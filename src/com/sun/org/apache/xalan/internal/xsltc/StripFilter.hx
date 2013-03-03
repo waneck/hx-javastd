@@ -27,7 +27,7 @@ package com.sun.org.apache.xalan.internal.xsltc;
 */
 extern interface StripFilter
 {
-	@:overload public function stripSpace(dom : com.sun.org.apache.xalan.internal.xsltc.DOM, node : Int, type : Int) : Bool;
+	@:overload @:public public function stripSpace(dom : com.sun.org.apache.xalan.internal.xsltc.DOM, node : Int, type : Int) : Bool;
 	
 	
 }

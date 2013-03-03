@@ -26,245 +26,245 @@ package com.sun.tools.javac.main;
 extern class JavaCompiler implements com.sun.tools.javac.jvm.ClassReader.ClassReader_SourceCompleter
 {
 	/** The context key for the compiler. */
-	private static var compilerKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.main.JavaCompiler>;
+	@:protected @:static @:final private static var compilerKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.main.JavaCompiler>;
 	
 	/** Get the JavaCompiler instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.main.JavaCompiler;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.main.JavaCompiler;
 	
 	/** The current version number as a string.
 	*/
-	@:overload public static function version() : String;
+	@:overload @:public @:static public static function version() : String;
 	
 	/** The current full version number as a string.
 	*/
-	@:overload public static function fullVersion() : String;
+	@:overload @:public @:static public static function fullVersion() : String;
 	
 	/** The log to be used for error reporting.
 	*/
-	public var log : com.sun.tools.javac.util.Log;
+	@:public public var log : com.sun.tools.javac.util.Log;
 	
 	/** The tree factory module.
 	*/
-	private var make : com.sun.tools.javac.tree.TreeMaker;
+	@:protected private var make : com.sun.tools.javac.tree.TreeMaker;
 	
 	/** The class reader.
 	*/
-	private var reader : com.sun.tools.javac.jvm.ClassReader;
+	@:protected private var reader : com.sun.tools.javac.jvm.ClassReader;
 	
 	/** The class writer.
 	*/
-	private var writer : com.sun.tools.javac.jvm.ClassWriter;
+	@:protected private var writer : com.sun.tools.javac.jvm.ClassWriter;
 	
 	/** The module for the symbol table entry phases.
 	*/
-	private var enter : com.sun.tools.javac.comp.Enter;
+	@:protected private var enter : com.sun.tools.javac.comp.Enter;
 	
 	/** The symbol table.
 	*/
-	private var syms : com.sun.tools.javac.code.Symtab;
+	@:protected private var syms : com.sun.tools.javac.code.Symtab;
 	
 	/** The language version.
 	*/
-	private var source : com.sun.tools.javac.code.Source;
+	@:protected private var source : com.sun.tools.javac.code.Source;
 	
 	/** The module for code generation.
 	*/
-	private var gen : com.sun.tools.javac.jvm.Gen;
+	@:protected private var gen : com.sun.tools.javac.jvm.Gen;
 	
 	/** The name table.
 	*/
-	private var names : com.sun.tools.javac.util.Names;
+	@:protected private var names : com.sun.tools.javac.util.Names;
 	
 	/** The attributor.
 	*/
-	private var attr : com.sun.tools.javac.comp.Attr;
+	@:protected private var attr : com.sun.tools.javac.comp.Attr;
 	
 	/** The attributor.
 	*/
-	private var chk : com.sun.tools.javac.comp.Check;
+	@:protected private var chk : com.sun.tools.javac.comp.Check;
 	
 	/** The type eraser.
 	*/
-	private var transTypes : com.sun.tools.javac.comp.TransTypes;
+	@:protected private var transTypes : com.sun.tools.javac.comp.TransTypes;
 	
 	/** The syntactic sugar desweetener.
 	*/
-	private var lower : com.sun.tools.javac.comp.Lower;
+	@:protected private var lower : com.sun.tools.javac.comp.Lower;
 	
 	/** The annotation annotator.
 	*/
-	private var annotate : com.sun.tools.javac.comp.Annotate;
+	@:protected private var annotate : com.sun.tools.javac.comp.Annotate;
 	
 	/** Force a completion failure on this name
 	*/
-	private var completionFailureName(default, null) : com.sun.tools.javac.util.Name;
+	@:protected @:final private var completionFailureName(default, null) : com.sun.tools.javac.util.Name;
 	
 	/** Type utilities.
 	*/
-	private var types : com.sun.tools.javac.code.Types;
+	@:protected private var types : com.sun.tools.javac.code.Types;
 	
 	/** Access to file objects.
 	*/
-	private var fileManager : javax.tools.JavaFileManager;
+	@:protected private var fileManager : javax.tools.JavaFileManager;
 	
 	/** Factory for parsers.
 	*/
-	private var parserFactory : com.sun.tools.javac.parser.ParserFactory;
+	@:protected private var parserFactory : com.sun.tools.javac.parser.ParserFactory;
 	
 	/** Optional listener for progress events
 	*/
-	private var taskListener : com.sun.source.util.TaskListener;
+	@:protected private var taskListener : com.sun.source.util.TaskListener;
 	
 	/**
 	* Annotation processing may require and provide a new instance
 	* of the compiler to be used for the analyze and generate phases.
 	*/
-	private var delegateCompiler : com.sun.tools.javac.main.JavaCompiler;
+	@:protected private var delegateCompiler : com.sun.tools.javac.main.JavaCompiler;
 	
 	/**
 	* Command line options.
 	*/
-	private var options : com.sun.tools.javac.util.Options;
+	@:protected private var options : com.sun.tools.javac.util.Options;
 	
-	private var context : com.sun.tools.javac.util.Context;
+	@:protected private var context : com.sun.tools.javac.util.Context;
 	
 	/**
 	* Flag set if any annotation processing occurred.
 	**/
-	private var annotationProcessingOccurred : Bool;
+	@:protected private var annotationProcessingOccurred : Bool;
 	
 	/**
 	* Flag set if any implicit source files read.
 	**/
-	private var implicitSourceFilesRead : Bool;
+	@:protected private var implicitSourceFilesRead : Bool;
 	
 	/** Construct a new compiler using a shared context.
 	*/
-	@:overload public function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:public public function new(context : com.sun.tools.javac.util.Context) : Void;
 	
 	/** Verbose output.
 	*/
-	public var verbose : Bool;
+	@:public public var verbose : Bool;
 	
 	/** Emit plain Java source files rather than class files.
 	*/
-	public var sourceOutput : Bool;
+	@:public public var sourceOutput : Bool;
 	
 	/** Emit stub source files rather than class files.
 	*/
-	public var stubOutput : Bool;
+	@:public public var stubOutput : Bool;
 	
 	/** Generate attributed parse tree only.
 	*/
-	public var attrParseOnly : Bool;
+	@:public public var attrParseOnly : Bool;
 	
 	/** Debug switch: Emit Java sources after inner class flattening.
 	*/
-	public var printFlat : Bool;
+	@:public public var printFlat : Bool;
 	
 	/** The encoding to be used for source input.
 	*/
-	public var encoding : String;
+	@:public public var encoding : String;
 	
 	/** Generate code with the LineNumberTable attribute for debugging
 	*/
-	public var lineDebugInfo : Bool;
+	@:public public var lineDebugInfo : Bool;
 	
 	/** Switch: should we store the ending positions?
 	*/
-	public var genEndPos : Bool;
+	@:public public var genEndPos : Bool;
 	
 	/** Switch: should we debug ignored exceptions
 	*/
-	private var devVerbose : Bool;
+	@:protected private var devVerbose : Bool;
 	
 	/** Switch: should we (annotation) process packages as well
 	*/
-	private var processPcks : Bool;
+	@:protected private var processPcks : Bool;
 	
 	/** Switch: treat warnings as errors
 	*/
-	private var werror : Bool;
+	@:protected private var werror : Bool;
 	
 	/**
 	* The policy for the order in which to perform the compilation
 	*/
-	private var compilePolicy : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_CompilePolicy;
+	@:protected private var compilePolicy : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_CompilePolicy;
 	
 	/**
 	* The policy for what to do with implicitly read source files
 	*/
-	private var implicitSourcePolicy : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_ImplicitSourcePolicy;
+	@:protected private var implicitSourcePolicy : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_ImplicitSourcePolicy;
 	
 	/**
 	* Report activity related to compilePolicy
 	*/
-	public var verboseCompilePolicy : Bool;
+	@:public public var verboseCompilePolicy : Bool;
 	
 	/**
 	* Policy of how far to continue processing. null means until first
 	* error.
 	*/
-	public var shouldStopPolicy : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_CompileState;
+	@:public public var shouldStopPolicy : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_CompileState;
 	
 	/** A queue of all as yet unattributed classes.
 	*/
-	public var todo : com.sun.tools.javac.comp.Todo;
+	@:public public var todo : com.sun.tools.javac.comp.Todo;
 	
 	/** The set of currently compiled inputfiles, needed to ensure
 	*  we don't accidentally overwrite an input file when -s is set.
 	*  initialized by `compile'.
 	*/
-	private var inputFiles : java.util.Set<javax.tools.JavaFileObject>;
+	@:protected private var inputFiles : java.util.Set<javax.tools.JavaFileObject>;
 	
-	@:overload private function shouldStop(cs : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_CompileState) : Bool;
+	@:overload @:protected private function shouldStop(cs : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_CompileState) : Bool;
 	
 	/** The number of errors reported so far.
 	*/
-	@:overload public function errorCount() : Int;
+	@:overload @:public public function errorCount() : Int;
 	
-	@:overload @:final private function stopIfError<T>(cs : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_CompileState, queue : java.util.Queue<T>) : java.util.Queue<T>;
+	@:overload @:protected @:final private function stopIfError<T>(cs : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_CompileState, queue : java.util.Queue<T>) : java.util.Queue<T>;
 	
-	@:overload @:final private function stopIfError<T>(cs : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_CompileState, list : com.sun.tools.javac.util.List<T>) : com.sun.tools.javac.util.List<T>;
+	@:overload @:protected @:final private function stopIfError<T>(cs : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_CompileState, list : com.sun.tools.javac.util.List<T>) : com.sun.tools.javac.util.List<T>;
 	
 	/** The number of warnings reported so far.
 	*/
-	@:overload public function warningCount() : Int;
+	@:overload @:public public function warningCount() : Int;
 	
 	/** Try to open input stream with given name.
 	*  Report an error if this fails.
 	*  @param filename   The file name of the input stream to be opened.
 	*/
-	@:overload public function readSource(filename : javax.tools.JavaFileObject) : java.lang.CharSequence;
+	@:overload @:public public function readSource(filename : javax.tools.JavaFileObject) : java.lang.CharSequence;
 	
 	/** Parse contents of input stream.
 	*  @param filename     The name of the file from which input stream comes.
 	*  @param input        The input stream to be parsed.
 	*/
-	@:overload private function parse(filename : javax.tools.JavaFileObject, content : java.lang.CharSequence) : JCCompilationUnit;
+	@:overload @:protected private function parse(filename : javax.tools.JavaFileObject, content : java.lang.CharSequence) : JCCompilationUnit;
 	
-	@:overload private function keepComments() : Bool;
-	
-	/** Parse contents of file.
-	*  @param filename     The name of the file to be parsed.
-	*/
-	@:overload public function parse(filename : String) : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit;
+	@:overload @:protected private function keepComments() : Bool;
 	
 	/** Parse contents of file.
 	*  @param filename     The name of the file to be parsed.
 	*/
-	@:overload public function parse(filename : javax.tools.JavaFileObject) : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit;
+	@:overload @:public public function parse(filename : String) : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit;
+	
+	/** Parse contents of file.
+	*  @param filename     The name of the file to be parsed.
+	*/
+	@:overload @:public public function parse(filename : javax.tools.JavaFileObject) : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit;
 	
 	/** Resolve an identifier which may be the binary name of a class or
 	* the Java name of a class or package.
 	* @param name      The name to resolve
 	*/
-	@:overload public function resolveBinaryNameOrIdent(name : String) : com.sun.tools.javac.code.Symbol;
+	@:overload @:public public function resolveBinaryNameOrIdent(name : String) : com.sun.tools.javac.code.Symbol;
 	
 	/** Resolve an identifier.
 	* @param name      The identifier to resolve
 	*/
-	@:overload public function resolveIdent(name : String) : com.sun.tools.javac.code.Symbol;
+	@:overload @:public public function resolveIdent(name : String) : com.sun.tools.javac.code.Symbol;
 	
 	/** Complete compiling a source file that has been accessed
 	*  by the class file reader.
@@ -272,11 +272,11 @@ extern class JavaCompiler implements com.sun.tools.javac.jvm.ClassReader.ClassRe
 	*  @param filename   The name of the source file.
 	*  @param f          An input stream that reads the source file.
 	*/
-	@:overload public function complete(c : ClassSymbol) : Void;
+	@:overload @:public public function complete(c : ClassSymbol) : Void;
 	
-	public var elapsed_msec : haxe.Int64;
+	@:public public var elapsed_msec : haxe.Int64;
 	
-	@:overload public function compile(sourceFileObject : com.sun.tools.javac.util.List<javax.tools.JavaFileObject>) : Void;
+	@:overload @:public public function compile(sourceFileObject : com.sun.tools.javac.util.List<javax.tools.JavaFileObject>) : Void;
 	
 	/**
 	* Main method: compile a list of files, return all compiled classes
@@ -286,19 +286,19 @@ extern class JavaCompiler implements com.sun.tools.javac.jvm.ClassReader.ClassRe
 	* @param processors user provided annotation processors to bypass
 	* discovery, {@code null} means that no processors were provided
 	*/
-	@:overload public function compile(sourceFileObjects : com.sun.tools.javac.util.List<javax.tools.JavaFileObject>, classnames : com.sun.tools.javac.util.List<String>, processors : java.lang.Iterable<javax.annotation.processing.Processor>) : Void;
+	@:overload @:public public function compile(sourceFileObjects : com.sun.tools.javac.util.List<javax.tools.JavaFileObject>, classnames : com.sun.tools.javac.util.List<String>, processors : java.lang.Iterable<javax.annotation.processing.Processor>) : Void;
 	
 	/**
 	* Parses a list of files.
 	*/
-	@:overload public function parseFiles(fileObjects : java.lang.Iterable<javax.tools.JavaFileObject>) : com.sun.tools.javac.util.List<JCCompilationUnit>;
+	@:overload @:public public function parseFiles(fileObjects : java.lang.Iterable<javax.tools.JavaFileObject>) : com.sun.tools.javac.util.List<JCCompilationUnit>;
 	
 	/**
 	* Enter the symbols found in a list of parse trees.
 	* As a side-effect, this puts elements on the "todo" list.
 	* Also stores a list of all top level classes in rootClasses.
 	*/
-	@:overload public function enterTrees(roots : com.sun.tools.javac.util.List<JCCompilationUnit>) : com.sun.tools.javac.util.List<JCCompilationUnit>;
+	@:overload @:public public function enterTrees(roots : com.sun.tools.javac.util.List<JCCompilationUnit>) : com.sun.tools.javac.util.List<JCCompilationUnit>;
 	
 	/**
 	* Check if we should process annotations.
@@ -309,16 +309,16 @@ extern class JavaCompiler implements com.sun.tools.javac.jvm.ClassReader.ClassRe
 	* @param processors user provided annotation processors to bypass
 	* discovery, {@code null} means that no processors were provided
 	*/
-	@:overload public function initProcessAnnotations(processors : java.lang.Iterable<javax.annotation.processing.Processor>) : Void;
+	@:overload @:public public function initProcessAnnotations(processors : java.lang.Iterable<javax.annotation.processing.Processor>) : Void;
 	
-	@:overload public function processAnnotations(roots : com.sun.tools.javac.util.List<JCCompilationUnit>) : com.sun.tools.javac.main.JavaCompiler;
+	@:overload @:public public function processAnnotations(roots : com.sun.tools.javac.util.List<JCCompilationUnit>) : com.sun.tools.javac.main.JavaCompiler;
 	
 	/**
 	* Process any anotations found in the specifed compilation units.
 	* @param roots a list of compilation units
 	* @return an instance of the compiler in which to complete the compilation
 	*/
-	@:overload public function processAnnotations(roots : com.sun.tools.javac.util.List<JCCompilationUnit>, classnames : com.sun.tools.javac.util.List<String>) : com.sun.tools.javac.main.JavaCompiler;
+	@:overload @:public public function processAnnotations(roots : com.sun.tools.javac.util.List<JCCompilationUnit>, classnames : com.sun.tools.javac.util.List<String>) : com.sun.tools.javac.main.JavaCompiler;
 	
 	/**
 	* Attribute a list of parse trees, such as found on the "todo" list.
@@ -327,13 +327,13 @@ extern class JavaCompiler implements com.sun.tools.javac.jvm.ClassReader.ClassRe
 	* Attribution of the entries in the list does not stop if any errors occur.
 	* @returns a list of environments for attributd classes.
 	*/
-	@:overload public function attribute(envs : java.util.Queue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>) : java.util.Queue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>;
+	@:overload @:public public function attribute(envs : java.util.Queue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>) : java.util.Queue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>;
 	
 	/**
 	* Attribute a parse tree.
 	* @returns the attributed parse tree
 	*/
-	@:overload public function attribute(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
+	@:overload @:public public function attribute(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
 	/**
 	* Perform dataflow checks on attributed parse trees.
@@ -341,17 +341,17 @@ extern class JavaCompiler implements com.sun.tools.javac.jvm.ClassReader.ClassRe
 	* If any errors occur, an empty list will be returned.
 	* @returns the list of attributed parse trees
 	*/
-	@:overload public function flow(envs : java.util.Queue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>) : java.util.Queue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>;
+	@:overload @:public public function flow(envs : java.util.Queue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>) : java.util.Queue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>;
 	
 	/**
 	* Perform dataflow checks on an attributed parse tree.
 	*/
-	@:overload public function flow(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : java.util.Queue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>;
+	@:overload @:public public function flow(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : java.util.Queue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>;
 	
 	/**
 	* Perform dataflow checks on an attributed parse tree.
 	*/
-	@:overload private function flow(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, results : java.util.Queue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>) : Void;
+	@:overload @:protected private function flow(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, results : java.util.Queue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>) : Void;
 	
 	/**
 	* Prepare attributed parse trees, in conjunction with their attribution contexts,
@@ -359,7 +359,7 @@ extern class JavaCompiler implements com.sun.tools.javac.jvm.ClassReader.ClassRe
 	* If any errors occur, an empty list will be returned.
 	* @returns a list containing the classes to be generated
 	*/
-	@:overload public function desugar(envs : java.util.Queue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>) : java.util.Queue<com.sun.tools.javac.util.Pair<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, JCClassDecl>>;
+	@:overload @:public public function desugar(envs : java.util.Queue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>) : java.util.Queue<com.sun.tools.javac.util.Pair<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, JCClassDecl>>;
 	
 	/**
 	* Prepare attributed parse trees, in conjunction with their attribution contexts,
@@ -367,34 +367,34 @@ extern class JavaCompiler implements com.sun.tools.javac.jvm.ClassReader.ClassRe
 	* the current implicitSourcePolicy is taken into account.
 	* The preparation stops as soon as an error is found.
 	*/
-	@:overload private function desugar(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, results : java.util.Queue<com.sun.tools.javac.util.Pair<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, JCClassDecl>>) : Void;
+	@:overload @:protected private function desugar(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, results : java.util.Queue<com.sun.tools.javac.util.Pair<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, JCClassDecl>>) : Void;
 	
 	/** Generates the source or class file for a list of classes.
 	* The decision to generate a source file or a class file is
 	* based upon the compiler's options.
 	* Generation stops if an error occurs while writing files.
 	*/
-	@:overload public function generate(queue : java.util.Queue<com.sun.tools.javac.util.Pair<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, JCClassDecl>>) : Void;
+	@:overload @:public public function generate(queue : java.util.Queue<com.sun.tools.javac.util.Pair<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, JCClassDecl>>) : Void;
 	
-	@:overload public function generate(queue : java.util.Queue<com.sun.tools.javac.util.Pair<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, JCClassDecl>>, results : java.util.Queue<javax.tools.JavaFileObject>) : Void;
+	@:overload @:public public function generate(queue : java.util.Queue<com.sun.tools.javac.util.Pair<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, JCClassDecl>>, results : java.util.Queue<javax.tools.JavaFileObject>) : Void;
 	
-	@:overload public function reportDeferredDiagnostics() : Void;
+	@:overload @:public public function reportDeferredDiagnostics() : Void;
 	
 	/** Close the compiler, flushing the logs
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function close(disposeNames : Bool) : Void;
+	@:overload @:public public function close(disposeNames : Bool) : Void;
 	
-	@:overload private function printNote(lines : String) : Void;
+	@:overload @:protected private function printNote(lines : String) : Void;
 	
 	/** Print numbers of errors and warnings.
 	*/
-	@:overload private function printCount(kind : String, count : Int) : Void;
+	@:overload @:protected private function printCount(kind : String, count : Int) : Void;
 	
-	@:overload public function initRound(prev : com.sun.tools.javac.main.JavaCompiler) : Void;
+	@:overload @:public public function initRound(prev : com.sun.tools.javac.main.JavaCompiler) : Void;
 	
-	@:overload public static function enableLogging() : Void;
+	@:overload @:public @:static public static function enableLogging() : Void;
 	
 	
 }

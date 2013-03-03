@@ -37,12 +37,12 @@ extern class SplitIndexWriter extends com.sun.tools.doclets.formats.html.Abstrac
 	/**
 	* Previous unicode character index in the built index.
 	*/
-	private var prev : Int;
+	@:protected private var prev : Int;
 	
 	/**
 	* Next unicode character in the built index.
 	*/
-	private var next : Int;
+	@:protected private var next : Int;
 	
 	/**
 	* Construct the SplitIndexWriter. Uses path to this file and relative path
@@ -53,7 +53,7 @@ extern class SplitIndexWriter extends com.sun.tools.doclets.formats.html.Abstrac
 	* @param relpath    Relative path from this file to the current directory.
 	* @param indexbuilder Unicode based Index from {@link IndexBuilder}
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, path : String, filename : String, relpath : String, indexbuilder : com.sun.tools.doclets.internal.toolkit.util.IndexBuilder, prev : Int, next : Int) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, path : String, filename : String, relpath : String, indexbuilder : com.sun.tools.doclets.internal.toolkit.util.IndexBuilder, prev : Int, next : Int) : Void;
 	
 	/**
 	* Generate separate index files, for each Unicode character, listing all
@@ -62,7 +62,7 @@ extern class SplitIndexWriter extends com.sun.tools.doclets.formats.html.Abstrac
 	* @param indexbuilder IndexBuilder built by {@link IndexBuilder}
 	* @throws DocletAbortException
 	*/
-	@:overload public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, indexbuilder : com.sun.tools.doclets.internal.toolkit.util.IndexBuilder) : Void;
+	@:overload @:public @:static public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, indexbuilder : com.sun.tools.doclets.internal.toolkit.util.IndexBuilder) : Void;
 	
 	/**
 	* Generate the contents of each index file, with Header, Footer,
@@ -71,28 +71,28 @@ extern class SplitIndexWriter extends com.sun.tools.doclets.formats.html.Abstrac
 	* @param unicode Unicode character referring to the character for the
 	* index.
 	*/
-	@:overload private function generateIndexFile(unicode : Null<java.StdTypes.Char16>) : Void;
+	@:overload @:protected private function generateIndexFile(unicode : Null<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Add links for all the Index Files per unicode character.
 	*
 	* @param contentTree the content tree to which the links for indexes will be added
 	*/
-	@:overload private function addLinksForIndexes(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addLinksForIndexes(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get link to the previous unicode character.
 	*
 	* @return a content tree for the link
 	*/
-	@:overload override public function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public override public function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get link to the next unicode character.
 	*
 	* @return a content tree for the link
 	*/
-	@:overload override public function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public override public function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

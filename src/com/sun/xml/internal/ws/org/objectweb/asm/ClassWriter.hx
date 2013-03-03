@@ -78,7 +78,7 @@ extern class ClassWriter implements com.sun.xml.internal.ws.org.objectweb.asm.Cl
 	*
 	* @see #ClassWriter(int)
 	*/
-	public static var COMPUTE_MAXS(default, null) : Int;
+	@:public @:static @:final public static var COMPUTE_MAXS(default, null) : Int;
 	
 	/**
 	* Flag to automatically compute the stack map frames of methods from
@@ -91,7 +91,7 @@ extern class ClassWriter implements com.sun.xml.internal.ws.org.objectweb.asm.Cl
 	*
 	* @see #ClassWriter(int)
 	*/
-	public static var COMPUTE_FRAMES(default, null) : Int;
+	@:public @:static @:final public static var COMPUTE_FRAMES(default, null) : Int;
 	
 	/**
 	* Constructs a new {@link ClassWriter} object.
@@ -99,7 +99,7 @@ extern class ClassWriter implements com.sun.xml.internal.ws.org.objectweb.asm.Cl
 	* @param flags option flags that can be used to modify the default behavior
 	*        of this class. See {@link #COMPUTE_MAXS}, {@link #COMPUTE_FRAMES}.
 	*/
-	@:overload public function new(flags : Int) : Void;
+	@:overload @:public public function new(flags : Int) : Void;
 	
 	/**
 	* Constructs a new {@link ClassWriter} object and enables optimizations for
@@ -125,32 +125,32 @@ extern class ClassWriter implements com.sun.xml.internal.ws.org.objectweb.asm.Cl
 	* @param flags option flags that can be used to modify the default behavior
 	*        of this class. See {@link #COMPUTE_MAXS}, {@link #COMPUTE_FRAMES}.
 	*/
-	@:overload public function new(classReader : com.sun.xml.internal.ws.org.objectweb.asm.ClassReader, flags : Int) : Void;
+	@:overload @:public public function new(classReader : com.sun.xml.internal.ws.org.objectweb.asm.ClassReader, flags : Int) : Void;
 	
-	@:overload public function visit(version : Int, access : Int, name : String, signature : String, superName : String, interfaces : java.NativeArray<String>) : Void;
+	@:overload @:public public function visit(version : Int, access : Int, name : String, signature : String, superName : String, interfaces : java.NativeArray<String>) : Void;
 	
-	@:overload public function visitSource(file : String, debug : String) : Void;
+	@:overload @:public public function visitSource(file : String, debug : String) : Void;
 	
-	@:overload public function visitOuterClass(owner : String, name : String, desc : String) : Void;
+	@:overload @:public public function visitOuterClass(owner : String, name : String, desc : String) : Void;
 	
-	@:overload public function visitAnnotation(desc : String, visible : Bool) : com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor;
+	@:overload @:public public function visitAnnotation(desc : String, visible : Bool) : com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor;
 	
-	@:overload public function visitAttribute(attr : com.sun.xml.internal.ws.org.objectweb.asm.Attribute) : Void;
+	@:overload @:public public function visitAttribute(attr : com.sun.xml.internal.ws.org.objectweb.asm.Attribute) : Void;
 	
-	@:overload public function visitInnerClass(name : String, outerName : String, innerName : String, access : Int) : Void;
+	@:overload @:public public function visitInnerClass(name : String, outerName : String, innerName : String, access : Int) : Void;
 	
-	@:overload public function visitField(access : Int, name : String, desc : String, signature : String, value : Dynamic) : com.sun.xml.internal.ws.org.objectweb.asm.FieldVisitor;
+	@:overload @:public public function visitField(access : Int, name : String, desc : String, signature : String, value : Dynamic) : com.sun.xml.internal.ws.org.objectweb.asm.FieldVisitor;
 	
-	@:overload public function visitMethod(access : Int, name : String, desc : String, signature : String, exceptions : java.NativeArray<String>) : com.sun.xml.internal.ws.org.objectweb.asm.MethodVisitor;
+	@:overload @:public public function visitMethod(access : Int, name : String, desc : String, signature : String, exceptions : java.NativeArray<String>) : com.sun.xml.internal.ws.org.objectweb.asm.MethodVisitor;
 	
-	@:overload public function visitEnd() : Void;
+	@:overload @:public public function visitEnd() : Void;
 	
 	/**
 	* Returns the bytecode of the class that was build with this class writer.
 	*
 	* @return the bytecode of the class that was build with this class writer.
 	*/
-	@:overload public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Adds a number or string constant to the constant pool of the class being
@@ -164,7 +164,7 @@ extern class ClassWriter implements com.sun.xml.internal.ws.org.objectweb.asm.Cl
 	* @return the index of a new or already existing constant item with the
 	*         given value.
 	*/
-	@:overload public function newConst(cst : Dynamic) : Int;
+	@:overload @:public public function newConst(cst : Dynamic) : Int;
 	
 	/**
 	* Adds an UTF8 string to the constant pool of the class being build. Does
@@ -175,7 +175,7 @@ extern class ClassWriter implements com.sun.xml.internal.ws.org.objectweb.asm.Cl
 	* @param value the String value.
 	* @return the index of a new or already existing UTF8 item.
 	*/
-	@:overload public function newUTF8(value : String) : Int;
+	@:overload @:public public function newUTF8(value : String) : Int;
 	
 	/**
 	* Adds a class reference to the constant pool of the class being build.
@@ -186,7 +186,7 @@ extern class ClassWriter implements com.sun.xml.internal.ws.org.objectweb.asm.Cl
 	* @param value the internal name of the class.
 	* @return the index of a new or already existing class reference item.
 	*/
-	@:overload public function newClass(value : String) : Int;
+	@:overload @:public public function newClass(value : String) : Int;
 	
 	/**
 	* Adds a field reference to the constant pool of the class being build.
@@ -199,7 +199,7 @@ extern class ClassWriter implements com.sun.xml.internal.ws.org.objectweb.asm.Cl
 	* @param desc the field's descriptor.
 	* @return the index of a new or already existing field reference item.
 	*/
-	@:overload public function newField(owner : String, name : String, desc : String) : Int;
+	@:overload @:public public function newField(owner : String, name : String, desc : String) : Int;
 	
 	/**
 	* Adds a method reference to the constant pool of the class being build.
@@ -213,7 +213,7 @@ extern class ClassWriter implements com.sun.xml.internal.ws.org.objectweb.asm.Cl
 	* @param itf <tt>true</tt> if <tt>owner</tt> is an interface.
 	* @return the index of a new or already existing method reference item.
 	*/
-	@:overload public function newMethod(owner : String, name : String, desc : String, itf : Bool) : Int;
+	@:overload @:public public function newMethod(owner : String, name : String, desc : String, itf : Bool) : Int;
 	
 	/**
 	* Adds a name and type to the constant pool of the class being build. Does
@@ -225,7 +225,7 @@ extern class ClassWriter implements com.sun.xml.internal.ws.org.objectweb.asm.Cl
 	* @param desc a type descriptor.
 	* @return the index of a new or already existing name and type item.
 	*/
-	@:overload public function newNameType(name : String, desc : String) : Int;
+	@:overload @:public public function newNameType(name : String, desc : String) : Int;
 	
 	/**
 	* Returns the common super type of the two given types. The default
@@ -241,7 +241,7 @@ extern class ClassWriter implements com.sun.xml.internal.ws.org.objectweb.asm.Cl
 	* @return the internal name of the common super class of the two given
 	*         classes.
 	*/
-	@:overload private function getCommonSuperClass(type1 : String, type2 : String) : String;
+	@:overload @:protected private function getCommonSuperClass(type1 : String, type2 : String) : String;
 	
 	
 }

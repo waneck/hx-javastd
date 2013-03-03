@@ -25,137 +25,137 @@ package sun.awt.X11;
 */
 extern class XTextFieldPeer extends sun.awt.X11.XComponentPeer implements java.awt.peer.TextFieldPeer
 {
-	@:overload public function new(target : java.awt.TextField) : Void;
+	@:overload @:public public function new(target : java.awt.TextField) : Void;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
 	/**
 	* @see java.awt.peer.TextComponentPeer
 	*/
-	@:overload public function setEditable(editable : Bool) : Void;
+	@:overload @:public public function setEditable(editable : Bool) : Void;
 	
 	/**
 	* @see java.awt.peer.ComponentPeer
 	*/
-	@:overload public function setEnabled(enabled : Bool) : Void;
+	@:overload @:public override public function setEnabled(enabled : Bool) : Void;
 	
 	/**
 	* @see java.awt.peer.TextComponentPeer
 	*/
-	@:overload public function getInputMethodRequests() : java.awt.im.InputMethodRequests;
+	@:overload @:public public function getInputMethodRequests() : java.awt.im.InputMethodRequests;
 	
 	/**
 	* @see java.awt.peer.TextFieldPeer
 	*/
-	@:overload public function setEchoChar(c : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setEchoChar(c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* @see java.awt.peer.TextComponentPeer
 	*/
-	@:overload public function getSelectionStart() : Int;
+	@:overload @:public public function getSelectionStart() : Int;
 	
 	/**
 	* @see java.awt.peer.TextComponentPeer
 	*/
-	@:overload public function getSelectionEnd() : Int;
+	@:overload @:public public function getSelectionEnd() : Int;
 	
 	/**
 	* @see java.awt.peer.TextComponentPeer
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
 	/**
 	* @see java.awt.peer.TextComponentPeer
 	*/
-	@:overload public function setText(txt : String) : Void;
+	@:overload @:public public function setText(txt : String) : Void;
 	
-	@:overload private function setXAWTTextField(txt : String) : Bool;
+	@:overload @:protected private function setXAWTTextField(txt : String) : Bool;
 	
 	/**
 	* to be implemented.
 	* @see java.awt.peer.TextComponentPeer
 	*/
-	@:overload public function setCaretPosition(position : Int) : Void;
+	@:overload @:public public function setCaretPosition(position : Int) : Void;
 	
 	/**
 	* DEPRECATED
 	* @see java.awt.peer.TextFieldPeer
 	*/
-	@:overload public function setEchoCharacter(c : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setEchoCharacter(c : java.StdTypes.Char16) : Void;
 	
-	@:overload public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setBackground(c : java.awt.Color) : Void;
 	
-	@:overload public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setForeground(c : java.awt.Color) : Void;
 	
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public override public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* DEPRECATED
 	* @see java.awt.peer.TextFieldPeer
 	*/
-	@:overload public function preferredSize(cols : Int) : java.awt.Dimension;
+	@:overload @:public public function preferredSize(cols : Int) : java.awt.Dimension;
 	
 	/**
 	* Deselects the the highlighted text.
 	*/
-	@:overload public function deselect() : Void;
+	@:overload @:public public function deselect() : Void;
 	
 	/**
 	* to be implemented.
 	* @see java.awt.peer.TextComponentPeer
 	*/
-	@:overload public function getCaretPosition() : Int;
+	@:overload @:public public function getCaretPosition() : Int;
 	
 	/**
 	* @see java.awt.peer.TextComponentPeer
 	*/
-	@:overload public function select(s : Int, e : Int) : Void;
+	@:overload @:public public function select(s : Int, e : Int) : Void;
 	
-	@:overload public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
-	@:overload public function getPreferredSize(cols : Int) : java.awt.Dimension;
+	@:overload @:public public function getPreferredSize(cols : Int) : java.awt.Dimension;
 	
-	@:overload public function getMinimumSize(cols : Int) : java.awt.Dimension;
+	@:overload @:public public function getMinimumSize(cols : Int) : java.awt.Dimension;
 	
-	@:overload public function isFocusable() : Bool;
+	@:overload @:public override public function isFocusable() : Bool;
 	
-	@:overload public function action(when : haxe.Int64, modifiers : Int) : Void;
+	@:overload @:public public function action(when : haxe.Int64, modifiers : Int) : Void;
 	
-	@:overload private function disposeImpl() : Void;
+	@:overload @:protected private function disposeImpl() : Void;
 	
-	@:overload public function repaint() : Void;
+	@:overload @:public override public function repaint() : Void;
 	
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload public function print(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function print(g : java.awt.Graphics) : Void;
 	
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public override public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public override public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function handleJavaMouseEvent(mouseEvent : java.awt.event.MouseEvent) : Void;
-	
-	/**
-	* DEPRECATED
-	*/
-	@:overload public function minimumSize() : java.awt.Dimension;
+	@:overload @:public public function handleJavaMouseEvent(mouseEvent : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* DEPRECATED
 	*/
-	@:overload public function minimumSize(cols : Int) : java.awt.Dimension;
+	@:overload @:public override public function minimumSize() : java.awt.Dimension;
 	
-	@:overload public function setVisible(b : Bool) : Void;
+	/**
+	* DEPRECATED
+	*/
+	@:overload @:public public function minimumSize(cols : Int) : java.awt.Dimension;
 	
-	@:overload public function setBounds(x : Int, y : Int, width : Int, height : Int, op : Int) : Void;
+	@:overload @:public override public function setVisible(b : Bool) : Void;
 	
-	@:overload public function getIndexAtPoint(x : Int, y : Int) : Int;
+	@:overload @:public override public function setBounds(x : Int, y : Int, width : Int, height : Int, op : Int) : Void;
 	
-	@:overload public function getCharacterBounds(i : Int) : java.awt.Rectangle;
+	@:overload @:public public function getIndexAtPoint(x : Int, y : Int) : Int;
 	
-	@:overload public function filterEvents(mask : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function getCharacterBounds(i : Int) : java.awt.Rectangle;
+	
+	@:overload @:public public function filterEvents(mask : haxe.Int64) : haxe.Int64;
 	
 	
 }
@@ -178,57 +178,57 @@ return;  // Need to write implemetation of this.
 */
 @:native('sun$awt$X11$XTextFieldPeer$AWTTextFieldUI') @:internal extern class XTextFieldPeer_AWTTextFieldUI extends com.sun.java.swing.plaf.motif.MotifPasswordFieldUI
 {
-	@:overload override private function getPropertyPrefix() : String;
+	@:overload @:protected override private function getPropertyPrefix() : String;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function installKeyboardActions() : Void;
+	@:overload @:protected override private function installKeyboardActions() : Void;
 	
-	@:overload override private function createCaret() : javax.swing.text.Caret;
+	@:overload @:protected override private function createCaret() : javax.swing.text.Caret;
 	
 	
 }
 @:native('sun$awt$X11$XTextFieldPeer$XAWTCaret') @:internal extern class XTextFieldPeer_XAWTCaret extends javax.swing.text.DefaultCaret
 {
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public override public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public override public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function setSelectionVisible(vis : Bool) : Void;
+	@:overload @:public override public function setSelectionVisible(vis : Bool) : Void;
 	
 	
 }
 @:native('sun$awt$X11$XTextFieldPeer$XAWTTextField') @:internal extern class XTextFieldPeer_XAWTTextField extends javax.swing.JPasswordField implements java.awt.event.ActionListener implements javax.swing.event.DocumentListener
 {
-	@:overload public function new(text : String, peer : sun.awt.X11.XComponentPeer, parent : java.awt.Container) : Void;
+	@:overload @:public public function new(text : String, peer : sun.awt.X11.XComponentPeer, parent : java.awt.Container) : Void;
 	
-	@:overload public function actionPerformed(actionEvent : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(actionEvent : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload public function getPeer() : java.awt.peer.ComponentPeer;
+	@:overload @:public override public function getPeer() : java.awt.peer.ComponentPeer;
 	
-	@:overload public function repaintNow() : Void;
+	@:overload @:public public function repaintNow() : Void;
 	
-	@:overload public function getGraphics() : java.awt.Graphics;
+	@:overload @:public override public function getGraphics() : java.awt.Graphics;
 	
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
-	@:overload public function hasFocus() : Bool;
+	@:overload @:public override public function hasFocus() : Bool;
 	
-	@:overload public function processInputMethodEventImpl(e : java.awt.event.InputMethodEvent) : Void;
+	@:overload @:public public function processInputMethodEventImpl(e : java.awt.event.InputMethodEvent) : Void;
 	
-	@:overload public function processMouseEventImpl(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function processMouseEventImpl(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function processMouseMotionEventImpl(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function processMouseMotionEventImpl(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function setTransferHandler(newHandler : javax.swing.TransferHandler) : Void;
+	@:overload @:public override public function setTransferHandler(newHandler : javax.swing.TransferHandler) : Void;
 	
-	@:overload public function setEchoChar(c : java.StdTypes.Char16) : Void;
+	@:overload @:public override public function setEchoChar(c : java.StdTypes.Char16) : Void;
 	
 	
 }

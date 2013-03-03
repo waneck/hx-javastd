@@ -25,7 +25,7 @@ package com.sun.org.apache.xerces.internal.impl.xs.util;
 */
 extern class XIntPool
 {
-	@:overload @:final public function getXInt(value : Int) : com.sun.org.apache.xerces.internal.impl.xs.util.XInt;
+	@:overload @:public @:final public function getXInt(value : Int) : com.sun.org.apache.xerces.internal.impl.xs.util.XInt;
 	
 	
 }

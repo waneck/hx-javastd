@@ -123,7 +123,7 @@ package java.util.concurrent;
 	* @return a task that can execute the runnable
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function decorateTask<V>(runnable : java.lang.Runnable, task : java.util.concurrent.RunnableScheduledFuture<V>) : java.util.concurrent.RunnableScheduledFuture<V>;
+	@:require(java6) @:overload @:protected private function decorateTask<V>(runnable : java.lang.Runnable, task : java.util.concurrent.RunnableScheduledFuture<V>) : java.util.concurrent.RunnableScheduledFuture<V>;
 	
 	/**
 	* Modifies or replaces the task used to execute a callable.
@@ -136,7 +136,7 @@ package java.util.concurrent;
 	* @return a task that can execute the callable
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function decorateTask<V>(callable : java.util.concurrent.Callable<V>, task : java.util.concurrent.RunnableScheduledFuture<V>) : java.util.concurrent.RunnableScheduledFuture<V>;
+	@:require(java6) @:overload @:protected private function decorateTask<V>(callable : java.util.concurrent.Callable<V>, task : java.util.concurrent.RunnableScheduledFuture<V>) : java.util.concurrent.RunnableScheduledFuture<V>;
 	
 	/**
 	* Creates a new {@code ScheduledThreadPoolExecutor} with the
@@ -146,7 +146,7 @@ package java.util.concurrent;
 	*        if they are idle, unless {@code allowCoreThreadTimeOut} is set
 	* @throws IllegalArgumentException if {@code corePoolSize < 0}
 	*/
-	@:overload public function new(corePoolSize : Int) : Void;
+	@:overload @:public public function new(corePoolSize : Int) : Void;
 	
 	/**
 	* Creates a new {@code ScheduledThreadPoolExecutor} with the
@@ -159,7 +159,7 @@ package java.util.concurrent;
 	* @throws IllegalArgumentException if {@code corePoolSize < 0}
 	* @throws NullPointerException if {@code threadFactory} is null
 	*/
-	@:overload public function new(corePoolSize : Int, threadFactory : java.util.concurrent.ThreadFactory) : Void;
+	@:overload @:public public function new(corePoolSize : Int, threadFactory : java.util.concurrent.ThreadFactory) : Void;
 	
 	/**
 	* Creates a new ScheduledThreadPoolExecutor with the given
@@ -172,7 +172,7 @@ package java.util.concurrent;
 	* @throws IllegalArgumentException if {@code corePoolSize < 0}
 	* @throws NullPointerException if {@code handler} is null
 	*/
-	@:overload public function new(corePoolSize : Int, handler : java.util.concurrent.RejectedExecutionHandler) : Void;
+	@:overload @:public public function new(corePoolSize : Int, handler : java.util.concurrent.RejectedExecutionHandler) : Void;
 	
 	/**
 	* Creates a new ScheduledThreadPoolExecutor with the given
@@ -188,33 +188,33 @@ package java.util.concurrent;
 	* @throws NullPointerException if {@code threadFactory} or
 	*         {@code handler} is null
 	*/
-	@:overload public function new(corePoolSize : Int, threadFactory : java.util.concurrent.ThreadFactory, handler : java.util.concurrent.RejectedExecutionHandler) : Void;
+	@:overload @:public public function new(corePoolSize : Int, threadFactory : java.util.concurrent.ThreadFactory, handler : java.util.concurrent.RejectedExecutionHandler) : Void;
 	
 	/**
 	* @throws RejectedExecutionException {@inheritDoc}
 	* @throws NullPointerException       {@inheritDoc}
 	*/
-	@:overload public function schedule(command : java.lang.Runnable, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
+	@:overload @:public public function schedule(command : java.lang.Runnable, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
 	
 	/**
 	* @throws RejectedExecutionException {@inheritDoc}
 	* @throws NullPointerException       {@inheritDoc}
 	*/
-	@:overload public function schedule<V>(callable : java.util.concurrent.Callable<V>, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<V>;
-	
-	/**
-	* @throws RejectedExecutionException {@inheritDoc}
-	* @throws NullPointerException       {@inheritDoc}
-	* @throws IllegalArgumentException   {@inheritDoc}
-	*/
-	@:overload public function scheduleAtFixedRate(command : java.lang.Runnable, initialDelay : haxe.Int64, period : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
+	@:overload @:public public function schedule<V>(callable : java.util.concurrent.Callable<V>, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<V>;
 	
 	/**
 	* @throws RejectedExecutionException {@inheritDoc}
 	* @throws NullPointerException       {@inheritDoc}
 	* @throws IllegalArgumentException   {@inheritDoc}
 	*/
-	@:overload public function scheduleWithFixedDelay(command : java.lang.Runnable, initialDelay : haxe.Int64, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
+	@:overload @:public public function scheduleAtFixedRate(command : java.lang.Runnable, initialDelay : haxe.Int64, period : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
+	
+	/**
+	* @throws RejectedExecutionException {@inheritDoc}
+	* @throws NullPointerException       {@inheritDoc}
+	* @throws IllegalArgumentException   {@inheritDoc}
+	*/
+	@:overload @:public public function scheduleWithFixedDelay(command : java.lang.Runnable, initialDelay : haxe.Int64, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
 	
 	/**
 	* Executes {@code command} with zero required delay.
@@ -236,25 +236,25 @@ package java.util.concurrent;
 	*         executor has been shut down
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function execute(command : java.lang.Runnable) : Void;
+	@:overload @:public override public function execute(command : java.lang.Runnable) : Void;
 	
 	/**
 	* @throws RejectedExecutionException {@inheritDoc}
 	* @throws NullPointerException       {@inheritDoc}
 	*/
-	@:overload public function submit(task : java.lang.Runnable) : java.util.concurrent.Future<Dynamic>;
+	@:overload @:public override public function submit(task : java.lang.Runnable) : java.util.concurrent.Future<Dynamic>;
 	
 	/**
 	* @throws RejectedExecutionException {@inheritDoc}
 	* @throws NullPointerException       {@inheritDoc}
 	*/
-	@:overload public function submit<T>(task : java.lang.Runnable, result : T) : java.util.concurrent.Future<T>;
+	@:overload @:public override public function submit<T>(task : java.lang.Runnable, result : T) : java.util.concurrent.Future<T>;
 	
 	/**
 	* @throws RejectedExecutionException {@inheritDoc}
 	* @throws NullPointerException       {@inheritDoc}
 	*/
-	@:overload public function submit<T>(task : java.util.concurrent.Callable<T>) : java.util.concurrent.Future<T>;
+	@:overload @:public override public function submit<T>(task : java.util.concurrent.Callable<T>) : java.util.concurrent.Future<T>;
 	
 	/**
 	* Sets the policy on whether to continue executing existing
@@ -267,7 +267,7 @@ package java.util.concurrent;
 	* @param value if {@code true}, continue after shutdown, else don't.
 	* @see #getContinueExistingPeriodicTasksAfterShutdownPolicy
 	*/
-	@:overload public function setContinueExistingPeriodicTasksAfterShutdownPolicy(value : Bool) : Void;
+	@:overload @:public public function setContinueExistingPeriodicTasksAfterShutdownPolicy(value : Bool) : Void;
 	
 	/**
 	* Gets the policy on whether to continue executing existing
@@ -280,7 +280,7 @@ package java.util.concurrent;
 	* @return {@code true} if will continue after shutdown
 	* @see #setContinueExistingPeriodicTasksAfterShutdownPolicy
 	*/
-	@:overload public function getContinueExistingPeriodicTasksAfterShutdownPolicy() : Bool;
+	@:overload @:public public function getContinueExistingPeriodicTasksAfterShutdownPolicy() : Bool;
 	
 	/**
 	* Sets the policy on whether to execute existing delayed
@@ -293,7 +293,7 @@ package java.util.concurrent;
 	* @param value if {@code true}, execute after shutdown, else don't.
 	* @see #getExecuteExistingDelayedTasksAfterShutdownPolicy
 	*/
-	@:overload public function setExecuteExistingDelayedTasksAfterShutdownPolicy(value : Bool) : Void;
+	@:overload @:public public function setExecuteExistingDelayedTasksAfterShutdownPolicy(value : Bool) : Void;
 	
 	/**
 	* Gets the policy on whether to execute existing delayed
@@ -306,7 +306,7 @@ package java.util.concurrent;
 	* @return {@code true} if will execute after shutdown
 	* @see #setExecuteExistingDelayedTasksAfterShutdownPolicy
 	*/
-	@:overload public function getExecuteExistingDelayedTasksAfterShutdownPolicy() : Bool;
+	@:overload @:public public function getExecuteExistingDelayedTasksAfterShutdownPolicy() : Bool;
 	
 	/**
 	* Sets the policy on whether cancelled tasks should be immediately
@@ -317,7 +317,7 @@ package java.util.concurrent;
 	* @see #getRemoveOnCancelPolicy
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function setRemoveOnCancelPolicy(value : Bool) : Void;
+	@:require(java7) @:overload @:public public function setRemoveOnCancelPolicy(value : Bool) : Void;
 	
 	/**
 	* Gets the policy on whether cancelled tasks should be immediately
@@ -329,7 +329,7 @@ package java.util.concurrent;
 	* @see #setRemoveOnCancelPolicy
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getRemoveOnCancelPolicy() : Bool;
+	@:require(java7) @:overload @:public public function getRemoveOnCancelPolicy() : Bool;
 	
 	/**
 	* Initiates an orderly shutdown in which previously submitted
@@ -349,7 +349,7 @@ package java.util.concurrent;
 	*
 	* @throws SecurityException {@inheritDoc}
 	*/
-	@:overload public function shutdown() : Void;
+	@:overload @:public override public function shutdown() : Void;
 	
 	/**
 	* Attempts to stop all actively executing tasks, halts the
@@ -372,7 +372,7 @@ package java.util.concurrent;
 	*         zero-delay {@code ScheduledFuture}.
 	* @throws SecurityException {@inheritDoc}
 	*/
-	@:overload public function shutdownNow() : java.util.List<java.lang.Runnable>;
+	@:overload @:public override public function shutdownNow() : java.util.List<java.lang.Runnable>;
 	
 	/**
 	* Returns the task queue used by this executor.  Each element of
@@ -385,29 +385,29 @@ package java.util.concurrent;
 	*
 	* @return the task queue
 	*/
-	@:overload public function getQueue() : java.util.concurrent.BlockingQueue<java.lang.Runnable>;
+	@:overload @:public override public function getQueue() : java.util.concurrent.BlockingQueue<java.lang.Runnable>;
 	
 	
 }
 @:native('java$util$concurrent$ScheduledThreadPoolExecutor$ScheduledFutureTask') @:internal extern class ScheduledThreadPoolExecutor_ScheduledFutureTask<V> extends java.util.concurrent.FutureTask<V> implements java.util.concurrent.RunnableScheduledFuture<V>
 {
-	@:overload public function getDelay(unit : java.util.concurrent.TimeUnit) : haxe.Int64;
+	@:overload @:public public function getDelay(unit : java.util.concurrent.TimeUnit) : haxe.Int64;
 	
-	@:overload public function compareTo(other : java.util.concurrent.Delayed) : Int;
+	@:overload @:public public function compareTo(other : java.util.concurrent.Delayed) : Int;
 	
 	/**
 	* Returns true if this is a periodic (not a one-shot) action.
 	*
 	* @return true if periodic
 	*/
-	@:overload public function isPeriodic() : Bool;
+	@:overload @:public public function isPeriodic() : Bool;
 	
-	@:overload public function cancel(mayInterruptIfRunning : Bool) : Bool;
+	@:overload @:public override public function cancel(mayInterruptIfRunning : Bool) : Bool;
 	
 	/**
 	* Overrides FutureTask version so as to reset/requeue if periodic.
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }
@@ -418,43 +418,43 @@ package java.util.concurrent;
 */
 @:native('java$util$concurrent$ScheduledThreadPoolExecutor$DelayedWorkQueue') @:internal extern class ScheduledThreadPoolExecutor_DelayedWorkQueue extends java.util.AbstractQueue<java.lang.Runnable> implements java.util.concurrent.BlockingQueue<java.lang.Runnable>
 {
-	@:overload public function contains(x : Dynamic) : Bool;
+	@:overload @:public override public function contains(x : Dynamic) : Bool;
 	
-	@:overload public function remove(x : Dynamic) : Bool;
+	@:overload @:public override public function remove(x : Dynamic) : Bool;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload public function remainingCapacity() : Int;
+	@:overload @:public public function remainingCapacity() : Int;
 	
-	@:overload public function peek() : java.util.concurrent.RunnableScheduledFuture<Dynamic>;
+	@:overload @:public override public function peek() : java.util.concurrent.RunnableScheduledFuture<Dynamic>;
 	
-	@:overload public function offer(x : java.lang.Runnable) : Bool;
+	@:overload @:public public function offer(x : java.lang.Runnable) : Bool;
 	
-	@:overload public function put(e : java.lang.Runnable) : Void;
+	@:overload @:public public function put(e : java.lang.Runnable) : Void;
 	
-	@:overload public function add(e : java.lang.Runnable) : Bool;
+	@:overload @:public public function add(e : java.lang.Runnable) : Bool;
 	
-	@:overload public function offer(e : java.lang.Runnable, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function offer(e : java.lang.Runnable, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
-	@:overload public function poll() : java.util.concurrent.RunnableScheduledFuture<Dynamic>;
+	@:overload @:public override public function poll() : java.util.concurrent.RunnableScheduledFuture<Dynamic>;
 	
-	@:overload public function take() : java.util.concurrent.RunnableScheduledFuture<Dynamic>;
+	@:overload @:public public function take() : java.util.concurrent.RunnableScheduledFuture<Dynamic>;
 	
-	@:overload public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.RunnableScheduledFuture<Dynamic>;
+	@:overload @:public public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.RunnableScheduledFuture<Dynamic>;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload public function drainTo(c : java.util.Collection<java.lang.Runnable>) : Int;
+	@:overload @:public public function drainTo(c : java.util.Collection<java.lang.Runnable>) : Int;
 	
-	@:overload public function drainTo(c : java.util.Collection<java.lang.Runnable>, maxElements : Int) : Int;
+	@:overload @:public public function drainTo(c : java.util.Collection<java.lang.Runnable>, maxElements : Int) : Int;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload public function iterator() : java.util.Iterator<java.lang.Runnable>;
+	@:overload @:public override public function iterator() : java.util.Iterator<java.lang.Runnable>;
 	
 	
 }
@@ -463,11 +463,11 @@ package java.util.concurrent;
 */
 @:native('java$util$concurrent$ScheduledThreadPoolExecutor$DelayedWorkQueue$Itr') @:internal extern class ScheduledThreadPoolExecutor_DelayedWorkQueue_Itr implements java.util.Iterator<java.lang.Runnable>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : java.lang.Runnable;
+	@:overload @:public public function next() : java.lang.Runnable;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

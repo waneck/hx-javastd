@@ -34,7 +34,7 @@ extern class SchemaFactory
 	* <code>null</code> {@link ErrorHandler} and
 	* <code>null</code> {@link LSResourceResolver}.</p>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* <p>Lookup an implementation of the <code>SchemaFactory</code> that supports the specified
@@ -101,7 +101,7 @@ extern class SchemaFactory
 	*
 	* @see #newInstance(String schemaLanguage, String factoryClassName, ClassLoader classLoader)
 	*/
-	@:overload @:final public static function newInstance(schemaLanguage : String) : javax.xml.validation.SchemaFactory;
+	@:overload @:public @:static @:final public static function newInstance(schemaLanguage : String) : javax.xml.validation.SchemaFactory;
 	
 	/**
 	* <p>Obtain a new instance of a <code>SchemaFactory</code> from class name. <code>SchemaFactory</code>
@@ -145,7 +145,7 @@ extern class SchemaFactory
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function newInstance(schemaLanguage : String, factoryClassName : String, classLoader : java.lang.ClassLoader) : javax.xml.validation.SchemaFactory;
+	@:require(java6) @:overload @:public @:static public static function newInstance(schemaLanguage : String, factoryClassName : String, classLoader : java.lang.ClassLoader) : javax.xml.validation.SchemaFactory;
 	
 	/**
 	* <p>Is specified schema supported by this <code>SchemaFactory</code>?</p>
@@ -159,7 +159,7 @@ extern class SchemaFactory
 	* @throws IllegalArgumentException If <code>schemaLanguage.length() == 0</code>
 	*   or <code>schemaLanguage</code> does not specify a <a href="#schemaLanguage">valid</a> schema language.
 	*/
-	@:overload @:abstract public function isSchemaLanguageSupported(schemaLanguage : String) : Bool;
+	@:overload @:public @:abstract public function isSchemaLanguageSupported(schemaLanguage : String) : Bool;
 	
 	/**
 	* Look up the value of a feature flag.
@@ -184,7 +184,7 @@ extern class SchemaFactory
 	*
 	* @see #setFeature(String, boolean)
 	*/
-	@:overload public function getFeature(name : String) : Bool;
+	@:overload @:public public function getFeature(name : String) : Bool;
 	
 	/**
 	* <p>Set a feature for this <code>SchemaFactory</code>,
@@ -235,7 +235,7 @@ extern class SchemaFactory
 	*
 	* @see #getFeature(String)
 	*/
-	@:overload public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public public function setFeature(name : String, value : Bool) : Void;
 	
 	/**
 	* Set the value of a property.
@@ -257,7 +257,7 @@ extern class SchemaFactory
 	*   cannot set the requested value.
 	* @throws NullPointerException If <code>name</code> is <code>null</code>.
 	*/
-	@:overload public function setProperty(name : String, object : Dynamic) : Void;
+	@:overload @:public public function setProperty(name : String, object : Dynamic) : Void;
 	
 	/**
 	* Look up the value of a property.
@@ -285,7 +285,7 @@ extern class SchemaFactory
 	*
 	* @see #setProperty(String, Object)
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	/**
 	* Sets the {@link ErrorHandler} to receive errors encountered
@@ -344,7 +344,7 @@ extern class SchemaFactory
 	* @param errorHandler A new error handler to be set.
 	*   This parameter can be <code>null</code>.
 	*/
-	@:overload @:abstract public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public @:abstract public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Gets the current {@link ErrorHandler} set to this {@link SchemaFactory}.
@@ -357,7 +357,7 @@ extern class SchemaFactory
 	*
 	* @see #setErrorHandler(ErrorHandler)
 	*/
-	@:overload @:abstract public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public @:abstract public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
 	/**
 	* Sets the {@link LSResourceResolver} to customize
@@ -404,7 +404,7 @@ extern class SchemaFactory
 	* @param   resourceResolver
 	*      A new resource resolver to be set. This parameter can be null.
 	*/
-	@:overload @:abstract public function setResourceResolver(resourceResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
+	@:overload @:public @:abstract public function setResourceResolver(resourceResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
 	
 	/**
 	* Gets the current {@link LSResourceResolver} set to this {@link SchemaFactory}.
@@ -417,7 +417,7 @@ extern class SchemaFactory
 	*
 	* @see #setErrorHandler(ErrorHandler)
 	*/
-	@:overload @:abstract public function getResourceResolver() : org.w3c.dom.ls.LSResourceResolver;
+	@:overload @:public @:abstract public function getResourceResolver() : org.w3c.dom.ls.LSResourceResolver;
 	
 	/**
 	* <p>Parses the specified source as a schema and returns it as a schema.</p>
@@ -431,7 +431,7 @@ extern class SchemaFactory
 	* @throws SAXException If a SAX error occurs during parsing.
 	* @throws NullPointerException if <code>schema</code> is null.
 	*/
-	@:overload public function newSchema(schema : javax.xml.transform.Source) : javax.xml.validation.Schema;
+	@:overload @:public public function newSchema(schema : javax.xml.transform.Source) : javax.xml.validation.Schema;
 	
 	/**
 	* <p>Parses the specified <code>File</code> as a schema and returns it as a <code>Schema</code>.</p>
@@ -445,7 +445,7 @@ extern class SchemaFactory
 	* @throws SAXException If a SAX error occurs during parsing.
 	* @throws NullPointerException if <code>schema</code> is null.
 	*/
-	@:overload public function newSchema(schema : java.io.File) : javax.xml.validation.Schema;
+	@:overload @:public public function newSchema(schema : java.io.File) : javax.xml.validation.Schema;
 	
 	/**
 	* <p>Parses the specified <code>URL</code> as a schema and returns it as a <code>Schema</code>.</p>
@@ -459,7 +459,7 @@ extern class SchemaFactory
 	* @throws SAXException If a SAX error occurs during parsing.
 	* @throws NullPointerException if <code>schema</code> is null.
 	*/
-	@:overload public function newSchema(schema : java.net.URL) : javax.xml.validation.Schema;
+	@:overload @:public public function newSchema(schema : java.net.URL) : javax.xml.validation.Schema;
 	
 	/**
 	* Parses the specified source(s) as a schema and returns it as a schema.
@@ -534,7 +534,7 @@ extern class SchemaFactory
 	* @throws UnsupportedOperationException
 	*      If the schema language doesn't support this operation.
 	*/
-	@:overload @:abstract public function newSchema(schemas : java.NativeArray<javax.xml.transform.Source>) : javax.xml.validation.Schema;
+	@:overload @:public @:abstract public function newSchema(schemas : java.NativeArray<javax.xml.transform.Source>) : javax.xml.validation.Schema;
 	
 	/**
 	* Creates a special {@link Schema} object.
@@ -587,7 +587,7 @@ extern class SchemaFactory
 	* @throws SAXException
 	*      If this operation is supported but failed for some reason.
 	*/
-	@:overload @:abstract public function newSchema() : javax.xml.validation.Schema;
+	@:overload @:public @:abstract public function newSchema() : javax.xml.validation.Schema;
 	
 	
 }

@@ -65,12 +65,12 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class IF_ICMPNE extends com.sun.org.apache.bcel.internal.generic.IfInstruction
 {
-	@:overload public function new(target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function new(target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* @return negation of instruction
 	*/
-	@:overload public function negate() : com.sun.org.apache.bcel.internal.generic.IfInstruction;
+	@:overload @:public override public function negate() : com.sun.org.apache.bcel.internal.generic.IfInstruction;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -80,7 +80,7 @@ extern class IF_ICMPNE extends com.sun.org.apache.bcel.internal.generic.IfInstru
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

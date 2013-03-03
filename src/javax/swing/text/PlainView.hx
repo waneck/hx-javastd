@@ -38,14 +38,14 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	*
 	* @param elem the element
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Returns the tab size set for the document, defaulting to 8.
 	*
 	* @return the tab size
 	*/
-	@:overload private function getTabSize() : Int;
+	@:overload @:protected private function getTabSize() : Int;
 	
 	/**
 	* Renders a line of text, suppressing whitespace at the end
@@ -61,7 +61,7 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	* @see #drawUnselectedText
 	* @see #drawSelectedText
 	*/
-	@:overload private function drawLine(lineIndex : Int, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:protected private function drawLine(lineIndex : Int, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
 	/**
 	* Renders the given range in the model as normal unselected
@@ -75,7 +75,7 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	* @return the X location of the end of the range >= 0
 	* @exception BadLocationException if the range is invalid
 	*/
-	@:overload private function drawUnselectedText(g : java.awt.Graphics, x : Int, y : Int, p0 : Int, p1 : Int) : Int;
+	@:overload @:protected private function drawUnselectedText(g : java.awt.Graphics, x : Int, y : Int, p0 : Int, p1 : Int) : Int;
 	
 	/**
 	* Renders the given range in the model as selected text.  This
@@ -91,7 +91,7 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	* @return the location of the end of the range
 	* @exception BadLocationException if the range is invalid
 	*/
-	@:overload private function drawSelectedText(g : java.awt.Graphics, x : Int, y : Int, p0 : Int, p1 : Int) : Int;
+	@:overload @:protected private function drawSelectedText(g : java.awt.Graphics, x : Int, y : Int, p0 : Int, p1 : Int) : Int;
 	
 	/**
 	* Gives access to a buffer that can be used to fetch
@@ -99,7 +99,7 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	*
 	* @return the buffer
 	*/
-	@:overload @:final private function getLineBuffer() : javax.swing.text.Segment;
+	@:overload @:protected @:final private function getLineBuffer() : javax.swing.text.Segment;
 	
 	/**
 	* Checks to see if the font metrics and longest line
@@ -107,7 +107,7 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function updateMetrics() : Void;
+	@:require(java4) @:overload @:protected private function updateMetrics() : Void;
 	
 	/**
 	* Determines the preferred span for this view along an
@@ -120,7 +120,7 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	*           The parent may choose to resize or break the view.
 	* @exception IllegalArgumentException for an invalid axis
 	*/
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Renders using the given rendering surface and area on that surface.
@@ -132,7 +132,7 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	*
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -145,7 +145,7 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	*   represent a valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload @:public override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -158,7 +158,7 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	*  given point in the view >= 0
 	* @see View#viewToModel
 	*/
-	@:overload override public function viewToModel(fx : Single, fy : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function viewToModel(fx : Single, fy : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Gives notification that something was inserted into the document
@@ -169,7 +169,7 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#insertUpdate
 	*/
-	@:overload override public function insertUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function insertUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -180,7 +180,7 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#removeUpdate
 	*/
-	@:overload override public function removeUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function removeUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -191,7 +191,7 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#changedUpdate
 	*/
-	@:overload override public function changedUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function changedUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Sets the size of the view.  This should cause
@@ -201,7 +201,7 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	* @param width the width >= 0
 	* @param height the height >= 0
 	*/
-	@:overload override public function setSize(width : Single, height : Single) : Void;
+	@:overload @:public override public function setSize(width : Single, height : Single) : Void;
 	
 	/**
 	* Returns the next tab stop position after a given reference position.
@@ -213,7 +213,7 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	*   that the tab occurred at >= 0.
 	* @return the tab stop, measured in points >= 0
 	*/
-	@:overload public function nextTabStop(x : Single, tabOffset : Int) : Single;
+	@:overload @:public public function nextTabStop(x : Single, tabOffset : Int) : Single;
 	
 	/**
 	* Repaint the region of change covered by the given document
@@ -225,7 +225,7 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function updateDamage(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:require(java4) @:overload @:protected private function updateDamage(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Repaint the given line range.
@@ -238,7 +238,7 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	*   be a valid line number in the model.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function damageLineRange(line0 : Int, line1 : Int, a : java.awt.Shape, host : java.awt.Component) : Void;
+	@:require(java4) @:overload @:protected private function damageLineRange(line0 : Int, line1 : Int, a : java.awt.Shape, host : java.awt.Component) : Void;
 	
 	/**
 	* Determine the rectangle that represents the given line.
@@ -248,12 +248,12 @@ extern class PlainView extends javax.swing.text.View implements javax.swing.text
 	*   be a valid line number in the model.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function lineToRect(a : java.awt.Shape, line : Int) : java.awt.Rectangle;
+	@:require(java4) @:overload @:protected private function lineToRect(a : java.awt.Shape, line : Int) : java.awt.Rectangle;
 	
 	/**
 	* Font metrics for the current font.
 	*/
-	private var metrics : java.awt.FontMetrics;
+	@:protected private var metrics : java.awt.FontMetrics;
 	
 	
 }

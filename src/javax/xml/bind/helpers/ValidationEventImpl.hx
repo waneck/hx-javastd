@@ -35,7 +35,7 @@ extern class ValidationEventImpl implements javax.xml.bind.ValidationEvent
 	* @param _locator The locator object for this event - may be null.
 	* @throws IllegalArgumentException if an illegal severity field is supplied
 	*/
-	@:overload public function new(_severity : Int, _message : String, _locator : javax.xml.bind.ValidationEventLocator) : Void;
+	@:overload @:public public function new(_severity : Int, _message : String, _locator : javax.xml.bind.ValidationEventLocator) : Void;
 	
 	/**
 	* Create a new ValidationEventImpl.
@@ -49,9 +49,9 @@ extern class ValidationEventImpl implements javax.xml.bind.ValidationEvent
 	* additional information about the event - may be null.
 	* @throws IllegalArgumentException if an illegal severity field is supplied
 	*/
-	@:overload public function new(_severity : Int, _message : String, _locator : javax.xml.bind.ValidationEventLocator, _linkedException : java.lang.Throwable) : Void;
+	@:overload @:public public function new(_severity : Int, _message : String, _locator : javax.xml.bind.ValidationEventLocator, _linkedException : java.lang.Throwable) : Void;
 	
-	@:overload public function getSeverity() : Int;
+	@:overload @:public public function getSeverity() : Int;
 	
 	/**
 	* Set the severity field of this event.
@@ -60,34 +60,34 @@ extern class ValidationEventImpl implements javax.xml.bind.ValidationEvent
 	* ValidationEvent.ERROR, or ValidationEvent.FATAL_ERROR.
 	* @throws IllegalArgumentException if an illegal severity field is supplied
 	*/
-	@:overload public function setSeverity(_severity : Int) : Void;
+	@:overload @:public public function setSeverity(_severity : Int) : Void;
 	
-	@:overload public function getMessage() : String;
+	@:overload @:public public function getMessage() : String;
 	
 	/**
 	* Set the message field of this event.
 	*
 	* @param _message String message - may be null.
 	*/
-	@:overload public function setMessage(_message : String) : Void;
+	@:overload @:public public function setMessage(_message : String) : Void;
 	
-	@:overload public function getLinkedException() : java.lang.Throwable;
+	@:overload @:public public function getLinkedException() : java.lang.Throwable;
 	
 	/**
 	* Set the linked exception field of this event.
 	*
 	* @param _linkedException Optional linked exception - may be null.
 	*/
-	@:overload public function setLinkedException(_linkedException : java.lang.Throwable) : Void;
+	@:overload @:public public function setLinkedException(_linkedException : java.lang.Throwable) : Void;
 	
-	@:overload public function getLocator() : javax.xml.bind.ValidationEventLocator;
+	@:overload @:public public function getLocator() : javax.xml.bind.ValidationEventLocator;
 	
 	/**
 	* Set the locator object for this event.
 	*
 	* @param _locator The locator - may be null.
 	*/
-	@:overload public function setLocator(_locator : javax.xml.bind.ValidationEventLocator) : Void;
+	@:overload @:public public function setLocator(_locator : javax.xml.bind.ValidationEventLocator) : Void;
 	
 	/**
 	* Returns a string representation of this object in a format
@@ -95,7 +95,7 @@ extern class ValidationEventImpl implements javax.xml.bind.ValidationEvent
 	*
 	* @see Object#equals(Object)
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

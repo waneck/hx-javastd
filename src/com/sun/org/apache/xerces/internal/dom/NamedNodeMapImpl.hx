@@ -20,21 +20,21 @@ package com.sun.org.apache.xerces.internal.dom;
 */
 extern class NamedNodeMapImpl implements org.w3c.dom.NamedNodeMap implements java.io.Serializable
 {
-	private var flags : java.StdTypes.Int16;
+	@:protected private var flags : java.StdTypes.Int16;
 	
-	private static var READONLY(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var READONLY(default, null) : java.StdTypes.Int16;
 	
-	private static var CHANGED(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var CHANGED(default, null) : java.StdTypes.Int16;
 	
-	private static var HASDEFAULTS(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var HASDEFAULTS(default, null) : java.StdTypes.Int16;
 	
 	/** Nodes. */
-	private var nodes : java.util.List<Dynamic>;
+	@:protected private var nodes : java.util.List<Dynamic>;
 	
-	private var ownerNode : com.sun.org.apache.xerces.internal.dom.NodeImpl;
+	@:protected private var ownerNode : com.sun.org.apache.xerces.internal.dom.NodeImpl;
 	
 	/** Constructs a named node map. */
-	@:overload private function new(ownerNode : com.sun.org.apache.xerces.internal.dom.NodeImpl) : Void;
+	@:overload @:protected private function new(ownerNode : com.sun.org.apache.xerces.internal.dom.NodeImpl) : Void;
 	
 	/**
 	* Report how many nodes are currently stored in this NamedNodeMap.
@@ -42,7 +42,7 @@ extern class NamedNodeMapImpl implements org.w3c.dom.NamedNodeMap implements jav
 	* highest-numbered node at any time can be accessed via
 	* item(getLength()-1).
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Retrieve an item from the map by 0-based index.
@@ -58,7 +58,7 @@ extern class NamedNodeMapImpl implements org.w3c.dom.NamedNodeMap implements jav
 	* @return the node which currenly has the specified index, or null if index
 	* is greater than or equal to getLength().
 	*/
-	@:overload public function item(index : Int) : org.w3c.dom.Node;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.Node;
 	
 	/**
 	* Retrieve a node by name.
@@ -67,7 +67,7 @@ extern class NamedNodeMapImpl implements org.w3c.dom.NamedNodeMap implements jav
 	* @return the Node (of unspecified sub-class) stored with that name, or
 	* null if no value has been assigned to that name.
 	*/
-	@:overload public function getNamedItem(name : String) : org.w3c.dom.Node;
+	@:overload @:public public function getNamedItem(name : String) : org.w3c.dom.Node;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -80,7 +80,7 @@ extern class NamedNodeMapImpl implements org.w3c.dom.NamedNodeMap implements jav
 	* @return Node         A Node (of any type) with the specified name, or null if the specified
 	*                      name did not identify any node in the map.
 	*/
-	@:overload public function getNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
+	@:overload @:public public function getNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
 	
 	/**
 	* Adds a node using its nodeName attribute.
@@ -99,7 +99,7 @@ extern class NamedNodeMapImpl implements org.w3c.dom.NamedNodeMap implements jav
 	*      one.
 	* @exception org.w3c.dom.DOMException The exception description.
 	*/
-	@:overload public function setNamedItem(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function setNamedItem(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Adds a node using its namespaceURI and localName.
@@ -112,10 +112,10 @@ extern class NamedNodeMapImpl implements org.w3c.dom.NamedNodeMap implements jav
 	*      local name is already present in the map, it is replaced by the new
 	*      one.
 	*/
-	@:overload public function setNamedItemNS(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function setNamedItemNS(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/***/
-	@:overload public function removeNamedItem(name : String) : org.w3c.dom.Node;
+	@:overload @:public public function removeNamedItem(name : String) : org.w3c.dom.Node;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -131,21 +131,21 @@ extern class NamedNodeMapImpl implements org.w3c.dom.NamedNodeMap implements jav
 	*                      name in the map.
 
 	*/
-	@:overload public function removeNamedItemNS(namespaceURI : String, name : String) : org.w3c.dom.Node;
+	@:overload @:public public function removeNamedItemNS(namespaceURI : String, name : String) : org.w3c.dom.Node;
 	
 	/**
 	* Cloning a NamedNodeMap is a DEEP OPERATION; it always clones
 	* all the nodes contained in the map.
 	*/
-	@:overload public function cloneMap(ownerNode : com.sun.org.apache.xerces.internal.dom.NodeImpl) : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl;
+	@:overload @:public public function cloneMap(ownerNode : com.sun.org.apache.xerces.internal.dom.NodeImpl) : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl;
 	
-	@:overload private function cloneContent(srcmap : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl) : Void;
+	@:overload @:protected private function cloneContent(srcmap : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl) : Void;
 	
 	/**
 	* NON-DOM
 	* set the ownerDocument of this node, and the attributes it contains
 	*/
-	@:overload private function setOwnerDocument(doc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl) : Void;
+	@:overload @:protected private function setOwnerDocument(doc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl) : Void;
 	
 	/**
 	* Subroutine: Locate the named item, or the point at which said item
@@ -159,22 +159,22 @@ extern class NamedNodeMapImpl implements org.w3c.dom.NamedNodeMap implements jav
 	* it from -1. (Encoding because I don't want to recompare the strings
 	* but don't want to burn bytes on a datatype to hold a flagged value.)
 	*/
-	@:overload private function findNamePoint(name : String, start : Int) : Int;
+	@:overload @:protected private function findNamePoint(name : String, start : Int) : Int;
 	
 	/** This findNamePoint is for DOM Level 2 Namespaces.
 	*/
-	@:overload private function findNamePoint(namespaceURI : String, name : String) : Int;
+	@:overload @:protected private function findNamePoint(namespaceURI : String, name : String) : Int;
 	
-	@:overload private function precedes(a : org.w3c.dom.Node, b : org.w3c.dom.Node) : Bool;
+	@:overload @:protected private function precedes(a : org.w3c.dom.Node, b : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* NON-DOM: Remove attribute at specified index
 	*/
-	@:overload private function removeItem(index : Int) : Void;
+	@:overload @:protected private function removeItem(index : Int) : Void;
 	
-	@:overload private function getItem(index : Int) : Dynamic;
+	@:overload @:protected private function getItem(index : Int) : Dynamic;
 	
-	@:overload private function addItem(arg : org.w3c.dom.Node) : Int;
+	@:overload @:protected private function addItem(arg : org.w3c.dom.Node) : Int;
 	
 	/**
 	* NON-DOM: copy content of this map into the specified ArrayList
@@ -182,14 +182,14 @@ extern class NamedNodeMapImpl implements org.w3c.dom.NamedNodeMap implements jav
 	* @param list   ArrayList to copy information into.
 	* @return A copy of this node named map
 	*/
-	@:overload private function cloneMap(list : java.util.ArrayList<Dynamic>) : java.util.ArrayList<Dynamic>;
+	@:overload @:protected private function cloneMap(list : java.util.ArrayList<Dynamic>) : java.util.ArrayList<Dynamic>;
 	
-	@:overload private function getNamedItemIndex(namespaceURI : String, localName : String) : Int;
+	@:overload @:protected private function getNamedItemIndex(namespaceURI : String, localName : String) : Int;
 	
 	/**
 	* NON-DOM remove all elements from this map
 	*/
-	@:overload public function removeAll() : Void;
+	@:overload @:public public function removeAll() : Void;
 	
 	
 }

@@ -34,7 +34,7 @@ extern interface WhitespaceStrippingElementMatcher
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function shouldStripWhiteSpace(support : com.sun.org.apache.xpath.internal.XPathContext, targetElement : org.w3c.dom.Element) : Bool;
+	@:overload @:public public function shouldStripWhiteSpace(support : com.sun.org.apache.xpath.internal.XPathContext, targetElement : org.w3c.dom.Element) : Bool;
 	
 	/**
 	* Get information about whether or not whitespace can be stripped.
@@ -42,7 +42,7 @@ extern interface WhitespaceStrippingElementMatcher
 	*
 	* @return true if the whitespace can be stripped.
 	*/
-	@:overload public function canStripWhiteSpace() : Bool;
+	@:overload @:public public function canStripWhiteSpace() : Bool;
 	
 	
 }

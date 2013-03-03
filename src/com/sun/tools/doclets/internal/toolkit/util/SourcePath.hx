@@ -28,13 +28,13 @@ extern class SourcePath
 	/**
 	* Build a source path from the specified path string on the command line.
 	*/
-	@:overload public function new(pathstr : String) : Void;
+	@:overload @:public public function new(pathstr : String) : Void;
 	
 	/**
 	* Build a default source path from the path strings specified by
 	* the properties env.class.path.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Find the specified directory in the source path.
@@ -42,12 +42,12 @@ extern class SourcePath
 	* @param name Name of the directory to be searched for in the source path.
 	* @return File Return the directory if found else return null.
 	*/
-	@:overload public function getDirectory(name : String) : java.io.File;
+	@:overload @:public public function getDirectory(name : String) : java.io.File;
 	
 	/**
 	* Return original source path string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

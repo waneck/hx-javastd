@@ -25,21 +25,21 @@ package com.sun.corba.se.impl.ior;
 */
 extern class ObjectKeyImpl implements com.sun.corba.se.spi.ior.ObjectKey
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function getTemplate() : com.sun.corba.se.spi.ior.ObjectKeyTemplate;
+	@:overload @:public public function getTemplate() : com.sun.corba.se.spi.ior.ObjectKeyTemplate;
 	
-	@:overload public function getId() : com.sun.corba.se.spi.ior.ObjectId;
+	@:overload @:public public function getId() : com.sun.corba.se.spi.ior.ObjectId;
 	
-	@:overload public function new(oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate, id : com.sun.corba.se.spi.ior.ObjectId) : Void;
+	@:overload @:public public function new(oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate, id : com.sun.corba.se.spi.ior.ObjectId) : Void;
 	
-	@:overload public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload public function getBytes(orb : org.omg.CORBA.ORB) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes(orb : org.omg.CORBA.ORB) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getServerRequestDispatcher(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
+	@:overload @:public public function getServerRequestDispatcher(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
 	
 	
 }

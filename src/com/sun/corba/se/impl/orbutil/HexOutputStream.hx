@@ -29,7 +29,7 @@ extern class HexOutputStream extends java.io.OutputStream
 	* Creates a new HexOutputStream.
 	* @param w The underlying StringWriter.
 	*/
-	@:overload public function new(w : java.io.StringWriter) : Void;
+	@:overload @:public public function new(w : java.io.StringWriter) : Void;
 	
 	/**
 	* Writes a byte. Will block until the byte is actually
@@ -37,11 +37,11 @@ extern class HexOutputStream extends java.io.OutputStream
 	* param b The byte to write out.
 	* @exception java.io.IOException I/O error occurred.
 	*/
-	@:overload @:synchronized public function write(b : Int) : Void;
+	@:overload @:public @:synchronized override public function write(b : Int) : Void;
 	
-	@:overload @:synchronized public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:synchronized public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	
 }

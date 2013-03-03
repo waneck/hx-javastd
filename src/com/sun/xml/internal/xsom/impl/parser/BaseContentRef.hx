@@ -25,11 +25,11 @@ package com.sun.xml.internal.xsom.impl.parser;
 */
 extern class BaseContentRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_ContentType implements com.sun.xml.internal.xsom.impl.parser.Patch
 {
-	@:overload public function new($runtime : com.sun.xml.internal.xsom.impl.parser.NGCCRuntimeEx, _baseType : com.sun.xml.internal.xsom.impl.Ref.Ref_Type) : Void;
+	@:overload @:public public function new($runtime : com.sun.xml.internal.xsom.impl.parser.NGCCRuntimeEx, _baseType : com.sun.xml.internal.xsom.impl.Ref.Ref_Type) : Void;
 	
-	@:overload public function getContentType() : com.sun.xml.internal.xsom.XSContentType;
+	@:overload @:public public function getContentType() : com.sun.xml.internal.xsom.XSContentType;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

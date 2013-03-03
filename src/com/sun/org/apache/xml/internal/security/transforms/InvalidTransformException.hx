@@ -25,14 +25,14 @@ extern class InvalidTransformException extends com.sun.org.apache.xml.internal.s
 	* Constructor InvalidTransformException
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor InvalidTransformException
 	*
 	* @param _msgId
 	*/
-	@:overload public function new(_msgId : String) : Void;
+	@:overload @:public public function new(_msgId : String) : Void;
 	
 	/**
 	* Constructor InvalidTransformException
@@ -40,7 +40,7 @@ extern class InvalidTransformException extends com.sun.org.apache.xml.internal.s
 	* @param _msgId
 	* @param exArgs
 	*/
-	@:overload public function new(_msgId : String, exArgs : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(_msgId : String, exArgs : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Constructor InvalidTransformException
@@ -48,7 +48,7 @@ extern class InvalidTransformException extends com.sun.org.apache.xml.internal.s
 	* @param _msgId
 	* @param _originalException
 	*/
-	@:overload public function new(_msgId : String, _originalException : java.lang.Exception) : Void;
+	@:overload @:public public function new(_msgId : String, _originalException : java.lang.Exception) : Void;
 	
 	/**
 	* Constructor InvalidTransformException
@@ -57,7 +57,7 @@ extern class InvalidTransformException extends com.sun.org.apache.xml.internal.s
 	* @param exArgs
 	* @param _originalException
 	*/
-	@:overload public function new(_msgId : String, exArgs : java.NativeArray<Dynamic>, _originalException : java.lang.Exception) : Void;
+	@:overload @:public public function new(_msgId : String, exArgs : java.NativeArray<Dynamic>, _originalException : java.lang.Exception) : Void;
 	
 	
 }

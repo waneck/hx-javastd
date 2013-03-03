@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.orb;
 */
 extern class DataCollectorFactory
 {
-	@:overload public static function create(app : java.applet.Applet, props : java.util.Properties, localHostName : String) : com.sun.corba.se.spi.orb.DataCollector;
+	@:overload @:public @:static public static function create(app : java.applet.Applet, props : java.util.Properties, localHostName : String) : com.sun.corba.se.spi.orb.DataCollector;
 	
-	@:overload public static function create(args : java.NativeArray<String>, props : java.util.Properties, localHostName : String) : com.sun.corba.se.spi.orb.DataCollector;
+	@:overload @:public @:static public static function create(args : java.NativeArray<String>, props : java.util.Properties, localHostName : String) : com.sun.corba.se.spi.orb.DataCollector;
 	
-	@:overload public static function create(props : java.util.Properties, localHostName : String) : com.sun.corba.se.spi.orb.DataCollector;
+	@:overload @:public @:static public static function create(props : java.util.Properties, localHostName : String) : com.sun.corba.se.spi.orb.DataCollector;
 	
 	
 }

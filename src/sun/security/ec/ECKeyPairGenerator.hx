@@ -28,13 +28,13 @@ extern class ECKeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	/**
 	* Constructs a new ECKeyPairGenerator.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function initialize(keySize : Int, random : java.security.SecureRandom) : Void;
+	@:overload @:public override public function initialize(keySize : Int, random : java.security.SecureRandom) : Void;
 	
-	@:overload override public function initialize(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:public override public function initialize(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
-	@:overload override public function generateKeyPair() : java.security.KeyPair;
+	@:overload @:public override public function generateKeyPair() : java.security.KeyPair;
 	
 	
 }

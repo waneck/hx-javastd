@@ -46,7 +46,7 @@ extern class IdentityHashtable extends java.util.Dictionary<Dynamic, Dynamic>
 	*               or equal to zero.
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:require(java0) @:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
 	/**
 	* Constructs a new, empty hashtable with the specified initial capacity
@@ -55,7 +55,7 @@ extern class IdentityHashtable extends java.util.Dictionary<Dynamic, Dynamic>
 	* @param   initialCapacity   the initial capacity of the hashtable.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function new(initialCapacity : Int) : Void;
+	@:require(java0) @:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs a new, empty hashtable with a default capacity and load
@@ -63,7 +63,7 @@ extern class IdentityHashtable extends java.util.Dictionary<Dynamic, Dynamic>
 	*
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function new() : Void;
+	@:require(java0) @:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the number of keys in this hashtable.
@@ -71,7 +71,7 @@ extern class IdentityHashtable extends java.util.Dictionary<Dynamic, Dynamic>
 	* @return  the number of keys in this hashtable.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload override public function size() : Int;
+	@:require(java0) @:overload @:public override public function size() : Int;
 	
 	/**
 	* Tests if this hashtable maps no keys to values.
@@ -80,7 +80,7 @@ extern class IdentityHashtable extends java.util.Dictionary<Dynamic, Dynamic>
 	*          <code>false</code> otherwise.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload override public function isEmpty() : Bool;
+	@:require(java0) @:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns an enumeration of the keys in this hashtable.
@@ -90,7 +90,7 @@ extern class IdentityHashtable extends java.util.Dictionary<Dynamic, Dynamic>
 	* @see     java.util.Hashtable#elements()
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload override public function keys() : java.util.Enumeration<Dynamic>;
+	@:require(java0) @:overload @:public override public function keys() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Returns an enumeration of the values in this hashtable.
@@ -102,7 +102,7 @@ extern class IdentityHashtable extends java.util.Dictionary<Dynamic, Dynamic>
 	* @see     java.util.Hashtable#keys()
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload override public function elements() : java.util.Enumeration<Dynamic>;
+	@:require(java0) @:overload @:public override public function elements() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Tests if some key maps into the specified value in this hashtable.
@@ -117,7 +117,7 @@ extern class IdentityHashtable extends java.util.Dictionary<Dynamic, Dynamic>
 	* @see        java.util.Hashtable#containsKey(java.lang.Object)
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload public function contains(value : Dynamic) : Bool;
+	@:require(java0) @:overload @:public public function contains(value : Dynamic) : Bool;
 	
 	/**
 	* Tests if the specified object is a key in this hashtable.
@@ -128,7 +128,7 @@ extern class IdentityHashtable extends java.util.Dictionary<Dynamic, Dynamic>
 	* @see     java.util.Hashtable#contains(java.lang.Object)
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function containsKey(key : Dynamic) : Bool;
+	@:require(java0) @:overload @:public public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Returns the value to which the specified key is mapped in this hashtable.
@@ -140,7 +140,7 @@ extern class IdentityHashtable extends java.util.Dictionary<Dynamic, Dynamic>
 	* @see     java.util.Hashtable#put(java.lang.Object, java.lang.Object)
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload override public function get(key : Dynamic) : Dynamic;
+	@:require(java0) @:overload @:public override public function get(key : Dynamic) : Dynamic;
 	
 	/**
 	* Rehashes the contents of the hashtable into a hashtable with a
@@ -150,7 +150,7 @@ extern class IdentityHashtable extends java.util.Dictionary<Dynamic, Dynamic>
 	*
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload private function rehash() : Void;
+	@:require(java0) @:overload @:protected private function rehash() : Void;
 	
 	/**
 	* Maps the specified <code>key</code> to the specified
@@ -169,7 +169,7 @@ extern class IdentityHashtable extends java.util.Dictionary<Dynamic, Dynamic>
 	* @see     java.util.Hashtable#get(java.lang.Object)
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload override public function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:require(java0) @:overload @:public override public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
 	/**
 	* Removes the key (and its corresponding value) from this
@@ -180,14 +180,14 @@ extern class IdentityHashtable extends java.util.Dictionary<Dynamic, Dynamic>
 	*          or <code>null</code> if the key did not have a mapping.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload override public function remove(key : Dynamic) : Dynamic;
+	@:require(java0) @:overload @:public override public function remove(key : Dynamic) : Dynamic;
 	
 	/**
 	* Clears this hashtable so that it contains no keys.
 	*
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function clear() : Void;
+	@:require(java0) @:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns a rather long string representation of this hashtable.
@@ -195,7 +195,7 @@ extern class IdentityHashtable extends java.util.Dictionary<Dynamic, Dynamic>
 	* @return  a string representation of this hashtable.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function toString() : String;
+	@:require(java0) @:overload @:public public function toString() : String;
 	
 	
 }

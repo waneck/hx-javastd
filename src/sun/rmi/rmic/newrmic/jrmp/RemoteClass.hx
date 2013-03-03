@@ -43,7 +43,7 @@ package sun.rmi.rmic.newrmic.jrmp;
 **/
 @:native('sun$rmi$rmic$newrmic$jrmp$RemoteClass$ClassDocComparator') @:internal extern class RemoteClass_ClassDocComparator implements java.util.Comparator<com.sun.javadoc.ClassDoc>
 {
-	@:overload public function compare(o1 : com.sun.javadoc.ClassDoc, o2 : com.sun.javadoc.ClassDoc) : Int;
+	@:overload @:public public function compare(o1 : com.sun.javadoc.ClassDoc, o2 : com.sun.javadoc.ClassDoc) : Int;
 	
 	
 }
@@ -58,7 +58,7 @@ package sun.rmi.rmic.newrmic.jrmp;
 	* Cloning is supported by returning a shallow copy of this
 	* object.
 	**/
-	@:overload private function clone() : sun.rmi.rmic.newrmic.jrmp.RemoteClass.RemoteClass_Method;
+	@:overload @:protected private function clone() : sun.rmi.rmic.newrmic.jrmp.RemoteClass.RemoteClass_Method;
 	
 	
 }

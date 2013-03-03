@@ -32,33 +32,33 @@ extern class DLSSampleOptions
 	*
 	* @author Karl Helgason
 	*/
-	private var unitynote : Int;
+	@:protected private var unitynote : Int;
 	
-	private var finetune : java.StdTypes.Int16;
+	@:protected private var finetune : java.StdTypes.Int16;
 	
-	private var attenuation : Int;
+	@:protected private var attenuation : Int;
 	
-	private var options : haxe.Int64;
+	@:protected private var options : haxe.Int64;
 	
-	private var loops : java.util.List<com.sun.media.sound.DLSSampleLoop>;
+	@:protected private var loops : java.util.List<com.sun.media.sound.DLSSampleLoop>;
 	
-	@:overload public function getAttenuation() : Int;
+	@:overload @:public public function getAttenuation() : Int;
 	
-	@:overload public function setAttenuation(attenuation : Int) : Void;
+	@:overload @:public public function setAttenuation(attenuation : Int) : Void;
 	
-	@:overload public function getFinetune() : java.StdTypes.Int16;
+	@:overload @:public public function getFinetune() : java.StdTypes.Int16;
 	
-	@:overload public function setFinetune(finetune : java.StdTypes.Int16) : Void;
+	@:overload @:public public function setFinetune(finetune : java.StdTypes.Int16) : Void;
 	
-	@:overload public function getLoops() : java.util.List<com.sun.media.sound.DLSSampleLoop>;
+	@:overload @:public public function getLoops() : java.util.List<com.sun.media.sound.DLSSampleLoop>;
 	
-	@:overload public function getOptions() : haxe.Int64;
+	@:overload @:public public function getOptions() : haxe.Int64;
 	
-	@:overload public function setOptions(options : haxe.Int64) : Void;
+	@:overload @:public public function setOptions(options : haxe.Int64) : Void;
 	
-	@:overload public function getUnitynote() : Int;
+	@:overload @:public public function getUnitynote() : Int;
 	
-	@:overload public function setUnitynote(unitynote : Int) : Void;
+	@:overload @:public public function setUnitynote(unitynote : Int) : Void;
 	
 	
 }

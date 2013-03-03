@@ -25,16 +25,16 @@ package com.sun.corba.se.spi.servicecontext;
 */
 extern class ServiceContexts
 {
-	@:overload public static function writeNullServiceContext(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public @:static public static function writeNullServiceContext(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
 	/**
 	* Read the Service contexts from the input stream.
 	*/
-	@:overload public function new(s : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	@:overload @:public public function new(s : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
-	@:overload public function addAlignmentPadding() : Void;
+	@:overload @:public public function addAlignmentPadding() : Void;
 	
 	/**
 	* Write the service contexts to the output stream.
@@ -42,20 +42,20 @@ extern class ServiceContexts
 	* If they haven't been unmarshaled, we don't have to
 	* unmarshal them.
 	*/
-	@:overload public function write(os : org.omg.CORBA_2_3.portable.OutputStream, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
+	@:overload @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
 	
 	/** Add a service context to the stream, if there is not already
 	* a service context in this object with the same id as sc.
 	*/
-	@:overload public function put(sc : com.sun.corba.se.spi.servicecontext.ServiceContext) : Void;
+	@:overload @:public public function put(sc : com.sun.corba.se.spi.servicecontext.ServiceContext) : Void;
 	
-	@:overload public function delete(scId : Int) : Void;
+	@:overload @:public public function delete(scId : Int) : Void;
 	
-	@:overload public function delete(id : Null<Int>) : Void;
+	@:overload @:public public function delete(id : Null<Int>) : Void;
 	
-	@:overload public function get(scId : Int) : com.sun.corba.se.spi.servicecontext.ServiceContext;
+	@:overload @:public public function get(scId : Int) : com.sun.corba.se.spi.servicecontext.ServiceContext;
 	
-	@:overload public function get(id : Null<Int>) : com.sun.corba.se.spi.servicecontext.ServiceContext;
+	@:overload @:public public function get(id : Null<Int>) : com.sun.corba.se.spi.servicecontext.ServiceContext;
 	
 	
 }

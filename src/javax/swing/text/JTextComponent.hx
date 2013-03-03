@@ -32,21 +32,21 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* is used, because layout is managed by the view subsystem of text.
 	* The document model is set to <code>null</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Fetches the user-interface factory for this text-oriented editor.
 	*
 	* @return the factory
 	*/
-	@:overload public function getUI() : javax.swing.plaf.TextUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.TextUI;
 	
 	/**
 	* Sets the user-interface factory for this text-oriented editor.
 	*
 	* @param ui the factory
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.TextUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.TextUI) : Void;
 	
 	/**
 	* Reloads the pluggable UI.  The key used to fetch the
@@ -54,7 +54,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* the UI is <code>TextUI</code>.  <code>invalidate</code>
 	* is called after setting the UI.
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Adds a caret listener for notification of any changes
@@ -63,7 +63,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param listener the listener to be added
 	* @see javax.swing.event.CaretEvent
 	*/
-	@:overload public function addCaretListener(listener : javax.swing.event.CaretListener) : Void;
+	@:overload @:public public function addCaretListener(listener : javax.swing.event.CaretListener) : Void;
 	
 	/**
 	* Removes a caret listener.
@@ -71,7 +71,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param listener the listener to be removed
 	* @see javax.swing.event.CaretEvent
 	*/
-	@:overload public function removeCaretListener(listener : javax.swing.event.CaretListener) : Void;
+	@:overload @:public public function removeCaretListener(listener : javax.swing.event.CaretListener) : Void;
 	
 	/**
 	* Returns an array of all the caret listeners
@@ -86,7 +86,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getCaretListeners() : java.NativeArray<javax.swing.event.CaretListener>;
+	@:require(java4) @:overload @:public public function getCaretListeners() : java.NativeArray<javax.swing.event.CaretListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -98,7 +98,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param e the event
 	* @see EventListenerList
 	*/
-	@:overload private function fireCaretUpdate(e : javax.swing.event.CaretEvent) : Void;
+	@:overload @:protected private function fireCaretUpdate(e : javax.swing.event.CaretEvent) : Void;
 	
 	/**
 	* Associates the editor with a text document.
@@ -113,7 +113,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*        bound: true
 	*       expert: true
 	*/
-	@:overload public function setDocument(doc : javax.swing.text.Document) : Void;
+	@:overload @:public public function setDocument(doc : javax.swing.text.Document) : Void;
 	
 	/**
 	* Fetches the model associated with the editor.  This is
@@ -124,9 +124,9 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return the model
 	*/
-	@:overload public function getDocument() : javax.swing.text.Document;
+	@:overload @:public public function getDocument() : javax.swing.text.Document;
 	
-	@:overload override public function setComponentOrientation(o : java.awt.ComponentOrientation) : Void;
+	@:overload @:public override public function setComponentOrientation(o : java.awt.ComponentOrientation) : Void;
 	
 	/**
 	* Fetches the command list for the editor.  This is
@@ -137,7 +137,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return the command list
 	*/
-	@:overload public function getActions() : java.NativeArray<javax.swing.Action>;
+	@:overload @:public public function getActions() : java.NativeArray<javax.swing.Action>;
 	
 	/**
 	* Sets margin space between the text component's border
@@ -154,7 +154,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*  description: desired space between the border and text area
 	*        bound: true
 	*/
-	@:overload public function setMargin(m : java.awt.Insets) : Void;
+	@:overload @:public public function setMargin(m : java.awt.Insets) : Void;
 	
 	/**
 	* Returns the margin between the text component's border and
@@ -162,7 +162,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return the margin
 	*/
-	@:overload public function getMargin() : java.awt.Insets;
+	@:overload @:public public function getMargin() : java.awt.Insets;
 	
 	/**
 	* Sets the <code>NavigationFilter</code>. <code>NavigationFilter</code>
@@ -171,7 +171,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setNavigationFilter(filter : javax.swing.text.NavigationFilter) : Void;
+	@:require(java4) @:overload @:public public function setNavigationFilter(filter : javax.swing.text.NavigationFilter) : Void;
 	
 	/**
 	* Returns the <code>NavigationFilter</code>. <code>NavigationFilter</code>
@@ -182,7 +182,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @since 1.4
 	* @return the NavigationFilter
 	*/
-	@:require(java4) @:overload public function getNavigationFilter() : javax.swing.text.NavigationFilter;
+	@:require(java4) @:overload @:public public function getNavigationFilter() : javax.swing.text.NavigationFilter;
 	
 	/**
 	* Fetches the caret that allows text-oriented navigation over
@@ -190,7 +190,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return the caret
 	*/
-	@:overload public function getCaret() : javax.swing.text.Caret;
+	@:overload @:public public function getCaret() : javax.swing.text.Caret;
 	
 	/**
 	* Sets the caret to be used.  By default this will be set
@@ -205,14 +205,14 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*        bound: true
 	*       expert: true
 	*/
-	@:overload public function setCaret(c : javax.swing.text.Caret) : Void;
+	@:overload @:public public function setCaret(c : javax.swing.text.Caret) : Void;
 	
 	/**
 	* Fetches the object responsible for making highlights.
 	*
 	* @return the highlighter
 	*/
-	@:overload public function getHighlighter() : javax.swing.text.Highlighter;
+	@:overload @:public public function getHighlighter() : javax.swing.text.Highlighter;
 	
 	/**
 	* Sets the highlighter to be used.  By default this will be set
@@ -229,7 +229,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*        bound: true
 	*       expert: true
 	*/
-	@:overload public function setHighlighter(h : javax.swing.text.Highlighter) : Void;
+	@:overload @:public public function setHighlighter(h : javax.swing.text.Highlighter) : Void;
 	
 	/**
 	* Sets the keymap to use for binding events to
@@ -244,7 +244,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*  description: set of key event to action bindings to use
 	*        bound: true
 	*/
-	@:overload public function setKeymap(map : javax.swing.text.Keymap) : Void;
+	@:overload @:public public function setKeymap(map : javax.swing.text.Keymap) : Void;
 	
 	/**
 	* Turns on or off automatic drag handling. In order to enable automatic
@@ -279,7 +279,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*  description: determines whether automatic drag handling is enabled
 	*        bound: false
 	*/
-	@:require(java4) @:overload public function setDragEnabled(b : Bool) : Void;
+	@:require(java4) @:overload @:public public function setDragEnabled(b : Bool) : Void;
 	
 	/**
 	* Returns whether or not automatic drag handling is enabled.
@@ -288,7 +288,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see #setDragEnabled
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getDragEnabled() : Bool;
+	@:require(java4) @:overload @:public public function getDragEnabled() : Bool;
 	
 	/**
 	* Sets the drop mode for this component. For backward compatibility,
@@ -316,7 +316,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see javax.swing.TransferHandler
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function setDropMode(dropMode : javax.swing.DropMode) : Void;
+	@:require(java6) @:overload @:public @:final public function setDropMode(dropMode : javax.swing.DropMode) : Void;
 	
 	/**
 	* Returns the drop mode for this component.
@@ -325,7 +325,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see #setDropMode
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getDropMode() : javax.swing.DropMode;
+	@:require(java6) @:overload @:public @:final public function getDropMode() : javax.swing.DropMode;
 	
 	/**
 	* Returns the location that this component should visually indicate
@@ -345,7 +345,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see TransferHandler#canImport(TransferHandler.TransferSupport)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getDropLocation() : javax.swing.TransferHandler.TransferHandler_DropLocation;
+	@:require(java6) @:overload @:public @:final public function getDropLocation() : javax.swing.TransferHandler.TransferHandler_DropLocation;
 	
 	/**
 	* Fetches the keymap currently active in this text
@@ -353,7 +353,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return the keymap
 	*/
-	@:overload public function getKeymap() : javax.swing.text.Keymap;
+	@:overload @:public public function getKeymap() : javax.swing.text.Keymap;
 	
 	/**
 	* Adds a new keymap into the keymap hierarchy.  Keymap bindings
@@ -370,7 +370,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*   unspecified bindings need not be resolved in some other keymap
 	* @return the keymap
 	*/
-	@:overload public static function addKeymap(nm : String, parent : javax.swing.text.Keymap) : javax.swing.text.Keymap;
+	@:overload @:public @:static public static function addKeymap(nm : String, parent : javax.swing.text.Keymap) : javax.swing.text.Keymap;
 	
 	/**
 	* Removes a named keymap previously added to the document.  Keymaps
@@ -379,7 +379,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param nm  the name of the keymap to remove
 	* @return the keymap that was removed
 	*/
-	@:overload public static function removeKeymap(nm : String) : javax.swing.text.Keymap;
+	@:overload @:public @:static public static function removeKeymap(nm : String) : javax.swing.text.Keymap;
 	
 	/**
 	* Fetches a named keymap previously added to the document.
@@ -388,7 +388,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param nm  the name of the keymap
 	* @return the keymap
 	*/
-	@:native('getKeymap') @:overload public static function _getKeymap(nm : String) : javax.swing.text.Keymap;
+	@:native('getKeymap') @:overload @:public @:static public static function _getKeymap(nm : String) : javax.swing.text.Keymap;
 	
 	/**
 	* <p>
@@ -425,7 +425,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param bindings the bindings
 	* @param actions the set of actions
 	*/
-	@:overload public static function loadKeymap(map : javax.swing.text.Keymap, bindings : java.NativeArray<javax.swing.text.JTextComponent.JTextComponent_KeyBinding>, actions : java.NativeArray<javax.swing.Action>) : Void;
+	@:overload @:public @:static public static function loadKeymap(map : javax.swing.text.Keymap, bindings : java.NativeArray<javax.swing.text.JTextComponent.JTextComponent_KeyBinding>, actions : java.NativeArray<javax.swing.Action>) : Void;
 	
 	/**
 	* Fetches the current color used to render the
@@ -433,7 +433,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return the color
 	*/
-	@:overload public function getCaretColor() : java.awt.Color;
+	@:overload @:public public function getCaretColor() : java.awt.Color;
 	
 	/**
 	* Sets the current color used to render the caret.
@@ -448,7 +448,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*        bound: true
 	*    preferred: true
 	*/
-	@:overload public function setCaretColor(c : java.awt.Color) : Void;
+	@:overload @:public public function setCaretColor(c : java.awt.Color) : Void;
 	
 	/**
 	* Fetches the current color used to render the
@@ -456,7 +456,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return the color
 	*/
-	@:overload public function getSelectionColor() : java.awt.Color;
+	@:overload @:public public function getSelectionColor() : java.awt.Color;
 	
 	/**
 	* Sets the current color used to render the selection.
@@ -471,7 +471,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*        bound: true
 	*    preferred: true
 	*/
-	@:overload public function setSelectionColor(c : java.awt.Color) : Void;
+	@:overload @:public public function setSelectionColor(c : java.awt.Color) : Void;
 	
 	/**
 	* Fetches the current color used to render the
@@ -479,7 +479,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return the color
 	*/
-	@:overload public function getSelectedTextColor() : java.awt.Color;
+	@:overload @:public public function getSelectedTextColor() : java.awt.Color;
 	
 	/**
 	* Sets the current color used to render the selected text.
@@ -494,7 +494,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*        bound: true
 	*    preferred: true
 	*/
-	@:overload public function setSelectedTextColor(c : java.awt.Color) : Void;
+	@:overload @:public public function setSelectedTextColor(c : java.awt.Color) : Void;
 	
 	/**
 	* Fetches the current color used to render the
@@ -502,7 +502,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return the color
 	*/
-	@:overload public function getDisabledTextColor() : java.awt.Color;
+	@:overload @:public public function getDisabledTextColor() : java.awt.Color;
 	
 	/**
 	* Sets the current color used to render the
@@ -516,7 +516,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*        bound: true
 	*    preferred: true
 	*/
-	@:overload public function setDisabledTextColor(c : java.awt.Color) : Void;
+	@:overload @:public public function setDisabledTextColor(c : java.awt.Color) : Void;
 	
 	/**
 	* Replaces the currently selected content with new content
@@ -531,7 +531,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @param content  the content to replace the selection with
 	*/
-	@:overload public function replaceSelection(content : String) : Void;
+	@:overload @:public public function replaceSelection(content : String) : Void;
 	
 	/**
 	* Fetches a portion of the text represented by the
@@ -542,7 +542,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @return the text
 	* @exception BadLocationException if the offset or length are invalid
 	*/
-	@:overload public function getText(offs : Int, len : Int) : String;
+	@:overload @:public public function getText(offs : Int, len : Int) : String;
 	
 	/**
 	* Converts the given location in the model to a place in
@@ -560,7 +560,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*   represent a valid location in the associated document
 	* @see TextUI#modelToView
 	*/
-	@:overload public function modelToView(pos : Int) : java.awt.Rectangle;
+	@:overload @:public public function modelToView(pos : Int) : java.awt.Rectangle;
 	
 	/**
 	* Converts the given place in the view coordinate system
@@ -576,7 +576,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*   size.
 	* @see TextUI#viewToModel
 	*/
-	@:overload public function viewToModel(pt : java.awt.Point) : Int;
+	@:overload @:public public function viewToModel(pt : java.awt.Point) : Int;
 	
 	/**
 	* Transfers the currently selected range in the associated
@@ -587,7 +587,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see java.awt.Toolkit#getSystemClipboard
 	* @see java.awt.datatransfer.Clipboard
 	*/
-	@:overload public function cut() : Void;
+	@:overload @:public public function cut() : Void;
 	
 	/**
 	* Transfers the currently selected range in the associated
@@ -598,7 +598,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see java.awt.Toolkit#getSystemClipboard
 	* @see java.awt.datatransfer.Clipboard
 	*/
-	@:overload public function copy() : Void;
+	@:overload @:public public function copy() : Void;
 	
 	/**
 	* Transfers the contents of the system clipboard into the
@@ -612,7 +612,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see java.awt.Toolkit#getSystemClipboard
 	* @see java.awt.datatransfer.Clipboard
 	*/
-	@:overload public function paste() : Void;
+	@:overload @:public public function paste() : Void;
 	
 	/**
 	* Moves the caret to a new position, leaving behind a mark
@@ -628,12 +628,12 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*               than the component's text length
 	* @see #setCaretPosition
 	*/
-	@:overload public function moveCaretPosition(pos : Int) : Void;
+	@:overload @:public public function moveCaretPosition(pos : Int) : Void;
 	
 	/**
 	* The bound property name for the focus accelerator.
 	*/
-	public static var FOCUS_ACCELERATOR_KEY(default, null) : String;
+	@:public @:static @:final public static var FOCUS_ACCELERATOR_KEY(default, null) : String;
 	
 	/**
 	* Sets the key accelerator that will cause the receiving text
@@ -651,7 +651,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*  description: accelerator character used to grab focus
 	*        bound: true
 	*/
-	@:overload public function setFocusAccelerator(aKey : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setFocusAccelerator(aKey : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Returns the key accelerator that will cause the receiving
@@ -660,7 +660,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return the key
 	*/
-	@:overload public function getFocusAccelerator() : java.StdTypes.Char16;
+	@:overload @:public public function getFocusAccelerator() : java.StdTypes.Char16;
 	
 	/**
 	* Initializes from a stream.  This creates a
@@ -681,7 +681,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see #setDocument
 	* @see PlainDocument
 	*/
-	@:overload public function read(_in : java.io.Reader, desc : Dynamic) : Void;
+	@:overload @:public public function read(_in : java.io.Reader, desc : Dynamic) : Void;
 	
 	/**
 	* Stores the contents of the model into the given
@@ -691,9 +691,9 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param out the output stream
 	* @exception IOException on any I/O error
 	*/
-	@:overload public function write(out : java.io.Writer) : Void;
+	@:overload @:public public function write(out : java.io.Writer) : Void;
 	
-	@:overload override public function removeNotify() : Void;
+	@:overload @:public override public function removeNotify() : Void;
 	
 	/**
 	* Sets the position of the text insertion caret for the
@@ -710,7 +710,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @beaninfo
 	* description: the caret position
 	*/
-	@:overload public function setCaretPosition(position : Int) : Void;
+	@:overload @:public public function setCaretPosition(position : Int) : Void;
 	
 	/**
 	* Returns the position of the text insertion caret for the
@@ -719,7 +719,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @return the position of the text insertion caret for the
 	*  text component >= 0
 	*/
-	@:overload public function getCaretPosition() : Int;
+	@:overload @:public public function getCaretPosition() : Int;
 	
 	/**
 	* Sets the text of this <code>TextComponent</code>
@@ -739,7 +739,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @beaninfo
 	* description: the text of this component
 	*/
-	@:overload public function setText(t : String) : Void;
+	@:overload @:public public function setText(t : String) : Void;
 	
 	/**
 	* Returns the text contained in this <code>TextComponent</code>.
@@ -754,7 +754,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @exception NullPointerException if the document is <code>null</code>
 	* @see #setText
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
 	/**
 	* Returns the selected text contained in this
@@ -766,7 +766,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*  have a valid mapping into the document for some reason
 	* @see #setText
 	*/
-	@:overload public function getSelectedText() : String;
+	@:overload @:public public function getSelectedText() : String;
 	
 	/**
 	* Returns the boolean indicating whether this
@@ -775,7 +775,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @return the boolean value
 	* @see #setEditable
 	*/
-	@:overload public function isEditable() : Bool;
+	@:overload @:public public function isEditable() : Bool;
 	
 	/**
 	* Sets the specified boolean to indicate whether or not this
@@ -789,7 +789,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* description: specifies if the text can be edited
 	*       bound: true
 	*/
-	@:overload public function setEditable(b : Bool) : Void;
+	@:overload @:public public function setEditable(b : Bool) : Void;
 	
 	/**
 	* Returns the selected text's start position.  Return 0 for an
@@ -797,7 +797,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return the start position >= 0
 	*/
-	@:overload public function getSelectionStart() : Int;
+	@:overload @:public public function getSelectionStart() : Int;
 	
 	/**
 	* Sets the selection start to the specified position.  The new
@@ -813,7 +813,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @beaninfo
 	* description: starting location of the selection.
 	*/
-	@:overload public function setSelectionStart(selectionStart : Int) : Void;
+	@:overload @:public public function setSelectionStart(selectionStart : Int) : Void;
 	
 	/**
 	* Returns the selected text's end position.  Return 0 if the document
@@ -821,7 +821,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return the end position >= 0
 	*/
-	@:overload public function getSelectionEnd() : Int;
+	@:overload @:public public function getSelectionEnd() : Int;
 	
 	/**
 	* Sets the selection end to the specified position.  The new
@@ -837,7 +837,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @beaninfo
 	* description: ending location of the selection.
 	*/
-	@:overload public function setSelectionEnd(selectionEnd : Int) : Void;
+	@:overload @:public public function setSelectionEnd(selectionEnd : Int) : Void;
 	
 	/**
 	* Selects the text between the specified start and end positions.
@@ -867,13 +867,13 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see #setCaretPosition
 	* @see #moveCaretPosition
 	*/
-	@:overload public function select(selectionStart : Int, selectionEnd : Int) : Void;
+	@:overload @:public public function select(selectionStart : Int, selectionEnd : Int) : Void;
 	
 	/**
 	* Selects all the text in the <code>TextComponent</code>.
 	* Does nothing on a <code>null</code> or empty document.
 	*/
-	@:overload public function selectAll() : Void;
+	@:overload @:public public function selectAll() : Void;
 	
 	/**
 	* Returns the string to be used as the tooltip for <code>event</code>.
@@ -897,7 +897,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see javax.swing.plaf.TextUI#getToolTipText
 	* @see javax.swing.ToolTipManager#registerComponent
 	*/
-	@:overload override public function getToolTipText(event : java.awt.event.MouseEvent) : String;
+	@:overload @:public override public function getToolTipText(event : java.awt.event.MouseEvent) : String;
 	
 	/**
 	* Returns the preferred size of the viewport for a view component.
@@ -907,7 +907,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @return the <code>preferredSize</code> of a <code>JViewport</code>
 	* whose view is this <code>Scrollable</code>
 	*/
-	@:overload public function getPreferredScrollableViewportSize() : java.awt.Dimension;
+	@:overload @:public public function getPreferredScrollableViewportSize() : java.awt.Dimension;
 	
 	/**
 	* Components that display logical rows or columns should compute
@@ -929,7 +929,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @exception IllegalArgumentException for an invalid orientation
 	* @see JScrollBar#setUnitIncrement
 	*/
-	@:overload public function getScrollableUnitIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
+	@:overload @:public public function getScrollableUnitIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
 	
 	/**
 	* Components that display logical rows or columns should compute
@@ -949,7 +949,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @exception IllegalArgumentException for an invalid orientation
 	* @see JScrollBar#setBlockIncrement
 	*/
-	@:overload public function getScrollableBlockIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
+	@:overload @:public public function getScrollableBlockIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
 	
 	/**
 	* Returns true if a viewport should always force the width of this
@@ -967,7 +967,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @return true if a viewport should force the <code>Scrollable</code>s
 	*   width to match its own
 	*/
-	@:overload public function getScrollableTracksViewportWidth() : Bool;
+	@:overload @:public public function getScrollableTracksViewportWidth() : Bool;
 	
 	/**
 	* Returns true if a viewport should always force the height of this
@@ -982,7 +982,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @return true if a viewport should force the Scrollables height
 	*   to match its own
 	*/
-	@:overload public function getScrollableTracksViewportHeight() : Bool;
+	@:overload @:public public function getScrollableTracksViewportHeight() : Bool;
 	
 	/**
 	* A convenience print method that displays a print dialog, and then
@@ -1005,7 +1005,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function print() : Bool;
+	@:require(java6) @:overload @:public public function print() : Bool;
 	
 	/**
 	* A convenience print method that displays a print dialog, and then
@@ -1032,7 +1032,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see java.text.MessageFormat
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function print(headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat) : Bool;
+	@:require(java6) @:overload @:public public function print(headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat) : Bool;
 	
 	/**
 	* Prints the content of this {@code JTextComponent}. Note: this method
@@ -1144,7 +1144,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function print(headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat, showPrintDialog : Bool, service : javax.print.PrintService, attributes : javax.print.attribute.PrintRequestAttributeSet, interactive : Bool) : Bool;
+	@:require(java6) @:overload @:public public function print(headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat, showPrintDialog : Bool, service : javax.print.PrintService, attributes : javax.print.attribute.PrintRequestAttributeSet, interactive : Bool) : Bool;
 	
 	/**
 	* Returns a {@code Printable} to use for printing the content of this
@@ -1204,7 +1204,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getPrintable(headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat) : java.awt.print.Printable;
+	@:require(java6) @:overload @:public public function getPrintable(headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat) : java.awt.print.Printable;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with this
@@ -1218,7 +1218,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*         <code>AccessibleContext</code> of this
 	*         <code>JTextComponent</code>
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Returns a string representation of this <code>JTextComponent</code>.
@@ -1232,20 +1232,20 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return  a string representation of this <code>JTextComponent</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* The default keymap that will be shared by all
 	* <code>JTextComponent</code> instances unless they
 	* have had a different keymap set.
 	*/
-	public static var DEFAULT_KEYMAP(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_KEYMAP(default, null) : String;
 	
-	@:overload override private function processInputMethodEvent(e : java.awt.event.InputMethodEvent) : Void;
+	@:overload @:protected override private function processInputMethodEvent(e : java.awt.event.InputMethodEvent) : Void;
 	
-	@:overload override public function getInputMethodRequests() : java.awt.im.InputMethodRequests;
+	@:overload @:public override public function getInputMethodRequests() : java.awt.im.InputMethodRequests;
 	
-	@:overload override public function addInputMethodListener(l : java.awt.event.InputMethodListener) : Void;
+	@:overload @:public override public function addInputMethodListener(l : java.awt.event.InputMethodListener) : Void;
 	
 	/**
 	* Saves composed text around the specified position.
@@ -1259,7 +1259,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see #restoreComposedText
 	* @since 1.7
 	*/
-	@:require(java7) @:overload private function saveComposedText(pos : Int) : Bool;
+	@:require(java7) @:overload @:protected private function saveComposedText(pos : Int) : Bool;
 	
 	/**
 	* Restores composed text previously saved by {@code saveComposedText}.
@@ -1270,7 +1270,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see #saveComposedText
 	* @since 1.7
 	*/
-	@:require(java7) @:overload private function restoreComposedText() : Void;
+	@:require(java7) @:overload @:protected private function restoreComposedText() : Void;
 	
 	
 }
@@ -1291,12 +1291,12 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	/**
 	* The key.
 	*/
-	public var key : javax.swing.KeyStroke;
+	@:public public var key : javax.swing.KeyStroke;
 	
 	/**
 	* The name of the action for the key.
 	*/
-	public var actionName : String;
+	@:public public var actionName : String;
 	
 	/**
 	* Creates a new key binding.
@@ -1304,7 +1304,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param key the key
 	* @param actionName the name of the action for the key
 	*/
-	@:overload public function new(key : javax.swing.KeyStroke, actionName : String) : Void;
+	@:overload @:public public function new(key : javax.swing.KeyStroke, actionName : String) : Void;
 	
 	
 }
@@ -1328,7 +1328,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* Constructs an AccessibleJTextComponent.  Adds a listener to track
 	* caret change.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Handles caret updates (fire appropriate property change event,
@@ -1339,7 +1339,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @param e the CaretEvent
 	*/
-	@:overload public function caretUpdate(e : javax.swing.event.CaretEvent) : Void;
+	@:overload @:public public function caretUpdate(e : javax.swing.event.CaretEvent) : Void;
 	
 	/**
 	* Handles document insert (fire appropriate property change event
@@ -1348,7 +1348,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @param e the DocumentEvent
 	*/
-	@:overload public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	/**
 	* Handles document remove (fire appropriate property change event,
@@ -1357,7 +1357,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @param e the DocumentEvent
 	*/
-	@:overload public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	/**
 	* Handles document remove (fire appropriate property change event,
@@ -1366,7 +1366,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @param e the DocumentEvent
 	*/
-	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	/**
 	* Gets the state set of the JTextComponent.
@@ -1381,7 +1381,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see AccessibleState
 	* @see #addPropertyChangeListener
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the role of this object.
@@ -1390,7 +1390,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* object (AccessibleRole.TEXT)
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the AccessibleText associated with this object.  In the
@@ -1400,7 +1400,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload @:public override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Given a point in local coordinates, return the zero-based index
@@ -1410,7 +1410,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param p the Point in local coordinates
 	* @return the zero-based index of the character under Point p.
 	*/
-	@:overload public function getIndexAtPoint(p : java.awt.Point) : Int;
+	@:overload @:public public function getIndexAtPoint(p : java.awt.Point) : Int;
 	
 	/**
 	* Determines the bounding box of the character at the given
@@ -1440,14 +1440,14 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param i the index into the String >= 0
 	* @return the screen coordinates of the character's bounding box
 	*/
-	@:overload public function getCharacterBounds(i : Int) : java.awt.Rectangle;
+	@:overload @:public public function getCharacterBounds(i : Int) : java.awt.Rectangle;
 	
 	/**
 	* Returns the number of characters (valid indices)
 	*
 	* @return the number of characters >= 0
 	*/
-	@:overload public function getCharCount() : Int;
+	@:overload @:public public function getCharCount() : Int;
 	
 	/**
 	* Returns the zero-based offset of the caret.
@@ -1458,7 +1458,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return the zero-based offset of the caret.
 	*/
-	@:overload public function getCaretPosition() : Int;
+	@:overload @:public public function getCaretPosition() : Int;
 	
 	/**
 	* Returns the AttributeSet for a given character (at a given index).
@@ -1466,7 +1466,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param i the zero-based index into the text
 	* @return the AttributeSet of the character
 	*/
-	@:overload public function getCharacterAttribute(i : Int) : javax.print.attribute.AttributeSet;
+	@:overload @:public public function getCharacterAttribute(i : Int) : javax.print.attribute.AttributeSet;
 	
 	/**
 	* Returns the start offset within the selected text.
@@ -1477,7 +1477,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return the index into the text of the start of the selection >= 0
 	*/
-	@:overload public function getSelectionStart() : Int;
+	@:overload @:public public function getSelectionStart() : Int;
 	
 	/**
 	* Returns the end offset within the selected text.
@@ -1488,14 +1488,14 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return the index into teh text of the end of the selection >= 0
 	*/
-	@:overload public function getSelectionEnd() : Int;
+	@:overload @:public public function getSelectionEnd() : Int;
 	
 	/**
 	* Returns the portion of the text that is selected.
 	*
 	* @return the text, null if no selection
 	*/
-	@:overload public function getSelectedText() : String;
+	@:overload @:public public function getSelectedText() : String;
 	
 	/**
 	* Returns the String at a given index. Whitespace
@@ -1506,7 +1506,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @return the letter, word, or sentence.
 	*
 	*/
-	@:overload public function getAtIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getAtIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the String after a given index. Whitespace
@@ -1516,7 +1516,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param index an index within the text
 	* @return the letter, word, or sentence.
 	*/
-	@:overload public function getAfterIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getAfterIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the String before a given index. Whitespace
@@ -1526,7 +1526,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param index an index within the text
 	* @return the letter, word, or sentence.
 	*/
-	@:overload public function getBeforeIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getBeforeIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the AccessibleEditableText interface for
@@ -1535,7 +1535,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @return the AccessibleEditableText interface
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getAccessibleEditableText() : javax.accessibility.AccessibleEditableText;
+	@:require(java4) @:overload @:public override public function getAccessibleEditableText() : javax.accessibility.AccessibleEditableText;
 	
 	/**
 	* Sets the text contents to the specified string.
@@ -1543,7 +1543,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param s the string to set the text contents
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setTextContents(s : String) : Void;
+	@:require(java4) @:overload @:public public function setTextContents(s : String) : Void;
 	
 	/**
 	* Inserts the specified string at the given index
@@ -1553,7 +1553,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param s the string to insert in the text
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function insertTextAtIndex(index : Int, s : String) : Void;
+	@:require(java4) @:overload @:public public function insertTextAtIndex(index : Int, s : String) : Void;
 	
 	/**
 	* Returns the text string between two indices.
@@ -1563,7 +1563,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @return the text string between the indices
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getTextRange(startIndex : Int, endIndex : Int) : String;
+	@:require(java4) @:overload @:public public function getTextRange(startIndex : Int, endIndex : Int) : String;
 	
 	/**
 	* Deletes the text between two indices
@@ -1572,7 +1572,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param endIndex the ending index in the text
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function delete(startIndex : Int, endIndex : Int) : Void;
+	@:require(java4) @:overload @:public public function delete(startIndex : Int, endIndex : Int) : Void;
 	
 	/**
 	* Cuts the text between two indices into the system clipboard.
@@ -1581,7 +1581,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param endIndex the ending index in the text
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function cut(startIndex : Int, endIndex : Int) : Void;
+	@:require(java4) @:overload @:public public function cut(startIndex : Int, endIndex : Int) : Void;
 	
 	/**
 	* Pastes the text from the system clipboard into the text
@@ -1590,7 +1590,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param startIndex the starting index in the text
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function paste(startIndex : Int) : Void;
+	@:require(java4) @:overload @:public public function paste(startIndex : Int) : Void;
 	
 	/**
 	* Replaces the text between two indices with the specified
@@ -1601,7 +1601,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param s the string to replace the text between two indices
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function replaceText(startIndex : Int, endIndex : Int, s : String) : Void;
+	@:require(java4) @:overload @:public public function replaceText(startIndex : Int, endIndex : Int, s : String) : Void;
 	
 	/**
 	* Selects the text between two indices.
@@ -1610,7 +1610,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param endIndex the ending index in the text
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function selectText(startIndex : Int, endIndex : Int) : Void;
+	@:require(java4) @:overload @:public public function selectText(startIndex : Int, endIndex : Int) : Void;
 	
 	/**
 	* Sets attributes for the text between two indices.
@@ -1621,7 +1621,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see AttributeSet
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setAttributes(startIndex : Int, endIndex : Int, as : javax.print.attribute.AttributeSet) : Void;
+	@:require(java4) @:overload @:public public function setAttributes(startIndex : Int, endIndex : Int, as : javax.print.attribute.AttributeSet) : Void;
 	
 	/**
 	* Returns the <code>AccessibleTextSequence</code> at a given
@@ -1643,7 +1643,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getTextSequenceAt(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
+	@:require(java6) @:overload @:public public function getTextSequenceAt(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
 	
 	/**
 	* Returns the <code>AccessibleTextSequence</code> after a given
@@ -1665,7 +1665,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getTextSequenceAfter(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
+	@:require(java6) @:overload @:public public function getTextSequenceAfter(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
 	
 	/**
 	* Returns the <code>AccessibleTextSequence</code> before a given
@@ -1687,7 +1687,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getTextSequenceBefore(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
+	@:require(java6) @:overload @:public public function getTextSequenceBefore(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
 	
 	/**
 	* Returns the <code>Rectangle</code> enclosing the text between
@@ -1700,9 +1700,9 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getTextBounds(startIndex : Int, endIndex : Int) : java.awt.Rectangle;
+	@:require(java6) @:overload @:public public function getTextBounds(startIndex : Int, endIndex : Int) : java.awt.Rectangle;
 	
-	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload @:public override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Returns the number of accessible actions available in this object
@@ -1712,7 +1712,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @return the zero-based number of Actions in this object
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAccessibleActionCount() : Int;
+	@:require(java4) @:overload @:public public function getAccessibleActionCount() : Int;
 	
 	/**
 	* Returns a description of the specified action of the object.
@@ -1722,7 +1722,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see #getAccessibleActionCount
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAccessibleActionDescription(i : Int) : String;
+	@:require(java4) @:overload @:public public function getAccessibleActionDescription(i : Int) : String;
 	
 	/**
 	* Performs the specified Action on the object
@@ -1732,7 +1732,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see #getAccessibleActionCount
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function doAccessibleAction(i : Int) : Bool;
+	@:require(java4) @:overload @:public public function doAccessibleAction(i : Int) : Bool;
 	
 	
 }
@@ -1745,7 +1745,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	/**
 	* Offset into the model that the position represents.
 	*/
-	public var modelOffset : Int;
+	@:public public var modelOffset : Int;
 	
 	
 }
@@ -1764,14 +1764,14 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return the drop index
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* Returns the bias for the drop index.
 	*
 	* @return the drop bias
 	*/
-	@:overload public function getBias() : javax.swing.text.Position.Position_Bias;
+	@:overload @:public public function getBias() : javax.swing.text.Position.Position_Bias;
 	
 	/**
 	* Returns a string representation of this drop location.
@@ -1781,7 +1781,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return a string representation of this drop location
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -1793,13 +1793,13 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 */
 @:native('javax$swing$text$JTextComponent$DefaultTransferHandler') @:internal extern class JTextComponent_DefaultTransferHandler extends javax.swing.TransferHandler implements javax.swing.plaf.UIResource
 {
-	@:overload override public function exportToClipboard(comp : javax.swing.JComponent, clipboard : java.awt.datatransfer.Clipboard, action : Int) : Void;
+	@:overload @:public override public function exportToClipboard(comp : javax.swing.JComponent, clipboard : java.awt.datatransfer.Clipboard, action : Int) : Void;
 	
-	@:overload override public function importData(comp : javax.swing.JComponent, t : java.awt.datatransfer.Transferable) : Bool;
+	@:overload @:public override public function importData(comp : javax.swing.JComponent, t : java.awt.datatransfer.Transferable) : Bool;
 	
-	@:overload override public function canImport(comp : javax.swing.JComponent, transferFlavors : java.NativeArray<java.awt.datatransfer.DataFlavor>) : Bool;
+	@:overload @:public override public function canImport(comp : javax.swing.JComponent, transferFlavors : java.NativeArray<java.awt.datatransfer.DataFlavor>) : Bool;
 	
-	@:overload override public function getSourceActions(c : javax.swing.JComponent) : Int;
+	@:overload @:public override public function getSourceActions(c : javax.swing.JComponent) : Int;
 	
 	
 }
@@ -1813,40 +1813,40 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* the keymap doesn't require an action for each
 	* possible key.
 	*/
-	@:overload public function getDefaultAction() : javax.swing.Action;
+	@:overload @:public public function getDefaultAction() : javax.swing.Action;
 	
 	/**
 	* Set the default action to fire if a key is typed.
 	*/
-	@:overload public function setDefaultAction(a : javax.swing.Action) : Void;
+	@:overload @:public public function setDefaultAction(a : javax.swing.Action) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getAction(key : javax.swing.KeyStroke) : javax.swing.Action;
+	@:overload @:public public function getAction(key : javax.swing.KeyStroke) : javax.swing.Action;
 	
-	@:overload public function getBoundKeyStrokes() : java.NativeArray<javax.swing.KeyStroke>;
+	@:overload @:public public function getBoundKeyStrokes() : java.NativeArray<javax.swing.KeyStroke>;
 	
-	@:overload public function getBoundActions() : java.NativeArray<javax.swing.Action>;
+	@:overload @:public public function getBoundActions() : java.NativeArray<javax.swing.Action>;
 	
-	@:overload public function getKeyStrokesForAction(a : javax.swing.Action) : java.NativeArray<javax.swing.KeyStroke>;
+	@:overload @:public public function getKeyStrokesForAction(a : javax.swing.Action) : java.NativeArray<javax.swing.KeyStroke>;
 	
-	@:overload public function isLocallyDefined(key : javax.swing.KeyStroke) : Bool;
+	@:overload @:public public function isLocallyDefined(key : javax.swing.KeyStroke) : Bool;
 	
-	@:overload public function addActionForKeyStroke(key : javax.swing.KeyStroke, a : javax.swing.Action) : Void;
+	@:overload @:public public function addActionForKeyStroke(key : javax.swing.KeyStroke, a : javax.swing.Action) : Void;
 	
-	@:overload public function removeKeyStrokeBinding(key : javax.swing.KeyStroke) : Void;
+	@:overload @:public public function removeKeyStrokeBinding(key : javax.swing.KeyStroke) : Void;
 	
-	@:overload public function removeBindings() : Void;
+	@:overload @:public public function removeBindings() : Void;
 	
-	@:overload public function getResolveParent() : javax.swing.text.Keymap;
+	@:overload @:public public function getResolveParent() : javax.swing.text.Keymap;
 	
-	@:overload public function setResolveParent(parent : javax.swing.text.Keymap) : Void;
+	@:overload @:public public function setResolveParent(parent : javax.swing.text.Keymap) : Void;
 	
 	/**
 	* String representation of the keymap... potentially
 	* a very long string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -1867,11 +1867,11 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 */
 @:native('javax$swing$text$JTextComponent$KeymapWrapper') @:internal extern class JTextComponent_KeymapWrapper extends javax.swing.InputMap
 {
-	@:overload override public function keys() : java.NativeArray<javax.swing.KeyStroke>;
+	@:overload @:public override public function keys() : java.NativeArray<javax.swing.KeyStroke>;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function get(keyStroke : javax.swing.KeyStroke) : Dynamic;
+	@:overload @:public override public function get(keyStroke : javax.swing.KeyStroke) : Dynamic;
 	
 	
 }
@@ -1883,11 +1883,11 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 */
 @:native('javax$swing$text$JTextComponent$KeymapActionMap') @:internal extern class JTextComponent_KeymapActionMap extends javax.swing.ActionMap
 {
-	@:overload override public function keys() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function keys() : java.NativeArray<Dynamic>;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function get(key : Dynamic) : javax.swing.Action;
+	@:overload @:public override public function get(key : Dynamic) : javax.swing.Action;
 	
 	
 }
@@ -1898,17 +1898,17 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 */
 @:native('javax$swing$text$JTextComponent$MutableCaretEvent') @:internal extern class JTextComponent_MutableCaretEvent extends javax.swing.event.CaretEvent implements javax.swing.event.ChangeListener implements java.awt.event.FocusListener implements java.awt.event.MouseListener
 {
-	@:overload @:final override public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
-	@:overload @:final override public function getDot() : Int;
+	@:overload @:public @:final override public function getDot() : Int;
 	
-	@:overload @:final override public function getMark() : Int;
+	@:overload @:public @:final override public function getMark() : Int;
 	
-	@:overload @:final public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public @:final public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
-	@:overload public function focusGained(fe : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(fe : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusLost(fe : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(fe : java.awt.event.FocusEvent) : Void;
 	
 	/**
 	* Requests focus on the associated
@@ -1917,7 +1917,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param e the mouse event
 	* @see MouseListener#mousePressed
 	*/
-	@:overload @:final public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:final public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Called when the mouse is released.
@@ -1925,53 +1925,53 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param e the mouse event
 	* @see MouseListener#mouseReleased
 	*/
-	@:overload @:final public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:final public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload @:final public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:final public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload @:final public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:final public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload @:final public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:final public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
 @:native('javax$swing$text$JTextComponent$InputMethodRequestsHandler') @:internal extern class JTextComponent_InputMethodRequestsHandler implements java.awt.im.InputMethodRequests implements javax.swing.event.DocumentListener
 {
-	@:overload public function cancelLatestCommittedText(attributes : java.NativeArray<javax.print.attribute.Attribute>) : java.text.AttributedCharacterIterator;
+	@:overload @:public public function cancelLatestCommittedText(attributes : java.NativeArray<javax.print.attribute.Attribute>) : java.text.AttributedCharacterIterator;
 	
-	@:overload public function getCommittedText(beginIndex : Int, endIndex : Int, attributes : java.NativeArray<javax.print.attribute.Attribute>) : java.text.AttributedCharacterIterator;
+	@:overload @:public public function getCommittedText(beginIndex : Int, endIndex : Int, attributes : java.NativeArray<javax.print.attribute.Attribute>) : java.text.AttributedCharacterIterator;
 	
-	@:overload public function getCommittedTextLength() : Int;
+	@:overload @:public public function getCommittedTextLength() : Int;
 	
-	@:overload public function getInsertPositionOffset() : Int;
+	@:overload @:public public function getInsertPositionOffset() : Int;
 	
-	@:overload public function getLocationOffset(x : Int, y : Int) : java.awt.font.TextHitInfo;
+	@:overload @:public public function getLocationOffset(x : Int, y : Int) : java.awt.font.TextHitInfo;
 	
-	@:overload public function getTextLocation(offset : java.awt.font.TextHitInfo) : java.awt.Rectangle;
+	@:overload @:public public function getTextLocation(offset : java.awt.font.TextHitInfo) : java.awt.Rectangle;
 	
-	@:overload public function getSelectedText(attributes : java.NativeArray<javax.print.attribute.Attribute>) : java.text.AttributedCharacterIterator;
+	@:overload @:public public function getSelectedText(attributes : java.NativeArray<javax.print.attribute.Attribute>) : java.text.AttributedCharacterIterator;
 	
-	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	
 }
 @:native('javax$swing$text$JTextComponent$ComposedTextCaret') @:internal extern class JTextComponent_ComposedTextCaret extends javax.swing.text.DefaultCaret implements java.io.Serializable
 {
-	@:overload override public function install(c : javax.swing.text.JTextComponent) : Void;
+	@:overload @:public override public function install(c : javax.swing.text.JTextComponent) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload override private function positionCaret(me : java.awt.event.MouseEvent) : Void;
+	@:overload @:protected override private function positionCaret(me : java.awt.event.MouseEvent) : Void;
 	
 	
 }
 @:native('javax$swing$text$JTextComponent$DoSetCaretPosition') @:internal extern class JTextComponent_DoSetCaretPosition implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

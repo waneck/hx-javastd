@@ -44,7 +44,7 @@ package java.util;
 	*
 	* @param a the array to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<Int>) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Sorts the specified range of the array.
@@ -53,14 +53,14 @@ package java.util;
 	* @param left the index of the first element, inclusive, to be sorted
 	* @param right the index of the last element, inclusive, to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<Int>, left : Int, right : Int) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<Int>, left : Int, right : Int) : Void;
 	
 	/**
 	* Sorts the specified array.
 	*
 	* @param a the array to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<haxe.Int64>) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<haxe.Int64>) : Void;
 	
 	/**
 	* Sorts the specified range of the array.
@@ -69,14 +69,14 @@ package java.util;
 	* @param left the index of the first element, inclusive, to be sorted
 	* @param right the index of the last element, inclusive, to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<haxe.Int64>, left : Int, right : Int) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<haxe.Int64>, left : Int, right : Int) : Void;
 	
 	/**
 	* Sorts the specified array.
 	*
 	* @param a the array to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<java.StdTypes.Int16>) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<java.StdTypes.Int16>) : Void;
 	
 	/**
 	* Sorts the specified range of the array.
@@ -85,14 +85,14 @@ package java.util;
 	* @param left the index of the first element, inclusive, to be sorted
 	* @param right the index of the last element, inclusive, to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<java.StdTypes.Int16>, left : Int, right : Int) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<java.StdTypes.Int16>, left : Int, right : Int) : Void;
 	
 	/**
 	* Sorts the specified array.
 	*
 	* @param a the array to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Sorts the specified range of the array.
@@ -101,14 +101,14 @@ package java.util;
 	* @param left the index of the first element, inclusive, to be sorted
 	* @param right the index of the last element, inclusive, to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<java.StdTypes.Char16>, left : Int, right : Int) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<java.StdTypes.Char16>, left : Int, right : Int) : Void;
 	
 	/**
 	* Sorts the specified array.
 	*
 	* @param a the array to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sorts the specified range of the array.
@@ -117,14 +117,14 @@ package java.util;
 	* @param left the index of the first element, inclusive, to be sorted
 	* @param right the index of the last element, inclusive, to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<java.StdTypes.Int8>, left : Int, right : Int) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<java.StdTypes.Int8>, left : Int, right : Int) : Void;
 	
 	/**
 	* Sorts the specified array.
 	*
 	* @param a the array to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<Single>) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<Single>) : Void;
 	
 	/**
 	* Sorts the specified range of the array.
@@ -133,14 +133,14 @@ package java.util;
 	* @param left the index of the first element, inclusive, to be sorted
 	* @param right the index of the last element, inclusive, to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<Single>, left : Int, right : Int) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<Single>, left : Int, right : Int) : Void;
 	
 	/**
 	* Sorts the specified array.
 	*
 	* @param a the array to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<Float>) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<Float>) : Void;
 	
 	/**
 	* Sorts the specified range of the array.
@@ -149,7 +149,7 @@ package java.util;
 	* @param left the index of the first element, inclusive, to be sorted
 	* @param right the index of the last element, inclusive, to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<Float>, left : Int, right : Int) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<Float>, left : Int, right : Int) : Void;
 	
 	
 }

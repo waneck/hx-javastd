@@ -28,40 +28,40 @@ extern class Name implements java.lang.Comparable<com.sun.xml.internal.bind.v2.r
 	/**
 	* Namespace URI. interned.
 	*/
-	public var nsUri(default, null) : String;
+	@:public @:final public var nsUri(default, null) : String;
 	
 	/**
 	* Local name. interned.
 	*/
-	public var localName(default, null) : String;
+	@:public @:final public var localName(default, null) : String;
 	
 	/**
 	* Index -1 is reserved for representing the empty namespace URI of attributes.
 	*/
-	public var nsUriIndex(default, null) : java.StdTypes.Int16;
+	@:public @:final public var nsUriIndex(default, null) : java.StdTypes.Int16;
 	
-	public var localNameIndex(default, null) : java.StdTypes.Int16;
+	@:public @:final public var localNameIndex(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Index of the Name for an EII or AII
 	*/
-	public var qNameIndex(default, null) : java.StdTypes.Int16;
+	@:public @:final public var qNameIndex(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Specifies if the Name is associated with an EII or AII
 	*/
-	public var isAttribute(default, null) : Bool;
+	@:public @:final public var isAttribute(default, null) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Creates a {@link QName} from this.
 	*/
-	@:overload public function toQName() : javax.xml.namespace.QName;
+	@:overload @:public public function toQName() : javax.xml.namespace.QName;
 	
-	@:overload public function equals(nsUri : String, localName : String) : Bool;
+	@:overload @:public public function equals(nsUri : String, localName : String) : Bool;
 	
-	@:overload public function compareTo(that : com.sun.xml.internal.bind.v2.runtime.Name) : Int;
+	@:overload @:public public function compareTo(that : com.sun.xml.internal.bind.v2.runtime.Name) : Int;
 	
 	
 }

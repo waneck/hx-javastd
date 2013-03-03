@@ -30,27 +30,27 @@ package sun.security.krb5;
 */
 extern class EncryptedData implements java.lang.Cloneable
 {
-	public static var ETYPE_NULL(default, null) : Int;
+	@:public @:static @:final public static var ETYPE_NULL(default, null) : Int;
 	
-	public static var ETYPE_DES_CBC_CRC(default, null) : Int;
+	@:public @:static @:final public static var ETYPE_DES_CBC_CRC(default, null) : Int;
 	
-	public static var ETYPE_DES_CBC_MD4(default, null) : Int;
+	@:public @:static @:final public static var ETYPE_DES_CBC_MD4(default, null) : Int;
 	
-	public static var ETYPE_DES_CBC_MD5(default, null) : Int;
+	@:public @:static @:final public static var ETYPE_DES_CBC_MD5(default, null) : Int;
 	
-	public static var ETYPE_ARCFOUR_HMAC(default, null) : Int;
+	@:public @:static @:final public static var ETYPE_ARCFOUR_HMAC(default, null) : Int;
 	
-	public static var ETYPE_ARCFOUR_HMAC_EXP(default, null) : Int;
+	@:public @:static @:final public static var ETYPE_ARCFOUR_HMAC_EXP(default, null) : Int;
 	
-	public static var ETYPE_DES3_CBC_HMAC_SHA1_KD(default, null) : Int;
+	@:public @:static @:final public static var ETYPE_DES3_CBC_HMAC_SHA1_KD(default, null) : Int;
 	
-	public static var ETYPE_AES128_CTS_HMAC_SHA1_96(default, null) : Int;
+	@:public @:static @:final public static var ETYPE_AES128_CTS_HMAC_SHA1_96(default, null) : Int;
 	
-	public static var ETYPE_AES256_CTS_HMAC_SHA1_96(default, null) : Int;
+	@:public @:static @:final public static var ETYPE_AES256_CTS_HMAC_SHA1_96(default, null) : Int;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function new(new_eType : Int, new_kvno : Null<Int>, new_cipher : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(new_eType : Int, new_kvno : Null<Int>, new_cipher : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/*
 	// Not used.
@@ -64,7 +64,7 @@ extern class EncryptedData implements java.lang.Cloneable
 	kvno = key.getKeyVersionNumber();
 	}
 	*/
-	@:overload public function new(key : sun.security.krb5.EncryptionKey, plaintext : java.NativeArray<java.StdTypes.Int8>, usage : Int) : Void;
+	@:overload @:public public function new(key : sun.security.krb5.EncryptionKey, plaintext : java.NativeArray<java.StdTypes.Int8>, usage : Int) : Void;
 	
 	/*
 	// Not used.
@@ -79,7 +79,7 @@ extern class EncryptedData implements java.lang.Cloneable
 	kvno = key.getKeyVersionNumber();
 	}
 	*/
-	@:overload public function decrypt(key : sun.security.krb5.EncryptionKey, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function decrypt(key : sun.security.krb5.EncryptionKey, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns an ASN.1 encoded EncryptedData type.
@@ -105,7 +105,7 @@ extern class EncryptedData implements java.lang.Cloneable
 	* encoded data.
 	*
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Parse (unmarshal) an EncryptedData from a DER input stream.  This form
@@ -123,7 +123,7 @@ extern class EncryptedData implements java.lang.Cloneable
 	* @return an instance of EncryptedData.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.EncryptedData;
+	@:overload @:public @:static public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.EncryptedData;
 	
 	/**
 	* Reset asn.1 data stream after decryption, remove redundant bytes.
@@ -132,16 +132,16 @@ extern class EncryptedData implements java.lang.Cloneable
 	* including its tag and length.
 	*
 	*/
-	@:overload public function reset(data : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function reset(data : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getEType() : Int;
+	@:overload @:public public function getEType() : Int;
 	
-	@:overload public function getKeyVersionNumber() : Null<Int>;
+	@:overload @:public public function getKeyVersionNumber() : Null<Int>;
 	
 	/**
 	* Returns the raw cipher text bytes, not in ASN.1 encoding.
 	*/
-	@:overload public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

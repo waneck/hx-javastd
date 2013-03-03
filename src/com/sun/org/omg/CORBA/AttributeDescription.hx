@@ -31,21 +31,21 @@ package com.sun.org.omg.CORBA;
 */
 extern class AttributeDescription implements org.omg.CORBA.portable.IDLEntity
 {
-	public var name : String;
+	@:public public var name : String;
 	
-	public var id : String;
+	@:public public var id : String;
 	
-	public var defined_in : String;
+	@:public public var defined_in : String;
 	
-	public var version : String;
+	@:public public var version : String;
 	
-	public var type : org.omg.CORBA.TypeCode;
+	@:public public var type : org.omg.CORBA.TypeCode;
 	
-	public var mode : com.sun.org.omg.CORBA.AttributeMode;
+	@:public public var mode : com.sun.org.omg.CORBA.AttributeMode;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_name : String, _id : String, _defined_in : String, _version : String, _type : org.omg.CORBA.TypeCode, _mode : com.sun.org.omg.CORBA.AttributeMode) : Void;
+	@:overload @:public public function new(_name : String, _id : String, _defined_in : String, _version : String, _type : org.omg.CORBA.TypeCode, _mode : com.sun.org.omg.CORBA.AttributeMode) : Void;
 	
 	
 }

@@ -41,9 +41,9 @@ package sun.security.provider;
 	/**
 	* Creates a new SHA object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

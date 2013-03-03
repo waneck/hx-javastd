@@ -35,7 +35,7 @@ extern interface OpenMBeanInfo
 	*
 	* @return the class name.
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Returns a human readable description of the type of open MBean
@@ -43,7 +43,7 @@ extern interface OpenMBeanInfo
 	*
 	* @return the description.
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	/**
 	* Returns an array of <tt>OpenMBeanAttributeInfo</tt> instances
@@ -56,7 +56,7 @@ extern interface OpenMBeanInfo
 	*
 	* @return the attribute array.
 	*/
-	@:overload public function getAttributes() : java.NativeArray<javax.management.MBeanAttributeInfo>;
+	@:overload @:public public function getAttributes() : java.NativeArray<javax.management.MBeanAttributeInfo>;
 	
 	/**
 	* Returns an array of <tt>OpenMBeanOperationInfo</tt> instances
@@ -69,7 +69,7 @@ extern interface OpenMBeanInfo
 	*
 	* @return the operation array.
 	*/
-	@:overload public function getOperations() : java.NativeArray<javax.management.MBeanOperationInfo>;
+	@:overload @:public public function getOperations() : java.NativeArray<javax.management.MBeanOperationInfo>;
 	
 	/**
 	* Returns an array of <tt>OpenMBeanConstructorInfo</tt> instances
@@ -82,7 +82,7 @@ extern interface OpenMBeanInfo
 	*
 	* @return the constructor array.
 	*/
-	@:overload public function getConstructors() : java.NativeArray<javax.management.MBeanConstructorInfo>;
+	@:overload @:public public function getConstructors() : java.NativeArray<javax.management.MBeanConstructorInfo>;
 	
 	/**
 	* Returns an array of <tt>MBeanNotificationInfo</tt> instances
@@ -91,7 +91,7 @@ extern interface OpenMBeanInfo
 	*
 	* @return the notification array.
 	*/
-	@:overload public function getNotifications() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload @:public public function getNotifications() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
 	
 }

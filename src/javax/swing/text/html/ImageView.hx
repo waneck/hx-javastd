@@ -43,35 +43,35 @@ package javax.swing.text.html;
 	*
 	* @param elem the element to create a view for
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Returns the text to display if the image can't be loaded. This is
 	* obtained from the Elements attribute set with the attribute name
 	* <code>HTML.Attribute.ALT</code>.
 	*/
-	@:overload public function getAltText() : String;
+	@:overload @:public public function getAltText() : String;
 	
 	/**
 	* Return a URL for the image source,
 	* or null if it could not be determined.
 	*/
-	@:overload public function getImageURL() : java.net.URL;
+	@:overload @:public public function getImageURL() : java.net.URL;
 	
 	/**
 	* Returns the icon to use if the image couldn't be found.
 	*/
-	@:overload public function getNoImageIcon() : javax.swing.Icon;
+	@:overload @:public public function getNoImageIcon() : javax.swing.Icon;
 	
 	/**
 	* Returns the icon to use while in the process of loading the image.
 	*/
-	@:overload public function getLoadingImageIcon() : javax.swing.Icon;
+	@:overload @:public public function getLoadingImageIcon() : javax.swing.Icon;
 	
 	/**
 	* Returns the image to render.
 	*/
-	@:overload public function getImage() : java.awt.Image;
+	@:overload @:public public function getImage() : java.awt.Image;
 	
 	/**
 	* Sets how the image is loaded. If <code>newValue</code> is true,
@@ -79,24 +79,24 @@ package javax.swing.text.html;
 	* be loaded asynchronously. The default is to not load synchronously,
 	* that is to load the image asynchronously.
 	*/
-	@:overload public function setLoadsSynchronously(newValue : Bool) : Void;
+	@:overload @:public public function setLoadsSynchronously(newValue : Bool) : Void;
 	
 	/**
 	* Returns true if the image should be loaded when first asked for.
 	*/
-	@:overload public function getLoadsSynchronously() : Bool;
+	@:overload @:public public function getLoadsSynchronously() : Bool;
 	
 	/**
 	* Convenience method to get the StyleSheet.
 	*/
-	@:overload private function getStyleSheet() : javax.swing.text.html.StyleSheet;
+	@:overload @:protected private function getStyleSheet() : javax.swing.text.html.StyleSheet;
 	
 	/**
 	* Fetches the attributes to use when rendering.  This is
 	* implemented to multiplex the attributes specified in the
 	* model with a StyleSheet.
 	*/
-	@:overload public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public override public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* For images the tooltip text comes from text specified with the
@@ -105,23 +105,23 @@ package javax.swing.text.html;
 	*
 	* @see JTextComponent#getToolTipText
 	*/
-	@:overload public function getToolTipText(x : Single, y : Single, allocation : java.awt.Shape) : String;
+	@:overload @:public override public function getToolTipText(x : Single, y : Single, allocation : java.awt.Shape) : String;
 	
 	/**
 	* Update any cached values that come from attributes.
 	*/
-	@:overload private function setPropertiesFromAttributes() : Void;
+	@:overload @:protected private function setPropertiesFromAttributes() : Void;
 	
 	/**
 	* Establishes the parent view for this view.
 	* Seize this moment to cache the AWT Container I'm in.
 	*/
-	@:overload public function setParent(parent : javax.swing.text.View) : Void;
+	@:overload @:public override public function setParent(parent : javax.swing.text.View) : Void;
 	
 	/**
 	* Invoked when the Elements attributes have changed. Recreates the image.
 	*/
-	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Paints the View.
@@ -130,7 +130,7 @@ package javax.swing.text.html;
 	* @param a the allocated region to render into
 	* @see View#paint
 	*/
-	@:overload public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
 	
 	/**
 	* Determines the preferred span for this view along an
@@ -142,7 +142,7 @@ package javax.swing.text.html;
 	*           that is returned, although there is no guarantee;
 	*           the parent may choose to resize or break the view
 	*/
-	@:overload public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the desired alignment for this view along an
@@ -157,7 +157,7 @@ package javax.swing.text.html;
 	*   away from the origin; an alignment of 0.5 would be the
 	*   center of the view
 	*/
-	@:overload public function getAlignment(axis : Int) : Single;
+	@:overload @:public override public function getAlignment(axis : Int) : Single;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -170,7 +170,7 @@ package javax.swing.text.html;
 	*   valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload @:public override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -183,7 +183,7 @@ package javax.swing.text.html;
 	*  given point of view
 	* @see View#viewToModel
 	*/
-	@:overload public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Sets the size of the view.  This should cause
@@ -192,7 +192,7 @@ package javax.swing.text.html;
 	* @param width the width >= 0
 	* @param height the height >= 0
 	*/
-	@:overload public function setSize(width : Single, height : Single) : Void;
+	@:overload @:public override public function setSize(width : Single, height : Single) : Void;
 	
 	
 }
@@ -202,7 +202,7 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$ImageView$ImageHandler') @:internal extern class ImageView_ImageHandler implements java.awt.image.ImageObserver
 {
-	@:overload public function imageUpdate(img : java.awt.Image, flags : Int, x : Int, y : Int, newWidth : Int, newHeight : Int) : Bool;
+	@:overload @:public public function imageUpdate(img : java.awt.Image, flags : Int, x : Int, y : Int, newWidth : Int, newHeight : Int) : Bool;
 	
 	
 }
@@ -213,19 +213,19 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$ImageView$ImageLabelView') @:internal extern class ImageView_ImageLabelView extends javax.swing.text.html.InlineView
 {
-	@:overload public function reset(text : String) : Void;
+	@:overload @:public public function reset(text : String) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
 	
-	@:overload override public function getText(p0 : Int, p1 : Int) : javax.swing.text.Segment;
+	@:overload @:public override public function getText(p0 : Int, p1 : Int) : javax.swing.text.Segment;
 	
-	@:overload override public function getStartOffset() : Int;
+	@:overload @:public override public function getStartOffset() : Int;
 	
-	@:overload override public function getEndOffset() : Int;
+	@:overload @:public override public function getEndOffset() : Int;
 	
-	@:overload override public function breakView(axis : Int, p0 : Int, pos : Single, len : Single) : javax.swing.text.View;
+	@:overload @:public override public function breakView(axis : Int, p0 : Int, pos : Single, len : Single) : javax.swing.text.View;
 	
-	@:overload override public function getForeground() : java.awt.Color;
+	@:overload @:public override public function getForeground() : java.awt.Color;
 	
 	
 }

@@ -65,7 +65,7 @@ extern interface UserDataHandler
 	* @param dst Specifies the node newly created if any, or
 	*   <code>null</code>.
 	*/
-	@:overload public function handle(operation : java.StdTypes.Int16, key : String, data : Dynamic, src : org.w3c.dom.Node, dst : org.w3c.dom.Node) : Void;
+	@:overload @:public public function handle(operation : java.StdTypes.Int16, key : String, data : Dynamic, src : org.w3c.dom.Node, dst : org.w3c.dom.Node) : Void;
 	
 	
 }

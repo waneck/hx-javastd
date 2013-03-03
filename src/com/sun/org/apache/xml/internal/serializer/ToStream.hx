@@ -24,7 +24,7 @@ package com.sun.org.apache.xml.internal.serializer;
 extern class ToStream extends com.sun.org.apache.xml.internal.serializer.SerializerBase
 {
 	/** Stack to keep track of disabling output escaping. */
-	private var m_disableOutputEscapingStates : com.sun.org.apache.xml.internal.serializer.ToStream.ToStream_BoolStack;
+	@:protected private var m_disableOutputEscapingStates : com.sun.org.apache.xml.internal.serializer.ToStream.ToStream_BoolStack;
 	
 	/**
 	* Stack to keep track of whether or not we need to
@@ -35,7 +35,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* If m_doIndent is false this field has no impact.
 	*
 	*/
-	private var m_preserves : com.sun.org.apache.xml.internal.serializer.ToStream.ToStream_BoolStack;
+	@:protected private var m_preserves : com.sun.org.apache.xml.internal.serializer.ToStream.ToStream_BoolStack;
 	
 	/**
 	* State flag to tell if preservation of whitespace
@@ -45,7 +45,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* If m_doIndent is false this flag has no impact.
 	*
 	*/
-	private var m_ispreserve : Bool;
+	@:protected private var m_ispreserve : Bool;
 	
 	/**
 	* State flag that tells if the previous node processed
@@ -55,13 +55,13 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* only if m_doIndent is true.
 	* If m_doIndent is false this flag has no impact.
 	*/
-	private var m_isprevtext : Bool;
+	@:protected private var m_isprevtext : Bool;
 	
 	/**
 	* The maximum character size before we have to resort
 	* to escaping.
 	*/
-	private var m_maxCharacter : Int;
+	@:protected private var m_maxCharacter : Int;
 	
 	/**
 	* The system line separator for writing out line breaks.
@@ -69,54 +69,54 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* but this value can be set through the xsl:output
 	* extension attribute xalan:line-separator.
 	*/
-	private var m_lineSep : java.NativeArray<java.StdTypes.Char16>;
+	@:protected private var m_lineSep : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* True if the the system line separator is to be used.
 	*/
-	private var m_lineSepUse : Bool;
+	@:protected private var m_lineSepUse : Bool;
 	
 	/**
 	* The length of the line seperator, since the write is done
 	* one character at a time.
 	*/
-	private var m_lineSepLen : Int;
+	@:protected private var m_lineSepLen : Int;
 	
 	/**
 	* Map that tells which characters should have special treatment, and it
 	*  provides character to entity name lookup.
 	*/
-	private var m_charInfo : com.sun.org.apache.xml.internal.serializer.CharInfo;
+	@:protected private var m_charInfo : com.sun.org.apache.xml.internal.serializer.CharInfo;
 	
 	/**
 	* Add space before '/>' for XHTML.
 	*/
-	private var m_spaceBeforeClose : Bool;
+	@:protected private var m_spaceBeforeClose : Bool;
 	
 	/**
 	* Tells if we're in an internal document type subset.
 	*/
-	private var m_inDoctype : Bool;
+	@:protected private var m_inDoctype : Bool;
 	
 	/** The xsl:output properties. */
-	private var m_format : java.util.Properties;
+	@:protected private var m_format : java.util.Properties;
 	
 	/**
 	* remembers if we are in between the startCDATA() and endCDATA() callbacks
 	*/
-	private var m_cdataStartCalled : Bool;
+	@:protected private var m_cdataStartCalled : Bool;
 	
 	/**
 	* Default constructor
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* This helper method to writes out "]]>" when closing a CDATA section.
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload private function closeCDATA() : Void;
+	@:overload @:protected private function closeCDATA() : Void;
 	
 	/**
 	* Serializes the DOM node. Throws an exception only if an I/O
@@ -125,14 +125,14 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @param node Node to serialize.
 	* @throws IOException An I/O exception occured while serializing
 	*/
-	@:overload override public function serialize(node : org.w3c.dom.Node) : Void;
+	@:overload @:public override public function serialize(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Flush the formatter's result stream.
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload @:final private function flushWriter() : Void;
+	@:overload @:protected @:final private function flushWriter() : Void;
 	
 	/**
 	* Get the output stream where the events will be serialized to.
@@ -140,7 +140,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @return reference to the result stream, or null of only a writer was
 	* set.
 	*/
-	@:overload override public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public override public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	*   Report an element type declaration.
@@ -155,7 +155,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*   @param model The content model as a normalized string.
 	*   @exception SAXException The application may raise an exception.
 	*/
-	@:overload override public function elementDecl(name : String, model : String) : Void;
+	@:overload @:public override public function elementDecl(name : String, model : String) : Void;
 	
 	/**
 	* Report an internal entity declaration.
@@ -170,14 +170,14 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @see #externalEntityDecl
 	* @see org.xml.sax.DTDHandler#unparsedEntityDecl
 	*/
-	@:overload override public function internalEntityDecl(name : String, value : String) : Void;
+	@:overload @:public override public function internalEntityDecl(name : String, value : String) : Void;
 	
 	/**
 	* Output a system-dependent line break.
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload @:final private function outputLineSep() : Void;
+	@:overload @:protected @:final private function outputLineSep() : Void;
 	
 	/**
 	* Specifies an output format for this serializer. It the
@@ -188,7 +188,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @param format The output format to use
 	*/
-	@:overload override public function setOutputFormat(format : java.util.Properties) : Void;
+	@:overload @:public override public function setOutputFormat(format : java.util.Properties) : Void;
 	
 	/**
 	* Initialize the serializer with the specified output stream and output
@@ -202,14 +202,14 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @throws UnsupportedEncodingException The encoding specified   in the
 	* output format is not supported
 	*/
-	@:overload @:synchronized private function init(output : java.io.OutputStream, format : java.util.Properties, defaultProperties : Bool) : Void;
+	@:overload @:protected @:synchronized private function init(output : java.io.OutputStream, format : java.util.Properties, defaultProperties : Bool) : Void;
 	
 	/**
 	* Returns the output format for this serializer.
 	*
 	* @return The output format in use
 	*/
-	@:overload override public function getOutputFormat() : java.util.Properties;
+	@:overload @:public override public function getOutputFormat() : java.util.Properties;
 	
 	/**
 	* Specifies a writer to which the document should be serialized.
@@ -218,7 +218,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @param writer The output writer stream
 	*/
-	@:overload override public function setWriter(writer : java.io.Writer) : Void;
+	@:overload @:public override public function setWriter(writer : java.io.Writer) : Void;
 	
 	/**
 	* Set if the operating systems end-of-line line separator should
@@ -232,7 +232,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* operating systems end-of-line separator.
 	* @return The previously set value of the serializer.
 	*/
-	@:overload public function setLineSepUse(use_sytem_line_break : Bool) : Bool;
+	@:overload @:public public function setLineSepUse(use_sytem_line_break : Bool) : Bool;
 	
 	/**
 	* Specifies an output stream to which the document should be
@@ -245,12 +245,12 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @param output The output stream
 	*/
-	@:overload override public function setOutputStream(output : java.io.OutputStream) : Void;
+	@:overload @:public override public function setOutputStream(output : java.io.OutputStream) : Void;
 	
 	/**
 	* @see SerializationHandler#setEscaping(boolean)
 	*/
-	@:overload override public function setEscaping(escape : Bool) : Bool;
+	@:overload @:public override public function setEscaping(escape : Bool) : Bool;
 	
 	/**
 	* Might print a newline character and the indentation amount
@@ -260,13 +260,13 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @throws org.xml.sax.SAXException if an error occurs during writing.
 	*/
-	@:overload private function indent(depth : Int) : Void;
+	@:overload @:protected private function indent(depth : Int) : Void;
 	
 	/**
 	* Indent at the current element nesting depth.
 	* @throws IOException
 	*/
-	@:overload private function indent() : Void;
+	@:overload @:protected private function indent() : Void;
 	
 	/**
 	* Report an attribute type declaration.
@@ -287,14 +287,14 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*        or null if there is none.
 	* @exception SAXException The application may raise an exception.
 	*/
-	@:overload override public function attributeDecl(eName : String, aName : String, type : String, valueDefault : String, value : String) : Void;
+	@:overload @:public override public function attributeDecl(eName : String, aName : String, type : String, valueDefault : String, value : String) : Void;
 	
 	/**
 	* Get the character stream where the events will be serialized to.
 	*
 	* @return Reference to the result Writer, or null.
 	*/
-	@:overload override public function getWriter() : java.io.Writer;
+	@:overload @:public override public function getWriter() : java.io.Writer;
 	
 	/**
 	* Report a parsed external entity declaration.
@@ -311,12 +311,12 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @see #internalEntityDecl
 	* @see org.xml.sax.DTDHandler#unparsedEntityDecl
 	*/
-	@:overload override public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public override public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Tell if this character can be written without escaping.
 	*/
-	@:overload private function escapingNotNeeded(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:protected private function escapingNotNeeded(ch : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Once a surrogate has been detected, write out the pair of
@@ -342,7 +342,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @throws IOException
 	* @throws org.xml.sax.SAXException if invalid UTF-16 surrogate detected.
 	*/
-	@:overload private function writeUTF16Surrogate(c : java.StdTypes.Char16, ch : java.NativeArray<java.StdTypes.Char16>, i : Int, end : Int) : Int;
+	@:overload @:protected private function writeUTF16Surrogate(c : java.StdTypes.Char16, ch : java.NativeArray<java.StdTypes.Char16>, i : Int, end : Int) : Int;
 	
 	/**
 	* Handle one of the default entities, return false if it
@@ -360,7 +360,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @throws java.io.IOException
 	*/
-	@:overload private function accumDefaultEntity(writer : java.io.Writer, ch : java.StdTypes.Char16, i : Int, chars : java.NativeArray<java.StdTypes.Char16>, len : Int, fromTextNode : Bool, escLF : Bool) : Int;
+	@:overload @:protected private function accumDefaultEntity(writer : java.io.Writer, ch : java.StdTypes.Char16, i : Int, chars : java.NativeArray<java.StdTypes.Char16>, len : Int, fromTextNode : Bool, escLF : Bool) : Int;
 	
 	/**
 	* Ends an un-escaping section.
@@ -369,7 +369,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function endNonEscaping() : Void;
+	@:overload @:public public function endNonEscaping() : Void;
 	
 	/**
 	* Starts an un-escaping section. All characters printed within an un-
@@ -381,7 +381,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function startNonEscaping() : Void;
+	@:overload @:public public function startNonEscaping() : Void;
 	
 	/**
 	* Receive notification of cdata.
@@ -410,7 +410,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload private function cdata(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:protected private function cdata(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* If available, when the disable-output-escaping attribute is used,
@@ -422,7 +422,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload private function charactersRaw(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:protected private function charactersRaw(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -451,7 +451,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function characters(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -460,7 +460,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function characters(s : String) : Void;
+	@:overload @:public override public function characters(s : String) : Void;
 	
 	/**
 	* Escape and writer.write a character.
@@ -479,7 +479,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload private function accumDefaultEscape(writer : java.io.Writer, ch : java.StdTypes.Char16, i : Int, chars : java.NativeArray<java.StdTypes.Char16>, len : Int, fromTextNode : Bool, escLF : Bool) : Int;
+	@:overload @:protected private function accumDefaultEscape(writer : java.io.Writer, ch : java.StdTypes.Char16, i : Int, chars : java.NativeArray<java.StdTypes.Char16>, len : Int, fromTextNode : Bool, escLF : Bool) : Int;
 	
 	/**
 	* Receive notification of the beginning of an element, although this is a
@@ -503,7 +503,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function startElement(namespaceURI : String, localName : String, name : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, name : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Receive notification of the beginning of an element, additional
@@ -526,9 +526,9 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function startElement(elementNamespaceURI : String, elementLocalName : String, elementName : String) : Void;
+	@:overload @:public override public function startElement(elementNamespaceURI : String, elementLocalName : String, elementName : String) : Void;
 	
-	@:overload override public function startElement(elementName : String) : Void;
+	@:overload @:public override public function startElement(elementName : String) : Void;
 	
 	/**
 	* Process the attributes, which means to write out the currently
@@ -542,7 +542,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @throws java.io.IOException
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function processAttributes(writer : java.io.Writer, nAttrs : Int) : Void;
+	@:overload @:public public function processAttributes(writer : java.io.Writer, nAttrs : Int) : Void;
 	
 	/**
 	* Returns the specified <var>string</var> after substituting <VAR>specials</VAR>,
@@ -553,7 +553,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @throws java.io.IOException
 	*/
-	@:overload public function writeAttrString(writer : java.io.Writer, string : String, encoding : String) : Void;
+	@:overload @:public public function writeAttrString(writer : java.io.Writer, string : String, encoding : String) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -571,7 +571,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function endElement(namespaceURI : String, localName : String, name : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, name : String) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -579,7 +579,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @throws org.xml.sax.SAXException Any SAX exception, possibly
 	*     wrapping another exception.
 	*/
-	@:overload override public function endElement(name : String) : Void;
+	@:overload @:public override public function endElement(name : String) : Void;
 	
 	/**
 	* Begin the scope of a prefix-URI Namespace mapping
@@ -596,7 +596,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*            an exception during processing.
 	*
 	*/
-	@:overload override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	/**
 	* Handle a prefix/uri mapping, which is associated with a startElement()
@@ -619,7 +619,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	*
 	*/
-	@:overload override public function startPrefixMapping(prefix : String, uri : String, shouldFlush : Bool) : Bool;
+	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String, shouldFlush : Bool) : Bool;
 	
 	/**
 	* Receive notification of an XML comment anywhere in the document. This
@@ -630,7 +630,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @param length The number of characters to use from the array.
 	* @throws org.xml.sax.SAXException The application may raise an exception.
 	*/
-	@:overload override public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Report the end of a CDATA section.
@@ -638,14 +638,14 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	*  @see  #startCDATA
 	*/
-	@:overload override public function endCDATA() : Void;
+	@:overload @:public override public function endCDATA() : Void;
 	
 	/**
 	* Report the end of DTD declarations.
 	* @throws org.xml.sax.SAXException The application may raise an exception.
 	* @see #startDTD
 	*/
-	@:overload override public function endDTD() : Void;
+	@:overload @:public override public function endDTD() : Void;
 	
 	/**
 	* End the scope of a prefix-URI Namespace mapping.
@@ -655,7 +655,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @throws org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload override public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public override public function endPrefixMapping(prefix : String) : Void;
 	
 	/**
 	* Receive notification of ignorable whitespace in element content.
@@ -671,7 +671,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of a skipped entity.
@@ -684,7 +684,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @throws org.xml.sax.SAXException Any SAX exception, possibly wrapping
 	* another exception.
 	*/
-	@:overload override public function skippedEntity(name : String) : Void;
+	@:overload @:public override public function skippedEntity(name : String) : Void;
 	
 	/**
 	* Report the start of a CDATA section.
@@ -692,7 +692,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @throws org.xml.sax.SAXException The application may raise an exception.
 	* @see #endCDATA
 	*/
-	@:overload override public function startCDATA() : Void;
+	@:overload @:public override public function startCDATA() : Void;
 	
 	/**
 	* Report the beginning of an entity.
@@ -709,7 +709,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @see org.xml.sax.ext.DeclHandler#internalEntityDecl
 	* @see org.xml.sax.ext.DeclHandler#externalEntityDecl
 	*/
-	@:overload override public function startEntity(name : String) : Void;
+	@:overload @:public override public function startEntity(name : String) : Void;
 	
 	/**
 	* For the enclosing elements starting tag write out
@@ -717,7 +717,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload private function closeStartTag() : Void;
+	@:overload @:protected private function closeStartTag() : Void;
 	
 	/**
 	* Report the start of DTD declarations, if any.
@@ -735,20 +735,20 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @see #endDTD
 	* @see #startEntity
 	*/
-	@:overload override public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public override public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Returns the m_indentAmount.
 	* @return int
 	*/
-	@:overload public function getIndentAmount() : Int;
+	@:overload @:public override public function getIndentAmount() : Int;
 	
 	/**
 	* Sets the m_indentAmount.
 	*
 	* @param m_indentAmount The m_indentAmount to set
 	*/
-	@:overload public function setIndentAmount(m_indentAmount : Int) : Void;
+	@:overload @:public override public function setIndentAmount(m_indentAmount : Int) : Void;
 	
 	/**
 	* Tell if, based on space preservation constraints and the doIndent property,
@@ -756,7 +756,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @return True if an indent should occur.
 	*/
-	@:overload private function shouldIndent() : Bool;
+	@:overload @:protected private function shouldIndent() : Bool;
 	
 	/**
 	* Remembers the cdata sections specified in the cdata-section-elements.
@@ -765,7 +765,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @param URI_and_localNames a vector of pairs of Strings (URI/local)
 	*/
-	@:overload override public function setCdataSectionElements(URI_and_localNames : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public override public function setCdataSectionElements(URI_and_localNames : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* Makes sure that the namespace URI for the given qualified attribute name
@@ -776,15 +776,15 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* prefix used in declaring the namespace.
 	* @throws SAXException
 	*/
-	@:overload private function ensureAttributesNamespaceIsDeclared(ns : String, localName : String, rawName : String) : String;
+	@:overload @:protected private function ensureAttributesNamespaceIsDeclared(ns : String, localName : String, rawName : String) : String;
 	
 	/**
 	* This method flushes any pending events, which can be startDocument()
 	* closing the opening tag of an element, or closing an open CDATA section.
 	*/
-	@:overload override public function flushPending() : Void;
+	@:overload @:public override public function flushPending() : Void;
 	
-	@:overload override public function setContentHandler(ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public override public function setContentHandler(ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Adds the given attribute to the set of attributes, even if there is
@@ -805,19 +805,19 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* false if the attribute already existed and the value was
 	* replaced with the new value.
 	*/
-	@:overload public function addAttributeAlways(uri : String, localName : String, rawName : String, type : String, value : String, xslAttribute : Bool) : Bool;
+	@:overload @:public override public function addAttributeAlways(uri : String, localName : String, rawName : String, type : String, value : String, xslAttribute : Bool) : Bool;
 	
 	/**
 	* To fire off the pseudo characters of attributes, as they currently
 	* exist. This method should be called everytime an attribute is added,
 	* or when an attribute value is changed, or an element is created.
 	*/
-	@:overload private function firePseudoAttributes() : Void;
+	@:overload @:protected private function firePseudoAttributes() : Void;
 	
 	/**
 	* @see SerializationHandler#setTransformer(Transformer)
 	*/
-	@:overload public function setTransformer(transformer : javax.xml.transform.Transformer) : Void;
+	@:overload @:public override public function setTransformer(transformer : javax.xml.transform.Transformer) : Void;
 	
 	/**
 	* Try's to reset the super class and reset this class for
@@ -826,13 +826,13 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @return true if the class was successfuly reset.
 	*/
-	@:overload public function reset() : Bool;
+	@:overload @:public override public function reset() : Bool;
 	
 	/**
 	* Sets the character encoding coming from the xsl:output encoding stylesheet attribute.
 	* @param encoding the character encoding
 	*/
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public override public function setEncoding(encoding : String) : Void;
 	
 	/**
 	* If this method is called, the serializer is used as a
@@ -840,7 +840,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* handles document entities.
 	* @see org.xml.sax.DTDHandler#notationDecl(java.lang.String, java.lang.String, java.lang.String)
 	*/
-	@:overload public function notationDecl(name : String, pubID : String, sysID : String) : Void;
+	@:overload @:public override public function notationDecl(name : String, pubID : String, sysID : String) : Void;
 	
 	/**
 	* If this method is called, the serializer is used as a
@@ -848,13 +848,13 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* handles document entities.
 	* @see org.xml.sax.DTDHandler#unparsedEntityDecl(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
 	*/
-	@:overload public function unparsedEntityDecl(name : String, pubID : String, sysID : String, notationName : String) : Void;
+	@:overload @:public override public function unparsedEntityDecl(name : String, pubID : String, sysID : String, notationName : String) : Void;
 	
 	/**
 	* If set to false the serializer does not expand DTD entities,
 	* but leaves them as is, the default value is true;
 	*/
-	@:overload public function setDTDEntityExpansion(expand : Bool) : Void;
+	@:overload @:public override public function setDTDEntityExpansion(expand : Bool) : Void;
 	
 	
 }
@@ -866,21 +866,21 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 */
 @:native('com$sun$org$apache$xml$internal$serializer$ToStream$WritertoStringBuffer') @:internal extern class ToStream_WritertoStringBuffer extends java.io.Writer
 {
-	@:overload override public function write(arg0 : java.NativeArray<java.StdTypes.Char16>, arg1 : Int, arg2 : Int) : Void;
+	@:overload @:public override public function write(arg0 : java.NativeArray<java.StdTypes.Char16>, arg1 : Int, arg2 : Int) : Void;
 	
 	/**
 	* @see java.io.Writer#flush()
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* @see java.io.Writer#close()
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload override public function write(i : Int) : Void;
+	@:overload @:public override public function write(i : Int) : Void;
 	
-	@:overload override public function write(s : String) : Void;
+	@:overload @:public override public function write(s : String) : Void;
 	
 	
 }
@@ -900,27 +900,27 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* Default constructor.  Note that the default
 	* block size is very small, for small lists.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a IntVector, using the given block size.
 	*
 	* @param size array size to allocate
 	*/
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
 	/**
 	* Get the length of the list.
 	*
 	* @return Current length of the list
 	*/
-	@:overload @:final public function size() : Int;
+	@:overload @:public @:final public function size() : Int;
 	
 	/**
 	* Clears the stack.
 	*
 	*/
-	@:overload @:final public function clear() : Void;
+	@:overload @:public @:final public function clear() : Void;
 	
 	/**
 	* Pushes an item onto the top of this stack.
@@ -929,7 +929,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @param val the boolean to be pushed onto this stack.
 	* @return  the <code>item</code> argument.
 	*/
-	@:overload @:final public function push(val : Bool) : Bool;
+	@:overload @:public @:final public function push(val : Bool) : Bool;
 	
 	/**
 	* Removes the object at the top of this stack and returns that
@@ -938,7 +938,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @return     The object at the top of this stack.
 	* @throws  EmptyStackException  if this stack is empty.
 	*/
-	@:overload @:final public function pop() : Bool;
+	@:overload @:public @:final public function pop() : Bool;
 	
 	/**
 	* Removes the object at the top of this stack and returns the
@@ -947,7 +947,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @return Next object to the top or false if none there
 	*/
-	@:overload @:final public function popAndTop() : Bool;
+	@:overload @:public @:final public function popAndTop() : Bool;
 	
 	/**
 	* Set the item at the top of this stack
@@ -955,7 +955,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @param b Object to set at the top of this stack
 	*/
-	@:overload @:final public function setTop(b : Bool) : Void;
+	@:overload @:public @:final public function setTop(b : Bool) : Void;
 	
 	/**
 	* Looks at the object at the top of this stack without removing it
@@ -964,7 +964,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @return     the object at the top of this stack.
 	* @throws  EmptyStackException  if this stack is empty.
 	*/
-	@:overload @:final public function peek() : Bool;
+	@:overload @:public @:final public function peek() : Bool;
 	
 	/**
 	* Looks at the object at the top of this stack without removing it
@@ -972,7 +972,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @return     the object at the top of this stack.
 	*/
-	@:overload @:final public function peekOrFalse() : Bool;
+	@:overload @:public @:final public function peekOrFalse() : Bool;
 	
 	/**
 	* Looks at the object at the top of this stack without removing it
@@ -980,7 +980,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @return     the object at the top of this stack.
 	*/
-	@:overload @:final public function peekOrTrue() : Bool;
+	@:overload @:public @:final public function peekOrTrue() : Bool;
 	
 	/**
 	* Tests if this stack is empty.
@@ -988,7 +988,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* @return  <code>true</code> if this stack is empty;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	
 }

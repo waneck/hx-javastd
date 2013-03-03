@@ -31,20 +31,20 @@ extern class TimestampToken
 	* @param status A buffer containing the ASN.1 BER encoding of the
 	*               TSTInfo element defined in RFC 3161.
 	*/
-	@:overload public function new(timestampTokenInfo : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(timestampTokenInfo : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Extract the date and time from the timestamp token.
 	*
 	* @return The date and time when the timestamp was generated.
 	*/
-	@:overload public function getDate() : java.util.Date;
+	@:overload @:public public function getDate() : java.util.Date;
 	
-	@:overload public function getHashAlgorithm() : sun.security.x509.AlgorithmId;
+	@:overload @:public public function getHashAlgorithm() : sun.security.x509.AlgorithmId;
 	
-	@:overload public function getHashedMessage() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getHashedMessage() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getNonce() : java.math.BigInteger;
+	@:overload @:public public function getNonce() : java.math.BigInteger;
 	
 	
 }

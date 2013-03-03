@@ -28,47 +28,47 @@ extern class SocketOrChannelContactInfoImpl extends com.sun.corba.se.impl.transp
 	/**
 	* @author Harold Carr
 	*/
-	private var isHashCodeCached : Bool;
+	@:protected private var isHashCodeCached : Bool;
 	
-	private var cachedHashCode : Int;
+	@:protected private var cachedHashCode : Int;
 	
-	private var socketType : String;
+	@:protected private var socketType : String;
 	
-	private var hostname : String;
+	@:protected private var hostname : String;
 	
-	private var port : Int;
+	@:protected private var port : Int;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, contactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, contactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, contactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList, socketType : String, hostname : String, port : Int) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, contactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList, socketType : String, hostname : String, port : Int) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, contactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList, effectiveTargetIOR : com.sun.corba.se.spi.ior.IOR, addressingDisposition : java.StdTypes.Int16, socketType : String, hostname : String, port : Int) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, contactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList, effectiveTargetIOR : com.sun.corba.se.spi.ior.IOR, addressingDisposition : java.StdTypes.Int16, socketType : String, hostname : String, port : Int) : Void;
 	
-	@:overload override public function isConnectionBased() : Bool;
+	@:overload @:public override public function isConnectionBased() : Bool;
 	
-	@:overload override public function shouldCacheConnection() : Bool;
+	@:overload @:public override public function shouldCacheConnection() : Bool;
 	
-	@:overload override public function getConnectionCacheType() : String;
+	@:overload @:public override public function getConnectionCacheType() : String;
 	
-	@:overload override public function createConnection() : com.sun.corba.se.pept.transport.Connection;
+	@:overload @:public override public function createConnection() : com.sun.corba.se.pept.transport.Connection;
 	
-	@:overload override public function getMonitoringName() : String;
+	@:overload @:public override public function getMonitoringName() : String;
 	
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function getHost() : String;
+	@:overload @:public public function getHost() : String;
 	
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload private function dprint(msg : String) : Void;
+	@:overload @:protected override private function dprint(msg : String) : Void;
 	
 	
 }

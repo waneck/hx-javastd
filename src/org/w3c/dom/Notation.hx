@@ -55,14 +55,14 @@ extern interface Notation extends org.w3c.dom.Node
 	* The public identifier of this notation. If the public identifier was
 	* not specified, this is <code>null</code>.
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* The system identifier of this notation. If the system identifier was
 	* not specified, this is <code>null</code>. This may be an absolute URI
 	* or not.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	
 }

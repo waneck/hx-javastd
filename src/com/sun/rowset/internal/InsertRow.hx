@@ -42,7 +42,7 @@ extern class InsertRow extends com.sun.rowset.internal.BaseRow implements java.i
 	* @param numCols an <code>int</code> indicating the number of columns
 	*                in this <code>InsertRow</code> object
 	*/
-	@:overload public function new(numCols : Int) : Void;
+	@:overload @:public public function new(numCols : Int) : Void;
 	
 	/**
 	* Sets the bit in this <code>InsertRow</code> object's internal
@@ -53,7 +53,7 @@ extern class InsertRow extends com.sun.rowset.internal.BaseRow implements java.i
 	* @param col the number of the column to be marked as inserted;
 	*            the first column is <code>1</code>
 	*/
-	@:overload private function markColInserted(col : Int) : Void;
+	@:overload @:protected private function markColInserted(col : Int) : Void;
 	
 	/**
 	* Indicates whether this <code>InsertRow</code> object has a value
@@ -65,14 +65,14 @@ extern class InsertRow extends com.sun.rowset.internal.BaseRow implements java.i
 	*         complete; <code>false</code> otherwise
 	* @throws SQLException if there is an error accessing data
 	*/
-	@:overload public function isCompleteRow(RowSetMD : javax.sql.RowSetMetaData) : Bool;
+	@:overload @:public public function isCompleteRow(RowSetMD : javax.sql.RowSetMetaData) : Bool;
 	
 	/**
 	* Clears all the bits in the internal <code>BitSet</code> object
 	* maintained by this <code>InsertRow</code> object.  Clearing all the bits
 	* indicates that none of the columns have had a value inserted.
 	*/
-	@:overload public function initInsertRow() : Void;
+	@:overload @:public public function initInsertRow() : Void;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -85,7 +85,7 @@ extern class InsertRow extends com.sun.rowset.internal.BaseRow implements java.i
 	* @throws SQLException if no value has been inserted into
 	*                                   the designated column
 	*/
-	@:overload override public function getColumnObject(idx : Int) : Dynamic;
+	@:overload @:public override public function getColumnObject(idx : Int) : Dynamic;
 	
 	/**
 	* Sets the element in this <code>InsertRow</code> object's
@@ -101,7 +101,7 @@ extern class InsertRow extends com.sun.rowset.internal.BaseRow implements java.i
 	*              the first column is <code>1</code>
 	* @param val the value to be set
 	*/
-	@:overload override public function setColumnObject(idx : Int, val : Dynamic) : Void;
+	@:overload @:public override public function setColumnObject(idx : Int, val : Dynamic) : Void;
 	
 	
 }

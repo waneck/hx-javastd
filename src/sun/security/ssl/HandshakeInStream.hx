@@ -31,22 +31,22 @@ extern class HandshakeInStream extends java.io.InputStream
 	* Note that this returns the bytes remaining in the buffer, not
 	* the bytes remaining in the current handshake message.
 	*/
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	/*
 	* Get a byte of handshake data.
 	*/
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/*
 	* Get a bunch of bytes of handshake data.
 	*/
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/*
 	* Skip some handshake data.
 	*/
-	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/*
 	* Mark/ reset code, implemented using InputRecord mark/ reset.
@@ -55,13 +55,13 @@ extern class HandshakeInStream extends java.io.InputStream
 	* and should be used with care (once a new handshake record has been
 	* read, data that has already been consumed is lost even if marked).
 	*/
-	@:overload public function mark(readlimit : Int) : Void;
+	@:overload @:public override public function mark(readlimit : Int) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload public function getBytes16() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes16() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

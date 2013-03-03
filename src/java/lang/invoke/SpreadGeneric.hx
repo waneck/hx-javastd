@@ -32,13 +32,13 @@ package java.lang.invoke;
 	* @param typedTarget the target
 	* @return an adapter method handle
 	*/
-	@:overload public static function make(target : java.lang.invoke.MethodHandle, spreadCount : Int) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function make(target : java.lang.invoke.MethodHandle, spreadCount : Int) : java.lang.invoke.MethodHandle;
 	
 	/** A check/coercion that happens once before any selections. */
-	@:overload private function check(av : Dynamic, n : Int) : Dynamic;
+	@:overload @:protected private function check(av : Dynamic, n : Int) : Dynamic;
 	
 	/** The selection operator for spreading; note that it takes Object not Object[]. */
-	@:overload private function select(av : Dynamic, n : Int) : Dynamic;
+	@:overload @:protected private function select(av : Dynamic, n : Int) : Dynamic;
 	
 	
 }
@@ -60,22 +60,22 @@ package java.lang.invoke;
 	*   Object invoke(Object**M a, Object v) = target(a..., v[0]...v[S-1]);
 	* }
 	*/
-	private var outer(default, null) : java.lang.invoke.SpreadGeneric;
+	@:protected @:final private var outer(default, null) : java.lang.invoke.SpreadGeneric;
 	
-	private var target(default, null) : java.lang.invoke.MethodHandle;
+	@:protected @:final private var target(default, null) : java.lang.invoke.MethodHandle;
 	
-	@:overload private function isPrototype() : Bool;
+	@:overload @:protected private function isPrototype() : Bool;
 	
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, target : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric, target : java.lang.invoke.MethodHandle) : Void;
 	
 	/** Make a copy of self, with new fields. */
-	@:overload @:abstract private function makeInstance(outer : java.lang.invoke.SpreadGeneric, target : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter;
+	@:overload @:protected @:abstract private function makeInstance(outer : java.lang.invoke.SpreadGeneric, target : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter;
 	
-	@:overload private function check(av : Dynamic, n : Int) : Dynamic;
+	@:overload @:protected private function check(av : Dynamic, n : Int) : Dynamic;
 	
-	@:overload private function select(av : Dynamic, n : Int) : Dynamic;
+	@:overload @:protected private function select(av : Dynamic, n : Int) : Dynamic;
 	
 	
 }
@@ -202,243 +202,243 @@ System.out.println(VAR.transform(line));
 //}}} */
 @:native('java$lang$invoke$SpreadGeneric$S0') @:internal extern class SpreadGeneric_S0 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S0;
+	@:overload @:protected override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S0;
 	
-	@:overload private function invoke_S0(av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S0(av : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$SpreadGeneric$S1') @:internal extern class SpreadGeneric_S1 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S1;
+	@:overload @:protected override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S1;
 	
-	@:overload private function invoke_S0(a0 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S0(a0 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S1(av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S1(av : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$SpreadGeneric$S2') @:internal extern class SpreadGeneric_S2 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S2;
+	@:overload @:protected override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S2;
 	
-	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S0(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S1(a0 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S1(a0 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S2(av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S2(av : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$SpreadGeneric$S3') @:internal extern class SpreadGeneric_S3 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S3;
+	@:overload @:protected override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S3;
 	
-	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S1(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S1(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S2(a0 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S2(a0 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S3(av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S3(av : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$SpreadGeneric$S4') @:internal extern class SpreadGeneric_S4 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S4;
+	@:overload @:protected override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S4;
 	
-	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S2(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S2(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S3(a0 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S3(a0 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S4(av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S4(av : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$SpreadGeneric$S5') @:internal extern class SpreadGeneric_S5 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S5;
+	@:overload @:protected override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S5;
 	
-	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S3(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S3(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S4(a0 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S4(a0 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S5(av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S5(av : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$SpreadGeneric$S6') @:internal extern class SpreadGeneric_S6 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S6;
+	@:overload @:protected override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S6;
 	
-	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S4(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S4(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S5(a0 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S5(a0 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S6(av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S6(av : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$SpreadGeneric$S7') @:internal extern class SpreadGeneric_S7 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S7;
+	@:overload @:protected override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S7;
 	
-	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S5(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S5(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S6(a0 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S6(a0 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S7(av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S7(av : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$SpreadGeneric$S8') @:internal extern class SpreadGeneric_S8 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S8;
+	@:overload @:protected override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S8;
 	
-	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S6(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S6(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S7(a0 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S7(a0 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S8(av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S8(av : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$SpreadGeneric$S9') @:internal extern class SpreadGeneric_S9 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S9;
+	@:overload @:protected override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S9;
 	
-	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S7(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S7(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S8(a0 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S8(a0 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S9(av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S9(av : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$SpreadGeneric$S10') @:internal extern class SpreadGeneric_S10 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S10;
+	@:overload @:protected override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S10;
 	
-	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S8(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S8(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S9(a0 : Dynamic, av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S9(a0 : Dynamic, av : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_S10(av : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_S10(av : Dynamic) : Dynamic;
 	
 	
 }

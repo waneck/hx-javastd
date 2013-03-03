@@ -33,17 +33,17 @@ package com.sun.tools.example.debug.bdi;
 ////### Should handle target VM death or connection failure cleanly.
 extern class ThreadInfo
 {
-	@:overload public function thread() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function thread() : com.sun.jdi.ThreadReference;
 	
-	@:overload public function getStatus() : Int;
+	@:overload @:public public function getStatus() : Int;
 	
-	@:overload public function getFrameCount() : Int;
+	@:overload @:public public function getFrameCount() : Int;
 	
-	@:overload public function getFrame(index : Int) : com.sun.jdi.StackFrame;
+	@:overload @:public public function getFrame(index : Int) : com.sun.jdi.StackFrame;
 	
-	@:overload public function getUserObject() : Dynamic;
+	@:overload @:public public function getUserObject() : Dynamic;
 	
-	@:overload public function setUserObject(obj : Dynamic) : Void;
+	@:overload @:public public function setUserObject(obj : Dynamic) : Void;
 	
 	
 }

@@ -36,7 +36,7 @@ extern class SplashScreen
 	* @return the {@link SplashScreen} instance, or <code>null</code> if there is
 	*         none or it has already been closed
 	*/
-	@:overload public static function getSplashScreen() : java.awt.SplashScreen;
+	@:overload @:public @:static public static function getSplashScreen() : java.awt.SplashScreen;
 	
 	/**
 	* Changes the splash screen image. The new image is loaded from the
@@ -53,7 +53,7 @@ extern class SplashScreen
 	* @throws IllegalStateException if the splash screen has already been
 	*         closed
 	*/
-	@:overload public function setImageURL(imageURL : java.net.URL) : Void;
+	@:overload @:public public function setImageURL(imageURL : java.net.URL) : Void;
 	
 	/**
 	* Returns the current splash screen image.
@@ -61,7 +61,7 @@ extern class SplashScreen
 	* @return URL for the current splash screen image file
 	* @throws IllegalStateException if the splash screen has already been closed
 	*/
-	@:overload public function getImageURL() : java.net.URL;
+	@:overload @:public public function getImageURL() : java.net.URL;
 	
 	/**
 	* Returns the bounds of the splash screen window as a {@link Rectangle}.
@@ -77,7 +77,7 @@ extern class SplashScreen
 	* @return a {@code Rectangle} containing the splash screen bounds
 	* @throws IllegalStateException if the splash screen has already been closed
 	*/
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Returns the size of the splash screen window as a {@link Dimension}.
@@ -93,7 +93,7 @@ extern class SplashScreen
 	* @return a {@link Dimension} object indicating the splash screen size
 	* @throws IllegalStateException if the splash screen has already been closed
 	*/
-	@:overload public function getSize() : java.awt.Dimension;
+	@:overload @:public public function getSize() : java.awt.Dimension;
 	
 	/**
 	* Creates a graphics context (as a {@link Graphics2D} object) for the splash
@@ -112,7 +112,7 @@ extern class SplashScreen
 	* @return graphics context for the splash screen overlay surface
 	* @throws IllegalStateException if the splash screen has already been closed
 	*/
-	@:overload public function createGraphics() : java.awt.Graphics2D;
+	@:overload @:public public function createGraphics() : java.awt.Graphics2D;
 	
 	/**
 	* Updates the splash window with current contents of the overlay image.
@@ -121,7 +121,7 @@ extern class SplashScreen
 	*         for example, if {@code createGraphics} has never been called,
 	*         or if the splash screen has already been closed
 	*/
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
 	/**
 	* Hides the splash screen, closes the window, and releases all associated
@@ -129,7 +129,7 @@ extern class SplashScreen
 	*
 	* @throws IllegalStateException if the splash screen has already been closed
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Determines whether the splash screen is visible. The splash screen may
@@ -144,7 +144,7 @@ extern class SplashScreen
 	* @return true if the splash screen is visible (has not been closed yet),
 	*         false otherwise
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
 	
 }

@@ -30,7 +30,7 @@ extern class StubFactoryFactoryBase implements com.sun.corba.se.spi.presentation
 	*
 	* @param fullName fully qualified name remote class
 	*/
-	@:overload public function getStubName(fullName : String) : String;
+	@:overload @:public public function getStubName(fullName : String) : String;
 	
 	/** Create a stub factory for stubs for the interface whose type is given by
 	* className.  className may identify either an IDL interface or an RMI-IIOP
@@ -42,18 +42,18 @@ extern class StubFactoryFactoryBase implements com.sun.corba.se.spi.presentation
 	* @param expectedClass The expected stub type (may be null or unused).
 	* @param classLoader The classLoader to use (may be null).
 	*/
-	@:overload public function createStubFactory(className : String, isIDLStub : Bool, remoteCodeBase : String, expectedClass : Class<Dynamic>, classLoader : java.lang.ClassLoader) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory;
+	@:overload @:public public function createStubFactory(className : String, isIDLStub : Bool, remoteCodeBase : String, expectedClass : Class<Dynamic>, classLoader : java.lang.ClassLoader) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory;
 	
 	/** Return whether or not this StubFactoryFactory creates StubFactory
 	* instances that create dynamic stubs and ties.  At the top level,
 	* true indicates that rmic -iiop is not needed for generating stubs
 	* or ties.
 	*/
-	@:overload public function createsDynamicStubs() : Bool;
+	@:overload @:public public function createsDynamicStubs() : Bool;
 	
 	/** Return a Tie for the given class.
 	*/
-	@:overload public function getTie(cls : Class<Dynamic>) : javax.rmi.CORBA.Tie;
+	@:overload @:public public function getTie(cls : Class<Dynamic>) : javax.rmi.CORBA.Tie;
 	
 	
 }

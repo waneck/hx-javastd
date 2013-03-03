@@ -48,21 +48,21 @@ package java.nio.channels;
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns this pipe's source channel.  </p>
 	*
 	* @return  This pipe's source channel
 	*/
-	@:overload @:abstract public function source() : java.nio.channels.Pipe.Pipe_SourceChannel;
+	@:overload @:public @:abstract public function source() : java.nio.channels.Pipe.Pipe_SourceChannel;
 	
 	/**
 	* Returns this pipe's sink channel.  </p>
 	*
 	* @return  This pipe's sink channel
 	*/
-	@:overload @:abstract public function sink() : java.nio.channels.Pipe.Pipe_SinkChannel;
+	@:overload @:public @:abstract public function sink() : java.nio.channels.Pipe.Pipe_SinkChannel;
 	
 	/**
 	* Opens a pipe.
@@ -77,7 +77,7 @@ package java.nio.channels;
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function open() : java.nio.channels.Pipe;
+	@:overload @:public @:static public static function open() : java.nio.channels.Pipe;
 	
 	
 }
@@ -91,7 +91,7 @@ package java.nio.channels;
 	/**
 	* Constructs a new instance of this class.
 	*/
-	@:overload private function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
+	@:overload @:protected private function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
 	
 	/**
 	* Returns an operation set identifying this channel's supported
@@ -102,7 +102,7 @@ package java.nio.channels;
 	*
 	* @return  The valid-operation set
 	*/
-	@:overload @:final public function validOps() : Int;
+	@:overload @:public @:final override public function validOps() : Int;
 	
 	/**
 	* Reads a sequence of bytes from this channel into a subsequence of the
@@ -174,7 +174,7 @@ package java.nio.channels;
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload public function read(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload @:public @:public public function read(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
 	/**
 	* Reads a sequence of bytes from this channel into the given buffer.
@@ -232,14 +232,14 @@ package java.nio.channels;
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload public function read(dst : java.nio.ByteBuffer) : Int;
+	@:overload @:public @:public public function read(dst : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* Tells whether or not this channel is open.  </p>
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload @:public override public function isOpen() : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function isOpen() : Bool;
 	
 	/**
 	* Reads a sequence of bytes from this channel into the given buffers.
@@ -275,7 +275,7 @@ package java.nio.channels;
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload public function read(dsts : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
+	@:overload @:public @:public public function read(dsts : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
 	
 	/**
 	* Closes this channel.
@@ -294,7 +294,7 @@ package java.nio.channels;
 	*
 	* @throws  IOException  If an I/O error occurs
 	*/
-	@:overload @:public override public function close() : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function close() : Void;
 	
 	
 }
@@ -308,7 +308,7 @@ package java.nio.channels;
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
+	@:overload @:protected private function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
 	
 	/**
 	* Returns an operation set identifying this channel's supported
@@ -319,7 +319,7 @@ package java.nio.channels;
 	*
 	* @return  The valid-operation set
 	*/
-	@:overload @:final public function validOps() : Int;
+	@:overload @:public @:final override public function validOps() : Int;
 	
 	/**
 	* Writes a sequence of bytes to this channel from a subsequence of the
@@ -395,7 +395,7 @@ package java.nio.channels;
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload @:public @:public public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
 	/**
 	* Writes a sequence of bytes to this channel from the given buffer.
@@ -448,7 +448,7 @@ package java.nio.channels;
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload public function write(src : java.nio.ByteBuffer) : Int;
+	@:overload @:public @:public public function write(src : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* Writes a sequence of bytes to this channel from the given buffers.
@@ -483,14 +483,14 @@ package java.nio.channels;
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload public function write(srcs : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
+	@:overload @:public @:public public function write(srcs : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
 	
 	/**
 	* Tells whether or not this channel is open.  </p>
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload override public function isOpen() : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function isOpen() : Bool;
 	
 	/**
 	* Closes this channel.
@@ -509,7 +509,7 @@ package java.nio.channels;
 	*
 	* @throws  IOException  If an I/O error occurs
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function close() : Void;
 	
 	
 }

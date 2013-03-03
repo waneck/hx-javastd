@@ -30,7 +30,7 @@ extern interface Keymap
 	*
 	* @return the name
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Fetches the default action to fire if a
@@ -42,14 +42,14 @@ extern interface Keymap
 	*
 	* @return the default action
 	*/
-	@:overload public function getDefaultAction() : javax.swing.Action;
+	@:overload @:public public function getDefaultAction() : javax.swing.Action;
 	
 	/**
 	* Set the default action to fire if a key is typed.
 	*
 	* @param a the action
 	*/
-	@:overload public function setDefaultAction(a : javax.swing.Action) : Void;
+	@:overload @:public public function setDefaultAction(a : javax.swing.Action) : Void;
 	
 	/**
 	* Fetches the action appropriate for the given symbolic
@@ -62,7 +62,7 @@ extern interface Keymap
 	* @return  the action associated with the key
 	*  sequence if one is defined, otherwise <code>null</code>
 	*/
-	@:overload public function getAction(key : javax.swing.KeyStroke) : javax.swing.Action;
+	@:overload @:public public function getAction(key : javax.swing.KeyStroke) : javax.swing.Action;
 	
 	/**
 	* Fetches all of the keystrokes in this map that
@@ -70,14 +70,14 @@ extern interface Keymap
 	*
 	* @return the list of keystrokes
 	*/
-	@:overload public function getBoundKeyStrokes() : java.NativeArray<javax.swing.KeyStroke>;
+	@:overload @:public public function getBoundKeyStrokes() : java.NativeArray<javax.swing.KeyStroke>;
 	
 	/**
 	* Fetches all of the actions defined in this keymap.
 	*
 	* @return the list of actions
 	*/
-	@:overload public function getBoundActions() : java.NativeArray<javax.swing.Action>;
+	@:overload @:public public function getBoundActions() : java.NativeArray<javax.swing.Action>;
 	
 	/**
 	* Fetches the keystrokes that will result in
@@ -86,7 +86,7 @@ extern interface Keymap
 	* @param a the action
 	* @return the list of keystrokes
 	*/
-	@:overload public function getKeyStrokesForAction(a : javax.swing.Action) : java.NativeArray<javax.swing.KeyStroke>;
+	@:overload @:public public function getKeyStrokesForAction(a : javax.swing.Action) : java.NativeArray<javax.swing.KeyStroke>;
 	
 	/**
 	* Determines if the given key sequence is locally defined.
@@ -94,7 +94,7 @@ extern interface Keymap
 	* @param key the key sequence
 	* @return true if the key sequence is locally defined else false
 	*/
-	@:overload public function isLocallyDefined(key : javax.swing.KeyStroke) : Bool;
+	@:overload @:public public function isLocallyDefined(key : javax.swing.KeyStroke) : Bool;
 	
 	/**
 	* Adds a binding to the keymap.
@@ -102,26 +102,26 @@ extern interface Keymap
 	* @param key the key sequence
 	* @param a the action
 	*/
-	@:overload public function addActionForKeyStroke(key : javax.swing.KeyStroke, a : javax.swing.Action) : Void;
+	@:overload @:public public function addActionForKeyStroke(key : javax.swing.KeyStroke, a : javax.swing.Action) : Void;
 	
 	/**
 	* Removes a binding from the keymap.
 	*
 	* @param keys the key sequence
 	*/
-	@:overload public function removeKeyStrokeBinding(keys : javax.swing.KeyStroke) : Void;
+	@:overload @:public public function removeKeyStrokeBinding(keys : javax.swing.KeyStroke) : Void;
 	
 	/**
 	* Removes all bindings from the keymap.
 	*/
-	@:overload public function removeBindings() : Void;
+	@:overload @:public public function removeBindings() : Void;
 	
 	/**
 	* Fetches the parent keymap used to resolve key-bindings.
 	*
 	* @return the keymap
 	*/
-	@:overload public function getResolveParent() : javax.swing.text.Keymap;
+	@:overload @:public public function getResolveParent() : javax.swing.text.Keymap;
 	
 	/**
 	* Sets the parent keymap, which will be used to
@@ -131,7 +131,7 @@ extern interface Keymap
 	*
 	* @param parent the parent keymap
 	*/
-	@:overload public function setResolveParent(parent : javax.swing.text.Keymap) : Void;
+	@:overload @:public public function setResolveParent(parent : javax.swing.text.Keymap) : Void;
 	
 	
 }

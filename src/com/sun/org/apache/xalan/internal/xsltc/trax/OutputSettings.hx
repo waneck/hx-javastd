@@ -23,7 +23,7 @@ package com.sun.org.apache.xalan.internal.xsltc.trax;
 */
 extern class OutputSettings
 {
-	@:overload public function getProperties() : java.util.Properties;
+	@:overload @:public public function getProperties() : java.util.Properties;
 	
 	
 }

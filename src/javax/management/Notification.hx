@@ -32,7 +32,7 @@ extern class Notification extends java.util.EventObject
 	*
 	* @serial The object on which the notification initially occurred.
 	*/
-	private var source : Dynamic;
+	@:protected private var source : Dynamic;
 	
 	/**
 	* Creates a Notification object.
@@ -43,7 +43,7 @@ extern class Notification extends java.util.EventObject
 	* @param sequenceNumber The notification sequence number within the source object.
 	*
 	*/
-	@:overload public function new(type : String, source : Dynamic, sequenceNumber : haxe.Int64) : Void;
+	@:overload @:public public function new(type : String, source : Dynamic, sequenceNumber : haxe.Int64) : Void;
 	
 	/**
 	* Creates a Notification object.
@@ -55,7 +55,7 @@ extern class Notification extends java.util.EventObject
 	* @param message The detailed message.
 	*
 	*/
-	@:overload public function new(type : String, source : Dynamic, sequenceNumber : haxe.Int64, message : String) : Void;
+	@:overload @:public public function new(type : String, source : Dynamic, sequenceNumber : haxe.Int64, message : String) : Void;
 	
 	/**
 	* Creates a Notification object.
@@ -66,7 +66,7 @@ extern class Notification extends java.util.EventObject
 	* @param timeStamp The notification emission date.
 	*
 	*/
-	@:overload public function new(type : String, source : Dynamic, sequenceNumber : haxe.Int64, timeStamp : haxe.Int64) : Void;
+	@:overload @:public public function new(type : String, source : Dynamic, sequenceNumber : haxe.Int64, timeStamp : haxe.Int64) : Void;
 	
 	/**
 	* Creates a Notification object.
@@ -78,7 +78,7 @@ extern class Notification extends java.util.EventObject
 	* @param message The detailed message.
 	*
 	*/
-	@:overload public function new(type : String, source : Dynamic, sequenceNumber : haxe.Int64, timeStamp : haxe.Int64, message : String) : Void;
+	@:overload @:public public function new(type : String, source : Dynamic, sequenceNumber : haxe.Int64, timeStamp : haxe.Int64, message : String) : Void;
 	
 	/**
 	* Sets the source.
@@ -87,7 +87,7 @@ extern class Notification extends java.util.EventObject
 	*
 	* @see EventObject#getSource
 	*/
-	@:overload public function setSource(source : Dynamic) : Void;
+	@:overload @:public public function setSource(source : Dynamic) : Void;
 	
 	/**
 	* Get the notification sequence number.
@@ -99,7 +99,7 @@ extern class Notification extends java.util.EventObject
 	*
 	* @see #setSequenceNumber
 	*/
-	@:overload public function getSequenceNumber() : haxe.Int64;
+	@:overload @:public public function getSequenceNumber() : haxe.Int64;
 	
 	/**
 	* Set the notification sequence number.
@@ -110,7 +110,7 @@ extern class Notification extends java.util.EventObject
 	*
 	* @see #getSequenceNumber
 	*/
-	@:overload public function setSequenceNumber(sequenceNumber : haxe.Int64) : Void;
+	@:overload @:public public function setSequenceNumber(sequenceNumber : haxe.Int64) : Void;
 	
 	/**
 	* Get the notification type.
@@ -120,7 +120,7 @@ extern class Notification extends java.util.EventObject
 	* should follow the reverse-domain-name convention used by Java package
 	* names.  An example of a notification type is com.example.alarm.router.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	* Get the notification timestamp.
@@ -129,7 +129,7 @@ extern class Notification extends java.util.EventObject
 	*
 	* @see #setTimeStamp
 	*/
-	@:overload public function getTimeStamp() : haxe.Int64;
+	@:overload @:public public function getTimeStamp() : haxe.Int64;
 	
 	/**
 	* Set the notification timestamp.
@@ -138,7 +138,7 @@ extern class Notification extends java.util.EventObject
 	*
 	* @see #getTimeStamp
 	*/
-	@:overload public function setTimeStamp(timeStamp : haxe.Int64) : Void;
+	@:overload @:public public function setTimeStamp(timeStamp : haxe.Int64) : Void;
 	
 	/**
 	* Get the notification message.
@@ -146,7 +146,7 @@ extern class Notification extends java.util.EventObject
 	* @return The message string of this notification object.
 	*
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public public function getMessage() : String;
 	
 	/**
 	* Get the user data.
@@ -156,7 +156,7 @@ extern class Notification extends java.util.EventObject
 	*
 	* @see #setUserData
 	*/
-	@:overload public function getUserData() : Dynamic;
+	@:overload @:public public function getUserData() : Dynamic;
 	
 	/**
 	* Set the user data.
@@ -166,14 +166,14 @@ extern class Notification extends java.util.EventObject
 	*
 	* @see #getUserData
 	*/
-	@:overload public function setUserData(userData : Dynamic) : Void;
+	@:overload @:public public function setUserData(userData : Dynamic) : Void;
 	
 	/**
 	* Returns a String representation of this notification.
 	*
 	* @return A String representation of this notification.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

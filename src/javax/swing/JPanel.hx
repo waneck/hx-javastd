@@ -34,14 +34,14 @@ extern class JPanel extends javax.swing.JComponent implements javax.accessibilit
 	*        uses additional memory space to achieve fast, flicker-free
 	*        updates
 	*/
-	@:overload public function new(layout : java.awt.LayoutManager, isDoubleBuffered : Bool) : Void;
+	@:overload @:public public function new(layout : java.awt.LayoutManager, isDoubleBuffered : Bool) : Void;
 	
 	/**
 	* Create a new buffered JPanel with the specified layout manager
 	*
 	* @param layout  the LayoutManager to use
 	*/
-	@:overload public function new(layout : java.awt.LayoutManager) : Void;
+	@:overload @:public public function new(layout : java.awt.LayoutManager) : Void;
 	
 	/**
 	* Creates a new <code>JPanel</code> with <code>FlowLayout</code>
@@ -53,20 +53,20 @@ extern class JPanel extends javax.swing.JComponent implements javax.accessibilit
 	*        uses additional memory space to achieve fast, flicker-free
 	*        updates
 	*/
-	@:overload public function new(isDoubleBuffered : Bool) : Void;
+	@:overload @:public public function new(isDoubleBuffered : Bool) : Void;
 	
 	/**
 	* Creates a new <code>JPanel</code> with a double buffer
 	* and a flow layout.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Resets the UI property with a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the look and feel (L&F) object that renders this component.
@@ -74,7 +74,7 @@ extern class JPanel extends javax.swing.JComponent implements javax.accessibilit
 	* @return the PanelUI object that renders this component
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getUI() : javax.swing.plaf.PanelUI;
+	@:require(java4) @:overload @:public public function getUI() : javax.swing.plaf.PanelUI;
 	
 	/**
 	* Sets the look and feel (L&F) object that renders this component.
@@ -88,7 +88,7 @@ extern class JPanel extends javax.swing.JComponent implements javax.accessibilit
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel.
 	*/
-	@:require(java4) @:overload public function setUI(ui : javax.swing.plaf.PanelUI) : Void;
+	@:require(java4) @:overload @:public public function setUI(ui : javax.swing.plaf.PanelUI) : Void;
 	
 	/**
 	* Returns a string that specifies the name of the L&F class
@@ -101,7 +101,7 @@ extern class JPanel extends javax.swing.JComponent implements javax.accessibilit
 	*        expert: true
 	*   description: A string that specifies the name of the L&F class.
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Returns a string representation of this JPanel. This method
@@ -112,7 +112,7 @@ extern class JPanel extends javax.swing.JComponent implements javax.accessibilit
 	*
 	* @return  a string representation of this JPanel.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JPanel.
@@ -123,7 +123,7 @@ extern class JPanel extends javax.swing.JComponent implements javax.accessibilit
 	* @return an AccessibleJPanel that serves as the
 	*         AccessibleContext of this JPanel
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -150,7 +150,7 @@ extern class JPanel extends javax.swing.JComponent implements javax.accessibilit
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

@@ -21,31 +21,31 @@ package com.sun.org.apache.xerces.internal.impl.xs.identity;
 extern class Selector
 {
 	/** XPath. */
-	private var fXPath(default, null) : com.sun.org.apache.xerces.internal.impl.xs.identity.Selector.Selector_XPath;
+	@:protected @:final private var fXPath(default, null) : com.sun.org.apache.xerces.internal.impl.xs.identity.Selector.Selector_XPath;
 	
 	/** Identity constraint. */
-	private var fIdentityConstraint(default, null) : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
+	@:protected @:final private var fIdentityConstraint(default, null) : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
 	
-	private var fIDConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
+	@:protected private var fIDConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
 	
 	/** Constructs a selector. */
-	@:overload public function new(xpath : com.sun.org.apache.xerces.internal.impl.xs.identity.Selector.Selector_XPath, identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : Void;
+	@:overload @:public public function new(xpath : com.sun.org.apache.xerces.internal.impl.xs.identity.Selector.Selector_XPath, identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : Void;
 	
 	/** Returns the selector XPath. */
-	@:overload public function getXPath() : com.sun.org.apache.xerces.internal.impl.xpath.XPath;
+	@:overload @:public public function getXPath() : com.sun.org.apache.xerces.internal.impl.xpath.XPath;
 	
 	/** Returns the identity constraint. */
-	@:overload public function getIDConstraint() : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
+	@:overload @:public public function getIDConstraint() : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
 	
 	/** Creates a selector matcher.
 	* @param activator     The activator for this selector's fields.
 	* @param initialDepth  The depth in the document at which this matcher began its life;
 	*                          used in correctly handling recursive elements.
 	*/
-	@:overload public function createMatcher(activator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator, initialDepth : Int) : com.sun.org.apache.xerces.internal.impl.xs.identity.XPathMatcher;
+	@:overload @:public public function createMatcher(activator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator, initialDepth : Int) : com.sun.org.apache.xerces.internal.impl.xs.identity.XPathMatcher;
 	
 	/** Returns a string representation of this object. */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -58,7 +58,7 @@ extern class Selector
 @:native('com$sun$org$apache$xerces$internal$impl$xs$identity$Selector$XPath') extern class Selector_XPath extends com.sun.org.apache.xerces.internal.impl.xpath.XPath
 {
 	/** Constructs a selector XPath expression. */
-	@:overload override public function new(xpath : String, symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, context : com.sun.org.apache.xerces.internal.xni.NamespaceContext) : Void;
+	@:overload @:public override public function new(xpath : String, symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, context : com.sun.org.apache.xerces.internal.xni.NamespaceContext) : Void;
 	
 	
 }
@@ -70,21 +70,21 @@ extern class Selector
 @:native('com$sun$org$apache$xerces$internal$impl$xs$identity$Selector$Matcher') extern class Selector_Matcher extends com.sun.org.apache.xerces.internal.impl.xs.identity.XPathMatcher
 {
 	/** Field activator. */
-	private var fFieldActivator(default, null) : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator;
+	@:protected @:final private var fFieldActivator(default, null) : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator;
 	
 	/** Initial depth in the document at which this matcher was created. */
-	private var fInitialDepth(default, null) : Int;
+	@:protected @:final private var fInitialDepth(default, null) : Int;
 	
 	/** Element depth. */
-	private var fElementDepth : Int;
+	@:protected private var fElementDepth : Int;
 	
 	/** Depth at match. */
-	private var fMatchedDepth : Int;
+	@:protected private var fMatchedDepth : Int;
 	
 	/** Constructs a selector matcher. */
-	@:overload public function new(xpath : com.sun.org.apache.xerces.internal.impl.xs.identity.Selector.Selector_XPath, activator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator, initialDepth : Int) : Void;
+	@:overload @:public public function new(xpath : com.sun.org.apache.xerces.internal.impl.xs.identity.Selector.Selector_XPath, activator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator, initialDepth : Int) : Void;
 	
-	@:overload public function startDocumentFragment() : Void;
+	@:overload @:public override public function startDocumentFragment() : Void;
 	
 	/**
 	* The start of an element. If the document specifies the start element
@@ -95,15 +95,15 @@ extern class Selector
 	* @param attributes The element attributes.
 	*
 	*/
-	@:overload public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Void;
+	@:overload @:public override public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Void;
 	
-	@:overload public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, type : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, nillable : Bool, actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList) : Void;
+	@:overload @:public override public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, type : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, nillable : Bool, actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList) : Void;
 	
 	/** Returns the identity constraint. */
-	@:overload public function getIdentityConstraint() : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
+	@:overload @:public public function getIdentityConstraint() : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
 	
 	/** get the initial depth at which this selector matched. */
-	@:overload public function getInitialDepth() : Int;
+	@:overload @:public public function getInitialDepth() : Int;
 	
 	
 }

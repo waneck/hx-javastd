@@ -40,7 +40,7 @@ extern interface AlgorithmConstraints
 	* @throws IllegalArgumentException if primitives or algorithm is null
 	*     or empty
 	*/
-	@:overload public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, algorithm : String, parameters : java.security.AlgorithmParameters) : Bool;
+	@:overload @:public public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, algorithm : String, parameters : java.security.AlgorithmParameters) : Bool;
 	
 	/**
 	* Determines whether a key is granted permission for the specified
@@ -57,7 +57,7 @@ extern interface AlgorithmConstraints
 	* @throws IllegalArgumentException if primitives is null or empty,
 	*     or the key is null
 	*/
-	@:overload public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, key : java.security.Key) : Bool;
+	@:overload @:public public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, key : java.security.Key) : Bool;
 	
 	/**
 	* Determines whether an algorithm and the corresponding key are granted
@@ -75,7 +75,7 @@ extern interface AlgorithmConstraints
 	* @throws IllegalArgumentException if primitives or algorithm is null
 	*     or empty, or the key is null
 	*/
-	@:overload public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, algorithm : String, key : java.security.Key, parameters : java.security.AlgorithmParameters) : Bool;
+	@:overload @:public public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, algorithm : String, key : java.security.Key, parameters : java.security.AlgorithmParameters) : Bool;
 	
 	
 }

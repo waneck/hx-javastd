@@ -25,13 +25,13 @@ package sun.security.rsa;
 */
 extern class RSAPrivateKeyImpl extends sun.security.pkcs.PKCS8Key implements java.security.interfaces.RSAPrivateKey
 {
-	@:overload public function getAlgorithm() : String;
+	@:overload @:public override public function getAlgorithm() : String;
 	
-	@:overload public function getModulus() : java.math.BigInteger;
+	@:overload @:public public function getModulus() : java.math.BigInteger;
 	
-	@:overload public function getPrivateExponent() : java.math.BigInteger;
+	@:overload @:public public function getPrivateExponent() : java.math.BigInteger;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

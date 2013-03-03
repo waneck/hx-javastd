@@ -31,7 +31,7 @@ extern class JAXB
 	* @param xml
 	*      Reads the entire file as XML.
 	*/
-	@:overload public static function unmarshal<T>(xml : java.io.File, type : Class<T>) : T;
+	@:overload @:public @:static public static function unmarshal<T>(xml : java.io.File, type : Class<T>) : T;
 	
 	/**
 	* Reads in a Java object tree from the given XML input.
@@ -39,7 +39,7 @@ extern class JAXB
 	* @param xml
 	*      The resource pointed by the URL is read in its entirety.
 	*/
-	@:overload public static function unmarshal<T>(xml : java.net.URL, type : Class<T>) : T;
+	@:overload @:public @:static public static function unmarshal<T>(xml : java.net.URL, type : Class<T>) : T;
 	
 	/**
 	* Reads in a Java object tree from the given XML input.
@@ -48,7 +48,7 @@ extern class JAXB
 	*      The URI is {@link URI#toURL() turned into URL} and then
 	*      follows the handling of <tt>URL</tt>.
 	*/
-	@:overload public static function unmarshal<T>(xml : java.net.URI, type : Class<T>) : T;
+	@:overload @:public @:static public static function unmarshal<T>(xml : java.net.URI, type : Class<T>) : T;
 	
 	/**
 	* Reads in a Java object tree from the given XML input.
@@ -58,7 +58,7 @@ extern class JAXB
 	*      If it's not {@link URI#isAbsolute() a valid absolute URI},
 	*      then it's interpreted as a <tt>File</tt>
 	*/
-	@:overload public static function unmarshal<T>(xml : String, type : Class<T>) : T;
+	@:overload @:public @:static public static function unmarshal<T>(xml : String, type : Class<T>) : T;
 	
 	/**
 	* Reads in a Java object tree from the given XML input.
@@ -67,7 +67,7 @@ extern class JAXB
 	*      The entire stream is read as an XML infoset.
 	*      Upon a successful completion, the stream will be closed by this method.
 	*/
-	@:overload public static function unmarshal<T>(xml : java.io.InputStream, type : Class<T>) : T;
+	@:overload @:public @:static public static function unmarshal<T>(xml : java.io.InputStream, type : Class<T>) : T;
 	
 	/**
 	* Reads in a Java object tree from the given XML input.
@@ -77,7 +77,7 @@ extern class JAXB
 	*      The encoding declaration in the XML will be ignored.
 	*      Upon a successful completion, the stream will be closed by this method.
 	*/
-	@:overload public static function unmarshal<T>(xml : java.io.Reader, type : Class<T>) : T;
+	@:overload @:public @:static public static function unmarshal<T>(xml : java.io.Reader, type : Class<T>) : T;
 	
 	/**
 	* Reads in a Java object tree from the given XML input.
@@ -85,7 +85,7 @@ extern class JAXB
 	* @param xml
 	*      The XML infoset that the {@link Source} represents is read.
 	*/
-	@:overload public static function unmarshal<T>(xml : javax.xml.transform.Source, type : Class<T>) : T;
+	@:overload @:public @:static public static function unmarshal<T>(xml : javax.xml.transform.Source, type : Class<T>) : T;
 	
 	/**
 	* Writes a Java object tree to XML and store it to the specified location.
@@ -107,7 +107,7 @@ extern class JAXB
 	* @throws DataBindingException
 	*      If the operation fails, such as due to I/O error, unbindable classes.
 	*/
-	@:overload public static function marshal(jaxbObject : Dynamic, xml : java.io.File) : Void;
+	@:overload @:public @:static public static function marshal(jaxbObject : Dynamic, xml : java.io.File) : Void;
 	
 	/**
 	* Writes a Java object tree to XML and store it to the specified location.
@@ -132,7 +132,7 @@ extern class JAXB
 	* @throws DataBindingException
 	*      If the operation fails, such as due to I/O error, unbindable classes.
 	*/
-	@:overload public static function marshal(jaxbObject : Dynamic, xml : java.net.URL) : Void;
+	@:overload @:public @:static public static function marshal(jaxbObject : Dynamic, xml : java.net.URL) : Void;
 	
 	/**
 	* Writes a Java object tree to XML and store it to the specified location.
@@ -154,7 +154,7 @@ extern class JAXB
 	* @throws DataBindingException
 	*      If the operation fails, such as due to I/O error, unbindable classes.
 	*/
-	@:overload public static function marshal(jaxbObject : Dynamic, xml : java.net.URI) : Void;
+	@:overload @:public @:static public static function marshal(jaxbObject : Dynamic, xml : java.net.URI) : Void;
 	
 	/**
 	* Writes a Java object tree to XML and store it to the specified location.
@@ -177,7 +177,7 @@ extern class JAXB
 	* @throws DataBindingException
 	*      If the operation fails, such as due to I/O error, unbindable classes.
 	*/
-	@:overload public static function marshal(jaxbObject : Dynamic, xml : String) : Void;
+	@:overload @:public @:static public static function marshal(jaxbObject : Dynamic, xml : String) : Void;
 	
 	/**
 	* Writes a Java object tree to XML and store it to the specified location.
@@ -199,7 +199,7 @@ extern class JAXB
 	* @throws DataBindingException
 	*      If the operation fails, such as due to I/O error, unbindable classes.
 	*/
-	@:overload public static function marshal(jaxbObject : Dynamic, xml : java.io.OutputStream) : Void;
+	@:overload @:public @:static public static function marshal(jaxbObject : Dynamic, xml : java.io.OutputStream) : Void;
 	
 	/**
 	* Writes a Java object tree to XML and store it to the specified location.
@@ -221,7 +221,7 @@ extern class JAXB
 	* @throws DataBindingException
 	*      If the operation fails, such as due to I/O error, unbindable classes.
 	*/
-	@:overload public static function marshal(jaxbObject : Dynamic, xml : java.io.Writer) : Void;
+	@:overload @:public @:static public static function marshal(jaxbObject : Dynamic, xml : java.io.Writer) : Void;
 	
 	/**
 	* Writes a Java object tree to XML and store it to the specified location.
@@ -242,7 +242,7 @@ extern class JAXB
 	* @throws DataBindingException
 	*      If the operation fails, such as due to I/O error, unbindable classes.
 	*/
-	@:overload public static function marshal(jaxbObject : Dynamic, xml : javax.xml.transform.Result) : Void;
+	@:overload @:public @:static public static function marshal(jaxbObject : Dynamic, xml : javax.xml.transform.Result) : Void;
 	
 	
 }
@@ -251,7 +251,7 @@ extern class JAXB
 */
 @:native('javax$xml$bind$JAXB$Cache') @:internal extern class JAXB_Cache
 {
-	@:overload public function new(type : Class<Dynamic>) : Void;
+	@:overload @:public public function new(type : Class<Dynamic>) : Void;
 	
 	
 }

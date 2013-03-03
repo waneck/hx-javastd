@@ -25,21 +25,21 @@ package com.sun.xml.internal.ws.encoding.policy;
 */
 extern class EncodingConstants
 {
-	public static var SUN_FI_SERVICE_NS(default, null) : String;
+	@:public @:static @:final public static var SUN_FI_SERVICE_NS(default, null) : String;
 	
-	public static var OPTIMIZED_FI_SERIALIZATION_ASSERTION(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var OPTIMIZED_FI_SERIALIZATION_ASSERTION(default, null) : javax.xml.namespace.QName;
 	
-	public static var SUN_ENCODING_CLIENT_NS(default, null) : String;
+	@:public @:static @:final public static var SUN_ENCODING_CLIENT_NS(default, null) : String;
 	
-	public static var SELECT_OPTIMAL_ENCODING_ASSERTION(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var SELECT_OPTIMAL_ENCODING_ASSERTION(default, null) : javax.xml.namespace.QName;
 	
-	public static var OPTIMIZED_MIME_NS(default, null) : String;
+	@:public @:static @:final public static var OPTIMIZED_MIME_NS(default, null) : String;
 	
-	public static var OPTIMIZED_MIME_SERIALIZATION_ASSERTION(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var OPTIMIZED_MIME_SERIALIZATION_ASSERTION(default, null) : javax.xml.namespace.QName;
 	
-	public static var ENCODING_NS(default, null) : String;
+	@:public @:static @:final public static var ENCODING_NS(default, null) : String;
 	
-	public static var UTF816FFFE_CHARACTER_ENCODING_ASSERTION(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var UTF816FFFE_CHARACTER_ENCODING_ASSERTION(default, null) : javax.xml.namespace.QName;
 	
 	
 }

@@ -29,9 +29,9 @@ extern interface CorbaContactInfoListFactory
 	* This will be called after the no-arg constructor before
 	* create is called.
 	*/
-	@:overload public function setORB(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function setORB(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function create(ior : com.sun.corba.se.spi.ior.IOR) : com.sun.corba.se.spi.transport.CorbaContactInfoList;
+	@:overload @:public public function create(ior : com.sun.corba.se.spi.ior.IOR) : com.sun.corba.se.spi.transport.CorbaContactInfoList;
 	
 	
 }

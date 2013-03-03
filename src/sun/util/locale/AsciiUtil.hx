@@ -31,41 +31,41 @@ package sun.util.locale;
 */
 extern class AsciiUtil
 {
-	@:overload public static function caseIgnoreMatch(s1 : String, s2 : String) : Bool;
+	@:overload @:public @:static public static function caseIgnoreMatch(s1 : String, s2 : String) : Bool;
 	
-	@:overload public static function caseIgnoreCompare(s1 : String, s2 : String) : Int;
+	@:overload @:public @:static public static function caseIgnoreCompare(s1 : String, s2 : String) : Int;
 	
-	@:overload public static function toUpper(c : java.StdTypes.Char16) : java.StdTypes.Char16;
+	@:overload @:public @:static public static function toUpper(c : java.StdTypes.Char16) : java.StdTypes.Char16;
 	
-	@:overload public static function toLower(c : java.StdTypes.Char16) : java.StdTypes.Char16;
+	@:overload @:public @:static public static function toLower(c : java.StdTypes.Char16) : java.StdTypes.Char16;
 	
-	@:overload public static function toLowerString(s : String) : String;
+	@:overload @:public @:static public static function toLowerString(s : String) : String;
 	
-	@:overload public static function toUpperString(s : String) : String;
+	@:overload @:public @:static public static function toUpperString(s : String) : String;
 	
-	@:overload public static function toTitleString(s : String) : String;
+	@:overload @:public @:static public static function toTitleString(s : String) : String;
 	
-	@:overload public static function isAlpha(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isAlpha(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload public static function isAlphaString(s : String) : Bool;
+	@:overload @:public @:static public static function isAlphaString(s : String) : Bool;
 	
-	@:overload public static function isNumeric(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isNumeric(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload public static function isNumericString(s : String) : Bool;
+	@:overload @:public @:static public static function isNumericString(s : String) : Bool;
 	
-	@:overload public static function isAlphaNumeric(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isAlphaNumeric(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload public static function isAlphaNumericString(s : String) : Bool;
+	@:overload @:public @:static public static function isAlphaNumericString(s : String) : Bool;
 	
 	
 }
 @:native('sun$util$locale$AsciiUtil$CaseInsensitiveKey') extern class AsciiUtil_CaseInsensitiveKey
 {
-	@:overload public function new(key : String) : Void;
+	@:overload @:public public function new(key : String) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

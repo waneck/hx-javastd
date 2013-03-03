@@ -25,13 +25,13 @@ package com.sun.xml.internal.bind.v2.util;
 */
 extern class FlattenIterator<T> implements java.util.Iterator<T>
 {
-	@:overload public function new(core : java.lang.Iterable<java.util.Map<Dynamic, T>>) : Void;
+	@:overload @:public public function new(core : java.lang.Iterable<java.util.Map<Dynamic, T>>) : Void;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : T;
+	@:overload @:public public function next() : T;
 	
 	
 }

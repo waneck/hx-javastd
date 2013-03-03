@@ -30,7 +30,7 @@ extern class FontScaler implements sun.java2d.DisposerRecord
 	* scaler with Disposer as well as trigger deregistring bad font
 	* in case when scaler reports this.
 	*/
-	@:overload public static function getScaler(font : sun.font.Font2D, indexInCollection : Int, supportsCJK : Bool, filesize : Int) : sun.font.FontScaler;
+	@:overload @:public @:static public static function getScaler(font : sun.font.Font2D, indexInCollection : Int, supportsCJK : Bool, filesize : Int) : sun.font.FontScaler;
 	
 	/*
 	* At the moment it is harmless to create 2 null scalers so, technically,
@@ -39,18 +39,18 @@ extern class FontScaler implements sun.java2d.DisposerRecord
 	* But it is safer to keep it to avoid subtle problems if we will be adding
 	* checks like whether scaler is null scaler.
 	*/
-	@:overload @:synchronized public static function getNullScaler() : sun.font.FontScaler;
+	@:overload @:public @:static @:synchronized public static function getNullScaler() : sun.font.FontScaler;
 	
-	private var font : java.lang.ref.WeakReference<sun.font.Font2D>;
+	@:protected private var font : java.lang.ref.WeakReference<sun.font.Font2D>;
 	
-	private var nativeScaler : haxe.Int64;
+	@:protected private var nativeScaler : haxe.Int64;
 	
-	private var disposed : Bool;
+	@:protected private var disposed : Bool;
 	
 	/* Used by Java2D disposer to ensure native resources are released.
 	Note: this method does not release any of created
 	scaler context objects! */
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	
 }

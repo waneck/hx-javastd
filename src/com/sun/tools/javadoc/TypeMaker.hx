@@ -25,25 +25,25 @@ package com.sun.tools.javadoc;
 */
 extern class TypeMaker
 {
-	@:overload public static function getType(env : com.sun.tools.javadoc.DocEnv, t : com.sun.tools.javac.code.Type) : com.sun.javadoc.Type;
+	@:overload @:public @:static public static function getType(env : com.sun.tools.javadoc.DocEnv, t : com.sun.tools.javac.code.Type) : com.sun.javadoc.Type;
 	
 	/**
 	* @param errToClassDoc  if true, ERROR type results in a ClassDoc;
 	*          false preserves legacy behavior
 	*/
-	@:overload public static function getType(env : com.sun.tools.javadoc.DocEnv, t : com.sun.tools.javac.code.Type, errToClassDoc : Bool) : com.sun.javadoc.Type;
+	@:overload @:public @:static public static function getType(env : com.sun.tools.javadoc.DocEnv, t : com.sun.tools.javac.code.Type, errToClassDoc : Bool) : com.sun.javadoc.Type;
 	
 	/**
 	* Convert a list of javac types into an array of javadoc types.
 	*/
-	@:overload public static function getTypes(env : com.sun.tools.javadoc.DocEnv, ts : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : java.NativeArray<com.sun.javadoc.Type>;
+	@:overload @:public @:static public static function getTypes(env : com.sun.tools.javadoc.DocEnv, ts : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : java.NativeArray<com.sun.javadoc.Type>;
 	
 	/**
 	* Like the above version, but use and return the array given.
 	*/
-	@:overload public static function getTypes(env : com.sun.tools.javadoc.DocEnv, ts : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, res : java.NativeArray<com.sun.javadoc.Type>) : java.NativeArray<com.sun.javadoc.Type>;
+	@:overload @:public @:static public static function getTypes(env : com.sun.tools.javadoc.DocEnv, ts : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, res : java.NativeArray<com.sun.javadoc.Type>) : java.NativeArray<com.sun.javadoc.Type>;
 	
-	@:overload public static function getTypeName(t : com.sun.tools.javac.code.Type, full : Bool) : String;
+	@:overload @:public @:static public static function getTypeName(t : com.sun.tools.javac.code.Type, full : Bool) : String;
 	
 	
 }
@@ -54,14 +54,14 @@ extern class TypeMaker
 	* <p>
 	* For example, a two dimensional array of String returns '[][]'.
 	*/
-	@:overload public function dimension() : String;
+	@:overload @:public public function dimension() : String;
 	
 	/**
 	* Return unqualified name of type excluding any dimension information.
 	* <p>
 	* For example, a two dimensional array of String returns 'String'.
 	*/
-	@:overload public function typeName() : String;
+	@:overload @:public public function typeName() : String;
 	
 	/**
 	* Return qualified name of type excluding any dimension information.
@@ -69,12 +69,12 @@ extern class TypeMaker
 	* For example, a two dimensional array of String
 	* returns 'java.lang.String'.
 	*/
-	@:overload public function qualifiedTypeName() : String;
+	@:overload @:public public function qualifiedTypeName() : String;
 	
 	/**
 	* Return the simple name of this type excluding any dimension information.
 	*/
-	@:overload public function simpleTypeName() : String;
+	@:overload @:public public function simpleTypeName() : String;
 	
 	/**
 	* Return this type as a class.  Array dimensions are ignored.
@@ -82,35 +82,35 @@ extern class TypeMaker
 	* @return a ClassDocImpl if the type is a Class.
 	* Return null if it is a primitive type..
 	*/
-	@:overload public function asClassDoc() : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function asClassDoc() : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Return this type as a <code>ParameterizedType</code> if it
 	* represents a parameterized type.  Array dimensions are ignored.
 	*/
-	@:overload public function asParameterizedType() : com.sun.javadoc.ParameterizedType;
+	@:overload @:public public function asParameterizedType() : com.sun.javadoc.ParameterizedType;
 	
 	/**
 	* Return this type as a <code>TypeVariable</code> if it represents
 	* a type variable.  Array dimensions are ignored.
 	*/
-	@:overload public function asTypeVariable() : com.sun.javadoc.TypeVariable;
+	@:overload @:public public function asTypeVariable() : com.sun.javadoc.TypeVariable;
 	
 	/**
 	* Return null, as there are no arrays of wildcard types.
 	*/
-	@:overload public function asWildcardType() : com.sun.javadoc.WildcardType;
+	@:overload @:public public function asWildcardType() : com.sun.javadoc.WildcardType;
 	
 	/**
 	* Return this type as an <code>AnnotationTypeDoc</code> if it
 	* represents an annotation type.  Array dimensions are ignored.
 	*/
-	@:overload public function asAnnotationTypeDoc() : com.sun.javadoc.AnnotationTypeDoc;
+	@:overload @:public public function asAnnotationTypeDoc() : com.sun.javadoc.AnnotationTypeDoc;
 	
 	/**
 	* Return true if this is an array of a primitive type.
 	*/
-	@:overload public function isPrimitive() : Bool;
+	@:overload @:public public function isPrimitive() : Bool;
 	
 	/**
 	* Return a string representation of the type.
@@ -122,7 +122,7 @@ extern class TypeMaker
 	*
 	* @return name of type including any dimension information.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

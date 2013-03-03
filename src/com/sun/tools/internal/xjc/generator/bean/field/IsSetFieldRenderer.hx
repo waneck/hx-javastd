@@ -25,9 +25,9 @@ package com.sun.tools.internal.xjc.generator.bean.field;
 */
 extern class IsSetFieldRenderer implements com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer
 {
-	@:overload public function new(core : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer, generateUnSetMethod : Bool, generateIsSetMethod : Bool) : Void;
+	@:overload @:public public function new(core : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer, generateUnSetMethod : Bool, generateIsSetMethod : Bool) : Void;
 	
-	@:overload public function generate(context : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : com.sun.tools.internal.xjc.outline.FieldOutline;
+	@:overload @:public public function generate(context : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : com.sun.tools.internal.xjc.outline.FieldOutline;
 	
 	
 }

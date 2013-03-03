@@ -25,17 +25,17 @@ package com.sun.tools.internal.xjc.api.impl.s2j;
 */
 @:internal extern class TypeAndAnnotationImpl implements com.sun.tools.internal.xjc.api.TypeAndAnnotation
 {
-	@:overload public function new(outline : com.sun.tools.internal.xjc.outline.Outline, typeUse : com.sun.tools.internal.xjc.model.TypeUse) : Void;
+	@:overload @:public public function new(outline : com.sun.tools.internal.xjc.outline.Outline, typeUse : com.sun.tools.internal.xjc.model.TypeUse) : Void;
 	
-	@:overload public function getTypeClass() : com.sun.codemodel.internal.JType;
+	@:overload @:public public function getTypeClass() : com.sun.codemodel.internal.JType;
 	
-	@:overload public function annotate(programElement : com.sun.codemodel.internal.JAnnotatable) : Void;
+	@:overload @:public public function annotate(programElement : com.sun.codemodel.internal.JAnnotatable) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

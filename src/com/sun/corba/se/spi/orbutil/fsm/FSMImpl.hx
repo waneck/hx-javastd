@@ -28,13 +28,13 @@ extern class FSMImpl implements com.sun.corba.se.spi.orbutil.fsm.FSM
 	/** Create an instance of an FSM using the StateEngine
 	* in a particular start state.
 	*/
-	@:overload public function new(se : com.sun.corba.se.spi.orbutil.fsm.StateEngine, startState : com.sun.corba.se.spi.orbutil.fsm.State) : Void;
+	@:overload @:public public function new(se : com.sun.corba.se.spi.orbutil.fsm.StateEngine, startState : com.sun.corba.se.spi.orbutil.fsm.State) : Void;
 	
-	@:overload public function new(se : com.sun.corba.se.spi.orbutil.fsm.StateEngine, startState : com.sun.corba.se.spi.orbutil.fsm.State, debug : Bool) : Void;
+	@:overload @:public public function new(se : com.sun.corba.se.spi.orbutil.fsm.StateEngine, startState : com.sun.corba.se.spi.orbutil.fsm.State, debug : Bool) : Void;
 	
 	/** Return the current state.
 	*/
-	@:overload public function getState() : com.sun.corba.se.spi.orbutil.fsm.State;
+	@:overload @:public public function getState() : com.sun.corba.se.spi.orbutil.fsm.State;
 	
 	/** Perform the transition for the given input in the current state.  This proceeds as follows:
 	* <p>Let S be the current state of the FSM.
@@ -55,9 +55,9 @@ extern class FSMImpl implements com.sun.corba.se.spi.orbutil.fsm.FSM
 	* <li>Set the current state to the next state.
 	* </ol>
 	*/
-	@:overload public function doIt(_in : com.sun.corba.se.spi.orbutil.fsm.Input) : Void;
+	@:overload @:public public function doIt(_in : com.sun.corba.se.spi.orbutil.fsm.Input) : Void;
 	
-	@:overload public function internalSetState(nextState : com.sun.corba.se.spi.orbutil.fsm.State) : Void;
+	@:overload @:public public function internalSetState(nextState : com.sun.corba.se.spi.orbutil.fsm.State) : Void;
 	
 	
 }

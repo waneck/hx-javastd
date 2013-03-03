@@ -36,7 +36,7 @@ extern class Sdp
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function openSocket() : java.net.Socket;
+	@:overload @:public @:static public static function openSocket() : java.net.Socket;
 	
 	/**
 	* Creates an unbound SDP server socket. The {@code ServerSocket} is
@@ -49,7 +49,7 @@ extern class Sdp
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function openServerSocket() : java.net.ServerSocket;
+	@:overload @:public @:static public static function openServerSocket() : java.net.ServerSocket;
 	
 	/**
 	* Opens a socket channel to a SDP socket.
@@ -65,7 +65,7 @@ extern class Sdp
 	* @throws  IOException
 	*          If an I/O error occurs.
 	*/
-	@:overload public static function openSocketChannel() : java.nio.channels.SocketChannel;
+	@:overload @:public @:static public static function openSocketChannel() : java.nio.channels.SocketChannel;
 	
 	/**
 	* Opens a socket channel to a SDP socket.
@@ -81,7 +81,7 @@ extern class Sdp
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function openServerSocketChannel() : java.nio.channels.ServerSocketChannel;
+	@:overload @:public @:static public static function openServerSocketChannel() : java.nio.channels.ServerSocketChannel;
 	
 	
 }

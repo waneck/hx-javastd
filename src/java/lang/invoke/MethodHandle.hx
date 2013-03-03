@@ -389,7 +389,7 @@ extern class MethodHandle
 	* Every invocation of this method handle via {@code invokeExact} must exactly match this type.
 	* @return the method handle type
 	*/
-	@:overload public function type() : java.lang.invoke.MethodType;
+	@:overload @:public public function type() : java.lang.invoke.MethodType;
 	
 	/**
 	* Invokes the method handle, allowing any caller type descriptor, but requiring an exact type match.
@@ -406,7 +406,7 @@ extern class MethodHandle
 	* @throws WrongMethodTypeException if the target's type is not identical with the caller's symbolic type descriptor
 	* @throws Throwable anything thrown by the underlying method propagates unchanged through the method handle call
 	*/
-	@:overload @:final @:native public function invokeExact(args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public @:final @:native public function invokeExact(args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	/**
 	* Invokes the method handle, allowing any caller type descriptor,
@@ -441,7 +441,7 @@ extern class MethodHandle
 	* @throws ClassCastException if the target's type can be adjusted to the caller, but a reference cast fails
 	* @throws Throwable anything thrown by the underlying method propagates unchanged through the method handle call
 	*/
-	@:overload @:final @:native public function invoke(args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public @:final @:native public function invoke(args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	/**
 	* Performs a variable arity invocation, passing the arguments in the given array
@@ -493,7 +493,7 @@ extern class MethodHandle
 	* @throws Throwable anything thrown by the target method invocation
 	* @see MethodHandles#spreadInvoker
 	*/
-	@:overload public function invokeWithArguments(arguments : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invokeWithArguments(arguments : java.NativeArray<Dynamic>) : Dynamic;
 	
 	/**
 	* Performs a variable arity invocation, passing the arguments in the given array
@@ -513,7 +513,7 @@ extern class MethodHandle
 	* @throws WrongMethodTypeException if the target's type cannot be adjusted to take the given number of {@code Object} arguments
 	* @throws Throwable anything thrown by the target method invocation
 	*/
-	@:overload public function invokeWithArguments(arguments : java.util.List<Dynamic>) : Dynamic;
+	@:overload @:public public function invokeWithArguments(arguments : java.util.List<Dynamic>) : Dynamic;
 	
 	/**
 	* Produces an adapter method handle which adapts the type of the
@@ -613,7 +613,7 @@ extern class MethodHandle
 	* @throws WrongMethodTypeException if the conversion cannot be made
 	* @see MethodHandles#explicitCastArguments
 	*/
-	@:overload public function asType(newType : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function asType(newType : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Makes an <em>array-spreading</em> method handle, which accepts a trailing array argument
@@ -692,7 +692,7 @@ assertEquals("[A, B, C]", (String) caToString2.invokeExact('A', "BC".toCharArray
 	* @throws WrongMethodTypeException if the implied {@code asType} call fails
 	* @see #asCollector
 	*/
-	@:overload public function asSpreader(arrayType : Class<Dynamic>, arrayLength : Int) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function asSpreader(arrayType : Class<Dynamic>, arrayLength : Int) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Makes an <em>array-collecting</em> method handle, which accepts a given number of trailing
@@ -763,7 +763,7 @@ assertEquals("[123]", (String) longsToString.invokeExact((long)123));
 	* @see #asSpreader
 	* @see #asVarargsCollector
 	*/
-	@:overload public function asCollector(arrayType : Class<Dynamic>, arrayLength : Int) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function asCollector(arrayType : Class<Dynamic>, arrayLength : Int) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Makes a <em>variable arity</em> adapter which is able to accept
@@ -915,7 +915,7 @@ assertEquals("[three, thee, tee]", Arrays.toString((Object[])ls.get(0)));
 	* @see #isVarargsCollector
 	* @see #asFixedArity
 	*/
-	@:overload public function asVarargsCollector(arrayType : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function asVarargsCollector(arrayType : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Determines if this method handle
@@ -932,7 +932,7 @@ assertEquals("[three, thee, tee]", Arrays.toString((Object[])ls.get(0)));
 	* @see #asVarargsCollector
 	* @see #asFixedArity
 	*/
-	@:overload public function isVarargsCollector() : Bool;
+	@:overload @:public public function isVarargsCollector() : Bool;
 	
 	/**
 	* Makes a <em>fixed arity</em> method handle which is otherwise
@@ -977,7 +977,7 @@ assertEquals("[three, thee, tee]", asListFix.invoke((Object)argv).toString());
 	* @see #asVarargsCollector
 	* @see #isVarargsCollector
 	*/
-	@:overload public function asFixedArity() : java.lang.invoke.MethodHandle;
+	@:overload @:public public function asFixedArity() : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Binds a value {@code x} to the first argument of a method handle, without invoking it.
@@ -1006,7 +1006,7 @@ assertEquals("[three, thee, tee]", asListFix.invoke((Object)argv).toString());
 	*         to the leading parameter type of the target
 	* @see MethodHandles#insertArguments
 	*/
-	@:overload public function bindTo(x : Dynamic) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function bindTo(x : Dynamic) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Returns a string representation of the method handle,
@@ -1023,7 +1023,7 @@ assertEquals("[three, thee, tee]", asListFix.invoke((Object)argv).toString());
 	*
 	* @return a string representation of the method handle
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

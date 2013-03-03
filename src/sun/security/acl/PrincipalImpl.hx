@@ -34,7 +34,7 @@ extern class PrincipalImpl implements java.security.Principal
 	* Construct a principal from a string user name.
 	* @param user The string form of the principal name.
 	*/
-	@:overload public function new(user : String) : Void;
+	@:overload @:public public function new(user : String) : Void;
 	
 	/**
 	* This function returns true if the object passed matches
@@ -43,22 +43,22 @@ extern class PrincipalImpl implements java.security.Principal
 	* @return true if the Principal passed is the same as that
 	* encapsulated in this object, false otherwise
 	*/
-	@:overload public function equals(another : Dynamic) : Bool;
+	@:overload @:public public function equals(another : Dynamic) : Bool;
 	
 	/**
 	* Prints a stringified version of the principal.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* return a hashcode for the principal.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* return the name of the principal.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

@@ -25,9 +25,9 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface AttrDecls extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function attribute() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.LocalAttribute;
+	@:overload @:public public function attribute() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.LocalAttribute;
 	
-	@:overload public function anyAttribute() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Wildcard;
+	@:overload @:public public function anyAttribute() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Wildcard;
 	
 	
 }

@@ -47,7 +47,7 @@ extern class IIOByteBuffer
 	* @param length an int specifying the length of the data of
 	* interest within byte array, in bytes.
 	*/
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Returns a reference to the byte array.  The returned value should
@@ -61,7 +61,7 @@ extern class IIOByteBuffer
 	* @see #getLength
 	* @see #setData
 	*/
-	@:overload public function getData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Updates the array reference that will be returned by subsequent calls
@@ -71,7 +71,7 @@ extern class IIOByteBuffer
 	*
 	* @see #getData
 	*/
-	@:overload public function setData(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setData(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the offset within the byte array returned by
@@ -83,7 +83,7 @@ extern class IIOByteBuffer
 	* @see #getLength
 	* @see #setOffset
 	*/
-	@:overload public function getOffset() : Int;
+	@:overload @:public public function getOffset() : Int;
 	
 	/**
 	* Updates the value that will be returned by subsequent calls
@@ -93,7 +93,7 @@ extern class IIOByteBuffer
 	*
 	* @see #getOffset
 	*/
-	@:overload public function setOffset(offset : Int) : Void;
+	@:overload @:public public function setOffset(offset : Int) : Void;
 	
 	/**
 	* Returns the length of the data of interest within the byte
@@ -105,7 +105,7 @@ extern class IIOByteBuffer
 	* @see #getOffset
 	* @see #setLength
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Updates the value that will be returned by subsequent calls
@@ -115,7 +115,7 @@ extern class IIOByteBuffer
 	*
 	* @see #getLength
 	*/
-	@:overload public function setLength(length : Int) : Void;
+	@:overload @:public public function setLength(length : Int) : Void;
 	
 	
 }

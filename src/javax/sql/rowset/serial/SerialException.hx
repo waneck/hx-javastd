@@ -29,7 +29,7 @@ extern class SerialException extends java.sql.SQLException
 	* Creates a new <code>SerialException</code> without a
 	* message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new <code>SerialException</code> with the
@@ -37,7 +37,7 @@ extern class SerialException extends java.sql.SQLException
 	*
 	* @param msg the detail message
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

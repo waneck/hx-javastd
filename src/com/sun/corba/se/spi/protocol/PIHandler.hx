@@ -30,9 +30,9 @@ extern interface PIHandler extends java.io.Closeable
 	* the ORB can obtain the PIHandler BEFORE the ORBInitializers run, since they
 	* will need access to the PIHandler through the ORB.
 	*/
-	@:overload public function initialize() : Void;
+	@:overload @:public public function initialize() : Void;
 	
-	@:overload public function destroyInterceptors() : Void;
+	@:overload @:public public function destroyInterceptors() : Void;
 	
 	/**
 	* Called when a new object adapter is created.

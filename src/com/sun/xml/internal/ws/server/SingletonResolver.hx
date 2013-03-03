@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.server;
 */
 extern class SingletonResolver<T> extends com.sun.xml.internal.ws.server.AbstractInstanceResolver<T>
 {
-	@:overload public function new(singleton : T) : Void;
+	@:overload @:public public function new(singleton : T) : Void;
 	
-	@:overload public function resolve(request : com.sun.xml.internal.ws.api.message.Packet) : T;
+	@:overload @:public override public function resolve(request : com.sun.xml.internal.ws.api.message.Packet) : T;
 	
-	@:overload public function start(wsc : com.sun.xml.internal.ws.api.server.WSWebServiceContext, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
+	@:overload @:public override public function start(wsc : com.sun.xml.internal.ws.api.server.WSWebServiceContext, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
 	
 }

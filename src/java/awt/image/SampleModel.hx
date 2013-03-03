@@ -79,20 +79,20 @@ extern class SampleModel
 	/** Width in pixels of the region of image data that this SampleModel
 	*  describes.
 	*/
-	private var width : Int;
+	@:protected private var width : Int;
 	
 	/** Height in pixels of the region of image data that this SampleModel
 	*  describes.
 	*/
-	private var height : Int;
+	@:protected private var height : Int;
 	
 	/** Number of bands of the image data that this SampleModel describes. */
-	private var numBands : Int;
+	@:protected private var numBands : Int;
 	
 	/** Data type of the DataBuffer storing the pixel data.
 	*  @see java.awt.image.DataBuffer
 	*/
-	private var dataType : Int;
+	@:protected private var dataType : Int;
 	
 	/**
 	* Constructs a SampleModel with the specified parameters.
@@ -108,25 +108,25 @@ extern class SampleModel
 	* @throws IllegalArgumentException if <code>dataType</code> is not
 	*         one of the supported data types
 	*/
-	@:overload public function new(dataType : Int, w : Int, h : Int, numBands : Int) : Void;
+	@:overload @:public public function new(dataType : Int, w : Int, h : Int, numBands : Int) : Void;
 	
 	/** Returns the width in pixels.
 	*  @return the width in pixels of the region of image data
 	*          that this <code>SampleModel</code> describes.
 	*/
-	@:overload @:final public function getWidth() : Int;
+	@:overload @:final @:public public function getWidth() : Int;
 	
 	/** Returns the height in pixels.
 	*  @return the height in pixels of the region of image data
 	*          that this <code>SampleModel</code> describes.
 	*/
-	@:overload @:final public function getHeight() : Int;
+	@:overload @:final @:public public function getHeight() : Int;
 	
 	/** Returns the total number of bands of image data.
 	*  @return the number of bands of image data that this
 	*          <code>SampleModel</code> describes.
 	*/
-	@:overload @:final public function getNumBands() : Int;
+	@:overload @:final @:public public function getNumBands() : Int;
 	
 	/** Returns the number of data elements needed to transfer a pixel
 	*  via the getDataElements and setDataElements methods.  When pixels
@@ -143,12 +143,12 @@ extern class SampleModel
 	*  @see #setDataElements(int, int, int, int, Object, DataBuffer)
 	*  @see #getTransferType
 	*/
-	@:overload @:abstract public function getNumDataElements() : Int;
+	@:overload @:public @:abstract public function getNumDataElements() : Int;
 	
 	/** Returns the data type of the DataBuffer storing the pixel data.
 	*  @return the data type.
 	*/
-	@:overload @:final public function getDataType() : Int;
+	@:overload @:final @:public public function getDataType() : Int;
 	
 	/** Returns the TransferType used to transfer pixels via the
 	*  getDataElements and setDataElements methods.  When pixels
@@ -167,7 +167,7 @@ extern class SampleModel
 	*  @see #getNumDataElements
 	*  @see java.awt.image.DataBuffer
 	*/
-	@:overload public function getTransferType() : Int;
+	@:overload @:public public function getTransferType() : Int;
 	
 	/**
 	* Returns the samples for a specified pixel in an int array,
@@ -185,7 +185,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are
 	* not in bounds, or if iArray is too small to hold the output.
 	*/
-	@:overload public function getPixel(x : Int, y : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
+	@:overload @:public public function getPixel(x : Int, y : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
 	
 	/**
 	* Returns data for a single pixel in a primitive array of type
@@ -233,7 +233,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are
 	* not in bounds, or if obj is too small to hold the output.
 	*/
-	@:overload @:abstract public function getDataElements(x : Int, y : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Dynamic;
+	@:overload @:public @:abstract public function getDataElements(x : Int, y : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Dynamic;
 	
 	/**
 	* Returns the pixel data for the specified rectangle of pixels in a
@@ -286,7 +286,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are
 	* not in bounds, or if obj is too small to hold the output.
 	*/
-	@:overload public function getDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Dynamic;
+	@:overload @:public public function getDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Dynamic;
 	
 	/**
 	* Sets the data for a single pixel in the specified DataBuffer from a
@@ -331,7 +331,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are
 	* not in bounds, or if obj is too small to hold the input.
 	*/
-	@:overload @:abstract public function setDataElements(x : Int, y : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public @:abstract public function setDataElements(x : Int, y : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets the data for a rectangle of pixels in the specified DataBuffer
@@ -379,7 +379,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are
 	* not in bounds, or if obj is too small to hold the input.
 	*/
-	@:overload public function setDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public public function setDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Returns the samples for the specified pixel in an array of float.
@@ -396,7 +396,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are
 	* not in bounds, or if fArray is too small to hold the output.
 	*/
-	@:overload public function getPixel(x : Int, y : Int, fArray : java.NativeArray<Single>, data : java.awt.image.DataBuffer) : java.NativeArray<Single>;
+	@:overload @:public public function getPixel(x : Int, y : Int, fArray : java.NativeArray<Single>, data : java.awt.image.DataBuffer) : java.NativeArray<Single>;
 	
 	/**
 	* Returns the samples for the specified pixel in an array of double.
@@ -413,7 +413,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are
 	* not in bounds, or if dArray is too small to hold the output.
 	*/
-	@:overload public function getPixel(x : Int, y : Int, dArray : java.NativeArray<Float>, data : java.awt.image.DataBuffer) : java.NativeArray<Float>;
+	@:overload @:public public function getPixel(x : Int, y : Int, dArray : java.NativeArray<Float>, data : java.awt.image.DataBuffer) : java.NativeArray<Float>;
 	
 	/**
 	* Returns all samples for a rectangle of pixels in an
@@ -433,7 +433,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are
 	* not in bounds, or if iArray is too small to hold the output.
 	*/
-	@:overload public function getPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
+	@:overload @:public public function getPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
 	
 	/**
 	* Returns all samples for a rectangle of pixels in a float
@@ -453,7 +453,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are
 	* not in bounds, or if fArray is too small to hold the output.
 	*/
-	@:overload public function getPixels(x : Int, y : Int, w : Int, h : Int, fArray : java.NativeArray<Single>, data : java.awt.image.DataBuffer) : java.NativeArray<Single>;
+	@:overload @:public public function getPixels(x : Int, y : Int, w : Int, h : Int, fArray : java.NativeArray<Single>, data : java.awt.image.DataBuffer) : java.NativeArray<Single>;
 	
 	/**
 	* Returns all samples for a rectangle of pixels in a double
@@ -473,7 +473,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are
 	* not in bounds, or if dArray is too small to hold the output.
 	*/
-	@:overload public function getPixels(x : Int, y : Int, w : Int, h : Int, dArray : java.NativeArray<Float>, data : java.awt.image.DataBuffer) : java.NativeArray<Float>;
+	@:overload @:public public function getPixels(x : Int, y : Int, w : Int, h : Int, dArray : java.NativeArray<Float>, data : java.awt.image.DataBuffer) : java.NativeArray<Float>;
 	
 	/**
 	* Returns the sample in a specified band for the pixel located
@@ -491,7 +491,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates or
 	* the band index are not in bounds.
 	*/
-	@:overload @:abstract public function getSample(x : Int, y : Int, b : Int, data : java.awt.image.DataBuffer) : Int;
+	@:overload @:public @:abstract public function getSample(x : Int, y : Int, b : Int, data : java.awt.image.DataBuffer) : Int;
 	
 	/**
 	* Returns the sample in a specified band
@@ -508,7 +508,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates or
 	* the band index are not in bounds.
 	*/
-	@:overload public function getSampleFloat(x : Int, y : Int, b : Int, data : java.awt.image.DataBuffer) : Single;
+	@:overload @:public public function getSampleFloat(x : Int, y : Int, b : Int, data : java.awt.image.DataBuffer) : Single;
 	
 	/**
 	* Returns the sample in a specified band
@@ -525,7 +525,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates or
 	* the band index are not in bounds.
 	*/
-	@:overload public function getSampleDouble(x : Int, y : Int, b : Int, data : java.awt.image.DataBuffer) : Float;
+	@:overload @:public public function getSampleDouble(x : Int, y : Int, b : Int, data : java.awt.image.DataBuffer) : Float;
 	
 	/**
 	* Returns the samples for a specified band for the specified rectangle
@@ -548,7 +548,7 @@ extern class SampleModel
 	* the band index are not in bounds, or if iArray is too small to
 	* hold the output.
 	*/
-	@:overload public function getSamples(x : Int, y : Int, w : Int, h : Int, b : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
+	@:overload @:public public function getSamples(x : Int, y : Int, w : Int, h : Int, b : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
 	
 	/**
 	* Returns the samples for a specified band for the specified rectangle
@@ -571,7 +571,7 @@ extern class SampleModel
 	* the band index are not in bounds, or if fArray is too small to
 	* hold the output.
 	*/
-	@:overload public function getSamples(x : Int, y : Int, w : Int, h : Int, b : Int, fArray : java.NativeArray<Single>, data : java.awt.image.DataBuffer) : java.NativeArray<Single>;
+	@:overload @:public public function getSamples(x : Int, y : Int, w : Int, h : Int, b : Int, fArray : java.NativeArray<Single>, data : java.awt.image.DataBuffer) : java.NativeArray<Single>;
 	
 	/**
 	* Returns the samples for a specified band for a specified rectangle
@@ -594,7 +594,7 @@ extern class SampleModel
 	* the band index are not in bounds, or if dArray is too small to
 	* hold the output.
 	*/
-	@:overload public function getSamples(x : Int, y : Int, w : Int, h : Int, b : Int, dArray : java.NativeArray<Float>, data : java.awt.image.DataBuffer) : java.NativeArray<Float>;
+	@:overload @:public public function getSamples(x : Int, y : Int, w : Int, h : Int, b : Int, dArray : java.NativeArray<Float>, data : java.awt.image.DataBuffer) : java.NativeArray<Float>;
 	
 	/**
 	* Sets a pixel in  the DataBuffer using an int array of samples for input.
@@ -610,7 +610,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are
 	* not in bounds, or if iArray is too small to hold the input.
 	*/
-	@:overload public function setPixel(x : Int, y : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public public function setPixel(x : Int, y : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets a pixel in the DataBuffer using a float array of samples for input.
@@ -626,7 +626,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are
 	* not in bounds, or if fArray is too small to hold the input.
 	*/
-	@:overload public function setPixel(x : Int, y : Int, fArray : java.NativeArray<Single>, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public public function setPixel(x : Int, y : Int, fArray : java.NativeArray<Single>, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets a pixel in the DataBuffer using a double array of samples
@@ -641,7 +641,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are
 	* not in bounds, or if fArray is too small to hold the input.
 	*/
-	@:overload public function setPixel(x : Int, y : Int, dArray : java.NativeArray<Float>, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public public function setPixel(x : Int, y : Int, dArray : java.NativeArray<Float>, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets all samples for a rectangle of pixels from an int array containing
@@ -660,7 +660,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are
 	* not in bounds, or if iArray is too small to hold the input.
 	*/
-	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public public function setPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets all samples for a rectangle of pixels from a float array containing
@@ -679,7 +679,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are
 	* not in bounds, or if fArray is too small to hold the input.
 	*/
-	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, fArray : java.NativeArray<Single>, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public public function setPixels(x : Int, y : Int, w : Int, h : Int, fArray : java.NativeArray<Single>, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets all samples for a rectangle of pixels from a double array
@@ -698,7 +698,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are
 	* not in bounds, or if dArray is too small to hold the input.
 	*/
-	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, dArray : java.NativeArray<Float>, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public public function setPixels(x : Int, y : Int, w : Int, h : Int, dArray : java.NativeArray<Float>, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets a sample in the specified band for the pixel located at (x,y)
@@ -716,7 +716,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates or
 	* the band index are not in bounds.
 	*/
-	@:overload @:abstract public function setSample(x : Int, y : Int, b : Int, s : Int, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public @:abstract public function setSample(x : Int, y : Int, b : Int, s : Int, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets a sample in the specified band for the pixel located at (x,y)
@@ -738,7 +738,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates or
 	* the band index are not in bounds.
 	*/
-	@:overload public function setSample(x : Int, y : Int, b : Int, s : Single, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public public function setSample(x : Int, y : Int, b : Int, s : Single, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets a sample in the specified band for the pixel located at (x,y)
@@ -760,7 +760,7 @@ extern class SampleModel
 	* @throws ArrayIndexOutOfBoundsException if the coordinates or
 	* the band index are not in bounds.
 	*/
-	@:overload public function setSample(x : Int, y : Int, b : Int, s : Float, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public public function setSample(x : Int, y : Int, b : Int, s : Float, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets the samples in the specified band for the specified rectangle
@@ -781,7 +781,7 @@ extern class SampleModel
 	* the band index are not in bounds, or if iArray is too small to
 	* hold the input.
 	*/
-	@:overload public function setSamples(x : Int, y : Int, w : Int, h : Int, b : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public public function setSamples(x : Int, y : Int, w : Int, h : Int, b : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets the samples in the specified band for the specified rectangle
@@ -802,7 +802,7 @@ extern class SampleModel
 	* the band index are not in bounds, or if fArray is too small to
 	* hold the input.
 	*/
-	@:overload public function setSamples(x : Int, y : Int, w : Int, h : Int, b : Int, fArray : java.NativeArray<Single>, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public public function setSamples(x : Int, y : Int, w : Int, h : Int, b : Int, fArray : java.NativeArray<Single>, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets the samples in the specified band for the specified rectangle
@@ -823,7 +823,7 @@ extern class SampleModel
 	* the band index are not in bounds, or if dArray is too small to
 	* hold the input.
 	*/
-	@:overload public function setSamples(x : Int, y : Int, w : Int, h : Int, b : Int, dArray : java.NativeArray<Float>, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public public function setSamples(x : Int, y : Int, w : Int, h : Int, b : Int, dArray : java.NativeArray<Float>, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	*  Creates a SampleModel which describes data in this SampleModel's
@@ -834,7 +834,7 @@ extern class SampleModel
 	*          data as this <code>SampleModel</code>, but with a
 	*          different size.
 	*/
-	@:overload @:abstract public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
+	@:overload @:public @:abstract public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
 	
 	/**
 	* Creates a new SampleModel
@@ -844,7 +844,7 @@ extern class SampleModel
 	* @return a <code>SampleModel</code> with a subset of bands of this
 	*         <code>SampleModel</code>.
 	*/
-	@:overload @:abstract public function createSubsetSampleModel(bands : java.NativeArray<Int>) : java.awt.image.SampleModel;
+	@:overload @:public @:abstract public function createSubsetSampleModel(bands : java.NativeArray<Int>) : java.awt.image.SampleModel;
 	
 	/**
 	* Creates a DataBuffer that corresponds to this SampleModel.
@@ -852,18 +852,18 @@ extern class SampleModel
 	* @return a <code>DataBuffer</code> corresponding to this
 	*         <code>SampleModel</code>.
 	*/
-	@:overload @:abstract public function createDataBuffer() : java.awt.image.DataBuffer;
+	@:overload @:public @:abstract public function createDataBuffer() : java.awt.image.DataBuffer;
 	
 	/** Returns the size in bits of samples for all bands.
 	*  @return the size of samples for all bands.
 	*/
-	@:overload @:abstract public function getSampleSize() : java.NativeArray<Int>;
+	@:overload @:public @:abstract public function getSampleSize() : java.NativeArray<Int>;
 	
 	/** Returns the size in bits of samples for the specified band.
 	*  @param band the specified band
 	*  @return the size of the samples of the specified band.
 	*/
-	@:overload @:abstract public function getSampleSize(band : Int) : Int;
+	@:overload @:public @:abstract public function getSampleSize(band : Int) : Int;
 	
 	
 }

@@ -30,41 +30,41 @@ package sun.font;
 */
 extern class CoreMetrics
 {
-	@:overload public function new(ascent : Single, descent : Single, leading : Single, height : Single, baselineIndex : Int, baselineOffsets : java.NativeArray<Single>, strikethroughOffset : Single, strikethroughThickness : Single, underlineOffset : Single, underlineThickness : Single, ssOffset : Single, italicAngle : Single) : Void;
+	@:overload @:public public function new(ascent : Single, descent : Single, leading : Single, height : Single, baselineIndex : Int, baselineOffsets : java.NativeArray<Single>, strikethroughOffset : Single, strikethroughThickness : Single, underlineOffset : Single, underlineThickness : Single, ssOffset : Single, italicAngle : Single) : Void;
 	
-	@:overload public static function get(lm : java.awt.font.LineMetrics) : sun.font.CoreMetrics;
+	@:overload @:public @:static public static function get(lm : java.awt.font.LineMetrics) : sun.font.CoreMetrics;
 	
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
-	@:overload @:final public function equals(rhs : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(rhs : Dynamic) : Bool;
 	
-	@:overload @:final public function equals(rhs : sun.font.CoreMetrics) : Bool;
+	@:overload @:public @:final public function equals(rhs : sun.font.CoreMetrics) : Bool;
 	
-	@:overload @:final public function effectiveBaselineOffset(fullOffsets : java.NativeArray<Single>) : Single;
+	@:overload @:public @:final public function effectiveBaselineOffset(fullOffsets : java.NativeArray<Single>) : Single;
 	
-	public var ascent(default, null) : Single;
+	@:public @:final public var ascent(default, null) : Single;
 	
-	public var descent(default, null) : Single;
+	@:public @:final public var descent(default, null) : Single;
 	
-	public var leading(default, null) : Single;
+	@:public @:final public var leading(default, null) : Single;
 	
-	public var height(default, null) : Single;
+	@:public @:final public var height(default, null) : Single;
 	
-	public var baselineIndex(default, null) : Int;
+	@:public @:final public var baselineIndex(default, null) : Int;
 	
-	public var baselineOffsets(default, null) : java.NativeArray<Single>;
+	@:public @:final public var baselineOffsets(default, null) : java.NativeArray<Single>;
 	
-	public var strikethroughOffset(default, null) : Single;
+	@:public @:final public var strikethroughOffset(default, null) : Single;
 	
-	public var strikethroughThickness(default, null) : Single;
+	@:public @:final public var strikethroughThickness(default, null) : Single;
 	
-	public var underlineOffset(default, null) : Single;
+	@:public @:final public var underlineOffset(default, null) : Single;
 	
-	public var underlineThickness(default, null) : Single;
+	@:public @:final public var underlineThickness(default, null) : Single;
 	
-	public var ssOffset(default, null) : Single;
+	@:public @:final public var ssOffset(default, null) : Single;
 	
-	public var italicAngle(default, null) : Single;
+	@:public @:final public var italicAngle(default, null) : Single;
 	
 	
 }

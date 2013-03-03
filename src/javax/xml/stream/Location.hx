@@ -65,13 +65,13 @@ package javax.xml.stream;
 	* Returns the public ID of the XML
 	* @return the public ID, or null if not available
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* Returns the system ID of the XML
 	* @return the system ID, or null if not available
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	
 }

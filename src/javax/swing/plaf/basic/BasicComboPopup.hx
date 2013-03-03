@@ -25,7 +25,7 @@ package javax.swing.plaf.basic;
 */
 extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swing.plaf.basic.ComboPopup
 {
-	private var comboBox : javax.swing.JComboBox<Dynamic>;
+	@:protected private var comboBox : javax.swing.JComboBox<Dynamic>;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -34,7 +34,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	* @see #getList
 	* @see #createList
 	*/
-	private var list : javax.swing.JList<Dynamic>;
+	@:protected private var list : javax.swing.JList<Dynamic>;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -42,13 +42,13 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @see #createScroller
 	*/
-	private var scroller : javax.swing.JScrollPane;
+	@:protected private var scroller : javax.swing.JScrollPane;
 	
 	/**
 	* As of Java 2 platform v1.4 this previously undocumented field is no
 	* longer used.
 	*/
-	private var valueIsAdjusting : Bool;
+	@:protected private var valueIsAdjusting : Bool;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -57,7 +57,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	* @see #getMouseMotionListener
 	* @see #createMouseMotionListener
 	*/
-	private var mouseMotionListener : java.awt.event.MouseMotionListener;
+	@:protected private var mouseMotionListener : java.awt.event.MouseMotionListener;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -66,7 +66,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	* @see #getMouseListener
 	* @see #createMouseListener
 	*/
-	private var mouseListener : java.awt.event.MouseListener;
+	@:protected private var mouseListener : java.awt.event.MouseListener;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -75,7 +75,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	* @see #getKeyListener
 	* @see #createKeyListener
 	*/
-	private var keyListener : java.awt.event.KeyListener;
+	@:protected private var keyListener : java.awt.event.KeyListener;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -83,7 +83,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @see #createListSelectionListener
 	*/
-	private var listSelectionListener : javax.swing.event.ListSelectionListener;
+	@:protected private var listSelectionListener : javax.swing.event.ListSelectionListener;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -91,7 +91,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @see #createListMouseListener
 	*/
-	private var listMouseListener : java.awt.event.MouseListener;
+	@:protected private var listMouseListener : java.awt.event.MouseListener;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -99,7 +99,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @see #createListMouseMotionListener
 	*/
-	private var listMouseMotionListener : java.awt.event.MouseMotionListener;
+	@:protected private var listMouseMotionListener : java.awt.event.MouseMotionListener;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -107,7 +107,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @see #createPropertyChangeListener
 	*/
-	private var propertyChangeListener : java.beans.PropertyChangeListener;
+	@:protected private var propertyChangeListener : java.beans.PropertyChangeListener;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -115,7 +115,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @see #createListDataListener
 	*/
-	private var listDataListener : javax.swing.event.ListDataListener;
+	@:protected private var listDataListener : javax.swing.event.ListDataListener;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -123,38 +123,38 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @see #createItemListener
 	*/
-	private var itemListener : java.awt.event.ItemListener;
+	@:protected private var itemListener : java.awt.event.ItemListener;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
 	* or override.
 	*/
-	private var autoscrollTimer : javax.swing.Timer;
+	@:protected private var autoscrollTimer : javax.swing.Timer;
 	
-	private var hasEntered : Bool;
+	@:protected private var hasEntered : Bool;
 	
-	private var isAutoScrolling : Bool;
+	@:protected private var isAutoScrolling : Bool;
 	
-	private var scrollDirection : Int;
+	@:protected private var scrollDirection : Int;
 	
-	private static var SCROLL_UP(default, null) : Int;
+	@:protected @:static @:final private static var SCROLL_UP(default, null) : Int;
 	
-	private static var SCROLL_DOWN(default, null) : Int;
+	@:protected @:static @:final private static var SCROLL_DOWN(default, null) : Int;
 	
 	/**
 	* Implementation of ComboPopup.show().
 	*/
-	@:overload override public function show() : Void;
+	@:overload @:public override public function show() : Void;
 	
 	/**
 	* Implementation of ComboPopup.hide().
 	*/
-	@:overload override public function hide() : Void;
+	@:overload @:public override public function hide() : Void;
 	
 	/**
 	* Implementation of ComboPopup.getList().
 	*/
-	@:overload public function getList() : javax.swing.JList<Dynamic>;
+	@:overload @:public public function getList() : javax.swing.JList<Dynamic>;
 	
 	/**
 	* Implementation of ComboPopup.getMouseListener().
@@ -162,7 +162,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	* @return a <code>MouseListener</code> or null
 	* @see ComboPopup#getMouseListener
 	*/
-	@:overload public function getMouseListener() : java.awt.event.MouseListener;
+	@:overload @:public public function getMouseListener() : java.awt.event.MouseListener;
 	
 	/**
 	* Implementation of ComboPopup.getMouseMotionListener().
@@ -170,7 +170,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	* @return a <code>MouseMotionListener</code> or null
 	* @see ComboPopup#getMouseMotionListener
 	*/
-	@:overload public function getMouseMotionListener() : java.awt.event.MouseMotionListener;
+	@:overload @:public public function getMouseMotionListener() : java.awt.event.MouseMotionListener;
 	
 	/**
 	* Implementation of ComboPopup.getKeyListener().
@@ -178,14 +178,14 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	* @return a <code>KeyListener</code> or null
 	* @see ComboPopup#getKeyListener
 	*/
-	@:overload public function getKeyListener() : java.awt.event.KeyListener;
+	@:overload @:public public function getKeyListener() : java.awt.event.KeyListener;
 	
 	/**
 	* Called when the UI is uninstalling.  Since this popup isn't in the component
 	* tree, it won't get it's uninstallUI() called.  It removes the listeners that
 	* were added in addComboBoxListeners().
 	*/
-	@:overload public function uninstallingUI() : Void;
+	@:overload @:public public function uninstallingUI() : Void;
 	
 	/**
 	* Removes the listeners from the combo box model
@@ -193,17 +193,17 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	* @param model The combo box model to install listeners
 	* @see #installComboBoxModelListeners
 	*/
-	@:overload private function uninstallComboBoxModelListeners(model : javax.swing.ComboBoxModel<Dynamic>) : Void;
+	@:overload @:protected private function uninstallComboBoxModelListeners(model : javax.swing.ComboBoxModel<Dynamic>) : Void;
 	
-	@:overload private function uninstallKeyboardActions() : Void;
+	@:overload @:protected private function uninstallKeyboardActions() : Void;
 	
-	@:overload public function new(combo : javax.swing.JComboBox<Dynamic>) : Void;
+	@:overload @:public public function new(combo : javax.swing.JComboBox<Dynamic>) : Void;
 	
-	@:overload override private function firePopupMenuWillBecomeVisible() : Void;
+	@:overload @:protected override private function firePopupMenuWillBecomeVisible() : Void;
 	
-	@:overload override private function firePopupMenuWillBecomeInvisible() : Void;
+	@:overload @:protected override private function firePopupMenuWillBecomeInvisible() : Void;
 	
-	@:overload override private function firePopupMenuCanceled() : Void;
+	@:overload @:protected override private function firePopupMenuCanceled() : Void;
 	
 	/**
 	* Creates a listener
@@ -216,7 +216,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	* @return a <code>MouseListener</code> which will be added to
 	* the combo box or null
 	*/
-	@:overload private function createMouseListener() : java.awt.event.MouseListener;
+	@:overload @:protected private function createMouseListener() : java.awt.event.MouseListener;
 	
 	/**
 	* Creates the mouse motion listener which will be added to the combo
@@ -229,7 +229,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	* @return a <code>MouseMotionListener</code> which will be added to
 	*         the combo box or null
 	*/
-	@:overload private function createMouseMotionListener() : java.awt.event.MouseMotionListener;
+	@:overload @:protected private function createMouseMotionListener() : java.awt.event.MouseMotionListener;
 	
 	/**
 	* Creates the key listener that will be added to the combo box. If
@@ -237,7 +237,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @return a <code>KeyListener</code> or null
 	*/
-	@:overload private function createKeyListener() : java.awt.event.KeyListener;
+	@:overload @:protected private function createKeyListener() : java.awt.event.KeyListener;
 	
 	/**
 	* Creates a list selection listener that watches for selection changes in
@@ -246,7 +246,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @return an instance of a <code>ListSelectionListener</code> or null
 	*/
-	@:overload private function createListSelectionListener() : javax.swing.event.ListSelectionListener;
+	@:overload @:protected private function createListSelectionListener() : javax.swing.event.ListSelectionListener;
 	
 	/**
 	* Creates a list data listener which will be added to the
@@ -255,7 +255,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @return an instance of a <code>ListDataListener</code> or null
 	*/
-	@:overload private function createListDataListener() : javax.swing.event.ListDataListener;
+	@:overload @:protected private function createListDataListener() : javax.swing.event.ListDataListener;
 	
 	/**
 	* Creates a mouse listener that watches for mouse events in
@@ -264,7 +264,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @return an instance of a <code>MouseListener</code> or null
 	*/
-	@:overload private function createListMouseListener() : java.awt.event.MouseListener;
+	@:overload @:protected private function createListMouseListener() : java.awt.event.MouseListener;
 	
 	/**
 	* Creates a mouse motion listener that watches for mouse motion
@@ -273,7 +273,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @return an instance of a <code>MouseMotionListener</code> or null
 	*/
-	@:overload private function createListMouseMotionListener() : java.awt.event.MouseMotionListener;
+	@:overload @:protected private function createListMouseMotionListener() : java.awt.event.MouseMotionListener;
 	
 	/**
 	* Creates a <code>PropertyChangeListener</code> which will be added to
@@ -282,7 +282,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @return an instance of a <code>PropertyChangeListener</code> or null
 	*/
-	@:overload private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	@:overload @:protected private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
 	
 	/**
 	* Creates an <code>ItemListener</code> which will be added to the
@@ -294,7 +294,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @return an instance of an <code>ItemListener</code> or null
 	*/
-	@:overload private function createItemListener() : java.awt.event.ItemListener;
+	@:overload @:protected private function createItemListener() : java.awt.event.ItemListener;
 	
 	/**
 	* Creates the JList used in the popup to display
@@ -303,7 +303,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @return a <code>JList</code> used to display the combo box items
 	*/
-	@:overload private function createList() : javax.swing.JList<Dynamic>;
+	@:overload @:protected private function createList() : javax.swing.JList<Dynamic>;
 	
 	/**
 	* Configures the list which is used to hold the combo box items in the
@@ -312,35 +312,35 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @see #createList
 	*/
-	@:overload private function configureList() : Void;
+	@:overload @:protected private function configureList() : Void;
 	
 	/**
 	* Adds the listeners to the list control.
 	*/
-	@:overload private function installListListeners() : Void;
+	@:overload @:protected private function installListListeners() : Void;
 	
 	/**
 	* Creates the scroll pane which houses the scrollable list.
 	*/
-	@:overload private function createScroller() : javax.swing.JScrollPane;
+	@:overload @:protected private function createScroller() : javax.swing.JScrollPane;
 	
 	/**
 	* Configures the scrollable portion which holds the list within
 	* the combo box popup. This method is called when the UI class
 	* is created.
 	*/
-	@:overload private function configureScroller() : Void;
+	@:overload @:protected private function configureScroller() : Void;
 	
 	/**
 	* Configures the popup portion of the combo box. This method is called
 	* when the UI class is created.
 	*/
-	@:overload private function configurePopup() : Void;
+	@:overload @:protected private function configurePopup() : Void;
 	
 	/**
 	* This method adds the necessary listeners to the JComboBox.
 	*/
-	@:overload private function installComboBoxListeners() : Void;
+	@:overload @:protected private function installComboBoxListeners() : Void;
 	
 	/**
 	* Installs the listeners on the combo box model. Any listeners installed
@@ -350,38 +350,38 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	* @param model The combo box model to install listeners
 	* @see #uninstallComboBoxModelListeners
 	*/
-	@:overload private function installComboBoxModelListeners(model : javax.swing.ComboBoxModel<Dynamic>) : Void;
+	@:overload @:protected private function installComboBoxModelListeners(model : javax.swing.ComboBoxModel<Dynamic>) : Void;
 	
-	@:overload private function installKeyboardActions() : Void;
+	@:overload @:protected private function installKeyboardActions() : Void;
 	
 	/**
 	* Overridden to unconditionally return false.
 	*/
-	@:overload override public function isFocusTraversable() : Bool;
+	@:overload @:public override public function isFocusTraversable() : Bool;
 	
 	/**
 	* This protected method is implementation specific and should be private.
 	* do not call or override.
 	*/
-	@:overload private function startAutoScrolling(direction : Int) : Void;
+	@:overload @:protected private function startAutoScrolling(direction : Int) : Void;
 	
 	/**
 	* This protected method is implementation specific and should be private.
 	* do not call or override.
 	*/
-	@:overload private function stopAutoScrolling() : Void;
+	@:overload @:protected private function stopAutoScrolling() : Void;
 	
 	/**
 	* This protected method is implementation specific and should be private.
 	* do not call or override.
 	*/
-	@:overload private function autoScrollUp() : Void;
+	@:overload @:protected private function autoScrollUp() : Void;
 	
 	/**
 	* This protected method is implementation specific and should be private.
 	* do not call or override.
 	*/
-	@:overload private function autoScrollDown() : Void;
+	@:overload @:protected private function autoScrollDown() : Void;
 	
 	/**
 	* Gets the AccessibleContext associated with this BasicComboPopup.
@@ -390,7 +390,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	* @return an AccessibleContext for the BasicComboPopup
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java5) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	/**
 	* This is is a utility method that helps event handlers figure out where to
@@ -398,21 +398,21 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	* delegates the focus to the editor (if the combo box is editable) or to
 	* the JComboBox if it is not editable.
 	*/
-	@:overload private function delegateFocus(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:protected private function delegateFocus(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Makes the popup visible if it is hidden and makes it hidden if it is
 	* visible.
 	*/
-	@:overload private function togglePopup() : Void;
+	@:overload @:protected private function togglePopup() : Void;
 	
-	@:overload private function convertMouseEvent(e : java.awt.event.MouseEvent) : java.awt.event.MouseEvent;
+	@:overload @:protected private function convertMouseEvent(e : java.awt.event.MouseEvent) : java.awt.event.MouseEvent;
 	
 	/**
 	* Retrieves the height of the popup based on the current
 	* ListCellRenderer and the maximum row count.
 	*/
-	@:overload private function getPopupHeightForRowCount(maxRowCount : Int) : Int;
+	@:overload @:protected private function getPopupHeightForRowCount(maxRowCount : Int) : Int;
 	
 	/**
 	* Calculate the placement and size of the popup portion of the combo box based
@@ -426,13 +426,13 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	* @param ph starting height
 	* @return a rectangle which represents the placement and size of the popup
 	*/
-	@:overload private function computePopupBounds(px : Int, py : Int, pw : Int, ph : Int) : java.awt.Rectangle;
+	@:overload @:protected private function computePopupBounds(px : Int, py : Int, pw : Int, ph : Int) : java.awt.Rectangle;
 	
 	/**
 	* A utility method used by the event listeners.  Given a mouse event, it changes
 	* the list selection to the list item below the mouse.
 	*/
-	@:overload private function updateListBoxSelectionForEvent(anEvent : java.awt.event.MouseEvent, shouldScroll : Bool) : Void;
+	@:overload @:protected private function updateListBoxSelectionForEvent(anEvent : java.awt.event.MouseEvent, shouldScroll : Bool) : Void;
 	
 	
 }
@@ -461,13 +461,13 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 */
 @:native('javax$swing$plaf$basic$BasicComboPopup$EmptyListModelClass') @:internal extern class BasicComboPopup_EmptyListModelClass implements javax.swing.ListModel<Dynamic> implements java.io.Serializable
 {
-	@:overload public function getSize() : Int;
+	@:overload @:public public function getSize() : Int;
 	
-	@:overload public function getElementAt(index : Int) : Dynamic;
+	@:overload @:public public function getElementAt(index : Int) : Dynamic;
 	
-	@:overload public function addListDataListener(l : javax.swing.event.ListDataListener) : Void;
+	@:overload @:public public function addListDataListener(l : javax.swing.event.ListDataListener) : Void;
 	
-	@:overload public function removeListDataListener(l : javax.swing.event.ListDataListener) : Void;
+	@:overload @:public public function removeListDataListener(l : javax.swing.event.ListDataListener) : Void;
 	
 	
 }
@@ -499,7 +499,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @param e the mouse-press event to be handled
 	*/
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Responds to the user terminating
@@ -507,7 +507,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @param e the mouse-release event to be handled
 	*/
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -517,7 +517,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 */
 @:native('javax$swing$plaf$basic$BasicComboPopup$InvocationMouseMotionHandler') extern class BasicComboPopup_InvocationMouseMotionHandler extends java.awt.event.MouseMotionAdapter
 {
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -530,7 +530,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 */
 @:native('javax$swing$plaf$basic$BasicComboPopup$InvocationKeyHandler') extern class BasicComboPopup_InvocationKeyHandler extends java.awt.event.KeyAdapter
 {
-	@:overload override public function keyReleased(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public override public function keyReleased(e : java.awt.event.KeyEvent) : Void;
 	
 	
 }
@@ -541,7 +541,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 */
 @:native('javax$swing$plaf$basic$BasicComboPopup$ListSelectionHandler') extern class BasicComboPopup_ListSelectionHandler implements javax.swing.event.ListSelectionListener
 {
-	@:overload public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
+	@:overload @:public public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	
 	
 }
@@ -556,11 +556,11 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 */
 @:native('javax$swing$plaf$basic$BasicComboPopup$ListDataHandler') extern class BasicComboPopup_ListDataHandler implements javax.swing.event.ListDataListener
 {
-	@:overload public function contentsChanged(e : javax.swing.event.ListDataEvent) : Void;
+	@:overload @:public public function contentsChanged(e : javax.swing.event.ListDataEvent) : Void;
 	
-	@:overload public function intervalAdded(e : javax.swing.event.ListDataEvent) : Void;
+	@:overload @:public public function intervalAdded(e : javax.swing.event.ListDataEvent) : Void;
 	
-	@:overload public function intervalRemoved(e : javax.swing.event.ListDataEvent) : Void;
+	@:overload @:public public function intervalRemoved(e : javax.swing.event.ListDataEvent) : Void;
 	
 	
 }
@@ -569,9 +569,9 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 */
 @:native('javax$swing$plaf$basic$BasicComboPopup$ListMouseHandler') extern class BasicComboPopup_ListMouseHandler extends java.awt.event.MouseAdapter
 {
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(anEvent : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseReleased(anEvent : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -581,7 +581,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 */
 @:native('javax$swing$plaf$basic$BasicComboPopup$ListMouseMotionHandler') extern class BasicComboPopup_ListMouseMotionHandler extends java.awt.event.MouseMotionAdapter
 {
-	@:overload public function mouseMoved(anEvent : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseMoved(anEvent : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -591,7 +591,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 */
 @:native('javax$swing$plaf$basic$BasicComboPopup$ItemHandler') extern class BasicComboPopup_ItemHandler implements java.awt.event.ItemListener
 {
-	@:overload public function itemStateChanged(e : java.awt.event.ItemEvent) : Void;
+	@:overload @:public public function itemStateChanged(e : java.awt.event.ItemEvent) : Void;
 	
 	
 }
@@ -607,35 +607,35 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 */
 @:native('javax$swing$plaf$basic$BasicComboPopup$PropertyChangeHandler') extern class BasicComboPopup_PropertyChangeHandler implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicComboPopup$AutoScrollActionHandler') @:internal extern class BasicComboPopup_AutoScrollActionHandler implements java.awt.event.ActionListener
 {
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicComboPopup$Handler') @:internal extern class BasicComboPopup_Handler implements java.awt.event.ItemListener implements java.awt.event.MouseListener implements java.awt.event.MouseMotionListener implements java.beans.PropertyChangeListener implements java.io.Serializable
 {
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseMoved(anEvent : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseMoved(anEvent : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload public function itemStateChanged(e : java.awt.event.ItemEvent) : Void;
+	@:overload @:public public function itemStateChanged(e : java.awt.event.ItemEvent) : Void;
 	
 	
 }

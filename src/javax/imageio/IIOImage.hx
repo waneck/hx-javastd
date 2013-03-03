@@ -28,25 +28,25 @@ extern class IIOImage
 	/**
 	* The <code>RenderedImage</code> being referenced.
 	*/
-	private var image : java.awt.image.RenderedImage;
+	@:protected private var image : java.awt.image.RenderedImage;
 	
 	/**
 	* The <code>Raster</code> being referenced.
 	*/
-	private var raster : java.awt.image.Raster;
+	@:protected private var raster : java.awt.image.Raster;
 	
 	/**
 	* A <code>List</code> of <code>BufferedImage</code> thumbnails,
 	* or <code>null</code>.  Non-<code>BufferedImage</code> objects
 	* must not be stored in this <code>List</code>.
 	*/
-	private var thumbnails : java.util.List<java.awt.image.BufferedImage>;
+	@:protected private var thumbnails : java.util.List<java.awt.image.BufferedImage>;
 	
 	/**
 	* An <code>IIOMetadata</code> object containing metadata
 	* associated with the image.
 	*/
-	private var metadata : javax.imageio.metadata.IIOMetadata;
+	@:protected private var metadata : javax.imageio.metadata.IIOMetadata;
 	
 	/**
 	* Constructs an <code>IIOImage</code> containing a
@@ -68,7 +68,7 @@ extern class IIOImage
 	* @exception IllegalArgumentException if <code>image</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function new(image : java.awt.image.RenderedImage, thumbnails : java.util.List<java.awt.image.BufferedImage>, metadata : javax.imageio.metadata.IIOMetadata) : Void;
+	@:overload @:public public function new(image : java.awt.image.RenderedImage, thumbnails : java.util.List<java.awt.image.BufferedImage>, metadata : javax.imageio.metadata.IIOMetadata) : Void;
 	
 	/**
 	* Constructs an <code>IIOImage</code> containing a
@@ -86,7 +86,7 @@ extern class IIOImage
 	* @exception IllegalArgumentException if <code>raster</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function new(raster : java.awt.image.Raster, thumbnails : java.util.List<java.awt.image.BufferedImage>, metadata : javax.imageio.metadata.IIOMetadata) : Void;
+	@:overload @:public public function new(raster : java.awt.image.Raster, thumbnails : java.util.List<java.awt.image.BufferedImage>, metadata : javax.imageio.metadata.IIOMetadata) : Void;
 	
 	/**
 	* Returns the currently set <code>RenderedImage</code>, or
@@ -96,7 +96,7 @@ extern class IIOImage
 	*
 	* @see #setRenderedImage
 	*/
-	@:overload public function getRenderedImage() : java.awt.image.RenderedImage;
+	@:overload @:public public function getRenderedImage() : java.awt.image.RenderedImage;
 	
 	/**
 	* Sets the current <code>RenderedImage</code>.  The value is
@@ -110,7 +110,7 @@ extern class IIOImage
 	*
 	* @see #getRenderedImage
 	*/
-	@:overload public function setRenderedImage(image : java.awt.image.RenderedImage) : Void;
+	@:overload @:public public function setRenderedImage(image : java.awt.image.RenderedImage) : Void;
 	
 	/**
 	* Returns <code>true</code> if this <code>IIOImage</code> stores
@@ -119,7 +119,7 @@ extern class IIOImage
 	* @return <code>true</code> if a <code>Raster</code> is
 	* available.
 	*/
-	@:overload public function hasRaster() : Bool;
+	@:overload @:public public function hasRaster() : Bool;
 	
 	/**
 	* Returns the currently set <code>Raster</code>, or
@@ -130,7 +130,7 @@ extern class IIOImage
 	*
 	* @see #setRaster
 	*/
-	@:overload public function getRaster() : java.awt.image.Raster;
+	@:overload @:public public function getRaster() : java.awt.image.Raster;
 	
 	/**
 	* Sets the current <code>Raster</code>.  The value is
@@ -144,7 +144,7 @@ extern class IIOImage
 	*
 	* @see #getRaster
 	*/
-	@:overload public function setRaster(raster : java.awt.image.Raster) : Void;
+	@:overload @:public public function setRaster(raster : java.awt.image.Raster) : Void;
 	
 	/**
 	* Returns the number of thumbnails stored in this
@@ -152,7 +152,7 @@ extern class IIOImage
 	*
 	* @return the number of thumbnails, as an <code>int</code>.
 	*/
-	@:overload public function getNumThumbnails() : Int;
+	@:overload @:public public function getNumThumbnails() : Int;
 	
 	/**
 	* Returns a thumbnail associated with the main image.
@@ -170,7 +170,7 @@ extern class IIOImage
 	* @see #getThumbnails
 	* @see #setThumbnails
 	*/
-	@:overload public function getThumbnail(index : Int) : java.awt.image.BufferedImage;
+	@:overload @:public public function getThumbnail(index : Int) : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns the current <code>List</code> of thumbnail
@@ -183,7 +183,7 @@ extern class IIOImage
 	* @see #getThumbnail(int)
 	* @see #setThumbnails
 	*/
-	@:overload public function getThumbnails() : java.util.List<java.awt.image.BufferedImage>;
+	@:overload @:public public function getThumbnails() : java.util.List<java.awt.image.BufferedImage>;
 	
 	/**
 	* Sets the list of thumbnails to a new <code>List</code> of
@@ -200,7 +200,7 @@ extern class IIOImage
 	* @see #getThumbnail(int)
 	* @see #getThumbnails
 	*/
-	@:overload public function setThumbnails(thumbnails : java.util.List<java.awt.image.BufferedImage>) : Void;
+	@:overload @:public public function setThumbnails(thumbnails : java.util.List<java.awt.image.BufferedImage>) : Void;
 	
 	/**
 	* Returns a reference to the current <code>IIOMetadata</code>
@@ -210,7 +210,7 @@ extern class IIOImage
 	*
 	* @see #setMetadata
 	*/
-	@:overload public function getMetadata() : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public public function getMetadata() : javax.imageio.metadata.IIOMetadata;
 	
 	/**
 	* Sets the <code>IIOMetadata</code> to a new object, or
@@ -221,7 +221,7 @@ extern class IIOImage
 	*
 	* @see #getMetadata
 	*/
-	@:overload public function setMetadata(metadata : javax.imageio.metadata.IIOMetadata) : Void;
+	@:overload @:public public function setMetadata(metadata : javax.imageio.metadata.IIOMetadata) : Void;
 	
 	
 }

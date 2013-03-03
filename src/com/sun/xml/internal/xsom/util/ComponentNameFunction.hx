@@ -28,81 +28,81 @@ extern class ComponentNameFunction implements com.sun.xml.internal.xsom.visitor.
 	/**
 	* @see com.sun.xml.internal.xsom.visitor.XSFunction#annotation(XSAnnotation)
 	*/
-	@:overload public function annotation(ann : com.sun.xml.internal.xsom.XSAnnotation) : String;
+	@:overload @:public public function annotation(ann : com.sun.xml.internal.xsom.XSAnnotation) : String;
 	
 	/**
 	* @see com.sun.xml.internal.xsom.visitor.XSFunction#attGroupDecl(XSAttGroupDecl)
 	*/
-	@:overload public function attGroupDecl(decl : com.sun.xml.internal.xsom.XSAttGroupDecl) : String;
+	@:overload @:public public function attGroupDecl(decl : com.sun.xml.internal.xsom.XSAttGroupDecl) : String;
 	
 	/**
 	* @see com.sun.xml.internal.xsom.visitor.XSFunction#attributeDecl(XSAttributeDecl)
 	*/
-	@:overload public function attributeDecl(decl : com.sun.xml.internal.xsom.XSAttributeDecl) : String;
+	@:overload @:public public function attributeDecl(decl : com.sun.xml.internal.xsom.XSAttributeDecl) : String;
 	
 	/**
 	* @see com.sun.xml.internal.xsom.visitor.XSFunction#attributeUse(XSAttributeUse)
 	*/
-	@:overload public function attributeUse(use : com.sun.xml.internal.xsom.XSAttributeUse) : String;
+	@:overload @:public public function attributeUse(use : com.sun.xml.internal.xsom.XSAttributeUse) : String;
 	
 	/**
 	* @see com.sun.xml.internal.xsom.visitor.XSFunction#complexType(XSComplexType)
 	*/
-	@:overload public function complexType(type : com.sun.xml.internal.xsom.XSComplexType) : String;
+	@:overload @:public public function complexType(type : com.sun.xml.internal.xsom.XSComplexType) : String;
 	
 	/**
 	* @see com.sun.xml.internal.xsom.visitor.XSFunction#schema(XSSchema)
 	*/
-	@:overload public function schema(schema : com.sun.xml.internal.xsom.XSSchema) : String;
+	@:overload @:public public function schema(schema : com.sun.xml.internal.xsom.XSSchema) : String;
 	
 	/**
 	* @see com.sun.xml.internal.xsom.visitor.XSFunction#facet(XSFacet)
 	*/
-	@:overload public function facet(facet : com.sun.xml.internal.xsom.XSFacet) : String;
+	@:overload @:public public function facet(facet : com.sun.xml.internal.xsom.XSFacet) : String;
 	
 	/**
 	* @see com.sun.xml.internal.xsom.visitor.XSFunction#notation(XSNotation)
 	*/
-	@:overload public function notation(notation : com.sun.xml.internal.xsom.XSNotation) : String;
+	@:overload @:public public function notation(notation : com.sun.xml.internal.xsom.XSNotation) : String;
 	
 	/**
 	* @see com.sun.xml.internal.xsom.visitor.XSContentTypeFunction#simpleType(XSSimpleType)
 	*/
-	@:overload public function simpleType(simpleType : com.sun.xml.internal.xsom.XSSimpleType) : String;
+	@:overload @:public public function simpleType(simpleType : com.sun.xml.internal.xsom.XSSimpleType) : String;
 	
 	/**
 	* @see com.sun.xml.internal.xsom.visitor.XSContentTypeFunction#particle(XSParticle)
 	*/
-	@:overload public function particle(particle : com.sun.xml.internal.xsom.XSParticle) : String;
+	@:overload @:public public function particle(particle : com.sun.xml.internal.xsom.XSParticle) : String;
 	
 	/**
 	* @see com.sun.xml.internal.xsom.visitor.XSContentTypeFunction#empty(XSContentType)
 	*/
-	@:overload public function empty(empty : com.sun.xml.internal.xsom.XSContentType) : String;
+	@:overload @:public public function empty(empty : com.sun.xml.internal.xsom.XSContentType) : String;
 	
 	/**
 	* @see com.sun.xml.internal.xsom.visitor.XSTermFunction#wildcard(XSWildcard)
 	*/
-	@:overload public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : String;
+	@:overload @:public public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : String;
 	
 	/**
 	* @see com.sun.xml.internal.xsom.visitor.XSTermFunction#modelGroupDecl(XSModelGroupDecl)
 	*/
-	@:overload public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : String;
+	@:overload @:public public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : String;
 	
 	/**
 	* @see com.sun.xml.internal.xsom.visitor.XSTermFunction#modelGroup(XSModelGroup)
 	*/
-	@:overload public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : String;
+	@:overload @:public public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : String;
 	
 	/**
 	* @see com.sun.xml.internal.xsom.visitor.XSTermFunction#elementDecl(XSElementDecl)
 	*/
-	@:overload public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : String;
+	@:overload @:public public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : String;
 	
-	@:overload public function identityConstraint(decl : com.sun.xml.internal.xsom.XSIdentityConstraint) : String;
+	@:overload @:public public function identityConstraint(decl : com.sun.xml.internal.xsom.XSIdentityConstraint) : String;
 	
-	@:overload public function xpath(xpath : com.sun.xml.internal.xsom.XSXPath) : String;
+	@:overload @:public public function xpath(xpath : com.sun.xml.internal.xsom.XSXPath) : String;
 	
 	
 }

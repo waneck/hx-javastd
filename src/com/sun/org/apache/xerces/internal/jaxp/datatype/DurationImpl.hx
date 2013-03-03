@@ -25,32 +25,32 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* to be able to set after conversion. It won't break the immutable nature
 	* of them since there's no other way to set new values to them
 	*/
-	private var years : java.math.BigInteger;
+	@:protected private var years : java.math.BigInteger;
 	
 	/**
 	* <p>Months of this <code>Duration</code>.</p>
 	*/
-	private var months : java.math.BigInteger;
+	@:protected private var months : java.math.BigInteger;
 	
 	/**
 	* <p>Days of this <code>Duration</code>.</p>
 	*/
-	private var days : java.math.BigInteger;
+	@:protected private var days : java.math.BigInteger;
 	
 	/**
 	* <p>Hours of this <code>Duration</code>.</p>
 	*/
-	private var hours : java.math.BigInteger;
+	@:protected private var hours : java.math.BigInteger;
 	
 	/**
 	* <p>Minutes of this <code>Duration</code>.</p>
 	*/
-	private var minutes : java.math.BigInteger;
+	@:protected private var minutes : java.math.BigInteger;
 	
 	/**
 	* <p>Seconds of this <code>Duration</code>.</p>
 	*/
-	private var seconds : java.math.BigDecimal;
+	@:protected private var seconds : java.math.BigDecimal;
 	
 	/**
 	* Returns the sign of this duration in -1,0, or 1.
@@ -59,7 +59,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*      -1 if this duration is negative, 0 if the duration is zero,
 	*      and 1 if the duration is postive.
 	*/
-	@:overload override public function getSign() : Int;
+	@:overload @:public override public function getSign() : Int;
 	
 	/**
 	* TODO: Javadoc
@@ -67,7 +67,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*
 	* @return 1 if positive, else -1.
 	*/
-	@:overload private function calcSignum(isPositive : Bool) : Int;
+	@:overload @:protected private function calcSignum(isPositive : Bool) : Int;
 	
 	/**
 	* <p>Constructs a new Duration object by specifying each field individually.</p>
@@ -89,7 +89,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*    seconds parameters are all <code>null</code>. Or if any
 	*    of those parameters are negative.
 	*/
-	@:overload private function new(isPositive : Bool, years : java.math.BigInteger, months : java.math.BigInteger, days : java.math.BigInteger, hours : java.math.BigInteger, minutes : java.math.BigInteger, seconds : java.math.BigDecimal) : Void;
+	@:overload @:protected private function new(isPositive : Bool, years : java.math.BigInteger, months : java.math.BigInteger, days : java.math.BigInteger, hours : java.math.BigInteger, minutes : java.math.BigInteger, seconds : java.math.BigDecimal) : Void;
 	
 	/**
 	* <p>Makes sure that the given number is non-negative. If it is not,
@@ -98,7 +98,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @param n Number to test.
 	* @param f Field to test.
 	*/
-	@:overload private static function testNonNegative(n : java.math.BigInteger, f : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field) : Void;
+	@:overload @:protected @:static private static function testNonNegative(n : java.math.BigInteger, f : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field) : Void;
 	
 	/**
 	* <p>Makes sure that the given number is non-negative. If it is not,
@@ -107,7 +107,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @param n Number to test.
 	* @param f Field to test.
 	*/
-	@:overload private static function testNonNegative(n : java.math.BigDecimal, f : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field) : Void;
+	@:overload @:protected @:static private static function testNonNegative(n : java.math.BigDecimal, f : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field) : Void;
 	
 	/**
 	* <p>Constructs a new Duration object by specifying each field
@@ -122,7 +122,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @see #DurationImpl(boolean, BigInteger, BigInteger, BigInteger, BigInteger,
 	*   BigInteger, BigDecimal)
 	*/
-	@:overload private function new(isPositive : Bool, years : Int, months : Int, days : Int, hours : Int, minutes : Int, seconds : Int) : Void;
+	@:overload @:protected private function new(isPositive : Bool, years : Int, months : Int, days : Int, hours : Int, minutes : Int, seconds : Int) : Void;
 	
 	/**
 	* TODO: Javadoc
@@ -131,7 +131,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*
 	* @return BigInteger representation of int.
 	*/
-	@:overload private static function wrap(i : Int) : java.math.BigInteger;
+	@:overload @:protected @:static private static function wrap(i : Int) : java.math.BigInteger;
 	
 	/**
 	* <p>Constructs a new Duration object by specifying the duration
@@ -140,7 +140,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @param durationInMilliSeconds
 	*      The length of the duration in milliseconds.
 	*/
-	@:overload private function new(durationInMilliSeconds : haxe.Int64) : Void;
+	@:overload @:protected private function new(durationInMilliSeconds : haxe.Int64) : Void;
 	
 	/**
 	* Constructs a new Duration object by
@@ -173,7 +173,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @throws NullPointerException
 	*      If the given string is null.
 	*/
-	@:overload private function new(lexicalRepresentation : String) : Void;
+	@:overload @:protected private function new(lexicalRepresentation : String) : Void;
 	
 	/**
 	* <p>Partial order relation comparison with this <code>Duration</code> instance.</p>
@@ -205,14 +205,14 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @see #isShorterThan(Duration)
 	* @see #isLongerThan(Duration)
 	*/
-	@:overload override public function compare(rhs : javax.xml.datatype.Duration) : Int;
+	@:overload @:public override public function compare(rhs : javax.xml.datatype.Duration) : Int;
 	
 	/**
 	* Returns a hash code consistent with the definition of the equals method.
 	*
 	* @see Object#hashCode()
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this duration object.
@@ -233,7 +233,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @return
 	*      Always return a non-null valid String object.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Checks if a field is set.
@@ -250,7 +250,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @throws NullPointerException
 	*      If the field parameter is null.
 	*/
-	@:overload override public function isSet(field : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field) : Bool;
+	@:overload @:public override public function isSet(field : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field) : Bool;
 	
 	/**
 	* Gets the value of a field.
@@ -276,7 +276,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @throws NullPointerException
 	*      If the field parameter is null.
 	*/
-	@:overload override public function getField(field : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field) : java.lang.Number;
+	@:overload @:public override public function getField(field : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field) : java.lang.Number;
 	
 	/**
 	* Obtains the value of the YEARS field as an integer value,
@@ -297,7 +297,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*      its value as an integer by using the {@link Number#intValue()}
 	*      method. If the YEARS field is not present, return 0.
 	*/
-	@:overload override public function getYears() : Int;
+	@:overload @:public override public function getYears() : Int;
 	
 	/**
 	* Obtains the value of the MONTHS field as an integer value,
@@ -308,7 +308,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*
 	* @return Months of this <code>Duration</code>.
 	*/
-	@:overload override public function getMonths() : Int;
+	@:overload @:public override public function getMonths() : Int;
 	
 	/**
 	* Obtains the value of the DAYS field as an integer value,
@@ -319,7 +319,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*
 	* @return Days of this <code>Duration</code>.
 	*/
-	@:overload override public function getDays() : Int;
+	@:overload @:public override public function getDays() : Int;
 	
 	/**
 	* Obtains the value of the HOURS field as an integer value,
@@ -331,7 +331,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @return Hours of this <code>Duration</code>.
 	*
 	*/
-	@:overload override public function getHours() : Int;
+	@:overload @:public override public function getHours() : Int;
 	
 	/**
 	* Obtains the value of the MINUTES field as an integer value,
@@ -343,7 +343,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @return Minutes of this <code>Duration</code>.
 	*
 	*/
-	@:overload override public function getMinutes() : Int;
+	@:overload @:public override public function getMinutes() : Int;
 	
 	/**
 	* Obtains the value of the SECONDS field as an integer value,
@@ -356,7 +356,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*   will be discarded (for example, if the actual value is 2.5,
 	*   this method returns 2)
 	*/
-	@:overload override public function getSeconds() : Int;
+	@:overload @:public override public function getSeconds() : Int;
 	
 	/**
 	* <p>Returns the length of the duration in milli-seconds.</p>
@@ -388,7 +388,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* is null.
 	*
 	*/
-	@:overload override public function getTimeInMillis(startInstant : java.util.Calendar) : haxe.Int64;
+	@:overload @:public override public function getTimeInMillis(startInstant : java.util.Calendar) : haxe.Int64;
 	
 	/**
 	* <p>Returns the length of the duration in milli-seconds.</p>
@@ -421,7 +421,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*
 	* @see #getTimeInMillis(Calendar)
 	*/
-	@:overload override public function getTimeInMillis(startInstant : java.util.Date) : haxe.Int64;
+	@:overload @:public override public function getTimeInMillis(startInstant : java.util.Date) : haxe.Int64;
 	
 	/**
 	* <p>Converts the years and months fields into the days field
@@ -453,7 +453,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*
 	* @throws NullPointerException If the startTimeInstant parameter is null.
 	*/
-	@:overload override public function normalizeWith(startTimeInstant : java.util.Calendar) : javax.xml.datatype.Duration;
+	@:overload @:public override public function normalizeWith(startTimeInstant : java.util.Calendar) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Computes a new duration whose value is <code>factor</code> times
@@ -471,7 +471,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*
 	* @see #multiply(BigDecimal)
 	*/
-	@:overload override public function multiply(factor : Int) : javax.xml.datatype.Duration;
+	@:overload @:public override public function multiply(factor : Int) : javax.xml.datatype.Duration;
 	
 	/**
 	* Computes a new duration whose value is <code>factor</code> times
@@ -520,7 +520,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* <code>null</code>.
 	*
 	*/
-	@:overload override public function multiply(factor : java.math.BigDecimal) : javax.xml.datatype.Duration;
+	@:overload @:public override public function multiply(factor : java.math.BigDecimal) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Computes a new duration whose value is <code>this+rhs</code>.</p>
@@ -572,7 +572,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*
 	* @see #subtract(Duration)
 	*/
-	@:overload override public function add(rhs : javax.xml.datatype.Duration) : javax.xml.datatype.Duration;
+	@:overload @:public override public function add(rhs : javax.xml.datatype.Duration) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Computes a new duration whose value is <code>this-rhs</code>.</p>
@@ -623,7 +623,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*
 	* @see #add(Duration)
 	*/
-	@:overload override public function subtract(rhs : javax.xml.datatype.Duration) : javax.xml.datatype.Duration;
+	@:overload @:public override public function subtract(rhs : javax.xml.datatype.Duration) : javax.xml.datatype.Duration;
 	
 	/**
 	* Returns a new {@link Duration} object whose
@@ -637,7 +637,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @return
 	*      always return a non-null valid {@link Duration} object.
 	*/
-	@:overload override public function negate() : javax.xml.datatype.Duration;
+	@:overload @:public override public function negate() : javax.xml.datatype.Duration;
 	
 	/**
 	* Returns the sign of this duration in -1,0, or 1.
@@ -646,7 +646,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*      -1 if this duration is negative, 0 if the duration is zero,
 	*      and 1 if the duration is postive.
 	*/
-	@:overload public function signum() : Int;
+	@:overload @:public public function signum() : Int;
 	
 	/**
 	* Adds this duration to a {@link Calendar} object.
@@ -687,7 +687,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @throws NullPointerException
 	*      if the calendar parameter is null.
 	*/
-	@:overload override public function addTo(calendar : java.util.Calendar) : Void;
+	@:overload @:public override public function addTo(calendar : java.util.Calendar) : Void;
 	
 	/**
 	* Adds this duration to a {@link Date} object.
@@ -710,7 +710,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @throws NullPointerException
 	*      if the date parameter is null.
 	*/
-	@:overload override public function addTo(date : java.util.Date) : Void;
+	@:overload @:public override public function addTo(date : java.util.Date) : Void;
 	
 	
 }

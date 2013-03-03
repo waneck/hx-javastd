@@ -47,13 +47,13 @@ extern class TrustManagerFactorySpi
 	*
 	* @param ks the key store or null
 	*/
-	@:overload @:abstract private function engineInit(ks : java.security.KeyStore) : Void;
+	@:overload @:protected @:abstract private function engineInit(ks : java.security.KeyStore) : Void;
 	
 	/**
 	* Returns one trust manager for each type of trust material.
 	* @return the trust managers
 	*/
-	@:overload @:abstract private function engineGetTrustManagers() : java.NativeArray<com.sun.net.ssl.TrustManager>;
+	@:overload @:protected @:abstract private function engineGetTrustManagers() : java.NativeArray<com.sun.net.ssl.TrustManager>;
 	
 	
 }

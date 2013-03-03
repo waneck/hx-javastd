@@ -25,11 +25,11 @@ package sun.nio.ch;
 */
 @:internal extern class Net
 {
-	public static var SHUT_RD(default, null) : Int;
+	@:public @:final @:static public static var SHUT_RD(default, null) : Int;
 	
-	public static var SHUT_WR(default, null) : Int;
+	@:public @:final @:static public static var SHUT_WR(default, null) : Int;
 	
-	public static var SHUT_RDWR(default, null) : Int;
+	@:public @:final @:static public static var SHUT_RDWR(default, null) : Int;
 	
 	
 }

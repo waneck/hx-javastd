@@ -41,7 +41,7 @@ resolve and might not save enough event traffic to be worth the investment.
 */
 @:internal extern class LCount
 {
-	public var captures : Int;
+	@:public public var captures : Int;
 	
 	
 }

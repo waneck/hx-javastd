@@ -32,7 +32,7 @@ extern class WrongParserException extends java.lang.RuntimeException
 	* Create a WrongParserException object.
 	* @param message The error message that should be reported to the user.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

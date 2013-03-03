@@ -37,19 +37,19 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* Set the output for the taglet.
 	* @param o an object representing the output.
 	*/
-	@:overload @:abstract public function setOutput(o : Dynamic) : Void;
+	@:overload @:public @:abstract public function setOutput(o : Dynamic) : Void;
 	
 	/**
 	* Append the given output to this output.
 	* @param o a TagletOutput representing the output.
 	*/
-	@:overload @:abstract public function appendOutput(o : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput) : Void;
+	@:overload @:public @:abstract public function appendOutput(o : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput) : Void;
 	
 	/**
 	* Return true if this output has any occurances of @inheritDoc.
 	* @return true if inheritDoc tag is found.
 	*/
-	@:overload @:abstract public function hasInheritDocTag() : Bool;
+	@:overload @:public @:abstract public function hasInheritDocTag() : Bool;
 	
 	
 }

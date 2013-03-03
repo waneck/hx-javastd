@@ -43,19 +43,19 @@ extern class CompositeFontDescriptor
 	*                 sections for each component font within the previous
 	*                 array
 	*/
-	@:overload public function new(faceName : String, coreComponentCount : Int, componentFaceNames : java.NativeArray<String>, componentFileNames : java.NativeArray<String>, exclusionRanges : java.NativeArray<Int>, exclusionRangeLimits : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(faceName : String, coreComponentCount : Int, componentFaceNames : java.NativeArray<String>, componentFileNames : java.NativeArray<String>, exclusionRanges : java.NativeArray<Int>, exclusionRangeLimits : java.NativeArray<Int>) : Void;
 	
-	@:overload public function getFaceName() : String;
+	@:overload @:public public function getFaceName() : String;
 	
-	@:overload public function getCoreComponentCount() : Int;
+	@:overload @:public public function getCoreComponentCount() : Int;
 	
-	@:overload public function getComponentFaceNames() : java.NativeArray<String>;
+	@:overload @:public public function getComponentFaceNames() : java.NativeArray<String>;
 	
-	@:overload public function getComponentFileNames() : java.NativeArray<String>;
+	@:overload @:public public function getComponentFileNames() : java.NativeArray<String>;
 	
-	@:overload public function getExclusionRanges() : java.NativeArray<Int>;
+	@:overload @:public public function getExclusionRanges() : java.NativeArray<Int>;
 	
-	@:overload public function getExclusionRangeLimits() : java.NativeArray<Int>;
+	@:overload @:public public function getExclusionRangeLimits() : java.NativeArray<Int>;
 	
 	
 }

@@ -44,25 +44,25 @@ extern class WSService extends javax.xml.ws.spi.ServiceDelegate
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Works like {@link #getPort(EndpointReference, Class, WebServiceFeature...)}
 	* but takes {@link WSEndpointReference}.
 	*/
-	@:overload @:abstract public function getPort<T>(epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference, portInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
+	@:overload @:public @:abstract public function getPort<T>(epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference, portInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
 	
 	/**
 	* Works like {@link #createDispatch(EndpointReference, Class, Mode, WebServiceFeature[])}
 	* but it takes the port name separately, so that EPR without embedded metadata can be used.
 	*/
-	@:overload @:abstract public function createDispatch<T>(portName : javax.xml.namespace.QName, wsepr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference, aClass : Class<T>, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<T>;
+	@:overload @:public @:abstract public function createDispatch<T>(portName : javax.xml.namespace.QName, wsepr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference, aClass : Class<T>, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<T>;
 	
 	/**
 	* Works like {@link #createDispatch(EndpointReference, JAXBContext, Mode, WebServiceFeature[])}
 	* but it takes the port name separately, so that EPR without embedded metadata can be used.
 	*/
-	@:overload @:abstract public function createDispatch(portName : javax.xml.namespace.QName, wsepr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference, jaxbContext : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<Dynamic>;
+	@:overload @:public @:abstract public function createDispatch(portName : javax.xml.namespace.QName, wsepr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference, jaxbContext : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<Dynamic>;
 	
 	/**
 	* Gets the {@link Container} object.
@@ -75,7 +75,7 @@ extern class WSService extends javax.xml.ws.spi.ServiceDelegate
 	*      always same object. If no "real" {@link Container} instance
 	*      is given, {@link Container#NONE} will be returned.
 	*/
-	@:overload @:abstract public function getContainer() : com.sun.xml.internal.ws.api.server.Container;
+	@:overload @:public @:abstract public function getContainer() : com.sun.xml.internal.ws.api.server.Container;
 	
 	/**
 	* Create a <code>Service</code> instance.
@@ -89,7 +89,7 @@ extern class WSService extends javax.xml.ws.spi.ServiceDelegate
 	* @throws WebServiceException If any error in creation of the
 	*                    specified service.
 	**/
-	@:overload public static function create(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.WSService;
+	@:overload @:public @:static public static function create(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.WSService;
 	
 	/**
 	* Create a <code>Service</code> instance.
@@ -98,23 +98,23 @@ extern class WSService extends javax.xml.ws.spi.ServiceDelegate
 	* @throws WebServiceException If any error in creation of the
 	*                    specified service
 	*/
-	@:overload public static function create(serviceName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.WSService;
+	@:overload @:public @:static public static function create(serviceName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.WSService;
 	
 	/**
 	* Creates a service with a dummy service name.
 	*/
-	@:overload public static function create() : com.sun.xml.internal.ws.api.WSService;
+	@:overload @:public @:static public static function create() : com.sun.xml.internal.ws.api.WSService;
 	
 	/**
 	* To create a {@link Service}, we need to go through the API that doesn't let us
 	* pass parameters, so as a hack we use thread local.
 	*/
-	private static var INIT_PARAMS(default, null) : java.lang.ThreadLocal<com.sun.xml.internal.ws.api.WSService.WSService_InitParams>;
+	@:protected @:static @:final private static var INIT_PARAMS(default, null) : java.lang.ThreadLocal<com.sun.xml.internal.ws.api.WSService.WSService_InitParams>;
 	
 	/**
 	* Used as a immutable constant so that we can avoid null check.
 	*/
-	private static var EMPTY_PARAMS(default, null) : com.sun.xml.internal.ws.api.WSService.WSService_InitParams;
+	@:protected @:static @:final private static var EMPTY_PARAMS(default, null) : com.sun.xml.internal.ws.api.WSService.WSService_InitParams;
 	
 	/**
 	* Creates a {@link Service} instance.
@@ -133,7 +133,7 @@ extern class WSService extends javax.xml.ws.spi.ServiceDelegate
 	* @throws WebServiceException
 	*          If any error in creation of the specified service.
 	**/
-	@:overload public static function create(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName, properties : com.sun.xml.internal.ws.api.WSService.WSService_InitParams) : javax.xml.ws.Service;
+	@:overload @:public @:static public static function create(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName, properties : com.sun.xml.internal.ws.api.WSService.WSService_InitParams) : javax.xml.ws.Service;
 	
 	/**
 	* Obtains the {@link WSService} that's encapsulated inside a {@link Service}.
@@ -141,7 +141,7 @@ extern class WSService extends javax.xml.ws.spi.ServiceDelegate
 	* @throws IllegalArgumentException
 	*      if the given service object is not from the JAX-WS RI.
 	*/
-	@:overload public static function unwrap(svc : javax.xml.ws.Service) : com.sun.xml.internal.ws.api.WSService;
+	@:overload @:public @:static public static function unwrap(svc : javax.xml.ws.Service) : com.sun.xml.internal.ws.api.WSService;
 	
 	
 }
@@ -157,9 +157,9 @@ extern class WSService extends javax.xml.ws.spi.ServiceDelegate
 	* This allows the client to use a specific {@link Container} instance
 	* as opposed to the one obtained by {@link ContainerResolver}.
 	*/
-	@:overload public function setContainer(c : com.sun.xml.internal.ws.api.server.Container) : Void;
+	@:overload @:public public function setContainer(c : com.sun.xml.internal.ws.api.server.Container) : Void;
 	
-	@:overload public function getContainer() : com.sun.xml.internal.ws.api.server.Container;
+	@:overload @:public public function getContainer() : com.sun.xml.internal.ws.api.server.Container;
 	
 	
 }

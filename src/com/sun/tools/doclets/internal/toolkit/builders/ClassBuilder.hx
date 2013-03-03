@@ -39,7 +39,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	/**
 	* The root element of the class XML is {@value}.
 	*/
-	public static var ROOT(default, null) : String;
+	@:public @:static @:final public static var ROOT(default, null) : String;
 	
 	/**
 	* Construct a new ClassBuilder.
@@ -48,17 +48,17 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param classDoc the class being documented.
 	* @param writer the doclet specific writer.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc, writer : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.builders.ClassBuilder;
+	@:overload @:public @:static public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc, writer : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.builders.ClassBuilder;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function build() : Void;
+	@:overload @:public override public function build() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Handles the &lt;ClassDoc> tag.
@@ -66,7 +66,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param contentTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildClassDoc(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildClassDoc(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the class tree documentation.
@@ -74,7 +74,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classContentTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildClassTree(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildClassTree(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the class information tree documentation.
@@ -82,7 +82,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classContentTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildClassInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildClassInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the typeparameters of this class.
@@ -90,7 +90,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classInfoTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildTypeParamInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildTypeParamInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* If this is an interface, list all super interfaces.
@@ -98,7 +98,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classInfoTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildSuperInterfacesInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildSuperInterfacesInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* If this is a class, list all interfaces implemented by this class.
@@ -106,7 +106,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classInfoTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildImplementedInterfacesInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildImplementedInterfacesInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* List all the classes extend this one.
@@ -114,7 +114,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classInfoTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildSubClassInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildSubClassInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* List all the interfaces that extend this one.
@@ -122,7 +122,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classInfoTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildSubInterfacesInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildSubInterfacesInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* If this is an interface, list all classes that implement this interface.
@@ -130,7 +130,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classInfoTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildInterfaceUsageInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildInterfaceUsageInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* If this class is deprecated, build the appropriate information.
@@ -138,7 +138,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classInfoTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildDeprecationInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildDeprecationInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* If this is an inner class or interface, list the enclosing class or interface.
@@ -146,7 +146,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classInfoTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildNestedClassInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildNestedClassInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the signature of the current class.
@@ -154,7 +154,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classInfoTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildClassSignature(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildClassSignature(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the class description.
@@ -162,7 +162,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classInfoTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildClassDescription(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildClassDescription(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the tag information for the current class.
@@ -170,7 +170,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classInfoTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildClassTagInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildClassTagInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the member summary contents of the page.
@@ -178,7 +178,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classContentTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildMemberSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildMemberSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the member details contents of the page.
@@ -186,7 +186,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classContentTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildMemberDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildMemberDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the enum constants documentation.
@@ -194,7 +194,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param memberDetailsTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildEnumConstantsDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildEnumConstantsDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the field documentation.
@@ -202,14 +202,14 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param memberDetailsTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildFieldDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildFieldDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the property documentation.
 	*
 	* @param elements the XML elements that specify how a field is documented.
 	*/
-	@:overload public function buildPropertyDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildPropertyDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the constructor documentation.
@@ -217,7 +217,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param memberDetailsTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildConstructorDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildConstructorDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the method documentation.
@@ -225,7 +225,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param memberDetailsTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildMethodDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildMethodDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }

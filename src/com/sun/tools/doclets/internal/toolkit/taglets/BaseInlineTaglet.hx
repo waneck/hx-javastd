@@ -39,7 +39,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* Will return true since this is an inline tag.
 	* @return true since this is an inline tag.
 	*/
-	@:overload override public function isInlineTag() : Bool;
+	@:overload @:public override public function isInlineTag() : Bool;
 	
 	
 }

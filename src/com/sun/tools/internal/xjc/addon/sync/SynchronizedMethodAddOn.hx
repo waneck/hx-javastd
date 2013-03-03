@@ -31,13 +31,13 @@ extern class SynchronizedMethodAddOn extends com.sun.tools.internal.xjc.Plugin
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload public function getOptionName() : String;
+	@:overload @:public override public function getOptionName() : String;
 	
-	@:overload public function getUsage() : String;
+	@:overload @:public override public function getUsage() : String;
 	
-	@:overload public function parseArgument(opt : com.sun.tools.internal.xjc.Options, args : java.NativeArray<String>, i : Int) : Int;
+	@:overload @:public override public function parseArgument(opt : com.sun.tools.internal.xjc.Options, args : java.NativeArray<String>, i : Int) : Int;
 	
-	@:overload public function run(model : com.sun.tools.internal.xjc.outline.Outline, opt : com.sun.tools.internal.xjc.Options, errorHandler : org.xml.sax.ErrorHandler) : Bool;
+	@:overload @:public override public function run(model : com.sun.tools.internal.xjc.outline.Outline, opt : com.sun.tools.internal.xjc.Options, errorHandler : org.xml.sax.ErrorHandler) : Bool;
 	
 	
 }

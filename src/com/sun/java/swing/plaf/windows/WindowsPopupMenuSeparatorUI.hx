@@ -31,11 +31,11 @@ extern class WindowsPopupMenuSeparatorUI extends javax.swing.plaf.basic.BasicPop
 	* @author Leif Samuelsson
 	* @author Igor Kushnirskiy
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	
 }

@@ -28,14 +28,14 @@ extern class FileSystem implements java.io.Closeable
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the provider that created this file system.
 	*
 	* @return  The provider that created this file system.
 	*/
-	@:overload @:abstract public function provider() : java.nio.file.spi.FileSystemProvider;
+	@:overload @:public @:abstract public function provider() : java.nio.file.spi.FileSystemProvider;
 	
 	/**
 	* Closes this file system.
@@ -56,7 +56,7 @@ extern class FileSystem implements java.io.Closeable
 	* @throws  UnsupportedOperationException
 	*          Thrown in the case of the default file system
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
 	/**
 	* Tells whether or not this file system is open.
@@ -65,7 +65,7 @@ extern class FileSystem implements java.io.Closeable
 	*
 	* @return  {@code true} if, and only if, this file system is open
 	*/
-	@:overload @:abstract public function isOpen() : Bool;
+	@:overload @:public @:abstract public function isOpen() : Bool;
 	
 	/**
 	* Tells whether or not this file system allows only read-only access to
@@ -74,7 +74,7 @@ extern class FileSystem implements java.io.Closeable
 	* @return  {@code true} if, and only if, this file system provides
 	*          read-only access
 	*/
-	@:overload @:abstract public function isReadOnly() : Bool;
+	@:overload @:public @:abstract public function isReadOnly() : Bool;
 	
 	/**
 	* Returns the name separator, represented as a string.
@@ -90,7 +90,7 @@ extern class FileSystem implements java.io.Closeable
 	*
 	* @return  The name separator
 	*/
-	@:overload @:abstract public function getSeparator() : String;
+	@:overload @:public @:abstract public function getSeparator() : String;
 	
 	/**
 	* Returns an object to iterate over the paths of the root directories.
@@ -114,7 +114,7 @@ extern class FileSystem implements java.io.Closeable
 	*
 	* @return  An object to iterate over the root directories
 	*/
-	@:overload @:abstract public function getRootDirectories() : java.lang.Iterable<java.nio.file.Path>;
+	@:overload @:public @:abstract public function getRootDirectories() : java.lang.Iterable<java.nio.file.Path>;
 	
 	/**
 	* Returns an object to iterate over the underlying file stores.
@@ -148,7 +148,7 @@ extern class FileSystem implements java.io.Closeable
 	*
 	* @return  An object to iterate over the backing file stores
 	*/
-	@:overload @:abstract public function getFileStores() : java.lang.Iterable<java.nio.file.FileStore>;
+	@:overload @:public @:abstract public function getFileStores() : java.lang.Iterable<java.nio.file.FileStore>;
 	
 	/**
 	* Returns the set of the {@link FileAttributeView#name names} of the file
@@ -165,7 +165,7 @@ extern class FileSystem implements java.io.Closeable
 	* @return  An unmodifiable set of the names of the supported file attribute
 	*          views
 	*/
-	@:overload @:abstract public function supportedFileAttributeViews() : java.util.Set<String>;
+	@:overload @:public @:abstract public function supportedFileAttributeViews() : java.util.Set<String>;
 	
 	/**
 	* Converts a path string, or a sequence of strings that when joined form
@@ -217,7 +217,7 @@ extern class FileSystem implements java.io.Closeable
 	* @throws  InvalidPathException
 	*          If the path string cannot be converted
 	*/
-	@:overload @:abstract public function getPath(first : String, more : java.NativeArray<String>) : java.nio.file.Path;
+	@:overload @:public @:abstract public function getPath(first : String, more : java.NativeArray<String>) : java.nio.file.Path;
 	
 	/**
 	* Returns a {@code PathMatcher} that performs match operations on the
@@ -354,7 +354,7 @@ extern class FileSystem implements java.io.Closeable
 	*
 	* @see Files#newDirectoryStream(Path,String)
 	*/
-	@:overload @:abstract public function getPathMatcher(syntaxAndPattern : String) : java.nio.file.PathMatcher;
+	@:overload @:public @:abstract public function getPathMatcher(syntaxAndPattern : String) : java.nio.file.PathMatcher;
 	
 	/**
 	* Returns the {@code UserPrincipalLookupService} for this file system
@@ -373,7 +373,7 @@ extern class FileSystem implements java.io.Closeable
 	*
 	* @return  The {@code UserPrincipalLookupService} for this file system
 	*/
-	@:overload @:abstract public function getUserPrincipalLookupService() : java.nio.file.attribute.UserPrincipalLookupService;
+	@:overload @:public @:abstract public function getUserPrincipalLookupService() : java.nio.file.attribute.UserPrincipalLookupService;
 	
 	/**
 	* Constructs a new {@link WatchService} <i>(optional operation)</i>.
@@ -390,7 +390,7 @@ extern class FileSystem implements java.io.Closeable
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:abstract public function newWatchService() : java.nio.file.WatchService;
+	@:overload @:public @:abstract public function newWatchService() : java.nio.file.WatchService;
 	
 	
 }

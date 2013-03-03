@@ -26,10 +26,10 @@ package com.sun.tools.internal.xjc.reader.dtd.bindinfo;
 extern class BIContent
 {
 	/** The particle element which this object is wrapping. */
-	private var element(default, null) : org.w3c.dom.Element;
+	@:protected @:final private var element(default, null) : org.w3c.dom.Element;
 	
 	/** The parent object.*/
-	private var parent(default, null) : com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIElement;
+	@:protected @:final private var parent(default, null) : com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIElement;
 	
 	/**
 	* Gets the realization of this particle, if any.
@@ -37,7 +37,7 @@ extern class BIContent
 	* @return
 	*      null if the "collection" attribute was not specified.
 	*/
-	@:overload @:final public function getRealization() : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
+	@:overload @:public @:final public function getRealization() : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
 	
 	/**
 	* Gets the property name of this particle.
@@ -45,7 +45,7 @@ extern class BIContent
 	* @return
 	*      always a non-null, valid string.
 	*/
-	@:overload @:final public function getPropertyName() : String;
+	@:overload @:public @:final public function getPropertyName() : String;
 	
 	/**
 	* Gets the type of this property, if any.
@@ -55,7 +55,7 @@ extern class BIContent
 	* @return
 	*      null if none is specified.
 	*/
-	@:overload @:final public function getType() : com.sun.codemodel.internal.JClass;
+	@:overload @:public @:final public function getType() : com.sun.codemodel.internal.JClass;
 	
 	
 }

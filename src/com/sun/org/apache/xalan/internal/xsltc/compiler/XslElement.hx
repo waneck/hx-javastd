@@ -26,27 +26,27 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Displays the contents of the element
 	*/
-	@:overload public function display(indent : Int) : Void;
+	@:overload @:public override public function display(indent : Int) : Void;
 	
 	/**
 	* This method is now deprecated. The new implemation of this class
 	* never declares the default NS.
 	*/
-	@:overload public function declaresDefaultNS() : Bool;
+	@:overload @:public public function declaresDefaultNS() : Bool;
 	
-	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Run type check on element name & contents
 	*/
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* This method is called when the name of the element is known at compile time.
 	* In this case, there is no need to inspect the element name at runtime to
 	* determine if a prefix exists, needs to be generated, etc.
 	*/
-	@:overload public function translateLiteral(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public public function translateLiteral(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* At runtime the compilation of xsl:element results in code that: (i)
@@ -56,13 +56,13 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* when the prefix is not known at compile time (vi) calls namespace()
 	* on the handler (vii) evaluates the contents (viii) calls endElement().
 	*/
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Override this method to make sure that xsl:attributes are not
 	* copied to output if this xsl:element is to be ignored
 	*/
-	@:overload public function translateContents(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translateContents(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

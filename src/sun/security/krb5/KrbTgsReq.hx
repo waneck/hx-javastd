@@ -30,22 +30,22 @@ package sun.security.krb5;
 */
 extern class KrbTgsReq
 {
-	@:overload public function new(asCreds : sun.security.krb5.Credentials, sname : sun.security.krb5.PrincipalName) : Void;
+	@:overload @:public public function new(asCreds : sun.security.krb5.Credentials, sname : sun.security.krb5.PrincipalName) : Void;
 	
 	/**
 	* Sends a TGS request to the realm of the target.
 	* @throws KrbException
 	* @throws IOException
 	*/
-	@:overload public function send() : Void;
+	@:overload @:public public function send() : Void;
 	
-	@:overload public function getReply() : sun.security.krb5.KrbTgsRep;
+	@:overload @:public public function getReply() : sun.security.krb5.KrbTgsRep;
 	
 	/**
 	* Sends the request, waits for a reply, and returns the Credentials.
 	* Used in Credentials, KrbCred, and internal/CredentialsUtil.
 	*/
-	@:overload public function sendAndGetCreds() : sun.security.krb5.Credentials;
+	@:overload @:public public function sendAndGetCreds() : sun.security.krb5.Credentials;
 	
 	
 }

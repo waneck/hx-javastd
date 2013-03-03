@@ -30,9 +30,9 @@ extern class PrefixFactoryImpl implements com.sun.xml.internal.ws.streaming.Pref
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(base : String) : Void;
+	@:overload @:public public function new(base : String) : Void;
 	
-	@:overload public function getPrefix(uri : String) : String;
+	@:overload @:public public function getPrefix(uri : String) : String;
 	
 	
 }

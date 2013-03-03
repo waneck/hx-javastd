@@ -46,14 +46,14 @@ package javax.naming.ldap;
 	* @param src The non-null source that fired the event.
 	* @param notice The non-null unsolicited notification.
 	*/
-	@:overload public function new(src : Dynamic, notice : javax.naming.ldap.UnsolicitedNotification) : Void;
+	@:overload @:public public function new(src : Dynamic, notice : javax.naming.ldap.UnsolicitedNotification) : Void;
 	
 	/**
 	* Returns the unsolicited notification.
 	* @return The non-null unsolicited notification that caused this
 	* event to be fired.
 	*/
-	@:overload public function getNotification() : javax.naming.ldap.UnsolicitedNotification;
+	@:overload @:public public function getNotification() : javax.naming.ldap.UnsolicitedNotification;
 	
 	/**
 	* Invokes the <tt>notificationReceived()</tt> method on
@@ -61,7 +61,7 @@ package javax.naming.ldap;
 	* @param listener The non-null listener on which to invoke
 	* <tt>notificationReceived</tt>.
 	*/
-	@:overload public function dispatch(listener : javax.naming.ldap.UnsolicitedNotificationListener) : Void;
+	@:overload @:public public function dispatch(listener : javax.naming.ldap.UnsolicitedNotificationListener) : Void;
 	
 	
 }

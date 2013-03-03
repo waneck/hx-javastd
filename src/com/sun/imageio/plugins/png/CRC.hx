@@ -25,79 +25,79 @@ package com.sun.imageio.plugins.png;
 */
 @:internal extern class CRC
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function update(data : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function update(data : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function update(data : Int) : Void;
+	@:overload @:public public function update(data : Int) : Void;
 	
-	@:overload public function getValue() : Int;
+	@:overload @:public public function getValue() : Int;
 	
 	
 }
 @:internal extern class ChunkStream extends javax.imageio.stream.ImageOutputStreamImpl
 {
-	@:overload public function new(type : Int, stream : javax.imageio.stream.ImageOutputStream) : Void;
+	@:overload @:public public function new(type : Int, stream : javax.imageio.stream.ImageOutputStream) : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload public function finish() : Void;
+	@:overload @:public public function finish() : Void;
 	
-	@:overload override private function finalize() : Void;
+	@:overload @:protected override private function finalize() : Void;
 	
 	
 }
 @:internal extern class IDATOutputStream extends javax.imageio.stream.ImageOutputStreamImpl
 {
-	@:overload public function new(stream : javax.imageio.stream.ImageOutputStream, chunkLength : Int) : Void;
+	@:overload @:public public function new(stream : javax.imageio.stream.ImageOutputStream, chunkLength : Int) : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function deflate() : Void;
+	@:overload @:public public function deflate() : Void;
 	
-	@:overload public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload public function finish() : Void;
+	@:overload @:public public function finish() : Void;
 	
-	@:overload override private function finalize() : Void;
+	@:overload @:protected override private function finalize() : Void;
 	
 	
 }
 @:internal extern class PNGImageWriteParam extends javax.imageio.ImageWriteParam
 {
-	@:overload public function new(locale : java.util.Locale) : Void;
+	@:overload @:public public function new(locale : java.util.Locale) : Void;
 	
 	
 }
 extern class PNGImageWriter extends javax.imageio.ImageWriter
 {
-	@:overload public function new(originatingProvider : javax.imageio.spi.ImageWriterSpi) : Void;
+	@:overload @:public public function new(originatingProvider : javax.imageio.spi.ImageWriterSpi) : Void;
 	
-	@:overload override public function setOutput(output : Dynamic) : Void;
+	@:overload @:public override public function setOutput(output : Dynamic) : Void;
 	
-	@:overload override public function getDefaultWriteParam() : javax.imageio.ImageWriteParam;
+	@:overload @:public override public function getDefaultWriteParam() : javax.imageio.ImageWriteParam;
 	
-	@:overload override public function getDefaultStreamMetadata(param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getDefaultStreamMetadata(param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function getDefaultImageMetadata(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getDefaultImageMetadata(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function convertStreamMetadata(inData : javax.imageio.metadata.IIOMetadata, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function convertStreamMetadata(inData : javax.imageio.metadata.IIOMetadata, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function convertImageMetadata(inData : javax.imageio.metadata.IIOMetadata, imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function convertImageMetadata(inData : javax.imageio.metadata.IIOMetadata, imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function write(streamMetadata : javax.imageio.metadata.IIOMetadata, image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
+	@:overload @:public override public function write(streamMetadata : javax.imageio.metadata.IIOMetadata, image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
 	
 	
 }

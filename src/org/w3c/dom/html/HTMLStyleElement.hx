@@ -48,25 +48,25 @@ extern interface HTMLStyleElement extends org.w3c.dom.html.HTMLElement
 	/**
 	*  Enables/disables the style sheet.
 	*/
-	@:overload public function getDisabled() : Bool;
+	@:overload @:public public function getDisabled() : Bool;
 	
-	@:overload public function setDisabled(disabled : Bool) : Void;
+	@:overload @:public public function setDisabled(disabled : Bool) : Void;
 	
 	/**
 	*  Designed for use with one or more target media. See the  media
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getMedia() : String;
+	@:overload @:public public function getMedia() : String;
 	
-	@:overload public function setMedia(media : String) : Void;
+	@:overload @:public public function setMedia(media : String) : Void;
 	
 	/**
 	*  The content type pf the style sheet language. See the  type attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function setType(type : String) : Void;
+	@:overload @:public public function setType(type : String) : Void;
 	
 	
 }

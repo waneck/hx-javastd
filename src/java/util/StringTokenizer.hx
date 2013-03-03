@@ -119,7 +119,7 @@ package java.util;
 	*                         as tokens.
 	* @exception NullPointerException if str is <CODE>null</CODE>
 	*/
-	@:overload public function new(str : String, delim : String, returnDelims : Bool) : Void;
+	@:overload @:public public function new(str : String, delim : String, returnDelims : Bool) : Void;
 	
 	/**
 	* Constructs a string tokenizer for the specified string. The
@@ -136,7 +136,7 @@ package java.util;
 	* @param   delim   the delimiters.
 	* @exception NullPointerException if str is <CODE>null</CODE>
 	*/
-	@:overload public function new(str : String, delim : String) : Void;
+	@:overload @:public public function new(str : String, delim : String) : Void;
 	
 	/**
 	* Constructs a string tokenizer for the specified string. The
@@ -149,7 +149,7 @@ package java.util;
 	* @param   str   a string to be parsed.
 	* @exception NullPointerException if str is <CODE>null</CODE>
 	*/
-	@:overload public function new(str : String) : Void;
+	@:overload @:public public function new(str : String) : Void;
 	
 	/**
 	* Tests if there are more tokens available from this tokenizer's string.
@@ -160,7 +160,7 @@ package java.util;
 	*          in the string after the current position; <code>false</code>
 	*          otherwise.
 	*/
-	@:overload public function hasMoreTokens() : Bool;
+	@:overload @:public public function hasMoreTokens() : Bool;
 	
 	/**
 	* Returns the next token from this string tokenizer.
@@ -169,7 +169,7 @@ package java.util;
 	* @exception  NoSuchElementException  if there are no more tokens in this
 	*               tokenizer's string.
 	*/
-	@:overload public function nextToken() : String;
+	@:overload @:public public function nextToken() : String;
 	
 	/**
 	* Returns the next token in this string tokenizer's string. First,
@@ -186,7 +186,7 @@ package java.util;
 	*               tokenizer's string.
 	* @exception NullPointerException if delim is <CODE>null</CODE>
 	*/
-	@:overload public function nextToken(delim : String) : String;
+	@:overload @:public public function nextToken(delim : String) : String;
 	
 	/**
 	* Returns the same value as the <code>hasMoreTokens</code>
@@ -198,7 +198,7 @@ package java.util;
 	* @see     java.util.Enumeration
 	* @see     java.util.StringTokenizer#hasMoreTokens()
 	*/
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
 	/**
 	* Returns the same value as the <code>nextToken</code> method,
@@ -212,7 +212,7 @@ package java.util;
 	* @see        java.util.Enumeration
 	* @see        java.util.StringTokenizer#nextToken()
 	*/
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
 	/**
 	* Calculates the number of times that this tokenizer's
@@ -223,7 +223,7 @@ package java.util;
 	*          delimiter set.
 	* @see     java.util.StringTokenizer#nextToken()
 	*/
-	@:overload public function countTokens() : Int;
+	@:overload @:public public function countTokens() : Int;
 	
 	
 }

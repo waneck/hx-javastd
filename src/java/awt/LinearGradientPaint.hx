@@ -51,7 +51,7 @@ extern class LinearGradientPaint extends java.awt.MultipleGradientPaint
 	* or a {@code fractions} value is less than 0.0 or greater than 1.0,
 	* or the {@code fractions} are not provided in strictly increasing order
 	*/
-	@:overload public function new(startX : Single, startY : Single, endX : Single, endY : Single, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>) : Void;
+	@:overload @:public public function new(startX : Single, startY : Single, endX : Single, endY : Single, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>) : Void;
 	
 	/**
 	* Constructs a {@code LinearGradientPaint} with a default {@code SRGB}
@@ -82,7 +82,7 @@ extern class LinearGradientPaint extends java.awt.MultipleGradientPaint
 	* or a {@code fractions} value is less than 0.0 or greater than 1.0,
 	* or the {@code fractions} are not provided in strictly increasing order
 	*/
-	@:overload public function new(startX : Single, startY : Single, endX : Single, endY : Single, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod) : Void;
+	@:overload @:public public function new(startX : Single, startY : Single, endX : Single, endY : Single, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod) : Void;
 	
 	/**
 	* Constructs a {@code LinearGradientPaint} with a default
@@ -105,7 +105,7 @@ extern class LinearGradientPaint extends java.awt.MultipleGradientPaint
 	* or a {@code fractions} value is less than 0.0 or greater than 1.0,
 	* or the {@code fractions} are not provided in strictly increasing order
 	*/
-	@:overload public function new(start : java.awt.geom.Point2D, end : java.awt.geom.Point2D, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>) : Void;
+	@:overload @:public public function new(start : java.awt.geom.Point2D, end : java.awt.geom.Point2D, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>) : Void;
 	
 	/**
 	* Constructs a {@code LinearGradientPaint} with a default {@code SRGB}
@@ -131,7 +131,7 @@ extern class LinearGradientPaint extends java.awt.MultipleGradientPaint
 	* or a {@code fractions} value is less than 0.0 or greater than 1.0,
 	* or the {@code fractions} are not provided in strictly increasing order
 	*/
-	@:overload public function new(start : java.awt.geom.Point2D, end : java.awt.geom.Point2D, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod) : Void;
+	@:overload @:public public function new(start : java.awt.geom.Point2D, end : java.awt.geom.Point2D, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod) : Void;
 	
 	/**
 	* Constructs a {@code LinearGradientPaint}.
@@ -161,7 +161,7 @@ extern class LinearGradientPaint extends java.awt.MultipleGradientPaint
 	* or a {@code fractions} value is less than 0.0 or greater than 1.0,
 	* or the {@code fractions} are not provided in strictly increasing order
 	*/
-	@:overload public function new(start : java.awt.geom.Point2D, end : java.awt.geom.Point2D, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod, colorSpace : java.awt.MultipleGradientPaint.MultipleGradientPaint_ColorSpaceType, gradientTransform : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public public function new(start : java.awt.geom.Point2D, end : java.awt.geom.Point2D, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod, colorSpace : java.awt.MultipleGradientPaint.MultipleGradientPaint_ColorSpaceType, gradientTransform : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Creates and returns a {@link PaintContext} used to
@@ -191,7 +191,7 @@ extern class LinearGradientPaint extends java.awt.MultipleGradientPaint
 	* @see AffineTransform
 	* @see RenderingHints
 	*/
-	@:overload public function createContext(cm : java.awt.image.ColorModel, deviceBounds : java.awt.Rectangle, userBounds : java.awt.geom.Rectangle2D, transform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : java.awt.PaintContext;
+	@:overload @:public override public function createContext(cm : java.awt.image.ColorModel, deviceBounds : java.awt.Rectangle, userBounds : java.awt.geom.Rectangle2D, transform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : java.awt.PaintContext;
 	
 	/**
 	* Returns a copy of the start point of the gradient axis.
@@ -199,7 +199,7 @@ extern class LinearGradientPaint extends java.awt.MultipleGradientPaint
 	* @return a {@code Point2D} object that is a copy of the point
 	* that anchors the first color of this {@code LinearGradientPaint}
 	*/
-	@:overload public function getStartPoint() : java.awt.geom.Point2D;
+	@:overload @:public public function getStartPoint() : java.awt.geom.Point2D;
 	
 	/**
 	* Returns a copy of the end point of the gradient axis.
@@ -207,7 +207,7 @@ extern class LinearGradientPaint extends java.awt.MultipleGradientPaint
 	* @return a {@code Point2D} object that is a copy of the point
 	* that anchors the last color of this {@code LinearGradientPaint}
 	*/
-	@:overload public function getEndPoint() : java.awt.geom.Point2D;
+	@:overload @:public public function getEndPoint() : java.awt.geom.Point2D;
 	
 	
 }

@@ -34,11 +34,11 @@ package com.sun.tools.hat.internal.oql;
 */
 extern class OQLException extends java.lang.Exception
 {
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
-	@:overload public function new(msg : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(msg : String, cause : java.lang.Throwable) : Void;
 	
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

@@ -33,13 +33,13 @@ extern class XMLReaderException extends com.sun.xml.internal.ws.util.exception.J
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(key : String, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function new(throwable : java.lang.Throwable) : Void;
+	@:overload @:public public function new(throwable : java.lang.Throwable) : Void;
 	
-	@:overload public function new(arg : com.sun.xml.internal.ws.util.localization.Localizable) : Void;
+	@:overload @:public public function new(arg : com.sun.xml.internal.ws.util.localization.Localizable) : Void;
 	
-	@:overload public function getDefaultResourceBundleName() : String;
+	@:overload @:public override public function getDefaultResourceBundleName() : String;
 	
 	
 }

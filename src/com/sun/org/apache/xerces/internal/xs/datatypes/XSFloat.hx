@@ -29,7 +29,7 @@ extern interface XSFloat
 	/**
 	* @return a float value
 	*/
-	@:overload public function getValue() : Single;
+	@:overload @:public public function getValue() : Single;
 	
 	
 }

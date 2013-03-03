@@ -33,7 +33,7 @@ extern interface DataContentHandler
 	*
 	* @return The DataFlavors.
 	*/
-	@:overload public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Returns an object which represents the data to be transferred.
@@ -47,7 +47,7 @@ extern interface DataContentHandler
 	*                                          support the requested flavor
 	* @exception IOException   if the data can't be accessed
 	*/
-	@:overload public function getTransferData(df : java.awt.datatransfer.DataFlavor, ds : javax.activation.DataSource) : Dynamic;
+	@:overload @:public public function getTransferData(df : java.awt.datatransfer.DataFlavor, ds : javax.activation.DataSource) : Dynamic;
 	
 	/**
 	* Return an object representing the data in its most preferred form.
@@ -58,7 +58,7 @@ extern interface DataContentHandler
 	* @return The constructed Object.
 	* @exception IOException   if the data can't be accessed
 	*/
-	@:overload public function getContent(ds : javax.activation.DataSource) : Dynamic;
+	@:overload @:public public function getContent(ds : javax.activation.DataSource) : Dynamic;
 	
 	/**
 	* Convert the object to a byte stream of the specified MIME type
@@ -70,7 +70,7 @@ extern interface DataContentHandler
 	*                  byte stream.
 	* @exception IOException   errors writing to the stream
 	*/
-	@:overload public function writeTo(obj : Dynamic, mimeType : String, os : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(obj : Dynamic, mimeType : String, os : java.io.OutputStream) : Void;
 	
 	
 }

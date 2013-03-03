@@ -30,25 +30,25 @@ extern class FilterTransducer<T> implements com.sun.xml.internal.bind.v2.runtime
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	private var core(default, null) : com.sun.xml.internal.bind.v2.runtime.Transducer<T>;
+	@:protected @:final private var core(default, null) : com.sun.xml.internal.bind.v2.runtime.Transducer<T>;
 	
-	@:overload private function new(core : com.sun.xml.internal.bind.v2.runtime.Transducer<T>) : Void;
+	@:overload @:protected private function new(core : com.sun.xml.internal.bind.v2.runtime.Transducer<T>) : Void;
 	
-	@:overload @:final public function isDefault() : Bool;
+	@:overload @:public @:final public function isDefault() : Bool;
 	
-	@:overload public function useNamespace() : Bool;
+	@:overload @:public public function useNamespace() : Bool;
 	
-	@:overload public function declareNamespace(o : T, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public public function declareNamespace(o : T, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload public function print(o : T) : java.lang.CharSequence;
+	@:overload @:public public function print(o : T) : java.lang.CharSequence;
 	
-	@:overload public function parse(lexical : java.lang.CharSequence) : T;
+	@:overload @:public public function parse(lexical : java.lang.CharSequence) : T;
 	
-	@:overload public function writeText(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, o : T, fieldName : String) : Void;
+	@:overload @:public public function writeText(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, o : T, fieldName : String) : Void;
 	
-	@:overload public function writeLeafElement(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, tagName : com.sun.xml.internal.bind.v2.runtime.Name, o : T, fieldName : String) : Void;
+	@:overload @:public public function writeLeafElement(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, tagName : com.sun.xml.internal.bind.v2.runtime.Name, o : T, fieldName : String) : Void;
 	
-	@:overload public function getTypeName(instance : T) : javax.xml.namespace.QName;
+	@:overload @:public public function getTypeName(instance : T) : javax.xml.namespace.QName;
 	
 	
 }

@@ -47,7 +47,7 @@ extern class PasswordCallback implements javax.security.auth.callback.Callback i
 	* @exception IllegalArgumentException if <code>prompt</code> is null or
 	*                  if <code>prompt</code> has a length of 0.
 	*/
-	@:overload public function new(prompt : String, echoOn : Bool) : Void;
+	@:overload @:public public function new(prompt : String, echoOn : Bool) : Void;
 	
 	/**
 	* Get the prompt.
@@ -56,7 +56,7 @@ extern class PasswordCallback implements javax.security.auth.callback.Callback i
 	*
 	* @return the prompt.
 	*/
-	@:overload public function getPrompt() : String;
+	@:overload @:public public function getPrompt() : String;
 	
 	/**
 	* Return whether the password
@@ -67,7 +67,7 @@ extern class PasswordCallback implements javax.security.auth.callback.Callback i
 	* @return the whether the password
 	*          should be displayed as it is being typed.
 	*/
-	@:overload public function isEchoOn() : Bool;
+	@:overload @:public public function isEchoOn() : Bool;
 	
 	/**
 	* Set the retrieved password.
@@ -81,7 +81,7 @@ extern class PasswordCallback implements javax.security.auth.callback.Callback i
 	*
 	* @see #getPassword
 	*/
-	@:overload public function setPassword(password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function setPassword(password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Get the retrieved password.
@@ -94,12 +94,12 @@ extern class PasswordCallback implements javax.security.auth.callback.Callback i
 	*
 	* @see #setPassword
 	*/
-	@:overload public function getPassword() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getPassword() : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Clear the retrieved password.
 	*/
-	@:overload public function clearPassword() : Void;
+	@:overload @:public public function clearPassword() : Void;
 	
 	
 }

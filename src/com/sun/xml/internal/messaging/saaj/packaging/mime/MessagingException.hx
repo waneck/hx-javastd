@@ -37,13 +37,13 @@ extern class MessagingException extends java.lang.Exception
 	/**
 	* Constructs a MessagingException with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a MessagingException with the specified detail message.
 	* @param s         the detail message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs a MessagingException with the specified
@@ -54,7 +54,7 @@ extern class MessagingException extends java.lang.Exception
 	* @see     #getNextException
 	* @see     #setNextException
 	*/
-	@:overload public function new(s : String, e : java.lang.Exception) : Void;
+	@:overload @:public public function new(s : String, e : java.lang.Exception) : Void;
 	
 	/**
 	* Get the next exception chained to this one. If the
@@ -63,7 +63,7 @@ extern class MessagingException extends java.lang.Exception
 	*
 	* @return  next Exception, null if none.
 	*/
-	@:overload public function getNextException() : java.lang.Exception;
+	@:overload @:public public function getNextException() : java.lang.Exception;
 	
 	/**
 	* Add an exception to the end of the chain. If the end
@@ -74,13 +74,13 @@ extern class MessagingException extends java.lang.Exception
 	* @return          <code>true</code> if the this Exception
 	*                  was added, <code>false</code> otherwise.
 	*/
-	@:overload @:synchronized public function setNextException(ex : java.lang.Exception) : Bool;
+	@:overload @:public @:synchronized public function setNextException(ex : java.lang.Exception) : Bool;
 	
 	/**
 	* Produce the message, include the message from the nested
 	* exception if there is one.
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

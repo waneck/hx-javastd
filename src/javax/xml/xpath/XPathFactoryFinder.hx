@@ -36,7 +36,7 @@ package javax.xml.xpath;
 	*      If this parameter is null, the default system class loader
 	*      will be used.
 	*/
-	@:overload public function new(loader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function new(loader : java.lang.ClassLoader) : Void;
 	
 	/**
 	* <p>Creates a new {@link XPathFactory} object for the specified
@@ -50,20 +50,20 @@ package javax.xml.xpath;
 	* @throws NullPointerException
 	*      If the parameter is null.
 	*/
-	@:overload public function newFactory(uri : String) : javax.xml.xpath.XPathFactory;
+	@:overload @:public public function newFactory(uri : String) : javax.xml.xpath.XPathFactory;
 	
 	
 }
 /** Iterator that lazily computes one value and returns it. */
 @:native('javax$xml$xpath$XPathFactoryFinder$SingleIterator') @:internal extern class XPathFactoryFinder_SingleIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload @:final public function remove() : Void;
+	@:overload @:public @:final public function remove() : Void;
 	
-	@:overload @:final public function hasNext() : Bool;
+	@:overload @:public @:final public function hasNext() : Bool;
 	
-	@:overload @:final public function next() : Dynamic;
+	@:overload @:public @:final public function next() : Dynamic;
 	
-	@:overload @:abstract private function value() : Dynamic;
+	@:overload @:protected @:abstract private function value() : Dynamic;
 	
 	
 }

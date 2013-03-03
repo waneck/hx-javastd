@@ -58,73 +58,73 @@ extern class BasicOptionPaneUI extends javax.swing.plaf.OptionPaneUI
 	* @author Scott Violet
 	* @author Amy Fowler
 	*/
-	public static var MinimumWidth(default, null) : Int;
+	@:public @:static @:final public static var MinimumWidth(default, null) : Int;
 	
-	public static var MinimumHeight(default, null) : Int;
+	@:public @:static @:final public static var MinimumHeight(default, null) : Int;
 	
 	/**
 	* <code>JOptionPane</code> that the receiver is providing the
 	* look and feel for.
 	*/
-	private var optionPane : javax.swing.JOptionPane;
+	@:protected private var optionPane : javax.swing.JOptionPane;
 	
-	private var minimumSize : java.awt.Dimension;
+	@:protected private var minimumSize : java.awt.Dimension;
 	
 	/** JComponent provide for input if optionPane.getWantsInput() returns
 	* true. */
-	private var inputComponent : javax.swing.JComponent;
+	@:protected private var inputComponent : javax.swing.JComponent;
 	
 	/** Component to receive focus when messaged with selectInitialValue. */
-	private var initialFocusComponent : java.awt.Component;
+	@:protected private var initialFocusComponent : java.awt.Component;
 	
 	/** This is set to true in validateComponent if a Component is contained
 	* in either the message or the buttons. */
-	private var hasCustomComponents : Bool;
+	@:protected private var hasCustomComponents : Bool;
 	
-	private var propertyChangeListener : java.beans.PropertyChangeListener;
+	@:protected private var propertyChangeListener : java.beans.PropertyChangeListener;
 	
 	/**
 	* Creates a new BasicOptionPaneUI instance.
 	*/
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Installs the receiver as the L&F for the passed in
 	* <code>JOptionPane</code>.
 	*/
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Removes the receiver from the L&F controller of the passed in split
 	* pane.
 	*/
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installDefaults() : Void;
+	@:overload @:protected private function installDefaults() : Void;
 	
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected private function uninstallDefaults() : Void;
 	
-	@:overload private function installComponents() : Void;
+	@:overload @:protected private function installComponents() : Void;
 	
-	@:overload private function uninstallComponents() : Void;
+	@:overload @:protected private function uninstallComponents() : Void;
 	
-	@:overload private function createLayoutManager() : java.awt.LayoutManager;
+	@:overload @:protected private function createLayoutManager() : java.awt.LayoutManager;
 	
-	@:overload private function installListeners() : Void;
+	@:overload @:protected private function installListeners() : Void;
 	
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected private function uninstallListeners() : Void;
 	
-	@:overload private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	@:overload @:protected private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
 	
-	@:overload private function installKeyboardActions() : Void;
+	@:overload @:protected private function installKeyboardActions() : Void;
 	
-	@:overload private function uninstallKeyboardActions() : Void;
+	@:overload @:protected private function uninstallKeyboardActions() : Void;
 	
 	/**
 	* Returns the minimum size the option pane should be. Primarily
 	* provided for subclassers wishing to offer a different minimum size.
 	*/
-	@:overload public function getMinimumOptionPaneSize() : java.awt.Dimension;
+	@:overload @:public public function getMinimumOptionPaneSize() : java.awt.Dimension;
 	
 	/**
 	* If <code>c</code> is the <code>JOptionPane</code> the receiver
@@ -133,14 +133,14 @@ extern class BasicOptionPaneUI extends javax.swing.plaf.OptionPaneUI
 	* the <code>LayoutManager</code> for the <code>JOptionPane</code>, and
 	* <code>getMinimumOptionPaneSize</code>.
 	*/
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Messaged from installComponents to create a Container containing the
 	* body of the message. The icon is the created by calling
 	* <code>addIcon</code>.
 	*/
-	@:overload private function createMessageArea() : java.awt.Container;
+	@:overload @:protected private function createMessageArea() : java.awt.Container;
 	
 	/**
 	* Creates the appropriate object to represent <code>msg</code> and
@@ -153,51 +153,51 @@ extern class BasicOptionPaneUI extends javax.swing.plaf.OptionPaneUI
 	* of Component and was created internally by this method (this is
 	* used to correctly set hasCustomComponents only if !internallyCreated).
 	*/
-	@:overload private function addMessageComponents(container : java.awt.Container, cons : java.awt.GridBagConstraints, msg : Dynamic, maxll : Int, internallyCreated : Bool) : Void;
+	@:overload @:protected private function addMessageComponents(container : java.awt.Container, cons : java.awt.GridBagConstraints, msg : Dynamic, maxll : Int, internallyCreated : Bool) : Void;
 	
 	/**
 	* Returns the message to display from the JOptionPane the receiver is
 	* providing the look and feel for.
 	*/
-	@:overload private function getMessage() : Dynamic;
+	@:overload @:protected private function getMessage() : Dynamic;
 	
 	/**
 	* Creates and adds a JLabel representing the icon returned from
 	* <code>getIcon</code> to <code>top</code>. This is messaged from
 	* <code>createMessageArea</code>
 	*/
-	@:overload private function addIcon(top : java.awt.Container) : Void;
+	@:overload @:protected private function addIcon(top : java.awt.Container) : Void;
 	
 	/**
 	* Returns the icon from the JOptionPane the receiver is providing
 	* the look and feel for, or the default icon as returned from
 	* <code>getDefaultIcon</code>.
 	*/
-	@:overload private function getIcon() : javax.swing.Icon;
+	@:overload @:protected private function getIcon() : javax.swing.Icon;
 	
 	/**
 	* Returns the icon to use for the passed in type.
 	*/
-	@:overload private function getIconForType(messageType : Int) : javax.swing.Icon;
+	@:overload @:protected private function getIconForType(messageType : Int) : javax.swing.Icon;
 	
 	/**
 	* Returns the maximum number of characters to place on a line.
 	*/
-	@:overload private function getMaxCharactersPerLineCount() : Int;
+	@:overload @:protected private function getMaxCharactersPerLineCount() : Int;
 	
 	/**
 	* Recursively creates new JLabel instances to represent <code>d</code>.
 	* Each JLabel instance is added to <code>c</code>.
 	*/
-	@:overload private function burstStringInto(c : java.awt.Container, d : String, maxll : Int) : Void;
+	@:overload @:protected private function burstStringInto(c : java.awt.Container, d : String, maxll : Int) : Void;
 	
-	@:overload private function createSeparator() : java.awt.Container;
+	@:overload @:protected private function createSeparator() : java.awt.Container;
 	
 	/**
 	* Creates and returns a Container containing the buttons. The buttons
 	* are created by calling <code>getButtons</code>.
 	*/
-	@:overload private function createButtonArea() : java.awt.Container;
+	@:overload @:protected private function createButtonArea() : java.awt.Container;
 	
 	/**
 	* Creates the appropriate object to represent each of the objects in
@@ -206,9 +206,9 @@ extern class BasicOptionPaneUI extends javax.swing.plaf.OptionPaneUI
 	* <code>buttons</code> and that if button is not a Component
 	* it will create an instance of JButton.
 	*/
-	@:overload private function addButtonComponents(container : java.awt.Container, buttons : java.NativeArray<Dynamic>, initialIndex : Int) : Void;
+	@:overload @:protected private function addButtonComponents(container : java.awt.Container, buttons : java.NativeArray<Dynamic>, initialIndex : Int) : Void;
 	
-	@:overload private function createButtonActionListener(buttonIndex : Int) : java.awt.event.ActionListener;
+	@:overload @:protected private function createButtonActionListener(buttonIndex : Int) : java.awt.event.ActionListener;
 	
 	/**
 	* Returns the buttons to display from the JOptionPane the receiver is
@@ -218,38 +218,38 @@ extern class BasicOptionPaneUI extends javax.swing.plaf.OptionPaneUI
 	* YES_NO_CANCEL_OPTION yesNoCancelOptions is returned, otherwise
 	* defaultButtons are returned.
 	*/
-	@:overload private function getButtons() : java.NativeArray<Dynamic>;
+	@:overload @:protected private function getButtons() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns true, basic L&F wants all the buttons to have the same
 	* width.
 	*/
-	@:overload private function getSizeButtonsToSameWidth() : Bool;
+	@:overload @:protected private function getSizeButtonsToSameWidth() : Bool;
 	
 	/**
 	* Returns the initial index into the buttons to select. The index
 	* is calculated from the initial value from the JOptionPane and
 	* options of the JOptionPane or 0.
 	*/
-	@:overload private function getInitialValueIndex() : Int;
+	@:overload @:protected private function getInitialValueIndex() : Int;
 	
 	/**
 	* Sets the input value in the option pane the receiver is providing
 	* the look and feel for based on the value in the inputComponent.
 	*/
-	@:overload private function resetInputValue() : Void;
+	@:overload @:protected private function resetInputValue() : Void;
 	
 	/**
 	* If inputComponent is non-null, the focus is requested on that,
 	* otherwise request focus on the default value
 	*/
-	@:overload override public function selectInitialValue(op : javax.swing.JOptionPane) : Void;
+	@:overload @:public override public function selectInitialValue(op : javax.swing.JOptionPane) : Void;
 	
 	/**
 	* Returns true if in the last call to validateComponent the message
 	* or buttons contained a subclass of Component.
 	*/
-	@:overload override public function containsCustomComponents(op : javax.swing.JOptionPane) : Bool;
+	@:overload @:public override public function containsCustomComponents(op : javax.swing.JOptionPane) : Bool;
 	
 	
 }
@@ -264,36 +264,36 @@ extern class BasicOptionPaneUI extends javax.swing.plaf.OptionPaneUI
 */
 @:native('javax$swing$plaf$basic$BasicOptionPaneUI$ButtonAreaLayout') extern class BasicOptionPaneUI_ButtonAreaLayout implements java.awt.LayoutManager
 {
-	private var syncAllWidths : Bool;
+	@:protected private var syncAllWidths : Bool;
 	
-	private var padding : Int;
+	@:protected private var padding : Int;
 	
 	/** If true, children are lumped together in parent. */
-	private var centersChildren : Bool;
+	@:protected private var centersChildren : Bool;
 	
-	@:overload public function new(syncAllWidths : Bool, padding : Int) : Void;
+	@:overload @:public public function new(syncAllWidths : Bool, padding : Int) : Void;
 	
-	@:overload public function setSyncAllWidths(newValue : Bool) : Void;
+	@:overload @:public public function setSyncAllWidths(newValue : Bool) : Void;
 	
-	@:overload public function getSyncAllWidths() : Bool;
+	@:overload @:public public function getSyncAllWidths() : Bool;
 	
-	@:overload public function setPadding(newPadding : Int) : Void;
+	@:overload @:public public function setPadding(newPadding : Int) : Void;
 	
-	@:overload public function getPadding() : Int;
+	@:overload @:public public function getPadding() : Int;
 	
-	@:overload public function setCentersChildren(newValue : Bool) : Void;
+	@:overload @:public public function setCentersChildren(newValue : Bool) : Void;
 	
-	@:overload public function getCentersChildren() : Bool;
+	@:overload @:public public function getCentersChildren() : Bool;
 	
-	@:overload public function addLayoutComponent(string : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(string : String, comp : java.awt.Component) : Void;
 	
-	@:overload public function layoutContainer(container : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(container : java.awt.Container) : Void;
 	
-	@:overload public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
 	
 }
@@ -309,7 +309,7 @@ extern class BasicOptionPaneUI extends javax.swing.plaf.OptionPaneUI
 	* OPTIONS_PROPERTY or INITIAL_VALUE_PROPERTY,
 	* validateComponent is invoked.
 	*/
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -319,29 +319,29 @@ extern class BasicOptionPaneUI extends javax.swing.plaf.OptionPaneUI
 */
 @:native('javax$swing$plaf$basic$BasicOptionPaneUI$ButtonActionListener') extern class BasicOptionPaneUI_ButtonActionListener implements java.awt.event.ActionListener
 {
-	private var buttonIndex : Int;
+	@:protected private var buttonIndex : Int;
 	
-	@:overload public function new(buttonIndex : Int) : Void;
+	@:overload @:public public function new(buttonIndex : Int) : Void;
 	
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicOptionPaneUI$Handler') @:internal extern class BasicOptionPaneUI_Handler implements java.awt.event.ActionListener implements java.awt.event.MouseListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -355,7 +355,7 @@ extern class BasicOptionPaneUI extends javax.swing.plaf.OptionPaneUI
 */
 @:native('javax$swing$plaf$basic$BasicOptionPaneUI$MultiplexingTextField') @:internal extern class BasicOptionPaneUI_MultiplexingTextField extends javax.swing.JTextField
 {
-	@:overload override private function processKeyBinding(ks : javax.swing.KeyStroke, e : java.awt.event.KeyEvent, condition : Int, pressed : Bool) : Bool;
+	@:overload @:protected override private function processKeyBinding(ks : javax.swing.KeyStroke, e : java.awt.event.KeyEvent, condition : Int, pressed : Bool) : Bool;
 	
 	
 }
@@ -365,7 +365,7 @@ extern class BasicOptionPaneUI extends javax.swing.plaf.OptionPaneUI
 */
 @:native('javax$swing$plaf$basic$BasicOptionPaneUI$Actions') @:internal extern class BasicOptionPaneUI_Actions extends sun.swing.UIAction
 {
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -380,9 +380,9 @@ extern class BasicOptionPaneUI extends javax.swing.plaf.OptionPaneUI
 }
 @:native('javax$swing$plaf$basic$BasicOptionPaneUI$ButtonFactory$ConstrainedButton') @:internal extern class BasicOptionPaneUI_ButtonFactory_ConstrainedButton extends javax.swing.JButton
 {
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	
 }

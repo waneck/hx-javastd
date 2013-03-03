@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.resolver;
 */
 extern class FileResolverImpl implements com.sun.corba.se.spi.resolver.Resolver
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, file : java.io.File) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, file : java.io.File) : Void;
 	
-	@:overload public function resolve(name : String) : org.omg.CORBA.Object;
+	@:overload @:public public function resolve(name : String) : org.omg.CORBA.Object;
 	
-	@:overload public function list() : java.util.Set<Dynamic>;
+	@:overload @:public public function list() : java.util.Set<Dynamic>;
 	
 	
 }

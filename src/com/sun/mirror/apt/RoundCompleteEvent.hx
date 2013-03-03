@@ -48,17 +48,17 @@ package com.sun.mirror.apt;
 	* @param source The source of events
 	* @param rs     The state of the round
 	*/
-	@:overload private function new(source : com.sun.mirror.apt.AnnotationProcessorEnvironment, rs : com.sun.mirror.apt.RoundState) : Void;
+	@:overload @:protected private function new(source : com.sun.mirror.apt.AnnotationProcessorEnvironment, rs : com.sun.mirror.apt.RoundState) : Void;
 	
 	/**
 	* Return round state.
 	*/
-	@:overload public function getRoundState() : com.sun.mirror.apt.RoundState;
+	@:overload @:public public function getRoundState() : com.sun.mirror.apt.RoundState;
 	
 	/**
 	* Return source.
 	*/
-	@:overload public function getSource() : com.sun.mirror.apt.AnnotationProcessorEnvironment;
+	@:overload @:public override public function getSource() : com.sun.mirror.apt.AnnotationProcessorEnvironment;
 	
 	
 }

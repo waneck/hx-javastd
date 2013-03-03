@@ -24,7 +24,7 @@ extern class REUtil
 	* Sample entry.
 	* <div>Usage: <KBD>com.sun.org.apache.xerces.internal.utils.regex.REUtil &lt;regex&gt; &lt;string&gt;</KBD></div>
 	*/
-	@:overload public static function main(argv : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(argv : java.NativeArray<String>) : Void;
 	
 	/**
 	* Creates a RegularExpression instance.
@@ -32,24 +32,24 @@ extern class REUtil
 	*
 	* @see RegularExpression#RegularExpression(java.lang.String, java.lang.String)
 	*/
-	@:overload public static function createRegex(pattern : String, options : String) : com.sun.org.apache.xerces.internal.impl.xpath.regex.RegularExpression;
+	@:overload @:public @:static public static function createRegex(pattern : String, options : String) : com.sun.org.apache.xerces.internal.impl.xpath.regex.RegularExpression;
 	
 	/**
 	*
 	* @see RegularExpression#matches(java.lang.String)
 	*/
-	@:overload public static function matches(regex : String, target : String) : Bool;
+	@:overload @:public @:static public static function matches(regex : String, target : String) : Bool;
 	
 	/**
 	*
 	* @see RegularExpression#matches(java.lang.String)
 	*/
-	@:overload public static function matches(regex : String, options : String, target : String) : Bool;
+	@:overload @:public @:static public static function matches(regex : String, options : String, target : String) : Bool;
 	
 	/**
 	*
 	*/
-	@:overload public static function quoteMeta(literal : String) : String;
+	@:overload @:public @:static public static function quoteMeta(literal : String) : String;
 	
 	
 }

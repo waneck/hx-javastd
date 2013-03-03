@@ -29,11 +29,11 @@ package com.sun.xml.internal.messaging.saaj.soap.ver1_1;
 */
 extern class Envelope1_1Impl extends com.sun.xml.internal.messaging.saaj.soap.impl.EnvelopeImpl
 {
-	@:overload public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, prefix : String) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, prefix : String) : Void;
 	
-	@:overload private function getBodyName(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected override private function getBodyName(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload private function getHeaderName(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected override private function getHeaderName(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	
 }

@@ -25,23 +25,23 @@ package com.sun.xml.internal.stream.events;
 */
 extern class NamedEvent extends com.sun.xml.internal.stream.events.DummyEvent
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(qname : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(qname : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function new(prefix : String, uri : String, localpart : String) : Void;
+	@:overload @:public public function new(prefix : String, uri : String, localpart : String) : Void;
 	
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function setName(qname : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setName(qname : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function nameAsString() : String;
+	@:overload @:public public function nameAsString() : String;
 	
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
-	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload @:protected override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	
 }

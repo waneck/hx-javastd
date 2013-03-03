@@ -39,7 +39,7 @@ extern class XPathFilter2ParameterSpec implements javax.xml.crypto.dsig.spec.Tra
 	* @throws NullPointerException if <code>xPathList</code> is
 	*    <code>null</code>
 	*/
-	@:overload public function new(xPathList : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function new(xPathList : java.util.List<Dynamic>) : Void;
 	
 	/**
 	* Returns a list of one or more {@link XPathType} objects.
@@ -50,7 +50,7 @@ extern class XPathFilter2ParameterSpec implements javax.xml.crypto.dsig.spec.Tra
 	* @return a <code>List</code> of <code>XPathType</code> objects
 	*    (never <code>null</code> or empty)
 	*/
-	@:overload public function getXPathList() : java.util.List<Dynamic>;
+	@:overload @:public public function getXPathList() : java.util.List<Dynamic>;
 	
 	
 }

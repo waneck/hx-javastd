@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.resolver;
 */
 extern class CompositeResolverImpl implements com.sun.corba.se.spi.resolver.Resolver
 {
-	@:overload public function new(first : com.sun.corba.se.spi.resolver.Resolver, second : com.sun.corba.se.spi.resolver.Resolver) : Void;
+	@:overload @:public public function new(first : com.sun.corba.se.spi.resolver.Resolver, second : com.sun.corba.se.spi.resolver.Resolver) : Void;
 	
-	@:overload public function resolve(name : String) : org.omg.CORBA.Object;
+	@:overload @:public public function resolve(name : String) : org.omg.CORBA.Object;
 	
-	@:overload public function list() : java.util.Set<Dynamic>;
+	@:overload @:public public function list() : java.util.Set<Dynamic>;
 	
 	
 }

@@ -53,21 +53,21 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	* DER-encoded form; subclasses can be made to automaticaly parse
 	* them so there is fast access to these parameters.
 	*/
-	private var params : sun.security.util.DerValue;
+	@:protected private var params : sun.security.util.DerValue;
 	
 	/**
 	* Constructs an algorithm ID which will be initialized
 	* separately, for example by deserialization.
 	* @deprecated use one of the other constructors.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a parameterless algorithm ID.
 	*
 	* @param oid the identifier for the algorithm
 	*/
-	@:overload public function new(oid : sun.security.util.ObjectIdentifier) : Void;
+	@:overload @:public public function new(oid : sun.security.util.ObjectIdentifier) : Void;
 	
 	/**
 	* Constructs an algorithm ID with algorithm parameters.
@@ -75,14 +75,14 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	* @param oid the identifier for the algorithm.
 	* @param algparams the associated algorithm parameters.
 	*/
-	@:overload public function new(oid : sun.security.util.ObjectIdentifier, algparams : java.security.AlgorithmParameters) : Void;
+	@:overload @:public public function new(oid : sun.security.util.ObjectIdentifier, algparams : java.security.AlgorithmParameters) : Void;
 	
-	@:overload private function decodeParams() : Void;
+	@:overload @:protected private function decodeParams() : Void;
 	
 	/**
 	* Marshal a DER-encoded "AlgorithmID" sequence on the DER stream.
 	*/
-	@:overload @:final public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public @:final public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* DER encode this object onto an output stream.
@@ -93,12 +93,12 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	*
 	* @exception IOException on encoding error.
 	*/
-	@:overload public function derEncode(out : java.io.OutputStream) : Void;
+	@:overload @:public public function derEncode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Returns the DER-encoded X.509 AlgorithmId as a byte array.
 	*/
-	@:overload @:final public function encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the ISO OID for this algorithm.  This is usually converted
@@ -107,7 +107,7 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	* call when you do not need to ensure cross-system portability
 	* of algorithm names, or need a user friendly name.
 	*/
-	@:overload @:final public function getOID() : sun.security.util.ObjectIdentifier;
+	@:overload @:public @:final public function getOID() : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Returns a name for the algorithm which may be more intelligible
@@ -117,9 +117,9 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	* some systems.  It also returns names like "OID.1.2.3.4", when
 	* no particular name for the algorithm is known.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getParameters() : java.security.AlgorithmParameters;
+	@:overload @:public public function getParameters() : java.security.AlgorithmParameters;
 	
 	/**
 	* Returns the DER encoded parameter, which can then be
@@ -127,13 +127,13 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	*
 	* @return DER encoded parameters, or null not present.
 	*/
-	@:overload public function getEncodedParams() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncodedParams() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns true iff the argument indicates the same algorithm
 	* with the same parameters.
 	*/
-	@:overload public function equals(other : sun.security.x509.AlgorithmId) : Bool;
+	@:overload @:public public function equals(other : sun.security.x509.AlgorithmId) : Bool;
 	
 	/**
 	* Compares this AlgorithmID to another.  If algorithm parameters are
@@ -142,31 +142,31 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	*
 	* @param other preferably an AlgorithmId, else an ObjectIdentifier
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Compares two algorithm IDs for equality.  Returns true iff
 	* they are the same algorithm, ignoring algorithm parameters.
 	*/
-	@:overload @:final public function equals(id : sun.security.util.ObjectIdentifier) : Bool;
+	@:overload @:public @:final public function equals(id : sun.security.util.ObjectIdentifier) : Bool;
 	
 	/**
 	* Returns a hashcode for this AlgorithmId.
 	*
 	* @return a hashcode for this AlgorithmId.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Provides a human-readable description of the algorithm parameters.
 	* This may be redefined by subclasses which parse those parameters.
 	*/
-	@:overload private function paramsToString() : String;
+	@:overload @:protected private function paramsToString() : String;
 	
 	/**
 	* Returns a string describing the algorithm and its parameters.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Parse (unmarshal) an ID from a DER sequence input value.  This form
@@ -181,7 +181,7 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	*          with some kind of special support for this algorithm.
 	*          In that case, you may "narrow" the type of the ID.
 	*/
-	@:overload public static function parse(val : sun.security.util.DerValue) : sun.security.x509.AlgorithmId;
+	@:overload @:public @:static public static function parse(val : sun.security.util.DerValue) : sun.security.x509.AlgorithmId;
 	
 	/**
 	* Returns one of the algorithm IDs most commonly associated
@@ -191,7 +191,7 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	* @deprecated use the short get form of this method.
 	* @exception NoSuchAlgorithmException on error.
 	*/
-	@:overload public static function getAlgorithmId(algname : String) : sun.security.x509.AlgorithmId;
+	@:overload @:public @:static public static function getAlgorithmId(algname : String) : sun.security.x509.AlgorithmId;
 	
 	/**
 	* Returns one of the algorithm IDs most commonly associated
@@ -200,7 +200,7 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	* @param algname the name being used
 	* @exception NoSuchAlgorithmException on error.
 	*/
-	@:overload public static function get(algname : String) : sun.security.x509.AlgorithmId;
+	@:overload @:public @:static public static function get(algname : String) : sun.security.x509.AlgorithmId;
 	
 	/**
 	* Returns one of the algorithm IDs most commonly associated
@@ -209,19 +209,19 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	* @param algparams the associated algorithm parameters.
 	* @exception NoSuchAlgorithmException on error.
 	*/
-	@:overload public static function get(algparams : java.security.AlgorithmParameters) : sun.security.x509.AlgorithmId;
+	@:overload @:public @:static public static function get(algparams : java.security.AlgorithmParameters) : sun.security.x509.AlgorithmId;
 	
 	/**
 	* Algorithm ID for the MD2 Message Digest Algorthm, from RFC 1319.
 	* OID = 1.2.840.113549.2.2
 	*/
-	public static var MD2_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var MD2_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Algorithm ID for the MD5 Message Digest Algorthm, from RFC 1321.
 	* OID = 1.2.840.113549.2.5
 	*/
-	public static var MD5_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var MD5_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Algorithm ID for the SHA1 Message Digest Algorithm, from FIPS 180-1.
@@ -229,93 +229,93 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	* many people refer to FIPS 180 (which has an error) as defining SHA.
 	* OID = 1.3.14.3.2.26. Old SHA-0 OID: 1.3.14.3.2.18.
 	*/
-	public static var SHA_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var SHA_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var SHA256_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var SHA256_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var SHA384_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var SHA384_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var SHA512_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var SHA512_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var DH_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var DH_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var DH_PKIX_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var DH_PKIX_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var DSA_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var DSA_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var DSA_OIW_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var DSA_OIW_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var EC_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var EC_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var RSA_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var RSA_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var RSAEncryption_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var RSAEncryption_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var md2WithRSAEncryption_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var md2WithRSAEncryption_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var md5WithRSAEncryption_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var md5WithRSAEncryption_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var sha1WithRSAEncryption_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var sha1WithRSAEncryption_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var sha1WithRSAEncryption_OIW_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var sha1WithRSAEncryption_OIW_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var sha256WithRSAEncryption_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var sha256WithRSAEncryption_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var sha384WithRSAEncryption_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var sha384WithRSAEncryption_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var sha512WithRSAEncryption_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var sha512WithRSAEncryption_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var shaWithDSA_OIW_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var shaWithDSA_OIW_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var sha1WithDSA_OIW_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var sha1WithDSA_OIW_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var sha1WithDSA_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var sha1WithDSA_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var sha1WithECDSA_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var sha1WithECDSA_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var sha224WithECDSA_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var sha224WithECDSA_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var sha256WithECDSA_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var sha256WithECDSA_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var sha384WithECDSA_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var sha384WithECDSA_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var sha512WithECDSA_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var sha512WithECDSA_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var specifiedWithECDSA_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var specifiedWithECDSA_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Algorithm ID for the PBE encryption algorithms from PKCS#5 and
 	* PKCS#12.
 	*/
-	public static var pbeWithMD5AndDES_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var pbeWithMD5AndDES_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var pbeWithMD5AndRC2_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var pbeWithMD5AndRC2_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var pbeWithSHA1AndDES_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var pbeWithSHA1AndDES_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var pbeWithSHA1AndRC2_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var pbeWithSHA1AndRC2_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var pbeWithSHA1AndDESede_oid : sun.security.util.ObjectIdentifier;
+	@:public @:static public static var pbeWithSHA1AndDESede_oid : sun.security.util.ObjectIdentifier;
 	
-	public static var pbeWithSHA1AndRC2_40_oid : sun.security.util.ObjectIdentifier;
+	@:public @:static public static var pbeWithSHA1AndRC2_40_oid : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Creates a signature algorithm name from a digest algorithm
 	* name and a encryption algorithm name.
 	*/
-	@:overload public static function makeSigAlg(digAlg : String, encAlg : String) : String;
+	@:overload @:public @:static public static function makeSigAlg(digAlg : String, encAlg : String) : String;
 	
 	/**
 	* Extracts the encryption algorithm name from a signature
 	* algorithm name.
 	*/
-	@:overload public static function getEncAlgFromSigAlg(signatureAlgorithm : String) : String;
+	@:overload @:public @:static public static function getEncAlgFromSigAlg(signatureAlgorithm : String) : String;
 	
 	/**
 	* Extracts the digest algorithm name from a signature
 	* algorithm name.
 	*/
-	@:overload public static function getDigAlgFromSigAlg(signatureAlgorithm : String) : String;
+	@:overload @:public @:static public static function getDigAlgFromSigAlg(signatureAlgorithm : String) : String;
 	
 	
 }

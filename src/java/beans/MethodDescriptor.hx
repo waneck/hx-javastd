@@ -31,7 +31,7 @@ extern class MethodDescriptor extends java.beans.FeatureDescriptor
 	*
 	* @param method    The low-level method information.
 	*/
-	@:overload public function new(method : java.lang.reflect.Method) : Void;
+	@:overload @:public public function new(method : java.lang.reflect.Method) : Void;
 	
 	/**
 	* Constructs a <code>MethodDescriptor</code> from a
@@ -42,14 +42,14 @@ extern class MethodDescriptor extends java.beans.FeatureDescriptor
 	* @param parameterDescriptors  Descriptive information for each of the
 	*                          method's parameters.
 	*/
-	@:overload public function new(method : java.lang.reflect.Method, parameterDescriptors : java.NativeArray<java.beans.ParameterDescriptor>) : Void;
+	@:overload @:public public function new(method : java.lang.reflect.Method, parameterDescriptors : java.NativeArray<java.beans.ParameterDescriptor>) : Void;
 	
 	/**
 	* Gets the method that this MethodDescriptor encapsualtes.
 	*
 	* @return The low-level description of the method
 	*/
-	@:overload @:synchronized public function getMethod() : java.lang.reflect.Method;
+	@:overload @:public @:synchronized public function getMethod() : java.lang.reflect.Method;
 	
 	/**
 	* Gets the ParameterDescriptor for each of this MethodDescriptor's
@@ -58,7 +58,7 @@ extern class MethodDescriptor extends java.beans.FeatureDescriptor
 	* @return The locale-independent names of the parameters.  May return
 	*          a null array if the parameter names aren't known.
 	*/
-	@:overload public function getParameterDescriptors() : java.NativeArray<java.beans.ParameterDescriptor>;
+	@:overload @:public public function getParameterDescriptors() : java.NativeArray<java.beans.ParameterDescriptor>;
 	
 	
 }

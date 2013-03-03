@@ -43,14 +43,14 @@ extern class InvocationTargetException extends java.lang.ReflectiveOperationExce
 	* Constructs an {@code InvocationTargetException} with
 	* {@code null} as the target exception.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs a InvocationTargetException with a target exception.
 	*
 	* @param target the target exception
 	*/
-	@:overload public function new(target : java.lang.Throwable) : Void;
+	@:overload @:public public function new(target : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a InvocationTargetException with a target exception
@@ -59,7 +59,7 @@ extern class InvocationTargetException extends java.lang.ReflectiveOperationExce
 	* @param target the target exception
 	* @param s      the detail message
 	*/
-	@:overload public function new(target : java.lang.Throwable, s : String) : Void;
+	@:overload @:public public function new(target : java.lang.Throwable, s : String) : Void;
 	
 	/**
 	* Get the thrown target exception.
@@ -70,7 +70,7 @@ extern class InvocationTargetException extends java.lang.ReflectiveOperationExce
 	*
 	* @return the thrown target exception (cause of this exception).
 	*/
-	@:overload public function getTargetException() : java.lang.Throwable;
+	@:overload @:public public function getTargetException() : java.lang.Throwable;
 	
 	/**
 	* Returns the cause of this exception (the thrown target exception,
@@ -79,7 +79,7 @@ extern class InvocationTargetException extends java.lang.ReflectiveOperationExce
 	* @return  the cause of this exception.
 	* @since   1.4
 	*/
-	@:require(java4) @:overload public function getCause() : java.lang.Throwable;
+	@:require(java4) @:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

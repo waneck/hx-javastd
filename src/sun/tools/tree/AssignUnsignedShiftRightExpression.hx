@@ -28,7 +28,7 @@ extern class AssignUnsignedShiftRightExpression extends sun.tools.tree.AssignOpE
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, left : sun.tools.tree.Expression, right : sun.tools.tree.Expression) : Void;
+	@:overload @:public public function new(where : haxe.Int64, left : sun.tools.tree.Expression, right : sun.tools.tree.Expression) : Void;
 	
 	
 }

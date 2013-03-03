@@ -37,9 +37,9 @@ extern class PrologCodeWriter extends com.sun.codemodel.internal.writer.FilterCo
 	*      a valid Java comment, so the caller can just pass strings like
 	*      "abc\ndef"
 	*/
-	@:overload public function new(core : com.sun.codemodel.internal.CodeWriter, prolog : String) : Void;
+	@:overload @:public public function new(core : com.sun.codemodel.internal.CodeWriter, prolog : String) : Void;
 	
-	@:overload override public function openSource(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.Writer;
+	@:overload @:public override public function openSource(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.Writer;
 	
 	
 }

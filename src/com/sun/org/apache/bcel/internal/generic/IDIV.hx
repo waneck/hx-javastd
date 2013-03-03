@@ -66,11 +66,11 @@ extern class IDIV extends com.sun.org.apache.bcel.internal.generic.ArithmeticIns
 {
 	/** Divide ints
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** @return exceptions this instruction may cause
 	*/
-	@:overload public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -80,7 +80,7 @@ extern class IDIV extends com.sun.org.apache.bcel.internal.generic.ArithmeticIns
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

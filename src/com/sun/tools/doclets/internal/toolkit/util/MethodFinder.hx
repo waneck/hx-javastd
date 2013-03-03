@@ -35,9 +35,9 @@ package com.sun.tools.doclets.internal.toolkit.util;
 */
 extern class MethodFinder
 {
-	@:overload public function search(cd : com.sun.javadoc.ClassDoc, method : com.sun.javadoc.MethodDoc) : com.sun.javadoc.MethodDoc;
+	@:overload @:public public function search(cd : com.sun.javadoc.ClassDoc, method : com.sun.javadoc.MethodDoc) : com.sun.javadoc.MethodDoc;
 	
-	@:overload public function searchInterfaces(cd : com.sun.javadoc.ClassDoc, method : com.sun.javadoc.MethodDoc) : com.sun.javadoc.MethodDoc;
+	@:overload @:public public function searchInterfaces(cd : com.sun.javadoc.ClassDoc, method : com.sun.javadoc.MethodDoc) : com.sun.javadoc.MethodDoc;
 	
 	
 }

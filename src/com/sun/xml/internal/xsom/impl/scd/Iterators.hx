@@ -25,9 +25,9 @@ package com.sun.xml.internal.xsom.impl.scd;
 */
 extern class Iterators
 {
-	@:overload public static function empty<T>() : java.util.Iterator<T>;
+	@:overload @:public @:static public static function empty<T>() : java.util.Iterator<T>;
 	
-	@:overload public static function singleton<T>(value : T) : java.util.Iterator<T>;
+	@:overload @:public @:static public static function singleton<T>(value : T) : java.util.Iterator<T>;
 	
 	
 }
@@ -37,7 +37,7 @@ extern class Iterators
 */
 @:native('com$sun$xml$internal$xsom$impl$scd$Iterators$ReadOnly') @:internal extern class Iterators_ReadOnly<T> implements java.util.Iterator<T>
 {
-	@:overload @:final public function remove() : Void;
+	@:overload @:public @:final public function remove() : Void;
 	
 	/**
 	* Returns the next element in the iteration.
@@ -45,7 +45,7 @@ extern class Iterators
 	* @return the next element in the iteration
 	* @throws NoSuchElementException if the iteration has no more elements
 	*/
-	@:overload public function next() : Dynamic;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function next() : Dynamic;
 	
 	/**
 	* Returns {@code true} if the iteration has more elements.
@@ -54,7 +54,7 @@ extern class Iterators
 	*
 	* @return {@code true} if the iteration has more elements
 	*/
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
 	
 }
@@ -63,9 +63,9 @@ extern class Iterators
 */
 @:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Singleton') @:internal extern class Iterators_Singleton<T> extends com.sun.xml.internal.xsom.impl.scd.Iterators.Iterators_ReadOnly<T>
 {
-	@:overload override public function hasNext() : Bool;
+	@:overload @:public override public function hasNext() : Bool;
 	
-	@:overload override public function next() : T;
+	@:overload @:public override public function next() : T;
 	
 	
 }
@@ -74,13 +74,13 @@ extern class Iterators
 */
 @:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Adapter') extern class Iterators_Adapter<T, U> extends com.sun.xml.internal.xsom.impl.scd.Iterators.Iterators_ReadOnly<T>
 {
-	@:overload public function new(core : java.util.Iterator<U>) : Void;
+	@:overload @:public public function new(core : java.util.Iterator<U>) : Void;
 	
-	@:overload override public function hasNext() : Bool;
+	@:overload @:public override public function hasNext() : Bool;
 	
-	@:overload override public function next() : T;
+	@:overload @:public override public function next() : T;
 	
-	@:overload @:abstract private function filter(u : U) : T;
+	@:overload @:protected @:abstract private function filter(u : U) : T;
 	
 	
 }
@@ -90,13 +90,13 @@ extern class Iterators
 */
 @:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Map') extern class Iterators_Map<T, U> extends com.sun.xml.internal.xsom.impl.scd.Iterators.Iterators_ReadOnly<T>
 {
-	@:overload private function new(core : java.util.Iterator<U>) : Void;
+	@:overload @:protected private function new(core : java.util.Iterator<U>) : Void;
 	
-	@:overload override public function hasNext() : Bool;
+	@:overload @:public override public function hasNext() : Bool;
 	
-	@:overload override public function next() : T;
+	@:overload @:public override public function next() : T;
 	
-	@:overload @:abstract private function apply(u : U) : java.util.Iterator<T>;
+	@:overload @:protected @:abstract private function apply(u : U) : java.util.Iterator<T>;
 	
 	
 }
@@ -105,16 +105,16 @@ extern class Iterators
 */
 @:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Filter') extern class Iterators_Filter<T> extends com.sun.xml.internal.xsom.impl.scd.Iterators.Iterators_ReadOnly<T>
 {
-	@:overload private function new(core : java.util.Iterator<T>) : Void;
+	@:overload @:protected private function new(core : java.util.Iterator<T>) : Void;
 	
 	/**
 	* Return true to retain the value.
 	*/
-	@:overload @:abstract private function matches(value : T) : Bool;
+	@:overload @:protected @:abstract private function matches(value : T) : Bool;
 	
-	@:overload override public function hasNext() : Bool;
+	@:overload @:public override public function hasNext() : Bool;
 	
-	@:overload override public function next() : T;
+	@:overload @:public override public function next() : T;
 	
 	
 }
@@ -123,9 +123,9 @@ extern class Iterators
 */
 @:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Unique') @:internal extern class Iterators_Unique<T> extends com.sun.xml.internal.xsom.impl.scd.Iterators.Iterators_Filter<T>
 {
-	@:overload public function new(core : java.util.Iterator<T>) : Void;
+	@:overload @:public public function new(core : java.util.Iterator<T>) : Void;
 	
-	@:overload override private function matches(value : T) : Bool;
+	@:overload @:protected override private function matches(value : T) : Bool;
 	
 	
 }
@@ -134,11 +134,11 @@ extern class Iterators
 */
 @:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Union') extern class Iterators_Union<T> extends com.sun.xml.internal.xsom.impl.scd.Iterators.Iterators_ReadOnly<T>
 {
-	@:overload public function new(first : java.util.Iterator<T>, second : java.util.Iterator<T>) : Void;
+	@:overload @:public public function new(first : java.util.Iterator<T>, second : java.util.Iterator<T>) : Void;
 	
-	@:overload override public function hasNext() : Bool;
+	@:overload @:public override public function hasNext() : Bool;
 	
-	@:overload override public function next() : T;
+	@:overload @:public override public function next() : T;
 	
 	
 }
@@ -147,11 +147,11 @@ extern class Iterators
 */
 @:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Array') extern class Iterators_Array<T> extends com.sun.xml.internal.xsom.impl.scd.Iterators.Iterators_ReadOnly<T>
 {
-	@:overload public function new(items : java.NativeArray<T>) : Void;
+	@:overload @:public public function new(items : java.NativeArray<T>) : Void;
 	
-	@:overload override public function hasNext() : Bool;
+	@:overload @:public override public function hasNext() : Bool;
 	
-	@:overload override public function next() : T;
+	@:overload @:public override public function next() : T;
 	
 	
 }

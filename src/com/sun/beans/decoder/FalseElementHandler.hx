@@ -48,7 +48,7 @@ package com.sun.beans.decoder;
 	*
 	* @return {@code Boolean.FALSE} by default
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
 	
 }

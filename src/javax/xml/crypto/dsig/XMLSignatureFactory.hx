@@ -31,7 +31,7 @@ extern class XMLSignatureFactory
 	/**
 	* Default constructor, for invocation by subclasses.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns an <code>XMLSignatureFactory</code> that supports the
@@ -61,7 +61,7 @@ extern class XMLSignatureFactory
 	*    mechanism
 	* @see Provider
 	*/
-	@:overload public static function getInstance(mechanismType : String) : javax.xml.crypto.dsig.XMLSignatureFactory;
+	@:overload @:public @:static public static function getInstance(mechanismType : String) : javax.xml.crypto.dsig.XMLSignatureFactory;
 	
 	/**
 	* Returns an <code>XMLSignatureFactory</code> that supports the
@@ -84,7 +84,7 @@ extern class XMLSignatureFactory
 	*   from the specified <code>Provider</code> object
 	* @see Provider
 	*/
-	@:overload public static function getInstance(mechanismType : String, provider : java.security.Provider) : javax.xml.crypto.dsig.XMLSignatureFactory;
+	@:overload @:public @:static public static function getInstance(mechanismType : String, provider : java.security.Provider) : javax.xml.crypto.dsig.XMLSignatureFactory;
 	
 	/**
 	* Returns an <code>XMLSignatureFactory</code> that supports the
@@ -111,7 +111,7 @@ extern class XMLSignatureFactory
 	*    available from the specified provider
 	* @see Provider
 	*/
-	@:overload public static function getInstance(mechanismType : String, provider : String) : javax.xml.crypto.dsig.XMLSignatureFactory;
+	@:overload @:public @:static public static function getInstance(mechanismType : String, provider : String) : javax.xml.crypto.dsig.XMLSignatureFactory;
 	
 	/**
 	* Returns an <code>XMLSignatureFactory</code> that supports the
@@ -134,7 +134,7 @@ extern class XMLSignatureFactory
 	*    mechanism
 	* @see Provider
 	*/
-	@:overload public static function getInstance() : javax.xml.crypto.dsig.XMLSignatureFactory;
+	@:overload @:public @:static public static function getInstance() : javax.xml.crypto.dsig.XMLSignatureFactory;
 	
 	/**
 	* Returns the type of the XML processing mechanism and representation
@@ -143,14 +143,14 @@ extern class XMLSignatureFactory
 	* @return the XML processing mechanism type supported by this
 	*    <code>XMLSignatureFactory</code>
 	*/
-	@:overload @:final public function getMechanismType() : String;
+	@:overload @:public @:final public function getMechanismType() : String;
 	
 	/**
 	* Returns the provider of this <code>XMLSignatureFactory</code>.
 	*
 	* @return the provider of this <code>XMLSignatureFactory</code>
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Creates an <code>XMLSignature</code> and initializes it with the contents
@@ -162,7 +162,7 @@ extern class XMLSignatureFactory
 	* @return an <code>XMLSignature</code>
 	* @throws NullPointerException if <code>si</code> is <code>null</code>
 	*/
-	@:overload @:abstract public function newXMLSignature(si : javax.xml.crypto.dsig.SignedInfo, ki : javax.xml.crypto.dsig.keyinfo.KeyInfo) : javax.xml.crypto.dsig.XMLSignature;
+	@:overload @:public @:abstract public function newXMLSignature(si : javax.xml.crypto.dsig.SignedInfo, ki : javax.xml.crypto.dsig.keyinfo.KeyInfo) : javax.xml.crypto.dsig.XMLSignature;
 	
 	/**
 	* Creates an <code>XMLSignature</code> and initializes it with the
@@ -179,7 +179,7 @@ extern class XMLSignatureFactory
 	* @throws ClassCastException if any of the <code>objects</code> are not of
 	*    type <code>XMLObject</code>
 	*/
-	@:overload @:abstract public function newXMLSignature(si : javax.xml.crypto.dsig.SignedInfo, ki : javax.xml.crypto.dsig.keyinfo.KeyInfo, objects : java.util.List<Dynamic>, id : String, signatureValueId : String) : javax.xml.crypto.dsig.XMLSignature;
+	@:overload @:public @:abstract public function newXMLSignature(si : javax.xml.crypto.dsig.SignedInfo, ki : javax.xml.crypto.dsig.keyinfo.KeyInfo, objects : java.util.List<Dynamic>, id : String, signatureValueId : String) : javax.xml.crypto.dsig.XMLSignature;
 	
 	/**
 	* Creates a <code>Reference</code> with the specified URI and digest
@@ -192,7 +192,7 @@ extern class XMLSignatureFactory
 	*    compliant
 	* @throws NullPointerException if <code>dm</code> is <code>null</code>
 	*/
-	@:overload @:abstract public function newReference(uri : String, dm : javax.xml.crypto.dsig.DigestMethod) : javax.xml.crypto.dsig.Reference;
+	@:overload @:public @:abstract public function newReference(uri : String, dm : javax.xml.crypto.dsig.DigestMethod) : javax.xml.crypto.dsig.Reference;
 	
 	/**
 	* Creates a <code>Reference</code> with the specified parameters.
@@ -211,7 +211,7 @@ extern class XMLSignatureFactory
 	*    compliant
 	* @throws NullPointerException if <code>dm</code> is <code>null</code>
 	*/
-	@:overload @:abstract public function newReference(uri : String, dm : javax.xml.crypto.dsig.DigestMethod, transforms : java.util.List<Dynamic>, type : String, id : String) : javax.xml.crypto.dsig.Reference;
+	@:overload @:public @:abstract public function newReference(uri : String, dm : javax.xml.crypto.dsig.DigestMethod, transforms : java.util.List<Dynamic>, type : String, id : String) : javax.xml.crypto.dsig.Reference;
 	
 	/**
 	* Creates a <code>Reference</code> with the specified parameters and
@@ -240,7 +240,7 @@ extern class XMLSignatureFactory
 	* @throws NullPointerException if <code>dm</code> or
 	*    <code>digestValue</code> is <code>null</code>
 	*/
-	@:overload @:abstract public function newReference(uri : String, dm : javax.xml.crypto.dsig.DigestMethod, transforms : java.util.List<Dynamic>, type : String, id : String, digestValue : java.NativeArray<java.StdTypes.Int8>) : javax.xml.crypto.dsig.Reference;
+	@:overload @:public @:abstract public function newReference(uri : String, dm : javax.xml.crypto.dsig.DigestMethod, transforms : java.util.List<Dynamic>, type : String, id : String, digestValue : java.NativeArray<java.StdTypes.Int8>) : javax.xml.crypto.dsig.Reference;
 	
 	/**
 	* Creates a <code>Reference</code> with the specified parameters.
@@ -281,7 +281,7 @@ extern class XMLSignatureFactory
 	*    <code>appliedTransforms</code> or <code>result</code> is
 	*    <code>null</code>
 	*/
-	@:overload @:abstract public function newReference(uri : String, dm : javax.xml.crypto.dsig.DigestMethod, appliedTransforms : java.util.List<Dynamic>, result : javax.xml.crypto.Data, transforms : java.util.List<Dynamic>, type : String, id : String) : javax.xml.crypto.dsig.Reference;
+	@:overload @:public @:abstract public function newReference(uri : String, dm : javax.xml.crypto.dsig.DigestMethod, appliedTransforms : java.util.List<Dynamic>, result : javax.xml.crypto.Data, transforms : java.util.List<Dynamic>, type : String, id : String) : javax.xml.crypto.dsig.Reference;
 	
 	/**
 	* Creates a <code>SignedInfo</code> with the specified canonicalization
@@ -298,7 +298,7 @@ extern class XMLSignatureFactory
 	* @throws NullPointerException if any of the parameters
 	*    are <code>null</code>
 	*/
-	@:overload @:abstract public function newSignedInfo(cm : javax.xml.crypto.dsig.CanonicalizationMethod, sm : javax.xml.crypto.dsig.SignatureMethod, references : java.util.List<Dynamic>) : javax.xml.crypto.dsig.SignedInfo;
+	@:overload @:public @:abstract public function newSignedInfo(cm : javax.xml.crypto.dsig.CanonicalizationMethod, sm : javax.xml.crypto.dsig.SignatureMethod, references : java.util.List<Dynamic>) : javax.xml.crypto.dsig.SignedInfo;
 	
 	/**
 	* Creates a <code>SignedInfo</code> with the specified parameters.
@@ -315,7 +315,7 @@ extern class XMLSignatureFactory
 	* @throws NullPointerException if <code>cm</code>, <code>sm</code>, or
 	*    <code>references</code> are <code>null</code>
 	*/
-	@:overload @:abstract public function newSignedInfo(cm : javax.xml.crypto.dsig.CanonicalizationMethod, sm : javax.xml.crypto.dsig.SignatureMethod, references : java.util.List<Dynamic>, id : String) : javax.xml.crypto.dsig.SignedInfo;
+	@:overload @:public @:abstract public function newSignedInfo(cm : javax.xml.crypto.dsig.CanonicalizationMethod, sm : javax.xml.crypto.dsig.SignatureMethod, references : java.util.List<Dynamic>, id : String) : javax.xml.crypto.dsig.SignedInfo;
 	
 	/**
 	* Creates an <code>XMLObject</code> from the specified parameters.
@@ -330,7 +330,7 @@ extern class XMLSignatureFactory
 	* @throws ClassCastException if <code>content</code> contains any
 	*    entries that are not of type {@link XMLStructure}
 	*/
-	@:overload @:abstract public function newXMLObject(content : java.util.List<Dynamic>, id : String, mimeType : String, encoding : String) : javax.xml.crypto.dsig.XMLObject;
+	@:overload @:public @:abstract public function newXMLObject(content : java.util.List<Dynamic>, id : String, mimeType : String, encoding : String) : javax.xml.crypto.dsig.XMLObject;
 	
 	/**
 	* Creates a <code>Manifest</code> containing the specified
@@ -345,7 +345,7 @@ extern class XMLSignatureFactory
 	* @throws ClassCastException if <code>references</code> contains any
 	*    entries that are not of type {@link Reference}
 	*/
-	@:overload @:abstract public function newManifest(references : java.util.List<Dynamic>) : javax.xml.crypto.dsig.Manifest;
+	@:overload @:public @:abstract public function newManifest(references : java.util.List<Dynamic>) : javax.xml.crypto.dsig.Manifest;
 	
 	/**
 	* Creates a <code>Manifest</code> containing the specified
@@ -361,7 +361,7 @@ extern class XMLSignatureFactory
 	* @throws ClassCastException if <code>references</code> contains any
 	*    entries that are not of type {@link Reference}
 	*/
-	@:overload @:abstract public function newManifest(references : java.util.List<Dynamic>, id : String) : javax.xml.crypto.dsig.Manifest;
+	@:overload @:public @:abstract public function newManifest(references : java.util.List<Dynamic>, id : String) : javax.xml.crypto.dsig.Manifest;
 	
 	/**
 	* Creates a <code>SignatureProperty</code> containing the specified
@@ -379,7 +379,7 @@ extern class XMLSignatureFactory
 	* @throws ClassCastException if <code>content</code> contains any
 	*    entries that are not of type {@link XMLStructure}
 	*/
-	@:overload @:abstract public function newSignatureProperty(content : java.util.List<Dynamic>, target : String, id : String) : javax.xml.crypto.dsig.SignatureProperty;
+	@:overload @:public @:abstract public function newSignatureProperty(content : java.util.List<Dynamic>, target : String, id : String) : javax.xml.crypto.dsig.SignatureProperty;
 	
 	/**
 	* Creates a <code>SignatureProperties</code> containing the specified
@@ -396,7 +396,7 @@ extern class XMLSignatureFactory
 	* @throws ClassCastException if <code>properties</code> contains any
 	*    entries that are not of type {@link SignatureProperty}
 	*/
-	@:overload @:abstract public function newSignatureProperties(properties : java.util.List<Dynamic>, id : String) : javax.xml.crypto.dsig.SignatureProperties;
+	@:overload @:public @:abstract public function newSignatureProperties(properties : java.util.List<Dynamic>, id : String) : javax.xml.crypto.dsig.SignatureProperties;
 	
 	/**
 	* Creates a <code>DigestMethod</code> for the specified algorithm URI
@@ -413,7 +413,7 @@ extern class XMLSignatureFactory
 	* @throws NullPointerException if <code>algorithm</code> is
 	*    <code>null</code>
 	*/
-	@:overload @:abstract public function newDigestMethod(algorithm : String, params : javax.xml.crypto.dsig.spec.DigestMethodParameterSpec) : javax.xml.crypto.dsig.DigestMethod;
+	@:overload @:public @:abstract public function newDigestMethod(algorithm : String, params : javax.xml.crypto.dsig.spec.DigestMethodParameterSpec) : javax.xml.crypto.dsig.DigestMethod;
 	
 	/**
 	* Creates a <code>SignatureMethod</code> for the specified algorithm URI
@@ -430,7 +430,7 @@ extern class XMLSignatureFactory
 	* @throws NullPointerException if <code>algorithm</code> is
 	*    <code>null</code>
 	*/
-	@:overload @:abstract public function newSignatureMethod(algorithm : String, params : javax.xml.crypto.dsig.spec.SignatureMethodParameterSpec) : javax.xml.crypto.dsig.SignatureMethod;
+	@:overload @:public @:abstract public function newSignatureMethod(algorithm : String, params : javax.xml.crypto.dsig.spec.SignatureMethodParameterSpec) : javax.xml.crypto.dsig.SignatureMethod;
 	
 	/**
 	* Creates a <code>Transform</code> for the specified algorithm URI
@@ -447,7 +447,7 @@ extern class XMLSignatureFactory
 	* @throws NullPointerException if <code>algorithm</code> is
 	*    <code>null</code>
 	*/
-	@:overload @:abstract public function newTransform(algorithm : String, params : javax.xml.crypto.dsig.spec.TransformParameterSpec) : javax.xml.crypto.dsig.Transform;
+	@:overload @:public @:abstract public function newTransform(algorithm : String, params : javax.xml.crypto.dsig.spec.TransformParameterSpec) : javax.xml.crypto.dsig.Transform;
 	
 	/**
 	* Creates a <code>Transform</code> for the specified algorithm URI
@@ -470,7 +470,7 @@ extern class XMLSignatureFactory
 	* @throws NullPointerException if <code>algorithm</code> is
 	*    <code>null</code>
 	*/
-	@:overload @:abstract public function newTransform(algorithm : String, params : javax.xml.crypto.XMLStructure) : javax.xml.crypto.dsig.Transform;
+	@:overload @:public @:abstract public function newTransform(algorithm : String, params : javax.xml.crypto.XMLStructure) : javax.xml.crypto.dsig.Transform;
 	
 	/**
 	* Creates a <code>CanonicalizationMethod</code> for the specified
@@ -487,7 +487,7 @@ extern class XMLSignatureFactory
 	* @throws NullPointerException if <code>algorithm</code> is
 	*    <code>null</code>
 	*/
-	@:overload @:abstract public function newCanonicalizationMethod(algorithm : String, params : javax.xml.crypto.dsig.spec.C14NMethodParameterSpec) : javax.xml.crypto.dsig.CanonicalizationMethod;
+	@:overload @:public @:abstract public function newCanonicalizationMethod(algorithm : String, params : javax.xml.crypto.dsig.spec.C14NMethodParameterSpec) : javax.xml.crypto.dsig.CanonicalizationMethod;
 	
 	/**
 	* Creates a <code>CanonicalizationMethod</code> for the specified
@@ -510,7 +510,7 @@ extern class XMLSignatureFactory
 	* @throws NullPointerException if <code>algorithm</code> is
 	*    <code>null</code>
 	*/
-	@:overload @:abstract public function newCanonicalizationMethod(algorithm : String, params : javax.xml.crypto.XMLStructure) : javax.xml.crypto.dsig.CanonicalizationMethod;
+	@:overload @:public @:abstract public function newCanonicalizationMethod(algorithm : String, params : javax.xml.crypto.XMLStructure) : javax.xml.crypto.dsig.CanonicalizationMethod;
 	
 	/**
 	* Returns a <code>KeyInfoFactory</code> that creates <code>KeyInfo</code>
@@ -522,7 +522,7 @@ extern class XMLSignatureFactory
 	*    implementation with the same mechanism type and provider
 	*    is not available
 	*/
-	@:overload @:final public function getKeyInfoFactory() : javax.xml.crypto.dsig.keyinfo.KeyInfoFactory;
+	@:overload @:public @:final public function getKeyInfoFactory() : javax.xml.crypto.dsig.keyinfo.KeyInfoFactory;
 	
 	/**
 	* Unmarshals a new <code>XMLSignature</code> instance from a
@@ -538,7 +538,7 @@ extern class XMLSignatureFactory
 	* @throws MarshalException if an unrecoverable exception occurs
 	*    during unmarshalling
 	*/
-	@:overload @:abstract public function unmarshalXMLSignature(context : javax.xml.crypto.dsig.XMLValidateContext) : javax.xml.crypto.dsig.XMLSignature;
+	@:overload @:public @:abstract public function unmarshalXMLSignature(context : javax.xml.crypto.dsig.XMLValidateContext) : javax.xml.crypto.dsig.XMLSignature;
 	
 	/**
 	* Unmarshals a new <code>XMLSignature</code> instance from a
@@ -556,7 +556,7 @@ extern class XMLSignatureFactory
 	* @throws MarshalException if an unrecoverable exception occurs
 	*    during unmarshalling
 	*/
-	@:overload @:abstract public function unmarshalXMLSignature(xmlStructure : javax.xml.crypto.XMLStructure) : javax.xml.crypto.dsig.XMLSignature;
+	@:overload @:public @:abstract public function unmarshalXMLSignature(xmlStructure : javax.xml.crypto.XMLStructure) : javax.xml.crypto.dsig.XMLSignature;
 	
 	/**
 	* Indicates whether a specified feature is supported.
@@ -566,7 +566,7 @@ extern class XMLSignatureFactory
 	*    <code>false</code> otherwise
 	* @throws NullPointerException if <code>feature</code> is <code>null</code>
 	*/
-	@:overload @:abstract public function isFeatureSupported(feature : String) : Bool;
+	@:overload @:public @:abstract public function isFeatureSupported(feature : String) : Bool;
 	
 	/**
 	* Returns a reference to the <code>URIDereferencer</code> that is used by
@@ -575,7 +575,7 @@ extern class XMLSignatureFactory
 	* @return a reference to the default <code>URIDereferencer</code> (never
 	*    <code>null</code>)
 	*/
-	@:overload @:abstract public function getURIDereferencer() : javax.xml.crypto.URIDereferencer;
+	@:overload @:public @:abstract public function getURIDereferencer() : javax.xml.crypto.URIDereferencer;
 	
 	
 }

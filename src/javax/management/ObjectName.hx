@@ -43,7 +43,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	* is null.
 	*
 	*/
-	@:overload public static function getInstance(name : String) : javax.management.ObjectName;
+	@:overload @:public @:static public static function getInstance(name : String) : javax.management.ObjectName;
 	
 	/**
 	* <p>Return an instance of ObjectName that can be used anywhere
@@ -67,7 +67,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	* @exception NullPointerException One of the parameters is null.
 	*
 	*/
-	@:overload public static function getInstance(domain : String, key : String, value : String) : javax.management.ObjectName;
+	@:overload @:public @:static public static function getInstance(domain : String, key : String, value : String) : javax.management.ObjectName;
 	
 	/**
 	* <p>Return an instance of ObjectName that can be used anywhere
@@ -94,7 +94,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	* @exception NullPointerException One of the parameters is null.
 	*
 	*/
-	@:overload public static function getInstance(domain : String, table : java.util.Hashtable<String, String>) : javax.management.ObjectName;
+	@:overload @:public @:static public static function getInstance(domain : String, table : java.util.Hashtable<String, String>) : javax.management.ObjectName;
 	
 	/**
 	* <p>Return an instance of ObjectName that can be used anywhere
@@ -125,7 +125,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	* @exception NullPointerException The <code>name</code> is null.
 	*
 	*/
-	@:overload public static function getInstance(name : javax.management.ObjectName) : javax.management.ObjectName;
+	@:overload @:public @:static public static function getInstance(name : javax.management.ObjectName) : javax.management.ObjectName;
 	
 	/**
 	* Construct an object name from the given string.
@@ -137,7 +137,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	* @exception NullPointerException The <code>name</code> parameter
 	* is null.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Construct an object name with exactly one key property.
@@ -152,7 +152,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	* follow the rules for quoting.
 	* @exception NullPointerException One of the parameters is null.
 	*/
-	@:overload public function new(domain : String, key : String, value : String) : Void;
+	@:overload @:public public function new(domain : String, key : String, value : String) : Void;
 	
 	/**
 	* Construct an object name with several key properties from a Hashtable.
@@ -170,7 +170,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	* quoting.
 	* @exception NullPointerException One of the parameters is null.
 	*/
-	@:overload public function new(domain : String, table : java.util.Hashtable<String, String>) : Void;
+	@:overload @:public public function new(domain : String, table : java.util.Hashtable<String, String>) : Void;
 	
 	/**
 	* Checks whether the object name is a pattern.
@@ -180,7 +180,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	*
 	* @return  True if the name is a pattern, otherwise false.
 	*/
-	@:overload public function isPattern() : Bool;
+	@:overload @:public public function isPattern() : Bool;
 	
 	/**
 	* Checks whether the object name is a pattern on the domain part.
@@ -188,7 +188,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	* @return  True if the name is a domain pattern, otherwise false.
 	*
 	*/
-	@:overload public function isDomainPattern() : Bool;
+	@:overload @:public public function isDomainPattern() : Bool;
 	
 	/**
 	* Checks whether the object name is a pattern on the key properties.
@@ -199,7 +199,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	*
 	* @return  True if the name is a property pattern, otherwise false.
 	*/
-	@:overload public function isPropertyPattern() : Bool;
+	@:overload @:public public function isPropertyPattern() : Bool;
 	
 	/**
 	* Checks whether the object name is a pattern on the key property list.
@@ -211,7 +211,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function isPropertyListPattern() : Bool;
+	@:require(java6) @:overload @:public public function isPropertyListPattern() : Bool;
 	
 	/**
 	* Checks whether the object name is a pattern on the value part
@@ -224,7 +224,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function isPropertyValuePattern() : Bool;
+	@:require(java6) @:overload @:public public function isPropertyValuePattern() : Bool;
 	
 	/**
 	* Checks whether the value associated with a key in a key
@@ -241,7 +241,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function isPropertyValuePattern(property : String) : Bool;
+	@:require(java6) @:overload @:public public function isPropertyValuePattern(property : String) : Bool;
 	
 	/**
 	* <p>Returns the canonical form of the name; that is, a string
@@ -269,14 +269,14 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	*
 	* @return The canonical form of the name.
 	*/
-	@:overload public function getCanonicalName() : String;
+	@:overload @:public public function getCanonicalName() : String;
 	
 	/**
 	* Returns the domain part.
 	*
 	* @return The domain.
 	*/
-	@:overload public function getDomain() : String;
+	@:overload @:public public function getDomain() : String;
 	
 	/**
 	* Obtains the value associated with a key in a key property.
@@ -288,7 +288,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	*
 	* @exception NullPointerException If <code>property</code> is null.
 	*/
-	@:overload public function getKeyProperty(property : String) : String;
+	@:overload @:public public function getKeyProperty(property : String) : String;
 	
 	/**
 	* <p>Returns the key properties as a Hashtable.  The returned
@@ -301,7 +301,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	*
 	* @return The table of key properties.
 	*/
-	@:overload public function getKeyPropertyList() : java.util.Hashtable<String, String>;
+	@:overload @:public public function getKeyPropertyList() : java.util.Hashtable<String, String>;
 	
 	/**
 	* <p>Returns a string representation of the list of key
@@ -313,7 +313,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	* @return The key property list string.  This string is
 	* independent of whether the ObjectName is a pattern.
 	*/
-	@:overload public function getKeyPropertyListString() : String;
+	@:overload @:public public function getKeyPropertyListString() : String;
 	
 	/**
 	* Returns a string representation of the list of key properties,
@@ -326,7 +326,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	* @return The canonical key property list string.  This string is
 	* independent of whether the ObjectName is a pattern.
 	*/
-	@:overload public function getCanonicalKeyPropertyListString() : String;
+	@:overload @:public public function getCanonicalKeyPropertyListString() : String;
 	
 	/**
 	* <p>Returns a string representation of the object name.  The
@@ -336,7 +336,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	*
 	* @return a string representation of this object name.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares the current object name with another object name.  Two
@@ -350,13 +350,13 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	* @return True if <code>object</code> is an ObjectName whose
 	* canonical form is equal to that of this ObjectName.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code for this object name.
 	*
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* <p>Returns a quoted form of the given String, suitable for
@@ -388,7 +388,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	* @exception NullPointerException if <code>s</code> is null.
 	*
 	*/
-	@:overload public static function quote(s : String) : String;
+	@:overload @:public @:static public static function quote(s : String) : String;
 	
 	/**
 	* <p>Returns an unquoted form of the given String.  If
@@ -411,14 +411,14 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	* @exception NullPointerException if <code>q</code> is null.
 	*
 	*/
-	@:overload public static function unquote(q : String) : String;
+	@:overload @:public @:static public static function unquote(q : String) : String;
 	
 	/**
 	* Defines the wildcard "*:*" ObjectName.
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var WILDCARD(default, null) : javax.management.ObjectName;
+	@:require(java6) @:public @:static @:final public static var WILDCARD(default, null) : javax.management.ObjectName;
 	
 	/**
 	* <p>Test whether this ObjectName, which may be a pattern,
@@ -437,13 +437,13 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	* @exception NullPointerException if <code>name</code> is null.
 	*
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function apply(name : javax.management.ObjectName) : Bool;
 	
 	/* Method inherited from QueryExp, no implementation needed here
 	because ObjectName is not relative to an MBeanServer and does
 	not contain a subquery.
 	*/
-	@:overload public function setMBeanServer(mbs : javax.management.MBeanServer) : Void;
+	@:overload @:public public function setMBeanServer(mbs : javax.management.MBeanServer) : Void;
 	
 	/**
 	* <p>Compares two ObjectName instances. The ordering relation between
@@ -488,7 +488,7 @@ extern class ObjectName implements java.lang.Comparable<javax.management.ObjectN
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function compareTo(name : javax.management.ObjectName) : Int;
+	@:require(java6) @:overload @:public public function compareTo(name : javax.management.ObjectName) : Int;
 	
 	
 }

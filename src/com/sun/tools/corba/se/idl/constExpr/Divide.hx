@@ -43,12 +43,12 @@ extern class Divide extends com.sun.tools.corba.se.idl.constExpr.BinaryExpr
 	/**
 	* Constructor: set operation and operands.
 	**/
-	@:overload private function new(leftOperand : com.sun.tools.corba.se.idl.constExpr.Expression, rightOperand : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
+	@:overload @:protected private function new(leftOperand : com.sun.tools.corba.se.idl.constExpr.Expression, rightOperand : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
 	
 	/**
 	*
 	**/
-	@:overload public function evaluate() : Dynamic;
+	@:overload @:public override public function evaluate() : Dynamic;
 	
 	
 }

@@ -26,17 +26,17 @@ package sun.awt.X11;
 */
 extern class XKeysym
 {
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
-	@:overload public static function convertKeysym(ks : haxe.Int64, state : Int) : java.StdTypes.Char16;
+	@:overload @:public @:static public static function convertKeysym(ks : haxe.Int64, state : Int) : java.StdTypes.Char16;
 	
-	@:overload public static function isKPEvent(ev : sun.awt.X11.XKeyEvent) : Bool;
+	@:overload @:public @:static public static function isKPEvent(ev : sun.awt.X11.XKeyEvent) : Bool;
 	
 	/**
 	Return uppercase keysym correspondent to a given keysym.
 	If input keysym does not belong to any lower/uppercase pair, return -1.
 	*/
-	@:overload public static function getUppercaseAlphabetic(keysym : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:static public static function getUppercaseAlphabetic(keysym : haxe.Int64) : haxe.Int64;
 	
 	
 }

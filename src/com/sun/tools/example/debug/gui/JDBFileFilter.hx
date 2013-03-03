@@ -57,7 +57,7 @@ extern class JDBFileFilter extends javax.swing.filechooser.FileFilter
 	*
 	* @see #addExtension
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a file filter that accepts files with the given extension.
@@ -65,7 +65,7 @@ extern class JDBFileFilter extends javax.swing.filechooser.FileFilter
 	*
 	* @see #addExtension
 	*/
-	@:overload public function new(extension : String) : Void;
+	@:overload @:public public function new(extension : String) : Void;
 	
 	/**
 	* Creates a file filter that accepts the given file type.
@@ -76,7 +76,7 @@ extern class JDBFileFilter extends javax.swing.filechooser.FileFilter
 	*
 	* @see #addExtension
 	*/
-	@:overload public function new(extension : String, description : String) : Void;
+	@:overload @:public public function new(extension : String, description : String) : Void;
 	
 	/**
 	* Creates a file filter from the given string array.
@@ -87,7 +87,7 @@ extern class JDBFileFilter extends javax.swing.filechooser.FileFilter
 	*
 	* @see #addExtension
 	*/
-	@:overload public function new(filters : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(filters : java.NativeArray<String>) : Void;
 	
 	/**
 	* Creates a file filter from the given string array and description.
@@ -97,7 +97,7 @@ extern class JDBFileFilter extends javax.swing.filechooser.FileFilter
 	*
 	* @see #addExtension
 	*/
-	@:overload public function new(filters : java.NativeArray<String>, description : String) : Void;
+	@:overload @:public public function new(filters : java.NativeArray<String>, description : String) : Void;
 	
 	/**
 	* Return true if this file should be shown in the directory pane,
@@ -108,7 +108,7 @@ extern class JDBFileFilter extends javax.swing.filechooser.FileFilter
 	* @see #getExtension
 	* @see FileFilter#accepts
 	*/
-	@:overload override public function accept(f : java.io.File) : Bool;
+	@:overload @:public override public function accept(f : java.io.File) : Bool;
 	
 	/**
 	* Return the extension portion of the file's name .
@@ -116,7 +116,7 @@ extern class JDBFileFilter extends javax.swing.filechooser.FileFilter
 	* @see #getExtension
 	* @see FileFilter#accept
 	*/
-	@:overload public function getExtension(f : java.io.File) : String;
+	@:overload @:public public function getExtension(f : java.io.File) : String;
 	
 	/**
 	* Adds a filetype "dot" extension to filter against.
@@ -130,7 +130,7 @@ extern class JDBFileFilter extends javax.swing.filechooser.FileFilter
 	*
 	* Note that the "." before the extension is not needed and will be ignored.
 	*/
-	@:overload public function addExtension(extension : String) : Void;
+	@:overload @:public public function addExtension(extension : String) : Void;
 	
 	/**
 	* Returns the human readable description of this filter. For
@@ -141,7 +141,7 @@ extern class JDBFileFilter extends javax.swing.filechooser.FileFilter
 	* @see isExtensionListInDescription
 	* @see FileFilter#getDescription
 	*/
-	@:overload override public function getDescription() : String;
+	@:overload @:public override public function getDescription() : String;
 	
 	/**
 	* Sets the human readable description of this filter. For
@@ -151,7 +151,7 @@ extern class JDBFileFilter extends javax.swing.filechooser.FileFilter
 	* @see setExtensionListInDescription
 	* @see isExtensionListInDescription
 	*/
-	@:overload public function setDescription(description : String) : Void;
+	@:overload @:public public function setDescription(description : String) : Void;
 	
 	/**
 	* Determines whether the extension list (.jpg, .gif, etc) should
@@ -164,7 +164,7 @@ extern class JDBFileFilter extends javax.swing.filechooser.FileFilter
 	* @see setDescription
 	* @see isExtensionListInDescription
 	*/
-	@:overload public function setExtensionListInDescription(b : Bool) : Void;
+	@:overload @:public public function setExtensionListInDescription(b : Bool) : Void;
 	
 	/**
 	* Returns whether the extension list (.jpg, .gif, etc) should
@@ -177,7 +177,7 @@ extern class JDBFileFilter extends javax.swing.filechooser.FileFilter
 	* @see setDescription
 	* @see setExtensionListInDescription
 	*/
-	@:overload public function isExtensionListInDescription() : Bool;
+	@:overload @:public public function isExtensionListInDescription() : Bool;
 	
 	
 }

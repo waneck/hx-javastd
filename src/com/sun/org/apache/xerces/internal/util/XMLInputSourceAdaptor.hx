@@ -64,13 +64,13 @@ extern class XMLInputSourceAdaptor implements javax.xml.transform.Source
 	/**
 	* the actual source information.
 	*/
-	public var fSource(default, null) : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
+	@:public @:final public var fSource(default, null) : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
 	
-	@:overload public function new(core : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public public function new(core : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	
 }

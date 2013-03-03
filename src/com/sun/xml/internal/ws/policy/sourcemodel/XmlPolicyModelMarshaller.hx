@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.policy.sourcemodel;
 */
 extern class XmlPolicyModelMarshaller extends com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelMarshaller
 {
-	@:overload override public function marshal(model : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel, storage : Dynamic) : Void;
+	@:overload @:public override public function marshal(model : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel, storage : Dynamic) : Void;
 	
-	@:overload override public function marshal(models : java.util.Collection<com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel>, storage : Dynamic) : Void;
+	@:overload @:public override public function marshal(models : java.util.Collection<com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel>, storage : Dynamic) : Void;
 	
 	
 }

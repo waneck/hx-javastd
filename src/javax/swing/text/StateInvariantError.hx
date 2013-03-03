@@ -37,7 +37,7 @@ package javax.swing.text;
 	*
 	* @param s         a string indicating the assertion that failed
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

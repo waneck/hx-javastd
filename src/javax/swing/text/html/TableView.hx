@@ -37,7 +37,7 @@ package javax.swing.text.html;
 	*
 	* @param elem the element that this view is responsible for
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Creates a new table row.
@@ -45,58 +45,58 @@ package javax.swing.text.html;
 	* @param elem an element
 	* @return the row
 	*/
-	@:overload private function createTableRow(elem : javax.swing.text.Element) : javax.swing.text.html.TableView.TableView_RowView;
+	@:overload @:protected private function createTableRow(elem : javax.swing.text.Element) : javax.swing.text.html.TableView.TableView_RowView;
 	
 	/**
 	* The number of columns in the table.
 	*/
-	@:overload public function getColumnCount() : Int;
+	@:overload @:public public function getColumnCount() : Int;
 	
 	/**
 	* Fetches the span (width) of the given column.
 	* This is used by the nested cells to query the
 	* sizes of grid locations outside of themselves.
 	*/
-	@:overload public function getColumnSpan(col : Int) : Int;
+	@:overload @:public public function getColumnSpan(col : Int) : Int;
 	
 	/**
 	* The number of rows in the table.
 	*/
-	@:overload public function getRowCount() : Int;
+	@:overload @:public public function getRowCount() : Int;
 	
 	/**
 	* Fetch the span of multiple rows.  This includes
 	* the border area.
 	*/
-	@:overload public function getMultiRowSpan(row0 : Int, row1 : Int) : Int;
+	@:overload @:public public function getMultiRowSpan(row0 : Int, row1 : Int) : Int;
 	
 	/**
 	* Fetches the span (height) of the given row.
 	*/
-	@:overload public function getRowSpan(row : Int) : Int;
+	@:overload @:public public function getRowSpan(row : Int) : Int;
 	
-	@:overload override private function getViewAtPoint(x : Int, y : Int, alloc : java.awt.Rectangle) : javax.swing.text.View;
+	@:overload @:protected override private function getViewAtPoint(x : Int, y : Int, alloc : java.awt.Rectangle) : javax.swing.text.View;
 	
 	/**
 	* Determines the number of columns occupied by
 	* the table cell represented by given element.
 	*/
-	@:overload private function getColumnsOccupied(v : javax.swing.text.View) : Int;
+	@:overload @:protected private function getColumnsOccupied(v : javax.swing.text.View) : Int;
 	
 	/**
 	* Determines the number of rows occupied by
 	* the table cell represented by given element.
 	*/
-	@:overload private function getRowsOccupied(v : javax.swing.text.View) : Int;
+	@:overload @:protected private function getRowsOccupied(v : javax.swing.text.View) : Int;
 	
-	@:overload private function invalidateGrid() : Void;
+	@:overload @:protected private function invalidateGrid() : Void;
 	
-	@:overload private function getStyleSheet() : javax.swing.text.html.StyleSheet;
+	@:overload @:protected private function getStyleSheet() : javax.swing.text.html.StyleSheet;
 	
 	/**
 	* Update any cached values that come from attributes.
 	*/
-	@:overload private function setPropertiesFromAttributes() : Void;
+	@:overload @:protected private function setPropertiesFromAttributes() : Void;
 	
 	/**
 	* Layout the columns to fit within the given target span.
@@ -113,7 +113,7 @@ package javax.swing.text.html;
 	* @return the offset from the origin and the span for each column
 	*  in the offsets and spans parameters
 	*/
-	@:overload private function layoutColumns(targetSpan : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>, reqs : java.NativeArray<javax.swing.SizeRequirements>) : Void;
+	@:overload @:protected private function layoutColumns(targetSpan : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>, reqs : java.NativeArray<javax.swing.SizeRequirements>) : Void;
 	
 	/**
 	* Calculate the requirements for the minor axis.  This is called by
@@ -125,7 +125,7 @@ package javax.swing.text.html;
 	* CSS width or height attribute is specified and applicable to
 	* the axis.
 	*/
-	@:overload override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
 	/**
 	* Calculate the requirements for the major axis.  This is called by
@@ -135,7 +135,7 @@ package javax.swing.text.html;
 	* This is implemented to provide the superclass behavior adjusted for
 	* multi-row table cells.
 	*/
-	@:overload override private function calculateMajorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMajorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
 	/**
 	* Perform layout for the minor axis of the box (i.e. the
@@ -161,7 +161,7 @@ package javax.swing.text.html;
 	* @return the offset and span for each child view in the
 	*  offsets and spans parameters
 	*/
-	@:overload override private function layoutMinorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:protected override private function layoutMinorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Perform layout for the major axis of the box (i.e. the
@@ -187,7 +187,7 @@ package javax.swing.text.html;
 	* @return the offset and span for each child view in the
 	*  offsets and spans parameters
 	*/
-	@:overload override private function layoutMajorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:protected override private function layoutMajorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Fetches the child view that represents the given position in
@@ -202,14 +202,14 @@ package javax.swing.text.html;
 	* @return  the view representing the given position, or
 	*   null if there isn't one
 	*/
-	@:overload override private function getViewAtPosition(pos : Int, a : java.awt.Rectangle) : javax.swing.text.View;
+	@:overload @:protected override private function getViewAtPosition(pos : Int, a : java.awt.Rectangle) : javax.swing.text.View;
 	
 	/**
 	* Fetches the attributes to use when rendering.  This is
 	* implemented to multiplex the attributes specified in the
 	* model with a StyleSheet.
 	*/
-	@:overload override public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public override public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Renders using the given rendering surface and area on that
@@ -226,7 +226,7 @@ package javax.swing.text.html;
 	* @param allocation the allocated region to render into
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
 	
 	/**
 	* Establishes the parent view for this view.  This is
@@ -245,7 +245,7 @@ package javax.swing.text.html;
 	*  being removed from a parent it was previously added
 	*  to
 	*/
-	@:overload override public function setParent(parent : javax.swing.text.View) : Void;
+	@:overload @:public override public function setParent(parent : javax.swing.text.View) : Void;
 	
 	/**
 	* Fetches the ViewFactory implementation that is feeding
@@ -258,7 +258,7 @@ package javax.swing.text.html;
 	*
 	* @return the factory, null if none
 	*/
-	@:overload override public function getViewFactory() : javax.swing.text.ViewFactory;
+	@:overload @:public override public function getViewFactory() : javax.swing.text.ViewFactory;
 	
 	/**
 	* Gives notification that something was inserted into
@@ -274,7 +274,7 @@ package javax.swing.text.html;
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#insertUpdate
 	*/
-	@:overload override public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -290,7 +290,7 @@ package javax.swing.text.html;
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#removeUpdate
 	*/
-	@:overload override public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -306,16 +306,16 @@ package javax.swing.text.html;
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#changedUpdate
 	*/
-	@:overload override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
-	@:overload override private function forwardUpdate(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:protected override private function forwardUpdate(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Change the child views.  This is implemented to
 	* provide the superclass behavior and invalidate the
 	* grid so that rows and columns will be recalculated.
 	*/
-	@:overload override public function replace(offset : Int, length : Int, views : java.NativeArray<javax.swing.text.View>) : Void;
+	@:overload @:public override public function replace(offset : Int, length : Int, views : java.NativeArray<javax.swing.text.View>) : Void;
 	
 	/**
 	* The table itself acts as a factory for the various
@@ -323,7 +323,7 @@ package javax.swing.text.html;
 	* All other factory activity is delegated to the factory
 	* returned by the parent of the table.
 	*/
-	@:overload public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
+	@:overload @:public public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
 	
 	
 }
@@ -332,63 +332,63 @@ package javax.swing.text.html;
 	/**
 	* Set the layout arrays to use for holding layout results
 	*/
-	@:overload public function setLayoutArrays(offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>, targetSpan : Int) : Void;
+	@:overload @:public public function setLayoutArrays(offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>, targetSpan : Int) : Void;
 	
-	@:overload public function getCount() : Int;
+	@:overload @:public public function getCount() : Int;
 	
-	@:overload public function setIndex(i : Int) : Void;
+	@:overload @:public public function setIndex(i : Int) : Void;
 	
-	@:overload public function setOffset(offs : Int) : Void;
+	@:overload @:public public function setOffset(offs : Int) : Void;
 	
-	@:overload public function getOffset() : Int;
+	@:overload @:public public function getOffset() : Int;
 	
-	@:overload public function setSpan(span : Int) : Void;
+	@:overload @:public public function setSpan(span : Int) : Void;
 	
-	@:overload public function getSpan() : Int;
+	@:overload @:public public function getSpan() : Int;
 	
-	@:overload public function getMinimumSpan(parentSpan : Single) : Single;
+	@:overload @:public public function getMinimumSpan(parentSpan : Single) : Single;
 	
-	@:overload public function getPreferredSpan(parentSpan : Single) : Single;
+	@:overload @:public public function getPreferredSpan(parentSpan : Single) : Single;
 	
-	@:overload public function getMaximumSpan(parentSpan : Single) : Single;
+	@:overload @:public public function getMaximumSpan(parentSpan : Single) : Single;
 	
-	@:overload public function getBorderWidth() : Single;
+	@:overload @:public public function getBorderWidth() : Single;
 	
-	@:overload public function getLeadingCollapseSpan() : Single;
+	@:overload @:public public function getLeadingCollapseSpan() : Single;
 	
-	@:overload public function getTrailingCollapseSpan() : Single;
+	@:overload @:public public function getTrailingCollapseSpan() : Single;
 	
-	@:overload public function getAdjustmentWeight() : Int;
+	@:overload @:public public function getAdjustmentWeight() : Int;
 	
 	
 }
 @:native('javax$swing$text$html$TableView$RowIterator') @:internal extern class TableView_RowIterator implements javax.swing.text.html.CSS.CSS_LayoutIterator
 {
-	@:overload public function setOffset(offs : Int) : Void;
+	@:overload @:public public function setOffset(offs : Int) : Void;
 	
-	@:overload public function getOffset() : Int;
+	@:overload @:public public function getOffset() : Int;
 	
-	@:overload public function setSpan(span : Int) : Void;
+	@:overload @:public public function setSpan(span : Int) : Void;
 	
-	@:overload public function getSpan() : Int;
+	@:overload @:public public function getSpan() : Int;
 	
-	@:overload public function getCount() : Int;
+	@:overload @:public public function getCount() : Int;
 	
-	@:overload public function setIndex(i : Int) : Void;
+	@:overload @:public public function setIndex(i : Int) : Void;
 	
-	@:overload public function getMinimumSpan(parentSpan : Single) : Single;
+	@:overload @:public public function getMinimumSpan(parentSpan : Single) : Single;
 	
-	@:overload public function getPreferredSpan(parentSpan : Single) : Single;
+	@:overload @:public public function getPreferredSpan(parentSpan : Single) : Single;
 	
-	@:overload public function getMaximumSpan(parentSpan : Single) : Single;
+	@:overload @:public public function getMaximumSpan(parentSpan : Single) : Single;
 	
-	@:overload public function getBorderWidth() : Single;
+	@:overload @:public public function getBorderWidth() : Single;
 	
-	@:overload public function getLeadingCollapseSpan() : Single;
+	@:overload @:public public function getLeadingCollapseSpan() : Single;
 	
-	@:overload public function getTrailingCollapseSpan() : Single;
+	@:overload @:public public function getTrailingCollapseSpan() : Single;
 	
-	@:overload public function getAdjustmentWeight() : Int;
+	@:overload @:public public function getAdjustmentWeight() : Int;
 	
 	
 }
@@ -402,16 +402,16 @@ package javax.swing.text.html;
 	*
 	* @param elem the element that this view is responsible for
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Fetches the attributes to use when rendering.  This is
 	* implemented to multiplex the attributes specified in the
 	* model with a StyleSheet.
 	*/
-	@:overload override public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public override public function getAttributes() : javax.swing.text.AttributeSet;
 	
-	@:overload private function getStyleSheet() : javax.swing.text.html.StyleSheet;
+	@:overload @:protected private function getStyleSheet() : javax.swing.text.html.StyleSheet;
 	
 	/**
 	* This is called by a child to indicate its
@@ -426,17 +426,17 @@ package javax.swing.text.html;
 	* @param width true if the width preference should change
 	* @param height true if the height preference should change
 	*/
-	@:overload override public function preferenceChanged(child : javax.swing.text.View, width : Bool, height : Bool) : Void;
+	@:overload @:public override public function preferenceChanged(child : javax.swing.text.View, width : Bool, height : Bool) : Void;
 	
-	@:overload override private function calculateMajorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMajorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
-	@:overload override public function getMinimumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMinimumSpan(axis : Int) : Single;
 	
-	@:overload override public function getMaximumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMaximumSpan(axis : Int) : Single;
 	
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
-	@:overload override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Renders using the given rendering surface and area on that
@@ -448,14 +448,14 @@ package javax.swing.text.html;
 	* @param allocation the allocated region to render into
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
 	
 	/**
 	* Change the child views.  This is implemented to
 	* provide the superclass behavior and invalidate the
 	* grid so that rows and columns will be recalculated.
 	*/
-	@:overload override public function replace(offset : Int, length : Int, views : java.NativeArray<javax.swing.text.View>) : Void;
+	@:overload @:public override public function replace(offset : Int, length : Int, views : java.NativeArray<javax.swing.text.View>) : Void;
 	
 	/**
 	* Calculate the height requirements of the table row.  The
@@ -465,7 +465,7 @@ package javax.swing.text.html;
 	* them.  This method updates the multi-row flag that indicates that
 	* this row and rows below need additional consideration.
 	*/
-	@:overload override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
 	/**
 	* Perform layout for the major axis of the box (i.e. the
@@ -488,7 +488,7 @@ package javax.swing.text.html;
 	* @return the offset and span for each child view in the
 	*  offsets and spans parameters
 	*/
-	@:overload override private function layoutMajorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:protected override private function layoutMajorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Perform layout for the minor axis of the box (i.e. the
@@ -512,7 +512,7 @@ package javax.swing.text.html;
 	* @return the offset and span for each child view in the
 	*  offsets and spans parameters
 	*/
-	@:overload override private function layoutMinorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:protected override private function layoutMinorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Determines the resizability of the view along the
@@ -522,7 +522,7 @@ package javax.swing.text.html;
 	* @return the resize weight
 	* @exception IllegalArgumentException for an invalid axis
 	*/
-	@:overload override public function getResizeWeight(axis : Int) : Int;
+	@:overload @:public override public function getResizeWeight(axis : Int) : Int;
 	
 	/**
 	* Fetches the child view that represents the given position in
@@ -537,7 +537,7 @@ package javax.swing.text.html;
 	* @return  the view representing the given position, or
 	*   null if there isn't one
 	*/
-	@:overload override private function getViewAtPosition(pos : Int, a : java.awt.Rectangle) : javax.swing.text.View;
+	@:overload @:protected override private function getViewAtPosition(pos : Int, a : java.awt.Rectangle) : javax.swing.text.View;
 	
 	
 }
@@ -552,7 +552,7 @@ package javax.swing.text.html;
 	*
 	* @param elem the element that this view is responsible for
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Perform layout for the major axis of the box (i.e. the
@@ -578,7 +578,7 @@ package javax.swing.text.html;
 	* @return the offset and span for each child view in the
 	*  offsets and spans parameters
 	*/
-	@:overload override private function layoutMajorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:protected override private function layoutMajorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Calculate the requirements needed along the major axis.
@@ -594,9 +594,9 @@ package javax.swing.text.html;
 	* @param r the requirements to fill in.  If null, a new one
 	*  should be allocated.
 	*/
-	@:overload override private function calculateMajorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMajorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
-	@:overload override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
 	
 }

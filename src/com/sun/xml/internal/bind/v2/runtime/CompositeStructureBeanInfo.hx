@@ -28,29 +28,29 @@ extern class CompositeStructureBeanInfo extends com.sun.xml.internal.bind.v2.run
 	/**
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
+	@:overload @:public public function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
 	
-	@:overload public function getElementNamespaceURI(o : com.sun.xml.internal.bind.api.CompositeStructure) : String;
+	@:overload @:public public function getElementNamespaceURI(o : com.sun.xml.internal.bind.api.CompositeStructure) : String;
 	
-	@:overload public function getElementLocalName(o : com.sun.xml.internal.bind.api.CompositeStructure) : String;
+	@:overload @:public public function getElementLocalName(o : com.sun.xml.internal.bind.api.CompositeStructure) : String;
 	
-	@:overload override public function createInstance(context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : com.sun.xml.internal.bind.api.CompositeStructure;
+	@:overload @:public override public function createInstance(context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : com.sun.xml.internal.bind.api.CompositeStructure;
 	
-	@:overload public function reset(o : com.sun.xml.internal.bind.api.CompositeStructure, context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : Bool;
+	@:overload @:public public function reset(o : com.sun.xml.internal.bind.api.CompositeStructure, context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : Bool;
 	
-	@:overload public function getId(o : com.sun.xml.internal.bind.api.CompositeStructure, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : String;
+	@:overload @:public public function getId(o : com.sun.xml.internal.bind.api.CompositeStructure, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : String;
 	
-	@:overload override public function getLoader(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, typeSubstitutionCapable : Bool) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
+	@:overload @:public override public function getLoader(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, typeSubstitutionCapable : Bool) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 	
-	@:overload public function serializeRoot(o : com.sun.xml.internal.bind.api.CompositeStructure, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public public function serializeRoot(o : com.sun.xml.internal.bind.api.CompositeStructure, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload public function serializeURIs(o : com.sun.xml.internal.bind.api.CompositeStructure, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public public function serializeURIs(o : com.sun.xml.internal.bind.api.CompositeStructure, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload public function serializeAttributes(o : com.sun.xml.internal.bind.api.CompositeStructure, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public public function serializeAttributes(o : com.sun.xml.internal.bind.api.CompositeStructure, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload public function serializeBody(o : com.sun.xml.internal.bind.api.CompositeStructure, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public public function serializeBody(o : com.sun.xml.internal.bind.api.CompositeStructure, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload override public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<com.sun.xml.internal.bind.api.CompositeStructure>;
+	@:overload @:public override public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<com.sun.xml.internal.bind.api.CompositeStructure>;
 	
 	
 }

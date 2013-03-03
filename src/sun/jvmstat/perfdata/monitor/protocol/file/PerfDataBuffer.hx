@@ -33,7 +33,7 @@ extern class PerfDataBuffer extends sun.jvmstat.perfdata.monitor.AbstractPerfDat
 	*
 	* @throws MonitorException
 	*/
-	@:overload public function new(vmid : sun.jvmstat.monitor.VmIdentifier) : Void;
+	@:overload @:public public function new(vmid : sun.jvmstat.monitor.VmIdentifier) : Void;
 	
 	
 }

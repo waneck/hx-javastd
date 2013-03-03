@@ -27,27 +27,27 @@ package com.sun.xml.internal.fastinfoset.util;
 */
 extern class QualifiedNameArray extends com.sun.xml.internal.fastinfoset.util.ValueArray
 {
-	public var _array : java.NativeArray<com.sun.xml.internal.fastinfoset.QualifiedName>;
+	@:public public var _array : java.NativeArray<com.sun.xml.internal.fastinfoset.QualifiedName>;
 	
-	@:overload public function new(initialCapacity : Int, maximumCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int, maximumCapacity : Int) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:final override public function clear() : Void;
+	@:overload @:public @:final override public function clear() : Void;
 	
-	@:overload @:final public function getArray() : java.NativeArray<com.sun.xml.internal.fastinfoset.QualifiedName>;
+	@:overload @:public @:final public function getArray() : java.NativeArray<com.sun.xml.internal.fastinfoset.QualifiedName>;
 	
-	@:overload @:final override public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.ValueArray, clear : Bool) : Void;
+	@:overload @:public @:final override public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.ValueArray, clear : Bool) : Void;
 	
-	@:overload @:final public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.QualifiedNameArray, clear : Bool) : Void;
+	@:overload @:public @:final public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.QualifiedNameArray, clear : Bool) : Void;
 	
-	@:overload @:final public function getCompleteArray() : java.NativeArray<com.sun.xml.internal.fastinfoset.QualifiedName>;
+	@:overload @:public @:final public function getCompleteArray() : java.NativeArray<com.sun.xml.internal.fastinfoset.QualifiedName>;
 	
-	@:overload @:final public function getNext() : com.sun.xml.internal.fastinfoset.QualifiedName;
+	@:overload @:public @:final public function getNext() : com.sun.xml.internal.fastinfoset.QualifiedName;
 	
-	@:overload @:final public function add(s : com.sun.xml.internal.fastinfoset.QualifiedName) : Void;
+	@:overload @:public @:final public function add(s : com.sun.xml.internal.fastinfoset.QualifiedName) : Void;
 	
-	@:overload @:final private function resize() : Void;
+	@:overload @:protected @:final private function resize() : Void;
 	
 	
 }

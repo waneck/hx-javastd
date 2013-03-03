@@ -25,7 +25,7 @@ package sun.print;
 */
 @:internal extern class PrintJobFlavorException extends javax.print.PrintException implements javax.print.FlavorException
 {
-	@:overload public function getUnsupportedFlavors() : java.NativeArray<javax.print.DocFlavor>;
+	@:overload @:public public function getUnsupportedFlavors() : java.NativeArray<javax.print.DocFlavor>;
 	
 	
 }

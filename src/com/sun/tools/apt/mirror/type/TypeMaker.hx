@@ -28,36 +28,36 @@ package com.sun.tools.apt.mirror.type;
 */
 extern class TypeMaker
 {
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.mirror.type.TypeMaker;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.mirror.type.TypeMaker;
 	
 	/**
 	* Returns the TypeMirror corresponding to a javac Type object.
 	*/
-	@:overload public function getType(t : com.sun.tools.javac.code.Type) : com.sun.mirror.type.TypeMirror;
+	@:overload @:public public function getType(t : com.sun.tools.javac.code.Type) : com.sun.mirror.type.TypeMirror;
 	
 	/**
 	* Returns the declared type corresponding to a given ClassType.
 	*/
-	@:overload public function getDeclaredType(t : com.sun.tools.javac.code.Type.Type_ClassType) : com.sun.mirror.type.DeclaredType;
+	@:overload @:public public function getDeclaredType(t : com.sun.tools.javac.code.Type.Type_ClassType) : com.sun.mirror.type.DeclaredType;
 	
 	/**
 	* Returns a collection of types corresponding to a list of javac Type
 	* objects.
 	*/
-	@:overload public function getTypes(types : java.lang.Iterable<com.sun.tools.javac.code.Type>) : java.util.Collection<com.sun.mirror.type.TypeMirror>;
+	@:overload @:public public function getTypes(types : java.lang.Iterable<com.sun.tools.javac.code.Type>) : java.util.Collection<com.sun.mirror.type.TypeMirror>;
 	
 	/**
 	* Returns a collection of types corresponding to a list of javac Type
 	* objects.  The element type of the result is specified explicitly.
 	*/
-	@:overload public function getTypes<T : com.sun.mirror.type.TypeMirror>(types : java.lang.Iterable<com.sun.tools.javac.code.Type>, resType : Class<T>) : java.util.Collection<T>;
+	@:overload @:public public function getTypes<T : com.sun.mirror.type.TypeMirror>(types : java.lang.Iterable<com.sun.tools.javac.code.Type>, resType : Class<T>) : java.util.Collection<T>;
 	
 	/**
 	* Returns the string representation of a type.
 	* Bounds of type variables are not included; bounds of wildcard types are.
 	* Type names are qualified.
 	*/
-	@:overload public function typeToString(t : com.sun.tools.javac.code.Type) : String;
+	@:overload @:public public function typeToString(t : com.sun.tools.javac.code.Type) : String;
 	
 	
 }

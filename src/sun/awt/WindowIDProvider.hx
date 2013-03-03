@@ -29,7 +29,7 @@ package sun.awt;
 */
 extern interface WindowIDProvider
 {
-	@:overload public function getWindow() : haxe.Int64;
+	@:overload @:public public function getWindow() : haxe.Int64;
 	
 	
 }

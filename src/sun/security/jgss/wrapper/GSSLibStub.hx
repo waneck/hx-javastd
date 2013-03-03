@@ -25,9 +25,9 @@ package sun.security.jgss.wrapper;
 */
 @:internal extern class GSSLibStub
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

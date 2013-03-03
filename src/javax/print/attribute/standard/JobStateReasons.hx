@@ -29,7 +29,7 @@ extern class JobStateReasons extends java.util.HashSet<javax.print.attribute.sta
 	* Construct a new, empty job state reasons attribute; the underlying hash
 	* set has the default initial capacity and load factor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a new, empty job state reasons attribute; the underlying hash
@@ -39,7 +39,7 @@ extern class JobStateReasons extends java.util.HashSet<javax.print.attribute.sta
 	* @throws IllegalArgumentException if the initial capacity is less
 	*     than zero.
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Construct a new, empty job state reasons attribute; the underlying hash
@@ -50,7 +50,7 @@ extern class JobStateReasons extends java.util.HashSet<javax.print.attribute.sta
 	* @throws IllegalArgumentException if the initial capacity is less
 	*     than zero.
 	*/
-	@:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
 	/**
 	* Construct a new job state reasons attribute that contains the same
@@ -70,7 +70,7 @@ extern class JobStateReasons extends java.util.HashSet<javax.print.attribute.sta
 	*     <CODE>collection</CODE> is not an instance of class {@link
 	*     JobStateReason JobStateReason}.
 	*/
-	@:overload public function new(collection : java.util.Collection<javax.print.attribute.standard.JobStateReason>) : Void;
+	@:overload @:public public function new(collection : java.util.Collection<javax.print.attribute.standard.JobStateReason>) : Void;
 	
 	/**
 	* Adds the specified element to this job state reasons attribute if it is
@@ -91,7 +91,7 @@ extern class JobStateReasons extends java.util.HashSet<javax.print.attribute.sta
 	*     instance of class {@link JobStateReason JobStateReason}.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function add(o : javax.print.attribute.standard.JobStateReason) : Bool;
+	@:require(java5) @:overload @:public public function add(o : javax.print.attribute.standard.JobStateReason) : Bool;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -102,7 +102,7 @@ extern class JobStateReasons extends java.util.HashSet<javax.print.attribute.sta
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -113,7 +113,7 @@ extern class JobStateReasons extends java.util.HashSet<javax.print.attribute.sta
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

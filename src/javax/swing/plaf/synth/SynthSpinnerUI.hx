@@ -40,17 +40,17 @@ package javax.swing.plaf.synth;
 	* @see ComponentUI#createUI
 	* @return a new SynthSpinnerUI object
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installListeners() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
 	/**
 	* Initializes the <code>JSpinner</code> <code>border</code>,
@@ -65,7 +65,7 @@ package javax.swing.plaf.synth;
 	* @see LookAndFeel#installBorder
 	* @see LookAndFeel#installColors
 	*/
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
 	/**
 	* Sets the <code>JSpinner's</code> layout manager to null.  This
@@ -74,22 +74,22 @@ package javax.swing.plaf.synth;
 	* @see #installDefaults
 	* @see #uninstallUI
 	*/
-	@:overload override private function uninstallDefaults() : Void;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function createLayout() : java.awt.LayoutManager;
+	@:overload @:protected override private function createLayout() : java.awt.LayoutManager;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function createPreviousButton() : java.awt.Component;
+	@:overload @:protected override private function createPreviousButton() : java.awt.Component;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function createNextButton() : java.awt.Component;
+	@:overload @:protected override private function createNextButton() : java.awt.Component;
 	
 	/**
 	* This method is called by installUI to get the editor component
@@ -114,7 +114,7 @@ package javax.swing.plaf.synth;
 	* @see #replaceEditor
 	* @see JSpinner#getEditor
 	*/
-	@:overload override private function createEditor() : javax.swing.JComponent;
+	@:overload @:protected override private function createEditor() : javax.swing.JComponent;
 	
 	/**
 	* Called by the <code>PropertyChangeListener</code> when the
@@ -131,12 +131,12 @@ package javax.swing.plaf.synth;
 	* @see #createEditor
 	* @see #createPropertyChangeListener
 	*/
-	@:overload override private function replaceEditor(oldEditor : javax.swing.JComponent, newEditor : javax.swing.JComponent) : Void;
+	@:overload @:protected override private function replaceEditor(oldEditor : javax.swing.JComponent, newEditor : javax.swing.JComponent) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -150,7 +150,7 @@ package javax.swing.plaf.synth;
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -161,7 +161,7 @@ package javax.swing.plaf.synth;
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component. This implementation does nothing.
@@ -170,17 +170,17 @@ package javax.swing.plaf.synth;
 	* @param g the {@code Graphics} object used for painting
 	* @see #update(Graphics,JComponent)
 	*/
-	@:overload private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -191,15 +191,15 @@ package javax.swing.plaf.synth;
 */
 @:native('javax$swing$plaf$synth$SynthSpinnerUI$SpinnerLayout') @:internal extern class SynthSpinnerUI_SpinnerLayout implements java.awt.LayoutManager implements javax.swing.plaf.UIResource
 {
-	@:overload public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
 	
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
-	@:overload public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(parent : java.awt.Container) : Void;
 	
 	
 }
@@ -207,10 +207,10 @@ package javax.swing.plaf.synth;
 @:native('javax$swing$plaf$synth$SynthSpinnerUI$EditorFocusHandler') @:internal extern class SynthSpinnerUI_EditorFocusHandler implements java.awt.event.FocusListener
 {
 	/** Invoked when a editor text field gains the keyboard focus. */
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
 	/** Invoked when a editor text field loses the keyboard focus. */
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
 	
 }

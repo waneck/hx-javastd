@@ -27,7 +27,7 @@ package sun.reflect;
 {
 	/** Base class for sun.misc.Unsafe-based FieldAccessors for final or
 	volatile static fields.  */
-	private var isReadOnly(default, null) : Bool;
+	@:protected @:final private var isReadOnly(default, null) : Bool;
 	
 	
 }

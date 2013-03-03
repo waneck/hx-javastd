@@ -25,7 +25,7 @@ package sun.font;
 */
 extern interface GlyphDisposedListener
 {
-	@:overload public function glyphDisposed(glyphs : java.util.ArrayList<Null<haxe.Int64>>) : Void;
+	@:overload @:public public function glyphDisposed(glyphs : java.util.ArrayList<Null<haxe.Int64>>) : Void;
 	
 	
 }

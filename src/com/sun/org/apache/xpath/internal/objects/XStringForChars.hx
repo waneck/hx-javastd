@@ -23,7 +23,7 @@ package com.sun.org.apache.xpath.internal.objects;
 */
 extern class XStringForChars extends com.sun.org.apache.xpath.internal.objects.XString
 {
-	private var m_strCache : String;
+	@:protected private var m_strCache : String;
 	
 	/**
 	* Construct a XNodeSet object.
@@ -32,35 +32,35 @@ extern class XStringForChars extends com.sun.org.apache.xpath.internal.objects.X
 	* @param start The start position in the array.
 	* @param length The number of characters to read from the array.
 	*/
-	@:overload public function new(val : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function new(val : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Cast result object to a string.
 	*
 	* @return The string this wraps or the empty string if null
 	*/
-	@:overload public function fsb() : com.sun.org.apache.xml.internal.utils.FastStringBuffer;
+	@:overload @:public public function fsb() : com.sun.org.apache.xml.internal.utils.FastStringBuffer;
 	
 	/**
 	* Cast result object to a string.
 	*
 	* @return The string this wraps or the empty string if null
 	*/
-	@:overload public function appendToFsb(fsb : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
+	@:overload @:public override public function appendToFsb(fsb : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
 	
 	/**
 	* Tell if this object contains a java String object.
 	*
 	* @return true if this XMLString can return a string without creating one.
 	*/
-	@:overload override public function hasString() : Bool;
+	@:overload @:public override public function hasString() : Bool;
 	
 	/**
 	* Cast result object to a string.
 	*
 	* @return The string this wraps or the empty string if null
 	*/
-	@:overload override public function str() : String;
+	@:overload @:public override public function str() : String;
 	
 	/**
 	* Since this object is incomplete without the length and the offset, we
@@ -68,7 +68,7 @@ extern class XStringForChars extends com.sun.org.apache.xpath.internal.objects.X
 	*
 	* @return The java String representation of this object.
 	*/
-	@:overload public function object() : Dynamic;
+	@:overload @:public override public function object() : Dynamic;
 	
 	/**
 	* Directly call the
@@ -81,7 +81,7 @@ extern class XStringForChars extends com.sun.org.apache.xpath.internal.objects.X
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function dispatchCharactersEvents(ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public override public function dispatchCharactersEvents(ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Directly call the
@@ -92,7 +92,7 @@ extern class XStringForChars extends com.sun.org.apache.xpath.internal.objects.X
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function dispatchAsComment(lh : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public override public function dispatchAsComment(lh : org.xml.sax.ext.LexicalHandler) : Void;
 	
 	/**
 	* Returns the length of this string.
@@ -100,7 +100,7 @@ extern class XStringForChars extends com.sun.org.apache.xpath.internal.objects.X
 	* @return  the length of the sequence of characters represented by this
 	*          object.
 	*/
-	@:overload override public function length() : Int;
+	@:overload @:public override public function length() : Int;
 	
 	/**
 	* Returns the character at the specified index. An index ranges
@@ -115,7 +115,7 @@ extern class XStringForChars extends com.sun.org.apache.xpath.internal.objects.X
 	*             argument is negative or not less than the length of this
 	*             string.
 	*/
-	@:overload override public function charAt(index : Int) : java.StdTypes.Char16;
+	@:overload @:public override public function charAt(index : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Copies characters from this string into the destination character
@@ -138,7 +138,7 @@ extern class XStringForChars extends com.sun.org.apache.xpath.internal.objects.X
 	*                <code>dst.length</code></ul>
 	* @exception NullPointerException if <code>dst</code> is <code>null</code>
 	*/
-	@:overload override public function getChars(srcBegin : Int, srcEnd : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstBegin : Int) : Void;
+	@:overload @:public override public function getChars(srcBegin : Int, srcEnd : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstBegin : Int) : Void;
 	
 	
 }

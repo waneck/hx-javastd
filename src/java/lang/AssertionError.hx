@@ -43,7 +43,7 @@ package java.lang;
 	/**
 	* Constructs an AssertionError with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an AssertionError with its detail message derived
@@ -57,7 +57,7 @@ package java.lang;
 	* @param detailMessage value to be used in constructing detail message
 	* @see   Throwable#getCause()
 	*/
-	@:overload public function new(detailMessage : Dynamic) : Void;
+	@:overload @:public public function new(detailMessage : Dynamic) : Void;
 	
 	/**
 	* Constructs an AssertionError with its detail message derived
@@ -67,7 +67,7 @@ package java.lang;
 	*
 	* @param detailMessage value to be used in constructing detail message
 	*/
-	@:overload public function new(detailMessage : Bool) : Void;
+	@:overload @:public public function new(detailMessage : Bool) : Void;
 	
 	/**
 	* Constructs an AssertionError with its detail message derived
@@ -77,7 +77,7 @@ package java.lang;
 	*
 	* @param detailMessage value to be used in constructing detail message
 	*/
-	@:overload public function new(detailMessage : java.StdTypes.Char16) : Void;
+	@:overload @:public public function new(detailMessage : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Constructs an AssertionError with its detail message derived
@@ -87,7 +87,7 @@ package java.lang;
 	*
 	* @param detailMessage value to be used in constructing detail message
 	*/
-	@:overload public function new(detailMessage : Int) : Void;
+	@:overload @:public public function new(detailMessage : Int) : Void;
 	
 	/**
 	* Constructs an AssertionError with its detail message derived
@@ -97,7 +97,7 @@ package java.lang;
 	*
 	* @param detailMessage value to be used in constructing detail message
 	*/
-	@:overload public function new(detailMessage : haxe.Int64) : Void;
+	@:overload @:public public function new(detailMessage : haxe.Int64) : Void;
 	
 	/**
 	* Constructs an AssertionError with its detail message derived
@@ -107,7 +107,7 @@ package java.lang;
 	*
 	* @param detailMessage value to be used in constructing detail message
 	*/
-	@:overload public function new(detailMessage : Single) : Void;
+	@:overload @:public public function new(detailMessage : Single) : Void;
 	
 	/**
 	* Constructs an AssertionError with its detail message derived
@@ -117,7 +117,7 @@ package java.lang;
 	*
 	* @param detailMessage value to be used in constructing detail message
 	*/
-	@:overload public function new(detailMessage : Float) : Void;
+	@:overload @:public public function new(detailMessage : Float) : Void;
 	
 	/**
 	* Constructs a new {@code AssertionError} with the specified
@@ -132,7 +132,7 @@ package java.lang;
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:require(java7) @:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	
 }

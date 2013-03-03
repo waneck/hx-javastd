@@ -27,51 +27,51 @@ package com.sun.xml.internal.fastinfoset.stax.events;
 */
 extern class AttributeBase extends com.sun.xml.internal.fastinfoset.stax.events.EventBase implements javax.xml.stream.events.Attribute
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : String, value : String) : Void;
+	@:overload @:public public function new(name : String, value : String) : Void;
 	
-	@:overload public function new(qname : javax.xml.namespace.QName, value : String) : Void;
+	@:overload @:public public function new(qname : javax.xml.namespace.QName, value : String) : Void;
 	
-	@:overload public function new(prefix : String, localName : String, value : String) : Void;
+	@:overload @:public public function new(prefix : String, localName : String, value : String) : Void;
 	
-	@:overload public function new(prefix : String, namespaceURI : String, localName : String, value : String, attributeType : String) : Void;
+	@:overload @:public public function new(prefix : String, namespaceURI : String, localName : String, value : String, attributeType : String) : Void;
 	
-	@:overload public function setName(name : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setName(name : javax.xml.namespace.QName) : Void;
 	
 	/**
 	* Returns the QName for this attribute
 	*/
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function setValue(value : String) : Void;
+	@:overload @:public public function setValue(value : String) : Void;
 	
-	@:overload public function getLocalName() : String;
+	@:overload @:public public function getLocalName() : String;
 	
 	/**
 	* Gets the normalized value of this attribute
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload public function setAttributeType(attributeType : String) : Void;
+	@:overload @:public public function setAttributeType(attributeType : String) : Void;
 	
 	/**
 	* Gets the type of this attribute, default is
 	* the String "CDATA"
 	* @return the type as a String, default is "CDATA"
 	*/
-	@:overload public function getDTDType() : String;
+	@:overload @:public public function getDTDType() : String;
 	
 	/**
 	* A flag indicating whether this attribute was actually
 	* specified in the start-tag of its element, or was defaulted from the schema.
 	* @return returns true if this was specified in the start element
 	*/
-	@:overload public function isSpecified() : Bool;
+	@:overload @:public public function isSpecified() : Bool;
 	
-	@:overload public function setSpecified(isSpecified : Bool) : Void;
+	@:overload @:public public function setSpecified(isSpecified : Bool) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

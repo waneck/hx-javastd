@@ -75,7 +75,7 @@ extern class BidiBase
 	* @see #REORDER_INVERSE_FOR_NUMBERS_SPECIAL
 	* @stable ICU 3.8
 	*/
-	public static var INTERNAL_LEVEL_DEFAULT_LTR(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var INTERNAL_LEVEL_DEFAULT_LTR(default, null) : java.StdTypes.Int8;
 	
 	/** Paragraph level setting<p>
 	*
@@ -102,21 +102,21 @@ extern class BidiBase
 	* @see #REORDER_INVERSE_FOR_NUMBERS_SPECIAL
 	* @stable ICU 3.8
 	*/
-	public static var INTERNAL_LEVEL_DEFAULT_RTL(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var INTERNAL_LEVEL_DEFAULT_RTL(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Maximum explicit embedding level.
 	* (The maximum resolved level can be up to <code>MAX_EXPLICIT_LEVEL+1</code>).
 	* @stable ICU 3.8
 	*/
-	public static var MAX_EXPLICIT_LEVEL(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var MAX_EXPLICIT_LEVEL(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Bit flag for level input.
 	* Overrides directional properties.
 	* @stable ICU 3.8
 	*/
-	public static var INTERNAL_LEVEL_OVERRIDE(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var INTERNAL_LEVEL_OVERRIDE(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Special value which can be returned by the mapping methods when a
@@ -134,13 +134,13 @@ extern class BidiBase
 	* @see #OPTION_REMOVE_CONTROLS
 	* @stable ICU 3.8
 	*/
-	public static var MAP_NOWHERE(default, null) : Int;
+	@:public @:static @:final public static var MAP_NOWHERE(default, null) : Int;
 	
 	/**
 	* Mixed-directional text.
 	* @stable ICU 3.8
 	*/
-	public static var MIXED(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var MIXED(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* option bit for writeReordered():
@@ -150,22 +150,22 @@ extern class BidiBase
 	* @see #writeReordered
 	* @stable ICU 3.8
 	*/
-	public static var DO_MIRRORING(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var DO_MIRRORING(default, null) : java.StdTypes.Int16;
 	
 	/* if the option OPTION_STREAMING is set, this is the length of
 	* text actually processed by <code>setPara</code>, which may be shorter
 	* than the original length. Otherwise, it is identical to the original
 	* length.
 	*/
-	public var length : Int;
+	@:public public var length : Int;
 	
-	@:overload public function verifyValidPara() : Void;
+	@:overload @:public public function verifyValidPara() : Void;
 	
-	@:overload public function verifyValidParaOrLine() : Void;
+	@:overload @:public public function verifyValidParaOrLine() : Void;
 	
-	@:overload public function verifyRange(index : Int, start : Int, limit : Int) : Void;
+	@:overload @:public public function verifyRange(index : Int, start : Int, limit : Int) : Void;
 	
-	@:overload public function verifyIndex(index : Int, start : Int, limit : Int) : Void;
+	@:overload @:public public function verifyIndex(index : Int, start : Int, limit : Int) : Void;
 	
 	/**
 	* Allocate a <code>Bidi</code> object with preallocated memory
@@ -197,7 +197,7 @@ extern class BidiBase
 	* @throws IllegalArgumentException if maxLength or maxRunCount is less than 0
 	* @stable ICU 3.8
 	*/
-	@:overload public function new(maxLength : Int, maxRunCount : Int) : Void;
+	@:overload @:public public function new(maxLength : Int, maxRunCount : Int) : Void;
 	
 	/**
 	* Perform the Unicode Bidi algorithm. It is defined in the
@@ -274,7 +274,7 @@ extern class BidiBase
 	* @see #MAX_EXPLICIT_LEVEL
 	* @stable ICU 3.8
 	*/
-	@:overload public function setPara(chars : java.NativeArray<java.StdTypes.Char16>, paraLevel : java.StdTypes.Int8, embeddingLevels : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setPara(chars : java.NativeArray<java.StdTypes.Char16>, paraLevel : java.StdTypes.Int8, embeddingLevels : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Perform the Unicode Bidi algorithm on a given paragraph, as defined in the
@@ -316,7 +316,7 @@ extern class BidiBase
 	*        paragraph attribute information
 	* @stable ICU 3.8
 	*/
-	@:overload public function setPara(paragraph : java.text.AttributedCharacterIterator) : Void;
+	@:overload @:public public function setPara(paragraph : java.text.AttributedCharacterIterator) : Void;
 	
 	/**
 	* Get the length of the text.
@@ -328,7 +328,7 @@ extern class BidiBase
 	*         call to <code>setPara</code> or <code>setLine</code>
 	* @stable ICU 3.8
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Get the paragraph level of the text.
@@ -347,7 +347,7 @@ extern class BidiBase
 	* @see #getParagraphByIndex
 	* @stable ICU 3.8
 	*/
-	@:overload public function getParaLevel() : java.StdTypes.Int8;
+	@:overload @:public public function getParaLevel() : java.StdTypes.Int8;
 	
 	/**
 	* Get the index of a paragraph, given a position within the text.<p>
@@ -366,7 +366,7 @@ extern class BidiBase
 	* @see #getProcessedLength
 	* @stable ICU 3.8
 	*/
-	@:overload public function getParagraphIndex(charIndex : Int) : Int;
+	@:overload @:public public function getParagraphIndex(charIndex : Int) : Int;
 	
 	/**
 	* <code>setLine()</code> returns a <code>Bidi</code> object to
@@ -407,7 +407,7 @@ extern class BidiBase
 	* @see #getProcessedLength
 	* @stable ICU 3.8
 	*/
-	@:overload public function setLine(bidi : java.text.Bidi, bidiBase : sun.text.bidi.BidiBase, newBidi : java.text.Bidi, newBidiBase : sun.text.bidi.BidiBase, start : Int, limit : Int) : java.text.Bidi;
+	@:overload @:public public function setLine(bidi : java.text.Bidi, bidiBase : sun.text.bidi.BidiBase, newBidi : java.text.Bidi, newBidiBase : sun.text.bidi.BidiBase, start : Int, limit : Int) : java.text.Bidi;
 	
 	/**
 	* Get the level for one character.
@@ -424,7 +424,7 @@ extern class BidiBase
 	* @see #getProcessedLength
 	* @stable ICU 3.8
 	*/
-	@:overload public function getLevelAt(charIndex : Int) : java.StdTypes.Int8;
+	@:overload @:public public function getLevelAt(charIndex : Int) : java.StdTypes.Int8;
 	
 	/**
 	* Get the number of runs.
@@ -440,7 +440,7 @@ extern class BidiBase
 	*         call to <code>setPara</code> or <code>setLine</code>
 	* @stable ICU 3.8
 	*/
-	@:overload public function countRuns() : Int;
+	@:overload @:public public function countRuns() : Int;
 	
 	/**
 	* Create Bidi from the given text, embedding, and direction information.
@@ -476,7 +476,7 @@ extern class BidiBase
 	* @see #DIRECTION_DEFAULT_RIGHT_TO_LEFT
 	* @stable ICU 3.8
 	*/
-	@:overload public function new(text : java.NativeArray<java.StdTypes.Char16>, textStart : Int, embeddings : java.NativeArray<java.StdTypes.Int8>, embStart : Int, paragraphLength : Int, flags : Int) : Void;
+	@:overload @:public public function new(text : java.NativeArray<java.StdTypes.Char16>, textStart : Int, embeddings : java.NativeArray<java.StdTypes.Int8>, embStart : Int, paragraphLength : Int, flags : Int) : Void;
 	
 	/**
 	* Return true if the line is not left-to-right or right-to-left. This means
@@ -489,7 +489,7 @@ extern class BidiBase
 	*         call to <code>setPara</code>
 	* @stable ICU 3.8
 	*/
-	@:overload public function isMixed() : Bool;
+	@:overload @:public public function isMixed() : Bool;
 	
 	/**
 	* Return true if the line is all left-to-right text and the base direction
@@ -502,7 +502,7 @@ extern class BidiBase
 	*         call to <code>setPara</code>
 	* @stable ICU 3.8
 	*/
-	@:overload public function isLeftToRight() : Bool;
+	@:overload @:public public function isLeftToRight() : Bool;
 	
 	/**
 	* Return true if the line is all right-to-left text, and the base direction
@@ -515,7 +515,7 @@ extern class BidiBase
 	*         call to <code>setPara</code>
 	* @stable ICU 3.8
 	*/
-	@:overload public function isRightToLeft() : Bool;
+	@:overload @:public public function isRightToLeft() : Bool;
 	
 	/**
 	* Return true if the base direction is left-to-right
@@ -527,7 +527,7 @@ extern class BidiBase
 	*
 	* @stable ICU 3.8
 	*/
-	@:overload public function baseIsLeftToRight() : Bool;
+	@:overload @:public public function baseIsLeftToRight() : Bool;
 	
 	/**
 	* Return the base level (0 if left-to-right, 1 if right-to-left).
@@ -539,7 +539,7 @@ extern class BidiBase
 	*
 	* @stable ICU 3.8
 	*/
-	@:overload public function getBaseLevel() : Int;
+	@:overload @:public public function getBaseLevel() : Int;
 	
 	/**
 	* Return the level of the nth logical run in this line.
@@ -554,7 +554,7 @@ extern class BidiBase
 	*         the range <code>0&lt;=run&lt;countRuns()</code>
 	* @stable ICU 3.8
 	*/
-	@:overload public function getRunLevel(run : Int) : Int;
+	@:overload @:public public function getRunLevel(run : Int) : Int;
 	
 	/**
 	* Return the index of the character at the start of the nth logical run in
@@ -570,7 +570,7 @@ extern class BidiBase
 	*         the range <code>0&lt;=run&lt;countRuns()</code>
 	* @stable ICU 3.8
 	*/
-	@:overload public function getRunStart(run : Int) : Int;
+	@:overload @:public public function getRunStart(run : Int) : Int;
 	
 	/**
 	* Return the index of the character past the end of the nth logical run in
@@ -587,7 +587,7 @@ extern class BidiBase
 	*         the range <code>0&lt;=run&lt;countRuns()</code>
 	* @stable ICU 3.8
 	*/
-	@:overload public function getRunLimit(run : Int) : Int;
+	@:overload @:public public function getRunLimit(run : Int) : Int;
 	
 	/**
 	* Return true if the specified text requires bidi analysis. If this returns
@@ -604,7 +604,7 @@ extern class BidiBase
 	*
 	* @stable ICU 3.8
 	*/
-	@:overload public static function requiresBidi(text : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : Bool;
+	@:overload @:public @:static public static function requiresBidi(text : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : Bool;
 	
 	/**
 	* Reorder the objects in the array into visual order based on their levels.
@@ -623,12 +623,12 @@ extern class BidiBase
 	* @param count the number of objects to reorder
 	* @stable ICU 3.8
 	*/
-	@:overload public static function reorderVisually(levels : java.NativeArray<java.StdTypes.Int8>, levelStart : Int, objects : java.NativeArray<Dynamic>, objectStart : Int, count : Int) : Void;
+	@:overload @:public @:static public static function reorderVisually(levels : java.NativeArray<java.StdTypes.Int8>, levelStart : Int, objects : java.NativeArray<Dynamic>, objectStart : Int, count : Int) : Void;
 	
 	/**
 	* Display the bidi internal state, used in debugging.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

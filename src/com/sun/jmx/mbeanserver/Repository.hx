@@ -28,19 +28,19 @@ extern class Repository
 	/**
 	* Construct a new repository with the given default domain.
 	*/
-	@:overload public function new(domain : String) : Void;
+	@:overload @:public public function new(domain : String) : Void;
 	
 	/**
 	* Construct a new repository with the given default domain.
 	*/
-	@:overload public function new(domain : String, fairLock : Bool) : Void;
+	@:overload @:public public function new(domain : String, fairLock : Bool) : Void;
 	
 	/**
 	* Returns the list of domains in which any MBean is currently
 	* registered.
 	*
 	*/
-	@:overload public function getDomains() : java.NativeArray<String>;
+	@:overload @:public public function getDomains() : java.NativeArray<String>;
 	
 	/**
 	* Stores an MBean associated with its object name in the repository.
@@ -58,7 +58,7 @@ extern class Repository
 	*                repository, and a {@link RuntimeOperationsException}
 	*                is thrown.
 	*/
-	@:overload public function addMBean(object : javax.management.DynamicMBean, name : javax.management.ObjectName, context : com.sun.jmx.mbeanserver.Repository.Repository_RegistrationContext) : Void;
+	@:overload @:public public function addMBean(object : javax.management.DynamicMBean, name : javax.management.ObjectName, context : com.sun.jmx.mbeanserver.Repository.Repository_RegistrationContext) : Void;
 	
 	/**
 	* Checks whether an MBean of the name specified is already stored in
@@ -69,7 +69,7 @@ extern class Repository
 	* @return  true if the MBean is stored in the repository,
 	*          false otherwise.
 	*/
-	@:overload public function contains(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function contains(name : javax.management.ObjectName) : Bool;
 	
 	/**
 	* Retrieves the MBean of the name specified from the repository. The
@@ -80,7 +80,7 @@ extern class Repository
 	* @return  The retrieved MBean if it is contained in the repository,
 	*          null otherwise.
 	*/
-	@:overload public function retrieve(name : javax.management.ObjectName) : javax.management.DynamicMBean;
+	@:overload @:public public function retrieve(name : javax.management.ObjectName) : javax.management.DynamicMBean;
 	
 	/**
 	* Selects and retrieves the list of MBeans whose names match the specified
@@ -96,7 +96,7 @@ extern class Repository
 	* @return  The list of MBeans selected. There may be zero, one or many
 	*          MBeans returned in the set.
 	*/
-	@:overload public function query(pattern : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<com.sun.jmx.mbeanserver.NamedObject>;
+	@:overload @:public public function query(pattern : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<com.sun.jmx.mbeanserver.NamedObject>;
 	
 	/**
 	* Removes an MBean from the repository.
@@ -115,14 +115,14 @@ extern class Repository
 	* @exception InstanceNotFoundException The MBean does not exist in
 	*            the repository.
 	*/
-	@:overload public function remove(name : javax.management.ObjectName, context : com.sun.jmx.mbeanserver.Repository.Repository_RegistrationContext) : Void;
+	@:overload @:public public function remove(name : javax.management.ObjectName, context : com.sun.jmx.mbeanserver.Repository.Repository_RegistrationContext) : Void;
 	
 	/**
 	* Gets the number of MBeans stored in the repository.
 	*
 	* @return  Number of MBeans.
 	*/
-	@:overload public function getCount() : Null<Int>;
+	@:overload @:public public function getCount() : Null<Int>;
 	
 	/**
 	* Gets the name of the domain currently used by default in the
@@ -130,7 +130,7 @@ extern class Repository
 	*
 	* @return  A string giving the name of the default domain name.
 	*/
-	@:overload public function getDefaultDomain() : String;
+	@:overload @:public public function getDefaultDomain() : String;
 	
 	
 }
@@ -147,13 +147,13 @@ extern class Repository
 	* Can throw a RuntimeOperationsException to cancel the
 	* registration.
 	*/
-	@:overload public function registering() : Void;
+	@:overload @:public public function registering() : Void;
 	
 	/**
 	* Called by {@link #remove}.
 	* Any exception thrown by this method will be ignored.
 	*/
-	@:overload public function unregistered() : Void;
+	@:overload @:public public function unregistered() : Void;
 	
 	
 }
@@ -163,13 +163,13 @@ extern class Repository
 	/**
 	* The ObjectName pattern against which ObjectNames are matched.
 	**/
-	public var pattern(default, null) : javax.management.ObjectName;
+	@:public @:final public var pattern(default, null) : javax.management.ObjectName;
 	
 	/**
 	* Builds a new ObjectNamePattern object from an ObjectName pattern.
 	* @param pattern The ObjectName pattern under examination.
 	**/
-	@:overload public function new(pattern : javax.management.ObjectName) : Void;
+	@:overload @:public public function new(pattern : javax.management.ObjectName) : Void;
 	
 	/**
 	* Return true if the given ObjectName matches the ObjectName pattern
@@ -180,7 +180,7 @@ extern class Repository
 	* @param name The ObjectName we want to match against the pattern.
 	* @return true if <code>name</code> matches the pattern.
 	**/
-	@:overload public function matchKeys(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function matchKeys(name : javax.management.ObjectName) : Bool;
 	
 	
 }

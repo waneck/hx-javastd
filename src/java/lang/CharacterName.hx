@@ -25,7 +25,7 @@ package java.lang;
 */
 @:internal extern class CharacterName
 {
-	@:overload public static function get(cp : Int) : String;
+	@:overload @:public @:static public static function get(cp : Int) : String;
 	
 	
 }

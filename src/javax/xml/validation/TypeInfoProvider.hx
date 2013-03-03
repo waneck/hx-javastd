@@ -31,7 +31,7 @@ extern class TypeInfoProvider
 	* <p>
 	* The constructor does nothing.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* <p>Returns the immutable {@link TypeInfo} object for the current
@@ -67,7 +67,7 @@ extern class TypeInfoProvider
 	*      an earlier error.)
 	*
 	*/
-	@:overload @:abstract public function getElementTypeInfo() : org.w3c.dom.TypeInfo;
+	@:overload @:public @:abstract public function getElementTypeInfo() : org.w3c.dom.TypeInfo;
 	
 	/**
 	* Returns the immutable {@link TypeInfo} object for the specified
@@ -99,7 +99,7 @@ extern class TypeInfoProvider
 	*      null if the validator is unable to
 	*      determine the type.
 	*/
-	@:overload @:abstract public function getAttributeTypeInfo(index : Int) : org.w3c.dom.TypeInfo;
+	@:overload @:public @:abstract public function getAttributeTypeInfo(index : Int) : org.w3c.dom.TypeInfo;
 	
 	/**
 	* Returns <code>true</code> if the specified attribute is determined
@@ -134,7 +134,7 @@ extern class TypeInfoProvider
 	* @return true
 	*      if the type of the specified attribute is ID.
 	*/
-	@:overload @:abstract public function isIdAttribute(index : Int) : Bool;
+	@:overload @:public @:abstract public function isIdAttribute(index : Int) : Bool;
 	
 	/**
 	* Returns <code>false</code> if the attribute was added by the validator.
@@ -170,7 +170,7 @@ extern class TypeInfoProvider
 	*      processes input. <code>false</code> if the attribute was added
 	*      by the validator.
 	*/
-	@:overload @:abstract public function isSpecified(index : Int) : Bool;
+	@:overload @:public @:abstract public function isSpecified(index : Int) : Bool;
 	
 	
 }

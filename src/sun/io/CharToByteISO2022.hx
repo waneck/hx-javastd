@@ -28,22 +28,24 @@ package sun.io;
 */
 extern class CharToByteISO2022 extends sun.io.CharToByteConverter
 {
-	private var maximumDesignatorLength(default, null) : java.StdTypes.Int8;
+	@:protected @:final private var maximumDesignatorLength(default, null) : java.StdTypes.Int8;
 	
-	private var SODesignator : String;
+	@:protected private var SODesignator : String;
 	
-	private var codeConverter : sun.io.CharToByteConverter;
+	@:protected private var SS2Designator : String;
 	
-	@:overload override public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
+	@:protected private var codeConverter : sun.io.CharToByteConverter;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
 	
-	@:overload override public function canConvert(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function reset() : Void;
+	
+	@:overload @:public override public function canConvert(ch : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Character conversion
 	*/
-	@:overload override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outOff : Int, outEnd : Int) : Int;
+	@:overload @:public override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outOff : Int, outEnd : Int) : Int;
 	
 	
 }

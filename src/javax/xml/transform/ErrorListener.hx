@@ -69,7 +69,7 @@ extern interface ErrorListener
 	*
 	* @see javax.xml.transform.TransformerException
 	*/
-	@:overload @:abstract public function warning(exception : javax.xml.transform.TransformerException) : Void;
+	@:overload @:public @:abstract public function warning(exception : javax.xml.transform.TransformerException) : Void;
 	
 	/**
 	* Receive notification of a recoverable error.
@@ -87,7 +87,7 @@ extern interface ErrorListener
 	*
 	* @see javax.xml.transform.TransformerException
 	*/
-	@:overload @:abstract public function error(exception : javax.xml.transform.TransformerException) : Void;
+	@:overload @:public @:abstract public function error(exception : javax.xml.transform.TransformerException) : Void;
 	
 	/**
 	* <p>Receive notification of a non-recoverable error.</p>
@@ -108,7 +108,7 @@ extern interface ErrorListener
 	*
 	* @see javax.xml.transform.TransformerException
 	*/
-	@:overload @:abstract public function fatalError(exception : javax.xml.transform.TransformerException) : Void;
+	@:overload @:public @:abstract public function fatalError(exception : javax.xml.transform.TransformerException) : Void;
 	
 	
 }

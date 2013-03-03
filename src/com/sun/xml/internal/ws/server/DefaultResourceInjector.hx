@@ -31,7 +31,7 @@ extern class DefaultResourceInjector extends com.sun.xml.internal.ws.api.server.
 	* @see ResourceInjector#STANDALONE
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function inject(context : com.sun.xml.internal.ws.api.server.WSWebServiceContext, instance : Dynamic) : Void;
+	@:overload @:public override public function inject(context : com.sun.xml.internal.ws.api.server.WSWebServiceContext, instance : Dynamic) : Void;
 	
 	
 }

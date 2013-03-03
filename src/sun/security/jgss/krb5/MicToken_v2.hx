@@ -34,23 +34,23 @@ package sun.security.jgss.krb5;
 	*
 	* @author Seema Malkani
 	*/
-	@:overload public function new(context : sun.security.jgss.krb5.Krb5Context, tokenBytes : java.NativeArray<java.StdTypes.Int8>, tokenOffset : Int, tokenLen : Int, prop : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public public function new(context : sun.security.jgss.krb5.Krb5Context, tokenBytes : java.NativeArray<java.StdTypes.Int8>, tokenOffset : Int, tokenLen : Int, prop : org.ietf.jgss.MessageProp) : Void;
 	
-	@:overload public function new(context : sun.security.jgss.krb5.Krb5Context, is : java.io.InputStream, prop : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public public function new(context : sun.security.jgss.krb5.Krb5Context, is : java.io.InputStream, prop : org.ietf.jgss.MessageProp) : Void;
 	
-	@:overload public function verify(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:public public function verify(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
-	@:overload public function verify(data : java.io.InputStream) : Void;
+	@:overload @:public public function verify(data : java.io.InputStream) : Void;
 	
-	@:overload public function new(context : sun.security.jgss.krb5.Krb5Context, prop : org.ietf.jgss.MessageProp, data : java.NativeArray<java.StdTypes.Int8>, pos : Int, len : Int) : Void;
+	@:overload @:public public function new(context : sun.security.jgss.krb5.Krb5Context, prop : org.ietf.jgss.MessageProp, data : java.NativeArray<java.StdTypes.Int8>, pos : Int, len : Int) : Void;
 	
-	@:overload public function new(context : sun.security.jgss.krb5.Krb5Context, prop : org.ietf.jgss.MessageProp, data : java.io.InputStream) : Void;
+	@:overload @:public public function new(context : sun.security.jgss.krb5.Krb5Context, prop : org.ietf.jgss.MessageProp, data : java.io.InputStream) : Void;
 	
-	@:overload public function encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function encode() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function encode(outToken : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Int;
+	@:overload @:public public function encode(outToken : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Int;
 	
-	@:overload public function encode(os : java.io.OutputStream) : Void;
+	@:overload @:public override public function encode(os : java.io.OutputStream) : Void;
 	
 	
 }

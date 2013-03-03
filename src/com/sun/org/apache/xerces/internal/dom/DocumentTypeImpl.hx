@@ -21,28 +21,28 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class DocumentTypeImpl extends com.sun.org.apache.xerces.internal.dom.ParentNode implements org.w3c.dom.DocumentType
 {
 	/** Document type name. */
-	private var name : String;
+	@:protected private var name : String;
 	
 	/** Entities. */
-	private var entities : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl;
+	@:protected private var entities : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl;
 	
 	/** Notations. */
-	private var notations : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl;
+	@:protected private var notations : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl;
 	
 	/** Elements. */
-	private var elements : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl;
+	@:protected private var elements : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl;
 	
-	private var publicID : String;
+	@:protected private var publicID : String;
 	
-	private var systemID : String;
+	@:protected private var systemID : String;
 	
-	private var internalSubset : String;
-	
-	/** Factory method for creating a document type node. */
-	@:overload public function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, name : String) : Void;
+	@:protected private var internalSubset : String;
 	
 	/** Factory method for creating a document type node. */
-	@:overload public function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, qualifiedName : String, publicID : String, systemID : String) : Void;
+	@:overload @:public public function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, name : String) : Void;
+	
+	/** Factory method for creating a document type node. */
+	@:overload @:public public function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, qualifiedName : String, publicID : String, systemID : String) : Void;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -50,7 +50,7 @@ extern class DocumentTypeImpl extends com.sun.org.apache.xerces.internal.dom.Par
 	* Return the public identifier of this Document type.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -58,14 +58,14 @@ extern class DocumentTypeImpl extends com.sun.org.apache.xerces.internal.dom.Par
 	* Return the system identifier of this Document type.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* NON-DOM. <p>
 	*
 	* Set the internalSubset given as a string.
 	*/
-	@:overload public function setInternalSubset(internalSubset : String) : Void;
+	@:overload @:public public function setInternalSubset(internalSubset : String) : Void;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -73,50 +73,50 @@ extern class DocumentTypeImpl extends com.sun.org.apache.xerces.internal.dom.Par
 	* Return the internalSubset given as a string.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function getInternalSubset() : String;
+	@:overload @:public public function getInternalSubset() : String;
 	
 	/**
 	* A short integer indicating what type of node this is. The named
 	* constants for this value are defined in the org.w3c.dom.Node interface.
 	*/
-	@:overload override public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public override public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the document type name
 	*/
-	@:overload override public function getNodeName() : String;
+	@:overload @:public override public function getNodeName() : String;
 	
 	/** Clones the node. */
-	@:overload override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/*
 	* Get Node text content
 	* @since DOM Level 3
 	*/
-	@:overload override public function getTextContent() : String;
+	@:overload @:public override public function getTextContent() : String;
 	
 	/*
 	* Set Node text content
 	* @since DOM Level 3
 	*/
-	@:overload override public function setTextContent(textContent : String) : Void;
+	@:overload @:public override public function setTextContent(textContent : String) : Void;
 	
 	/**
 	* DOM Level 3 WD- Experimental.
 	* Override inherited behavior from ParentNodeImpl to support deep equal.
 	*/
-	@:overload override public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
+	@:overload @:public override public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
 	
 	/** NON-DOM
 	Get the number associated with this doctype.
 	*/
-	@:overload override private function getNodeNumber() : Int;
+	@:overload @:protected override private function getNodeNumber() : Int;
 	
 	/**
 	* Name of this document type. If we loaded from a DTD, this should
 	* be the name immediately following the DOCTYPE keyword.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Access the collection of general Entities, both external and
@@ -140,33 +140,33 @@ extern class DocumentTypeImpl extends com.sun.org.apache.xerces.internal.dom.Par
 	* contained text, and should be converted back when the DOM is rendered
 	* as XML or HTML, and hence DO NOT appear here.
 	*/
-	@:overload public function getEntities() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public public function getEntities() : org.w3c.dom.NamedNodeMap;
 	
 	/**
 	* Access the collection of Notations defined in the DTD.  A
 	* notation declares, by name, the format of an XML unparsed entity
 	* or is used to formally declare a Processing Instruction target.
 	*/
-	@:overload public function getNotations() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public public function getNotations() : org.w3c.dom.NamedNodeMap;
 	
 	/**
 	* NON-DOM: Subclassed to flip the entities' and notations' readonly switch
 	* as well.
 	* @see NodeImpl#setReadOnly
 	*/
-	@:overload override public function setReadOnly(readOnly : Bool, deep : Bool) : Void;
+	@:overload @:public override public function setReadOnly(readOnly : Bool, deep : Bool) : Void;
 	
 	/**
 	* NON-DOM: Access the collection of ElementDefinitions.
 	* @see ElementDefinitionImpl
 	*/
-	@:overload public function getElements() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public public function getElements() : org.w3c.dom.NamedNodeMap;
 	
-	@:overload override public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
+	@:overload @:public override public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
 	
-	@:overload override public function getUserData(key : String) : Dynamic;
+	@:overload @:public override public function getUserData(key : String) : Dynamic;
 	
-	@:overload override private function getUserDataRecord() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:protected override private function getUserDataRecord() : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	
 }

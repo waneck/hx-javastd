@@ -31,7 +31,7 @@ extern interface HierarchyListener extends java.util.EventListener
 	*
 	* @see HierarchyEvent#getChangeFlags()
 	*/
-	@:overload public function hierarchyChanged(e : java.awt.event.HierarchyEvent) : Void;
+	@:overload @:public public function hierarchyChanged(e : java.awt.event.HierarchyEvent) : Void;
 	
 	
 }

@@ -35,20 +35,20 @@ extern class XMLAttributesIteratorImpl extends com.sun.org.apache.xerces.interna
 	* Should we change XMLAttributes interface to implement Iteraotr ? I think its better avoid touching XNI as
 	* much as possible. - NB.
 	*/
-	private var fCurrent : Int;
+	@:protected private var fCurrent : Int;
 	
-	private var fLastReturnedItem : com.sun.org.apache.xerces.internal.util.XMLAttributesImpl.XMLAttributesImpl_Attribute;
+	@:protected private var fLastReturnedItem : com.sun.org.apache.xerces.internal.util.XMLAttributesImpl.XMLAttributesImpl_Attribute;
 	
 	/** Creates a new instance of XMLAttributesIteratorImpl */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
-	@:overload override public function removeAllAttributes() : Void;
+	@:overload @:public override public function removeAllAttributes() : Void;
 	
 	
 }

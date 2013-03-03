@@ -32,7 +32,7 @@ extern class MBeanFeatureInfo implements java.io.Serializable implements javax.m
 	*
 	* @serial The name of the feature.
 	*/
-	private var name : String;
+	@:protected private var name : String;
 	
 	/**
 	* The human-readable description of the feature.  It is
@@ -41,7 +41,7 @@ extern class MBeanFeatureInfo implements java.io.Serializable implements javax.m
 	*
 	* @serial The human-readable description of the feature.
 	*/
-	private var description : String;
+	@:protected private var description : String;
 	
 	/**
 	* Constructs an <CODE>MBeanFeatureInfo</CODE> object.  This
@@ -51,7 +51,7 @@ extern class MBeanFeatureInfo implements java.io.Serializable implements javax.m
 	* @param name The name of the feature.
 	* @param description A human readable description of the feature.
 	*/
-	@:overload public function new(name : String, description : String) : Void;
+	@:overload @:public public function new(name : String, description : String) : Void;
 	
 	/**
 	* Constructs an <CODE>MBeanFeatureInfo</CODE> object.
@@ -63,21 +63,21 @@ extern class MBeanFeatureInfo implements java.io.Serializable implements javax.m
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(name : String, description : String, descriptor : javax.management.Descriptor) : Void;
+	@:require(java6) @:overload @:public public function new(name : String, description : String, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Returns the name of the feature.
 	*
 	* @return the name of the feature.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the human-readable description of the feature.
 	*
 	* @return the human-readable description of the feature.
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	/**
 	* Returns the descriptor for the feature.  Changing the returned value
@@ -87,7 +87,7 @@ extern class MBeanFeatureInfo implements java.io.Serializable implements javax.m
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getDescriptor() : javax.management.Descriptor;
+	@:require(java6) @:overload @:public public function getDescriptor() : javax.management.Descriptor;
 	
 	/**
 	* Compare this MBeanFeatureInfo to another.
@@ -100,9 +100,9 @@ extern class MBeanFeatureInfo implements java.io.Serializable implements javax.m
 	* values are equal (not necessarily identical) to those of this
 	* MBeanFeatureInfo.
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

@@ -30,7 +30,7 @@ extern class Adapter<TypeT, ClassDeclT>
 	*
 	* A class that derives from {@link javax.xml.bind.annotation.adapters.XmlAdapter}.
 	*/
-	public var adapterType(default, null) : ClassDeclT;
+	@:public @:final public var adapterType(default, null) : ClassDeclT;
 	
 	/**
 	* The type that the JAXB can handle natively.
@@ -38,17 +38,17 @@ extern class Adapter<TypeT, ClassDeclT>
 	*
 	* Always non-null.
 	*/
-	public var defaultType(default, null) : TypeT;
+	@:public @:final public var defaultType(default, null) : TypeT;
 	
 	/**
 	* The type that is stored in memory.
 	* The <tt>Custom</tt> parameter of <tt>XmlAdapter&lt;Default,Custom></tt>.
 	*/
-	public var customType(default, null) : TypeT;
+	@:public @:final public var customType(default, null) : TypeT;
 	
-	@:overload public function new(spec : javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter, reader : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<TypeT, ClassDeclT, Dynamic, Dynamic>, nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<TypeT, ClassDeclT, Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(spec : javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter, reader : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<TypeT, ClassDeclT, Dynamic, Dynamic>, nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<TypeT, ClassDeclT, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function new(adapterType : ClassDeclT, nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<TypeT, ClassDeclT, Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(adapterType : ClassDeclT, nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<TypeT, ClassDeclT, Dynamic, Dynamic>) : Void;
 	
 	
 }

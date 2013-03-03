@@ -26,27 +26,27 @@ package java.nio;
 //// -- This file was mechanically generated: Do not edit! -- //
 @:internal extern class DirectIntBufferRS extends java.nio.DirectIntBufferS implements sun.nio.ch.DirectBuffer
 {
-	@:overload public function slice() : java.nio.IntBuffer;
+	@:overload @:public override public function slice() : java.nio.IntBuffer;
 	
-	@:overload public function duplicate() : java.nio.IntBuffer;
+	@:overload @:public override public function duplicate() : java.nio.IntBuffer;
 	
-	@:overload public function asReadOnlyBuffer() : java.nio.IntBuffer;
+	@:overload @:public override public function asReadOnlyBuffer() : java.nio.IntBuffer;
 	
-	@:overload public function put(x : Int) : java.nio.IntBuffer;
+	@:overload @:public override public function put(x : Int) : java.nio.IntBuffer;
 	
-	@:overload public function put(i : Int, x : Int) : java.nio.IntBuffer;
+	@:overload @:public override public function put(i : Int, x : Int) : java.nio.IntBuffer;
 	
-	@:overload public function put(src : java.nio.IntBuffer) : java.nio.IntBuffer;
+	@:overload @:public override public function put(src : java.nio.IntBuffer) : java.nio.IntBuffer;
 	
-	@:overload public function put(src : java.NativeArray<Int>, offset : Int, length : Int) : java.nio.IntBuffer;
+	@:overload @:public override public function put(src : java.NativeArray<Int>, offset : Int, length : Int) : java.nio.IntBuffer;
 	
-	@:overload public function compact() : java.nio.IntBuffer;
+	@:overload @:public override public function compact() : java.nio.IntBuffer;
 	
-	@:overload public function isDirect() : Bool;
+	@:overload @:public override public function isDirect() : Bool;
 	
-	@:overload public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload public function order() : java.nio.ByteOrder;
+	@:overload @:public override public function order() : java.nio.ByteOrder;
 	
 	
 }

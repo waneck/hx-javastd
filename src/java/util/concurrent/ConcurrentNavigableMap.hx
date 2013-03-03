@@ -122,7 +122,7 @@ package java.util.concurrent;
 	*
 	* @return a navigable set view of the keys in this map
 	*/
-	@:overload public function navigableKeySet() : java.util.NavigableSet<K>;
+	@:overload @:public public function navigableKeySet() : java.util.NavigableSet<K>;
 	
 	/**
 	* Returns a {@link NavigableSet} view of the keys contained in this map.
@@ -166,7 +166,7 @@ package java.util.concurrent;
 	*
 	* @return a reverse order navigable set view of the keys in this map
 	*/
-	@:overload public function descendingKeySet() : java.util.NavigableSet<K>;
+	@:overload @:public public function descendingKeySet() : java.util.NavigableSet<K>;
 	
 	
 }

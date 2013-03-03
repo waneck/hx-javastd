@@ -30,15 +30,15 @@ package com.sun.org.glassfish.external.amx;
 */
 extern class MBeanListener<T> implements javax.management.NotificationListener
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getMBeanServer() : javax.management.MBeanServerConnection;
+	@:overload @:public public function getMBeanServer() : javax.management.MBeanServerConnection;
 	
-	@:overload public function getCallback() : T;
+	@:overload @:public public function getCallback() : T;
 	
 	/**
 	* Listener for a specific MBean.
@@ -47,7 +47,7 @@ extern class MBeanListener<T> implements javax.management.NotificationListener
 	* @param objectName
 	* @param callback
 	*/
-	@:overload public function new(server : javax.management.MBeanServerConnection, objectName : javax.management.ObjectName, _callback : T) : Void;
+	@:overload @:public public function new(server : javax.management.MBeanServerConnection, objectName : javax.management.ObjectName, _callback : T) : Void;
 	
 	/**
 	* Listener for all MBeans of specified type, with or without a name.
@@ -56,7 +56,7 @@ extern class MBeanListener<T> implements javax.management.NotificationListener
 	* @param type type of the MBean (as found in the ObjectName)
 	* @param callback
 	*/
-	@:overload public function new(server : javax.management.MBeanServerConnection, domain : String, type : String, _callback : T) : Void;
+	@:overload @:public public function new(server : javax.management.MBeanServerConnection, domain : String, type : String, _callback : T) : Void;
 	
 	/**
 	* Listener for MBeans of specified type, with specified name (or any name
@@ -67,28 +67,28 @@ extern class MBeanListener<T> implements javax.management.NotificationListener
 	* @param name name of the MBean, or null if none
 	* @param callback
 	*/
-	@:overload public function new(server : javax.management.MBeanServerConnection, domain : String, type : String, name : String, _callback : T) : Void;
+	@:overload @:public public function new(server : javax.management.MBeanServerConnection, domain : String, type : String, name : String, _callback : T) : Void;
 	
 	/**
 	Start listening.  If the required MBean(s) are already present, the callback
 	will be synchronously made before returning.  It is also possible that the
 	callback could happen twice for the same MBean.
 	*/
-	@:overload public function startListening() : Void;
+	@:overload @:public public function startListening() : Void;
 	
 	/** unregister the listener */
-	@:overload public function stopListening() : Void;
+	@:overload @:public public function stopListening() : Void;
 	
-	@:overload public function handleNotification(notifIn : javax.management.Notification, handback : Dynamic) : Void;
+	@:overload @:public public function handleNotification(notifIn : javax.management.Notification, handback : Dynamic) : Void;
 	
 	
 }
 /** Callback interface.  */
 @:native('com$sun$org$glassfish$external$amx$MBeanListener$Callback') extern interface MBeanListener_Callback
 {
-	@:overload public function mbeanRegistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
+	@:overload @:public public function mbeanRegistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
 	
-	@:overload public function mbeanUnregistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
+	@:overload @:public public function mbeanUnregistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
 	
 	
 }
@@ -98,25 +98,25 @@ Remembers only the last MBean that was seen.
 */
 @:native('com$sun$org$glassfish$external$amx$MBeanListener$CallbackImpl') extern class MBeanListener_CallbackImpl implements com.sun.org.glassfish.external.amx.MBeanListener.MBeanListener_Callback
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(stopAtFirst : Bool) : Void;
+	@:overload @:public public function new(stopAtFirst : Bool) : Void;
 	
-	@:overload public function getRegistered() : javax.management.ObjectName;
+	@:overload @:public public function getRegistered() : javax.management.ObjectName;
 	
-	@:overload public function getUnregistered() : javax.management.ObjectName;
+	@:overload @:public public function getUnregistered() : javax.management.ObjectName;
 	
-	private var mLatch(default, null) : java.util.concurrent.CountDownLatch;
+	@:protected @:final private var mLatch(default, null) : java.util.concurrent.CountDownLatch;
 	
 	/** Optional: wait for the CountDownLatch to fire
 	If used, the subclass should countDown() the latch when the
 	appropriate event happens
 	*/
-	@:overload public function await() : Void;
+	@:overload @:public public function await() : Void;
 	
-	@:overload public function mbeanRegistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
+	@:overload @:public public function mbeanRegistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
 	
-	@:overload public function mbeanUnregistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
+	@:overload @:public public function mbeanUnregistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
 	
 	
 }

@@ -34,7 +34,7 @@ extern class Point extends java.awt.geom.Point2D implements java.io.Serializable
 	* @see #move(int, int)
 	* @since 1.0
 	*/
-	@:require(java0) public var x : Int;
+	@:require(java0) @:public public var x : Int;
 	
 	/**
 	* The Y coordinate of this <code>Point</code>.
@@ -45,14 +45,14 @@ extern class Point extends java.awt.geom.Point2D implements java.io.Serializable
 	* @see #move(int, int)
 	* @since 1.0
 	*/
-	@:require(java0) public var y : Int;
+	@:require(java0) @:public public var y : Int;
 	
 	/**
 	* Constructs and initializes a point at the origin
 	* (0,&nbsp;0) of the coordinate space.
 	* @since       1.1
 	*/
-	@:require(java1) @:overload public function new() : Void;
+	@:require(java1) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs and initializes a point with the same location as
@@ -60,7 +60,7 @@ extern class Point extends java.awt.geom.Point2D implements java.io.Serializable
 	* @param       p a point
 	* @since       1.1
 	*/
-	@:require(java1) @:overload public function new(p : java.awt.Point) : Void;
+	@:require(java1) @:overload @:public public function new(p : java.awt.Point) : Void;
 	
 	/**
 	* Constructs and initializes a point at the specified
@@ -69,19 +69,19 @@ extern class Point extends java.awt.geom.Point2D implements java.io.Serializable
 	* @param y the Y coordinate of the newly constructed <code>Point</code>
 	* @since 1.0
 	*/
-	@:require(java0) @:overload public function new(x : Int, y : Int) : Void;
+	@:require(java0) @:overload @:public public function new(x : Int, y : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX() : Float;
+	@:require(java2) @:overload @:public override public function getX() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY() : Float;
+	@:require(java2) @:overload @:public override public function getY() : Float;
 	
 	/**
 	* Returns the location of this point.
@@ -93,7 +93,7 @@ extern class Point extends java.awt.geom.Point2D implements java.io.Serializable
 	* @see         java.awt.Point#setLocation(int, int)
 	* @since       1.1
 	*/
-	@:require(java1) @:overload public function getLocation() : java.awt.Point;
+	@:require(java1) @:overload @:public public function getLocation() : java.awt.Point;
 	
 	/**
 	* Sets the location of the point to the specified location.
@@ -104,7 +104,7 @@ extern class Point extends java.awt.geom.Point2D implements java.io.Serializable
 	* @see         java.awt.Point#getLocation
 	* @since       1.1
 	*/
-	@:require(java1) @:overload public function setLocation(p : java.awt.Point) : Void;
+	@:require(java1) @:overload @:public public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* Changes the point to have the specified location.
@@ -119,7 +119,7 @@ extern class Point extends java.awt.geom.Point2D implements java.io.Serializable
 	* @see         java.awt.Point#move(int, int)
 	* @since       1.1
 	*/
-	@:require(java1) @:overload public function setLocation(x : Int, y : Int) : Void;
+	@:require(java1) @:overload @:public public function setLocation(x : Int, y : Int) : Void;
 	
 	/**
 	* Sets the location of this point to the specified double coordinates.
@@ -133,7 +133,7 @@ extern class Point extends java.awt.geom.Point2D implements java.io.Serializable
 	* @param y the Y coordinate of the new location
 	* @see #getLocation
 	*/
-	@:overload override public function setLocation(x : Float, y : Float) : Void;
+	@:overload @:public override public function setLocation(x : Float, y : Float) : Void;
 	
 	/**
 	* Moves this point to the specified location in the
@@ -143,7 +143,7 @@ extern class Point extends java.awt.geom.Point2D implements java.io.Serializable
 	* @param       y the Y coordinate of the new location
 	* @see         java.awt.Component#setLocation(int, int)
 	*/
-	@:overload public function move(x : Int, y : Int) : Void;
+	@:overload @:public public function move(x : Int, y : Int) : Void;
 	
 	/**
 	* Translates this point, at location {@code (x,y)},
@@ -156,7 +156,7 @@ extern class Point extends java.awt.geom.Point2D implements java.io.Serializable
 	* @param       dy    the distance to move this point
 	*                            along the Y axis
 	*/
-	@:overload public function translate(dx : Int, dy : Int) : Void;
+	@:overload @:public public function translate(dx : Int, dy : Int) : Void;
 	
 	/**
 	* Determines whether or not two points are equal. Two instances of
@@ -168,7 +168,7 @@ extern class Point extends java.awt.geom.Point2D implements java.io.Serializable
 	*         an instance of <code>Point2D</code> and has
 	*         the same values; <code>false</code> otherwise.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a string representation of this point and its location
@@ -179,7 +179,7 @@ extern class Point extends java.awt.geom.Point2D implements java.io.Serializable
 	*
 	* @return  a string representation of this point
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -42,7 +42,7 @@ package org.omg.CORBA;
 */
 extern interface PUBLIC_MEMBER
 {
-	public var value(default, null) : java.StdTypes.Int16;
+	@:final public var value(default, null) : java.StdTypes.Int16;
 	
 	
 }

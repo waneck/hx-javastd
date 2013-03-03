@@ -21,7 +21,7 @@ package com.sun.org.apache.xerces.internal.util;
 extern class XMLEntityDescriptionImpl extends com.sun.org.apache.xerces.internal.util.XMLResourceIdentifierImpl implements com.sun.org.apache.xerces.internal.impl.XMLEntityDescription
 {
 	/** Constructs an empty entity description. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an entity description.
@@ -32,7 +32,7 @@ extern class XMLEntityDescriptionImpl extends com.sun.org.apache.xerces.internal
 	* @param baseSystemId The base system identifier.
 	* @param expandedSystemId The expanded system identifier.
 	*/
-	@:overload public function new(entityName : String, publicId : String, literalSystemId : String, baseSystemId : String, expandedSystemId : String) : Void;
+	@:overload @:public public function new(entityName : String, publicId : String, literalSystemId : String, baseSystemId : String, expandedSystemId : String) : Void;
 	
 	/**
 	* Constructs a resource identifier.
@@ -44,24 +44,24 @@ extern class XMLEntityDescriptionImpl extends com.sun.org.apache.xerces.internal
 	* @param expandedSystemId The expanded system identifier.
 	* @param namespace The namespace.
 	*/
-	@:overload public function new(entityName : String, publicId : String, literalSystemId : String, baseSystemId : String, expandedSystemId : String, namespace : String) : Void;
+	@:overload @:public public function new(entityName : String, publicId : String, literalSystemId : String, baseSystemId : String, expandedSystemId : String, namespace : String) : Void;
 	
 	/** The name of the entity. */
-	private var fEntityName : String;
+	@:protected private var fEntityName : String;
 	
 	/**
 	* Sets the name of the entity.
 	*
 	* @param name the name of the entity
 	*/
-	@:overload public function setEntityName(name : String) : Void;
+	@:overload @:public public function setEntityName(name : String) : Void;
 	
 	/**
 	* Returns the name of the entity.
 	*
 	* @return the name of the entity
 	*/
-	@:overload public function getEntityName() : String;
+	@:overload @:public public function getEntityName() : String;
 	
 	/**
 	* <p>Sets the values of this entity description.</p>
@@ -72,7 +72,7 @@ extern class XMLEntityDescriptionImpl extends com.sun.org.apache.xerces.internal
 	* @param baseSystemId The base system identifier.
 	* @param expandedSystemId The expanded system identifier.
 	*/
-	@:overload public function setDescription(entityName : String, publicId : String, literalSystemId : String, baseSystemId : String, expandedSystemId : String) : Void;
+	@:overload @:public public function setDescription(entityName : String, publicId : String, literalSystemId : String, baseSystemId : String, expandedSystemId : String) : Void;
 	
 	/**
 	* <p>Sets the values of this entity description.</p>
@@ -84,18 +84,18 @@ extern class XMLEntityDescriptionImpl extends com.sun.org.apache.xerces.internal
 	* @param expandedSystemId The expanded system identifier.
 	* @param namespace The namespace.
 	*/
-	@:overload public function setDescription(entityName : String, publicId : String, literalSystemId : String, baseSystemId : String, expandedSystemId : String, namespace : String) : Void;
+	@:overload @:public public function setDescription(entityName : String, publicId : String, literalSystemId : String, baseSystemId : String, expandedSystemId : String, namespace : String) : Void;
 	
 	/**
 	* <p>Clears the values.</p>
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/** Returns a hash code for this object. */
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/** Returns a string representation of this object. */
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

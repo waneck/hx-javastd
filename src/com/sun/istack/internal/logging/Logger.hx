@@ -28,7 +28,7 @@ extern class Logger
 	/**
 	* Prevents creation of a new instance of this Logger unless used by a subclass.
 	*/
-	@:overload private function new(systemLoggerName : String, componentName : String) : Void;
+	@:overload @:protected private function new(systemLoggerName : String, componentName : String) : Void;
 	
 	/**
 	* <p>
@@ -45,7 +45,7 @@ extern class Logger
 	* @return logger instance preconfigured for use with the component
 	* @throws NullPointerException if the componentClass parameter is {@code null}.
 	*/
-	@:overload public static function getLogger(componentClass : Class<Dynamic>) : com.sun.istack.internal.logging.Logger;
+	@:overload @:public @:static public static function getLogger(componentClass : Class<Dynamic>) : com.sun.istack.internal.logging.Logger;
 	
 	/**
 	* The factory method returns preconfigured Logger wrapper for the class. Since there is no caching implemented,
@@ -63,53 +63,53 @@ extern class Logger
 	*
 	* @see #getLogger(java.lang.Class)
 	*/
-	@:overload public static function getLogger(customLoggerName : String, componentClass : Class<Dynamic>) : com.sun.istack.internal.logging.Logger;
+	@:overload @:public @:static public static function getLogger(customLoggerName : String, componentClass : Class<Dynamic>) : com.sun.istack.internal.logging.Logger;
 	
-	@:overload public function log(level : java.util.logging.Level, message : String) : Void;
+	@:overload @:public public function log(level : java.util.logging.Level, message : String) : Void;
 	
-	@:overload public function log(level : java.util.logging.Level, message : String, thrown : java.lang.Throwable) : Void;
+	@:overload @:public public function log(level : java.util.logging.Level, message : String, thrown : java.lang.Throwable) : Void;
 	
-	@:overload public function finest(message : String) : Void;
+	@:overload @:public public function finest(message : String) : Void;
 	
-	@:overload public function finest(message : String, thrown : java.lang.Throwable) : Void;
+	@:overload @:public public function finest(message : String, thrown : java.lang.Throwable) : Void;
 	
-	@:overload public function finer(message : String) : Void;
+	@:overload @:public public function finer(message : String) : Void;
 	
-	@:overload public function finer(message : String, thrown : java.lang.Throwable) : Void;
+	@:overload @:public public function finer(message : String, thrown : java.lang.Throwable) : Void;
 	
-	@:overload public function fine(message : String) : Void;
+	@:overload @:public public function fine(message : String) : Void;
 	
-	@:overload public function fine(message : String, thrown : java.lang.Throwable) : Void;
+	@:overload @:public public function fine(message : String, thrown : java.lang.Throwable) : Void;
 	
-	@:overload public function info(message : String) : Void;
+	@:overload @:public public function info(message : String) : Void;
 	
-	@:overload public function info(message : String, thrown : java.lang.Throwable) : Void;
+	@:overload @:public public function info(message : String, thrown : java.lang.Throwable) : Void;
 	
-	@:overload public function config(message : String) : Void;
+	@:overload @:public public function config(message : String) : Void;
 	
-	@:overload public function config(message : String, thrown : java.lang.Throwable) : Void;
+	@:overload @:public public function config(message : String, thrown : java.lang.Throwable) : Void;
 	
-	@:overload public function warning(message : String) : Void;
+	@:overload @:public public function warning(message : String) : Void;
 	
-	@:overload public function warning(message : String, thrown : java.lang.Throwable) : Void;
+	@:overload @:public public function warning(message : String, thrown : java.lang.Throwable) : Void;
 	
-	@:overload public function severe(message : String) : Void;
+	@:overload @:public public function severe(message : String) : Void;
 	
-	@:overload public function severe(message : String, thrown : java.lang.Throwable) : Void;
+	@:overload @:public public function severe(message : String, thrown : java.lang.Throwable) : Void;
 	
-	@:overload public function isMethodCallLoggable() : Bool;
+	@:overload @:public public function isMethodCallLoggable() : Bool;
 	
-	@:overload public function isLoggable(level : java.util.logging.Level) : Bool;
+	@:overload @:public public function isLoggable(level : java.util.logging.Level) : Bool;
 	
-	@:overload public function setLevel(level : java.util.logging.Level) : Void;
+	@:overload @:public public function setLevel(level : java.util.logging.Level) : Void;
 	
-	@:overload public function entering() : Void;
+	@:overload @:public public function entering() : Void;
 	
-	@:overload public function entering(parameters : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function entering(parameters : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function exiting() : Void;
+	@:overload @:public public function exiting() : Void;
 	
-	@:overload public function exiting(result : Dynamic) : Void;
+	@:overload @:public public function exiting(result : Dynamic) : Void;
 	
 	/**
 	* Method logs {@code exception}'s message as a {@code SEVERE} logging level
@@ -126,7 +126,7 @@ extern class Logger
 	* @return the same exception instance that was passed in as the {@code exception}
 	*         parameter.
 	*/
-	@:overload public function logSevereException<T : java.lang.Throwable>(exception : T, cause : java.lang.Throwable) : T;
+	@:overload @:public public function logSevereException<T : java.lang.Throwable>(exception : T, cause : java.lang.Throwable) : T;
 	
 	/**
 	* Method logs {@code exception}'s message as a {@code SEVERE} logging level
@@ -146,12 +146,12 @@ extern class Logger
 	* @return the same exception instance that was passed in as the {@code exception}
 	*         parameter.
 	*/
-	@:overload public function logSevereException<T : java.lang.Throwable>(exception : T, logCause : Bool) : T;
+	@:overload @:public public function logSevereException<T : java.lang.Throwable>(exception : T, logCause : Bool) : T;
 	
 	/**
 	* Same as {@link #logSevereException(Throwable, boolean) logSevereException(exception, true)}.
 	*/
-	@:overload public function logSevereException<T : java.lang.Throwable>(exception : T) : T;
+	@:overload @:public public function logSevereException<T : java.lang.Throwable>(exception : T) : T;
 	
 	/**
 	* Method logs {@code exception}'s message at the logging level specified by the
@@ -169,7 +169,7 @@ extern class Logger
 	* @return the same exception instance that was passed in as the {@code exception}
 	*         parameter.
 	*/
-	@:overload public function logException<T : java.lang.Throwable>(exception : T, cause : java.lang.Throwable, level : java.util.logging.Level) : T;
+	@:overload @:public public function logException<T : java.lang.Throwable>(exception : T, cause : java.lang.Throwable, level : java.util.logging.Level) : T;
 	
 	/**
 	* Method logs {@code exception}'s message at the logging level specified by the
@@ -190,13 +190,13 @@ extern class Logger
 	* @return the same exception instance that was passed in as the {@code exception}
 	*         parameter.
 	*/
-	@:overload public function logException<T : java.lang.Throwable>(exception : T, logCause : Bool, level : java.util.logging.Level) : T;
+	@:overload @:public public function logException<T : java.lang.Throwable>(exception : T, logCause : Bool, level : java.util.logging.Level) : T;
 	
 	/**
 	* Same as {@link #logException(Throwable, Throwable, Level)
 	* logException(exception, true, level)}.
 	*/
-	@:overload public function logException<T : java.lang.Throwable>(exception : T, level : java.util.logging.Level) : T;
+	@:overload @:public public function logException<T : java.lang.Throwable>(exception : T, level : java.util.logging.Level) : T;
 	
 	
 }

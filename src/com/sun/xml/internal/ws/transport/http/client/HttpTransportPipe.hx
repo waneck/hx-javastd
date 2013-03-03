@@ -25,24 +25,24 @@ package com.sun.xml.internal.ws.transport.http.client;
 */
 extern class HttpTransportPipe extends com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl
 {
-	@:overload public function new(codec : com.sun.xml.internal.ws.api.pipe.Codec, binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
+	@:overload @:public public function new(codec : com.sun.xml.internal.ws.api.pipe.Codec, binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
 	
-	@:overload public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload public function process(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public override public function process(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Packet;
 	
-	@:overload public function preDestroy() : Void;
+	@:overload @:public override public function preDestroy() : Void;
 	
-	@:overload public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.transport.http.client.HttpTransportPipe;
+	@:overload @:public override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.transport.http.client.HttpTransportPipe;
 	
 	/**
 	* Dumps what goes across HTTP transport.
 	*/
-	@:native('dump') public static var _dump : Bool;
+	@:native('dump') @:public @:static public static var _dump : Bool;
 	
 	
 }

@@ -30,7 +30,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	*
 	* @param elem the element
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Creates a shallow copy.  This is used by the
@@ -38,19 +38,19 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	*
 	* @return the copy
 	*/
-	@:overload @:final private function clone() : Dynamic;
+	@:overload @:protected @:final private function clone() : Dynamic;
 	
 	/**
 	* Fetch the currently installed glyph painter.
 	* If a painter has not yet been installed, and
 	* a default was not yet needed, null is returned.
 	*/
-	@:overload public function getGlyphPainter() : javax.swing.text.GlyphView.GlyphView_GlyphPainter;
+	@:overload @:public public function getGlyphPainter() : javax.swing.text.GlyphView.GlyphView_GlyphPainter;
 	
 	/**
 	* Sets the painter to use for rendering glyphs.
 	*/
-	@:overload public function setGlyphPainter(p : javax.swing.text.GlyphView.GlyphView_GlyphPainter) : Void;
+	@:overload @:public public function setGlyphPainter(p : javax.swing.text.GlyphView.GlyphView_GlyphPainter) : Void;
 	
 	/**
 	* Fetch a reference to the text that occupies
@@ -62,7 +62,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* @param p1  the ending document offset >= p0
 	* @return    the <code>Segment</code> containing the text
 	*/
-	@:overload public function getText(p0 : Int, p1 : Int) : javax.swing.text.Segment;
+	@:overload @:public public function getText(p0 : Int, p1 : Int) : javax.swing.text.Segment;
 	
 	/**
 	* Fetch the background color to use to render the
@@ -71,7 +71,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* <code>StyledDocument.getBackground</code> if the associated
 	* document is a styled document, otherwise it returns null.
 	*/
-	@:overload public function getBackground() : java.awt.Color;
+	@:overload @:public public function getBackground() : java.awt.Color;
 	
 	/**
 	* Fetch the foreground color to use to render the
@@ -83,7 +83,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* color is used.  If there is no associated component, null
 	* is returned.
 	*/
-	@:overload public function getForeground() : java.awt.Color;
+	@:overload @:public public function getForeground() : java.awt.Color;
 	
 	/**
 	* Fetch the font that the glyphs should be based
@@ -94,41 +94,41 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* is used.  If there is no associated component, null
 	* is returned.
 	*/
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public public function getFont() : java.awt.Font;
 	
 	/**
 	* Determine if the glyphs should be underlined.  If true,
 	* an underline should be drawn through the baseline.
 	*/
-	@:overload public function isUnderline() : Bool;
+	@:overload @:public public function isUnderline() : Bool;
 	
 	/**
 	* Determine if the glyphs should have a strikethrough
 	* line.  If true, a line should be drawn through the center
 	* of the glyphs.
 	*/
-	@:overload public function isStrikeThrough() : Bool;
+	@:overload @:public public function isStrikeThrough() : Bool;
 	
 	/**
 	* Determine if the glyphs should be rendered as superscript.
 	*/
-	@:overload public function isSubscript() : Bool;
+	@:overload @:public public function isSubscript() : Bool;
 	
 	/**
 	* Determine if the glyphs should be rendered as subscript.
 	*/
-	@:overload public function isSuperscript() : Bool;
+	@:overload @:public public function isSuperscript() : Bool;
 	
 	/**
 	* Fetch the TabExpander to use if tabs are present in this view.
 	*/
-	@:overload public function getTabExpander() : javax.swing.text.TabExpander;
+	@:overload @:public public function getTabExpander() : javax.swing.text.TabExpander;
 	
 	/**
 	* Check to see that a glyph painter exists.  If a painter
 	* doesn't exist, a default glyph painter will be installed.
 	*/
-	@:overload private function checkPainter() : Void;
+	@:overload @:protected private function checkPainter() : Void;
 	
 	/**
 	* Determines the desired span when using the given
@@ -140,7 +140,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* @return the desired span >= 0
 	* @see TabableView#getTabbedSpan
 	*/
-	@:overload public function getTabbedSpan(x : Single, e : javax.swing.text.TabExpander) : Single;
+	@:overload @:public public function getTabbedSpan(x : Single, e : javax.swing.text.TabExpander) : Single;
 	
 	/**
 	* Determines the span along the same axis as tab
@@ -161,7 +161,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* @param p1 the ending document offset >= p0
 	* @return the span >= 0
 	*/
-	@:overload public function getPartialSpan(p0 : Int, p1 : Int) : Single;
+	@:overload @:public public function getPartialSpan(p0 : Int, p1 : Int) : Single;
 	
 	/**
 	* Fetches the portion of the model that this view is responsible for.
@@ -169,7 +169,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* @return the starting offset into the model
 	* @see View#getStartOffset
 	*/
-	@:overload override public function getStartOffset() : Int;
+	@:overload @:public override public function getStartOffset() : Int;
 	
 	/**
 	* Fetches the portion of the model that this view is responsible for.
@@ -177,7 +177,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* @return the ending offset into the model
 	* @see View#getEndOffset
 	*/
-	@:overload override public function getEndOffset() : Int;
+	@:overload @:public override public function getEndOffset() : Int;
 	
 	/**
 	* Renders a portion of a text style run.
@@ -185,7 +185,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* @param g the rendering surface to use
 	* @param a the allocated region to render into
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
 	
 	/**
 	* Determines the minimum span for this view along an axis.
@@ -198,7 +198,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* @throws IllegalArgumentException if the {@code axis} parameter is invalid
 	* @see         javax.swing.text.View#getMinimumSpan
 	*/
-	@:overload override public function getMinimumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMinimumSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the preferred span for this view along an
@@ -210,7 +210,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	*           that is returned, although there is no guarantee.
 	*           The parent may choose to resize or break the view.
 	*/
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the desired alignment for this view along an
@@ -225,7 +225,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	*   away from the origin.  An alignment of 0.5 would be the
 	*   center of the view.
 	*/
-	@:overload override public function getAlignment(axis : Int) : Single;
+	@:overload @:public override public function getAlignment(axis : Int) : Single;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -240,7 +240,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	*   valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload @:public override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -256,7 +256,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	*  given point of view >= 0
 	* @see View#viewToModel
 	*/
-	@:overload override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, biasReturn : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, biasReturn : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Determines how attractive a break opportunity in
@@ -301,7 +301,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* @see View#ExcellentBreakWeight
 	* @see View#ForcedBreakWeight
 	*/
-	@:overload override public function getBreakWeight(axis : Int, pos : Single, len : Single) : Int;
+	@:overload @:public override public function getBreakWeight(axis : Int, pos : Single, len : Single) : Int;
 	
 	/**
 	* Breaks this view on the given axis at the given length.
@@ -324,7 +324,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	*  returned.
 	* @see View#breakView
 	*/
-	@:overload override public function breakView(axis : Int, p0 : Int, pos : Single, len : Single) : javax.swing.text.View;
+	@:overload @:public override public function breakView(axis : Int, p0 : Int, pos : Single, len : Single) : javax.swing.text.View;
 	
 	/**
 	* Creates a view that represents a portion of the element.
@@ -347,7 +347,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	*   support breaking into fragments
 	* @see LabelView
 	*/
-	@:overload override public function createFragment(p0 : Int, p1 : Int) : javax.swing.text.View;
+	@:overload @:public override public function createFragment(p0 : Int, p1 : Int) : javax.swing.text.View;
 	
 	/**
 	* Provides a way to determine the next visually represented model
@@ -367,7 +367,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* @exception BadLocationException
 	* @exception IllegalArgumentException for an invalid direction
 	*/
-	@:overload override public function getNextVisualPositionFrom(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function getNextVisualPositionFrom(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Gives notification that something was inserted into
@@ -380,7 +380,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#insertUpdate
 	*/
-	@:overload override public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -393,7 +393,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#removeUpdate
 	*/
-	@:overload override public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -406,7 +406,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#changedUpdate
 	*/
-	@:overload override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	
 }
@@ -436,18 +436,18 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* Determine the span the glyphs given a start location
 	* (for tab expansion).
 	*/
-	@:overload @:abstract public function getSpan(v : javax.swing.text.GlyphView, p0 : Int, p1 : Int, e : javax.swing.text.TabExpander, x : Single) : Single;
+	@:overload @:public @:abstract public function getSpan(v : javax.swing.text.GlyphView, p0 : Int, p1 : Int, e : javax.swing.text.TabExpander, x : Single) : Single;
 	
-	@:overload @:abstract public function getHeight(v : javax.swing.text.GlyphView) : Single;
+	@:overload @:public @:abstract public function getHeight(v : javax.swing.text.GlyphView) : Single;
 	
-	@:overload @:abstract public function getAscent(v : javax.swing.text.GlyphView) : Single;
+	@:overload @:public @:abstract public function getAscent(v : javax.swing.text.GlyphView) : Single;
 	
-	@:overload @:abstract public function getDescent(v : javax.swing.text.GlyphView) : Single;
+	@:overload @:public @:abstract public function getDescent(v : javax.swing.text.GlyphView) : Single;
 	
 	/**
 	* Paint the glyphs representing the given range.
 	*/
-	@:overload @:abstract public function paint(v : javax.swing.text.GlyphView, g : java.awt.Graphics, a : java.awt.Shape, p0 : Int, p1 : Int) : Void;
+	@:overload @:public @:abstract public function paint(v : javax.swing.text.GlyphView, g : java.awt.Graphics, a : java.awt.Shape, p0 : Int, p1 : Int) : Void;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -465,7 +465,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	*   valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload @:abstract public function modelToView(v : javax.swing.text.GlyphView, pos : Int, bias : javax.swing.text.Position.Position_Bias, a : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public @:abstract public function modelToView(v : javax.swing.text.GlyphView, pos : Int, bias : javax.swing.text.Position.Position_Bias, a : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -482,7 +482,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	*         given point of view
 	* @see View#viewToModel
 	*/
-	@:overload @:abstract public function viewToModel(v : javax.swing.text.GlyphView, x : Single, y : Single, a : java.awt.Shape, biasReturn : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public @:abstract public function viewToModel(v : javax.swing.text.GlyphView, x : Single, y : Single, a : java.awt.Shape, biasReturn : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Determines the model location that represents the
@@ -503,7 +503,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* @return the maximum model location possible for a break.
 	* @see View#breakView
 	*/
-	@:overload @:abstract public function getBoundedPosition(v : javax.swing.text.GlyphView, p0 : Int, x : Single, len : Single) : Int;
+	@:overload @:public @:abstract public function getBoundedPosition(v : javax.swing.text.GlyphView, p0 : Int, x : Single, len : Single) : Int;
 	
 	/**
 	* Create a painter to use for the given GlyphView.  If
@@ -515,7 +515,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* @param p0 the starting document offset >= 0
 	* @param p1 the ending document offset >= p0
 	*/
-	@:overload public function getPainter(v : javax.swing.text.GlyphView, p0 : Int, p1 : Int) : javax.swing.text.GlyphView.GlyphView_GlyphPainter;
+	@:overload @:public public function getPainter(v : javax.swing.text.GlyphView, p0 : Int, p1 : Int) : javax.swing.text.GlyphView.GlyphView_GlyphPainter;
 	
 	/**
 	* Provides a way to determine the next visually represented model
@@ -541,7 +541,7 @@ extern class GlyphView extends javax.swing.text.View implements javax.swing.text
 	* @exception BadLocationException
 	* @exception IllegalArgumentException for an invalid direction
 	*/
-	@:overload public function getNextVisualPositionFrom(v : javax.swing.text.GlyphView, pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public public function getNextVisualPositionFrom(v : javax.swing.text.GlyphView, pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	
 }

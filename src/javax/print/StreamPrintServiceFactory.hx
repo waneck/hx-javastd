@@ -47,21 +47,21 @@ extern class StreamPrintServiceFactory
 	* @return - matching factories for stream print service instance,
 	*           empty if no suitable factories could be located.
 	*/
-	@:overload public static function lookupStreamPrintServiceFactories(flavor : javax.print.DocFlavor, outputMimeType : String) : java.NativeArray<javax.print.StreamPrintServiceFactory>;
+	@:overload @:public @:static public static function lookupStreamPrintServiceFactories(flavor : javax.print.DocFlavor, outputMimeType : String) : java.NativeArray<javax.print.StreamPrintServiceFactory>;
 	
 	/** Queries the factory for the document format that is emitted
 	* by printers obtained from this factory.
 	*
 	* @return the output format described as a mime type.
 	*/
-	@:overload @:abstract public function getOutputFormat() : String;
+	@:overload @:public @:abstract public function getOutputFormat() : String;
 	
 	/**
 	* Queries the factory for the document flavors that can be accepted
 	* by printers obtained from this factory.
 	* @return array of supported doc flavors.
 	*/
-	@:overload @:abstract public function getSupportedDocFlavors() : java.NativeArray<javax.print.DocFlavor>;
+	@:overload @:public @:abstract public function getSupportedDocFlavors() : java.NativeArray<javax.print.DocFlavor>;
 	
 	/**
 	* Returns a <code>StreamPrintService</code> that can print to
@@ -95,7 +95,7 @@ extern class StreamPrintServiceFactory
 	* @return a PrintService which will generate the format specified by the
 	* DocFlavor supported by this Factory.
 	*/
-	@:overload @:abstract public function getPrintService(out : java.io.OutputStream) : javax.print.StreamPrintService;
+	@:overload @:public @:abstract public function getPrintService(out : java.io.OutputStream) : javax.print.StreamPrintService;
 	
 	
 }

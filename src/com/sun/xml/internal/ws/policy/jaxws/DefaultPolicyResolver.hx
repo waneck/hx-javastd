@@ -32,9 +32,9 @@ extern class DefaultPolicyResolver implements com.sun.xml.internal.ws.api.policy
 	* @author Rama Pulavarthi
 	* @author Fabian Ritzmann
 	*/
-	@:overload public function resolve(context : com.sun.xml.internal.ws.api.policy.PolicyResolver.PolicyResolver_ServerContext) : com.sun.xml.internal.ws.policy.PolicyMap;
+	@:overload @:public public function resolve(context : com.sun.xml.internal.ws.api.policy.PolicyResolver.PolicyResolver_ServerContext) : com.sun.xml.internal.ws.policy.PolicyMap;
 	
-	@:overload public function resolve(context : com.sun.xml.internal.ws.api.policy.PolicyResolver.PolicyResolver_ClientContext) : com.sun.xml.internal.ws.policy.PolicyMap;
+	@:overload @:public public function resolve(context : com.sun.xml.internal.ws.api.policy.PolicyResolver.PolicyResolver_ClientContext) : com.sun.xml.internal.ws.policy.PolicyMap;
 	
 	
 }

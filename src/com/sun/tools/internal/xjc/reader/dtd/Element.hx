@@ -25,9 +25,9 @@ package com.sun.tools.internal.xjc.reader.dtd;
 */
 @:internal extern class Element extends com.sun.tools.internal.xjc.reader.dtd.Term implements java.lang.Comparable<com.sun.tools.internal.xjc.reader.dtd.Element>
 {
-	@:overload public function new(owner : com.sun.tools.internal.xjc.reader.dtd.TDTDReader, name : String) : Void;
+	@:overload @:public public function new(owner : com.sun.tools.internal.xjc.reader.dtd.TDTDReader, name : String) : Void;
 	
-	@:overload public function compareTo(that : com.sun.tools.internal.xjc.reader.dtd.Element) : Int;
+	@:overload @:public public function compareTo(that : com.sun.tools.internal.xjc.reader.dtd.Element) : Int;
 	
 	
 }

@@ -57,7 +57,7 @@ package javax.naming;
 	* @param  obj     The possibly null object bound to name.
 	* @see NameClassPair#setClassName
 	*/
-	@:overload public function new(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function new(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Constructs an instance of a Binding given its name, object, and whether
@@ -77,7 +77,7 @@ package javax.naming;
 	* @see NameClassPair#setRelative
 	* @see NameClassPair#setClassName
 	*/
-	@:overload public function new(name : String, obj : Dynamic, isRelative : Bool) : Void;
+	@:overload @:public public function new(name : String, obj : Dynamic, isRelative : Bool) : Void;
 	
 	/**
 	* Constructs an instance of a Binding given its name, class name, and object.
@@ -92,7 +92,7 @@ package javax.naming;
 	* @param  obj     The possibly null object bound to name.
 	* @see NameClassPair#setClassName
 	*/
-	@:overload public function new(name : String, className : String, obj : Dynamic) : Void;
+	@:overload @:public public function new(name : String, className : String, obj : Dynamic) : Void;
 	
 	/**
 	* Constructs an instance of a Binding given its
@@ -112,7 +112,7 @@ package javax.naming;
 	* @see NameClassPair#setRelative
 	* @see NameClassPair#setClassName
 	*/
-	@:overload public function new(name : String, className : String, obj : Dynamic, isRelative : Bool) : Void;
+	@:overload @:public public function new(name : String, className : String, obj : Dynamic, isRelative : Bool) : Void;
 	
 	/**
 	* Retrieves the class name of the object bound to the name of this binding.
@@ -122,7 +122,7 @@ package javax.naming;
 	*
 	* @return A possibly null string containing class name of object bound.
 	*/
-	@:overload override public function getClassName() : String;
+	@:overload @:public override public function getClassName() : String;
 	
 	/**
 	* Retrieves the object bound to the name of this binding.
@@ -130,14 +130,14 @@ package javax.naming;
 	* @return The object bound; null if this binding does not contain an object.
 	* @see #setObject
 	*/
-	@:overload public function getObject() : Dynamic;
+	@:overload @:public public function getObject() : Dynamic;
 	
 	/**
 	* Sets the object associated with this binding.
 	* @param obj The possibly null object to use.
 	* @see #getObject
 	*/
-	@:overload public function setObject(obj : Dynamic) : Void;
+	@:overload @:public public function setObject(obj : Dynamic) : Void;
 	
 	/**
 	* Generates the string representation of this binding.
@@ -149,7 +149,7 @@ package javax.naming;
 	*
 	* @return The non-null string representation of this binding.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

@@ -56,60 +56,60 @@ package javax.management;
 	* A code representing the {@link Query#gt} query.  This is chiefly
 	* of interest for the serialized form of queries.
 	*/
-	public static var GT(default, null) : Int;
+	@:public @:static @:final public static var GT(default, null) : Int;
 	
 	/**
 	* A code representing the {@link Query#lt} query.  This is chiefly
 	* of interest for the serialized form of queries.
 	*/
-	public static var LT(default, null) : Int;
+	@:public @:static @:final public static var LT(default, null) : Int;
 	
 	/**
 	* A code representing the {@link Query#geq} query.  This is chiefly
 	* of interest for the serialized form of queries.
 	*/
-	public static var GE(default, null) : Int;
+	@:public @:static @:final public static var GE(default, null) : Int;
 	
 	/**
 	* A code representing the {@link Query#leq} query.  This is chiefly
 	* of interest for the serialized form of queries.
 	*/
-	public static var LE(default, null) : Int;
+	@:public @:static @:final public static var LE(default, null) : Int;
 	
 	/**
 	* A code representing the {@link Query#eq} query.  This is chiefly
 	* of interest for the serialized form of queries.
 	*/
-	public static var EQ(default, null) : Int;
+	@:public @:static @:final public static var EQ(default, null) : Int;
 	
 	/**
 	* A code representing the {@link Query#plus} expression.  This
 	* is chiefly of interest for the serialized form of queries.
 	*/
-	public static var PLUS(default, null) : Int;
+	@:public @:static @:final public static var PLUS(default, null) : Int;
 	
 	/**
 	* A code representing the {@link Query#minus} expression.  This
 	* is chiefly of interest for the serialized form of queries.
 	*/
-	public static var MINUS(default, null) : Int;
+	@:public @:static @:final public static var MINUS(default, null) : Int;
 	
 	/**
 	* A code representing the {@link Query#times} expression.  This
 	* is chiefly of interest for the serialized form of queries.
 	*/
-	public static var TIMES(default, null) : Int;
+	@:public @:static @:final public static var TIMES(default, null) : Int;
 	
 	/**
 	* A code representing the {@link Query#div} expression.  This is
 	* chiefly of interest for the serialized form of queries.
 	*/
-	public static var DIV(default, null) : Int;
+	@:public @:static @:final public static var DIV(default, null) : Int;
 	
 	/**
 	* Basic constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns a query expression that is the conjunction of two other query
@@ -123,7 +123,7 @@ package javax.management;
 	* <a href="../../serialized-form.html#javax.management.AndQueryExp">
 	* javax.management.AndQueryExp</a>}.
 	*/
-	@:overload public static function and(q1 : javax.management.QueryExp, q2 : javax.management.QueryExp) : javax.management.QueryExp;
+	@:overload @:public @:static public static function and(q1 : javax.management.QueryExp, q2 : javax.management.QueryExp) : javax.management.QueryExp;
 	
 	/**
 	* Returns a query expression that is the disjunction of two other query
@@ -137,7 +137,7 @@ package javax.management;
 	* <a href="../../serialized-form.html#javax.management.OrQueryExp">
 	* javax.management.OrQueryExp</a>}.
 	*/
-	@:overload public static function or(q1 : javax.management.QueryExp, q2 : javax.management.QueryExp) : javax.management.QueryExp;
+	@:overload @:public @:static public static function or(q1 : javax.management.QueryExp, q2 : javax.management.QueryExp) : javax.management.QueryExp;
 	
 	/**
 	* Returns a query expression that represents a "greater than" constraint on
@@ -153,7 +153,7 @@ package javax.management;
 	* javax.management.BinaryRelQueryExp</a>} with a {@code relOp} equal
 	* to {@link #GT}.
 	*/
-	@:overload public static function gt(v1 : javax.management.ValueExp, v2 : javax.management.ValueExp) : javax.management.QueryExp;
+	@:overload @:public @:static public static function gt(v1 : javax.management.ValueExp, v2 : javax.management.ValueExp) : javax.management.QueryExp;
 	
 	/**
 	* Returns a query expression that represents a "greater than or equal
@@ -169,7 +169,7 @@ package javax.management;
 	* javax.management.BinaryRelQueryExp</a>} with a {@code relOp} equal
 	* to {@link #GE}.
 	*/
-	@:overload public static function geq(v1 : javax.management.ValueExp, v2 : javax.management.ValueExp) : javax.management.QueryExp;
+	@:overload @:public @:static public static function geq(v1 : javax.management.ValueExp, v2 : javax.management.ValueExp) : javax.management.QueryExp;
 	
 	/**
 	* Returns a query expression that represents a "less than or equal to"
@@ -185,7 +185,7 @@ package javax.management;
 	* javax.management.BinaryRelQueryExp</a>} with a {@code relOp} equal
 	* to {@link #LE}.
 	*/
-	@:overload public static function leq(v1 : javax.management.ValueExp, v2 : javax.management.ValueExp) : javax.management.QueryExp;
+	@:overload @:public @:static public static function leq(v1 : javax.management.ValueExp, v2 : javax.management.ValueExp) : javax.management.QueryExp;
 	
 	/**
 	* Returns a query expression that represents a "less than" constraint on
@@ -201,7 +201,7 @@ package javax.management;
 	* javax.management.BinaryRelQueryExp</a>} with a {@code relOp} equal
 	* to {@link #LT}.
 	*/
-	@:overload public static function lt(v1 : javax.management.ValueExp, v2 : javax.management.ValueExp) : javax.management.QueryExp;
+	@:overload @:public @:static public static function lt(v1 : javax.management.ValueExp, v2 : javax.management.ValueExp) : javax.management.QueryExp;
 	
 	/**
 	* Returns a query expression that represents an equality constraint on
@@ -217,7 +217,7 @@ package javax.management;
 	* javax.management.BinaryRelQueryExp</a>} with a {@code relOp} equal
 	* to {@link #EQ}.
 	*/
-	@:overload public static function eq(v1 : javax.management.ValueExp, v2 : javax.management.ValueExp) : javax.management.QueryExp;
+	@:overload @:public @:static public static function eq(v1 : javax.management.ValueExp, v2 : javax.management.ValueExp) : javax.management.QueryExp;
 	
 	/**
 	* Returns a query expression that represents the constraint that one
@@ -233,7 +233,7 @@ package javax.management;
 	* href="../../serialized-form.html#javax.management.BetweenQueryExp">
 	* javax.management.BetweenQueryExp</a>}.
 	*/
-	@:overload public static function between(v1 : javax.management.ValueExp, v2 : javax.management.ValueExp, v3 : javax.management.ValueExp) : javax.management.QueryExp;
+	@:overload @:public @:static public static function between(v1 : javax.management.ValueExp, v2 : javax.management.ValueExp, v3 : javax.management.ValueExp) : javax.management.QueryExp;
 	
 	/**
 	* Returns a query expression that represents a matching constraint on
@@ -259,7 +259,7 @@ package javax.management;
 	* href="../../serialized-form.html#javax.management.MatchQueryExp">
 	* javax.management.MatchQueryExp</a>}.
 	*/
-	@:overload public static function match(a : javax.management.AttributeValueExp, s : javax.management.StringValueExp) : javax.management.QueryExp;
+	@:overload @:public @:static public static function match(a : javax.management.AttributeValueExp, s : javax.management.StringValueExp) : javax.management.QueryExp;
 	
 	/**
 	* <p>Returns a new attribute expression.  See {@link AttributeValueExp}
@@ -274,7 +274,7 @@ package javax.management;
 	*
 	* @return An attribute expression for the attribute named {@code name}.
 	*/
-	@:overload public static function attr(name : String) : javax.management.AttributeValueExp;
+	@:overload @:public @:static public static function attr(name : String) : javax.management.AttributeValueExp;
 	
 	/**
 	* <p>Returns a new qualified attribute expression.</p>
@@ -295,7 +295,7 @@ package javax.management;
 	* href="../../serialized-form.html#javax.management.QualifiedAttributeValueExp">
 	* javax.management.QualifiedAttributeValueExp</a>}.
 	*/
-	@:overload public static function attr(className : String, name : String) : javax.management.AttributeValueExp;
+	@:overload @:public @:static public static function attr(className : String, name : String) : javax.management.AttributeValueExp;
 	
 	/**
 	* <p>Returns a new class attribute expression which can be used in any
@@ -312,7 +312,7 @@ package javax.management;
 	* href="../../serialized-form.html#javax.management.ClassAttributeValueExp">
 	* javax.management.ClassAttributeValueExp</a>}.
 	*/
-	@:overload public static function classattr() : javax.management.AttributeValueExp;
+	@:overload @:public @:static public static function classattr() : javax.management.AttributeValueExp;
 	
 	/**
 	* Returns a constraint that is the negation of its argument.
@@ -324,7 +324,7 @@ package javax.management;
 	* href="../../serialized-form.html#javax.management.NotQueryExp">
 	* javax.management.NotQueryExp</a>}.
 	*/
-	@:overload public static function not(queryExp : javax.management.QueryExp) : javax.management.QueryExp;
+	@:overload @:public @:static public static function not(queryExp : javax.management.QueryExp) : javax.management.QueryExp;
 	
 	/**
 	* Returns an expression constraining a value to be one of an explicit list.
@@ -338,7 +338,7 @@ package javax.management;
 	* href="../../serialized-form.html#javax.management.InQueryExp">
 	* javax.management.InQueryExp</a>}.
 	*/
-	@:native('in') @:overload public static function _in(val : javax.management.ValueExp, valueList : java.NativeArray<javax.management.ValueExp>) : javax.management.QueryExp;
+	@:native('in') @:overload @:public @:static public static function _in(val : javax.management.ValueExp, valueList : java.NativeArray<javax.management.ValueExp>) : javax.management.QueryExp;
 	
 	/**
 	* Returns a new string expression.
@@ -347,7 +347,7 @@ package javax.management;
 	*
 	* @return  A ValueExp object containing the string argument.
 	*/
-	@:overload public static function value(val : String) : javax.management.StringValueExp;
+	@:overload @:public @:static public static function value(val : String) : javax.management.StringValueExp;
 	
 	/**
 	* Returns a numeric value expression that can be used in any Query call
@@ -361,7 +361,7 @@ package javax.management;
 	* href="../../serialized-form.html#javax.management.NumericValueExp">
 	* javax.management.NumericValueExp</a>}.
 	*/
-	@:overload public static function value(val : java.lang.Number) : javax.management.ValueExp;
+	@:overload @:public @:static public static function value(val : java.lang.Number) : javax.management.ValueExp;
 	
 	/**
 	* Returns a numeric value expression that can be used in any Query call
@@ -375,7 +375,7 @@ package javax.management;
 	* href="../../serialized-form.html#javax.management.NumericValueExp">
 	* javax.management.NumericValueExp</a>}.
 	*/
-	@:overload public static function value(val : Int) : javax.management.ValueExp;
+	@:overload @:public @:static public static function value(val : Int) : javax.management.ValueExp;
 	
 	/**
 	* Returns a numeric value expression that can be used in any Query call
@@ -389,7 +389,7 @@ package javax.management;
 	* href="../../serialized-form.html#javax.management.NumericValueExp">
 	* javax.management.NumericValueExp</a>}.
 	*/
-	@:overload public static function value(val : haxe.Int64) : javax.management.ValueExp;
+	@:overload @:public @:static public static function value(val : haxe.Int64) : javax.management.ValueExp;
 	
 	/**
 	* Returns a numeric value expression that can be used in any Query call
@@ -403,7 +403,7 @@ package javax.management;
 	* href="../../serialized-form.html#javax.management.NumericValueExp">
 	* javax.management.NumericValueExp</a>}.
 	*/
-	@:overload public static function value(val : Single) : javax.management.ValueExp;
+	@:overload @:public @:static public static function value(val : Single) : javax.management.ValueExp;
 	
 	/**
 	* Returns a numeric value expression that can be used in any Query call
@@ -417,7 +417,7 @@ package javax.management;
 	* href="../../serialized-form.html#javax.management.NumericValueExp">
 	* javax.management.NumericValueExp</a>}.
 	*/
-	@:overload public static function value(val : Float) : javax.management.ValueExp;
+	@:overload @:public @:static public static function value(val : Float) : javax.management.ValueExp;
 	
 	/**
 	* Returns a boolean value expression that can be used in any Query call
@@ -431,7 +431,7 @@ package javax.management;
 	* href="../../serialized-form.html#javax.management.BooleanValueExp">
 	* javax.management.BooleanValueExp</a>}.
 	*/
-	@:overload public static function value(val : Bool) : javax.management.ValueExp;
+	@:overload @:public @:static public static function value(val : Bool) : javax.management.ValueExp;
 	
 	/**
 	* Returns a binary expression representing the sum of two numeric values,
@@ -447,7 +447,7 @@ package javax.management;
 	* javax.management.BinaryOpValueExp</a>} with an {@code op} equal to
 	* {@link #PLUS}.
 	*/
-	@:overload public static function plus(value1 : javax.management.ValueExp, value2 : javax.management.ValueExp) : javax.management.ValueExp;
+	@:overload @:public @:static public static function plus(value1 : javax.management.ValueExp, value2 : javax.management.ValueExp) : javax.management.ValueExp;
 	
 	/**
 	* Returns a binary expression representing the product of two numeric values.
@@ -463,7 +463,7 @@ package javax.management;
 	* javax.management.BinaryOpValueExp</a>} with an {@code op} equal to
 	* {@link #TIMES}.
 	*/
-	@:overload public static function times(value1 : javax.management.ValueExp, value2 : javax.management.ValueExp) : javax.management.ValueExp;
+	@:overload @:public @:static public static function times(value1 : javax.management.ValueExp, value2 : javax.management.ValueExp) : javax.management.ValueExp;
 	
 	/**
 	* Returns a binary expression representing the difference between two numeric
@@ -479,7 +479,7 @@ package javax.management;
 	* javax.management.BinaryOpValueExp</a>} with an {@code op} equal to
 	* {@link #MINUS}.
 	*/
-	@:overload public static function minus(value1 : javax.management.ValueExp, value2 : javax.management.ValueExp) : javax.management.ValueExp;
+	@:overload @:public @:static public static function minus(value1 : javax.management.ValueExp, value2 : javax.management.ValueExp) : javax.management.ValueExp;
 	
 	/**
 	* Returns a binary expression representing the quotient of two numeric
@@ -495,7 +495,7 @@ package javax.management;
 	* javax.management.BinaryOpValueExp</a>} with an {@code op} equal to
 	* {@link #DIV}.
 	*/
-	@:overload public static function div(value1 : javax.management.ValueExp, value2 : javax.management.ValueExp) : javax.management.ValueExp;
+	@:overload @:public @:static public static function div(value1 : javax.management.ValueExp, value2 : javax.management.ValueExp) : javax.management.ValueExp;
 	
 	/**
 	* Returns a query expression that represents a matching constraint on
@@ -512,7 +512,7 @@ package javax.management;
 	* href="../../serialized-form.html#javax.management.MatchQueryExp">
 	* javax.management.MatchQueryExp</a>}.
 	*/
-	@:overload public static function initialSubString(a : javax.management.AttributeValueExp, s : javax.management.StringValueExp) : javax.management.QueryExp;
+	@:overload @:public @:static public static function initialSubString(a : javax.management.AttributeValueExp, s : javax.management.StringValueExp) : javax.management.QueryExp;
 	
 	/**
 	* Returns a query expression that represents a matching constraint on
@@ -528,7 +528,7 @@ package javax.management;
 	* href="../../serialized-form.html#javax.management.MatchQueryExp">
 	* javax.management.MatchQueryExp</a>}.
 	*/
-	@:overload public static function anySubString(a : javax.management.AttributeValueExp, s : javax.management.StringValueExp) : javax.management.QueryExp;
+	@:overload @:public @:static public static function anySubString(a : javax.management.AttributeValueExp, s : javax.management.StringValueExp) : javax.management.QueryExp;
 	
 	/**
 	* Returns a query expression that represents a matching constraint on
@@ -545,7 +545,7 @@ package javax.management;
 	* href="../../serialized-form.html#javax.management.MatchQueryExp">
 	* javax.management.MatchQueryExp</a>}.
 	*/
-	@:overload public static function finalSubString(a : javax.management.AttributeValueExp, s : javax.management.StringValueExp) : javax.management.QueryExp;
+	@:overload @:public @:static public static function finalSubString(a : javax.management.AttributeValueExp, s : javax.management.StringValueExp) : javax.management.QueryExp;
 	
 	/**
 	* Returns a query expression that represents an inheritance constraint
@@ -568,7 +568,7 @@ package javax.management;
 	* javax.management.InstanceOfQueryExp</a>}.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function isInstanceOf(classNameValue : javax.management.StringValueExp) : javax.management.QueryExp;
+	@:require(java6) @:overload @:public @:static public static function isInstanceOf(classNameValue : javax.management.StringValueExp) : javax.management.QueryExp;
 	
 	
 }

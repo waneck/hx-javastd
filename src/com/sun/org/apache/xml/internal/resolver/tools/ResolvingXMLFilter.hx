@@ -27,24 +27,24 @@ extern class ResolvingXMLFilter extends org.xml.sax.helpers.XMLFilterImpl
 	*
 	* @see #parse(InputSource)
 	*/
-	public static var suppressExplanation : Bool;
+	@:public @:static public static var suppressExplanation : Bool;
 	
 	/** Construct an empty XML Filter with no parent. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Construct an XML filter with the specified parent. */
-	@:overload public function new(parent : org.xml.sax.XMLReader) : Void;
+	@:overload @:public public function new(parent : org.xml.sax.XMLReader) : Void;
 	
 	/** Construct an XML filter with the specified parent. */
-	@:overload public function new(manager : com.sun.org.apache.xml.internal.resolver.CatalogManager) : Void;
+	@:overload @:public public function new(manager : com.sun.org.apache.xml.internal.resolver.CatalogManager) : Void;
 	
 	/** Construct an XML filter with the specified parent. */
-	@:overload public function new(parent : org.xml.sax.XMLReader, manager : com.sun.org.apache.xml.internal.resolver.CatalogManager) : Void;
+	@:overload @:public public function new(parent : org.xml.sax.XMLReader, manager : com.sun.org.apache.xml.internal.resolver.CatalogManager) : Void;
 	
 	/**
 	* Provide accessto the underlying Catalog.
 	*/
-	@:overload public function getCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
+	@:overload @:public public function getCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
 	
 	/**
 	* SAX XMLReader API.
@@ -67,20 +67,20 @@ extern class ResolvingXMLFilter extends org.xml.sax.helpers.XMLFilterImpl
 	* <code>suppressExplanation</code> is set to <code>false</code> before
 	* parsing, it will never be printed.</p>
 	*/
-	@:overload override public function parse(input : org.xml.sax.InputSource) : Void;
+	@:overload @:public override public function parse(input : org.xml.sax.InputSource) : Void;
 	
 	/** SAX XMLReader API.
 	*
 	* @see #parse(InputSource)
 	*/
-	@:overload override public function parse(systemId : String) : Void;
+	@:overload @:public override public function parse(systemId : String) : Void;
 	
 	/**
 	* Implements the <code>resolveEntity</code> method
 	* for the SAX interface, using an underlying CatalogResolver
 	* to do the real work.
 	*/
-	@:overload override public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public override public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
 	/** SAX DTDHandler API.
 	*
@@ -88,7 +88,7 @@ extern class ResolvingXMLFilter extends org.xml.sax.helpers.XMLFilterImpl
 	* we can ignore subsequent oasis-xml-catalog PIs. Otherwise
 	* the events are just passed through.</p>
 	*/
-	@:overload override public function notationDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public override public function notationDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	/** SAX DTDHandler API.
 	*
@@ -96,7 +96,7 @@ extern class ResolvingXMLFilter extends org.xml.sax.helpers.XMLFilterImpl
 	* we can ignore subsequent oasis-xml-catalog PIs. Otherwise
 	* the events are just passed through.</p>
 	*/
-	@:overload override public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
+	@:overload @:public override public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
 	
 	/** SAX ContentHandler API.
 	*
@@ -104,13 +104,13 @@ extern class ResolvingXMLFilter extends org.xml.sax.helpers.XMLFilterImpl
 	* we can ignore subsequent oasis-xml-catalog PIs. Otherwise
 	* the events are just passed through.</p>
 	*/
-	@:overload override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/** SAX ContentHandler API.
 	*
 	* <p>Detect and use the oasis-xml-catalog PI if it occurs.</p>
 	*/
-	@:overload override public function processingInstruction(target : String, pidata : String) : Void;
+	@:overload @:public override public function processingInstruction(target : String, pidata : String) : Void;
 	
 	
 }

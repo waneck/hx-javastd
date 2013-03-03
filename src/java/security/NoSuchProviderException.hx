@@ -36,7 +36,7 @@ extern class NoSuchProviderException extends java.security.GeneralSecurityExcept
 	* detail message is a String that describes this particular
 	* exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a NoSuchProviderException with the specified detail
@@ -45,7 +45,7 @@ extern class NoSuchProviderException extends java.security.GeneralSecurityExcept
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

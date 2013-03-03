@@ -25,13 +25,13 @@ package sun.management;
 */
 @:internal extern class HotspotRuntime implements sun.management.HotspotRuntimeMBean
 {
-	@:overload public function getSafepointCount() : haxe.Int64;
+	@:overload @:public public function getSafepointCount() : haxe.Int64;
 	
-	@:overload public function getTotalSafepointTime() : haxe.Int64;
+	@:overload @:public public function getTotalSafepointTime() : haxe.Int64;
 	
-	@:overload public function getSafepointSyncTime() : haxe.Int64;
+	@:overload @:public public function getSafepointSyncTime() : haxe.Int64;
 	
-	@:overload public function getInternalRuntimeCounters() : java.util.List<sun.management.counter.Counter>;
+	@:overload @:public public function getInternalRuntimeCounters() : java.util.List<sun.management.counter.Counter>;
 	
 	
 }

@@ -28,25 +28,25 @@ package javax.swing.text;
 	/**
 	* Calculate break positions eagerly parallel to reading text.
 	*/
-	@:overload override public function setText(ci : java.text.CharacterIterator) : Void;
+	@:overload @:public override public function setText(ci : java.text.CharacterIterator) : Void;
 	
-	@:overload override public function getText() : java.text.CharacterIterator;
+	@:overload @:public override public function getText() : java.text.CharacterIterator;
 	
-	@:overload override public function first() : Int;
+	@:overload @:public override public function first() : Int;
 	
-	@:overload override public function last() : Int;
+	@:overload @:public override public function last() : Int;
 	
-	@:overload override public function current() : Int;
+	@:overload @:public override public function current() : Int;
 	
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
-	@:overload override public function previous() : Int;
+	@:overload @:public override public function previous() : Int;
 	
-	@:overload override public function next(n : Int) : Int;
+	@:overload @:public override public function next(n : Int) : Int;
 	
-	@:overload override public function following(n : Int) : Int;
+	@:overload @:public override public function following(n : Int) : Int;
 	
-	@:overload override public function preceding(n : Int) : Int;
+	@:overload @:public override public function preceding(n : Int) : Int;
 	
 	
 }

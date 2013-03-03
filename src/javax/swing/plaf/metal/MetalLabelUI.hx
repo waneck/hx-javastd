@@ -38,9 +38,9 @@ extern class MetalLabelUI extends javax.swing.plaf.basic.BasicLabelUI
 	* overrides the <code>createUI</code> method, and place that class
 	* name in defaults table under the key "LabelUI".
 	*/
-	private static var metalLabelUI : javax.swing.plaf.metal.MetalLabelUI;
+	@:protected @:static private static var metalLabelUI : javax.swing.plaf.metal.MetalLabelUI;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Just paint the text gray (Label.disabledForeground) rather than
@@ -49,7 +49,7 @@ extern class MetalLabelUI extends javax.swing.plaf.basic.BasicLabelUI
 	* @see #paint
 	* @see #paintEnabledText
 	*/
-	@:overload private function paintDisabledText(l : javax.swing.JLabel, g : java.awt.Graphics, s : String, textX : Int, textY : Int) : Void;
+	@:overload @:protected override private function paintDisabledText(l : javax.swing.JLabel, g : java.awt.Graphics, s : String, textX : Int, textY : Int) : Void;
 	
 	
 }

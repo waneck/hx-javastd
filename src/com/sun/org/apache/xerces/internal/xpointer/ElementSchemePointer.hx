@@ -20,15 +20,15 @@ package com.sun.org.apache.xerces.internal.xpointer;
 */
 @:internal extern class ElementSchemePointer implements com.sun.org.apache.xerces.internal.xpointer.XPointerPart
 {
-	private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
+	@:protected private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
 	
-	private var fErrorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
+	@:protected private var fErrorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter) : Void;
 	
 	/**
 	* Parses the XPointer expression and tokenizes it into Strings
@@ -36,34 +36,34 @@ package com.sun.org.apache.xerces.internal.xpointer;
 	*
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerProcessor#parseXPointer(java.lang.String)
 	*/
-	@:overload public function parseXPointer(xpointer : String) : Void;
+	@:overload @:public public function parseXPointer(xpointer : String) : Void;
 	
 	/**
 	* Returns the scheme name i.e element
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerPart#getSchemeName()
 	*/
-	@:overload public function getSchemeName() : String;
+	@:overload @:public public function getSchemeName() : String;
 	
 	/**
 	* Returns the scheme data
 	*
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerPart#getSchemeData()
 	*/
-	@:overload public function getSchemeData() : String;
+	@:overload @:public public function getSchemeData() : String;
 	
 	/**
 	* Sets the scheme name
 	*
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerPart#setSchemeName(java.lang.String)
 	*/
-	@:overload public function setSchemeName(schemeName : String) : Void;
+	@:overload @:public public function setSchemeName(schemeName : String) : Void;
 	
 	/**
 	* Sets the scheme data
 	*
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerPart#setSchemeData(java.lang.String)
 	*/
-	@:overload public function setSchemeData(schemeData : String) : Void;
+	@:overload @:public public function setSchemeData(schemeData : String) : Void;
 	
 	/**
 	* Responsible for resolving the element() scheme XPointer.  If a ShortHand
@@ -72,7 +72,7 @@ package com.sun.org.apache.xerces.internal.xpointer;
 	*
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerProcessor#resolveXPointer(com.sun.org.apache.xerces.internal.xni.QName, com.sun.org.apache.xerces.internal.xni.XMLAttributes, com.sun.org.apache.xerces.internal.xni.Augmentations, int event)
 	*/
-	@:overload public function resolveXPointer(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations, event : Int) : Bool;
+	@:overload @:public public function resolveXPointer(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations, event : Int) : Bool;
 	
 	/**
 	* Matches the current element position in the document tree with the
@@ -83,7 +83,7 @@ package com.sun.org.apache.xerces.internal.xpointer;
 	* tree matches theelement position specified in the element XPointer
 	* scheme.
 	*/
-	@:overload private function matchChildSequence(element : com.sun.org.apache.xerces.internal.xni.QName, event : Int) : Bool;
+	@:overload @:protected private function matchChildSequence(element : com.sun.org.apache.xerces.internal.xni.QName, event : Int) : Bool;
 	
 	/**
 	* Matches the current position of the element being visited by checking
@@ -92,7 +92,7 @@ package com.sun.org.apache.xerces.internal.xpointer;
 	*
 	* @return boolean
 	*/
-	@:overload private function checkMatch() : Bool;
+	@:overload @:protected private function checkMatch() : Bool;
 	
 	/**
 	* Returns true if the node matches or is a child of a matching element()
@@ -100,7 +100,7 @@ package com.sun.org.apache.xerces.internal.xpointer;
 	*
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerProcessor#isFragmentResolved()
 	*/
-	@:overload public function isFragmentResolved() : Bool;
+	@:overload @:public public function isFragmentResolved() : Bool;
 	
 	/**
 	* Returns true if the XPointer expression resolves to a non-element child
@@ -109,22 +109,22 @@ package com.sun.org.apache.xerces.internal.xpointer;
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerPart#isChildFragmentResolved()
 	*
 	*/
-	@:overload public function isChildFragmentResolved() : Bool;
+	@:overload @:public public function isChildFragmentResolved() : Bool;
 	
 	/**
 	* Reports an XPointer error
 	*/
-	@:overload private function reportError(key : String, arguments : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected private function reportError(key : String, arguments : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Initializes error handling objects
 	*/
-	@:overload private function initErrorReporter() : Void;
+	@:overload @:protected private function initErrorReporter() : Void;
 	
 	/**
 	* Initializes the element scheme processor
 	*/
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
 	
 }
@@ -159,7 +159,7 @@ package com.sun.org.apache.xerces.internal.xpointer;
 	* XPath expression. This is a convenient way of allowing only
 	* a subset of XPath.
 	*/
-	@:overload private function addToken(tokens : com.sun.org.apache.xerces.internal.xpointer.ElementSchemePointer.ElementSchemePointer_Tokens, token : Int) : Void;
+	@:overload @:protected private function addToken(tokens : com.sun.org.apache.xerces.internal.xpointer.ElementSchemePointer.ElementSchemePointer_Tokens, token : Int) : Void;
 	
 	
 }

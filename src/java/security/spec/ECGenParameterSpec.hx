@@ -47,14 +47,14 @@ package java.security.spec;
 	* @exception NullPointerException if <code>stdName</code>
 	* is null.
 	*/
-	@:overload public function new(stdName : String) : Void;
+	@:overload @:public public function new(stdName : String) : Void;
 	
 	/**
 	* Returns the standard or predefined name of the
 	* to-be-generated EC domain parameters.
 	* @return the standard or predefined name.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

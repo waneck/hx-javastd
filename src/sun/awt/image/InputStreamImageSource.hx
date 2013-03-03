@@ -25,23 +25,23 @@ package sun.awt.image;
 */
 extern class InputStreamImageSource implements java.awt.image.ImageProducer implements sun.awt.image.ImageFetchable
 {
-	@:overload public function addConsumer(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public public function addConsumer(ic : java.awt.image.ImageConsumer) : Void;
 	
-	@:overload @:synchronized public function isConsumer(ic : java.awt.image.ImageConsumer) : Bool;
+	@:overload @:public @:synchronized public function isConsumer(ic : java.awt.image.ImageConsumer) : Bool;
 	
-	@:overload @:synchronized public function removeConsumer(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public @:synchronized public function removeConsumer(ic : java.awt.image.ImageConsumer) : Void;
 	
-	@:overload public function startProduction(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public public function startProduction(ic : java.awt.image.ImageConsumer) : Void;
 	
-	@:overload public function requestTopDownLeftRightResend(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public public function requestTopDownLeftRightResend(ic : java.awt.image.ImageConsumer) : Void;
 	
-	@:overload @:abstract private function getDecoder() : sun.awt.image.ImageDecoder;
+	@:overload @:protected @:abstract private function getDecoder() : sun.awt.image.ImageDecoder;
 	
-	@:overload private function decoderForType(is : java.io.InputStream, content_type : String) : sun.awt.image.ImageDecoder;
+	@:overload @:protected private function decoderForType(is : java.io.InputStream, content_type : String) : sun.awt.image.ImageDecoder;
 	
-	@:overload private function getDecoder(is : java.io.InputStream) : sun.awt.image.ImageDecoder;
+	@:overload @:protected private function getDecoder(is : java.io.InputStream) : sun.awt.image.ImageDecoder;
 	
-	@:overload public function doFetch() : Void;
+	@:overload @:public public function doFetch() : Void;
 	
 	
 }

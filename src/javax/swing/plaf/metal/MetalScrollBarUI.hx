@@ -25,60 +25,60 @@ package javax.swing.plaf.metal;
 */
 extern class MetalScrollBarUI extends javax.swing.plaf.basic.BasicScrollBarUI
 {
-	private var bumps : javax.swing.plaf.metal.MetalBumps;
+	@:protected private var bumps : javax.swing.plaf.metal.MetalBumps;
 	
-	private var increaseButton : javax.swing.plaf.metal.MetalScrollButton;
+	@:protected private var increaseButton : javax.swing.plaf.metal.MetalScrollButton;
 	
-	private var decreaseButton : javax.swing.plaf.metal.MetalScrollButton;
+	@:protected private var decreaseButton : javax.swing.plaf.metal.MetalScrollButton;
 	
-	private var scrollBarWidth : Int;
+	@:protected private var scrollBarWidth : Int;
 	
-	public static var FREE_STANDING_PROP(default, null) : String;
+	@:public @:static @:final public static var FREE_STANDING_PROP(default, null) : String;
 	
-	private var isFreeStanding : Bool;
+	@:protected private var isFreeStanding : Bool;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
-	@:overload override private function installListeners() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
-	@:overload override private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	@:overload @:protected override private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
 	
-	@:overload override private function configureScrollBarColors() : Void;
+	@:overload @:protected override private function configureScrollBarColors() : Void;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/** Returns the view that represents the decrease view.
 	*/
-	@:overload override private function createDecreaseButton(orientation : Int) : javax.swing.JButton;
+	@:overload @:protected override private function createDecreaseButton(orientation : Int) : javax.swing.JButton;
 	
 	/** Returns the view that represents the increase view. */
-	@:overload override private function createIncreaseButton(orientation : Int) : javax.swing.JButton;
+	@:overload @:protected override private function createIncreaseButton(orientation : Int) : javax.swing.JButton;
 	
-	@:overload override private function paintTrack(g : java.awt.Graphics, c : javax.swing.JComponent, trackBounds : java.awt.Rectangle) : Void;
+	@:overload @:protected override private function paintTrack(g : java.awt.Graphics, c : javax.swing.JComponent, trackBounds : java.awt.Rectangle) : Void;
 	
-	@:overload override private function paintThumb(g : java.awt.Graphics, c : javax.swing.JComponent, thumbBounds : java.awt.Rectangle) : Void;
+	@:overload @:protected override private function paintThumb(g : java.awt.Graphics, c : javax.swing.JComponent, thumbBounds : java.awt.Rectangle) : Void;
 	
-	@:overload override private function getMinimumThumbSize() : java.awt.Dimension;
+	@:overload @:protected override private function getMinimumThumbSize() : java.awt.Dimension;
 	
 	/**
 	* This is overridden only to increase the invalid area.  This
 	* ensures that the "Shadow" below the thumb is invalidated
 	*/
-	@:overload override private function setThumbBounds(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:protected override private function setThumbBounds(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$metal$MetalScrollBarUI$ScrollBarListener') @:internal extern class MetalScrollBarUI_ScrollBarListener extends javax.swing.plaf.basic.BasicScrollBarUI.BasicScrollBarUI_PropertyChangeHandler
 {
-	@:overload override public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public override public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload public function handlePropertyChange(newValue : Dynamic) : Void;
+	@:overload @:public public function handlePropertyChange(newValue : Dynamic) : Void;
 	
-	@:overload private function toFlush() : Void;
+	@:overload @:protected private function toFlush() : Void;
 	
-	@:overload private function toFreeStanding() : Void;
+	@:overload @:protected private function toFreeStanding() : Void;
 	
 	
 }

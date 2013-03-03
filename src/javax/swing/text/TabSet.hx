@@ -29,37 +29,37 @@ extern class TabSet implements java.io.Serializable
 	* Creates and returns an instance of TabSet. The array of Tabs
 	* passed in must be sorted in ascending order.
 	*/
-	@:overload public function new(tabs : java.NativeArray<javax.swing.text.TabStop>) : Void;
+	@:overload @:public public function new(tabs : java.NativeArray<javax.swing.text.TabStop>) : Void;
 	
 	/**
 	* Returns the number of Tab instances the receiver contains.
 	*/
-	@:overload public function getTabCount() : Int;
+	@:overload @:public public function getTabCount() : Int;
 	
 	/**
 	* Returns the TabStop at index <code>index</code>. This will throw an
 	* IllegalArgumentException if <code>index</code> is outside the range
 	* of tabs.
 	*/
-	@:overload public function getTab(index : Int) : javax.swing.text.TabStop;
+	@:overload @:public public function getTab(index : Int) : javax.swing.text.TabStop;
 	
 	/**
 	* Returns the Tab instance after <code>location</code>. This will
 	* return null if there are no tabs after <code>location</code>.
 	*/
-	@:overload public function getTabAfter(location : Single) : javax.swing.text.TabStop;
+	@:overload @:public public function getTabAfter(location : Single) : javax.swing.text.TabStop;
 	
 	/**
 	* @return the index of the TabStop <code>tab</code>, or -1 if
 	* <code>tab</code> is not contained in the receiver.
 	*/
-	@:overload public function getTabIndex(tab : javax.swing.text.TabStop) : Int;
+	@:overload @:public public function getTabIndex(tab : javax.swing.text.TabStop) : Int;
 	
 	/**
 	* Returns the index of the Tab to be used after <code>location</code>.
 	* This will return -1 if there are no tabs after <code>location</code>.
 	*/
-	@:overload public function getTabIndexAfter(location : Single) : Int;
+	@:overload @:public public function getTabIndexAfter(location : Single) : Int;
 	
 	/**
 	* Indicates whether this <code>TabSet</code> is equal to another one.
@@ -71,7 +71,7 @@ extern class TabSet implements java.io.Serializable
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function equals(o : Dynamic) : Bool;
+	@:require(java5) @:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode for this set of TabStops.
@@ -79,12 +79,12 @@ extern class TabSet implements java.io.Serializable
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function hashCode() : Int;
+	@:require(java5) @:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the string representation of the set of tabs.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

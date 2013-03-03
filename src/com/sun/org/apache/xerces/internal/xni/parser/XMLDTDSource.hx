@@ -21,10 +21,10 @@ package com.sun.org.apache.xerces.internal.xni.parser;
 extern interface XMLDTDSource
 {
 	/** Sets the DTD handler. */
-	@:overload public function setDTDHandler(handler : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler) : Void;
+	@:overload @:public public function setDTDHandler(handler : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler) : Void;
 	
 	/** Returns the DTD handler. */
-	@:overload public function getDTDHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler;
+	@:overload @:public public function getDTDHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler;
 	
 	
 }

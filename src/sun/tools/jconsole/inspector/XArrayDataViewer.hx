@@ -25,9 +25,9 @@ package sun.tools.jconsole.inspector;
 */
 @:internal extern class XArrayDataViewer
 {
-	@:overload public static function isViewableValue(value : Dynamic) : Bool;
+	@:overload @:public @:static public static function isViewableValue(value : Dynamic) : Bool;
 	
-	@:overload public static function loadArray(value : Dynamic) : java.awt.Component;
+	@:overload @:public @:static public static function loadArray(value : Dynamic) : java.awt.Component;
 	
 	
 }

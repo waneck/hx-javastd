@@ -56,21 +56,21 @@ package com.sun.beans.decoder;
 	*
 	* @param ch  the character
 	*/
-	@:overload @:final override public function addCharacter(ch : java.StdTypes.Char16) : Void;
+	@:overload @:public @:final override public function addCharacter(ch : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Adds the string value of the argument to the string value of this element.
 	*
 	* @param argument  the value of the element that contained in this one
 	*/
-	@:overload @:final override private function addArgument(argument : Dynamic) : Void;
+	@:overload @:protected @:final override private function addArgument(argument : Dynamic) : Void;
 	
 	/**
 	* Returns the value of this element.
 	*
 	* @return the value of this element
 	*/
-	@:overload @:final override private function getValueObject() : com.sun.beans.decoder.ValueObject;
+	@:overload @:protected @:final override private function getValueObject() : com.sun.beans.decoder.ValueObject;
 	
 	/**
 	* Returns the text of the body of this element.
@@ -81,7 +81,7 @@ package com.sun.beans.decoder;
 	* @param argument  the text of the body
 	* @return evaluated value
 	*/
-	@:overload private function getValue(argument : String) : Dynamic;
+	@:overload @:protected private function getValue(argument : String) : Dynamic;
 	
 	
 }

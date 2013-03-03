@@ -39,90 +39,90 @@ package javax.swing.plaf.metal;
 */
 extern class MetalSliderUI extends javax.swing.plaf.basic.BasicSliderUI
 {
-	private var TICK_BUFFER(default, null) : Int;
+	@:protected @:final private var TICK_BUFFER(default, null) : Int;
 	
-	private var filledSlider : Bool;
+	@:protected private var filledSlider : Bool;
 	
-	private static var thumbColor : java.awt.Color;
+	@:protected @:static private static var thumbColor : java.awt.Color;
 	
-	private static var highlightColor : java.awt.Color;
+	@:protected @:static private static var highlightColor : java.awt.Color;
 	
-	private static var darkShadowColor : java.awt.Color;
+	@:protected @:static private static var darkShadowColor : java.awt.Color;
 	
-	private static var trackWidth : Int;
+	@:protected @:static private static var trackWidth : Int;
 	
-	private static var tickLength : Int;
+	@:protected @:static private static var tickLength : Int;
 	
 	/**
 	* A default horizontal thumb <code>Icon</code>. This field might not be
 	* used. To change the <code>Icon</code> used by this delgate directly set it
 	* using the <code>Slider.horizontalThumbIcon</code> UIManager property.
 	*/
-	private static var horizThumbIcon : javax.swing.Icon;
+	@:protected @:static private static var horizThumbIcon : javax.swing.Icon;
 	
 	/**
 	* A default vertical thumb <code>Icon</code>. This field might not be
 	* used. To change the <code>Icon</code> used by this delgate directly set it
 	* using the <code>Slider.verticalThumbIcon</code> UIManager property.
 	*/
-	private static var vertThumbIcon : javax.swing.Icon;
+	@:protected @:static private static var vertThumbIcon : javax.swing.Icon;
 	
-	private var SLIDER_FILL(default, null) : String;
+	@:protected @:final private var SLIDER_FILL(default, null) : String;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function createPropertyChangeListener(slider : javax.swing.JSlider) : java.beans.PropertyChangeListener;
+	@:overload @:protected override private function createPropertyChangeListener(slider : javax.swing.JSlider) : java.beans.PropertyChangeListener;
 	
-	@:overload override public function paintThumb(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintThumb(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function paintTrack(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintTrack(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function paintFocus(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintFocus(g : java.awt.Graphics) : Void;
 	
-	@:overload override private function getThumbSize() : java.awt.Dimension;
+	@:overload @:protected override private function getThumbSize() : java.awt.Dimension;
 	
 	/**
 	* Gets the height of the tick area for horizontal sliders and the width of the
 	* tick area for vertical sliders.  BasicSliderUI uses the returned value to
 	* determine the tick area rectangle.
 	*/
-	@:overload override public function getTickLength() : Int;
+	@:overload @:public override public function getTickLength() : Int;
 	
 	/**
 	* Returns the shorter dimension of the track.
 	*/
-	@:overload private function getTrackWidth() : Int;
+	@:overload @:protected private function getTrackWidth() : Int;
 	
 	/**
 	* Returns the longer dimension of the slide bar.  (The slide bar is only the
 	* part that runs directly under the thumb)
 	*/
-	@:overload private function getTrackLength() : Int;
+	@:overload @:protected private function getTrackLength() : Int;
 	
 	/**
 	* Returns the amount that the thumb goes past the slide bar.
 	*/
-	@:overload private function getThumbOverhang() : Int;
+	@:overload @:protected private function getThumbOverhang() : Int;
 	
-	@:overload override private function scrollDueToClickInTrack(dir : Int) : Void;
+	@:overload @:protected override private function scrollDueToClickInTrack(dir : Int) : Void;
 	
-	@:overload override private function paintMinorTickForHorizSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, x : Int) : Void;
+	@:overload @:protected override private function paintMinorTickForHorizSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, x : Int) : Void;
 	
-	@:overload override private function paintMajorTickForHorizSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, x : Int) : Void;
+	@:overload @:protected override private function paintMajorTickForHorizSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, x : Int) : Void;
 	
-	@:overload override private function paintMinorTickForVertSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, y : Int) : Void;
+	@:overload @:protected override private function paintMinorTickForVertSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, y : Int) : Void;
 	
-	@:overload override private function paintMajorTickForVertSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, y : Int) : Void;
+	@:overload @:protected override private function paintMajorTickForVertSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, y : Int) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$metal$MetalSliderUI$MetalPropertyListener') extern class MetalSliderUI_MetalPropertyListener extends javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_PropertyChangeHandler
 {
-	@:overload override public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public override public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

@@ -54,17 +54,17 @@ extern class IncorrectNamespaceURIChecker extends org.xml.sax.helpers.XMLFilterI
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload public function new(handler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function new(handler : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload override public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
-	@:overload override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload override public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public override public function endPrefixMapping(prefix : String) : Void;
 	
-	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	
 }

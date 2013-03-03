@@ -35,52 +35,52 @@ extern class DOMErrorImpl implements org.w3c.dom.DOMError
 	* @author Elena Litani, IBM
 	*
 	*/
-	public var fSeverity : java.StdTypes.Int16;
+	@:public public var fSeverity : java.StdTypes.Int16;
 	
-	public var fMessage : String;
+	@:public public var fMessage : String;
 	
-	public var fLocator : com.sun.org.apache.xerces.internal.dom.DOMLocatorImpl;
+	@:public public var fLocator : com.sun.org.apache.xerces.internal.dom.DOMLocatorImpl;
 	
-	public var fException : java.lang.Exception;
+	@:public public var fException : java.lang.Exception;
 	
-	public var fType : String;
+	@:public public var fType : String;
 	
-	public var fRelatedData : Dynamic;
+	@:public public var fRelatedData : Dynamic;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Exctracts information from XMLParserException) */
-	@:overload public function new(severity : java.StdTypes.Int16, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
+	@:overload @:public public function new(severity : java.StdTypes.Int16, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
 	
 	/**
 	* The severity of the error, either <code>SEVERITY_WARNING</code>,
 	* <code>SEVERITY_ERROR</code>, or <code>SEVERITY_FATAL_ERROR</code>.
 	*/
-	@:overload public function getSeverity() : java.StdTypes.Int16;
+	@:overload @:public public function getSeverity() : java.StdTypes.Int16;
 	
 	/**
 	* An implementation specific string describing the error that occured.
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public public function getMessage() : String;
 	
 	/**
 	* The location of the error.
 	*/
-	@:overload public function getLocation() : org.w3c.dom.DOMLocator;
+	@:overload @:public public function getLocation() : org.w3c.dom.DOMLocator;
 	
 	/**
 	* The related platform dependent exception if any.exception is a reserved
 	* word, we need to rename it.Change to "relatedException". (F2F 26 Sep
 	* 2001)
 	*/
-	@:overload public function getRelatedException() : Dynamic;
+	@:overload @:public public function getRelatedException() : Dynamic;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function getRelatedData() : Dynamic;
+	@:overload @:public public function getRelatedData() : Dynamic;
 	
 	
 }

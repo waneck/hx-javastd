@@ -25,7 +25,7 @@ package com.sun.corba.se.spi.orbutil.proxy;
 */
 extern class DelegateInvocationHandlerImpl
 {
-	@:overload public static function create(delegate : Dynamic) : java.lang.reflect.InvocationHandler;
+	@:overload @:public @:static public static function create(delegate : Dynamic) : java.lang.reflect.InvocationHandler;
 	
 	
 }

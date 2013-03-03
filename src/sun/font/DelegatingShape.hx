@@ -25,27 +25,27 @@ package sun.font;
 */
 extern class DelegatingShape implements java.awt.Shape
 {
-	@:overload public function new(delegate : java.awt.Shape) : Void;
+	@:overload @:public public function new(delegate : java.awt.Shape) : Void;
 	
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public public function getBounds() : java.awt.Rectangle;
 	
-	@:overload public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
-	@:overload public function contains(x : Float, y : Float) : Bool;
+	@:overload @:public public function contains(x : Float, y : Float) : Bool;
 	
-	@:overload public function contains(p : java.awt.geom.Point2D) : Bool;
+	@:overload @:public public function contains(p : java.awt.geom.Point2D) : Bool;
 	
-	@:overload public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:overload @:public public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
-	@:overload public function intersects(r : java.awt.geom.Rectangle2D) : Bool;
+	@:overload @:public public function intersects(r : java.awt.geom.Rectangle2D) : Bool;
 	
-	@:overload public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:overload @:public public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
-	@:overload public function contains(r : java.awt.geom.Rectangle2D) : Bool;
+	@:overload @:public public function contains(r : java.awt.geom.Rectangle2D) : Bool;
 	
-	@:overload public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
+	@:overload @:public public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
 	
-	@:overload public function getPathIterator(at : java.awt.geom.AffineTransform, flatness : Float) : java.awt.geom.PathIterator;
+	@:overload @:public public function getPathIterator(at : java.awt.geom.AffineTransform, flatness : Float) : java.awt.geom.PathIterator;
 	
 	
 }

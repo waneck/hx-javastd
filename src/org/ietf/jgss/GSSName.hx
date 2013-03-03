@@ -39,7 +39,7 @@ extern interface GSSName
 	*         {@link GSSException#BAD_NAMETYPE GSSException.BAD_NAMETYPE},
 	*         {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function equals(another : org.ietf.jgss.GSSName) : Bool;
+	@:overload @:public public function equals(another : org.ietf.jgss.GSSName) : Bool;
 	
 	/**
 	* Creates a name that is canonicalized for some
@@ -58,7 +58,7 @@ extern interface GSSName
 	*         {@link GSSException#BAD_NAME GSSException.BAD_NAME},
 	*         {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function canonicalize(mech : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
+	@:overload @:public public function canonicalize(mech : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
 	
 	/**
 	* Returns a canonical contiguous byte representation of a mechanism name
@@ -92,7 +92,7 @@ extern interface GSSName
 	*         {@link GSSException#BAD_NAMETYPE GSSException.BAD_NAMETYPE},
 	*         {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function export() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function export() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the name type of the printable
@@ -106,14 +106,14 @@ extern interface GSSName
 	* major error codes:
 	*         {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function getStringNameType() : org.ietf.jgss.Oid;
+	@:overload @:public public function getStringNameType() : org.ietf.jgss.Oid;
 	
 	/**
 	* Tests if this name object represents an anonymous entity.
 	*
 	* @return true if this is an anonymous name, false otherwise.
 	*/
-	@:overload public function isAnonymous() : Bool;
+	@:overload @:public public function isAnonymous() : Bool;
 	
 	/**
 	* Tests if this name object represents a Mechanism Name (MN). An MN is
@@ -122,7 +122,7 @@ extern interface GSSName
 	*
 	* @return true if this is an MN, false otherwise.
 	*/
-	@:overload public function isMN() : Bool;
+	@:overload @:public public function isMN() : Bool;
 	
 	
 }

@@ -31,23 +31,23 @@ package com.sun.org.apache.xpath.internal.compiler;
 extern class OpMapVector
 {
 	/** Size of blocks to allocate          */
-	private var m_blocksize : Int;
+	@:protected private var m_blocksize : Int;
 	
 	/** Array of ints          */
-	private var m_map : java.NativeArray<Int>;
+	@:protected private var m_map : java.NativeArray<Int>;
 	
 	/** Position where size of array is kept          */
-	private var m_lengthPos : Int;
+	@:protected private var m_lengthPos : Int;
 	
 	/** Size of array          */
-	private var m_mapSize : Int;
+	@:protected private var m_mapSize : Int;
 	
 	/**
 	* Construct a OpMapVector, using the given block size.
 	*
 	* @param blocksize Size of block to allocate
 	*/
-	@:overload public function new(blocksize : Int, increaseSize : Int, lengthPos : Int) : Void;
+	@:overload @:public public function new(blocksize : Int, increaseSize : Int, lengthPos : Int) : Void;
 	
 	/**
 	* Get the nth element.
@@ -56,7 +56,7 @@ extern class OpMapVector
 	*
 	* @return object at given index
 	*/
-	@:overload @:final public function elementAt(i : Int) : Int;
+	@:overload @:public @:final public function elementAt(i : Int) : Int;
 	
 	/**
 	* Sets the component at the specified index of this vector to be the
@@ -68,14 +68,14 @@ extern class OpMapVector
 	* @param value object to set
 	* @param index Index of where to set the object
 	*/
-	@:overload @:final public function setElementAt(value : Int, index : Int) : Void;
+	@:overload @:public @:final public function setElementAt(value : Int, index : Int) : Void;
 	
 	/*
 	* Reset the array to the supplied size.  No checking is done.
 	*
 	* @param size The size to trim to.
 	*/
-	@:overload @:final public function setToSize(size : Int) : Void;
+	@:overload @:public @:final public function setToSize(size : Int) : Void;
 	
 	
 }

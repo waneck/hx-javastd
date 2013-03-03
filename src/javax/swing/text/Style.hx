@@ -32,7 +32,7 @@ extern interface Style extends javax.swing.text.MutableAttributeSet
 	*
 	* @return the name
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Adds a listener to track whenever an attribute
@@ -40,14 +40,14 @@ extern interface Style extends javax.swing.text.MutableAttributeSet
 	*
 	* @param l the change listener
 	*/
-	@:overload public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Removes a listener that was tracking attribute changes.
 	*
 	* @param l the change listener
 	*/
-	@:overload public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	
 }

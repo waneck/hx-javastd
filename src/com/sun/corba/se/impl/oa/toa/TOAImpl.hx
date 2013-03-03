@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.oa.toa;
 */
 extern class TOAImpl extends com.sun.corba.se.spi.oa.ObjectAdapterBase implements com.sun.corba.se.impl.oa.toa.TOA
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, tom : com.sun.corba.se.impl.oa.toa.TransientObjectManager, codebase : String) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, tom : com.sun.corba.se.impl.oa.toa.TransientObjectManager, codebase : String) : Void;
 	
-	@:overload public function getObjectCopierFactory() : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
+	@:overload @:public override public function getObjectCopierFactory() : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
 	
-	@:overload public function getLocalServant(objectId : java.NativeArray<java.StdTypes.Int8>) : org.omg.CORBA.Object;
+	@:overload @:public override public function getLocalServant(objectId : java.NativeArray<java.StdTypes.Int8>) : org.omg.CORBA.Object;
 	
 	/** Get the servant for the request given by the parameters.
 	* This will update thread Current, so that subsequent calls to
@@ -37,27 +37,27 @@ extern class TOAImpl extends com.sun.corba.se.spi.oa.ObjectAdapterBase implement
 	* same request.
 	* @param request is the request containing the rest of the request
 	*/
-	@:overload public function getInvocationServant(info : com.sun.corba.se.spi.oa.OAInvocationInfo) : Void;
+	@:overload @:public override public function getInvocationServant(info : com.sun.corba.se.spi.oa.OAInvocationInfo) : Void;
 	
-	@:overload public function returnServant() : Void;
+	@:overload @:public override public function returnServant() : Void;
 	
 	/** Return the most derived interface for the given servant and objectId.
 	*/
-	@:overload public function getInterfaces(servant : org.omg.CORBA.Object, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
+	@:overload @:public override public function getInterfaces(servant : org.omg.CORBA.Object, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
-	@:overload public function getEffectivePolicy(type : Int) : org.omg.CORBA.Policy;
+	@:overload @:public override public function getEffectivePolicy(type : Int) : org.omg.CORBA.Policy;
 	
-	@:overload public function getManagerId() : Int;
+	@:overload @:public override public function getManagerId() : Int;
 	
-	@:overload public function getState() : java.StdTypes.Int16;
+	@:overload @:public override public function getState() : java.StdTypes.Int16;
 	
-	@:overload public function enter() : Void;
+	@:overload @:public override public function enter() : Void;
 	
-	@:overload public function exit() : Void;
+	@:overload @:public override public function exit() : Void;
 	
-	@:overload public function connect(objref : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function connect(objref : org.omg.CORBA.Object) : Void;
 	
-	@:overload public function disconnect(objref : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function disconnect(objref : org.omg.CORBA.Object) : Void;
 	
 	
 }

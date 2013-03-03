@@ -25,23 +25,23 @@ package com.sun.tools.jdi;
 */
 extern class ThreadGroupReferenceImpl extends com.sun.tools.jdi.ObjectReferenceImpl implements com.sun.jdi.ThreadGroupReference implements com.sun.tools.jdi.VMListener
 {
-	@:overload override private function newCache() : com.sun.tools.jdi.ObjectReferenceImpl.ObjectReferenceImpl_Cache;
+	@:overload @:protected override private function newCache() : com.sun.tools.jdi.ObjectReferenceImpl.ObjectReferenceImpl_Cache;
 	
-	@:overload override private function description() : String;
+	@:overload @:protected override private function description() : String;
 	
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function parent() : com.sun.jdi.ThreadGroupReference;
+	@:overload @:public public function parent() : com.sun.jdi.ThreadGroupReference;
 	
-	@:overload public function suspend() : Void;
+	@:overload @:public public function suspend() : Void;
 	
-	@:overload public function resume() : Void;
+	@:overload @:public public function resume() : Void;
 	
-	@:overload public function threads() : java.util.List<com.sun.jdi.ThreadReference>;
+	@:overload @:public public function threads() : java.util.List<com.sun.jdi.ThreadReference>;
 	
-	@:overload public function threadGroups() : java.util.List<com.sun.jdi.ThreadGroupReference>;
+	@:overload @:public public function threadGroups() : java.util.List<com.sun.jdi.ThreadGroupReference>;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

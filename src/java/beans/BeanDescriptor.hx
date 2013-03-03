@@ -31,7 +31,7 @@ extern class BeanDescriptor extends java.beans.FeatureDescriptor
 	* @param beanClass  The Class object of the Java class that implements
 	*          the bean.  For example sun.beans.OurButton.class.
 	*/
-	@:overload public function new(beanClass : Class<Dynamic>) : Void;
+	@:overload @:public public function new(beanClass : Class<Dynamic>) : Void;
 	
 	/**
 	* Create a BeanDescriptor for a bean that has a customizer.
@@ -41,14 +41,14 @@ extern class BeanDescriptor extends java.beans.FeatureDescriptor
 	* @param customizerClass  The Class object of the Java class that implements
 	*          the bean's Customizer.  For example sun.beans.OurButtonCustomizer.class.
 	*/
-	@:overload public function new(beanClass : Class<Dynamic>, customizerClass : Class<Dynamic>) : Void;
+	@:overload @:public public function new(beanClass : Class<Dynamic>, customizerClass : Class<Dynamic>) : Void;
 	
 	/**
 	* Gets the bean's Class object.
 	*
 	* @return The Class object for the bean.
 	*/
-	@:overload public function getBeanClass() : Class<Dynamic>;
+	@:overload @:public public function getBeanClass() : Class<Dynamic>;
 	
 	/**
 	* Gets the Class object for the bean's customizer.
@@ -56,7 +56,7 @@ extern class BeanDescriptor extends java.beans.FeatureDescriptor
 	* @return The Class object for the bean's customizer.  This may
 	* be null if the bean doesn't have a customizer.
 	*/
-	@:overload public function getCustomizerClass() : Class<Dynamic>;
+	@:overload @:public public function getCustomizerClass() : Class<Dynamic>;
 	
 	
 }

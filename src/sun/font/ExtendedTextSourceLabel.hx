@@ -32,40 +32,40 @@ package sun.font;
 	/**
 	* Create from a TextSource.
 	*/
-	@:overload public function new(source : sun.font.TextSource, decorator : sun.font.Decoration) : Void;
+	@:overload @:public public function new(source : sun.font.TextSource, decorator : sun.font.Decoration) : Void;
 	
 	/**
 	* Create from a TextSource, optionally using cached data from oldLabel starting at the offset.
 	* If present oldLabel must have been created from a run of text that includes the text used in
 	* the new label.  Start in source corresponds to logical character offset in oldLabel.
 	*/
-	@:overload public function new(source : sun.font.TextSource, oldLabel : sun.font.ExtendedTextSourceLabel, offset : Int) : Void;
+	@:overload @:public public function new(source : sun.font.TextSource, oldLabel : sun.font.ExtendedTextSourceLabel, offset : Int) : Void;
 	
-	@:overload override public function getLogicalBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public override public function getLogicalBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload override public function getLogicalBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
+	@:overload @:public override public function getLogicalBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
 	
-	@:overload override public function getAdvance() : Single;
+	@:overload @:public override public function getAdvance() : Single;
 	
-	@:overload override public function getVisualBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
+	@:overload @:public override public function getVisualBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
 	
-	@:overload override public function getAlignBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
+	@:overload @:public override public function getAlignBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
 	
-	@:overload override public function getItalicBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
+	@:overload @:public override public function getItalicBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
 	
-	@:overload override public function getPixelBounds(frc : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
+	@:overload @:public override public function getPixelBounds(frc : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
 	
-	@:overload override public function isSimple() : Bool;
+	@:overload @:public override public function isSimple() : Bool;
 	
-	@:overload override public function getBaselineTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public override public function getBaselineTransform() : java.awt.geom.AffineTransform;
 	
-	@:overload public function handleGetOutline(x : Single, y : Single) : java.awt.Shape;
+	@:overload @:public public function handleGetOutline(x : Single, y : Single) : java.awt.Shape;
 	
-	@:overload override public function getOutline(x : Single, y : Single) : java.awt.Shape;
+	@:overload @:public override public function getOutline(x : Single, y : Single) : java.awt.Shape;
 	
-	@:overload public function handleDraw(g : java.awt.Graphics2D, x : Single, y : Single) : Void;
+	@:overload @:public public function handleDraw(g : java.awt.Graphics2D, x : Single, y : Single) : Void;
 	
-	@:overload override public function draw(g : java.awt.Graphics2D, x : Single, y : Single) : Void;
+	@:overload @:public override public function draw(g : java.awt.Graphics2D, x : Single, y : Single) : Void;
 	
 	/**
 	* The logical bounds extends from the origin of the glyphvector to the
@@ -91,9 +91,9 @@ package sun.font;
 	* being the leftmost character.  However we can again rely on the leftmost
 	* character origin and the rightmost character + advance.
 	*/
-	@:overload private function createLogicalBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:protected private function createLogicalBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload public function handleGetVisualBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function handleGetVisualBounds() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Like createLogicalBounds except ignore leading and logically trailing white space.
@@ -105,25 +105,25 @@ package sun.font;
 	* of the character to its left.  So we no longer need to skip chars with zero
 	* advance, as their bounds (right and left) are already correct.
 	*/
-	@:overload private function createAlignBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:protected private function createAlignBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload public function createItalicBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function createItalicBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload private function createGV() : sun.font.StandardGlyphVector;
+	@:overload @:protected private function createGV() : sun.font.StandardGlyphVector;
 	
-	@:overload override public function getNumCharacters() : Int;
+	@:overload @:public override public function getNumCharacters() : Int;
 	
-	@:overload override public function getCoreMetrics() : sun.font.CoreMetrics;
+	@:overload @:public override public function getCoreMetrics() : sun.font.CoreMetrics;
 	
-	@:overload override public function getCharX(index : Int) : Single;
+	@:overload @:public override public function getCharX(index : Int) : Single;
 	
-	@:overload override public function getCharY(index : Int) : Single;
+	@:overload @:public override public function getCharY(index : Int) : Single;
 	
-	@:overload override public function getCharAdvance(index : Int) : Single;
+	@:overload @:public override public function getCharAdvance(index : Int) : Single;
 	
-	@:overload public function handleGetCharVisualBounds(index : Int) : java.awt.geom.Rectangle2D;
+	@:overload @:public public function handleGetCharVisualBounds(index : Int) : java.awt.geom.Rectangle2D;
 	
-	@:overload override public function getCharVisualBounds(index : Int, x : Single, y : Single) : java.awt.geom.Rectangle2D;
+	@:overload @:public override public function getCharVisualBounds(index : Int, x : Single, y : Single) : java.awt.geom.Rectangle2D;
 	
 	/*
 	public int hitTestChar(float x, float y) {
@@ -171,15 +171,15 @@ package sun.font;
 	return left ? n : -n;
 	}
 	*/
-	@:overload override public function logicalToVisual(logicalIndex : Int) : Int;
+	@:overload @:public override public function logicalToVisual(logicalIndex : Int) : Int;
 	
-	@:overload override public function visualToLogical(visualIndex : Int) : Int;
+	@:overload @:public override public function visualToLogical(visualIndex : Int) : Int;
 	
-	@:overload override public function getLineBreakIndex(start : Int, width : Single) : Int;
+	@:overload @:public override public function getLineBreakIndex(start : Int, width : Single) : Int;
 	
-	@:overload override public function getAdvanceBetween(start : Int, limit : Int) : Single;
+	@:overload @:public override public function getAdvanceBetween(start : Int, limit : Int) : Single;
 	
-	@:overload override public function caretAtOffsetIsValid(offset : Int) : Bool;
+	@:overload @:public override public function caretAtOffsetIsValid(offset : Int) : Bool;
 	
 	/*
 * This takes the glyph info record obtained from the glyph vector and converts it into a similar record
@@ -246,31 +246,31 @@ package sun.font;
 *    boolean hasSplitCharacters();
 *    The optimized cases in (4) correspond to values 0, 1, 3, and 7 returned by getDescriptionFlags().
 */
-	@:overload private function createCharinfo() : java.NativeArray<Single>;
+	@:overload @:protected private function createCharinfo() : java.NativeArray<Single>;
 	
 	/**
 	* Map logical character index to visual character index.
 	* <p>
 	* This ignores hindi reordering.  @see createCharinfo
 	*/
-	@:overload private function l2v(index : Int) : Int;
+	@:overload @:protected private function l2v(index : Int) : Int;
 	
 	/**
 	* Map visual character index to logical character index.
 	* <p>
 	* This ignores hindi reordering.  @see createCharinfo
 	*/
-	@:overload private function v2l(index : Int) : Int;
+	@:overload @:protected private function v2l(index : Int) : Int;
 	
-	@:overload override public function getSubset(start : Int, limit : Int, dir : Int) : sun.font.TextLineComponent;
+	@:overload @:public override public function getSubset(start : Int, limit : Int, dir : Int) : sun.font.TextLineComponent;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function getNumJustificationInfos() : Int;
+	@:overload @:public override public function getNumJustificationInfos() : Int;
 	
-	@:overload override public function getJustificationInfos(infos : java.NativeArray<java.awt.font.GlyphJustificationInfo>, infoStart : Int, charStart : Int, charLimit : Int) : Void;
+	@:overload @:public override public function getJustificationInfos(infos : java.NativeArray<java.awt.font.GlyphJustificationInfo>, infoStart : Int, charStart : Int, charLimit : Int) : Void;
 	
-	@:overload override public function applyJustificationDeltas(deltas : java.NativeArray<Single>, deltaStart : Int, flags : java.NativeArray<Bool>) : sun.font.TextLineComponent;
+	@:overload @:public override public function applyJustificationDeltas(deltas : java.NativeArray<Single>, deltaStart : Int, flags : java.NativeArray<Bool>) : sun.font.TextLineComponent;
 	
 	
 }

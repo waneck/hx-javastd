@@ -78,21 +78,21 @@ extern class JCheckBoxMenuItem extends javax.swing.JMenuItem implements javax.sw
 	/**
 	* Creates an initially unselected check box menu item with no set text or icon.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an initially unselected check box menu item with an icon.
 	*
 	* @param icon the icon of the CheckBoxMenuItem.
 	*/
-	@:overload public function new(icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates an initially unselected check box menu item with text.
 	*
 	* @param text the text of the CheckBoxMenuItem
 	*/
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* Creates a menu item whose properties are taken from the
@@ -100,7 +100,7 @@ extern class JCheckBoxMenuItem extends javax.swing.JMenuItem implements javax.sw
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(a : javax.swing.Action) : Void;
+	@:require(java3) @:overload @:public public function new(a : javax.swing.Action) : Void;
 	
 	/**
 	* Creates an initially unselected check box menu item with the specified text and icon.
@@ -108,7 +108,7 @@ extern class JCheckBoxMenuItem extends javax.swing.JMenuItem implements javax.sw
 	* @param text the text of the CheckBoxMenuItem
 	* @param icon the icon of the CheckBoxMenuItem
 	*/
-	@:overload public function new(text : String, icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(text : String, icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates a check box menu item with the specified text and selection state.
@@ -116,7 +116,7 @@ extern class JCheckBoxMenuItem extends javax.swing.JMenuItem implements javax.sw
 	* @param text the text of the check box menu item.
 	* @param b the selected state of the check box menu item
 	*/
-	@:overload public function new(text : String, b : Bool) : Void;
+	@:overload @:public public function new(text : String, b : Bool) : Void;
 	
 	/**
 	* Creates a check box menu item with the specified text, icon, and selection state.
@@ -125,7 +125,7 @@ extern class JCheckBoxMenuItem extends javax.swing.JMenuItem implements javax.sw
 	* @param icon the icon of the check box menu item
 	* @param b the selected state of the check box menu item
 	*/
-	@:overload public function new(text : String, icon : javax.swing.Icon, b : Bool) : Void;
+	@:overload @:public public function new(text : String, icon : javax.swing.Icon, b : Bool) : Void;
 	
 	/**
 	* Returns the name of the L&F class
@@ -135,7 +135,7 @@ extern class JCheckBoxMenuItem extends javax.swing.JMenuItem implements javax.sw
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Returns the selected-state of the item. This method
@@ -144,7 +144,7 @@ extern class JCheckBoxMenuItem extends javax.swing.JMenuItem implements javax.sw
 	*
 	* @return true  if the item is selected
 	*/
-	@:overload public function getState() : Bool;
+	@:overload @:public public function getState() : Bool;
 	
 	/**
 	* Sets the selected-state of the item. This method
@@ -157,7 +157,7 @@ extern class JCheckBoxMenuItem extends javax.swing.JMenuItem implements javax.sw
 	* description: The selection state of the check box menu item
 	*      hidden: true
 	*/
-	@:overload @:synchronized public function setState(b : Bool) : Void;
+	@:overload @:public @:synchronized public function setState(b : Bool) : Void;
 	
 	/**
 	* Returns an array (length 1) containing the check box menu item
@@ -166,7 +166,7 @@ extern class JCheckBoxMenuItem extends javax.swing.JMenuItem implements javax.sw
 	* @return an array containing one Object -- the text of the menu item
 	*         -- if the item is selected; otherwise null
 	*/
-	@:overload public function getSelectedObjects() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function getSelectedObjects() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns a string representation of this JCheckBoxMenuItem. This method
@@ -177,7 +177,7 @@ extern class JCheckBoxMenuItem extends javax.swing.JMenuItem implements javax.sw
 	*
 	* @return  a string representation of this JCheckBoxMenuItem.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JCheckBoxMenuItem.
@@ -188,7 +188,7 @@ extern class JCheckBoxMenuItem extends javax.swing.JMenuItem implements javax.sw
 	* @return an AccessibleJCheckBoxMenuItem that serves as the
 	*         AccessibleContext of this AccessibleJCheckBoxMenuItem
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -215,7 +215,7 @@ extern class JCheckBoxMenuItem extends javax.swing.JMenuItem implements javax.sw
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

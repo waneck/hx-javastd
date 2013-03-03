@@ -31,7 +31,7 @@ package java.lang;
 	* @return  the length of the sequence of characters currently
 	*          represented by this object
 	*/
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
 	/**
 	* Returns the current capacity. The capacity is the amount of storage
@@ -40,7 +40,7 @@ package java.lang;
 	*
 	* @return  the current capacity
 	*/
-	@:overload public function capacity() : Int;
+	@:overload @:public public function capacity() : Int;
 	
 	/**
 	* Ensures that the capacity is at least equal to the specified minimum.
@@ -56,7 +56,7 @@ package java.lang;
 	*
 	* @param   minimumCapacity   the minimum desired capacity.
 	*/
-	@:overload public function ensureCapacity(minimumCapacity : Int) : Void;
+	@:overload @:public public function ensureCapacity(minimumCapacity : Int) : Void;
 	
 	/**
 	* Attempts to reduce storage used for the character sequence.
@@ -65,7 +65,7 @@ package java.lang;
 	* Calling this method may, but is not required to, affect the value
 	* returned by a subsequent call to the {@link #capacity()} method.
 	*/
-	@:overload public function trimToSize() : Void;
+	@:overload @:public public function trimToSize() : Void;
 	
 	/**
 	* Sets the length of the character sequence.
@@ -92,7 +92,7 @@ package java.lang;
 	* @throws     IndexOutOfBoundsException  if the
 	*               <code>newLength</code> argument is negative.
 	*/
-	@:overload public function setLength(newLength : Int) : Void;
+	@:overload @:public public function setLength(newLength : Int) : Void;
 	
 	/**
 	* Returns the <code>char</code> value in this sequence at the specified index.
@@ -111,7 +111,7 @@ package java.lang;
 	* @throws     IndexOutOfBoundsException  if <code>index</code> is
 	*             negative or greater than or equal to <code>length()</code>.
 	*/
-	@:overload public function charAt(index : Int) : java.StdTypes.Char16;
+	@:overload @:public public function charAt(index : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Returns the character (Unicode code point) at the specified
@@ -134,7 +134,7 @@ package java.lang;
 	*             argument is negative or not less than the length of this
 	*             sequence.
 	*/
-	@:overload public function codePointAt(index : Int) : Int;
+	@:overload @:public public function codePointAt(index : Int) : Int;
 	
 	/**
 	* Returns the character (Unicode code point) before the specified
@@ -157,7 +157,7 @@ package java.lang;
 	*            argument is less than 1 or greater than the length
 	*            of this sequence.
 	*/
-	@:overload public function codePointBefore(index : Int) : Int;
+	@:overload @:public public function codePointBefore(index : Int) : Int;
 	
 	/**
 	* Returns the number of Unicode code points in the specified text
@@ -179,7 +179,7 @@ package java.lang;
 	* is larger than the length of this sequence, or
 	* <code>beginIndex</code> is larger than <code>endIndex</code>.
 	*/
-	@:overload public function codePointCount(beginIndex : Int, endIndex : Int) : Int;
+	@:overload @:public public function codePointCount(beginIndex : Int, endIndex : Int) : Int;
 	
 	/**
 	* Returns the index within this sequence that is offset from the
@@ -200,7 +200,7 @@ package java.lang;
 	*   before <code>index</code> has fewer than the absolute value of
 	*   <code>codePointOffset</code> code points.
 	*/
-	@:overload public function offsetByCodePoints(index : Int, codePointOffset : Int) : Int;
+	@:overload @:public public function offsetByCodePoints(index : Int, codePointOffset : Int) : Int;
 	
 	/**
 	* Characters are copied from this sequence into the
@@ -232,7 +232,7 @@ package java.lang;
 	*             <code>dst.length</code>
 	*             </ul>
 	*/
-	@:overload public function getChars(srcBegin : Int, srcEnd : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstBegin : Int) : Void;
+	@:overload @:public public function getChars(srcBegin : Int, srcEnd : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstBegin : Int) : Void;
 	
 	/**
 	* The character at the specified index is set to <code>ch</code>. This
@@ -248,7 +248,7 @@ package java.lang;
 	* @throws     IndexOutOfBoundsException  if <code>index</code> is
 	*             negative or greater than or equal to <code>length()</code>.
 	*/
-	@:overload public function setCharAt(index : Int, ch : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setCharAt(index : Int, ch : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Appends the string representation of the {@code Object} argument.
@@ -261,7 +261,7 @@ package java.lang;
 	* @param   obj   an {@code Object}.
 	* @return  a reference to this object.
 	*/
-	@:overload public function append(obj : Dynamic) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function append(obj : Dynamic) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Appends the specified string to this character sequence.
@@ -281,11 +281,11 @@ package java.lang;
 	* @param   str   a string.
 	* @return  a reference to this object.
 	*/
-	@:overload public function append(str : String) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function append(str : String) : java.lang.AbstractStringBuilder;
 	
-	@:overload public function append(sb : java.lang.StringBuffer) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function append(sb : java.lang.StringBuffer) : java.lang.AbstractStringBuilder;
 	
-	@:overload public function append(s : java.lang.CharSequence) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function append(s : java.lang.CharSequence) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Appends a subsequence of the specified {@code CharSequence} to this
@@ -316,7 +316,7 @@ package java.lang;
 	*             {@code start} is greater than {@code end} or
 	*             {@code end} is greater than {@code s.length()}
 	*/
-	@:overload public function append(s : java.lang.CharSequence, start : Int, end : Int) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function append(s : java.lang.CharSequence, start : Int, end : Int) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Appends the string representation of the {@code char} array
@@ -334,7 +334,7 @@ package java.lang;
 	* @param   str   the characters to be appended.
 	* @return  a reference to this object.
 	*/
-	@:overload public function append(str : java.NativeArray<java.StdTypes.Char16>) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function append(str : java.NativeArray<java.StdTypes.Char16>) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Appends the string representation of a subarray of the
@@ -358,7 +358,7 @@ package java.lang;
 	*         if {@code offset < 0} or {@code len < 0}
 	*         or {@code offset+len > str.length}
 	*/
-	@:overload public function append(str : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function append(str : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Appends the string representation of the {@code boolean}
@@ -372,7 +372,7 @@ package java.lang;
 	* @param   b   a {@code boolean}.
 	* @return  a reference to this object.
 	*/
-	@:overload public function append(b : Bool) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function append(b : Bool) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Appends the string representation of the {@code char}
@@ -389,7 +389,7 @@ package java.lang;
 	* @param   c   a {@code char}.
 	* @return  a reference to this object.
 	*/
-	@:overload public function append(c : java.StdTypes.Char16) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function append(c : java.StdTypes.Char16) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Appends the string representation of the {@code int}
@@ -403,7 +403,7 @@ package java.lang;
 	* @param   i   an {@code int}.
 	* @return  a reference to this object.
 	*/
-	@:overload public function append(i : Int) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function append(i : Int) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Appends the string representation of the {@code long}
@@ -417,7 +417,7 @@ package java.lang;
 	* @param   l   a {@code long}.
 	* @return  a reference to this object.
 	*/
-	@:overload public function append(l : haxe.Int64) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function append(l : haxe.Int64) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Appends the string representation of the {@code float}
@@ -431,7 +431,7 @@ package java.lang;
 	* @param   f   a {@code float}.
 	* @return  a reference to this object.
 	*/
-	@:overload public function append(f : Single) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function append(f : Single) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Appends the string representation of the {@code double}
@@ -445,7 +445,7 @@ package java.lang;
 	* @param   d   a {@code double}.
 	* @return  a reference to this object.
 	*/
-	@:overload public function append(d : Float) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function append(d : Float) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Removes the characters in a substring of this sequence.
@@ -461,7 +461,7 @@ package java.lang;
 	*             is negative, greater than {@code length()}, or
 	*             greater than {@code end}.
 	*/
-	@:overload public function delete(start : Int, end : Int) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function delete(start : Int, end : Int) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Appends the string representation of the {@code codePoint}
@@ -482,7 +482,7 @@ package java.lang;
 	* @exception IllegalArgumentException if the specified
 	* {@code codePoint} isn't a valid Unicode code point
 	*/
-	@:overload public function appendCodePoint(codePoint : Int) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function appendCodePoint(codePoint : Int) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Removes the <code>char</code> at the specified position in this
@@ -501,7 +501,7 @@ package java.lang;
 	*              is negative or greater than or equal to
 	*              <code>length()</code>.
 	*/
-	@:overload public function deleteCharAt(index : Int) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function deleteCharAt(index : Int) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Replaces the characters in a substring of this sequence
@@ -522,7 +522,7 @@ package java.lang;
 	*             is negative, greater than <code>length()</code>, or
 	*             greater than <code>end</code>.
 	*/
-	@:overload public function replace(start : Int, end : Int, str : String) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function replace(start : Int, end : Int, str : String) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Returns a new <code>String</code> that contains a subsequence of
@@ -535,7 +535,7 @@ package java.lang;
 	* @throws     StringIndexOutOfBoundsException  if <code>start</code> is
 	*             less than zero, or greater than the length of this object.
 	*/
-	@:overload public function substring(start : Int) : String;
+	@:overload @:public public function substring(start : Int) : String;
 	
 	/**
 	* Returns a new character sequence that is a subsequence of this sequence.
@@ -563,7 +563,7 @@ package java.lang;
 	*          or if <tt>start</tt> is greater than <tt>end</tt>
 	* @spec JSR-51
 	*/
-	@:overload public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
+	@:overload @:public public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
 	
 	/**
 	* Returns a new <code>String</code> that contains a subsequence of
@@ -579,7 +579,7 @@ package java.lang;
 	*             <code>length()</code>, or <code>start</code> is
 	*             greater than <code>end</code>.
 	*/
-	@:overload public function substring(start : Int, end : Int) : String;
+	@:overload @:public public function substring(start : Int, end : Int) : String;
 	
 	/**
 	* Inserts the string representation of a subarray of the {@code str}
@@ -602,7 +602,7 @@ package java.lang;
 	*             {@code (offset+len)} is greater than
 	*             {@code str.length}.
 	*/
-	@:overload public function insert(index : Int, str : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function insert(index : Int, str : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Inserts the string representation of the {@code Object}
@@ -623,7 +623,7 @@ package java.lang;
 	* @return     a reference to this object.
 	* @throws     StringIndexOutOfBoundsException  if the offset is invalid.
 	*/
-	@:overload public function insert(offset : Int, obj : Dynamic) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function insert(offset : Int, obj : Dynamic) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Inserts the string into this character sequence.
@@ -656,7 +656,7 @@ package java.lang;
 	* @return     a reference to this object.
 	* @throws     StringIndexOutOfBoundsException  if the offset is invalid.
 	*/
-	@:overload public function insert(offset : Int, str : String) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function insert(offset : Int, str : String) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Inserts the string representation of the {@code char} array
@@ -682,7 +682,7 @@ package java.lang;
 	* @return     a reference to this object.
 	* @throws     StringIndexOutOfBoundsException  if the offset is invalid.
 	*/
-	@:overload public function insert(offset : Int, str : java.NativeArray<java.StdTypes.Char16>) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function insert(offset : Int, str : java.NativeArray<java.StdTypes.Char16>) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Inserts the specified {@code CharSequence} into this sequence.
@@ -705,7 +705,7 @@ package java.lang;
 	* @return     a reference to this object.
 	* @throws     IndexOutOfBoundsException  if the offset is invalid.
 	*/
-	@:overload public function insert(dstOffset : Int, s : java.lang.CharSequence) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function insert(dstOffset : Int, s : java.lang.CharSequence) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Inserts a subsequence of the specified {@code CharSequence} into
@@ -751,7 +751,7 @@ package java.lang;
 	*              {@code start} is greater than {@code end} or
 	*              {@code end} is greater than {@code s.length()}
 	*/
-	@:overload public function insert(dstOffset : Int, s : java.lang.CharSequence, start : Int, end : Int) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function insert(dstOffset : Int, s : java.lang.CharSequence, start : Int, end : Int) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Inserts the string representation of the {@code boolean}
@@ -772,7 +772,7 @@ package java.lang;
 	* @return     a reference to this object.
 	* @throws     StringIndexOutOfBoundsException  if the offset is invalid.
 	*/
-	@:overload public function insert(offset : Int, b : Bool) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function insert(offset : Int, b : Bool) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Inserts the string representation of the {@code char}
@@ -793,7 +793,7 @@ package java.lang;
 	* @return     a reference to this object.
 	* @throws     IndexOutOfBoundsException  if the offset is invalid.
 	*/
-	@:overload public function insert(offset : Int, c : java.StdTypes.Char16) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function insert(offset : Int, c : java.StdTypes.Char16) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Inserts the string representation of the second {@code int}
@@ -814,7 +814,7 @@ package java.lang;
 	* @return     a reference to this object.
 	* @throws     StringIndexOutOfBoundsException  if the offset is invalid.
 	*/
-	@:overload public function insert(offset : Int, i : Int) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function insert(offset : Int, i : Int) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Inserts the string representation of the {@code long}
@@ -835,7 +835,7 @@ package java.lang;
 	* @return     a reference to this object.
 	* @throws     StringIndexOutOfBoundsException  if the offset is invalid.
 	*/
-	@:overload public function insert(offset : Int, l : haxe.Int64) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function insert(offset : Int, l : haxe.Int64) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Inserts the string representation of the {@code float}
@@ -856,7 +856,7 @@ package java.lang;
 	* @return     a reference to this object.
 	* @throws     StringIndexOutOfBoundsException  if the offset is invalid.
 	*/
-	@:overload public function insert(offset : Int, f : Single) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function insert(offset : Int, f : Single) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Inserts the string representation of the {@code double}
@@ -877,7 +877,7 @@ package java.lang;
 	* @return     a reference to this object.
 	* @throws     StringIndexOutOfBoundsException  if the offset is invalid.
 	*/
-	@:overload public function insert(offset : Int, d : Float) : java.lang.AbstractStringBuilder;
+	@:overload @:public public function insert(offset : Int, d : Float) : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -896,7 +896,7 @@ package java.lang;
 	* @throws  java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function indexOf(str : String) : Int;
+	@:overload @:public public function indexOf(str : String) : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -915,7 +915,7 @@ package java.lang;
 	* @throws  java.lang.NullPointerException if <code>str</code> is
 	*            <code>null</code>.
 	*/
-	@:overload public function indexOf(str : String, fromIndex : Int) : Int;
+	@:overload @:public public function indexOf(str : String, fromIndex : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the rightmost occurrence
@@ -935,7 +935,7 @@ package java.lang;
 	* @throws  java.lang.NullPointerException  if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function lastIndexOf(str : String) : Int;
+	@:overload @:public public function lastIndexOf(str : String) : Int;
 	
 	/**
 	* Returns the index within this string of the last occurrence of the
@@ -954,7 +954,7 @@ package java.lang;
 	* @throws  java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function lastIndexOf(str : String, fromIndex : Int) : Int;
+	@:overload @:public public function lastIndexOf(str : String, fromIndex : Int) : Int;
 	
 	/**
 	* Causes this character sequence to be replaced by the reverse of
@@ -978,7 +978,7 @@ package java.lang;
 	*
 	* @return  a reference to this object.
 	*/
-	@:overload public function reverse() : java.lang.AbstractStringBuilder;
+	@:overload @:public public function reverse() : java.lang.AbstractStringBuilder;
 	
 	/**
 	* Returns a string representing the data in this sequence.
@@ -990,7 +990,7 @@ package java.lang;
 	*
 	* @return  a string representation of this sequence of characters.
 	*/
-	@:overload @:abstract public function toString() : String;
+	@:overload @:public @:abstract public function toString() : String;
 	
 	
 }

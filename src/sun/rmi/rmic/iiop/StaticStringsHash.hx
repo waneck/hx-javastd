@@ -58,36 +58,36 @@ package sun.rmi.rmic.iiop;
 extern class StaticStringsHash
 {
 	/** The set of strings upon which the hash info is created */
-	public var strings : java.NativeArray<String>;
+	@:public public var strings : java.NativeArray<String>;
 	
 	/** Unique hash keys */
-	public var keys : java.NativeArray<Int>;
+	@:public public var keys : java.NativeArray<Int>;
 	
 	/** Buckets for each key, where buckets[x][y] is an index
 	* into the strings[] array. */
-	public var buckets : java.NativeArray<java.NativeArray<Int>>;
+	@:public public var buckets : java.NativeArray<java.NativeArray<Int>>;
 	
 	/** The method to invoke on String to produce the hash key */
-	public var method : String;
+	@:public public var method : String;
 	
 	/** Get a key for the given string using the
 	* selected hash method.
 	* @param str the string to return a key for.
 	* @return the key.
 	*/
-	@:overload public function getKey(str : String) : Int;
+	@:overload @:public public function getKey(str : String) : Int;
 	
 	/** Constructor
 	* @param strings the set of strings upon which to
 	* find an optimal hash method. Must not contain
 	* duplicates.
 	*/
-	@:overload public function new(strings : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(strings : java.NativeArray<String>) : Void;
 	
 	/** Print an optimized 'contains' method for the
 	* argument strings
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

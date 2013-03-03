@@ -28,7 +28,7 @@ extern class OAEPParameterSpec implements java.security.spec.AlgorithmParameterS
 	/**
 	* The OAEP parameter set with all default values.
 	*/
-	public static var DEFAULT(default, null) : javax.crypto.spec.OAEPParameterSpec;
+	@:public @:static @:final public static var DEFAULT(default, null) : javax.crypto.spec.OAEPParameterSpec;
 	
 	/**
 	* Constructs a parameter set for OAEP padding as defined in
@@ -47,35 +47,35 @@ extern class OAEPParameterSpec implements java.security.spec.AlgorithmParameterS
 	* @exception NullPointerException if <code>mdName</code>,
 	* <code>mgfName</code>, or <code>pSrc</code> is null.
 	*/
-	@:overload public function new(mdName : String, mgfName : String, mgfSpec : java.security.spec.AlgorithmParameterSpec, pSrc : javax.crypto.spec.PSource) : Void;
+	@:overload @:public public function new(mdName : String, mgfName : String, mgfSpec : java.security.spec.AlgorithmParameterSpec, pSrc : javax.crypto.spec.PSource) : Void;
 	
 	/**
 	* Returns the message digest algorithm name.
 	*
 	* @return the message digest algorithm name.
 	*/
-	@:overload public function getDigestAlgorithm() : String;
+	@:overload @:public public function getDigestAlgorithm() : String;
 	
 	/**
 	* Returns the mask generation function algorithm name.
 	*
 	* @return the mask generation function algorithm name.
 	*/
-	@:overload public function getMGFAlgorithm() : String;
+	@:overload @:public public function getMGFAlgorithm() : String;
 	
 	/**
 	* Returns the parameters for the mask generation function.
 	*
 	* @return the parameters for the mask generation function.
 	*/
-	@:overload public function getMGFParameters() : java.security.spec.AlgorithmParameterSpec;
+	@:overload @:public public function getMGFParameters() : java.security.spec.AlgorithmParameterSpec;
 	
 	/**
 	* Returns the source of encoding input P.
 	*
 	* @return the source of encoding input P.
 	*/
-	@:overload public function getPSource() : javax.crypto.spec.PSource;
+	@:overload @:public public function getPSource() : javax.crypto.spec.PSource;
 	
 	
 }

@@ -34,19 +34,25 @@ extern class Token
 	* system is determined by JavaCCParser, and a table of these numbers is
 	* stored in the file ...Constants.java.
 	*/
-	public var kind : Int;
+	@:public public var kind : Int;
 	
 	/**
 	* beginLine and beginColumn describe the position of the first character
 	* of this token; endLine and endColumn describe the position of the
 	* last character of this token.
 	*/
-	public var beginLine : Int;
+	@:public public var beginLine : Int;
+	
+	@:public public var beginColumn : Int;
+	
+	@:public public var endLine : Int;
+	
+	@:public public var endColumn : Int;
 	
 	/**
 	* The string image of the token.
 	*/
-	public var image : String;
+	@:public public var image : String;
 	
 	/**
 	* A reference to the next regular (non-special) token from the input
@@ -56,7 +62,7 @@ extern class Token
 	* token.  Otherwise, see below for a description of the contents of
 	* this field.
 	*/
-	public var next : com.sun.xml.internal.xsom.impl.scd.Token;
+	@:public public var next : com.sun.xml.internal.xsom.impl.scd.Token;
 	
 	/**
 	* This field is used to access special tokens that occur prior to this
@@ -70,12 +76,12 @@ extern class Token
 	* immediately follow it (without an intervening regular token).  If there
 	* is no such token, this field is null.
 	*/
-	public var specialToken : com.sun.xml.internal.xsom.impl.scd.Token;
+	@:public public var specialToken : com.sun.xml.internal.xsom.impl.scd.Token;
 	
 	/**
 	* Returns the image.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a new Token object, by default. However, if you want, you
@@ -89,7 +95,7 @@ extern class Token
 	* to the following switch statement. Then you can cast matchedToken
 	* variable to the appropriate type and use it in your lexical actions.
 	*/
-	@:overload @:final public static function newToken(ofKind : Int) : com.sun.xml.internal.xsom.impl.scd.Token;
+	@:overload @:public @:static @:final public static function newToken(ofKind : Int) : com.sun.xml.internal.xsom.impl.scd.Token;
 	
 	
 }

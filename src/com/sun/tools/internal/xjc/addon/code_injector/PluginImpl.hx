@@ -32,15 +32,15 @@ extern class PluginImpl extends com.sun.tools.internal.xjc.Plugin
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload override public function getOptionName() : String;
+	@:overload @:public override public function getOptionName() : String;
 	
-	@:overload override public function getCustomizationURIs() : java.util.List<String>;
+	@:overload @:public override public function getCustomizationURIs() : java.util.List<String>;
 	
-	@:overload override public function isCustomizationTagName(nsUri : String, localName : String) : Bool;
+	@:overload @:public override public function isCustomizationTagName(nsUri : String, localName : String) : Bool;
 	
-	@:overload override public function getUsage() : String;
+	@:overload @:public override public function getUsage() : String;
 	
-	@:overload override public function run(model : com.sun.tools.internal.xjc.outline.Outline, opt : com.sun.tools.internal.xjc.Options, errorHandler : org.xml.sax.ErrorHandler) : Bool;
+	@:overload @:public override public function run(model : com.sun.tools.internal.xjc.outline.Outline, opt : com.sun.tools.internal.xjc.Options, errorHandler : org.xml.sax.ErrorHandler) : Bool;
 	
 	
 }

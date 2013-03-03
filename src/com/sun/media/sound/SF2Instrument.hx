@@ -30,59 +30,59 @@ extern class SF2Instrument extends com.sun.media.sound.ModelInstrument
 	*
 	* @author Karl Helgason
 	*/
-	private var name : String;
+	@:protected private var name : String;
 	
-	private var preset : Int;
+	@:protected private var preset : Int;
 	
-	private var bank : Int;
+	@:protected private var bank : Int;
 	
-	private var library : haxe.Int64;
+	@:protected private var library : haxe.Int64;
 	
-	private var genre : haxe.Int64;
+	@:protected private var genre : haxe.Int64;
 	
-	private var morphology : haxe.Int64;
+	@:protected private var morphology : haxe.Int64;
 	
-	private var globalregion : com.sun.media.sound.SF2GlobalRegion;
+	@:protected private var globalregion : com.sun.media.sound.SF2GlobalRegion;
 	
-	private var regions : java.util.List<com.sun.media.sound.SF2InstrumentRegion>;
+	@:protected private var regions : java.util.List<com.sun.media.sound.SF2InstrumentRegion>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(soundbank : com.sun.media.sound.SF2Soundbank) : Void;
+	@:overload @:public public function new(soundbank : com.sun.media.sound.SF2Soundbank) : Void;
 	
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
-	@:overload override public function getPatch() : javax.sound.midi.Patch;
+	@:overload @:public override public function getPatch() : javax.sound.midi.Patch;
 	
-	@:overload public function setPatch(patch : javax.sound.midi.Patch) : Void;
+	@:overload @:public public function setPatch(patch : javax.sound.midi.Patch) : Void;
 	
-	@:overload override public function getData() : Dynamic;
+	@:overload @:public override public function getData() : Dynamic;
 	
-	@:overload public function getGenre() : haxe.Int64;
+	@:overload @:public public function getGenre() : haxe.Int64;
 	
-	@:overload public function setGenre(genre : haxe.Int64) : Void;
+	@:overload @:public public function setGenre(genre : haxe.Int64) : Void;
 	
-	@:overload public function getLibrary() : haxe.Int64;
+	@:overload @:public public function getLibrary() : haxe.Int64;
 	
-	@:overload public function setLibrary(library : haxe.Int64) : Void;
+	@:overload @:public public function setLibrary(library : haxe.Int64) : Void;
 	
-	@:overload public function getMorphology() : haxe.Int64;
+	@:overload @:public public function getMorphology() : haxe.Int64;
 	
-	@:overload public function setMorphology(morphology : haxe.Int64) : Void;
+	@:overload @:public public function setMorphology(morphology : haxe.Int64) : Void;
 	
-	@:overload public function getRegions() : java.util.List<com.sun.media.sound.SF2InstrumentRegion>;
+	@:overload @:public public function getRegions() : java.util.List<com.sun.media.sound.SF2InstrumentRegion>;
 	
-	@:overload public function getGlobalRegion() : com.sun.media.sound.SF2GlobalRegion;
+	@:overload @:public public function getGlobalRegion() : com.sun.media.sound.SF2GlobalRegion;
 	
-	@:overload public function setGlobalZone(zone : com.sun.media.sound.SF2GlobalRegion) : Void;
+	@:overload @:public public function setGlobalZone(zone : com.sun.media.sound.SF2GlobalRegion) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function getPerformers() : java.NativeArray<com.sun.media.sound.ModelPerformer>;
+	@:overload @:public override public function getPerformers() : java.NativeArray<com.sun.media.sound.ModelPerformer>;
 	
-	@:overload private static function convertDestination(dst : Int, amountcorrection : java.NativeArray<Float>, extrasrc : java.NativeArray<com.sun.media.sound.ModelSource>) : com.sun.media.sound.ModelDestination;
+	@:overload @:protected @:static private static function convertDestination(dst : Int, amountcorrection : java.NativeArray<Float>, extrasrc : java.NativeArray<com.sun.media.sound.ModelSource>) : com.sun.media.sound.ModelDestination;
 	
 	
 }

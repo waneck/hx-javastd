@@ -53,7 +53,7 @@ package java.lang;
 	*
 	* @return  the number of <code>char</code>s in this sequence
 	*/
-	//@:overload public function length() : Int;
+	//@:overload @:public public function length() : Int;
 	
 	/**
 	* Returns the <code>char</code> value at the specified index.  An index ranges from zero
@@ -73,7 +73,7 @@ package java.lang;
 	*          if the <tt>index</tt> argument is negative or not less than
 	*          <tt>length()</tt>
 	*/
-	//@:overload public function charAt(index : Int) : java.StdTypes.Char16;
+	//@:overload @:public public function charAt(index : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Returns a new <code>CharSequence</code> that is a subsequence of this sequence.
@@ -93,7 +93,7 @@ package java.lang;
 	*          if <tt>end</tt> is greater than <tt>length()</tt>,
 	*          or if <tt>start</tt> is greater than <tt>end</tt>
 	*/
-	//@:overload public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
+	//@:overload @:public public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
 	
 	
 }

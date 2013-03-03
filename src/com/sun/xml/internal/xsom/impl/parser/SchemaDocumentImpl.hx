@@ -25,29 +25,29 @@ package com.sun.xml.internal.xsom.impl.parser;
 */
 extern class SchemaDocumentImpl implements com.sun.xml.internal.xsom.parser.SchemaDocument
 {
-	@:overload private function new(schema : com.sun.xml.internal.xsom.impl.SchemaImpl, _schemaDocumentURI : String) : Void;
+	@:overload @:protected private function new(schema : com.sun.xml.internal.xsom.impl.SchemaImpl, _schemaDocumentURI : String) : Void;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
-	@:overload public function getTargetNamespace() : String;
+	@:overload @:public public function getTargetNamespace() : String;
 	
-	@:overload public function getSchema() : com.sun.xml.internal.xsom.impl.SchemaImpl;
+	@:overload @:public public function getSchema() : com.sun.xml.internal.xsom.impl.SchemaImpl;
 	
-	@:overload public function getReferencedDocuments() : java.util.Set<com.sun.xml.internal.xsom.parser.SchemaDocument>;
+	@:overload @:public public function getReferencedDocuments() : java.util.Set<com.sun.xml.internal.xsom.parser.SchemaDocument>;
 	
-	@:overload public function getIncludedDocuments() : java.util.Set<com.sun.xml.internal.xsom.parser.SchemaDocument>;
+	@:overload @:public public function getIncludedDocuments() : java.util.Set<com.sun.xml.internal.xsom.parser.SchemaDocument>;
 	
-	@:overload public function getImportedDocuments(targetNamespace : String) : java.util.Set<com.sun.xml.internal.xsom.parser.SchemaDocument>;
+	@:overload @:public public function getImportedDocuments(targetNamespace : String) : java.util.Set<com.sun.xml.internal.xsom.parser.SchemaDocument>;
 	
-	@:overload public function includes(doc : com.sun.xml.internal.xsom.parser.SchemaDocument) : Bool;
+	@:overload @:public public function includes(doc : com.sun.xml.internal.xsom.parser.SchemaDocument) : Bool;
 	
-	@:overload public function imports(doc : com.sun.xml.internal.xsom.parser.SchemaDocument) : Bool;
+	@:overload @:public public function imports(doc : com.sun.xml.internal.xsom.parser.SchemaDocument) : Bool;
 	
-	@:overload public function getReferers() : java.util.Set<com.sun.xml.internal.xsom.parser.SchemaDocument>;
+	@:overload @:public public function getReferers() : java.util.Set<com.sun.xml.internal.xsom.parser.SchemaDocument>;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

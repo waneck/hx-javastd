@@ -30,11 +30,11 @@ package com.sun.xml.internal.ws.policy.jaxws;
 	* in multiple builder handlers referring to the same policies. This method allows
 	* to sort out these duplicate handlers.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload override private function doPopulate(policyMapExtender : com.sun.xml.internal.ws.policy.PolicyMapExtender) : Void;
+	@:overload @:protected override private function doPopulate(policyMapExtender : com.sun.xml.internal.ws.policy.PolicyMapExtender) : Void;
 	
 	
 }

@@ -46,7 +46,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	* @exception RuntimeOperationsException Wraps a {@link
 	* RuntimeException} during the construction of the object.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a RequiredModelMBean object using ModelMBeanInfo passed in.
@@ -68,7 +68,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	*          The MBeanInfo passed in parameter is null.
 	*
 	**/
-	@:overload public function new(mbi : javax.management.modelmbean.ModelMBeanInfo) : Void;
+	@:overload @:public public function new(mbi : javax.management.modelmbean.ModelMBeanInfo) : Void;
 	
 	/**
 	* Initializes a ModelMBean object using ModelMBeanInfo passed in.
@@ -103,7 +103,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	* </ul>
 	*
 	**/
-	@:overload public function setModelMBeanInfo(mbi : javax.management.modelmbean.ModelMBeanInfo) : Void;
+	@:overload @:public public function setModelMBeanInfo(mbi : javax.management.modelmbean.ModelMBeanInfo) : Void;
 	
 	/**
 	* Sets the instance handle of the object against which to
@@ -125,7 +125,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	* @exception RuntimeOperationsException Wraps a {@link
 	*            RuntimeException} when setting the resource.
 	**/
-	@:overload public function setManagedResource(mr : Dynamic, mr_type : String) : Void;
+	@:overload @:public public function setManagedResource(mr : Dynamic, mr_type : String) : Void;
 	
 	/**
 	* <p>Instantiates this MBean instance with the data found for
@@ -147,7 +147,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	* @exception InstanceNotFoundException Could not find or load
 	* this MBean from persistent storage
 	*/
-	@:overload public function load() : Void;
+	@:overload @:public public function load() : Void;
 	
 	/**
 	* <p>Captures the current state of this MBean instance and writes
@@ -183,7 +183,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	* @exception InstanceNotFoundException Could not find/access the
 	* persistent store
 	*/
-	@:overload public function store() : Void;
+	@:overload @:public public function store() : Void;
 	
 	/**
 	* Returns the attributes, operations, constructors and notifications
@@ -193,7 +193,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	*          attributes, operations, and Notifications of this MBean.
 	*
 	**/
-	@:overload public function getMBeanInfo() : javax.management.MBeanInfo;
+	@:overload @:public public function getMBeanInfo() : javax.management.MBeanInfo;
 	
 	/*
 	The requirement to be able to invoke methods on the
@@ -230,7 +230,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	loader because when we call Method.invoke we must call it on
 	a Method that is implemented by the target object.
 	*/
-	@:overload public function invoke(opName : String, opArgs : java.NativeArray<Dynamic>, sig : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function invoke(opName : String, opArgs : java.NativeArray<Dynamic>, sig : java.NativeArray<String>) : Dynamic;
 	
 	/**
 	* Returns the value of a specific attribute defined for this
@@ -338,7 +338,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	*
 	* @see #setAttribute(javax.management.Attribute)
 	**/
-	@:overload public function getAttribute(attrName : String) : Dynamic;
+	@:overload @:public public function getAttribute(attrName : String) : Dynamic;
 	
 	/**
 	* Returns the values of several attributes in the ModelMBean.
@@ -356,7 +356,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	*
 	* @see #setAttributes(javax.management.AttributeList)
 	*/
-	@:overload public function getAttributes(attrNames : java.NativeArray<String>) : javax.management.AttributeList;
+	@:overload @:public public function getAttributes(attrNames : java.NativeArray<String>) : javax.management.AttributeList;
 	
 	/**
 	* Sets the value of a specific attribute of a named ModelMBean.
@@ -434,7 +434,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	*
 	* @see #getAttribute(java.lang.String)
 	**/
-	@:overload public function setAttribute(attribute : javax.management.Attribute) : Void;
+	@:overload @:public public function setAttribute(attribute : javax.management.Attribute) : Void;
 	
 	/**
 	* Sets the values of an array of attributes of this ModelMBean.
@@ -452,7 +452,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	*
 	* @see #getAttributes
 	**/
-	@:overload public function setAttributes(attributes : javax.management.AttributeList) : javax.management.AttributeList;
+	@:overload @:public public function setAttributes(attributes : javax.management.AttributeList) : javax.management.AttributeList;
 	
 	/**
 	* Registers an object which implements the NotificationListener
@@ -473,7 +473,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	*
 	* @see #removeNotificationListener
 	*/
-	@:overload public function addNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	/**
 	* Removes a listener for Notifications from the RequiredModelMBean.
@@ -487,13 +487,13 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	*
 	* @see #addNotificationListener
 	**/
-	@:overload public function removeNotificationListener(listener : javax.management.NotificationListener) : Void;
+	@:overload @:public public function removeNotificationListener(listener : javax.management.NotificationListener) : Void;
 	
-	@:overload public function removeNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload public function sendNotification(ntfyObj : javax.management.Notification) : Void;
+	@:overload @:public public function sendNotification(ntfyObj : javax.management.Notification) : Void;
 	
-	@:overload public function sendNotification(ntfyText : String) : Void;
+	@:overload @:public public function sendNotification(ntfyText : String) : Void;
 	
 	/**
 	* Returns the array of Notifications always generated by the
@@ -512,15 +512,15 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	* @return MBeanNotificationInfo[]
 	*
 	**/
-	@:overload public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload @:public public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
-	@:overload public function addAttributeChangeNotificationListener(inlistener : javax.management.NotificationListener, inAttributeName : String, inhandback : Dynamic) : Void;
+	@:overload @:public public function addAttributeChangeNotificationListener(inlistener : javax.management.NotificationListener, inAttributeName : String, inhandback : Dynamic) : Void;
 	
-	@:overload public function removeAttributeChangeNotificationListener(inlistener : javax.management.NotificationListener, inAttributeName : String) : Void;
+	@:overload @:public public function removeAttributeChangeNotificationListener(inlistener : javax.management.NotificationListener, inAttributeName : String) : Void;
 	
-	@:overload public function sendAttributeChangeNotification(ntfyObj : javax.management.AttributeChangeNotification) : Void;
+	@:overload @:public public function sendAttributeChangeNotification(ntfyObj : javax.management.AttributeChangeNotification) : Void;
 	
-	@:overload public function sendAttributeChangeNotification(inOldVal : javax.management.Attribute, inNewVal : javax.management.Attribute) : Void;
+	@:overload @:public public function sendAttributeChangeNotification(inOldVal : javax.management.Attribute, inNewVal : javax.management.Attribute) : Void;
 	
 	/**
 	* Return the Class Loader Repository used to perform class loading.
@@ -531,7 +531,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	* @return the Class Loader Repository.
 	*
 	*/
-	@:overload private function getClassLoaderRepository() : javax.management.loading.ClassLoaderRepository;
+	@:overload @:protected private function getClassLoaderRepository() : javax.management.loading.ClassLoaderRepository;
 	
 	/**
 	* Allows the MBean to perform any operations it needs before
@@ -563,7 +563,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	* {@link javax.management.MBeanRegistrationException
 	* MBeanRegistrationException}.
 	*/
-	@:overload public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
+	@:overload @:public public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
 	
 	/**
 	* Allows the MBean to perform any operations needed after having been
@@ -578,7 +578,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	* been successfully registered in the MBean server. The value
 	* false means that the registration phase has failed.
 	*/
-	@:overload public function postRegister(registrationDone : Null<Bool>) : Void;
+	@:overload @:public public function postRegister(registrationDone : Null<Bool>) : Void;
 	
 	/**
 	* Allows the MBean to perform any operations it needs before
@@ -594,7 +594,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	* {@link javax.management.MBeanRegistrationException
 	* MBeanRegistrationException}.
 	*/
-	@:overload public function preDeregister() : Void;
+	@:overload @:public public function preDeregister() : Void;
 	
 	/**
 	* Allows the MBean to perform any operations needed after having been
@@ -605,7 +605,7 @@ extern class RequiredModelMBean implements javax.management.modelmbean.ModelMBea
 	* method should call <code>super.postDeregister()</code> in its own
 	* <code>postDeregister</code> implementation.
 	*/
-	@:overload public function postDeregister() : Void;
+	@:overload @:public public function postDeregister() : Void;
 	
 	
 }

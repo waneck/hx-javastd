@@ -32,7 +32,7 @@ extern class Completions
 	* @param message a message about the completion
 	* @return a completion of the provided value and message
 	*/
-	@:overload public static function of(value : String, message : String) : javax.annotation.processing.Completion;
+	@:overload @:public @:static public static function of(value : String, message : String) : javax.annotation.processing.Completion;
 	
 	/**
 	* Returns a completion of the value and an empty message
@@ -40,17 +40,17 @@ extern class Completions
 	* @param value the text of the completion
 	* @return a completion of the value and an empty message
 	*/
-	@:overload public static function of(value : String) : javax.annotation.processing.Completion;
+	@:overload @:public @:static public static function of(value : String) : javax.annotation.processing.Completion;
 	
 	
 }
 @:native('javax$annotation$processing$Completions$SimpleCompletion') @:internal extern class Completions_SimpleCompletion implements javax.annotation.processing.Completion
 {
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload public function getMessage() : String;
+	@:overload @:public public function getMessage() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

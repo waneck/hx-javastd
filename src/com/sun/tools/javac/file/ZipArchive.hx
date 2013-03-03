@@ -31,43 +31,43 @@ extern class ZipArchive implements com.sun.tools.javac.file.JavacFileManager.Jav
 	* This code and its internal interfaces are subject to change or
 	* deletion without notice.</b>
 	*/
-	@:overload public function new(fm : com.sun.tools.javac.file.JavacFileManager, zfile : java.util.zip.ZipFile) : Void;
+	@:overload @:public public function new(fm : com.sun.tools.javac.file.JavacFileManager, zfile : java.util.zip.ZipFile) : Void;
 	
-	@:overload private function new(fm : com.sun.tools.javac.file.JavacFileManager, zfile : java.util.zip.ZipFile, initMap : Bool) : Void;
+	@:overload @:protected private function new(fm : com.sun.tools.javac.file.JavacFileManager, zfile : java.util.zip.ZipFile, initMap : Bool) : Void;
 	
-	@:overload private function initMap() : Void;
+	@:overload @:protected private function initMap() : Void;
 	
-	@:overload public function contains(name : com.sun.tools.javac.file.RelativePath) : Bool;
+	@:overload @:public public function contains(name : com.sun.tools.javac.file.RelativePath) : Bool;
 	
-	@:overload public function getFiles(subdirectory : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory) : com.sun.tools.javac.util.List<String>;
+	@:overload @:public public function getFiles(subdirectory : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory) : com.sun.tools.javac.util.List<String>;
 	
-	@:overload public function getFileObject(subdirectory : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory, file : String) : javax.tools.JavaFileObject;
+	@:overload @:public public function getFileObject(subdirectory : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory, file : String) : javax.tools.JavaFileObject;
 	
-	@:overload public function getSubdirectories() : java.util.Set<com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory>;
+	@:overload @:public public function getSubdirectories() : java.util.Set<com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory>;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* The file manager that created this archive.
 	*/
-	private var fileManager : com.sun.tools.javac.file.JavacFileManager;
+	@:protected private var fileManager : com.sun.tools.javac.file.JavacFileManager;
 	
 	/**
 	* The index for the contents of this archive.
 	*/
-	private var map(default, null) : java.util.Map<com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory, com.sun.tools.javac.util.List<String>>;
+	@:protected @:final private var map(default, null) : java.util.Map<com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory, com.sun.tools.javac.util.List<String>>;
 	
 	/**
 	* The zip file for the archive.
 	*/
-	private var zfile(default, null) : java.util.zip.ZipFile;
+	@:protected @:final private var zfile(default, null) : java.util.zip.ZipFile;
 	
 	/**
 	* A reference to the absolute filename for the zip file for the archive.
 	*/
-	private var absFileRef : java.lang.ref.Reference<java.io.File>;
+	@:protected private var absFileRef : java.lang.ref.Reference<java.io.File>;
 	
 	
 }
@@ -76,42 +76,42 @@ extern class ZipArchive implements com.sun.tools.javac.file.JavacFileManager.Jav
 */
 @:native('com$sun$tools$javac$file$ZipArchive$ZipFileObject') extern class ZipArchive_ZipFileObject extends com.sun.tools.javac.file.BaseFileObject
 {
-	@:overload private function new(zarch : com.sun.tools.javac.file.ZipArchive, name : String, entry : java.util.zip.ZipEntry) : Void;
+	@:overload @:protected private function new(zarch : com.sun.tools.javac.file.ZipArchive, name : String, entry : java.util.zip.ZipEntry) : Void;
 	
-	@:overload public function toUri() : java.net.URI;
+	@:overload @:public override public function toUri() : java.net.URI;
 	
-	@:overload public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
-	@:overload public function getShortName() : String;
+	@:overload @:public override public function getShortName() : String;
 	
-	@:overload public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
+	@:overload @:public override public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	
-	@:overload public function openInputStream() : java.io.InputStream;
+	@:overload @:public override public function openInputStream() : java.io.InputStream;
 	
-	@:overload public function openOutputStream() : java.io.OutputStream;
+	@:overload @:public override public function openOutputStream() : java.io.OutputStream;
 	
-	@:overload public function getCharContent(ignoreEncodingErrors : Bool) : java.nio.CharBuffer;
+	@:overload @:public override public function getCharContent(ignoreEncodingErrors : Bool) : java.nio.CharBuffer;
 	
-	@:overload public function openWriter() : java.io.Writer;
+	@:overload @:public override public function openWriter() : java.io.Writer;
 	
-	@:overload public function getLastModified() : haxe.Int64;
+	@:overload @:public override public function getLastModified() : haxe.Int64;
 	
-	@:overload public function delete() : Bool;
+	@:overload @:public override public function delete() : Bool;
 	
-	@:overload private function getDecoder(ignoreEncodingErrors : Bool) : java.nio.charset.CharsetDecoder;
+	@:overload @:protected override private function getDecoder(ignoreEncodingErrors : Bool) : java.nio.charset.CharsetDecoder;
 	
-	@:overload private function inferBinaryName(path : java.lang.Iterable<java.io.File>) : String;
+	@:overload @:protected override private function inferBinaryName(path : java.lang.Iterable<java.io.File>) : String;
 	
-	@:overload public function isNameCompatible(cn : String, k : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
+	@:overload @:public override public function isNameCompatible(cn : String, k : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
 	
 	/**
 	* Check if two file objects are equal.
 	* Two ZipFileObjects are equal if the absolute paths of the underlying
 	* zip files are equal and if the paths within those zip files are equal.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public override public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

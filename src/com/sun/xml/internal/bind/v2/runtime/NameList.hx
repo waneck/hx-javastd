@@ -35,7 +35,7 @@ extern class NameList
 	* Namespace URIs by their indices. No nulls in this array.
 	* Read-only.
 	*/
-	public var namespaceURIs(default, null) : java.NativeArray<String>;
+	@:public @:final public var namespaceURIs(default, null) : java.NativeArray<String>;
 	
 	/**
 	* For each entry in {@link #namespaceURIs}, whether the namespace URI
@@ -44,25 +44,25 @@ extern class NameList
 	*
 	* True if this URI has to have a prefix.
 	*/
-	public var nsUriCannotBeDefaulted(default, null) : java.NativeArray<Bool>;
+	@:public @:final public var nsUriCannotBeDefaulted(default, null) : java.NativeArray<Bool>;
 	
 	/**
 	* Local names by their indices. No nulls in this array.
 	* Read-only.
 	*/
-	public var localNames(default, null) : java.NativeArray<String>;
+	@:public @:final public var localNames(default, null) : java.NativeArray<String>;
 	
 	/**
 	* Number of Names for elements
 	*/
-	public var numberOfElementNames(default, null) : Int;
+	@:public @:final public var numberOfElementNames(default, null) : Int;
 	
 	/**
 	* Number of Names for attributes
 	*/
-	public var numberOfAttributeNames(default, null) : Int;
+	@:public @:final public var numberOfAttributeNames(default, null) : Int;
 	
-	@:overload public function new(namespaceURIs : java.NativeArray<String>, nsUriCannotBeDefaulted : java.NativeArray<Bool>, localNames : java.NativeArray<String>, numberElementNames : Int, numberAttributeNames : Int) : Void;
+	@:overload @:public public function new(namespaceURIs : java.NativeArray<String>, nsUriCannotBeDefaulted : java.NativeArray<Bool>, localNames : java.NativeArray<String>, numberElementNames : Int, numberAttributeNames : Int) : Void;
 	
 	
 }

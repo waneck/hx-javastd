@@ -1031,7 +1031,7 @@ extern interface Statement extends java.sql.Wrapper extends java.lang.AutoClosea
 	* {@code Statement}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function closeOnCompletion() : Void;
+	@:require(java7) @:overload @:public public function closeOnCompletion() : Void;
 	
 	/**
 	* Returns a value indicating whether this {@code Statement} will be
@@ -1042,7 +1042,7 @@ extern interface Statement extends java.sql.Wrapper extends java.lang.AutoClosea
 	* {@code Statement}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function isCloseOnCompletion() : Bool;
+	@:require(java7) @:overload @:public public function isCloseOnCompletion() : Bool;
 	
 	
 }

@@ -39,29 +39,29 @@ package com.sun.tools.javadoc;
 	/**
 	* Return the exception name.
 	*/
-	@:overload public function exceptionName() : String;
+	@:overload @:public public function exceptionName() : String;
 	
 	/**
 	* Return the exception comment.
 	*/
-	@:overload public function exceptionComment() : String;
+	@:overload @:public public function exceptionComment() : String;
 	
 	/**
 	* Return the exception as a ClassDocImpl.
 	*/
-	@:overload public function exception() : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function exception() : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Return the type that represents the exception.
 	* This may be a <code>ClassDoc</code> or a <code>TypeVariable</code>.
 	*/
-	@:overload public function exceptionType() : com.sun.javadoc.Type;
+	@:overload @:public public function exceptionType() : com.sun.javadoc.Type;
 	
 	/**
 	* Return the kind of this tag.  Always "@throws" for instances
 	* of ThrowsTagImpl.
 	*/
-	@:overload override public function kind() : String;
+	@:overload @:public override public function kind() : String;
 	
 	/**
 	* For the exception comment with embedded @link tags return the array of
@@ -71,7 +71,7 @@ package com.sun.tools.javadoc;
 	* @see TagImpl#inlineTagImpls()
 	* @see ParamTagImpl#inlineTagImpls()
 	*/
-	@:overload override public function inlineTags() : java.NativeArray<com.sun.javadoc.Tag>;
+	@:overload @:public override public function inlineTags() : java.NativeArray<com.sun.javadoc.Tag>;
 	
 	
 }

@@ -25,15 +25,15 @@ package com.sun.tools.javap;
 */
 extern class LocalVariableTypeTableWriter extends com.sun.tools.javap.InstructionDetailWriter
 {
-	@:overload private function new(context : com.sun.tools.javap.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javap.Context) : Void;
 	
-	@:overload public function reset(attr : com.sun.tools.classfile.Code_attribute) : Void;
+	@:overload @:public public function reset(attr : com.sun.tools.classfile.Code_attribute) : Void;
 	
-	@:overload public function writeDetails(instr : com.sun.tools.classfile.Instruction) : Void;
+	@:overload @:public public function writeDetails(instr : com.sun.tools.classfile.Instruction) : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
-	@:overload public function writeLocalVariables(pc : Int, kind : com.sun.tools.javap.LocalVariableTypeTableWriter.LocalVariableTypeTableWriter_NoteKind) : Void;
+	@:overload @:public public function writeLocalVariables(pc : Int, kind : com.sun.tools.javap.LocalVariableTypeTableWriter.LocalVariableTypeTableWriter_NoteKind) : Void;
 	
 	
 }

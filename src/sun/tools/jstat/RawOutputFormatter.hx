@@ -31,11 +31,11 @@ package sun.tools.jstat;
 */
 @:require(java5) extern class RawOutputFormatter implements sun.tools.jstat.OutputFormatter
 {
-	@:overload public function new(logged : java.util.List<Dynamic>, printStrings : Bool) : Void;
+	@:overload @:public public function new(logged : java.util.List<Dynamic>, printStrings : Bool) : Void;
 	
-	@:overload public function getHeader() : String;
+	@:overload @:public public function getHeader() : String;
 	
-	@:overload public function getRow() : String;
+	@:overload @:public public function getRow() : String;
 	
 	
 }

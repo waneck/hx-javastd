@@ -31,7 +31,7 @@ extern class BasicLabelUI extends javax.swing.plaf.LabelUI implements java.beans
 	* overrides the <code>createUI</code> method, and place that class
 	* name in defaults table under the key "LabelUI".
 	*/
-	private static var labelUI : javax.swing.plaf.basic.BasicLabelUI;
+	@:protected @:static private static var labelUI : javax.swing.plaf.basic.BasicLabelUI;
 	
 	/**
 	* Forwards the call to SwingUtilities.layoutCompoundLabel().
@@ -40,7 +40,7 @@ extern class BasicLabelUI extends javax.swing.plaf.LabelUI implements java.beans
 	*
 	* @see SwingUtilities#layoutCompoundLabel
 	*/
-	@:overload private function layoutCL(label : javax.swing.JLabel, fontMetrics : java.awt.FontMetrics, text : String, icon : javax.swing.Icon, viewR : java.awt.Rectangle, iconR : java.awt.Rectangle, textR : java.awt.Rectangle) : String;
+	@:overload @:protected private function layoutCL(label : javax.swing.JLabel, fontMetrics : java.awt.FontMetrics, text : String, icon : javax.swing.Icon, viewR : java.awt.Rectangle, iconR : java.awt.Rectangle, textR : java.awt.Rectangle) : String;
 	
 	/**
 	* Paint clippedText at textX, textY with the labels foreground color.
@@ -48,7 +48,7 @@ extern class BasicLabelUI extends javax.swing.plaf.LabelUI implements java.beans
 	* @see #paint
 	* @see #paintDisabledText
 	*/
-	@:overload private function paintEnabledText(l : javax.swing.JLabel, g : java.awt.Graphics, s : String, textX : Int, textY : Int) : Void;
+	@:overload @:protected private function paintEnabledText(l : javax.swing.JLabel, g : java.awt.Graphics, s : String, textX : Int, textY : Int) : Void;
 	
 	/**
 	* Paint clippedText at textX, textY with background.lighter() and then
@@ -57,7 +57,7 @@ extern class BasicLabelUI extends javax.swing.plaf.LabelUI implements java.beans
 	* @see #paint
 	* @see #paintEnabledText
 	*/
-	@:overload private function paintDisabledText(l : javax.swing.JLabel, g : java.awt.Graphics, s : String, textX : Int, textY : Int) : Void;
+	@:overload @:protected private function paintDisabledText(l : javax.swing.JLabel, g : java.awt.Graphics, s : String, textX : Int, textY : Int) : Void;
 	
 	/**
 	* Paints the label text with the foreground color, if the label is opaque
@@ -69,19 +69,19 @@ extern class BasicLabelUI extends javax.swing.plaf.LabelUI implements java.beans
 	* @see #paintDisabledText
 	* @see #layoutCL
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
-	
-	/**
-	* @return getPreferredSize(c)
-	*/
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* @return getPreferredSize(c)
 	*/
-	@:overload override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	
+	/**
+	* @return getPreferredSize(c)
+	*/
+	@:overload @:public override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Returns the baseline.
@@ -91,7 +91,7 @@ extern class BasicLabelUI extends javax.swing.plaf.LabelUI implements java.beans
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
+	@:require(java6) @:overload @:public override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
 	
 	/**
 	* Returns an enum indicating how the baseline of the component
@@ -101,37 +101,37 @@ extern class BasicLabelUI extends javax.swing.plaf.LabelUI implements java.beans
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
+	@:require(java6) @:overload @:public override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installDefaults(c : javax.swing.JLabel) : Void;
+	@:overload @:protected private function installDefaults(c : javax.swing.JLabel) : Void;
 	
-	@:overload private function installListeners(c : javax.swing.JLabel) : Void;
+	@:overload @:protected private function installListeners(c : javax.swing.JLabel) : Void;
 	
-	@:overload private function installComponents(c : javax.swing.JLabel) : Void;
+	@:overload @:protected private function installComponents(c : javax.swing.JLabel) : Void;
 	
-	@:overload private function installKeyboardActions(l : javax.swing.JLabel) : Void;
+	@:overload @:protected private function installKeyboardActions(l : javax.swing.JLabel) : Void;
 	
-	@:overload private function uninstallDefaults(c : javax.swing.JLabel) : Void;
+	@:overload @:protected private function uninstallDefaults(c : javax.swing.JLabel) : Void;
 	
-	@:overload private function uninstallListeners(c : javax.swing.JLabel) : Void;
+	@:overload @:protected private function uninstallListeners(c : javax.swing.JLabel) : Void;
 	
-	@:overload private function uninstallComponents(c : javax.swing.JLabel) : Void;
+	@:overload @:protected private function uninstallComponents(c : javax.swing.JLabel) : Void;
 	
-	@:overload private function uninstallKeyboardActions(c : javax.swing.JLabel) : Void;
+	@:overload @:protected private function uninstallKeyboardActions(c : javax.swing.JLabel) : Void;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicLabelUI$Actions') @:internal extern class BasicLabelUI_Actions extends sun.swing.UIAction
 {
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }

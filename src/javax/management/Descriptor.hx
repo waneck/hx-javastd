@@ -40,7 +40,7 @@ extern interface Descriptor extends java.io.Serializable extends java.lang.Clone
 	*
 	* @exception RuntimeOperationsException if the field name is illegal.
 	*/
-	@:overload public function getFieldValue(fieldName : String) : Dynamic;
+	@:overload @:public public function getFieldValue(fieldName : String) : Dynamic;
 	
 	/**
 	* <p>Sets the value for a specific field name. This will
@@ -60,7 +60,7 @@ extern interface Descriptor extends java.io.Serializable extends java.lang.Clone
 	* if the descriptor is immutable (wrapped exception is
 	* {@link UnsupportedOperationException}).
 	*/
-	@:overload public function setField(fieldName : String, fieldValue : Dynamic) : Void;
+	@:overload @:public public function setField(fieldName : String, fieldValue : Dynamic) : Void;
 	
 	/**
 	* Returns all of the fields contained in this descriptor as a string array.
@@ -75,7 +75,7 @@ extern interface Descriptor extends java.io.Serializable extends java.lang.Clone
 	*
 	* @see #setFields
 	*/
-	@:overload public function getFields() : java.NativeArray<String>;
+	@:overload @:public public function getFields() : java.NativeArray<String>;
 	
 	/**
 	* Returns all the field names in the descriptor.
@@ -83,7 +83,7 @@ extern interface Descriptor extends java.io.Serializable extends java.lang.Clone
 	* @return String array of field names. If the descriptor is empty,
 	* you will get an empty array.
 	*/
-	@:overload public function getFieldNames() : java.NativeArray<String>;
+	@:overload @:public public function getFieldNames() : java.NativeArray<String>;
 	
 	/**
 	* Returns all the field values in the descriptor as an array of Objects. The
@@ -101,7 +101,7 @@ extern interface Descriptor extends java.io.Serializable extends java.lang.Clone
 	* @return Object array of field values. If the list of {@code fieldNames}
 	* is empty, you will get an empty array.
 	*/
-	@:overload public function getFieldValues(fieldNames : java.NativeArray<String>) : java.NativeArray<Dynamic>;
+	@:overload @:public public function getFieldValues(fieldNames : java.NativeArray<String>) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Removes a field from the descriptor.
@@ -114,7 +114,7 @@ extern interface Descriptor extends java.io.Serializable extends java.lang.Clone
 	* exists and the descriptor is immutable.  The wrapped exception will
 	* be an {@link UnsupportedOperationException}.
 	*/
-	@:overload public function removeField(fieldName : String) : Void;
+	@:overload @:public public function removeField(fieldName : String) : Void;
 	
 	/**
 	* <p>Sets all fields in the field names array to the new value with
@@ -140,7 +140,7 @@ extern interface Descriptor extends java.io.Serializable extends java.lang.Clone
 	*
 	* @see #getFields
 	*/
-	@:overload public function setFields(fieldNames : java.NativeArray<String>, fieldValues : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function setFields(fieldNames : java.NativeArray<String>, fieldValues : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Returns true if all of the fields have legal values given their
@@ -153,7 +153,7 @@ extern interface Descriptor extends java.io.Serializable extends java.lang.Clone
 	* The method returns false if the descriptor is not valid, but throws
 	* this exception if the attempt to determine validity fails.
 	*/
-	@:overload public function isValid() : Bool;
+	@:overload @:public public function isValid() : Bool;
 	
 	
 }

@@ -25,17 +25,17 @@ package sun.management;
 */
 @:internal extern class ClassLoadingImpl implements java.lang.management.ClassLoadingMXBean
 {
-	@:overload public function getTotalLoadedClassCount() : haxe.Int64;
+	@:overload @:public public function getTotalLoadedClassCount() : haxe.Int64;
 	
-	@:overload public function getLoadedClassCount() : Int;
+	@:overload @:public public function getLoadedClassCount() : Int;
 	
-	@:overload public function getUnloadedClassCount() : haxe.Int64;
+	@:overload @:public public function getUnloadedClassCount() : haxe.Int64;
 	
-	@:overload public function isVerbose() : Bool;
+	@:overload @:public public function isVerbose() : Bool;
 	
-	@:overload public function setVerbose(value : Bool) : Void;
+	@:overload @:public public function setVerbose(value : Bool) : Void;
 	
-	@:overload public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
 	
 }

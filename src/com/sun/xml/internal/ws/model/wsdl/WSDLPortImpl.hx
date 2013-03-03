@@ -25,31 +25,31 @@ package com.sun.xml.internal.ws.model.wsdl;
 */
 extern class WSDLPortImpl extends com.sun.xml.internal.ws.model.wsdl.AbstractFeaturedObjectImpl implements com.sun.xml.internal.ws.api.model.wsdl.WSDLPort
 {
-	@:overload public function new(xsr : javax.xml.stream.XMLStreamReader, owner : com.sun.xml.internal.ws.model.wsdl.WSDLServiceImpl, name : javax.xml.namespace.QName, binding : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(xsr : javax.xml.stream.XMLStreamReader, owner : com.sun.xml.internal.ws.model.wsdl.WSDLServiceImpl, name : javax.xml.namespace.QName, binding : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function getBindingName() : javax.xml.namespace.QName;
+	@:overload @:public public function getBindingName() : javax.xml.namespace.QName;
 	
-	@:overload public function getAddress() : com.sun.xml.internal.ws.api.EndpointAddress;
+	@:overload @:public public function getAddress() : com.sun.xml.internal.ws.api.EndpointAddress;
 	
-	@:overload public function getOwner() : com.sun.xml.internal.ws.model.wsdl.WSDLServiceImpl;
-	
-	/**
-	* Only meant for {@link RuntimeWSDLParser} to call.
-	*/
-	@:overload public function setAddress(address : com.sun.xml.internal.ws.api.EndpointAddress) : Void;
+	@:overload @:public public function getOwner() : com.sun.xml.internal.ws.model.wsdl.WSDLServiceImpl;
 	
 	/**
 	* Only meant for {@link RuntimeWSDLParser} to call.
 	*/
-	@:overload public function setEPR(epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
+	@:overload @:public public function setAddress(address : com.sun.xml.internal.ws.api.EndpointAddress) : Void;
 	
-	@:overload public function getEPR() : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
+	/**
+	* Only meant for {@link RuntimeWSDLParser} to call.
+	*/
+	@:overload @:public public function setEPR(epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
 	
-	@:overload public function getBinding() : com.sun.xml.internal.ws.model.wsdl.WSDLBoundPortTypeImpl;
+	@:overload @:public public function getEPR() : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
 	
-	@:overload public function getSOAPVersion() : com.sun.xml.internal.ws.api.SOAPVersion;
+	@:overload @:public public function getBinding() : com.sun.xml.internal.ws.model.wsdl.WSDLBoundPortTypeImpl;
+	
+	@:overload @:public public function getSOAPVersion() : com.sun.xml.internal.ws.api.SOAPVersion;
 	
 	
 }

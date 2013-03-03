@@ -28,42 +28,42 @@ extern class AdjustmentEvent extends java.awt.AWTEvent
 	/**
 	* Marks the first integer id for the range of adjustment event ids.
 	*/
-	public static var ADJUSTMENT_FIRST(default, null) : Int;
+	@:public @:static @:final public static var ADJUSTMENT_FIRST(default, null) : Int;
 	
 	/**
 	* Marks the last integer id for the range of adjustment event ids.
 	*/
-	public static var ADJUSTMENT_LAST(default, null) : Int;
+	@:public @:static @:final public static var ADJUSTMENT_LAST(default, null) : Int;
 	
 	/**
 	* The adjustment value changed event.
 	*/
-	public static var ADJUSTMENT_VALUE_CHANGED(default, null) : Int;
+	@:public @:static @:final public static var ADJUSTMENT_VALUE_CHANGED(default, null) : Int;
 	
 	/**
 	* The unit increment adjustment type.
 	*/
-	public static var UNIT_INCREMENT(default, null) : Int;
+	@:public @:static @:final public static var UNIT_INCREMENT(default, null) : Int;
 	
 	/**
 	* The unit decrement adjustment type.
 	*/
-	public static var UNIT_DECREMENT(default, null) : Int;
+	@:public @:static @:final public static var UNIT_DECREMENT(default, null) : Int;
 	
 	/**
 	* The block decrement adjustment type.
 	*/
-	public static var BLOCK_DECREMENT(default, null) : Int;
+	@:public @:static @:final public static var BLOCK_DECREMENT(default, null) : Int;
 	
 	/**
 	* The block increment adjustment type.
 	*/
-	public static var BLOCK_INCREMENT(default, null) : Int;
+	@:public @:static @:final public static var BLOCK_INCREMENT(default, null) : Int;
 	
 	/**
 	* The absolute tracking adjustment type.
 	*/
-	public static var TRACK(default, null) : Int;
+	@:public @:static @:final public static var TRACK(default, null) : Int;
 	
 	/**
 	* Constructs an <code>AdjustmentEvent</code> object with the
@@ -88,7 +88,7 @@ extern class AdjustmentEvent extends java.awt.AWTEvent
 	* @see #getAdjustmentType()
 	* @see #getValue()
 	*/
-	@:overload public function new(source : java.awt.Adjustable, id : Int, type : Int, value : Int) : Void;
+	@:overload @:public public function new(source : java.awt.Adjustable, id : Int, type : Int, value : Int) : Void;
 	
 	/**
 	* Constructs an <code>AdjustmentEvent</code> object with the
@@ -117,21 +117,21 @@ extern class AdjustmentEvent extends java.awt.AWTEvent
 	* @see #getValue()
 	* @see #getValueIsAdjusting()
 	*/
-	@:require(java4) @:overload public function new(source : java.awt.Adjustable, id : Int, type : Int, value : Int, isAdjusting : Bool) : Void;
+	@:require(java4) @:overload @:public public function new(source : java.awt.Adjustable, id : Int, type : Int, value : Int, isAdjusting : Bool) : Void;
 	
 	/**
 	* Returns the <code>Adjustable</code> object where this event originated.
 	*
 	* @return the <code>Adjustable</code> object where this event originated
 	*/
-	@:overload public function getAdjustable() : java.awt.Adjustable;
+	@:overload @:public public function getAdjustable() : java.awt.Adjustable;
 	
 	/**
 	* Returns the current value in the adjustment event.
 	*
 	* @return the current value in the adjustment event
 	*/
-	@:overload public function getValue() : Int;
+	@:overload @:public public function getValue() : Int;
 	
 	/**
 	* Returns the type of adjustment which caused the value changed
@@ -145,7 +145,7 @@ extern class AdjustmentEvent extends java.awt.AWTEvent
 	* </ul>
 	* @return one of the adjustment values listed above
 	*/
-	@:overload public function getAdjustmentType() : Int;
+	@:overload @:public public function getAdjustmentType() : Int;
 	
 	/**
 	* Returns <code>true</code> if this is one of multiple
@@ -155,9 +155,9 @@ extern class AdjustmentEvent extends java.awt.AWTEvent
 	*         adjustment events, otherwise returns <code>false</code>
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getValueIsAdjusting() : Bool;
+	@:require(java4) @:overload @:public public function getValueIsAdjusting() : Bool;
 	
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	
 }

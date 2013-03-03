@@ -69,12 +69,12 @@ extern class ConstantDouble extends com.sun.org.apache.bcel.internal.classfile.C
 	/**
 	* @param bytes Data
 	*/
-	@:overload public function new(bytes : Float) : Void;
+	@:overload @:public public function new(bytes : Float) : Void;
 	
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantDouble) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantDouble) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -83,7 +83,7 @@ extern class ConstantDouble extends com.sun.org.apache.bcel.internal.classfile.C
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump constant double to file stream in binary format.
@@ -91,26 +91,26 @@ extern class ConstantDouble extends com.sun.org.apache.bcel.internal.classfile.C
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final override public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return data, i.e., 8 bytes.
 	*/
-	@:overload @:final public function getBytes() : Float;
+	@:overload @:public @:final public function getBytes() : Float;
 	
 	/**
 	* @param bytes.
 	*/
-	@:overload @:final public function setBytes(bytes : Float) : Void;
+	@:overload @:public @:final public function setBytes(bytes : Float) : Void;
 	
 	/**
 	* @return String representation.
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	/** @return Double object
 	*/
-	@:overload public function getConstantValue(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Dynamic;
+	@:overload @:public public function getConstantValue(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Dynamic;
 	
 	
 }

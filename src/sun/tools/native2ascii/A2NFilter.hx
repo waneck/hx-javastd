@@ -35,11 +35,11 @@ package sun.tools.native2ascii;
 */
 @:internal extern class A2NFilter extends java.io.FilterReader
 {
-	@:overload public function new(_in : java.io.Reader) : Void;
+	@:overload @:public public function new(_in : java.io.Reader) : Void;
 	
-	@:overload override public function read(buf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(buf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	
 }

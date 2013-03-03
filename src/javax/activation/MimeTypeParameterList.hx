@@ -28,35 +28,35 @@ extern class MimeTypeParameterList
 	/**
 	* Default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new MimeTypeParameterList with the passed in data.
 	*
 	* @param parameterList an RFC 2045, 2046 compliant parameter list.
 	*/
-	@:overload public function new(parameterList : String) : Void;
+	@:overload @:public public function new(parameterList : String) : Void;
 	
 	/**
 	* A routine for parsing the parameter list out of a String.
 	*
 	* @param parameterList an RFC 2045, 2046 compliant parameter list.
 	*/
-	@:overload private function parse(parameterList : String) : Void;
+	@:overload @:protected private function parse(parameterList : String) : Void;
 	
 	/**
 	* Return the number of name-value pairs in this list.
 	*
 	* @return  the number of parameters
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Determine whether or not this list is empty.
 	*
 	* @return  true if there are no parameters
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Retrieve the value associated with the given name, or null if there
@@ -65,7 +65,7 @@ extern class MimeTypeParameterList
 	* @param name      the parameter name
 	* @return          the parameter's value
 	*/
-	@:overload public function get(name : String) : String;
+	@:overload @:public public function get(name : String) : String;
 	
 	/**
 	* Set the value to be associated with the given name, replacing
@@ -74,26 +74,26 @@ extern class MimeTypeParameterList
 	* @param name      the parameter name
 	* @param value     the parameter's value
 	*/
-	@:overload public function set(name : String, value : String) : Void;
+	@:overload @:public public function set(name : String, value : String) : Void;
 	
 	/**
 	* Remove any value associated with the given name.
 	*
 	* @param name      the parameter name
 	*/
-	@:overload public function remove(name : String) : Void;
+	@:overload @:public public function remove(name : String) : Void;
 	
 	/**
 	* Retrieve an enumeration of all the names in this list.
 	*
 	* @return  an enumeration of all parameter names
 	*/
-	@:overload public function getNames() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getNames() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Return a string representation of this object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

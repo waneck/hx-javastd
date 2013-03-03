@@ -38,7 +38,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	* Creates a new ForkJoinWorkerThread. This factory is used unless
 	* overridden in ForkJoinPool constructors.
 	*/
-	public static var defaultForkJoinWorkerThreadFactory(default, null) : java.util.concurrent.ForkJoinPool.ForkJoinPool_ForkJoinWorkerThreadFactory;
+	@:public @:static @:final public static var defaultForkJoinWorkerThreadFactory(default, null) : java.util.concurrent.ForkJoinPool.ForkJoinPool_ForkJoinWorkerThreadFactory;
 	
 	/**
 	* Creates a {@code ForkJoinPool} with parallelism equal to {@link
@@ -51,7 +51,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*         because it does not hold {@link
 	*         java.lang.RuntimePermission}{@code ("modifyThread")}
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a {@code ForkJoinPool} with the indicated parallelism
@@ -67,7 +67,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*         because it does not hold {@link
 	*         java.lang.RuntimePermission}{@code ("modifyThread")}
 	*/
-	@:overload public function new(parallelism : Int) : Void;
+	@:overload @:public public function new(parallelism : Int) : Void;
 	
 	/**
 	* Creates a {@code ForkJoinPool} with the given parameters.
@@ -93,7 +93,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*         because it does not hold {@link
 	*         java.lang.RuntimePermission}{@code ("modifyThread")}
 	*/
-	@:overload public function new(parallelism : Int, factory : java.util.concurrent.ForkJoinPool.ForkJoinPool_ForkJoinWorkerThreadFactory, handler : java.lang.Thread.Thread_UncaughtExceptionHandler, asyncMode : Bool) : Void;
+	@:overload @:public public function new(parallelism : Int, factory : java.util.concurrent.ForkJoinPool.ForkJoinPool_ForkJoinWorkerThreadFactory, handler : java.lang.Thread.Thread_UncaughtExceptionHandler, asyncMode : Bool) : Void;
 	
 	/**
 	* Performs the given task, returning its result upon completion.
@@ -111,7 +111,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	* @throws RejectedExecutionException if the task cannot be
 	*         scheduled for execution
 	*/
-	@:overload public function invoke<T>(task : java.util.concurrent.ForkJoinTask<T>) : T;
+	@:overload @:public public function invoke<T>(task : java.util.concurrent.ForkJoinTask<T>) : T;
 	
 	/**
 	* Arranges for (asynchronous) execution of the given task.
@@ -121,14 +121,14 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	* @throws RejectedExecutionException if the task cannot be
 	*         scheduled for execution
 	*/
-	@:overload public function execute(task : java.util.concurrent.ForkJoinTask<Dynamic>) : Void;
+	@:overload @:public public function execute(task : java.util.concurrent.ForkJoinTask<Dynamic>) : Void;
 	
 	/**
 	* @throws NullPointerException if the task is null
 	* @throws RejectedExecutionException if the task cannot be
 	*         scheduled for execution
 	*/
-	@:overload public function execute(task : java.lang.Runnable) : Void;
+	@:overload @:public override public function execute(task : java.lang.Runnable) : Void;
 	
 	/**
 	* Submits a ForkJoinTask for execution.
@@ -139,41 +139,41 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	* @throws RejectedExecutionException if the task cannot be
 	*         scheduled for execution
 	*/
-	@:overload public function submit<T>(task : java.util.concurrent.ForkJoinTask<T>) : java.util.concurrent.ForkJoinTask<T>;
+	@:overload @:public public function submit<T>(task : java.util.concurrent.ForkJoinTask<T>) : java.util.concurrent.ForkJoinTask<T>;
 	
 	/**
 	* @throws NullPointerException if the task is null
 	* @throws RejectedExecutionException if the task cannot be
 	*         scheduled for execution
 	*/
-	@:overload public function submit<T>(task : java.util.concurrent.Callable<T>) : java.util.concurrent.ForkJoinTask<T>;
+	@:overload @:public override public function submit<T>(task : java.util.concurrent.Callable<T>) : java.util.concurrent.ForkJoinTask<T>;
 	
 	/**
 	* @throws NullPointerException if the task is null
 	* @throws RejectedExecutionException if the task cannot be
 	*         scheduled for execution
 	*/
-	@:overload public function submit<T>(task : java.lang.Runnable, result : T) : java.util.concurrent.ForkJoinTask<T>;
+	@:overload @:public override public function submit<T>(task : java.lang.Runnable, result : T) : java.util.concurrent.ForkJoinTask<T>;
 	
 	/**
 	* @throws NullPointerException if the task is null
 	* @throws RejectedExecutionException if the task cannot be
 	*         scheduled for execution
 	*/
-	@:overload public function submit(task : java.lang.Runnable) : java.util.concurrent.ForkJoinTask<Dynamic>;
+	@:overload @:public override public function submit(task : java.lang.Runnable) : java.util.concurrent.ForkJoinTask<Dynamic>;
 	
 	/**
 	* @throws NullPointerException       {@inheritDoc}
 	* @throws RejectedExecutionException {@inheritDoc}
 	*/
-	@:overload public function invokeAll<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>) : java.util.List<java.util.concurrent.Future<T>>;
+	@:overload @:public override public function invokeAll<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>) : java.util.List<java.util.concurrent.Future<T>>;
 	
 	/**
 	* Returns the factory used for constructing new workers.
 	*
 	* @return the factory used for constructing new workers
 	*/
-	@:overload public function getFactory() : java.util.concurrent.ForkJoinPool.ForkJoinPool_ForkJoinWorkerThreadFactory;
+	@:overload @:public public function getFactory() : java.util.concurrent.ForkJoinPool.ForkJoinPool_ForkJoinWorkerThreadFactory;
 	
 	/**
 	* Returns the handler for internal worker threads that terminate
@@ -181,14 +181,14 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*
 	* @return the handler, or {@code null} if none
 	*/
-	@:overload public function getUncaughtExceptionHandler() : java.lang.Thread.Thread_UncaughtExceptionHandler;
+	@:overload @:public public function getUncaughtExceptionHandler() : java.lang.Thread.Thread_UncaughtExceptionHandler;
 	
 	/**
 	* Returns the targeted parallelism level of this pool.
 	*
 	* @return the targeted parallelism level of this pool
 	*/
-	@:overload public function getParallelism() : Int;
+	@:overload @:public public function getParallelism() : Int;
 	
 	/**
 	* Returns the number of worker threads that have started but not
@@ -198,7 +198,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*
 	* @return the number of worker threads
 	*/
-	@:overload public function getPoolSize() : Int;
+	@:overload @:public public function getPoolSize() : Int;
 	
 	/**
 	* Returns {@code true} if this pool uses local first-in-first-out
@@ -206,7 +206,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*
 	* @return {@code true} if this pool uses async mode
 	*/
-	@:overload public function getAsyncMode() : Bool;
+	@:overload @:public public function getAsyncMode() : Bool;
 	
 	/**
 	* Returns an estimate of the number of worker threads that are
@@ -216,7 +216,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*
 	* @return the number of worker threads
 	*/
-	@:overload public function getRunningThreadCount() : Int;
+	@:overload @:public public function getRunningThreadCount() : Int;
 	
 	/**
 	* Returns an estimate of the number of threads that are currently
@@ -225,7 +225,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*
 	* @return the number of active threads
 	*/
-	@:overload public function getActiveThreadCount() : Int;
+	@:overload @:public public function getActiveThreadCount() : Int;
 	
 	/**
 	* Returns {@code true} if all worker threads are currently idle.
@@ -238,7 +238,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*
 	* @return {@code true} if all threads are currently idle
 	*/
-	@:overload public function isQuiescent() : Bool;
+	@:overload @:public public function isQuiescent() : Bool;
 	
 	/**
 	* Returns an estimate of the total number of tasks stolen from
@@ -251,7 +251,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*
 	* @return the number of steals
 	*/
-	@:overload public function getStealCount() : haxe.Int64;
+	@:overload @:public public function getStealCount() : haxe.Int64;
 	
 	/**
 	* Returns an estimate of the total number of tasks currently held
@@ -263,7 +263,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*
 	* @return the number of queued tasks
 	*/
-	@:overload public function getQueuedTaskCount() : haxe.Int64;
+	@:overload @:public public function getQueuedTaskCount() : haxe.Int64;
 	
 	/**
 	* Returns an estimate of the number of tasks submitted to this
@@ -272,7 +272,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*
 	* @return the number of queued submissions
 	*/
-	@:overload public function getQueuedSubmissionCount() : Int;
+	@:overload @:public public function getQueuedSubmissionCount() : Int;
 	
 	/**
 	* Returns {@code true} if there are any tasks submitted to this
@@ -280,7 +280,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*
 	* @return {@code true} if there are any queued submissions
 	*/
-	@:overload public function hasQueuedSubmissions() : Bool;
+	@:overload @:public public function hasQueuedSubmissions() : Bool;
 	
 	/**
 	* Removes and returns the next unexecuted submission if one is
@@ -289,7 +289,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*
 	* @return the next submission, or {@code null} if none
 	*/
-	@:overload private function pollSubmission() : java.util.concurrent.ForkJoinTask<Dynamic>;
+	@:overload @:protected private function pollSubmission() : java.util.concurrent.ForkJoinTask<Dynamic>;
 	
 	/**
 	* Removes all available unexecuted submitted and forked tasks
@@ -308,7 +308,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	* @param c the collection to transfer elements into
 	* @return the number of elements transferred
 	*/
-	@:overload private function drainTasksTo(c : java.util.Collection<java.util.concurrent.ForkJoinTask<Dynamic>>) : Int;
+	@:overload @:protected private function drainTasksTo(c : java.util.Collection<java.util.concurrent.ForkJoinTask<Dynamic>>) : Int;
 	
 	/**
 	* Returns a string identifying this pool, as well as its state,
@@ -317,7 +317,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*
 	* @return a string identifying this pool, as well as its state
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Initiates an orderly shutdown in which previously submitted
@@ -331,7 +331,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*         because it does not hold {@link
 	*         java.lang.RuntimePermission}{@code ("modifyThread")}
 	*/
-	@:overload public function shutdown() : Void;
+	@:overload @:public override public function shutdown() : Void;
 	
 	/**
 	* Attempts to cancel and/or stop all tasks, and reject all
@@ -349,14 +349,14 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*         because it does not hold {@link
 	*         java.lang.RuntimePermission}{@code ("modifyThread")}
 	*/
-	@:overload public function shutdownNow() : java.util.List<java.lang.Runnable>;
+	@:overload @:public override public function shutdownNow() : java.util.List<java.lang.Runnable>;
 	
 	/**
 	* Returns {@code true} if all tasks have completed following shut down.
 	*
 	* @return {@code true} if all tasks have completed following shut down
 	*/
-	@:overload public function isTerminated() : Bool;
+	@:overload @:public override public function isTerminated() : Bool;
 	
 	/**
 	* Returns {@code true} if the process of termination has
@@ -371,14 +371,14 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*
 	* @return {@code true} if terminating but not yet terminated
 	*/
-	@:overload public function isTerminating() : Bool;
+	@:overload @:public public function isTerminating() : Bool;
 	
 	/**
 	* Returns {@code true} if this pool has been shut down.
 	*
 	* @return {@code true} if this pool has been shut down
 	*/
-	@:overload public function isShutdown() : Bool;
+	@:overload @:public override public function isShutdown() : Bool;
 	
 	/**
 	* Blocks until all tasks have completed execution after a shutdown
@@ -391,7 +391,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	*         {@code false} if the timeout elapsed before termination
 	* @throws InterruptedException if interrupted while waiting
 	*/
-	@:overload public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public override public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Blocks in accord with the given blocker.  If the current thread
@@ -413,11 +413,11 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	* @param blocker the blocker
 	* @throws InterruptedException if blocker.block did so
 	*/
-	@:overload public static function managedBlock(blocker : java.util.concurrent.ForkJoinPool.ForkJoinPool_ManagedBlocker) : Void;
+	@:overload @:public @:static public static function managedBlock(blocker : java.util.concurrent.ForkJoinPool.ForkJoinPool_ManagedBlocker) : Void;
 	
-	@:overload private function newTaskFor<T>(runnable : java.lang.Runnable, value : T) : java.util.concurrent.RunnableFuture<T>;
+	@:overload @:protected override private function newTaskFor<T>(runnable : java.lang.Runnable, value : T) : java.util.concurrent.RunnableFuture<T>;
 	
-	@:overload private function newTaskFor<T>(callable : java.util.concurrent.Callable<T>) : java.util.concurrent.RunnableFuture<T>;
+	@:overload @:protected override private function newTaskFor<T>(callable : java.util.concurrent.Callable<T>) : java.util.concurrent.RunnableFuture<T>;
 	
 	
 }
@@ -435,7 +435,7 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 	* @param pool the pool this thread works in
 	* @throws NullPointerException if the pool is null
 	*/
-	@:overload public function newThread(pool : java.util.concurrent.ForkJoinPool) : java.util.concurrent.ForkJoinWorkerThread;
+	@:overload @:public public function newThread(pool : java.util.concurrent.ForkJoinPool) : java.util.concurrent.ForkJoinWorkerThread;
 	
 	
 }
@@ -445,13 +445,13 @@ extern class ForkJoinPool extends java.util.concurrent.AbstractExecutorService
 */
 @:native('java$util$concurrent$ForkJoinPool$DefaultForkJoinWorkerThreadFactory') @:internal extern class ForkJoinPool_DefaultForkJoinWorkerThreadFactory implements java.util.concurrent.ForkJoinPool.ForkJoinPool_ForkJoinWorkerThreadFactory
 {
-	@:overload public function newThread(pool : java.util.concurrent.ForkJoinPool) : java.util.concurrent.ForkJoinWorkerThread;
+	@:overload @:public public function newThread(pool : java.util.concurrent.ForkJoinPool) : java.util.concurrent.ForkJoinWorkerThread;
 	
 	
 }
 @:native('java$util$concurrent$ForkJoinPool$InvokeAll') @:internal extern class ForkJoinPool_InvokeAll<T> extends java.util.concurrent.RecursiveAction
 {
-	@:overload public function compute() : Void;
+	@:overload @:public override public function compute() : Void;
 	
 	
 }

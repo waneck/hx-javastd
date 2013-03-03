@@ -47,7 +47,7 @@ extern interface PooledConnection
 	/**
 	* Closes the physical connection.
 	*/
-	@:overload @:abstract public function closeConnection() : Void;
+	@:overload @:public @:abstract public function closeConnection() : Void;
 	
 	
 }

@@ -25,21 +25,21 @@ package com.sun.tools.classfile;
 */
 extern class Descriptor
 {
-	@:overload public function new(cr : com.sun.tools.classfile.ClassReader) : Void;
+	@:overload @:public public function new(cr : com.sun.tools.classfile.ClassReader) : Void;
 	
-	@:overload public function new(index : Int) : Void;
+	@:overload @:public public function new(index : Int) : Void;
 	
-	@:overload public function getValue(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
+	@:overload @:public public function getValue(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	@:overload public function getParameterCount(constant_pool : com.sun.tools.classfile.ConstantPool) : Int;
+	@:overload @:public public function getParameterCount(constant_pool : com.sun.tools.classfile.ConstantPool) : Int;
 	
-	@:overload public function getParameterTypes(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
+	@:overload @:public public function getParameterTypes(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	@:overload public function getReturnType(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
+	@:overload @:public public function getReturnType(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	@:overload public function getFieldType(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
+	@:overload @:public public function getFieldType(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	public var index(default, null) : Int;
+	@:public @:final public var index(default, null) : Int;
 	
 	
 }
@@ -53,11 +53,11 @@ extern class Descriptor
 */
 @:native('com$sun$tools$classfile$Descriptor$InvalidDescriptor') extern class Descriptor_InvalidDescriptor extends com.sun.tools.classfile.DescriptorException
 {
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
-	public var desc(default, null) : String;
+	@:public @:final public var desc(default, null) : String;
 	
-	public var index(default, null) : Int;
+	@:public @:final public var index(default, null) : Int;
 	
 	
 }

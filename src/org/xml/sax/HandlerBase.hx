@@ -84,7 +84,7 @@ package org.xml.sax;
 	*            wrapping another exception.
 	* @see org.xml.sax.EntityResolver#resolveEntity
 	*/
-	@:overload public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
 	/**
 	* Receive notification of a notation declaration.
@@ -99,7 +99,7 @@ package org.xml.sax;
 	* @param systemId The notation system identifier.
 	* @see org.xml.sax.DTDHandler#notationDecl
 	*/
-	@:overload public function notationDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function notationDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Receive notification of an unparsed entity declaration.
@@ -115,7 +115,7 @@ package org.xml.sax;
 	* @param notationName The name of the associated notation.
 	* @see org.xml.sax.DTDHandler#unparsedEntityDecl
 	*/
-	@:overload public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
+	@:overload @:public public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
 	
 	/**
 	* Receive a Locator object for document events.
@@ -128,7 +128,7 @@ package org.xml.sax;
 	* @see org.xml.sax.DocumentHandler#setDocumentLocator
 	* @see org.xml.sax.Locator
 	*/
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Receive notification of the beginning of the document.
@@ -142,7 +142,7 @@ package org.xml.sax;
 	*            wrapping another exception.
 	* @see org.xml.sax.DocumentHandler#startDocument
 	*/
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
 	/**
 	* Receive notification of the end of the document.
@@ -156,7 +156,7 @@ package org.xml.sax;
 	*            wrapping another exception.
 	* @see org.xml.sax.DocumentHandler#endDocument
 	*/
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
 	/**
 	* Receive notification of the start of an element.
@@ -172,7 +172,7 @@ package org.xml.sax;
 	*            wrapping another exception.
 	* @see org.xml.sax.DocumentHandler#startElement
 	*/
-	@:overload public function startElement(name : String, attributes : org.xml.sax.AttributeList) : Void;
+	@:overload @:public public function startElement(name : String, attributes : org.xml.sax.AttributeList) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -187,7 +187,7 @@ package org.xml.sax;
 	*            wrapping another exception.
 	* @see org.xml.sax.DocumentHandler#endElement
 	*/
-	@:overload public function endElement(name : String) : Void;
+	@:overload @:public public function endElement(name : String) : Void;
 	
 	/**
 	* Receive notification of character data inside an element.
@@ -205,7 +205,7 @@ package org.xml.sax;
 	*            wrapping another exception.
 	* @see org.xml.sax.DocumentHandler#characters
 	*/
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of ignorable whitespace in element content.
@@ -223,7 +223,7 @@ package org.xml.sax;
 	*            wrapping another exception.
 	* @see org.xml.sax.DocumentHandler#ignorableWhitespace
 	*/
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of a processing instruction.
@@ -240,7 +240,7 @@ package org.xml.sax;
 	*            wrapping another exception.
 	* @see org.xml.sax.DocumentHandler#processingInstruction
 	*/
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* Receive notification of a parser warning.
@@ -256,7 +256,7 @@ package org.xml.sax;
 	* @see org.xml.sax.ErrorHandler#warning
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload public function warning(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(e : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Receive notification of a recoverable parser error.
@@ -272,7 +272,7 @@ package org.xml.sax;
 	* @see org.xml.sax.ErrorHandler#warning
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(e : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Report a fatal XML parsing error.
@@ -291,7 +291,7 @@ package org.xml.sax;
 	* @see org.xml.sax.ErrorHandler#fatalError
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload public function fatalError(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(e : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

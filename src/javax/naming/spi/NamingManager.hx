@@ -50,7 +50,7 @@ extern class NamingManager
 	* @see ObjectFactoryBuilder
 	* @see java.lang.SecurityManager#checkSetFactory
 	*/
-	@:overload @:synchronized public static function setObjectFactoryBuilder(builder : javax.naming.spi.ObjectFactoryBuilder) : Void;
+	@:overload @:public @:static @:synchronized public static function setObjectFactoryBuilder(builder : javax.naming.spi.ObjectFactoryBuilder) : Void;
 	
 	/**
 	* Creates an instance of an object for the specified object
@@ -137,7 +137,7 @@ extern class NamingManager
 	* @see ObjectFactory
 	* @see ObjectFactory#getObjectInstance
 	*/
-	@:overload public static function getObjectInstance(refInfo : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>) : Dynamic;
+	@:overload @:public @:static public static function getObjectInstance(refInfo : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>) : Dynamic;
 	
 	/**
 	* Creates a context for the given URL scheme id.
@@ -201,7 +201,7 @@ extern class NamingManager
 	* @see #getObjectInstance
 	* @see ObjectFactory#getObjectInstance
 	*/
-	@:overload public static function getURLContext(scheme : String, environment : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
+	@:overload @:public @:static public static function getURLContext(scheme : String, environment : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
 	
 	/**
 	* Creates an initial context using the specified environment
@@ -228,7 +228,7 @@ extern class NamingManager
 	* @see javax.naming.InitialContext
 	* @see javax.naming.directory.InitialDirContext
 	*/
-	@:overload public static function getInitialContext(env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
+	@:overload @:public @:static public static function getInitialContext(env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
 	
 	/**
 	* Sets the InitialContextFactory builder to be builder.
@@ -247,7 +247,7 @@ extern class NamingManager
 	* @see #hasInitialContextFactoryBuilder
 	* @see java.lang.SecurityManager#checkSetFactory
 	*/
-	@:overload @:synchronized public static function setInitialContextFactoryBuilder(builder : javax.naming.spi.InitialContextFactoryBuilder) : Void;
+	@:overload @:public @:static @:synchronized public static function setInitialContextFactoryBuilder(builder : javax.naming.spi.InitialContextFactoryBuilder) : Void;
 	
 	/**
 	* Determines whether an initial context factory builder has
@@ -256,7 +256,7 @@ extern class NamingManager
 	*           been set; false otherwise.
 	* @see #setInitialContextFactoryBuilder
 	*/
-	@:overload public static function hasInitialContextFactoryBuilder() : Bool;
+	@:overload @:public @:static public static function hasInitialContextFactoryBuilder() : Bool;
 	
 	/**
 	* Constant that holds the name of the environment property into
@@ -271,7 +271,7 @@ extern class NamingManager
 	* @see #getContinuationContext
 	* @since 1.3
 	*/
-	@:require(java3) public static var CPE(default, null) : String;
+	@:require(java3) @:public @:static @:final public static var CPE(default, null) : String;
 	
 	/**
 	* Creates a context in which to continue a context operation.
@@ -300,7 +300,7 @@ extern class NamingManager
 	* @return A non-null Context object for continuing the operation.
 	* @exception NamingException If a naming exception occurred.
 	*/
-	@:overload public static function getContinuationContext(cpe : javax.naming.CannotProceedException) : javax.naming.Context;
+	@:overload @:public @:static public static function getContinuationContext(cpe : javax.naming.CannotProceedException) : javax.naming.Context;
 	
 	/**
 	* Retrieves the state of an object for binding.
@@ -361,7 +361,7 @@ extern class NamingManager
 	* @see DirectoryManager#getStateToBind
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function getStateToBind(obj : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>) : Dynamic;
+	@:require(java3) @:overload @:public @:static public static function getStateToBind(obj : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>) : Dynamic;
 	
 	
 }

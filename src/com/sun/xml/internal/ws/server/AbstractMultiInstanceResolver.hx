@@ -31,26 +31,26 @@ extern class AbstractMultiInstanceResolver<T> extends com.sun.xml.internal.ws.se
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	private var clazz(default, null) : Class<T>;
+	@:protected @:final private var clazz(default, null) : Class<T>;
 	
 	/*almost final*/
-	private var owner : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>;
+	@:protected private var owner : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>;
 	
-	@:overload public function new(clazz : Class<T>) : Void;
+	@:overload @:public public function new(clazz : Class<T>) : Void;
 	
 	/**
 	* Perform resource injection on the given instance.
 	*/
-	@:overload @:final private function prepare(t : T) : Void;
+	@:overload @:protected @:final private function prepare(t : T) : Void;
 	
 	/**
 	* Creates a new instance via the default constructor.
 	*/
-	@:overload @:final private function create() : T;
+	@:overload @:protected @:final private function create() : T;
 	
-	@:overload public function start(wsc : com.sun.xml.internal.ws.api.server.WSWebServiceContext, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
+	@:overload @:public override public function start(wsc : com.sun.xml.internal.ws.api.server.WSWebServiceContext, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
 	
-	@:overload @:final private function dispose(instance : T) : Void;
+	@:overload @:protected @:final private function dispose(instance : T) : Void;
 	
 	
 }

@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.oa;
 */
 extern class NullServantImpl implements com.sun.corba.se.spi.oa.NullServant
 {
-	@:overload public function new(ex : org.omg.CORBA.SystemException) : Void;
+	@:overload @:public public function new(ex : org.omg.CORBA.SystemException) : Void;
 	
-	@:overload public function getException() : org.omg.CORBA.SystemException;
+	@:overload @:public public function getException() : org.omg.CORBA.SystemException;
 	
 	
 }

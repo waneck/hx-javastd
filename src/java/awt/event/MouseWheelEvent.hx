@@ -31,7 +31,7 @@ extern class MouseWheelEvent extends java.awt.event.MouseEvent
 	*
 	* @see #getScrollType
 	*/
-	public static var WHEEL_UNIT_SCROLL(default, null) : Int;
+	@:public @:static @:final public static var WHEEL_UNIT_SCROLL(default, null) : Int;
 	
 	/**
 	* Constant representing scrolling by a "block" (like scrolling
@@ -39,7 +39,7 @@ extern class MouseWheelEvent extends java.awt.event.MouseEvent
 	*
 	* @see #getScrollType
 	*/
-	public static var WHEEL_BLOCK_SCROLL(default, null) : Int;
+	@:public @:static @:final public static var WHEEL_BLOCK_SCROLL(default, null) : Int;
 	
 	/**
 	* Constructs a <code>MouseWheelEvent</code> object with the
@@ -76,7 +76,7 @@ extern class MouseWheelEvent extends java.awt.event.MouseEvent
 	* @see MouseEvent#MouseEvent(java.awt.Component, int, long, int, int, int, int, boolean)
 	* @see MouseEvent#MouseEvent(java.awt.Component, int, long, int, int, int, int, int, int, boolean, int)
 	*/
-	@:overload public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, x : Int, y : Int, clickCount : Int, popupTrigger : Bool, scrollType : Int, scrollAmount : Int, wheelRotation : Int) : Void;
+	@:overload @:public public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, x : Int, y : Int, clickCount : Int, popupTrigger : Bool, scrollType : Int, scrollAmount : Int, wheelRotation : Int) : Void;
 	
 	/**
 	* Constructs a <code>MouseWheelEvent</code> object with the
@@ -117,7 +117,7 @@ extern class MouseWheelEvent extends java.awt.event.MouseEvent
 	* @see MouseEvent#MouseEvent(java.awt.Component, int, long, int, int, int, int, int, int, boolean, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, x : Int, y : Int, xAbs : Int, yAbs : Int, clickCount : Int, popupTrigger : Bool, scrollType : Int, scrollAmount : Int, wheelRotation : Int) : Void;
+	@:require(java6) @:overload @:public public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, x : Int, y : Int, xAbs : Int, yAbs : Int, clickCount : Int, popupTrigger : Bool, scrollType : Int, scrollAmount : Int, wheelRotation : Int) : Void;
 	
 	/**
 	* Constructs a <code>MouseWheelEvent</code> object with the specified
@@ -163,7 +163,7 @@ extern class MouseWheelEvent extends java.awt.event.MouseEvent
 	* @see MouseEvent#MouseEvent(java.awt.Component, int, long, int, int, int, int, int, int, boolean, int)
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, x : Int, y : Int, xAbs : Int, yAbs : Int, clickCount : Int, popupTrigger : Bool, scrollType : Int, scrollAmount : Int, wheelRotation : Int, preciseWheelRotation : Float) : Void;
+	@:require(java7) @:overload @:public public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, x : Int, y : Int, xAbs : Int, yAbs : Int, clickCount : Int, popupTrigger : Bool, scrollType : Int, scrollAmount : Int, wheelRotation : Int, preciseWheelRotation : Float) : Void;
 	
 	/**
 	* Returns the type of scrolling that should take place in response to this
@@ -181,7 +181,7 @@ extern class MouseWheelEvent extends java.awt.event.MouseEvent
 	* @see javax.swing.Scrollable#getScrollableUnitIncrement
 	* @see javax.swing.Scrollable#getScrollableBlockIncrement
 	*/
-	@:overload public function getScrollType() : Int;
+	@:overload @:public public function getScrollType() : Int;
 	
 	/**
 	* Returns the number of units that should be scrolled per
@@ -194,7 +194,7 @@ extern class MouseWheelEvent extends java.awt.event.MouseEvent
 	*  <code>MouseWheelEvent.WHEEL_BLOCK_SCROLL</code>
 	* @see #getScrollType
 	*/
-	@:overload public function getScrollAmount() : Int;
+	@:overload @:public public function getScrollAmount() : Int;
 	
 	/**
 	* Returns the number of "clicks" the mouse wheel was rotated, as an integer.
@@ -206,7 +206,7 @@ extern class MouseWheelEvent extends java.awt.event.MouseEvent
 	* towards the user
 	* @see #getPreciseWheelRotation
 	*/
-	@:overload public function getWheelRotation() : Int;
+	@:overload @:public public function getWheelRotation() : Int;
 	
 	/**
 	* Returns the number of "clicks" the mouse wheel was rotated, as a double.
@@ -219,7 +219,7 @@ extern class MouseWheelEvent extends java.awt.event.MouseEvent
 	* @see #getWheelRotation
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getPreciseWheelRotation() : Float;
+	@:require(java7) @:overload @:public public function getPreciseWheelRotation() : Float;
 	
 	/**
 	* This is a convenience method to aid in the implementation of
@@ -268,7 +268,7 @@ extern class MouseWheelEvent extends java.awt.event.MouseEvent
 	* @see javax.swing.JScrollPane
 	* @see javax.swing.JScrollPane#setWheelScrollingEnabled
 	*/
-	@:overload public function getUnitsToScroll() : Int;
+	@:overload @:public public function getUnitsToScroll() : Int;
 	
 	/**
 	* Returns a parameter string identifying this event.
@@ -276,7 +276,7 @@ extern class MouseWheelEvent extends java.awt.event.MouseEvent
 	*
 	* @return a string identifying the event and its attributes
 	*/
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	
 }

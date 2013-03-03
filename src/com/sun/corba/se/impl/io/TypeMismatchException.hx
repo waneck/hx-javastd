@@ -31,9 +31,9 @@ package com.sun.corba.se.impl.io;
 */
 extern class TypeMismatchException extends java.lang.Error
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(mssg : String) : Void;
+	@:overload @:public public function new(mssg : String) : Void;
 	
 	
 }

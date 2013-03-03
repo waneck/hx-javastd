@@ -29,28 +29,28 @@ extern class DefaultSingleSelectionModel implements javax.swing.SingleSelectionM
 	* event's only (read-only) state is the source property.  The source
 	* of events generated here is always "this".
 	*/
-	@:transient private var changeEvent : javax.swing.event.ChangeEvent;
+	@:protected @:transient private var changeEvent : javax.swing.event.ChangeEvent;
 	
 	/** The collection of registered listeners */
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
-	@:overload public function getSelectedIndex() : Int;
+	@:overload @:public public function getSelectedIndex() : Int;
 	
-	@:overload public function setSelectedIndex(index : Int) : Void;
+	@:overload @:public public function setSelectedIndex(index : Int) : Void;
 	
-	@:overload public function clearSelection() : Void;
+	@:overload @:public public function clearSelection() : Void;
 	
-	@:overload public function isSelected() : Bool;
+	@:overload @:public public function isSelected() : Bool;
 	
 	/**
 	* Adds a <code>ChangeListener</code> to the button.
 	*/
-	@:overload public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Removes a <code>ChangeListener</code> from the button.
 	*/
-	@:overload public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the change listeners
@@ -65,7 +65,7 @@ extern class DefaultSingleSelectionModel implements javax.swing.SingleSelectionM
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
+	@:require(java4) @:overload @:public public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -73,7 +73,7 @@ extern class DefaultSingleSelectionModel implements javax.swing.SingleSelectionM
 	* is created lazily.
 	* @see EventListenerList
 	*/
-	@:overload private function fireStateChanged() : Void;
+	@:overload @:protected private function fireStateChanged() : Void;
 	
 	/**
 	* Returns an array of all the objects currently registered as
@@ -110,7 +110,7 @@ extern class DefaultSingleSelectionModel implements javax.swing.SingleSelectionM
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	
 }

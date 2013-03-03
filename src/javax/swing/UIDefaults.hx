@@ -28,7 +28,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	/**
 	* Creates an empty defaults table.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an empty defaults table with the specified initial capacity and
@@ -39,7 +39,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see java.util.Hashtable
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:require(java6) @:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
 	/**
 	* Creates a defaults table initialized with the specified
@@ -55,7 +55,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @param keyValueList  an array of objects containing the key/value
 	*          pairs
 	*/
-	@:overload public function new(keyValueList : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(keyValueList : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Returns the value for key.  If the value is a
@@ -83,7 +83,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see #addResourceBundle
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function get(key : Dynamic) : Dynamic;
+	@:require(java4) @:overload @:public override public function get(key : Dynamic) : Dynamic;
 	
 	/**
 	* Returns the value for key associated with the given locale.
@@ -110,7 +110,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see #addResourceBundle
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function get(key : Dynamic, l : java.util.Locale) : Dynamic;
+	@:require(java4) @:overload @:public public function get(key : Dynamic, l : java.util.Locale) : Dynamic;
 	
 	/**
 	* Sets the value of <code>key</code> to <code>value</code> for all locales.
@@ -126,7 +126,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see #putDefaults
 	* @see java.util.Hashtable#put
 	*/
-	@:overload override public function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:overload @:public override public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
 	/**
 	* Puts all of the key/value pairs in the database and
@@ -139,7 +139,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see #put
 	* @see java.util.Hashtable#put
 	*/
-	@:overload public function putDefaults(keyValueList : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function putDefaults(keyValueList : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* If the value of <code>key</code> is a <code>Font</code> return it,
@@ -149,7 +149,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*          return the <code>Font</code> object; otherwise return
 	*          <code>null</code>
 	*/
-	@:overload public function getFont(key : Dynamic) : java.awt.Font;
+	@:overload @:public public function getFont(key : Dynamic) : java.awt.Font;
 	
 	/**
 	* If the value of <code>key</code> for the given <code>Locale</code>
@@ -162,7 +162,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*          <code>null</code>
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getFont(key : Dynamic, l : java.util.Locale) : java.awt.Font;
+	@:require(java4) @:overload @:public public function getFont(key : Dynamic, l : java.util.Locale) : java.awt.Font;
 	
 	/**
 	* If the value of <code>key</code> is a <code>Color</code> return it,
@@ -172,7 +172,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*          return the <code>Color</code> object; otherwise return
 	*          <code>null</code>
 	*/
-	@:overload public function getColor(key : Dynamic) : java.awt.Color;
+	@:overload @:public public function getColor(key : Dynamic) : java.awt.Color;
 	
 	/**
 	* If the value of <code>key</code> for the given <code>Locale</code>
@@ -185,7 +185,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*          <code>null</code>
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getColor(key : Dynamic, l : java.util.Locale) : java.awt.Color;
+	@:require(java4) @:overload @:public public function getColor(key : Dynamic, l : java.util.Locale) : java.awt.Color;
 	
 	/**
 	* If the value of <code>key</code> is an <code>Icon</code> return it,
@@ -195,7 +195,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*          return the <code>Icon</code> object; otherwise return
 	*          <code>null</code>
 	*/
-	@:overload public function getIcon(key : Dynamic) : javax.swing.Icon;
+	@:overload @:public public function getIcon(key : Dynamic) : javax.swing.Icon;
 	
 	/**
 	* If the value of <code>key</code> for the given <code>Locale</code>
@@ -208,7 +208,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*          <code>null</code>
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getIcon(key : Dynamic, l : java.util.Locale) : javax.swing.Icon;
+	@:require(java4) @:overload @:public public function getIcon(key : Dynamic, l : java.util.Locale) : javax.swing.Icon;
 	
 	/**
 	* If the value of <code>key</code> is a <code>Border</code> return it,
@@ -218,7 +218,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*          return the <code>Border</code> object; otherwise return
 	*          <code>null</code>
 	*/
-	@:overload public function getBorder(key : Dynamic) : javax.swing.border.Border;
+	@:overload @:public public function getBorder(key : Dynamic) : javax.swing.border.Border;
 	
 	/**
 	* If the value of <code>key</code> for the given <code>Locale</code>
@@ -231,7 +231,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*          <code>null</code>
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getBorder(key : Dynamic, l : java.util.Locale) : javax.swing.border.Border;
+	@:require(java4) @:overload @:public public function getBorder(key : Dynamic, l : java.util.Locale) : javax.swing.border.Border;
 	
 	/**
 	* If the value of <code>key</code> is a <code>String</code> return it,
@@ -241,7 +241,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*          return the <code>String</code> object; otherwise return
 	*          <code>null</code>
 	*/
-	@:overload public function getString(key : Dynamic) : String;
+	@:overload @:public public function getString(key : Dynamic) : String;
 	
 	/**
 	* If the value of <code>key</code> for the given <code>Locale</code>
@@ -254,7 +254,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*          <code>null</code>
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getString(key : Dynamic, l : java.util.Locale) : String;
+	@:require(java4) @:overload @:public public function getString(key : Dynamic, l : java.util.Locale) : String;
 	
 	/**
 	* If the value of <code>key</code> is an <code>Integer</code> return its
@@ -263,7 +263,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @return if the value for <code>key</code> is an <code>Integer</code>,
 	*          return its value, otherwise return 0
 	*/
-	@:overload public function getInt(key : Dynamic) : Int;
+	@:overload @:public public function getInt(key : Dynamic) : Int;
 	
 	/**
 	* If the value of <code>key</code> for the given <code>Locale</code>
@@ -275,7 +275,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*          return its value, otherwise return 0
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getInt(key : Dynamic, l : java.util.Locale) : Int;
+	@:require(java4) @:overload @:public public function getInt(key : Dynamic, l : java.util.Locale) : Int;
 	
 	/**
 	* If the value of <code>key</code> is boolean, return the
@@ -286,7 +286,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*         boolean value, otherwise return false.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getBoolean(key : Dynamic) : Bool;
+	@:require(java4) @:overload @:public public function getBoolean(key : Dynamic) : Bool;
 	
 	/**
 	* If the value of <code>key</code> for the given <code>Locale</code>
@@ -299,7 +299,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*         boolean value, otherwise return false.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getBoolean(key : Dynamic, l : java.util.Locale) : Bool;
+	@:require(java4) @:overload @:public public function getBoolean(key : Dynamic, l : java.util.Locale) : Bool;
 	
 	/**
 	* If the value of <code>key</code> is an <code>Insets</code> return it,
@@ -309,7 +309,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*          return the <code>Insets</code> object; otherwise return
 	*          <code>null</code>
 	*/
-	@:overload public function getInsets(key : Dynamic) : java.awt.Insets;
+	@:overload @:public public function getInsets(key : Dynamic) : java.awt.Insets;
 	
 	/**
 	* If the value of <code>key</code> for the given <code>Locale</code>
@@ -322,7 +322,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*          <code>null</code>
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getInsets(key : Dynamic, l : java.util.Locale) : java.awt.Insets;
+	@:require(java4) @:overload @:public public function getInsets(key : Dynamic, l : java.util.Locale) : java.awt.Insets;
 	
 	/**
 	* If the value of <code>key</code> is a <code>Dimension</code> return it,
@@ -332,7 +332,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*          return the <code>Dimension</code> object; otherwise return
 	*          <code>null</code>
 	*/
-	@:overload public function getDimension(key : Dynamic) : java.awt.Dimension;
+	@:overload @:public public function getDimension(key : Dynamic) : java.awt.Dimension;
 	
 	/**
 	* If the value of <code>key</code> for the given <code>Locale</code>
@@ -345,7 +345,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*          <code>null</code>
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getDimension(key : Dynamic, l : java.util.Locale) : java.awt.Dimension;
+	@:require(java4) @:overload @:public public function getDimension(key : Dynamic, l : java.util.Locale) : java.awt.Dimension;
 	
 	/**
 	* The value of <code>get(uidClassID)</code> must be the
@@ -367,7 +367,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @return the value of <code>Class.forName(get(uidClassID))</code>
 	* @see #getUI
 	*/
-	@:overload public function getUIClass(uiClassID : String, uiClassLoader : java.lang.ClassLoader) : Class<javax.swing.plaf.ComponentUI>;
+	@:overload @:public public function getUIClass(uiClassID : String, uiClassLoader : java.lang.ClassLoader) : Class<javax.swing.plaf.ComponentUI>;
 	
 	/**
 	* Returns the L&F class that renders this component.
@@ -376,7 +376,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @return the Class object returned by
 	*          <code>getUIClass(uiClassID, null)</code>
 	*/
-	@:overload public function getUIClass(uiClassID : String) : Class<javax.swing.plaf.ComponentUI>;
+	@:overload @:public public function getUIClass(uiClassID : String) : Class<javax.swing.plaf.ComponentUI>;
 	
 	/**
 	* If <code>getUI()</code> fails for any reason,
@@ -386,7 +386,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @param msg message string to print
 	* @see #getUI
 	*/
-	@:overload private function getUIError(msg : String) : Void;
+	@:overload @:protected private function getUIError(msg : String) : Void;
 	
 	/**
 	* Creates an <code>ComponentUI</code> implementation for the
@@ -402,7 +402,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @param target  the <code>JComponent</code> which needs a UI
 	* @return the <code>ComponentUI</code> object
 	*/
-	@:overload public function getUI(target : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public public function getUI(target : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Adds a <code>PropertyChangeListener</code> to the listener list.
@@ -414,7 +414,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @param listener  the <code>PropertyChangeListener</code> to be added
 	* @see java.beans.PropertyChangeSupport
 	*/
-	@:overload @:synchronized public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a <code>PropertyChangeListener</code> from the listener list.
@@ -424,7 +424,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @param listener  the <code>PropertyChangeListener</code> to be removed
 	* @see java.beans.PropertyChangeSupport
 	*/
-	@:overload @:synchronized public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>PropertyChangeListener</code>s added
@@ -434,7 +434,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	/**
 	* Support for reporting bound property changes.  If oldValue and
@@ -448,7 +448,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @param newValue  the new value of the property
 	* @see java.beans.PropertyChangeSupport
 	*/
-	@:overload private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:protected private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Adds a resource bundle to the list of resource bundles that are
@@ -461,7 +461,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see #removeResourceBundle
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function addResourceBundle(bundleName : String) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function addResourceBundle(bundleName : String) : Void;
 	
 	/**
 	* Removes a resource bundle from the list of resource bundles that are
@@ -472,7 +472,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see #addResourceBundle
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function removeResourceBundle(bundleName : String) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function removeResourceBundle(bundleName : String) : Void;
 	
 	/**
 	* Sets the default locale.  The default locale is used in retrieving
@@ -488,7 +488,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see #get(Object,Locale)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setDefaultLocale(l : java.util.Locale) : Void;
+	@:require(java4) @:overload @:public public function setDefaultLocale(l : java.util.Locale) : Void;
 	
 	/**
 	* Returns the default locale.  The default locale is used in retrieving
@@ -504,7 +504,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see #get(Object,Locale)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getDefaultLocale() : java.util.Locale;
+	@:require(java4) @:overload @:public public function getDefaultLocale() : java.util.Locale;
 	
 	
 }
@@ -601,7 +601,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @param c    a <code>String</code> specifying the classname
 	*             of the instance to be created on demand
 	*/
-	@:overload public function new(c : String) : Void;
+	@:overload @:public public function new(c : String) : Void;
 	
 	/**
 	* Creates a <code>LazyValue</code> which will construct an instance
@@ -614,7 +614,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @param m    a <code>String</code> specifying the static
 	*              method to be called on class c
 	*/
-	@:overload public function new(c : String, m : String) : Void;
+	@:overload @:public public function new(c : String, m : String) : Void;
 	
 	/**
 	* Creates a <code>LazyValue</code> which will construct an instance
@@ -625,7 +625,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @param o    an array of <code>Objects</code> to be passed as
 	*              paramaters to the constructor in class c
 	*/
-	@:overload public function new(c : String, o : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(c : String, o : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Creates a <code>LazyValue</code> which will construct an instance
@@ -640,7 +640,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @param o    an array of <code>Objects</code> to be passed as
 	*              paramaters to the static method in class c
 	*/
-	@:overload public function new(c : String, m : String, o : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(c : String, m : String, o : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Creates the value retrieved from the <code>UIDefaults</code> table.
@@ -649,7 +649,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @param table  a <code>UIDefaults</code> table
 	* @return the created <code>Object</code>
 	*/
-	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
@@ -666,7 +666,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 */
 @:require(java3) @:native('javax$swing$UIDefaults$LazyInputMap') extern class UIDefaults_LazyInputMap implements javax.swing.UIDefaults.UIDefaults_LazyValue
 {
-	@:overload public function new(bindings : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(bindings : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Creates an <code>InputMap</code> with the bindings that are
@@ -675,7 +675,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @param table a <code>UIDefaults</code> table
 	* @return the <code>InputMap</code>
 	*/
-	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
@@ -703,7 +703,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 */
 @:native('javax$swing$UIDefaults$TextAndMnemonicHashMap') @:internal extern class UIDefaults_TextAndMnemonicHashMap extends java.util.HashMap<String, Dynamic>
 {
-	@:overload override public function get(key : Dynamic) : Dynamic;
+	@:overload @:public override public function get(key : Dynamic) : Dynamic;
 	
 	
 }

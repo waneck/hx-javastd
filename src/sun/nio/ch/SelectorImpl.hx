@@ -28,31 +28,31 @@ package sun.nio.ch;
 */
 @:internal extern class SelectorImpl extends java.nio.channels.spi.AbstractSelector
 {
-	@:overload private function new(sp : java.nio.channels.spi.SelectorProvider) : Void;
+	@:overload @:protected private function new(sp : java.nio.channels.spi.SelectorProvider) : Void;
 	
-	@:overload override public function keys() : java.util.Set<java.nio.channels.SelectionKey>;
+	@:overload @:public override public function keys() : java.util.Set<java.nio.channels.SelectionKey>;
 	
-	@:overload override public function selectedKeys() : java.util.Set<java.nio.channels.SelectionKey>;
+	@:overload @:public override public function selectedKeys() : java.util.Set<java.nio.channels.SelectionKey>;
 	
-	@:overload @:abstract private function doSelect(timeout : haxe.Int64) : Int;
+	@:overload @:protected @:abstract private function doSelect(timeout : haxe.Int64) : Int;
 	
-	@:overload override public function select(timeout : haxe.Int64) : Int;
+	@:overload @:public override public function select(timeout : haxe.Int64) : Int;
 	
-	@:overload override public function select() : Int;
+	@:overload @:public override public function select() : Int;
 	
-	@:overload override public function selectNow() : Int;
+	@:overload @:public override public function selectNow() : Int;
 	
-	@:overload override public function implCloseSelector() : Void;
+	@:overload @:public override public function implCloseSelector() : Void;
 	
-	@:overload @:abstract private function implClose() : Void;
+	@:overload @:protected @:abstract private function implClose() : Void;
 	
-	@:overload @:final override private function register(ch : java.nio.channels.spi.AbstractSelectableChannel, ops : Int, attachment : Dynamic) : java.nio.channels.SelectionKey;
+	@:overload @:protected @:final override private function register(ch : java.nio.channels.spi.AbstractSelectableChannel, ops : Int, attachment : Dynamic) : java.nio.channels.SelectionKey;
 	
-	@:overload @:abstract private function implRegister(ski : sun.nio.ch.SelectionKeyImpl) : Void;
+	@:overload @:protected @:abstract private function implRegister(ski : sun.nio.ch.SelectionKeyImpl) : Void;
 	
-	@:overload @:abstract private function implDereg(ski : sun.nio.ch.SelectionKeyImpl) : Void;
+	@:overload @:protected @:abstract private function implDereg(ski : sun.nio.ch.SelectionKeyImpl) : Void;
 	
-	@:overload @:abstract override public function wakeup() : java.nio.channels.Selector;
+	@:overload @:abstract @:public override public function wakeup() : java.nio.channels.Selector;
 	
 	
 }

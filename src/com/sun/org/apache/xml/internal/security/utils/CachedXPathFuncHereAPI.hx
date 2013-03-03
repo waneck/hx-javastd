@@ -26,21 +26,21 @@ extern class CachedXPathFuncHereAPI
 	* @return the context for this object
 	*
 	*/
-	@:overload public function getFuncHereContext() : com.sun.org.apache.xml.internal.security.transforms.implementations.FuncHereContext;
+	@:overload @:public public function getFuncHereContext() : com.sun.org.apache.xml.internal.security.transforms.implementations.FuncHereContext;
 	
 	/**
 	* Constructor CachedXPathFuncHereAPI
 	*
 	* @param existingXPathContext
 	*/
-	@:overload public function new(existingXPathContext : com.sun.org.apache.xpath.internal.XPathContext) : Void;
+	@:overload @:public public function new(existingXPathContext : com.sun.org.apache.xpath.internal.XPathContext) : Void;
 	
 	/**
 	* Constructor CachedXPathFuncHereAPI
 	*
 	* @param previouslyUsed
 	*/
-	@:overload public function new(previouslyUsed : com.sun.org.apache.xpath.internal.CachedXPathAPI) : Void;
+	@:overload @:public public function new(previouslyUsed : com.sun.org.apache.xpath.internal.CachedXPathAPI) : Void;
 	
 	/**
 	* Use an XPath string to select a single node. XPath namespace
@@ -53,7 +53,7 @@ extern class CachedXPathFuncHereAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function selectSingleNode(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function selectSingleNode(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Use an XPath string to select a single node.
@@ -66,7 +66,7 @@ extern class CachedXPathFuncHereAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function selectSingleNode(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function selectSingleNode(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	*   Use an XPath string to select a nodelist.
@@ -78,7 +78,7 @@ extern class CachedXPathFuncHereAPI
 	*
 	*  @throws TransformerException
 	*/
-	@:overload public function selectNodeIterator(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node) : org.w3c.dom.traversal.NodeIterator;
+	@:overload @:public public function selectNodeIterator(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node) : org.w3c.dom.traversal.NodeIterator;
 	
 	/**
 	*  Use an XPath string to select a nodelist.
@@ -92,7 +92,7 @@ extern class CachedXPathFuncHereAPI
 	* @throws TransformerException
 	* @deprecated
 	*/
-	@:overload public function selectNodeIterator(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.traversal.NodeIterator;
+	@:overload @:public public function selectNodeIterator(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.traversal.NodeIterator;
 	
 	/**
 	*  Use an XPath string to select a nodelist.
@@ -105,7 +105,7 @@ extern class CachedXPathFuncHereAPI
 	* @throws TransformerException
 	* @deprecated
 	*/
-	@:overload public function selectNodeList(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node) : org.w3c.dom.NodeList;
+	@:overload @:public public function selectNodeList(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node) : org.w3c.dom.NodeList;
 	
 	/**
 	*  Use an XPath string to select a nodelist.
@@ -119,7 +119,7 @@ extern class CachedXPathFuncHereAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function selectNodeList(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.NodeList;
+	@:overload @:public public function selectNodeList(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.NodeList;
 	
 	/**
 	*  Evaluate XPath string to an XObject.  Using this method,
@@ -137,7 +137,7 @@ extern class CachedXPathFuncHereAPI
 	* @throws TransformerException
 	* @deprecated
 	*/
-	@:overload public function eval(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function eval(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	*  Evaluate XPath string to an XObject.
@@ -160,7 +160,7 @@ extern class CachedXPathFuncHereAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function eval(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function eval(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	*   Evaluate XPath string to an XObject.
@@ -184,7 +184,7 @@ extern class CachedXPathFuncHereAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function eval(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node, str : String, prefixResolver : com.sun.org.apache.xml.internal.utils.PrefixResolver) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function eval(contextNode : org.w3c.dom.Node, xpathnode : org.w3c.dom.Node, str : String, prefixResolver : com.sun.org.apache.xml.internal.utils.PrefixResolver) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Method getStrFromNode
@@ -192,7 +192,7 @@ extern class CachedXPathFuncHereAPI
 	* @param xpathnode
 	* @return the string for the node.
 	*/
-	@:overload public static function getStrFromNode(xpathnode : org.w3c.dom.Node) : String;
+	@:overload @:public @:static public static function getStrFromNode(xpathnode : org.w3c.dom.Node) : String;
 	
 	
 }

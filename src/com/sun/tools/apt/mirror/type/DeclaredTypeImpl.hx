@@ -28,43 +28,43 @@ package com.sun.tools.apt.mirror.type;
 	/**
 	* Implementation of DeclaredType
 	*/
-	private var type : com.sun.tools.javac.code.Type.Type_ClassType;
+	@:protected private var type : com.sun.tools.javac.code.Type.Type_ClassType;
 	
-	@:overload private function new(env : com.sun.tools.apt.mirror.AptEnv, type : com.sun.tools.javac.code.Type.Type_ClassType) : Void;
+	@:overload @:protected private function new(env : com.sun.tools.apt.mirror.AptEnv, type : com.sun.tools.javac.code.Type.Type_ClassType) : Void;
 	
 	/**
 	* Returns a string representation of this declared type.
 	* This includes the type's name and any actual type arguments.
 	* Type names are qualified.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getDeclaration() : com.sun.mirror.declaration.TypeDeclaration;
+	@:overload @:public public function getDeclaration() : com.sun.mirror.declaration.TypeDeclaration;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getContainingType() : com.sun.mirror.type.DeclaredType;
+	@:overload @:public public function getContainingType() : com.sun.mirror.type.DeclaredType;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getActualTypeArguments() : java.util.Collection<com.sun.mirror.type.TypeMirror>;
+	@:overload @:public public function getActualTypeArguments() : java.util.Collection<com.sun.mirror.type.TypeMirror>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getSuperinterfaces() : java.util.Collection<com.sun.mirror.type.InterfaceType>;
+	@:overload @:public public function getSuperinterfaces() : java.util.Collection<com.sun.mirror.type.InterfaceType>;
 	
 	/**
 	* Applies a visitor to this type.
 	*
 	* @param v the visitor operating on this type
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
+	@:overload @:public @:public override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
 	
 	
 }

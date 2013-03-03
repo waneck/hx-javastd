@@ -89,7 +89,7 @@ package org.xml.sax;
 	*            wrapping another exception.
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload @:abstract public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public @:abstract public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Receive notification of a recoverable error.
@@ -116,7 +116,7 @@ package org.xml.sax;
 	*            wrapping another exception.
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload @:abstract public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public @:abstract public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Receive notification of a non-recoverable error.
@@ -146,7 +146,7 @@ package org.xml.sax;
 	*            wrapping another exception.
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload @:abstract public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public @:abstract public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

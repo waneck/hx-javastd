@@ -22,13 +22,13 @@ package com.sun.org.apache.xml.internal.security.signature;
 extern class Reference extends com.sun.org.apache.xml.internal.security.utils.SignatureElementProxy
 {
 	/** Field CacheSignedNodes */
-	public static var CacheSignedNodes(default, null) : Bool;
+	@:public @:final @:static public static var CacheSignedNodes(default, null) : Bool;
 	
 	/** Field OBJECT_URI */
-	public static var OBJECT_URI(default, null) : String;
+	@:public @:static @:final public static var OBJECT_URI(default, null) : String;
 	
 	/** Field MANIFEST_URI */
-	public static var MANIFEST_URI(default, null) : String;
+	@:public @:static @:final public static var MANIFEST_URI(default, null) : String;
 	
 	/**
 	* Constructor Reference
@@ -42,7 +42,7 @@ extern class Reference extends com.sun.org.apache.xml.internal.security.utils.Si
 	* TODO should we throw XMLSignatureException if MessageDigestAlgoURI is wrong?
 	* @throws XMLSignatureException
 	*/
-	@:overload private function new(doc : org.w3c.dom.Document, BaseURI : String, ReferenceURI : String, manifest : com.sun.org.apache.xml.internal.security.signature.Manifest, transforms : com.sun.org.apache.xml.internal.security.transforms.Transforms, messageDigestAlgorithm : String) : Void;
+	@:overload @:protected private function new(doc : org.w3c.dom.Document, BaseURI : String, ReferenceURI : String, manifest : com.sun.org.apache.xml.internal.security.signature.Manifest, transforms : com.sun.org.apache.xml.internal.security.transforms.Transforms, messageDigestAlgorithm : String) : Void;
 	
 	/**
 	* Build a {@link Reference} from an {@link Element}
@@ -52,7 +52,7 @@ extern class Reference extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @param manifest is the {@link Manifest} of {@link SignedInfo} in which the Reference occurs. We need this because the Manifest has the individual {@link ResourceResolver}s whcih have been set by the user
 	* @throws XMLSecurityException
 	*/
-	@:overload private function new(element : org.w3c.dom.Element, BaseURI : String, manifest : com.sun.org.apache.xml.internal.security.signature.Manifest) : Void;
+	@:overload @:protected private function new(element : org.w3c.dom.Element, BaseURI : String, manifest : com.sun.org.apache.xml.internal.security.signature.Manifest) : Void;
 	
 	/**
 	* Returns {@link MessageDigestAlgorithm}
@@ -62,49 +62,49 @@ extern class Reference extends com.sun.org.apache.xml.internal.security.utils.Si
 	*
 	* @throws XMLSignatureException
 	*/
-	@:overload public function getMessageDigestAlgorithm() : com.sun.org.apache.xml.internal.security.algorithms.MessageDigestAlgorithm;
+	@:overload @:public public function getMessageDigestAlgorithm() : com.sun.org.apache.xml.internal.security.algorithms.MessageDigestAlgorithm;
 	
 	/**
 	* Sets the <code>URI</code> of this <code>Reference</code> element
 	*
 	* @param URI the <code>URI</code> of this <code>Reference</code> element
 	*/
-	@:overload public function setURI(URI : String) : Void;
+	@:overload @:public public function setURI(URI : String) : Void;
 	
 	/**
 	* Returns the <code>URI</code> of this <code>Reference</code> element
 	*
 	* @return URI the <code>URI</code> of this <code>Reference</code> element
 	*/
-	@:overload public function getURI() : String;
+	@:overload @:public public function getURI() : String;
 	
 	/**
 	* Sets the <code>Id</code> attribute of this <code>Reference</code> element
 	*
 	* @param Id the <code>Id</code> attribute of this <code>Reference</code> element
 	*/
-	@:overload public function setId(Id : String) : Void;
+	@:overload @:public public function setId(Id : String) : Void;
 	
 	/**
 	* Returns the <code>Id</code> attribute of this <code>Reference</code> element
 	*
 	* @return Id the <code>Id</code> attribute of this <code>Reference</code> element
 	*/
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
 	/**
 	* Sets the <code>type</code> atttibute of the Reference indicate whether an <code>ds:Object</code>, <code>ds:SignatureProperty</code>, or <code>ds:Manifest</code> element
 	*
 	* @param Type the <code>type</code> attribute of the Reference
 	*/
-	@:overload public function setType(Type : String) : Void;
+	@:overload @:public public function setType(Type : String) : Void;
 	
 	/**
 	* Return the <code>type</code> atttibute of the Reference indicate whether an <code>ds:Object</code>, <code>ds:SignatureProperty</code>, or <code>ds:Manifest</code> element
 	*
 	* @return the <code>type</code> attribute of the Reference
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	* Method isReferenceToObject
@@ -114,7 +114,7 @@ extern class Reference extends com.sun.org.apache.xml.internal.security.utils.Si
 	*
 	* @return true if the Reference type indicates that this Reference points to an <code>Object</code>
 	*/
-	@:overload public function typeIsReferenceToObject() : Bool;
+	@:overload @:public public function typeIsReferenceToObject() : Bool;
 	
 	/**
 	* Method isReferenceToManifest
@@ -124,7 +124,7 @@ extern class Reference extends com.sun.org.apache.xml.internal.security.utils.Si
 	*
 	* @return true if the Reference type indicates that this Reference points to a {@link Manifest}
 	*/
-	@:overload public function typeIsReferenceToManifest() : Bool;
+	@:overload @:public public function typeIsReferenceToManifest() : Bool;
 	
 	/**
 	* Method generateDigestValue
@@ -132,7 +132,7 @@ extern class Reference extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @throws ReferenceNotInitializedException
 	* @throws XMLSignatureException
 	*/
-	@:overload public function generateDigestValue() : Void;
+	@:overload @:public public function generateDigestValue() : Void;
 	
 	/**
 	* Returns the XMLSignatureInput which is created by de-referencing the URI attribute.
@@ -140,7 +140,7 @@ extern class Reference extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @throws ReferenceNotInitializedException If the resolver found any
 	*  problem resolving the reference
 	*/
-	@:overload public function getContentsBeforeTransformation() : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public public function getContentsBeforeTransformation() : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* Returns the data which is referenced by the URI attribute. This method
@@ -150,14 +150,14 @@ extern class Reference extends com.sun.org.apache.xml.internal.security.utils.Si
 	*
 	* @deprecated use getContentsBeforeTransformation
 	*/
-	@:overload public function getTransformsInput() : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public public function getTransformsInput() : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* Returns the XMLSignatureInput which is the result of the Transforms.
 	* @return a XMLSignatureInput with all transformations applied.
 	* @throws XMLSignatureException
 	*/
-	@:overload public function getContentsAfterTransformation() : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public public function getContentsAfterTransformation() : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* This method returns the XMLSignatureInput which represents the node set before
@@ -166,20 +166,20 @@ extern class Reference extends com.sun.org.apache.xml.internal.security.utils.Si
 	*
 	* @throws XMLSignatureException
 	*/
-	@:overload public function getNodesetBeforeFirstCanonicalization() : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public public function getNodesetBeforeFirstCanonicalization() : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* Method getHTMLRepresentation
 	* @return The HTML of the transformation
 	* @throws XMLSignatureException
 	*/
-	@:overload public function getHTMLRepresentation() : String;
+	@:overload @:public public function getHTMLRepresentation() : String;
 	
 	/**
 	* This method only works works after a call to verify.
 	* @return the transformed output(i.e. what is going to be digested).
 	*/
-	@:overload public function getTransformsOutput() : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public public function getTransformsOutput() : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* This method returns the {@link XMLSignatureInput} which is referenced by the
@@ -190,7 +190,7 @@ extern class Reference extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @throws XMLSignatureException
 	* @see Manifest#verifyReferences()
 	*/
-	@:overload private function dereferenceURIandPerformTransforms(os : java.io.OutputStream) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:protected private function dereferenceURIandPerformTransforms(os : java.io.OutputStream) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* Method getTransforms
@@ -201,7 +201,7 @@ extern class Reference extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @throws XMLSecurityException
 	* @throws XMLSignatureException
 	*/
-	@:overload public function getTransforms() : com.sun.org.apache.xml.internal.security.transforms.Transforms;
+	@:overload @:public public function getTransforms() : com.sun.org.apache.xml.internal.security.transforms.Transforms;
 	
 	/**
 	* Method getReferencedBytes
@@ -210,7 +210,7 @@ extern class Reference extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @throws ReferenceNotInitializedException
 	* @throws XMLSignatureException
 	*/
-	@:overload public function getReferencedBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getReferencedBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the digest value.
@@ -219,7 +219,7 @@ extern class Reference extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @throws Base64DecodingException if Reference contains no proper base64 encoded data.
 	* @throws XMLSecurityException if the Reference does not contain a DigestValue element
 	*/
-	@:overload public function getDigestValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getDigestValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Tests reference valdiation is success or false
@@ -228,14 +228,14 @@ extern class Reference extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @throws ReferenceNotInitializedException
 	* @throws XMLSecurityException
 	*/
-	@:overload public function verify() : Bool;
+	@:overload @:public public function verify() : Bool;
 	
 	/**
 	* Method getBaseLocalName
 	* @inheritDoc
 	*
 	*/
-	@:overload override public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

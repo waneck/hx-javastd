@@ -38,7 +38,7 @@ extern class NTNumericCredential
 	* @param token the Windows NT security token for this user. <p>
 	*
 	*/
-	@:overload public function new(token : haxe.Int64) : Void;
+	@:overload @:public public function new(token : haxe.Int64) : Void;
 	
 	/**
 	* Return an integer representation of this
@@ -49,7 +49,7 @@ extern class NTNumericCredential
 	* @return an integer representation of this
 	*          <code>NTNumericCredential</code>.
 	*/
-	@:overload public function getToken() : haxe.Int64;
+	@:overload @:public public function getToken() : haxe.Int64;
 	
 	/**
 	* Return a string representation of this <code>NTNumericCredential</code>.
@@ -58,7 +58,7 @@ extern class NTNumericCredential
 	*
 	* @return a string representation of this <code>NTNumericCredential</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares the specified Object with this <code>NTNumericCredential</code>
@@ -74,7 +74,7 @@ extern class NTNumericCredential
 	* @return true if the specified Object is equal equal to this
 	*          <code>NTNumericCredential</code>.
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Return a hash code for this <code>NTNumericCredential</code>.
@@ -83,7 +83,7 @@ extern class NTNumericCredential
 	*
 	* @return a hash code for this <code>NTNumericCredential</code>.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

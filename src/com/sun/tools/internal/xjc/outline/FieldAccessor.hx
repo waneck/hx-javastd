@@ -36,7 +36,7 @@ extern interface FieldAccessor
 	* @param $var
 	*      Variable whose type is {@link FieldOutline#getRawType()}
 	*/
-	@:overload public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
+	@:overload @:public @:public public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
 	
 	/**
 	* Sets the value of the field from the specified expression.
@@ -57,7 +57,7 @@ extern interface FieldAccessor
 	*      The expression that evaluates to a value of the type
 	*      {@link FieldOutline#getRawType()}.
 	*/
-	@:overload public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:public @:public public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
 	
 	/**
 	* Generates a code fragment to remove any "set" value
@@ -66,7 +66,7 @@ extern interface FieldAccessor
 	* @param body
 	*      The code will be appended at the end of this block.
 	*/
-	@:overload public function unsetValues(body : com.sun.codemodel.internal.JBlock) : Void;
+	@:overload @:public public function unsetValues(body : com.sun.codemodel.internal.JBlock) : Void;
 	
 	/**
 	* Return an expression that evaluates to true only when
@@ -76,7 +76,7 @@ extern interface FieldAccessor
 	*      if the isSetXXX/unsetXXX method does not make sense
 	*      for the given field.
 	*/
-	@:overload public function hasSetValue() : com.sun.codemodel.internal.JExpression;
+	@:overload @:public public function hasSetValue() : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Gets the {@link FieldOutline} from which

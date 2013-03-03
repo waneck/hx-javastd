@@ -30,12 +30,12 @@ extern class CorbalocURL extends com.sun.corba.se.impl.naming.namingutil.INSURLB
 	* the URL Object is constructed it is immutable. URL parameter is a
 	* corbaloc: URL string with 'corbaloc:' prefix stripped.
 	*/
-	@:overload public function new(aURL : String) : Void;
+	@:overload @:public public function new(aURL : String) : Void;
 	
 	/**
 	* Will be true only in CorbanameURL class.
 	*/
-	@:overload public function isCorbanameURL() : Bool;
+	@:overload @:public override public function isCorbanameURL() : Bool;
 	
 	
 }

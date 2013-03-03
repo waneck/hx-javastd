@@ -39,13 +39,13 @@ extern class EnumEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	/**
 	* This is the symbol table entry for enumerated types.
 	**/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.EnumEntry) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.EnumEntry) : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/** Invoke the enumerator generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -53,18 +53,18 @@ extern class EnumEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload @:public override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the enumerator generator.
 	@returns an object which implements the EnumGen interface.
 	@see EnumGen */
-	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload @:public override public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	/** Add an element to the list of elements. */
-	@:overload public function addElement(element : String) : Void;
+	@:overload @:public public function addElement(element : String) : Void;
 	
 	/** Each element of the vector is a String. */
-	@:overload public function elements() : java.util.Vector<Dynamic>;
+	@:overload @:public public function elements() : java.util.Vector<Dynamic>;
 	
 	
 }

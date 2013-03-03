@@ -44,7 +44,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #setCompressionMode
 	* @see #getCompressionMode
 	*/
-	public static var MODE_DISABLED(default, null) : Int;
+	@:public @:static @:final public static var MODE_DISABLED(default, null) : Int;
 	
 	/**
 	* A constant value that may be passed into methods such as
@@ -67,7 +67,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #setCompressionMode
 	* @see #getCompressionMode
 	*/
-	public static var MODE_DEFAULT(default, null) : Int;
+	@:public @:static @:final public static var MODE_DEFAULT(default, null) : Int;
 	
 	/**
 	* A constant value that may be passed into methods such as
@@ -89,7 +89,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #setCompressionMode
 	* @see #getCompressionMode
 	*/
-	public static var MODE_EXPLICIT(default, null) : Int;
+	@:public @:static @:final public static var MODE_EXPLICIT(default, null) : Int;
 	
 	/**
 	* A constant value that may be passed into methods such as
@@ -115,7 +115,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #setCompressionMode
 	* @see #getCompressionMode
 	*/
-	public static var MODE_COPY_FROM_METADATA(default, null) : Int;
+	@:public @:static @:final public static var MODE_COPY_FROM_METADATA(default, null) : Int;
 	
 	/**
 	* The mode controlling tiling settings, which Must be
@@ -131,7 +131,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #setTilingMode
 	* @see #getTilingMode
 	*/
-	private var tilingMode : Int;
+	@:protected private var tilingMode : Int;
 	
 	/**
 	* An array of preferred tile size range pairs.  The default value
@@ -144,7 +144,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	*
 	* @see #getPreferredTileSizes
 	*/
-	private var preferredTileSizes : java.NativeArray<java.awt.Dimension>;
+	@:protected private var preferredTileSizes : java.NativeArray<java.awt.Dimension>;
 	
 	/**
 	* A <code>boolean</code> that is <code>true</code> if tiling
@@ -153,7 +153,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* <p> Subclasses that do not support writing tiles may ignore
 	* this value.
 	*/
-	private var tilingSet : Bool;
+	@:protected private var tilingSet : Bool;
 	
 	/**
 	* The width of each tile if tiling has been set, or 0 otherwise.
@@ -161,7 +161,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* <p> Subclasses that do not support tiling may ignore this
 	* value.
 	*/
-	private var tileWidth : Int;
+	@:protected private var tileWidth : Int;
 	
 	/**
 	* The height of each tile if tiling has been set, or 0 otherwise.
@@ -170,7 +170,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* <p> Subclasses that do not support tiling may ignore this
 	* value.
 	*/
-	private var tileHeight : Int;
+	@:protected private var tileHeight : Int;
 	
 	/**
 	* The amount by which the tile grid origin should be offset
@@ -180,7 +180,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* <p> Subclasses that do not support offsetting tiles may ignore
 	* this value.
 	*/
-	private var tileGridXOffset : Int;
+	@:protected private var tileGridXOffset : Int;
 	
 	/**
 	* The amount by which the tile grid origin should be offset
@@ -190,7 +190,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* <p> Subclasses that do not support offsetting tiles may ignore
 	* this value.
 	*/
-	private var tileGridYOffset : Int;
+	@:protected private var tileGridYOffset : Int;
 	
 	/**
 	* The mode controlling progressive encoding, which must be set to
@@ -208,7 +208,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #setProgressiveMode
 	* @see #getProgressiveMode
 	*/
-	private var progressiveMode : Int;
+	@:protected private var progressiveMode : Int;
 	
 	/**
 	* The mode controlling compression settings, which must be set to
@@ -225,7 +225,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #setCompressionMode
 	* @see #getCompressionMode
 	*/
-	private var compressionMode : Int;
+	@:protected private var compressionMode : Int;
 	
 	/**
 	* An array of <code>String</code>s containing the names of the
@@ -235,7 +235,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* <p> Subclasses that do not support compression may ignore this
 	* value.
 	*/
-	private var compressionTypes : java.NativeArray<String>;
+	@:protected private var compressionTypes : java.NativeArray<String>;
 	
 	/**
 	* A <code>String</code> containing the name of the current
@@ -244,7 +244,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* <p> Subclasses that do not support compression may ignore this
 	* value.
 	*/
-	private var compressionType : String;
+	@:protected private var compressionType : String;
 	
 	/**
 	* A <code>float</code> containing the current compression quality
@@ -253,7 +253,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* <p> Subclasses that do not support compression may ignore this
 	* value.
 	*/
-	private var compressionQuality : Single;
+	@:protected private var compressionQuality : Single;
 	
 	/**
 	* A <code>Locale</code> to be used to localize compression type
@@ -261,13 +261,13 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* default <code>Locale</code>.  Subclasses must set the value
 	* manually.
 	*/
-	private var locale : java.util.Locale;
+	@:protected private var locale : java.util.Locale;
 	
 	/**
 	* Constructs an empty <code>ImageWriteParam</code>.  It is up to
 	* the subclass to set up the instance variables properly.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs an <code>ImageWriteParam</code> set to use a
@@ -277,7 +277,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* compression type names and quality descriptions, or
 	* <code>null</code>.
 	*/
-	@:overload public function new(locale : java.util.Locale) : Void;
+	@:overload @:public public function new(locale : java.util.Locale) : Void;
 	
 	/**
 	* Returns the currently set <code>Locale</code>, or
@@ -286,7 +286,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	*
 	* @return the current <code>Locale</code>, or <code>null</code>.
 	*/
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	/**
 	* Returns <code>true</code> if the writer can perform tiling
@@ -299,7 +299,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #canOffsetTiles()
 	* @see #setTiling(int, int, int, int)
 	*/
-	@:overload public function canWriteTiles() : Bool;
+	@:overload @:public public function canWriteTiles() : Bool;
 	
 	/**
 	* Returns <code>true</code> if the writer can perform tiling with
@@ -316,7 +316,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #canWriteTiles()
 	* @see #setTiling(int, int, int, int)
 	*/
-	@:overload public function canOffsetTiles() : Bool;
+	@:overload @:public public function canOffsetTiles() : Bool;
 	
 	/**
 	* Determines whether the image will be tiled in the output
@@ -355,7 +355,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #setTiling
 	* @see #getTilingMode
 	*/
-	@:overload public function setTilingMode(mode : Int) : Void;
+	@:overload @:public public function setTilingMode(mode : Int) : Void;
 	
 	/**
 	* Returns the current tiling mode, if tiling is supported.
@@ -368,7 +368,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	*
 	* @see #setTilingMode
 	*/
-	@:overload public function getTilingMode() : Int;
+	@:overload @:public public function getTilingMode() : Int;
 	
 	/**
 	* Returns an array of <code>Dimension</code>s indicating the
@@ -393,7 +393,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @return an array of <code>Dimension</code>s with an even length
 	* of at least two, or <code>null</code>.
 	*/
-	@:overload public function getPreferredTileSizes() : java.NativeArray<java.awt.Dimension>;
+	@:overload @:public public function getPreferredTileSizes() : java.NativeArray<java.awt.Dimension>;
 	
 	/**
 	* Specifies that the image should be tiled in the output stream.
@@ -430,7 +430,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #getTileGridXOffset()
 	* @see #getTileGridYOffset()
 	*/
-	@:overload public function setTiling(tileWidth : Int, tileHeight : Int, tileGridXOffset : Int, tileGridYOffset : Int) : Void;
+	@:overload @:public public function setTiling(tileWidth : Int, tileHeight : Int, tileGridXOffset : Int, tileGridYOffset : Int) : Void;
 	
 	/**
 	* Removes any previous tile grid parameters specified by calls to
@@ -448,7 +448,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	*
 	* @see #setTiling(int, int, int, int)
 	*/
-	@:overload public function unsetTiling() : Void;
+	@:overload @:public public function unsetTiling() : Void;
 	
 	/**
 	* Returns the width of each tile in an image as it will be
@@ -467,7 +467,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #setTiling(int, int, int, int)
 	* @see #getTileHeight()
 	*/
-	@:overload public function getTileWidth() : Int;
+	@:overload @:public public function getTileWidth() : Int;
 	
 	/**
 	* Returns the height of each tile in an image as it will be written to
@@ -486,7 +486,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #setTiling(int, int, int, int)
 	* @see #getTileWidth()
 	*/
-	@:overload public function getTileHeight() : Int;
+	@:overload @:public public function getTileHeight() : Int;
 	
 	/**
 	* Returns the horizontal tile grid offset of an image as it will
@@ -505,7 +505,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #setTiling(int, int, int, int)
 	* @see #getTileGridYOffset()
 	*/
-	@:overload public function getTileGridXOffset() : Int;
+	@:overload @:public public function getTileGridXOffset() : Int;
 	
 	/**
 	* Returns the vertical tile grid offset of an image as it will
@@ -524,7 +524,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #setTiling(int, int, int, int)
 	* @see #getTileGridXOffset()
 	*/
-	@:overload public function getTileGridYOffset() : Int;
+	@:overload @:public public function getTileGridYOffset() : Int;
 	
 	/**
 	* Returns <code>true</code> if the writer can write out images
@@ -536,7 +536,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #setProgressiveMode
 	* @see #getProgressiveMode
 	*/
-	@:overload public function canWriteProgressive() : Bool;
+	@:overload @:public public function canWriteProgressive() : Bool;
 	
 	/**
 	* Specifies that the writer is to write the image out in a
@@ -578,7 +578,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	*
 	* @see #getProgressiveMode
 	*/
-	@:overload public function setProgressiveMode(mode : Int) : Void;
+	@:overload @:public public function setProgressiveMode(mode : Int) : Void;
 	
 	/**
 	* Returns the current mode for writing the stream in a
@@ -591,14 +591,14 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	*
 	* @see #setProgressiveMode
 	*/
-	@:overload public function getProgressiveMode() : Int;
+	@:overload @:public public function getProgressiveMode() : Int;
 	
 	/**
 	* Returns <code>true</code> if this writer supports compression.
 	*
 	* @return <code>true</code> if the writer supports compression.
 	*/
-	@:overload public function canWriteCompressed() : Bool;
+	@:overload @:public public function canWriteCompressed() : Bool;
 	
 	/**
 	* Specifies whether compression is to be performed, and if so how
@@ -641,7 +641,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	*
 	* @see #getCompressionMode
 	*/
-	@:overload public function setCompressionMode(mode : Int) : Void;
+	@:overload @:public public function setCompressionMode(mode : Int) : Void;
 	
 	/**
 	* Returns the current compression mode, if compression is
@@ -654,7 +654,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	*
 	* @see #setCompressionMode
 	*/
-	@:overload public function getCompressionMode() : Int;
+	@:overload @:public public function getCompressionMode() : Int;
 	
 	/**
 	* Returns a list of available compression types, as an array or
@@ -682,7 +682,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @exception UnsupportedOperationException if the writer does not
 	* support compression.
 	*/
-	@:overload public function getCompressionTypes() : java.NativeArray<String>;
+	@:overload @:public public function getCompressionTypes() : java.NativeArray<String>;
 	
 	/**
 	* Sets the compression type to one of the values indicated by
@@ -717,7 +717,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #getCompressionType
 	* @see #unsetCompression
 	*/
-	@:overload public function setCompressionType(compressionType : String) : Void;
+	@:overload @:public public function setCompressionType(compressionType : String) : Void;
 	
 	/**
 	* Returns the currently set compression type, or
@@ -742,7 +742,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	*
 	* @see #setCompressionType
 	*/
-	@:overload public function getCompressionType() : String;
+	@:overload @:public public function getCompressionType() : String;
 	
 	/**
 	* Removes any previous compression type and quality settings.
@@ -760,7 +760,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @see #setCompressionType
 	* @see #setCompressionQuality
 	*/
-	@:overload public function unsetCompression() : Void;
+	@:overload @:public public function unsetCompression() : Void;
 	
 	/**
 	* Returns a localized version of the name of the current
@@ -783,7 +783,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* <code>MODE_EXPLICIT</code>.
 	* @exception IllegalStateException if no compression type is set.
 	*/
-	@:overload public function getLocalizedCompressionTypeName() : String;
+	@:overload @:public public function getLocalizedCompressionTypeName() : String;
 	
 	/**
 	* Returns <code>true</code> if the current compression type
@@ -812,7 +812,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* compression types is non-<code>null</code> and the current
 	* compression type is <code>null</code>.
 	*/
-	@:overload public function isCompressionLossless() : Bool;
+	@:overload @:public public function isCompressionLossless() : Bool;
 	
 	/**
 	* Sets the compression quality to a value between <code>0</code>
@@ -858,7 +858,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	*
 	* @see #getCompressionQuality
 	*/
-	@:overload public function setCompressionQuality(quality : Single) : Void;
+	@:overload @:public public function setCompressionQuality(quality : Single) : Void;
 	
 	/**
 	* Returns the current compression quality setting.
@@ -886,7 +886,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	*
 	* @see #setCompressionQuality
 	*/
-	@:overload public function getCompressionQuality() : Single;
+	@:overload @:public public function getCompressionQuality() : Single;
 	
 	/**
 	* Returns a <code>float</code> indicating an estimate of the
@@ -924,7 +924,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	* @exception IllegalArgumentException if <code>quality</code> is
 	* not between <code>0</code>and <code>1</code>, inclusive.
 	*/
-	@:overload public function getBitRate(quality : Single) : Single;
+	@:overload @:public public function getBitRate(quality : Single) : Single;
 	
 	/**
 	* Returns an array of <code>String</code>s that may be used along
@@ -979,7 +979,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	*
 	* @see #getCompressionQualityValues
 	*/
-	@:overload public function getCompressionQualityDescriptions() : java.NativeArray<String>;
+	@:overload @:public public function getCompressionQualityDescriptions() : java.NativeArray<String>;
 	
 	/**
 	* Returns an array of <code>float</code>s that may be used along
@@ -1018,7 +1018,7 @@ extern class ImageWriteParam extends javax.imageio.IIOParam
 	*
 	* @see #getCompressionQualityDescriptions
 	*/
-	@:overload public function getCompressionQualityValues() : java.NativeArray<Single>;
+	@:overload @:public public function getCompressionQualityValues() : java.NativeArray<Single>;
 	
 	
 }

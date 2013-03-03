@@ -25,9 +25,9 @@ package com.sun.corba.se.spi.orb;
 */
 extern class ParserDataFactory
 {
-	@:overload public static function make(propertyName : String, operation : com.sun.corba.se.spi.orb.Operation, fieldName : String, defaultValue : Dynamic, testValue : Dynamic, testData : String) : com.sun.corba.se.spi.orb.ParserData;
+	@:overload @:public @:static public static function make(propertyName : String, operation : com.sun.corba.se.spi.orb.Operation, fieldName : String, defaultValue : Dynamic, testValue : Dynamic, testData : String) : com.sun.corba.se.spi.orb.ParserData;
 	
-	@:overload public static function make(propertyName : String, operation : com.sun.corba.se.spi.orb.Operation, fieldName : String, defaultValue : Dynamic, testValue : Dynamic, testData : java.NativeArray<com.sun.corba.se.spi.orb.StringPair>, componentType : Class<Dynamic>) : com.sun.corba.se.spi.orb.ParserData;
+	@:overload @:public @:static public static function make(propertyName : String, operation : com.sun.corba.se.spi.orb.Operation, fieldName : String, defaultValue : Dynamic, testValue : Dynamic, testData : java.NativeArray<com.sun.corba.se.spi.orb.StringPair>, componentType : Class<Dynamic>) : com.sun.corba.se.spi.orb.ParserData;
 	
 	
 }

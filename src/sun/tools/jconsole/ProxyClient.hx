@@ -31,7 +31,7 @@ extern class ProxyClient implements com.sun.tools.jconsole.JConsoleContext
 	* @exception UnsupportedOperationException If this {@code ProxyClient}
 	* does not denote a JMX connector for a JMX VM agent.
 	*/
-	@:overload public function isSslRmiRegistry() : Bool;
+	@:overload @:public public function isSslRmiRegistry() : Bool;
 	
 	/**
 	* Returns true if the retrieved RMI stub is SSL-protected.
@@ -39,66 +39,66 @@ extern class ProxyClient implements com.sun.tools.jconsole.JConsoleContext
 	* @exception UnsupportedOperationException If this {@code ProxyClient}
 	* does not denote a JMX connector for a JMX VM agent.
 	*/
-	@:overload public function isSslRmiStub() : Bool;
+	@:overload @:public public function isSslRmiStub() : Bool;
 	
 	/**
 	* Returns true if this {@code ProxyClient} denotes
 	* a JMX connector for a JMX VM agent.
 	*/
-	@:overload public function isVmConnector() : Bool;
+	@:overload @:public public function isVmConnector() : Bool;
 	
-	@:overload public function getConnectionState() : com.sun.tools.jconsole.JConsoleContext.JConsoleContext_ConnectionState;
+	@:overload @:public public function getConnectionState() : com.sun.tools.jconsole.JConsoleContext.JConsoleContext_ConnectionState;
 	
 	/**
 	* Gets a proxy client for a given local virtual machine.
 	*/
-	@:overload public static function getProxyClient(lvm : sun.tools.jconsole.LocalVirtualMachine) : sun.tools.jconsole.ProxyClient;
+	@:overload @:public @:static public static function getProxyClient(lvm : sun.tools.jconsole.LocalVirtualMachine) : sun.tools.jconsole.ProxyClient;
 	
-	@:overload public static function getConnectionName(lvm : sun.tools.jconsole.LocalVirtualMachine) : String;
+	@:overload @:public @:static public static function getConnectionName(lvm : sun.tools.jconsole.LocalVirtualMachine) : String;
 	
 	/**
 	* Gets a proxy client for a given JMXServiceURL.
 	*/
-	@:overload public static function getProxyClient(url : String, userName : String, password : String) : sun.tools.jconsole.ProxyClient;
+	@:overload @:public @:static public static function getProxyClient(url : String, userName : String, password : String) : sun.tools.jconsole.ProxyClient;
 	
-	@:overload public static function getConnectionName(url : String, userName : String) : String;
+	@:overload @:public @:static public static function getConnectionName(url : String, userName : String) : String;
 	
 	/**
 	* Gets a proxy client for a given "hostname:port".
 	*/
-	@:overload public static function getProxyClient(hostName : String, port : Int, userName : String, password : String) : sun.tools.jconsole.ProxyClient;
+	@:overload @:public @:static public static function getProxyClient(hostName : String, port : Int, userName : String, password : String) : sun.tools.jconsole.ProxyClient;
 	
-	@:overload public static function getConnectionName(hostName : String, port : Int, userName : String) : String;
+	@:overload @:public @:static public static function getConnectionName(hostName : String, port : Int, userName : String) : String;
 	
-	@:overload public function connectionName() : String;
+	@:overload @:public public function connectionName() : String;
 	
-	@:overload public function getDisplayName() : String;
+	@:overload @:public public function getDisplayName() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getMBeanServerConnection() : javax.management.MBeanServerConnection;
+	@:overload @:public public function getMBeanServerConnection() : javax.management.MBeanServerConnection;
 	
-	@:overload public function getSnapshotMBeanServerConnection() : sun.tools.jconsole.ProxyClient.ProxyClient_SnapshotMBeanServerConnection;
+	@:overload @:public public function getSnapshotMBeanServerConnection() : sun.tools.jconsole.ProxyClient.ProxyClient_SnapshotMBeanServerConnection;
 	
-	@:overload public function getUrl() : String;
+	@:overload @:public public function getUrl() : String;
 	
-	@:overload public function getHostName() : String;
+	@:overload @:public public function getHostName() : String;
 	
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
-	@:overload public function getVmid() : Int;
+	@:overload @:public public function getVmid() : Int;
 	
-	@:overload public function getUserName() : String;
+	@:overload @:public public function getUserName() : String;
 	
-	@:overload public function getPassword() : String;
+	@:overload @:public public function getPassword() : String;
 	
-	@:overload public function disconnect() : Void;
+	@:overload @:public public function disconnect() : Void;
 	
 	/**
 	* Returns the list of domains in which any MBean is
 	* currently registered.
 	*/
-	@:overload public function getDomains() : java.NativeArray<String>;
+	@:overload @:public public function getDomains() : java.NativeArray<String>;
 	
 	/**
 	* Returns a map of MBeans with ObjectName as the key and MBeanInfo value
@@ -106,18 +106,18 @@ extern class ProxyClient implements com.sun.tools.jconsole.JConsoleContext
 	* are returned.  If no MBean found, an empty map is returned.
 	*
 	*/
-	@:overload public function getMBeans(domain : String) : java.util.Map<javax.management.ObjectName, javax.management.MBeanInfo>;
+	@:overload @:public public function getMBeans(domain : String) : java.util.Map<javax.management.ObjectName, javax.management.MBeanInfo>;
 	
 	/**
 	* Returns a list of attributes of a named MBean.
 	*
 	*/
-	@:overload public function getAttributes(name : javax.management.ObjectName, attributes : java.NativeArray<String>) : javax.management.AttributeList;
+	@:overload @:public public function getAttributes(name : javax.management.ObjectName, attributes : java.NativeArray<String>) : javax.management.AttributeList;
 	
 	/**
 	* Set the value of a specific attribute of a named MBean.
 	*/
-	@:overload public function setAttribute(name : javax.management.ObjectName, attribute : javax.management.Attribute) : Void;
+	@:overload @:public public function setAttribute(name : javax.management.ObjectName, attribute : javax.management.Attribute) : Void;
 	
 	/**
 	* Invokes an operation of a named MBean.
@@ -125,43 +125,43 @@ extern class ProxyClient implements com.sun.tools.jconsole.JConsoleContext
 	* @throws MBeanException Wraps an exception thrown by
 	*      the MBean's invoked method.
 	*/
-	@:overload public function invoke(name : javax.management.ObjectName, operationName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function invoke(name : javax.management.ObjectName, operationName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
-	@:overload @:synchronized public function getClassLoadingMXBean() : java.lang.management.ClassLoadingMXBean;
+	@:overload @:public @:synchronized public function getClassLoadingMXBean() : java.lang.management.ClassLoadingMXBean;
 	
-	@:overload @:synchronized public function getCompilationMXBean() : java.lang.management.CompilationMXBean;
+	@:overload @:public @:synchronized public function getCompilationMXBean() : java.lang.management.CompilationMXBean;
 	
-	@:overload public function getMemoryPoolProxies() : java.util.Collection<sun.tools.jconsole.MemoryPoolProxy>;
+	@:overload @:public public function getMemoryPoolProxies() : java.util.Collection<sun.tools.jconsole.MemoryPoolProxy>;
 	
-	@:overload @:synchronized public function getGarbageCollectorMXBeans() : java.util.Collection<java.lang.management.GarbageCollectorMXBean>;
+	@:overload @:public @:synchronized public function getGarbageCollectorMXBeans() : java.util.Collection<java.lang.management.GarbageCollectorMXBean>;
 	
-	@:overload @:synchronized public function getMemoryMXBean() : java.lang.management.MemoryMXBean;
+	@:overload @:public @:synchronized public function getMemoryMXBean() : java.lang.management.MemoryMXBean;
 	
-	@:overload @:synchronized public function getRuntimeMXBean() : java.lang.management.RuntimeMXBean;
+	@:overload @:public @:synchronized public function getRuntimeMXBean() : java.lang.management.RuntimeMXBean;
 	
-	@:overload @:synchronized public function getThreadMXBean() : java.lang.management.ThreadMXBean;
+	@:overload @:public @:synchronized public function getThreadMXBean() : java.lang.management.ThreadMXBean;
 	
-	@:overload @:synchronized public function getOperatingSystemMXBean() : java.lang.management.OperatingSystemMXBean;
+	@:overload @:public @:synchronized public function getOperatingSystemMXBean() : java.lang.management.OperatingSystemMXBean;
 	
-	@:overload @:synchronized public function getSunOperatingSystemMXBean() : com.sun.management.OperatingSystemMXBean;
+	@:overload @:public @:synchronized public function getSunOperatingSystemMXBean() : com.sun.management.OperatingSystemMXBean;
 	
-	@:overload @:synchronized public function getHotSpotDiagnosticMXBean() : com.sun.management.HotSpotDiagnosticMXBean;
+	@:overload @:public @:synchronized public function getHotSpotDiagnosticMXBean() : com.sun.management.HotSpotDiagnosticMXBean;
 	
-	@:overload public function getMXBean<T>(objName : javax.management.ObjectName, interfaceClass : Class<T>) : T;
+	@:overload @:public public function getMXBean<T>(objName : javax.management.ObjectName, interfaceClass : Class<T>) : T;
 	
-	@:overload public function findDeadlockedThreads() : java.NativeArray<haxe.Int64>;
+	@:overload @:public public function findDeadlockedThreads() : java.NativeArray<haxe.Int64>;
 	
-	@:overload @:synchronized public function markAsDead() : Void;
+	@:overload @:public @:synchronized public function markAsDead() : Void;
 	
-	@:overload public function isDead() : Bool;
+	@:overload @:public public function isDead() : Bool;
 	
-	@:overload public function isRegistered(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function isRegistered(name : javax.management.ObjectName) : Bool;
 	
-	@:overload public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload public function addWeakPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addWeakPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	
 }
@@ -171,7 +171,7 @@ extern class ProxyClient implements com.sun.tools.jconsole.JConsoleContext
 */
 @:native('sun$tools$jconsole$ProxyClient$WeakPCL') @:internal extern class ProxyClient_WeakPCL extends java.lang.ref.WeakReference<java.beans.PropertyChangeListener> implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(pce : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(pce : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -180,19 +180,19 @@ extern class ProxyClient implements com.sun.tools.jconsole.JConsoleContext
 	/**
 	* Flush all cached values of attributes.
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$ProxyClient$Snapshot') extern class ProxyClient_Snapshot
 {
-	@:overload public static function newSnapshot(mbsc : javax.management.MBeanServerConnection) : sun.tools.jconsole.ProxyClient.ProxyClient_SnapshotMBeanServerConnection;
+	@:overload @:public @:static public static function newSnapshot(mbsc : javax.management.MBeanServerConnection) : sun.tools.jconsole.ProxyClient.ProxyClient_SnapshotMBeanServerConnection;
 	
 	
 }
 @:native('sun$tools$jconsole$ProxyClient$SnapshotInvocationHandler') @:internal extern class ProxyClient_SnapshotInvocationHandler implements java.lang.reflect.InvocationHandler
 {
-	@:overload public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

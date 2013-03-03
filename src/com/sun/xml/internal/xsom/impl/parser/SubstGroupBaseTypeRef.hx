@@ -25,9 +25,9 @@ package com.sun.xml.internal.xsom.impl.parser;
 */
 extern class SubstGroupBaseTypeRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_Type
 {
-	@:overload public function new(_e : com.sun.xml.internal.xsom.impl.Ref.Ref_Element) : Void;
+	@:overload @:public public function new(_e : com.sun.xml.internal.xsom.impl.Ref.Ref_Element) : Void;
 	
-	@:overload public function getType() : com.sun.xml.internal.xsom.XSType;
+	@:overload @:public public function getType() : com.sun.xml.internal.xsom.XSType;
 	
 	
 }

@@ -34,7 +34,7 @@ extern class JarEntry extends java.util.zip.ZipEntry
 	* @exception IllegalArgumentException if the entry name is longer than
 	*            0xFFFF bytes.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a new <code>JarEntry</code> with fields taken from the
@@ -42,7 +42,7 @@ extern class JarEntry extends java.util.zip.ZipEntry
 	* @param ze the <code>ZipEntry</code> object to create the
 	*           <code>JarEntry</code> from
 	*/
-	@:overload public function new(ze : java.util.zip.ZipEntry) : Void;
+	@:overload @:public public function new(ze : java.util.zip.ZipEntry) : Void;
 	
 	/**
 	* Creates a new <code>JarEntry</code> with fields taken from the
@@ -50,7 +50,7 @@ extern class JarEntry extends java.util.zip.ZipEntry
 	*
 	* @param je the <code>JarEntry</code> to copy
 	*/
-	@:overload public function new(je : java.util.jar.JarEntry) : Void;
+	@:overload @:public public function new(je : java.util.jar.JarEntry) : Void;
 	
 	/**
 	* Returns the <code>Manifest</code> <code>Attributes</code> for this
@@ -59,7 +59,7 @@ extern class JarEntry extends java.util.zip.ZipEntry
 	* @return the <code>Manifest</code> <code>Attributes</code> for this
 	* entry, or <code>null</code> if none
 	*/
-	@:overload public function getAttributes() : java.util.jar.Attributes;
+	@:overload @:public public function getAttributes() : java.util.jar.Attributes;
 	
 	/**
 	* Returns the <code>Certificate</code> objects for this entry, or
@@ -78,7 +78,7 @@ extern class JarEntry extends java.util.zip.ZipEntry
 	* @return the <code>Certificate</code> objects for this entry, or
 	* <code>null</code> if none.
 	*/
-	@:overload public function getCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public public function getCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the <code>CodeSigner</code> objects for this entry, or
@@ -95,7 +95,7 @@ extern class JarEntry extends java.util.zip.ZipEntry
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getCodeSigners() : java.NativeArray<java.security.CodeSigner>;
+	@:require(java5) @:overload @:public public function getCodeSigners() : java.NativeArray<java.security.CodeSigner>;
 	
 	
 }

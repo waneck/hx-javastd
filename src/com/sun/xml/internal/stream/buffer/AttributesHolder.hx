@@ -31,55 +31,55 @@ extern class AttributesHolder implements org.xml.sax.Attributes
 	* Since it implements {@link Attributes}, this class follows the SAX convention
 	* of using "" instead of null.
 	*/
-	private static var DEFAULT_CAPACITY(default, null) : Int;
+	@:protected @:static @:final private static var DEFAULT_CAPACITY(default, null) : Int;
 	
-	private static var ITEM_SIZE(default, null) : Int;
+	@:protected @:static @:final private static var ITEM_SIZE(default, null) : Int;
 	
-	private static var PREFIX(default, null) : Int;
+	@:protected @:static @:final private static var PREFIX(default, null) : Int;
 	
-	private static var URI(default, null) : Int;
+	@:protected @:static @:final private static var URI(default, null) : Int;
 	
-	private static var LOCAL_NAME(default, null) : Int;
+	@:protected @:static @:final private static var LOCAL_NAME(default, null) : Int;
 	
-	private static var QNAME(default, null) : Int;
+	@:protected @:static @:final private static var QNAME(default, null) : Int;
 	
-	private static var TYPE(default, null) : Int;
+	@:protected @:static @:final private static var TYPE(default, null) : Int;
 	
-	private static var VALUE(default, null) : Int;
+	@:protected @:static @:final private static var VALUE(default, null) : Int;
 	
-	private var _attributeCount : Int;
+	@:protected private var _attributeCount : Int;
 	
-	private var _strings : java.NativeArray<String>;
+	@:protected private var _strings : java.NativeArray<String>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:final public function getLength() : Int;
+	@:overload @:public @:final public function getLength() : Int;
 	
-	@:overload @:final public function getPrefix(index : Int) : String;
+	@:overload @:public @:final public function getPrefix(index : Int) : String;
 	
-	@:overload @:final public function getLocalName(index : Int) : String;
+	@:overload @:public @:final public function getLocalName(index : Int) : String;
 	
-	@:overload @:final public function getQName(index : Int) : String;
+	@:overload @:public @:final public function getQName(index : Int) : String;
 	
-	@:overload @:final public function getType(index : Int) : String;
+	@:overload @:public @:final public function getType(index : Int) : String;
 	
-	@:overload @:final public function getURI(index : Int) : String;
+	@:overload @:public @:final public function getURI(index : Int) : String;
 	
-	@:overload @:final public function getValue(index : Int) : String;
+	@:overload @:public @:final public function getValue(index : Int) : String;
 	
-	@:overload @:final public function getIndex(qName : String) : Int;
+	@:overload @:public @:final public function getIndex(qName : String) : Int;
 	
-	@:overload @:final public function getType(qName : String) : String;
+	@:overload @:public @:final public function getType(qName : String) : String;
 	
-	@:overload @:final public function getValue(qName : String) : String;
+	@:overload @:public @:final public function getValue(qName : String) : String;
 	
-	@:overload @:final public function getIndex(uri : String, localName : String) : Int;
+	@:overload @:public @:final public function getIndex(uri : String, localName : String) : Int;
 	
-	@:overload @:final public function getType(uri : String, localName : String) : String;
+	@:overload @:public @:final public function getType(uri : String, localName : String) : String;
 	
-	@:overload @:final public function getValue(uri : String, localName : String) : String;
+	@:overload @:public @:final public function getValue(uri : String, localName : String) : String;
 	
-	@:overload @:final public function clear() : Void;
+	@:overload @:public @:final public function clear() : Void;
 	
 	/**
 	* Add an attribute using a qualified name that contains the
@@ -88,7 +88,7 @@ extern class AttributesHolder implements org.xml.sax.Attributes
 	* @param uri
 	*      This can be empty but not null, just like everywhere else in SAX.
 	*/
-	@:overload @:final public function addAttributeWithQName(uri : String, localName : String, qName : String, type : String, value : String) : Void;
+	@:overload @:public @:final public function addAttributeWithQName(uri : String, localName : String, qName : String, type : String, value : String) : Void;
 	
 	/**
 	* Add an attribute using a prefix.
@@ -98,7 +98,7 @@ extern class AttributesHolder implements org.xml.sax.Attributes
 	* @param uri
 	*      This can be empty but not null, just like everywhere else in SAX.
 	*/
-	@:overload @:final public function addAttributeWithPrefix(prefix : String, uri : String, localName : String, type : String, value : String) : Void;
+	@:overload @:public @:final public function addAttributeWithPrefix(prefix : String, uri : String, localName : String, type : String, value : String) : Void;
 	
 	
 }

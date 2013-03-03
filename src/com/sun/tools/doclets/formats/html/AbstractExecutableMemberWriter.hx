@@ -32,9 +32,9 @@ package com.sun.tools.doclets.formats.html;
 */
 extern class AbstractExecutableMemberWriter extends com.sun.tools.doclets.formats.html.AbstractMemberWriter
 {
-	@:overload public function new(writer : com.sun.tools.doclets.formats.html.SubWriterHolderWriter, classdoc : com.sun.javadoc.ClassDoc) : Void;
+	@:overload @:public public function new(writer : com.sun.tools.doclets.formats.html.SubWriterHolderWriter, classdoc : com.sun.javadoc.ClassDoc) : Void;
 	
-	@:overload public function new(writer : com.sun.tools.doclets.formats.html.SubWriterHolderWriter) : Void;
+	@:overload @:public public function new(writer : com.sun.tools.doclets.formats.html.SubWriterHolderWriter) : Void;
 	
 	/**
 	* Add the type parameters for the executable member.
@@ -43,12 +43,12 @@ extern class AbstractExecutableMemberWriter extends com.sun.tools.doclets.format
 	* @param htmltree the content tree to which the parameters will be added.
 	* @return the display length required to write this information.
 	*/
-	@:overload private function addTypeParameters(member : com.sun.javadoc.ExecutableMemberDoc, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Int;
+	@:overload @:protected private function addTypeParameters(member : com.sun.javadoc.ExecutableMemberDoc, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload private function getDeprecatedLink(member : com.sun.javadoc.ProgramElementDoc) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getDeprecatedLink(member : com.sun.javadoc.ProgramElementDoc) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add the summary link for the member.
@@ -58,7 +58,7 @@ extern class AbstractExecutableMemberWriter extends com.sun.tools.doclets.format
 	* @param member the member being linked to
 	* @param tdSummary the content tree to which the link will be added
 	*/
-	@:overload private function addSummaryLink(context : Int, cd : com.sun.javadoc.ClassDoc, member : com.sun.javadoc.ProgramElementDoc, tdSummary : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected override private function addSummaryLink(context : Int, cd : com.sun.javadoc.ClassDoc, member : com.sun.javadoc.ProgramElementDoc, tdSummary : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the inherited summary link for the member.
@@ -67,7 +67,7 @@ extern class AbstractExecutableMemberWriter extends com.sun.tools.doclets.format
 	* @param member the member being linked to
 	* @param linksTree the content tree to which the link will be added
 	*/
-	@:overload private function addInheritedSummaryLink(cd : com.sun.javadoc.ClassDoc, member : com.sun.javadoc.ProgramElementDoc, linksTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected override private function addInheritedSummaryLink(cd : com.sun.javadoc.ClassDoc, member : com.sun.javadoc.ProgramElementDoc, linksTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the parameter for the executable member.
@@ -77,7 +77,7 @@ extern class AbstractExecutableMemberWriter extends com.sun.tools.doclets.format
 	* @param isVarArg true if this is a link to var arg.
 	* @param tree the content tree to which the parameter information will be added.
 	*/
-	@:overload private function addParam(member : com.sun.javadoc.ExecutableMemberDoc, param : com.sun.javadoc.Parameter, isVarArg : Bool, tree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addParam(member : com.sun.javadoc.ExecutableMemberDoc, param : com.sun.javadoc.Parameter, isVarArg : Bool, tree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add all the parameters for the executable member.
@@ -85,7 +85,7 @@ extern class AbstractExecutableMemberWriter extends com.sun.tools.doclets.format
 	* @param member the member to write parameters for.
 	* @param tree the content tree to which the parameters information will be added.
 	*/
-	@:overload private function addParameters(member : com.sun.javadoc.ExecutableMemberDoc, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addParameters(member : com.sun.javadoc.ExecutableMemberDoc, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add all the parameters for the executable member.
@@ -94,7 +94,7 @@ extern class AbstractExecutableMemberWriter extends com.sun.tools.doclets.format
 	* @param includeAnnotations true if annotation information needs to be added.
 	* @param tree the content tree to which the parameters information will be added.
 	*/
-	@:overload private function addParameters(member : com.sun.javadoc.ExecutableMemberDoc, includeAnnotations : Bool, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addParameters(member : com.sun.javadoc.ExecutableMemberDoc, includeAnnotations : Bool, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add exceptions for the executable member.
@@ -102,11 +102,11 @@ extern class AbstractExecutableMemberWriter extends com.sun.tools.doclets.format
 	* @param member the member to write exceptions for.
 	* @param htmltree the content tree to which the exceptions information will be added.
 	*/
-	@:overload private function addExceptions(member : com.sun.javadoc.ExecutableMemberDoc, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addExceptions(member : com.sun.javadoc.ExecutableMemberDoc, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
-	@:overload private function getReturnTypeLength(member : com.sun.javadoc.ExecutableMemberDoc) : Int;
+	@:overload @:protected private function getReturnTypeLength(member : com.sun.javadoc.ExecutableMemberDoc) : Int;
 	
-	@:overload private function implementsMethodInIntfac(method : com.sun.javadoc.MethodDoc, intfacs : java.NativeArray<com.sun.javadoc.ClassDoc>) : com.sun.javadoc.ClassDoc;
+	@:overload @:protected private function implementsMethodInIntfac(method : com.sun.javadoc.MethodDoc, intfacs : java.NativeArray<com.sun.javadoc.ClassDoc>) : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* For backward compatibility, include an anchor using the erasures of the
@@ -116,7 +116,7 @@ extern class AbstractExecutableMemberWriter extends com.sun.tools.doclets.format
 	* @param emd the ExecutableMemberDoc to anchor to.
 	* @return the 1.4.x style anchor for the ExecutableMemberDoc.
 	*/
-	@:overload private function getErasureAnchor(emd : com.sun.javadoc.ExecutableMemberDoc) : String;
+	@:overload @:protected private function getErasureAnchor(emd : com.sun.javadoc.ExecutableMemberDoc) : String;
 	
 	
 }

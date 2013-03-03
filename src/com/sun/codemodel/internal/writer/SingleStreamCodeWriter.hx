@@ -29,11 +29,11 @@ extern class SingleStreamCodeWriter extends com.sun.codemodel.internal.CodeWrite
 	* @param os
 	*      This stream will be closed at the end of the code generation.
 	*/
-	@:overload public function new(os : java.io.OutputStream) : Void;
+	@:overload @:public public function new(os : java.io.OutputStream) : Void;
 	
-	@:overload public function openBinary(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.OutputStream;
+	@:overload @:public override public function openBinary(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.OutputStream;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

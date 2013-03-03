@@ -42,95 +42,95 @@ package org.ietf.jgss;
 	/**
 	* Channel bindings mismatch.
 	*/
-	public static var BAD_BINDINGS(default, null) : Int;
+	@:public @:static @:final public static var BAD_BINDINGS(default, null) : Int;
 	
 	/**
 	* Unsupported mechanism requested.
 	*/
-	public static var BAD_MECH(default, null) : Int;
+	@:public @:static @:final public static var BAD_MECH(default, null) : Int;
 	
 	/**
 	* Invalid name provided.
 	*/
-	public static var BAD_NAME(default, null) : Int;
+	@:public @:static @:final public static var BAD_NAME(default, null) : Int;
 	
 	/**
 	* Name of unsupported type provided.
 	*/
-	public static var BAD_NAMETYPE(default, null) : Int;
+	@:public @:static @:final public static var BAD_NAMETYPE(default, null) : Int;
 	
 	/*
 	* This is meant to be thrown by display_status which displays
 	* major/minor status when an incorrect status type is passed in to it!
 	*/
-	public static var BAD_STATUS(default, null) : Int;
+	@:public @:static @:final public static var BAD_STATUS(default, null) : Int;
 	
 	/**
 	* Token had invalid integrity check.
 	*/
-	public static var BAD_MIC(default, null) : Int;
+	@:public @:static @:final public static var BAD_MIC(default, null) : Int;
 	
 	/**
 	* Security context expired.
 	*/
-	public static var CONTEXT_EXPIRED(default, null) : Int;
+	@:public @:static @:final public static var CONTEXT_EXPIRED(default, null) : Int;
 	
 	/**
 	* Expired credentials.
 	*/
-	public static var CREDENTIALS_EXPIRED(default, null) : Int;
+	@:public @:static @:final public static var CREDENTIALS_EXPIRED(default, null) : Int;
 	
 	/**
 	* Defective credentials.
 	*
 	*/
-	public static var DEFECTIVE_CREDENTIAL(default, null) : Int;
+	@:public @:static @:final public static var DEFECTIVE_CREDENTIAL(default, null) : Int;
 	
 	/**
 	* Defective token.
 	*
 	*/
-	public static var DEFECTIVE_TOKEN(default, null) : Int;
+	@:public @:static @:final public static var DEFECTIVE_TOKEN(default, null) : Int;
 	
 	/**
 	* General failure, unspecified at GSS-API level.
 	*/
-	public static var FAILURE(default, null) : Int;
+	@:public @:static @:final public static var FAILURE(default, null) : Int;
 	
 	/**
 	* Invalid security context.
 	*/
-	public static var NO_CONTEXT(default, null) : Int;
+	@:public @:static @:final public static var NO_CONTEXT(default, null) : Int;
 	
 	/**
 	* Invalid credentials.
 	*/
-	public static var NO_CRED(default, null) : Int;
+	@:public @:static @:final public static var NO_CRED(default, null) : Int;
 	
 	/**
 	* Unsupported QOP value.
 	*/
-	public static var BAD_QOP(default, null) : Int;
+	@:public @:static @:final public static var BAD_QOP(default, null) : Int;
 	
 	/**
 	* Operation unauthorized.
 	*/
-	public static var UNAUTHORIZED(default, null) : Int;
+	@:public @:static @:final public static var UNAUTHORIZED(default, null) : Int;
 	
 	/**
 	* Operation unavailable.
 	*/
-	public static var UNAVAILABLE(default, null) : Int;
+	@:public @:static @:final public static var UNAVAILABLE(default, null) : Int;
 	
 	/**
 	* Duplicate credential element requested.
 	*/
-	public static var DUPLICATE_ELEMENT(default, null) : Int;
+	@:public @:static @:final public static var DUPLICATE_ELEMENT(default, null) : Int;
 	
 	/**
 	* Name contains multi-mechanism elements.
 	*/
-	public static var NAME_NOT_MN(default, null) : Int;
+	@:public @:static @:final public static var NAME_NOT_MN(default, null) : Int;
 	
 	/**
 	* The token was a duplicate of an earlier token.
@@ -139,7 +139,7 @@ package org.ietf.jgss;
 	* supplementary status values. The MessageProp object is
 	* used for that purpose.
 	*/
-	public static var DUPLICATE_TOKEN(default, null) : Int;
+	@:public @:static @:final public static var DUPLICATE_TOKEN(default, null) : Int;
 	
 	/**
 	* The token's validity period has expired.  This is a
@@ -147,7 +147,7 @@ package org.ietf.jgss;
 	* It is not used to indicate supplementary status values.
 	* The MessageProp object is used for that purpose.
 	*/
-	public static var OLD_TOKEN(default, null) : Int;
+	@:public @:static @:final public static var OLD_TOKEN(default, null) : Int;
 	
 	/**
 	* A later token has already been processed.  This is a
@@ -155,7 +155,7 @@ package org.ietf.jgss;
 	* It is not used to indicate supplementary status values.
 	* The MessageProp object is used for that purpose.
 	*/
-	public static var UNSEQ_TOKEN(default, null) : Int;
+	@:public @:static @:final public static var UNSEQ_TOKEN(default, null) : Int;
 	
 	/**
 	* An expected per-message token was not received.  This is a
@@ -163,7 +163,7 @@ package org.ietf.jgss;
 	* It is not used to indicate supplementary status values.
 	* The MessageProp object is used for that purpose.
 	*/
-	public static var GAP_TOKEN(default, null) : Int;
+	@:public @:static @:final public static var GAP_TOKEN(default, null) : Int;
 	
 	/**
 	*  Creates a GSSException object with a specified major code.
@@ -171,7 +171,7 @@ package org.ietf.jgss;
 	* @param majorCode the The GSS error code for the problem causing this
 	* exception to be thrown.
 	*/
-	@:overload public function new(majorCode : Int) : Void;
+	@:overload @:public public function new(majorCode : Int) : Void;
 	
 	/**
 	* Creates a GSSException object with the specified major code, minor
@@ -187,7 +187,7 @@ package org.ietf.jgss;
 	* @param minorString the textual explanation of the mechanism error
 	* code.
 	*/
-	@:overload public function new(majorCode : Int, minorCode : Int, minorString : String) : Void;
+	@:overload @:public public function new(majorCode : Int, minorCode : Int, minorString : String) : Void;
 	
 	/**
 	* Returns the GSS-API level major error code for the problem causing
@@ -201,7 +201,7 @@ package org.ietf.jgss;
 	* @see #getMinor
 	* @see #getMinorString
 	*/
-	@:overload public function getMajor() : Int;
+	@:overload @:public public function getMajor() : Int;
 	
 	/**
 	* Returns the mechanism level error code for the problem causing this
@@ -213,7 +213,7 @@ package org.ietf.jgss;
 	* @see #getMinorString
 	* @see #setMinor
 	*/
-	@:overload public function getMinor() : Int;
+	@:overload @:public public function getMinor() : Int;
 	
 	/**
 	* Returns a string explaining the GSS-API level major error code in
@@ -223,7 +223,7 @@ package org.ietf.jgss;
 	* @see #getMajor
 	* @see #toString
 	*/
-	@:overload public function getMajorString() : String;
+	@:overload @:public public function getMajorString() : String;
 	
 	/**
 	* Returns a string explaining the mechanism specific error code.
@@ -235,7 +235,7 @@ package org.ietf.jgss;
 	* @see #getMajorString
 	* @see #toString
 	*/
-	@:overload public function getMinorString() : String;
+	@:overload @:public public function getMinorString() : String;
 	
 	/**
 	* Used by the exception thrower to set the mechanism
@@ -246,7 +246,7 @@ package org.ietf.jgss;
 	* @param message textual explanation of the mechanism error code
 	* @see #getMinor
 	*/
-	@:overload public function setMinor(minorCode : Int, message : String) : Void;
+	@:overload @:public public function setMinor(minorCode : Int, message : String) : Void;
 	
 	/**
 	* Returns a textual representation of both the major and the minor
@@ -254,7 +254,7 @@ package org.ietf.jgss;
 	*
 	* @return a String with the error descriptions
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Returns a textual representation of both the major and the minor
@@ -262,7 +262,7 @@ package org.ietf.jgss;
 	*
 	* @return a String with the error descriptions
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

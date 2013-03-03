@@ -54,7 +54,7 @@ extern class CachedPainter
 	*
 	* @param cacheCount Max number of images to cache
 	*/
-	@:overload public function new(cacheCount : Int) : Void;
+	@:overload @:public public function new(cacheCount : Int) : Void;
 	
 	/**
 	* Renders the cached image to the the passed in <code>Graphic</code>.
@@ -69,7 +69,7 @@ extern class CachedPainter
 	* @param h Height to render in
 	* @param arg Variable arguments that will be passed to paintToImage
 	*/
-	@:overload public function paint(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function paint(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Paints the representation to cache to the supplied Graphics.
@@ -81,7 +81,7 @@ extern class CachedPainter
 	* @param h Height to paint to
 	* @param args Arguments supplied to <code>paint</code>
 	*/
-	@:overload @:abstract private function paintToImage(c : java.awt.Component, image : java.awt.Image, g : java.awt.Graphics, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected @:abstract private function paintToImage(c : java.awt.Component, image : java.awt.Image, g : java.awt.Graphics, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Paints the image to the specified location.
@@ -95,7 +95,7 @@ extern class CachedPainter
 	* @param image Image to paint
 	* @param args Arguments supplied to <code>paint</code>
 	*/
-	@:overload private function paintImage(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, image : java.awt.Image, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected private function paintImage(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, image : java.awt.Image, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Creates the image to cache.  This returns an opaque image, subclasses
@@ -109,12 +109,12 @@ extern class CachedPainter
 	*        rendered to, this may be null.
 	* @param args Arguments passed to paint
 	*/
-	@:overload private function createImage(c : java.awt.Component, w : Int, h : Int, config : java.awt.GraphicsConfiguration, args : java.NativeArray<Dynamic>) : java.awt.Image;
+	@:overload @:protected private function createImage(c : java.awt.Component, w : Int, h : Int, config : java.awt.GraphicsConfiguration, args : java.NativeArray<Dynamic>) : java.awt.Image;
 	
 	/**
 	* Clear the image cache
 	*/
-	@:overload private function flush() : Void;
+	@:overload @:protected private function flush() : Void;
 	
 	
 }

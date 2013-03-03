@@ -92,14 +92,14 @@ package javax.swing;
 	/**
 	* Creates a <code>RowSorter</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the underlying model.
 	*
 	* @return the underlying model
 	*/
-	@:overload @:abstract public function getModel() : M;
+	@:overload @:public @:abstract public function getModel() : M;
 	
 	/**
 	* Reverses the sort order of the specified column.  It is up to
@@ -120,7 +120,7 @@ package javax.swing;
 	* @throws IndexOutOfBoundsException if column is outside the range of
 	*         the underlying model
 	*/
-	@:overload @:abstract public function toggleSortOrder(column : Int) : Void;
+	@:overload @:public @:abstract public function toggleSortOrder(column : Int) : Void;
 	
 	/**
 	* Returns the location of <code>index</code> in terms of the
@@ -133,7 +133,7 @@ package javax.swing;
 	* @throws IndexOutOfBoundsException if <code>index</code> is outside the
 	*         range of the view
 	*/
-	@:overload @:abstract public function convertRowIndexToModel(index : Int) : Int;
+	@:overload @:public @:abstract public function convertRowIndexToModel(index : Int) : Int;
 	
 	/**
 	* Returns the location of <code>index</code> in terms of the
@@ -147,7 +147,7 @@ package javax.swing;
 	* @throws IndexOutOfBoundsException if <code>index</code> is outside
 	*         the range of the model
 	*/
-	@:overload @:abstract public function convertRowIndexToView(index : Int) : Int;
+	@:overload @:public @:abstract public function convertRowIndexToView(index : Int) : Int;
 	
 	/**
 	* Sets the current sort keys.
@@ -156,7 +156,7 @@ package javax.swing;
 	*        is a shorthand for specifying an empty list,
 	*        indicating that the view should be unsorted
 	*/
-	@:overload @:abstract public function setSortKeys(keys : java.util.List<javax.swing.RowSorter.RowSorter_SortKey>) : Void;
+	@:overload @:public @:abstract public function setSortKeys(keys : java.util.List<javax.swing.RowSorter.RowSorter_SortKey>) : Void;
 	
 	/**
 	* Returns the current sort keys.  This must return a {@code
@@ -167,7 +167,7 @@ package javax.swing;
 	*
 	* @return the current sort order
 	*/
-	@:overload @:abstract public function getSortKeys() : java.util.List<javax.swing.RowSorter.RowSorter_SortKey>;
+	@:overload @:public @:abstract public function getSortKeys() : java.util.List<javax.swing.RowSorter.RowSorter_SortKey>;
 	
 	/**
 	* Returns the number of rows in the view.  If the contents have
@@ -177,7 +177,7 @@ package javax.swing;
 	* @return number of rows in the view
 	* @see #getModelRowCount
 	*/
-	@:overload @:abstract public function getViewRowCount() : Int;
+	@:overload @:public @:abstract public function getViewRowCount() : Int;
 	
 	/**
 	* Returns the number of rows in the underlying model.
@@ -185,7 +185,7 @@ package javax.swing;
 	* @return number of rows in the underlying model
 	* @see #getViewRowCount
 	*/
-	@:overload @:abstract public function getModelRowCount() : Int;
+	@:overload @:public @:abstract public function getModelRowCount() : Int;
 	
 	/**
 	* Invoked when the underlying model structure has completely
@@ -195,7 +195,7 @@ package javax.swing;
 	* You normally do not call this method.  This method is public
 	* to allow view classes to call it.
 	*/
-	@:overload @:abstract public function modelStructureChanged() : Void;
+	@:overload @:public @:abstract public function modelStructureChanged() : Void;
 	
 	/**
 	* Invoked when the contents of the underlying model have
@@ -207,7 +207,7 @@ package javax.swing;
 	* You normally do not call this method.  This method is public
 	* to allow view classes to call it.
 	*/
-	@:overload @:abstract public function allRowsChanged() : Void;
+	@:overload @:public @:abstract public function allRowsChanged() : Void;
 	
 	/**
 	* Invoked when rows have been inserted into the underlying model
@@ -229,7 +229,7 @@ package javax.swing;
 	* @throws IndexOutOfBoundsException if either argument is invalid, or
 	*         <code>firstRow</code> &gt; <code>endRow</code>
 	*/
-	@:overload @:abstract public function rowsInserted(firstRow : Int, endRow : Int) : Void;
+	@:overload @:public @:abstract public function rowsInserted(firstRow : Int, endRow : Int) : Void;
 	
 	/**
 	* Invoked when rows have been deleted from the underlying model
@@ -249,7 +249,7 @@ package javax.swing;
 	*         the range of the model before the change, or
 	*         <code>firstRow</code> &gt; <code>endRow</code>
 	*/
-	@:overload @:abstract public function rowsDeleted(firstRow : Int, endRow : Int) : Void;
+	@:overload @:public @:abstract public function rowsDeleted(firstRow : Int, endRow : Int) : Void;
 	
 	/**
 	* Invoked when rows have been changed in the underlying model
@@ -264,7 +264,7 @@ package javax.swing;
 	*         the range of the underlying model, or
 	*         <code>firstRow</code> &gt; <code>endRow</code>
 	*/
-	@:overload @:abstract public function rowsUpdated(firstRow : Int, endRow : Int) : Void;
+	@:overload @:public @:abstract public function rowsUpdated(firstRow : Int, endRow : Int) : Void;
 	
 	/**
 	* Invoked when the column in the rows have been updated in
@@ -283,7 +283,7 @@ package javax.swing;
 	*         <code>column</code> is outside the range of the underlying
 	*          model
 	*/
-	@:overload @:abstract public function rowsUpdated(firstRow : Int, endRow : Int, column : Int) : Void;
+	@:overload @:public @:abstract public function rowsUpdated(firstRow : Int, endRow : Int, column : Int) : Void;
 	
 	/**
 	* Adds a <code>RowSorterListener</code> to receive notification
@@ -294,7 +294,7 @@ package javax.swing;
 	*
 	* @param l the <code>RowSorterListener</code>
 	*/
-	@:overload public function addRowSorterListener(l : javax.swing.event.RowSorterListener) : Void;
+	@:overload @:public public function addRowSorterListener(l : javax.swing.event.RowSorterListener) : Void;
 	
 	/**
 	* Removes a <code>RowSorterListener</code>.  If
@@ -302,12 +302,12 @@ package javax.swing;
 	*
 	* @param l the <code>RowSorterListener</code>
 	*/
-	@:overload public function removeRowSorterListener(l : javax.swing.event.RowSorterListener) : Void;
+	@:overload @:public public function removeRowSorterListener(l : javax.swing.event.RowSorterListener) : Void;
 	
 	/**
 	* Notifies listener that the sort order has changed.
 	*/
-	@:overload private function fireSortOrderChanged() : Void;
+	@:overload @:protected private function fireSortOrderChanged() : Void;
 	
 	/**
 	* Notifies listener that the mapping has changed.
@@ -315,7 +315,7 @@ package javax.swing;
 	* @param lastRowIndexToModel the mapping from model indices to
 	*        view indices prior to the sort, may be <code>null</code>
 	*/
-	@:overload private function fireRowSorterChanged(lastRowIndexToModel : java.NativeArray<Int>) : Void;
+	@:overload @:protected private function fireRowSorterChanged(lastRowIndexToModel : java.NativeArray<Int>) : Void;
 	
 	
 }
@@ -337,28 +337,28 @@ package javax.swing;
 	* @throws IllegalArgumentException if <code>sortOrder</code> is
 	*         <code>null</code>
 	*/
-	@:overload public function new(column : Int, sortOrder : javax.swing.SortOrder) : Void;
+	@:overload @:public public function new(column : Int, sortOrder : javax.swing.SortOrder) : Void;
 	
 	/**
 	* Returns the index of the column.
 	*
 	* @return index of column
 	*/
-	@:overload @:final public function getColumn() : Int;
+	@:overload @:public @:final public function getColumn() : Int;
 	
 	/**
 	* Returns the sort order of the column.
 	*
 	* @return the sort order of the column
 	*/
-	@:overload @:final public function getSortOrder() : javax.swing.SortOrder;
+	@:overload @:public @:final public function getSortOrder() : javax.swing.SortOrder;
 	
 	/**
 	* Returns the hash code for this <code>SortKey</code>.
 	*
 	* @return hash code
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns true if this object equals the specified object.
@@ -369,7 +369,7 @@ package javax.swing;
 	* @param o the object to compare to
 	* @return true if <code>o</code> is equal to this <code>SortKey</code>
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }

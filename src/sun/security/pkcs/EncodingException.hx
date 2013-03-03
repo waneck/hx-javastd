@@ -30,9 +30,9 @@ package sun.security.pkcs;
 */
 extern class EncodingException extends java.lang.Exception
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

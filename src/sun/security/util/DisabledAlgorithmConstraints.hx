@@ -31,9 +31,9 @@ extern class DisabledAlgorithmConstraints implements java.security.AlgorithmCons
 	* See the "jdk.certpath.disabledAlgorithms" specification in java.security
 	* for the syntax of the disabled algorithm string.
 	*/
-	public static var PROPERTY_CERTPATH_DISABLED_ALGS(default, null) : String;
+	@:public @:final @:static public static var PROPERTY_CERTPATH_DISABLED_ALGS(default, null) : String;
 	
-	public static var PROPERTY_TLS_DISABLED_ALGS(default, null) : String;
+	@:public @:final @:static public static var PROPERTY_TLS_DISABLED_ALGS(default, null) : String;
 	
 	/**
 	* Initialize algorithm constraints with the specified security property.
@@ -41,13 +41,13 @@ extern class DisabledAlgorithmConstraints implements java.security.AlgorithmCons
 	* @param propertyName the security property name that define the disabled
 	*        algorithm constraints
 	*/
-	@:overload public function new(propertyName : String) : Void;
+	@:overload @:public public function new(propertyName : String) : Void;
 	
-	@:overload @:final public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, algorithm : String, parameters : java.security.AlgorithmParameters) : Bool;
+	@:overload @:final @:public public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, algorithm : String, parameters : java.security.AlgorithmParameters) : Bool;
 	
-	@:overload @:final public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, key : java.security.Key) : Bool;
+	@:overload @:final @:public public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, key : java.security.Key) : Bool;
 	
-	@:overload @:final public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, algorithm : String, key : java.security.Key, parameters : java.security.AlgorithmParameters) : Bool;
+	@:overload @:final @:public public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, algorithm : String, key : java.security.Key, parameters : java.security.AlgorithmParameters) : Bool;
 	
 	/**
 	* Decompose the standard algorithm name into sub-elements.
@@ -58,7 +58,7 @@ extern class DisabledAlgorithmConstraints implements java.security.AlgorithmCons
 	* <p>
 	* Please override the method if need to support more name pattern.
 	*/
-	@:overload private function decomposes(algorithm : String) : java.util.Set<String>;
+	@:overload @:protected private function decomposes(algorithm : String) : java.util.Set<String>;
 	
 	
 }
@@ -67,9 +67,9 @@ extern class DisabledAlgorithmConstraints implements java.security.AlgorithmCons
 */
 @:native('sun$security$util$DisabledAlgorithmConstraints$KeySizeConstraints') @:internal extern class DisabledAlgorithmConstraints_KeySizeConstraints
 {
-	@:overload public function new(restrictions : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(restrictions : java.NativeArray<String>) : Void;
 	
-	@:overload public function disables(key : java.security.Key) : Bool;
+	@:overload @:public public function disables(key : java.security.Key) : Bool;
 	
 	
 }
@@ -80,9 +80,9 @@ extern class DisabledAlgorithmConstraints implements java.security.AlgorithmCons
 */
 @:native('sun$security$util$DisabledAlgorithmConstraints$KeySizeConstraint') @:internal extern class DisabledAlgorithmConstraints_KeySizeConstraint
 {
-	@:overload public function new(operator : sun.security.util.DisabledAlgorithmConstraints.DisabledAlgorithmConstraints_KeySizeConstraint_Operator, length : Int) : Void;
+	@:overload @:public public function new(operator : sun.security.util.DisabledAlgorithmConstraints.DisabledAlgorithmConstraints_KeySizeConstraint_Operator, length : Int) : Void;
 	
-	@:overload public function disables(key : java.security.Key) : Bool;
+	@:overload @:public public function disables(key : java.security.Key) : Bool;
 	
 	
 }

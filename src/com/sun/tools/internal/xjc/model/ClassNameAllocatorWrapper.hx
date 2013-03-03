@@ -25,11 +25,11 @@ package com.sun.tools.internal.xjc.model;
 */
 @:internal extern class ClassNameAllocatorWrapper implements com.sun.tools.internal.xjc.api.ClassNameAllocator
 {
-	@:overload public function assignClassName(packageName : String, className : String) : String;
+	@:overload @:public public function assignClassName(packageName : String, className : String) : String;
 	
-	@:overload public function assignClassName(pkg : com.sun.codemodel.internal.JPackage, className : String) : String;
+	@:overload @:public public function assignClassName(pkg : com.sun.codemodel.internal.JPackage, className : String) : String;
 	
-	@:overload public function assignClassName(parent : com.sun.tools.internal.xjc.model.CClassInfoParent, className : String) : String;
+	@:overload @:public public function assignClassName(parent : com.sun.tools.internal.xjc.model.CClassInfoParent, className : String) : String;
 	
 	
 }

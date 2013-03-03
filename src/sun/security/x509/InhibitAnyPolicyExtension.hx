@@ -29,19 +29,19 @@ extern class InhibitAnyPolicyExtension extends java.security.cert.Extension impl
 	* Identifier for this attribute, to be used with the
 	* get, set, delete methods of Certificate, x509 type.
 	*/
-	public static var IDENT(default, null) : String;
+	@:public @:static @:final public static var IDENT(default, null) : String;
 	
 	/**
 	* Object identifier for "any-policy"
 	*/
-	public static var AnyPolicy_Id : sun.security.util.ObjectIdentifier;
+	@:public @:static public static var AnyPolicy_Id : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Attribute names.
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
-	public static var SKIP_CERTS(default, null) : String;
+	@:public @:static @:final public static var SKIP_CERTS(default, null) : String;
 	
 	/**
 	* Default constructor for this object.
@@ -49,7 +49,7 @@ extern class InhibitAnyPolicyExtension extends java.security.cert.Extension impl
 	* @param skipCerts specifies the depth of the certification path.
 	*                  Use value of -1 to request unlimited depth.
 	*/
-	@:overload public function new(skipCerts : Int) : Void;
+	@:overload @:public public function new(skipCerts : Int) : Void;
 	
 	/**
 	* Create the extension from the passed DER encoded value of the same.
@@ -60,19 +60,19 @@ extern class InhibitAnyPolicyExtension extends java.security.cert.Extension impl
 	* @exception ClassCastException if value is not an array of bytes
 	* @exception IOException on error.
 	*/
-	@:overload public function new(critical : Null<Bool>, value : Dynamic) : Void;
+	@:overload @:public public function new(critical : Null<Bool>, value : Dynamic) : Void;
 	
 	/**
 	* Return user readable form of extension.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Encode this extension value to the output stream.
 	*
 	* @param out the DerOutputStream to encode the extension to.
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public override public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Set the attribute value.
@@ -82,7 +82,7 @@ extern class InhibitAnyPolicyExtension extends java.security.cert.Extension impl
 	*             type.
 	* @throws IOException on error
 	*/
-	@:overload public function set(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function set(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Get the attribute value.
@@ -92,7 +92,7 @@ extern class InhibitAnyPolicyExtension extends java.security.cert.Extension impl
 	*          Integer.
 	* @throws IOException on error
 	*/
-	@:overload public function get(name : String) : Dynamic;
+	@:overload @:public public function get(name : String) : Dynamic;
 	
 	/**
 	* Delete the attribute value.
@@ -102,7 +102,7 @@ extern class InhibitAnyPolicyExtension extends java.security.cert.Extension impl
 	*                     thrown, because the only attribute, SKIP_CERTS, is
 	*                     required.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this
@@ -110,14 +110,14 @@ extern class InhibitAnyPolicyExtension extends java.security.cert.Extension impl
 	*
 	* @returns enumeration of elements
 	*/
-	@:overload public function getElements() : java.util.Enumeration<String>;
+	@:overload @:public public function getElements() : java.util.Enumeration<String>;
 	
 	/**
 	* Return the name of this attribute.
 	*
 	* @returns name of attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

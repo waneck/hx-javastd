@@ -41,13 +41,13 @@ extern class AttributeEntry extends com.sun.tools.corba.se.idl.MethodEntry
 	* two methods with no exceptions or contexts:  a get method and, if not
 	* readOnly, a set method.
 	**/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.AttributeEntry) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.AttributeEntry) : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.InterfaceEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.InterfaceEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/** Invoke the attribute generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -55,20 +55,20 @@ extern class AttributeEntry extends com.sun.tools.corba.se.idl.MethodEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload @:public override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the attribute generator.
 	@returns an object which implements the AttributeGen interface.
 	@see AttributeGen */
-	@:overload override public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload @:public override public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	/** if true, only a get method will be generated. */
-	@:overload public function readOnly() : Bool;
+	@:overload @:public public function readOnly() : Bool;
 	
 	/** if true, only a get method will be generated. */
-	@:overload public function readOnly(readOnly : Bool) : Void;
+	@:overload @:public public function readOnly(readOnly : Bool) : Void;
 	
-	public var _readOnly : Bool;
+	@:public public var _readOnly : Bool;
 	
 	
 }

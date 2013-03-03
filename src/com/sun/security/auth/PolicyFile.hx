@@ -29,7 +29,7 @@ extern class PolicyFile extends javax.security.auth.Policy
 	* Initializes the Policy object and reads the default policy
 	* configuration file(s) into the Policy object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Refreshes the policy object by re-reading all the policy files.
@@ -39,7 +39,7 @@ extern class PolicyFile extends javax.security.auth.Policy
 	* @exception SecurityException if the caller doesn't have permission
 	*          to refresh the <code>Policy</code>.
 	*/
-	@:overload @:synchronized override public function refresh() : Void;
+	@:overload @:public @:synchronized override public function refresh() : Void;
 	
 	/**
 	* Examines this <code>Policy</code> and returns the Permissions granted
@@ -96,7 +96,7 @@ extern class PolicyFile extends javax.security.auth.Policy
 	* @return the Permissions granted to the provided <code>Subject</code>
 	*          <code>CodeSource</code>.
 	*/
-	@:overload override public function getPermissions(subject : javax.security.auth.Subject, codesource : java.security.CodeSource) : java.security.PermissionCollection;
+	@:overload @:public override public function getPermissions(subject : javax.security.auth.Subject, codesource : java.security.CodeSource) : java.security.PermissionCollection;
 	
 	
 }
@@ -146,19 +146,19 @@ extern class PolicyFile extends javax.security.auth.Policy
 */
 @:native('com$sun$security$auth$PolicyFile$PolicyEntry') @:internal extern class PolicyFile_PolicyEntry
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:internal extern class PolicyPermissions extends java.security.PermissionCollection
 {
-	@:overload public function add(permission : java.security.Permission) : Void;
+	@:overload @:public override public function add(permission : java.security.Permission) : Void;
 	
-	@:overload public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(permission : java.security.Permission) : Bool;
 	
-	@:overload public function elements() : java.util.Enumeration<java.security.Permission>;
+	@:overload @:public override public function elements() : java.util.Enumeration<java.security.Permission>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

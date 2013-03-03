@@ -21,23 +21,23 @@ package com.sun.org.apache.xerces.internal.parsers;
 extern class IntegratedParserConfiguration extends com.sun.org.apache.xerces.internal.parsers.StandardParserConfiguration
 {
 	/** Document scanner that does namespace binding. */
-	private var fNamespaceScanner : com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl;
+	@:protected private var fNamespaceScanner : com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl;
 	
 	/** Default Xerces implementation of scanner */
-	private var fNonNSScanner : com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl;
+	@:protected private var fNonNSScanner : com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl;
 	
 	/** DTD Validator that does not bind namespaces */
-	private var fNonNSDTDValidator : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator;
+	@:protected private var fNonNSDTDValidator : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table.
 	*
 	* @param symbolTable The symbol table to use.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table and
@@ -50,7 +50,7 @@ extern class IntegratedParserConfiguration extends com.sun.org.apache.xerces.int
 	* @param symbolTable The symbol table to use.
 	* @param grammarPool The grammar pool to use.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table,
@@ -64,18 +64,18 @@ extern class IntegratedParserConfiguration extends com.sun.org.apache.xerces.int
 	* @param grammarPool    The grammar pool to use.
 	* @param parentSettings The parent settings.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool, parentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool, parentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/** Configures the pipeline. */
-	@:overload private function configurePipeline() : Void;
+	@:overload @:protected override private function configurePipeline() : Void;
 	
 	/** Create a document scanner: this scanner performs namespace binding
 	*/
-	@:overload private function createDocumentScanner() : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentScanner;
+	@:overload @:protected override private function createDocumentScanner() : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentScanner;
 	
 	/** Create a DTD validator: this validator performs namespace binding.
 	*/
-	@:overload private function createDTDValidator() : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator;
+	@:overload @:protected override private function createDTDValidator() : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator;
 	
 	
 }

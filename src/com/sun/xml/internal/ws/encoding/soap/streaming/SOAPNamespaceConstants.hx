@@ -28,35 +28,35 @@ package com.sun.xml.internal.ws.encoding.soap.streaming;
 */
 extern class SOAPNamespaceConstants
 {
-	public static var NSPREFIX_SOAP_ENVELOPE(default, null) : String;
+	@:public @:static @:final public static var NSPREFIX_SOAP_ENVELOPE(default, null) : String;
 	
-	public static var ENVELOPE(default, null) : String;
+	@:public @:static @:final public static var ENVELOPE(default, null) : String;
 	
-	public static var ENCODING(default, null) : String;
+	@:public @:static @:final public static var ENCODING(default, null) : String;
 	
-	public static var XSD(default, null) : String;
+	@:public @:static @:final public static var XSD(default, null) : String;
 	
-	public static var XSI(default, null) : String;
+	@:public @:static @:final public static var XSI(default, null) : String;
 	
-	public static var XMLNS(default, null) : String;
+	@:public @:static @:final public static var XMLNS(default, null) : String;
 	
-	public static var TRANSPORT_HTTP(default, null) : String;
+	@:public @:static @:final public static var TRANSPORT_HTTP(default, null) : String;
 	
-	public static var ACTOR_NEXT(default, null) : String;
+	@:public @:static @:final public static var ACTOR_NEXT(default, null) : String;
 	
-	public static var TAG_ENVELOPE(default, null) : String;
+	@:public @:static @:final public static var TAG_ENVELOPE(default, null) : String;
 	
-	public static var TAG_HEADER(default, null) : String;
+	@:public @:static @:final public static var TAG_HEADER(default, null) : String;
 	
-	public static var TAG_BODY(default, null) : String;
+	@:public @:static @:final public static var TAG_BODY(default, null) : String;
 	
-	public static var TAG_FAULT(default, null) : String;
+	@:public @:static @:final public static var TAG_FAULT(default, null) : String;
 	
-	public static var ATTR_ACTOR(default, null) : String;
+	@:public @:static @:final public static var ATTR_ACTOR(default, null) : String;
 	
-	public static var ATTR_MUST_UNDERSTAND(default, null) : String;
+	@:public @:static @:final public static var ATTR_MUST_UNDERSTAND(default, null) : String;
 	
-	public static var ATTR_ENCODING_STYLE(default, null) : String;
+	@:public @:static @:final public static var ATTR_ENCODING_STYLE(default, null) : String;
 	
 	
 }

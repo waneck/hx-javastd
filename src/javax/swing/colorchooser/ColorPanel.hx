@@ -25,7 +25,7 @@ package javax.swing.colorchooser;
 */
 @:internal extern class ColorPanel extends javax.swing.JPanel implements java.awt.event.ActionListener
 {
-	@:overload public function actionPerformed(event : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(event : java.awt.event.ActionEvent) : Void;
 	
 	
 }

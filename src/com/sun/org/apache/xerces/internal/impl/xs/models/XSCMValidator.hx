@@ -26,7 +26,7 @@ extern interface XSCMValidator
 	*
 	* @return Start state of the content model
 	*/
-	@:overload public function startContentModel() : java.NativeArray<Int>;
+	@:overload @:public public function startContentModel() : java.NativeArray<Int>;
 	
 	/**
 	* The method corresponds to one transaction in the content model.
@@ -36,7 +36,7 @@ extern interface XSCMValidator
 	* @return element decl or wildcard decl that
 	*         corresponds to the element from the Schema grammar
 	*/
-	@:overload public function oneTransition(elementName : com.sun.org.apache.xerces.internal.xni.QName, state : java.NativeArray<Int>, subGroupHandler : com.sun.org.apache.xerces.internal.impl.xs.SubstitutionGroupHandler) : Dynamic;
+	@:overload @:public public function oneTransition(elementName : com.sun.org.apache.xerces.internal.xni.QName, state : java.NativeArray<Int>, subGroupHandler : com.sun.org.apache.xerces.internal.impl.xs.SubstitutionGroupHandler) : Dynamic;
 	
 	/**
 	* The method indicates the end of list of children
@@ -44,7 +44,7 @@ extern interface XSCMValidator
 	* @param state  Current state of the content model
 	* @return true if the last state was a valid final state
 	*/
-	@:overload public function endContentModel(state : java.NativeArray<Int>) : Bool;
+	@:overload @:public public function endContentModel(state : java.NativeArray<Int>) : Bool;
 	
 	/**
 	* check whether this content violates UPA constraint.
@@ -52,7 +52,7 @@ extern interface XSCMValidator
 	* @param subGroupHandler the substitution group handler
 	* @return true if this content model contains other or list wildcard
 	*/
-	@:overload public function checkUniqueParticleAttribution(subGroupHandler : com.sun.org.apache.xerces.internal.impl.xs.SubstitutionGroupHandler) : Bool;
+	@:overload @:public public function checkUniqueParticleAttribution(subGroupHandler : com.sun.org.apache.xerces.internal.impl.xs.SubstitutionGroupHandler) : Bool;
 	
 	/**
 	* Check which elements are valid to appear at this point. This method also
@@ -63,7 +63,7 @@ extern interface XSCMValidator
 	* @return       a Vector whose entries are instances of
 	*               either XSWildcardDecl or XSElementDecl.
 	*/
-	@:overload public function whatCanGoHere(state : java.NativeArray<Int>) : java.util.Vector<Dynamic>;
+	@:overload @:public public function whatCanGoHere(state : java.NativeArray<Int>) : java.util.Vector<Dynamic>;
 	
 	/**
 	* Used by constant space algorithm for a{n,m} for n > 1 and
@@ -78,7 +78,7 @@ extern interface XSCMValidator
 	* is associated with the error code that preceeds it in
 	* the list.
 	*/
-	@:overload public function checkMinMaxBounds() : java.util.ArrayList<Dynamic>;
+	@:overload @:public public function checkMinMaxBounds() : java.util.ArrayList<Dynamic>;
 	
 	
 }

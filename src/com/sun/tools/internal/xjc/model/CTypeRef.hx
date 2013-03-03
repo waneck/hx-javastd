@@ -25,21 +25,21 @@ package com.sun.tools.internal.xjc.model;
 */
 extern class CTypeRef implements com.sun.xml.internal.bind.v2.model.core.TypeRef<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.nav.NClass>
 {
-	public var defaultValue(default, null) : com.sun.xml.internal.xsom.XmlString;
+	@:public @:final public var defaultValue(default, null) : com.sun.xml.internal.xsom.XmlString;
 	
-	@:overload public function new(type : com.sun.tools.internal.xjc.model.CNonElement, decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
+	@:overload @:public public function new(type : com.sun.tools.internal.xjc.model.CNonElement, decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
 	
-	@:overload public function getTypeName() : javax.xml.namespace.QName;
+	@:overload @:public public function getTypeName() : javax.xml.namespace.QName;
 	
-	@:overload public static function getSimpleTypeName(decl : com.sun.xml.internal.xsom.XSElementDecl) : javax.xml.namespace.QName;
+	@:overload @:public @:static public static function getSimpleTypeName(decl : com.sun.xml.internal.xsom.XSElementDecl) : javax.xml.namespace.QName;
 	
-	@:overload public function new(type : com.sun.tools.internal.xjc.model.CNonElement, elementName : javax.xml.namespace.QName, typeName : javax.xml.namespace.QName, nillable : Bool, defaultValue : com.sun.xml.internal.xsom.XmlString) : Void;
+	@:overload @:public public function new(type : com.sun.tools.internal.xjc.model.CNonElement, elementName : javax.xml.namespace.QName, typeName : javax.xml.namespace.QName, nillable : Bool, defaultValue : com.sun.xml.internal.xsom.XmlString) : Void;
 	
-	@:overload public function getTarget() : com.sun.tools.internal.xjc.model.CNonElement;
+	@:overload @:public public function getTarget() : com.sun.tools.internal.xjc.model.CNonElement;
 	
-	@:overload public function getTagName() : javax.xml.namespace.QName;
+	@:overload @:public public function getTagName() : javax.xml.namespace.QName;
 	
-	@:overload public function isNillable() : Bool;
+	@:overload @:public public function isNillable() : Bool;
 	
 	/**
 	* Inside XJC, use {@link #defaultValue} that has context information.
@@ -47,11 +47,11 @@ extern class CTypeRef implements com.sun.xml.internal.bind.v2.model.core.TypeRef
 	*
 	* @see #defaultValue
 	*/
-	@:overload public function getDefaultValue() : String;
+	@:overload @:public public function getDefaultValue() : String;
 	
-	@:overload public function isLeaf() : Bool;
+	@:overload @:public public function isLeaf() : Bool;
 	
-	@:overload public function getSource() : com.sun.xml.internal.bind.v2.model.core.PropertyInfo<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.nav.NClass>;
+	@:overload @:public public function getSource() : com.sun.xml.internal.bind.v2.model.core.PropertyInfo<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.nav.NClass>;
 	
 	
 }

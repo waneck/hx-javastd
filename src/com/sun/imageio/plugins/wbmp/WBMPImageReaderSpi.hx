@@ -25,15 +25,15 @@ package com.sun.imageio.plugins.wbmp;
 */
 extern class WBMPImageReaderSpi extends javax.imageio.spi.ImageReaderSpi
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function onRegistration(registry : javax.imageio.spi.ServiceRegistry, category : Class<Dynamic>) : Void;
+	@:overload @:public override public function onRegistration(registry : javax.imageio.spi.ServiceRegistry, category : Class<Dynamic>) : Void;
 	
-	@:overload public function getDescription(locale : java.util.Locale) : String;
+	@:overload @:public override public function getDescription(locale : java.util.Locale) : String;
 	
-	@:overload public function canDecodeInput(source : Dynamic) : Bool;
+	@:overload @:public override public function canDecodeInput(source : Dynamic) : Bool;
 	
-	@:overload public function createReaderInstance(extension : Dynamic) : javax.imageio.ImageReader;
+	@:overload @:public override public function createReaderInstance(extension : Dynamic) : javax.imageio.ImageReader;
 	
 	
 }

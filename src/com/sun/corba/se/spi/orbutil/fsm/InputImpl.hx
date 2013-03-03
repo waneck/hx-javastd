@@ -25,7 +25,7 @@ package com.sun.corba.se.spi.orbutil.fsm;
 */
 extern class InputImpl extends com.sun.corba.se.impl.orbutil.fsm.NameBase implements com.sun.corba.se.spi.orbutil.fsm.Input
 {
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	
 }

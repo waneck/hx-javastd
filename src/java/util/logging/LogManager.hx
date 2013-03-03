@@ -31,12 +31,12 @@ extern class LogManager
 	* it is intended that there only be one LogManager object, whose value is
 	* retrieved by calling Logmanager.getLogManager.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Return the global LogManager object.
 	*/
-	@:overload public static function getLogManager() : java.util.logging.LogManager;
+	@:overload @:public @:static public static function getLogManager() : java.util.logging.LogManager;
 	
 	/**
 	* Adds an event listener to be invoked when the logging
@@ -49,7 +49,7 @@ extern class LogManager
 	*             the caller does not have LoggingPermission("control").
 	* @exception NullPointerException if the PropertyChangeListener is null.
 	*/
-	@:overload public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes an event listener for property change events.
@@ -65,7 +65,7 @@ extern class LogManager
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have LoggingPermission("control").
 	*/
-	@:overload public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Add a named logger.  This does nothing and returns false if a logger
@@ -83,7 +83,7 @@ extern class LogManager
 	*          false if a logger of that name already exists.
 	* @exception NullPointerException if the logger name is null.
 	*/
-	@:overload public function addLogger(logger : java.util.logging.Logger) : Bool;
+	@:overload @:public public function addLogger(logger : java.util.logging.Logger) : Bool;
 	
 	/**
 	* Method to find a named logger.
@@ -100,7 +100,7 @@ extern class LogManager
 	* @param name name of the logger
 	* @return  matching logger or null if none is found
 	*/
-	@:overload public function getLogger(name : String) : java.util.logging.Logger;
+	@:overload @:public public function getLogger(name : String) : java.util.logging.Logger;
 	
 	/**
 	* Get an enumeration of known logger names.
@@ -118,7 +118,7 @@ extern class LogManager
 	* <p>
 	* @return  enumeration of logger name strings
 	*/
-	@:overload public function getLoggerNames() : java.util.Enumeration<String>;
+	@:overload @:public public function getLoggerNames() : java.util.Enumeration<String>;
 	
 	/**
 	* Reinitialize the logging properties and reread the logging configuration.
@@ -136,7 +136,7 @@ extern class LogManager
 	*             the caller does not have LoggingPermission("control").
 	* @exception  IOException if there are IO problems reading the configuration.
 	*/
-	@:overload public function readConfiguration() : Void;
+	@:overload @:public public function readConfiguration() : Void;
 	
 	/**
 	* Reset the logging configuration.
@@ -148,7 +148,7 @@ extern class LogManager
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have LoggingPermission("control").
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Reinitialize the logging properties and reread the logging configuration
@@ -163,7 +163,7 @@ extern class LogManager
 	*             the caller does not have LoggingPermission("control").
 	* @exception  IOException if there are problems reading from the stream.
 	*/
-	@:overload public function readConfiguration(ins : java.io.InputStream) : Void;
+	@:overload @:public public function readConfiguration(ins : java.io.InputStream) : Void;
 	
 	/**
 	* Get the value of a logging property.
@@ -171,7 +171,7 @@ extern class LogManager
 	* @param name      property name
 	* @return          property value
 	*/
-	@:overload public function getProperty(name : String) : String;
+	@:overload @:public public function getProperty(name : String) : String;
 	
 	/**
 	* Check that the current context is trusted to modify the logging
@@ -183,7 +183,7 @@ extern class LogManager
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have LoggingPermission("control").
 	*/
-	@:overload public function checkAccess() : Void;
+	@:overload @:public public function checkAccess() : Void;
 	
 	/**
 	* String representation of the
@@ -195,7 +195,7 @@ extern class LogManager
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var LOGGING_MXBEAN_NAME(default, null) : String;
+	@:require(java5) @:public @:final @:static public static var LOGGING_MXBEAN_NAME(default, null) : String;
 	
 	/**
 	* Returns <tt>LoggingMXBean</tt> for managing loggers.
@@ -212,13 +212,13 @@ extern class LogManager
 	* @see java.lang.management.PlatformLoggingMXBean
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized public static function getLoggingMXBean() : java.util.logging.LoggingMXBean;
+	@:require(java5) @:overload @:public @:static @:synchronized public static function getLoggingMXBean() : java.util.logging.LoggingMXBean;
 	
 	
 }
 @:native('java$util$logging$LogManager$Cleaner') @:internal extern class LogManager_Cleaner extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }
@@ -240,13 +240,13 @@ extern class LogManager
 }
 @:native('java$util$logging$LogManager$RootLogger') @:internal extern class LogManager_RootLogger extends java.util.logging.Logger
 {
-	@:overload public function log(record : java.util.logging.LogRecord) : Void;
+	@:overload @:public override public function log(record : java.util.logging.LogRecord) : Void;
 	
-	@:overload public function addHandler(h : java.util.logging.Handler) : Void;
+	@:overload @:public override public function addHandler(h : java.util.logging.Handler) : Void;
 	
-	@:overload public function removeHandler(h : java.util.logging.Handler) : Void;
+	@:overload @:public override public function removeHandler(h : java.util.logging.Handler) : Void;
 	
-	@:overload public function getHandlers() : java.NativeArray<java.util.logging.Handler>;
+	@:overload @:public override public function getHandlers() : java.NativeArray<java.util.logging.Handler>;
 	
 	
 }

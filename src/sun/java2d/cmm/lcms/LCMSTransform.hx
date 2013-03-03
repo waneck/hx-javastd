@@ -34,25 +34,25 @@ package sun.java2d.cmm.lcms;
 **********************************************************************/
 extern class LCMSTransform implements sun.java2d.cmm.ColorTransform
 {
-	@:overload public function new(profile : java.awt.color.ICC_Profile, renderType : Int, transformType : Int) : Void;
+	@:overload @:public public function new(profile : java.awt.color.ICC_Profile, renderType : Int, transformType : Int) : Void;
 	
-	@:overload public function new(transforms : java.NativeArray<sun.java2d.cmm.ColorTransform>) : Void;
+	@:overload @:public public function new(transforms : java.NativeArray<sun.java2d.cmm.ColorTransform>) : Void;
 	
-	@:overload public function getNumInComponents() : Int;
+	@:overload @:public public function getNumInComponents() : Int;
 	
-	@:overload public function getNumOutComponents() : Int;
+	@:overload @:public public function getNumOutComponents() : Int;
 	
-	@:overload public function colorConvert(src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage) : Void;
+	@:overload @:public public function colorConvert(src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage) : Void;
 	
-	@:overload public function colorConvert(src : java.awt.image.Raster, dst : java.awt.image.WritableRaster, srcMinVal : java.NativeArray<Single>, srcMaxVal : java.NativeArray<Single>, dstMinVal : java.NativeArray<Single>, dstMaxVal : java.NativeArray<Single>) : Void;
+	@:overload @:public public function colorConvert(src : java.awt.image.Raster, dst : java.awt.image.WritableRaster, srcMinVal : java.NativeArray<Single>, srcMaxVal : java.NativeArray<Single>, dstMinVal : java.NativeArray<Single>, dstMaxVal : java.NativeArray<Single>) : Void;
 	
-	@:overload public function colorConvert(src : java.awt.image.Raster, dst : java.awt.image.WritableRaster) : Void;
+	@:overload @:public public function colorConvert(src : java.awt.image.Raster, dst : java.awt.image.WritableRaster) : Void;
 	
 	/* the number of colors is (size of the array) / (number of input/output
 	components */
-	@:overload public function colorConvert(src : java.NativeArray<java.StdTypes.Int16>, dst : java.NativeArray<java.StdTypes.Int16>) : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function colorConvert(src : java.NativeArray<java.StdTypes.Int16>, dst : java.NativeArray<java.StdTypes.Int16>) : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public function colorConvert(src : java.NativeArray<java.StdTypes.Int8>, dst : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function colorConvert(src : java.NativeArray<java.StdTypes.Int8>, dst : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

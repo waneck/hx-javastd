@@ -28,7 +28,7 @@ extern class DSAKeyValue extends com.sun.org.apache.xml.internal.security.utils.
 	* @param BaseURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Constructor DSAKeyValue
@@ -39,7 +39,7 @@ extern class DSAKeyValue extends com.sun.org.apache.xml.internal.security.utils.
 	* @param G
 	* @param Y
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, P : java.math.BigInteger, Q : java.math.BigInteger, G : java.math.BigInteger, Y : java.math.BigInteger) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, P : java.math.BigInteger, Q : java.math.BigInteger, G : java.math.BigInteger, Y : java.math.BigInteger) : Void;
 	
 	/**
 	* Constructor DSAKeyValue
@@ -48,13 +48,13 @@ extern class DSAKeyValue extends com.sun.org.apache.xml.internal.security.utils.
 	* @param key
 	* @throws IllegalArgumentException
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, key : java.security.Key) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, key : java.security.Key) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getPublicKey() : java.security.PublicKey;
+	@:overload @:public public function getPublicKey() : java.security.PublicKey;
 	
 	/** @inheritDoc */
-	@:overload public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

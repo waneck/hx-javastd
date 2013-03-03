@@ -46,14 +46,14 @@ extern interface Name extends java.lang.Cloneable extends java.io.Serializable e
 	*
 	* @see Comparable#compareTo(Object)
 	*/
-	@:overload public function compareTo(obj : Dynamic) : Int;
+	@:overload @:public public function compareTo(obj : Dynamic) : Int;
 	
 	/**
 	* Returns the number of components in this name.
 	*
 	* @return  the number of components in this name
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Determines whether this name is empty.
@@ -61,7 +61,7 @@ extern interface Name extends java.lang.Cloneable extends java.io.Serializable e
 	*
 	* @return  true if this name is empty, false otherwise
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Retrieves the components of this name as an enumeration
@@ -71,7 +71,7 @@ extern interface Name extends java.lang.Cloneable extends java.io.Serializable e
 	*
 	* @return  an enumeration of the components of this name, each a string
 	*/
-	@:overload public function getAll() : java.util.Enumeration<String>;
+	@:overload @:public public function getAll() : java.util.Enumeration<String>;
 	
 	/**
 	* Retrieves a component of this name.
@@ -83,7 +83,7 @@ extern interface Name extends java.lang.Cloneable extends java.io.Serializable e
 	* @throws  ArrayIndexOutOfBoundsException
 	*          if posn is outside the specified range
 	*/
-	@:overload public function get(posn : Int) : String;
+	@:overload @:public public function get(posn : Int) : String;
 	
 	/**
 	* Creates a name whose components consist of a prefix of the
@@ -98,7 +98,7 @@ extern interface Name extends java.lang.Cloneable extends java.io.Serializable e
 	* @throws  ArrayIndexOutOfBoundsException
 	*          if posn is outside the specified range
 	*/
-	@:overload public function getPrefix(posn : Int) : javax.naming.Name;
+	@:overload @:public public function getPrefix(posn : Int) : javax.naming.Name;
 	
 	/**
 	* Creates a name whose components consist of a suffix of the
@@ -114,7 +114,7 @@ extern interface Name extends java.lang.Cloneable extends java.io.Serializable e
 	* @throws  ArrayIndexOutOfBoundsException
 	*          if posn is outside the specified range
 	*/
-	@:overload public function getSuffix(posn : Int) : javax.naming.Name;
+	@:overload @:public public function getSuffix(posn : Int) : javax.naming.Name;
 	
 	/**
 	* Determines whether this name starts with a specified prefix.
@@ -125,7 +125,7 @@ extern interface Name extends java.lang.Cloneable extends java.io.Serializable e
 	*          the name to check
 	* @return  true if <tt>n</tt> is a prefix of this name, false otherwise
 	*/
-	@:overload public function startsWith(n : javax.naming.Name) : Bool;
+	@:overload @:public public function startsWith(n : javax.naming.Name) : Bool;
 	
 	/**
 	* Determines whether this name ends with a specified suffix.
@@ -136,7 +136,7 @@ extern interface Name extends java.lang.Cloneable extends java.io.Serializable e
 	*          the name to check
 	* @return  true if <tt>n</tt> is a suffix of this name, false otherwise
 	*/
-	@:overload public function endsWith(n : javax.naming.Name) : Bool;
+	@:overload @:public public function endsWith(n : javax.naming.Name) : Bool;
 	
 	/**
 	* Adds the components of a name -- in order -- to the end of this name.
@@ -149,7 +149,7 @@ extern interface Name extends java.lang.Cloneable extends java.io.Serializable e
 	*          or if the addition of the components would violate the syntax
 	*          rules of this name
 	*/
-	@:overload public function addAll(suffix : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function addAll(suffix : javax.naming.Name) : javax.naming.Name;
 	
 	/**
 	* Adds the components of a name -- in order -- at a specified position
@@ -171,7 +171,7 @@ extern interface Name extends java.lang.Cloneable extends java.io.Serializable e
 	*          or if the addition of the components would violate the syntax
 	*          rules of this name
 	*/
-	@:overload public function addAll(posn : Int, n : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function addAll(posn : Int, n : javax.naming.Name) : javax.naming.Name;
 	
 	/**
 	* Adds a single component to the end of this name.
@@ -183,7 +183,7 @@ extern interface Name extends java.lang.Cloneable extends java.io.Serializable e
 	* @throws  InvalidNameException if adding <tt>comp</tt> would violate
 	*          the syntax rules of this name
 	*/
-	@:overload public function add(comp : String) : javax.naming.Name;
+	@:overload @:public public function add(comp : String) : javax.naming.Name;
 	
 	/**
 	* Adds a single component at a specified position within this name.
@@ -203,7 +203,7 @@ extern interface Name extends java.lang.Cloneable extends java.io.Serializable e
 	* @throws  InvalidNameException if adding <tt>comp</tt> would violate
 	*          the syntax rules of this name
 	*/
-	@:overload public function add(posn : Int, comp : String) : javax.naming.Name;
+	@:overload @:public public function add(posn : Int, comp : String) : javax.naming.Name;
 	
 	/**
 	* Removes a component from this name.
@@ -221,7 +221,7 @@ extern interface Name extends java.lang.Cloneable extends java.io.Serializable e
 	* @throws  InvalidNameException if deleting the component
 	*          would violate the syntax rules of the name
 	*/
-	@:overload public function remove(posn : Int) : Dynamic;
+	@:overload @:public public function remove(posn : Int) : Dynamic;
 	
 	
 }

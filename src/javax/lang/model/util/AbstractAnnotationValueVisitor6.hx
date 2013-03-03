@@ -28,7 +28,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	/**
 	* Constructor for concrete subclasses to call.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Visits an annotation value as if by passing itself to that
@@ -37,7 +37,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	* @param av {@inheritDoc}
 	* @param p  {@inheritDoc}
 	*/
-	@:overload @:final public function visit(av : javax.lang.model.element.AnnotationValue, p : P) : R;
+	@:overload @:public @:final public function visit(av : javax.lang.model.element.AnnotationValue, p : P) : R;
 	
 	/**
 	* Visits an annotation value as if by passing itself to that
@@ -47,7 +47,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	* null)}.
 	* @param av {@inheritDoc}
 	*/
-	@:overload @:final public function visit(av : javax.lang.model.element.AnnotationValue) : R;
+	@:overload @:public @:final public function visit(av : javax.lang.model.element.AnnotationValue) : R;
 	
 	/**
 	* {@inheritDoc}
@@ -60,7 +60,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	* @param av {@inheritDoc}
 	* @param p  {@inheritDoc}
 	*/
-	@:overload public function visitUnknown(av : javax.lang.model.element.AnnotationValue, p : P) : R;
+	@:overload @:public public function visitUnknown(av : javax.lang.model.element.AnnotationValue, p : P) : R;
 	
 	/**
 	* Visits a {@code double} value in an annotation.
@@ -68,7 +68,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	* @param  p a visitor-specified parameter
 	* @return the result of the visit
 	*/
-	@:overload public function visitDouble(d : Float, p : P) : R;
+	@:overload @:public public function visitDouble(d : Float, p : P) : R;
 	
 	/**
 	* Visits a {@code long} value in an annotation.
@@ -76,7 +76,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	* @param  p a visitor-specified parameter
 	* @return the result of the visit
 	*/
-	@:overload public function visitLong(i : haxe.Int64, p : P) : R;
+	@:overload @:public public function visitLong(i : haxe.Int64, p : P) : R;
 	
 	/**
 	* Visits an annotation value in an annotation.
@@ -84,7 +84,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	* @param  p a visitor-specified parameter
 	* @return the result of the visit
 	*/
-	@:overload public function visitAnnotation(a : javax.lang.model.element.AnnotationMirror, p : P) : R;
+	@:overload @:public public function visitAnnotation(a : javax.lang.model.element.AnnotationMirror, p : P) : R;
 	
 	/**
 	* Visits an array value in an annotation.
@@ -92,7 +92,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	* @param  p a visitor-specified parameter
 	* @return the result of the visit
 	*/
-	@:overload public function visitArray(vals : java.util.List<javax.lang.model.element.AnnotationValue>, p : P) : R;
+	@:overload @:public public function visitArray(vals : java.util.List<javax.lang.model.element.AnnotationValue>, p : P) : R;
 	
 	/**
 	* Visits a {@code char} value in an annotation.
@@ -100,7 +100,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	* @param  p a visitor-specified parameter
 	* @return the result of the visit
 	*/
-	@:overload public function visitChar(c : java.StdTypes.Char16, p : P) : R;
+	@:overload @:public public function visitChar(c : java.StdTypes.Char16, p : P) : R;
 	
 	/**
 	* Visits a {@code byte} value in an annotation.
@@ -108,7 +108,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	* @param  p a visitor-specified parameter
 	* @return the result of the visit
 	*/
-	@:overload public function visitByte(b : java.StdTypes.Int8, p : P) : R;
+	@:overload @:public public function visitByte(b : java.StdTypes.Int8, p : P) : R;
 	
 	/**
 	* Visits a {@code short} value in an annotation.
@@ -116,7 +116,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	* @param  p a visitor-specified parameter
 	* @return the result of the visit
 	*/
-	@:overload public function visitShort(s : java.StdTypes.Int16, p : P) : R;
+	@:overload @:public public function visitShort(s : java.StdTypes.Int16, p : P) : R;
 	
 	/**
 	* Visits a {@code boolean} value in an annotation.
@@ -124,7 +124,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	* @param p a visitor-specified parameter
 	* @return the result of the visit
 	*/
-	@:overload public function visitBoolean(b : Bool, p : P) : R;
+	@:overload @:public public function visitBoolean(b : Bool, p : P) : R;
 	
 	/**
 	* Visits a {@code float} value in an annotation.
@@ -132,7 +132,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	* @param  p a visitor-specified parameter
 	* @return the result of the visit
 	*/
-	@:overload public function visitFloat(f : Single, p : P) : R;
+	@:overload @:public public function visitFloat(f : Single, p : P) : R;
 	
 	/**
 	* Visits an {@code enum} value in an annotation.
@@ -140,7 +140,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	* @param  p a visitor-specified parameter
 	* @return the result of the visit
 	*/
-	@:overload public function visitEnumConstant(c : javax.lang.model.element.VariableElement, p : P) : R;
+	@:overload @:public public function visitEnumConstant(c : javax.lang.model.element.VariableElement, p : P) : R;
 	
 	/**
 	* Visits an {@code int} value in an annotation.
@@ -148,7 +148,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	* @param  p a visitor-specified parameter
 	* @return the result of the visit
 	*/
-	@:overload public function visitInt(i : Int, p : P) : R;
+	@:overload @:public public function visitInt(i : Int, p : P) : R;
 	
 	/**
 	* Visits a string value in an annotation.
@@ -156,7 +156,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	* @param  p a visitor-specified parameter
 	* @return the result of the visit
 	*/
-	@:overload public function visitString(s : String, p : P) : R;
+	@:overload @:public public function visitString(s : String, p : P) : R;
 	
 	/**
 	* Visits a type value in an annotation.
@@ -164,7 +164,7 @@ extern class AbstractAnnotationValueVisitor6<R, P> implements javax.lang.model.e
 	* @param  p a visitor-specified parameter
 	* @return the result of the visit
 	*/
-	@:overload public function visitType(t : javax.lang.model.type.TypeMirror, p : P) : R;
+	@:overload @:public public function visitType(t : javax.lang.model.type.TypeMirror, p : P) : R;
 	
 	
 }

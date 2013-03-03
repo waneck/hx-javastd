@@ -29,7 +29,7 @@ package sun.security.ssl;
 	* Reset the record so that it can be refilled, starting
 	* immediately after the header.
 	*/
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
 	
 }

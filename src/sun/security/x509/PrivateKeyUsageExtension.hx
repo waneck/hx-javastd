@@ -51,16 +51,16 @@ extern class PrivateKeyUsageExtension extends java.security.cert.Extension imple
 	* Identifier for this attribute, to be used with the
 	* get, set, delete methods of Certificate, x509 type.
 	*/
-	public static var IDENT(default, null) : String;
+	@:public @:static @:final public static var IDENT(default, null) : String;
 	
 	/**
 	* Sub attributes name for this CertAttrSet.
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
-	public static var NOT_BEFORE(default, null) : String;
+	@:public @:static @:final public static var NOT_BEFORE(default, null) : String;
 	
-	public static var NOT_AFTER(default, null) : String;
+	@:public @:static @:final public static var NOT_AFTER(default, null) : String;
 	
 	/**
 	* The default constructor for PrivateKeyUsageExtension.
@@ -70,7 +70,7 @@ extern class PrivateKeyUsageExtension extends java.security.cert.Extension imple
 	* @param notAfter the date/time after which the private key
 	*         should not be used.
 	*/
-	@:overload public function new(notBefore : java.util.Date, notAfter : java.util.Date) : Void;
+	@:overload @:public public function new(notBefore : java.util.Date, notAfter : java.util.Date) : Void;
 	
 	/**
 	* Create the extension from the passed DER encoded value.
@@ -81,12 +81,12 @@ extern class PrivateKeyUsageExtension extends java.security.cert.Extension imple
 	* @exception CertificateException on certificate parsing errors.
 	* @exception IOException on error.
 	*/
-	@:overload public function new(critical : Null<Bool>, value : Dynamic) : Void;
+	@:overload @:public public function new(critical : Null<Bool>, value : Dynamic) : Void;
 	
 	/**
 	* Return the printable string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Verify that that the current time is within the validity period.
@@ -95,7 +95,7 @@ extern class PrivateKeyUsageExtension extends java.security.cert.Extension imple
 	* @exception CertificateNotYetValidException if the certificate is not
 	* yet valid.
 	*/
-	@:overload public function valid() : Void;
+	@:overload @:public public function valid() : Void;
 	
 	/**
 	* Verify that that the passed time is within the validity period.
@@ -106,7 +106,7 @@ extern class PrivateKeyUsageExtension extends java.security.cert.Extension imple
 	* yet valid with respect to the <code>Date</code> supplied.
 	*
 	*/
-	@:overload public function valid(now : java.util.Date) : Void;
+	@:overload @:public public function valid(now : java.util.Date) : Void;
 	
 	/**
 	* Write the extension to the OutputStream.
@@ -114,36 +114,36 @@ extern class PrivateKeyUsageExtension extends java.security.cert.Extension imple
 	* @param out the OutputStream to write the extension to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public override public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Set the attribute value.
 	* @exception CertificateException on attribute handling errors.
 	*/
-	@:overload public function set(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function set(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Get the attribute value.
 	* @exception CertificateException on attribute handling errors.
 	*/
-	@:overload public function get(name : String) : Dynamic;
+	@:overload @:public public function get(name : String) : Dynamic;
 	
 	/**
 	* Delete the attribute value.
 	* @exception CertificateException on attribute handling errors.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this
 	* attribute.
 	*/
-	@:overload public function getElements() : java.util.Enumeration<String>;
+	@:overload @:public public function getElements() : java.util.Enumeration<String>;
 	
 	/**
 	* Return the name of this attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

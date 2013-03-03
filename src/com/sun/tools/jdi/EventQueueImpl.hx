@@ -28,23 +28,23 @@ extern class EventQueueImpl extends com.sun.tools.jdi.MirrorImpl implements com.
 	/*
 	* Override superclass back to default equality
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload public function remove() : com.sun.jdi.event.EventSet;
+	@:overload @:public public function remove() : com.sun.jdi.event.EventSet;
 	
 	/**
 	* Filter out events not for user's eyes.
 	* Then filter out empty sets.
 	*/
-	@:overload public function remove(timeout : haxe.Int64) : com.sun.jdi.event.EventSet;
+	@:overload @:public public function remove(timeout : haxe.Int64) : com.sun.jdi.event.EventSet;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventQueueImpl$TimerThread') @:internal extern class EventQueueImpl_TimerThread extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

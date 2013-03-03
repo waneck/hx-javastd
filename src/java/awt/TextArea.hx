@@ -48,25 +48,25 @@ package java.awt;
 	* Create and display both vertical and horizontal scrollbars.
 	* @since JDK1.1
 	*/
-	@:require(java1) public static var SCROLLBARS_BOTH(default, null) : Int;
+	@:require(java1) @:public @:static @:final public static var SCROLLBARS_BOTH(default, null) : Int;
 	
 	/**
 	* Create and display vertical scrollbar only.
 	* @since JDK1.1
 	*/
-	@:require(java1) public static var SCROLLBARS_VERTICAL_ONLY(default, null) : Int;
+	@:require(java1) @:public @:static @:final public static var SCROLLBARS_VERTICAL_ONLY(default, null) : Int;
 	
 	/**
 	* Create and display horizontal scrollbar only.
 	* @since JDK1.1
 	*/
-	@:require(java1) public static var SCROLLBARS_HORIZONTAL_ONLY(default, null) : Int;
+	@:require(java1) @:public @:static @:final public static var SCROLLBARS_HORIZONTAL_ONLY(default, null) : Int;
 	
 	/**
 	* Do not create or display any scrollbars for the text area.
 	* @since JDK1.1
 	*/
-	@:require(java1) public static var SCROLLBARS_NONE(default, null) : Int;
+	@:require(java1) @:public @:static @:final public static var SCROLLBARS_NONE(default, null) : Int;
 	
 	/**
 	* Constructs a new text area with the empty string as text.
@@ -77,7 +77,7 @@ package java.awt;
 	*    <code>GraphicsEnvironment.isHeadless</code> returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless()
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new text area with the specified text.
@@ -91,7 +91,7 @@ package java.awt;
 	*        <code>GraphicsEnvironment.isHeadless</code> returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless()
 	*/
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* Constructs a new text area with the specified number of
@@ -107,7 +107,7 @@ package java.awt;
 	*     <code>GraphicsEnvironment.isHeadless</code> returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless()
 	*/
-	@:overload public function new(rows : Int, columns : Int) : Void;
+	@:overload @:public public function new(rows : Int, columns : Int) : Void;
 	
 	/**
 	* Constructs a new text area with the specified text,
@@ -126,7 +126,7 @@ package java.awt;
 	*   <code>GraphicsEnvironment.isHeadless</code> returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless()
 	*/
-	@:overload public function new(text : String, rows : Int, columns : Int) : Void;
+	@:overload @:public public function new(text : String, rows : Int, columns : Int) : Void;
 	
 	/**
 	* Constructs a new text area with the specified text,
@@ -163,14 +163,14 @@ package java.awt;
 	*    <code>GraphicsEnvironment.isHeadless</code> returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless()
 	*/
-	@:require(java1) @:overload public function new(text : String, rows : Int, columns : Int, scrollbars : Int) : Void;
+	@:require(java1) @:overload @:public public function new(text : String, rows : Int, columns : Int, scrollbars : Int) : Void;
 	
 	/**
 	* Creates the <code>TextArea</code>'s peer.  The peer allows us to modify
 	* the appearance of the <code>TextArea</code> without changing any of its
 	* functionality.
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Inserts the specified text at the specified position
@@ -186,13 +186,13 @@ package java.awt;
 	* @see        java.awt.TextArea#append
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function insert(str : String, pos : Int) : Void;
+	@:require(java1) @:overload @:public public function insert(str : String, pos : Int) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>insert(String, int)</code>.
 	*/
-	@:overload @:synchronized public function insertText(str : String, pos : Int) : Void;
+	@:overload @:public @:synchronized public function insertText(str : String, pos : Int) : Void;
 	
 	/**
 	* Appends the given text to the text area's current text.
@@ -204,13 +204,13 @@ package java.awt;
 	* @see       java.awt.TextArea#insert
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function append(str : String) : Void;
+	@:require(java1) @:overload @:public public function append(str : String) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>append(String)</code>.
 	*/
-	@:overload @:synchronized public function appendText(str : String) : Void;
+	@:overload @:public @:synchronized public function appendText(str : String) : Void;
 	
 	/**
 	* Replaces text between the indicated start and end positions
@@ -231,13 +231,13 @@ package java.awt;
 	* @see       java.awt.TextArea#insert
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function replaceRange(str : String, start : Int, end : Int) : Void;
+	@:require(java1) @:overload @:public public function replaceRange(str : String, start : Int, end : Int) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>replaceRange(String, int, int)</code>.
 	*/
-	@:overload @:synchronized public function replaceText(str : String, start : Int, end : Int) : Void;
+	@:overload @:public @:synchronized public function replaceText(str : String, start : Int, end : Int) : Void;
 	
 	/**
 	* Returns the number of rows in the text area.
@@ -246,7 +246,7 @@ package java.awt;
 	* @see       #getColumns()
 	* @since     JDK1
 	*/
-	@:overload public function getRows() : Int;
+	@:overload @:public public function getRows() : Int;
 	
 	/**
 	* Sets the number of rows for this text area.
@@ -258,7 +258,7 @@ package java.awt;
 	*                 is less than <code>0</code>
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function setRows(rows : Int) : Void;
+	@:require(java1) @:overload @:public public function setRows(rows : Int) : Void;
 	
 	/**
 	* Returns the number of columns in this text area.
@@ -266,7 +266,7 @@ package java.awt;
 	* @see       #setColumns(int)
 	* @see       #getRows()
 	*/
-	@:overload public function getColumns() : Int;
+	@:overload @:public public function getColumns() : Int;
 	
 	/**
 	* Sets the number of columns for this text area.
@@ -278,7 +278,7 @@ package java.awt;
 	*                 is less than <code>0</code>
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function setColumns(columns : Int) : Void;
+	@:require(java1) @:overload @:public public function setColumns(columns : Int) : Void;
 	
 	/**
 	* Returns an enumerated value that indicates which scroll bars
@@ -297,7 +297,7 @@ package java.awt;
 	* @see        java.awt.TextArea#TextArea(java.lang.String, int, int, int)
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getScrollbarVisibility() : Int;
+	@:require(java1) @:overload @:public public function getScrollbarVisibility() : Int;
 	
 	/**
 	* Determines the preferred size of a text area with the specified
@@ -310,13 +310,13 @@ package java.awt;
 	* @see       java.awt.Component#getPreferredSize
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function getPreferredSize(rows : Int, columns : Int) : java.awt.Dimension;
+	@:require(java1) @:overload @:public public function getPreferredSize(rows : Int, columns : Int) : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getPreferredSize(int, int)</code>.
 	*/
-	@:overload public function preferredSize(rows : Int, columns : Int) : java.awt.Dimension;
+	@:overload @:public public function preferredSize(rows : Int, columns : Int) : java.awt.Dimension;
 	
 	/**
 	* Determines the preferred size of this text area.
@@ -324,13 +324,13 @@ package java.awt;
 	* @see       java.awt.Component#getPreferredSize
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function getPreferredSize() : java.awt.Dimension;
+	@:require(java1) @:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getPreferredSize()</code>.
 	*/
-	@:overload public function preferredSize() : java.awt.Dimension;
+	@:overload @:public override public function preferredSize() : java.awt.Dimension;
 	
 	/**
 	* Determines the minimum size of a text area with the specified
@@ -343,13 +343,13 @@ package java.awt;
 	* @see       java.awt.Component#getMinimumSize
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function getMinimumSize(rows : Int, columns : Int) : java.awt.Dimension;
+	@:require(java1) @:overload @:public public function getMinimumSize(rows : Int, columns : Int) : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getMinimumSize(int, int)</code>.
 	*/
-	@:overload public function minimumSize(rows : Int, columns : Int) : java.awt.Dimension;
+	@:overload @:public public function minimumSize(rows : Int, columns : Int) : java.awt.Dimension;
 	
 	/**
 	* Determines the minimum size of this text area.
@@ -357,13 +357,13 @@ package java.awt;
 	* @see       java.awt.Component#getPreferredSize
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function getMinimumSize() : java.awt.Dimension;
+	@:require(java1) @:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getMinimumSize()</code>.
 	*/
-	@:overload public function minimumSize() : java.awt.Dimension;
+	@:overload @:public override public function minimumSize() : java.awt.Dimension;
 	
 	/**
 	* Returns a string representing the state of this <code>TextArea</code>.
@@ -374,7 +374,7 @@ package java.awt;
 	*
 	* @return      the parameter string of this text area
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Returns the <code>AccessibleContext</code> associated with
@@ -387,7 +387,7 @@ package java.awt;
 	*         <code>AccessibleContext</code> of this <code>TextArea</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -406,7 +406,7 @@ package java.awt;
 	* of the object
 	* @see AccessibleStateSet
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

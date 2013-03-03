@@ -32,16 +32,16 @@ extern class ServiceInformation implements org.omg.CORBA.portable.IDLEntity
 {
 	/** Array of ints representing service options.
 	*/
-	public var service_options : java.NativeArray<Int>;
+	@:public public var service_options : java.NativeArray<Int>;
 	
 	/** Array of ServiceDetails giving more details about the service.
 	*/
-	public var service_details : java.NativeArray<org.omg.CORBA.ServiceDetail>;
+	@:public public var service_details : java.NativeArray<org.omg.CORBA.ServiceDetail>;
 	
 	/** Constructs a ServiceInformation object with empty service_options
 	* and service_details.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Constructs a ServiceInformation object with the given service_options
 	* and service_details.
@@ -49,7 +49,7 @@ extern class ServiceInformation implements org.omg.CORBA.portable.IDLEntity
 	* @param __service_details An array of ServiceDetails describing the service
 	* details.
 	*/
-	@:overload public function new(__service_options : java.NativeArray<Int>, __service_details : java.NativeArray<org.omg.CORBA.ServiceDetail>) : Void;
+	@:overload @:public public function new(__service_options : java.NativeArray<Int>, __service_details : java.NativeArray<org.omg.CORBA.ServiceDetail>) : Void;
 	
 	
 }

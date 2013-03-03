@@ -29,118 +29,118 @@ package com.sun.xml.internal.stream.buffer;
 */
 extern class AbstractProcessor extends com.sun.xml.internal.stream.buffer.AbstractCreatorProcessor
 {
-	private static var STATE_ILLEGAL(default, null) : Int;
+	@:protected @:static @:final private static var STATE_ILLEGAL(default, null) : Int;
 	
-	private static var STATE_DOCUMENT(default, null) : Int;
+	@:protected @:static @:final private static var STATE_DOCUMENT(default, null) : Int;
 	
-	private static var STATE_DOCUMENT_FRAGMENT(default, null) : Int;
+	@:protected @:static @:final private static var STATE_DOCUMENT_FRAGMENT(default, null) : Int;
 	
-	private static var STATE_ELEMENT_U_LN_QN(default, null) : Int;
+	@:protected @:static @:final private static var STATE_ELEMENT_U_LN_QN(default, null) : Int;
 	
-	private static var STATE_ELEMENT_P_U_LN(default, null) : Int;
+	@:protected @:static @:final private static var STATE_ELEMENT_P_U_LN(default, null) : Int;
 	
-	private static var STATE_ELEMENT_U_LN(default, null) : Int;
+	@:protected @:static @:final private static var STATE_ELEMENT_U_LN(default, null) : Int;
 	
-	private static var STATE_ELEMENT_LN(default, null) : Int;
+	@:protected @:static @:final private static var STATE_ELEMENT_LN(default, null) : Int;
 	
-	private static var STATE_TEXT_AS_CHAR_ARRAY_SMALL(default, null) : Int;
+	@:protected @:static @:final private static var STATE_TEXT_AS_CHAR_ARRAY_SMALL(default, null) : Int;
 	
-	private static var STATE_TEXT_AS_CHAR_ARRAY_MEDIUM(default, null) : Int;
+	@:protected @:static @:final private static var STATE_TEXT_AS_CHAR_ARRAY_MEDIUM(default, null) : Int;
 	
-	private static var STATE_TEXT_AS_CHAR_ARRAY_COPY(default, null) : Int;
+	@:protected @:static @:final private static var STATE_TEXT_AS_CHAR_ARRAY_COPY(default, null) : Int;
 	
-	private static var STATE_TEXT_AS_STRING(default, null) : Int;
+	@:protected @:static @:final private static var STATE_TEXT_AS_STRING(default, null) : Int;
 	
-	private static var STATE_TEXT_AS_OBJECT(default, null) : Int;
+	@:protected @:static @:final private static var STATE_TEXT_AS_OBJECT(default, null) : Int;
 	
-	private static var STATE_COMMENT_AS_CHAR_ARRAY_SMALL(default, null) : Int;
+	@:protected @:static @:final private static var STATE_COMMENT_AS_CHAR_ARRAY_SMALL(default, null) : Int;
 	
-	private static var STATE_COMMENT_AS_CHAR_ARRAY_MEDIUM(default, null) : Int;
+	@:protected @:static @:final private static var STATE_COMMENT_AS_CHAR_ARRAY_MEDIUM(default, null) : Int;
 	
-	private static var STATE_COMMENT_AS_CHAR_ARRAY_COPY(default, null) : Int;
+	@:protected @:static @:final private static var STATE_COMMENT_AS_CHAR_ARRAY_COPY(default, null) : Int;
 	
-	private static var STATE_COMMENT_AS_STRING(default, null) : Int;
+	@:protected @:static @:final private static var STATE_COMMENT_AS_STRING(default, null) : Int;
 	
-	private static var STATE_PROCESSING_INSTRUCTION(default, null) : Int;
+	@:protected @:static @:final private static var STATE_PROCESSING_INSTRUCTION(default, null) : Int;
 	
-	private static var STATE_END(default, null) : Int;
+	@:protected @:static @:final private static var STATE_END(default, null) : Int;
 	
-	private static var STATE_NAMESPACE_ATTRIBUTE(default, null) : Int;
+	@:protected @:static @:final private static var STATE_NAMESPACE_ATTRIBUTE(default, null) : Int;
 	
-	private static var STATE_NAMESPACE_ATTRIBUTE_P(default, null) : Int;
+	@:protected @:static @:final private static var STATE_NAMESPACE_ATTRIBUTE_P(default, null) : Int;
 	
-	private static var STATE_NAMESPACE_ATTRIBUTE_P_U(default, null) : Int;
+	@:protected @:static @:final private static var STATE_NAMESPACE_ATTRIBUTE_P_U(default, null) : Int;
 	
-	private static var STATE_NAMESPACE_ATTRIBUTE_U(default, null) : Int;
+	@:protected @:static @:final private static var STATE_NAMESPACE_ATTRIBUTE_U(default, null) : Int;
 	
-	private static var STATE_ATTRIBUTE_U_LN_QN(default, null) : Int;
+	@:protected @:static @:final private static var STATE_ATTRIBUTE_U_LN_QN(default, null) : Int;
 	
-	private static var STATE_ATTRIBUTE_P_U_LN(default, null) : Int;
+	@:protected @:static @:final private static var STATE_ATTRIBUTE_P_U_LN(default, null) : Int;
 	
-	private static var STATE_ATTRIBUTE_U_LN(default, null) : Int;
+	@:protected @:static @:final private static var STATE_ATTRIBUTE_U_LN(default, null) : Int;
 	
-	private static var STATE_ATTRIBUTE_LN(default, null) : Int;
+	@:protected @:static @:final private static var STATE_ATTRIBUTE_LN(default, null) : Int;
 	
-	private static var STATE_ATTRIBUTE_U_LN_QN_OBJECT(default, null) : Int;
+	@:protected @:static @:final private static var STATE_ATTRIBUTE_U_LN_QN_OBJECT(default, null) : Int;
 	
-	private static var STATE_ATTRIBUTE_P_U_LN_OBJECT(default, null) : Int;
+	@:protected @:static @:final private static var STATE_ATTRIBUTE_P_U_LN_OBJECT(default, null) : Int;
 	
-	private static var STATE_ATTRIBUTE_U_LN_OBJECT(default, null) : Int;
+	@:protected @:static @:final private static var STATE_ATTRIBUTE_U_LN_OBJECT(default, null) : Int;
 	
-	private static var STATE_ATTRIBUTE_LN_OBJECT(default, null) : Int;
+	@:protected @:static @:final private static var STATE_ATTRIBUTE_LN_OBJECT(default, null) : Int;
 	
-	private var _buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
+	@:protected private var _buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
 	
 	/**
 	* True if this processor should create a fragment of XML, without the start/end document markers.
 	*/
-	private var _fragmentMode : Bool;
+	@:protected private var _fragmentMode : Bool;
 	
-	private var _stringInterningFeature : Bool;
+	@:protected private var _stringInterningFeature : Bool;
 	
 	/**
 	* Number of remaining XML element trees that should be visible
 	* through this {@link AbstractProcessor}.
 	*/
-	private var _treeCount : Int;
+	@:protected private var _treeCount : Int;
 	
 	/**
 	* @deprecated
 	*      Use {@link #setBuffer(XMLStreamBuffer, boolean)}
 	*/
-	@:overload @:final private function setBuffer(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : Void;
+	@:overload @:protected @:final private function setBuffer(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : Void;
 	
-	@:overload @:final private function setBuffer(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer, fragmentMode : Bool) : Void;
+	@:overload @:protected @:final private function setBuffer(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer, fragmentMode : Bool) : Void;
 	
-	@:overload @:final private function peekStructure() : Int;
+	@:overload @:protected @:final private function peekStructure() : Int;
 	
-	@:overload @:final private function readStructure() : Int;
+	@:overload @:protected @:final private function readStructure() : Int;
 	
-	@:overload @:final private function readEiiState() : Int;
+	@:overload @:protected @:final private function readEiiState() : Int;
 	
-	@:overload private static function getEIIState(item : Int) : Int;
+	@:overload @:protected @:static private static function getEIIState(item : Int) : Int;
 	
-	@:overload private static function getNIIState(item : Int) : Int;
+	@:overload @:protected @:static private static function getNIIState(item : Int) : Int;
 	
-	@:overload private static function getAIIState(item : Int) : Int;
+	@:overload @:protected @:static private static function getAIIState(item : Int) : Int;
 	
-	@:overload @:final private function readStructure16() : Int;
+	@:overload @:protected @:final private function readStructure16() : Int;
 	
-	@:overload @:final private function readStructureString() : String;
+	@:overload @:protected @:final private function readStructureString() : String;
 	
-	@:overload @:final private function readContentString() : String;
+	@:overload @:protected @:final private function readContentString() : String;
 	
-	@:overload @:final private function readContentCharactersCopy() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:protected @:final private function readContentCharactersCopy() : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload @:final private function readContentCharactersBuffer(length : Int) : Int;
+	@:overload @:protected @:final private function readContentCharactersBuffer(length : Int) : Int;
 	
-	@:overload @:final private function readContentObject() : Dynamic;
+	@:overload @:protected @:final private function readContentObject() : Dynamic;
 	
-	private var _qNameBuffer(default, null) : java.lang.StringBuilder;
+	@:protected @:final private var _qNameBuffer(default, null) : java.lang.StringBuilder;
 	
-	@:overload @:final private function getQName(prefix : String, localName : String) : String;
+	@:overload @:protected @:final private function getQName(prefix : String, localName : String) : String;
 	
-	@:overload @:final private function getPrefixFromQName(qName : String) : String;
+	@:overload @:protected @:final private function getPrefixFromQName(qName : String) : String;
 	
 	
 }

@@ -45,9 +45,9 @@ package org.w3c.dom.xpath;
 */
 extern class XPathException extends java.lang.RuntimeException
 {
-	@:overload public function new(code : java.StdTypes.Int16, message : String) : Void;
+	@:overload @:public public function new(code : java.StdTypes.Int16, message : String) : Void;
 	
-	public var code : java.StdTypes.Int16;
+	@:public public var code : java.StdTypes.Int16;
 	
 	/**
 	* If the expression has a syntax error or otherwise is not a legal
@@ -55,12 +55,12 @@ extern class XPathException extends java.lang.RuntimeException
 	* <code>XPathEvaluator</code> or contains specialized extension
 	* functions or variables not supported by this implementation.
 	*/
-	public static var INVALID_EXPRESSION_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var INVALID_EXPRESSION_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If the expression cannot be converted to return the specified type.
 	*/
-	public static var TYPE_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TYPE_ERR(default, null) : java.StdTypes.Int16;
 	
 	
 }

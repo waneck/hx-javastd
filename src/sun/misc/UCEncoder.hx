@@ -26,37 +26,37 @@ package sun.misc;
 extern class UCEncoder extends sun.misc.CharacterEncoder
 {
 	/** this clase encodes two bytes per atom */
-	@:overload private function bytesPerAtom() : Int;
+	@:overload @:protected override private function bytesPerAtom() : Int;
 	
 	/** this class encodes 48 bytes per line */
-	@:overload private function bytesPerLine() : Int;
+	@:overload @:protected override private function bytesPerLine() : Int;
 	
 	/**
 	* encodeAtom - take two bytes and encode them into the correct
 	* three characters. If only one byte is to be encoded, the other
 	* must be zero. The padding byte is not included in the CRC computation.
 	*/
-	@:overload private function encodeAtom(outStream : java.io.OutputStream, data : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected override private function encodeAtom(outStream : java.io.OutputStream, data : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* Each UCE encoded line starts with a prefix of '*[XXX]', where
 	* the sequence number and the length are encoded in the first
 	* atom.
 	*/
-	@:overload private function encodeLinePrefix(outStream : java.io.OutputStream, length : Int) : Void;
+	@:overload @:protected override private function encodeLinePrefix(outStream : java.io.OutputStream, length : Int) : Void;
 	
 	/**
 	* each UCE encoded line ends with YYY and encoded version of the
 	* 16 bit checksum. The most significant byte of the check sum
 	* is always encoded FIRST.
 	*/
-	@:overload private function encodeLineSuffix(outStream : java.io.OutputStream) : Void;
+	@:overload @:protected override private function encodeLineSuffix(outStream : java.io.OutputStream) : Void;
 	
 	/**
 	* The buffer prefix code is used to initialize the sequence number
 	* to zero.
 	*/
-	@:overload private function encodeBufferPrefix(a : java.io.OutputStream) : Void;
+	@:overload @:protected override private function encodeBufferPrefix(a : java.io.OutputStream) : Void;
 	
 	
 }

@@ -25,11 +25,11 @@ package com.sun.media.sound;
 */
 extern class SoftMixingMixerProvider extends javax.sound.sampled.spi.MixerProvider
 {
-	private static var mutex(default, null) : Dynamic;
+	@:protected @:final @:static private static var mutex(default, null) : Dynamic;
 	
-	@:overload public function getMixer(info : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.Mixer;
+	@:overload @:public override public function getMixer(info : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.Mixer;
 	
-	@:overload public function getMixerInfo() : java.NativeArray<javax.sound.sampled.Mixer.Mixer_Info>;
+	@:overload @:public override public function getMixerInfo() : java.NativeArray<javax.sound.sampled.Mixer.Mixer_Info>;
 	
 	
 }

@@ -39,13 +39,13 @@ extern class StructEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	/**
 	* This is the symbol table entry for structs.
 	**/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.StructEntry) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.StructEntry) : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/** Invoke the struct generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -53,21 +53,21 @@ extern class StructEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload @:public override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the struct generator.
 	@returns an object which implements the StructGen interface.
 	@see StructGen */
-	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload @:public override public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	/** Add a member to the member list. */
-	@:overload public function addMember(member : com.sun.tools.corba.se.idl.TypedefEntry) : Void;
+	@:overload @:public public function addMember(member : com.sun.tools.corba.se.idl.TypedefEntry) : Void;
 	
 	/** This is a vector of TypedefEntry's.  In this context, only the name,
 	type, and arrayInfo fields hold any meaning. */
-	@:overload public function members() : java.util.Vector<Dynamic>;
+	@:overload @:public public function members() : java.util.Vector<Dynamic>;
 	
-	@:overload public function addContained(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:public public function addContained(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/** This is a vector of SymtabEntry's.  It itemizes any types which
 	this struct contains.  It is different than the member list.
@@ -85,7 +85,7 @@ extern class StructEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	</pre>
 	Struct B is contained within struct A.
 	The members vector will contain entries for x and y. */
-	@:overload public function contained() : java.util.Vector<Dynamic>;
+	@:overload @:public public function contained() : java.util.Vector<Dynamic>;
 	
 	
 }

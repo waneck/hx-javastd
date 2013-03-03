@@ -24,23 +24,23 @@ extern class XMLDocumentParser extends com.sun.org.apache.xerces.internal.parser
 	* Constructs a document parser using the default basic parser
 	* configuration.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a document parser using the specified parser configuration.
 	*/
-	@:overload public function new(config : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration) : Void;
+	@:overload @:public public function new(config : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration) : Void;
 	
 	/**
 	* Constructs a document parser using the specified symbol table.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
 	/**
 	* Constructs a document parser using the specified symbol table and
 	* grammar pool.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
 	
 	
 }

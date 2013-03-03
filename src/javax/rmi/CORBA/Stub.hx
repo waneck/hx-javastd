@@ -36,7 +36,7 @@ extern class Stub extends org.omg.CORBA.portable.ObjectImpl implements java.io.S
 	* that represent the same remote object.
 	* @return the hash code value.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Compares two stubs for equality. Returns <code>true</code> when used to compare stubs
@@ -45,14 +45,14 @@ extern class Stub extends org.omg.CORBA.portable.ObjectImpl implements java.io.S
 	* @return <code>true</code> if this object is the same as the <code>obj</code>
 	*          argument; <code>false</code> otherwise.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a string representation of this stub. Returns the same string
 	* for all stubs that represent the same remote object.
 	* @return a string representation of this stub.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Connects this stub to an ORB. Required after the stub is deserialized
@@ -65,7 +65,7 @@ extern class Stub extends org.omg.CORBA.portable.ObjectImpl implements java.io.S
 	* @exception RemoteException if the stub is already connected to a different
 	* ORB, or if the stub does not represent an exported remote or local object.
 	*/
-	@:overload public function connect(orb : org.omg.CORBA.ORB) : Void;
+	@:overload @:public public function connect(orb : org.omg.CORBA.ORB) : Void;
 	
 	
 }

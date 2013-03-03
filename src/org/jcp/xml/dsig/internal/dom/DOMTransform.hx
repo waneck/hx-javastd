@@ -32,14 +32,14 @@ extern class DOMTransform extends org.jcp.xml.dsig.internal.dom.DOMStructure imp
 	*
 	* @author Sean Mullan
 	*/
-	private var spi : javax.xml.crypto.dsig.TransformService;
+	@:protected private var spi : javax.xml.crypto.dsig.TransformService;
 	
 	/**
 	* Creates a <code>DOMTransform</code>.
 	*
 	* @param spi the TransformService
 	*/
-	@:overload public function new(spi : javax.xml.crypto.dsig.TransformService) : Void;
+	@:overload @:public public function new(spi : javax.xml.crypto.dsig.TransformService) : Void;
 	
 	/**
 	* Creates a <code>DOMTransform</code> from an element. This constructor
@@ -48,17 +48,17 @@ extern class DOMTransform extends org.jcp.xml.dsig.internal.dom.DOMStructure imp
 	*
 	* @param transElem a Transform element
 	*/
-	@:overload public function new(transElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
+	@:overload @:public public function new(transElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
 	
-	@:overload @:final public function getParameterSpec() : java.security.spec.AlgorithmParameterSpec;
+	@:overload @:public @:final public function getParameterSpec() : java.security.spec.AlgorithmParameterSpec;
 	
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* This method invokes the abstract {@link #marshalParams marshalParams}
 	* method to marshal any algorithm-specific parameters.
 	*/
-	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
 	/**
 	* Transforms the specified data using the underlying transform algorithm.
@@ -71,7 +71,7 @@ extern class DOMTransform extends org.jcp.xml.dsig.internal.dom.DOMStructure imp
 	* @throws XMLSignatureException if an unexpected error occurs while
 	*    executing the transform
 	*/
-	@:overload public function transform(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
+	@:overload @:public public function transform(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
 	
 	/**
 	* Transforms the specified data using the underlying transform algorithm.
@@ -86,9 +86,9 @@ extern class DOMTransform extends org.jcp.xml.dsig.internal.dom.DOMStructure imp
 	* @throws XMLSignatureException if an unexpected error occurs while
 	*    executing the transform
 	*/
-	@:overload public function transform(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext, os : java.io.OutputStream) : javax.xml.crypto.Data;
+	@:overload @:public public function transform(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext, os : java.io.OutputStream) : javax.xml.crypto.Data;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }

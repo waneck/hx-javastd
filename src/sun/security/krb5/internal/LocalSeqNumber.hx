@@ -30,21 +30,21 @@ package sun.security.krb5.internal;
 */
 extern class LocalSeqNumber implements sun.security.krb5.internal.SeqNumber
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(start : Int) : Void;
+	@:overload @:public public function new(start : Int) : Void;
 	
-	@:overload public function new(start : Null<Int>) : Void;
+	@:overload @:public public function new(start : Null<Int>) : Void;
 	
-	@:overload @:synchronized public function randInit() : Void;
+	@:overload @:public @:synchronized public function randInit() : Void;
 	
-	@:overload @:synchronized public function init(start : Int) : Void;
+	@:overload @:public @:synchronized public function init(start : Int) : Void;
 	
-	@:overload @:synchronized public function current() : Int;
+	@:overload @:public @:synchronized public function current() : Int;
 	
-	@:overload @:synchronized public function next() : Int;
+	@:overload @:public @:synchronized public function next() : Int;
 	
-	@:overload @:synchronized public function step() : Int;
+	@:overload @:public @:synchronized public function step() : Int;
 	
 	
 }

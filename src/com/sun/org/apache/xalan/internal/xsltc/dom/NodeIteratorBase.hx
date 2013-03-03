@@ -26,75 +26,75 @@ extern class NodeIteratorBase implements com.sun.org.apache.xalan.internal.xsltc
 	/**
 	* Cached computed value of last().
 	*/
-	private var _last : Int;
+	@:protected private var _last : Int;
 	
 	/**
 	* Value of position() in this iterator. Incremented in
 	* returnNode().
 	*/
-	private var _position : Int;
+	@:protected private var _position : Int;
 	
 	/**
 	* Store node in call to setMark().
 	*/
-	private var _markedNode : Int;
+	@:protected private var _markedNode : Int;
 	
 	/**
 	* Store node in call to setStartNode().
 	*/
-	private var _startNode : Int;
+	@:protected private var _startNode : Int;
 	
 	/**
 	* Flag indicating if "self" should be returned.
 	*/
-	private var _includeSelf : Bool;
+	@:protected private var _includeSelf : Bool;
 	
 	/**
 	* Flag indicating if iterator can be restarted.
 	*/
-	private var _isRestartable : Bool;
+	@:protected private var _isRestartable : Bool;
 	
 	/**
 	* Setter for _isRestartable flag.
 	*/
-	@:overload public function setRestartable(isRestartable : Bool) : Void;
+	@:overload @:public public function setRestartable(isRestartable : Bool) : Void;
 	
 	/**
 	* Initialize iterator using a node. If iterator is not
 	* restartable, then do nothing. If node is equal to END then
 	* subsequent calls to next() must return END.
 	*/
-	@:overload @:abstract public function setStartNode(node : Int) : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
+	@:overload @:abstract @:public public function setStartNode(node : Int) : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
 	
 	/**
 	* Reset this iterator using state from last call to
 	* setStartNode().
 	*/
-	@:overload public function reset() : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
+	@:overload @:public public function reset() : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
 	
 	/**
 	* Setter for _includeSelf flag.
 	*/
-	@:overload public function includeSelf() : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
+	@:overload @:public public function includeSelf() : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
 	
 	/**
 	* Default implementation of getLast(). Stores current position
 	* and current node, resets the iterator, counts all nodes and
 	* restores iterator to original state.
 	*/
-	@:overload public function getLast() : Int;
+	@:overload @:public public function getLast() : Int;
 	
 	/**
 	* Returns the position() in this iterator.
 	*/
-	@:overload public function getPosition() : Int;
+	@:overload @:public public function getPosition() : Int;
 	
 	/**
 	* Indicates if position in this iterator is computed in reverse
 	* document order. Note that nodes are always returned in document
 	* order.
 	*/
-	@:overload public function isReverse() : Bool;
+	@:overload @:public public function isReverse() : Bool;
 	
 	/**
 	* Clones and resets this iterator. Note that the cloned iterator is
@@ -102,33 +102,33 @@ extern class NodeIteratorBase implements com.sun.org.apache.xalan.internal.xsltc
 	* references, and the context node of the original variable
 	* declaration must be preserved.
 	*/
-	@:overload public function cloneIterator() : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
+	@:overload @:public public function cloneIterator() : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
 	
 	/**
 	* Utility method that increments position and returns its
 	* argument.
 	*/
-	@:overload @:final private function returnNode(node : Int) : Int;
+	@:overload @:protected @:final private function returnNode(node : Int) : Int;
 	
 	/**
 	* Reset the position in this iterator.
 	*/
-	@:overload @:final private function resetPosition() : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
+	@:overload @:protected @:final private function resetPosition() : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
 	
 	/**
 	* Callers should not call next() after it returns END.
 	*/
-	@:overload public function next() : Int;
+	@:overload @:public @:public public function next() : Int;
 	
 	/**
 	* Remembers the current node for the next call to gotoMark().
 	*/
-	@:overload public function setMark() : Void;
+	@:overload @:public @:public public function setMark() : Void;
 	
 	/**
 	* Restores the current node remembered by setMark().
 	*/
-	@:overload public function gotoMark() : Void;
+	@:overload @:public @:public public function gotoMark() : Void;
 	
 	
 }

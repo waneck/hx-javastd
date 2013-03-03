@@ -32,7 +32,7 @@ package java.awt;
 	* @param x,y,w,h the area in device space for which colors are
 	* generated.
 	*/
-	@:overload private function fillRaster(pixels : java.NativeArray<Int>, off : Int, adjust : Int, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:protected override private function fillRaster(pixels : java.NativeArray<Int>, off : Int, adjust : Int, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	
 }

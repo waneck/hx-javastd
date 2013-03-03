@@ -29,41 +29,41 @@ extern class HKSCS
 }
 @:native('sun$nio$cs$ext$HKSCS$Decoder') extern class HKSCS_Decoder extends sun.nio.cs.ext.DoubleByte.DoubleByte_Decoder
 {
-	@:overload private function new(cs : java.nio.charset.Charset, big5Dec : sun.nio.cs.ext.DoubleByte.DoubleByte_Decoder, b2cBmp : java.NativeArray<java.NativeArray<java.StdTypes.Char16>>, b2cSupp : java.NativeArray<java.NativeArray<java.StdTypes.Char16>>) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, big5Dec : sun.nio.cs.ext.DoubleByte.DoubleByte_Decoder, b2cBmp : java.NativeArray<java.NativeArray<java.StdTypes.Char16>>, b2cSupp : java.NativeArray<java.NativeArray<java.StdTypes.Char16>>) : Void;
 	
-	@:overload override public function decodeSingle(b : Int) : java.StdTypes.Char16;
+	@:overload @:public override public function decodeSingle(b : Int) : java.StdTypes.Char16;
 	
-	@:overload public function decodeBig5(b1 : Int, b2 : Int) : java.StdTypes.Char16;
+	@:overload @:public public function decodeBig5(b1 : Int, b2 : Int) : java.StdTypes.Char16;
 	
-	@:overload override public function decodeDouble(b1 : Int, b2 : Int) : java.StdTypes.Char16;
+	@:overload @:public override public function decodeDouble(b1 : Int, b2 : Int) : java.StdTypes.Char16;
 	
-	@:overload public function decodeDoubleEx(b1 : Int, b2 : Int) : java.StdTypes.Char16;
+	@:overload @:public public function decodeDoubleEx(b1 : Int, b2 : Int) : java.StdTypes.Char16;
 	
-	@:overload override private function decodeArrayLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeArrayLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function decodeBufferLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeBufferLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override public function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:public override public function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
 	
 }
 @:native('sun$nio$cs$ext$HKSCS$Encoder') extern class HKSCS_Encoder extends sun.nio.cs.ext.DoubleByte.DoubleByte_Encoder
 {
-	@:overload private function new(cs : java.nio.charset.Charset, big5Enc : sun.nio.cs.ext.DoubleByte.DoubleByte_Encoder, c2bBmp : java.NativeArray<java.NativeArray<java.StdTypes.Char16>>, c2bSupp : java.NativeArray<java.NativeArray<java.StdTypes.Char16>>) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, big5Enc : sun.nio.cs.ext.DoubleByte.DoubleByte_Encoder, c2bBmp : java.NativeArray<java.NativeArray<java.StdTypes.Char16>>, c2bSupp : java.NativeArray<java.NativeArray<java.StdTypes.Char16>>) : Void;
 	
-	@:overload public function encodeBig5(ch : java.StdTypes.Char16) : Int;
+	@:overload @:public public function encodeBig5(ch : java.StdTypes.Char16) : Int;
 	
-	@:overload override public function encodeChar(ch : java.StdTypes.Char16) : Int;
+	@:overload @:public override public function encodeChar(ch : java.StdTypes.Char16) : Int;
 	
-	@:overload public function encodeSupp(cp : Int) : Int;
+	@:overload @:public public function encodeSupp(cp : Int) : Int;
 	
-	@:overload override public function canEncode(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canEncode(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload override private function encodeArrayLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function encodeArrayLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function encodeBufferLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function encodeBufferLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
 	
 }

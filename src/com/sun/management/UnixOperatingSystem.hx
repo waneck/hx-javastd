@@ -25,25 +25,25 @@ package com.sun.management;
 */
 @:internal extern class UnixOperatingSystem extends sun.management.OperatingSystemImpl implements com.sun.management.UnixOperatingSystemMXBean
 {
-	@:overload @:native public function getCommittedVirtualMemorySize() : haxe.Int64;
+	@:overload @:public @:native public function getCommittedVirtualMemorySize() : haxe.Int64;
 	
-	@:overload @:native public function getTotalSwapSpaceSize() : haxe.Int64;
+	@:overload @:public @:native public function getTotalSwapSpaceSize() : haxe.Int64;
 	
-	@:overload @:native public function getFreeSwapSpaceSize() : haxe.Int64;
+	@:overload @:public @:native public function getFreeSwapSpaceSize() : haxe.Int64;
 	
-	@:overload @:native public function getProcessCpuTime() : haxe.Int64;
+	@:overload @:public @:native public function getProcessCpuTime() : haxe.Int64;
 	
-	@:overload @:native public function getFreePhysicalMemorySize() : haxe.Int64;
+	@:overload @:public @:native public function getFreePhysicalMemorySize() : haxe.Int64;
 	
-	@:overload @:native public function getTotalPhysicalMemorySize() : haxe.Int64;
+	@:overload @:public @:native public function getTotalPhysicalMemorySize() : haxe.Int64;
 	
-	@:overload @:native public function getOpenFileDescriptorCount() : haxe.Int64;
+	@:overload @:public @:native public function getOpenFileDescriptorCount() : haxe.Int64;
 	
-	@:overload @:native public function getMaxFileDescriptorCount() : haxe.Int64;
+	@:overload @:public @:native public function getMaxFileDescriptorCount() : haxe.Int64;
 	
-	@:overload @:native public function getSystemCpuLoad() : Float;
+	@:overload @:public @:native public function getSystemCpuLoad() : Float;
 	
-	@:overload @:native public function getProcessCpuLoad() : Float;
+	@:overload @:public @:native public function getProcessCpuLoad() : Float;
 	
 	
 }

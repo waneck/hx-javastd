@@ -32,7 +32,7 @@ extern interface KeyboardFocusManagerPeer
 	*
 	* @see KeyboardFocusManager#getNativeFocusedWindow()
 	*/
-	@:overload public function getCurrentFocusedWindow() : java.awt.Window;
+	@:overload @:public public function getCurrentFocusedWindow() : java.awt.Window;
 	
 	/**
 	* Sets the component that should become the focus owner.
@@ -41,7 +41,7 @@ extern interface KeyboardFocusManagerPeer
 	*
 	* @see KeyboardFocusManager#setNativeFocusOwner(Component)
 	*/
-	@:overload public function setCurrentFocusOwner(comp : java.awt.Component) : Void;
+	@:overload @:public public function setCurrentFocusOwner(comp : java.awt.Component) : Void;
 	
 	/**
 	* Returns the component that currently owns the input focus.
@@ -50,7 +50,7 @@ extern interface KeyboardFocusManagerPeer
 	*
 	* @see KeyboardFocusManager#getNativeFocusOwner()
 	*/
-	@:overload public function getCurrentFocusOwner() : java.awt.Component;
+	@:overload @:public public function getCurrentFocusOwner() : java.awt.Component;
 	
 	/**
 	* Clears the current global focus owner.

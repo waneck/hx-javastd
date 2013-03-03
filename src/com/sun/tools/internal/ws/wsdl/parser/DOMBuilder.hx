@@ -33,27 +33,27 @@ package com.sun.tools.internal.ws.wsdl.parser;
 	*      This set will receive newly found outermost
 	*      jaxb:bindings customizations.
 	*/
-	@:overload public function new(dom : org.w3c.dom.Document, ltable : com.sun.tools.internal.xjc.reader.internalizer.LocatorTable, outerMostBindings : java.util.Set<Dynamic>) : Void;
+	@:overload @:public public function new(dom : org.w3c.dom.Document, ltable : com.sun.tools.internal.xjc.reader.internalizer.LocatorTable, outerMostBindings : java.util.Set<Dynamic>) : Void;
 	
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
-	@:overload public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
-	@:overload public function startEntity(name : String) : Void;
+	@:overload @:public public function startEntity(name : String) : Void;
 	
-	@:overload public function endEntity(name : String) : Void;
+	@:overload @:public public function endEntity(name : String) : Void;
 	
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
-	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	
 }

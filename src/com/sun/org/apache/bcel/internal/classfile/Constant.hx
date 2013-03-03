@@ -73,7 +73,7 @@ extern class Constant implements java.lang.Cloneable implements com.sun.org.apac
 	* need the tag as an index to select the corresponding class name from the
 	* `CONSTANT_NAMES' array.
 	*/
-	private var tag : java.StdTypes.Int8;
+	@:protected private var tag : java.StdTypes.Int8;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -82,27 +82,27 @@ extern class Constant implements java.lang.Cloneable implements com.sun.org.apac
 	*
 	* @param v Visitor object
 	*/
-	@:overload @:abstract public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public @:abstract public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
-	@:overload @:abstract public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:abstract public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Tag of constant, i.e., its type. No setTag() method to avoid
 	* confusion.
 	*/
-	@:overload @:final public function getTag() : java.StdTypes.Int8;
+	@:overload @:public @:final public function getTag() : java.StdTypes.Int8;
 	
 	/**
 	* @return String representation.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* @return deep copy of this constant
 	*/
-	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.Constant;
+	@:overload @:public public function copy() : com.sun.org.apache.bcel.internal.classfile.Constant;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

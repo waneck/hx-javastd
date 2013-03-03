@@ -29,7 +29,7 @@ package com.sun.org.apache.xml.internal.serializer;
 	*
 	* @param os The byte stream to write to.
 	*/
-	@:overload public function new(os : java.io.OutputStream) : Void;
+	@:overload @:public public function new(os : java.io.OutputStream) : Void;
 	
 	/**
 	* Write a portion of an array of characters.
@@ -42,7 +42,7 @@ package com.sun.org.apache.xml.internal.serializer;
 	*
 	* @throws java.io.IOException
 	*/
-	@:overload override public function write(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function write(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Write a single character.  The character to be written is contained in
@@ -55,7 +55,7 @@ package com.sun.org.apache.xml.internal.serializer;
 	* @param c  int specifying a character to be written.
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(c : Int) : Void;
+	@:overload @:public override public function write(c : Int) : Void;
 	
 	/**
 	* Write a string.
@@ -64,7 +64,7 @@ package com.sun.org.apache.xml.internal.serializer;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(s : String) : Void;
+	@:overload @:public override public function write(s : String) : Void;
 	
 	/**
 	* Flush the stream.  If the stream has saved any characters from the
@@ -75,7 +75,7 @@ package com.sun.org.apache.xml.internal.serializer;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* Close the stream, flushing it first.  Once a stream has been closed,
@@ -84,7 +84,7 @@ package com.sun.org.apache.xml.internal.serializer;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Get the output stream where the events will be serialized to.
@@ -92,12 +92,12 @@ package com.sun.org.apache.xml.internal.serializer;
 	* @return reference to the result stream, or null of only a writer was
 	* set.
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Get the writer that this writer directly chains to.
 	*/
-	@:overload public function getWriter() : java.io.Writer;
+	@:overload @:public public function getWriter() : java.io.Writer;
 	
 	
 }

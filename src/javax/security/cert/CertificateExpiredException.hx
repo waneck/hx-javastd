@@ -45,7 +45,7 @@ package javax.security.cert;
 	* detail message is a String that describes this particular
 	* exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a CertificateExpiredException with the specified detail
@@ -54,7 +54,7 @@ package javax.security.cert;
 	*
 	* @param message the detail message.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

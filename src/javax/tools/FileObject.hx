@@ -29,7 +29,7 @@ extern interface FileObject
 	* Returns a URI identifying this file object.
 	* @return a URI
 	*/
-	@:overload public function toUri() : java.net.URI;
+	@:overload @:public public function toUri() : java.net.URI;
 	
 	/**
 	* Gets a user-friendly name for this file object.  The exact
@@ -43,7 +43,7 @@ extern interface FileObject
 	*
 	* @return a user-friendly name
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Gets an InputStream for this file object.
@@ -55,7 +55,7 @@ extern interface FileObject
 	* object does not support byte access
 	* @throws IOException if an I/O error occurred
 	*/
-	@:overload public function openInputStream() : java.io.InputStream;
+	@:overload @:public public function openInputStream() : java.io.InputStream;
 	
 	/**
 	* Gets an OutputStream for this file object.
@@ -67,7 +67,7 @@ extern interface FileObject
 	* file object does not support byte access
 	* @throws IOException if an I/O error occurred
 	*/
-	@:overload public function openOutputStream() : java.io.OutputStream;
+	@:overload @:public public function openOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Gets a reader for this object.  The returned reader will
@@ -99,7 +99,7 @@ extern interface FileObject
 	* file object does not support character access
 	* @throws IOException if an I/O error occurred
 	*/
-	@:overload public function getCharContent(ignoreEncodingErrors : Bool) : java.lang.CharSequence;
+	@:overload @:public public function getCharContent(ignoreEncodingErrors : Bool) : java.lang.CharSequence;
 	
 	/**
 	* Gets a Writer for this file object.
@@ -111,7 +111,7 @@ extern interface FileObject
 	* file object does not support character access
 	* @throws IOException if an I/O error occurred
 	*/
-	@:overload public function openWriter() : java.io.Writer;
+	@:overload @:public public function openWriter() : java.io.Writer;
 	
 	/**
 	* Gets the time this file object was last modified.  The time is
@@ -122,14 +122,14 @@ extern interface FileObject
 	* the file object does not exist, if an I/O error occurred, or if
 	* the operation is not supported
 	*/
-	@:overload public function getLastModified() : haxe.Int64;
+	@:overload @:public public function getLastModified() : haxe.Int64;
 	
 	/**
 	* Deletes this file object.  In case of errors, returns false.
 	* @return true if and only if this file object is successfully
 	* deleted; false otherwise
 	*/
-	@:overload public function delete() : Bool;
+	@:overload @:public public function delete() : Bool;
 	
 	
 }

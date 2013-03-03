@@ -25,13 +25,13 @@ package com.sun.tools.internal.xjc.api.impl.s2j;
 */
 @:internal extern class DowngradingErrorHandler implements org.xml.sax.ErrorHandler
 {
-	@:overload public function new(core : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function new(core : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

@@ -28,37 +28,37 @@ extern interface Connection
 	/**
 	* Gets the input stream for this connection.
 	*/
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
 	/*
 	* Release the input stream for this connection.
 	*/
-	@:overload public function releaseInputStream() : Void;
+	@:overload @:public public function releaseInputStream() : Void;
 	
 	/**
 	* Gets the output stream for this connection
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/*
 	* Release the output stream for this connection.
 	*/
-	@:overload public function releaseOutputStream() : Void;
+	@:overload @:public public function releaseOutputStream() : Void;
 	
 	/**
 	* Return true if channel can be used for multiple operations.
 	*/
-	@:overload public function isReusable() : Bool;
+	@:overload @:public public function isReusable() : Bool;
 	
 	/**
 	* Close connection.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Returns the channel for this connection.
 	*/
-	@:overload public function getChannel() : sun.rmi.transport.Channel;
+	@:overload @:public public function getChannel() : sun.rmi.transport.Channel;
 	
 	
 }

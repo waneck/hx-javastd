@@ -41,7 +41,7 @@ extern class TreeWriter extends com.sun.tools.doclets.formats.html.AbstractTreeW
 	* @param filename String filename
 	* @param classtree the tree being built.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
 	
 	/**
 	* Create a TreeWriter object and use it to generate the
@@ -50,26 +50,26 @@ extern class TreeWriter extends com.sun.tools.doclets.formats.html.AbstractTreeW
 	* @param classtree the class tree being documented.
 	* @throws  DocletAbortException
 	*/
-	@:overload public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
+	@:overload @:public @:static public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
 	
 	/**
 	* Generate the interface hierarchy and class hierarchy.
 	*/
-	@:overload public function generateTreeFile() : Void;
+	@:overload @:public public function generateTreeFile() : Void;
 	
 	/**
 	* Add the links to all the package tree files.
 	*
 	* @param contentTree the content tree to which the links will be added
 	*/
-	@:overload private function addPackageTreeLinks(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addPackageTreeLinks(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get the tree header.
 	*
 	* @return a content tree for the tree header
 	*/
-	@:overload private function getTreeHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getTreeHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

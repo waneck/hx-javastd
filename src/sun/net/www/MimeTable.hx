@@ -29,50 +29,50 @@ extern class MimeTable implements java.net.FileNameMap
 	* Get the single instance of this class.  First use will load the
 	* table from a data file.
 	*/
-	@:overload public static function getDefaultTable() : sun.net.www.MimeTable;
+	@:overload @:public @:static public static function getDefaultTable() : sun.net.www.MimeTable;
 	
 	/**
 	*
 	*/
-	@:overload public static function loadTable() : java.net.FileNameMap;
+	@:overload @:public @:static public static function loadTable() : java.net.FileNameMap;
 	
-	@:overload @:synchronized public function getSize() : Int;
+	@:overload @:public @:synchronized public function getSize() : Int;
 	
-	@:overload @:synchronized public function getContentTypeFor(fileName : String) : String;
+	@:overload @:public @:synchronized public function getContentTypeFor(fileName : String) : String;
 	
-	@:overload @:synchronized public function add(m : sun.net.www.MimeEntry) : Void;
+	@:overload @:public @:synchronized public function add(m : sun.net.www.MimeEntry) : Void;
 	
-	@:overload @:synchronized public function remove(type : String) : sun.net.www.MimeEntry;
+	@:overload @:public @:synchronized public function remove(type : String) : sun.net.www.MimeEntry;
 	
-	@:overload @:synchronized public function remove(entry : sun.net.www.MimeEntry) : sun.net.www.MimeEntry;
+	@:overload @:public @:synchronized public function remove(entry : sun.net.www.MimeEntry) : sun.net.www.MimeEntry;
 	
-	@:overload @:synchronized public function find(type : String) : sun.net.www.MimeEntry;
+	@:overload @:public @:synchronized public function find(type : String) : sun.net.www.MimeEntry;
 	
 	/**
 	* Locate a MimeEntry by the file extension that has been associated
 	* with it. Parses general file names, and URLs.
 	*/
-	@:overload public function findByFileName(fname : String) : sun.net.www.MimeEntry;
+	@:overload @:public public function findByFileName(fname : String) : sun.net.www.MimeEntry;
 	
 	/**
 	* Locate a MimeEntry by the file extension that has been associated
 	* with it.
 	*/
-	@:overload @:synchronized public function findByExt(fileExtension : String) : sun.net.www.MimeEntry;
+	@:overload @:public @:synchronized public function findByExt(fileExtension : String) : sun.net.www.MimeEntry;
 	
-	@:overload @:synchronized public function findByDescription(description : String) : sun.net.www.MimeEntry;
+	@:overload @:public @:synchronized public function findByDescription(description : String) : sun.net.www.MimeEntry;
 	
-	@:overload @:synchronized public function elements() : java.util.Enumeration<sun.net.www.MimeEntry>;
+	@:overload @:public @:synchronized public function elements() : java.util.Enumeration<sun.net.www.MimeEntry>;
 	
-	private static var mailcapLocations : java.NativeArray<String>;
+	@:protected @:static private static var mailcapLocations : java.NativeArray<String>;
 	
-	@:overload @:synchronized public function load() : Void;
+	@:overload @:public @:synchronized public function load() : Void;
 	
-	@:overload @:synchronized public function save(filename : String) : Bool;
+	@:overload @:public @:synchronized public function save(filename : String) : Bool;
 	
-	@:overload public function getAsProperties() : java.util.Properties;
+	@:overload @:public public function getAsProperties() : java.util.Properties;
 	
-	@:overload private function saveAsProperties(file : java.io.File) : Bool;
+	@:overload @:protected private function saveAsProperties(file : java.io.File) : Bool;
 	
 	
 }

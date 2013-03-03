@@ -28,15 +28,15 @@ package sun.nio.fs;
 	/**
 	* Base implementation class of FileSystemProvider
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload @:final override public function setAttribute(file : java.nio.file.Path, attribute : String, value : Dynamic, options : java.NativeArray<java.nio.file.LinkOption>) : Void;
+	@:overload @:public @:final override public function setAttribute(file : java.nio.file.Path, attribute : String, value : Dynamic, options : java.NativeArray<java.nio.file.LinkOption>) : Void;
 	
-	@:overload @:final override public function readAttributes(file : java.nio.file.Path, attributes : String, options : java.NativeArray<java.nio.file.LinkOption>) : java.util.Map<String, Dynamic>;
+	@:overload @:public @:final override public function readAttributes(file : java.nio.file.Path, attributes : String, options : java.NativeArray<java.nio.file.LinkOption>) : java.util.Map<String, Dynamic>;
 	
-	@:overload @:final override public function delete(file : java.nio.file.Path) : Void;
+	@:overload @:public @:final override public function delete(file : java.nio.file.Path) : Void;
 	
-	@:overload @:final override public function deleteIfExists(file : java.nio.file.Path) : Bool;
+	@:overload @:public @:final override public function deleteIfExists(file : java.nio.file.Path) : Bool;
 	
 	
 }

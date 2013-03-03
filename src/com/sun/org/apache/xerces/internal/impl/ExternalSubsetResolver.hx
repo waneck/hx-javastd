@@ -31,7 +31,7 @@ extern interface ExternalSubsetResolver extends com.sun.org.apache.xerces.intern
 	* @throws IOException  Thrown if resolved entity stream cannot be
 	*                      opened or some other i/o error occurs.
 	*/
-	@:overload public function getExternalSubset(grammarDescription : com.sun.org.apache.xerces.internal.xni.grammars.XMLDTDDescription) : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
+	@:overload @:public public function getExternalSubset(grammarDescription : com.sun.org.apache.xerces.internal.xni.grammars.XMLDTDDescription) : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
 	
 	
 }

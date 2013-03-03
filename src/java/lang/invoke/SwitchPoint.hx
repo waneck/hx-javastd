@@ -112,7 +112,7 @@ extern class SwitchPoint
 	/**
 	* Creates a new switch point.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Determines if this switch point has been invalidated yet.
@@ -137,7 +137,7 @@ extern class SwitchPoint
 	*
 	* @return true if this switch point has been invalidated
 	*/
-	@:overload public function hasBeenInvalidated() : Bool;
+	@:overload @:public public function hasBeenInvalidated() : Bool;
 	
 	/**
 	* Returns a method handle which always delegates either to the target or the fallback.
@@ -154,7 +154,7 @@ extern class SwitchPoint
 	* @throws IllegalArgumentException if the two method types do not match
 	* @see MethodHandles#guardWithTest
 	*/
-	@:overload public function guardWithTest(target : java.lang.invoke.MethodHandle, fallback : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function guardWithTest(target : java.lang.invoke.MethodHandle, fallback : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Sets all of the given switch points into the invalid state.
@@ -197,7 +197,7 @@ extern class SwitchPoint
 	* @throws NullPointerException if the {@code switchPoints} array reference is null
 	*                              or the array contains a null
 	*/
-	@:overload public static function invalidateAll(switchPoints : java.NativeArray<java.lang.invoke.SwitchPoint>) : Void;
+	@:overload @:public @:static public static function invalidateAll(switchPoints : java.NativeArray<java.lang.invoke.SwitchPoint>) : Void;
 	
 	
 }

@@ -38,7 +38,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @see     java.lang.ThreadGroup#checkAccess()
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function new(name : String) : Void;
+	@:require(java0) @:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a new thread group. The parent of this new group is the
@@ -57,7 +57,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @see     java.lang.ThreadGroup#checkAccess()
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function new(parent : java.lang.ThreadGroup, name : String) : Void;
+	@:require(java0) @:overload @:public public function new(parent : java.lang.ThreadGroup, name : String) : Void;
 	
 	/**
 	* Returns the name of this thread group.
@@ -65,7 +65,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @return  the name of this thread group.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload @:final public function getName() : String;
+	@:require(java0) @:overload @:public @:final public function getName() : String;
 	
 	/**
 	* Returns the parent of this thread group.
@@ -83,7 +83,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @see        java.lang.RuntimePermission
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload @:final public function getParent() : java.lang.ThreadGroup;
+	@:require(java0) @:overload @:public @:final public function getParent() : java.lang.ThreadGroup;
 	
 	/**
 	* Returns the maximum priority of this thread group. Threads that are
@@ -95,7 +95,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @see     #setMaxPriority
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload @:final public function getMaxPriority() : Int;
+	@:require(java0) @:overload @:public @:final public function getMaxPriority() : Int;
 	
 	/**
 	* Tests if this thread group is a daemon thread group. A
@@ -106,7 +106,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	*          <code>false</code> otherwise.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload @:final public function isDaemon() : Bool;
+	@:require(java0) @:overload @:public @:final public function isDaemon() : Bool;
 	
 	/**
 	* Tests if this thread group has been destroyed.
@@ -114,7 +114,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @return  true if this object is destroyed
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function isDestroyed() : Bool;
+	@:require(java1) @:overload @:public @:synchronized public function isDestroyed() : Bool;
 	
 	/**
 	* Changes the daemon status of this thread group.
@@ -134,7 +134,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @see        java.lang.ThreadGroup#checkAccess()
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload @:final public function setDaemon(daemon : Bool) : Void;
+	@:require(java0) @:overload @:public @:final public function setDaemon(daemon : Bool) : Void;
 	
 	/**
 	* Sets the maximum priority of the group. Threads in the thread
@@ -164,7 +164,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @see        java.lang.ThreadGroup#checkAccess()
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload @:final public function setMaxPriority(pri : Int) : Void;
+	@:require(java0) @:overload @:public @:final public function setMaxPriority(pri : Int) : Void;
 	
 	/**
 	* Tests if this thread group is either the thread group
@@ -176,7 +176,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	*          <code>false</code> otherwise.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload @:final public function parentOf(g : java.lang.ThreadGroup) : Bool;
+	@:require(java0) @:overload @:public @:final public function parentOf(g : java.lang.ThreadGroup) : Bool;
 	
 	/**
 	* Determines if the currently running thread has permission to
@@ -191,7 +191,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @see        java.lang.SecurityManager#checkAccess(java.lang.ThreadGroup)
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload @:final public function checkAccess() : Void;
+	@:require(java0) @:overload @:public @:final public function checkAccess() : Void;
 	
 	/**
 	* Returns an estimate of the number of active threads in this thread
@@ -210,7 +210,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	*
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function activeCount() : Int;
+	@:require(java0) @:overload @:public public function activeCount() : Int;
 	
 	/**
 	* Copies into the specified array every active thread in this
@@ -234,7 +234,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	*
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function enumerate(list : java.NativeArray<java.lang.Thread>) : Int;
+	@:require(java0) @:overload @:public public function enumerate(list : java.NativeArray<java.lang.Thread>) : Int;
 	
 	/**
 	* Copies into the specified array every active thread in this
@@ -269,7 +269,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	*
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function enumerate(list : java.NativeArray<java.lang.Thread>, recurse : Bool) : Int;
+	@:require(java0) @:overload @:public public function enumerate(list : java.NativeArray<java.lang.Thread>, recurse : Bool) : Int;
 	
 	/**
 	* Returns an estimate of the number of active groups in this
@@ -286,7 +286,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	*
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function activeGroupCount() : Int;
+	@:require(java0) @:overload @:public public function activeGroupCount() : Int;
 	
 	/**
 	* Copies into the specified array references to every active
@@ -310,7 +310,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	*
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function enumerate(list : java.NativeArray<java.lang.ThreadGroup>) : Int;
+	@:require(java0) @:overload @:public public function enumerate(list : java.NativeArray<java.lang.ThreadGroup>) : Int;
 	
 	/**
 	* Copies into the specified array references to every active
@@ -345,7 +345,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	*
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function enumerate(list : java.NativeArray<java.lang.ThreadGroup>, recurse : Bool) : Int;
+	@:require(java0) @:overload @:public public function enumerate(list : java.NativeArray<java.lang.ThreadGroup>, recurse : Bool) : Int;
 	
 	/**
 	* Stops all threads in this thread group.
@@ -366,7 +366,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @deprecated    This method is inherently unsafe.  See
 	*     {@link Thread#stop} for details.
 	*/
-	@:require(java0) @:overload @:final public function stop() : Void;
+	@:require(java0) @:overload @:public @:final public function stop() : Void;
 	
 	/**
 	* Interrupts all threads in this thread group.
@@ -385,7 +385,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @see        java.lang.ThreadGroup#checkAccess()
 	* @since      1.2
 	*/
-	@:require(java2) @:overload @:final public function interrupt() : Void;
+	@:require(java2) @:overload @:public @:final public function interrupt() : Void;
 	
 	/**
 	* Suspends all threads in this thread group.
@@ -406,7 +406,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @deprecated    This method is inherently deadlock-prone.  See
 	*     {@link Thread#suspend} for details.
 	*/
-	@:require(java0) @:overload @:final public function suspend() : Void;
+	@:require(java0) @:overload @:public @:final public function suspend() : Void;
 	
 	/**
 	* Resumes all threads in this thread group.
@@ -429,7 +429,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	*       both of which have been deprecated, as they are inherently
 	*       deadlock-prone.  See {@link Thread#suspend} for details.
 	*/
-	@:require(java0) @:overload @:final public function resume() : Void;
+	@:require(java0) @:overload @:public @:final public function resume() : Void;
 	
 	/**
 	* Destroys this thread group and all of its subgroups. This thread
@@ -446,7 +446,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @see        java.lang.ThreadGroup#checkAccess()
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload @:final public function destroy() : Void;
+	@:require(java0) @:overload @:public @:final public function destroy() : Void;
 	
 	/**
 	* Prints information about this thread group to the standard
@@ -454,7 +454,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	*
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function list() : Void;
+	@:require(java0) @:overload @:public public function list() : Void;
 	
 	/**
 	* Called by the Java Virtual Machine when a thread in this
@@ -491,7 +491,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @param   e   the uncaught exception.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function uncaughtException(t : java.lang.Thread, e : java.lang.Throwable) : Void;
+	@:require(java0) @:overload @:public public function uncaughtException(t : java.lang.Thread, e : java.lang.Throwable) : Void;
 	
 	/**
 	* Used by VM to control lowmem implicit suspension.
@@ -503,7 +503,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	*             which is deprecated.  Further, the behavior of this call
 	*             was never specified.
 	*/
-	@:require(java1) @:overload public function allowThreadSuspension(b : Bool) : Bool;
+	@:require(java1) @:overload @:public public function allowThreadSuspension(b : Bool) : Bool;
 	
 	/**
 	* Returns a string representation of this Thread group.
@@ -511,7 +511,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @return  a string representation of this thread group.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function toString() : String;
+	@:require(java0) @:overload @:public public function toString() : String;
 	
 	
 }

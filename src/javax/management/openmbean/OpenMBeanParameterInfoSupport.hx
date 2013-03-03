@@ -50,7 +50,7 @@ package javax.management.openmbean;
 	* description} are null or empty string, or {@code openType} is
 	* null.
 	*/
-	@:overload public function new(name : String, description : String, openType : javax.management.openmbean.OpenType<Dynamic>) : Void;
+	@:overload @:public public function new(name : String, description : String, openType : javax.management.openmbean.OpenType<Dynamic>) : Void;
 	
 	/**
 	* <p>Constructs an {@code OpenMBeanParameterInfoSupport} instance,
@@ -81,7 +81,7 @@ package javax.management.openmbean;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(name : String, description : String, openType : javax.management.openmbean.OpenType<Dynamic>, descriptor : javax.management.Descriptor) : Void;
+	@:require(java6) @:overload @:public public function new(name : String, description : String, openType : javax.management.openmbean.OpenType<Dynamic>, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Constructs an {@code OpenMBeanParameterInfoSupport} instance,
@@ -113,7 +113,7 @@ package javax.management.openmbean;
 	* defaultValue} is non null and {@code openType} is an {@code
 	* ArrayType} or a {@code TabularType}.
 	*/
-	@:overload public function new<T>(name : String, description : String, openType : javax.management.openmbean.OpenType<T>, defaultValue : T) : Void;
+	@:overload @:public public function new<T>(name : String, description : String, openType : javax.management.openmbean.OpenType<T>, defaultValue : T) : Void;
 	
 	/**
 	* <p>Constructs an {@code OpenMBeanParameterInfoSupport} instance,
@@ -161,7 +161,7 @@ package javax.management.openmbean;
 	* {@code legalValues} is non null and non empty and {@code
 	* defaultValue} is not contained in {@code legalValues}.
 	*/
-	@:overload public function new<T>(name : String, description : String, openType : javax.management.openmbean.OpenType<T>, defaultValue : T, legalValues : java.NativeArray<T>) : Void;
+	@:overload @:public public function new<T>(name : String, description : String, openType : javax.management.openmbean.OpenType<T>, defaultValue : T, legalValues : java.NativeArray<T>) : Void;
 	
 	/**
 	* Constructs an {@code OpenMBeanParameterInfoSupport} instance,
@@ -213,41 +213,41 @@ package javax.management.openmbean;
 	* are non-null and {@code defaultValue.compareTo(maxValue) > 0}
 	* is {@code true}.
 	*/
-	@:overload public function new<T>(name : String, description : String, openType : javax.management.openmbean.OpenType<T>, defaultValue : T, minValue : java.lang.Comparable<T>, maxValue : java.lang.Comparable<T>) : Void;
+	@:overload @:public public function new<T>(name : String, description : String, openType : javax.management.openmbean.OpenType<T>, defaultValue : T, minValue : java.lang.Comparable<T>, maxValue : java.lang.Comparable<T>) : Void;
 	
 	/**
 	* Returns the open type for the values of the parameter described
 	* by this {@code OpenMBeanParameterInfoSupport} instance.
 	*/
-	@:overload public function getOpenType() : javax.management.openmbean.OpenType<Dynamic>;
+	@:overload @:public public function getOpenType() : javax.management.openmbean.OpenType<Dynamic>;
 	
 	/**
 	* Returns the default value for the parameter described by this
 	* {@code OpenMBeanParameterInfoSupport} instance, if specified,
 	* or {@code null} otherwise.
 	*/
-	@:overload public function getDefaultValue() : Dynamic;
+	@:overload @:public public function getDefaultValue() : Dynamic;
 	
 	/**
 	* Returns an unmodifiable Set of legal values for the parameter
 	* described by this {@code OpenMBeanParameterInfoSupport}
 	* instance, if specified, or {@code null} otherwise.
 	*/
-	@:overload public function getLegalValues() : java.util.Set<Dynamic>;
+	@:overload @:public public function getLegalValues() : java.util.Set<Dynamic>;
 	
 	/**
 	* Returns the minimal value for the parameter described by this
 	* {@code OpenMBeanParameterInfoSupport} instance, if specified,
 	* or {@code null} otherwise.
 	*/
-	@:overload public function getMinValue() : java.lang.Comparable<Dynamic>;
+	@:overload @:public public function getMinValue() : java.lang.Comparable<Dynamic>;
 	
 	/**
 	* Returns the maximal value for the parameter described by this
 	* {@code OpenMBeanParameterInfoSupport} instance, if specified,
 	* or {@code null} otherwise.
 	*/
-	@:overload public function getMaxValue() : java.lang.Comparable<Dynamic>;
+	@:overload @:public public function getMaxValue() : java.lang.Comparable<Dynamic>;
 	
 	/**
 	* Returns {@code true} if this {@code
@@ -255,7 +255,7 @@ package javax.management.openmbean;
 	* default value for the described parameter, {@code false}
 	* otherwise.
 	*/
-	@:overload public function hasDefaultValue() : Bool;
+	@:overload @:public public function hasDefaultValue() : Bool;
 	
 	/**
 	* Returns {@code true} if this {@code
@@ -263,7 +263,7 @@ package javax.management.openmbean;
 	* set of legal values for the described parameter, {@code false}
 	* otherwise.
 	*/
-	@:overload public function hasLegalValues() : Bool;
+	@:overload @:public public function hasLegalValues() : Bool;
 	
 	/**
 	* Returns {@code true} if this {@code
@@ -271,7 +271,7 @@ package javax.management.openmbean;
 	* minimal value for the described parameter, {@code false}
 	* otherwise.
 	*/
-	@:overload public function hasMinValue() : Bool;
+	@:overload @:public public function hasMinValue() : Bool;
 	
 	/**
 	* Returns {@code true} if this {@code
@@ -279,7 +279,7 @@ package javax.management.openmbean;
 	* maximal value for the described parameter, {@code false}
 	* otherwise.
 	*/
-	@:overload public function hasMaxValue() : Bool;
+	@:overload @:public public function hasMaxValue() : Bool;
 	
 	/**
 	* Tests whether {@code obj} is a valid value for the parameter
@@ -292,7 +292,7 @@ package javax.management.openmbean;
 	* {@code OpenMBeanParameterInfo} instance,
 	* {@code false} otherwise.
 	*/
-	@:overload public function isValue(obj : Dynamic) : Bool;
+	@:overload @:public public function isValue(obj : Dynamic) : Bool;
 	
 	/**
 	* <p>Compares the specified {@code obj} parameter with this {@code
@@ -323,7 +323,7 @@ package javax.management.openmbean;
 	* @return {@code true} if the specified object is equal to this
 	* {@code OpenMBeanParameterInfoSupport} instance.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* <p>Returns the hash code value for this {@code
@@ -355,7 +355,7 @@ package javax.management.openmbean;
 	* @return the hash code value for this {@code
 	* OpenMBeanParameterInfoSupport} instance
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this
@@ -375,7 +375,7 @@ package javax.management.openmbean;
 	* @return a string representation of this
 	* {@code OpenMBeanParameterInfoSupport} instance.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

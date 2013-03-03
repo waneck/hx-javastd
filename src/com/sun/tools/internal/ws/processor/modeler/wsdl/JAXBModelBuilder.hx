@@ -25,19 +25,19 @@ package com.sun.tools.internal.ws.processor.modeler.wsdl;
 */
 extern class JAXBModelBuilder
 {
-	@:overload public function new(options : com.sun.tools.internal.ws.wscompile.WsimportOptions, classNameCollector : com.sun.tools.internal.ws.processor.util.ClassNameCollector, finder : com.sun.tools.internal.ws.wsdl.parser.MetadataFinder, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function new(options : com.sun.tools.internal.ws.wscompile.WsimportOptions, classNameCollector : com.sun.tools.internal.ws.processor.util.ClassNameCollector, finder : com.sun.tools.internal.ws.wsdl.parser.MetadataFinder, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function getJAXBType(qname : javax.xml.namespace.QName) : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType;
+	@:overload @:public public function getJAXBType(qname : javax.xml.namespace.QName) : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType;
 	
-	@:overload public function getElementTypeAndAnn(qname : javax.xml.namespace.QName) : com.sun.tools.internal.xjc.api.TypeAndAnnotation;
+	@:overload @:public public function getElementTypeAndAnn(qname : javax.xml.namespace.QName) : com.sun.tools.internal.xjc.api.TypeAndAnnotation;
 	
-	@:overload private function bind() : Void;
+	@:overload @:protected private function bind() : Void;
 	
-	@:overload private function getJAXBSchemaCompiler() : com.sun.tools.internal.xjc.api.SchemaCompiler;
+	@:overload @:protected private function getJAXBSchemaCompiler() : com.sun.tools.internal.xjc.api.SchemaCompiler;
 	
-	@:overload public function getJAXBModel() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel;
+	@:overload @:public public function getJAXBModel() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel;
 	
-	private static var NULL_LOCATOR(default, null) : org.xml.sax.helpers.LocatorImpl;
+	@:protected @:static @:final private static var NULL_LOCATOR(default, null) : org.xml.sax.helpers.LocatorImpl;
 	
 	
 }

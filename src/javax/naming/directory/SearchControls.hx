@@ -53,7 +53,7 @@ package javax.naming.directory;
 	* <p>
 	* The value of this constant is <tt>0</tt>.
 	*/
-	public static var OBJECT_SCOPE(default, null) : Int;
+	@:public @:final @:static public static var OBJECT_SCOPE(default, null) : Int;
 	
 	/**
 	* Search one level of the named context.
@@ -67,7 +67,7 @@ package javax.naming.directory;
 	* <p>
 	* The value of this constant is <tt>1</tt>.
 	*/
-	public static var ONELEVEL_SCOPE(default, null) : Int;
+	@:public @:final @:static public static var ONELEVEL_SCOPE(default, null) : Int;
 	
 	/**
 	* Search the entire subtree rooted at the named object.
@@ -90,7 +90,7 @@ package javax.naming.directory;
 	* <p>
 	* The value of this constant is <tt>2</tt>.
 	*/
-	public static var SUBTREE_SCOPE(default, null) : Int;
+	@:public @:final @:static public static var SUBTREE_SCOPE(default, null) : Int;
 	
 	/**
 	* Constructs a search constraints using defaults.
@@ -106,7 +106,7 @@ package javax.naming.directory;
 	* <li>do not dereference links during search
 	*</ul>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a search constraints using arguments.
@@ -123,7 +123,7 @@ package javax.naming.directory;
 	*                  the entry.  If null, return all attributes. If empty
 	*                  return no attributes.
 	*/
-	@:overload public function new(scope : Int, countlim : haxe.Int64, timelim : Int, attrs : java.NativeArray<String>, retobj : Bool, deref : Bool) : Void;
+	@:overload @:public public function new(scope : Int, countlim : haxe.Int64, timelim : Int, attrs : java.NativeArray<String>, retobj : Bool, deref : Bool) : Void;
 	
 	/**
 	* Retrieves the search scope of these SearchControls.
@@ -133,7 +133,7 @@ package javax.naming.directory;
 	* @return The search scope of this SearchControls.
 	* @see #setSearchScope
 	*/
-	@:overload public function getSearchScope() : Int;
+	@:overload @:public public function getSearchScope() : Int;
 	
 	/**
 	* Retrieves the time limit of these SearchControls in milliseconds.
@@ -142,7 +142,7 @@ package javax.naming.directory;
 	* @return The time limit of these SearchControls in milliseconds.
 	* @see #setTimeLimit
 	*/
-	@:overload public function getTimeLimit() : Int;
+	@:overload @:public public function getTimeLimit() : Int;
 	
 	/**
 	* Determines whether links will be dereferenced during the search.
@@ -150,7 +150,7 @@ package javax.naming.directory;
 	* @return true if links will be dereferenced; false otherwise.
 	* @see #setDerefLinkFlag
 	*/
-	@:overload public function getDerefLinkFlag() : Bool;
+	@:overload @:public public function getDerefLinkFlag() : Bool;
 	
 	/**
 	* Determines whether objects will be returned as part of the result.
@@ -158,7 +158,7 @@ package javax.naming.directory;
 	* @return true if objects will be returned; false otherwise.
 	* @see #setReturningObjFlag
 	*/
-	@:overload public function getReturningObjFlag() : Bool;
+	@:overload @:public public function getReturningObjFlag() : Bool;
 	
 	/**
 	* Retrieves the maximum number of entries that will be returned
@@ -168,7 +168,7 @@ package javax.naming.directory;
 	* @return The maximum number of entries that will be returned.
 	* @see #setCountLimit
 	*/
-	@:overload public function getCountLimit() : haxe.Int64;
+	@:overload @:public public function getCountLimit() : haxe.Int64;
 	
 	/**
 	* Retrieves the attributes that will be returned as part of the search.
@@ -180,7 +180,7 @@ package javax.naming.directory;
 	* will be returned. Can be null.
 	* @see #setReturningAttributes
 	*/
-	@:overload public function getReturningAttributes() : java.NativeArray<String>;
+	@:overload @:public public function getReturningAttributes() : java.NativeArray<String>;
 	
 	/**
 	* Sets the search scope to one of:
@@ -188,7 +188,7 @@ package javax.naming.directory;
 	* @param scope     The search scope of this SearchControls.
 	* @see #getSearchScope
 	*/
-	@:overload public function setSearchScope(scope : Int) : Void;
+	@:overload @:public public function setSearchScope(scope : Int) : Void;
 	
 	/**
 	* Sets the time limit of these SearchControls in milliseconds.
@@ -197,7 +197,7 @@ package javax.naming.directory;
 	* @param ms        The time limit of these SearchControls in milliseconds.
 	* @see #getTimeLimit
 	*/
-	@:overload public function setTimeLimit(ms : Int) : Void;
+	@:overload @:public public function setTimeLimit(ms : Int) : Void;
 	
 	/**
 	* Enables/disables link dereferencing during the search.
@@ -205,7 +205,7 @@ package javax.naming.directory;
 	* @param on        if true links will be dereferenced; if false, not followed.
 	* @see #getDerefLinkFlag
 	*/
-	@:overload public function setDerefLinkFlag(on : Bool) : Void;
+	@:overload @:public public function setDerefLinkFlag(on : Bool) : Void;
 	
 	/**
 	* Enables/disables returning objects returned as part of the result.
@@ -217,7 +217,7 @@ package javax.naming.directory;
 	*                  objects will not be returned.
 	* @see #getReturningObjFlag
 	*/
-	@:overload public function setReturningObjFlag(on : Bool) : Void;
+	@:overload @:public public function setReturningObjFlag(on : Bool) : Void;
 	
 	/**
 	* Sets the maximum number of entries to be returned
@@ -228,7 +228,7 @@ package javax.naming.directory;
 	* @param limit The maximum number of entries that will be returned.
 	* @see #getCountLimit
 	*/
-	@:overload public function setCountLimit(limit : haxe.Int64) : Void;
+	@:overload @:public public function setCountLimit(limit : haxe.Int64) : Void;
 	
 	/**
 	* Specifies the attributes that will be returned as part of the search.
@@ -240,7 +240,7 @@ package javax.naming.directory;
 	*              will be returned. Can be null.
 	* @see #getReturningAttributes
 	*/
-	@:overload public function setReturningAttributes(attrs : java.NativeArray<String>) : Void;
+	@:overload @:public public function setReturningAttributes(attrs : java.NativeArray<String>) : Void;
 	
 	
 }

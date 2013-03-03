@@ -30,14 +30,14 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* public masks defined in AWTEvent.  Should be used as the mask
 	* value for Toolkit.addAWTEventListener.
 	*/
-	public static var GRAB_EVENT_MASK(default, null) : Int;
+	@:public @:static @:final public static var GRAB_EVENT_MASK(default, null) : Int;
 	
 	/**
 	* Number of buttons.
 	* By default it's taken from the system. If system value does not
 	* fit into int type range, use our own MAX_BUTTONS_SUPPORT value.
 	*/
-	private static var numberOfButtons : Int;
+	@:protected @:static private static var numberOfButtons : Int;
 	
 	/* XFree standard mention 24 buttons as maximum:
 	* http://www.xfree86.org/current/mouse.4.html
@@ -48,84 +48,84 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* the 4-bytes limit for the int type. (CR 6799099)
 	* One more bit is reserved for FIRST_HIGH_BIT.
 	*/
-	public static var MAX_BUTTONS_SUPPORTED(default, null) : Int;
+	@:public @:final @:static public static var MAX_BUTTONS_SUPPORTED(default, null) : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function useBufferPerWindow() : Bool;
+	@:overload @:public public function useBufferPerWindow() : Bool;
 	
-	@:overload @:abstract override public function createWindow(target : java.awt.Window) : java.awt.peer.WindowPeer;
+	@:overload @:public @:abstract override public function createWindow(target : java.awt.Window) : java.awt.peer.WindowPeer;
 	
-	@:overload @:abstract override public function createFrame(target : java.awt.Frame) : java.awt.peer.FramePeer;
+	@:overload @:public @:abstract override public function createFrame(target : java.awt.Frame) : java.awt.peer.FramePeer;
 	
-	@:overload @:abstract override public function createDialog(target : java.awt.Dialog) : java.awt.peer.DialogPeer;
+	@:overload @:public @:abstract override public function createDialog(target : java.awt.Dialog) : java.awt.peer.DialogPeer;
 	
-	@:overload @:abstract override public function createButton(target : java.awt.Button) : java.awt.peer.ButtonPeer;
+	@:overload @:public @:abstract override public function createButton(target : java.awt.Button) : java.awt.peer.ButtonPeer;
 	
-	@:overload @:abstract override public function createTextField(target : java.awt.TextField) : java.awt.peer.TextFieldPeer;
+	@:overload @:public @:abstract override public function createTextField(target : java.awt.TextField) : java.awt.peer.TextFieldPeer;
 	
-	@:overload @:abstract override public function createChoice(target : java.awt.Choice) : java.awt.peer.ChoicePeer;
+	@:overload @:public @:abstract override public function createChoice(target : java.awt.Choice) : java.awt.peer.ChoicePeer;
 	
-	@:overload @:abstract override public function createLabel(target : java.awt.Label) : java.awt.peer.LabelPeer;
+	@:overload @:public @:abstract override public function createLabel(target : java.awt.Label) : java.awt.peer.LabelPeer;
 	
-	@:overload @:abstract override public function createList(target : java.awt.List) : java.awt.peer.ListPeer;
+	@:overload @:public @:abstract override public function createList(target : java.awt.List) : java.awt.peer.ListPeer;
 	
-	@:overload @:abstract override public function createCheckbox(target : java.awt.Checkbox) : java.awt.peer.CheckboxPeer;
+	@:overload @:public @:abstract override public function createCheckbox(target : java.awt.Checkbox) : java.awt.peer.CheckboxPeer;
 	
-	@:overload @:abstract override public function createScrollbar(target : java.awt.Scrollbar) : java.awt.peer.ScrollbarPeer;
+	@:overload @:public @:abstract override public function createScrollbar(target : java.awt.Scrollbar) : java.awt.peer.ScrollbarPeer;
 	
-	@:overload @:abstract override public function createScrollPane(target : java.awt.ScrollPane) : java.awt.peer.ScrollPanePeer;
+	@:overload @:public @:abstract override public function createScrollPane(target : java.awt.ScrollPane) : java.awt.peer.ScrollPanePeer;
 	
-	@:overload @:abstract override public function createTextArea(target : java.awt.TextArea) : java.awt.peer.TextAreaPeer;
+	@:overload @:public @:abstract override public function createTextArea(target : java.awt.TextArea) : java.awt.peer.TextAreaPeer;
 	
-	@:overload @:abstract override public function createFileDialog(target : java.awt.FileDialog) : java.awt.peer.FileDialogPeer;
+	@:overload @:public @:abstract override public function createFileDialog(target : java.awt.FileDialog) : java.awt.peer.FileDialogPeer;
 	
-	@:overload @:abstract override public function createMenuBar(target : java.awt.MenuBar) : java.awt.peer.MenuBarPeer;
+	@:overload @:public @:abstract override public function createMenuBar(target : java.awt.MenuBar) : java.awt.peer.MenuBarPeer;
 	
-	@:overload @:abstract override public function createMenu(target : java.awt.Menu) : java.awt.peer.MenuPeer;
+	@:overload @:public @:abstract override public function createMenu(target : java.awt.Menu) : java.awt.peer.MenuPeer;
 	
-	@:overload @:abstract override public function createPopupMenu(target : java.awt.PopupMenu) : java.awt.peer.PopupMenuPeer;
+	@:overload @:public @:abstract override public function createPopupMenu(target : java.awt.PopupMenu) : java.awt.peer.PopupMenuPeer;
 	
-	@:overload @:abstract override public function createMenuItem(target : java.awt.MenuItem) : java.awt.peer.MenuItemPeer;
+	@:overload @:public @:abstract override public function createMenuItem(target : java.awt.MenuItem) : java.awt.peer.MenuItemPeer;
 	
-	@:overload @:abstract override public function createCheckboxMenuItem(target : java.awt.CheckboxMenuItem) : java.awt.peer.CheckboxMenuItemPeer;
+	@:overload @:public @:abstract override public function createCheckboxMenuItem(target : java.awt.CheckboxMenuItem) : java.awt.peer.CheckboxMenuItemPeer;
 	
-	@:overload @:abstract override public function createDragSourceContextPeer(dge : java.awt.dnd.DragGestureEvent) : java.awt.dnd.peer.DragSourceContextPeer;
+	@:overload @:public @:abstract override public function createDragSourceContextPeer(dge : java.awt.dnd.DragGestureEvent) : java.awt.dnd.peer.DragSourceContextPeer;
 	
-	@:overload @:abstract public function createTrayIcon(target : java.awt.TrayIcon) : java.awt.peer.TrayIconPeer;
+	@:overload @:public @:abstract public function createTrayIcon(target : java.awt.TrayIcon) : java.awt.peer.TrayIconPeer;
 	
-	@:overload @:abstract public function createSystemTray(target : java.awt.SystemTray) : java.awt.peer.SystemTrayPeer;
+	@:overload @:public @:abstract public function createSystemTray(target : java.awt.SystemTray) : java.awt.peer.SystemTrayPeer;
 	
-	@:overload @:abstract public function isTraySupported() : Bool;
+	@:overload @:public @:abstract public function isTraySupported() : Bool;
 	
-	@:overload @:abstract override public function getFontPeer(name : String, style : Int) : java.awt.peer.FontPeer;
+	@:overload @:public @:abstract override public function getFontPeer(name : String, style : Int) : java.awt.peer.FontPeer;
 	
-	@:overload @:abstract public function createRobot(target : java.awt.Robot, screen : java.awt.GraphicsDevice) : java.awt.peer.RobotPeer;
+	@:overload @:public @:abstract public function createRobot(target : java.awt.Robot, screen : java.awt.GraphicsDevice) : java.awt.peer.RobotPeer;
 	
-	@:overload @:abstract public function createKeyboardFocusManagerPeer(manager : java.awt.KeyboardFocusManager) : java.awt.peer.KeyboardFocusManagerPeer;
+	@:overload @:public @:abstract public function createKeyboardFocusManagerPeer(manager : java.awt.KeyboardFocusManager) : java.awt.peer.KeyboardFocusManagerPeer;
 	
-	@:overload @:final public static function awtLock() : Void;
+	@:overload @:public @:static @:final public static function awtLock() : Void;
 	
-	@:overload @:final public static function awtTryLock() : Bool;
+	@:overload @:public @:static @:final public static function awtTryLock() : Bool;
 	
-	@:overload @:final public static function awtUnlock() : Void;
+	@:overload @:public @:static @:final public static function awtUnlock() : Void;
 	
-	@:overload @:final public static function awtLockWait() : Void;
+	@:overload @:public @:static @:final public static function awtLockWait() : Void;
 	
-	@:overload @:final public static function awtLockWait(timeout : haxe.Int64) : Void;
+	@:overload @:public @:static @:final public static function awtLockWait(timeout : haxe.Int64) : Void;
 	
-	@:overload @:final public static function awtLockNotify() : Void;
+	@:overload @:public @:static @:final public static function awtLockNotify() : Void;
 	
-	@:overload @:final public static function awtLockNotifyAll() : Void;
+	@:overload @:public @:static @:final public static function awtLockNotifyAll() : Void;
 	
-	@:overload @:final public static function isAWTLockHeldByCurrentThread() : Bool;
+	@:overload @:public @:static @:final public static function isAWTLockHeldByCurrentThread() : Bool;
 	
 	/*
 	* Create a new AppContext, along with its EventQueue, for a
 	* new ThreadGroup.  Browser code, for example, would use this
 	* method to create an AppContext & EventQueue for an Applet.
 	*/
-	@:overload public static function createNewAppContext() : sun.awt.AppContext;
+	@:overload @:public @:static public static function createNewAppContext() : sun.awt.AppContext;
 	
 	/*
 	* Fetch the peer associated with the given target (as specified
@@ -135,11 +135,11 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* never created for it or the peer was disposed), a null will
 	* be returned.
 	*/
-	@:overload private static function targetToPeer(target : Dynamic) : Dynamic;
+	@:overload @:protected @:static private static function targetToPeer(target : Dynamic) : Dynamic;
 	
-	@:overload private static function targetCreatedPeer(target : Dynamic, peer : Dynamic) : Void;
+	@:overload @:protected @:static private static function targetCreatedPeer(target : Dynamic, peer : Dynamic) : Void;
 	
-	@:overload private static function targetDisposedPeer(target : Dynamic, peer : Dynamic) : Void;
+	@:overload @:protected @:static private static function targetDisposedPeer(target : Dynamic, peer : Dynamic) : Void;
 	
 	/*
 	* Fetch the AppContext associated with the given target.
@@ -147,7 +147,7 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* to use for posting events to a Component.  If the target is
 	* null or the target can't be found, a null with be returned.
 	*/
-	@:overload public static function targetToAppContext(target : Dynamic) : sun.awt.AppContext;
+	@:overload @:public @:static public static function targetToAppContext(target : Dynamic) : sun.awt.AppContext;
 	
 	/**
 	* Sets the synchronous status of focus requests on lightweight
@@ -173,15 +173,15 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	*             should be set
 	* @param    status the value of lightweight focus request status
 	*/
-	@:overload public static function setLWRequestStatus(changed : java.awt.Window, status : Bool) : Void;
+	@:overload @:public @:static public static function setLWRequestStatus(changed : java.awt.Window, status : Bool) : Void;
 	
-	@:overload public static function checkAndSetPolicy(cont : java.awt.Container) : Void;
+	@:overload @:public @:static public static function checkAndSetPolicy(cont : java.awt.Container) : Void;
 	
 	/*
 	* Insert a mapping from target to AppContext, for later retrieval
 	* via targetToAppContext() above.
 	*/
-	@:overload public static function insertTargetMapping(target : Dynamic, appContext : sun.awt.AppContext) : Void;
+	@:overload @:public @:static public static function insertTargetMapping(target : Dynamic, appContext : sun.awt.AppContext) : Void;
 	
 	/*
 	* Post an AWTEvent to the Java EventQueue, using the PostEventQueue
@@ -190,42 +190,42 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* not be called under another lock since it locks the EventQueue.
 	* See bugids 4632918, 4526597.
 	*/
-	@:overload public static function postEvent(appContext : sun.awt.AppContext, event : java.awt.AWTEvent) : Void;
+	@:overload @:public @:static public static function postEvent(appContext : sun.awt.AppContext, event : java.awt.AWTEvent) : Void;
 	
 	/*
 	* Post AWTEvent of high priority.
 	*/
-	@:overload public static function postPriorityEvent(e : java.awt.AWTEvent) : Void;
+	@:overload @:public @:static public static function postPriorityEvent(e : java.awt.AWTEvent) : Void;
 	
-	private static var flushLock(default, null) : java.util.concurrent.locks.Lock;
+	@:protected @:static @:final private static var flushLock(default, null) : java.util.concurrent.locks.Lock;
 	
 	/*
 	* Flush any pending events which haven't been posted to the AWT
 	* EventQueue yet.
 	*/
-	@:overload public static function flushPendingEvents() : Void;
+	@:overload @:public @:static public static function flushPendingEvents() : Void;
 	
-	@:overload public static function isPostEventQueueEmpty() : Bool;
+	@:overload @:public @:static public static function isPostEventQueueEmpty() : Bool;
 	
 	/*
 	* Execute a chunk of code on the Java event handler thread for the
 	* given target.  Does not wait for the execution to occur before
 	* returning to the caller.
 	*/
-	@:overload public static function executeOnEventHandlerThread(target : Dynamic, runnable : java.lang.Runnable) : Void;
+	@:overload @:public @:static public static function executeOnEventHandlerThread(target : Dynamic, runnable : java.lang.Runnable) : Void;
 	
 	/*
 	* Fixed 5064013: the InvocationEvent time should be equals
 	* the time of the ActionEvent
 	*/
-	@:overload public static function executeOnEventHandlerThread(target : Dynamic, runnable : java.lang.Runnable, when : haxe.Int64) : Void;
+	@:overload @:public @:static public static function executeOnEventHandlerThread(target : Dynamic, runnable : java.lang.Runnable, when : haxe.Int64) : Void;
 	
 	/*
 	* Execute a chunk of code on the Java event handler thread for the
 	* given target.  Does not wait for the execution to occur before
 	* returning to the caller.
 	*/
-	@:overload public static function executeOnEventHandlerThread(peerEvent : sun.awt.PeerEvent) : Void;
+	@:overload @:public @:static public static function executeOnEventHandlerThread(peerEvent : sun.awt.PeerEvent) : Void;
 	
 	/*
 	* Execute a chunk of code on the Java event handler thread. The
@@ -235,14 +235,14 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* Does not wait for the execution to occur before returning to
 	* the caller.
 	*/
-	@:overload public static function invokeLaterOnAppContext(appContext : sun.awt.AppContext, dispatcher : java.lang.Runnable) : Void;
+	@:overload @:public @:static public static function invokeLaterOnAppContext(appContext : sun.awt.AppContext, dispatcher : java.lang.Runnable) : Void;
 	
 	/*
 	* Execute a chunk of code on the Java event handler thread for the
 	* given target.  Waits for the execution to occur before returning
 	* to the caller.
 	*/
-	@:overload public static function executeOnEDTAndWait(target : Dynamic, runnable : java.lang.Runnable) : Void;
+	@:overload @:public @:static public static function executeOnEDTAndWait(target : Dynamic, runnable : java.lang.Runnable) : Void;
 	
 	/*
 	* Returns true if the calling thread is the event dispatch thread
@@ -250,21 +250,21 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* Use this call to ensure that a given task is being executed
 	* (or not being) on the event dispatch thread for the given target.
 	*/
-	@:overload public static function isDispatchThreadForAppContext(target : Dynamic) : Bool;
+	@:overload @:public @:static public static function isDispatchThreadForAppContext(target : Dynamic) : Bool;
 	
-	@:overload override public function getScreenSize() : java.awt.Dimension;
+	@:overload @:public override public function getScreenSize() : java.awt.Dimension;
 	
-	@:overload @:abstract private function getScreenWidth() : Int;
+	@:overload @:protected @:abstract private function getScreenWidth() : Int;
 	
-	@:overload @:abstract private function getScreenHeight() : Int;
+	@:overload @:protected @:abstract private function getScreenHeight() : Int;
 	
-	@:overload override public function getFontMetrics(font : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public override public function getFontMetrics(font : java.awt.Font) : java.awt.FontMetrics;
 	
-	@:overload override public function getFontList() : java.NativeArray<String>;
+	@:overload @:public override public function getFontList() : java.NativeArray<String>;
 	
-	@:overload override public function createPanel(target : java.awt.Panel) : java.awt.peer.PanelPeer;
+	@:overload @:public override public function createPanel(target : java.awt.Panel) : java.awt.peer.PanelPeer;
 	
-	@:overload override public function createCanvas(target : java.awt.Canvas) : java.awt.peer.CanvasPeer;
+	@:overload @:public override public function createCanvas(target : java.awt.Canvas) : java.awt.peer.CanvasPeer;
 	
 	/**
 	* Disables erasing of background on the canvas before painting if
@@ -273,7 +273,7 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* because some Toolkit implementations do not support changing
 	* this property once the Canvas becomes displayable.
 	*/
-	@:overload public function disableBackgroundErase(canvas : java.awt.Canvas) : Void;
+	@:overload @:public public function disableBackgroundErase(canvas : java.awt.Canvas) : Void;
 	
 	/**
 	* Disables the native erasing of the background on the given
@@ -284,65 +284,65 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* Toolkit implementations do not support changing this property
 	* once the Component becomes displayable.
 	*/
-	@:overload public function disableBackgroundErase(component : java.awt.Component) : Void;
+	@:overload @:public public function disableBackgroundErase(component : java.awt.Component) : Void;
 	
 	/**
 	* Returns the value of "sun.awt.noerasebackground" property. Default
 	* value is {@code false}.
 	*/
-	@:overload public static function getSunAwtNoerasebackground() : Bool;
+	@:overload @:public @:static public static function getSunAwtNoerasebackground() : Bool;
 	
 	/**
 	* Returns the value of "sun.awt.erasebackgroundonresize" property. Default
 	* value is {@code false}.
 	*/
-	@:overload public static function getSunAwtErasebackgroundonresize() : Bool;
+	@:overload @:public @:static public static function getSunAwtErasebackgroundonresize() : Bool;
 	
-	@:overload override public function getImage(filename : String) : java.awt.Image;
+	@:overload @:public override public function getImage(filename : String) : java.awt.Image;
 	
-	@:overload override public function getImage(url : java.net.URL) : java.awt.Image;
+	@:overload @:public override public function getImage(url : java.net.URL) : java.awt.Image;
 	
-	@:overload override public function createImage(filename : String) : java.awt.Image;
+	@:overload @:public override public function createImage(filename : String) : java.awt.Image;
 	
-	@:overload override public function createImage(url : java.net.URL) : java.awt.Image;
+	@:overload @:public override public function createImage(url : java.net.URL) : java.awt.Image;
 	
-	@:overload override public function createImage(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : java.awt.Image;
+	@:overload @:public override public function createImage(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : java.awt.Image;
 	
-	@:overload override public function createImage(producer : java.awt.image.ImageProducer) : java.awt.Image;
+	@:overload @:public override public function createImage(producer : java.awt.image.ImageProducer) : java.awt.Image;
 	
-	@:overload override public function checkImage(img : java.awt.Image, w : Int, h : Int, o : java.awt.image.ImageObserver) : Int;
+	@:overload @:public override public function checkImage(img : java.awt.Image, w : Int, h : Int, o : java.awt.image.ImageObserver) : Int;
 	
-	@:overload override public function prepareImage(img : java.awt.Image, w : Int, h : Int, o : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public override public function prepareImage(img : java.awt.Image, w : Int, h : Int, o : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Scans {@code imageList} for best-looking image of specified dimensions.
 	* Image can be scaled and/or padded with transparency.
 	*/
-	@:overload public static function getScaledIconImage(imageList : java.util.List<java.awt.Image>, width : Int, height : Int) : java.awt.image.BufferedImage;
+	@:overload @:public @:static public static function getScaledIconImage(imageList : java.util.List<java.awt.Image>, width : Int, height : Int) : java.awt.image.BufferedImage;
 	
-	@:overload public static function getScaledIconData(imageList : java.util.List<java.awt.Image>, width : Int, height : Int) : java.awt.image.DataBufferInt;
+	@:overload @:public @:static public static function getScaledIconData(imageList : java.util.List<java.awt.Image>, width : Int, height : Int) : java.awt.image.DataBufferInt;
 	
-	@:overload override private function getSystemEventQueueImpl() : java.awt.EventQueue;
+	@:overload @:protected override private function getSystemEventQueueImpl() : java.awt.EventQueue;
 	
-	@:overload public static function getSystemEventQueueImplPP(appContext : sun.awt.AppContext) : java.awt.EventQueue;
+	@:overload @:public @:static public static function getSystemEventQueueImplPP(appContext : sun.awt.AppContext) : java.awt.EventQueue;
 	
 	/**
 	* Give native peers the ability to query the native container
 	* given a native component (eg the direct parent may be lightweight).
 	*/
-	@:overload public static function getNativeContainer(c : java.awt.Component) : java.awt.Container;
+	@:overload @:public @:static public static function getNativeContainer(c : java.awt.Component) : java.awt.Container;
 	
 	/**
 	* Gives native peers the ability to query the closest HW component.
 	* If the given component is heavyweight, then it returns this. Otherwise,
 	* it goes one level up in the hierarchy and tests next component.
 	*/
-	@:overload public static function getHeavyweightComponent(c : java.awt.Component) : java.awt.Component;
+	@:overload @:public @:static public static function getHeavyweightComponent(c : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* Returns key modifiers used by Swing to set up a focus accelerator key stroke.
 	*/
-	@:overload public function getFocusAcceleratorKeyMask() : Int;
+	@:overload @:public public function getFocusAcceleratorKeyMask() : Int;
 	
 	/**
 	* Tests whether specified key modifiers mask can be used to enter a printable
@@ -350,14 +350,14 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* the way things work on Windows: here, pressing ctrl + alt allows user to enter
 	* characters from the extended character set (like euro sign or math symbols)
 	*/
-	@:overload public function isPrintableCharacterModifiersMask(mods : Int) : Bool;
+	@:overload @:public public function isPrintableCharacterModifiersMask(mods : Int) : Bool;
 	
 	/**
 	* Returns whether popup is allowed to be shown above the task bar.
 	* This is a default implementation of this method, which checks
 	* corresponding security permission.
 	*/
-	@:overload public function canPopupOverlapTaskBar() : Bool;
+	@:overload @:public public function canPopupOverlapTaskBar() : Bool;
 	
 	/**
 	* Returns a new input method window, with behavior as specified in
@@ -369,70 +369,70 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* SunToolkit subclasses can override this method to return better input
 	* method windows.
 	*/
-	@:overload public function createInputMethodWindow(title : String, context : sun.awt.im.InputContext) : java.awt.Window;
+	@:overload @:public public function createInputMethodWindow(title : String, context : sun.awt.im.InputContext) : java.awt.Window;
 	
 	/**
 	* Returns whether enableInputMethods should be set to true for peered
 	* TextComponent instances on this platform. False by default.
 	*/
-	@:overload public function enableInputMethodsForTextComponent() : Bool;
+	@:overload @:public public function enableInputMethodsForTextComponent() : Bool;
 	
 	/**
 	* Returns the locale in which the runtime was started.
 	*/
-	@:overload public static function getStartupLocale() : java.util.Locale;
+	@:overload @:public @:static public static function getStartupLocale() : java.util.Locale;
 	
 	/**
 	* Returns the default keyboard locale of the underlying operating system
 	*/
-	@:overload public function getDefaultKeyboardLocale() : java.util.Locale;
+	@:overload @:public public function getDefaultKeyboardLocale() : java.util.Locale;
 	
-	@:overload private static function setDataTransfererClassName(className : String) : Void;
+	@:overload @:protected @:static private static function setDataTransfererClassName(className : String) : Void;
 	
-	@:overload public static function getDataTransfererClassName() : String;
+	@:overload @:public @:static public static function getDataTransfererClassName() : String;
 	
 	/**
 	* @see sun.awt.WindowClosingSupport#getWindowClosingListener
 	*/
-	@:overload public function getWindowClosingListener() : sun.awt.WindowClosingListener;
+	@:overload @:public public function getWindowClosingListener() : sun.awt.WindowClosingListener;
 	
 	/**
 	* @see sun.awt.WindowClosingSupport#setWindowClosingListener
 	*/
-	@:overload public function setWindowClosingListener(wcl : sun.awt.WindowClosingListener) : Void;
+	@:overload @:public public function setWindowClosingListener(wcl : sun.awt.WindowClosingListener) : Void;
 	
 	/**
 	* @see sun.awt.WindowClosingListener#windowClosingNotify
 	*/
-	@:overload public function windowClosingNotify(event : java.awt.event.WindowEvent) : java.lang.RuntimeException;
+	@:overload @:public public function windowClosingNotify(event : java.awt.event.WindowEvent) : java.lang.RuntimeException;
 	
 	/**
 	* @see sun.awt.WindowClosingListener#windowClosingDelivered
 	*/
-	@:overload public function windowClosingDelivered(event : java.awt.event.WindowEvent) : java.lang.RuntimeException;
+	@:overload @:public public function windowClosingDelivered(event : java.awt.event.WindowEvent) : java.lang.RuntimeException;
 	
-	@:overload @:synchronized override private function getMouseInfoPeer() : java.awt.peer.MouseInfoPeer;
+	@:overload @:protected @:synchronized override private function getMouseInfoPeer() : java.awt.peer.MouseInfoPeer;
 	
 	/**
 	* Returns whether default toolkit needs the support of the xembed
 	* from embedding host(if any).
 	* @return <code>true</code>, if XEmbed is needed, <code>false</code> otherwise
 	*/
-	@:overload public static function needsXEmbed() : Bool;
+	@:overload @:public @:static public static function needsXEmbed() : Bool;
 	
 	/**
 	* Returns whether this toolkit needs the support of the xembed
 	* from embedding host(if any).
 	* @return <code>true</code>, if XEmbed is needed, <code>false</code> otherwise
 	*/
-	@:overload private function needsXEmbedImpl() : Bool;
+	@:overload @:protected private function needsXEmbedImpl() : Bool;
 	
 	/**
 	* Returns whether the XEmbed server feature is requested by
 	* developer.  If true, Toolkit should return an
 	* XEmbed-server-enabled CanvasPeer instead of the ordinary CanvasPeer.
 	*/
-	@:overload @:final private function isXEmbedServerRequested() : Bool;
+	@:overload @:protected @:final private function isXEmbedServerRequested() : Bool;
 	
 	/**
 	* Returns whether the modal exclusion API is supported by the current toolkit.
@@ -446,7 +446,7 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function isModalExcludedSupported() : Bool;
+	@:require(java5) @:overload @:public @:static public static function isModalExcludedSupported() : Bool;
 	
 	/*
 	* Default implementation for isModalExcludedSupportedImpl(), returns false.
@@ -456,7 +456,7 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function isModalExcludedSupportedImpl() : Bool;
+	@:require(java5) @:overload @:protected private function isModalExcludedSupportedImpl() : Bool;
 	
 	/*
 	* Sets this window to be excluded from being modally blocked. When the
@@ -474,7 +474,7 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* @see sun.awt.SunToolkit#isModalExcludedSupported
 	* @see sun.awt.SunToolkit#isModalExcluded(java.awt.Window)
 	*/
-	@:overload public static function setModalExcluded(window : java.awt.Window) : Void;
+	@:overload @:public @:static public static function setModalExcluded(window : java.awt.Window) : Void;
 	
 	/*
 	* Returns whether the specified window is blocked by modal dialogs.
@@ -492,34 +492,34 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function isModalExcluded(window : java.awt.Window) : Bool;
+	@:require(java5) @:overload @:public @:static public static function isModalExcluded(window : java.awt.Window) : Bool;
 	
 	/**
 	* Overridden in XToolkit and WToolkit
 	*/
-	@:overload override public function isModalityTypeSupported(modalityType : java.awt.Dialog.Dialog_ModalityType) : Bool;
+	@:overload @:public override public function isModalityTypeSupported(modalityType : java.awt.Dialog.Dialog_ModalityType) : Bool;
 	
 	/**
 	* Overridden in XToolkit and WToolkit
 	*/
-	@:overload override public function isModalExclusionTypeSupported(exclusionType : java.awt.Dialog.Dialog_ModalExclusionType) : Bool;
+	@:overload @:public override public function isModalExclusionTypeSupported(exclusionType : java.awt.Dialog.Dialog_ModalExclusionType) : Bool;
 	
-	@:overload public function addModalityListener(listener : sun.awt.ModalityListener) : Void;
+	@:overload @:public public function addModalityListener(listener : sun.awt.ModalityListener) : Void;
 	
-	@:overload public function removeModalityListener(listener : sun.awt.ModalityListener) : Void;
+	@:overload @:public public function removeModalityListener(listener : sun.awt.ModalityListener) : Void;
 	
-	@:overload public function notifyModalityPushed(dialog : java.awt.Dialog) : Void;
+	@:overload @:public public function notifyModalityPushed(dialog : java.awt.Dialog) : Void;
 	
-	@:overload public function notifyModalityPopped(dialog : java.awt.Dialog) : Void;
+	@:overload @:public public function notifyModalityPopped(dialog : java.awt.Dialog) : Void;
 	
-	@:overload public static function isLightweightOrUnknown(comp : java.awt.Component) : Bool;
+	@:overload @:public @:static public static function isLightweightOrUnknown(comp : java.awt.Component) : Bool;
 	
-	public static var DEFAULT_WAIT_TIME(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_WAIT_TIME(default, null) : Int;
 	
 	/**
 	* Parameterless version of realsync which uses default timout (see DEFAUL_WAIT_TIME).
 	*/
-	@:overload public function realSync() : Void;
+	@:overload @:public public function realSync() : Void;
 	
 	/**
 	* Forces toolkit to synchronize with the native windowing
@@ -566,7 +566,7 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	*
 	* @param timeout the maximum time to wait in milliseconds, negative means "forever".
 	*/
-	@:overload public function realSync(timeout : haxe.Int64) : Void;
+	@:overload @:public public function realSync(timeout : haxe.Int64) : Void;
 	
 	/**
 	* Platform toolkits need to implement this method to perform the
@@ -576,7 +576,7 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* <code>true</code> if some events were processed,
 	* <code>false</code> otherwise.
 	*/
-	@:overload @:abstract private function syncNativeQueue(timeout : haxe.Int64) : Bool;
+	@:overload @:protected @:abstract private function syncNativeQueue(timeout : haxe.Int64) : Bool;
 	
 	/**
 	* Waits for the Java event queue to empty.  Ensures that all
@@ -585,7 +585,7 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* Should return <code>true</code> if more processing is
 	* necessary, <code>false</code> otherwise.
 	*/
-	@:overload @:final private function waitForIdle(timeout : haxe.Int64) : Bool;
+	@:overload @:protected @:final private function waitForIdle(timeout : haxe.Int64) : Bool;
 	
 	/**
 	* Grabs the mouse input for the given window.  The window must be
@@ -599,12 +599,12 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* about to happen.
 	* @see UngrabEvent
 	*/
-	@:overload @:abstract public function grab(w : java.awt.Window) : Void;
+	@:overload @:public @:abstract public function grab(w : java.awt.Window) : Void;
 	
 	/**
 	* Forces ungrab.  No event will be sent.
 	*/
-	@:overload @:abstract public function ungrab(w : java.awt.Window) : Void;
+	@:overload @:public @:abstract public function ungrab(w : java.awt.Window) : Void;
 	
 	/**
 	* Locates the splash screen library in a platform dependent way and closes
@@ -612,7 +612,7 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* @see java.awt.SplashScreen
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:native public static function closeSplashScreen() : Void;
+	@:require(java6) @:overload @:public @:static @:native public static function closeSplashScreen() : Void;
 	
 	/* Since Swing is the reason for this "extra condition" logic its
 	* worth documenting it in some detail.
@@ -638,13 +638,13 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* But it is expected this will be addressed within GTK and the font
 	* system so is a temporary and somewhat unlikely harmless corner case.
 	*/
-	@:overload public static function setAAFontSettingsCondition(extraCondition : Bool) : Void;
+	@:overload @:public @:static public static function setAAFontSettingsCondition(extraCondition : Bool) : Void;
 	
 	/* A variable defined for the convenience of JDK code */
-	public static var DESKTOPFONTHINTS(default, null) : String;
+	@:public @:static @:final public static var DESKTOPFONTHINTS(default, null) : String;
 	
 	/* Overridden by subclasses to return platform/desktop specific values */
-	@:overload private function getDesktopAAHints() : java.awt.RenderingHints;
+	@:overload @:protected private function getDesktopAAHints() : java.awt.RenderingHints;
 	
 	/* Subclass desktop property loading methods call this which
 	* in turn calls the appropriate subclass implementation of
@@ -652,49 +652,49 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* Its public rather than protected because subclasses may delegate
 	* to a helper class.
 	*/
-	@:overload public static function getDesktopFontHints() : java.awt.RenderingHints;
+	@:overload @:public @:static public static function getDesktopFontHints() : java.awt.RenderingHints;
 	
-	@:overload @:abstract public function isDesktopSupported() : Bool;
+	@:overload @:public @:abstract public function isDesktopSupported() : Bool;
 	
 	/*
 	* consumeNextKeyTyped() method is not currently used,
 	* however Swing could use it in the future.
 	*/
-	@:overload @:synchronized public static function consumeNextKeyTyped(keyEvent : java.awt.event.KeyEvent) : Void;
+	@:overload @:public @:static @:synchronized public static function consumeNextKeyTyped(keyEvent : java.awt.event.KeyEvent) : Void;
 	
-	@:overload private static function dumpPeers(aLog : sun.util.logging.PlatformLogger) : Void;
+	@:overload @:protected @:static private static function dumpPeers(aLog : sun.util.logging.PlatformLogger) : Void;
 	
 	/**
 	* Returns the <code>Window</code> ancestor of the component <code>comp</code>.
 	* @return Window ancestor of the component or component by itself if it is Window;
 	*         null, if component is not a part of window hierarchy
 	*/
-	@:overload public static function getContainingWindow(comp : java.awt.Component) : java.awt.Window;
+	@:overload @:public @:static public static function getContainingWindow(comp : java.awt.Component) : java.awt.Window;
 	
 	/**
 	* Returns the value of "sun.awt.disableMixing" property. Default
 	* value is {@code false}.
 	*/
-	@:overload @:synchronized public static function getSunAwtDisableMixing() : Bool;
+	@:overload @:public @:synchronized @:static public static function getSunAwtDisableMixing() : Bool;
 	
 	/**
 	* Returns true if the native GTK libraries are available.  The
 	* default implementation returns false, but UNIXToolkit overrides this
 	* method to provide a more specific answer.
 	*/
-	@:overload public function isNativeGTKAvailable() : Bool;
+	@:overload @:public public function isNativeGTKAvailable() : Bool;
 	
-	@:overload @:synchronized public function setWindowDeactivationTime(w : java.awt.Window, time : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function setWindowDeactivationTime(w : java.awt.Window, time : haxe.Int64) : Void;
 	
-	@:overload @:synchronized public function getWindowDeactivationTime(w : java.awt.Window) : haxe.Int64;
+	@:overload @:public @:synchronized public function getWindowDeactivationTime(w : java.awt.Window) : haxe.Int64;
 	
-	@:overload public function isWindowOpacitySupported() : Bool;
+	@:overload @:public public function isWindowOpacitySupported() : Bool;
 	
-	@:overload public function isWindowShapingSupported() : Bool;
+	@:overload @:public public function isWindowShapingSupported() : Bool;
 	
-	@:overload public function isWindowTranslucencySupported() : Bool;
+	@:overload @:public public function isWindowTranslucencySupported() : Bool;
 	
-	@:overload public function isTranslucencyCapable(gc : java.awt.GraphicsConfiguration) : Bool;
+	@:overload @:public public function isTranslucencyCapable(gc : java.awt.GraphicsConfiguration) : Bool;
 	
 	/**
 	* Returns whether or not a containing top level window for the passed
@@ -707,7 +707,7 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* is not enabled), {@code false} otherwise
 	* @see GraphicsDevice.WindowTranslucency#PERPIXEL_TRANSLUCENT
 	*/
-	@:overload public static function isContainingTopLevelOpaque(c : java.awt.Component) : Bool;
+	@:overload @:public @:static public static function isContainingTopLevelOpaque(c : java.awt.Component) : Bool;
 	
 	/**
 	* Returns whether or not a containing top level window for the passed
@@ -720,7 +720,7 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* 1.0f (which means that it is translucent), {@code false} otherwise
 	* @see GraphicsDevice.WindowTranslucency#TRANSLUCENT
 	*/
-	@:overload public static function isContainingTopLevelTranslucent(c : java.awt.Component) : Bool;
+	@:overload @:public @:static public static function isContainingTopLevelTranslucent(c : java.awt.Component) : Bool;
 	
 	/**
 	* Returns whether the native system requires using the peer.updateWindow()
@@ -729,12 +729,12 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* the X11 systems. On MS Windows this method is overriden in WToolkit
 	* to return true.
 	*/
-	@:overload public function needUpdateWindow() : Bool;
+	@:overload @:public public function needUpdateWindow() : Bool;
 	
 	/**
 	* Descendants of the SunToolkit should override and put their own logic here.
 	*/
-	@:overload public function getNumberOfButtons() : Int;
+	@:overload @:public public function getNumberOfButtons() : Int;
 	
 	/**
 	* Checks that the given object implements/extends the given
@@ -750,27 +750,32 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* @return true, if this object implements/extends the given
 	*         interface/class, false, otherwise, or if obj or type is null
 	*/
-	@:overload public static function isInstanceOf(obj : Dynamic, type : String) : Bool;
+	@:overload @:public @:static public static function isInstanceOf(obj : Dynamic, type : String) : Bool;
 	
-	@:overload public static function setSystemGenerated(e : java.awt.AWTEvent) : Void;
+	@:overload @:public @:static public static function setSystemGenerated(e : java.awt.AWTEvent) : Void;
 	
-	@:overload public static function isSystemGenerated(e : java.awt.AWTEvent) : Bool;
+	@:overload @:public @:static public static function isSystemGenerated(e : java.awt.AWTEvent) : Bool;
+	
+	/**
+	* Returns a new input method adapter descriptor for native input methods.
+	*/
+	@:overload @:public public function getInputMethodAdapterDescriptor() : java.awt.im.spi.InputMethodDescriptor;
 	
 	
 }
 @:native('sun$awt$SunToolkit$ModalityListenerList') @:internal extern class SunToolkit_ModalityListenerList implements sun.awt.ModalityListener
 {
-	@:overload public function modalityPushed(ev : sun.awt.ModalityEvent) : Void;
+	@:overload @:public public function modalityPushed(ev : sun.awt.ModalityEvent) : Void;
 	
-	@:overload public function modalityPopped(ev : sun.awt.ModalityEvent) : Void;
+	@:overload @:public public function modalityPopped(ev : sun.awt.ModalityEvent) : Void;
 	
 	
 }
 @:native('sun$awt$SunToolkit$OperationTimedOut') extern class SunToolkit_OperationTimedOut extends java.lang.RuntimeException
 {
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
@@ -780,15 +785,15 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 }
 @:native('sun$awt$SunToolkit$IllegalThreadException') extern class SunToolkit_IllegalThreadException extends java.lang.RuntimeException
 {
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:internal extern class PostEventQueue
 {
-	@:overload @:synchronized public function noEvents() : Bool;
+	@:overload @:public @:synchronized public function noEvents() : Bool;
 	
 	/*
 	* Continually post pending AWTEvents to the Java EventQueue. The method
@@ -799,7 +804,7 @@ extern class SunToolkit extends java.awt.Toolkit implements sun.awt.WindowClosin
 	* of EventQueue.postEvent() that uses pushPopLock, otherwise it could
 	* potentially lead to deadlock
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	
 }

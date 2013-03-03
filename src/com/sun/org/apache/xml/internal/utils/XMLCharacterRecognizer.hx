@@ -35,7 +35,7 @@ extern class XMLCharacterRecognizer
 	* @param ch Character to check as XML whitespace.
 	* @return =true if <var>ch</var> is XML whitespace; otherwise =false.
 	*/
-	@:overload public static function isWhiteSpace(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isWhiteSpace(ch : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Tell if the string is whitespace.
@@ -46,7 +46,7 @@ extern class XMLCharacterRecognizer
 	* @return True if the characters in the array are
 	* XML whitespace; otherwise, false.
 	*/
-	@:overload public static function isWhiteSpace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Bool;
+	@:overload @:public @:static public static function isWhiteSpace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Bool;
 	
 	/**
 	* Tell if the string is whitespace.
@@ -54,7 +54,7 @@ extern class XMLCharacterRecognizer
 	* @param buf StringBuffer to check as XML whitespace.
 	* @return True if characters in buffer are XML whitespace, false otherwise
 	*/
-	@:overload public static function isWhiteSpace(buf : java.lang.StringBuffer) : Bool;
+	@:overload @:public @:static public static function isWhiteSpace(buf : java.lang.StringBuffer) : Bool;
 	
 	/**
 	* Tell if the string is whitespace.
@@ -62,7 +62,7 @@ extern class XMLCharacterRecognizer
 	* @param s String to check as XML whitespace.
 	* @return True if characters in buffer are XML whitespace, false otherwise
 	*/
-	@:overload public static function isWhiteSpace(s : String) : Bool;
+	@:overload @:public @:static public static function isWhiteSpace(s : String) : Bool;
 	
 	
 }

@@ -44,7 +44,7 @@ extern interface FieldOutline
 	* This type allows the client of the outline to generate code
 	* to set/get values from a property.
 	*/
-	@:overload public function getRawType() : com.sun.codemodel.internal.JType;
+	@:overload @:public @:public public function getRawType() : com.sun.codemodel.internal.JType;
 	
 	/**
 	* Creates a new {@link FieldAccessor} of this field
@@ -54,7 +54,7 @@ extern interface FieldOutline
 	*      Evaluates to an object, and the field on this object
 	*      will be accessed.
 	*/
-	@:overload public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.outline.FieldAccessor;
+	@:overload @:public @:public public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.outline.FieldAccessor;
 	
 	
 }

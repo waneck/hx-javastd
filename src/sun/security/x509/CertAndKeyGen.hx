@@ -34,7 +34,7 @@ extern class CertAndKeyGen
 	*          "MD2WithRSA", "SHAwithDSA".
 	* @exception NoSuchAlgorithmException on unrecognized algorithms.
 	*/
-	@:overload public function new(keyType : String, sigAlg : String) : Void;
+	@:overload @:public public function new(keyType : String, sigAlg : String) : Void;
 	
 	/**
 	* Creates a CertAndKeyGen object for a particular key type,
@@ -47,7 +47,7 @@ extern class CertAndKeyGen
 	* @exception NoSuchAlgorithmException on unrecognized algorithms.
 	* @exception NoSuchProviderException on unrecognized providers.
 	*/
-	@:overload public function new(keyType : String, sigAlg : String, providerName : String) : Void;
+	@:overload @:public public function new(keyType : String, sigAlg : String, providerName : String) : Void;
 	
 	/**
 	* Sets the source of random numbers used when generating keys.
@@ -57,7 +57,7 @@ extern class CertAndKeyGen
 	* because you may be able to take advantage of strong sources
 	* of randomness/entropy in your environment.
 	*/
-	@:overload public function setRandom(generator : java.security.SecureRandom) : Void;
+	@:overload @:public public function setRandom(generator : java.security.SecureRandom) : Void;
 	
 	/**
 	* Generates a random public/private key pair, with a given key
@@ -76,7 +76,7 @@ extern class CertAndKeyGen
 	* @exception InvalidKeyException if the environment does not
 	*  provide X.509 public keys for this signature algorithm.
 	*/
-	@:overload public function generate(keyBits : Int) : Void;
+	@:overload @:public public function generate(keyBits : Int) : Void;
 	
 	/**
 	* Returns the public key of the generated key pair if it is of type
@@ -88,7 +88,7 @@ extern class CertAndKeyGen
 	* <code>X509Key</code>. Accordingly, the return type of this method
 	* should be <code>PublicKey</code>.
 	*/
-	@:overload public function getPublicKey() : sun.security.x509.X509Key;
+	@:overload @:public public function getPublicKey() : sun.security.x509.X509Key;
 	
 	/**
 	* Returns the private key of the generated key pair.
@@ -98,7 +98,7 @@ extern class CertAndKeyGen
 	* to securely authenticate specific entities ... that is a huge
 	* security risk!</em></STRONG>
 	*/
-	@:overload public function getPrivateKey() : java.security.PrivateKey;
+	@:overload @:public public function getPrivateKey() : java.security.PrivateKey;
 	
 	/**
 	* Returns a self-signed X.509v3 certificate for the public key.
@@ -119,9 +119,9 @@ extern class CertAndKeyGen
 	* @exception NoSuchAlgorithmException on unrecognized algorithms.
 	* @exception NoSuchProviderException on unrecognized providers.
 	*/
-	@:overload public function getSelfCertificate(myname : sun.security.x509.X500Name, firstDate : java.util.Date, validity : haxe.Int64) : java.security.cert.X509Certificate;
+	@:overload @:public public function getSelfCertificate(myname : sun.security.x509.X500Name, firstDate : java.util.Date, validity : haxe.Int64) : java.security.cert.X509Certificate;
 	
-	@:overload public function getSelfCertificate(myname : sun.security.x509.X500Name, validity : haxe.Int64) : java.security.cert.X509Certificate;
+	@:overload @:public public function getSelfCertificate(myname : sun.security.x509.X500Name, validity : haxe.Int64) : java.security.cert.X509Certificate;
 	
 	/**
 	* Returns a PKCS #10 certificate request.  The caller uses either
@@ -137,7 +137,7 @@ extern class CertAndKeyGen
 	* @exception InvalidKeyException on key handling errors.
 	* @exception SignatureException on signature handling errors.
 	*/
-	@:overload public function getCertRequest(myname : sun.security.x509.X500Name) : sun.security.pkcs.PKCS10;
+	@:overload @:public public function getCertRequest(myname : sun.security.x509.X500Name) : sun.security.pkcs.PKCS10;
 	
 	
 }

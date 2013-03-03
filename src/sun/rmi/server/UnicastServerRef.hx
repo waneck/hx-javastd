@@ -26,27 +26,27 @@ package sun.rmi.server;
 extern class UnicastServerRef extends sun.rmi.server.UnicastRef implements java.rmi.server.ServerRef implements sun.rmi.server.Dispatcher
 {
 	/** value of server call log property */
-	public static var logCalls(default, null) : Bool;
+	@:public @:static @:final public static var logCalls(default, null) : Bool;
 	
 	/** server call log */
-	public static var callLog(default, null) : sun.rmi.runtime.Log;
+	@:public @:static @:final public static var callLog(default, null) : sun.rmi.runtime.Log;
 	
 	/**
 	* Create a new (empty) Unicast server remote reference.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a Unicast server remote reference for a specified
 	* liveRef.
 	*/
-	@:overload public function new(ref : sun.rmi.transport.LiveRef) : Void;
+	@:overload @:public public function new(ref : sun.rmi.transport.LiveRef) : Void;
 	
 	/**
 	* Construct a Unicast server remote reference to be exported
 	* on the specified port.
 	*/
-	@:overload public function new(port : Int) : Void;
+	@:overload @:public public function new(port : Int) : Void;
 	
 	/**
 	* Constructs a UnicastServerRef to be exported on an
@@ -61,7 +61,7 @@ extern class UnicastServerRef extends sun.rmi.server.UnicastRef implements java.
 	* extends RemoteStub (instead of an instance of a dynamic proxy class
 	* which is not an instance of RemoteStub).
 	**/
-	@:overload public function new(forceStubUse : Bool) : Void;
+	@:overload @:public public function new(forceStubUse : Bool) : Void;
 	
 	/**
 	* With the addition of support for dynamic proxies as stubs, this
@@ -77,7 +77,7 @@ extern class UnicastServerRef extends sun.rmi.server.UnicastRef implements java.
 	* target defined by the impl, dispatcher (this) and stub.
 	* Export that target via the Ref.
 	**/
-	@:overload public function exportObject(impl : java.rmi.Remote, data : Dynamic) : java.rmi.server.RemoteStub;
+	@:overload @:public public function exportObject(impl : java.rmi.Remote, data : Dynamic) : java.rmi.server.RemoteStub;
 	
 	/**
 	* Export this object, create the skeleton and stubs for this
@@ -86,7 +86,7 @@ extern class UnicastServerRef extends sun.rmi.server.UnicastRef implements java.
 	* target defined by the impl, dispatcher (this) and stub.
 	* Export that target via the Ref.
 	*/
-	@:overload public function exportObject(impl : java.rmi.Remote, data : Dynamic, permanent : Bool) : java.rmi.Remote;
+	@:overload @:public public function exportObject(impl : java.rmi.Remote, data : Dynamic, permanent : Bool) : java.rmi.Remote;
 	
 	/**
 	* Return the hostname of the current client.  When called from a
@@ -95,12 +95,12 @@ extern class UnicastServerRef extends sun.rmi.server.UnicastRef implements java.
 	* @exception ServerNotActiveException If called outside of servicing
 	* a remote method invocation.
 	*/
-	@:overload public function getClientHost() : String;
+	@:overload @:public public function getClientHost() : String;
 	
 	/**
 	* Discovers and sets the appropriate skeleton for the impl.
 	*/
-	@:overload public function setSkeleton(impl : java.rmi.Remote) : Void;
+	@:overload @:public public function setSkeleton(impl : java.rmi.Remote) : Void;
 	
 	/**
 	* Call to dispatch to the remote object (on the server side).
@@ -113,9 +113,9 @@ extern class UnicastServerRef extends sun.rmi.server.UnicastRef implements java.
 	* @exception IOException If unable to marshal return result or
 	* release input or output streams
 	*/
-	@:overload public function dispatch(obj : java.rmi.Remote, call : java.rmi.server.RemoteCall) : Void;
+	@:overload @:public public function dispatch(obj : java.rmi.Remote, call : java.rmi.server.RemoteCall) : Void;
 	
-	@:overload private function unmarshalCustomCallData(_in : java.io.ObjectInput) : Void;
+	@:overload @:protected private function unmarshalCustomCallData(_in : java.io.ObjectInput) : Void;
 	
 	/**
 	* Handle server-side dispatch using the RMI 1.1 stub/skeleton
@@ -129,19 +129,19 @@ extern class UnicastServerRef extends sun.rmi.server.UnicastRef implements java.
 	* @exception IOException if unable to marshal return result or
 	* release input or output streams
 	*/
-	@:overload public function oldDispatch(obj : java.rmi.Remote, call : java.rmi.server.RemoteCall, op : Int) : Void;
+	@:overload @:public public function oldDispatch(obj : java.rmi.Remote, call : java.rmi.server.RemoteCall, op : Int) : Void;
 	
 	/**
 	* Clear the stack trace of the given Throwable by replacing it with
 	* an empty StackTraceElement array, and do the same for all of its
 	* chained causative exceptions.
 	*/
-	@:overload public static function clearStackTraces(t : java.lang.Throwable) : Void;
+	@:overload @:public @:static public static function clearStackTraces(t : java.lang.Throwable) : Void;
 	
 	/**
 	* Returns the class of the ref type to be serialized.
 	*/
-	@:overload override public function getRefClass(out : java.io.ObjectOutput) : String;
+	@:overload @:public override public function getRefClass(out : java.io.ObjectOutput) : String;
 	
 	/**
 	* Return the client remote reference for this remoteRef.
@@ -149,19 +149,19 @@ extern class UnicastServerRef extends sun.rmi.server.UnicastRef implements java.
 	* For a server remote reference, a client side one will have to
 	* found or created.
 	*/
-	@:overload private function getClientRef() : java.rmi.server.RemoteRef;
+	@:overload @:protected private function getClientRef() : java.rmi.server.RemoteRef;
 	
 	/**
 	* Write out external representation for remote ref.
 	*/
-	@:overload override public function writeExternal(out : java.io.ObjectOutput) : Void;
+	@:overload @:public override public function writeExternal(out : java.io.ObjectOutput) : Void;
 	
 	/**
 	* Read in external representation for remote ref.
 	* @exception ClassNotFoundException If the class for an object
 	* being restored cannot be found.
 	*/
-	@:overload override public function readExternal(_in : java.io.ObjectInput) : Void;
+	@:overload @:public override public function readExternal(_in : java.io.ObjectInput) : Void;
 	
 	
 }
@@ -171,7 +171,7 @@ extern class UnicastServerRef extends sun.rmi.server.UnicastRef implements java.
 **/
 @:native('sun$rmi$server$UnicastServerRef$HashToMethod_Maps') @:internal extern class UnicastServerRef_HashToMethod_Maps extends sun.rmi.server.WeakClassHashMap<java.util.Map<Null<haxe.Int64>, java.lang.reflect.Method>>
 {
-	@:overload override private function computeValue(remoteClass : Class<Dynamic>) : java.util.Map<Null<haxe.Int64>, java.lang.reflect.Method>;
+	@:overload @:protected override private function computeValue(remoteClass : Class<Dynamic>) : java.util.Map<Null<haxe.Int64>, java.lang.reflect.Method>;
 	
 	
 }

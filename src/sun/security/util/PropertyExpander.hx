@@ -25,9 +25,9 @@ package sun.security.util;
 */
 extern class PropertyExpander
 {
-	@:overload public static function expand(value : String) : String;
+	@:overload @:public @:static public static function expand(value : String) : String;
 	
-	@:overload public static function expand(value : String, encodeURL : Bool) : String;
+	@:overload @:public @:static public static function expand(value : String, encodeURL : Bool) : String;
 	
 	
 }
@@ -42,7 +42,7 @@ extern class PropertyExpander
 */
 @:native('sun$security$util$PropertyExpander$ExpandException') extern class PropertyExpander_ExpandException extends java.security.GeneralSecurityException
 {
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

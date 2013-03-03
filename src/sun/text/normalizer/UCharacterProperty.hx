@@ -39,41 +39,41 @@ extern class UCharacterProperty
 	/**
 	* Trie data
 	*/
-	public var m_trie_ : sun.text.normalizer.CharTrie;
+	@:public public var m_trie_ : sun.text.normalizer.CharTrie;
 	
 	/**
 	* Optimization
 	* CharTrie index array
 	*/
-	public var m_trieIndex_ : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var m_trieIndex_ : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Optimization
 	* CharTrie data array
 	*/
-	public var m_trieData_ : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var m_trieData_ : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Optimization
 	* CharTrie data offset
 	*/
-	public var m_trieInitialValue_ : Int;
+	@:public public var m_trieInitialValue_ : Int;
 	
 	/**
 	* Unicode version
 	*/
-	public var m_unicodeVersion_ : sun.text.normalizer.VersionInfo;
+	@:public public var m_unicodeVersion_ : sun.text.normalizer.VersionInfo;
 	
 	/** From uchar.c/uprops.icu properties vectors trie */
-	public static var SRC_PROPSVEC(default, null) : Int;
+	@:public @:static @:final public static var SRC_PROPSVEC(default, null) : Int;
 	
 	/** One more than the highest UPropertySource (SRC_) constant. */
-	public static var SRC_COUNT(default, null) : Int;
+	@:public @:static @:final public static var SRC_COUNT(default, null) : Int;
 	
 	/**
 	* Java friends implementation
 	*/
-	@:overload public function setIndexData(friendagent : sun.text.normalizer.CharTrie.CharTrie_FriendAgent) : Void;
+	@:overload @:public public function setIndexData(friendagent : sun.text.normalizer.CharTrie.CharTrie_FriendAgent) : Void;
 	
 	/**
 	* Gets the property value at the index.
@@ -83,7 +83,7 @@ extern class UCharacterProperty
 	* @param ch code point whose property value is to be retrieved
 	* @return property value of code point
 	*/
-	@:overload @:final public function getProperty(ch : Int) : Int;
+	@:overload @:public @:final public function getProperty(ch : Int) : Int;
 	
 	/**
 	* Getting the unsigned numeric value of a character embedded in the property
@@ -91,7 +91,7 @@ extern class UCharacterProperty
 	* @param prop the character
 	* @return unsigned numberic value
 	*/
-	@:overload public static function getUnsignedValue(prop : Int) : Int;
+	@:overload @:public @:static public static function getUnsignedValue(prop : Int) : Int;
 	
 	/**
 	* Gets the unicode additional properties.
@@ -101,7 +101,7 @@ extern class UCharacterProperty
 	* @param column
 	* @return unicode properties
 	*/
-	@:overload public function getAdditional(codepoint : Int, column : Int) : Int;
+	@:overload @:public public function getAdditional(codepoint : Int, column : Int) : Int;
 	
 	/**
 	* <p>Get the "age" of the code point.</p>
@@ -115,7 +115,7 @@ extern class UCharacterProperty
 	* @param codepoint The code point.
 	* @return the Unicode version number
 	*/
-	@:overload public function getAge(codepoint : Int) : sun.text.normalizer.VersionInfo;
+	@:overload @:public public function getAge(codepoint : Int) : sun.text.normalizer.VersionInfo;
 	
 	/**
 	* Forms a supplementary code point from the argument character<br>
@@ -125,13 +125,13 @@ extern class UCharacterProperty
 	* @param trail trailing surrogate character
 	* @return code point of the supplementary character
 	*/
-	@:overload public static function getRawSupplementary(lead : java.StdTypes.Char16, trail : java.StdTypes.Char16) : Int;
+	@:overload @:public @:static public static function getRawSupplementary(lead : java.StdTypes.Char16, trail : java.StdTypes.Char16) : Int;
 	
 	/**
 	* Loads the property data and initialize the UCharacterProperty instance.
 	* @throws MissingResourceException when data is missing or data has been corrupted
 	*/
-	@:overload public static function getInstance() : sun.text.normalizer.UCharacterProperty;
+	@:overload @:public @:static public static function getInstance() : sun.text.normalizer.UCharacterProperty;
 	
 	/**
 	* Checks if the argument c is to be treated as a white space in ICU
@@ -142,9 +142,9 @@ extern class UCharacterProperty
 	* @param c codepoint to check
 	* @return true if c is a ICU white space
 	*/
-	@:overload public static function isRuleWhiteSpace(c : Int) : Bool;
+	@:overload @:public @:static public static function isRuleWhiteSpace(c : Int) : Bool;
 	
-	@:overload public function upropsvec_addPropertyStarts(set : sun.text.normalizer.UnicodeSet) : Void;
+	@:overload @:public public function upropsvec_addPropertyStarts(set : sun.text.normalizer.UnicodeSet) : Void;
 	
 	
 }

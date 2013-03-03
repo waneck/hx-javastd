@@ -46,17 +46,17 @@ package com.sun.xml.internal.rngom.util;
 */
 extern class Localizer
 {
-	@:overload public function new(cls : Class<Dynamic>) : Void;
+	@:overload @:public public function new(cls : Class<Dynamic>) : Void;
 	
-	@:overload public function new(parent : com.sun.xml.internal.rngom.util.Localizer, cls : Class<Dynamic>) : Void;
+	@:overload @:public public function new(parent : com.sun.xml.internal.rngom.util.Localizer, cls : Class<Dynamic>) : Void;
 	
-	@:overload public function message(key : String) : String;
+	@:overload @:public public function message(key : String) : String;
 	
-	@:overload public function message(key : String, arg : Dynamic) : String;
+	@:overload @:public public function message(key : String, arg : Dynamic) : String;
 	
-	@:overload public function message(key : String, arg1 : Dynamic, arg2 : Dynamic) : String;
+	@:overload @:public public function message(key : String, arg1 : Dynamic, arg2 : Dynamic) : String;
 	
-	@:overload public function message(key : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public public function message(key : String, args : java.NativeArray<Dynamic>) : String;
 	
 	
 }

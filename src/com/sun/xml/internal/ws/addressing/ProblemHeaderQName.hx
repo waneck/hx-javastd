@@ -26,9 +26,9 @@ package com.sun.xml.internal.ws.addressing;
 extern class ProblemHeaderQName
 {
 	/** Creates a new instance of ProblemHeaderQName */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName) : Void;
 	
 	
 }

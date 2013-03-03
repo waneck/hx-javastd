@@ -25,7 +25,7 @@ package sun.awt.image;
 */
 @:internal extern class ImageConsumerQueue
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

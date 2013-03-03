@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.model.wsdl;
 */
 @:internal extern class AbstractObjectImpl implements com.sun.xml.internal.ws.api.model.wsdl.WSDLObject
 {
-	@:overload @:final public function getLocation() : org.xml.sax.Locator;
+	@:overload @:public @:final public function getLocation() : org.xml.sax.Locator;
 	
 	
 }

@@ -25,17 +25,17 @@ package com.sun.codemodel.internal;
 */
 @:internal extern class JGenerifiableImpl implements com.sun.codemodel.internal.JGenerifiable implements com.sun.codemodel.internal.JDeclaration
 {
-	@:overload @:abstract private function owner() : com.sun.codemodel.internal.JCodeModel;
+	@:overload @:protected @:abstract private function owner() : com.sun.codemodel.internal.JCodeModel;
 	
-	@:overload public function declare(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function declare(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
-	@:overload public function generify(name : String) : com.sun.codemodel.internal.JTypeVar;
+	@:overload @:public public function generify(name : String) : com.sun.codemodel.internal.JTypeVar;
 	
-	@:overload public function generify(name : String, bound : Class<Dynamic>) : com.sun.codemodel.internal.JTypeVar;
+	@:overload @:public public function generify(name : String, bound : Class<Dynamic>) : com.sun.codemodel.internal.JTypeVar;
 	
-	@:overload public function generify(name : String, bound : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JTypeVar;
+	@:overload @:public public function generify(name : String, bound : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JTypeVar;
 	
-	@:overload public function typeParams() : java.NativeArray<com.sun.codemodel.internal.JTypeVar>;
+	@:overload @:public public function typeParams() : java.NativeArray<com.sun.codemodel.internal.JTypeVar>;
 	
 	
 }

@@ -37,14 +37,14 @@ package java.nio;
 	* multibyte value are ordered from most significant to least significant.
 	* </p>
 	*/
-	public static var BIG_ENDIAN(default, null) : java.nio.ByteOrder;
+	@:public @:static @:final public static var BIG_ENDIAN(default, null) : java.nio.ByteOrder;
 	
 	/**
 	* Constant denoting little-endian byte order.  In this order, the bytes of
 	* a multibyte value are ordered from least significant to most
 	* significant.  </p>
 	*/
-	public static var LITTLE_ENDIAN(default, null) : java.nio.ByteOrder;
+	@:public @:static @:final public static var LITTLE_ENDIAN(default, null) : java.nio.ByteOrder;
 	
 	/**
 	* Retrieves the native byte order of the underlying platform.
@@ -57,7 +57,7 @@ package java.nio;
 	* @return  The native byte order of the hardware upon which this Java
 	*          virtual machine is running
 	*/
-	@:overload public static function nativeOrder() : java.nio.ByteOrder;
+	@:overload @:public @:static public static function nativeOrder() : java.nio.ByteOrder;
 	
 	/**
 	* Constructs a string describing this object.
@@ -68,7 +68,7 @@ package java.nio;
 	*
 	* @return  The specified string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

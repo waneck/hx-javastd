@@ -22,10 +22,10 @@ package com.sun.org.apache.xml.internal.security.transforms.implementations;
 extern class TransformXPointer extends com.sun.org.apache.xml.internal.security.transforms.TransformSpi
 {
 	/** Field implementedTransformURI */
-	public static var implementedTransformURI(default, null) : String;
+	@:public @:static @:final public static var implementedTransformURI(default, null) : String;
 	
 	/** @inheritDoc */
-	@:overload override private function engineGetURI() : String;
+	@:overload @:protected override private function engineGetURI() : String;
 	
 	/**
 	* Method enginePerformTransform
@@ -35,7 +35,7 @@ extern class TransformXPointer extends com.sun.org.apache.xml.internal.security.
 	* @throws TransformationException
 	*
 	*/
-	@:overload override private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:protected override private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	
 }

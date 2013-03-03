@@ -32,7 +32,7 @@ extern class QDecoderStream extends com.sun.xml.internal.messaging.saaj.packagin
 	* Create a Q-decoder that decodes the specified input stream.
 	* @param in        the input stream
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Read the next decoded byte from this input stream. The byte
@@ -46,7 +46,7 @@ extern class QDecoderStream extends com.sun.xml.internal.messaging.saaj.packagin
 	*             stream is reached.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	
 }

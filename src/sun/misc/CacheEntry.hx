@@ -25,7 +25,7 @@ package sun.misc;
 */
 @:internal extern class CacheEntry extends sun.misc.Ref
 {
-	@:overload public function reconstitute() : Dynamic;
+	@:overload @:public override public function reconstitute() : Dynamic;
 	
 	
 }
@@ -43,38 +43,38 @@ extern class Cache extends java.util.Dictionary<Dynamic, Dynamic>
 	* @exception IllegalArgumentException If the load factor is
 	* less than or equal to zero.
 	*/
-	@:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
 	/**
 	* Constructs a new, empty Cache with the specified initial
 	* capacity.
 	* @param initialCapacity the initial number of buckets
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs a new, empty Cache. A default capacity and load factor
 	* is used. Note that the Cache will automatically grow when it gets
 	* full.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the number of elements contained within the Cache.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns true if the Cache contains no elements.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns an enumeration of the Cache's keys.
 	* @see Cache#elements
 	* @see Enumeration
 	*/
-	@:overload @:synchronized public function keys() : java.util.Enumeration<Dynamic>;
+	@:overload @:public @:synchronized override public function keys() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Returns an enumeration of the elements. Use the Enumeration methods
@@ -82,7 +82,7 @@ extern class Cache extends java.util.Dictionary<Dynamic, Dynamic>
 	* @see Cache#keys
 	* @see Enumeration
 	*/
-	@:overload @:synchronized public function elements() : java.util.Enumeration<Dynamic>;
+	@:overload @:public @:synchronized override public function elements() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Gets the object associated with the specified key in the Cache.
@@ -91,14 +91,14 @@ extern class Cache extends java.util.Dictionary<Dynamic, Dynamic>
 	*          is not defined in the hash table.
 	* @see Cache#put
 	*/
-	@:overload @:synchronized public function get(key : Dynamic) : Dynamic;
+	@:overload @:public @:synchronized override public function get(key : Dynamic) : Dynamic;
 	
 	/**
 	* Rehashes the contents of the table into a bigger table.
 	* This is method is called automatically when the Cache's
 	* size exceeds the threshold.
 	*/
-	@:overload private function rehash() : Void;
+	@:overload @:protected private function rehash() : Void;
 	
 	/**
 	* Puts the specified element into the Cache, using the specified
@@ -111,7 +111,7 @@ extern class Cache extends java.util.Dictionary<Dynamic, Dynamic>
 	* element is null.
 	* @see Cache#get
 	*/
-	@:overload @:synchronized public function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:overload @:public @:synchronized override public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
 	/**
 	* Removes the element corresponding to the key. Does nothing if the
@@ -119,15 +119,15 @@ extern class Cache extends java.util.Dictionary<Dynamic, Dynamic>
 	* @param key the key that needs to be removed
 	* @return the value of key, or null if the key was not found.
 	*/
-	@:overload @:synchronized public function remove(key : Dynamic) : Dynamic;
+	@:overload @:public @:synchronized override public function remove(key : Dynamic) : Dynamic;
 	
 	
 }
 @:internal extern class CacheEnumerator implements java.util.Enumeration<Dynamic>
 {
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
 	
 }

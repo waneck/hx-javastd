@@ -32,7 +32,7 @@ extern class Mac implements java.lang.Cloneable
 	* @param provider the provider
 	* @param algorithm the algorithm
 	*/
-	@:overload private function new(macSpi : javax.crypto.MacSpi, provider : java.security.Provider, algorithm : String) : Void;
+	@:overload @:protected private function new(macSpi : javax.crypto.MacSpi, provider : java.security.Provider, algorithm : String) : Void;
 	
 	/**
 	* Returns the algorithm name of this <code>Mac</code> object.
@@ -43,7 +43,7 @@ extern class Mac implements java.lang.Cloneable
 	*
 	* @return the algorithm name of this <code>Mac</code> object.
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Returns a <code>Mac</code> object that implements the
@@ -72,7 +72,7 @@ extern class Mac implements java.lang.Cloneable
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String) : javax.crypto.Mac;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String) : javax.crypto.Mac;
 	
 	/**
 	* Returns a <code>Mac</code> object that implements the
@@ -108,7 +108,7 @@ extern class Mac implements java.lang.Cloneable
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : String) : javax.crypto.Mac;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String, provider : String) : javax.crypto.Mac;
 	
 	/**
 	* Returns a <code>Mac</code> object that implements the
@@ -138,21 +138,21 @@ extern class Mac implements java.lang.Cloneable
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.crypto.Mac;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.crypto.Mac;
 	
 	/**
 	* Returns the provider of this <code>Mac</code> object.
 	*
 	* @return the provider of this <code>Mac</code> object.
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Returns the length of the MAC in bytes.
 	*
 	* @return the MAC length in bytes.
 	*/
-	@:overload @:final public function getMacLength() : Int;
+	@:overload @:public @:final public function getMacLength() : Int;
 	
 	/**
 	* Initializes this <code>Mac</code> object with the given key.
@@ -162,7 +162,7 @@ extern class Mac implements java.lang.Cloneable
 	* @exception InvalidKeyException if the given key is inappropriate for
 	* initializing this MAC.
 	*/
-	@:overload @:final public function init(key : java.security.Key) : Void;
+	@:overload @:public @:final public function init(key : java.security.Key) : Void;
 	
 	/**
 	* Initializes this <code>Mac</code> object with the given key and
@@ -176,7 +176,7 @@ extern class Mac implements java.lang.Cloneable
 	* @exception InvalidAlgorithmParameterException if the given algorithm
 	* parameters are inappropriate for this MAC.
 	*/
-	@:overload @:final public function init(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:public @:final public function init(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Processes the given byte.
@@ -186,7 +186,7 @@ extern class Mac implements java.lang.Cloneable
 	* @exception IllegalStateException if this <code>Mac</code> has not been
 	* initialized.
 	*/
-	@:overload @:final public function update(input : java.StdTypes.Int8) : Void;
+	@:overload @:public @:final public function update(input : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Processes the given array of bytes.
@@ -196,7 +196,7 @@ extern class Mac implements java.lang.Cloneable
 	* @exception IllegalStateException if this <code>Mac</code> has not been
 	* initialized.
 	*/
-	@:overload @:final public function update(input : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:final public function update(input : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Processes the first <code>len</code> bytes in <code>input</code>,
@@ -209,7 +209,7 @@ extern class Mac implements java.lang.Cloneable
 	* @exception IllegalStateException if this <code>Mac</code> has not been
 	* initialized.
 	*/
-	@:overload @:final public function update(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:public @:final public function update(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* Processes <code>input.remaining()</code> bytes in the ByteBuffer
@@ -223,7 +223,7 @@ extern class Mac implements java.lang.Cloneable
 	* initialized.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function update(input : java.nio.ByteBuffer) : Void;
+	@:require(java5) @:overload @:public @:final public function update(input : java.nio.ByteBuffer) : Void;
 	
 	/**
 	* Finishes the MAC operation.
@@ -244,7 +244,7 @@ extern class Mac implements java.lang.Cloneable
 	* @exception IllegalStateException if this <code>Mac</code> has not been
 	* initialized.
 	*/
-	@:overload @:final public function doFinal() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function doFinal() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Finishes the MAC operation.
@@ -272,7 +272,7 @@ extern class Mac implements java.lang.Cloneable
 	* @exception IllegalStateException if this <code>Mac</code> has not been
 	* initialized.
 	*/
-	@:overload @:final public function doFinal(output : java.NativeArray<java.StdTypes.Int8>, outOffset : Int) : Void;
+	@:overload @:public @:final public function doFinal(output : java.NativeArray<java.StdTypes.Int8>, outOffset : Int) : Void;
 	
 	/**
 	* Processes the given array of bytes and finishes the MAC operation.
@@ -294,7 +294,7 @@ extern class Mac implements java.lang.Cloneable
 	* @exception IllegalStateException if this <code>Mac</code> has not been
 	* initialized.
 	*/
-	@:overload @:final public function doFinal(input : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function doFinal(input : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Resets this <code>Mac</code> object.
@@ -310,7 +310,7 @@ extern class Mac implements java.lang.Cloneable
 	* it must be reinitialized via a call to <code>init(Key)</code> or
 	* <code>init(Key, AlgorithmParameterSpec)</code>.
 	*/
-	@:overload @:final public function reset() : Void;
+	@:overload @:public @:final public function reset() : Void;
 	
 	/**
 	* Returns a clone if the provider implementation is cloneable.
@@ -320,7 +320,7 @@ extern class Mac implements java.lang.Cloneable
 	* @exception CloneNotSupportedException if this is called on a
 	* delegate that does not support <code>Cloneable</code>.
 	*/
-	@:overload @:final public function clone() : Dynamic;
+	@:overload @:public @:final public function clone() : Dynamic;
 	
 	
 }

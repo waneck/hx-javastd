@@ -36,7 +36,7 @@ extern interface ReferenceType extends com.sun.jdi.Type extends java.lang.Compar
 	* represented by {@link java.lang.Integer#TYPE Integer.TYPE}.
 	* @return a string containing the type name.
 	*/
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/**
 	* Gets the generic signature for this type if there is one.

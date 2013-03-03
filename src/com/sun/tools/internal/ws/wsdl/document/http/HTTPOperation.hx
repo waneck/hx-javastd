@@ -30,15 +30,15 @@ extern class HTTPOperation extends com.sun.tools.internal.ws.wsdl.framework.Exte
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function getLocation() : String;
+	@:overload @:public public function getLocation() : String;
 	
-	@:overload public function setLocation(s : String) : Void;
+	@:overload @:public public function setLocation(s : String) : Void;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload @:public override public function validateThis() : Void;
 	
 	
 }

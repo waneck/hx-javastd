@@ -25,23 +25,23 @@ package sun.print;
 */
 extern class PrinterGraphicsConfig extends java.awt.GraphicsConfiguration
 {
-	@:overload public function new(printerID : String, deviceTx : java.awt.geom.AffineTransform, pageWid : Int, pageHgt : Int) : Void;
+	@:overload @:public public function new(printerID : String, deviceTx : java.awt.geom.AffineTransform, pageWid : Int, pageHgt : Int) : Void;
 	
 	/**
 	* Return the graphics device associated with this configuration.
 	*/
-	@:overload public function getDevice() : java.awt.GraphicsDevice;
+	@:overload @:public override public function getDevice() : java.awt.GraphicsDevice;
 	
 	/**
 	* Returns the color model associated with this configuration.
 	*/
-	@:overload public function getColorModel() : java.awt.image.ColorModel;
+	@:overload @:public override public function getColorModel() : java.awt.image.ColorModel;
 	
 	/**
 	* Returns the color model associated with this configuration that
 	* supports the specified transparency.
 	*/
-	@:overload public function getColorModel(transparency : Int) : java.awt.image.ColorModel;
+	@:overload @:public override public function getColorModel(transparency : Int) : java.awt.image.ColorModel;
 	
 	/**
 	* Returns the default Transform for this configuration.  This
@@ -52,7 +52,7 @@ extern class PrinterGraphicsConfig extends java.awt.GraphicsConfiguration
 	* increasing to the right and Y coordinates increasing downwards.
 	* For image buffers, this Transform will be the Identity transform.
 	*/
-	@:overload public function getDefaultTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public override public function getDefaultTransform() : java.awt.geom.AffineTransform;
 	
 	/**
 	*
@@ -73,9 +73,9 @@ extern class PrinterGraphicsConfig extends java.awt.GraphicsConfiguration
 	* For image buffers, this Transform will be the Identity transform,
 	* since there is no valid distance measurement.
 	*/
-	@:overload public function getNormalizingTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public override public function getNormalizingTransform() : java.awt.geom.AffineTransform;
 	
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public override public function getBounds() : java.awt.Rectangle;
 	
 	
 }

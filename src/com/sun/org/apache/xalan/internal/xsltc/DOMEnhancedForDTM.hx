@@ -35,23 +35,23 @@ package com.sun.org.apache.xalan.internal.xsltc;
 */
 extern interface DOMEnhancedForDTM extends com.sun.org.apache.xalan.internal.xsltc.DOM
 {
-	@:overload public function getMapping(names : java.NativeArray<String>, uris : java.NativeArray<String>, types : java.NativeArray<Int>) : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getMapping(names : java.NativeArray<String>, uris : java.NativeArray<String>, types : java.NativeArray<Int>) : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public function getReverseMapping(names : java.NativeArray<String>, uris : java.NativeArray<String>, types : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public public function getReverseMapping(names : java.NativeArray<String>, uris : java.NativeArray<String>, types : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
-	@:overload public function getNamespaceMapping(namespaces : java.NativeArray<String>) : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getNamespaceMapping(namespaces : java.NativeArray<String>) : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public function getReverseNamespaceMapping(namespaces : java.NativeArray<String>) : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getReverseNamespaceMapping(namespaces : java.NativeArray<String>) : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public function getDocumentURI() : String;
+	@:overload @:public public function getDocumentURI() : String;
 	
-	@:overload public function setDocumentURI(uri : String) : Void;
+	@:overload @:public public function setDocumentURI(uri : String) : Void;
 	
-	@:overload public function getExpandedTypeID2(nodeHandle : Int) : Int;
+	@:overload @:public public function getExpandedTypeID2(nodeHandle : Int) : Int;
 	
-	@:overload public function hasDOMSource() : Bool;
+	@:overload @:public public function hasDOMSource() : Bool;
 	
-	@:overload public function getElementById(idString : String) : Int;
+	@:overload @:public public function getElementById(idString : String) : Int;
 	
 	
 }

@@ -36,27 +36,27 @@ package java.nio;
 */
 @:internal extern class HeapDoubleBufferR extends java.nio.HeapDoubleBuffer
 {
-	@:overload private function new(buf : java.NativeArray<Float>, mark : Int, pos : Int, lim : Int, cap : Int, off : Int) : Void;
+	@:overload @:protected private function new(buf : java.NativeArray<Float>, mark : Int, pos : Int, lim : Int, cap : Int, off : Int) : Void;
 	
-	@:overload override public function slice() : java.nio.DoubleBuffer;
+	@:overload @:public override public function slice() : java.nio.DoubleBuffer;
 	
-	@:overload override public function duplicate() : java.nio.DoubleBuffer;
+	@:overload @:public override public function duplicate() : java.nio.DoubleBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.DoubleBuffer;
+	@:overload @:public override public function asReadOnlyBuffer() : java.nio.DoubleBuffer;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload override public function put(x : Float) : java.nio.DoubleBuffer;
+	@:overload @:public override public function put(x : Float) : java.nio.DoubleBuffer;
 	
-	@:overload override public function put(i : Int, x : Float) : java.nio.DoubleBuffer;
+	@:overload @:public override public function put(i : Int, x : Float) : java.nio.DoubleBuffer;
 	
-	@:overload override public function put(src : java.NativeArray<Float>, offset : Int, length : Int) : java.nio.DoubleBuffer;
+	@:overload @:public override public function put(src : java.NativeArray<Float>, offset : Int, length : Int) : java.nio.DoubleBuffer;
 	
-	@:overload override public function put(src : java.nio.DoubleBuffer) : java.nio.DoubleBuffer;
+	@:overload @:public override public function put(src : java.nio.DoubleBuffer) : java.nio.DoubleBuffer;
 	
-	@:overload override public function compact() : java.nio.DoubleBuffer;
+	@:overload @:public override public function compact() : java.nio.DoubleBuffer;
 	
-	@:overload override public function order() : java.nio.ByteOrder;
+	@:overload @:public override public function order() : java.nio.ByteOrder;
 	
 	
 }

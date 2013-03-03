@@ -52,7 +52,7 @@ package java.io;
 	*
 	* @param      in   the underlying input stream.
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Reads the next byte of data from this input stream. The value
@@ -77,7 +77,7 @@ package java.io;
 	* @see        java.io.FilterInputStream#in
 	* @see        java.io.LineNumberInputStream#getLineNumber()
 	*/
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads up to <code>len</code> bytes of data from this input stream
@@ -96,7 +96,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.LineNumberInputStream#read()
 	*/
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips over and discards <code>n</code> bytes of data from this
@@ -115,7 +115,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Sets the line number to the specified argument.
@@ -123,7 +123,7 @@ package java.io;
 	* @param      lineNumber   the new line number.
 	* @see #getLineNumber
 	*/
-	@:overload public function setLineNumber(lineNumber : Int) : Void;
+	@:overload @:public public function setLineNumber(lineNumber : Int) : Void;
 	
 	/**
 	* Returns the current line number.
@@ -131,7 +131,7 @@ package java.io;
 	* @return     the current line number.
 	* @see #setLineNumber
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* Returns the number of bytes that can be read from this input
@@ -151,7 +151,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	/**
 	* Marks the current position in this input stream. A subsequent
@@ -168,7 +168,7 @@ package java.io;
 	* @see     java.io.FilterInputStream#in
 	* @see     java.io.LineNumberInputStream#reset()
 	*/
-	@:overload public function mark(readlimit : Int) : Void;
+	@:overload @:public override public function mark(readlimit : Int) : Void;
 	
 	/**
 	* Repositions this stream to the position at the time the
@@ -193,7 +193,7 @@ package java.io;
 	* @see        java.io.FilterInputStream#in
 	* @see        java.io.LineNumberInputStream#mark(int)
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }

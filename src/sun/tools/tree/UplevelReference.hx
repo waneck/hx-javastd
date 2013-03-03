@@ -28,7 +28,7 @@ extern class UplevelReference implements sun.tools.java.Constants
 	/**
 	* constructor
 	*/
-	@:overload public function new(client : sun.tools.java.ClassDefinition, target : sun.tools.tree.LocalMember) : Void;
+	@:overload @:public public function new(client : sun.tools.java.ClassDefinition, target : sun.tools.tree.LocalMember) : Void;
 	
 	/**
 	* Insert self into a list of references.
@@ -37,43 +37,43 @@ extern class UplevelReference implements sun.tools.java.Constants
 	* and (b) to allow uplevel "this" parameters to come at the
 	* front of every argument list they appear in.
 	*/
-	@:overload public function insertInto(references : sun.tools.tree.UplevelReference) : sun.tools.tree.UplevelReference;
+	@:overload @:public public function insertInto(references : sun.tools.tree.UplevelReference) : sun.tools.tree.UplevelReference;
 	
 	/**
 	* Tells if self precedes the other in the canonical ordering.
 	*/
-	@:overload @:final public function isEarlierThan(other : sun.tools.tree.UplevelReference) : Bool;
+	@:overload @:public @:final public function isEarlierThan(other : sun.tools.tree.UplevelReference) : Bool;
 	
 	/**
 	* the target of this reference
 	*/
-	@:overload @:final public function getTarget() : sun.tools.tree.LocalMember;
+	@:overload @:public @:final public function getTarget() : sun.tools.tree.LocalMember;
 	
 	/**
 	* the local argument for this reference
 	*/
-	@:overload @:final public function getLocalArgument() : sun.tools.tree.LocalMember;
+	@:overload @:public @:final public function getLocalArgument() : sun.tools.tree.LocalMember;
 	
 	/**
 	* the field allocated in the client for this reference
 	*/
-	@:overload @:final public function getLocalField() : sun.tools.java.MemberDefinition;
+	@:overload @:public @:final public function getLocalField() : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Get the local field, creating one if necessary.
 	* The client class must not be frozen.
 	*/
-	@:overload @:final public function getLocalField(env : sun.tools.java.Environment) : sun.tools.java.MemberDefinition;
+	@:overload @:public @:final public function getLocalField(env : sun.tools.java.Environment) : sun.tools.java.MemberDefinition;
 	
 	/**
 	* the client class
 	*/
-	@:overload @:final public function getClient() : sun.tools.java.ClassDefinition;
+	@:overload @:public @:final public function getClient() : sun.tools.java.ClassDefinition;
 	
 	/**
 	* the next reference in the client's list
 	*/
-	@:overload @:final public function getNext() : sun.tools.tree.UplevelReference;
+	@:overload @:public @:final public function getNext() : sun.tools.tree.UplevelReference;
 	
 	/**
 	* Tell if this uplevel reference is the up-level "this" pointer
@@ -81,7 +81,7 @@ extern class UplevelReference implements sun.tools.java.Constants
 	* than others, because they affect constructor calls across
 	* compilation units.
 	*/
-	@:overload public function isClientOuterField() : Bool;
+	@:overload @:public public function isClientOuterField() : Bool;
 	
 	/**
 	* Tell if my local argument is directly available in this context.
@@ -90,7 +90,7 @@ extern class UplevelReference implements sun.tools.java.Constants
 	* This must be called in a context which is local
 	* to the client of the uplevel reference.
 	*/
-	@:overload public function localArgumentAvailable(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Bool;
+	@:overload @:public public function localArgumentAvailable(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Bool;
 	
 	/**
 	* Process an uplevel reference.
@@ -98,7 +98,7 @@ extern class UplevelReference implements sun.tools.java.Constants
 	* to build a "localField" instance variable, which
 	* is done (lazily) when localArgumentAvailable() proves false.
 	*/
-	@:overload public function noteReference(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Void;
+	@:overload @:public public function noteReference(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Void;
 	
 	/**
 	* Assuming noteReference() is all taken care of,
@@ -107,13 +107,13 @@ extern class UplevelReference implements sun.tools.java.Constants
 	* This must be called in a context which is local
 	* to the client of the uplevel reference.
 	*/
-	@:overload public function makeLocalReference(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload @:public public function makeLocalReference(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* As with makeLocalReference(), build a locally-usable reference.
 	* Ignore the availability of local arguments; always use a class field.
 	*/
-	@:overload public function makeFieldReference(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload @:public public function makeFieldReference(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* During the inline phase, call this on a list of references
@@ -124,21 +124,21 @@ extern class UplevelReference implements sun.tools.java.Constants
 	* If any reference is a "ClientOuterField", it is skipped
 	* by this method (and by willCodeArguments).  This is because
 	*/
-	@:overload public function willCodeArguments(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Void;
+	@:overload @:public public function willCodeArguments(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Void;
 	
 	/**
 	* Code is being generated for a call to a constructor of
 	* the client class.  Push an argument for the constructor.
 	*/
-	@:overload public function codeArguments(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler, where : haxe.Int64, conField : sun.tools.java.MemberDefinition) : Void;
+	@:overload @:public public function codeArguments(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler, where : haxe.Int64, conField : sun.tools.java.MemberDefinition) : Void;
 	
 	/**
 	* Code is being generated for a constructor of the client class.
 	* Emit code which initializes the instance.
 	*/
-	@:overload public function codeInitialization(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler, where : haxe.Int64, conField : sun.tools.java.MemberDefinition) : Void;
+	@:overload @:public public function codeInitialization(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler, where : haxe.Int64, conField : sun.tools.java.MemberDefinition) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

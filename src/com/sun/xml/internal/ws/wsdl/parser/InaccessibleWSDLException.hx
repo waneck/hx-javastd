@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.wsdl.parser;
 */
 extern class InaccessibleWSDLException extends javax.xml.ws.WebServiceException
 {
-	@:overload public function new(errors : java.util.List<java.lang.Throwable>) : Void;
+	@:overload @:public public function new(errors : java.util.List<java.lang.Throwable>) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Returns a read-only list of {@link InaccessibleWSDLException}s
@@ -36,19 +36,19 @@ extern class InaccessibleWSDLException extends javax.xml.ws.WebServiceException
 	* @return
 	*      a non-null list.
 	*/
-	@:overload public function getErrors() : java.util.List<java.lang.Throwable>;
+	@:overload @:public public function getErrors() : java.util.List<java.lang.Throwable>;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$wsdl$parser$InaccessibleWSDLException$Builder') extern class InaccessibleWSDLException_Builder implements com.sun.xml.internal.ws.wsdl.parser.ErrorHandler
 {
-	@:overload public function error(e : java.lang.Throwable) : Void;
+	@:overload @:public public function error(e : java.lang.Throwable) : Void;
 	
 	/**
 	* If an error was reported, throw the exception.
 	* Otherwise exit normally.
 	*/
-	@:overload public function check() : Void;
+	@:overload @:public public function check() : Void;
 	
 	
 }

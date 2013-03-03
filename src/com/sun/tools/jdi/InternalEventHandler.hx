@@ -25,7 +25,7 @@ package com.sun.tools.jdi;
 */
 extern class InternalEventHandler implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

@@ -33,7 +33,7 @@ extern class DOMUtils
 	* @param node the node
 	* @return the owner document
 	*/
-	@:overload public static function getOwnerDocument(node : org.w3c.dom.Node) : org.w3c.dom.Document;
+	@:overload @:public @:static public static function getOwnerDocument(node : org.w3c.dom.Node) : org.w3c.dom.Document;
 	
 	/**
 	* Creates an element in the specified namespace, with the specified tag
@@ -45,7 +45,7 @@ extern class DOMUtils
 	* @param prefix the namespace prefix
 	* @return the newly created element
 	*/
-	@:overload public static function createElement(doc : org.w3c.dom.Document, tag : String, nsURI : String, prefix : String) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function createElement(doc : org.w3c.dom.Document, tag : String, nsURI : String, prefix : String) : org.w3c.dom.Element;
 	
 	/**
 	* Sets an element's attribute (using DOM level 2) with the
@@ -55,7 +55,7 @@ extern class DOMUtils
 	* @param name the name of the attribute
 	* @param value the attribute value. If null, no attribute is set.
 	*/
-	@:overload public static function setAttribute(elem : org.w3c.dom.Element, name : String, value : String) : Void;
+	@:overload @:public @:static public static function setAttribute(elem : org.w3c.dom.Element, name : String, value : String) : Void;
 	
 	/**
 	* Sets an element's attribute (using DOM level 2) with the
@@ -67,7 +67,7 @@ extern class DOMUtils
 	* @param name the name of the attribute
 	* @param value the attribute value. If null, no attribute is set.
 	*/
-	@:overload public static function setAttributeID(elem : org.w3c.dom.Element, name : String, value : String) : Void;
+	@:overload @:public @:static public static function setAttributeID(elem : org.w3c.dom.Element, name : String, value : String) : Void;
 	
 	/**
 	* Returns the first child element of the specified node, or null if there
@@ -78,7 +78,7 @@ extern class DOMUtils
 	*    is no such element
 	* @throws NullPointerException if <code>node == null</code>
 	*/
-	@:overload public static function getFirstChildElement(node : org.w3c.dom.Node) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function getFirstChildElement(node : org.w3c.dom.Node) : org.w3c.dom.Element;
 	
 	/**
 	* Returns the last child element of the specified node, or null if there
@@ -89,7 +89,7 @@ extern class DOMUtils
 	*    is no such element
 	* @throws NullPointerException if <code>node == null</code>
 	*/
-	@:overload public static function getLastChildElement(node : org.w3c.dom.Node) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function getLastChildElement(node : org.w3c.dom.Node) : org.w3c.dom.Element;
 	
 	/**
 	* Returns the next sibling element of the specified node, or null if there
@@ -100,7 +100,7 @@ extern class DOMUtils
 	*    is no such element
 	* @throws NullPointerException if <code>node == null</code>
 	*/
-	@:overload public static function getNextSiblingElement(node : org.w3c.dom.Node) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function getNextSiblingElement(node : org.w3c.dom.Node) : org.w3c.dom.Element;
 	
 	/**
 	* Returns the attribute value for the attribute with the specified name.
@@ -116,7 +116,7 @@ extern class DOMUtils
 	* @param name the name of the attribute
 	* @return the attribute value (may be null if unspecified)
 	*/
-	@:overload public static function getAttributeValue(elem : org.w3c.dom.Element, name : String) : String;
+	@:overload @:public @:static public static function getAttributeValue(elem : org.w3c.dom.Element, name : String) : String;
 	
 	/**
 	* Returns a Set of <code>Node</code>s, backed by the specified
@@ -125,7 +125,7 @@ extern class DOMUtils
 	* @param nl the NodeList
 	* @return a Set of Nodes
 	*/
-	@:overload public static function nodeSet(nl : org.w3c.dom.NodeList) : java.util.Set<Dynamic>;
+	@:overload @:public @:static public static function nodeSet(nl : org.w3c.dom.NodeList) : java.util.Set<Dynamic>;
 	
 	/**
 	* Returns the prefix associated with the specified namespace URI
@@ -135,7 +135,7 @@ extern class DOMUtils
 	* @return the prefix associated with the specified namespace URI, or
 	*    null if not set
 	*/
-	@:overload public static function getNSPrefix(context : javax.xml.crypto.XMLCryptoContext, nsURI : String) : String;
+	@:overload @:public @:static public static function getNSPrefix(context : javax.xml.crypto.XMLCryptoContext, nsURI : String) : String;
 	
 	/**
 	* Returns the prefix associated with the XML Signature namespace URI
@@ -144,38 +144,38 @@ extern class DOMUtils
 	* @return the prefix associated with the specified namespace URI, or
 	*    null if not set
 	*/
-	@:overload public static function getSignaturePrefix(context : javax.xml.crypto.XMLCryptoContext) : String;
+	@:overload @:public @:static public static function getSignaturePrefix(context : javax.xml.crypto.XMLCryptoContext) : String;
 	
 	/**
 	* Removes all children nodes from the specified node.
 	*
 	* @param node the parent node whose children are to be removed
 	*/
-	@:overload public static function removeAllChildren(node : org.w3c.dom.Node) : Void;
+	@:overload @:public @:static public static function removeAllChildren(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Compares 2 nodes for equality. Implementation is not complete.
 	*/
-	@:overload public static function nodesEqual(thisNode : org.w3c.dom.Node, otherNode : org.w3c.dom.Node) : Bool;
+	@:overload @:public @:static public static function nodesEqual(thisNode : org.w3c.dom.Node, otherNode : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Checks if child element has same owner document before
 	* appending to the parent, and imports it to the parent's document
 	* if necessary.
 	*/
-	@:overload public static function appendChild(parent : org.w3c.dom.Node, child : org.w3c.dom.Node) : Void;
+	@:overload @:public @:static public static function appendChild(parent : org.w3c.dom.Node, child : org.w3c.dom.Node) : Void;
 	
-	@:overload public static function paramsEqual(spec1 : java.security.spec.AlgorithmParameterSpec, spec2 : java.security.spec.AlgorithmParameterSpec) : Bool;
+	@:overload @:public @:static public static function paramsEqual(spec1 : java.security.spec.AlgorithmParameterSpec, spec2 : java.security.spec.AlgorithmParameterSpec) : Bool;
 	
 	
 }
 @:native('org$jcp$xml$dsig$internal$dom$DOMUtils$NodeSet') @:internal extern class DOMUtils_NodeSet extends java.util.AbstractSet<Dynamic>
 {
-	@:overload public function new(nl : org.w3c.dom.NodeList) : Void;
+	@:overload @:public public function new(nl : org.w3c.dom.NodeList) : Void;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
 	
 }

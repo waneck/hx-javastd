@@ -25,29 +25,29 @@ package com.sun.tools.jdi;
 */
 extern class TypeComponentImpl extends com.sun.tools.jdi.MirrorImpl implements com.sun.jdi.TypeComponent
 {
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function signature() : String;
+	@:overload @:public public function signature() : String;
 	
-	@:overload public function genericSignature() : String;
+	@:overload @:public public function genericSignature() : String;
 	
-	@:overload public function modifiers() : Int;
+	@:overload @:public public function modifiers() : Int;
 	
-	@:overload public function declaringType() : com.sun.jdi.ReferenceType;
+	@:overload @:public public function declaringType() : com.sun.jdi.ReferenceType;
 	
-	@:overload public function isStatic() : Bool;
+	@:overload @:public public function isStatic() : Bool;
 	
-	@:overload public function isFinal() : Bool;
+	@:overload @:public public function isFinal() : Bool;
 	
-	@:overload public function isPrivate() : Bool;
+	@:overload @:public public function isPrivate() : Bool;
 	
-	@:overload public function isPackagePrivate() : Bool;
+	@:overload @:public public function isPackagePrivate() : Bool;
 	
-	@:overload public function isProtected() : Bool;
+	@:overload @:public public function isProtected() : Bool;
 	
-	@:overload public function isPublic() : Bool;
+	@:overload @:public public function isPublic() : Bool;
 	
-	@:overload public function isSynthetic() : Bool;
+	@:overload @:public public function isSynthetic() : Bool;
 	
 	/**
 	* Gets the VirtualMachine to which this
@@ -56,7 +56,7 @@ extern class TypeComponentImpl extends com.sun.tools.jdi.MirrorImpl implements c
 	*
 	* @return the {@link VirtualMachine} for which this mirror is a proxy.
 	*/
-	@:overload @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public @:public @:public @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	
 }

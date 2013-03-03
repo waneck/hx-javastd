@@ -46,7 +46,7 @@ extern class LoginContext
 	*          the caller does not additionally have
 	*          AuthPermission("createLoginContext.other")
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Instantiate a new <code>LoginContext</code> object with a name
@@ -75,7 +75,7 @@ extern class LoginContext
 	*          the caller does not additionally have
 	*          AuthPermission("createLoginContext.other")
 	*/
-	@:overload public function new(name : String, subject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function new(name : String, subject : javax.security.auth.Subject) : Void;
 	
 	/**
 	* Instantiate a new <code>LoginContext</code> object with a name
@@ -102,7 +102,7 @@ extern class LoginContext
 	*          the caller does not additionally have
 	*          AuthPermission("createLoginContext.other")
 	*/
-	@:overload public function new(name : String, callbackHandler : javax.security.auth.callback.CallbackHandler) : Void;
+	@:overload @:public public function new(name : String, callbackHandler : javax.security.auth.callback.CallbackHandler) : Void;
 	
 	/**
 	* Instantiate a new <code>LoginContext</code> object with a name,
@@ -134,7 +134,7 @@ extern class LoginContext
 	*          the caller does not additionally have
 	*          AuthPermission("createLoginContext.other")
 	*/
-	@:overload public function new(name : String, subject : javax.security.auth.Subject, callbackHandler : javax.security.auth.callback.CallbackHandler) : Void;
+	@:overload @:public public function new(name : String, subject : javax.security.auth.Subject, callbackHandler : javax.security.auth.callback.CallbackHandler) : Void;
 	
 	/**
 	* Instantiate a new <code>LoginContext</code> object with a name,
@@ -173,7 +173,7 @@ extern class LoginContext
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(name : String, subject : javax.security.auth.Subject, callbackHandler : javax.security.auth.callback.CallbackHandler, config : javax.security.auth.login.Configuration) : Void;
+	@:require(java5) @:overload @:public public function new(name : String, subject : javax.security.auth.Subject, callbackHandler : javax.security.auth.callback.CallbackHandler, config : javax.security.auth.login.Configuration) : Void;
 	
 	/**
 	* Perform the authentication.
@@ -224,7 +224,7 @@ extern class LoginContext
 	*
 	* @exception LoginException if the authentication fails.
 	*/
-	@:overload public function login() : Void;
+	@:overload @:public public function login() : Void;
 	
 	/**
 	* Logout the <code>Subject</code>.
@@ -247,7 +247,7 @@ extern class LoginContext
 	*
 	* @exception LoginException if the logout fails.
 	*/
-	@:overload public function logout() : Void;
+	@:overload @:public public function logout() : Void;
 	
 	/**
 	* Return the authenticated Subject.
@@ -263,7 +263,7 @@ extern class LoginContext
 	*          If a Subject was not specified, and authentication fails or
 	*          has not been attempted, this method returns null.
 	*/
-	@:overload public function getSubject() : javax.security.auth.Subject;
+	@:overload @:public public function getSubject() : javax.security.auth.Subject;
 	
 	
 }
@@ -274,7 +274,7 @@ extern class LoginContext
 */
 @:native('javax$security$auth$login$LoginContext$SecureCallbackHandler') @:internal extern class LoginContext_SecureCallbackHandler implements javax.security.auth.callback.CallbackHandler
 {
-	@:overload public function handle(callbacks : java.NativeArray<javax.security.auth.callback.Callback>) : Void;
+	@:overload @:public public function handle(callbacks : java.NativeArray<javax.security.auth.callback.Callback>) : Void;
 	
 	
 }

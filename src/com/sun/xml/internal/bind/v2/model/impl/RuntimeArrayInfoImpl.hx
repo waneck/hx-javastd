@@ -25,11 +25,11 @@ package com.sun.xml.internal.bind.v2.model.impl;
 */
 @:internal extern class RuntimeArrayInfoImpl extends com.sun.xml.internal.bind.v2.model.impl.ArrayInfoImpl<java.lang.reflect.Type, Class<Dynamic>, java.lang.reflect.Field, java.lang.reflect.Method> implements com.sun.xml.internal.bind.v2.model.runtime.RuntimeArrayInfo
 {
-	@:overload override public function getType() : Class<Dynamic>;
+	@:overload @:public override public function getType() : Class<Dynamic>;
 	
-	@:overload public function getItemType() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
+	@:overload @:public override public function getItemType() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
 	
-	@:overload public function getTransducer<V>() : com.sun.xml.internal.bind.v2.runtime.Transducer<V>;
+	@:overload @:public public function getTransducer<V>() : com.sun.xml.internal.bind.v2.runtime.Transducer<V>;
 	
 	
 }

@@ -38,7 +38,7 @@ extern interface ExtendedContentHandler extends org.xml.sax.ContentHandler
 	*            wrapping another exception
 	* @see ContentHandler#characters
 	*/
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, index : Bool) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, index : Bool) : Void;
 	
 	
 }

@@ -25,13 +25,22 @@ package com.sun.tools.jdi;
 */
 extern class TypeImpl extends com.sun.tools.jdi.MirrorImpl implements com.sun.jdi.Type
 {
-	@:overload @:abstract public function signature() : String;
+	@:overload @:public @:abstract public function signature() : String;
 	
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
+	
+	/**
+	* Gets the VirtualMachine to which this
+	* Mirror belongs. A Mirror must be associated
+	* with a VirtualMachine to have any meaning.
+	*
+	* @return the {@link VirtualMachine} for which this mirror is a proxy.
+	*/
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	
 }

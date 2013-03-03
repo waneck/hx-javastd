@@ -29,7 +29,7 @@ extern class BreakIteratorProvider extends java.util.spi.LocaleServiceProvider
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -44,7 +44,7 @@ extern class BreakIteratorProvider extends java.util.spi.LocaleServiceProvider
 	*     getAvailableLocales()}.
 	* @see java.text.BreakIterator#getWordInstance(java.util.Locale)
 	*/
-	@:overload @:abstract public function getWordInstance(locale : java.util.Locale) : java.text.BreakIterator;
+	@:overload @:public @:abstract public function getWordInstance(locale : java.util.Locale) : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -59,7 +59,7 @@ extern class BreakIteratorProvider extends java.util.spi.LocaleServiceProvider
 	*     getAvailableLocales()}.
 	* @see java.text.BreakIterator#getLineInstance(java.util.Locale)
 	*/
-	@:overload @:abstract public function getLineInstance(locale : java.util.Locale) : java.text.BreakIterator;
+	@:overload @:public @:abstract public function getLineInstance(locale : java.util.Locale) : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -74,7 +74,7 @@ extern class BreakIteratorProvider extends java.util.spi.LocaleServiceProvider
 	*     getAvailableLocales()}.
 	* @see java.text.BreakIterator#getCharacterInstance(java.util.Locale)
 	*/
-	@:overload @:abstract public function getCharacterInstance(locale : java.util.Locale) : java.text.BreakIterator;
+	@:overload @:public @:abstract public function getCharacterInstance(locale : java.util.Locale) : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -89,7 +89,7 @@ extern class BreakIteratorProvider extends java.util.spi.LocaleServiceProvider
 	*     getAvailableLocales()}.
 	* @see java.text.BreakIterator#getSentenceInstance(java.util.Locale)
 	*/
-	@:overload @:abstract public function getSentenceInstance(locale : java.util.Locale) : java.text.BreakIterator;
+	@:overload @:public @:abstract public function getSentenceInstance(locale : java.util.Locale) : java.text.BreakIterator;
 	
 	
 }

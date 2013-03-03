@@ -40,24 +40,24 @@ extern class Version
 	*
 	* @return String denoting our current version
 	*/
-	@:overload public static function getVersion() : String;
+	@:overload @:public @:static public static function getVersion() : String;
 	
 	/**
 	* Print the processor version to the command line.
 	*
 	* @param argv command line arguments, unused.
 	*/
-	@:overload public static function _main(argv : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function _main(argv : java.NativeArray<String>) : Void;
 	
 	/**
 	* Name of product: Serializer.
 	*/
-	@:overload public static function getProduct() : String;
+	@:overload @:public @:static public static function getProduct() : String;
 	
 	/**
 	* Implementation Language: Java.
 	*/
-	@:overload public static function getImplementationLanguage() : String;
+	@:overload @:public @:static public static function getImplementationLanguage() : String;
 	
 	/**
 	* Major version number.
@@ -70,7 +70,7 @@ extern class Version
 	*          of new versions as external interfaces and behaviour
 	*          may have changed.
 	*/
-	@:overload public static function getMajorVersionNum() : Int;
+	@:overload @:public @:static public static function getMajorVersionNum() : Int;
 	
 	/**
 	* Release Number.
@@ -80,7 +80,7 @@ extern class Version
 	*            -  API or behaviour change.
 	*            -  its designated as a reference release.
 	*/
-	@:overload public static function getReleaseVersionNum() : Int;
+	@:overload @:public @:static public static function getReleaseVersionNum() : Int;
 	
 	/**
 	* Maintenance Drop Number.
@@ -91,7 +91,7 @@ extern class Version
 	*          When missing, it designates the final and complete
 	*          development drop for a release.
 	*/
-	@:overload public static function getMaintenanceVersionNum() : Int;
+	@:overload @:public @:static public static function getMaintenanceVersionNum() : Int;
 	
 	/**
 	* Development Drop Number.
@@ -110,7 +110,7 @@ extern class Version
 	*          well as defect fixes. 'D' drops may not be as stable as
 	*          the final releases.
 	*/
-	@:overload public static function getDevelopmentVersionNum() : Int;
+	@:overload @:public @:static public static function getDevelopmentVersionNum() : Int;
 	
 	
 }

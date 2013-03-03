@@ -31,7 +31,7 @@ extern class DistributionPointName
 	* @param fullName the name for the distribution point.
 	* @exception IllegalArgumentException if <code>fullName</code> is null.
 	*/
-	@:overload public function new(fullName : sun.security.x509.GeneralNames) : Void;
+	@:overload @:public public function new(fullName : sun.security.x509.GeneralNames) : Void;
 	
 	/**
 	* Creates a distribution point name using a relative name.
@@ -40,7 +40,7 @@ extern class DistributionPointName
 	*        the name of the issuer of the CRL.
 	* @exception IllegalArgumentException if <code>relativeName</code> is null.
 	*/
-	@:overload public function new(relativeName : sun.security.x509.RDN) : Void;
+	@:overload @:public public function new(relativeName : sun.security.x509.RDN) : Void;
 	
 	/**
 	* Creates a distribution point name from its DER-encoded form.
@@ -48,17 +48,17 @@ extern class DistributionPointName
 	* @param encoding the DER-encoded value.
 	* @throws IOException on decoding error.
 	*/
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Returns the full name for the distribution point or null if not set.
 	*/
-	@:overload public function getFullName() : sun.security.x509.GeneralNames;
+	@:overload @:public public function getFullName() : sun.security.x509.GeneralNames;
 	
 	/**
 	* Returns the relative name for the distribution point or null if not set.
 	*/
-	@:overload public function getRelativeName() : sun.security.x509.RDN;
+	@:overload @:public public function getRelativeName() : sun.security.x509.RDN;
 	
 	/**
 	* Encodes the distribution point name and writes it to the DerOutputStream.
@@ -66,7 +66,7 @@ extern class DistributionPointName
 	* @param out the output stream.
 	* @exception IOException on encoding error.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Compare an object to this distribution point name for equality.
@@ -74,19 +74,19 @@ extern class DistributionPointName
 	* @param obj Object to be compared to this
 	* @return true if objects match; false otherwise
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code for this distribution point name.
 	*
 	* @return the hash code.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a printable string of the distribution point name.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

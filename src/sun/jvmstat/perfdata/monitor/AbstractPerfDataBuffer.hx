@@ -29,7 +29,7 @@ extern class AbstractPerfDataBuffer
 	* Reference to the concrete instance created by the
 	* {@link #createPerfDataBuffer} method.
 	*/
-	private var impl : sun.jvmstat.perfdata.monitor.PerfDataBufferImpl;
+	@:protected private var impl : sun.jvmstat.perfdata.monitor.PerfDataBufferImpl;
 	
 	/**
 	* Get the Local Java Virtual Machine Identifier, or <em>lvmid</em>
@@ -37,7 +37,7 @@ extern class AbstractPerfDataBuffer
 	*
 	* @return int - the lvmid
 	*/
-	@:overload public function getLocalVmId() : Int;
+	@:overload @:public public function getLocalVmId() : Int;
 	
 	/**
 	* Get a copy of the raw instrumentation data.
@@ -47,14 +47,14 @@ extern class AbstractPerfDataBuffer
 	*
 	* @return byte[] - a copy of the bytes in the instrumentation buffer.
 	*/
-	@:overload public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Get the capacity of the instrumentation buffer.
 	*
 	* @return int - the capacity, or size, of the instrumentation buffer.
 	*/
-	@:overload public function getCapacity() : Int;
+	@:overload @:public public function getCapacity() : Int;
 	
 	/**
 	* Find a named Instrumentation object.
@@ -72,7 +72,7 @@ extern class AbstractPerfDataBuffer
 	* @throws MonitorException Thrown if an error occurs while communicating
 	*                          with the target Java Virtual Machine.
 	*/
-	@:overload public function findByName(name : String) : sun.jvmstat.monitor.Monitor;
+	@:overload @:public public function findByName(name : String) : sun.jvmstat.monitor.Monitor;
 	
 	/**
 	* Find all Instrumentation objects with names matching the given pattern.
@@ -91,7 +91,7 @@ extern class AbstractPerfDataBuffer
 	*                          with the target Java Virtual Machine.
 	* @see java.util.regex.Pattern
 	*/
-	@:overload public function findByPattern(patternString : String) : java.util.List<sun.jvmstat.monitor.Monitor>;
+	@:overload @:public public function findByPattern(patternString : String) : java.util.List<sun.jvmstat.monitor.Monitor>;
 	
 	/**
 	* Get a list of the inserted and removed monitors since last called.
@@ -101,7 +101,7 @@ extern class AbstractPerfDataBuffer
 	* @throws MonitorException Thrown if communications errors occur
 	*                          while communicating with the target.
 	*/
-	@:overload public function getMonitorStatus() : sun.jvmstat.perfdata.monitor.MonitorStatus;
+	@:overload @:public public function getMonitorStatus() : sun.jvmstat.perfdata.monitor.MonitorStatus;
 	
 	/**
 	* Get the ByteBuffer containing the instrumentation data.
@@ -109,7 +109,7 @@ extern class AbstractPerfDataBuffer
 	* @return ByteBuffer - a ByteBuffer object that refers to the
 	*                      instrumentation data.
 	*/
-	@:overload public function getByteBuffer() : java.nio.ByteBuffer;
+	@:overload @:public public function getByteBuffer() : java.nio.ByteBuffer;
 	
 	/**
 	* Create the perfdata instrumentation buffer for the given lvmid
@@ -125,7 +125,7 @@ extern class AbstractPerfDataBuffer
 	*
 	* @throws MonitorException
 	*/
-	@:overload private function createPerfDataBuffer(bb : java.nio.ByteBuffer, lvmid : Int) : Void;
+	@:overload @:protected private function createPerfDataBuffer(bb : java.nio.ByteBuffer, lvmid : Int) : Void;
 	
 	
 }

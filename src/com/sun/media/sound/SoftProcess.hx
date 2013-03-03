@@ -30,13 +30,13 @@ package com.sun.media.sound;
 */
 extern interface SoftProcess extends com.sun.media.sound.SoftControl
 {
-	@:overload public function init(synth : com.sun.media.sound.SoftSynthesizer) : Void;
+	@:overload @:public public function init(synth : com.sun.media.sound.SoftSynthesizer) : Void;
 	
-	@:overload public function get(instance : Int, name : String) : java.NativeArray<Float>;
+	@:overload @:public public function get(instance : Int, name : String) : java.NativeArray<Float>;
 	
-	@:overload public function processControlLogic() : Void;
+	@:overload @:public public function processControlLogic() : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

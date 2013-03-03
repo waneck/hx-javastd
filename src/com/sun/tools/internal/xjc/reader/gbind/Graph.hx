@@ -31,14 +31,14 @@ extern class Graph implements java.lang.Iterable<com.sun.tools.internal.xjc.read
 	* {@link Expression} given to the graph will be modified forever,
 	* and it will not be able to create another {@link Graph}.
 	*/
-	@:overload public function new(body : com.sun.tools.internal.xjc.reader.gbind.Expression) : Void;
+	@:overload @:public public function new(body : com.sun.tools.internal.xjc.reader.gbind.Expression) : Void;
 	
 	/**
 	* List up {@link ConnectedComponent}s of this graph in an order.
 	*/
-	@:overload public function iterator() : java.util.Iterator<com.sun.tools.internal.xjc.reader.gbind.ConnectedComponent>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.tools.internal.xjc.reader.gbind.ConnectedComponent>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

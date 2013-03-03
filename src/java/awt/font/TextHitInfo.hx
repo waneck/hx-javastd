@@ -43,7 +43,7 @@ extern class TextHitInfo
 	* Returns the index of the character hit.
 	* @return the index of the character hit.
 	*/
-	@:overload public function getCharIndex() : Int;
+	@:overload @:public public function getCharIndex() : Int;
 	
 	/**
 	* Returns <code>true</code> if the leading edge of the character was
@@ -51,7 +51,7 @@ extern class TextHitInfo
 	* @return <code>true</code> if the leading edge of the character was
 	* hit; <code>false</code> otherwise.
 	*/
-	@:overload public function isLeadingEdge() : Bool;
+	@:overload @:public public function isLeadingEdge() : Bool;
 	
 	/**
 	* Returns the insertion index.  This is the character index if
@@ -59,14 +59,14 @@ extern class TextHitInfo
 	* than the character index if the trailing edge was hit.
 	* @return the insertion index.
 	*/
-	@:overload public function getInsertionIndex() : Int;
+	@:overload @:public public function getInsertionIndex() : Int;
 	
 	/**
 	* Returns the hash code.
 	* @return the hash code of this <code>TextHitInfo</code>, which is
 	* also the <code>charIndex</code> of this <code>TextHitInfo</code>.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns <code>true</code> if the specified <code>Object</code> is a
@@ -75,7 +75,7 @@ extern class TextHitInfo
 	* @return <code>true</code> if the specified <code>Object</code>
 	* equals this <code>TextHitInfo</code>; <code>false</code> otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns <code>true</code> if the specified <code>TextHitInfo</code>
@@ -87,7 +87,7 @@ extern class TextHitInfo
 	* has the same <code>charIndex</code> and <code>isLeadingEdge</code>
 	* as this <code>TextHitInfo</code>.
 	*/
-	@:overload public function equals(hitInfo : java.awt.font.TextHitInfo) : Bool;
+	@:overload @:public public function equals(hitInfo : java.awt.font.TextHitInfo) : Bool;
 	
 	/**
 	* Returns a <code>String</code> representing the hit for debugging
@@ -95,7 +95,7 @@ extern class TextHitInfo
 	* @return a <code>String</code> representing this
 	* <code>TextHitInfo</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Creates a <code>TextHitInfo</code> on the leading edge of the
@@ -104,7 +104,7 @@ extern class TextHitInfo
 	* @return a <code>TextHitInfo</code> on the leading edge of the
 	* character at the specified <code>charIndex</code>.
 	*/
-	@:overload public static function leading(charIndex : Int) : java.awt.font.TextHitInfo;
+	@:overload @:public @:static public static function leading(charIndex : Int) : java.awt.font.TextHitInfo;
 	
 	/**
 	* Creates a hit on the trailing edge of the character at
@@ -113,7 +113,7 @@ extern class TextHitInfo
 	* @return a <code>TextHitInfo</code> on the trailing edge of the
 	* character at the specified <code>charIndex</code>.
 	*/
-	@:overload public static function trailing(charIndex : Int) : java.awt.font.TextHitInfo;
+	@:overload @:public @:static public static function trailing(charIndex : Int) : java.awt.font.TextHitInfo;
 	
 	/**
 	* Creates a <code>TextHitInfo</code> at the specified offset,
@@ -122,7 +122,7 @@ extern class TextHitInfo
 	* the offset
 	* @return a <code>TextHitInfo</code> at the specified offset.
 	*/
-	@:overload public static function beforeOffset(offset : Int) : java.awt.font.TextHitInfo;
+	@:overload @:public @:static public static function beforeOffset(offset : Int) : java.awt.font.TextHitInfo;
 	
 	/**
 	* Creates a <code>TextHitInfo</code> at the specified offset,
@@ -131,7 +131,7 @@ extern class TextHitInfo
 	* the offset
 	* @return a <code>TextHitInfo</code> at the specified offset.
 	*/
-	@:overload public static function afterOffset(offset : Int) : java.awt.font.TextHitInfo;
+	@:overload @:public @:static public static function afterOffset(offset : Int) : java.awt.font.TextHitInfo;
 	
 	/**
 	* Creates a <code>TextHitInfo</code> on the other side of the
@@ -139,7 +139,7 @@ extern class TextHitInfo
 	* @return a <code>TextHitInfo</code> on the other side of the
 	* insertion point.
 	*/
-	@:overload public function getOtherHit() : java.awt.font.TextHitInfo;
+	@:overload @:public public function getOtherHit() : java.awt.font.TextHitInfo;
 	
 	/**
 	* Creates a <code>TextHitInfo</code> whose character index is offset
@@ -151,7 +151,7 @@ extern class TextHitInfo
 	* offset by <code>delta</code> from the <code>charIndex</code> of
 	* this <code>TextHitInfo</code>.
 	*/
-	@:overload public function getOffsetHit(delta : Int) : java.awt.font.TextHitInfo;
+	@:overload @:public public function getOffsetHit(delta : Int) : java.awt.font.TextHitInfo;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
+	@:overload @:protected private function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
 	
 	/**
 	* Opens a socket channel.
@@ -43,7 +43,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function open() : java.nio.channels.SocketChannel;
+	@:overload @:public @:static public static function open() : java.nio.channels.SocketChannel;
 	
 	/**
 	* Opens a socket channel and connects it to a remote address.
@@ -79,7 +79,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload public static function open(remote : java.net.SocketAddress) : java.nio.channels.SocketChannel;
+	@:overload @:public @:static public static function open(remote : java.net.SocketAddress) : java.nio.channels.SocketChannel;
 	
 	/**
 	* Returns an operation set identifying this channel's supported
@@ -92,7 +92,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	*
 	* @return  The valid-operation set
 	*/
-	@:overload @:final public function validOps() : Int;
+	@:overload @:public @:final override public function validOps() : Int;
 	
 	/**
 	* @throws  ConnectionPendingException
@@ -105,7 +105,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function bind(local : java.net.SocketAddress) : java.nio.channels.SocketChannel;
+	@:require(java7) @:overload @:public @:abstract public function bind(local : java.net.SocketAddress) : java.nio.channels.SocketChannel;
 	
 	/**
 	* @throws  UnsupportedOperationException           {@inheritDoc}
@@ -115,7 +115,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.SocketChannel;
+	@:require(java7) @:overload @:public @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.SocketChannel;
 	
 	/**
 	* Shutdown the connection for reading without closing the channel.
@@ -135,7 +135,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function shutdownInput() : java.nio.channels.SocketChannel;
+	@:require(java7) @:overload @:public @:abstract public function shutdownInput() : java.nio.channels.SocketChannel;
 	
 	/**
 	* Shutdown the connection for writing without closing the channel.
@@ -156,7 +156,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function shutdownOutput() : java.nio.channels.SocketChannel;
+	@:require(java7) @:overload @:public @:abstract public function shutdownOutput() : java.nio.channels.SocketChannel;
 	
 	/**
 	* Retrieves a socket associated with this channel.
@@ -166,7 +166,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	*
 	* @return  A socket associated with this channel
 	*/
-	@:overload @:abstract public function socket() : java.net.Socket;
+	@:overload @:public @:abstract public function socket() : java.net.Socket;
 	
 	/**
 	* Tells whether or not this channel's network socket is connected.
@@ -174,7 +174,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	* @return  <tt>true</tt> if, and only if, this channel's network socket
 	*          is {@link #isOpen open} and connected
 	*/
-	@:overload @:abstract public function isConnected() : Bool;
+	@:overload @:public @:abstract public function isConnected() : Bool;
 	
 	/**
 	* Tells whether or not a connection operation is in progress on this
@@ -184,7 +184,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	*          initiated on this channel but not yet completed by invoking the
 	*          {@link #finishConnect finishConnect} method
 	*/
-	@:overload @:abstract public function isConnectionPending() : Bool;
+	@:overload @:public @:abstract public function isConnectionPending() : Bool;
 	
 	/**
 	* Connects this channel's socket.
@@ -253,7 +253,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function connect(remote : java.net.SocketAddress) : Bool;
+	@:overload @:public @:abstract public function connect(remote : java.net.SocketAddress) : Bool;
 	
 	/**
 	* Finishes the process of connecting a socket channel.
@@ -304,7 +304,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function finishConnect() : Bool;
+	@:overload @:public @:abstract public function finishConnect() : Bool;
 	
 	/**
 	* Returns the remote address to which this channel's socket is connected.
@@ -323,43 +323,43 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function getRemoteAddress() : java.net.SocketAddress;
+	@:require(java7) @:overload @:public @:abstract public function getRemoteAddress() : java.net.SocketAddress;
 	
 	/**
 	* @throws  NotYetConnectedException
 	*          If this channel is not yet connected
 	*/
-	@:overload @:abstract public function read(dst : java.nio.ByteBuffer) : Int;
+	@:overload @:public @:abstract public function read(dst : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* @throws  NotYetConnectedException
 	*          If this channel is not yet connected
 	*/
-	@:overload @:abstract public function read(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload @:public @:abstract public function read(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
 	/**
 	* @throws  NotYetConnectedException
 	*          If this channel is not yet connected
 	*/
-	@:overload @:final public function read(dsts : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
+	@:overload @:public @:final public function read(dsts : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
 	
 	/**
 	* @throws  NotYetConnectedException
 	*          If this channel is not yet connected
 	*/
-	@:overload @:abstract public function write(src : java.nio.ByteBuffer) : Int;
+	@:overload @:public @:abstract public function write(src : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* @throws  NotYetConnectedException
 	*          If this channel is not yet connected
 	*/
-	@:overload @:abstract public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload @:public @:abstract public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
 	/**
 	* @throws  NotYetConnectedException
 	*          If this channel is not yet connected
 	*/
-	@:overload @:final public function write(srcs : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
+	@:overload @:public @:final public function write(srcs : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
 	
 	/**
 	* Returns the value of a socket option.
@@ -379,7 +379,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	*
 	* @see java.net.StandardSocketOptions
 	*/
-	@:overload public function getOption<T>(name : java.net.SocketOption<T>) : T;
+	@:overload @:public @:public @:public @:public @:public public function getOption<T>(name : java.net.SocketOption<T>) : T;
 	
 	/**
 	* Returns a set of the socket options supported by this channel.
@@ -389,7 +389,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	*
 	* @return  A set of the socket options supported by this channel
 	*/
-	@:overload public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
+	@:overload @:public @:public @:public @:public @:public public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
 	
 	/**
 	* Returns the socket address that this channel's socket is bound to, or
@@ -407,14 +407,14 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public function getLocalAddress() : java.net.SocketAddress;
+	@:overload @:public @:public @:public @:public @:public public function getLocalAddress() : java.net.SocketAddress;
 	
 	/**
 	* Tells whether or not this channel is open.  </p>
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload @:public @:public override public function isOpen() : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function isOpen() : Bool;
 	
 	/**
 	* Closes this channel.
@@ -433,7 +433,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	*
 	* @throws  IOException  If an I/O error occurs
 	*/
-	@:overload @:public @:public override public function close() : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function close() : Void;
 	
 	
 }

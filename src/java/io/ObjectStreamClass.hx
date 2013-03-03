@@ -26,7 +26,7 @@ package java.io;
 extern class ObjectStreamClass implements java.io.Serializable
 {
 	/** serialPersistentFields value indicating no serializable fields */
-	public static var NO_FIELDS(default, null) : java.NativeArray<java.io.ObjectStreamField>;
+	@:public @:static @:final public static var NO_FIELDS(default, null) : java.NativeArray<java.io.ObjectStreamField>;
 	
 	/**
 	* Find the descriptor for a class that can be serialized.  Creates an
@@ -37,7 +37,7 @@ extern class ObjectStreamClass implements java.io.Serializable
 	* @param   cl class for which to get the descriptor
 	* @return  the class descriptor for the specified class
 	*/
-	@:overload public static function lookup(cl : Class<Dynamic>) : java.io.ObjectStreamClass;
+	@:overload @:public @:static public static function lookup(cl : Class<Dynamic>) : java.io.ObjectStreamClass;
 	
 	/**
 	* Returns the descriptor for any class, regardless of whether it
@@ -47,7 +47,7 @@ extern class ObjectStreamClass implements java.io.Serializable
 	* @return       the class descriptor for the specified class
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function lookupAny(cl : Class<Dynamic>) : java.io.ObjectStreamClass;
+	@:require(java6) @:overload @:public @:static public static function lookupAny(cl : Class<Dynamic>) : java.io.ObjectStreamClass;
 	
 	/**
 	* Returns the name of the class described by this descriptor.
@@ -56,7 +56,7 @@ extern class ObjectStreamClass implements java.io.Serializable
 	*
 	* @return a string representing the name of the class
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return the serialVersionUID for this class.  The serialVersionUID
@@ -66,7 +66,7 @@ extern class ObjectStreamClass implements java.io.Serializable
 	*
 	* @return  the SUID of the class described by this descriptor
 	*/
-	@:overload public function getSerialVersionUID() : haxe.Int64;
+	@:overload @:public public function getSerialVersionUID() : haxe.Int64;
 	
 	/**
 	* Return the class in the local VM that this version is mapped to.  Null
@@ -74,7 +74,7 @@ extern class ObjectStreamClass implements java.io.Serializable
 	*
 	* @return  the <code>Class</code> instance that this descriptor represents
 	*/
-	@:overload public function forClass() : Class<Dynamic>;
+	@:overload @:public public function forClass() : Class<Dynamic>;
 	
 	/**
 	* Return an array of the fields of this serializable class.
@@ -84,7 +84,7 @@ extern class ObjectStreamClass implements java.io.Serializable
 	*          fields.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getFields() : java.NativeArray<java.io.ObjectStreamField>;
+	@:require(java2) @:overload @:public public function getFields() : java.NativeArray<java.io.ObjectStreamField>;
 	
 	/**
 	* Get the field of this class by name.
@@ -93,12 +93,12 @@ extern class ObjectStreamClass implements java.io.Serializable
 	* @return  The ObjectStreamField object of the named field or null if
 	*          there is no such named field.
 	*/
-	@:overload public function getField(name : String) : java.io.ObjectStreamField;
+	@:overload @:public public function getField(name : String) : java.io.ObjectStreamField;
 	
 	/**
 	* Return a string describing this ObjectStreamClass.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -144,17 +144,17 @@ extern class ObjectStreamClass implements java.io.Serializable
 */
 @:native('java$io$ObjectStreamClass$MemberSignature') @:internal extern class ObjectStreamClass_MemberSignature
 {
-	public var member(default, null) : java.lang.reflect.Member;
+	@:public @:final public var member(default, null) : java.lang.reflect.Member;
 	
-	public var name(default, null) : String;
+	@:public @:final public var name(default, null) : String;
 	
-	public var signature(default, null) : String;
+	@:public @:final public var signature(default, null) : String;
 	
-	@:overload public function new(field : java.lang.reflect.Field) : Void;
+	@:overload @:public public function new(field : java.lang.reflect.Field) : Void;
 	
-	@:overload public function new(cons : java.lang.reflect.Constructor<Dynamic>) : Void;
+	@:overload @:public public function new(cons : java.lang.reflect.Constructor<Dynamic>) : Void;
 	
-	@:overload public function new(meth : java.lang.reflect.Method) : Void;
+	@:overload @:public public function new(meth : java.lang.reflect.Method) : Void;
 	
 	
 }
@@ -171,9 +171,9 @@ extern class ObjectStreamClass implements java.io.Serializable
 */
 @:native('java$io$ObjectStreamClass$FieldReflectorKey') @:internal extern class ObjectStreamClass_FieldReflectorKey extends java.lang.ref.WeakReference<Class<Dynamic>>
 {
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }
@@ -186,7 +186,7 @@ extern class ObjectStreamClass implements java.io.Serializable
 	/**
 	* Returns the identity hash code of the original referent.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns true if the given object is this identical
@@ -194,7 +194,7 @@ extern class ObjectStreamClass implements java.io.Serializable
 	* been cleared, if the given object is another WeakClassKey
 	* instance with the identical non-null referent as this one.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

@@ -26,7 +26,7 @@ package java.lang.ref;
 /* Final references, used to implement finalization */
 @:internal extern class FinalReference<T> extends java.lang.ref.Reference<T>
 {
-	@:overload public function new(referent : T, q : java.lang.ref.ReferenceQueue<T>) : Void;
+	@:overload @:public public function new(referent : T, q : java.lang.ref.ReferenceQueue<T>) : Void;
 	
 	
 }

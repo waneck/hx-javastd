@@ -39,61 +39,61 @@ extern class ConstGen implements com.sun.tools.corba.se.idl.ConstGen
 	/**
 	* Public zero-argument constructor.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Generate Java code for an IDL constant.  A constant is written to
 	* a new class only when it is not a member of an interface; otherwise
 	* it written to the interface class in which it resides.
 	**/
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, c : com.sun.tools.corba.se.idl.ConstEntry, s : java.io.PrintWriter) : Void;
+	@:overload @:public public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, c : com.sun.tools.corba.se.idl.ConstEntry, s : java.io.PrintWriter) : Void;
 	
 	/**
 	* Initialize members unique to this generator.
 	**/
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
 	/**
 	* Generate the class defining the constant.
 	**/
-	@:overload private function generateConst() : Void;
+	@:overload @:protected private function generateConst() : Void;
 	
 	/**
 	* Open a new print stream only if the constant is not a member
 	* of an interface.
 	**/
-	@:overload private function openStream() : Void;
+	@:overload @:protected private function openStream() : Void;
 	
 	/**
 	* Write the heading for the class defining the constant.
 	**/
-	@:overload private function writeHeading() : Void;
+	@:overload @:protected private function writeHeading() : Void;
 	
 	/**
 	* Write the constant expression and any comment, if present.
 	**/
-	@:overload private function writeBody() : Void;
+	@:overload @:protected private function writeBody() : Void;
 	
 	/**
 	* Write the entire constant expression and any comment, if present.
 	**/
-	@:overload private function writeConstExpr() : Void;
+	@:overload @:protected private function writeConstExpr() : Void;
 	
 	/**
 	* Generate any last words and close the class.
 	**/
-	@:overload private function writeClosing() : Void;
+	@:overload @:protected private function writeClosing() : Void;
 	
 	/**
 	* Close the print stream, causing the file to be written.
 	**/
-	@:overload private function closeStream() : Void;
+	@:overload @:protected private function closeStream() : Void;
 	
-	private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	private var c : com.sun.tools.corba.se.idl.ConstEntry;
+	@:protected private var c : com.sun.tools.corba.se.idl.ConstEntry;
 	
-	private var stream : java.io.PrintWriter;
+	@:protected private var stream : java.io.PrintWriter;
 	
 	
 }

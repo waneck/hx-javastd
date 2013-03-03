@@ -28,17 +28,17 @@ extern class W3CAddressingExtensionHandler extends com.sun.tools.internal.ws.wsd
 	/**
 	* @author Arun Gupta
 	*/
-	@:overload public function new(extensionHandlerMap : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>) : Void;
+	@:overload @:public public function new(extensionHandlerMap : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>) : Void;
 	
-	@:overload public function new(extensionHandlerMap : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function new(extensionHandlerMap : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public override public function getNamespaceURI() : String;
 	
-	@:overload private function getWSDLExtensionQName() : javax.xml.namespace.QName;
+	@:overload @:protected private function getWSDLExtensionQName() : javax.xml.namespace.QName;
 	
-	@:overload public function handleBindingExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload @:public override public function handleBindingExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
-	@:overload public function handlePortExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload @:public override public function handlePortExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	
 }

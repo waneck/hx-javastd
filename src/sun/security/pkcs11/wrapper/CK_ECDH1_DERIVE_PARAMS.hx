@@ -68,7 +68,7 @@ extern class CK_ECDH1_DERIVE_PARAMS
 	*   CK_EC_KDF_TYPE kdf;
 	* </PRE>
 	*/
-	public var kdf : haxe.Int64;
+	@:public public var kdf : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -77,7 +77,7 @@ extern class CK_ECDH1_DERIVE_PARAMS
 	*   CK_BYTE_PTR pSharedData;
 	* </PRE>
 	*/
-	public var pSharedData : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var pSharedData : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -86,16 +86,16 @@ extern class CK_ECDH1_DERIVE_PARAMS
 	*   CK_BYTE_PTR pPublicData;
 	* </PRE>
 	*/
-	public var pPublicData : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var pPublicData : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function new(kdf : haxe.Int64, pSharedData : java.NativeArray<java.StdTypes.Int8>, pPublicData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(kdf : haxe.Int64, pSharedData : java.NativeArray<java.StdTypes.Int8>, pPublicData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the string representation of CK_PKCS5_PBKD2_PARAMS.
 	*
 	* @return the string representation of CK_PKCS5_PBKD2_PARAMS
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

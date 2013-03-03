@@ -28,7 +28,7 @@ extern class DigestOutputStream extends java.io.FilterOutputStream
 	/**
 	* The message digest associated with this stream.
 	*/
-	private var digest : java.security.MessageDigest;
+	@:protected private var digest : java.security.MessageDigest;
 	
 	/**
 	* Creates a digest output stream, using the specified output stream
@@ -38,7 +38,7 @@ extern class DigestOutputStream extends java.io.FilterOutputStream
 	*
 	* @param digest the message digest to associate with this stream.
 	*/
-	@:overload public function new(stream : java.io.OutputStream, digest : java.security.MessageDigest) : Void;
+	@:overload @:public public function new(stream : java.io.OutputStream, digest : java.security.MessageDigest) : Void;
 	
 	/**
 	* Returns the message digest associated with this stream.
@@ -46,7 +46,7 @@ extern class DigestOutputStream extends java.io.FilterOutputStream
 	* @return the message digest associated with this stream.
 	* @see #setMessageDigest(java.security.MessageDigest)
 	*/
-	@:overload public function getMessageDigest() : java.security.MessageDigest;
+	@:overload @:public public function getMessageDigest() : java.security.MessageDigest;
 	
 	/**
 	* Associates the specified message digest with this stream.
@@ -54,7 +54,7 @@ extern class DigestOutputStream extends java.io.FilterOutputStream
 	* @param digest the message digest to be associated with this stream.
 	* @see #getMessageDigest()
 	*/
-	@:overload public function setMessageDigest(digest : java.security.MessageDigest) : Void;
+	@:overload @:public public function setMessageDigest(digest : java.security.MessageDigest) : Void;
 	
 	/**
 	* Updates the message digest (if the digest function is on) using
@@ -73,7 +73,7 @@ extern class DigestOutputStream extends java.io.FilterOutputStream
 	*
 	* @see MessageDigest#update(byte)
 	*/
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
 	/**
 	* Updates the message digest (if the digest function is on) using
@@ -98,7 +98,7 @@ extern class DigestOutputStream extends java.io.FilterOutputStream
 	*
 	* @see MessageDigest#update(byte[], int, int)
 	*/
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Turns the digest function on or off. The default is on.  When
@@ -109,13 +109,13 @@ extern class DigestOutputStream extends java.io.FilterOutputStream
 	* @param on true to turn the digest function on, false to turn it
 	* off.
 	*/
-	@:overload public function on(on : Bool) : Void;
+	@:overload @:public public function on(on : Bool) : Void;
 	
 	/**
 	* Prints a string representation of this digest output stream and
 	* its associated message digest object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

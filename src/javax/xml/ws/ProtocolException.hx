@@ -37,7 +37,7 @@ package javax.xml.ws;
 	* cause is not initialized, and may subsequently be initialized by a call
 	* to <code>Throwable.initCause(java.lang.Throwable)</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new protocol exception with the specified detail message.
@@ -47,7 +47,7 @@ package javax.xml.ws;
 	* @param message the detail message. The detail message is saved for later
 	*   retrieval by the Throwable.getMessage() method.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructs a new runtime exception with the specified detail message and
@@ -62,7 +62,7 @@ package javax.xml.ws;
 	* <code>Throwable.getCause()</code> method). (A <code>null</code> value is  permitted, and indicates
 	* that the cause is nonexistent or  unknown.)
 	*/
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a new runtime exception with the specified cause and a  detail
@@ -75,7 +75,7 @@ package javax.xml.ws;
 	* <code>Throwable.getCause()</code> method). (A <code>null</code> value is  permitted, and indicates
 	* that the cause is nonexistent or  unknown.)
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

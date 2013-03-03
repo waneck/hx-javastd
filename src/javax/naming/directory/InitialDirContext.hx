@@ -54,7 +54,7 @@ package javax.naming.directory;
 	* @see InitialContext#init(Hashtable)
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function new(lazy : Bool) : Void;
+	@:require(java3) @:overload @:protected private function new(lazy : Bool) : Void;
 	
 	/**
 	* Constructs an initial DirContext.
@@ -65,7 +65,7 @@ package javax.naming.directory;
 	*
 	* @see #InitialDirContext(Hashtable)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an initial DirContext using the supplied environment.
@@ -83,59 +83,59 @@ package javax.naming.directory;
 	*
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function new(environment : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(environment : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function getAttributes(name : String) : javax.naming.directory.Attributes;
+	@:overload @:public public function getAttributes(name : String) : javax.naming.directory.Attributes;
 	
-	@:overload public function getAttributes(name : String, attrIds : java.NativeArray<String>) : javax.naming.directory.Attributes;
+	@:overload @:public public function getAttributes(name : String, attrIds : java.NativeArray<String>) : javax.naming.directory.Attributes;
 	
-	@:overload public function getAttributes(name : javax.naming.Name) : javax.naming.directory.Attributes;
+	@:overload @:public public function getAttributes(name : javax.naming.Name) : javax.naming.directory.Attributes;
 	
-	@:overload public function getAttributes(name : javax.naming.Name, attrIds : java.NativeArray<String>) : javax.naming.directory.Attributes;
+	@:overload @:public public function getAttributes(name : javax.naming.Name, attrIds : java.NativeArray<String>) : javax.naming.directory.Attributes;
 	
-	@:overload public function modifyAttributes(name : String, mod_op : Int, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function modifyAttributes(name : String, mod_op : Int, attrs : javax.naming.directory.Attributes) : Void;
 	
-	@:overload public function modifyAttributes(name : javax.naming.Name, mod_op : Int, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function modifyAttributes(name : javax.naming.Name, mod_op : Int, attrs : javax.naming.directory.Attributes) : Void;
 	
-	@:overload public function modifyAttributes(name : String, mods : java.NativeArray<javax.naming.directory.ModificationItem>) : Void;
+	@:overload @:public public function modifyAttributes(name : String, mods : java.NativeArray<javax.naming.directory.ModificationItem>) : Void;
 	
-	@:overload public function modifyAttributes(name : javax.naming.Name, mods : java.NativeArray<javax.naming.directory.ModificationItem>) : Void;
+	@:overload @:public public function modifyAttributes(name : javax.naming.Name, mods : java.NativeArray<javax.naming.directory.ModificationItem>) : Void;
 	
-	@:overload public function bind(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function bind(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
 	
-	@:overload public function bind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function bind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
 	
-	@:overload public function rebind(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function rebind(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
 	
-	@:overload public function rebind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function rebind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
 	
-	@:overload public function createSubcontext(name : String, attrs : javax.naming.directory.Attributes) : javax.naming.directory.DirContext;
+	@:overload @:public public function createSubcontext(name : String, attrs : javax.naming.directory.Attributes) : javax.naming.directory.DirContext;
 	
-	@:overload public function createSubcontext(name : javax.naming.Name, attrs : javax.naming.directory.Attributes) : javax.naming.directory.DirContext;
+	@:overload @:public public function createSubcontext(name : javax.naming.Name, attrs : javax.naming.directory.Attributes) : javax.naming.directory.DirContext;
 	
-	@:overload public function getSchema(name : String) : javax.naming.directory.DirContext;
+	@:overload @:public public function getSchema(name : String) : javax.naming.directory.DirContext;
 	
-	@:overload public function getSchema(name : javax.naming.Name) : javax.naming.directory.DirContext;
+	@:overload @:public public function getSchema(name : javax.naming.Name) : javax.naming.directory.DirContext;
 	
-	@:overload public function getSchemaClassDefinition(name : String) : javax.naming.directory.DirContext;
+	@:overload @:public public function getSchemaClassDefinition(name : String) : javax.naming.directory.DirContext;
 	
-	@:overload public function getSchemaClassDefinition(name : javax.naming.Name) : javax.naming.directory.DirContext;
+	@:overload @:public public function getSchemaClassDefinition(name : javax.naming.Name) : javax.naming.directory.DirContext;
 	
-	@:overload public function search(name : String, matchingAttributes : javax.naming.directory.Attributes) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : String, matchingAttributes : javax.naming.directory.Attributes) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
-	@:overload public function search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
-	@:overload public function search(name : String, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : String, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
-	@:overload public function search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
-	@:overload public function search(name : String, filter : String, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : String, filter : String, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
-	@:overload public function search(name : javax.naming.Name, filter : String, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : javax.naming.Name, filter : String, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
-	@:overload public function search(name : String, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : String, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
-	@:overload public function search(name : javax.naming.Name, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : javax.naming.Name, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
 	
 }

@@ -38,14 +38,14 @@ extern class DSAPublicKeyImpl extends java.security.interfaces.DSAPublicKey
 	* @param q DSA parameter q, may be null if all of p, q, and g are null.
 	* @param g DSA parameter g, may be null if all of p, q, and g are null.
 	*/
-	@:overload public function new(y : java.math.BigInteger, p : java.math.BigInteger, q : java.math.BigInteger, g : java.math.BigInteger) : Void;
+	@:overload @:public public function new(y : java.math.BigInteger, p : java.math.BigInteger, q : java.math.BigInteger, g : java.math.BigInteger) : Void;
 	
 	/**
 	* Make a DSA public key from its DER encoding (X.509).
 	*/
-	@:overload public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload private function writeReplace() : Dynamic;
+	@:overload @:protected private function writeReplace() : Dynamic;
 	
 	
 }

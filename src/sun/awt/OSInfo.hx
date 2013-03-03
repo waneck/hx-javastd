@@ -33,30 +33,30 @@ extern class OSInfo
 	and so the method getWindowsVersion() will return the constant for known OS.
 	It allows compare objects by "==" instead of "equals".
 	*/
-	public static var WINDOWS_UNKNOWN(default, null) : sun.awt.OSInfo.OSInfo_WindowsVersion;
+	@:public @:static @:final public static var WINDOWS_UNKNOWN(default, null) : sun.awt.OSInfo.OSInfo_WindowsVersion;
 	
-	public static var WINDOWS_95(default, null) : sun.awt.OSInfo.OSInfo_WindowsVersion;
+	@:public @:static @:final public static var WINDOWS_95(default, null) : sun.awt.OSInfo.OSInfo_WindowsVersion;
 	
-	public static var WINDOWS_98(default, null) : sun.awt.OSInfo.OSInfo_WindowsVersion;
+	@:public @:static @:final public static var WINDOWS_98(default, null) : sun.awt.OSInfo.OSInfo_WindowsVersion;
 	
-	public static var WINDOWS_ME(default, null) : sun.awt.OSInfo.OSInfo_WindowsVersion;
+	@:public @:static @:final public static var WINDOWS_ME(default, null) : sun.awt.OSInfo.OSInfo_WindowsVersion;
 	
-	public static var WINDOWS_2000(default, null) : sun.awt.OSInfo.OSInfo_WindowsVersion;
+	@:public @:static @:final public static var WINDOWS_2000(default, null) : sun.awt.OSInfo.OSInfo_WindowsVersion;
 	
-	public static var WINDOWS_XP(default, null) : sun.awt.OSInfo.OSInfo_WindowsVersion;
+	@:public @:static @:final public static var WINDOWS_XP(default, null) : sun.awt.OSInfo.OSInfo_WindowsVersion;
 	
-	public static var WINDOWS_2003(default, null) : sun.awt.OSInfo.OSInfo_WindowsVersion;
+	@:public @:static @:final public static var WINDOWS_2003(default, null) : sun.awt.OSInfo.OSInfo_WindowsVersion;
 	
-	public static var WINDOWS_VISTA(default, null) : sun.awt.OSInfo.OSInfo_WindowsVersion;
+	@:public @:static @:final public static var WINDOWS_VISTA(default, null) : sun.awt.OSInfo.OSInfo_WindowsVersion;
 	
 	/**
 	* Returns type of operating system.
 	*/
-	@:overload public static function getOSType() : sun.awt.OSInfo.OSInfo_OSType;
+	@:overload @:public @:static public static function getOSType() : sun.awt.OSInfo.OSInfo_OSType;
 	
-	@:overload public static function getOSTypeAction() : java.security.PrivilegedAction<sun.awt.OSInfo.OSInfo_OSType>;
+	@:overload @:public @:static public static function getOSTypeAction() : java.security.PrivilegedAction<sun.awt.OSInfo.OSInfo_OSType>;
 	
-	@:overload public static function getWindowsVersion() : sun.awt.OSInfo.OSInfo_WindowsVersion;
+	@:overload @:public @:static public static function getWindowsVersion() : sun.awt.OSInfo.OSInfo_WindowsVersion;
 	
 	
 }
@@ -72,17 +72,17 @@ extern class OSInfo
 
 @:native('sun$awt$OSInfo$WindowsVersion') extern class OSInfo_WindowsVersion implements java.lang.Comparable<sun.awt.OSInfo.OSInfo_WindowsVersion>
 {
-	@:overload public function getMajor() : Int;
+	@:overload @:public public function getMajor() : Int;
 	
-	@:overload public function getMinor() : Int;
+	@:overload @:public public function getMinor() : Int;
 	
-	@:overload public function compareTo(o : sun.awt.OSInfo.OSInfo_WindowsVersion) : Int;
+	@:overload @:public public function compareTo(o : sun.awt.OSInfo.OSInfo_WindowsVersion) : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

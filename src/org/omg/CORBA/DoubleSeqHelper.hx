@@ -46,17 +46,17 @@ package org.omg.CORBA;
 */
 extern class DoubleSeqHelper
 {
-	@:overload public static function insert(a : org.omg.CORBA.Any, that : java.NativeArray<Float>) : Void;
+	@:overload @:public @:static public static function insert(a : org.omg.CORBA.Any, that : java.NativeArray<Float>) : Void;
 	
-	@:overload public static function extract(a : org.omg.CORBA.Any) : java.NativeArray<Float>;
+	@:overload @:public @:static public static function extract(a : org.omg.CORBA.Any) : java.NativeArray<Float>;
 	
-	@:overload @:synchronized public static function type() : org.omg.CORBA.TypeCode;
+	@:overload @:synchronized @:public @:static public static function type() : org.omg.CORBA.TypeCode;
 	
-	@:overload public static function id() : String;
+	@:overload @:public @:static public static function id() : String;
 	
-	@:overload public static function read(istream : org.omg.CORBA.portable.InputStream) : java.NativeArray<Float>;
+	@:overload @:public @:static public static function read(istream : org.omg.CORBA.portable.InputStream) : java.NativeArray<Float>;
 	
-	@:overload public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : java.NativeArray<Float>) : Void;
+	@:overload @:public @:static public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : java.NativeArray<Float>) : Void;
 	
 	
 }

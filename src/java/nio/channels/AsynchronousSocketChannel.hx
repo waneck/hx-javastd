@@ -28,12 +28,12 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new(provider : java.nio.channels.spi.AsynchronousChannelProvider) : Void;
+	@:overload @:protected private function new(provider : java.nio.channels.spi.AsynchronousChannelProvider) : Void;
 	
 	/**
 	* Returns the provider that created this channel.
 	*/
-	@:overload @:final public function provider() : java.nio.channels.spi.AsynchronousChannelProvider;
+	@:overload @:public @:final public function provider() : java.nio.channels.spi.AsynchronousChannelProvider;
 	
 	/**
 	* Opens an asynchronous socket channel.
@@ -56,7 +56,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function open(group : java.nio.channels.AsynchronousChannelGroup) : java.nio.channels.AsynchronousSocketChannel;
+	@:overload @:public @:static public static function open(group : java.nio.channels.AsynchronousChannelGroup) : java.nio.channels.AsynchronousSocketChannel;
 	
 	/**
 	* Opens an asynchronous socket channel.
@@ -73,7 +73,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function open() : java.nio.channels.AsynchronousSocketChannel;
+	@:overload @:public @:static public static function open() : java.nio.channels.AsynchronousSocketChannel;
 	
 	/**
 	* @throws  ConnectionPendingException
@@ -83,14 +83,14 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  ClosedChannelException              {@inheritDoc}
 	* @throws  IOException                         {@inheritDoc}
 	*/
-	@:overload @:abstract public function bind(local : java.net.SocketAddress) : java.nio.channels.AsynchronousSocketChannel;
+	@:overload @:public @:abstract public function bind(local : java.net.SocketAddress) : java.nio.channels.AsynchronousSocketChannel;
 	
 	/**
 	* @throws  IllegalArgumentException                {@inheritDoc}
 	* @throws  ClosedChannelException                  {@inheritDoc}
 	* @throws  IOException                             {@inheritDoc}
 	*/
-	@:overload @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.AsynchronousSocketChannel;
+	@:overload @:public @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.AsynchronousSocketChannel;
 	
 	/**
 	* Shutdown the connection for reading without closing the channel.
@@ -112,7 +112,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function shutdownInput() : java.nio.channels.AsynchronousSocketChannel;
+	@:overload @:public @:abstract public function shutdownInput() : java.nio.channels.AsynchronousSocketChannel;
 	
 	/**
 	* Shutdown the connection for writing without closing the channel.
@@ -132,7 +132,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function shutdownOutput() : java.nio.channels.AsynchronousSocketChannel;
+	@:overload @:public @:abstract public function shutdownOutput() : java.nio.channels.AsynchronousSocketChannel;
 	
 	/**
 	* Returns the remote address to which this channel's socket is connected.
@@ -149,7 +149,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:abstract public function getRemoteAddress() : java.net.SocketAddress;
+	@:overload @:public @:abstract public function getRemoteAddress() : java.net.SocketAddress;
 	
 	/**
 	* Connects this channel.
@@ -189,7 +189,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	*
 	* @see #getRemoteAddress
 	*/
-	@:overload @:abstract public function connect<A>(remote : java.net.SocketAddress, attachment : A, handler : java.nio.channels.CompletionHandler<java.lang.Void, A>) : Void;
+	@:overload @:public @:abstract public function connect<A>(remote : java.net.SocketAddress, attachment : A, handler : java.nio.channels.CompletionHandler<java.lang.Void, A>) : Void;
 	
 	/**
 	* Connects this channel.
@@ -218,7 +218,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	*          If a security manager has been installed
 	*          and it does not permit access to the given remote endpoint
 	*/
-	@:overload @:abstract public function connect(remote : java.net.SocketAddress) : java.util.concurrent.Future<java.lang.Void>;
+	@:overload @:public @:abstract public function connect(remote : java.net.SocketAddress) : java.util.concurrent.Future<java.lang.Void>;
 	
 	/**
 	* Reads a sequence of bytes from this channel into the given buffer.
@@ -262,7 +262,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  ShutdownChannelGroupException
 	*          If the channel group has terminated
 	*/
-	@:overload @:abstract public function read<A>(dst : java.nio.ByteBuffer, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
+	@:overload @:public @:abstract public function read<A>(dst : java.nio.ByteBuffer, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
 	
 	/**
 	* @throws  IllegalArgumentException        {@inheritDoc}
@@ -272,7 +272,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  ShutdownChannelGroupException
 	*          If the channel group has terminated
 	*/
-	@:overload @:final public function read<A>(dst : java.nio.ByteBuffer, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
+	@:overload @:public @:final public function read<A>(dst : java.nio.ByteBuffer, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
 	
 	/**
 	* @throws  IllegalArgumentException        {@inheritDoc}
@@ -280,7 +280,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  NotYetConnectedException
 	*          If this channel is not yet connected
 	*/
-	@:overload @:abstract public function read(dst : java.nio.ByteBuffer) : java.util.concurrent.Future<Null<Int>>;
+	@:overload @:public @:abstract public function read(dst : java.nio.ByteBuffer) : java.util.concurrent.Future<Null<Int>>;
 	
 	/**
 	* Reads a sequence of bytes from this channel into a subsequence of the
@@ -357,7 +357,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  ShutdownChannelGroupException
 	*          If the channel group has terminated
 	*/
-	@:overload @:abstract public function read<A>(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit, attachment : A, handler : java.nio.channels.CompletionHandler<Null<haxe.Int64>, A>) : Void;
+	@:overload @:public @:abstract public function read<A>(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit, attachment : A, handler : java.nio.channels.CompletionHandler<Null<haxe.Int64>, A>) : Void;
 	
 	/**
 	* Writes a sequence of bytes to this channel from the given buffer.
@@ -398,7 +398,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  ShutdownChannelGroupException
 	*          If the channel group has terminated
 	*/
-	@:overload @:abstract public function write<A>(src : java.nio.ByteBuffer, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
+	@:overload @:public @:abstract public function write<A>(src : java.nio.ByteBuffer, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
 	
 	/**
 	* @throws  WritePendingException          {@inheritDoc}
@@ -407,14 +407,14 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  ShutdownChannelGroupException
 	*          If the channel group has terminated
 	*/
-	@:overload @:final public function write<A>(src : java.nio.ByteBuffer, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
+	@:overload @:public @:final public function write<A>(src : java.nio.ByteBuffer, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
 	
 	/**
 	* @throws  WritePendingException       {@inheritDoc}
 	* @throws  NotYetConnectedException
 	*          If this channel is not yet connected
 	*/
-	@:overload @:abstract public function write(src : java.nio.ByteBuffer) : java.util.concurrent.Future<Null<Int>>;
+	@:overload @:public @:abstract public function write(src : java.nio.ByteBuffer) : java.util.concurrent.Future<Null<Int>>;
 	
 	/**
 	* Writes a sequence of bytes to this channel from a subsequence of the given
@@ -486,7 +486,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  ShutdownChannelGroupException
 	*          If the channel group has terminated
 	*/
-	@:overload @:abstract public function write<A>(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit, attachment : A, handler : java.nio.channels.CompletionHandler<Null<haxe.Int64>, A>) : Void;
+	@:overload @:public @:abstract public function write<A>(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit, attachment : A, handler : java.nio.channels.CompletionHandler<Null<haxe.Int64>, A>) : Void;
 	
 	/**
 	* Returns the value of a socket option.
@@ -506,7 +506,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	*
 	* @see java.net.StandardSocketOptions
 	*/
-	@:overload @:public public function getOption<T>(name : java.net.SocketOption<T>) : T;
+	@:overload @:public @:public @:public @:public @:public public function getOption<T>(name : java.net.SocketOption<T>) : T;
 	
 	/**
 	* Returns a set of the socket options supported by this channel.
@@ -516,7 +516,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	*
 	* @return  A set of the socket options supported by this channel
 	*/
-	@:overload @:public public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
+	@:overload @:public @:public @:public @:public @:public public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
 	
 	/**
 	* Returns the socket address that this channel's socket is bound to, or
@@ -534,14 +534,14 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:public public function getLocalAddress() : java.net.SocketAddress;
+	@:overload @:public @:public @:public @:public @:public public function getLocalAddress() : java.net.SocketAddress;
 	
 	/**
 	* Tells whether or not this channel is open.  </p>
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload @:public @:public @:public override public function isOpen() : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function isOpen() : Bool;
 	
 	/**
 	* Closes this channel.
@@ -560,7 +560,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	*
 	* @throws  IOException  If an I/O error occurs
 	*/
-	@:overload @:public @:public @:public override public function close() : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function close() : Void;
 	
 	
 }

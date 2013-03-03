@@ -70,7 +70,7 @@ extern interface Activator extends java.rmi.Remote
 	* @exception RemoteException if remote call fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function activate(id : java.rmi.activation.ActivationID, force : Bool) : java.rmi.MarshalledObject<java.rmi.Remote>;
+	@:require(java2) @:overload @:public public function activate(id : java.rmi.activation.ActivationID, force : Bool) : java.rmi.MarshalledObject<java.rmi.Remote>;
 	
 	
 }

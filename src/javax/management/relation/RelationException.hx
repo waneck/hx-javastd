@@ -28,14 +28,14 @@ extern class RelationException extends javax.management.JMException
 	/**
 	* Default constructor, no message put in exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor with given message put in exception.
 	*
 	* @param message the detail message.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

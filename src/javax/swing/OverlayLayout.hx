@@ -32,7 +32,7 @@ extern class OverlayLayout implements java.awt.LayoutManager2 implements java.io
 	*
 	* @param target  the container to do layout against
 	*/
-	@:overload public function new(target : java.awt.Container) : Void;
+	@:overload @:public public function new(target : java.awt.Container) : Void;
 	
 	/**
 	* Returns the container that uses this layout manager.
@@ -41,7 +41,7 @@ extern class OverlayLayout implements java.awt.LayoutManager2 implements java.io
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getTarget() : java.awt.Container;
+	@:require(java6) @:overload @:public @:final public function getTarget() : java.awt.Container;
 	
 	/**
 	* Indicates a child has changed its layout related information,
@@ -49,7 +49,7 @@ extern class OverlayLayout implements java.awt.LayoutManager2 implements java.io
 	*
 	* @param target the container
 	*/
-	@:overload public function invalidateLayout(target : java.awt.Container) : Void;
+	@:overload @:public public function invalidateLayout(target : java.awt.Container) : Void;
 	
 	/**
 	* Adds the specified component to the layout. Used by
@@ -58,7 +58,7 @@ extern class OverlayLayout implements java.awt.LayoutManager2 implements java.io
 	* @param name the name of the component
 	* @param comp the the component to be added
 	*/
-	@:overload public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
 	
 	/**
 	* Removes the specified component from the layout. Used by
@@ -66,7 +66,7 @@ extern class OverlayLayout implements java.awt.LayoutManager2 implements java.io
 	*
 	* @param comp the component to remove
 	*/
-	@:overload public function removeLayoutComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(comp : java.awt.Component) : Void;
 	
 	/**
 	* Adds the specified component to the layout, using the specified
@@ -76,7 +76,7 @@ extern class OverlayLayout implements java.awt.LayoutManager2 implements java.io
 	* @param comp the component to be added
 	* @param constraints  where/how the component is added to the layout.
 	*/
-	@:overload public function addLayoutComponent(comp : java.awt.Component, constraints : Dynamic) : Void;
+	@:overload @:public public function addLayoutComponent(comp : java.awt.Component, constraints : Dynamic) : Void;
 	
 	/**
 	* Returns the preferred dimensions for this layout given the components
@@ -88,7 +88,7 @@ extern class OverlayLayout implements java.awt.LayoutManager2 implements java.io
 	* @return a Dimension object containing the preferred dimensions
 	* @see #minimumLayoutSize
 	*/
-	@:overload public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the minimum dimensions needed to lay out the components
@@ -99,7 +99,7 @@ extern class OverlayLayout implements java.awt.LayoutManager2 implements java.io
 	* @return a Dimension object containing the minimum dimensions
 	* @see #preferredLayoutSize
 	*/
-	@:overload public function minimumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the maximum dimensions needed to lay out the components
@@ -112,7 +112,7 @@ extern class OverlayLayout implements java.awt.LayoutManager2 implements java.io
 	*         dimensions
 	* @see #preferredLayoutSize
 	*/
-	@:overload public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the alignment along the x axis for the container.
@@ -120,7 +120,7 @@ extern class OverlayLayout implements java.awt.LayoutManager2 implements java.io
 	* @param target the container
 	* @return the alignment >= 0.0f && <= 1.0f
 	*/
-	@:overload public function getLayoutAlignmentX(target : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentX(target : java.awt.Container) : Single;
 	
 	/**
 	* Returns the alignment along the y axis for the container.
@@ -128,7 +128,7 @@ extern class OverlayLayout implements java.awt.LayoutManager2 implements java.io
 	* @param target the container
 	* @return the alignment >= 0.0f && <= 1.0f
 	*/
-	@:overload public function getLayoutAlignmentY(target : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentY(target : java.awt.Container) : Single;
 	
 	/**
 	* Called by the AWT when the specified container needs to be laid out.
@@ -138,7 +138,7 @@ extern class OverlayLayout implements java.awt.LayoutManager2 implements java.io
 	* @exception AWTError  if the target isn't the container specified to the
 	*                      constructor
 	*/
-	@:overload public function layoutContainer(target : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(target : java.awt.Container) : Void;
 	
 	
 }

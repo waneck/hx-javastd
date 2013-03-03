@@ -66,9 +66,9 @@ package sun.net;
 */
 extern class TelnetOutputStream extends java.io.BufferedOutputStream
 {
-	public var binaryMode : Bool;
+	@:public public var binaryMode : Bool;
 	
-	@:overload public function new(fd : java.io.OutputStream, binary : Bool) : Void;
+	@:overload @:public public function new(fd : java.io.OutputStream, binary : Bool) : Void;
 	
 	/**
 	* set the stickyCRLF flag. Tells wether the terminal considers CRLF as a single
@@ -76,18 +76,18 @@ extern class TelnetOutputStream extends java.io.BufferedOutputStream
 	*
 	* @param   on      the <code>boolean</code> to set the flag to.
 	*/
-	@:overload public function setStickyCRLF(on : Bool) : Void;
+	@:overload @:public public function setStickyCRLF(on : Bool) : Void;
 	
 	/**
 	* Writes the int to the stream and does CR LF processing if necessary.
 	*/
-	@:overload override public function write(c : Int) : Void;
+	@:overload @:public override public function write(c : Int) : Void;
 	
 	/**
 	* Write the bytes at offset <i>off</i> in buffer <i>bytes</i> for
 	* <i>length</i> bytes.
 	*/
-	@:overload override public function write(bytes : java.NativeArray<java.StdTypes.Int8>, off : Int, length : Int) : Void;
+	@:overload @:public override public function write(bytes : java.NativeArray<java.StdTypes.Int8>, off : Int, length : Int) : Void;
 	
 	
 }

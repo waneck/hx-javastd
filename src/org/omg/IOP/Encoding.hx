@@ -10,21 +10,21 @@ extern class Encoding implements org.omg.CORBA.portable.IDLEntity
 	/**
 	* The encoding format.
 	*/
-	public var format : java.StdTypes.Int16;
+	@:public public var format : java.StdTypes.Int16;
 	
 	/**
 	* The major version of this Encoding format.
 	*/
-	public var major_version : java.StdTypes.Int8;
+	@:public public var major_version : java.StdTypes.Int8;
 	
 	/**
 	* The minor version of this Encoding format.
 	*/
-	public var minor_version : java.StdTypes.Int8;
+	@:public public var minor_version : java.StdTypes.Int8;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_format : java.StdTypes.Int16, _major_version : java.StdTypes.Int8, _minor_version : java.StdTypes.Int8) : Void;
+	@:overload @:public public function new(_format : java.StdTypes.Int16, _major_version : java.StdTypes.Int8, _minor_version : java.StdTypes.Int8) : Void;
 	
 	
 }

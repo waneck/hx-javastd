@@ -186,7 +186,7 @@ extern interface Attr extends org.w3c.dom.Node
 	* Returns the name of this attribute. If <code>Node.localName</code> is
 	* different from <code>null</code>, this attribute is a qualified name.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	*  <code>True</code> if this attribute was explicitly given a value in
@@ -198,7 +198,7 @@ extern interface Attr extends org.w3c.dom.Node
 	* use <code>Document.normalizeDocument()</code> to guarantee this
 	* information is up-to-date.
 	*/
-	@:overload public function getSpecified() : Bool;
+	@:overload @:public public function getSpecified() : Bool;
 	
 	/**
 	* On retrieval, the value of the attribute is returned as a string.
@@ -214,7 +214,7 @@ extern interface Attr extends org.w3c.dom.Node
 	* mutation; in such case, the value on retrieval may differ from the
 	* value on setting.
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	/**
 	* On retrieval, the value of the attribute is returned as a string.
@@ -232,14 +232,14 @@ extern interface Attr extends org.w3c.dom.Node
 	* @exception DOMException
 	*   NO_MODIFICATION_ALLOWED_ERR: Raised when the node is readonly.
 	*/
-	@:overload public function setValue(value : String) : Void;
+	@:overload @:public public function setValue(value : String) : Void;
 	
 	/**
 	* The <code>Element</code> node this attribute is attached to or
 	* <code>null</code> if this attribute is not in use.
 	* @since DOM Level 2
 	*/
-	@:overload public function getOwnerElement() : org.w3c.dom.Element;
+	@:overload @:public public function getOwnerElement() : org.w3c.dom.Element;
 	
 	/**
 	*  The type information associated with this attribute. While the type
@@ -249,7 +249,7 @@ extern interface Attr extends org.w3c.dom.Node
 	*  may not be reliable if the node was moved.
 	* @since DOM Level 3
 	*/
-	@:overload public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
+	@:overload @:public public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
 	
 	/**
 	*  Returns whether this attribute is known to be of type ID (i.e. to
@@ -297,7 +297,7 @@ extern interface Attr extends org.w3c.dom.Node
 	* <code>isId</code> will always return true.
 	* @since DOM Level 3
 	*/
-	@:overload public function isId() : Bool;
+	@:overload @:public public function isId() : Bool;
 	
 	
 }

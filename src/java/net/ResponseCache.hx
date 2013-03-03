@@ -36,7 +36,7 @@ extern class ResponseCache
 	* @return the system-wide <code>ResponseCache</code>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized public static function getDefault() : java.net.ResponseCache;
+	@:require(java5) @:overload @:public @:synchronized @:static public static function getDefault() : java.net.ResponseCache;
 	
 	/**
 	* Sets (or unsets) the system-wide cache.
@@ -53,7 +53,7 @@ extern class ResponseCache
 	* @see #getDefault()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized public static function setDefault(responseCache : java.net.ResponseCache) : Void;
+	@:require(java5) @:overload @:public @:synchronized @:static public static function setDefault(responseCache : java.net.ResponseCache) : Void;
 	
 	/**
 	* Retrieve the cached response based on the requesting uri,
@@ -79,7 +79,7 @@ extern class ResponseCache
 	* @see     java.net.URLConnection#setDefaultUseCaches(boolean)
 	* @see     java.net.URLConnection#getDefaultUseCaches()
 	*/
-	@:overload @:abstract public function get(uri : java.net.URI, rqstMethod : String, rqstHeaders : java.util.Map<String, java.util.List<String>>) : java.net.CacheResponse;
+	@:overload @:public @:abstract public function get(uri : java.net.URI, rqstMethod : String, rqstHeaders : java.util.Map<String, java.util.List<String>>) : java.net.CacheResponse;
 	
 	/**
 	* The protocol handler calls this method after a resource has
@@ -101,7 +101,7 @@ extern class ResponseCache
 	* @throws IllegalArgumentException if any one of the arguments is
 	*            null
 	*/
-	@:overload @:abstract public function put(uri : java.net.URI, conn : java.net.URLConnection) : java.net.CacheRequest;
+	@:overload @:public @:abstract public function put(uri : java.net.URI, conn : java.net.URLConnection) : java.net.CacheRequest;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class DESKeySpec implements java.security.spec.KeySpec
 	/**
 	* The constant which defines the length of a DES key in bytes.
 	*/
-	public static var DES_KEY_LEN(default, null) : Int;
+	@:public @:static @:final public static var DES_KEY_LEN(default, null) : Int;
 	
 	/**
 	* Creates a DESKeySpec object using the first 8 bytes in
@@ -45,7 +45,7 @@ extern class DESKeySpec implements java.security.spec.KeySpec
 	* @exception InvalidKeyException if the given key material is shorter
 	* than 8 bytes.
 	*/
-	@:overload public function new(key : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(key : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Creates a DESKeySpec object using the first 8 bytes in
@@ -66,7 +66,7 @@ extern class DESKeySpec implements java.security.spec.KeySpec
 	* @exception InvalidKeyException if the given key material, starting at
 	* <code>offset</code> inclusive, is shorter than 8 bytes.
 	*/
-	@:overload public function new(key : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Void;
+	@:overload @:public public function new(key : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Void;
 	
 	/**
 	* Returns the DES key material.
@@ -74,7 +74,7 @@ extern class DESKeySpec implements java.security.spec.KeySpec
 	* @return the DES key material. Returns a new array
 	* each time this method is called.
 	*/
-	@:overload public function getKey() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getKey() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Checks if the given DES key material, starting at <code>offset</code>
@@ -91,7 +91,7 @@ extern class DESKeySpec implements java.security.spec.KeySpec
 	* <code>null</code>, or starting at <code>offset</code> inclusive, is
 	* shorter than 8 bytes.
 	*/
-	@:overload public static function isParityAdjusted(key : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Bool;
+	@:overload @:public @:static public static function isParityAdjusted(key : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Bool;
 	
 	/**
 	* Checks if the given DES key material is weak or semi-weak.
@@ -107,7 +107,7 @@ extern class DESKeySpec implements java.security.spec.KeySpec
 	* <code>null</code>, or starting at <code>offset</code> inclusive, is
 	* shorter than 8 bytes.
 	*/
-	@:overload public static function isWeak(key : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Bool;
+	@:overload @:public @:static public static function isWeak(key : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Bool;
 	
 	
 }

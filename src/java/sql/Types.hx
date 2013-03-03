@@ -36,140 +36,140 @@ extern class Types
 	* to as a type code, that identifies the generic SQL type
 	* <code>BIT</code>.
 	*/
-	public static var BIT(default, null) : Int;
+	@:public @:final @:static public static var BIT(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>TINYINT</code>.
 	*/
-	public static var TINYINT(default, null) : Int;
+	@:public @:final @:static public static var TINYINT(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>SMALLINT</code>.
 	*/
-	public static var SMALLINT(default, null) : Int;
+	@:public @:final @:static public static var SMALLINT(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>INTEGER</code>.
 	*/
-	public static var INTEGER(default, null) : Int;
+	@:public @:final @:static public static var INTEGER(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>BIGINT</code>.
 	*/
-	public static var BIGINT(default, null) : Int;
+	@:public @:final @:static public static var BIGINT(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>FLOAT</code>.
 	*/
-	public static var FLOAT(default, null) : Int;
+	@:public @:final @:static public static var FLOAT(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>REAL</code>.
 	*/
-	public static var REAL(default, null) : Int;
+	@:public @:final @:static public static var REAL(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>DOUBLE</code>.
 	*/
-	public static var DOUBLE(default, null) : Int;
+	@:public @:final @:static public static var DOUBLE(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>NUMERIC</code>.
 	*/
-	public static var NUMERIC(default, null) : Int;
+	@:public @:final @:static public static var NUMERIC(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>DECIMAL</code>.
 	*/
-	public static var DECIMAL(default, null) : Int;
+	@:public @:final @:static public static var DECIMAL(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>CHAR</code>.
 	*/
-	public static var CHAR(default, null) : Int;
+	@:public @:final @:static public static var CHAR(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>VARCHAR</code>.
 	*/
-	public static var VARCHAR(default, null) : Int;
+	@:public @:final @:static public static var VARCHAR(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>LONGVARCHAR</code>.
 	*/
-	public static var LONGVARCHAR(default, null) : Int;
+	@:public @:final @:static public static var LONGVARCHAR(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>DATE</code>.
 	*/
-	public static var DATE(default, null) : Int;
+	@:public @:final @:static public static var DATE(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>TIME</code>.
 	*/
-	public static var TIME(default, null) : Int;
+	@:public @:final @:static public static var TIME(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>TIMESTAMP</code>.
 	*/
-	public static var TIMESTAMP(default, null) : Int;
+	@:public @:final @:static public static var TIMESTAMP(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>BINARY</code>.
 	*/
-	public static var BINARY(default, null) : Int;
+	@:public @:final @:static public static var BINARY(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>VARBINARY</code>.
 	*/
-	public static var VARBINARY(default, null) : Int;
+	@:public @:final @:static public static var VARBINARY(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language, sometimes referred
 	* to as a type code, that identifies the generic SQL type
 	* <code>LONGVARBINARY</code>.
 	*/
-	public static var LONGVARBINARY(default, null) : Int;
+	@:public @:final @:static public static var LONGVARBINARY(default, null) : Int;
 	
 	/**
 	* <P>The constant in the Java programming language
 	* that identifies the generic SQL value
 	* <code>NULL</code>.
 	*/
-	public static var NULL(default, null) : Int;
+	@:public @:final @:static public static var NULL(default, null) : Int;
 	
 	/**
 	* The constant in the Java programming language that indicates
@@ -177,7 +177,7 @@ extern class Types
 	* gets mapped to a Java object that can be accessed via
 	* the methods <code>getObject</code> and <code>setObject</code>.
 	*/
-	public static var OTHER(default, null) : Int;
+	@:public @:final @:static public static var OTHER(default, null) : Int;
 	
 	/**
 	* The constant in the Java programming language, sometimes referred to
@@ -185,7 +185,7 @@ extern class Types
 	* <code>JAVA_OBJECT</code>.
 	* @since 1.2
 	*/
-	@:require(java2) public static var JAVA_OBJECT(default, null) : Int;
+	@:require(java2) @:public @:final @:static public static var JAVA_OBJECT(default, null) : Int;
 	
 	/**
 	* The constant in the Java programming language, sometimes referred to
@@ -193,7 +193,7 @@ extern class Types
 	* <code>DISTINCT</code>.
 	* @since 1.2
 	*/
-	@:require(java2) public static var DISTINCT(default, null) : Int;
+	@:require(java2) @:public @:final @:static public static var DISTINCT(default, null) : Int;
 	
 	/**
 	* The constant in the Java programming language, sometimes referred to
@@ -201,7 +201,7 @@ extern class Types
 	* <code>STRUCT</code>.
 	* @since 1.2
 	*/
-	@:require(java2) public static var STRUCT(default, null) : Int;
+	@:require(java2) @:public @:final @:static public static var STRUCT(default, null) : Int;
 	
 	/**
 	* The constant in the Java programming language, sometimes referred to
@@ -209,7 +209,7 @@ extern class Types
 	* <code>ARRAY</code>.
 	* @since 1.2
 	*/
-	@:require(java2) public static var ARRAY(default, null) : Int;
+	@:require(java2) @:public @:final @:static public static var ARRAY(default, null) : Int;
 	
 	/**
 	* The constant in the Java programming language, sometimes referred to
@@ -217,7 +217,7 @@ extern class Types
 	* <code>BLOB</code>.
 	* @since 1.2
 	*/
-	@:require(java2) public static var BLOB(default, null) : Int;
+	@:require(java2) @:public @:final @:static public static var BLOB(default, null) : Int;
 	
 	/**
 	* The constant in the Java programming language, sometimes referred to
@@ -225,7 +225,7 @@ extern class Types
 	* <code>CLOB</code>.
 	* @since 1.2
 	*/
-	@:require(java2) public static var CLOB(default, null) : Int;
+	@:require(java2) @:public @:final @:static public static var CLOB(default, null) : Int;
 	
 	/**
 	* The constant in the Java programming language, sometimes referred to
@@ -233,7 +233,7 @@ extern class Types
 	* <code>REF</code>.
 	* @since 1.2
 	*/
-	@:require(java2) public static var REF(default, null) : Int;
+	@:require(java2) @:public @:final @:static public static var REF(default, null) : Int;
 	
 	/**
 	* The constant in the Java programming language, somtimes referred to
@@ -241,7 +241,7 @@ extern class Types
 	*
 	* @since 1.4
 	*/
-	@:require(java4) public static var DATALINK(default, null) : Int;
+	@:require(java4) @:public @:final @:static public static var DATALINK(default, null) : Int;
 	
 	/**
 	* The constant in the Java programming language, somtimes referred to
@@ -249,7 +249,7 @@ extern class Types
 	*
 	* @since 1.4
 	*/
-	@:require(java4) public static var BOOLEAN(default, null) : Int;
+	@:require(java4) @:public @:final @:static public static var BOOLEAN(default, null) : Int;
 	
 	/**
 	* The constant in the Java programming language, sometimes referred to
@@ -258,7 +258,7 @@ extern class Types
 	* @since 1.6
 	*
 	*/
-	@:require(java6) public static var ROWID(default, null) : Int;
+	@:require(java6) @:public @:final @:static public static var ROWID(default, null) : Int;
 	
 	/**
 	* The constant in the Java programming language, sometimes referred to
@@ -266,7 +266,7 @@ extern class Types
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var NCHAR(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var NCHAR(default, null) : Int;
 	
 	/**
 	* The constant in the Java programming language, sometimes referred to
@@ -274,7 +274,7 @@ extern class Types
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var NVARCHAR(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var NVARCHAR(default, null) : Int;
 	
 	/**
 	* The constant in the Java programming language, sometimes referred to
@@ -282,7 +282,7 @@ extern class Types
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var LONGNVARCHAR(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var LONGNVARCHAR(default, null) : Int;
 	
 	/**
 	* The constant in the Java programming language, sometimes referred to
@@ -290,7 +290,7 @@ extern class Types
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var NCLOB(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var NCLOB(default, null) : Int;
 	
 	/**
 	* The constant in the Java programming language, sometimes referred to
@@ -298,7 +298,7 @@ extern class Types
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var SQLXML(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var SQLXML(default, null) : Int;
 	
 	
 }

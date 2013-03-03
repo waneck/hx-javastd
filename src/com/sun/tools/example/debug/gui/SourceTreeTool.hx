@@ -32,66 +32,66 @@ package com.sun.tools.example.debug.gui;
 */
 extern class SourceTreeTool extends javax.swing.JPanel
 {
-	@:overload public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
+	@:overload @:public public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$SourceTreeTool$SourceTreeToolListener') @:internal extern class SourceTreeTool_SourceTreeToolListener implements com.sun.tools.example.debug.gui.SourceListener
 {
-	@:overload public function sourcepathChanged(e : com.sun.tools.example.debug.gui.SourcepathChangedEvent) : Void;
+	@:overload @:public public function sourcepathChanged(e : com.sun.tools.example.debug.gui.SourcepathChangedEvent) : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$SourceTreeTool$SourceOrDirectoryFilter') @:internal extern class SourceTreeTool_SourceOrDirectoryFilter implements java.io.FilenameFilter
 {
-	@:overload public function accept(dir : java.io.File, name : String) : Bool;
+	@:overload @:public public function accept(dir : java.io.File, name : String) : Bool;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$SourceTreeTool$SourceTreeNode') @:internal extern class SourceTreeTool_SourceTreeNode implements javax.swing.tree.TreeNode
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getRelativePath() : String;
+	@:overload @:public public function getRelativePath() : String;
 	
 	/*
 	* Returns the child <code>TreeNode</code> at index
 	* <code>childIndex</code>.
 	*/
-	@:overload public function getChildAt(childIndex : Int) : javax.swing.tree.TreeNode;
+	@:overload @:public public function getChildAt(childIndex : Int) : javax.swing.tree.TreeNode;
 	
 	/**
 	* Returns the number of children <code>TreeNode</code>s the receiver
 	* contains.
 	*/
-	@:overload public function getChildCount() : Int;
+	@:overload @:public public function getChildCount() : Int;
 	
 	/**
 	* Returns the parent <code>TreeNode</code> of the receiver.
 	*/
-	@:overload public function getParent() : javax.swing.tree.TreeNode;
+	@:overload @:public public function getParent() : javax.swing.tree.TreeNode;
 	
 	/**
 	* Returns the index of <code>node</code> in the receivers children.
 	* If the receiver does not contain <code>node</code>, -1 will be
 	* returned.
 	*/
-	@:overload public function getIndex(node : javax.swing.tree.TreeNode) : Int;
+	@:overload @:public public function getIndex(node : javax.swing.tree.TreeNode) : Int;
 	
 	/**
 	* Returns true if the receiver allows children.
 	*/
-	@:overload public function getAllowsChildren() : Bool;
+	@:overload @:public public function getAllowsChildren() : Bool;
 	
 	/**
 	* Returns true if the receiver is a leaf.
 	*/
-	@:overload public function isLeaf() : Bool;
+	@:overload @:public public function isLeaf() : Bool;
 	
 	/**
 	* Returns the children of the receiver as an Enumeration.
 	*/
-	@:overload public function children() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function children() : java.util.Enumeration<Dynamic>;
 	
 	
 }

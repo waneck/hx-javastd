@@ -52,12 +52,12 @@ extern class ExsltStrings extends com.sun.org.apache.xalan.internal.lib.ExsltBas
 	*
 	* @return The string after alignment
 	*/
-	@:overload public static function align(targetStr : String, paddingStr : String, type : String) : String;
+	@:overload @:public @:static public static function align(targetStr : String, paddingStr : String, type : String) : String;
 	
 	/**
 	* See above
 	*/
-	@:overload public static function align(targetStr : String, paddingStr : String) : String;
+	@:overload @:public @:static public static function align(targetStr : String, paddingStr : String) : String;
 	
 	/**
 	* The str:concat function takes a node set and returns the concatenation of the
@@ -67,7 +67,7 @@ extern class ExsltStrings extends com.sun.org.apache.xalan.internal.lib.ExsltBas
 	* @param nl A node set
 	* @return The concatenation of the string values of the nodes in that node set
 	*/
-	@:overload public static function concat(nl : org.w3c.dom.NodeList) : String;
+	@:overload @:public @:static public static function concat(nl : org.w3c.dom.NodeList) : String;
 	
 	/**
 	* The str:padding function creates a padding string of a certain length.
@@ -84,12 +84,12 @@ extern class ExsltStrings extends com.sun.org.apache.xalan.internal.lib.ExsltBas
 	*
 	* @return A padding string of the given length
 	*/
-	@:overload public static function padding(length : Float, pattern : String) : String;
+	@:overload @:public @:static public static function padding(length : Float, pattern : String) : String;
 	
 	/**
 	* See above
 	*/
-	@:overload public static function padding(length : Float) : String;
+	@:overload @:public @:static public static function padding(length : Float) : String;
 	
 	/**
 	* The str:split function splits up a string and returns a node set of token
@@ -112,12 +112,12 @@ extern class ExsltStrings extends com.sun.org.apache.xalan.internal.lib.ExsltBas
 	*
 	* @return A node set of split tokens
 	*/
-	@:overload public static function split(str : String, pattern : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function split(str : String, pattern : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* See above
 	*/
-	@:overload public static function split(str : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function split(str : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* The str:tokenize function splits up a string and returns a node set of token
@@ -152,12 +152,12 @@ extern class ExsltStrings extends com.sun.org.apache.xalan.internal.lib.ExsltBas
 	*
 	* @return A node set of split token elements
 	*/
-	@:overload public static function tokenize(toTokenize : String, delims : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function tokenize(toTokenize : String, delims : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* See above
 	*/
-	@:overload public static function tokenize(toTokenize : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function tokenize(toTokenize : String) : org.w3c.dom.NodeList;
 	
 	
 }

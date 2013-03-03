@@ -28,7 +28,7 @@ extern class KeyName extends com.sun.org.apache.xml.internal.security.utils.Sign
 	* @param BaseURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Constructor KeyName
@@ -36,17 +36,17 @@ extern class KeyName extends com.sun.org.apache.xml.internal.security.utils.Sign
 	* @param doc
 	* @param keyName
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, keyName : String) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, keyName : String) : Void;
 	
 	/**
 	* Method getKeyName
 	*
 	* @return key name
 	*/
-	@:overload public function getKeyName() : String;
+	@:overload @:public public function getKeyName() : String;
 	
 	/** @inheritDoc */
-	@:overload public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

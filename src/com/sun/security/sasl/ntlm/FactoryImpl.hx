@@ -28,7 +28,7 @@ extern class FactoryImpl implements javax.security.sasl.SaslClientFactory implem
 	/**
 	* Empty constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns a new instance of the NTLM SASL client mechanism.
@@ -37,7 +37,7 @@ extern class FactoryImpl implements javax.security.sasl.SaslClientFactory implem
 	* @throws SaslException If there is an error creating the NTLM
 	* SASL client.
 	*/
-	@:overload public function createSaslClient(mechs : java.NativeArray<String>, authorizationId : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslClient;
+	@:overload @:public public function createSaslClient(mechs : java.NativeArray<String>, authorizationId : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslClient;
 	
 	/**
 	* Returns a new instance of the NTLM SASL server mechanism.
@@ -46,7 +46,7 @@ extern class FactoryImpl implements javax.security.sasl.SaslClientFactory implem
 	* @throws SaslException If there is an error creating the NTLM
 	* SASL server.
 	*/
-	@:overload public function createSaslServer(mech : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslServer;
+	@:overload @:public public function createSaslServer(mech : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslServer;
 	
 	/**
 	* Returns the authentication mechanisms that this factory can produce.
@@ -54,7 +54,7 @@ extern class FactoryImpl implements javax.security.sasl.SaslClientFactory implem
 	* @returns String[] {"NTLM"} if policies in env match those of this
 	* factory.
 	*/
-	@:overload public function getMechanismNames(env : java.util.Map<String, Dynamic>) : java.NativeArray<String>;
+	@:overload @:public public function getMechanismNames(env : java.util.Map<String, Dynamic>) : java.NativeArray<String>;
 	
 	
 }

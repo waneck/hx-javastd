@@ -29,31 +29,31 @@ extern class SwingUtilities2
 	* The <code>AppContext</code> key for our one <code>LAFState</code>
 	* instance.
 	*/
-	public static var LAF_STATE_KEY(default, null) : Dynamic;
+	@:public @:static @:final public static var LAF_STATE_KEY(default, null) : Dynamic;
 	
-	public static var DEFAULT_FRC(default, null) : java.awt.font.FontRenderContext;
+	@:public @:static @:final public static var DEFAULT_FRC(default, null) : java.awt.font.FontRenderContext;
 	
 	/**
 	* A JComponent client property is used to determine text aa settings.
 	* To avoid having this property persist between look and feels changes
 	* the value of the property is set to null in JComponent.setUI
 	*/
-	public static var AA_TEXT_PROPERTY_KEY(default, null) : Dynamic;
+	@:public @:static @:final public static var AA_TEXT_PROPERTY_KEY(default, null) : Dynamic;
 	
 	/**
 	* Attribute key for the content elements.  If it is set on an element, the
 	* element is considered to be a line break.
 	*/
-	public static var IMPLIED_CR(default, null) : String;
+	@:public @:static @:final public static var IMPLIED_CR(default, null) : String;
 	
 	/**
 	* Key used in client properties used to indicate that the
 	* <code>ComponentUI</code> of the JComponent instance should be returned.
 	*/
-	public static var COMPONENT_UI_PROPERTY_KEY(default, null) : Dynamic;
+	@:public @:static @:final public static var COMPONENT_UI_PROPERTY_KEY(default, null) : Dynamic;
 	
 	/** Client Property key for the text maximal offsets for BasicMenuItemUI */
-	public static var BASICMENUITEMUI_MAX_TEXT_OFFSET(default, null) : sun.swing.StringUIClientPropertyKey;
+	@:public @:static @:final public static var BASICMENUITEMUI_MAX_TEXT_OFFSET(default, null) : sun.swing.StringUIClientPropertyKey;
 	
 	/**
 	* checks whether TextLayout is required to handle characters.
@@ -64,7 +64,7 @@ extern class SwingUtilities2
 	* @return <tt>true</tt>  if TextLayout is required
 	*         <tt>false</tt> if TextLayout is not required
 	*/
-	@:overload @:final public static function isComplexLayout(text : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : Bool;
+	@:overload @:public @:static @:final public static function isComplexLayout(text : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : Bool;
 	
 	/**
 	* Returns whether or not text should be drawn antialiased.
@@ -73,7 +73,7 @@ extern class SwingUtilities2
 	* @return Whether or not text should be drawn antialiased for the
 	*         specified component.
 	*/
-	@:overload public static function drawTextAntialiased(c : javax.swing.JComponent) : sun.swing.SwingUtilities2.SwingUtilities2_AATextInfo;
+	@:overload @:public @:static public static function drawTextAntialiased(c : javax.swing.JComponent) : sun.swing.SwingUtilities2.SwingUtilities2_AATextInfo;
 	
 	/**
 	* Returns the left side bearing of the first character of string. The
@@ -89,7 +89,7 @@ extern class SwingUtilities2
 	* @return the left side bearing of the first character of string
 	* or {@code 0} if the string is empty
 	*/
-	@:overload public static function getLeftSideBearing(c : javax.swing.JComponent, fm : java.awt.FontMetrics, string : String) : Int;
+	@:overload @:public @:static public static function getLeftSideBearing(c : javax.swing.JComponent, fm : java.awt.FontMetrics, string : String) : Int;
 	
 	/**
 	* Returns the left side bearing of the first character of string. The
@@ -99,7 +99,7 @@ extern class SwingUtilities2
 	* @param fm FontMetrics used to measure the String width
 	* @param firstChar Character to get the left side bearing for.
 	*/
-	@:overload public static function getLeftSideBearing(c : javax.swing.JComponent, fm : java.awt.FontMetrics, firstChar : java.StdTypes.Char16) : Int;
+	@:overload @:public @:static public static function getLeftSideBearing(c : javax.swing.JComponent, fm : java.awt.FontMetrics, firstChar : java.StdTypes.Char16) : Int;
 	
 	/**
 	* Returns the FontMetrics for the current Font of the passed
@@ -117,7 +117,7 @@ extern class SwingUtilities2
 	* @param c JComponent requesting FontMetrics, may be null
 	* @param g Graphics Graphics
 	*/
-	@:overload public static function getFontMetrics(c : javax.swing.JComponent, g : java.awt.Graphics) : java.awt.FontMetrics;
+	@:overload @:public @:static public static function getFontMetrics(c : javax.swing.JComponent, g : java.awt.Graphics) : java.awt.FontMetrics;
 	
 	/**
 	* Returns the FontMetrics for the specified Font.
@@ -136,7 +136,7 @@ extern class SwingUtilities2
 	* @param c Graphics Graphics
 	* @param font Font to get FontMetrics for
 	*/
-	@:overload public static function getFontMetrics(c : javax.swing.JComponent, g : java.awt.Graphics, font : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public @:static public static function getFontMetrics(c : javax.swing.JComponent, g : java.awt.Graphics, font : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Returns the width of the passed in String.
@@ -146,7 +146,7 @@ extern class SwingUtilities2
 	* @param fm FontMetrics used to measure the String width
 	* @param string String to get the width of
 	*/
-	@:overload public static function stringWidth(c : javax.swing.JComponent, fm : java.awt.FontMetrics, string : String) : Int;
+	@:overload @:public @:static public static function stringWidth(c : javax.swing.JComponent, fm : java.awt.FontMetrics, string : String) : Int;
 	
 	/**
 	* Clips the passed in String to the space provided.
@@ -157,7 +157,7 @@ extern class SwingUtilities2
 	* @param availTextWidth Amount of space that the string can be drawn in
 	* @return Clipped string that can fit in the provided space.
 	*/
-	@:overload public static function clipStringIfNecessary(c : javax.swing.JComponent, fm : java.awt.FontMetrics, string : String, availTextWidth : Int) : String;
+	@:overload @:public @:static public static function clipStringIfNecessary(c : javax.swing.JComponent, fm : java.awt.FontMetrics, string : String, availTextWidth : Int) : String;
 	
 	/**
 	* Clips the passed in String to the space provided.  NOTE: this assumes
@@ -169,7 +169,7 @@ extern class SwingUtilities2
 	* @param availTextWidth Amount of space that the string can be drawn in
 	* @return Clipped string that can fit in the provided space.
 	*/
-	@:overload public static function clipString(c : javax.swing.JComponent, fm : java.awt.FontMetrics, string : String, availTextWidth : Int) : String;
+	@:overload @:public @:static public static function clipString(c : javax.swing.JComponent, fm : java.awt.FontMetrics, string : String, availTextWidth : Int) : String;
 	
 	/**
 	* Draws the string at the specified location.
@@ -180,7 +180,7 @@ extern class SwingUtilities2
 	* @param x X coordinate to draw the text at
 	* @param y Y coordinate to draw the text at
 	*/
-	@:overload public static function drawString(c : javax.swing.JComponent, g : java.awt.Graphics, text : String, x : Int, y : Int) : Void;
+	@:overload @:public @:static public static function drawString(c : javax.swing.JComponent, g : java.awt.Graphics, text : String, x : Int, y : Int) : Void;
 	
 	/**
 	* Draws the string at the specified location underlining the specified
@@ -193,7 +193,7 @@ extern class SwingUtilities2
 	* @param x X coordinate to draw the text at
 	* @param y Y coordinate to draw the text at
 	*/
-	@:overload public static function drawStringUnderlineCharAt(c : javax.swing.JComponent, g : java.awt.Graphics, text : String, underlinedIndex : Int, x : Int, y : Int) : Void;
+	@:overload @:public @:static public static function drawStringUnderlineCharAt(c : javax.swing.JComponent, g : java.awt.Graphics, text : String, underlinedIndex : Int, x : Int, y : Int) : Void;
 	
 	/**
 	* A variation of locationToIndex() which only returns an index if the
@@ -202,7 +202,7 @@ extern class SwingUtilities2
 	* Otherwise, this method returns -1.
 	* This is used to make WindowsL&F JFileChooser act like native dialogs.
 	*/
-	@:overload public static function loc2IndexFileList(list : javax.swing.JList<Dynamic>, point : java.awt.Point) : Int;
+	@:overload @:public @:static public static function loc2IndexFileList(list : javax.swing.JList<Dynamic>, point : java.awt.Point) : Int;
 	
 	/**
 	* Returns true if the given point is outside the preferredSize of the
@@ -211,25 +211,25 @@ extern class SwingUtilities2
 	* before calling this method.
 	* This is used to make WindowsL&F JFileChooser act like native dialogs.
 	*/
-	@:overload public static function pointOutsidePrefSize(table : javax.swing.JTable, row : Int, column : Int, p : java.awt.Point) : Bool;
+	@:overload @:public @:static public static function pointOutsidePrefSize(table : javax.swing.JTable, row : Int, column : Int, p : java.awt.Point) : Bool;
 	
 	/**
 	* Set the lead and anchor without affecting selection.
 	*/
-	@:overload public static function setLeadAnchorWithoutSelection(model : javax.swing.ListSelectionModel, lead : Int, anchor : Int) : Void;
+	@:overload @:public @:static public static function setLeadAnchorWithoutSelection(model : javax.swing.ListSelectionModel, lead : Int, anchor : Int) : Void;
 	
 	/**
 	* Ignore mouse events if the component is null, not enabled, the event
 	* is not associated with the left mouse button, or the event has been
 	* consumed.
 	*/
-	@:overload public static function shouldIgnore(me : java.awt.event.MouseEvent, c : javax.swing.JComponent) : Bool;
+	@:overload @:public @:static public static function shouldIgnore(me : java.awt.event.MouseEvent, c : javax.swing.JComponent) : Bool;
 	
 	/**
 	* Request focus on the given component if it doesn't already have it
 	* and <code>isRequestFocusEnabled()</code> returns true.
 	*/
-	@:overload public static function adjustFocus(c : javax.swing.JComponent) : Void;
+	@:overload @:public @:static public static function adjustFocus(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* The following draw functions have the same semantic as the
@@ -237,19 +237,19 @@ extern class SwingUtilities2
 	*
 	* this is used for printing
 	*/
-	@:overload public static function drawChars(c : javax.swing.JComponent, g : java.awt.Graphics, data : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, x : Int, y : Int) : Int;
+	@:overload @:public @:static public static function drawChars(c : javax.swing.JComponent, g : java.awt.Graphics, data : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, x : Int, y : Int) : Int;
 	
 	/*
 	* see documentation for drawChars
 	* returns the advance
 	*/
-	@:overload public static function drawString(c : javax.swing.JComponent, g : java.awt.Graphics, iterator : java.text.AttributedCharacterIterator, x : Int, y : Int) : Single;
+	@:overload @:public @:static public static function drawString(c : javax.swing.JComponent, g : java.awt.Graphics, iterator : java.text.AttributedCharacterIterator, x : Int, y : Int) : Single;
 	
 	/*
 	* Tries it best to get Graphics2D out of the given Graphics
 	* returns null if can not derive it.
 	*/
-	@:overload public static function getGraphics2D(g : java.awt.Graphics) : java.awt.Graphics2D;
+	@:overload @:public @:static public static function getGraphics2D(g : java.awt.Graphics) : java.awt.Graphics2D;
 	
 	/*
 	* Returns FontRenderContext associated with Component.
@@ -259,7 +259,7 @@ extern class SwingUtilities2
 	* Uses Component.getFontMetrics to get the FontRenderContext from.
 	* see JComponent.getFontMetrics and TextLayoutStrategy.java
 	*/
-	@:overload public static function getFontRenderContext(c : java.awt.Component) : java.awt.font.FontRenderContext;
+	@:overload @:public @:static public static function getFontRenderContext(c : java.awt.Component) : java.awt.font.FontRenderContext;
 	
 	/*
 	* This method is to be used only for JComponent.getFontMetrics.
@@ -267,7 +267,7 @@ extern class SwingUtilities2
 	* JComponent.getFontMetrics.
 	*
 	*/
-	@:overload public static function getFontMetrics(c : javax.swing.JComponent, font : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public @:static public static function getFontMetrics(c : javax.swing.JComponent, font : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Determines whether the SelectedTextColor should be used for painting text
@@ -280,7 +280,7 @@ extern class SwingUtilities2
 	*
 	* This is a hack for fixing both bugs 4761990 and 5003294
 	*/
-	@:overload public static function useSelectedTextColor(h : javax.swing.text.Highlighter.Highlighter_Highlight, c : javax.swing.text.JTextComponent) : Bool;
+	@:overload @:public @:static public static function useSelectedTextColor(h : javax.swing.text.Highlighter.Highlighter_Highlight, c : javax.swing.text.JTextComponent) : Bool;
 	
 	/**
 	* checks the security permissions for accessing system clipboard
@@ -289,13 +289,13 @@ extern class SwingUtilities2
 	* permissions for the current event being handled
 	*
 	*/
-	@:overload public static function canAccessSystemClipboard() : Bool;
+	@:overload @:public @:static public static function canAccessSystemClipboard() : Bool;
 	
 	/**
 	* Returns true if EventQueue.getCurrentEvent() has the permissions to
 	* access the system clipboard
 	*/
-	@:overload public static function canCurrentEventAccessSystemClipboard() : Bool;
+	@:overload @:public @:static public static function canCurrentEventAccessSystemClipboard() : Bool;
 	
 	/**
 	* Returns true if the given event has permissions to access the
@@ -303,9 +303,9 @@ extern class SwingUtilities2
 	*
 	* @param e AWTEvent to check
 	*/
-	@:overload public static function canEventAccessSystemClipboard(e : java.awt.AWTEvent) : Bool;
+	@:overload @:public @:static public static function canEventAccessSystemClipboard(e : java.awt.AWTEvent) : Bool;
 	
-	@:overload public static function displayPropertiesToCSS(font : java.awt.Font, fg : java.awt.Color) : String;
+	@:overload @:public @:static public static function displayPropertiesToCSS(font : java.awt.Font, fg : java.awt.Color) : String;
 	
 	/**
 	* Utility method that creates a <code>UIDefaults.LazyValue</code> that
@@ -324,7 +324,7 @@ extern class SwingUtilities2
 	*         <code>UIResource</code> for the image,
 	*         or null if it cannot be found
 	*/
-	@:overload public static function makeIcon(baseClass : Class<Dynamic>, rootClass : Class<Dynamic>, imageFile : String) : Dynamic;
+	@:overload @:public @:static public static function makeIcon(baseClass : Class<Dynamic>, rootClass : Class<Dynamic>, imageFile : String) : Dynamic;
 	
 	/* Used to help decide if AA text rendering should be used, so
 	* this local display test should be additionally qualified
@@ -333,7 +333,7 @@ extern class SwingUtilities2
 	* on by default. An additional complication there is XRender does not
 	* appear capable of performing gamma correction needed for LCD text.
 	*/
-	@:overload public static function isLocalDisplay() : Bool;
+	@:overload @:public @:static public static function isLocalDisplay() : Bool;
 	
 	/**
 	* Returns an integer from the defaults table. If <code>key</code> does
@@ -343,7 +343,7 @@ extern class SwingUtilities2
 	* @param key  an <code>Object</code> specifying the int.
 	* @return the int
 	*/
-	@:overload public static function getUIDefaultsInt(key : Dynamic) : Int;
+	@:overload @:public @:static public static function getUIDefaultsInt(key : Dynamic) : Int;
 	
 	/**
 	* Returns an integer from the defaults table that is appropriate
@@ -356,7 +356,7 @@ extern class SwingUtilities2
 	* @param l the <code>Locale</code> for which the int is desired
 	* @return the int
 	*/
-	@:overload public static function getUIDefaultsInt(key : Dynamic, l : java.util.Locale) : Int;
+	@:overload @:public @:static public static function getUIDefaultsInt(key : Dynamic, l : java.util.Locale) : Int;
 	
 	/**
 	* Returns an integer from the defaults table. If <code>key</code> does
@@ -370,7 +370,7 @@ extern class SwingUtilities2
 	*                     or is not an Integer
 	* @return the int
 	*/
-	@:overload public static function getUIDefaultsInt(key : Dynamic, defaultValue : Int) : Int;
+	@:overload @:public @:static public static function getUIDefaultsInt(key : Dynamic, defaultValue : Int) : Int;
 	
 	/**
 	* Returns an integer from the defaults table that is appropriate
@@ -385,16 +385,16 @@ extern class SwingUtilities2
 	*                     or is not an Integer
 	* @return the int
 	*/
-	@:overload public static function getUIDefaultsInt(key : Dynamic, l : java.util.Locale, defaultValue : Int) : Int;
+	@:overload @:public @:static public static function getUIDefaultsInt(key : Dynamic, l : java.util.Locale, defaultValue : Int) : Int;
 	
-	@:overload public static function compositeRequestFocus(component : java.awt.Component) : java.awt.Component;
+	@:overload @:public @:static public static function compositeRequestFocus(component : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* Change focus to the visible component in {@code JTabbedPane}.
 	* This is not a general-purpose method and is here only to permit
 	* sharing code.
 	*/
-	@:overload public static function tabbedPaneChangeFocusTo(comp : java.awt.Component) : Bool;
+	@:overload @:public @:static public static function tabbedPaneChangeFocusTo(comp : java.awt.Component) : Bool;
 	
 	/**
 	* Submits a value-returning task for execution on the EDT and
@@ -404,7 +404,7 @@ extern class SwingUtilities2
 	* @return a Future representing pending completion of the task
 	* @throws NullPointerException if the task is null
 	*/
-	@:overload public static function submit<V>(task : java.util.concurrent.Callable<V>) : java.util.concurrent.Future<V>;
+	@:overload @:public @:static public static function submit<V>(task : java.util.concurrent.Callable<V>) : java.util.concurrent.Future<V>;
 	
 	/**
 	* Submits a Runnable task for execution on the EDT and returns a
@@ -417,7 +417,7 @@ extern class SwingUtilities2
 	*         result value upon completion
 	* @throws NullPointerException if the task is null
 	*/
-	@:overload public static function submit<V>(task : java.lang.Runnable, result : V) : java.util.concurrent.Future<V>;
+	@:overload @:public @:static public static function submit<V>(task : java.lang.Runnable, result : V) : java.util.concurrent.Future<V>;
 	
 	/**
 	* Sets the {@code SKIP_CLICK_COUNT} client property on the component
@@ -426,7 +426,7 @@ extern class SwingUtilities2
 	* as editors in a table or tree, tells {@code DefaultCaret} how many
 	* clicks to skip before starting selection.
 	*/
-	@:overload public static function setSkipClickCount(comp : java.awt.Component, count : Int) : Void;
+	@:overload @:public @:static public static function setSkipClickCount(comp : java.awt.Component, count : Int) : Void;
 	
 	/**
 	* Return the MouseEvent's click count, possibly reduced by the value of
@@ -436,7 +436,7 @@ extern class SwingUtilities2
 	* must be a mousePressed implementation on the caller with this
 	* call as the first line.
 	*/
-	@:overload public static function getAdjustedClickCount(comp : javax.swing.text.JTextComponent, e : java.awt.event.MouseEvent) : Int;
+	@:overload @:public @:static public static function getAdjustedClickCount(comp : javax.swing.text.JTextComponent, e : java.awt.event.MouseEvent) : Int;
 	
 	/**
 	* This method divides a rectangle into two or three sections along
@@ -458,7 +458,7 @@ extern class SwingUtilities2
 	* @throws NullPointerException if {@code rect} or {@code p} are
 	*         {@code null}
 	*/
-	@:overload public static function liesInHorizontal(rect : java.awt.Rectangle, p : java.awt.Point, ltr : Bool, three : Bool) : sun.swing.SwingUtilities2.SwingUtilities2_Section;
+	@:overload @:public @:static public static function liesInHorizontal(rect : java.awt.Rectangle, p : java.awt.Point, ltr : Bool, three : Bool) : sun.swing.SwingUtilities2.SwingUtilities2_Section;
 	
 	/**
 	* This method divides a rectangle into two or three sections along
@@ -478,7 +478,7 @@ extern class SwingUtilities2
 	* @throws NullPointerException if {@code rect} or {@code p} are
 	*         {@code null}
 	*/
-	@:overload public static function liesInVertical(rect : java.awt.Rectangle, p : java.awt.Point, three : Bool) : sun.swing.SwingUtilities2.SwingUtilities2_Section;
+	@:overload @:public @:static public static function liesInVertical(rect : java.awt.Rectangle, p : java.awt.Point, three : Bool) : sun.swing.SwingUtilities2.SwingUtilities2_Section;
 	
 	/**
 	* Maps the index of the column in the view at
@@ -494,7 +494,7 @@ extern class SwingUtilities2
 	* @see JTable#convertColumnIndexToModel(int)
 	* @see javax.swing.plaf.basic.BasicTableHeaderUI
 	*/
-	@:overload public static function convertColumnIndexToModel(cm : javax.swing.table.TableColumnModel, viewColumnIndex : Int) : Int;
+	@:overload @:public @:static public static function convertColumnIndexToModel(cm : javax.swing.table.TableColumnModel, viewColumnIndex : Int) : Int;
 	
 	/**
 	* Maps the index of the column in the {@code cm} at
@@ -511,7 +511,7 @@ extern class SwingUtilities2
 	* @see JTable#convertColumnIndexToView(int)
 	* @see javax.swing.plaf.basic.BasicTableHeaderUI
 	*/
-	@:overload public static function convertColumnIndexToView(cm : javax.swing.table.TableColumnModel, modelColumnIndex : Int) : Int;
+	@:overload @:public @:static public static function convertColumnIndexToView(cm : javax.swing.table.TableColumnModel, modelColumnIndex : Int) : Int;
 	
 	
 }
@@ -520,14 +520,14 @@ extern class SwingUtilities2
 */
 @:native('sun$swing$SwingUtilities2$AATextInfo') extern class SwingUtilities2_AATextInfo
 {
-	@:overload public static function getAATextInfo(lafCondition : Bool) : sun.swing.SwingUtilities2.SwingUtilities2_AATextInfo;
+	@:overload @:public @:static public static function getAATextInfo(lafCondition : Bool) : sun.swing.SwingUtilities2.SwingUtilities2_AATextInfo;
 	
 	/* These are rarely constructed objects, and only when a complete
 	* UI is being updated, so the cost of the tests here is minimal
 	* and saves tests elsewhere.
 	* We test that the values are ones we support/expect.
 	*/
-	@:overload public function new(aaHint : Dynamic, lcdContrastHint : Null<Int>) : Void;
+	@:overload @:public public function new(aaHint : Dynamic, lcdContrastHint : Null<Int>) : Void;
 	
 	
 }
@@ -539,15 +539,15 @@ extern class SwingUtilities2
 */
 @:native('sun$swing$SwingUtilities2$LSBCacheEntry') @:internal extern class SwingUtilities2_LSBCacheEntry
 {
-	@:overload public function new(frc : java.awt.font.FontRenderContext, font : java.awt.Font) : Void;
+	@:overload @:public public function new(frc : java.awt.font.FontRenderContext, font : java.awt.Font) : Void;
 	
-	@:overload public function reset(frc : java.awt.font.FontRenderContext, font : java.awt.Font) : Void;
+	@:overload @:public public function reset(frc : java.awt.font.FontRenderContext, font : java.awt.Font) : Void;
 	
-	@:overload public function getLeftSideBearing(aChar : java.StdTypes.Char16) : Int;
+	@:overload @:public public function getLeftSideBearing(aChar : java.StdTypes.Char16) : Int;
 	
-	@:overload public function equals(entry : Dynamic) : Bool;
+	@:overload @:public public function equals(entry : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

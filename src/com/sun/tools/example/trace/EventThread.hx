@@ -37,11 +37,11 @@ extern class EventThread extends java.lang.Thread
 	* As long as we are connected, get event sets off
 	* the queue and dispatch the events within them.
 	*/
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
-	@:overload public function vmDeathEvent(event : com.sun.jdi.event.VMDeathEvent) : Void;
+	@:overload @:public public function vmDeathEvent(event : com.sun.jdi.event.VMDeathEvent) : Void;
 	
-	@:overload public function vmDisconnectEvent(event : com.sun.jdi.event.VMDisconnectEvent) : Void;
+	@:overload @:public public function vmDisconnectEvent(event : com.sun.jdi.event.VMDisconnectEvent) : Void;
 	
 	
 }

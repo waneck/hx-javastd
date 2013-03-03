@@ -38,7 +38,7 @@ extern class Desktop
 	* @see #isDesktopSupported()
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload @:synchronized public static function getDesktop() : java.awt.Desktop;
+	@:overload @:public @:static @:synchronized public static function getDesktop() : java.awt.Desktop;
 	
 	/**
 	* Tests whether this class is supported on the current platform.
@@ -49,7 +49,7 @@ extern class Desktop
 	*         current platform; <code>false</code> otherwise
 	* @see #getDesktop()
 	*/
-	@:overload public static function isDesktopSupported() : Bool;
+	@:overload @:public @:static public static function isDesktopSupported() : Bool;
 	
 	/**
 	* Tests whether an action is supported on the current platform.
@@ -67,7 +67,7 @@ extern class Desktop
 	*         the current platform; <code>false</code> otherwise
 	* @see Desktop.Action
 	*/
-	@:overload public function isSupported(action : java.awt.Desktop.Desktop_Action) : Bool;
+	@:overload @:public public function isSupported(action : java.awt.Desktop.Desktop_Action) : Bool;
 	
 	/**
 	* Launches the associated application to open the file.
@@ -91,7 +91,7 @@ extern class Desktop
 	* subprocess
 	* @see java.awt.AWTPermission
 	*/
-	@:overload public function open(file : java.io.File) : Void;
+	@:overload @:public public function open(file : java.io.File) : Void;
 	
 	/**
 	* Launches the associated editor application and opens a file for
@@ -115,7 +115,7 @@ extern class Desktop
 	* subprocess
 	* @see java.awt.AWTPermission
 	*/
-	@:overload public function edit(file : java.io.File) : Void;
+	@:overload @:public public function edit(file : java.io.File) : Void;
 	
 	/**
 	* Prints a file with the native desktop printing facility, using
@@ -137,7 +137,7 @@ extern class Desktop
 	* the permission to print the file, or the calling thread is not
 	* allowed to create a subprocess
 	*/
-	@:overload public function print(file : java.io.File) : Void;
+	@:overload @:public public function print(file : java.io.File) : Void;
 	
 	/**
 	* Launches the default browser to display a {@code URI}.
@@ -173,7 +173,7 @@ extern class Desktop
 	* @see java.awt.AWTPermission
 	* @see java.applet.AppletContext
 	*/
-	@:overload public function browse(uri : java.net.URI) : Void;
+	@:overload @:public public function browse(uri : java.net.URI) : Void;
 	
 	/**
 	* Launches the mail composing window of the user default mail
@@ -190,7 +190,7 @@ extern class Desktop
 	* subprocess
 	* @see java.awt.AWTPermission
 	*/
-	@:overload public function mail() : Void;
+	@:overload @:public public function mail() : Void;
 	
 	/**
 	* Launches the mail composing window of the user default mail
@@ -221,7 +221,7 @@ extern class Desktop
 	* @see java.net.URI
 	* @see java.awt.AWTPermission
 	*/
-	@:overload public function mail(mailtoURI : java.net.URI) : Void;
+	@:overload @:public public function mail(mailtoURI : java.net.URI) : Void;
 	
 	
 }

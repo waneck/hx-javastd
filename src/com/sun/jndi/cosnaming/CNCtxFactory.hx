@@ -30,7 +30,7 @@ extern class CNCtxFactory implements javax.naming.spi.InitialContextFactory
 	* should contain the ORB object for the value jndi.corba.orb.
 	* @param env Properties object
 	*/
-	@:overload public function getInitialContext(env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
+	@:overload @:public public function getInitialContext(env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
 	
 	
 }

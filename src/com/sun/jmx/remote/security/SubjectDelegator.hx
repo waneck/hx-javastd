@@ -29,7 +29,7 @@ extern class SubjectDelegator
 	operation on behalf of the delegatedSubject.  If the
 	authenticatedAccessControlContext does not have permission to
 	delegate to that subject, throw SecurityException.  */
-	@:overload @:synchronized public function delegatedContext(authenticatedACC : java.security.AccessControlContext, delegatedSubject : javax.security.auth.Subject, removeCallerContext : Bool) : java.security.AccessControlContext;
+	@:overload @:public @:synchronized public function delegatedContext(authenticatedACC : java.security.AccessControlContext, delegatedSubject : javax.security.auth.Subject, removeCallerContext : Bool) : java.security.AccessControlContext;
 	
 	/**
 	* Check if the connector server creator can assume the identity of each
@@ -40,7 +40,7 @@ extern class SubjectDelegator
 	* @return {@code true} if the connector server creator can delegate to all
 	* the authenticated principals in the subject. Otherwise, {@code false}.
 	*/
-	@:overload @:synchronized public static function checkRemoveCallerContext(subject : javax.security.auth.Subject) : Bool;
+	@:overload @:public @:static @:synchronized public static function checkRemoveCallerContext(subject : javax.security.auth.Subject) : Bool;
 	
 	
 }

@@ -32,7 +32,7 @@ extern interface BackgroundServiceLookup
 	/**
 	*
 	*/
-	@:overload public function getServicesInbackground(listener : sun.print.BackgroundLookupListener) : Void;
+	@:overload @:public public function getServicesInbackground(listener : sun.print.BackgroundLookupListener) : Void;
 	
 	
 }

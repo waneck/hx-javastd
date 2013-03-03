@@ -26,7 +26,7 @@ extern class SignatureAlgorithmSpi
 	*
 	* @return the URI representation of <code>Transformation algorithm</code>
 	*/
-	@:overload @:abstract private function engineGetURI() : String;
+	@:overload @:protected @:abstract private function engineGetURI() : String;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#getAlgorithm}
@@ -34,14 +34,14 @@ extern class SignatureAlgorithmSpi
 	*
 	* @return the result of the {@link java.security.Signature#getAlgorithm} method
 	*/
-	@:overload @:abstract private function engineGetJCEAlgorithmString() : String;
+	@:overload @:protected @:abstract private function engineGetJCEAlgorithmString() : String;
 	
 	/**
 	* Method engineGetJCEProviderName
 	*
 	* @return the JCE ProviderName
 	*/
-	@:overload @:abstract private function engineGetJCEProviderName() : String;
+	@:overload @:protected @:abstract private function engineGetJCEProviderName() : String;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#update(byte[])}
@@ -50,7 +50,7 @@ extern class SignatureAlgorithmSpi
 	* @param input
 	* @throws XMLSignatureException
 	*/
-	@:overload @:abstract private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected @:abstract private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#update(byte[])}
@@ -59,7 +59,7 @@ extern class SignatureAlgorithmSpi
 	* @param input
 	* @throws XMLSignatureException
 	*/
-	@:overload @:abstract private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload @:protected @:abstract private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#update(byte[], int, int)}
@@ -70,7 +70,7 @@ extern class SignatureAlgorithmSpi
 	* @param len
 	* @throws XMLSignatureException
 	*/
-	@:overload @:abstract private function engineUpdate(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected @:abstract private function engineUpdate(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#initSign(java.security.PrivateKey)}
@@ -79,7 +79,7 @@ extern class SignatureAlgorithmSpi
 	* @param signingKey
 	* @throws XMLSignatureException if this method is called on a MAC
 	*/
-	@:overload @:abstract private function engineInitSign(signingKey : java.security.Key) : Void;
+	@:overload @:protected @:abstract private function engineInitSign(signingKey : java.security.Key) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#initSign(java.security.PrivateKey, java.security.SecureRandom)}
@@ -89,7 +89,7 @@ extern class SignatureAlgorithmSpi
 	* @param secureRandom
 	* @throws XMLSignatureException if this method is called on a MAC
 	*/
-	@:overload @:abstract private function engineInitSign(signingKey : java.security.Key, secureRandom : java.security.SecureRandom) : Void;
+	@:overload @:protected @:abstract private function engineInitSign(signingKey : java.security.Key, secureRandom : java.security.SecureRandom) : Void;
 	
 	/**
 	* Proxy method for {@link javax.crypto.Mac}
@@ -99,7 +99,7 @@ extern class SignatureAlgorithmSpi
 	* @param algorithmParameterSpec
 	* @throws XMLSignatureException if this method is called on a Signature
 	*/
-	@:overload @:abstract private function engineInitSign(signingKey : java.security.Key, algorithmParameterSpec : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected @:abstract private function engineInitSign(signingKey : java.security.Key, algorithmParameterSpec : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#sign()}
@@ -108,7 +108,7 @@ extern class SignatureAlgorithmSpi
 	* @return the result of the {@link java.security.Signature#sign()} method
 	* @throws XMLSignatureException
 	*/
-	@:overload @:abstract private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:abstract private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Method engineInitVerify
@@ -116,7 +116,7 @@ extern class SignatureAlgorithmSpi
 	* @param verificationKey
 	* @throws XMLSignatureException
 	*/
-	@:overload @:abstract private function engineInitVerify(verificationKey : java.security.Key) : Void;
+	@:overload @:protected @:abstract private function engineInitVerify(verificationKey : java.security.Key) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#verify(byte[])}
@@ -126,7 +126,7 @@ extern class SignatureAlgorithmSpi
 	* @return true if the signature is correct
 	* @throws XMLSignatureException
 	*/
-	@:overload @:abstract private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:protected @:abstract private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#setParameter(java.security.spec.AlgorithmParameterSpec)}
@@ -135,14 +135,14 @@ extern class SignatureAlgorithmSpi
 	* @param params
 	* @throws XMLSignatureException
 	*/
-	@:overload @:abstract private function engineSetParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected @:abstract private function engineSetParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Method engineGetContextFromElement
 	*
 	* @param element
 	*/
-	@:overload private function engineGetContextFromElement(element : org.w3c.dom.Element) : Void;
+	@:overload @:protected private function engineGetContextFromElement(element : org.w3c.dom.Element) : Void;
 	
 	/**
 	* Method engineSetHMACOutputLength
@@ -150,9 +150,9 @@ extern class SignatureAlgorithmSpi
 	* @param HMACOutputLength
 	* @throws XMLSignatureException
 	*/
-	@:overload @:abstract private function engineSetHMACOutputLength(HMACOutputLength : Int) : Void;
+	@:overload @:protected @:abstract private function engineSetHMACOutputLength(HMACOutputLength : Int) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

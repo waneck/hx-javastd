@@ -56,29 +56,29 @@ extern class CRLReasonCodeExtension extends java.security.cert.Extension impleme
 	/**
 	* Attribute name and Reason codes
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
-	public static var REASON(default, null) : String;
+	@:public @:static @:final public static var REASON(default, null) : String;
 	
-	public static var UNSPECIFIED(default, null) : Int;
+	@:public @:static @:final public static var UNSPECIFIED(default, null) : Int;
 	
-	public static var KEY_COMPROMISE(default, null) : Int;
+	@:public @:static @:final public static var KEY_COMPROMISE(default, null) : Int;
 	
-	public static var CA_COMPROMISE(default, null) : Int;
+	@:public @:static @:final public static var CA_COMPROMISE(default, null) : Int;
 	
-	public static var AFFLIATION_CHANGED(default, null) : Int;
+	@:public @:static @:final public static var AFFLIATION_CHANGED(default, null) : Int;
 	
-	public static var SUPERSEDED(default, null) : Int;
+	@:public @:static @:final public static var SUPERSEDED(default, null) : Int;
 	
-	public static var CESSATION_OF_OPERATION(default, null) : Int;
+	@:public @:static @:final public static var CESSATION_OF_OPERATION(default, null) : Int;
 	
-	public static var CERTIFICATE_HOLD(default, null) : Int;
+	@:public @:static @:final public static var CERTIFICATE_HOLD(default, null) : Int;
 	
-	public static var REMOVE_FROM_CRL(default, null) : Int;
+	@:public @:static @:final public static var REMOVE_FROM_CRL(default, null) : Int;
 	
-	public static var PRIVILEGE_WITHDRAWN(default, null) : Int;
+	@:public @:static @:final public static var PRIVILEGE_WITHDRAWN(default, null) : Int;
 	
-	public static var AA_COMPROMISE(default, null) : Int;
+	@:public @:static @:final public static var AA_COMPROMISE(default, null) : Int;
 	
 	/**
 	* Create a CRLReasonCodeExtension with the passed in reason.
@@ -86,7 +86,7 @@ extern class CRLReasonCodeExtension extends java.security.cert.Extension impleme
 	*
 	* @param reason the enumerated value for the reason code.
 	*/
-	@:overload public function new(reason : Int) : Void;
+	@:overload @:public public function new(reason : Int) : Void;
 	
 	/**
 	* Create a CRLReasonCodeExtension with the passed in reason.
@@ -94,7 +94,7 @@ extern class CRLReasonCodeExtension extends java.security.cert.Extension impleme
 	* @param critical true if the extension is to be treated as critical.
 	* @param reason the enumerated value for the reason code.
 	*/
-	@:overload public function new(critical : Bool, reason : Int) : Void;
+	@:overload @:public public function new(critical : Bool, reason : Int) : Void;
 	
 	/**
 	* Create the extension from the passed DER encoded value of the same.
@@ -104,27 +104,27 @@ extern class CRLReasonCodeExtension extends java.security.cert.Extension impleme
 	* @exception ClassCastException if value is not an array of bytes
 	* @exception IOException on error.
 	*/
-	@:overload public function new(critical : Null<Bool>, value : Dynamic) : Void;
+	@:overload @:public public function new(critical : Null<Bool>, value : Dynamic) : Void;
 	
 	/**
 	* Set the attribute value.
 	*/
-	@:overload public function set(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function set(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Get the attribute value.
 	*/
-	@:overload public function get(name : String) : Dynamic;
+	@:overload @:public public function get(name : String) : Dynamic;
 	
 	/**
 	* Delete the attribute value.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
 	/**
 	* Returns a printable representation of the Reason code.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Write the extension to the DerOutputStream.
@@ -132,23 +132,23 @@ extern class CRLReasonCodeExtension extends java.security.cert.Extension impleme
 	* @param out the DerOutputStream to write the extension to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public override public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this
 	* attribute.
 	*/
-	@:overload public function getElements() : java.util.Enumeration<String>;
+	@:overload @:public public function getElements() : java.util.Enumeration<String>;
 	
 	/**
 	* Return the name of this attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return the reason as a CRLReason enum.
 	*/
-	@:overload public function getReasonCode() : java.security.cert.CRLReason;
+	@:overload @:public public function getReasonCode() : java.security.cert.CRLReason;
 	
 	
 }

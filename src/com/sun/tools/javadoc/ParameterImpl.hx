@@ -28,19 +28,19 @@ package com.sun.tools.javadoc;
 	/**
 	* Get the type of this parameter.
 	*/
-	@:overload public function type() : com.sun.javadoc.Type;
+	@:overload @:public public function type() : com.sun.javadoc.Type;
 	
 	/**
 	* Get local name of this parameter.
 	* For example if parameter is the short 'index', returns "index".
 	*/
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/**
 	* Get type name of this parameter.
 	* For example if parameter is the short 'index', returns "short".
 	*/
-	@:overload public function typeName() : String;
+	@:overload @:public public function typeName() : String;
 	
 	/**
 	* Returns a string representation of the parameter.
@@ -49,13 +49,13 @@ package com.sun.tools.javadoc;
 	*
 	* @return type name and parameter name of this parameter.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Get the annotations of this parameter.
 	* Return an empty array if there are none.
 	*/
-	@:overload public function annotations() : java.NativeArray<com.sun.javadoc.AnnotationDesc>;
+	@:overload @:public public function annotations() : java.NativeArray<com.sun.javadoc.AnnotationDesc>;
 	
 	
 }

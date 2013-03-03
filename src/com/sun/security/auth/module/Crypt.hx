@@ -55,7 +55,7 @@ package com.sun.security.auth.module;
 	* Creates a new Crypt object for use with the crypt method.
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Implements the libc crypt(3) function.
@@ -68,7 +68,7 @@ package com.sun.security.auth.module;
 	* password. The first two characters are the salt.
 	*
 	*/
-	@:overload @:synchronized public function crypt(pw : java.NativeArray<java.StdTypes.Int8>, salt : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:synchronized public function crypt(pw : java.NativeArray<java.StdTypes.Int8>, salt : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* program to test the crypt routine.
@@ -80,7 +80,7 @@ package com.sun.security.auth.module;
 	* @param arg command line arguments.
 	*
 	*/
-	@:overload public static function main(arg : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(arg : java.NativeArray<String>) : Void;
 	
 	
 }

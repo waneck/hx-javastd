@@ -32,7 +32,7 @@ package java.lang.invoke;
 	* @param genericTarget the target, which must accept and return only Object values
 	* @return an adapter method handle
 	*/
-	@:overload public static function make(type : java.lang.invoke.MethodType, genericTarget : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function make(type : java.lang.invoke.MethodType, genericTarget : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
 	
 	
 }
@@ -54,31 +54,31 @@ package java.lang.invoke;
 	*   R invoke(A... a...) = convert(invoker(target, a...)))
 	* }
 	*/
-	private var invoker(default, null) : java.lang.invoke.MethodHandle;
+	@:protected @:final private var invoker(default, null) : java.lang.invoke.MethodHandle;
 	
-	private var convert(default, null) : java.lang.invoke.MethodHandle;
+	@:protected @:final private var convert(default, null) : java.lang.invoke.MethodHandle;
 	
-	@:overload private function isPrototype() : Bool;
+	@:overload @:protected private function isPrototype() : Bool;
 	
 	/* Prototype constructor. */
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function prototypeEntryPoint() : java.lang.invoke.MethodHandle;
+	@:overload @:protected private function prototypeEntryPoint() : java.lang.invoke.MethodHandle;
 	
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle, invoker : java.lang.invoke.MethodHandle, convert : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle, invoker : java.lang.invoke.MethodHandle, convert : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : Void;
 	
 	/** Make a copy of self, with new fields. */
-	@:overload @:abstract private function makeInstance(entryPoint : java.lang.invoke.MethodHandle, invoker : java.lang.invoke.MethodHandle, convert : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_Adapter;
+	@:overload @:protected @:abstract private function makeInstance(entryPoint : java.lang.invoke.MethodHandle, invoker : java.lang.invoke.MethodHandle, convert : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_Adapter;
 	
-	@:overload private function target() : Dynamic;
+	@:overload @:protected private function target() : Dynamic;
 	
-	@:overload private function target(a0 : Dynamic) : Dynamic;
+	@:overload @:protected private function target(a0 : Dynamic) : Dynamic;
 	
-	@:overload private function target(a0 : Dynamic, a1 : Dynamic) : Dynamic;
+	@:overload @:protected private function target(a0 : Dynamic, a1 : Dynamic) : Dynamic;
 	
-	@:overload private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
+	@:overload @:protected private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
-	@:overload private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
 	/*
 	protected Object target_0(Object... av) throws Throwable { return invoker.invokeExact(target, av); }
@@ -91,15 +91,15 @@ package java.lang.invoke;
 	protected Object target_4(Object a0, Object a1, Object a2, Object a3, Object... av)
 	throws Throwable { return invoker.invokeExact(target, a0, a1, a2, a3, (Object)av); }
 	// */
-	@:overload private function return_L(res : Dynamic) : Dynamic;
+	@:overload @:protected private function return_L(res : Dynamic) : Dynamic;
 	
-	@:overload private function return_I(res : Dynamic) : Int;
+	@:overload @:protected private function return_I(res : Dynamic) : Int;
 	
-	@:overload private function return_J(res : Dynamic) : haxe.Int64;
+	@:overload @:protected private function return_J(res : Dynamic) : haxe.Int64;
 	
-	@:overload private function return_F(res : Dynamic) : Single;
+	@:overload @:protected private function return_F(res : Dynamic) : Single;
 	
-	@:overload private function return_D(res : Dynamic) : Float;
+	@:overload @:protected private function return_D(res : Dynamic) : Float;
 	
 	
 }
@@ -278,881 +278,881 @@ System.out.println(VAR.transform(line));
 //}}} */
 @:native('java$lang$invoke$ToGeneric$A0') @:internal extern class ToGeneric_A0 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A0;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A0;
 	
-	@:overload override private function target() : Dynamic;
+	@:overload @:protected override private function target() : Dynamic;
 	
-	@:overload private function targetA0() : Dynamic;
+	@:overload @:protected private function targetA0() : Dynamic;
 	
-	@:overload private function invoke_L() : Dynamic;
+	@:overload @:protected private function invoke_L() : Dynamic;
 	
-	@:overload private function invoke_I() : Int;
+	@:overload @:protected private function invoke_I() : Int;
 	
-	@:overload private function invoke_J() : haxe.Int64;
+	@:overload @:protected private function invoke_J() : haxe.Int64;
 	
-	@:overload private function invoke_F() : Single;
+	@:overload @:protected private function invoke_F() : Single;
 	
-	@:overload private function invoke_D() : Float;
+	@:overload @:protected private function invoke_D() : Float;
 	
 	
 }
 @:native('java$lang$invoke$ToGeneric$A1') @:internal extern class ToGeneric_A1 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A1;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A1;
 	
-	@:overload override private function target(a0 : Dynamic) : Dynamic;
+	@:overload @:protected override private function target(a0 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA1(a0 : Dynamic) : Dynamic;
+	@:overload @:protected private function targetA1(a0 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA1(a0 : Int) : Dynamic;
+	@:overload @:protected private function targetA1(a0 : Int) : Dynamic;
 	
-	@:overload private function targetA1(a0 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA1(a0 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_L(a0 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Dynamic) : Single;
+	@:overload @:protected private function invoke_F(a0 : Dynamic) : Single;
 	
-	@:overload private function invoke_D(a0 : Dynamic) : Float;
+	@:overload @:protected private function invoke_D(a0 : Dynamic) : Float;
 	
-	@:overload private function invoke_L(a0 : Int) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Int) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Int) : Int;
+	@:overload @:protected private function invoke_I(a0 : Int) : Int;
 	
-	@:overload private function invoke_J(a0 : Int) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Int) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Int) : Single;
+	@:overload @:protected private function invoke_F(a0 : Int) : Single;
 	
-	@:overload private function invoke_D(a0 : Int) : Float;
+	@:overload @:protected private function invoke_D(a0 : Int) : Float;
 	
-	@:overload private function invoke_L(a0 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : haxe.Int64) : Single;
+	@:overload @:protected private function invoke_F(a0 : haxe.Int64) : Single;
 	
-	@:overload private function invoke_D(a0 : haxe.Int64) : Float;
+	@:overload @:protected private function invoke_D(a0 : haxe.Int64) : Float;
 	
 	
 }
 @:native('java$lang$invoke$ToGeneric$A2') @:internal extern class ToGeneric_A2 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A2;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A2;
 	
-	@:overload override private function target(a0 : Dynamic, a1 : Dynamic) : Dynamic;
+	@:overload @:protected override private function target(a0 : Dynamic, a1 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA2(a0 : Dynamic, a1 : Dynamic) : Dynamic;
+	@:overload @:protected private function targetA2(a0 : Dynamic, a1 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA2(a0 : Dynamic, a1 : Int) : Dynamic;
+	@:overload @:protected private function targetA2(a0 : Dynamic, a1 : Int) : Dynamic;
 	
-	@:overload private function targetA2(a0 : Int, a1 : Int) : Dynamic;
+	@:overload @:protected private function targetA2(a0 : Int, a1 : Int) : Dynamic;
 	
-	@:overload private function targetA2(a0 : Dynamic, a1 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA2(a0 : Dynamic, a1 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA2(a0 : haxe.Int64, a1 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA2(a0 : haxe.Int64, a1 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Dynamic, a1 : Dynamic) : Single;
+	@:overload @:protected private function invoke_F(a0 : Dynamic, a1 : Dynamic) : Single;
 	
-	@:overload private function invoke_D(a0 : Dynamic, a1 : Dynamic) : Float;
+	@:overload @:protected private function invoke_D(a0 : Dynamic, a1 : Dynamic) : Float;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Int) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Int) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Int) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Int) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Int) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Int) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Dynamic, a1 : Int) : Single;
+	@:overload @:protected private function invoke_F(a0 : Dynamic, a1 : Int) : Single;
 	
-	@:overload private function invoke_D(a0 : Dynamic, a1 : Int) : Float;
+	@:overload @:protected private function invoke_D(a0 : Dynamic, a1 : Int) : Float;
 	
-	@:overload private function invoke_L(a0 : Int, a1 : Int) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Int, a1 : Int) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Int, a1 : Int) : Int;
+	@:overload @:protected private function invoke_I(a0 : Int, a1 : Int) : Int;
 	
-	@:overload private function invoke_J(a0 : Int, a1 : Int) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Int, a1 : Int) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Int, a1 : Int) : Single;
+	@:overload @:protected private function invoke_F(a0 : Int, a1 : Int) : Single;
 	
-	@:overload private function invoke_D(a0 : Int, a1 : Int) : Float;
+	@:overload @:protected private function invoke_D(a0 : Int, a1 : Int) : Float;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Dynamic, a1 : haxe.Int64) : Single;
+	@:overload @:protected private function invoke_F(a0 : Dynamic, a1 : haxe.Int64) : Single;
 	
-	@:overload private function invoke_D(a0 : Dynamic, a1 : haxe.Int64) : Float;
+	@:overload @:protected private function invoke_D(a0 : Dynamic, a1 : haxe.Int64) : Float;
 	
-	@:overload private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : haxe.Int64, a1 : haxe.Int64) : Single;
+	@:overload @:protected private function invoke_F(a0 : haxe.Int64, a1 : haxe.Int64) : Single;
 	
-	@:overload private function invoke_D(a0 : haxe.Int64, a1 : haxe.Int64) : Float;
+	@:overload @:protected private function invoke_D(a0 : haxe.Int64, a1 : haxe.Int64) : Float;
 	
 	
 }
 @:native('java$lang$invoke$ToGeneric$A3') @:internal extern class ToGeneric_A3 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A3;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A3;
 	
-	@:overload override private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
+	@:overload @:protected override private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
+	@:overload @:protected private function targetA3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA3(a0 : Dynamic, a1 : Dynamic, a2 : Int) : Dynamic;
+	@:overload @:protected private function targetA3(a0 : Dynamic, a1 : Dynamic, a2 : Int) : Dynamic;
 	
-	@:overload private function targetA3(a0 : Dynamic, a1 : Int, a2 : Int) : Dynamic;
+	@:overload @:protected private function targetA3(a0 : Dynamic, a1 : Int, a2 : Int) : Dynamic;
 	
-	@:overload private function targetA3(a0 : Int, a1 : Int, a2 : Int) : Dynamic;
+	@:overload @:protected private function targetA3(a0 : Int, a1 : Int, a2 : Int) : Dynamic;
 	
-	@:overload private function targetA3(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA3(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA3(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA3(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA3(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA3(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Single;
+	@:overload @:protected private function invoke_F(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Single;
 	
-	@:overload private function invoke_D(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Float;
+	@:overload @:protected private function invoke_D(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Float;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Int) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Int) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Int) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Int) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Int) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Int) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Dynamic, a1 : Dynamic, a2 : Int) : Single;
+	@:overload @:protected private function invoke_F(a0 : Dynamic, a1 : Dynamic, a2 : Int) : Single;
 	
-	@:overload private function invoke_D(a0 : Dynamic, a1 : Dynamic, a2 : Int) : Float;
+	@:overload @:protected private function invoke_D(a0 : Dynamic, a1 : Dynamic, a2 : Int) : Float;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Int, a2 : Int) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Int, a2 : Int) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Int, a2 : Int) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Int, a2 : Int) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Int, a2 : Int) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Int, a2 : Int) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Dynamic, a1 : Int, a2 : Int) : Single;
+	@:overload @:protected private function invoke_F(a0 : Dynamic, a1 : Int, a2 : Int) : Single;
 	
-	@:overload private function invoke_D(a0 : Dynamic, a1 : Int, a2 : Int) : Float;
+	@:overload @:protected private function invoke_D(a0 : Dynamic, a1 : Int, a2 : Int) : Float;
 	
-	@:overload private function invoke_L(a0 : Int, a1 : Int, a2 : Int) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Int, a1 : Int, a2 : Int) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Int, a1 : Int, a2 : Int) : Int;
+	@:overload @:protected private function invoke_I(a0 : Int, a1 : Int, a2 : Int) : Int;
 	
-	@:overload private function invoke_J(a0 : Int, a1 : Int, a2 : Int) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Int, a1 : Int, a2 : Int) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Int, a1 : Int, a2 : Int) : Single;
+	@:overload @:protected private function invoke_F(a0 : Int, a1 : Int, a2 : Int) : Single;
 	
-	@:overload private function invoke_D(a0 : Int, a1 : Int, a2 : Int) : Float;
+	@:overload @:protected private function invoke_D(a0 : Int, a1 : Int, a2 : Int) : Float;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64) : Single;
+	@:overload @:protected private function invoke_F(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64) : Single;
 	
-	@:overload private function invoke_D(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64) : Float;
+	@:overload @:protected private function invoke_D(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64) : Float;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64) : Single;
+	@:overload @:protected private function invoke_F(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64) : Single;
 	
-	@:overload private function invoke_D(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64) : Float;
+	@:overload @:protected private function invoke_D(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64) : Float;
 	
-	@:overload private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64) : Single;
+	@:overload @:protected private function invoke_F(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64) : Single;
 	
-	@:overload private function invoke_D(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64) : Float;
+	@:overload @:protected private function invoke_D(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64) : Float;
 	
 	
 }
 @:native('java$lang$invoke$ToGeneric$A4') @:internal extern class ToGeneric_A4 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A4;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A4;
 	
-	@:overload override private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected override private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function targetA4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int) : Dynamic;
+	@:overload @:protected private function targetA4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int) : Dynamic;
 	
-	@:overload private function targetA4(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int) : Dynamic;
+	@:overload @:protected private function targetA4(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int) : Dynamic;
 	
-	@:overload private function targetA4(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int) : Dynamic;
+	@:overload @:protected private function targetA4(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int) : Dynamic;
 	
-	@:overload private function targetA4(a0 : Int, a1 : Int, a2 : Int, a3 : Int) : Dynamic;
+	@:overload @:protected private function targetA4(a0 : Int, a1 : Int, a2 : Int, a3 : Int) : Dynamic;
 	
-	@:overload private function targetA4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA4(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA4(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA4(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA4(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA4(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA4(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Single;
+	@:overload @:protected private function invoke_F(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Single;
 	
-	@:overload private function invoke_D(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Float;
+	@:overload @:protected private function invoke_D(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Float;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int) : Single;
+	@:overload @:protected private function invoke_F(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int) : Single;
 	
-	@:overload private function invoke_D(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int) : Float;
+	@:overload @:protected private function invoke_D(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int) : Float;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int) : Single;
+	@:overload @:protected private function invoke_F(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int) : Single;
 	
-	@:overload private function invoke_D(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int) : Float;
+	@:overload @:protected private function invoke_D(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int) : Float;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int) : Single;
+	@:overload @:protected private function invoke_F(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int) : Single;
 	
-	@:overload private function invoke_D(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int) : Float;
+	@:overload @:protected private function invoke_D(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int) : Float;
 	
-	@:overload private function invoke_L(a0 : Int, a1 : Int, a2 : Int, a3 : Int) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Int, a1 : Int, a2 : Int, a3 : Int) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Int, a1 : Int, a2 : Int, a3 : Int) : Int;
+	@:overload @:protected private function invoke_I(a0 : Int, a1 : Int, a2 : Int, a3 : Int) : Int;
 	
-	@:overload private function invoke_J(a0 : Int, a1 : Int, a2 : Int, a3 : Int) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Int, a1 : Int, a2 : Int, a3 : Int) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Int, a1 : Int, a2 : Int, a3 : Int) : Single;
+	@:overload @:protected private function invoke_F(a0 : Int, a1 : Int, a2 : Int, a3 : Int) : Single;
 	
-	@:overload private function invoke_D(a0 : Int, a1 : Int, a2 : Int, a3 : Int) : Float;
+	@:overload @:protected private function invoke_D(a0 : Int, a1 : Int, a2 : Int, a3 : Int) : Float;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64) : Single;
+	@:overload @:protected private function invoke_F(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64) : Single;
 	
-	@:overload private function invoke_D(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64) : Float;
+	@:overload @:protected private function invoke_D(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64) : Float;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64) : Single;
+	@:overload @:protected private function invoke_F(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64) : Single;
 	
-	@:overload private function invoke_D(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64) : Float;
+	@:overload @:protected private function invoke_D(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64) : Float;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Single;
+	@:overload @:protected private function invoke_F(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Single;
 	
-	@:overload private function invoke_D(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Float;
+	@:overload @:protected private function invoke_D(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Float;
 	
-	@:overload private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_F(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Single;
+	@:overload @:protected private function invoke_F(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Single;
 	
-	@:overload private function invoke_D(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Float;
+	@:overload @:protected private function invoke_D(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64) : Float;
 	
 	
 }
 @:native('java$lang$invoke$ToGeneric$A5') @:internal extern class ToGeneric_A5 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A5;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A5;
 	
-	@:overload private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function targetA5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Int) : Dynamic;
+	@:overload @:protected private function targetA5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Int) : Dynamic;
 	
-	@:overload private function targetA5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int, a4 : Int) : Dynamic;
+	@:overload @:protected private function targetA5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int, a4 : Int) : Dynamic;
 	
-	@:overload private function targetA5(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int, a4 : Int) : Dynamic;
+	@:overload @:protected private function targetA5(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int, a4 : Int) : Dynamic;
 	
-	@:overload private function targetA5(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int, a4 : Int) : Dynamic;
+	@:overload @:protected private function targetA5(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int, a4 : Int) : Dynamic;
 	
-	@:overload private function targetA5(a0 : Int, a1 : Int, a2 : Int, a3 : Int, a4 : Int) : Dynamic;
+	@:overload @:protected private function targetA5(a0 : Int, a1 : Int, a2 : Int, a3 : Int, a4 : Int) : Dynamic;
 	
-	@:overload private function targetA5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA5(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA5(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA5(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA5(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA5(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA5(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Int) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Int) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Int) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Int) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Int) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Int) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int, a4 : Int) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int, a4 : Int) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int, a4 : Int) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int, a4 : Int) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int, a4 : Int) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Int, a4 : Int) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int, a4 : Int) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int, a4 : Int) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int, a4 : Int) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int, a4 : Int) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int, a4 : Int) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Int, a3 : Int, a4 : Int) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int, a4 : Int) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int, a4 : Int) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int, a4 : Int) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int, a4 : Int) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int, a4 : Int) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Int, a2 : Int, a3 : Int, a4 : Int) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Int, a1 : Int, a2 : Int, a3 : Int, a4 : Int) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Int, a1 : Int, a2 : Int, a3 : Int, a4 : Int) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Int, a1 : Int, a2 : Int, a3 : Int, a4 : Int) : Int;
+	@:overload @:protected private function invoke_I(a0 : Int, a1 : Int, a2 : Int, a3 : Int, a4 : Int) : Int;
 	
-	@:overload private function invoke_J(a0 : Int, a1 : Int, a2 : Int, a3 : Int, a4 : Int) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Int, a1 : Int, a2 : Int, a3 : Int, a4 : Int) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64) : haxe.Int64;
 	
 	
 }
 @:native('java$lang$invoke$ToGeneric$A6') @:internal extern class ToGeneric_A6 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A6;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A6;
 	
-	@:overload private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function targetA6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA6(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA6(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA6(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA6(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA6(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA6(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64) : haxe.Int64;
 	
 	
 }
 @:native('java$lang$invoke$ToGeneric$A7') @:internal extern class ToGeneric_A7 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A7;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A7;
 	
-	@:overload private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function targetA7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA7(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA7(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA7(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA7(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA7(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA7(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64) : haxe.Int64;
 	
 	
 }
 @:native('java$lang$invoke$ToGeneric$A8') @:internal extern class ToGeneric_A8 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A8;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A8;
 	
-	@:overload private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function targetA8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA8(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA8(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA8(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA8(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA8(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA8(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64) : haxe.Int64;
 	
 	
 }
 @:native('java$lang$invoke$ToGeneric$A9') @:internal extern class ToGeneric_A9 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A9;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A9;
 	
-	@:overload private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function targetA9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA9(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA9(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA9(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA9(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA9(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA9(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64, a8 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64, a8 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64, a8 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64, a8 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64) : haxe.Int64;
 	
 	
 }
 @:native('java$lang$invoke$ToGeneric$A10') @:internal extern class ToGeneric_A10 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A10;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A10;
 	
-	@:overload private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA10(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA10(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA10(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function targetA10(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function targetA10(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : Dynamic, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : Dynamic, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
+	@:overload @:protected private function invoke_L(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Dynamic;
 	
-	@:overload private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
+	@:overload @:protected private function invoke_I(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : Int;
 	
-	@:overload private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function invoke_J(a0 : haxe.Int64, a1 : haxe.Int64, a2 : haxe.Int64, a3 : haxe.Int64, a4 : haxe.Int64, a5 : haxe.Int64, a6 : haxe.Int64, a7 : haxe.Int64, a8 : haxe.Int64, a9 : haxe.Int64) : haxe.Int64;
 	
 	
 }

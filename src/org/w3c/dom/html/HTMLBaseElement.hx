@@ -47,17 +47,17 @@ extern interface HTMLBaseElement extends org.w3c.dom.html.HTMLElement
 	/**
 	*  The base URI. See the  href attribute definition in HTML 4.0.
 	*/
-	@:overload public function getHref() : String;
+	@:overload @:public public function getHref() : String;
 	
-	@:overload public function setHref(href : String) : Void;
+	@:overload @:public public function setHref(href : String) : Void;
 	
 	/**
 	*  The default target frame. See the  target attribute definition in HTML
 	* 4.0.
 	*/
-	@:overload public function getTarget() : String;
+	@:overload @:public public function getTarget() : String;
 	
-	@:overload public function setTarget(target : String) : Void;
+	@:overload @:public public function setTarget(target : String) : Void;
 	
 	
 }

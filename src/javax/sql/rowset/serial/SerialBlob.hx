@@ -61,7 +61,7 @@ extern class SerialBlob implements java.sql.Blob implements java.io.Serializable
 	* @throws SerialException if an error occurs during serialization
 	* @throws SQLException if a SQL errors occurs
 	*/
-	@:overload public function new(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs a <code>SerialBlob</code> object that is a serialized
@@ -82,7 +82,7 @@ extern class SerialBlob implements java.sql.Blob implements java.io.Serializable
 	*     to this constructor is a <code>null</code>.
 	* @see java.sql.Blob
 	*/
-	@:overload public function new(blob : java.sql.Blob) : Void;
+	@:overload @:public public function new(blob : java.sql.Blob) : Void;
 	
 	/**
 	* Copies the specified number of bytes, starting at the given
@@ -104,7 +104,7 @@ extern class SerialBlob implements java.sql.Blob implements java.io.Serializable
 	*         position and containing the given number of consecutive bytes
 	* @throws SerialException if the given starting position is out of bounds
 	*/
-	@:overload public function getBytes(pos : haxe.Int64, length : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes(pos : haxe.Int64, length : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the number of bytes in this <code>SerialBlob</code>
@@ -114,7 +114,7 @@ extern class SerialBlob implements java.sql.Blob implements java.io.Serializable
 	*         <code>SerialBlob</code> object's array of bytes
 	* @throws SerialException if an error occurs
 	*/
-	@:overload public function length() : haxe.Int64;
+	@:overload @:public public function length() : haxe.Int64;
 	
 	/**
 	* Returns this <code>SerialBlob</code> object as an input stream.
@@ -127,7 +127,7 @@ extern class SerialBlob implements java.sql.Blob implements java.io.Serializable
 	* @throws SerialException if an error occurs
 	* @see #setBinaryStream
 	*/
-	@:overload public function getBinaryStream() : java.io.InputStream;
+	@:overload @:public public function getBinaryStream() : java.io.InputStream;
 	
 	/**
 	* Returns the position in this <code>SerialBlob</code> object where
@@ -149,7 +149,7 @@ extern class SerialBlob implements java.sql.Blob implements java.io.Serializable
 	* @throws SQLException if there is an error accessing the <code>BLOB</code>
 	*         value from the database
 	*/
-	@:overload public function position(pattern : java.NativeArray<java.StdTypes.Int8>, start : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function position(pattern : java.NativeArray<java.StdTypes.Int8>, start : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the position in this <code>SerialBlob</code> object where
@@ -171,7 +171,7 @@ extern class SerialBlob implements java.sql.Blob implements java.io.Serializable
 	* @throws SQLException if there is an error accessing the <code>BLOB</code>
 	*         value from the database
 	*/
-	@:overload public function position(pattern : java.sql.Blob, start : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function position(pattern : java.sql.Blob, start : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Writes the given array of bytes to the <code>BLOB</code> value that
@@ -192,7 +192,7 @@ extern class SerialBlob implements java.sql.Blob implements java.io.Serializable
 	*         value from the database
 	* @see #getBytes
 	*/
-	@:overload public function setBytes(pos : haxe.Int64, bytes : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public public function setBytes(pos : haxe.Int64, bytes : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Writes all or part of the given <code>byte</code> array to the
@@ -224,7 +224,7 @@ extern class SerialBlob implements java.sql.Blob implements java.io.Serializable
 	*         value from the database.
 	* @see #getBytes
 	*/
-	@:overload public function setBytes(pos : haxe.Int64, bytes : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Int;
+	@:overload @:public public function setBytes(pos : haxe.Int64, bytes : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Int;
 	
 	/**
 	* Retrieves a stream that can be used to write to the <code>BLOB</code>
@@ -245,7 +245,7 @@ extern class SerialBlob implements java.sql.Blob implements java.io.Serializable
 	*     <code>Blob</code> object that supports <code>setBinaryStream()</code>
 	* @see #getBinaryStream
 	*/
-	@:overload public function setBinaryStream(pos : haxe.Int64) : java.io.OutputStream;
+	@:overload @:public public function setBinaryStream(pos : haxe.Int64) : java.io.OutputStream;
 	
 	/**
 	* Truncates the <code>BLOB</code> value that this <code>Blob</code>
@@ -257,7 +257,7 @@ extern class SerialBlob implements java.sql.Blob implements java.io.Serializable
 	* @throws SerialException if there is an error accessing the Blob value;
 	*     or the length to truncate is greater that the SerialBlob length
 	*/
-	@:overload public function truncate(length : haxe.Int64) : Void;
+	@:overload @:public public function truncate(length : haxe.Int64) : Void;
 	
 	/**
 	* Returns an <code>InputStream</code> object that contains a partial <code>Blob</code> value,
@@ -273,7 +273,7 @@ extern class SerialBlob implements java.sql.Blob implements java.io.Serializable
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getBinaryStream(pos : haxe.Int64, length : haxe.Int64) : java.io.InputStream;
+	@:require(java6) @:overload @:public public function getBinaryStream(pos : haxe.Int64, length : haxe.Int64) : java.io.InputStream;
 	
 	/**
 	* This method frees the <code>Blob</code> object and releases the resources that it holds.
@@ -285,7 +285,7 @@ extern class SerialBlob implements java.sql.Blob implements java.io.Serializable
 	* the Blob's resources
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function free() : Void;
+	@:require(java6) @:overload @:public public function free() : Void;
 	
 	
 }

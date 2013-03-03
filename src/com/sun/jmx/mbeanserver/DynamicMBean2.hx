@@ -33,7 +33,7 @@ extern interface DynamicMBean2 extends javax.management.DynamicMBean
 	* object, like javax.management.StandardMBean, it will be the wrapped
 	* object.
 	*/
-	@:overload public function getResource() : Dynamic;
+	@:overload @:public public function getResource() : Dynamic;
 	
 	/**
 	* The name of this MBean's class, as used by permission checks.
@@ -42,7 +42,7 @@ extern interface DynamicMBean2 extends javax.management.DynamicMBean
 	* than getMBeanInfo().getClassName(), but should return the same
 	* result.
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Additional registration hook.  This method is called after
@@ -54,14 +54,14 @@ extern interface DynamicMBean2 extends javax.management.DynamicMBean
 	* expects for a problem that does not come from its own preRegister
 	* method.
 	*/
-	@:overload public function preRegister2(mbs : javax.management.MBeanServer, name : javax.management.ObjectName) : Void;
+	@:overload @:public public function preRegister2(mbs : javax.management.MBeanServer, name : javax.management.ObjectName) : Void;
 	
 	/**
 	* Additional registration hook.  This method is called if preRegister
 	* and preRegister2 succeed, but then the MBean cannot be registered
 	* (for example because there is already another MBean of the same name).
 	*/
-	@:overload public function registerFailed() : Void;
+	@:overload @:public public function registerFailed() : Void;
 	
 	
 }

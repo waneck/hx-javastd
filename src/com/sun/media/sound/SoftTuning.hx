@@ -25,13 +25,13 @@ package com.sun.media.sound;
 */
 extern class SoftTuning
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(patch : javax.sound.midi.Patch) : Void;
+	@:overload @:public public function new(patch : javax.sound.midi.Patch) : Void;
 	
-	@:overload public function new(patch : javax.sound.midi.Patch, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(patch : javax.sound.midi.Patch, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/*
 	private boolean checksumOK2(byte[] data) {
@@ -44,17 +44,17 @@ extern class SoftTuning
 	return (data[data.length - 2] & 0xFF) == (x & 127);
 	}
 	*/
-	@:overload public function load(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function load(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function getTuning() : java.NativeArray<Float>;
+	@:overload @:public public function getTuning() : java.NativeArray<Float>;
 	
-	@:overload public function getTuning(noteNumber : Int) : Float;
+	@:overload @:public public function getTuning(noteNumber : Int) : Float;
 	
-	@:overload public function getPatch() : javax.sound.midi.Patch;
+	@:overload @:public public function getPatch() : javax.sound.midi.Patch;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	
 }

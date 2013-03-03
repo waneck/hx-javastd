@@ -36,7 +36,7 @@ extern interface RasterOp
 	* @return a <code>WritableRaster</code> that represents the result of
 	*         the filtering operation.
 	*/
-	@:overload public function filter(src : java.awt.image.Raster, dest : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
+	@:overload @:public public function filter(src : java.awt.image.Raster, dest : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns the bounding box of the filtered destination Raster.
@@ -48,7 +48,7 @@ extern interface RasterOp
 	*         the <code>Raster</code> resulting from the filtering
 	*         operation.
 	*/
-	@:overload public function getBounds2D(src : java.awt.image.Raster) : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getBounds2D(src : java.awt.image.Raster) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Creates a zeroed destination Raster with the correct size and number of
@@ -60,7 +60,7 @@ extern interface RasterOp
 	* @return a <code>WritableRaster</code> that is compatible with
 	*         <code>src</code>
 	*/
-	@:overload public function createCompatibleDestRaster(src : java.awt.image.Raster) : java.awt.image.WritableRaster;
+	@:overload @:public public function createCompatibleDestRaster(src : java.awt.image.Raster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns the location of the destination point given a
@@ -70,7 +70,7 @@ extern interface RasterOp
 	* @param dstPt the destination <code>Point2D</code>
 	* @return the location of the destination point.
 	*/
-	@:overload public function getPoint2D(srcPt : java.awt.geom.Point2D, dstPt : java.awt.geom.Point2D) : java.awt.geom.Point2D;
+	@:overload @:public public function getPoint2D(srcPt : java.awt.geom.Point2D, dstPt : java.awt.geom.Point2D) : java.awt.geom.Point2D;
 	
 	/**
 	* Returns the rendering hints for this RasterOp.  Returns
@@ -78,7 +78,7 @@ extern interface RasterOp
 	* @return the <code>RenderingHints</code> object of this
 	*         <code>RasterOp</code>.
 	*/
-	@:overload public function getRenderingHints() : java.awt.RenderingHints;
+	@:overload @:public public function getRenderingHints() : java.awt.RenderingHints;
 	
 	
 }

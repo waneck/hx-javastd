@@ -35,17 +35,17 @@ extern class Util implements sun.rmi.rmic.Constants
 	* Util provides static utility methods used by other rmic classes.
 	* @author Bryan Atsatt
 	*/
-	@:overload public static function packagePrefix() : String;
+	@:overload @:public @:static public static function packagePrefix() : String;
 	
-	@:overload public static function getOutputDirectoryForIDL(theClass : sun.tools.java.Identifier, rootDir : java.io.File, env : sun.rmi.rmic.iiop.BatchEnvironment) : java.io.File;
+	@:overload @:public @:static public static function getOutputDirectoryForIDL(theClass : sun.tools.java.Identifier, rootDir : java.io.File, env : sun.rmi.rmic.iiop.BatchEnvironment) : java.io.File;
 	
-	@:overload public static function getOutputDirectoryForStub(theClass : sun.tools.java.Identifier, rootDir : java.io.File, env : sun.rmi.rmic.iiop.BatchEnvironment) : java.io.File;
+	@:overload @:public @:static public static function getOutputDirectoryForStub(theClass : sun.tools.java.Identifier, rootDir : java.io.File, env : sun.rmi.rmic.iiop.BatchEnvironment) : java.io.File;
 	
-	@:overload public static function correctPackageName(p : String, idl : Bool, standardPackage : Bool) : String;
+	@:overload @:public @:static public static function correctPackageName(p : String, idl : Bool, standardPackage : Bool) : String;
 	
-	@:overload public static function isOffendingPackage(p : String) : Bool;
+	@:overload @:public @:static public static function isOffendingPackage(p : String) : Bool;
 	
-	@:overload public static function hasOffendingPrefix(p : String) : Bool;
+	@:overload @:public @:static public static function hasOffendingPrefix(p : String) : Bool;
 	
 	
 }

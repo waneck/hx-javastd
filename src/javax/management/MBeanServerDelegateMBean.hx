@@ -35,7 +35,7 @@ package javax.management;
 	*
 	* @return the agent identity.
 	*/
-	@:overload public function getMBeanServerId() : String;
+	@:overload @:public public function getMBeanServerId() : String;
 	
 	/**
 	* Returns the full name of the JMX specification implemented
@@ -43,7 +43,7 @@ package javax.management;
 	*
 	* @return the specification name.
 	*/
-	@:overload public function getSpecificationName() : String;
+	@:overload @:public public function getSpecificationName() : String;
 	
 	/**
 	* Returns the version of the JMX specification implemented
@@ -51,7 +51,7 @@ package javax.management;
 	*
 	* @return the specification version.
 	*/
-	@:overload public function getSpecificationVersion() : String;
+	@:overload @:public public function getSpecificationVersion() : String;
 	
 	/**
 	* Returns the vendor of the JMX specification implemented
@@ -59,28 +59,28 @@ package javax.management;
 	*
 	* @return the specification vendor.
 	*/
-	@:overload public function getSpecificationVendor() : String;
+	@:overload @:public public function getSpecificationVendor() : String;
 	
 	/**
 	* Returns the JMX implementation name (the name of this product).
 	*
 	* @return the implementation name.
 	*/
-	@:overload public function getImplementationName() : String;
+	@:overload @:public public function getImplementationName() : String;
 	
 	/**
 	* Returns the JMX implementation version (the version of this product).
 	*
 	* @return the implementation version.
 	*/
-	@:overload public function getImplementationVersion() : String;
+	@:overload @:public public function getImplementationVersion() : String;
 	
 	/**
 	* Returns the JMX implementation vendor (the vendor of this product).
 	*
 	* @return the implementation vendor.
 	*/
-	@:overload public function getImplementationVendor() : String;
+	@:overload @:public public function getImplementationVendor() : String;
 	
 	
 }

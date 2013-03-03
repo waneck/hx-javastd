@@ -30,7 +30,7 @@ package sun.rmi.transport.proxy;
 	* @param port the port
 	* @exception IOException IO error when opening the socket.
 	*/
-	@:overload public function new(port : Int) : Void;
+	@:overload @:public public function new(port : Int) : Void;
 	
 	/**
 	* Create a server socket, bind it to the specified local port
@@ -41,7 +41,7 @@ package sun.rmi.transport.proxy;
 	* @param port the specified port
 	* @param backlog the number of queued connect requests pending accept
 	*/
-	@:overload public function new(port : Int, backlog : Int) : Void;
+	@:overload @:public public function new(port : Int, backlog : Int) : Void;
 	
 	/**
 	* Accept a connection. This method will block until the connection
@@ -54,13 +54,13 @@ package sun.rmi.transport.proxy;
 	* the underlying socket's input stream.
 	* @exception IOException IO error when waiting for the connection.
 	*/
-	@:overload public function accept() : java.net.Socket;
+	@:overload @:public override public function accept() : java.net.Socket;
 	
 	/**
 	* Return the implementation address and implementation port of
 	* the HttpAwareServerSocket as a String.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

@@ -25,43 +25,43 @@ package com.sun.tools.internal.xjc.reader.xmlschema;
 */
 extern class ClassSelector extends com.sun.tools.internal.xjc.reader.xmlschema.BindingComponent
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Gets the current class scope. */
-	@:overload @:final public function getClassScope() : com.sun.tools.internal.xjc.model.CClassInfoParent;
+	@:overload @:public @:final public function getClassScope() : com.sun.tools.internal.xjc.model.CClassInfoParent;
 	
-	@:overload @:final public function pushClassScope(clsFctry : com.sun.tools.internal.xjc.model.CClassInfoParent) : Void;
+	@:overload @:public @:final public function pushClassScope(clsFctry : com.sun.tools.internal.xjc.model.CClassInfoParent) : Void;
 	
-	@:overload @:final public function popClassScope() : Void;
+	@:overload @:public @:final public function popClassScope() : Void;
 	
-	@:overload public function getCurrentRoot() : com.sun.xml.internal.xsom.XSComponent;
+	@:overload @:public public function getCurrentRoot() : com.sun.xml.internal.xsom.XSComponent;
 	
-	@:overload public function getCurrentBean() : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload @:public public function getCurrentBean() : com.sun.tools.internal.xjc.model.CClassInfo;
 	
 	/**
 	* Checks if the given component is bound to a class.
 	*/
-	@:overload @:final public function isBound(x : com.sun.xml.internal.xsom.XSElementDecl, referer : com.sun.xml.internal.xsom.XSComponent) : com.sun.tools.internal.xjc.model.CElement;
+	@:overload @:public @:final public function isBound(x : com.sun.xml.internal.xsom.XSElementDecl, referer : com.sun.xml.internal.xsom.XSComponent) : com.sun.tools.internal.xjc.model.CElement;
 	
 	/**
 	* Checks if the given component is being mapped to a type.
 	* If so, build that type and return that object.
 	* If it is not being mapped to a type item, return null.
 	*/
-	@:overload public function bindToType(sc : com.sun.xml.internal.xsom.XSComponent, referer : com.sun.xml.internal.xsom.XSComponent) : com.sun.tools.internal.xjc.model.CTypeInfo;
+	@:overload @:public public function bindToType(sc : com.sun.xml.internal.xsom.XSComponent, referer : com.sun.xml.internal.xsom.XSComponent) : com.sun.tools.internal.xjc.model.CTypeInfo;
 	
-	@:overload public function bindToType(e : com.sun.xml.internal.xsom.XSElementDecl, referer : com.sun.xml.internal.xsom.XSComponent) : com.sun.tools.internal.xjc.model.CElement;
+	@:overload @:public public function bindToType(e : com.sun.xml.internal.xsom.XSElementDecl, referer : com.sun.xml.internal.xsom.XSComponent) : com.sun.tools.internal.xjc.model.CElement;
 	
-	@:overload public function bindToType(t : com.sun.xml.internal.xsom.XSComplexType, referer : com.sun.xml.internal.xsom.XSComponent, cannotBeDelayed : Bool) : com.sun.tools.internal.xjc.model.CClass;
+	@:overload @:public public function bindToType(t : com.sun.xml.internal.xsom.XSComplexType, referer : com.sun.xml.internal.xsom.XSComponent, cannotBeDelayed : Bool) : com.sun.tools.internal.xjc.model.CClass;
 	
-	@:overload public function bindToType(t : com.sun.xml.internal.xsom.XSType, referer : com.sun.xml.internal.xsom.XSComponent) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function bindToType(t : com.sun.xml.internal.xsom.XSType, referer : com.sun.xml.internal.xsom.XSComponent) : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	/**
 	* Runs all the pending build tasks.
 	*/
-	@:overload public function executeTasks() : Void;
+	@:overload @:public public function executeTasks() : Void;
 	
-	@:overload public function queueBuild(sc : com.sun.xml.internal.xsom.XSComponent, bean : com.sun.tools.internal.xjc.model.CElement) : Void;
+	@:overload @:public public function queueBuild(sc : com.sun.xml.internal.xsom.XSComponent, bean : com.sun.tools.internal.xjc.model.CElement) : Void;
 	
 	/**
 	* Gets the Java package to which classes from
@@ -71,13 +71,13 @@ extern class ClassSelector extends com.sun.tools.internal.xjc.reader.xmlschema.B
 	* Usually, the getOuterClass method should be used
 	* to determine where to put a class.
 	*/
-	@:overload public function getPackage(targetNamespace : String) : com.sun.codemodel.internal.JPackage;
+	@:overload @:public public function getPackage(targetNamespace : String) : com.sun.codemodel.internal.JPackage;
 	
 	
 }
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$ClassSelector$Binding') @:internal extern class ClassSelector_Binding
 {
-	@:overload public function new(sc : com.sun.xml.internal.xsom.XSComponent, bean : com.sun.tools.internal.xjc.model.CTypeInfo) : Void;
+	@:overload @:public public function new(sc : com.sun.xml.internal.xsom.XSComponent, bean : com.sun.tools.internal.xjc.model.CTypeInfo) : Void;
 	
 	
 }

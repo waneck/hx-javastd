@@ -37,11 +37,11 @@ extern class WritableRasterNative extends java.awt.image.WritableRaster
 	* So this class exists simply to allow the WritableRaster
 	* functionality for this new kind of DataBuffer object.
 	*/
-	@:overload public static function createNativeRaster(sm : java.awt.image.SampleModel, db : java.awt.image.DataBuffer) : sun.awt.image.WritableRasterNative;
+	@:overload @:public @:static public static function createNativeRaster(sm : java.awt.image.SampleModel, db : java.awt.image.DataBuffer) : sun.awt.image.WritableRasterNative;
 	
-	@:overload private function new(sm : java.awt.image.SampleModel, db : java.awt.image.DataBuffer) : Void;
+	@:overload @:protected private function new(sm : java.awt.image.SampleModel, db : java.awt.image.DataBuffer) : Void;
 	
-	@:overload public static function createNativeRaster(cm : java.awt.image.ColorModel, sd : sun.java2d.SurfaceData, width : Int, height : Int) : sun.awt.image.WritableRasterNative;
+	@:overload @:public @:static public static function createNativeRaster(cm : java.awt.image.ColorModel, sd : sun.java2d.SurfaceData, width : Int, height : Int) : sun.awt.image.WritableRasterNative;
 	
 	
 }

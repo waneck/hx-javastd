@@ -31,27 +31,27 @@ package sun.java2d.xr;
 */
 extern class GrowableEltArray extends sun.java2d.xr.GrowableIntArray
 {
-	@:overload public function new(initialSize : Int) : Void;
+	@:overload @:public public function new(initialSize : Int) : Void;
 	
-	@:overload @:final public function getCharCnt(index : Int) : Int;
+	@:overload @:public @:final public function getCharCnt(index : Int) : Int;
 	
-	@:overload @:final public function setCharCnt(index : Int, cnt : Int) : Void;
+	@:overload @:public @:final public function setCharCnt(index : Int, cnt : Int) : Void;
 	
-	@:overload @:final public function getXOff(index : Int) : Int;
+	@:overload @:public @:final public function getXOff(index : Int) : Int;
 	
-	@:overload @:final public function setXOff(index : Int, xOff : Int) : Void;
+	@:overload @:public @:final public function setXOff(index : Int, xOff : Int) : Void;
 	
-	@:overload @:final public function getYOff(index : Int) : Int;
+	@:overload @:public @:final public function getYOff(index : Int) : Int;
 	
-	@:overload @:final public function setYOff(index : Int, yOff : Int) : Void;
+	@:overload @:public @:final public function setYOff(index : Int, yOff : Int) : Void;
 	
-	@:overload @:final public function getGlyphSet(index : Int) : Int;
+	@:overload @:public @:final public function getGlyphSet(index : Int) : Int;
 	
-	@:overload @:final public function setGlyphSet(index : Int, glyphSet : Int) : Void;
+	@:overload @:public @:final public function setGlyphSet(index : Int, glyphSet : Int) : Void;
 	
-	@:overload public function getGlyphs() : sun.java2d.xr.GrowableIntArray;
+	@:overload @:public public function getGlyphs() : sun.java2d.xr.GrowableIntArray;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }

@@ -33,17 +33,17 @@ extern class ReachableObjects
 	/**
 	* @author      A. Sundararajan
 	*/
-	@:overload public function new(root : com.sun.tools.hat.internal.model.JavaHeapObject, excludes : com.sun.tools.hat.internal.model.ReachableExcludes) : Void;
+	@:overload @:public public function new(root : com.sun.tools.hat.internal.model.JavaHeapObject, excludes : com.sun.tools.hat.internal.model.ReachableExcludes) : Void;
 	
-	@:overload public function getRoot() : com.sun.tools.hat.internal.model.JavaHeapObject;
+	@:overload @:public public function getRoot() : com.sun.tools.hat.internal.model.JavaHeapObject;
 	
-	@:overload public function getReachables() : java.NativeArray<com.sun.tools.hat.internal.model.JavaThing>;
+	@:overload @:public public function getReachables() : java.NativeArray<com.sun.tools.hat.internal.model.JavaThing>;
 	
-	@:overload public function getTotalSize() : haxe.Int64;
+	@:overload @:public public function getTotalSize() : haxe.Int64;
 	
-	@:overload public function getExcludedFields() : java.NativeArray<String>;
+	@:overload @:public public function getExcludedFields() : java.NativeArray<String>;
 	
-	@:overload public function getUsedFields() : java.NativeArray<String>;
+	@:overload @:public public function getUsedFields() : java.NativeArray<String>;
 	
 	
 }

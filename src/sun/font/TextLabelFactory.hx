@@ -36,21 +36,21 @@ extern class TextLabelFactory
 	* @param bidi the bidi information for the paragraph text, or null if the
 	* entire text is left-to-right text.
 	*/
-	@:overload public function new(frc : java.awt.font.FontRenderContext, text : java.NativeArray<java.StdTypes.Char16>, bidi : java.text.Bidi, flags : Int) : Void;
+	@:overload @:public public function new(frc : java.awt.font.FontRenderContext, text : java.NativeArray<java.StdTypes.Char16>, bidi : java.text.Bidi, flags : Int) : Void;
 	
-	@:overload public function getFontRenderContext() : java.awt.font.FontRenderContext;
+	@:overload @:public public function getFontRenderContext() : java.awt.font.FontRenderContext;
 	
-	@:overload public function getText() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getText() : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload public function getParagraphBidi() : java.text.Bidi;
+	@:overload @:public public function getParagraphBidi() : java.text.Bidi;
 	
-	@:overload public function getLineBidi() : java.text.Bidi;
+	@:overload @:public public function getLineBidi() : java.text.Bidi;
 	
-	@:overload public function getLayoutFlags() : Int;
+	@:overload @:public public function getLayoutFlags() : Int;
 	
-	@:overload public function getLineStart() : Int;
+	@:overload @:public public function getLineStart() : Int;
 	
-	@:overload public function getLineLimit() : Int;
+	@:overload @:public public function getLineLimit() : Int;
 	
 	/**
 	* Set a line context for the factory.  Shaping only occurs on this line.
@@ -58,7 +58,7 @@ extern class TextLabelFactory
 	* @param lineStart the index within the text of the start of the line.
 	* @param lineLimit the index within the text of the limit of the line.
 	*/
-	@:overload public function setLineContext(lineStart : Int, lineLimit : Int) : Void;
+	@:overload @:public public function setLineContext(lineStart : Int, lineLimit : Int) : Void;
 	
 	/**
 	* Create an extended glyph array for the text between start and limit.
@@ -74,7 +74,7 @@ extern class TextLabelFactory
 	* at start.  Clients should ensure that all text between start and limit
 	* has the same bidi level for the current line.
 	*/
-	@:overload public function createExtended(font : java.awt.Font, lm : sun.font.CoreMetrics, decorator : sun.font.Decoration, start : Int, limit : Int) : sun.font.ExtendedTextLabel;
+	@:overload @:public public function createExtended(font : java.awt.Font, lm : sun.font.CoreMetrics, decorator : sun.font.Decoration, start : Int, limit : Int) : sun.font.ExtendedTextLabel;
 	
 	/**
 	* Create a simple glyph array for the text between start and limit.
@@ -83,7 +83,7 @@ extern class TextLabelFactory
 	* @param start the start of the subrange for which to create the glyph array
 	* @param limit the limit of the subrange for which to create glyph array
 	*/
-	@:overload public function createSimple(font : java.awt.Font, lm : sun.font.CoreMetrics, start : Int, limit : Int) : sun.font.TextLabel;
+	@:overload @:public public function createSimple(font : java.awt.Font, lm : sun.font.CoreMetrics, start : Int, limit : Int) : sun.font.TextLabel;
 	
 	
 }

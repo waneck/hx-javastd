@@ -30,40 +30,40 @@ extern class XPathConstants
 	*
 	* <p>Maps to Java {@link Double}.</p>
 	*/
-	public static var NUMBER(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var NUMBER(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>The XPath 1.0 string data type.</p>
 	*
 	* <p>Maps to Java {@link String}.</p>
 	*/
-	public static var STRING(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var STRING(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>The XPath 1.0 boolean data type.</p>
 	*
 	* <p>Maps to Java {@link Boolean}.</p>
 	*/
-	public static var BOOLEAN(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var BOOLEAN(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>The XPath 1.0 NodeSet data type.</p>
 	*
 	* <p>Maps to Java {@link org.w3c.dom.NodeList}.</p>
 	*/
-	public static var NODESET(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var NODESET(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>The XPath 1.0 NodeSet data type.
 	*
 	* <p>Maps to Java {@link org.w3c.dom.Node}.</p>
 	*/
-	public static var NODE(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var NODE(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>The URI for the DOM object model, "http://java.sun.com/jaxp/xpath/dom".</p>
 	*/
-	public static var DOM_OBJECT_MODEL(default, null) : String;
+	@:public @:static @:final public static var DOM_OBJECT_MODEL(default, null) : String;
 	
 	
 }

@@ -25,47 +25,47 @@ package sun.tools.jconsole.inspector;
 */
 extern class XMBeanInfo extends javax.swing.JPanel
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function emptyInfoTable() : Void;
+	@:overload @:public public function emptyInfoTable() : Void;
 	
-	@:overload public function emptyDescTable() : Void;
+	@:overload @:public public function emptyDescTable() : Void;
 	
-	@:overload public function addMBeanInfo(mbean : sun.tools.jconsole.inspector.XMBean, mbeanInfo : javax.management.MBeanInfo) : Void;
+	@:overload @:public public function addMBeanInfo(mbean : sun.tools.jconsole.inspector.XMBean, mbeanInfo : javax.management.MBeanInfo) : Void;
 	
-	@:overload public function addMBeanAttributeInfo(mbai : javax.management.MBeanAttributeInfo) : Void;
+	@:overload @:public public function addMBeanAttributeInfo(mbai : javax.management.MBeanAttributeInfo) : Void;
 	
-	@:overload public function addMBeanOperationInfo(mboi : javax.management.MBeanOperationInfo) : Void;
+	@:overload @:public public function addMBeanOperationInfo(mboi : javax.management.MBeanOperationInfo) : Void;
 	
-	@:overload public function addMBeanNotificationInfo(mbni : javax.management.MBeanNotificationInfo) : Void;
+	@:overload @:public public function addMBeanNotificationInfo(mbni : javax.management.MBeanNotificationInfo) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$XMBeanInfo$ReadOnlyDefaultTableModel') @:internal extern class XMBeanInfo_ReadOnlyDefaultTableModel extends javax.swing.table.DefaultTableModel
 {
-	@:overload override public function setValueAt(value : Dynamic, row : Int, col : Int) : Void;
+	@:overload @:public override public function setValueAt(value : Dynamic, row : Int, col : Int) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$XMBeanInfo$TableRowDivider') @:internal extern class XMBeanInfo_TableRowDivider
 {
-	@:overload public function new(tableRowDividerText : String) : Void;
+	@:overload @:public public function new(tableRowDividerText : String) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$XMBeanInfo$MBeanInfoTableCellRenderer') @:internal extern class XMBeanInfo_MBeanInfoTableCellRenderer extends javax.swing.table.DefaultTableCellRenderer
 {
-	@:overload override public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
+	@:overload @:public override public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$XMBeanInfo$MBeanInfoTableCellEditor') @:internal extern class XMBeanInfo_MBeanInfoTableCellEditor extends sun.tools.jconsole.inspector.Utils.Utils_ReadOnlyTableCellEditor
 {
-	@:overload public function new(tf : javax.swing.JTextField) : Void;
+	@:overload @:public public function new(tf : javax.swing.JTextField) : Void;
 	
-	@:overload override public function getTableCellEditorComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, row : Int, column : Int) : java.awt.Component;
+	@:overload @:public override public function getTableCellEditorComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, row : Int, column : Int) : java.awt.Component;
 	
 	
 }

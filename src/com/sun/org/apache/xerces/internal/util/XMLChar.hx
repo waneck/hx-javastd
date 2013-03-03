@@ -21,19 +21,19 @@ package com.sun.org.apache.xerces.internal.util;
 extern class XMLChar
 {
 	/** Valid character mask. */
-	public static var MASK_VALID(default, null) : Int;
+	@:public @:static @:final public static var MASK_VALID(default, null) : Int;
 	
 	/** Space character mask. */
-	public static var MASK_SPACE(default, null) : Int;
+	@:public @:static @:final public static var MASK_SPACE(default, null) : Int;
 	
 	/** Name start character mask. */
-	public static var MASK_NAME_START(default, null) : Int;
+	@:public @:static @:final public static var MASK_NAME_START(default, null) : Int;
 	
 	/** Name character mask. */
-	public static var MASK_NAME(default, null) : Int;
+	@:public @:static @:final public static var MASK_NAME(default, null) : Int;
 	
 	/** Pubid character mask. */
-	public static var MASK_PUBID(default, null) : Int;
+	@:public @:static @:final public static var MASK_PUBID(default, null) : Int;
 	
 	/**
 	* Content character mask. Special characters are those that can
@@ -43,20 +43,20 @@ extern class XMLChar
 	* <p>
 	* This is an optimization for the inner loop of character scanning.
 	*/
-	public static var MASK_CONTENT(default, null) : Int;
+	@:public @:static @:final public static var MASK_CONTENT(default, null) : Int;
 	
 	/** NCName start character mask. */
-	public static var MASK_NCNAME_START(default, null) : Int;
+	@:public @:static @:final public static var MASK_NCNAME_START(default, null) : Int;
 	
 	/** NCName character mask. */
-	public static var MASK_NCNAME(default, null) : Int;
+	@:public @:static @:final public static var MASK_NCNAME(default, null) : Int;
 	
 	/**
 	* Returns true if the specified character is a supplemental character.
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isSupplemental(c : Int) : Bool;
+	@:overload @:public @:static public static function isSupplemental(c : Int) : Bool;
 	
 	/**
 	* Returns true the supplemental character corresponding to the given
@@ -65,35 +65,35 @@ extern class XMLChar
 	* @param h The high surrogate.
 	* @param l The low surrogate.
 	*/
-	@:overload public static function supplemental(h : java.StdTypes.Char16, l : java.StdTypes.Char16) : Int;
+	@:overload @:public @:static public static function supplemental(h : java.StdTypes.Char16, l : java.StdTypes.Char16) : Int;
 	
 	/**
 	* Returns the high surrogate of a supplemental character
 	*
 	* @param c The supplemental character to "split".
 	*/
-	@:overload public static function highSurrogate(c : Int) : java.StdTypes.Char16;
+	@:overload @:public @:static public static function highSurrogate(c : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Returns the low surrogate of a supplemental character
 	*
 	* @param c The supplemental character to "split".
 	*/
-	@:overload public static function lowSurrogate(c : Int) : java.StdTypes.Char16;
+	@:overload @:public @:static public static function lowSurrogate(c : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Returns whether the given character is a high surrogate
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isHighSurrogate(c : Int) : Bool;
+	@:overload @:public @:static public static function isHighSurrogate(c : Int) : Bool;
 	
 	/**
 	* Returns whether the given character is a low surrogate
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isLowSurrogate(c : Int) : Bool;
+	@:overload @:public @:static public static function isLowSurrogate(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character is valid. This method
@@ -105,21 +105,21 @@ extern class XMLChar
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isValid(c : Int) : Bool;
+	@:overload @:public @:static public static function isValid(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character is invalid.
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isInvalid(c : Int) : Bool;
+	@:overload @:public @:static public static function isInvalid(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character can be considered content.
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isContent(c : Int) : Bool;
+	@:overload @:public @:static public static function isContent(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character can be considered markup.
@@ -127,7 +127,7 @@ extern class XMLChar
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isMarkup(c : Int) : Bool;
+	@:overload @:public @:static public static function isMarkup(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character is a space character
@@ -135,7 +135,7 @@ extern class XMLChar
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isSpace(c : Int) : Bool;
+	@:overload @:public @:static public static function isSpace(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character is a valid name start
@@ -144,7 +144,7 @@ extern class XMLChar
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isNameStart(c : Int) : Bool;
+	@:overload @:public @:static public static function isNameStart(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character is a valid name
@@ -153,7 +153,7 @@ extern class XMLChar
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isName(c : Int) : Bool;
+	@:overload @:public @:static public static function isName(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character is a valid NCName start
@@ -162,7 +162,7 @@ extern class XMLChar
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isNCNameStart(c : Int) : Bool;
+	@:overload @:public @:static public static function isNCNameStart(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character is a valid NCName
@@ -171,7 +171,7 @@ extern class XMLChar
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isNCName(c : Int) : Bool;
+	@:overload @:public @:static public static function isNCName(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character is a valid Pubid
@@ -180,7 +180,7 @@ extern class XMLChar
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isPubid(c : Int) : Bool;
+	@:overload @:public @:static public static function isPubid(c : Int) : Bool;
 	
 	/**
 	* Check to see if a string is a valid Name according to [5]
@@ -189,7 +189,7 @@ extern class XMLChar
 	* @param name string to check
 	* @return true if name is a valid Name
 	*/
-	@:overload public static function isValidName(name : String) : Bool;
+	@:overload @:public @:static public static function isValidName(name : String) : Bool;
 	
 	/**
 	* Check to see if a string is a valid NCName according to [4]
@@ -198,7 +198,7 @@ extern class XMLChar
 	* @param ncName string to check
 	* @return true if name is a valid NCName
 	*/
-	@:overload public static function isValidNCName(ncName : String) : Bool;
+	@:overload @:public @:static public static function isValidNCName(ncName : String) : Bool;
 	
 	/**
 	* Check to see if a string is a valid Nmtoken according to [7]
@@ -207,7 +207,7 @@ extern class XMLChar
 	* @param nmtoken string to check
 	* @return true if nmtoken is a valid Nmtoken
 	*/
-	@:overload public static function isValidNmtoken(nmtoken : String) : Bool;
+	@:overload @:public @:static public static function isValidNmtoken(nmtoken : String) : Bool;
 	
 	/**
 	* Returns true if the encoding name is a valid IANA encoding.
@@ -217,7 +217,7 @@ extern class XMLChar
 	*
 	* @param ianaEncoding The IANA encoding name.
 	*/
-	@:overload public static function isValidIANAEncoding(ianaEncoding : String) : Bool;
+	@:overload @:public @:static public static function isValidIANAEncoding(ianaEncoding : String) : Bool;
 	
 	/**
 	* Returns true if the encoding name is a valid Java encoding.
@@ -227,7 +227,7 @@ extern class XMLChar
 	*
 	* @param javaEncoding The Java encoding name.
 	*/
-	@:overload public static function isValidJavaEncoding(javaEncoding : String) : Bool;
+	@:overload @:public @:static public static function isValidJavaEncoding(javaEncoding : String) : Bool;
 	
 	/**
 	* Trims space characters as defined by production [3] in
@@ -237,7 +237,7 @@ extern class XMLChar
 	* @return the given string with the space characters trimmed
 	* from both ends
 	*/
-	@:overload public static function trim(value : String) : String;
+	@:overload @:public @:static public static function trim(value : String) : String;
 	
 	
 }

@@ -28,100 +28,100 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	/**
 	* Gets the code model representation of this type.
 	*/
-	@:overload public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
+	@:overload @:public public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
 	
 	/**
 	* Since {@link CBuiltinLeafInfo} represents a default binding,
 	* it is never a collection.
 	*/
-	@:overload @:final public function isCollection() : Bool;
+	@:overload @:public @:final public function isCollection() : Bool;
 	
 	/**
 	* Guaranteed to return this.
 	*/
-	@:overload public function getInfo() : com.sun.tools.internal.xjc.model.CNonElement;
+	@:overload @:public public function getInfo() : com.sun.tools.internal.xjc.model.CNonElement;
 	
-	@:overload public function idUse() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload @:public public function idUse() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
 	/**
 	* {@link CBuiltinLeafInfo} never has a default associated MIME type.
 	*/
-	@:overload public function getExpectedMimeType() : javax.activation.MimeType;
+	@:overload @:public public function getExpectedMimeType() : javax.activation.MimeType;
 	
-	@:overload @:final public function getAdapterUse() : com.sun.tools.internal.xjc.model.CAdapter;
+	@:overload @:public @:final public function getAdapterUse() : com.sun.tools.internal.xjc.model.CAdapter;
 	
-	@:overload public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public public function getLocator() : org.xml.sax.Locator;
 	
-	@:overload @:final public function getSchemaComponent() : com.sun.xml.internal.xsom.XSComponent;
+	@:overload @:public @:final public function getSchemaComponent() : com.sun.xml.internal.xsom.XSComponent;
 	
 	/**
 	* Creates a {@link TypeUse} that represents a collection of this {@link CBuiltinLeafInfo}.
 	*/
-	@:overload @:final public function makeCollection() : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public @:final public function makeCollection() : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	/**
 	* Creates a {@link TypeUse} that represents an adapted use of this {@link CBuiltinLeafInfo}.
 	*/
-	@:overload @:final public function makeAdapted(adapter : Class<javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>, copy : Bool) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public @:final public function makeAdapted(adapter : Class<javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>, copy : Bool) : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	/**
 	* Creates a {@link TypeUse} that represents a MIME-type assocaited version of this {@link CBuiltinLeafInfo}.
 	*/
-	@:overload @:final public function makeMimeTyped(mt : javax.activation.MimeType) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public @:final public function makeMimeTyped(mt : javax.activation.MimeType) : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	/**
 	* All built-in leaves.
 	*/
-	public static var LEAVES(default, null) : java.util.Map<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.CBuiltinLeafInfo>;
+	@:public @:static @:final public static var LEAVES(default, null) : java.util.Map<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.CBuiltinLeafInfo>;
 	
-	public static var ANYTYPE(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var ANYTYPE(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var STRING(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var STRING(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var BOOLEAN(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var BOOLEAN(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var INT(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var INT(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var LONG(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var LONG(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var BYTE(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var BYTE(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var SHORT(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var SHORT(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var FLOAT(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var FLOAT(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var DOUBLE(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var DOUBLE(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var QNAME(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var QNAME(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var CALENDAR(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var CALENDAR(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var DURATION(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var DURATION(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var BIG_INTEGER(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var BIG_INTEGER(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var BIG_DECIMAL(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var BIG_DECIMAL(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var BASE64_BYTE_ARRAY(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var BASE64_BYTE_ARRAY(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var DATA_HANDLER(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var DATA_HANDLER(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var IMAGE(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var IMAGE(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var XML_SOURCE(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:public @:static @:final public static var XML_SOURCE(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var HEXBIN_BYTE_ARRAY(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:public @:static @:final public static var HEXBIN_BYTE_ARRAY(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	public static var TOKEN(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:public @:static @:final public static var TOKEN(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	public static var NORMALIZED_STRING(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:public @:static @:final public static var NORMALIZED_STRING(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	public static var ID(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:public @:static @:final public static var ID(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	/**
 	* boolean restricted to 0 or 1.
 	*/
-	public static var BOOLEAN_ZERO_OR_ONE(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:public @:static @:final public static var BOOLEAN_ZERO_OR_ONE(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	/**
 	* IDREF.
@@ -129,12 +129,12 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	* IDREF is has a whitespace normalization semantics of token, but
 	* we don't want {@link XmlJavaTypeAdapter} and {@link XmlIDREF} to interact.
 	*/
-	public static var IDREF(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:public @:static @:final public static var IDREF(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	/**
 	* For all list of strings, such as NMTOKENS, ENTITIES.
 	*/
-	public static var STRING_LIST(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:public @:static @:final public static var STRING_LIST(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	/**
 	* Creates a constant for the given lexical value.
@@ -155,19 +155,19 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	*      if the constant cannot be created for this {@link TypeUse}
 	*      (such as when it's a collection)
 	*/
-	@:overload public function createConstant(outline : com.sun.tools.internal.xjc.outline.Outline, lexical : com.sun.xml.internal.xsom.XmlString) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public public function createConstant(outline : com.sun.tools.internal.xjc.outline.Outline, lexical : com.sun.xml.internal.xsom.XmlString) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* True if this type is a valid target from a property annotated with {@link XmlIDREF}.
 	*/
-	@:overload public function canBeReferencedByIDREF() : Bool;
+	@:overload @:public @:public @:public @:public override public function canBeReferencedByIDREF() : Bool;
 	
 	/**
 	* Gets the location object that this object points to.
 	*
 	* This operation could be inefficient and costly.
 	*/
-	@:overload public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public @:public @:public @:public override public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
 	/**
 	* Gets the primary XML type ANYTYPE_NAME of the class.
@@ -179,13 +179,13 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	* @return
 	*      null if the object doesn't have an explicit type ANYTYPE_NAME (AKA anonymous.)
 	*/
-	@:overload public function getTypeName() : javax.xml.namespace.QName;
+	@:overload @:public @:public override public function getTypeName() : javax.xml.namespace.QName;
 	
 	/**
 	* Returns true if this {@link NonElement} maps to text in XML,
 	* without any attribute nor child elements.
 	*/
-	@:overload public function isSimpleType() : Bool;
+	@:overload @:public @:public override public function isSimpleType() : Bool;
 	
 	/**
 	* Gets the upstream {@link Location} information.
@@ -193,7 +193,7 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	* @return
 	*      can be null.
 	*/
-	@:overload public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
+	@:overload @:public @:public @:public override public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
 	/**
 	* Gets the underlying Java type that object represents.
@@ -201,7 +201,7 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	* @return
 	*      always non-null.
 	*/
-	@:overload public function getType() : Dynamic;
+	@:overload @:public @:public @:public @:public @:public override public function getType() : Dynamic;
 	
 	/**
 	* Gets the list of customizations attached to this model component.
@@ -212,7 +212,7 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	*
 	* @see Plugin#getCustomizationURIs()
 	*/
-	@:overload public function getCustomizations() : com.sun.tools.internal.xjc.model.CCustomizations;
+	@:overload @:public @:public public function getCustomizations() : com.sun.tools.internal.xjc.model.CCustomizations;
 	
 	
 }
@@ -222,22 +222,22 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 */
 @:native('com$sun$tools$internal$xjc$model$CBuiltinLeafInfo$Builtin') @:internal extern class CBuiltinLeafInfo_Builtin extends com.sun.tools.internal.xjc.model.CBuiltinLeafInfo
 {
-	@:overload private function new(c : Class<Dynamic>, typeName : String) : Void;
+	@:overload @:protected private function new(c : Class<Dynamic>, typeName : String) : Void;
 	
-	@:overload private function new(c : Class<Dynamic>, typeName : String, id : com.sun.xml.internal.bind.v2.model.core.ID) : Void;
+	@:overload @:protected private function new(c : Class<Dynamic>, typeName : String, id : com.sun.xml.internal.bind.v2.model.core.ID) : Void;
 	
 	/**
 	* No vendor customization in the built-in classes.
 	*/
-	@:overload override public function getCustomizations() : com.sun.tools.internal.xjc.model.CCustomizations;
+	@:overload @:public override public function getCustomizations() : com.sun.tools.internal.xjc.model.CCustomizations;
 	
 	
 }
 @:native('com$sun$tools$internal$xjc$model$CBuiltinLeafInfo$NoConstantBuiltin') @:internal extern class CBuiltinLeafInfo_NoConstantBuiltin extends com.sun.tools.internal.xjc.model.CBuiltinLeafInfo.CBuiltinLeafInfo_Builtin
 {
-	@:overload public function new(c : Class<Dynamic>, typeName : String) : Void;
+	@:overload @:public public function new(c : Class<Dynamic>, typeName : String) : Void;
 	
-	@:overload override public function createConstant(outline : com.sun.tools.internal.xjc.outline.Outline, lexical : com.sun.xml.internal.xsom.XmlString) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public override public function createConstant(outline : com.sun.tools.internal.xjc.outline.Outline, lexical : com.sun.xml.internal.xsom.XmlString) : com.sun.codemodel.internal.JExpression;
 	
 	
 }

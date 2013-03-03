@@ -25,11 +25,11 @@ package sun.misc;
 */
 extern class MetaIndex
 {
-	@:overload public static function forJar(jar : java.io.File) : sun.misc.MetaIndex;
+	@:overload @:public @:static public static function forJar(jar : java.io.File) : sun.misc.MetaIndex;
 	
-	@:overload @:synchronized public static function registerDirectory(dir : java.io.File) : Void;
+	@:overload @:public @:static @:synchronized public static function registerDirectory(dir : java.io.File) : Void;
 	
-	@:overload public function mayContain(entry : String) : Bool;
+	@:overload @:public public function mayContain(entry : String) : Bool;
 	
 	
 }

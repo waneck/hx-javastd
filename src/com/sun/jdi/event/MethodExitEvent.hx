@@ -45,7 +45,7 @@ package com.sun.jdi.event;
 	* @throws ObjectCollectedException may be thrown if class
 	* has been garbage collected.
 	*/
-	@:overload public function method() : com.sun.jdi.Method;
+	@:overload @:public public function method() : com.sun.jdi.Method;
 	
 	/**
 	* Returns the value that the method will return.
@@ -64,7 +64,7 @@ package com.sun.jdi.event;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function returnValue() : com.sun.jdi.Value;
+	@:require(java6) @:overload @:public public function returnValue() : com.sun.jdi.Value;
 	
 	
 }

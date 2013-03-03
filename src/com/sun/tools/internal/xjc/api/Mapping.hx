@@ -43,7 +43,7 @@ extern interface Mapping
 	* @return
 	*      never be null.
 	*/
-	@:overload public function getType() : com.sun.tools.internal.xjc.api.TypeAndAnnotation;
+	@:overload @:public public function getType() : com.sun.tools.internal.xjc.api.TypeAndAnnotation;
 	
 	/**
 	* If this element is a so-called "wrapper-style" element,

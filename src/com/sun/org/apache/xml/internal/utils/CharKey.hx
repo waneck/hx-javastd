@@ -33,26 +33,26 @@ extern class CharKey
 	*
 	* @param key char value of this object.
 	*/
-	@:overload public function new(key : java.StdTypes.Char16) : Void;
+	@:overload @:public public function new(key : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Default constructor for a CharKey.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Get the hash value of the character.
 	*
 	* @return hash value of the character.
 	*/
-	@:overload @:final public function setChar(c : java.StdTypes.Char16) : Void;
+	@:overload @:public @:final public function setChar(c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Get the hash value of the character.
 	*
 	* @return hash value of the character.
 	*/
-	@:overload @:final override public function hashCode() : Int;
+	@:overload @:public @:final override public function hashCode() : Int;
 	
 	/**
 	* Override of equals() for this object
@@ -61,7 +61,7 @@ extern class CharKey
 	*
 	* @return True if this object equals this string value
 	*/
-	@:overload @:final override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:final override public function equals(obj : Dynamic) : Bool;
 	
 	
 }

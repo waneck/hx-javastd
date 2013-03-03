@@ -69,13 +69,13 @@ extern class ConstantFloat extends com.sun.org.apache.bcel.internal.classfile.Co
 	/**
 	* @param bytes Data
 	*/
-	@:overload public function new(bytes : Single) : Void;
+	@:overload @:public public function new(bytes : Single) : Void;
 	
 	/**
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantFloat) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantFloat) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -84,7 +84,7 @@ extern class ConstantFloat extends com.sun.org.apache.bcel.internal.classfile.Co
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump constant float to file stream in binary format.
@@ -92,26 +92,26 @@ extern class ConstantFloat extends com.sun.org.apache.bcel.internal.classfile.Co
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final override public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return data, i.e., 4 bytes.
 	*/
-	@:overload @:final public function getBytes() : Single;
+	@:overload @:public @:final public function getBytes() : Single;
 	
 	/**
 	* @param bytes.
 	*/
-	@:overload @:final public function setBytes(bytes : Single) : Void;
+	@:overload @:public @:final public function setBytes(bytes : Single) : Void;
 	
 	/**
 	* @return String representation.
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	/** @return Float object
 	*/
-	@:overload public function getConstantValue(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Dynamic;
+	@:overload @:public public function getConstantValue(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Dynamic;
 	
 	
 }

@@ -33,39 +33,29 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	* @author Georges Saab
 	* @author Jeff Shapiro
 	*/
-	private var toolBar : javax.swing.JToolBar;
+	@:protected private var toolBar : javax.swing.JToolBar;
 	
-	private var dragWindow : javax.swing.plaf.basic.BasicToolBarUI.BasicToolBarUI_DragWindow;
+	@:protected private var dragWindow : javax.swing.plaf.basic.BasicToolBarUI.BasicToolBarUI_DragWindow;
 	
-	private var focusedCompIndex : Int;
+	@:protected private var focusedCompIndex : Int;
 	
-	private var dockingColor : java.awt.Color;
+	@:protected private var dockingColor : java.awt.Color;
 	
-	private var floatingColor : java.awt.Color;
+	@:protected private var floatingColor : java.awt.Color;
 	
-	private var dockingBorderColor : java.awt.Color;
+	@:protected private var dockingBorderColor : java.awt.Color;
 	
-	private var floatingBorderColor : java.awt.Color;
+	@:protected private var floatingBorderColor : java.awt.Color;
 	
-	private var dockingListener : javax.swing.event.MouseInputListener;
+	@:protected private var dockingListener : javax.swing.event.MouseInputListener;
 	
-	private var propertyListener : java.beans.PropertyChangeListener;
+	@:protected private var propertyListener : java.beans.PropertyChangeListener;
 	
-	private var toolBarContListener : java.awt.event.ContainerListener;
+	@:protected private var toolBarContListener : java.awt.event.ContainerListener;
 	
-	private var toolBarFocusListener : java.awt.event.FocusListener;
+	@:protected private var toolBarFocusListener : java.awt.event.FocusListener;
 	
-	private var constraintBeforeFloating : String;
-	
-	/**
-	* As of Java 2 platform v1.3 this previously undocumented field is no
-	* longer used.
-	* Key bindings are now defined by the LookAndFeel, please refer to
-	* the key bindings specification for further details.
-	*
-	* @deprecated As of Java 2 platform v1.3.
-	*/
-	private var upKey : javax.swing.KeyStroke;
+	@:protected private var constraintBeforeFloating : String;
 	
 	/**
 	* As of Java 2 platform v1.3 this previously undocumented field is no
@@ -75,7 +65,7 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	*
 	* @deprecated As of Java 2 platform v1.3.
 	*/
-	private var downKey : javax.swing.KeyStroke;
+	@:protected private var upKey : javax.swing.KeyStroke;
 	
 	/**
 	* As of Java 2 platform v1.3 this previously undocumented field is no
@@ -85,7 +75,7 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	*
 	* @deprecated As of Java 2 platform v1.3.
 	*/
-	private var leftKey : javax.swing.KeyStroke;
+	@:protected private var downKey : javax.swing.KeyStroke;
 	
 	/**
 	* As of Java 2 platform v1.3 this previously undocumented field is no
@@ -95,31 +85,41 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	*
 	* @deprecated As of Java 2 platform v1.3.
 	*/
-	private var rightKey : javax.swing.KeyStroke;
+	@:protected private var leftKey : javax.swing.KeyStroke;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	/**
+	* As of Java 2 platform v1.3 this previously undocumented field is no
+	* longer used.
+	* Key bindings are now defined by the LookAndFeel, please refer to
+	* the key bindings specification for further details.
+	*
+	* @deprecated As of Java 2 platform v1.3.
+	*/
+	@:protected private var rightKey : javax.swing.KeyStroke;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installDefaults() : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected private function installDefaults() : Void;
 	
-	@:overload private function installComponents() : Void;
+	@:overload @:protected private function uninstallDefaults() : Void;
 	
-	@:overload private function uninstallComponents() : Void;
+	@:overload @:protected private function installComponents() : Void;
 	
-	@:overload private function installListeners() : Void;
+	@:overload @:protected private function uninstallComponents() : Void;
 	
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected private function installListeners() : Void;
 	
-	@:overload private function installKeyboardActions() : Void;
+	@:overload @:protected private function uninstallListeners() : Void;
 	
-	@:overload private function uninstallKeyboardActions() : Void;
+	@:overload @:protected private function installKeyboardActions() : Void;
 	
-	@:overload private function navigateFocusedComp(direction : Int) : Void;
+	@:overload @:protected private function uninstallKeyboardActions() : Void;
+	
+	@:overload @:protected private function navigateFocusedComp(direction : Int) : Void;
 	
 	/**
 	* Creates a rollover border for toolbar components. The
@@ -130,7 +130,7 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function createRolloverBorder() : javax.swing.border.Border;
+	@:require(java4) @:overload @:protected private function createRolloverBorder() : javax.swing.border.Border;
 	
 	/**
 	* Creates the non rollover border for toolbar components. This
@@ -141,13 +141,13 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function createNonRolloverBorder() : javax.swing.border.Border;
+	@:require(java4) @:overload @:protected private function createNonRolloverBorder() : javax.swing.border.Border;
 	
 	/**
 	* No longer used, use BasicToolBarUI.createFloatingWindow(JToolBar)
 	* @see #createFloatingWindow
 	*/
-	@:overload private function createFloatingFrame(toolbar : javax.swing.JToolBar) : javax.swing.JFrame;
+	@:overload @:protected private function createFloatingFrame(toolbar : javax.swing.JToolBar) : javax.swing.JFrame;
 	
 	/**
 	* Creates a window which contains the toolbar after it has been
@@ -155,9 +155,9 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	* @return a <code>RootPaneContainer</code> object, containing the toolbar.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function createFloatingWindow(toolbar : javax.swing.JToolBar) : javax.swing.RootPaneContainer;
+	@:require(java4) @:overload @:protected private function createFloatingWindow(toolbar : javax.swing.JToolBar) : javax.swing.RootPaneContainer;
 	
-	@:overload private function createDragWindow(toolbar : javax.swing.JToolBar) : javax.swing.plaf.basic.BasicToolBarUI.BasicToolBarUI_DragWindow;
+	@:overload @:protected private function createDragWindow(toolbar : javax.swing.JToolBar) : javax.swing.plaf.basic.BasicToolBarUI.BasicToolBarUI_DragWindow;
 	
 	/**
 	* Returns a flag to determine whether rollover button borders
@@ -167,7 +167,7 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	* @see #setRolloverBorders
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isRolloverBorders() : Bool;
+	@:require(java4) @:overload @:public public function isRolloverBorders() : Bool;
 	
 	/**
 	* Sets the flag for enabling rollover borders on the toolbar and it will
@@ -178,7 +178,7 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	* @see #isRolloverBorders
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setRolloverBorders(rollover : Bool) : Void;
+	@:require(java4) @:overload @:public public function setRolloverBorders(rollover : Bool) : Void;
 	
 	/**
 	* Installs rollover borders on all the child components of the JComponent.
@@ -190,7 +190,7 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	* @see #setBorderToRollover
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function installRolloverBorders(c : javax.swing.JComponent) : Void;
+	@:require(java4) @:overload @:protected private function installRolloverBorders(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Installs non-rollover borders on all the child components of the JComponent.
@@ -204,7 +204,7 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	* @see #setBorderToNonRollover
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function installNonRolloverBorders(c : javax.swing.JComponent) : Void;
+	@:require(java4) @:overload @:protected private function installNonRolloverBorders(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Installs normal borders on all the child components of the JComponent.
@@ -218,7 +218,7 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	* @see #setBorderToNonRollover
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function installNormalBorders(c : javax.swing.JComponent) : Void;
+	@:require(java4) @:overload @:protected private function installNormalBorders(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Sets the border of the component to have a rollover border which
@@ -228,7 +228,7 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	* @see #createRolloverBorder
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function setBorderToRollover(c : java.awt.Component) : Void;
+	@:require(java4) @:overload @:protected private function setBorderToRollover(c : java.awt.Component) : Void;
 	
 	/**
 	* Returns a rollover border for the button.
@@ -238,7 +238,7 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	* @see #setBorderToRollover
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function getRolloverBorder(b : javax.swing.AbstractButton) : javax.swing.border.Border;
+	@:require(java6) @:overload @:protected private function getRolloverBorder(b : javax.swing.AbstractButton) : javax.swing.border.Border;
 	
 	/**
 	* Sets the border of the component to have a non-rollover border which
@@ -248,7 +248,7 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	* @see #createNonRolloverBorder
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function setBorderToNonRollover(c : java.awt.Component) : Void;
+	@:require(java4) @:overload @:protected private function setBorderToNonRollover(c : java.awt.Component) : Void;
 	
 	/**
 	* Returns a non-rollover border for the button.
@@ -258,7 +258,7 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	* @see #setBorderToNonRollover
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function getNonRolloverBorder(b : javax.swing.AbstractButton) : javax.swing.border.Border;
+	@:require(java6) @:overload @:protected private function getNonRolloverBorder(b : javax.swing.AbstractButton) : javax.swing.border.Border;
 	
 	/**
 	* Sets the border of the component to have a normal border.
@@ -269,51 +269,51 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	* @see #createNonRolloverBorder
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function setBorderToNormal(c : java.awt.Component) : Void;
+	@:require(java4) @:overload @:protected private function setBorderToNormal(c : java.awt.Component) : Void;
 	
-	@:overload public function setFloatingLocation(x : Int, y : Int) : Void;
+	@:overload @:public public function setFloatingLocation(x : Int, y : Int) : Void;
 	
-	@:overload public function isFloating() : Bool;
+	@:overload @:public public function isFloating() : Bool;
 	
-	@:overload public function setFloating(b : Bool, p : java.awt.Point) : Void;
+	@:overload @:public public function setFloating(b : Bool, p : java.awt.Point) : Void;
 	
-	@:overload public function setOrientation(orientation : Int) : Void;
+	@:overload @:public public function setOrientation(orientation : Int) : Void;
 	
 	/**
 	* Gets the color displayed when over a docking area
 	*/
-	@:overload public function getDockingColor() : java.awt.Color;
+	@:overload @:public public function getDockingColor() : java.awt.Color;
 	
 	/**
 	* Sets the color displayed when over a docking area
 	*/
-	@:overload public function setDockingColor(c : java.awt.Color) : Void;
+	@:overload @:public public function setDockingColor(c : java.awt.Color) : Void;
 	
 	/**
 	* Gets the color displayed when over a floating area
 	*/
-	@:overload public function getFloatingColor() : java.awt.Color;
+	@:overload @:public public function getFloatingColor() : java.awt.Color;
 	
 	/**
 	* Sets the color displayed when over a floating area
 	*/
-	@:overload public function setFloatingColor(c : java.awt.Color) : Void;
+	@:overload @:public public function setFloatingColor(c : java.awt.Color) : Void;
 	
-	@:overload public function canDock(c : java.awt.Component, p : java.awt.Point) : Bool;
+	@:overload @:public public function canDock(c : java.awt.Component, p : java.awt.Point) : Bool;
 	
-	@:overload private function dragTo(position : java.awt.Point, origin : java.awt.Point) : Void;
+	@:overload @:protected private function dragTo(position : java.awt.Point, origin : java.awt.Point) : Void;
 	
-	@:overload private function floatAt(position : java.awt.Point, origin : java.awt.Point) : Void;
+	@:overload @:protected private function floatAt(position : java.awt.Point, origin : java.awt.Point) : Void;
 	
-	@:overload private function createToolBarContListener() : java.awt.event.ContainerListener;
+	@:overload @:protected private function createToolBarContListener() : java.awt.event.ContainerListener;
 	
-	@:overload private function createToolBarFocusListener() : java.awt.event.FocusListener;
+	@:overload @:protected private function createToolBarFocusListener() : java.awt.event.FocusListener;
 	
-	@:overload private function createPropertyListener() : java.beans.PropertyChangeListener;
+	@:overload @:protected private function createPropertyListener() : java.beans.PropertyChangeListener;
 	
-	@:overload private function createDockingListener() : javax.swing.event.MouseInputListener;
+	@:overload @:protected private function createDockingListener() : javax.swing.event.MouseInputListener;
 	
-	@:overload private function createFrameListener() : java.awt.event.WindowListener;
+	@:overload @:protected private function createFrameListener() : java.awt.event.WindowListener;
 	
 	/**
 	* Paints the contents of the window used for dragging.
@@ -322,71 +322,71 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	* @throws NullPointerException is <code>g</code> is null
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function paintDragWindow(g : java.awt.Graphics) : Void;
+	@:require(java5) @:overload @:protected private function paintDragWindow(g : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicToolBarUI$Actions') @:internal extern class BasicToolBarUI_Actions extends sun.swing.UIAction
 {
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicToolBarUI$Handler') @:internal extern class BasicToolBarUI_Handler implements java.awt.event.ContainerListener implements java.awt.event.FocusListener implements javax.swing.event.MouseInputListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function componentAdded(evt : java.awt.event.ContainerEvent) : Void;
+	@:overload @:public public function componentAdded(evt : java.awt.event.ContainerEvent) : Void;
 	
-	@:overload public function componentRemoved(evt : java.awt.event.ContainerEvent) : Void;
+	@:overload @:public public function componentRemoved(evt : java.awt.event.ContainerEvent) : Void;
 	
-	@:overload public function focusGained(evt : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(evt : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusLost(evt : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(evt : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function mousePressed(evt : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(evt : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(evt : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(evt : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseDragged(evt : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(evt : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseClicked(evt : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(evt : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(evt : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(evt : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(evt : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(evt : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseMoved(evt : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseMoved(evt : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicToolBarUI$FrameListener') extern class BasicToolBarUI_FrameListener extends java.awt.event.WindowAdapter
 {
-	@:overload override public function windowClosing(w : java.awt.event.WindowEvent) : Void;
+	@:overload @:public override public function windowClosing(w : java.awt.event.WindowEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicToolBarUI$ToolBarContListener') extern class BasicToolBarUI_ToolBarContListener implements java.awt.event.ContainerListener
 {
-	@:overload public function componentAdded(e : java.awt.event.ContainerEvent) : Void;
+	@:overload @:public public function componentAdded(e : java.awt.event.ContainerEvent) : Void;
 	
-	@:overload public function componentRemoved(e : java.awt.event.ContainerEvent) : Void;
+	@:overload @:public public function componentRemoved(e : java.awt.event.ContainerEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicToolBarUI$ToolBarFocusListener') extern class BasicToolBarUI_ToolBarFocusListener implements java.awt.event.FocusListener
 {
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicToolBarUI$PropertyListener') extern class BasicToolBarUI_PropertyListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -396,27 +396,27 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 */
 @:native('javax$swing$plaf$basic$BasicToolBarUI$DockingListener') extern class BasicToolBarUI_DockingListener implements javax.swing.event.MouseInputListener
 {
-	private var toolBar : javax.swing.JToolBar;
+	@:protected private var toolBar : javax.swing.JToolBar;
 	
-	private var isDragging : Bool;
+	@:protected private var isDragging : Bool;
 	
-	private var origin : java.awt.Point;
+	@:protected private var origin : java.awt.Point;
 	
-	@:overload public function new(t : javax.swing.JToolBar) : Void;
+	@:overload @:public public function new(t : javax.swing.JToolBar) : Void;
 	
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -430,21 +430,21 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	* @return the orientation of the toolbar window
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getOrientation() : Int;
+	@:require(java6) @:overload @:public public function getOrientation() : Int;
 	
-	@:overload public function setOrientation(o : Int) : Void;
+	@:overload @:public public function setOrientation(o : Int) : Void;
 	
-	@:overload public function getOffset() : java.awt.Point;
+	@:overload @:public public function getOffset() : java.awt.Point;
 	
-	@:overload public function setOffset(p : java.awt.Point) : Void;
+	@:overload @:public public function setOffset(p : java.awt.Point) : Void;
 	
-	@:overload public function setBorderColor(c : java.awt.Color) : Void;
+	@:overload @:public public function setBorderColor(c : java.awt.Color) : Void;
 	
-	@:overload public function getBorderColor() : java.awt.Color;
+	@:overload @:public public function getBorderColor() : java.awt.Color;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function getInsets() : java.awt.Insets;
+	@:overload @:public override public function getInsets() : java.awt.Insets;
 	
 	
 }

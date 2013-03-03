@@ -46,14 +46,14 @@ package com.sun.xml.internal.rngom.digested;
 */
 extern class DXmlTokenPattern extends com.sun.xml.internal.rngom.digested.DUnaryPattern
 {
-	@:overload public function new(name : com.sun.xml.internal.rngom.nc.NameClass) : Void;
+	@:overload @:public public function new(name : com.sun.xml.internal.rngom.nc.NameClass) : Void;
 	
 	/**
 	* Gets the name class of this element/attribute.
 	*/
-	@:overload public function getName() : com.sun.xml.internal.rngom.nc.NameClass;
+	@:overload @:public public function getName() : com.sun.xml.internal.rngom.nc.NameClass;
 	
-	@:overload @:final override public function isNullable() : Bool;
+	@:overload @:public @:final override public function isNullable() : Bool;
 	
 	
 }

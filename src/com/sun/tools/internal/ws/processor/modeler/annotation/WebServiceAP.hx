@@ -32,83 +32,83 @@ extern class WebServiceAP implements com.sun.mirror.apt.AnnotationProcessor impl
 	*
 	* @author WS Development Team
 	*/
-	private var apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment;
+	@:protected private var apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment;
 	
-	private var context : com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext;
+	@:protected private var context : com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext;
 	
-	private var messager : com.sun.mirror.apt.Messager;
+	@:protected private var messager : com.sun.mirror.apt.Messager;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
-	@:overload private function parseArguments(args : java.NativeArray<String>) : Bool;
+	@:overload @:protected private function parseArguments(args : java.NativeArray<String>) : Bool;
 	
-	@:overload public function new(options : com.sun.tools.internal.ws.wscompile.WsgenOptions, context : com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver, out : java.io.PrintStream) : Void;
+	@:overload @:public public function new(options : com.sun.tools.internal.ws.wscompile.WsgenOptions, context : com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver, out : java.io.PrintStream) : Void;
 	
-	@:overload public function init(apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : Void;
+	@:overload @:public public function init(apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : Void;
 	
-	@:overload public function getAPEnv() : com.sun.mirror.apt.AnnotationProcessorEnvironment;
+	@:overload @:public public function getAPEnv() : com.sun.mirror.apt.AnnotationProcessorEnvironment;
 	
-	@:overload public function getOptions() : com.sun.tools.internal.ws.wscompile.WsgenOptions;
+	@:overload @:public public function getOptions() : com.sun.tools.internal.ws.wscompile.WsgenOptions;
 	
-	@:overload public function getSourceDir() : java.io.File;
+	@:overload @:public public function getSourceDir() : java.io.File;
 	
-	@:overload public function onError(message : String) : Void;
+	@:overload @:public public function onError(message : String) : Void;
 	
-	@:overload public function onError(pos : com.sun.mirror.util.SourcePosition, msg : com.sun.xml.internal.ws.util.localization.Localizable) : Void;
+	@:overload @:public public function onError(pos : com.sun.mirror.util.SourcePosition, msg : com.sun.xml.internal.ws.util.localization.Localizable) : Void;
 	
-	@:overload public function onWarning(message : String) : Void;
+	@:overload @:public public function onWarning(message : String) : Void;
 	
-	@:overload public function onInfo(message : String) : Void;
+	@:overload @:public public function onInfo(message : String) : Void;
 	
-	@:overload private function report(msg : String) : Void;
+	@:overload @:protected private function report(msg : String) : Void;
 	
-	@:overload public function process() : Void;
+	@:overload @:public public function process() : Void;
 	
-	@:overload public function checkAndSetProcessed(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
+	@:overload @:public public function checkAndSetProcessed(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
 	
-	@:overload public function clearProcessed() : Void;
+	@:overload @:public public function clearProcessed() : Void;
 	
-	@:overload public function setService(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
+	@:overload @:public public function setService(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
 	
-	@:overload public function setPort(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
+	@:overload @:public public function setPort(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
 	
-	@:overload public function addOperation(operation : com.sun.tools.internal.ws.processor.model.Operation) : Void;
+	@:overload @:public public function addOperation(operation : com.sun.tools.internal.ws.processor.model.Operation) : Void;
 	
-	@:overload public function setWrapperGenerated(wrapperGenerated : Bool) : Void;
+	@:overload @:public public function setWrapperGenerated(wrapperGenerated : Bool) : Void;
 	
-	@:overload public function getTypeDeclaration(typeName : String) : com.sun.mirror.declaration.TypeDeclaration;
+	@:overload @:public public function getTypeDeclaration(typeName : String) : com.sun.mirror.declaration.TypeDeclaration;
 	
-	@:overload public function getSourceVersion() : String;
+	@:overload @:public public function getSourceVersion() : String;
 	
-	@:overload private function createWrapperGenerator() : com.sun.tools.internal.ws.processor.modeler.annotation.WebServiceVisitor;
+	@:overload @:protected private function createWrapperGenerator() : com.sun.tools.internal.ws.processor.modeler.annotation.WebServiceVisitor;
 	
-	@:overload private function shouldProcessWebService(webService : javax.jws.WebService) : Bool;
+	@:overload @:protected private function shouldProcessWebService(webService : javax.jws.WebService) : Bool;
 	
-	@:overload public function isException(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
+	@:overload @:public public function isException(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
 	
-	@:overload public function isRemoteException(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
+	@:overload @:public public function isRemoteException(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
 	
-	@:overload public function isServiceException(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
+	@:overload @:public public function isServiceException(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
 	
-	@:overload public function isRemote(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
+	@:overload @:public public function isRemote(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
 	
-	@:overload public static function isSubtype(env : com.sun.mirror.apt.AnnotationProcessorEnvironment, d1 : com.sun.mirror.declaration.TypeDeclaration, d2 : com.sun.mirror.declaration.TypeDeclaration) : Bool;
+	@:overload @:public @:static public static function isSubtype(env : com.sun.mirror.apt.AnnotationProcessorEnvironment, d1 : com.sun.mirror.declaration.TypeDeclaration, d2 : com.sun.mirror.declaration.TypeDeclaration) : Bool;
 	
-	@:overload public static function isSubtype(d1 : com.sun.mirror.declaration.TypeDeclaration, d2 : com.sun.mirror.declaration.TypeDeclaration) : Bool;
+	@:overload @:public @:static public static function isSubtype(d1 : com.sun.mirror.declaration.TypeDeclaration, d2 : com.sun.mirror.declaration.TypeDeclaration) : Bool;
 	
-	@:overload public static function getMethodSig(method : com.sun.mirror.declaration.MethodDeclaration) : String;
+	@:overload @:public @:static public static function getMethodSig(method : com.sun.mirror.declaration.MethodDeclaration) : String;
 	
-	@:overload public function getOperationName(messageName : String) : String;
+	@:overload @:public public function getOperationName(messageName : String) : String;
 	
-	@:overload public function getResponseName(operationName : String) : String;
+	@:overload @:public public function getResponseName(operationName : String) : String;
 	
-	@:overload public function getHolderValueType(type : com.sun.mirror.type.TypeMirror) : com.sun.mirror.type.TypeMirror;
+	@:overload @:public public function getHolderValueType(type : com.sun.mirror.type.TypeMirror) : com.sun.mirror.type.TypeMirror;
 	
-	@:overload public function canOverWriteClass(className : String) : Bool;
+	@:overload @:public public function canOverWriteClass(className : String) : Bool;
 	
-	@:overload public function log(msg : String) : Void;
+	@:overload @:public public function log(msg : String) : Void;
 	
-	@:overload public function getXMLName(javaName : String) : String;
+	@:overload @:public public function getXMLName(javaName : String) : String;
 	
 	
 }

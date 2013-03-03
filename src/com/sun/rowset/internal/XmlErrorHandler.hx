@@ -31,13 +31,13 @@ package com.sun.rowset.internal;
 */
 extern class XmlErrorHandler extends org.xml.sax.helpers.DefaultHandler
 {
-	public var errorCounter : Int;
+	@:public public var errorCounter : Int;
 	
-	@:overload override public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function error(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function fatalError(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function fatalError(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

@@ -30,9 +30,9 @@ package com.sun.tools.hat.internal.server;
 */
 @:internal extern class AllClassesQuery extends com.sun.tools.hat.internal.server.QueryHandler
 {
-	@:overload public function new(excludePlatform : Bool, oqlSupported : Bool) : Void;
+	@:overload @:public public function new(excludePlatform : Bool, oqlSupported : Bool) : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

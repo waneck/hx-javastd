@@ -28,7 +28,7 @@ extern class CertPathBuilderSpi
 	/**
 	* The default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Attempts to build a certification path using the specified
@@ -41,7 +41,7 @@ extern class CertPathBuilderSpi
 	* @throws InvalidAlgorithmParameterException if the specified parameters
 	* are inappropriate for this <code>CertPathBuilder</code>
 	*/
-	@:overload @:abstract public function engineBuild(params : java.security.cert.CertPathParameters) : java.security.cert.CertPathBuilderResult;
+	@:overload @:public @:abstract public function engineBuild(params : java.security.cert.CertPathParameters) : java.security.cert.CertPathBuilderResult;
 	
 	
 }

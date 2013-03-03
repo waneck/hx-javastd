@@ -149,7 +149,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* Constructs an HTMLEditorKit, creates a StyleContext,
 	* and loads the style sheet.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Get the MIME type of the data that this
@@ -158,7 +158,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	*
 	* @return the type
 	*/
-	@:overload override public function getContentType() : String;
+	@:overload @:public override public function getContentType() : String;
 	
 	/**
 	* Fetch a factory that is suitable for producing
@@ -167,7 +167,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	*
 	* @return the factory
 	*/
-	@:overload override public function getViewFactory() : javax.swing.text.ViewFactory;
+	@:overload @:public override public function getViewFactory() : javax.swing.text.ViewFactory;
 	
 	/**
 	* Create an uninitialized text storage model
@@ -175,7 +175,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	*
 	* @return the model
 	*/
-	@:overload override public function createDefaultDocument() : javax.swing.text.Document;
+	@:overload @:public override public function createDefaultDocument() : javax.swing.text.Document;
 	
 	/**
 	* Inserts content from the given stream. If <code>doc</code> is
@@ -195,7 +195,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* @exception RuntimeException (will eventually be a BadLocationException)
 	*            if pos is invalid
 	*/
-	@:overload override public function read(_in : java.io.Reader, doc : javax.swing.text.Document, pos : Int) : Void;
+	@:overload @:public override public function read(_in : java.io.Reader, doc : javax.swing.text.Document, pos : Int) : Void;
 	
 	/**
 	* Inserts HTML into an existing document.
@@ -211,7 +211,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* @exception RuntimeException (will eventually be a BadLocationException)
 	*            if pos is invalid
 	*/
-	@:overload public function insertHTML(doc : javax.swing.text.html.HTMLDocument, offset : Int, html : String, popDepth : Int, pushDepth : Int, insertTag : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public public function insertHTML(doc : javax.swing.text.html.HTMLDocument, offset : Int, html : String, popDepth : Int, pushDepth : Int, insertTag : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	/**
 	* Write content from a document to the given stream
@@ -226,7 +226,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* @exception BadLocationException if pos represents an invalid
 	*   location within the document
 	*/
-	@:overload override public function write(out : java.io.Writer, doc : javax.swing.text.Document, pos : Int, len : Int) : Void;
+	@:overload @:public override public function write(out : java.io.Writer, doc : javax.swing.text.Document, pos : Int, len : Int) : Void;
 	
 	/**
 	* Called when the kit is being installed into the
@@ -234,7 +234,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	*
 	* @param c the JEditorPane
 	*/
-	@:overload override public function install(c : javax.swing.JEditorPane) : Void;
+	@:overload @:public override public function install(c : javax.swing.JEditorPane) : Void;
 	
 	/**
 	* Called when the kit is being removed from the
@@ -243,13 +243,13 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	*
 	* @param c the JEditorPane
 	*/
-	@:overload override public function deinstall(c : javax.swing.JEditorPane) : Void;
+	@:overload @:public override public function deinstall(c : javax.swing.JEditorPane) : Void;
 	
 	/**
 	* Default Cascading Style Sheet file that sets
 	* up the tag views.
 	*/
-	public static var DEFAULT_CSS(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_CSS(default, null) : String;
 	
 	/**
 	* Set the set of styles to be used to render the various
@@ -261,7 +261,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* This should be reimplemented to provide a finer granularity
 	* if desired.
 	*/
-	@:overload public function setStyleSheet(s : javax.swing.text.html.StyleSheet) : Void;
+	@:overload @:public public function setStyleSheet(s : javax.swing.text.html.StyleSheet) : Void;
 	
 	/**
 	* Get the set of styles currently being used to render the
@@ -269,7 +269,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* DEFAULT_CSS gets loaded, and is shared by all HTMLEditorKit
 	* instances.
 	*/
-	@:overload public function getStyleSheet() : javax.swing.text.html.StyleSheet;
+	@:overload @:public public function getStyleSheet() : javax.swing.text.html.StyleSheet;
 	
 	/**
 	* Fetches the command list for the editor.  This is
@@ -279,7 +279,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	*
 	* @return the command list
 	*/
-	@:overload override public function getActions() : java.NativeArray<javax.swing.Action>;
+	@:overload @:public override public function getActions() : java.NativeArray<javax.swing.Action>;
 	
 	/**
 	* Copies the key/values in <code>element</code>s AttributeSet into
@@ -290,7 +290,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* This is called anytime the caret moves over a different location.
 	*
 	*/
-	@:overload override private function createInputAttributes(element : javax.swing.text.Element, set : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:protected override private function createInputAttributes(element : javax.swing.text.Element, set : javax.swing.text.MutableAttributeSet) : Void;
 	
 	/**
 	* Gets the input attributes used for the styled
@@ -298,34 +298,34 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	*
 	* @return the attribute set
 	*/
-	@:overload override public function getInputAttributes() : javax.swing.text.MutableAttributeSet;
+	@:overload @:public override public function getInputAttributes() : javax.swing.text.MutableAttributeSet;
 	
 	/**
 	* Sets the default cursor.
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setDefaultCursor(cursor : java.awt.Cursor) : Void;
+	@:require(java3) @:overload @:public public function setDefaultCursor(cursor : java.awt.Cursor) : Void;
 	
 	/**
 	* Returns the default cursor.
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getDefaultCursor() : java.awt.Cursor;
+	@:require(java3) @:overload @:public public function getDefaultCursor() : java.awt.Cursor;
 	
 	/**
 	* Sets the cursor to use over links.
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setLinkCursor(cursor : java.awt.Cursor) : Void;
+	@:require(java3) @:overload @:public public function setLinkCursor(cursor : java.awt.Cursor) : Void;
 	
 	/**
 	* Returns the cursor to use over hyper links.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getLinkCursor() : java.awt.Cursor;
+	@:require(java3) @:overload @:public public function getLinkCursor() : java.awt.Cursor;
 	
 	/**
 	* Indicates whether an html form submission is processed automatically
@@ -337,7 +337,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* @see #setAutoFormSubmission
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isAutoFormSubmission() : Bool;
+	@:require(java5) @:overload @:public public function isAutoFormSubmission() : Bool;
 	
 	/**
 	* Specifies if an html form submission is processed
@@ -348,14 +348,14 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* @see FormSubmitEvent
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setAutoFormSubmission(isAuto : Bool) : Void;
+	@:require(java5) @:overload @:public public function setAutoFormSubmission(isAuto : Bool) : Void;
 	
 	/**
 	* Creates a copy of the editor kit.
 	*
 	* @return the copy
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Fetch the parser to use for reading HTML streams.
@@ -365,7 +365,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* it's not used.  The default parser is the HotJava parser
 	* using an HTML 3.2 DTD.
 	*/
-	@:overload private function getParser() : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_Parser;
+	@:overload @:protected private function getParser() : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_Parser;
 	
 	/**
 	* returns the AccessibleContext associated with this editor kit
@@ -373,61 +373,61 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* @return the AccessibleContext associated with this editor kit
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java4) @:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	/** The bold action identifier
 */
-	public static var BOLD_ACTION(default, null) : String;
+	@:public @:static @:final public static var BOLD_ACTION(default, null) : String;
 	
 	/** The italic action identifier
 */
-	public static var ITALIC_ACTION(default, null) : String;
+	@:public @:static @:final public static var ITALIC_ACTION(default, null) : String;
 	
 	/** The paragraph left indent action identifier
 */
-	public static var PARA_INDENT_LEFT(default, null) : String;
+	@:public @:static @:final public static var PARA_INDENT_LEFT(default, null) : String;
 	
 	/** The paragraph right indent action identifier
 */
-	public static var PARA_INDENT_RIGHT(default, null) : String;
+	@:public @:static @:final public static var PARA_INDENT_RIGHT(default, null) : String;
 	
 	/** The  font size increase to next value action identifier
 */
-	public static var FONT_CHANGE_BIGGER(default, null) : String;
+	@:public @:static @:final public static var FONT_CHANGE_BIGGER(default, null) : String;
 	
 	/** The font size decrease to next value action identifier
 */
-	public static var FONT_CHANGE_SMALLER(default, null) : String;
+	@:public @:static @:final public static var FONT_CHANGE_SMALLER(default, null) : String;
 	
 	/** The Color choice action identifier
 	The color is passed as an argument
 */
-	public static var COLOR_ACTION(default, null) : String;
+	@:public @:static @:final public static var COLOR_ACTION(default, null) : String;
 	
 	/** The logical style choice action identifier
 	The logical style is passed in as an argument
 */
-	public static var LOGICAL_STYLE_ACTION(default, null) : String;
+	@:public @:static @:final public static var LOGICAL_STYLE_ACTION(default, null) : String;
 	
 	/**
 	* Align images at the top.
 	*/
-	public static var IMG_ALIGN_TOP(default, null) : String;
+	@:public @:static @:final public static var IMG_ALIGN_TOP(default, null) : String;
 	
 	/**
 	* Align images in the middle.
 	*/
-	public static var IMG_ALIGN_MIDDLE(default, null) : String;
+	@:public @:static @:final public static var IMG_ALIGN_MIDDLE(default, null) : String;
 	
 	/**
 	* Align images at the bottom.
 	*/
-	public static var IMG_ALIGN_BOTTOM(default, null) : String;
+	@:public @:static @:final public static var IMG_ALIGN_BOTTOM(default, null) : String;
 	
 	/**
 	* Align images at the border.
 	*/
-	public static var IMG_BORDER(default, null) : String;
+	@:public @:static @:final public static var IMG_BORDER(default, null) : String;
 	
 	
 }
@@ -446,11 +446,11 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* @param e the mouse event
 	* @see MouseListener#mouseClicked
 	*/
-	@:overload override public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Calls linkActivated on the associated JEditorPane
@@ -461,7 +461,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* @param pos the position
 	* @param editor the editor pane
 	*/
-	@:overload private function activateLink(pos : Int, editor : javax.swing.JEditorPane) : Void;
+	@:overload @:protected private function activateLink(pos : Int, editor : javax.swing.JEditorPane) : Void;
 	
 	
 }
@@ -477,7 +477,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* with the results of the parse.  This method should
 	* be implemented to be thread-safe.
 	*/
-	@:overload @:abstract public function parse(r : java.io.Reader, cb : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_ParserCallback, ignoreCharSet : Bool) : Void;
+	@:overload @:public @:abstract public function parse(r : java.io.Reader, cb : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_ParserCallback, ignoreCharSet : Bool) : Void;
 	
 	
 }
@@ -502,21 +502,21 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	*
 	* @since 1.3
 	*/
-	@:require(java3) public static var IMPLIED(default, null) : Dynamic;
+	@:require(java3) @:public @:static @:final public static var IMPLIED(default, null) : Dynamic;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
-	@:overload public function handleText(data : java.NativeArray<java.StdTypes.Char16>, pos : Int) : Void;
+	@:overload @:public public function handleText(data : java.NativeArray<java.StdTypes.Char16>, pos : Int) : Void;
 	
-	@:overload public function handleComment(data : java.NativeArray<java.StdTypes.Char16>, pos : Int) : Void;
+	@:overload @:public public function handleComment(data : java.NativeArray<java.StdTypes.Char16>, pos : Int) : Void;
 	
-	@:overload public function handleStartTag(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet, pos : Int) : Void;
+	@:overload @:public public function handleStartTag(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet, pos : Int) : Void;
 	
-	@:overload public function handleEndTag(t : javax.swing.text.html.HTML.HTML_Tag, pos : Int) : Void;
+	@:overload @:public public function handleEndTag(t : javax.swing.text.html.HTML.HTML_Tag, pos : Int) : Void;
 	
-	@:overload public function handleSimpleTag(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet, pos : Int) : Void;
+	@:overload @:public public function handleSimpleTag(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet, pos : Int) : Void;
 	
-	@:overload public function handleError(errorMsg : String, pos : Int) : Void;
+	@:overload @:public public function handleError(errorMsg : String, pos : Int) : Void;
 	
 	/**
 	* This is invoked after the stream has been parsed, but before
@@ -526,7 +526,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function handleEndOfLineString(eol : String) : Void;
+	@:require(java3) @:overload @:public public function handleEndOfLineString(eol : String) : Void;
 	
 	
 }
@@ -619,27 +619,27 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* @param elem the element
 	* @return the view
 	*/
-	@:overload public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
+	@:overload @:public public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
 	
 	
 }
 @:native('javax$swing$text$html$HTMLEditorKit$HTMLFactory$BodyBlockView') @:internal extern class HTMLEditorKit_HTMLFactory_BodyBlockView extends javax.swing.text.html.BlockView implements java.awt.event.ComponentListener
 {
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
-	@:overload override private function calculateMajorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMajorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
-	@:overload override private function layoutMinorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:protected override private function layoutMinorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
-	@:overload override public function setParent(parent : javax.swing.text.View) : Void;
+	@:overload @:public override public function setParent(parent : javax.swing.text.View) : Void;
 	
-	@:overload public function componentResized(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentResized(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentShown(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentShown(e : java.awt.event.ComponentEvent) : Void;
 	
 	
 }
@@ -652,23 +652,23 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 */
 @:native('javax$swing$text$html$HTMLEditorKit$HTMLTextAction') extern class HTMLEditorKit_HTMLTextAction extends javax.swing.text.StyledEditorKit.StyledEditorKit_StyledTextAction
 {
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* @return HTMLDocument of <code>e</code>.
 	*/
-	@:overload private function getHTMLDocument(e : javax.swing.JEditorPane) : javax.swing.text.html.HTMLDocument;
+	@:overload @:protected private function getHTMLDocument(e : javax.swing.JEditorPane) : javax.swing.text.html.HTMLDocument;
 	
 	/**
 	* @return HTMLEditorKit for <code>e</code>.
 	*/
-	@:overload private function getHTMLEditorKit(e : javax.swing.JEditorPane) : javax.swing.text.html.HTMLEditorKit;
+	@:overload @:protected private function getHTMLEditorKit(e : javax.swing.JEditorPane) : javax.swing.text.html.HTMLEditorKit;
 	
 	/**
 	* Returns an array of the Elements that contain <code>offset</code>.
 	* The first elements corresponds to the root.
 	*/
-	@:overload private function getElementsAt(doc : javax.swing.text.html.HTMLDocument, offset : Int) : java.NativeArray<javax.swing.text.Element>;
+	@:overload @:protected private function getElementsAt(doc : javax.swing.text.html.HTMLDocument, offset : Int) : java.NativeArray<javax.swing.text.Element>;
 	
 	/**
 	* Returns number of elements, starting at the deepest leaf, needed
@@ -677,13 +677,13 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* or 0 if the parent of the leaf at <code>offset</code> represents
 	* <code>tag</code>.
 	*/
-	@:overload private function elementCountToTag(doc : javax.swing.text.html.HTMLDocument, offset : Int, tag : javax.swing.text.html.HTML.HTML_Tag) : Int;
+	@:overload @:protected private function elementCountToTag(doc : javax.swing.text.html.HTMLDocument, offset : Int, tag : javax.swing.text.html.HTML.HTML_Tag) : Int;
 	
 	/**
 	* Returns the deepest element at <code>offset</code> matching
 	* <code>tag</code>.
 	*/
-	@:overload private function findElementMatchingTag(doc : javax.swing.text.html.HTMLDocument, offset : Int, tag : javax.swing.text.html.HTML.HTML_Tag) : javax.swing.text.Element;
+	@:overload @:protected private function findElementMatchingTag(doc : javax.swing.text.html.HTMLDocument, offset : Int, tag : javax.swing.text.html.HTML.HTML_Tag) : javax.swing.text.Element;
 	
 	
 }
@@ -706,15 +706,15 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 */
 @:native('javax$swing$text$html$HTMLEditorKit$InsertHTMLTextAction') extern class HTMLEditorKit_InsertHTMLTextAction extends javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_HTMLTextAction
 {
-	@:overload public function new(name : String, html : String, parentTag : javax.swing.text.html.HTML.HTML_Tag, addTag : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public public function new(name : String, html : String, parentTag : javax.swing.text.html.HTML.HTML_Tag, addTag : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
-	@:overload public function new(name : String, html : String, parentTag : javax.swing.text.html.HTML.HTML_Tag, addTag : javax.swing.text.html.HTML.HTML_Tag, alternateParentTag : javax.swing.text.html.HTML.HTML_Tag, alternateAddTag : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public public function new(name : String, html : String, parentTag : javax.swing.text.html.HTML.HTML_Tag, addTag : javax.swing.text.html.HTML.HTML_Tag, alternateParentTag : javax.swing.text.html.HTML.HTML_Tag, alternateAddTag : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	/**
 	* A cover for HTMLEditorKit.insertHTML. If an exception it
 	* thrown it is wrapped in a RuntimeException and thrown.
 	*/
-	@:overload private function insertHTML(editor : javax.swing.JEditorPane, doc : javax.swing.text.html.HTMLDocument, offset : Int, html : String, popDepth : Int, pushDepth : Int, addTag : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:protected private function insertHTML(editor : javax.swing.JEditorPane, doc : javax.swing.text.html.HTMLDocument, offset : Int, html : String, popDepth : Int, pushDepth : Int, addTag : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	/**
 	* This is invoked when inserting at a boundary. It determines
@@ -722,7 +722,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* to be performed, and then invokes insertHTML.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function insertAtBoundary(editor : javax.swing.JEditorPane, doc : javax.swing.text.html.HTMLDocument, offset : Int, insertElement : javax.swing.text.Element, html : String, parentTag : javax.swing.text.html.HTML.HTML_Tag, addTag : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:require(java3) @:overload @:protected private function insertAtBoundary(editor : javax.swing.JEditorPane, doc : javax.swing.text.html.HTMLDocument, offset : Int, insertElement : javax.swing.text.Element, html : String, parentTag : javax.swing.text.html.HTML.HTML_Tag, addTag : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	/**
 	* This is invoked when inserting at a boundary. It determines
@@ -730,31 +730,31 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* to be performed, and then invokes insertHTML.
 	* @deprecated As of Java 2 platform v1.3, use insertAtBoundary
 	*/
-	@:overload private function insertAtBoundry(editor : javax.swing.JEditorPane, doc : javax.swing.text.html.HTMLDocument, offset : Int, insertElement : javax.swing.text.Element, html : String, parentTag : javax.swing.text.html.HTML.HTML_Tag, addTag : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:protected private function insertAtBoundry(editor : javax.swing.JEditorPane, doc : javax.swing.text.html.HTMLDocument, offset : Int, insertElement : javax.swing.text.Element, html : String, parentTag : javax.swing.text.html.HTML.HTML_Tag, addTag : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	/**
 	* Inserts the HTML into the document.
 	*
 	* @param ae the event
 	*/
-	@:overload override public function actionPerformed(ae : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(ae : java.awt.event.ActionEvent) : Void;
 	
 	/** HTML to insert. */
-	private var html : String;
+	@:protected private var html : String;
 	
 	/** Tag to check for in the document. */
-	private var parentTag : javax.swing.text.html.HTML.HTML_Tag;
+	@:protected private var parentTag : javax.swing.text.html.HTML.HTML_Tag;
 	
 	/** Tag in HTML to start adding tags from. */
-	private var addTag : javax.swing.text.html.HTML.HTML_Tag;
+	@:protected private var addTag : javax.swing.text.html.HTML.HTML_Tag;
 	
 	/** Alternate Tag to check for in the document if parentTag is
 	* not found. */
-	private var alternateParentTag : javax.swing.text.html.HTML.HTML_Tag;
+	@:protected private var alternateParentTag : javax.swing.text.html.HTML.HTML_Tag;
 	
 	/** Alternate tag in HTML to start adding tags from if parentTag
 	* is not found and alternateParentTag is found. */
-	private var alternateAddTag : javax.swing.text.html.HTML.HTML_Tag;
+	@:protected private var alternateAddTag : javax.swing.text.html.HTML.HTML_Tag;
 	
 	
 }
@@ -770,7 +770,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	*
 	* @param ae the event
 	*/
-	@:overload override public function actionPerformed(ae : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(ae : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -785,19 +785,19 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	/*
 	* Create this action with the appropriate identifier.
 	*/
-	@:overload public function new(actionName : String) : Void;
+	@:overload @:public public function new(actionName : String) : Void;
 	
 	/**
 	* Called when the caret position is updated.
 	*
 	* @param e the caret event
 	*/
-	@:overload public function caretUpdate(e : javax.swing.event.CaretEvent) : Void;
+	@:overload @:public public function caretUpdate(e : javax.swing.event.CaretEvent) : Void;
 	
 	/*
 	* The operation to perform when this action is triggered.
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -819,7 +819,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* @param view View painting for
 	* @return region in which drawing occurred
 	*/
-	@:overload override public function paintLayer(g : java.awt.Graphics, offs0 : Int, offs1 : Int, bounds : java.awt.Shape, c : javax.swing.text.JTextComponent, view : javax.swing.text.View) : java.awt.Shape;
+	@:overload @:public override public function paintLayer(g : java.awt.Graphics, offs0 : Int, offs1 : Int, bounds : java.awt.Shape, c : javax.swing.text.JTextComponent, view : javax.swing.text.View) : java.awt.Shape;
 	
 	
 }
@@ -834,12 +834,12 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	/**
 	* Create this action with the appropriate identifier.
 	*/
-	@:overload public function new(actionName : String) : Void;
+	@:overload @:public public function new(actionName : String) : Void;
 	
 	/*
 	* The operation to perform when this action is triggered.
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -851,7 +851,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 @:native('javax$swing$text$html$HTMLEditorKit$BeginAction') @:internal extern class HTMLEditorKit_BeginAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }

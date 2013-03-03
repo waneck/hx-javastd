@@ -28,7 +28,7 @@ package com.sun.corba.se.internal.POA;
 */
 extern class POAORB extends com.sun.corba.se.internal.iiop.ORB
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

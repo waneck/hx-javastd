@@ -109,47 +109,47 @@ extern class KDCOptions extends sun.security.krb5.internal.util.KerberosFlags
 	* subsequent requests.
 	* </ol><p>
 	*/
-	public var KDC_OPT_PROXIABLE(default, null) : Int;
+	@:public @:final public var KDC_OPT_PROXIABLE(default, null) : Int;
 	
-	public var KDC_OPT_RENEWABLE_OK(default, null) : Int;
+	@:public @:final public var KDC_OPT_RENEWABLE_OK(default, null) : Int;
 	
-	public var KDC_OPT_FORWARDABLE(default, null) : Int;
+	@:public @:final public var KDC_OPT_FORWARDABLE(default, null) : Int;
 	
-	public static var RESERVED(default, null) : Int;
+	@:public @:static @:final public static var RESERVED(default, null) : Int;
 	
-	public static var FORWARDABLE(default, null) : Int;
+	@:public @:static @:final public static var FORWARDABLE(default, null) : Int;
 	
-	public static var FORWARDED(default, null) : Int;
+	@:public @:static @:final public static var FORWARDED(default, null) : Int;
 	
-	public static var PROXIABLE(default, null) : Int;
+	@:public @:static @:final public static var PROXIABLE(default, null) : Int;
 	
-	public static var PROXY(default, null) : Int;
+	@:public @:static @:final public static var PROXY(default, null) : Int;
 	
-	public static var ALLOW_POSTDATE(default, null) : Int;
+	@:public @:static @:final public static var ALLOW_POSTDATE(default, null) : Int;
 	
-	public static var POSTDATED(default, null) : Int;
+	@:public @:static @:final public static var POSTDATED(default, null) : Int;
 	
-	public static var UNUSED7(default, null) : Int;
+	@:public @:static @:final public static var UNUSED7(default, null) : Int;
 	
-	public static var RENEWABLE(default, null) : Int;
+	@:public @:static @:final public static var RENEWABLE(default, null) : Int;
 	
-	public static var UNUSED9(default, null) : Int;
+	@:public @:static @:final public static var UNUSED9(default, null) : Int;
 	
-	public static var UNUSED10(default, null) : Int;
+	@:public @:static @:final public static var UNUSED10(default, null) : Int;
 	
-	public static var UNUSED11(default, null) : Int;
+	@:public @:static @:final public static var UNUSED11(default, null) : Int;
 	
-	public static var RENEWABLE_OK(default, null) : Int;
+	@:public @:static @:final public static var RENEWABLE_OK(default, null) : Int;
 	
-	public static var ENC_TKT_IN_SKEY(default, null) : Int;
+	@:public @:static @:final public static var ENC_TKT_IN_SKEY(default, null) : Int;
 	
-	public static var RENEW(default, null) : Int;
+	@:public @:static @:final public static var RENEW(default, null) : Int;
 	
-	public static var VALIDATE(default, null) : Int;
+	@:public @:static @:final public static var VALIDATE(default, null) : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(size : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(size : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs a KDCOptions from the specified bit settings.
@@ -159,9 +159,9 @@ extern class KDCOptions extends sun.security.krb5.internal.util.KerberosFlags
 	* encoded data.
 	*
 	*/
-	@:overload public function new(data : java.NativeArray<Bool>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<Bool>) : Void;
 	
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Constructs a KDCOptions from the passed bit settings.
@@ -169,7 +169,7 @@ extern class KDCOptions extends sun.security.krb5.internal.util.KerberosFlags
 	* @param options the bits to be set for the KDCOptions.
 	*
 	*/
-	@:overload public function new(options : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(options : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Parse (unmarshal) a KDCOptions from a DER input stream.  This form
@@ -185,7 +185,7 @@ extern class KDCOptions extends sun.security.krb5.internal.util.KerberosFlags
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.KDCOptions;
+	@:overload @:public @:static public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.KDCOptions;
 	
 	/**
 	* Sets the value(true/false) for one of the <code>KDCOptions</code>.
@@ -195,7 +195,7 @@ extern class KDCOptions extends sun.security.krb5.internal.util.KerberosFlags
 	* @exception ArrayIndexOutOfBoundsException if array index out of bound occurs.
 	* @see sun.security.krb5.internal.Krb5
 	*/
-	@:overload public function set(option : Int, value : Bool) : Void;
+	@:overload @:public override public function set(option : Int, value : Bool) : Void;
 	
 	/**
 	* Gets the value(true/false) for one of the <code>KDCOptions</code>.
@@ -205,7 +205,7 @@ extern class KDCOptions extends sun.security.krb5.internal.util.KerberosFlags
 	* @exception ArrayIndexOutOfBoundsException if array index out of bound occurs.
 	* @see sun.security.krb5.internal.Krb5
 	*/
-	@:overload public function get(option : Int) : Bool;
+	@:overload @:public override public function get(option : Int) : Bool;
 	
 	
 }

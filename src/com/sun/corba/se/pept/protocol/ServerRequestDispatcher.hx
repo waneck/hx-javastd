@@ -32,7 +32,7 @@ extern interface ServerRequestDispatcher
 	* For example, this may involve finding an "object adapter" which
 	* would return Ties/Servants to handle the request.
 	*/
-	@:overload public function dispatch(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
+	@:overload @:public public function dispatch(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
 	
 	
 }

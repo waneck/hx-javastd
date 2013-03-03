@@ -26,15 +26,15 @@ package com.sun.org.apache.xalan.internal.xsltc.runtime.output;
 */
 @:internal extern class StringOutputBuffer implements com.sun.org.apache.xalan.internal.xsltc.runtime.output.OutputBuffer
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function close() : String;
+	@:overload @:public public function close() : String;
 	
-	@:overload public function append(s : String) : com.sun.org.apache.xalan.internal.xsltc.runtime.output.OutputBuffer;
+	@:overload @:public public function append(s : String) : com.sun.org.apache.xalan.internal.xsltc.runtime.output.OutputBuffer;
 	
-	@:overload public function append(s : java.NativeArray<java.StdTypes.Char16>, from : Int, to : Int) : com.sun.org.apache.xalan.internal.xsltc.runtime.output.OutputBuffer;
+	@:overload @:public public function append(s : java.NativeArray<java.StdTypes.Char16>, from : Int, to : Int) : com.sun.org.apache.xalan.internal.xsltc.runtime.output.OutputBuffer;
 	
-	@:overload public function append(ch : java.StdTypes.Char16) : com.sun.org.apache.xalan.internal.xsltc.runtime.output.OutputBuffer;
+	@:overload @:public public function append(ch : java.StdTypes.Char16) : com.sun.org.apache.xalan.internal.xsltc.runtime.output.OutputBuffer;
 	
 	
 }

@@ -39,22 +39,22 @@ extern class DOMX509IssuerSerial extends org.jcp.xml.dsig.internal.dom.DOMStruct
 	* @throws NullPointerException if <code>issuerName</code> or
 	*    <code>serialNumber</code> is <code>null</code>
 	*/
-	@:overload public function new(issuerName : String, serialNumber : java.math.BigInteger) : Void;
+	@:overload @:public public function new(issuerName : String, serialNumber : java.math.BigInteger) : Void;
 	
 	/**
 	* Creates a <code>DOMX509IssuerSerial</code> from an element.
 	*
 	* @param isElem an X509IssuerSerial element
 	*/
-	@:overload public function new(isElem : org.w3c.dom.Element) : Void;
+	@:overload @:public public function new(isElem : org.w3c.dom.Element) : Void;
 	
-	@:overload public function getIssuerName() : String;
+	@:overload @:public public function getIssuerName() : String;
 	
-	@:overload public function getSerialNumber() : java.math.BigInteger;
+	@:overload @:public public function getSerialNumber() : java.math.BigInteger;
 	
-	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

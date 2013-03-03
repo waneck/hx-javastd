@@ -36,31 +36,31 @@ package sun.java2d.loops;
 */
 extern class RenderLoops
 {
-	public static var primTypeID(default, null) : Int;
+	@:public @:static @:final public static var primTypeID(default, null) : Int;
 	
-	public var drawLineLoop : sun.java2d.loops.DrawLine;
+	@:public public var drawLineLoop : sun.java2d.loops.DrawLine;
 	
-	public var fillRectLoop : sun.java2d.loops.FillRect;
+	@:public public var fillRectLoop : sun.java2d.loops.FillRect;
 	
-	public var drawRectLoop : sun.java2d.loops.DrawRect;
+	@:public public var drawRectLoop : sun.java2d.loops.DrawRect;
 	
-	public var drawPolygonsLoop : sun.java2d.loops.DrawPolygons;
+	@:public public var drawPolygonsLoop : sun.java2d.loops.DrawPolygons;
 	
-	public var drawPathLoop : sun.java2d.loops.DrawPath;
+	@:public public var drawPathLoop : sun.java2d.loops.DrawPath;
 	
-	public var fillPathLoop : sun.java2d.loops.FillPath;
+	@:public public var fillPathLoop : sun.java2d.loops.FillPath;
 	
-	public var fillSpansLoop : sun.java2d.loops.FillSpans;
+	@:public public var fillSpansLoop : sun.java2d.loops.FillSpans;
 	
-	public var fillParallelogramLoop : sun.java2d.loops.FillParallelogram;
+	@:public public var fillParallelogramLoop : sun.java2d.loops.FillParallelogram;
 	
-	public var drawParallelogramLoop : sun.java2d.loops.DrawParallelogram;
+	@:public public var drawParallelogramLoop : sun.java2d.loops.DrawParallelogram;
 	
-	public var drawGlyphListLoop : sun.java2d.loops.DrawGlyphList;
+	@:public public var drawGlyphListLoop : sun.java2d.loops.DrawGlyphList;
 	
-	public var drawGlyphListAALoop : sun.java2d.loops.DrawGlyphListAA;
+	@:public public var drawGlyphListAALoop : sun.java2d.loops.DrawGlyphListAA;
 	
-	public var drawGlyphListLCDLoop : sun.java2d.loops.DrawGlyphListLCD;
+	@:public public var drawGlyphListLCDLoop : sun.java2d.loops.DrawGlyphListLCD;
 	
 	
 }

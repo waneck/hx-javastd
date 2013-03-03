@@ -32,13 +32,13 @@ extern class Package implements java.lang.reflect.AnnotatedElement
 	*          <cite>The Java&trade; Language Specification</cite>,
 	*          for example, {@code java.lang}
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return the title of the specification that this package implements.
 	* @return the specification title, null is returned if it is not known.
 	*/
-	@:overload public function getSpecificationTitle() : String;
+	@:overload @:public public function getSpecificationTitle() : String;
 	
 	/**
 	* Returns the version number of the specification
@@ -49,7 +49,7 @@ extern class Package implements java.lang.reflect.AnnotatedElement
 	* numbers are compared.
 	* @return the specification version, null is returned if it is not known.
 	*/
-	@:overload public function getSpecificationVersion() : String;
+	@:overload @:public public function getSpecificationVersion() : String;
 	
 	/**
 	* Return the name of the organization, vendor,
@@ -57,13 +57,13 @@ extern class Package implements java.lang.reflect.AnnotatedElement
 	* of the classes that implement this package.
 	* @return the specification vendor, null is returned if it is not known.
 	*/
-	@:overload public function getSpecificationVendor() : String;
+	@:overload @:public public function getSpecificationVendor() : String;
 	
 	/**
 	* Return the title of this package.
 	* @return the title of the implementation, null is returned if it is not known.
 	*/
-	@:overload public function getImplementationTitle() : String;
+	@:overload @:public public function getImplementationTitle() : String;
 	
 	/**
 	* Return the version of this implementation. It consists of any string
@@ -74,21 +74,21 @@ extern class Package implements java.lang.reflect.AnnotatedElement
 	* by this vendor for this package.
 	* @return the version of the implementation, null is returned if it is not known.
 	*/
-	@:overload public function getImplementationVersion() : String;
+	@:overload @:public public function getImplementationVersion() : String;
 	
 	/**
 	* Returns the name of the organization,
 	* vendor or company that provided this implementation.
 	* @return the vendor that implemented this package..
 	*/
-	@:overload public function getImplementationVendor() : String;
+	@:overload @:public public function getImplementationVendor() : String;
 	
 	/**
 	* Returns true if this package is sealed.
 	*
 	* @return true if the package is sealed, false otherwise
 	*/
-	@:overload public function isSealed() : Bool;
+	@:overload @:public public function isSealed() : Bool;
 	
 	/**
 	* Returns true if this package is sealed with respect to the specified
@@ -97,7 +97,7 @@ extern class Package implements java.lang.reflect.AnnotatedElement
 	* @param url the code source url
 	* @return true if this package is sealed with respect to url
 	*/
-	@:overload public function isSealed(url : java.net.URL) : Bool;
+	@:overload @:public public function isSealed(url : java.net.URL) : Bool;
 	
 	/**
 	* Compare this package's specification version with a
@@ -121,7 +121,7 @@ extern class Package implements java.lang.reflect.AnnotatedElement
 	* @exception NumberFormatException if the desired or current version
 	*          is not of the correct dotted form.
 	*/
-	@:overload public function isCompatibleWith(desired : String) : Bool;
+	@:overload @:public public function isCompatibleWith(desired : String) : Bool;
 	
 	/**
 	* Find a package by name in the callers {@code ClassLoader} instance.
@@ -139,7 +139,7 @@ extern class Package implements java.lang.reflect.AnnotatedElement
 	* @return the package of the requested name. It may be null if no package
 	*          information is available from the archive or codebase.
 	*/
-	@:overload public static function getPackage(name : String) : java.lang.Package;
+	@:overload @:public @:static public static function getPackage(name : String) : java.lang.Package;
 	
 	/**
 	* Get all the packages currently known for the caller's {@code ClassLoader}
@@ -153,13 +153,13 @@ extern class Package implements java.lang.reflect.AnnotatedElement
 	* @return a new array of packages known to the callers {@code ClassLoader}
 	* instance.  An zero length array is returned if none are known.
 	*/
-	@:overload public static function getPackages() : java.NativeArray<java.lang.Package>;
+	@:overload @:public @:static public static function getPackages() : java.NativeArray<java.lang.Package>;
 	
 	/**
 	* Return the hash code computed from the package name.
 	* @return the hash code computed from the package name.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the string representation of this Package.
@@ -168,29 +168,29 @@ extern class Package implements java.lang.reflect.AnnotatedElement
 	* If the package version is defined it is appended.
 	* @return the string representation of the package.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getAnnotation<A : java.lang.annotation.Annotation>(annotationClass : Class<A>) : A;
+	@:require(java5) @:overload @:public public function getAnnotation<A : java.lang.annotation.Annotation>(annotationClass : Class<A>) : A;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isAnnotationPresent(annotationClass : Class<java.lang.annotation.Annotation>) : Bool;
+	@:require(java5) @:overload @:public public function isAnnotationPresent(annotationClass : Class<java.lang.annotation.Annotation>) : Bool;
 	
 	/**
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
+	@:require(java5) @:overload @:public public function getAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
 	
 	/**
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getDeclaredAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
+	@:require(java5) @:overload @:public public function getDeclaredAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
 	
 	
 }

@@ -20,110 +20,110 @@ package com.sun.org.apache.xerces.internal.impl;
 extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser.XMLComponent
 {
 	/** Feature identifier: namespaces. */
-	private static var NAMESPACES(default, null) : String;
+	@:protected @:static @:final private static var NAMESPACES(default, null) : String;
 	
 	/** Feature identifier: validation. */
-	private static var VALIDATION(default, null) : String;
+	@:protected @:static @:final private static var VALIDATION(default, null) : String;
 	
 	/** Feature identifier: notify character references. */
-	private static var NOTIFY_CHAR_REFS(default, null) : String;
+	@:protected @:static @:final private static var NOTIFY_CHAR_REFS(default, null) : String;
 	
-	private static var PARSER_SETTINGS(default, null) : String;
+	@:protected @:static @:final private static var PARSER_SETTINGS(default, null) : String;
 	
 	/** Property identifier: symbol table. */
-	private static var SYMBOL_TABLE(default, null) : String;
+	@:protected @:static @:final private static var SYMBOL_TABLE(default, null) : String;
 	
 	/** Property identifier: error reporter. */
-	private static var ERROR_REPORTER(default, null) : String;
+	@:protected @:static @:final private static var ERROR_REPORTER(default, null) : String;
 	
 	/** Property identifier: entity manager. */
-	private static var ENTITY_MANAGER(default, null) : String;
+	@:protected @:static @:final private static var ENTITY_MANAGER(default, null) : String;
 	
 	/** Debug attribute normalization. */
-	private static var DEBUG_ATTR_NORMALIZATION(default, null) : Bool;
+	@:protected @:static @:final private static var DEBUG_ATTR_NORMALIZATION(default, null) : Bool;
 	
-	private var attributeValueCache : java.util.ArrayList<Dynamic>;
+	@:protected private var attributeValueCache : java.util.ArrayList<Dynamic>;
 	
-	private var stringBufferCache : java.util.ArrayList<Dynamic>;
+	@:protected private var stringBufferCache : java.util.ArrayList<Dynamic>;
 	
-	private var fStringBufferIndex : Int;
+	@:protected private var fStringBufferIndex : Int;
 	
-	private var fAttributeCacheInitDone : Bool;
+	@:protected private var fAttributeCacheInitDone : Bool;
 	
-	private var fAttributeCacheUsedCount : Int;
+	@:protected private var fAttributeCacheUsedCount : Int;
 	
 	/**
 	* Validation. This feature identifier is:
 	* http://xml.org/sax/features/validation
 	*/
-	private var fValidation : Bool;
+	@:protected private var fValidation : Bool;
 	
 	/** Namespaces. */
-	private var fNamespaces : Bool;
+	@:protected private var fNamespaces : Bool;
 	
 	/** Character references notification. */
-	private var fNotifyCharRefs : Bool;
+	@:protected private var fNotifyCharRefs : Bool;
 	
 	/** Internal parser-settings feature */
-	private var fParserSettings : Bool;
+	@:protected private var fParserSettings : Bool;
 	
-	private var fPropertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager;
+	@:protected private var fPropertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager;
 	
 	/** Symbol table. */
-	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
 	/** Error reporter. */
-	private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
+	@:protected private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
 	
 	/** Entity manager. */
-	private var fEntityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager;
+	@:protected private var fEntityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager;
 	
 	/** xxx this should be available from EntityManager Entity storage */
-	private var fEntityStore : com.sun.xml.internal.stream.XMLEntityStorage;
+	@:protected private var fEntityStore : com.sun.xml.internal.stream.XMLEntityStorage;
 	
 	/** event type */
-	private var fEvent : javax.xml.stream.events.XMLEvent;
+	@:protected private var fEvent : javax.xml.stream.events.XMLEvent;
 	
 	/** Entity scanner, this alwasy works on last entity that was opened. */
-	private var fEntityScanner : com.sun.org.apache.xerces.internal.impl.XMLEntityScanner;
+	@:protected private var fEntityScanner : com.sun.org.apache.xerces.internal.impl.XMLEntityScanner;
 	
 	/** Entity depth. */
-	private var fEntityDepth : Int;
+	@:protected private var fEntityDepth : Int;
 	
 	/** Literal value of the last character refence scanned. */
-	private var fCharRefLiteral : String;
+	@:protected private var fCharRefLiteral : String;
 	
 	/** Scanning attribute. */
-	private var fScanningAttribute : Bool;
+	@:protected private var fScanningAttribute : Bool;
 	
 	/** Report entity boundary. */
-	private var fReportEntity : Bool;
+	@:protected private var fReportEntity : Bool;
 	
 	/** Symbol: "version". */
-	private static var fVersionSymbol(default, null) : String;
+	@:protected @:final @:static private static var fVersionSymbol(default, null) : String;
 	
 	/** Symbol: "encoding". */
-	private static var fEncodingSymbol(default, null) : String;
+	@:protected @:final @:static private static var fEncodingSymbol(default, null) : String;
 	
 	/** Symbol: "standalone". */
-	private static var fStandaloneSymbol(default, null) : String;
+	@:protected @:final @:static private static var fStandaloneSymbol(default, null) : String;
 	
 	/** Symbol: "amp". */
-	private static var fAmpSymbol(default, null) : String;
+	@:protected @:final @:static private static var fAmpSymbol(default, null) : String;
 	
 	/** Symbol: "lt". */
-	private static var fLtSymbol(default, null) : String;
+	@:protected @:final @:static private static var fLtSymbol(default, null) : String;
 	
 	/** Symbol: "gt". */
-	private static var fGtSymbol(default, null) : String;
+	@:protected @:final @:static private static var fGtSymbol(default, null) : String;
 	
 	/** Symbol: "quot". */
-	private static var fQuotSymbol(default, null) : String;
+	@:protected @:final @:static private static var fQuotSymbol(default, null) : String;
 	
 	/** Symbol: "apos". */
-	private static var fAposSymbol(default, null) : String;
+	@:protected @:final @:static private static var fAposSymbol(default, null) : String;
 	
-	private var fResourceIdentifier : com.sun.org.apache.xerces.internal.util.XMLResourceIdentifierImpl;
+	@:protected private var fResourceIdentifier : com.sun.org.apache.xerces.internal.util.XMLResourceIdentifierImpl;
 	
 	/**
 	*
@@ -133,9 +133,9 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	* @throws SAXException Throws exception if required features and
 	*                      properties cannot be found.
 	*/
-	@:overload public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
-	@:overload private function setPropertyManager(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:protected private function setPropertyManager(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* Sets the value of a property during parsing.
@@ -143,21 +143,21 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	* @param propertyId
 	* @param value
 	*/
-	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/*
 	* Sets the feature of the scanner.
 	*/
-	@:overload public function setFeature(featureId : String, value : Bool) : Void;
+	@:overload @:public public function setFeature(featureId : String, value : Bool) : Void;
 	
 	/*
 	* Gets the state of the feature of the scanner.
 	*/
-	@:overload public function getFeature(featureId : String) : Bool;
+	@:overload @:public public function getFeature(featureId : String) : Bool;
 	
-	@:overload private function reset() : Void;
+	@:overload @:protected private function reset() : Void;
 	
-	@:overload public function reset(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function reset(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* Scans an XML or text declaration.
@@ -183,7 +183,7 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	* <strong>Note:</strong> This method uses fString, anything in it
 	* at the time of calling is lost.
 	*/
-	@:overload private function scanXMLDeclOrTextDecl(scanningTextDecl : Bool, pseudoAttributeValues : java.NativeArray<String>) : Void;
+	@:overload @:protected private function scanXMLDeclOrTextDecl(scanningTextDecl : Bool, pseudoAttributeValues : java.NativeArray<String>) : Void;
 	
 	/**
 	* Scans a pseudo attribute.
@@ -200,7 +200,7 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	* <strong>Note:</strong> This method uses fStringBuffer2, anything in it
 	* at the time of calling is lost.
 	*/
-	@:overload public function scanPseudoAttribute(scanningTextDecl : Bool, value : com.sun.org.apache.xerces.internal.xni.XMLString) : String;
+	@:overload @:public public function scanPseudoAttribute(scanningTextDecl : Bool, value : com.sun.org.apache.xerces.internal.xni.XMLString) : String;
 	
 	/**
 	* Scans a processing instruction.
@@ -210,7 +210,7 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	* [17] PITarget ::= Name - (('X' | 'x') ('M' | 'm') ('L' | 'l'))
 	* </pre>
 	*/
-	@:overload private function scanPI(data : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Void;
+	@:overload @:protected private function scanPI(data : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Void;
 	
 	/**
 	* Scans a processing data. This is needed to handle the situation
@@ -223,7 +223,7 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	* @param target The PI target
 	* @param data The string to fill in with the data
 	*/
-	@:overload private function scanPIData(target : String, data : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Void;
+	@:overload @:protected private function scanPIData(target : String, data : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Void;
 	
 	/**
 	* Scans a comment.
@@ -238,7 +238,7 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	*
 	* @param text The buffer to fill in with the text.
 	*/
-	@:overload private function scanComment(text : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Void;
+	@:overload @:protected private function scanComment(text : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Void;
 	
 	/**
 	* Scans an attribute value and normalizes whitespace converting all
@@ -258,7 +258,7 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	* <strong>Note:</strong> This method uses fStringBuffer2, anything in it
 	* at the time of calling is lost.
 	**/
-	@:overload private function scanAttributeValue(value : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedValue : com.sun.org.apache.xerces.internal.xni.XMLString, atName : String, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, attrIndex : Int, checkEntities : Bool) : Void;
+	@:overload @:protected private function scanAttributeValue(value : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedValue : com.sun.org.apache.xerces.internal.xni.XMLString, atName : String, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, attrIndex : Int, checkEntities : Bool) : Void;
 	
 	/**
 	* Scans External ID and return the public and system IDs.
@@ -270,7 +270,7 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	* <strong>Note:</strong> This method uses fString and fStringBuffer,
 	* anything in them at the time of calling is lost.
 	*/
-	@:overload private function scanExternalID(identifiers : java.NativeArray<String>, optionalSystemId : Bool) : Void;
+	@:overload @:protected private function scanExternalID(identifiers : java.NativeArray<String>, optionalSystemId : Bool) : Void;
 	
 	/**
 	* Scans public ID literal.
@@ -291,13 +291,13 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	* <strong>Note:</strong> This method uses fStringBuffer, anything in it at
 	* the time of calling is lost.
 	*/
-	@:overload private function scanPubidLiteral(literal : com.sun.org.apache.xerces.internal.xni.XMLString) : Bool;
+	@:overload @:protected private function scanPubidLiteral(literal : com.sun.org.apache.xerces.internal.xni.XMLString) : Bool;
 	
 	/**
 	* Normalize whitespace in an XMLString converting all whitespace
 	* characters to space characters.
 	*/
-	@:overload private function normalizeWhitespace(value : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
+	@:overload @:protected private function normalizeWhitespace(value : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
 	
 	/**
 	* This method notifies of the start of an entity. The document entity
@@ -315,7 +315,7 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies the end of an entity. The document entity has
@@ -327,7 +327,7 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Scans a character reference and append the corresponding chars to the
@@ -346,19 +346,19 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	*
 	* @return the character value or (-1) on conversion failure
 	*/
-	@:overload private function scanCharReferenceValue(buf : com.sun.org.apache.xerces.internal.util.XMLStringBuffer, buf2 : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Int;
+	@:overload @:protected private function scanCharReferenceValue(buf : com.sun.org.apache.xerces.internal.util.XMLStringBuffer, buf2 : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Int;
 	
-	@:overload private function isInvalid(value : Int) : Bool;
+	@:overload @:protected private function isInvalid(value : Int) : Bool;
 	
-	@:overload private function isInvalidLiteral(value : Int) : Bool;
+	@:overload @:protected private function isInvalidLiteral(value : Int) : Bool;
 	
-	@:overload private function isValidNameChar(value : Int) : Bool;
+	@:overload @:protected private function isValidNameChar(value : Int) : Bool;
 	
-	@:overload private function isValidNCName(value : Int) : Bool;
+	@:overload @:protected private function isValidNCName(value : Int) : Bool;
 	
-	@:overload private function isValidNameStartChar(value : Int) : Bool;
+	@:overload @:protected private function isValidNameStartChar(value : Int) : Bool;
 	
-	@:overload private function versionSupported(version : String) : Bool;
+	@:overload @:protected private function versionSupported(version : String) : Bool;
 	
 	/**
 	* Scans surrogates and append them to the specified buffer.
@@ -369,12 +369,12 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	* @param buf The StringBuffer to append the read surrogates to.
 	* @return True if it succeeded.
 	*/
-	@:overload private function scanSurrogates(buf : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Bool;
+	@:overload @:protected private function scanSurrogates(buf : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Bool;
 	
 	/**
 	* Convenience function used in all XML scanners.
 	*/
-	@:overload private function reportFatalError(msgId : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected private function reportFatalError(msgId : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Returns the default state for a feature, or null if this
@@ -385,7 +385,7 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload public function getFeatureDefault(featureId : String) : Null<Bool>;
+	@:require(java2) @:overload @:public @:public public function getFeatureDefault(featureId : String) : Null<Bool>;
 	
 	/**
 	* Returns the default state for a property, or null if this
@@ -396,21 +396,21 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload public function getPropertyDefault(propertyId : String) : Dynamic;
+	@:require(java2) @:overload @:public @:public public function getPropertyDefault(propertyId : String) : Dynamic;
 	
 	/**
 	* Returns a list of property identifiers that are recognized by
 	* this component. This method may return null if no properties
 	* are recognized by this component.
 	*/
-	@:overload public function getRecognizedProperties() : java.NativeArray<String>;
+	@:overload @:public @:public public function getRecognizedProperties() : java.NativeArray<String>;
 	
 	/**
 	* Returns a list of feature identifiers that are recognized by
 	* this component. This method may return null if no features
 	* are recognized by this component.
 	*/
-	@:overload public function getRecognizedFeatures() : java.NativeArray<String>;
+	@:overload @:public @:public public function getRecognizedFeatures() : java.NativeArray<String>;
 	
 	
 }

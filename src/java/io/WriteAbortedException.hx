@@ -52,7 +52,7 @@ package java.io;
 	*
 	* @serial
 	*/
-	public var detail : java.lang.Exception;
+	@:public public var detail : java.lang.Exception;
 	
 	/**
 	* Constructs a WriteAbortedException with a string describing
@@ -60,13 +60,13 @@ package java.io;
 	* @param s   String describing the exception.
 	* @param ex  Exception causing the abort.
 	*/
-	@:overload public function new(s : String, ex : java.lang.Exception) : Void;
+	@:overload @:public public function new(s : String, ex : java.lang.Exception) : Void;
 	
 	/**
 	* Produce the message and include the message from the nested
 	* exception, if there is one.
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	/**
 	* Returns the exception that terminated the operation (the <i>cause</i>).
@@ -75,7 +75,7 @@ package java.io;
 	*          which may be null.
 	* @since   1.4
 	*/
-	@:require(java4) @:overload override public function getCause() : java.lang.Throwable;
+	@:require(java4) @:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

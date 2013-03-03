@@ -31,22 +31,22 @@ extern class MtomCodec extends com.sun.xml.internal.ws.encoding.MimeCodec
 	* @author Vivek Pandey
 	* @author Jitendra Kotamraju
 	*/
-	public static var XOP_XML_MIME_TYPE(default, null) : String;
+	@:public @:static @:final public static var XOP_XML_MIME_TYPE(default, null) : String;
 	
 	/**
 	* Return the soap 1.1 and soap 1.2 specific XOP packaged ContentType
 	*
 	* @return A non-null content type for soap11 or soap 1.2 content type
 	*/
-	@:overload public function getStaticContentType(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public override public function getStaticContentType(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public override public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public override public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload public function copy() : com.sun.xml.internal.ws.encoding.MtomCodec;
+	@:overload @:public override public function copy() : com.sun.xml.internal.ws.encoding.MtomCodec;
 	
-	@:overload private function decode(mpp : com.sun.xml.internal.ws.encoding.MimeMultipartParser, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:protected override private function decode(mpp : com.sun.xml.internal.ws.encoding.MimeMultipartParser, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	
 }
@@ -56,80 +56,80 @@ extern class MtomCodec extends com.sun.xml.internal.ws.encoding.MimeCodec
 }
 @:native('com$sun$xml$internal$ws$encoding$MtomCodec$MtomStreamWriterImpl') @:internal extern class MtomCodec_MtomStreamWriterImpl extends com.sun.xml.internal.ws.util.xml.XMLStreamWriterFilter implements com.sun.xml.internal.org.jvnet.staxex.XMLStreamWriterEx implements com.sun.xml.internal.ws.streaming.MtomStreamWriter
 {
-	@:overload public function new(w : javax.xml.stream.XMLStreamWriter, out : java.io.OutputStream, mtomAttachments : java.util.List<com.sun.xml.internal.ws.encoding.MtomCodec.MtomCodec_ByteArrayBuffer>) : Void;
+	@:overload @:public public function new(w : javax.xml.stream.XMLStreamWriter, out : java.io.OutputStream, mtomAttachments : java.util.List<com.sun.xml.internal.ws.encoding.MtomCodec.MtomCodec_ByteArrayBuffer>) : Void;
 	
-	@:overload public function writeBinary(data : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int, contentType : String) : Void;
+	@:overload @:public public function writeBinary(data : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int, contentType : String) : Void;
 	
-	@:overload public function writeBinary(dataHandler : javax.activation.DataHandler) : Void;
+	@:overload @:public public function writeBinary(dataHandler : javax.activation.DataHandler) : Void;
 	
-	@:overload public function writeBinary(contentType : String) : java.io.OutputStream;
+	@:overload @:public public function writeBinary(contentType : String) : java.io.OutputStream;
 	
-	@:overload public function writePCDATA(data : java.lang.CharSequence) : Void;
+	@:overload @:public public function writePCDATA(data : java.lang.CharSequence) : Void;
 	
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public override public function getProperty(name : String) : Dynamic;
 	
 	/**
 	* JAXBMessage writes envelope directly to the OutputStream(for SJSXP, woodstox).
 	* While writing, it calls the AttachmentMarshaller methods for adding attachments.
 	* JAXB writes xop:Include in this case.
 	*/
-	@:overload public function getAttachmentMarshaller() : javax.xml.bind.attachment.AttachmentMarshaller;
+	@:overload @:public public function getAttachmentMarshaller() : javax.xml.bind.attachment.AttachmentMarshaller;
 	
-	@:overload public function getNamespaceContext() : com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx;
+	@:overload @:public override public function getNamespaceContext() : com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$encoding$MtomCodec$MtomStreamWriterImpl$MtomNamespaceContextEx') @:internal extern class MtomCodec_MtomStreamWriterImpl_MtomNamespaceContextEx implements com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx
 {
-	@:overload public function new(nsContext : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public public function new(nsContext : javax.xml.namespace.NamespaceContext) : Void;
 	
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx.NamespaceContextEx_Binding>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx.NamespaceContextEx_Binding>;
 	
-	@:overload public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public public function getNamespaceURI(prefix : String) : String;
 	
-	@:overload public function getPrefix(namespaceURI : String) : String;
+	@:overload @:public public function getPrefix(namespaceURI : String) : String;
 	
-	@:overload public function getPrefixes(namespaceURI : String) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getPrefixes(namespaceURI : String) : java.util.Iterator<Dynamic>;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$encoding$MtomCodec$MtomXMLStreamReaderEx') @:internal extern class MtomCodec_MtomXMLStreamReaderEx extends com.sun.xml.internal.ws.util.xml.XMLStreamReaderFilter implements com.sun.xml.internal.org.jvnet.staxex.XMLStreamReaderEx
 {
-	@:overload public function new(mimeMP : com.sun.xml.internal.ws.encoding.MimeMultipartParser, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function new(mimeMP : com.sun.xml.internal.ws.encoding.MimeMultipartParser, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload public function getPCDATA() : java.lang.CharSequence;
+	@:overload @:public public function getPCDATA() : java.lang.CharSequence;
 	
-	@:overload public function getNamespaceContext() : com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx;
+	@:overload @:public override public function getNamespaceContext() : com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx;
 	
-	@:overload public function getElementTextTrim() : String;
+	@:overload @:public public function getElementTextTrim() : String;
 	
-	@:overload public function getTextLength() : Int;
+	@:overload @:public override public function getTextLength() : Int;
 	
-	@:overload public function getTextStart() : Int;
+	@:overload @:public override public function getTextStart() : Int;
 	
-	@:overload public function getEventType() : Int;
+	@:overload @:public override public function getEventType() : Int;
 	
-	@:overload public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
-	@:overload public function getTextCharacters() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public override public function getTextCharacters() : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload public function getTextCharacters(sourceStart : Int, target : java.NativeArray<java.StdTypes.Char16>, targetStart : Int, length : Int) : Int;
+	@:overload @:public override public function getTextCharacters(sourceStart : Int, target : java.NativeArray<java.StdTypes.Char16>, targetStart : Int, length : Int) : Int;
 	
-	@:overload public function getText() : String;
+	@:overload @:public override public function getText() : String;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$encoding$MtomCodec$MtomXMLStreamReaderEx$MtomNamespaceContextEx') @:internal extern class MtomCodec_MtomXMLStreamReaderEx_MtomNamespaceContextEx implements com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx
 {
-	@:overload public function new(nsContext : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public public function new(nsContext : javax.xml.namespace.NamespaceContext) : Void;
 	
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx.NamespaceContextEx_Binding>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx.NamespaceContextEx_Binding>;
 	
-	@:overload public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public public function getNamespaceURI(prefix : String) : String;
 	
-	@:overload public function getPrefix(namespaceURI : String) : String;
+	@:overload @:public public function getPrefix(namespaceURI : String) : String;
 	
-	@:overload public function getPrefixes(namespaceURI : String) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getPrefixes(namespaceURI : String) : java.util.Iterator<Dynamic>;
 	
 	
 }

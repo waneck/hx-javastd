@@ -59,67 +59,67 @@ extern class ClassFile
 	*  If you write code that depends on this, you do so at your own risk.
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b> */
-	public static var JAVA_MAGIC(default, null) : Int;
+	@:public @:final @:static public static var JAVA_MAGIC(default, null) : Int;
 	
-	public static var CONSTANT_Utf8(default, null) : Int;
+	@:public @:final @:static public static var CONSTANT_Utf8(default, null) : Int;
 	
-	public static var CONSTANT_Unicode(default, null) : Int;
+	@:public @:final @:static public static var CONSTANT_Unicode(default, null) : Int;
 	
-	public static var CONSTANT_Integer(default, null) : Int;
+	@:public @:final @:static public static var CONSTANT_Integer(default, null) : Int;
 	
-	public static var CONSTANT_Float(default, null) : Int;
+	@:public @:final @:static public static var CONSTANT_Float(default, null) : Int;
 	
-	public static var CONSTANT_Long(default, null) : Int;
+	@:public @:final @:static public static var CONSTANT_Long(default, null) : Int;
 	
-	public static var CONSTANT_Double(default, null) : Int;
+	@:public @:final @:static public static var CONSTANT_Double(default, null) : Int;
 	
-	public static var CONSTANT_Class(default, null) : Int;
+	@:public @:final @:static public static var CONSTANT_Class(default, null) : Int;
 	
-	public static var CONSTANT_String(default, null) : Int;
+	@:public @:final @:static public static var CONSTANT_String(default, null) : Int;
 	
-	public static var CONSTANT_Fieldref(default, null) : Int;
+	@:public @:final @:static public static var CONSTANT_Fieldref(default, null) : Int;
 	
-	public static var CONSTANT_Methodref(default, null) : Int;
+	@:public @:final @:static public static var CONSTANT_Methodref(default, null) : Int;
 	
-	public static var CONSTANT_InterfaceMethodref(default, null) : Int;
+	@:public @:final @:static public static var CONSTANT_InterfaceMethodref(default, null) : Int;
 	
-	public static var CONSTANT_NameandType(default, null) : Int;
+	@:public @:final @:static public static var CONSTANT_NameandType(default, null) : Int;
 	
-	public static var CONSTANT_MethodHandle(default, null) : Int;
+	@:public @:final @:static public static var CONSTANT_MethodHandle(default, null) : Int;
 	
-	public static var CONSTANT_MethodType(default, null) : Int;
+	@:public @:final @:static public static var CONSTANT_MethodType(default, null) : Int;
 	
-	public static var CONSTANT_InvokeDynamic(default, null) : Int;
+	@:public @:final @:static public static var CONSTANT_InvokeDynamic(default, null) : Int;
 	
-	public static var MAX_PARAMETERS(default, null) : Int;
+	@:public @:final @:static public static var MAX_PARAMETERS(default, null) : Int;
 	
-	public static var MAX_DIMENSIONS(default, null) : Int;
+	@:public @:final @:static public static var MAX_DIMENSIONS(default, null) : Int;
 	
-	public static var MAX_CODE(default, null) : Int;
+	@:public @:final @:static public static var MAX_CODE(default, null) : Int;
 	
-	public static var MAX_LOCALS(default, null) : Int;
+	@:public @:final @:static public static var MAX_LOCALS(default, null) : Int;
 	
-	public static var MAX_STACK(default, null) : Int;
+	@:public @:final @:static public static var MAX_STACK(default, null) : Int;
 	
 	/** Return internal representation of buf[offset..offset+len-1],
 	*  converting '/' to '.'.
 	*/
-	@:overload public static function internalize(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function internalize(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** Return internal representation of given name,
 	*  converting '/' to '.'.
 	*/
-	@:overload public static function internalize(name : com.sun.tools.javac.util.Name) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function internalize(name : com.sun.tools.javac.util.Name) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** Return external representation of buf[offset..offset+len-1],
 	*  converting '.' to '/'.
 	*/
-	@:overload public static function externalize(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function externalize(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** Return external representation of given name,
 	*  converting '/' to '.'.
 	*/
-	@:overload public static function externalize(name : com.sun.tools.javac.util.Name) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function externalize(name : com.sun.tools.javac.util.Name) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
@@ -136,9 +136,9 @@ extern class ClassFile
 */
 @:native('com$sun$tools$javac$jvm$ClassFile$NameAndType') extern class ClassFile_NameAndType
 {
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

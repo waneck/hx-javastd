@@ -28,22 +28,22 @@ extern class NewInstanceExpression extends sun.tools.tree.NaryExpression
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, right : sun.tools.tree.Expression, args : java.NativeArray<sun.tools.tree.Expression>) : Void;
+	@:overload @:public public function new(where : haxe.Int64, right : sun.tools.tree.Expression, args : java.NativeArray<sun.tools.tree.Expression>) : Void;
 	
-	@:overload public function new(where : haxe.Int64, right : sun.tools.tree.Expression, args : java.NativeArray<sun.tools.tree.Expression>, outerArg : sun.tools.tree.Expression, body : sun.tools.java.ClassDefinition) : Void;
+	@:overload @:public public function new(where : haxe.Int64, right : sun.tools.tree.Expression, args : java.NativeArray<sun.tools.tree.Expression>, outerArg : sun.tools.tree.Expression, body : sun.tools.java.ClassDefinition) : Void;
 	
 	/**
 	* From the "new" in an expression of the form outer.new InnerCls(...),
 	* return the "outer" expression, or null if there is none.
 	*/
-	@:overload public function getOuterArg() : sun.tools.tree.Expression;
+	@:overload @:public public function getOuterArg() : sun.tools.tree.Expression;
 	
-	@:overload public function order() : sun.tools.tree.Expression;
+	@:overload @:public override public function order() : sun.tools.tree.Expression;
 	
 	/**
 	* Check expression type
 	*/
-	@:overload public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
+	@:overload @:public override public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
 	
 	/**
 	* Given a list of arguments for a constructor,
@@ -52,27 +52,27 @@ extern class NewInstanceExpression extends sun.tools.tree.NaryExpression
 	* @arg def the class which perhaps contains an outer link.
 	* @arg outerArg if non-null, an explicit location in which to construct.
 	*/
-	@:overload public static function insertOuterLink(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, where : haxe.Int64, def : sun.tools.java.ClassDefinition, outerArg : sun.tools.tree.Expression, args : java.NativeArray<sun.tools.tree.Expression>) : java.NativeArray<sun.tools.tree.Expression>;
+	@:overload @:public @:static public static function insertOuterLink(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, where : haxe.Int64, def : sun.tools.java.ClassDefinition, outerArg : sun.tools.tree.Expression, args : java.NativeArray<sun.tools.tree.Expression>) : java.NativeArray<sun.tools.tree.Expression>;
 	
 	/**
 	* Check void expression
 	*/
-	@:overload public function check(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
+	@:overload @:public override public function check(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
 	
-	@:overload public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload @:public override public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	//@:overload public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	//@:overload @:public override public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload @:public override public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
+	@:overload @:public override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
 	
 	/**
 	* Code
 	*/
-	@:overload public function code(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public override public function code(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
-	@:overload public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	
 }

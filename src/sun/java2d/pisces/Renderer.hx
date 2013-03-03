@@ -25,29 +25,29 @@ package sun.java2d.pisces;
 */
 @:internal extern class Renderer implements sun.awt.geom.PathConsumer2D
 {
-	public static var WIND_EVEN_ODD(default, null) : Int;
+	@:public @:static @:final public static var WIND_EVEN_ODD(default, null) : Int;
 	
-	public static var WIND_NON_ZERO(default, null) : Int;
+	@:public @:static @:final public static var WIND_NON_ZERO(default, null) : Int;
 	
-	@:overload public function new(subpixelLgPositionsX : Int, subpixelLgPositionsY : Int, pix_boundsX : Int, pix_boundsY : Int, pix_boundsWidth : Int, pix_boundsHeight : Int, windingRule : Int) : Void;
+	@:overload @:public public function new(subpixelLgPositionsX : Int, subpixelLgPositionsY : Int, pix_boundsX : Int, pix_boundsY : Int, pix_boundsWidth : Int, pix_boundsHeight : Int, windingRule : Int) : Void;
 	
-	@:overload public function moveTo(pix_x0 : Single, pix_y0 : Single) : Void;
+	@:overload @:public public function moveTo(pix_x0 : Single, pix_y0 : Single) : Void;
 	
-	@:overload public function lineTo(pix_x1 : Single, pix_y1 : Single) : Void;
+	@:overload @:public public function lineTo(pix_x1 : Single, pix_y1 : Single) : Void;
 	
-	@:overload public function curveTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single, x3 : Single, y3 : Single) : Void;
+	@:overload @:public public function curveTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single, x3 : Single, y3 : Single) : Void;
 	
-	@:overload public function quadTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
+	@:overload @:public public function quadTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
 	
-	@:overload public function closePath() : Void;
+	@:overload @:public public function closePath() : Void;
 	
-	@:overload public function pathDone() : Void;
+	@:overload @:public public function pathDone() : Void;
 	
-	@:overload public function getNativeConsumer() : haxe.Int64;
+	@:overload @:public public function getNativeConsumer() : haxe.Int64;
 	
-	@:overload public function endRendering() : Void;
+	@:overload @:public public function endRendering() : Void;
 	
-	@:overload public function getCache() : sun.java2d.pisces.PiscesCache;
+	@:overload @:public public function getCache() : sun.java2d.pisces.PiscesCache;
 	
 	
 }

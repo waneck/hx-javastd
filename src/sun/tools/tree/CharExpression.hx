@@ -28,12 +28,12 @@ extern class CharExpression extends sun.tools.tree.IntegerExpression
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, value : java.StdTypes.Char16) : Void;
+	@:overload @:public public function new(where : haxe.Int64, value : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Print
 	*/
-	@:overload public function print(out : java.io.PrintStream) : Void;
+	@:overload @:public override public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

@@ -41,7 +41,7 @@ extern class SingleIndexWriter extends com.sun.tools.doclets.formats.html.Abstra
 	* @param filename     Name of the index file to be generated.
 	* @param indexbuilder Unicode based Index from {@link IndexBuilder}
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String, indexbuilder : com.sun.tools.doclets.internal.toolkit.util.IndexBuilder) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String, indexbuilder : com.sun.tools.doclets.internal.toolkit.util.IndexBuilder) : Void;
 	
 	/**
 	* Generate single index file, for all Unicode characters.
@@ -49,20 +49,20 @@ extern class SingleIndexWriter extends com.sun.tools.doclets.formats.html.Abstra
 	* @param indexbuilder IndexBuilder built by {@link IndexBuilder}
 	* @throws DocletAbortException
 	*/
-	@:overload public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, indexbuilder : com.sun.tools.doclets.internal.toolkit.util.IndexBuilder) : Void;
+	@:overload @:public @:static public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, indexbuilder : com.sun.tools.doclets.internal.toolkit.util.IndexBuilder) : Void;
 	
 	/**
 	* Generate the contents of each index file, with Header, Footer,
 	* Member Field, Method and Constructor Description.
 	*/
-	@:overload private function generateIndexFile() : Void;
+	@:overload @:protected private function generateIndexFile() : Void;
 	
 	/**
 	* Add links for all the Index Files per unicode character.
 	*
 	* @param contentTree the content tree to which the links for indexes will be added
 	*/
-	@:overload private function addLinksForIndexes(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addLinksForIndexes(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }

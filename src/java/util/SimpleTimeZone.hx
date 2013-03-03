@@ -44,7 +44,7 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* @param rawOffset  The base time zone offset in milliseconds to GMT.
 	* @param ID         The time zone name that is given to this instance.
 	*/
-	@:overload public function new(rawOffset : Int, ID : String) : Void;
+	@:overload @:public public function new(rawOffset : Int, ID : String) : Void;
 	
 	/**
 	* Constructs a SimpleTimeZone with the given base time zone offset from
@@ -95,7 +95,7 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* @exception IllegalArgumentException if the month, day, dayOfWeek, or time
 	* parameters are out of range for the start or end rule
 	*/
-	@:overload public function new(rawOffset : Int, ID : String, startMonth : Int, startDay : Int, startDayOfWeek : Int, startTime : Int, endMonth : Int, endDay : Int, endDayOfWeek : Int, endTime : Int) : Void;
+	@:overload @:public public function new(rawOffset : Int, ID : String, startMonth : Int, startDay : Int, startDayOfWeek : Int, startTime : Int, endMonth : Int, endDay : Int, endDayOfWeek : Int, endTime : Int) : Void;
 	
 	/**
 	* Constructs a SimpleTimeZone with the given base time zone offset from
@@ -145,7 +145,7 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* parameters are out of range for the start or end rule
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(rawOffset : Int, ID : String, startMonth : Int, startDay : Int, startDayOfWeek : Int, startTime : Int, endMonth : Int, endDay : Int, endDayOfWeek : Int, endTime : Int, dstSavings : Int) : Void;
+	@:require(java2) @:overload @:public public function new(rawOffset : Int, ID : String, startMonth : Int, startDay : Int, startDayOfWeek : Int, startTime : Int, endMonth : Int, endDay : Int, endDayOfWeek : Int, endTime : Int, dstSavings : Int) : Void;
 	
 	/**
 	* Constructs a SimpleTimeZone with the given base time zone offset from
@@ -192,14 +192,14 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(rawOffset : Int, ID : String, startMonth : Int, startDay : Int, startDayOfWeek : Int, startTime : Int, startTimeMode : Int, endMonth : Int, endDay : Int, endDayOfWeek : Int, endTime : Int, endTimeMode : Int, dstSavings : Int) : Void;
+	@:require(java4) @:overload @:public public function new(rawOffset : Int, ID : String, startMonth : Int, startDay : Int, startDayOfWeek : Int, startTime : Int, startTimeMode : Int, endMonth : Int, endDay : Int, endDayOfWeek : Int, endTime : Int, endTimeMode : Int, dstSavings : Int) : Void;
 	
 	/**
 	* Sets the daylight saving time starting year.
 	*
 	* @param year  The daylight saving starting year.
 	*/
-	@:overload public function setStartYear(year : Int) : Void;
+	@:overload @:public public function setStartYear(year : Int) : Void;
 	
 	/**
 	* Sets the daylight saving time start rule. For example, if daylight saving
@@ -219,7 +219,7 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* @exception IllegalArgumentException if the <code>startMonth</code>, <code>startDay</code>,
 	* <code>startDayOfWeek</code>, or <code>startTime</code> parameters are out of range
 	*/
-	@:overload public function setStartRule(startMonth : Int, startDay : Int, startDayOfWeek : Int, startTime : Int) : Void;
+	@:overload @:public public function setStartRule(startMonth : Int, startDay : Int, startDayOfWeek : Int, startTime : Int) : Void;
 	
 	/**
 	* Sets the daylight saving time start rule to a fixed date within a month.
@@ -237,7 +237,7 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* <code>startDayOfMonth</code>, or <code>startTime</code> parameters are out of range
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setStartRule(startMonth : Int, startDay : Int, startTime : Int) : Void;
+	@:require(java2) @:overload @:public public function setStartRule(startMonth : Int, startDay : Int, startTime : Int) : Void;
 	
 	/**
 	* Sets the daylight saving time start rule to a weekday before or after the given date within
@@ -258,7 +258,7 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* <code>startDayOfWeek</code>, or <code>startTime</code> parameters are out of range
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setStartRule(startMonth : Int, startDay : Int, startDayOfWeek : Int, startTime : Int, after : Bool) : Void;
+	@:require(java2) @:overload @:public public function setStartRule(startMonth : Int, startDay : Int, startDayOfWeek : Int, startTime : Int, after : Bool) : Void;
 	
 	/**
 	* Sets the daylight saving time end rule. For example, if daylight saving time
@@ -279,7 +279,7 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* @exception IllegalArgumentException if the <code>endMonth</code>, <code>endDay</code>,
 	* <code>endDayOfWeek</code>, or <code>endTime</code> parameters are out of range
 	*/
-	@:overload public function setEndRule(endMonth : Int, endDay : Int, endDayOfWeek : Int, endTime : Int) : Void;
+	@:overload @:public public function setEndRule(endMonth : Int, endDay : Int, endDayOfWeek : Int, endTime : Int) : Void;
 	
 	/**
 	* Sets the daylight saving time end rule to a fixed date within a month.
@@ -297,7 +297,7 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* or <code>endTime</code> parameters are out of range
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setEndRule(endMonth : Int, endDay : Int, endTime : Int) : Void;
+	@:require(java2) @:overload @:public public function setEndRule(endMonth : Int, endDay : Int, endTime : Int) : Void;
 	
 	/**
 	* Sets the daylight saving time end rule to a weekday before or after the given date within
@@ -319,7 +319,7 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* <code>endDayOfWeek</code>, or <code>endTime</code> parameters are out of range
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setEndRule(endMonth : Int, endDay : Int, endDayOfWeek : Int, endTime : Int, after : Bool) : Void;
+	@:require(java2) @:overload @:public public function setEndRule(endMonth : Int, endDay : Int, endDayOfWeek : Int, endTime : Int, after : Bool) : Void;
 	
 	/**
 	* Returns the offset of this time zone from UTC at the given
@@ -332,7 +332,7 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* local time.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getOffset(date : haxe.Int64) : Int;
+	@:require(java4) @:overload @:public override public function getOffset(date : haxe.Int64) : Int;
 	
 	/**
 	* Returns the difference in milliseconds between local time and
@@ -360,21 +360,21 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	*                  <code>month</code>, <code>day</code>, <code>dayOfWeek</code>,
 	*                  or <code>millis</code> parameters are out of range
 	*/
-	@:overload public function getOffset(era : Int, year : Int, month : Int, day : Int, dayOfWeek : Int, millis : Int) : Int;
+	@:overload @:public override public function getOffset(era : Int, year : Int, month : Int, day : Int, dayOfWeek : Int, millis : Int) : Int;
 	
 	/**
 	* Gets the GMT offset for this time zone.
 	* @return the GMT offset value in milliseconds
 	* @see #setRawOffset
 	*/
-	@:overload public function getRawOffset() : Int;
+	@:overload @:public override public function getRawOffset() : Int;
 	
 	/**
 	* Sets the base time zone offset to GMT.
 	* This is the offset to add to UTC to get local time.
 	* @see #getRawOffset
 	*/
-	@:overload public function setRawOffset(offsetMillis : Int) : Void;
+	@:overload @:public override public function setRawOffset(offsetMillis : Int) : Void;
 	
 	/**
 	* Sets the amount of time in milliseconds that the clock is advanced
@@ -385,7 +385,7 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* @see #getDSTSavings
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setDSTSavings(millisSavedDuringDST : Int) : Void;
+	@:require(java2) @:overload @:public public function setDSTSavings(millisSavedDuringDST : Int) : Void;
 	
 	/**
 	* Returns the amount of time in milliseconds that the clock is
@@ -399,14 +399,14 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* @see #setDSTSavings
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getDSTSavings() : Int;
+	@:require(java2) @:overload @:public override public function getDSTSavings() : Int;
 	
 	/**
 	* Queries if this time zone uses daylight saving time.
 	* @return true if this time zone uses daylight saving time;
 	* false otherwise.
 	*/
-	@:overload public function useDaylightTime() : Bool;
+	@:overload @:public override public function useDaylightTime() : Bool;
 	
 	/**
 	* Returns {@code true} if this {@code SimpleTimeZone} observes
@@ -417,26 +417,26 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* Daylight Saving Time; {@code false} otherwise.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function observesDaylightTime() : Bool;
+	@:require(java7) @:overload @:public override public function observesDaylightTime() : Bool;
 	
 	/**
 	* Queries if the given date is in daylight saving time.
 	* @return true if daylight saving time is in effective at the
 	* given date; false otherwise.
 	*/
-	@:overload public function inDaylightTime(date : java.util.Date) : Bool;
+	@:overload @:public override public function inDaylightTime(date : java.util.Date) : Bool;
 	
 	/**
 	* Returns a clone of this <code>SimpleTimeZone</code> instance.
 	* @return a clone of this instance.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Generates the hash code for the SimpleDateFormat object.
 	* @return the hash code for this object
 	*/
-	@:overload @:synchronized public function hashCode() : Int;
+	@:overload @:public @:synchronized public function hashCode() : Int;
 	
 	/**
 	* Compares the equality of two <code>SimpleTimeZone</code> objects.
@@ -445,7 +445,7 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* @return     True if the given <code>obj</code> is the same as this
 	*             <code>SimpleTimeZone</code> object; false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns <code>true</code> if this zone has the same rules and offset as another zone.
@@ -454,13 +454,13 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* same rules and offset as this one
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function hasSameRules(other : java.util.TimeZone) : Bool;
+	@:require(java2) @:overload @:public override public function hasSameRules(other : java.util.TimeZone) : Bool;
 	
 	/**
 	* Returns a string representation of this time zone.
 	* @return a string representation of this time zone.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Constant for a mode of start or end time specified as wall clock
@@ -468,20 +468,20 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* daylight time for the end rule.
 	* @since 1.4
 	*/
-	@:require(java4) public static var WALL_TIME(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var WALL_TIME(default, null) : Int;
 	
 	/**
 	* Constant for a mode of start or end time specified as standard time.
 	* @since 1.4
 	*/
-	@:require(java4) public static var STANDARD_TIME(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var STANDARD_TIME(default, null) : Int;
 	
 	/**
 	* Constant for a mode of start or end time specified as UTC. European
 	* Union rules are specified as UTC time, for example.
 	* @since 1.4
 	*/
-	@:require(java4) public static var UTC_TIME(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var UTC_TIME(default, null) : Int;
 	
 	
 }

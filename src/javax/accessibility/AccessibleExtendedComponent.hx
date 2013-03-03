@@ -51,7 +51,7 @@ package javax.accessibility;
 	* @return the tool tip text, if supported, of the object;
 	* otherwise, null
 	*/
-	@:overload public function getToolTipText() : String;
+	@:overload @:public public function getToolTipText() : String;
 	
 	/**
 	* Returns the titled border text
@@ -59,7 +59,7 @@ package javax.accessibility;
 	* @return the titled border text, if supported, of the object;
 	* otherwise, null
 	*/
-	@:overload public function getTitledBorderText() : String;
+	@:overload @:public public function getTitledBorderText() : String;
 	
 	/**
 	* Returns key bindings associated with this object
@@ -68,7 +68,7 @@ package javax.accessibility;
 	* otherwise, null
 	* @see AccessibleKeyBinding
 	*/
-	@:overload public function getAccessibleKeyBinding() : javax.accessibility.AccessibleKeyBinding;
+	@:overload @:public public function getAccessibleKeyBinding() : javax.accessibility.AccessibleKeyBinding;
 	
 	
 }

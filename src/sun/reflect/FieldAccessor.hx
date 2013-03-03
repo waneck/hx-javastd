@@ -30,58 +30,58 @@ interface. */
 extern interface FieldAccessor
 {
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function get(obj : Dynamic) : Dynamic;
+	@:overload @:public public function get(obj : Dynamic) : Dynamic;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function getBoolean(obj : Dynamic) : Bool;
+	@:overload @:public public function getBoolean(obj : Dynamic) : Bool;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function getByte(obj : Dynamic) : java.StdTypes.Int8;
+	@:overload @:public public function getByte(obj : Dynamic) : java.StdTypes.Int8;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function getChar(obj : Dynamic) : java.StdTypes.Char16;
+	@:overload @:public public function getChar(obj : Dynamic) : java.StdTypes.Char16;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function getShort(obj : Dynamic) : java.StdTypes.Int16;
+	@:overload @:public public function getShort(obj : Dynamic) : java.StdTypes.Int16;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function getInt(obj : Dynamic) : Int;
+	@:overload @:public public function getInt(obj : Dynamic) : Int;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function getLong(obj : Dynamic) : haxe.Int64;
+	@:overload @:public public function getLong(obj : Dynamic) : haxe.Int64;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function getFloat(obj : Dynamic) : Single;
+	@:overload @:public public function getFloat(obj : Dynamic) : Single;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function getDouble(obj : Dynamic) : Float;
+	@:overload @:public public function getDouble(obj : Dynamic) : Float;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function set(obj : Dynamic, value : Dynamic) : Void;
+	@:overload @:public public function set(obj : Dynamic, value : Dynamic) : Void;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function setBoolean(obj : Dynamic, z : Bool) : Void;
+	@:overload @:public public function setBoolean(obj : Dynamic, z : Bool) : Void;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function setByte(obj : Dynamic, b : java.StdTypes.Int8) : Void;
+	@:overload @:public public function setByte(obj : Dynamic, b : java.StdTypes.Int8) : Void;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function setChar(obj : Dynamic, c : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setChar(obj : Dynamic, c : java.StdTypes.Char16) : Void;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function setShort(obj : Dynamic, s : java.StdTypes.Int16) : Void;
+	@:overload @:public public function setShort(obj : Dynamic, s : java.StdTypes.Int16) : Void;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function setInt(obj : Dynamic, i : Int) : Void;
+	@:overload @:public public function setInt(obj : Dynamic, i : Int) : Void;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function setLong(obj : Dynamic, l : haxe.Int64) : Void;
+	@:overload @:public public function setLong(obj : Dynamic, l : haxe.Int64) : Void;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function setFloat(obj : Dynamic, f : Single) : Void;
+	@:overload @:public public function setFloat(obj : Dynamic, f : Single) : Void;
 	
 	/** Matches specification in {@link java.lang.reflect.Field} */
-	@:overload public function setDouble(obj : Dynamic, d : Float) : Void;
+	@:overload @:public public function setDouble(obj : Dynamic, d : Float) : Void;
 	
 	
 }

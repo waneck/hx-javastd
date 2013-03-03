@@ -25,13 +25,13 @@ package com.sun.tools.internal.xjc.util;
 */
 extern class NamespaceContextAdapter implements javax.xml.namespace.NamespaceContext
 {
-	@:overload public function new(xstr : com.sun.xml.internal.xsom.XmlString) : Void;
+	@:overload @:public public function new(xstr : com.sun.xml.internal.xsom.XmlString) : Void;
 	
-	@:overload public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public public function getNamespaceURI(prefix : String) : String;
 	
-	@:overload public function getPrefix(namespaceURI : String) : String;
+	@:overload @:public public function getPrefix(namespaceURI : String) : String;
 	
-	@:overload public function getPrefixes(namespaceURI : String) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getPrefixes(namespaceURI : String) : java.util.Iterator<Dynamic>;
 	
 	
 }

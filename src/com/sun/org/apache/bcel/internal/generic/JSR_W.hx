@@ -58,18 +58,18 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class JSR_W extends com.sun.org.apache.bcel.internal.generic.JsrInstruction
 {
-	@:overload public function new(target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function new(target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload @:public override public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* Read needed data (e.g. index) from file.
 	*/
-	@:overload private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload @:protected override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -79,7 +79,7 @@ extern class JSR_W extends com.sun.org.apache.bcel.internal.generic.JsrInstructi
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

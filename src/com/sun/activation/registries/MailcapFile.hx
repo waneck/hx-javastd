@@ -30,19 +30,19 @@ extern class MailcapFile
 	*
 	* @param new_fname The file name of the mailcap file.
 	*/
-	@:overload public function new(new_fname : String) : Void;
+	@:overload @:public public function new(new_fname : String) : Void;
 	
 	/**
 	* The constructor that takes an input stream as an argument.
 	*
 	* @param is        the input stream
 	*/
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	/**
 	* Mailcap file default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Get the Map of MailcapEntries based on the MIME type.
@@ -52,7 +52,7 @@ extern class MailcapFile
 	* if that fails looks for wildcard <type>/\* and return that. Return the
 	* list of all that hit.
 	*/
-	@:overload public function getMailcapList(mime_type : String) : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function getMailcapList(mime_type : String) : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* Get the Map of fallback MailcapEntries based on the MIME type.
@@ -62,17 +62,17 @@ extern class MailcapFile
 	* if that fails looks for wildcard <type>/\* and return that. Return the
 	* list of all that hit.
 	*/
-	@:overload public function getMailcapFallbackList(mime_type : String) : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function getMailcapFallbackList(mime_type : String) : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* Return all the MIME types known to this mailcap file.
 	*/
-	@:overload public function getMimeTypes() : java.NativeArray<String>;
+	@:overload @:public public function getMimeTypes() : java.NativeArray<String>;
 	
 	/**
 	* Return all the native comands for the given MIME type.
 	*/
-	@:overload public function getNativeCommands(mime_type : String) : java.NativeArray<String>;
+	@:overload @:public public function getNativeCommands(mime_type : String) : java.NativeArray<String>;
 	
 	/**
 	* appendToMailcap: Append to this Mailcap DB, use the mailcap
@@ -84,7 +84,7 @@ extern class MailcapFile
 	* # this is a comment
 	* image/gif       jaf.viewers.ImageViewer
 	*/
-	@:overload public function appendToMailcap(mail_cap : String) : Void;
+	@:overload @:public public function appendToMailcap(mail_cap : String) : Void;
 	
 	/**
 	*  A routine to parse individual entries in a Mailcap file.
@@ -92,13 +92,13 @@ extern class MailcapFile
 	*  Note that this routine does not handle line continuations.
 	*  They should have been handled prior to calling this routine.
 	*/
-	@:overload private function parseLine(mailcapEntry : String) : Void;
+	@:overload @:protected private function parseLine(mailcapEntry : String) : Void;
 	
-	@:overload private static function reportParseError(expectedToken : Int, actualToken : Int, actualTokenValue : String) : Void;
+	@:overload @:protected @:static private static function reportParseError(expectedToken : Int, actualToken : Int, actualTokenValue : String) : Void;
 	
-	@:overload private static function reportParseError(expectedToken : Int, otherExpectedToken : Int, actualToken : Int, actualTokenValue : String) : Void;
+	@:overload @:protected @:static private static function reportParseError(expectedToken : Int, otherExpectedToken : Int, actualToken : Int, actualTokenValue : String) : Void;
 	
-	@:overload private static function reportParseError(expectedToken : Int, otherExpectedToken : Int, anotherExpectedToken : Int, actualToken : Int, actualTokenValue : String) : Void;
+	@:overload @:protected @:static private static function reportParseError(expectedToken : Int, otherExpectedToken : Int, anotherExpectedToken : Int, actualToken : Int, actualTokenValue : String) : Void;
 	
 	
 }

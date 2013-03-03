@@ -30,7 +30,7 @@ extern class MirroredTypesException extends java.lang.RuntimeException
 	*
 	* @param types  the types being accessed
 	*/
-	@:overload public function new(types : java.util.List<javax.lang.model.type.TypeMirror>) : Void;
+	@:overload @:public public function new(types : java.util.List<javax.lang.model.type.TypeMirror>) : Void;
 	
 	/**
 	* Returns the type mirrors corresponding to the types being accessed.
@@ -39,7 +39,7 @@ extern class MirroredTypesException extends java.lang.RuntimeException
 	*
 	* @return the type mirrors in construction order, or {@code null} if unavailable
 	*/
-	@:overload public function getTypeMirrors() : java.util.List<javax.lang.model.type.TypeMirror>;
+	@:overload @:public public function getTypeMirrors() : java.util.List<javax.lang.model.type.TypeMirror>;
 	
 	
 }

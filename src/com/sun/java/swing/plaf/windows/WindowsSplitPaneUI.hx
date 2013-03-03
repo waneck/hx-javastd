@@ -35,17 +35,17 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsSplitPaneUI extends javax.swing.plaf.basic.BasicSplitPaneUI
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new WindowsSplitPaneUI instance
 	*/
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Creates the default divider.
 	*/
-	@:overload public function createDefaultDivider() : javax.swing.plaf.basic.BasicSplitPaneDivider;
+	@:overload @:public override public function createDefaultDivider() : javax.swing.plaf.basic.BasicSplitPaneDivider;
 	
 	
 }

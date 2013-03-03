@@ -25,27 +25,27 @@ package com.sun.xml.internal.ws.message.jaxb;
 */
 extern class JAXBHeader extends com.sun.xml.internal.ws.message.AbstractHeaderImpl
 {
-	@:overload public function new(context : com.sun.xml.internal.bind.api.JAXBRIContext, jaxbObject : Dynamic) : Void;
+	@:overload @:public public function new(context : com.sun.xml.internal.bind.api.JAXBRIContext, jaxbObject : Dynamic) : Void;
 	
-	@:overload public function new(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, jaxbObject : Dynamic) : Void;
+	@:overload @:public public function new(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, jaxbObject : Dynamic) : Void;
 	
-	@:overload override public function getNamespaceURI() : String;
+	@:overload @:public override public function getNamespaceURI() : String;
 	
-	@:overload override public function getLocalPart() : String;
+	@:overload @:public override public function getLocalPart() : String;
 	
-	@:overload public function getAttribute(nsUri : String, localName : String) : String;
+	@:overload @:public override public function getAttribute(nsUri : String, localName : String) : String;
 	
-	@:overload override public function readHeader() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function readHeader() : javax.xml.stream.XMLStreamReader;
 	
-	@:overload public function readAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
+	@:overload @:public override public function readAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
 	
-	@:overload public function readAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
+	@:overload @:public override public function readAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
 	
-	@:overload override public function writeTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function writeTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload override public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public override public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
 	
-	@:overload override public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public override public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	
 }

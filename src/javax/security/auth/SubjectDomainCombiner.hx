@@ -34,7 +34,7 @@ extern class SubjectDomainCombiner implements java.security.DomainCombiner
 	* @param subject the <code>Subject</code> to be associated with
 	*          with this <code>SubjectDomainCombiner</code>.
 	*/
-	@:overload public function new(subject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function new(subject : javax.security.auth.Subject) : Void;
 	
 	/**
 	* Get the <code>Subject</code> associated with this
@@ -51,7 +51,7 @@ extern class SubjectDomainCombiner implements java.security.DomainCombiner
 	*          to get the <code>Subject</code> associated with this
 	*          <code>SubjectDomainCombiner</code>.
 	*/
-	@:overload public function getSubject() : javax.security.auth.Subject;
+	@:overload @:public public function getSubject() : javax.security.auth.Subject;
 	
 	/**
 	* Update the relevant ProtectionDomains with the Principals
@@ -99,7 +99,7 @@ extern class SubjectDomainCombiner implements java.security.DomainCombiner
 	* @return a new array consisting of the updated ProtectionDomains,
 	*          or <code>null</code>.
 	*/
-	@:overload public function combine(currentDomains : java.NativeArray<java.security.ProtectionDomain>, assignedDomains : java.NativeArray<java.security.ProtectionDomain>) : java.NativeArray<java.security.ProtectionDomain>;
+	@:overload @:public public function combine(currentDomains : java.NativeArray<java.security.ProtectionDomain>, assignedDomains : java.NativeArray<java.security.ProtectionDomain>) : java.NativeArray<java.security.ProtectionDomain>;
 	
 	
 }
@@ -121,9 +121,9 @@ extern class SubjectDomainCombiner implements java.security.DomainCombiner
 */
 @:native('javax$security$auth$SubjectDomainCombiner$WeakKeyValueMap') @:internal extern class SubjectDomainCombiner_WeakKeyValueMap<K, V> extends java.util.WeakHashMap<K, java.lang.ref.WeakReference<V>>
 {
-	@:overload public function getValue(key : K) : V;
+	@:overload @:public public function getValue(key : K) : V;
 	
-	@:overload public function putValue(key : K, value : V) : V;
+	@:overload @:public public function putValue(key : K, value : V) : V;
 	
 	
 }

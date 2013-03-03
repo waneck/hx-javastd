@@ -29,7 +29,7 @@ extern class ComponentUI
 	* Sole constructor. (For invocation by subclass constructors,
 	* typically implicit.)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Configures the specified component appropriately for the look and feel.
@@ -56,7 +56,7 @@ extern class ComponentUI
 	* @see javax.swing.JComponent#setUI
 	* @see javax.swing.JComponent#updateUI
 	*/
-	@:overload public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public public function installUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Reverses configuration which was done on the specified component during
@@ -83,7 +83,7 @@ extern class ComponentUI
 	* @see #installUI
 	* @see javax.swing.JComponent#updateUI
 	*/
-	@:overload public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component appropriately for the look and feel.
@@ -100,7 +100,7 @@ extern class ComponentUI
 	*
 	* @see #update
 	*/
-	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Notifies this UI delegate that it is time to paint the specified
@@ -122,7 +122,7 @@ extern class ComponentUI
 	* @see #paint
 	* @see javax.swing.JComponent#paintComponent
 	*/
-	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Returns the specified component's preferred size appropriate for
@@ -140,7 +140,7 @@ extern class ComponentUI
 	* @see javax.swing.JComponent#getPreferredSize
 	* @see java.awt.LayoutManager#preferredLayoutSize
 	*/
-	@:overload public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Returns the specified component's minimum size appropriate for
@@ -161,7 +161,7 @@ extern class ComponentUI
 	* @see java.awt.LayoutManager#minimumLayoutSize
 	* @see #getPreferredSize
 	*/
-	@:overload public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Returns the specified component's maximum size appropriate for
@@ -180,7 +180,7 @@ extern class ComponentUI
 	* @see javax.swing.JComponent#getMaximumSize
 	* @see java.awt.LayoutManager2#maximumLayoutSize
 	*/
-	@:overload public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Returns <code>true</code> if the specified <i>x,y</i> location is
@@ -201,7 +201,7 @@ extern class ComponentUI
 	* @see javax.swing.JComponent#contains
 	* @see java.awt.Component#contains
 	*/
-	@:overload public function contains(c : javax.swing.JComponent, x : Int, y : Int) : Bool;
+	@:overload @:public public function contains(c : javax.swing.JComponent, x : Int, y : Int) : Bool;
 	
 	/**
 	* Returns an instance of the UI delegate for the specified component.
@@ -213,7 +213,7 @@ extern class ComponentUI
 	* The default implementation of this method throws an error, as it
 	* should never be invoked.
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Returns the baseline.  The baseline is measured from the top of
@@ -237,7 +237,7 @@ extern class ComponentUI
 	* @see javax.swing.JComponent#getBaseline(int,int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
+	@:require(java6) @:overload @:public public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
 	
 	/**
 	* Returns an enum indicating how the baseline of he component
@@ -254,7 +254,7 @@ extern class ComponentUI
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
+	@:require(java6) @:overload @:public public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
 	
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -272,7 +272,7 @@ extern class ComponentUI
 	* @see #getAccessibleChild
 	* @return the number of accessible children in the object
 	*/
-	@:overload public function getAccessibleChildrenCount(c : javax.swing.JComponent) : Int;
+	@:overload @:public public function getAccessibleChildrenCount(c : javax.swing.JComponent) : Int;
 	
 	/**
 	* Returns the <code>i</code>th <code>Accessible</code> child of the object.
@@ -290,7 +290,7 @@ extern class ComponentUI
 	* @param i zero-based index of child
 	* @return the <code>i</code>th <code>Accessible</code> child of the object
 	*/
-	@:overload public function getAccessibleChild(c : javax.swing.JComponent, i : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleChild(c : javax.swing.JComponent, i : Int) : javax.accessibility.Accessible;
 	
 	
 }

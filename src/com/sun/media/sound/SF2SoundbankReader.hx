@@ -31,11 +31,11 @@ extern class SF2SoundbankReader extends javax.sound.midi.spi.SoundbankReader
 	*
 	* @author Karl Helgason
 	*/
-	@:overload public function getSoundbank(url : java.net.URL) : javax.sound.midi.Soundbank;
+	@:overload @:public override public function getSoundbank(url : java.net.URL) : javax.sound.midi.Soundbank;
 	
-	@:overload public function getSoundbank(stream : java.io.InputStream) : javax.sound.midi.Soundbank;
+	@:overload @:public override public function getSoundbank(stream : java.io.InputStream) : javax.sound.midi.Soundbank;
 	
-	@:overload public function getSoundbank(file : java.io.File) : javax.sound.midi.Soundbank;
+	@:overload @:public override public function getSoundbank(file : java.io.File) : javax.sound.midi.Soundbank;
 	
 	
 }

@@ -26,7 +26,7 @@ extern class Canonicalizer20010315Excl extends com.sun.org.apache.xml.internal.s
 	*
 	* @param includeComments
 	*/
-	@:overload public function new(includeComments : Bool) : Void;
+	@:overload @:public public function new(includeComments : Bool) : Void;
 	
 	/**
 	* Method engineCanonicalizeSubTree
@@ -35,7 +35,7 @@ extern class Canonicalizer20010315Excl extends com.sun.org.apache.xml.internal.s
 	*
 	* @throws CanonicalizationException
 	*/
-	@:overload override public function engineCanonicalizeSubTree(rootNode : org.w3c.dom.Node) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function engineCanonicalizeSubTree(rootNode : org.w3c.dom.Node) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Method engineCanonicalizeSubTree
@@ -45,7 +45,7 @@ extern class Canonicalizer20010315Excl extends com.sun.org.apache.xml.internal.s
 	*
 	* @throws CanonicalizationException
 	*/
-	@:overload override public function engineCanonicalizeSubTree(rootNode : org.w3c.dom.Node, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function engineCanonicalizeSubTree(rootNode : org.w3c.dom.Node, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Method engineCanonicalizeSubTree
@@ -55,7 +55,7 @@ extern class Canonicalizer20010315Excl extends com.sun.org.apache.xml.internal.s
 	* @return the rootNode c14n.
 	* @throws CanonicalizationException
 	*/
-	@:overload public function engineCanonicalizeSubTree(rootNode : org.w3c.dom.Node, inclusiveNamespaces : String, excl : org.w3c.dom.Node) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function engineCanonicalizeSubTree(rootNode : org.w3c.dom.Node, inclusiveNamespaces : String, excl : org.w3c.dom.Node) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	*
@@ -64,7 +64,7 @@ extern class Canonicalizer20010315Excl extends com.sun.org.apache.xml.internal.s
 	* @return the rootNode c14n.
 	* @throws CanonicalizationException
 	*/
-	@:overload public function engineCanonicalize(rootNode : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function engineCanonicalize(rootNode : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Method engineCanonicalizeXPathNodeSet
@@ -73,7 +73,7 @@ extern class Canonicalizer20010315Excl extends com.sun.org.apache.xml.internal.s
 	* @param inclusiveNamespaces
 	* @throws CanonicalizationException
 	*/
-	@:overload override public function engineCanonicalizeXPathNodeSet(xpathNodeSet : java.util.Set<Dynamic>, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function engineCanonicalizeXPathNodeSet(xpathNodeSet : java.util.Set<Dynamic>, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

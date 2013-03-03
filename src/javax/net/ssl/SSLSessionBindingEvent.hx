@@ -32,7 +32,7 @@ extern class SSLSessionBindingEvent extends java.util.EventObject
 	* @param name the name to which the object is being bound or unbound
 	* @exception  IllegalArgumentException  if <code>session</code> is null.
 	*/
-	@:overload public function new(session : javax.net.ssl.SSLSession, name : String) : Void;
+	@:overload @:public public function new(session : javax.net.ssl.SSLSession, name : String) : Void;
 	
 	/**
 	* Returns the name to which the object is being bound, or the name
@@ -40,7 +40,7 @@ extern class SSLSessionBindingEvent extends java.util.EventObject
 	*
 	* @return the name to which the object is being bound or unbound
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the SSLSession into which the listener is being bound or
@@ -48,7 +48,7 @@ extern class SSLSessionBindingEvent extends java.util.EventObject
 	*
 	* @return the <code>SSLSession</code>
 	*/
-	@:overload public function getSession() : javax.net.ssl.SSLSession;
+	@:overload @:public public function getSession() : javax.net.ssl.SSLSession;
 	
 	
 }

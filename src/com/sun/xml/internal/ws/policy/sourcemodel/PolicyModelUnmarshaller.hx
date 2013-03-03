@@ -34,7 +34,7 @@ extern class PolicyModelUnmarshaller
 	* @return unmarshalled policy source model. If no policies are found, returns {@code null}.
 	* @throws PolicyException in case of the unmarshalling problems
 	*/
-	@:overload @:abstract public function unmarshalModel(storage : Dynamic) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
+	@:overload @:public @:abstract public function unmarshalModel(storage : Dynamic) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	/**
 	* Factory method that returns policy model unmarshaller able to unmarshal
@@ -45,7 +45,7 @@ extern class PolicyModelUnmarshaller
 	*
 	* @return policy model unmarshaller able to unmarshal policy expressions from XML source.
 	*/
-	@:overload public static function getXmlUnmarshaller() : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelUnmarshaller;
+	@:overload @:public @:static public static function getXmlUnmarshaller() : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelUnmarshaller;
 	
 	
 }

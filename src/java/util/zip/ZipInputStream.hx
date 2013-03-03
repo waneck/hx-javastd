@@ -40,7 +40,7 @@ extern class ZipInputStream extends java.util.zip.InflaterInputStream implements
 	*
 	* @param in the actual input stream
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Creates a new ZIP input stream.
@@ -56,7 +56,7 @@ extern class ZipInputStream extends java.util.zip.InflaterInputStream implements
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(_in : java.io.InputStream, charset : java.nio.charset.Charset) : Void;
+	@:require(java7) @:overload @:public public function new(_in : java.io.InputStream, charset : java.nio.charset.Charset) : Void;
 	
 	/**
 	* Reads the next ZIP file entry and positions the stream at the
@@ -65,7 +65,7 @@ extern class ZipInputStream extends java.util.zip.InflaterInputStream implements
 	* @exception ZipException if a ZIP file error has occurred
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function getNextEntry() : java.util.zip.ZipEntry;
+	@:overload @:public public function getNextEntry() : java.util.zip.ZipEntry;
 	
 	/**
 	* Closes the current ZIP entry and positions the stream for reading the
@@ -73,7 +73,7 @@ extern class ZipInputStream extends java.util.zip.InflaterInputStream implements
 	* @exception ZipException if a ZIP file error has occurred
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function closeEntry() : Void;
+	@:overload @:public public function closeEntry() : Void;
 	
 	/**
 	* Returns 0 after EOF has reached for the current entry data,
@@ -86,7 +86,7 @@ extern class ZipInputStream extends java.util.zip.InflaterInputStream implements
 	* @exception  IOException  if an I/O error occurs.
 	*
 	*/
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	/**
 	* Reads from the current ZIP entry into an array of bytes.
@@ -105,7 +105,7 @@ extern class ZipInputStream extends java.util.zip.InflaterInputStream implements
 	* @exception ZipException if a ZIP file error has occurred
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips specified number of bytes in the current ZIP entry.
@@ -115,14 +115,14 @@ extern class ZipInputStream extends java.util.zip.InflaterInputStream implements
 	* @exception IOException if an I/O error has occurred
 	* @exception IllegalArgumentException if n < 0
 	*/
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Closes this input stream and releases any system resources associated
 	* with the stream.
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Creates a new <code>ZipEntry</code> object for the specified
@@ -131,7 +131,7 @@ extern class ZipInputStream extends java.util.zip.InflaterInputStream implements
 	* @param name the ZIP file entry name
 	* @return the ZipEntry just created
 	*/
-	@:overload private function createZipEntry(name : String) : java.util.zip.ZipEntry;
+	@:overload @:protected private function createZipEntry(name : String) : java.util.zip.ZipEntry;
 	
 	
 }

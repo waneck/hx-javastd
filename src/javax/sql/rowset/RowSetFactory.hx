@@ -35,7 +35,7 @@ extern interface RowSetFactory
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function createCachedRowSet() : javax.sql.rowset.CachedRowSet;
+	@:require(java7) @:overload @:public public function createCachedRowSet() : javax.sql.rowset.CachedRowSet;
 	
 	/**
 	* <p>Creates a new instance of a FilteredRowSet.</p>
@@ -47,7 +47,7 @@ extern interface RowSetFactory
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function createFilteredRowSet() : javax.sql.rowset.FilteredRowSet;
+	@:require(java7) @:overload @:public public function createFilteredRowSet() : javax.sql.rowset.FilteredRowSet;
 	
 	/**
 	* <p>Creates a new instance of a JdbcRowSet.</p>
@@ -59,7 +59,7 @@ extern interface RowSetFactory
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function createJdbcRowSet() : javax.sql.rowset.JdbcRowSet;
+	@:require(java7) @:overload @:public public function createJdbcRowSet() : javax.sql.rowset.JdbcRowSet;
 	
 	/**
 	* <p>Creates a new instance of a JoinRowSet.</p>
@@ -71,7 +71,7 @@ extern interface RowSetFactory
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function createJoinRowSet() : javax.sql.rowset.JoinRowSet;
+	@:require(java7) @:overload @:public public function createJoinRowSet() : javax.sql.rowset.JoinRowSet;
 	
 	/**
 	* <p>Creates a new instance of a WebRowSet.</p>
@@ -83,7 +83,7 @@ extern interface RowSetFactory
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function createWebRowSet() : javax.sql.rowset.WebRowSet;
+	@:require(java7) @:overload @:public public function createWebRowSet() : javax.sql.rowset.WebRowSet;
 	
 	
 }

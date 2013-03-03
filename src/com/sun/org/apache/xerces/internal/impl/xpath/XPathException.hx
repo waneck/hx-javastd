@@ -29,12 +29,12 @@ package com.sun.org.apache.xerces.internal.impl.xpath;
 extern class XPathException extends java.lang.Exception
 {
 	/** Constructs an exception. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Constructs an exception with the specified key. */
-	@:overload public function new(key : String) : Void;
+	@:overload @:public public function new(key : String) : Void;
 	
-	@:overload public function getKey() : String;
+	@:overload @:public public function getKey() : String;
 	
 	
 }

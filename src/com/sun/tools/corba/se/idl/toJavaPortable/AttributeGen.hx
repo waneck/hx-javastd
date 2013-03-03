@@ -39,43 +39,43 @@ extern class AttributeGen extends com.sun.tools.corba.se.idl.MethodGen implement
 	/**
 	* Public zero-argument constructor.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Method generate() is not used in MethodGen.  They are replaced by the
 	* more granular interfaceMethod, stub, skeleton, dispatchSkeleton.
 	**/
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.AttributeEntry, stream : java.io.PrintWriter) : Void;
+	@:overload @:public public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.AttributeEntry, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function interfaceMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
+	@:overload @:protected private function interfaceMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function stub(className : String, isAbstract : Bool, symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
+	@:overload @:protected private function stub(className : String, isAbstract : Bool, symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function skeleton(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
+	@:overload @:protected private function skeleton(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function dispatchSkeleton(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
+	@:overload @:protected private function dispatchSkeleton(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function setupForSetMethod() : Void;
+	@:overload @:protected private function setupForSetMethod() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function clear() : Void;
+	@:overload @:protected private function clear() : Void;
 	
 	
 }

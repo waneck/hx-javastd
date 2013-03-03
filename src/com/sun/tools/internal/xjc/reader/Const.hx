@@ -26,19 +26,19 @@ package com.sun.tools.internal.xjc.reader;
 extern class Const
 {
 	/** XML namespace URI. */
-	public static var XMLNS_URI(default, null) : String;
+	@:public @:final @:static public static var XMLNS_URI(default, null) : String;
 	
 	/** JAXB customization URI. */
-	public static var JAXB_NSURI(default, null) : String;
+	@:public @:final @:static public static var JAXB_NSURI(default, null) : String;
 	
 	/** XJC vendor extension namespace URI. */
-	public static var XJC_EXTENSION_URI(default, null) : String;
+	@:public @:final @:static public static var XJC_EXTENSION_URI(default, null) : String;
 	
 	/** RELAX NG namespace URI. */
-	public static var RELAXNG_URI(default, null) : String;
+	@:public @:static @:final public static var RELAXNG_URI(default, null) : String;
 	
 	/** URI to represent DTD. */
-	public static var DTD(default, null) : String;
+	@:public @:static @:final public static var DTD(default, null) : String;
 	
 	/**
 	* Attribute name of the expected media type.
@@ -46,7 +46,7 @@ extern class Const
 	* @see WellKnownNamespace#XML_MIME_URI
 	* @see http://www.w3.org/TR/xml-media-types/
 	*/
-	public static var EXPECTED_CONTENT_TYPES(default, null) : String;
+	@:public @:static @:final public static var EXPECTED_CONTENT_TYPES(default, null) : String;
 	
 	
 }

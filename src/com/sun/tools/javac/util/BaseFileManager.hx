@@ -30,63 +30,63 @@ extern class BaseFileManager
 	* There are no references here to file-system specific objects such as
 	* java.io.File or java.nio.file.Path.
 	*/
-	@:overload private function new(charset : java.nio.charset.Charset) : Void;
+	@:overload @:protected private function new(charset : java.nio.charset.Charset) : Void;
 	
 	/**
 	* Set the context for JavacPathFileManager.
 	*/
-	@:overload private function setContext(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function setContext(context : com.sun.tools.javac.util.Context) : Void;
 	
 	/**
 	* The log to be used for error reporting.
 	*/
-	public var log : com.sun.tools.javac.util.Log;
+	@:public public var log : com.sun.tools.javac.util.Log;
 	
 	/**
 	* User provided charset (through javax.tools).
 	*/
-	private var charset : java.nio.charset.Charset;
+	@:protected private var charset : java.nio.charset.Charset;
 	
-	private var options : com.sun.tools.javac.util.Options;
+	@:protected private var options : com.sun.tools.javac.util.Options;
 	
-	private var classLoaderClass : String;
+	@:protected private var classLoaderClass : String;
 	
-	@:overload private function getSource() : com.sun.tools.javac.code.Source;
+	@:overload @:protected private function getSource() : com.sun.tools.javac.code.Source;
 	
-	@:overload private function getClassLoader(urls : java.NativeArray<java.net.URL>) : java.lang.ClassLoader;
+	@:overload @:protected private function getClassLoader(urls : java.NativeArray<java.net.URL>) : java.lang.ClassLoader;
 	
-	@:overload public function handleOption(current : String, remaining : java.util.Iterator<String>) : Bool;
+	@:overload @:public public function handleOption(current : String, remaining : java.util.Iterator<String>) : Bool;
 	
-	@:overload public function isSupportedOption(option : String) : Int;
+	@:overload @:public public function isSupportedOption(option : String) : Int;
 	
-	@:overload @:abstract public function isDefaultBootClassPath() : Bool;
+	@:overload @:public @:abstract public function isDefaultBootClassPath() : Bool;
 	
-	@:overload public function getEncodingName() : String;
+	@:overload @:public public function getEncodingName() : String;
 	
-	@:overload public function decode(inbuf : java.nio.ByteBuffer, ignoreEncodingErrors : Bool) : java.nio.CharBuffer;
+	@:overload @:public public function decode(inbuf : java.nio.ByteBuffer, ignoreEncodingErrors : Bool) : java.nio.CharBuffer;
 	
-	@:overload public function getDecoder(encodingName : String, ignoreEncodingErrors : Bool) : java.nio.charset.CharsetDecoder;
+	@:overload @:public public function getDecoder(encodingName : String, ignoreEncodingErrors : Bool) : java.nio.charset.CharsetDecoder;
 	
 	/**
 	* Make a byte buffer from an input stream.
 	*/
-	@:overload public function makeByteBuffer(_in : java.io.InputStream) : java.nio.ByteBuffer;
+	@:overload @:public public function makeByteBuffer(_in : java.io.InputStream) : java.nio.ByteBuffer;
 	
-	@:overload public function recycleByteBuffer(bb : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function recycleByteBuffer(bb : java.nio.ByteBuffer) : Void;
 	
-	@:overload public function getCachedContent(file : javax.tools.JavaFileObject) : java.nio.CharBuffer;
+	@:overload @:public public function getCachedContent(file : javax.tools.JavaFileObject) : java.nio.CharBuffer;
 	
-	@:overload public function cache(file : javax.tools.JavaFileObject, cb : java.nio.CharBuffer) : Void;
+	@:overload @:public public function cache(file : javax.tools.JavaFileObject, cb : java.nio.CharBuffer) : Void;
 	
-	@:overload public function flushCache(file : javax.tools.JavaFileObject) : Void;
+	@:overload @:public public function flushCache(file : javax.tools.JavaFileObject) : Void;
 	
-	private var contentCache(default, null) : java.util.Map<javax.tools.JavaFileObject, com.sun.tools.javac.util.BaseFileManager.BaseFileManager_ContentCacheEntry>;
+	@:protected @:final private var contentCache(default, null) : java.util.Map<javax.tools.JavaFileObject, com.sun.tools.javac.util.BaseFileManager.BaseFileManager_ContentCacheEntry>;
 	
-	@:overload public static function getKind(name : String) : javax.tools.JavaFileObject.JavaFileObject_Kind;
+	@:overload @:public @:static public static function getKind(name : String) : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	
-	@:overload private static function nullCheck<T>(o : T) : T;
+	@:overload @:protected @:static private static function nullCheck<T>(o : T) : T;
 	
-	@:overload private static function nullCheck<T>(it : java.util.Collection<T>) : java.util.Collection<T>;
+	@:overload @:protected @:static private static function nullCheck<T>(it : java.util.Collection<T>) : java.util.Collection<T>;
 	
 	
 }

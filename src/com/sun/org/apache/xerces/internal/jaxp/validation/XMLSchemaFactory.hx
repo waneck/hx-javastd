@@ -20,9 +20,9 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 */
 extern class XMLSchemaFactory extends javax.xml.validation.SchemaFactory
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function newXMLSchemaFactoryNoServiceLoader() : com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory;
+	@:overload @:public @:static public static function newXMLSchemaFactoryNoServiceLoader() : com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory;
 	
 	/**
 	* <p>Is specified schema supported by this <code>SchemaFactory</code>?</p>
@@ -36,27 +36,27 @@ extern class XMLSchemaFactory extends javax.xml.validation.SchemaFactory
 	* @throws IllegalArgumentException If <code>schemaLanguage.length() == 0</code>
 	*   or <code>schemaLanguage</code> does not specify a <a href="#schemaLanguage">valid</a> schema language.
 	*/
-	@:overload public function isSchemaLanguageSupported(schemaLanguage : String) : Bool;
+	@:overload @:public override public function isSchemaLanguageSupported(schemaLanguage : String) : Bool;
 	
-	@:overload public function getResourceResolver() : org.w3c.dom.ls.LSResourceResolver;
+	@:overload @:public override public function getResourceResolver() : org.w3c.dom.ls.LSResourceResolver;
 	
-	@:overload public function setResourceResolver(resourceResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
+	@:overload @:public override public function setResourceResolver(resourceResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
 	
-	@:overload public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public override public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
-	@:overload public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public override public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload public function newSchema(schemas : java.NativeArray<javax.xml.transform.Source>) : javax.xml.validation.Schema;
+	@:overload @:public override public function newSchema(schemas : java.NativeArray<javax.xml.transform.Source>) : javax.xml.validation.Schema;
 	
-	@:overload public function newSchema() : javax.xml.validation.Schema;
+	@:overload @:public override public function newSchema() : javax.xml.validation.Schema;
 	
-	@:overload public function getFeature(name : String) : Bool;
+	@:overload @:public override public function getFeature(name : String) : Bool;
 	
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public override public function getProperty(name : String) : Dynamic;
 	
-	@:overload public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public override public function setFeature(name : String, value : Bool) : Void;
 	
-	@:overload public function setProperty(name : String, object : Dynamic) : Void;
+	@:overload @:public override public function setProperty(name : String, object : Dynamic) : Void;
 	
 	
 }
@@ -67,10 +67,10 @@ extern class XMLSchemaFactory extends javax.xml.validation.SchemaFactory
 @:native('com$sun$org$apache$xerces$internal$jaxp$validation$XMLSchemaFactory$XMLGrammarPoolImplExtension') @:internal extern class XMLSchemaFactory_XMLGrammarPoolImplExtension extends com.sun.org.apache.xerces.internal.util.XMLGrammarPoolImpl
 {
 	/** Constructs a grammar pool with a default number of buckets. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Constructs a grammar pool with a specified number of buckets. */
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	
 }
@@ -82,17 +82,17 @@ extern class XMLSchemaFactory extends javax.xml.validation.SchemaFactory
 	/*
 	* XMLGrammarPool methods
 	*/
-	@:overload public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
+	@:overload @:public public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
 	
-	@:overload public function cacheGrammars(grammarType : String, grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>) : Void;
+	@:overload @:public public function cacheGrammars(grammarType : String, grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>) : Void;
 	
-	@:overload public function retrieveGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload @:public public function retrieveGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
-	@:overload public function lockPool() : Void;
+	@:overload @:public public function lockPool() : Void;
 	
-	@:overload public function unlockPool() : Void;
+	@:overload @:public public function unlockPool() : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

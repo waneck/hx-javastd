@@ -30,9 +30,9 @@ extern class ManagementAssertionCreator implements com.sun.xml.internal.ws.polic
 	*
 	* @author Fabian Ritzmann
 	*/
-	@:overload public function getSupportedDomainNamespaceURIs() : java.NativeArray<String>;
+	@:overload @:public public function getSupportedDomainNamespaceURIs() : java.NativeArray<String>;
 	
-	@:overload public function createAssertion(data : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>, nestedAlternative : com.sun.xml.internal.ws.policy.AssertionSet, defaultCreator : com.sun.xml.internal.ws.policy.spi.PolicyAssertionCreator) : com.sun.xml.internal.ws.policy.PolicyAssertion;
+	@:overload @:public public function createAssertion(data : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>, nestedAlternative : com.sun.xml.internal.ws.policy.AssertionSet, defaultCreator : com.sun.xml.internal.ws.policy.spi.PolicyAssertionCreator) : com.sun.xml.internal.ws.policy.PolicyAssertion;
 	
 	
 }

@@ -29,9 +29,9 @@ package com.sun.xml.internal.messaging.saaj.soap;
 */
 extern class SOAPDocumentFragment extends com.sun.org.apache.xerces.internal.dom.DocumentFragmentImpl
 {
-	@:overload public function new(ownerDoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

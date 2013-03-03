@@ -28,11 +28,11 @@ package sun.nio.ch;
 */
 @:internal extern class PollSelectorImpl extends sun.nio.ch.AbstractPollSelectorImpl
 {
-	@:overload private function doSelect(timeout : haxe.Int64) : Int;
+	@:overload @:protected override private function doSelect(timeout : haxe.Int64) : Int;
 	
-	@:overload private function implCloseInterrupt() : Void;
+	@:overload @:protected override private function implCloseInterrupt() : Void;
 	
-	@:overload public function wakeup() : java.nio.channels.Selector;
+	@:overload @:public override public function wakeup() : java.nio.channels.Selector;
 	
 	
 }

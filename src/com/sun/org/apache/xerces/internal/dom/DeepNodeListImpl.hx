@@ -68,36 +68,36 @@ extern class DeepNodeListImpl implements org.w3c.dom.NodeList
 	*
 	* @since  PR-DOM-Level-1-19980818.
 	*/
-	private var rootNode : com.sun.org.apache.xerces.internal.dom.NodeImpl;
+	@:protected private var rootNode : com.sun.org.apache.xerces.internal.dom.NodeImpl;
 	
-	private var tagName : String;
+	@:protected private var tagName : String;
 	
-	private var changes : Int;
+	@:protected private var changes : Int;
 	
-	private var nodes : java.util.Vector<Dynamic>;
+	@:protected private var nodes : java.util.Vector<Dynamic>;
 	
-	private var nsName : String;
+	@:protected private var nsName : String;
 	
-	private var enableNS : Bool;
+	@:protected private var enableNS : Bool;
 	
 	/** Constructor. */
-	@:overload public function new(rootNode : com.sun.org.apache.xerces.internal.dom.NodeImpl, tagName : String) : Void;
+	@:overload @:public public function new(rootNode : com.sun.org.apache.xerces.internal.dom.NodeImpl, tagName : String) : Void;
 	
 	/** Constructor for Namespace support. */
-	@:overload public function new(rootNode : com.sun.org.apache.xerces.internal.dom.NodeImpl, nsName : String, tagName : String) : Void;
+	@:overload @:public public function new(rootNode : com.sun.org.apache.xerces.internal.dom.NodeImpl, nsName : String, tagName : String) : Void;
 	
 	/** Returns the length of the node list. */
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/** Returns the node at the specified index. */
-	@:overload public function item(index : Int) : org.w3c.dom.Node;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.Node;
 	
 	/**
 	* Iterative tree-walker. When you have a Parent link, there's often no
 	* need to resort to recursion. NOTE THAT only Element nodes are matched
 	* since we're specifically supporting getElementsByTagName().
 	*/
-	@:overload private function nextMatchingElementAfter(current : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:protected private function nextMatchingElementAfter(current : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	
 }

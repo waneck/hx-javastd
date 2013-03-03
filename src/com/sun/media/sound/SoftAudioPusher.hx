@@ -25,13 +25,13 @@ package com.sun.media.sound;
 */
 extern class SoftAudioPusher implements java.lang.Runnable
 {
-	@:overload public function new(sourceDataLine : javax.sound.sampled.SourceDataLine, ais : javax.sound.sampled.AudioInputStream, workbuffersizer : Int) : Void;
+	@:overload @:public public function new(sourceDataLine : javax.sound.sampled.SourceDataLine, ais : javax.sound.sampled.AudioInputStream, workbuffersizer : Int) : Void;
 	
-	@:overload @:synchronized public function start() : Void;
+	@:overload @:public @:synchronized public function start() : Void;
 	
-	@:overload @:synchronized public function stop() : Void;
+	@:overload @:public @:synchronized public function stop() : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

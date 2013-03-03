@@ -36,17 +36,17 @@ extern class PackageWriterImpl extends com.sun.tools.doclets.formats.html.HtmlDo
 	/**
 	* The prev package name in the alpha-order list.
 	*/
-	private var prev : com.sun.javadoc.PackageDoc;
+	@:protected private var prev : com.sun.javadoc.PackageDoc;
 	
 	/**
 	* The next package name in the alpha-order list.
 	*/
-	private var next : com.sun.javadoc.PackageDoc;
+	@:protected private var next : com.sun.javadoc.PackageDoc;
 	
 	/**
 	* The package being documented.
 	*/
-	private var packageDoc : com.sun.javadoc.PackageDoc;
+	@:protected private var packageDoc : com.sun.javadoc.PackageDoc;
 	
 	/**
 	* Constructor to construct PackageWriter object and to generate
@@ -61,82 +61,82 @@ extern class PackageWriterImpl extends com.sun.tools.doclets.formats.html.HtmlDo
 	* @param prev          Previous package in the sorted array.
 	* @param next            Next package in the sorted array.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, packageDoc : com.sun.javadoc.PackageDoc, prev : com.sun.javadoc.PackageDoc, next : com.sun.javadoc.PackageDoc) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, packageDoc : com.sun.javadoc.PackageDoc, prev : com.sun.javadoc.PackageDoc, next : com.sun.javadoc.PackageDoc) : Void;
 	
 	/**
 	* Return the name of the output file.
 	*
 	* @return the name of the output file.
 	*/
-	@:overload public function getOutputFileName() : String;
+	@:overload @:public public function getOutputFileName() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getPackageHeader(heading : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getPackageHeader(heading : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getContentHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getContentHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add the package deprecation information to the documentation tree.
 	*
 	* @param div the content tree to which the deprecation information will be added
 	*/
-	@:overload public function addDeprecationInfo(div : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addDeprecationInfo(div : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getSummaryHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSummaryHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addClassesSummary(classes : java.NativeArray<com.sun.javadoc.ClassDoc>, label : String, tableSummary : String, tableHeader : java.NativeArray<String>, summaryContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addClassesSummary(classes : java.NativeArray<com.sun.javadoc.ClassDoc>, label : String, tableSummary : String, tableHeader : java.NativeArray<String>, summaryContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addPackageDescription(packageContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addPackageDescription(packageContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addPackageTags(packageContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addPackageTags(packageContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addPackageFooter(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addPackageFooter(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function printDocument(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function printDocument(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get "Use" link for this pacakge in the navigation bar.
 	*
 	* @return a content tree for the class use link
 	*/
-	@:overload private function getNavLinkClassUse() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkClassUse() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get "PREV PACKAGE" link in the navigation bar.
 	*
 	* @return a content tree for the previous link
 	*/
-	@:overload public function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public override public function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get "NEXT PACKAGE" link in the navigation bar.
 	*
 	* @return a content tree for the next link
 	*/
-	@:overload public function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public override public function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get "Tree" link in the navigation bar. This will be link to the package
@@ -144,14 +144,14 @@ extern class PackageWriterImpl extends com.sun.tools.doclets.formats.html.HtmlDo
 	*
 	* @return a content tree for the tree link
 	*/
-	@:overload private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Highlight "Package" in the navigation bar, as this is the package page.
 	*
 	* @return a content tree for the package link
 	*/
-	@:overload private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

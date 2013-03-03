@@ -38,7 +38,7 @@ extern class ClassPrepareEventSet extends com.sun.tools.example.debug.event.Abst
 	* @return a {@link ThreadReference} which mirrors the event's thread in
 	* the target VM.
 	*/
-	@:overload public function getThread() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function getThread() : com.sun.jdi.ThreadReference;
 	
 	/**
 	* Returns the reference type for which this event was generated.
@@ -46,9 +46,9 @@ extern class ClassPrepareEventSet extends com.sun.tools.example.debug.event.Abst
 	* @return a {@link ReferenceType} which mirrors the class, interface, or
 	* array which has been linked.
 	*/
-	@:overload public function getReferenceType() : com.sun.jdi.ReferenceType;
+	@:overload @:public public function getReferenceType() : com.sun.jdi.ReferenceType;
 	
-	@:overload public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
+	@:overload @:public override public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
 	
 	
 }

@@ -54,7 +54,7 @@ extern interface ElementCSSInlineStyle
 	/**
 	*  The style attribute.
 	*/
-	@:overload public function getStyle() : org.w3c.dom.css.CSSStyleDeclaration;
+	@:overload @:public public function getStyle() : org.w3c.dom.css.CSSStyleDeclaration;
 	
 	
 }

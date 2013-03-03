@@ -36,7 +36,7 @@ extern class KeyFactorySpi
 	* @exception InvalidKeySpecException if the given key specification
 	* is inappropriate for this key factory to produce a public key.
 	*/
-	@:overload @:abstract private function engineGeneratePublic(keySpec : java.security.spec.KeySpec) : java.security.PublicKey;
+	@:overload @:protected @:abstract private function engineGeneratePublic(keySpec : java.security.spec.KeySpec) : java.security.PublicKey;
 	
 	/**
 	* Generates a private key object from the provided key
@@ -49,7 +49,7 @@ extern class KeyFactorySpi
 	* @exception InvalidKeySpecException if the given key specification
 	* is inappropriate for this key factory to produce a private key.
 	*/
-	@:overload @:abstract private function engineGeneratePrivate(keySpec : java.security.spec.KeySpec) : java.security.PrivateKey;
+	@:overload @:protected @:abstract private function engineGeneratePrivate(keySpec : java.security.spec.KeySpec) : java.security.PrivateKey;
 	
 	/**
 	* Returns a specification (key material) of the given key
@@ -72,7 +72,7 @@ extern class KeyFactorySpi
 	* inappropriate for the given key, or the given key cannot be dealt with
 	* (e.g., the given key has an unrecognized format).
 	*/
-	@:overload @:abstract private function engineGetKeySpec<T : java.security.spec.KeySpec>(key : java.security.Key, keySpec : Class<T>) : T;
+	@:overload @:protected @:abstract private function engineGetKeySpec<T : java.security.spec.KeySpec>(key : java.security.Key, keySpec : Class<T>) : T;
 	
 	/**
 	* Translates a key object, whose provider may be unknown or
@@ -86,7 +86,7 @@ extern class KeyFactorySpi
 	* @exception InvalidKeyException if the given key cannot be processed
 	* by this key factory.
 	*/
-	@:overload @:abstract private function engineTranslateKey(key : java.security.Key) : java.security.Key;
+	@:overload @:protected @:abstract private function engineTranslateKey(key : java.security.Key) : java.security.Key;
 	
 	
 }

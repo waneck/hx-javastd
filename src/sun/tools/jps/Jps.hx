@@ -31,7 +31,7 @@ package sun.tools.jps;
 */
 @:require(java5) extern class Jps
 {
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

@@ -28,12 +28,12 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	/**
 	* Return true if <code>a</code> contains <code>b</code>
 	*/
-	@:overload @:final public static function isRectangleContainingRectangle(a : java.awt.Rectangle, b : java.awt.Rectangle) : Bool;
+	@:overload @:public @:static @:final public static function isRectangleContainingRectangle(a : java.awt.Rectangle, b : java.awt.Rectangle) : Bool;
 	
 	/**
 	* Return the rectangle (0,0,bounds.width,bounds.height) for the component <code>aComponent</code>
 	*/
-	@:overload public static function getLocalBounds(aComponent : java.awt.Component) : java.awt.Rectangle;
+	@:overload @:public @:static public static function getLocalBounds(aComponent : java.awt.Component) : java.awt.Rectangle;
 	
 	/**
 	* Returns the first <code>Window </code> ancestor of <code>c</code>, or
@@ -46,7 +46,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	*         <code>Window</code>.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function getWindowAncestor(c : java.awt.Component) : java.awt.Window;
+	@:require(java3) @:overload @:public @:static public static function getWindowAncestor(c : java.awt.Component) : java.awt.Window;
 	
 	/**
 	* Convert a <code>aPoint</code> in <code>source</code> coordinate system to
@@ -58,7 +58,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* If both <code>source</code> and <code>destination</code> are {@code null}, return <code>aPoint</code>
 	* without any conversion.
 	*/
-	@:overload public static function convertPoint(source : java.awt.Component, aPoint : java.awt.Point, destination : java.awt.Component) : java.awt.Point;
+	@:overload @:public @:static public static function convertPoint(source : java.awt.Component, aPoint : java.awt.Point, destination : java.awt.Component) : java.awt.Point;
 	
 	/**
 	* Convert the point <code>(x,y)</code> in <code>source</code> coordinate system to
@@ -70,7 +70,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* If both <code>source</code> and <code>destination</code> are {@code null}, return <code>(x,y)</code>
 	* without any conversion.
 	*/
-	@:overload public static function convertPoint(source : java.awt.Component, x : Int, y : Int, destination : java.awt.Component) : java.awt.Point;
+	@:overload @:public @:static public static function convertPoint(source : java.awt.Component, x : Int, y : Int, destination : java.awt.Component) : java.awt.Point;
 	
 	/**
 	* Convert the rectangle <code>aRectangle</code> in <code>source</code> coordinate system to
@@ -82,21 +82,21 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* If both <code>source</code> and <code>destination</code> are {@code null}, return <code>aRectangle</code>
 	* without any conversion.
 	*/
-	@:overload public static function convertRectangle(source : java.awt.Component, aRectangle : java.awt.Rectangle, destination : java.awt.Component) : java.awt.Rectangle;
+	@:overload @:public @:static public static function convertRectangle(source : java.awt.Component, aRectangle : java.awt.Rectangle, destination : java.awt.Component) : java.awt.Rectangle;
 	
 	/**
 	* Convenience method for searching above <code>comp</code> in the
 	* component hierarchy and returns the first object of class <code>c</code> it
 	* finds. Can return {@code null}, if a class <code>c</code> cannot be found.
 	*/
-	@:overload public static function getAncestorOfClass(c : Class<Dynamic>, comp : java.awt.Component) : java.awt.Container;
+	@:overload @:public @:static public static function getAncestorOfClass(c : Class<Dynamic>, comp : java.awt.Component) : java.awt.Container;
 	
 	/**
 	* Convenience method for searching above <code>comp</code> in the
 	* component hierarchy and returns the first object of <code>name</code> it
 	* finds. Can return {@code null}, if <code>name</code> cannot be found.
 	*/
-	@:overload public static function getAncestorNamed(name : String, comp : java.awt.Component) : java.awt.Container;
+	@:overload @:public @:static public static function getAncestorNamed(name : String, comp : java.awt.Component) : java.awt.Container;
 	
 	/**
 	* Returns the deepest visible descendent Component of <code>parent</code>
@@ -110,7 +110,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* @param x the x target location
 	* @param y the y target location
 	*/
-	@:overload public static function getDeepestComponentAt(parent : java.awt.Component, x : Int, y : Int) : java.awt.Component;
+	@:overload @:public @:static public static function getDeepestComponentAt(parent : java.awt.Component, x : Int, y : Int) : java.awt.Component;
 	
 	/**
 	* Returns a MouseEvent similar to <code>sourceEvent</code> except that its x
@@ -125,7 +125,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* use the translateMouseEvent() method to translate a mouse event from
 	* one component to another without changing the source.
 	*/
-	@:overload public static function convertMouseEvent(source : java.awt.Component, sourceEvent : java.awt.event.MouseEvent, destination : java.awt.Component) : java.awt.event.MouseEvent;
+	@:overload @:public @:static public static function convertMouseEvent(source : java.awt.Component, sourceEvent : java.awt.event.MouseEvent, destination : java.awt.Component) : java.awt.event.MouseEvent;
 	
 	/**
 	* Convert a point from a component's coordinate system to
@@ -134,7 +134,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* @param p  a Point object (converted to the new coordinate system)
 	* @param c  a Component object
 	*/
-	@:overload public static function convertPointToScreen(p : java.awt.Point, c : java.awt.Component) : Void;
+	@:overload @:public @:static public static function convertPointToScreen(p : java.awt.Point, c : java.awt.Component) : Void;
 	
 	/**
 	* Convert a point from a screen coordinates to a component's
@@ -143,7 +143,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* @param p  a Point object (converted to the new coordinate system)
 	* @param c  a Component object
 	*/
-	@:overload public static function convertPointFromScreen(p : java.awt.Point, c : java.awt.Component) : Void;
+	@:overload @:public @:static public static function convertPointFromScreen(p : java.awt.Point, c : java.awt.Component) : Void;
 	
 	/**
 	* Returns the first <code>Window </code> ancestor of <code>c</code>, or
@@ -158,12 +158,12 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	*         {@code null} if <code>c</code> is not contained inside a
 	*         <code>Window</code>.
 	*/
-	@:overload public static function windowForComponent(c : java.awt.Component) : java.awt.Window;
+	@:overload @:public @:static public static function windowForComponent(c : java.awt.Component) : java.awt.Window;
 	
 	/**
 	* Return <code>true</code> if a component <code>a</code> descends from a component <code>b</code>
 	*/
-	@:overload public static function isDescendingFrom(a : java.awt.Component, b : java.awt.Component) : Bool;
+	@:overload @:public @:static public static function isDescendingFrom(a : java.awt.Component, b : java.awt.Component) : Bool;
 	
 	/**
 	* Convenience to calculate the intersection of two rectangles
@@ -180,7 +180,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	*
 	* @return <code>dest</code>, modified to specify the intersection
 	*/
-	@:overload public static function computeIntersection(x : Int, y : Int, width : Int, height : Int, dest : java.awt.Rectangle) : java.awt.Rectangle;
+	@:overload @:public @:static public static function computeIntersection(x : Int, y : Int, width : Int, height : Int, dest : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	/**
 	* Convenience method that calculates the union of two rectangles
@@ -194,14 +194,14 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	*    of the two rectangles is returned in this rectangle
 	* @return the <code>dest</code> <code>Rectangle</code>
 	*/
-	@:overload public static function computeUnion(x : Int, y : Int, width : Int, height : Int, dest : java.awt.Rectangle) : java.awt.Rectangle;
+	@:overload @:public @:static public static function computeUnion(x : Int, y : Int, width : Int, height : Int, dest : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	/**
 	* Convenience returning an array of rect representing the regions within
 	* <code>rectA</code> that do not overlap with <code>rectB</code>. If the
 	* two Rects do not overlap, returns an empty array
 	*/
-	@:overload public static function computeDifference(rectA : java.awt.Rectangle, rectB : java.awt.Rectangle) : java.NativeArray<java.awt.Rectangle>;
+	@:overload @:public @:static public static function computeDifference(rectA : java.awt.Rectangle, rectB : java.awt.Rectangle) : java.NativeArray<java.awt.Rectangle>;
 	
 	/**
 	* Returns true if the mouse event specifies the left mouse button.
@@ -209,7 +209,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* @param anEvent  a MouseEvent object
 	* @return true if the left mouse button was active
 	*/
-	@:overload public static function isLeftMouseButton(anEvent : java.awt.event.MouseEvent) : Bool;
+	@:overload @:public @:static public static function isLeftMouseButton(anEvent : java.awt.event.MouseEvent) : Bool;
 	
 	/**
 	* Returns true if the mouse event specifies the middle mouse button.
@@ -217,7 +217,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* @param anEvent  a MouseEvent object
 	* @return true if the middle mouse button was active
 	*/
-	@:overload public static function isMiddleMouseButton(anEvent : java.awt.event.MouseEvent) : Bool;
+	@:overload @:public @:static public static function isMiddleMouseButton(anEvent : java.awt.event.MouseEvent) : Bool;
 	
 	/**
 	* Returns true if the mouse event specifies the right mouse button.
@@ -225,7 +225,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* @param anEvent  a MouseEvent object
 	* @return true if the right mouse button was active
 	*/
-	@:overload public static function isRightMouseButton(anEvent : java.awt.event.MouseEvent) : Bool;
+	@:overload @:public @:static public static function isRightMouseButton(anEvent : java.awt.event.MouseEvent) : Bool;
 	
 	/**
 	* Compute the width of the string using a font with the specified
@@ -235,7 +235,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* @param str  the String to compute
 	* @return an int containing the string width
 	*/
-	@:overload public static function computeStringWidth(fm : java.awt.FontMetrics, str : String) : Int;
+	@:overload @:public @:static public static function computeStringWidth(fm : java.awt.FontMetrics, str : String) : Int;
 	
 	/**
 	* Compute and return the location of the icons origin, the
@@ -245,7 +245,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* The JComponents orientation (LEADING/TRAILING) will also be taken
 	* into account and translated into LEFT/RIGHT values accordingly.
 	*/
-	@:overload public static function layoutCompoundLabel(c : javax.swing.JComponent, fm : java.awt.FontMetrics, text : String, icon : javax.swing.Icon, verticalAlignment : Int, horizontalAlignment : Int, verticalTextPosition : Int, horizontalTextPosition : Int, viewR : java.awt.Rectangle, iconR : java.awt.Rectangle, textR : java.awt.Rectangle, textIconGap : Int) : String;
+	@:overload @:public @:static public static function layoutCompoundLabel(c : javax.swing.JComponent, fm : java.awt.FontMetrics, text : String, icon : javax.swing.Icon, verticalAlignment : Int, horizontalAlignment : Int, verticalTextPosition : Int, horizontalTextPosition : Int, viewR : java.awt.Rectangle, iconR : java.awt.Rectangle, textR : java.awt.Rectangle, textIconGap : Int) : String;
 	
 	/**
 	* Compute and return the location of the icons origin, the
@@ -257,7 +257,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* horizontalAlignment (they will default to CENTER).
 	* Use the other version of layoutCompoundLabel() instead.
 	*/
-	@:overload public static function layoutCompoundLabel(fm : java.awt.FontMetrics, text : String, icon : javax.swing.Icon, verticalAlignment : Int, horizontalAlignment : Int, verticalTextPosition : Int, horizontalTextPosition : Int, viewR : java.awt.Rectangle, iconR : java.awt.Rectangle, textR : java.awt.Rectangle, textIconGap : Int) : String;
+	@:overload @:public @:static public static function layoutCompoundLabel(fm : java.awt.FontMetrics, text : String, icon : javax.swing.Icon, verticalAlignment : Int, horizontalAlignment : Int, verticalTextPosition : Int, horizontalTextPosition : Int, viewR : java.awt.Rectangle, iconR : java.awt.Rectangle, textR : java.awt.Rectangle, textIconGap : Int) : String;
 	
 	/**
 	* Paints a component to the specified <code>Graphics</code>.
@@ -306,7 +306,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* @see CellRendererPane
 	* @see java.awt.Component#isLightweight
 	*/
-	@:overload public static function paintComponent(g : java.awt.Graphics, c : java.awt.Component, p : java.awt.Container, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public @:static public static function paintComponent(g : java.awt.Graphics, c : java.awt.Component, p : java.awt.Container, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints a component to the specified <code>Graphics</code>.  This
@@ -322,14 +322,14 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* @see #paintComponent(Graphics,Component,Container,int,int,int,int)
 	* @see CellRendererPane
 	*/
-	@:overload public static function paintComponent(g : java.awt.Graphics, c : java.awt.Component, p : java.awt.Container, r : java.awt.Rectangle) : Void;
+	@:overload @:public @:static public static function paintComponent(g : java.awt.Graphics, c : java.awt.Component, p : java.awt.Container, r : java.awt.Rectangle) : Void;
 	
 	/**
 	* A simple minded look and feel change: ask each node in the tree
 	* to <code>updateUI()</code> -- that is, to initialize its UI property
 	* with the current look and feel.
 	*/
-	@:overload public static function updateComponentTreeUI(c : java.awt.Component) : Void;
+	@:overload @:public @:static public static function updateComponentTreeUI(c : java.awt.Component) : Void;
 	
 	/**
 	* Causes <i>doRun.run()</i> to be executed asynchronously on the
@@ -367,7 +367,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	*
 	* @see #invokeAndWait
 	*/
-	@:overload public static function invokeLater(doRun : java.lang.Runnable) : Void;
+	@:overload @:public @:static public static function invokeLater(doRun : java.lang.Runnable) : Void;
 	
 	/**
 	* Causes <code>doRun.run()</code> to be executed synchronously on the
@@ -421,7 +421,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	*
 	* @see #invokeLater
 	*/
-	@:overload public static function invokeAndWait(doRun : java.lang.Runnable) : Void;
+	@:overload @:public @:static public static function invokeAndWait(doRun : java.lang.Runnable) : Void;
 	
 	/**
 	* Returns true if the current thread is an AWT event dispatching thread.
@@ -431,7 +431,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	*
 	* @return true if the current thread is an AWT event dispatching thread
 	*/
-	@:overload public static function isEventDispatchThread() : Bool;
+	@:overload @:public @:static public static function isEventDispatchThread() : Bool;
 	
 	/**
 	* Get the index of this object in its accessible parent.<p>
@@ -443,7 +443,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* @return -1 of this object does not have an accessible parent.
 	* Otherwise, the index of the child in its accessible parent.
 	*/
-	@:overload public static function getAccessibleIndexInParent(c : java.awt.Component) : Int;
+	@:overload @:public @:static public static function getAccessibleIndexInParent(c : java.awt.Component) : Int;
 	
 	/**
 	* Returns the <code>Accessible</code> child contained at the
@@ -453,7 +453,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* @return the <code>Accessible</code> at the specified location,
 	*    if it exists; otherwise <code>null</code>
 	*/
-	@:overload public static function getAccessibleAt(c : java.awt.Component, p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public @:static public static function getAccessibleAt(c : java.awt.Component, p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Get the state of this object. <p>
@@ -466,7 +466,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* set of the object
 	* @see AccessibleState
 	*/
-	@:overload public static function getAccessibleStateSet(c : java.awt.Component) : javax.accessibility.AccessibleStateSet;
+	@:overload @:public @:static public static function getAccessibleStateSet(c : java.awt.Component) : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -479,7 +479,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	*
 	* @return the number of accessible children in the object.
 	*/
-	@:overload public static function getAccessibleChildrenCount(c : java.awt.Component) : Int;
+	@:overload @:public @:static public static function getAccessibleChildrenCount(c : java.awt.Component) : Int;
 	
 	/**
 	* Return the nth Accessible child of the object. <p>
@@ -491,7 +491,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* @param i zero-based index of child
 	* @return the nth Accessible child of the object
 	*/
-	@:overload public static function getAccessibleChild(c : java.awt.Component, i : Int) : javax.accessibility.Accessible;
+	@:overload @:public @:static public static function getAccessibleChild(c : java.awt.Component, i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Return the child <code>Component</code> of the specified
@@ -507,20 +507,20 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* @deprecated As of 1.4, replaced by
 	*   <code>KeyboardFocusManager.getFocusOwner()</code>.
 	*/
-	@:overload public static function findFocusOwner(c : java.awt.Component) : java.awt.Component;
+	@:overload @:public @:static public static function findFocusOwner(c : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* If c is a JRootPane descendant return its JRootPane ancestor.
 	* If c is a RootPaneContainer then return its JRootPane.
 	* @return the JRootPane for Component c or {@code null}.
 	*/
-	@:overload public static function getRootPane(c : java.awt.Component) : javax.swing.JRootPane;
+	@:overload @:public @:static public static function getRootPane(c : java.awt.Component) : javax.swing.JRootPane;
 	
 	/**
 	* Returns the root component for the current component tree.
 	* @return the first ancestor of c that's a Window or the last Applet ancestor
 	*/
-	@:overload public static function getRoot(c : java.awt.Component) : java.awt.Component;
+	@:overload @:public @:static public static function getRoot(c : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* Process the key bindings for the <code>Component</code> associated with
@@ -538,7 +538,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	* @return true if a binding has found and processed
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function processKeyBindings(event : java.awt.event.KeyEvent) : Bool;
+	@:require(java4) @:overload @:public @:static public static function processKeyBindings(event : java.awt.event.KeyEvent) : Bool;
 	
 	/**
 	* Invokes <code>actionPerformed</code> on <code>action</code> if
@@ -557,7 +557,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function notifyAction(action : javax.swing.Action, ks : javax.swing.KeyStroke, event : java.awt.event.KeyEvent, sender : Dynamic, modifiers : Int) : Bool;
+	@:require(java3) @:overload @:public @:static public static function notifyAction(action : javax.swing.Action, ks : javax.swing.KeyStroke, event : java.awt.event.KeyEvent, sender : Dynamic, modifiers : Int) : Bool;
 	
 	/**
 	* Convenience method to change the UI InputMap for <code>component</code>
@@ -566,7 +566,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function replaceUIInputMap(component : javax.swing.JComponent, type : Int, uiInputMap : javax.swing.InputMap) : Void;
+	@:require(java3) @:overload @:public @:static public static function replaceUIInputMap(component : javax.swing.JComponent, type : Int, uiInputMap : javax.swing.InputMap) : Void;
 	
 	/**
 	* Convenience method to change the UI ActionMap for <code>component</code>
@@ -575,7 +575,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function replaceUIActionMap(component : javax.swing.JComponent, uiActionMap : javax.swing.ActionMap) : Void;
+	@:require(java3) @:overload @:public @:static public static function replaceUIActionMap(component : javax.swing.JComponent, uiActionMap : javax.swing.ActionMap) : Void;
 	
 	/**
 	* Returns the InputMap provided by the UI for condition
@@ -585,7 +585,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function getUIInputMap(component : javax.swing.JComponent, condition : Int) : javax.swing.InputMap;
+	@:require(java3) @:overload @:public @:static public static function getUIInputMap(component : javax.swing.JComponent, condition : Int) : javax.swing.InputMap;
 	
 	/**
 	* Returns the ActionMap provided by the UI
@@ -594,7 +594,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function getUIActionMap(component : javax.swing.JComponent) : javax.swing.ActionMap;
+	@:require(java3) @:overload @:public @:static public static function getUIActionMap(component : javax.swing.JComponent) : javax.swing.ActionMap;
 	
 	/**
 	* Stores the position and size of
@@ -614,7 +614,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function calculateInnerArea(c : javax.swing.JComponent, r : java.awt.Rectangle) : java.awt.Rectangle;
+	@:require(java4) @:overload @:public @:static public static function calculateInnerArea(c : javax.swing.JComponent, r : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	/**
 	* Returns the first ancestor of the {@code component}
@@ -632,7 +632,7 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getUnwrappedParent(component : java.awt.Component) : java.awt.Container;
+	@:require(java7) @:overload @:public @:static public static function getUnwrappedParent(component : java.awt.Component) : java.awt.Container;
 	
 	/**
 	* Returns the first {@code JViewport}'s descendant
@@ -657,35 +657,35 @@ extern class SwingUtilities implements javax.swing.SwingConstants
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getUnwrappedView(viewport : javax.swing.JViewport) : java.awt.Component;
+	@:require(java7) @:overload @:public @:static public static function getUnwrappedView(viewport : javax.swing.JViewport) : java.awt.Component;
 	
 	
 }
 @:native('javax$swing$SwingUtilities$SharedOwnerFrame') @:internal extern class SwingUtilities_SharedOwnerFrame extends java.awt.Frame implements java.awt.event.WindowListener
 {
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Watches for displayability changes and disposes shared instance if there are no
 	* displayable children left.
 	*/
-	@:overload public function windowClosed(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowClosed(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowOpened(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowOpened(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowClosing(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowClosing(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowIconified(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowIconified(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowDeiconified(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowDeiconified(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowActivated(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowActivated(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowDeactivated(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowDeactivated(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload override public function show() : Void;
+	@:overload @:public override public function show() : Void;
 	
-	@:overload override public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
 	
 }

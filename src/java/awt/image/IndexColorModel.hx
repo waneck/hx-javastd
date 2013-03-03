@@ -48,7 +48,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @throws IllegalArgumentException if <code>size</code> is less
 	*         than 1
 	*/
-	@:overload public function new(bits : Int, size : Int, r : java.NativeArray<java.StdTypes.Int8>, g : java.NativeArray<java.StdTypes.Int8>, b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(bits : Int, size : Int, r : java.NativeArray<java.StdTypes.Int8>, g : java.NativeArray<java.StdTypes.Int8>, b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs an <code>IndexColorModel</code> from the given arrays
@@ -76,7 +76,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @throws IllegalArgumentException if <code>size</code> is less than
 	*          1
 	*/
-	@:overload public function new(bits : Int, size : Int, r : java.NativeArray<java.StdTypes.Int8>, g : java.NativeArray<java.StdTypes.Int8>, b : java.NativeArray<java.StdTypes.Int8>, trans : Int) : Void;
+	@:overload @:public public function new(bits : Int, size : Int, r : java.NativeArray<java.StdTypes.Int8>, g : java.NativeArray<java.StdTypes.Int8>, b : java.NativeArray<java.StdTypes.Int8>, trans : Int) : Void;
 	
 	/**
 	* Constructs an <code>IndexColorModel</code> from the given
@@ -102,7 +102,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @throws IllegalArgumentException if <code>size</code> is less
 	*           than 1
 	*/
-	@:overload public function new(bits : Int, size : Int, r : java.NativeArray<java.StdTypes.Int8>, g : java.NativeArray<java.StdTypes.Int8>, b : java.NativeArray<java.StdTypes.Int8>, a : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(bits : Int, size : Int, r : java.NativeArray<java.StdTypes.Int8>, g : java.NativeArray<java.StdTypes.Int8>, b : java.NativeArray<java.StdTypes.Int8>, a : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs an <code>IndexColorModel</code> from a single
@@ -130,7 +130,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @throws IllegalArgumentException if <code>size</code> is less
 	*           than 1
 	*/
-	@:overload public function new(bits : Int, size : Int, cmap : java.NativeArray<java.StdTypes.Int8>, start : Int, hasalpha : Bool) : Void;
+	@:overload @:public public function new(bits : Int, size : Int, cmap : java.NativeArray<java.StdTypes.Int8>, start : Int, hasalpha : Bool) : Void;
 	
 	/**
 	* Constructs an <code>IndexColorModel</code> from a single array of
@@ -160,7 +160,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @throws IllegalArgumentException if <code>size</code> is less than
 	*               1
 	*/
-	@:overload public function new(bits : Int, size : Int, cmap : java.NativeArray<java.StdTypes.Int8>, start : Int, hasalpha : Bool, trans : Int) : Void;
+	@:overload @:public public function new(bits : Int, size : Int, cmap : java.NativeArray<java.StdTypes.Int8>, start : Int, hasalpha : Bool, trans : Int) : Void;
 	
 	/**
 	* Constructs an <code>IndexColorModel</code> from an array of
@@ -195,7 +195,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	*           one of <code>DataBuffer.TYPE_BYTE</code> or
 	*           <code>DataBuffer.TYPE_USHORT</code>
 	*/
-	@:overload public function new(bits : Int, size : Int, cmap : java.NativeArray<Int>, start : Int, hasalpha : Bool, trans : Int, transferType : Int) : Void;
+	@:overload @:public public function new(bits : Int, size : Int, cmap : java.NativeArray<Int>, start : Int, hasalpha : Bool, trans : Int, transferType : Int) : Void;
 	
 	/**
 	* Constructs an <code>IndexColorModel</code> from an
@@ -236,7 +236,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(bits : Int, size : Int, cmap : java.NativeArray<Int>, start : Int, transferType : Int, validBits : java.math.BigInteger) : Void;
+	@:require(java3) @:overload @:public public function new(bits : Int, size : Int, cmap : java.NativeArray<Int>, start : Int, transferType : Int, validBits : java.math.BigInteger) : Void;
 	
 	/**
 	* Returns the transparency.  Returns either OPAQUE, BITMASK,
@@ -246,7 +246,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @see Transparency#BITMASK
 	* @see Transparency#TRANSLUCENT
 	*/
-	@:overload override public function getTransparency() : Int;
+	@:overload @:public override public function getTransparency() : Int;
 	
 	/**
 	* Returns an array of the number of bits for each color/alpha component.
@@ -255,14 +255,14 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @return an array containing the number of bits of each color
 	*         and alpha component of this <code>IndexColorModel</code>
 	*/
-	@:overload override public function getComponentSize() : java.NativeArray<Int>;
+	@:overload @:public override public function getComponentSize() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the size of the color/alpha component arrays in this
 	* <code>IndexColorModel</code>.
 	* @return the size of the color and alpha component arrays.
 	*/
-	@:overload @:final public function getMapSize() : Int;
+	@:overload @:final @:public public function getMapSize() : Int;
 	
 	/**
 	* Returns the index of a transparent pixel in this
@@ -276,7 +276,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	*         <code>IndexColorModel</code> object, or -1 if there
 	*         is no such pixel
 	*/
-	@:overload @:final public function getTransparentPixel() : Int;
+	@:overload @:final @:public public function getTransparentPixel() : Int;
 	
 	/**
 	* Copies the array of red color components into the specified array.
@@ -285,7 +285,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @param r the specified array into which the elements of the
 	*      array of red color components are copied
 	*/
-	@:overload @:final public function getReds(r : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:final @:public public function getReds(r : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Copies the array of green color components into the specified array.
@@ -294,7 +294,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @param g the specified array into which the elements of the
 	*      array of green color components are copied
 	*/
-	@:overload @:final public function getGreens(g : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:final @:public public function getGreens(g : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Copies the array of blue color components into the specified array.
@@ -303,7 +303,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @param b the specified array into which the elements of the
 	*      array of blue color components are copied
 	*/
-	@:overload @:final public function getBlues(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:final @:public public function getBlues(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Copies the array of alpha transparency components into the
@@ -312,7 +312,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @param a the specified array into which the elements of the
 	*      array of alpha components are copied
 	*/
-	@:overload @:final public function getAlphas(a : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:final @:public public function getAlphas(a : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Converts data for each index from the color and alpha component
@@ -325,7 +325,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	*        values from this array of color and alpha components
 	*        are copied.
 	*/
-	@:overload @:final public function getRGBs(rgb : java.NativeArray<Int>) : Void;
+	@:overload @:final @:public public function getRGBs(rgb : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Returns the red color component for the specified pixel, scaled
@@ -338,7 +338,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @param pixel the specified pixel
 	* @return the value of the red color component for the specified pixel
 	*/
-	@:overload @:final override public function getRed(pixel : Int) : Int;
+	@:overload @:final @:public override public function getRed(pixel : Int) : Int;
 	
 	/**
 	* Returns the green color component for the specified pixel, scaled
@@ -351,7 +351,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @param pixel the specified pixel
 	* @return the value of the green color component for the specified pixel
 	*/
-	@:overload @:final override public function getGreen(pixel : Int) : Int;
+	@:overload @:final @:public override public function getGreen(pixel : Int) : Int;
 	
 	/**
 	* Returns the blue color component for the specified pixel, scaled
@@ -364,7 +364,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @param pixel the specified pixel
 	* @return the value of the blue color component for the specified pixel
 	*/
-	@:overload @:final override public function getBlue(pixel : Int) : Int;
+	@:overload @:final @:public override public function getBlue(pixel : Int) : Int;
 	
 	/**
 	* Returns the alpha component for the specified pixel, scaled
@@ -375,7 +375,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @param pixel the specified pixel
 	* @return the value of the alpha component for the specified pixel
 	*/
-	@:overload @:final override public function getAlpha(pixel : Int) : Int;
+	@:overload @:final @:public override public function getAlpha(pixel : Int) : Int;
 	
 	/**
 	* Returns the color/alpha components of the pixel in the default
@@ -388,7 +388,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @return the color and alpha components of the specified pixel
 	* @see ColorModel#getRGBdefault
 	*/
-	@:overload @:final override public function getRGB(pixel : Int) : Int;
+	@:overload @:final @:public override public function getRGB(pixel : Int) : Int;
 	
 	/**
 	* Returns a data element array representation of a pixel in this
@@ -424,7 +424,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @see WritableRaster#setDataElements
 	* @see SampleModel#setDataElements
 	*/
-	@:overload @:synchronized override public function getDataElements(rgb : Int, pixel : Dynamic) : Dynamic;
+	@:overload @:public @:synchronized override public function getDataElements(rgb : Int, pixel : Dynamic) : Dynamic;
 	
 	/**
 	* Returns an array of unnormalized color/alpha components for a
@@ -451,7 +451,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @see ColorModel#hasAlpha
 	* @see ColorModel#getNumComponents
 	*/
-	@:overload override public function getComponents(pixel : Int, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
+	@:overload @:public override public function getComponents(pixel : Int, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
 	
 	/**
 	* Returns an array of unnormalized color/alpha components for
@@ -503,7 +503,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @see ColorModel#hasAlpha
 	* @see ColorModel#getNumComponents
 	*/
-	@:overload override public function getComponents(pixel : Dynamic, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
+	@:overload @:public override public function getComponents(pixel : Dynamic, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
 	
 	/**
 	* Returns a pixel value represented as an int in this
@@ -529,7 +529,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @throws UnsupportedOperationException if <code>transferType</code>
 	*         is invalid
 	*/
-	@:overload override public function getDataElement(components : java.NativeArray<Int>, offset : Int) : Int;
+	@:overload @:public override public function getDataElement(components : java.NativeArray<Int>, offset : Int) : Int;
 	
 	/**
 	* Returns a data element array representation of a pixel in this
@@ -573,7 +573,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @see WritableRaster#setDataElements
 	* @see SampleModel#setDataElements
 	*/
-	@:overload override public function getDataElements(components : java.NativeArray<Int>, offset : Int, pixel : Dynamic) : Dynamic;
+	@:overload @:public override public function getDataElements(components : java.NativeArray<Int>, offset : Int, pixel : Dynamic) : Dynamic;
 	
 	/**
 	* Creates a <code>WritableRaster</code> with the specified width
@@ -594,7 +594,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @see WritableRaster
 	* @see SampleModel
 	*/
-	@:overload override public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
+	@:overload @:public override public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns <code>true</code> if <code>raster</code> is compatible
@@ -605,7 +605,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* with this <code>ColorModel</code>; <code>false</code> otherwise.
 	*
 	*/
-	@:overload override public function isCompatibleRaster(raster : java.awt.image.Raster) : Bool;
+	@:overload @:public override public function isCompatibleRaster(raster : java.awt.image.Raster) : Bool;
 	
 	/**
 	* Creates a <code>SampleModel</code> with the specified
@@ -619,7 +619,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	*         <code>h</code> is not greater than 0
 	* @see SampleModel
 	*/
-	@:overload override public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
+	@:overload @:public override public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
 	
 	/**
 	* Checks if the specified <code>SampleModel</code> is compatible
@@ -632,7 +632,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* otherwise.
 	* @see SampleModel
 	*/
-	@:overload override public function isCompatibleSampleModel(sm : java.awt.image.SampleModel) : Bool;
+	@:overload @:public override public function isCompatibleSampleModel(sm : java.awt.image.SampleModel) : Bool;
 	
 	/**
 	* Returns a new <code>BufferedImage</code> of TYPE_INT_ARGB or
@@ -655,7 +655,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @throws IllegalArgumentException if the raster argument is not
 	*           compatible with this IndexColorModel
 	*/
-	@:overload public function convertToIntDiscrete(raster : java.awt.image.Raster, forceARGB : Bool) : java.awt.image.BufferedImage;
+	@:overload @:public public function convertToIntDiscrete(raster : java.awt.image.Raster, forceARGB : Bool) : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns whether or not the pixel is valid.
@@ -664,7 +664,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* is valid; <code>false</code> otherwise.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function isValid(pixel : Int) : Bool;
+	@:require(java3) @:overload @:public public function isValid(pixel : Int) : Bool;
 	
 	/**
 	* Returns whether or not all of the pixels are valid.
@@ -672,7 +672,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* <code>false</code> otherwise.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function isValid() : Bool;
+	@:require(java3) @:overload @:public public function isValid() : Bool;
 	
 	/**
 	* Returns a <code>BigInteger</code> that indicates the valid/invalid
@@ -684,14 +684,14 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @return a <code>BigInteger</code> indicating the valid/invalid pixels.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getValidPixels() : java.math.BigInteger;
+	@:require(java3) @:overload @:public public function getValidPixels() : java.math.BigInteger;
 	
 	/**
 	* Disposes of system resources associated with this
 	* <code>ColorModel</code> once this <code>ColorModel</code> is no
 	* longer referenced.
 	*/
-	@:overload override public function finalize() : Void;
+	@:overload @:public override public function finalize() : Void;
 	
 	/**
 	* Returns the <code>String</code> representation of the contents of
@@ -699,7 +699,7 @@ extern class IndexColorModel extends java.awt.image.ColorModel
 	* @return a <code>String</code> representing the contents of this
 	* <code>ColorModel</code> object.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

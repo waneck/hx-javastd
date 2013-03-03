@@ -31,24 +31,24 @@ package com.sun.corba.se.impl.io;
 */
 extern class ValueHandlerImpl implements javax.rmi.CORBA.ValueHandlerMultiFormat
 {
-	public static var FORMAT_VERSION_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var FORMAT_VERSION_PROPERTY(default, null) : String;
 	
-	public static var kRemoteType(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var kRemoteType(default, null) : java.StdTypes.Int16;
 	
-	public static var kAbstractType(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var kAbstractType(default, null) : java.StdTypes.Int16;
 	
-	public static var kValueType(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var kValueType(default, null) : java.StdTypes.Int16;
 	
-	@:overload public function getMaximumStreamFormatVersion() : java.StdTypes.Int8;
+	@:overload @:public public function getMaximumStreamFormatVersion() : java.StdTypes.Int8;
 	
-	@:overload public function writeValue(out : org.omg.CORBA.portable.OutputStream, value : java.io.Serializable, streamFormatVersion : java.StdTypes.Int8) : Void;
+	@:overload @:public public function writeValue(out : org.omg.CORBA.portable.OutputStream, value : java.io.Serializable, streamFormatVersion : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Writes the value to the stream using java semantics.
 	* @param out The stream to write the value to
 	* @param value The value to be written to the stream
 	**/
-	@:overload public function writeValue(_out : org.omg.CORBA.portable.OutputStream, value : java.io.Serializable) : Void;
+	@:overload @:public public function writeValue(_out : org.omg.CORBA.portable.OutputStream, value : java.io.Serializable) : Void;
 	
 	/**
 	* Reads a value from the stream using java semantics.
@@ -56,14 +56,14 @@ extern class ValueHandlerImpl implements javax.rmi.CORBA.ValueHandlerMultiFormat
 	* @param clazz The type of the value to be read in
 	* @param sender The sending context runtime
 	**/
-	@:overload public function readValue(_in : org.omg.CORBA.portable.InputStream, offset : Int, clazz : Class<Dynamic>, repositoryID : String, _sender : org.omg.SendingContext.RunTime) : java.io.Serializable;
+	@:overload @:public public function readValue(_in : org.omg.CORBA.portable.InputStream, offset : Int, clazz : Class<Dynamic>, repositoryID : String, _sender : org.omg.SendingContext.RunTime) : java.io.Serializable;
 	
 	/**
 	* Returns the repository ID for the given RMI value Class.
 	* @param clz The class to return a repository ID for.
 	* @return the repository ID of the Class.
 	**/
-	@:overload public function getRMIRepositoryID(clz : Class<Dynamic>) : String;
+	@:overload @:public public function getRMIRepositoryID(clz : Class<Dynamic>) : String;
 	
 	/**
 	* Indicates whether the given Class performs custom or
@@ -72,7 +72,7 @@ extern class ValueHandlerImpl implements javax.rmi.CORBA.ValueHandlerMultiFormat
 	* @return True if the class performs custom marshaling, false
 	* if it does not.
 	**/
-	@:overload public function isCustomMarshaled(clz : Class<Dynamic>) : Bool;
+	@:overload @:public public function isCustomMarshaled(clz : Class<Dynamic>) : Bool;
 	
 	/**
 	* Returns the CodeBase for this ValueHandler.  This is used by
@@ -81,39 +81,39 @@ extern class ValueHandlerImpl implements javax.rmi.CORBA.ValueHandlerMultiFormat
 	* do the same on the first GIOP request.
 	* @return the SendingContext.CodeBase of this ValueHandler.
 	**/
-	@:overload public function getRunTimeCodeBase() : org.omg.SendingContext.RunTime;
+	@:overload @:public public function getRunTimeCodeBase() : org.omg.SendingContext.RunTime;
 	
 	/**
 	*  Returns a boolean of whether or not RepositoryId indicates
 	*  FullValueDescriptor.
 	*  used for backward compatability
 	*/
-	@:overload public function useFullValueDescription(clazz : Class<Dynamic>, repositoryID : String) : Bool;
+	@:overload @:public public function useFullValueDescription(clazz : Class<Dynamic>, repositoryID : String) : Bool;
 	
-	@:overload public function getClassName(id : String) : String;
+	@:overload @:public public function getClassName(id : String) : String;
 	
-	@:overload public function getClassFromType(id : String) : Class<Dynamic>;
+	@:overload @:public public function getClassFromType(id : String) : Class<Dynamic>;
 	
-	@:overload public function getAnyClassFromType(id : String) : Class<Dynamic>;
+	@:overload @:public public function getAnyClassFromType(id : String) : Class<Dynamic>;
 	
-	@:overload public function createForAnyType(cl : Class<Dynamic>) : String;
+	@:overload @:public public function createForAnyType(cl : Class<Dynamic>) : String;
 	
-	@:overload public function getDefinedInId(id : String) : String;
+	@:overload @:public public function getDefinedInId(id : String) : String;
 	
-	@:overload public function getUnqualifiedName(id : String) : String;
+	@:overload @:public public function getUnqualifiedName(id : String) : String;
 	
-	@:overload public function getSerialVersionUID(id : String) : String;
+	@:overload @:public public function getSerialVersionUID(id : String) : String;
 	
-	@:overload public function isAbstractBase(clazz : Class<Dynamic>) : Bool;
+	@:overload @:public public function isAbstractBase(clazz : Class<Dynamic>) : Bool;
 	
-	@:overload public function isSequence(id : String) : Bool;
+	@:overload @:public public function isSequence(id : String) : Bool;
 	
 	/**
 	* If the value contains a writeReplace method then the result
 	* is returned.  Otherwise, the value itself is returned.
 	* @return the true value to marshal on the wire.
 	**/
-	@:overload public function writeReplace(value : java.io.Serializable) : java.io.Serializable;
+	@:overload @:public public function writeReplace(value : java.io.Serializable) : java.io.Serializable;
 	
 	
 }

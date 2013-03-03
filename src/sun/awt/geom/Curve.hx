@@ -25,19 +25,19 @@ package sun.awt.geom;
 */
 extern class Curve
 {
-	public static var INCREASING(default, null) : Int;
+	@:public @:static @:final public static var INCREASING(default, null) : Int;
 	
-	public static var DECREASING(default, null) : Int;
+	@:public @:static @:final public static var DECREASING(default, null) : Int;
 	
-	private var direction : Int;
+	@:protected private var direction : Int;
 	
-	@:overload public static function insertMove(curves : java.util.Vector<Dynamic>, x : Float, y : Float) : Void;
+	@:overload @:public @:static public static function insertMove(curves : java.util.Vector<Dynamic>, x : Float, y : Float) : Void;
 	
-	@:overload public static function insertLine(curves : java.util.Vector<Dynamic>, x0 : Float, y0 : Float, x1 : Float, y1 : Float) : Void;
+	@:overload @:public @:static public static function insertLine(curves : java.util.Vector<Dynamic>, x0 : Float, y0 : Float, x1 : Float, y1 : Float) : Void;
 	
-	@:overload public static function insertQuad(curves : java.util.Vector<Dynamic>, x0 : Float, y0 : Float, coords : java.NativeArray<Float>) : Void;
+	@:overload @:public @:static public static function insertQuad(curves : java.util.Vector<Dynamic>, x0 : Float, y0 : Float, coords : java.NativeArray<Float>) : Void;
 	
-	@:overload public static function insertCubic(curves : java.util.Vector<Dynamic>, x0 : Float, y0 : Float, coords : java.NativeArray<Float>) : Void;
+	@:overload @:public @:static public static function insertCubic(curves : java.util.Vector<Dynamic>, x0 : Float, y0 : Float, coords : java.NativeArray<Float>) : Void;
 	
 	/**
 	* Calculates the number of times the given path
@@ -53,7 +53,7 @@ extern class Curve
 	* The caller must check p[xy] for NaN values.
 	* The caller may also reject infinite p[xy] values as well.
 	*/
-	@:overload public static function pointCrossingsForPath(pi : java.awt.geom.PathIterator, px : Float, py : Float) : Int;
+	@:overload @:public @:static public static function pointCrossingsForPath(pi : java.awt.geom.PathIterator, px : Float, py : Float) : Int;
 	
 	/**
 	* Calculates the number of times the line from (x0,y0) to (x1,y1)
@@ -62,7 +62,7 @@ extern class Curve
 	* +1 is returned for a crossing where the Y coordinate is increasing
 	* -1 is returned for a crossing where the Y coordinate is decreasing
 	*/
-	@:overload public static function pointCrossingsForLine(px : Float, py : Float, x0 : Float, y0 : Float, x1 : Float, y1 : Float) : Int;
+	@:overload @:public @:static public static function pointCrossingsForLine(px : Float, py : Float, x0 : Float, y0 : Float, x1 : Float, y1 : Float) : Int;
 	
 	/**
 	* Calculates the number of times the quad from (x0,y0) to (x1,y1)
@@ -74,7 +74,7 @@ extern class Curve
 	* +1 is added for each crossing where the Y coordinate is increasing
 	* -1 is added for each crossing where the Y coordinate is decreasing
 	*/
-	@:overload public static function pointCrossingsForQuad(px : Float, py : Float, x0 : Float, y0 : Float, xc : Float, yc : Float, x1 : Float, y1 : Float, level : Int) : Int;
+	@:overload @:public @:static public static function pointCrossingsForQuad(px : Float, py : Float, x0 : Float, y0 : Float, xc : Float, yc : Float, x1 : Float, y1 : Float, level : Int) : Int;
 	
 	/**
 	* Calculates the number of times the cubic from (x0,y0) to (x1,y1)
@@ -86,7 +86,7 @@ extern class Curve
 	* +1 is added for each crossing where the Y coordinate is increasing
 	* -1 is added for each crossing where the Y coordinate is decreasing
 	*/
-	@:overload public static function pointCrossingsForCubic(px : Float, py : Float, x0 : Float, y0 : Float, xc0 : Float, yc0 : Float, xc1 : Float, yc1 : Float, x1 : Float, y1 : Float, level : Int) : Int;
+	@:overload @:public @:static public static function pointCrossingsForCubic(px : Float, py : Float, x0 : Float, y0 : Float, xc0 : Float, yc0 : Float, xc1 : Float, yc1 : Float, x1 : Float, y1 : Float, level : Int) : Int;
 	
 	/**
 	* The rectangle intersection test counts the number of times
@@ -118,7 +118,7 @@ extern class Curve
 	* "false" if the path intersects the rectangle.  Thus, no
 	* further processing is ever needed if an intersection occurs.
 	*/
-	public static var RECT_INTERSECTS(default, null) : Int;
+	@:public @:static @:final public static var RECT_INTERSECTS(default, null) : Int;
 	
 	/**
 	* Accumulate the number of times the path crosses the shadow
@@ -132,110 +132,110 @@ extern class Curve
 	* thrown.
 	* The caller must check r[xy]{min,max} for NaN values.
 	*/
-	@:overload public static function rectCrossingsForPath(pi : java.awt.geom.PathIterator, rxmin : Float, rymin : Float, rxmax : Float, rymax : Float) : Int;
+	@:overload @:public @:static public static function rectCrossingsForPath(pi : java.awt.geom.PathIterator, rxmin : Float, rymin : Float, rxmax : Float, rymax : Float) : Int;
 	
 	/**
 	* Accumulate the number of times the line crosses the shadow
 	* extending to the right of the rectangle.  See the comment
 	* for the RECT_INTERSECTS constant for more complete details.
 	*/
-	@:overload public static function rectCrossingsForLine(crossings : Int, rxmin : Float, rymin : Float, rxmax : Float, rymax : Float, x0 : Float, y0 : Float, x1 : Float, y1 : Float) : Int;
+	@:overload @:public @:static public static function rectCrossingsForLine(crossings : Int, rxmin : Float, rymin : Float, rxmax : Float, rymax : Float, x0 : Float, y0 : Float, x1 : Float, y1 : Float) : Int;
 	
 	/**
 	* Accumulate the number of times the quad crosses the shadow
 	* extending to the right of the rectangle.  See the comment
 	* for the RECT_INTERSECTS constant for more complete details.
 	*/
-	@:overload public static function rectCrossingsForQuad(crossings : Int, rxmin : Float, rymin : Float, rxmax : Float, rymax : Float, x0 : Float, y0 : Float, xc : Float, yc : Float, x1 : Float, y1 : Float, level : Int) : Int;
+	@:overload @:public @:static public static function rectCrossingsForQuad(crossings : Int, rxmin : Float, rymin : Float, rxmax : Float, rymax : Float, x0 : Float, y0 : Float, xc : Float, yc : Float, x1 : Float, y1 : Float, level : Int) : Int;
 	
 	/**
 	* Accumulate the number of times the cubic crosses the shadow
 	* extending to the right of the rectangle.  See the comment
 	* for the RECT_INTERSECTS constant for more complete details.
 	*/
-	@:overload public static function rectCrossingsForCubic(crossings : Int, rxmin : Float, rymin : Float, rxmax : Float, rymax : Float, x0 : Float, y0 : Float, xc0 : Float, yc0 : Float, xc1 : Float, yc1 : Float, x1 : Float, y1 : Float, level : Int) : Int;
+	@:overload @:public @:static public static function rectCrossingsForCubic(crossings : Int, rxmin : Float, rymin : Float, rxmax : Float, rymax : Float, x0 : Float, y0 : Float, xc0 : Float, yc0 : Float, xc1 : Float, yc1 : Float, x1 : Float, y1 : Float, level : Int) : Int;
 	
-	@:overload public function new(direction : Int) : Void;
+	@:overload @:public public function new(direction : Int) : Void;
 	
-	@:overload @:final public function getDirection() : Int;
+	@:overload @:public @:final public function getDirection() : Int;
 	
-	@:overload @:final public function getWithDirection(direction : Int) : sun.awt.geom.Curve;
+	@:overload @:public @:final public function getWithDirection(direction : Int) : sun.awt.geom.Curve;
 	
-	@:overload public static function round(v : Float) : Float;
+	@:overload @:public @:static public static function round(v : Float) : Float;
 	
-	@:overload public static function orderof(x1 : Float, x2 : Float) : Int;
+	@:overload @:public @:static public static function orderof(x1 : Float, x2 : Float) : Int;
 	
-	@:overload public static function signeddiffbits(y1 : Float, y2 : Float) : haxe.Int64;
+	@:overload @:public @:static public static function signeddiffbits(y1 : Float, y2 : Float) : haxe.Int64;
 	
-	@:overload public static function diffbits(y1 : Float, y2 : Float) : haxe.Int64;
+	@:overload @:public @:static public static function diffbits(y1 : Float, y2 : Float) : haxe.Int64;
 	
-	@:overload public static function prev(v : Float) : Float;
+	@:overload @:public @:static public static function prev(v : Float) : Float;
 	
-	@:overload public static function next(v : Float) : Float;
+	@:overload @:public @:static public static function next(v : Float) : Float;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function controlPointString() : String;
+	@:overload @:public public function controlPointString() : String;
 	
-	@:overload @:abstract public function getOrder() : Int;
+	@:overload @:public @:abstract public function getOrder() : Int;
 	
-	@:overload @:abstract public function getXTop() : Float;
+	@:overload @:public @:abstract public function getXTop() : Float;
 	
-	@:overload @:abstract public function getYTop() : Float;
+	@:overload @:public @:abstract public function getYTop() : Float;
 	
-	@:overload @:abstract public function getXBot() : Float;
+	@:overload @:public @:abstract public function getXBot() : Float;
 	
-	@:overload @:abstract public function getYBot() : Float;
+	@:overload @:public @:abstract public function getYBot() : Float;
 	
-	@:overload @:abstract public function getXMin() : Float;
+	@:overload @:public @:abstract public function getXMin() : Float;
 	
-	@:overload @:abstract public function getXMax() : Float;
+	@:overload @:public @:abstract public function getXMax() : Float;
 	
-	@:overload @:abstract public function getX0() : Float;
+	@:overload @:public @:abstract public function getX0() : Float;
 	
-	@:overload @:abstract public function getY0() : Float;
+	@:overload @:public @:abstract public function getY0() : Float;
 	
-	@:overload @:abstract public function getX1() : Float;
+	@:overload @:public @:abstract public function getX1() : Float;
 	
-	@:overload @:abstract public function getY1() : Float;
+	@:overload @:public @:abstract public function getY1() : Float;
 	
-	@:overload @:abstract public function XforY(y : Float) : Float;
+	@:overload @:public @:abstract public function XforY(y : Float) : Float;
 	
-	@:overload @:abstract public function TforY(y : Float) : Float;
+	@:overload @:public @:abstract public function TforY(y : Float) : Float;
 	
-	@:overload @:abstract public function XforT(t : Float) : Float;
+	@:overload @:public @:abstract public function XforT(t : Float) : Float;
 	
-	@:overload @:abstract public function YforT(t : Float) : Float;
+	@:overload @:public @:abstract public function YforT(t : Float) : Float;
 	
-	@:overload @:abstract public function dXforT(t : Float, deriv : Int) : Float;
+	@:overload @:public @:abstract public function dXforT(t : Float, deriv : Int) : Float;
 	
-	@:overload @:abstract public function dYforT(t : Float, deriv : Int) : Float;
+	@:overload @:public @:abstract public function dYforT(t : Float, deriv : Int) : Float;
 	
-	@:overload @:abstract public function nextVertical(t0 : Float, t1 : Float) : Float;
+	@:overload @:public @:abstract public function nextVertical(t0 : Float, t1 : Float) : Float;
 	
-	@:overload public function crossingsFor(x : Float, y : Float) : Int;
+	@:overload @:public public function crossingsFor(x : Float, y : Float) : Int;
 	
-	@:overload public function accumulateCrossings(c : sun.awt.geom.Crossings) : Bool;
+	@:overload @:public public function accumulateCrossings(c : sun.awt.geom.Crossings) : Bool;
 	
-	@:overload @:abstract public function enlarge(r : java.awt.geom.Rectangle2D) : Void;
+	@:overload @:public @:abstract public function enlarge(r : java.awt.geom.Rectangle2D) : Void;
 	
-	@:overload public function getSubCurve(ystart : Float, yend : Float) : sun.awt.geom.Curve;
+	@:overload @:public public function getSubCurve(ystart : Float, yend : Float) : sun.awt.geom.Curve;
 	
-	@:overload @:abstract public function getReversedCurve() : sun.awt.geom.Curve;
+	@:overload @:public @:abstract public function getReversedCurve() : sun.awt.geom.Curve;
 	
-	@:overload @:abstract public function getSubCurve(ystart : Float, yend : Float, dir : Int) : sun.awt.geom.Curve;
+	@:overload @:public @:abstract public function getSubCurve(ystart : Float, yend : Float, dir : Int) : sun.awt.geom.Curve;
 	
-	@:overload public function compareTo(that : sun.awt.geom.Curve, yrange : java.NativeArray<Float>) : Int;
+	@:overload @:public public function compareTo(that : sun.awt.geom.Curve, yrange : java.NativeArray<Float>) : Int;
 	
-	public static var TMIN(default, null) : Float;
+	@:public @:static @:final public static var TMIN(default, null) : Float;
 	
-	@:overload public function findIntersect(that : sun.awt.geom.Curve, yrange : java.NativeArray<Float>, ymin : Float, slevel : Int, tlevel : Int, s0 : Float, xs0 : Float, ys0 : Float, s1 : Float, xs1 : Float, ys1 : Float, t0 : Float, xt0 : Float, yt0 : Float, t1 : Float, xt1 : Float, yt1 : Float) : Bool;
+	@:overload @:public public function findIntersect(that : sun.awt.geom.Curve, yrange : java.NativeArray<Float>, ymin : Float, slevel : Int, tlevel : Int, s0 : Float, xs0 : Float, ys0 : Float, s1 : Float, xs1 : Float, ys1 : Float, t0 : Float, xt0 : Float, yt0 : Float, t1 : Float, xt1 : Float, yt1 : Float) : Bool;
 	
-	@:overload public function refineTforY(t0 : Float, yt0 : Float, y0 : Float) : Float;
+	@:overload @:public public function refineTforY(t0 : Float, yt0 : Float, y0 : Float) : Float;
 	
-	@:overload public function fairlyClose(v1 : Float, v2 : Float) : Bool;
+	@:overload @:public public function fairlyClose(v1 : Float, v2 : Float) : Bool;
 	
-	@:overload @:abstract public function getSegment(coords : java.NativeArray<Float>) : Int;
+	@:overload @:public @:abstract public function getSegment(coords : java.NativeArray<Float>) : Int;
 	
 	
 }

@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 */
 @:internal extern class ValuePropertyInfoImpl<TypeT, ClassDeclT, FieldT, MethodT> extends com.sun.xml.internal.bind.v2.model.impl.SingleTypePropertyInfoImpl<TypeT, ClassDeclT, FieldT, MethodT> implements com.sun.xml.internal.bind.v2.model.core.ValuePropertyInfo<TypeT, ClassDeclT>
 {
-	@:overload override public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:public override public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
 	
 }

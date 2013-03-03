@@ -30,7 +30,7 @@ extern class XMLX509SKI extends com.sun.org.apache.xml.internal.security.utils.S
 	* A key identifer shall be unique with respect to all key identifiers
 	* for the subject with which it is used. This extension is always non-critical.
 	*/
-	public static var SKI_OID(default, null) : String;
+	@:public @:static @:final public static var SKI_OID(default, null) : String;
 	
 	/**
 	* Constructor X509SKI
@@ -38,7 +38,7 @@ extern class XMLX509SKI extends com.sun.org.apache.xml.internal.security.utils.S
 	* @param doc
 	* @param skiBytes
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, skiBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, skiBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructor XMLX509SKI
@@ -47,7 +47,7 @@ extern class XMLX509SKI extends com.sun.org.apache.xml.internal.security.utils.S
 	* @param x509certificate
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, x509certificate : java.security.cert.X509Certificate) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, x509certificate : java.security.cert.X509Certificate) : Void;
 	
 	/**
 	* Constructor XMLX509SKI
@@ -56,7 +56,7 @@ extern class XMLX509SKI extends com.sun.org.apache.xml.internal.security.utils.S
 	* @param BaseURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Method getSKIBytes
@@ -64,7 +64,7 @@ extern class XMLX509SKI extends com.sun.org.apache.xml.internal.security.utils.S
 	* @return the skibytes
 	* @throws XMLSecurityException
 	*/
-	@:overload public function getSKIBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getSKIBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Method getSKIBytesFromCert
@@ -75,13 +75,13 @@ extern class XMLX509SKI extends com.sun.org.apache.xml.internal.security.utils.S
 	* @throws XMLSecurityException
 	* @see java.security.cert.X509Extension#getExtensionValue(java.lang.String)
 	*/
-	@:overload public static function getSKIBytesFromCert(cert : java.security.cert.X509Certificate) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function getSKIBytesFromCert(cert : java.security.cert.X509Certificate) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** @inheritDoc */
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/** @inheritDoc */
-	@:overload public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

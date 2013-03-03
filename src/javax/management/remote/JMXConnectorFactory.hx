@@ -32,7 +32,7 @@ extern class JMXConnectorFactory
 	* calls.  The value associated with this attribute is an instance
 	* of {@link ClassLoader}.</p>
 	*/
-	public static var DEFAULT_CLASS_LOADER(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_CLASS_LOADER(default, null) : String;
 	
 	/**
 	* <p>Name of the attribute that specifies the provider packages
@@ -40,7 +40,7 @@ extern class JMXConnectorFactory
 	* The value associated with this attribute is a string with
 	* package names separated by vertical bars (<code>|</code>).</p>
 	*/
-	public static var PROTOCOL_PROVIDER_PACKAGES(default, null) : String;
+	@:public @:static @:final public static var PROTOCOL_PROVIDER_PACKAGES(default, null) : String;
 	
 	/**
 	* <p>Name of the attribute that specifies the class
@@ -48,7 +48,7 @@ extern class JMXConnectorFactory
 	* The value associated with this attribute is an instance
 	* of {@link ClassLoader}.</p>
 	*/
-	public static var PROTOCOL_PROVIDER_CLASS_LOADER(default, null) : String;
+	@:public @:static @:final public static var PROTOCOL_PROVIDER_CLASS_LOADER(default, null) : String;
 	
 	/**
 	* <p>Creates a connection to the connector server at the given
@@ -71,7 +71,7 @@ extern class JMXConnectorFactory
 	* @exception SecurityException if the connection cannot be made
 	* for security reasons.
 	*/
-	@:overload public static function connect(serviceURL : javax.management.remote.JMXServiceURL) : javax.management.remote.JMXConnector;
+	@:overload @:public @:static public static function connect(serviceURL : javax.management.remote.JMXServiceURL) : javax.management.remote.JMXConnector;
 	
 	/**
 	* <p>Creates a connection to the connector server at the given
@@ -105,7 +105,7 @@ extern class JMXConnectorFactory
 	* @exception SecurityException if the connection cannot be made
 	* for security reasons.
 	*/
-	@:overload public static function connect(serviceURL : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>) : javax.management.remote.JMXConnector;
+	@:overload @:public @:static public static function connect(serviceURL : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>) : javax.management.remote.JMXConnector;
 	
 	/**
 	* <p>Creates a connector client for the connector server at the
@@ -136,7 +136,7 @@ extern class JMXConnectorFactory
 	* protocol in <code>serviceURL</code> but it cannot be used for
 	* some reason.
 	*/
-	@:overload public static function newJMXConnector(serviceURL : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>) : javax.management.remote.JMXConnector;
+	@:overload @:public @:static public static function newJMXConnector(serviceURL : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>) : javax.management.remote.JMXConnector;
 	
 	
 }

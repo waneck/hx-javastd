@@ -28,21 +28,21 @@ extern class Handler extends java.net.URLStreamHandler
 	/**
 	* A class to handle the gopher protocol.
 	*/
-	@:overload override private function getDefaultPort() : Int;
+	@:overload @:protected override private function getDefaultPort() : Int;
 	
-	@:overload override public function openConnection(u : java.net.URL) : java.net.URLConnection;
+	@:overload @:public override public function openConnection(u : java.net.URL) : java.net.URLConnection;
 	
-	@:overload override public function openConnection(u : java.net.URL, p : java.net.Proxy) : java.net.URLConnection;
+	@:overload @:public override public function openConnection(u : java.net.URL, p : java.net.Proxy) : java.net.URLConnection;
 	
 	
 }
 @:internal extern class GopherURLConnection extends sun.net.www.URLConnection
 {
-	@:overload override public function connect() : Void;
+	@:overload @:public override public function connect() : Void;
 	
-	@:overload override public function getInputStream() : java.io.InputStream;
+	@:overload @:public override public function getInputStream() : java.io.InputStream;
 	
-	@:overload override public function getPermission() : java.security.Permission;
+	@:overload @:public override public function getPermission() : java.security.Permission;
 	
 	
 }

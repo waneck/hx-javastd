@@ -25,15 +25,15 @@ package sun.invoke.util;
 */
 extern class BytecodeDescriptor
 {
-	@:overload public static function parseMethod(bytecodeSignature : String, loader : java.lang.ClassLoader) : java.util.List<Class<Dynamic>>;
+	@:overload @:public @:static public static function parseMethod(bytecodeSignature : String, loader : java.lang.ClassLoader) : java.util.List<Class<Dynamic>>;
 	
-	@:overload public static function unparse(type : Class<Dynamic>) : String;
+	@:overload @:public @:static public static function unparse(type : Class<Dynamic>) : String;
 	
-	@:overload public static function unparse(type : java.lang.invoke.MethodType) : String;
+	@:overload @:public @:static public static function unparse(type : java.lang.invoke.MethodType) : String;
 	
-	@:overload public static function unparse(type : Dynamic) : String;
+	@:overload @:public @:static public static function unparse(type : Dynamic) : String;
 	
-	@:overload public static function unparseMethod(rtype : Class<Dynamic>, ptypes : java.util.List<Class<Dynamic>>) : String;
+	@:overload @:public @:static public static function unparseMethod(rtype : Class<Dynamic>, ptypes : java.util.List<Class<Dynamic>>) : String;
 	
 	
 }

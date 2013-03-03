@@ -29,7 +29,7 @@ extern class Timer
 	* Creates a new timer.  The associated thread does <i>not</i>
 	* {@linkplain Thread#setDaemon run as a daemon}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new timer whose associated thread may be specified to
@@ -41,7 +41,7 @@ extern class Timer
 	*
 	* @param isDaemon true if the associated thread should run as a daemon.
 	*/
-	@:overload public function new(isDaemon : Bool) : Void;
+	@:overload @:public public function new(isDaemon : Bool) : Void;
 	
 	/**
 	* Creates a new timer whose associated thread has the specified name.
@@ -52,7 +52,7 @@ extern class Timer
 	* @throws NullPointerException if {@code name} is null
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(name : String) : Void;
+	@:require(java5) @:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a new timer whose associated thread has the specified name,
@@ -64,7 +64,7 @@ extern class Timer
 	* @throws NullPointerException if {@code name} is null
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(name : String, isDaemon : Bool) : Void;
+	@:require(java5) @:overload @:public public function new(name : String, isDaemon : Bool) : Void;
 	
 	/**
 	* Schedules the specified task for execution after the specified delay.
@@ -77,7 +77,7 @@ extern class Timer
 	*         cancelled, timer was cancelled, or timer thread terminated.
 	* @throws NullPointerException if {@code task} is null
 	*/
-	@:overload public function schedule(task : java.util.TimerTask, delay : haxe.Int64) : Void;
+	@:overload @:public public function schedule(task : java.util.TimerTask, delay : haxe.Int64) : Void;
 	
 	/**
 	* Schedules the specified task for execution at the specified time.  If
@@ -90,7 +90,7 @@ extern class Timer
 	*         cancelled, timer was cancelled, or timer thread terminated.
 	* @throws NullPointerException if {@code task} or {@code time} is null
 	*/
-	@:overload public function schedule(task : java.util.TimerTask, time : java.util.Date) : Void;
+	@:overload @:public public function schedule(task : java.util.TimerTask, time : java.util.Date) : Void;
 	
 	/**
 	* Schedules the specified task for repeated <i>fixed-delay execution</i>,
@@ -124,7 +124,7 @@ extern class Timer
 	*         cancelled, timer was cancelled, or timer thread terminated.
 	* @throws NullPointerException if {@code task} is null
 	*/
-	@:overload public function schedule(task : java.util.TimerTask, delay : haxe.Int64, period : haxe.Int64) : Void;
+	@:overload @:public public function schedule(task : java.util.TimerTask, delay : haxe.Int64, period : haxe.Int64) : Void;
 	
 	/**
 	* Schedules the specified task for repeated <i>fixed-delay execution</i>,
@@ -159,7 +159,7 @@ extern class Timer
 	*         cancelled, timer was cancelled, or timer thread terminated.
 	* @throws NullPointerException if {@code task} or {@code firstTime} is null
 	*/
-	@:overload public function schedule(task : java.util.TimerTask, firstTime : java.util.Date, period : haxe.Int64) : Void;
+	@:overload @:public public function schedule(task : java.util.TimerTask, firstTime : java.util.Date, period : haxe.Int64) : Void;
 	
 	/**
 	* Schedules the specified task for repeated <i>fixed-rate execution</i>,
@@ -194,7 +194,7 @@ extern class Timer
 	*         cancelled, timer was cancelled, or timer thread terminated.
 	* @throws NullPointerException if {@code task} is null
 	*/
-	@:overload public function scheduleAtFixedRate(task : java.util.TimerTask, delay : haxe.Int64, period : haxe.Int64) : Void;
+	@:overload @:public public function scheduleAtFixedRate(task : java.util.TimerTask, delay : haxe.Int64, period : haxe.Int64) : Void;
 	
 	/**
 	* Schedules the specified task for repeated <i>fixed-rate execution</i>,
@@ -231,7 +231,7 @@ extern class Timer
 	*         cancelled, timer was cancelled, or timer thread terminated.
 	* @throws NullPointerException if {@code task} or {@code firstTime} is null
 	*/
-	@:overload public function scheduleAtFixedRate(task : java.util.TimerTask, firstTime : java.util.Date, period : haxe.Int64) : Void;
+	@:overload @:public public function scheduleAtFixedRate(task : java.util.TimerTask, firstTime : java.util.Date, period : haxe.Int64) : Void;
 	
 	/**
 	* Terminates this timer, discarding any currently scheduled tasks.
@@ -247,7 +247,7 @@ extern class Timer
 	* <p>This method may be called repeatedly; the second and subsequent
 	* calls have no effect.
 	*/
-	@:overload public function cancel() : Void;
+	@:overload @:public public function cancel() : Void;
 	
 	/**
 	* Removes all cancelled tasks from this timer's task queue.  <i>Calling
@@ -269,13 +269,13 @@ extern class Timer
 	* @return the number of tasks removed from the queue.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function purge() : Int;
+	@:require(java5) @:overload @:public public function purge() : Int;
 	
 	
 }
 @:internal extern class TimerThread extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

@@ -29,7 +29,7 @@ extern class SimpleAnnotationValueVisitor7<R, P> extends javax.lang.model.util.S
 	* Constructor for concrete subclasses; uses {@code null} for the
 	* default value.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructor for concrete subclasses; uses the argument for the
@@ -37,7 +37,7 @@ extern class SimpleAnnotationValueVisitor7<R, P> extends javax.lang.model.util.S
 	*
 	* @param defaultValue the value to assign to {@link #DEFAULT_VALUE}
 	*/
-	@:overload private function new(defaultValue : R) : Void;
+	@:overload @:protected private function new(defaultValue : R) : Void;
 	
 	
 }

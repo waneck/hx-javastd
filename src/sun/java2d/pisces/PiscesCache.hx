@@ -25,7 +25,7 @@ package sun.java2d.pisces;
 */
 @:internal extern class PiscesCache
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

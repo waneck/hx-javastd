@@ -26,7 +26,7 @@ extern class DOM2Helper
 	/**
 	* Construct an instance.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the local name of the given node, as defined by the
@@ -39,7 +39,7 @@ extern class DOM2Helper
 	* @return String containing the local name, or null if the node
 	* was not assigned a Namespace.
 	*/
-	@:overload public function getLocalNameOfNode(n : org.w3c.dom.Node) : String;
+	@:overload @:public public function getLocalNameOfNode(n : org.w3c.dom.Node) : String;
 	
 	/**
 	* Returns the Namespace Name (Namespace URI) for the given node.
@@ -56,7 +56,7 @@ extern class DOM2Helper
 	* @return String containing the Namespace URI bound to this DOM node
 	* at the time the Node was created.
 	*/
-	@:overload public function getNamespaceOfNode(n : org.w3c.dom.Node) : String;
+	@:overload @:public public function getNamespaceOfNode(n : org.w3c.dom.Node) : String;
 	
 	
 }

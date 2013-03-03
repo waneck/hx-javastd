@@ -29,7 +29,7 @@ package com.sun.media.sound;
 	* Invoked when there is at least one event in the queue.
 	* Implement this as a callback to process one event.
 	*/
-	@:overload private function processEvent(eventInfo : com.sun.media.sound.EventDispatcher.EventDispatcher_EventInfo) : Void;
+	@:overload @:protected private function processEvent(eventInfo : com.sun.media.sound.EventDispatcher.EventDispatcher_EventInfo) : Void;
 	
 	/**
 	* Wait until there is something in the event queue to process.  Then
@@ -39,12 +39,12 @@ package com.sun.media.sound;
 	* exclusive access over the code where an event is removed from the
 	*queue.
 	*/
-	@:overload private function dispatchEvents() : Void;
+	@:overload @:protected private function dispatchEvents() : Void;
 	
 	/**
 	* A loop to dispatch events.
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
@@ -71,7 +71,7 @@ package com.sun.media.sound;
 	/**
 	* Called by event dispatcher in regular intervals
 	*/
-	@:overload public function checkLine() : Void;
+	@:overload @:public public function checkLine() : Void;
 	
 	
 }

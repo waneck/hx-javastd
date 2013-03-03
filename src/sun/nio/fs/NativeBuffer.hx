@@ -29,7 +29,7 @@ package sun.nio.fs;
 }
 @:native('sun$nio$fs$NativeBuffer$Deallocator') @:internal extern class NativeBuffer_Deallocator implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

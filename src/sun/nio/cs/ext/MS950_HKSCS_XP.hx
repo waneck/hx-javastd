@@ -25,25 +25,25 @@ package sun.nio.cs.ext;
 */
 extern class MS950_HKSCS_XP extends java.nio.charset.Charset
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	
 }
 @:native('sun$nio$cs$ext$MS950_HKSCS_XP$Decoder') @:internal extern class MS950_HKSCS_XP_Decoder extends sun.nio.cs.ext.HKSCS.HKSCS_Decoder
 {
-	@:overload override public function decodeDoubleEx(b1 : Int, b2 : Int) : java.StdTypes.Char16;
+	@:overload @:public override public function decodeDoubleEx(b1 : Int, b2 : Int) : java.StdTypes.Char16;
 	
 	
 }
 @:native('sun$nio$cs$ext$MS950_HKSCS_XP$Encoder') @:internal extern class MS950_HKSCS_XP_Encoder extends sun.nio.cs.ext.HKSCS.HKSCS_Encoder
 {
-	@:overload override public function encodeSupp(cp : Int) : Int;
+	@:overload @:public override public function encodeSupp(cp : Int) : Int;
 	
 	
 }

@@ -30,11 +30,11 @@ package com.sun.media.sound;
 */
 extern class SF2InstrumentRegion extends com.sun.media.sound.SF2Region
 {
-	private var layer : com.sun.media.sound.SF2Layer;
+	@:protected private var layer : com.sun.media.sound.SF2Layer;
 	
-	@:overload public function getLayer() : com.sun.media.sound.SF2Layer;
+	@:overload @:public public function getLayer() : com.sun.media.sound.SF2Layer;
 	
-	@:overload public function setLayer(layer : com.sun.media.sound.SF2Layer) : Void;
+	@:overload @:public public function setLayer(layer : com.sun.media.sound.SF2Layer) : Void;
 	
 	
 }

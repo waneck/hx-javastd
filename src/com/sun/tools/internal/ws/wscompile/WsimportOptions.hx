@@ -28,52 +28,52 @@ extern class WsimportOptions extends com.sun.tools.internal.ws.wscompile.Options
 	/**
 	* -wsdlLocation
 	*/
-	public var wsdlLocation : String;
+	@:public public var wsdlLocation : String;
 	
 	/**
 	* Actually stores {@link com.sun.org.apache.xml.internal.resolver.tools.CatalogResolver}, but the field
 	* type is made to {@link org.xml.sax.EntityResolver} so that XJC can be
 	* used even if resolver.jar is not available in the classpath.
 	*/
-	public var entityResolver : org.xml.sax.EntityResolver;
+	@:public public var entityResolver : org.xml.sax.EntityResolver;
 	
 	/**
 	* The -p option that should control the default Java package that
 	* will contain the generated code. Null if unspecified.
 	*/
-	public var defaultPackage : String;
+	@:public public var defaultPackage : String;
 	
 	/**
 	* The -clientjar option to package client artifacts as jar
 	*/
-	public var clientjar : String;
+	@:public public var clientjar : String;
 	
 	/**
 	* -XadditionalHeaders
 	*/
-	public var additionalHeaders : Bool;
+	@:public public var additionalHeaders : Bool;
 	
 	/**
 	* Setting disableSSLHostVerification to true disables the SSL Hostname verification while fetching the wsdls.
 	* -XdisableSSLHostVerification
 	*/
-	public var disableSSLHostnameVerification : Bool;
+	@:public public var disableSSLHostnameVerification : Bool;
 	
 	/**
 	* Authentication file
 	*/
-	public var authFile : java.io.File;
+	@:public public var authFile : java.io.File;
 	
-	@:overload public function getCodeModel() : com.sun.codemodel.internal.JCodeModel;
+	@:overload @:public public function getCodeModel() : com.sun.codemodel.internal.JCodeModel;
 	
-	@:overload public function getSchemaCompiler() : com.sun.tools.internal.xjc.api.SchemaCompiler;
+	@:overload @:public public function getSchemaCompiler() : com.sun.tools.internal.xjc.api.SchemaCompiler;
 	
-	@:overload public function setCodeModel(codeModel : com.sun.codemodel.internal.JCodeModel) : Void;
+	@:overload @:public public function setCodeModel(codeModel : com.sun.codemodel.internal.JCodeModel) : Void;
 	
 	/**
 	* This captures jars passed on the commandline and passes them to XJC and puts them in the classpath for compilation
 	*/
-	public var cmdlineJars : java.util.List<String>;
+	@:public public var cmdlineJars : java.util.List<String>;
 	
 	/**
 	* Parses arguments and fill fields of this object.
@@ -81,20 +81,20 @@ extern class WsimportOptions extends com.sun.tools.internal.ws.wscompile.Options
 	* @exception BadCommandLineException
 	*      thrown when there's a problem in the command-line arguments
 	*/
-	@:overload @:final override public function parseArguments(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:final override public function parseArguments(args : java.NativeArray<String>) : Void;
 	
 	/** -Xno-addressing-databinding option to disable addressing namespace data binding. This is
 	* experimental switch and will be working as a temporary workaround till
 	* jaxb can provide a better way to selelctively disable compiling of an
 	* schema component.
 	* **/
-	public var noAddressingBbinding : Bool;
+	@:public public var noAddressingBbinding : Bool;
 	
-	@:overload override public function parseArguments(args : java.NativeArray<String>, i : Int) : Int;
+	@:overload @:public override public function parseArguments(args : java.NativeArray<String>, i : Int) : Int;
 	
-	@:overload public function validate() : Void;
+	@:overload @:public public function validate() : Void;
 	
-	@:overload override private function addFile(arg : String) : Void;
+	@:overload @:protected override private function addFile(arg : String) : Void;
 	
 	/**
 	* There is supposed to be one handler chain per generated SEI.
@@ -102,39 +102,39 @@ extern class WsimportOptions extends com.sun.tools.internal.ws.wscompile.Options
 	* with each port on the generated SEI. For now lets preserve the JAXWS 2.0 FCS
 	* behaviour and generate only one @HandlerChain on the SEI
 	*/
-	@:overload public function getHandlerChainConfiguration() : org.w3c.dom.Element;
+	@:overload @:public public function getHandlerChainConfiguration() : org.w3c.dom.Element;
 	
-	@:overload public function addHandlerChainConfiguration(config : org.w3c.dom.Element) : Void;
+	@:overload @:public public function addHandlerChainConfiguration(config : org.w3c.dom.Element) : Void;
 	
-	@:overload public function getWSDLs() : java.NativeArray<org.xml.sax.InputSource>;
+	@:overload @:public public function getWSDLs() : java.NativeArray<org.xml.sax.InputSource>;
 	
-	@:overload public function getSchemas() : java.NativeArray<org.xml.sax.InputSource>;
+	@:overload @:public public function getSchemas() : java.NativeArray<org.xml.sax.InputSource>;
 	
-	@:overload public function getWSDLBindings() : java.NativeArray<org.xml.sax.InputSource>;
+	@:overload @:public public function getWSDLBindings() : java.NativeArray<org.xml.sax.InputSource>;
 	
-	@:overload public function getSchemaBindings() : java.NativeArray<org.xml.sax.InputSource>;
+	@:overload @:public public function getSchemaBindings() : java.NativeArray<org.xml.sax.InputSource>;
 	
-	@:overload public function addWSDL(source : java.io.File) : Void;
+	@:overload @:public public function addWSDL(source : java.io.File) : Void;
 	
-	@:overload public function addWSDL(is : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function addWSDL(is : org.xml.sax.InputSource) : Void;
 	
-	@:overload public function addSchema(source : java.io.File) : Void;
+	@:overload @:public public function addSchema(source : java.io.File) : Void;
 	
-	@:overload public function addSchema(is : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function addSchema(is : org.xml.sax.InputSource) : Void;
 	
 	/**
 	* Recursively scan directories and add all XSD files in it.
 	*/
-	@:overload public function addGrammarRecursive(dir : java.io.File) : Void;
+	@:overload @:public public function addGrammarRecursive(dir : java.io.File) : Void;
 	
 	/**
 	* Adds a new input schema.
 	*/
-	@:overload public function addWSDLBindFile(is : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function addWSDLBindFile(is : org.xml.sax.InputSource) : Void;
 	
-	@:overload public function addSchemmaBindFile(is : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function addSchemmaBindFile(is : org.xml.sax.InputSource) : Void;
 	
-	@:overload public function addBindings(name : String) : Void;
+	@:overload @:public public function addBindings(name : String) : Void;
 	
 	/**
 	* Exposing it as a public method to allow external tools such as NB to read from wsdl model and work on it.
@@ -145,7 +145,7 @@ extern class WsimportOptions extends com.sun.tools.internal.ws.wscompile.Options
 	*
 	* @param receiver {@link ErrorReceiver}
 	*/
-	@:overload @:final public function parseBindings(receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public @:final public function parseBindings(receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
 	
 }

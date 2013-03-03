@@ -33,30 +33,30 @@ extern class AbstractMessageImpl extends com.sun.xml.internal.ws.api.message.Mes
 	* So if you aren't using those methods that use this field,
 	* this can be null.
 	*/
-	private var soapVersion(default, null) : com.sun.xml.internal.ws.api.SOAPVersion;
+	@:protected @:final private var soapVersion(default, null) : com.sun.xml.internal.ws.api.SOAPVersion;
 	
-	@:overload private function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
+	@:overload @:protected private function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
 	/**
 	* Copy constructor.
 	*/
-	@:overload private function new(that : com.sun.xml.internal.ws.message.AbstractMessageImpl) : Void;
+	@:overload @:protected private function new(that : com.sun.xml.internal.ws.message.AbstractMessageImpl) : Void;
 	
-	@:overload override public function readEnvelopeAsSource() : javax.xml.transform.Source;
+	@:overload @:public override public function readEnvelopeAsSource() : javax.xml.transform.Source;
 	
-	@:overload override public function readPayloadAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
+	@:overload @:public override public function readPayloadAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
 	
-	@:overload override public function readPayloadAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
+	@:overload @:public override public function readPayloadAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
 	
 	/**
 	* Default implementation that relies on {@link #writePayloadTo(XMLStreamWriter)}
 	*/
-	@:overload override public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Writes the whole envelope as SAX events.
 	*/
-	@:overload override public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public override public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Writes the payload to SAX events.
@@ -66,21 +66,21 @@ extern class AbstractMessageImpl extends com.sun.xml.internal.ws.api.message.Mes
 	*      suitable for embedding this into a bigger SAX event sequence.
 	*      if false, this method generaets a completely SAX event sequence on its own.
 	*/
-	@:overload @:abstract private function writePayloadTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, fragment : Bool) : Void;
+	@:overload @:protected @:abstract private function writePayloadTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, fragment : Bool) : Void;
 	
 	/**
 	* Default implementation that uses {@link #writeTo(ContentHandler, ErrorHandler)}
 	*/
-	@:overload override public function readAsSOAPMessage() : javax.xml.soap.SOAPMessage;
+	@:overload @:public override public function readAsSOAPMessage() : javax.xml.soap.SOAPMessage;
 	
 	/**
 	*
 	*/
-	@:overload override public function readAsSOAPMessage(packet : com.sun.xml.internal.ws.api.message.Packet, inbound : Bool) : javax.xml.soap.SOAPMessage;
+	@:overload @:public override public function readAsSOAPMessage(packet : com.sun.xml.internal.ws.api.message.Packet, inbound : Bool) : javax.xml.soap.SOAPMessage;
 	
-	private static var EMPTY_ATTS(default, null) : org.xml.sax.helpers.AttributesImpl;
+	@:protected @:static @:final private static var EMPTY_ATTS(default, null) : org.xml.sax.helpers.AttributesImpl;
 	
-	private static var NULL_LOCATOR(default, null) : org.xml.sax.helpers.LocatorImpl;
+	@:protected @:static @:final private static var NULL_LOCATOR(default, null) : org.xml.sax.helpers.LocatorImpl;
 	
 	
 }

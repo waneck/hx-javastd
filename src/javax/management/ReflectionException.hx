@@ -37,7 +37,7 @@ package javax.management;
 	*
 	* @param e the wrapped exception.
 	*/
-	@:overload public function new(e : java.lang.Exception) : Void;
+	@:overload @:public public function new(e : java.lang.Exception) : Void;
 	
 	/**
 	* Creates a <CODE>ReflectionException</CODE> that wraps the actual <CODE>java.lang.Exception</CODE> with
@@ -46,21 +46,21 @@ package javax.management;
 	* @param e the wrapped exception.
 	* @param message the detail message.
 	*/
-	@:overload public function new(e : java.lang.Exception, message : String) : Void;
+	@:overload @:public public function new(e : java.lang.Exception, message : String) : Void;
 	
 	/**
 	* Returns the actual {@link Exception} thrown.
 	*
 	* @return the wrapped {@link Exception}.
 	*/
-	@:overload public function getTargetException() : java.lang.Exception;
+	@:overload @:public public function getTargetException() : java.lang.Exception;
 	
 	/**
 	* Returns the actual {@link Exception} thrown.
 	*
 	* @return the wrapped {@link Exception}.
 	*/
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

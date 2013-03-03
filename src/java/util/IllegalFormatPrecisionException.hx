@@ -38,16 +38,16 @@ package java.util;
 	* @param  p
 	*         The precision
 	*/
-	@:overload public function new(p : Int) : Void;
+	@:overload @:public public function new(p : Int) : Void;
 	
 	/**
 	* Returns the precision
 	*
 	* @return  The precision
 	*/
-	@:overload public function getPrecision() : Int;
+	@:overload @:public public function getPrecision() : Int;
 	
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

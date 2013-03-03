@@ -29,21 +29,21 @@ extern class IORTemplateListImpl extends com.sun.corba.se.impl.ior.FreezableList
 	* so that adding an IORTemplateList to an IORTemplateList just results
 	* in a list of TaggedProfileTemplates.
 	*/
-	@:overload override public function set(index : Int, element : Dynamic) : Dynamic;
+	@:overload @:public override public function set(index : Int, element : Dynamic) : Dynamic;
 	
-	@:overload override public function add(index : Int, element : Dynamic) : Void;
+	@:overload @:public override public function add(index : Int, element : Dynamic) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(is : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	@:overload @:public public function new(is : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
-	@:overload override public function makeImmutable() : Void;
+	@:overload @:public override public function makeImmutable() : Void;
 	
-	@:overload public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload public function makeIOR(orb : com.sun.corba.se.spi.orb.ORB, typeid : String, oid : com.sun.corba.se.spi.ior.ObjectId) : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public public function makeIOR(orb : com.sun.corba.se.spi.orb.ORB, typeid : String, oid : com.sun.corba.se.spi.ior.ObjectId) : com.sun.corba.se.spi.ior.IOR;
 	
-	@:overload public function isEquivalent(other : com.sun.corba.se.spi.ior.IORFactory) : Bool;
+	@:overload @:public public function isEquivalent(other : com.sun.corba.se.spi.ior.IORFactory) : Bool;
 	
 	
 }

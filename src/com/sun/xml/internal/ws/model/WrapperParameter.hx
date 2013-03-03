@@ -42,30 +42,30 @@ extern class WrapperParameter extends com.sun.xml.internal.ws.model.ParameterImp
 	*
 	* @author Vivek Pandey
 	*/
-	private var wrapperChildren(default, null) : java.util.List<com.sun.xml.internal.ws.model.ParameterImpl>;
+	@:protected @:final private var wrapperChildren(default, null) : java.util.List<com.sun.xml.internal.ws.model.ParameterImpl>;
 	
-	@:overload public function new(parent : com.sun.xml.internal.ws.model.JavaMethodImpl, typeRef : com.sun.xml.internal.bind.api.TypeReference, mode : Mode, index : Int) : Void;
+	@:overload @:public public function new(parent : com.sun.xml.internal.ws.model.JavaMethodImpl, typeRef : com.sun.xml.internal.bind.api.TypeReference, mode : Mode, index : Int) : Void;
 	
 	/**
 	*
 	* @deprecated
 	*      Why are you calling a method that always return true?
 	*/
-	@:overload override public function isWrapperStyle() : Bool;
+	@:overload @:public override public function isWrapperStyle() : Bool;
 	
 	/**
 	* @return Returns the wrapperChildren.
 	*/
-	@:overload public function getWrapperChildren() : java.util.List<com.sun.xml.internal.ws.model.ParameterImpl>;
+	@:overload @:public public function getWrapperChildren() : java.util.List<com.sun.xml.internal.ws.model.ParameterImpl>;
 	
 	/**
 	* Adds a new child parameter.
 	*
 	* @param wrapperChild
 	*/
-	@:overload public function addWrapperChild(wrapperChild : com.sun.xml.internal.ws.model.ParameterImpl) : Void;
+	@:overload @:public public function addWrapperChild(wrapperChild : com.sun.xml.internal.ws.model.ParameterImpl) : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

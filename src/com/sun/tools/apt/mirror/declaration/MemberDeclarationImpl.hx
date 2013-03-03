@@ -28,23 +28,23 @@ extern class MemberDeclarationImpl extends com.sun.tools.apt.mirror.declaration.
 	/**
 	* Implementation of MemberDeclaration
 	*/
-	@:overload private function new(env : com.sun.tools.apt.mirror.AptEnv, sym : com.sun.tools.javac.code.Symbol) : Void;
+	@:overload @:protected private function new(env : com.sun.tools.apt.mirror.AptEnv, sym : com.sun.tools.javac.code.Symbol) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getDeclaringType() : com.sun.mirror.declaration.TypeDeclaration;
+	@:overload @:public public function getDeclaringType() : com.sun.mirror.declaration.TypeDeclaration;
 	
 	/**
 	* {@inheritDoc}
 	* For methods, constructors, and types.
 	*/
-	@:overload public function getFormalTypeParameters() : java.util.Collection<com.sun.mirror.declaration.TypeParameterDeclaration>;
+	@:overload @:public public function getFormalTypeParameters() : java.util.Collection<com.sun.mirror.declaration.TypeParameterDeclaration>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
 	
 	/**
 	* Returns the formal type parameters of a type, member or constructor
@@ -53,7 +53,7 @@ extern class MemberDeclarationImpl extends com.sun.tools.apt.mirror.declaration.
 	* clause added).  Type names are qualified.
 	* Returns "" if there are no type parameters.
 	*/
-	@:overload private static function typeParamsToString(env : com.sun.tools.apt.mirror.AptEnv, sym : com.sun.tools.javac.code.Symbol) : String;
+	@:overload @:protected @:static private static function typeParamsToString(env : com.sun.tools.apt.mirror.AptEnv, sym : com.sun.tools.javac.code.Symbol) : String;
 	
 	/**
 	* Returns the simple (unqualified) name of this declaration.
@@ -68,7 +68,7 @@ extern class MemberDeclarationImpl extends com.sun.tools.apt.mirror.declaration.
 	*
 	* @return the simple name of this declaration
 	*/
-	@:overload override public function getSimpleName() : String;
+	@:overload @:public @:public override public function getSimpleName() : String;
 	
 	/**
 	* Returns the annotation of this declaration having the specified
@@ -104,7 +104,7 @@ extern class MemberDeclarationImpl extends com.sun.tools.apt.mirror.declaration.
 	*
 	* @see #getAnnotationMirrors()
 	*/
-	@:overload override public function getAnnotation<A : java.lang.annotation.Annotation>(annotationType : Class<A>) : A;
+	@:overload @:public @:public override public function getAnnotation<A : java.lang.annotation.Annotation>(annotationType : Class<A>) : A;
 	
 	/**
 	* Returns the source position of the beginning of this declaration.
@@ -117,7 +117,7 @@ extern class MemberDeclarationImpl extends com.sun.tools.apt.mirror.declaration.
 	* @return the source position of the beginning of this declaration,
 	*          or null if the position is unknown or not applicable
 	*/
-	@:overload override public function getPosition() : com.sun.mirror.util.SourcePosition;
+	@:overload @:public @:public override public function getPosition() : com.sun.mirror.util.SourcePosition;
 	
 	/**
 	* Returns the text of the documentation ("javadoc") comment of
@@ -126,7 +126,7 @@ extern class MemberDeclarationImpl extends com.sun.tools.apt.mirror.declaration.
 	* @return the documentation comment of this declaration, or <tt>null</tt>
 	*          if there is none
 	*/
-	@:overload override public function getDocComment() : String;
+	@:overload @:public @:public override public function getDocComment() : String;
 	
 	/**
 	* Returns the annotations that are directly present on this declaration.
@@ -134,7 +134,7 @@ extern class MemberDeclarationImpl extends com.sun.tools.apt.mirror.declaration.
 	* @return the annotations directly present on this declaration;
 	*          an empty collection if there are none
 	*/
-	@:overload override public function getAnnotationMirrors() : java.util.Collection<com.sun.mirror.declaration.AnnotationMirror>;
+	@:overload @:public @:public override public function getAnnotationMirrors() : java.util.Collection<com.sun.mirror.declaration.AnnotationMirror>;
 	
 	/**
 	* Returns the modifiers of this declaration, excluding annotations.
@@ -144,7 +144,7 @@ extern class MemberDeclarationImpl extends com.sun.tools.apt.mirror.declaration.
 	* @return the modifiers of this declaration in undefined order;
 	*          an empty collection if there are none
 	*/
-	@:overload override public function getModifiers() : java.util.Collection<com.sun.mirror.declaration.Modifier>;
+	@:overload @:public @:public override public function getModifiers() : java.util.Collection<com.sun.mirror.declaration.Modifier>;
 	
 	
 }

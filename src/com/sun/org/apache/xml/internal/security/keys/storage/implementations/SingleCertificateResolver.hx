@@ -26,10 +26,10 @@ extern class SingleCertificateResolver extends com.sun.org.apache.xml.internal.s
 	*
 	* @param x509cert the single {@link X509Certificate}
 	*/
-	@:overload public function new(x509cert : java.security.cert.X509Certificate) : Void;
+	@:overload @:public public function new(x509cert : java.security.cert.X509Certificate) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getIterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function getIterator() : java.util.Iterator<Dynamic>;
 	
 	
 }
@@ -46,19 +46,19 @@ extern class SingleCertificateResolver extends com.sun.org.apache.xml.internal.s
 	*
 	* @param x509cert
 	*/
-	@:overload public function new(x509cert : java.security.cert.X509Certificate) : Void;
+	@:overload @:public public function new(x509cert : java.security.cert.X509Certificate) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
 	/** @inheritDoc */
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
 	/**
 	* Method remove
 	*
 	*/
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

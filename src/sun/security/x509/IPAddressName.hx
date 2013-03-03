@@ -31,7 +31,7 @@ extern class IPAddressName implements sun.security.x509.GeneralNameInterface
 	* @params derValue the encoded DER IPAddressName.
 	* @exception IOException on error.
 	*/
-	@:overload public function new(derValue : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(derValue : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Create the IPAddressName object with the specified octets.
@@ -39,7 +39,7 @@ extern class IPAddressName implements sun.security.x509.GeneralNameInterface
 	* @params address the IP address
 	* @throws IOException if address is not a valid IPv4 or IPv6 address
 	*/
-	@:overload public function new(address : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(address : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Create an IPAddressName from a String.
@@ -60,12 +60,12 @@ extern class IPAddressName implements sun.security.x509.GeneralNameInterface
 	* @throws IOException if name can not be converted to a valid IPv4 or IPv6
 	*     address
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Return the type of the GeneralName.
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Encode the IPAddress name into the DerOutputStream.
@@ -73,12 +73,12 @@ extern class IPAddressName implements sun.security.x509.GeneralNameInterface
 	* @params out the DER stream to encode the IPAddressName to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Return a printable string of IPaddress
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Return a standard String representation of IPAddress.
@@ -87,26 +87,26 @@ extern class IPAddressName implements sun.security.x509.GeneralNameInterface
 	*
 	* @throws IOException if the IPAddress cannot be converted to a String
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns this IPAddress name as a byte array.
 	*/
-	@:overload public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Compares this name with another, for equality.
 	*
 	* @return true iff the names are identical.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Return type of constraint inputName places on this name:<ul>
@@ -137,7 +137,7 @@ extern class IPAddressName implements sun.security.x509.GeneralNameInterface
 	* @throws UnsupportedOperationException if name is not exact match, but
 	* narrowing and widening are not supported for this name type.
 	*/
-	@:overload public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
+	@:overload @:public public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
 	
 	/**
 	* Return subtree depth of this name for purposes of determining
@@ -147,7 +147,7 @@ extern class IPAddressName implements sun.security.x509.GeneralNameInterface
 	* @returns distance of name from root
 	* @throws UnsupportedOperationException if not supported for this name type
 	*/
-	@:overload public function subtreeDepth() : Int;
+	@:overload @:public public function subtreeDepth() : Int;
 	
 	
 }

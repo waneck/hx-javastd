@@ -28,38 +28,38 @@ package javax.swing;
 	/*
 	* Put the key-value pair into storage
 	*/
-	@:overload public function put(key : Dynamic, value : Dynamic) : Void;
+	@:overload @:public public function put(key : Dynamic, value : Dynamic) : Void;
 	
 	/*
 	* Gets the value for key
 	*/
-	@:overload public function get(key : Dynamic) : Dynamic;
+	@:overload @:public public function get(key : Dynamic) : Dynamic;
 	
 	/*
 	* Returns the number of pairs in storage
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/*
 	* Returns true if we have a value for the key
 	*/
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public public function containsKey(key : Dynamic) : Bool;
 	
 	/*
 	* Removes the key and its value
 	* Returns the value for the pair removed
 	*/
-	@:overload public function remove(key : Dynamic) : Dynamic;
+	@:overload @:public public function remove(key : Dynamic) : Dynamic;
 	
 	/**
 	* Removes all the mappings.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/*
 	* Returns a clone of the <code>ArrayTable</code>.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns the keys of the table, or <code>null</code> if there
@@ -67,7 +67,7 @@ package javax.swing;
 	* @param keys  array of keys
 	* @return an array of bindings
 	*/
-	@:overload public function getKeys(keys : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
+	@:overload @:public public function getKeys(keys : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
 	
 	
 }

@@ -45,19 +45,19 @@ package java.lang;
 	* A constant holding the minimum value a {@code byte} can
 	* have, -2<sup>7</sup>.
 	*/
-	public static var MIN_VALUE(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var MIN_VALUE(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* A constant holding the maximum value a {@code byte} can
 	* have, 2<sup>7</sup>-1.
 	*/
-	public static var MAX_VALUE(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var MAX_VALUE(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* The {@code Class} instance representing the primitive type
 	* {@code byte}.
 	*/
-	public static var TYPE(default, null) : Class<Null<java.StdTypes.Int8>>;
+	@:public @:static @:final public static var TYPE(default, null) : Class<Null<java.StdTypes.Int8>>;
 	
 	/**
 	* Returns a new {@code String} object representing the
@@ -67,7 +67,7 @@ package java.lang;
 	* @return the string representation of the specified {@code byte}
 	* @see java.lang.Integer#toString(int)
 	*/
-	@:native('toString') @:overload public static function _toString(b : java.StdTypes.Int8) : String;
+	@:native('toString') @:overload @:public @:static public static function _toString(b : java.StdTypes.Int8) : String;
 	
 	/**
 	* Returns a {@code Byte} instance representing the specified
@@ -82,7 +82,7 @@ package java.lang;
 	* @return a {@code Byte} instance representing {@code b}.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public static function valueOf(b : java.StdTypes.Int8) : Null<java.StdTypes.Int8>;
+	@:require(java5) @:overload @:public @:static public static function valueOf(b : java.StdTypes.Int8) : Null<java.StdTypes.Int8>;
 	
 	/**
 	* Parses the string argument as a signed {@code byte} in the
@@ -125,7 +125,7 @@ package java.lang;
 	* @throws          NumberFormatException If the string does
 	*                  not contain a parsable {@code byte}.
 	*/
-	@:overload public static function parseByte(s : String, radix : Int) : java.StdTypes.Int8;
+	@:overload @:public @:static public static function parseByte(s : String, radix : Int) : java.StdTypes.Int8;
 	
 	/**
 	* Parses the string argument as a signed decimal {@code
@@ -145,7 +145,7 @@ package java.lang;
 	* @throws          NumberFormatException if the string does not
 	*                  contain a parsable {@code byte}.
 	*/
-	@:overload public static function parseByte(s : String) : java.StdTypes.Int8;
+	@:overload @:public @:static public static function parseByte(s : String) : java.StdTypes.Int8;
 	
 	/**
 	* Returns a {@code Byte} object holding the value
@@ -172,7 +172,7 @@ package java.lang;
 	* @throws          NumberFormatException If the {@code String} does
 	*                  not contain a parsable {@code byte}.
 	*/
-	@:overload public static function valueOf(s : String, radix : Int) : Null<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function valueOf(s : String, radix : Int) : Null<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a {@code Byte} object holding the value
@@ -196,7 +196,7 @@ package java.lang;
 	* @throws          NumberFormatException If the {@code String} does
 	*                  not contain a parsable {@code byte}.
 	*/
-	@:overload public static function valueOf(s : String) : Null<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function valueOf(s : String) : Null<java.StdTypes.Int8>;
 	
 	/**
 	* Decodes a {@code String} into a {@code Byte}.
@@ -240,7 +240,7 @@ package java.lang;
 	*            contain a parsable {@code byte}.
 	* @see java.lang.Byte#parseByte(java.lang.String, int)
 	*/
-	@:overload public static function decode(nm : String) : Null<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function decode(nm : String) : Null<java.StdTypes.Int8>;
 	
 	/**
 	* Constructs a newly allocated {@code Byte} object that
@@ -249,7 +249,7 @@ package java.lang;
 	* @param value     the value to be represented by the
 	*                  {@code Byte}.
 	*/
-	@:overload public function new(value : java.StdTypes.Int8) : Void;
+	@:overload @:public public function new(value : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Constructs a newly allocated {@code Byte} object that
@@ -264,43 +264,43 @@ package java.lang;
 	*                  does not contain a parsable {@code byte}.
 	* @see        java.lang.Byte#parseByte(java.lang.String, int)
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Returns the value of this {@code Byte} as a
 	* {@code byte}.
 	*/
-	@:overload override public function byteValue() : java.StdTypes.Int8;
+	@:overload @:public override public function byteValue() : java.StdTypes.Int8;
 	
 	/**
 	* Returns the value of this {@code Byte} as a
 	* {@code short}.
 	*/
-	@:overload override public function shortValue() : java.StdTypes.Int16;
+	@:overload @:public override public function shortValue() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the value of this {@code Byte} as an
 	* {@code int}.
 	*/
-	@:overload override public function intValue() : Int;
+	@:overload @:public override public function intValue() : Int;
 	
 	/**
 	* Returns the value of this {@code Byte} as a
 	* {@code long}.
 	*/
-	@:overload override public function longValue() : haxe.Int64;
+	@:overload @:public override public function longValue() : haxe.Int64;
 	
 	/**
 	* Returns the value of this {@code Byte} as a
 	* {@code float}.
 	*/
-	@:overload override public function floatValue() : Single;
+	@:overload @:public override public function floatValue() : Single;
 	
 	/**
 	* Returns the value of this {@code Byte} as a
 	* {@code double}.
 	*/
-	@:overload override public function doubleValue() : Float;
+	@:overload @:public override public function doubleValue() : Float;
 	
 	/**
 	* Returns a {@code String} object representing this
@@ -312,7 +312,7 @@ package java.lang;
 	* @return  a string representation of the value of this object in
 	*          base&nbsp;10.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hash code for this {@code Byte}; equal to the result
@@ -320,7 +320,7 @@ package java.lang;
 	*
 	* @return a hash code value for this {@code Byte}
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this object to the specified object.  The result is
@@ -332,7 +332,7 @@ package java.lang;
 	* @return          {@code true} if the objects are the same;
 	*                  {@code false} otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Compares two {@code Byte} objects numerically.
@@ -347,7 +347,7 @@ package java.lang;
 	*           comparison).
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function compareTo(anotherByte : Null<java.StdTypes.Int8>) : Int;
+	@:require(java2) @:overload @:public public function compareTo(anotherByte : Null<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Compares two {@code byte} values numerically.
@@ -363,7 +363,7 @@ package java.lang;
 	*         a value greater than {@code 0} if {@code x > y}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function compare(x : java.StdTypes.Int8, y : java.StdTypes.Int8) : Int;
+	@:require(java7) @:overload @:public @:static public static function compare(x : java.StdTypes.Int8, y : java.StdTypes.Int8) : Int;
 	
 	/**
 	* The number of bits used to represent a {@code byte} value in two's
@@ -371,7 +371,7 @@ package java.lang;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var SIZE(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var SIZE(default, null) : Int;
 	
 	
 }

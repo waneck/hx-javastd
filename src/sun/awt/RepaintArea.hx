@@ -29,7 +29,7 @@ extern class RepaintArea
 	* Constructs a new <code>RepaintArea</code>
 	* @since   1.3
 	*/
-	@:require(java3) @:overload public function new() : Void;
+	@:require(java3) @:overload @:public public function new() : Void;
 	
 	/**
 	* Adds a <code>Rectangle</code> to this <code>RepaintArea</code>.
@@ -41,20 +41,20 @@ extern class RepaintArea
 	* @param   id  possible values PaintEvent.UPDATE or PaintEvent.PAINT
 	* @since   1.3
 	*/
-	@:require(java3) @:overload @:synchronized public function add(r : java.awt.Rectangle, id : Int) : Void;
+	@:require(java3) @:overload @:public @:synchronized public function add(r : java.awt.Rectangle, id : Int) : Void;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Constrains the size of the repaint area to the passed in bounds.
 	*/
-	@:overload @:synchronized public function constrain(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public @:synchronized public function constrain(x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Marks the passed in region as not needing to be painted. It's possible
 	* this will do nothing.
 	*/
-	@:overload @:synchronized public function subtract(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public @:synchronized public function subtract(x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Invokes paint and update on target Component with optimal
@@ -66,19 +66,19 @@ extern class RepaintArea
 	* @param   target Component to <code>paint</code> or <code>update</code>
 	* @since   1.4
 	*/
-	@:require(java4) @:overload public function paint(target : Dynamic, shouldClearRectBeforePaint : Bool) : Void;
+	@:require(java4) @:overload @:public public function paint(target : Dynamic, shouldClearRectBeforePaint : Bool) : Void;
 	
 	/**
 	* Calls <code>Component.update(Graphics)</code> with given Graphics.
 	*/
-	@:overload private function updateComponent(comp : java.awt.Component, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function updateComponent(comp : java.awt.Component, g : java.awt.Graphics) : Void;
 	
 	/**
 	* Calls <code>Component.paint(Graphics)</code> with given Graphics.
 	*/
-	@:overload private function paintComponent(comp : java.awt.Component, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paintComponent(comp : java.awt.Component, g : java.awt.Graphics) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

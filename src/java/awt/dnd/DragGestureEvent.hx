@@ -46,14 +46,14 @@ extern class DragGestureEvent extends java.util.EventObject
 	*                                  description for {@link DragGestureEvent}
 	* @see java.awt.dnd.DnDConstants
 	*/
-	@:overload public function new(dgr : java.awt.dnd.DragGestureRecognizer, act : Int, ori : java.awt.Point, evs : java.util.List<java.awt.event.InputEvent>) : Void;
+	@:overload @:public public function new(dgr : java.awt.dnd.DragGestureRecognizer, act : Int, ori : java.awt.Point, evs : java.util.List<java.awt.event.InputEvent>) : Void;
 	
 	/**
 	* Returns the source as a <code>DragGestureRecognizer</code>.
 	* <P>
 	* @return the source as a <code>DragGestureRecognizer</code>
 	*/
-	@:overload public function getSourceAsDragGestureRecognizer() : java.awt.dnd.DragGestureRecognizer;
+	@:overload @:public public function getSourceAsDragGestureRecognizer() : java.awt.dnd.DragGestureRecognizer;
 	
 	/**
 	* Returns the <code>Component</code> associated
@@ -61,14 +61,14 @@ extern class DragGestureEvent extends java.util.EventObject
 	* <P>
 	* @return the Component
 	*/
-	@:overload public function getComponent() : java.awt.Component;
+	@:overload @:public public function getComponent() : java.awt.Component;
 	
 	/**
 	* Returns the <code>DragSource</code>.
 	* <P>
 	* @return the <code>DragSource</code>
 	*/
-	@:overload public function getDragSource() : java.awt.dnd.DragSource;
+	@:overload @:public public function getDragSource() : java.awt.dnd.DragSource;
 	
 	/**
 	* Returns a <code>Point</code> in the coordinates
@@ -76,7 +76,7 @@ extern class DragGestureEvent extends java.util.EventObject
 	* <P>
 	* @return the Point where the drag originated in Component coords.
 	*/
-	@:overload public function getDragOrigin() : java.awt.Point;
+	@:overload @:public public function getDragOrigin() : java.awt.Point;
 	
 	/**
 	* Returns an <code>Iterator</code> for the events
@@ -84,7 +84,7 @@ extern class DragGestureEvent extends java.util.EventObject
 	* <P>
 	* @return an Iterator for the events comprising the gesture
 	*/
-	@:overload public function iterator() : java.util.Iterator<java.awt.event.InputEvent>;
+	@:overload @:public public function iterator() : java.util.Iterator<java.awt.event.InputEvent>;
 	
 	/**
 	* Returns an <code>Object</code> array of the
@@ -92,7 +92,7 @@ extern class DragGestureEvent extends java.util.EventObject
 	* <P>
 	* @return an array of the events comprising the gesture
 	*/
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array of the events comprising the drag gesture.
@@ -101,7 +101,7 @@ extern class DragGestureEvent extends java.util.EventObject
 	* <P>
 	* @return an array of the events comprising the gesture
 	*/
-	@:overload public function toArray(array : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray(array : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an <code>int</code> representing the
@@ -109,14 +109,14 @@ extern class DragGestureEvent extends java.util.EventObject
 	* <P>
 	* @return the action selected by the user
 	*/
-	@:overload public function getDragAction() : Int;
+	@:overload @:public public function getDragAction() : Int;
 	
 	/**
 	* Returns the initial event that triggered the gesture.
 	* <P>
 	* @return the first "triggering" event in the sequence of the gesture
 	*/
-	@:overload public function getTriggerEvent() : java.awt.event.InputEvent;
+	@:overload @:public public function getTriggerEvent() : java.awt.event.InputEvent;
 	
 	/**
 	* Starts the drag operation given the <code>Cursor</code> for this drag
@@ -144,7 +144,7 @@ extern class DragGestureEvent extends java.util.EventObject
 	* @throws NullPointerException if the {@code Transferable} is {@code null}
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function startDrag(dragCursor : java.awt.Cursor, transferable : java.awt.datatransfer.Transferable) : Void;
+	@:require(java4) @:overload @:public public function startDrag(dragCursor : java.awt.Cursor, transferable : java.awt.datatransfer.Transferable) : Void;
 	
 	/**
 	* Starts the drag given the initial <code>Cursor</code> to display,
@@ -166,7 +166,7 @@ extern class DragGestureEvent extends java.util.EventObject
 	* attempts to start a drag while an existing
 	* drag operation is still executing.
 	*/
-	@:overload public function startDrag(dragCursor : java.awt.Cursor, transferable : java.awt.datatransfer.Transferable, dsl : java.awt.dnd.DragSourceListener) : Void;
+	@:overload @:public public function startDrag(dragCursor : java.awt.Cursor, transferable : java.awt.datatransfer.Transferable, dsl : java.awt.dnd.DragSourceListener) : Void;
 	
 	/**
 	* Start the drag given the initial <code>Cursor</code> to display,
@@ -192,7 +192,7 @@ extern class DragGestureEvent extends java.util.EventObject
 	* attempts to start a drag while an existing
 	* drag operation is still executing.
 	*/
-	@:overload public function startDrag(dragCursor : java.awt.Cursor, dragImage : java.awt.Image, imageOffset : java.awt.Point, transferable : java.awt.datatransfer.Transferable, dsl : java.awt.dnd.DragSourceListener) : Void;
+	@:overload @:public public function startDrag(dragCursor : java.awt.Cursor, dragImage : java.awt.Image, imageOffset : java.awt.Point, transferable : java.awt.datatransfer.Transferable, dsl : java.awt.dnd.DragSourceListener) : Void;
 	
 	
 }

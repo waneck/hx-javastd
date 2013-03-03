@@ -25,47 +25,47 @@ package com.sun.media.sound;
 */
 extern class ModelByteBufferWavetable implements com.sun.media.sound.ModelWavetable
 {
-	@:overload public function new(buffer : com.sun.media.sound.ModelByteBuffer) : Void;
+	@:overload @:public public function new(buffer : com.sun.media.sound.ModelByteBuffer) : Void;
 	
-	@:overload public function new(buffer : com.sun.media.sound.ModelByteBuffer, pitchcorrection : Single) : Void;
+	@:overload @:public public function new(buffer : com.sun.media.sound.ModelByteBuffer, pitchcorrection : Single) : Void;
 	
-	@:overload public function new(buffer : com.sun.media.sound.ModelByteBuffer, format : javax.sound.sampled.AudioFormat) : Void;
+	@:overload @:public public function new(buffer : com.sun.media.sound.ModelByteBuffer, format : javax.sound.sampled.AudioFormat) : Void;
 	
-	@:overload public function new(buffer : com.sun.media.sound.ModelByteBuffer, format : javax.sound.sampled.AudioFormat, pitchcorrection : Single) : Void;
+	@:overload @:public public function new(buffer : com.sun.media.sound.ModelByteBuffer, format : javax.sound.sampled.AudioFormat, pitchcorrection : Single) : Void;
 	
-	@:overload public function set8BitExtensionBuffer(buffer : com.sun.media.sound.ModelByteBuffer) : Void;
+	@:overload @:public public function set8BitExtensionBuffer(buffer : com.sun.media.sound.ModelByteBuffer) : Void;
 	
-	@:overload public function get8BitExtensionBuffer() : com.sun.media.sound.ModelByteBuffer;
+	@:overload @:public public function get8BitExtensionBuffer() : com.sun.media.sound.ModelByteBuffer;
 	
-	@:overload public function getBuffer() : com.sun.media.sound.ModelByteBuffer;
+	@:overload @:public public function getBuffer() : com.sun.media.sound.ModelByteBuffer;
 	
-	@:overload public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public public function getFormat() : javax.sound.sampled.AudioFormat;
 	
-	@:overload public function openStream() : com.sun.media.sound.AudioFloatInputStream;
+	@:overload @:public public function openStream() : com.sun.media.sound.AudioFloatInputStream;
 	
-	@:overload public function getChannels() : Int;
+	@:overload @:public public function getChannels() : Int;
 	
-	@:overload public function open(samplerate : Single) : com.sun.media.sound.ModelOscillatorStream;
+	@:overload @:public public function open(samplerate : Single) : com.sun.media.sound.ModelOscillatorStream;
 	
-	@:overload public function getAttenuation() : Single;
+	@:overload @:public public function getAttenuation() : Single;
 	
-	@:overload public function setAttenuation(attenuation : Single) : Void;
+	@:overload @:public public function setAttenuation(attenuation : Single) : Void;
 	
-	@:overload public function getLoopLength() : Single;
+	@:overload @:public public function getLoopLength() : Single;
 	
-	@:overload public function setLoopLength(loopLength : Single) : Void;
+	@:overload @:public public function setLoopLength(loopLength : Single) : Void;
 	
-	@:overload public function getLoopStart() : Single;
+	@:overload @:public public function getLoopStart() : Single;
 	
-	@:overload public function setLoopStart(loopStart : Single) : Void;
+	@:overload @:public public function setLoopStart(loopStart : Single) : Void;
 	
-	@:overload public function setLoopType(loopType : Int) : Void;
+	@:overload @:public public function setLoopType(loopType : Int) : Void;
 	
-	@:overload public function getLoopType() : Int;
+	@:overload @:public public function getLoopType() : Int;
 	
-	@:overload public function getPitchcorrection() : Single;
+	@:overload @:public public function getPitchcorrection() : Single;
 	
-	@:overload public function setPitchcorrection(pitchcorrection : Single) : Void;
+	@:overload @:public public function setPitchcorrection(pitchcorrection : Single) : Void;
 	
 	
 }
@@ -76,23 +76,23 @@ extern class ModelByteBufferWavetable implements com.sun.media.sound.ModelWaveta
 */
 @:native('com$sun$media$sound$ModelByteBufferWavetable$Buffer8PlusInputStream') @:internal extern class ModelByteBufferWavetable_Buffer8PlusInputStream extends java.io.InputStream
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload @:synchronized public function mark(readlimit : Int) : Void;
+	@:overload @:public @:synchronized override public function mark(readlimit : Int) : Void;
 	
-	@:overload @:synchronized public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
 	
 }

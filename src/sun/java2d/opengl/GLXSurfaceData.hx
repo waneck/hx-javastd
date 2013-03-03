@@ -25,48 +25,48 @@ package sun.java2d.opengl;
 */
 extern class GLXSurfaceData extends sun.java2d.opengl.OGLSurfaceData
 {
-	private var peer : sun.awt.X11ComponentPeer;
+	@:protected private var peer : sun.awt.X11ComponentPeer;
 	
-	@:overload @:native private function initPbuffer(pData : haxe.Int64, pConfigInfo : haxe.Int64, isOpaque : Bool, width : Int, height : Int) : Bool;
+	@:overload @:protected @:native override private function initPbuffer(pData : haxe.Int64, pConfigInfo : haxe.Int64, isOpaque : Bool, width : Int, height : Int) : Bool;
 	
-	@:overload private function new(peer : sun.awt.X11ComponentPeer, gc : sun.java2d.opengl.GLXGraphicsConfig, cm : java.awt.image.ColorModel, type : Int) : Void;
+	@:overload @:protected private function new(peer : sun.awt.X11ComponentPeer, gc : sun.java2d.opengl.GLXGraphicsConfig, cm : java.awt.image.ColorModel, type : Int) : Void;
 	
-	@:overload override public function getDeviceConfiguration() : java.awt.GraphicsConfiguration;
+	@:overload @:public override public function getDeviceConfiguration() : java.awt.GraphicsConfiguration;
 	
 	/**
 	* Creates a SurfaceData object representing the primary (front) buffer
 	* of an on-screen Window.
 	*/
-	@:overload public static function createData(peer : sun.awt.X11ComponentPeer) : sun.java2d.opengl.GLXSurfaceData.GLXSurfaceData_GLXWindowSurfaceData;
+	@:overload @:public @:static public static function createData(peer : sun.awt.X11ComponentPeer) : sun.java2d.opengl.GLXSurfaceData.GLXSurfaceData_GLXWindowSurfaceData;
 	
 	/**
 	* Creates a SurfaceData object representing the back buffer of a
 	* double-buffered on-screen Window.
 	*/
-	@:overload public static function createData(peer : sun.awt.X11ComponentPeer, image : java.awt.Image, type : Int) : sun.java2d.opengl.GLXSurfaceData.GLXSurfaceData_GLXOffScreenSurfaceData;
+	@:overload @:public @:static public static function createData(peer : sun.awt.X11ComponentPeer, image : java.awt.Image, type : Int) : sun.java2d.opengl.GLXSurfaceData.GLXSurfaceData_GLXOffScreenSurfaceData;
 	
 	/**
 	* Creates a SurfaceData object representing an off-screen buffer (either
 	* a Pbuffer or Texture).
 	*/
-	@:overload public static function createData(gc : sun.java2d.opengl.GLXGraphicsConfig, width : Int, height : Int, cm : java.awt.image.ColorModel, image : java.awt.Image, type : Int) : sun.java2d.opengl.GLXSurfaceData.GLXSurfaceData_GLXOffScreenSurfaceData;
+	@:overload @:public @:static public static function createData(gc : sun.java2d.opengl.GLXGraphicsConfig, width : Int, height : Int, cm : java.awt.image.ColorModel, image : java.awt.Image, type : Int) : sun.java2d.opengl.GLXSurfaceData.GLXSurfaceData_GLXOffScreenSurfaceData;
 	
-	@:overload public static function getGC(peer : sun.awt.X11ComponentPeer) : sun.java2d.opengl.GLXGraphicsConfig;
+	@:overload @:public @:static public static function getGC(peer : sun.awt.X11ComponentPeer) : sun.java2d.opengl.GLXGraphicsConfig;
 	
 	
 }
 @:native('sun$java2d$opengl$GLXSurfaceData$GLXWindowSurfaceData') extern class GLXSurfaceData_GLXWindowSurfaceData extends sun.java2d.opengl.GLXSurfaceData
 {
-	@:overload public function new(peer : sun.awt.X11ComponentPeer, gc : sun.java2d.opengl.GLXGraphicsConfig) : Void;
+	@:overload @:public public function new(peer : sun.awt.X11ComponentPeer, gc : sun.java2d.opengl.GLXGraphicsConfig) : Void;
 	
-	@:overload override public function getReplacement() : sun.java2d.SurfaceData;
+	@:overload @:public override public function getReplacement() : sun.java2d.SurfaceData;
 	
-	@:overload override public function getBounds() : java.awt.Rectangle;
+	@:overload @:public override public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Returns destination Component associated with this SurfaceData.
 	*/
-	@:overload override public function getDestination() : Dynamic;
+	@:overload @:public override public function getDestination() : Dynamic;
 	
 	
 }
@@ -81,26 +81,26 @@ extern class GLXSurfaceData extends sun.java2d.opengl.OGLSurfaceData
 */
 @:native('sun$java2d$opengl$GLXSurfaceData$GLXVSyncOffScreenSurfaceData') extern class GLXSurfaceData_GLXVSyncOffScreenSurfaceData extends sun.java2d.opengl.GLXSurfaceData.GLXSurfaceData_GLXOffScreenSurfaceData
 {
-	@:overload public function new(peer : sun.awt.X11ComponentPeer, gc : sun.java2d.opengl.GLXGraphicsConfig, width : Int, height : Int, image : java.awt.Image, cm : java.awt.image.ColorModel, type : Int) : Void;
+	@:overload @:public public function new(peer : sun.awt.X11ComponentPeer, gc : sun.java2d.opengl.GLXGraphicsConfig, width : Int, height : Int, image : java.awt.Image, cm : java.awt.image.ColorModel, type : Int) : Void;
 	
-	@:overload public function getFlipSurface() : sun.java2d.SurfaceData;
+	@:overload @:public public function getFlipSurface() : sun.java2d.SurfaceData;
 	
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	
 }
 @:native('sun$java2d$opengl$GLXSurfaceData$GLXOffScreenSurfaceData') extern class GLXSurfaceData_GLXOffScreenSurfaceData extends sun.java2d.opengl.GLXSurfaceData
 {
-	@:overload public function new(peer : sun.awt.X11ComponentPeer, gc : sun.java2d.opengl.GLXGraphicsConfig, width : Int, height : Int, image : java.awt.Image, cm : java.awt.image.ColorModel, type : Int) : Void;
+	@:overload @:public public function new(peer : sun.awt.X11ComponentPeer, gc : sun.java2d.opengl.GLXGraphicsConfig, width : Int, height : Int, image : java.awt.Image, cm : java.awt.image.ColorModel, type : Int) : Void;
 	
-	@:overload override public function getReplacement() : sun.java2d.SurfaceData;
+	@:overload @:public override public function getReplacement() : sun.java2d.SurfaceData;
 	
-	@:overload override public function getBounds() : java.awt.Rectangle;
+	@:overload @:public override public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Returns destination Image associated with this SurfaceData.
 	*/
-	@:overload override public function getDestination() : Dynamic;
+	@:overload @:public override public function getDestination() : Dynamic;
 	
 	
 }

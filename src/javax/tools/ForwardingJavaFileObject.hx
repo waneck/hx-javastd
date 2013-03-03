@@ -29,15 +29,15 @@ extern class ForwardingJavaFileObject<F> extends javax.tools.ForwardingFileObjec
 	* Creates a new instance of ForwardingJavaFileObject.
 	* @param fileObject delegate to this file object
 	*/
-	@:overload private function new(fileObject : F) : Void;
+	@:overload @:protected private function new(fileObject : F) : Void;
 	
-	@:overload public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
+	@:overload @:public public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	
-	@:overload public function isNameCompatible(simpleName : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
+	@:overload @:public public function isNameCompatible(simpleName : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
 	
-	@:overload public function getNestingKind() : javax.lang.model.element.NestingKind;
+	@:overload @:public public function getNestingKind() : javax.lang.model.element.NestingKind;
 	
-	@:overload public function getAccessLevel() : javax.lang.model.element.Modifier;
+	@:overload @:public public function getAccessLevel() : javax.lang.model.element.Modifier;
 	
 	
 }

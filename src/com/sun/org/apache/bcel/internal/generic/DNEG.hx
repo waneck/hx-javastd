@@ -64,7 +64,7 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class DNEG extends com.sun.org.apache.bcel.internal.generic.ArithmeticInstruction
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -74,7 +74,7 @@ extern class DNEG extends com.sun.org.apache.bcel.internal.generic.ArithmeticIns
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

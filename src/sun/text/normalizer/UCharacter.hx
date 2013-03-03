@@ -40,7 +40,7 @@ extern class UCharacter
 	* The lowest Unicode code point value.
 	* @stable ICU 2.1
 	*/
-	public static var MIN_VALUE(default, null) : Int;
+	@:public @:static @:final public static var MIN_VALUE(default, null) : Int;
 	
 	/**
 	* The highest Unicode code point value (scalar value) according to the
@@ -49,13 +49,13 @@ extern class UCharacter
 	* Up-to-date Unicode implementation of java.lang.Character.MIN_VALUE
 	* @stable ICU 2.1
 	*/
-	public static var MAX_VALUE(default, null) : Int;
+	@:public @:static @:final public static var MAX_VALUE(default, null) : Int;
 	
 	/**
 	* The minimum value for Supplementary code points
 	* @stable ICU 2.1
 	*/
-	public static var SUPPLEMENTARY_MIN_VALUE(default, null) : Int;
+	@:public @:static @:final public static var SUPPLEMENTARY_MIN_VALUE(default, null) : Int;
 	
 	/**
 	* Retrieves the numeric value of a decimal digit code point.
@@ -80,7 +80,7 @@ extern class UCharacter
 	* or if its value is too large for the radix
 	* @stable ICU 2.1
 	*/
-	@:overload public static function digit(ch : Int, radix : Int) : Int;
+	@:overload @:public @:static public static function digit(ch : Int, radix : Int) : Int;
 	
 	/**
 	* Returns the Bidirection property of a code point.
@@ -92,7 +92,7 @@ extern class UCharacter
 	* @return direction constant from UCharacterDirection.
 	* @stable ICU 2.1
 	*/
-	@:overload public static function getDirection(ch : Int) : Int;
+	@:overload @:public @:static public static function getDirection(ch : Int) : Int;
 	
 	/**
 	* Returns a code point corresponding to the two UTF16 characters.
@@ -103,7 +103,7 @@ extern class UCharacter
 	*            not form a valid codepoint
 	* @stable ICU 2.1
 	*/
-	@:overload public static function getCodePoint(lead : java.StdTypes.Char16, trail : java.StdTypes.Char16) : Int;
+	@:overload @:public @:static public static function getCodePoint(lead : java.StdTypes.Char16, trail : java.StdTypes.Char16) : Int;
 	
 	/**
 	* <p>Get the "age" of the code point.</p>
@@ -117,7 +117,7 @@ extern class UCharacter
 	* @return the Unicode version number
 	* @stable ICU 2.6
 	*/
-	@:overload public static function getAge(ch : Int) : sun.text.normalizer.VersionInfo;
+	@:overload @:public @:static public static function getAge(ch : Int) : sun.text.normalizer.VersionInfo;
 	
 	
 }

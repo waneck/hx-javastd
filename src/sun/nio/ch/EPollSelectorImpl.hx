@@ -29,19 +29,19 @@ package sun.nio.ch;
 */
 @:internal extern class EPollSelectorImpl extends sun.nio.ch.SelectorImpl
 {
-	private var fd0 : Int;
+	@:protected private var fd0 : Int;
 	
-	private var fd1 : Int;
+	@:protected private var fd1 : Int;
 	
-	@:overload private function doSelect(timeout : haxe.Int64) : Int;
+	@:overload @:protected override private function doSelect(timeout : haxe.Int64) : Int;
 	
-	@:overload private function implClose() : Void;
+	@:overload @:protected override private function implClose() : Void;
 	
-	@:overload private function implRegister(ski : sun.nio.ch.SelectionKeyImpl) : Void;
+	@:overload @:protected override private function implRegister(ski : sun.nio.ch.SelectionKeyImpl) : Void;
 	
-	@:overload private function implDereg(ski : sun.nio.ch.SelectionKeyImpl) : Void;
+	@:overload @:protected override private function implDereg(ski : sun.nio.ch.SelectionKeyImpl) : Void;
 	
-	@:overload public function wakeup() : java.nio.channels.Selector;
+	@:overload @:public override public function wakeup() : java.nio.channels.Selector;
 	
 	
 }

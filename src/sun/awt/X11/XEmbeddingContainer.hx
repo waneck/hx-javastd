@@ -25,9 +25,9 @@ package sun.awt.X11;
 */
 extern class XEmbeddingContainer extends sun.awt.X11.XEmbedHelper implements sun.awt.X11.XEventDispatcher
 {
-	@:overload public function handleClientMessage(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handleClientMessage(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function dispatchEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function dispatchEvent(xev : sun.awt.X11.XEvent) : Void;
 	
 	
 }

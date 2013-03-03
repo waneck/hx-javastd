@@ -25,19 +25,19 @@ package com.sun.tools.jdi;
 */
 extern class InterfaceTypeImpl extends com.sun.tools.jdi.ReferenceTypeImpl implements com.sun.jdi.InterfaceType
 {
-	@:overload private function new(aVm : com.sun.jdi.VirtualMachine, aRef : haxe.Int64) : Void;
+	@:overload @:protected private function new(aVm : com.sun.jdi.VirtualMachine, aRef : haxe.Int64) : Void;
 	
-	@:overload public function superinterfaces() : java.util.List<com.sun.jdi.InterfaceType>;
+	@:overload @:public public function superinterfaces() : java.util.List<com.sun.jdi.InterfaceType>;
 	
-	@:overload public function subinterfaces() : java.util.List<com.sun.jdi.InterfaceType>;
+	@:overload @:public public function subinterfaces() : java.util.List<com.sun.jdi.InterfaceType>;
 	
-	@:overload public function implementors() : java.util.List<com.sun.jdi.ClassType>;
+	@:overload @:public public function implementors() : java.util.List<com.sun.jdi.ClassType>;
 	
-	@:overload override public function allMethods() : java.util.List<com.sun.jdi.Method>;
+	@:overload @:public override public function allMethods() : java.util.List<com.sun.jdi.Method>;
 	
-	@:overload override public function isInitialized() : Bool;
+	@:overload @:public override public function isInitialized() : Bool;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

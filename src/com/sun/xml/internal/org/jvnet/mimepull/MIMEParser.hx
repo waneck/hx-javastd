@@ -31,7 +31,7 @@ package com.sun.xml.internal.org.jvnet.mimepull;
 	*
 	* @return iterator for parsing events
 	*/
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.org.jvnet.mimepull.MIMEEvent>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.org.jvnet.mimepull.MIMEEvent>;
 	
 	
 }
@@ -49,11 +49,11 @@ package com.sun.xml.internal.org.jvnet.mimepull;
 
 @:native('com$sun$xml$internal$org$jvnet$mimepull$MIMEParser$MIMEEventIterator') @:internal extern class MIMEParser_MIMEEventIterator implements java.util.Iterator<com.sun.xml.internal.org.jvnet.mimepull.MIMEEvent>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : com.sun.xml.internal.org.jvnet.mimepull.MIMEEvent;
+	@:overload @:public public function next() : com.sun.xml.internal.org.jvnet.mimepull.MIMEEvent;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }
@@ -70,7 +70,7 @@ package com.sun.xml.internal.org.jvnet.mimepull;
 	* This class is similar to the deprecated
 	* <code>DataInputStream.readLine()</code>
 	*/
-	@:overload public function readLine() : String;
+	@:overload @:public public function readLine() : String;
 	
 	
 }

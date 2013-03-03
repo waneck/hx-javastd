@@ -58,7 +58,7 @@ package com.sun.jdi.connect;
 	* Constructs a <tt>TransportTimeoutException</tt> with no detail
 	* message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <tt>TransportTimeoutException</tt> with the
@@ -66,7 +66,7 @@ package com.sun.jdi.connect;
 	*
 	* @param message the detail message pertaining to this exception.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

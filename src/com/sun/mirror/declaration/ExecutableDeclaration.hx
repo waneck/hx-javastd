@@ -41,7 +41,7 @@ extern interface ExecutableDeclaration extends com.sun.mirror.declaration.Member
 	* @return the formal type parameters of this method or constructor,
 	* or an empty collection if there are none
 	*/
-	@:overload public function getFormalTypeParameters() : java.util.Collection<com.sun.mirror.declaration.TypeParameterDeclaration>;
+	@:overload @:public public function getFormalTypeParameters() : java.util.Collection<com.sun.mirror.declaration.TypeParameterDeclaration>;
 	
 	/**
 	* Returns the formal parameters of this method or constructor.

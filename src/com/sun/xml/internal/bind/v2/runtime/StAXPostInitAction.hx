@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.runtime;
 */
 @:internal extern class StAXPostInitAction implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

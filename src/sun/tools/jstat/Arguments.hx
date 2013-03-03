@@ -25,51 +25,51 @@ package sun.tools.jstat;
 */
 extern class Arguments
 {
-	@:overload public static function printUsage(ps : java.io.PrintStream) : Void;
+	@:overload @:public @:static public static function printUsage(ps : java.io.PrintStream) : Void;
 	
-	@:overload public function new(args : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(args : java.NativeArray<String>) : Void;
 	
-	@:overload public function comparator() : java.util.Comparator<sun.jvmstat.monitor.Monitor>;
+	@:overload @:public public function comparator() : java.util.Comparator<sun.jvmstat.monitor.Monitor>;
 	
-	@:overload public function isHelp() : Bool;
+	@:overload @:public public function isHelp() : Bool;
 	
-	@:overload public function isList() : Bool;
+	@:overload @:public public function isList() : Bool;
 	
-	@:overload public function isSnap() : Bool;
+	@:overload @:public public function isSnap() : Bool;
 	
-	@:overload public function isOptions() : Bool;
+	@:overload @:public public function isOptions() : Bool;
 	
-	@:overload public function isVerbose() : Bool;
+	@:overload @:public public function isVerbose() : Bool;
 	
-	@:overload public function printConstants() : Bool;
+	@:overload @:public public function printConstants() : Bool;
 	
-	@:overload public function isConstantsOnly() : Bool;
+	@:overload @:public public function isConstantsOnly() : Bool;
 	
-	@:overload public function printStrings() : Bool;
+	@:overload @:public public function printStrings() : Bool;
 	
-	@:overload public function showUnsupported() : Bool;
+	@:overload @:public public function showUnsupported() : Bool;
 	
-	@:overload public function headerRate() : Int;
+	@:overload @:public public function headerRate() : Int;
 	
-	@:overload public function counterNames() : String;
+	@:overload @:public public function counterNames() : String;
 	
-	@:overload public function vmId() : sun.jvmstat.monitor.VmIdentifier;
+	@:overload @:public public function vmId() : sun.jvmstat.monitor.VmIdentifier;
 	
-	@:overload public function vmIdString() : String;
+	@:overload @:public public function vmIdString() : String;
 	
-	@:overload public function sampleInterval() : Int;
+	@:overload @:public public function sampleInterval() : Int;
 	
-	@:overload public function sampleCount() : Int;
+	@:overload @:public public function sampleCount() : Int;
 	
-	@:overload public function isTimestamp() : Bool;
+	@:overload @:public public function isTimestamp() : Bool;
 	
-	@:overload public function isSpecialOption() : Bool;
+	@:overload @:public public function isSpecialOption() : Bool;
 	
-	@:overload public function specialOption() : String;
+	@:overload @:public public function specialOption() : String;
 	
-	@:overload public function optionFormat() : sun.tools.jstat.OptionFormat;
+	@:overload @:public public function optionFormat() : sun.tools.jstat.OptionFormat;
 	
-	@:overload public function optionsSources() : java.util.List<java.net.URL>;
+	@:overload @:public public function optionsSources() : java.util.List<java.net.URL>;
 	
 	
 }

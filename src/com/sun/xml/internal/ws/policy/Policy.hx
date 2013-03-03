@@ -31,7 +31,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	*
 	* @return policy instance which represents a <emph>'nothing allowed'</emph> (no policy alternatives).
 	*/
-	@:overload public static function createNullPolicy() : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public @:static public static function createNullPolicy() : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* The factory method creates an <b>immutable</b> policy instance which represents a <emph>'anything allowed'</emph>
@@ -40,7 +40,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	* @return policy instance which represents a <emph>'anything allowed'</emph> (empty policy alternative with no plicy
 	* assertions prescribed).
 	*/
-	@:overload public static function createEmptyPolicy() : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public @:static public static function createEmptyPolicy() : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* The factory method creates an <b>immutable</b> policy instance which represents a <emph>'nothing allowed'</emph>
@@ -50,7 +50,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	* @param policyId local URI of the policy. May be {@code null}.
 	* @return policy instance which represents a <emph>'nothing allowed'</emph> (no policy alternatives).
 	*/
-	@:overload public static function createNullPolicy(name : String, policyId : String) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public @:static public static function createNullPolicy(name : String, policyId : String) : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* The factory method creates an <b>immutable</b> policy instance which represents a <emph>'nothing allowed'</emph>
@@ -61,7 +61,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	* @param policyId local URI of the policy. May be {@code null}.
 	* @return policy instance which represents a <emph>'nothing allowed'</emph> (no policy alternatives).
 	*/
-	@:overload public static function createNullPolicy(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, name : String, policyId : String) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public @:static public static function createNullPolicy(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, name : String, policyId : String) : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* The factory method creates an <b>immutable</b> policy instance which represents a <emph>'anything allowed'</emph>
@@ -73,7 +73,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	* @return policy instance which represents a <emph>'anything allowed'</emph> (empty policy alternative with no plicy
 	* assertions prescribed).
 	*/
-	@:overload public static function createEmptyPolicy(name : String, policyId : String) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public @:static public static function createEmptyPolicy(name : String, policyId : String) : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* The factory method creates an <b>immutable</b> policy instance which represents a <emph>'anything allowed'</emph>
@@ -86,7 +86,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	* @return policy instance which represents a <emph>'anything allowed'</emph> (empty policy alternative with no plicy
 	* assertions prescribed).
 	*/
-	@:overload public static function createEmptyPolicy(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, name : String, policyId : String) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public @:static public static function createEmptyPolicy(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, name : String, policyId : String) : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* The factory method creates an <b>immutable</b> policy instance which represents a policy expression with
@@ -100,7 +100,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	*
 	* @return policy instance which represents the policy with given alternatives.
 	*/
-	@:overload public static function createPolicy(sets : java.util.Collection<com.sun.xml.internal.ws.policy.AssertionSet>) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public @:static public static function createPolicy(sets : java.util.Collection<com.sun.xml.internal.ws.policy.AssertionSet>) : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* The factory method creates an <b>immutable</b> policy instance which represents a policy expression with
@@ -116,7 +116,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	*
 	* @return policy instance which represents the policy with given alternatives.
 	*/
-	@:overload public static function createPolicy(name : String, policyId : String, sets : java.util.Collection<com.sun.xml.internal.ws.policy.AssertionSet>) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public @:static public static function createPolicy(name : String, policyId : String, sets : java.util.Collection<com.sun.xml.internal.ws.policy.AssertionSet>) : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* The factory method creates an <b>immutable</b> policy instance which represents a policy expression with
@@ -133,23 +133,23 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	*
 	* @return policy instance which represents the policy with given alternatives.
 	*/
-	@:overload public static function createPolicy(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, name : String, policyId : String, sets : java.util.Collection<com.sun.xml.internal.ws.policy.AssertionSet>) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public @:static public static function createPolicy(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, name : String, policyId : String, sets : java.util.Collection<com.sun.xml.internal.ws.policy.AssertionSet>) : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* Returns the policy identifier that serves as a local relative policy URI.
 	*
 	* @return policy identifier - a local relative policy URI. If no policy identifier is set, returns {@code null}.
 	*/
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
 	/**
 	* Returns the policy name that serves as a global policy URI.
 	*
 	* @return policy name - a global policy URI. If no policy name is set, returns {@code null}.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getNamespaceVersion() : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion;
+	@:overload @:public public function getNamespaceVersion() : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion;
 	
 	/**
 	* Returns the policy ID or if that is null the policy name. May return null
@@ -159,14 +159,14 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	* @see #getName()
 	* @return The policy ID if it was set, or the name or null if no attribute was set.
 	*/
-	@:overload public function getIdOrName() : String;
+	@:overload @:public public function getIdOrName() : String;
 	
 	/**
 	* Method returns how many policy alternatives this policy instance contains.
 	*
 	* @return number of policy alternatives contained in this policy instance
 	*/
-	@:overload public function getNumberOfAssertionSets() : Int;
+	@:overload @:public public function getNumberOfAssertionSets() : Int;
 	
 	/**
 	* A policy usually contains one or more assertion sets. Each assertion set
@@ -174,21 +174,21 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	*
 	* @return An iterator to iterate through all contained assertion sets
 	*/
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.policy.AssertionSet>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.policy.AssertionSet>;
 	
 	/**
 	* Returns {@code true} if the policy instance represents "nothing allowed" policy expression
 	*
 	* @return {@code true} if the policy instance represents "nothing allowed" policy expression, {@code false} otherwise.
 	*/
-	@:overload public function isNull() : Bool;
+	@:overload @:public public function isNull() : Bool;
 	
 	/**
 	* Returns {@code true} if the policy instance represents "anything allowed" policy expression
 	*
 	* @return {@code true} if the policy instance represents "anything allowed" policy expression, {@code false} otherwise.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Returns true if the policy contains the assertion names with specified namespace in its vocabulary
@@ -196,7 +196,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	* @param namespaceUri the assertion namespace URI (identifying assertion domain)
 	* @return {@code true}, if an assertion with the given name could be found in the policy vocabulary {@code false} otherwise.
 	*/
-	@:overload public function contains(namespaceUri : String) : Bool;
+	@:overload @:public public function contains(namespaceUri : String) : Bool;
 	
 	/**
 	* Retrieves the vocabulary of this policy expression. The vocabulary is represented by an immutable collection of
@@ -204,7 +204,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	*
 	* @return immutable collection of assertion types contained in the policy (a policy vocabulary).
 	*/
-	@:overload public function getVocabulary() : java.util.Collection<javax.xml.namespace.QName>;
+	@:overload @:public public function getVocabulary() : java.util.Collection<javax.xml.namespace.QName>;
 	
 	/**
 	* Determines if the policy instance contains the assertion with the name specified in its vocabulary.
@@ -214,22 +214,22 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	* @return {@code true} if the assertion with the specified name is part of the policy instance's vocabulary,
 	* {@code false} otherwise.
 	*/
-	@:overload public function contains(assertionName : javax.xml.namespace.QName) : Bool;
+	@:overload @:public public function contains(assertionName : javax.xml.namespace.QName) : Bool;
 	
 	/**
 	* An {@code Object.equals(Object obj)} method override.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* An {@code Object.hashCode()} method override.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* An {@code Object.toString()} method override.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -27,13 +27,13 @@ package org.jcp.xml.dsig.internal.dom;
 */
 extern class DOMSubTreeData implements javax.xml.crypto.NodeSetData
 {
-	@:overload public function new(root : org.w3c.dom.Node, excludeComments : Bool) : Void;
+	@:overload @:public public function new(root : org.w3c.dom.Node, excludeComments : Bool) : Void;
 	
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function getRoot() : org.w3c.dom.Node;
+	@:overload @:public public function getRoot() : org.w3c.dom.Node;
 	
-	@:overload public function excludeComments() : Bool;
+	@:overload @:public public function excludeComments() : Bool;
 	
 	
 }
@@ -43,11 +43,11 @@ extern class DOMSubTreeData implements javax.xml.crypto.NodeSetData
 */
 @:native('org$jcp$xml$dsig$internal$dom$DOMSubTreeData$DelayedNodeIterator') @:internal extern class DOMSubTreeData_DelayedNodeIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

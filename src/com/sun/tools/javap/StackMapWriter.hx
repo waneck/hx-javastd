@@ -33,31 +33,31 @@ package com.sun.tools.javap;
 */
 extern class StackMapWriter extends com.sun.tools.javap.InstructionDetailWriter
 {
-	@:overload private function new(context : com.sun.tools.javap.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javap.Context) : Void;
 	
-	@:overload public function reset(attr : com.sun.tools.classfile.Code_attribute) : Void;
+	@:overload @:public public function reset(attr : com.sun.tools.classfile.Code_attribute) : Void;
 	
-	@:overload public function writeInitialDetails() : Void;
+	@:overload @:public public function writeInitialDetails() : Void;
 	
-	@:overload public function writeDetails(instr : com.sun.tools.classfile.Instruction) : Void;
+	@:overload @:public public function writeDetails(instr : com.sun.tools.classfile.Instruction) : Void;
 	
 	
 }
 @:native('com$sun$tools$javap$StackMapWriter$StackMapBuilder') @:internal extern class StackMapWriter_StackMapBuilder implements com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame_Visitor<Null<Int>, Null<Int>>
 {
-	@:overload public function visit_same_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_frame, pc : Null<Int>) : Null<Int>;
+	@:overload @:public public function visit_same_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_frame, pc : Null<Int>) : Null<Int>;
 	
-	@:overload public function visit_same_locals_1_stack_item_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_locals_1_stack_item_frame, pc : Null<Int>) : Null<Int>;
+	@:overload @:public public function visit_same_locals_1_stack_item_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_locals_1_stack_item_frame, pc : Null<Int>) : Null<Int>;
 	
-	@:overload public function visit_same_locals_1_stack_item_frame_extended(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_locals_1_stack_item_frame_extended, pc : Null<Int>) : Null<Int>;
+	@:overload @:public public function visit_same_locals_1_stack_item_frame_extended(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_locals_1_stack_item_frame_extended, pc : Null<Int>) : Null<Int>;
 	
-	@:overload public function visit_chop_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_chop_frame, pc : Null<Int>) : Null<Int>;
+	@:overload @:public public function visit_chop_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_chop_frame, pc : Null<Int>) : Null<Int>;
 	
-	@:overload public function visit_same_frame_extended(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_frame_extended, pc : Null<Int>) : Null<Int>;
+	@:overload @:public public function visit_same_frame_extended(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_frame_extended, pc : Null<Int>) : Null<Int>;
 	
-	@:overload public function visit_append_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_append_frame, pc : Null<Int>) : Null<Int>;
+	@:overload @:public public function visit_append_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_append_frame, pc : Null<Int>) : Null<Int>;
 	
-	@:overload public function visit_full_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_full_frame, pc : Null<Int>) : Null<Int>;
+	@:overload @:public public function visit_full_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_full_frame, pc : Null<Int>) : Null<Int>;
 	
 	
 }
@@ -67,7 +67,7 @@ extern class StackMapWriter extends com.sun.tools.javap.InstructionDetailWriter
 }
 @:native('com$sun$tools$javap$StackMapWriter$CustomVerificationTypeInfo') @:internal extern class StackMapWriter_CustomVerificationTypeInfo extends verification_type_info
 {
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	
 }

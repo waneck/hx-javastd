@@ -31,7 +31,7 @@ extern class Console implements java.io.Flushable
 	*
 	* @return  The printwriter associated with this console
 	*/
-	@:overload public function writer() : java.io.PrintWriter;
+	@:overload @:public public function writer() : java.io.PrintWriter;
 	
 	/**
 	* Retrieves the unique {@link java.io.Reader Reader} object associated
@@ -62,7 +62,7 @@ extern class Console implements java.io.Flushable
 	*
 	* @return  The reader associated with this console
 	*/
-	@:overload public function reader() : java.io.Reader;
+	@:overload @:public public function reader() : java.io.Reader;
 	
 	/**
 	* Writes a formatted string to this console's output stream using
@@ -94,7 +94,7 @@ extern class Console implements java.io.Flushable
 	*
 	* @return  This console
 	*/
-	@:overload public function format(fmt : String, args : java.NativeArray<Dynamic>) : java.io.Console;
+	@:overload @:public public function format(fmt : String, args : java.NativeArray<Dynamic>) : java.io.Console;
 	
 	/**
 	* A convenience method to write a formatted string to this console's
@@ -130,7 +130,7 @@ extern class Console implements java.io.Flushable
 	*
 	* @return  This console
 	*/
-	@:overload public function printf(format : String, args : java.NativeArray<Dynamic>) : java.io.Console;
+	@:overload @:public public function printf(format : String, args : java.NativeArray<Dynamic>) : java.io.Console;
 	
 	/**
 	* Provides a formatted prompt, then reads a single line of text from the
@@ -163,7 +163,7 @@ extern class Console implements java.io.Flushable
 	*          including any line-termination characters, or <tt>null</tt>
 	*          if an end of stream has been reached.
 	*/
-	@:overload public function readLine(fmt : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public public function readLine(fmt : String, args : java.NativeArray<Dynamic>) : String;
 	
 	/**
 	* Reads a single line of text from the console.
@@ -175,7 +175,7 @@ extern class Console implements java.io.Flushable
 	*          including any line-termination characters, or <tt>null</tt>
 	*          if an end of stream has been reached.
 	*/
-	@:overload public function readLine() : String;
+	@:overload @:public public function readLine() : String;
 	
 	/**
 	* Provides a formatted prompt, then reads a password or passphrase from
@@ -209,7 +209,7 @@ extern class Console implements java.io.Flushable
 	*          from the console, not including any line-termination characters,
 	*          or <tt>null</tt> if an end of stream has been reached.
 	*/
-	@:overload public function readPassword(fmt : String, args : java.NativeArray<Dynamic>) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function readPassword(fmt : String, args : java.NativeArray<Dynamic>) : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Reads a password or passphrase from the console with echoing disabled
@@ -221,23 +221,23 @@ extern class Console implements java.io.Flushable
 	*          from the console, not including any line-termination characters,
 	*          or <tt>null</tt> if an end of stream has been reached.
 	*/
-	@:overload public function readPassword() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function readPassword() : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Flushes the console and forces any buffered output to be written
 	* immediately .
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	
 }
 @:native('java$io$Console$LineReader') @:internal extern class Console_LineReader extends java.io.Reader
 {
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload override public function ready() : Bool;
+	@:overload @:public override public function ready() : Bool;
 	
-	@:overload override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
+	@:overload @:public override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
 	
 	
 }

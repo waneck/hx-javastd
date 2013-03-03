@@ -48,7 +48,7 @@ extern class MBeanInfo implements java.lang.Cloneable implements java.io.Seriali
 	* @param notifications The list of notifications emitted.  This
 	* may be null with the same effect as a zero-length array.
 	*/
-	@:overload public function new(className : String, description : String, attributes : java.NativeArray<javax.management.MBeanAttributeInfo>, constructors : java.NativeArray<javax.management.MBeanConstructorInfo>, operations : java.NativeArray<javax.management.MBeanOperationInfo>, notifications : java.NativeArray<javax.management.MBeanNotificationInfo>) : Void;
+	@:overload @:public public function new(className : String, description : String, attributes : java.NativeArray<javax.management.MBeanAttributeInfo>, constructors : java.NativeArray<javax.management.MBeanConstructorInfo>, operations : java.NativeArray<javax.management.MBeanOperationInfo>, notifications : java.NativeArray<javax.management.MBeanNotificationInfo>) : Void;
 	
 	/**
 	* Constructs an <CODE>MBeanInfo</CODE>.
@@ -77,7 +77,7 @@ extern class MBeanInfo implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(className : String, description : String, attributes : java.NativeArray<javax.management.MBeanAttributeInfo>, constructors : java.NativeArray<javax.management.MBeanConstructorInfo>, operations : java.NativeArray<javax.management.MBeanOperationInfo>, notifications : java.NativeArray<javax.management.MBeanNotificationInfo>, descriptor : javax.management.Descriptor) : Void;
+	@:require(java6) @:overload @:public public function new(className : String, description : String, attributes : java.NativeArray<javax.management.MBeanAttributeInfo>, constructors : java.NativeArray<javax.management.MBeanConstructorInfo>, operations : java.NativeArray<javax.management.MBeanOperationInfo>, notifications : java.NativeArray<javax.management.MBeanNotificationInfo>, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* <p>Returns a shallow clone of this instance.
@@ -89,7 +89,7 @@ extern class MBeanInfo implements java.lang.Cloneable implements java.io.Seriali
 	* <p>Since this class is immutable, the clone method is chiefly of
 	* interest to subclasses.</p>
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns the name of the Java class of the MBean described by
@@ -97,14 +97,14 @@ extern class MBeanInfo implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @return the class name.
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Returns a human readable description of the MBean.
 	*
 	* @return the description.
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	/**
 	* Returns the list of attributes exposed for management.
@@ -117,7 +117,7 @@ extern class MBeanInfo implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @return  An array of <CODE>MBeanAttributeInfo</CODE> objects.
 	*/
-	@:overload public function getAttributes() : java.NativeArray<javax.management.MBeanAttributeInfo>;
+	@:overload @:public public function getAttributes() : java.NativeArray<javax.management.MBeanAttributeInfo>;
 	
 	/**
 	* Returns the list of operations  of the MBean.
@@ -130,7 +130,7 @@ extern class MBeanInfo implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @return  An array of <CODE>MBeanOperationInfo</CODE> objects.
 	*/
-	@:overload public function getOperations() : java.NativeArray<javax.management.MBeanOperationInfo>;
+	@:overload @:public public function getOperations() : java.NativeArray<javax.management.MBeanOperationInfo>;
 	
 	/**
 	* <p>Returns the list of the public constructors of the MBean.
@@ -151,7 +151,7 @@ extern class MBeanInfo implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @return  An array of <CODE>MBeanConstructorInfo</CODE> objects.
 	*/
-	@:overload public function getConstructors() : java.NativeArray<javax.management.MBeanConstructorInfo>;
+	@:overload @:public public function getConstructors() : java.NativeArray<javax.management.MBeanConstructorInfo>;
 	
 	/**
 	* Returns the list of the notifications emitted by the MBean.
@@ -164,7 +164,7 @@ extern class MBeanInfo implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @return  An array of <CODE>MBeanNotificationInfo</CODE> objects.
 	*/
-	@:overload public function getNotifications() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload @:public public function getNotifications() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
 	/**
 	* Get the descriptor of this MBeanInfo.  Changing the returned value
@@ -174,9 +174,9 @@ extern class MBeanInfo implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getDescriptor() : javax.management.Descriptor;
+	@:require(java6) @:overload @:public public function getDescriptor() : javax.management.Descriptor;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* <p>Compare this MBeanInfo to another.  Two MBeanInfo objects
@@ -197,9 +197,9 @@ extern class MBeanInfo implements java.lang.Cloneable implements java.io.Seriali
 	* @return true if and only if <code>o</code> is an MBeanInfo that is equal
 	* to this one according to the rules above.
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
@@ -212,7 +212,7 @@ extern class MBeanInfo implements java.lang.Cloneable implements java.io.Seriali
 */
 @:native('javax$management$MBeanInfo$ArrayGettersSafeAction') @:internal extern class MBeanInfo_ArrayGettersSafeAction implements java.security.PrivilegedAction<Null<Bool>>
 {
-	@:overload public function run() : Null<Bool>;
+	@:overload @:public public function run() : Null<Bool>;
 	
 	
 }

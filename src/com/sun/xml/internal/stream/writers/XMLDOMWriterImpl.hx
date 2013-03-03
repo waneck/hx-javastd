@@ -29,25 +29,25 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* Creates a new instance of XMLDOMwriterImpl
 	* @param result DOMResult object @javax.xml.transform.dom.DOMResult
 	*/
-	@:overload public function new(result : javax.xml.transform.dom.DOMResult) : Void;
+	@:overload @:public public function new(result : javax.xml.transform.dom.DOMResult) : Void;
 	
 	/**
 	* This method has no effect when called.
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* This method has no effect when called.
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @return {@inheritDoc}
 	*/
-	@:overload public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
 	
 	/**
 	* {@inheritDoc}
@@ -55,7 +55,7 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	* @return {@inheritDoc}
 	*/
-	@:overload public function getPrefix(namespaceURI : String) : String;
+	@:overload @:public public function getPrefix(namespaceURI : String) : String;
 	
 	/**
 	* Is not supported in this implementation.
@@ -63,21 +63,21 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @throws java.lang.IllegalArgumentException {@inheritDoc}
 	* @return {@inheritDoc}
 	*/
-	@:overload public function getProperty(str : String) : Dynamic;
+	@:overload @:public public function getProperty(str : String) : Dynamic;
 	
 	/**
 	* Is not supported in this version of the implementation.
 	* @param uri {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function setDefaultNamespace(uri : String) : Void;
+	@:overload @:public public function setDefaultNamespace(uri : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @param namespaceContext {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function setNamespaceContext(namespaceContext : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public public function setNamespaceContext(namespaceContext : javax.xml.namespace.NamespaceContext) : Void;
 	
 	/**
 	* Is not supported in this version of the implementation.
@@ -85,7 +85,7 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @param uri {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function setPrefix(prefix : String, uri : String) : Void;
+	@:overload @:public public function setPrefix(prefix : String, uri : String) : Void;
 	
 	/**
 	* Creates a DOM Atrribute @see org.w3c.dom.Node and associates it with the current DOM element @see org.w3c.dom.Node.
@@ -93,7 +93,7 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @param value {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeAttribute(localName : String, value : String) : Void;
+	@:overload @:public public function writeAttribute(localName : String, value : String) : Void;
 	
 	/**
 	* Creates a DOM Atrribute @see org.w3c.dom.Node and associates it with the current DOM element @see org.w3c.dom.Node.
@@ -102,7 +102,7 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @param value {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeAttribute(namespaceURI : String, localName : String, value : String) : Void;
+	@:overload @:public public function writeAttribute(namespaceURI : String, localName : String, value : String) : Void;
 	
 	/**
 	* Creates a DOM Atrribute @see org.w3c.dom.Node and associates it with the current DOM element @see org.w3c.dom.Node.
@@ -112,14 +112,14 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @param value {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeAttribute(prefix : String, namespaceURI : String, localName : String, value : String) : Void;
+	@:overload @:public public function writeAttribute(prefix : String, namespaceURI : String, localName : String, value : String) : Void;
 	
 	/**
 	* Creates a CDATA object @see org.w3c.dom.CDATASection.
 	* @param data {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeCData(data : String) : Void;
+	@:overload @:public public function writeCData(data : String) : Void;
 	
 	/**
 	* Creates a character object @see org.w3c.dom.Text and appends it to the current
@@ -127,7 +127,7 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @param charData {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeCharacters(charData : String) : Void;
+	@:overload @:public public function writeCharacters(charData : String) : Void;
 	
 	/**
 	* Creates a character object @see org.w3c.dom.Text and appends it to the current
@@ -137,7 +137,7 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @param param2 {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeCharacters(values : java.NativeArray<java.StdTypes.Char16>, param : Int, param2 : Int) : Void;
+	@:overload @:public public function writeCharacters(values : java.NativeArray<java.StdTypes.Char16>, param : Int, param2 : Int) : Void;
 	
 	/**
 	* Creates a Comment object @see org.w3c.dom.Comment and appends it to the current
@@ -145,28 +145,28 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @param str {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeComment(str : String) : Void;
+	@:overload @:public public function writeComment(str : String) : Void;
 	
 	/**
 	* This method is not supported in this implementation.
 	* @param str {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeDTD(str : String) : Void;
+	@:overload @:public public function writeDTD(str : String) : Void;
 	
 	/**
 	* Creates a DOM attribute and adds it to the current element in the DOM tree.
 	* @param namespaceURI {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeDefaultNamespace(namespaceURI : String) : Void;
+	@:overload @:public public function writeDefaultNamespace(namespaceURI : String) : Void;
 	
 	/**
 	* creates a DOM Element and appends it to the current element in the tree.
 	* @param localName {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeEmptyElement(localName : String) : Void;
+	@:overload @:public public function writeEmptyElement(localName : String) : Void;
 	
 	/**
 	* creates a DOM Element and appends it to the current element in the tree.
@@ -174,7 +174,7 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @param localName {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeEmptyElement(namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function writeEmptyElement(namespaceURI : String, localName : String) : Void;
 	
 	/**
 	* creates a DOM Element and appends it to the current element in the tree.
@@ -183,26 +183,26 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @param namespaceURI {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeEmptyElement(prefix : String, localName : String, namespaceURI : String) : Void;
+	@:overload @:public public function writeEmptyElement(prefix : String, localName : String, namespaceURI : String) : Void;
 	
 	/**
 	* Will reset current Node pointer maintained by the implementation.
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeEndDocument() : Void;
+	@:overload @:public public function writeEndDocument() : Void;
 	
 	/**
 	* Internal current Node pointer will point to the parent of the current Node.
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeEndElement() : Void;
+	@:overload @:public public function writeEndElement() : Void;
 	
 	/**
 	* Is not supported in this implementation.
 	* @param name {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeEntityRef(name : String) : Void;
+	@:overload @:public public function writeEntityRef(name : String) : Void;
 	
 	/**
 	* creates a namespace attribute and will associate it with the current element in
@@ -211,14 +211,14 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @param namespaceURI {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeNamespace(prefix : String, namespaceURI : String) : Void;
+	@:overload @:public public function writeNamespace(prefix : String, namespaceURI : String) : Void;
 	
 	/**
 	* is not supported in this release.
 	* @param target {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeProcessingInstruction(target : String) : Void;
+	@:overload @:public public function writeProcessingInstruction(target : String) : Void;
 	
 	/**
 	* is not supported in this release.
@@ -226,14 +226,14 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @param data {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeProcessingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function writeProcessingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* will set version on the Document object when the DOM Node passed to this implementation
 	* supports DOM Level3 API's.
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeStartDocument() : Void;
+	@:overload @:public public function writeStartDocument() : Void;
 	
 	/**
 	* will set version on the Document object when the DOM Node passed to this implementation
@@ -241,7 +241,7 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @param version {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeStartDocument(version : String) : Void;
+	@:overload @:public public function writeStartDocument(version : String) : Void;
 	
 	/**
 	* will set version on the Document object when the DOM Node passed to this implementation
@@ -250,14 +250,14 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @param version {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeStartDocument(encoding : String, version : String) : Void;
+	@:overload @:public public function writeStartDocument(encoding : String, version : String) : Void;
 	
 	/**
 	* creates a DOM Element and appends it to the current element in the tree.
 	* @param localName {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeStartElement(localName : String) : Void;
+	@:overload @:public public function writeStartElement(localName : String) : Void;
 	
 	/**
 	* creates a DOM Element and appends it to the current element in the tree.
@@ -265,7 +265,7 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @param localName {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeStartElement(namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function writeStartElement(namespaceURI : String, localName : String) : Void;
 	
 	/**
 	* creates a DOM Element and appends it to the current element in the tree.
@@ -274,7 +274,7 @@ extern class XMLDOMWriterImpl implements javax.xml.stream.XMLStreamWriter
 	* @param namespaceURI {@inheritDoc}
 	* @throws javax.xml.stream.XMLStreamException {@inheritDoc}
 	*/
-	@:overload public function writeStartElement(prefix : String, localName : String, namespaceURI : String) : Void;
+	@:overload @:public public function writeStartElement(prefix : String, localName : String, namespaceURI : String) : Void;
 	
 	
 }

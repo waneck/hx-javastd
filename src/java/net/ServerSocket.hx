@@ -31,7 +31,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @exception IOException IO error when opening the socket.
 	* @revised 1.4
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a server socket, bound to the specified port. A port number
@@ -70,7 +70,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @see        java.net.ServerSocket#setSocketFactory(java.net.SocketImplFactory)
 	* @see        SecurityManager#checkListen
 	*/
-	@:overload public function new(port : Int) : Void;
+	@:overload @:public public function new(port : Int) : Void;
 	
 	/**
 	* Creates a server socket and binds it to the specified local port
@@ -121,7 +121,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @see        java.net.ServerSocket#setSocketFactory(java.net.SocketImplFactory)
 	* @see        SecurityManager#checkListen
 	*/
-	@:overload public function new(port : Int, backlog : Int) : Void;
+	@:overload @:public public function new(port : Int, backlog : Int) : Void;
 	
 	/**
 	* Create a server with the specified port, listen backlog, and
@@ -168,7 +168,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @see SecurityManager#checkListen
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function new(port : Int, backlog : Int, bindAddr : java.net.InetAddress) : Void;
+	@:require(java1) @:overload @:public public function new(port : Int, backlog : Int, bindAddr : java.net.InetAddress) : Void;
 	
 	/**
 	*
@@ -187,7 +187,7 @@ extern class ServerSocket implements java.io.Closeable
 	*          SocketAddress subclass not supported by this socket
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function bind(endpoint : java.net.SocketAddress) : Void;
+	@:require(java4) @:overload @:public public function bind(endpoint : java.net.SocketAddress) : Void;
 	
 	/**
 	*
@@ -214,7 +214,7 @@ extern class ServerSocket implements java.io.Closeable
 	*          SocketAddress subclass not supported by this socket
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function bind(endpoint : java.net.SocketAddress, backlog : Int) : Void;
+	@:require(java4) @:overload @:public public function bind(endpoint : java.net.SocketAddress, backlog : Int) : Void;
 	
 	/**
 	* Returns the local address of this server socket.
@@ -226,7 +226,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @return  the address to which this socket is bound,
 	*          or <code>null</code> if the socket is unbound.
 	*/
-	@:overload public function getInetAddress() : java.net.InetAddress;
+	@:overload @:public public function getInetAddress() : java.net.InetAddress;
 	
 	/**
 	* Returns the port number on which this socket is listening.
@@ -238,7 +238,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @return  the port number to which this socket is listening or
 	*          -1 if the socket is not bound yet.
 	*/
-	@:overload public function getLocalPort() : Int;
+	@:overload @:public public function getLocalPort() : Int;
 	
 	/**
 	* Returns the address of the endpoint this socket is bound to, or
@@ -255,7 +255,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @see #bind(SocketAddress)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getLocalSocketAddress() : java.net.SocketAddress;
+	@:require(java4) @:overload @:public public function getLocalSocketAddress() : java.net.SocketAddress;
 	
 	/**
 	* Listens for a connection to be made to this socket and accepts
@@ -285,7 +285,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @revised 1.4
 	* @spec JSR-51
 	*/
-	@:overload public function accept() : java.net.Socket;
+	@:overload @:public public function accept() : java.net.Socket;
 	
 	/**
 	* Subclasses of ServerSocket use this method to override accept()
@@ -303,7 +303,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @revised 1.4
 	* @spec JSR-51
 	*/
-	@:require(java1) @:overload @:final private function implAccept(s : java.net.Socket) : Void;
+	@:require(java1) @:overload @:protected @:final private function implAccept(s : java.net.Socket) : Void;
 	
 	/**
 	* Closes this socket.
@@ -318,7 +318,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @revised 1.4
 	* @spec JSR-51
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Returns the unique {@link java.nio.channels.ServerSocketChannel} object
@@ -336,7 +336,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @since 1.4
 	* @spec JSR-51
 	*/
-	@:require(java4) @:overload public function getChannel() : java.nio.channels.ServerSocketChannel;
+	@:require(java4) @:overload @:public public function getChannel() : java.nio.channels.ServerSocketChannel;
 	
 	/**
 	* Returns the binding state of the ServerSocket.
@@ -344,7 +344,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @return true if the ServerSocket succesfuly bound to an address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isBound() : Bool;
+	@:require(java4) @:overload @:public public function isBound() : Bool;
 	
 	/**
 	* Returns the closed state of the ServerSocket.
@@ -352,7 +352,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @return true if the socket has been closed
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isClosed() : Bool;
+	@:require(java4) @:overload @:public public function isClosed() : Bool;
 	
 	/**
 	* Enable/disable SO_TIMEOUT with the specified timeout, in
@@ -370,7 +370,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @since   JDK1.1
 	* @see #getSoTimeout()
 	*/
-	@:require(java1) @:overload @:synchronized public function setSoTimeout(timeout : Int) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function setSoTimeout(timeout : Int) : Void;
 	
 	/**
 	* Retrieve setting for SO_TIMEOUT.  0 returns implies that the
@@ -380,7 +380,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @since   JDK1.1
 	* @see #setSoTimeout(int)
 	*/
-	@:require(java1) @:overload @:synchronized public function getSoTimeout() : Int;
+	@:require(java1) @:overload @:public @:synchronized public function getSoTimeout() : Int;
 	
 	/**
 	* Enable/disable the SO_REUSEADDR socket option.
@@ -418,7 +418,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @see #isBound()
 	* @see #isClosed()
 	*/
-	@:require(java4) @:overload public function setReuseAddress(on : Bool) : Void;
+	@:require(java4) @:overload @:public public function setReuseAddress(on : Bool) : Void;
 	
 	/**
 	* Tests if SO_REUSEADDR is enabled.
@@ -429,7 +429,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @since   1.4
 	* @see #setReuseAddress(boolean)
 	*/
-	@:require(java4) @:overload public function getReuseAddress() : Bool;
+	@:require(java4) @:overload @:public public function getReuseAddress() : Bool;
 	
 	/**
 	* Returns the implementation address and implementation port of
@@ -437,7 +437,7 @@ extern class ServerSocket implements java.io.Closeable
 	*
 	* @return  a string representation of this socket.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Sets the server socket implementation factory for the
@@ -464,7 +464,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @see        java.net.SocketImplFactory#createSocketImpl()
 	* @see        SecurityManager#checkSetFactory
 	*/
-	@:overload @:synchronized public static function setSocketFactory(fac : java.net.SocketImplFactory) : Void;
+	@:overload @:public @:static @:synchronized public static function setSocketFactory(fac : java.net.SocketImplFactory) : Void;
 	
 	/**
 	* Sets a default proposed value for the SO_RCVBUF option for sockets
@@ -501,7 +501,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @since 1.4
 	* @see #getReceiveBufferSize
 	*/
-	@:require(java4) @:overload @:synchronized public function setReceiveBufferSize(size : Int) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function setReceiveBufferSize(size : Int) : Void;
 	
 	/**
 	* Gets the value of the SO_RCVBUF option for this <tt>ServerSocket</tt>,
@@ -516,7 +516,7 @@ extern class ServerSocket implements java.io.Closeable
 	* @see #setReceiveBufferSize(int)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getReceiveBufferSize() : Int;
+	@:require(java4) @:overload @:public @:synchronized public function getReceiveBufferSize() : Int;
 	
 	/**
 	* Sets performance preferences for this ServerSocket.
@@ -556,7 +556,7 @@ extern class ServerSocket implements java.io.Closeable
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setPerformancePreferences(connectionTime : Int, latency : Int, bandwidth : Int) : Void;
+	@:require(java5) @:overload @:public public function setPerformancePreferences(connectionTime : Int, latency : Int, bandwidth : Int) : Void;
 	
 	
 }

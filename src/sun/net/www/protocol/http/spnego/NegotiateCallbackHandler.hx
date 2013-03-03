@@ -25,9 +25,9 @@ package sun.net.www.protocol.http.spnego;
 */
 extern class NegotiateCallbackHandler implements javax.security.auth.callback.CallbackHandler
 {
-	@:overload public function new(hci : sun.net.www.protocol.http.HttpCallerInfo) : Void;
+	@:overload @:public public function new(hci : sun.net.www.protocol.http.HttpCallerInfo) : Void;
 	
-	@:overload public function handle(callbacks : java.NativeArray<javax.security.auth.callback.Callback>) : Void;
+	@:overload @:public public function handle(callbacks : java.NativeArray<javax.security.auth.callback.Callback>) : Void;
 	
 	
 }

@@ -25,9 +25,9 @@ package sun.awt;
 */
 extern class EventQueueDelegate
 {
-	@:overload public static function setDelegate(delegate : sun.awt.EventQueueDelegate.EventQueueDelegate_Delegate) : Void;
+	@:overload @:public @:static public static function setDelegate(delegate : sun.awt.EventQueueDelegate.EventQueueDelegate_Delegate) : Void;
 	
-	@:overload public static function getDelegate() : sun.awt.EventQueueDelegate.EventQueueDelegate_Delegate;
+	@:overload @:public @:static public static function getDelegate() : sun.awt.EventQueueDelegate.EventQueueDelegate_Delegate;
 	
 	
 }
@@ -39,7 +39,7 @@ extern class EventQueueDelegate
 	* @param eventQueue current {@code EventQueue}
 	* @return next {@code event} for the {@code EventDispatchThread}
 	*/
-	@:overload public function getNextEvent(eventQueue : java.awt.EventQueue) : java.awt.AWTEvent;
+	@:overload @:public public function getNextEvent(eventQueue : java.awt.EventQueue) : java.awt.AWTEvent;
 	
 	/**
 	* Notifies delegate before EventQueue.dispatch method.
@@ -49,7 +49,7 @@ extern class EventQueueDelegate
 	* @param event  to be dispatched by {@code dispatch} method
 	* @return handle to be passed to {@code afterDispatch} method
 	*/
-	@:overload public function beforeDispatch(event : java.awt.AWTEvent) : Dynamic;
+	@:overload @:public public function beforeDispatch(event : java.awt.AWTEvent) : Dynamic;
 	
 	/**
 	* Notifies delegate after EventQueue.dispatch method.
@@ -57,7 +57,7 @@ extern class EventQueueDelegate
 	* @param event {@code event} dispatched by the {@code dispatch} method
 	* @param handle object which came from {@code beforeDispatch} method
 	*/
-	@:overload public function afterDispatch(event : java.awt.AWTEvent, handle : Dynamic) : Void;
+	@:overload @:public public function afterDispatch(event : java.awt.AWTEvent, handle : Dynamic) : Void;
 	
 	
 }

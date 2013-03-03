@@ -29,7 +29,7 @@ extern class ElementKindVisitor7<R, P> extends javax.lang.model.util.ElementKind
 	* Constructor for concrete subclasses; uses {@code null} for the
 	* default value.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructor for concrete subclasses; uses the argument for the
@@ -37,7 +37,7 @@ extern class ElementKindVisitor7<R, P> extends javax.lang.model.util.ElementKind
 	*
 	* @param defaultValue the value to assign to {@link #DEFAULT_VALUE}
 	*/
-	@:overload private function new(defaultValue : R) : Void;
+	@:overload @:protected private function new(defaultValue : R) : Void;
 	
 	/**
 	* Visits a {@code RESOURCE_VARIABLE} variable element by calling
@@ -47,7 +47,7 @@ extern class ElementKindVisitor7<R, P> extends javax.lang.model.util.ElementKind
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitVariableAsResourceVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
+	@:overload @:public override public function visitVariableAsResourceVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
 	
 	
 }

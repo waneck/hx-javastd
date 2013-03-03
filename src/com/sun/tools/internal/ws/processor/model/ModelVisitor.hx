@@ -29,23 +29,23 @@ package com.sun.tools.internal.ws.processor.model;
 */
 extern interface ModelVisitor
 {
-	@:overload public function visit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
+	@:overload @:public public function visit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
 	
-	@:overload public function visit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
+	@:overload @:public public function visit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
 	
-	@:overload public function visit(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
+	@:overload @:public public function visit(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
 	
-	@:overload public function visit(operation : com.sun.tools.internal.ws.processor.model.Operation) : Void;
+	@:overload @:public public function visit(operation : com.sun.tools.internal.ws.processor.model.Operation) : Void;
 	
-	@:overload public function visit(request : com.sun.tools.internal.ws.processor.model.Request) : Void;
+	@:overload @:public public function visit(request : com.sun.tools.internal.ws.processor.model.Request) : Void;
 	
-	@:overload public function visit(response : com.sun.tools.internal.ws.processor.model.Response) : Void;
+	@:overload @:public public function visit(response : com.sun.tools.internal.ws.processor.model.Response) : Void;
 	
-	@:overload public function visit(fault : com.sun.tools.internal.ws.processor.model.Fault) : Void;
+	@:overload @:public public function visit(fault : com.sun.tools.internal.ws.processor.model.Fault) : Void;
 	
-	@:overload public function visit(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
+	@:overload @:public public function visit(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
-	@:overload public function visit(parameter : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
+	@:overload @:public public function visit(parameter : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
 	
 	
 }

@@ -39,21 +39,21 @@ extern class MetalComboBoxEditor extends javax.swing.plaf.basic.BasicComboBoxEdi
 	*
 	* @author Steve Wilson
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* The default editor border <code>Insets</code>. This field
 	* might not be used.
 	*/
-	private static var editorBorderInsets : java.awt.Insets;
+	@:protected @:static private static var editorBorderInsets : java.awt.Insets;
 	
 	
 }
 @:native('javax$swing$plaf$metal$MetalComboBoxEditor$EditorBorder') @:internal extern class MetalComboBoxEditor_EditorBorder extends javax.swing.border.AbstractBorder
 {
-	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }

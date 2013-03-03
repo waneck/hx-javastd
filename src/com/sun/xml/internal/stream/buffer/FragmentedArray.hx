@@ -25,11 +25,11 @@ package com.sun.xml.internal.stream.buffer;
 */
 @:internal extern class FragmentedArray<T>
 {
-	private var _item : T;
+	@:protected private var _item : T;
 	
-	private var _next : com.sun.xml.internal.stream.buffer.FragmentedArray<T>;
+	@:protected private var _next : com.sun.xml.internal.stream.buffer.FragmentedArray<T>;
 	
-	private var _previous : com.sun.xml.internal.stream.buffer.FragmentedArray<T>;
+	@:protected private var _previous : com.sun.xml.internal.stream.buffer.FragmentedArray<T>;
 	
 	
 }

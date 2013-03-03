@@ -34,11 +34,11 @@ extern class ByteToCharJIS0208_Solaris extends sun.io.ByteToCharDoubleByte
 	*
 	* @author  ConverterGenerator tool
 	*/
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
-	@:overload override private function convSingleByte(b : Int) : java.StdTypes.Char16;
+	@:overload @:protected override private function convSingleByte(b : Int) : java.StdTypes.Char16;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

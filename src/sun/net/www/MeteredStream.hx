@@ -28,37 +28,37 @@ extern class MeteredStream extends java.io.FilterInputStream
 	/* if expected != -1, after we've read >= expected, we're "closed" and return -1
 	* from subsequest read() 's
 	*/
-	private var closed : Bool;
+	@:protected private var closed : Bool;
 	
-	private var expected : haxe.Int64;
+	@:protected private var expected : haxe.Int64;
 	
-	private var count : haxe.Int64;
+	@:protected private var count : haxe.Int64;
 	
-	private var markedCount : haxe.Int64;
+	@:protected private var markedCount : haxe.Int64;
 	
-	private var markLimit : Int;
+	@:protected private var markLimit : Int;
 	
-	private var pi : sun.net.ProgressSource;
+	@:protected private var pi : sun.net.ProgressSource;
 	
-	@:overload public function new(is : java.io.InputStream, pi : sun.net.ProgressSource, expected : haxe.Int64) : Void;
+	@:overload @:public public function new(is : java.io.InputStream, pi : sun.net.ProgressSource, expected : haxe.Int64) : Void;
 	
-	@:overload @:synchronized override public function read() : Int;
+	@:overload @:public @:synchronized override public function read() : Int;
 	
-	@:overload @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload @:synchronized override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:synchronized override public function skip(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload @:synchronized override public function available() : Int;
+	@:overload @:public @:synchronized override public function available() : Int;
 	
-	@:overload @:synchronized override public function mark(readLimit : Int) : Void;
+	@:overload @:public @:synchronized override public function mark(readLimit : Int) : Void;
 	
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

@@ -25,19 +25,19 @@ package sun.print;
 */
 extern class PrinterGraphicsDevice extends java.awt.GraphicsDevice
 {
-	@:overload private function new(conf : java.awt.GraphicsConfiguration, id : String) : Void;
+	@:overload @:protected private function new(conf : java.awt.GraphicsConfiguration, id : String) : Void;
 	
-	@:overload public function getType() : Int;
+	@:overload @:public override public function getType() : Int;
 	
-	@:overload public function getIDstring() : String;
+	@:overload @:public override public function getIDstring() : String;
 	
-	@:overload public function getConfigurations() : java.NativeArray<java.awt.GraphicsConfiguration>;
+	@:overload @:public override public function getConfigurations() : java.NativeArray<java.awt.GraphicsConfiguration>;
 	
-	@:overload public function getDefaultConfiguration() : java.awt.GraphicsConfiguration;
+	@:overload @:public override public function getDefaultConfiguration() : java.awt.GraphicsConfiguration;
 	
-	@:overload public function setFullScreenWindow(w : java.awt.Window) : Void;
+	@:overload @:public override public function setFullScreenWindow(w : java.awt.Window) : Void;
 	
-	@:overload public function getFullScreenWindow() : java.awt.Window;
+	@:overload @:public override public function getFullScreenWindow() : java.awt.Window;
 	
 	
 }

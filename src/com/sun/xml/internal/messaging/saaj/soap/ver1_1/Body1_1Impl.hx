@@ -29,21 +29,21 @@ package com.sun.xml.internal.messaging.saaj.soap.ver1_1;
 */
 extern class Body1_1Impl extends com.sun.xml.internal.messaging.saaj.soap.impl.BodyImpl
 {
-	@:overload public function new(ownerDocument : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, prefix : String) : Void;
+	@:overload @:public public function new(ownerDocument : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, prefix : String) : Void;
 	
-	@:overload public function addSOAP12Fault(faultCode : javax.xml.namespace.QName, faultReason : String, locale : java.util.Locale) : javax.xml.soap.SOAPFault;
+	@:overload @:public public function addSOAP12Fault(faultCode : javax.xml.namespace.QName, faultReason : String, locale : java.util.Locale) : javax.xml.soap.SOAPFault;
 	
-	@:overload override private function getFaultName(name : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected override private function getFaultName(name : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload override private function createBodyElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPBodyElement;
+	@:overload @:protected override private function createBodyElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPBodyElement;
 	
-	@:overload override private function createBodyElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPBodyElement;
+	@:overload @:protected override private function createBodyElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPBodyElement;
 	
-	@:overload override private function getDefaultFaultCode() : javax.xml.namespace.QName;
+	@:overload @:protected override private function getDefaultFaultCode() : javax.xml.namespace.QName;
 	
-	@:overload override private function isFault(child : javax.xml.soap.SOAPElement) : Bool;
+	@:overload @:protected override private function isFault(child : javax.xml.soap.SOAPElement) : Bool;
 	
-	@:overload override private function createFaultElement() : javax.xml.soap.SOAPFault;
+	@:overload @:protected override private function createFaultElement() : javax.xml.soap.SOAPFault;
 	
 	
 }

@@ -60,7 +60,7 @@ package java.util;
 	* @param  msg  The message, or <tt>null</tt> if there is no message
 	*
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Constructs a new instance with the specified message and cause.
@@ -70,7 +70,7 @@ package java.util;
 	* @param  cause  The cause, or <tt>null</tt> if the cause is nonexistent
 	*                or unknown
 	*/
-	@:overload public function new(msg : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(msg : String, cause : java.lang.Throwable) : Void;
 	
 	
 }

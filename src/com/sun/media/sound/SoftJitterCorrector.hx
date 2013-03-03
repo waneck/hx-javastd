@@ -25,7 +25,7 @@ package com.sun.media.sound;
 */
 extern class SoftJitterCorrector extends javax.sound.sampled.AudioInputStream
 {
-	@:overload public function new(stream : javax.sound.sampled.AudioInputStream, buffersize : Int, smallbuffersize : Int) : Void;
+	@:overload @:public public function new(stream : javax.sound.sampled.AudioInputStream, buffersize : Int, smallbuffersize : Int) : Void;
 	
 	
 }
@@ -36,23 +36,23 @@ extern class SoftJitterCorrector extends javax.sound.sampled.AudioInputStream
 */
 @:native('com$sun$media$sound$SoftJitterCorrector$JitterStream') @:internal extern class SoftJitterCorrector_JitterStream extends java.io.InputStream
 {
-	@:overload public function nextReadBuffer() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function nextReadBuffer() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function nextWriteBuffer() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function nextWriteBuffer() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function commit() : Void;
+	@:overload @:public public function commit() : Void;
 	
-	@:overload public function new(s : javax.sound.sampled.AudioInputStream, buffersize : Int, smallbuffersize : Int) : Void;
+	@:overload @:public public function new(s : javax.sound.sampled.AudioInputStream, buffersize : Int, smallbuffersize : Int) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function fillBuffer() : Void;
+	@:overload @:public public function fillBuffer() : Void;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	
 }

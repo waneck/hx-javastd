@@ -35,12 +35,12 @@ package java.net;
 	* message.
 	* @param msg the detail message
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Construct a new SocketTimeoutException with no detailed message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

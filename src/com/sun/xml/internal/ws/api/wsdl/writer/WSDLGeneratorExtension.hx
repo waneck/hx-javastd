@@ -44,14 +44,14 @@ extern class WSDLGeneratorExtension
 	*                  TODO: think about tool side
 	* @deprecated
 	*/
-	@:overload public function start(root : com.sun.xml.internal.txw2.TypedXmlWriter, model : com.sun.xml.internal.ws.api.model.SEIModel, binding : com.sun.xml.internal.ws.api.WSBinding, container : com.sun.xml.internal.ws.api.server.Container) : Void;
+	@:overload @:public public function start(root : com.sun.xml.internal.txw2.TypedXmlWriter, model : com.sun.xml.internal.ws.api.model.SEIModel, binding : com.sun.xml.internal.ws.api.WSBinding, container : com.sun.xml.internal.ws.api.server.Container) : Void;
 	
 	/**
 	* Called before writing </wsdl:defintions>.
 	*
 	* @param ctxt
 	*/
-	@:overload public function end(ctxt : com.sun.xml.internal.ws.api.wsdl.writer.WSDLGenExtnContext) : Void;
+	@:overload @:public public function end(ctxt : com.sun.xml.internal.ws.api.wsdl.writer.WSDLGenExtnContext) : Void;
 	
 	/**
 	* Called at the very beginning of the process.
@@ -64,7 +64,7 @@ extern class WSDLGeneratorExtension
 	*
 	* @param ctxt Provides the context for the generator extensions
 	*/
-	@:overload public function start(ctxt : com.sun.xml.internal.ws.api.wsdl.writer.WSDLGenExtnContext) : Void;
+	@:overload @:public public function start(ctxt : com.sun.xml.internal.ws.api.wsdl.writer.WSDLGenExtnContext) : Void;
 	
 	/**
 	* This method is invoked so that extensions to a <code>wsdl:definitions</code>
@@ -72,7 +72,7 @@ extern class WSDLGeneratorExtension
 	*
 	* @param definitions This is the <code>wsdl:defintions</code> element that the extension can be added to.
 	*/
-	@:overload public function addDefinitionsExtension(definitions : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
+	@:overload @:public public function addDefinitionsExtension(definitions : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
 	
 	/**
 	* This method is invoked so that extensions to a <code>wsdl:service</code>
@@ -80,7 +80,7 @@ extern class WSDLGeneratorExtension
 	*
 	* @param service This is the <code>wsdl:service</code> element that the extension can be added to.
 	*/
-	@:overload public function addServiceExtension(service : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
+	@:overload @:public public function addServiceExtension(service : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
 	
 	/**
 	* This method is invoked so that extensions to a <code>wsdl:port</code>
@@ -88,7 +88,7 @@ extern class WSDLGeneratorExtension
 	*
 	* @param port This is the wsdl:port element that the extension can be added to.
 	*/
-	@:overload public function addPortExtension(port : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
+	@:overload @:public public function addPortExtension(port : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
 	
 	/**
 	* This method is invoked so that extensions to a <code>wsdl:portType</code>
@@ -97,7 +97,7 @@ extern class WSDLGeneratorExtension
 	*
 	* @param portType This is the wsdl:portType element that the extension can be added to.
 	*/
-	@:overload public function addPortTypeExtension(portType : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
+	@:overload @:public public function addPortTypeExtension(portType : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
 	
 	/**
 	* This method is invoked so that extensions to a <code>wsdl:binding</code>
@@ -108,7 +108,7 @@ extern class WSDLGeneratorExtension
 	*
 	* @param binding This is the wsdl:binding element that the extension can be added to.
 	*/
-	@:overload public function addBindingExtension(binding : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
+	@:overload @:public public function addBindingExtension(binding : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
 	
 	/**
 	* This method is invoked so that extensions to a <code>wsdl:portType/wsdl:operation</code>
@@ -118,7 +118,7 @@ extern class WSDLGeneratorExtension
 	*                  extension can be added to.
 	* @param method    {@link JavaMethod} which captures all the information to generate wsdl:portType/wsdl:operation
 	*/
-	@:overload public function addOperationExtension(operation : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
+	@:overload @:public public function addOperationExtension(operation : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
 	
 	/**
 	* This method is invoked so that extensions to a <code>wsdl:binding/wsdl:operation</code>
@@ -128,7 +128,7 @@ extern class WSDLGeneratorExtension
 	*                  extension can be added to.
 	* @param method    {@link JavaMethod} which captures all the information to generate wsdl:portType/wsdl:operation
 	*/
-	@:overload public function addBindingOperationExtension(operation : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
+	@:overload @:public public function addBindingOperationExtension(operation : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
 	
 	/**
 	* This method is invoked so that extensions to an input <code>wsdl:message</code>
@@ -138,7 +138,7 @@ extern class WSDLGeneratorExtension
 	*                extension can be added to.
 	* @param method  {@link JavaMethod} which captures all the information to generate wsdl:portType/wsdl:operation
 	*/
-	@:overload public function addInputMessageExtension(message : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
+	@:overload @:public public function addInputMessageExtension(message : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
 	
 	/**
 	* This method is invoked so that extensions to an output <code>wsdl:message</code>
@@ -148,7 +148,7 @@ extern class WSDLGeneratorExtension
 	*                extension can be added to.
 	* @param method  {@link JavaMethod} which captures all the information to generate wsdl:portType/wsdl:operation
 	*/
-	@:overload public function addOutputMessageExtension(message : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
+	@:overload @:public public function addOutputMessageExtension(message : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
 	
 	/**
 	* This method is invoked so that extensions to a
@@ -159,7 +159,7 @@ extern class WSDLGeneratorExtension
 	*               extension can be added to.
 	* @param method {@link JavaMethod} which captures all the information to generate wsdl:portType/wsdl:operation
 	*/
-	@:overload public function addOperationInputExtension(input : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
+	@:overload @:public public function addOperationInputExtension(input : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
 	
 	/**
 	* This method is invoked so that extensions to a <code>wsdl:portType/wsdl:operation/wsdl:output</code>
@@ -169,7 +169,7 @@ extern class WSDLGeneratorExtension
 	*               extension can be added to.
 	* @param method {@link JavaMethod} which captures all the information to generate wsdl:portType/wsdl:operation
 	*/
-	@:overload public function addOperationOutputExtension(output : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
+	@:overload @:public public function addOperationOutputExtension(output : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
 	
 	/**
 	* This method is invoked so that extensions to a
@@ -180,7 +180,7 @@ extern class WSDLGeneratorExtension
 	*               extension can be added to.
 	* @param method {@link JavaMethod} which captures all the information to generate wsdl:portType/wsdl:operation
 	*/
-	@:overload public function addBindingOperationInputExtension(input : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
+	@:overload @:public public function addBindingOperationInputExtension(input : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
 	
 	/**
 	* This method is invoked so that extensions to a  <code>wsdl:binding/wsdl:operation/wsdl:output</code>
@@ -190,7 +190,7 @@ extern class WSDLGeneratorExtension
 	*               extension can be added to.
 	* @param method {@link JavaMethod} which captures all the information to generate wsdl:portType/wsdl:operation
 	*/
-	@:overload public function addBindingOperationOutputExtension(output : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
+	@:overload @:public public function addBindingOperationOutputExtension(output : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
 	
 	/**
 	* This method is invoked so that extensions to a <code>wsdl:binding/wsdl:operation/wsdl:fault</code>
@@ -200,7 +200,7 @@ extern class WSDLGeneratorExtension
 	*               element that the extension can be added to.
 	* @param method {@link JavaMethod} which captures all the information to generate wsdl:portType/wsdl:operation
 	*/
-	@:overload public function addBindingOperationFaultExtension(fault : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod, ce : com.sun.xml.internal.ws.api.model.CheckedException) : Void;
+	@:overload @:public public function addBindingOperationFaultExtension(fault : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod, ce : com.sun.xml.internal.ws.api.model.CheckedException) : Void;
 	
 	/**
 	* This method is invoked so that extensions to a <code>wsdl:portType/wsdl:operation/wsdl:fault</code>
@@ -212,7 +212,7 @@ extern class WSDLGeneratorExtension
 	*
 	* @param ce      {@link CheckedException} that abstracts wsdl:fault
 	*/
-	@:overload public function addFaultMessageExtension(message : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod, ce : com.sun.xml.internal.ws.api.model.CheckedException) : Void;
+	@:overload @:public public function addFaultMessageExtension(message : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod, ce : com.sun.xml.internal.ws.api.model.CheckedException) : Void;
 	
 	/**
 	* This method is invoked so that extensions to a <code>wsdl:portType/wsdl:operation/wsdl:fault</code>
@@ -223,7 +223,7 @@ extern class WSDLGeneratorExtension
 	* @param method {@link JavaMethod} which captures all the information to generate wsdl:portType/wsdl:operation
 	* @param ce     {@link CheckedException} that abstracts wsdl:fault
 	*/
-	@:overload public function addOperationFaultExtension(fault : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod, ce : com.sun.xml.internal.ws.api.model.CheckedException) : Void;
+	@:overload @:public public function addOperationFaultExtension(fault : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod, ce : com.sun.xml.internal.ws.api.model.CheckedException) : Void;
 	
 	
 }

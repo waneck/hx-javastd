@@ -101,7 +101,7 @@ package java.math;
 	*         BigInteger.
 	* @throws NumberFormatException {@code val} is zero bytes long.
 	*/
-	@:overload public function new(val : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(val : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Translates the sign-magnitude representation of a BigInteger into a
@@ -119,7 +119,7 @@ package java.math;
 	*         legal values (-1, 0, and 1), or {@code signum} is 0 and
 	*         {@code magnitude} contains one or more non-zero bytes.
 	*/
-	@:overload public function new(signum : Int, magnitude : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(signum : Int, magnitude : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Translates the String representation of a BigInteger in the
@@ -138,7 +138,7 @@ package java.math;
 	*         {@link Character#MAX_RADIX}, inclusive.
 	* @see    Character#digit
 	*/
-	@:overload public function new(val : String, radix : Int) : Void;
+	@:overload @:public public function new(val : String, radix : Int) : Void;
 	
 	/**
 	* Translates the decimal String representation of a BigInteger into a
@@ -153,7 +153,7 @@ package java.math;
 	*         of a BigInteger.
 	* @see    Character#digit
 	*/
-	@:overload public function new(val : String) : Void;
+	@:overload @:public public function new(val : String) : Void;
 	
 	/**
 	* Constructs a randomly generated BigInteger, uniformly distributed over
@@ -168,7 +168,7 @@ package java.math;
 	* @throws IllegalArgumentException {@code numBits} is negative.
 	* @see #bitLength()
 	*/
-	@:overload public function new(numBits : Int, rnd : java.util.Random) : Void;
+	@:overload @:public public function new(numBits : Int, rnd : java.util.Random) : Void;
 	
 	/**
 	* Constructs a randomly generated positive BigInteger that is probably
@@ -189,7 +189,7 @@ package java.math;
 	* @throws ArithmeticException {@code bitLength < 2}.
 	* @see    #bitLength()
 	*/
-	@:overload public function new(bitLength : Int, certainty : Int, rnd : java.util.Random) : Void;
+	@:overload @:public public function new(bitLength : Int, certainty : Int, rnd : java.util.Random) : Void;
 	
 	/**
 	* Returns a positive BigInteger that is probably prime, with the
@@ -204,7 +204,7 @@ package java.math;
 	* @see    #bitLength()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function probablePrime(bitLength : Int, rnd : java.util.Random) : java.math.BigInteger;
+	@:require(java4) @:overload @:public @:static public static function probablePrime(bitLength : Int, rnd : java.util.Random) : java.math.BigInteger;
 	
 	/**
 	* Returns the first integer greater than this {@code BigInteger} that
@@ -218,7 +218,7 @@ package java.math;
 	* @throws ArithmeticException {@code this < 0}.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function nextProbablePrime() : java.math.BigInteger;
+	@:require(java5) @:overload @:public public function nextProbablePrime() : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is equal to that of the
@@ -229,28 +229,28 @@ package java.math;
 	* @param  val value of the BigInteger to return.
 	* @return a BigInteger with the specified value.
 	*/
-	@:overload public static function valueOf(val : haxe.Int64) : java.math.BigInteger;
+	@:overload @:public @:static public static function valueOf(val : haxe.Int64) : java.math.BigInteger;
 	
 	/**
 	* The BigInteger constant zero.
 	*
 	* @since   1.2
 	*/
-	@:require(java2) public static var ZERO(default, null) : java.math.BigInteger;
+	@:require(java2) @:public @:static @:final public static var ZERO(default, null) : java.math.BigInteger;
 	
 	/**
 	* The BigInteger constant one.
 	*
 	* @since   1.2
 	*/
-	@:require(java2) public static var ONE(default, null) : java.math.BigInteger;
+	@:require(java2) @:public @:static @:final public static var ONE(default, null) : java.math.BigInteger;
 	
 	/**
 	* The BigInteger constant ten.
 	*
 	* @since   1.5
 	*/
-	@:require(java5) public static var TEN(default, null) : java.math.BigInteger;
+	@:require(java5) @:public @:static @:final public static var TEN(default, null) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this + val)}.
@@ -258,7 +258,7 @@ package java.math;
 	* @param  val value to be added to this BigInteger.
 	* @return {@code this + val}
 	*/
-	@:overload public function add(val : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:public public function add(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this - val)}.
@@ -266,7 +266,7 @@ package java.math;
 	* @param  val value to be subtracted from this BigInteger.
 	* @return {@code this - val}
 	*/
-	@:overload public function subtract(val : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:public public function subtract(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this * val)}.
@@ -274,7 +274,7 @@ package java.math;
 	* @param  val value to be multiplied by this BigInteger.
 	* @return {@code this * val}
 	*/
-	@:overload public function multiply(val : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:public public function multiply(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this / val)}.
@@ -283,7 +283,7 @@ package java.math;
 	* @return {@code this / val}
 	* @throws ArithmeticException if {@code val} is zero.
 	*/
-	@:overload public function divide(val : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:public public function divide(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns an array of two BigIntegers containing {@code (this / val)}
@@ -296,7 +296,7 @@ package java.math;
 	*         is the final element.
 	* @throws ArithmeticException if {@code val} is zero.
 	*/
-	@:overload public function divideAndRemainder(val : java.math.BigInteger) : java.NativeArray<java.math.BigInteger>;
+	@:overload @:public public function divideAndRemainder(val : java.math.BigInteger) : java.NativeArray<java.math.BigInteger>;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this % val)}.
@@ -306,7 +306,7 @@ package java.math;
 	* @return {@code this % val}
 	* @throws ArithmeticException if {@code val} is zero.
 	*/
-	@:overload public function remainder(val : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:public public function remainder(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is <tt>(this<sup>exponent</sup>)</tt>.
@@ -317,7 +317,7 @@ package java.math;
 	* @throws ArithmeticException {@code exponent} is negative.  (This would
 	*         cause the operation to yield a non-integer value.)
 	*/
-	@:overload public function pow(exponent : Int) : java.math.BigInteger;
+	@:overload @:public public function pow(exponent : Int) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is the greatest common divisor of
@@ -327,7 +327,7 @@ package java.math;
 	* @param  val value with which the GCD is to be computed.
 	* @return {@code GCD(abs(this), abs(val))}
 	*/
-	@:overload public function gcd(val : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:public public function gcd(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is the absolute value of this
@@ -335,14 +335,14 @@ package java.math;
 	*
 	* @return {@code abs(this)}
 	*/
-	@:overload public function abs() : java.math.BigInteger;
+	@:overload @:public public function abs() : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (-this)}.
 	*
 	* @return {@code -this}
 	*/
-	@:overload public function negate() : java.math.BigInteger;
+	@:overload @:public public function negate() : java.math.BigInteger;
 	
 	/**
 	* Returns the signum function of this BigInteger.
@@ -350,7 +350,7 @@ package java.math;
 	* @return -1, 0 or 1 as the value of this BigInteger is negative, zero or
 	*         positive.
 	*/
-	@:overload public function signum() : Int;
+	@:overload @:public public function signum() : Int;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this mod m}).  This method
@@ -362,7 +362,7 @@ package java.math;
 	* @throws ArithmeticException {@code m} &le; 0
 	* @see    #remainder
 	*/
-	@:overload public function mod(m : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:public public function mod(m : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is
@@ -377,7 +377,7 @@ package java.math;
 	*         prime</i> to {@code m}.
 	* @see    #modInverse
 	*/
-	@:overload public function modPow(exponent : java.math.BigInteger, m : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:public public function modPow(exponent : java.math.BigInteger, m : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this}<sup>-1</sup> {@code mod m)}.
@@ -388,7 +388,7 @@ package java.math;
 	*         has no multiplicative inverse mod m (that is, this BigInteger
 	*         is not <i>relatively prime</i> to m).
 	*/
-	@:overload public function modInverse(m : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:public public function modInverse(m : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this << n)}.
@@ -402,7 +402,7 @@ package java.math;
 	*         Integer.MIN_VALUE}.
 	* @see #shiftRight
 	*/
-	@:overload public function shiftLeft(n : Int) : java.math.BigInteger;
+	@:overload @:public public function shiftLeft(n : Int) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this >> n)}.  Sign
@@ -416,7 +416,7 @@ package java.math;
 	*         Integer.MIN_VALUE}.
 	* @see #shiftLeft
 	*/
-	@:overload public function shiftRight(n : Int) : java.math.BigInteger;
+	@:overload @:public public function shiftRight(n : Int) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this & val)}.  (This
@@ -426,7 +426,7 @@ package java.math;
 	* @param val value to be AND'ed with this BigInteger.
 	* @return {@code this & val}
 	*/
-	@:overload public function and(val : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:public public function and(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this | val)}.  (This method
@@ -436,7 +436,7 @@ package java.math;
 	* @param val value to be OR'ed with this BigInteger.
 	* @return {@code this | val}
 	*/
-	@:overload public function or(val : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:public public function or(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this ^ val)}.  (This method
@@ -446,7 +446,7 @@ package java.math;
 	* @param val value to be XOR'ed with this BigInteger.
 	* @return {@code this ^ val}
 	*/
-	@:overload public function xor(val : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:public public function xor(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (~this)}.  (This method
@@ -455,7 +455,7 @@ package java.math;
 	*
 	* @return {@code ~this}
 	*/
-	@:overload public function not() : java.math.BigInteger;
+	@:overload @:public public function not() : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this & ~val)}.  This
@@ -467,7 +467,7 @@ package java.math;
 	* @param val value to be complemented and AND'ed with this BigInteger.
 	* @return {@code this & ~val}
 	*/
-	@:overload public function andNot(val : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:public public function andNot(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns {@code true} if and only if the designated bit is set.
@@ -477,7 +477,7 @@ package java.math;
 	* @return {@code true} if and only if the designated bit is set.
 	* @throws ArithmeticException {@code n} is negative.
 	*/
-	@:overload public function testBit(n : Int) : Bool;
+	@:overload @:public public function testBit(n : Int) : Bool;
 	
 	/**
 	* Returns a BigInteger whose value is equivalent to this BigInteger
@@ -487,7 +487,7 @@ package java.math;
 	* @return {@code this | (1<<n)}
 	* @throws ArithmeticException {@code n} is negative.
 	*/
-	@:overload public function setBit(n : Int) : java.math.BigInteger;
+	@:overload @:public public function setBit(n : Int) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is equivalent to this BigInteger
@@ -498,7 +498,7 @@ package java.math;
 	* @return {@code this & ~(1<<n)}
 	* @throws ArithmeticException {@code n} is negative.
 	*/
-	@:overload public function clearBit(n : Int) : java.math.BigInteger;
+	@:overload @:public public function clearBit(n : Int) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is equivalent to this BigInteger
@@ -509,7 +509,7 @@ package java.math;
 	* @return {@code this ^ (1<<n)}
 	* @throws ArithmeticException {@code n} is negative.
 	*/
-	@:overload public function flipBit(n : Int) : java.math.BigInteger;
+	@:overload @:public public function flipBit(n : Int) : java.math.BigInteger;
 	
 	/**
 	* Returns the index of the rightmost (lowest-order) one bit in this
@@ -519,7 +519,7 @@ package java.math;
 	*
 	* @return index of the rightmost one bit in this BigInteger.
 	*/
-	@:overload public function getLowestSetBit() : Int;
+	@:overload @:public public function getLowestSetBit() : Int;
 	
 	/**
 	* Returns the number of bits in the minimal two's-complement
@@ -531,7 +531,7 @@ package java.math;
 	* @return number of bits in the minimal two's-complement
 	*         representation of this BigInteger, <i>excluding</i> a sign bit.
 	*/
-	@:overload public function bitLength() : Int;
+	@:overload @:public public function bitLength() : Int;
 	
 	/**
 	* Returns the number of bits in the two's complement representation
@@ -541,7 +541,7 @@ package java.math;
 	* @return number of bits in the two's complement representation
 	*         of this BigInteger that differ from its sign bit.
 	*/
-	@:overload public function bitCount() : Int;
+	@:overload @:public public function bitCount() : Int;
 	
 	/**
 	* Returns {@code true} if this BigInteger is probably prime,
@@ -557,7 +557,7 @@ package java.math;
 	* @return {@code true} if this BigInteger is probably prime,
 	*         {@code false} if it's definitely composite.
 	*/
-	@:overload public function isProbablePrime(certainty : Int) : Bool;
+	@:overload @:public public function isProbablePrime(certainty : Int) : Bool;
 	
 	/**
 	* Compares this BigInteger with the specified BigInteger.  This
@@ -572,7 +572,7 @@ package java.math;
 	* @return -1, 0 or 1 as this BigInteger is numerically less than, equal
 	*         to, or greater than {@code val}.
 	*/
-	@:overload public function compareTo(val : java.math.BigInteger) : Int;
+	@:overload @:public public function compareTo(val : java.math.BigInteger) : Int;
 	
 	/**
 	* Compares this BigInteger with the specified Object for equality.
@@ -581,7 +581,7 @@ package java.math;
 	* @return {@code true} if and only if the specified Object is a
 	*         BigInteger whose value is numerically equal to this BigInteger.
 	*/
-	@:overload public function equals(x : Dynamic) : Bool;
+	@:overload @:public public function equals(x : Dynamic) : Bool;
 	
 	/**
 	* Returns the minimum of this BigInteger and {@code val}.
@@ -590,7 +590,7 @@ package java.math;
 	* @return the BigInteger whose value is the lesser of this BigInteger and
 	*         {@code val}.  If they are equal, either may be returned.
 	*/
-	@:overload public function min(val : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:public public function min(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns the maximum of this BigInteger and {@code val}.
@@ -599,14 +599,14 @@ package java.math;
 	* @return the BigInteger whose value is the greater of this and
 	*         {@code val}.  If they are equal, either may be returned.
 	*/
-	@:overload public function max(val : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:public public function max(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns the hash code for this BigInteger.
 	*
 	* @return hash code for this BigInteger.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the String representation of this BigInteger in the
@@ -625,7 +625,7 @@ package java.math;
 	* @see    Character#forDigit
 	* @see    #BigInteger(java.lang.String, int)
 	*/
-	@:overload public function toString(radix : Int) : String;
+	@:overload @:public public function toString(radix : Int) : String;
 	
 	/**
 	* Returns the decimal String representation of this BigInteger.
@@ -639,7 +639,7 @@ package java.math;
 	* @see    Character#forDigit
 	* @see    #BigInteger(java.lang.String)
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a byte array containing the two's-complement
@@ -655,7 +655,7 @@ package java.math;
 	*         this BigInteger.
 	* @see    #BigInteger(byte[])
 	*/
-	@:overload public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Converts this BigInteger to an {@code int}.  This
@@ -671,7 +671,7 @@ package java.math;
 	*
 	* @return this BigInteger converted to an {@code int}.
 	*/
-	@:overload override public function intValue() : Int;
+	@:overload @:public override public function intValue() : Int;
 	
 	/**
 	* Converts this BigInteger to a {@code long}.  This
@@ -687,7 +687,7 @@ package java.math;
 	*
 	* @return this BigInteger converted to a {@code long}.
 	*/
-	@:overload override public function longValue() : haxe.Int64;
+	@:overload @:public override public function longValue() : haxe.Int64;
 	
 	/**
 	* Converts this BigInteger to a {@code float}.  This
@@ -704,7 +704,7 @@ package java.math;
 	*
 	* @return this BigInteger converted to a {@code float}.
 	*/
-	@:overload override public function floatValue() : Single;
+	@:overload @:public override public function floatValue() : Single;
 	
 	/**
 	* Converts this BigInteger to a {@code double}.  This
@@ -721,7 +721,7 @@ package java.math;
 	*
 	* @return this BigInteger converted to a {@code double}.
 	*/
-	@:overload override public function doubleValue() : Float;
+	@:overload @:public override public function doubleValue() : Float;
 	
 	
 }

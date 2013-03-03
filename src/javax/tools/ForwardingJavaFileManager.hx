@@ -28,73 +28,73 @@ extern class ForwardingJavaFileManager<M> implements javax.tools.JavaFileManager
 	/**
 	* The file manager which all methods are delegated to.
 	*/
-	private var fileManager(default, null) : M;
+	@:protected @:final private var fileManager(default, null) : M;
 	
 	/**
 	* Creates a new instance of ForwardingJavaFileManager.
 	* @param fileManager delegate to this file manager
 	*/
-	@:overload private function new(fileManager : M) : Void;
+	@:overload @:protected private function new(fileManager : M) : Void;
 	
 	/**
 	* @throws SecurityException {@inheritDoc}
 	* @throws IllegalStateException {@inheritDoc}
 	*/
-	@:overload public function getClassLoader(location : javax.tools.JavaFileManager.JavaFileManager_Location) : java.lang.ClassLoader;
+	@:overload @:public public function getClassLoader(location : javax.tools.JavaFileManager.JavaFileManager_Location) : java.lang.ClassLoader;
 	
 	/**
 	* @throws IOException {@inheritDoc}
 	* @throws IllegalStateException {@inheritDoc}
 	*/
-	@:overload public function list(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, kinds : java.util.Set<javax.tools.JavaFileObject.JavaFileObject_Kind>, recurse : Bool) : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload @:public public function list(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, kinds : java.util.Set<javax.tools.JavaFileObject.JavaFileObject_Kind>, recurse : Bool) : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
 	/**
 	* @throws IllegalStateException {@inheritDoc}
 	*/
-	@:overload public function inferBinaryName(location : javax.tools.JavaFileManager.JavaFileManager_Location, file : javax.tools.JavaFileObject) : String;
+	@:overload @:public public function inferBinaryName(location : javax.tools.JavaFileManager.JavaFileManager_Location, file : javax.tools.JavaFileObject) : String;
 	
 	/**
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function isSameFile(a : javax.tools.FileObject, b : javax.tools.FileObject) : Bool;
-	
-	/**
-	* @throws IllegalArgumentException {@inheritDoc}
-	* @throws IllegalStateException {@inheritDoc}
-	*/
-	@:overload public function handleOption(current : String, remaining : java.util.Iterator<String>) : Bool;
-	
-	@:overload public function hasLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location) : Bool;
-	
-	@:overload public function isSupportedOption(option : String) : Int;
+	@:overload @:public public function isSameFile(a : javax.tools.FileObject, b : javax.tools.FileObject) : Bool;
 	
 	/**
 	* @throws IllegalArgumentException {@inheritDoc}
 	* @throws IllegalStateException {@inheritDoc}
 	*/
-	@:overload public function getJavaFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : javax.tools.JavaFileObject;
+	@:overload @:public public function handleOption(current : String, remaining : java.util.Iterator<String>) : Bool;
+	
+	@:overload @:public public function hasLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location) : Bool;
+	
+	@:overload @:public public function isSupportedOption(option : String) : Int;
 	
 	/**
 	* @throws IllegalArgumentException {@inheritDoc}
 	* @throws IllegalStateException {@inheritDoc}
 	*/
-	@:overload public function getJavaFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind, sibling : javax.tools.FileObject) : javax.tools.JavaFileObject;
+	@:overload @:public public function getJavaFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : javax.tools.JavaFileObject;
 	
 	/**
 	* @throws IllegalArgumentException {@inheritDoc}
 	* @throws IllegalStateException {@inheritDoc}
 	*/
-	@:overload public function getFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String) : javax.tools.FileObject;
+	@:overload @:public public function getJavaFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind, sibling : javax.tools.FileObject) : javax.tools.JavaFileObject;
 	
 	/**
 	* @throws IllegalArgumentException {@inheritDoc}
 	* @throws IllegalStateException {@inheritDoc}
 	*/
-	@:overload public function getFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String, sibling : javax.tools.FileObject) : javax.tools.FileObject;
+	@:overload @:public public function getFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String) : javax.tools.FileObject;
 	
-	@:overload public function flush() : Void;
+	/**
+	* @throws IllegalArgumentException {@inheritDoc}
+	* @throws IllegalStateException {@inheritDoc}
+	*/
+	@:overload @:public public function getFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String, sibling : javax.tools.FileObject) : javax.tools.FileObject;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function flush() : Void;
+	
+	@:overload @:public public function close() : Void;
 	
 	
 }

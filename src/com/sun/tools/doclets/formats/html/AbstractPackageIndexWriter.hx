@@ -36,35 +36,35 @@ extern class AbstractPackageIndexWriter extends com.sun.tools.doclets.formats.ht
 	/**
 	* Array of Packages to be documented.
 	*/
-	private var packages : java.NativeArray<com.sun.javadoc.PackageDoc>;
+	@:protected private var packages : java.NativeArray<com.sun.javadoc.PackageDoc>;
 	
 	/**
 	* Constructor. Also initialises the packages variable.
 	*
 	* @param filename Name of the package index file to be generated.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String) : Void;
 	
 	/**
 	* Adds the navigation bar header to the documentation tree.
 	*
 	* @param body the document tree to which the navigation bar header will be added
 	*/
-	@:overload @:abstract private function addNavigationBarHeader(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected @:abstract private function addNavigationBarHeader(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the navigation bar footer to the documentation tree.
 	*
 	* @param body the document tree to which the navigation bar footer will be added
 	*/
-	@:overload @:abstract private function addNavigationBarFooter(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected @:abstract private function addNavigationBarFooter(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the overview header to the documentation tree.
 	*
 	* @param body the document tree to which the overview header will be added
 	*/
-	@:overload @:abstract private function addOverviewHeader(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected @:abstract private function addOverviewHeader(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the packages list to the documentation tree.
@@ -74,7 +74,7 @@ extern class AbstractPackageIndexWriter extends com.sun.tools.doclets.formats.ht
 	* @param tableSummary summary for the table
 	* @param body the document tree to which the packages list will be added
 	*/
-	@:overload @:abstract private function addPackagesList(packages : java.NativeArray<com.sun.javadoc.PackageDoc>, text : String, tableSummary : String, body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected @:abstract private function addPackagesList(packages : java.NativeArray<com.sun.javadoc.PackageDoc>, text : String, tableSummary : String, body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Generate and prints the contents in the package index file. Call appropriate
@@ -84,21 +84,21 @@ extern class AbstractPackageIndexWriter extends com.sun.tools.doclets.formats.ht
 	* @param title the title of the window.
 	* @param includeScript boolean set true if windowtitle script is to be included
 	*/
-	@:overload private function buildPackageIndexFile(title : String, includeScript : Bool) : Void;
+	@:overload @:protected private function buildPackageIndexFile(title : String, includeScript : Bool) : Void;
 	
 	/**
 	* Default to no overview, override to add overview.
 	*
 	* @param body the document tree to which the overview will be added
 	*/
-	@:overload private function addOverview(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addOverview(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the frame or non-frame package index to the documentation tree.
 	*
 	* @param body the document tree to which the index will be added
 	*/
-	@:overload private function addIndex(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addIndex(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds package index contents. Call appropriate methods from
@@ -109,14 +109,14 @@ extern class AbstractPackageIndexWriter extends com.sun.tools.doclets.formats.ht
 	* @param tableSummary summary for the table
 	* @param body the document tree to which the index contents will be added
 	*/
-	@:overload private function addIndexContents(packages : java.NativeArray<com.sun.javadoc.PackageDoc>, text : String, tableSummary : String, body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addIndexContents(packages : java.NativeArray<com.sun.javadoc.PackageDoc>, text : String, tableSummary : String, body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the doctitle to the documentation tree, if it is specified on the command line.
 	*
 	* @param body the document tree to which the title will be added
 	*/
-	@:overload private function addConfigurationTitle(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addConfigurationTitle(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Returns highlighted "Overview", in the navigation bar as this is the
@@ -124,14 +124,14 @@ extern class AbstractPackageIndexWriter extends com.sun.tools.doclets.formats.ht
 	*
 	* @return a Content object to be added to the documentation tree
 	*/
-	@:overload private function getNavLinkContents() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkContents() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Do nothing. This will be overridden in PackageIndexFrameWriter.
 	*
 	* @param body the document tree to which the all classes link will be added
 	*/
-	@:overload private function addAllClassesLink(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addAllClassesLink(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }

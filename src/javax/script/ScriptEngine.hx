@@ -49,7 +49,7 @@ extern interface ScriptEngine
 	* implementations.
 	* @throws NullPointerException if either argument is null.
 	*/
-	@:overload public function eval(script : String, context : javax.script.ScriptContext) : Dynamic;
+	@:overload @:public @:public public function eval(script : String, context : javax.script.ScriptContext) : Dynamic;
 	
 	/**
 	* Same as <code>eval(String, ScriptContext)</code> where the source of the script
@@ -64,7 +64,7 @@ extern interface ScriptEngine
 	* @throws ScriptException if an error occurrs in script.
 	* @throws NullPointerException if either argument is null.
 	*/
-	@:overload public function eval(reader : java.io.Reader, context : javax.script.ScriptContext) : Dynamic;
+	@:overload @:public @:public public function eval(reader : java.io.Reader, context : javax.script.ScriptContext) : Dynamic;
 	
 	/**
 	* Executes the specified script.  The default <code>ScriptContext</code> for the <code>ScriptEngine</code>
@@ -77,7 +77,7 @@ extern interface ScriptEngine
 	* @throws ScriptException if error occurrs in script.
 	* @throws NullPointerException if the argument is null.
 	*/
-	@:overload public function eval(script : String) : Dynamic;
+	@:overload @:public public function eval(script : String) : Dynamic;
 	
 	/**
 	* Same as <code>eval(String)</code> except that the source of the script is
@@ -90,7 +90,7 @@ extern interface ScriptEngine
 	* @throws ScriptException if an error occurrs in script.
 	* @throws NullPointerException if the argument is null.
 	*/
-	@:overload public function eval(reader : java.io.Reader) : Dynamic;
+	@:overload @:public public function eval(reader : java.io.Reader) : Dynamic;
 	
 	/**
 	* Executes the script using the <code>Bindings</code> argument as the <code>ENGINE_SCOPE</code>
@@ -109,7 +109,7 @@ extern interface ScriptEngine
 	* @throws ScriptException if an error occurrs in script.
 	* @throws NullPointerException if either argument is null.
 	*/
-	@:overload public function eval(script : String, n : javax.script.Bindings) : Dynamic;
+	@:overload @:public public function eval(script : String, n : javax.script.Bindings) : Dynamic;
 	
 	/**
 	* Same as <code>eval(String, Bindings)</code> except that the source of the script
@@ -123,7 +123,7 @@ extern interface ScriptEngine
 	* @throws ScriptException if an error occurrs.
 	* @throws NullPointerException if either argument is null.
 	*/
-	@:overload public function eval(reader : java.io.Reader, n : javax.script.Bindings) : Dynamic;
+	@:overload @:public public function eval(reader : java.io.Reader, n : javax.script.Bindings) : Dynamic;
 	
 	/**
 	* Sets a key/value pair in the state of the ScriptEngine that may either create
@@ -137,7 +137,7 @@ extern interface ScriptEngine
 	* @throws NullPointerException if key is null.
 	* @throws IllegalArgumentException if key is empty.
 	*/
-	@:overload public function put(key : String, value : Dynamic) : Void;
+	@:overload @:public public function put(key : String, value : Dynamic) : Void;
 	
 	/**
 	* Retrieves a value set in the state of this engine.  The value might be one
@@ -151,7 +151,7 @@ extern interface ScriptEngine
 	* @throws NullPointerException if key is null.
 	* @throws IllegalArgumentException if key is empty.
 	*/
-	@:overload public function get(key : String) : Dynamic;
+	@:overload @:public public function get(key : String) : Dynamic;
 	
 	/**
 	* Returns a scope of named values.  The possible scopes are:
@@ -182,7 +182,7 @@ extern interface ScriptEngine
 	* @throws IllegalArgumentException if specified scope is invalid
 	*
 	*/
-	@:overload public function getBindings(scope : Int) : javax.script.Bindings;
+	@:overload @:public public function getBindings(scope : Int) : javax.script.Bindings;
 	
 	/**
 	* Sets a scope of named values to be used by scripts.  The possible scopes are:
@@ -210,14 +210,14 @@ extern interface ScriptEngine
 	* @throws NullPointerException if the bindings is null and the scope is
 	* <code>ScriptContext.ENGINE_SCOPE</code>
 	*/
-	@:overload public function setBindings(bindings : javax.script.Bindings, scope : Int) : Void;
+	@:overload @:public public function setBindings(bindings : javax.script.Bindings, scope : Int) : Void;
 	
 	/**
 	* Returns an uninitialized <code>Bindings</code>.
 	*
 	* @return A <code>Bindings</code> that can be used to replace the state of this <code>ScriptEngine</code>.
 	**/
-	@:overload public function createBindings() : javax.script.Bindings;
+	@:overload @:public @:public public function createBindings() : javax.script.Bindings;
 	
 	/**
 	* Returns the default <code>ScriptContext</code> of the <code>ScriptEngine</code> whose Bindings, Reader
@@ -225,7 +225,7 @@ extern interface ScriptEngine
 	*
 	* @return The default <code>ScriptContext</code> of the <code>ScriptEngine</code>.
 	*/
-	@:overload public function getContext() : javax.script.ScriptContext;
+	@:overload @:public public function getContext() : javax.script.ScriptContext;
 	
 	/**
 	* Sets the default <code>ScriptContext</code> of the <code>ScriptEngine</code> whose Bindings, Reader
@@ -235,14 +235,14 @@ extern interface ScriptEngine
 	* the <code>ScriptEngine</code>.
 	* @throws NullPointerException if context is null.
 	*/
-	@:overload public function setContext(context : javax.script.ScriptContext) : Void;
+	@:overload @:public public function setContext(context : javax.script.ScriptContext) : Void;
 	
 	/**
 	* Returns a <code>ScriptEngineFactory</code> for the class to which this <code>ScriptEngine</code> belongs.
 	*
 	* @return The <code>ScriptEngineFactory</code>
 	*/
-	@:overload public function getFactory() : javax.script.ScriptEngineFactory;
+	@:overload @:public @:public public function getFactory() : javax.script.ScriptEngineFactory;
 	
 	
 }

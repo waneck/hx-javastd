@@ -33,7 +33,7 @@ extern class LayoutStyle
 	* @param style the <code>LayoutStyle</code>, or <code>null</code>
 	* @see #getInstance
 	*/
-	@:overload public static function setInstance(style : javax.swing.LayoutStyle) : Void;
+	@:overload @:public @:static public static function setInstance(style : javax.swing.LayoutStyle) : Void;
 	
 	/**
 	* Returns the shared instance of <code>LayoutStyle</code>.  If an instance
@@ -43,7 +43,7 @@ extern class LayoutStyle
 	* @see LookAndFeel#getLayoutStyle
 	* @return the shared instance of <code>LayoutStyle</code>
 	*/
-	@:overload public static function getInstance() : javax.swing.LayoutStyle;
+	@:overload @:public @:static public static function getInstance() : javax.swing.LayoutStyle;
 	
 	/**
 	* Creates a new <code>LayoutStyle</code>.  You generally don't
@@ -51,7 +51,7 @@ extern class LayoutStyle
 	* <code>getInstance</code> to obtain the current
 	* <code>LayoutStyle</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the amount of space to use between two components.
@@ -106,7 +106,7 @@ extern class LayoutStyle
 	* @see LookAndFeel#getLayoutStyle
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : javax.swing.LayoutStyle.LayoutStyle_ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
+	@:require(java6) @:overload @:public @:abstract public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : javax.swing.LayoutStyle.LayoutStyle_ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
 	
 	/**
 	* Returns the amount of space to place between the component and specified
@@ -129,7 +129,7 @@ extern class LayoutStyle
 	*         <code>SwingConstants.EAST</code> or
 	*         <code>SwingConstants.WEST</code>
 	*/
-	@:overload @:abstract public function getContainerGap(component : javax.swing.JComponent, position : Int, parent : java.awt.Container) : Int;
+	@:overload @:public @:abstract public function getContainerGap(component : javax.swing.JComponent, position : Int, parent : java.awt.Container) : Int;
 	
 	
 }

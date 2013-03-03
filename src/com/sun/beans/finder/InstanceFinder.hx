@@ -33,15 +33,15 @@ package com.sun.beans.finder;
 */
 @:require(java7) @:internal extern class InstanceFinder<T>
 {
-	@:overload public function getPackages() : java.NativeArray<String>;
+	@:overload @:public public function getPackages() : java.NativeArray<String>;
 	
-	@:overload public function setPackages(packages : java.NativeArray<String>) : Void;
+	@:overload @:public public function setPackages(packages : java.NativeArray<String>) : Void;
 	
-	@:overload public function find(type : Class<Dynamic>) : T;
+	@:overload @:public public function find(type : Class<Dynamic>) : T;
 	
-	@:overload private function instantiate(type : Class<Dynamic>, name : String) : T;
+	@:overload @:protected private function instantiate(type : Class<Dynamic>, name : String) : T;
 	
-	@:overload private function instantiate(type : Class<Dynamic>, prefix : String, name : String) : T;
+	@:overload @:protected private function instantiate(type : Class<Dynamic>, prefix : String, name : String) : T;
 	
 	
 }

@@ -25,29 +25,29 @@ package com.sun.xml.internal.bind.v2.model.annotation;
 */
 extern class Quick implements java.lang.annotation.Annotation implements com.sun.xml.internal.bind.v2.model.annotation.Locatable implements com.sun.xml.internal.bind.v2.runtime.Location
 {
-	@:overload private function new(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : Void;
+	@:overload @:protected private function new(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : Void;
 	
 	/**
 	* Gets the annotation object that this object is wrapping.
 	*/
-	@:overload @:abstract private function getAnnotation() : java.lang.annotation.Annotation;
+	@:overload @:protected @:abstract private function getAnnotation() : java.lang.annotation.Annotation;
 	
 	/**
 	* Factory method to create a new instance of the same kind.
 	* A {@link Quick} object also works as a factory of itself
 	*/
-	@:overload @:abstract private function newInstance(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : java.lang.annotation.Annotation) : com.sun.xml.internal.bind.v2.model.annotation.Quick;
+	@:overload @:protected @:abstract private function newInstance(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : java.lang.annotation.Annotation) : com.sun.xml.internal.bind.v2.model.annotation.Quick;
 	
-	@:overload @:final public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public @:final public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
-	@:overload @:final public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
+	@:overload @:public @:final public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/**
 	* Returns the annotation type of this annotation.
 	*/
-	@:overload public function annotationType() : Class<java.lang.annotation.Annotation>;
+	@:overload @:public public function annotationType() : Class<java.lang.annotation.Annotation>;
 	
 	
 }

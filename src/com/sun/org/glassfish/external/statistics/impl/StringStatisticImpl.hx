@@ -28,23 +28,23 @@ package com.sun.org.glassfish.external.statistics.impl;
 */
 extern class StringStatisticImpl extends com.sun.org.glassfish.external.statistics.impl.StatisticImpl implements com.sun.org.glassfish.external.statistics.StringStatistic implements java.lang.reflect.InvocationHandler
 {
-	@:overload public function new(str : String, name : String, unit : String, desc : String, sampleTime : haxe.Int64, startTime : haxe.Int64) : Void;
+	@:overload @:public public function new(str : String, name : String, unit : String, desc : String, sampleTime : haxe.Int64, startTime : haxe.Int64) : Void;
 	
-	@:overload public function new(name : String, unit : String, desc : String) : Void;
+	@:overload @:public public function new(name : String, unit : String, desc : String) : Void;
 	
-	@:overload @:synchronized public function getStatistic() : com.sun.org.glassfish.external.statistics.StringStatistic;
+	@:overload @:public @:synchronized public function getStatistic() : com.sun.org.glassfish.external.statistics.StringStatistic;
 	
-	@:overload @:synchronized override public function getStaticAsMap() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public @:synchronized override public function getStaticAsMap() : java.util.Map<Dynamic, Dynamic>;
 	
-	@:overload @:synchronized override public function toString() : String;
+	@:overload @:public @:synchronized override public function toString() : String;
 	
-	@:overload public function getCurrent() : String;
+	@:overload @:public public function getCurrent() : String;
 	
-	@:overload public function setCurrent(str : String) : Void;
+	@:overload @:public public function setCurrent(str : String) : Void;
 	
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
-	@:overload public function invoke(proxy : Dynamic, m : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, m : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

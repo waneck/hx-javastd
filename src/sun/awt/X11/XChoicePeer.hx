@@ -25,95 +25,95 @@ package sun.awt.X11;
 */
 extern class XChoicePeer extends sun.awt.X11.XComponentPeer implements java.awt.peer.ChoicePeer implements sun.awt.X11.ToplevelStateListener
 {
-	public static var TEXT_SPACE(default, null) : Int;
+	@:public @:final @:static public static var TEXT_SPACE(default, null) : Int;
 	
-	public static var BORDER_WIDTH(default, null) : Int;
+	@:public @:final @:static public static var BORDER_WIDTH(default, null) : Int;
 	
-	public static var ITEM_MARGIN(default, null) : Int;
+	@:public @:final @:static public static var ITEM_MARGIN(default, null) : Int;
 	
-	public static var SCROLLBAR_WIDTH(default, null) : Int;
+	@:public @:final @:static public static var SCROLLBAR_WIDTH(default, null) : Int;
 	
-	@:overload public function isFocusable() : Bool;
+	@:overload @:public override public function isFocusable() : Bool;
 	
-	@:overload public function setBounds(x : Int, y : Int, width : Int, height : Int, op : Int) : Void;
+	@:overload @:public override public function setBounds(x : Int, y : Int, width : Int, height : Int, op : Int) : Void;
 	
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public override public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
 	/*
 	* Fix for 6246503 : Disabling a choice after selection locks keyboard, mouse and makes the system unusable, Xtoolkit
 	* if setEnabled(false) invoked we should close opened choice in
 	* order to prevent keyboard/mouse lock.
 	*/
-	@:overload public function setEnabled(value : Bool) : Void;
+	@:overload @:public override public function setEnabled(value : Bool) : Void;
 	
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public override public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function keyPressed(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public public function keyPressed(e : java.awt.event.KeyEvent) : Void;
 	
-	@:overload public function handlesWheelScrolling() : Bool;
+	@:overload @:public override public function handlesWheelScrolling() : Bool;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
 	/*
 	* Layout the...
 	*/
-	@:overload public function layout() : Void;
+	@:overload @:public override public function layout() : Void;
 	
 	/**
 	* Paint the choice
 	*/
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload private function paintFocus(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:protected private function paintFocus(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/*
 	* ChoicePeer methods stolen from TinyChoicePeer
 	*/
-	@:overload public function select(index : Int) : Void;
+	@:overload @:public public function select(index : Int) : Void;
 	
-	@:overload public function add(item : String, index : Int) : Void;
+	@:overload @:public public function add(item : String, index : Int) : Void;
 	
-	@:overload public function remove(index : Int) : Void;
+	@:overload @:public public function remove(index : Int) : Void;
 	
-	@:overload public function removeAll() : Void;
+	@:overload @:public public function removeAll() : Void;
 	
 	/**
 	* DEPRECATED: Replaced by add(String, int).
 	*/
-	@:overload public function addItem(item : String, index : Int) : Void;
+	@:overload @:public public function addItem(item : String, index : Int) : Void;
 	
-	@:overload public function setFont(font : java.awt.Font) : Void;
+	@:overload @:public override public function setFont(font : java.awt.Font) : Void;
 	
-	@:overload public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setForeground(c : java.awt.Color) : Void;
 	
-	@:overload public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setBackground(c : java.awt.Color) : Void;
 	
-	@:overload public function setDrawSelectedItem(value : Bool) : Void;
+	@:overload @:public public function setDrawSelectedItem(value : Bool) : Void;
 	
-	@:overload public function setAlignUnder(comp : java.awt.Component) : Void;
+	@:overload @:public public function setAlignUnder(comp : java.awt.Component) : Void;
 	
-	@:overload public function addXChoicePeerListener(l : sun.awt.X11.XChoicePeer.XChoicePeerListener) : Void;
+	@:overload @:public public function addXChoicePeerListener(l : sun.awt.X11.XChoicePeer.XChoicePeerListener) : Void;
 	
-	@:overload public function removeXChoicePeerListener() : Void;
+	@:overload @:public public function removeXChoicePeerListener() : Void;
 	
-	@:overload public function isUnfurled() : Bool;
+	@:overload @:public public function isUnfurled() : Bool;
 	
 	/* fix for 6261352. We should detect if current parent Window (containing a Choice) become iconified and hide pop-down menu with grab release.
 	* In this case we should hide pop-down menu.
 	*/
-	@:overload public function stateChangedICCCM(oldState : Int, newState : Int) : Void;
+	@:overload @:public public function stateChangedICCCM(oldState : Int, newState : Int) : Void;
 	
-	@:overload public function stateChangedJava(oldState : Int, newState : Int) : Void;
+	@:overload @:public public function stateChangedJava(oldState : Int, newState : Int) : Void;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
-	@:overload public function handleMouseEventByChoice(me : java.awt.event.MouseEvent) : Bool;
+	@:overload @:public public function handleMouseEventByChoice(me : java.awt.event.MouseEvent) : Bool;
 	
 	
 }
@@ -123,42 +123,42 @@ extern class XChoicePeer extends sun.awt.X11.XComponentPeer implements java.awt.
 */
 @:native('sun$awt$X11$XChoicePeer$UnfurledChoice') @:internal extern class XChoicePeer_UnfurledChoice extends sun.awt.X11.XWindow
 {
-	@:overload public function new(target : java.awt.Component) : Void;
+	@:overload @:public public function new(target : java.awt.Component) : Void;
 	
-	@:overload public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload @:public public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
-	@:overload override public function toFront() : Void;
+	@:overload @:public override public function toFront() : Void;
 	
 	/*
 	* Track a MouseEvent (either a drag or a press) and paint a new
 	* selected item, if necessary.
 	*/
-	@:overload public function trackMouse(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function trackMouse(e : java.awt.event.MouseEvent) : Void;
 	
 	/*
 	* fillRect with current Background color on the whole dropdown list.
 	*/
-	@:overload public function paintBackground() : Void;
+	@:overload @:public public function paintBackground() : Void;
 	
 	/*
 	* 6405689. In some cases we should erase background to eliminate painting
 	* artefacts.
 	*/
-	@:overload public function repaint() : Void;
+	@:overload @:public override public function repaint() : Void;
 	
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload public function setVisible(vis : Bool) : Void;
+	@:overload @:public public function setVisible(vis : Bool) : Void;
 	
 	/*
 	* Overridden from XWindow() because we don't want to send
 	* ComponentEvents
 	*/
-	@:overload override public function handleConfigureNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleConfigureNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload override public function handleMapNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleMapNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload override public function handleUnmapNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleUnmapNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
 	
 	
 }
@@ -173,9 +173,9 @@ extern class XChoicePeer extends sun.awt.X11.XComponentPeer implements java.awt.
 	* and the Enter pressing.
 	* see 6240074 for more information
 	*/
-	@:overload public function unfurledChoiceOpening(choiceHelper : sun.awt.X11.ListHelper) : Void;
+	@:overload @:public public function unfurledChoiceOpening(choiceHelper : sun.awt.X11.ListHelper) : Void;
 	
-	@:overload public function unfurledChoiceClosing() : Void;
+	@:overload @:public public function unfurledChoiceClosing() : Void;
 	
 	
 }

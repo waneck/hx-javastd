@@ -30,17 +30,17 @@ extern class InternalBindingValue implements java.io.Serializable
 	* a org.omg.CosNaming::Binding and an CORBA object reference, which are the two
 	* components associated with the binding.
 	*/
-	public var theBindingType : org.omg.CosNaming.BindingType;
+	@:public public var theBindingType : org.omg.CosNaming.BindingType;
 	
-	public var strObjectRef : String;
+	@:public public var strObjectRef : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(b : org.omg.CosNaming.BindingType, o : String) : Void;
+	@:overload @:public public function new(b : org.omg.CosNaming.BindingType, o : String) : Void;
 	
-	@:overload public function getObjectRef() : org.omg.CORBA.Object;
+	@:overload @:public public function getObjectRef() : org.omg.CORBA.Object;
 	
-	@:overload public function setObjectRef(ObjectRef : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function setObjectRef(ObjectRef : org.omg.CORBA.Object) : Void;
 	
 	
 }

@@ -52,7 +52,7 @@ package javax.activation;
 	*
 	* @return the CommandMap
 	*/
-	@:overload public static function getDefaultCommandMap() : javax.activation.CommandMap;
+	@:overload @:public @:static public static function getDefaultCommandMap() : javax.activation.CommandMap;
 	
 	/**
 	* Set the default CommandMap. Reset the CommandMap to the default by
@@ -62,7 +62,7 @@ package javax.activation;
 	* @exception SecurityException if the caller doesn't have permission
 	*                                  to change the default
 	*/
-	@:overload public static function setDefaultCommandMap(commandMap : javax.activation.CommandMap) : Void;
+	@:overload @:public @:static public static function setDefaultCommandMap(commandMap : javax.activation.CommandMap) : Void;
 	
 	/**
 	* Get the preferred command list from a MIME Type. The actual semantics
@@ -71,7 +71,7 @@ package javax.activation;
 	* @param mimeType  the MIME type
 	* @return the CommandInfo classes that represent the command Beans.
 	*/
-	@:overload @:abstract public function getPreferredCommands(mimeType : String) : java.NativeArray<javax.activation.CommandInfo>;
+	@:overload @:abstract @:public public function getPreferredCommands(mimeType : String) : java.NativeArray<javax.activation.CommandInfo>;
 	
 	/**
 	* Get the preferred command list from a MIME Type. The actual semantics
@@ -88,7 +88,7 @@ package javax.activation;
 	* @return the CommandInfo classes that represent the command Beans.
 	* @since   JAF 1.1
 	*/
-	@:require(java1) @:overload public function getPreferredCommands(mimeType : String, ds : javax.activation.DataSource) : java.NativeArray<javax.activation.CommandInfo>;
+	@:require(java1) @:overload @:public public function getPreferredCommands(mimeType : String, ds : javax.activation.DataSource) : java.NativeArray<javax.activation.CommandInfo>;
 	
 	/**
 	* Get all the available commands for this type. This method
@@ -97,7 +97,7 @@ package javax.activation;
 	* @param mimeType  the MIME type
 	* @return the CommandInfo objects representing all the commands.
 	*/
-	@:overload @:abstract public function getAllCommands(mimeType : String) : java.NativeArray<javax.activation.CommandInfo>;
+	@:overload @:abstract @:public public function getAllCommands(mimeType : String) : java.NativeArray<javax.activation.CommandInfo>;
 	
 	/**
 	* Get all the available commands for this type. This method
@@ -114,7 +114,7 @@ package javax.activation;
 	* @return the CommandInfo objects representing all the commands.
 	* @since   JAF 1.1
 	*/
-	@:require(java1) @:overload public function getAllCommands(mimeType : String, ds : javax.activation.DataSource) : java.NativeArray<javax.activation.CommandInfo>;
+	@:require(java1) @:overload @:public public function getAllCommands(mimeType : String, ds : javax.activation.DataSource) : java.NativeArray<javax.activation.CommandInfo>;
 	
 	/**
 	* Get the default command corresponding to the MIME type.
@@ -123,7 +123,7 @@ package javax.activation;
 	* @param cmdName   the command name
 	* @return the CommandInfo corresponding to the command.
 	*/
-	@:overload @:abstract public function getCommand(mimeType : String, cmdName : String) : javax.activation.CommandInfo;
+	@:overload @:abstract @:public public function getCommand(mimeType : String, cmdName : String) : javax.activation.CommandInfo;
 	
 	/**
 	* Get the default command corresponding to the MIME type. <p>
@@ -140,7 +140,7 @@ package javax.activation;
 	* @return the CommandInfo corresponding to the command.
 	* @since   JAF 1.1
 	*/
-	@:require(java1) @:overload public function getCommand(mimeType : String, cmdName : String, ds : javax.activation.DataSource) : javax.activation.CommandInfo;
+	@:require(java1) @:overload @:public public function getCommand(mimeType : String, cmdName : String, ds : javax.activation.DataSource) : javax.activation.CommandInfo;
 	
 	/**
 	* Locate a DataContentHandler that corresponds to the MIME type.
@@ -150,7 +150,7 @@ package javax.activation;
 	* @param mimeType  the MIME type
 	* @return          the DataContentHandler for the MIME type
 	*/
-	@:overload @:abstract public function createDataContentHandler(mimeType : String) : javax.activation.DataContentHandler;
+	@:overload @:abstract @:public public function createDataContentHandler(mimeType : String) : javax.activation.DataContentHandler;
 	
 	/**
 	* Locate a DataContentHandler that corresponds to the MIME type.
@@ -168,7 +168,7 @@ package javax.activation;
 	* @return          the DataContentHandler for the MIME type
 	* @since   JAF 1.1
 	*/
-	@:require(java1) @:overload public function createDataContentHandler(mimeType : String, ds : javax.activation.DataSource) : javax.activation.DataContentHandler;
+	@:require(java1) @:overload @:public public function createDataContentHandler(mimeType : String, ds : javax.activation.DataSource) : javax.activation.DataContentHandler;
 	
 	/**
 	* Get all the MIME types known to this command map.
@@ -178,7 +178,7 @@ package javax.activation;
 	* @return          array of MIME types as strings, or null if not supported
 	* @since   JAF 1.1
 	*/
-	@:require(java1) @:overload public function getMimeTypes() : java.NativeArray<String>;
+	@:require(java1) @:overload @:public public function getMimeTypes() : java.NativeArray<String>;
 	
 	
 }

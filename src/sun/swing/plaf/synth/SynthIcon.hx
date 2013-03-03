@@ -32,11 +32,11 @@ extern class SynthIcon implements javax.swing.Icon
 	*
 	* @author Scott Violet
 	*/
-	@:native('getIconWidth') @:overload public static function _getIconWidth(icon : javax.swing.Icon, context : javax.swing.plaf.synth.SynthContext) : Int;
+	@:native('getIconWidth') @:overload @:public @:static public static function _getIconWidth(icon : javax.swing.Icon, context : javax.swing.plaf.synth.SynthContext) : Int;
 	
-	@:native('getIconHeight') @:overload public static function _getIconHeight(icon : javax.swing.Icon, context : javax.swing.plaf.synth.SynthContext) : Int;
+	@:native('getIconHeight') @:overload @:public @:static public static function _getIconHeight(icon : javax.swing.Icon, context : javax.swing.plaf.synth.SynthContext) : Int;
 	
-	@:native('paintIcon') @:overload public static function _paintIcon(icon : javax.swing.Icon, context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:native('paintIcon') @:overload @:public @:static public static function _paintIcon(icon : javax.swing.Icon, context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the icon at the specified location.
@@ -47,7 +47,7 @@ extern class SynthIcon implements javax.swing.Icon
 	* @param w Width of the region to paint to, may be 0
 	* @param h Height of the region to paint to, may be 0
 	*/
-	@:overload @:abstract public function paintIcon(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public @:abstract public function paintIcon(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Returns the desired width of the Icon.
@@ -55,7 +55,7 @@ extern class SynthIcon implements javax.swing.Icon
 	* @param context SynthContext requesting the Icon, may be null.
 	* @return Desired width of the icon.
 	*/
-	@:overload @:abstract public function getIconWidth(context : javax.swing.plaf.synth.SynthContext) : Int;
+	@:overload @:public @:abstract public function getIconWidth(context : javax.swing.plaf.synth.SynthContext) : Int;
 	
 	/**
 	* Returns the desired height of the Icon.
@@ -63,13 +63,13 @@ extern class SynthIcon implements javax.swing.Icon
 	* @param context SynthContext requesting the Icon, may be null.
 	* @return Desired height of the icon.
 	*/
-	@:overload @:abstract public function getIconHeight(context : javax.swing.plaf.synth.SynthContext) : Int;
+	@:overload @:public @:abstract public function getIconHeight(context : javax.swing.plaf.synth.SynthContext) : Int;
 	
 	/**
 	* Paints the icon. This is a cover method for
 	* <code>paintIcon(null, g, x, y, 0, 0)</code>
 	*/
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
 	/**
 	* Returns the icon's width. This is a cover methods for
@@ -77,7 +77,7 @@ extern class SynthIcon implements javax.swing.Icon
 	*
 	* @return an int specifying the fixed width of the icon.
 	*/
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
 	/**
 	* Returns the icon's height. This is a cover method for
@@ -85,7 +85,7 @@ extern class SynthIcon implements javax.swing.Icon
 	*
 	* @return an int specifying the fixed height of the icon.
 	*/
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }

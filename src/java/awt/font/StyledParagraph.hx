@@ -34,7 +34,7 @@ package java.awt.font;
 	* @param aci an iterator over the text
 	* @param chars the characters extracted from aci
 	*/
-	@:overload public function new(aci : java.text.AttributedCharacterIterator, chars : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(aci : java.text.AttributedCharacterIterator, chars : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Return a StyledParagraph reflecting the insertion of a single character
@@ -48,7 +48,7 @@ package java.awt.font;
 	* @param oldParagraph a StyledParagraph for the text in aci before the
 	*     insertion
 	*/
-	@:overload public static function insertChar(aci : java.text.AttributedCharacterIterator, chars : java.NativeArray<java.StdTypes.Char16>, insertPos : Int, oldParagraph : java.awt.font.StyledParagraph) : java.awt.font.StyledParagraph;
+	@:overload @:public @:static public static function insertChar(aci : java.text.AttributedCharacterIterator, chars : java.NativeArray<java.StdTypes.Char16>, insertPos : Int, oldParagraph : java.awt.font.StyledParagraph) : java.awt.font.StyledParagraph;
 	
 	/**
 	* Return a StyledParagraph reflecting the insertion of a single character
@@ -62,7 +62,7 @@ package java.awt.font;
 	* @param oldParagraph a StyledParagraph for the text in aci before the
 	*     insertion
 	*/
-	@:overload public static function deleteChar(aci : java.text.AttributedCharacterIterator, chars : java.NativeArray<java.StdTypes.Char16>, deletePos : Int, oldParagraph : java.awt.font.StyledParagraph) : java.awt.font.StyledParagraph;
+	@:overload @:public @:static public static function deleteChar(aci : java.text.AttributedCharacterIterator, chars : java.NativeArray<java.StdTypes.Char16>, deletePos : Int, oldParagraph : java.awt.font.StyledParagraph) : java.awt.font.StyledParagraph;
 	
 	/**
 	* Return the index at which there is a different Font, GraphicAttribute, or
@@ -71,14 +71,14 @@ package java.awt.font;
 	* @return the first index where there is a change in attributes from
 	*      those at index
 	*/
-	@:overload public function getRunLimit(index : Int) : Int;
+	@:overload @:public public function getRunLimit(index : Int) : Int;
 	
 	/**
 	* Return the Decoration in effect at the given index.
 	* @param index a valid index in the paragraph
 	* @return the Decoration at index.
 	*/
-	@:overload public function getDecorationAt(index : Int) : sun.font.Decoration;
+	@:overload @:public public function getDecorationAt(index : Int) : sun.font.Decoration;
 	
 	/**
 	* Return the Font or GraphicAttribute in effect at the given index.
@@ -87,7 +87,7 @@ package java.awt.font;
 	* @param index a valid index in the paragraph
 	* @return the Font or GraphicAttribute at index.
 	*/
-	@:overload public function getFontOrGraphicAt(index : Int) : Dynamic;
+	@:overload @:public public function getFontOrGraphicAt(index : Int) : Dynamic;
 	
 	
 }

@@ -34,7 +34,7 @@ extern class LinkPermission extends java.security.BasicPermission
 	* @throws  IllegalArgumentException
 	*          if name is empty or invalid
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Constructs a {@code LinkPermission} with the specified name.
@@ -48,7 +48,7 @@ extern class LinkPermission extends java.security.BasicPermission
 	* @throws  IllegalArgumentException
 	*          if name is empty or invalid, or actions is a non-empty string
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	
 }

@@ -32,11 +32,11 @@ package com.sun.tools.example.debug.bdi;
 */
 extern class SpecEvent extends java.util.EventObject
 {
-	@:overload public function new(eventRequestSpec : com.sun.tools.example.debug.bdi.EventRequestSpec) : Void;
+	@:overload @:public public function new(eventRequestSpec : com.sun.tools.example.debug.bdi.EventRequestSpec) : Void;
 	
-	@:overload public function getEventRequestSpec() : com.sun.tools.example.debug.bdi.EventRequestSpec;
+	@:overload @:public public function getEventRequestSpec() : com.sun.tools.example.debug.bdi.EventRequestSpec;
 	
-	@:overload public function getEventRequest() : com.sun.jdi.request.EventRequest;
+	@:overload @:public public function getEventRequest() : com.sun.jdi.request.EventRequest;
 	
 	
 }

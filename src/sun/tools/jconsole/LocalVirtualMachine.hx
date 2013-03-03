@@ -25,25 +25,25 @@ package sun.tools.jconsole;
 */
 extern class LocalVirtualMachine
 {
-	@:overload public function new(vmid : Int, commandLine : String, canAttach : Bool, connectorAddress : String) : Void;
+	@:overload @:public public function new(vmid : Int, commandLine : String, canAttach : Bool, connectorAddress : String) : Void;
 	
-	@:overload public function vmid() : Int;
+	@:overload @:public public function vmid() : Int;
 	
-	@:overload public function isManageable() : Bool;
+	@:overload @:public public function isManageable() : Bool;
 	
-	@:overload public function isAttachable() : Bool;
+	@:overload @:public public function isAttachable() : Bool;
 	
-	@:overload public function startManagementAgent() : Void;
+	@:overload @:public public function startManagementAgent() : Void;
 	
-	@:overload public function connectorAddress() : String;
+	@:overload @:public public function connectorAddress() : String;
 	
-	@:overload public function displayName() : String;
+	@:overload @:public public function displayName() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public static function getAllVirtualMachines() : java.util.Map<Null<Int>, sun.tools.jconsole.LocalVirtualMachine>;
+	@:overload @:public @:static public static function getAllVirtualMachines() : java.util.Map<Null<Int>, sun.tools.jconsole.LocalVirtualMachine>;
 	
-	@:overload public static function getLocalVirtualMachine(vmid : Int) : sun.tools.jconsole.LocalVirtualMachine;
+	@:overload @:public @:static public static function getLocalVirtualMachine(vmid : Int) : sun.tools.jconsole.LocalVirtualMachine;
 	
 	
 }

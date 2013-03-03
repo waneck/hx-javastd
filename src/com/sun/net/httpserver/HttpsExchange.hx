@@ -31,13 +31,13 @@ package com.sun.net.httpserver;
 */
 @:require(java6) extern class HttpsExchange extends com.sun.net.httpserver.HttpExchange
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Get the SSLSession for this exchange.
 	* @return the SSLSession
 	*/
-	@:overload @:abstract public function getSSLSession() : javax.net.ssl.SSLSession;
+	@:overload @:public @:abstract public function getSSLSession() : javax.net.ssl.SSLSession;
 	
 	
 }

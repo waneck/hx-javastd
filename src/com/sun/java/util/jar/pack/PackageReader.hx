@@ -31,7 +31,7 @@ package com.sun.java.util.jar.pack;
 */
 @:internal extern class PackageReader extends com.sun.java.util.jar.pack.BandStructure
 {
-	@:overload private function getCPIndex(tag : java.StdTypes.Int8) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index;
+	@:overload @:protected override private function getCPIndex(tag : java.StdTypes.Int8) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index;
 	
 	
 }
@@ -43,19 +43,19 @@ package com.sun.java.util.jar.pack;
 */
 @:native('com$sun$java$util$jar$pack$PackageReader$LimitedBuffer') @:internal extern class PackageReader_LimitedBuffer extends java.io.BufferedInputStream
 {
-	@:overload public function atLimit() : Bool;
+	@:overload @:public public function atLimit() : Bool;
 	
-	@:overload public function getBytesServed() : haxe.Int64;
+	@:overload @:public public function getBytesServed() : haxe.Int64;
 	
-	@:overload public function setReadLimit(newLimit : haxe.Int64) : Void;
+	@:overload @:public public function setReadLimit(newLimit : haxe.Int64) : Void;
 	
-	@:overload public function getReadLimit() : haxe.Int64;
+	@:overload @:public public function getReadLimit() : haxe.Int64;
 	
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	
 }

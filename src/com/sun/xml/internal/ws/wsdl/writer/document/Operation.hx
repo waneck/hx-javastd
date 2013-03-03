@@ -38,15 +38,15 @@ extern interface Operation extends com.sun.xml.internal.txw2.TypedXmlWriter exte
 	@XmlElement("one-way-operation")
 	public OneWayOperation oneWayOperation();
 */
-	@:overload public function input() : com.sun.xml.internal.ws.wsdl.writer.document.ParamType;
+	@:overload @:public public function input() : com.sun.xml.internal.ws.wsdl.writer.document.ParamType;
 	
-	@:overload public function output() : com.sun.xml.internal.ws.wsdl.writer.document.ParamType;
+	@:overload @:public public function output() : com.sun.xml.internal.ws.wsdl.writer.document.ParamType;
 	
-	@:overload public function fault() : com.sun.xml.internal.ws.wsdl.writer.document.FaultType;
+	@:overload @:public public function fault() : com.sun.xml.internal.ws.wsdl.writer.document.FaultType;
 	
-	@:overload public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Operation;
+	@:overload @:public public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Operation;
 	
-	@:overload public function parameterOrder(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Operation;
+	@:overload @:public public function parameterOrder(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Operation;
 	
 	
 }

@@ -54,9 +54,9 @@ package sun.security.pkcs11.wrapper;
 */
 extern class Constants
 {
-	public static var NEWLINE(default, null) : String;
+	@:public @:static @:final public static var NEWLINE(default, null) : String;
 	
-	public static var INDENT(default, null) : String;
+	@:public @:static @:final public static var INDENT(default, null) : String;
 	
 	
 }

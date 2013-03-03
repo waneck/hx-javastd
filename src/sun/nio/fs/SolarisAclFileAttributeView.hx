@@ -29,13 +29,13 @@ package sun.nio.fs;
 */
 @:internal extern class SolarisAclFileAttributeView extends sun.nio.fs.AbstractAclFileAttributeView
 {
-	@:overload override public function getAcl() : java.util.List<java.nio.file.attribute.AclEntry>;
+	@:overload @:public override public function getAcl() : java.util.List<java.nio.file.attribute.AclEntry>;
 	
-	@:overload override public function setAcl(acl : java.util.List<java.nio.file.attribute.AclEntry>) : Void;
+	@:overload @:public override public function setAcl(acl : java.util.List<java.nio.file.attribute.AclEntry>) : Void;
 	
-	@:overload override public function getOwner() : java.nio.file.attribute.UserPrincipal;
+	@:overload @:public override public function getOwner() : java.nio.file.attribute.UserPrincipal;
 	
-	@:overload override public function setOwner(owner : java.nio.file.attribute.UserPrincipal) : Void;
+	@:overload @:public override public function setOwner(owner : java.nio.file.attribute.UserPrincipal) : Void;
 	
 	
 }

@@ -23,15 +23,15 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 */
 extern class RtMethodGenerator extends com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator
 {
-	@:overload public function new(access_flags : Int, return_type : com.sun.org.apache.bcel.internal.generic.Type, arg_types : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>, arg_names : java.NativeArray<String>, method_name : String, class_name : String, il : com.sun.org.apache.bcel.internal.generic.InstructionList, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
+	@:overload @:public public function new(access_flags : Int, return_type : com.sun.org.apache.bcel.internal.generic.Type, arg_types : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>, arg_names : java.NativeArray<String>, method_name : String, class_name : String, il : com.sun.org.apache.bcel.internal.generic.InstructionList, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
 	
-	@:overload public function getIteratorIndex() : Int;
+	@:overload @:public public function getIteratorIndex() : Int;
 	
-	@:overload @:final public function storeHandler() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public @:final override public function storeHandler() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload @:final public function loadHandler() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public @:final override public function loadHandler() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload public function getLocalIndex(name : String) : Int;
+	@:overload @:public override public function getLocalIndex(name : String) : Int;
 	
 	
 }

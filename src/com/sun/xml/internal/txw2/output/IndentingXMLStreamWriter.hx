@@ -25,7 +25,7 @@ package com.sun.xml.internal.txw2.output;
 */
 extern class IndentingXMLStreamWriter extends com.sun.xml.internal.txw2.output.DelegatingXMLStreamWriter
 {
-	@:overload public function new(writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function new(writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Return the current indent step.
@@ -41,7 +41,7 @@ extern class IndentingXMLStreamWriter extends com.sun.xml.internal.txw2.output.D
 	* @deprecated
 	*      Only return the length of the indent string.
 	*/
-	@:overload public function getIndentStep() : Int;
+	@:overload @:public public function getIndentStep() : Int;
 	
 	/**
 	* Set the current indent step.
@@ -53,35 +53,35 @@ extern class IndentingXMLStreamWriter extends com.sun.xml.internal.txw2.output.D
 	* @deprecated
 	*      Should use the version that takes string.
 	*/
-	@:overload public function setIndentStep(indentStep : Int) : Void;
+	@:overload @:public public function setIndentStep(indentStep : Int) : Void;
 	
-	@:overload public function setIndentStep(s : String) : Void;
+	@:overload @:public public function setIndentStep(s : String) : Void;
 	
-	@:overload public function writeStartDocument() : Void;
+	@:overload @:public override public function writeStartDocument() : Void;
 	
-	@:overload public function writeStartDocument(version : String) : Void;
+	@:overload @:public override public function writeStartDocument(version : String) : Void;
 	
-	@:overload public function writeStartDocument(encoding : String, version : String) : Void;
+	@:overload @:public override public function writeStartDocument(encoding : String, version : String) : Void;
 	
-	@:overload public function writeStartElement(localName : String) : Void;
+	@:overload @:public override public function writeStartElement(localName : String) : Void;
 	
-	@:overload public function writeStartElement(namespaceURI : String, localName : String) : Void;
+	@:overload @:public override public function writeStartElement(namespaceURI : String, localName : String) : Void;
 	
-	@:overload public function writeStartElement(prefix : String, localName : String, namespaceURI : String) : Void;
+	@:overload @:public override public function writeStartElement(prefix : String, localName : String, namespaceURI : String) : Void;
 	
-	@:overload public function writeEmptyElement(namespaceURI : String, localName : String) : Void;
+	@:overload @:public override public function writeEmptyElement(namespaceURI : String, localName : String) : Void;
 	
-	@:overload public function writeEmptyElement(prefix : String, localName : String, namespaceURI : String) : Void;
+	@:overload @:public override public function writeEmptyElement(prefix : String, localName : String, namespaceURI : String) : Void;
 	
-	@:overload public function writeEmptyElement(localName : String) : Void;
+	@:overload @:public override public function writeEmptyElement(localName : String) : Void;
 	
-	@:overload public function writeEndElement() : Void;
+	@:overload @:public override public function writeEndElement() : Void;
 	
-	@:overload public function writeCharacters(text : String) : Void;
+	@:overload @:public override public function writeCharacters(text : String) : Void;
 	
-	@:overload public function writeCharacters(text : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload @:public override public function writeCharacters(text : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
-	@:overload public function writeCData(data : String) : Void;
+	@:overload @:public override public function writeCData(data : String) : Void;
 	
 	
 }

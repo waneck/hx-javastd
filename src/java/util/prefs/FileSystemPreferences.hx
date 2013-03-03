@@ -25,34 +25,34 @@ package java.util.prefs;
 */
 @:internal extern class FileSystemPreferences extends java.util.prefs.AbstractPreferences
 {
-	@:overload public function isUserNode() : Bool;
+	@:overload @:public override public function isUserNode() : Bool;
 	
-	@:overload private function putSpi(key : String, value : String) : Void;
+	@:overload @:protected override private function putSpi(key : String, value : String) : Void;
 	
-	@:overload private function getSpi(key : String) : String;
+	@:overload @:protected override private function getSpi(key : String) : String;
 	
-	@:overload private function removeSpi(key : String) : Void;
+	@:overload @:protected override private function removeSpi(key : String) : Void;
 	
-	@:overload private function keysSpi() : java.NativeArray<String>;
+	@:overload @:protected override private function keysSpi() : java.NativeArray<String>;
 	
-	@:overload private function childrenNamesSpi() : java.NativeArray<String>;
+	@:overload @:protected override private function childrenNamesSpi() : java.NativeArray<String>;
 	
-	@:overload private function childSpi(name : String) : java.util.prefs.AbstractPreferences;
+	@:overload @:protected override private function childSpi(name : String) : java.util.prefs.AbstractPreferences;
 	
-	@:overload public function removeNode() : Void;
+	@:overload @:public override public function removeNode() : Void;
 	
 	/**
 	* Called with file lock held (in addition to node locks).
 	*/
-	@:overload private function removeNodeSpi() : Void;
+	@:overload @:protected override private function removeNodeSpi() : Void;
 	
-	@:overload @:synchronized public function sync() : Void;
+	@:overload @:public @:synchronized override public function sync() : Void;
 	
-	@:overload private function syncSpi() : Void;
+	@:overload @:protected override private function syncSpi() : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload private function flushSpi() : Void;
+	@:overload @:protected override private function flushSpi() : Void;
 	
 	
 }

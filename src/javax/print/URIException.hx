@@ -29,13 +29,13 @@ extern interface URIException
 	* Return the URI.
 	* @return the URI that is the cause of this exception.
 	*/
-	@:overload public function getUnsupportedURI() : java.net.URI;
+	@:overload @:public public function getUnsupportedURI() : java.net.URI;
 	
 	/**
 	* Return the reason for the event.
 	* @return one of the predefined reasons enumerated in this interface.
 	*/
-	@:overload public function getReason() : Int;
+	@:overload @:public public function getReason() : Int;
 	
 	
 }

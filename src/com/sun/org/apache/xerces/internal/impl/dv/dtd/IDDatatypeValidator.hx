@@ -41,7 +41,7 @@ extern class IDDatatypeValidator implements com.sun.org.apache.xerces.internal.i
 	* @author Sandy Gao, IBM
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Checks that "content" string is valid ID value.
@@ -53,7 +53,7 @@ extern class IDDatatypeValidator implements com.sun.org.apache.xerces.internal.i
 	*         invalid according to the rules for the validators
 	* @see InvalidDatatypeValueException
 	*/
-	@:overload public function validate(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
+	@:overload @:public public function validate(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
 	
 	
 }

@@ -25,31 +25,31 @@ package sun.java2d.pipe;
 */
 extern class LoopPipe implements sun.java2d.pipe.PixelDrawPipe implements sun.java2d.pipe.PixelFillPipe implements sun.java2d.pipe.ParallelogramPipe implements sun.java2d.pipe.ShapeDrawPipe implements sun.java2d.pipe.LoopBasedPipe
 {
-	@:overload public function drawLine(sg2d : sun.java2d.SunGraphics2D, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public public function drawLine(sg2d : sun.java2d.SunGraphics2D, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
-	@:overload public function drawRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function drawRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function drawRoundRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
+	@:overload @:public public function drawRoundRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
 	
-	@:overload public function drawOval(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function drawOval(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function drawArc(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
+	@:overload @:public public function drawArc(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
 	
-	@:overload public function drawPolyline(sg2d : sun.java2d.SunGraphics2D, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:overload @:public public function drawPolyline(sg2d : sun.java2d.SunGraphics2D, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
-	@:overload public function drawPolygon(sg2d : sun.java2d.SunGraphics2D, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:overload @:public public function drawPolygon(sg2d : sun.java2d.SunGraphics2D, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
-	@:overload public function fillRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function fillRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function fillRoundRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
+	@:overload @:public public function fillRoundRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
 	
-	@:overload public function fillOval(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function fillOval(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function fillArc(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
+	@:overload @:public public function fillArc(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
 	
-	@:overload public function fillPolygon(sg2d : sun.java2d.SunGraphics2D, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:overload @:public public function fillPolygon(sg2d : sun.java2d.SunGraphics2D, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
-	@:overload public function draw(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
+	@:overload @:public public function draw(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
 	
 	/**
 	* Return a ShapeSpanIterator instance that normalizes as
@@ -72,7 +72,7 @@ extern class LoopPipe implements sun.java2d.pipe.PixelDrawPipe implements sun.ja
 	*     }
 	* </pre>
 	*/
-	@:overload public static function getFillSSI(sg2d : sun.java2d.SunGraphics2D) : sun.java2d.pipe.ShapeSpanIterator;
+	@:overload @:public @:static public static function getFillSSI(sg2d : sun.java2d.SunGraphics2D) : sun.java2d.pipe.ShapeSpanIterator;
 	
 	/*
 	* Return a ShapeSpanIterator ready to iterate the spans of the wide
@@ -101,13 +101,13 @@ extern class LoopPipe implements sun.java2d.pipe.PixelDrawPipe implements sun.ja
 	* is only on ShapeSpanIterator.
 	* TODO: Add a dispose() method to the SpanIterator interface.
 	*/
-	@:overload public static function getStrokeSpans(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : sun.java2d.pipe.ShapeSpanIterator;
+	@:overload @:public @:static public static function getStrokeSpans(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : sun.java2d.pipe.ShapeSpanIterator;
 	
-	@:overload public function fill(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
+	@:overload @:public public function fill(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
 	
-	@:overload public function fillParallelogram(sg2d : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
+	@:overload @:public public function fillParallelogram(sg2d : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
 	
-	@:overload public function drawParallelogram(sg2d : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float) : Void;
+	@:overload @:public public function drawParallelogram(sg2d : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float) : Void;
 	
 	
 }

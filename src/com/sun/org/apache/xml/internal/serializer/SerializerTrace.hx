@@ -28,14 +28,14 @@ extern interface SerializerTrace
 	*
 	* @return True if there are trace listeners
 	*/
-	@:overload public function hasTraceListeners() : Bool;
+	@:overload @:public public function hasTraceListeners() : Bool;
 	
 	/**
 	* Fire startDocument, endDocument events.
 	*
 	* @param eventType One of the EVENTTYPE_XXX constants.
 	*/
-	@:overload public function fireGenerateEvent(eventType : Int) : Void;
+	@:overload @:public public function fireGenerateEvent(eventType : Int) : Void;
 	
 	/**
 	* Fire startElement, endElement events.
@@ -44,7 +44,7 @@ extern interface SerializerTrace
 	* @param name The name of the element.
 	* @param atts The SAX attribute list.
 	*/
-	@:overload public function fireGenerateEvent(eventType : Int, name : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function fireGenerateEvent(eventType : Int, name : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Fire characters, cdata events.
@@ -54,7 +54,7 @@ extern interface SerializerTrace
 	* @param start The start offset to be used in the char array.
 	* @param length The end offset to be used in the chara array.
 	*/
-	@:overload public function fireGenerateEvent(eventType : Int, ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function fireGenerateEvent(eventType : Int, ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Fire processingInstruction events.
@@ -63,7 +63,7 @@ extern interface SerializerTrace
 	* @param name The name of the processing instruction.
 	* @param data The processing instruction data.
 	*/
-	@:overload public function fireGenerateEvent(eventType : Int, name : String, data : String) : Void;
+	@:overload @:public public function fireGenerateEvent(eventType : Int, name : String, data : String) : Void;
 	
 	/**
 	* Fire comment and entity ref events.
@@ -71,7 +71,7 @@ extern interface SerializerTrace
 	* @param eventType One of the EVENTTYPE_XXX constants.
 	* @param data The comment or entity ref data.
 	*/
-	@:overload public function fireGenerateEvent(eventType : Int, data : String) : Void;
+	@:overload @:public public function fireGenerateEvent(eventType : Int, data : String) : Void;
 	
 	
 }

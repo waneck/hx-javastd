@@ -25,9 +25,9 @@ package com.sun.corba.se.spi.orbutil.closure;
 */
 extern class ClosureFactory
 {
-	@:overload public static function makeConstant(value : Dynamic) : com.sun.corba.se.spi.orbutil.closure.Closure;
+	@:overload @:public @:static public static function makeConstant(value : Dynamic) : com.sun.corba.se.spi.orbutil.closure.Closure;
 	
-	@:overload public static function makeFuture(value : com.sun.corba.se.spi.orbutil.closure.Closure) : com.sun.corba.se.spi.orbutil.closure.Closure;
+	@:overload @:public @:static public static function makeFuture(value : com.sun.corba.se.spi.orbutil.closure.Closure) : com.sun.corba.se.spi.orbutil.closure.Closure;
 	
 	
 }

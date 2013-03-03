@@ -33,9 +33,9 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 */
 extern class Discarder extends com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader
 {
-	public static var INSTANCE(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
+	@:public @:static @:final public static var INSTANCE(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 	
-	@:overload public function childElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:public override public function childElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
 	
 }

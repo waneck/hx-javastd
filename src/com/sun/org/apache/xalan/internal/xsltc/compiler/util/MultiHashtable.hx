@@ -23,9 +23,9 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 */
 extern class MultiHashtable extends java.util.Hashtable<Dynamic, Dynamic>
 {
-	@:overload override public function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:overload @:public override public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
-	@:overload public function maps(from : Dynamic, to : Dynamic) : Dynamic;
+	@:overload @:public public function maps(from : Dynamic, to : Dynamic) : Dynamic;
 	
 	
 }

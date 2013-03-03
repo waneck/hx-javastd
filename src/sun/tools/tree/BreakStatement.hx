@@ -28,22 +28,22 @@ extern class BreakStatement extends sun.tools.tree.Statement
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, lbl : sun.tools.java.Identifier) : Void;
+	@:overload @:public public function new(where : haxe.Int64, lbl : sun.tools.java.Identifier) : Void;
 	
 	/**
 	* The cost of inlining this statement
 	*/
-	@:overload override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
+	@:overload @:public override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
 	
 	/**
 	* Code
 	*/
-	@:overload override public function code(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public override public function code(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Print
 	*/
-	@:overload override public function print(out : java.io.PrintStream, indent : Int) : Void;
+	@:overload @:public override public function print(out : java.io.PrintStream, indent : Int) : Void;
 	
 	
 }

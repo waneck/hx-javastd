@@ -52,7 +52,7 @@ package java.awt.image;
 	*
 	* @param size The number of elements in the <code>DataBuffer</code>.
 	*/
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
 	/**
 	* Constructs a <code>double</code>-based <code>DataBuffer</code>
@@ -63,7 +63,7 @@ package java.awt.image;
 	*        <code>DataBuffer</code>.
 	* @param numBanks The number of banks in the <code>DataBuffer</code>.
 	*/
-	@:overload public function new(size : Int, numBanks : Int) : Void;
+	@:overload @:public public function new(size : Int, numBanks : Int) : Void;
 	
 	/**
 	* Constructs a <code>double</code>-based <code>DataBuffer</code>
@@ -81,7 +81,7 @@ package java.awt.image;
 	*                  first and only bank of this <code>DataBuffer</code>.
 	* @param size The number of elements of the array to be used.
 	*/
-	@:overload public function new(dataArray : java.NativeArray<Float>, size : Int) : Void;
+	@:overload @:public public function new(dataArray : java.NativeArray<Float>, size : Int) : Void;
 	
 	/**
 	* Constructs a <code>double</code>-based <code>DataBuffer</code>
@@ -101,7 +101,7 @@ package java.awt.image;
 	* @param offset The offset of the first element of the array
 	*               that will be used.
 	*/
-	@:overload public function new(dataArray : java.NativeArray<Float>, size : Int, offset : Int) : Void;
+	@:overload @:public public function new(dataArray : java.NativeArray<Float>, size : Int, offset : Int) : Void;
 	
 	/**
 	* Constructs a <code>double</code>-based <code>DataBuffer</code>
@@ -119,7 +119,7 @@ package java.awt.image;
 	*        used as the banks of this <code>DataBuffer</code>.
 	* @param size The number of elements of each array to be used.
 	*/
-	@:overload public function new(dataArray : java.NativeArray<java.NativeArray<Float>>, size : Int) : Void;
+	@:overload @:public public function new(dataArray : java.NativeArray<java.NativeArray<Float>>, size : Int) : Void;
 	
 	/**
 	* Constructs a <code>double</code>-based <code>DataBuffer</code>
@@ -139,7 +139,7 @@ package java.awt.image;
 	* @param size The number of elements of each array to be used.
 	* @param offsets An array of integer offsets, one for each bank.
 	*/
-	@:overload public function new(dataArray : java.NativeArray<java.NativeArray<Float>>, size : Int, offsets : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(dataArray : java.NativeArray<java.NativeArray<Float>>, size : Int, offsets : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Returns the default (first) <code>double</code> data array.
@@ -151,7 +151,7 @@ package java.awt.image;
 	*
 	* @return the first double data array.
 	*/
-	@:overload public function getData() : java.NativeArray<Float>;
+	@:overload @:public public function getData() : java.NativeArray<Float>;
 	
 	/**
 	* Returns the data array for the specified bank.
@@ -164,7 +164,7 @@ package java.awt.image;
 	* @param bank the data array
 	* @return the data array specified by <code>bank</code>.
 	*/
-	@:overload public function getData(bank : Int) : java.NativeArray<Float>;
+	@:overload @:public public function getData(bank : Int) : java.NativeArray<Float>;
 	
 	/**
 	* Returns the data array for all banks.
@@ -176,7 +176,7 @@ package java.awt.image;
 	*
 	* @return all data arrays from this data buffer.
 	*/
-	@:overload public function getBankData() : java.NativeArray<java.NativeArray<Float>>;
+	@:overload @:public public function getBankData() : java.NativeArray<java.NativeArray<Float>>;
 	
 	/**
 	* Returns the requested data array element from the first
@@ -187,7 +187,7 @@ package java.awt.image;
 	* @see #setElem(int, int)
 	* @see #setElem(int, int, int)
 	*/
-	@:overload public function getElem(i : Int) : Int;
+	@:overload @:public override public function getElem(i : Int) : Int;
 	
 	/**
 	* Returns the requested data array element from the specified
@@ -200,7 +200,7 @@ package java.awt.image;
 	* @see #setElem(int, int)
 	* @see #setElem(int, int, int)
 	*/
-	@:overload public function getElem(bank : Int, i : Int) : Int;
+	@:overload @:public override public function getElem(bank : Int, i : Int) : Int;
 	
 	/**
 	* Sets the requested data array element in the first (default)
@@ -211,7 +211,7 @@ package java.awt.image;
 	* @see #getElem(int)
 	* @see #getElem(int, int)
 	*/
-	@:overload public function setElem(i : Int, val : Int) : Void;
+	@:overload @:public override public function setElem(i : Int, val : Int) : Void;
 	
 	/**
 	* Sets the requested data array element in the specified bank
@@ -223,7 +223,7 @@ package java.awt.image;
 	* @see #getElem(int)
 	* @see #getElem(int, int)
 	*/
-	@:overload public function setElem(bank : Int, i : Int, val : Int) : Void;
+	@:overload @:public override public function setElem(bank : Int, i : Int, val : Int) : Void;
 	
 	/**
 	* Returns the requested data array element from the first
@@ -235,7 +235,7 @@ package java.awt.image;
 	* @see #setElemFloat(int, float)
 	* @see #setElemFloat(int, int, float)
 	*/
-	@:overload public function getElemFloat(i : Int) : Single;
+	@:overload @:public override public function getElemFloat(i : Int) : Single;
 	
 	/**
 	* Returns the requested data array element from the specified
@@ -248,7 +248,7 @@ package java.awt.image;
 	* @see #setElemFloat(int, float)
 	* @see #setElemFloat(int, int, float)
 	*/
-	@:overload public function getElemFloat(bank : Int, i : Int) : Single;
+	@:overload @:public override public function getElemFloat(bank : Int, i : Int) : Single;
 	
 	/**
 	* Sets the requested data array element in the first (default)
@@ -259,7 +259,7 @@ package java.awt.image;
 	* @see #getElemFloat(int)
 	* @see #getElemFloat(int, int)
 	*/
-	@:overload public function setElemFloat(i : Int, val : Single) : Void;
+	@:overload @:public override public function setElemFloat(i : Int, val : Single) : Void;
 	
 	/**
 	* Sets the requested data array element in the specified bank to
@@ -271,7 +271,7 @@ package java.awt.image;
 	* @see #getElemFloat(int)
 	* @see #getElemFloat(int, int)
 	*/
-	@:overload public function setElemFloat(bank : Int, i : Int, val : Single) : Void;
+	@:overload @:public override public function setElemFloat(bank : Int, i : Int, val : Single) : Void;
 	
 	/**
 	* Returns the requested data array element from the first
@@ -283,7 +283,7 @@ package java.awt.image;
 	* @see #setElemDouble(int, double)
 	* @see #setElemDouble(int, int, double)
 	*/
-	@:overload public function getElemDouble(i : Int) : Float;
+	@:overload @:public override public function getElemDouble(i : Int) : Float;
 	
 	/**
 	* Returns the requested data array element from the specified
@@ -296,7 +296,7 @@ package java.awt.image;
 	* @see #setElemDouble(int, double)
 	* @see #setElemDouble(int, int, double)
 	*/
-	@:overload public function getElemDouble(bank : Int, i : Int) : Float;
+	@:overload @:public override public function getElemDouble(bank : Int, i : Int) : Float;
 	
 	/**
 	* Sets the requested data array element in the first (default)
@@ -307,7 +307,7 @@ package java.awt.image;
 	* @see #getElemDouble(int)
 	* @see #getElemDouble(int, int)
 	*/
-	@:overload public function setElemDouble(i : Int, val : Float) : Void;
+	@:overload @:public override public function setElemDouble(i : Int, val : Float) : Void;
 	
 	/**
 	* Sets the requested data array element in the specified bank to
@@ -319,7 +319,7 @@ package java.awt.image;
 	* @see #getElemDouble(int)
 	* @see #getElemDouble(int, int)
 	*/
-	@:overload public function setElemDouble(bank : Int, i : Int, val : Float) : Void;
+	@:overload @:public override public function setElemDouble(bank : Int, i : Int, val : Float) : Void;
 	
 	
 }

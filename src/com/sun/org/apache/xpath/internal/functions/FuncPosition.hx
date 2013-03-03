@@ -27,7 +27,7 @@ extern class FuncPosition extends com.sun.org.apache.xpath.internal.functions.Fu
 	* Figure out if we're executing a toplevel expression.
 	* If so, we can't be inside of a predicate.
 	*/
-	@:overload override public function postCompileStep(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler) : Void;
+	@:overload @:public override public function postCompileStep(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler) : Void;
 	
 	/**
 	* Get the position in the current context node list.
@@ -37,7 +37,7 @@ extern class FuncPosition extends com.sun.org.apache.xpath.internal.functions.Fu
 	* @return The current position of the itteration in the context node list,
 	*         or -1 if there is no active context node list.
 	*/
-	@:overload public function getPositionInContextNodeList(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public public function getPositionInContextNodeList(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Execute the function.  The function must return
@@ -47,12 +47,12 @@ extern class FuncPosition extends com.sun.org.apache.xpath.internal.functions.Fu
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* No arguments to process, so this does nothing.
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	
 }

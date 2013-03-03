@@ -29,73 +29,73 @@ extern class WSDLDocumentVisitorBase extends com.sun.tools.internal.ws.wsdl.fram
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function preVisit(definitions : com.sun.tools.internal.ws.wsdl.document.Definitions) : Void;
+	@:overload @:public public function preVisit(definitions : com.sun.tools.internal.ws.wsdl.document.Definitions) : Void;
 	
-	@:overload public function postVisit(definitions : com.sun.tools.internal.ws.wsdl.document.Definitions) : Void;
+	@:overload @:public public function postVisit(definitions : com.sun.tools.internal.ws.wsdl.document.Definitions) : Void;
 	
-	@:overload public function visit(i : com.sun.tools.internal.ws.wsdl.document.Import) : Void;
+	@:overload @:public public function visit(i : com.sun.tools.internal.ws.wsdl.document.Import) : Void;
 	
-	@:overload public function preVisit(types : com.sun.tools.internal.ws.wsdl.document.Types) : Void;
+	@:overload @:public public function preVisit(types : com.sun.tools.internal.ws.wsdl.document.Types) : Void;
 	
-	@:overload public function postVisit(types : com.sun.tools.internal.ws.wsdl.document.Types) : Void;
+	@:overload @:public public function postVisit(types : com.sun.tools.internal.ws.wsdl.document.Types) : Void;
 	
-	@:overload public function preVisit(message : com.sun.tools.internal.ws.wsdl.document.Message) : Void;
+	@:overload @:public public function preVisit(message : com.sun.tools.internal.ws.wsdl.document.Message) : Void;
 	
-	@:overload public function postVisit(message : com.sun.tools.internal.ws.wsdl.document.Message) : Void;
+	@:overload @:public public function postVisit(message : com.sun.tools.internal.ws.wsdl.document.Message) : Void;
 	
-	@:overload public function visit(part : com.sun.tools.internal.ws.wsdl.document.MessagePart) : Void;
+	@:overload @:public public function visit(part : com.sun.tools.internal.ws.wsdl.document.MessagePart) : Void;
 	
-	@:overload public function preVisit(portType : com.sun.tools.internal.ws.wsdl.document.PortType) : Void;
+	@:overload @:public public function preVisit(portType : com.sun.tools.internal.ws.wsdl.document.PortType) : Void;
 	
-	@:overload public function postVisit(portType : com.sun.tools.internal.ws.wsdl.document.PortType) : Void;
+	@:overload @:public public function postVisit(portType : com.sun.tools.internal.ws.wsdl.document.PortType) : Void;
 	
-	@:overload public function preVisit(operation : com.sun.tools.internal.ws.wsdl.document.Operation) : Void;
+	@:overload @:public public function preVisit(operation : com.sun.tools.internal.ws.wsdl.document.Operation) : Void;
 	
-	@:overload public function postVisit(operation : com.sun.tools.internal.ws.wsdl.document.Operation) : Void;
+	@:overload @:public public function postVisit(operation : com.sun.tools.internal.ws.wsdl.document.Operation) : Void;
 	
-	@:overload public function preVisit(input : com.sun.tools.internal.ws.wsdl.document.Input) : Void;
+	@:overload @:public public function preVisit(input : com.sun.tools.internal.ws.wsdl.document.Input) : Void;
 	
-	@:overload public function postVisit(input : com.sun.tools.internal.ws.wsdl.document.Input) : Void;
+	@:overload @:public public function postVisit(input : com.sun.tools.internal.ws.wsdl.document.Input) : Void;
 	
-	@:overload public function preVisit(output : com.sun.tools.internal.ws.wsdl.document.Output) : Void;
+	@:overload @:public public function preVisit(output : com.sun.tools.internal.ws.wsdl.document.Output) : Void;
 	
-	@:overload public function postVisit(output : com.sun.tools.internal.ws.wsdl.document.Output) : Void;
+	@:overload @:public public function postVisit(output : com.sun.tools.internal.ws.wsdl.document.Output) : Void;
 	
-	@:overload public function preVisit(fault : com.sun.tools.internal.ws.wsdl.document.Fault) : Void;
+	@:overload @:public public function preVisit(fault : com.sun.tools.internal.ws.wsdl.document.Fault) : Void;
 	
-	@:overload public function postVisit(fault : com.sun.tools.internal.ws.wsdl.document.Fault) : Void;
+	@:overload @:public public function postVisit(fault : com.sun.tools.internal.ws.wsdl.document.Fault) : Void;
 	
-	@:overload public function preVisit(binding : com.sun.tools.internal.ws.wsdl.document.Binding) : Void;
+	@:overload @:public public function preVisit(binding : com.sun.tools.internal.ws.wsdl.document.Binding) : Void;
 	
-	@:overload public function postVisit(binding : com.sun.tools.internal.ws.wsdl.document.Binding) : Void;
+	@:overload @:public public function postVisit(binding : com.sun.tools.internal.ws.wsdl.document.Binding) : Void;
 	
-	@:overload public function preVisit(operation : com.sun.tools.internal.ws.wsdl.document.BindingOperation) : Void;
+	@:overload @:public public function preVisit(operation : com.sun.tools.internal.ws.wsdl.document.BindingOperation) : Void;
 	
-	@:overload public function postVisit(operation : com.sun.tools.internal.ws.wsdl.document.BindingOperation) : Void;
+	@:overload @:public public function postVisit(operation : com.sun.tools.internal.ws.wsdl.document.BindingOperation) : Void;
 	
-	@:overload public function preVisit(input : com.sun.tools.internal.ws.wsdl.document.BindingInput) : Void;
+	@:overload @:public public function preVisit(input : com.sun.tools.internal.ws.wsdl.document.BindingInput) : Void;
 	
-	@:overload public function postVisit(input : com.sun.tools.internal.ws.wsdl.document.BindingInput) : Void;
+	@:overload @:public public function postVisit(input : com.sun.tools.internal.ws.wsdl.document.BindingInput) : Void;
 	
-	@:overload public function preVisit(output : com.sun.tools.internal.ws.wsdl.document.BindingOutput) : Void;
+	@:overload @:public public function preVisit(output : com.sun.tools.internal.ws.wsdl.document.BindingOutput) : Void;
 	
-	@:overload public function postVisit(output : com.sun.tools.internal.ws.wsdl.document.BindingOutput) : Void;
+	@:overload @:public public function postVisit(output : com.sun.tools.internal.ws.wsdl.document.BindingOutput) : Void;
 	
-	@:overload public function preVisit(fault : com.sun.tools.internal.ws.wsdl.document.BindingFault) : Void;
+	@:overload @:public public function preVisit(fault : com.sun.tools.internal.ws.wsdl.document.BindingFault) : Void;
 	
-	@:overload public function postVisit(fault : com.sun.tools.internal.ws.wsdl.document.BindingFault) : Void;
+	@:overload @:public public function postVisit(fault : com.sun.tools.internal.ws.wsdl.document.BindingFault) : Void;
 	
-	@:overload public function preVisit(service : com.sun.tools.internal.ws.wsdl.document.Service) : Void;
+	@:overload @:public public function preVisit(service : com.sun.tools.internal.ws.wsdl.document.Service) : Void;
 	
-	@:overload public function postVisit(service : com.sun.tools.internal.ws.wsdl.document.Service) : Void;
+	@:overload @:public public function postVisit(service : com.sun.tools.internal.ws.wsdl.document.Service) : Void;
 	
-	@:overload public function preVisit(port : com.sun.tools.internal.ws.wsdl.document.Port) : Void;
+	@:overload @:public public function preVisit(port : com.sun.tools.internal.ws.wsdl.document.Port) : Void;
 	
-	@:overload public function postVisit(port : com.sun.tools.internal.ws.wsdl.document.Port) : Void;
+	@:overload @:public public function postVisit(port : com.sun.tools.internal.ws.wsdl.document.Port) : Void;
 	
-	@:overload public function visit(documentation : com.sun.tools.internal.ws.wsdl.document.Documentation) : Void;
+	@:overload @:public public function visit(documentation : com.sun.tools.internal.ws.wsdl.document.Documentation) : Void;
 	
 	
 }

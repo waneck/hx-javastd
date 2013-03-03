@@ -29,7 +29,7 @@ package com.sun.tools.javac.processing;
 	* Return true if a description for at least one service is found in the
 	* service configuration files in the given URLs.
 	*/
-	@:overload public static function hasService(service : Class<Dynamic>, urls : java.NativeArray<java.net.URL>) : Bool;
+	@:overload @:public @:static public static function hasService(service : Class<Dynamic>, urls : java.NativeArray<java.net.URL>) : Bool;
 	
 	
 }

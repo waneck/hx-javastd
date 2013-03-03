@@ -50,7 +50,7 @@ ate and Certificate Revocation List (CRL) Profile</a>.
 	/**
 	* Attribute name.
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
 	/**
 	* Creates a freshest CRL extension.
@@ -58,7 +58,7 @@ ate and Certificate Revocation List (CRL) Profile</a>.
 	*
 	* @param distributionPoints the list of delta CRL distribution points.
 	*/
-	@:overload public function new(distributionPoints : java.util.List<sun.security.x509.DistributionPoint>) : Void;
+	@:overload @:public public function new(distributionPoints : java.util.List<sun.security.x509.DistributionPoint>) : Void;
 	
 	/**
 	* Creates the extension from the passed DER encoded value of the same.
@@ -67,7 +67,7 @@ ate and Certificate Revocation List (CRL) Profile</a>.
 	* @param value an array of DER encoded bytes of the actual value.
 	* @exception IOException on decoding error.
 	*/
-	@:overload public function new(critical : Null<Bool>, value : Dynamic) : Void;
+	@:overload @:public public function new(critical : Null<Bool>, value : Dynamic) : Void;
 	
 	/**
 	* Writes the extension to the DerOutputStream.
@@ -75,7 +75,7 @@ ate and Certificate Revocation List (CRL) Profile</a>.
 	* @param out the DerOutputStream to write the extension to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public override public function encode(out : java.io.OutputStream) : Void;
 	
 	
 }

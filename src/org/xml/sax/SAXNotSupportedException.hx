@@ -52,14 +52,14 @@ package org.xml.sax;
 	/**
 	* Construct a new exception with no message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a new exception with the given message.
 	*
 	* @param message The text message of the exception.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

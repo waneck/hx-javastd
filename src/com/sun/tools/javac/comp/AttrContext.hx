@@ -33,9 +33,9 @@ package com.sun.tools.javac.comp;
 */
 extern class AttrContext
 {
-	@:overload public function getLocalElements() : java.lang.Iterable<com.sun.tools.javac.code.Symbol>;
+	@:overload @:public public function getLocalElements() : java.lang.Iterable<com.sun.tools.javac.code.Symbol>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

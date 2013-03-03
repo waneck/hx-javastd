@@ -32,7 +32,7 @@ package java.lang.invoke;
 @:internal extern class BoundMethodHandle extends java.lang.invoke.MethodHandle
 {
 	/** Component of toString() before the type string. */
-	@:overload private function baseName() : String;
+	@:overload @:protected private function baseName() : String;
 	
 	
 }

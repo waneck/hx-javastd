@@ -32,14 +32,14 @@ package sun.print;
 	*                       this graphics context.
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload override public function create() : java.awt.Graphics;
+	@:require(java0) @:overload @:public override public function create() : java.awt.Graphics;
 	
 	/**
 	* Override the inherited implementation of fill
 	* so that we can generate PostScript in user space
 	* rather than device space.
 	*/
-	@:overload override public function fill(s : java.awt.Shape, color : java.awt.Color) : Void;
+	@:overload @:public override public function fill(s : java.awt.Shape, color : java.awt.Color) : Void;
 	
 	/**
 	* Draws the text given by the specified string, using this
@@ -53,7 +53,7 @@ package sun.print;
 	* @see         java.awt.Graphics#drawChars
 	* @since       JDK1.0
 	*/
-	@:require(java0) @:overload override public function drawString(str : String, x : Int, y : Int) : Void;
+	@:require(java0) @:overload @:public override public function drawString(str : String, x : Int, y : Int) : Void;
 	
 	/**
 	* Renders the text specified by the specified <code>String</code>,
@@ -77,13 +77,13 @@ package sun.print;
 	* @see #setComposite
 	* @see #setClip
 	*/
-	@:overload override public function drawString(str : String, x : Single, y : Single) : Void;
+	@:overload @:public override public function drawString(str : String, x : Single, y : Single) : Void;
 	
-	@:overload override private function canDrawStringToWidth() : Bool;
+	@:overload @:protected override private function canDrawStringToWidth() : Bool;
 	
-	@:overload override private function platformFontCount(font : java.awt.Font, str : String) : Int;
+	@:overload @:protected override private function platformFontCount(font : java.awt.Font, str : String) : Int;
 	
-	@:overload override private function drawString(str : String, x : Single, y : Single, font : java.awt.Font, frc : java.awt.font.FontRenderContext, w : Single) : Void;
+	@:overload @:protected override private function drawString(str : String, x : Single, y : Single, font : java.awt.Font, frc : java.awt.font.FontRenderContext, w : Single) : Void;
 	
 	/**
 	* The various <code>drawImage()</code> methods for
@@ -114,45 +114,45 @@ package sun.print;
 	* @param   handlingTransparency if being recursively called to
 	*                    print opaque region of transparent image
 	*/
-	@:overload override private function drawImageToPlatform(image : java.awt.Image, xform : java.awt.geom.AffineTransform, bgcolor : java.awt.Color, srcX : Int, srcY : Int, srcWidth : Int, srcHeight : Int, handlingTransparency : Bool) : Bool;
+	@:overload @:protected override private function drawImageToPlatform(image : java.awt.Image, xform : java.awt.geom.AffineTransform, bgcolor : java.awt.Color, srcX : Int, srcY : Int, srcWidth : Int, srcHeight : Int, handlingTransparency : Bool) : Bool;
 	
 	/** Redraw a rectanglular area using a proxy graphics
 	* To do this we need to know the rectangular area to redraw and
 	* the transform & clip in effect at the time of the original drawImage
 	*
 	*/
-	@:overload override public function redrawRegion(region : java.awt.geom.Rectangle2D, scaleX : Float, scaleY : Float, savedClip : java.awt.Shape, savedTransform : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public override public function redrawRegion(region : java.awt.geom.Rectangle2D, scaleX : Float, scaleY : Float, savedClip : java.awt.Shape, savedTransform : java.awt.geom.AffineTransform) : Void;
 	
 	/*
 	* Fill the path defined by <code>pathIter</code>
 	* with the specified color.
 	* The path is provided in current user space.
 	*/
-	@:overload override private function deviceFill(pathIter : java.awt.geom.PathIterator, color : java.awt.Color) : Void;
+	@:overload @:protected override private function deviceFill(pathIter : java.awt.geom.PathIterator, color : java.awt.Color) : Void;
 	
 	/*
 	* Draw the bounding rectangle using path by calling draw()
 	* function and passing a rectangle shape.
 	*/
-	@:overload override private function deviceFrameRect(x : Int, y : Int, width : Int, height : Int, color : java.awt.Color) : Void;
+	@:overload @:protected override private function deviceFrameRect(x : Int, y : Int, width : Int, height : Int, color : java.awt.Color) : Void;
 	
 	/*
 	* Draw a line using path by calling draw() function and passing
 	* a line shape.
 	*/
-	@:overload override private function deviceDrawLine(xBegin : Int, yBegin : Int, xEnd : Int, yEnd : Int, color : java.awt.Color) : Void;
+	@:overload @:protected override private function deviceDrawLine(xBegin : Int, yBegin : Int, xEnd : Int, yEnd : Int, color : java.awt.Color) : Void;
 	
 	/*
 	* Fill the rectangle with the specified color by calling fill().
 	*/
-	@:overload override private function deviceFillRect(x : Int, y : Int, width : Int, height : Int, color : java.awt.Color) : Void;
+	@:overload @:protected override private function deviceFillRect(x : Int, y : Int, width : Int, height : Int, color : java.awt.Color) : Void;
 	
 	/*
 	* This method should not be invoked by PSPathGraphics.
 	* FIX: Rework PathGraphics so that this method is
 	* not an abstract method there.
 	*/
-	@:overload override private function deviceClip(pathIter : java.awt.geom.PathIterator) : Void;
+	@:overload @:protected override private function deviceClip(pathIter : java.awt.geom.PathIterator) : Void;
 	
 	
 }

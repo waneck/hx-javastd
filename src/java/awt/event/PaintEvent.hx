@@ -28,22 +28,22 @@ extern class PaintEvent extends java.awt.event.ComponentEvent
 	/**
 	* Marks the first integer id for the range of paint event ids.
 	*/
-	public static var PAINT_FIRST(default, null) : Int;
+	@:public @:static @:final public static var PAINT_FIRST(default, null) : Int;
 	
 	/**
 	* Marks the last integer id for the range of paint event ids.
 	*/
-	public static var PAINT_LAST(default, null) : Int;
+	@:public @:static @:final public static var PAINT_LAST(default, null) : Int;
 	
 	/**
 	* The paint event type.
 	*/
-	public static var PAINT(default, null) : Int;
+	@:public @:static @:final public static var PAINT(default, null) : Int;
 	
 	/**
 	* The update event type.
 	*/
-	public static var UPDATE(default, null) : Int;
+	@:public @:static @:final public static var UPDATE(default, null) : Int;
 	
 	/**
 	* Constructs a <code>PaintEvent</code> object with the specified
@@ -62,22 +62,22 @@ extern class PaintEvent extends java.awt.event.ComponentEvent
 	* @see #getID()
 	* @see #getUpdateRect()
 	*/
-	@:overload public function new(source : java.awt.Component, id : Int, updateRect : java.awt.Rectangle) : Void;
+	@:overload @:public public function new(source : java.awt.Component, id : Int, updateRect : java.awt.Rectangle) : Void;
 	
 	/**
 	* Returns the rectangle representing the area which needs to be
 	* repainted in response to this event.
 	*/
-	@:overload public function getUpdateRect() : java.awt.Rectangle;
+	@:overload @:public public function getUpdateRect() : java.awt.Rectangle;
 	
 	/**
 	* Sets the rectangle representing the area which needs to be
 	* repainted in response to this event.
 	* @param updateRect the rectangle area which needs to be repainted
 	*/
-	@:overload public function setUpdateRect(updateRect : java.awt.Rectangle) : Void;
+	@:overload @:public public function setUpdateRect(updateRect : java.awt.Rectangle) : Void;
 	
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	
 }

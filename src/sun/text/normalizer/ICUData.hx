@@ -39,12 +39,12 @@ extern class ICUData
 	/*
 	* Convenience override that calls getStream(ICUData.class, resourceName, false);
 	*/
-	@:overload public static function getStream(resourceName : String) : java.io.InputStream;
+	@:overload @:public @:static public static function getStream(resourceName : String) : java.io.InputStream;
 	
 	/*
 	* Convenience method that calls getStream(ICUData.class, resourceName, true).
 	*/
-	@:overload public static function getRequiredStream(resourceName : String) : java.io.InputStream;
+	@:overload @:public @:static public static function getRequiredStream(resourceName : String) : java.io.InputStream;
 	
 	
 }

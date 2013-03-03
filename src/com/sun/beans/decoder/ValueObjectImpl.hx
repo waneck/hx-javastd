@@ -38,7 +38,7 @@ package com.sun.beans.decoder;
 	*
 	* @return the result of method execution
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	/**
 	* Returns {@code void} state of this value object.
@@ -46,7 +46,7 @@ package com.sun.beans.decoder;
 	* @return {@code true} if value should be ignored,
 	*         {@code false} otherwise
 	*/
-	@:overload public function isVoid() : Bool;
+	@:overload @:public public function isVoid() : Bool;
 	
 	
 }

@@ -25,13 +25,13 @@ package com.sun.tools.doclets.standard;
 */
 extern class Standard
 {
-	@:overload public static function optionLength(option : String) : Int;
+	@:overload @:public @:static public static function optionLength(option : String) : Int;
 	
-	@:overload public static function start(root : com.sun.javadoc.RootDoc) : Bool;
+	@:overload @:public @:static public static function start(root : com.sun.javadoc.RootDoc) : Bool;
 	
-	@:overload public static function validOptions(options : java.NativeArray<java.NativeArray<String>>, reporter : com.sun.javadoc.DocErrorReporter) : Bool;
+	@:overload @:public @:static public static function validOptions(options : java.NativeArray<java.NativeArray<String>>, reporter : com.sun.javadoc.DocErrorReporter) : Bool;
 	
-	@:overload public static function languageVersion() : com.sun.javadoc.LanguageVersion;
+	@:overload @:public @:static public static function languageVersion() : com.sun.javadoc.LanguageVersion;
 	
 	
 }

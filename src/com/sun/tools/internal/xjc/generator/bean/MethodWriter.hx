@@ -38,9 +38,9 @@ extern class MethodWriter
 	*
 	* @author Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	private var codeModel(default, null) : com.sun.codemodel.internal.JCodeModel;
+	@:protected @:final private var codeModel(default, null) : com.sun.codemodel.internal.JCodeModel;
 	
-	@:overload private function new(context : com.sun.tools.internal.xjc.outline.ClassOutline) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.internal.xjc.outline.ClassOutline) : Void;
 	
 	/**
 	* Declares a method in both the interface and the implementation.
@@ -49,16 +49,16 @@ extern class MethodWriter
 	*      JMethod object that represents a newly declared method
 	*      on the implementation class.
 	*/
-	@:overload @:abstract public function declareMethod(returnType : com.sun.codemodel.internal.JType, methodName : String) : com.sun.codemodel.internal.JMethod;
+	@:overload @:public @:abstract public function declareMethod(returnType : com.sun.codemodel.internal.JType, methodName : String) : com.sun.codemodel.internal.JMethod;
 	
-	@:overload @:final public function declareMethod(returnType : Class<Dynamic>, methodName : String) : com.sun.codemodel.internal.JMethod;
+	@:overload @:public @:final public function declareMethod(returnType : Class<Dynamic>, methodName : String) : com.sun.codemodel.internal.JMethod;
 	
 	/**
 	* To generate javadoc for the previously declared method, use this method
 	* to obtain a {@link JDocComment} object. This may return a value
 	* different from declareMethod().javadoc().
 	*/
-	@:overload @:abstract public function javadoc() : com.sun.codemodel.internal.JDocComment;
+	@:overload @:public @:abstract public function javadoc() : com.sun.codemodel.internal.JDocComment;
 	
 	/**
 	* Adds a parameter to the previously declared method.
@@ -67,9 +67,9 @@ extern class MethodWriter
 	*      JVar object that represents a newly added parameter
 	*      on the implementation class.
 	*/
-	@:overload @:abstract public function addParameter(type : com.sun.codemodel.internal.JType, name : String) : com.sun.codemodel.internal.JVar;
+	@:overload @:public @:abstract public function addParameter(type : com.sun.codemodel.internal.JType, name : String) : com.sun.codemodel.internal.JVar;
 	
-	@:overload @:final public function addParameter(type : Class<Dynamic>, name : String) : com.sun.codemodel.internal.JVar;
+	@:overload @:public @:final public function addParameter(type : Class<Dynamic>, name : String) : com.sun.codemodel.internal.JVar;
 	
 	
 }

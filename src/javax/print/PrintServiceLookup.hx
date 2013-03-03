@@ -38,7 +38,7 @@ extern class PrintServiceLookup
 	* representing print services that support the specified flavor
 	* attributes.  If no services match, the array is zero-length.
 	*/
-	@:overload @:final public static function lookupPrintServices(flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : java.NativeArray<javax.print.PrintService>;
+	@:overload @:public @:static @:final public static function lookupPrintServices(flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : java.NativeArray<javax.print.PrintService>;
 	
 	/**
 	* Locates MultiDoc print Services capable of printing MultiDocs
@@ -60,7 +60,7 @@ extern class PrintServiceLookup
 	* If no services match, the array is zero-length.
 	*
 	*/
-	@:overload @:final public static function lookupMultiDocPrintServices(flavors : java.NativeArray<javax.print.DocFlavor>, attributes : javax.print.attribute.AttributeSet) : java.NativeArray<javax.print.MultiDocPrintService>;
+	@:overload @:public @:static @:final public static function lookupMultiDocPrintServices(flavors : java.NativeArray<javax.print.DocFlavor>, attributes : javax.print.attribute.AttributeSet) : java.NativeArray<javax.print.MultiDocPrintService>;
 	
 	/**
 	* Locates the default print service for this environment.
@@ -82,7 +82,7 @@ extern class PrintServiceLookup
 	*
 	* @return the default PrintService.
 	*/
-	@:overload @:final public static function lookupDefaultPrintService() : javax.print.PrintService;
+	@:overload @:public @:static @:final public static function lookupDefaultPrintService() : javax.print.PrintService;
 	
 	/**
 	* Allows an application to explicitly register a class that
@@ -98,7 +98,7 @@ extern class PrintServiceLookup
 	* @return <code>true</code> if the new lookup service is newly
 	*         registered; <code>false</code> otherwise.
 	*/
-	@:overload public static function registerServiceProvider(sp : javax.print.PrintServiceLookup) : Bool;
+	@:overload @:public @:static public static function registerServiceProvider(sp : javax.print.PrintServiceLookup) : Bool;
 	
 	/**
 	* Allows an application to directly register an instance of a
@@ -118,7 +118,7 @@ extern class PrintServiceLookup
 	* @return <code>true</code> if the service is newly
 	*         registered; <code>false</code> otherwise.
 	*/
-	@:overload public static function registerService(service : javax.print.PrintService) : Bool;
+	@:overload @:public @:static public static function registerService(service : javax.print.PrintService) : Bool;
 	
 	/**
 	* Locates services that can be positively confirmed to support
@@ -140,7 +140,7 @@ extern class PrintServiceLookup
 	* @return array of matching PrintServices. If no services match, the
 	* array is zero-length.
 	*/
-	@:overload @:abstract public function getPrintServices(flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : java.NativeArray<javax.print.PrintService>;
+	@:overload @:public @:abstract public function getPrintServices(flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : java.NativeArray<javax.print.PrintService>;
 	
 	/**
 	* Not called directly by applications.
@@ -149,7 +149,7 @@ extern class PrintServiceLookup
 	* @return array of all PrintServices known to this lookup service
 	* class. If none are found, the array is zero-length.
 	*/
-	@:overload @:abstract public function getPrintServices() : java.NativeArray<javax.print.PrintService>;
+	@:overload @:public @:abstract public function getPrintServices() : java.NativeArray<javax.print.PrintService>;
 	
 	/**
 	* Not called directly by applications.
@@ -167,7 +167,7 @@ extern class PrintServiceLookup
 	* @return array of matching PrintServices. If no services match, the
 	* array is zero-length.
 	*/
-	@:overload @:abstract public function getMultiDocPrintServices(flavors : java.NativeArray<javax.print.DocFlavor>, attributes : javax.print.attribute.AttributeSet) : java.NativeArray<javax.print.MultiDocPrintService>;
+	@:overload @:public @:abstract public function getMultiDocPrintServices(flavors : java.NativeArray<javax.print.DocFlavor>, attributes : javax.print.attribute.AttributeSet) : java.NativeArray<javax.print.MultiDocPrintService>;
 	
 	/**
 	* Not called directly by applications.
@@ -176,7 +176,7 @@ extern class PrintServiceLookup
 	* @return the default PrintService for this lookup service.
 	* If there is no default, returns null.
 	*/
-	@:overload @:abstract public function getDefaultPrintService() : javax.print.PrintService;
+	@:overload @:public @:abstract public function getDefaultPrintService() : javax.print.PrintService;
 	
 	
 }

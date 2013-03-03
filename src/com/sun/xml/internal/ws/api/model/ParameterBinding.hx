@@ -43,18 +43,18 @@ extern class ParameterBinding
 	/**
 	* Singleton instance that represents 'BODY'
 	*/
-	public static var BODY(default, null) : com.sun.xml.internal.ws.api.model.ParameterBinding;
+	@:public @:static @:final public static var BODY(default, null) : com.sun.xml.internal.ws.api.model.ParameterBinding;
 	
 	/**
 	* Singleton instance that represents 'HEADER'
 	*/
-	public static var HEADER(default, null) : com.sun.xml.internal.ws.api.model.ParameterBinding;
+	@:public @:static @:final public static var HEADER(default, null) : com.sun.xml.internal.ws.api.model.ParameterBinding;
 	
 	/**
 	* Singleton instance that represents 'UNBOUND',
 	* meaning the parameter doesn't have a representation in a SOAP message.
 	*/
-	public static var UNBOUND(default, null) : com.sun.xml.internal.ws.api.model.ParameterBinding;
+	@:public @:static @:final public static var UNBOUND(default, null) : com.sun.xml.internal.ws.api.model.ParameterBinding;
 	
 	/**
 	* Creates an instance that represents the attachment
@@ -65,15 +65,15 @@ extern class ParameterBinding
 	* a cache? It's more elegant to do so, but
 	* no where in JAX-WS RI two {@link ParameterBinding}s are compared today,
 	*/
-	@:overload public static function createAttachment(mimeType : String) : com.sun.xml.internal.ws.api.model.ParameterBinding;
+	@:overload @:public @:static public static function createAttachment(mimeType : String) : com.sun.xml.internal.ws.api.model.ParameterBinding;
 	
 	/**
 	* Represents the kind of {@link ParameterBinding}.
 	* Always non-null.
 	*/
-	public var kind(default, null) : com.sun.xml.internal.ws.api.model.ParameterBinding.ParameterBinding_Kind;
+	@:public @:final public var kind(default, null) : com.sun.xml.internal.ws.api.model.ParameterBinding.ParameterBinding_Kind;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the MIME type associated with this binding.
@@ -84,15 +84,15 @@ extern class ParameterBinding
 	* @return
 	*      Can be null, if the MIME type is not known.
 	*/
-	@:overload public function getMimeType() : String;
+	@:overload @:public public function getMimeType() : String;
 	
-	@:overload public function isBody() : Bool;
+	@:overload @:public public function isBody() : Bool;
 	
-	@:overload public function isHeader() : Bool;
+	@:overload @:public public function isHeader() : Bool;
 	
-	@:overload public function isUnbound() : Bool;
+	@:overload @:public public function isUnbound() : Bool;
 	
-	@:overload public function isAttachment() : Bool;
+	@:overload @:public public function isAttachment() : Bool;
 	
 	
 }

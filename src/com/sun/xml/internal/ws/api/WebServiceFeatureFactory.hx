@@ -32,7 +32,7 @@ extern class WebServiceFeatureFactory
 	* @param ann list of annotations(that can also have non-feature annotations)
 	* @return non-null feature list object
 	*/
-	@:overload public static function getWSFeatureList(ann : java.lang.Iterable<java.lang.annotation.Annotation>) : com.sun.xml.internal.ws.api.WSFeatureList;
+	@:overload @:public @:static public static function getWSFeatureList(ann : java.lang.Iterable<java.lang.annotation.Annotation>) : com.sun.xml.internal.ws.api.WSFeatureList;
 	
 	/**
 	* Returns a corresponding feature for a feature annotation(i.e which has
@@ -42,7 +42,7 @@ extern class WebServiceFeatureFactory
 	* @return corresponding feature for the annotation
 	*         null, if the annotation is not a feature annotation
 	*/
-	@:overload public static function getWebServiceFeature(ann : java.lang.annotation.Annotation) : javax.xml.ws.WebServiceFeature;
+	@:overload @:public @:static public static function getWebServiceFeature(ann : java.lang.annotation.Annotation) : javax.xml.ws.WebServiceFeature;
 	
 	
 }

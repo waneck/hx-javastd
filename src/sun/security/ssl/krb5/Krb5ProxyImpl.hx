@@ -29,19 +29,19 @@ extern class Krb5ProxyImpl implements sun.security.ssl.Krb5Proxy
 	* An implementation of Krb5Proxy that simply delegates to the appropriate
 	* Kerberos APIs.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getClientSubject(acc : java.security.AccessControlContext) : javax.security.auth.Subject;
+	@:overload @:public public function getClientSubject(acc : java.security.AccessControlContext) : javax.security.auth.Subject;
 	
-	@:overload public function getServerSubject(acc : java.security.AccessControlContext) : javax.security.auth.Subject;
+	@:overload @:public public function getServerSubject(acc : java.security.AccessControlContext) : javax.security.auth.Subject;
 	
-	@:overload public function getServerKeys(acc : java.security.AccessControlContext) : java.NativeArray<javax.crypto.SecretKey>;
+	@:overload @:public public function getServerKeys(acc : java.security.AccessControlContext) : java.NativeArray<javax.crypto.SecretKey>;
 	
-	@:overload public function getServerPrincipalName(kerberosKey : javax.crypto.SecretKey) : String;
+	@:overload @:public public function getServerPrincipalName(kerberosKey : javax.crypto.SecretKey) : String;
 	
-	@:overload public function getPrincipalHostName(principal : java.security.Principal) : String;
+	@:overload @:public public function getPrincipalHostName(principal : java.security.Principal) : String;
 	
-	@:overload public function getServicePermission(principalName : String, action : String) : java.security.Permission;
+	@:overload @:public public function getServicePermission(principalName : String, action : String) : java.security.Permission;
 	
 	
 }

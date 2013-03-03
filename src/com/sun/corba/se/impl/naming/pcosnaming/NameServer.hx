@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.naming.pcosnaming;
 */
 extern class NameServer
 {
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
-	@:overload private function new(args : java.NativeArray<String>) : Void;
+	@:overload @:protected private function new(args : java.NativeArray<String>) : Void;
 	
-	@:overload private function run() : Void;
+	@:overload @:protected private function run() : Void;
 	
 	
 }

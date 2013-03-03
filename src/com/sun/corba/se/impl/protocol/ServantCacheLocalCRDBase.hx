@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.protocol;
 */
 extern class ServantCacheLocalCRDBase extends com.sun.corba.se.impl.protocol.LocalClientRequestDispatcherBase
 {
-	private var wrapper : com.sun.corba.se.impl.logging.POASystemException;
+	@:protected private var wrapper : com.sun.corba.se.impl.logging.POASystemException;
 	
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, scid : Int, ior : com.sun.corba.se.spi.ior.IOR) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, scid : Int, ior : com.sun.corba.se.spi.ior.IOR) : Void;
 	
-	@:overload @:synchronized private function getCachedInfo() : com.sun.corba.se.spi.oa.OAInvocationInfo;
+	@:overload @:protected @:synchronized private function getCachedInfo() : com.sun.corba.se.spi.oa.OAInvocationInfo;
 	
 	
 }

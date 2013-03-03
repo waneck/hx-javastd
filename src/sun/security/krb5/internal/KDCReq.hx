@@ -49,13 +49,13 @@ extern class KDCReq
 	* <a href="http://www.ietf.org/rfc/rfc4120.txt">
 	* http://www.ietf.org/rfc/rfc4120.txt</a>.
 	*/
-	public var reqBody : sun.security.krb5.internal.KDCReqBody;
+	@:public public var reqBody : sun.security.krb5.internal.KDCReqBody;
 	
-	@:overload public function new(new_pAData : java.NativeArray<sun.security.krb5.internal.PAData>, new_reqBody : sun.security.krb5.internal.KDCReqBody, req_type : Int) : Void;
+	@:overload @:public public function new(new_pAData : java.NativeArray<sun.security.krb5.internal.PAData>, new_reqBody : sun.security.krb5.internal.KDCReqBody, req_type : Int) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>, req_type : Int) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>, req_type : Int) : Void;
 	
 	/**
 	* Creates an KDCReq object from a DerValue object and asn1 type.
@@ -66,7 +66,7 @@ extern class KDCReq
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	* @exceptoin KrbErrException
 	*/
-	@:overload public function new(der : sun.security.util.DerValue, req_type : Int) : Void;
+	@:overload @:public public function new(der : sun.security.util.DerValue, req_type : Int) : Void;
 	
 	/**
 	* Initializes a KDCReq object from a DerValue.  The DER encoding
@@ -79,7 +79,7 @@ extern class KDCReq
 	* @exception KrbException if an error occurs while constructing a Realm object,
 	* or a Krb object from DER-encoded data.
 	*/
-	@:overload private function init(encoding : sun.security.util.DerValue, req_type : Int) : Void;
+	@:overload @:protected private function init(encoding : sun.security.util.DerValue, req_type : Int) : Void;
 	
 	/**
 	* Encodes this object to a byte array.
@@ -89,9 +89,9 @@ extern class KDCReq
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function asn1EncodeReqBody() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1EncodeReqBody() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

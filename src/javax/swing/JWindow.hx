@@ -90,7 +90,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	* @see #getRootPane
 	* @see #setRootPane
 	*/
-	private var rootPane : javax.swing.JRootPane;
+	@:protected private var rootPane : javax.swing.JRootPane;
 	
 	/**
 	* If true then calls to <code>add</code> and <code>setLayout</code>
@@ -101,7 +101,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	private var rootPaneCheckingEnabled : Bool;
+	@:protected private var rootPaneCheckingEnabled : Bool;
 	
 	/**
 	* Creates a window with no specified owner. This window will not be
@@ -116,7 +116,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	* @see #isFocusableWindow
 	* @see JComponent#getDefaultLocale
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a window with the specified <code>GraphicsConfiguration</code>
@@ -140,7 +140,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	*
 	* @since  1.3
 	*/
-	@:require(java3) @:overload public function new(gc : java.awt.GraphicsConfiguration) : Void;
+	@:require(java3) @:overload @:public public function new(gc : java.awt.GraphicsConfiguration) : Void;
 	
 	/**
 	* Creates a window with the specified owner frame.
@@ -159,7 +159,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	* @see #isFocusableWindow
 	* @see JComponent#getDefaultLocale
 	*/
-	@:overload public function new(owner : java.awt.Frame) : Void;
+	@:overload @:public public function new(owner : java.awt.Frame) : Void;
 	
 	/**
 	* Creates a window with the specified owner window. This window
@@ -177,7 +177,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	* @see #isFocusableWindow
 	* @see JComponent#getDefaultLocale
 	*/
-	@:overload public function new(owner : java.awt.Window) : Void;
+	@:overload @:public public function new(owner : java.awt.Window) : Void;
 	
 	/**
 	* Creates a window with the specified owner window and
@@ -206,18 +206,18 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	*
 	* @since  1.3
 	*/
-	@:require(java3) @:overload public function new(owner : java.awt.Window, gc : java.awt.GraphicsConfiguration) : Void;
+	@:require(java3) @:overload @:public public function new(owner : java.awt.Window, gc : java.awt.GraphicsConfiguration) : Void;
 	
 	/**
 	* Called by the constructors to init the <code>JWindow</code> properly.
 	*/
-	@:overload private function windowInit() : Void;
+	@:overload @:protected private function windowInit() : Void;
 	
 	/**
 	* Called by the constructor methods to create the default
 	* <code>rootPane</code>.
 	*/
-	@:overload private function createRootPane() : javax.swing.JRootPane;
+	@:overload @:protected private function createRootPane() : javax.swing.JRootPane;
 	
 	/**
 	* Returns whether calls to <code>add</code> and
@@ -231,7 +231,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload private function isRootPaneCheckingEnabled() : Bool;
+	@:overload @:protected private function isRootPaneCheckingEnabled() : Bool;
 	
 	/**
 	* Sets the {@code transferHandler} property, which is a mechanism to
@@ -266,7 +266,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	*       hidden: true
 	*  description: Mechanism for transfer of data into the component
 	*/
-	@:require(java6) @:overload public function setTransferHandler(newHandler : javax.swing.TransferHandler) : Void;
+	@:require(java6) @:overload @:public public function setTransferHandler(newHandler : javax.swing.TransferHandler) : Void;
 	
 	/**
 	* Gets the <code>transferHandler</code> property.
@@ -277,7 +277,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	* @see #setTransferHandler
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getTransferHandler() : javax.swing.TransferHandler;
+	@:require(java6) @:overload @:public public function getTransferHandler() : javax.swing.TransferHandler;
 	
 	/**
 	* Calls <code>paint(g)</code>.  This method was overridden to
@@ -285,7 +285,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	*
 	* @param g  the <code>Graphics</code> context in which to paint
 	*/
-	@:overload override public function update(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Sets whether calls to <code>add</code> and
@@ -303,7 +303,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	*      hidden: true
 	* description: Whether the add and setLayout methods are forwarded
 	*/
-	@:overload private function setRootPaneCheckingEnabled(enabled : Bool) : Void;
+	@:overload @:protected private function setRootPaneCheckingEnabled(enabled : Bool) : Void;
 	
 	/**
 	* Adds the specified child <code>Component</code>.
@@ -324,7 +324,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload @:protected override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Removes the specified component from the container. If
@@ -338,7 +338,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	* @see #add
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload override public function remove(comp : java.awt.Component) : Void;
+	@:overload @:public override public function remove(comp : java.awt.Component) : Void;
 	
 	/**
 	* Sets the <code>LayoutManager</code>.
@@ -351,7 +351,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload override public function setLayout(manager : java.awt.LayoutManager) : Void;
+	@:overload @:public override public function setLayout(manager : java.awt.LayoutManager) : Void;
 	
 	/**
 	* Returns the <code>rootPane</code> object for this window.
@@ -360,7 +360,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	* @see #setRootPane
 	* @see RootPaneContainer#getRootPane
 	*/
-	@:overload public function getRootPane() : javax.swing.JRootPane;
+	@:overload @:public public function getRootPane() : javax.swing.JRootPane;
 	
 	/**
 	* Sets the new <code>rootPane</code> object for this window.
@@ -373,7 +373,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	*        hidden: true
 	*   description: the RootPane object for this window.
 	*/
-	@:overload private function setRootPane(root : javax.swing.JRootPane) : Void;
+	@:overload @:protected private function setRootPane(root : javax.swing.JRootPane) : Void;
 	
 	/**
 	* Returns the <code>Container</code> which is the <code>contentPane</code>
@@ -383,7 +383,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	* @see #setContentPane
 	* @see RootPaneContainer#getContentPane
 	*/
-	@:overload public function getContentPane() : java.awt.Container;
+	@:overload @:public public function getContentPane() : java.awt.Container;
 	
 	/**
 	* Sets the <code>contentPane</code> property for this window.
@@ -401,7 +401,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	*     description: The client area of the window where child
 	*                  components are normally inserted.
 	*/
-	@:overload public function setContentPane(contentPane : java.awt.Container) : Void;
+	@:overload @:public public function setContentPane(contentPane : java.awt.Container) : Void;
 	
 	/**
 	* Returns the <code>layeredPane</code> object for this window.
@@ -410,7 +410,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	* @see #setLayeredPane
 	* @see RootPaneContainer#getLayeredPane
 	*/
-	@:overload public function getLayeredPane() : javax.swing.JLayeredPane;
+	@:overload @:public public function getLayeredPane() : javax.swing.JLayeredPane;
 	
 	/**
 	* Sets the <code>layeredPane</code> property.
@@ -427,7 +427,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	*     hidden: true
 	*     description: The pane which holds the various window layers.
 	*/
-	@:overload public function setLayeredPane(layeredPane : javax.swing.JLayeredPane) : Void;
+	@:overload @:public public function setLayeredPane(layeredPane : javax.swing.JLayeredPane) : Void;
 	
 	/**
 	* Returns the <code>glassPane Component</code> for this window.
@@ -436,7 +436,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	* @see #setGlassPane
 	* @see RootPaneContainer#getGlassPane
 	*/
-	@:overload public function getGlassPane() : java.awt.Component;
+	@:overload @:public public function getGlassPane() : java.awt.Component;
 	
 	/**
 	* Sets the <code>glassPane</code> property.
@@ -450,14 +450,14 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	*     hidden: true
 	*     description: A transparent pane used for menu rendering.
 	*/
-	@:overload public function setGlassPane(glassPane : java.awt.Component) : Void;
+	@:overload @:public public function setGlassPane(glassPane : java.awt.Component) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getGraphics() : java.awt.Graphics;
+	@:require(java6) @:overload @:public override public function getGraphics() : java.awt.Graphics;
 	
 	/**
 	* Repaints the specified rectangle of this component within
@@ -472,7 +472,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	* @see       RepaintManager
 	* @since     1.6
 	*/
-	@:require(java6) @:overload override public function repaint(time : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java6) @:overload @:public override public function repaint(time : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Returns a string representation of this <code>JWindow</code>.
@@ -484,10 +484,10 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	*
 	* @return  a string representation of this <code>JWindow</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/** The accessible context property. */
-	private var accessibleContext : javax.accessibility.AccessibleContext;
+	@:protected private var accessibleContext : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Gets the AccessibleContext associated with this JWindow.
@@ -498,7 +498,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 	* @return an AccessibleJWindow that serves as the
 	*         AccessibleContext of this JWindow
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }

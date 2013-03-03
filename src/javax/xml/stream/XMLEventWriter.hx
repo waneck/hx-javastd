@@ -31,13 +31,13 @@ extern interface XMLEventWriter extends javax.xml.stream.util.XMLEventConsumer
 	* Writes any cached events to the underlying output mechanism
 	* @throws XMLStreamException
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* Frees any resources associated with this stream
 	* @throws XMLStreamException
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Add an event to the output stream
@@ -165,7 +165,7 @@ extern interface XMLEventWriter extends javax.xml.stream.util.XMLEventConsumer
 	* @param event the event to be added
 	* @throws XMLStreamException
 	*/
-	@:overload public function add(event : javax.xml.stream.events.XMLEvent) : Void;
+	@:overload @:public public function add(event : javax.xml.stream.events.XMLEvent) : Void;
 	
 	/**
 	* Adds an entire stream to an output stream,
@@ -177,14 +177,14 @@ extern interface XMLEventWriter extends javax.xml.stream.util.XMLEventConsumer
 	* @param reader the event stream to add to the output
 	* @throws XMLStreamException
 	*/
-	@:overload public function add(reader : javax.xml.stream.XMLEventReader) : Void;
+	@:overload @:public public function add(reader : javax.xml.stream.XMLEventReader) : Void;
 	
 	/**
 	* Gets the prefix the uri is bound to
 	* @param uri the uri to look up
 	* @throws XMLStreamException
 	*/
-	@:overload public function getPrefix(uri : String) : String;
+	@:overload @:public public function getPrefix(uri : String) : String;
 	
 	/**
 	* Sets the prefix the uri is bound to.  This prefix is bound
@@ -195,7 +195,7 @@ extern interface XMLEventWriter extends javax.xml.stream.util.XMLEventConsumer
 	* @param uri the uri to bind to the prefix
 	* @throws XMLStreamException
 	*/
-	@:overload public function setPrefix(prefix : String, uri : String) : Void;
+	@:overload @:public public function setPrefix(prefix : String, uri : String) : Void;
 	
 	/**
 	* Binds a URI to the default namespace
@@ -206,7 +206,7 @@ extern interface XMLEventWriter extends javax.xml.stream.util.XMLEventConsumer
 	* @param uri the uri to bind to the default namespace
 	* @throws XMLStreamException
 	*/
-	@:overload public function setDefaultNamespace(uri : String) : Void;
+	@:overload @:public public function setDefaultNamespace(uri : String) : Void;
 	
 	/**
 	* Sets the current namespace context for prefix and uri bindings.
@@ -218,13 +218,13 @@ extern interface XMLEventWriter extends javax.xml.stream.util.XMLEventConsumer
 	* @param context the namespace context to use for this writer
 	* @throws XMLStreamException
 	*/
-	@:overload public function setNamespaceContext(context : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public public function setNamespaceContext(context : javax.xml.namespace.NamespaceContext) : Void;
 	
 	/**
 	* Returns the current namespace context.
 	* @return the current namespace context
 	*/
-	@:overload public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
 	
 	
 }

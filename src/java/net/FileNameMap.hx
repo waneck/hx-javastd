@@ -38,7 +38,7 @@ package java.net;
 	* @return a <code>String</code> indicating the MIME
 	* type for the specified file name.
 	*/
-	@:overload public function getContentTypeFor(fileName : String) : String;
+	@:overload @:public public function getContentTypeFor(fileName : String) : String;
 	
 	
 }

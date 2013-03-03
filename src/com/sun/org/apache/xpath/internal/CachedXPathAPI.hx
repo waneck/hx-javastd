@@ -26,7 +26,7 @@ extern class CachedXPathAPI
 	/** XPathContext, and thus the document model system (DTMs), persists through multiple
 	calls to this object. This is set in the constructor.
 	*/
-	private var xpathSupport : com.sun.org.apache.xpath.internal.XPathContext;
+	@:protected private var xpathSupport : com.sun.org.apache.xpath.internal.XPathContext;
 	
 	/**
 	* <p>Default constructor. Establishes its own {@link XPathContext}, and hence
@@ -37,7 +37,7 @@ extern class CachedXPathAPI
 	* not currently support multithreaded access to a single
 	* {@link com.sun.org.apache.xml.internal.dtm.DTM}.</p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* <p>This constructor shares its {@link XPathContext} with a pre-existing
@@ -52,14 +52,14 @@ extern class CachedXPathAPI
 	* <p>%REVIEW% Should this instead do a clone-and-reset on the XPathSupport object?</p>
 	*
 	*/
-	@:overload public function new(priorXPathAPI : com.sun.org.apache.xpath.internal.CachedXPathAPI) : Void;
+	@:overload @:public public function new(priorXPathAPI : com.sun.org.apache.xpath.internal.CachedXPathAPI) : Void;
 	
 	/** Returns the XPathSupport object used in this CachedXPathAPI
 	*
 	* %REVIEW% I'm somewhat concerned about the loss of encapsulation
 	* this causes, but the xml-security folks say they need it.
 	* */
-	@:overload public function getXPathContext() : com.sun.org.apache.xpath.internal.XPathContext;
+	@:overload @:public public function getXPathContext() : com.sun.org.apache.xpath.internal.XPathContext;
 	
 	/**
 	* Use an XPath string to select a single node. XPath namespace
@@ -72,7 +72,7 @@ extern class CachedXPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function selectSingleNode(contextNode : org.w3c.dom.Node, str : String) : org.w3c.dom.Node;
+	@:overload @:public public function selectSingleNode(contextNode : org.w3c.dom.Node, str : String) : org.w3c.dom.Node;
 	
 	/**
 	* Use an XPath string to select a single node.
@@ -85,7 +85,7 @@ extern class CachedXPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function selectSingleNode(contextNode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function selectSingleNode(contextNode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	*  Use an XPath string to select a nodelist.
@@ -97,7 +97,7 @@ extern class CachedXPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function selectNodeIterator(contextNode : org.w3c.dom.Node, str : String) : org.w3c.dom.traversal.NodeIterator;
+	@:overload @:public public function selectNodeIterator(contextNode : org.w3c.dom.Node, str : String) : org.w3c.dom.traversal.NodeIterator;
 	
 	/**
 	*  Use an XPath string to select a nodelist.
@@ -110,7 +110,7 @@ extern class CachedXPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function selectNodeIterator(contextNode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.traversal.NodeIterator;
+	@:overload @:public public function selectNodeIterator(contextNode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.traversal.NodeIterator;
 	
 	/**
 	*  Use an XPath string to select a nodelist.
@@ -122,7 +122,7 @@ extern class CachedXPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function selectNodeList(contextNode : org.w3c.dom.Node, str : String) : org.w3c.dom.NodeList;
+	@:overload @:public public function selectNodeList(contextNode : org.w3c.dom.Node, str : String) : org.w3c.dom.NodeList;
 	
 	/**
 	*  Use an XPath string to select a nodelist.
@@ -135,7 +135,7 @@ extern class CachedXPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function selectNodeList(contextNode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.NodeList;
+	@:overload @:public public function selectNodeList(contextNode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.NodeList;
 	
 	/**
 	*  Evaluate XPath string to an XObject.  Using this method,
@@ -152,7 +152,7 @@ extern class CachedXPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function eval(contextNode : org.w3c.dom.Node, str : String) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function eval(contextNode : org.w3c.dom.Node, str : String) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	*  Evaluate XPath string to an XObject.
@@ -174,7 +174,7 @@ extern class CachedXPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function eval(contextNode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function eval(contextNode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	*   Evaluate XPath string to an XObject.
@@ -197,7 +197,7 @@ extern class CachedXPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function eval(contextNode : org.w3c.dom.Node, str : String, prefixResolver : com.sun.org.apache.xml.internal.utils.PrefixResolver) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function eval(contextNode : org.w3c.dom.Node, str : String, prefixResolver : com.sun.org.apache.xml.internal.utils.PrefixResolver) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	
 }

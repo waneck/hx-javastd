@@ -38,12 +38,12 @@ package java.io;
 	*
 	* @param classname Class of the instance being serialized/deserialized.
 	*/
-	@:overload public function new(classname : String) : Void;
+	@:overload @:public public function new(classname : String) : Void;
 	
 	/**
 	*  Constructs a NotSerializableException object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

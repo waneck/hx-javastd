@@ -69,7 +69,7 @@ package javax.crypto;
 	* @param is the to-be-processed input stream
 	* @param c an initialized Cipher object
 	*/
-	@:overload public function new(is : java.io.InputStream, c : javax.crypto.Cipher) : Void;
+	@:overload @:public public function new(is : java.io.InputStream, c : javax.crypto.Cipher) : Void;
 	
 	/**
 	* Constructs a CipherInputStream from an InputStream without
@@ -79,7 +79,7 @@ package javax.crypto;
 	* NullPointerException may be thrown later when it is used.
 	* @param is the to-be-processed input stream
 	*/
-	@:overload private function new(is : java.io.InputStream) : Void;
+	@:overload @:protected private function new(is : java.io.InputStream) : Void;
 	
 	/**
 	* Reads the next byte of data from this input stream. The value
@@ -96,7 +96,7 @@ package javax.crypto;
 	* @exception  IOException  if an I/O error occurs.
 	* @since JCE1.2
 	*/
-	@:require(java2) @:overload public function read() : Int;
+	@:require(java2) @:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads up to <code>b.length</code> bytes of data from this input
@@ -114,7 +114,7 @@ package javax.crypto;
 	* @see        java.io.InputStream#read(byte[], int, int)
 	* @since      JCE1.2
 	*/
-	@:require(java2) @:overload public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:require(java2) @:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Reads up to <code>len</code> bytes of data from this input stream
@@ -133,7 +133,7 @@ package javax.crypto;
 	* @see        java.io.InputStream#read()
 	* @since      JCE1.2
 	*/
-	@:require(java2) @:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:require(java2) @:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips <code>n</code> bytes of input from the bytes that can be read
@@ -153,7 +153,7 @@ package javax.crypto;
 	* @exception  IOException  if an I/O error occurs.
 	* @since JCE1.2
 	*/
-	@:require(java2) @:overload public function skip(n : haxe.Int64) : haxe.Int64;
+	@:require(java2) @:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the number of bytes that can be read from this input
@@ -166,7 +166,7 @@ package javax.crypto;
 	* @exception  IOException  if an I/O error occurs.
 	* @since      JCE1.2
 	*/
-	@:require(java2) @:overload public function available() : Int;
+	@:require(java2) @:overload @:public override public function available() : Int;
 	
 	/**
 	* Closes this input stream and releases any system resources
@@ -179,7 +179,7 @@ package javax.crypto;
 	* @exception  IOException  if an I/O error occurs.
 	* @since JCE1.2
 	*/
-	@:require(java2) @:overload public function close() : Void;
+	@:require(java2) @:overload @:public override public function close() : Void;
 	
 	/**
 	* Tests if this input stream supports the <code>mark</code>
@@ -191,7 +191,7 @@ package javax.crypto;
 	* @see     java.io.InputStream#reset()
 	* @since   JCE1.2
 	*/
-	@:require(java2) @:overload public function markSupported() : Bool;
+	@:require(java2) @:overload @:public override public function markSupported() : Bool;
 	
 	
 }

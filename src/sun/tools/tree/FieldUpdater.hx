@@ -28,18 +28,18 @@ package sun.tools.tree;
 	/**
 	* Constructor.
 	*/
-	@:overload public function new(where : haxe.Int64, field : sun.tools.java.MemberDefinition, base : sun.tools.tree.Expression, getter : sun.tools.java.MemberDefinition, setter : sun.tools.java.MemberDefinition) : Void;
+	@:overload @:public public function new(where : haxe.Int64, field : sun.tools.java.MemberDefinition, base : sun.tools.tree.Expression, getter : sun.tools.java.MemberDefinition, setter : sun.tools.java.MemberDefinition) : Void;
 	
 	/**
 	* Since the object reference expression may be captured before it has been inlined,
 	* we must inline it later.  A <code>FieldUpdater</code> is inlined essentially as if
 	* it were a child of the assignment node to which it belongs.
 	*/
-	//@:overload public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
+	//@:overload @:public public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
 	
-	@:overload public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
+	@:overload @:public public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
 	
-	@:overload public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, needGet : Bool) : Int;
+	@:overload @:public public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, needGet : Bool) : Int;
 	
 	/**
 	* Begin a field update by an assignment, increment, or decrement operator.
@@ -47,7 +47,7 @@ package sun.tools.tree;
 	* If <code>valNeeded</code> is true, we arrange for the initial value to remain
 	* on the stack after the update.
 	*/
-	@:overload public function startUpdate(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler, valNeeded : Bool) : Void;
+	@:overload @:public public function startUpdate(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler, valNeeded : Bool) : Void;
 	
 	/**
 	* Complete a field update by an assignment, increment, or decrement operator.
@@ -57,7 +57,7 @@ package sun.tools.tree;
 	* on the stack after the update.  The <code>valNeeded</code> argument must not be
 	* true in both <code>startUpdate</code> and <code>finishUpdate</code>.
 	*/
-	@:overload public function finishUpdate(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler, valNeeded : Bool) : Void;
+	@:overload @:public public function finishUpdate(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler, valNeeded : Bool) : Void;
 	
 	/**
 	* Like above, but used when assigning a new value independent of the
@@ -65,9 +65,9 @@ package sun.tools.tree;
 	* code must be emitted to leave one additional value on the stack without
 	* altering any others, followed by 'finishAssign'.
 	*/
-	@:overload public function startAssign(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public public function startAssign(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
-	@:overload public function finishAssign(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler, valNeeded : Bool) : Void;
+	@:overload @:public public function finishAssign(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler, valNeeded : Bool) : Void;
 	
 	
 }

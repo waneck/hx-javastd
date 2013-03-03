@@ -29,7 +29,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* The tab layout policy for wrapping tabs in multiple runs when all
 	* tabs will not fit within a single run.
 	*/
-	public static var WRAP_TAB_LAYOUT(default, null) : Int;
+	@:public @:static @:final public static var WRAP_TAB_LAYOUT(default, null) : Int;
 	
 	/**
 	* Tab layout policy for providing a subset of available tabs when all
@@ -37,22 +37,22 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* not fit within a single run the look and feel will provide a way
 	* to navigate to hidden tabs.
 	*/
-	public static var SCROLL_TAB_LAYOUT(default, null) : Int;
+	@:public @:static @:final public static var SCROLL_TAB_LAYOUT(default, null) : Int;
 	
 	/**
 	* Where the tabs are placed.
 	* @see #setTabPlacement
 	*/
-	private var tabPlacement : Int;
+	@:protected private var tabPlacement : Int;
 	
 	/** The default selection model */
-	private var model : javax.swing.SingleSelectionModel;
+	@:protected private var model : javax.swing.SingleSelectionModel;
 	
 	/**
 	* The <code>changeListener</code> is the listener we add to the
 	* model.
 	*/
-	private var changeListener : javax.swing.event.ChangeListener;
+	@:protected private var changeListener : javax.swing.event.ChangeListener;
 	
 	/**
 	* Only one <code>ChangeEvent</code> is needed per <code>TabPane</code>
@@ -60,14 +60,14 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* event's only (read-only) state is the source property.  The source
 	* of events generated here is always "this".
 	*/
-	@:transient private var changeEvent : javax.swing.event.ChangeEvent;
+	@:protected @:transient private var changeEvent : javax.swing.event.ChangeEvent;
 	
 	/**
 	* Creates an empty <code>TabbedPane</code> with a default
 	* tab placement of <code>JTabbedPane.TOP</code>.
 	* @see #addTab
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an empty <code>TabbedPane</code> with the specified tab placement
@@ -77,7 +77,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @param tabPlacement the placement for the tabs relative to the content
 	* @see #addTab
 	*/
-	@:overload public function new(tabPlacement : Int) : Void;
+	@:overload @:public public function new(tabPlacement : Int) : Void;
 	
 	/**
 	* Creates an empty <code>TabbedPane</code> with the specified tab placement
@@ -94,7 +94,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #addTab
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(tabPlacement : Int, tabLayoutPolicy : Int) : Void;
+	@:require(java4) @:overload @:public public function new(tabPlacement : Int, tabLayoutPolicy : Int) : Void;
 	
 	/**
 	* Returns the UI object which implements the L&F for this component.
@@ -102,7 +102,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @return a <code>TabbedPaneUI</code> object
 	* @see #setUI
 	*/
-	@:overload public function getUI() : javax.swing.plaf.TabbedPaneUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.TabbedPaneUI;
 	
 	/**
 	* Sets the UI object which implements the L&F for this component.
@@ -115,14 +115,14 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the tabbedpane's LookAndFeel
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.TabbedPaneUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.TabbedPaneUI) : Void;
 	
 	/**
 	* Resets the UI property to a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the UI class that implements the
@@ -132,7 +132,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Subclasses that want to handle <code>ChangeEvents</code> differently
@@ -141,7 +141,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*
 	* @see #fireStateChanged
 	*/
-	@:overload private function createChangeListener() : javax.swing.event.ChangeListener;
+	@:overload @:protected private function createChangeListener() : javax.swing.event.ChangeListener;
 	
 	/**
 	* Adds a <code>ChangeListener</code> to this tabbedpane.
@@ -150,7 +150,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #fireStateChanged
 	* @see #removeChangeListener
 	*/
-	@:overload public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Removes a <code>ChangeListener</code> from this tabbedpane.
@@ -159,7 +159,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #fireStateChanged
 	* @see #addChangeListener
 	*/
-	@:overload public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ChangeListener</code>s added
@@ -169,7 +169,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
+	@:require(java4) @:overload @:public public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
 	
 	/**
 	* Sends a {@code ChangeEvent}, with this {@code JTabbedPane} as the source,
@@ -185,14 +185,14 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #addChangeListener
 	* @see EventListenerList
 	*/
-	@:overload private function fireStateChanged() : Void;
+	@:overload @:protected private function fireStateChanged() : Void;
 	
 	/**
 	* Returns the model associated with this tabbedpane.
 	*
 	* @see #setModel
 	*/
-	@:overload public function getModel() : javax.swing.SingleSelectionModel;
+	@:overload @:public public function getModel() : javax.swing.SingleSelectionModel;
 	
 	/**
 	* Sets the model to be used with this tabbedpane.
@@ -203,13 +203,13 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*       bound: true
 	* description: The tabbedpane's SingleSelectionModel.
 	*/
-	@:overload public function setModel(model : javax.swing.SingleSelectionModel) : Void;
+	@:overload @:public public function setModel(model : javax.swing.SingleSelectionModel) : Void;
 	
 	/**
 	* Returns the placement of the tabs for this tabbedpane.
 	* @see #setTabPlacement
 	*/
-	@:overload public function getTabPlacement() : Int;
+	@:overload @:public public function getTabPlacement() : Int;
 	
 	/**
 	* Sets the tab placement for this tabbedpane.
@@ -236,7 +236,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*  description: The tabbedpane's tab placement.
 	*
 	*/
-	@:overload public function setTabPlacement(tabPlacement : Int) : Void;
+	@:overload @:public public function setTabPlacement(tabPlacement : Int) : Void;
 	
 	/**
 	* Returns the policy used by the tabbedpane to layout the tabs when all the
@@ -244,7 +244,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #setTabLayoutPolicy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getTabLayoutPolicy() : Int;
+	@:require(java4) @:overload @:public public function getTabLayoutPolicy() : Int;
 	
 	/**
 	* Sets the policy which the tabbedpane will use in laying out the tabs
@@ -276,7 +276,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*  description: The tabbedpane's policy for laying out the tabs
 	*
 	*/
-	@:require(java4) @:overload public function setTabLayoutPolicy(tabLayoutPolicy : Int) : Void;
+	@:require(java4) @:overload @:public public function setTabLayoutPolicy(tabLayoutPolicy : Int) : Void;
 	
 	/**
 	* Returns the currently selected index for this tabbedpane.
@@ -285,7 +285,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @return the index of the selected tab
 	* @see #setSelectedIndex
 	*/
-	@:overload public function getSelectedIndex() : Int;
+	@:overload @:public public function getSelectedIndex() : Int;
 	
 	/**
 	* Sets the selected index for this tabbedpane. The index must be
@@ -304,7 +304,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*   preferred: true
 	* description: The tabbedpane's selected tab index.
 	*/
-	@:overload public function setSelectedIndex(index : Int) : Void;
+	@:overload @:public public function setSelectedIndex(index : Int) : Void;
 	
 	/**
 	* Returns the currently selected component for this tabbedpane.
@@ -313,7 +313,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @return the component corresponding to the selected tab
 	* @see #setSelectedComponent
 	*/
-	@:overload public function getSelectedComponent() : java.awt.Component;
+	@:overload @:public public function getSelectedComponent() : java.awt.Component;
 	
 	/**
 	* Sets the selected component for this tabbedpane.  This
@@ -327,7 +327,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*   preferred: true
 	* description: The tabbedpane's selected component.
 	*/
-	@:overload public function setSelectedComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function setSelectedComponent(c : java.awt.Component) : Void;
 	
 	/**
 	* Inserts a new tab for the given component, at the given index,
@@ -347,7 +347,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #addTab
 	* @see #removeTabAt
 	*/
-	@:overload public function insertTab(title : String, icon : javax.swing.Icon, component : java.awt.Component, tip : String, index : Int) : Void;
+	@:overload @:public public function insertTab(title : String, icon : javax.swing.Icon, component : java.awt.Component, tip : String, index : Int) : Void;
 	
 	/**
 	* Adds a <code>component</code> and <code>tip</code>
@@ -363,7 +363,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #insertTab
 	* @see #removeTabAt
 	*/
-	@:overload public function addTab(title : String, icon : javax.swing.Icon, component : java.awt.Component, tip : String) : Void;
+	@:overload @:public public function addTab(title : String, icon : javax.swing.Icon, component : java.awt.Component, tip : String) : Void;
 	
 	/**
 	* Adds a <code>component</code> represented by a <code>title</code>
@@ -377,7 +377,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #insertTab
 	* @see #removeTabAt
 	*/
-	@:overload public function addTab(title : String, icon : javax.swing.Icon, component : java.awt.Component) : Void;
+	@:overload @:public public function addTab(title : String, icon : javax.swing.Icon, component : java.awt.Component) : Void;
 	
 	/**
 	* Adds a <code>component</code> represented by a <code>title</code>
@@ -390,7 +390,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #insertTab
 	* @see #removeTabAt
 	*/
-	@:overload public function addTab(title : String, component : java.awt.Component) : Void;
+	@:overload @:public public function addTab(title : String, component : java.awt.Component) : Void;
 	
 	/**
 	* Adds a <code>component</code> with a tab title defaulting to
@@ -404,7 +404,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #insertTab
 	* @see #removeTabAt
 	*/
-	@:overload override public function add(component : java.awt.Component) : java.awt.Component;
+	@:overload @:public override public function add(component : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* Adds a <code>component</code> with the specified tab title.
@@ -417,7 +417,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #insertTab
 	* @see #removeTabAt
 	*/
-	@:overload override public function add(title : String, component : java.awt.Component) : java.awt.Component;
+	@:overload @:public override public function add(title : String, component : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* Adds a <code>component</code> at the specified tab index with a tab
@@ -431,7 +431,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #insertTab
 	* @see #removeTabAt
 	*/
-	@:overload override public function add(component : java.awt.Component, index : Int) : java.awt.Component;
+	@:overload @:public override public function add(component : java.awt.Component, index : Int) : java.awt.Component;
 	
 	/**
 	* Adds a <code>component</code> to the tabbed pane.
@@ -446,7 +446,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #insertTab
 	* @see #removeTabAt
 	*/
-	@:overload override public function add(component : java.awt.Component, constraints : Dynamic) : Void;
+	@:overload @:public override public function add(component : java.awt.Component, constraints : Dynamic) : Void;
 	
 	/**
 	* Adds a <code>component</code> at the specified tab index.
@@ -462,7 +462,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #insertTab
 	* @see #removeTabAt
 	*/
-	@:overload override public function add(component : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload @:public override public function add(component : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Removes the tab at <code>index</code>.
@@ -476,7 +476,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #addTab
 	* @see #insertTab
 	*/
-	@:overload public function removeTabAt(index : Int) : Void;
+	@:overload @:public public function removeTabAt(index : Int) : Void;
 	
 	/**
 	* Removes the specified <code>Component</code> from the
@@ -487,7 +487,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #addTab
 	* @see #removeTabAt
 	*/
-	@:overload override public function remove(component : java.awt.Component) : Void;
+	@:overload @:public override public function remove(component : java.awt.Component) : Void;
 	
 	/**
 	* Removes the tab and component which corresponds to the specified index.
@@ -499,7 +499,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #addTab
 	* @see #removeTabAt
 	*/
-	@:overload override public function remove(index : Int) : Void;
+	@:overload @:public override public function remove(index : Int) : Void;
 	
 	/**
 	* Removes all the tabs and their corresponding components
@@ -508,14 +508,14 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #addTab
 	* @see #removeTabAt
 	*/
-	@:overload override public function removeAll() : Void;
+	@:overload @:public override public function removeAll() : Void;
 	
 	/**
 	* Returns the number of tabs in this <code>tabbedpane</code>.
 	*
 	* @return an integer specifying the number of tabbed pages
 	*/
-	@:overload public function getTabCount() : Int;
+	@:overload @:public public function getTabCount() : Int;
 	
 	/**
 	* Returns the number of tab runs currently used to display
@@ -528,7 +528,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*          is <code>LEFT</code> or <code>RIGHT</code>,
 	*          or 0 if there is no UI set on this <code>tabbedpane</code>
 	*/
-	@:overload public function getTabRunCount() : Int;
+	@:overload @:public public function getTabRunCount() : Int;
 	
 	/**
 	* Returns the tab title at <code>index</code>.
@@ -539,7 +539,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*            (index < 0 || index >= tab count)
 	* @see #setTitleAt
 	*/
-	@:overload public function getTitleAt(index : Int) : String;
+	@:overload @:public public function getTitleAt(index : Int) : String;
 	
 	/**
 	* Returns the tab icon at <code>index</code>.
@@ -551,7 +551,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*
 	* @see #setIconAt
 	*/
-	@:overload public function getIconAt(index : Int) : javax.swing.Icon;
+	@:overload @:public public function getIconAt(index : Int) : javax.swing.Icon;
 	
 	/**
 	* Returns the tab disabled icon at <code>index</code>.
@@ -568,7 +568,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*
 	* @see #setDisabledIconAt
 	*/
-	@:overload public function getDisabledIconAt(index : Int) : javax.swing.Icon;
+	@:overload @:public public function getDisabledIconAt(index : Int) : javax.swing.Icon;
 	
 	/**
 	* Returns the tab tooltip text at <code>index</code>.
@@ -581,7 +581,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #setToolTipTextAt
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getToolTipTextAt(index : Int) : String;
+	@:require(java3) @:overload @:public public function getToolTipTextAt(index : Int) : String;
 	
 	/**
 	* Returns the tab background color at <code>index</code>.
@@ -594,7 +594,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*
 	* @see #setBackgroundAt
 	*/
-	@:overload public function getBackgroundAt(index : Int) : java.awt.Color;
+	@:overload @:public public function getBackgroundAt(index : Int) : java.awt.Color;
 	
 	/**
 	* Returns the tab foreground color at <code>index</code>.
@@ -607,7 +607,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*
 	* @see #setForegroundAt
 	*/
-	@:overload public function getForegroundAt(index : Int) : java.awt.Color;
+	@:overload @:public public function getForegroundAt(index : Int) : java.awt.Color;
 	
 	/**
 	* Returns whether or not the tab at <code>index</code> is
@@ -621,7 +621,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*
 	* @see #setEnabledAt
 	*/
-	@:overload public function isEnabledAt(index : Int) : Bool;
+	@:overload @:public public function isEnabledAt(index : Int) : Bool;
 	
 	/**
 	* Returns the component at <code>index</code>.
@@ -633,7 +633,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*
 	* @see #setComponentAt
 	*/
-	@:overload public function getComponentAt(index : Int) : java.awt.Component;
+	@:overload @:public public function getComponentAt(index : Int) : java.awt.Component;
 	
 	/**
 	* Returns the keyboard mnemonic for accessing the specified tab.
@@ -651,7 +651,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #setDisplayedMnemonicIndexAt(int,int)
 	* @see #setMnemonicAt(int,int)
 	*/
-	@:require(java4) @:overload public function getMnemonicAt(tabIndex : Int) : Int;
+	@:require(java4) @:overload @:public public function getMnemonicAt(tabIndex : Int) : Int;
 	
 	/**
 	* Returns the character, as an index, that the look and feel should
@@ -667,7 +667,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #setDisplayedMnemonicIndexAt(int,int)
 	* @see #setMnemonicAt(int,int)
 	*/
-	@:require(java4) @:overload public function getDisplayedMnemonicIndexAt(tabIndex : Int) : Int;
+	@:require(java4) @:overload @:public public function getDisplayedMnemonicIndexAt(tabIndex : Int) : Int;
 	
 	/**
 	* Returns the tab bounds at <code>index</code>.  If the tab at
@@ -684,7 +684,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @exception IndexOutOfBoundsException if index is out of range
 	*            (index &lt; 0 || index &gt;= tab count)
 	*/
-	@:overload public function getBoundsAt(index : Int) : java.awt.Rectangle;
+	@:overload @:public public function getBoundsAt(index : Int) : java.awt.Rectangle;
 	
 	/**
 	* Sets the title at <code>index</code> to <code>title</code> which
@@ -704,7 +704,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*    attribute: visualUpdate true
 	*  description: The title at the specified tab index.
 	*/
-	@:overload public function setTitleAt(index : Int, title : String) : Void;
+	@:overload @:public public function setTitleAt(index : Int, title : String) : Void;
 	
 	/**
 	* Sets the icon at <code>index</code> to <code>icon</code> which can be
@@ -729,7 +729,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*    attribute: visualUpdate true
 	*  description: The icon at the specified tab index.
 	*/
-	@:overload public function setIconAt(index : Int, icon : javax.swing.Icon) : Void;
+	@:overload @:public public function setIconAt(index : Int, icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Sets the disabled icon at <code>index</code> to <code>icon</code>
@@ -747,7 +747,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*    attribute: visualUpdate true
 	*  description: The disabled icon at the specified tab index.
 	*/
-	@:overload public function setDisabledIconAt(index : Int, disabledIcon : javax.swing.Icon) : Void;
+	@:overload @:public public function setDisabledIconAt(index : Int, disabledIcon : javax.swing.Icon) : Void;
 	
 	/**
 	* Sets the tooltip text at <code>index</code> to <code>toolTipText</code>
@@ -765,7 +765,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*  description: The tooltip text at the specified tab index.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setToolTipTextAt(index : Int, toolTipText : String) : Void;
+	@:require(java3) @:overload @:public public function setToolTipTextAt(index : Int, toolTipText : String) : Void;
 	
 	/**
 	* Sets the background color at <code>index</code> to
@@ -788,7 +788,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*    attribute: visualUpdate true
 	*  description: The background color at the specified tab index.
 	*/
-	@:overload public function setBackgroundAt(index : Int, background : java.awt.Color) : Void;
+	@:overload @:public public function setBackgroundAt(index : Int, background : java.awt.Color) : Void;
 	
 	/**
 	* Sets the foreground color at <code>index</code> to
@@ -811,7 +811,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*    attribute: visualUpdate true
 	*  description: The foreground color at the specified tab index.
 	*/
-	@:overload public function setForegroundAt(index : Int, foreground : java.awt.Color) : Void;
+	@:overload @:public public function setForegroundAt(index : Int, foreground : java.awt.Color) : Void;
 	
 	/**
 	* Sets whether or not the tab at <code>index</code> is enabled.
@@ -824,7 +824,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*
 	* @see #isEnabledAt
 	*/
-	@:overload public function setEnabledAt(index : Int, enabled : Bool) : Void;
+	@:overload @:public public function setEnabledAt(index : Int, enabled : Bool) : Void;
 	
 	/**
 	* Sets the component at <code>index</code> to <code>component</code>.
@@ -840,7 +840,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*    attribute: visualUpdate true
 	*  description: The component at the specified tab index.
 	*/
-	@:overload public function setComponentAt(index : Int, component : java.awt.Component) : Void;
+	@:overload @:public public function setComponentAt(index : Int, component : java.awt.Component) : Void;
 	
 	/**
 	* Provides a hint to the look and feel as to which character in the
@@ -880,7 +880,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*  description: the index into the String to draw the keyboard character
 	*               mnemonic at
 	*/
-	@:require(java4) @:overload public function setDisplayedMnemonicIndexAt(tabIndex : Int, mnemonicIndex : Int) : Void;
+	@:require(java4) @:overload @:public public function setDisplayedMnemonicIndexAt(tabIndex : Int, mnemonicIndex : Int) : Void;
 	
 	/**
 	* Sets the keyboard mnemonic for accessing the specified tab.
@@ -914,7 +914,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*  description: The keyboard mnenmonic, as a KeyEvent VK constant,
 	*               for the specified tab
 	*/
-	@:require(java4) @:overload public function setMnemonicAt(tabIndex : Int, mnemonic : Int) : Void;
+	@:require(java4) @:overload @:public public function setMnemonicAt(tabIndex : Int, mnemonic : Int) : Void;
 	
 	/**
 	* Returns the first tab index with a given <code>title</code>,  or
@@ -924,7 +924,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @return the first tab index which matches <code>title</code>, or
 	*          -1 if no tab has this title
 	*/
-	@:overload public function indexOfTab(title : String) : Int;
+	@:overload @:public public function indexOfTab(title : String) : Int;
 	
 	/**
 	* Returns the first tab index with a given <code>icon</code>,
@@ -934,7 +934,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @return the first tab index which matches <code>icon</code>,
 	*          or -1 if no tab has this icon
 	*/
-	@:overload public function indexOfTab(icon : javax.swing.Icon) : Int;
+	@:overload @:public public function indexOfTab(icon : javax.swing.Icon) : Int;
 	
 	/**
 	* Returns the index of the tab for the specified component.
@@ -944,7 +944,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @return the first tab which matches this component, or -1
 	*          if there is no tab for this component
 	*/
-	@:overload public function indexOfComponent(component : java.awt.Component) : Int;
+	@:overload @:public public function indexOfComponent(component : java.awt.Component) : Int;
 	
 	/**
 	* Returns the tab index corresponding to the tab whose bounds
@@ -957,7 +957,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*         -1 if no tab intersects the location
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function indexAtLocation(x : Int, y : Int) : Int;
+	@:require(java4) @:overload @:public public function indexAtLocation(x : Int, y : Int) : Int;
 	
 	/**
 	* Returns the tooltip text for the component determined by the
@@ -967,7 +967,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*          cursor is lingering
 	* @return the <code>String</code> containing the tooltip text
 	*/
-	@:overload public function getToolTipText(event : java.awt.event.MouseEvent) : String;
+	@:overload @:public override public function getToolTipText(event : java.awt.event.MouseEvent) : String;
 	
 	/**
 	* Returns a string representation of this <code>JTabbedPane</code>.
@@ -979,7 +979,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*
 	* @return  a string representation of this JTabbedPane.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JTabbedPane.
@@ -990,7 +990,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @return an AccessibleJTabbedPane that serves as the
 	*         AccessibleContext of this JTabbedPane
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Sets the component that is responsible for rendering the
@@ -1018,7 +1018,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*  description: The tab component at the specified tab index.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setTabComponentAt(index : Int, component : java.awt.Component) : Void;
+	@:require(java6) @:overload @:public public function setTabComponentAt(index : Int, component : java.awt.Component) : Void;
 	
 	/**
 	* Returns the tab component at <code>index</code>.
@@ -1031,7 +1031,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #setTabComponentAt
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getTabComponentAt(index : Int) : java.awt.Component;
+	@:require(java6) @:overload @:public public function getTabComponentAt(index : Int) : java.awt.Component;
 	
 	/**
 	* Returns the index of the tab for the specified tab component.
@@ -1044,7 +1044,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see #getTabComponentAt
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function indexOfTabComponent(tabComponent : java.awt.Component) : Int;
+	@:require(java6) @:overload @:public public function indexOfTabComponent(tabComponent : java.awt.Component) : Int;
 	
 	
 }
@@ -1054,7 +1054,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 */
 @:native('javax$swing$JTabbedPane$ModelListener') extern class JTabbedPane_ModelListener implements javax.swing.event.ChangeListener implements java.io.Serializable
 {
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }
@@ -1082,14 +1082,14 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @return the accessible name of this object, nor {@code null}.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getAccessibleName() : String;
+	@:require(java6) @:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	*  Constructs an AccessibleJTabbedPane
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	/**
 	* Get the role of this object.
@@ -1097,14 +1097,14 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @return an instance of AccessibleRole describing the role of
 	*          the object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the number of accessible children in the object.
 	*
 	* @return the number of accessible children in the object.
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Return the specified Accessible child of the object.
@@ -1113,7 +1113,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @return the Accessible child of the object
 	* @exception IllegalArgumentException if index is out of bounds
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the <code>AccessibleSelection</code> associated with
@@ -1124,7 +1124,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload @:public override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Returns the <code>Accessible</code> child contained at
@@ -1134,99 +1134,99 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @return the <code>Accessible</code> at the specified
 	*    location, if it exists
 	*/
-	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
-	@:overload public function getAccessibleSelectionCount() : Int;
+	@:overload @:public public function getAccessibleSelectionCount() : Int;
 	
-	@:overload public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
 	
-	@:overload public function isAccessibleChildSelected(i : Int) : Bool;
+	@:overload @:public public function isAccessibleChildSelected(i : Int) : Bool;
 	
-	@:overload public function addAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function addAccessibleSelection(i : Int) : Void;
 	
-	@:overload public function removeAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function removeAccessibleSelection(i : Int) : Void;
 	
-	@:overload public function clearAccessibleSelection() : Void;
+	@:overload @:public public function clearAccessibleSelection() : Void;
 	
-	@:overload public function selectAllAccessibleSelection() : Void;
+	@:overload @:public public function selectAllAccessibleSelection() : Void;
 	
 	
 }
 @:native('javax$swing$JTabbedPane$Page') @:internal extern class JTabbedPane_Page extends javax.accessibility.AccessibleContext implements java.io.Serializable implements javax.accessibility.Accessible implements javax.accessibility.AccessibleComponent
 {
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
-	@:overload override public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
-	@:overload override public function getAccessibleIndexInParent() : Int;
+	@:overload @:public override public function getAccessibleIndexInParent() : Int;
 	
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
-	@:overload override public function getLocale() : java.util.Locale;
+	@:overload @:public override public function getLocale() : java.util.Locale;
 	
-	@:overload override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
+	@:overload @:public override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
 	
-	@:overload public function getBackground() : java.awt.Color;
+	@:overload @:public public function getBackground() : java.awt.Color;
 	
-	@:overload public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public public function setBackground(c : java.awt.Color) : Void;
 	
-	@:overload public function getForeground() : java.awt.Color;
+	@:overload @:public public function getForeground() : java.awt.Color;
 	
-	@:overload public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public public function setForeground(c : java.awt.Color) : Void;
 	
-	@:overload public function getCursor() : java.awt.Cursor;
+	@:overload @:public public function getCursor() : java.awt.Cursor;
 	
-	@:overload public function setCursor(c : java.awt.Cursor) : Void;
+	@:overload @:public public function setCursor(c : java.awt.Cursor) : Void;
 	
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public public function getFont() : java.awt.Font;
 	
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public public function setFont(f : java.awt.Font) : Void;
 	
-	@:overload public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public public function setEnabled(b : Bool) : Void;
 	
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
-	@:overload public function setVisible(b : Bool) : Void;
+	@:overload @:public public function setVisible(b : Bool) : Void;
 	
-	@:overload public function isShowing() : Bool;
+	@:overload @:public public function isShowing() : Bool;
 	
-	@:overload public function contains(p : java.awt.Point) : Bool;
+	@:overload @:public public function contains(p : java.awt.Point) : Bool;
 	
-	@:overload public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public public function getLocationOnScreen() : java.awt.Point;
 	
-	@:overload public function getLocation() : java.awt.Point;
+	@:overload @:public public function getLocation() : java.awt.Point;
 	
-	@:overload public function setLocation(p : java.awt.Point) : Void;
+	@:overload @:public public function setLocation(p : java.awt.Point) : Void;
 	
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public public function getBounds() : java.awt.Rectangle;
 	
-	@:overload public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload @:public public function setBounds(r : java.awt.Rectangle) : Void;
 	
-	@:overload public function getSize() : java.awt.Dimension;
+	@:overload @:public public function getSize() : java.awt.Dimension;
 	
-	@:overload public function setSize(d : java.awt.Dimension) : Void;
+	@:overload @:public public function setSize(d : java.awt.Dimension) : Void;
 	
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public public function isFocusTraversable() : Bool;
 	
-	@:overload public function requestFocus() : Void;
+	@:overload @:public public function requestFocus() : Void;
 	
-	@:overload public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
-	@:overload public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Returns an AccessibleIcon
@@ -1236,7 +1236,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* one exists and the page is disabled.  Otherwise, null
 	* is returned.
 	*/
-	@:overload override public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
+	@:overload @:public override public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
 	
 	
 }

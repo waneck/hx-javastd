@@ -33,7 +33,7 @@ package com.sun.org.apache.xml.internal.serialize;
 ////   <d96-mst@d.kth.se>
 extern class HTMLSerializer extends com.sun.org.apache.xml.internal.serialize.BaseMarkupSerializer
 {
-	public static var XHTMLNamespace(default, null) : String;
+	@:public @:static @:final public static var XHTMLNamespace(default, null) : String;
 	
 	/**
 	* Constructs a new HTML/XHTML serializer depending on the value of
@@ -42,21 +42,21 @@ extern class HTMLSerializer extends com.sun.org.apache.xml.internal.serialize.Ba
 	*
 	* @param xhtml True if XHTML serializing
 	*/
-	@:overload private function new(xhtml : Bool, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:protected private function new(xhtml : Bool, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
 	/**
 	* Constructs a new serializer. The serializer cannot be used without
 	* calling {@link #setOutputCharStream} or {@link #setOutputByteStream}
 	* first.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new serializer. The serializer cannot be used without
 	* calling {@link #setOutputCharStream} or {@link #setOutputByteStream}
 	* first.
 	*/
-	@:overload public function new(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public public function new(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
 	/**
 	* Constructs a new serializer that writes to the specified writer
@@ -66,7 +66,7 @@ extern class HTMLSerializer extends com.sun.org.apache.xml.internal.serialize.Ba
 	* @param writer The writer to use
 	* @param format The output format to use, null for the default
 	*/
-	@:overload public function new(writer : java.io.Writer, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public public function new(writer : java.io.Writer, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
 	/**
 	* Constructs a new serializer that writes to the specified output
@@ -76,23 +76,23 @@ extern class HTMLSerializer extends com.sun.org.apache.xml.internal.serialize.Ba
 	* @param output The output stream to use
 	* @param format The output format to use, null for the default
 	*/
-	@:overload public function new(output : java.io.OutputStream, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public public function new(output : java.io.OutputStream, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
-	@:overload override public function setOutputFormat(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public override public function setOutputFormat(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
-	@:overload public function setXHTMLNamespace(newNamespace : String) : Void;
+	@:overload @:public public function setXHTMLNamespace(newNamespace : String) : Void;
 	
-	@:overload override public function startElement(namespaceURI : String, localName : String, rawName : String, attrs : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, rawName : String, attrs : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function endElement(namespaceURI : String, localName : String, rawName : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, rawName : String) : Void;
 	
-	@:overload public function endElementIO(namespaceURI : String, localName : String, rawName : String) : Void;
+	@:overload @:public public function endElementIO(namespaceURI : String, localName : String, rawName : String) : Void;
 	
-	@:overload override public function characters(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload override public function startElement(tagName : String, attrs : org.xml.sax.AttributeList) : Void;
+	@:overload @:public override public function startElement(tagName : String, attrs : org.xml.sax.AttributeList) : Void;
 	
-	@:overload override public function endElement(tagName : String) : Void;
+	@:overload @:public override public function endElement(tagName : String) : Void;
 	
 	/**
 	* Called to serialize the document's DOCTYPE by the root element.
@@ -106,20 +106,20 @@ extern class HTMLSerializer extends com.sun.org.apache.xml.internal.serialize.Ba
 	* (see {@link #serializePreRoot}). Pre-root will be serialized even if
 	* this is not the first root element of the document.
 	*/
-	@:overload private function startDocument(rootTagName : String) : Void;
+	@:overload @:protected private function startDocument(rootTagName : String) : Void;
 	
 	/**
 	* Called to serialize a DOM element. Equivalent to calling {@link
 	* #startElement}, {@link #endElement} and serializing everything
 	* inbetween, but better optimized.
 	*/
-	@:overload override private function serializeElement(elem : org.w3c.dom.Element) : Void;
+	@:overload @:protected override private function serializeElement(elem : org.w3c.dom.Element) : Void;
 	
-	@:overload override private function characters(text : String) : Void;
+	@:overload @:protected override private function characters(text : String) : Void;
 	
-	@:overload override private function getEntityRef(ch : Int) : String;
+	@:overload @:protected override private function getEntityRef(ch : Int) : String;
 	
-	@:overload private function escapeURI(uri : String) : String;
+	@:overload @:protected private function escapeURI(uri : String) : String;
 	
 	
 }

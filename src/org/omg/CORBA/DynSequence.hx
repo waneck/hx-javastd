@@ -36,7 +36,7 @@ extern interface DynSequence extends org.omg.CORBA.Object extends org.omg.CORBA.
 	*
 	* @return the length of the sequence
 	*/
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
 	/**
 	* Sets the length of the sequence represented by this
@@ -44,7 +44,7 @@ extern interface DynSequence extends org.omg.CORBA.Object extends org.omg.CORBA.
 	*
 	* @param arg the length of the sequence
 	*/
-	@:overload public function length(arg : Int) : Void;
+	@:overload @:public public function length(arg : Int) : Void;
 	
 	/**
 	* Returns the value of every element in this sequence.
@@ -53,7 +53,7 @@ extern interface DynSequence extends org.omg.CORBA.Object extends org.omg.CORBA.
 	*         the sequence
 	* @see #set_elements
 	*/
-	@:overload public function get_elements() : java.NativeArray<org.omg.CORBA.Any>;
+	@:overload @:public public function get_elements() : java.NativeArray<org.omg.CORBA.Any>;
 	
 	/**
 	* Sets the values of all elements in this sequence with the given
@@ -63,7 +63,7 @@ extern interface DynSequence extends org.omg.CORBA.Object extends org.omg.CORBA.
 	* @exception InvalidSeq if the array of values is bad
 	* @see #get_elements
 	*/
-	@:overload public function set_elements(value : java.NativeArray<org.omg.CORBA.Any>) : Void;
+	@:overload @:public public function set_elements(value : java.NativeArray<org.omg.CORBA.Any>) : Void;
 	
 	
 }

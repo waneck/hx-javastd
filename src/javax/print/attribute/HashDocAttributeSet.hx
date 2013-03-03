@@ -28,7 +28,7 @@ extern class HashDocAttributeSet extends javax.print.attribute.HashAttributeSet 
 	/**
 	* Construct a new, empty hash doc attribute set.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a new hash doc attribute set,
@@ -39,7 +39,7 @@ extern class HashDocAttributeSet extends javax.print.attribute.HashAttributeSet 
 	* @exception  NullPointerException
 	*     (unchecked exception) Thrown if <CODE>attribute</CODE> is null.
 	*/
-	@:overload public function new(attribute : javax.print.attribute.DocAttribute) : Void;
+	@:overload @:public public function new(attribute : javax.print.attribute.DocAttribute) : Void;
 	
 	/**
 	* Construct a new hash doc attribute set,
@@ -57,7 +57,7 @@ extern class HashDocAttributeSet extends javax.print.attribute.HashAttributeSet 
 	*  (unchecked exception)
 	* Thrown if any element of <CODE>attributes</CODE> is null.
 	*/
-	@:overload public function new(attributes : java.NativeArray<javax.print.attribute.DocAttribute>) : Void;
+	@:overload @:public public function new(attributes : java.NativeArray<javax.print.attribute.DocAttribute>) : Void;
 	
 	/**
 	* Construct a new attribute set, initially populated with the
@@ -72,7 +72,7 @@ extern class HashDocAttributeSet extends javax.print.attribute.HashAttributeSet 
 	* <CODE>attributes</CODE> is not an instance of
 	* <CODE>DocAttribute</CODE>.
 	*/
-	@:overload public function new(attributes : javax.print.attribute.DocAttributeSet) : Void;
+	@:overload @:public public function new(attributes : javax.print.attribute.DocAttributeSet) : Void;
 	
 	
 }

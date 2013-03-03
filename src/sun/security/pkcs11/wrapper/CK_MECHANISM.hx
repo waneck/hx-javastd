@@ -67,7 +67,7 @@ extern class CK_MECHANISM
 	*   CK_MECHANISM_TYPE mechanism;
 	* </PRE>
 	*/
-	public var mechanism : haxe.Int64;
+	@:public public var mechanism : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -76,36 +76,36 @@ extern class CK_MECHANISM
 	*   CK_ULONG ulParameterLen;
 	* </PRE>
 	*/
-	public var pParameter : Dynamic;
+	@:public public var pParameter : Dynamic;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(mechanism : haxe.Int64) : Void;
+	@:overload @:public public function new(mechanism : haxe.Int64) : Void;
 	
-	@:overload public function new(mechanism : haxe.Int64, pParameter : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(mechanism : haxe.Int64, pParameter : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(mechanism : haxe.Int64, b : java.math.BigInteger) : Void;
+	@:overload @:public public function new(mechanism : haxe.Int64, b : java.math.BigInteger) : Void;
 	
-	@:overload public function new(mechanism : haxe.Int64, version : sun.security.pkcs11.wrapper.CK_VERSION) : Void;
+	@:overload @:public public function new(mechanism : haxe.Int64, version : sun.security.pkcs11.wrapper.CK_VERSION) : Void;
 	
-	@:overload public function new(mechanism : haxe.Int64, params : sun.security.pkcs11.wrapper.CK_SSL3_MASTER_KEY_DERIVE_PARAMS) : Void;
+	@:overload @:public public function new(mechanism : haxe.Int64, params : sun.security.pkcs11.wrapper.CK_SSL3_MASTER_KEY_DERIVE_PARAMS) : Void;
 	
-	@:overload public function new(mechanism : haxe.Int64, params : sun.security.pkcs11.wrapper.CK_SSL3_KEY_MAT_PARAMS) : Void;
+	@:overload @:public public function new(mechanism : haxe.Int64, params : sun.security.pkcs11.wrapper.CK_SSL3_KEY_MAT_PARAMS) : Void;
 	
-	@:overload public function new(mechanism : haxe.Int64, params : sun.security.pkcs11.wrapper.CK_TLS_PRF_PARAMS) : Void;
+	@:overload @:public public function new(mechanism : haxe.Int64, params : sun.security.pkcs11.wrapper.CK_TLS_PRF_PARAMS) : Void;
 	
-	@:overload public function new(mechanism : haxe.Int64, params : sun.security.pkcs11.wrapper.CK_ECDH1_DERIVE_PARAMS) : Void;
+	@:overload @:public public function new(mechanism : haxe.Int64, params : sun.security.pkcs11.wrapper.CK_ECDH1_DERIVE_PARAMS) : Void;
 	
-	@:overload public function new(mechanism : haxe.Int64, params : Null<haxe.Int64>) : Void;
+	@:overload @:public public function new(mechanism : haxe.Int64, params : Null<haxe.Int64>) : Void;
 	
-	@:overload public function new(mechanism : haxe.Int64, params : sun.security.pkcs11.wrapper.CK_AES_CTR_PARAMS) : Void;
+	@:overload @:public public function new(mechanism : haxe.Int64, params : sun.security.pkcs11.wrapper.CK_AES_CTR_PARAMS) : Void;
 	
 	/**
 	* Returns the string representation of CK_MECHANISM.
 	*
 	* @return the string representation of CK_MECHANISM
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

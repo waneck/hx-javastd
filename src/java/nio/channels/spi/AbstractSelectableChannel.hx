@@ -45,18 +45,18 @@ package java.nio.channels.spi;
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
+	@:overload @:protected private function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
 	
 	/**
 	* Returns the provider that created this channel.
 	*
 	* @return  The provider that created this channel
 	*/
-	@:overload @:final public function provider() : java.nio.channels.spi.SelectorProvider;
+	@:overload @:public @:final override public function provider() : java.nio.channels.spi.SelectorProvider;
 	
-	@:overload @:final public function isRegistered() : Bool;
+	@:overload @:public @:final override public function isRegistered() : Bool;
 	
-	@:overload @:final public function keyFor(sel : java.nio.channels.Selector) : java.nio.channels.SelectionKey;
+	@:overload @:public @:final override public function keyFor(sel : java.nio.channels.Selector) : java.nio.channels.SelectionKey;
 	
 	/**
 	* Registers this channel with the given selector, returning a selection key.
@@ -84,7 +84,7 @@ package java.nio.channels.spi;
 	*
 	* @throws  IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload @:final public function register(sel : java.nio.channels.Selector, ops : Int, att : Dynamic) : java.nio.channels.SelectionKey;
+	@:overload @:public @:final override public function register(sel : java.nio.channels.Selector, ops : Int, att : Dynamic) : java.nio.channels.SelectionKey;
 	
 	/**
 	* Closes this channel.
@@ -96,7 +96,7 @@ package java.nio.channels.spi;
 	* order to perform the actual work of closing this channel.  It then
 	* cancels all of this channel's keys.  </p>
 	*/
-	@:overload @:final override private function implCloseChannel() : Void;
+	@:overload @:protected @:final override private function implCloseChannel() : Void;
 	
 	/**
 	* Closes this selectable channel.
@@ -111,11 +111,11 @@ package java.nio.channels.spi;
 	* immediately, either by throwing an exception or by returning normally.
 	* </p>
 	*/
-	@:overload @:abstract private function implCloseSelectableChannel() : Void;
+	@:overload @:protected @:abstract private function implCloseSelectableChannel() : Void;
 	
-	@:overload @:final public function isBlocking() : Bool;
+	@:overload @:public @:final override public function isBlocking() : Bool;
 	
-	@:overload @:final public function blockingLock() : Dynamic;
+	@:overload @:public @:final override public function blockingLock() : Dynamic;
 	
 	/**
 	* Adjusts this channel's blocking mode.
@@ -125,7 +125,7 @@ package java.nio.channels.spi;
 	* implConfigureBlocking} method, while holding the appropriate locks, in
 	* order to change the mode.  </p>
 	*/
-	@:overload @:final public function configureBlocking(block : Bool) : java.nio.channels.SelectableChannel;
+	@:overload @:public @:final override public function configureBlocking(block : Bool) : java.nio.channels.SelectableChannel;
 	
 	/**
 	* Adjusts this channel's blocking mode.
@@ -138,7 +138,7 @@ package java.nio.channels.spi;
 	* @throws IOException
 	*         If an I/O error occurs
 	*/
-	@:overload @:abstract private function implConfigureBlocking(block : Bool) : Void;
+	@:overload @:protected @:abstract private function implConfigureBlocking(block : Bool) : Void;
 	
 	
 }

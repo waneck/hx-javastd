@@ -34,7 +34,7 @@ package javax.sound.midi;
 {
 	/** Obtains a MidiDevice object which is an owner of this Receiver.
 	*/
-	@:overload public function getMidiDevice() : javax.sound.midi.MidiDevice;
+	@:overload @:public public function getMidiDevice() : javax.sound.midi.MidiDevice;
 	
 	
 }

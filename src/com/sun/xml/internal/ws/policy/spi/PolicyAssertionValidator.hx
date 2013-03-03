@@ -54,7 +54,7 @@ extern interface PolicyAssertionValidator
 	* May contain nested policies and assertions.
 	* @return fitness of the {@code assertion} on in the client-side context. Must not be {@code null}.
 	*/
-	@:overload public function validateClientSide(assertion : com.sun.xml.internal.ws.policy.PolicyAssertion) : com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator.PolicyAssertionValidator_Fitness;
+	@:overload @:public public function validateClientSide(assertion : com.sun.xml.internal.ws.policy.PolicyAssertion) : com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator.PolicyAssertionValidator_Fitness;
 	
 	/**
 	* An implementation of this method must return:
@@ -84,7 +84,7 @@ extern interface PolicyAssertionValidator
 	* May contain nested policies and assertions.
 	* @return fitness of the {@code assertion} on in the server-side context. Must not be {@code null}.
 	*/
-	@:overload public function validateServerSide(assertion : com.sun.xml.internal.ws.policy.PolicyAssertion) : com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator.PolicyAssertionValidator_Fitness;
+	@:overload @:public public function validateServerSide(assertion : com.sun.xml.internal.ws.policy.PolicyAssertion) : com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator.PolicyAssertionValidator_Fitness;
 	
 	/**
 	* Each service provider that implements this SPI must make sure to identify all possible domains it supports.
@@ -104,7 +104,7 @@ extern interface PolicyAssertionValidator
 	* @return {@code String} array holding {@code String} representations of identifiers of all supported domains.
 	* Usually a domain identifier is represented by a namespace.
 	*/
-	@:overload public function declareSupportedDomains() : java.NativeArray<String>;
+	@:overload @:public public function declareSupportedDomains() : java.NativeArray<String>;
 	
 	
 }

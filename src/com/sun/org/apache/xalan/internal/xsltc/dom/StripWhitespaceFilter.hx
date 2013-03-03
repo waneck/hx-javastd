@@ -27,7 +27,7 @@ extern interface StripWhitespaceFilter
 	* @author Jacek Ambroziak
 	* @author Santiago Pericas-Geertsen
 	*/
-	@:overload public function stripSpace(dom : com.sun.org.apache.xalan.internal.xsltc.DOM, node : Int, type : Int) : Bool;
+	@:overload @:public public function stripSpace(dom : com.sun.org.apache.xalan.internal.xsltc.DOM, node : Int, type : Int) : Bool;
 	
 	
 }

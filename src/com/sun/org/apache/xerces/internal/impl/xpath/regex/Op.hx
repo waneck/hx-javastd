@@ -20,7 +20,7 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 */
 @:internal extern class Op
 {
-	@:overload private function new(type : Int) : Void;
+	@:overload @:protected private function new(type : Int) : Void;
 	
 	
 }

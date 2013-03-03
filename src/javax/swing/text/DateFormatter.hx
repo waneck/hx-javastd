@@ -46,7 +46,7 @@ package javax.swing.text;
 	* This is shorthand for
 	* <code>new DateFormatter(DateFormat.getDateInstance())</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns a DateFormatter configured with the specified
@@ -54,7 +54,7 @@ package javax.swing.text;
 	*
 	* @param format Format used to dictate legal values
 	*/
-	@:overload public function new(format : java.text.DateFormat) : Void;
+	@:overload @:public public function new(format : java.text.DateFormat) : Void;
 	
 	/**
 	* Sets the format that dictates the legal values that can be edited
@@ -66,7 +66,7 @@ package javax.swing.text;
 	*
 	* @param format DateFormat instance used for converting from/to Strings
 	*/
-	@:overload public function setFormat(format : java.text.DateFormat) : Void;
+	@:overload @:public public function setFormat(format : java.text.DateFormat) : Void;
 	
 	
 }

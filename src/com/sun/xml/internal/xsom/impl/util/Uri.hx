@@ -35,15 +35,15 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //// @@3RD PARTY CODE@@
 extern class Uri
 {
-	@:overload public static function isValid(s : String) : Bool;
+	@:overload @:public @:static public static function isValid(s : String) : Bool;
 	
-	@:overload public static function escapeDisallowedChars(s : String) : String;
+	@:overload @:public @:static public static function escapeDisallowedChars(s : String) : String;
 	
-	@:overload public static function resolve(baseUri : String, uriReference : String) : String;
+	@:overload @:public @:static public static function resolve(baseUri : String, uriReference : String) : String;
 	
-	@:overload public static function hasFragmentId(uri : String) : Bool;
+	@:overload @:public @:static public static function hasFragmentId(uri : String) : Bool;
 	
-	@:overload public static function isAbsolute(uri : String) : Bool;
+	@:overload @:public @:static public static function isAbsolute(uri : String) : Bool;
 	
 	
 }

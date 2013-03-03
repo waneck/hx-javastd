@@ -26,33 +26,33 @@ package com.sun.tools.internal.jxc.apt;
 extern class InlineAnnotationReaderImpl extends com.sun.xml.internal.bind.v2.model.annotation.AbstractInlineAnnotationReaderImpl<com.sun.mirror.type.TypeMirror, com.sun.mirror.declaration.TypeDeclaration, com.sun.mirror.declaration.FieldDeclaration, com.sun.mirror.declaration.MethodDeclaration>
 {
 	/** The singleton instance. */
-	public static var theInstance(default, null) : com.sun.tools.internal.jxc.apt.InlineAnnotationReaderImpl;
+	@:public @:static @:final public static var theInstance(default, null) : com.sun.tools.internal.jxc.apt.InlineAnnotationReaderImpl;
 	
-	@:overload public function getClassAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>, clazz : com.sun.mirror.declaration.TypeDeclaration, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
+	@:overload @:public public function getClassAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>, clazz : com.sun.mirror.declaration.TypeDeclaration, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	
-	@:overload public function getFieldAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>, f : com.sun.mirror.declaration.FieldDeclaration, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
+	@:overload @:public public function getFieldAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>, f : com.sun.mirror.declaration.FieldDeclaration, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	
-	@:overload public function hasFieldAnnotation(annotationType : Class<java.lang.annotation.Annotation>, f : com.sun.mirror.declaration.FieldDeclaration) : Bool;
+	@:overload @:public public function hasFieldAnnotation(annotationType : Class<java.lang.annotation.Annotation>, f : com.sun.mirror.declaration.FieldDeclaration) : Bool;
 	
-	@:overload public function hasClassAnnotation(clazz : com.sun.mirror.declaration.TypeDeclaration, annotationType : Class<java.lang.annotation.Annotation>) : Bool;
+	@:overload @:public public function hasClassAnnotation(clazz : com.sun.mirror.declaration.TypeDeclaration, annotationType : Class<java.lang.annotation.Annotation>) : Bool;
 	
-	@:overload public function getAllFieldAnnotations(field : com.sun.mirror.declaration.FieldDeclaration, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : java.NativeArray<java.lang.annotation.Annotation>;
+	@:overload @:public public function getAllFieldAnnotations(field : com.sun.mirror.declaration.FieldDeclaration, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : java.NativeArray<java.lang.annotation.Annotation>;
 	
-	@:overload public function getMethodAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>, method : com.sun.mirror.declaration.MethodDeclaration, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
+	@:overload @:public public function getMethodAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>, method : com.sun.mirror.declaration.MethodDeclaration, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	
-	@:overload public function hasMethodAnnotation(a : Class<java.lang.annotation.Annotation>, method : com.sun.mirror.declaration.MethodDeclaration) : Bool;
+	@:overload @:public public function hasMethodAnnotation(a : Class<java.lang.annotation.Annotation>, method : com.sun.mirror.declaration.MethodDeclaration) : Bool;
 	
-	@:overload public function getAllMethodAnnotations(method : com.sun.mirror.declaration.MethodDeclaration, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : java.NativeArray<java.lang.annotation.Annotation>;
+	@:overload @:public public function getAllMethodAnnotations(method : com.sun.mirror.declaration.MethodDeclaration, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : java.NativeArray<java.lang.annotation.Annotation>;
 	
-	@:overload public function getMethodParameterAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>, m : com.sun.mirror.declaration.MethodDeclaration, paramIndex : Int, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
+	@:overload @:public public function getMethodParameterAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>, m : com.sun.mirror.declaration.MethodDeclaration, paramIndex : Int, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	
-	@:overload public function getPackageAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>, clazz : com.sun.mirror.declaration.TypeDeclaration, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
+	@:overload @:public public function getPackageAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>, clazz : com.sun.mirror.declaration.TypeDeclaration, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	
-	@:overload override public function getClassValue(a : java.lang.annotation.Annotation, name : String) : com.sun.mirror.type.TypeMirror;
+	@:overload @:public override public function getClassValue(a : java.lang.annotation.Annotation, name : String) : com.sun.mirror.type.TypeMirror;
 	
-	@:overload override public function getClassArrayValue(a : java.lang.annotation.Annotation, name : String) : java.NativeArray<com.sun.mirror.type.TypeMirror>;
+	@:overload @:public override public function getClassArrayValue(a : java.lang.annotation.Annotation, name : String) : java.NativeArray<com.sun.mirror.type.TypeMirror>;
 	
-	@:overload private function fullName(m : com.sun.mirror.declaration.MethodDeclaration) : String;
+	@:overload @:protected private function fullName(m : com.sun.mirror.declaration.MethodDeclaration) : String;
 	
 	
 }

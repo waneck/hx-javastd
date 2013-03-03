@@ -28,66 +28,66 @@ extern class DuctusRenderingEngine extends sun.java2d.pipe.RenderingEngine
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function createStrokedShape(src : java.awt.Shape, width : Single, caps : Int, join : Int, miterlimit : Single, dashes : java.NativeArray<Single>, dashphase : Single) : java.awt.Shape;
+	@:overload @:public override public function createStrokedShape(src : java.awt.Shape, width : Single, caps : Int, join : Int, miterlimit : Single, dashes : java.NativeArray<Single>, dashphase : Single) : java.awt.Shape;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function strokeTo(src : java.awt.Shape, transform : java.awt.geom.AffineTransform, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, antialias : Bool, sr : sun.awt.geom.PathConsumer2D) : Void;
+	@:overload @:public override public function strokeTo(src : java.awt.Shape, transform : java.awt.geom.AffineTransform, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, antialias : Bool, sr : sun.awt.geom.PathConsumer2D) : Void;
 	
 	/*
 	* Feed a path from a PathIterator to a Ductus PathConsumer.
 	*/
-	@:native('feedConsumer') @:overload public static function _feedConsumer(pi : java.awt.geom.PathIterator, consumer : PathConsumer, normalize : Bool, norm : Single) : Void;
+	@:native('feedConsumer') @:overload @:public @:static public static function _feedConsumer(pi : java.awt.geom.PathIterator, consumer : PathConsumer, normalize : Bool, norm : Single) : Void;
 	
-	@:overload @:synchronized public static function getRasterizer() : Rasterizer;
+	@:overload @:public @:synchronized @:static public static function getRasterizer() : Rasterizer;
 	
-	@:overload @:synchronized public static function dropRasterizer(r : Rasterizer) : Void;
-	
-	/**
-	* {@inheritDoc}
-	*/
-	@:overload override public function getMinimumAAPenSize() : Single;
+	@:overload @:public @:synchronized @:static public static function dropRasterizer(r : Rasterizer) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getAATileGenerator(s : java.awt.Shape, at : java.awt.geom.AffineTransform, clip : sun.java2d.pipe.Region, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
+	@:overload @:public override public function getMinimumAAPenSize() : Single;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getAATileGenerator(x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float, clip : sun.java2d.pipe.Region, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
+	@:overload @:public override public function getAATileGenerator(s : java.awt.Shape, at : java.awt.geom.AffineTransform, clip : sun.java2d.pipe.Region, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
+	
+	/**
+	* {@inheritDoc}
+	*/
+	@:overload @:public override public function getAATileGenerator(x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float, clip : sun.java2d.pipe.Region, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
 	
 	
 }
 @:native('sun$dc$DuctusRenderingEngine$FillAdapter') @:internal extern class DuctusRenderingEngine_FillAdapter implements PathConsumer
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getShape() : java.awt.Shape;
+	@:overload @:public public function getShape() : java.awt.Shape;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload public function getConsumer() : PathConsumer;
+	@:overload @:public public function getConsumer() : PathConsumer;
 	
-	@:overload public function beginPath() : Void;
+	@:overload @:public public function beginPath() : Void;
 	
-	@:overload public function beginSubpath(x0 : Single, y0 : Single) : Void;
+	@:overload @:public public function beginSubpath(x0 : Single, y0 : Single) : Void;
 	
-	@:overload public function appendLine(x1 : Single, y1 : Single) : Void;
+	@:overload @:public public function appendLine(x1 : Single, y1 : Single) : Void;
 	
-	@:overload public function appendQuadratic(xm : Single, ym : Single, x1 : Single, y1 : Single) : Void;
+	@:overload @:public public function appendQuadratic(xm : Single, ym : Single, x1 : Single, y1 : Single) : Void;
 	
-	@:overload public function appendCubic(xm : Single, ym : Single, xn : Single, yn : Single, x1 : Single, y1 : Single) : Void;
+	@:overload @:public public function appendCubic(xm : Single, ym : Single, xn : Single, yn : Single, x1 : Single, y1 : Single) : Void;
 	
-	@:overload public function closedSubpath() : Void;
+	@:overload @:public public function closedSubpath() : Void;
 	
-	@:overload public function endPath() : Void;
+	@:overload @:public public function endPath() : Void;
 	
-	@:overload public function useProxy(proxy : FastPathProducer) : Void;
+	@:overload @:public public function useProxy(proxy : FastPathProducer) : Void;
 	
-	@:overload public function getCPathConsumer() : haxe.Int64;
+	@:overload @:public public function getCPathConsumer() : haxe.Int64;
 	
 	
 }

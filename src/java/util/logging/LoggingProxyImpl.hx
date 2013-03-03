@@ -25,33 +25,33 @@ package java.util.logging;
 */
 @:internal extern class LoggingProxyImpl implements sun.util.logging.LoggingProxy
 {
-	@:overload public function getLogger(name : String) : Dynamic;
+	@:overload @:public public function getLogger(name : String) : Dynamic;
 	
-	@:overload public function getLevel(logger : Dynamic) : Dynamic;
+	@:overload @:public public function getLevel(logger : Dynamic) : Dynamic;
 	
-	@:overload public function setLevel(logger : Dynamic, newLevel : Dynamic) : Void;
+	@:overload @:public public function setLevel(logger : Dynamic, newLevel : Dynamic) : Void;
 	
-	@:overload public function isLoggable(logger : Dynamic, level : Dynamic) : Bool;
+	@:overload @:public public function isLoggable(logger : Dynamic, level : Dynamic) : Bool;
 	
-	@:overload public function log(logger : Dynamic, level : Dynamic, msg : String) : Void;
+	@:overload @:public public function log(logger : Dynamic, level : Dynamic, msg : String) : Void;
 	
-	@:overload public function log(logger : Dynamic, level : Dynamic, msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public public function log(logger : Dynamic, level : Dynamic, msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload public function log(logger : Dynamic, level : Dynamic, msg : String, params : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function log(logger : Dynamic, level : Dynamic, msg : String, params : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function getLoggerNames() : java.util.List<String>;
+	@:overload @:public public function getLoggerNames() : java.util.List<String>;
 	
-	@:overload public function getLoggerLevel(loggerName : String) : String;
+	@:overload @:public public function getLoggerLevel(loggerName : String) : String;
 	
-	@:overload public function setLoggerLevel(loggerName : String, levelName : String) : Void;
+	@:overload @:public public function setLoggerLevel(loggerName : String, levelName : String) : Void;
 	
-	@:overload public function getParentLoggerName(loggerName : String) : String;
+	@:overload @:public public function getParentLoggerName(loggerName : String) : String;
 	
-	@:overload public function parseLevel(levelName : String) : Dynamic;
+	@:overload @:public public function parseLevel(levelName : String) : Dynamic;
 	
-	@:overload public function getLevelName(level : Dynamic) : String;
+	@:overload @:public public function getLevelName(level : Dynamic) : String;
 	
-	@:overload public function getProperty(key : String) : String;
+	@:overload @:public public function getProperty(key : String) : String;
 	
 	
 }

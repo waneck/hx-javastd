@@ -37,23 +37,23 @@ package com.sun.media.sound;
 	/**
 	* This is the device handle returned from native code
 	*/
-	private var id : haxe.Int64;
+	@:protected private var id : haxe.Int64;
 	
 	/*
 	* The initial mode and and only supported mode default to OMNI_ON_POLY.
 	*/
-	@:overload private function new(info : javax.sound.midi.MidiDevice.MidiDevice_Info) : Void;
+	@:overload @:protected private function new(info : javax.sound.midi.MidiDevice.MidiDevice_Info) : Void;
 	
-	@:overload public function getDeviceInfo() : javax.sound.midi.MidiDevice.MidiDevice_Info;
+	@:overload @:public public function getDeviceInfo() : javax.sound.midi.MidiDevice.MidiDevice_Info;
 	
 	/** Open the device from an aplication program.
 	* Setting the open reference count to -1 here prevents Transmitters and Receivers that
 	* opened the the device implicitly from closing it. The only way to close the device after
 	* this call is a call to close().
 	*/
-	@:overload public function open() : Void;
+	@:overload @:public public function open() : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/** Close the device for an object that implicitely opened it.
 	* This method is intended to be used by Transmitter.close() and Receiver.close().
@@ -67,32 +67,32 @@ package com.sun.media.sound;
 	* @param object The object that might have been opening the device implicitely (for now,
 	* this may be a Transmitter or receiver).
 	*/
-	@:overload public function closeInternal(object : Dynamic) : Void;
+	@:overload @:public public function closeInternal(object : Dynamic) : Void;
 	
-	@:overload public function doClose() : Void;
+	@:overload @:public public function doClose() : Void;
 	
-	@:overload public function isOpen() : Bool;
+	@:overload @:public public function isOpen() : Bool;
 	
-	@:overload private function implClose() : Void;
+	@:overload @:protected private function implClose() : Void;
 	
 	/**
 	* This implementation always returns -1.
 	* Devices that actually provide this should over-ride
 	* this method.
 	*/
-	@:overload public function getMicrosecondPosition() : haxe.Int64;
+	@:overload @:public public function getMicrosecondPosition() : haxe.Int64;
 	
 	/** Return the maximum number of Receivers supported by this device.
 	Depending on the return value of hasReceivers(), this method returns either 0 or -1.
 	Subclasses should rather override hasReceivers() than override this method.
 	*/
-	@:overload @:final public function getMaxReceivers() : Int;
+	@:overload @:public @:final public function getMaxReceivers() : Int;
 	
 	/** Return the maximum number of Transmitters supported by this device.
 	Depending on the return value of hasTransmitters(), this method returns either 0 or -1.
 	Subclasses should override hasTransmitters().
 	*/
-	@:overload @:final public function getMaxTransmitters() : Int;
+	@:overload @:public @:final public function getMaxTransmitters() : Int;
 	
 	/** Retrieve a Receiver for this device.
 	This method returns the value returned by createReceiver(), if it doesn't throw
@@ -101,28 +101,28 @@ package com.sun.media.sound;
 	If createReceiver returns a Receiver, it is added to the internal list
 	of Receivers (see getReceiversList)
 	*/
-	@:overload @:final public function getReceiver() : javax.sound.midi.Receiver;
+	@:overload @:public @:final public function getReceiver() : javax.sound.midi.Receiver;
 	
-	@:overload @:final public function getReceivers() : java.util.List<javax.sound.midi.Receiver>;
+	@:overload @:public @:final public function getReceivers() : java.util.List<javax.sound.midi.Receiver>;
 	
 	/**
 	* This implementation uses createTransmitter, which may throw an exception.
 	* If a transmitter is returned in createTransmitter, it is added to the internal
 	* TransmitterList
 	*/
-	@:overload @:final public function getTransmitter() : javax.sound.midi.Transmitter;
+	@:overload @:public @:final public function getTransmitter() : javax.sound.midi.Transmitter;
 	
-	@:overload @:final public function getTransmitters() : java.util.List<javax.sound.midi.Transmitter>;
+	@:overload @:public @:final public function getTransmitters() : java.util.List<javax.sound.midi.Transmitter>;
 	
 	/** Retrieve a Receiver and open the device implicitly.
 	This method is called by MidiSystem.getReceiver().
 	*/
-	@:overload public function getReceiverReferenceCounting() : javax.sound.midi.Receiver;
+	@:overload @:public public function getReceiverReferenceCounting() : javax.sound.midi.Receiver;
 	
 	/** Retrieve a Transmitter and open the device implicitly.
 	This method is called by MidiSystem.getTransmitter().
 	*/
-	@:overload public function getTransmitterReferenceCounting() : javax.sound.midi.Transmitter;
+	@:overload @:public public function getTransmitterReferenceCounting() : javax.sound.midi.Transmitter;
 	
 	/** Returns if this device supports Receivers.
 	Subclasses that use Receivers should override this method to
@@ -130,7 +130,7 @@ package com.sun.media.sound;
 
 	@return true, if the device supports Receivers, false otherwise.
 	*/
-	@:overload private function hasReceivers() : Bool;
+	@:overload @:protected private function hasReceivers() : Bool;
 	
 	/** Create a Receiver object.
 	throwing an exception here means that Receivers aren't enabled.
@@ -139,11 +139,11 @@ package com.sun.media.sound;
 	Classes overriding this method should also override hasReceivers()
 	to return true.
 	*/
-	@:overload private function createReceiver() : javax.sound.midi.Receiver;
+	@:overload @:protected private function createReceiver() : javax.sound.midi.Receiver;
 	
 	/** Return the internal list of Transmitters, possibly creating it first.
 	*/
-	@:overload private function getTransmitterList() : com.sun.media.sound.AbstractMidiDevice.AbstractMidiDevice_TransmitterList;
+	@:overload @:protected private function getTransmitterList() : com.sun.media.sound.AbstractMidiDevice.AbstractMidiDevice_TransmitterList;
 	
 	/** Returns if this device supports Transmitters.
 	Subclasses that use Transmitters should override this method to
@@ -151,7 +151,7 @@ package com.sun.media.sound;
 
 	@return true, if the device supports Transmitters, false otherwise.
 	*/
-	@:overload private function hasTransmitters() : Bool;
+	@:overload @:protected private function hasTransmitters() : Bool;
 	
 	/** Create a Transmitter object.
 	throwing an exception here means that Transmitters aren't enabled.
@@ -160,14 +160,14 @@ package com.sun.media.sound;
 	Classes overriding this method should also override hasTransmitters()
 	to return true.
 	*/
-	@:overload private function createTransmitter() : javax.sound.midi.Transmitter;
+	@:overload @:protected private function createTransmitter() : javax.sound.midi.Transmitter;
 	
-	@:overload @:abstract private function implOpen() : Void;
+	@:overload @:protected @:abstract private function implOpen() : Void;
 	
 	/**
 	* close this device if discarded by the garbage collector
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }
@@ -184,20 +184,20 @@ This is necessary for Receivers retrieved via MidiSystem.getReceiver()
 	Receiver. Therefore, subclasses should not override this method.
 	Instead, they should implement implSend().
 	*/
-	@:overload @:synchronized public function send(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function send(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
 	
-	@:overload @:abstract private function implSend(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
+	@:overload @:protected @:abstract private function implSend(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
 	
 	/** Close the Receiver.
 	* Here, the call to the magic method closeInternal() takes place.
 	* Therefore, subclasses that override this method must call
 	* 'super.close()'.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function getMidiDevice() : javax.sound.midi.MidiDevice;
+	@:overload @:public public function getMidiDevice() : javax.sound.midi.MidiDevice;
 	
-	@:overload private function isOpen() : Bool;
+	@:overload @:protected private function isOpen() : Bool;
 	
 	
 }
@@ -212,20 +212,20 @@ This is necessary for Receivers retrieved via MidiSystem.getReceiver()
 */
 @:native('com$sun$media$sound$AbstractMidiDevice$BasicTransmitter') extern class AbstractMidiDevice_BasicTransmitter implements javax.sound.midi.MidiDeviceTransmitter
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload public function setReceiver(receiver : javax.sound.midi.Receiver) : Void;
+	@:overload @:public public function setReceiver(receiver : javax.sound.midi.Receiver) : Void;
 	
-	@:overload public function getReceiver() : javax.sound.midi.Receiver;
+	@:overload @:public public function getReceiver() : javax.sound.midi.Receiver;
 	
 	/** Close the Transmitter.
 	* Here, the call to the magic method closeInternal() takes place.
 	* Therefore, subclasses that override this method must call
 	* 'super.close()'.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function getMidiDevice() : javax.sound.midi.MidiDevice;
+	@:overload @:public public function getMidiDevice() : javax.sound.midi.MidiDevice;
 	
 	
 }

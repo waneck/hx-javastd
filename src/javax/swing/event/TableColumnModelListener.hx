@@ -26,22 +26,22 @@ package javax.swing.event;
 extern interface TableColumnModelListener extends java.util.EventListener
 {
 	/** Tells listeners that a column was added to the model. */
-	@:overload public function columnAdded(e : javax.swing.event.TableColumnModelEvent) : Void;
+	@:overload @:public public function columnAdded(e : javax.swing.event.TableColumnModelEvent) : Void;
 	
 	/** Tells listeners that a column was removed from the model. */
-	@:overload public function columnRemoved(e : javax.swing.event.TableColumnModelEvent) : Void;
+	@:overload @:public public function columnRemoved(e : javax.swing.event.TableColumnModelEvent) : Void;
 	
 	/** Tells listeners that a column was repositioned. */
-	@:overload public function columnMoved(e : javax.swing.event.TableColumnModelEvent) : Void;
+	@:overload @:public public function columnMoved(e : javax.swing.event.TableColumnModelEvent) : Void;
 	
 	/** Tells listeners that a column was moved due to a margin change. */
-	@:overload public function columnMarginChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function columnMarginChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	/**
 	* Tells listeners that the selection model of the
 	* TableColumnModel changed.
 	*/
-	@:overload public function columnSelectionChanged(e : javax.swing.event.ListSelectionEvent) : Void;
+	@:overload @:public public function columnSelectionChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	
 	
 }

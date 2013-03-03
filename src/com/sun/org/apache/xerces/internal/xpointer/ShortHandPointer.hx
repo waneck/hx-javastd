@@ -20,18 +20,18 @@ package com.sun.org.apache.xerces.internal.xpointer;
 */
 @:internal extern class ShortHandPointer implements com.sun.org.apache.xerces.internal.xpointer.XPointerPart
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
 	/**
 	* The XPointerProcessor takes care of this.  Simply set the ShortHand Pointer here.
 	*
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerPart#parseXPointer(java.lang.String)
 	*/
-	@:overload public function parseXPointer(part : String) : Void;
+	@:overload @:public public function parseXPointer(part : String) : Void;
 	
-	@:overload public function resolveXPointer(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations, event : Int) : Bool;
+	@:overload @:public public function resolveXPointer(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations, event : Int) : Bool;
 	
 	/**
 	* Rerturns the DTD determine-ID
@@ -41,7 +41,7 @@ package com.sun.org.apache.xerces.internal.xpointer;
 	* @return String
 	* @throws XNIException
 	*/
-	@:overload public function getDTDDeterminedID(attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, index : Int) : String;
+	@:overload @:public public function getDTDDeterminedID(attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, index : Int) : String;
 	
 	/**
 	* Returns the schema-determined-ID.
@@ -52,7 +52,7 @@ package com.sun.org.apache.xerces.internal.xpointer;
 	* @return A String containing the schema-determined ID.
 	* @throws XNIException
 	*/
-	@:overload public function getSchemaDeterminedID(attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, index : Int) : String;
+	@:overload @:public public function getSchemaDeterminedID(attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, index : Int) : String;
 	
 	/**
 	* Not quite sure how this can be correctly implemented.
@@ -62,41 +62,41 @@ package com.sun.org.apache.xerces.internal.xpointer;
 	* @return String - We return null since we currenly do not supprt this.
 	* @throws XNIException
 	*/
-	@:overload public function getChildrenSchemaDeterminedID(attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, index : Int) : String;
+	@:overload @:public public function getChildrenSchemaDeterminedID(attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, index : Int) : String;
 	
 	/**
 	*
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerPart#isFragmentResolved()
 	*/
-	@:overload public function isFragmentResolved() : Bool;
+	@:overload @:public public function isFragmentResolved() : Bool;
 	
 	/**
 	*
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerPart#isChildFragmentResolved()
 	*/
-	@:overload public function isChildFragmentResolved() : Bool;
+	@:overload @:public public function isChildFragmentResolved() : Bool;
 	
 	/**
 	* Returns the name of the ShortHand pointer
 	*
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerPart#getSchemeName()
 	*/
-	@:overload public function getSchemeName() : String;
+	@:overload @:public public function getSchemeName() : String;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerPart#getSchemeData()
 	*/
-	@:overload public function getSchemeData() : String;
+	@:overload @:public public function getSchemeData() : String;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerPart#setSchemeName(java.lang.String)
 	*/
-	@:overload public function setSchemeName(schemeName : String) : Void;
+	@:overload @:public public function setSchemeName(schemeName : String) : Void;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerPart#setSchemeData(java.lang.String)
 	*/
-	@:overload public function setSchemeData(schemeData : String) : Void;
+	@:overload @:public public function setSchemeData(schemeData : String) : Void;
 	
 	
 }

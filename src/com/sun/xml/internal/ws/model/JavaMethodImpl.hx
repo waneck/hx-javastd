@@ -31,33 +31,33 @@ extern class JavaMethodImpl implements com.sun.xml.internal.ws.api.model.JavaMet
 	* @param seiMethod : corresponding SEI Method.
 	*                  Is there is no SEI, it should be Implementation class method
 	*/
-	@:overload public function new(owner : com.sun.xml.internal.ws.model.AbstractSEIModelImpl, method : java.lang.reflect.Method, seiMethod : java.lang.reflect.Method) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.ws.model.AbstractSEIModelImpl, method : java.lang.reflect.Method, seiMethod : java.lang.reflect.Method) : Void;
 	
-	@:overload public function getOwner() : com.sun.xml.internal.ws.api.model.SEIModel;
+	@:overload @:public public function getOwner() : com.sun.xml.internal.ws.api.model.SEIModel;
 	
 	/**
 	* @see {@link JavaMethod}
 	*
 	* @return Returns the method.
 	*/
-	@:overload public function getMethod() : java.lang.reflect.Method;
+	@:overload @:public public function getMethod() : java.lang.reflect.Method;
 	
 	/**
 	* @see {@link JavaMethod}
 	*
 	* @return Returns the SEI method where annotations are present
 	*/
-	@:overload public function getSEIMethod() : java.lang.reflect.Method;
+	@:overload @:public public function getSEIMethod() : java.lang.reflect.Method;
 	
 	/**
 	* @return Returns the mep.
 	*/
-	@:overload public function getMEP() : com.sun.xml.internal.ws.api.model.MEP;
+	@:overload @:public public function getMEP() : com.sun.xml.internal.ws.api.model.MEP;
 	
 	/**
 	* @return the Binding object
 	*/
-	@:overload public function getBinding() : com.sun.xml.internal.ws.model.soap.SOAPBindingImpl;
+	@:overload @:public public function getBinding() : com.sun.xml.internal.ws.model.soap.SOAPBindingImpl;
 	
 	/**
 	* Returns the {@link WSDLBoundOperation} Operation associated with {@link this}
@@ -65,35 +65,35 @@ extern class JavaMethodImpl implements com.sun.xml.internal.ws.api.model.JavaMet
 	*
 	* @return the WSDLBoundOperation for this JavaMethod
 	*/
-	@:overload public function getOperation() : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
+	@:overload @:public public function getOperation() : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
 	
-	@:overload public function setOperationName(name : String) : Void;
+	@:overload @:public public function setOperationName(name : String) : Void;
 	
-	@:overload public function getOperationName() : String;
+	@:overload @:public public function getOperationName() : String;
 	
-	@:overload public function getRequestMessageName() : String;
+	@:overload @:public public function getRequestMessageName() : String;
 	
-	@:overload public function getResponseMessageName() : String;
+	@:overload @:public public function getResponseMessageName() : String;
 	
 	/**
 	* @return soap:Body's first child name for request message.
 	*/
-	@:overload public function getRequestPayloadName() : javax.xml.namespace.QName;
+	@:overload @:public public function getRequestPayloadName() : javax.xml.namespace.QName;
 	
 	/**
 	* @return soap:Body's first child name for response message.
 	*/
-	@:overload public function getResponsePayloadName() : javax.xml.namespace.QName;
+	@:overload @:public public function getResponsePayloadName() : javax.xml.namespace.QName;
 	
 	/**
 	* @return returns unmodifiable list of request parameters
 	*/
-	@:overload public function getRequestParameters() : java.util.List<com.sun.xml.internal.ws.model.ParameterImpl>;
+	@:overload @:public public function getRequestParameters() : java.util.List<com.sun.xml.internal.ws.model.ParameterImpl>;
 	
 	/**
 	* @return returns unmodifiable list of response parameters
 	*/
-	@:overload public function getResponseParameters() : java.util.List<com.sun.xml.internal.ws.model.ParameterImpl>;
+	@:overload @:public public function getResponseParameters() : java.util.List<com.sun.xml.internal.ws.model.ParameterImpl>;
 	
 	/**
 	* @return Returns number of java method parameters - that will be all the
@@ -101,36 +101,36 @@ extern class JavaMethodImpl implements com.sun.xml.internal.ws.api.model.JavaMet
 	*
 	* @deprecated no longer use in the new architecture
 	*/
-	@:overload public function getInputParametersCount() : Int;
+	@:overload @:public public function getInputParametersCount() : Int;
 	
 	/**
 	* @param exceptionClass
 	* @return CheckedException corresponding to the exceptionClass. Returns
 	*         null if not found.
 	*/
-	@:overload public function getCheckedException(exceptionClass : Class<Dynamic>) : com.sun.xml.internal.ws.model.CheckedExceptionImpl;
+	@:overload @:public public function getCheckedException(exceptionClass : Class<Dynamic>) : com.sun.xml.internal.ws.model.CheckedExceptionImpl;
 	
 	/**
 	* @return a list of checked Exceptions thrown by this method
 	*/
-	@:overload public function getCheckedExceptions() : java.util.List<com.sun.xml.internal.ws.model.CheckedExceptionImpl>;
+	@:overload @:public public function getCheckedExceptions() : java.util.List<com.sun.xml.internal.ws.model.CheckedExceptionImpl>;
 	
-	@:overload public function getInputAction() : String;
+	@:overload @:public public function getInputAction() : String;
 	
-	@:overload public function getOutputAction() : String;
+	@:overload @:public public function getOutputAction() : String;
 	
 	/**
 	* @param detailType
 	* @return Gets the CheckedException corresponding to detailType. Returns
 	*         null if no CheckedExcpetion with the detailType found.
 	*/
-	@:overload public function getCheckedException(detailType : com.sun.xml.internal.bind.api.TypeReference) : com.sun.xml.internal.ws.model.CheckedExceptionImpl;
+	@:overload @:public public function getCheckedException(detailType : com.sun.xml.internal.bind.api.TypeReference) : com.sun.xml.internal.ws.model.CheckedExceptionImpl;
 	
 	/**
 	* Returns if the java method  is async
 	* @return if this is an Asynch
 	*/
-	@:overload public function isAsync() : Bool;
+	@:overload @:public public function isAsync() : Bool;
 	
 	
 }

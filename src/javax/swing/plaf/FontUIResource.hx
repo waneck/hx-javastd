@@ -43,9 +43,9 @@ extern class FontUIResource extends java.awt.Font implements javax.swing.plaf.UI
 	* @author Hans Muller
 	*
 	*/
-	@:overload public function new(name : String, style : Int, size : Int) : Void;
+	@:overload @:public public function new(name : String, style : Int, size : Int) : Void;
 	
-	@:overload public function new(font : java.awt.Font) : Void;
+	@:overload @:public public function new(font : java.awt.Font) : Void;
 	
 	
 }

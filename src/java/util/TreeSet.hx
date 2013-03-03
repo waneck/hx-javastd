@@ -101,7 +101,7 @@ package java.util;
 	* integers), the {@code add} call will throw a
 	* {@code ClassCastException}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new, empty tree set, sorted according to the specified
@@ -116,7 +116,7 @@ package java.util;
 	*        If {@code null}, the {@linkplain Comparable natural
 	*        ordering} of the elements will be used.
 	*/
-	@:overload public function new(comparator : java.util.Comparator<E>) : Void;
+	@:overload @:public public function new(comparator : java.util.Comparator<E>) : Void;
 	
 	/**
 	* Constructs a new tree set containing the elements in the specified
@@ -132,7 +132,7 @@ package java.util;
 	*         not {@link Comparable}, or are not mutually comparable
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload public function new(c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	/**
 	* Constructs a new tree set containing the same elements and
@@ -141,14 +141,14 @@ package java.util;
 	* @param s sorted set whose elements will comprise the new set
 	* @throws NullPointerException if the specified sorted set is null
 	*/
-	@:overload public function new(s : java.util.SortedSet<E>) : Void;
+	@:overload @:public public function new(s : java.util.SortedSet<E>) : Void;
 	
 	/**
 	* Returns an iterator over the elements in this set in ascending order.
 	*
 	* @return an iterator over the elements in this set in ascending order
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
 	/**
 	* Returns an iterator over the elements in this set in descending order.
@@ -156,26 +156,26 @@ package java.util;
 	* @return an iterator over the elements in this set in descending order
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function descendingIterator() : java.util.Iterator<E>;
+	@:require(java6) @:overload @:public public function descendingIterator() : java.util.Iterator<E>;
 	
 	/**
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function descendingSet() : java.util.NavigableSet<E>;
+	@:require(java6) @:overload @:public public function descendingSet() : java.util.NavigableSet<E>;
 	
 	/**
 	* Returns the number of elements in this set (its cardinality).
 	*
 	* @return the number of elements in this set (its cardinality)
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns {@code true} if this set contains no elements.
 	*
 	* @return {@code true} if this set contains no elements
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns {@code true} if this set contains the specified element.
@@ -191,7 +191,7 @@ package java.util;
 	*         and this set uses natural ordering, or its comparator
 	*         does not permit null elements
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Adds the specified element to this set if it is not already present.
@@ -210,7 +210,7 @@ package java.util;
 	*         and this set uses natural ordering, or its comparator
 	*         does not permit null elements
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* Removes the specified element from this set if it is present.
@@ -229,13 +229,13 @@ package java.util;
 	*         and this set uses natural ordering, or its comparator
 	*         does not permit null elements
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Removes all of the elements from this set.
 	* The set will be empty after this call returns.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Adds all of the elements in the specified collection to this set.
@@ -248,7 +248,7 @@ package java.util;
 	*         if any element is null and this set uses natural ordering, or
 	*         its comparator does not permit null elements
 	*/
-	@:overload override public function addAll(c : java.util.Collection<E>) : Bool;
+	@:overload @:public override public function addAll(c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -258,7 +258,7 @@ package java.util;
 	* @throws IllegalArgumentException {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function subSet(fromElement : E, fromInclusive : Bool, toElement : E, toInclusive : Bool) : java.util.NavigableSet<E>;
+	@:require(java6) @:overload @:public public function subSet(fromElement : E, fromInclusive : Bool, toElement : E, toInclusive : Bool) : java.util.NavigableSet<E>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -268,7 +268,7 @@ package java.util;
 	* @throws IllegalArgumentException {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function headSet(toElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
+	@:require(java6) @:overload @:public public function headSet(toElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -278,7 +278,7 @@ package java.util;
 	* @throws IllegalArgumentException {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function tailSet(fromElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
+	@:require(java6) @:overload @:public public function tailSet(fromElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -287,7 +287,7 @@ package java.util;
 	*         or its comparator does not permit null elements
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function subSet(fromElement : E, toElement : E) : java.util.SortedSet<E>;
+	@:overload @:public public function subSet(fromElement : E, toElement : E) : java.util.SortedSet<E>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -296,7 +296,7 @@ package java.util;
 	*         not permit null elements
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function headSet(toElement : E) : java.util.SortedSet<E>;
+	@:overload @:public public function headSet(toElement : E) : java.util.SortedSet<E>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -305,19 +305,19 @@ package java.util;
 	*         not permit null elements
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function tailSet(fromElement : E) : java.util.SortedSet<E>;
+	@:overload @:public public function tailSet(fromElement : E) : java.util.SortedSet<E>;
 	
-	@:overload public function comparator() : java.util.Comparator<E>;
-	
-	/**
-	* @throws NoSuchElementException {@inheritDoc}
-	*/
-	@:overload public function first() : E;
+	@:overload @:public public function comparator() : java.util.Comparator<E>;
 	
 	/**
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function last() : E;
+	@:overload @:public public function first() : E;
+	
+	/**
+	* @throws NoSuchElementException {@inheritDoc}
+	*/
+	@:overload @:public public function last() : E;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -326,7 +326,7 @@ package java.util;
 	*         does not permit null elements
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function lower(e : E) : E;
+	@:require(java6) @:overload @:public public function lower(e : E) : E;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -335,7 +335,7 @@ package java.util;
 	*         does not permit null elements
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function floor(e : E) : E;
+	@:require(java6) @:overload @:public public function floor(e : E) : E;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -344,7 +344,7 @@ package java.util;
 	*         does not permit null elements
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function ceiling(e : E) : E;
+	@:require(java6) @:overload @:public public function ceiling(e : E) : E;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -353,17 +353,17 @@ package java.util;
 	*         does not permit null elements
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function higher(e : E) : E;
+	@:require(java6) @:overload @:public public function higher(e : E) : E;
 	
 	/**
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function pollFirst() : E;
+	@:require(java6) @:overload @:public public function pollFirst() : E;
 	
 	/**
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function pollLast() : E;
+	@:require(java6) @:overload @:public public function pollLast() : E;
 	
 	/**
 	* Returns a shallow copy of this {@code TreeSet} instance. (The elements
@@ -371,7 +371,7 @@ package java.util;
 	*
 	* @return a shallow copy of this set
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

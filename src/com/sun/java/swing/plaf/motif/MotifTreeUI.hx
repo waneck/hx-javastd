@@ -40,21 +40,21 @@ extern class MotifTreeUI extends javax.swing.plaf.basic.BasicTreeUI
 	/**
 	* creates a UI object to represent a Motif Tree widget
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function paintVerticalLine(g : java.awt.Graphics, c : javax.swing.JComponent, x : Int, top : Int, bottom : Int) : Void;
+	@:overload @:protected override private function paintVerticalLine(g : java.awt.Graphics, c : javax.swing.JComponent, x : Int, top : Int, bottom : Int) : Void;
 	
-	@:overload override private function paintHorizontalLine(g : java.awt.Graphics, c : javax.swing.JComponent, y : Int, left : Int, right : Int) : Void;
+	@:overload @:protected override private function paintHorizontalLine(g : java.awt.Graphics, c : javax.swing.JComponent, y : Int, left : Int, right : Int) : Void;
 	
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Returns the default cell renderer that is used to do the
 	* stamping of each node.
 	*/
-	@:overload override public function createDefaultCellRenderer() : javax.swing.tree.TreeCellRenderer;
+	@:overload @:public override public function createDefaultCellRenderer() : javax.swing.tree.TreeCellRenderer;
 	
 	
 }
@@ -70,15 +70,15 @@ extern class MotifTreeUI extends javax.swing.plaf.basic.BasicTreeUI
 */
 @:native('com$sun$java$swing$plaf$motif$MotifTreeUI$MotifExpandedIcon') extern class MotifTreeUI_MotifExpandedIcon implements javax.swing.Icon implements java.io.Serializable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function createExpandedIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function createExpandedIcon() : javax.swing.Icon;
 	
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
@@ -94,9 +94,9 @@ extern class MotifTreeUI extends javax.swing.plaf.basic.BasicTreeUI
 */
 @:native('com$sun$java$swing$plaf$motif$MotifTreeUI$MotifCollapsedIcon') extern class MotifTreeUI_MotifCollapsedIcon extends com.sun.java.swing.plaf.motif.MotifTreeUI.MotifTreeUI_MotifExpandedIcon
 {
-	@:overload public static function createCollapsedIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function createCollapsedIcon() : javax.swing.Icon;
 	
-	@:overload override public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public override public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
 	
 }

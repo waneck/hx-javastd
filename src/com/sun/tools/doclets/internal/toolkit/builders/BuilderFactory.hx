@@ -40,13 +40,13 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param configuration the configuration for the current doclet
 	* being executed.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
 	
 	/**
 	* Return the builder that builds the constant summary.
 	* @return the builder that builds the constant summary.
 	*/
-	@:overload public function getConstantsSummaryBuider() : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
+	@:overload @:public public function getConstantsSummaryBuider() : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
 	
 	/**
 	* Return the builder that builds the package summary.
@@ -56,7 +56,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param nextPkg the next package being documented.
 	* @return the builder that builds the constant summary.
 	*/
-	@:overload public function getPackageSummaryBuilder(pkg : com.sun.javadoc.PackageDoc, prevPkg : com.sun.javadoc.PackageDoc, nextPkg : com.sun.javadoc.PackageDoc) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
+	@:overload @:public public function getPackageSummaryBuilder(pkg : com.sun.javadoc.PackageDoc, prevPkg : com.sun.javadoc.PackageDoc, nextPkg : com.sun.javadoc.PackageDoc) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
 	
 	/**
 	* Return the builder for the class.
@@ -68,7 +68,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @return the writer for the class.  Return null if this
 	* writer is not supported by the doclet.
 	*/
-	@:overload public function getClassBuilder(classDoc : com.sun.javadoc.ClassDoc, prevClass : com.sun.javadoc.ClassDoc, nextClass : com.sun.javadoc.ClassDoc, classTree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
+	@:overload @:public public function getClassBuilder(classDoc : com.sun.javadoc.ClassDoc, prevClass : com.sun.javadoc.ClassDoc, nextClass : com.sun.javadoc.ClassDoc, classTree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
 	
 	/**
 	* Return the builder for the annotation type.
@@ -79,14 +79,14 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @return the writer for the annotation type.  Return null if this
 	* writer is not supported by the doclet.
 	*/
-	@:overload public function getAnnotationTypeBuilder(annotationType : com.sun.javadoc.AnnotationTypeDoc, prevType : com.sun.javadoc.Type, nextType : com.sun.javadoc.Type) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
+	@:overload @:public public function getAnnotationTypeBuilder(annotationType : com.sun.javadoc.AnnotationTypeDoc, prevType : com.sun.javadoc.Type, nextType : com.sun.javadoc.Type) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
 	
 	/**
 	* Return an instance of the method builder for the given class.
 	*
 	* @return an instance of the method builder for the given class.
 	*/
-	@:overload public function getMethodBuilder(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
+	@:overload @:public public function getMethodBuilder(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
 	
 	/**
 	* Return an instance of the annotation type member builder for the given
@@ -95,7 +95,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @return an instance of the annotation type memebr builder for the given
 	*         annotation type.
 	*/
-	@:overload public function getAnnotationTypeOptionalMemberBuilder(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
+	@:overload @:public public function getAnnotationTypeOptionalMemberBuilder(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
 	
 	/**
 	* Return an instance of the annotation type member builder for the given
@@ -104,42 +104,42 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @return an instance of the annotation type memebr builder for the given
 	*         annotation type.
 	*/
-	@:overload public function getAnnotationTypeRequiredMemberBuilder(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
+	@:overload @:public public function getAnnotationTypeRequiredMemberBuilder(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
 	
 	/**
 	* Return an instance of the enum constants builder for the given class.
 	*
 	* @return an instance of the enum constants builder for the given class.
 	*/
-	@:overload public function getEnumConstantsBuilder(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
+	@:overload @:public public function getEnumConstantsBuilder(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
 	
 	/**
 	* Return an instance of the field builder for the given class.
 	*
 	* @return an instance of the field builder for the given class.
 	*/
-	@:overload public function getFieldBuilder(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
+	@:overload @:public public function getFieldBuilder(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
 	
 	/**
 	* Return an instance of the property builder for the given class.
 	*
 	* @return an instance of the field builder for the given class.
 	*/
-	@:overload public function getPropertyBuilder(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
+	@:overload @:public public function getPropertyBuilder(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
 	
 	/**
 	* Return an instance of the constructor builder for the given class.
 	*
 	* @return an instance of the constructor builder for the given class.
 	*/
-	@:overload public function getConstructorBuilder(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
+	@:overload @:public public function getConstructorBuilder(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
 	
 	/**
 	* Return an instance of the member summary builder for the given class.
 	*
 	* @return an instance of the member summary builder for the given class.
 	*/
-	@:overload public function getMemberSummaryBuilder(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
+	@:overload @:public public function getMemberSummaryBuilder(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
 	
 	/**
 	* Return an instance of the member summary builder for the given annotation
@@ -148,14 +148,14 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @return an instance of the member summary builder for the given
 	*         annotation type.
 	*/
-	@:overload public function getMemberSummaryBuilder(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
+	@:overload @:public public function getMemberSummaryBuilder(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
 	
 	/**
 	* Return the builder that builds the serialized form.
 	*
 	* @return the builder that builds the serialized form.
 	*/
-	@:overload public function getSerializedFormBuilder() : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
+	@:overload @:public public function getSerializedFormBuilder() : com.sun.tools.doclets.internal.toolkit.builders.AbstractBuilder;
 	
 	
 }

@@ -45,7 +45,7 @@ extern class DOMHelper
 	* null if we can't find a DOM implementation that permits creating
 	* new empty Documents.
 	*/
-	@:overload public static function createDocument(isSecureProcessing : Bool) : org.w3c.dom.Document;
+	@:overload @:public @:static public static function createDocument(isSecureProcessing : Bool) : org.w3c.dom.Document;
 	
 	/**
 	* DOM Level 1 did not have a standard mechanism for creating a new
@@ -57,7 +57,7 @@ extern class DOMHelper
 	* null if we can't find a DOM implementation that permits creating
 	* new empty Documents.
 	*/
-	@:overload public static function createDocument() : org.w3c.dom.Document;
+	@:overload @:public @:static public static function createDocument() : org.w3c.dom.Document;
 	
 	/**
 	* Tells, through the combination of the default-space attribute
@@ -71,7 +71,7 @@ extern class DOMHelper
 	* @throws javax.xml.transform.TransformerException
 	* @xsl.usage advanced
 	*/
-	@:overload public function shouldStripSourceNode(textNode : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function shouldStripSourceNode(textNode : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Supports the XPath function GenerateID by returning a unique
@@ -98,7 +98,7 @@ extern class DOMHelper
 	*
 	* @return a string which should be different for every Node object.
 	*/
-	@:overload public function getUniqueID(node : org.w3c.dom.Node) : String;
+	@:overload @:public public function getUniqueID(node : org.w3c.dom.Node) : String;
 	
 	/**
 	* Figure out whether node2 should be considered as being later
@@ -118,7 +118,7 @@ extern class DOMHelper
 	* You can think of this as
 	* <code>(node1.documentOrderPosition &lt;= node2.documentOrderPosition)</code>.
 	*/
-	@:overload public static function isNodeAfter(node1 : org.w3c.dom.Node, node2 : org.w3c.dom.Node) : Bool;
+	@:overload @:public @:static public static function isNodeAfter(node1 : org.w3c.dom.Node, node2 : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Use DTMNodeProxy to determine whether two nodes are the same.
@@ -127,7 +127,7 @@ extern class DOMHelper
 	* @param node2 The second DOM node to compare.
 	* @return true if the two nodes are the same.
 	*/
-	@:overload public static function isNodeTheSame(node1 : org.w3c.dom.Node, node2 : org.w3c.dom.Node) : Bool;
+	@:overload @:public @:static public static function isNodeTheSame(node1 : org.w3c.dom.Node, node2 : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Get the depth level of this node in the tree (equals 1 for
@@ -137,7 +137,7 @@ extern class DOMHelper
 	* @return the number of ancestors, plus one
 	* @xsl.usage internal
 	*/
-	@:overload public function getLevel(n : org.w3c.dom.Node) : java.StdTypes.Int16;
+	@:overload @:public public function getLevel(n : org.w3c.dom.Node) : java.StdTypes.Int16;
 	
 	/**
 	* Given an XML Namespace prefix and a context in which the prefix
@@ -158,35 +158,35 @@ extern class DOMHelper
 	* @return a String containing the Namespace URI which this prefix
 	* represents in the specified context.
 	*/
-	@:overload public function getNamespaceForPrefix(prefix : String, namespaceContext : org.w3c.dom.Element) : String;
+	@:overload @:public public function getNamespaceForPrefix(prefix : String, namespaceContext : org.w3c.dom.Element) : String;
 	
 	/** Object to put into the m_NSInfos table that tells that a node has not been
 	*  processed, but has xmlns namespace decls.  */
-	private static var m_NSInfoUnProcWithXMLNS(default, null) : com.sun.org.apache.xml.internal.utils.NSInfo;
+	@:protected @:static @:final private static var m_NSInfoUnProcWithXMLNS(default, null) : com.sun.org.apache.xml.internal.utils.NSInfo;
 	
 	/** Object to put into the m_NSInfos table that tells that a node has not been
 	*  processed, but has no xmlns namespace decls.  */
-	private static var m_NSInfoUnProcWithoutXMLNS(default, null) : com.sun.org.apache.xml.internal.utils.NSInfo;
+	@:protected @:static @:final private static var m_NSInfoUnProcWithoutXMLNS(default, null) : com.sun.org.apache.xml.internal.utils.NSInfo;
 	
 	/** Object to put into the m_NSInfos table that tells that a node has not been
 	*  processed, and has no xmlns namespace decls, and has no ancestor decls.  */
-	private static var m_NSInfoUnProcNoAncestorXMLNS(default, null) : com.sun.org.apache.xml.internal.utils.NSInfo;
+	@:protected @:static @:final private static var m_NSInfoUnProcNoAncestorXMLNS(default, null) : com.sun.org.apache.xml.internal.utils.NSInfo;
 	
 	/** Object to put into the m_NSInfos table that tells that a node has been
 	*  processed, and has xmlns namespace decls.  */
-	private static var m_NSInfoNullWithXMLNS(default, null) : com.sun.org.apache.xml.internal.utils.NSInfo;
+	@:protected @:static @:final private static var m_NSInfoNullWithXMLNS(default, null) : com.sun.org.apache.xml.internal.utils.NSInfo;
 	
 	/** Object to put into the m_NSInfos table that tells that a node has been
 	*  processed, and has no xmlns namespace decls.  */
-	private static var m_NSInfoNullWithoutXMLNS(default, null) : com.sun.org.apache.xml.internal.utils.NSInfo;
+	@:protected @:static @:final private static var m_NSInfoNullWithoutXMLNS(default, null) : com.sun.org.apache.xml.internal.utils.NSInfo;
 	
 	/** Object to put into the m_NSInfos table that tells that a node has been
 	*  processed, and has no xmlns namespace decls. and has no ancestor decls.  */
-	private static var m_NSInfoNullNoAncestorXMLNS(default, null) : com.sun.org.apache.xml.internal.utils.NSInfo;
+	@:protected @:static @:final private static var m_NSInfoNullNoAncestorXMLNS(default, null) : com.sun.org.apache.xml.internal.utils.NSInfo;
 	
 	/** Vector of node (odd indexes) and NSInfos (even indexes) that tell if
 	*  the given node is a candidate for ancestor namespace processing.  */
-	private var m_candidateNoAncestorXMLNS : java.util.Vector<Dynamic>;
+	@:protected private var m_candidateNoAncestorXMLNS : java.util.Vector<Dynamic>;
 	
 	/**
 	* Returns the namespace of the given node. Differs from simply getting
@@ -200,7 +200,7 @@ extern class DOMHelper
 	* Note that this is undefined for any nodes other than Elements and
 	* Attributes.
 	*/
-	@:overload public function getNamespaceOfNode(n : org.w3c.dom.Node) : String;
+	@:overload @:public public function getNamespaceOfNode(n : org.w3c.dom.Node) : String;
 	
 	/**
 	* Returns the local name of the given node. If the node's name begins
@@ -211,7 +211,7 @@ extern class DOMHelper
 	*
 	* @return String containing the Local Name
 	*/
-	@:overload public function getLocalNameOfNode(n : org.w3c.dom.Node) : String;
+	@:overload @:public public function getLocalNameOfNode(n : org.w3c.dom.Node) : String;
 	
 	/**
 	* Returns the element name with the namespace prefix (if any) replaced
@@ -225,7 +225,7 @@ extern class DOMHelper
 	* belongs to a namespace, or simply "localname" if it doesn't.
 	* @see #getExpandedAttributeName
 	*/
-	@:overload public function getExpandedElementName(elem : org.w3c.dom.Element) : String;
+	@:overload @:public public function getExpandedElementName(elem : org.w3c.dom.Element) : String;
 	
 	/**
 	* Returns the attribute name with the namespace prefix (if any) replaced
@@ -239,7 +239,7 @@ extern class DOMHelper
 	* belongs to a namespace, or simply "localname" if it doesn't.
 	* @see #getExpandedElementName
 	*/
-	@:overload public function getExpandedAttributeName(attr : org.w3c.dom.Attr) : String;
+	@:overload @:public public function getExpandedAttributeName(attr : org.w3c.dom.Attr) : String;
 	
 	/**
 	* Tell if the node is ignorable whitespace. Note that this can
@@ -256,7 +256,7 @@ extern class DOMHelper
 	* (Note that determining this last may require allowing for
 	* Entity References.)
 	*/
-	@:overload public function isIgnorableWhitespace(node : org.w3c.dom.Text) : Bool;
+	@:overload @:public public function isIgnorableWhitespace(node : org.w3c.dom.Text) : Bool;
 	
 	/**
 	* Get the first unparented node in the ancestor chain.
@@ -266,7 +266,7 @@ extern class DOMHelper
 	*
 	* @return the topmost ancestor.
 	*/
-	@:overload public function getRoot(node : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function getRoot(node : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Get the root node of the document tree, regardless of
@@ -286,7 +286,7 @@ extern class DOMHelper
 	* as can arise if the DOM has been edited rather than being generated
 	* by a parser.
 	*/
-	@:overload public function getRootNode(n : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function getRootNode(n : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Test whether the given node is a namespace decl node. In DOM Level 2
@@ -298,7 +298,7 @@ extern class DOMHelper
 	* @return boolean -- true iff the node is an Attr whose name is
 	* "xmlns" or has the "xmlns:" prefix.
 	*/
-	@:overload public function isNamespaceNode(n : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function isNamespaceNode(n : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Obtain the XPath-model parent of a DOM node -- ownerElement for Attrs,
@@ -326,7 +326,7 @@ extern class DOMHelper
 	* via the DOM Level 2 factory methods, but is possible if other
 	* mechanisms were used to obtain it
 	*/
-	@:overload public static function getParentOfNode(node : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:static public static function getParentOfNode(node : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Given an ID, return the element. This can work only if the document
@@ -346,7 +346,7 @@ extern class DOMHelper
 	* The node which has this unique identifier, or null if there
 	* is no such node or this DOM can't reliably recognize it.
 	*/
-	@:overload public function getElementByID(id : String, doc : org.w3c.dom.Document) : org.w3c.dom.Element;
+	@:overload @:public public function getElementByID(id : String, doc : org.w3c.dom.Document) : org.w3c.dom.Element;
 	
 	/**
 	* The getUnparsedEntityURI function returns the URI of the unparsed
@@ -383,13 +383,13 @@ extern class DOMHelper
 	* @return String containing the URI of the Unparsed Entity, or an
 	* empty string if no such entity exists.
 	*/
-	@:overload public function getUnparsedEntityURI(name : String, doc : org.w3c.dom.Document) : String;
+	@:overload @:public public function getUnparsedEntityURI(name : String, doc : org.w3c.dom.Document) : String;
 	
 	/**
 	* The factory object used for creating nodes
 	* in the result tree.
 	*/
-	private var m_DOMFactory : org.w3c.dom.Document;
+	@:protected private var m_DOMFactory : org.w3c.dom.Document;
 	
 	/**
 	* Store the factory object required to create DOM nodes
@@ -399,7 +399,7 @@ extern class DOMHelper
 	* @param domFactory The DOM Document Node within whose context
 	* the result tree will be built.
 	*/
-	@:overload public function setDOMFactory(domFactory : org.w3c.dom.Document) : Void;
+	@:overload @:public public function setDOMFactory(domFactory : org.w3c.dom.Document) : Void;
 	
 	/**
 	* Retrieve the factory object required to create DOM nodes
@@ -407,7 +407,7 @@ extern class DOMHelper
 	*
 	* @return The result tree's DOM Document Node.
 	*/
-	@:overload public function getDOMFactory() : org.w3c.dom.Document;
+	@:overload @:public public function getDOMFactory() : org.w3c.dom.Document;
 	
 	/**
 	* Get the textual contents of the node. See
@@ -420,7 +420,7 @@ extern class DOMHelper
 	* @see #getNodeData(Node,FastStringBuffer)
 	*
 	*/
-	@:overload public static function getNodeData(node : org.w3c.dom.Node) : String;
+	@:overload @:public @:static public static function getNodeData(node : org.w3c.dom.Node) : String;
 	
 	/**
 	* Retrieve the text content of a DOM subtree, appending it into a
@@ -439,7 +439,7 @@ extern class DOMHelper
 	* @param buf FastStringBuffer into which the contents of the text
 	* nodes are to be concatenated.
 	*/
-	@:overload public static function getNodeData(node : org.w3c.dom.Node, buf : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
+	@:overload @:public @:static public static function getNodeData(node : org.w3c.dom.Node, buf : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
 	
 	
 }

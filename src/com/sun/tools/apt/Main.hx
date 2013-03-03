@@ -29,21 +29,21 @@ extern class Main
 	* <tt>NullPointerException</tt> is thrown.
 	* @param args   The command line parameters.
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	/** Programatic interface.  If args is <tt>null</tt>, a
 	* <tt>NullPointerException</tt> is thrown.
 	* Output is directed to <tt>System.err</tt>.
 	* @param args   The command line parameters.
 	*/
-	@:overload public static function process(args : java.NativeArray<String>) : Int;
+	@:overload @:public @:static public static function process(args : java.NativeArray<String>) : Int;
 	
 	/** Programmatic interface.  If any argument
 	* is <tt>null</tt>, a <tt>NullPointerException</tt> is thrown.
 	* @param args   The command line parameters.
 	* @param out    Where the tool's output is directed.
 	*/
-	@:overload public static function process(out : java.io.PrintWriter, args : java.NativeArray<String>) : Int;
+	@:overload @:public @:static public static function process(out : java.io.PrintWriter, args : java.NativeArray<String>) : Int;
 	
 	/** Programmatic interface.  If <tt>factory</tt> or <tt>args</tt>
 	* is <tt>null</tt>, a <tt>NullPointerException</tt> is thrown.
@@ -54,7 +54,7 @@ extern class Main
 	* @param factory The annotation processor factory to use
 	* @param args    The command line parameters.
 	*/
-	@:overload public static function process(factory : com.sun.mirror.apt.AnnotationProcessorFactory, args : java.NativeArray<String>) : Int;
+	@:overload @:public @:static public static function process(factory : com.sun.mirror.apt.AnnotationProcessorFactory, args : java.NativeArray<String>) : Int;
 	
 	/** Programmatic interface.  If any argument
 	* is <tt>null</tt>, a <tt>NullPointerException</tt> is thrown.
@@ -65,7 +65,7 @@ extern class Main
 	* @param args   The command line parameters.
 	* @param out    Where the tool's output is directed.
 	*/
-	@:overload public static function process(factory : com.sun.mirror.apt.AnnotationProcessorFactory, out : java.io.PrintWriter, args : java.NativeArray<String>) : Int;
+	@:overload @:public @:static public static function process(factory : com.sun.mirror.apt.AnnotationProcessorFactory, out : java.io.PrintWriter, args : java.NativeArray<String>) : Int;
 	
 	
 }

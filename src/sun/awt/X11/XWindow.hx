@@ -25,136 +25,136 @@ package sun.awt.X11;
 */
 extern class XWindow extends sun.awt.X11.XBaseWindow implements sun.awt.X11ComponentPeer
 {
-	private var mwm_hints : sun.awt.X11.PropMwmHints;
+	@:protected private var mwm_hints : sun.awt.X11.PropMwmHints;
 	
-	private static var wm_protocols : sun.awt.X11.XAtom;
+	@:protected @:static private static var wm_protocols : sun.awt.X11.XAtom;
 	
-	private static var wm_delete_window : sun.awt.X11.XAtom;
+	@:protected @:static private static var wm_delete_window : sun.awt.X11.XAtom;
 	
-	private static var wm_take_focus : sun.awt.X11.XAtom;
+	@:protected @:static private static var wm_take_focus : sun.awt.X11.XAtom;
 	
-	private var graphicsConfig : sun.awt.X11GraphicsConfig;
+	@:protected private var graphicsConfig : sun.awt.X11GraphicsConfig;
 	
-	private var graphicsConfigData : sun.awt.X11.AwtGraphicsConfigData;
+	@:protected private var graphicsConfigData : sun.awt.X11.AwtGraphicsConfigData;
 	
-	public static var TARGET(default, null) : String;
+	@:public @:static @:final public static var TARGET(default, null) : String;
 	
-	@:overload private function initGraphicsConfiguration() : Void;
+	@:overload @:protected private function initGraphicsConfiguration() : Void;
 	
-	@:overload public function getGraphicsConfiguration() : java.awt.GraphicsConfiguration;
+	@:overload @:public public function getGraphicsConfiguration() : java.awt.GraphicsConfiguration;
 	
-	@:overload public function getGraphicsConfigurationData() : sun.awt.X11.AwtGraphicsConfigData;
+	@:overload @:public public function getGraphicsConfigurationData() : sun.awt.X11.AwtGraphicsConfigData;
 	
-	@:overload private function getWMClass() : java.NativeArray<String>;
+	@:overload @:protected private function getWMClass() : java.NativeArray<String>;
 	
-	@:overload public function getTarget() : Dynamic;
+	@:overload @:public public function getTarget() : Dynamic;
 	
-	@:overload public function getEventSource() : java.awt.Component;
+	@:overload @:public public function getEventSource() : java.awt.Component;
 	
-	@:overload public function getColorModel(transparency : Int) : java.awt.image.ColorModel;
+	@:overload @:public public function getColorModel(transparency : Int) : java.awt.image.ColorModel;
 	
-	@:overload public function getColorModel() : java.awt.image.ColorModel;
+	@:overload @:public public function getColorModel() : java.awt.image.ColorModel;
 	
-	@:overload public function getGraphics() : java.awt.Graphics;
+	@:overload @:public public function getGraphics() : java.awt.Graphics;
 	
-	@:overload public function getFontMetrics(font : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public public function getFontMetrics(font : java.awt.Font) : java.awt.FontMetrics;
 	
-	@:overload public function getTargetBounds() : java.awt.Rectangle;
+	@:overload @:public public function getTargetBounds() : java.awt.Rectangle;
 	
-	@:overload public function postEventToEventQueue(event : java.awt.AWTEvent) : Void;
+	@:overload @:public public function postEventToEventQueue(event : java.awt.AWTEvent) : Void;
 	
-	@:overload private function doEraseBackground() : Bool;
+	@:overload @:protected private function doEraseBackground() : Bool;
 	
-	@:overload @:final public function xSetBackground(c : java.awt.Color) : Void;
+	@:overload @:final @:public public function xSetBackground(c : java.awt.Color) : Void;
 	
-	@:overload public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public public function setBackground(c : java.awt.Color) : Void;
 	
-	@:overload public function getWinBackground() : java.awt.Color;
+	@:overload @:public public function getWinBackground() : java.awt.Color;
 	
-	@:overload public function isEmbedded() : Bool;
+	@:overload @:public public function isEmbedded() : Bool;
 	
-	@:overload public function repaint(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function repaint(x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function repaint() : Void;
+	@:overload @:public public function repaint() : Void;
 	
-	@:overload private function flush() : Void;
+	@:overload @:protected private function flush() : Void;
 	
-	@:overload public function popup(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function popup(x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload override public function handleExposeEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleExposeEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function handleExposeEvent(target : java.awt.Component, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function handleExposeEvent(target : java.awt.Component, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function handleButtonPressRelease(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleButtonPressRelease(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload override public function handleMotionNotify(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleMotionNotify(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload @:native public function x11inputMethodLookupString(event : haxe.Int64, keysymArray : java.NativeArray<haxe.Int64>) : Bool;
+	@:overload @:public @:native public function x11inputMethodLookupString(event : haxe.Int64, keysymArray : java.NativeArray<haxe.Int64>) : Bool;
 	
-	@:overload public function isMouseAbove() : Bool;
+	@:overload @:public public function isMouseAbove() : Bool;
 	
-	@:overload private function setMouseAbove(above : Bool) : Void;
+	@:overload @:protected private function setMouseAbove(above : Bool) : Void;
 	
-	@:overload private function enterNotify(window : haxe.Int64) : Void;
+	@:overload @:protected private function enterNotify(window : haxe.Int64) : Void;
 	
-	@:overload private function leaveNotify(window : haxe.Int64) : Void;
+	@:overload @:protected private function leaveNotify(window : haxe.Int64) : Void;
 	
-	@:overload override public function handleXCrossingEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleXCrossingEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function doLayout(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function doLayout(x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload override public function handleConfigureNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleConfigureNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload override public function handleMapNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleMapNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload override public function handleUnmapNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleUnmapNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload override public function handleKeyPress(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleKeyPress(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload override public function handleKeyRelease(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleKeyRelease(xev : sun.awt.X11.XEvent) : Void;
 	
 	/**
 	* Override this methods to get notifications when top-level window state changes. The state is
 	* meant in terms of ICCCM: WithdrawnState, IconicState, NormalState
 	*/
-	@:overload private function stateChanged(time : haxe.Int64, oldState : Int, newState : Int) : Void;
+	@:overload @:protected private function stateChanged(time : haxe.Int64, oldState : Int, newState : Int) : Void;
 	
-	@:overload override public function handlePropertyNotify(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handlePropertyNotify(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function reshape(bounds : java.awt.Rectangle) : Void;
+	@:overload @:public public function reshape(bounds : java.awt.Rectangle) : Void;
 	
-	@:overload public function reshape(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function reshape(x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function layout() : Void;
+	@:overload @:public public function layout() : Void;
 	
-	@:overload public function getSurfaceData() : sun.java2d.SurfaceData;
+	@:overload @:public public function getSurfaceData() : sun.java2d.SurfaceData;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public public function getLocationOnScreen() : java.awt.Point;
 	
-	@:overload public function postKeyEvent(id : Int, when : haxe.Int64, keyCode : Int, keyChar : Int, keyLocation : Int, state : Int, event : haxe.Int64, eventSize : Int, rawCode : haxe.Int64, unicodeFromPrimaryKeysym : Int, extendedKeyCode : Int) : Void;
+	@:overload @:public public function postKeyEvent(id : Int, when : haxe.Int64, keyCode : Int, keyChar : Int, keyLocation : Int, state : Int, event : haxe.Int64, eventSize : Int, rawCode : haxe.Int64, unicodeFromPrimaryKeysym : Int, extendedKeyCode : Int) : Void;
 	
 	/* These two methods are actually applicable to toplevel windows only.
 	* However, the functionality is required by both the XWindowPeer and
 	* XWarningWindow, both of which have the XWindow as a common ancestor.
 	* See XWM.setMotifDecor() for details.
 	*/
-	@:overload public function getMWMHints() : sun.awt.X11.PropMwmHints;
+	@:overload @:public public function getMWMHints() : sun.awt.X11.PropMwmHints;
 	
-	@:overload public function setMWMHints(hints : sun.awt.X11.PropMwmHints) : Void;
+	@:overload @:public public function setMWMHints(hints : sun.awt.X11.PropMwmHints) : Void;
 	
-	@:overload @:final private function initWMProtocols() : Void;
+	@:overload @:protected @:final private function initWMProtocols() : Void;
 	
 	/**
 	* Returns list of protocols which should be installed on this window.
 	* Descendants can override this method to add class-specific protocols
 	*/
-	@:overload private function getWMProtocols() : sun.awt.X11.XAtomList;
+	@:overload @:protected private function getWMProtocols() : sun.awt.X11.XAtomList;
 	
-	@:overload public function setFullScreenExclusiveModeState(state : Bool) : Void;
+	@:overload @:public public function setFullScreenExclusiveModeState(state : Bool) : Void;
 	
-	@:overload @:final public function isFullScreenExclusiveMode() : Bool;
+	@:overload @:public @:final public function isFullScreenExclusiveMode() : Bool;
 	
 	
 }

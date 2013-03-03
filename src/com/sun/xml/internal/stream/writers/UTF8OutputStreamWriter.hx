@@ -25,23 +25,23 @@ package com.sun.xml.internal.stream.writers;
 */
 extern class UTF8OutputStreamWriter extends java.io.Writer
 {
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
-	@:overload override public function write(c : Int) : Void;
+	@:overload @:public override public function write(c : Int) : Void;
 	
-	@:overload override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
-	@:overload override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
-	@:overload override public function write(str : String) : Void;
+	@:overload @:public override public function write(str : String) : Void;
 	
-	@:overload override public function write(str : String, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(str : String, off : Int, len : Int) : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

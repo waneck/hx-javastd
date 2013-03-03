@@ -30,9 +30,9 @@ extern class HKSCS extends sun.nio.cs.ext.MS950_HKSCS_XP
 	ExtendedCharsets class, because if we want to have a public HKSCS,
 	it probably should be HKSCS_2001 not HKSCS.
 */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	
 }

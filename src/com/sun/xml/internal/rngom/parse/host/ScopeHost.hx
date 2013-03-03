@@ -51,15 +51,15 @@ extern class ScopeHost extends com.sun.xml.internal.rngom.parse.host.GrammarSect
 	* @author
 	*      Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	private var lhs(default, null) : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:protected @:final private var lhs(default, null) : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	
-	private var rhs(default, null) : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:protected @:final private var rhs(default, null) : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	
-	@:overload private function new(lhs : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, rhs : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload @:protected private function new(lhs : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, rhs : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function makeParentRef(name : String, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeParentRef(name : String, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeRef(name : String, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeRef(name : String, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
 	
 }

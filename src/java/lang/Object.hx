@@ -54,7 +54,7 @@ package java.lang;
 	* @see    Class Literals, section 15.8.2 of
 	*         <cite>The Java&trade; Language Specification</cite>.
 	*/
-	@:overload @:final @:native public function getClass() : Class<Dynamic>;
+	@:overload @:public @:final @:native public function getClass() : Class<Dynamic>;
 	
 	/**
 	* Returns a hash code value for the object. This method is
@@ -91,7 +91,7 @@ package java.lang;
 	* @see     java.lang.Object#equals(java.lang.Object)
 	* @see     java.lang.System#identityHashCode
 	*/
-	@:overload @:native public function hashCode() : Int;
+	@:overload @:public @:native public function hashCode() : Int;
 	
 	/**
 	* Indicates whether some other object is "equal to" this one.
@@ -139,7 +139,7 @@ package java.lang;
 	* @see     #hashCode()
 	* @see     java.util.HashMap
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Creates and returns a copy of this object.  The precise meaning
@@ -201,7 +201,7 @@ package java.lang;
 	*               be cloned.
 	* @see java.lang.Cloneable
 	*/
-	@:overload @:native private function clone() : Dynamic;
+	@:overload @:protected @:native private function clone() : Dynamic;
 	
 	/**
 	* Returns a string representation of the object. In general, the
@@ -224,7 +224,7 @@ package java.lang;
 	*
 	* @return  a string representation of the object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Wakes up a single thread that is waiting on this object's
@@ -258,7 +258,7 @@ package java.lang;
 	* @see        java.lang.Object#notifyAll()
 	* @see        java.lang.Object#wait()
 	*/
-	@:overload @:final @:native public function notify() : Void;
+	@:overload @:public @:final @:native public function notify() : Void;
 	
 	/**
 	* Wakes up all threads that are waiting on this object's monitor. A
@@ -282,7 +282,7 @@ package java.lang;
 	* @see        java.lang.Object#notify()
 	* @see        java.lang.Object#wait()
 	*/
-	@:overload @:final @:native public function notifyAll() : Void;
+	@:overload @:public @:final @:native public function notifyAll() : Void;
 	
 	/**
 	* Causes the current thread to wait until either another thread invokes the
@@ -369,7 +369,7 @@ package java.lang;
 	* @see        java.lang.Object#notify()
 	* @see        java.lang.Object#notifyAll()
 	*/
-	@:overload @:final @:native public function wait(timeout : haxe.Int64) : Void;
+	@:overload @:public @:final @:native public function wait(timeout : haxe.Int64) : Void;
 	
 	/**
 	* Causes the current thread to wait until another thread invokes the
@@ -433,7 +433,7 @@ package java.lang;
 	*             status</i> of the current thread is cleared when
 	*             this exception is thrown.
 	*/
-	@:overload @:final public function wait(timeout : haxe.Int64, nanos : Int) : Void;
+	@:overload @:public @:final public function wait(timeout : haxe.Int64, nanos : Int) : Void;
 	
 	/**
 	* Causes the current thread to wait until another thread invokes the
@@ -473,7 +473,7 @@ package java.lang;
 	* @see        java.lang.Object#notify()
 	* @see        java.lang.Object#notifyAll()
 	*/
-	@:overload @:final public function wait() : Void;
+	@:overload @:public @:final public function wait() : Void;
 	
 	/**
 	* Called by the garbage collector on an object when garbage collection
@@ -522,7 +522,7 @@ package java.lang;
 	*
 	* @throws Throwable the {@code Exception} raised by this method
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

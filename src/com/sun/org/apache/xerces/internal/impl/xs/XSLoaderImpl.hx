@@ -23,7 +23,7 @@ extern class XSLoaderImpl implements com.sun.org.apache.xerces.internal.xs.XSLoa
 	/**
 	* No-args constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*  The configuration of a document. It maintains a table of recognized
@@ -49,7 +49,7 @@ extern class XSLoaderImpl implements com.sun.org.apache.xerces.internal.xs.XSLoa
 	* </dl></dd>
 	* </dl>
 	*/
-	@:overload public function getConfig() : org.w3c.dom.DOMConfiguration;
+	@:overload @:public public function getConfig() : org.w3c.dom.DOMConfiguration;
 	
 	/**
 	* Parses the content of XML Schema documents specified as the list of URI
@@ -58,7 +58,7 @@ extern class XSLoaderImpl implements com.sun.org.apache.xerces.internal.xs.XSLoa
 	* @param uriList The list of URI locations.
 	* @return An XSModel representing the schema documents.
 	*/
-	@:overload public function loadURIList(uriList : com.sun.org.apache.xerces.internal.xs.StringList) : com.sun.org.apache.xerces.internal.xs.XSModel;
+	@:overload @:public public function loadURIList(uriList : com.sun.org.apache.xerces.internal.xs.StringList) : com.sun.org.apache.xerces.internal.xs.XSModel;
 	
 	/**
 	*  Parses the content of XML Schema documents specified as a list of
@@ -67,7 +67,7 @@ extern class XSLoaderImpl implements com.sun.org.apache.xerces.internal.xs.XSLoa
 	*   Schema documents are to be read.
 	* @return An XSModel representing the schema documents.
 	*/
-	@:overload public function loadInputList(is : com.sun.org.apache.xerces.internal.xs.LSInputList) : com.sun.org.apache.xerces.internal.xs.XSModel;
+	@:overload @:public public function loadInputList(is : com.sun.org.apache.xerces.internal.xs.LSInputList) : com.sun.org.apache.xerces.internal.xs.XSModel;
 	
 	/**
 	* Parse an XML Schema document from a location identified by a URI
@@ -76,7 +76,7 @@ extern class XSLoaderImpl implements com.sun.org.apache.xerces.internal.xs.XSLoa
 	* @param uri The location of the XML Schema document to be read.
 	* @return An XSModel representing this schema.
 	*/
-	@:overload public function loadURI(uri : String) : com.sun.org.apache.xerces.internal.xs.XSModel;
+	@:overload @:public public function loadURI(uri : String) : com.sun.org.apache.xerces.internal.xs.XSModel;
 	
 	/**
 	*  Parse an XML Schema document from a resource identified by a
@@ -85,27 +85,27 @@ extern class XSLoaderImpl implements com.sun.org.apache.xerces.internal.xs.XSLoa
 	*   document is to be read.
 	* @return An XSModel representing this schema.
 	*/
-	@:overload public function load(is : org.w3c.dom.ls.LSInput) : com.sun.org.apache.xerces.internal.xs.XSModel;
+	@:overload @:public public function load(is : org.w3c.dom.ls.LSInput) : com.sun.org.apache.xerces.internal.xs.XSModel;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.dom3.DOMConfiguration#setParameter(java.lang.String, java.lang.Object)
 	*/
-	@:overload public function setParameter(name : String, value : Dynamic) : Void;
+	@:overload @:public public function setParameter(name : String, value : Dynamic) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.dom3.DOMConfiguration#getParameter(java.lang.String)
 	*/
-	@:overload public function getParameter(name : String) : Dynamic;
+	@:overload @:public public function getParameter(name : String) : Dynamic;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.dom3.DOMConfiguration#canSetParameter(java.lang.String, java.lang.Object)
 	*/
-	@:overload public function canSetParameter(name : String, value : Dynamic) : Bool;
+	@:overload @:public public function canSetParameter(name : String, value : Dynamic) : Bool;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.dom3.DOMConfiguration#getParameterNames()
 	*/
-	@:overload public function getParameterNames() : org.w3c.dom.DOMStringList;
+	@:overload @:public public function getParameterNames() : org.w3c.dom.DOMStringList;
 	
 	
 }
@@ -116,17 +116,17 @@ extern class XSLoaderImpl implements com.sun.org.apache.xerces.internal.xs.XSLoa
 */
 @:native('com$sun$org$apache$xerces$internal$impl$xs$XSLoaderImpl$XSGrammarMerger') @:internal extern class XSLoaderImpl_XSGrammarMerger extends com.sun.org.apache.xerces.internal.impl.xs.util.XSGrammarPool
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function putGrammar(grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar) : Void;
+	@:overload @:public override public function putGrammar(grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar) : Void;
 	
-	@:overload public function containsGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : Bool;
+	@:overload @:public override public function containsGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : Bool;
 	
-	@:overload public function getGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload @:public override public function getGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
-	@:overload public function retrieveGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload @:public override public function retrieveGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
-	@:overload public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
+	@:overload @:public override public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
 	
 	
 }

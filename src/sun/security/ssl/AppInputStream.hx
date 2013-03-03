@@ -36,12 +36,12 @@ package sun.security.ssl;
 	* Return the minimum number of bytes that can be read without blocking.
 	* Currently not synchronized.
 	*/
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	/**
 	* Read a single byte, returning -1 on non-fault EOF status.
 	*/
-	@:overload @:synchronized public function read() : Int;
+	@:overload @:public @:synchronized override public function read() : Int;
 	
 	/**
 	* Read up to "len" bytes into this buffer, starting at "off".
@@ -49,7 +49,7 @@ package sun.security.ssl;
 	* are responsible only for blocking to fill at most one buffer,
 	* and returning "-1" on non-fault EOF status.
 	*/
-	@:overload @:synchronized public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skip n bytes. This implementation is somewhat less efficient
@@ -58,12 +58,12 @@ package sun.security.ssl;
 	* is static and may garbled by concurrent use, but we are not interested
 	* in the data anyway.
 	*/
-	@:overload @:synchronized public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:synchronized override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/*
 	* Socket close is already synchronized, no need to block here.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

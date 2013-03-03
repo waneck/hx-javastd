@@ -25,13 +25,13 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class BufferQueue
 {
-	@:overload public function enqueue(item : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
+	@:overload @:public public function enqueue(item : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
 	
-	@:overload public function dequeue() : com.sun.corba.se.impl.encoding.ByteBufferWithInfo;
+	@:overload @:public public function dequeue() : com.sun.corba.se.impl.encoding.ByteBufferWithInfo;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function push(item : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
+	@:overload @:public public function push(item : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
 	
 	
 }

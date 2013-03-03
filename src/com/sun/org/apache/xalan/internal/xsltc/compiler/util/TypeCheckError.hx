@@ -23,19 +23,19 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 */
 extern class TypeCheckError extends java.lang.Exception
 {
-	@:overload public function new(node : com.sun.org.apache.xalan.internal.xsltc.compiler.SyntaxTreeNode) : Void;
+	@:overload @:public public function new(node : com.sun.org.apache.xalan.internal.xsltc.compiler.SyntaxTreeNode) : Void;
 	
-	@:overload public function new(error : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ErrorMsg) : Void;
+	@:overload @:public public function new(error : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ErrorMsg) : Void;
 	
-	@:overload public function new(code : String, param : Dynamic) : Void;
+	@:overload @:public public function new(code : String, param : Dynamic) : Void;
 	
-	@:overload public function new(code : String, param1 : Dynamic, param2 : Dynamic) : Void;
+	@:overload @:public public function new(code : String, param1 : Dynamic, param2 : Dynamic) : Void;
 	
-	@:overload public function getErrorMsg() : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ErrorMsg;
+	@:overload @:public public function getErrorMsg() : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ErrorMsg;
 	
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

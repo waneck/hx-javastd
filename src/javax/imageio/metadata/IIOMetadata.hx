@@ -29,27 +29,27 @@ extern class IIOMetadata
 	* A boolean indicating whether the concrete subclass supports the
 	* standard metadata format, set via the constructor.
 	*/
-	private var standardFormatSupported : Bool;
+	@:protected private var standardFormatSupported : Bool;
 	
 	/**
 	* The name of the native metadata format for this object,
 	* initialized to <code>null</code> and set via the constructor.
 	*/
-	private var nativeMetadataFormatName : String;
+	@:protected private var nativeMetadataFormatName : String;
 	
 	/**
 	* The name of the class implementing <code>IIOMetadataFormat</code>
 	* and representing the native metadata format, initialized to
 	* <code>null</code> and set via the constructor.
 	*/
-	private var nativeMetadataFormatClassName : String;
+	@:protected private var nativeMetadataFormatClassName : String;
 	
 	/**
 	* An array of names of formats, other than the standard and
 	* native formats, that are supported by this plug-in,
 	* initialized to <code>null</code> and set via the constructor.
 	*/
-	private var extraMetadataFormatNames : java.NativeArray<String>;
+	@:protected private var extraMetadataFormatNames : java.NativeArray<String>;
 	
 	/**
 	* An array of names of classes implementing <code>IIOMetadataFormat</code>
@@ -57,7 +57,7 @@ extern class IIOMetadata
 	* native formats, that are supported by this plug-in,
 	* initialized to <code>null</code> and set via the constructor.
 	*/
-	private var extraMetadataFormatClassNames : java.NativeArray<String>;
+	@:protected private var extraMetadataFormatClassNames : java.NativeArray<String>;
 	
 	/**
 	* An <code>IIOMetadataController</code> that is suggested for use
@@ -72,7 +72,7 @@ extern class IIOMetadata
 	* @see IIOMetadataController
 	* @see #getDefaultController
 	*/
-	private var defaultController : javax.imageio.metadata.IIOMetadataController;
+	@:protected private var defaultController : javax.imageio.metadata.IIOMetadataController;
 	
 	/**
 	* The <code>IIOMetadataController</code> that will be
@@ -86,7 +86,7 @@ extern class IIOMetadata
 	* @see #hasController()
 	* @see #activateController()
 	*/
-	private var controller : javax.imageio.metadata.IIOMetadataController;
+	@:protected private var controller : javax.imageio.metadata.IIOMetadataController;
 	
 	/**
 	* Constructs an empty <code>IIOMetadata</code> object.  The
@@ -95,7 +95,7 @@ extern class IIOMetadata
 	* implemtations of methods to satisfy their contracts.  For example,
 	* <code>extraMetadataFormatNames</code> should not have length 0.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs an <code>IIOMetadata</code> object with the given
@@ -129,7 +129,7 @@ extern class IIOMetadata
 	* <code>extraMetadataFormatClassNames</code> are neither both
 	* <code>null</code>, nor of the same length.
 	*/
-	@:overload private function new(standardMetadataFormatSupported : Bool, nativeMetadataFormatName : String, nativeMetadataFormatClassName : String, extraMetadataFormatNames : java.NativeArray<String>, extraMetadataFormatClassNames : java.NativeArray<String>) : Void;
+	@:overload @:protected private function new(standardMetadataFormatSupported : Bool, nativeMetadataFormatName : String, nativeMetadataFormatClassName : String, extraMetadataFormatNames : java.NativeArray<String>, extraMetadataFormatClassNames : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns <code>true</code> if the standard metadata format is
@@ -148,7 +148,7 @@ extern class IIOMetadata
 	* @see #mergeTree
 	* @see #getMetadataFormat
 	*/
-	@:overload public function isStandardMetadataFormatSupported() : Bool;
+	@:overload @:public public function isStandardMetadataFormatSupported() : Bool;
 	
 	/**
 	* Returns <code>true</code> if this object does not support the
@@ -158,7 +158,7 @@ extern class IIOMetadata
 	* @return true if this <code>IIOMetadata</code> object cannot be
 	* modified.
 	*/
-	@:overload @:abstract public function isReadOnly() : Bool;
+	@:overload @:public @:abstract public function isReadOnly() : Bool;
 	
 	/**
 	* Returns the name of the "native" metadata format for this
@@ -183,7 +183,7 @@ extern class IIOMetadata
 	* @see #getExtraMetadataFormatNames
 	* @see #getMetadataFormatNames
 	*/
-	@:overload public function getNativeMetadataFormatName() : String;
+	@:overload @:public public function getNativeMetadataFormatName() : String;
 	
 	/**
 	* Returns an array of <code>String</code>s containing the names
@@ -205,7 +205,7 @@ extern class IIOMetadata
 	* @see #getNativeMetadataFormatName
 	* @see #getMetadataFormatNames
 	*/
-	@:overload public function getExtraMetadataFormatNames() : java.NativeArray<String>;
+	@:overload @:public public function getExtraMetadataFormatNames() : java.NativeArray<String>;
 	
 	/**
 	* Returns an array of <code>String</code>s containing the names
@@ -226,7 +226,7 @@ extern class IIOMetadata
 	* @see #isStandardMetadataFormatSupported
 	* @see #getExtraMetadataFormatNames
 	*/
-	@:overload public function getMetadataFormatNames() : java.NativeArray<String>;
+	@:overload @:public public function getMetadataFormatNames() : java.NativeArray<String>;
 	
 	/**
 	* Returns an <code>IIOMetadataFormat</code> object describing the
@@ -257,7 +257,7 @@ extern class IIOMetadata
 	* @exception IllegalStateException if the class corresponding to
 	* the format name cannot be loaded.
 	*/
-	@:overload public function getMetadataFormat(formatName : String) : javax.imageio.metadata.IIOMetadataFormat;
+	@:overload @:public public function getMetadataFormat(formatName : String) : javax.imageio.metadata.IIOMetadataFormat;
 	
 	/**
 	* Returns an XML DOM <code>Node</code> object that represents the
@@ -281,7 +281,7 @@ extern class IIOMetadata
 	* @see #setFromTree
 	* @see #mergeTree
 	*/
-	@:overload @:abstract public function getAsTree(formatName : String) : org.w3c.dom.Node;
+	@:overload @:public @:abstract public function getAsTree(formatName : String) : org.w3c.dom.Node;
 	
 	/**
 	* Alters the internal state of this <code>IIOMetadata</code>
@@ -315,7 +315,7 @@ extern class IIOMetadata
 	* @see #getAsTree
 	* @see #setFromTree
 	*/
-	@:overload @:abstract public function mergeTree(formatName : String, root : org.w3c.dom.Node) : Void;
+	@:overload @:public @:abstract public function mergeTree(formatName : String, root : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Returns an <code>IIOMetadataNode</code> representing the chroma
@@ -334,7 +334,7 @@ extern class IIOMetadata
 	*
 	* @see #getStandardTree
 	*/
-	@:overload private function getStandardChromaNode() : IIOMetadataNode;
+	@:overload @:protected private function getStandardChromaNode() : IIOMetadataNode;
 	
 	/**
 	* Returns an <code>IIOMetadataNode</code> representing the
@@ -354,7 +354,7 @@ extern class IIOMetadata
 	*
 	* @see #getStandardTree
 	*/
-	@:overload private function getStandardCompressionNode() : IIOMetadataNode;
+	@:overload @:protected private function getStandardCompressionNode() : IIOMetadataNode;
 	
 	/**
 	* Returns an <code>IIOMetadataNode</code> representing the data
@@ -374,7 +374,7 @@ extern class IIOMetadata
 	*
 	* @see #getStandardTree
 	*/
-	@:overload private function getStandardDataNode() : IIOMetadataNode;
+	@:overload @:protected private function getStandardDataNode() : IIOMetadataNode;
 	
 	/**
 	* Returns an <code>IIOMetadataNode</code> representing the
@@ -394,7 +394,7 @@ extern class IIOMetadata
 	*
 	* @see #getStandardTree
 	*/
-	@:overload private function getStandardDimensionNode() : IIOMetadataNode;
+	@:overload @:protected private function getStandardDimensionNode() : IIOMetadataNode;
 	
 	/**
 	* Returns an <code>IIOMetadataNode</code> representing the document
@@ -413,7 +413,7 @@ extern class IIOMetadata
 	*
 	* @see #getStandardTree
 	*/
-	@:overload private function getStandardDocumentNode() : IIOMetadataNode;
+	@:overload @:protected private function getStandardDocumentNode() : IIOMetadataNode;
 	
 	/**
 	* Returns an <code>IIOMetadataNode</code> representing the textual
@@ -432,7 +432,7 @@ extern class IIOMetadata
 	*
 	* @see #getStandardTree
 	*/
-	@:overload private function getStandardTextNode() : IIOMetadataNode;
+	@:overload @:protected private function getStandardTextNode() : IIOMetadataNode;
 	
 	/**
 	* Returns an <code>IIOMetadataNode</code> representing the tiling
@@ -451,7 +451,7 @@ extern class IIOMetadata
 	*
 	* @see #getStandardTree
 	*/
-	@:overload private function getStandardTileNode() : IIOMetadataNode;
+	@:overload @:protected private function getStandardTileNode() : IIOMetadataNode;
 	
 	/**
 	* Returns an <code>IIOMetadataNode</code> representing the
@@ -469,7 +469,7 @@ extern class IIOMetadata
 	*
 	* @return an <code>IIOMetadataNode</code>, or <code>null</code>.
 	*/
-	@:overload private function getStandardTransparencyNode() : IIOMetadataNode;
+	@:overload @:protected private function getStandardTransparencyNode() : IIOMetadataNode;
 	
 	/**
 	* A utility method to return a tree of
@@ -497,7 +497,7 @@ extern class IIOMetadata
 	* @see #getStandardTileNode
 	* @see #getStandardTransparencyNode
 	*/
-	@:overload @:final private function getStandardTree() : IIOMetadataNode;
+	@:overload @:protected @:final private function getStandardTree() : IIOMetadataNode;
 	
 	/**
 	* Sets the internal state of this <code>IIOMetadata</code> object
@@ -526,7 +526,7 @@ extern class IIOMetadata
 	* @see #getAsTree
 	* @see #mergeTree
 	*/
-	@:overload public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Resets all the data stored in this object to default values,
@@ -542,7 +542,7 @@ extern class IIOMetadata
 	* @see javax.imageio.ImageWriter#getDefaultStreamMetadata
 	* @see javax.imageio.ImageWriter#getDefaultImageMetadata
 	*/
-	@:overload @:abstract public function reset() : Void;
+	@:overload @:public @:abstract public function reset() : Void;
 	
 	/**
 	* Sets the <code>IIOMetadataController</code> to be used
@@ -565,7 +565,7 @@ extern class IIOMetadata
 	* @see #hasController
 	* @see #activateController()
 	*/
-	@:overload public function setController(controller : javax.imageio.metadata.IIOMetadataController) : Void;
+	@:overload @:public public function setController(controller : javax.imageio.metadata.IIOMetadataController) : Void;
 	
 	/**
 	* Returns whatever <code>IIOMetadataController</code> is currently
@@ -585,7 +585,7 @@ extern class IIOMetadata
 	* @see #hasController
 	* @see #activateController()
 	*/
-	@:overload public function getController() : javax.imageio.metadata.IIOMetadataController;
+	@:overload @:public public function getController() : javax.imageio.metadata.IIOMetadataController;
 	
 	/**
 	* Returns the default <code>IIOMetadataController</code>, if there
@@ -604,7 +604,7 @@ extern class IIOMetadata
 	* @see #hasController
 	* @see #activateController()
 	*/
-	@:overload public function getDefaultController() : javax.imageio.metadata.IIOMetadataController;
+	@:overload @:public public function getDefaultController() : javax.imageio.metadata.IIOMetadataController;
 	
 	/**
 	* Returns <code>true</code> if there is a controller installed
@@ -622,7 +622,7 @@ extern class IIOMetadata
 	* @see #getDefaultController
 	* @see #activateController()
 	*/
-	@:overload public function hasController() : Bool;
+	@:overload @:public public function hasController() : Bool;
 	
 	/**
 	* Activates the installed <code>IIOMetadataController</code> for
@@ -652,7 +652,7 @@ extern class IIOMetadata
 	* @see #getDefaultController
 	* @see #hasController
 	*/
-	@:overload public function activateController() : Bool;
+	@:overload @:public public function activateController() : Bool;
 	
 	
 }

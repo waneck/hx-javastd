@@ -25,61 +25,61 @@ package com.sun.xml.internal.dtdparser;
 */
 extern class InputEntity
 {
-	@:overload public static function getInputEntity(h : com.sun.xml.internal.dtdparser.DTDEventListener, l : java.util.Locale) : com.sun.xml.internal.dtdparser.InputEntity;
+	@:overload @:public @:static public static function getInputEntity(h : com.sun.xml.internal.dtdparser.DTDEventListener, l : java.util.Locale) : com.sun.xml.internal.dtdparser.InputEntity;
 	
-	@:overload public function isInternal() : Bool;
+	@:overload @:public public function isInternal() : Bool;
 	
-	@:overload public function isDocument() : Bool;
+	@:overload @:public public function isDocument() : Bool;
 	
-	@:overload public function isParameterEntity() : Bool;
+	@:overload @:public public function isParameterEntity() : Bool;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function init(_in : org.xml.sax.InputSource, name : String, stack : com.sun.xml.internal.dtdparser.InputEntity, isPE : Bool) : Void;
+	@:overload @:public public function init(_in : org.xml.sax.InputSource, name : String, stack : com.sun.xml.internal.dtdparser.InputEntity, isPE : Bool) : Void;
 	
-	@:overload public function init(b : java.NativeArray<java.StdTypes.Char16>, name : String, stack : com.sun.xml.internal.dtdparser.InputEntity, isPE : Bool) : Void;
+	@:overload @:public public function init(b : java.NativeArray<java.StdTypes.Char16>, name : String, stack : com.sun.xml.internal.dtdparser.InputEntity, isPE : Bool) : Void;
 	
-	@:overload public function pop() : com.sun.xml.internal.dtdparser.InputEntity;
+	@:overload @:public public function pop() : com.sun.xml.internal.dtdparser.InputEntity;
 	
 	/**
 	* returns true iff there's no more data to consume ...
 	*/
-	@:overload public function isEOF() : Bool;
+	@:overload @:public public function isEOF() : Bool;
 	
 	/**
 	* Returns the name of the encoding in use, else null; the name
 	* returned is in as standard a form as we can get.
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	* returns the next name char, or NUL ... faster than getc(),
 	* and the common "name or nmtoken must be next" case won't
 	* need ungetc().
 	*/
-	@:overload public function getNameChar() : java.StdTypes.Char16;
+	@:overload @:public public function getNameChar() : java.StdTypes.Char16;
 	
 	/**
 	* gets the next Java character -- might be part of an XML
 	* text character represented by a surrogate pair, or be
 	* the end of the entity.
 	*/
-	@:overload public function getc() : java.StdTypes.Char16;
+	@:overload @:public public function getc() : java.StdTypes.Char16;
 	
 	/**
 	* lookahead one character
 	*/
-	@:overload public function peekc(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function peekc(c : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* two character pushback is guaranteed
 	*/
-	@:overload public function ungetc() : Void;
+	@:overload @:public public function ungetc() : Void;
 	
 	/**
 	* optional grammatical whitespace (discarded)
 	*/
-	@:overload public function maybeWhitespace() : Bool;
+	@:overload @:public public function maybeWhitespace() : Bool;
 	
 	/**
 	* normal content; whitespace in markup may be handled
@@ -91,7 +91,7 @@ extern class InputEntity
 	* <P> the document handler's characters() method is called
 	* on all the content found
 	*/
-	@:overload public function parsedContent(docHandler : com.sun.xml.internal.dtdparser.DTDEventListener) : Bool;
+	@:overload @:public public function parsedContent(docHandler : com.sun.xml.internal.dtdparser.DTDEventListener) : Bool;
 	
 	/**
 	* CDATA -- character data, terminated by "]]>" and optionally
@@ -109,7 +109,7 @@ extern class InputEntity
 	* @param whitespaceInvalidMessage if true, ignorable whitespace
 	*                                 causes a validity error report as well as a callback
 	*/
-	@:overload public function unparsedContent(docHandler : com.sun.xml.internal.dtdparser.DTDEventListener, ignorableWhitespace : Bool, whitespaceInvalidMessage : String) : Bool;
+	@:overload @:public public function unparsedContent(docHandler : com.sun.xml.internal.dtdparser.DTDEventListener, ignorableWhitespace : Bool, whitespaceInvalidMessage : String) : Bool;
 	
 	/**
 	* whitespace in markup (flagged to app, discardable)
@@ -117,7 +117,7 @@ extern class InputEntity
 	* <P> the document handler's ignorableWhitespace() method
 	* is called on all the whitespace found
 	*/
-	@:overload public function ignorableWhitespace(handler : com.sun.xml.internal.dtdparser.DTDEventListener) : Bool;
+	@:overload @:public public function ignorableWhitespace(handler : com.sun.xml.internal.dtdparser.DTDEventListener) : Bool;
 	
 	/**
 	* returns false iff 'next' string isn't as provided,
@@ -126,33 +126,33 @@ extern class InputEntity
 	* <P> NOTE:  two alternative string representations are
 	* both passed in, since one is faster.
 	*/
-	@:overload public function peek(next : String, chars : java.NativeArray<java.StdTypes.Char16>) : Bool;
+	@:overload @:public public function peek(next : String, chars : java.NativeArray<java.StdTypes.Char16>) : Bool;
 	
-	@:overload public function startRemembering() : Void;
+	@:overload @:public public function startRemembering() : Void;
 	
-	@:overload public function rememberText() : String;
+	@:overload @:public public function rememberText() : String;
 	
 	/**
 	* Returns the public ID of this input source, if known
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* Returns the system ID of this input source, if known
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* Returns the current line number in this input source
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* returns -1; maintaining column numbers hurts performance
 	*/
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

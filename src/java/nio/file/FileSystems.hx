@@ -64,7 +64,7 @@ extern class FileSystems
 	*
 	* @return  the default file system
 	*/
-	@:overload public static function getDefault() : java.nio.file.FileSystem;
+	@:overload @:public @:static public static function getDefault() : java.nio.file.FileSystem;
 	
 	/**
 	* Returns a reference to an existing {@code FileSystem}.
@@ -100,7 +100,7 @@ extern class FileSystems
 	*          if a security manager is installed and it denies an unspecified
 	*          permission
 	*/
-	@:overload public static function getFileSystem(uri : java.net.URI) : java.nio.file.FileSystem;
+	@:overload @:public @:static public static function getFileSystem(uri : java.net.URI) : java.nio.file.FileSystem;
 	
 	/**
 	* Constructs a new file system that is identified by a {@link URI}
@@ -148,7 +148,7 @@ extern class FileSystems
 	*          if a security manager is installed and it denies an unspecified
 	*          permission required by the file system provider implementation
 	*/
-	@:overload public static function newFileSystem(uri : java.net.URI, env : java.util.Map<String, Dynamic>) : java.nio.file.FileSystem;
+	@:overload @:public @:static public static function newFileSystem(uri : java.net.URI, env : java.util.Map<String, Dynamic>) : java.nio.file.FileSystem;
 	
 	/**
 	* Constructs a new file system that is identified by a {@link URI}
@@ -189,7 +189,7 @@ extern class FileSystems
 	*          if a security manager is installed and it denies an unspecified
 	*          permission required by the file system provider implementation
 	*/
-	@:overload public static function newFileSystem(uri : java.net.URI, env : java.util.Map<String, Dynamic>, loader : java.lang.ClassLoader) : java.nio.file.FileSystem;
+	@:overload @:public @:static public static function newFileSystem(uri : java.net.URI, env : java.util.Map<String, Dynamic>, loader : java.lang.ClassLoader) : java.nio.file.FileSystem;
 	
 	/**
 	* Constructs a new {@code FileSystem} to access the contents of a file as a
@@ -226,7 +226,7 @@ extern class FileSystems
 	*          if a security manager is installed and it denies an unspecified
 	*          permission
 	*/
-	@:overload public static function newFileSystem(path : java.nio.file.Path, loader : java.lang.ClassLoader) : java.nio.file.FileSystem;
+	@:overload @:public @:static public static function newFileSystem(path : java.nio.file.Path, loader : java.lang.ClassLoader) : java.nio.file.FileSystem;
 	
 	
 }

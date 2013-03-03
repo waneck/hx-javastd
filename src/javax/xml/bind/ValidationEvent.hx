@@ -45,14 +45,14 @@ package javax.xml.bind;
 	*
 	* @return the severity code for this warning/error
 	*/
-	@:overload public function getSeverity() : Int;
+	@:overload @:public public function getSeverity() : Int;
 	
 	/**
 	* Retrieve the text message for this warning/error.
 	*
 	* @return the text message for this warning/error or null if one wasn't set
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public public function getMessage() : String;
 	
 	/**
 	* Retrieve the linked exception for this warning/error.
@@ -60,14 +60,14 @@ package javax.xml.bind;
 	* @return the linked exception for this warning/error or null if one
 	*         wasn't set
 	*/
-	@:overload public function getLinkedException() : java.lang.Throwable;
+	@:overload @:public public function getLinkedException() : java.lang.Throwable;
 	
 	/**
 	* Retrieve the locator for this warning/error.
 	*
 	* @return the locator that indicates where the warning/error occurred
 	*/
-	@:overload public function getLocator() : javax.xml.bind.ValidationEventLocator;
+	@:overload @:public public function getLocator() : javax.xml.bind.ValidationEventLocator;
 	
 	
 }

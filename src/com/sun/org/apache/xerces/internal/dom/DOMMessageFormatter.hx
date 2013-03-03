@@ -27,11 +27,11 @@ extern class DOMMessageFormatter
 	*
 	* @author Sandy Gao, IBM
 	*/
-	public static var DOM_DOMAIN(default, null) : String;
+	@:public @:static @:final public static var DOM_DOMAIN(default, null) : String;
 	
-	public static var XML_DOMAIN(default, null) : String;
+	@:public @:static @:final public static var XML_DOMAIN(default, null) : String;
 	
-	public static var SERIALIZER_DOMAIN(default, null) : String;
+	@:public @:static @:final public static var SERIALIZER_DOMAIN(default, null) : String;
 	
 	/**
 	* Formats a message with the specified arguments using the given
@@ -48,18 +48,18 @@ extern class DOMMessageFormatter
 	* @throws MissingResourceException Thrown if the message with the
 	*                                  specified key cannot be found.
 	*/
-	@:overload public static function formatMessage(domain : String, key : String, arguments : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static public static function formatMessage(domain : String, key : String, arguments : java.NativeArray<Dynamic>) : String;
 	
 	/**
 	* Initialize Message Formatter.
 	*/
-	@:overload public static function init() : Void;
+	@:overload @:public @:static public static function init() : Void;
 	
 	/**
 	* setLocale to be used by the formatter.
 	* @param locale
 	*/
-	@:overload public static function setLocale(dlocale : java.util.Locale) : Void;
+	@:overload @:public @:static public static function setLocale(dlocale : java.util.Locale) : Void;
 	
 	
 }

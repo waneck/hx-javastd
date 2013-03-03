@@ -30,7 +30,7 @@ extern interface DSAPublicKey extends java.security.interfaces.DSAKey extends ja
 	*
 	* @return the value of the public key, <code>y</code>.
 	*/
-	@:overload public function getY() : java.math.BigInteger;
+	@:overload @:public public function getY() : java.math.BigInteger;
 	
 	
 }

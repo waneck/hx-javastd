@@ -38,7 +38,7 @@ package javax.swing.event;
 	*
 	* @param e the event, will not be null
 	*/
-	@:overload public function sorterChanged(e : javax.swing.event.RowSorterEvent) : Void;
+	@:overload @:public public function sorterChanged(e : javax.swing.event.RowSorterEvent) : Void;
 	
 	
 }

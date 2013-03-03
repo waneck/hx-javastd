@@ -43,14 +43,14 @@ package java.io;
 	*
 	* @serial Name of the invalid class.
 	*/
-	public var classname : String;
+	@:public public var classname : String;
 	
 	/**
 	* Report an InvalidClassException for the reason specified.
 	*
 	* @param reason  String describing the reason for the exception.
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	/**
 	* Constructs an InvalidClassException object.
@@ -58,12 +58,12 @@ package java.io;
 	* @param cname   a String naming the invalid class.
 	* @param reason  a String describing the reason for the exception.
 	*/
-	@:overload public function new(cname : String, reason : String) : Void;
+	@:overload @:public public function new(cname : String, reason : String) : Void;
 	
 	/**
 	* Produce the message and include the classname, if present.
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

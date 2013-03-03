@@ -25,17 +25,17 @@ package com.sun.xml.internal.bind.v2.model.annotation;
 */
 @:internal extern class XmlRootElementQuick extends com.sun.xml.internal.bind.v2.model.annotation.Quick implements javax.xml.bind.annotation.XmlRootElement
 {
-	@:overload public function new(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : javax.xml.bind.annotation.XmlRootElement) : Void;
+	@:overload @:public public function new(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : javax.xml.bind.annotation.XmlRootElement) : Void;
 	
-	@:overload override private function getAnnotation() : java.lang.annotation.Annotation;
+	@:overload @:protected override private function getAnnotation() : java.lang.annotation.Annotation;
 	
-	@:overload override private function newInstance(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : java.lang.annotation.Annotation) : com.sun.xml.internal.bind.v2.model.annotation.Quick;
+	@:overload @:protected override private function newInstance(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : java.lang.annotation.Annotation) : com.sun.xml.internal.bind.v2.model.annotation.Quick;
 	
-	@:overload override public function annotationType() : Class<javax.xml.bind.annotation.XmlRootElement>;
+	@:overload @:public override public function annotationType() : Class<javax.xml.bind.annotation.XmlRootElement>;
 	
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function namespace() : String;
+	@:overload @:public public function namespace() : String;
 	
 	
 }

@@ -29,20 +29,20 @@ extern class StartTlsResponse implements javax.naming.ldap.ExtendedResponse
 	* The StartTLS extended response's assigned object identifier
 	* is 1.3.6.1.4.1.1466.20037.
 	*/
-	public static var OID(default, null) : String;
+	@:public @:static @:final public static var OID(default, null) : String;
 	
 	/**
 	* Constructs a StartTLS extended response.
 	* A concrete subclass must have a public no-arg constructor.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Retrieves the StartTLS response's object identifier string.
 	*
 	* @return The object identifier string, "1.3.6.1.4.1.1466.20037".
 	*/
-	@:overload public function getID() : String;
+	@:overload @:public public function getID() : String;
 	
 	/**
 	* Retrieves the StartTLS response's ASN.1 BER encoded value.
@@ -51,7 +51,7 @@ extern class StartTlsResponse implements javax.naming.ldap.ExtendedResponse
 	*
 	* @return The null value.
 	*/
-	@:overload public function getEncodedValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncodedValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Overrides the default list of cipher suites enabled for use on the
@@ -65,7 +65,7 @@ extern class StartTlsResponse implements javax.naming.ldap.ExtendedResponse
 	* enable.
 	* @see #negotiate
 	*/
-	@:overload @:abstract public function setEnabledCipherSuites(suites : java.NativeArray<String>) : Void;
+	@:overload @:public @:abstract public function setEnabledCipherSuites(suites : java.NativeArray<String>) : Void;
 	
 	/**
 	* Sets the hostname verifier used by <tt>negotiate()</tt>
@@ -79,7 +79,7 @@ extern class StartTlsResponse implements javax.naming.ldap.ExtendedResponse
 	* @param verifier The non-null hostname verifier callback.
 	* @see #negotiate
 	*/
-	@:overload @:abstract public function setHostnameVerifier(verifier : javax.net.ssl.HostnameVerifier) : Void;
+	@:overload @:public @:abstract public function setHostnameVerifier(verifier : javax.net.ssl.HostnameVerifier) : Void;
 	
 	/**
 	* Negotiates a TLS session using the default SSL socket factory.
@@ -92,7 +92,7 @@ extern class StartTlsResponse implements javax.naming.ldap.ExtendedResponse
 	* @see #setEnabledCipherSuites
 	* @see #setHostnameVerifier
 	*/
-	@:overload @:abstract public function negotiate() : javax.net.ssl.SSLSession;
+	@:overload @:public @:abstract public function negotiate() : javax.net.ssl.SSLSession;
 	
 	/**
 	* Negotiates a TLS session using an SSL socket factory.
@@ -124,7 +124,7 @@ extern class StartTlsResponse implements javax.naming.ldap.ExtendedResponse
 	* @see #setEnabledCipherSuites
 	* @see #setHostnameVerifier
 	*/
-	@:overload @:abstract public function negotiate(factory : javax.net.ssl.SSLSocketFactory) : javax.net.ssl.SSLSession;
+	@:overload @:public @:abstract public function negotiate(factory : javax.net.ssl.SSLSocketFactory) : javax.net.ssl.SSLSession;
 	
 	/**
 	* Closes the TLS connection gracefully and reverts back to the underlying
@@ -133,7 +133,7 @@ extern class StartTlsResponse implements javax.naming.ldap.ExtendedResponse
 	* @throws IOException If an IO error was encountered while closing the
 	* TLS connection
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
 	
 }

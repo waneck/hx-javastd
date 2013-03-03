@@ -37,9 +37,9 @@ exception statement from your version.
 */
 extern class PulseAudioMixerProvider extends javax.sound.sampled.spi.MixerProvider
 {
-	@:overload public function getMixer(info : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.Mixer;
+	@:overload @:public override public function getMixer(info : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.Mixer;
 	
-	@:overload public function getMixerInfo() : java.NativeArray<javax.sound.sampled.Mixer.Mixer_Info>;
+	@:overload @:public override public function getMixerInfo() : java.NativeArray<javax.sound.sampled.Mixer.Mixer_Info>;
 	
 	
 }

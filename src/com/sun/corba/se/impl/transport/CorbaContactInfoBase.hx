@@ -28,49 +28,49 @@ extern class CorbaContactInfoBase implements com.sun.corba.se.spi.transport.Corb
 	/**
 	* @author Harold Carr
 	*/
-	private var orb : com.sun.corba.se.spi.orb.ORB;
+	@:protected private var orb : com.sun.corba.se.spi.orb.ORB;
 	
-	private var contactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList;
+	@:protected private var contactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList;
 	
-	private var effectiveTargetIOR : com.sun.corba.se.spi.ior.IOR;
+	@:protected private var effectiveTargetIOR : com.sun.corba.se.spi.ior.IOR;
 	
-	private var addressingDisposition : java.StdTypes.Int16;
+	@:protected private var addressingDisposition : java.StdTypes.Int16;
 	
-	private var connectionCache : com.sun.corba.se.pept.transport.OutboundConnectionCache;
+	@:protected private var connectionCache : com.sun.corba.se.pept.transport.OutboundConnectionCache;
 	
-	@:overload public function getBroker() : com.sun.corba.se.pept.broker.Broker;
+	@:overload @:public public function getBroker() : com.sun.corba.se.pept.broker.Broker;
 	
-	@:overload public function getContactInfoList() : com.sun.corba.se.pept.transport.ContactInfoList;
+	@:overload @:public public function getContactInfoList() : com.sun.corba.se.pept.transport.ContactInfoList;
 	
-	@:overload public function getClientRequestDispatcher() : com.sun.corba.se.pept.protocol.ClientRequestDispatcher;
+	@:overload @:public public function getClientRequestDispatcher() : com.sun.corba.se.pept.protocol.ClientRequestDispatcher;
 	
-	@:overload public function setConnectionCache(connectionCache : com.sun.corba.se.pept.transport.OutboundConnectionCache) : Void;
+	@:overload @:public public function setConnectionCache(connectionCache : com.sun.corba.se.pept.transport.OutboundConnectionCache) : Void;
 	
-	@:overload public function getConnectionCache() : com.sun.corba.se.pept.transport.OutboundConnectionCache;
+	@:overload @:public public function getConnectionCache() : com.sun.corba.se.pept.transport.OutboundConnectionCache;
 	
-	@:overload public function createMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, contactInfo : com.sun.corba.se.pept.transport.ContactInfo, connection : com.sun.corba.se.pept.transport.Connection, methodName : String, isOneWay : Bool) : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function createMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, contactInfo : com.sun.corba.se.pept.transport.ContactInfo, connection : com.sun.corba.se.pept.transport.Connection, methodName : String, isOneWay : Bool) : com.sun.corba.se.pept.protocol.MessageMediator;
 	
-	@:overload public function createMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, conn : com.sun.corba.se.pept.transport.Connection) : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function createMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, conn : com.sun.corba.se.pept.transport.Connection) : com.sun.corba.se.pept.protocol.MessageMediator;
 	
-	@:overload public function finishCreatingMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, conn : com.sun.corba.se.pept.transport.Connection, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function finishCreatingMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, conn : com.sun.corba.se.pept.transport.Connection, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.protocol.MessageMediator;
 	
-	@:overload public function createOutputObject(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.OutputObject;
+	@:overload @:public public function createOutputObject(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.OutputObject;
 	
-	@:overload public function createInputObject(broker : com.sun.corba.se.pept.broker.Broker, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.InputObject;
+	@:overload @:public public function createInputObject(broker : com.sun.corba.se.pept.broker.Broker, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.InputObject;
 	
-	@:overload public function getAddressingDisposition() : java.StdTypes.Int16;
+	@:overload @:public public function getAddressingDisposition() : java.StdTypes.Int16;
 	
-	@:overload public function setAddressingDisposition(addressingDisposition : java.StdTypes.Int16) : Void;
+	@:overload @:public public function setAddressingDisposition(addressingDisposition : java.StdTypes.Int16) : Void;
 	
-	@:overload public function getTargetIOR() : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public public function getTargetIOR() : com.sun.corba.se.spi.ior.IOR;
 	
-	@:overload public function getEffectiveTargetIOR() : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public public function getEffectiveTargetIOR() : com.sun.corba.se.spi.ior.IOR;
 	
-	@:overload public function getEffectiveProfile() : com.sun.corba.se.spi.ior.iiop.IIOPProfile;
+	@:overload @:public public function getEffectiveProfile() : com.sun.corba.se.spi.ior.iiop.IIOPProfile;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload private function dprint(msg : String) : Void;
+	@:overload @:protected private function dprint(msg : String) : Void;
 	
 	/**
 	* Used to determine if a
@@ -85,7 +85,7 @@ extern class CorbaContactInfoBase implements com.sun.corba.se.spi.transport.Corb
 	* {@link com.sun.corba.se.pept.transport.Connection Connection}
 	* will be used for an invocation.
 	*/
-	@:overload @:public public function isConnectionBased() : Bool;
+	@:overload @:public @:public public function isConnectionBased() : Bool;
 	
 	/**
 	* PEPt uses separate caches for each type of <code>ContactInfo</code>
@@ -93,7 +93,7 @@ extern class CorbaContactInfoBase implements com.sun.corba.se.spi.transport.Corb
 	*
 	* @return {@link java.lang.String}
 	*/
-	@:overload @:public public function getConnectionCacheType() : String;
+	@:overload @:public @:public public function getConnectionCacheType() : String;
 	
 	/**
 	* Used to get a
@@ -104,9 +104,9 @@ extern class CorbaContactInfoBase implements com.sun.corba.se.spi.transport.Corb
 	* @return
 	* {@link com.sun.corba.se.pept.transport.Connection Connection}
 	*/
-	@:overload @:public public function createConnection() : com.sun.corba.se.pept.transport.Connection;
+	@:overload @:public @:public public function createConnection() : com.sun.corba.se.pept.transport.Connection;
 	
-	@:overload @:public public function getMonitoringName() : String;
+	@:overload @:public @:public public function getMonitoringName() : String;
 	
 	/**
 	* Used to determine if the
@@ -122,7 +122,7 @@ extern class CorbaContactInfoBase implements com.sun.corba.se.spi.transport.Corb
 	* {@link com.sun.corba.se.pept.transport.Connection Connection}s
 	* created by this <code>ContactInfo</code> should be cached.
 	*/
-	@:overload @:public public function shouldCacheConnection() : Bool;
+	@:overload @:public @:public public function shouldCacheConnection() : Bool;
 	
 	
 }

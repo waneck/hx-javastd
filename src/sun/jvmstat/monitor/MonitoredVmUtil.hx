@@ -40,7 +40,7 @@ package sun.jvmstat.monitor;
 	*                  the string "Unknown" if the version cannot be
 	*                  determined.
 	*/
-	@:overload public static function vmVersion(vm : sun.jvmstat.monitor.MonitoredVm) : String;
+	@:overload @:public @:static public static function vmVersion(vm : sun.jvmstat.monitor.MonitoredVm) : String;
 	
 	/**
 	* Return the command line for the target Java application.
@@ -50,7 +50,7 @@ package sun.jvmstat.monitor;
 	*                  application or the the string "Unknown" if the
 	*                  command line cannot be determined.
 	*/
-	@:overload public static function commandLine(vm : sun.jvmstat.monitor.MonitoredVm) : String;
+	@:overload @:public @:static public static function commandLine(vm : sun.jvmstat.monitor.MonitoredVm) : String;
 	
 	/**
 	* Return the arguments to the main class for the target Java application.
@@ -62,7 +62,7 @@ package sun.jvmstat.monitor;
 	*                  target Java application or the the string "Unknown"
 	*                  if the command line cannot be determined.
 	*/
-	@:overload public static function mainArgs(vm : sun.jvmstat.monitor.MonitoredVm) : String;
+	@:overload @:public @:static public static function mainArgs(vm : sun.jvmstat.monitor.MonitoredVm) : String;
 	
 	/**
 	* Return the main class for the target Java application.
@@ -75,7 +75,7 @@ package sun.jvmstat.monitor;
 	*                  application or the the string "Unknown" if the
 	*                  command line cannot be determined.
 	*/
-	@:overload public static function mainClass(vm : sun.jvmstat.monitor.MonitoredVm, fullPath : Bool) : String;
+	@:overload @:public @:static public static function mainClass(vm : sun.jvmstat.monitor.MonitoredVm, fullPath : Bool) : String;
 	
 	/**
 	* Return the JVM arguments for the target Java application.
@@ -85,7 +85,7 @@ package sun.jvmstat.monitor;
 	*                  target Java application or the the string "Unknown"
 	*                  if the command line cannot be determined.
 	*/
-	@:overload public static function jvmArgs(vm : sun.jvmstat.monitor.MonitoredVm) : String;
+	@:overload @:public @:static public static function jvmArgs(vm : sun.jvmstat.monitor.MonitoredVm) : String;
 	
 	/**
 	* Return the JVM flags for the target Java application.
@@ -95,14 +95,14 @@ package sun.jvmstat.monitor;
 	*                  target Java application or the the string "Unknown"
 	*                  if the command line cannot be determined.
 	*/
-	@:overload public static function jvmFlags(vm : sun.jvmstat.monitor.MonitoredVm) : String;
+	@:overload @:public @:static public static function jvmFlags(vm : sun.jvmstat.monitor.MonitoredVm) : String;
 	
 	/**
 	* Returns true if the VM supports attach-on-demand.
 	*
 	* @param vm the target MonitoredVm
 	*/
-	@:overload public static function isAttachable(vm : sun.jvmstat.monitor.MonitoredVm) : Bool;
+	@:overload @:public @:static public static function isAttachable(vm : sun.jvmstat.monitor.MonitoredVm) : Bool;
 	
 	
 }

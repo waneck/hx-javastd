@@ -39,7 +39,7 @@ package java.io;
 	/**
 	* The underlying character-input stream.
 	*/
-	//private var _in : java.io.Reader;
+	//@:protected private var _in : java.io.Reader;
 	
 	/**
 	* Creates a new filtered reader.
@@ -47,56 +47,56 @@ package java.io;
 	* @param in  a Reader object providing the underlying stream.
 	* @throws NullPointerException if <code>in</code> is <code>null</code>
 	*/
-	@:overload private function new(_in : java.io.Reader) : Void;
+	@:overload @:protected private function new(_in : java.io.Reader) : Void;
 	
 	/**
 	* Reads a single character.
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads characters into a portion of an array.
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips characters.
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Tells whether this stream is ready to be read.
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function ready() : Bool;
+	@:overload @:public override public function ready() : Bool;
 	
 	/**
 	* Tells whether this stream supports the mark() operation.
 	*/
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	/**
 	* Marks the present position in the stream.
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function mark(readAheadLimit : Int) : Void;
+	@:overload @:public override public function mark(readAheadLimit : Int) : Void;
 	
 	/**
 	* Resets the stream.
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

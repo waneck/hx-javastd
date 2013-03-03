@@ -28,27 +28,27 @@ package javax.management;
 	/**
 	* Basic constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns a double numeric value
 	*/
-	@:overload public function doubleValue() : Float;
+	@:overload @:public public function doubleValue() : Float;
 	
 	/**
 	* Returns a long numeric value
 	*/
-	@:overload public function longValue() : haxe.Int64;
+	@:overload @:public public function longValue() : haxe.Int64;
 	
 	/**
 	* Returns true is if the numeric value is a long, false otherwise.
 	*/
-	@:overload public function isLong() : Bool;
+	@:overload @:public public function isLong() : Bool;
 	
 	/**
 	* Returns the string representing the object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Applies the ValueExp on a MBean.
@@ -62,9 +62,9 @@ package javax.management;
 	* @exception BadAttributeValueExpException
 	* @exception InvalidApplicationException
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
+	@:overload @:public public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
 	
-	@:overload public function setMBeanServer(s : javax.management.MBeanServer) : Void;
+	@:overload @:public override public function setMBeanServer(s : javax.management.MBeanServer) : Void;
 	
 	
 }

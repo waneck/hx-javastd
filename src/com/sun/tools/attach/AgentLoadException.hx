@@ -40,7 +40,7 @@ extern class AgentLoadException extends java.lang.Exception
 	* Constructs an <code>AgentLoadException</code> with
 	* no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>AgentLoadException</code> with
@@ -48,7 +48,7 @@ extern class AgentLoadException extends java.lang.Exception
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

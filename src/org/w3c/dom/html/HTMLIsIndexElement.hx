@@ -49,15 +49,15 @@ extern interface HTMLIsIndexElement extends org.w3c.dom.html.HTMLElement
 	*  Returns the <code>FORM</code> element containing this control. Returns
 	* <code>null</code> if this control is not within the context of a form.
 	*/
-	@:overload public function getForm() : org.w3c.dom.html.HTMLFormElement;
+	@:overload @:public public function getForm() : org.w3c.dom.html.HTMLFormElement;
 	
 	/**
 	*  The prompt message. See the  prompt attribute definition in HTML 4.0.
 	* This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getPrompt() : String;
+	@:overload @:public public function getPrompt() : String;
 	
-	@:overload public function setPrompt(prompt : String) : Void;
+	@:overload @:public public function setPrompt(prompt : String) : Void;
 	
 	
 }

@@ -28,33 +28,33 @@ Currently this is needed to provide reflective access to annotations
 but may be used by other internal subsystems in the future. */
 extern class ConstantPool
 {
-	@:overload public function getSize() : Int;
+	@:overload @:public public function getSize() : Int;
 	
-	@:overload public function getClassAt(index : Int) : Class<Dynamic>;
+	@:overload @:public public function getClassAt(index : Int) : Class<Dynamic>;
 	
-	@:overload public function getClassAtIfLoaded(index : Int) : Class<Dynamic>;
+	@:overload @:public public function getClassAtIfLoaded(index : Int) : Class<Dynamic>;
 	
-	@:overload public function getMethodAt(index : Int) : java.lang.reflect.Member;
+	@:overload @:public public function getMethodAt(index : Int) : java.lang.reflect.Member;
 	
-	@:overload public function getMethodAtIfLoaded(index : Int) : java.lang.reflect.Member;
+	@:overload @:public public function getMethodAtIfLoaded(index : Int) : java.lang.reflect.Member;
 	
-	@:overload public function getFieldAt(index : Int) : java.lang.reflect.Field;
+	@:overload @:public public function getFieldAt(index : Int) : java.lang.reflect.Field;
 	
-	@:overload public function getFieldAtIfLoaded(index : Int) : java.lang.reflect.Field;
+	@:overload @:public public function getFieldAtIfLoaded(index : Int) : java.lang.reflect.Field;
 	
-	@:overload public function getMemberRefInfoAt(index : Int) : java.NativeArray<String>;
+	@:overload @:public public function getMemberRefInfoAt(index : Int) : java.NativeArray<String>;
 	
-	@:overload public function getIntAt(index : Int) : Int;
+	@:overload @:public public function getIntAt(index : Int) : Int;
 	
-	@:overload public function getLongAt(index : Int) : haxe.Int64;
+	@:overload @:public public function getLongAt(index : Int) : haxe.Int64;
 	
-	@:overload public function getFloatAt(index : Int) : Single;
+	@:overload @:public public function getFloatAt(index : Int) : Single;
 	
-	@:overload public function getDoubleAt(index : Int) : Float;
+	@:overload @:public public function getDoubleAt(index : Int) : Float;
 	
-	@:overload public function getStringAt(index : Int) : String;
+	@:overload @:public public function getStringAt(index : Int) : String;
 	
-	@:overload public function getUTF8At(index : Int) : String;
+	@:overload @:public public function getUTF8At(index : Int) : String;
 	
 	
 }

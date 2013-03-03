@@ -28,7 +28,7 @@ extern class PropertySet
 	/**
 	* Creates a new instance of TypedMap.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Map representing the Fields and Methods annotated with {@link Property}.
@@ -48,14 +48,14 @@ extern class PropertySet
 	* }
 	* </pre>
 	*/
-	@:overload @:abstract private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
+	@:overload @:protected @:abstract private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
 	/**
 	* This method parses a class for fields and methods with {@link Property}.
 	*/
-	@:overload private static function parse(clazz : Class<Dynamic>) : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
+	@:overload @:protected @:static private static function parse(clazz : Class<Dynamic>) : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
-	@:overload @:final public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public @:final public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Gets the name of the property.
@@ -65,7 +65,7 @@ extern class PropertySet
 	*      convention, but if anything but {@link String} is passed, this method
 	*      just returns null.
 	*/
-	@:overload public function get(key : Dynamic) : Dynamic;
+	@:overload @:public public function get(key : Dynamic) : Dynamic;
 	
 	/**
 	* Sets a property.
@@ -80,14 +80,14 @@ extern class PropertySet
 	*
 	* @see Property
 	*/
-	@:overload public function put(key : String, value : Dynamic) : Dynamic;
+	@:overload @:public public function put(key : String, value : Dynamic) : Dynamic;
 	
 	/**
 	* Checks if this {@link PropertySet} supports a property of the given name.
 	*/
-	@:overload public function supports(key : Dynamic) : Bool;
+	@:overload @:public public function supports(key : Dynamic) : Bool;
 	
-	@:overload public function remove(key : Dynamic) : Dynamic;
+	@:overload @:public public function remove(key : Dynamic) : Dynamic;
 	
 	/**
 	* Creates a {@link Map} view of this {@link PropertySet}.
@@ -103,7 +103,7 @@ extern class PropertySet
 	* @return
 	*      always non-null valid instance.
 	*/
-	@:overload @:final public function createMapView() : java.util.Map<String, Dynamic>;
+	@:overload @:public @:final public function createMapView() : java.util.Map<String, Dynamic>;
 	
 	
 }
@@ -156,29 +156,29 @@ extern class PropertySet
 }
 @:native('com$sun$xml$internal$ws$api$PropertySet$FieldAccessor') @:internal extern class PropertySet_FieldAccessor implements com.sun.xml.internal.ws.api.PropertySet.PropertySet_Accessor
 {
-	@:overload private function new(f : java.lang.reflect.Field, name : String) : Void;
+	@:overload @:protected private function new(f : java.lang.reflect.Field, name : String) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function hasValue(props : com.sun.xml.internal.ws.api.PropertySet) : Bool;
+	@:overload @:public public function hasValue(props : com.sun.xml.internal.ws.api.PropertySet) : Bool;
 	
-	@:overload public function get(props : com.sun.xml.internal.ws.api.PropertySet) : Dynamic;
+	@:overload @:public public function get(props : com.sun.xml.internal.ws.api.PropertySet) : Dynamic;
 	
-	@:overload public function set(props : com.sun.xml.internal.ws.api.PropertySet, value : Dynamic) : Void;
+	@:overload @:public public function set(props : com.sun.xml.internal.ws.api.PropertySet, value : Dynamic) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$api$PropertySet$MethodAccessor') @:internal extern class PropertySet_MethodAccessor implements com.sun.xml.internal.ws.api.PropertySet.PropertySet_Accessor
 {
-	@:overload private function new(getter : java.lang.reflect.Method, setter : java.lang.reflect.Method, value : String) : Void;
+	@:overload @:protected private function new(getter : java.lang.reflect.Method, setter : java.lang.reflect.Method, value : String) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function hasValue(props : com.sun.xml.internal.ws.api.PropertySet) : Bool;
+	@:overload @:public public function hasValue(props : com.sun.xml.internal.ws.api.PropertySet) : Bool;
 	
-	@:overload public function get(props : com.sun.xml.internal.ws.api.PropertySet) : Dynamic;
+	@:overload @:public public function get(props : com.sun.xml.internal.ws.api.PropertySet) : Dynamic;
 	
-	@:overload public function set(props : com.sun.xml.internal.ws.api.PropertySet, value : Dynamic) : Void;
+	@:overload @:public public function set(props : com.sun.xml.internal.ws.api.PropertySet, value : Dynamic) : Void;
 	
 	
 }

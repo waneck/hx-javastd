@@ -31,7 +31,7 @@ extern class PolicyMapMutator
 	* @param map the policy map instance that will be mutable by this mutator.
 	* @throws IllegalStateException in case this mutator object is already connected to a policy map.
 	*/
-	@:overload public function connect(map : com.sun.xml.internal.ws.policy.PolicyMap) : Void;
+	@:overload @:public public function connect(map : com.sun.xml.internal.ws.policy.PolicyMap) : Void;
 	
 	/**
 	* Can be used to retrieve the policy map currently connected to this mutator. Will return {@code null} if not connected.
@@ -41,7 +41,7 @@ extern class PolicyMapMutator
 	* @see #isConnected()
 	* @see #disconnect()
 	*/
-	@:overload public function getMap() : com.sun.xml.internal.ws.policy.PolicyMap;
+	@:overload @:public public function getMap() : com.sun.xml.internal.ws.policy.PolicyMap;
 	
 	/**
 	* Disconnects the mutator from the policy map object it is connected to. Method must be called prior to connecting this
@@ -50,14 +50,14 @@ extern class PolicyMapMutator
 	* This operation is irreversible: you cannot connect the mutator to the same policy map instance once you disconnect from it.
 	* Multiple consequent calls of this method will have no effect.
 	*/
-	@:overload public function disconnect() : Void;
+	@:overload @:public public function disconnect() : Void;
 	
 	/**
 	* This method provides connection status information of the policy map mutator instance.
 	*
 	* @return {@code true} if the mutator instance is connected to a policy map, otherwise returns {@code false}.
 	*/
-	@:overload public function isConnected() : Bool;
+	@:overload @:public public function isConnected() : Bool;
 	
 	
 }

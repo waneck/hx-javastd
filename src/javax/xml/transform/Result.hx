@@ -40,7 +40,7 @@ extern interface Result
 	*
 	* @param systemId The system identifier as a URI string.
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	/**
 	* Get the system identifier that was set with setSystemId.
@@ -48,7 +48,7 @@ extern interface Result
 	* @return The system identifier that was set with setSystemId,
 	* or null if setSystemId was not called.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	
 }

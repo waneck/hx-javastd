@@ -25,11 +25,11 @@ package com.sun.tools.classfile;
 */
 extern class RuntimeVisibleParameterAnnotations_attribute extends com.sun.tools.classfile.RuntimeParameterAnnotations_attribute
 {
-	@:overload public function new(cp : com.sun.tools.classfile.ConstantPool, parameter_annotations : java.NativeArray<java.NativeArray<com.sun.tools.classfile.Annotation>>) : Void;
+	@:overload @:public public function new(cp : com.sun.tools.classfile.ConstantPool, parameter_annotations : java.NativeArray<java.NativeArray<com.sun.tools.classfile.Annotation>>) : Void;
 	
-	@:overload public function new(name_index : Int, parameter_annotations : java.NativeArray<java.NativeArray<com.sun.tools.classfile.Annotation>>) : Void;
+	@:overload @:public public function new(name_index : Int, parameter_annotations : java.NativeArray<java.NativeArray<com.sun.tools.classfile.Annotation>>) : Void;
 	
-	@:overload public function accept<R, P>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, P>, p : P) : R;
+	@:overload @:public override public function accept<R, P>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, P>, p : P) : R;
 	
 	
 }

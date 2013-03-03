@@ -28,9 +28,9 @@ package com.sun.xml.internal.ws.client.sei;
 	/**
 	* The index of the method invocation parameters that this object looks for.
 	*/
-	private var methodPos(default, null) : Int;
+	@:protected @:final private var methodPos(default, null) : Int;
 	
-	@:overload private function new(methodPos : Int) : Void;
+	@:overload @:protected private function new(methodPos : Int) : Void;
 	
 	
 }
@@ -39,13 +39,13 @@ package com.sun.xml.internal.ws.client.sei;
 */
 @:native('com$sun$xml$internal$ws$client$sei$MessageFiller$AttachmentFiller') @:internal extern class MessageFiller_AttachmentFiller extends com.sun.xml.internal.ws.client.sei.MessageFiller
 {
-	private var param(default, null) : com.sun.xml.internal.ws.model.ParameterImpl;
+	@:protected @:final private var param(default, null) : com.sun.xml.internal.ws.model.ParameterImpl;
 	
-	private var getter(default, null) : com.sun.xml.internal.ws.client.sei.ValueGetter;
+	@:protected @:final private var getter(default, null) : com.sun.xml.internal.ws.client.sei.ValueGetter;
 	
-	private var mimeType(default, null) : String;
+	@:protected @:final private var mimeType(default, null) : String;
 	
-	@:overload private function new(param : com.sun.xml.internal.ws.model.ParameterImpl, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : Void;
+	@:overload @:protected private function new(param : com.sun.xml.internal.ws.model.ParameterImpl, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : Void;
 	
 	/**
 	* Creates an MessageFiller based on the parameter type
@@ -56,25 +56,25 @@ package com.sun.xml.internal.ws.client.sei;
 	*      Gets a value from an object that represents a parameter passed
 	*      as a method argument.
 	*/
-	@:overload public static function createAttachmentFiller(param : com.sun.xml.internal.ws.model.ParameterImpl, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : com.sun.xml.internal.ws.client.sei.MessageFiller;
+	@:overload @:public @:static public static function createAttachmentFiller(param : com.sun.xml.internal.ws.model.ParameterImpl, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : com.sun.xml.internal.ws.client.sei.MessageFiller;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$client$sei$MessageFiller$ByteArrayFiller') @:internal extern class MessageFiller_ByteArrayFiller extends com.sun.xml.internal.ws.client.sei.MessageFiller.MessageFiller_AttachmentFiller
 {
-	@:overload private function new(param : com.sun.xml.internal.ws.model.ParameterImpl, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : Void;
+	@:overload @:protected private function new(param : com.sun.xml.internal.ws.model.ParameterImpl, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$client$sei$MessageFiller$DataHandlerFiller') @:internal extern class MessageFiller_DataHandlerFiller extends com.sun.xml.internal.ws.client.sei.MessageFiller.MessageFiller_AttachmentFiller
 {
-	@:overload private function new(param : com.sun.xml.internal.ws.model.ParameterImpl, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : Void;
+	@:overload @:protected private function new(param : com.sun.xml.internal.ws.model.ParameterImpl, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$client$sei$MessageFiller$JAXBFiller') @:internal extern class MessageFiller_JAXBFiller extends com.sun.xml.internal.ws.client.sei.MessageFiller.MessageFiller_AttachmentFiller
 {
-	@:overload private function new(param : com.sun.xml.internal.ws.model.ParameterImpl, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : Void;
+	@:overload @:protected private function new(param : com.sun.xml.internal.ws.model.ParameterImpl, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : Void;
 	
 	
 }
@@ -83,7 +83,7 @@ package com.sun.xml.internal.ws.client.sei;
 */
 @:native('com$sun$xml$internal$ws$client$sei$MessageFiller$Header') @:internal extern class MessageFiller_Header extends com.sun.xml.internal.ws.client.sei.MessageFiller
 {
-	@:overload private function new(methodPos : Int, bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : Void;
+	@:overload @:protected private function new(methodPos : Int, bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : Void;
 	
 	
 }

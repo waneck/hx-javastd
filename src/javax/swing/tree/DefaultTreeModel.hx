@@ -45,10 +45,10 @@ package javax.swing.tree;
 extern class DefaultTreeModel implements java.io.Serializable implements javax.swing.tree.TreeModel
 {
 	/** Root of the tree. */
-	private var root : javax.swing.tree.TreeNode;
+	@:protected private var root : javax.swing.tree.TreeNode;
 	
 	/** Listeners. */
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
 	/**
 	* Creates a tree in which any node can have children.
@@ -56,7 +56,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	* @param root a TreeNode object that is the root of the tree
 	* @see #DefaultTreeModel(TreeNode, boolean)
 	*/
-	@:overload public function new(root : javax.swing.tree.TreeNode) : Void;
+	@:overload @:public public function new(root : javax.swing.tree.TreeNode) : Void;
 	
 	/**
 	* Creates a tree specifying whether any node can have children,
@@ -68,14 +68,14 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	*        it can have children
 	* @see #asksAllowsChildren
 	*/
-	@:overload public function new(root : javax.swing.tree.TreeNode, asksAllowsChildren : Bool) : Void;
+	@:overload @:public public function new(root : javax.swing.tree.TreeNode, asksAllowsChildren : Bool) : Void;
 	
 	/**
 	* Sets whether or not to test leafness by asking getAllowsChildren()
 	* or isLeaf() to the TreeNodes.  If newvalue is true, getAllowsChildren()
 	* is messaged, otherwise isLeaf() is messaged.
 	*/
-	@:overload public function setAsksAllowsChildren(newValue : Bool) : Void;
+	@:overload @:public public function setAsksAllowsChildren(newValue : Bool) : Void;
 	
 	/**
 	* Tells how leaf nodes are determined.
@@ -85,13 +85,13 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	*         (even if allowed) are leaf nodes
 	* @see #asksAllowsChildren
 	*/
-	@:overload public function asksAllowsChildren() : Bool;
+	@:overload @:public public function asksAllowsChildren() : Bool;
 	
 	/**
 	* Sets the root to <code>root</code>. A null <code>root</code> implies
 	* the tree is to display nothing, and is legal.
 	*/
-	@:overload public function setRoot(root : javax.swing.tree.TreeNode) : Void;
+	@:overload @:public public function setRoot(root : javax.swing.tree.TreeNode) : Void;
 	
 	/**
 	* Returns the root of the tree.  Returns null only if the tree has
@@ -99,7 +99,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	*
 	* @return  the root of the tree
 	*/
-	@:overload public function getRoot() : Dynamic;
+	@:overload @:public public function getRoot() : Dynamic;
 	
 	/**
 	* Returns the index of child in parent.
@@ -109,7 +109,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	* @return the index of the child in the parent, or -1
 	*    if either the parent or the child is <code>null</code>
 	*/
-	@:overload public function getIndexOfChild(parent : Dynamic, child : Dynamic) : Int;
+	@:overload @:public public function getIndexOfChild(parent : Dynamic, child : Dynamic) : Int;
 	
 	/**
 	* Returns the child of <I>parent</I> at index <I>index</I> in the parent's
@@ -121,7 +121,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	* @param   parent  a node in the tree, obtained from this data source
 	* @return  the child of <I>parent</I> at index <I>index</I>
 	*/
-	@:overload public function getChild(parent : Dynamic, index : Int) : Dynamic;
+	@:overload @:public public function getChild(parent : Dynamic, index : Int) : Dynamic;
 	
 	/**
 	* Returns the number of children of <I>parent</I>.  Returns 0 if the node
@@ -131,7 +131,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	* @param   parent  a node in the tree, obtained from this data source
 	* @return  the number of children of the node <I>parent</I>
 	*/
-	@:overload public function getChildCount(parent : Dynamic) : Int;
+	@:overload @:public public function getChildCount(parent : Dynamic) : Int;
 	
 	/**
 	* Returns whether the specified node is a leaf node.
@@ -144,14 +144,14 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	* @see #asksAllowsChildren
 	* @see TreeModel#isLeaf
 	*/
-	@:overload public function isLeaf(node : Dynamic) : Bool;
+	@:overload @:public public function isLeaf(node : Dynamic) : Bool;
 	
 	/**
 	* Invoke this method if you've modified the {@code TreeNode}s upon which
 	* this model depends. The model will notify all of its listeners that the
 	* model has changed.
 	*/
-	@:overload public function reload() : Void;
+	@:overload @:public public function reload() : Void;
 	
 	/**
 	* This sets the user object of the TreeNode identified by path
@@ -159,7 +159,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	* the TreeModel you're going to need to subclass this and
 	* set the user object of the changed node to something meaningful.
 	*/
-	@:overload public function valueForPathChanged(path : javax.swing.tree.TreePath, newValue : Dynamic) : Void;
+	@:overload @:public public function valueForPathChanged(path : javax.swing.tree.TreePath, newValue : Dynamic) : Void;
 	
 	/**
 	* Invoked this to insert newChild at location index in parents children.
@@ -167,7 +167,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	* event. This is the preferred way to add children as it will create
 	* the appropriate event.
 	*/
-	@:overload public function insertNodeInto(newChild : javax.swing.tree.MutableTreeNode, parent : javax.swing.tree.MutableTreeNode, index : Int) : Void;
+	@:overload @:public public function insertNodeInto(newChild : javax.swing.tree.MutableTreeNode, parent : javax.swing.tree.MutableTreeNode, index : Int) : Void;
 	
 	/**
 	* Message this to remove node from its parent. This will message
@@ -175,13 +175,13 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	* preferred way to remove a node as it handles the event creation
 	* for you.
 	*/
-	@:overload public function removeNodeFromParent(node : javax.swing.tree.MutableTreeNode) : Void;
+	@:overload @:public public function removeNodeFromParent(node : javax.swing.tree.MutableTreeNode) : Void;
 	
 	/**
 	* Invoke this method after you've changed how node is to be
 	* represented in the tree.
 	*/
-	@:overload public function nodeChanged(node : javax.swing.tree.TreeNode) : Void;
+	@:overload @:public public function nodeChanged(node : javax.swing.tree.TreeNode) : Void;
 	
 	/**
 	* Invoke this method if you've modified the {@code TreeNode}s upon which
@@ -190,14 +190,14 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	*
 	* @param node the node below which the model has changed
 	*/
-	@:overload public function reload(node : javax.swing.tree.TreeNode) : Void;
+	@:overload @:public public function reload(node : javax.swing.tree.TreeNode) : Void;
 	
 	/**
 	* Invoke this method after you've inserted some TreeNodes into
 	* node.  childIndices should be the index of the new elements and
 	* must be sorted in ascending order.
 	*/
-	@:overload public function nodesWereInserted(node : javax.swing.tree.TreeNode, childIndices : java.NativeArray<Int>) : Void;
+	@:overload @:public public function nodesWereInserted(node : javax.swing.tree.TreeNode, childIndices : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Invoke this method after you've removed some TreeNodes from
@@ -205,20 +205,20 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	* must be sorted in ascending order. And removedChildren should be
 	* the array of the children objects that were removed.
 	*/
-	@:overload public function nodesWereRemoved(node : javax.swing.tree.TreeNode, childIndices : java.NativeArray<Int>, removedChildren : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function nodesWereRemoved(node : javax.swing.tree.TreeNode, childIndices : java.NativeArray<Int>, removedChildren : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Invoke this method after you've changed how the children identified by
 	* childIndicies are to be represented in the tree.
 	*/
-	@:overload public function nodesChanged(node : javax.swing.tree.TreeNode, childIndices : java.NativeArray<Int>) : Void;
+	@:overload @:public public function nodesChanged(node : javax.swing.tree.TreeNode, childIndices : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Invoke this method if you've totally changed the children of
 	* node and its childrens children...  This will post a
 	* treeStructureChanged event.
 	*/
-	@:overload public function nodeStructureChanged(node : javax.swing.tree.TreeNode) : Void;
+	@:overload @:public public function nodeStructureChanged(node : javax.swing.tree.TreeNode) : Void;
 	
 	/**
 	* Builds the parents of node up to and including the root node,
@@ -228,7 +228,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	*
 	* @param aNode the TreeNode to get the path for
 	*/
-	@:overload public function getPathToRoot(aNode : javax.swing.tree.TreeNode) : java.NativeArray<javax.swing.tree.TreeNode>;
+	@:overload @:public public function getPathToRoot(aNode : javax.swing.tree.TreeNode) : java.NativeArray<javax.swing.tree.TreeNode>;
 	
 	/**
 	* Builds the parents of node up to and including the root node,
@@ -242,7 +242,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	* @return an array of TreeNodes giving the path from the root to the
 	*         specified node
 	*/
-	@:overload private function getPathToRoot(aNode : javax.swing.tree.TreeNode, depth : Int) : java.NativeArray<javax.swing.tree.TreeNode>;
+	@:overload @:protected private function getPathToRoot(aNode : javax.swing.tree.TreeNode, depth : Int) : java.NativeArray<javax.swing.tree.TreeNode>;
 	
 	/**
 	* Adds a listener for the TreeModelEvent posted after the tree changes.
@@ -250,7 +250,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	* @see     #removeTreeModelListener
 	* @param   l       the listener to add
 	*/
-	@:overload public function addTreeModelListener(l : javax.swing.event.TreeModelListener) : Void;
+	@:overload @:public public function addTreeModelListener(l : javax.swing.event.TreeModelListener) : Void;
 	
 	/**
 	* Removes a listener previously added with <B>addTreeModelListener()</B>.
@@ -258,7 +258,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	* @see     #addTreeModelListener
 	* @param   l       the listener to remove
 	*/
-	@:overload public function removeTreeModelListener(l : javax.swing.event.TreeModelListener) : Void;
+	@:overload @:public public function removeTreeModelListener(l : javax.swing.event.TreeModelListener) : Void;
 	
 	/**
 	* Returns an array of all the tree model listeners
@@ -273,7 +273,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getTreeModelListeners() : java.NativeArray<javax.swing.event.TreeModelListener>;
+	@:require(java4) @:overload @:public public function getTreeModelListeners() : java.NativeArray<javax.swing.event.TreeModelListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -288,7 +288,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	* @param childIndices the indices of the changed elements
 	* @param children the changed elements
 	*/
-	@:overload private function fireTreeNodesChanged(source : Dynamic, path : java.NativeArray<Dynamic>, childIndices : java.NativeArray<Int>, children : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected private function fireTreeNodesChanged(source : Dynamic, path : java.NativeArray<Dynamic>, childIndices : java.NativeArray<Int>, children : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -302,7 +302,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	* @param childIndices the indices of the new elements
 	* @param children the new elements
 	*/
-	@:overload private function fireTreeNodesInserted(source : Dynamic, path : java.NativeArray<Dynamic>, childIndices : java.NativeArray<Int>, children : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected private function fireTreeNodesInserted(source : Dynamic, path : java.NativeArray<Dynamic>, childIndices : java.NativeArray<Int>, children : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -316,7 +316,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	* @param childIndices the indices of the removed elements
 	* @param children the removed elements
 	*/
-	@:overload private function fireTreeNodesRemoved(source : Dynamic, path : java.NativeArray<Dynamic>, childIndices : java.NativeArray<Int>, children : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected private function fireTreeNodesRemoved(source : Dynamic, path : java.NativeArray<Dynamic>, childIndices : java.NativeArray<Int>, children : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -331,7 +331,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	* @param childIndices the indices of the affected elements
 	* @param children the affected elements
 	*/
-	@:overload private function fireTreeStructureChanged(source : Dynamic, path : java.NativeArray<Dynamic>, childIndices : java.NativeArray<Int>, children : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected private function fireTreeStructureChanged(source : Dynamic, path : java.NativeArray<Dynamic>, childIndices : java.NativeArray<Int>, children : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -369,7 +369,7 @@ extern class DefaultTreeModel implements java.io.Serializable implements javax.s
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	
 }

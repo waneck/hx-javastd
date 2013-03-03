@@ -25,9 +25,9 @@ package com.sun.naming.internal;
 */
 extern class FactoryEnumeration
 {
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function hasMore() : Bool;
+	@:overload @:public public function hasMore() : Bool;
 	
 	
 }

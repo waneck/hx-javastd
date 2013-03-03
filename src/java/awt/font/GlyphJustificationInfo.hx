@@ -95,68 +95,68 @@ extern class GlyphJustificationInfo
 	* @param shrinkRightLimit the maximum amount by which the right side
 	* of this glyph can shrink.  Must be non-negative.
 	*/
-	@:overload public function new(weight : Single, growAbsorb : Bool, growPriority : Int, growLeftLimit : Single, growRightLimit : Single, shrinkAbsorb : Bool, shrinkPriority : Int, shrinkLeftLimit : Single, shrinkRightLimit : Single) : Void;
+	@:overload @:public public function new(weight : Single, growAbsorb : Bool, growPriority : Int, growLeftLimit : Single, growRightLimit : Single, shrinkAbsorb : Bool, shrinkPriority : Int, shrinkLeftLimit : Single, shrinkRightLimit : Single) : Void;
 	
 	/** The highest justification priority. */
-	public static var PRIORITY_KASHIDA(default, null) : Int;
+	@:public @:static @:final public static var PRIORITY_KASHIDA(default, null) : Int;
 	
 	/** The second highest justification priority. */
-	public static var PRIORITY_WHITESPACE(default, null) : Int;
+	@:public @:static @:final public static var PRIORITY_WHITESPACE(default, null) : Int;
 	
 	/** The second lowest justification priority. */
-	public static var PRIORITY_INTERCHAR(default, null) : Int;
+	@:public @:static @:final public static var PRIORITY_INTERCHAR(default, null) : Int;
 	
 	/** The lowest justification priority. */
-	public static var PRIORITY_NONE(default, null) : Int;
+	@:public @:static @:final public static var PRIORITY_NONE(default, null) : Int;
 	
 	/**
 	* The weight of this glyph.
 	*/
-	public var weight(default, null) : Single;
+	@:public @:final public var weight(default, null) : Single;
 	
 	/**
 	* The priority level of this glyph as it is growing.
 	*/
-	public var growPriority(default, null) : Int;
+	@:public @:final public var growPriority(default, null) : Int;
 	
 	/**
 	* If <code>true</code>, this glyph absorbs all extra
 	* space at this and lower priority levels when it grows.
 	*/
-	public var growAbsorb(default, null) : Bool;
+	@:public @:final public var growAbsorb(default, null) : Bool;
 	
 	/**
 	* The maximum amount by which the left side of this glyph can grow.
 	*/
-	public var growLeftLimit(default, null) : Single;
+	@:public @:final public var growLeftLimit(default, null) : Single;
 	
 	/**
 	* The maximum amount by which the right side of this glyph can grow.
 	*/
-	public var growRightLimit(default, null) : Single;
+	@:public @:final public var growRightLimit(default, null) : Single;
 	
 	/**
 	* The priority level of this glyph as it is shrinking.
 	*/
-	public var shrinkPriority(default, null) : Int;
+	@:public @:final public var shrinkPriority(default, null) : Int;
 	
 	/**
 	* If <code>true</code>,this glyph absorbs all remaining shrinkage at
 	* this and lower priority levels as it shrinks.
 	*/
-	public var shrinkAbsorb(default, null) : Bool;
+	@:public @:final public var shrinkAbsorb(default, null) : Bool;
 	
 	/**
 	* The maximum amount by which the left side of this glyph can shrink
 	* (a positive number).
 	*/
-	public var shrinkLeftLimit(default, null) : Single;
+	@:public @:final public var shrinkLeftLimit(default, null) : Single;
 	
 	/**
 	* The maximum amount by which the right side of this glyph can shrink
 	* (a positive number).
 	*/
-	public var shrinkRightLimit(default, null) : Single;
+	@:public @:final public var shrinkRightLimit(default, null) : Single;
 	
 	
 }

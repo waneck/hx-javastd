@@ -30,11 +30,11 @@ extern class BindingComponent
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload @:final private function getErrorReporter() : com.sun.tools.internal.xjc.reader.xmlschema.ErrorReporter;
+	@:overload @:protected @:final private function getErrorReporter() : com.sun.tools.internal.xjc.reader.xmlschema.ErrorReporter;
 	
-	@:overload @:final private function getClassSelector() : com.sun.tools.internal.xjc.reader.xmlschema.ClassSelector;
+	@:overload @:protected @:final private function getClassSelector() : com.sun.tools.internal.xjc.reader.xmlschema.ClassSelector;
 	
 	
 }

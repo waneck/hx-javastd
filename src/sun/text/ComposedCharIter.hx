@@ -30,14 +30,14 @@ extern class ComposedCharIter
 	* {@link #next} returns this value when there are no more composed characters
 	* over which to iterate.
 	*/
-	public static var DONE(default, null) : Int;
+	@:public @:static @:final public static var DONE(default, null) : Int;
 	
 	/**
 	* Construct a new <tt>ComposedCharIter</tt>.  The iterator will return
 	* all Unicode characters with canonical decompositions, excluding Korean
 	* Hangul characters.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the next precomposed Unicode character.
@@ -46,7 +46,7 @@ extern class ComposedCharIter
 	* been returned, {@link #hasNext} will return <tt>false</tt> and further calls
 	* to <tt>next</tt> will return {@link #DONE}.
 	*/
-	@:overload public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
 	/**
 	* Returns the Unicode decomposition of the current character.
@@ -54,7 +54,7 @@ extern class ComposedCharIter
 	* recently returned by {@link #next}.  The resulting decomposition is
 	* affected by the settings of the options passed to the constructor.
 	*/
-	@:overload public function decomposition() : String;
+	@:overload @:public public function decomposition() : String;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	/**
 	* Constructs an empty list.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a list containing the elements of the specified
@@ -38,7 +38,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @param  c the collection whose elements are to be placed into this list
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload public function new(c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	/**
 	* Returns the first element in this list.
@@ -46,7 +46,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return the first element in this list
 	* @throws NoSuchElementException if this list is empty
 	*/
-	@:overload public function getFirst() : E;
+	@:overload @:public public function getFirst() : E;
 	
 	/**
 	* Returns the last element in this list.
@@ -54,7 +54,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return the last element in this list
 	* @throws NoSuchElementException if this list is empty
 	*/
-	@:overload public function getLast() : E;
+	@:overload @:public public function getLast() : E;
 	
 	/**
 	* Removes and returns the first element from this list.
@@ -62,7 +62,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return the first element from this list
 	* @throws NoSuchElementException if this list is empty
 	*/
-	@:overload public function removeFirst() : E;
+	@:overload @:public public function removeFirst() : E;
 	
 	/**
 	* Removes and returns the last element from this list.
@@ -70,14 +70,14 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return the last element from this list
 	* @throws NoSuchElementException if this list is empty
 	*/
-	@:overload public function removeLast() : E;
+	@:overload @:public public function removeLast() : E;
 	
 	/**
 	* Inserts the specified element at the beginning of this list.
 	*
 	* @param e the element to add
 	*/
-	@:overload public function addFirst(e : E) : Void;
+	@:overload @:public public function addFirst(e : E) : Void;
 	
 	/**
 	* Appends the specified element to the end of this list.
@@ -86,7 +86,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	*
 	* @param e the element to add
 	*/
-	@:overload public function addLast(e : E) : Void;
+	@:overload @:public public function addLast(e : E) : Void;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains the specified element.
@@ -97,14 +97,14 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @param o element whose presence in this list is to be tested
 	* @return <tt>true</tt> if this list contains the specified element
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the number of elements in this list.
 	*
 	* @return the number of elements in this list
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Appends the specified element to the end of this list.
@@ -114,7 +114,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @param e element to be appended to this list
 	* @return <tt>true</tt> (as specified by {@link Collection#add})
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* Removes the first occurrence of the specified element from this list,
@@ -128,7 +128,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @param o element to be removed from this list, if present
 	* @return <tt>true</tt> if this list contained the specified element
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Appends all of the elements in the specified collection to the end of
@@ -142,7 +142,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return <tt>true</tt> if this list changed as a result of the call
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload override public function addAll(c : java.util.Collection<E>) : Bool;
+	@:overload @:public override public function addAll(c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Inserts all of the elements in the specified collection into this
@@ -159,12 +159,12 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload override public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
+	@:overload @:public override public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Removes all of the elements from this list.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns the element at the specified position in this list.
@@ -173,7 +173,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return the element at the specified position in this list
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override public function get(index : Int) : E;
+	@:overload @:public override public function get(index : Int) : E;
 	
 	/**
 	* Replaces the element at the specified position in this list with the
@@ -184,7 +184,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return the element previously at the specified position
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override public function set(index : Int, element : E) : E;
+	@:overload @:public override public function set(index : Int, element : E) : E;
 	
 	/**
 	* Inserts the specified element at the specified position in this list.
@@ -195,7 +195,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @param element element to be inserted
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override public function add(index : Int, element : E) : Void;
+	@:overload @:public override public function add(index : Int, element : E) : Void;
 	
 	/**
 	* Removes the element at the specified position in this list.  Shifts any
@@ -206,7 +206,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return the element previously at the specified position
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override public function remove(index : Int) : E;
+	@:overload @:public override public function remove(index : Int) : E;
 	
 	/**
 	* Returns the index of the first occurrence of the specified element
@@ -219,7 +219,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return the index of the first occurrence of the specified element in
 	*         this list, or -1 if this list does not contain the element
 	*/
-	@:overload public function indexOf(o : Dynamic) : Int;
+	@:overload @:public override public function indexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns the index of the last occurrence of the specified element
@@ -232,14 +232,14 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return the index of the last occurrence of the specified element in
 	*         this list, or -1 if this list does not contain the element
 	*/
-	@:overload public function lastIndexOf(o : Dynamic) : Int;
+	@:overload @:public override public function lastIndexOf(o : Dynamic) : Int;
 	
 	/**
 	* Retrieves, but does not remove, the head (first element) of this list.
 	* @return the head of this list, or <tt>null</tt> if this list is empty
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function peek() : E;
+	@:require(java5) @:overload @:public public function peek() : E;
 	
 	/**
 	* Retrieves, but does not remove, the head (first element) of this list.
@@ -247,14 +247,14 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @throws NoSuchElementException if this list is empty
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function element() : E;
+	@:require(java5) @:overload @:public public function element() : E;
 	
 	/**
 	* Retrieves and removes the head (first element) of this list
 	* @return the head of this list, or <tt>null</tt> if this list is empty
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function poll() : E;
+	@:require(java5) @:overload @:public public function poll() : E;
 	
 	/**
 	* Retrieves and removes the head (first element) of this list.
@@ -263,7 +263,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @throws NoSuchElementException if this list is empty
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function remove() : E;
+	@:require(java5) @:overload @:public public function remove() : E;
 	
 	/**
 	* Adds the specified element as the tail (last element) of this list.
@@ -272,7 +272,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return <tt>true</tt> (as specified by {@link Queue#offer})
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function offer(e : E) : Bool;
+	@:require(java5) @:overload @:public public function offer(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element at the front of this list.
@@ -281,7 +281,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return <tt>true</tt> (as specified by {@link Deque#offerFirst})
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function offerFirst(e : E) : Bool;
+	@:require(java6) @:overload @:public public function offerFirst(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element at the end of this list.
@@ -290,7 +290,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return <tt>true</tt> (as specified by {@link Deque#offerLast})
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function offerLast(e : E) : Bool;
+	@:require(java6) @:overload @:public public function offerLast(e : E) : Bool;
 	
 	/**
 	* Retrieves, but does not remove, the first element of this list,
@@ -300,7 +300,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	*         if this list is empty
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function peekFirst() : E;
+	@:require(java6) @:overload @:public public function peekFirst() : E;
 	
 	/**
 	* Retrieves, but does not remove, the last element of this list,
@@ -310,7 +310,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	*         if this list is empty
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function peekLast() : E;
+	@:require(java6) @:overload @:public public function peekLast() : E;
 	
 	/**
 	* Retrieves and removes the first element of this list,
@@ -320,7 +320,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	*     this list is empty
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function pollFirst() : E;
+	@:require(java6) @:overload @:public public function pollFirst() : E;
 	
 	/**
 	* Retrieves and removes the last element of this list,
@@ -330,7 +330,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	*     this list is empty
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function pollLast() : E;
+	@:require(java6) @:overload @:public public function pollLast() : E;
 	
 	/**
 	* Pushes an element onto the stack represented by this list.  In other
@@ -341,7 +341,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @param e the element to push
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function push(e : E) : Void;
+	@:require(java6) @:overload @:public public function push(e : E) : Void;
 	
 	/**
 	* Pops an element from the stack represented by this list.  In other
@@ -354,7 +354,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @throws NoSuchElementException if this list is empty
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function pop() : E;
+	@:require(java6) @:overload @:public public function pop() : E;
 	
 	/**
 	* Removes the first occurrence of the specified element in this
@@ -365,7 +365,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return <tt>true</tt> if the list contained the specified element
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function removeFirstOccurrence(o : Dynamic) : Bool;
+	@:require(java6) @:overload @:public public function removeFirstOccurrence(o : Dynamic) : Bool;
 	
 	/**
 	* Removes the last occurrence of the specified element in this
@@ -376,7 +376,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return <tt>true</tt> if the list contained the specified element
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function removeLastOccurrence(o : Dynamic) : Bool;
+	@:require(java6) @:overload @:public public function removeLastOccurrence(o : Dynamic) : Bool;
 	
 	/**
 	* Returns a list-iterator of the elements in this list (in proper
@@ -399,12 +399,12 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	* @see List#listIterator(int)
 	*/
-	@:overload override public function listIterator(index : Int) : java.util.ListIterator<E>;
+	@:overload @:public override public function listIterator(index : Int) : java.util.ListIterator<E>;
 	
 	/**
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function descendingIterator() : java.util.Iterator<E>;
+	@:require(java6) @:overload @:public public function descendingIterator() : java.util.Iterator<E>;
 	
 	/**
 	* Returns an array containing all of the elements in this list
@@ -420,7 +420,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return an array containing all of the elements in this list
 	*         in proper sequence
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this list in
@@ -460,29 +460,29 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	*         this list
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	
 }
 @:native('sun$awt$util$IdentityLinkedList$ListItr') @:internal extern class IdentityLinkedList_ListItr implements java.util.ListIterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function hasPrevious() : Bool;
+	@:overload @:public public function hasPrevious() : Bool;
 	
-	@:overload public function previous() : Dynamic;
+	@:overload @:public public function previous() : Dynamic;
 	
-	@:overload public function nextIndex() : Int;
+	@:overload @:public public function nextIndex() : Int;
 	
-	@:overload public function previousIndex() : Int;
+	@:overload @:public public function previousIndex() : Int;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
-	@:overload public function set(e : Dynamic) : Void;
+	@:overload @:public public function set(e : Dynamic) : Void;
 	
-	@:overload public function add(e : Dynamic) : Void;
+	@:overload @:public public function add(e : Dynamic) : Void;
 	
 	
 }
@@ -493,11 +493,11 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 /** Adapter to provide descending iterators via ListItr.previous */
 @:native('sun$awt$util$IdentityLinkedList$DescendingIterator') @:internal extern class IdentityLinkedList_DescendingIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

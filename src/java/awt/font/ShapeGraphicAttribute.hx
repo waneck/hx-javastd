@@ -42,12 +42,12 @@ extern class ShapeGraphicAttribute extends java.awt.font.GraphicAttribute
 	/**
 	* A key indicating the shape should be stroked with a 1-pixel wide stroke.
 	*/
-	public static var STROKE(default, null) : Bool;
+	@:public @:static @:final public static var STROKE(default, null) : Bool;
 	
 	/**
 	* A key indicating the shape should be filled.
 	*/
-	public static var FILL(default, null) : Bool;
+	@:public @:static @:final public static var FILL(default, null) : Bool;
 	
 	/**
 	* Constructs a <code>ShapeGraphicAttribute</code> for the specified
@@ -63,7 +63,7 @@ extern class ShapeGraphicAttribute extends java.awt.font.GraphicAttribute
 	* stroked; <code>false</code> if the <code>Shape</code> should be
 	* filled.
 	*/
-	@:overload public function new(shape : java.awt.Shape, alignment : Int, stroke : Bool) : Void;
+	@:overload @:public public function new(shape : java.awt.Shape, alignment : Int, stroke : Bool) : Void;
 	
 	/**
 	* Returns the ascent of this <code>ShapeGraphicAttribute</code>.  The
@@ -72,7 +72,7 @@ extern class ShapeGraphicAttribute extends java.awt.font.GraphicAttribute
 	* bounds of its <code>Shape</code>.
 	* @return the ascent of this <code>ShapeGraphicAttribute</code>.
 	*/
-	@:overload override public function getAscent() : Single;
+	@:overload @:public override public function getAscent() : Single;
 	
 	/**
 	* Returns the descent of this <code>ShapeGraphicAttribute</code>.
@@ -81,7 +81,7 @@ extern class ShapeGraphicAttribute extends java.awt.font.GraphicAttribute
 	* bounds of its <code>Shape</code>.
 	* @return the descent of this <code>ShapeGraphicAttribute</code>.
 	*/
-	@:overload override public function getDescent() : Single;
+	@:overload @:public override public function getDescent() : Single;
 	
 	/**
 	* Returns the advance of this <code>ShapeGraphicAttribute</code>.
@@ -90,12 +90,12 @@ extern class ShapeGraphicAttribute extends java.awt.font.GraphicAttribute
 	* bounds of its <code>Shape</code>.
 	* @return the advance of this <code>ShapeGraphicAttribute</code>.
 	*/
-	@:overload override public function getAdvance() : Single;
+	@:overload @:public override public function getAdvance() : Single;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function draw(graphics : java.awt.Graphics2D, x : Single, y : Single) : Void;
+	@:overload @:public override public function draw(graphics : java.awt.Graphics2D, x : Single, y : Single) : Void;
 	
 	/**
 	* Returns a {@link Rectangle2D} that encloses all of the
@@ -106,7 +106,7 @@ extern class ShapeGraphicAttribute extends java.awt.font.GraphicAttribute
 	* @return a <code>Rectangle2D</code> that encloses all of the bits
 	* rendered by this <code>ShapeGraphicAttribute</code>.
 	*/
-	@:overload override public function getBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public override public function getBounds() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Return a {@link java.awt.Shape} that represents the region that
@@ -120,14 +120,14 @@ extern class ShapeGraphicAttribute extends java.awt.font.GraphicAttribute
 	*   suitable for stroking or filling.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getOutline(tx : java.awt.geom.AffineTransform) : java.awt.Shape;
+	@:require(java6) @:overload @:public override public function getOutline(tx : java.awt.geom.AffineTransform) : java.awt.Shape;
 	
 	/**
 	* Returns a hashcode for this <code>ShapeGraphicAttribute</code>.
 	* @return  a hash code value for this
 	* <code>ShapeGraphicAttribute</code>.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this <code>ShapeGraphicAttribute</code> to the specified
@@ -137,7 +137,7 @@ extern class ShapeGraphicAttribute extends java.awt.font.GraphicAttribute
 	* <code>ShapeGraphicAttribute</code> equals <code>rhs</code>;
 	* <code>false</code> otherwise.
 	*/
-	@:overload public function equals(rhs : Dynamic) : Bool;
+	@:overload @:public public function equals(rhs : Dynamic) : Bool;
 	
 	/**
 	* Compares this <code>ShapeGraphicAttribute</code> to the specified
@@ -148,7 +148,7 @@ extern class ShapeGraphicAttribute extends java.awt.font.GraphicAttribute
 	* <code>ShapeGraphicAttribute</code> equals <code>rhs</code>;
 	* <code>false</code> otherwise.
 	*/
-	@:overload public function equals(rhs : java.awt.font.ShapeGraphicAttribute) : Bool;
+	@:overload @:public public function equals(rhs : java.awt.font.ShapeGraphicAttribute) : Bool;
 	
 	
 }

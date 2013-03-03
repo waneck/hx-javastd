@@ -25,45 +25,45 @@ package sun.java2d.pipe;
 */
 extern class SpanShapeRenderer implements sun.java2d.pipe.ShapeDrawPipe
 {
-	@:overload public function draw(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
+	@:overload @:public public function draw(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
 	
-	public static var NON_RECTILINEAR_TRANSFORM_MASK(default, null) : Int;
+	@:public @:static @:final public static var NON_RECTILINEAR_TRANSFORM_MASK(default, null) : Int;
 	
-	@:overload public function fill(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
+	@:overload @:public public function fill(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
 	
-	@:overload @:abstract public function startSequence(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape, devR : java.awt.Rectangle, bbox : java.NativeArray<Int>) : Dynamic;
+	@:overload @:public @:abstract public function startSequence(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape, devR : java.awt.Rectangle, bbox : java.NativeArray<Int>) : Dynamic;
 	
-	@:overload @:abstract public function renderBox(ctx : Dynamic, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public @:abstract public function renderBox(ctx : Dynamic, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload @:abstract public function endSequence(ctx : Dynamic) : Void;
+	@:overload @:public @:abstract public function endSequence(ctx : Dynamic) : Void;
 	
-	@:overload public function renderRect(sg : sun.java2d.SunGraphics2D, r : java.awt.geom.Rectangle2D) : Void;
+	@:overload @:public public function renderRect(sg : sun.java2d.SunGraphics2D, r : java.awt.geom.Rectangle2D) : Void;
 	
-	@:overload public function renderSpans(sg : sun.java2d.SunGraphics2D, clipRegion : sun.java2d.pipe.Region, s : java.awt.Shape, sr : sun.java2d.pipe.ShapeSpanIterator) : Void;
+	@:overload @:public public function renderSpans(sg : sun.java2d.SunGraphics2D, clipRegion : sun.java2d.pipe.Region, s : java.awt.Shape, sr : sun.java2d.pipe.ShapeSpanIterator) : Void;
 	
-	@:overload public function spanClipLoop(ctx : Dynamic, sr : sun.java2d.pipe.SpanIterator, r : sun.java2d.pipe.Region, abox : java.NativeArray<Int>) : Void;
+	@:overload @:public public function spanClipLoop(ctx : Dynamic, sr : sun.java2d.pipe.SpanIterator, r : sun.java2d.pipe.Region, abox : java.NativeArray<Int>) : Void;
 	
 	
 }
 @:native('sun$java2d$pipe$SpanShapeRenderer$Composite') extern class SpanShapeRenderer_Composite extends sun.java2d.pipe.SpanShapeRenderer
 {
-	@:overload public function new(pipe : sun.java2d.pipe.CompositePipe) : Void;
+	@:overload @:public public function new(pipe : sun.java2d.pipe.CompositePipe) : Void;
 	
-	@:overload override public function startSequence(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape, devR : java.awt.Rectangle, bbox : java.NativeArray<Int>) : Dynamic;
+	@:overload @:public override public function startSequence(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape, devR : java.awt.Rectangle, bbox : java.NativeArray<Int>) : Dynamic;
 	
-	@:overload override public function renderBox(ctx : Dynamic, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function renderBox(ctx : Dynamic, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function endSequence(ctx : Dynamic) : Void;
+	@:overload @:public override public function endSequence(ctx : Dynamic) : Void;
 	
 	
 }
 @:native('sun$java2d$pipe$SpanShapeRenderer$Simple') extern class SpanShapeRenderer_Simple extends sun.java2d.pipe.SpanShapeRenderer implements sun.java2d.pipe.LoopBasedPipe
 {
-	@:overload override public function startSequence(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape, devR : java.awt.Rectangle, bbox : java.NativeArray<Int>) : Dynamic;
+	@:overload @:public override public function startSequence(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape, devR : java.awt.Rectangle, bbox : java.NativeArray<Int>) : Dynamic;
 	
-	@:overload override public function renderBox(ctx : Dynamic, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function renderBox(ctx : Dynamic, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function endSequence(ctx : Dynamic) : Void;
+	@:overload @:public override public function endSequence(ctx : Dynamic) : Void;
 	
 	
 }

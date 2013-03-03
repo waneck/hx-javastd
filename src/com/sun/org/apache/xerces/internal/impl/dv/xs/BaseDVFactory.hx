@@ -31,7 +31,7 @@ extern class BaseDVFactory extends com.sun.org.apache.xerces.internal.impl.dv.Sc
 	* @param name  the name of the datatype
 	* @return      the datatype validator of the given name
 	*/
-	@:overload public function getBuiltInType(name : String) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
+	@:overload @:public override public function getBuiltInType(name : String) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
 	
 	/**
 	* get all built-in simple types, which are stored in a hashtable keyed by
@@ -39,7 +39,7 @@ extern class BaseDVFactory extends com.sun.org.apache.xerces.internal.impl.dv.Sc
 	*
 	* @return      a hashtable which contains all built-in simple types
 	*/
-	@:overload public function getBuiltInTypes() : com.sun.org.apache.xerces.internal.util.SymbolHash;
+	@:overload @:public override public function getBuiltInTypes() : com.sun.org.apache.xerces.internal.util.SymbolHash;
 	
 	/**
 	* Create a new simple type which is derived by restriction from another
@@ -52,7 +52,7 @@ extern class BaseDVFactory extends com.sun.org.apache.xerces.internal.impl.dv.Sc
 	* @param annotations       set of annotations
 	* @return                  the newly created simple type
 	*/
-	@:overload public function createTypeRestriction(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, base : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
+	@:overload @:public override public function createTypeRestriction(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, base : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
 	
 	/**
 	* Create a new simple type which is derived by list from another simple
@@ -65,7 +65,7 @@ extern class BaseDVFactory extends com.sun.org.apache.xerces.internal.impl.dv.Sc
 	* @param annotations       set of annotations
 	* @return                  the newly created simple type
 	*/
-	@:overload public function createTypeList(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, itemType : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
+	@:overload @:public override public function createTypeList(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, itemType : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
 	
 	/**
 	* Create a new simple type which is derived by union from a list of other
@@ -78,7 +78,7 @@ extern class BaseDVFactory extends com.sun.org.apache.xerces.internal.impl.dv.Sc
 	* @param annotations       set of annotations
 	* @return                  the newly created simple type
 	*/
-	@:overload public function createTypeUnion(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, memberTypes : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType>, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
+	@:overload @:public override public function createTypeUnion(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, memberTypes : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType>, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
 	
 	
 }

@@ -72,7 +72,7 @@ extern class OpenMBeanInfoSupport extends javax.management.MBeanInfo implements 
 	* MBeanConstructorInfo} or {@code MBeanOperationInfo}
 	* respectively.
 	*/
-	@:overload public function new(className : String, description : String, openAttributes : java.NativeArray<javax.management.openmbean.OpenMBeanAttributeInfo>, openConstructors : java.NativeArray<javax.management.openmbean.OpenMBeanConstructorInfo>, openOperations : java.NativeArray<javax.management.openmbean.OpenMBeanOperationInfo>, notifications : java.NativeArray<javax.management.MBeanNotificationInfo>) : Void;
+	@:overload @:public public function new(className : String, description : String, openAttributes : java.NativeArray<javax.management.openmbean.OpenMBeanAttributeInfo>, openConstructors : java.NativeArray<javax.management.openmbean.OpenMBeanConstructorInfo>, openOperations : java.NativeArray<javax.management.openmbean.OpenMBeanOperationInfo>, notifications : java.NativeArray<javax.management.MBeanNotificationInfo>) : Void;
 	
 	/**
 	* <p>Constructs an {@code OpenMBeanInfoSupport} instance, which
@@ -124,7 +124,7 @@ extern class OpenMBeanInfoSupport extends javax.management.MBeanInfo implements 
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(className : String, description : String, openAttributes : java.NativeArray<javax.management.openmbean.OpenMBeanAttributeInfo>, openConstructors : java.NativeArray<javax.management.openmbean.OpenMBeanConstructorInfo>, openOperations : java.NativeArray<javax.management.openmbean.OpenMBeanOperationInfo>, notifications : java.NativeArray<javax.management.MBeanNotificationInfo>, descriptor : javax.management.Descriptor) : Void;
+	@:require(java6) @:overload @:public public function new(className : String, description : String, openAttributes : java.NativeArray<javax.management.openmbean.OpenMBeanAttributeInfo>, openConstructors : java.NativeArray<javax.management.openmbean.OpenMBeanConstructorInfo>, openOperations : java.NativeArray<javax.management.openmbean.OpenMBeanOperationInfo>, notifications : java.NativeArray<javax.management.MBeanNotificationInfo>, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* <p>Compares the specified {@code obj} parameter with this
@@ -152,7 +152,7 @@ extern class OpenMBeanInfoSupport extends javax.management.MBeanInfo implements 
 	* @return {@code true} if the specified object is equal to this
 	* {@code OpenMBeanInfoSupport} instance.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* <p>Returns the hash code value for this {@code
@@ -186,7 +186,7 @@ extern class OpenMBeanInfoSupport extends javax.management.MBeanInfo implements 
 	* @return the hash code value for this {@code
 	* OpenMBeanInfoSupport} instance
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* <p>Returns a string representation of this {@code
@@ -206,7 +206,7 @@ extern class OpenMBeanInfoSupport extends javax.management.MBeanInfo implements 
 	* @return a string representation of this {@code
 	* OpenMBeanInfoSupport} instance
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

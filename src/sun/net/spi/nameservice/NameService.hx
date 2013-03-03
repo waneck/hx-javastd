@@ -25,9 +25,9 @@ package sun.net.spi.nameservice;
 */
 extern interface NameService
 {
-	@:overload public function lookupAllHostAddr(host : String) : java.NativeArray<java.net.InetAddress>;
+	@:overload @:public public function lookupAllHostAddr(host : String) : java.NativeArray<java.net.InetAddress>;
 	
-	@:overload public function getHostByAddr(addr : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public public function getHostByAddr(addr : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	
 }

@@ -58,9 +58,9 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class ANEWARRAY extends com.sun.org.apache.bcel.internal.generic.CPInstruction implements com.sun.org.apache.bcel.internal.generic.LoadClass implements com.sun.org.apache.bcel.internal.generic.AllocationInstruction implements com.sun.org.apache.bcel.internal.generic.ExceptionThrower implements com.sun.org.apache.bcel.internal.generic.StackProducer
 {
-	@:overload public function new(index : Int) : Void;
+	@:overload @:public public function new(index : Int) : Void;
 	
-	@:overload public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -70,9 +70,9 @@ extern class ANEWARRAY extends com.sun.org.apache.bcel.internal.generic.CPInstru
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
-	@:overload public function getLoadClassType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.ObjectType;
+	@:overload @:public public function getLoadClassType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.ObjectType;
 	
 	
 }

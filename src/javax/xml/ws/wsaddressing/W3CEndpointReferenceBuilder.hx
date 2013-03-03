@@ -28,7 +28,7 @@ extern class W3CEndpointReferenceBuilder
 	/**
 	* Creates a new <code>W3CEndpointReferenceBuilder</code> instance.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets the <code>address</code> to the
@@ -46,7 +46,7 @@ extern class W3CEndpointReferenceBuilder
 	* @return A <code>W3CEndpointReferenceBuilder</code> instance with
 	*   the <code>address</code> set to the <code>wsa:Address</code>.
 	*/
-	@:overload public function address(address : String) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
+	@:overload @:public public function address(address : String) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
 	
 	/**
 	* Sets the <code>interfaceName</code> as the
@@ -63,7 +63,7 @@ extern class W3CEndpointReferenceBuilder
 	*   the <code>interfaceName</code> as <code>wsam:InterfaceName</code>
 	*   element added to the <code>wsa:Metadata</code> element
 	*/
-	@:overload public function interfaceName(interfaceName : javax.xml.namespace.QName) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
+	@:overload @:public public function interfaceName(interfaceName : javax.xml.namespace.QName) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
 	
 	/**
 	* Sets the <code>serviceName</code> as the
@@ -84,7 +84,7 @@ extern class W3CEndpointReferenceBuilder
 	*   element added to the <code>wsa:Metadata</code> element
 	*
 	*/
-	@:overload public function serviceName(serviceName : javax.xml.namespace.QName) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
+	@:overload @:public public function serviceName(serviceName : javax.xml.namespace.QName) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
 	
 	/**
 	* Sets the <code>endpointName</code> as
@@ -113,7 +113,7 @@ extern class W3CEndpointReferenceBuilder
 	* Namespace URI doesn't match <code>serviceName</code>'s Namespace URI
 	*
 	*/
-	@:overload public function endpointName(endpointName : javax.xml.namespace.QName) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
+	@:overload @:public public function endpointName(endpointName : javax.xml.namespace.QName) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
 	
 	/**
 	* Sets the <code>wsdlDocumentLocation</code> that will be referenced
@@ -130,7 +130,7 @@ extern class W3CEndpointReferenceBuilder
 	* @return A <code>W3CEndpointReferenceBuilder</code> instance with
 	*   the <code>wsdlDocumentLocation</code> that is to be referenced.
 	*/
-	@:overload public function wsdlDocumentLocation(wsdlDocumentLocation : String) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
+	@:overload @:public public function wsdlDocumentLocation(wsdlDocumentLocation : String) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
 	
 	/**
 	* Adds the <code>referenceParameter</code> to the
@@ -147,7 +147,7 @@ extern class W3CEndpointReferenceBuilder
 	* @throws java.lang.IllegalArgumentException if <code>referenceParameter</code>
 	* is <code>null</code>.
 	*/
-	@:overload public function referenceParameter(referenceParameter : org.w3c.dom.Element) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
+	@:overload @:public public function referenceParameter(referenceParameter : org.w3c.dom.Element) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
 	
 	/**
 	* Adds the <code>metadataElement</code> to the
@@ -164,7 +164,7 @@ extern class W3CEndpointReferenceBuilder
 	* @throws java.lang.IllegalArgumentException if <code>metadataElement</code>
 	* is <code>null</code>.
 	*/
-	@:overload public function metadata(metadataElement : org.w3c.dom.Element) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
+	@:overload @:public public function metadata(metadataElement : org.w3c.dom.Element) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
 	
 	/**
 	* Adds an extension element to the
@@ -181,7 +181,7 @@ extern class W3CEndpointReferenceBuilder
 	*
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:overload public function element(element : org.w3c.dom.Element) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
+	@:require(java2) @:overload @:public public function element(element : org.w3c.dom.Element) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
 	
 	/**
 	* Adds an extension attribute to the
@@ -199,7 +199,7 @@ extern class W3CEndpointReferenceBuilder
 	*
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:overload public function attribute(name : javax.xml.namespace.QName, value : String) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
+	@:require(java2) @:overload @:public public function attribute(name : javax.xml.namespace.QName, value : String) : javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
 	
 	/**
 	* Builds a <code>W3CEndpointReference</code> from the accumulated
@@ -246,7 +246,7 @@ extern class W3CEndpointReferenceBuilder
 	*                             <code>W3CEndpointReference</code>.
 	*
 	*/
-	@:overload public function build() : javax.xml.ws.wsaddressing.W3CEndpointReference;
+	@:overload @:public public function build() : javax.xml.ws.wsaddressing.W3CEndpointReference;
 	
 	
 }

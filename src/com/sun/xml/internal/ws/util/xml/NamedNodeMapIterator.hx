@@ -28,17 +28,17 @@ extern class NamedNodeMapIterator implements java.util.Iterator<Dynamic>
 	/**
 	* @author WS Development Team
 	*/
-	private var _map : org.w3c.dom.NamedNodeMap;
+	@:protected private var _map : org.w3c.dom.NamedNodeMap;
 	
-	private var _index : Int;
+	@:protected private var _index : Int;
 	
-	@:overload public function new(map : org.w3c.dom.NamedNodeMap) : Void;
+	@:overload @:public public function new(map : org.w3c.dom.NamedNodeMap) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

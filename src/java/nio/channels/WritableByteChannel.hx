@@ -76,7 +76,7 @@ extern interface WritableByteChannel extends java.nio.channels.Channel
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:public public function write(src : java.nio.ByteBuffer) : Int;
+	@:overload @:public @:public public function write(src : java.nio.ByteBuffer) : Int;
 	
 	
 }

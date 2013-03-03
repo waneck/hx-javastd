@@ -118,22 +118,22 @@ extern class XMLContentSpec
 	* Name or #PCDATA. Leaf nodes that represent parsed character
 	* data (#PCDATA) have values of -1.
 	*/
-	public static var CONTENTSPECNODE_LEAF(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CONTENTSPECNODE_LEAF(default, null) : java.StdTypes.Int16;
 	
 	/** Represents a zero or one occurence count, '?'. */
-	public static var CONTENTSPECNODE_ZERO_OR_ONE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CONTENTSPECNODE_ZERO_OR_ONE(default, null) : java.StdTypes.Int16;
 	
 	/** Represents a zero or more occurence count, '*'. */
-	public static var CONTENTSPECNODE_ZERO_OR_MORE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CONTENTSPECNODE_ZERO_OR_MORE(default, null) : java.StdTypes.Int16;
 	
 	/** Represents a one or more occurence count, '+'. */
-	public static var CONTENTSPECNODE_ONE_OR_MORE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CONTENTSPECNODE_ONE_OR_MORE(default, null) : java.StdTypes.Int16;
 	
 	/** Represents choice, '|'. */
-	public static var CONTENTSPECNODE_CHOICE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CONTENTSPECNODE_CHOICE(default, null) : java.StdTypes.Int16;
 	
 	/** Represents sequence, ','. */
-	public static var CONTENTSPECNODE_SEQ(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CONTENTSPECNODE_SEQ(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Represents any namespace specified namespace. When the element
@@ -145,7 +145,7 @@ extern class XMLContentSpec
 	* Lists of valid namespaces are created from choice content spec
 	* nodes that have any content spec nodes as children.
 	*/
-	public static var CONTENTSPECNODE_ANY(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CONTENTSPECNODE_ANY(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Represents any other namespace (XML Schema: ##other).
@@ -154,24 +154,24 @@ extern class XMLContentSpec
 	* <code>value</code> will contain the namespace that <em>cannot</em>
 	* occur.
 	*/
-	public static var CONTENTSPECNODE_ANY_OTHER(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CONTENTSPECNODE_ANY_OTHER(default, null) : java.StdTypes.Int16;
 	
 	/** Represents any local element (XML Schema: ##local). */
-	public static var CONTENTSPECNODE_ANY_LOCAL(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CONTENTSPECNODE_ANY_LOCAL(default, null) : java.StdTypes.Int16;
 	
 	/** prcessContent is 'lax' **/
-	public static var CONTENTSPECNODE_ANY_LAX(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CONTENTSPECNODE_ANY_LAX(default, null) : java.StdTypes.Int16;
 	
-	public static var CONTENTSPECNODE_ANY_OTHER_LAX(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CONTENTSPECNODE_ANY_OTHER_LAX(default, null) : java.StdTypes.Int16;
 	
-	public static var CONTENTSPECNODE_ANY_LOCAL_LAX(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CONTENTSPECNODE_ANY_LOCAL_LAX(default, null) : java.StdTypes.Int16;
 	
 	/** processContent is 'skip' **/
-	public static var CONTENTSPECNODE_ANY_SKIP(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CONTENTSPECNODE_ANY_SKIP(default, null) : java.StdTypes.Int16;
 	
-	public static var CONTENTSPECNODE_ANY_OTHER_SKIP(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CONTENTSPECNODE_ANY_OTHER_SKIP(default, null) : java.StdTypes.Int16;
 	
-	public static var CONTENTSPECNODE_ANY_LOCAL_SKIP(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CONTENTSPECNODE_ANY_LOCAL_SKIP(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* The content spec node type.
@@ -183,58 +183,58 @@ extern class XMLContentSpec
 	* @see #CONTENTSPECNODE_CHOICE
 	* @see #CONTENTSPECNODE_SEQ
 	*/
-	public var type : java.StdTypes.Int16;
+	@:public public var type : java.StdTypes.Int16;
 	
 	/**
 	* The "left hand" value object of the content spec node.
 	* leaf name.localpart, single child for unary ops, left child for binary ops.
 	*/
-	public var value : Dynamic;
+	@:public public var value : Dynamic;
 	
 	/**
 	* The "right hand" value of the content spec node.
 	*  leaf name.uri, right child for binary ops
 	*/
-	public var otherValue : Dynamic;
+	@:public public var otherValue : Dynamic;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Constructs a content spec with the specified values. */
-	@:overload public function new(type : java.StdTypes.Int16, value : Dynamic, otherValue : Dynamic) : Void;
+	@:overload @:public public function new(type : java.StdTypes.Int16, value : Dynamic, otherValue : Dynamic) : Void;
 	
 	/**
 	* Constructs a content spec from the values in the specified content spec.
 	*/
-	@:overload public function new(contentSpec : com.sun.org.apache.xerces.internal.impl.dtd.XMLContentSpec) : Void;
+	@:overload @:public public function new(contentSpec : com.sun.org.apache.xerces.internal.impl.dtd.XMLContentSpec) : Void;
 	
 	/**
 	* Constructs a content spec from the values specified by the given
 	* content spec provider and identifier.
 	*/
-	@:overload public function new(provider : com.sun.org.apache.xerces.internal.impl.dtd.XMLContentSpec.XMLContentSpec_Provider, contentSpecIndex : Int) : Void;
+	@:overload @:public public function new(provider : com.sun.org.apache.xerces.internal.impl.dtd.XMLContentSpec.XMLContentSpec_Provider, contentSpecIndex : Int) : Void;
 	
 	/** Clears the values. */
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/** Sets the values. */
-	@:overload public function setValues(type : java.StdTypes.Int16, value : Dynamic, otherValue : Dynamic) : Void;
+	@:overload @:public public function setValues(type : java.StdTypes.Int16, value : Dynamic, otherValue : Dynamic) : Void;
 	
 	/** Sets the values of the specified content spec. */
-	@:overload public function setValues(contentSpec : com.sun.org.apache.xerces.internal.impl.dtd.XMLContentSpec) : Void;
+	@:overload @:public public function setValues(contentSpec : com.sun.org.apache.xerces.internal.impl.dtd.XMLContentSpec) : Void;
 	
 	/**
 	* Sets the values from the values specified by the given content spec
 	* provider and identifier. If the specified content spec cannot be
 	* provided, the values of this content spec are cleared.
 	*/
-	@:overload public function setValues(provider : com.sun.org.apache.xerces.internal.impl.dtd.XMLContentSpec.XMLContentSpec_Provider, contentSpecIndex : Int) : Void;
+	@:overload @:public public function setValues(provider : com.sun.org.apache.xerces.internal.impl.dtd.XMLContentSpec.XMLContentSpec_Provider, contentSpecIndex : Int) : Void;
 	
 	/** Returns a hash code for this node. */
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/** Returns true if the two objects are equal. */
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	
 }
@@ -261,7 +261,7 @@ extern class XMLContentSpec
 	*
 	* @return Returns true if the contentSpecIndex was found.
 	*/
-	@:overload public function getContentSpec(contentSpecIndex : Int, contentSpec : com.sun.org.apache.xerces.internal.impl.dtd.XMLContentSpec) : Bool;
+	@:overload @:public public function getContentSpec(contentSpecIndex : Int, contentSpec : com.sun.org.apache.xerces.internal.impl.dtd.XMLContentSpec) : Bool;
 	
 	
 }

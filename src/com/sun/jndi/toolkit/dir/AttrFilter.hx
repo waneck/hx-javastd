@@ -28,7 +28,7 @@ extern interface AttrFilter
 	/**
 	* Determines whether an attribute passes the filter.
 	*/
-	@:overload public function check(targetAttrs : javax.naming.directory.Attributes) : Bool;
+	@:overload @:public public function check(targetAttrs : javax.naming.directory.Attributes) : Bool;
 	
 	
 }

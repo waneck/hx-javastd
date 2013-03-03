@@ -27,7 +27,7 @@ extern class JCEMapper
 	* @param mappingElement
 	* @throws Exception
 	*/
-	@:overload public static function init(mappingElement : org.w3c.dom.Element) : Void;
+	@:overload @:public @:static public static function init(mappingElement : org.w3c.dom.Element) : Void;
 	
 	/**
 	* Method translateURItoJCEID
@@ -36,7 +36,7 @@ extern class JCEMapper
 	* @return the JCE standard name corresponding to the given URI
 	*
 	*/
-	@:overload public static function translateURItoJCEID(AlgorithmURI : String) : String;
+	@:overload @:public @:static public static function translateURItoJCEID(AlgorithmURI : String) : String;
 	
 	/**
 	* Method getAlgorithmClassFromURI
@@ -46,7 +46,7 @@ extern class JCEMapper
 	* @return the class name that implements this algorithm
 	*
 	*/
-	@:overload public static function getAlgorithmClassFromURI(AlgorithmURI : String) : String;
+	@:overload @:public @:static public static function getAlgorithmClassFromURI(AlgorithmURI : String) : String;
 	
 	/**
 	* Returns the keylength in bit for a particular algorithm.
@@ -54,7 +54,7 @@ extern class JCEMapper
 	* @param AlgorithmURI
 	* @return The length of the key used in the alogrithm
 	*/
-	@:overload public static function getKeyLengthFromURI(AlgorithmURI : String) : Int;
+	@:overload @:public @:static public static function getKeyLengthFromURI(AlgorithmURI : String) : Int;
 	
 	/**
 	* Method getJCEKeyAlgorithmFromURI
@@ -63,19 +63,19 @@ extern class JCEMapper
 	* @return The KeyAlgorithm for the given URI.
 	*
 	*/
-	@:overload public static function getJCEKeyAlgorithmFromURI(AlgorithmURI : String) : String;
+	@:overload @:public @:static public static function getJCEKeyAlgorithmFromURI(AlgorithmURI : String) : String;
 	
 	/**
 	* Gets the default Provider for obtaining the security algorithms
 	* @return the default providerId.
 	*/
-	@:overload public static function getProviderId() : String;
+	@:overload @:public @:static public static function getProviderId() : String;
 	
 	/**
 	* Sets the default Provider for obtaining the security algorithms
 	* @param provider the default providerId.
 	*/
-	@:overload public static function setProviderId(provider : String) : Void;
+	@:overload @:public @:static public static function setProviderId(provider : String) : Void;
 	
 	
 }
@@ -88,7 +88,7 @@ extern class JCEMapper
 	* Gets data from element
 	* @param el
 	*/
-	@:overload public function new(el : org.w3c.dom.Element) : Void;
+	@:overload @:public public function new(el : org.w3c.dom.Element) : Void;
 	
 	
 }

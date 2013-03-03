@@ -21,16 +21,16 @@ package org.jcp.xml.dsig.internal;
 */
 extern class MacOutputStream extends java.io.ByteArrayOutputStream
 {
-	@:overload public function new(mac : javax.crypto.Mac) : Void;
+	@:overload @:public public function new(mac : javax.crypto.Mac) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function write(arg0 : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(arg0 : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function write(arg0 : Int) : Void;
+	@:overload @:public override public function write(arg0 : Int) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function write(arg0 : java.NativeArray<java.StdTypes.Int8>, arg1 : Int, arg2 : Int) : Void;
+	@:overload @:public override public function write(arg0 : java.NativeArray<java.StdTypes.Int8>, arg1 : Int, arg2 : Int) : Void;
 	
 	
 }

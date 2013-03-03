@@ -31,14 +31,14 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since 1.2
 	*/
-	@:require(java2) private var out : java.io.Writer;
+	@:require(java2) @:protected private var out : java.io.Writer;
 	
 	/**
 	* Creates a new PrintWriter, without automatic line flushing.
 	*
 	* @param  out        A character-output stream
 	*/
-	@:overload public function new(out : java.io.Writer) : Void;
+	@:overload @:public public function new(out : java.io.Writer) : Void;
 	
 	/**
 	* Creates a new PrintWriter.
@@ -48,7 +48,7 @@ extern class PrintWriter extends java.io.Writer
 	*                    <tt>printf</tt>, or <tt>format</tt> methods will
 	*                    flush the output buffer
 	*/
-	@:overload public function new(out : java.io.Writer, autoFlush : Bool) : Void;
+	@:overload @:public public function new(out : java.io.Writer, autoFlush : Bool) : Void;
 	
 	/**
 	* Creates a new PrintWriter, without automatic line flushing, from an
@@ -60,7 +60,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @see java.io.OutputStreamWriter#OutputStreamWriter(java.io.OutputStream)
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Creates a new PrintWriter from an existing OutputStream.  This
@@ -75,7 +75,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @see java.io.OutputStreamWriter#OutputStreamWriter(java.io.OutputStream)
 	*/
-	@:overload public function new(out : java.io.OutputStream, autoFlush : Bool) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, autoFlush : Bool) : Void;
 	
 	/**
 	* Creates a new PrintWriter, without automatic line flushing, with the
@@ -104,7 +104,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function new(fileName : String) : Void;
+	@:require(java5) @:overload @:public public function new(fileName : String) : Void;
 	
 	/**
 	* Creates a new PrintWriter, without automatic line flushing, with the
@@ -139,7 +139,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function new(fileName : String, csn : String) : Void;
+	@:require(java5) @:overload @:public public function new(fileName : String, csn : String) : Void;
 	
 	/**
 	* Creates a new PrintWriter, without automatic line flushing, with the
@@ -168,7 +168,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function new(file : java.io.File) : Void;
+	@:require(java5) @:overload @:public public function new(file : java.io.File) : Void;
 	
 	/**
 	* Creates a new PrintWriter, without automatic line flushing, with the
@@ -203,13 +203,13 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function new(file : java.io.File, csn : String) : Void;
+	@:require(java5) @:overload @:public public function new(file : java.io.File, csn : String) : Void;
 	
 	/**
 	* Flushes the stream.
 	* @see #checkError()
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* Closes the stream and releases any system resources associated
@@ -217,7 +217,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @see #checkError()
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Flushes the stream if it's not closed and checks its error state.
@@ -226,7 +226,7 @@ extern class PrintWriter extends java.io.Writer
 	*          either on the underlying output stream or during a format
 	*          conversion.
 	*/
-	@:overload public function checkError() : Bool;
+	@:overload @:public public function checkError() : Bool;
 	
 	/**
 	* Indicates that an error has occurred.
@@ -235,7 +235,7 @@ extern class PrintWriter extends java.io.Writer
 	* #checkError()} to return <tt>true</tt> until {@link
 	* #clearError()} is invoked.
 	*/
-	@:overload private function setError() : Void;
+	@:overload @:protected private function setError() : Void;
 	
 	/**
 	* Clears the error state of this stream.
@@ -246,13 +246,13 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function clearError() : Void;
+	@:require(java6) @:overload @:protected private function clearError() : Void;
 	
 	/**
 	* Writes a single character.
 	* @param c int specifying a character to be written.
 	*/
-	@:overload override public function write(c : Int) : Void;
+	@:overload @:public override public function write(c : Int) : Void;
 	
 	/**
 	* Writes A Portion of an array of characters.
@@ -260,14 +260,14 @@ extern class PrintWriter extends java.io.Writer
 	* @param off Offset from which to start writing characters
 	* @param len Number of characters to write
 	*/
-	@:overload override public function write(buf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(buf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
 	/**
 	* Writes an array of characters.  This method cannot be inherited from the
 	* Writer class because it must suppress I/O exceptions.
 	* @param buf Array of characters to be written
 	*/
-	@:overload override public function write(buf : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public override public function write(buf : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Writes a portion of a string.
@@ -275,14 +275,14 @@ extern class PrintWriter extends java.io.Writer
 	* @param off Offset from which to start writing characters
 	* @param len Number of characters to write
 	*/
-	@:overload override public function write(s : String, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(s : String, off : Int, len : Int) : Void;
 	
 	/**
 	* Writes a string.  This method cannot be inherited from the Writer class
 	* because it must suppress I/O exceptions.
 	* @param s String to be written
 	*/
-	@:overload override public function write(s : String) : Void;
+	@:overload @:public override public function write(s : String) : Void;
 	
 	/**
 	* Prints a boolean value.  The string produced by <code>{@link
@@ -293,7 +293,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @param      b   The <code>boolean</code> to be printed
 	*/
-	@:overload public function print(b : Bool) : Void;
+	@:overload @:public public function print(b : Bool) : Void;
 	
 	/**
 	* Prints a character.  The character is translated into one or more bytes
@@ -303,7 +303,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @param      c   The <code>char</code> to be printed
 	*/
-	@:overload public function print(c : java.StdTypes.Char16) : Void;
+	@:overload @:public public function print(c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Prints an integer.  The string produced by <code>{@link
@@ -315,7 +315,7 @@ extern class PrintWriter extends java.io.Writer
 	* @param      i   The <code>int</code> to be printed
 	* @see        java.lang.Integer#toString(int)
 	*/
-	@:overload public function print(i : Int) : Void;
+	@:overload @:public public function print(i : Int) : Void;
 	
 	/**
 	* Prints a long integer.  The string produced by <code>{@link
@@ -327,7 +327,7 @@ extern class PrintWriter extends java.io.Writer
 	* @param      l   The <code>long</code> to be printed
 	* @see        java.lang.Long#toString(long)
 	*/
-	@:overload public function print(l : haxe.Int64) : Void;
+	@:overload @:public public function print(l : haxe.Int64) : Void;
 	
 	/**
 	* Prints a floating-point number.  The string produced by <code>{@link
@@ -339,7 +339,7 @@ extern class PrintWriter extends java.io.Writer
 	* @param      f   The <code>float</code> to be printed
 	* @see        java.lang.Float#toString(float)
 	*/
-	@:overload public function print(f : Single) : Void;
+	@:overload @:public public function print(f : Single) : Void;
 	
 	/**
 	* Prints a double-precision floating-point number.  The string produced by
@@ -351,7 +351,7 @@ extern class PrintWriter extends java.io.Writer
 	* @param      d   The <code>double</code> to be printed
 	* @see        java.lang.Double#toString(double)
 	*/
-	@:overload public function print(d : Float) : Void;
+	@:overload @:public public function print(d : Float) : Void;
 	
 	/**
 	* Prints an array of characters.  The characters are converted into bytes
@@ -363,7 +363,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @throws  NullPointerException  If <code>s</code> is <code>null</code>
 	*/
-	@:overload public function print(s : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function print(s : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Prints a string.  If the argument is <code>null</code> then the string
@@ -374,7 +374,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @param      s   The <code>String</code> to be printed
 	*/
-	@:overload public function print(s : String) : Void;
+	@:overload @:public public function print(s : String) : Void;
 	
 	/**
 	* Prints an object.  The string produced by the <code>{@link
@@ -386,7 +386,7 @@ extern class PrintWriter extends java.io.Writer
 	* @param      obj   The <code>Object</code> to be printed
 	* @see        java.lang.Object#toString()
 	*/
-	@:overload public function print(obj : Dynamic) : Void;
+	@:overload @:public public function print(obj : Dynamic) : Void;
 	
 	/**
 	* Terminates the current line by writing the line separator string.  The
@@ -394,7 +394,7 @@ extern class PrintWriter extends java.io.Writer
 	* <code>line.separator</code>, and is not necessarily a single newline
 	* character (<code>'\n'</code>).
 	*/
-	@:overload public function println() : Void;
+	@:overload @:public public function println() : Void;
 	
 	/**
 	* Prints a boolean value and then terminates the line.  This method behaves
@@ -403,7 +403,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @param x the <code>boolean</code> value to be printed
 	*/
-	@:overload public function println(x : Bool) : Void;
+	@:overload @:public public function println(x : Bool) : Void;
 	
 	/**
 	* Prints a character and then terminates the line.  This method behaves as
@@ -412,7 +412,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @param x the <code>char</code> value to be printed
 	*/
-	@:overload public function println(x : java.StdTypes.Char16) : Void;
+	@:overload @:public public function println(x : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Prints an integer and then terminates the line.  This method behaves as
@@ -421,7 +421,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @param x the <code>int</code> value to be printed
 	*/
-	@:overload public function println(x : Int) : Void;
+	@:overload @:public public function println(x : Int) : Void;
 	
 	/**
 	* Prints a long integer and then terminates the line.  This method behaves
@@ -430,7 +430,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @param x the <code>long</code> value to be printed
 	*/
-	@:overload public function println(x : haxe.Int64) : Void;
+	@:overload @:public public function println(x : haxe.Int64) : Void;
 	
 	/**
 	* Prints a floating-point number and then terminates the line.  This method
@@ -439,7 +439,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @param x the <code>float</code> value to be printed
 	*/
-	@:overload public function println(x : Single) : Void;
+	@:overload @:public public function println(x : Single) : Void;
 	
 	/**
 	* Prints a double-precision floating-point number and then terminates the
@@ -448,7 +448,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @param x the <code>double</code> value to be printed
 	*/
-	@:overload public function println(x : Float) : Void;
+	@:overload @:public public function println(x : Float) : Void;
 	
 	/**
 	* Prints an array of characters and then terminates the line.  This method
@@ -457,7 +457,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @param x the array of <code>char</code> values to be printed
 	*/
-	@:overload public function println(x : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function println(x : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Prints a String and then terminates the line.  This method behaves as
@@ -466,7 +466,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @param x the <code>String</code> value to be printed
 	*/
-	@:overload public function println(x : String) : Void;
+	@:overload @:public public function println(x : String) : Void;
 	
 	/**
 	* Prints an Object and then terminates the line.  This method calls
@@ -477,7 +477,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @param x  The <code>Object</code> to be printed.
 	*/
-	@:overload public function println(x : Dynamic) : Void;
+	@:overload @:public public function println(x : Dynamic) : Void;
 	
 	/**
 	* A convenience method to write a formatted string to this writer using
@@ -521,7 +521,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function printf(format : String, args : java.NativeArray<Dynamic>) : java.io.PrintWriter;
+	@:require(java5) @:overload @:public public function printf(format : String, args : java.NativeArray<Dynamic>) : java.io.PrintWriter;
 	
 	/**
 	* A convenience method to write a formatted string to this writer using
@@ -570,7 +570,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function printf(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : java.io.PrintWriter;
+	@:require(java5) @:overload @:public public function printf(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : java.io.PrintWriter;
 	
 	/**
 	* Writes a formatted string to this writer using the specified format
@@ -612,7 +612,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function format(format : String, args : java.NativeArray<Dynamic>) : java.io.PrintWriter;
+	@:require(java5) @:overload @:public public function format(format : String, args : java.NativeArray<Dynamic>) : java.io.PrintWriter;
 	
 	/**
 	* Writes a formatted string to this writer using the specified format
@@ -655,7 +655,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function format(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : java.io.PrintWriter;
+	@:require(java5) @:overload @:public public function format(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : java.io.PrintWriter;
 	
 	/**
 	* Appends the specified character sequence to this writer.
@@ -681,7 +681,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence) : java.io.PrintWriter;
+	@:require(java5) @:overload @:public override public function append(csq : java.lang.CharSequence) : java.io.PrintWriter;
 	
 	/**
 	* Appends a subsequence of the specified character sequence to this writer.
@@ -715,7 +715,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.io.PrintWriter;
+	@:require(java5) @:overload @:public override public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.io.PrintWriter;
 	
 	/**
 	* Appends the specified character to this writer.
@@ -733,7 +733,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function append(c : java.StdTypes.Char16) : java.io.PrintWriter;
+	@:require(java5) @:overload @:public override public function append(c : java.StdTypes.Char16) : java.io.PrintWriter;
 	
 	
 }

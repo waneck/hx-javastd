@@ -44,7 +44,7 @@ extern class UnsupportedLookAndFeelException extends java.lang.Exception
 	* Constructs an UnsupportedLookAndFeelException object.
 	* @param s a message String
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

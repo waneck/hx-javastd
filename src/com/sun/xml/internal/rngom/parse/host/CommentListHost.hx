@@ -46,7 +46,7 @@ package com.sun.xml.internal.rngom.parse.host;
 */
 @:internal extern class CommentListHost extends com.sun.xml.internal.rngom.parse.host.Base implements com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>
 {
-	@:overload public function addComment(value : String, _loc : com.sun.xml.internal.rngom.ast.om.Location) : Void;
+	@:overload @:public public function addComment(value : String, _loc : com.sun.xml.internal.rngom.ast.om.Location) : Void;
 	
 	
 }

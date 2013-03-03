@@ -68,7 +68,7 @@ package sun.security.action;
 	*
 	* @param theProp the name of the system property.
 	*/
-	@:overload public function new(theProp : String) : Void;
+	@:overload @:public public function new(theProp : String) : Void;
 	
 	/**
 	* Constructor that takes the name of the system property and the default
@@ -77,7 +77,7 @@ package sun.security.action;
 	* @param theProp the name of the system property.
 	* @param defaulVal the default value.
 	*/
-	@:overload public function new(theProp : String, defaultVal : haxe.Int64) : Void;
+	@:overload @:public public function new(theProp : String, defaultVal : haxe.Int64) : Void;
 	
 	/**
 	* Determines the <code>Long</code> value of the system property whose
@@ -91,7 +91,7 @@ package sun.security.action;
 	*
 	* @return the <code>Long</code> value of the property.
 	*/
-	@:overload public function run() : Null<haxe.Int64>;
+	@:overload @:public public function run() : Null<haxe.Int64>;
 	
 	
 }

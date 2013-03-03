@@ -28,54 +28,54 @@ package com.sun.jndi.ldap;
 	/**
 	* Basic enumeration for NameClassPair, Binding, and SearchResults.
 	*/
-	private var listArg : javax.naming.Name;
+	@:protected private var listArg : javax.naming.Name;
 	
-	private var homeCtx : com.sun.jndi.ldap.LdapCtx;
+	@:protected private var homeCtx : com.sun.jndi.ldap.LdapCtx;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
 	/*
 	* Test if unprocessed entries or referrals exist.
 	*/
-	@:overload public function hasMore() : Bool;
+	@:overload @:public public function hasMore() : Bool;
 	
 	/*
 	* Retrieve the next entry.
 	*/
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload private function getAtom(dn : String) : String;
+	@:overload @:protected private function getAtom(dn : String) : String;
 	
-	@:overload private function createItem(dn : String, attrs : javax.naming.directory.Attributes, respCtls : java.util.Vector<Dynamic>) : javax.naming.NameClassPair;
+	@:overload @:protected private function createItem(dn : String, attrs : javax.naming.directory.Attributes, respCtls : java.util.Vector<Dynamic>) : javax.naming.NameClassPair;
 	
 	/*
 	* Append the supplied (chain of) referrals onto the
 	* end of the current (chain of) referrals.
 	*/
-	@:overload public function appendUnprocessedReferrals(ex : com.sun.jndi.ldap.LdapReferralException) : Void;
+	@:overload @:public public function appendUnprocessedReferrals(ex : com.sun.jndi.ldap.LdapReferralException) : Void;
 	
-	@:overload private function getReferredResults(refCtx : com.sun.jndi.ldap.LdapReferralContext) : com.sun.jndi.ldap.LdapNamingEnumeration;
+	@:overload @:protected private function getReferredResults(refCtx : com.sun.jndi.ldap.LdapReferralContext) : com.sun.jndi.ldap.LdapNamingEnumeration;
 	
 	/*
 	* Iterate through the URLs of a referral. If successful then perform
 	* a search operation and merge the received results with the current
 	* results.
 	*/
-	@:overload private function hasMoreReferrals() : Bool;
+	@:overload @:protected private function hasMoreReferrals() : Bool;
 	
 	/*
 	* Merge the entries and/or referrals from the supplied enumeration
 	* with those of the current enumeration.
 	*/
-	@:overload private function update(ne : com.sun.jndi.ldap.LdapNamingEnumeration) : Void;
+	@:overload @:protected private function update(ne : com.sun.jndi.ldap.LdapNamingEnumeration) : Void;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
-	@:overload private function cleanup() : Void;
+	@:overload @:protected private function cleanup() : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

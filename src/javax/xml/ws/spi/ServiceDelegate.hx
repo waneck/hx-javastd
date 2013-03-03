@@ -38,7 +38,7 @@ extern class ServiceDelegate
 	*
 	* @since JAX-WS 2.0
 	*/
-	@:require(java0) @:overload private function new() : Void;
+	@:require(java0) @:overload @:protected private function new() : Void;
 	
 	/**
 	* The <code>getPort</code> method returns a proxy. A service client
@@ -68,7 +68,7 @@ extern class ServiceDelegate
 	* @see java.lang.reflect.Proxy
 	* @see java.lang.reflect.InvocationHandler
 	**/
-	@:overload @:abstract public function getPort<T>(portName : javax.xml.namespace.QName, serviceEndpointInterface : Class<T>) : T;
+	@:overload @:public @:abstract public function getPort<T>(portName : javax.xml.namespace.QName, serviceEndpointInterface : Class<T>) : T;
 	
 	/**
 	* The <code>getPort</code> method returns a proxy. A service client
@@ -106,7 +106,7 @@ extern class ServiceDelegate
 	*
 	* @since JAX-WS 2.1
 	**/
-	@:require(java1) @:overload @:abstract public function getPort<T>(portName : javax.xml.namespace.QName, serviceEndpointInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
+	@:require(java1) @:overload @:public @:abstract public function getPort<T>(portName : javax.xml.namespace.QName, serviceEndpointInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
 	
 	/**
 	* The <code>getPort</code> method returns a proxy.
@@ -180,7 +180,7 @@ extern class ServiceDelegate
 	*
 	* @since JAX-WS 2.1
 	**/
-	@:require(java1) @:overload @:abstract public function getPort<T>(endpointReference : javax.xml.ws.EndpointReference, serviceEndpointInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
+	@:require(java1) @:overload @:public @:abstract public function getPort<T>(endpointReference : javax.xml.ws.EndpointReference, serviceEndpointInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
 	
 	/**
 	* The <code>getPort</code> method returns a proxy. The parameter
@@ -205,7 +205,7 @@ extern class ServiceDelegate
 	*                      is specified
 	*                  </UL>
 	**/
-	@:overload @:abstract public function getPort<T>(serviceEndpointInterface : Class<T>) : T;
+	@:overload @:public @:abstract public function getPort<T>(serviceEndpointInterface : Class<T>) : T;
 	
 	/**
 	* The <code>getPort</code> method returns a proxy. The parameter
@@ -239,7 +239,7 @@ extern class ServiceDelegate
 	*
 	* @since JAX-WS 2.1
 	**/
-	@:require(java1) @:overload @:abstract public function getPort<T>(serviceEndpointInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
+	@:require(java1) @:overload @:public @:abstract public function getPort<T>(serviceEndpointInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
 	
 	/**
 	* Creates a new port for the service. Ports created in this way contain
@@ -256,7 +256,7 @@ extern class ServiceDelegate
 	* @see javax.xml.ws.soap.SOAPBinding#SOAP12HTTP_BINDING
 	* @see javax.xml.ws.http.HTTPBinding#HTTP_BINDING
 	**/
-	@:overload @:abstract public function addPort(portName : javax.xml.namespace.QName, bindingId : String, endpointAddress : String) : Void;
+	@:overload @:public @:abstract public function addPort(portName : javax.xml.namespace.QName, bindingId : String, endpointAddress : String) : Void;
 	
 	/**
 	* Creates a <code>Dispatch</code> instance for use with objects of
@@ -279,7 +279,7 @@ extern class ServiceDelegate
 	* @see javax.xml.transform.Source
 	* @see javax.xml.soap.SOAPMessage
 	**/
-	@:overload @:abstract public function createDispatch<T>(portName : javax.xml.namespace.QName, type : Class<T>, mode : javax.xml.ws.Service.Service_Mode) : javax.xml.ws.Dispatch<T>;
+	@:overload @:public @:abstract public function createDispatch<T>(portName : javax.xml.namespace.QName, type : Class<T>, mode : javax.xml.ws.Service.Service_Mode) : javax.xml.ws.Dispatch<T>;
 	
 	/**
 	* Creates a <code>Dispatch</code> instance for use with objects of
@@ -311,7 +311,7 @@ extern class ServiceDelegate
 	*
 	* @since JAX-WS 2.1
 	**/
-	@:require(java1) @:overload @:abstract public function createDispatch<T>(portName : javax.xml.namespace.QName, type : Class<T>, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<T>;
+	@:require(java1) @:overload @:public @:abstract public function createDispatch<T>(portName : javax.xml.namespace.QName, type : Class<T>, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<T>;
 	
 	/**
 	* Creates a <code>Dispatch</code> instance for use with objects of
@@ -382,7 +382,7 @@ extern class ServiceDelegate
 	*
 	* @since JAX-WS 2.1
 	**/
-	@:require(java1) @:overload @:abstract public function createDispatch<T>(endpointReference : javax.xml.ws.EndpointReference, type : Class<T>, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<T>;
+	@:require(java1) @:overload @:public @:abstract public function createDispatch<T>(endpointReference : javax.xml.ws.EndpointReference, type : Class<T>, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<T>;
 	
 	/**
 	* Creates a <code>Dispatch</code> instance for use with JAXB
@@ -403,7 +403,7 @@ extern class ServiceDelegate
 	*
 	* @see javax.xml.bind.JAXBContext
 	**/
-	@:overload @:abstract public function createDispatch(portName : javax.xml.namespace.QName, context : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode) : javax.xml.ws.Dispatch<Dynamic>;
+	@:overload @:public @:abstract public function createDispatch(portName : javax.xml.namespace.QName, context : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode) : javax.xml.ws.Dispatch<Dynamic>;
 	
 	/**
 	* Creates a <code>Dispatch</code> instance for use with JAXB
@@ -432,7 +432,7 @@ extern class ServiceDelegate
 	*
 	* @since JAX-WS 2.1
 	**/
-	@:require(java1) @:overload @:abstract public function createDispatch(portName : javax.xml.namespace.QName, context : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<Dynamic>;
+	@:require(java1) @:overload @:public @:abstract public function createDispatch(portName : javax.xml.namespace.QName, context : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<Dynamic>;
 	
 	/**
 	* Creates a <code>Dispatch</code> instance for use with JAXB
@@ -501,13 +501,13 @@ extern class ServiceDelegate
 	*
 	* @since JAX-WS 2.1
 	**/
-	@:require(java1) @:overload @:abstract public function createDispatch(endpointReference : javax.xml.ws.EndpointReference, context : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<Dynamic>;
+	@:require(java1) @:overload @:public @:abstract public function createDispatch(endpointReference : javax.xml.ws.EndpointReference, context : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<Dynamic>;
 	
 	/**
 	* Gets the name of this service.
 	* @return Qualified name of this service
 	**/
-	@:overload @:abstract public function getServiceName() : javax.xml.namespace.QName;
+	@:overload @:public @:abstract public function getServiceName() : javax.xml.namespace.QName;
 	
 	/**
 	* Returns an <code>Iterator</code> for the list of
@@ -519,7 +519,7 @@ extern class ServiceDelegate
 	* @throws WebServiceException If this Service class does not
 	*         have access to the required WSDL metadata
 	**/
-	@:overload @:abstract public function getPorts() : java.util.Iterator<javax.xml.namespace.QName>;
+	@:overload @:public @:abstract public function getPorts() : java.util.Iterator<javax.xml.namespace.QName>;
 	
 	/**
 	* Gets the location of the WSDL document for this Service.
@@ -527,7 +527,7 @@ extern class ServiceDelegate
 	* @return URL for the location of the WSDL document for
 	*         this service
 	**/
-	@:overload @:abstract public function getWSDLDocumentLocation() : java.net.URL;
+	@:overload @:public @:abstract public function getWSDLDocumentLocation() : java.net.URL;
 	
 	/**
 	* Returns the configured handler resolver.
@@ -536,7 +536,7 @@ extern class ServiceDelegate
 	*         used by this <code>Service</code> instance, or <code>null</code>
 	*         if there isn't one.
 	**/
-	@:overload @:abstract public function getHandlerResolver() : javax.xml.ws.handler.HandlerResolver;
+	@:overload @:public @:abstract public function getHandlerResolver() : javax.xml.ws.handler.HandlerResolver;
 	
 	/**
 	* Sets the <code>HandlerResolver</code> for this <code>Service</code>
@@ -551,7 +551,7 @@ extern class ServiceDelegate
 	*
 	* @see javax.xml.ws.handler.HandlerResolver
 	**/
-	@:overload @:abstract public function setHandlerResolver(handlerResolver : javax.xml.ws.handler.HandlerResolver) : Void;
+	@:overload @:public @:abstract public function setHandlerResolver(handlerResolver : javax.xml.ws.handler.HandlerResolver) : Void;
 	
 	/**
 	* Returns the executor for this <code>Service</code>instance.
@@ -564,7 +564,7 @@ extern class ServiceDelegate
 	*
 	* @see java.util.concurrent.Executor
 	**/
-	@:overload @:abstract public function getExecutor() : java.util.concurrent.Executor;
+	@:overload @:public @:abstract public function getExecutor() : java.util.concurrent.Executor;
 	
 	/**
 	* Sets the executor for this <code>Service</code> instance.
@@ -581,7 +581,7 @@ extern class ServiceDelegate
 	*
 	* @see java.util.concurrent.Executor
 	**/
-	@:overload @:abstract public function setExecutor(executor : java.util.concurrent.Executor) : Void;
+	@:overload @:public @:abstract public function setExecutor(executor : java.util.concurrent.Executor) : Void;
 	
 	
 }

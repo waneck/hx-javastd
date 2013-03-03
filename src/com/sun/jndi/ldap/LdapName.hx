@@ -32,54 +32,54 @@ extern class LdapName implements javax.naming.Name
 	*
 	* @throws InvalidNameException if a syntax violation is detected.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function compareTo(obj : Dynamic) : Int;
+	@:overload @:public public function compareTo(obj : Dynamic) : Int;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function getAll() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getAll() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function get(pos : Int) : String;
+	@:overload @:public public function get(pos : Int) : String;
 	
-	@:overload public function getPrefix(pos : Int) : javax.naming.Name;
+	@:overload @:public public function getPrefix(pos : Int) : javax.naming.Name;
 	
-	@:overload public function getSuffix(pos : Int) : javax.naming.Name;
+	@:overload @:public public function getSuffix(pos : Int) : javax.naming.Name;
 	
-	@:overload public function startsWith(n : javax.naming.Name) : Bool;
+	@:overload @:public public function startsWith(n : javax.naming.Name) : Bool;
 	
-	@:overload public function endsWith(n : javax.naming.Name) : Bool;
+	@:overload @:public public function endsWith(n : javax.naming.Name) : Bool;
 	
 	/**
 	* Controls whether string-values are treated as case-sensitive
 	* when the string values within names are compared.  The default
 	* behavior is case-insensitive comparison.
 	*/
-	@:overload public function setValuesCaseSensitive(caseSensitive : Bool) : Void;
+	@:overload @:public public function setValuesCaseSensitive(caseSensitive : Bool) : Void;
 	
-	@:overload public function addAll(suffix : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function addAll(suffix : javax.naming.Name) : javax.naming.Name;
 	
 	/*
 	* If "suffix" is not an LdapName, each of its components is parsed as
 	* the string form of an RDN.
 	*/
-	@:overload public function addAll(pos : Int, suffix : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function addAll(pos : Int, suffix : javax.naming.Name) : javax.naming.Name;
 	
-	@:overload public function add(comp : String) : javax.naming.Name;
+	@:overload @:public public function add(comp : String) : javax.naming.Name;
 	
-	@:overload public function add(pos : Int, comp : String) : javax.naming.Name;
+	@:overload @:public public function add(pos : Int, comp : String) : javax.naming.Name;
 	
-	@:overload public function remove(pos : Int) : Dynamic;
+	@:overload @:public public function remove(pos : Int) : Dynamic;
 	
 	/**
 	* Given the value of an attribute, returns a string suitable
@@ -93,14 +93,14 @@ extern class LdapName implements javax.naming.Name
 	* If the value is a byte array, it is converted to hex
 	* notation (such as "#CEB1DF80").
 	*/
-	@:overload public static function escapeAttributeValue(val : Dynamic) : String;
+	@:overload @:public @:static public static function escapeAttributeValue(val : Dynamic) : String;
 	
 	/**
 	* Given an attribute value formated according to RFC 2253,
 	* returns the unformated value.  Returns a string value as
 	* a string, and a binary value as a byte array.
 	*/
-	@:overload public static function unescapeAttributeValue(val : String) : Dynamic;
+	@:overload @:public @:static public static function unescapeAttributeValue(val : String) : Dynamic;
 	
 	
 }
@@ -116,13 +116,13 @@ extern class LdapName implements javax.naming.Name
 */
 @:native('com$sun$jndi$ldap$LdapName$Rdn') @:internal extern class LdapName_Rdn
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function compareTo(obj : Dynamic) : Int;
+	@:overload @:public public function compareTo(obj : Dynamic) : Int;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
@@ -132,13 +132,13 @@ extern class LdapName implements javax.naming.Name
 */
 @:native('com$sun$jndi$ldap$LdapName$TypeAndValue') @:internal extern class LdapName_TypeAndValue
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function compareTo(obj : Dynamic) : Int;
+	@:overload @:public public function compareTo(obj : Dynamic) : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

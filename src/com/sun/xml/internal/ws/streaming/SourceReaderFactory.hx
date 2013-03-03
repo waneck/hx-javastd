@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.streaming;
 */
 extern class SourceReaderFactory
 {
-	@:overload public static function createSourceReader(source : javax.xml.transform.Source, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:static public static function createSourceReader(source : javax.xml.transform.Source, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
-	@:overload public static function createSourceReader(source : javax.xml.transform.Source, rejectDTDs : Bool, charsetName : String) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:static public static function createSourceReader(source : javax.xml.transform.Source, rejectDTDs : Bool, charsetName : String) : javax.xml.stream.XMLStreamReader;
 	
 	
 }

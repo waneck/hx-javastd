@@ -31,7 +31,7 @@ extern interface LocatableEvent extends com.sun.jdi.event.Event extends com.sun.
 	* @return a {@link ThreadReference} which mirrors the event's thread in
 	* the target VM.
 	*/
-	@:overload public function thread() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function thread() : com.sun.jdi.ThreadReference;
 	
 	
 }

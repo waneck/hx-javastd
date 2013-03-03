@@ -30,12 +30,12 @@ extern class Printer
 	* the default one for this document type will be used. The format
 	* object is never changed by the serializer.
 	*/
-	private var _format(default, null) : com.sun.org.apache.xml.internal.serialize.OutputFormat;
+	@:protected @:final private var _format(default, null) : com.sun.org.apache.xml.internal.serialize.OutputFormat;
 	
 	/**
 	* The writer to which the document is written.
 	*/
-	private var _writer : java.io.Writer;
+	@:protected private var _writer : java.io.Writer;
 	
 	/**
 	* The DTD writer. When we switch to DTD mode, all output is
@@ -43,23 +43,23 @@ extern class Printer
 	* the output is obtained as a string. Must not be reset to
 	* null until we're done with the document.
 	*/
-	private var _dtdWriter : java.io.StringWriter;
+	@:protected private var _dtdWriter : java.io.StringWriter;
 	
 	/**
 	* Holds a reference to the document writer while we are
 	* in DTD mode.
 	*/
-	private var _docWriter : java.io.Writer;
+	@:protected private var _docWriter : java.io.Writer;
 	
 	/**
 	* Holds the exception thrown by the serializer.  Exceptions do not cause
 	* the serializer to quit, but are held and one is thrown at the end.
 	*/
-	private var _exception : java.io.IOException;
+	@:protected private var _exception : java.io.IOException;
 	
-	@:overload public function new(writer : java.io.Writer, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public public function new(writer : java.io.Writer, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
-	@:overload public function getException() : java.io.IOException;
+	@:overload @:public public function getException() : java.io.IOException;
 	
 	/**
 	* Called by any of the DTD handlers to enter DTD mode.
@@ -69,46 +69,46 @@ extern class Printer
 	* have affect the first time it's called. To exist DTD state
 	* and get the accumulated DTD, call {@link #leaveDTD}.
 	*/
-	@:overload public function enterDTD() : Void;
+	@:overload @:public public function enterDTD() : Void;
 	
 	/**
 	* Called by the root element to leave DTD mode and if any
 	* DTD parts were printer, will return a string with their
 	* textual content.
 	*/
-	@:overload public function leaveDTD() : String;
+	@:overload @:public public function leaveDTD() : String;
 	
-	@:overload public function printText(text : String) : Void;
+	@:overload @:public public function printText(text : String) : Void;
 	
-	@:overload public function printText(text : java.lang.StringBuffer) : Void;
+	@:overload @:public public function printText(text : java.lang.StringBuffer) : Void;
 	
-	@:overload public function printText(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function printText(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function printText(ch : java.StdTypes.Char16) : Void;
+	@:overload @:public public function printText(ch : java.StdTypes.Char16) : Void;
 	
-	@:overload public function printSpace() : Void;
+	@:overload @:public public function printSpace() : Void;
 	
-	@:overload public function breakLine() : Void;
+	@:overload @:public public function breakLine() : Void;
 	
-	@:overload public function breakLine(preserveSpace : Bool) : Void;
+	@:overload @:public public function breakLine(preserveSpace : Bool) : Void;
 	
-	@:overload public function flushLine(preserveSpace : Bool) : Void;
+	@:overload @:public public function flushLine(preserveSpace : Bool) : Void;
 	
 	/**
 	* Flush the output stream. Must be called when done printing
 	* the document, otherwise some text might be buffered.
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
-	@:overload public function indent() : Void;
+	@:overload @:public public function indent() : Void;
 	
-	@:overload public function unindent() : Void;
+	@:overload @:public public function unindent() : Void;
 	
-	@:overload public function getNextIndent() : Int;
+	@:overload @:public public function getNextIndent() : Int;
 	
-	@:overload public function setNextIndent(indent : Int) : Void;
+	@:overload @:public public function setNextIndent(indent : Int) : Void;
 	
-	@:overload public function setThisIndent(indent : Int) : Void;
+	@:overload @:public public function setThisIndent(indent : Int) : Void;
 	
 	
 }

@@ -28,9 +28,9 @@ extern interface CorbaResponseWaitingRoom extends com.sun.corba.se.pept.transpor
 	/**
 	* @author Harold Carr
 	*/
-	@:overload public function signalExceptionToAllWaiters(systemException : org.omg.CORBA.SystemException) : Void;
+	@:overload @:public public function signalExceptionToAllWaiters(systemException : org.omg.CORBA.SystemException) : Void;
 	
-	@:overload public function getMessageMediator(requestId : Int) : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function getMessageMediator(requestId : Int) : com.sun.corba.se.pept.protocol.MessageMediator;
 	
 	
 }

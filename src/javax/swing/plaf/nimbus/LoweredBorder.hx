@@ -25,7 +25,7 @@ package javax.swing.plaf.nimbus;
 */
 @:internal extern class LoweredBorder extends javax.swing.plaf.nimbus.AbstractRegionPainter implements javax.swing.border.Border
 {
-	@:overload private function getExtendedCacheKeys(c : javax.swing.JComponent) : java.NativeArray<Dynamic>;
+	@:overload @:protected override private function getExtendedCacheKeys(c : javax.swing.JComponent) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Actually performs the painting operation. Subclasses must implement this
@@ -49,7 +49,7 @@ package javax.swing.plaf.nimbus;
 	*               painting the foreground, this value may differ from
 	*               c.getHeight().
 	*/
-	@:overload private function doPaint(g : java.awt.Graphics2D, c : javax.swing.JComponent, width : Int, height : Int, extendedCacheKeys : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected override private function doPaint(g : java.awt.Graphics2D, c : javax.swing.JComponent, width : Int, height : Int, extendedCacheKeys : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* <p>Gets the PaintContext for this painting operation. This method is
@@ -65,20 +65,20 @@ package javax.swing.plaf.nimbus;
 	*
 	* @return a PaintContext associated with this paint operation.
 	*/
-	@:overload private function getPaintContext() : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext;
+	@:overload @:protected override private function getPaintContext() : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext;
 	
 	/**
 	* Returns the insets of the border.
 	*
 	* @param c the component for which this border insets value applies
 	*/
-	@:overload public function getBorderInsets(c : java.awt.Component) : java.awt.Insets;
+	@:overload @:public public function getBorderInsets(c : java.awt.Component) : java.awt.Insets;
 	
 	/**
 	* Returns whether or not the border is opaque.  If the border is opaque, it
 	* is responsible for filling in it's own background when painting.
 	*/
-	@:overload public function isBorderOpaque() : Bool;
+	@:overload @:public public function isBorderOpaque() : Bool;
 	
 	/**
 	* Paints the border for the specified component with the specified position
@@ -91,7 +91,7 @@ package javax.swing.plaf.nimbus;
 	* @param width  the width of the painted border
 	* @param height the height of the painted border
 	*/
-	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	
 }

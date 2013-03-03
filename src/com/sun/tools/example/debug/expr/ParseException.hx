@@ -54,7 +54,7 @@ extern class ParseException extends java.lang.Exception
 	* print the error message in the form:
 	*     ParseException: <result of getMessage>
 	*/
-	@:overload public function new(currentTokenVal : com.sun.tools.example.debug.expr.Token, expectedTokenSequencesVal : java.NativeArray<java.NativeArray<Int>>, tokenImageVal : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(currentTokenVal : com.sun.tools.example.debug.expr.Token, expectedTokenSequencesVal : java.NativeArray<java.NativeArray<Int>>, tokenImageVal : java.NativeArray<String>) : Void;
 	
 	/**
 	* The following constructors are for use by you for whatever
@@ -65,37 +65,37 @@ extern class ParseException extends java.lang.Exception
 	* relevant information.  The JavaCC generated code does not use
 	* these constructors.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* This variable determines which constructor was used to create
 	* this object and thereby affects the semantics of the
 	* "getMessage" method (see below).
 	*/
-	private var specialConstructor : Bool;
+	@:protected private var specialConstructor : Bool;
 	
 	/**
 	* This is the last token that has been consumed successfully.  If
 	* this object has been created due to a parse error, the token
 	* followng this token will (therefore) be the first error token.
 	*/
-	public var currentToken : com.sun.tools.example.debug.expr.Token;
+	@:public public var currentToken : com.sun.tools.example.debug.expr.Token;
 	
 	/**
 	* Each entry in this array is an array of integers.  Each array
 	* of integers represents a sequence of tokens (by their ordinal
 	* values) that is expected at this point of the parse.
 	*/
-	public var expectedTokenSequences : java.NativeArray<java.NativeArray<Int>>;
+	@:public public var expectedTokenSequences : java.NativeArray<java.NativeArray<Int>>;
 	
 	/**
 	* This is a reference to the "tokenImage" array of the generated
 	* parser within which the parse error occurred.  This array is
 	* defined in the generated ...Constants interface.
 	*/
-	public var tokenImage : java.NativeArray<String>;
+	@:public public var tokenImage : java.NativeArray<String>;
 	
 	/**
 	* This method has the standard behavior when this object has been
@@ -107,19 +107,19 @@ extern class ParseException extends java.lang.Exception
 	* of the final stack trace, and hence the correct error message
 	* gets displayed.
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	/**
 	* The end of line string for this machine.
 	*/
-	private var eol : String;
+	@:protected private var eol : String;
 	
 	/**
 	* Used to convert raw characters to their escaped version
 	* when these raw version cannot be used as part of an ASCII
 	* string literal.
 	*/
-	@:overload private function add_escapes(str : String) : String;
+	@:overload @:protected private function add_escapes(str : String) : String;
 	
 	
 }

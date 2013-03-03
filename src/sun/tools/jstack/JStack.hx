@@ -30,7 +30,7 @@ extern class JStack
 	* and decides if the command should be executed by the SA JStack tool or by
 	* obtained the thread dump from a target process using the VM attach mechanism
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

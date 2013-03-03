@@ -25,9 +25,9 @@ package com.sun.corba.se.spi.transport;
 */
 extern interface CorbaTransportManager extends com.sun.corba.se.pept.transport.TransportManager
 {
-	@:overload public function getAcceptors(objectAdapterManagerId : String, objectAdapterId : com.sun.corba.se.spi.ior.ObjectAdapterId) : java.util.Collection<Dynamic>;
+	@:overload @:public public function getAcceptors(objectAdapterManagerId : String, objectAdapterId : com.sun.corba.se.spi.ior.ObjectAdapterId) : java.util.Collection<Dynamic>;
 	
-	@:overload public function addToIORTemplate(iorTemplate : com.sun.corba.se.spi.ior.IORTemplate, policies : com.sun.corba.se.impl.oa.poa.Policies, codebase : String, objectAdapterManagerId : String, objectAdapterId : com.sun.corba.se.spi.ior.ObjectAdapterId) : Void;
+	@:overload @:public public function addToIORTemplate(iorTemplate : com.sun.corba.se.spi.ior.IORTemplate, policies : com.sun.corba.se.impl.oa.poa.Policies, codebase : String, objectAdapterManagerId : String, objectAdapterId : com.sun.corba.se.spi.ior.ObjectAdapterId) : Void;
 	
 	
 }

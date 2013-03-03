@@ -37,7 +37,7 @@ extern class HtmlDocument extends com.sun.tools.doclets.internal.toolkit.Content
 	* @param docComment comment for the document
 	* @param htmlTree HTML tree of the document
 	*/
-	@:overload public function new(docType : com.sun.tools.doclets.internal.toolkit.Content, docComment : com.sun.tools.doclets.internal.toolkit.Content, htmlTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function new(docType : com.sun.tools.doclets.internal.toolkit.Content, docComment : com.sun.tools.doclets.internal.toolkit.Content, htmlTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Constructor to construct an HTML document.
@@ -45,14 +45,14 @@ extern class HtmlDocument extends com.sun.tools.doclets.internal.toolkit.Content
 	* @param docType document type for the HTML document
 	* @param htmlTree HTML tree of the document
 	*/
-	@:overload public function new(docType : com.sun.tools.doclets.internal.toolkit.Content, htmlTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function new(docType : com.sun.tools.doclets.internal.toolkit.Content, htmlTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds content for the HTML document.
 	*
 	* @param htmlContent html content to be added
 	*/
-	@:overload public function addContent(htmlContent : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public override public function addContent(htmlContent : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* This method is not supported by the class.
@@ -62,17 +62,17 @@ extern class HtmlDocument extends com.sun.tools.doclets.internal.toolkit.Content
 	*                              DocletAbortException because it
 	*                              is not supported.
 	*/
-	@:overload public function addContent(stringContent : String) : Void;
+	@:overload @:public override public function addContent(stringContent : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function write(contentBuilder : java.lang.StringBuilder) : Void;
+	@:overload @:public override public function write(contentBuilder : java.lang.StringBuilder) : Void;
 	
 	
 }

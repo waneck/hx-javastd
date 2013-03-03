@@ -31,14 +31,14 @@ extern class LoginConfigImpl extends javax.security.auth.login.Configuration
 	* @param caller defined in GSSUtil as CALLER_XXX final fields
 	* @param oid defined in GSSUtil as XXX_MECH_OID final fields
 	*/
-	@:overload public function new(caller : sun.security.jgss.GSSCaller, mech : org.ietf.jgss.Oid) : Void;
+	@:overload @:public public function new(caller : sun.security.jgss.GSSCaller, mech : org.ietf.jgss.Oid) : Void;
 	
 	/**
 	* @param name Almost useless, since the (caller, mech) is already passed
 	*             into constructor. The only use will be detecting OTHER which
 	*             is called in LoginContext
 	*/
-	@:overload override public function getAppConfigurationEntry(name : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
+	@:overload @:public override public function getAppConfigurationEntry(name : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
 	
 	
 }

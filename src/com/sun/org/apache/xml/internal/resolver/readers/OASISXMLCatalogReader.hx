@@ -35,25 +35,25 @@ extern class OASISXMLCatalogReader extends com.sun.org.apache.xml.internal.resol
 	/** The catalog object needs to be stored by the object so that
 	* SAX callbacks can use it.
 	*/
-	private var catalog : com.sun.org.apache.xml.internal.resolver.Catalog;
+	@:protected private var catalog : com.sun.org.apache.xml.internal.resolver.Catalog;
 	
 	/** The namespace name of OASIS ERTC catalogs */
-	public static var namespaceName(default, null) : String;
+	@:public @:static @:final public static var namespaceName(default, null) : String;
 	
 	/** The namespace name of OASIS ERTC TR9401 catalog extension */
-	public static var tr9401NamespaceName(default, null) : String;
+	@:public @:static @:final public static var tr9401NamespaceName(default, null) : String;
 	
-	private var baseURIStack : java.util.Stack<Dynamic>;
+	@:protected private var baseURIStack : java.util.Stack<Dynamic>;
 	
-	private var overrideStack : java.util.Stack<Dynamic>;
+	@:protected private var overrideStack : java.util.Stack<Dynamic>;
 	
-	private var namespaceStack : java.util.Stack<Dynamic>;
+	@:protected private var namespaceStack : java.util.Stack<Dynamic>;
 	
 	/** Set the current catalog. */
-	@:overload public function setCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog) : Void;
+	@:overload @:public public function setCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog) : Void;
 	
 	/** Get the current catalog. */
-	@:overload public function getCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
+	@:overload @:public public function getCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
 	
 	/**
 	* Are we in an extension namespace?
@@ -61,16 +61,16 @@ extern class OASISXMLCatalogReader extends com.sun.org.apache.xml.internal.resol
 	* @return true if the current stack of open namespaces includes
 	*               an extension namespace.
 	*/
-	@:overload private function inExtensionNamespace() : Bool;
+	@:overload @:protected private function inExtensionNamespace() : Bool;
 	
 	/** The SAX <code>setDocumentLocator</code> method does nothing. */
-	@:overload override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	/** The SAX <code>startDocument</code> method does nothing. */
-	@:overload override public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
 	/** The SAX <code>endDocument</code> method does nothing. */
-	@:overload override public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
 	/**
 	* The SAX <code>startElement</code> method recognizes elements
@@ -84,32 +84,32 @@ extern class OASISXMLCatalogReader extends com.sun.org.apache.xml.internal.resol
 	*
 	* @see CatalogEntry
 	*/
-	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function checkAttributes(atts : org.xml.sax.Attributes, attName : String) : Bool;
+	@:overload @:public public function checkAttributes(atts : org.xml.sax.Attributes, attName : String) : Bool;
 	
-	@:overload public function checkAttributes(atts : org.xml.sax.Attributes, attName1 : String, attName2 : String) : Bool;
+	@:overload @:public public function checkAttributes(atts : org.xml.sax.Attributes, attName1 : String, attName2 : String) : Bool;
 	
 	/** The SAX <code>endElement</code> method does nothing. */
-	@:overload override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
 	/** The SAX <code>characters</code> method does nothing. */
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/** The SAX <code>ignorableWhitespace</code> method does nothing. */
-	@:overload override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/** The SAX <code>processingInstruction</code> method does nothing. */
-	@:overload override public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public override public function processingInstruction(target : String, data : String) : Void;
 	
 	/** The SAX <code>skippedEntity</code> method does nothing. */
-	@:overload override public function skippedEntity(name : String) : Void;
+	@:overload @:public override public function skippedEntity(name : String) : Void;
 	
 	/** The SAX <code>startPrefixMapping</code> method does nothing. */
-	@:overload override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	/** The SAX <code>endPrefixMapping</code> method does nothing. */
-	@:overload override public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public override public function endPrefixMapping(prefix : String) : Void;
 	
 	
 }

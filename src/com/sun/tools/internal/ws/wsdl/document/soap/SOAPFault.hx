@@ -30,31 +30,31 @@ extern class SOAPFault extends com.sun.tools.internal.ws.wsdl.framework.Extensio
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(s : String) : Void;
+	@:overload @:public public function setName(s : String) : Void;
 	
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
-	@:overload public function setNamespace(s : String) : Void;
+	@:overload @:public public function setNamespace(s : String) : Void;
 	
-	@:overload public function getUse() : com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse;
+	@:overload @:public public function getUse() : com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse;
 	
-	@:overload public function setUse(u : com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse) : Void;
+	@:overload @:public public function setUse(u : com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse) : Void;
 	
-	@:overload public function isEncoded() : Bool;
+	@:overload @:public public function isEncoded() : Bool;
 	
-	@:overload public function isLiteral() : Bool;
+	@:overload @:public public function isLiteral() : Bool;
 	
-	@:overload public function getEncodingStyle() : String;
+	@:overload @:public public function getEncodingStyle() : String;
 	
-	@:overload public function setEncodingStyle(s : String) : Void;
+	@:overload @:public public function setEncodingStyle(s : String) : Void;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload @:public override public function validateThis() : Void;
 	
 	
 }

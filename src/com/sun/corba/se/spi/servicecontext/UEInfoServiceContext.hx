@@ -25,19 +25,19 @@ package com.sun.corba.se.spi.servicecontext;
 */
 extern class UEInfoServiceContext extends com.sun.corba.se.spi.servicecontext.ServiceContext
 {
-	@:overload public function new(ex : java.lang.Throwable) : Void;
+	@:overload @:public public function new(ex : java.lang.Throwable) : Void;
 	
-	@:overload public function new(is : org.omg.CORBA_2_3.portable.InputStream, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
+	@:overload @:public public function new(is : org.omg.CORBA_2_3.portable.InputStream, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
 	
-	public static var SERVICE_CONTEXT_ID(default, null) : Int;
+	@:public @:static @:final public static var SERVICE_CONTEXT_ID(default, null) : Int;
 	
-	@:overload public function getId() : Int;
+	@:overload @:public override public function getId() : Int;
 	
-	@:overload public function writeData(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public override public function writeData(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload public function getUE() : java.lang.Throwable;
+	@:overload @:public public function getUE() : java.lang.Throwable;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

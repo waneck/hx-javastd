@@ -37,15 +37,15 @@ struct.  We can always do that later if need be.
 */
 extern class AttributeMap extends java.util.AbstractMap<java.awt.font.TextAttribute, Dynamic>
 {
-	@:overload public function new(values : sun.font.AttributeValues) : Void;
+	@:overload @:public public function new(values : sun.font.AttributeValues) : Void;
 	
-	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<java.awt.font.TextAttribute, Dynamic>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<java.awt.font.TextAttribute, Dynamic>>;
 	
-	@:overload public function put(key : java.awt.font.TextAttribute, value : Dynamic) : Dynamic;
+	@:overload @:public public function put(key : java.awt.font.TextAttribute, value : Dynamic) : Dynamic;
 	
-	@:overload public function getValues() : sun.font.AttributeValues;
+	@:overload @:public public function getValues() : sun.font.AttributeValues;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

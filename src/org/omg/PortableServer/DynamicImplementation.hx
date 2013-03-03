@@ -38,7 +38,7 @@ extern class DynamicImplementation extends org.omg.PortableServer.Servant
 	* necessary to execute the request.
 	* @param request the request issued to the CORBA object.
 	*/
-	@:overload @:abstract public function invoke(request : org.omg.CORBA.ServerRequest) : Void;
+	@:overload @:abstract @:public public function invoke(request : org.omg.CORBA.ServerRequest) : Void;
 	
 	
 }

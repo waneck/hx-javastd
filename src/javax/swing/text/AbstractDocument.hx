@@ -31,7 +31,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @param data the content
 	*/
-	@:overload private function new(data : javax.swing.text.AbstractDocument.AbstractDocument_Content) : Void;
+	@:overload @:protected private function new(data : javax.swing.text.AbstractDocument.AbstractDocument_Content) : Void;
 	
 	/**
 	* Constructs a new <code>AbstractDocument</code>, wrapped around some
@@ -40,7 +40,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param data the content
 	* @param context the attribute context
 	*/
-	@:overload private function new(data : javax.swing.text.AbstractDocument.AbstractDocument_Content, context : javax.swing.text.AbstractDocument.AbstractDocument_AttributeContext) : Void;
+	@:overload @:protected private function new(data : javax.swing.text.AbstractDocument.AbstractDocument_Content, context : javax.swing.text.AbstractDocument.AbstractDocument_AttributeContext) : Void;
 	
 	/**
 	* Supports managing a set of properties. Callers
@@ -50,7 +50,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return a non-<code>null</code> <code>Dictionary</code>
 	* @see #setDocumentProperties
 	*/
-	@:overload public function getDocumentProperties() : java.util.Dictionary<Dynamic, Dynamic>;
+	@:overload @:public public function getDocumentProperties() : java.util.Dictionary<Dynamic, Dynamic>;
 	
 	/**
 	* Replaces the document properties dictionary for this document.
@@ -58,7 +58,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param x the new dictionary
 	* @see #getDocumentProperties
 	*/
-	@:overload public function setDocumentProperties(x : java.util.Dictionary<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function setDocumentProperties(x : java.util.Dictionary<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -69,7 +69,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param e the event
 	* @see EventListenerList
 	*/
-	@:overload private function fireInsertUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:protected private function fireInsertUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -80,7 +80,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param e the event
 	* @see EventListenerList
 	*/
-	@:overload private function fireChangedUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:protected private function fireChangedUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -91,7 +91,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param e the event
 	* @see EventListenerList
 	*/
-	@:overload private function fireRemoveUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:protected private function fireRemoveUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -102,7 +102,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param e the event
 	* @see EventListenerList
 	*/
-	@:overload private function fireUndoableEditUpdate(e : javax.swing.event.UndoableEditEvent) : Void;
+	@:overload @:protected private function fireUndoableEditUpdate(e : javax.swing.event.UndoableEditEvent) : Void;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -139,7 +139,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Gets the asynchronous loading priority.  If less than zero,
@@ -148,7 +148,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the asynchronous loading priority, or <code>-1</code>
 	*   if the document should not be loaded asynchronously
 	*/
-	@:overload public function getAsynchronousLoadPriority() : Int;
+	@:overload @:public public function getAsynchronousLoadPriority() : Int;
 	
 	/**
 	* Sets the asynchronous loading priority.
@@ -156,7 +156,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*   less than zero indicates that the document should not be
 	*   loaded asynchronously
 	*/
-	@:overload public function setAsynchronousLoadPriority(p : Int) : Void;
+	@:overload @:public public function setAsynchronousLoadPriority(p : Int) : Void;
 	
 	/**
 	* Sets the <code>DocumentFilter</code>. The <code>DocumentFilter</code>
@@ -168,7 +168,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @see #getDocumentFilter
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setDocumentFilter(filter : javax.swing.text.DocumentFilter) : Void;
+	@:require(java4) @:overload @:public public function setDocumentFilter(filter : javax.swing.text.DocumentFilter) : Void;
 	
 	/**
 	* Returns the <code>DocumentFilter</code> that is responsible for
@@ -179,7 +179,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @see #setDocumentFilter
 	* @return the DocumentFilter
 	*/
-	@:require(java4) @:overload public function getDocumentFilter() : javax.swing.text.DocumentFilter;
+	@:require(java4) @:overload @:public public function getDocumentFilter() : javax.swing.text.DocumentFilter;
 	
 	/**
 	* This allows the model to be safely rendered in the presence
@@ -211,7 +211,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @param r the renderer to execute
 	*/
-	@:overload public function render(r : java.lang.Runnable) : Void;
+	@:overload @:public public function render(r : java.lang.Runnable) : Void;
 	
 	/**
 	* Returns the length of the data.  This is the number of
@@ -220,7 +220,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the length >= 0
 	* @see Document#getLength
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Adds a document listener for notification of any changes.
@@ -228,7 +228,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param listener the <code>DocumentListener</code> to add
 	* @see Document#addDocumentListener
 	*/
-	@:overload public function addDocumentListener(listener : javax.swing.event.DocumentListener) : Void;
+	@:overload @:public public function addDocumentListener(listener : javax.swing.event.DocumentListener) : Void;
 	
 	/**
 	* Removes a document listener.
@@ -236,7 +236,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param listener the <code>DocumentListener</code> to remove
 	* @see Document#removeDocumentListener
 	*/
-	@:overload public function removeDocumentListener(listener : javax.swing.event.DocumentListener) : Void;
+	@:overload @:public public function removeDocumentListener(listener : javax.swing.event.DocumentListener) : Void;
 	
 	/**
 	* Returns an array of all the document listeners
@@ -250,7 +250,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @see #removeDocumentListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getDocumentListeners() : java.NativeArray<javax.swing.event.DocumentListener>;
+	@:require(java4) @:overload @:public public function getDocumentListeners() : java.NativeArray<javax.swing.event.DocumentListener>;
 	
 	/**
 	* Adds an undo listener for notification of any changes.
@@ -261,7 +261,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param listener the <code>UndoableEditListener</code> to add
 	* @see Document#addUndoableEditListener
 	*/
-	@:overload public function addUndoableEditListener(listener : javax.swing.event.UndoableEditListener) : Void;
+	@:overload @:public public function addUndoableEditListener(listener : javax.swing.event.UndoableEditListener) : Void;
 	
 	/**
 	* Removes an undo listener.
@@ -269,7 +269,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param listener the <code>UndoableEditListener</code> to remove
 	* @see Document#removeDocumentListener
 	*/
-	@:overload public function removeUndoableEditListener(listener : javax.swing.event.UndoableEditListener) : Void;
+	@:overload @:public public function removeUndoableEditListener(listener : javax.swing.event.UndoableEditListener) : Void;
 	
 	/**
 	* Returns an array of all the undoable edit listeners
@@ -284,7 +284,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getUndoableEditListeners() : java.NativeArray<javax.swing.event.UndoableEditListener>;
+	@:require(java4) @:overload @:public public function getUndoableEditListeners() : java.NativeArray<javax.swing.event.UndoableEditListener>;
 	
 	/**
 	* A convenience method for looking up a property value. It is
@@ -297,7 +297,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the value of this property or <code>null</code>
 	* @see #getDocumentProperties
 	*/
-	@:overload @:final public function getProperty(key : Dynamic) : Dynamic;
+	@:overload @:public @:final public function getProperty(key : Dynamic) : Dynamic;
 	
 	/**
 	* A convenience method for storing up a property value.  It is
@@ -312,7 +312,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param value the property value
 	* @see #getDocumentProperties
 	*/
-	@:overload @:final public function putProperty(key : Dynamic, value : Dynamic) : Void;
+	@:overload @:public @:final public function putProperty(key : Dynamic, value : Dynamic) : Void;
 	
 	/**
 	* Removes some content from the document.
@@ -331,7 +331,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*   position within the document
 	* @see Document#remove
 	*/
-	@:overload public function remove(offs : Int, len : Int) : Void;
+	@:overload @:public public function remove(offs : Int, len : Int) : Void;
 	
 	/**
 	* Deletes the region of text from <code>offset</code> to
@@ -353,7 +353,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*            position within the document
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function replace(offset : Int, length : Int, text : String, attrs : javax.swing.text.AttributeSet) : Void;
+	@:require(java4) @:overload @:public public function replace(offset : Int, length : Int, text : String, attrs : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Inserts some content into the document.
@@ -373,7 +373,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*   position within the document
 	* @see Document#insertString
 	*/
-	@:overload public function insertString(offs : Int, str : String, a : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function insertString(offs : Int, str : String, a : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Gets a sequence of text from the document.
@@ -385,7 +385,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*   that is not a valid position within the document
 	* @see Document#getText
 	*/
-	@:overload public function getText(offset : Int, length : Int) : String;
+	@:overload @:public public function getText(offset : Int, length : Int) : String;
 	
 	/**
 	* Fetches the text contained within the given portion
@@ -419,7 +419,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @exception BadLocationException  the range given includes a position
 	*   that is not a valid position within the document
 	*/
-	@:overload public function getText(offset : Int, length : Int, txt : javax.swing.text.Segment) : Void;
+	@:overload @:public public function getText(offset : Int, length : Int, txt : javax.swing.text.Segment) : Void;
 	
 	/**
 	* Returns a position that will track change as the document
@@ -436,7 +436,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*   represent a valid location in the associated document
 	* @see Document#createPosition
 	*/
-	@:overload @:synchronized public function createPosition(offs : Int) : javax.swing.text.Position;
+	@:overload @:public @:synchronized public function createPosition(offs : Int) : javax.swing.text.Position;
 	
 	/**
 	* Returns a position that represents the start of the document.  The
@@ -445,7 +445,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @return the position
 	*/
-	@:overload @:final public function getStartPosition() : javax.swing.text.Position;
+	@:overload @:public @:final public function getStartPosition() : javax.swing.text.Position;
 	
 	/**
 	* Returns a position that represents the end of the document.  The
@@ -454,7 +454,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @return the position
 	*/
-	@:overload @:final public function getEndPosition() : javax.swing.text.Position;
+	@:overload @:public @:final public function getEndPosition() : javax.swing.text.Position;
 	
 	/**
 	* Gets all root elements defined.  Typically, there
@@ -463,7 +463,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @return the root element
 	*/
-	@:overload public function getRootElements() : java.NativeArray<javax.swing.text.Element>;
+	@:overload @:public public function getRootElements() : java.NativeArray<javax.swing.text.Element>;
 	
 	/**
 	* Returns the root element that views should be based upon
@@ -473,14 +473,14 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the root element
 	* @see Document#getDefaultRootElement
 	*/
-	@:overload @:abstract public function getDefaultRootElement() : javax.swing.text.Element;
+	@:overload @:public @:abstract public function getDefaultRootElement() : javax.swing.text.Element;
 	
 	/**
 	* Returns the root element of the bidirectional structure for this
 	* document.  Its children represent character runs with a given
 	* Unicode bidi level.
 	*/
-	@:overload public function getBidiRootElement() : javax.swing.text.Element;
+	@:overload @:public public function getBidiRootElement() : javax.swing.text.Element;
 	
 	/**
 	* Get the paragraph element containing the given position.  Sub-classes
@@ -490,7 +490,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @param pos the starting offset >= 0
 	* @return the element */
-	@:overload @:abstract public function getParagraphElement(pos : Int) : javax.swing.text.Element;
+	@:overload @:public @:abstract public function getParagraphElement(pos : Int) : javax.swing.text.Element;
 	
 	/**
 	* Fetches the context for managing attributes.  This
@@ -499,7 +499,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @return the context
 	*/
-	@:overload @:final private function getAttributeContext() : javax.swing.text.AbstractDocument.AbstractDocument_AttributeContext;
+	@:overload @:protected @:final private function getAttributeContext() : javax.swing.text.AbstractDocument.AbstractDocument_AttributeContext;
 	
 	/**
 	* Updates document structure as a result of text insertion.  This
@@ -510,7 +510,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param chng a description of the change
 	* @param attr the attributes for the change
 	*/
-	@:overload private function insertUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:protected private function insertUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Updates any document structure as a result of text removal.  This
@@ -521,7 +521,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @param chng a description of the change
 	*/
-	@:overload private function removeUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
+	@:overload @:protected private function removeUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
 	
 	/**
 	* Updates any document structure as a result of text removal.  This
@@ -532,21 +532,21 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @param chng a description of the change
 	*/
-	@:overload private function postRemoveUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
+	@:overload @:protected private function postRemoveUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
 	
 	/**
 	* Gives a diagnostic dump.
 	*
 	* @param out the output stream
 	*/
-	@:overload public function dump(out : java.io.PrintStream) : Void;
+	@:overload @:public public function dump(out : java.io.PrintStream) : Void;
 	
 	/**
 	* Gets the content for the document.
 	*
 	* @return the content
 	*/
-	@:overload @:final private function getContent() : javax.swing.text.AbstractDocument.AbstractDocument_Content;
+	@:overload @:protected @:final private function getContent() : javax.swing.text.AbstractDocument.AbstractDocument_Content;
 	
 	/**
 	* Creates a document leaf element.
@@ -563,7 +563,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param p1 the end of the range >= p0
 	* @return the new element
 	*/
-	@:overload private function createLeafElement(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet, p0 : Int, p1 : Int) : javax.swing.text.Element;
+	@:overload @:protected private function createLeafElement(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet, p0 : Int, p1 : Int) : javax.swing.text.Element;
 	
 	/**
 	* Creates a document branch element, that can contain other elements.
@@ -572,7 +572,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param a the attributes
 	* @return the element
 	*/
-	@:overload private function createBranchElement(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet) : javax.swing.text.Element;
+	@:overload @:protected private function createBranchElement(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet) : javax.swing.text.Element;
 	
 	/**
 	* Fetches the current writing thread if there is one.
@@ -584,7 +584,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the thread actively modifying the document
 	*  or <code>null</code> if there are no modifications in progress
 	*/
-	@:overload @:synchronized @:final private function getCurrentWriter() : java.lang.Thread;
+	@:overload @:protected @:synchronized @:final private function getCurrentWriter() : java.lang.Thread;
 	
 	/**
 	* Acquires a lock to begin mutating the document this lock
@@ -611,7 +611,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*  where order of delivery is not guaranteed and all listeners
 	*  should be notified before further mutations are allowed.
 	*/
-	@:overload @:synchronized @:final private function writeLock() : Void;
+	@:overload @:protected @:synchronized @:final private function writeLock() : Void;
 	
 	/**
 	* Releases a write lock previously obtained via <code>writeLock</code>.
@@ -620,7 +620,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @see #writeLock
 	*/
-	@:overload @:synchronized @:final private function writeUnlock() : Void;
+	@:overload @:protected @:synchronized @:final private function writeUnlock() : Void;
 	
 	/**
 	* Acquires a lock to begin reading some state from the
@@ -633,7 +633,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @see #readUnlock
 	*/
-	@:overload @:synchronized @:final public function readLock() : Void;
+	@:overload @:public @:synchronized @:final public function readLock() : Void;
 	
 	/**
 	* Does a read unlock.  This signals that one
@@ -653,43 +653,43 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @see #readLock
 	*/
-	@:overload @:synchronized @:final public function readUnlock() : Void;
+	@:overload @:public @:synchronized @:final public function readUnlock() : Void;
 	
 	/**
 	* The event listener list for the document.
 	*/
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
 	/**
 	* Error message to indicate a bad location.
 	*/
-	private static var BAD_LOCATION(default, null) : String;
+	@:protected @:static @:final private static var BAD_LOCATION(default, null) : String;
 	
 	/**
 	* Name of elements used to represent paragraphs
 	*/
-	public static var ParagraphElementName(default, null) : String;
+	@:public @:static @:final public static var ParagraphElementName(default, null) : String;
 	
 	/**
 	* Name of elements used to represent content
 	*/
-	public static var ContentElementName(default, null) : String;
+	@:public @:static @:final public static var ContentElementName(default, null) : String;
 	
 	/**
 	* Name of elements used to hold sections (lines/paragraphs).
 	*/
-	public static var SectionElementName(default, null) : String;
+	@:public @:static @:final public static var SectionElementName(default, null) : String;
 	
 	/**
 	* Name of elements used to hold a unidirectional run
 	*/
-	public static var BidiElementName(default, null) : String;
+	@:public @:static @:final public static var BidiElementName(default, null) : String;
 	
 	/**
 	* Name of the attribute used to specify element
 	* names.
 	*/
-	public static var ElementNameAttribute(default, null) : String;
+	@:public @:static @:final public static var ElementNameAttribute(default, null) : String;
 	
 	
 }
@@ -710,14 +710,14 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return a Position
 	* @exception BadLocationException for an invalid offset
 	*/
-	@:overload public function createPosition(offset : Int) : javax.swing.text.Position;
+	@:overload @:public public function createPosition(offset : Int) : javax.swing.text.Position;
 	
 	/**
 	* Current length of the sequence of character content.
 	*
 	* @return the length >= 0
 	*/
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
 	/**
 	* Inserts a string of characters into the sequence.
@@ -730,7 +730,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @exception BadLocationException  thrown if the area covered by
 	*   the arguments is not contained in the character sequence
 	*/
-	@:overload public function insertString(where : Int, str : String) : javax.swing.undo.UndoableEdit;
+	@:overload @:public public function insertString(where : Int, str : String) : javax.swing.undo.UndoableEdit;
 	
 	/**
 	* Removes some portion of the sequence.
@@ -744,7 +744,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @exception BadLocationException  Thrown if the area covered by
 	*   the arguments is not contained in the character sequence.
 	*/
-	@:overload public function remove(where : Int, nitems : Int) : javax.swing.undo.UndoableEdit;
+	@:overload @:public public function remove(where : Int, nitems : Int) : javax.swing.undo.UndoableEdit;
 	
 	/**
 	* Fetches a string of characters contained in the sequence.
@@ -755,7 +755,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @exception BadLocationException  Thrown if the area covered by
 	*   the arguments is not contained in the character sequence.
 	*/
-	@:overload public function getString(where : Int, len : Int) : String;
+	@:overload @:public public function getString(where : Int, len : Int) : String;
 	
 	/**
 	* Gets a sequence of characters and copies them into a Segment.
@@ -766,7 +766,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @exception BadLocationException  Thrown if the area covered by
 	*   the arguments is not contained in the character sequence.
 	*/
-	@:overload public function getChars(where : Int, len : Int, txt : javax.swing.text.Segment) : Void;
+	@:overload @:public public function getChars(where : Int, len : Int, txt : javax.swing.text.Segment) : Void;
 	
 	
 }
@@ -801,7 +801,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the updated attribute set
 	* @see MutableAttributeSet#addAttribute
 	*/
-	@:overload public function addAttribute(old : javax.swing.text.AttributeSet, name : Dynamic, value : Dynamic) : javax.swing.text.AttributeSet;
+	@:overload @:public public function addAttribute(old : javax.swing.text.AttributeSet, name : Dynamic, value : Dynamic) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Adds a set of attributes to the element.
@@ -811,7 +811,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the updated attribute set
 	* @see MutableAttributeSet#addAttribute
 	*/
-	@:overload public function addAttributes(old : javax.swing.text.AttributeSet, attr : javax.swing.text.AttributeSet) : javax.swing.text.AttributeSet;
+	@:overload @:public public function addAttributes(old : javax.swing.text.AttributeSet, attr : javax.swing.text.AttributeSet) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Removes an attribute from the set.
@@ -821,7 +821,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the updated attribute set
 	* @see MutableAttributeSet#removeAttribute
 	*/
-	@:overload public function removeAttribute(old : javax.swing.text.AttributeSet, name : Dynamic) : javax.swing.text.AttributeSet;
+	@:overload @:public public function removeAttribute(old : javax.swing.text.AttributeSet, name : Dynamic) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Removes a set of attributes for the element.
@@ -831,7 +831,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the updated attribute set
 	* @see MutableAttributeSet#removeAttributes
 	*/
-	@:overload public function removeAttributes(old : javax.swing.text.AttributeSet, names : java.util.Enumeration<Dynamic>) : javax.swing.text.AttributeSet;
+	@:overload @:public public function removeAttributes(old : javax.swing.text.AttributeSet, names : java.util.Enumeration<Dynamic>) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Removes a set of attributes for the element.
@@ -841,14 +841,14 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the updated attribute set
 	* @see MutableAttributeSet#removeAttributes
 	*/
-	@:overload public function removeAttributes(old : javax.swing.text.AttributeSet, attrs : javax.swing.text.AttributeSet) : javax.swing.text.AttributeSet;
+	@:overload @:public public function removeAttributes(old : javax.swing.text.AttributeSet, attrs : javax.swing.text.AttributeSet) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Fetches an empty AttributeSet.
 	*
 	* @return the attribute set
 	*/
-	@:overload public function getEmptySet() : javax.swing.text.AttributeSet;
+	@:overload @:public public function getEmptySet() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Reclaims an attribute set.
@@ -859,7 +859,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @param a the attribute set to reclaim
 	*/
-	@:overload public function reclaim(a : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function reclaim(a : javax.swing.text.AttributeSet) : Void;
 	
 	
 }
@@ -889,7 +889,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param a the attributes for the element
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet) : Void;
+	@:require(java4) @:overload @:public public function new(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Dumps a debugging representation of the element hierarchy.
@@ -897,7 +897,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param psOut the output stream
 	* @param indentAmount the indentation level >= 0
 	*/
-	@:overload public function dump(psOut : java.io.PrintStream, indentAmount : Int) : Void;
+	@:overload @:public public function dump(psOut : java.io.PrintStream, indentAmount : Int) : Void;
 	
 	/**
 	* Gets the number of attributes that are defined.
@@ -905,7 +905,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the number of attributes >= 0
 	* @see AttributeSet#getAttributeCount
 	*/
-	@:overload public function getAttributeCount() : Int;
+	@:overload @:public public function getAttributeCount() : Int;
 	
 	/**
 	* Checks whether a given attribute is defined.
@@ -914,7 +914,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return true if the attribute is defined
 	* @see AttributeSet#isDefined
 	*/
-	@:overload public function isDefined(attrName : Dynamic) : Bool;
+	@:overload @:public public function isDefined(attrName : Dynamic) : Bool;
 	
 	/**
 	* Checks whether two attribute sets are equal.
@@ -923,7 +923,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return true if the same
 	* @see AttributeSet#isEqual
 	*/
-	@:overload public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:public public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
 	
 	/**
 	* Copies a set of attributes.
@@ -931,7 +931,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the copy
 	* @see AttributeSet#copyAttributes
 	*/
-	@:overload public function copyAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public public function copyAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Gets the value of an attribute.
@@ -940,7 +940,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the attribute value
 	* @see AttributeSet#getAttribute
 	*/
-	@:overload public function getAttribute(attrName : Dynamic) : Dynamic;
+	@:overload @:public public function getAttribute(attrName : Dynamic) : Dynamic;
 	
 	/**
 	* Gets the names of all attributes.
@@ -948,7 +948,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the attribute names as an enumeration
 	* @see AttributeSet#getAttributeNames
 	*/
-	@:overload public function getAttributeNames() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getAttributeNames() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Checks whether a given attribute name/value is defined.
@@ -958,7 +958,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return true if the name/value is defined
 	* @see AttributeSet#containsAttribute
 	*/
-	@:overload public function containsAttribute(name : Dynamic, value : Dynamic) : Bool;
+	@:overload @:public public function containsAttribute(name : Dynamic, value : Dynamic) : Bool;
 	
 	/**
 	* Checks whether the element contains all the attributes.
@@ -967,7 +967,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return true if the element contains all the attributes
 	* @see AttributeSet#containsAttributes
 	*/
-	@:overload public function containsAttributes(attrs : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:public public function containsAttributes(attrs : javax.swing.text.AttributeSet) : Bool;
 	
 	/**
 	* Gets the resolving parent.
@@ -977,7 +977,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the attributes from the parent, <code>null</code> if none
 	* @see AttributeSet#getResolveParent
 	*/
-	@:overload public function getResolveParent() : javax.swing.text.AttributeSet;
+	@:overload @:public public function getResolveParent() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Adds an attribute to the element.
@@ -986,7 +986,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param value the attribute value
 	* @see MutableAttributeSet#addAttribute
 	*/
-	@:overload public function addAttribute(name : Dynamic, value : Dynamic) : Void;
+	@:overload @:public public function addAttribute(name : Dynamic, value : Dynamic) : Void;
 	
 	/**
 	* Adds a set of attributes to the element.
@@ -994,7 +994,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param attr the attributes to add
 	* @see MutableAttributeSet#addAttribute
 	*/
-	@:overload public function addAttributes(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function addAttributes(attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Removes an attribute from the set.
@@ -1002,7 +1002,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param name the non-null attribute name
 	* @see MutableAttributeSet#removeAttribute
 	*/
-	@:overload public function removeAttribute(name : Dynamic) : Void;
+	@:overload @:public public function removeAttribute(name : Dynamic) : Void;
 	
 	/**
 	* Removes a set of attributes for the element.
@@ -1010,7 +1010,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param names the attribute names
 	* @see MutableAttributeSet#removeAttributes
 	*/
-	@:overload public function removeAttributes(names : java.util.Enumeration<Dynamic>) : Void;
+	@:overload @:public public function removeAttributes(names : java.util.Enumeration<Dynamic>) : Void;
 	
 	/**
 	* Removes a set of attributes for the element.
@@ -1018,7 +1018,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param attrs the attributes
 	* @see MutableAttributeSet#removeAttributes
 	*/
-	@:overload public function removeAttributes(attrs : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function removeAttributes(attrs : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Sets the resolving parent.
@@ -1026,49 +1026,49 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param parent the parent, null if none
 	* @see MutableAttributeSet#setResolveParent
 	*/
-	@:overload public function setResolveParent(parent : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function setResolveParent(parent : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Retrieves the underlying model.
 	*
 	* @return the model
 	*/
-	@:overload public function getDocument() : javax.swing.text.Document;
+	@:overload @:public public function getDocument() : javax.swing.text.Document;
 	
 	/**
 	* Gets the parent of the element.
 	*
 	* @return the parent
 	*/
-	@:overload public function getParentElement() : javax.swing.text.Element;
+	@:overload @:public public function getParentElement() : javax.swing.text.Element;
 	
 	/**
 	* Gets the attributes for the element.
 	*
 	* @return the attribute set
 	*/
-	@:overload public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Gets the name of the element.
 	*
 	* @return the name, null if none
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Gets the starting offset in the model for the element.
 	*
 	* @return the offset >= 0
 	*/
-	@:overload @:abstract public function getStartOffset() : Int;
+	@:overload @:public @:abstract public function getStartOffset() : Int;
 	
 	/**
 	* Gets the ending offset in the model for the element.
 	*
 	* @return the offset >= 0
 	*/
-	@:overload @:abstract public function getEndOffset() : Int;
+	@:overload @:public @:abstract public function getEndOffset() : Int;
 	
 	/**
 	* Gets a child element.
@@ -1076,14 +1076,14 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param index the child index, >= 0 && < getElementCount()
 	* @return the child element
 	*/
-	@:overload @:abstract public function getElement(index : Int) : javax.swing.text.Element;
+	@:overload @:public @:abstract public function getElement(index : Int) : javax.swing.text.Element;
 	
 	/**
 	* Gets the number of children for the element.
 	*
 	* @return the number of children >= 0
 	*/
-	@:overload @:abstract public function getElementCount() : Int;
+	@:overload @:public @:abstract public function getElementCount() : Int;
 	
 	/**
 	* Gets the child element index closest to the given model offset.
@@ -1091,20 +1091,20 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param offset the offset >= 0
 	* @return the element index >= 0
 	*/
-	@:overload @:abstract public function getElementIndex(offset : Int) : Int;
+	@:overload @:public @:abstract public function getElementIndex(offset : Int) : Int;
 	
 	/**
 	* Checks whether the element is a leaf.
 	*
 	* @return true if a leaf
 	*/
-	@:overload @:abstract public function isLeaf() : Bool;
+	@:overload @:public @:abstract public function isLeaf() : Bool;
 	
 	/**
 	* Returns the child <code>TreeNode</code> at index
 	* <code>childIndex</code>.
 	*/
-	@:overload public function getChildAt(childIndex : Int) : javax.swing.tree.TreeNode;
+	@:overload @:public public function getChildAt(childIndex : Int) : javax.swing.tree.TreeNode;
 	
 	/**
 	* Returns the number of children <code>TreeNode</code>'s
@@ -1112,13 +1112,13 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the number of children <code>TreeNodews</code>'s
 	* receiver contains
 	*/
-	@:overload public function getChildCount() : Int;
+	@:overload @:public public function getChildCount() : Int;
 	
 	/**
 	* Returns the parent <code>TreeNode</code> of the receiver.
 	* @return the parent <code>TreeNode</code> of the receiver
 	*/
-	@:overload public function getParent() : javax.swing.tree.TreeNode;
+	@:overload @:public public function getParent() : javax.swing.tree.TreeNode;
 	
 	/**
 	* Returns the index of <code>node</code> in the receivers children.
@@ -1128,20 +1128,20 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the index of <code>node</code> in the receiver's
 	* children, or -1 if absent
 	*/
-	@:overload public function getIndex(node : javax.swing.tree.TreeNode) : Int;
+	@:overload @:public public function getIndex(node : javax.swing.tree.TreeNode) : Int;
 	
 	/**
 	* Returns true if the receiver allows children.
 	* @return true if the receiver allows children, otherwise false
 	*/
-	@:overload @:abstract public function getAllowsChildren() : Bool;
+	@:overload @:public @:abstract public function getAllowsChildren() : Bool;
 	
 	/**
 	* Returns the children of the receiver as an
 	* <code>Enumeration</code>.
 	* @return the children of the receiver as an <code>Enumeration</code>
 	*/
-	@:overload @:abstract public function children() : java.util.Enumeration<Dynamic>;
+	@:overload @:public @:abstract public function children() : java.util.Enumeration<Dynamic>;
 	
 	
 }
@@ -1167,7 +1167,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param a the attributes for the element
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet) : Void;
+	@:require(java4) @:overload @:public public function new(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Gets the child element that contains
@@ -1176,7 +1176,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param pos the position >= 0
 	* @return the element, null if none
 	*/
-	@:overload public function positionToElement(pos : Int) : javax.swing.text.Element;
+	@:overload @:public public function positionToElement(pos : Int) : javax.swing.text.Element;
 	
 	/**
 	* Replaces content with a new set of elements.
@@ -1185,28 +1185,28 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param length the length to replace >= 0
 	* @param elems the new elements
 	*/
-	@:overload public function replace(offset : Int, length : Int, elems : java.NativeArray<javax.swing.text.Element>) : Void;
+	@:overload @:public public function replace(offset : Int, length : Int, elems : java.NativeArray<javax.swing.text.Element>) : Void;
 	
 	/**
 	* Converts the element to a string.
 	*
 	* @return the string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Gets the element name.
 	*
 	* @return the element name
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Gets the starting offset in the model for the element.
 	*
 	* @return the offset >= 0
 	*/
-	@:overload override public function getStartOffset() : Int;
+	@:overload @:public override public function getStartOffset() : Int;
 	
 	/**
 	* Gets the ending offset in the model for the element.
@@ -1214,7 +1214,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @return the offset >= 0
 	*/
-	@:overload override public function getEndOffset() : Int;
+	@:overload @:public override public function getEndOffset() : Int;
 	
 	/**
 	* Gets a child element.
@@ -1222,14 +1222,14 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param index the child index, >= 0 && < getElementCount()
 	* @return the child element, null if none
 	*/
-	@:overload override public function getElement(index : Int) : javax.swing.text.Element;
+	@:overload @:public override public function getElement(index : Int) : javax.swing.text.Element;
 	
 	/**
 	* Gets the number of children for the element.
 	*
 	* @return the number of children >= 0
 	*/
-	@:overload override public function getElementCount() : Int;
+	@:overload @:public override public function getElementCount() : Int;
 	
 	/**
 	* Gets the child element index closest to the given model offset.
@@ -1237,27 +1237,27 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param offset the offset >= 0
 	* @return the element index >= 0
 	*/
-	@:overload override public function getElementIndex(offset : Int) : Int;
+	@:overload @:public override public function getElementIndex(offset : Int) : Int;
 	
 	/**
 	* Checks whether the element is a leaf.
 	*
 	* @return true if a leaf
 	*/
-	@:overload override public function isLeaf() : Bool;
+	@:overload @:public override public function isLeaf() : Bool;
 	
 	/**
 	* Returns true if the receiver allows children.
 	* @return true if the receiver allows children, otherwise false
 	*/
-	@:overload override public function getAllowsChildren() : Bool;
+	@:overload @:public override public function getAllowsChildren() : Bool;
 	
 	/**
 	* Returns the children of the receiver as an
 	* <code>Enumeration</code>.
 	* @return the children of the receiver
 	*/
-	@:overload override public function children() : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function children() : java.util.Enumeration<Dynamic>;
 	
 	
 }
@@ -1288,35 +1288,35 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param offs1   The end offset >= offs0
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet, offs0 : Int, offs1 : Int) : Void;
+	@:require(java4) @:overload @:public public function new(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet, offs0 : Int, offs1 : Int) : Void;
 	
 	/**
 	* Converts the element to a string.
 	*
 	* @return the string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Gets the starting offset in the model for the element.
 	*
 	* @return the offset >= 0
 	*/
-	@:overload override public function getStartOffset() : Int;
+	@:overload @:public override public function getStartOffset() : Int;
 	
 	/**
 	* Gets the ending offset in the model for the element.
 	*
 	* @return the offset >= 0
 	*/
-	@:overload override public function getEndOffset() : Int;
+	@:overload @:public override public function getEndOffset() : Int;
 	
 	/**
 	* Gets the element name.
 	*
 	* @return the name
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Gets the child element index closest to the given model offset.
@@ -1324,7 +1324,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param pos the offset >= 0
 	* @return the element index >= 0
 	*/
-	@:overload override public function getElementIndex(pos : Int) : Int;
+	@:overload @:public override public function getElementIndex(pos : Int) : Int;
 	
 	/**
 	* Gets a child element.
@@ -1332,34 +1332,34 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param index the child index, >= 0 && < getElementCount()
 	* @return the child element
 	*/
-	@:overload override public function getElement(index : Int) : javax.swing.text.Element;
+	@:overload @:public override public function getElement(index : Int) : javax.swing.text.Element;
 	
 	/**
 	* Returns the number of child elements.
 	*
 	* @return the number of children >= 0
 	*/
-	@:overload override public function getElementCount() : Int;
+	@:overload @:public override public function getElementCount() : Int;
 	
 	/**
 	* Checks whether the element is a leaf.
 	*
 	* @return true if a leaf
 	*/
-	@:overload override public function isLeaf() : Bool;
+	@:overload @:public override public function isLeaf() : Bool;
 	
 	/**
 	* Returns true if the receiver allows children.
 	* @return true if the receiver allows children, otherwise false
 	*/
-	@:overload override public function getAllowsChildren() : Bool;
+	@:overload @:public override public function getAllowsChildren() : Bool;
 	
 	/**
 	* Returns the children of the receiver as an
 	* <code>Enumeration</code>.
 	* @return the children of the receiver
 	*/
-	@:overload override public function children() : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function children() : java.util.Enumeration<Dynamic>;
 	
 	
 }
@@ -1374,7 +1374,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* Gets the name of the element.
 	* @return the name
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	
 }
@@ -1387,7 +1387,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* Gets the name of the element.
 	* @return the name
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	
 }
@@ -1408,14 +1408,14 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param type the type of event (DocumentEvent.EventType)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(offs : Int, len : Int, type : javax.swing.event.DocumentEvent.DocumentEvent_EventType) : Void;
+	@:require(java4) @:overload @:public public function new(offs : Int, len : Int, type : javax.swing.event.DocumentEvent.DocumentEvent_EventType) : Void;
 	
 	/**
 	* Returns a string description of the change event.
 	*
 	* @return a string
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Adds a document edit.  If the number of edits crosses
@@ -1426,21 +1426,21 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param anEdit a document edit record
 	* @return true if the edit was added
 	*/
-	@:overload override public function addEdit(anEdit : javax.swing.undo.UndoableEdit) : Bool;
+	@:overload @:public override public function addEdit(anEdit : javax.swing.undo.UndoableEdit) : Bool;
 	
 	/**
 	* Redoes a change.
 	*
 	* @exception CannotRedoException if the change cannot be redone
 	*/
-	@:overload override public function redo() : Void;
+	@:overload @:public override public function redo() : Void;
 	
 	/**
 	* Undoes a change.
 	*
 	* @exception CannotUndoException if the change cannot be undone
 	*/
-	@:overload override public function undo() : Void;
+	@:overload @:public override public function undo() : Void;
 	
 	/**
 	* DefaultDocument events are significant.  If you wish to aggregate
@@ -1449,7 +1449,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @return whether the event is significant for edit undo purposes
 	*/
-	@:overload override public function isSignificant() : Bool;
+	@:overload @:public override public function isSignificant() : Bool;
 	
 	/**
 	* Provides a localized, human readable description of this edit
@@ -1457,7 +1457,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @return the description
 	*/
-	@:overload override public function getPresentationName() : String;
+	@:overload @:public override public function getPresentationName() : String;
 	
 	/**
 	* Provides a localized, human readable description of the undoable
@@ -1466,7 +1466,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @return the description
 	*/
-	@:overload override public function getUndoPresentationName() : String;
+	@:overload @:public override public function getUndoPresentationName() : String;
 	
 	/**
 	* Provides a localized, human readable description of the redoable
@@ -1475,7 +1475,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @return the description
 	*/
-	@:overload override public function getRedoPresentationName() : String;
+	@:overload @:public override public function getRedoPresentationName() : String;
 	
 	/**
 	* Returns the type of event.
@@ -1483,7 +1483,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the event type as a DocumentEvent.EventType
 	* @see DocumentEvent#getType
 	*/
-	@:overload public function getType() : javax.swing.event.DocumentEvent.DocumentEvent_EventType;
+	@:overload @:public public function getType() : javax.swing.event.DocumentEvent.DocumentEvent_EventType;
 	
 	/**
 	* Returns the offset within the document of the start of the change.
@@ -1491,7 +1491,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the offset >= 0
 	* @see DocumentEvent#getOffset
 	*/
-	@:overload public function getOffset() : Int;
+	@:overload @:public public function getOffset() : Int;
 	
 	/**
 	* Returns the length of the change.
@@ -1499,7 +1499,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the length >= 0
 	* @see DocumentEvent#getLength
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Gets the document that sourced the change event.
@@ -1507,7 +1507,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @return the document
 	* @see DocumentEvent#getDocument
 	*/
-	@:overload public function getDocument() : javax.swing.text.Document;
+	@:overload @:public public function getDocument() : javax.swing.text.Document;
 	
 	/**
 	* Gets the changes for an element.
@@ -1515,7 +1515,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param elem the element
 	* @return the changes
 	*/
-	@:overload public function getChange(elem : javax.swing.text.Element) : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange;
+	@:overload @:public public function getChange(elem : javax.swing.text.Element) : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange;
 	
 	
 }
@@ -1527,19 +1527,19 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 */
 @:native('javax$swing$text$AbstractDocument$UndoRedoDocumentEvent') @:internal extern class AbstractDocument_UndoRedoDocumentEvent implements javax.swing.event.DocumentEvent
 {
-	@:overload public function new(src : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, isUndo : Bool) : Void;
+	@:overload @:public public function new(src : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, isUndo : Bool) : Void;
 	
-	@:overload public function getSource() : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent;
+	@:overload @:public public function getSource() : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent;
 	
-	@:overload public function getOffset() : Int;
+	@:overload @:public public function getOffset() : Int;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
-	@:overload public function getDocument() : javax.swing.text.Document;
+	@:overload @:public public function getDocument() : javax.swing.text.Document;
 	
-	@:overload public function getType() : javax.swing.event.DocumentEvent.DocumentEvent_EventType;
+	@:overload @:public public function getType() : javax.swing.event.DocumentEvent.DocumentEvent_EventType;
 	
-	@:overload public function getChange(elem : javax.swing.text.Element) : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange;
+	@:overload @:public public function getChange(elem : javax.swing.text.Element) : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange;
 	
 	
 }
@@ -1559,61 +1559,61 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param removed a set of elements that were removed
 	* @param added a set of elements that were added
 	*/
-	@:overload public function new(e : javax.swing.text.Element, index : Int, removed : java.NativeArray<javax.swing.text.Element>, added : java.NativeArray<javax.swing.text.Element>) : Void;
+	@:overload @:public public function new(e : javax.swing.text.Element, index : Int, removed : java.NativeArray<javax.swing.text.Element>, added : java.NativeArray<javax.swing.text.Element>) : Void;
 	
 	/**
 	* Returns the underlying element.
 	*
 	* @return the element
 	*/
-	@:overload public function getElement() : javax.swing.text.Element;
+	@:overload @:public public function getElement() : javax.swing.text.Element;
 	
 	/**
 	* Returns the index into the list of elements.
 	*
 	* @return the index >= 0
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* Gets a list of children that were removed.
 	*
 	* @return the list
 	*/
-	@:overload public function getChildrenRemoved() : java.NativeArray<javax.swing.text.Element>;
+	@:overload @:public public function getChildrenRemoved() : java.NativeArray<javax.swing.text.Element>;
 	
 	/**
 	* Gets a list of children that were added.
 	*
 	* @return the list
 	*/
-	@:overload public function getChildrenAdded() : java.NativeArray<javax.swing.text.Element>;
+	@:overload @:public public function getChildrenAdded() : java.NativeArray<javax.swing.text.Element>;
 	
 	/**
 	* Redoes a change.
 	*
 	* @exception CannotRedoException if the change cannot be redone
 	*/
-	@:overload override public function redo() : Void;
+	@:overload @:public override public function redo() : Void;
 	
 	/**
 	* Undoes a change.
 	*
 	* @exception CannotUndoException if the change cannot be undone
 	*/
-	@:overload override public function undo() : Void;
+	@:overload @:public override public function undo() : Void;
 	
 	
 }
 @:native('javax$swing$text$AbstractDocument$DefaultFilterBypass') @:internal extern class AbstractDocument_DefaultFilterBypass extends javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass
 {
-	@:overload override public function getDocument() : javax.swing.text.Document;
+	@:overload @:public override public function getDocument() : javax.swing.text.Document;
 	
-	@:overload override public function remove(offset : Int, length : Int) : Void;
+	@:overload @:public override public function remove(offset : Int, length : Int) : Void;
 	
-	@:overload override public function insertString(offset : Int, string : String, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public override public function insertString(offset : Int, string : String, attr : javax.swing.text.AttributeSet) : Void;
 	
-	@:overload override public function replace(offset : Int, length : Int, text : String, attrs : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public override public function replace(offset : Int, length : Int, text : String, attrs : javax.swing.text.AttributeSet) : Void;
 	
 	
 }

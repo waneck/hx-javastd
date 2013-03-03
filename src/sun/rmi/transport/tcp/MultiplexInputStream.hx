@@ -36,7 +36,7 @@ package sun.rmi.transport.tcp;
 	/**
 	* Read a byte from the connection.
 	*/
-	@:overload @:synchronized override public function read() : Int;
+	@:overload @:public @:synchronized override public function read() : Int;
 	
 	/**
 	* Read a subarray of bytes from connection.  This method blocks for
@@ -46,17 +46,17 @@ package sun.rmi.transport.tcp;
 	* @param off offset of beginning of bytes to read into
 	* @param len number of bytes to read
 	*/
-	@:overload @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Return the number of bytes immediately available for reading.
 	*/
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	/**
 	* Close this connection.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

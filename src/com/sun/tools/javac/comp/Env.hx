@@ -27,63 +27,63 @@ extern class Env<A> implements java.lang.Iterable<com.sun.tools.javac.comp.Env<A
 {
 	/** The next enclosing environment.
 	*/
-	public var next : com.sun.tools.javac.comp.Env<A>;
+	@:public public var next : com.sun.tools.javac.comp.Env<A>;
 	
 	/** The environment enclosing the current class.
 	*/
-	public var outer : com.sun.tools.javac.comp.Env<A>;
+	@:public public var outer : com.sun.tools.javac.comp.Env<A>;
 	
 	/** The tree with which this environment is associated.
 	*/
-	public var tree : com.sun.tools.javac.tree.JCTree;
+	@:public public var tree : com.sun.tools.javac.tree.JCTree;
 	
 	/** The enclosing toplevel tree.
 	*/
-	public var toplevel : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit;
+	@:public public var toplevel : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit;
 	
 	/** The next enclosing class definition.
 	*/
-	public var enclClass : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl;
+	@:public public var enclClass : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl;
 	
 	/** The next enclosing method definition.
 	*/
-	public var enclMethod : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl;
+	@:public public var enclMethod : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl;
 	
 	/** A generic field for further information.
 	*/
-	public var info : A;
+	@:public public var info : A;
 	
 	/** Is this an environment for evaluating a base clause?
 	*/
-	public var baseClause : Bool;
+	@:public public var baseClause : Bool;
 	
 	/** Create an outermost environment for a given (toplevel)tree,
 	*  with a given info field.
 	*/
-	@:overload public function new(tree : com.sun.tools.javac.tree.JCTree, info : A) : Void;
+	@:overload @:public public function new(tree : com.sun.tools.javac.tree.JCTree, info : A) : Void;
 	
 	/** Duplicate this environment, updating with given tree and info,
 	*  and copying all other fields.
 	*/
-	@:overload public function dup(tree : com.sun.tools.javac.tree.JCTree, info : A) : com.sun.tools.javac.comp.Env<A>;
+	@:overload @:public public function dup(tree : com.sun.tools.javac.tree.JCTree, info : A) : com.sun.tools.javac.comp.Env<A>;
 	
 	/** Duplicate this environment into a given Environment,
 	*  using its tree and info, and copying all other fields.
 	*/
-	@:overload public function dupto(that : com.sun.tools.javac.comp.Env<A>) : com.sun.tools.javac.comp.Env<A>;
+	@:overload @:public public function dupto(that : com.sun.tools.javac.comp.Env<A>) : com.sun.tools.javac.comp.Env<A>;
 	
 	/** Duplicate this environment, updating with given tree,
 	*  and copying all other fields.
 	*/
-	@:overload public function dup(tree : com.sun.tools.javac.tree.JCTree) : com.sun.tools.javac.comp.Env<A>;
+	@:overload @:public public function dup(tree : com.sun.tools.javac.tree.JCTree) : com.sun.tools.javac.comp.Env<A>;
 	
 	/** Return closest enclosing environment which points to a tree with given tag.
 	*/
-	@:overload public function enclosing(tag : Int) : com.sun.tools.javac.comp.Env<A>;
+	@:overload @:public public function enclosing(tag : Int) : com.sun.tools.javac.comp.Env<A>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function iterator() : java.util.Iterator<com.sun.tools.javac.comp.Env<A>>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.tools.javac.comp.Env<A>>;
 	
 	
 }

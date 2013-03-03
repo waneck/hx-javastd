@@ -30,35 +30,35 @@ extern class WSDLDocument extends com.sun.tools.internal.ws.wsdl.framework.Abstr
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(forest : com.sun.tools.internal.ws.wsdl.parser.MetadataFinder, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function new(forest : com.sun.tools.internal.ws.wsdl.parser.MetadataFinder, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function getDefinitions() : com.sun.tools.internal.ws.wsdl.document.Definitions;
+	@:overload @:public public function getDefinitions() : com.sun.tools.internal.ws.wsdl.document.Definitions;
 	
-	@:overload public function setDefinitions(d : com.sun.tools.internal.ws.wsdl.document.Definitions) : Void;
+	@:overload @:public public function setDefinitions(d : com.sun.tools.internal.ws.wsdl.document.Definitions) : Void;
 	
-	@:overload public function getAllServiceQNames() : java.NativeArray<javax.xml.namespace.QName>;
+	@:overload @:public public function getAllServiceQNames() : java.NativeArray<javax.xml.namespace.QName>;
 	
-	@:overload public function getAllPortQNames() : java.NativeArray<javax.xml.namespace.QName>;
+	@:overload @:public public function getAllPortQNames() : java.NativeArray<javax.xml.namespace.QName>;
 	
-	@:overload public function getPortQNames(serviceNameLocalPart : String) : java.NativeArray<javax.xml.namespace.QName>;
+	@:overload @:public public function getPortQNames(serviceNameLocalPart : String) : java.NativeArray<javax.xml.namespace.QName>;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
+	@:overload @:public public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
 	
-	@:overload override public function validate(validator : com.sun.tools.internal.ws.wsdl.framework.EntityReferenceValidator) : Void;
+	@:overload @:public override public function validate(validator : com.sun.tools.internal.ws.wsdl.framework.EntityReferenceValidator) : Void;
 	
-	@:overload override private function getRoot() : com.sun.tools.internal.ws.wsdl.framework.Entity;
+	@:overload @:protected override private function getRoot() : com.sun.tools.internal.ws.wsdl.framework.Entity;
 	
 	
 }
 @:native('com$sun$tools$internal$ws$wsdl$document$WSDLDocument$GloballyValidatingAction') @:internal extern class WSDLDocument_GloballyValidatingAction implements com.sun.tools.internal.ws.wsdl.framework.EntityAction implements com.sun.tools.internal.ws.wsdl.framework.EntityReferenceAction
 {
-	@:overload public function new(document : com.sun.tools.internal.ws.wsdl.framework.AbstractDocument, validator : com.sun.tools.internal.ws.wsdl.framework.EntityReferenceValidator) : Void;
+	@:overload @:public public function new(document : com.sun.tools.internal.ws.wsdl.framework.AbstractDocument, validator : com.sun.tools.internal.ws.wsdl.framework.EntityReferenceValidator) : Void;
 	
-	@:overload public function perform(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function perform(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function perform(kind : com.sun.tools.internal.ws.wsdl.framework.Kind, name : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function perform(kind : com.sun.tools.internal.ws.wsdl.framework.Kind, name : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getException() : com.sun.tools.internal.ws.wsdl.framework.ValidationException;
+	@:overload @:public public function getException() : com.sun.tools.internal.ws.wsdl.framework.ValidationException;
 	
 	
 }

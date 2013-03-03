@@ -28,67 +28,67 @@ extern class SocketOrChannelAcceptorImpl extends com.sun.corba.se.impl.transport
 	/**
 	* @author Harold Carr
 	*/
-	private var serverSocketChannel : java.nio.channels.ServerSocketChannel;
+	@:protected private var serverSocketChannel : java.nio.channels.ServerSocketChannel;
 	
-	private var serverSocket : java.net.ServerSocket;
+	@:protected private var serverSocket : java.net.ServerSocket;
 	
-	private var port : Int;
+	@:protected private var port : Int;
 	
-	private var enqueueTime : haxe.Int64;
+	@:protected private var enqueueTime : haxe.Int64;
 	
-	private var wrapper : com.sun.corba.se.impl.logging.ORBUtilSystemException;
+	@:protected private var wrapper : com.sun.corba.se.impl.logging.ORBUtilSystemException;
 	
-	private var connectionCache : com.sun.corba.se.pept.transport.InboundConnectionCache;
+	@:protected private var connectionCache : com.sun.corba.se.pept.transport.InboundConnectionCache;
 	
-	private var type : String;
+	@:protected private var type : String;
 	
-	private var name : String;
+	@:protected private var name : String;
 	
-	private var hostname : String;
+	@:protected private var hostname : String;
 	
-	private var locatorPort : Int;
+	@:protected private var locatorPort : Int;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, port : Int) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, port : Int) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, port : Int, name : String, type : String) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, port : Int, name : String, type : String) : Void;
 	
-	@:overload public function initialize() : Bool;
+	@:overload @:public public function initialize() : Bool;
 	
-	@:overload private function internalInitialize() : Void;
+	@:overload @:protected private function internalInitialize() : Void;
 	
-	@:overload public function initialized() : Bool;
+	@:overload @:public public function initialized() : Bool;
 	
-	@:overload public function getConnectionCacheType() : String;
+	@:overload @:public public function getConnectionCacheType() : String;
 	
-	@:overload public function setConnectionCache(connectionCache : com.sun.corba.se.pept.transport.InboundConnectionCache) : Void;
+	@:overload @:public public function setConnectionCache(connectionCache : com.sun.corba.se.pept.transport.InboundConnectionCache) : Void;
 	
-	@:overload public function getConnectionCache() : com.sun.corba.se.pept.transport.InboundConnectionCache;
+	@:overload @:public public function getConnectionCache() : com.sun.corba.se.pept.transport.InboundConnectionCache;
 	
-	@:overload public function shouldRegisterAcceptEvent() : Bool;
+	@:overload @:public public function shouldRegisterAcceptEvent() : Bool;
 	
-	@:overload public function accept() : Void;
+	@:overload @:public public function accept() : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function getEventHandler() : com.sun.corba.se.pept.transport.EventHandler;
+	@:overload @:public public function getEventHandler() : com.sun.corba.se.pept.transport.EventHandler;
 	
-	@:overload public function getObjectAdapterId() : String;
+	@:overload @:public public function getObjectAdapterId() : String;
 	
-	@:overload public function getObjectAdapterManagerId() : String;
+	@:overload @:public public function getObjectAdapterManagerId() : String;
 	
-	@:overload public function addToIORTemplate(iorTemplate : com.sun.corba.se.spi.ior.IORTemplate, policies : com.sun.corba.se.impl.oa.poa.Policies, codebase : String) : Void;
+	@:overload @:public public function addToIORTemplate(iorTemplate : com.sun.corba.se.spi.ior.IORTemplate, policies : com.sun.corba.se.impl.oa.poa.Policies, codebase : String) : Void;
 	
-	@:overload public function getMonitoringName() : String;
+	@:overload @:public public function getMonitoringName() : String;
 	
-	@:overload override public function getChannel() : java.nio.channels.SelectableChannel;
+	@:overload @:public override public function getChannel() : java.nio.channels.SelectableChannel;
 	
-	@:overload override public function getInterestOps() : Int;
+	@:overload @:public override public function getInterestOps() : Int;
 	
-	@:overload override public function getAcceptor() : com.sun.corba.se.pept.transport.Acceptor;
+	@:overload @:public override public function getAcceptor() : com.sun.corba.se.pept.transport.Acceptor;
 	
-	@:overload override public function getConnection() : com.sun.corba.se.pept.transport.Connection;
+	@:overload @:public override public function getConnection() : com.sun.corba.se.pept.transport.Connection;
 	
 	/* CONFLICT: with legacy below.
 	public String getName()
@@ -96,43 +96,43 @@ extern class SocketOrChannelAcceptorImpl extends com.sun.corba.se.impl.transport
 	return this.toString();
 	}
 	*/
-	@:overload public function doWork() : Void;
+	@:overload @:public public function doWork() : Void;
 	
-	@:overload public function setEnqueueTime(timeInMillis : haxe.Int64) : Void;
+	@:overload @:public public function setEnqueueTime(timeInMillis : haxe.Int64) : Void;
 	
-	@:overload public function getEnqueueTime() : haxe.Int64;
+	@:overload @:public public function getEnqueueTime() : haxe.Int64;
 	
-	@:overload public function createMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, connection : com.sun.corba.se.pept.transport.Connection) : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function createMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, connection : com.sun.corba.se.pept.transport.Connection) : com.sun.corba.se.pept.protocol.MessageMediator;
 	
-	@:overload public function finishCreatingMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, connection : com.sun.corba.se.pept.transport.Connection, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function finishCreatingMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, connection : com.sun.corba.se.pept.transport.Connection, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.protocol.MessageMediator;
 	
-	@:overload public function createInputObject(broker : com.sun.corba.se.pept.broker.Broker, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.InputObject;
+	@:overload @:public public function createInputObject(broker : com.sun.corba.se.pept.broker.Broker, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.InputObject;
 	
-	@:overload public function createOutputObject(broker : com.sun.corba.se.pept.broker.Broker, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.OutputObject;
+	@:overload @:public public function createOutputObject(broker : com.sun.corba.se.pept.broker.Broker, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.OutputObject;
 	
-	@:overload public function getServerSocket() : java.net.ServerSocket;
+	@:overload @:public public function getServerSocket() : java.net.ServerSocket;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload private function toStringName() : String;
+	@:overload @:protected private function toStringName() : String;
 	
-	@:overload private function dprint(msg : String) : Void;
+	@:overload @:protected private function dprint(msg : String) : Void;
 	
-	@:overload private function dprint(msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:protected private function dprint(msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function getHostName() : String;
+	@:overload @:public public function getHostName() : String;
 	
-	@:overload public function getHost() : String;
+	@:overload @:public public function getHost() : String;
 	
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
-	@:overload public function getLocatorPort() : Int;
+	@:overload @:public public function getLocatorPort() : Int;
 	
-	@:overload public function setLocatorPort(port : Int) : Void;
+	@:overload @:public public function setLocatorPort(port : Int) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

@@ -31,9 +31,9 @@ package com.sun.java.swing.plaf.gtk;
 	*
 	* @author Scott Violet
 	*/
-	public static var HANDLE_BOX(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var HANDLE_BOX(default, null) : javax.swing.plaf.synth.Region;
 	
-	@:overload private function new(name : String, ui : String, subregion : Bool) : Void;
+	@:overload @:protected private function new(name : String, ui : String, subregion : Bool) : Void;
 	
 	
 }

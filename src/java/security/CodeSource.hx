@@ -43,7 +43,7 @@ extern class CodeSource implements java.io.Serializable
 	* @param certs the certificate(s). It may be null. The contents of the
 	* array are copied to protect against subsequent modification.
 	*/
-	@:overload public function new(url : java.net.URL, certs : java.NativeArray<java.security.cert.Certificate>) : Void;
+	@:overload @:public public function new(url : java.net.URL, certs : java.NativeArray<java.security.cert.Certificate>) : Void;
 	
 	/**
 	* Constructs a CodeSource and associates it with the specified
@@ -55,14 +55,14 @@ extern class CodeSource implements java.io.Serializable
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(url : java.net.URL, signers : java.NativeArray<java.security.CodeSigner>) : Void;
+	@:require(java5) @:overload @:public public function new(url : java.net.URL, signers : java.NativeArray<java.security.CodeSigner>) : Void;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Tests for equality between the specified object and this
@@ -75,14 +75,14 @@ extern class CodeSource implements java.io.Serializable
 	*
 	* @return true if the objects are considered equal, false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the location associated with this CodeSource.
 	*
 	* @return the location (URL).
 	*/
-	@:overload @:final public function getLocation() : java.net.URL;
+	@:overload @:public @:final public function getLocation() : java.net.URL;
 	
 	/**
 	* Returns the certificates associated with this CodeSource.
@@ -98,7 +98,7 @@ extern class CodeSource implements java.io.Serializable
 	*
 	* @return A copy of the certificates array, or null if there is none.
 	*/
-	@:overload @:final public function getCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public @:final public function getCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the code signers associated with this CodeSource.
@@ -113,7 +113,7 @@ extern class CodeSource implements java.io.Serializable
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function getCodeSigners() : java.NativeArray<java.security.CodeSigner>;
+	@:require(java5) @:overload @:public @:final public function getCodeSigners() : java.NativeArray<java.security.CodeSigner>;
 	
 	/**
 	* Returns true if this CodeSource object "implies" the specified CodeSource.
@@ -183,7 +183,7 @@ extern class CodeSource implements java.io.Serializable
 	* @return true if the specified codesource is implied by this codesource,
 	* false if not.
 	*/
-	@:overload public function implies(codesource : java.security.CodeSource) : Bool;
+	@:overload @:public public function implies(codesource : java.security.CodeSource) : Bool;
 	
 	/**
 	* Returns a string describing this CodeSource, telling its
@@ -191,7 +191,7 @@ extern class CodeSource implements java.io.Serializable
 	*
 	* @return information about this CodeSource.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

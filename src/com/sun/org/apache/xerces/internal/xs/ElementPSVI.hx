@@ -27,24 +27,24 @@ extern interface ElementPSVI extends com.sun.org.apache.xerces.internal.xs.ItemP
 	* [element declaration]: an item isomorphic to the element declaration
 	* used to validate this element.
 	*/
-	@:overload public function getElementDeclaration() : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
+	@:overload @:public public function getElementDeclaration() : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
 	
 	/**
 	*  [notation]: the notation declaration.
 	*/
-	@:overload public function getNotation() : com.sun.org.apache.xerces.internal.xs.XSNotationDeclaration;
+	@:overload @:public public function getNotation() : com.sun.org.apache.xerces.internal.xs.XSNotationDeclaration;
 	
 	/**
 	* [nil]: true if clause 3.2 of Element Locally Valid (Element) (3.3.4) is
 	* satisfied, otherwise false.
 	*/
-	@:overload public function getNil() : Bool;
+	@:overload @:public public function getNil() : Bool;
 	
 	/**
 	* schema information: the schema information property if it is the
 	* validation root, <code>null</code> otherwise.
 	*/
-	@:overload public function getSchemaInformation() : com.sun.org.apache.xerces.internal.xs.XSModel;
+	@:overload @:public public function getSchemaInformation() : com.sun.org.apache.xerces.internal.xs.XSModel;
 	
 	
 }

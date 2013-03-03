@@ -35,9 +35,9 @@ package com.sun.tools.hat.internal.server;
 	*
 	* @author A. Sundararajan
 	*/
-	@:overload public function new(engine : com.sun.tools.hat.internal.oql.OQLEngine) : Void;
+	@:overload @:public public function new(engine : com.sun.tools.hat.internal.oql.OQLEngine) : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

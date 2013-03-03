@@ -62,14 +62,14 @@ package com.sun.org.apache.xerces.internal.impl.dtd;
 extern class DTDGrammarBucket
 {
 	/** Grammars associated with element root name. */
-	private var fGrammars : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var fGrammars : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	private var fActiveGrammar : com.sun.org.apache.xerces.internal.impl.dtd.DTDGrammar;
+	@:protected private var fActiveGrammar : com.sun.org.apache.xerces.internal.impl.dtd.DTDGrammar;
 	
-	private var fIsStandalone : Bool;
+	@:protected private var fIsStandalone : Bool;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Puts the specified grammar into the grammar pool and associate it to
@@ -77,11 +77,11 @@ extern class DTDGrammarBucket
 	*
 	* @param grammar     The grammar.
 	*/
-	@:overload public function putGrammar(grammar : com.sun.org.apache.xerces.internal.impl.dtd.DTDGrammar) : Void;
+	@:overload @:public public function putGrammar(grammar : com.sun.org.apache.xerces.internal.impl.dtd.DTDGrammar) : Void;
 	
-	@:overload public function getGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.impl.dtd.DTDGrammar;
+	@:overload @:public public function getGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.impl.dtd.DTDGrammar;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

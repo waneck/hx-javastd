@@ -25,13 +25,13 @@ package com.sun.xml.internal.messaging.saaj.util;
 */
 extern class ParserPool
 {
-	@:overload public function new(capacity : Int) : Void;
+	@:overload @:public public function new(capacity : Int) : Void;
 	
-	@:overload public function get() : javax.xml.parsers.SAXParser;
+	@:overload @:public public function get() : javax.xml.parsers.SAXParser;
 	
-	@:overload public function put(parser : javax.xml.parsers.SAXParser) : Void;
+	@:overload @:public public function put(parser : javax.xml.parsers.SAXParser) : Void;
 	
-	@:overload public function returnParser(saxParser : javax.xml.parsers.SAXParser) : Void;
+	@:overload @:public public function returnParser(saxParser : javax.xml.parsers.SAXParser) : Void;
 	
 	
 }

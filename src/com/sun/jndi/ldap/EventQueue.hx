@@ -28,7 +28,7 @@ package com.sun.jndi.ldap;
 	/**
 	* Pull events off the queue and dispatch them.
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

@@ -26,18 +26,18 @@ extern interface XSModelGroupDefinition extends com.sun.org.apache.xerces.intern
 	/**
 	* A model group.
 	*/
-	@:overload public function getModelGroup() : com.sun.org.apache.xerces.internal.xs.XSModelGroup;
+	@:overload @:public public function getModelGroup() : com.sun.org.apache.xerces.internal.xs.XSModelGroup;
 	
 	/**
 	* An annotation if it exists, otherwise <code>null</code>. If not null
 	* then the first [annotation] from the sequence of annotations.
 	*/
-	@:overload public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:overload @:public public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
 	/**
 	* A sequence of [annotations] or an empty <code>XSObjectList</code>.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	
 }

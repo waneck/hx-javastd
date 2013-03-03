@@ -29,9 +29,9 @@ extern interface SOAPBinding extends com.sun.xml.internal.txw2.TypedXmlWriter
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function transport(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.soap12.SOAPBinding;
+	@:overload @:public public function transport(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.soap12.SOAPBinding;
 	
-	@:overload public function style(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.soap12.SOAPBinding;
+	@:overload @:public public function style(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.soap12.SOAPBinding;
 	
 	
 }

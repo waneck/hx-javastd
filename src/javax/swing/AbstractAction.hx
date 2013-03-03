@@ -28,12 +28,12 @@ extern class AbstractAction implements javax.swing.Action implements java.lang.C
 	/**
 	* Specifies whether action is enabled; the default is true.
 	*/
-	private var enabled : Bool;
+	@:protected private var enabled : Bool;
 	
 	/**
 	* Creates an {@code Action}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an {@code Action} with the specified name.
@@ -41,7 +41,7 @@ extern class AbstractAction implements javax.swing.Action implements java.lang.C
 	* @param name the name ({@code Action.NAME}) for the action; a
 	*        value of {@code null} is ignored
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates an {@code Action} with the specified name and small icon.
@@ -51,7 +51,7 @@ extern class AbstractAction implements javax.swing.Action implements java.lang.C
 	* @param icon the small icon ({@code Action.SMALL_ICON}) for the action; a
 	*        value of {@code null} is ignored
 	*/
-	@:overload public function new(name : String, icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(name : String, icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Gets the <code>Object</code> associated with the specified key.
@@ -61,7 +61,7 @@ extern class AbstractAction implements javax.swing.Action implements java.lang.C
 	*          are no keys, it will return <code>null</code>
 	* @see Action#getValue
 	*/
-	@:overload public function getValue(key : String) : Dynamic;
+	@:overload @:public public function getValue(key : String) : Dynamic;
 	
 	/**
 	* Sets the <code>Value</code> associated with the specified key.
@@ -70,7 +70,7 @@ extern class AbstractAction implements javax.swing.Action implements java.lang.C
 	* @param newValue the <code>Object</code> to store using this key
 	* @see Action#putValue
 	*/
-	@:overload public function putValue(key : String, newValue : Dynamic) : Void;
+	@:overload @:public public function putValue(key : String, newValue : Dynamic) : Void;
 	
 	/**
 	* Returns true if the action is enabled.
@@ -78,7 +78,7 @@ extern class AbstractAction implements javax.swing.Action implements java.lang.C
 	* @return true if the action is enabled, false otherwise
 	* @see Action#isEnabled
 	*/
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
 	/**
 	* Sets whether the {@code Action} is enabled. The default is {@code true}.
@@ -87,7 +87,7 @@ extern class AbstractAction implements javax.swing.Action implements java.lang.C
 	*                  disable it
 	* @see Action#setEnabled
 	*/
-	@:overload public function setEnabled(newValue : Bool) : Void;
+	@:overload @:public public function setEnabled(newValue : Bool) : Void;
 	
 	/**
 	* Returns an array of <code>Object</code>s which are keys for
@@ -97,13 +97,13 @@ extern class AbstractAction implements javax.swing.Action implements java.lang.C
 	*                  keys have values set
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getKeys() : java.NativeArray<Dynamic>;
+	@:require(java3) @:overload @:public public function getKeys() : java.NativeArray<Dynamic>;
 	
 	/**
 	* If any <code>PropertyChangeListeners</code> have been registered, the
 	* <code>changeSupport</code> field describes them.
 	*/
-	private var changeSupport : javax.swing.event.SwingPropertyChangeSupport;
+	@:protected private var changeSupport : javax.swing.event.SwingPropertyChangeSupport;
 	
 	/**
 	* Supports reporting bound property changes.  This method can be called
@@ -111,7 +111,7 @@ extern class AbstractAction implements javax.swing.Action implements java.lang.C
 	* <code>PropertyChangeEvent</code> to any registered
 	* <code>PropertyChangeListeners</code>.
 	*/
-	@:overload private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:protected private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Adds a <code>PropertyChangeListener</code> to the listener list.
@@ -128,7 +128,7 @@ extern class AbstractAction implements javax.swing.Action implements java.lang.C
 	*
 	* @see Action#addPropertyChangeListener
 	*/
-	@:overload @:synchronized public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a <code>PropertyChangeListener</code> from the listener list.
@@ -139,7 +139,7 @@ extern class AbstractAction implements javax.swing.Action implements java.lang.C
 	*
 	* @see Action#removePropertyChangeListener
 	*/
-	@:overload @:synchronized public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>PropertyChangeListener</code>s added
@@ -149,19 +149,19 @@ extern class AbstractAction implements javax.swing.Action implements java.lang.C
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	/**
 	* Clones the abstract action. This gives the clone
 	* its own copy of the key/value list,
 	* which is not handled for you by <code>Object.clone()</code>.
 	**/
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected private function clone() : Dynamic;
 	
 	/**
 	* Invoked when an action occurs.
 	*/
-	@:overload @:public @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public @:public @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }

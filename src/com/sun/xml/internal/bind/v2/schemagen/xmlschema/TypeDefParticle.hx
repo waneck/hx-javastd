@@ -25,11 +25,11 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface TypeDefParticle extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function all() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ExplicitGroup;
+	@:overload @:public public function all() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ExplicitGroup;
 	
-	@:overload public function sequence() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ExplicitGroup;
+	@:overload @:public public function sequence() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ExplicitGroup;
 	
-	@:overload public function choice() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ExplicitGroup;
+	@:overload @:public public function choice() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ExplicitGroup;
 	
 	
 }

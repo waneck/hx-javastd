@@ -31,7 +31,7 @@ extern class HTTPBindingImpl extends com.sun.xml.internal.ws.binding.BindingImpl
 	* Only logical handlers are allowed with HTTPBinding.
 	* Setting SOAPHandlers throws WebServiceException
 	*/
-	@:overload override public function setHandlerChain(chain : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
+	@:overload @:public override public function setHandlerChain(chain : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
 	
 	
 }

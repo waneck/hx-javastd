@@ -33,16 +33,16 @@ package com.sun.xml.internal.ws.client;
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	public var sei(default, null) : Class<Dynamic>;
+	@:public @:final public var sei(default, null) : Class<Dynamic>;
 	
 	/**
 	* Model of {@link #sei}.
 	*/
-	public var model(default, null) : com.sun.xml.internal.ws.model.SOAPSEIModel;
+	@:public @:final public var model(default, null) : com.sun.xml.internal.ws.model.SOAPSEIModel;
 	
-	@:overload public function new(owner : com.sun.xml.internal.ws.client.WSServiceDelegate, sei : Class<Dynamic>, model : com.sun.xml.internal.ws.model.SOAPSEIModel, portModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.ws.client.WSServiceDelegate, sei : Class<Dynamic>, model : com.sun.xml.internal.ws.model.SOAPSEIModel, portModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort) : Void;
 	
-	@:overload public function createBinding(webServiceFeatures : java.NativeArray<javax.xml.ws.WebServiceFeature>, portInterface : Class<Dynamic>) : com.sun.xml.internal.ws.binding.BindingImpl;
+	@:overload @:public public function createBinding(webServiceFeatures : java.NativeArray<javax.xml.ws.WebServiceFeature>, portInterface : Class<Dynamic>) : com.sun.xml.internal.ws.binding.BindingImpl;
 	
 	
 }

@@ -29,7 +29,7 @@ package com.sun.rowset.internal;
 */
 extern class WebRowSetXmlWriter implements javax.sql.rowset.spi.XmlWriter implements java.io.Serializable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Writes the given <code>WebRowSet</code> object as an XML document
@@ -53,7 +53,7 @@ extern class WebRowSetXmlWriter implements javax.sql.rowset.spi.XmlWriter implem
 	*            for the given rowset
 	* @see XmlWriter#writeXML
 	*/
-	@:overload public function writeXML(caller : javax.sql.rowset.WebRowSet, wrt : java.io.Writer) : Void;
+	@:overload @:public public function writeXML(caller : javax.sql.rowset.WebRowSet, wrt : java.io.Writer) : Void;
 	
 	/**
 	* Writes the given <code>WebRowSet</code> object as an XML document
@@ -79,12 +79,12 @@ extern class WebRowSetXmlWriter implements javax.sql.rowset.spi.XmlWriter implem
 	*            for the given rowset
 	* @see XmlWriter#writeXML
 	*/
-	@:overload public function writeXML(caller : javax.sql.rowset.WebRowSet, oStream : java.io.OutputStream) : Void;
+	@:overload @:public public function writeXML(caller : javax.sql.rowset.WebRowSet, oStream : java.io.OutputStream) : Void;
 	
 	/**
 	* Purely for code coverage purposes..
 	*/
-	@:overload public function writeData(caller : javax.sql.RowSetInternal) : Bool;
+	@:overload @:public public function writeData(caller : javax.sql.RowSetInternal) : Bool;
 	
 	
 }

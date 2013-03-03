@@ -36,7 +36,7 @@ package javax.management;
 	*
 	* @param e the wrapped error.
 	*/
-	@:overload public function new(e : java.lang.Error) : Void;
+	@:overload @:public public function new(e : java.lang.Error) : Void;
 	
 	/**
 	* Constructor that allows a specific error message to be specified.
@@ -44,21 +44,21 @@ package javax.management;
 	* @param e the wrapped error.
 	* @param message the detail message.
 	*/
-	@:overload public function new(e : java.lang.Error, message : String) : Void;
+	@:overload @:public public function new(e : java.lang.Error, message : String) : Void;
 	
 	/**
 	* Returns the actual {@link Error} thrown.
 	*
 	* @return the wrapped {@link Error}.
 	*/
-	@:overload public function getTargetError() : java.lang.Error;
+	@:overload @:public public function getTargetError() : java.lang.Error;
 	
 	/**
 	* Returns the actual {@link Error} thrown.
 	*
 	* @return the wrapped {@link Error}.
 	*/
-	@:overload public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

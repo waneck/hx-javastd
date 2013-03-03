@@ -28,21 +28,21 @@ extern class DOMUnsupportedException extends java.lang.Exception
 	/**
 	* Constructs a new DOMUnsupportedException with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new DOMUnsupportedException with the given detail message.
 	*
 	* @param msg Detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Constructs a new DOMUnsupportedException with the given exception as a root clause.
 	*
 	* @param e Exception.
 	*/
-	@:overload public function new(e : java.lang.Exception) : Void;
+	@:overload @:public public function new(e : java.lang.Exception) : Void;
 	
 	/**
 	* Constructs a new DOMUnsupportedException with the given exception as a root clause and the given detail message.
@@ -50,17 +50,17 @@ extern class DOMUnsupportedException extends java.lang.Exception
 	* @param e Exception.
 	* @param msg Detail message.
 	*/
-	@:overload public function new(e : java.lang.Exception, msg : String) : Void;
+	@:overload @:public public function new(e : java.lang.Exception, msg : String) : Void;
 	
 	/**
 	* Returns the detail message of the error or null if there is no detail message.
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	/**
 	* Returns the root cause of the error or null if there is none.
 	*/
-	@:overload public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

@@ -66,22 +66,22 @@ package sun.net;
 */
 extern class TelnetInputStream extends java.io.FilterInputStream
 {
-	public var binaryMode : Bool;
+	@:public public var binaryMode : Bool;
 	
-	@:overload public function new(fd : java.io.InputStream, binary : Bool) : Void;
+	@:overload @:public public function new(fd : java.io.InputStream, binary : Bool) : Void;
 	
-	@:overload public function setStickyCRLF(on : Bool) : Void;
+	@:overload @:public public function setStickyCRLF(on : Bool) : Void;
 	
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/** read into a byte array */
-	@:overload public function read(bytes : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public override public function read(bytes : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Read into a byte array at offset <i>off</i> for length <i>length</i>
 	* bytes.
 	*/
-	@:overload public function read(bytes : java.NativeArray<java.StdTypes.Int8>, off : Int, length : Int) : Int;
+	@:overload @:public override public function read(bytes : java.NativeArray<java.StdTypes.Int8>, off : Int, length : Int) : Int;
 	
 	
 }

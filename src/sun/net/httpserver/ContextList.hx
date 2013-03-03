@@ -25,13 +25,13 @@ package sun.net.httpserver;
 */
 @:internal extern class ContextList
 {
-	@:overload @:synchronized public function add(ctx : sun.net.httpserver.HttpContextImpl) : Void;
+	@:overload @:public @:synchronized public function add(ctx : sun.net.httpserver.HttpContextImpl) : Void;
 	
-	@:overload @:synchronized public function size() : Int;
+	@:overload @:public @:synchronized public function size() : Int;
 	
-	@:overload @:synchronized public function remove(protocol : String, path : String) : Void;
+	@:overload @:public @:synchronized public function remove(protocol : String, path : String) : Void;
 	
-	@:overload @:synchronized public function remove(context : sun.net.httpserver.HttpContextImpl) : Void;
+	@:overload @:public @:synchronized public function remove(context : sun.net.httpserver.HttpContextImpl) : Void;
 	
 	
 }

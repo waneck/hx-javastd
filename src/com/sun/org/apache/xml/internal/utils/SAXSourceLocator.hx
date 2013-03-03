@@ -27,7 +27,7 @@ extern class SAXSourceLocator extends org.xml.sax.helpers.LocatorImpl implements
 	* Constructor SAXSourceLocator
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor SAXSourceLocator
@@ -35,7 +35,7 @@ extern class SAXSourceLocator extends org.xml.sax.helpers.LocatorImpl implements
 	*
 	* @param locator Source locator
 	*/
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Constructor SAXSourceLocator
@@ -43,7 +43,7 @@ extern class SAXSourceLocator extends org.xml.sax.helpers.LocatorImpl implements
 	*
 	* @param locator Source locator
 	*/
-	@:overload public function new(locator : javax.xml.transform.SourceLocator) : Void;
+	@:overload @:public public function new(locator : javax.xml.transform.SourceLocator) : Void;
 	
 	/**
 	* Constructor SAXSourceLocator
@@ -51,7 +51,7 @@ extern class SAXSourceLocator extends org.xml.sax.helpers.LocatorImpl implements
 	*
 	* @param spe SAXParseException exception.
 	*/
-	@:overload public function new(spe : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function new(spe : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Return the public identifier for the current document event.
@@ -64,7 +64,7 @@ extern class SAXSourceLocator extends org.xml.sax.helpers.LocatorImpl implements
 	*         null if none is available.
 	* @see #getSystemId
 	*/
-	@:overload override public function getPublicId() : String;
+	@:overload @:public override public function getPublicId() : String;
 	
 	/**
 	* Return the system identifier for the current document event.
@@ -80,7 +80,7 @@ extern class SAXSourceLocator extends org.xml.sax.helpers.LocatorImpl implements
 	*         if none is available.
 	* @see #getPublicId
 	*/
-	@:overload override public function getSystemId() : String;
+	@:overload @:public override public function getSystemId() : String;
 	
 	/**
 	* Return the line number where the current document event ends.
@@ -97,7 +97,7 @@ extern class SAXSourceLocator extends org.xml.sax.helpers.LocatorImpl implements
 	* @return The line number, or -1 if none is available.
 	* @see #getColumnNumber
 	*/
-	@:overload override public function getLineNumber() : Int;
+	@:overload @:public override public function getLineNumber() : Int;
 	
 	/**
 	* Return the column number where the current document event ends.
@@ -114,7 +114,7 @@ extern class SAXSourceLocator extends org.xml.sax.helpers.LocatorImpl implements
 	* @return The column number, or -1 if none is available.
 	* @see #getLineNumber
 	*/
-	@:overload override public function getColumnNumber() : Int;
+	@:overload @:public override public function getColumnNumber() : Int;
 	
 	
 }

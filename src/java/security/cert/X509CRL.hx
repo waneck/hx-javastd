@@ -28,7 +28,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	/**
 	* Constructor for X.509 CRLs.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Compares this CRL for equality with the given
@@ -42,7 +42,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	* @return true iff the encoded forms of the two CRLs
 	* match, false otherwise.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode value for this CRL from its
@@ -50,7 +50,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	*
 	* @return the hashcode value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the ASN.1 DER-encoded form of this CRL.
@@ -58,7 +58,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	* @return the encoded form of this certificate
 	* @exception CRLException if an encoding error occurs.
 	*/
-	@:overload @:abstract public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Verifies that this CRL was signed using the
@@ -73,7 +73,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	* @exception SignatureException on signature errors.
 	* @exception CRLException on encoding errors.
 	*/
-	@:overload @:abstract public function verify(key : java.security.PublicKey) : Void;
+	@:overload @:public @:abstract public function verify(key : java.security.PublicKey) : Void;
 	
 	/**
 	* Verifies that this CRL was signed using the
@@ -91,7 +91,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	* @exception SignatureException on signature errors.
 	* @exception CRLException on encoding errors.
 	*/
-	@:overload @:abstract public function verify(key : java.security.PublicKey, sigProvider : String) : Void;
+	@:overload @:public @:abstract public function verify(key : java.security.PublicKey, sigProvider : String) : Void;
 	
 	/**
 	* Gets the <code>version</code> (version number) value from the CRL.
@@ -106,7 +106,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	*
 	* @return the version number, i.e. 1 or 2.
 	*/
-	@:overload @:abstract public function getVersion() : Int;
+	@:overload @:public @:abstract public function getVersion() : Int;
 	
 	/**
 	* <strong>Denigrated</strong>, replaced by {@linkplain
@@ -147,7 +147,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	*
 	* @return a Principal whose name is the issuer distinguished name.
 	*/
-	@:overload @:abstract public function getIssuerDN() : java.security.Principal;
+	@:overload @:public @:abstract public function getIssuerDN() : java.security.Principal;
 	
 	/**
 	* Returns the issuer (issuer distinguished name) value from the
@@ -159,7 +159,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	*          distinguished name
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getIssuerX500Principal() : javax.security.auth.x500.X500Principal;
+	@:require(java4) @:overload @:public public function getIssuerX500Principal() : javax.security.auth.x500.X500Principal;
 	
 	/**
 	* Gets the <code>thisUpdate</code> date from the CRL.
@@ -173,7 +173,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	*
 	* @return the <code>thisUpdate</code> date from the CRL.
 	*/
-	@:overload @:abstract public function getThisUpdate() : java.util.Date;
+	@:overload @:public @:abstract public function getThisUpdate() : java.util.Date;
 	
 	/**
 	* Gets the <code>nextUpdate</code> date from the CRL.
@@ -181,7 +181,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	* @return the <code>nextUpdate</code> date from the CRL, or null if
 	* not present.
 	*/
-	@:overload @:abstract public function getNextUpdate() : java.util.Date;
+	@:overload @:public @:abstract public function getNextUpdate() : java.util.Date;
 	
 	/**
 	* Gets the CRL entry, if any, with the given certificate serialNumber.
@@ -192,7 +192,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	* exists in this CRL.
 	* @see X509CRLEntry
 	*/
-	@:overload @:abstract public function getRevokedCertificate(serialNumber : java.math.BigInteger) : java.security.cert.X509CRLEntry;
+	@:overload @:public @:abstract public function getRevokedCertificate(serialNumber : java.math.BigInteger) : java.security.cert.X509CRLEntry;
 	
 	/**
 	* Get the CRL entry, if any, for the given certificate.
@@ -211,7 +211,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getRevokedCertificate(certificate : java.security.cert.X509Certificate) : java.security.cert.X509CRLEntry;
+	@:require(java5) @:overload @:public public function getRevokedCertificate(certificate : java.security.cert.X509Certificate) : java.security.cert.X509CRLEntry;
 	
 	/**
 	* Gets all the entries from this CRL.
@@ -220,7 +220,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	* @return all the entries or null if there are none present.
 	* @see X509CRLEntry
 	*/
-	@:overload @:abstract public function getRevokedCertificates() : java.util.Set<java.security.cert.X509CRLEntry>;
+	@:overload @:public @:abstract public function getRevokedCertificates() : java.util.Set<java.security.cert.X509CRLEntry>;
 	
 	/**
 	* Gets the DER-encoded CRL information, the
@@ -230,7 +230,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	* @return the DER-encoded CRL information.
 	* @exception CRLException if an encoding error occurs.
 	*/
-	@:overload @:abstract public function getTBSCertList() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getTBSCertList() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the <code>signature</code> value (the raw signature bits) from
@@ -242,7 +242,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	*
 	* @return the signature.
 	*/
-	@:overload @:abstract public function getSignature() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getSignature() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the signature algorithm name for the CRL
@@ -263,7 +263,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	*
 	* @return the signature algorithm name.
 	*/
-	@:overload @:abstract public function getSigAlgName() : String;
+	@:overload @:public @:abstract public function getSigAlgName() : String;
 	
 	/**
 	* Gets the signature algorithm OID string from the CRL.
@@ -280,7 +280,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	*
 	* @return the signature algorithm OID string.
 	*/
-	@:overload @:abstract public function getSigAlgOID() : String;
+	@:overload @:public @:abstract public function getSigAlgOID() : String;
 	
 	/**
 	* Gets the DER-encoded signature algorithm parameters from this
@@ -298,7 +298,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	* @return the DER-encoded signature algorithm parameters, or
 	*         null if no parameters are present.
 	*/
-	@:overload @:abstract public function getSigAlgParams() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getSigAlgParams() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets a Set of the OID strings for the extension(s) marked
@@ -342,7 +342,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	* If there are no extensions present at all, then this method returns
 	* null.
 	*/
-	@:overload public function getNonCriticalExtensionOIDs() : java.util.Set<String>;
+	@:overload @:public @:public @:public @:public public function getNonCriticalExtensionOIDs() : java.util.Set<String>;
 	
 	/**
 	* Gets a Set of the OID strings for the extension(s) marked
@@ -377,7 +377,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	* If there are no extensions present at all, then this method returns
 	* null.
 	*/
-	@:overload public function getCriticalExtensionOIDs() : java.util.Set<String>;
+	@:overload @:public @:public @:public @:public public function getCriticalExtensionOIDs() : java.util.Set<String>;
 	
 	/**
 	* Gets the DER-encoded OCTET string for the extension value
@@ -418,7 +418,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	* @return the DER-encoded octet string of the extension value or
 	* null if it is not present.
 	*/
-	@:overload public function getExtensionValue(oid : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:public @:public @:public public function getExtensionValue(oid : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Check if there is a critical extension that is not supported.
@@ -426,7 +426,7 @@ extern class X509CRL extends java.security.cert.CRL implements java.security.cer
 	* @return <tt>true</tt> if a critical extension is found that is
 	* not supported, otherwise <tt>false</tt>.
 	*/
-	@:overload public function hasUnsupportedCriticalExtension() : Bool;
+	@:overload @:public @:public @:public @:public public function hasUnsupportedCriticalExtension() : Bool;
 	
 	
 }

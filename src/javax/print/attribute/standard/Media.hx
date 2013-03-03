@@ -30,7 +30,7 @@ extern class Media extends javax.print.attribute.EnumSyntax implements javax.pri
 	*
 	* @param value         a value
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns whether this media attribute is equivalent to the passed in
@@ -49,7 +49,7 @@ extern class Media extends javax.print.attribute.EnumSyntax implements javax.pri
 	* @return  True if <CODE>object</CODE> is equivalent to this media
 	*          attribute, false otherwise.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -61,7 +61,7 @@ extern class Media extends javax.print.attribute.EnumSyntax implements javax.pri
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -72,7 +72,7 @@ extern class Media extends javax.print.attribute.EnumSyntax implements javax.pri
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

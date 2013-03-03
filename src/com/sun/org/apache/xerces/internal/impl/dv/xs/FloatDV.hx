@@ -30,29 +30,29 @@ extern class FloatDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.TypeV
 	*
 	* @version $Id: FloatDV.java,v 1.7 2010-11-01 04:39:47 joehw Exp $
 	*/
-	@:overload override public function getAllowedFacets() : java.StdTypes.Int16;
+	@:overload @:public override public function getAllowedFacets() : java.StdTypes.Int16;
 	
-	@:overload override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
+	@:overload @:public override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
 	
-	@:overload override public function compare(value1 : Dynamic, value2 : Dynamic) : Int;
+	@:overload @:public override public function compare(value1 : Dynamic, value2 : Dynamic) : Int;
 	
-	@:overload override public function isIdentical(value1 : Dynamic, value2 : Dynamic) : Bool;
+	@:overload @:public override public function isIdentical(value1 : Dynamic, value2 : Dynamic) : Bool;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$impl$dv$xs$FloatDV$XFloat') @:internal extern class FloatDV_XFloat implements com.sun.org.apache.xerces.internal.xs.datatypes.XSFloat
 {
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
-	@:overload public function equals(val : Dynamic) : Bool;
+	@:overload @:public public function equals(val : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function isIdentical(val : com.sun.org.apache.xerces.internal.impl.dv.xs.FloatDV.FloatDV_XFloat) : Bool;
+	@:overload @:public public function isIdentical(val : com.sun.org.apache.xerces.internal.impl.dv.xs.FloatDV.FloatDV_XFloat) : Bool;
 	
-	@:overload @:synchronized public function toString() : String;
+	@:overload @:public @:synchronized public function toString() : String;
 	
-	@:overload public function getValue() : Single;
+	@:overload @:public public function getValue() : Single;
 	
 	
 }

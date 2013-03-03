@@ -31,39 +31,39 @@ package com.sun.java.util.jar.pack;
 //// This tactic alone reduces the final zipped rt.jar by about a percent.
 @:internal extern class PopulationCoding implements com.sun.java.util.jar.pack.CodingMethod
 {
-	@:overload public function setFavoredValues(fValues : java.NativeArray<Int>, fVlen : Int) : Void;
+	@:overload @:public public function setFavoredValues(fValues : java.NativeArray<Int>, fVlen : Int) : Void;
 	
-	@:overload public function setFavoredValues(fValues : java.NativeArray<Int>) : Void;
+	@:overload @:public public function setFavoredValues(fValues : java.NativeArray<Int>) : Void;
 	
-	@:overload public function setHistogram(vHist : com.sun.java.util.jar.pack.Histogram) : Void;
+	@:overload @:public public function setHistogram(vHist : com.sun.java.util.jar.pack.Histogram) : Void;
 	
-	@:overload public function setL(L : Int) : Void;
+	@:overload @:public public function setL(L : Int) : Void;
 	
-	@:overload public static function fitTokenCoding(fVlen : Int, L : Int) : com.sun.java.util.jar.pack.Coding;
+	@:overload @:public @:static public static function fitTokenCoding(fVlen : Int, L : Int) : com.sun.java.util.jar.pack.Coding;
 	
-	@:overload public function setFavoredCoding(favoredCoding : com.sun.java.util.jar.pack.CodingMethod) : Void;
+	@:overload @:public public function setFavoredCoding(favoredCoding : com.sun.java.util.jar.pack.CodingMethod) : Void;
 	
-	@:overload public function setTokenCoding(tokenCoding : com.sun.java.util.jar.pack.CodingMethod) : Void;
+	@:overload @:public public function setTokenCoding(tokenCoding : com.sun.java.util.jar.pack.CodingMethod) : Void;
 	
-	@:overload public function setUnfavoredCoding(unfavoredCoding : com.sun.java.util.jar.pack.CodingMethod) : Void;
+	@:overload @:public public function setUnfavoredCoding(unfavoredCoding : com.sun.java.util.jar.pack.CodingMethod) : Void;
 	
-	@:overload public function favoredValueMaxLength() : Int;
+	@:overload @:public public function favoredValueMaxLength() : Int;
 	
-	@:overload public function resortFavoredValues() : Void;
+	@:overload @:public public function resortFavoredValues() : Void;
 	
-	@:overload public function getToken(value : Int) : Int;
+	@:overload @:public public function getToken(value : Int) : Int;
 	
-	@:overload public function encodeValues(values : java.NativeArray<Int>, start : Int, end : Int) : java.NativeArray<java.NativeArray<Int>>;
+	@:overload @:public public function encodeValues(values : java.NativeArray<Int>, start : Int, end : Int) : java.NativeArray<java.NativeArray<Int>>;
 	
-	@:overload public function writeArrayTo(out : java.io.OutputStream, a : java.NativeArray<Int>, start : Int, end : Int) : Void;
+	@:overload @:public public function writeArrayTo(out : java.io.OutputStream, a : java.NativeArray<Int>, start : Int, end : Int) : Void;
 	
-	@:overload public function readArrayFrom(_in : java.io.InputStream, a : java.NativeArray<Int>, start : Int, end : Int) : Void;
+	@:overload @:public public function readArrayFrom(_in : java.io.InputStream, a : java.NativeArray<Int>, start : Int, end : Int) : Void;
 	
-	@:overload public function getMetaCoding(dflt : com.sun.java.util.jar.pack.Coding) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getMetaCoding(dflt : com.sun.java.util.jar.pack.Coding) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function parseMetaCoding(bytes : java.NativeArray<java.StdTypes.Int8>, pos : Int, dflt : com.sun.java.util.jar.pack.Coding, res : java.NativeArray<com.sun.java.util.jar.pack.CodingMethod>) : Int;
+	@:overload @:public @:static public static function parseMetaCoding(bytes : java.NativeArray<java.StdTypes.Int8>, pos : Int, dflt : com.sun.java.util.jar.pack.Coding, res : java.NativeArray<com.sun.java.util.jar.pack.CodingMethod>) : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

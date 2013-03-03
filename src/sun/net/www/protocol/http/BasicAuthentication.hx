@@ -28,27 +28,27 @@ package sun.net.www.protocol.http;
 	/**
 	* Create a BasicAuthentication
 	*/
-	@:overload public function new(isProxy : Bool, host : String, port : Int, realm : String, pw : java.net.PasswordAuthentication) : Void;
+	@:overload @:public public function new(isProxy : Bool, host : String, port : Int, realm : String, pw : java.net.PasswordAuthentication) : Void;
 	
 	/**
 	* Create a BasicAuthentication
 	*/
-	@:overload public function new(isProxy : Bool, host : String, port : Int, realm : String, auth : String) : Void;
+	@:overload @:public public function new(isProxy : Bool, host : String, port : Int, realm : String, auth : String) : Void;
 	
 	/**
 	* Create a BasicAuthentication
 	*/
-	@:overload public function new(isProxy : Bool, url : java.net.URL, realm : String, pw : java.net.PasswordAuthentication) : Void;
+	@:overload @:public public function new(isProxy : Bool, url : java.net.URL, realm : String, pw : java.net.PasswordAuthentication) : Void;
 	
 	/**
 	* Create a BasicAuthentication
 	*/
-	@:overload public function new(isProxy : Bool, url : java.net.URL, realm : String, auth : String) : Void;
+	@:overload @:public public function new(isProxy : Bool, url : java.net.URL, realm : String, auth : String) : Void;
 	
 	/**
 	* @return true if this authentication supports preemptive authorization
 	*/
-	@:overload override public function supportsPreemptiveAuthorization() : Bool;
+	@:overload @:public override public function supportsPreemptiveAuthorization() : Bool;
 	
 	/**
 	* Set header(s) on the given connection. This will only be called for
@@ -58,26 +58,26 @@ package sun.net.www.protocol.http;
 	* @param raw The raw header values for this connection, if needed.
 	* @return true if all goes well, false if no headers were set.
 	*/
-	@:overload override public function setHeaders(conn : sun.net.www.protocol.http.HttpURLConnection, p : sun.net.www.HeaderParser, raw : String) : Bool;
+	@:overload @:public override public function setHeaders(conn : sun.net.www.protocol.http.HttpURLConnection, p : sun.net.www.HeaderParser, raw : String) : Bool;
 	
 	/**
 	* @return the value of the HTTP header this authentication wants set
 	*/
-	@:overload override public function getHeaderValue(url : java.net.URL, method : String) : String;
+	@:overload @:public override public function getHeaderValue(url : java.net.URL, method : String) : String;
 	
 	/**
 	* For Basic Authentication, the security parameters can never be stale.
 	* In other words there is no possibility to reuse the credentials.
 	* They are always either valid or invalid.
 	*/
-	@:overload override public function isAuthorizationStale(header : String) : Bool;
+	@:overload @:public override public function isAuthorizationStale(header : String) : Bool;
 	
 	
 }
 /* It is never expected that the header value will exceed the bytesPerLine */
 @:native('sun$net$www$protocol$http$BasicAuthentication$BasicBASE64Encoder') @:internal extern class BasicAuthentication_BasicBASE64Encoder extends sun.misc.BASE64Encoder
 {
-	@:overload override private function bytesPerLine() : Int;
+	@:overload @:protected override private function bytesPerLine() : Int;
 	
 	
 }

@@ -27,39 +27,39 @@ package javax.swing.text.rtf;
 {
 	/* This AttributeSet is made entirely out of tofu and Ritz Crackers
 	and yet has a remarkably attribute-set-like interface! */
-	public var backing : java.util.Dictionary<Dynamic, Dynamic>;
+	@:public public var backing : java.util.Dictionary<Dynamic, Dynamic>;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function getAttributeCount() : Int;
+	@:overload @:public public function getAttributeCount() : Int;
 	
-	@:overload public function isDefined(name : Dynamic) : Bool;
+	@:overload @:public public function isDefined(name : Dynamic) : Bool;
 	
-	@:overload public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:public public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
 	
-	@:overload public function copyAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public public function copyAttributes() : javax.swing.text.AttributeSet;
 	
-	@:overload public function getAttribute(name : Dynamic) : Dynamic;
+	@:overload @:public public function getAttribute(name : Dynamic) : Dynamic;
 	
-	@:overload public function addAttribute(name : Dynamic, value : Dynamic) : Void;
+	@:overload @:public public function addAttribute(name : Dynamic, value : Dynamic) : Void;
 	
-	@:overload public function addAttributes(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function addAttributes(attr : javax.swing.text.AttributeSet) : Void;
 	
-	@:overload public function removeAttribute(name : Dynamic) : Void;
+	@:overload @:public public function removeAttribute(name : Dynamic) : Void;
 	
-	@:overload public function removeAttributes(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function removeAttributes(attr : javax.swing.text.AttributeSet) : Void;
 	
-	@:overload public function removeAttributes(en : java.util.Enumeration<Dynamic>) : Void;
+	@:overload @:public public function removeAttributes(en : java.util.Enumeration<Dynamic>) : Void;
 	
-	@:overload public function setResolveParent(pp : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function setResolveParent(pp : javax.swing.text.AttributeSet) : Void;
 	
-	@:overload public function getAttributeNames() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getAttributeNames() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function containsAttribute(name : Dynamic, value : Dynamic) : Bool;
+	@:overload @:public public function containsAttribute(name : Dynamic, value : Dynamic) : Bool;
 	
-	@:overload public function containsAttributes(attr : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:public public function containsAttributes(attr : javax.swing.text.AttributeSet) : Bool;
 	
-	@:overload public function getResolveParent() : javax.swing.text.AttributeSet;
+	@:overload @:public public function getResolveParent() : javax.swing.text.AttributeSet;
 	
 	
 }

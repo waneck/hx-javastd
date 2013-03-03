@@ -49,28 +49,28 @@ and Save Specification</a>.
 	*
 	* @author Gopal Sharma, SUN Microsystems Inc.
 	*/
-	private var fPublicId : String;
+	@:protected private var fPublicId : String;
 	
-	private var fSystemId : String;
+	@:protected private var fSystemId : String;
 	
-	private var fBaseSystemId : String;
+	@:protected private var fBaseSystemId : String;
 	
-	private var fByteStream : java.io.InputStream;
+	@:protected private var fByteStream : java.io.InputStream;
 	
-	private var fCharStream : java.io.Reader;
+	@:protected private var fCharStream : java.io.Reader;
 	
-	private var fData : String;
+	@:protected private var fData : String;
 	
-	private var fEncoding : String;
+	@:protected private var fEncoding : String;
 	
-	private var fCertifiedText : Bool;
+	@:protected private var fCertifiedText : Bool;
 	
 	/**
 	* Default Constructor, constructs an input source
 	*
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an input source from just the public and system
@@ -87,7 +87,7 @@ and Save Specification</a>.
 	*                     always be set to the fully expanded URI of the
 	*                     base system identifier, if possible.
 	*/
-	@:overload public function new(publicId : String, systemId : String, baseSystemId : String) : Void;
+	@:overload @:public public function new(publicId : String, systemId : String, baseSystemId : String) : Void;
 	
 	/**
 	* Constructs an input source from a byte stream.
@@ -104,7 +104,7 @@ and Save Specification</a>.
 	* @param byteStream   The byte stream.
 	* @param encoding     The encoding of the byte stream, if known.
 	*/
-	@:overload public function new(publicId : String, systemId : String, baseSystemId : String, byteStream : java.io.InputStream, encoding : String) : Void;
+	@:overload @:public public function new(publicId : String, systemId : String, baseSystemId : String, byteStream : java.io.InputStream, encoding : String) : Void;
 	
 	/**
 	* Constructs an input source from a character stream.
@@ -122,7 +122,7 @@ and Save Specification</a>.
 	* @param encoding     The original encoding of the byte stream
 	*                     used by the reader, if known.
 	*/
-	@:overload public function new(publicId : String, systemId : String, baseSystemId : String, charStream : java.io.Reader, encoding : String) : Void;
+	@:overload @:public public function new(publicId : String, systemId : String, baseSystemId : String, charStream : java.io.Reader, encoding : String) : Void;
 	
 	/**
 	* Constructs an input source from a String.
@@ -140,7 +140,7 @@ and Save Specification</a>.
 	* @param encoding     The original encoding of the byte stream
 	*                     used by the reader, if known.
 	*/
-	@:overload public function new(publicId : String, systemId : String, baseSystemId : String, data : String, encoding : String) : Void;
+	@:overload @:public public function new(publicId : String, systemId : String, baseSystemId : String, data : String, encoding : String) : Void;
 	
 	/**
 	* An attribute of a language-binding dependent type that represents a
@@ -152,7 +152,7 @@ and Save Specification</a>.
 	* it should set the encoding property. Setting the encoding in this way
 	* will override any encoding specified in the XML declaration itself.
 	*/
-	@:overload public function getByteStream() : java.io.InputStream;
+	@:overload @:public public function getByteStream() : java.io.InputStream;
 	
 	/**
 	* An attribute of a language-binding dependent type that represents a
@@ -164,7 +164,7 @@ and Save Specification</a>.
 	* it should set the encoding property. Setting the encoding in this way
 	* will override any encoding specified in the XML declaration itself.
 	*/
-	@:overload public function setByteStream(byteStream : java.io.InputStream) : Void;
+	@:overload @:public public function setByteStream(byteStream : java.io.InputStream) : Void;
 	
 	/**
 	*  An attribute of a language-binding dependent type that represents a
@@ -174,7 +174,7 @@ and Save Specification</a>.
 	* stream and will not attempt to open a URI connection to the system
 	* identifier.
 	*/
-	@:overload public function getCharacterStream() : java.io.Reader;
+	@:overload @:public public function getCharacterStream() : java.io.Reader;
 	
 	/**
 	*  An attribute of a language-binding dependent type that represents a
@@ -184,7 +184,7 @@ and Save Specification</a>.
 	* stream and will not attempt to open a URI connection to the system
 	* identifier.
 	*/
-	@:overload public function setCharacterStream(characterStream : java.io.Reader) : Void;
+	@:overload @:public public function setCharacterStream(characterStream : java.io.Reader) : Void;
 	
 	/**
 	* A string attribute that represents a sequence of 16 bit units (utf-16
@@ -193,7 +193,7 @@ and Save Specification</a>.
 	* ignore the character stream and the byte stream and will not attempt
 	* to open a URI connection to the system identifier.
 	*/
-	@:overload public function getStringData() : String;
+	@:overload @:public public function getStringData() : String;
 	
 	/**
 	* A string attribute that represents a sequence of 16 bit units (utf-16
@@ -202,7 +202,7 @@ and Save Specification</a>.
 	* ignore the character stream and the byte stream and will not attempt
 	* to open a URI connection to the system identifier.
 	*/
-	@:overload public function setStringData(stringData : String) : Void;
+	@:overload @:public public function setStringData(stringData : String) : Void;
 	
 	/**
 	*  The character encoding, if known. The encoding must be a string
@@ -214,7 +214,7 @@ and Save Specification</a>.
 	* the XML claration or the Text Declaration, or an encoding obtained
 	* from a higher level protocol, such as HTTP .
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	*  The character encoding, if known. The encoding must be a string
@@ -226,21 +226,21 @@ and Save Specification</a>.
 	* the XML claration or the Text Declaration, or an encoding obtained
 	* from a higher level protocol, such as HTTP .
 	*/
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
 	/**
 	* The public identifier for this input source. The public identifier is
 	* always optional: if the application writer includes one, it will be
 	* provided as part of the location information.
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* The public identifier for this input source. The public identifier is
 	* always optional: if the application writer includes one, it will be
 	* provided as part of the location information.
 	*/
-	@:overload public function setPublicId(publicId : String) : Void;
+	@:overload @:public public function setPublicId(publicId : String) : Void;
 	
 	/**
 	* The system identifier, a URI reference , for this input source. The
@@ -256,7 +256,7 @@ and Save Specification</a>.
 	* <br>If the system ID is a relative URI reference (see section 5 in ),
 	* the behavior is implementation dependent.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* The system identifier, a URI reference , for this input source. The
@@ -272,35 +272,35 @@ and Save Specification</a>.
 	* <br>If the system ID is a relative URI reference (see section 5 in ),
 	* the behavior is implementation dependent.
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	/**
 	*  The base URI to be used (see section 5.1.4 in ) for resolving relative
 	* URIs to absolute URIs. If the baseURI is itself a relative URI, the
 	* behavior is implementation dependent.
 	*/
-	@:overload public function getBaseURI() : String;
+	@:overload @:public public function getBaseURI() : String;
 	
 	/**
 	*  The base URI to be used (see section 5.1.4 in ) for resolving relative
 	* URIs to absolute URIs. If the baseURI is itself a relative URI, the
 	* behavior is implementation dependent.
 	*/
-	@:overload public function setBaseURI(baseURI : String) : Void;
+	@:overload @:public public function setBaseURI(baseURI : String) : Void;
 	
 	/**
 	*  If set to true, assume that the input is certified (see section 2.13
 	* in [<a href='http://www.w3.org/TR/2002/CR-xml11-20021015/'>XML 1.1</a>]) when
 	* parsing [<a href='http://www.w3.org/TR/2002/CR-xml11-20021015/'>XML 1.1</a>].
 	*/
-	@:overload public function getCertifiedText() : Bool;
+	@:overload @:public public function getCertifiedText() : Bool;
 	
 	/**
 	*  If set to true, assume that the input is certified (see section 2.13
 	* in [<a href='http://www.w3.org/TR/2002/CR-xml11-20021015/'>XML 1.1</a>]) when
 	* parsing [<a href='http://www.w3.org/TR/2002/CR-xml11-20021015/'>XML 1.1</a>].
 	*/
-	@:overload public function setCertifiedText(certifiedText : Bool) : Void;
+	@:overload @:public public function setCertifiedText(certifiedText : Bool) : Void;
 	
 	
 }

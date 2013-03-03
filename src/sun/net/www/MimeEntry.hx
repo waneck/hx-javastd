@@ -25,48 +25,48 @@ package sun.net.www;
 */
 extern class MimeEntry implements java.lang.Cloneable
 {
-	public static var UNKNOWN(default, null) : Int;
+	@:public @:static @:final public static var UNKNOWN(default, null) : Int;
 	
-	public static var LOAD_INTO_BROWSER(default, null) : Int;
+	@:public @:static @:final public static var LOAD_INTO_BROWSER(default, null) : Int;
 	
-	public static var SAVE_TO_FILE(default, null) : Int;
+	@:public @:static @:final public static var SAVE_TO_FILE(default, null) : Int;
 	
-	public static var LAUNCH_APPLICATION(default, null) : Int;
+	@:public @:static @:final public static var LAUNCH_APPLICATION(default, null) : Int;
 	
 	/**
 	* Construct an empty entry of the given type and subtype.
 	*/
-	@:overload public function new(type : String) : Void;
+	@:overload @:public public function new(type : String) : Void;
 	
-	@:overload @:synchronized public function getType() : String;
+	@:overload @:public @:synchronized public function getType() : String;
 	
-	@:overload @:synchronized public function setType(type : String) : Void;
+	@:overload @:public @:synchronized public function setType(type : String) : Void;
 	
-	@:overload @:synchronized public function getAction() : Int;
+	@:overload @:public @:synchronized public function getAction() : Int;
 	
-	@:overload @:synchronized public function setAction(action : Int, command : String) : Void;
+	@:overload @:public @:synchronized public function setAction(action : Int, command : String) : Void;
 	
-	@:overload @:synchronized public function setAction(action : Int) : Void;
+	@:overload @:public @:synchronized public function setAction(action : Int) : Void;
 	
-	@:overload @:synchronized public function getLaunchString() : String;
+	@:overload @:public @:synchronized public function getLaunchString() : String;
 	
-	@:overload @:synchronized public function setCommand(command : String) : Void;
+	@:overload @:public @:synchronized public function setCommand(command : String) : Void;
 	
-	@:overload @:synchronized public function getDescription() : String;
+	@:overload @:public @:synchronized public function getDescription() : String;
 	
-	@:overload @:synchronized public function setDescription(description : String) : Void;
+	@:overload @:public @:synchronized public function setDescription(description : String) : Void;
 	
-	@:overload public function getImageFileName() : String;
+	@:overload @:public public function getImageFileName() : String;
 	
-	@:overload @:synchronized public function setImageFileName(filename : String) : Void;
+	@:overload @:public @:synchronized public function setImageFileName(filename : String) : Void;
 	
-	@:overload public function getTempFileTemplate() : String;
+	@:overload @:public public function getTempFileTemplate() : String;
 	
-	@:overload @:synchronized public function getExtensions() : java.NativeArray<String>;
+	@:overload @:public @:synchronized public function getExtensions() : java.NativeArray<String>;
 	
-	@:overload @:synchronized public function getExtensionsAsList() : String;
+	@:overload @:public @:synchronized public function getExtensionsAsList() : String;
 	
-	@:overload @:synchronized public function setExtensions(extensionString : String) : Void;
+	@:overload @:public @:synchronized public function setExtensions(extensionString : String) : Void;
 	
 	/**
 	* Invoke the MIME type specific behavior for this MIME type.
@@ -79,15 +79,15 @@ extern class MimeEntry implements java.lang.Cloneable
 	* <li>A document (?) --
 	* </ol>
 	*/
-	@:overload public function launch(urlc : java.net.URLConnection, is : java.io.InputStream, mt : sun.net.www.MimeTable) : Dynamic;
+	@:overload @:public public function launch(urlc : java.net.URLConnection, is : java.io.InputStream, mt : sun.net.www.MimeTable) : Dynamic;
 	
-	@:overload public function matches(type : String) : Bool;
+	@:overload @:public public function matches(type : String) : Bool;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload @:synchronized public function toProperty() : String;
+	@:overload @:public @:synchronized public function toProperty() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -41,7 +41,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	*
 	* @return an Output object representing the documentation that was found.
 	*/
-	@:overload public static function search(input : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Input) : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Output;
+	@:overload @:public @:static public static function search(input : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Input) : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Output;
 	
 	
 }
@@ -53,56 +53,56 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	/**
 	* The method to search documentation from.
 	*/
-	public var method : com.sun.javadoc.MethodDoc;
+	@:public public var method : com.sun.javadoc.MethodDoc;
 	
 	/**
 	* The taglet to search for documentation on behalf of. Null if we want
 	* to search for overall documentation.
 	*/
-	public var taglet : com.sun.tools.doclets.internal.toolkit.taglets.InheritableTaglet;
+	@:public public var taglet : com.sun.tools.doclets.internal.toolkit.taglets.InheritableTaglet;
 	
 	/**
 	* The id of the tag to retrieve documentation for.
 	*/
-	public var tagId : String;
+	@:public public var tagId : String;
 	
 	/**
 	* The tag to retrieve documentation for.  This is only used for the
 	* inheritDoc tag.
 	*/
-	public var tag : com.sun.javadoc.Tag;
+	@:public public var tag : com.sun.javadoc.Tag;
 	
 	/**
 	* True if we only want to search for the first sentence.
 	*/
-	public var isFirstSentence : Bool;
+	@:public public var isFirstSentence : Bool;
 	
 	/**
 	* True if we are looking for documentation to replace the inheritDocTag.
 	*/
-	public var isInheritDocTag : Bool;
+	@:public public var isInheritDocTag : Bool;
 	
 	/**
 	* Used to distinguish between type variable param tags and regular
 	* param tags.
 	*/
-	public var isTypeVariableParamTag : Bool;
+	@:public public var isTypeVariableParamTag : Bool;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(method : com.sun.javadoc.MethodDoc, taglet : com.sun.tools.doclets.internal.toolkit.taglets.InheritableTaglet, tag : com.sun.javadoc.Tag, isFirstSentence : Bool, isInheritDocTag : Bool) : Void;
+	@:overload @:public public function new(method : com.sun.javadoc.MethodDoc, taglet : com.sun.tools.doclets.internal.toolkit.taglets.InheritableTaglet, tag : com.sun.javadoc.Tag, isFirstSentence : Bool, isInheritDocTag : Bool) : Void;
 	
-	@:overload public function new(method : com.sun.javadoc.MethodDoc, taglet : com.sun.tools.doclets.internal.toolkit.taglets.InheritableTaglet, tagId : String) : Void;
+	@:overload @:public public function new(method : com.sun.javadoc.MethodDoc, taglet : com.sun.tools.doclets.internal.toolkit.taglets.InheritableTaglet, tagId : String) : Void;
 	
-	@:overload public function new(method : com.sun.javadoc.MethodDoc, taglet : com.sun.tools.doclets.internal.toolkit.taglets.InheritableTaglet, tagId : String, isTypeVariableParamTag : Bool) : Void;
+	@:overload @:public public function new(method : com.sun.javadoc.MethodDoc, taglet : com.sun.tools.doclets.internal.toolkit.taglets.InheritableTaglet, tagId : String, isTypeVariableParamTag : Bool) : Void;
 	
-	@:overload public function new(method : com.sun.javadoc.MethodDoc, taglet : com.sun.tools.doclets.internal.toolkit.taglets.InheritableTaglet) : Void;
+	@:overload @:public public function new(method : com.sun.javadoc.MethodDoc, taglet : com.sun.tools.doclets.internal.toolkit.taglets.InheritableTaglet) : Void;
 	
-	@:overload public function new(method : com.sun.javadoc.MethodDoc) : Void;
+	@:overload @:public public function new(method : com.sun.javadoc.MethodDoc) : Void;
 	
-	@:overload public function new(method : com.sun.javadoc.MethodDoc, isFirstSentence : Bool) : Void;
+	@:overload @:public public function new(method : com.sun.javadoc.MethodDoc, isFirstSentence : Bool) : Void;
 	
-	@:overload public function copy() : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Input;
+	@:overload @:public public function copy() : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Input;
 	
 	
 }
@@ -115,22 +115,22 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	* The tag that holds the documentation.  Null if documentation
 	* is not held by a tag.
 	*/
-	public var holderTag : com.sun.javadoc.Tag;
+	@:public public var holderTag : com.sun.javadoc.Tag;
 	
 	/**
 	* The Doc object that holds the documentation.
 	*/
-	public var holder : com.sun.javadoc.Doc;
+	@:public public var holder : com.sun.javadoc.Doc;
 	
 	/**
 	* The inherited documentation.
 	*/
-	public var inlineTags : java.NativeArray<com.sun.javadoc.Tag>;
+	@:public public var inlineTags : java.NativeArray<com.sun.javadoc.Tag>;
 	
 	/**
 	* False if documentation could not be inherited.
 	*/
-	public var isValidInheritDocTag : Bool;
+	@:public public var isValidInheritDocTag : Bool;
 	
 	/**
 	* When automatically inheriting throws tags, you sometime must inherit
@@ -140,7 +140,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	* subclass of IOException.  This subclass of DocFinder.Output allows
 	* multiple tag inheritence.
 	*/
-	public var tagList : java.util.List<com.sun.javadoc.Tag>;
+	@:public public var tagList : java.util.List<com.sun.javadoc.Tag>;
 	
 	
 }

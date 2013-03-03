@@ -25,53 +25,53 @@ package com.sun.corba.se.impl.oa.poa;
 */
 extern class Policies
 {
-	public static var defaultPolicies(default, null) : com.sun.corba.se.impl.oa.poa.Policies;
+	@:public @:static @:final public static var defaultPolicies(default, null) : com.sun.corba.se.impl.oa.poa.Policies;
 	
-	public static var rootPOAPolicies(default, null) : com.sun.corba.se.impl.oa.poa.Policies;
+	@:public @:static @:final public static var rootPOAPolicies(default, null) : com.sun.corba.se.impl.oa.poa.Policies;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function get_effective_policy(type : Int) : org.omg.CORBA.Policy;
+	@:overload @:public public function get_effective_policy(type : Int) : org.omg.CORBA.Policy;
 	
 	/* Thread Policies */
-	@:overload @:final public function isOrbControlledThreads() : Bool;
+	@:overload @:public @:final public function isOrbControlledThreads() : Bool;
 	
-	@:overload @:final public function isSingleThreaded() : Bool;
+	@:overload @:public @:final public function isSingleThreaded() : Bool;
 	
 	/* Lifespan */
-	@:overload @:final public function isTransient() : Bool;
+	@:overload @:public @:final public function isTransient() : Bool;
 	
-	@:overload @:final public function isPersistent() : Bool;
+	@:overload @:public @:final public function isPersistent() : Bool;
 	
 	/* ID Uniqueness */
-	@:overload @:final public function isUniqueIds() : Bool;
+	@:overload @:public @:final public function isUniqueIds() : Bool;
 	
-	@:overload @:final public function isMultipleIds() : Bool;
+	@:overload @:public @:final public function isMultipleIds() : Bool;
 	
 	/* ID Assignment */
-	@:overload @:final public function isUserAssignedIds() : Bool;
+	@:overload @:public @:final public function isUserAssignedIds() : Bool;
 	
-	@:overload @:final public function isSystemAssignedIds() : Bool;
+	@:overload @:public @:final public function isSystemAssignedIds() : Bool;
 	
 	/* Servant Rentention */
-	@:overload @:final public function retainServants() : Bool;
+	@:overload @:public @:final public function retainServants() : Bool;
 	
 	/* Request Processing */
-	@:overload @:final public function useActiveMapOnly() : Bool;
+	@:overload @:public @:final public function useActiveMapOnly() : Bool;
 	
-	@:overload @:final public function useDefaultServant() : Bool;
+	@:overload @:public @:final public function useDefaultServant() : Bool;
 	
-	@:overload @:final public function useServantManager() : Bool;
+	@:overload @:public @:final public function useServantManager() : Bool;
 	
 	/* Implicit Activation */
-	@:overload @:final public function isImplicitlyActivated() : Bool;
+	@:overload @:public @:final public function isImplicitlyActivated() : Bool;
 	
 	/* proprietary servant caching policy */
-	@:overload @:final public function servantCachingLevel() : Int;
+	@:overload @:public @:final public function servantCachingLevel() : Int;
 	
-	@:overload @:final public function forceZeroPort() : Bool;
+	@:overload @:public @:final public function forceZeroPort() : Bool;
 	
-	@:overload @:final public function getCopierId() : Int;
+	@:overload @:public @:final public function getCopierId() : Int;
 	
 	
 }

@@ -39,7 +39,7 @@ package javax.swing.plaf.metal;
 */
 extern class MetalProgressBarUI extends javax.swing.plaf.basic.BasicProgressBarUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Draws a bit of special highlighting on the progress bar.
@@ -47,7 +47,7 @@ extern class MetalProgressBarUI extends javax.swing.plaf.basic.BasicProgressBarU
 	* <code>paintDeterminate</code> method.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function paintDeterminate(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:require(java4) @:overload @:public override public function paintDeterminate(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Draws a bit of special highlighting on the progress bar
@@ -56,7 +56,7 @@ extern class MetalProgressBarUI extends javax.swing.plaf.basic.BasicProgressBarU
 	* <code>paintIndeterminate</code> method.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function paintIndeterminate(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:require(java4) @:overload @:public override public function paintIndeterminate(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	
 }

@@ -26,20 +26,20 @@ package javax.swing.border;
 extern class BevelBorder extends javax.swing.border.AbstractBorder
 {
 	/** Raised bevel type. */
-	public static var RAISED(default, null) : Int;
+	@:public @:static @:final public static var RAISED(default, null) : Int;
 	
 	/** Lowered bevel type. */
-	public static var LOWERED(default, null) : Int;
+	@:public @:static @:final public static var LOWERED(default, null) : Int;
 	
-	private var bevelType : Int;
+	@:protected private var bevelType : Int;
 	
-	private var highlightOuter : java.awt.Color;
+	@:protected private var highlightOuter : java.awt.Color;
 	
-	private var highlightInner : java.awt.Color;
+	@:protected private var highlightInner : java.awt.Color;
 	
-	private var shadowInner : java.awt.Color;
+	@:protected private var shadowInner : java.awt.Color;
 	
-	private var shadowOuter : java.awt.Color;
+	@:protected private var shadowOuter : java.awt.Color;
 	
 	/**
 	* Creates a bevel border with the specified type and whose
@@ -47,7 +47,7 @@ extern class BevelBorder extends javax.swing.border.AbstractBorder
 	* component passed into the paintBorder method.
 	* @param bevelType the type of bevel for the border
 	*/
-	@:overload public function new(bevelType : Int) : Void;
+	@:overload @:public public function new(bevelType : Int) : Void;
 	
 	/**
 	* Creates a bevel border with the specified type, highlight and
@@ -56,7 +56,7 @@ extern class BevelBorder extends javax.swing.border.AbstractBorder
 	* @param highlight the color to use for the bevel highlight
 	* @param shadow the color to use for the bevel shadow
 	*/
-	@:overload public function new(bevelType : Int, highlight : java.awt.Color, shadow : java.awt.Color) : Void;
+	@:overload @:public public function new(bevelType : Int, highlight : java.awt.Color, shadow : java.awt.Color) : Void;
 	
 	/**
 	* Creates a bevel border with the specified type, highlight and
@@ -68,7 +68,7 @@ extern class BevelBorder extends javax.swing.border.AbstractBorder
 	* @param shadowOuterColor the color to use for the bevel outer shadow
 	* @param shadowInnerColor the color to use for the bevel inner shadow
 	*/
-	@:overload public function new(bevelType : Int, highlightOuterColor : java.awt.Color, highlightInnerColor : java.awt.Color, shadowOuterColor : java.awt.Color, shadowInnerColor : java.awt.Color) : Void;
+	@:overload @:public public function new(bevelType : Int, highlightOuterColor : java.awt.Color, highlightInnerColor : java.awt.Color, shadowOuterColor : java.awt.Color, shadowInnerColor : java.awt.Color) : Void;
 	
 	/**
 	* Paints the border for the specified component with the specified
@@ -80,14 +80,14 @@ extern class BevelBorder extends javax.swing.border.AbstractBorder
 	* @param width the width of the painted border
 	* @param height the height of the painted border
 	*/
-	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Reinitialize the insets parameter with this Border's current Insets.
 	* @param c the component for which this border insets value applies
 	* @param insets the object to be reinitialized
 	*/
-	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* Returns the outer highlight color of the bevel border
@@ -97,7 +97,7 @@ extern class BevelBorder extends javax.swing.border.AbstractBorder
 	* @param c the component for which the highlight may be derived
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getHighlightOuterColor(c : java.awt.Component) : java.awt.Color;
+	@:require(java3) @:overload @:public public function getHighlightOuterColor(c : java.awt.Component) : java.awt.Color;
 	
 	/**
 	* Returns the inner highlight color of the bevel border
@@ -107,7 +107,7 @@ extern class BevelBorder extends javax.swing.border.AbstractBorder
 	* @param c the component for which the highlight may be derived
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getHighlightInnerColor(c : java.awt.Component) : java.awt.Color;
+	@:require(java3) @:overload @:public public function getHighlightInnerColor(c : java.awt.Component) : java.awt.Color;
 	
 	/**
 	* Returns the inner shadow color of the bevel border
@@ -117,7 +117,7 @@ extern class BevelBorder extends javax.swing.border.AbstractBorder
 	* @param c the component for which the shadow may be derived
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getShadowInnerColor(c : java.awt.Component) : java.awt.Color;
+	@:require(java3) @:overload @:public public function getShadowInnerColor(c : java.awt.Component) : java.awt.Color;
 	
 	/**
 	* Returns the outer shadow color of the bevel border
@@ -127,7 +127,7 @@ extern class BevelBorder extends javax.swing.border.AbstractBorder
 	* @param c the component for which the shadow may be derived
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getShadowOuterColor(c : java.awt.Component) : java.awt.Color;
+	@:require(java3) @:overload @:public public function getShadowOuterColor(c : java.awt.Component) : java.awt.Color;
 	
 	/**
 	* Returns the outer highlight color of the bevel border.
@@ -135,7 +135,7 @@ extern class BevelBorder extends javax.swing.border.AbstractBorder
 	* at instantiation.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getHighlightOuterColor() : java.awt.Color;
+	@:require(java3) @:overload @:public public function getHighlightOuterColor() : java.awt.Color;
 	
 	/**
 	* Returns the inner highlight color of the bevel border.
@@ -143,7 +143,7 @@ extern class BevelBorder extends javax.swing.border.AbstractBorder
 	* at instantiation.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getHighlightInnerColor() : java.awt.Color;
+	@:require(java3) @:overload @:public public function getHighlightInnerColor() : java.awt.Color;
 	
 	/**
 	* Returns the inner shadow color of the bevel border.
@@ -151,7 +151,7 @@ extern class BevelBorder extends javax.swing.border.AbstractBorder
 	* at instantiation.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getShadowInnerColor() : java.awt.Color;
+	@:require(java3) @:overload @:public public function getShadowInnerColor() : java.awt.Color;
 	
 	/**
 	* Returns the outer shadow color of the bevel border.
@@ -159,21 +159,21 @@ extern class BevelBorder extends javax.swing.border.AbstractBorder
 	* at instantiation.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getShadowOuterColor() : java.awt.Color;
+	@:require(java3) @:overload @:public public function getShadowOuterColor() : java.awt.Color;
 	
 	/**
 	* Returns the type of the bevel border.
 	*/
-	@:overload public function getBevelType() : Int;
+	@:overload @:public public function getBevelType() : Int;
 	
 	/**
 	* Returns whether or not the border is opaque.
 	*/
-	@:overload public function isBorderOpaque() : Bool;
+	@:overload @:public override public function isBorderOpaque() : Bool;
 	
-	@:overload private function paintRaisedBevel(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:protected private function paintRaisedBevel(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload private function paintLoweredBevel(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:protected private function paintLoweredBevel(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	
 }

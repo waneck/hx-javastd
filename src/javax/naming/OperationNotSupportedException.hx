@@ -43,7 +43,7 @@ package javax.naming;
 	* Constructs a new instance of OperationNotSupportedException.
 	* All fields default to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new instance of OperationNotSupportedException using an
@@ -52,7 +52,7 @@ package javax.naming;
 	* @param  explanation     Possibly null additional detail about this exception
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload public function new(explanation : String) : Void;
+	@:overload @:public public function new(explanation : String) : Void;
 	
 	
 }

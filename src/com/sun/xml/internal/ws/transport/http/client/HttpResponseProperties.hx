@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.transport.http.client;
 */
 @:internal extern class HttpResponseProperties extends com.sun.xml.internal.ws.api.PropertySet
 {
-	@:overload public function new(con : com.sun.xml.internal.ws.transport.http.client.HttpClientTransport) : Void;
+	@:overload @:public public function new(con : com.sun.xml.internal.ws.transport.http.client.HttpClientTransport) : Void;
 	
-	@:overload public function getResponseHeaders() : java.util.Map<String, java.util.List<String>>;
+	@:overload @:public public function getResponseHeaders() : java.util.Map<String, java.util.List<String>>;
 	
-	@:overload public function getResponseCode() : Int;
+	@:overload @:public public function getResponseCode() : Int;
 	
-	@:overload private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
+	@:overload @:protected override private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
 	
 }

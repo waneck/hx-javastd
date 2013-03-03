@@ -36,7 +36,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @param g the {@code Graphics} context in which to paint
 	* @param c the component being painted
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Processes {@code AWTEvent}s for {@code JLayer}
@@ -67,7 +67,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @see #processHierarchyEvent
 	* @see #processMouseWheelEvent
 	*/
-	@:overload public function eventDispatched(e : java.awt.AWTEvent, l : javax.swing.JLayer<V>) : Void;
+	@:overload @:public public function eventDispatched(e : java.awt.AWTEvent, l : javax.swing.JLayer<V>) : Void;
 	
 	/**
 	* Processes component events occurring on the {@link JLayer}
@@ -98,7 +98,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @see #installUI(javax.swing.JComponent)
 	* @see #uninstallUI(javax.swing.JComponent)
 	*/
-	@:overload private function processComponentEvent(e : java.awt.event.ComponentEvent, l : javax.swing.JLayer<V>) : Void;
+	@:overload @:protected private function processComponentEvent(e : java.awt.event.ComponentEvent, l : javax.swing.JLayer<V>) : Void;
 	
 	/**
 	* Processes focus events occurring on the {@link JLayer}
@@ -129,7 +129,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @see #installUI(javax.swing.JComponent)
 	* @see #uninstallUI(javax.swing.JComponent)
 	*/
-	@:overload private function processFocusEvent(e : java.awt.event.FocusEvent, l : javax.swing.JLayer<V>) : Void;
+	@:overload @:protected private function processFocusEvent(e : java.awt.event.FocusEvent, l : javax.swing.JLayer<V>) : Void;
 	
 	/**
 	* Processes key events occurring on the {@link JLayer}
@@ -160,7 +160,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @see #installUI(javax.swing.JComponent)
 	* @see #uninstallUI(javax.swing.JComponent)
 	*/
-	@:overload private function processKeyEvent(e : java.awt.event.KeyEvent, l : javax.swing.JLayer<V>) : Void;
+	@:overload @:protected private function processKeyEvent(e : java.awt.event.KeyEvent, l : javax.swing.JLayer<V>) : Void;
 	
 	/**
 	* Processes mouse events occurring on the {@link JLayer}
@@ -191,7 +191,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @see #installUI(javax.swing.JComponent)
 	* @see #uninstallUI(javax.swing.JComponent)
 	*/
-	@:overload private function processMouseEvent(e : java.awt.event.MouseEvent, l : javax.swing.JLayer<V>) : Void;
+	@:overload @:protected private function processMouseEvent(e : java.awt.event.MouseEvent, l : javax.swing.JLayer<V>) : Void;
 	
 	/**
 	* Processes mouse motion event occurring on the {@link JLayer}
@@ -222,7 +222,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @see #installUI(javax.swing.JComponent)
 	* @see #uninstallUI(javax.swing.JComponent)
 	*/
-	@:overload private function processMouseMotionEvent(e : java.awt.event.MouseEvent, l : javax.swing.JLayer<V>) : Void;
+	@:overload @:protected private function processMouseMotionEvent(e : java.awt.event.MouseEvent, l : javax.swing.JLayer<V>) : Void;
 	
 	/**
 	* Processes mouse wheel event occurring on the {@link JLayer}
@@ -253,7 +253,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @see #installUI(javax.swing.JComponent)
 	* @see #uninstallUI(javax.swing.JComponent)
 	*/
-	@:overload private function processMouseWheelEvent(e : java.awt.event.MouseWheelEvent, l : javax.swing.JLayer<V>) : Void;
+	@:overload @:protected private function processMouseWheelEvent(e : java.awt.event.MouseWheelEvent, l : javax.swing.JLayer<V>) : Void;
 	
 	/**
 	* Processes input event occurring on the {@link JLayer}
@@ -284,7 +284,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @see #installUI(javax.swing.JComponent)
 	* @see #uninstallUI(javax.swing.JComponent)
 	*/
-	@:overload private function processInputMethodEvent(e : java.awt.event.InputMethodEvent, l : javax.swing.JLayer<V>) : Void;
+	@:overload @:protected private function processInputMethodEvent(e : java.awt.event.InputMethodEvent, l : javax.swing.JLayer<V>) : Void;
 	
 	/**
 	* Processes hierarchy event occurring on the {@link JLayer}
@@ -315,7 +315,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @see #installUI(javax.swing.JComponent)
 	* @see #uninstallUI(javax.swing.JComponent)
 	*/
-	@:overload private function processHierarchyEvent(e : java.awt.event.HierarchyEvent, l : javax.swing.JLayer<V>) : Void;
+	@:overload @:protected private function processHierarchyEvent(e : java.awt.event.HierarchyEvent, l : javax.swing.JLayer<V>) : Void;
 	
 	/**
 	* Processes hierarchy bounds event occurring on the {@link JLayer}
@@ -346,7 +346,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @see #installUI(javax.swing.JComponent)
 	* @see #uninstallUI(javax.swing.JComponent)
 	*/
-	@:overload private function processHierarchyBoundsEvent(e : java.awt.event.HierarchyEvent, l : javax.swing.JLayer<V>) : Void;
+	@:overload @:protected private function processHierarchyBoundsEvent(e : java.awt.event.HierarchyEvent, l : javax.swing.JLayer<V>) : Void;
 	
 	/**
 	* Invoked when {@link javax.swing.JLayer#updateUI()} is called
@@ -354,7 +354,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	*
 	* @param l the {@code JLayer} which UI is updated
 	*/
-	@:overload public function updateUI(l : javax.swing.JLayer<V>) : Void;
+	@:overload @:public public function updateUI(l : javax.swing.JLayer<V>) : Void;
 	
 	/**
 	* Configures the {@code JLayer} this {@code LayerUI} is set to.
@@ -363,7 +363,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	*
 	* @param c the {@code JLayer} component where this UI delegate is being installed
 	*/
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Reverses the configuration which was previously set
@@ -373,7 +373,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	*
 	* @param c the component from which this UI delegate is being removed.
 	*/
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list. The listener is
@@ -387,7 +387,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @see #getPropertyChangeListeners
 	* @see #addPropertyChangeListener(String, java.beans.PropertyChangeListener)
 	*/
-	@:overload public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a PropertyChangeListener from the listener list. This method
@@ -402,7 +402,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @see #getPropertyChangeListeners
 	* @see #removePropertyChangeListener(String, PropertyChangeListener)
 	*/
-	@:overload public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the property change listeners
@@ -415,7 +415,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @see #removePropertyChangeListener
 	* @see #getPropertyChangeListeners(String)
 	*/
-	@:overload public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:overload @:public public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list for a specific
@@ -430,7 +430,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @see #getPropertyChangeListeners(String)
 	* @see #addPropertyChangeListener(String, PropertyChangeListener)
 	*/
-	@:overload public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a {@code PropertyChangeListener} from the listener
@@ -447,7 +447,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @see #getPropertyChangeListeners(String)
 	* @see #removePropertyChangeListener(PropertyChangeListener)
 	*/
-	@:overload public function removePropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the listeners which have been associated
@@ -462,7 +462,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @see #removePropertyChangeListener(String, PropertyChangeListener)
 	* @see #getPropertyChangeListeners
 	*/
-	@:overload public function getPropertyChangeListeners(propertyName : String) : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:overload @:public public function getPropertyChangeListeners(propertyName : String) : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	/**
 	* Support for reporting bound property changes for Object properties.
@@ -474,7 +474,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @param oldValue     the property's previous value
 	* @param newValue     the property's new value
 	*/
-	@:overload private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:protected private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Notifies the {@code LayerUI} when any of its property are changed
@@ -484,7 +484,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @param evt the PropertyChangeEvent generated by this {@code LayerUI}
 	* @param l the {@code JLayer} this LayerUI is set to
 	*/
-	@:overload public function applyPropertyChange(evt : java.beans.PropertyChangeEvent, l : javax.swing.JLayer<V>) : Void;
+	@:overload @:public public function applyPropertyChange(evt : java.beans.PropertyChangeEvent, l : javax.swing.JLayer<V>) : Void;
 	
 	/**
 	* If the {@code JLayer}'s view component is not {@code null},
@@ -497,7 +497,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @return baseline or a value &lt; 0 indicating there is no reasonable
 	*                  baseline
 	*/
-	@:overload override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
+	@:overload @:public override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
 	
 	/**
 	* If the {@code JLayer}'s view component is not {@code null},
@@ -508,14 +508,14 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @return an enum indicating how the baseline changes as the component
 	*         size changes
 	*/
-	@:overload override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
+	@:overload @:public override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
 	
 	/**
 	* Causes the passed instance of {@code JLayer} to lay out its components.
 	*
 	* @param l the {@code JLayer} component where this UI delegate is being installed
 	*/
-	@:overload public function doLayout(l : javax.swing.JLayer<V>) : Void;
+	@:overload @:public public function doLayout(l : javax.swing.JLayer<V>) : Void;
 	
 	/**
 	* If the {@code JLayer}'s view component is not {@code null},
@@ -525,7 +525,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @param c {@code JLayer} to return preferred size for
 	* @return preferred size for the passed {@code JLayer}
 	*/
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* If the {@code JLayer}'s view component is not {@code null},
@@ -535,7 +535,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @param c {@code JLayer} to return preferred size for
 	* @return minimal size for the passed {@code JLayer}
 	*/
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* If the {@code JLayer}'s view component is not {@code null},
@@ -545,7 +545,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	* @param c {@code JLayer} to return preferred size for
 	* @return maximum size for the passed {@code JLayer}
 	*/
-	@:overload override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Paints the specified region in the {@code JLayer} this {@code LayerUI} is set to, immediately.
@@ -560,7 +560,7 @@ extern class LayerUI<V> extends javax.swing.plaf.ComponentUI implements java.io.
 	*
 	* @see JComponent#paintImmediately(int, int, int, int)
 	*/
-	@:overload public function paintImmediately(x : Int, y : Int, width : Int, height : Int, l : javax.swing.JLayer<V>) : Void;
+	@:overload @:public public function paintImmediately(x : Int, y : Int, width : Int, height : Int, l : javax.swing.JLayer<V>) : Void;
 	
 	
 }

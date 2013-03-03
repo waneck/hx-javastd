@@ -31,15 +31,15 @@ package sun.misc;
 extern class CRC16
 {
 	/** value contains the currently computed CRC, set it to 0 initally */
-	public var value : Int;
+	@:public public var value : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** update CRC with byte b */
-	@:overload public function update(aByte : java.StdTypes.Int8) : Void;
+	@:overload @:public public function update(aByte : java.StdTypes.Int8) : Void;
 	
 	/** reset CRC value to 0 */
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

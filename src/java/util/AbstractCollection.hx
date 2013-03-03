@@ -61,23 +61,23 @@ package java.util;
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns an iterator over the elements contained in this collection.
 	*
 	* @return an iterator over the elements contained in this collection
 	*/
-	@:overload @:abstract public function iterator() : java.util.Iterator<E>;
+	@:overload @:public @:abstract public function iterator() : java.util.Iterator<E>;
 	
-	@:overload @:abstract public function size() : Int;
+	@:overload @:public @:abstract public function size() : Int;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* <p>This implementation returns <tt>size() == 0</tt>.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -88,7 +88,7 @@ package java.util;
 	* @throws ClassCastException   {@inheritDoc}
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -112,7 +112,7 @@ package java.util;
 	* return list.toArray();
 	* }</pre>
 	*/
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* {@inheritDoc}
@@ -141,7 +141,7 @@ package java.util;
 	* @throws ArrayStoreException  {@inheritDoc}
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* {@inheritDoc}
@@ -155,7 +155,7 @@ package java.util;
 	* @throws IllegalArgumentException      {@inheritDoc}
 	* @throws IllegalStateException         {@inheritDoc}
 	*/
-	@:overload public function add(e : E) : Bool;
+	@:overload @:public public function add(e : E) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -173,7 +173,7 @@ package java.util;
 	* @throws ClassCastException            {@inheritDoc}
 	* @throws NullPointerException          {@inheritDoc}
 	*/
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -187,7 +187,7 @@ package java.util;
 	* @throws NullPointerException          {@inheritDoc}
 	* @see #contains(Object)
 	*/
-	@:overload public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -207,7 +207,7 @@ package java.util;
 	*
 	* @see #add(Object)
 	*/
-	@:overload public function addAll(c : java.util.Collection<E>) : Bool;
+	@:overload @:public public function addAll(c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -230,7 +230,7 @@ package java.util;
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -253,7 +253,7 @@ package java.util;
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -270,7 +270,7 @@ package java.util;
 	*
 	* @throws UnsupportedOperationException {@inheritDoc}
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns a string representation of this collection.  The string
@@ -282,7 +282,7 @@ package java.util;
 	*
 	* @return a string representation of this collection
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

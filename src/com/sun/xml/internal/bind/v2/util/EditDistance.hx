@@ -31,7 +31,7 @@ extern class EditDistance
 	* <p>
 	* The complexity is O(nm) where n=a.length() and m=b.length().
 	*/
-	@:overload public static function editDistance(a : String, b : String) : Int;
+	@:overload @:public @:static public static function editDistance(a : String, b : String) : Int;
 	
 	/**
 	* Finds the string in the <code>group</code> closest to
@@ -39,7 +39,7 @@ extern class EditDistance
 	*
 	* @return null if group.length==0.
 	*/
-	@:overload public static function findNearest(key : String, group : java.NativeArray<String>) : String;
+	@:overload @:public @:static public static function findNearest(key : String, group : java.NativeArray<String>) : String;
 	
 	/**
 	* Finds the string in the <code>group</code> closest to
@@ -47,7 +47,7 @@ extern class EditDistance
 	*
 	* @return null if group.length==0.
 	*/
-	@:overload public static function findNearest(key : String, group : java.util.Collection<String>) : String;
+	@:overload @:public @:static public static function findNearest(key : String, group : java.util.Collection<String>) : String;
 	
 	
 }

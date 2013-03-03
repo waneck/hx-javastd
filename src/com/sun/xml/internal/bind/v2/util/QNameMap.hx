@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.util;
 */
 extern class QNameMap<V>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Associates the specified value with the specified keys in this map.
@@ -37,11 +37,11 @@ extern class QNameMap<V>
 	* @param value value to be associated with the specified key.
 	*
 	*/
-	@:overload public function put(namespaceUri : String, localname : String, value : V) : Void;
+	@:overload @:public public function put(namespaceUri : String, localname : String, value : V) : Void;
 	
-	@:overload public function put(name : javax.xml.namespace.QName, value : V) : Void;
+	@:overload @:public public function put(name : javax.xml.namespace.QName, value : V) : Void;
 	
-	@:overload public function put(name : com.sun.xml.internal.bind.v2.runtime.Name, value : V) : Void;
+	@:overload @:public public function put(name : com.sun.xml.internal.bind.v2.runtime.Name, value : V) : Void;
 	
 	/**
 	* Returns the value to which the specified keys are mapped in this QNameMap,
@@ -53,16 +53,16 @@ extern class QNameMap<V>
 	*          <tt>null</tt> if the map contains no mapping for this set of keys.
 	* @see #put(String,String, Object)
 	*/
-	@:overload public function get(nsUri : String, localPart : String) : V;
+	@:overload @:public public function get(nsUri : String, localPart : String) : V;
 	
-	@:overload public function get(name : javax.xml.namespace.QName) : V;
+	@:overload @:public public function get(name : javax.xml.namespace.QName) : V;
 	
 	/**
 	* Returns the number of keys-value mappings in this map.
 	*
 	* @return the number of keys-value mappings in this map.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Copies all of the mappings from the specified map to this map
@@ -72,7 +72,7 @@ extern class QNameMap<V>
 	* @param map mappings to be stored in this map.
 	*
 	*/
-	@:overload public function putAll(map : com.sun.xml.internal.bind.v2.util.QNameMap<V>) : com.sun.xml.internal.bind.v2.util.QNameMap<V>;
+	@:overload @:public public function putAll(map : com.sun.xml.internal.bind.v2.util.QNameMap<V>) : com.sun.xml.internal.bind.v2.util.QNameMap<V>;
 	
 	/**
 	* Returns one random item in the map.
@@ -81,28 +81,28 @@ extern class QNameMap<V>
 	* <p>
 	* This method is useful to obtain the value from a map that only contains one element.
 	*/
-	@:overload public function getOne() : com.sun.xml.internal.bind.v2.util.QNameMap.QNameMap_Entry<V>;
+	@:overload @:public public function getOne() : com.sun.xml.internal.bind.v2.util.QNameMap.QNameMap_Entry<V>;
 	
-	@:overload public function keySet() : java.util.Collection<javax.xml.namespace.QName>;
+	@:overload @:public public function keySet() : java.util.Collection<javax.xml.namespace.QName>;
 	
-	@:overload public function containsKey(nsUri : String, localName : String) : Bool;
+	@:overload @:public public function containsKey(nsUri : String, localName : String) : Bool;
 	
 	/**
 	* Returns true if this map is empty.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function entrySet() : java.util.Set<com.sun.xml.internal.bind.v2.util.QNameMap.QNameMap_Entry<V>>;
+	@:overload @:public public function entrySet() : java.util.Set<com.sun.xml.internal.bind.v2.util.QNameMap.QNameMap_Entry<V>>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$util$QNameMap$HashIterator') @:internal extern class QNameMap_HashIterator<E> implements java.util.Iterator<E>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	/**
 	* Returns the next element in the iteration.
@@ -110,50 +110,50 @@ extern class QNameMap<V>
 	* @return the next element in the iteration
 	* @throws NoSuchElementException if the iteration has no more elements
 	*/
-	@:overload public function next() : E;
+	@:overload @:public @:public @:public @:public @:public public function next() : E;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$util$QNameMap$Entry') extern class QNameMap_Entry<V>
 {
 	/** The namespace URI. */
-	public var nsUri(default, null) : String;
+	@:public @:final public var nsUri(default, null) : String;
 	
 	/** The localPart. */
-	public var localName(default, null) : String;
+	@:public @:final public var localName(default, null) : String;
 	
 	/**
 	* Creates a new QName object from {@link #nsUri} and {@link #localName}.
 	*/
-	@:overload public function createQName() : javax.xml.namespace.QName;
+	@:overload @:public public function createQName() : javax.xml.namespace.QName;
 	
-	@:overload public function getValue() : V;
+	@:overload @:public public function getValue() : V;
 	
-	@:overload public function setValue(newValue : V) : V;
+	@:overload @:public public function setValue(newValue : V) : V;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$util$QNameMap$EntryIterator') @:internal extern class QNameMap_EntryIterator extends com.sun.xml.internal.bind.v2.util.QNameMap.QNameMap_HashIterator<com.sun.xml.internal.bind.v2.util.QNameMap.QNameMap_Entry<Dynamic>>
 {
-	@:overload override public function next() : com.sun.xml.internal.bind.v2.util.QNameMap.QNameMap_Entry<Dynamic>;
+	@:overload @:public override public function next() : com.sun.xml.internal.bind.v2.util.QNameMap.QNameMap_Entry<Dynamic>;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$util$QNameMap$EntrySet') @:internal extern class QNameMap_EntrySet extends java.util.AbstractSet<com.sun.xml.internal.bind.v2.util.QNameMap.QNameMap_Entry<Dynamic>>
 {
-	@:overload override public function iterator() : java.util.Iterator<com.sun.xml.internal.bind.v2.util.QNameMap.QNameMap_Entry<Dynamic>>;
+	@:overload @:public override public function iterator() : java.util.Iterator<com.sun.xml.internal.bind.v2.util.QNameMap.QNameMap_Entry<Dynamic>>;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	
 }

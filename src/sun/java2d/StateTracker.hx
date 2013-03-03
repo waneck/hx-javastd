@@ -68,7 +68,7 @@ package sun.java2d;
 	* {@link StateTrackable.State#IMMUTABLE IMMUTABLE}.
 	* @since 1.7
 	*/
-	@:require(java7) public var ALWAYS_CURRENT : sun.java2d.StateTracker;
+	@:require(java7) @:public public var ALWAYS_CURRENT : sun.java2d.StateTracker;
 	
 	/**
 	* An implementation of the StateTracker interface which
@@ -81,7 +81,7 @@ package sun.java2d;
 	* {@link StateTrackable.State#DYNAMIC DYNAMIC}.
 	* @since 1.7
 	*/
-	@:require(java7) public var NEVER_CURRENT : sun.java2d.StateTracker;
+	@:require(java7) @:public public var NEVER_CURRENT : sun.java2d.StateTracker;
 	
 	/**
 	* Returns true iff the contents of the complex data of the
@@ -91,7 +91,7 @@ package sun.java2d;
 	* @see StateTrackable
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function isCurrent() : Bool;
+	@:require(java7) @:overload @:public public function isCurrent() : Bool;
 	
 	
 }

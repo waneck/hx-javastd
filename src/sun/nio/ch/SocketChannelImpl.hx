@@ -25,73 +25,73 @@ package sun.nio.ch;
 */
 @:internal extern class SocketChannelImpl extends java.nio.channels.SocketChannel implements sun.nio.ch.SelChImpl
 {
-	@:overload override public function socket() : java.net.Socket;
+	@:overload @:public override public function socket() : java.net.Socket;
 	
-	@:overload override public function getLocalAddress() : java.net.SocketAddress;
+	@:overload @:public override public function getLocalAddress() : java.net.SocketAddress;
 	
-	@:overload override public function getRemoteAddress() : java.net.SocketAddress;
+	@:overload @:public override public function getRemoteAddress() : java.net.SocketAddress;
 	
-	@:overload override public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.SocketChannel;
+	@:overload @:public override public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.SocketChannel;
 	
-	@:overload override public function getOption<T>(name : java.net.SocketOption<T>) : T;
+	@:overload @:public override public function getOption<T>(name : java.net.SocketOption<T>) : T;
 	
-	@:overload @:final override public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
+	@:overload @:public @:final override public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
 	
-	@:overload override public function read(buf : java.nio.ByteBuffer) : Int;
+	@:overload @:public override public function read(buf : java.nio.ByteBuffer) : Int;
 	
-	@:overload override public function read(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload @:public override public function read(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
-	@:overload override public function write(buf : java.nio.ByteBuffer) : Int;
+	@:overload @:public override public function write(buf : java.nio.ByteBuffer) : Int;
 	
-	@:overload override public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload @:public override public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
-	@:overload override private function implConfigureBlocking(block : Bool) : Void;
+	@:overload @:protected override private function implConfigureBlocking(block : Bool) : Void;
 	
-	@:overload public function localAddress() : java.net.SocketAddress;
+	@:overload @:public public function localAddress() : java.net.SocketAddress;
 	
-	@:overload public function remoteAddress() : java.net.SocketAddress;
+	@:overload @:public public function remoteAddress() : java.net.SocketAddress;
 	
-	@:overload override public function bind(local : java.net.SocketAddress) : java.nio.channels.SocketChannel;
+	@:overload @:public override public function bind(local : java.net.SocketAddress) : java.nio.channels.SocketChannel;
 	
-	@:overload override public function isConnected() : Bool;
+	@:overload @:public override public function isConnected() : Bool;
 	
-	@:overload override public function isConnectionPending() : Bool;
+	@:overload @:public override public function isConnectionPending() : Bool;
 	
-	@:overload override public function connect(sa : java.net.SocketAddress) : Bool;
+	@:overload @:public override public function connect(sa : java.net.SocketAddress) : Bool;
 	
-	@:overload override public function finishConnect() : Bool;
+	@:overload @:public override public function finishConnect() : Bool;
 	
-	@:overload override public function shutdownInput() : java.nio.channels.SocketChannel;
+	@:overload @:public override public function shutdownInput() : java.nio.channels.SocketChannel;
 	
-	@:overload override public function shutdownOutput() : java.nio.channels.SocketChannel;
+	@:overload @:public override public function shutdownOutput() : java.nio.channels.SocketChannel;
 	
-	@:overload public function isInputOpen() : Bool;
+	@:overload @:public public function isInputOpen() : Bool;
 	
-	@:overload public function isOutputOpen() : Bool;
+	@:overload @:public public function isOutputOpen() : Bool;
 	
-	@:overload override private function implCloseSelectableChannel() : Void;
+	@:overload @:protected override private function implCloseSelectableChannel() : Void;
 	
-	@:overload public function kill() : Void;
+	@:overload @:public public function kill() : Void;
 	
 	/**
 	* Translates native poll revent ops into a ready operation ops
 	*/
-	@:overload public function translateReadyOps(ops : Int, initialOps : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
+	@:overload @:public public function translateReadyOps(ops : Int, initialOps : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
 	
-	@:overload public function translateAndUpdateReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
+	@:overload @:public public function translateAndUpdateReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
 	
-	@:overload public function translateAndSetReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
+	@:overload @:public public function translateAndSetReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
 	
 	/**
 	* Translates an interest operation set into a native poll event set
 	*/
-	@:overload public function translateAndSetInterestOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Void;
+	@:overload @:public public function translateAndSetInterestOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Void;
 	
-	@:overload public function getFD() : java.io.FileDescriptor;
+	@:overload @:public public function getFD() : java.io.FileDescriptor;
 	
-	@:overload public function getFDVal() : Int;
+	@:overload @:public public function getFDVal() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

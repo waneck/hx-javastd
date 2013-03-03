@@ -55,7 +55,7 @@ extern class ReplaceableString implements sun.text.normalizer.Replaceable
 	* @param str initial contents
 	* @stable ICU 2.0
 	*/
-	@:overload public function new(str : String) : Void;
+	@:overload @:public public function new(str : String) : Void;
 	
 	/**
 	* Construct a new object using <code>buf</code> for internal
@@ -66,14 +66,14 @@ extern class ReplaceableString implements sun.text.normalizer.Replaceable
 	* @param buf object to be used as internal storage
 	* @stable ICU 2.0
 	*/
-	@:overload public function new(buf : java.lang.StringBuffer) : Void;
+	@:overload @:public public function new(buf : java.lang.StringBuffer) : Void;
 	
 	/**
 	* Return the number of characters contained in this object.
 	* <code>Replaceable</code> API.
 	* @stable ICU 2.0
 	*/
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
 	/**
 	* Return the character at the given position in this object.
@@ -82,7 +82,7 @@ extern class ReplaceableString implements sun.text.normalizer.Replaceable
 	* <code>length()</code> - 1
 	* @stable ICU 2.0
 	*/
-	@:overload public function charAt(offset : Int) : java.StdTypes.Char16;
+	@:overload @:public public function charAt(offset : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Copies characters from this object into the destination
@@ -102,7 +102,7 @@ extern class ReplaceableString implements sun.text.normalizer.Replaceable
 	* @param dstStart the start offset in the destination array.
 	* @stable ICU 2.0
 	*/
-	@:overload public function getChars(srcStart : Int, srcLimit : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstStart : Int) : Void;
+	@:overload @:public public function getChars(srcStart : Int, srcLimit : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstStart : Int) : Void;
 	
 	
 }

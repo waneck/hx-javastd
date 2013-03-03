@@ -30,27 +30,27 @@ extern class MIMEPart extends com.sun.tools.internal.ws.wsdl.framework.Extension
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(s : String) : Void;
+	@:overload @:public public function setName(s : String) : Void;
 	
-	@:overload public function getNameValue() : String;
+	@:overload @:public public function getNameValue() : String;
 	
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
-	@:overload public function getWSDLElementName() : javax.xml.namespace.QName;
+	@:overload @:public public function getWSDLElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function addExtension(e : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
+	@:overload @:public public function addExtension(e : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
 	
-	@:overload public function extensions() : java.lang.Iterable<com.sun.tools.internal.ws.api.wsdl.TWSDLExtension>;
+	@:overload @:public public function extensions() : java.lang.Iterable<com.sun.tools.internal.ws.api.wsdl.TWSDLExtension>;
 	
-	@:overload override public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
+	@:overload @:public override public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload @:public override public function validateThis() : Void;
 	
 	
 }

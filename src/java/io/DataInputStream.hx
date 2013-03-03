@@ -45,7 +45,7 @@ package java.io;
 	*
 	* @param  in   the specified input stream
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Reads some number of bytes from the contained input stream and
@@ -85,7 +85,7 @@ package java.io;
 	* @see        java.io.FilterInputStream#in
 	* @see        java.io.InputStream#read(byte[], int, int)
 	*/
-	@:overload @:final override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public @:final override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Reads up to <code>len</code> bytes of data from the contained
@@ -132,7 +132,7 @@ package java.io;
 	* @see        java.io.FilterInputStream#in
 	* @see        java.io.InputStream#read(byte[], int, int)
 	*/
-	@:overload @:final override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public @:final override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* See the general contract of the <code>readFully</code>
@@ -150,7 +150,7 @@ package java.io;
 	*             another I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload @:final public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:final public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* See the general contract of the <code>readFully</code>
@@ -170,7 +170,7 @@ package java.io;
 	*             another I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload @:final public function readFully(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public @:final public function readFully(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* See the general contract of the <code>skipBytes</code>
@@ -186,7 +186,7 @@ package java.io;
 	*             the contained input stream does not support
 	*             reading after close, or another I/O error occurs.
 	*/
-	@:overload @:final public function skipBytes(n : Int) : Int;
+	@:overload @:public @:final public function skipBytes(n : Int) : Int;
 	
 	/**
 	* See the general contract of the <code>readBoolean</code>
@@ -202,7 +202,7 @@ package java.io;
 	*             another I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload @:final public function readBoolean() : Bool;
+	@:overload @:public @:final public function readBoolean() : Bool;
 	
 	/**
 	* See the general contract of the <code>readByte</code>
@@ -220,7 +220,7 @@ package java.io;
 	*             another I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload @:final public function readByte() : java.StdTypes.Int8;
+	@:overload @:public @:final public function readByte() : java.StdTypes.Int8;
 	
 	/**
 	* See the general contract of the <code>readUnsignedByte</code>
@@ -238,7 +238,7 @@ package java.io;
 	*             another I/O error occurs.
 	* @see         java.io.FilterInputStream#in
 	*/
-	@:overload @:final public function readUnsignedByte() : Int;
+	@:overload @:public @:final public function readUnsignedByte() : Int;
 	
 	/**
 	* See the general contract of the <code>readShort</code>
@@ -257,7 +257,7 @@ package java.io;
 	*             another I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload @:final public function readShort() : java.StdTypes.Int16;
+	@:overload @:public @:final public function readShort() : java.StdTypes.Int16;
 	
 	/**
 	* See the general contract of the <code>readUnsignedShort</code>
@@ -276,7 +276,7 @@ package java.io;
 	*             another I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload @:final public function readUnsignedShort() : Int;
+	@:overload @:public @:final public function readUnsignedShort() : Int;
 	
 	/**
 	* See the general contract of the <code>readChar</code>
@@ -295,7 +295,7 @@ package java.io;
 	*             another I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload @:final public function readChar() : java.StdTypes.Char16;
+	@:overload @:public @:final public function readChar() : java.StdTypes.Char16;
 	
 	/**
 	* See the general contract of the <code>readInt</code>
@@ -314,7 +314,7 @@ package java.io;
 	*             another I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload @:final public function readInt() : Int;
+	@:overload @:public @:final public function readInt() : Int;
 	
 	/**
 	* See the general contract of the <code>readLong</code>
@@ -333,7 +333,7 @@ package java.io;
 	*             another I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload @:final public function readLong() : haxe.Int64;
+	@:overload @:public @:final public function readLong() : haxe.Int64;
 	
 	/**
 	* See the general contract of the <code>readFloat</code>
@@ -353,7 +353,7 @@ package java.io;
 	* @see        java.io.DataInputStream#readInt()
 	* @see        java.lang.Float#intBitsToFloat(int)
 	*/
-	@:overload @:final public function readFloat() : Single;
+	@:overload @:public @:final public function readFloat() : Single;
 	
 	/**
 	* See the general contract of the <code>readDouble</code>
@@ -373,7 +373,7 @@ package java.io;
 	* @see        java.io.DataInputStream#readLong()
 	* @see        java.lang.Double#longBitsToDouble(long)
 	*/
-	@:overload @:final public function readDouble() : Float;
+	@:overload @:public @:final public function readDouble() : Float;
 	
 	/**
 	* See the general contract of the <code>readLine</code>
@@ -402,7 +402,7 @@ package java.io;
 	* @see        java.io.BufferedReader#readLine()
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload @:final public function readLine() : String;
+	@:overload @:public @:final public function readLine() : String;
 	
 	/**
 	* See the general contract of the <code>readUTF</code>
@@ -422,7 +422,7 @@ package java.io;
 	*             modified UTF-8 encoding of a string.
 	* @see        java.io.DataInputStream#readUTF(java.io.DataInput)
 	*/
-	@:overload @:final public function readUTF() : String;
+	@:overload @:public @:final public function readUTF() : String;
 	
 	/**
 	* Reads from the
@@ -445,7 +445,7 @@ package java.io;
 	*               valid modified UTF-8 encoding of a Unicode string.
 	* @see        java.io.DataInputStream#readUnsignedShort()
 	*/
-	@:native('readUTF') @:overload @:final public static function _readUTF(_in : java.io.DataInput) : String;
+	@:native('readUTF') @:overload @:public @:final @:static public static function _readUTF(_in : java.io.DataInput) : String;
 	
 	
 }

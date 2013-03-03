@@ -38,20 +38,20 @@ extern class InterfaceType extends sun.rmi.rmic.iiop.CompoundType
 	* @param useIDLNames If true, print IDL names; otherwise, print java names.
 	* @param globalIDLNames If true and useIDLNames true, prepends "::".
 	*/
-	@:overload public function print(writer : sun.rmi.rmic.IndentingWriter, useQualifiedNames : Bool, useIDLNames : Bool, globalIDLNames : Bool) : Void;
+	@:overload @:public override public function print(writer : sun.rmi.rmic.IndentingWriter, useQualifiedNames : Bool, useIDLNames : Bool, globalIDLNames : Bool) : Void;
 	
 	/**
 	* Create a InterfaceType instance for the given class. NOTE: This constructor
 	* is ONLY for SpecialInterfaceType.
 	*/
-	@:overload private function new(stack : sun.rmi.rmic.iiop.ContextStack, typeCode : Int, classDef : sun.tools.java.ClassDefinition) : Void;
+	@:overload @:protected private function new(stack : sun.rmi.rmic.iiop.ContextStack, typeCode : Int, classDef : sun.tools.java.ClassDefinition) : Void;
 	
 	/**
 	* Create a InterfaceType instance for the given class.  The resulting
 	* object is not yet completely initialized. Subclasses must call
 	* initialize(directInterfaces,directInterfaces,directConstants);
 	*/
-	@:overload private function new(stack : sun.rmi.rmic.iiop.ContextStack, classDef : sun.tools.java.ClassDefinition, typeCode : Int) : Void;
+	@:overload @:protected private function new(stack : sun.rmi.rmic.iiop.ContextStack, classDef : sun.tools.java.ClassDefinition, typeCode : Int) : Void;
 	
 	
 }

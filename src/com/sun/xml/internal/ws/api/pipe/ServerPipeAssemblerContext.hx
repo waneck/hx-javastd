@@ -33,39 +33,39 @@ extern class ServerPipeAssemblerContext extends com.sun.xml.internal.ws.api.pipe
 	* @author Jitendra Kotamraju
 	* @deprecated Use {@link ServerTubeAssemblerContext}.
 	*/
-	@:overload public function new(seiModel : com.sun.xml.internal.ws.api.model.SEIModel, wsdlModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, terminal : com.sun.xml.internal.ws.api.pipe.Tube, isSynchronous : Bool) : Void;
+	@:overload @:public public function new(seiModel : com.sun.xml.internal.ws.api.model.SEIModel, wsdlModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, terminal : com.sun.xml.internal.ws.api.pipe.Tube, isSynchronous : Bool) : Void;
 	
 	/**
 	* Creates a {@link Pipe} that performs SOAP mustUnderstand processing.
 	* This pipe should be before HandlerPipes.
 	*/
-	@:overload public function createServerMUPipe(next : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public public function createServerMUPipe(next : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	/**
 	* creates a {@link Pipe} that dumps messages that pass through.
 	*/
-	@:overload public function createDumpPipe(name : String, out : java.io.PrintStream, next : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public public function createDumpPipe(name : String, out : java.io.PrintStream, next : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	/**
 	* Creates a {@link Pipe} that does the monitoring of the invocation for a
 	* container
 	*/
-	@:overload public function createMonitoringPipe(next : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public public function createMonitoringPipe(next : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	/**
 	* Creates a {@link Pipe} that adds container specific security
 	*/
-	@:overload public function createSecurityPipe(next : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public public function createSecurityPipe(next : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	/**
 	* creates a {@link Pipe} that validates messages against schema
 	*/
-	@:overload public function createValidationPipe(next : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public public function createValidationPipe(next : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	/**
 	* Creates a {@link Pipe} that invokes protocol and logical handlers.
 	*/
-	@:overload public function createHandlerPipe(next : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public public function createHandlerPipe(next : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	/**
 	* The last {@link Pipe} in the pipeline. The assembler is expected to put
@@ -77,12 +77,12 @@ extern class ServerPipeAssemblerContext extends com.sun.xml.internal.ws.api.pipe
 	*
 	* @return always non-null terminal pipe
 	*/
-	@:overload public function getTerminalPipe() : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public public function getTerminalPipe() : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	/**
 	* Creates WS-Addressing pipe
 	*/
-	@:overload public function createWsaPipe(next : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public public function createWsaPipe(next : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	
 }

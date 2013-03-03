@@ -28,22 +28,22 @@ extern class XmlString
 	/**
 	* Textual value. AKA lexical representation.
 	*/
-	public var value(default, null) : String;
+	@:public @:final public var value(default, null) : String;
 	
 	/**
 	* Used to resole in-scope namespace bindings.
 	*/
-	public var context(default, null) : org.relaxng.datatype.ValidationContext;
+	@:public @:final public var context(default, null) : org.relaxng.datatype.ValidationContext;
 	
 	/**
 	* Creates a new {@link XmlString} from a lexical representation and in-scope namespaces.
 	*/
-	@:overload public function new(value : String, context : org.relaxng.datatype.ValidationContext) : Void;
+	@:overload @:public public function new(value : String, context : org.relaxng.datatype.ValidationContext) : Void;
 	
 	/**
 	* Creates a new {@link XmlString} with empty in-scope namespace bindings.
 	*/
-	@:overload public function new(value : String) : Void;
+	@:overload @:public public function new(value : String) : Void;
 	
 	/**
 	* Resolves a namespace prefix to the corresponding namespace URI.
@@ -65,9 +65,9 @@ extern class XmlString
 	*          If the specified prefix is not declared,
 	*          the implementation returns null.
 	*/
-	@:overload @:final public function resolvePrefix(prefix : String) : String;
+	@:overload @:public @:final public function resolvePrefix(prefix : String) : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -32,7 +32,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @param  source A character source implementing the {@link Readable}
 	*         interface
 	*/
-	@:overload public function new(source : java.lang.Readable) : Void;
+	@:overload @:public public function new(source : java.lang.Readable) : Void;
 	
 	/**
 	* Constructs a new <code>Scanner</code> that produces values scanned
@@ -42,7 +42,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*
 	* @param  source An input stream to be scanned
 	*/
-	@:overload public function new(source : java.io.InputStream) : Void;
+	@:overload @:public public function new(source : java.io.InputStream) : Void;
 	
 	/**
 	* Constructs a new <code>Scanner</code> that produces values scanned
@@ -55,7 +55,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws IllegalArgumentException if the specified character set
 	*         does not exist
 	*/
-	@:overload public function new(source : java.io.InputStream, charsetName : String) : Void;
+	@:overload @:public public function new(source : java.io.InputStream, charsetName : String) : Void;
 	
 	/**
 	* Constructs a new <code>Scanner</code> that produces values scanned
@@ -66,7 +66,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @param  source A file to be scanned
 	* @throws FileNotFoundException if source is not found
 	*/
-	@:overload public function new(source : java.io.File) : Void;
+	@:overload @:public public function new(source : java.io.File) : Void;
 	
 	/**
 	* Constructs a new <code>Scanner</code> that produces values scanned
@@ -80,7 +80,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws IllegalArgumentException if the specified encoding is
 	*         not found
 	*/
-	@:overload public function new(source : java.io.File, charsetName : String) : Void;
+	@:overload @:public public function new(source : java.io.File, charsetName : String) : Void;
 	
 	/**
 	* Constructs a new <code>Scanner</code> that produces values scanned
@@ -95,7 +95,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*
 	* @since   1.7
 	*/
-	@:require(java7) @:overload public function new(source : java.nio.file.Path) : Void;
+	@:require(java7) @:overload @:public public function new(source : java.nio.file.Path) : Void;
 	
 	/**
 	* Constructs a new <code>Scanner</code> that produces values scanned
@@ -113,7 +113,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*          if the specified encoding is not found
 	* @since   1.7
 	*/
-	@:require(java7) @:overload public function new(source : java.nio.file.Path, charsetName : String) : Void;
+	@:require(java7) @:overload @:public public function new(source : java.nio.file.Path, charsetName : String) : Void;
 	
 	/**
 	* Constructs a new <code>Scanner</code> that produces values scanned
@@ -121,7 +121,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*
 	* @param  source A string to scan
 	*/
-	@:overload public function new(source : String) : Void;
+	@:overload @:public public function new(source : String) : Void;
 	
 	/**
 	* Constructs a new <code>Scanner</code> that produces values scanned
@@ -131,7 +131,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*
 	* @param  source A channel to scan
 	*/
-	@:overload public function new(source : java.nio.channels.ReadableByteChannel) : Void;
+	@:overload @:public public function new(source : java.nio.channels.ReadableByteChannel) : Void;
 	
 	/**
 	* Constructs a new <code>Scanner</code> that produces values scanned
@@ -144,7 +144,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws IllegalArgumentException if the specified character set
 	*         does not exist
 	*/
-	@:overload public function new(source : java.nio.channels.ReadableByteChannel, charsetName : String) : Void;
+	@:overload @:public public function new(source : java.nio.channels.ReadableByteChannel, charsetName : String) : Void;
 	
 	/**
 	* Closes this scanner.
@@ -159,7 +159,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* been closed will result in an {@link IllegalStateException}.
 	*
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Returns the <code>IOException</code> last thrown by this
@@ -168,7 +168,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*
 	* @return the last exception thrown by this scanner's readable
 	*/
-	@:overload public function ioException() : java.io.IOException;
+	@:overload @:public public function ioException() : java.io.IOException;
 	
 	/**
 	* Returns the <code>Pattern</code> this <code>Scanner</code> is currently
@@ -176,7 +176,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*
 	* @return this scanner's delimiting pattern.
 	*/
-	@:overload public function delimiter() : java.util.regex.Pattern;
+	@:overload @:public public function delimiter() : java.util.regex.Pattern;
 	
 	/**
 	* Sets this scanner's delimiting pattern to the specified pattern.
@@ -184,7 +184,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @param pattern A delimiting pattern
 	* @return this scanner
 	*/
-	@:overload public function useDelimiter(pattern : java.util.regex.Pattern) : java.util.Scanner;
+	@:overload @:public public function useDelimiter(pattern : java.util.regex.Pattern) : java.util.Scanner;
 	
 	/**
 	* Sets this scanner's delimiting pattern to a pattern constructed from
@@ -200,7 +200,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @param pattern A string specifying a delimiting pattern
 	* @return this scanner
 	*/
-	@:overload public function useDelimiter(pattern : String) : java.util.Scanner;
+	@:overload @:public public function useDelimiter(pattern : String) : java.util.Scanner;
 	
 	/**
 	* Returns this scanner's locale.
@@ -211,7 +211,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*
 	* @return this scanner's locale
 	*/
-	@:overload public function locale() : java.util.Locale;
+	@:overload @:public public function locale() : java.util.Locale;
 	
 	/**
 	* Sets this scanner's locale to the specified locale.
@@ -226,7 +226,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @param locale A string specifying the locale to use
 	* @return this scanner
 	*/
-	@:overload public function useLocale(locale : java.util.Locale) : java.util.Scanner;
+	@:overload @:public public function useLocale(locale : java.util.Locale) : java.util.Scanner;
 	
 	/**
 	* Returns this scanner's default radix.
@@ -237,7 +237,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*
 	* @return the default radix of this scanner
 	*/
-	@:overload public function radix() : Int;
+	@:overload @:public public function radix() : Int;
 	
 	/**
 	* Sets this scanner's default radix to the specified radix.
@@ -257,7 +257,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @return this scanner
 	* @throws IllegalArgumentException if radix is out of range
 	*/
-	@:overload public function useRadix(radix : Int) : java.util.Scanner;
+	@:overload @:public public function useRadix(radix : Int) : java.util.Scanner;
 	
 	/**
 	* Returns the match result of the last scanning operation performed
@@ -278,7 +278,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @return a match result for the last match operation
 	* @throws IllegalStateException  If no match result is available
 	*/
-	@:overload public function match() : java.util.regex.MatchResult;
+	@:overload @:public public function match() : java.util.regex.MatchResult;
 	
 	/**
 	* <p>Returns the string representation of this <code>Scanner</code>. The
@@ -287,7 +287,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*
 	* @return  The string representation of this scanner
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns true if this scanner has another token in its input.
@@ -298,7 +298,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws IllegalStateException if this scanner is closed
 	* @see java.util.Iterator
 	*/
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
 	/**
 	* Finds and returns the next complete token from this scanner.
@@ -312,7 +312,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws IllegalStateException if this scanner is closed
 	* @see java.util.Iterator
 	*/
-	@:overload public function next() : String;
+	@:overload @:public public function next() : String;
 	
 	/**
 	* The remove operation is not supported by this implementation of
@@ -321,7 +321,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws UnsupportedOperationException if this method is invoked.
 	* @see java.util.Iterator
 	*/
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	/**
 	* Returns true if the next token matches the pattern constructed from the
@@ -336,7 +336,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*         the specified pattern
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNext(pattern : String) : Bool;
+	@:overload @:public public function hasNext(pattern : String) : Bool;
 	
 	/**
 	* Returns the next token if it matches the pattern constructed from the
@@ -352,7 +352,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if no such tokens are available
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function next(pattern : String) : String;
+	@:overload @:public public function next(pattern : String) : String;
 	
 	/**
 	* Returns true if the next complete token matches the specified pattern.
@@ -365,7 +365,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*         the specified pattern
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNext(pattern : java.util.regex.Pattern) : Bool;
+	@:overload @:public public function hasNext(pattern : java.util.regex.Pattern) : Bool;
 	
 	/**
 	* Returns the next token if it matches the specified pattern. This
@@ -379,7 +379,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if no more tokens are available
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function next(pattern : java.util.regex.Pattern) : String;
+	@:overload @:public public function next(pattern : java.util.regex.Pattern) : String;
 	
 	/**
 	* Returns true if there is another line in the input of this scanner.
@@ -389,7 +389,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @return true if and only if this scanner has another line of input
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNextLine() : Bool;
+	@:overload @:public public function hasNextLine() : Bool;
 	
 	/**
 	* Advances this scanner past the current line and returns the input
@@ -407,7 +407,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if no line was found
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function nextLine() : String;
+	@:overload @:public public function nextLine() : String;
 	
 	/**
 	* Attempts to find the next occurrence of a pattern constructed from the
@@ -421,7 +421,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @return the text that matched the specified pattern
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function findInLine(pattern : String) : String;
+	@:overload @:public public function findInLine(pattern : String) : String;
 	
 	/**
 	* Attempts to find the next occurrence of the specified pattern ignoring
@@ -441,7 +441,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @return the text that matched the specified pattern
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function findInLine(pattern : java.util.regex.Pattern) : String;
+	@:overload @:public public function findInLine(pattern : java.util.regex.Pattern) : String;
 	
 	/**
 	* Attempts to find the next occurrence of a pattern constructed from the
@@ -457,7 +457,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws IllegalStateException if this scanner is closed
 	* @throws IllegalArgumentException if horizon is negative
 	*/
-	@:overload public function findWithinHorizon(pattern : String, horizon : Int) : String;
+	@:overload @:public public function findWithinHorizon(pattern : String, horizon : Int) : String;
 	
 	/**
 	* Attempts to find the next occurrence of the specified pattern.
@@ -489,7 +489,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws IllegalStateException if this scanner is closed
 	* @throws IllegalArgumentException if horizon is negative
 	*/
-	@:overload public function findWithinHorizon(pattern : java.util.regex.Pattern, horizon : Int) : String;
+	@:overload @:public public function findWithinHorizon(pattern : java.util.regex.Pattern, horizon : Int) : String;
 	
 	/**
 	* Skips input that matches the specified pattern, ignoring delimiters.
@@ -514,7 +514,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if the specified pattern is not found
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function skip(pattern : java.util.regex.Pattern) : java.util.Scanner;
+	@:overload @:public public function skip(pattern : java.util.regex.Pattern) : java.util.Scanner;
 	
 	/**
 	* Skips input that matches a pattern constructed from the specified
@@ -528,7 +528,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @return this scanner
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function skip(pattern : String) : java.util.Scanner;
+	@:overload @:public public function skip(pattern : String) : java.util.Scanner;
 	
 	/**
 	* Returns true if the next token in this scanner's input can be
@@ -540,7 +540,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*         boolean value
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNextBoolean() : Bool;
+	@:overload @:public public function hasNextBoolean() : Bool;
 	
 	/**
 	* Scans the next token of the input into a boolean value and returns
@@ -554,7 +554,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if input is exhausted
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function nextBoolean() : Bool;
+	@:overload @:public public function nextBoolean() : Bool;
 	
 	/**
 	* Returns true if the next token in this scanner's input can be
@@ -565,7 +565,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*         byte value
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNextByte() : Bool;
+	@:overload @:public public function hasNextByte() : Bool;
 	
 	/**
 	* Returns true if the next token in this scanner's input can be
@@ -577,7 +577,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*         byte value
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNextByte(radix : Int) : Bool;
+	@:overload @:public public function hasNextByte(radix : Int) : Bool;
 	
 	/**
 	* Scans the next token of the input as a <tt>byte</tt>.
@@ -594,7 +594,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if input is exhausted
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function nextByte() : java.StdTypes.Int8;
+	@:overload @:public public function nextByte() : java.StdTypes.Int8;
 	
 	/**
 	* Scans the next token of the input as a <tt>byte</tt>.
@@ -622,7 +622,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if input is exhausted
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function nextByte(radix : Int) : java.StdTypes.Int8;
+	@:overload @:public public function nextByte(radix : Int) : java.StdTypes.Int8;
 	
 	/**
 	* Returns true if the next token in this scanner's input can be
@@ -633,7 +633,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*         short value in the default radix
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNextShort() : Bool;
+	@:overload @:public public function hasNextShort() : Bool;
 	
 	/**
 	* Returns true if the next token in this scanner's input can be
@@ -645,7 +645,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*         short value in the specified radix
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNextShort(radix : Int) : Bool;
+	@:overload @:public public function hasNextShort(radix : Int) : Bool;
 	
 	/**
 	* Scans the next token of the input as a <tt>short</tt>.
@@ -662,7 +662,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if input is exhausted
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function nextShort() : java.StdTypes.Int16;
+	@:overload @:public public function nextShort() : java.StdTypes.Int16;
 	
 	/**
 	* Scans the next token of the input as a <tt>short</tt>.
@@ -690,7 +690,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if input is exhausted
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function nextShort(radix : Int) : java.StdTypes.Int16;
+	@:overload @:public public function nextShort(radix : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Returns true if the next token in this scanner's input can be
@@ -701,7 +701,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*         int value
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNextInt() : Bool;
+	@:overload @:public public function hasNextInt() : Bool;
 	
 	/**
 	* Returns true if the next token in this scanner's input can be
@@ -713,7 +713,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*         int value
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNextInt(radix : Int) : Bool;
+	@:overload @:public public function hasNextInt(radix : Int) : Bool;
 	
 	/**
 	* Scans the next token of the input as an <tt>int</tt>.
@@ -730,7 +730,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if input is exhausted
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function nextInt() : Int;
+	@:overload @:public public function nextInt() : Int;
 	
 	/**
 	* Scans the next token of the input as an <tt>int</tt>.
@@ -758,7 +758,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if input is exhausted
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function nextInt(radix : Int) : Int;
+	@:overload @:public public function nextInt(radix : Int) : Int;
 	
 	/**
 	* Returns true if the next token in this scanner's input can be
@@ -769,7 +769,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*         long value
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNextLong() : Bool;
+	@:overload @:public public function hasNextLong() : Bool;
 	
 	/**
 	* Returns true if the next token in this scanner's input can be
@@ -781,7 +781,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*         long value
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNextLong(radix : Int) : Bool;
+	@:overload @:public public function hasNextLong(radix : Int) : Bool;
 	
 	/**
 	* Scans the next token of the input as a <tt>long</tt>.
@@ -798,7 +798,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if input is exhausted
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function nextLong() : haxe.Int64;
+	@:overload @:public public function nextLong() : haxe.Int64;
 	
 	/**
 	* Scans the next token of the input as a <tt>long</tt>.
@@ -826,7 +826,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if input is exhausted
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function nextLong(radix : Int) : haxe.Int64;
+	@:overload @:public public function nextLong(radix : Int) : haxe.Int64;
 	
 	/**
 	* Returns true if the next token in this scanner's input can be
@@ -837,7 +837,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*         float value
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNextFloat() : Bool;
+	@:overload @:public public function hasNextFloat() : Bool;
 	
 	/**
 	* Scans the next token of the input as a <tt>float</tt>.
@@ -866,7 +866,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if input is exhausted
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function nextFloat() : Single;
+	@:overload @:public public function nextFloat() : Single;
 	
 	/**
 	* Returns true if the next token in this scanner's input can be
@@ -877,7 +877,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*         double value
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNextDouble() : Bool;
+	@:overload @:public public function hasNextDouble() : Bool;
 	
 	/**
 	* Scans the next token of the input as a <tt>double</tt>.
@@ -906,7 +906,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if the input is exhausted
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function nextDouble() : Float;
+	@:overload @:public public function nextDouble() : Float;
 	
 	/**
 	* Returns true if the next token in this scanner's input can be
@@ -918,7 +918,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*         <code>BigInteger</code>
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNextBigInteger() : Bool;
+	@:overload @:public public function hasNextBigInteger() : Bool;
 	
 	/**
 	* Returns true if the next token in this scanner's input can be
@@ -931,7 +931,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*         <code>BigInteger</code>
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNextBigInteger(radix : Int) : Bool;
+	@:overload @:public public function hasNextBigInteger(radix : Int) : Bool;
 	
 	/**
 	* Scans the next token of the input as a {@link java.math.BigInteger
@@ -949,7 +949,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if the input is exhausted
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function nextBigInteger() : java.math.BigInteger;
+	@:overload @:public public function nextBigInteger() : java.math.BigInteger;
 	
 	/**
 	* Scans the next token of the input as a {@link java.math.BigInteger
@@ -972,7 +972,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if the input is exhausted
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function nextBigInteger(radix : Int) : java.math.BigInteger;
+	@:overload @:public public function nextBigInteger(radix : Int) : java.math.BigInteger;
 	
 	/**
 	* Returns true if the next token in this scanner's input can be
@@ -984,7 +984,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*         <code>BigDecimal</code>
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function hasNextBigDecimal() : Bool;
+	@:overload @:public public function hasNextBigDecimal() : Bool;
 	
 	/**
 	* Scans the next token of the input as a {@link java.math.BigDecimal
@@ -1006,7 +1006,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if the input is exhausted
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function nextBigDecimal() : java.math.BigDecimal;
+	@:overload @:public public function nextBigDecimal() : java.math.BigDecimal;
 	
 	/**
 	* Resets this scanner.
@@ -1029,7 +1029,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function reset() : java.util.Scanner;
+	@:require(java6) @:overload @:public public function reset() : java.util.Scanner;
 	
 	
 }

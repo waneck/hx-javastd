@@ -24,7 +24,7 @@ extern interface StringList extends java.util.List<Dynamic>
 	*  The number of <code>GenericString</code>s in the list. The range of
 	* valid child object indices is 0 to <code>length-1</code> inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	*  Checks if the <code>GenericString</code> <code>item</code> is a member
@@ -34,7 +34,7 @@ extern interface StringList extends java.util.List<Dynamic>
 	* @return  True if this list contains the <code>GenericString</code>
 	*   <code>item</code>.
 	*/
-	@:overload public function contains(item : String) : Bool;
+	@:overload @:public public function contains(item : String) : Bool;
 	
 	/**
 	*  Returns the <code>index</code>th item in the collection or
@@ -45,7 +45,7 @@ extern interface StringList extends java.util.List<Dynamic>
 	*   position in the <code>StringList</code>, or <code>null</code> if
 	*   the index specified is not valid.
 	*/
-	@:overload public function item(index : Int) : String;
+	@:overload @:public public function item(index : Int) : String;
 	
 	
 }

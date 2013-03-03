@@ -48,9 +48,9 @@ package sun.security.pkcs;
 */
 extern class PKCS10Attribute implements sun.security.util.DerEncoder
 {
-	private var attributeId : sun.security.util.ObjectIdentifier;
+	@:protected private var attributeId : sun.security.util.ObjectIdentifier;
 	
-	private var attributeValue : Dynamic;
+	@:protected private var attributeValue : Dynamic;
 	
 	/**
 	* Constructs an attribute from a DER encoding.
@@ -62,7 +62,7 @@ extern class PKCS10Attribute implements sun.security.util.DerEncoder
 	* @param derVal the der encoded attribute.
 	* @exception IOException on parsing errors.
 	*/
-	@:overload public function new(derVal : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(derVal : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Constructs an attribute from individual components of
@@ -72,14 +72,14 @@ extern class PKCS10Attribute implements sun.security.util.DerEncoder
 	* @param attributeValue an instance of a class that implements
 	* the attribute identified by the ObjectIdentifier.
 	*/
-	@:overload public function new(attributeId : sun.security.util.ObjectIdentifier, attributeValue : Dynamic) : Void;
+	@:overload @:public public function new(attributeId : sun.security.util.ObjectIdentifier, attributeValue : Dynamic) : Void;
 	
 	/**
 	* Constructs an attribute from PKCS9 attribute.
 	*
 	* @param attr the PKCS9Attribute to create from.
 	*/
-	@:overload public function new(attr : sun.security.pkcs.PKCS9Attribute) : Void;
+	@:overload @:public public function new(attr : sun.security.pkcs.PKCS9Attribute) : Void;
 	
 	/**
 	* DER encode this object onto an output stream.
@@ -90,22 +90,22 @@ extern class PKCS10Attribute implements sun.security.util.DerEncoder
 	*
 	* @exception IOException on encoding errors.
 	*/
-	@:overload public function derEncode(out : java.io.OutputStream) : Void;
+	@:overload @:public public function derEncode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Returns the ObjectIdentifier of the attribute.
 	*/
-	@:overload public function getAttributeId() : sun.security.util.ObjectIdentifier;
+	@:overload @:public public function getAttributeId() : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Returns the attribute value.
 	*/
-	@:overload public function getAttributeValue() : Dynamic;
+	@:overload @:public public function getAttributeValue() : Dynamic;
 	
 	/**
 	* Returns the attribute in user readable form.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

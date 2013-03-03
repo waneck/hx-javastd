@@ -26,24 +26,24 @@ extern class XPathContainer extends com.sun.org.apache.xml.internal.security.uti
 	*
 	* @param doc
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document) : Void;
 	
 	/**
 	* Sets the TEXT value of the <CODE>ds:XPath</CODE> Element.
 	*
 	* @param xpath
 	*/
-	@:overload public function setXPath(xpath : String) : Void;
+	@:overload @:public public function setXPath(xpath : String) : Void;
 	
 	/**
 	* Returns the TEXT value of the <CODE>ds:XPath</CODE> Element.
 	*
 	* @return the TEXT value of the <CODE>ds:XPath</CODE> Element.
 	*/
-	@:overload public function getXPath() : String;
+	@:overload @:public public function getXPath() : String;
 	
 	/** @inheritDoc */
-	@:overload public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

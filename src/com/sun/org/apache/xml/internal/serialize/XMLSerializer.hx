@@ -63,18 +63,18 @@ extern class XMLSerializer extends com.sun.org.apache.xml.internal.serialize.Bas
 	* @author Elena Litani IBM
 	* @see Serializer
 	*/
-	private static var DEBUG(default, null) : Bool;
+	@:protected @:static @:final private static var DEBUG(default, null) : Bool;
 	
 	/** stores namespaces in scope */
-	private var fNSBinder : com.sun.org.apache.xerces.internal.util.NamespaceSupport;
+	@:protected private var fNSBinder : com.sun.org.apache.xerces.internal.util.NamespaceSupport;
 	
 	/** stores all namespace bindings on the current element */
-	private var fLocalNSBinder : com.sun.org.apache.xerces.internal.util.NamespaceSupport;
+	@:protected private var fLocalNSBinder : com.sun.org.apache.xerces.internal.util.NamespaceSupport;
 	
 	/** symbol table for serialization */
-	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
-	private static var PREFIX(default, null) : String;
+	@:protected @:final @:static private static var PREFIX(default, null) : String;
 	
 	/**
 	* Controls whether namespace fixup should be performed during
@@ -83,26 +83,26 @@ extern class XMLSerializer extends com.sun.org.apache.xml.internal.serialize.Bas
 	* fields need to be initialized: fNSBinder, fLocalNSBinder, fSymbolTable,
 	* XMLSymbols.EMPTY_STRING, fXmlSymbol, fXmlnsSymbol
 	*/
-	private var fNamespaces : Bool;
+	@:protected private var fNamespaces : Bool;
 	
 	/**
 	* Controls whether namespace prefixes will be printed out during serialization
 	*/
-	private var fNamespacePrefixes : Bool;
+	@:protected private var fNamespacePrefixes : Bool;
 	
 	/**
 	* Constructs a new serializer. The serializer cannot be used without
 	* calling {@link #setOutputCharStream} or {@link #setOutputByteStream}
 	* first.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new serializer. The serializer cannot be used without
 	* calling {@link #setOutputCharStream} or {@link #setOutputByteStream}
 	* first.
 	*/
-	@:overload public function new(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public public function new(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
 	/**
 	* Constructs a new serializer that writes to the specified writer
@@ -112,7 +112,7 @@ extern class XMLSerializer extends com.sun.org.apache.xml.internal.serialize.Bas
 	* @param writer The writer to use
 	* @param format The output format to use, null for the default
 	*/
-	@:overload public function new(writer : java.io.Writer, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public public function new(writer : java.io.Writer, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
 	/**
 	* Constructs a new serializer that writes to the specified output
@@ -122,9 +122,9 @@ extern class XMLSerializer extends com.sun.org.apache.xml.internal.serialize.Bas
 	* @param output The output stream to use
 	* @param format The output format to use, null for the default
 	*/
-	@:overload public function new(output : java.io.OutputStream, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public public function new(output : java.io.OutputStream, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
-	@:overload override public function setOutputFormat(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public override public function setOutputFormat(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
 	/**
 	* This methods turns on namespace fixup algorithm during
@@ -133,17 +133,17 @@ extern class XMLSerializer extends com.sun.org.apache.xml.internal.serialize.Bas
 	*
 	* @param namespaces
 	*/
-	@:overload public function setNamespaces(namespaces : Bool) : Void;
+	@:overload @:public public function setNamespaces(namespaces : Bool) : Void;
 	
-	@:overload override public function startElement(namespaceURI : String, localName : String, rawName : String, attrs : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, rawName : String, attrs : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function endElement(namespaceURI : String, localName : String, rawName : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, rawName : String) : Void;
 	
-	@:overload public function endElementIO(namespaceURI : String, localName : String, rawName : String) : Void;
+	@:overload @:public public function endElementIO(namespaceURI : String, localName : String, rawName : String) : Void;
 	
-	@:overload override public function startElement(tagName : String, attrs : org.xml.sax.AttributeList) : Void;
+	@:overload @:public override public function startElement(tagName : String, attrs : org.xml.sax.AttributeList) : Void;
 	
-	@:overload override public function endElement(tagName : String) : Void;
+	@:overload @:public override public function endElement(tagName : String) : Void;
 	
 	/**
 	* Called to serialize the document's DOCTYPE by the root element.
@@ -157,25 +157,25 @@ extern class XMLSerializer extends com.sun.org.apache.xml.internal.serialize.Bas
 	* (see {@link #serializePreRoot}). Pre-root will be serialized even if
 	* this is not the first root element of the document.
 	*/
-	@:overload private function startDocument(rootTagName : String) : Void;
+	@:overload @:protected private function startDocument(rootTagName : String) : Void;
 	
 	/**
 	* Called to serialize a DOM element. Equivalent to calling {@link
 	* #startElement}, {@link #endElement} and serializing everything
 	* inbetween, but better optimized.
 	*/
-	@:overload override private function serializeElement(elem : org.w3c.dom.Element) : Void;
+	@:overload @:protected override private function serializeElement(elem : org.w3c.dom.Element) : Void;
 	
-	@:overload override private function getEntityRef(ch : Int) : String;
+	@:overload @:protected override private function getEntityRef(ch : Int) : String;
 	
-	@:overload override private function printEscaped(source : String) : Void;
+	@:overload @:protected override private function printEscaped(source : String) : Void;
 	
 	/** print text data */
-	@:overload private function printXMLChar(ch : Int) : Void;
+	@:overload @:protected private function printXMLChar(ch : Int) : Void;
 	
-	@:overload override private function printText(text : String, preserveSpace : Bool, unescaped : Bool) : Void;
+	@:overload @:protected override private function printText(text : String, preserveSpace : Bool, unescaped : Bool) : Void;
 	
-	@:overload override private function printText(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, preserveSpace : Bool, unescaped : Bool) : Void;
+	@:overload @:protected override private function printText(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, preserveSpace : Bool, unescaped : Bool) : Void;
 	
 	/**
 	* DOM Level 3:
@@ -183,9 +183,9 @@ extern class XMLSerializer extends com.sun.org.apache.xml.internal.serialize.Bas
 	*
 	* @param node The node to check for unbound namespace prefices
 	*/
-	@:overload override private function checkUnboundNamespacePrefixedNode(node : org.w3c.dom.Node) : Void;
+	@:overload @:protected override private function checkUnboundNamespacePrefixedNode(node : org.w3c.dom.Node) : Void;
 	
-	@:overload override public function reset() : Bool;
+	@:overload @:public override public function reset() : Bool;
 	
 	
 }

@@ -25,9 +25,9 @@ package sun.java2d.jules;
 */
 extern class JulesRenderingEngine extends sun.java2d.pisces.PiscesRenderingEngine
 {
-	@:overload override public function getAATileGenerator(s : java.awt.Shape, at : java.awt.geom.AffineTransform, clip : sun.java2d.pipe.Region, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
+	@:overload @:public override public function getAATileGenerator(s : java.awt.Shape, at : java.awt.geom.AffineTransform, clip : sun.java2d.pipe.Region, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
 	
-	@:overload override public function getMinimumAAPenSize() : Single;
+	@:overload @:public override public function getMinimumAAPenSize() : Single;
 	
 	
 }

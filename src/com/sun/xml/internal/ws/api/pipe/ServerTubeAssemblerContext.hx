@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.api.pipe;
 */
 extern class ServerTubeAssemblerContext
 {
-	@:overload public function new(seiModel : com.sun.xml.internal.ws.api.model.SEIModel, wsdlModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, terminal : com.sun.xml.internal.ws.api.pipe.Tube, isSynchronous : Bool) : Void;
+	@:overload @:public public function new(seiModel : com.sun.xml.internal.ws.api.model.SEIModel, wsdlModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, terminal : com.sun.xml.internal.ws.api.pipe.Tube, isSynchronous : Bool) : Void;
 	
 	/**
 	* The created pipeline will use seiModel to get java concepts for the endpoint
@@ -33,7 +33,7 @@ extern class ServerTubeAssemblerContext
 	* @return Null if the service doesn't have SEI model e.g. Provider endpoints,
 	*         and otherwise non-null.
 	*/
-	@:overload public function getSEIModel() : com.sun.xml.internal.ws.api.model.SEIModel;
+	@:overload @:public public function getSEIModel() : com.sun.xml.internal.ws.api.model.SEIModel;
 	
 	/**
 	* The created pipeline will be used to serve this port.
@@ -41,7 +41,7 @@ extern class ServerTubeAssemblerContext
 	* @return Null if the service isn't associated with any port definition in WSDL,
 	*         and otherwise non-null.
 	*/
-	@:overload public function getWsdlModel() : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
+	@:overload @:public public function getWsdlModel() : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
 	
 	/**
 	*
@@ -50,7 +50,7 @@ extern class ServerTubeAssemblerContext
 	* {@link com.sun.xml.internal.ws.api.pipe.Pipe}s.
 	*  @return Always non-null.
 	*/
-	@:overload public function getEndpoint() : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>;
+	@:overload @:public public function getEndpoint() : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>;
 	
 	/**
 	* The last {@link com.sun.xml.internal.ws.api.pipe.Pipe} in the pipeline. The assembler is expected to put
@@ -62,7 +62,7 @@ extern class ServerTubeAssemblerContext
 	*
 	* @return always non-null terminal pipe
 	*/
-	@:overload public function getTerminalTube() : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public public function getTerminalTube() : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	/**
 	* If this server pipeline is known to be used for serving synchronous transport,
@@ -70,44 +70,44 @@ extern class ServerTubeAssemblerContext
 	* hint, since often synchronous versions are cheaper to execute than asycnhronous
 	* versions.
 	*/
-	@:overload public function isSynchronous() : Bool;
+	@:overload @:public public function isSynchronous() : Bool;
 	
 	/**
 	* Creates a {@link Tube} that performs SOAP mustUnderstand processing.
 	* This pipe should be before HandlerPipes.
 	*/
-	@:overload public function createServerMUTube(next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public public function createServerMUTube(next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	/**
 	* Creates a {@link Tube} that invokes protocol and logical handlers.
 	*/
-	@:overload public function createHandlerTube(next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public public function createHandlerTube(next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	/**
 	* Creates a {@link Tube} that does the monitoring of the invocation for a
 	* container
 	*/
-	@:overload public function createMonitoringTube(next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public public function createMonitoringTube(next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	/**
 	* Creates a {@link Tube} that adds container specific security
 	*/
-	@:overload public function createSecurityTube(next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public public function createSecurityTube(next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	/**
 	* creates a {@link Tube} that dumps messages that pass through.
 	*/
-	@:overload public function createDumpTube(name : String, out : java.io.PrintStream, next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public public function createDumpTube(name : String, out : java.io.PrintStream, next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	/**
 	* creates a {@link Tube} that validates messages against schema
 	*/
-	@:overload public function createValidationTube(next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public public function createValidationTube(next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	/**
 	* Creates WS-Addressing pipe
 	*/
-	@:overload public function createWsaTube(next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public public function createWsaTube(next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	/**
 	* Gets the {@link Codec} that is set by {@link #setCodec} or the default codec
@@ -118,7 +118,7 @@ extern class ServerTubeAssemblerContext
 	* @return codec to be used for web service requests
 	* @see {@link Codecs}
 	*/
-	@:overload public function getCodec() : com.sun.xml.internal.ws.api.pipe.Codec;
+	@:overload @:public public function getCodec() : com.sun.xml.internal.ws.api.pipe.Codec;
 	
 	/**
 	* Interception point to change {@link Codec} during {@link Tube}line assembly. The
@@ -138,7 +138,7 @@ extern class ServerTubeAssemblerContext
 	* @param codec codec to be used for web service requests
 	* @see {@link Codecs}
 	*/
-	@:overload public function setCodec(codec : com.sun.xml.internal.ws.api.pipe.Codec) : Void;
+	@:overload @:public public function setCodec(codec : com.sun.xml.internal.ws.api.pipe.Codec) : Void;
 	
 	
 }

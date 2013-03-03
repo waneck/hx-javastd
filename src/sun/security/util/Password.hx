@@ -26,12 +26,12 @@ package sun.security.util;
 extern class Password
 {
 	/** Reads user password from given input stream. */
-	@:overload public static function readPassword(_in : java.io.InputStream) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public @:static public static function readPassword(_in : java.io.InputStream) : java.NativeArray<java.StdTypes.Char16>;
 	
 	/** Reads user password from given input stream.
 	* @param isEchoOn true if the password should be echoed on the screen
 	*/
-	@:overload public static function readPassword(_in : java.io.InputStream, isEchoOn : Bool) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public @:static public static function readPassword(_in : java.io.InputStream, isEchoOn : Bool) : java.NativeArray<java.StdTypes.Char16>;
 	
 	
 }

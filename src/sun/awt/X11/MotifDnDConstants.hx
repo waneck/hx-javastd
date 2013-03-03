@@ -25,94 +25,94 @@ package sun.awt.X11;
 */
 @:internal extern class MotifDnDConstants
 {
-	public static var MOTIF_DND_PROTOCOL_VERSION(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var MOTIF_DND_PROTOCOL_VERSION(default, null) : java.StdTypes.Int8;
 	
 	/* Supported protocol styles */
-	public static var MOTIF_PREFER_PREREGISTER_STYLE(default, null) : Int;
+	@:public @:static @:final public static var MOTIF_PREFER_PREREGISTER_STYLE(default, null) : Int;
 	
-	public static var MOTIF_PREFER_DYNAMIC_STYLE(default, null) : Int;
+	@:public @:static @:final public static var MOTIF_PREFER_DYNAMIC_STYLE(default, null) : Int;
 	
-	public static var MOTIF_DYNAMIC_STYLE(default, null) : Int;
+	@:public @:static @:final public static var MOTIF_DYNAMIC_STYLE(default, null) : Int;
 	
-	public static var MOTIF_PREFER_RECEIVER_STYLE(default, null) : Int;
+	@:public @:static @:final public static var MOTIF_PREFER_RECEIVER_STYLE(default, null) : Int;
 	
 	/* Info structure sizes */
-	public static var MOTIF_INITIATOR_INFO_SIZE(default, null) : Int;
+	@:public @:static @:final public static var MOTIF_INITIATOR_INFO_SIZE(default, null) : Int;
 	
-	public static var MOTIF_RECEIVER_INFO_SIZE(default, null) : Int;
+	@:public @:static @:final public static var MOTIF_RECEIVER_INFO_SIZE(default, null) : Int;
 	
 	/* Sender/reason message masks */
-	public static var MOTIF_MESSAGE_REASON_MASK(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var MOTIF_MESSAGE_REASON_MASK(default, null) : java.StdTypes.Int8;
 	
-	public static var MOTIF_MESSAGE_SENDER_MASK(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var MOTIF_MESSAGE_SENDER_MASK(default, null) : java.StdTypes.Int8;
 	
-	public static var MOTIF_MESSAGE_FROM_RECEIVER(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var MOTIF_MESSAGE_FROM_RECEIVER(default, null) : java.StdTypes.Int8;
 	
-	public static var MOTIF_MESSAGE_FROM_INITIATOR(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var MOTIF_MESSAGE_FROM_INITIATOR(default, null) : java.StdTypes.Int8;
 	
 	/* Message flags masks and shifts */
-	public static var MOTIF_DND_ACTION_MASK(default, null) : Int;
+	@:public @:static @:final public static var MOTIF_DND_ACTION_MASK(default, null) : Int;
 	
-	public static var MOTIF_DND_ACTION_SHIFT(default, null) : Int;
+	@:public @:static @:final public static var MOTIF_DND_ACTION_SHIFT(default, null) : Int;
 	
-	public static var MOTIF_DND_STATUS_MASK(default, null) : Int;
+	@:public @:static @:final public static var MOTIF_DND_STATUS_MASK(default, null) : Int;
 	
-	public static var MOTIF_DND_STATUS_SHIFT(default, null) : Int;
+	@:public @:static @:final public static var MOTIF_DND_STATUS_SHIFT(default, null) : Int;
 	
-	public static var MOTIF_DND_ACTIONS_MASK(default, null) : Int;
+	@:public @:static @:final public static var MOTIF_DND_ACTIONS_MASK(default, null) : Int;
 	
-	public static var MOTIF_DND_ACTIONS_SHIFT(default, null) : Int;
+	@:public @:static @:final public static var MOTIF_DND_ACTIONS_SHIFT(default, null) : Int;
 	
 	/* message type constants */
-	public static var TOP_LEVEL_ENTER(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var TOP_LEVEL_ENTER(default, null) : java.StdTypes.Int8;
 	
-	public static var TOP_LEVEL_LEAVE(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var TOP_LEVEL_LEAVE(default, null) : java.StdTypes.Int8;
 	
-	public static var DRAG_MOTION(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var DRAG_MOTION(default, null) : java.StdTypes.Int8;
 	
-	public static var DROP_SITE_ENTER(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var DROP_SITE_ENTER(default, null) : java.StdTypes.Int8;
 	
-	public static var DROP_SITE_LEAVE(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var DROP_SITE_LEAVE(default, null) : java.StdTypes.Int8;
 	
-	public static var DROP_START(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var DROP_START(default, null) : java.StdTypes.Int8;
 	
-	public static var DROP_FINISH(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var DROP_FINISH(default, null) : java.StdTypes.Int8;
 	
-	public static var DRAG_DROP_FINISH(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var DRAG_DROP_FINISH(default, null) : java.StdTypes.Int8;
 	
-	public static var OPERATION_CHANGED(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var OPERATION_CHANGED(default, null) : java.StdTypes.Int8;
 	
 	/* drop action constants */
-	public static var MOTIF_DND_NOOP(default, null) : Int;
+	@:public @:static @:final public static var MOTIF_DND_NOOP(default, null) : Int;
 	
-	public static var MOTIF_DND_MOVE(default, null) : Int;
+	@:public @:static @:final public static var MOTIF_DND_MOVE(default, null) : Int;
 	
-	public static var MOTIF_DND_COPY(default, null) : Int;
+	@:public @:static @:final public static var MOTIF_DND_COPY(default, null) : Int;
 	
-	public static var MOTIF_DND_LINK(default, null) : Int;
+	@:public @:static @:final public static var MOTIF_DND_LINK(default, null) : Int;
 	
 	/* drop site status constants */
-	public static var MOTIF_NO_DROP_SITE(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var MOTIF_NO_DROP_SITE(default, null) : java.StdTypes.Int8;
 	
-	public static var MOTIF_INVALID_DROP_SITE(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var MOTIF_INVALID_DROP_SITE(default, null) : java.StdTypes.Int8;
 	
-	public static var MOTIF_VALID_DROP_SITE(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var MOTIF_VALID_DROP_SITE(default, null) : java.StdTypes.Int8;
 	
-	@:overload public static function getMotifActionsForJavaActions(javaActions : Int) : Int;
+	@:overload @:public @:static public static function getMotifActionsForJavaActions(javaActions : Int) : Int;
 	
-	@:overload public static function getJavaActionsForMotifActions(motifActions : Int) : Int;
+	@:overload @:public @:static public static function getJavaActionsForMotifActions(motifActions : Int) : Int;
 	
 	
 }
 @:native('sun$awt$X11$MotifDnDConstants$Swapper') extern class MotifDnDConstants_Swapper
 {
-	@:overload public static function swap(s : java.StdTypes.Int16) : java.StdTypes.Int16;
+	@:overload @:public @:static public static function swap(s : java.StdTypes.Int16) : java.StdTypes.Int16;
 	
-	@:overload public static function swap(i : Int) : Int;
+	@:overload @:public @:static public static function swap(i : Int) : Int;
 	
-	@:overload public static function getShort(data : haxe.Int64, order : java.StdTypes.Int8) : java.StdTypes.Int16;
+	@:overload @:public @:static public static function getShort(data : haxe.Int64, order : java.StdTypes.Int8) : java.StdTypes.Int16;
 	
-	@:overload public static function getInt(data : haxe.Int64, order : java.StdTypes.Int8) : Int;
+	@:overload @:public @:static public static function getInt(data : haxe.Int64, order : java.StdTypes.Int8) : Int;
 	
 	
 }

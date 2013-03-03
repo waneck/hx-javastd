@@ -25,11 +25,11 @@ package com.sun.corba.se.spi.transport;
 */
 extern interface SocketInfo
 {
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function getHost() : String;
+	@:overload @:public public function getHost() : String;
 	
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
 	
 }

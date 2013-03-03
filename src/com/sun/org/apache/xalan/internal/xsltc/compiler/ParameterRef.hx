@@ -23,11 +23,11 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class ParameterRef extends com.sun.org.apache.xalan.internal.xsltc.compiler.VariableRefBase
 {
-	@:overload public function new(param : com.sun.org.apache.xalan.internal.xsltc.compiler.Param) : Void;
+	@:overload @:public public function new(param : com.sun.org.apache.xalan.internal.xsltc.compiler.Param) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

@@ -25,51 +25,51 @@ package sun.java2d.cmm.lcms;
 */
 @:internal extern class LCMSImageLayout
 {
-	@:overload public static function BYTES_SH(x : Int) : Int;
+	@:overload @:public @:static public static function BYTES_SH(x : Int) : Int;
 	
-	@:overload public static function EXTRA_SH(x : Int) : Int;
+	@:overload @:public @:static public static function EXTRA_SH(x : Int) : Int;
 	
-	@:overload public static function CHANNELS_SH(x : Int) : Int;
+	@:overload @:public @:static public static function CHANNELS_SH(x : Int) : Int;
 	
-	public static var SWAPFIRST(default, null) : Int;
+	@:public @:static @:final public static var SWAPFIRST(default, null) : Int;
 	
-	public static var DOSWAP(default, null) : Int;
+	@:public @:static @:final public static var DOSWAP(default, null) : Int;
 	
-	public static var PT_RGB_8(default, null) : Int;
+	@:public @:static @:final public static var PT_RGB_8(default, null) : Int;
 	
-	public static var PT_GRAY_8(default, null) : Int;
+	@:public @:static @:final public static var PT_GRAY_8(default, null) : Int;
 	
-	public static var PT_GRAY_16(default, null) : Int;
+	@:public @:static @:final public static var PT_GRAY_16(default, null) : Int;
 	
-	public static var PT_RGBA_8(default, null) : Int;
+	@:public @:static @:final public static var PT_RGBA_8(default, null) : Int;
 	
-	public static var PT_ARGB_8(default, null) : Int;
+	@:public @:static @:final public static var PT_ARGB_8(default, null) : Int;
 	
-	public static var PT_BGR_8(default, null) : Int;
+	@:public @:static @:final public static var PT_BGR_8(default, null) : Int;
 	
-	public static var PT_ABGR_8(default, null) : Int;
+	@:public @:static @:final public static var PT_ABGR_8(default, null) : Int;
 	
-	public static var PT_BGRA_8(default, null) : Int;
+	@:public @:static @:final public static var PT_BGRA_8(default, null) : Int;
 	
-	public static var DT_BYTE(default, null) : Int;
+	@:public @:static @:final public static var DT_BYTE(default, null) : Int;
 	
-	public static var DT_SHORT(default, null) : Int;
+	@:public @:static @:final public static var DT_SHORT(default, null) : Int;
 	
-	public static var DT_INT(default, null) : Int;
+	@:public @:static @:final public static var DT_INT(default, null) : Int;
 	
-	public static var DT_DOUBLE(default, null) : Int;
+	@:public @:static @:final public static var DT_DOUBLE(default, null) : Int;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>, np : Int, pixelType : Int, pixelSize : Int) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>, np : Int, pixelType : Int, pixelSize : Int) : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int16>, np : Int, pixelType : Int, pixelSize : Int) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int16>, np : Int, pixelType : Int, pixelSize : Int) : Void;
 	
-	@:overload public function new(data : java.NativeArray<Int>, np : Int, pixelType : Int, pixelSize : Int) : Void;
+	@:overload @:public public function new(data : java.NativeArray<Int>, np : Int, pixelType : Int, pixelSize : Int) : Void;
 	
-	@:overload public function new(data : java.NativeArray<Float>, np : Int, pixelType : Int, pixelSize : Int) : Void;
+	@:overload @:public public function new(data : java.NativeArray<Float>, np : Int, pixelType : Int, pixelSize : Int) : Void;
 	
-	@:overload public function new(image : java.awt.image.BufferedImage) : Void;
+	@:overload @:public public function new(image : java.awt.image.BufferedImage) : Void;
 	
-	@:overload public static function isSupported(image : java.awt.image.BufferedImage) : Bool;
+	@:overload @:public @:static public static function isSupported(image : java.awt.image.BufferedImage) : Bool;
 	
 	
 }

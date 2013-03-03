@@ -23,37 +23,37 @@ extern interface XSDecimal
 	/**
 	* @return the <code>BigDecimal</code> representation of this object
 	*/
-	@:overload public function getBigDecimal() : java.math.BigDecimal;
+	@:overload @:public public function getBigDecimal() : java.math.BigDecimal;
 	
 	/**
 	* @return the <code>BigInteger</code> representation of this object
 	* @exception NumberFormatException if the value cannot be represented as a <code>BigInteger</code>
 	*/
-	@:overload public function getBigInteger() : java.math.BigInteger;
+	@:overload @:public public function getBigInteger() : java.math.BigInteger;
 	
 	/**
 	* @return the long value representation of this object
 	* @exception NumberFormatException if the value cannot be represented as a <code>long</code>
 	*/
-	@:overload public function getLong() : haxe.Int64;
+	@:overload @:public public function getLong() : haxe.Int64;
 	
 	/**
 	* @return the int value representation of this object
 	* @exception NumberFormatException if the value cannot be represented as a <code>int</code>
 	*/
-	@:overload public function getInt() : Int;
+	@:overload @:public public function getInt() : Int;
 	
 	/**
 	* @return the short value representation of this object
 	* @exception NumberFormatException if the value cannot be represented as a <code>short</code>
 	*/
-	@:overload public function getShort() : java.StdTypes.Int16;
+	@:overload @:public public function getShort() : java.StdTypes.Int16;
 	
 	/**
 	* @return the byte value representation of this object
 	* @exception NumberFormatException if the value cannot be represented as a <code>byte</code>
 	*/
-	@:overload public function getByte() : java.StdTypes.Int8;
+	@:overload @:public public function getByte() : java.StdTypes.Int8;
 	
 	
 }

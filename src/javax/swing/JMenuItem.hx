@@ -73,21 +73,21 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	/**
 	* Creates a <code>JMenuItem</code> with no set text or icon.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>JMenuItem</code> with the specified icon.
 	*
 	* @param icon the icon of the <code>JMenuItem</code>
 	*/
-	@:overload public function new(icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates a <code>JMenuItem</code> with the specified text.
 	*
 	* @param text the text of the <code>JMenuItem</code>
 	*/
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* Creates a menu item whose properties are taken from the
@@ -96,7 +96,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @param a the action of the <code>JMenuItem</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(a : javax.swing.Action) : Void;
+	@:require(java3) @:overload @:public public function new(a : javax.swing.Action) : Void;
 	
 	/**
 	* Creates a <code>JMenuItem</code> with the specified text and icon.
@@ -104,7 +104,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @param text the text of the <code>JMenuItem</code>
 	* @param icon the icon of the <code>JMenuItem</code>
 	*/
-	@:overload public function new(text : String, icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(text : String, icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates a <code>JMenuItem</code> with the specified text and
@@ -113,12 +113,12 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @param text the text of the <code>JMenuItem</code>
 	* @param mnemonic the keyboard mnemonic for the <code>JMenuItem</code>
 	*/
-	@:overload public function new(text : String, mnemonic : Int) : Void;
+	@:overload @:public public function new(text : String, mnemonic : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setModel(newModel : javax.swing.ButtonModel) : Void;
+	@:overload @:public override public function setModel(newModel : javax.swing.ButtonModel) : Void;
 	
 	/**
 	* Initializes the menu item with the specified text and icon.
@@ -126,7 +126,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @param text the text of the <code>JMenuItem</code>
 	* @param icon the icon of the <code>JMenuItem</code>
 	*/
-	@:overload private function init(text : String, icon : javax.swing.Icon) : Void;
+	@:overload @:protected override private function init(text : String, icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Sets the look and feel object that renders this component.
@@ -139,14 +139,14 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.MenuItemUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.MenuItemUI) : Void;
 	
 	/**
 	* Resets the UI property with a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the suffix used to construct the name of the L&F class used to
@@ -156,7 +156,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Identifies the menu item as "armed". If the mouse button is
@@ -169,7 +169,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	*    description: Mouse release will fire an action event
 	*         hidden: true
 	*/
-	@:overload public function setArmed(b : Bool) : Void;
+	@:overload @:public public function setArmed(b : Bool) : Void;
 	
 	/**
 	* Returns whether the menu item is "armed".
@@ -177,7 +177,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @return true if the menu item is armed, and it can be selected
 	* @see #setArmed
 	*/
-	@:overload public function isArmed() : Bool;
+	@:overload @:public public function isArmed() : Bool;
 	
 	/**
 	* Enables or disables the menu item.
@@ -188,7 +188,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	*          bound: true
 	*      preferred: true
 	*/
-	@:overload override public function setEnabled(b : Bool) : Void;
+	@:overload @:public override public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Sets the key combination which invokes the menu item's
@@ -206,7 +206,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	*           bound: true
 	*       preferred: true
 	*/
-	@:overload public function setAccelerator(keyStroke : javax.swing.KeyStroke) : Void;
+	@:overload @:public public function setAccelerator(keyStroke : javax.swing.KeyStroke) : Void;
 	
 	/**
 	* Returns the <code>KeyStroke</code> which serves as an accelerator
@@ -214,20 +214,20 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @return a <code>KeyStroke</code> object identifying the
 	*          accelerator key
 	*/
-	@:overload public function getAccelerator() : javax.swing.KeyStroke;
+	@:overload @:public public function getAccelerator() : javax.swing.KeyStroke;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function configurePropertiesFromAction(a : javax.swing.Action) : Void;
+	@:require(java3) @:overload @:protected override private function configurePropertiesFromAction(a : javax.swing.Action) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function actionPropertyChanged(action : javax.swing.Action, propertyName : String) : Void;
+	@:require(java6) @:overload @:protected override private function actionPropertyChanged(action : javax.swing.Action, propertyName : String) : Void;
 	
 	/**
 	* Processes a mouse event forwarded from the
@@ -242,7 +242,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @param path  the <code>MenuElement</code> path array
 	* @param manager   the <code>MenuSelectionManager</code>
 	*/
-	@:overload public function processMouseEvent(e : java.awt.event.MouseEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
+	@:overload @:public public function processMouseEvent(e : java.awt.event.MouseEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
 	
 	/**
 	* Processes a key event forwarded from the
@@ -256,21 +256,21 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @param path the <code>MenuElement</code> path array
 	* @param manager   the <code>MenuSelectionManager</code>
 	*/
-	@:overload public function processKeyEvent(e : java.awt.event.KeyEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
+	@:overload @:public public function processKeyEvent(e : java.awt.event.KeyEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
 	
 	/**
 	* Handles mouse drag in a menu.
 	*
 	* @param e  a <code>MenuDragMouseEvent</code> object
 	*/
-	@:overload public function processMenuDragMouseEvent(e : javax.swing.event.MenuDragMouseEvent) : Void;
+	@:overload @:public public function processMenuDragMouseEvent(e : javax.swing.event.MenuDragMouseEvent) : Void;
 	
 	/**
 	* Handles a keystroke in a menu.
 	*
 	* @param e  a <code>MenuKeyEvent</code> object
 	*/
-	@:overload public function processMenuKeyEvent(e : javax.swing.event.MenuKeyEvent) : Void;
+	@:overload @:public public function processMenuKeyEvent(e : javax.swing.event.MenuKeyEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -279,7 +279,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @param event a <code>MenuMouseDragEvent</code>
 	* @see EventListenerList
 	*/
-	@:overload private function fireMenuDragMouseEntered(event : javax.swing.event.MenuDragMouseEvent) : Void;
+	@:overload @:protected private function fireMenuDragMouseEntered(event : javax.swing.event.MenuDragMouseEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -288,7 +288,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @param event a <code>MenuDragMouseEvent</code>
 	* @see EventListenerList
 	*/
-	@:overload private function fireMenuDragMouseExited(event : javax.swing.event.MenuDragMouseEvent) : Void;
+	@:overload @:protected private function fireMenuDragMouseExited(event : javax.swing.event.MenuDragMouseEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -297,7 +297,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @param event a <code>MenuDragMouseEvent</code>
 	* @see EventListenerList
 	*/
-	@:overload private function fireMenuDragMouseDragged(event : javax.swing.event.MenuDragMouseEvent) : Void;
+	@:overload @:protected private function fireMenuDragMouseDragged(event : javax.swing.event.MenuDragMouseEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -306,7 +306,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @param event a <code>MenuDragMouseEvent</code>
 	* @see EventListenerList
 	*/
-	@:overload private function fireMenuDragMouseReleased(event : javax.swing.event.MenuDragMouseEvent) : Void;
+	@:overload @:protected private function fireMenuDragMouseReleased(event : javax.swing.event.MenuDragMouseEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -315,7 +315,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @param event a <code>MenuKeyEvent</code>
 	* @see EventListenerList
 	*/
-	@:overload private function fireMenuKeyPressed(event : javax.swing.event.MenuKeyEvent) : Void;
+	@:overload @:protected private function fireMenuKeyPressed(event : javax.swing.event.MenuKeyEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -324,7 +324,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @param event a <code>MenuKeyEvent</code>
 	* @see EventListenerList
 	*/
-	@:overload private function fireMenuKeyReleased(event : javax.swing.event.MenuKeyEvent) : Void;
+	@:overload @:protected private function fireMenuKeyReleased(event : javax.swing.event.MenuKeyEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -333,7 +333,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @param event a <code>MenuKeyEvent</code>
 	* @see EventListenerList
 	*/
-	@:overload private function fireMenuKeyTyped(event : javax.swing.event.MenuKeyEvent) : Void;
+	@:overload @:protected private function fireMenuKeyTyped(event : javax.swing.event.MenuKeyEvent) : Void;
 	
 	/**
 	* Called by the <code>MenuSelectionManager</code> when the
@@ -345,7 +345,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	*                    that path is still the same
 	* @see MenuSelectionManager#setSelectedPath(MenuElement[])
 	*/
-	@:overload public function menuSelectionChanged(isIncluded : Bool) : Void;
+	@:overload @:public public function menuSelectionChanged(isIncluded : Bool) : Void;
 	
 	/**
 	* This method returns an array containing the sub-menu
@@ -353,7 +353,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	*
 	* @return an array of <code>MenuElement</code>s
 	*/
-	@:overload public function getSubElements() : java.NativeArray<javax.swing.MenuElement>;
+	@:overload @:public public function getSubElements() : java.NativeArray<javax.swing.MenuElement>;
 	
 	/**
 	* Returns the <code>java.awt.Component</code> used to paint
@@ -362,21 +362,21 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	*
 	* @return the <code>Component</code> that paints this menu item
 	*/
-	@:overload public function getComponent() : java.awt.Component;
+	@:overload @:public public function getComponent() : java.awt.Component;
 	
 	/**
 	* Adds a <code>MenuDragMouseListener</code> to the menu item.
 	*
 	* @param l the <code>MenuDragMouseListener</code> to be added
 	*/
-	@:overload public function addMenuDragMouseListener(l : javax.swing.event.MenuDragMouseListener) : Void;
+	@:overload @:public public function addMenuDragMouseListener(l : javax.swing.event.MenuDragMouseListener) : Void;
 	
 	/**
 	* Removes a <code>MenuDragMouseListener</code> from the menu item.
 	*
 	* @param l the <code>MenuDragMouseListener</code> to be removed
 	*/
-	@:overload public function removeMenuDragMouseListener(l : javax.swing.event.MenuDragMouseListener) : Void;
+	@:overload @:public public function removeMenuDragMouseListener(l : javax.swing.event.MenuDragMouseListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>MenuDragMouseListener</code>s added
@@ -386,21 +386,21 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getMenuDragMouseListeners() : java.NativeArray<javax.swing.event.MenuDragMouseListener>;
+	@:require(java4) @:overload @:public public function getMenuDragMouseListeners() : java.NativeArray<javax.swing.event.MenuDragMouseListener>;
 	
 	/**
 	* Adds a <code>MenuKeyListener</code> to the menu item.
 	*
 	* @param l the <code>MenuKeyListener</code> to be added
 	*/
-	@:overload public function addMenuKeyListener(l : javax.swing.event.MenuKeyListener) : Void;
+	@:overload @:public public function addMenuKeyListener(l : javax.swing.event.MenuKeyListener) : Void;
 	
 	/**
 	* Removes a <code>MenuKeyListener</code> from the menu item.
 	*
 	* @param l the <code>MenuKeyListener</code> to be removed
 	*/
-	@:overload public function removeMenuKeyListener(l : javax.swing.event.MenuKeyListener) : Void;
+	@:overload @:public public function removeMenuKeyListener(l : javax.swing.event.MenuKeyListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>MenuKeyListener</code>s added
@@ -410,7 +410,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getMenuKeyListeners() : java.NativeArray<javax.swing.event.MenuKeyListener>;
+	@:require(java4) @:overload @:public public function getMenuKeyListeners() : java.NativeArray<javax.swing.event.MenuKeyListener>;
 	
 	/**
 	* Returns a string representation of this <code>JMenuItem</code>.
@@ -421,7 +421,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	*
 	* @return  a string representation of this <code>JMenuItem</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Returns the <code>AccessibleContext</code> associated with this
@@ -433,15 +433,15 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @return an <code>AccessibleJMenuItem</code> that serves as the
 	*         <code>AccessibleContext</code> of this <code>JMenuItem</code>
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
 @:native('javax$swing$JMenuItem$MenuItemFocusListener') @:internal extern class JMenuItem_MenuItemFocusListener implements java.awt.event.FocusListener implements java.io.Serializable
 {
-	@:overload public function focusGained(event : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(event : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusLost(event : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(event : java.awt.event.FocusEvent) : Void;
 	
 	
 }
@@ -468,12 +468,12 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Supports the change listener interface and fires property changes.
 	*/
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }

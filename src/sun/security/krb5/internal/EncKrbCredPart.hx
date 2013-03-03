@@ -49,15 +49,15 @@ extern class EncKrbCredPart
 	* <a href="http://www.ietf.org/rfc/rfc4120.txt">
 	* http://www.ietf.org/rfc/rfc4120.txt</a>.
 	*/
-	public var ticketInfo : java.NativeArray<sun.security.krb5.internal.KrbCredInfo>;
+	@:public public var ticketInfo : java.NativeArray<sun.security.krb5.internal.KrbCredInfo>;
 	
-	public var timeStamp : sun.security.krb5.internal.KerberosTime;
+	@:public public var timeStamp : sun.security.krb5.internal.KerberosTime;
 	
-	@:overload public function new(new_ticketInfo : java.NativeArray<sun.security.krb5.internal.KrbCredInfo>, new_timeStamp : sun.security.krb5.internal.KerberosTime, new_usec : Null<Int>, new_nonce : Null<Int>, new_sAddress : sun.security.krb5.internal.HostAddress, new_rAddress : sun.security.krb5.internal.HostAddresses) : Void;
+	@:overload @:public public function new(new_ticketInfo : java.NativeArray<sun.security.krb5.internal.KrbCredInfo>, new_timeStamp : sun.security.krb5.internal.KerberosTime, new_usec : Null<Int>, new_nonce : Null<Int>, new_sAddress : sun.security.krb5.internal.HostAddress, new_rAddress : sun.security.krb5.internal.HostAddresses) : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes an EncKrbCredPart object.
@@ -66,7 +66,7 @@ extern class EncKrbCredPart
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

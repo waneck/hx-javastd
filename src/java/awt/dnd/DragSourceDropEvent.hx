@@ -62,7 +62,7 @@ package java.awt.dnd;
 	*
 	* @see DragSourceEvent#getLocation
 	*/
-	@:overload public function new(dsc : java.awt.dnd.DragSourceContext, action : Int, success : Bool) : Void;
+	@:overload @:public public function new(dsc : java.awt.dnd.DragSourceContext, action : Int, success : Bool) : Void;
 	
 	/**
 	* Construct a <code>DragSourceDropEvent</code> for a drop, given the
@@ -84,7 +84,7 @@ package java.awt.dnd;
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(dsc : java.awt.dnd.DragSourceContext, action : Int, success : Bool, x : Int, y : Int) : Void;
+	@:require(java4) @:overload @:public public function new(dsc : java.awt.dnd.DragSourceContext, action : Int, success : Bool, x : Int, y : Int) : Void;
 	
 	/**
 	* Construct a <code>DragSourceDropEvent</code>
@@ -99,7 +99,7 @@ package java.awt.dnd;
 	*
 	* @see DragSourceEvent#getLocation
 	*/
-	@:overload public function new(dsc : java.awt.dnd.DragSourceContext) : Void;
+	@:overload @:public public function new(dsc : java.awt.dnd.DragSourceContext) : Void;
 	
 	/**
 	* This method returns a <code>boolean</code> indicating
@@ -111,7 +111,7 @@ package java.awt.dnd;
 	*         if the drop target accepted the drop, but failed to perform
 	*         a drop action.
 	*/
-	@:overload public function getDropSuccess() : Bool;
+	@:overload @:public public function getDropSuccess() : Bool;
 	
 	/**
 	* This method returns an <code>int</code> representing
@@ -122,7 +122,7 @@ package java.awt.dnd;
 	*         is supported by the drag source; otherwise,
 	*         <code>DnDConstants.ACTION_NONE</code>.
 	*/
-	@:overload public function getDropAction() : Int;
+	@:overload @:public public function getDropAction() : Int;
 	
 	
 }

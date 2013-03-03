@@ -25,7 +25,7 @@ package sun.awt.motif;
 */
 extern class X11CNS11643P2 extends sun.awt.motif.X11CNS11643
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

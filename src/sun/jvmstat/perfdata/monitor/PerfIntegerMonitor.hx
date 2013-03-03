@@ -35,7 +35,7 @@ extern class PerfIntegerMonitor extends sun.jvmstat.monitor.AbstractMonitor impl
 	* @param supported support level indicator
 	* @param ib the buffer containing the integer instrument data.
 	*/
-	@:overload public function new(name : String, u : sun.jvmstat.monitor.Units, v : sun.jvmstat.monitor.Variability, supported : Bool, ib : java.nio.IntBuffer) : Void;
+	@:overload @:public public function new(name : String, u : sun.jvmstat.monitor.Units, v : sun.jvmstat.monitor.Variability, supported : Bool, ib : java.nio.IntBuffer) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -45,14 +45,14 @@ extern class PerfIntegerMonitor extends sun.jvmstat.monitor.AbstractMonitor impl
 	* @return Object - the current value of the the IntegerInstrument. The
 	*                   return type is guaranteed to be of type Integer.
 	*/
-	@:overload override public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
 	/**
 	* Return the current value of the IntegerInstrument as an int.
 	*
 	* @return int - a the current value of the IntegerInstrument.
 	*/
-	@:overload public function intValue() : Int;
+	@:overload @:public public function intValue() : Int;
 	
 	
 }

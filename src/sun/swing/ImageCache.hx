@@ -25,19 +25,19 @@ package sun.swing;
 */
 extern class ImageCache
 {
-	@:overload public function new(maxCount : Int) : Void;
+	@:overload @:public public function new(maxCount : Int) : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* Returns the cached Image, or null, for the specified arguments.
 	*/
-	@:overload public function getImage(key : Dynamic, config : java.awt.GraphicsConfiguration, w : Int, h : Int, args : java.NativeArray<Dynamic>) : java.awt.Image;
+	@:overload @:public public function getImage(key : Dynamic, config : java.awt.GraphicsConfiguration, w : Int, h : Int, args : java.NativeArray<Dynamic>) : java.awt.Image;
 	
 	/**
 	* Sets the cached image for the specified constraints.
 	*/
-	@:overload public function setImage(key : Dynamic, config : java.awt.GraphicsConfiguration, w : Int, h : Int, args : java.NativeArray<Dynamic>, image : java.awt.Image) : Void;
+	@:overload @:public public function setImage(key : Dynamic, config : java.awt.GraphicsConfiguration, w : Int, h : Int, args : java.NativeArray<Dynamic>, image : java.awt.Image) : Void;
 	
 	
 }
@@ -46,13 +46,13 @@ extern class ImageCache
 */
 @:native('sun$swing$ImageCache$Entry') @:internal extern class ImageCache_Entry
 {
-	@:overload public function setImage(image : java.awt.Image) : Void;
+	@:overload @:public public function setImage(image : java.awt.Image) : Void;
 	
-	@:overload public function getImage() : java.awt.Image;
+	@:overload @:public public function getImage() : java.awt.Image;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(config : java.awt.GraphicsConfiguration, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Bool;
+	@:overload @:public public function equals(config : java.awt.GraphicsConfiguration, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Bool;
 	
 	
 }

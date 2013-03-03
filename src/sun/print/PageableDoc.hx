@@ -25,17 +25,17 @@ package sun.print;
 */
 extern class PageableDoc implements javax.print.Doc
 {
-	@:overload public function new(pageable : java.awt.print.Pageable) : Void;
+	@:overload @:public public function new(pageable : java.awt.print.Pageable) : Void;
 	
-	@:overload public function getDocFlavor() : javax.print.DocFlavor;
+	@:overload @:public public function getDocFlavor() : javax.print.DocFlavor;
 	
-	@:overload public function getAttributes() : javax.print.attribute.DocAttributeSet;
+	@:overload @:public public function getAttributes() : javax.print.attribute.DocAttributeSet;
 	
-	@:overload public function getPrintData() : Dynamic;
+	@:overload @:public public function getPrintData() : Dynamic;
 	
-	@:overload public function getReaderForText() : java.io.Reader;
+	@:overload @:public public function getReaderForText() : java.io.Reader;
 	
-	@:overload public function getStreamForBytes() : java.io.InputStream;
+	@:overload @:public public function getStreamForBytes() : java.io.InputStream;
 	
 	
 }

@@ -25,56 +25,56 @@ package com.sun.codemodel.internal;
 */
 extern class JDocComment extends com.sun.codemodel.internal.JCommentPart implements com.sun.codemodel.internal.JGenerable
 {
-	@:overload public function new(owner : com.sun.codemodel.internal.JCodeModel) : Void;
+	@:overload @:public public function new(owner : com.sun.codemodel.internal.JCodeModel) : Void;
 	
-	@:overload public function append(o : Dynamic) : com.sun.codemodel.internal.JDocComment;
+	@:overload @:public override public function append(o : Dynamic) : com.sun.codemodel.internal.JDocComment;
 	
 	/**
 	* Append a text to a @param tag to the javadoc
 	*/
-	@:overload public function addParam(param : String) : com.sun.codemodel.internal.JCommentPart;
+	@:overload @:public public function addParam(param : String) : com.sun.codemodel.internal.JCommentPart;
 	
 	/**
 	* Append a text to an @param tag.
 	*/
-	@:overload public function addParam(param : com.sun.codemodel.internal.JVar) : com.sun.codemodel.internal.JCommentPart;
+	@:overload @:public public function addParam(param : com.sun.codemodel.internal.JVar) : com.sun.codemodel.internal.JCommentPart;
 	
 	/**
 	* add an @throws tag to the javadoc
 	*/
-	@:overload public function addThrows(exception : Class<java.lang.Throwable>) : com.sun.codemodel.internal.JCommentPart;
+	@:overload @:public public function addThrows(exception : Class<java.lang.Throwable>) : com.sun.codemodel.internal.JCommentPart;
 	
 	/**
 	* add an @throws tag to the javadoc
 	*/
-	@:overload public function addThrows(exception : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JCommentPart;
+	@:overload @:public public function addThrows(exception : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JCommentPart;
 	
 	/**
 	* Appends a text to @return tag.
 	*/
-	@:overload public function addReturn() : com.sun.codemodel.internal.JCommentPart;
+	@:overload @:public public function addReturn() : com.sun.codemodel.internal.JCommentPart;
 	
 	/**
 	* add an @deprecated tag to the javadoc, with the associated message.
 	*/
-	@:overload public function addDeprecated() : com.sun.codemodel.internal.JCommentPart;
+	@:overload @:public public function addDeprecated() : com.sun.codemodel.internal.JCommentPart;
 	
 	/**
 	* add an xdoclet.
 	*/
-	@:overload public function addXdoclet(name : String) : java.util.Map<String, String>;
+	@:overload @:public public function addXdoclet(name : String) : java.util.Map<String, String>;
 	
 	/**
 	* add an xdoclet.
 	*/
-	@:overload public function addXdoclet(name : String, attributes : java.util.Map<String, String>) : java.util.Map<String, String>;
+	@:overload @:public public function addXdoclet(name : String, attributes : java.util.Map<String, String>) : java.util.Map<String, String>;
 	
 	/**
 	* add an xdoclet.
 	*/
-	@:overload public function addXdoclet(name : String, attribute : String, value : String) : java.util.Map<String, String>;
+	@:overload @:public public function addXdoclet(name : String, attribute : String, value : String) : java.util.Map<String, String>;
 	
-	@:overload public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

@@ -25,41 +25,41 @@ package sun.reflect;
 */
 @:internal extern class UnsafeQualifiedStaticLongFieldAccessorImpl extends sun.reflect.UnsafeQualifiedStaticFieldAccessorImpl
 {
-	@:overload override public function get(obj : Dynamic) : Dynamic;
+	@:overload @:public override public function get(obj : Dynamic) : Dynamic;
 	
-	@:overload override public function getBoolean(obj : Dynamic) : Bool;
+	@:overload @:public override public function getBoolean(obj : Dynamic) : Bool;
 	
-	@:overload override public function getByte(obj : Dynamic) : java.StdTypes.Int8;
+	@:overload @:public override public function getByte(obj : Dynamic) : java.StdTypes.Int8;
 	
-	@:overload override public function getChar(obj : Dynamic) : java.StdTypes.Char16;
+	@:overload @:public override public function getChar(obj : Dynamic) : java.StdTypes.Char16;
 	
-	@:overload override public function getShort(obj : Dynamic) : java.StdTypes.Int16;
+	@:overload @:public override public function getShort(obj : Dynamic) : java.StdTypes.Int16;
 	
-	@:overload override public function getInt(obj : Dynamic) : Int;
+	@:overload @:public override public function getInt(obj : Dynamic) : Int;
 	
-	@:overload override public function getLong(obj : Dynamic) : haxe.Int64;
+	@:overload @:public override public function getLong(obj : Dynamic) : haxe.Int64;
 	
-	@:overload override public function getFloat(obj : Dynamic) : Single;
+	@:overload @:public override public function getFloat(obj : Dynamic) : Single;
 	
-	@:overload override public function getDouble(obj : Dynamic) : Float;
+	@:overload @:public override public function getDouble(obj : Dynamic) : Float;
 	
-	@:overload override public function set(obj : Dynamic, value : Dynamic) : Void;
+	@:overload @:public override public function set(obj : Dynamic, value : Dynamic) : Void;
 	
-	@:overload override public function setBoolean(obj : Dynamic, z : Bool) : Void;
+	@:overload @:public override public function setBoolean(obj : Dynamic, z : Bool) : Void;
 	
-	@:overload override public function setByte(obj : Dynamic, b : java.StdTypes.Int8) : Void;
+	@:overload @:public override public function setByte(obj : Dynamic, b : java.StdTypes.Int8) : Void;
 	
-	@:overload override public function setChar(obj : Dynamic, c : java.StdTypes.Char16) : Void;
+	@:overload @:public override public function setChar(obj : Dynamic, c : java.StdTypes.Char16) : Void;
 	
-	@:overload override public function setShort(obj : Dynamic, s : java.StdTypes.Int16) : Void;
+	@:overload @:public override public function setShort(obj : Dynamic, s : java.StdTypes.Int16) : Void;
 	
-	@:overload override public function setInt(obj : Dynamic, i : Int) : Void;
+	@:overload @:public override public function setInt(obj : Dynamic, i : Int) : Void;
 	
-	@:overload override public function setLong(obj : Dynamic, l : haxe.Int64) : Void;
+	@:overload @:public override public function setLong(obj : Dynamic, l : haxe.Int64) : Void;
 	
-	@:overload override public function setFloat(obj : Dynamic, f : Single) : Void;
+	@:overload @:public override public function setFloat(obj : Dynamic, f : Single) : Void;
 	
-	@:overload override public function setDouble(obj : Dynamic, d : Float) : Void;
+	@:overload @:public override public function setDouble(obj : Dynamic, d : Float) : Void;
 	
 	
 }

@@ -35,83 +35,83 @@ extern class AbstractSaslImpl
 	*
 	* @author Rosanna Lee
 	*/
-	private var completed : Bool;
+	@:protected private var completed : Bool;
 	
-	private var privacy : Bool;
+	@:protected private var privacy : Bool;
 	
-	private var integrity : Bool;
+	@:protected private var integrity : Bool;
 	
-	private var qop : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var qop : java.NativeArray<java.StdTypes.Int8>;
 	
-	private var allQop : java.StdTypes.Int8;
+	@:protected private var allQop : java.StdTypes.Int8;
 	
-	private var strength : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var strength : java.NativeArray<java.StdTypes.Int8>;
 	
-	private var sendMaxBufSize : Int;
+	@:protected private var sendMaxBufSize : Int;
 	
-	private var recvMaxBufSize : Int;
+	@:protected private var recvMaxBufSize : Int;
 	
-	private var rawSendSize : Int;
+	@:protected private var rawSendSize : Int;
 	
-	private var myClassName : String;
+	@:protected private var myClassName : String;
 	
-	@:overload private function new(props : java.util.Map<Dynamic, Dynamic>, className : String) : Void;
+	@:overload @:protected private function new(props : java.util.Map<Dynamic, Dynamic>, className : String) : Void;
 	
 	/**
 	* Determines whether this mechanism has completed.
 	*
 	* @return true if has completed; false otherwise;
 	*/
-	@:overload public function isComplete() : Bool;
+	@:overload @:public public function isComplete() : Bool;
 	
 	/**
 	* Retrieves the negotiated property.
 	* @exception SaslException if this authentication exchange has not completed
 	*/
-	@:overload public function getNegotiatedProperty(propName : String) : Dynamic;
+	@:overload @:public public function getNegotiatedProperty(propName : String) : Dynamic;
 	
-	@:overload @:final private static function combineMasks(_in : java.NativeArray<java.StdTypes.Int8>) : java.StdTypes.Int8;
+	@:overload @:protected @:static @:final private static function combineMasks(_in : java.NativeArray<java.StdTypes.Int8>) : java.StdTypes.Int8;
 	
-	@:overload @:final private static function findPreferredMask(pref : java.StdTypes.Int8, _in : java.NativeArray<java.StdTypes.Int8>) : java.StdTypes.Int8;
+	@:overload @:protected @:static @:final private static function findPreferredMask(pref : java.StdTypes.Int8, _in : java.NativeArray<java.StdTypes.Int8>) : java.StdTypes.Int8;
 	
-	@:overload @:final private static function parseQop(qop : String, saveTokens : java.NativeArray<String>, ignore : Bool) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:static @:final private static function parseQop(qop : String, saveTokens : java.NativeArray<String>, ignore : Bool) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Outputs a byte array and converts
 	*/
-	@:overload @:final private static function traceOutput(srcClass : String, srcMethod : String, traceTag : String, output : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected @:static @:final private static function traceOutput(srcClass : String, srcMethod : String, traceTag : String, output : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:final private static function traceOutput(srcClass : String, srcMethod : String, traceTag : String, output : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected @:static @:final private static function traceOutput(srcClass : String, srcMethod : String, traceTag : String, output : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* Returns the integer represented by  4 bytes in network byte order.
 	*/
-	@:overload @:final private static function networkByteOrderToInt(buf : java.NativeArray<java.StdTypes.Int8>, start : Int, count : Int) : Int;
+	@:overload @:protected @:static @:final private static function networkByteOrderToInt(buf : java.NativeArray<java.StdTypes.Int8>, start : Int, count : Int) : Int;
 	
 	/**
 	* Encodes an integer into 4 bytes in network byte order in the buffer
 	* supplied.
 	*/
-	@:overload @:final private static function intToNetworkByteOrder(num : Int, buf : java.NativeArray<java.StdTypes.Int8>, start : Int, count : Int) : Void;
+	@:overload @:protected @:static @:final private static function intToNetworkByteOrder(num : Int, buf : java.NativeArray<java.StdTypes.Int8>, start : Int, count : Int) : Void;
 	
-	private static var MAX_SEND_BUF(default, null) : String;
+	@:protected @:static @:final private static var MAX_SEND_BUF(default, null) : String;
 	
 	/**
 	* Logger for debug messages
 	*/
-	private static var logger(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var logger(default, null) : java.util.logging.Logger;
 	
-	private static var NO_PROTECTION(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var NO_PROTECTION(default, null) : java.StdTypes.Int8;
 	
-	private static var INTEGRITY_ONLY_PROTECTION(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var INTEGRITY_ONLY_PROTECTION(default, null) : java.StdTypes.Int8;
 	
-	private static var PRIVACY_PROTECTION(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var PRIVACY_PROTECTION(default, null) : java.StdTypes.Int8;
 	
-	private static var LOW_STRENGTH(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var LOW_STRENGTH(default, null) : java.StdTypes.Int8;
 	
-	private static var MEDIUM_STRENGTH(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var MEDIUM_STRENGTH(default, null) : java.StdTypes.Int8;
 	
-	private static var HIGH_STRENGTH(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var HIGH_STRENGTH(default, null) : java.StdTypes.Int8;
 	
 	
 }

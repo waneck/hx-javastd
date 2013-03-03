@@ -25,13 +25,13 @@ package com.sun.xml.internal.bind.v2.util;
 */
 extern class FatalAdapter implements org.xml.sax.ErrorHandler
 {
-	@:overload public function new(handler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function new(handler : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

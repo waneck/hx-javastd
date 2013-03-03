@@ -119,7 +119,7 @@ package java.sql;
 	* @throws IllegalArgumentException if <code>name</code> is empty.
 
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a new <code>SQLPermission</code> object with the specified name.
@@ -135,7 +135,7 @@ package java.sql;
 	* @throws IllegalArgumentException if <code>name</code> is empty.
 
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	
 }

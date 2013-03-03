@@ -33,19 +33,19 @@ extern interface AttributedCharacterIterator extends java.text.CharacterIterator
 	* same set of attribute/value pairs) are treated as separate runs
 	* if the attributes have been given to those text segments separately.
 	*/
-	@:overload public function getRunStart() : Int;
+	@:overload @:public public function getRunStart() : Int;
 	
 	/**
 	* Returns the index of the first character of the run
 	* with respect to the given {@code attribute} containing the current character.
 	*/
-	@:overload public function getRunStart(attribute : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute) : Int;
+	@:overload @:public public function getRunStart(attribute : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute) : Int;
 	
 	/**
 	* Returns the index of the first character of the run
 	* with respect to the given {@code attributes} containing the current character.
 	*/
-	@:overload public function getRunStart(attributes : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : Int;
+	@:overload @:public public function getRunStart(attributes : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : Int;
 	
 	/**
 	* Returns the index of the first character following the run
@@ -55,38 +55,38 @@ extern interface AttributedCharacterIterator extends java.text.CharacterIterator
 	* same set of attribute/value pairs) are treated as separate runs
 	* if the attributes have been given to those text segments separately.
 	*/
-	@:overload public function getRunLimit() : Int;
+	@:overload @:public public function getRunLimit() : Int;
 	
 	/**
 	* Returns the index of the first character following the run
 	* with respect to the given {@code attribute} containing the current character.
 	*/
-	@:overload public function getRunLimit(attribute : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute) : Int;
+	@:overload @:public public function getRunLimit(attribute : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute) : Int;
 	
 	/**
 	* Returns the index of the first character following the run
 	* with respect to the given {@code attributes} containing the current character.
 	*/
-	@:overload public function getRunLimit(attributes : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : Int;
+	@:overload @:public public function getRunLimit(attributes : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : Int;
 	
 	/**
 	* Returns a map with the attributes defined on the current
 	* character.
 	*/
-	@:overload public function getAttributes() : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>;
+	@:overload @:public public function getAttributes() : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>;
 	
 	/**
 	* Returns the value of the named {@code attribute} for the current character.
 	* Returns {@code null} if the {@code attribute} is not defined.
 	*/
-	@:overload public function getAttribute(attribute : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute) : Dynamic;
+	@:overload @:public public function getAttribute(attribute : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute) : Dynamic;
 	
 	/**
 	* Returns the keys of all attributes defined on the
 	* iterator's text range. The set is empty if no
 	* attributes are defined.
 	*/
-	@:overload public function getAllAttributeKeys() : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>;
+	@:overload @:public public function getAllAttributeKeys() : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>;
 	
 	
 }
@@ -102,44 +102,44 @@ extern interface AttributedCharacterIterator extends java.text.CharacterIterator
 	/**
 	* Constructs an {@code Attribute} with the given name.
 	*/
-	@:overload private function new(name : String) : Void;
+	@:overload @:protected private function new(name : String) : Void;
 	
 	/**
 	* Compares two objects for equality. This version only returns true
 	* for <code>x.equals(y)</code> if <code>x</code> and <code>y</code> refer
 	* to the same object, and guarantees this for all subclasses.
 	*/
-	@:overload @:final public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for the object. This version is identical to
 	* the one in {@code Object}, but is also final.
 	*/
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of the object. This version returns the
 	* concatenation of class name, {@code "("}, a name identifying the attribute
 	* and {@code ")"}.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the name of the attribute.
 	*/
-	@:overload private function getName() : String;
+	@:overload @:protected private function getName() : String;
 	
 	/**
 	* Resolves instances being deserialized to the predefined constants.
 	*/
-	@:overload private function readResolve() : Dynamic;
+	@:overload @:protected private function readResolve() : Dynamic;
 	
 	/**
 	* Attribute key for the language of some text.
 	* <p> Values are instances of {@link java.util.Locale Locale}.
 	* @see java.util.Locale
 	*/
-	public static var LANGUAGE(default, null) : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute;
+	@:public @:static @:final public static var LANGUAGE(default, null) : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute;
 	
 	/**
 	* Attribute key for the reading of some text. In languages where the written form
@@ -150,7 +150,7 @@ extern interface AttributedCharacterIterator extends java.text.CharacterIterator
 	* @see Annotation
 	* @see java.lang.String
 	*/
-	public static var READING(default, null) : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute;
+	@:public @:static @:final public static var READING(default, null) : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute;
 	
 	/**
 	* Attribute key for input method segments. Input methods often break
@@ -158,7 +158,7 @@ extern interface AttributedCharacterIterator extends java.text.CharacterIterator
 	* <p>Values are instances of {@link Annotation} holding a {@code null} reference.
 	* @see Annotation
 	*/
-	public static var INPUT_METHOD_SEGMENT(default, null) : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute;
+	@:public @:static @:final public static var INPUT_METHOD_SEGMENT(default, null) : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute;
 	
 	
 }

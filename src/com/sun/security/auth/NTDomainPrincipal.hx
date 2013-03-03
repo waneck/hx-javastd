@@ -35,7 +35,7 @@ extern class NTDomainPrincipal implements java.security.Principal implements jav
 	* @exception NullPointerException if the <code>name</code>
 	*                  is <code>null</code>.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Return the Windows NT domain name for this
@@ -46,7 +46,7 @@ extern class NTDomainPrincipal implements java.security.Principal implements jav
 	* @return the Windows NT domain name for this
 	*                  <code>NTDomainPrincipal</code>
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return a string representation of this <code>NTDomainPrincipal</code>.
@@ -55,7 +55,7 @@ extern class NTDomainPrincipal implements java.security.Principal implements jav
 	*
 	* @return a string representation of this <code>NTDomainPrincipal</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares the specified Object with this <code>NTDomainPrincipal</code>
@@ -71,7 +71,7 @@ extern class NTDomainPrincipal implements java.security.Principal implements jav
 	* @return true if the specified Object is equal equal to this
 	*          <code>NTDomainPrincipal</code>.
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Return a hash code for this <code>NTDomainPrincipal</code>.
@@ -80,7 +80,7 @@ extern class NTDomainPrincipal implements java.security.Principal implements jav
 	*
 	* @return a hash code for this <code>NTDomainPrincipal</code>.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

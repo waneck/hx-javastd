@@ -30,9 +30,9 @@ extern interface SerializationHandler extends com.sun.org.apache.xml.internal.se
 	* @see Serializer#asContentHandler()
 	* @see ToSAXHandler
 	*/
-	@:overload public function setContentHandler(ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public @:public public function setContentHandler(ch : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Notify that the serializer should take this DOM node as input to be
@@ -41,7 +41,7 @@ extern interface SerializationHandler extends com.sun.org.apache.xml.internal.se
 	* @param node the DOM node to be serialized.
 	* @throws IOException
 	*/
-	@:overload public function serialize(node : org.w3c.dom.Node) : Void;
+	@:overload @:public @:public public function serialize(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Turns special character escaping on/off.
@@ -52,25 +52,25 @@ extern interface SerializationHandler extends com.sun.org.apache.xml.internal.se
 	*
 	* @param escape true if escaping is to be set on.
 	*/
-	@:overload public function setEscaping(escape : Bool) : Bool;
+	@:overload @:public @:public public function setEscaping(escape : Bool) : Bool;
 	
 	/**
 	* Set the number of spaces to indent for each indentation level.
 	* @param spaces the number of spaces to indent for each indentation level.
 	*/
-	@:overload public function setIndentAmount(spaces : Int) : Void;
+	@:overload @:public public function setIndentAmount(spaces : Int) : Void;
 	
 	/**
 	* Set the transformer associated with the serializer.
 	* @param transformer the transformer associated with the serializer.
 	*/
-	@:overload public function setTransformer(transformer : javax.xml.transform.Transformer) : Void;
+	@:overload @:public public function setTransformer(transformer : javax.xml.transform.Transformer) : Void;
 	
 	/**
 	* Get the transformer associated with the serializer.
 	* @return Transformer the transformer associated with the serializer.
 	*/
-	@:overload public function getTransformer() : javax.xml.transform.Transformer;
+	@:overload @:public public function getTransformer() : javax.xml.transform.Transformer;
 	
 	/**
 	* Used only by TransformerSnapshotImpl to restore the serialization
@@ -78,14 +78,14 @@ extern interface SerializationHandler extends com.sun.org.apache.xml.internal.se
 	*
 	* @param mappings NamespaceMappings
 	*/
-	@:overload public function setNamespaceMappings(mappings : com.sun.org.apache.xml.internal.serializer.NamespaceMappings) : Void;
+	@:overload @:public public function setNamespaceMappings(mappings : com.sun.org.apache.xml.internal.serializer.NamespaceMappings) : Void;
 	
 	/**
 	* Flush any pending events currently queued up in the serializer. This will
 	* flush any input that the serializer has which it has not yet sent as
 	* output.
 	*/
-	@:overload public function flushPending() : Void;
+	@:overload @:public @:public public function flushPending() : Void;
 	
 	/**
 	* Default behavior is to expand DTD entities,
@@ -93,14 +93,14 @@ extern interface SerializationHandler extends com.sun.org.apache.xml.internal.se
 	* @param expand true if DTD entities are to be expanded,
 	* false if they are to be left as DTD entity references.
 	*/
-	@:overload public function setDTDEntityExpansion(expand : Bool) : Void;
+	@:overload @:public public function setDTDEntityExpansion(expand : Bool) : Void;
 	
 	/**
 	* Specify if the output will be treated as a standalone  property
 	* @param isStandalone true if the http://www.oracle.com/xml/is-standalone is set to yes
 	* @see OutputPropertiesFactory ORACLE_IS_STANDALONE
 	*/
-	@:overload public function setIsStandalone(b : Bool) : Void;
+	@:overload @:public public function setIsStandalone(b : Bool) : Void;
 	
 	
 }

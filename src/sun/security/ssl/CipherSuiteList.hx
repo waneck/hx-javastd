@@ -25,7 +25,7 @@ package sun.security.ssl;
 */
 @:internal extern class CipherSuiteList
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

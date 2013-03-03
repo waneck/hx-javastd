@@ -25,15 +25,15 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class EncapsInputStream extends com.sun.corba.se.impl.encoding.CDRInputStream
 {
-	@:overload public function new(orb : org.omg.CORBA.ORB, buf : java.NativeArray<java.StdTypes.Int8>, size : Int, littleEndian : Bool, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
+	@:overload @:public public function new(orb : org.omg.CORBA.ORB, buf : java.NativeArray<java.StdTypes.Int8>, size : Int, littleEndian : Bool, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
 	
-	@:overload public function new(orb : org.omg.CORBA.ORB, byteBuffer : java.nio.ByteBuffer, size : Int, littleEndian : Bool, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
+	@:overload @:public public function new(orb : org.omg.CORBA.ORB, byteBuffer : java.nio.ByteBuffer, size : Int, littleEndian : Bool, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
 	
-	@:overload public function new(orb : org.omg.CORBA.ORB, data : java.NativeArray<java.StdTypes.Int8>, size : Int) : Void;
+	@:overload @:public public function new(orb : org.omg.CORBA.ORB, data : java.NativeArray<java.StdTypes.Int8>, size : Int) : Void;
 	
-	@:overload public function new(eis : com.sun.corba.se.impl.encoding.EncapsInputStream) : Void;
+	@:overload @:public public function new(eis : com.sun.corba.se.impl.encoding.EncapsInputStream) : Void;
 	
-	@:overload public function new(orb : org.omg.CORBA.ORB, data : java.NativeArray<java.StdTypes.Int8>, size : Int, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
+	@:overload @:public public function new(orb : org.omg.CORBA.ORB, data : java.NativeArray<java.StdTypes.Int8>, size : Int, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
 	
 	/**
 	* Full constructor with a CodeBase parameter useful for
@@ -41,15 +41,15 @@ extern class EncapsInputStream extends com.sun.corba.se.impl.encoding.CDRInputSt
 	* intention of an encapsulation, but necessary due to OMG
 	* issue 4795.  Used by ServiceContexts.
 	*/
-	@:overload public function new(orb : org.omg.CORBA.ORB, data : java.NativeArray<java.StdTypes.Int8>, size : Int, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion, codeBase : com.sun.org.omg.SendingContext.CodeBase) : Void;
+	@:overload @:public public function new(orb : org.omg.CORBA.ORB, data : java.NativeArray<java.StdTypes.Int8>, size : Int, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion, codeBase : com.sun.org.omg.SendingContext.CodeBase) : Void;
 	
-	@:overload override public function dup() : com.sun.corba.se.impl.encoding.CDRInputStream;
+	@:overload @:public override public function dup() : com.sun.corba.se.impl.encoding.CDRInputStream;
 	
-	@:overload override private function createCharBTCConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_BTCConverter;
+	@:overload @:protected override private function createCharBTCConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_BTCConverter;
 	
-	@:overload override private function createWCharBTCConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_BTCConverter;
+	@:overload @:protected override private function createWCharBTCConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_BTCConverter;
 	
-	@:overload override public function getCodeBase() : com.sun.org.omg.SendingContext.CodeBase;
+	@:overload @:public override public function getCodeBase() : com.sun.org.omg.SendingContext.CodeBase;
 	
 	
 }

@@ -35,13 +35,13 @@ extern class FunctionDef1Arg extends com.sun.org.apache.xpath.internal.functions
 	* @throws javax.xml.transform.TransformerException if an error occurs while
 	*                                   executing the argument expression.
 	*/
-	@:overload private function getArg0AsNode(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:protected private function getArg0AsNode(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Tell if the expression is a nodeset expression.
 	* @return true if the expression can be represented as a nodeset.
 	*/
-	@:overload public function Arg0IsNodesetExpr() : Bool;
+	@:overload @:public public function Arg0IsNodesetExpr() : Bool;
 	
 	/**
 	* Execute the first argument expression that is expected to return a
@@ -56,7 +56,7 @@ extern class FunctionDef1Arg extends com.sun.org.apache.xpath.internal.functions
 	* @throws javax.xml.transform.TransformerException if an error occurs while
 	*                                   executing the argument expression.
 	*/
-	@:overload private function getArg0AsString(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:protected private function getArg0AsString(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Execute the first argument expression that is expected to return a
@@ -71,7 +71,7 @@ extern class FunctionDef1Arg extends com.sun.org.apache.xpath.internal.functions
 	* @throws javax.xml.transform.TransformerException if an error occurs while
 	*                                   executing the argument expression.
 	*/
-	@:overload private function getArg0AsNumber(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Float;
+	@:overload @:protected private function getArg0AsNumber(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Float;
 	
 	/**
 	* Check that the number of arguments passed to this function is correct.
@@ -80,7 +80,7 @@ extern class FunctionDef1Arg extends com.sun.org.apache.xpath.internal.functions
 	*
 	* @throws WrongNumberArgsException if the number of arguments is not 0 or 1.
 	*/
-	@:overload override public function checkNumberArgs(argNum : Int) : Void;
+	@:overload @:public override public function checkNumberArgs(argNum : Int) : Void;
 	
 	/**
 	* Constructs and throws a WrongNumberArgException with the appropriate
@@ -88,7 +88,7 @@ extern class FunctionDef1Arg extends com.sun.org.apache.xpath.internal.functions
 	*
 	* @throws WrongNumberArgsException
 	*/
-	@:overload override private function reportWrongNumberArgs() : Void;
+	@:overload @:protected override private function reportWrongNumberArgs() : Void;
 	
 	/**
 	* Tell if this expression or it's subexpressions can traverse outside
@@ -96,7 +96,7 @@ extern class FunctionDef1Arg extends com.sun.org.apache.xpath.internal.functions
 	*
 	* @return true if traversal outside the context node's subtree can occur.
 	*/
-	@:overload override public function canTraverseOutsideSubtree() : Bool;
+	@:overload @:public override public function canTraverseOutsideSubtree() : Bool;
 	
 	
 }

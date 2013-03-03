@@ -25,14 +25,14 @@ extern interface XMLEntityDescription extends com.sun.org.apache.xerces.internal
 	*
 	* @param name the name of the entity
 	*/
-	@:overload public function setEntityName(name : String) : Void;
+	@:overload @:public public function setEntityName(name : String) : Void;
 	
 	/**
 	* Returns the name of the entity.
 	*
 	* @return the name of the entity
 	*/
-	@:overload public function getEntityName() : String;
+	@:overload @:public public function getEntityName() : String;
 	
 	
 }

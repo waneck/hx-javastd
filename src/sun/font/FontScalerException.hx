@@ -25,9 +25,9 @@ package sun.font;
 */
 extern class FontScalerException extends java.lang.Exception
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	
 }

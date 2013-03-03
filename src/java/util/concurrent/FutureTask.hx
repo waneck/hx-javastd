@@ -64,7 +64,7 @@ package java.util.concurrent;
 	* @param  callable the callable task
 	* @throws NullPointerException if callable is null
 	*/
-	@:overload public function new(callable : java.util.concurrent.Callable<V>) : Void;
+	@:overload @:public public function new(callable : java.util.concurrent.Callable<V>) : Void;
 	
 	/**
 	* Creates a <tt>FutureTask</tt> that will, upon running, execute the
@@ -78,23 +78,23 @@ package java.util.concurrent;
 	* {@code Future<?> f = new FutureTask<Void>(runnable, null)}
 	* @throws NullPointerException if runnable is null
 	*/
-	@:overload public function new(runnable : java.lang.Runnable, result : V) : Void;
+	@:overload @:public public function new(runnable : java.lang.Runnable, result : V) : Void;
 	
-	@:overload public function isCancelled() : Bool;
+	@:overload @:public public function isCancelled() : Bool;
 	
-	@:overload public function isDone() : Bool;
+	@:overload @:public public function isDone() : Bool;
 	
-	@:overload public function cancel(mayInterruptIfRunning : Bool) : Bool;
-	
-	/**
-	* @throws CancellationException {@inheritDoc}
-	*/
-	@:overload public function get() : V;
+	@:overload @:public public function cancel(mayInterruptIfRunning : Bool) : Bool;
 	
 	/**
 	* @throws CancellationException {@inheritDoc}
 	*/
-	@:overload public function get(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : V;
+	@:overload @:public public function get() : V;
+	
+	/**
+	* @throws CancellationException {@inheritDoc}
+	*/
+	@:overload @:public public function get(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : V;
 	
 	/**
 	* Protected method invoked when this task transitions to state
@@ -105,7 +105,7 @@ package java.util.concurrent;
 	* implementation of this method to determine whether this task
 	* has been cancelled.
 	*/
-	@:overload private function done() : Void;
+	@:overload @:protected private function done() : Void;
 	
 	/**
 	* Sets the result of this Future to the given value unless
@@ -114,7 +114,7 @@ package java.util.concurrent;
 	* upon successful completion of the computation.
 	* @param v the value
 	*/
-	@:overload private function set(v : V) : Void;
+	@:overload @:protected private function set(v : V) : Void;
 	
 	/**
 	* Causes this future to report an <tt>ExecutionException</tt>
@@ -124,13 +124,13 @@ package java.util.concurrent;
 	* upon failure of the computation.
 	* @param t the cause of failure
 	*/
-	@:overload private function setException(t : java.lang.Throwable) : Void;
+	@:overload @:protected private function setException(t : java.lang.Throwable) : Void;
 	
 	/**
 	* Sets this Future to the result of its computation
 	* unless it has been cancelled.
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	/**
 	* Executes the computation without setting its result, and then
@@ -140,7 +140,7 @@ package java.util.concurrent;
 	* than once.
 	* @return true if successfully run and reset
 	*/
-	@:overload private function runAndReset() : Bool;
+	@:overload @:protected private function runAndReset() : Bool;
 	
 	
 }
@@ -157,13 +157,13 @@ package java.util.concurrent;
 	/**
 	* Implements AQS base acquire to succeed if ran or cancelled
 	*/
-	@:overload override private function tryAcquireShared(ignore : Int) : Int;
+	@:overload @:protected override private function tryAcquireShared(ignore : Int) : Int;
 	
 	/**
 	* Implements AQS base release to always signal after setting
 	* final done status by nulling runner thread.
 	*/
-	@:overload override private function tryReleaseShared(ignore : Int) : Bool;
+	@:overload @:protected override private function tryReleaseShared(ignore : Int) : Bool;
 	
 	
 }

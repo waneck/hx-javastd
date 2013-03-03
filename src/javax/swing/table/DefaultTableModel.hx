@@ -29,16 +29,16 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* The <code>Vector</code> of <code>Vectors</code> of
 	* <code>Object</code> values.
 	*/
-	private var dataVector : java.util.Vector<Dynamic>;
+	@:protected private var dataVector : java.util.Vector<Dynamic>;
 	
 	/** The <code>Vector</code> of column identifiers. */
-	private var columnIdentifiers : java.util.Vector<Dynamic>;
+	@:protected private var columnIdentifiers : java.util.Vector<Dynamic>;
 	
 	/**
 	*  Constructs a default <code>DefaultTableModel</code>
 	*  which is a table of zero columns and zero rows.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*  Constructs a <code>DefaultTableModel</code> with
@@ -50,7 +50,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	*
 	* @see #setValueAt
 	*/
-	@:overload public function new(rowCount : Int, columnCount : Int) : Void;
+	@:overload @:public public function new(rowCount : Int, columnCount : Int) : Void;
 	
 	/**
 	*  Constructs a <code>DefaultTableModel</code> with as many columns
@@ -66,7 +66,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @see #setDataVector
 	* @see #setValueAt
 	*/
-	@:overload public function new(columnNames : java.util.Vector<Dynamic>, rowCount : Int) : Void;
+	@:overload @:public public function new(columnNames : java.util.Vector<Dynamic>, rowCount : Int) : Void;
 	
 	/**
 	*  Constructs a <code>DefaultTableModel</code> with as many
@@ -82,7 +82,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @see #setDataVector
 	* @see #setValueAt
 	*/
-	@:overload public function new(columnNames : java.NativeArray<Dynamic>, rowCount : Int) : Void;
+	@:overload @:public public function new(columnNames : java.NativeArray<Dynamic>, rowCount : Int) : Void;
 	
 	/**
 	*  Constructs a <code>DefaultTableModel</code> and initializes the table
@@ -97,7 +97,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @see #getDataVector
 	* @see #setDataVector
 	*/
-	@:overload public function new(data : java.util.Vector<Dynamic>, columnNames : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function new(data : java.util.Vector<Dynamic>, columnNames : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	*  Constructs a <code>DefaultTableModel</code> and initializes the table
@@ -111,7 +111,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @see #getDataVector
 	* @see #setDataVector
 	*/
-	@:overload public function new(data : java.NativeArray<java.NativeArray<Dynamic>>, columnNames : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.NativeArray<Dynamic>>, columnNames : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	*  Returns the <code>Vector</code> of <code>Vectors</code>
@@ -128,7 +128,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @see #newRowsAdded
 	* @see #setDataVector
 	*/
-	@:overload public function getDataVector() : java.util.Vector<Dynamic>;
+	@:overload @:public public function getDataVector() : java.util.Vector<Dynamic>;
 	
 	/**
 	*  Replaces the current <code>dataVector</code> instance variable
@@ -150,7 +150,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @param   columnIdentifiers     the names of the columns
 	* @see #getDataVector
 	*/
-	@:overload public function setDataVector(dataVector : java.util.Vector<Dynamic>, columnIdentifiers : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function setDataVector(dataVector : java.util.Vector<Dynamic>, columnIdentifiers : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	*  Replaces the value in the <code>dataVector</code> instance
@@ -163,7 +163,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @param columnIdentifiers the names of the columns
 	* @see #setDataVector(Vector, Vector)
 	*/
-	@:overload public function setDataVector(dataVector : java.NativeArray<java.NativeArray<Dynamic>>, columnIdentifiers : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function setDataVector(dataVector : java.NativeArray<java.NativeArray<Dynamic>>, columnIdentifiers : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	*  Equivalent to <code>fireTableChanged</code>.
@@ -171,7 +171,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @param event  the change event
 	*
 	*/
-	@:overload public function newDataAvailable(event : javax.swing.event.TableModelEvent) : Void;
+	@:overload @:public public function newDataAvailable(event : javax.swing.event.TableModelEvent) : Void;
 	
 	/**
 	*  Ensures that the new rows have the correct number of columns.
@@ -188,7 +188,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	*                           all the rows were newly added
 	* @see #getDataVector
 	*/
-	@:overload public function newRowsAdded(e : javax.swing.event.TableModelEvent) : Void;
+	@:overload @:public public function newRowsAdded(e : javax.swing.event.TableModelEvent) : Void;
 	
 	/**
 	*  Equivalent to <code>fireTableChanged</code>.
@@ -196,7 +196,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	*  @param event the change event
 	*
 	*/
-	@:overload public function rowsRemoved(event : javax.swing.event.TableModelEvent) : Void;
+	@:overload @:public public function rowsRemoved(event : javax.swing.event.TableModelEvent) : Void;
 	
 	/*
 	*  Sets the number of rows in the model.  If the new size is greater
@@ -207,7 +207,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @param   rowCount   the new number of rows
 	* @see #setRowCount
 	*/
-	@:overload public function setNumRows(rowCount : Int) : Void;
+	@:overload @:public public function setNumRows(rowCount : Int) : Void;
 	
 	/**
 	*  Sets the number of rows in the model.  If the new size is greater
@@ -218,7 +218,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	*  @see #setColumnCount
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setRowCount(rowCount : Int) : Void;
+	@:require(java3) @:overload @:public public function setRowCount(rowCount : Int) : Void;
 	
 	/**
 	*  Adds a row to the end of the model.  The new row will contain
@@ -227,7 +227,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	*
 	* @param   rowData          optional data of the row being added
 	*/
-	@:overload public function addRow(rowData : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function addRow(rowData : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	*  Adds a row to the end of the model.  The new row will contain
@@ -236,7 +236,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	*
 	* @param   rowData          optional data of the row being added
 	*/
-	@:overload public function addRow(rowData : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function addRow(rowData : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	*  Inserts a row at <code>row</code> in the model.  The new row
@@ -247,7 +247,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @param   rowData         optional data of the row being added
 	* @exception  ArrayIndexOutOfBoundsException  if the row was invalid
 	*/
-	@:overload public function insertRow(row : Int, rowData : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function insertRow(row : Int, rowData : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	*  Inserts a row at <code>row</code> in the model.  The new row
@@ -258,7 +258,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @param   rowData          optional data of the row being added
 	* @exception  ArrayIndexOutOfBoundsException  if the row was invalid
 	*/
-	@:overload public function insertRow(row : Int, rowData : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function insertRow(row : Int, rowData : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	*  Moves one or more rows from the inclusive range <code>start</code> to
@@ -288,7 +288,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* would be moved out of the table's range
 	*
 	*/
-	@:overload public function moveRow(start : Int, end : Int, to : Int) : Void;
+	@:overload @:public public function moveRow(start : Int, end : Int, to : Int) : Void;
 	
 	/**
 	*  Removes the row at <code>row</code> from the model.  Notification
@@ -297,7 +297,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @param   row      the row index of the row to be removed
 	* @exception  ArrayIndexOutOfBoundsException  if the row was invalid
 	*/
-	@:overload public function removeRow(row : Int) : Void;
+	@:overload @:public public function removeRow(row : Int) : Void;
 	
 	/**
 	* Replaces the column identifiers in the model.  If the number of
@@ -312,7 +312,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	*                          to zero columns
 	* @see #setNumRows
 	*/
-	@:overload public function setColumnIdentifiers(columnIdentifiers : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function setColumnIdentifiers(columnIdentifiers : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* Replaces the column identifiers in the model.  If the number of
@@ -327,7 +327,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	*                          the model to zero columns
 	* @see #setNumRows
 	*/
-	@:overload public function setColumnIdentifiers(newIdentifiers : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function setColumnIdentifiers(newIdentifiers : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	*  Sets the number of columns in the model.  If the new size is greater
@@ -341,7 +341,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	*  @see #setColumnCount
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setColumnCount(columnCount : Int) : Void;
+	@:require(java3) @:overload @:public public function setColumnCount(columnCount : Int) : Void;
 	
 	/**
 	*  Adds a column to the model.  The new column will have the
@@ -353,7 +353,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	*
 	* @param   columnName the identifier of the column being added
 	*/
-	@:overload public function addColumn(columnName : Dynamic) : Void;
+	@:overload @:public public function addColumn(columnName : Dynamic) : Void;
 	
 	/**
 	*  Adds a column to the model.  The new column will have the
@@ -368,7 +368,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @param   columnName the identifier of the column being added
 	* @param   columnData       optional data of the column being added
 	*/
-	@:overload public function addColumn(columnName : Dynamic, columnData : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function addColumn(columnName : Dynamic, columnData : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	*  Adds a column to the model.  The new column will have the
@@ -381,19 +381,19 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	*
 	* @see #addColumn(Object, Vector)
 	*/
-	@:overload public function addColumn(columnName : Dynamic, columnData : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function addColumn(columnName : Dynamic, columnData : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Returns the number of rows in this data table.
 	* @return the number of rows in the model
 	*/
-	@:overload override public function getRowCount() : Int;
+	@:overload @:public override public function getRowCount() : Int;
 	
 	/**
 	* Returns the number of columns in this data table.
 	* @return the number of columns in the model
 	*/
-	@:overload override public function getColumnCount() : Int;
+	@:overload @:public override public function getColumnCount() : Int;
 	
 	/**
 	* Returns the column name.
@@ -404,7 +404,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* for this index, returns the default
 	* name provided by the superclass.
 	*/
-	@:overload override public function getColumnName(column : Int) : String;
+	@:overload @:public override public function getColumnName(column : Int) : String;
 	
 	/**
 	* Returns true regardless of parameter values.
@@ -414,7 +414,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @return                  true
 	* @see #setValueAt
 	*/
-	@:overload override public function isCellEditable(row : Int, column : Int) : Bool;
+	@:overload @:public override public function isCellEditable(row : Int, column : Int) : Bool;
 	
 	/**
 	* Returns an attribute value for the cell at <code>row</code>
@@ -426,7 +426,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @exception  ArrayIndexOutOfBoundsException  if an invalid row or
 	*               column was given
 	*/
-	@:overload override public function getValueAt(row : Int, column : Int) : Dynamic;
+	@:overload @:public override public function getValueAt(row : Int, column : Int) : Dynamic;
 	
 	/**
 	* Sets the object value for the cell at <code>column</code> and
@@ -439,7 +439,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @exception  ArrayIndexOutOfBoundsException  if an invalid row or
 	*               column was given
 	*/
-	@:overload override public function setValueAt(aValue : Dynamic, row : Int, column : Int) : Void;
+	@:overload @:public override public function setValueAt(aValue : Dynamic, row : Int, column : Int) : Void;
 	
 	/**
 	* Returns a vector that contains the same objects as the array.
@@ -447,7 +447,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @return  the new vector; if <code>anArray</code> is <code>null</code>,
 	*                          returns <code>null</code>
 	*/
-	@:overload private static function convertToVector(anArray : java.NativeArray<Dynamic>) : java.util.Vector<Dynamic>;
+	@:overload @:protected @:static private static function convertToVector(anArray : java.NativeArray<Dynamic>) : java.util.Vector<Dynamic>;
 	
 	/**
 	* Returns a vector of vectors that contains the same objects as the array.
@@ -455,7 +455,7 @@ extern class DefaultTableModel extends javax.swing.table.AbstractTableModel impl
 	* @return the new vector of vectors; if <code>anArray</code> is
 	*                          <code>null</code>, returns <code>null</code>
 	*/
-	@:overload private static function convertToVector(anArray : java.NativeArray<java.NativeArray<Dynamic>>) : java.util.Vector<Dynamic>;
+	@:overload @:protected @:static private static function convertToVector(anArray : java.NativeArray<java.NativeArray<Dynamic>>) : java.util.Vector<Dynamic>;
 	
 	
 }

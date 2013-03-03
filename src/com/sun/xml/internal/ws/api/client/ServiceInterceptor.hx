@@ -47,7 +47,7 @@ extern class ServiceInterceptor
 	*      will take precedence over {@link BindingID}'s
 	*      {@link BindingID#createBuiltinFeatureList() implicit features}.
 	*/
-	@:overload public function preCreateBinding(port : com.sun.xml.internal.ws.api.client.WSPortInfo, serviceEndpointInterface : Class<Dynamic>, defaultFeatures : com.sun.xml.internal.ws.api.WSFeatureList) : java.util.List<javax.xml.ws.WebServiceFeature>;
+	@:overload @:public public function preCreateBinding(port : com.sun.xml.internal.ws.api.client.WSPortInfo, serviceEndpointInterface : Class<Dynamic>, defaultFeatures : com.sun.xml.internal.ws.api.WSFeatureList) : java.util.List<javax.xml.ws.WebServiceFeature>;
 	
 	/**
 	* A callback to notify the event of creation of proxy object for SEI endpoint. The
@@ -56,7 +56,7 @@ extern class ServiceInterceptor
 	* @param bp created proxy instance
 	* @param serviceEndpointInterface SEI of the endpoint
 	*/
-	@:overload public function postCreateProxy(bp : com.sun.xml.internal.ws.developer.WSBindingProvider, serviceEndpointInterface : Class<Dynamic>) : Void;
+	@:overload @:public public function postCreateProxy(bp : com.sun.xml.internal.ws.developer.WSBindingProvider, serviceEndpointInterface : Class<Dynamic>) : Void;
 	
 	/**
 	* A callback to notify that a {@link Dispatch} object is created. The callback
@@ -64,12 +64,12 @@ extern class ServiceInterceptor
 	*
 	* @param bp BindingProvider of dispatch object
 	*/
-	@:overload public function postCreateDispatch(bp : com.sun.xml.internal.ws.developer.WSBindingProvider) : Void;
+	@:overload @:public public function postCreateDispatch(bp : com.sun.xml.internal.ws.developer.WSBindingProvider) : Void;
 	
 	/**
 	* Aggregates multiple interceptors into one facade.
 	*/
-	@:overload public static function aggregate(interceptors : java.NativeArray<com.sun.xml.internal.ws.api.client.ServiceInterceptor>) : com.sun.xml.internal.ws.api.client.ServiceInterceptor;
+	@:overload @:public @:static public static function aggregate(interceptors : java.NativeArray<com.sun.xml.internal.ws.api.client.ServiceInterceptor>) : com.sun.xml.internal.ws.api.client.ServiceInterceptor;
 	
 	
 }

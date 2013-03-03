@@ -25,15 +25,15 @@ package sun.awt.X11;
 */
 extern class XContentWindow extends sun.awt.X11.XWindow
 {
-	@:overload override private function getWMName() : String;
+	@:overload @:protected override private function getWMName() : String;
 	
-	@:overload override private function isEventDisabled(e : sun.awt.X11.XEvent) : Bool;
+	@:overload @:protected override private function isEventDisabled(e : sun.awt.X11.XEvent) : Bool;
 	
-	@:overload public function handleResize(bounds : java.awt.Rectangle) : Void;
+	@:overload @:public public function handleResize(bounds : java.awt.Rectangle) : Void;
 	
-	@:overload public function handleExposeEvent(target : java.awt.Component, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function handleExposeEvent(target : java.awt.Component, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

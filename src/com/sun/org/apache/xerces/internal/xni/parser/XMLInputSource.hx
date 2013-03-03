@@ -21,22 +21,22 @@ package com.sun.org.apache.xerces.internal.xni.parser;
 extern class XMLInputSource
 {
 	/** Public identifier. */
-	private var fPublicId : String;
+	@:protected private var fPublicId : String;
 	
 	/** System identifier. */
-	private var fSystemId : String;
+	@:protected private var fSystemId : String;
 	
 	/** Base system identifier. */
-	private var fBaseSystemId : String;
+	@:protected private var fBaseSystemId : String;
 	
 	/** Byte stream. */
-	private var fByteStream : java.io.InputStream;
+	@:protected private var fByteStream : java.io.InputStream;
 	
 	/** Character stream. */
-	private var fCharStream : java.io.Reader;
+	@:protected private var fCharStream : java.io.Reader;
 	
 	/** Encoding. */
-	private var fEncoding : String;
+	@:protected private var fEncoding : String;
 	
 	/**
 	* Constructs an input source from just the public and system
@@ -53,7 +53,7 @@ extern class XMLInputSource
 	*                     always be set to the fully expanded URI of the
 	*                     base system identifier, if possible.
 	*/
-	@:overload public function new(publicId : String, systemId : String, baseSystemId : String) : Void;
+	@:overload @:public public function new(publicId : String, systemId : String, baseSystemId : String) : Void;
 	
 	/**
 	* Constructs an input source from a XMLResourceIdentifier
@@ -62,7 +62,7 @@ extern class XMLInputSource
 	*
 	* @param resourceIdentifier    the XMLResourceIdentifier containing the information
 	*/
-	@:overload public function new(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : Void;
+	@:overload @:public public function new(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : Void;
 	
 	/**
 	* Constructs an input source from a byte stream.
@@ -79,7 +79,7 @@ extern class XMLInputSource
 	* @param byteStream   The byte stream.
 	* @param encoding     The encoding of the byte stream, if known.
 	*/
-	@:overload public function new(publicId : String, systemId : String, baseSystemId : String, byteStream : java.io.InputStream, encoding : String) : Void;
+	@:overload @:public public function new(publicId : String, systemId : String, baseSystemId : String, byteStream : java.io.InputStream, encoding : String) : Void;
 	
 	/**
 	* Constructs an input source from a character stream.
@@ -97,37 +97,37 @@ extern class XMLInputSource
 	* @param encoding     The original encoding of the byte stream
 	*                     used by the reader, if known.
 	*/
-	@:overload public function new(publicId : String, systemId : String, baseSystemId : String, charStream : java.io.Reader, encoding : String) : Void;
+	@:overload @:public public function new(publicId : String, systemId : String, baseSystemId : String, charStream : java.io.Reader, encoding : String) : Void;
 	
 	/**
 	* Sets the public identifier.
 	*
 	* @param publicId The new public identifier.
 	*/
-	@:overload public function setPublicId(publicId : String) : Void;
+	@:overload @:public public function setPublicId(publicId : String) : Void;
 	
 	/** Returns the public identifier. */
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* Sets the system identifier.
 	*
 	* @param systemId The new system identifier.
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	/** Returns the system identifier. */
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* Sets the base system identifier.
 	*
 	* @param baseSystemId The new base system identifier.
 	*/
-	@:overload public function setBaseSystemId(baseSystemId : String) : Void;
+	@:overload @:public public function setBaseSystemId(baseSystemId : String) : Void;
 	
 	/** Returns the base system identifier. */
-	@:overload public function getBaseSystemId() : String;
+	@:overload @:public public function getBaseSystemId() : String;
 	
 	/**
 	* Sets the byte stream. If the byte stream is not already opened
@@ -138,10 +138,10 @@ extern class XMLInputSource
 	*
 	* @param byteStream The new byte stream.
 	*/
-	@:overload public function setByteStream(byteStream : java.io.InputStream) : Void;
+	@:overload @:public public function setByteStream(byteStream : java.io.InputStream) : Void;
 	
 	/** Returns the byte stream. */
-	@:overload public function getByteStream() : java.io.InputStream;
+	@:overload @:public public function getByteStream() : java.io.InputStream;
 	
 	/**
 	* Sets the character stream. If the character stream is not already
@@ -154,20 +154,20 @@ extern class XMLInputSource
 	*
 	* @see #setEncoding
 	*/
-	@:overload public function setCharacterStream(charStream : java.io.Reader) : Void;
+	@:overload @:public public function setCharacterStream(charStream : java.io.Reader) : Void;
 	
 	/** Returns the character stream. */
-	@:overload public function getCharacterStream() : java.io.Reader;
+	@:overload @:public public function getCharacterStream() : java.io.Reader;
 	
 	/**
 	* Sets the encoding of the stream.
 	*
 	* @param encoding The new encoding.
 	*/
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
 	/** Returns the encoding of the stream, or null if not known. */
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	
 }

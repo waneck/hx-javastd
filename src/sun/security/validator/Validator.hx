@@ -82,86 +82,86 @@ extern class Validator
 	* Constant for a validator of type Simple.
 	* @see #getInstance
 	*/
-	public static var TYPE_SIMPLE(default, null) : String;
+	@:public @:final @:static public static var TYPE_SIMPLE(default, null) : String;
 	
 	/**
 	* Constant for a validator of type PKIX.
 	* @see #getInstance
 	*/
-	public static var TYPE_PKIX(default, null) : String;
+	@:public @:final @:static public static var TYPE_PKIX(default, null) : String;
 	
 	/**
 	* Constant for a Generic variant of a validator.
 	* @see #getInstance
 	*/
-	public static var VAR_GENERIC(default, null) : String;
+	@:public @:final @:static public static var VAR_GENERIC(default, null) : String;
 	
 	/**
 	* Constant for a Code Signing variant of a validator.
 	* @see #getInstance
 	*/
-	public static var VAR_CODE_SIGNING(default, null) : String;
+	@:public @:final @:static public static var VAR_CODE_SIGNING(default, null) : String;
 	
 	/**
 	* Constant for a JCE Code Signing variant of a validator.
 	* @see #getInstance
 	*/
-	public static var VAR_JCE_SIGNING(default, null) : String;
+	@:public @:final @:static public static var VAR_JCE_SIGNING(default, null) : String;
 	
 	/**
 	* Constant for a TLS Client variant of a validator.
 	* @see #getInstance
 	*/
-	public static var VAR_TLS_CLIENT(default, null) : String;
+	@:public @:final @:static public static var VAR_TLS_CLIENT(default, null) : String;
 	
 	/**
 	* Constant for a TLS Server variant of a validator.
 	* @see #getInstance
 	*/
-	public static var VAR_TLS_SERVER(default, null) : String;
+	@:public @:final @:static public static var VAR_TLS_SERVER(default, null) : String;
 	
 	/**
 	* Constant for a TSA Server variant of a validator.
 	* @see #getInstance
 	*/
-	public static var VAR_TSA_SERVER(default, null) : String;
+	@:public @:final @:static public static var VAR_TSA_SERVER(default, null) : String;
 	
 	/**
 	* Constant for a Code Signing variant of a validator for use by
 	* the J2SE Plugin/WebStart code.
 	* @see #getInstance
 	*/
-	public static var VAR_PLUGIN_CODE_SIGNING(default, null) : String;
+	@:public @:final @:static public static var VAR_PLUGIN_CODE_SIGNING(default, null) : String;
 	
 	/**
 	* Get a new Validator instance using the trusted certificates from the
 	* specified KeyStore as trust anchors.
 	*/
-	@:overload public static function getInstance(type : String, variant : String, ks : java.security.KeyStore) : sun.security.validator.Validator;
+	@:overload @:public @:static public static function getInstance(type : String, variant : String, ks : java.security.KeyStore) : sun.security.validator.Validator;
 	
 	/**
 	* Get a new Validator instance using the Set of X509Certificates as trust
 	* anchors.
 	*/
-	@:overload public static function getInstance(type : String, variant : String, trustedCerts : java.util.Collection<java.security.cert.X509Certificate>) : sun.security.validator.Validator;
+	@:overload @:public @:static public static function getInstance(type : String, variant : String, trustedCerts : java.util.Collection<java.security.cert.X509Certificate>) : sun.security.validator.Validator;
 	
 	/**
 	* Get a new Validator instance using the provided PKIXBuilderParameters.
 	* This method can only be used with the PKIX validator.
 	*/
-	@:overload public static function getInstance(type : String, variant : String, params : java.security.cert.PKIXBuilderParameters) : sun.security.validator.Validator;
+	@:overload @:public @:static public static function getInstance(type : String, variant : String, params : java.security.cert.PKIXBuilderParameters) : sun.security.validator.Validator;
 	
 	/**
 	* Validate the given certificate chain.
 	*/
-	@:overload @:final public function validate(chain : java.NativeArray<java.security.cert.X509Certificate>) : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public @:final public function validate(chain : java.NativeArray<java.security.cert.X509Certificate>) : java.NativeArray<java.security.cert.X509Certificate>;
 	
 	/**
 	* Validate the given certificate chain. If otherCerts is non-null, it is
 	* a Collection of additional X509Certificates that could be helpful for
 	* path building.
 	*/
-	@:overload @:final public function validate(chain : java.NativeArray<java.security.cert.X509Certificate>, otherCerts : java.util.Collection<java.security.cert.X509Certificate>) : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public @:final public function validate(chain : java.NativeArray<java.security.cert.X509Certificate>, otherCerts : java.util.Collection<java.security.cert.X509Certificate>) : java.NativeArray<java.security.cert.X509Certificate>;
 	
 	/**
 	* Validate the given certificate chain. If otherCerts is non-null, it is
@@ -178,7 +178,7 @@ extern class Validator
 	* @return a non-empty chain that was used to validate the path. The
 	* end entity cert is at index 0, the trust anchor at index n-1.
 	*/
-	@:overload @:final public function validate(chain : java.NativeArray<java.security.cert.X509Certificate>, otherCerts : java.util.Collection<java.security.cert.X509Certificate>, parameter : Dynamic) : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public @:final public function validate(chain : java.NativeArray<java.security.cert.X509Certificate>, otherCerts : java.util.Collection<java.security.cert.X509Certificate>, parameter : Dynamic) : java.NativeArray<java.security.cert.X509Certificate>;
 	
 	/**
 	* Validate the given certificate chain.
@@ -197,13 +197,13 @@ extern class Validator
 	* @return a non-empty chain that was used to validate the path. The
 	*        end entity cert is at index 0, the trust anchor at index n-1.
 	*/
-	@:overload @:final public function validate(chain : java.NativeArray<java.security.cert.X509Certificate>, otherCerts : java.util.Collection<java.security.cert.X509Certificate>, constraints : java.security.AlgorithmConstraints, parameter : Dynamic) : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public @:final public function validate(chain : java.NativeArray<java.security.cert.X509Certificate>, otherCerts : java.util.Collection<java.security.cert.X509Certificate>, constraints : java.security.AlgorithmConstraints, parameter : Dynamic) : java.NativeArray<java.security.cert.X509Certificate>;
 	
 	/**
 	* Returns an immutable Collection of the X509Certificates this instance
 	* uses as trust anchors.
 	*/
-	@:overload @:abstract public function getTrustedCertificates() : java.util.Collection<java.security.cert.X509Certificate>;
+	@:overload @:public @:abstract public function getTrustedCertificates() : java.util.Collection<java.security.cert.X509Certificate>;
 	
 	/**
 	* Set the date to be used for subsequent validations. NOTE that
@@ -212,7 +212,7 @@ extern class Validator
 	*
 	* @deprecated
 	*/
-	@:overload public function setValidationDate(validationDate : java.util.Date) : Void;
+	@:overload @:public public function setValidationDate(validationDate : java.util.Date) : Void;
 	
 	
 }

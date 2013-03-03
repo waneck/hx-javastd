@@ -21,7 +21,7 @@ extern interface BindingIteratorOperations
 	* 
 	* @param b the returned binding
 	*/
-	@:overload public function next_one(b : org.omg.CosNaming.BindingHolder) : Bool;
+	@:overload @:public public function next_one(b : org.omg.CosNaming.BindingHolder) : Bool;
 	
 	/**
 	* This operation returns at most the requested number of bindings.
@@ -30,12 +30,12 @@ extern interface BindingIteratorOperations
 	* 
 	* @param bl the returned bindings
 	*/
-	@:overload public function next_n(how_many : Int, bl : org.omg.CosNaming.BindingListHolder) : Bool;
+	@:overload @:public public function next_n(how_many : Int, bl : org.omg.CosNaming.BindingListHolder) : Bool;
 	
 	/**
 	* This operation destroys the iterator.
 	*/
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	
 }

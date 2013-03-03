@@ -28,34 +28,34 @@ extern class ForwardingDiagnosticFormatter<D, F> implements com.sun.tools.javac.
 	/**
 	* The delegated formatter
 	*/
-	private var formatter : F;
+	@:protected private var formatter : F;
 	
 	/*
 	* configuration object used by this formatter
 	*/
-	private var configuration : com.sun.tools.javac.util.ForwardingDiagnosticFormatter.ForwardingDiagnosticFormatter_ForwardingConfiguration;
+	@:protected private var configuration : com.sun.tools.javac.util.ForwardingDiagnosticFormatter.ForwardingDiagnosticFormatter_ForwardingConfiguration;
 	
-	@:overload public function new(formatter : F) : Void;
+	@:overload @:public public function new(formatter : F) : Void;
 	
 	/**
 	* Returns the underlying delegated formatter
 	* @return delegate formatter
 	*/
-	@:overload public function getDelegatedFormatter() : F;
+	@:overload @:public public function getDelegatedFormatter() : F;
 	
-	@:overload public function getConfiguration() : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration;
+	@:overload @:public public function getConfiguration() : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration;
 	
-	@:overload public function displaySource(diag : D) : Bool;
+	@:overload @:public public function displaySource(diag : D) : Bool;
 	
-	@:overload public function format(diag : D, l : java.util.Locale) : String;
+	@:overload @:public public function format(diag : D, l : java.util.Locale) : String;
 	
-	@:overload public function formatKind(diag : D, l : java.util.Locale) : String;
+	@:overload @:public public function formatKind(diag : D, l : java.util.Locale) : String;
 	
-	@:overload public function formatMessage(diag : D, l : java.util.Locale) : String;
+	@:overload @:public public function formatMessage(diag : D, l : java.util.Locale) : String;
 	
-	@:overload public function formatPosition(diag : D, pk : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_PositionKind, l : java.util.Locale) : String;
+	@:overload @:public public function formatPosition(diag : D, pk : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_PositionKind, l : java.util.Locale) : String;
 	
-	@:overload public function formatSource(diag : D, fullname : Bool, l : java.util.Locale) : String;
+	@:overload @:public public function formatSource(diag : D, fullname : Bool, l : java.util.Locale) : String;
 	
 	
 }
@@ -66,23 +66,23 @@ extern class ForwardingDiagnosticFormatter<D, F> implements com.sun.tools.javac.
 @:native('com$sun$tools$javac$util$ForwardingDiagnosticFormatter$ForwardingConfiguration') extern class ForwardingDiagnosticFormatter_ForwardingConfiguration implements com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration
 {
 	/** The configurationr object to which the forwarding configuration delegates some settings */
-	private var configuration : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration;
+	@:protected private var configuration : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration;
 	
-	@:overload public function new(configuration : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration) : Void;
 	
 	/**
 	* Returns the underlying delegated configuration.
 	* @return delegated configuration
 	*/
-	@:overload public function getDelegatedConfiguration() : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration;
+	@:overload @:public public function getDelegatedConfiguration() : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration;
 	
-	@:overload public function getMultilineLimit(limit : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_MultilineLimit) : Int;
+	@:overload @:public public function getMultilineLimit(limit : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_MultilineLimit) : Int;
 	
-	@:overload public function getVisible() : java.util.Set<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart>;
+	@:overload @:public public function getVisible() : java.util.Set<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart>;
 	
-	@:overload public function setMultilineLimit(limit : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_MultilineLimit, value : Int) : Void;
+	@:overload @:public public function setMultilineLimit(limit : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_MultilineLimit, value : Int) : Void;
 	
-	@:overload public function setVisible(diagParts : java.util.Set<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart>) : Void;
+	@:overload @:public public function setVisible(diagParts : java.util.Set<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart>) : Void;
 	
 	
 }

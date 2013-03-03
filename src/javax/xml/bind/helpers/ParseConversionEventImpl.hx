@@ -35,7 +35,7 @@ extern class ParseConversionEventImpl extends javax.xml.bind.helpers.ValidationE
 	* @param _locator The locator object for this event - may be null.
 	* @throws IllegalArgumentException if an illegal severity field is supplied
 	*/
-	@:overload public function new(_severity : Int, _message : String, _locator : javax.xml.bind.ValidationEventLocator) : Void;
+	@:overload @:public public function new(_severity : Int, _message : String, _locator : javax.xml.bind.ValidationEventLocator) : Void;
 	
 	/**
 	* Create a new ParseConversionEventImpl.
@@ -49,7 +49,7 @@ extern class ParseConversionEventImpl extends javax.xml.bind.helpers.ValidationE
 	* additional information about the event - may be null.
 	* @throws IllegalArgumentException if an illegal severity field is supplied
 	*/
-	@:overload public function new(_severity : Int, _message : String, _locator : javax.xml.bind.ValidationEventLocator, _linkedException : java.lang.Throwable) : Void;
+	@:overload @:public public function new(_severity : Int, _message : String, _locator : javax.xml.bind.ValidationEventLocator, _linkedException : java.lang.Throwable) : Void;
 	
 	
 }

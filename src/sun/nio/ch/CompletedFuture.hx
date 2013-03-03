@@ -25,15 +25,15 @@ package sun.nio.ch;
 */
 @:internal extern class CompletedFuture<V> implements java.util.concurrent.Future<V>
 {
-	@:overload public function get() : V;
+	@:overload @:public public function get() : V;
 	
-	@:overload public function get(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : V;
+	@:overload @:public public function get(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : V;
 	
-	@:overload public function isCancelled() : Bool;
+	@:overload @:public public function isCancelled() : Bool;
 	
-	@:overload public function isDone() : Bool;
+	@:overload @:public public function isDone() : Bool;
 	
-	@:overload public function cancel(mayInterruptIfRunning : Bool) : Bool;
+	@:overload @:public public function cancel(mayInterruptIfRunning : Bool) : Bool;
 	
 	
 }

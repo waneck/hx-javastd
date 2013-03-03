@@ -41,7 +41,7 @@ extern class DOMSignedInfo extends org.jcp.xml.dsig.internal.dom.DOMStructure im
 	* @throws ClassCastException if any of the references are not of
 	*    type <code>Reference</code>
 	*/
-	@:overload public function new(cm : javax.xml.crypto.dsig.CanonicalizationMethod, sm : javax.xml.crypto.dsig.SignatureMethod, references : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function new(cm : javax.xml.crypto.dsig.CanonicalizationMethod, sm : javax.xml.crypto.dsig.SignatureMethod, references : java.util.List<Dynamic>) : Void;
 	
 	/**
 	* Creates a <code>DOMSignedInfo</code> from the specified parameters.
@@ -58,30 +58,30 @@ extern class DOMSignedInfo extends org.jcp.xml.dsig.internal.dom.DOMStructure im
 	* @throws ClassCastException if any of the references are not of
 	*    type <code>Reference</code>
 	*/
-	@:overload public function new(cm : javax.xml.crypto.dsig.CanonicalizationMethod, sm : javax.xml.crypto.dsig.SignatureMethod, references : java.util.List<Dynamic>, id : String) : Void;
+	@:overload @:public public function new(cm : javax.xml.crypto.dsig.CanonicalizationMethod, sm : javax.xml.crypto.dsig.SignatureMethod, references : java.util.List<Dynamic>, id : String) : Void;
 	
 	/**
 	* Creates a <code>DOMSignedInfo</code> from an element.
 	*
 	* @param siElem a SignedInfo element
 	*/
-	@:overload public function new(siElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
+	@:overload @:public public function new(siElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
 	
-	@:overload public function getCanonicalizationMethod() : javax.xml.crypto.dsig.CanonicalizationMethod;
+	@:overload @:public public function getCanonicalizationMethod() : javax.xml.crypto.dsig.CanonicalizationMethod;
 	
-	@:overload public function getSignatureMethod() : javax.xml.crypto.dsig.SignatureMethod;
+	@:overload @:public public function getSignatureMethod() : javax.xml.crypto.dsig.SignatureMethod;
 	
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
-	@:overload public function getReferences() : java.util.List<Dynamic>;
+	@:overload @:public public function getReferences() : java.util.List<Dynamic>;
 	
-	@:overload public function getCanonicalizedData() : java.io.InputStream;
+	@:overload @:public public function getCanonicalizedData() : java.io.InputStream;
 	
-	@:overload public function canonicalize(context : javax.xml.crypto.XMLCryptoContext, bos : java.io.ByteArrayOutputStream) : Void;
+	@:overload @:public public function canonicalize(context : javax.xml.crypto.XMLCryptoContext, bos : java.io.ByteArrayOutputStream) : Void;
 	
-	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }

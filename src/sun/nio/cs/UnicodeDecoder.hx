@@ -25,23 +25,23 @@ package sun.nio.cs;
 */
 @:internal extern class UnicodeDecoder extends java.nio.charset.CharsetDecoder
 {
-	private static var BYTE_ORDER_MARK(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var BYTE_ORDER_MARK(default, null) : java.StdTypes.Char16;
 	
-	private static var REVERSED_MARK(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var REVERSED_MARK(default, null) : java.StdTypes.Char16;
 	
-	private static var NONE(default, null) : Int;
+	@:protected @:static @:final private static var NONE(default, null) : Int;
 	
-	private static var BIG(default, null) : Int;
+	@:protected @:static @:final private static var BIG(default, null) : Int;
 	
-	private static var LITTLE(default, null) : Int;
+	@:protected @:static @:final private static var LITTLE(default, null) : Int;
 	
-	@:overload public function new(cs : java.nio.charset.Charset, bo : Int) : Void;
+	@:overload @:public public function new(cs : java.nio.charset.Charset, bo : Int) : Void;
 	
-	@:overload public function new(cs : java.nio.charset.Charset, bo : Int, defaultBO : Int) : Void;
+	@:overload @:public public function new(cs : java.nio.charset.Charset, bo : Int, defaultBO : Int) : Void;
 	
-	@:overload override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function implReset() : Void;
+	@:overload @:protected override private function implReset() : Void;
 	
 	
 }

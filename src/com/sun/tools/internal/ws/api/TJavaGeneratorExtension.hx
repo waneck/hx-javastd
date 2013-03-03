@@ -31,7 +31,7 @@ extern class TJavaGeneratorExtension
 	* @param wsdlOperation non-null wsdl extensiblity element -  wsdl:portType/wsdl:operation.
 	* @param jMethod non-null {@link JMethod}
 	*/
-	@:overload @:abstract public function writeMethodAnnotations(wsdlOperation : com.sun.tools.internal.ws.api.wsdl.TWSDLOperation, jMethod : com.sun.codemodel.internal.JMethod) : Void;
+	@:overload @:public @:abstract public function writeMethodAnnotations(wsdlOperation : com.sun.tools.internal.ws.api.wsdl.TWSDLOperation, jMethod : com.sun.codemodel.internal.JMethod) : Void;
 	
 	
 }

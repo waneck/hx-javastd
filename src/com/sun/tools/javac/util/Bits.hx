@@ -34,59 +34,59 @@ extern class Bits
 {
 	/** Construct an initially empty set.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Construct a set consisting initially of given bit vector.
 	*/
-	@:overload public function new(bits : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(bits : java.NativeArray<Int>) : Void;
 	
 	/** Construct a set consisting initially of given range.
 	*/
-	@:overload public function new(start : Int, limit : Int) : Void;
+	@:overload @:public public function new(start : Int, limit : Int) : Void;
 	
 	/** This set = {}.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/** Return a copy of this set.
 	*/
-	@:overload public function dup() : com.sun.tools.javac.util.Bits;
+	@:overload @:public public function dup() : com.sun.tools.javac.util.Bits;
 	
 	/** Include x in this set.
 	*/
-	@:overload public function incl(x : Int) : Void;
+	@:overload @:public public function incl(x : Int) : Void;
 	
 	/** Include [start..limit) in this set.
 	*/
-	@:overload public function inclRange(start : Int, limit : Int) : Void;
+	@:overload @:public public function inclRange(start : Int, limit : Int) : Void;
 	
 	/** Exclude [start...end] from this set.
 	*/
-	@:overload public function excludeFrom(start : Int) : Void;
+	@:overload @:public public function excludeFrom(start : Int) : Void;
 	
 	/** Exclude x from this set.
 	*/
-	@:overload public function excl(x : Int) : Void;
+	@:overload @:public public function excl(x : Int) : Void;
 	
 	/** Is x an element of this set?
 	*/
-	@:overload public function isMember(x : Int) : Bool;
+	@:overload @:public public function isMember(x : Int) : Bool;
 	
 	/** this set = this set & xs.
 	*/
-	@:overload public function andSet(xs : com.sun.tools.javac.util.Bits) : com.sun.tools.javac.util.Bits;
+	@:overload @:public public function andSet(xs : com.sun.tools.javac.util.Bits) : com.sun.tools.javac.util.Bits;
 	
 	/** this set = this set | xs.
 	*/
-	@:overload public function orSet(xs : com.sun.tools.javac.util.Bits) : com.sun.tools.javac.util.Bits;
+	@:overload @:public public function orSet(xs : com.sun.tools.javac.util.Bits) : com.sun.tools.javac.util.Bits;
 	
 	/** this set = this set \ xs.
 	*/
-	@:overload public function diffSet(xs : com.sun.tools.javac.util.Bits) : com.sun.tools.javac.util.Bits;
+	@:overload @:public public function diffSet(xs : com.sun.tools.javac.util.Bits) : com.sun.tools.javac.util.Bits;
 	
 	/** this set = this set ^ xs.
 	*/
-	@:overload public function xorSet(xs : com.sun.tools.javac.util.Bits) : com.sun.tools.javac.util.Bits;
+	@:overload @:public public function xorSet(xs : com.sun.tools.javac.util.Bits) : com.sun.tools.javac.util.Bits;
 	
 	/** Return the index of the least bit position >= x that is set.
 	*  If none are set, returns -1.  This provides a nice way to iterate
@@ -95,14 +95,14 @@ extern class Bits
 	*  for (int i = bits.nextBit(0); i>=0; i = bits.nextBit(i+1)) ...
 	*  </pre>
 	*/
-	@:overload public function nextBit(x : Int) : Int;
+	@:overload @:public public function nextBit(x : Int) : Int;
 	
 	/** a string representation of this set.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/** Test Bits.nextBit(int). */
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

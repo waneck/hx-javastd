@@ -30,43 +30,43 @@ extern class EventReaderDelegate implements javax.xml.stream.XMLEventReader
 	/**
 	* Construct an empty filter with no parent.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct an filter with the specified parent.
 	* @param reader the parent
 	*/
-	@:overload public function new(reader : javax.xml.stream.XMLEventReader) : Void;
+	@:overload @:public public function new(reader : javax.xml.stream.XMLEventReader) : Void;
 	
 	/**
 	* Set the parent of this instance.
 	* @param reader the new parent
 	*/
-	@:overload public function setParent(reader : javax.xml.stream.XMLEventReader) : Void;
+	@:overload @:public public function setParent(reader : javax.xml.stream.XMLEventReader) : Void;
 	
 	/**
 	* Get the parent of this instance.
 	* @return the parent or null if none is set
 	*/
-	@:overload public function getParent() : javax.xml.stream.XMLEventReader;
+	@:overload @:public public function getParent() : javax.xml.stream.XMLEventReader;
 	
-	@:overload public function nextEvent() : javax.xml.stream.events.XMLEvent;
+	@:overload @:public public function nextEvent() : javax.xml.stream.events.XMLEvent;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function peek() : javax.xml.stream.events.XMLEvent;
+	@:overload @:public public function peek() : javax.xml.stream.events.XMLEvent;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function getElementText() : String;
+	@:overload @:public public function getElementText() : String;
 	
-	@:overload public function nextTag() : javax.xml.stream.events.XMLEvent;
+	@:overload @:public public function nextTag() : javax.xml.stream.events.XMLEvent;
 	
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

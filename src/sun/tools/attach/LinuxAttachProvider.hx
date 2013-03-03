@@ -25,15 +25,15 @@ package sun.tools.attach;
 */
 extern class LinuxAttachProvider extends sun.tools.attach.HotSpotAttachProvider
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload override public function type() : String;
+	@:overload @:public override public function type() : String;
 	
-	@:overload override public function attachVirtualMachine(vmid : String) : com.sun.tools.attach.VirtualMachine;
+	@:overload @:public override public function attachVirtualMachine(vmid : String) : com.sun.tools.attach.VirtualMachine;
 	
-	@:overload override public function attachVirtualMachine(vmd : com.sun.tools.attach.VirtualMachineDescriptor) : com.sun.tools.attach.VirtualMachine;
+	@:overload @:public override public function attachVirtualMachine(vmd : com.sun.tools.attach.VirtualMachineDescriptor) : com.sun.tools.attach.VirtualMachine;
 	
 	
 }

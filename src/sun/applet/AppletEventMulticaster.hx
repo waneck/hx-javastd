@@ -25,9 +25,9 @@ package sun.applet;
 */
 extern class AppletEventMulticaster implements sun.applet.AppletListener
 {
-	@:overload public function new(a : sun.applet.AppletListener, b : sun.applet.AppletListener) : Void;
+	@:overload @:public public function new(a : sun.applet.AppletListener, b : sun.applet.AppletListener) : Void;
 	
-	@:overload public function appletStateChanged(e : sun.applet.AppletEvent) : Void;
+	@:overload @:public public function appletStateChanged(e : sun.applet.AppletEvent) : Void;
 	
 	/**
 	* Adds Applet-listener-a with Applet-listener-b and
@@ -35,7 +35,7 @@ extern class AppletEventMulticaster implements sun.applet.AppletListener
 	* @param a Applet-listener-a
 	* @param b Applet-listener-b
 	*/
-	@:overload public static function add(a : sun.applet.AppletListener, b : sun.applet.AppletListener) : sun.applet.AppletListener;
+	@:overload @:public @:static public static function add(a : sun.applet.AppletListener, b : sun.applet.AppletListener) : sun.applet.AppletListener;
 	
 	/**
 	* Removes the old Applet-listener from Applet-listener-l and
@@ -43,14 +43,14 @@ extern class AppletEventMulticaster implements sun.applet.AppletListener
 	* @param l Applet-listener-l
 	* @param oldl the Applet-listener being removed
 	*/
-	@:native('remove') @:overload public static function _remove(l : sun.applet.AppletListener, oldl : sun.applet.AppletListener) : sun.applet.AppletListener;
+	@:native('remove') @:overload @:public @:static public static function _remove(l : sun.applet.AppletListener, oldl : sun.applet.AppletListener) : sun.applet.AppletListener;
 	
 	/**
 	* Removes a listener from this multicaster and returns the
 	* resulting multicast listener.
 	* @param oldl the listener to be removed
 	*/
-	@:overload private function remove(oldl : sun.applet.AppletListener) : sun.applet.AppletListener;
+	@:overload @:protected private function remove(oldl : sun.applet.AppletListener) : sun.applet.AppletListener;
 	
 	
 }

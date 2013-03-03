@@ -25,17 +25,17 @@ package sun.security.smartcardio;
 */
 @:internal extern class ChannelImpl extends javax.smartcardio.CardChannel
 {
-	@:overload override public function getCard() : javax.smartcardio.Card;
+	@:overload @:public override public function getCard() : javax.smartcardio.Card;
 	
-	@:overload override public function getChannelNumber() : Int;
+	@:overload @:public override public function getChannelNumber() : Int;
 	
-	@:overload override public function transmit(command : javax.smartcardio.CommandAPDU) : javax.smartcardio.ResponseAPDU;
+	@:overload @:public override public function transmit(command : javax.smartcardio.CommandAPDU) : javax.smartcardio.ResponseAPDU;
 	
-	@:overload override public function transmit(command : java.nio.ByteBuffer, response : java.nio.ByteBuffer) : Int;
+	@:overload @:public override public function transmit(command : java.nio.ByteBuffer, response : java.nio.ByteBuffer) : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

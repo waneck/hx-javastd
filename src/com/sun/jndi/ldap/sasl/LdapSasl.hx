@@ -51,7 +51,7 @@ extern class LdapSasl
 	* @param bindCtls The possibly null controls to accompany the bind
 	* @return LdapResult containing status of the bind
 	*/
-	@:overload public static function saslBind(clnt : com.sun.jndi.ldap.LdapClient, conn : com.sun.jndi.ldap.Connection, server : String, dn : String, pw : Dynamic, authMech : String, env : java.util.Hashtable<Dynamic, Dynamic>, bindCtls : java.NativeArray<javax.naming.ldap.Control>) : com.sun.jndi.ldap.LdapResult;
+	@:overload @:public @:static public static function saslBind(clnt : com.sun.jndi.ldap.LdapClient, conn : com.sun.jndi.ldap.Connection, server : String, dn : String, pw : Dynamic, authMech : String, env : java.util.Hashtable<Dynamic, Dynamic>, bindCtls : java.NativeArray<javax.naming.ldap.Control>) : com.sun.jndi.ldap.LdapResult;
 	
 	
 }

@@ -25,61 +25,61 @@ package sun.java2d.xr;
 */
 extern class XRBackendNative implements sun.java2d.xr.XRBackend
 {
-	@:overload @:native public function createGC(drawable : Int) : haxe.Int64;
+	@:overload @:public @:native public function createGC(drawable : Int) : haxe.Int64;
 	
-	@:overload @:native public function freeGC(gc : haxe.Int64) : Void;
+	@:overload @:public @:native public function freeGC(gc : haxe.Int64) : Void;
 	
-	@:overload @:native public function createPixmap(drawable : Int, depth : Int, width : Int, height : Int) : Int;
+	@:overload @:public @:native public function createPixmap(drawable : Int, depth : Int, width : Int, height : Int) : Int;
 	
-	@:overload @:native public function freePicture(picture : Int) : Void;
+	@:overload @:public @:native public function freePicture(picture : Int) : Void;
 	
-	@:overload @:native public function freePixmap(pixmap : Int) : Void;
+	@:overload @:public @:native public function freePixmap(pixmap : Int) : Void;
 	
-	@:overload @:native public function setGCExposures(gc : haxe.Int64, exposure : Bool) : Void;
+	@:overload @:public @:native public function setGCExposures(gc : haxe.Int64, exposure : Bool) : Void;
 	
-	@:overload @:native public function setGCForeground(gc : haxe.Int64, pixel : Int) : Void;
+	@:overload @:public @:native public function setGCForeground(gc : haxe.Int64, pixel : Int) : Void;
 	
-	@:overload @:native public function setPictureRepeat(picture : Int, repeat : Int) : Void;
+	@:overload @:public @:native public function setPictureRepeat(picture : Int, repeat : Int) : Void;
 	
-	@:overload @:native public function copyArea(src : Int, dst : Int, gc : haxe.Int64, srcx : Int, srcy : Int, width : Int, height : Int, dstx : Int, dsty : Int) : Void;
+	@:overload @:public @:native public function copyArea(src : Int, dst : Int, gc : haxe.Int64, srcx : Int, srcy : Int, width : Int, height : Int, dstx : Int, dsty : Int) : Void;
 	
-	@:overload @:native public function setGCMode(gc : haxe.Int64, copy : Bool) : Void;
+	@:overload @:public @:native public function setGCMode(gc : haxe.Int64, copy : Bool) : Void;
 	
-	@:overload @:native public function renderComposite(op : java.StdTypes.Int8, src : Int, mask : Int, dst : Int, srcX : Int, srcY : Int, maskX : Int, maskY : Int, dstX : Int, dstY : Int, width : Int, height : Int) : Void;
+	@:overload @:public @:native public function renderComposite(op : java.StdTypes.Int8, src : Int, mask : Int, dst : Int, srcX : Int, srcY : Int, maskX : Int, maskY : Int, dstX : Int, dstY : Int, width : Int, height : Int) : Void;
 	
-	@:overload @:native public function setFilter(picture : Int, filter : Int) : Void;
+	@:overload @:public @:native public function setFilter(picture : Int, filter : Int) : Void;
 	
-	@:overload public function GCRectangles(drawable : Int, gc : haxe.Int64, rects : sun.java2d.xr.GrowableRectArray) : Void;
+	@:overload @:public public function GCRectangles(drawable : Int, gc : haxe.Int64, rects : sun.java2d.xr.GrowableRectArray) : Void;
 	
-	@:overload public function createPicture(drawable : Int, formatID : Int) : Int;
+	@:overload @:public public function createPicture(drawable : Int, formatID : Int) : Int;
 	
-	@:overload public function setPictureTransform(picture : Int, transform : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public public function setPictureTransform(picture : Int, transform : java.awt.geom.AffineTransform) : Void;
 	
-	@:overload public function renderRectangle(dst : Int, op : java.StdTypes.Int8, color : sun.java2d.xr.XRColor, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function renderRectangle(dst : Int, op : java.StdTypes.Int8, color : sun.java2d.xr.XRColor, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function createLinearGradient(p1 : java.awt.geom.Point2D, p2 : java.awt.geom.Point2D, fractions : java.NativeArray<Single>, pixels : java.NativeArray<Int>, repeat : Int, trx : java.awt.geom.AffineTransform) : Int;
+	@:overload @:public public function createLinearGradient(p1 : java.awt.geom.Point2D, p2 : java.awt.geom.Point2D, fractions : java.NativeArray<Single>, pixels : java.NativeArray<Int>, repeat : Int, trx : java.awt.geom.AffineTransform) : Int;
 	
-	@:overload public function createRadialGradient(inner : java.awt.geom.Point2D, outer : java.awt.geom.Point2D, innerRadius : Single, outerRadius : Single, fractions : java.NativeArray<Single>, pixels : java.NativeArray<Int>, repeat : Int, trx : java.awt.geom.AffineTransform) : Int;
+	@:overload @:public public function createRadialGradient(inner : java.awt.geom.Point2D, outer : java.awt.geom.Point2D, innerRadius : Single, outerRadius : Single, fractions : java.NativeArray<Single>, pixels : java.NativeArray<Int>, repeat : Int, trx : java.awt.geom.AffineTransform) : Int;
 	
-	@:overload public function setGCClipRectangles(gc : haxe.Int64, clip : sun.java2d.pipe.Region) : Void;
+	@:overload @:public public function setGCClipRectangles(gc : haxe.Int64, clip : sun.java2d.pipe.Region) : Void;
 	
-	@:overload public function setClipRectangles(picture : Int, clip : sun.java2d.pipe.Region) : Void;
+	@:overload @:public public function setClipRectangles(picture : Int, clip : sun.java2d.pipe.Region) : Void;
 	
-	@:overload public function renderRectangles(dst : Int, op : java.StdTypes.Int8, color : sun.java2d.xr.XRColor, rects : sun.java2d.xr.GrowableRectArray) : Void;
+	@:overload @:public public function renderRectangles(dst : Int, op : java.StdTypes.Int8, color : sun.java2d.xr.XRColor, rects : sun.java2d.xr.GrowableRectArray) : Void;
 	
-	@:overload public function XRenderAddGlyphs(glyphSet : Int, gl : sun.font.GlyphList, cacheEntries : java.util.List<sun.font.XRGlyphCacheEntry>, pixelData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function XRenderAddGlyphs(glyphSet : Int, gl : sun.font.GlyphList, cacheEntries : java.util.List<sun.font.XRGlyphCacheEntry>, pixelData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function XRenderFreeGlyphs(glyphSet : Int, gids : java.NativeArray<Int>) : Void;
+	@:overload @:public public function XRenderFreeGlyphs(glyphSet : Int, gids : java.NativeArray<Int>) : Void;
 	
-	@:overload public function XRenderCreateGlyphSet(formatID : Int) : Int;
+	@:overload @:public public function XRenderCreateGlyphSet(formatID : Int) : Int;
 	
-	@:overload public function XRenderCompositeText(op : java.StdTypes.Int8, src : Int, dst : Int, maskFormatID : Int, src2 : Int, src3 : Int, dst2 : Int, dst3 : Int, glyphset : Int, elts : sun.java2d.xr.GrowableEltArray) : Void;
+	@:overload @:public public function XRenderCompositeText(op : java.StdTypes.Int8, src : Int, dst : Int, maskFormatID : Int, src2 : Int, src3 : Int, dst2 : Int, dst3 : Int, glyphset : Int, elts : sun.java2d.xr.GrowableEltArray) : Void;
 	
-	@:overload public function putMaskImage(drawable : Int, gc : haxe.Int64, imageData : java.NativeArray<java.StdTypes.Int8>, sx : Int, sy : Int, dx : Int, dy : Int, width : Int, height : Int, maskOff : Int, maskScan : Int, ea : Single) : Void;
+	@:overload @:public public function putMaskImage(drawable : Int, gc : haxe.Int64, imageData : java.NativeArray<java.StdTypes.Int8>, sx : Int, sy : Int, dx : Int, dy : Int, width : Int, height : Int, maskOff : Int, maskScan : Int, ea : Single) : Void;
 	
-	@:overload public function padBlit(op : java.StdTypes.Int8, srcPict : Int, maskPict : Int, dstPict : Int, maskTrx : java.awt.geom.AffineTransform, maskWidth : Int, maskHeight : Int, lastMaskWidth : Int, lastMaskHeight : Int, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function padBlit(op : java.StdTypes.Int8, srcPict : Int, maskPict : Int, dstPict : Int, maskTrx : java.awt.geom.AffineTransform, maskWidth : Int, maskHeight : Int, lastMaskWidth : Int, lastMaskHeight : Int, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function renderCompositeTrapezoids(op : java.StdTypes.Int8, src : Int, maskFormat : Int, dst : Int, srcX : Int, srcY : Int, trapList : sun.java2d.jules.TrapezoidList) : Void;
+	@:overload @:public public function renderCompositeTrapezoids(op : java.StdTypes.Int8, src : Int, maskFormat : Int, dst : Int, srcX : Int, srcY : Int, trapList : sun.java2d.jules.TrapezoidList) : Void;
 	
 	
 }

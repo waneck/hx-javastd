@@ -37,7 +37,7 @@ package java.io;
 	/**
 	* The internal buffer where data is stored.
 	*/
-	private var buf : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var buf : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* The number of valid bytes in the buffer. This value is always
@@ -45,7 +45,7 @@ package java.io;
 	* <tt>buf[0]</tt> through <tt>buf[count-1]</tt> contain valid
 	* byte data.
 	*/
-	private var count : Int;
+	@:protected private var count : Int;
 	
 	/**
 	* Creates a new buffered output stream to write data to the
@@ -53,7 +53,7 @@ package java.io;
 	*
 	* @param   out   the underlying output stream.
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Creates a new buffered output stream to write data to the
@@ -64,7 +64,7 @@ package java.io;
 	* @param   size   the buffer size.
 	* @exception IllegalArgumentException if size &lt;= 0.
 	*/
-	@:overload public function new(out : java.io.OutputStream, size : Int) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, size : Int) : Void;
 	
 	/**
 	* Writes the specified byte to this buffered output stream.
@@ -72,7 +72,7 @@ package java.io;
 	* @param      b   the byte to be written.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:synchronized override public function write(b : Int) : Void;
+	@:overload @:public @:synchronized override public function write(b : Int) : Void;
 	
 	/**
 	* Writes <code>len</code> bytes from the specified byte array
@@ -90,7 +90,7 @@ package java.io;
 	* @param      len   the number of bytes to write.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Flushes this buffered output stream. This forces any buffered
@@ -99,7 +99,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterOutputStream#out
 	*/
-	@:overload @:synchronized override public function flush() : Void;
+	@:overload @:public @:synchronized override public function flush() : Void;
 	
 	
 }

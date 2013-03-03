@@ -28,12 +28,12 @@ extern class MonitorStatus
 	/**
 	* The list of Monitors inserted since the last query.
 	*/
-	private var inserted : java.util.List<Dynamic>;
+	@:protected private var inserted : java.util.List<Dynamic>;
 	
 	/**
 	* The list of Monitors removed since the last query.
 	*/
-	private var removed : java.util.List<Dynamic>;
+	@:protected private var removed : java.util.List<Dynamic>;
 	
 	/**
 	* Create a MonitorStatus instance.
@@ -41,21 +41,21 @@ extern class MonitorStatus
 	* @param inserted the list of Monitors inserted
 	* @param removed the list of Monitors removed
 	*/
-	@:overload public function new(inserted : java.util.List<Dynamic>, removed : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function new(inserted : java.util.List<Dynamic>, removed : java.util.List<Dynamic>) : Void;
 	
 	/**
 	* Get the list of Monitors inserted since the last query.
 	*
 	* @return List - the List of Monitor objects inserted or an empty List.
 	*/
-	@:overload public function getInserted() : java.util.List<Dynamic>;
+	@:overload @:public public function getInserted() : java.util.List<Dynamic>;
 	
 	/**
 	* Get the list of Monitors removed since the last query.
 	*
 	* @return List - the List of Monitor objects removed or an empty List.
 	*/
-	@:overload public function getRemoved() : java.util.List<Dynamic>;
+	@:overload @:public public function getRemoved() : java.util.List<Dynamic>;
 	
 	
 }

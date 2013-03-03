@@ -25,17 +25,17 @@ package sun.awt.X11;
 */
 @:internal extern class XDnDConstants
 {
-	public static var XDND_MIN_PROTOCOL_VERSION(default, null) : Int;
+	@:public @:static @:final public static var XDND_MIN_PROTOCOL_VERSION(default, null) : Int;
 	
-	public static var XDND_PROTOCOL_VERSION(default, null) : Int;
+	@:public @:static @:final public static var XDND_PROTOCOL_VERSION(default, null) : Int;
 	
-	public static var XDND_PROTOCOL_MASK(default, null) : Int;
+	@:public @:static @:final public static var XDND_PROTOCOL_MASK(default, null) : Int;
 	
-	public static var XDND_PROTOCOL_SHIFT(default, null) : Int;
+	@:public @:static @:final public static var XDND_PROTOCOL_SHIFT(default, null) : Int;
 	
-	public static var XDND_DATA_TYPES_BIT(default, null) : Int;
+	@:public @:static @:final public static var XDND_DATA_TYPES_BIT(default, null) : Int;
 	
-	public static var XDND_ACCEPT_DROP_FLAG(default, null) : Int;
+	@:public @:static @:final public static var XDND_ACCEPT_DROP_FLAG(default, null) : Int;
 	
 	
 }

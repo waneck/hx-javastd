@@ -28,58 +28,58 @@ extern class ProgressMonitor
 	/**
 	* Return default ProgressMonitor.
 	*/
-	@:overload @:synchronized public static function getDefault() : sun.net.ProgressMonitor;
+	@:overload @:public @:static @:synchronized public static function getDefault() : sun.net.ProgressMonitor;
 	
 	/**
 	* Change default ProgressMonitor implementation.
 	*/
-	@:overload @:synchronized public static function setDefault(m : sun.net.ProgressMonitor) : Void;
+	@:overload @:public @:static @:synchronized public static function setDefault(m : sun.net.ProgressMonitor) : Void;
 	
 	/**
 	* Change progress metering policy.
 	*/
-	@:overload @:synchronized public static function setMeteringPolicy(policy : sun.net.ProgressMeteringPolicy) : Void;
+	@:overload @:public @:static @:synchronized public static function setMeteringPolicy(policy : sun.net.ProgressMeteringPolicy) : Void;
 	
 	/**
 	* Return a snapshot of the ProgressSource list
 	*/
-	@:overload public function getProgressSources() : java.util.ArrayList<sun.net.ProgressSource>;
+	@:overload @:public public function getProgressSources() : java.util.ArrayList<sun.net.ProgressSource>;
 	
 	/**
 	* Return update notification threshold
 	*/
-	@:overload @:synchronized public function getProgressUpdateThreshold() : Int;
+	@:overload @:public @:synchronized public function getProgressUpdateThreshold() : Int;
 	
 	/**
 	* Return true if metering should be turned on
 	* for a particular URL input stream.
 	*/
-	@:overload public function shouldMeterInput(url : java.net.URL, method : String) : Bool;
+	@:overload @:public public function shouldMeterInput(url : java.net.URL, method : String) : Bool;
 	
 	/**
 	* Register progress source when progress is began.
 	*/
-	@:overload public function registerSource(pi : sun.net.ProgressSource) : Void;
+	@:overload @:public public function registerSource(pi : sun.net.ProgressSource) : Void;
 	
 	/**
 	* Unregister progress source when progress is finished.
 	*/
-	@:overload public function unregisterSource(pi : sun.net.ProgressSource) : Void;
+	@:overload @:public public function unregisterSource(pi : sun.net.ProgressSource) : Void;
 	
 	/**
 	* Progress source is updated.
 	*/
-	@:overload public function updateProgress(pi : sun.net.ProgressSource) : Void;
+	@:overload @:public public function updateProgress(pi : sun.net.ProgressSource) : Void;
 	
 	/**
 	* Add progress listener in progress monitor.
 	*/
-	@:overload public function addProgressListener(l : sun.net.ProgressListener) : Void;
+	@:overload @:public public function addProgressListener(l : sun.net.ProgressListener) : Void;
 	
 	/**
 	* Remove progress listener from progress monitor.
 	*/
-	@:overload public function removeProgressListener(l : sun.net.ProgressListener) : Void;
+	@:overload @:public public function removeProgressListener(l : sun.net.ProgressListener) : Void;
 	
 	
 }
@@ -88,12 +88,12 @@ extern class ProgressMonitor
 	/**
 	* Return true if metering should be turned on for a particular network input stream.
 	*/
-	@:overload public function shouldMeterInput(url : java.net.URL, method : String) : Bool;
+	@:overload @:public public function shouldMeterInput(url : java.net.URL, method : String) : Bool;
 	
 	/**
 	* Return update notification threshold.
 	*/
-	@:overload public function getProgressUpdateThreshold() : Int;
+	@:overload @:public public function getProgressUpdateThreshold() : Int;
 	
 	
 }

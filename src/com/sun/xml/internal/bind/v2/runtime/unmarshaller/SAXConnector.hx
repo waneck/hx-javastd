@@ -31,39 +31,39 @@ extern class SAXConnector implements javax.xml.bind.UnmarshallerHandler
 	*      the caller can override the default SAX {@link Locator} object by this object
 	*      to provide better location information.
 	*/
-	@:overload public function new(next : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor, externalLocator : com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx) : Void;
+	@:overload @:public public function new(next : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor, externalLocator : com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx) : Void;
 	
-	@:overload public function getResult() : Dynamic;
+	@:overload @:public public function getResult() : Dynamic;
 	
-	@:overload public function getContext() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext;
+	@:overload @:public public function getContext() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext;
 	
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
-	@:overload public function startElement(uri : String, local : String, qname : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(uri : String, local : String, qname : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public public function endElement(uri : String, localName : String, qName : String) : Void;
 	
-	@:overload @:final public function characters(buf : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload @:public @:final public function characters(buf : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
-	@:overload @:final public function ignorableWhitespace(buf : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload @:public @:final public function ignorableWhitespace(buf : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$runtime$unmarshaller$SAXConnector$TagNameImpl') @:internal extern class SAXConnector_TagNameImpl extends com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName
 {
-	@:overload public function getQname() : String;
+	@:overload @:public override public function getQname() : String;
 	
 	
 }

@@ -28,13 +28,13 @@ extern class WSDLMessageImpl extends com.sun.xml.internal.ws.model.wsdl.Abstract
 	/**
 	* @param name wsdl:message name attribute value
 	*/
-	@:overload public function new(xsr : javax.xml.stream.XMLStreamReader, name : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(xsr : javax.xml.stream.XMLStreamReader, name : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function add(part : com.sun.xml.internal.ws.model.wsdl.WSDLPartImpl) : Void;
+	@:overload @:public public function add(part : com.sun.xml.internal.ws.model.wsdl.WSDLPartImpl) : Void;
 	
-	@:overload public function parts() : java.lang.Iterable<com.sun.xml.internal.ws.model.wsdl.WSDLPartImpl>;
+	@:overload @:public public function parts() : java.lang.Iterable<com.sun.xml.internal.ws.model.wsdl.WSDLPartImpl>;
 	
 	
 }

@@ -40,7 +40,7 @@ extern class Holder implements com.sun.tools.corba.se.idl.toJavaPortable.AuxGen
 	/**
 	* Public zero-argument constructor.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Generate the holder class. Provides general algorithm for
@@ -55,70 +55,70 @@ extern class Holder implements com.sun.tools.corba.se.idl.toJavaPortable.AuxGen
 	* 6.) Write class closing (close curly)
 	* 7.) Close the print stream
 	**/
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:public public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/**
 	* Initialize variables unique to this generator.
 	**/
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
 	/**
 	* Open the print stream for subsequent output.
 	**/
-	@:overload private function openStream() : Void;
+	@:overload @:protected private function openStream() : Void;
 	
 	/**
 	* Generate the heading, including the package, imports,
 	* source comment, class statement, and left curly.
 	**/
-	@:overload private function writeHeading() : Void;
+	@:overload @:protected private function writeHeading() : Void;
 	
 	/**
 	* Generate members of this class.
 	**/
-	@:overload private function writeBody() : Void;
+	@:overload @:protected private function writeBody() : Void;
 	
 	/**
 	* Generate the closing statements.
 	**/
-	@:overload private function writeClosing() : Void;
+	@:overload @:protected private function writeClosing() : Void;
 	
 	/**
 	* Write the stream to file by closing the print stream.
 	**/
-	@:overload private function closeStream() : Void;
+	@:overload @:protected private function closeStream() : Void;
 	
 	/**
 	* Generate the constructors.
 	**/
-	@:overload private function writeCtors() : Void;
+	@:overload @:protected private function writeCtors() : Void;
 	
 	/**
 	* Generate the _read method.
 	**/
-	@:overload private function writeRead() : Void;
+	@:overload @:protected private function writeRead() : Void;
 	
 	/**
 	* Generate the _write method.
 	**/
-	@:overload private function writeWrite() : Void;
+	@:overload @:protected private function writeWrite() : Void;
 	
 	/**
 	* Generate the _type method.
 	**/
-	@:overload private function writeType() : Void;
+	@:overload @:protected private function writeType() : Void;
 	
-	private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	private var entry : com.sun.tools.corba.se.idl.SymtabEntry;
+	@:protected private var entry : com.sun.tools.corba.se.idl.SymtabEntry;
 	
-	private var stream : com.sun.tools.corba.se.idl.GenFileStream;
+	@:protected private var stream : com.sun.tools.corba.se.idl.GenFileStream;
 	
-	private var holderClass : String;
+	@:protected private var holderClass : String;
 	
-	private var helperClass : String;
+	@:protected private var helperClass : String;
 	
-	private var holderType : String;
+	@:protected private var holderType : String;
 	
 	
 }

@@ -69,7 +69,7 @@ package sun.font;
 */
 extern class ScriptRun
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a <code>ScriptRun</code> object which iterates over a subrange
@@ -79,23 +79,23 @@ extern class ScriptRun
 	* @param start the index of the first character over which to iterate
 	* @param count the number of characters over which to iterate
 	*/
-	@:overload public function new(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, count : Int) : Void;
+	@:overload @:public public function new(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, count : Int) : Void;
 	
-	@:overload public function init(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, count : Int) : Void;
+	@:overload @:public public function init(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, count : Int) : Void;
 	
 	/**
 	* Get the starting index of the current script run.
 	*
 	* @return the index of the first character in the current script run.
 	*/
-	@:overload @:final public function getScriptStart() : Int;
+	@:overload @:public @:final public function getScriptStart() : Int;
 	
 	/**
 	* Get the index of the first character after the current script run.
 	*
 	* @return the index of the first character after the current script run.
 	*/
-	@:overload @:final public function getScriptLimit() : Int;
+	@:overload @:public @:final public function getScriptLimit() : Int;
 	
 	/**
 	* Get the script code for the script of the current script run.
@@ -103,7 +103,7 @@ extern class ScriptRun
 	* @return the script code for the script of the current script run.
 	* @see #Script
 	*/
-	@:overload @:final public function getScriptCode() : Int;
+	@:overload @:public @:final public function getScriptCode() : Int;
 	
 	/**
 	* Find the next script run. Returns <code>false</code> if there
@@ -111,7 +111,7 @@ extern class ScriptRun
 	*
 	* @return <code>false</code> if there isn't another run, <code>true</code> if there is.
 	*/
-	@:overload @:final public function next() : Bool;
+	@:overload @:public @:final public function next() : Bool;
 	
 	
 }

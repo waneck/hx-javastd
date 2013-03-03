@@ -37,7 +37,7 @@ extern interface RawCharacterHandler
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function charactersRaw(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function charactersRaw(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	
 }

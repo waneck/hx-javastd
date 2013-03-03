@@ -59,15 +59,15 @@ extern interface CClassInfoParent
 */
 @:native('com$sun$tools$internal$xjc$model$CClassInfoParent$Package') extern class CClassInfoParent_Package implements com.sun.tools.internal.xjc.model.CClassInfoParent
 {
-	public var pkg(default, null) : com.sun.codemodel.internal.JPackage;
+	@:public @:final public var pkg(default, null) : com.sun.codemodel.internal.JPackage;
 	
-	@:overload public function new(pkg : com.sun.codemodel.internal.JPackage) : Void;
+	@:overload @:public public function new(pkg : com.sun.codemodel.internal.JPackage) : Void;
 	
-	@:overload public function fullName() : String;
+	@:overload @:public public function fullName() : String;
 	
-	@:overload public function accept<T>(visitor : com.sun.tools.internal.xjc.model.CClassInfoParent.CClassInfoParent_Visitor<T>) : T;
+	@:overload @:public public function accept<T>(visitor : com.sun.tools.internal.xjc.model.CClassInfoParent.CClassInfoParent_Visitor<T>) : T;
 	
-	@:overload public function getOwnerPackage() : com.sun.codemodel.internal.JPackage;
+	@:overload @:public public function getOwnerPackage() : com.sun.codemodel.internal.JPackage;
 	
 	
 }

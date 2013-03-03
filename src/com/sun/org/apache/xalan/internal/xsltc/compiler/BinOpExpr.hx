@@ -27,36 +27,36 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* @author Jacek Ambroziak
 	* @author Santiago Pericas-Geertsen
 	*/
-	public static var PLUS(default, null) : Int;
+	@:public @:static @:final public static var PLUS(default, null) : Int;
 	
-	public static var MINUS(default, null) : Int;
+	@:public @:static @:final public static var MINUS(default, null) : Int;
 	
-	public static var TIMES(default, null) : Int;
+	@:public @:static @:final public static var TIMES(default, null) : Int;
 	
-	public static var DIV(default, null) : Int;
+	@:public @:static @:final public static var DIV(default, null) : Int;
 	
-	public static var MOD(default, null) : Int;
+	@:public @:static @:final public static var MOD(default, null) : Int;
 	
-	@:overload public function new(op : Int, left : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression, right : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression) : Void;
+	@:overload @:public public function new(op : Int, left : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression, right : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression) : Void;
 	
 	/**
 	* Returns true if this expressions contains a call to position(). This is
 	* needed for context changes in node steps containing multiple predicates.
 	*/
-	@:overload public function hasPositionCall() : Bool;
+	@:overload @:public override public function hasPositionCall() : Bool;
 	
 	/**
 	* Returns true if this expressions contains a call to last()
 	*/
-	@:overload public function hasLastCall() : Bool;
+	@:overload @:public override public function hasLastCall() : Bool;
 	
-	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

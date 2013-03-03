@@ -36,11 +36,11 @@ package java.beans;
 	* @author Philip Milne
 	* @author Steve Langley
 	*/
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
-	@:overload override public function writeObject(oldInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:public override public function writeObject(oldInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
@@ -51,65 +51,65 @@ package java.beans;
 	*
 	* @author Sergey A. Malenkov
 	*/
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:internal extern class PrimitivePersistenceDelegate extends java.beans.PersistenceDelegate
 {
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:internal extern class ArrayPersistenceDelegate extends java.beans.PersistenceDelegate
 {
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class ProxyPersistenceDelegate extends java.beans.PersistenceDelegate
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:internal extern class java_lang_String_PersistenceDelegate extends java.beans.PersistenceDelegate
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
-	@:overload override public function writeObject(oldInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:public override public function writeObject(oldInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class java_lang_Class_PersistenceDelegate extends java.beans.PersistenceDelegate
 {
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:internal extern class java_lang_reflect_Field_PersistenceDelegate extends java.beans.PersistenceDelegate
 {
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:internal extern class java_lang_reflect_Method_PersistenceDelegate extends java.beans.PersistenceDelegate
 {
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
@@ -123,15 +123,15 @@ package java.beans;
 	*
 	* @author Sergey A. Malenkov
 	*/
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:internal extern class java_sql_Timestamp_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Date_PersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
@@ -143,169 +143,169 @@ package java.beans;
 	*
 	* @author Sergey A. Malenkov
 	*/
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
 	
 }
 @:native('java$beans$java_util_Collections$EmptyList_PersistenceDelegate') @:internal extern class java_util_Collections_EmptyList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$EmptySet_PersistenceDelegate') @:internal extern class java_util_Collections_EmptySet_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$EmptyMap_PersistenceDelegate') @:internal extern class java_util_Collections_EmptyMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$SingletonList_PersistenceDelegate') @:internal extern class java_util_Collections_SingletonList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$SingletonSet_PersistenceDelegate') @:internal extern class java_util_Collections_SingletonSet_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$SingletonMap_PersistenceDelegate') @:internal extern class java_util_Collections_SingletonMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$UnmodifiableCollection_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableCollection_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$UnmodifiableList_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$UnmodifiableRandomAccessList_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableRandomAccessList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$UnmodifiableSet_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableSet_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$UnmodifiableSortedSet_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableSortedSet_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$UnmodifiableMap_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$UnmodifiableSortedMap_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableSortedMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$SynchronizedCollection_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedCollection_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$SynchronizedList_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$SynchronizedRandomAccessList_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedRandomAccessList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$SynchronizedSet_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedSet_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$SynchronizedSortedSet_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedSortedSet_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$SynchronizedMap_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$SynchronizedSortedMap_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedSortedMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$CheckedCollection_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedCollection_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$CheckedList_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$CheckedRandomAccessList_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedRandomAccessList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$CheckedSet_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedSet_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$CheckedSortedSet_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedSortedSet_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$CheckedMap_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:native('java$beans$java_util_Collections$CheckedSortedMap_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedSortedMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
@@ -316,9 +316,9 @@ package java.beans;
 	*
 	* @author Sergey A. Malenkov
 	*/
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
@@ -329,27 +329,27 @@ package java.beans;
 	*
 	* @author Sergey A. Malenkov
 	*/
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:internal extern class java_util_Collection_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class java_util_List_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class java_util_Map_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
@@ -382,9 +382,9 @@ package java.beans;
 	*
 	* @author Sergey A. Malenkov
 	*/
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
@@ -397,9 +397,9 @@ package java.beans;
 	*
 	* @author Sergey A. Malenkov
 	*/
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
@@ -412,19 +412,19 @@ package java.beans;
 	*
 	* @author Sergey A. Malenkov
 	*/
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:internal extern class StaticFieldsPersistenceDelegate extends java.beans.PersistenceDelegate
 {
-	@:overload private function installFields(out : java.beans.Encoder, cls : Class<Dynamic>) : Void;
+	@:overload @:protected private function installFields(out : java.beans.Encoder, cls : Class<Dynamic>) : Void;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
-	@:overload override public function writeObject(oldInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:public override public function writeObject(oldInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
@@ -438,113 +438,113 @@ package java.beans;
 }
 @:internal extern class java_awt_MenuShortcut_PersistenceDelegate extends java.beans.PersistenceDelegate
 {
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:internal extern class java_awt_Component_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class java_awt_Container_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class java_awt_Choice_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class java_awt_Menu_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class java_awt_MenuBar_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class java_awt_List_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class java_awt_BorderLayout_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class java_awt_CardLayout_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class java_awt_GridBagLayout_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class javax_swing_JFrame_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class javax_swing_DefaultListModel_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class javax_swing_DefaultComboBoxModel_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class javax_swing_tree_DefaultMutableTreeNode_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class javax_swing_ToolTipManager_PersistenceDelegate extends java.beans.PersistenceDelegate
 {
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:internal extern class javax_swing_JTabbedPane_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
 @:internal extern class javax_swing_Box_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:internal extern class javax_swing_JMenu_PersistenceDelegate extends java.beans.DefaultPersistenceDelegate
 {
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }
@@ -557,7 +557,7 @@ package java.beans;
 	*
 	* @author Sergey A. Malenkov
 	*/
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
@@ -573,15 +573,15 @@ package java.beans;
 	*
 	* @author Sergey A. Malenkov
 	*/
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
 @:internal extern class MetaData
 {
-	@:overload @:synchronized public static function getPersistenceDelegate(type : Class<Dynamic>) : java.beans.PersistenceDelegate;
+	@:overload @:public @:synchronized @:static public static function getPersistenceDelegate(type : Class<Dynamic>) : java.beans.PersistenceDelegate;
 	
 	
 }

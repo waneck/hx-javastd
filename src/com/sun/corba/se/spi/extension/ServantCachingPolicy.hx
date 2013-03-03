@@ -29,46 +29,46 @@ extern class ServantCachingPolicy extends org.omg.CORBA.LocalObject implements o
 	* always support the full POA semantics, including changing the
 	* servant that handles requests on a particular objref.
 	*/
-	public static var NO_SERVANT_CACHING(default, null) : Int;
+	@:public @:static @:final public static var NO_SERVANT_CACHING(default, null) : Int;
 	
 	/** Perform servant caching, preserving POA current and POA destroy semantics.
 	* We will use this as the new default, as the app server is making heavier use
 	* now of POA facilities.
 	*/
-	public static var FULL_SEMANTICS(default, null) : Int;
+	@:public @:static @:final public static var FULL_SEMANTICS(default, null) : Int;
 	
 	/** Perform servant caching, preservent only POA current semantics.
 	* At least this level is required in order to support selection of ObjectCopiers
 	* for co-located RMI-IIOP calls, as the current copier is stored in
 	* OAInvocationInfo, which must be present on the stack inside the call.
 	*/
-	public static var INFO_ONLY_SEMANTICS(default, null) : Int;
+	@:public @:static @:final public static var INFO_ONLY_SEMANTICS(default, null) : Int;
 	
 	/** Perform servant caching, not preserving POA current or POA destroy semantics.
 	*/
-	public static var MINIMAL_SEMANTICS(default, null) : Int;
+	@:public @:static @:final public static var MINIMAL_SEMANTICS(default, null) : Int;
 	
-	@:overload public function typeToName() : String;
+	@:overload @:public public function typeToName() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/** Return the default servant caching policy.
 	*/
-	@:overload @:synchronized public static function getPolicy() : com.sun.corba.se.spi.extension.ServantCachingPolicy;
+	@:overload @:public @:synchronized @:static public static function getPolicy() : com.sun.corba.se.spi.extension.ServantCachingPolicy;
 	
-	@:overload @:synchronized public static function getFullPolicy() : com.sun.corba.se.spi.extension.ServantCachingPolicy;
+	@:overload @:public @:synchronized @:static public static function getFullPolicy() : com.sun.corba.se.spi.extension.ServantCachingPolicy;
 	
-	@:overload @:synchronized public static function getInfoOnlyPolicy() : com.sun.corba.se.spi.extension.ServantCachingPolicy;
+	@:overload @:public @:synchronized @:static public static function getInfoOnlyPolicy() : com.sun.corba.se.spi.extension.ServantCachingPolicy;
 	
-	@:overload @:synchronized public static function getMinimalPolicy() : com.sun.corba.se.spi.extension.ServantCachingPolicy;
+	@:overload @:public @:synchronized @:static public static function getMinimalPolicy() : com.sun.corba.se.spi.extension.ServantCachingPolicy;
 	
-	@:overload public function policy_type() : Int;
+	@:overload @:public public function policy_type() : Int;
 	
-	@:overload public function copy() : org.omg.CORBA.Policy;
+	@:overload @:public public function copy() : org.omg.CORBA.Policy;
 	
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	
 }

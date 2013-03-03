@@ -25,32 +25,32 @@ package sun.tools.jstat;
 */
 extern class JStatLogger
 {
-	@:overload public function new(monitoredVm : sun.jvmstat.monitor.MonitoredVm) : Void;
+	@:overload @:public public function new(monitoredVm : sun.jvmstat.monitor.MonitoredVm) : Void;
 	
 	/**
 	* print the monitors that match the given monitor name pattern string.
 	*/
-	@:overload public function printNames(names : String, comparator : java.util.Comparator<sun.jvmstat.monitor.Monitor>, showUnsupported : Bool, out : java.io.PrintStream) : Void;
+	@:overload @:public public function printNames(names : String, comparator : java.util.Comparator<sun.jvmstat.monitor.Monitor>, showUnsupported : Bool, out : java.io.PrintStream) : Void;
 	
 	/**
 	* print name=value pairs for the given list of monitors.
 	*/
-	@:overload public function printSnapShot(names : String, comparator : java.util.Comparator<sun.jvmstat.monitor.Monitor>, verbose : Bool, showUnsupported : Bool, out : java.io.PrintStream) : Void;
+	@:overload @:public public function printSnapShot(names : String, comparator : java.util.Comparator<sun.jvmstat.monitor.Monitor>, verbose : Bool, showUnsupported : Bool, out : java.io.PrintStream) : Void;
 	
 	/**
 	* print name=value pairs for the given list of monitors.
 	*/
-	@:overload public function printList(list : java.util.List<sun.jvmstat.monitor.Monitor>, verbose : Bool, showUnsupported : Bool, out : java.io.PrintStream) : Void;
+	@:overload @:public public function printList(list : java.util.List<sun.jvmstat.monitor.Monitor>, verbose : Bool, showUnsupported : Bool, out : java.io.PrintStream) : Void;
 	
 	/**
 	* method to for asynchronous termination of sampling loops
 	*/
-	@:overload public function stopLogging() : Void;
+	@:overload @:public public function stopLogging() : Void;
 	
 	/**
 	* print samples according to the given format.
 	*/
-	@:overload public function logSamples(formatter : sun.tools.jstat.OutputFormatter, headerRate : Int, sampleInterval : Int, sampleCount : Int, out : java.io.PrintStream) : Void;
+	@:overload @:public public function logSamples(formatter : sun.tools.jstat.OutputFormatter, headerRate : Int, sampleInterval : Int, sampleCount : Int, out : java.io.PrintStream) : Void;
 	
 	
 }

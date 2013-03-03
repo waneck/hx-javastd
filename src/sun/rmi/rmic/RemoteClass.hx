@@ -34,17 +34,17 @@ extern class RemoteClass implements sun.rmi.rmic.RMIConstants
 	* return value will be null, and errors will have been reported to
 	* the supplied BatchEnvironment.
 	*/
-	@:overload public static function forClass(env : sun.rmi.rmic.BatchEnvironment, implClassDef : sun.tools.java.ClassDefinition) : sun.rmi.rmic.RemoteClass;
+	@:overload @:public @:static public static function forClass(env : sun.rmi.rmic.BatchEnvironment, implClassDef : sun.tools.java.ClassDefinition) : sun.rmi.rmic.RemoteClass;
 	
 	/**
 	* Return the ClassDefinition for this class.
 	*/
-	@:overload public function getClassDefinition() : sun.tools.java.ClassDefinition;
+	@:overload @:public public function getClassDefinition() : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Return the name of the class represented by this object.
 	*/
-	@:overload public function getName() : sun.tools.java.Identifier;
+	@:overload @:public public function getName() : sun.tools.java.Identifier;
 	
 	/**
 	* Return an array of ClassDefinitions representing all of the remote
@@ -60,7 +60,7 @@ extern class RemoteClass implements sun.rmi.rmic.RMIConstants
 	* may be superfluous (i.e., superinterfaces of other interfaces
 	* in the array).
 	*/
-	@:overload public function getRemoteInterfaces() : java.NativeArray<sun.tools.java.ClassDefinition>;
+	@:overload @:public public function getRemoteInterfaces() : java.NativeArray<sun.tools.java.ClassDefinition>;
 	
 	/**
 	* Return an array of RemoteClass.Method objects representing all of
@@ -73,19 +73,19 @@ extern class RemoteClass implements sun.rmi.rmic.RMIConstants
 	* to its "operation number" in the JDK 1.1 version of the
 	* stub/skeleton protocol.
 	*/
-	@:overload public function getRemoteMethods() : java.NativeArray<sun.rmi.rmic.RemoteClass.RemoteClass_Method>;
+	@:overload @:public public function getRemoteMethods() : java.NativeArray<sun.rmi.rmic.RemoteClass.RemoteClass_Method>;
 	
 	/**
 	* Return the "interface hash" used to match a stub/skeleton pair for
 	* this class in the JDK 1.1 version of the stub/skeleton protocol.
 	*/
-	@:overload public function getInterfaceHash() : haxe.Int64;
+	@:overload @:public public function getInterfaceHash() : haxe.Int64;
 	
 	/**
 	* Return string representation of this object, consisting of
 	* the string "remote class " followed by the class name.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -102,17 +102,17 @@ extern class RemoteClass implements sun.rmi.rmic.RMIConstants
 	*
 	* REMIND: Can this method be removed?
 	*/
-	@:overload public function getMemberDefinition() : sun.tools.java.MemberDefinition;
+	@:overload @:public public function getMemberDefinition() : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Return the name of this method.
 	*/
-	@:overload public function getName() : sun.tools.java.Identifier;
+	@:overload @:public public function getName() : sun.tools.java.Identifier;
 	
 	/**
 	* Return the type of this method.
 	*/
-	@:overload public function getType() : sun.tools.java.Type;
+	@:overload @:public public function getType() : sun.tools.java.Type;
 	
 	/**
 	* Return an array of the exception classes declared to be
@@ -123,24 +123,24 @@ extern class RemoteClass implements sun.rmi.rmic.RMIConstants
 	* the set of exceptions declared in all of the interfaces'
 	* methods that can be legally thrown in each of them.
 	*/
-	@:overload public function getExceptions() : java.NativeArray<sun.tools.java.ClassDeclaration>;
+	@:overload @:public public function getExceptions() : java.NativeArray<sun.tools.java.ClassDeclaration>;
 	
 	/**
 	* Return the "method hash" used to identify this remote method
 	* in the JDK 1.2 version of the stub protocol.
 	*/
-	@:overload public function getMethodHash() : haxe.Int64;
+	@:overload @:public public function getMethodHash() : haxe.Int64;
 	
 	/**
 	* Return the string representation of this method.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Return the string representation of this method appropriate
 	* for the construction of a java.rmi.server.Operation object.
 	*/
-	@:overload public function getOperationString() : String;
+	@:overload @:public public function getOperationString() : String;
 	
 	/**
 	* Return a string consisting of this method's name followed by
@@ -148,12 +148,12 @@ extern class RemoteClass implements sun.rmi.rmic.RMIConstants
 	* method descriptors (see section 4.3.3 of The Java Virtual
 	* Machine Specification).
 	*/
-	@:overload public function getNameAndDescriptor() : String;
+	@:overload @:public public function getNameAndDescriptor() : String;
 	
 	/**
 	* Cloning is supported by returning a shallow copy of this object.
 	*/
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected private function clone() : Dynamic;
 	
 	
 }

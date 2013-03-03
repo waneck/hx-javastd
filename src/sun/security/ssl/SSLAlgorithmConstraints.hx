@@ -31,43 +31,43 @@ package sun.security.ssl;
 */
 @:internal extern class SSLAlgorithmConstraints implements java.security.AlgorithmConstraints
 {
-	@:overload public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, algorithm : String, parameters : java.security.AlgorithmParameters) : Bool;
+	@:overload @:public public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, algorithm : String, parameters : java.security.AlgorithmParameters) : Bool;
 	
-	@:overload public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, key : java.security.Key) : Bool;
+	@:overload @:public public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, key : java.security.Key) : Bool;
 	
-	@:overload public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, algorithm : String, key : java.security.Key, parameters : java.security.AlgorithmParameters) : Bool;
+	@:overload @:public public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, algorithm : String, key : java.security.Key, parameters : java.security.AlgorithmParameters) : Bool;
 	
 	
 }
 @:native('sun$security$ssl$SSLAlgorithmConstraints$SupportedSignatureAlgorithmConstraints') @:internal extern class SSLAlgorithmConstraints_SupportedSignatureAlgorithmConstraints implements java.security.AlgorithmConstraints
 {
-	@:overload public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, algorithm : String, parameters : java.security.AlgorithmParameters) : Bool;
+	@:overload @:public public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, algorithm : String, parameters : java.security.AlgorithmParameters) : Bool;
 	
-	@:overload @:final public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, key : java.security.Key) : Bool;
+	@:overload @:final @:public public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, key : java.security.Key) : Bool;
 	
-	@:overload @:final public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, algorithm : String, key : java.security.Key, parameters : java.security.AlgorithmParameters) : Bool;
+	@:overload @:final @:public public function permits(primitives : java.util.Set<java.security.CryptoPrimitive>, algorithm : String, key : java.security.Key, parameters : java.security.AlgorithmParameters) : Bool;
 	
 	
 }
 @:native('sun$security$ssl$SSLAlgorithmConstraints$BasicDisabledAlgConstraints') @:internal extern class SSLAlgorithmConstraints_BasicDisabledAlgConstraints extends sun.security.util.DisabledAlgorithmConstraints
 {
-	@:overload private function decomposes(keyExchange : KeyExchange, forCertPathOnly : Bool) : java.util.Set<String>;
+	@:overload @:protected private function decomposes(keyExchange : KeyExchange, forCertPathOnly : Bool) : java.util.Set<String>;
 	
-	@:overload private function decomposes(bulkCipher : BulkCipher) : java.util.Set<String>;
+	@:overload @:protected private function decomposes(bulkCipher : BulkCipher) : java.util.Set<String>;
 	
-	@:overload private function decomposes(macAlg : MacAlg) : java.util.Set<String>;
+	@:overload @:protected private function decomposes(macAlg : MacAlg) : java.util.Set<String>;
 	
 	
 }
 @:native('sun$security$ssl$SSLAlgorithmConstraints$TLSDisabledAlgConstraints') @:internal extern class SSLAlgorithmConstraints_TLSDisabledAlgConstraints extends sun.security.ssl.SSLAlgorithmConstraints.SSLAlgorithmConstraints_BasicDisabledAlgConstraints
 {
-	@:overload private function decomposes(algorithm : String) : java.util.Set<String>;
+	@:overload @:protected override private function decomposes(algorithm : String) : java.util.Set<String>;
 	
 	
 }
 @:native('sun$security$ssl$SSLAlgorithmConstraints$X509DisabledAlgConstraints') @:internal extern class SSLAlgorithmConstraints_X509DisabledAlgConstraints extends sun.security.ssl.SSLAlgorithmConstraints.SSLAlgorithmConstraints_BasicDisabledAlgConstraints
 {
-	@:overload private function decomposes(algorithm : String) : java.util.Set<String>;
+	@:overload @:protected override private function decomposes(algorithm : String) : java.util.Set<String>;
 	
 	
 }

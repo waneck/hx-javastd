@@ -28,12 +28,12 @@ package java.net;
 	/**
 	* The default ctor
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Add one cookie into cookie store.
 	*/
-	@:overload public function add(uri : java.net.URI, cookie : java.net.HttpCookie) : Void;
+	@:overload @:public public function add(uri : java.net.URI, cookie : java.net.HttpCookie) : Void;
 	
 	/**
 	* Get all cookies, which:
@@ -42,28 +42,28 @@ package java.net;
 	*  3) not expired.
 	* See RFC 2965 sec. 3.3.4 for more detail.
 	*/
-	@:overload public function get(uri : java.net.URI) : java.util.List<java.net.HttpCookie>;
+	@:overload @:public public function get(uri : java.net.URI) : java.util.List<java.net.HttpCookie>;
 	
 	/**
 	* Get all cookies in cookie store, except those have expired
 	*/
-	@:overload public function getCookies() : java.util.List<java.net.HttpCookie>;
+	@:overload @:public public function getCookies() : java.util.List<java.net.HttpCookie>;
 	
 	/**
 	* Get all URIs, which are associated with at least one cookie
 	* of this cookie store.
 	*/
-	@:overload public function getURIs() : java.util.List<java.net.URI>;
+	@:overload @:public public function getURIs() : java.util.List<java.net.URI>;
 	
 	/**
 	* Remove a cookie from store
 	*/
-	@:overload public function remove(uri : java.net.URI, ck : java.net.HttpCookie) : Bool;
+	@:overload @:public public function remove(uri : java.net.URI, ck : java.net.HttpCookie) : Bool;
 	
 	/**
 	* Remove all cookies in this cookie store.
 	*/
-	@:overload public function removeAll() : Bool;
+	@:overload @:public public function removeAll() : Bool;
 	
 	
 }

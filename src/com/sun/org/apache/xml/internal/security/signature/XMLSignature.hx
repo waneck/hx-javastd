@@ -22,49 +22,49 @@ package com.sun.org.apache.xml.internal.security.signature;
 extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils.SignatureElementProxy
 {
 	/** MAC - Required HMAC-SHA1 */
-	public static var ALGO_ID_MAC_HMAC_SHA1(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_MAC_HMAC_SHA1(default, null) : String;
 	
 	/** Signature - Required DSAwithSHA1 (DSS) */
-	public static var ALGO_ID_SIGNATURE_DSA(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_SIGNATURE_DSA(default, null) : String;
 	
 	/** Signature - Recommended RSAwithSHA1 */
-	public static var ALGO_ID_SIGNATURE_RSA(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_SIGNATURE_RSA(default, null) : String;
 	
 	/** Signature - Recommended RSAwithSHA1 */
-	public static var ALGO_ID_SIGNATURE_RSA_SHA1(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_SIGNATURE_RSA_SHA1(default, null) : String;
 	
 	/** Signature - NOT Recommended RSAwithMD5 */
-	public static var ALGO_ID_SIGNATURE_NOT_RECOMMENDED_RSA_MD5(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_SIGNATURE_NOT_RECOMMENDED_RSA_MD5(default, null) : String;
 	
 	/** Signature - Optional RSAwithRIPEMD160 */
-	public static var ALGO_ID_SIGNATURE_RSA_RIPEMD160(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_SIGNATURE_RSA_RIPEMD160(default, null) : String;
 	
 	/** Signature - Optional RSAwithSHA256 */
-	public static var ALGO_ID_SIGNATURE_RSA_SHA256(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_SIGNATURE_RSA_SHA256(default, null) : String;
 	
 	/** Signature - Optional RSAwithSHA384 */
-	public static var ALGO_ID_SIGNATURE_RSA_SHA384(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_SIGNATURE_RSA_SHA384(default, null) : String;
 	
 	/** Signature - Optional RSAwithSHA512 */
-	public static var ALGO_ID_SIGNATURE_RSA_SHA512(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_SIGNATURE_RSA_SHA512(default, null) : String;
 	
 	/** HMAC - NOT Recommended HMAC-MD5 */
-	public static var ALGO_ID_MAC_HMAC_NOT_RECOMMENDED_MD5(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_MAC_HMAC_NOT_RECOMMENDED_MD5(default, null) : String;
 	
 	/** HMAC - Optional HMAC-RIPEMD160 */
-	public static var ALGO_ID_MAC_HMAC_RIPEMD160(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_MAC_HMAC_RIPEMD160(default, null) : String;
 	
 	/** HMAC - Optional HMAC-SHA256 */
-	public static var ALGO_ID_MAC_HMAC_SHA256(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_MAC_HMAC_SHA256(default, null) : String;
 	
 	/** HMAC - Optional HMAC-SHA284 */
-	public static var ALGO_ID_MAC_HMAC_SHA384(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_MAC_HMAC_SHA384(default, null) : String;
 	
 	/** HMAC - Optional HMAC-SHA512 */
-	public static var ALGO_ID_MAC_HMAC_SHA512(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_MAC_HMAC_SHA512(default, null) : String;
 	
 	/**Signature - Optional ECDSAwithSHA1 */
-	public static var ALGO_ID_SIGNATURE_ECDSA_SHA1(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_SIGNATURE_ECDSA_SHA1(default, null) : String;
 	
 	/**
 	* This creates a new <CODE>ds:Signature</CODE> Element and adds an empty
@@ -78,7 +78,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @param SignatureMethodURI signature algorithm to use.
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, BaseURI : String, SignatureMethodURI : String) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, BaseURI : String, SignatureMethodURI : String) : Void;
 	
 	/**
 	* Constructor XMLSignature
@@ -89,7 +89,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @param HMACOutputLength
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, BaseURI : String, SignatureMethodURI : String, HMACOutputLength : Int) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, BaseURI : String, SignatureMethodURI : String, HMACOutputLength : Int) : Void;
 	
 	/**
 	* Constructor XMLSignature
@@ -100,7 +100,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @param CanonicalizationMethodURI the canonicalization algorithm to be used to c14nize the SignedInfo element.
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, BaseURI : String, SignatureMethodURI : String, CanonicalizationMethodURI : String) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, BaseURI : String, SignatureMethodURI : String, CanonicalizationMethodURI : String) : Void;
 	
 	/**
 	* Constructor XMLSignature
@@ -112,7 +112,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @param CanonicalizationMethodURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, BaseURI : String, SignatureMethodURI : String, HMACOutputLength : Int, CanonicalizationMethodURI : String) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, BaseURI : String, SignatureMethodURI : String, HMACOutputLength : Int, CanonicalizationMethodURI : String) : Void;
 	
 	/**
 	*  Creates a XMLSignature in a Document
@@ -122,7 +122,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @param CanonicalizationMethodElem
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, BaseURI : String, SignatureMethodElem : org.w3c.dom.Element, CanonicalizationMethodElem : org.w3c.dom.Element) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, BaseURI : String, SignatureMethodElem : org.w3c.dom.Element, CanonicalizationMethodElem : org.w3c.dom.Element) : Void;
 	
 	/**
 	* This will parse the element and construct the Java Objects.
@@ -133,28 +133,28 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @throws XMLSecurityException
 	* @throws XMLSignatureException if the signature is badly formatted
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Sets the <code>Id</code> attribute
 	*
 	* @param Id Id value to be used by the id attribute on the Signature Element
 	*/
-	@:overload public function setId(Id : String) : Void;
+	@:overload @:public public function setId(Id : String) : Void;
 	
 	/**
 	* Returns the <code>Id</code> attribute
 	*
 	* @return the <code>Id</code> attribute
 	*/
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
 	/**
 	* Returns the completely parsed <code>SignedInfo</code> object.
 	*
 	* @return the completely parsed <code>SignedInfo</code> object.
 	*/
-	@:overload public function getSignedInfo() : com.sun.org.apache.xml.internal.security.signature.SignedInfo;
+	@:overload @:public public function getSignedInfo() : com.sun.org.apache.xml.internal.security.signature.SignedInfo;
 	
 	/**
 	* Returns the octet value of the SignatureValue element.
@@ -163,7 +163,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @return the value of the SignatureValue element.
 	* @throws XMLSignatureException If there is no content
 	*/
-	@:overload public function getSignatureValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getSignatureValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the KeyInfo child. If we are in signing mode and the KeyInfo
@@ -173,7 +173,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	*
 	* @return the KeyInfo object
 	*/
-	@:overload public function getKeyInfo() : com.sun.org.apache.xml.internal.security.keys.KeyInfo;
+	@:overload @:public public function getKeyInfo() : com.sun.org.apache.xml.internal.security.keys.KeyInfo;
 	
 	/**
 	* Appends an Object (not a <code>java.lang.Object</code> but an Object
@@ -183,7 +183,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @param object ds:Object to be appended.
 	* @throws XMLSignatureException When this object is used to verify.
 	*/
-	@:overload public function appendObject(object : com.sun.org.apache.xml.internal.security.signature.ObjectContainer) : Void;
+	@:overload @:public public function appendObject(object : com.sun.org.apache.xml.internal.security.signature.ObjectContainer) : Void;
 	
 	/**
 	* Returns the <code>i<code>th <code>ds:Object</code> child of the signature
@@ -192,14 +192,14 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @param i
 	* @return the <code>i<code>th <code>ds:Object</code> child of the signature or null if no such <code>ds:Object</code> element exists.
 	*/
-	@:overload public function getObjectItem(i : Int) : com.sun.org.apache.xml.internal.security.signature.ObjectContainer;
+	@:overload @:public public function getObjectItem(i : Int) : com.sun.org.apache.xml.internal.security.signature.ObjectContainer;
 	
 	/**
 	* Returns the number of all <code>ds:Object</code> elements.
 	*
 	* @return the number of all <code>ds:Object</code> elements.
 	*/
-	@:overload public function getObjectLength() : Int;
+	@:overload @:public public function getObjectLength() : Int;
 	
 	/**
 	* Digests all References in the SignedInfo, calculates the signature value and
@@ -208,21 +208,21 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @param signingKey the {@link java.security.PrivateKey} or {@link javax.crypto.SecretKey} that is used to sign.
 	* @throws XMLSignatureException
 	*/
-	@:overload public function sign(signingKey : java.security.Key) : Void;
+	@:overload @:public public function sign(signingKey : java.security.Key) : Void;
 	
 	/**
 	* Adds a {@link ResourceResolver} to enable the retrieval of resources.
 	*
 	* @param resolver
 	*/
-	@:overload public function addResourceResolver(resolver : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolver) : Void;
+	@:overload @:public public function addResourceResolver(resolver : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolver) : Void;
 	
 	/**
 	* Adds a {@link ResourceResolverSpi} to enable the retrieval of resources.
 	*
 	* @param resolver
 	*/
-	@:overload public function addResourceResolver(resolver : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolverSpi) : Void;
+	@:overload @:public public function addResourceResolver(resolver : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolverSpi) : Void;
 	
 	/**
 	* Extracts the public key from the certificate and verifies if the signature
@@ -234,7 +234,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @return true if the signature is valid, false otherwise
 	* @throws XMLSignatureException
 	*/
-	@:overload public function checkSignatureValue(cert : java.security.cert.X509Certificate) : Bool;
+	@:overload @:public public function checkSignatureValue(cert : java.security.cert.X509Certificate) : Bool;
 	
 	/**
 	* Verifies if the signature is valid by redigesting all References,
@@ -245,7 +245,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @return true if the signature is valid, false otherwise
 	* @throws XMLSignatureException
 	*/
-	@:overload public function checkSignatureValue(pk : java.security.Key) : Bool;
+	@:overload @:public public function checkSignatureValue(pk : java.security.Key) : Bool;
 	
 	/**
 	* Add a Reference with full parameters to this Signature
@@ -260,7 +260,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @param ReferenceType Optional mimetype for the URI
 	* @throws XMLSignatureException
 	*/
-	@:overload public function addDocument(referenceURI : String, trans : com.sun.org.apache.xml.internal.security.transforms.Transforms, digestURI : String, ReferenceId : String, ReferenceType : String) : Void;
+	@:overload @:public public function addDocument(referenceURI : String, trans : com.sun.org.apache.xml.internal.security.transforms.Transforms, digestURI : String, ReferenceId : String, ReferenceType : String) : Void;
 	
 	/**
 	* This method is a proxy method for the {@link Manifest#addDocument} method.
@@ -271,7 +271,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @see Manifest#addDocument
 	* @throws XMLSignatureException
 	*/
-	@:overload public function addDocument(referenceURI : String, trans : com.sun.org.apache.xml.internal.security.transforms.Transforms, digestURI : String) : Void;
+	@:overload @:public public function addDocument(referenceURI : String, trans : com.sun.org.apache.xml.internal.security.transforms.Transforms, digestURI : String) : Void;
 	
 	/**
 	* Adds a Reference with just the URI and the transforms. This used the
@@ -281,7 +281,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @param trans List of transformations to be applied.
 	* @throws XMLSignatureException
 	*/
-	@:overload public function addDocument(referenceURI : String, trans : com.sun.org.apache.xml.internal.security.transforms.Transforms) : Void;
+	@:overload @:public public function addDocument(referenceURI : String, trans : com.sun.org.apache.xml.internal.security.transforms.Transforms) : Void;
 	
 	/**
 	* Add a Reference with just this URI. It uses SHA1 by default as the digest
@@ -290,7 +290,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @param referenceURI URI according to the XML Signature specification.
 	* @throws XMLSignatureException
 	*/
-	@:overload public function addDocument(referenceURI : String) : Void;
+	@:overload @:public public function addDocument(referenceURI : String) : Void;
 	
 	/**
 	* Add an X509 Certificate to the KeyInfo. This will include the whole cert
@@ -299,7 +299,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @param cert Certificate to be included. This should be the certificate of the key that was used to sign.
 	* @throws XMLSecurityException
 	*/
-	@:overload public function addKeyInfo(cert : java.security.cert.X509Certificate) : Void;
+	@:overload @:public public function addKeyInfo(cert : java.security.cert.X509Certificate) : Void;
 	
 	/**
 	* Add this public key to the KeyInfo. This will include the complete key in
@@ -307,7 +307,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	*
 	* @param pk
 	*/
-	@:overload public function addKeyInfo(pk : java.security.PublicKey) : Void;
+	@:overload @:public public function addKeyInfo(pk : java.security.PublicKey) : Void;
 	
 	/**
 	* Proxy method for {@link SignedInfo#createSecretKey(byte[])}. If you want to
@@ -318,7 +318,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @return the secret key created.
 	* @see SignedInfo#createSecretKey(byte[])
 	*/
-	@:overload public function createSecretKey(secretKeyBytes : java.NativeArray<java.StdTypes.Int8>) : javax.crypto.SecretKey;
+	@:overload @:public public function createSecretKey(secretKeyBytes : java.NativeArray<java.StdTypes.Int8>) : javax.crypto.SecretKey;
 	
 	/**
 	* Signal wether Manifest should be automatically validated.
@@ -329,14 +329,14 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	* @param followManifests
 	* @see <a href="http://www.w3.org/TR/xmldsig-core/#sec-CoreValidation">Core validation section in the XML Signature Rec.</a>
 	*/
-	@:overload public function setFollowNestedManifests(followManifests : Bool) : Void;
+	@:overload @:public public function setFollowNestedManifests(followManifests : Bool) : Void;
 	
 	/**
 	* Get the local name of this element
 	*
 	* @return Constant._TAG_SIGNATURE
 	*/
-	@:overload public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

@@ -65,33 +65,33 @@ package com.sun.org.apache.bcel.internal.util;
 */
 @:internal extern class BCELFactory extends com.sun.org.apache.bcel.internal.generic.EmptyVisitor
 {
-	@:overload public function start() : Void;
+	@:overload @:public public function start() : Void;
 	
-	@:overload override public function visitLocalVariableInstruction(i : com.sun.org.apache.bcel.internal.generic.LocalVariableInstruction) : Void;
+	@:overload @:public override public function visitLocalVariableInstruction(i : com.sun.org.apache.bcel.internal.generic.LocalVariableInstruction) : Void;
 	
-	@:overload override public function visitArrayInstruction(i : com.sun.org.apache.bcel.internal.generic.ArrayInstruction) : Void;
+	@:overload @:public override public function visitArrayInstruction(i : com.sun.org.apache.bcel.internal.generic.ArrayInstruction) : Void;
 	
-	@:overload override public function visitFieldInstruction(i : com.sun.org.apache.bcel.internal.generic.FieldInstruction) : Void;
+	@:overload @:public override public function visitFieldInstruction(i : com.sun.org.apache.bcel.internal.generic.FieldInstruction) : Void;
 	
-	@:overload override public function visitInvokeInstruction(i : com.sun.org.apache.bcel.internal.generic.InvokeInstruction) : Void;
+	@:overload @:public override public function visitInvokeInstruction(i : com.sun.org.apache.bcel.internal.generic.InvokeInstruction) : Void;
 	
-	@:overload override public function visitAllocationInstruction(i : com.sun.org.apache.bcel.internal.generic.AllocationInstruction) : Void;
+	@:overload @:public override public function visitAllocationInstruction(i : com.sun.org.apache.bcel.internal.generic.AllocationInstruction) : Void;
 	
-	@:overload override public function visitLDC(i : com.sun.org.apache.bcel.internal.generic.LDC) : Void;
+	@:overload @:public override public function visitLDC(i : com.sun.org.apache.bcel.internal.generic.LDC) : Void;
 	
-	@:overload override public function visitLDC2_W(i : com.sun.org.apache.bcel.internal.generic.LDC2_W) : Void;
+	@:overload @:public override public function visitLDC2_W(i : com.sun.org.apache.bcel.internal.generic.LDC2_W) : Void;
 	
-	@:overload override public function visitConstantPushInstruction(i : com.sun.org.apache.bcel.internal.generic.ConstantPushInstruction) : Void;
+	@:overload @:public override public function visitConstantPushInstruction(i : com.sun.org.apache.bcel.internal.generic.ConstantPushInstruction) : Void;
 	
-	@:overload override public function visitINSTANCEOF(i : com.sun.org.apache.bcel.internal.generic.INSTANCEOF) : Void;
+	@:overload @:public override public function visitINSTANCEOF(i : com.sun.org.apache.bcel.internal.generic.INSTANCEOF) : Void;
 	
-	@:overload override public function visitCHECKCAST(i : com.sun.org.apache.bcel.internal.generic.CHECKCAST) : Void;
+	@:overload @:public override public function visitCHECKCAST(i : com.sun.org.apache.bcel.internal.generic.CHECKCAST) : Void;
 	
-	@:overload override public function visitReturnInstruction(i : com.sun.org.apache.bcel.internal.generic.ReturnInstruction) : Void;
+	@:overload @:public override public function visitReturnInstruction(i : com.sun.org.apache.bcel.internal.generic.ReturnInstruction) : Void;
 	
-	@:overload override public function visitBranchInstruction(bi : com.sun.org.apache.bcel.internal.generic.BranchInstruction) : Void;
+	@:overload @:public override public function visitBranchInstruction(bi : com.sun.org.apache.bcel.internal.generic.BranchInstruction) : Void;
 	
-	@:overload override public function visitRET(i : com.sun.org.apache.bcel.internal.generic.RET) : Void;
+	@:overload @:public override public function visitRET(i : com.sun.org.apache.bcel.internal.generic.RET) : Void;
 	
 	
 }

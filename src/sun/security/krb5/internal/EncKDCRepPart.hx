@@ -55,39 +55,39 @@ extern class EncKDCRepPart
 	* <a href="http://www.ietf.org/rfc/rfc4120.txt">
 	* http://www.ietf.org/rfc/rfc4120.txt</a>.
 	*/
-	public var key : sun.security.krb5.EncryptionKey;
+	@:public public var key : sun.security.krb5.EncryptionKey;
 	
-	public var lastReq : sun.security.krb5.internal.LastReq;
+	@:public public var lastReq : sun.security.krb5.internal.LastReq;
 	
-	public var nonce : Int;
+	@:public public var nonce : Int;
 	
-	public var keyExpiration : sun.security.krb5.internal.KerberosTime;
+	@:public public var keyExpiration : sun.security.krb5.internal.KerberosTime;
 	
-	public var flags : sun.security.krb5.internal.TicketFlags;
+	@:public public var flags : sun.security.krb5.internal.TicketFlags;
 	
-	public var authtime : sun.security.krb5.internal.KerberosTime;
+	@:public public var authtime : sun.security.krb5.internal.KerberosTime;
 	
-	public var starttime : sun.security.krb5.internal.KerberosTime;
+	@:public public var starttime : sun.security.krb5.internal.KerberosTime;
 	
-	public var endtime : sun.security.krb5.internal.KerberosTime;
+	@:public public var endtime : sun.security.krb5.internal.KerberosTime;
 	
-	public var renewTill : sun.security.krb5.internal.KerberosTime;
+	@:public public var renewTill : sun.security.krb5.internal.KerberosTime;
 	
-	public var srealm : sun.security.krb5.Realm;
+	@:public public var srealm : sun.security.krb5.Realm;
 	
-	public var sname : sun.security.krb5.PrincipalName;
+	@:public public var sname : sun.security.krb5.PrincipalName;
 	
-	public var caddr : sun.security.krb5.internal.HostAddresses;
+	@:public public var caddr : sun.security.krb5.internal.HostAddresses;
 	
-	public var msgType : Int;
+	@:public public var msgType : Int;
 	
-	@:overload public function new(new_key : sun.security.krb5.EncryptionKey, new_lastReq : sun.security.krb5.internal.LastReq, new_nonce : Int, new_keyExpiration : sun.security.krb5.internal.KerberosTime, new_flags : sun.security.krb5.internal.TicketFlags, new_authtime : sun.security.krb5.internal.KerberosTime, new_starttime : sun.security.krb5.internal.KerberosTime, new_endtime : sun.security.krb5.internal.KerberosTime, new_renewTill : sun.security.krb5.internal.KerberosTime, new_srealm : sun.security.krb5.Realm, new_sname : sun.security.krb5.PrincipalName, new_caddr : sun.security.krb5.internal.HostAddresses, new_msgType : Int) : Void;
+	@:overload @:public public function new(new_key : sun.security.krb5.EncryptionKey, new_lastReq : sun.security.krb5.internal.LastReq, new_nonce : Int, new_keyExpiration : sun.security.krb5.internal.KerberosTime, new_flags : sun.security.krb5.internal.TicketFlags, new_authtime : sun.security.krb5.internal.KerberosTime, new_starttime : sun.security.krb5.internal.KerberosTime, new_endtime : sun.security.krb5.internal.KerberosTime, new_renewTill : sun.security.krb5.internal.KerberosTime, new_srealm : sun.security.krb5.Realm, new_sname : sun.security.krb5.PrincipalName, new_caddr : sun.security.krb5.internal.HostAddresses, new_msgType : Int) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>, rep_type : Int) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>, rep_type : Int) : Void;
 	
-	@:overload public function new(encoding : sun.security.util.DerValue, rep_type : Int) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue, rep_type : Int) : Void;
 	
 	/**
 	* Initializes an EncKDCRepPart object.
@@ -98,7 +98,7 @@ extern class EncKDCRepPart
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	* @exception RealmException if an error occurs while decoding an Realm object.
 	*/
-	@:overload private function init(encoding : sun.security.util.DerValue, rep_type : Int) : Void;
+	@:overload @:protected private function init(encoding : sun.security.util.DerValue, rep_type : Int) : Void;
 	
 	/**
 	* Encodes an EncKDCRepPart object.
@@ -107,7 +107,7 @@ extern class EncKDCRepPart
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function asn1Encode(rep_type : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode(rep_type : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

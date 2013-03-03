@@ -44,7 +44,7 @@ extern class BindingIteratorImpl extends org.omg.CosNaming.BindingIteratorPOA
 	* methods are invoked from synchronized methods and need therefore
 	* not be synchronized themselves.
 	*/
-	private var orb : org.omg.CORBA.ORB;
+	@:protected private var orb : org.omg.CORBA.ORB;
 	
 	/**
 	* Create a binding iterator servant.
@@ -52,7 +52,7 @@ extern class BindingIteratorImpl extends org.omg.CosNaming.BindingIteratorPOA
 	* @param orb an ORB object.
 	* @exception java.lang.Exception a Java exception.
 	*/
-	@:overload public function new(orb : org.omg.CORBA.ORB) : Void;
+	@:overload @:public public function new(orb : org.omg.CORBA.ORB) : Void;
 	
 	/**
 	* Return the next binding. It also returns true or false, indicating
@@ -63,7 +63,7 @@ extern class BindingIteratorImpl extends org.omg.CosNaming.BindingIteratorPOA
 	* system exceptions.
 	* @see NextOne
 	*/
-	@:overload @:synchronized override public function next_one(b : org.omg.CosNaming.BindingHolder) : Bool;
+	@:overload @:public @:synchronized override public function next_one(b : org.omg.CosNaming.BindingHolder) : Bool;
 	
 	/**
 	* Return the next n bindings. It also returns true or false, indicating
@@ -75,7 +75,7 @@ extern class BindingIteratorImpl extends org.omg.CosNaming.BindingIteratorPOA
 	* system exceptions.
 	* @see NextOne
 	*/
-	@:overload @:synchronized override public function next_n(how_many : Int, blh : org.omg.CosNaming.BindingListHolder) : Bool;
+	@:overload @:public @:synchronized override public function next_n(how_many : Int, blh : org.omg.CosNaming.BindingListHolder) : Bool;
 	
 	/**
 	* lists next n bindings. It returns true or false, indicating
@@ -86,7 +86,7 @@ extern class BindingIteratorImpl extends org.omg.CosNaming.BindingIteratorPOA
 	* @param bl The BindingList as an out parameter.
 	* @return true if there were more bindings.
 	*/
-	@:overload public function list(how_many : Int, blh : org.omg.CosNaming.BindingListHolder) : Bool;
+	@:overload @:public public function list(how_many : Int, blh : org.omg.CosNaming.BindingListHolder) : Bool;
 	
 	/**
 	* Destroy this BindingIterator object. The object corresponding to this
@@ -95,7 +95,7 @@ extern class BindingIteratorImpl extends org.omg.CosNaming.BindingIteratorPOA
 	* system exceptions.
 	* @see Destroy
 	*/
-	@:overload @:synchronized override public function destroy() : Void;
+	@:overload @:public @:synchronized override public function destroy() : Void;
 	
 	/**
 	* Abstract method for returning the next binding in the NamingContext
@@ -105,20 +105,20 @@ extern class BindingIteratorImpl extends org.omg.CosNaming.BindingIteratorPOA
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA
 	* system exceptions.
 	*/
-	@:overload @:abstract private function NextOne(b : org.omg.CosNaming.BindingHolder) : Bool;
+	@:overload @:protected @:abstract private function NextOne(b : org.omg.CosNaming.BindingHolder) : Bool;
 	
 	/**
 	* Abstract method for destroying this BindingIterator.
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA
 	* system exceptions.
 	*/
-	@:overload @:abstract private function Destroy() : Void;
+	@:overload @:protected @:abstract private function Destroy() : Void;
 	
 	/**
 	* Abstract method for returning the remaining number of elements.
 	* @return the remaining number of elements in the iterator.
 	*/
-	@:overload @:abstract private function RemainingElements() : Int;
+	@:overload @:protected @:abstract private function RemainingElements() : Int;
 	
 	
 }

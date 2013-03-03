@@ -29,13 +29,13 @@ package com.sun.xml.internal.messaging.saaj.soap.ver1_1;
 */
 extern class Detail1_1Impl extends com.sun.xml.internal.messaging.saaj.soap.impl.DetailImpl
 {
-	@:overload public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, prefix : String) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, prefix : String) : Void;
 	
-	@:overload public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl) : Void;
 	
-	@:overload override private function createDetailEntry(name : javax.xml.soap.Name) : javax.xml.soap.DetailEntry;
+	@:overload @:protected override private function createDetailEntry(name : javax.xml.soap.Name) : javax.xml.soap.DetailEntry;
 	
-	@:overload override private function createDetailEntry(name : javax.xml.namespace.QName) : javax.xml.soap.DetailEntry;
+	@:overload @:protected override private function createDetailEntry(name : javax.xml.namespace.QName) : javax.xml.soap.DetailEntry;
 	
 	
 }

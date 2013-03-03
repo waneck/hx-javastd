@@ -25,9 +25,9 @@ package com.sun.xml.internal.bind.v2.runtime;
 */
 extern class IllegalAnnotationsException extends javax.xml.bind.JAXBException
 {
-	@:overload public function new(errors : java.util.List<com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationException>) : Void;
+	@:overload @:public public function new(errors : java.util.List<com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationException>) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Returns a read-only list of {@link IllegalAnnotationException}s
@@ -36,19 +36,19 @@ extern class IllegalAnnotationsException extends javax.xml.bind.JAXBException
 	* @return
 	*      a non-null list.
 	*/
-	@:overload public function getErrors() : java.util.List<com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationException>;
+	@:overload @:public public function getErrors() : java.util.List<com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationException>;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$runtime$IllegalAnnotationsException$Builder') extern class IllegalAnnotationsException_Builder implements com.sun.xml.internal.bind.v2.model.core.ErrorHandler
 {
-	@:overload public function error(e : com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationException) : Void;
+	@:overload @:public public function error(e : com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationException) : Void;
 	
 	/**
 	* If an error was reported, throw the exception.
 	* Otherwise exit normally.
 	*/
-	@:overload public function check() : Void;
+	@:overload @:public public function check() : Void;
 	
 	
 }

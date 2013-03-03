@@ -25,15 +25,15 @@ package com.sun.imageio.plugins.jpeg;
 */
 extern class JPEGImageWriterSpi extends javax.imageio.spi.ImageWriterSpi
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getDescription(locale : java.util.Locale) : String;
+	@:overload @:public override public function getDescription(locale : java.util.Locale) : String;
 	
-	@:overload override public function isFormatLossless() : Bool;
+	@:overload @:public override public function isFormatLossless() : Bool;
 	
-	@:overload override public function canEncodeImage(type : javax.imageio.ImageTypeSpecifier) : Bool;
+	@:overload @:public override public function canEncodeImage(type : javax.imageio.ImageTypeSpecifier) : Bool;
 	
-	@:overload override public function createWriterInstance(extension : Dynamic) : javax.imageio.ImageWriter;
+	@:overload @:public override public function createWriterInstance(extension : Dynamic) : javax.imageio.ImageWriter;
 	
 	
 }

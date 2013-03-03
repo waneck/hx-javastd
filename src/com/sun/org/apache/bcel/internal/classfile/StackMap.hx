@@ -78,7 +78,7 @@ extern class StackMap extends com.sun.org.apache.bcel.internal.classfile.Attribu
 	* @param map Table of stack map entries
 	* @param constant_pool Array of constants
 	*/
-	@:overload public function new(name_index : Int, length : Int, map : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapEntry>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function new(name_index : Int, length : Int, map : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapEntry>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Dump line number table attribute to file stream in binary format.
@@ -86,27 +86,27 @@ extern class StackMap extends com.sun.org.apache.bcel.internal.classfile.Attribu
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final override public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Array of stack map entries
 	*/
-	@:overload @:final public function getStackMap() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapEntry>;
+	@:overload @:public @:final public function getStackMap() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapEntry>;
 	
 	/**
 	* @param map Array of stack map entries
 	*/
-	@:overload @:final public function setStackMap(map : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapEntry>) : Void;
+	@:overload @:public @:final public function setStackMap(map : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapEntry>) : Void;
 	
 	/**
 	* @return String representation.
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	/**
 	* @return deep copy of this attribute
 	*/
-	@:overload public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
+	@:overload @:public override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -115,9 +115,9 @@ extern class StackMap extends com.sun.org.apache.bcel.internal.classfile.Attribu
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
-	@:overload @:final public function getMapLength() : Int;
+	@:overload @:public @:final public function getMapLength() : Int;
 	
 	
 }

@@ -61,7 +61,7 @@ extern class CertificateFactorySpi
 	*
 	* @exception CertificateException on parsing errors.
 	*/
-	@:overload @:abstract public function engineGenerateCertificate(inStream : java.io.InputStream) : java.security.cert.Certificate;
+	@:overload @:public @:abstract public function engineGenerateCertificate(inStream : java.io.InputStream) : java.security.cert.Certificate;
 	
 	/**
 	* Generates a <code>CertPath</code> object and initializes it with
@@ -80,7 +80,7 @@ extern class CertificateFactorySpi
 	* @exception UnsupportedOperationException if the method is not supported
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function engineGenerateCertPath(inStream : java.io.InputStream) : java.security.cert.CertPath;
+	@:require(java4) @:overload @:public public function engineGenerateCertPath(inStream : java.io.InputStream) : java.security.cert.CertPath;
 	
 	/**
 	* Generates a <code>CertPath</code> object and initializes it with
@@ -101,7 +101,7 @@ extern class CertificateFactorySpi
 	* @exception UnsupportedOperationException if the method is not supported
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function engineGenerateCertPath(inStream : java.io.InputStream, encoding : String) : java.security.cert.CertPath;
+	@:require(java4) @:overload @:public public function engineGenerateCertPath(inStream : java.io.InputStream, encoding : String) : java.security.cert.CertPath;
 	
 	/**
 	* Generates a <code>CertPath</code> object and initializes it with
@@ -123,7 +123,7 @@ extern class CertificateFactorySpi
 	* @exception UnsupportedOperationException if the method is not supported
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function engineGenerateCertPath(certificates : java.util.List<java.security.cert.Certificate>) : java.security.cert.CertPath;
+	@:require(java4) @:overload @:public public function engineGenerateCertPath(certificates : java.util.List<java.security.cert.Certificate>) : java.security.cert.CertPath;
 	
 	/**
 	* Returns an iteration of the <code>CertPath</code> encodings supported
@@ -147,7 +147,7 @@ extern class CertificateFactorySpi
 	* @exception UnsupportedOperationException if the method is not supported
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function engineGetCertPathEncodings() : java.util.Iterator<String>;
+	@:require(java4) @:overload @:public public function engineGetCertPathEncodings() : java.util.Iterator<String>;
 	
 	/**
 	* Returns a (possibly empty) collection view of the certificates read
@@ -185,7 +185,7 @@ extern class CertificateFactorySpi
 	*
 	* @exception CertificateException on parsing errors.
 	*/
-	@:overload @:abstract public function engineGenerateCertificates(inStream : java.io.InputStream) : java.util.Collection<java.security.cert.Certificate>;
+	@:overload @:public @:abstract public function engineGenerateCertificates(inStream : java.io.InputStream) : java.util.Collection<java.security.cert.Certificate>;
 	
 	/**
 	* Generates a certificate revocation list (CRL) object and initializes it
@@ -216,7 +216,7 @@ extern class CertificateFactorySpi
 	*
 	* @exception CRLException on parsing errors.
 	*/
-	@:overload @:abstract public function engineGenerateCRL(inStream : java.io.InputStream) : java.security.cert.CRL;
+	@:overload @:public @:abstract public function engineGenerateCRL(inStream : java.io.InputStream) : java.security.cert.CRL;
 	
 	/**
 	* Returns a (possibly empty) collection view of the CRLs read
@@ -251,7 +251,7 @@ extern class CertificateFactorySpi
 	*
 	* @exception CRLException on parsing errors.
 	*/
-	@:overload @:abstract public function engineGenerateCRLs(inStream : java.io.InputStream) : java.util.Collection<java.security.cert.CRL>;
+	@:overload @:public @:abstract public function engineGenerateCRLs(inStream : java.io.InputStream) : java.util.Collection<java.security.cert.CRL>;
 	
 	
 }

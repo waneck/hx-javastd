@@ -47,28 +47,28 @@ package javax.swing.plaf.synth;
 	* @param state State of the component as defined in SynthConstants.
 	* @throws NullPointerException if component, region of style is null.
 	*/
-	@:overload public function new(component : javax.swing.JComponent, region : javax.swing.plaf.synth.Region, style : javax.swing.plaf.synth.SynthStyle, state : Int) : Void;
+	@:overload @:public public function new(component : javax.swing.JComponent, region : javax.swing.plaf.synth.Region, style : javax.swing.plaf.synth.SynthStyle, state : Int) : Void;
 	
 	/**
 	* Returns the hosting component containing the region.
 	*
 	* @return Hosting Component
 	*/
-	@:overload public function getComponent() : javax.swing.JComponent;
+	@:overload @:public public function getComponent() : javax.swing.JComponent;
 	
 	/**
 	* Returns the Region identifying this state.
 	*
 	* @return Region of the hosting component
 	*/
-	@:overload public function getRegion() : javax.swing.plaf.synth.Region;
+	@:overload @:public public function getRegion() : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Returns the style associated with this Region.
 	*
 	* @return SynthStyle associated with the region.
 	*/
-	@:overload public function getStyle() : javax.swing.plaf.synth.SynthStyle;
+	@:overload @:public public function getStyle() : javax.swing.plaf.synth.SynthStyle;
 	
 	/**
 	* Returns the state of the widget, which is a bitmask of the
@@ -80,7 +80,7 @@ package javax.swing.plaf.synth;
 	* @see SynthConstants
 	* @return State of Component
 	*/
-	@:overload public function getComponentState() : Int;
+	@:overload @:public public function getComponentState() : Int;
 	
 	
 }

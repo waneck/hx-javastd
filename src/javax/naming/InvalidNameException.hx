@@ -51,13 +51,13 @@ package javax.naming;
 	* @param explanation      A possibly null message explaining the problem.
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload public function new(explanation : String) : Void;
+	@:overload @:public public function new(explanation : String) : Void;
 	
 	/**
 	* Constructs an instance of InvalidNameException with
 	* all fields set to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

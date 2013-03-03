@@ -28,13 +28,13 @@ package com.sun.xml.internal.ws.util.localization;
 */
 extern class LocalizableMessage implements com.sun.xml.internal.ws.util.localization.Localizable
 {
-	@:overload public function new(bundlename : String, key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(bundlename : String, key : String, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function getKey() : String;
+	@:overload @:public public function getKey() : String;
 	
-	@:overload public function getArguments() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getArguments() : java.NativeArray<Dynamic>;
 	
-	@:overload public function getResourceBundleName() : String;
+	@:overload @:public public function getResourceBundleName() : String;
 	
 	
 }

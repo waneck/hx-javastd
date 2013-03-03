@@ -29,7 +29,7 @@ extern class DialogCallbackHandler implements javax.security.auth.callback.Callb
 	/**
 	* Creates a callback dialog with the default parent window.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a callback dialog and specify the parent window.
@@ -37,7 +37,7 @@ extern class DialogCallbackHandler implements javax.security.auth.callback.Callb
 	* @param parentComponent the parent window -- specify <code>null</code>
 	* for the default parent
 	*/
-	@:overload public function new(parentComponent : java.awt.Component) : Void;
+	@:overload @:public public function new(parentComponent : java.awt.Component) : Void;
 	
 	/**
 	* Handles the specified set of callbacks.
@@ -46,7 +46,7 @@ extern class DialogCallbackHandler implements javax.security.auth.callback.Callb
 	* @throws UnsupportedCallbackException if the callback is not an
 	* instance  of NameCallback or PasswordCallback
 	*/
-	@:overload public function handle(callbacks : java.NativeArray<javax.security.auth.callback.Callback>) : Void;
+	@:overload @:public public function handle(callbacks : java.NativeArray<javax.security.auth.callback.Callback>) : Void;
 	
 	
 }

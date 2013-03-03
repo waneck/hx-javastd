@@ -28,7 +28,7 @@ extern class DHKeyAgreement extends javax.crypto.KeyAgreementSpi
 	/**
 	* Empty constructor
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Initializes this key agreement with the given key and source of
@@ -50,7 +50,7 @@ extern class DHKeyAgreement extends javax.crypto.KeyAgreementSpi
 	* inappropriate for this key agreement, e.g., is of the wrong type or
 	* has an incompatible algorithm type.
 	*/
-	@:overload private function engineInit(key : java.security.Key, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(key : java.security.Key, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this key agreement with the given key, set of
@@ -68,7 +68,7 @@ extern class DHKeyAgreement extends javax.crypto.KeyAgreementSpi
 	* @exception InvalidAlgorithmParameterException if the given parameters
 	* are inappropriate for this key agreement.
 	*/
-	@:overload private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Executes the next phase of this key agreement with the given
@@ -89,7 +89,7 @@ extern class DHKeyAgreement extends javax.crypto.KeyAgreementSpi
 	* @exception IllegalStateException if this key agreement has not been
 	* initialized.
 	*/
-	@:overload private function engineDoPhase(key : java.security.Key, lastPhase : Bool) : java.security.Key;
+	@:overload @:protected override private function engineDoPhase(key : java.security.Key, lastPhase : Bool) : java.security.Key;
 	
 	/**
 	* Generates the shared secret and returns it in a new buffer.
@@ -106,7 +106,7 @@ extern class DHKeyAgreement extends javax.crypto.KeyAgreementSpi
 	* @exception IllegalStateException if this key agreement has not been
 	* completed yet
 	*/
-	@:overload private function engineGenerateSecret() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineGenerateSecret() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Generates the shared secret, and places it into the buffer
@@ -134,7 +134,7 @@ extern class DHKeyAgreement extends javax.crypto.KeyAgreementSpi
 	* @exception ShortBufferException if the given output buffer is too small
 	* to hold the secret
 	*/
-	@:overload private function engineGenerateSecret(sharedSecret : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Int;
+	@:overload @:protected override private function engineGenerateSecret(sharedSecret : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Int;
 	
 	/**
 	* Creates the shared secret and returns it as a secret key object
@@ -159,7 +159,7 @@ extern class DHKeyAgreement extends javax.crypto.KeyAgreementSpi
 	* be used to generate a secret key of the requested algorithm type (e.g.,
 	* the key material is too short)
 	*/
-	@:overload private function engineGenerateSecret(algorithm : String) : javax.crypto.SecretKey;
+	@:overload @:protected override private function engineGenerateSecret(algorithm : String) : javax.crypto.SecretKey;
 	
 	
 }

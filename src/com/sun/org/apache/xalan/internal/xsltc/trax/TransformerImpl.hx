@@ -23,37 +23,37 @@ package com.sun.org.apache.xalan.internal.xsltc.trax;
 */
 extern class TransformerImpl extends javax.xml.transform.Transformer implements com.sun.org.apache.xalan.internal.xsltc.DOMCache implements javax.xml.transform.ErrorListener
 {
-	@:overload private function new(outputProperties : java.util.Properties, indentNumber : Int, tfactory : com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl) : Void;
+	@:overload @:protected private function new(outputProperties : java.util.Properties, indentNumber : Int, tfactory : com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl) : Void;
 	
-	@:overload private function new(translet : com.sun.org.apache.xalan.internal.xsltc.Translet, outputProperties : java.util.Properties, indentNumber : Int, tfactory : com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl) : Void;
+	@:overload @:protected private function new(translet : com.sun.org.apache.xalan.internal.xsltc.Translet, outputProperties : java.util.Properties, indentNumber : Int, tfactory : com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl) : Void;
 	
 	/**
 	* Return the state of the secure processing feature.
 	*/
-	@:overload public function isSecureProcessing() : Bool;
+	@:overload @:public public function isSecureProcessing() : Bool;
 	
 	/**
 	* Set the state of the secure processing feature.
 	*/
-	@:overload public function setSecureProcessing(flag : Bool) : Void;
+	@:overload @:public public function setSecureProcessing(flag : Bool) : Void;
 	
 	/**
 	* Return the state of the services mechanism feature.
 	*/
-	@:overload public function useServicesMechnism() : Bool;
+	@:overload @:public public function useServicesMechnism() : Bool;
 	
 	/**
 	* Set the state of the services mechanism feature.
 	*/
-	@:overload public function setServicesMechnism(flag : Bool) : Void;
+	@:overload @:public public function setServicesMechnism(flag : Bool) : Void;
 	
 	/**
 	* Returns the translet wrapped inside this Transformer or
 	* null if this is the identity transform.
 	*/
-	@:overload private function getTranslet() : com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet;
+	@:overload @:protected private function getTranslet() : com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet;
 	
-	@:overload public function isIdentity() : Bool;
+	@:overload @:public public function isIdentity() : Bool;
 	
 	/**
 	* Implements JAXP's Transformer.transform()
@@ -62,31 +62,31 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 	* @param result Will contain the output from the transformation
 	* @throws TransformerException
 	*/
-	@:overload override public function transform(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
+	@:overload @:public override public function transform(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
 	
 	/**
 	* Create an output handler for the transformation output based on
 	* the type and contents of the TrAX Result object passed to the
 	* transform() method.
 	*/
-	@:overload public function getOutputHandler(result : javax.xml.transform.Result) : com.sun.org.apache.xml.internal.serializer.SerializationHandler;
+	@:overload @:public public function getOutputHandler(result : javax.xml.transform.Result) : com.sun.org.apache.xml.internal.serializer.SerializationHandler;
 	
 	/**
 	* Set the internal DOM that will be used for the next transformation
 	*/
-	@:overload private function setDOM(dom : com.sun.org.apache.xalan.internal.xsltc.DOM) : Void;
+	@:overload @:protected private function setDOM(dom : com.sun.org.apache.xalan.internal.xsltc.DOM) : Void;
 	
 	/**
 	* Returns the {@link com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl}
 	* object that create this <code>Transformer</code>.
 	*/
-	@:overload private function getTransformerFactory() : com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl;
+	@:overload @:protected private function getTransformerFactory() : com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl;
 	
 	/**
 	* Returns the {@link com.sun.org.apache.xalan.internal.xsltc.runtime.output.TransletOutputHandlerFactory}
 	* object that create the <code>TransletOutputHandler</code>.
 	*/
-	@:overload private function getTransletOutputHandlerFactory() : com.sun.org.apache.xalan.internal.xsltc.runtime.output.TransletOutputHandlerFactory;
+	@:overload @:protected private function getTransletOutputHandlerFactory() : com.sun.org.apache.xalan.internal.xsltc.runtime.output.TransletOutputHandlerFactory;
 	
 	/**
 	* Implements JAXP's Transformer.getErrorListener()
@@ -94,7 +94,7 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 	*
 	* @return The error event handler currently in effect
 	*/
-	@:overload override public function getErrorListener() : javax.xml.transform.ErrorListener;
+	@:overload @:public override public function getErrorListener() : javax.xml.transform.ErrorListener;
 	
 	/**
 	* Implements JAXP's Transformer.setErrorListener()
@@ -105,7 +105,7 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 	* @param listener The error event listener to use
 	* @throws IllegalArgumentException
 	*/
-	@:overload override public function setErrorListener(listener : javax.xml.transform.ErrorListener) : Void;
+	@:overload @:public override public function setErrorListener(listener : javax.xml.transform.ErrorListener) : Void;
 	
 	/**
 	* Implements JAXP's Transformer.getOutputProperties().
@@ -118,7 +118,7 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 	*
 	* @return Properties in effect for this Transformer
 	*/
-	@:overload override public function getOutputProperties() : java.util.Properties;
+	@:overload @:public override public function getOutputProperties() : java.util.Properties;
 	
 	/**
 	* Implements JAXP's Transformer.getOutputProperty().
@@ -129,7 +129,7 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 	* @param name A non-null string that contains the name of the property
 	* @throws IllegalArgumentException if the property name is not known
 	*/
-	@:overload override public function getOutputProperty(name : String) : String;
+	@:overload @:public override public function getOutputProperty(name : String) : String;
 	
 	/**
 	* Implements JAXP's Transformer.setOutputProperties().
@@ -140,7 +140,7 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 	* @param properties The properties to use for the Transformer
 	* @throws IllegalArgumentException Never, errors are ignored
 	*/
-	@:overload override public function setOutputProperties(properties : java.util.Properties) : Void;
+	@:overload @:public override public function setOutputProperties(properties : java.util.Properties) : Void;
 	
 	/**
 	* Implements JAXP's Transformer.setOutputProperty().
@@ -152,13 +152,13 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 	* @param value The value to assign to the property
 	* @throws IllegalArgumentException Never, errors are ignored
 	*/
-	@:overload override public function setOutputProperty(name : String, value : String) : Void;
+	@:overload @:public override public function setOutputProperty(name : String, value : String) : Void;
 	
 	/**
 	* This method is used to pass any properties to the output handler
 	* when running the identity transform.
 	*/
-	@:overload public function transferOutputProperties(handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler) : Void;
+	@:overload @:public public function transferOutputProperties(handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler) : Void;
 	
 	/**
 	* Implements JAXP's Transformer.setParameter()
@@ -169,14 +169,14 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 	* @param name The name of the parameter
 	* @param value The value to assign to the parameter
 	*/
-	@:overload override public function setParameter(name : String, value : Dynamic) : Void;
+	@:overload @:public override public function setParameter(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Implements JAXP's Transformer.clearParameters()
 	* Clear all parameters set with setParameter. Clears the translet's
 	* parameter stack.
 	*/
-	@:overload override public function clearParameters() : Void;
+	@:overload @:public override public function clearParameters() : Void;
 	
 	/**
 	* Implements JAXP's Transformer.getParameter()
@@ -186,7 +186,7 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 	* @param name The name of the parameter
 	* @return An object that contains the value assigned to the parameter
 	*/
-	@:overload @:final override public function getParameter(name : String) : Dynamic;
+	@:overload @:public @:final override public function getParameter(name : String) : Dynamic;
 	
 	/**
 	* Implements JAXP's Transformer.getURIResolver()
@@ -194,7 +194,7 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 	*
 	* @return  The URLResolver object currently in use
 	*/
-	@:overload override public function getURIResolver() : javax.xml.transform.URIResolver;
+	@:overload @:public override public function getURIResolver() : javax.xml.transform.URIResolver;
 	
 	/**
 	* Implements JAXP's Transformer.setURIResolver()
@@ -202,7 +202,7 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 	*
 	* @param resolver The URIResolver to use in document()
 	*/
-	@:overload override public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
+	@:overload @:public override public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
 	
 	/**
 	* This class should only be used as a DOMCache for the translet if the
@@ -218,7 +218,7 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 	* @param href The href argument passed to the document function.
 	* @param translet A reference to the translet requesting the document
 	*/
-	@:overload public function retrieveDocument(baseURI : String, href : String, translet : com.sun.org.apache.xalan.internal.xsltc.Translet) : com.sun.org.apache.xalan.internal.xsltc.DOM;
+	@:overload @:public public function retrieveDocument(baseURI : String, href : String, translet : com.sun.org.apache.xalan.internal.xsltc.Translet) : com.sun.org.apache.xalan.internal.xsltc.DOM;
 	
 	/**
 	* Receive notification of a recoverable error.
@@ -231,7 +231,7 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 	* @throws TransformerException if the application chooses to discontinue
 	* the transformation (always does in our case).
 	*/
-	@:overload public function error(e : javax.xml.transform.TransformerException) : Void;
+	@:overload @:public public function error(e : javax.xml.transform.TransformerException) : Void;
 	
 	/**
 	* Receive notification of a non-recoverable error.
@@ -246,7 +246,7 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 	* @throws TransformerException if the application chooses to discontinue
 	* the transformation (always does in our case).
 	*/
-	@:overload public function fatalError(e : javax.xml.transform.TransformerException) : Void;
+	@:overload @:public public function fatalError(e : javax.xml.transform.TransformerException) : Void;
 	
 	/**
 	* Receive notification of a warning.
@@ -261,7 +261,7 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 	* @throws TransformerException if the application chooses to discontinue
 	* the transformation (never does in our case).
 	*/
-	@:overload public function warning(e : javax.xml.transform.TransformerException) : Void;
+	@:overload @:public public function warning(e : javax.xml.transform.TransformerException) : Void;
 	
 	/**
 	* This method resets  the Transformer to its original configuration
@@ -269,7 +269,7 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 	* created
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function reset() : Void;
+	@:require(java5) @:overload @:public override public function reset() : Void;
 	
 	
 }
@@ -279,9 +279,9 @@ extern class TransformerImpl extends javax.xml.transform.Transformer implements 
 */
 @:native('com$sun$org$apache$xalan$internal$xsltc$trax$TransformerImpl$MessageHandler') @:internal extern class TransformerImpl_MessageHandler extends com.sun.org.apache.xalan.internal.xsltc.runtime.MessageHandler
 {
-	@:overload public function new(errorListener : javax.xml.transform.ErrorListener) : Void;
+	@:overload @:public public function new(errorListener : javax.xml.transform.ErrorListener) : Void;
 	
-	@:overload override public function displayMessage(msg : String) : Void;
+	@:overload @:public override public function displayMessage(msg : String) : Void;
 	
 	
 }

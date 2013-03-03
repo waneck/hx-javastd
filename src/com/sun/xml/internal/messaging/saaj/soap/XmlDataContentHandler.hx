@@ -30,15 +30,15 @@ extern class XmlDataContentHandler implements javax.activation.DataContentHandle
 	*
 	* @author Anil Vijendran
 	*/
-	public var STR_SRC(default, null) : String;
+	@:public @:final public var STR_SRC(default, null) : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* return the DataFlavors for this <code>DataContentHandler</code>
 	* @return The DataFlavors.
 	*/
-	@:overload public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* return the Transfer Data of type DataFlavor from InputStream
@@ -46,19 +46,19 @@ extern class XmlDataContentHandler implements javax.activation.DataContentHandle
 	* @param ins The InputStream corresponding to the data.
 	* @return The constructed Object.
 	*/
-	@:overload public function getTransferData(flavor : java.awt.datatransfer.DataFlavor, dataSource : javax.activation.DataSource) : Dynamic;
+	@:overload @:public public function getTransferData(flavor : java.awt.datatransfer.DataFlavor, dataSource : javax.activation.DataSource) : Dynamic;
 	
 	/**
 	*
 	*/
-	@:overload public function getContent(dataSource : javax.activation.DataSource) : Dynamic;
+	@:overload @:public public function getContent(dataSource : javax.activation.DataSource) : Dynamic;
 	
 	/**
 	* construct an object from a byte stream
 	* (similar semantically to previous method, we are deciding
 	*  which one to support)
 	*/
-	@:overload public function writeTo(obj : Dynamic, mimeType : String, os : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(obj : Dynamic, mimeType : String, os : java.io.OutputStream) : Void;
 	
 	
 }

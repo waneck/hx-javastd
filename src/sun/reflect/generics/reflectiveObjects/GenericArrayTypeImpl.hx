@@ -31,7 +31,7 @@ extern class GenericArrayTypeImpl implements java.lang.reflect.GenericArrayType
 	* being created
 	* @return a generic array type with the desired component type
 	*/
-	@:overload public static function make(ct : java.lang.reflect.Type) : sun.reflect.generics.reflectiveObjects.GenericArrayTypeImpl;
+	@:overload @:public @:static public static function make(ct : java.lang.reflect.Type) : sun.reflect.generics.reflectiveObjects.GenericArrayTypeImpl;
 	
 	/**
 	* Returns  a <tt>Type</tt> object representing the component type
@@ -41,13 +41,13 @@ extern class GenericArrayTypeImpl implements java.lang.reflect.GenericArrayType
 	*     of this array
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getGenericComponentType() : java.lang.reflect.Type;
+	@:require(java5) @:overload @:public public function getGenericComponentType() : java.lang.reflect.Type;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

@@ -42,7 +42,7 @@ extern class SCD
 	*      Its {@link NamespaceContext#getNamespaceURI(String)} is used
 	*      to resolve prefixes in the SCD to the namespace URI.
 	*/
-	@:overload public static function create(path : String, nsContext : javax.xml.namespace.NamespaceContext) : com.sun.xml.internal.xsom.SCD;
+	@:overload @:public @:static public static function create(path : String, nsContext : javax.xml.namespace.NamespaceContext) : com.sun.xml.internal.xsom.SCD;
 	
 	/**
 	* Evaluates the SCD against the given context node and
@@ -51,7 +51,7 @@ extern class SCD
 	* @return
 	*      could be empty but never be null.
 	*/
-	@:overload @:final public function select(contextNode : com.sun.xml.internal.xsom.XSComponent) : java.util.Collection<com.sun.xml.internal.xsom.XSComponent>;
+	@:overload @:public @:final public function select(contextNode : com.sun.xml.internal.xsom.XSComponent) : java.util.Collection<com.sun.xml.internal.xsom.XSComponent>;
 	
 	/**
 	* Evaluates the SCD against the whole schema and
@@ -64,7 +64,7 @@ extern class SCD
 	* @return
 	*      could be empty but never be null.
 	*/
-	@:overload @:final public function select(contextNode : com.sun.xml.internal.xsom.XSSchemaSet) : java.util.Collection<com.sun.xml.internal.xsom.XSComponent>;
+	@:overload @:public @:final public function select(contextNode : com.sun.xml.internal.xsom.XSSchemaSet) : java.util.Collection<com.sun.xml.internal.xsom.XSComponent>;
 	
 	/**
 	* Evaluates the SCD against the given context node and
@@ -74,7 +74,7 @@ extern class SCD
 	*      null if the SCD didn't match anything. If the SCD matched more than one node,
 	*      the first one will be returned.
 	*/
-	@:overload @:final public function selectSingle(contextNode : com.sun.xml.internal.xsom.XSComponent) : com.sun.xml.internal.xsom.XSComponent;
+	@:overload @:public @:final public function selectSingle(contextNode : com.sun.xml.internal.xsom.XSComponent) : com.sun.xml.internal.xsom.XSComponent;
 	
 	/**
 	* Evaluates the SCD against the whole schema set and
@@ -84,7 +84,7 @@ extern class SCD
 	*      null if the SCD didn't match anything. If the SCD matched more than one node,
 	*      the first one will be returned.
 	*/
-	@:overload @:final public function selectSingle(contextNode : com.sun.xml.internal.xsom.XSSchemaSet) : com.sun.xml.internal.xsom.XSComponent;
+	@:overload @:public @:final public function selectSingle(contextNode : com.sun.xml.internal.xsom.XSSchemaSet) : com.sun.xml.internal.xsom.XSComponent;
 	
 	/**
 	* Evaluates the SCD against the given set of context nodes and
@@ -97,7 +97,7 @@ extern class SCD
 	* @return
 	*      could be empty but never be null.
 	*/
-	@:overload @:abstract public function select(contextNodes : java.util.Iterator<com.sun.xml.internal.xsom.XSComponent>) : java.util.Iterator<com.sun.xml.internal.xsom.XSComponent>;
+	@:overload @:public @:abstract public function select(contextNodes : java.util.Iterator<com.sun.xml.internal.xsom.XSComponent>) : java.util.Iterator<com.sun.xml.internal.xsom.XSComponent>;
 	
 	/**
 	* Evaluates the SCD against the given set of context nodes and
@@ -110,12 +110,12 @@ extern class SCD
 	* @return
 	*      could be empty but never be null.
 	*/
-	@:overload @:final public function select(contextNodes : java.util.Collection<com.sun.xml.internal.xsom.XSComponent>) : java.util.Collection<com.sun.xml.internal.xsom.XSComponent>;
+	@:overload @:public @:final public function select(contextNodes : java.util.Collection<com.sun.xml.internal.xsom.XSComponent>) : java.util.Collection<com.sun.xml.internal.xsom.XSComponent>;
 	
 	/**
 	* Returns the textual SCD representation as given to {@link SCD#create(String, NamespaceContext)}.
 	*/
-	@:overload @:abstract public function toString() : String;
+	@:overload @:public @:abstract public function toString() : String;
 	
 	
 }

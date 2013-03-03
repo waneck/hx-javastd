@@ -26,7 +26,7 @@ extern class XMLReaderManager
 	/**
 	* Retrieves the singleton reader manager
 	*/
-	@:overload public static function getInstance(useServicesMechanism : Bool) : com.sun.org.apache.xml.internal.utils.XMLReaderManager;
+	@:overload @:public @:static public static function getInstance(useServicesMechanism : Bool) : com.sun.org.apache.xml.internal.utils.XMLReaderManager;
 	
 	/**
 	* Retrieves a cached XMLReader for this thread, or creates a new
@@ -34,7 +34,7 @@ extern class XMLReaderManager
 	* longer needs the reader, it must release it with a call to
 	* {@link #releaseXMLReader}.
 	*/
-	@:overload @:synchronized public function getXMLReader() : org.xml.sax.XMLReader;
+	@:overload @:public @:synchronized public function getXMLReader() : org.xml.sax.XMLReader;
 	
 	/**
 	* Mark the cached XMLReader as available.  If the reader was not
@@ -42,17 +42,17 @@ extern class XMLReaderManager
 	*
 	* @param reader The XMLReader that's being released.
 	*/
-	@:overload @:synchronized public function releaseXMLReader(reader : org.xml.sax.XMLReader) : Void;
+	@:overload @:public @:synchronized public function releaseXMLReader(reader : org.xml.sax.XMLReader) : Void;
 	
 	/**
 	* Return the state of the services mechanism feature.
 	*/
-	@:overload public function useServicesMechnism() : Bool;
+	@:overload @:public public function useServicesMechnism() : Bool;
 	
 	/**
 	* Set the state of the services mechanism feature.
 	*/
-	@:overload public function setServicesMechnism(flag : Bool) : Void;
+	@:overload @:public public function setServicesMechnism(flag : Bool) : Void;
 	
 	
 }

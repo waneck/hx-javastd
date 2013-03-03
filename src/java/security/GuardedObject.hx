@@ -54,7 +54,7 @@ extern class GuardedObject implements java.io.Serializable
 	*
 	* @param guard the Guard object that guards access to the object.
 	*/
-	@:overload public function new(object : Dynamic, guard : java.security.Guard) : Void;
+	@:overload @:public public function new(object : Dynamic, guard : java.security.Guard) : Void;
 	
 	/**
 	* Retrieves the guarded object, or throws an exception if access
@@ -65,7 +65,7 @@ extern class GuardedObject implements java.io.Serializable
 	* @exception SecurityException if access to the guarded object is
 	* denied.
 	*/
-	@:overload public function getObject() : Dynamic;
+	@:overload @:public public function getObject() : Dynamic;
 	
 	
 }

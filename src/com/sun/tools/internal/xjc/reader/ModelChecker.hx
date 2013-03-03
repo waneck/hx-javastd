@@ -25,9 +25,9 @@ package com.sun.tools.internal.xjc.reader;
 */
 extern class ModelChecker
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function check() : Void;
+	@:overload @:public public function check() : Void;
 	
 	
 }

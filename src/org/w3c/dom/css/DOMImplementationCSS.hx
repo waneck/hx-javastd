@@ -50,7 +50,7 @@ extern interface DOMImplementationCSS extends org.w3c.dom.DOMImplementation
 	*    SYNTAX_ERR: Raised if the specified media string value has a syntax
 	*   error and is unparsable.
 	*/
-	@:overload public function createCSSStyleSheet(title : String, media : String) : org.w3c.dom.css.CSSStyleSheet;
+	@:overload @:public public function createCSSStyleSheet(title : String, media : String) : org.w3c.dom.css.CSSStyleSheet;
 	
 	
 }

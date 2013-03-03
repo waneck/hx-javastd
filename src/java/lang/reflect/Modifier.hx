@@ -33,7 +33,7 @@ extern class Modifier
 	* @return {@code true} if {@code mod} includes the
 	* {@code public} modifier; {@code false} otherwise.
 	*/
-	@:overload public static function isPublic(mod : Int) : Bool;
+	@:overload @:public @:static public static function isPublic(mod : Int) : Bool;
 	
 	/**
 	* Return {@code true} if the integer argument includes the
@@ -43,7 +43,7 @@ extern class Modifier
 	* @return {@code true} if {@code mod} includes the
 	* {@code private} modifier; {@code false} otherwise.
 	*/
-	@:overload public static function isPrivate(mod : Int) : Bool;
+	@:overload @:public @:static public static function isPrivate(mod : Int) : Bool;
 	
 	/**
 	* Return {@code true} if the integer argument includes the
@@ -53,7 +53,7 @@ extern class Modifier
 	* @return {@code true} if {@code mod} includes the
 	* {@code protected} modifier; {@code false} otherwise.
 	*/
-	@:overload public static function isProtected(mod : Int) : Bool;
+	@:overload @:public @:static public static function isProtected(mod : Int) : Bool;
 	
 	/**
 	* Return {@code true} if the integer argument includes the
@@ -63,7 +63,7 @@ extern class Modifier
 	* @return {@code true} if {@code mod} includes the
 	* {@code static} modifier; {@code false} otherwise.
 	*/
-	@:overload public static function isStatic(mod : Int) : Bool;
+	@:overload @:public @:static public static function isStatic(mod : Int) : Bool;
 	
 	/**
 	* Return {@code true} if the integer argument includes the
@@ -73,7 +73,7 @@ extern class Modifier
 	* @return {@code true} if {@code mod} includes the
 	* {@code final} modifier; {@code false} otherwise.
 	*/
-	@:overload public static function isFinal(mod : Int) : Bool;
+	@:overload @:public @:static public static function isFinal(mod : Int) : Bool;
 	
 	/**
 	* Return {@code true} if the integer argument includes the
@@ -83,7 +83,7 @@ extern class Modifier
 	* @return {@code true} if {@code mod} includes the
 	* {@code synchronized} modifier; {@code false} otherwise.
 	*/
-	@:overload public static function isSynchronized(mod : Int) : Bool;
+	@:overload @:public @:static public static function isSynchronized(mod : Int) : Bool;
 	
 	/**
 	* Return {@code true} if the integer argument includes the
@@ -93,7 +93,7 @@ extern class Modifier
 	* @return {@code true} if {@code mod} includes the
 	* {@code volatile} modifier; {@code false} otherwise.
 	*/
-	@:overload public static function isVolatile(mod : Int) : Bool;
+	@:overload @:public @:static public static function isVolatile(mod : Int) : Bool;
 	
 	/**
 	* Return {@code true} if the integer argument includes the
@@ -103,7 +103,7 @@ extern class Modifier
 	* @return {@code true} if {@code mod} includes the
 	* {@code transient} modifier; {@code false} otherwise.
 	*/
-	@:overload public static function isTransient(mod : Int) : Bool;
+	@:overload @:public @:static public static function isTransient(mod : Int) : Bool;
 	
 	/**
 	* Return {@code true} if the integer argument includes the
@@ -113,7 +113,7 @@ extern class Modifier
 	* @return {@code true} if {@code mod} includes the
 	* {@code native} modifier; {@code false} otherwise.
 	*/
-	@:overload public static function isNative(mod : Int) : Bool;
+	@:overload @:public @:static public static function isNative(mod : Int) : Bool;
 	
 	/**
 	* Return {@code true} if the integer argument includes the
@@ -123,7 +123,7 @@ extern class Modifier
 	* @return {@code true} if {@code mod} includes the
 	* {@code interface} modifier; {@code false} otherwise.
 	*/
-	@:overload public static function isInterface(mod : Int) : Bool;
+	@:overload @:public @:static public static function isInterface(mod : Int) : Bool;
 	
 	/**
 	* Return {@code true} if the integer argument includes the
@@ -133,7 +133,7 @@ extern class Modifier
 	* @return {@code true} if {@code mod} includes the
 	* {@code abstract} modifier; {@code false} otherwise.
 	*/
-	@:overload public static function isAbstract(mod : Int) : Bool;
+	@:overload @:public @:static public static function isAbstract(mod : Int) : Bool;
 	
 	/**
 	* Return {@code true} if the integer argument includes the
@@ -143,7 +143,7 @@ extern class Modifier
 	* @return {@code true} if {@code mod} includes the
 	* {@code strictfp} modifier; {@code false} otherwise.
 	*/
-	@:overload public static function isStrict(mod : Int) : Bool;
+	@:overload @:public @:static public static function isStrict(mod : Int) : Bool;
 	
 	/**
 	* Return a string describing the access modifier flags in
@@ -176,79 +176,79 @@ extern class Modifier
 	* @return  a string representation of the set of modifiers
 	* represented by {@code mod}
 	*/
-	@:overload public static function toString(mod : Int) : String;
+	@:overload @:public @:static public static function toString(mod : Int) : String;
 	
 	/**
 	* The {@code int} value representing the {@code public}
 	* modifier.
 	*/
-	public static var PUBLIC(default, null) : Int;
+	@:public @:static @:final public static var PUBLIC(default, null) : Int;
 	
 	/**
 	* The {@code int} value representing the {@code private}
 	* modifier.
 	*/
-	public static var PRIVATE(default, null) : Int;
+	@:public @:static @:final public static var PRIVATE(default, null) : Int;
 	
 	/**
 	* The {@code int} value representing the {@code protected}
 	* modifier.
 	*/
-	public static var PROTECTED(default, null) : Int;
+	@:public @:static @:final public static var PROTECTED(default, null) : Int;
 	
 	/**
 	* The {@code int} value representing the {@code static}
 	* modifier.
 	*/
-	public static var STATIC(default, null) : Int;
+	@:public @:static @:final public static var STATIC(default, null) : Int;
 	
 	/**
 	* The {@code int} value representing the {@code final}
 	* modifier.
 	*/
-	public static var FINAL(default, null) : Int;
+	@:public @:static @:final public static var FINAL(default, null) : Int;
 	
 	/**
 	* The {@code int} value representing the {@code synchronized}
 	* modifier.
 	*/
-	public static var SYNCHRONIZED(default, null) : Int;
+	@:public @:static @:final public static var SYNCHRONIZED(default, null) : Int;
 	
 	/**
 	* The {@code int} value representing the {@code volatile}
 	* modifier.
 	*/
-	public static var VOLATILE(default, null) : Int;
+	@:public @:static @:final public static var VOLATILE(default, null) : Int;
 	
 	/**
 	* The {@code int} value representing the {@code transient}
 	* modifier.
 	*/
-	public static var TRANSIENT(default, null) : Int;
+	@:public @:static @:final public static var TRANSIENT(default, null) : Int;
 	
 	/**
 	* The {@code int} value representing the {@code native}
 	* modifier.
 	*/
-	public static var NATIVE(default, null) : Int;
+	@:public @:static @:final public static var NATIVE(default, null) : Int;
 	
 	/**
 	* The {@code int} value representing the {@code interface}
 	* modifier.
 	*/
-	public static var INTERFACE(default, null) : Int;
+	@:public @:static @:final public static var INTERFACE(default, null) : Int;
 	
 	/**
 	* The {@code int} value representing the {@code abstract}
 	* modifier.
 	*/
-	public static var ABSTRACT(default, null) : Int;
+	@:public @:static @:final public static var ABSTRACT(default, null) : Int;
 	
 	/**
 	* The {@code int} value representing the {@code strictfp}
 	* modifier.
 	*/
-	public static var STRICT(default, null) : Int;
+	@:public @:static @:final public static var STRICT(default, null) : Int;
 	
 	/**
 	* Return an {@code int} value OR-ing together the source language
@@ -259,7 +259,7 @@ extern class Modifier
 	* @jls 8.1.1 Class Modifiers
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function classModifiers() : Int;
+	@:require(java7) @:overload @:public @:static public static function classModifiers() : Int;
 	
 	/**
 	* Return an {@code int} value OR-ing together the source language
@@ -270,7 +270,7 @@ extern class Modifier
 	* @jls 9.1.1 Interface Modifiers
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function interfaceModifiers() : Int;
+	@:require(java7) @:overload @:public @:static public static function interfaceModifiers() : Int;
 	
 	/**
 	* Return an {@code int} value OR-ing together the source language
@@ -281,7 +281,7 @@ extern class Modifier
 	* @jls 8.8.3 Constructor Modifiers
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function constructorModifiers() : Int;
+	@:require(java7) @:overload @:public @:static public static function constructorModifiers() : Int;
 	
 	/**
 	* Return an {@code int} value OR-ing together the source language
@@ -292,7 +292,7 @@ extern class Modifier
 	* @jls 8.4.3 Method Modifiers
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function methodModifiers() : Int;
+	@:require(java7) @:overload @:public @:static public static function methodModifiers() : Int;
 	
 	/**
 	* Return an {@code int} value OR-ing together the source language
@@ -303,7 +303,7 @@ extern class Modifier
 	* @jls 8.3.1 Field Modifiers
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function fieldModifiers() : Int;
+	@:require(java7) @:overload @:public @:static public static function fieldModifiers() : Int;
 	
 	
 }

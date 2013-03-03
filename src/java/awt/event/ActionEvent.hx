@@ -29,40 +29,40 @@ extern class ActionEvent extends java.awt.AWTEvent
 	* The shift modifier. An indicator that the shift key was held
 	* down during the event.
 	*/
-	public static var SHIFT_MASK(default, null) : Int;
+	@:public @:static @:final public static var SHIFT_MASK(default, null) : Int;
 	
 	/**
 	* The control modifier. An indicator that the control key was held
 	* down during the event.
 	*/
-	public static var CTRL_MASK(default, null) : Int;
+	@:public @:static @:final public static var CTRL_MASK(default, null) : Int;
 	
 	/**
 	* The meta modifier. An indicator that the meta key was held
 	* down during the event.
 	*/
-	public static var META_MASK(default, null) : Int;
+	@:public @:static @:final public static var META_MASK(default, null) : Int;
 	
 	/**
 	* The alt modifier. An indicator that the alt key was held
 	* down during the event.
 	*/
-	public static var ALT_MASK(default, null) : Int;
+	@:public @:static @:final public static var ALT_MASK(default, null) : Int;
 	
 	/**
 	* The first number in the range of ids used for action events.
 	*/
-	public static var ACTION_FIRST(default, null) : Int;
+	@:public @:static @:final public static var ACTION_FIRST(default, null) : Int;
 	
 	/**
 	* The last number in the range of ids used for action events.
 	*/
-	public static var ACTION_LAST(default, null) : Int;
+	@:public @:static @:final public static var ACTION_LAST(default, null) : Int;
 	
 	/**
 	* This event id indicates that a meaningful action occured.
 	*/
-	public static var ACTION_PERFORMED(default, null) : Int;
+	@:public @:static @:final public static var ACTION_PERFORMED(default, null) : Int;
 	
 	/**
 	* Constructs an <code>ActionEvent</code> object.
@@ -84,7 +84,7 @@ extern class ActionEvent extends java.awt.AWTEvent
 	* @see #getID()
 	* @see #getActionCommand()
 	*/
-	@:overload public function new(source : Dynamic, id : Int, command : String) : Void;
+	@:overload @:public public function new(source : Dynamic, id : Int, command : String) : Void;
 	
 	/**
 	* Constructs an <code>ActionEvent</code> object with modifier keys.
@@ -111,7 +111,7 @@ extern class ActionEvent extends java.awt.AWTEvent
 	* @see #getActionCommand()
 	* @see #getModifiers()
 	*/
-	@:overload public function new(source : Dynamic, id : Int, command : String, modifiers : Int) : Void;
+	@:overload @:public public function new(source : Dynamic, id : Int, command : String, modifiers : Int) : Void;
 	
 	/**
 	* Constructs an <code>ActionEvent</code> object with the specified
@@ -145,7 +145,7 @@ extern class ActionEvent extends java.awt.AWTEvent
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(source : Dynamic, id : Int, command : String, when : haxe.Int64, modifiers : Int) : Void;
+	@:require(java4) @:overload @:public public function new(source : Dynamic, id : Int, command : String, when : haxe.Int64, modifiers : Int) : Void;
 	
 	/**
 	* Returns the command string associated with this action.
@@ -161,7 +161,7 @@ extern class ActionEvent extends java.awt.AWTEvent
 	*
 	* @return the string identifying the command for this event
 	*/
-	@:overload public function getActionCommand() : String;
+	@:overload @:public public function getActionCommand() : String;
 	
 	/**
 	* Returns the timestamp of when this event occurred. Because an
@@ -171,14 +171,14 @@ extern class ActionEvent extends java.awt.AWTEvent
 	* @return this event's timestamp
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getWhen() : haxe.Int64;
+	@:require(java4) @:overload @:public public function getWhen() : haxe.Int64;
 	
 	/**
 	* Returns the modifier keys held down during this action event.
 	*
 	* @return the bitwise-or of the modifier constants
 	*/
-	@:overload public function getModifiers() : Int;
+	@:overload @:public public function getModifiers() : Int;
 	
 	/**
 	* Returns a parameter string identifying this action event.
@@ -186,7 +186,7 @@ extern class ActionEvent extends java.awt.AWTEvent
 	*
 	* @return a string identifying the event and its associated command
 	*/
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	
 }

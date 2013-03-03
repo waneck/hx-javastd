@@ -29,9 +29,9 @@ extern class JAXBContext
 	* The name of the property that contains the name of the class capable
 	* of creating new <tt>JAXBContext</tt> objects.
 	*/
-	public static var JAXB_CONTEXT_FACTORY(default, null) : String;
+	@:public @:static @:final public static var JAXB_CONTEXT_FACTORY(default, null) : String;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* <p>
@@ -51,7 +51,7 @@ extern class JAXBContext
 	*   <li>mixing schema derived packages from different providers on the same contextPath</li>
 	* </ol>
 	*/
-	@:overload public static function newInstance(contextPath : String) : javax.xml.bind.JAXBContext;
+	@:overload @:public @:static public static function newInstance(contextPath : String) : javax.xml.bind.JAXBContext;
 	
 	/**
 	* <p>
@@ -144,7 +144,7 @@ extern class JAXBContext
 	*   <li>mixing schema derived packages from different providers on the same contextPath</li>
 	* </ol>
 	*/
-	@:overload public static function newInstance(contextPath : String, classLoader : java.lang.ClassLoader) : javax.xml.bind.JAXBContext;
+	@:overload @:public @:static public static function newInstance(contextPath : String, classLoader : java.lang.ClassLoader) : javax.xml.bind.JAXBContext;
 	
 	/**
 	* <p>
@@ -177,7 +177,7 @@ extern class JAXBContext
 	* </ol>
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public static function newInstance(contextPath : String, classLoader : java.lang.ClassLoader, properties : java.util.Map<String, Dynamic>) : javax.xml.bind.JAXBContext;
+	@:require(java0) @:overload @:public @:static public static function newInstance(contextPath : String, classLoader : java.lang.ClassLoader, properties : java.util.Map<String, Dynamic>) : javax.xml.bind.JAXBContext;
 	
 	/**
 	* <p>
@@ -242,7 +242,7 @@ extern class JAXBContext
 	*
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public static function newInstance(classesToBeBound : java.NativeArray<Class<Dynamic>>) : javax.xml.bind.JAXBContext;
+	@:require(java0) @:overload @:public @:static public static function newInstance(classesToBeBound : java.NativeArray<Class<Dynamic>>) : javax.xml.bind.JAXBContext;
 	
 	/**
 	* <p>
@@ -284,7 +284,7 @@ extern class JAXBContext
 	*
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public static function newInstance(classesToBeBound : java.NativeArray<Class<Dynamic>>, properties : java.util.Map<String, Dynamic>) : javax.xml.bind.JAXBContext;
+	@:require(java0) @:overload @:public @:static public static function newInstance(classesToBeBound : java.NativeArray<Class<Dynamic>>, properties : java.util.Map<String, Dynamic>) : javax.xml.bind.JAXBContext;
 	
 	/**
 	* Create an <tt>Unmarshaller</tt> object that can be used to convert XML
@@ -295,7 +295,7 @@ extern class JAXBContext
 	* @throws JAXBException if an error was encountered while creating the
 	*                       <tt>Unmarshaller</tt> object
 	*/
-	@:overload @:abstract public function createUnmarshaller() : javax.xml.bind.Unmarshaller;
+	@:overload @:public @:abstract public function createUnmarshaller() : javax.xml.bind.Unmarshaller;
 	
 	/**
 	* Create a <tt>Marshaller</tt> object that can be used to convert a
@@ -306,7 +306,7 @@ extern class JAXBContext
 	* @throws JAXBException if an error was encountered while creating the
 	*                       <tt>Marshaller</tt> object
 	*/
-	@:overload @:abstract public function createMarshaller() : javax.xml.bind.Marshaller;
+	@:overload @:public @:abstract public function createMarshaller() : javax.xml.bind.Marshaller;
 	
 	/**
 	* {@link Validator} has been made optional and deprecated in JAXB 2.0.  Please
@@ -321,7 +321,7 @@ extern class JAXBContext
 	*                       <tt>Validator</tt> object
 	* @deprecated since JAXB2.0
 	*/
-	@:overload @:abstract public function createValidator() : javax.xml.bind.Validator;
+	@:overload @:public @:abstract public function createValidator() : javax.xml.bind.Validator;
 	
 	/**
 	* Creates a <tt>Binder</tt> object that can be used for
@@ -337,7 +337,7 @@ extern class JAXBContext
 	*
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function createBinder<T>(domType : Class<T>) : javax.xml.bind.Binder<T>;
+	@:require(java0) @:overload @:public public function createBinder<T>(domType : Class<T>) : javax.xml.bind.Binder<T>;
 	
 	/**
 	* Creates a <tt>Binder</tt> for W3C DOM.
@@ -346,7 +346,7 @@ extern class JAXBContext
 	*
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function createBinder() : javax.xml.bind.Binder<org.w3c.dom.Node>;
+	@:require(java0) @:overload @:public public function createBinder() : javax.xml.bind.Binder<org.w3c.dom.Node>;
 	
 	/**
 	* Creates a <tt>JAXBIntrospector</tt> object that can be used to
@@ -361,7 +361,7 @@ extern class JAXBContext
 	*
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function createJAXBIntrospector() : javax.xml.bind.JAXBIntrospector;
+	@:require(java0) @:overload @:public public function createJAXBIntrospector() : javax.xml.bind.JAXBIntrospector;
 	
 	/**
 	* Generates the schema documents for this context.
@@ -379,7 +379,7 @@ extern class JAXBContext
 	*
 	* @since JAXB 2.0
 	*/
-	@:require(java0) @:overload public function generateSchema(outputResolver : javax.xml.bind.SchemaOutputResolver) : Void;
+	@:require(java0) @:overload @:public public function generateSchema(outputResolver : javax.xml.bind.SchemaOutputResolver) : Void;
 	
 	
 }

@@ -23,11 +23,11 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 */
 @:internal extern class SlotAllocator
 {
-	@:overload public function initialize(vars : java.NativeArray<com.sun.org.apache.bcel.internal.generic.LocalVariableGen>) : Void;
+	@:overload @:public public function initialize(vars : java.NativeArray<com.sun.org.apache.bcel.internal.generic.LocalVariableGen>) : Void;
 	
-	@:overload public function allocateSlot(type : com.sun.org.apache.bcel.internal.generic.Type) : Int;
+	@:overload @:public public function allocateSlot(type : com.sun.org.apache.bcel.internal.generic.Type) : Int;
 	
-	@:overload public function releaseSlot(lvg : com.sun.org.apache.bcel.internal.generic.LocalVariableGen) : Void;
+	@:overload @:public public function releaseSlot(lvg : com.sun.org.apache.bcel.internal.generic.LocalVariableGen) : Void;
 	
 	
 }

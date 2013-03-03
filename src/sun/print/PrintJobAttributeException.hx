@@ -25,9 +25,9 @@ package sun.print;
 */
 @:internal extern class PrintJobAttributeException extends javax.print.PrintException implements javax.print.AttributeException
 {
-	@:overload public function getUnsupportedAttributes() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getUnsupportedAttributes() : java.NativeArray<Class<Dynamic>>;
 	
-	@:overload public function getUnsupportedValues() : java.NativeArray<javax.print.attribute.Attribute>;
+	@:overload @:public public function getUnsupportedValues() : java.NativeArray<javax.print.attribute.Attribute>;
 	
 	
 }

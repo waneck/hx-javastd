@@ -25,9 +25,9 @@ package javax.swing.plaf.basic;
 */
 extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 {
-	private var progressBar : javax.swing.JProgressBar;
+	@:protected private var progressBar : javax.swing.JProgressBar;
 	
-	private var changeListener : javax.swing.event.ChangeListener;
+	@:protected private var changeListener : javax.swing.event.ChangeListener;
 	
 	/**
 	* Used to hold the location and size of the bouncing box (returned
@@ -35,19 +35,19 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	*
 	* @since 1.5
 	*/
-	@:require(java5) private var boxRect : java.awt.Rectangle;
+	@:require(java5) @:protected private var boxRect : java.awt.Rectangle;
 	
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installDefaults() : Void;
+	@:overload @:protected private function installDefaults() : Void;
 	
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected private function uninstallDefaults() : Void;
 	
-	@:overload private function installListeners() : Void;
+	@:overload @:protected private function installListeners() : Void;
 	
 	/**
 	* Starts the animation thread, creating and initializing
@@ -66,7 +66,7 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	* @since 1.4
 	* @see #stopAnimationTimer
 	*/
-	@:require(java4) @:overload private function startAnimationTimer() : Void;
+	@:require(java4) @:overload @:protected private function startAnimationTimer() : Void;
 	
 	/**
 	* Stops the animation thread.
@@ -83,12 +83,12 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	* @since 1.4
 	* @see #startAnimationTimer
 	*/
-	@:require(java4) @:overload private function stopAnimationTimer() : Void;
+	@:require(java4) @:overload @:protected private function stopAnimationTimer() : Void;
 	
 	/**
 	* Removes all listeners installed by this object.
 	*/
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected private function uninstallListeners() : Void;
 	
 	/**
 	* Returns the baseline.
@@ -98,7 +98,7 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
+	@:require(java6) @:overload @:public override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
 	
 	/**
 	* Returns an enum indicating how the baseline of the component
@@ -108,23 +108,23 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
+	@:require(java6) @:overload @:public override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
 	
-	@:overload private function getPreferredInnerHorizontal() : java.awt.Dimension;
+	@:overload @:protected private function getPreferredInnerHorizontal() : java.awt.Dimension;
 	
-	@:overload private function getPreferredInnerVertical() : java.awt.Dimension;
+	@:overload @:protected private function getPreferredInnerVertical() : java.awt.Dimension;
 	
 	/**
 	* The "selectionForeground" is the color of the text when it is painted
 	* over a filled area of the progress bar.
 	*/
-	@:overload private function getSelectionForeground() : java.awt.Color;
+	@:overload @:protected private function getSelectionForeground() : java.awt.Color;
 	
 	/**
 	* The "selectionBackground" is the color of the text when it is painted
 	* over an unfilled area of the progress bar.
 	*/
-	@:overload private function getSelectionBackground() : java.awt.Color;
+	@:overload @:protected private function getSelectionBackground() : java.awt.Color;
 	
 	/**
 	* Returns the width (if HORIZONTAL) or height (if VERTICAL)
@@ -137,9 +137,9 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	* @see    #setCellLength
 	* @see    JProgressBar#isStringPainted
 	*/
-	@:overload private function getCellLength() : Int;
+	@:overload @:protected private function getCellLength() : Int;
 	
-	@:overload private function setCellLength(cellLen : Int) : Void;
+	@:overload @:protected private function setCellLength(cellLen : Int) : Void;
 	
 	/**
 	* Returns the spacing between each of the cells/units in the
@@ -151,9 +151,9 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	* @see    #setCellSpacing
 	* @see    JProgressBar#isStringPainted
 	*/
-	@:overload private function getCellSpacing() : Int;
+	@:overload @:protected private function getCellSpacing() : Int;
 	
-	@:overload private function setCellSpacing(cellSpace : Int) : Void;
+	@:overload @:protected private function setCellSpacing(cellSpace : Int) : Void;
 	
 	/**
 	* This determines the amount of the progress bar that should be filled
@@ -162,13 +162,13 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	* is linear. That is, if you are making a circular progress indicator,
 	* you will want to override this method.
 	*/
-	@:overload private function getAmountFull(b : java.awt.Insets, width : Int, height : Int) : Int;
+	@:overload @:protected private function getAmountFull(b : java.awt.Insets, width : Int, height : Int) : Int;
 	
 	/**
 	* Delegates painting to one of two methods:
 	* paintDeterminate or paintIndeterminate.
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Stores the position and size of
@@ -194,7 +194,7 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	* @see #setAnimationIndex
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function getBox(r : java.awt.Rectangle) : java.awt.Rectangle;
+	@:require(java4) @:overload @:protected private function getBox(r : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	/**
 	* Returns the length
@@ -229,7 +229,7 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	* @see javax.swing.SwingUtilities#calculateInnerArea
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function getBoxLength(availableLength : Int, otherDimension : Int) : Int;
+	@:require(java5) @:overload @:protected private function getBoxLength(availableLength : Int, otherDimension : Int) : Int;
 	
 	/**
 	* All purpose paint method that should do the right thing for all
@@ -241,7 +241,7 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function paintIndeterminate(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:require(java4) @:overload @:protected private function paintIndeterminate(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* All purpose paint method that should do the right thing for almost
@@ -255,9 +255,9 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function paintDeterminate(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:require(java4) @:overload @:protected private function paintDeterminate(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload private function paintString(g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int, amountFull : Int, b : java.awt.Insets) : Void;
+	@:overload @:protected private function paintString(g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int, amountFull : Int, b : java.awt.Insets) : Void;
 	
 	/**
 	* Designate the place where the progress string will be painted.
@@ -266,24 +266,24 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	* left, top, or bottom align the progress string or if you need
 	* to nudge it around for any reason.
 	*/
-	@:overload private function getStringPlacement(g : java.awt.Graphics, progressString : String, x : Int, y : Int, width : Int, height : Int) : java.awt.Point;
+	@:overload @:protected private function getStringPlacement(g : java.awt.Graphics, progressString : String, x : Int, y : Int, width : Int, height : Int) : java.awt.Point;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* The Minimum size for this component is 10. The rationale here
 	* is that there should be at least one pixel per 10 percent.
 	*/
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Gets the index of the current animation frame.
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function getAnimationIndex() : Int;
+	@:require(java4) @:overload @:protected private function getAnimationIndex() : Int;
 	
 	/**
 	* Returns the number of frames for the complete animation loop
@@ -294,7 +294,7 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	* @return the number of frames
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final private function getFrameCount() : Int;
+	@:require(java6) @:overload @:protected @:final private function getFrameCount() : Int;
 	
 	/**
 	* Sets the index of the current animation frame
@@ -311,7 +311,7 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function setAnimationIndex(newValue : Int) : Void;
+	@:require(java4) @:overload @:protected private function setAnimationIndex(newValue : Int) : Void;
 	
 	/**
 	* Sets the index of the current animation frame,
@@ -333,7 +333,7 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	* @see #setAnimationIndex
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function incrementAnimationIndex() : Void;
+	@:require(java4) @:overload @:protected private function incrementAnimationIndex() : Void;
 	
 	
 }
@@ -349,7 +349,7 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 	/**
 	* Reacts to the timer's action events.
 	*/
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -359,17 +359,17 @@ extern class BasicProgressBarUI extends javax.swing.plaf.ProgressBarUI
 */
 @:native('javax$swing$plaf$basic$BasicProgressBarUI$ChangeHandler') extern class BasicProgressBarUI_ChangeHandler implements javax.swing.event.ChangeListener
 {
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicProgressBarUI$Handler') @:internal extern class BasicProgressBarUI_Handler implements javax.swing.event.ChangeListener implements java.beans.PropertyChangeListener implements java.awt.event.HierarchyListener
 {
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload public function hierarchyChanged(he : java.awt.event.HierarchyEvent) : Void;
+	@:overload @:public public function hierarchyChanged(he : java.awt.event.HierarchyEvent) : Void;
 	
 	
 }

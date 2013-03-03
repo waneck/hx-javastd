@@ -31,24 +31,24 @@ extern class NGCCHandler implements com.sun.xml.internal.xsom.impl.parser.state.
 	* @version $Id: NGCCHandler.java,v 1.9 2002/09/29 02:55:48 okajima Exp $
 	* @author Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	@:overload private function new(source : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventSource, parent : com.sun.xml.internal.xsom.impl.parser.state.NGCCHandler, parentCookie : Int) : Void;
+	@:overload @:protected private function new(source : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventSource, parent : com.sun.xml.internal.xsom.impl.parser.state.NGCCHandler, parentCookie : Int) : Void;
 	
 	/**
 	* Parent NGCCHandler, if any.
 	* If this is the root handler, this field will be null.
 	*/
-	private var _parent(default, null) : com.sun.xml.internal.xsom.impl.parser.state.NGCCHandler;
+	@:protected @:final private var _parent(default, null) : com.sun.xml.internal.xsom.impl.parser.state.NGCCHandler;
 	
 	/**
 	* Event source.
 	*/
-	private var _source(default, null) : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventSource;
+	@:protected @:final private var _source(default, null) : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventSource;
 	
 	/**
 	* This method will be implemented by the generated code
 	* and returns a reference to the current runtime.
 	*/
-	@:overload @:abstract private function getRuntime() : com.sun.xml.internal.xsom.impl.parser.state.NGCCRuntime;
+	@:overload @:protected @:abstract private function getRuntime() : com.sun.xml.internal.xsom.impl.parser.state.NGCCRuntime;
 	
 	/**
 	* Cookie assigned by the parent.
@@ -56,7 +56,7 @@ extern class NGCCHandler implements com.sun.xml.internal.xsom.impl.parser.state.
 	* This value will be passed to the onChildCompleted handler
 	* of the parent.
 	*/
-	private var _cookie(default, null) : Int;
+	@:protected @:final private var _cookie(default, null) : Int;
 	
 	/**
 	* Notifies the completion of a child object.
@@ -72,50 +72,50 @@ extern class NGCCHandler implements com.sun.xml.internal.xsom.impl.parser.state.
 	*      This flag is set to false when this method is triggered by
 	*      attribute transition.
 	*/
-	@:overload @:abstract private function onChildCompleted(result : Dynamic, cookie : Int, needAttCheck : Bool) : Void;
+	@:overload @:protected @:abstract private function onChildCompleted(result : Dynamic, cookie : Int, needAttCheck : Bool) : Void;
 	
-	@:overload public function spawnChildFromEnterElement(child : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, uri : String, localname : String, qname : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function spawnChildFromEnterElement(child : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, uri : String, localname : String, qname : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function spawnChildFromEnterAttribute(child : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, uri : String, localname : String, qname : String) : Void;
+	@:overload @:public public function spawnChildFromEnterAttribute(child : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, uri : String, localname : String, qname : String) : Void;
 	
-	@:overload public function spawnChildFromLeaveElement(child : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, uri : String, localname : String, qname : String) : Void;
+	@:overload @:public public function spawnChildFromLeaveElement(child : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, uri : String, localname : String, qname : String) : Void;
 	
-	@:overload public function spawnChildFromLeaveAttribute(child : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, uri : String, localname : String, qname : String) : Void;
+	@:overload @:public public function spawnChildFromLeaveAttribute(child : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, uri : String, localname : String, qname : String) : Void;
 	
-	@:overload public function spawnChildFromText(child : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, value : String) : Void;
+	@:overload @:public public function spawnChildFromText(child : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, value : String) : Void;
 	
-	@:overload public function revertToParentFromEnterElement(result : Dynamic, cookie : Int, uri : String, local : String, qname : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function revertToParentFromEnterElement(result : Dynamic, cookie : Int, uri : String, local : String, qname : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function revertToParentFromLeaveElement(result : Dynamic, cookie : Int, uri : String, local : String, qname : String) : Void;
+	@:overload @:public public function revertToParentFromLeaveElement(result : Dynamic, cookie : Int, uri : String, local : String, qname : String) : Void;
 	
-	@:overload public function revertToParentFromEnterAttribute(result : Dynamic, cookie : Int, uri : String, local : String, qname : String) : Void;
+	@:overload @:public public function revertToParentFromEnterAttribute(result : Dynamic, cookie : Int, uri : String, local : String, qname : String) : Void;
 	
-	@:overload public function revertToParentFromLeaveAttribute(result : Dynamic, cookie : Int, uri : String, local : String, qname : String) : Void;
+	@:overload @:public public function revertToParentFromLeaveAttribute(result : Dynamic, cookie : Int, uri : String, local : String, qname : String) : Void;
 	
-	@:overload public function revertToParentFromText(result : Dynamic, cookie : Int, text : String) : Void;
+	@:overload @:public public function revertToParentFromText(result : Dynamic, cookie : Int, text : String) : Void;
 	
-	@:overload public function unexpectedEnterElement(qname : String) : Void;
+	@:overload @:public public function unexpectedEnterElement(qname : String) : Void;
 	
-	@:overload public function unexpectedLeaveElement(qname : String) : Void;
+	@:overload @:public public function unexpectedLeaveElement(qname : String) : Void;
 	
-	@:overload public function unexpectedEnterAttribute(qname : String) : Void;
+	@:overload @:public public function unexpectedEnterAttribute(qname : String) : Void;
 	
-	@:overload public function unexpectedLeaveAttribute(qname : String) : Void;
+	@:overload @:public public function unexpectedLeaveAttribute(qname : String) : Void;
 	
-	@:overload public function enterAttribute(uri : String, localName : String, qname : String) : Void;
+	@:overload @:public public function enterAttribute(uri : String, localName : String, qname : String) : Void;
 	
-	@:overload public function leaveElement(uri : String, localName : String, qname : String) : Void;
+	@:overload @:public public function leaveElement(uri : String, localName : String, qname : String) : Void;
 	
 	/**
 	*
 	*
 	* @author Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	@:overload public function enterElement(uri : String, localName : String, qname : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function enterElement(uri : String, localName : String, qname : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function text(value : String) : Void;
+	@:overload @:public public function text(value : String) : Void;
 	
-	@:overload public function leaveAttribute(uri : String, localName : String, qname : String) : Void;
+	@:overload @:public public function leaveAttribute(uri : String, localName : String, qname : String) : Void;
 	
 	
 }

@@ -47,7 +47,7 @@ extern class AccessController
 	* @see #doPrivilegedWithCombiner(PrivilegedAction)
 	* @see java.security.DomainCombiner
 	*/
-	@:overload @:native public static function doPrivileged<T>(action : java.security.PrivilegedAction<T>) : T;
+	@:overload @:public @:static @:native public static function doPrivileged<T>(action : java.security.PrivilegedAction<T>) : T;
 	
 	/**
 	* Performs the specified <code>PrivilegedAction</code> with privileges
@@ -71,7 +71,7 @@ extern class AccessController
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function doPrivilegedWithCombiner<T>(action : java.security.PrivilegedAction<T>) : T;
+	@:require(java6) @:overload @:public @:static public static function doPrivilegedWithCombiner<T>(action : java.security.PrivilegedAction<T>) : T;
 	
 	/**
 	* Performs the specified <code>PrivilegedAction</code> with privileges
@@ -100,7 +100,7 @@ extern class AccessController
 	* @see #doPrivileged(PrivilegedAction)
 	* @see #doPrivileged(PrivilegedExceptionAction,AccessControlContext)
 	*/
-	@:overload @:native public static function doPrivileged<T>(action : java.security.PrivilegedAction<T>, context : java.security.AccessControlContext) : T;
+	@:overload @:public @:static @:native public static function doPrivileged<T>(action : java.security.PrivilegedAction<T>, context : java.security.AccessControlContext) : T;
 	
 	/**
 	* Performs the specified <code>PrivilegedExceptionAction</code> with
@@ -126,7 +126,7 @@ extern class AccessController
 	* @see #doPrivilegedWithCombiner(PrivilegedExceptionAction)
 	* @see java.security.DomainCombiner
 	*/
-	@:overload @:native public static function doPrivileged<T>(action : java.security.PrivilegedExceptionAction<T>) : T;
+	@:overload @:public @:static @:native public static function doPrivileged<T>(action : java.security.PrivilegedExceptionAction<T>) : T;
 	
 	/**
 	* Performs the specified <code>PrivilegedExceptionAction</code> with
@@ -153,7 +153,7 @@ extern class AccessController
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function doPrivilegedWithCombiner<T>(action : java.security.PrivilegedExceptionAction<T>) : T;
+	@:require(java6) @:overload @:public @:static public static function doPrivilegedWithCombiner<T>(action : java.security.PrivilegedExceptionAction<T>) : T;
 	
 	/**
 	* Performs the specified <code>PrivilegedExceptionAction</code> with
@@ -184,7 +184,7 @@ extern class AccessController
 	* @see #doPrivileged(PrivilegedAction)
 	* @see #doPrivileged(PrivilegedExceptionAction,AccessControlContext)
 	*/
-	@:overload @:native public static function doPrivileged<T>(action : java.security.PrivilegedExceptionAction<T>, context : java.security.AccessControlContext) : T;
+	@:overload @:public @:static @:native public static function doPrivileged<T>(action : java.security.PrivilegedExceptionAction<T>, context : java.security.AccessControlContext) : T;
 	
 	/**
 	* This method takes a "snapshot" of the current calling context, which
@@ -196,7 +196,7 @@ extern class AccessController
 	*
 	* @return the AccessControlContext based on the current context.
 	*/
-	@:overload public static function getContext() : java.security.AccessControlContext;
+	@:overload @:public @:static public static function getContext() : java.security.AccessControlContext;
 	
 	/**
 	* Determines whether the access request indicated by the
@@ -215,7 +215,7 @@ extern class AccessController
 	*            is <code>null</code> and is checked based on the
 	*            security policy currently in effect.
 	*/
-	@:overload public static function checkPermission(perm : java.security.Permission) : Void;
+	@:overload @:public @:static public static function checkPermission(perm : java.security.Permission) : Void;
 	
 	
 }

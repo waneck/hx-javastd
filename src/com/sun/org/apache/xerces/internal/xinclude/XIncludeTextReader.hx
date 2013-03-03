@@ -27,7 +27,7 @@ extern class XIncludeTextReader
 	* @param handler The XIncludeHandler to use.
 	* @param bufferSize The size of this text reader's buffer.
 	*/
-	@:overload public function new(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource, handler : com.sun.org.apache.xerces.internal.xinclude.XIncludeHandler, bufferSize : Int) : Void;
+	@:overload @:public public function new(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource, handler : com.sun.org.apache.xerces.internal.xinclude.XIncludeHandler, bufferSize : Int) : Void;
 	
 	/**
 	* Sets the XMLErrorReporter used for reporting errors while
@@ -36,14 +36,14 @@ extern class XIncludeTextReader
 	* @param errorReporter the XMLErrorReporter to be used for
 	* reporting errors.
 	*/
-	@:overload public function setErrorReporter(errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter) : Void;
+	@:overload @:public public function setErrorReporter(errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter) : Void;
 	
 	/**
 	* Return the Reader for given XMLInputSource.
 	*
 	* @param source The XMLInputSource to use.
 	*/
-	@:overload private function getReader(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : java.io.Reader;
+	@:overload @:protected private function getReader(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : java.io.Reader;
 	
 	/**
 	* XMLEntityManager cares about endian-ness, since it creates its own optimized
@@ -51,7 +51,7 @@ extern class XIncludeTextReader
 	* about endian-ness.  If this changes, even more code needs to be copied from
 	* XMLEntity manager. -- PJM
 	*/
-	@:overload private function getEncodingName(stream : java.io.InputStream) : String;
+	@:overload @:protected private function getEncodingName(stream : java.io.InputStream) : String;
 	
 	/**
 	* Removes the byte order mark from the stream, if
@@ -61,7 +61,7 @@ extern class XIncludeTextReader
 	* @param encoding
 	* @throws IOException
 	*/
-	@:overload private function consumeBOM(stream : java.io.InputStream, encoding : String) : String;
+	@:overload @:protected private function consumeBOM(stream : java.io.InputStream, encoding : String) : String;
 	
 	/**
 	* REVISIT: This code is taken from com.sun.org.apache.xerces.internal.impl.XMLEntityManager.
@@ -74,7 +74,7 @@ extern class XIncludeTextReader
 	* @param b4    The first four bytes of the input.
 	* @return the encoding name, or null if no encoding could be detected
 	*/
-	@:overload private function getEncodingName(b4 : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:protected private function getEncodingName(b4 : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	/**
 	* Read the input stream as text, and pass the text on to the XIncludeHandler
@@ -83,14 +83,14 @@ extern class XIncludeTextReader
 	*
 	* @throws IOException
 	*/
-	@:overload public function parse() : Void;
+	@:overload @:public public function parse() : Void;
 	
 	/**
 	* Sets the input source on this text reader.
 	*
 	* @param source The XMLInputSource to use.
 	*/
-	@:overload public function setInputSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public public function setInputSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**
 	* Closes the stream.  Call this after parse(), or when there is no longer any need
@@ -98,7 +98,7 @@ extern class XIncludeTextReader
 	*
 	* @throws IOException
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Returns true if the specified character is a valid XML character
@@ -106,7 +106,7 @@ extern class XIncludeTextReader
 	*
 	* @param ch The character to check.
 	*/
-	@:overload private function isValid(ch : Int) : Bool;
+	@:overload @:protected private function isValid(ch : Int) : Bool;
 	
 	/**
 	* Sets the buffer size property for the reader which decides the chunk sizes that are parsed
@@ -114,7 +114,7 @@ extern class XIncludeTextReader
 	*
 	* @param bufferSize The size of the buffer desired
 	*/
-	@:overload private function setBufferSize(bufferSize : Int) : Void;
+	@:overload @:protected private function setBufferSize(bufferSize : Int) : Void;
 	
 	
 }

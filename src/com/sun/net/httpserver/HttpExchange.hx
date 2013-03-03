@@ -56,7 +56,7 @@ extern class HttpExchange
 	* result in resources failing to be freed/reused.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function new() : Void;
+	@:require(java6) @:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns an immutable Map containing the HTTP headers that were
@@ -70,7 +70,7 @@ extern class HttpExchange
 	* The keys in Map are case-insensitive.
 	* @return a read-only Map which can be used to access request headers
 	*/
-	@:overload @:abstract public function getRequestHeaders() : com.sun.net.httpserver.Headers;
+	@:overload @:public @:abstract public function getRequestHeaders() : com.sun.net.httpserver.Headers;
 	
 	/**
 	* Returns a mutable Map into which the HTTP response headers can be stored
@@ -82,26 +82,26 @@ extern class HttpExchange
 	* The keys in Map are case-insensitive.
 	* @return a writable Map which can be used to set response headers.
 	*/
-	@:overload @:abstract public function getResponseHeaders() : com.sun.net.httpserver.Headers;
+	@:overload @:public @:abstract public function getResponseHeaders() : com.sun.net.httpserver.Headers;
 	
 	/**
 	* Get the request URI
 	*
 	* @return the request URI
 	*/
-	@:overload @:abstract public function getRequestURI() : java.net.URI;
+	@:overload @:public @:abstract public function getRequestURI() : java.net.URI;
 	
 	/**
 	* Get the request method
 	* @return the request method
 	*/
-	@:overload @:abstract public function getRequestMethod() : String;
+	@:overload @:public @:abstract public function getRequestMethod() : String;
 	
 	/**
 	* Get the HttpContext for this exchange
 	* @return the HttpContext
 	*/
-	@:overload @:abstract public function getHttpContext() : com.sun.net.httpserver.HttpContext;
+	@:overload @:public @:abstract public function getHttpContext() : com.sun.net.httpserver.HttpContext;
 	
 	/**
 	* Ends this exchange by doing the following in sequence:<p><ol>
@@ -109,7 +109,7 @@ extern class HttpExchange
 	* <li>close the response OutputStream, if not already closed. </li>
 	* </ol>
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
 	/**
 	* returns a stream from which the request body can be read.
@@ -121,7 +121,7 @@ extern class HttpExchange
 	* number of bytes).
 	* @return the stream from which the request body can be read.
 	*/
-	@:overload @:abstract public function getRequestBody() : java.io.InputStream;
+	@:overload @:public @:abstract public function getRequestBody() : java.io.InputStream;
 	
 	/**
 	* returns a stream to which the response body must be
@@ -143,7 +143,7 @@ extern class HttpExchange
 	* the exchange is aborted and the underlying TCP connection closed.
 	* @return the stream to which the response body is written
 	*/
-	@:overload @:abstract public function getResponseBody() : java.io.OutputStream;
+	@:overload @:public @:abstract public function getResponseBody() : java.io.OutputStream;
 	
 	/**
 	* Starts sending the response back to the client using the current set of response headers
@@ -169,25 +169,25 @@ extern class HttpExchange
 	*        no response body may be written.
 	* @see HttpExchange#getResponseBody()
 	*/
-	@:overload @:abstract public function sendResponseHeaders(rCode : Int, responseLength : haxe.Int64) : Void;
+	@:overload @:public @:abstract public function sendResponseHeaders(rCode : Int, responseLength : haxe.Int64) : Void;
 	
 	/**
 	* Returns the address of the remote entity invoking this request
 	* @return the InetSocketAddress of the caller
 	*/
-	@:overload @:abstract public function getRemoteAddress() : java.net.InetSocketAddress;
+	@:overload @:public @:abstract public function getRemoteAddress() : java.net.InetSocketAddress;
 	
 	/**
 	* Returns the response code, if it has already been set
 	* @return the response code, if available. <code>-1</code> if not available yet.
 	*/
-	@:overload @:abstract public function getResponseCode() : Int;
+	@:overload @:public @:abstract public function getResponseCode() : Int;
 	
 	/**
 	* Returns the local address on which the request was received
 	* @return the InetSocketAddress of the local interface
 	*/
-	@:overload @:abstract public function getLocalAddress() : java.net.InetSocketAddress;
+	@:overload @:public @:abstract public function getLocalAddress() : java.net.InetSocketAddress;
 	
 	/**
 	* Returns the protocol string from the request in the form
@@ -195,7 +195,7 @@ extern class HttpExchange
 	* "HTTP/1.1"
 	* @return the protocol string from the request
 	*/
-	@:overload @:abstract public function getProtocol() : String;
+	@:overload @:public @:abstract public function getProtocol() : String;
 	
 	/**
 	* Filter modules may store arbitrary objects with HttpExchange
@@ -208,7 +208,7 @@ extern class HttpExchange
 	* @return the attribute object, or null if it does not exist
 	* @throws NullPointerException if name is <code>null</code>
 	*/
-	@:overload @:abstract public function getAttribute(name : String) : Dynamic;
+	@:overload @:public @:abstract public function getAttribute(name : String) : Dynamic;
 	
 	/**
 	* Filter modules may store arbitrary objects with HttpExchange
@@ -222,7 +222,7 @@ extern class HttpExchange
 	* value is permitted.
 	* @throws NullPointerException if name is <code>null</code>
 	*/
-	@:overload @:abstract public function setAttribute(name : String, value : Dynamic) : Void;
+	@:overload @:public @:abstract public function setAttribute(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Used by Filters to wrap either (or both) of this exchange's InputStream
@@ -239,7 +239,7 @@ extern class HttpExchange
 	* @param o the filtered output stream to set as this object's outputstream,
 	*          or <code>null</code> if no change.
 	*/
-	@:overload @:abstract public function setStreams(i : java.io.InputStream, o : java.io.OutputStream) : Void;
+	@:overload @:public @:abstract public function setStreams(i : java.io.InputStream, o : java.io.OutputStream) : Void;
 	
 	/**
 	* If an authenticator is set on the HttpContext that owns this exchange,
@@ -247,7 +247,7 @@ extern class HttpExchange
 	* the authenticated user for this HttpExchange.
 	* @return the HttpPrincipal, or <code>null</code> if no authenticator is set.
 	*/
-	@:overload @:abstract public function getPrincipal() : com.sun.net.httpserver.HttpPrincipal;
+	@:overload @:public @:abstract public function getPrincipal() : com.sun.net.httpserver.HttpPrincipal;
 	
 	
 }

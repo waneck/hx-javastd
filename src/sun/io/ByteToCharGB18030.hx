@@ -27,26 +27,26 @@ package sun.io;
 */
 extern class ByteToCharGB18030 extends sun.io.ByteToCharGB18030DB
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getOuter() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getOuter() : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public function getInner() : java.NativeArray<String>;
+	@:overload @:public public function getInner() : java.NativeArray<String>;
 	
-	@:overload public function getDBIndex1() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getDBIndex1() : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public function getDBIndex2() : java.NativeArray<String>;
+	@:overload @:public public function getDBIndex2() : java.NativeArray<String>;
 	
-	@:overload public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public override public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Character conversion
 	*/
-	@:overload public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
+	@:overload @:public override public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
 	
 }

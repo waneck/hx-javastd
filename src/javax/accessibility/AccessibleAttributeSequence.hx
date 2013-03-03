@@ -26,13 +26,13 @@ package javax.accessibility;
 extern class AccessibleAttributeSequence
 {
 	/** The start index of the text sequence */
-	public var startIndex : Int;
+	@:public public var startIndex : Int;
 	
 	/** The end index of the text sequence */
-	public var endIndex : Int;
+	@:public public var endIndex : Int;
 	
 	/** The text attributes */
-	public var attributes : javax.swing.text.AttributeSet;
+	@:public public var attributes : javax.swing.text.AttributeSet;
 	
 	/**
 	* Constructs an <code>AccessibleAttributeSequence</code> with the given
@@ -44,7 +44,7 @@ extern class AccessibleAttributeSequence
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(start : Int, end : Int, attr : javax.swing.text.AttributeSet) : Void;
+	@:require(java6) @:overload @:public public function new(start : Int, end : Int, attr : javax.swing.text.AttributeSet) : Void;
 	
 	
 }

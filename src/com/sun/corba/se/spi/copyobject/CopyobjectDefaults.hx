@@ -30,14 +30,14 @@ extern class CopyobjectDefaults
 	* within a single call to copy.  The others copiers all preserve aliasing across
 	* all calls to copy (on the same ObjectCopier instance).
 	*/
-	@:overload public static function makeORBStreamObjectCopierFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
+	@:overload @:public @:static public static function makeORBStreamObjectCopierFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
 	
-	@:overload public static function makeJavaStreamObjectCopierFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
+	@:overload @:public @:static public static function makeJavaStreamObjectCopierFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
 	
 	/** Obtain the reference object "copier".  This does no copies: it just
 	* returns whatever is passed to it.
 	*/
-	@:overload public static function getReferenceObjectCopierFactory() : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
+	@:overload @:public @:static public static function getReferenceObjectCopierFactory() : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
 	
 	/** Create a fallback copier factory from the two ObjectCopierFactory
 	* arguments.  This copier makes an ObjectCopierFactory that creates
@@ -45,7 +45,7 @@ extern class CopyobjectDefaults
 	* created from f1, then tries one created from f2, if the first
 	* throws a ReflectiveCopyException.
 	*/
-	@:overload public static function makeFallbackObjectCopierFactory(f1 : com.sun.corba.se.spi.copyobject.ObjectCopierFactory, f2 : com.sun.corba.se.spi.copyobject.ObjectCopierFactory) : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
+	@:overload @:public @:static public static function makeFallbackObjectCopierFactory(f1 : com.sun.corba.se.spi.copyobject.ObjectCopierFactory, f2 : com.sun.corba.se.spi.copyobject.ObjectCopierFactory) : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
 	
 	
 }

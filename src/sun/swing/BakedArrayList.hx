@@ -42,19 +42,19 @@ package sun.swing;
 */
 extern class BakedArrayList extends java.util.ArrayList<Dynamic>
 {
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
-	@:overload public function new(data : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function new(data : java.util.List<Dynamic>) : Void;
 	
 	/**
 	* Caches the hash code. It is assumed you won't modify the list, or that
 	* if you do you'll call cacheHashCode again.
 	*/
-	@:overload public function cacheHashCode() : Void;
+	@:overload @:public public function cacheHashCode() : Void;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
 	
 }

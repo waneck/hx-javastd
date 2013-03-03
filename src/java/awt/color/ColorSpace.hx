@@ -37,127 +37,127 @@ extern class ColorSpace implements java.io.Serializable
 	/**
 	* Any of the family of XYZ color spaces.
 	*/
-	public static var TYPE_XYZ(default, null) : Int;
+	@:public @:static @:final public static var TYPE_XYZ(default, null) : Int;
 	
 	/**
 	* Any of the family of Lab color spaces.
 	*/
-	public static var TYPE_Lab(default, null) : Int;
+	@:public @:static @:final public static var TYPE_Lab(default, null) : Int;
 	
 	/**
 	* Any of the family of Luv color spaces.
 	*/
-	public static var TYPE_Luv(default, null) : Int;
+	@:public @:static @:final public static var TYPE_Luv(default, null) : Int;
 	
 	/**
 	* Any of the family of YCbCr color spaces.
 	*/
-	public static var TYPE_YCbCr(default, null) : Int;
+	@:public @:static @:final public static var TYPE_YCbCr(default, null) : Int;
 	
 	/**
 	* Any of the family of Yxy color spaces.
 	*/
-	public static var TYPE_Yxy(default, null) : Int;
+	@:public @:static @:final public static var TYPE_Yxy(default, null) : Int;
 	
 	/**
 	* Any of the family of RGB color spaces.
 	*/
-	public static var TYPE_RGB(default, null) : Int;
+	@:public @:static @:final public static var TYPE_RGB(default, null) : Int;
 	
 	/**
 	* Any of the family of GRAY color spaces.
 	*/
-	public static var TYPE_GRAY(default, null) : Int;
+	@:public @:static @:final public static var TYPE_GRAY(default, null) : Int;
 	
 	/**
 	* Any of the family of HSV color spaces.
 	*/
-	public static var TYPE_HSV(default, null) : Int;
+	@:public @:static @:final public static var TYPE_HSV(default, null) : Int;
 	
 	/**
 	* Any of the family of HLS color spaces.
 	*/
-	public static var TYPE_HLS(default, null) : Int;
+	@:public @:static @:final public static var TYPE_HLS(default, null) : Int;
 	
 	/**
 	* Any of the family of CMYK color spaces.
 	*/
-	public static var TYPE_CMYK(default, null) : Int;
+	@:public @:static @:final public static var TYPE_CMYK(default, null) : Int;
 	
 	/**
 	* Any of the family of CMY color spaces.
 	*/
-	public static var TYPE_CMY(default, null) : Int;
+	@:public @:static @:final public static var TYPE_CMY(default, null) : Int;
 	
 	/**
 	* Generic 2 component color spaces.
 	*/
-	public static var TYPE_2CLR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_2CLR(default, null) : Int;
 	
 	/**
 	* Generic 3 component color spaces.
 	*/
-	public static var TYPE_3CLR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_3CLR(default, null) : Int;
 	
 	/**
 	* Generic 4 component color spaces.
 	*/
-	public static var TYPE_4CLR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_4CLR(default, null) : Int;
 	
 	/**
 	* Generic 5 component color spaces.
 	*/
-	public static var TYPE_5CLR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_5CLR(default, null) : Int;
 	
 	/**
 	* Generic 6 component color spaces.
 	*/
-	public static var TYPE_6CLR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_6CLR(default, null) : Int;
 	
 	/**
 	* Generic 7 component color spaces.
 	*/
-	public static var TYPE_7CLR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_7CLR(default, null) : Int;
 	
 	/**
 	* Generic 8 component color spaces.
 	*/
-	public static var TYPE_8CLR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_8CLR(default, null) : Int;
 	
 	/**
 	* Generic 9 component color spaces.
 	*/
-	public static var TYPE_9CLR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_9CLR(default, null) : Int;
 	
 	/**
 	* Generic 10 component color spaces.
 	*/
-	public static var TYPE_ACLR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_ACLR(default, null) : Int;
 	
 	/**
 	* Generic 11 component color spaces.
 	*/
-	public static var TYPE_BCLR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_BCLR(default, null) : Int;
 	
 	/**
 	* Generic 12 component color spaces.
 	*/
-	public static var TYPE_CCLR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_CCLR(default, null) : Int;
 	
 	/**
 	* Generic 13 component color spaces.
 	*/
-	public static var TYPE_DCLR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_DCLR(default, null) : Int;
 	
 	/**
 	* Generic 14 component color spaces.
 	*/
-	public static var TYPE_ECLR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_ECLR(default, null) : Int;
 	
 	/**
 	* Generic 15 component color spaces.
 	*/
-	public static var TYPE_FCLR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_FCLR(default, null) : Int;
 	
 	/**
 	* The sRGB color space defined at
@@ -165,28 +165,28 @@ extern class ColorSpace implements java.io.Serializable
 	* http://www.w3.org/pub/WWW/Graphics/Color/sRGB.html
 	* </A>.
 	*/
-	public static var CS_sRGB(default, null) : Int;
+	@:public @:static @:final public static var CS_sRGB(default, null) : Int;
 	
 	/**
 	* A built-in linear RGB color space.  This space is based on the
 	* same RGB primaries as CS_sRGB, but has a linear tone reproduction curve.
 	*/
-	public static var CS_LINEAR_RGB(default, null) : Int;
+	@:public @:static @:final public static var CS_LINEAR_RGB(default, null) : Int;
 	
 	/**
 	* The CIEXYZ conversion color space defined above.
 	*/
-	public static var CS_CIEXYZ(default, null) : Int;
+	@:public @:static @:final public static var CS_CIEXYZ(default, null) : Int;
 	
 	/**
 	* The Photo YCC conversion color space.
 	*/
-	public static var CS_PYCC(default, null) : Int;
+	@:public @:static @:final public static var CS_PYCC(default, null) : Int;
 	
 	/**
 	* The built-in linear gray scale color space.
 	*/
-	public static var CS_GRAY(default, null) : Int;
+	@:public @:static @:final public static var CS_GRAY(default, null) : Int;
 	
 	/**
 	* Constructs a ColorSpace object given a color space type
@@ -194,7 +194,7 @@ extern class ColorSpace implements java.io.Serializable
 	* @param type one of the <CODE>ColorSpace</CODE> type constants
 	* @param numcomponents the number of components in the color space
 	*/
-	@:overload private function new(type : Int, numcomponents : Int) : Void;
+	@:overload @:protected private function new(type : Int, numcomponents : Int) : Void;
 	
 	/**
 	* Returns a ColorSpace representing one of the specific
@@ -204,14 +204,14 @@ extern class ColorSpace implements java.io.Serializable
 	*        CS_CIEXYZ, CS_GRAY, or CS_PYCC)
 	* @return the requested <CODE>ColorSpace</CODE> object
 	*/
-	@:overload public static function getInstance(colorspace : Int) : java.awt.color.ColorSpace;
+	@:overload @:public @:static public static function getInstance(colorspace : Int) : java.awt.color.ColorSpace;
 	
 	/**
 	* Returns true if the ColorSpace is CS_sRGB.
 	* @return <CODE>true</CODE> if this is a <CODE>CS_sRGB</CODE> color
 	*         space, <code>false</code> if it is not
 	*/
-	@:overload public function isCS_sRGB() : Bool;
+	@:overload @:public public function isCS_sRGB() : Bool;
 	
 	/**
 	* Transforms a color value assumed to be in this ColorSpace
@@ -234,7 +234,7 @@ extern class ColorSpace implements java.io.Serializable
 	* @throws ArrayIndexOutOfBoundsException if array length is not
 	*         at least the number of components in this ColorSpace
 	*/
-	@:overload @:abstract public function toRGB(colorvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public @:abstract public function toRGB(colorvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Transforms a color value assumed to be in the default CS_sRGB
@@ -257,7 +257,7 @@ extern class ColorSpace implements java.io.Serializable
 	* @throws ArrayIndexOutOfBoundsException if array length is not
 	*         at least 3
 	*/
-	@:overload @:abstract public function fromRGB(rgbvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public @:abstract public function fromRGB(rgbvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Transforms a color value assumed to be in this ColorSpace
@@ -283,7 +283,7 @@ extern class ColorSpace implements java.io.Serializable
 	* @throws ArrayIndexOutOfBoundsException if array length is not
 	*         at least the number of components in this ColorSpace.
 	*/
-	@:overload @:abstract public function toCIEXYZ(colorvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public @:abstract public function toCIEXYZ(colorvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Transforms a color value assumed to be in the CS_CIEXYZ conversion
@@ -310,7 +310,7 @@ extern class ColorSpace implements java.io.Serializable
 	* @throws ArrayIndexOutOfBoundsException if array length is not
 	*         at least 3
 	*/
-	@:overload @:abstract public function fromCIEXYZ(colorvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public @:abstract public function fromCIEXYZ(colorvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Returns the color space type of this ColorSpace (for example
@@ -324,13 +324,13 @@ extern class ColorSpace implements java.io.Serializable
 	* @return the type constant that represents the type of this
 	*         <CODE>ColorSpace</CODE>
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Returns the number of components of this ColorSpace.
 	* @return The number of components in this <CODE>ColorSpace</CODE>.
 	*/
-	@:overload public function getNumComponents() : Int;
+	@:overload @:public public function getNumComponents() : Int;
 	
 	/**
 	* Returns the name of the component given the component index.
@@ -340,7 +340,7 @@ extern class ColorSpace implements java.io.Serializable
 	* @throws IllegalArgumentException if <code>idx</code> is
 	*         less than 0 or greater than numComponents - 1
 	*/
-	@:overload public function getName(idx : Int) : String;
+	@:overload @:public public function getName(idx : Int) : String;
 	
 	/**
 	* Returns the minimum normalized color component value for the
@@ -354,7 +354,7 @@ extern class ColorSpace implements java.io.Serializable
 	*         greater than numComponents - 1
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getMinValue(component : Int) : Single;
+	@:require(java4) @:overload @:public public function getMinValue(component : Int) : Single;
 	
 	/**
 	* Returns the maximum normalized color component value for the
@@ -368,7 +368,7 @@ extern class ColorSpace implements java.io.Serializable
 	*         greater than numComponents - 1
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getMaxValue(component : Int) : Single;
+	@:require(java4) @:overload @:public public function getMaxValue(component : Int) : Single;
 	
 	
 }

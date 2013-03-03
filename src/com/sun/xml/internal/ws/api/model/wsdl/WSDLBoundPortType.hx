@@ -42,7 +42,7 @@ extern interface WSDLBoundPortType extends com.sun.xml.internal.ws.api.model.wsd
 	* @param operationName non-null operationName
 	* @return null if a {@link WSDLBoundOperation} is not found
 	*/
-	@:overload public function get(operationName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
+	@:overload @:public public function get(operationName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
 	
 	/**
 	* Gets the wsdl:binding@type value, same as {@link WSDLPortType#getName()}

@@ -25,9 +25,9 @@ package sun.nio.ch;
 */
 extern class DevPollSelectorProvider extends sun.nio.ch.SelectorProviderImpl
 {
-	@:overload override public function openSelector() : java.nio.channels.spi.AbstractSelector;
+	@:overload @:public override public function openSelector() : java.nio.channels.spi.AbstractSelector;
 	
-	@:overload public function inheritedChannel() : java.nio.channels.Channel;
+	@:overload @:public override public function inheritedChannel() : java.nio.channels.Channel;
 	
 	
 }

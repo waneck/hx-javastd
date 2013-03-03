@@ -28,11 +28,11 @@ extern class SimpleInputMethodWindow extends java.awt.Frame implements sun.awt.i
 	/**
 	* Constructs a simple input method window.
 	*/
-	@:overload public function new(title : String, context : sun.awt.im.InputContext) : Void;
+	@:overload @:public public function new(title : String, context : sun.awt.im.InputContext) : Void;
 	
-	@:overload public function setInputContext(inputContext : sun.awt.im.InputContext) : Void;
+	@:overload @:public public function setInputContext(inputContext : sun.awt.im.InputContext) : Void;
 	
-	@:overload override public function getInputContext() : java.awt.im.InputContext;
+	@:overload @:public override public function getInputContext() : java.awt.im.InputContext;
 	
 	
 }

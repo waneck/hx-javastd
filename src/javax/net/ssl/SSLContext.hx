@@ -32,7 +32,7 @@ extern class SSLContext
 	* @param provider the provider
 	* @param protocol the protocol
 	*/
-	@:overload private function new(contextSpi : javax.net.ssl.SSLContextSpi, provider : java.security.Provider, protocol : String) : Void;
+	@:overload @:protected private function new(contextSpi : javax.net.ssl.SSLContextSpi, provider : java.security.Provider, protocol : String) : Void;
 	
 	/**
 	* Returns the default SSL context.
@@ -51,7 +51,7 @@ extern class SSLContext
 	*   {@link SSLContext#getInstance SSLContext.getInstance()} call fails
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:synchronized public static function getDefault() : javax.net.ssl.SSLContext;
+	@:require(java6) @:overload @:public @:static @:synchronized public static function getDefault() : javax.net.ssl.SSLContext;
 	
 	/**
 	* Sets the default SSL context. It will be returned by subsequent calls
@@ -65,7 +65,7 @@ extern class SSLContext
 	*          <code>SSLPermission("setDefaultSSLContext")</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:synchronized public static function setDefault(context : javax.net.ssl.SSLContext) : Void;
+	@:require(java6) @:overload @:public @:static @:synchronized public static function setDefault(context : javax.net.ssl.SSLContext) : Void;
 	
 	/**
 	* Returns a <code>SSLContext</code> object that implements the
@@ -96,7 +96,7 @@ extern class SSLContext
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(protocol : String) : javax.net.ssl.SSLContext;
+	@:overload @:public @:static public static function getInstance(protocol : String) : javax.net.ssl.SSLContext;
 	
 	/**
 	* Returns a <code>SSLContext</code> object that implements the
@@ -133,7 +133,7 @@ extern class SSLContext
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(protocol : String, provider : String) : javax.net.ssl.SSLContext;
+	@:overload @:public @:static public static function getInstance(protocol : String, provider : String) : javax.net.ssl.SSLContext;
 	
 	/**
 	* Returns a <code>SSLContext</code> object that implements the
@@ -164,7 +164,7 @@ extern class SSLContext
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(protocol : String, provider : java.security.Provider) : javax.net.ssl.SSLContext;
+	@:overload @:public @:static public static function getInstance(protocol : String, provider : java.security.Provider) : javax.net.ssl.SSLContext;
 	
 	/**
 	* Returns the protocol name of this <code>SSLContext</code> object.
@@ -175,14 +175,14 @@ extern class SSLContext
 	*
 	* @return the protocol name of this <code>SSLContext</code> object.
 	*/
-	@:overload @:final public function getProtocol() : String;
+	@:overload @:public @:final public function getProtocol() : String;
 	
 	/**
 	* Returns the provider of this <code>SSLContext</code> object.
 	*
 	* @return the provider of this <code>SSLContext</code> object
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Initializes this context. Either of the first two parameters
@@ -200,7 +200,7 @@ extern class SSLContext
 	* @param random the source of randomness for this generator or null
 	* @throws KeyManagementException if this operation fails
 	*/
-	@:overload @:final public function init(km : java.NativeArray<javax.net.ssl.KeyManager>, tm : java.NativeArray<javax.net.ssl.TrustManager>, random : java.security.SecureRandom) : Void;
+	@:overload @:public @:final public function init(km : java.NativeArray<javax.net.ssl.KeyManager>, tm : java.NativeArray<javax.net.ssl.TrustManager>, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Returns a <code>SocketFactory</code> object for this
@@ -210,7 +210,7 @@ extern class SSLContext
 	* @throws IllegalStateException if the SSLContextImpl requires
 	*          initialization and the <code>init()</code> has not been called
 	*/
-	@:overload @:final public function getSocketFactory() : javax.net.ssl.SSLSocketFactory;
+	@:overload @:public @:final public function getSocketFactory() : javax.net.ssl.SSLSocketFactory;
 	
 	/**
 	* Returns a <code>ServerSocketFactory</code> object for
@@ -220,7 +220,7 @@ extern class SSLContext
 	* @throws IllegalStateException if the SSLContextImpl requires
 	*          initialization and the <code>init()</code> has not been called
 	*/
-	@:overload @:final public function getServerSocketFactory() : javax.net.ssl.SSLServerSocketFactory;
+	@:overload @:public @:final public function getServerSocketFactory() : javax.net.ssl.SSLServerSocketFactory;
 	
 	/**
 	* Creates a new <code>SSLEngine</code> using this context.
@@ -240,7 +240,7 @@ extern class SSLContext
 	*          initialization and the <code>init()</code> has not been called
 	* @since   1.5
 	*/
-	@:require(java5) @:overload @:final public function createSSLEngine() : javax.net.ssl.SSLEngine;
+	@:require(java5) @:overload @:public @:final public function createSSLEngine() : javax.net.ssl.SSLEngine;
 	
 	/**
 	* Creates a new <code>SSLEngine</code> using this context using
@@ -261,7 +261,7 @@ extern class SSLContext
 	*          initialization and the <code>init()</code> has not been called
 	* @since   1.5
 	*/
-	@:require(java5) @:overload @:final public function createSSLEngine(peerHost : String, peerPort : Int) : javax.net.ssl.SSLEngine;
+	@:require(java5) @:overload @:public @:final public function createSSLEngine(peerHost : String, peerPort : Int) : javax.net.ssl.SSLEngine;
 	
 	/**
 	* Returns the server session context, which represents the set of
@@ -276,7 +276,7 @@ extern class SSLContext
 	*
 	* @return server session context bound to this SSL context
 	*/
-	@:overload @:final public function getServerSessionContext() : javax.net.ssl.SSLSessionContext;
+	@:overload @:public @:final public function getServerSessionContext() : javax.net.ssl.SSLSessionContext;
 	
 	/**
 	* Returns the client session context, which represents the set of
@@ -291,7 +291,7 @@ extern class SSLContext
 	*
 	* @return client session context bound to this SSL context
 	*/
-	@:overload @:final public function getClientSessionContext() : javax.net.ssl.SSLSessionContext;
+	@:overload @:public @:final public function getClientSessionContext() : javax.net.ssl.SSLSessionContext;
 	
 	/**
 	* Returns a copy of the SSLParameters indicating the default
@@ -305,7 +305,7 @@ extern class SSLContext
 	*   could not be obtained.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getDefaultSSLParameters() : javax.net.ssl.SSLParameters;
+	@:require(java6) @:overload @:public @:final public function getDefaultSSLParameters() : javax.net.ssl.SSLParameters;
 	
 	/**
 	* Returns a copy of the SSLParameters indicating the supported
@@ -320,7 +320,7 @@ extern class SSLContext
 	*   could not be obtained.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getSupportedSSLParameters() : javax.net.ssl.SSLParameters;
+	@:require(java6) @:overload @:public @:final public function getSupportedSSLParameters() : javax.net.ssl.SSLParameters;
 	
 	
 }

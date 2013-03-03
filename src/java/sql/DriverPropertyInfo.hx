@@ -41,24 +41,24 @@ extern class DriverPropertyInfo
 	* @param name the name of the property
 	* @param value the current value, which may be null
 	*/
-	@:overload public function new(name : String, value : String) : Void;
+	@:overload @:public public function new(name : String, value : String) : Void;
 	
 	/**
 	* The name of the property.
 	*/
-	public var name : String;
+	@:public public var name : String;
 	
 	/**
 	* A brief description of the property, which may be null.
 	*/
-	public var description : String;
+	@:public public var description : String;
 	
 	/**
 	* The <code>required</code> field is <code>true</code> if a value must be
 	* supplied for this property
 	* during <code>Driver.connect</code> and <code>false</code> otherwise.
 	*/
-	public var required : Bool;
+	@:public public var required : Bool;
 	
 	/**
 	* The <code>value</code> field specifies the current value of
@@ -67,14 +67,14 @@ extern class DriverPropertyInfo
 	* Java environment, and the driver-supplied default values.  This field
 	* may be null if no value is known.
 	*/
-	public var value : String;
+	@:public public var value : String;
 	
 	/**
 	* An array of possible values if the value for the field
 	* <code>DriverPropertyInfo.value</code> may be selected
 	* from a particular set of values; otherwise null.
 	*/
-	public var choices : java.NativeArray<String>;
+	@:public public var choices : java.NativeArray<String>;
 	
 	
 }

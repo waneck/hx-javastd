@@ -25,7 +25,7 @@ package com.sun.codemodel.internal.fmt;
 */
 extern class JBinaryFile extends com.sun.codemodel.internal.JResourceFile
 {
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	*
@@ -33,9 +33,9 @@ extern class JBinaryFile extends com.sun.codemodel.internal.JResourceFile
 	*      Data written to the returned output stream will be written
 	*      to the file.
 	*/
-	@:overload public function getDataStore() : java.io.OutputStream;
+	@:overload @:public public function getDataStore() : java.io.OutputStream;
 	
-	@:overload override public function build(os : java.io.OutputStream) : Void;
+	@:overload @:public override public function build(os : java.io.OutputStream) : Void;
 	
 	
 }

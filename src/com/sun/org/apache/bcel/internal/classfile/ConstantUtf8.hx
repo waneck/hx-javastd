@@ -69,12 +69,12 @@ extern class ConstantUtf8 extends com.sun.org.apache.bcel.internal.classfile.Con
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantUtf8) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantUtf8) : Void;
 	
 	/**
 	* @param bytes Data
 	*/
-	@:overload public function new(bytes : String) : Void;
+	@:overload @:public public function new(bytes : String) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -83,7 +83,7 @@ extern class ConstantUtf8 extends com.sun.org.apache.bcel.internal.classfile.Con
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump String in Utf8 format to file stream.
@@ -91,22 +91,22 @@ extern class ConstantUtf8 extends com.sun.org.apache.bcel.internal.classfile.Con
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final override public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Data converted to string.
 	*/
-	@:overload @:final public function getBytes() : String;
+	@:overload @:public @:final public function getBytes() : String;
 	
 	/**
 	* @param bytes.
 	*/
-	@:overload @:final public function setBytes(bytes : String) : Void;
+	@:overload @:public @:final public function setBytes(bytes : String) : Void;
 	
 	/**
 	* @return String representation
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	
 }

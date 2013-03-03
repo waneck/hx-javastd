@@ -25,23 +25,23 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class BufferManagerReadGrow implements com.sun.corba.se.impl.encoding.BufferManagerRead implements com.sun.corba.se.impl.encoding.MarkAndResetHandler
 {
-	@:overload public function processFragment(byteBuffer : java.nio.ByteBuffer, header : com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage) : Void;
+	@:overload @:public public function processFragment(byteBuffer : java.nio.ByteBuffer, header : com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage) : Void;
 	
-	@:overload public function init(msg : com.sun.corba.se.impl.protocol.giopmsgheaders.Message) : Void;
+	@:overload @:public public function init(msg : com.sun.corba.se.impl.protocol.giopmsgheaders.Message) : Void;
 	
-	@:overload public function underflow(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : com.sun.corba.se.impl.encoding.ByteBufferWithInfo;
+	@:overload @:public public function underflow(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : com.sun.corba.se.impl.encoding.ByteBufferWithInfo;
 	
-	@:overload public function cancelProcessing(requestId : Int) : Void;
+	@:overload @:public public function cancelProcessing(requestId : Int) : Void;
 	
-	@:overload public function getMarkAndResetHandler() : com.sun.corba.se.impl.encoding.MarkAndResetHandler;
+	@:overload @:public public function getMarkAndResetHandler() : com.sun.corba.se.impl.encoding.MarkAndResetHandler;
 	
-	@:overload public function mark(is : com.sun.corba.se.impl.encoding.RestorableInputStream) : Void;
+	@:overload @:public public function mark(is : com.sun.corba.se.impl.encoding.RestorableInputStream) : Void;
 	
-	@:overload public function fragmentationOccured(newFragment : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
+	@:overload @:public public function fragmentationOccured(newFragment : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function close(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
+	@:overload @:public public function close(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
 	
 	
 }

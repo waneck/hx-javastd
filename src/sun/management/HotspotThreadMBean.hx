@@ -30,7 +30,7 @@ extern interface HotspotThreadMBean
 	*
 	* @return the current number of VM internal threads.
 	*/
-	@:overload public function getInternalThreadCount() : Int;
+	@:overload @:public public function getInternalThreadCount() : Int;
 	
 	/**
 	* Returns a <tt>Map</tt> of the name of all VM internal threads
@@ -46,7 +46,7 @@ extern interface HotspotThreadMBean
 	*
 	* @see java.lang.management.ThreadMBean#isThreadCpuTimeSupported
 	*/
-	@:overload public function getInternalThreadCpuTimes() : java.util.Map<String, Null<haxe.Int64>>;
+	@:overload @:public public function getInternalThreadCpuTimes() : java.util.Map<String, Null<haxe.Int64>>;
 	
 	/**
 	* Returns a list of internal counters maintained in the Java
@@ -55,7 +55,7 @@ extern interface HotspotThreadMBean
 	* @return a list of internal counters maintained in the VM
 	* for the thread system.
 	*/
-	@:overload public function getInternalThreadingCounters() : java.util.List<sun.management.counter.Counter>;
+	@:overload @:public public function getInternalThreadingCounters() : java.util.List<sun.management.counter.Counter>;
 	
 	
 }

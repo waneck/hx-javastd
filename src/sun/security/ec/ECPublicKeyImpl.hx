@@ -35,29 +35,29 @@ package sun.security.ec;
 	* Construct a key from its components. Used by the
 	* ECKeyFactory and SunPKCS11.
 	*/
-	@:overload public function new(w : java.security.spec.ECPoint, params : java.security.spec.ECParameterSpec) : Void;
+	@:overload @:public public function new(w : java.security.spec.ECPoint, params : java.security.spec.ECParameterSpec) : Void;
 	
 	/**
 	* Construct a key from its encoding. Used by RSAKeyFactory.
 	*/
-	@:overload public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override public function getAlgorithm() : String;
+	@:overload @:public override public function getAlgorithm() : String;
 	
-	@:overload public function getW() : java.security.spec.ECPoint;
+	@:overload @:public public function getW() : java.security.spec.ECPoint;
 	
-	@:overload public function getParams() : java.security.spec.ECParameterSpec;
+	@:overload @:public public function getParams() : java.security.spec.ECParameterSpec;
 	
-	@:overload public function getEncodedPublicValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncodedPublicValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Parse the key. Called by X509Key.
 	*/
-	@:overload override private function parseKeyBits() : Void;
+	@:overload @:protected override private function parseKeyBits() : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload private function writeReplace() : Dynamic;
+	@:overload @:protected private function writeReplace() : Dynamic;
 	
 	
 }

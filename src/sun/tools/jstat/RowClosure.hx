@@ -33,11 +33,11 @@ package sun.tools.jstat;
 */
 @:require(java5) extern class RowClosure implements sun.tools.jstat.Closure
 {
-	@:overload public function new(vm : sun.jvmstat.monitor.MonitoredVm) : Void;
+	@:overload @:public public function new(vm : sun.jvmstat.monitor.MonitoredVm) : Void;
 	
-	@:overload public function visit(o : Dynamic, hasNext : Bool) : Void;
+	@:overload @:public public function visit(o : Dynamic, hasNext : Bool) : Void;
 	
-	@:overload public function getRow() : String;
+	@:overload @:public public function getRow() : String;
 	
 	
 }

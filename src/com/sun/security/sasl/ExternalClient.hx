@@ -39,14 +39,14 @@ package com.sun.security.sasl;
 	*
 	* @return  The string "EXTERNAL".
 	*/
-	@:overload public function getMechanismName() : String;
+	@:overload @:public public function getMechanismName() : String;
 	
 	/**
 	* This mechanism has an initial response.
 	*/
-	@:overload public function hasInitialResponse() : Bool;
+	@:overload @:public public function hasInitialResponse() : Bool;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* Processes the challenge data.
@@ -59,27 +59,27 @@ package com.sun.security.sasl;
 	* @return The possible empty initial response.
 	* @throws SaslException If authentication has already been called.
 	*/
-	@:overload public function evaluateChallenge(challengeData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function evaluateChallenge(challengeData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns whether this mechanism is complete.
 	* @return true if initial response has been sent; false otherwise.
 	*/
-	@:overload public function isComplete() : Bool;
+	@:overload @:public public function isComplete() : Bool;
 	
 	/**
 	* Unwraps the incoming buffer.
 	*
 	* @throws SaslException Not applicable to this mechanism.
 	*/
-	@:overload public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Wraps the outgoing buffer.
 	*
 	* @throws SaslException Not applicable to this mechanism.
 	*/
-	@:overload public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the negotiated property.
@@ -91,7 +91,7 @@ package com.sun.security.sasl;
 	* @exception IllegalStateException if this authentication exchange
 	* has not completed
 	*/
-	@:overload public function getNegotiatedProperty(propName : String) : Dynamic;
+	@:overload @:public public function getNegotiatedProperty(propName : String) : Dynamic;
 	
 	
 }

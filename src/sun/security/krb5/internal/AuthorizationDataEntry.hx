@@ -28,19 +28,19 @@ package sun.security.krb5.internal;
 */
 extern class AuthorizationDataEntry implements java.lang.Cloneable
 {
-	public var adType : Int;
+	@:public public var adType : Int;
 	
-	public var adData : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var adData : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function new(new_adType : Int, new_adData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(new_adType : Int, new_adData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Constructs an instance of AuthorizationDataEntry.
 	* @param encoding a single DER-encoded value.
 	*/
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes an AuthorizationDataEntry object.
@@ -48,7 +48,7 @@ extern class AuthorizationDataEntry implements java.lang.Cloneable
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Writes the entry's data fields in FCC format to an output stream.
@@ -56,9 +56,9 @@ extern class AuthorizationDataEntry implements java.lang.Cloneable
 	* @param cos a <code>CCacheOutputStream</code>.
 	* @exception IOException if an I/O exception occurs.
 	*/
-	@:overload public function writeEntry(cos : sun.security.krb5.internal.ccache.CCacheOutputStream) : Void;
+	@:overload @:public public function writeEntry(cos : sun.security.krb5.internal.ccache.CCacheOutputStream) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

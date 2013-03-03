@@ -40,14 +40,14 @@ package java.nio.charset;
 	* @param  charsetName
 	*         The name of the unsupported charset
 	*/
-	@:overload public function new(charsetName : String) : Void;
+	@:overload @:public public function new(charsetName : String) : Void;
 	
 	/**
 	* Retrieves the name of the unsupported charset. </p>
 	*
 	* @return  The name of the unsupported charset
 	*/
-	@:overload public function getCharsetName() : String;
+	@:overload @:public public function getCharsetName() : String;
 	
 	
 }

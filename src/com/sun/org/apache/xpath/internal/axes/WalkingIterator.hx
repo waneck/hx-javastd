@@ -29,13 +29,13 @@ extern class WalkingIterator extends com.sun.org.apache.xpath.internal.axes.LocP
 	* @param nscontext The namespace context for this iterator,
 	* should be OK if null.
 	*/
-	@:overload public function new(nscontext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
+	@:overload @:public public function new(nscontext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
 	
 	/**
 	* Get the analysis bits for this walker, as defined in the WalkerFactory.
 	* @return One of WalkerFactory#BIT_DESCENDANT, etc.
 	*/
-	@:overload override public function getAnalysisBits() : Int;
+	@:overload @:public override public function getAnalysisBits() : Int;
 	
 	/**
 	* Get a cloned WalkingIterator that holds the same
@@ -45,12 +45,12 @@ extern class WalkingIterator extends com.sun.org.apache.xpath.internal.axes.LocP
 	*
 	* @throws CloneNotSupportedException
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Reset the iterator.
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* Initialize the context values for this expression
@@ -59,7 +59,7 @@ extern class WalkingIterator extends com.sun.org.apache.xpath.internal.axes.LocP
 	* @param context The XPath runtime context for this
 	* transformation.
 	*/
-	@:overload override public function setRoot(context : Int, environment : Dynamic) : Void;
+	@:overload @:public override public function setRoot(context : Int, environment : Dynamic) : Void;
 	
 	/**
 	*  Returns the next node in the set and advances the position of the
@@ -68,7 +68,7 @@ extern class WalkingIterator extends com.sun.org.apache.xpath.internal.axes.LocP
 	* @return  The next <code>Node</code> in the set being iterated over, or
 	*   <code>null</code> if there are no more members in that set.
 	*/
-	@:overload override public function nextNode() : Int;
+	@:overload @:public override public function nextNode() : Int;
 	
 	/**
 	* Get the head of the walker list.
@@ -77,7 +77,7 @@ extern class WalkingIterator extends com.sun.org.apache.xpath.internal.axes.LocP
 	* if this iterator does not implement walkers.
 	* @xsl.usage advanced
 	*/
-	@:overload @:final public function getFirstWalker() : com.sun.org.apache.xpath.internal.axes.AxesWalker;
+	@:overload @:public @:final public function getFirstWalker() : com.sun.org.apache.xpath.internal.axes.AxesWalker;
 	
 	/**
 	* Set the head of the walker list.
@@ -85,7 +85,7 @@ extern class WalkingIterator extends com.sun.org.apache.xpath.internal.axes.LocP
 	* @param walker Should be a valid AxesWalker.
 	* @xsl.usage advanced
 	*/
-	@:overload @:final public function setFirstWalker(walker : com.sun.org.apache.xpath.internal.axes.AxesWalker) : Void;
+	@:overload @:public @:final public function setFirstWalker(walker : com.sun.org.apache.xpath.internal.axes.AxesWalker) : Void;
 	
 	/**
 	* Set the last used walker.
@@ -93,7 +93,7 @@ extern class WalkingIterator extends com.sun.org.apache.xpath.internal.axes.LocP
 	* @param walker The last used walker, or null.
 	* @xsl.usage advanced
 	*/
-	@:overload @:final public function setLastUsedWalker(walker : com.sun.org.apache.xpath.internal.axes.AxesWalker) : Void;
+	@:overload @:public @:final public function setLastUsedWalker(walker : com.sun.org.apache.xpath.internal.axes.AxesWalker) : Void;
 	
 	/**
 	* Get the last used walker.
@@ -101,7 +101,7 @@ extern class WalkingIterator extends com.sun.org.apache.xpath.internal.axes.LocP
 	* @return The last used walker, or null.
 	* @xsl.usage advanced
 	*/
-	@:overload @:final public function getLastUsedWalker() : com.sun.org.apache.xpath.internal.axes.AxesWalker;
+	@:overload @:public @:final public function getLastUsedWalker() : com.sun.org.apache.xpath.internal.axes.AxesWalker;
 	
 	/**
 	*  Detaches the iterator from the set which it iterated over, releasing
@@ -110,7 +110,7 @@ extern class WalkingIterator extends com.sun.org.apache.xpath.internal.axes.LocP
 	* <code>nextNode</code> or<code>previousNode</code> will raise the
 	* exception INVALID_STATE_ERR.
 	*/
-	@:overload override public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	/**
 	* This function is used to fixup variables from QNames to stack frame
@@ -122,35 +122,35 @@ extern class WalkingIterator extends com.sun.org.apache.xpath.internal.axes.LocP
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* @see com.sun.org.apache.xpath.internal.XPathVisitable#callVisitors(ExpressionOwner, XPathVisitor)
 	*/
-	@:overload override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/** The last used step walker in the walker list.
 	*  @serial */
-	private var m_lastUsedWalker : com.sun.org.apache.xpath.internal.axes.AxesWalker;
+	@:protected private var m_lastUsedWalker : com.sun.org.apache.xpath.internal.axes.AxesWalker;
 	
 	/** The head of the step walker list.
 	*  @serial */
-	private var m_firstWalker : com.sun.org.apache.xpath.internal.axes.AxesWalker;
+	@:protected private var m_firstWalker : com.sun.org.apache.xpath.internal.axes.AxesWalker;
 	
 	/**
 	* @see ExpressionOwner#getExpression()
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see ExpressionOwner#setExpression(Expression)
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }

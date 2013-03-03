@@ -22,15 +22,15 @@ package com.sun.org.apache.xerces.internal.impl.xs.opti;
 @:internal extern class SchemaDOMImplementation implements org.w3c.dom.DOMImplementation
 {
 	/** NON-DOM: Obtain and return the single shared object */
-	@:overload public static function getDOMImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload @:public @:static public static function getDOMImplementation() : org.w3c.dom.DOMImplementation;
 	
-	@:overload public function createDocument(namespaceURI : String, qualifiedName : String, doctype : org.w3c.dom.DocumentType) : org.w3c.dom.Document;
+	@:overload @:public public function createDocument(namespaceURI : String, qualifiedName : String, doctype : org.w3c.dom.DocumentType) : org.w3c.dom.Document;
 	
-	@:overload public function createDocumentType(qualifiedName : String, publicId : String, systemId : String) : org.w3c.dom.DocumentType;
+	@:overload @:public public function createDocumentType(qualifiedName : String, publicId : String, systemId : String) : org.w3c.dom.DocumentType;
 	
-	@:overload public function getFeature(feature : String, version : String) : Dynamic;
+	@:overload @:public public function getFeature(feature : String, version : String) : Dynamic;
 	
-	@:overload public function hasFeature(feature : String, version : String) : Bool;
+	@:overload @:public public function hasFeature(feature : String, version : String) : Bool;
 	
 	
 }

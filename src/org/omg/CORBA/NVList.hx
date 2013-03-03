@@ -96,7 +96,7 @@ package org.omg.CORBA;
 	* @return                  an <code>int</code> indicating the number of
 	* <code>NamedValue</code> objects in this <code>NVList</code>.
 	*/
-	@:overload @:abstract public function count() : Int;
+	@:overload @:public @:abstract public function count() : Int;
 	
 	/**
 	* Creates a new <code>NamedValue</code> object initialized with the given flag
@@ -108,7 +108,7 @@ package org.omg.CORBA;
 	* @param flags             one of the argument mode flags
 	* @return                  the newly-created <code>NamedValue</code> object
 	*/
-	@:overload @:abstract public function add(flags : Int) : org.omg.CORBA.NamedValue;
+	@:overload @:public @:abstract public function add(flags : Int) : org.omg.CORBA.NamedValue;
 	
 	/**
 	* Creates a new <code>NamedValue</code> object initialized with the
@@ -122,7 +122,7 @@ package org.omg.CORBA;
 	* @param flags             one of the argument mode flags
 	* @return                  the newly-created <code>NamedValue</code> object
 	*/
-	@:overload @:abstract public function add_item(item_name : String, flags : Int) : org.omg.CORBA.NamedValue;
+	@:overload @:public @:abstract public function add_item(item_name : String, flags : Int) : org.omg.CORBA.NamedValue;
 	
 	/**
 	* Creates a new <code>NamedValue</code> object initialized with the
@@ -137,7 +137,7 @@ package org.omg.CORBA;
 	*                    <code>ARG_INOUT.value</code>
 	* @return            the newly created <code>NamedValue</code> object
 	*/
-	@:overload @:abstract public function add_value(item_name : String, val : org.omg.CORBA.Any, flags : Int) : org.omg.CORBA.NamedValue;
+	@:overload @:public @:abstract public function add_value(item_name : String, val : org.omg.CORBA.Any, flags : Int) : org.omg.CORBA.NamedValue;
 	
 	/**
 	* Retrieves the <code>NamedValue</code> object at the given index.
@@ -149,7 +149,7 @@ package org.omg.CORBA;
 	* @exception org.omg.CORBA.Bounds  if the index is greater than
 	*                          or equal to number of <code>NamedValue</code> objects
 	*/
-	@:overload @:abstract public function item(index : Int) : org.omg.CORBA.NamedValue;
+	@:overload @:public @:abstract public function item(index : Int) : org.omg.CORBA.NamedValue;
 	
 	/**
 	* Removes the <code>NamedValue</code> object at the given index.
@@ -164,7 +164,7 @@ package org.omg.CORBA;
 	*                          or equal to number of <code>NamedValue</code> objects in
 	*                the list
 	*/
-	@:overload @:abstract public function remove(index : Int) : Void;
+	@:overload @:public @:abstract public function remove(index : Int) : Void;
 	
 	
 }

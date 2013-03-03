@@ -28,13 +28,13 @@ extern class VolatileImage extends java.awt.Image implements java.awt.Transparen
 	/**
 	* Validated image is ready to use as-is.
 	*/
-	public static var IMAGE_OK(default, null) : Int;
+	@:public @:static @:final public static var IMAGE_OK(default, null) : Int;
 	
 	/**
 	* Validated image has been restored and is now ready to use.
 	* Note that restoration causes contents of the image to be lost.
 	*/
-	public static var IMAGE_RESTORED(default, null) : Int;
+	@:public @:static @:final public static var IMAGE_RESTORED(default, null) : Int;
 	
 	/**
 	* Validated image is incompatible with supplied
@@ -43,7 +43,7 @@ extern class VolatileImage extends java.awt.Image implements java.awt.Transparen
 	* after receiving this return code from <code>validate</code>
 	* is undefined.
 	*/
-	public static var IMAGE_INCOMPATIBLE(default, null) : Int;
+	@:public @:static @:final public static var IMAGE_INCOMPATIBLE(default, null) : Int;
 	
 	/**
 	* Returns a static snapshot image of this object.  The
@@ -55,19 +55,19 @@ extern class VolatileImage extends java.awt.Image implements java.awt.Transparen
 	*          <code>VolatileImage</code>
 	* @see BufferedImage
 	*/
-	@:overload @:abstract public function getSnapshot() : java.awt.image.BufferedImage;
+	@:overload @:public @:abstract public function getSnapshot() : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns the width of the <code>VolatileImage</code>.
 	* @return the width of this <code>VolatileImage</code>.
 	*/
-	@:overload @:abstract public function getWidth() : Int;
+	@:overload @:public @:abstract public function getWidth() : Int;
 	
 	/**
 	* Returns the height of the <code>VolatileImage</code>.
 	* @return the height of this <code>VolatileImage</code>.
 	*/
-	@:overload @:abstract public function getHeight() : Int;
+	@:overload @:public @:abstract public function getHeight() : Int;
 	
 	/**
 	* This returns an ImageProducer for this VolatileImage.
@@ -91,7 +91,7 @@ extern class VolatileImage extends java.awt.Image implements java.awt.Transparen
 	* @see ImageProducer
 	* @see #getSnapshot()
 	*/
-	@:overload public function getSource() : java.awt.image.ImageProducer;
+	@:overload @:public override public function getSource() : java.awt.image.ImageProducer;
 	
 	/**
 	* This method returns a {@link Graphics2D}, but is here
@@ -101,7 +101,7 @@ extern class VolatileImage extends java.awt.Image implements java.awt.Transparen
 	* @return a <code>Graphics2D</code>, which can be used to draw into
 	*          this image.
 	*/
-	@:overload public function getGraphics() : java.awt.Graphics;
+	@:overload @:public override public function getGraphics() : java.awt.Graphics;
 	
 	/**
 	* Creates a <code>Graphics2D</code>, which can be used to draw into
@@ -109,7 +109,7 @@ extern class VolatileImage extends java.awt.Image implements java.awt.Transparen
 	* @return a <code>Graphics2D</code>, used for drawing into this
 	*          image.
 	*/
-	@:overload @:abstract public function createGraphics() : java.awt.Graphics2D;
+	@:overload @:public @:abstract public function createGraphics() : java.awt.Graphics2D;
 	
 	/**
 	* Attempts to restore the drawing surface of the image if the surface
@@ -152,7 +152,7 @@ extern class VolatileImage extends java.awt.Image implements java.awt.Transparen
 	* @see #IMAGE_RESTORED
 	* @see #IMAGE_INCOMPATIBLE
 	*/
-	@:overload @:abstract public function validate(gc : java.awt.GraphicsConfiguration) : Int;
+	@:overload @:public @:abstract public function validate(gc : java.awt.GraphicsConfiguration) : Int;
 	
 	/**
 	* Returns <code>true</code> if rendering data was lost since last
@@ -163,7 +163,7 @@ extern class VolatileImage extends java.awt.Image implements java.awt.Transparen
 	* @return <code>true</code> if the drawing surface needs to be restored;
 	* <code>false</code> otherwise.
 	*/
-	@:overload @:abstract public function contentsLost() : Bool;
+	@:overload @:public @:abstract public function contentsLost() : Bool;
 	
 	/**
 	* Returns an ImageCapabilities object which can be
@@ -181,7 +181,7 @@ extern class VolatileImage extends java.awt.Image implements java.awt.Transparen
 	*         the capabilities of this <code>VolatileImage</code>.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:abstract public function getCapabilities() : java.awt.ImageCapabilities;
+	@:require(java4) @:overload @:public @:abstract public function getCapabilities() : java.awt.ImageCapabilities;
 	
 	/**
 	* The transparency value with which this image was created.
@@ -192,7 +192,7 @@ extern class VolatileImage extends java.awt.Image implements java.awt.Transparen
 	* @see Transparency
 	* @since 1.5
 	*/
-	@:require(java5) private var transparency : Int;
+	@:require(java5) @:protected private var transparency : Int;
 	
 	/**
 	* Returns the transparency.  Returns either OPAQUE, BITMASK,
@@ -203,7 +203,7 @@ extern class VolatileImage extends java.awt.Image implements java.awt.Transparen
 	* @see Transparency#TRANSLUCENT
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getTransparency() : Int;
+	@:require(java5) @:overload @:public public function getTransparency() : Int;
 	
 	
 }

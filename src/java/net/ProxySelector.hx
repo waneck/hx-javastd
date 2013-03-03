@@ -35,7 +35,7 @@ extern class ProxySelector
 	* @return the system-wide <code>ProxySelector</code>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getDefault() : java.net.ProxySelector;
+	@:require(java5) @:overload @:public @:static public static function getDefault() : java.net.ProxySelector;
 	
 	/**
 	* Sets (or unsets) the system-wide proxy selector.
@@ -52,7 +52,7 @@ extern class ProxySelector
 	* @see #getDefault()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function setDefault(ps : java.net.ProxySelector) : Void;
+	@:require(java5) @:overload @:public @:static public static function setDefault(ps : java.net.ProxySelector) : Void;
 	
 	/**
 	* Selects all the applicable proxies based on the protocol to
@@ -79,7 +79,7 @@ extern class ProxySelector
 	*          that represents a direct connection.
 	* @throws IllegalArgumentException if the argument is null
 	*/
-	@:overload @:abstract public function select(uri : java.net.URI) : java.util.List<java.net.Proxy>;
+	@:overload @:public @:abstract public function select(uri : java.net.URI) : java.util.List<java.net.Proxy>;
 	
 	/**
 	* Called to indicate that a connection could not be established
@@ -97,7 +97,7 @@ extern class ProxySelector
 	*          The I/O exception thrown when the connect failed.
 	* @throws IllegalArgumentException if either argument is null
 	*/
-	@:overload @:abstract public function connectFailed(uri : java.net.URI, sa : java.net.SocketAddress, ioe : java.io.IOException) : Void;
+	@:overload @:public @:abstract public function connectFailed(uri : java.net.URI, sa : java.net.SocketAddress, ioe : java.io.IOException) : Void;
 	
 	
 }

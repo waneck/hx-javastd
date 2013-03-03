@@ -30,7 +30,7 @@ package com.sun.tools.internal.ws.processor.modeler.wsdl;
 */
 extern class PseudoSchemaBuilder
 {
-	@:native('build') @:overload public static function _build(wsdlModeler : com.sun.tools.internal.ws.processor.modeler.wsdl.WSDLModeler, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : java.util.List<org.xml.sax.InputSource>;
+	@:native('build') @:overload @:public @:static public static function _build(wsdlModeler : com.sun.tools.internal.ws.processor.modeler.wsdl.WSDLModeler, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : java.util.List<org.xml.sax.InputSource>;
 	
 	
 }

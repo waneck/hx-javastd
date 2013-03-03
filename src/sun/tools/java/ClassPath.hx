@@ -36,7 +36,7 @@ extern class ClassPath
 	/**
 	* Build a class path from the specified path string
 	*/
-	@:overload public function new(pathstr : String) : Void;
+	@:overload @:public public function new(pathstr : String) : Void;
 	
 	/**
 	* Build a class path from the specified array of class path
@@ -49,39 +49,39 @@ extern class ClassPath
 	* previous constructor as a single path-separator-delimited
 	* string; use of this constructor avoids that problem.
 	*/
-	@:overload public function new(patharray : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(patharray : java.NativeArray<String>) : Void;
 	
 	/**
 	* Build a default class path from the path strings specified by
 	* the properties sun.boot.class.path and env.class.path, in that
 	* order.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Find the specified directory in the class path
 	*/
-	@:overload public function getDirectory(name : String) : sun.tools.java.ClassFile;
+	@:overload @:public public function getDirectory(name : String) : sun.tools.java.ClassFile;
 	
 	/**
 	* Load the specified file from the class path
 	*/
-	@:overload public function getFile(name : String) : sun.tools.java.ClassFile;
+	@:overload @:public public function getFile(name : String) : sun.tools.java.ClassFile;
 	
 	/**
 	* Returns list of files given a package name and extension.
 	*/
-	@:overload public function getFiles(pkg : String, ext : String) : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getFiles(pkg : String, ext : String) : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Release resources.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Returns original class path string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

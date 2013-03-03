@@ -25,13 +25,13 @@ package com.sun.tools.internal.xjc.model.nav;
 */
 @:internal extern class NClassByJClass implements com.sun.tools.internal.xjc.model.nav.NClass
 {
-	@:overload public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JClass;
+	@:overload @:public public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JClass;
 	
-	@:overload public function isAbstract() : Bool;
+	@:overload @:public public function isAbstract() : Bool;
 	
-	@:overload public function isBoxedType() : Bool;
+	@:overload @:public public function isBoxedType() : Bool;
 	
-	@:overload public function fullName() : String;
+	@:overload @:public public function fullName() : String;
 	
 	
 }

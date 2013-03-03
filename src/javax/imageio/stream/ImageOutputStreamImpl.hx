@@ -28,51 +28,51 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	/**
 	* Constructs an <code>ImageOutputStreamImpl</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:abstract public function write(b : Int) : Void;
+	@:overload @:public @:abstract public function write(b : Int) : Void;
 	
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:abstract public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public @:abstract public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function writeBoolean(v : Bool) : Void;
+	@:overload @:public public function writeBoolean(v : Bool) : Void;
 	
-	@:overload public function writeByte(v : Int) : Void;
+	@:overload @:public public function writeByte(v : Int) : Void;
 	
-	@:overload public function writeShort(v : Int) : Void;
+	@:overload @:public public function writeShort(v : Int) : Void;
 	
-	@:overload public function writeChar(v : Int) : Void;
+	@:overload @:public public function writeChar(v : Int) : Void;
 	
-	@:overload public function writeInt(v : Int) : Void;
+	@:overload @:public public function writeInt(v : Int) : Void;
 	
-	@:overload public function writeLong(v : haxe.Int64) : Void;
+	@:overload @:public public function writeLong(v : haxe.Int64) : Void;
 	
-	@:overload public function writeFloat(v : Single) : Void;
+	@:overload @:public public function writeFloat(v : Single) : Void;
 	
-	@:overload public function writeDouble(v : Float) : Void;
+	@:overload @:public public function writeDouble(v : Float) : Void;
 	
-	@:overload public function writeBytes(s : String) : Void;
+	@:overload @:public public function writeBytes(s : String) : Void;
 	
-	@:overload public function writeChars(s : String) : Void;
+	@:overload @:public public function writeChars(s : String) : Void;
 	
-	@:overload public function writeUTF(s : String) : Void;
+	@:overload @:public public function writeUTF(s : String) : Void;
 	
-	@:overload public function writeShorts(s : java.NativeArray<java.StdTypes.Int16>, off : Int, len : Int) : Void;
+	@:overload @:public public function writeShorts(s : java.NativeArray<java.StdTypes.Int16>, off : Int, len : Int) : Void;
 	
-	@:overload public function writeChars(c : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public public function writeChars(c : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
-	@:overload public function writeInts(i : java.NativeArray<Int>, off : Int, len : Int) : Void;
+	@:overload @:public public function writeInts(i : java.NativeArray<Int>, off : Int, len : Int) : Void;
 	
-	@:overload public function writeLongs(l : java.NativeArray<haxe.Int64>, off : Int, len : Int) : Void;
+	@:overload @:public public function writeLongs(l : java.NativeArray<haxe.Int64>, off : Int, len : Int) : Void;
 	
-	@:overload public function writeFloats(f : java.NativeArray<Single>, off : Int, len : Int) : Void;
+	@:overload @:public public function writeFloats(f : java.NativeArray<Single>, off : Int, len : Int) : Void;
 	
-	@:overload public function writeDoubles(d : java.NativeArray<Float>, off : Int, len : Int) : Void;
+	@:overload @:public public function writeDoubles(d : java.NativeArray<Float>, off : Int, len : Int) : Void;
 	
-	@:overload public function writeBit(bit : Int) : Void;
+	@:overload @:public public function writeBit(bit : Int) : Void;
 	
-	@:overload public function writeBits(bits : haxe.Int64, numBits : Int) : Void;
+	@:overload @:public public function writeBits(bits : haxe.Int64, numBits : Int) : Void;
 	
 	/**
 	* If the bit offset is non-zero, forces the remaining bits
@@ -83,7 +83,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload @:final private function flushBits() : Void;
+	@:overload @:protected @:final private function flushBits() : Void;
 	
 	/**
 	* Sets the desired byte order for future reads of data values
@@ -113,7 +113,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* @see #getByteOrder
 	* @see #readBits(int)
 	*/
-	@:overload override public function setByteOrder(byteOrder : java.nio.ByteOrder) : Void;
+	@:overload @:public override public function setByteOrder(byteOrder : java.nio.ByteOrder) : Void;
 	
 	/**
 	* Marks a position in the stream to be returned to by a
@@ -138,7 +138,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* should not assume that the marked position will remain valid after
 	* the read operation has completed.
 	*/
-	@:overload override public function mark() : Void;
+	@:overload @:public override public function mark() : Void;
 	
 	/**
 	* Reads 8 bytes from the stream, and (conceptually) concatenates
@@ -156,7 +156,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @see #getByteOrder
 	*/
-	@:overload override public function readLong() : haxe.Int64;
+	@:overload @:public override public function readLong() : haxe.Int64;
 	
 	/**
 	* Sets the bit offset to an integer between 0 and 7, inclusive.
@@ -175,7 +175,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @see #getBitOffset
 	*/
-	@:overload override public function setBitOffset(bitOffset : Int) : Void;
+	@:overload @:public override public function setBitOffset(bitOffset : Int) : Void;
 	
 	/**
 	* Reads a single bit from the stream and returns it as an
@@ -190,7 +190,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* reading all the bits.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function readBit() : Int;
+	@:overload @:public override public function readBit() : Int;
 	
 	/**
 	* Reads up to <code>b.length</code> bytes from the stream, and
@@ -211,7 +211,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Returns the stream pointer to its previous position, including
@@ -226,7 +226,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* Reads a byte from the stream and returns a <code>boolean</code>
@@ -241,7 +241,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* @exception EOFException if the end of the stream is reached.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function readBoolean() : Bool;
+	@:overload @:public override public function readBoolean() : Bool;
 	
 	/**
 	* Reads 4 bytes from the stream, and (conceptually) concatenates
@@ -261,7 +261,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @see #getByteOrder
 	*/
-	@:overload override public function readUnsignedInt() : haxe.Int64;
+	@:overload @:public override public function readUnsignedInt() : haxe.Int64;
 	
 	/**
 	* Returns the total length of the stream, if known.  Otherwise,
@@ -272,7 +272,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function length() : haxe.Int64;
+	@:overload @:public override public function length() : haxe.Int64;
 	
 	/**
 	* Returns the current byte position of the stream.  The next read
@@ -282,7 +282,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function getStreamPosition() : haxe.Int64;
+	@:overload @:public override public function getStreamPosition() : haxe.Int64;
 	
 	/**
 	* Reads up to <code>len</code> bytes from the stream, and stores
@@ -308,7 +308,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* len</code> is greater than <code>b.length</code>.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Reads a byte from the stream and returns it as a
@@ -326,7 +326,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* @exception EOFException if the end of the stream is reached.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function readByte() : java.StdTypes.Int8;
+	@:overload @:public override public function readByte() : java.StdTypes.Int8;
 	
 	/**
 	* Returns the current bit offset, as an integer between 0 and 7,
@@ -347,7 +347,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @see #setBitOffset
 	*/
-	@:overload override public function getBitOffset() : Int;
+	@:overload @:public override public function getBitOffset() : Int;
 	
 	/**
 	* Discards the initial position of the stream prior to the current
@@ -356,7 +356,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* Reads a byte from the stream, and (conceptually) converts it to
@@ -380,7 +380,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* @exception EOFException if the end of the stream is reached.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function readUnsignedByte() : Int;
+	@:overload @:public override public function readUnsignedByte() : Int;
 	
 	/**
 	* Reads 4 bytes from the stream, and (conceptually) concatenates
@@ -398,7 +398,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @see #getByteOrder
 	*/
-	@:overload override public function readFloat() : Single;
+	@:overload @:public override public function readFloat() : Single;
 	
 	/**
 	* Sets the current stream position to the desired location.  The
@@ -420,7 +420,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* than the flushed position.
 	* @exception IOException if any other I/O error occurs.
 	*/
-	@:overload override public function seek(pos : haxe.Int64) : Void;
+	@:overload @:public override public function seek(pos : haxe.Int64) : Void;
 	
 	/**
 	* Reads a bitstring from the stream and returns it as a
@@ -463,7 +463,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* reading all the bits.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function readBits(numBits : Int) : haxe.Int64;
+	@:overload @:public override public function readBits(numBits : Int) : haxe.Int64;
 	
 	/**
 	* Reads up to <code>len</code> bytes from the stream, and
@@ -485,7 +485,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function readBytes(buf : javax.imageio.stream.IIOByteBuffer, len : Int) : Void;
+	@:overload @:public override public function readBytes(buf : javax.imageio.stream.IIOByteBuffer, len : Int) : Void;
 	
 	/**
 	* Equivalent to <code>readUnsignedShort</code>, except that the
@@ -502,7 +502,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @see #readUnsignedShort
 	*/
-	@:overload override public function readChar() : java.StdTypes.Char16;
+	@:overload @:public override public function readChar() : java.StdTypes.Char16;
 	
 	/**
 	* Reads a single byte from the stream and returns it as an
@@ -517,7 +517,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads <code>len</code> ints (signed 32-bit integers) from the
@@ -542,7 +542,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* reading all the bytes.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function readFully(i : java.NativeArray<Int>, off : Int, len : Int) : Void;
+	@:overload @:public override public function readFully(i : java.NativeArray<Int>, off : Int, len : Int) : Void;
 	
 	/**
 	* Closes the stream.  Attempts to access a stream that has been
@@ -553,7 +553,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Returns the byte order with which data values will be read from
@@ -567,7 +567,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* @see java.nio.ByteOrder
 	* @see #setByteOrder
 	*/
-	@:overload override public function getByteOrder() : java.nio.ByteOrder;
+	@:overload @:public override public function getByteOrder() : java.nio.ByteOrder;
 	
 	/**
 	* Reads <code>b.length</code> bytes from the stream, and stores them
@@ -586,7 +586,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* reading all the bytes.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Reads <code>len</code> doubles (64-bit IEEE double-precision
@@ -611,7 +611,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* reading all the bytes.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function readFully(d : java.NativeArray<Float>, off : Int, len : Int) : Void;
+	@:overload @:public override public function readFully(d : java.NativeArray<Float>, off : Int, len : Int) : Void;
 	
 	/**
 	* Returns <code>true</code> if this <code>ImageInputStream</code>
@@ -625,7 +625,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* @see #isCachedMemory
 	* @see #isCachedFile
 	*/
-	@:overload override public function isCached() : Bool;
+	@:overload @:public override public function isCached() : Bool;
 	
 	/**
 	* Reads 4 bytes from the stream, and (conceptually) concatenates
@@ -643,7 +643,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @see #getByteOrder
 	*/
-	@:overload override public function readInt() : Int;
+	@:overload @:public override public function readInt() : Int;
 	
 	/**
 	* Reads in a string that has been encoded using a
@@ -727,7 +727,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* valid modified UTF-8 encoding of a string.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function readUTF() : String;
+	@:overload @:public override public function readUTF() : String;
 	
 	/**
 	* Reads the next line of text from the input stream.  It reads
@@ -761,7 +761,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function readLine() : String;
+	@:overload @:public override public function readLine() : String;
 	
 	/**
 	* Moves the stream position forward by a given number of bytes.
@@ -776,7 +776,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function skipBytes(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skipBytes(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Flushes all data prior to the given position to the underlying
@@ -793,7 +793,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* position.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function flushBefore(pos : haxe.Int64) : Void;
+	@:overload @:public override public function flushBefore(pos : haxe.Int64) : Void;
 	
 	/**
 	* Reads two bytes from the stream, and (conceptually)
@@ -811,7 +811,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @see #getByteOrder
 	*/
-	@:overload override public function readShort() : java.StdTypes.Int16;
+	@:overload @:public override public function readShort() : java.StdTypes.Int16;
 	
 	/**
 	* Reads <code>len</code> floats (32-bit IEEE single-precision
@@ -836,7 +836,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* reading all the bytes.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function readFully(f : java.NativeArray<Single>, off : Int, len : Int) : Void;
+	@:overload @:public override public function readFully(f : java.NativeArray<Single>, off : Int, len : Int) : Void;
 	
 	/**
 	* Reads <code>len</code> shorts (signed 16-bit integers) from the
@@ -861,7 +861,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* reading all the bytes.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function readFully(s : java.NativeArray<java.StdTypes.Int16>, off : Int, len : Int) : Void;
+	@:overload @:public override public function readFully(s : java.NativeArray<java.StdTypes.Int16>, off : Int, len : Int) : Void;
 	
 	/**
 	* Reads <code>len</code> longs (signed 64-bit integers) from the
@@ -886,7 +886,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* reading all the bytes.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function readFully(l : java.NativeArray<haxe.Int64>, off : Int, len : Int) : Void;
+	@:overload @:public override public function readFully(l : java.NativeArray<haxe.Int64>, off : Int, len : Int) : Void;
 	
 	/**
 	* Returns <code>true</code> if this <code>ImageInputStream</code>
@@ -901,7 +901,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* @see #isCached
 	* @see #isCachedMemory
 	*/
-	@:overload override public function isCachedFile() : Bool;
+	@:overload @:public override public function isCachedFile() : Bool;
 	
 	/**
 	* Moves the stream position forward by a given number of bytes.  It
@@ -918,7 +918,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function skipBytes(n : Int) : Int;
+	@:overload @:public override public function skipBytes(n : Int) : Int;
 	
 	/**
 	* Reads two bytes from the stream, and (conceptually)
@@ -939,7 +939,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @see #getByteOrder
 	*/
-	@:overload override public function readUnsignedShort() : Int;
+	@:overload @:public override public function readUnsignedShort() : Int;
 	
 	/**
 	* Reads <code>len</code> chars (unsigned 16-bit integers) from the
@@ -964,7 +964,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* reading all the bytes.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function readFully(c : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public override public function readFully(c : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
 	/**
 	* Returns <code>true</code> if this <code>ImageInputStream</code>
@@ -979,7 +979,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* @see #isCached
 	* @see #isCachedFile
 	*/
-	@:overload override public function isCachedMemory() : Bool;
+	@:overload @:public override public function isCachedMemory() : Bool;
 	
 	/**
 	* Returns the earliest position in the stream to which seeking
@@ -990,7 +990,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* @return the earliest legal position for seeking, as a
 	* <code>long</code>.
 	*/
-	@:overload override public function getFlushedPosition() : haxe.Int64;
+	@:overload @:public override public function getFlushedPosition() : haxe.Int64;
 	
 	/**
 	* Reads <code>len</code> bytes from the stream, and stores them
@@ -1014,7 +1014,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	* reading all the bytes.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload override public function readFully(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function readFully(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Reads 8 bytes from the stream, and (conceptually) concatenates
@@ -1032,7 +1032,7 @@ extern class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStream
 	*
 	* @see #getByteOrder
 	*/
-	@:overload override public function readDouble() : Float;
+	@:overload @:public override public function readDouble() : Float;
 	
 	
 }

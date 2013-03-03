@@ -64,7 +64,7 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern interface InstructionListObserver
 {
-	@:overload public function notify(list : com.sun.org.apache.bcel.internal.generic.InstructionList) : Void;
+	@:overload @:public public function notify(list : com.sun.org.apache.bcel.internal.generic.InstructionList) : Void;
 	
 	
 }

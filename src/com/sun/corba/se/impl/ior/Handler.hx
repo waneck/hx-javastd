@@ -39,23 +39,23 @@ extern class ObjectKeyFactoryImpl implements com.sun.corba.se.spi.ior.ObjectKeyF
 	* instances.
 	* @author Ken Cavanaugh
 	*/
-	public static var MAGIC_BASE(default, null) : Int;
+	@:public @:static @:final public static var MAGIC_BASE(default, null) : Int;
 	
-	public static var JAVAMAGIC_OLD(default, null) : Int;
+	@:public @:static @:final public static var JAVAMAGIC_OLD(default, null) : Int;
 	
-	public static var JAVAMAGIC_NEW(default, null) : Int;
+	@:public @:static @:final public static var JAVAMAGIC_NEW(default, null) : Int;
 	
-	public static var JAVAMAGIC_NEWER(default, null) : Int;
+	@:public @:static @:final public static var JAVAMAGIC_NEWER(default, null) : Int;
 	
-	public static var MAX_MAGIC(default, null) : Int;
+	@:public @:static @:final public static var MAX_MAGIC(default, null) : Int;
 	
-	public static var JDK1_3_1_01_PATCH_LEVEL(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var JDK1_3_1_01_PATCH_LEVEL(default, null) : java.StdTypes.Int8;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function create(key : java.NativeArray<java.StdTypes.Int8>) : com.sun.corba.se.spi.ior.ObjectKey;
+	@:overload @:public public function create(key : java.NativeArray<java.StdTypes.Int8>) : com.sun.corba.se.spi.ior.ObjectKey;
 	
-	@:overload public function createTemplate(is : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.ObjectKeyTemplate;
+	@:overload @:public public function createTemplate(is : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.ObjectKeyTemplate;
 	
 	
 }

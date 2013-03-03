@@ -59,56 +59,56 @@ extern class TlsKeyMaterialParameterSpec implements java.security.spec.Algorithm
 	*   negative or larger than 255; or if cipherKeyLength, expandedKeyLength,
 	*   ivLength, or macKeyLength are negative
 	*/
-	@:overload public function new(masterSecret : javax.crypto.SecretKey, majorVersion : Int, minorVersion : Int, clientRandom : java.NativeArray<java.StdTypes.Int8>, serverRandom : java.NativeArray<java.StdTypes.Int8>, cipherAlgorithm : String, cipherKeyLength : Int, expandedCipherKeyLength : Int, ivLength : Int, macKeyLength : Int, prfHashAlg : String, prfHashLength : Int, prfBlockSize : Int) : Void;
+	@:overload @:public public function new(masterSecret : javax.crypto.SecretKey, majorVersion : Int, minorVersion : Int, clientRandom : java.NativeArray<java.StdTypes.Int8>, serverRandom : java.NativeArray<java.StdTypes.Int8>, cipherAlgorithm : String, cipherKeyLength : Int, expandedCipherKeyLength : Int, ivLength : Int, macKeyLength : Int, prfHashAlg : String, prfHashLength : Int, prfBlockSize : Int) : Void;
 	
 	/**
 	* Returns the master secret.
 	*
 	* @return the master secret.
 	*/
-	@:overload public function getMasterSecret() : javax.crypto.SecretKey;
+	@:overload @:public public function getMasterSecret() : javax.crypto.SecretKey;
 	
 	/**
 	* Returns the major version number.
 	*
 	* @return the major version number.
 	*/
-	@:overload public function getMajorVersion() : Int;
+	@:overload @:public public function getMajorVersion() : Int;
 	
 	/**
 	* Returns the minor version number.
 	*
 	* @return the minor version number.
 	*/
-	@:overload public function getMinorVersion() : Int;
+	@:overload @:public public function getMinorVersion() : Int;
 	
 	/**
 	* Returns a copy of the client's random value.
 	*
 	* @return a copy of the client's random value.
 	*/
-	@:overload public function getClientRandom() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getClientRandom() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a copy of the server's random value.
 	*
 	* @return a copy of the server's random value.
 	*/
-	@:overload public function getServerRandom() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getServerRandom() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the cipher algorithm.
 	*
 	* @return the cipher algorithm.
 	*/
-	@:overload public function getCipherAlgorithm() : String;
+	@:overload @:public public function getCipherAlgorithm() : String;
 	
 	/**
 	* Returns the length in bytes of the encryption key to be generated.
 	*
 	* @return the length in bytes of the encryption key to be generated.
 	*/
-	@:overload public function getCipherKeyLength() : Int;
+	@:overload @:public public function getCipherKeyLength() : Int;
 	
 	/**
 	* Returns the length in bytes of the expanded encryption key to be
@@ -118,7 +118,7 @@ extern class TlsKeyMaterialParameterSpec implements java.security.spec.Algorithm
 	* @return the length in bytes of the expanded encryption key to be
 	*     generated.
 	*/
-	@:overload public function getExpandedCipherKeyLength() : Int;
+	@:overload @:public public function getExpandedCipherKeyLength() : Int;
 	
 	/**
 	* Returns the length in bytes of the initialization vector to be
@@ -128,35 +128,35 @@ extern class TlsKeyMaterialParameterSpec implements java.security.spec.Algorithm
 	* @return the length in bytes of the initialization vector to be
 	*     generated.
 	*/
-	@:overload public function getIvLength() : Int;
+	@:overload @:public public function getIvLength() : Int;
 	
 	/**
 	* Returns the length in bytes of the MAC key to be generated.
 	*
 	* @return the length in bytes of the MAC key to be generated.
 	*/
-	@:overload public function getMacKeyLength() : Int;
+	@:overload @:public public function getMacKeyLength() : Int;
 	
 	/**
 	* Obtains the PRF hash algorithm to use in the PRF calculation.
 	*
 	* @return the hash algorithm.
 	*/
-	@:overload public function getPRFHashAlg() : String;
+	@:overload @:public public function getPRFHashAlg() : String;
 	
 	/**
 	* Obtains the length of the PRF hash algorithm.
 	*
 	* @return the hash algorithm length.
 	*/
-	@:overload public function getPRFHashLength() : Int;
+	@:overload @:public public function getPRFHashLength() : Int;
 	
 	/**
 	* Obtains the block size of the PRF hash algorithm.
 	*
 	* @return the hash algorithm block size
 	*/
-	@:overload public function getPRFBlockSize() : Int;
+	@:overload @:public public function getPRFBlockSize() : Int;
 	
 	
 }

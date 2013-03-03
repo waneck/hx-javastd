@@ -86,7 +86,7 @@ extern interface XMLReader
 	*            cannot determine its value at this time.
 	* @see #setFeature
 	*/
-	@:overload public function getFeature(name : String) : Bool;
+	@:overload @:public public function getFeature(name : String) : Bool;
 	
 	/**
 	* Set the value of a feature flag.
@@ -111,7 +111,7 @@ extern interface XMLReader
 	*            cannot set the requested value.
 	* @see #getFeature
 	*/
-	@:overload public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public public function setFeature(name : String, value : Bool) : Void;
 	
 	/**
 	* Look up the value of a property.
@@ -138,7 +138,7 @@ extern interface XMLReader
 	*            cannot determine its value at this time.
 	* @see #setProperty
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	/**
 	* Set the value of a property.
@@ -165,7 +165,7 @@ extern interface XMLReader
 	*            XMLReader recognizes the property name but
 	*            cannot set the requested value.
 	*/
-	@:overload public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Allow an application to register an entity resolver.
@@ -180,7 +180,7 @@ extern interface XMLReader
 	* @param resolver The entity resolver.
 	* @see #getEntityResolver
 	*/
-	@:overload public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
 	
 	/**
 	* Return the current entity resolver.
@@ -189,7 +189,7 @@ extern interface XMLReader
 	*         has been registered.
 	* @see #setEntityResolver
 	*/
-	@:overload public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
 	/**
 	* Allow an application to register a DTD event handler.
@@ -204,7 +204,7 @@ extern interface XMLReader
 	* @param handler The DTD handler.
 	* @see #getDTDHandler
 	*/
-	@:overload public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
+	@:overload @:public public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
 	
 	/**
 	* Return the current DTD handler.
@@ -213,7 +213,7 @@ extern interface XMLReader
 	*         has been registered.
 	* @see #setDTDHandler
 	*/
-	@:overload public function getDTDHandler() : org.xml.sax.DTDHandler;
+	@:overload @:public public function getDTDHandler() : org.xml.sax.DTDHandler;
 	
 	/**
 	* Allow an application to register a content event handler.
@@ -229,7 +229,7 @@ extern interface XMLReader
 	* @param handler The content handler.
 	* @see #getContentHandler
 	*/
-	@:overload public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Return the current content handler.
@@ -238,7 +238,7 @@ extern interface XMLReader
 	*         has been registered.
 	* @see #setContentHandler
 	*/
-	@:overload public function getContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function getContentHandler() : org.xml.sax.ContentHandler;
 	
 	/**
 	* Allow an application to register an error event handler.
@@ -256,7 +256,7 @@ extern interface XMLReader
 	* @param handler The error handler.
 	* @see #getErrorHandler
 	*/
-	@:overload public function setErrorHandler(handler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function setErrorHandler(handler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Return the current error handler.
@@ -265,7 +265,7 @@ extern interface XMLReader
 	*         has been registered.
 	* @see #setErrorHandler
 	*/
-	@:overload public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
 	/**
 	* Parse an XML document.
@@ -309,7 +309,7 @@ extern interface XMLReader
 	* @see #setContentHandler
 	* @see #setErrorHandler
 	*/
-	@:overload public function parse(input : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function parse(input : org.xml.sax.InputSource) : Void;
 	
 	/**
 	* Parse an XML document from a system identifier (URI).
@@ -333,7 +333,7 @@ extern interface XMLReader
 	*            supplied by the application.
 	* @see #parse(org.xml.sax.InputSource)
 	*/
-	@:overload public function parse(systemId : String) : Void;
+	@:overload @:public public function parse(systemId : String) : Void;
 	
 	
 }

@@ -65,7 +65,7 @@ extern interface StackConsumer
 {
 	/** @return how many words are consumed from stack
 	*/
-	@:overload @:public public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	
 }

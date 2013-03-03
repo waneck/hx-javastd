@@ -28,7 +28,7 @@ extern interface NodeConsumer
 	*
 	* @param n Reference to node that originated the current event.
 	*/
-	@:overload public function setOriginatingNode(n : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setOriginatingNode(n : org.w3c.dom.Node) : Void;
 	
 	
 }

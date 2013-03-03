@@ -25,29 +25,29 @@ package com.sun.media.sound;
 */
 extern class AudioFloatConverter
 {
-	@:overload public static function getConverter(format : javax.sound.sampled.AudioFormat) : com.sun.media.sound.AudioFloatConverter;
+	@:overload @:public @:static public static function getConverter(format : javax.sound.sampled.AudioFormat) : com.sun.media.sound.AudioFloatConverter;
 	
-	@:overload public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public public function getFormat() : javax.sound.sampled.AudioFormat;
 	
-	@:overload @:abstract public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public @:abstract public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, out_buff : java.NativeArray<Single>, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, out_buff : java.NativeArray<Single>, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, out_buff : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, out_buff : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
-	@:overload @:abstract public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function toByteArray(in_buff : java.NativeArray<Single>, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function toByteArray(in_buff : java.NativeArray<Single>, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function toByteArray(in_buff : java.NativeArray<Single>, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function toByteArray(in_buff : java.NativeArray<Single>, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function toByteArray(in_buff : java.NativeArray<Single>, out_buff : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function toByteArray(in_buff : java.NativeArray<Single>, out_buff : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
@@ -61,11 +61,11 @@ extern class AudioFloatConverter
 **************************************************************************/
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatLSBFilter') @:internal extern class AudioFloatConverter_AudioFloatLSBFilter extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload public function new(converter : com.sun.media.sound.AudioFloatConverter, format : javax.sound.sampled.AudioFormat) : Void;
+	@:overload @:public public function new(converter : com.sun.media.sound.AudioFloatConverter, format : javax.sound.sampled.AudioFormat) : Void;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
 	
 }
@@ -76,17 +76,17 @@ extern class AudioFloatConverter
 **************************************************************************/
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion64L') @:internal extern class AudioFloatConverter_AudioFloatConversion64L extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion64B') @:internal extern class AudioFloatConverter_AudioFloatConversion64B extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
@@ -97,17 +97,17 @@ extern class AudioFloatConverter
 **************************************************************************/
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion32L') @:internal extern class AudioFloatConverter_AudioFloatConversion32L extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion32B') @:internal extern class AudioFloatConverter_AudioFloatConversion32B extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
@@ -118,17 +118,17 @@ extern class AudioFloatConverter
 **************************************************************************/
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion8S') @:internal extern class AudioFloatConverter_AudioFloatConversion8S extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion8U') @:internal extern class AudioFloatConverter_AudioFloatConversion8U extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
@@ -139,33 +139,33 @@ extern class AudioFloatConverter
 **************************************************************************/
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion16SL') @:internal extern class AudioFloatConverter_AudioFloatConversion16SL extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion16SB') @:internal extern class AudioFloatConverter_AudioFloatConversion16SB extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion16UL') @:internal extern class AudioFloatConverter_AudioFloatConversion16UL extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion16UB') @:internal extern class AudioFloatConverter_AudioFloatConversion16UB extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
@@ -176,33 +176,33 @@ extern class AudioFloatConverter
 **************************************************************************/
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion24SL') @:internal extern class AudioFloatConverter_AudioFloatConversion24SL extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion24SB') @:internal extern class AudioFloatConverter_AudioFloatConversion24SB extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion24UL') @:internal extern class AudioFloatConverter_AudioFloatConversion24UL extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion24UB') @:internal extern class AudioFloatConverter_AudioFloatConversion24UB extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
@@ -213,33 +213,33 @@ extern class AudioFloatConverter
 **************************************************************************/
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion32SL') @:internal extern class AudioFloatConverter_AudioFloatConversion32SL extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion32SB') @:internal extern class AudioFloatConverter_AudioFloatConversion32SB extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion32UL') @:internal extern class AudioFloatConverter_AudioFloatConversion32UL extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion32UB') @:internal extern class AudioFloatConverter_AudioFloatConversion32UB extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
@@ -250,41 +250,41 @@ extern class AudioFloatConverter
 **************************************************************************/
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion32xSL') @:internal extern class AudioFloatConverter_AudioFloatConversion32xSL extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload public function new(xbytes : Int) : Void;
+	@:overload @:public public function new(xbytes : Int) : Void;
 	
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion32xSB') @:internal extern class AudioFloatConverter_AudioFloatConversion32xSB extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload public function new(xbytes : Int) : Void;
+	@:overload @:public public function new(xbytes : Int) : Void;
 	
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion32xUL') @:internal extern class AudioFloatConverter_AudioFloatConversion32xUL extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload public function new(xbytes : Int) : Void;
+	@:overload @:public public function new(xbytes : Int) : Void;
 	
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatConverter$AudioFloatConversion32xUB') @:internal extern class AudioFloatConverter_AudioFloatConversion32xUB extends com.sun.media.sound.AudioFloatConverter
 {
-	@:overload public function new(xbytes : Int) : Void;
+	@:overload @:public public function new(xbytes : Int) : Void;
 	
-	@:overload override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function toFloatArray(in_buff : java.NativeArray<java.StdTypes.Int8>, in_offset : Int, out_buff : java.NativeArray<Single>, out_offset : Int, out_len : Int) : java.NativeArray<Single>;
 	
-	@:overload override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray(in_buff : java.NativeArray<Single>, in_offset : Int, in_len : Int, out_buff : java.NativeArray<java.StdTypes.Int8>, out_offset : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

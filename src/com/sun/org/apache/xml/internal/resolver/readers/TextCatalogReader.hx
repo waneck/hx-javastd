@@ -23,34 +23,34 @@ package com.sun.org.apache.xml.internal.resolver.readers;
 extern class TextCatalogReader implements com.sun.org.apache.xml.internal.resolver.readers.CatalogReader
 {
 	/** The input stream used to read the catalog */
-	private var catfile : java.io.InputStream;
+	@:protected private var catfile : java.io.InputStream;
 	
 	/**
 	* Character lookahead stack. Reading a catalog sometimes requires
 	* up to two characters of lookahead.
 	*/
-	private var stack : java.NativeArray<Int>;
+	@:protected private var stack : java.NativeArray<Int>;
 	
 	/**
 	* Token stack. Recognizing an unexpected catalog entry requires
 	* the ability to "push back" a token.
 	*/
-	private var tokenStack : java.util.Stack<Dynamic>;
+	@:protected private var tokenStack : java.util.Stack<Dynamic>;
 	
 	/** The current position on the lookahead stack */
-	private var top : Int;
+	@:protected private var top : Int;
 	
 	/** Are keywords in the catalog case sensitive? */
-	private var caseSensitive : Bool;
+	@:protected private var caseSensitive : Bool;
 	
 	/**
 	* Construct a CatalogReader object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setCaseSensitive(isCaseSensitive : Bool) : Void;
+	@:overload @:public public function setCaseSensitive(isCaseSensitive : Bool) : Void;
 	
-	@:overload public function getCaseSensitive() : Bool;
+	@:overload @:public public function getCaseSensitive() : Bool;
 	
 	/**
 	* Start parsing a text catalog file. The file is
@@ -62,16 +62,16 @@ extern class TextCatalogReader implements com.sun.org.apache.xml.internal.resolv
 	* @throws MalformedURLException Improper fileUrl
 	* @throws IOException Error reading catalog file
 	*/
-	@:overload public function readCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog, fileUrl : String) : Void;
+	@:overload @:public public function readCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog, fileUrl : String) : Void;
 	
-	@:overload public function readCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog, is : java.io.InputStream) : Void;
+	@:overload @:public public function readCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog, is : java.io.InputStream) : Void;
 	
 	/**
 	* The destructor.
 	*
 	* <p>Makes sure the catalog file is closed.</p>
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	/**
 	* Return the next token in the catalog file.
@@ -82,7 +82,7 @@ extern class TextCatalogReader implements com.sun.org.apache.xml.internal.resolv
 	* @return The Catalog file token from the input stream.
 	* @throws IOException If an error occurs reading from the stream.
 	*/
-	@:overload private function nextToken() : String;
+	@:overload @:protected private function nextToken() : String;
 	
 	/**
 	* Return the next logical character from the input stream.
@@ -92,7 +92,7 @@ extern class TextCatalogReader implements com.sun.org.apache.xml.internal.resolv
 	*
 	* @throws IOException If an error occurs reading from the stream.
 	*/
-	@:overload private function nextChar() : Int;
+	@:overload @:protected private function nextChar() : Int;
 	
 	
 }

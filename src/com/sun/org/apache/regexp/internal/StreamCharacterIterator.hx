@@ -21,19 +21,19 @@ package com.sun.org.apache.regexp.internal;
 extern class StreamCharacterIterator implements com.sun.org.apache.regexp.internal.CharacterIterator
 {
 	/** @param is an InputStream, which is parsed */
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	/** @return a substring */
-	@:overload public function substring(beginIndex : Int, endIndex : Int) : String;
+	@:overload @:public public function substring(beginIndex : Int, endIndex : Int) : String;
 	
 	/** @return a substring */
-	@:overload public function substring(beginIndex : Int) : String;
+	@:overload @:public public function substring(beginIndex : Int) : String;
 	
 	/** @return a character at the specified position. */
-	@:overload public function charAt(pos : Int) : java.StdTypes.Char16;
+	@:overload @:public public function charAt(pos : Int) : java.StdTypes.Char16;
 	
 	/** @return <tt>true</tt> iff if the specified index is after the end of the character stream */
-	@:overload public function isEnd(pos : Int) : Bool;
+	@:overload @:public public function isEnd(pos : Int) : Bool;
 	
 	
 }

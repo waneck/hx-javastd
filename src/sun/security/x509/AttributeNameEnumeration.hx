@@ -28,7 +28,7 @@ extern class AttributeNameEnumeration extends java.util.Vector<String>
 	/**
 	* The default constructor for this class.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

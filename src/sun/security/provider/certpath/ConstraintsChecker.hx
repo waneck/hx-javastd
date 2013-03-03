@@ -25,11 +25,11 @@ package sun.security.provider.certpath;
 */
 @:internal extern class ConstraintsChecker extends java.security.cert.PKIXCertPathChecker
 {
-	@:overload override public function init(forward : Bool) : Void;
+	@:overload @:public override public function init(forward : Bool) : Void;
 	
-	@:overload override public function isForwardCheckingSupported() : Bool;
+	@:overload @:public override public function isForwardCheckingSupported() : Bool;
 	
-	@:overload override public function getSupportedExtensions() : java.util.Set<String>;
+	@:overload @:public override public function getSupportedExtensions() : java.util.Set<String>;
 	
 	/**
 	* Performs the basic constraints and name constraints
@@ -41,7 +41,7 @@ package sun.security.provider.certpath;
 	* @throws CertPathValidatorException if the specified certificate
 	* does not pass the check
 	*/
-	@:overload override public function check(cert : java.security.cert.Certificate, unresCritExts : java.util.Collection<String>) : Void;
+	@:overload @:public override public function check(cert : java.security.cert.Certificate, unresCritExts : java.util.Collection<String>) : Void;
 	
 	
 }

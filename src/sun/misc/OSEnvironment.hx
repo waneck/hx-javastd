@@ -29,7 +29,7 @@ extern class OSEnvironment
 	* Initialize any miscellenous operating system settings that need to be set
 	* for the class libraries.
 	*/
-	@:overload public static function initialize() : Void;
+	@:overload @:public @:static public static function initialize() : Void;
 	
 	
 }

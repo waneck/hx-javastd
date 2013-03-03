@@ -68,9 +68,9 @@ extern class ReaderUtil
 	* destination min X, min Y, width, height, X period and Y period
 	* of the region that will be updated.
 	*/
-	@:overload public static function computeUpdatedPixels(sourceRegion : java.awt.Rectangle, destinationOffset : java.awt.Point, dstMinX : Int, dstMinY : Int, dstMaxX : Int, dstMaxY : Int, sourceXSubsampling : Int, sourceYSubsampling : Int, passXStart : Int, passYStart : Int, passWidth : Int, passHeight : Int, passPeriodX : Int, passPeriodY : Int) : java.NativeArray<Int>;
+	@:overload @:public @:static public static function computeUpdatedPixels(sourceRegion : java.awt.Rectangle, destinationOffset : java.awt.Point, dstMinX : Int, dstMinY : Int, dstMaxX : Int, dstMaxY : Int, sourceXSubsampling : Int, sourceYSubsampling : Int, passXStart : Int, passYStart : Int, passWidth : Int, passHeight : Int, passPeriodX : Int, passPeriodY : Int) : java.NativeArray<Int>;
 	
-	@:overload public static function readMultiByteInteger(iis : javax.imageio.stream.ImageInputStream) : Int;
+	@:overload @:public @:static public static function readMultiByteInteger(iis : javax.imageio.stream.ImageInputStream) : Int;
 	
 	
 }

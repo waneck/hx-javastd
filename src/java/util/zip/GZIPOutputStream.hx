@@ -28,7 +28,7 @@ extern class GZIPOutputStream extends java.util.zip.DeflaterOutputStream
 	/**
 	* CRC-32 of uncompressed data.
 	*/
-	private var crc : java.util.zip.CRC32;
+	@:protected private var crc : java.util.zip.CRC32;
 	
 	/**
 	* Creates a new output stream with the specified buffer size.
@@ -42,7 +42,7 @@ extern class GZIPOutputStream extends java.util.zip.DeflaterOutputStream
 	* @exception IllegalArgumentException if size is <= 0
 
 	*/
-	@:overload public function new(out : java.io.OutputStream, size : Int) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, size : Int) : Void;
 	
 	/**
 	* Creates a new output stream with the specified buffer size and
@@ -61,7 +61,7 @@ extern class GZIPOutputStream extends java.util.zip.DeflaterOutputStream
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(out : java.io.OutputStream, size : Int, syncFlush : Bool) : Void;
+	@:require(java7) @:overload @:public public function new(out : java.io.OutputStream, size : Int, syncFlush : Bool) : Void;
 	
 	/**
 	* Creates a new output stream with a default buffer size.
@@ -72,7 +72,7 @@ extern class GZIPOutputStream extends java.util.zip.DeflaterOutputStream
 	* @param out the output stream
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Creates a new output stream with a default buffer size and
@@ -90,7 +90,7 @@ extern class GZIPOutputStream extends java.util.zip.DeflaterOutputStream
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(out : java.io.OutputStream, syncFlush : Bool) : Void;
+	@:require(java7) @:overload @:public public function new(out : java.io.OutputStream, syncFlush : Bool) : Void;
 	
 	/**
 	* Writes array of bytes to the compressed output stream. This method
@@ -100,7 +100,7 @@ extern class GZIPOutputStream extends java.util.zip.DeflaterOutputStream
 	* @param len the length of the data
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload @:synchronized override public function write(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public @:synchronized override public function write(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Finishes writing compressed data to the output stream without closing
@@ -108,7 +108,7 @@ extern class GZIPOutputStream extends java.util.zip.DeflaterOutputStream
 	* in succession to the same output stream.
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload override public function finish() : Void;
+	@:overload @:public override public function finish() : Void;
 	
 	
 }

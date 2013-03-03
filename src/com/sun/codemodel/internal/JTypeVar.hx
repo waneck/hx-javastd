@@ -25,18 +25,18 @@ package com.sun.codemodel.internal;
 */
 extern class JTypeVar extends com.sun.codemodel.internal.JClass implements com.sun.codemodel.internal.JDeclaration
 {
-	@:overload public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload public function fullName() : String;
+	@:overload @:public override public function fullName() : String;
 	
-	@:overload public function _package() : com.sun.codemodel.internal.JPackage;
+	@:overload @:public override public function _package() : com.sun.codemodel.internal.JPackage;
 	
 	/**
 	* Adds a bound to this variable.
 	*
 	* @return  this
 	*/
-	@:overload public function bound(c : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JTypeVar;
+	@:overload @:public public function bound(c : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JTypeVar;
 	
 	/**
 	* Returns the class bound of this variable.
@@ -44,25 +44,25 @@ extern class JTypeVar extends com.sun.codemodel.internal.JClass implements com.s
 	* <p>
 	* If no bound is given, this method returns {@link Object}.
 	*/
-	@:overload public function _extends() : com.sun.codemodel.internal.JClass;
+	@:overload @:public override public function _extends() : com.sun.codemodel.internal.JClass;
 	
 	/**
 	* Returns the interface bounds of this variable.
 	*/
-	@:overload public function _implements() : java.util.Iterator<com.sun.codemodel.internal.JClass>;
+	@:overload @:public override public function _implements() : java.util.Iterator<com.sun.codemodel.internal.JClass>;
 	
-	@:overload public function isInterface() : Bool;
+	@:overload @:public override public function isInterface() : Bool;
 	
-	@:overload public function isAbstract() : Bool;
+	@:overload @:public override public function isAbstract() : Bool;
 	
 	/**
 	* Prints out the declaration of the variable.
 	*/
-	@:overload public function declare(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function declare(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
-	@:overload private function substituteParams(variables : java.NativeArray<com.sun.codemodel.internal.JTypeVar>, bindings : java.util.List<com.sun.codemodel.internal.JClass>) : com.sun.codemodel.internal.JClass;
+	@:overload @:protected override private function substituteParams(variables : java.NativeArray<com.sun.codemodel.internal.JTypeVar>, bindings : java.util.List<com.sun.codemodel.internal.JClass>) : com.sun.codemodel.internal.JClass;
 	
-	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

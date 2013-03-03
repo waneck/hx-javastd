@@ -38,7 +38,7 @@ extern class PortableRemoteObject implements javax.rmi.CORBA.PortableRemoteObjec
 	* @param obj the server object to export.
 	* @exception RemoteException if export fails.
 	*/
-	@:overload public function exportObject(obj : java.rmi.Remote) : Void;
+	@:overload @:public public function exportObject(obj : java.rmi.Remote) : Void;
 	
 	/**
 	* Returns a stub for the given server object.
@@ -48,7 +48,7 @@ extern class PortableRemoteObject implements javax.rmi.CORBA.PortableRemoteObjec
 	* @return the most derived stub for the object.
 	* @exception NoSuchObjectException if a stub cannot be located for the given server object.
 	*/
-	@:overload public function toStub(obj : java.rmi.Remote) : java.rmi.Remote;
+	@:overload @:public public function toStub(obj : java.rmi.Remote) : java.rmi.Remote;
 	
 	/**
 	* Deregisters a server object from the runtime, allowing the object to become
@@ -57,7 +57,7 @@ extern class PortableRemoteObject implements javax.rmi.CORBA.PortableRemoteObjec
 	* @exception NoSuchObjectException if the remote object is not
 	* currently exported.
 	*/
-	@:overload public function unexportObject(obj : java.rmi.Remote) : Void;
+	@:overload @:public public function unexportObject(obj : java.rmi.Remote) : Void;
 	
 	/**
 	* Checks to ensure that an object of a remote or abstract interface type
@@ -67,7 +67,7 @@ extern class PortableRemoteObject implements javax.rmi.CORBA.PortableRemoteObjec
 	* @return an object which can be cast to the desired type.
 	* @throws ClassCastException if narrowFrom cannot be cast to narrowTo.
 	*/
-	@:overload public function narrow(narrowFrom : Dynamic, narrowTo : Class<Dynamic>) : Dynamic;
+	@:overload @:public public function narrow(narrowFrom : Dynamic, narrowTo : Class<Dynamic>) : Dynamic;
 	
 	/**
 	* Makes a Remote object ready for remote communication. This normally
@@ -81,7 +81,7 @@ extern class PortableRemoteObject implements javax.rmi.CORBA.PortableRemoteObjec
 	* or if <code>target</code> is already connected to a different ORB than
 	* <code>source</code>.
 	*/
-	@:overload public function connect(target : java.rmi.Remote, source : java.rmi.Remote) : Void;
+	@:overload @:public public function connect(target : java.rmi.Remote, source : java.rmi.Remote) : Void;
 	
 	
 }

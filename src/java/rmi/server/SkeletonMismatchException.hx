@@ -33,7 +33,7 @@ extern class SkeletonMismatchException extends java.rmi.RemoteException
 	* @since JDK1.1
 	* @deprecated no replacement
 	*/
-	@:require(java1) @:overload public function new(s : String) : Void;
+	@:require(java1) @:overload @:public public function new(s : String) : Void;
 	
 	
 }

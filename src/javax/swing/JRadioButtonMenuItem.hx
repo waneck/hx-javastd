@@ -74,7 +74,7 @@ extern class JRadioButtonMenuItem extends javax.swing.JMenuItem implements javax
 	/**
 	* Creates a <code>JRadioButtonMenuItem</code> with no set text or icon.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>JRadioButtonMenuItem</code> with an icon.
@@ -82,14 +82,14 @@ extern class JRadioButtonMenuItem extends javax.swing.JMenuItem implements javax
 	* @param icon the <code>Icon</code> to display on the
 	*          <code>JRadioButtonMenuItem</code>
 	*/
-	@:overload public function new(icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates a <code>JRadioButtonMenuItem</code> with text.
 	*
 	* @param text the text of the <code>JRadioButtonMenuItem</code>
 	*/
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* Creates a radio button menu item whose properties are taken from the
@@ -100,7 +100,7 @@ extern class JRadioButtonMenuItem extends javax.swing.JMenuItem implements javax
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(a : javax.swing.Action) : Void;
+	@:require(java3) @:overload @:public public function new(a : javax.swing.Action) : Void;
 	
 	/**
 	* Creates a radio button menu item with the specified text
@@ -109,7 +109,7 @@ extern class JRadioButtonMenuItem extends javax.swing.JMenuItem implements javax
 	* @param text the text of the <code>JRadioButtonMenuItem</code>
 	* @param icon the icon to display on the <code>JRadioButtonMenuItem</code>
 	*/
-	@:overload public function new(text : String, icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(text : String, icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates a radio button menu item with the specified text
@@ -118,7 +118,7 @@ extern class JRadioButtonMenuItem extends javax.swing.JMenuItem implements javax
 	* @param text the text of the <code>CheckBoxMenuItem</code>
 	* @param selected the selected state of the <code>CheckBoxMenuItem</code>
 	*/
-	@:overload public function new(text : String, selected : Bool) : Void;
+	@:overload @:public public function new(text : String, selected : Bool) : Void;
 	
 	/**
 	* Creates a radio button menu item with the specified image
@@ -128,7 +128,7 @@ extern class JRadioButtonMenuItem extends javax.swing.JMenuItem implements javax
 	* @param selected  if true, the button is initially selected;
 	*                  otherwise, the button is initially unselected
 	*/
-	@:overload public function new(icon : javax.swing.Icon, selected : Bool) : Void;
+	@:overload @:public public function new(icon : javax.swing.Icon, selected : Bool) : Void;
 	
 	/**
 	* Creates a radio button menu item that has the specified
@@ -138,7 +138,7 @@ extern class JRadioButtonMenuItem extends javax.swing.JMenuItem implements javax
 	* @param text  the string displayed on the radio button
 	* @param icon  the image that the button should display
 	*/
-	@:overload public function new(text : String, icon : javax.swing.Icon, selected : Bool) : Void;
+	@:overload @:public public function new(text : String, icon : javax.swing.Icon, selected : Bool) : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -147,7 +147,7 @@ extern class JRadioButtonMenuItem extends javax.swing.JMenuItem implements javax
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Returns a string representation of this
@@ -160,7 +160,7 @@ extern class JRadioButtonMenuItem extends javax.swing.JMenuItem implements javax
 	* @return  a string representation of this
 	*          <code>JRadioButtonMenuItem</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JRadioButtonMenuItem.
@@ -171,7 +171,7 @@ extern class JRadioButtonMenuItem extends javax.swing.JMenuItem implements javax
 	* @return an AccessibleJRadioButtonMenuItem that serves as the
 	*         AccessibleContext of this JRadioButtonMenuItem
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -198,7 +198,7 @@ extern class JRadioButtonMenuItem extends javax.swing.JMenuItem implements javax
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

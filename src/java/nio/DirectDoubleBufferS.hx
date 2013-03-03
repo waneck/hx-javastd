@@ -26,43 +26,43 @@ package java.nio;
 //// -- This file was mechanically generated: Do not edit! -- //
 @:internal extern class DirectDoubleBufferS extends java.nio.DoubleBuffer implements sun.nio.ch.DirectBuffer
 {
-	private static var unsafe(default, null) : sun.misc.Unsafe;
+	@:protected @:static @:final private static var unsafe(default, null) : sun.misc.Unsafe;
 	
-	private static var unaligned(default, null) : Bool;
+	@:protected @:static @:final private static var unaligned(default, null) : Bool;
 	
-	@:overload public function attachment() : Dynamic;
+	@:overload @:public public function attachment() : Dynamic;
 	
-	@:overload public function cleaner() : sun.misc.Cleaner;
+	@:overload @:public public function cleaner() : sun.misc.Cleaner;
 	
-	@:overload override public function slice() : java.nio.DoubleBuffer;
+	@:overload @:public override public function slice() : java.nio.DoubleBuffer;
 	
-	@:overload override public function duplicate() : java.nio.DoubleBuffer;
+	@:overload @:public override public function duplicate() : java.nio.DoubleBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.DoubleBuffer;
+	@:overload @:public override public function asReadOnlyBuffer() : java.nio.DoubleBuffer;
 	
-	@:overload public function address() : haxe.Int64;
+	@:overload @:public public function address() : haxe.Int64;
 	
-	@:overload override public function get() : Float;
+	@:overload @:public override public function get() : Float;
 	
-	@:overload override public function get(i : Int) : Float;
+	@:overload @:public override public function get(i : Int) : Float;
 	
-	@:overload override public function get(dst : java.NativeArray<Float>, offset : Int, length : Int) : java.nio.DoubleBuffer;
+	@:overload @:public override public function get(dst : java.NativeArray<Float>, offset : Int, length : Int) : java.nio.DoubleBuffer;
 	
-	@:overload override public function put(x : Float) : java.nio.DoubleBuffer;
+	@:overload @:public override public function put(x : Float) : java.nio.DoubleBuffer;
 	
-	@:overload override public function put(i : Int, x : Float) : java.nio.DoubleBuffer;
+	@:overload @:public override public function put(i : Int, x : Float) : java.nio.DoubleBuffer;
 	
-	@:overload override public function put(src : java.nio.DoubleBuffer) : java.nio.DoubleBuffer;
+	@:overload @:public override public function put(src : java.nio.DoubleBuffer) : java.nio.DoubleBuffer;
 	
-	@:overload override public function put(src : java.NativeArray<Float>, offset : Int, length : Int) : java.nio.DoubleBuffer;
+	@:overload @:public override public function put(src : java.NativeArray<Float>, offset : Int, length : Int) : java.nio.DoubleBuffer;
 	
-	@:overload override public function compact() : java.nio.DoubleBuffer;
+	@:overload @:public override public function compact() : java.nio.DoubleBuffer;
 	
-	@:overload override public function isDirect() : Bool;
+	@:overload @:public override public function isDirect() : Bool;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload override public function order() : java.nio.ByteOrder;
+	@:overload @:public override public function order() : java.nio.ByteOrder;
 	
 	
 }

@@ -25,23 +25,23 @@ package com.sun.corba.se.spi.orb;
 */
 extern class ORBVersionFactory
 {
-	@:overload public static function getFOREIGN() : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload @:public @:static public static function getFOREIGN() : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	@:overload public static function getOLD() : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload @:public @:static public static function getOLD() : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	@:overload public static function getNEW() : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload @:public @:static public static function getNEW() : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	@:overload public static function getJDK1_3_1_01() : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload @:public @:static public static function getJDK1_3_1_01() : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	@:overload public static function getNEWER() : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload @:public @:static public static function getNEWER() : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	@:overload public static function getPEORB() : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload @:public @:static public static function getPEORB() : com.sun.corba.se.spi.orb.ORBVersion;
 	
 	/** Return the current version of this ORB
 	*/
-	@:overload public static function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload @:public @:static public static function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	@:overload public static function create(is : org.omg.CORBA.portable.InputStream) : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload @:public @:static public static function create(is : org.omg.CORBA.portable.InputStream) : com.sun.corba.se.spi.orb.ORBVersion;
 	
 	
 }

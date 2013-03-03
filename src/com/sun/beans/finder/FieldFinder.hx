@@ -35,7 +35,7 @@ extern class FieldFinder
 	* @throws NoSuchFieldException if field is not found
 	* @see Class#getField
 	*/
-	@:overload public static function findField(type : Class<Dynamic>, name : String) : java.lang.reflect.Field;
+	@:overload @:public @:static public static function findField(type : Class<Dynamic>, name : String) : java.lang.reflect.Field;
 	
 	/**
 	* Finds public non-static field
@@ -47,7 +47,7 @@ extern class FieldFinder
 	* @throws NoSuchFieldException if field is not found
 	* @see Class#getField
 	*/
-	@:overload public static function findInstanceField(type : Class<Dynamic>, name : String) : java.lang.reflect.Field;
+	@:overload @:public @:static public static function findInstanceField(type : Class<Dynamic>, name : String) : java.lang.reflect.Field;
 	
 	/**
 	* Finds public static field
@@ -59,7 +59,7 @@ extern class FieldFinder
 	* @throws NoSuchFieldException if field is not found
 	* @see Class#getField
 	*/
-	@:overload public static function findStaticField(type : Class<Dynamic>, name : String) : java.lang.reflect.Field;
+	@:overload @:public @:static public static function findStaticField(type : Class<Dynamic>, name : String) : java.lang.reflect.Field;
 	
 	
 }

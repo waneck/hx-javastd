@@ -40,14 +40,14 @@ package java.nio.charset;
 	* @param  charsetName
 	*         The illegal charset name
 	*/
-	@:overload public function new(charsetName : String) : Void;
+	@:overload @:public public function new(charsetName : String) : Void;
 	
 	/**
 	* Retrieves the illegal charset name. </p>
 	*
 	* @return  The illegal charset name
 	*/
-	@:overload public function getCharsetName() : String;
+	@:overload @:public public function getCharsetName() : String;
 	
 	
 }

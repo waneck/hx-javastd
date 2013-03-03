@@ -53,7 +53,7 @@ extern interface StyleSheetList
 	* child stylesheet indices is <code>0</code> to <code>length-1</code>
 	* inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	*  Used to retrieve a style sheet by ordinal index. If index is greater
@@ -64,7 +64,7 @@ extern interface StyleSheetList
 	*   <code>StyleSheetList</code>, or <code>null</code> if that is not a
 	*   valid index.
 	*/
-	@:overload public function item(index : Int) : org.w3c.dom.stylesheets.StyleSheet;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.stylesheets.StyleSheet;
 	
 	
 }

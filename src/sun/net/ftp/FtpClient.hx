@@ -30,14 +30,14 @@ extern class FtpClient implements java.io.Closeable
 	*
 	* @return the port number.
 	*/
-	@:overload @:final public static function defaultPort() : Int;
+	@:overload @:public @:static @:final public static function defaultPort() : Int;
 	
 	/**
 	* Creates an instance of FtpClient. The client is not connected to any
 	* server yet.
 	*
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates an instance of {@code FtpClient}. The client is not connected to any
@@ -45,7 +45,7 @@ extern class FtpClient implements java.io.Closeable
 	*
 	* @return the created {@code FtpClient}
 	*/
-	@:overload public static function create() : sun.net.ftp.FtpClient;
+	@:overload @:public @:static public static function create() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Creates an instance of FtpClient and connects it to the specified
@@ -56,7 +56,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if the connection fails
 	* @see #connect(java.net.SocketAddress)
 	*/
-	@:overload public static function create(dest : java.net.InetSocketAddress) : sun.net.ftp.FtpClient;
+	@:overload @:public @:static public static function create(dest : java.net.InetSocketAddress) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Creates an instance of {@code FtpClient} and connects it to the
@@ -68,7 +68,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if the connection fails.
 	* @throws FtpProtocolException if the server rejected the connection
 	*/
-	@:overload public static function create(dest : String) : sun.net.ftp.FtpClient;
+	@:overload @:public @:static public static function create(dest : String) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Enables, or disables, the use of the <I>passive</I> mode. In that mode,
@@ -87,7 +87,7 @@ extern class FtpClient implements java.io.Closeable
 	* @return This FtpClient
 	* @see #isPassiveModeEnabled()
 	*/
-	@:overload @:abstract public function enablePassiveMode(passive : Bool) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function enablePassiveMode(passive : Bool) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Tests whether passive mode is enabled.
@@ -95,7 +95,7 @@ extern class FtpClient implements java.io.Closeable
 	* @return {@code true} if the passive mode has been enabled.
 	* @see #enablePassiveMode(boolean)
 	*/
-	@:overload @:abstract public function isPassiveModeEnabled() : Bool;
+	@:overload @:public @:abstract public function isPassiveModeEnabled() : Bool;
 	
 	/**
 	* Sets the default timeout value to use when connecting to the server,
@@ -105,7 +105,7 @@ extern class FtpClient implements java.io.Closeable
 	*
 	* @return This FtpClient
 	*/
-	@:overload @:abstract public function setConnectTimeout(timeout : Int) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function setConnectTimeout(timeout : Int) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Returns the current default connection timeout value.
@@ -113,7 +113,7 @@ extern class FtpClient implements java.io.Closeable
 	* @return the value, in milliseconds, of the current connect timeout.
 	* @see #setConnectTimeout(int)
 	*/
-	@:overload @:abstract public function getConnectTimeout() : Int;
+	@:overload @:public @:abstract public function getConnectTimeout() : Int;
 	
 	/**
 	* Sets the timeout value to use when reading from the server,
@@ -122,7 +122,7 @@ extern class FtpClient implements java.io.Closeable
 	*        operation. A value of zero or less, means use the default timeout.
 	* @return This FtpClient
 	*/
-	@:overload @:abstract public function setReadTimeout(timeout : Int) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function setReadTimeout(timeout : Int) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Returns the current read timeout value.
@@ -130,7 +130,7 @@ extern class FtpClient implements java.io.Closeable
 	* @return the value, in milliseconds, of the current read timeout.
 	* @see #setReadTimeout(int)
 	*/
-	@:overload @:abstract public function getReadTimeout() : Int;
+	@:overload @:public @:abstract public function getReadTimeout() : Int;
 	
 	/**
 	* Set the {@code Proxy} to be used for the next connection.
@@ -140,7 +140,7 @@ extern class FtpClient implements java.io.Closeable
 	* @param p the {@code Proxy} to use, or {@code null} for no proxy.
 	* @return This FtpClient
 	*/
-	@:overload @:abstract public function setProxy(p : java.net.Proxy) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function setProxy(p : java.net.Proxy) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Get the proxy of this FtpClient
@@ -149,14 +149,14 @@ extern class FtpClient implements java.io.Closeable
 	* if none is used.
 	* @see #setProxy(Proxy)
 	*/
-	@:overload @:abstract public function getProxy() : java.net.Proxy;
+	@:overload @:public @:abstract public function getProxy() : java.net.Proxy;
 	
 	/**
 	* Tests whether this client is connected or not to a server.
 	*
 	* @return {@code true} if the client is connected.
 	*/
-	@:overload @:abstract public function isConnected() : Bool;
+	@:overload @:public @:abstract public function isConnected() : Bool;
 	
 	/**
 	* Connects the {@code FtpClient} to the specified destination server.
@@ -168,7 +168,7 @@ extern class FtpClient implements java.io.Closeable
 	* denied the authorization to connect to the destination.
 	* @throws FtpProtocolException
 	*/
-	@:overload @:abstract public function connect(dest : java.net.SocketAddress) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function connect(dest : java.net.SocketAddress) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Connects the FtpClient to the specified destination server.
@@ -181,7 +181,7 @@ extern class FtpClient implements java.io.Closeable
 	* denied the authorization to connect to the destination.
 	* @throws FtpProtocolException
 	*/
-	@:overload @:abstract public function connect(dest : java.net.SocketAddress, timeout : Int) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function connect(dest : java.net.SocketAddress, timeout : Int) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Retrieves the address of the FTP server this client is connected to.
@@ -189,7 +189,7 @@ extern class FtpClient implements java.io.Closeable
 	* @return the {@link SocketAddress} of the server, or {@code null} if this
 	* client is not connected yet.
 	*/
-	@:overload @:abstract public function getServerAddress() : java.net.SocketAddress;
+	@:overload @:public @:abstract public function getServerAddress() : java.net.SocketAddress;
 	
 	/**
 	* Attempts to log on the server with the specified user name and password.
@@ -200,7 +200,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during the transmission
 	* @throws FtpProtocolException if the login was refused by the server
 	*/
-	@:overload @:abstract public function login(user : String, password : java.NativeArray<java.StdTypes.Char16>) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function login(user : String, password : java.NativeArray<java.StdTypes.Char16>) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Attempts to log on the server with the specified user name, password and
@@ -213,7 +213,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occurs during the transmission.
 	* @throws FtpProtocolException if the login was refused by the server
 	*/
-	@:overload @:abstract public function login(user : String, password : java.NativeArray<java.StdTypes.Char16>, account : String) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function login(user : String, password : java.NativeArray<java.StdTypes.Char16>, account : String) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Closes the current connection. Logs out the current user, if any, by
@@ -225,14 +225,14 @@ extern class FtpClient implements java.io.Closeable
 	*
 	* @throws IOException if an error occurs during transmission
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
 	/**
 	* Checks whether the client is logged in to the server or not.
 	*
 	* @return {@code true} if the client has already completed a login.
 	*/
-	@:overload @:abstract public function isLoggedIn() : Bool;
+	@:overload @:public @:abstract public function isLoggedIn() : Bool;
 	
 	/**
 	* Changes to a specific directory on a remote FTP server
@@ -242,7 +242,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occurs during the transmission.
 	* @throws FtpProtocolException if the command was refused by the server
 	*/
-	@:overload @:abstract public function changeDirectory(remoteDirectory : String) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function changeDirectory(remoteDirectory : String) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Changes to the parent directory, sending the CDUP command to the server.
@@ -251,7 +251,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occurs during the transmission.
 	* @throws FtpProtocolException if the command was refused by the server
 	*/
-	@:overload @:abstract public function changeToParentDirectory() : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function changeToParentDirectory() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Retrieve the server current working directory using the PWD command.
@@ -260,7 +260,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occurs during transmission
 	* @throws FtpProtocolException if the command was refused by the server,
 	*/
-	@:overload @:abstract public function getWorkingDirectory() : String;
+	@:overload @:public @:abstract public function getWorkingDirectory() : String;
 	
 	/**
 	* Sets the restart offset to the specified value.  That value will be
@@ -274,7 +274,7 @@ extern class FtpClient implements java.io.Closeable
 	* @return this FtpClient
 	* @throws IllegalArgumentException if the offset is negative.
 	*/
-	@:overload @:abstract public function setRestartOffset(offset : haxe.Int64) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function setRestartOffset(offset : haxe.Int64) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Retrieves a file from the ftp server and writes its content to the specified
@@ -295,7 +295,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws FtpProtocolException if the command was refused by the server
 	* @see #setRestartOffset(long)
 	*/
-	@:overload @:abstract public function getFile(name : String, local : java.io.OutputStream) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function getFile(name : String, local : java.io.OutputStream) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Retrieves a file from the ftp server, using the {@code RETR} command, and
@@ -312,7 +312,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws FtpProtocolException if the command was refused by the server
 	* @see #setRestartOffset(long)
 	*/
-	@:overload @:abstract public function getFileStream(name : String) : java.io.InputStream;
+	@:overload @:public @:abstract public function getFileStream(name : String) : java.io.InputStream;
 	
 	/**
 	* Transfers a file from the client to the server (aka a <I>put</I>)
@@ -331,7 +331,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during the transmission.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload public function putFileStream(name : String) : java.io.OutputStream;
+	@:overload @:public public function putFileStream(name : String) : java.io.OutputStream;
 	
 	/**
 	* Transfers a file from the client to the server (aka a <I>put</I>)
@@ -358,7 +358,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during the transmission.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function putFileStream(name : String, unique : Bool) : java.io.OutputStream;
+	@:overload @:public @:abstract public function putFileStream(name : String, unique : Bool) : java.io.OutputStream;
 	
 	/**
 	* Transfers a file from the client to the server (aka a <I>put</I>)
@@ -387,7 +387,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during the transmission.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload public function putFile(name : String, local : java.io.InputStream) : sun.net.ftp.FtpClient;
+	@:overload @:public public function putFile(name : String, local : java.io.InputStream) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Transfers a file from the client to the server (aka a <I>put</I>)
@@ -411,7 +411,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws FtpProtocolException if the command was rejected by the server
 	* @see #getLastFileName()
 	*/
-	@:overload @:abstract public function putFile(name : String, local : java.io.InputStream, unique : Bool) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function putFile(name : String, local : java.io.InputStream, unique : Bool) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Sends the APPE command to the server in order to transfer a data stream
@@ -429,7 +429,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during the transmission.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function appendFile(name : String, local : java.io.InputStream) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function appendFile(name : String, local : java.io.InputStream) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Renames a file on the server.
@@ -440,7 +440,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during the transmission.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function rename(from : String, to : String) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function rename(from : String, to : String) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Deletes a file on the server.
@@ -451,7 +451,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during the exchange
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function deleteFile(name : String) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function deleteFile(name : String) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Creates a new directory on the server.
@@ -462,7 +462,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during the exchange
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function makeDirectory(name : String) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function makeDirectory(name : String) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Removes a directory on the server.
@@ -474,7 +474,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during the exchange.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function removeDirectory(name : String) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function removeDirectory(name : String) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Sends a No-operation command. It's useful for testing the connection
@@ -484,7 +484,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during the transmission.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function noop() : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function noop() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Sends the {@code STAT} command to the server.
@@ -501,7 +501,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during the transmission.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function getStatus(name : String) : String;
+	@:overload @:public @:abstract public function getStatus(name : String) : String;
 	
 	/**
 	* Sends the {@code FEAT} command to the server and returns the list of supported
@@ -518,7 +518,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occurs during the transmission.
 	* @throws FtpProtocolException if the command is rejected by the server
 	*/
-	@:overload @:abstract public function getFeatures() : java.util.List<String>;
+	@:overload @:public @:abstract public function getFeatures() : java.util.List<String>;
 	
 	/**
 	* Sends the {@code ABOR} command to the server.
@@ -531,7 +531,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during the transmission.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function abort() : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function abort() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Some methods do not wait until completion before returning, so this
@@ -566,7 +566,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during the transfer
 	* @throws FtpProtocolException if the command didn't complete successfully
 	*/
-	@:overload @:abstract public function completePending() : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function completePending() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Reinitializes the USER parameters on the FTP server
@@ -575,7 +575,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occurs during transmission
 	* @throws FtpProtocolException if the command fails
 	*/
-	@:overload @:abstract public function reInit() : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function reInit() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Changes the transfer type (binary, ascii, ebcdic) and issue the
@@ -586,7 +586,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occurs during transmission.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function setType(type : sun.net.ftp.FtpClient.FtpClient_TransferType) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function setType(type : sun.net.ftp.FtpClient.FtpClient_TransferType) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Changes the current transfer type to binary.
@@ -598,7 +598,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws FtpProtocolException if the command was rejected by the server
 	* @see #setType(TransferType)
 	*/
-	@:overload public function setBinaryType() : sun.net.ftp.FtpClient;
+	@:overload @:public public function setBinaryType() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Changes the current transfer type to ascii.
@@ -610,7 +610,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws FtpProtocolException if the command was rejected by the server
 	* @see #setType(TransferType)
 	*/
-	@:overload public function setAsciiType() : sun.net.ftp.FtpClient;
+	@:overload @:public public function setAsciiType() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Issues a {@code LIST} command to the server to get the current directory
@@ -627,7 +627,7 @@ extern class FtpClient implements java.io.Closeable
 	* @see #changeDirectory(String)
 	* @see #listFiles(String)
 	*/
-	@:overload @:abstract public function list(path : String) : java.io.InputStream;
+	@:overload @:public @:abstract public function list(path : String) : java.io.InputStream;
 	
 	/**
 	* Issues a {@code NLST path} command to server to get the specified directory
@@ -644,7 +644,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occurs during the transmission.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function nameList(path : String) : java.io.InputStream;
+	@:overload @:public @:abstract public function nameList(path : String) : java.io.InputStream;
 	
 	/**
 	* Issues the {@code SIZE [path]} command to the server to get the size of a
@@ -660,7 +660,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occurs during the transmission.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function getSize(path : String) : haxe.Int64;
+	@:overload @:public @:abstract public function getSize(path : String) : haxe.Int64;
 	
 	/**
 	* Issues the {@code MDTM [path]} command to the server to get the modification
@@ -675,7 +675,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occurs during the transmission.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function getLastModified(path : String) : java.util.Date;
+	@:overload @:public @:abstract public function getLastModified(path : String) : java.util.Date;
 	
 	/**
 	* Sets the parser used to handle the directory output to the specified
@@ -688,7 +688,7 @@ extern class FtpClient implements java.io.Closeable
 	* @return this FtpClient
 	* @see #listFiles(String)
 	*/
-	@:overload @:abstract public function setDirParser(p : sun.net.ftp.FtpDirParser) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function setDirParser(p : sun.net.ftp.FtpDirParser) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Issues a {@code MLSD} command to the server to get the specified directory
@@ -711,7 +711,7 @@ extern class FtpClient implements java.io.Closeable
 	* @see #changeDirectory(String)
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function listFiles(path : String) : java.util.Iterator<sun.net.ftp.FtpDirEntry>;
+	@:overload @:public @:abstract public function listFiles(path : String) : java.util.Iterator<sun.net.ftp.FtpDirEntry>;
 	
 	/**
 	* Attempts to use Kerberos GSSAPI as an authentication mechanism with the
@@ -724,7 +724,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occurs during the transmission.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function useKerberos() : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function useKerberos() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Returns the Welcome string the server sent during initial connection.
@@ -732,14 +732,14 @@ extern class FtpClient implements java.io.Closeable
 	* @return a {@code String} containing the message the server
 	*         returned during connection or {@code null}.
 	*/
-	@:overload @:abstract public function getWelcomeMsg() : String;
+	@:overload @:public @:abstract public function getWelcomeMsg() : String;
 	
 	/**
 	* Returns the last reply code sent by the server.
 	*
 	* @return the lastReplyCode or {@code null} if none were received yet.
 	*/
-	@:overload @:abstract public function getLastReplyCode() : sun.net.ftp.FtpReplyCode;
+	@:overload @:public @:abstract public function getLastReplyCode() : sun.net.ftp.FtpReplyCode;
 	
 	/**
 	* Returns the last response string sent by the server.
@@ -747,7 +747,7 @@ extern class FtpClient implements java.io.Closeable
 	* @return the message string, which can be quite long, last returned
 	*         by the server, or {@code null} if no response were received yet.
 	*/
-	@:overload @:abstract public function getLastResponseString() : String;
+	@:overload @:public @:abstract public function getLastResponseString() : String;
 	
 	/**
 	* Returns, when available, the size of the latest started transfer.
@@ -757,7 +757,7 @@ extern class FtpClient implements java.io.Closeable
 	* @return the size of the latest transfer or -1 if either there was no
 	*         transfer or the information was unavailable.
 	*/
-	@:overload @:abstract public function getLastTransferSize() : haxe.Int64;
+	@:overload @:public @:abstract public function getLastTransferSize() : haxe.Int64;
 	
 	/**
 	* Returns, when available, the remote name of the last transfered file.
@@ -768,7 +768,7 @@ extern class FtpClient implements java.io.Closeable
 	* @return the name the latest transfered file remote name, or
 	*         {@code null} if that information is unavailable.
 	*/
-	@:overload @:abstract public function getLastFileName() : String;
+	@:overload @:public @:abstract public function getLastFileName() : String;
 	
 	/**
 	* Attempts to switch to a secure, encrypted connection. This is done by
@@ -786,7 +786,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws FtpProtocolException if the command was rejected by the server
 	* @see #endSecureSession()
 	*/
-	@:overload @:abstract public function startSecureSession() : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function startSecureSession() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Sends a {@code CCC} command followed by a {@code PROT C}
@@ -798,7 +798,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws FtpProtocolException if the command was rejected by the server
 	* @see #startSecureSession()
 	*/
-	@:overload @:abstract public function endSecureSession() : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function endSecureSession() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Sends the "Allocate" ({@code ALLO}) command to the server telling it to
@@ -809,7 +809,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during the transmission.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function allocate(size : haxe.Int64) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function allocate(size : haxe.Int64) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Sends the "Structure Mount" ({@code SMNT}) command to the server. This let the
@@ -822,7 +822,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during the transmission.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function structureMount(struct : String) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function structureMount(struct : String) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Sends a System ({@code SYST}) command to the server and returns the String
@@ -834,7 +834,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during the transmission.
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function getSystem() : String;
+	@:overload @:public @:abstract public function getSystem() : String;
 	
 	/**
 	* Sends the {@code HELP} command to the server, with an optional command, like
@@ -847,7 +847,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during transmission
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function getHelp(cmd : String) : String;
+	@:overload @:public @:abstract public function getHelp(cmd : String) : String;
 	
 	/**
 	* Sends the {@code SITE} command to the server. This is used by the server
@@ -859,7 +859,7 @@ extern class FtpClient implements java.io.Closeable
 	* @throws IOException if an error occured during transmission
 	* @throws FtpProtocolException if the command was rejected by the server
 	*/
-	@:overload @:abstract public function siteCmd(cmd : String) : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function siteCmd(cmd : String) : sun.net.ftp.FtpClient;
 	
 	
 }

@@ -35,13 +35,13 @@ extern interface JConsoleContext
 	* @return the {@code MBeanServerConnection} for the
 	* connection to an application.
 	*/
-	@:overload public function getMBeanServerConnection() : javax.management.MBeanServerConnection;
+	@:overload @:public public function getMBeanServerConnection() : javax.management.MBeanServerConnection;
 	
 	/**
 	* Returns the current connection state.
 	* @return the current connection state.
 	*/
-	@:overload public function getConnectionState() : com.sun.tools.jconsole.JConsoleContext.JConsoleContext_ConnectionState;
+	@:overload @:public public function getConnectionState() : com.sun.tools.jconsole.JConsoleContext.JConsoleContext_ConnectionState;
 	
 	/**
 	* Add a {@link java.beans.PropertyChangeListener PropertyChangeListener}
@@ -54,7 +54,7 @@ extern interface JConsoleContext
 	*
 	* @param listener  The {@code PropertyChangeListener} to be added
 	*/
-	@:overload public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a {@link java.beans.PropertyChangeListener PropertyChangeListener}
@@ -67,7 +67,7 @@ extern interface JConsoleContext
 	*
 	* @param listener the {@code PropertyChangeListener} to be removed
 	*/
-	@:overload public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	
 }

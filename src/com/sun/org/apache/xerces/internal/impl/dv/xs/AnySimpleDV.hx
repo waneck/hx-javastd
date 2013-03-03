@@ -29,9 +29,9 @@ extern class AnySimpleDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.T
 	* @author Sandy Gao, IBM
 	*
 	*/
-	@:overload override public function getAllowedFacets() : java.StdTypes.Int16;
+	@:overload @:public override public function getAllowedFacets() : java.StdTypes.Int16;
 	
-	@:overload override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
+	@:overload @:public override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
 	
 	
 }

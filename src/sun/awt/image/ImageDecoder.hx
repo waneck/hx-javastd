@@ -25,39 +25,39 @@ package sun.awt.image;
 */
 extern class ImageDecoder
 {
-	private var aborted : Bool;
+	@:protected private var aborted : Bool;
 	
-	private var finished : Bool;
+	@:protected private var finished : Bool;
 	
-	@:overload public function new(src : sun.awt.image.InputStreamImageSource, is : java.io.InputStream) : Void;
+	@:overload @:public public function new(src : sun.awt.image.InputStreamImageSource, is : java.io.InputStream) : Void;
 	
-	@:overload public function isConsumer(ic : java.awt.image.ImageConsumer) : Bool;
+	@:overload @:public public function isConsumer(ic : java.awt.image.ImageConsumer) : Bool;
 	
-	@:overload public function removeConsumer(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public public function removeConsumer(ic : java.awt.image.ImageConsumer) : Void;
 	
-	@:overload private function nextConsumer(cq : sun.awt.image.ImageConsumerQueue) : sun.awt.image.ImageConsumerQueue;
+	@:overload @:protected private function nextConsumer(cq : sun.awt.image.ImageConsumerQueue) : sun.awt.image.ImageConsumerQueue;
 	
-	@:overload private function setDimensions(w : Int, h : Int) : Int;
+	@:overload @:protected private function setDimensions(w : Int, h : Int) : Int;
 	
-	@:overload private function setProperties(props : java.util.Hashtable<Dynamic, Dynamic>) : Int;
+	@:overload @:protected private function setProperties(props : java.util.Hashtable<Dynamic, Dynamic>) : Int;
 	
-	@:overload private function setColorModel(model : java.awt.image.ColorModel) : Int;
+	@:overload @:protected private function setColorModel(model : java.awt.image.ColorModel) : Int;
 	
-	@:overload private function setHints(hints : Int) : Int;
+	@:overload @:protected private function setHints(hints : Int) : Int;
 	
-	@:overload private function headerComplete() : Void;
+	@:overload @:protected private function headerComplete() : Void;
 	
-	@:overload private function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pix : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Int;
+	@:overload @:protected private function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pix : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Int;
 	
-	@:overload private function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pix : java.NativeArray<Int>, off : Int, scansize : Int) : Int;
+	@:overload @:protected private function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pix : java.NativeArray<Int>, off : Int, scansize : Int) : Int;
 	
-	@:overload private function imageComplete(status : Int, done : Bool) : Int;
+	@:overload @:protected private function imageComplete(status : Int, done : Bool) : Int;
 	
-	@:overload @:abstract public function produceImage() : Void;
+	@:overload @:public @:abstract public function produceImage() : Void;
 	
-	@:overload public function abort() : Void;
+	@:overload @:public public function abort() : Void;
 	
-	@:overload @:synchronized public function close() : Void;
+	@:overload @:public @:synchronized public function close() : Void;
 	
 	
 }

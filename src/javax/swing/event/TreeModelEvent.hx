@@ -26,13 +26,13 @@ package javax.swing.event;
 extern class TreeModelEvent extends java.util.EventObject
 {
 	/** Path to the parent of the nodes that have changed. */
-	private var path : javax.swing.tree.TreePath;
+	@:protected private var path : javax.swing.tree.TreePath;
 	
 	/** Indices identifying the position of where the children were. */
-	private var childIndices : java.NativeArray<Int>;
+	@:protected private var childIndices : java.NativeArray<Int>;
 	
 	/** Children that have been removed. */
-	private var children : java.NativeArray<Dynamic>;
+	@:protected private var children : java.NativeArray<Dynamic>;
 	
 	/**
 	* Used to create an event when nodes have been changed, inserted, or
@@ -101,7 +101,7 @@ extern class TreeModelEvent extends java.util.EventObject
 	*                 changed objects
 	* @see TreePath
 	*/
-	@:overload public function new(source : Dynamic, path : java.NativeArray<Dynamic>, childIndices : java.NativeArray<Int>, children : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(source : Dynamic, path : java.NativeArray<Dynamic>, childIndices : java.NativeArray<Int>, children : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Used to create an event when nodes have been changed, inserted, or
@@ -122,7 +122,7 @@ extern class TreeModelEvent extends java.util.EventObject
 	*
 	* @see #TreeModelEvent(Object,Object[],int[],Object[])
 	*/
-	@:overload public function new(source : Dynamic, path : javax.swing.tree.TreePath, childIndices : java.NativeArray<Int>, children : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(source : Dynamic, path : javax.swing.tree.TreePath, childIndices : java.NativeArray<Int>, children : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Used to create an event when the node structure has changed in some way,
@@ -146,7 +146,7 @@ extern class TreeModelEvent extends java.util.EventObject
 	*               is the object stored at the changed node
 	* @see TreePath
 	*/
-	@:overload public function new(source : Dynamic, path : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(source : Dynamic, path : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Used to create an event when the node structure has changed in some way,
@@ -165,7 +165,7 @@ extern class TreeModelEvent extends java.util.EventObject
 	*
 	* @see #TreeModelEvent(Object,Object[])
 	*/
-	@:overload public function new(source : Dynamic, path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function new(source : Dynamic, path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* For all events, except treeStructureChanged,
@@ -182,7 +182,7 @@ extern class TreeModelEvent extends java.util.EventObject
 	* @return the TreePath used in identifying the changed nodes.
 	* @see TreePath#getLastPathComponent
 	*/
-	@:overload public function getTreePath() : javax.swing.tree.TreePath;
+	@:overload @:public public function getTreePath() : javax.swing.tree.TreePath;
 	
 	/**
 	* Convenience method to get the array of objects from the TreePath
@@ -192,7 +192,7 @@ extern class TreeModelEvent extends java.util.EventObject
 	*         stored at the root and the last object is the one
 	*         stored at the node identified by the path
 	*/
-	@:overload public function getPath() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getPath() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns the objects that are children of the node identified by
@@ -205,7 +205,7 @@ extern class TreeModelEvent extends java.util.EventObject
 	* @see #getPath
 	* @see #getChildIndices
 	*/
-	@:overload public function getChildren() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getChildren() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns the values of the child indexes. If this is a removal event
@@ -217,7 +217,7 @@ extern class TreeModelEvent extends java.util.EventObject
 	* @return an array of <code>int</code> containing index locations for
 	*         the children specified by the event
 	*/
-	@:overload public function getChildIndices() : java.NativeArray<Int>;
+	@:overload @:public public function getChildIndices() : java.NativeArray<Int>;
 	
 	/**
 	* Returns a string that displays and identifies this object's
@@ -225,7 +225,7 @@ extern class TreeModelEvent extends java.util.EventObject
 	*
 	* @return a String representation of this object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

@@ -25,29 +25,29 @@ package javax.swing.text.html;
 */
 @:internal extern class Map implements java.io.Serializable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Returns the name of the Map.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Defines a region of the Map, based on the passed in AttributeSet.
 	*/
-	@:overload public function addArea(as : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function addArea(as : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Removes the previously created area.
 	*/
-	@:overload public function removeArea(as : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function removeArea(as : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Returns the AttributeSets representing the differet areas of the Map.
 	*/
-	@:overload public function getAreas() : java.NativeArray<javax.swing.text.AttributeSet>;
+	@:overload @:public public function getAreas() : java.NativeArray<javax.swing.text.AttributeSet>;
 	
 	/**
 	* Returns the AttributeSet that contains the passed in location,
@@ -55,13 +55,13 @@ package javax.swing.text.html;
 	* gives the size of the region the map is defined over. If a matching
 	* area is found, the AttribueSet for it is returned.
 	*/
-	@:overload public function getArea(x : Int, y : Int, width : Int, height : Int) : javax.swing.text.AttributeSet;
+	@:overload @:public public function getArea(x : Int, y : Int, width : Int, height : Int) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Creates and returns an instance of RegionContainment that can be
 	* used to test if a particular point lies inside a region.
 	*/
-	@:overload private function createRegionContainment(attributes : javax.swing.text.AttributeSet) : javax.swing.text.html.Map.Map_RegionContainment;
+	@:overload @:protected private function createRegionContainment(attributes : javax.swing.text.AttributeSet) : javax.swing.text.html.Map.Map_RegionContainment;
 	
 	/**
 	* Creates and returns an array of integers from the String
@@ -69,7 +69,7 @@ package javax.swing.text.html;
 	* % the returned value with be negative. If a parse error results
 	* from trying to parse one of the numbers null is returned.
 	*/
-	@:overload private static function extractCoords(stringCoords : Dynamic) : java.NativeArray<Int>;
+	@:overload @:static @:protected private static function extractCoords(stringCoords : Dynamic) : java.NativeArray<Int>;
 	
 	
 }
@@ -85,7 +85,7 @@ package javax.swing.text.html;
 	* <code>width</code>, <code>height</code> is the size of
 	* the enclosing region.
 	*/
-	@:overload public function contains(x : Int, y : Int, width : Int, height : Int) : Bool;
+	@:overload @:public public function contains(x : Int, y : Int, width : Int, height : Int) : Bool;
 	
 	
 }
@@ -94,11 +94,11 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$Map$RectangleRegionContainment') @:internal extern class Map_RectangleRegionContainment implements javax.swing.text.html.Map.Map_RegionContainment
 {
-	@:overload public function new(as : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function new(as : javax.swing.text.AttributeSet) : Void;
 	
-	@:overload public function contains(x : Int, y : Int, width : Int, height : Int) : Bool;
+	@:overload @:public public function contains(x : Int, y : Int, width : Int, height : Int) : Bool;
 	
-	@:overload public function contains(x : Int, y : Int) : Bool;
+	@:overload @:public public function contains(x : Int, y : Int) : Bool;
 	
 	
 }
@@ -107,9 +107,9 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$Map$PolygonRegionContainment') @:internal extern class Map_PolygonRegionContainment extends java.awt.Polygon implements javax.swing.text.html.Map.Map_RegionContainment
 {
-	@:overload public function new(as : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function new(as : javax.swing.text.AttributeSet) : Void;
 	
-	@:overload public function contains(x : Int, y : Int, width : Int, height : Int) : Bool;
+	@:overload @:public public function contains(x : Int, y : Int, width : Int, height : Int) : Bool;
 	
 	
 }
@@ -118,9 +118,9 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$Map$CircleRegionContainment') @:internal extern class Map_CircleRegionContainment implements javax.swing.text.html.Map.Map_RegionContainment
 {
-	@:overload public function new(as : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function new(as : javax.swing.text.AttributeSet) : Void;
 	
-	@:overload public function contains(x : Int, y : Int, width : Int, height : Int) : Bool;
+	@:overload @:public public function contains(x : Int, y : Int, width : Int, height : Int) : Bool;
 	
 	
 }
@@ -131,9 +131,9 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$Map$DefaultRegionContainment') @:internal extern class Map_DefaultRegionContainment implements javax.swing.text.html.Map.Map_RegionContainment
 {
-	@:overload public static function sharedInstance() : javax.swing.text.html.Map.Map_DefaultRegionContainment;
+	@:overload @:public @:static public static function sharedInstance() : javax.swing.text.html.Map.Map_DefaultRegionContainment;
 	
-	@:overload public function contains(x : Int, y : Int, width : Int, height : Int) : Bool;
+	@:overload @:public public function contains(x : Int, y : Int, width : Int, height : Int) : Bool;
 	
 	
 }

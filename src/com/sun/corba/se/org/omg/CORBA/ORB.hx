@@ -38,7 +38,7 @@ extern class ORB extends org.omg.CORBA_2_3.ORB
 	*     including the default names defined by OMG.
 	* @throws BAD_PARAM if the obj parameter is null.
 	*/
-	@:overload public function register_initial_reference(id : String, obj : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function register_initial_reference(id : String, obj : org.omg.CORBA.Object) : Void;
 	
 	
 }

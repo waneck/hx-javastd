@@ -25,19 +25,19 @@ package java.util.jar;
 */
 @:internal extern class JavaUtilJarAccessImpl implements sun.misc.JavaUtilJarAccess
 {
-	@:overload public function jarFileHasClassPathAttribute(jar : java.util.jar.JarFile) : Bool;
+	@:overload @:public public function jarFileHasClassPathAttribute(jar : java.util.jar.JarFile) : Bool;
 	
-	@:overload public function getCodeSources(jar : java.util.jar.JarFile, url : java.net.URL) : java.NativeArray<java.security.CodeSource>;
+	@:overload @:public public function getCodeSources(jar : java.util.jar.JarFile, url : java.net.URL) : java.NativeArray<java.security.CodeSource>;
 	
-	@:overload public function getCodeSource(jar : java.util.jar.JarFile, url : java.net.URL, name : String) : java.security.CodeSource;
+	@:overload @:public public function getCodeSource(jar : java.util.jar.JarFile, url : java.net.URL, name : String) : java.security.CodeSource;
 	
-	@:overload public function entryNames(jar : java.util.jar.JarFile, cs : java.NativeArray<java.security.CodeSource>) : java.util.Enumeration<String>;
+	@:overload @:public public function entryNames(jar : java.util.jar.JarFile, cs : java.NativeArray<java.security.CodeSource>) : java.util.Enumeration<String>;
 	
-	@:overload public function entries2(jar : java.util.jar.JarFile) : java.util.Enumeration<java.util.jar.JarEntry>;
+	@:overload @:public public function entries2(jar : java.util.jar.JarFile) : java.util.Enumeration<java.util.jar.JarEntry>;
 	
-	@:overload public function setEagerValidation(jar : java.util.jar.JarFile, eager : Bool) : Void;
+	@:overload @:public public function setEagerValidation(jar : java.util.jar.JarFile, eager : Bool) : Void;
 	
-	@:overload public function getManifestDigests(jar : java.util.jar.JarFile) : java.util.List<Dynamic>;
+	@:overload @:public public function getManifestDigests(jar : java.util.jar.JarFile) : java.util.List<Dynamic>;
 	
 	
 }

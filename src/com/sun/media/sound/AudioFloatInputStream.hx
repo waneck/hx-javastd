@@ -25,37 +25,37 @@ package com.sun.media.sound;
 */
 extern class AudioFloatInputStream
 {
-	@:overload public static function getInputStream(url : java.net.URL) : com.sun.media.sound.AudioFloatInputStream;
+	@:overload @:public @:static public static function getInputStream(url : java.net.URL) : com.sun.media.sound.AudioFloatInputStream;
 	
-	@:overload public static function getInputStream(file : java.io.File) : com.sun.media.sound.AudioFloatInputStream;
+	@:overload @:public @:static public static function getInputStream(file : java.io.File) : com.sun.media.sound.AudioFloatInputStream;
 	
-	@:overload public static function getInputStream(stream : java.io.InputStream) : com.sun.media.sound.AudioFloatInputStream;
+	@:overload @:public @:static public static function getInputStream(stream : java.io.InputStream) : com.sun.media.sound.AudioFloatInputStream;
 	
-	@:overload public static function getInputStream(stream : javax.sound.sampled.AudioInputStream) : com.sun.media.sound.AudioFloatInputStream;
+	@:overload @:public @:static public static function getInputStream(stream : javax.sound.sampled.AudioInputStream) : com.sun.media.sound.AudioFloatInputStream;
 	
-	@:overload public static function getInputStream(format : javax.sound.sampled.AudioFormat, buffer : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : com.sun.media.sound.AudioFloatInputStream;
+	@:overload @:public @:static public static function getInputStream(format : javax.sound.sampled.AudioFormat, buffer : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : com.sun.media.sound.AudioFloatInputStream;
 	
-	@:overload @:abstract public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public @:abstract public function getFormat() : javax.sound.sampled.AudioFormat;
 	
-	@:overload @:abstract public function getFrameLength() : haxe.Int64;
+	@:overload @:public @:abstract public function getFrameLength() : haxe.Int64;
 	
-	@:overload @:abstract public function read(b : java.NativeArray<Single>, off : Int, len : Int) : Int;
+	@:overload @:public @:abstract public function read(b : java.NativeArray<Single>, off : Int, len : Int) : Int;
 	
-	@:overload public function read(b : java.NativeArray<Single>) : Int;
+	@:overload @:public public function read(b : java.NativeArray<Single>) : Int;
 	
-	@:overload public function read() : Single;
+	@:overload @:public public function read() : Single;
 	
-	@:overload @:abstract public function skip(len : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:abstract public function skip(len : haxe.Int64) : haxe.Int64;
 	
-	@:overload @:abstract public function available() : Int;
+	@:overload @:public @:abstract public function available() : Int;
 	
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
-	@:overload @:abstract public function mark(readlimit : Int) : Void;
+	@:overload @:public @:abstract public function mark(readlimit : Int) : Void;
 	
-	@:overload @:abstract public function markSupported() : Bool;
+	@:overload @:public @:abstract public function markSupported() : Bool;
 	
-	@:overload @:abstract public function reset() : Void;
+	@:overload @:public @:abstract public function reset() : Void;
 	
 	
 }
@@ -67,49 +67,49 @@ extern class AudioFloatInputStream
 */
 @:native('com$sun$media$sound$AudioFloatInputStream$BytaArrayAudioFloatInputStream') @:internal extern class AudioFloatInputStream_BytaArrayAudioFloatInputStream extends com.sun.media.sound.AudioFloatInputStream
 {
-	@:overload public function new(converter : com.sun.media.sound.AudioFloatConverter, buffer : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:public public function new(converter : com.sun.media.sound.AudioFloatConverter, buffer : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
-	@:overload override public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public override public function getFormat() : javax.sound.sampled.AudioFormat;
 	
-	@:overload override public function getFrameLength() : haxe.Int64;
+	@:overload @:public override public function getFrameLength() : haxe.Int64;
 	
-	@:overload override public function read(b : java.NativeArray<Single>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<Single>, off : Int, len : Int) : Int;
 	
-	@:overload override public function skip(len : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(len : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload override public function mark(readlimit : Int) : Void;
+	@:overload @:public override public function mark(readlimit : Int) : Void;
 	
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatInputStream$DirectAudioFloatInputStream') @:internal extern class AudioFloatInputStream_DirectAudioFloatInputStream extends com.sun.media.sound.AudioFloatInputStream
 {
-	@:overload public function new(stream : javax.sound.sampled.AudioInputStream) : Void;
+	@:overload @:public public function new(stream : javax.sound.sampled.AudioInputStream) : Void;
 	
-	@:overload override public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public override public function getFormat() : javax.sound.sampled.AudioFormat;
 	
-	@:overload override public function getFrameLength() : haxe.Int64;
+	@:overload @:public override public function getFrameLength() : haxe.Int64;
 	
-	@:overload override public function read(b : java.NativeArray<Single>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<Single>, off : Int, len : Int) : Int;
 	
-	@:overload override public function skip(len : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(len : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload override public function mark(readlimit : Int) : Void;
+	@:overload @:public override public function mark(readlimit : Int) : Void;
 	
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }

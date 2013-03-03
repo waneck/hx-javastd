@@ -30,21 +30,21 @@ extern class TransportService
 	*
 	* @return  The name of the transport service
 	*/
-	@:overload @:abstract public function name() : String;
+	@:overload @:public @:abstract public function name() : String;
 	
 	/**
 	* Returns a description of the transport service.
 	*
 	* @return  The description of the transport service
 	*/
-	@:overload @:abstract public function description() : String;
+	@:overload @:public @:abstract public function description() : String;
 	
 	/**
 	* Returns the capabilities of the transport service.
 	*
 	* @return  the transport service capabilities
 	*/
-	@:overload @:abstract public function capabilities() : com.sun.jdi.connect.spi.TransportService.TransportService_Capabilities;
+	@:overload @:public @:abstract public function capabilities() : com.sun.jdi.connect.spi.TransportService.TransportService_Capabilities;
 	
 	/**
 	* Attaches to the specified address.
@@ -105,7 +105,7 @@ extern class TransportService
 	*
 	* @see TransportService.Capabilities#supportsAttachTimeout()
 	*/
-	@:overload @:abstract public function attach(address : String, attachTimeout : haxe.Int64, handshakeTimeout : haxe.Int64) : com.sun.jdi.connect.spi.Connection;
+	@:overload @:public @:abstract public function attach(address : String, attachTimeout : haxe.Int64, handshakeTimeout : haxe.Int64) : com.sun.jdi.connect.spi.Connection;
 	
 	/**
 	* Listens on the specified address for inbound connections.
@@ -130,7 +130,7 @@ extern class TransportService
 	* @throws  IllegalArgumentException
 	*          If the specific address is invalid
 	*/
-	@:overload @:abstract public function startListening(address : String) : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey;
+	@:overload @:public @:abstract public function startListening(address : String) : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey;
 	
 	/**
 	* Listens on an address choosen by the transport service.
@@ -145,7 +145,7 @@ extern class TransportService
 	* @throws  IOException
 	*          If an I/O error occurs.
 	*/
-	@:overload @:abstract public function startListening() : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey;
+	@:overload @:public @:abstract public function startListening() : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey;
 	
 	/**
 	* Stop listening for inbound connections.
@@ -169,7 +169,7 @@ extern class TransportService
 	* @throws  IOException
 	*          If an I/O error occurs.
 	*/
-	@:overload @:abstract public function stopListening(listenKey : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey) : Void;
+	@:overload @:public @:abstract public function stopListening(listenKey : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey) : Void;
 	
 	/**
 	* Accept a connection from a target VM.
@@ -241,7 +241,7 @@ extern class TransportService
 	*
 	* @see TransportService.Capabilities#supportsAcceptTimeout()
 	*/
-	@:overload @:abstract public function accept(listenKey : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey, acceptTimeout : haxe.Int64, handshakeTimeout : haxe.Int64) : com.sun.jdi.connect.spi.Connection;
+	@:overload @:public @:abstract public function accept(listenKey : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey, acceptTimeout : haxe.Int64, handshakeTimeout : haxe.Int64) : com.sun.jdi.connect.spi.Connection;
 	
 	
 }
@@ -258,7 +258,7 @@ extern class TransportService
 	* @return  <tt>true</tt> if, and only if, this transport
 	*          service supports multiple connections.
 	*/
-	@:overload @:abstract public function supportsMultipleConnections() : Bool;
+	@:overload @:public @:abstract public function supportsMultipleConnections() : Bool;
 	
 	/**
 	* Tell whether or not this transport service supports a timeout
@@ -269,7 +269,7 @@ extern class TransportService
 	*
 	* @see #attach(String,long,long)
 	*/
-	@:overload @:abstract public function supportsAttachTimeout() : Bool;
+	@:overload @:public @:abstract public function supportsAttachTimeout() : Bool;
 	
 	/**
 	* Tell whether or not this transport service supports a
@@ -281,7 +281,7 @@ extern class TransportService
 	*
 	* @see #accept(TransportService.ListenKey,long,long)
 	*/
-	@:overload @:abstract public function supportsAcceptTimeout() : Bool;
+	@:overload @:public @:abstract public function supportsAcceptTimeout() : Bool;
 	
 	/**
 	* Tells whether or not this transport service supports a
@@ -294,7 +294,7 @@ extern class TransportService
 	* @see #attach(String,long,long)
 	* @see #accept(TransportService.ListenKey,long,long)
 	*/
-	@:overload @:abstract public function supportsHandshakeTimeout() : Bool;
+	@:overload @:public @:abstract public function supportsHandshakeTimeout() : Bool;
 	
 	
 }
@@ -316,7 +316,7 @@ extern class TransportService
 	/**
 	* Returns a string representation of the listen key.
 	*/
-	@:overload @:abstract public function address() : String;
+	@:overload @:public @:abstract public function address() : String;
 	
 	
 }

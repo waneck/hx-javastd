@@ -26,7 +26,7 @@ package sun.rmi.server;
 extern class Util
 {
 	/** server reference log */
-	public static var serverRefLog(default, null) : sun.rmi.runtime.Log;
+	@:public @:static @:final public static var serverRefLog(default, null) : sun.rmi.runtime.Log;
 	
 	/**
 	* Returns a proxy for the specified implClass.
@@ -57,14 +57,14 @@ extern class Util
 	* @throws StubNotFoundException if problem locating/creating stub or
 	* creating the dynamic proxy instance
 	**/
-	@:overload public static function createProxy(implClass : Class<Dynamic>, clientRef : java.rmi.server.RemoteRef, forceStubUse : Bool) : java.rmi.Remote;
+	@:overload @:public @:static public static function createProxy(implClass : Class<Dynamic>, clientRef : java.rmi.server.RemoteRef, forceStubUse : Bool) : java.rmi.Remote;
 	
 	/**
 	* Compute the "method hash" of a remote method.  The method hash
 	* is a long containing the first 64 bits of the SHA digest from
 	* the UTF encoded string of the method name and descriptor.
 	*/
-	@:overload public static function computeMethodHash(m : java.lang.reflect.Method) : haxe.Int64;
+	@:overload @:public @:static public static function computeMethodHash(m : java.lang.reflect.Method) : haxe.Int64;
 	
 	/**
 	* Returns the binary name of the given type without package
@@ -74,7 +74,7 @@ extern class Util
 	* top-level type (and perhaps other enclosing types), the
 	* separator will be '$', etc.
 	**/
-	@:overload public static function getUnqualifiedName(c : Class<Dynamic>) : String;
+	@:overload @:public @:static public static function getUnqualifiedName(c : Class<Dynamic>) : String;
 	
 	
 }

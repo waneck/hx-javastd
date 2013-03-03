@@ -36,7 +36,7 @@ extern class HttpHandler
 	* @throws IOException when an I/O error happens during request
 	*      handling
 	*/
-	@:overload @:abstract public function handle(exchange : javax.xml.ws.spi.http.HttpExchange) : Void;
+	@:overload @:public @:abstract public function handle(exchange : javax.xml.ws.spi.http.HttpExchange) : Void;
 	
 	
 }

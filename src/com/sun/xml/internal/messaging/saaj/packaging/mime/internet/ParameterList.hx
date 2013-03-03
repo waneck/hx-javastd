@@ -31,7 +31,7 @@ extern class ParameterList
 	/**
 	* No-arg Constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor that takes a parameter-list string. The String
@@ -43,14 +43,14 @@ extern class ParameterList
 	* @param   s       the parameter-list string.
 	* @exception       ParseException if the parse fails.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Return the number of parameters in this list.
 	*
 	* @return  number of parameters.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Returns the value of the specified parameter. Note that
@@ -61,7 +61,7 @@ extern class ParameterList
 	*                  <code>null</code> if the parameter is not
 	*                  present.
 	*/
-	@:overload public function get(name : String) : String;
+	@:overload @:public public function get(name : String) : String;
 	
 	/**
 	* Set a parameter. If this parameter already exists, it is
@@ -70,7 +70,7 @@ extern class ParameterList
 	* @param   name    name of the parameter.
 	* @param   value   value of the parameter.
 	*/
-	@:overload public function set(name : String, value : String) : Void;
+	@:overload @:public public function set(name : String, value : String) : Void;
 	
 	/**
 	* Removes the specified parameter from this ParameterList.
@@ -78,7 +78,7 @@ extern class ParameterList
 	*
 	* @param   name    name of the parameter.
 	*/
-	@:overload public function remove(name : String) : Void;
+	@:overload @:public public function remove(name : String) : Void;
 	
 	/**
 	* Return an enumeration of the names of all parameters in this
@@ -86,7 +86,7 @@ extern class ParameterList
 	*
 	* @return Enumeration of all parameter names in this list.
 	*/
-	@:overload public function getNames() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getNames() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Convert this ParameterList into a MIME String. If this is
@@ -94,7 +94,7 @@ extern class ParameterList
 	*
 	* @return          String
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Convert this ParameterList into a MIME String. If this is
@@ -110,9 +110,9 @@ extern class ParameterList
 	*                  be inserted.
 	* @return          String
 	*/
-	@:overload public function toString(used : Int) : String;
+	@:overload @:public public function toString(used : Int) : String;
 	
-	@:overload public function copy() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParameterList;
+	@:overload @:public public function copy() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParameterList;
 	
 	
 }

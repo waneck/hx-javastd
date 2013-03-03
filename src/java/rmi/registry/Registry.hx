@@ -45,7 +45,7 @@ extern interface Registry extends java.rmi.Remote
 	*
 	* @throws  NullPointerException if <code>name</code> is <code>null</code>
 	*/
-	@:overload public function lookup(name : String) : java.rmi.Remote;
+	@:overload @:public public function lookup(name : String) : java.rmi.Remote;
 	
 	/**
 	* Binds a remote reference to the specified <code>name</code> in
@@ -68,7 +68,7 @@ extern interface Registry extends java.rmi.Remote
 	* @throws  NullPointerException if <code>name</code> is
 	* <code>null</code>, or if <code>obj</code> is <code>null</code>
 	*/
-	@:overload public function bind(name : String, obj : java.rmi.Remote) : Void;
+	@:overload @:public public function bind(name : String, obj : java.rmi.Remote) : Void;
 	
 	/**
 	* Removes the binding for the specified <code>name</code> in
@@ -89,7 +89,7 @@ extern interface Registry extends java.rmi.Remote
 	*
 	* @throws  NullPointerException if <code>name</code> is <code>null</code>
 	*/
-	@:overload public function unbind(name : String) : Void;
+	@:overload @:public public function unbind(name : String) : Void;
 	
 	/**
 	* Replaces the binding for the specified <code>name</code> in
@@ -112,7 +112,7 @@ extern interface Registry extends java.rmi.Remote
 	* @throws  NullPointerException if <code>name</code> is
 	* <code>null</code>, or if <code>obj</code> is <code>null</code>
 	*/
-	@:overload public function rebind(name : String, obj : java.rmi.Remote) : Void;
+	@:overload @:public public function rebind(name : String, obj : java.rmi.Remote) : Void;
 	
 	/**
 	* Returns an array of the names bound in this registry.  The
@@ -129,7 +129,7 @@ extern interface Registry extends java.rmi.Remote
 	* @throws  AccessException if this registry is local and it denies
 	* the caller access to perform this operation
 	*/
-	@:overload public function list() : java.NativeArray<String>;
+	@:overload @:public public function list() : java.NativeArray<String>;
 	
 	
 }

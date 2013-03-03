@@ -51,25 +51,25 @@ extern class NameClassBuilderImpl<E, L, A, CL> implements com.sun.xml.internal.r
 	* @author
 	*      Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	@:overload public function makeChoice(nameClasses : java.util.List<com.sun.xml.internal.rngom.nc.NameClass>, loc : L, anno : A) : com.sun.xml.internal.rngom.nc.NameClass;
+	@:overload @:public public function makeChoice(nameClasses : java.util.List<com.sun.xml.internal.rngom.nc.NameClass>, loc : L, anno : A) : com.sun.xml.internal.rngom.nc.NameClass;
 	
-	@:overload public function makeName(ns : String, localName : String, prefix : String, loc : L, anno : A) : com.sun.xml.internal.rngom.nc.NameClass;
+	@:overload @:public public function makeName(ns : String, localName : String, prefix : String, loc : L, anno : A) : com.sun.xml.internal.rngom.nc.NameClass;
 	
-	@:overload public function makeNsName(ns : String, loc : L, anno : A) : com.sun.xml.internal.rngom.nc.NameClass;
+	@:overload @:public public function makeNsName(ns : String, loc : L, anno : A) : com.sun.xml.internal.rngom.nc.NameClass;
 	
-	@:overload public function makeNsName(ns : String, except : com.sun.xml.internal.rngom.nc.NameClass, loc : L, anno : A) : com.sun.xml.internal.rngom.nc.NameClass;
+	@:overload @:public public function makeNsName(ns : String, except : com.sun.xml.internal.rngom.nc.NameClass, loc : L, anno : A) : com.sun.xml.internal.rngom.nc.NameClass;
 	
-	@:overload public function makeAnyName(loc : L, anno : A) : com.sun.xml.internal.rngom.nc.NameClass;
+	@:overload @:public public function makeAnyName(loc : L, anno : A) : com.sun.xml.internal.rngom.nc.NameClass;
 	
-	@:overload public function makeAnyName(except : com.sun.xml.internal.rngom.nc.NameClass, loc : L, anno : A) : com.sun.xml.internal.rngom.nc.NameClass;
+	@:overload @:public public function makeAnyName(except : com.sun.xml.internal.rngom.nc.NameClass, loc : L, anno : A) : com.sun.xml.internal.rngom.nc.NameClass;
 	
-	@:overload public function makeErrorNameClass() : com.sun.xml.internal.rngom.nc.NameClass;
+	@:overload @:public public function makeErrorNameClass() : com.sun.xml.internal.rngom.nc.NameClass;
 	
-	@:overload public function annotate(nc : com.sun.xml.internal.rngom.nc.NameClass, anno : A) : com.sun.xml.internal.rngom.nc.NameClass;
+	@:overload @:public public function annotate(nc : com.sun.xml.internal.rngom.nc.NameClass, anno : A) : com.sun.xml.internal.rngom.nc.NameClass;
 	
-	@:overload public function annotateAfter(nc : com.sun.xml.internal.rngom.nc.NameClass, e : E) : com.sun.xml.internal.rngom.nc.NameClass;
+	@:overload @:public public function annotateAfter(nc : com.sun.xml.internal.rngom.nc.NameClass, e : E) : com.sun.xml.internal.rngom.nc.NameClass;
 	
-	@:overload public function commentAfter(nc : com.sun.xml.internal.rngom.nc.NameClass, comments : CL) : com.sun.xml.internal.rngom.nc.NameClass;
+	@:overload @:public public function commentAfter(nc : com.sun.xml.internal.rngom.nc.NameClass, comments : CL) : com.sun.xml.internal.rngom.nc.NameClass;
 	
 	
 }

@@ -28,14 +28,14 @@ extern class MonitorVersionException extends sun.jvmstat.monitor.MonitorExceptio
 	/**
 	* Create a MonitorVersionException
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a MonitorVersionException with the given message.
 	*
 	* @param message the message to associate with the exception.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

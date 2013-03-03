@@ -20,174 +20,174 @@ package com.sun.org.apache.xerces.internal.impl;
 extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.parser.XMLComponent implements com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver
 {
 	/** Default buffer size (2048). */
-	public static var DEFAULT_BUFFER_SIZE(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_BUFFER_SIZE(default, null) : Int;
 	
 	/** Default buffer size before we've finished with the XMLDecl:  */
-	public static var DEFAULT_XMLDECL_BUFFER_SIZE(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_XMLDECL_BUFFER_SIZE(default, null) : Int;
 	
 	/** Default internal entity buffer size (1024). */
-	public static var DEFAULT_INTERNAL_BUFFER_SIZE(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_INTERNAL_BUFFER_SIZE(default, null) : Int;
 	
 	/** Feature identifier: validation. */
-	private static var VALIDATION(default, null) : String;
+	@:protected @:static @:final private static var VALIDATION(default, null) : String;
 	
 	/**
 	* standard uri conformant (strict uri).
 	* http://apache.org/xml/features/standard-uri-conformant
 	*/
-	private var fStrictURI : Bool;
+	@:protected private var fStrictURI : Bool;
 	
 	/** Feature identifier: external general entities. */
-	private static var EXTERNAL_GENERAL_ENTITIES(default, null) : String;
+	@:protected @:static @:final private static var EXTERNAL_GENERAL_ENTITIES(default, null) : String;
 	
 	/** Feature identifier: external parameter entities. */
-	private static var EXTERNAL_PARAMETER_ENTITIES(default, null) : String;
+	@:protected @:static @:final private static var EXTERNAL_PARAMETER_ENTITIES(default, null) : String;
 	
 	/** Feature identifier: allow Java encodings. */
-	private static var ALLOW_JAVA_ENCODINGS(default, null) : String;
+	@:protected @:static @:final private static var ALLOW_JAVA_ENCODINGS(default, null) : String;
 	
 	/** Feature identifier: warn on duplicate EntityDef */
-	private static var WARN_ON_DUPLICATE_ENTITYDEF(default, null) : String;
+	@:protected @:static @:final private static var WARN_ON_DUPLICATE_ENTITYDEF(default, null) : String;
 	
 	/** Property identifier: symbol table. */
-	private static var SYMBOL_TABLE(default, null) : String;
+	@:protected @:static @:final private static var SYMBOL_TABLE(default, null) : String;
 	
 	/** Property identifier: error reporter. */
-	private static var ERROR_REPORTER(default, null) : String;
+	@:protected @:static @:final private static var ERROR_REPORTER(default, null) : String;
 	
 	/** Feature identifier: standard uri conformant */
-	private static var STANDARD_URI_CONFORMANT(default, null) : String;
+	@:protected @:static @:final private static var STANDARD_URI_CONFORMANT(default, null) : String;
 	
 	/** Property identifier: entity resolver. */
-	private static var ENTITY_RESOLVER(default, null) : String;
+	@:protected @:static @:final private static var ENTITY_RESOLVER(default, null) : String;
 	
-	private static var STAX_ENTITY_RESOLVER(default, null) : String;
+	@:protected @:static @:final private static var STAX_ENTITY_RESOLVER(default, null) : String;
 	
-	private static var VALIDATION_MANAGER(default, null) : String;
+	@:protected @:static @:final private static var VALIDATION_MANAGER(default, null) : String;
 	
 	/** property identifier: buffer size. */
-	private static var BUFFER_SIZE(default, null) : String;
+	@:protected @:static @:final private static var BUFFER_SIZE(default, null) : String;
 	
 	/** property identifier: security manager. */
-	private static var SECURITY_MANAGER(default, null) : String;
+	@:protected @:static @:final private static var SECURITY_MANAGER(default, null) : String;
 	
-	private static var PARSER_SETTINGS(default, null) : String;
+	@:protected @:static @:final private static var PARSER_SETTINGS(default, null) : String;
 	
 	/** warn on duplicate Entity declaration.
 	*  http://apache.org/xml/features/warn-on-duplicate-entitydef
 	*/
-	private var fWarnDuplicateEntityDef : Bool;
+	@:protected private var fWarnDuplicateEntityDef : Bool;
 	
 	/**
 	* Validation. This feature identifier is:
 	* http://xml.org/sax/features/validation
 	*/
-	private var fValidation : Bool;
+	@:protected private var fValidation : Bool;
 	
 	/**
 	* External general entities. This feature identifier is:
 	* http://xml.org/sax/features/external-general-entities
 	*/
-	private var fExternalGeneralEntities : Bool;
+	@:protected private var fExternalGeneralEntities : Bool;
 	
 	/**
 	* External parameter entities. This feature identifier is:
 	* http://xml.org/sax/features/external-parameter-entities
 	*/
-	private var fExternalParameterEntities : Bool;
+	@:protected private var fExternalParameterEntities : Bool;
 	
 	/**
 	* Allow Java encoding names. This feature identifier is:
 	* http://apache.org/xml/features/allow-java-encodings
 	*/
-	private var fAllowJavaEncodings : Bool;
+	@:protected private var fAllowJavaEncodings : Bool;
 	
 	/**
 	* Symbol table. This property identifier is:
 	* http://apache.org/xml/properties/internal/symbol-table
 	*/
-	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
 	/**
 	* Error reporter. This property identifier is:
 	* http://apache.org/xml/properties/internal/error-reporter
 	*/
-	private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
+	@:protected private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
 	
 	/**
 	* Entity resolver. This property identifier is:
 	* http://apache.org/xml/properties/internal/entity-resolver
 	*/
-	private var fEntityResolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
+	@:protected private var fEntityResolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
 	
 	/** Stax Entity Resolver. This property identifier is XMLInputFactory.ENTITY_RESOLVER */
-	private var fStaxEntityResolver : com.sun.xml.internal.stream.StaxEntityResolverWrapper;
+	@:protected private var fStaxEntityResolver : com.sun.xml.internal.stream.StaxEntityResolverWrapper;
 	
 	/** Property Manager. This is used from Stax */
-	private var fPropertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager;
+	@:protected private var fPropertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager;
 	
 	/**
 	* Validation manager. This property identifier is:
 	* http://apache.org/xml/properties/internal/validation-manager
 	*/
-	private var fValidationManager : com.sun.org.apache.xerces.internal.impl.validation.ValidationManager;
+	@:protected private var fValidationManager : com.sun.org.apache.xerces.internal.impl.validation.ValidationManager;
 	
 	/**
 	* Buffer size. We get this value from a property. The default size
 	* is used if the input buffer size property is not specified.
 	* REVISIT: do we need a property for internal entity buffer size?
 	*/
-	private var fBufferSize : Int;
+	@:protected private var fBufferSize : Int;
 	
-	private var fSecurityManager : com.sun.org.apache.xerces.internal.util.SecurityManager;
+	@:protected private var fSecurityManager : com.sun.org.apache.xerces.internal.util.SecurityManager;
 	
 	/**
 	* True if the document entity is standalone. This should really
 	* only be set by the document source (e.g. XMLDocumentScanner).
 	*/
-	private var fStandalone : Bool;
+	@:protected private var fStandalone : Bool;
 	
-	private var fInExternalSubset : Bool;
+	@:protected private var fInExternalSubset : Bool;
 	
 	/** Entity handler. */
-	private var fEntityHandler : com.sun.org.apache.xerces.internal.impl.XMLEntityHandler;
+	@:protected private var fEntityHandler : com.sun.org.apache.xerces.internal.impl.XMLEntityHandler;
 	
 	/** Current entity scanner */
-	private var fEntityScanner : com.sun.org.apache.xerces.internal.impl.XMLEntityScanner;
+	@:protected private var fEntityScanner : com.sun.org.apache.xerces.internal.impl.XMLEntityScanner;
 	
 	/** XML 1.0 entity scanner. */
-	private var fXML10EntityScanner : com.sun.org.apache.xerces.internal.impl.XMLEntityScanner;
+	@:protected private var fXML10EntityScanner : com.sun.org.apache.xerces.internal.impl.XMLEntityScanner;
 	
 	/** XML 1.1 entity scanner. */
-	private var fXML11EntityScanner : com.sun.org.apache.xerces.internal.impl.XMLEntityScanner;
+	@:protected private var fXML11EntityScanner : com.sun.org.apache.xerces.internal.impl.XMLEntityScanner;
 	
 	/** entity expansion limit (contains useful data if and only if
 	fSecurityManager is non-null) */
-	private var fEntityExpansionLimit : Int;
+	@:protected private var fEntityExpansionLimit : Int;
 	
 	/** count of entities expanded: */
-	private var fEntityExpansionCount : Int;
+	@:protected private var fEntityExpansionCount : Int;
 	
 	/** Entities. */
-	private var fEntities : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var fEntities : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/** Entity stack. */
-	private var fEntityStack : java.util.Stack<Dynamic>;
+	@:protected private var fEntityStack : java.util.Stack<Dynamic>;
 	
 	/** Current entity. */
-	private var fCurrentEntity : com.sun.xml.internal.stream.Entity.Entity_ScannedEntity;
+	@:protected private var fCurrentEntity : com.sun.xml.internal.stream.Entity.Entity_ScannedEntity;
 	
-	private var fEntityStorage : com.sun.xml.internal.stream.XMLEntityStorage;
+	@:protected private var fEntityStorage : com.sun.xml.internal.stream.XMLEntityStorage;
 	
-	private var defaultEncoding(default, null) : java.NativeArray<Dynamic>;
+	@:protected @:final private var defaultEncoding(default, null) : java.NativeArray<Dynamic>;
 	
 	/**
 	* If this constructor is used to create the object, reset() should be invoked on this object
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Default constructor. */
-	@:overload public function new(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function new(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* Adds an internal entity declaration.
@@ -203,7 +203,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @see SymbolTable
 	*/
-	@:overload public function addInternalEntity(name : String, text : String) : Void;
+	@:overload @:public public function addInternalEntity(name : String, text : String) : Void;
 	
 	/**
 	* Adds an external entity declaration.
@@ -227,7 +227,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @see SymbolTable
 	*/
-	@:overload public function addExternalEntity(name : String, publicId : String, literalSystemId : String, baseSystemId : String) : Void;
+	@:overload @:public public function addExternalEntity(name : String, publicId : String, literalSystemId : String, baseSystemId : String) : Void;
 	
 	/**
 	* Adds an unparsed entity declaration.
@@ -245,15 +245,15 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @see SymbolTable
 	*/
-	@:overload public function addUnparsedEntity(name : String, publicId : String, systemId : String, baseSystemId : String, notation : String) : Void;
+	@:overload @:public public function addUnparsedEntity(name : String, publicId : String, systemId : String, baseSystemId : String, notation : String) : Void;
 	
 	/** get the entity storage object from entity manager */
-	@:overload public function getEntityStore() : com.sun.xml.internal.stream.XMLEntityStorage;
+	@:overload @:public public function getEntityStore() : com.sun.xml.internal.stream.XMLEntityStorage;
 	
 	/** return the entity responsible for reading the entity */
-	@:overload public function getEntityScanner() : com.sun.org.apache.xerces.internal.impl.XMLEntityScanner;
+	@:overload @:public public function getEntityScanner() : com.sun.org.apache.xerces.internal.impl.XMLEntityScanner;
 	
-	@:overload public function setScannerVersion(version : java.StdTypes.Int16) : Void;
+	@:overload @:public public function setScannerVersion(version : java.StdTypes.Int16) : Void;
 	
 	/**
 	* This method uses the passed-in XMLInputSource to make
@@ -268,7 +268,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*  XNIException    If any parser-specific goes wrong.
 	* @return the encoding of the new entity or null if a character stream was employed
 	*/
-	@:overload public function setupCurrentEntity(name : String, xmlInputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource, literal : Bool, isExternal : Bool) : String;
+	@:overload @:public public function setupCurrentEntity(name : String, xmlInputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource, literal : Bool, isExternal : Bool) : String;
 	
 	/**
 	* Checks whether an entity given by name is external.
@@ -277,7 +277,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	* @return True if the entity is external, false otherwise
 	* (including when the entity is not declared).
 	*/
-	@:overload public function isExternalEntity(entityName : String) : Bool;
+	@:overload @:public public function isExternalEntity(entityName : String) : Bool;
 	
 	/**
 	* Checks whether the declaration of an entity given by name is
@@ -287,23 +287,23 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	* @return True if the entity was declared in the external subset, false otherwise
 	*           (including when the entity is not declared).
 	*/
-	@:overload public function isEntityDeclInExternalSubset(entityName : String) : Bool;
+	@:overload @:public public function isEntityDeclInExternalSubset(entityName : String) : Bool;
 	
 	/**
 	* Sets whether the document entity is standalone.
 	*
 	* @param standalone True if document entity is standalone.
 	*/
-	@:overload public function setStandalone(standalone : Bool) : Void;
+	@:overload @:public public function setStandalone(standalone : Bool) : Void;
 	
 	/** Returns true if the document entity is standalone. */
-	@:overload public function isStandalone() : Bool;
+	@:overload @:public public function isStandalone() : Bool;
 	
-	@:overload public function isDeclaredEntity(entityName : String) : Bool;
+	@:overload @:public public function isDeclaredEntity(entityName : String) : Bool;
 	
-	@:overload public function isUnparsedEntity(entityName : String) : Bool;
+	@:overload @:public public function isUnparsedEntity(entityName : String) : Bool;
 	
-	@:overload public function getCurrentResourceIdentifier() : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier;
+	@:overload @:public public function getCurrentResourceIdentifier() : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier;
 	
 	/**
 	* Sets the entity handler. When an entity starts and ends, the
@@ -311,9 +311,9 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @param entityHandler The new entity handler.
 	*/
-	@:overload public function setEntityHandler(entityHandler : com.sun.org.apache.xerces.internal.impl.XMLEntityHandler) : Void;
+	@:overload @:public public function setEntityHandler(entityHandler : com.sun.org.apache.xerces.internal.impl.XMLEntityHandler) : Void;
 	
-	@:overload public function resolveEntityAsPerStax(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : com.sun.xml.internal.stream.StaxXMLInputSource;
+	@:overload @:public public function resolveEntityAsPerStax(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : com.sun.xml.internal.stream.StaxXMLInputSource;
 	
 	/**
 	* Resolves the specified public and system identifiers. This
@@ -337,7 +337,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	* @throws IOException  Thrown on i/o error.
 	* @throws XNIException Thrown by entity resolver to signal an error.
 	*/
-	@:overload public function resolveEntity(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
+	@:overload @:public public function resolveEntity(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
 	
 	/**
 	* Starts a named entity.
@@ -349,7 +349,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	* @throws IOException  Thrown on i/o error.
 	* @throws XNIException Thrown by entity handler to signal an error.
 	*/
-	@:overload public function startEntity(entityName : String, literal : Bool) : Void;
+	@:overload @:public public function startEntity(entityName : String, literal : Bool) : Void;
 	
 	/**
 	* Starts the document entity. The document entity has the "[xml]"
@@ -360,7 +360,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	* @throws IOException  Thrown on i/o error.
 	* @throws XNIException Thrown by entity handler to signal an error.
 	*/
-	@:overload public function startDocumentEntity(xmlInputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public public function startDocumentEntity(xmlInputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**
 	* Starts the DTD entity. The DTD entity has the "[dtd]"
@@ -371,11 +371,11 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	* @throws IOException  Thrown on i/o error.
 	* @throws XNIException Thrown by entity handler to signal an error.
 	*/
-	@:overload public function startDTDEntity(xmlInputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public public function startDTDEntity(xmlInputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
-	@:overload public function startExternalSubset() : Void;
+	@:overload @:public public function startExternalSubset() : Void;
 	
-	@:overload public function endExternalSubset() : Void;
+	@:overload @:public public function endExternalSubset() : Void;
 	
 	/**
 	* Starts an entity.
@@ -392,28 +392,28 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	* @throws IOException  Thrown on i/o error.
 	* @throws XNIException Thrown by entity handler to signal an error.
 	*/
-	@:overload public function startEntity(name : String, xmlInputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource, literal : Bool, isExternal : Bool) : Void;
+	@:overload @:public public function startEntity(name : String, xmlInputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource, literal : Bool, isExternal : Bool) : Void;
 	
 	/**
 	* Return the current entity being scanned. Current entity is SET using startEntity function.
 	* @return Entity.ScannedEntity
 	*/
-	@:overload public function getCurrentEntity() : com.sun.xml.internal.stream.Entity.Entity_ScannedEntity;
+	@:overload @:public public function getCurrentEntity() : com.sun.xml.internal.stream.Entity.Entity_ScannedEntity;
 	
 	/**
 	* Return the top level entity handled by this manager, or null
 	* if no entity was added.
 	*/
-	@:overload public function getTopLevelEntity() : com.sun.xml.internal.stream.Entity.Entity_ScannedEntity;
+	@:overload @:public public function getTopLevelEntity() : com.sun.xml.internal.stream.Entity.Entity_ScannedEntity;
 	
 	/**
 	* Close all opened InputStreams and Readers opened by this parser.
 	*/
-	@:overload public function closeReaders() : Void;
+	@:overload @:public public function closeReaders() : Void;
 	
-	@:overload public function endEntity() : Void;
+	@:overload @:public public function endEntity() : Void;
 	
-	@:overload public function reset(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function reset(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* Resets the component. The component can query the component manager
@@ -429,16 +429,16 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*                      SAXNotRecognizedException or a
 	*                      SAXNotSupportedException.
 	*/
-	@:overload public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Returns a list of feature identifiers that are recognized by
 	* this component. This method may return null if no features
 	* are recognized by this component.
 	*/
-	@:overload public function getRecognizedFeatures() : java.NativeArray<String>;
+	@:overload @:public public function getRecognizedFeatures() : java.NativeArray<String>;
 	
 	/**
 	* Sets the state of a feature. This method is called by the component
@@ -455,7 +455,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	* @throws SAXNotSupportedException The component should not throw
 	*                                  this exception.
 	*/
-	@:overload public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload @:public public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* Sets the value of a property. This method is called by the component
@@ -472,14 +472,14 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	* @throws SAXNotSupportedException The component should not throw
 	*                                  this exception.
 	*/
-	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/**
 	* Returns a list of property identifiers that are recognized by
 	* this component. This method may return null if no properties
 	* are recognized by this component.
 	*/
-	@:overload public function getRecognizedProperties() : java.NativeArray<String>;
+	@:overload @:public public function getRecognizedProperties() : java.NativeArray<String>;
 	
 	/**
 	* Returns the default state for a feature, or null if this
@@ -490,7 +490,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload public function getFeatureDefault(featureId : String) : Null<Bool>;
+	@:require(java2) @:overload @:public public function getFeatureDefault(featureId : String) : Null<Bool>;
 	
 	/**
 	* Returns the default state for a property, or null if this
@@ -501,7 +501,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload public function getPropertyDefault(propertyId : String) : Dynamic;
+	@:require(java2) @:overload @:public public function getPropertyDefault(propertyId : String) : Dynamic;
 	
 	/**
 	* Expands a system id and returns the system id as a URI, if
@@ -516,7 +516,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*         system identifier is already expanded.
 	*
 	*/
-	@:overload public static function expandSystemId(systemId : String) : String;
+	@:overload @:public @:static public static function expandSystemId(systemId : String) : String;
 	
 	/**
 	* Absolutizes a URI using the current value
@@ -525,7 +525,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @param uri the URI to absolutize
 	*/
-	@:overload public static function absolutizeAgainstUserDir(uri : com.sun.org.apache.xerces.internal.util.URI) : Void;
+	@:overload @:public @:static public static function absolutizeAgainstUserDir(uri : com.sun.org.apache.xerces.internal.util.URI) : Void;
 	
 	/**
 	* Expands a system id and returns the system id as a URI, if
@@ -540,7 +540,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*         system identifier is already expanded.
 	*
 	*/
-	@:overload public static function expandSystemId(systemId : String, baseSystemId : String) : String;
+	@:overload @:public @:static public static function expandSystemId(systemId : String, baseSystemId : String) : String;
 	
 	/**
 	* Expands a system id and returns the system id as a URI, if
@@ -555,13 +555,13 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*         system identifier is already expanded.
 	*
 	*/
-	@:overload public static function expandSystemId(systemId : String, baseSystemId : String, strict : Bool) : String;
+	@:overload @:public @:static public static function expandSystemId(systemId : String, baseSystemId : String, strict : Bool) : String;
 	
 	/**
 	* Attempt to set whether redirects will be followed for an <code>HttpURLConnection</code>.
 	* This may fail on earlier JDKs which do not support setting this preference.
 	*/
-	@:overload public static function setInstanceFollowRedirects(urlCon : java.net.HttpURLConnection, followRedirects : Bool) : Void;
+	@:overload @:public @:static public static function setInstanceFollowRedirects(urlCon : java.net.HttpURLConnection, followRedirects : Bool) : Void;
 	
 	/**
 	* Returns the IANA encoding name that is auto-detected from
@@ -573,7 +573,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*  the second element a Boolean which is true iff the document is big endian, false
 	*  if it's little-endian, and null if the distinction isn't relevant.
 	*/
-	@:overload private function getEncodingName(b4 : java.NativeArray<java.StdTypes.Int8>, count : Int) : java.NativeArray<Dynamic>;
+	@:overload @:protected private function getEncodingName(b4 : java.NativeArray<java.StdTypes.Int8>, count : Int) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Creates a reader capable of reading the given input stream in
@@ -591,7 +591,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @return Returns a reader.
 	*/
-	@:overload private function createReader(inputStream : java.io.InputStream, encoding : String, isBigEndian : Null<Bool>) : java.io.Reader;
+	@:overload @:protected private function createReader(inputStream : java.io.InputStream, encoding : String, isBigEndian : Null<Bool>) : java.io.Reader;
 	
 	/**
 	* Return the public identifier for the current document event.
@@ -603,7 +603,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	* @return A string containing the public identifier, or
 	*         null if none is available.
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* Return the expanded system identifier for the current document event.
@@ -618,7 +618,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	* @return A string containing the expanded system identifier, or null
 	*         if none is available.
 	*/
-	@:overload public function getExpandedSystemId() : String;
+	@:overload @:public public function getExpandedSystemId() : String;
 	
 	/**
 	* Return the literal system identifier for the current document event.
@@ -630,7 +630,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	* @return A string containing the literal system identifier, or null
 	*         if none is available.
 	*/
-	@:overload public function getLiteralSystemId() : String;
+	@:overload @:public public function getLiteralSystemId() : String;
 	
 	/**
 	* Return the line number where the current document event ends.
@@ -650,7 +650,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @return The line number, or -1 if none is available.
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* Return the column number where the current document event ends.
@@ -674,7 +674,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @return The column number, or -1 if none is available.
 	*/
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	/**
 	* Fixes a platform dependent filename to standard URI form.
@@ -683,7 +683,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @return Returns the fixed URI string.
 	*/
-	@:overload private static function fixURI(str : String) : String;
+	@:overload @:protected @:static private static function fixURI(str : String) : String;
 	
 	/**
 	* Escape invalid URI characters.
@@ -704,9 +704,9 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* Very rarely, we may be wrong. If so, tell the user to fix the clearly broken URI.
 	*/
-	@:overload private static function escapeNonUSAscii(str : String) : String;
+	@:overload @:protected @:static private static function escapeNonUSAscii(str : String) : String;
 	
-	@:overload public function test() : Void;
+	@:overload @:public public function test() : Void;
 	
 	
 }
@@ -720,7 +720,7 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 */
 @:native('com$sun$org$apache$xerces$internal$impl$XMLEntityManager$CharacterBuffer') @:internal extern class XMLEntityManager_CharacterBuffer
 {
-	@:overload public function new(isExternal : Bool, size : Int) : Void;
+	@:overload @:public public function new(isExternal : Bool, size : Int) : Void;
 	
 	
 }
@@ -734,18 +734,18 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 */
 @:native('com$sun$org$apache$xerces$internal$impl$XMLEntityManager$CharacterBufferPool') @:internal extern class XMLEntityManager_CharacterBufferPool
 {
-	@:overload public function new(externalBufferSize : Int, internalBufferSize : Int) : Void;
+	@:overload @:public public function new(externalBufferSize : Int, internalBufferSize : Int) : Void;
 	
-	@:overload public function new(poolSize : Int, externalBufferSize : Int, internalBufferSize : Int) : Void;
+	@:overload @:public public function new(poolSize : Int, externalBufferSize : Int, internalBufferSize : Int) : Void;
 	
 	/** Retrieves buffer from pool. **/
-	@:overload public function getBuffer(external : Bool) : com.sun.org.apache.xerces.internal.impl.XMLEntityManager.XMLEntityManager_CharacterBuffer;
+	@:overload @:public public function getBuffer(external : Bool) : com.sun.org.apache.xerces.internal.impl.XMLEntityManager.XMLEntityManager_CharacterBuffer;
 	
 	/** Returns buffer to pool. **/
-	@:overload public function returnToPool(buffer : com.sun.org.apache.xerces.internal.impl.XMLEntityManager.XMLEntityManager_CharacterBuffer) : Void;
+	@:overload @:public public function returnToPool(buffer : com.sun.org.apache.xerces.internal.impl.XMLEntityManager.XMLEntityManager_CharacterBuffer) : Void;
 	
 	/** Sets the size of external buffers and dumps the old pool. **/
-	@:overload public function setExternalBufferSize(bufferSize : Int) : Void;
+	@:overload @:public public function setExternalBufferSize(bufferSize : Int) : Void;
 	
 	
 }
@@ -773,27 +773,27 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 */
 @:native('com$sun$org$apache$xerces$internal$impl$XMLEntityManager$RewindableInputStream') extern class XMLEntityManager_RewindableInputStream extends java.io.InputStream
 {
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
-	@:overload public function setStartOffset(offset : Int) : Void;
+	@:overload @:public public function setStartOffset(offset : Int) : Void;
 	
-	@:overload public function rewind() : Void;
+	@:overload @:public public function rewind() : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload override public function mark(howMuch : Int) : Void;
+	@:overload @:public override public function mark(howMuch : Int) : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

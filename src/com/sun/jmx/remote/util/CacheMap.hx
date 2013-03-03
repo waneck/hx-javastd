@@ -38,11 +38,11 @@ extern class CacheMap<K, V> extends java.util.WeakHashMap<K, V>
 	* @throws IllegalArgumentException if
 	* <code>nSoftReferences</code> is negative.
 	*/
-	@:overload public function new(nSoftReferences : Int) : Void;
+	@:overload @:public public function new(nSoftReferences : Int) : Void;
 	
-	@:overload public function put(key : K, value : V) : V;
+	@:overload @:public override public function put(key : K, value : V) : V;
 	
-	@:overload public function get(key : Dynamic) : V;
+	@:overload @:public override public function get(key : Dynamic) : V;
 	
 	
 }

@@ -32,7 +32,7 @@ package com.sun.java.swing.plaf.gtk;
 */
 @:native('com$sun$java$swing$plaf$gtk$XColors$XColor') @:internal extern class XColors_XColor implements java.lang.Comparable<Dynamic>
 {
-	@:overload public function compareTo(o : Dynamic) : Int;
+	@:overload @:public public function compareTo(o : Dynamic) : Int;
 	
 	
 }

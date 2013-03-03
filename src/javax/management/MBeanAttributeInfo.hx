@@ -41,7 +41,7 @@ extern class MBeanAttributeInfo extends javax.management.MBeanFeatureInfo implem
 	* (New code should always use {@code boolean} rather than
 	* {@code java.lang.Boolean}.)
 	*/
-	@:overload public function new(name : String, type : String, description : String, isReadable : Bool, isWritable : Bool, isIs : Bool) : Void;
+	@:overload @:public public function new(name : String, type : String, description : String, isReadable : Bool, isWritable : Bool, isIs : Bool) : Void;
 	
 	/**
 	* Constructs an <CODE>MBeanAttributeInfo</CODE> object.
@@ -63,7 +63,7 @@ extern class MBeanAttributeInfo extends javax.management.MBeanFeatureInfo implem
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(name : String, type : String, description : String, isReadable : Bool, isWritable : Bool, isIs : Bool, descriptor : javax.management.Descriptor) : Void;
+	@:require(java6) @:overload @:public public function new(name : String, type : String, description : String, isReadable : Bool, isWritable : Bool, isIs : Bool, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* <p>This constructor takes the name of a simple attribute, and Method
@@ -81,7 +81,7 @@ extern class MBeanAttributeInfo extends javax.management.MBeanFeatureInfo implem
 	* @exception IntrospectionException There is a consistency
 	* problem in the definition of this attribute.
 	*/
-	@:overload public function new(name : String, description : String, getter : java.lang.reflect.Method, setter : java.lang.reflect.Method) : Void;
+	@:overload @:public public function new(name : String, description : String, getter : java.lang.reflect.Method, setter : java.lang.reflect.Method) : Void;
 	
 	/**
 	* <p>Returns a shallow clone of this instance.
@@ -93,37 +93,37 @@ extern class MBeanAttributeInfo extends javax.management.MBeanFeatureInfo implem
 	* <p>Since this class is immutable, cloning is chiefly of
 	* interest to subclasses.</p>
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns the class name of the attribute.
 	*
 	* @return the class name.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	* Whether the value of the attribute can be read.
 	*
 	* @return True if the attribute can be read, false otherwise.
 	*/
-	@:overload public function isReadable() : Bool;
+	@:overload @:public public function isReadable() : Bool;
 	
 	/**
 	* Whether new values can be written to the attribute.
 	*
 	* @return True if the attribute can be written to, false otherwise.
 	*/
-	@:overload public function isWritable() : Bool;
+	@:overload @:public public function isWritable() : Bool;
 	
 	/**
 	* Indicates if this attribute has an "is" getter.
 	*
 	* @return true if this attribute has an "is" getter.
 	*/
-	@:overload public function isIs() : Bool;
+	@:overload @:public public function isIs() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compare this MBeanAttributeInfo to another.
@@ -136,7 +136,7 @@ extern class MBeanAttributeInfo extends javax.management.MBeanFeatureInfo implem
 	* #isWritable()}, and {@link #isIs()} values are equal (not
 	* necessarily identical) to those of this MBeanAttributeInfo.
 	*/
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
 	/* We do not include everything in the hashcode.  We assume that
 	if two operations are different they'll probably have different
@@ -144,7 +144,7 @@ extern class MBeanAttributeInfo extends javax.management.MBeanFeatureInfo implem
 	wrong should be less than the penalty we would pay if it were
 	right and we needlessly hashed in the description and parameter
 	array.  */
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

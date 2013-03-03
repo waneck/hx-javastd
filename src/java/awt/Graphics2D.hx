@@ -37,7 +37,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see java.awt.Component#getGraphics
 	* @see java.awt.Graphics#create
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Draws a 3-D highlighted outline of the specified rectangle.
@@ -60,7 +60,7 @@ extern class Graphics2D extends java.awt.Graphics
 	*                      or sunk into the surface.
 	* @see         java.awt.Graphics#fill3DRect
 	*/
-	@:overload public function draw3DRect(x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
+	@:overload @:public override public function draw3DRect(x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
 	
 	/**
 	* Paints a 3-D highlighted rectangle filled with the current color.
@@ -79,7 +79,7 @@ extern class Graphics2D extends java.awt.Graphics
 	*                      or etched into the surface.
 	* @see         java.awt.Graphics#draw3DRect
 	*/
-	@:overload public function fill3DRect(x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
+	@:overload @:public override public function fill3DRect(x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
 	
 	/**
 	* Strokes the outline of a <code>Shape</code> using the settings of the
@@ -97,7 +97,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #setClip
 	* @see #setComposite
 	*/
-	@:overload @:abstract public function draw(s : java.awt.Shape) : Void;
+	@:overload @:public @:abstract public function draw(s : java.awt.Shape) : Void;
 	
 	/**
 	* Renders an image, applying a transform from image space into user space
@@ -125,7 +125,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload @:abstract public function drawImage(img : java.awt.Image, xform : java.awt.geom.AffineTransform, obs : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public @:abstract public function drawImage(img : java.awt.Image, xform : java.awt.geom.AffineTransform, obs : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Renders a <code>BufferedImage</code> that is
@@ -152,7 +152,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload @:abstract public function drawImage(img : java.awt.image.BufferedImage, op : java.awt.image.BufferedImageOp, x : Int, y : Int) : Void;
+	@:overload @:public @:abstract public function drawImage(img : java.awt.image.BufferedImage, op : java.awt.image.BufferedImageOp, x : Int, y : Int) : Void;
 	
 	/**
 	* Renders a {@link RenderedImage},
@@ -175,7 +175,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload @:abstract public function drawRenderedImage(img : java.awt.image.RenderedImage, xform : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public @:abstract public function drawRenderedImage(img : java.awt.image.RenderedImage, xform : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Renders a
@@ -208,7 +208,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #setClip
 	* @see #drawRenderedImage
 	*/
-	@:overload @:abstract public function drawRenderableImage(img : java.awt.image.renderable.RenderableImage, xform : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public @:abstract public function drawRenderableImage(img : java.awt.image.renderable.RenderableImage, xform : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Renders the text of the specified <code>String</code>, using the
@@ -233,7 +233,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see         java.awt.Graphics#drawChars
 	* @since       JDK1.0
 	*/
-	@:require(java0) @:overload @:abstract public function drawString(str : String, x : Int, y : Int) : Void;
+	@:require(java0) @:overload @:public @:abstract override public function drawString(str : String, x : Int, y : Int) : Void;
 	
 	/**
 	* Renders the text specified by the specified <code>String</code>,
@@ -260,7 +260,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #setComposite
 	* @see #setClip
 	*/
-	@:overload @:abstract public function drawString(str : String, x : Single, y : Single) : Void;
+	@:overload @:public @:abstract public function drawString(str : String, x : Single, y : Single) : Void;
 	
 	/**
 	* Renders the text of the specified iterator applying its attributes
@@ -285,7 +285,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #setComposite
 	* @see #setClip
 	*/
-	@:overload @:abstract public function drawString(iterator : java.text.AttributedCharacterIterator, x : Int, y : Int) : Void;
+	@:overload @:public @:abstract override public function drawString(iterator : java.text.AttributedCharacterIterator, x : Int, y : Int) : Void;
 	
 	/**
 	* Renders the text of the specified iterator applying its attributes
@@ -310,7 +310,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #setComposite
 	* @see #setClip
 	*/
-	@:overload @:abstract public function drawString(iterator : java.text.AttributedCharacterIterator, x : Single, y : Single) : Void;
+	@:overload @:public @:abstract public function drawString(iterator : java.text.AttributedCharacterIterator, x : Single, y : Single) : Void;
 	
 	/**
 	* Renders the text of the specified
@@ -338,7 +338,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #setComposite
 	* @see #setClip
 	*/
-	@:overload @:abstract public function drawGlyphVector(g : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
+	@:overload @:public @:abstract public function drawGlyphVector(g : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
 	
 	/**
 	* Fills the interior of a <code>Shape</code> using the settings of the
@@ -354,7 +354,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload @:abstract public function fill(s : java.awt.Shape) : Void;
+	@:overload @:public @:abstract public function fill(s : java.awt.Shape) : Void;
 	
 	/**
 	* Checks whether or not the specified <code>Shape</code> intersects
@@ -385,14 +385,14 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload @:abstract public function hit(rect : java.awt.Rectangle, s : java.awt.Shape, onStroke : Bool) : Bool;
+	@:overload @:public @:abstract public function hit(rect : java.awt.Rectangle, s : java.awt.Shape, onStroke : Bool) : Bool;
 	
 	/**
 	* Returns the device configuration associated with this
 	* <code>Graphics2D</code>.
 	* @return the device configuration of this <code>Graphics2D</code>.
 	*/
-	@:overload @:abstract public function getDeviceConfiguration() : java.awt.GraphicsConfiguration;
+	@:overload @:public @:abstract public function getDeviceConfiguration() : java.awt.GraphicsConfiguration;
 	
 	/**
 	* Sets the <code>Composite</code> for the <code>Graphics2D</code> context.
@@ -421,7 +421,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see SecurityManager#checkPermission
 	* @see java.awt.AWTPermission
 	*/
-	@:overload @:abstract public function setComposite(comp : java.awt.Composite) : Void;
+	@:overload @:public @:abstract public function setComposite(comp : java.awt.Composite) : Void;
 	
 	/**
 	* Sets the <code>Paint</code> attribute for the
@@ -436,7 +436,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see GradientPaint
 	* @see TexturePaint
 	*/
-	@:overload @:abstract public function setPaint(paint : java.awt.Paint) : Void;
+	@:overload @:public @:abstract public function setPaint(paint : java.awt.Paint) : Void;
 	
 	/**
 	* Sets the <code>Stroke</code> for the <code>Graphics2D</code> context.
@@ -445,7 +445,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see BasicStroke
 	* @see #getStroke
 	*/
-	@:overload @:abstract public function setStroke(s : java.awt.Stroke) : Void;
+	@:overload @:public @:abstract public function setStroke(s : java.awt.Stroke) : Void;
 	
 	/**
 	* Sets the value of a single preference for the rendering algorithms.
@@ -459,7 +459,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #getRenderingHint(RenderingHints.Key)
 	* @see RenderingHints
 	*/
-	@:overload @:abstract public function setRenderingHint(hintKey : java.awt.RenderingHints.RenderingHints_Key, hintValue : Dynamic) : Void;
+	@:overload @:public @:abstract public function setRenderingHint(hintKey : java.awt.RenderingHints.RenderingHints_Key, hintValue : Dynamic) : Void;
 	
 	/**
 	* Returns the value of a single preference for the rendering algorithms.
@@ -474,7 +474,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see RenderingHints
 	* @see #setRenderingHint(RenderingHints.Key, Object)
 	*/
-	@:overload @:abstract public function getRenderingHint(hintKey : java.awt.RenderingHints.RenderingHints_Key) : Dynamic;
+	@:overload @:public @:abstract public function getRenderingHint(hintKey : java.awt.RenderingHints.RenderingHints_Key) : Dynamic;
 	
 	/**
 	* Replaces the values of all preferences for the rendering
@@ -490,7 +490,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #getRenderingHints
 	* @see RenderingHints
 	*/
-	@:overload @:abstract public function setRenderingHints(hints : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public @:abstract public function setRenderingHints(hints : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Sets the values of an arbitrary number of preferences for the
@@ -506,7 +506,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @param hints the rendering hints to be set
 	* @see RenderingHints
 	*/
-	@:overload @:abstract public function addRenderingHints(hints : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public @:abstract public function addRenderingHints(hints : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Gets the preferences for the rendering algorithms.  Hint categories
@@ -521,7 +521,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see RenderingHints
 	* @see #setRenderingHints(Map)
 	*/
-	@:overload @:abstract public function getRenderingHints() : java.awt.RenderingHints;
+	@:overload @:public @:abstract public function getRenderingHints() : java.awt.RenderingHints;
 	
 	/**
 	* Translates the origin of the <code>Graphics2D</code> context to the
@@ -535,7 +535,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @param  y the specified y coordinate
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload @:abstract public function translate(x : Int, y : Int) : Void;
+	@:require(java0) @:overload @:public @:abstract override public function translate(x : Int, y : Int) : Void;
 	
 	/**
 	* Concatenates the current
@@ -553,7 +553,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @param tx the distance to translate along the x-axis
 	* @param ty the distance to translate along the y-axis
 	*/
-	@:overload @:abstract public function translate(tx : Float, ty : Float) : Void;
+	@:overload @:public @:abstract public function translate(tx : Float, ty : Float) : Void;
 	
 	/**
 	* Concatenates the current <code>Graphics2D</code>
@@ -571,7 +571,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* x axis toward the positive y axis.
 	* @param theta the angle of rotation in radians
 	*/
-	@:overload @:abstract public function rotate(theta : Float) : Void;
+	@:overload @:public @:abstract public function rotate(theta : Float) : Void;
 	
 	/**
 	* Concatenates the current <code>Graphics2D</code>
@@ -592,7 +592,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @param x the x coordinate of the origin of the rotation
 	* @param y the y coordinate of the origin of the rotation
 	*/
-	@:overload @:abstract public function rotate(theta : Float, x : Float, y : Float) : Void;
+	@:overload @:public @:abstract public function rotate(theta : Float, x : Float, y : Float) : Void;
 	
 	/**
 	* Concatenates the current <code>Graphics2D</code>
@@ -613,7 +613,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* rendering operations are multiplied relative to previous
 	* rendering operations.
 	*/
-	@:overload @:abstract public function scale(sx : Float, sy : Float) : Void;
+	@:overload @:public @:abstract public function scale(sx : Float, sy : Float) : Void;
 	
 	/**
 	* Concatenates the current <code>Graphics2D</code>
@@ -633,7 +633,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @param shy the multiplier by which coordinates are shifted in
 	* the positive Y axis direction as a function of their X coordinate
 	*/
-	@:overload @:abstract public function shear(shx : Float, shy : Float) : Void;
+	@:overload @:public @:abstract public function shear(shx : Float, shy : Float) : Void;
 	
 	/**
 	* Composes an <code>AffineTransform</code> object with the
@@ -652,7 +652,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #setTransform
 	* @see AffineTransform
 	*/
-	@:overload @:abstract public function transform(Tx : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public @:abstract public function transform(Tx : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Overwrites the Transform in the <code>Graphics2D</code> context.
@@ -685,7 +685,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #getTransform
 	* @see AffineTransform
 	*/
-	@:overload @:abstract public function setTransform(Tx : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public @:abstract public function setTransform(Tx : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Returns a copy of the current <code>Transform</code> in the
@@ -695,7 +695,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #transform
 	* @see #setTransform
 	*/
-	@:overload @:abstract public function getTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public @:abstract public function getTransform() : java.awt.geom.AffineTransform;
 	
 	/**
 	* Returns the current <code>Paint</code> of the
@@ -705,7 +705,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #setPaint
 	* @see java.awt.Graphics#setColor
 	*/
-	@:overload @:abstract public function getPaint() : java.awt.Paint;
+	@:overload @:public @:abstract public function getPaint() : java.awt.Paint;
 	
 	/**
 	* Returns the current <code>Composite</code> in the
@@ -714,7 +714,7 @@ extern class Graphics2D extends java.awt.Graphics
 	*              which defines a compositing style.
 	* @see #setComposite
 	*/
-	@:overload @:abstract public function getComposite() : java.awt.Composite;
+	@:overload @:public @:abstract public function getComposite() : java.awt.Composite;
 	
 	/**
 	* Sets the background color for the <code>Graphics2D</code> context.
@@ -732,7 +732,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #getBackground
 	* @see java.awt.Graphics#clearRect
 	*/
-	@:overload @:abstract public function setBackground(color : java.awt.Color) : Void;
+	@:overload @:public @:abstract public function setBackground(color : java.awt.Color) : Void;
 	
 	/**
 	* Returns the background color used for clearing a region.
@@ -740,7 +740,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* which defines the background color.
 	* @see #setBackground
 	*/
-	@:overload @:abstract public function getBackground() : java.awt.Color;
+	@:overload @:public @:abstract public function getBackground() : java.awt.Color;
 	
 	/**
 	* Returns the current <code>Stroke</code> in the
@@ -749,7 +749,7 @@ extern class Graphics2D extends java.awt.Graphics
 	*                 which defines the line style.
 	* @see #setStroke
 	*/
-	@:overload @:abstract public function getStroke() : java.awt.Stroke;
+	@:overload @:public @:abstract public function getStroke() : java.awt.Stroke;
 	
 	/**
 	* Intersects the current <code>Clip</code> with the interior of the
@@ -770,7 +770,7 @@ extern class Graphics2D extends java.awt.Graphics
 	*          <code>Clip</code>.  If <code>s</code> is <code>null</code>,
 	*          this method clears the current <code>Clip</code>.
 	*/
-	@:overload @:abstract public function clip(s : java.awt.Shape) : Void;
+	@:overload @:public @:abstract public function clip(s : java.awt.Shape) : Void;
 	
 	/**
 	* Get the rendering context of the <code>Font</code> within this
@@ -793,7 +793,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see java.awt.font.TextLayout
 	* @since     1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getFontRenderContext() : java.awt.font.FontRenderContext;
+	@:require(java2) @:overload @:public @:abstract public function getFontRenderContext() : java.awt.font.FontRenderContext;
 	
 	
 }

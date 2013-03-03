@@ -37,7 +37,7 @@ extern interface PrefixFactory
 	/**
 	* Return a brand new prefix for the given URI.
 	*/
-	@:overload public function getPrefix(uri : String) : String;
+	@:overload @:public public function getPrefix(uri : String) : String;
 	
 	
 }

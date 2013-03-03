@@ -264,7 +264,7 @@ package java.nio;
 	* @throws  IllegalArgumentException
 	*          If the <tt>capacity</tt> is a negative integer
 	*/
-	@:overload public static function allocateDirect(capacity : Int) : java.nio.ByteBuffer;
+	@:overload @:public @:static public static function allocateDirect(capacity : Int) : java.nio.ByteBuffer;
 	
 	/**
 	* Allocates a new byte buffer.
@@ -283,7 +283,7 @@ package java.nio;
 	* @throws  IllegalArgumentException
 	*          If the <tt>capacity</tt> is a negative integer
 	*/
-	@:overload public static function allocate(capacity : Int) : java.nio.ByteBuffer;
+	@:overload @:public @:static public static function allocate(capacity : Int) : java.nio.ByteBuffer;
 	
 	/**
 	* Wraps a byte array into a buffer.
@@ -316,7 +316,7 @@ package java.nio;
 	*          If the preconditions on the <tt>offset</tt> and <tt>length</tt>
 	*          parameters do not hold
 	*/
-	@:overload public static function wrap(array : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : java.nio.ByteBuffer;
+	@:overload @:public @:static public static function wrap(array : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : java.nio.ByteBuffer;
 	
 	/**
 	* Wraps a byte array into a buffer.
@@ -334,7 +334,7 @@ package java.nio;
 	*
 	* @return  The new byte buffer
 	*/
-	@:overload public static function wrap(array : java.NativeArray<java.StdTypes.Int8>) : java.nio.ByteBuffer;
+	@:overload @:public @:static public static function wrap(array : java.NativeArray<java.StdTypes.Int8>) : java.nio.ByteBuffer;
 	
 	/**
 	* Creates a new byte buffer whose content is a shared subsequence of
@@ -353,7 +353,7 @@ package java.nio;
 	*
 	* @return  The new byte buffer
 	*/
-	@:overload @:abstract public function slice() : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function slice() : java.nio.ByteBuffer;
 	
 	/**
 	* Creates a new byte buffer that shares this buffer's content.
@@ -370,7 +370,7 @@ package java.nio;
 	*
 	* @return  The new byte buffer
 	*/
-	@:overload @:abstract public function duplicate() : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function duplicate() : java.nio.ByteBuffer;
 	
 	/**
 	* Creates a new, read-only byte buffer that shares this buffer's
@@ -390,7 +390,7 @@ package java.nio;
 	*
 	* @return  The new, read-only byte buffer
 	*/
-	@:overload @:abstract public function asReadOnlyBuffer() : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function asReadOnlyBuffer() : java.nio.ByteBuffer;
 	
 	/**
 	* Relative <i>get</i> method.  Reads the byte at this buffer's
@@ -401,7 +401,7 @@ package java.nio;
 	* @throws  BufferUnderflowException
 	*          If the buffer's current position is not smaller than its limit
 	*/
-	@:overload @:abstract public function get() : java.StdTypes.Int8;
+	@:overload @:public @:abstract public function get() : java.StdTypes.Int8;
 	
 	/**
 	* Relative <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -420,7 +420,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function put(b : java.StdTypes.Int8) : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function put(b : java.StdTypes.Int8) : java.nio.ByteBuffer;
 	
 	/**
 	* Absolute <i>get</i> method.  Reads the byte at the given
@@ -435,7 +435,7 @@ package java.nio;
 	*          If <tt>index</tt> is negative
 	*          or not smaller than the buffer's limit
 	*/
-	@:overload @:abstract public function get(index : Int) : java.StdTypes.Int8;
+	@:overload @:public @:abstract public function get(index : Int) : java.StdTypes.Int8;
 	
 	/**
 	* Absolute <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -458,7 +458,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function put(index : Int, b : java.StdTypes.Int8) : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function put(index : Int, b : java.StdTypes.Int8) : java.nio.ByteBuffer;
 	
 	/**
 	* Relative bulk <i>get</i> method.
@@ -509,7 +509,7 @@ package java.nio;
 	*          If the preconditions on the <tt>offset</tt> and <tt>length</tt>
 	*          parameters do not hold
 	*/
-	@:overload public function get(dst : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : java.nio.ByteBuffer;
+	@:overload @:public public function get(dst : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : java.nio.ByteBuffer;
 	
 	/**
 	* Relative bulk <i>get</i> method.
@@ -527,7 +527,7 @@ package java.nio;
 	*          If there are fewer than <tt>length</tt> bytes
 	*          remaining in this buffer
 	*/
-	@:overload public function get(dst : java.NativeArray<java.StdTypes.Int8>) : java.nio.ByteBuffer;
+	@:overload @:public public function get(dst : java.NativeArray<java.StdTypes.Int8>) : java.nio.ByteBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -570,7 +570,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload public function put(src : java.nio.ByteBuffer) : java.nio.ByteBuffer;
+	@:overload @:public public function put(src : java.nio.ByteBuffer) : java.nio.ByteBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -622,7 +622,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload public function put(src : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : java.nio.ByteBuffer;
+	@:overload @:public public function put(src : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : java.nio.ByteBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -643,7 +643,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:final public function put(src : java.NativeArray<java.StdTypes.Int8>) : java.nio.ByteBuffer;
+	@:overload @:public @:final public function put(src : java.NativeArray<java.StdTypes.Int8>) : java.nio.ByteBuffer;
 	
 	/**
 	* Tells whether or not this buffer is backed by an accessible byte
@@ -656,7 +656,7 @@ package java.nio;
 	* @return  <tt>true</tt> if, and only if, this buffer
 	*          is backed by an array and is not read-only
 	*/
-	@:overload @:final override public function hasArray() : Bool;
+	@:overload @:public @:final override public function hasArray() : Bool;
 	
 	/**
 	* Returns the byte array that backs this
@@ -677,7 +677,7 @@ package java.nio;
 	* @throws  UnsupportedOperationException
 	*          If this buffer is not backed by an accessible array
 	*/
-	@:overload @:final override public function array() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final override public function array() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the offset within this buffer's backing array of the first
@@ -699,7 +699,7 @@ package java.nio;
 	* @throws  UnsupportedOperationException
 	*          If this buffer is not backed by an accessible array
 	*/
-	@:overload @:final override public function arrayOffset() : Int;
+	@:overload @:public @:final override public function arrayOffset() : Int;
 	
 	/**
 	* Compacts this buffer&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -740,21 +740,21 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function compact() : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function compact() : java.nio.ByteBuffer;
 	
 	/**
 	* Tells whether or not this byte buffer is direct. </p>
 	*
 	* @return  <tt>true</tt> if, and only if, this buffer is direct
 	*/
-	@:overload @:abstract override public function isDirect() : Bool;
+	@:overload @:public @:abstract override public function isDirect() : Bool;
 	
 	/**
 	* Returns a string summarizing the state of this buffer.  </p>
 	*
 	* @return  A summary string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the current hash code of this buffer.
@@ -769,7 +769,7 @@ package java.nio;
 	*
 	* @return  The current hash code of this buffer
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Tells whether or not this buffer is equal to another object.
@@ -803,7 +803,7 @@ package java.nio;
 	* @return  <tt>true</tt> if, and only if, this buffer is equal to the
 	*           given object
 	*/
-	@:overload public function equals(ob : Dynamic) : Bool;
+	@:overload @:public public function equals(ob : Dynamic) : Bool;
 	
 	/**
 	* Compares this buffer to another.
@@ -828,7 +828,7 @@ package java.nio;
 	* @return  A negative integer, zero, or a positive integer as this buffer
 	*          is less than, equal to, or greater than the given buffer
 	*/
-	@:overload public function compareTo(that : java.nio.ByteBuffer) : Int;
+	@:overload @:public public function compareTo(that : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* Retrieves this buffer's byte order.
@@ -840,7 +840,7 @@ package java.nio;
 	*
 	* @return  This buffer's byte order
 	*/
-	@:overload @:final public function order() : java.nio.ByteOrder;
+	@:overload @:public @:final public function order() : java.nio.ByteOrder;
 	
 	/**
 	* Modifies this buffer's byte order.  </p>
@@ -852,7 +852,7 @@ package java.nio;
 	*
 	* @return  This buffer
 	*/
-	@:overload @:final public function order(bo : java.nio.ByteOrder) : java.nio.ByteBuffer;
+	@:overload @:public @:final public function order(bo : java.nio.ByteOrder) : java.nio.ByteBuffer;
 	
 	/**
 	* Relative <i>get</i> method for reading a char value.
@@ -867,7 +867,7 @@ package java.nio;
 	*          If there are fewer than two bytes
 	*          remaining in this buffer
 	*/
-	@:overload @:abstract public function getChar() : java.StdTypes.Char16;
+	@:overload @:public @:abstract public function getChar() : java.StdTypes.Char16;
 	
 	/**
 	* Relative <i>put</i> method for writing a char
@@ -889,7 +889,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function putChar(value : java.StdTypes.Char16) : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function putChar(value : java.StdTypes.Char16) : java.nio.ByteBuffer;
 	
 	/**
 	* Absolute <i>get</i> method for reading a char value.
@@ -907,7 +907,7 @@ package java.nio;
 	*          or not smaller than the buffer's limit,
 	*          minus one
 	*/
-	@:overload @:abstract public function getChar(index : Int) : java.StdTypes.Char16;
+	@:overload @:public @:abstract public function getChar(index : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Absolute <i>put</i> method for writing a char
@@ -932,7 +932,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function putChar(index : Int, value : java.StdTypes.Char16) : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function putChar(index : Int, value : java.StdTypes.Char16) : java.nio.ByteBuffer;
 	
 	/**
 	* Creates a view of this byte buffer as a char buffer.
@@ -950,7 +950,7 @@ package java.nio;
 	*
 	* @return  A new char buffer
 	*/
-	@:overload @:abstract public function asCharBuffer() : java.nio.CharBuffer;
+	@:overload @:public @:abstract public function asCharBuffer() : java.nio.CharBuffer;
 	
 	/**
 	* Relative <i>get</i> method for reading a short value.
@@ -965,7 +965,7 @@ package java.nio;
 	*          If there are fewer than two bytes
 	*          remaining in this buffer
 	*/
-	@:overload @:abstract public function getShort() : java.StdTypes.Int16;
+	@:overload @:public @:abstract public function getShort() : java.StdTypes.Int16;
 	
 	/**
 	* Relative <i>put</i> method for writing a short
@@ -987,7 +987,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function putShort(value : java.StdTypes.Int16) : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function putShort(value : java.StdTypes.Int16) : java.nio.ByteBuffer;
 	
 	/**
 	* Absolute <i>get</i> method for reading a short value.
@@ -1005,7 +1005,7 @@ package java.nio;
 	*          or not smaller than the buffer's limit,
 	*          minus one
 	*/
-	@:overload @:abstract public function getShort(index : Int) : java.StdTypes.Int16;
+	@:overload @:public @:abstract public function getShort(index : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Absolute <i>put</i> method for writing a short
@@ -1030,7 +1030,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function putShort(index : Int, value : java.StdTypes.Int16) : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function putShort(index : Int, value : java.StdTypes.Int16) : java.nio.ByteBuffer;
 	
 	/**
 	* Creates a view of this byte buffer as a short buffer.
@@ -1048,7 +1048,7 @@ package java.nio;
 	*
 	* @return  A new short buffer
 	*/
-	@:overload @:abstract public function asShortBuffer() : java.nio.ShortBuffer;
+	@:overload @:public @:abstract public function asShortBuffer() : java.nio.ShortBuffer;
 	
 	/**
 	* Relative <i>get</i> method for reading an int value.
@@ -1063,7 +1063,7 @@ package java.nio;
 	*          If there are fewer than four bytes
 	*          remaining in this buffer
 	*/
-	@:overload @:abstract public function getInt() : Int;
+	@:overload @:public @:abstract public function getInt() : Int;
 	
 	/**
 	* Relative <i>put</i> method for writing an int
@@ -1085,7 +1085,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function putInt(value : Int) : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function putInt(value : Int) : java.nio.ByteBuffer;
 	
 	/**
 	* Absolute <i>get</i> method for reading an int value.
@@ -1103,7 +1103,7 @@ package java.nio;
 	*          or not smaller than the buffer's limit,
 	*          minus three
 	*/
-	@:overload @:abstract public function getInt(index : Int) : Int;
+	@:overload @:public @:abstract public function getInt(index : Int) : Int;
 	
 	/**
 	* Absolute <i>put</i> method for writing an int
@@ -1128,7 +1128,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function putInt(index : Int, value : Int) : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function putInt(index : Int, value : Int) : java.nio.ByteBuffer;
 	
 	/**
 	* Creates a view of this byte buffer as an int buffer.
@@ -1146,7 +1146,7 @@ package java.nio;
 	*
 	* @return  A new int buffer
 	*/
-	@:overload @:abstract public function asIntBuffer() : java.nio.IntBuffer;
+	@:overload @:public @:abstract public function asIntBuffer() : java.nio.IntBuffer;
 	
 	/**
 	* Relative <i>get</i> method for reading a long value.
@@ -1161,7 +1161,7 @@ package java.nio;
 	*          If there are fewer than eight bytes
 	*          remaining in this buffer
 	*/
-	@:overload @:abstract public function getLong() : haxe.Int64;
+	@:overload @:public @:abstract public function getLong() : haxe.Int64;
 	
 	/**
 	* Relative <i>put</i> method for writing a long
@@ -1183,7 +1183,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function putLong(value : haxe.Int64) : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function putLong(value : haxe.Int64) : java.nio.ByteBuffer;
 	
 	/**
 	* Absolute <i>get</i> method for reading a long value.
@@ -1201,7 +1201,7 @@ package java.nio;
 	*          or not smaller than the buffer's limit,
 	*          minus seven
 	*/
-	@:overload @:abstract public function getLong(index : Int) : haxe.Int64;
+	@:overload @:public @:abstract public function getLong(index : Int) : haxe.Int64;
 	
 	/**
 	* Absolute <i>put</i> method for writing a long
@@ -1226,7 +1226,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function putLong(index : Int, value : haxe.Int64) : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function putLong(index : Int, value : haxe.Int64) : java.nio.ByteBuffer;
 	
 	/**
 	* Creates a view of this byte buffer as a long buffer.
@@ -1244,7 +1244,7 @@ package java.nio;
 	*
 	* @return  A new long buffer
 	*/
-	@:overload @:abstract public function asLongBuffer() : java.nio.LongBuffer;
+	@:overload @:public @:abstract public function asLongBuffer() : java.nio.LongBuffer;
 	
 	/**
 	* Relative <i>get</i> method for reading a float value.
@@ -1259,7 +1259,7 @@ package java.nio;
 	*          If there are fewer than four bytes
 	*          remaining in this buffer
 	*/
-	@:overload @:abstract public function getFloat() : Single;
+	@:overload @:public @:abstract public function getFloat() : Single;
 	
 	/**
 	* Relative <i>put</i> method for writing a float
@@ -1281,7 +1281,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function putFloat(value : Single) : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function putFloat(value : Single) : java.nio.ByteBuffer;
 	
 	/**
 	* Absolute <i>get</i> method for reading a float value.
@@ -1299,7 +1299,7 @@ package java.nio;
 	*          or not smaller than the buffer's limit,
 	*          minus three
 	*/
-	@:overload @:abstract public function getFloat(index : Int) : Single;
+	@:overload @:public @:abstract public function getFloat(index : Int) : Single;
 	
 	/**
 	* Absolute <i>put</i> method for writing a float
@@ -1324,7 +1324,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function putFloat(index : Int, value : Single) : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function putFloat(index : Int, value : Single) : java.nio.ByteBuffer;
 	
 	/**
 	* Creates a view of this byte buffer as a float buffer.
@@ -1342,7 +1342,7 @@ package java.nio;
 	*
 	* @return  A new float buffer
 	*/
-	@:overload @:abstract public function asFloatBuffer() : java.nio.FloatBuffer;
+	@:overload @:public @:abstract public function asFloatBuffer() : java.nio.FloatBuffer;
 	
 	/**
 	* Relative <i>get</i> method for reading a double value.
@@ -1357,7 +1357,7 @@ package java.nio;
 	*          If there are fewer than eight bytes
 	*          remaining in this buffer
 	*/
-	@:overload @:abstract public function getDouble() : Float;
+	@:overload @:public @:abstract public function getDouble() : Float;
 	
 	/**
 	* Relative <i>put</i> method for writing a double
@@ -1379,7 +1379,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function putDouble(value : Float) : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function putDouble(value : Float) : java.nio.ByteBuffer;
 	
 	/**
 	* Absolute <i>get</i> method for reading a double value.
@@ -1397,7 +1397,7 @@ package java.nio;
 	*          or not smaller than the buffer's limit,
 	*          minus seven
 	*/
-	@:overload @:abstract public function getDouble(index : Int) : Float;
+	@:overload @:public @:abstract public function getDouble(index : Int) : Float;
 	
 	/**
 	* Absolute <i>put</i> method for writing a double
@@ -1422,7 +1422,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function putDouble(index : Int, value : Float) : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function putDouble(index : Int, value : Float) : java.nio.ByteBuffer;
 	
 	/**
 	* Creates a view of this byte buffer as a double buffer.
@@ -1440,7 +1440,7 @@ package java.nio;
 	*
 	* @return  A new double buffer
 	*/
-	@:overload @:abstract public function asDoubleBuffer() : java.nio.DoubleBuffer;
+	@:overload @:public @:abstract public function asDoubleBuffer() : java.nio.DoubleBuffer;
 	
 	/**
 	* Compares this object with the specified object for order.  Returns a
@@ -1481,7 +1481,7 @@ package java.nio;
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload public function compareTo(o : Dynamic) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
 	
 	
 }

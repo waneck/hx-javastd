@@ -43,7 +43,7 @@ package java.lang.invoke;
 	/**
 	* Constructs a {@code WrongMethodTypeException} with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a {@code WrongMethodTypeException} with the specified
@@ -51,7 +51,7 @@ package java.lang.invoke;
 	*
 	* @param s the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

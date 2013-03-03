@@ -45,17 +45,17 @@ extern class JavadocEscapeWriter extends java.io.FilterWriter
 	* @author
 	*      Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload public function new(next : java.io.Writer) : Void;
+	@:overload @:public public function new(next : java.io.Writer) : Void;
 	
-	@:overload override public function write(ch : Int) : Void;
+	@:overload @:public override public function write(ch : Int) : Void;
 	
-	@:overload override public function write(buf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(buf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
-	@:overload override public function write(buf : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public override public function write(buf : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
-	@:overload override public function write(buf : String, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(buf : String, off : Int, len : Int) : Void;
 	
-	@:overload override public function write(buf : String) : Void;
+	@:overload @:public override public function write(buf : String) : Void;
 	
 	
 }

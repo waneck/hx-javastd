@@ -31,29 +31,29 @@ package javax.swing.plaf.metal;
 */
 extern class MetalInternalFrameUI extends javax.swing.plaf.basic.BasicInternalFrameUI
 {
-	private static var IS_PALETTE : String;
+	@:protected @:static private static var IS_PALETTE : String;
 	
-	@:overload public function new(b : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function new(b : javax.swing.JInternalFrame) : Void;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installListeners() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
-	@:overload private function installKeyboardActions() : Void;
+	@:overload @:protected override private function installKeyboardActions() : Void;
 	
-	@:overload private function uninstallKeyboardActions() : Void;
+	@:overload @:protected override private function uninstallKeyboardActions() : Void;
 	
-	@:overload private function uninstallComponents() : Void;
+	@:overload @:protected override private function uninstallComponents() : Void;
 	
-	@:overload private function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
+	@:overload @:protected override private function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
 	
-	@:overload public function setPalette(isPalette : Bool) : Void;
+	@:overload @:public public function setPalette(isPalette : Bool) : Void;
 	
 	/**
 	* Returns the <code>MouseInputAdapter</code> that will be installed
@@ -64,19 +64,19 @@ extern class MetalInternalFrameUI extends javax.swing.plaf.basic.BasicInternalFr
 	* on the TitlePane.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function createBorderListener(w : javax.swing.JInternalFrame) : javax.swing.event.MouseInputAdapter;
+	@:require(java6) @:overload @:protected override private function createBorderListener(w : javax.swing.JInternalFrame) : javax.swing.event.MouseInputAdapter;
 	
 	
 }
 @:native('javax$swing$plaf$metal$MetalInternalFrameUI$MetalPropertyChangeHandler') @:internal extern class MetalInternalFrameUI_MetalPropertyChangeHandler implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$metal$MetalInternalFrameUI$BorderListener1') @:internal extern class MetalInternalFrameUI_BorderListener1 extends javax.swing.plaf.basic.BasicInternalFrameUI.BasicInternalFrameUI_BorderListener implements javax.swing.SwingConstants
 {
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

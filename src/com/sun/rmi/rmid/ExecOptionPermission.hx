@@ -34,9 +34,9 @@ package com.sun.rmi.rmid;
 */
 extern class ExecOptionPermission extends java.security.Permission
 {
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	/**
 	* Checks if the specified permission is "implied" by
@@ -56,7 +56,7 @@ extern class ExecOptionPermission extends java.security.Permission
 	* @return true if the passed permission is equal to or
 	* implied by this permission, false otherwise.
 	*/
-	@:overload override public function implies(p : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two ExecOptionPermission objects for equality.
@@ -67,7 +67,7 @@ extern class ExecOptionPermission extends java.security.Permission
 	* @return true if <i>obj</i> is an ExecOptionPermission, and has the same
 	* name as this ExecOptionPermission object, false otherwise.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
@@ -77,14 +77,14 @@ extern class ExecOptionPermission extends java.security.Permission
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Returns the canonical string representation of the actions.
 	*
 	* @return the canonical string representation of the actions.
 	*/
-	@:overload override public function getActions() : String;
+	@:overload @:public override public function getActions() : String;
 	
 	/**
 	* Returns a new PermissionCollection object for storing
@@ -101,7 +101,7 @@ extern class ExecOptionPermission extends java.security.Permission
 	* @return a new PermissionCollection object suitable for
 	* storing ExecOptionPermissions.
 	*/
-	@:overload override public function newPermissionCollection() : java.security.PermissionCollection;
+	@:overload @:public override public function newPermissionCollection() : java.security.PermissionCollection;
 	
 	
 }
@@ -122,7 +122,7 @@ extern class ExecOptionPermission extends java.security.Permission
 	/**
 	* Create an empty ExecOptionPermissionCollection.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Adds a permission to the collection. The key for the hash is
@@ -136,7 +136,7 @@ extern class ExecOptionPermission extends java.security.Permission
 	* @exception SecurityException - if this ExecOptionPermissionCollection
 	*                                object has been marked readonly
 	*/
-	@:overload override public function add(permission : java.security.Permission) : Void;
+	@:overload @:public override public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* Check and see if this set of permissions implies the permissions
@@ -147,7 +147,7 @@ extern class ExecOptionPermission extends java.security.Permission
 	* @return true if "permission" is a proper subset of a permission in
 	* the set, false if not.
 	*/
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Returns an enumeration of all the ExecOptionPermission objects in the
@@ -155,7 +155,7 @@ extern class ExecOptionPermission extends java.security.Permission
 	*
 	* @return an enumeration of all the ExecOptionPermission objects.
 	*/
-	@:overload override public function elements() : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function elements() : java.util.Enumeration<Dynamic>;
 	
 	
 }

@@ -39,7 +39,7 @@ extern class CannotProceedException extends javax.naming.NamingException
 	* @see #getRemainingNewName
 	* @see #setRemainingNewName
 	*/
-	private var remainingNewName : javax.naming.Name;
+	@:protected private var remainingNewName : javax.naming.Name;
 	
 	/**
 	* Contains the environment
@@ -53,7 +53,7 @@ extern class CannotProceedException extends javax.naming.NamingException
 	* @see #getEnvironment
 	* @see #setEnvironment
 	*/
-	private var environment : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var environment : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* Contains the name of the resolved object, relative
@@ -72,7 +72,7 @@ extern class CannotProceedException extends javax.naming.NamingException
 	* @see #altNameCtx
 	* @see javax.naming.spi.ObjectFactory#getObjectInstance
 	*/
-	private var altName : javax.naming.Name;
+	@:protected private var altName : javax.naming.Name;
 	
 	/**
 	* Contains the context relative to which
@@ -91,7 +91,7 @@ extern class CannotProceedException extends javax.naming.NamingException
 	* @see #altName
 	* @see javax.naming.spi.ObjectFactory#getObjectInstance
 	*/
-	private var altNameCtx : javax.naming.Context;
+	@:protected private var altNameCtx : javax.naming.Context;
 	
 	/**
 	* Constructs a new instance of CannotProceedException using an
@@ -102,13 +102,13 @@ extern class CannotProceedException extends javax.naming.NamingException
 	*   If null, this exception has no detail message.
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload public function new(explanation : String) : Void;
+	@:overload @:public public function new(explanation : String) : Void;
 	
 	/**
 	* Constructs a new instance of CannotProceedException.
 	* All fields default to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Retrieves the environment that was in effect when this exception
@@ -117,7 +117,7 @@ extern class CannotProceedException extends javax.naming.NamingException
 	*          null means no environment was recorded for this exception.
 	* @see #setEnvironment
 	*/
-	@:overload public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:public public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* Sets the environment that will be returned when getEnvironment()
@@ -127,7 +127,7 @@ extern class CannotProceedException extends javax.naming.NamingException
 	*          this exception.
 	* @see #getEnvironment
 	*/
-	@:overload public function setEnvironment(environment : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function setEnvironment(environment : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Retrieves the "remaining new name" field of this exception, which is
@@ -139,7 +139,7 @@ extern class CannotProceedException extends javax.naming.NamingException
 	*
 	* @see #setRemainingNewName
 	*/
-	@:overload public function getRemainingNewName() : javax.naming.Name;
+	@:overload @:public public function getRemainingNewName() : javax.naming.Name;
 	
 	/**
 	* Sets the "remaining new name" field of this exception.
@@ -160,7 +160,7 @@ extern class CannotProceedException extends javax.naming.NamingException
 	*
 	* @see #getRemainingNewName
 	*/
-	@:overload public function setRemainingNewName(newName : javax.naming.Name) : Void;
+	@:overload @:public public function setRemainingNewName(newName : javax.naming.Name) : Void;
 	
 	/**
 	* Retrieves the <code>altName</code> field of this exception.
@@ -176,7 +176,7 @@ extern class CannotProceedException extends javax.naming.NamingException
 	* @see #getAltNameCtx
 	* @see javax.naming.spi.ObjectFactory#getObjectInstance
 	*/
-	@:overload public function getAltName() : javax.naming.Name;
+	@:overload @:public public function getAltName() : javax.naming.Name;
 	
 	/**
 	* Sets the <code>altName</code> field of this exception.
@@ -189,7 +189,7 @@ extern class CannotProceedException extends javax.naming.NamingException
 	* @see #getAltName
 	* @see #setAltNameCtx
 	*/
-	@:overload public function setAltName(altName : javax.naming.Name) : Void;
+	@:overload @:public public function setAltName(altName : javax.naming.Name) : Void;
 	
 	/**
 	* Retrieves the <code>altNameCtx</code> field of this exception.
@@ -204,7 +204,7 @@ extern class CannotProceedException extends javax.naming.NamingException
 	* @see #getAltName
 	* @see javax.naming.spi.ObjectFactory#getObjectInstance
 	*/
-	@:overload public function getAltNameCtx() : javax.naming.Context;
+	@:overload @:public public function getAltNameCtx() : javax.naming.Context;
 	
 	/**
 	* Sets the <code>altNameCtx</code> field of this exception.
@@ -217,7 +217,7 @@ extern class CannotProceedException extends javax.naming.NamingException
 	* @see #getAltNameCtx
 	* @see #setAltName
 	*/
-	@:overload public function setAltNameCtx(altNameCtx : javax.naming.Context) : Void;
+	@:overload @:public public function setAltNameCtx(altNameCtx : javax.naming.Context) : Void;
 	
 	
 }

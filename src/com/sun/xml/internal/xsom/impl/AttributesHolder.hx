@@ -25,47 +25,47 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class AttributesHolder extends com.sun.xml.internal.xsom.impl.DeclarationImpl
 {
-	@:overload private function new(_parent : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _name : String, _anonymous : Bool) : Void;
+	@:overload @:protected private function new(_parent : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _name : String, _anonymous : Bool) : Void;
 	
 	/** set the local wildcard. */
-	@:overload @:abstract public function setWildcard(wc : com.sun.xml.internal.xsom.impl.WildcardImpl) : Void;
+	@:overload @:public @:abstract public function setWildcard(wc : com.sun.xml.internal.xsom.impl.WildcardImpl) : Void;
 	
 	/**
 	* Local attribute use.
 	* Use linked hash map to guarantee the iteration order, and make it close to
 	* what was in the schema document.
 	*/
-	private var attributes(default, null) : java.util.Map<com.sun.xml.internal.xsom.impl.UName, com.sun.xml.internal.xsom.impl.AttributeUseImpl>;
+	@:protected @:final private var attributes(default, null) : java.util.Map<com.sun.xml.internal.xsom.impl.UName, com.sun.xml.internal.xsom.impl.AttributeUseImpl>;
 	
-	@:overload public function addAttributeUse(name : com.sun.xml.internal.xsom.impl.UName, a : com.sun.xml.internal.xsom.impl.AttributeUseImpl) : Void;
+	@:overload @:public public function addAttributeUse(name : com.sun.xml.internal.xsom.impl.UName, a : com.sun.xml.internal.xsom.impl.AttributeUseImpl) : Void;
 	
 	/** prohibited attributes. */
-	private var prohibitedAtts(default, null) : java.util.Set<com.sun.xml.internal.xsom.impl.UName>;
+	@:protected @:final private var prohibitedAtts(default, null) : java.util.Set<com.sun.xml.internal.xsom.impl.UName>;
 	
-	@:overload public function addProhibitedAttribute(name : com.sun.xml.internal.xsom.impl.UName) : Void;
+	@:overload @:public public function addProhibitedAttribute(name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
 	/**
 	* Returns the attribute uses by looking at attribute groups and etc.
 	* Searching for the base type is done in {@link ComplexTypeImpl}.
 	*/
-	@:overload public function getAttributeUses() : java.util.Collection<com.sun.xml.internal.xsom.XSAttributeUse>;
+	@:overload @:public public function getAttributeUses() : java.util.Collection<com.sun.xml.internal.xsom.XSAttributeUse>;
 	
-	@:overload public function iterateAttributeUses() : java.util.Iterator<com.sun.xml.internal.xsom.XSAttributeUse>;
+	@:overload @:public public function iterateAttributeUses() : java.util.Iterator<com.sun.xml.internal.xsom.XSAttributeUse>;
 	
-	@:overload public function getDeclaredAttributeUse(nsURI : String, localName : String) : com.sun.xml.internal.xsom.XSAttributeUse;
+	@:overload @:public public function getDeclaredAttributeUse(nsURI : String, localName : String) : com.sun.xml.internal.xsom.XSAttributeUse;
 	
-	@:overload public function iterateDeclaredAttributeUses() : java.util.Iterator<com.sun.xml.internal.xsom.impl.AttributeUseImpl>;
+	@:overload @:public public function iterateDeclaredAttributeUses() : java.util.Iterator<com.sun.xml.internal.xsom.impl.AttributeUseImpl>;
 	
-	@:overload public function getDeclaredAttributeUses() : java.util.Collection<com.sun.xml.internal.xsom.impl.AttributeUseImpl>;
+	@:overload @:public public function getDeclaredAttributeUses() : java.util.Collection<com.sun.xml.internal.xsom.impl.AttributeUseImpl>;
 	
 	/** {@link Ref.AttGroup}s that are directly refered from this. */
-	private var attGroups(default, null) : java.util.Set<com.sun.xml.internal.xsom.impl.Ref.Ref_AttGroup>;
+	@:protected @:final private var attGroups(default, null) : java.util.Set<com.sun.xml.internal.xsom.impl.Ref.Ref_AttGroup>;
 	
-	@:overload public function addAttGroup(a : com.sun.xml.internal.xsom.impl.Ref.Ref_AttGroup) : Void;
+	@:overload @:public public function addAttGroup(a : com.sun.xml.internal.xsom.impl.Ref.Ref_AttGroup) : Void;
 	
-	@:overload public function iterateAttGroups() : java.util.Iterator<com.sun.xml.internal.xsom.XSAttGroupDecl>;
+	@:overload @:public public function iterateAttGroups() : java.util.Iterator<com.sun.xml.internal.xsom.XSAttGroupDecl>;
 	
-	@:overload public function getAttGroups() : java.util.Set<com.sun.xml.internal.xsom.XSAttGroupDecl>;
+	@:overload @:public public function getAttGroups() : java.util.Set<com.sun.xml.internal.xsom.XSAttGroupDecl>;
 	
 	
 }

@@ -25,15 +25,15 @@ package com.sun.corba.se.impl.presentation.rmi;
 */
 extern class ExceptionHandlerImpl implements com.sun.corba.se.impl.presentation.rmi.ExceptionHandler
 {
-	@:overload public function new(exceptions : java.NativeArray<Class<Dynamic>>) : Void;
+	@:overload @:public public function new(exceptions : java.NativeArray<Class<Dynamic>>) : Void;
 	
-	@:overload public function isDeclaredException(cls : Class<Dynamic>) : Bool;
+	@:overload @:public public function isDeclaredException(cls : Class<Dynamic>) : Bool;
 	
-	@:overload public function writeException(os : org.omg.CORBA_2_3.portable.OutputStream, ex : java.lang.Exception) : Void;
+	@:overload @:public public function writeException(os : org.omg.CORBA_2_3.portable.OutputStream, ex : java.lang.Exception) : Void;
 	
-	@:overload public function readException(ae : org.omg.CORBA.portable.ApplicationException) : java.lang.Exception;
+	@:overload @:public public function readException(ae : org.omg.CORBA.portable.ApplicationException) : java.lang.Exception;
 	
-	@:overload public function getRMIExceptionRW(cls : Class<Dynamic>) : com.sun.corba.se.impl.presentation.rmi.ExceptionHandlerImpl.ExceptionHandlerImpl_ExceptionRW;
+	@:overload @:public public function getRMIExceptionRW(cls : Class<Dynamic>) : com.sun.corba.se.impl.presentation.rmi.ExceptionHandlerImpl.ExceptionHandlerImpl_ExceptionRW;
 	
 	
 }
@@ -43,39 +43,43 @@ extern class ExceptionHandlerImpl implements com.sun.corba.se.impl.presentation.
 	
 	@:overload public function getId() : String;
 	
-	@:overload public function write(os : org.omg.CORBA_2_3.portable.OutputStream, ex : java.lang.Exception) : Void;
+	@:overload @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream, ex : java.lang.Exception) : Void;
 	
-	@:overload public function read(is : org.omg.CORBA_2_3.portable.InputStream) : java.lang.Exception;
+	@:overload @:public public function read(is : org.omg.CORBA_2_3.portable.InputStream) : java.lang.Exception;
 	
 	
 }
 @:native('com$sun$corba$se$impl$presentation$rmi$ExceptionHandlerImpl$ExceptionRWBase') extern class ExceptionHandlerImpl_ExceptionRWBase implements com.sun.corba.se.impl.presentation.rmi.ExceptionHandlerImpl.ExceptionHandlerImpl_ExceptionRW
 {
-	@:overload public function new(cls : Class<Dynamic>) : Void;
+	@:overload @:public public function new(cls : Class<Dynamic>) : Void;
 	
-	@:overload public function getExceptionClass() : Class<Dynamic>;
+	@:overload @:public public function getExceptionClass() : Class<Dynamic>;
 	
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
+	
+	@:overload @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream, ex : java.lang.Exception) : Void;
+	
+	@:overload @:public public function read(is : org.omg.CORBA_2_3.portable.InputStream) : java.lang.Exception;
 	
 	
 }
 @:native('com$sun$corba$se$impl$presentation$rmi$ExceptionHandlerImpl$ExceptionRWIDLImpl') extern class ExceptionHandlerImpl_ExceptionRWIDLImpl extends com.sun.corba.se.impl.presentation.rmi.ExceptionHandlerImpl.ExceptionHandlerImpl_ExceptionRWBase
 {
-	@:overload public function new(cls : Class<Dynamic>) : Void;
+	@:overload @:public public function new(cls : Class<Dynamic>) : Void;
 	
-	@:overload override public function write(os : org.omg.CORBA_2_3.portable.OutputStream, ex : java.lang.Exception) : Void;
+	@:overload @:public override public function write(os : org.omg.CORBA_2_3.portable.OutputStream, ex : java.lang.Exception) : Void;
 	
-	@:overload override public function read(is : org.omg.CORBA_2_3.portable.InputStream) : java.lang.Exception;
+	@:overload @:public override public function read(is : org.omg.CORBA_2_3.portable.InputStream) : java.lang.Exception;
 	
 	
 }
 @:native('com$sun$corba$se$impl$presentation$rmi$ExceptionHandlerImpl$ExceptionRWRMIImpl') extern class ExceptionHandlerImpl_ExceptionRWRMIImpl extends com.sun.corba.se.impl.presentation.rmi.ExceptionHandlerImpl.ExceptionHandlerImpl_ExceptionRWBase
 {
-	@:overload public function new(cls : Class<Dynamic>) : Void;
+	@:overload @:public public function new(cls : Class<Dynamic>) : Void;
 	
-	@:overload override public function write(os : org.omg.CORBA_2_3.portable.OutputStream, ex : java.lang.Exception) : Void;
+	@:overload @:public override public function write(os : org.omg.CORBA_2_3.portable.OutputStream, ex : java.lang.Exception) : Void;
 	
-	@:overload override public function read(is : org.omg.CORBA_2_3.portable.InputStream) : java.lang.Exception;
+	@:overload @:public override public function read(is : org.omg.CORBA_2_3.portable.InputStream) : java.lang.Exception;
 	
 	
 }

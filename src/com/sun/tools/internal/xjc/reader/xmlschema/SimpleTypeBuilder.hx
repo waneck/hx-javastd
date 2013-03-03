@@ -50,7 +50,7 @@ extern class SimpleTypeBuilder extends com.sun.tools.internal.xjc.reader.xmlsche
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	private var builder(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder;
+	@:protected @:final private var builder(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder;
 	
 	/**
 	* The component that is refering to the simple type
@@ -61,10 +61,10 @@ extern class SimpleTypeBuilder extends com.sun.tools.internal.xjc.reader.xmlsche
 	*
 	* UGLY: Implemented as a Stack of XSComponent to fix a bug
 	*/
-	public var refererStack(default, null) : java.util.Stack<com.sun.xml.internal.xsom.XSComponent>;
+	@:public @:final public var refererStack(default, null) : java.util.Stack<com.sun.xml.internal.xsom.XSComponent>;
 	
 	/** {@link TypeUse}s for the built-in types. Read-only. */
-	public static var builtinConversions(default, null) : java.util.Map<String, com.sun.tools.internal.xjc.model.TypeUse>;
+	@:public @:static @:final public static var builtinConversions(default, null) : java.util.Map<String, com.sun.tools.internal.xjc.model.TypeUse>;
 	
 	/**
 	* Entry point from outside. Builds a BGM type expression
@@ -73,18 +73,18 @@ extern class SimpleTypeBuilder extends com.sun.tools.internal.xjc.reader.xmlsche
 	* @param type
 	*      the simple type to be bound.
 	*/
-	@:overload public function build(type : com.sun.xml.internal.xsom.XSSimpleType) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function build(type : com.sun.xml.internal.xsom.XSSimpleType) : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	/**
 	* A version of the {@link #build(XSSimpleType)} method
 	* used to bind the definition of a class generated from
 	* the given simple type.
 	*/
-	@:overload public function buildDef(type : com.sun.xml.internal.xsom.XSSimpleType) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function buildDef(type : com.sun.xml.internal.xsom.XSSimpleType) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function getReferer() : com.sun.xml.internal.xsom.XSComponent;
+	@:overload @:public public function getReferer() : com.sun.xml.internal.xsom.XSComponent;
 	
-	public var composer(default, null) : com.sun.xml.internal.xsom.visitor.XSSimpleTypeFunction<com.sun.tools.internal.xjc.model.TypeUse>;
+	@:public @:final public var composer(default, null) : com.sun.xml.internal.xsom.visitor.XSSimpleTypeFunction<com.sun.tools.internal.xjc.model.TypeUse>;
 	
 	/**
 	* Returns true if the given simple type can be mapped to a
@@ -95,9 +95,9 @@ extern class SimpleTypeBuilder extends com.sun.tools.internal.xjc.reader.xmlsche
 	* mapped to a type-safe enum. This method enforces this
 	* constraint.
 	*/
-	@:overload public static function canBeMappedToTypeSafeEnum(type : com.sun.xml.internal.xsom.XSSimpleType) : Bool;
+	@:overload @:public @:static public static function canBeMappedToTypeSafeEnum(type : com.sun.xml.internal.xsom.XSSimpleType) : Bool;
 	
-	@:overload public function isAcknowledgedXmimeContentTypes(c : com.sun.xml.internal.xsom.XSComponent) : Bool;
+	@:overload @:public public function isAcknowledgedXmimeContentTypes(c : com.sun.xml.internal.xsom.XSComponent) : Bool;
 	
 	
 }

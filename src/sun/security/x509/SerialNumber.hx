@@ -36,14 +36,14 @@ extern class SerialNumber
 	*
 	* @param num the BigInteger number used to create the serial number.
 	*/
-	@:overload public function new(num : java.math.BigInteger) : Void;
+	@:overload @:public public function new(num : java.math.BigInteger) : Void;
 	
 	/**
 	* The default constructor for this class using int.
 	*
 	* @param num the BigInteger number used to create the serial number.
 	*/
-	@:overload public function new(num : Int) : Void;
+	@:overload @:public public function new(num : Int) : Void;
 	
 	/**
 	* Create the object, decoding the values from the passed DER stream.
@@ -51,7 +51,7 @@ extern class SerialNumber
 	* @param in the DerInputStream to read the SerialNumber from.
 	* @exception IOException on decoding errors.
 	*/
-	@:overload public function new(_in : sun.security.util.DerInputStream) : Void;
+	@:overload @:public public function new(_in : sun.security.util.DerInputStream) : Void;
 	
 	/**
 	* Create the object, decoding the values from the passed DerValue.
@@ -59,7 +59,7 @@ extern class SerialNumber
 	* @param val the DerValue to read the SerialNumber from.
 	* @exception IOException on decoding errors.
 	*/
-	@:overload public function new(val : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(val : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Create the object, decoding the values from the passed stream.
@@ -67,12 +67,12 @@ extern class SerialNumber
 	* @param in the InputStream to read the SerialNumber from.
 	* @exception IOException on decoding errors.
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Return the SerialNumber as user readable string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Encode the SerialNumber in DER form to the stream.
@@ -80,12 +80,12 @@ extern class SerialNumber
 	* @param out the DerOutputStream to marshal the contents to.
 	* @exception IOException on errors.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Return the serial number.
 	*/
-	@:overload public function getNumber() : java.math.BigInteger;
+	@:overload @:public public function getNumber() : java.math.BigInteger;
 	
 	
 }

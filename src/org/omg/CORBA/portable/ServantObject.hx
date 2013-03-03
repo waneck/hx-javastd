@@ -40,7 +40,7 @@ extern class ServantObject
 	* invoke the operation directly. Note, the object may or may not be the actual servant
 	* instance.
 	*/
-	public var servant : Dynamic;
+	@:public public var servant : Dynamic;
 	
 	
 }

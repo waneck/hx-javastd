@@ -32,7 +32,7 @@ extern interface SubContextList
 	*
 	* @return the number of nodes in the node list.
 	*/
-	@:overload public function getLastPos(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public public function getLastPos(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Get the current sub-context position.
@@ -41,7 +41,7 @@ extern interface SubContextList
 	*
 	* @return The position of the current node in the list.
 	*/
-	@:overload public function getProximityPosition(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public public function getProximityPosition(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	
 }

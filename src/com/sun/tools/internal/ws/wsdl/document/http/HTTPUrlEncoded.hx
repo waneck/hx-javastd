@@ -30,11 +30,11 @@ extern class HTTPUrlEncoded extends com.sun.tools.internal.ws.wsdl.framework.Ext
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload @:public override public function validateThis() : Void;
 	
 	
 }

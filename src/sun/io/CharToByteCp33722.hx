@@ -25,11 +25,11 @@ package sun.io;
 */
 extern class CharToByteCp33722 extends sun.io.CharToByteEUC
 {
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
-	@:overload override public function getMaxBytesPerChar() : Int;
+	@:overload @:public override public function getMaxBytesPerChar() : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

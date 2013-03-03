@@ -40,49 +40,49 @@ package javax.swing.plaf.synth;
 	* @param b component to create UI object for
 	* @return the UI object
 	*/
-	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload private function new(b : javax.swing.JInternalFrame) : Void;
-	
-	/**
-	* @inheritDoc
-	*/
-	@:overload public function installDefaults() : Void;
+	@:overload @:protected private function new(b : javax.swing.JInternalFrame) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function installListeners() : Void;
+	@:overload @:public override public function installDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function uninstallComponents() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallComponents() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
+	@:overload @:public public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function createComponentListener() : java.awt.event.ComponentListener;
+	@:overload @:protected override private function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
+	
+	/**
+	* @inheritDoc
+	*/
+	@:overload @:protected override private function createComponentListener() : java.awt.event.ComponentListener;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -96,7 +96,7 @@ package javax.swing.plaf.synth;
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -107,7 +107,7 @@ package javax.swing.plaf.synth;
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component. This implementation does nothing.
@@ -116,17 +116,17 @@ package javax.swing.plaf.synth;
 	* @param g the {@code Graphics} object used for painting
 	* @see #update(Graphics,JComponent)
 	*/
-	@:overload private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

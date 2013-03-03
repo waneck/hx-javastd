@@ -36,7 +36,7 @@ extern class DOMService
 	*
 	* @param obj Object to leverage the DOMService
 	*/
-	@:overload public static function getService(obj : Dynamic) : com.sun.java.browser.dom.DOMService;
+	@:overload @:public @:static public static function getService(obj : Dynamic) : com.sun.java.browser.dom.DOMService;
 	
 	/**
 	* An empty constructor is provided. Implementations of this
@@ -45,7 +45,7 @@ extern class DOMService
 	* Application programmers should not be able to directly
 	* construct implementation subclasses of this abstract subclass.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Causes action.run() to be executed synchronously on the
@@ -65,7 +65,7 @@ extern class DOMService
 	*
 	* @param action DOMAction.
 	*/
-	@:overload @:abstract public function invokeAndWait(action : com.sun.java.browser.dom.DOMAction) : Dynamic;
+	@:overload @:public @:abstract public function invokeAndWait(action : com.sun.java.browser.dom.DOMAction) : Dynamic;
 	
 	/**
 	* Causes action.run() to be executed asynchronously on the
@@ -79,7 +79,7 @@ extern class DOMService
 	*
 	* @param action DOMAction.
 	*/
-	@:overload @:abstract public function invokeLater(action : com.sun.java.browser.dom.DOMAction) : Void;
+	@:overload @:public @:abstract public function invokeLater(action : com.sun.java.browser.dom.DOMAction) : Void;
 	
 	
 }

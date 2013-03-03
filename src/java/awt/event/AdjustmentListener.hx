@@ -28,7 +28,7 @@ extern interface AdjustmentListener extends java.util.EventListener
 	/**
 	* Invoked when the value of the adjustable has changed.
 	*/
-	@:overload public function adjustmentValueChanged(e : java.awt.event.AdjustmentEvent) : Void;
+	@:overload @:public public function adjustmentValueChanged(e : java.awt.event.AdjustmentEvent) : Void;
 	
 	
 }

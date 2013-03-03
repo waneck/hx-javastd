@@ -28,49 +28,49 @@ extern class TemplatesImpl implements javax.xml.transform.Templates implements j
 	* The bytecodes for the translet and auxiliary classes, plus the name of
 	* the main translet class, must be supplied.
 	*/
-	@:overload private function new(bytecodes : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>, transletName : String, outputProperties : java.util.Properties, indentNumber : Int, tfactory : com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl) : Void;
+	@:overload @:protected private function new(bytecodes : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>, transletName : String, outputProperties : java.util.Properties, indentNumber : Int, tfactory : com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl) : Void;
 	
 	/**
 	* Create an XSLTC template object from the translet class definition(s).
 	*/
-	@:overload private function new(transletClasses : java.NativeArray<Class<Dynamic>>, transletName : String, outputProperties : java.util.Properties, indentNumber : Int, tfactory : com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl) : Void;
+	@:overload @:protected private function new(transletClasses : java.NativeArray<Class<Dynamic>>, transletName : String, outputProperties : java.util.Properties, indentNumber : Int, tfactory : com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl) : Void;
 	
 	/**
 	* Need for de-serialization, see readObject().
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Return the state of the services mechanism feature.
 	*/
-	@:overload public function useServicesMechnism() : Bool;
+	@:overload @:public public function useServicesMechnism() : Bool;
 	
 	/**
 	* Store URIResolver needed for Transformers.
 	*/
-	@:overload @:synchronized public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
+	@:overload @:public @:synchronized public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
 	
 	/**
 	* Returns the index of the main class in array of bytecodes
 	*/
-	@:overload @:synchronized public function getTransletIndex() : Int;
+	@:overload @:public @:synchronized public function getTransletIndex() : Int;
 	
 	/**
 	* The TransformerFactory should call this method to set the translet name
 	*/
-	@:overload @:synchronized private function setTransletName(name : String) : Void;
+	@:overload @:protected @:synchronized private function setTransletName(name : String) : Void;
 	
 	/**
 	* Returns the name of the main translet class stored in this template
 	*/
-	@:overload @:synchronized private function getTransletName() : String;
+	@:overload @:protected @:synchronized private function getTransletName() : String;
 	
 	/**
 	* Implements JAXP's Templates.newTransformer()
 	*
 	* @throws TransformerConfigurationException
 	*/
-	@:overload @:synchronized public function newTransformer() : javax.xml.transform.Transformer;
+	@:overload @:public @:synchronized public function newTransformer() : javax.xml.transform.Transformer;
 	
 	/**
 	* Implements JAXP's Templates.getOutputProperties(). We need to
@@ -78,17 +78,17 @@ extern class TemplatesImpl implements javax.xml.transform.Templates implements j
 	* we might as well just instanciate a Transformer and use its
 	* implementation of this method.
 	*/
-	@:overload @:synchronized public function getOutputProperties() : java.util.Properties;
+	@:overload @:public @:synchronized public function getOutputProperties() : java.util.Properties;
 	
 	/**
 	* Return the thread local copy of the stylesheet DOM.
 	*/
-	@:overload public function getStylesheetDOM() : com.sun.org.apache.xalan.internal.xsltc.DOM;
+	@:overload @:public public function getStylesheetDOM() : com.sun.org.apache.xalan.internal.xsltc.DOM;
 	
 	/**
 	* Set the thread local copy of the stylesheet DOM.
 	*/
-	@:overload public function setStylesheetDOM(sdom : com.sun.org.apache.xalan.internal.xsltc.DOM) : Void;
+	@:overload @:public public function setStylesheetDOM(sdom : com.sun.org.apache.xalan.internal.xsltc.DOM) : Void;
 	
 	
 }

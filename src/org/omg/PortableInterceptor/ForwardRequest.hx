@@ -10,13 +10,13 @@ extern class ForwardRequest extends org.omg.CORBA.UserException
 	/** 
 	* The new object to forward the request to.
 	*/
-	public var forward : org.omg.CORBA.Object;
+	@:public public var forward : org.omg.CORBA.Object;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_forward : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function new(_forward : org.omg.CORBA.Object) : Void;
 	
-	@:overload public function new($reason : String, _forward : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function new($reason : String, _forward : org.omg.CORBA.Object) : Void;
 	
 	
 }

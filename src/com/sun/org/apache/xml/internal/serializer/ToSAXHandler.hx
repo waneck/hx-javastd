@@ -31,38 +31,38 @@ extern class ToSAXHandler extends com.sun.org.apache.xml.internal.serializer.Ser
 	*
 	* @xsl.usage internal
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(hdlr : org.xml.sax.ContentHandler, lex : org.xml.sax.ext.LexicalHandler, encoding : String) : Void;
+	@:overload @:public public function new(hdlr : org.xml.sax.ContentHandler, lex : org.xml.sax.ext.LexicalHandler, encoding : String) : Void;
 	
-	@:overload public function new(handler : org.xml.sax.ContentHandler, encoding : String) : Void;
+	@:overload @:public public function new(handler : org.xml.sax.ContentHandler, encoding : String) : Void;
 	
 	/**
 	* Underlying SAX handler. Taken from XSLTC
 	*/
-	private var m_saxHandler : org.xml.sax.ContentHandler;
+	@:protected private var m_saxHandler : org.xml.sax.ContentHandler;
 	
 	/**
 	* Underlying LexicalHandler. Taken from XSLTC
 	*/
-	private var m_lexHandler : org.xml.sax.ext.LexicalHandler;
+	@:protected private var m_lexHandler : org.xml.sax.ext.LexicalHandler;
 	
 	/** If this is true, then the content handler wrapped by this
 	* serializer implements the TransformState interface which
 	* will give the content handler access to the state of
 	* the transform. */
-	private var m_state : com.sun.org.apache.xml.internal.serializer.TransformStateSetter;
+	@:protected private var m_state : com.sun.org.apache.xml.internal.serializer.TransformStateSetter;
 	
 	/**
 	* Pass callback to the SAX Handler
 	*/
-	@:overload private function startDocumentInternal() : Void;
+	@:overload @:protected override private function startDocumentInternal() : Void;
 	
 	/**
 	* Do nothing.
 	* @see org.xml.sax.ext.LexicalHandler#startDTD(String, String, String)
 	*/
-	@:overload public function startDTD(arg0 : String, arg1 : String, arg2 : String) : Void;
+	@:overload @:public override public function startDTD(arg0 : String, arg1 : String, arg2 : String) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -73,25 +73,25 @@ extern class ToSAXHandler extends com.sun.org.apache.xml.internal.serializer.Ser
 	*
 	* @see ExtendedContentHandler#characters(String)
 	*/
-	@:overload override public function characters(characters : String) : Void;
+	@:overload @:public override public function characters(characters : String) : Void;
 	
 	/**
 	* Receive notification of a comment.
 	*
 	* @see ExtendedLexicalHandler#comment(String)
 	*/
-	@:overload public function comment(comment : String) : Void;
+	@:overload @:public override public function comment(comment : String) : Void;
 	
 	/**
 	* Do nothing as this is an abstract class. All subclasses will need to
 	* define their behavior if it is different.
 	* @see org.xml.sax.ContentHandler#processingInstruction(String, String)
 	*/
-	@:overload override public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public override public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload private function closeStartTag() : Void;
+	@:overload @:protected private function closeStartTag() : Void;
 	
-	@:overload private function closeCDATA() : Void;
+	@:overload @:protected private function closeCDATA() : Void;
 	
 	/**
 	* Receive notification of the beginning of an element, although this is a
@@ -108,26 +108,26 @@ extern class ToSAXHandler extends com.sun.org.apache.xml.internal.serializer.Ser
 	*
 	* @see org.xml.sax.ContentHandler#startElement(String,String,String,Attributes)
 	*/
-	@:overload override public function startElement(arg0 : String, arg1 : String, arg2 : String, arg3 : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(arg0 : String, arg1 : String, arg2 : String, arg3 : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Sets the LexicalHandler.
 	* @param _lexHandler The LexicalHandler to set
 	*/
-	@:overload public function setLexHandler(_lexHandler : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public public function setLexHandler(_lexHandler : org.xml.sax.ext.LexicalHandler) : Void;
 	
 	/**
 	* Sets the SAX ContentHandler.
 	* @param _saxHandler The ContentHandler to set
 	*/
-	@:overload override public function setContentHandler(_saxHandler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public override public function setContentHandler(_saxHandler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Does nothing. The setting of CDATA section elements has an impact on
 	* stream serializers.
 	* @see SerializationHandler#setCdataSectionElements(java.util.Vector)
 	*/
-	@:overload override public function setCdataSectionElements(URI_and_localNames : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public override public function setCdataSectionElements(URI_and_localNames : java.util.Vector<Dynamic>) : Void;
 	
 	/** Set whether or not namespace declarations (e.g.
 	* xmlns:foo) should appear as attributes of
@@ -135,13 +135,13 @@ extern class ToSAXHandler extends com.sun.org.apache.xml.internal.serializer.Ser
 	* @param doOutputNSAttr whether or not namespace declarations
 	* should appear as attributes
 	*/
-	@:overload public function setShouldOutputNSAttr(doOutputNSAttr : Bool) : Void;
+	@:overload @:public public function setShouldOutputNSAttr(doOutputNSAttr : Bool) : Void;
 	
 	/**
 	* This method flushes any pending events, which can be startDocument()
 	* closing the opening tag of an element, or closing an open CDATA section.
 	*/
-	@:overload override public function flushPending() : Void;
+	@:overload @:public override public function flushPending() : Void;
 	
 	/**
 	* Pass in a reference to a TransformState object, which
@@ -151,7 +151,7 @@ extern class ToSAXHandler extends com.sun.org.apache.xml.internal.serializer.Ser
 	*
 	* @param ts A reference to a TransformState object
 	*/
-	@:overload public function setTransformState(ts : com.sun.org.apache.xml.internal.serializer.TransformStateSetter) : Void;
+	@:overload @:public public function setTransformState(ts : com.sun.org.apache.xml.internal.serializer.TransformStateSetter) : Void;
 	
 	/**
 	* Receives notification that an element starts, but attributes are not
@@ -163,7 +163,7 @@ extern class ToSAXHandler extends com.sun.org.apache.xml.internal.serializer.Ser
 	*
 	* @see ExtendedContentHandler#startElement(String, String, String)
 	*/
-	@:overload override public function startElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function startElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* An element starts, but attributes are not fully known yet.
@@ -172,7 +172,7 @@ extern class ToSAXHandler extends com.sun.org.apache.xml.internal.serializer.Ser
 
 	* @see ExtendedContentHandler#startElement(String)
 	*/
-	@:overload override public function startElement(qName : String) : Void;
+	@:overload @:public override public function startElement(qName : String) : Void;
 	
 	/**
 	* This method gets the node's value as a String and uses that String as if
@@ -180,22 +180,22 @@ extern class ToSAXHandler extends com.sun.org.apache.xml.internal.serializer.Ser
 	* @param node the Node to serialize
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function characters(node : org.w3c.dom.Node) : Void;
+	@:overload @:public override public function characters(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* @see org.xml.sax.ErrorHandler#fatalError(SAXParseException)
 	*/
-	@:overload public function fatalError(exc : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function fatalError(exc : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* @see org.xml.sax.ErrorHandler#error(SAXParseException)
 	*/
-	@:overload public function error(exc : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function error(exc : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* @see org.xml.sax.ErrorHandler#warning(SAXParseException)
 	*/
-	@:overload public function warning(exc : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function warning(exc : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Try's to reset the super class and reset this class for
@@ -205,12 +205,12 @@ extern class ToSAXHandler extends com.sun.org.apache.xml.internal.serializer.Ser
 	* @return true if the class was successfuly reset.
 	* @see Serializer#reset()
 	*/
-	@:overload public function reset() : Bool;
+	@:overload @:public override public function reset() : Bool;
 	
 	/**
 	* Add a unique attribute
 	*/
-	@:overload override public function addUniqueAttribute(qName : String, value : String, flags : Int) : Void;
+	@:overload @:public override public function addUniqueAttribute(qName : String, value : String, flags : Int) : Void;
 	
 	
 }

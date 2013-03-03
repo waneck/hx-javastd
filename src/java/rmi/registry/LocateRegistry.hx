@@ -33,7 +33,7 @@ extern class LocateRegistry
 	* @exception RemoteException if the reference could not be created
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public static function getRegistry() : java.rmi.registry.Registry;
+	@:require(java1) @:overload @:public @:static public static function getRegistry() : java.rmi.registry.Registry;
 	
 	/**
 	* Returns a reference to the the remote object <code>Registry</code> for
@@ -44,7 +44,7 @@ extern class LocateRegistry
 	* @exception RemoteException if the reference could not be created
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public static function getRegistry(port : Int) : java.rmi.registry.Registry;
+	@:require(java1) @:overload @:public @:static public static function getRegistry(port : Int) : java.rmi.registry.Registry;
 	
 	/**
 	* Returns a reference to the remote object <code>Registry</code> on the
@@ -56,7 +56,7 @@ extern class LocateRegistry
 	* @exception RemoteException if the reference could not be created
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public static function getRegistry(host : String) : java.rmi.registry.Registry;
+	@:require(java1) @:overload @:public @:static public static function getRegistry(host : String) : java.rmi.registry.Registry;
 	
 	/**
 	* Returns a reference to the remote object <code>Registry</code> on the
@@ -69,7 +69,7 @@ extern class LocateRegistry
 	* @exception RemoteException if the reference could not be created
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public static function getRegistry(host : String, port : Int) : java.rmi.registry.Registry;
+	@:require(java1) @:overload @:public @:static public static function getRegistry(host : String, port : Int) : java.rmi.registry.Registry;
 	
 	/**
 	* Returns a locally created remote reference to the remote object
@@ -89,7 +89,7 @@ extern class LocateRegistry
 	* @exception RemoteException if the reference could not be created
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function getRegistry(host : String, port : Int, csf : java.rmi.server.RMIClientSocketFactory) : java.rmi.registry.Registry;
+	@:require(java2) @:overload @:public @:static public static function getRegistry(host : String, port : Int, csf : java.rmi.server.RMIClientSocketFactory) : java.rmi.registry.Registry;
 	
 	/**
 	* Creates and exports a <code>Registry</code> instance on the local
@@ -108,7 +108,7 @@ extern class LocateRegistry
 	* @exception RemoteException if the registry could not be exported
 	* @since JDK1.1
 	**/
-	@:require(java1) @:overload public static function createRegistry(port : Int) : java.rmi.registry.Registry;
+	@:require(java1) @:overload @:public @:static public static function createRegistry(port : Int) : java.rmi.registry.Registry;
 	
 	/**
 	* Creates and exports a <code>Registry</code> instance on the local
@@ -138,7 +138,7 @@ extern class LocateRegistry
 	* @exception RemoteException if the registry could not be exported
 	* @since 1.2
 	**/
-	@:require(java2) @:overload public static function createRegistry(port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : java.rmi.registry.Registry;
+	@:require(java2) @:overload @:public @:static public static function createRegistry(port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : java.rmi.registry.Registry;
 	
 	
 }

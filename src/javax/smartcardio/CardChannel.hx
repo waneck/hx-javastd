@@ -47,14 +47,14 @@ package javax.smartcardio;
 	* {@linkplain Card#openLogicalChannel} methods to obtain a CardChannel
 	* object.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the Card this channel is associated with.
 	*
 	* @return the Card this channel is associated with
 	*/
-	@:overload @:abstract public function getCard() : javax.smartcardio.Card;
+	@:overload @:public @:abstract public function getCard() : javax.smartcardio.Card;
 	
 	/**
 	* Returns the channel number of this CardChannel. A channel number of
@@ -66,7 +66,7 @@ package javax.smartcardio;
 	*   {@linkplain #close closed} or if the corresponding Card has been
 	*   {@linkplain Card#disconnect disconnected}.
 	*/
-	@:overload @:abstract public function getChannelNumber() : Int;
+	@:overload @:public @:abstract public function getChannelNumber() : Int;
 	
 	/**
 	* Transmits the specified command APDU to the Smart Card and returns the
@@ -112,7 +112,7 @@ package javax.smartcardio;
 	* @throws NullPointerException if command is null
 	* @throws CardException if the card operation failed
 	*/
-	@:overload @:abstract public function transmit(command : javax.smartcardio.CommandAPDU) : javax.smartcardio.ResponseAPDU;
+	@:overload @:public @:abstract public function transmit(command : javax.smartcardio.CommandAPDU) : javax.smartcardio.ResponseAPDU;
 	
 	/**
 	* Transmits the command APDU stored in the command ByteBuffer and receives
@@ -154,7 +154,7 @@ package javax.smartcardio;
 	*   or if the APDU encodes a <code>MANAGE CHANNEL</code> command
 	* @throws CardException if the card operation failed
 	*/
-	@:overload @:abstract public function transmit(command : java.nio.ByteBuffer, response : java.nio.ByteBuffer) : Int;
+	@:overload @:public @:abstract public function transmit(command : java.nio.ByteBuffer, response : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* Closes this CardChannel. The logical channel is closed by issuing
@@ -172,7 +172,7 @@ package javax.smartcardio;
 	* @throws IllegalStateException if this CardChannel represents a
 	*   connection the basic logical channel
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
 	
 }

@@ -65,15 +65,15 @@ extern class ClassVector implements java.io.Serializable
 	* @author <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
 	* @see ClassQueue
 */
-	private var vec : java.util.ArrayList<Dynamic>;
+	@:protected private var vec : java.util.ArrayList<Dynamic>;
 	
-	@:overload public function addElement(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
+	@:overload @:public public function addElement(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
 	
-	@:overload public function elementAt(index : Int) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function elementAt(index : Int) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
-	@:overload public function removeElementAt(index : Int) : Void;
+	@:overload @:public public function removeElementAt(index : Int) : Void;
 	
-	@:overload public function toArray() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.JavaClass>;
+	@:overload @:public public function toArray() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.JavaClass>;
 	
 	
 }

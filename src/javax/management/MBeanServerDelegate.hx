@@ -28,14 +28,14 @@ extern class MBeanServerDelegate implements javax.management.MBeanServerDelegate
 	/**
 	* Create a MBeanServerDelegate object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the MBean server agent identity.
 	*
 	* @return the identity.
 	*/
-	@:overload @:synchronized public function getMBeanServerId() : String;
+	@:overload @:public @:synchronized public function getMBeanServerId() : String;
 	
 	/**
 	* Returns the full name of the JMX specification implemented
@@ -43,7 +43,7 @@ extern class MBeanServerDelegate implements javax.management.MBeanServerDelegate
 	*
 	* @return the specification name.
 	*/
-	@:overload public function getSpecificationName() : String;
+	@:overload @:public public function getSpecificationName() : String;
 	
 	/**
 	* Returns the version of the JMX specification implemented
@@ -51,7 +51,7 @@ extern class MBeanServerDelegate implements javax.management.MBeanServerDelegate
 	*
 	* @return the specification version.
 	*/
-	@:overload public function getSpecificationVersion() : String;
+	@:overload @:public public function getSpecificationVersion() : String;
 	
 	/**
 	* Returns the vendor of the JMX specification implemented
@@ -59,36 +59,36 @@ extern class MBeanServerDelegate implements javax.management.MBeanServerDelegate
 	*
 	* @return the specification vendor.
 	*/
-	@:overload public function getSpecificationVendor() : String;
+	@:overload @:public public function getSpecificationVendor() : String;
 	
 	/**
 	* Returns the JMX implementation name (the name of this product).
 	*
 	* @return the implementation name.
 	*/
-	@:overload public function getImplementationName() : String;
+	@:overload @:public public function getImplementationName() : String;
 	
 	/**
 	* Returns the JMX implementation version (the version of this product).
 	*
 	* @return the implementation version.
 	*/
-	@:overload public function getImplementationVersion() : String;
+	@:overload @:public public function getImplementationVersion() : String;
 	
 	/**
 	* Returns the JMX implementation vendor (the vendor of this product).
 	*
 	* @return the implementation vendor.
 	*/
-	@:overload public function getImplementationVendor() : String;
+	@:overload @:public public function getImplementationVendor() : String;
 	
-	@:overload public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload @:public public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
-	@:overload @:synchronized public function addNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public @:synchronized public function addNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload @:synchronized public function removeNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public @:synchronized public function removeNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload @:synchronized public function removeNotificationListener(listener : javax.management.NotificationListener) : Void;
+	@:overload @:public @:synchronized public function removeNotificationListener(listener : javax.management.NotificationListener) : Void;
 	
 	/**
 	* Enables the MBean server to send a notification.
@@ -98,14 +98,14 @@ extern class MBeanServerDelegate implements javax.management.MBeanServerDelegate
 	* @param notification The notification to send.
 	*
 	*/
-	@:overload public function sendNotification(notification : javax.management.Notification) : Void;
+	@:overload @:public public function sendNotification(notification : javax.management.Notification) : Void;
 	
 	/**
 	* Defines the default ObjectName of the MBeanServerDelegate.
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var DELEGATE_NAME(default, null) : javax.management.ObjectName;
+	@:require(java6) @:public @:static @:final public static var DELEGATE_NAME(default, null) : javax.management.ObjectName;
 	
 	
 }

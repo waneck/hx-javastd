@@ -28,7 +28,7 @@ extern class NotExpression extends sun.tools.tree.UnaryExpression
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, right : sun.tools.tree.Expression) : Void;
+	@:overload @:public public function new(where : haxe.Int64, right : sun.tools.tree.Expression) : Void;
 	
 	/*
 	* Check a "not" expression.
@@ -42,13 +42,13 @@ extern class NotExpression extends sun.tools.tree.UnaryExpression
 	* For "not" expressions, we look at the inside expression, and then
 	* swap true and false.
 	*/
-	@:overload public function checkCondition(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, cvars : sun.tools.tree.ConditionVars) : Void;
+	@:overload @:public override public function checkCondition(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, cvars : sun.tools.tree.ConditionVars) : Void;
 	
 	/**
 	* Instead of relying on the default code generation which uses
 	* conditional branching, generate a simpler stream using XOR.
 	*/
-	@:overload public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	
 }

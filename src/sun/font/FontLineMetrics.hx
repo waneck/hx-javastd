@@ -35,41 +35,41 @@ extern class FontLineMetrics extends java.awt.font.LineMetrics implements java.l
 	* and layout of set of lines.
 	* This and CoreMetrics replace what was previously a private internal class of Font
 	*/
-	public var numchars : Int;
+	@:public public var numchars : Int;
 	
-	public var cm(default, null) : sun.font.CoreMetrics;
+	@:public @:final public var cm(default, null) : sun.font.CoreMetrics;
 	
-	public var frc(default, null) : java.awt.font.FontRenderContext;
+	@:public @:final public var frc(default, null) : java.awt.font.FontRenderContext;
 	
-	@:overload public function new(numchars : Int, cm : sun.font.CoreMetrics, frc : java.awt.font.FontRenderContext) : Void;
+	@:overload @:public public function new(numchars : Int, cm : sun.font.CoreMetrics, frc : java.awt.font.FontRenderContext) : Void;
 	
-	@:overload @:final override public function getNumChars() : Int;
+	@:overload @:public @:final override public function getNumChars() : Int;
 	
-	@:overload @:final override public function getAscent() : Single;
+	@:overload @:public @:final override public function getAscent() : Single;
 	
-	@:overload @:final override public function getDescent() : Single;
+	@:overload @:public @:final override public function getDescent() : Single;
 	
-	@:overload @:final override public function getLeading() : Single;
+	@:overload @:public @:final override public function getLeading() : Single;
 	
-	@:overload @:final override public function getHeight() : Single;
+	@:overload @:public @:final override public function getHeight() : Single;
 	
-	@:overload @:final override public function getBaselineIndex() : Int;
+	@:overload @:public @:final override public function getBaselineIndex() : Int;
 	
-	@:overload @:final override public function getBaselineOffsets() : java.NativeArray<Single>;
+	@:overload @:public @:final override public function getBaselineOffsets() : java.NativeArray<Single>;
 	
-	@:overload @:final override public function getStrikethroughOffset() : Single;
+	@:overload @:public @:final override public function getStrikethroughOffset() : Single;
 	
-	@:overload @:final override public function getStrikethroughThickness() : Single;
+	@:overload @:public @:final override public function getStrikethroughThickness() : Single;
 	
-	@:overload @:final override public function getUnderlineOffset() : Single;
+	@:overload @:public @:final override public function getUnderlineOffset() : Single;
 	
-	@:overload @:final override public function getUnderlineThickness() : Single;
+	@:overload @:public @:final override public function getUnderlineThickness() : Single;
 	
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
-	@:overload @:final public function equals(rhs : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(rhs : Dynamic) : Bool;
 	
-	@:overload @:final public function clone() : Dynamic;
+	@:overload @:public @:final public function clone() : Dynamic;
 	
 	
 }

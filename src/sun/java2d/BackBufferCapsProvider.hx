@@ -28,7 +28,7 @@ extern interface BackBufferCapsProvider
 	/**
 	* Provides access to back-buffer's BufferCapabilities.
 	*/
-	@:overload public function getBackBufferCaps() : java.awt.BufferCapabilities;
+	@:overload @:public public function getBackBufferCaps() : java.awt.BufferCapabilities;
 	
 	
 }

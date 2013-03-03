@@ -38,43 +38,43 @@ extern class ByteToCharConverter
 	/*
 	* Substitution mode flag.
 	*/
-	private var subMode : Bool;
+	@:protected private var subMode : Bool;
 	
 	/*
 	* Characters to use for automatic substitution.
 	*/
-	private var subChars : java.NativeArray<java.StdTypes.Char16>;
+	@:protected private var subChars : java.NativeArray<java.StdTypes.Char16>;
 	
 	/*
 	* Offset of next character to be output
 	*/
-	private var charOff : Int;
+	@:protected private var charOff : Int;
 	
 	/*
 	* Offset of next byte to be converted
 	*/
-	private var byteOff : Int;
+	@:protected private var byteOff : Int;
 	
 	/*
 	* Length of bad input that caused a MalformedInputException.
 	*/
-	private var badInputLength : Int;
+	@:protected private var badInputLength : Int;
 	
 	/**
 	* Create an instance of the default ByteToCharConverter subclass.
 	*/
-	@:overload public static function getDefault() : sun.io.ByteToCharConverter;
+	@:overload @:public @:static public static function getDefault() : sun.io.ByteToCharConverter;
 	
 	/**
 	* Returns appropriate ByteToCharConverter subclass instance.
 	* @param string represents encoding
 	*/
-	@:overload public static function getConverter(encoding : String) : sun.io.ByteToCharConverter;
+	@:overload @:public @:static public static function getConverter(encoding : String) : sun.io.ByteToCharConverter;
 	
 	/**
 	* Returns the character set id for the conversion
 	*/
-	@:overload @:abstract public function getCharacterEncoding() : String;
+	@:overload @:public @:abstract public function getCharacterEncoding() : String;
 	
 	/**
 	* Converts an array of bytes containing characters in an external
@@ -101,7 +101,7 @@ extern class ByteToCharConverter
 	* @exception ConversionBufferFullException if output array is filled prior
 	* to converting all the input.
 	*/
-	@:overload @:abstract public function convert(input : java.NativeArray<java.StdTypes.Int8>, inStart : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public @:abstract public function convert(input : java.NativeArray<java.StdTypes.Int8>, inStart : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Converts an array of bytes containing characters in an external
@@ -134,7 +134,7 @@ extern class ByteToCharConverter
 	* @see   sun.io.CharToByteConverter#setSubstitutionBytes(byte[])
 	* @see   #getBadInputLength
 	*/
-	@:overload public function convertAll(input : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function convertAll(input : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Writes any remaining output to the output buffer and resets the
@@ -152,19 +152,19 @@ extern class ByteToCharConverter
 	* to the output buffer and remember its state.  An additional call to
 	* flush with a new output buffer will conclude the operation.
 	*/
-	@:overload @:abstract public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public @:abstract public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Resets converter to its initial state.
 	*/
-	@:overload @:abstract public function reset() : Void;
+	@:overload @:public @:abstract public function reset() : Void;
 	
 	/**
 	* Returns the maximum number of characters needed to convert a byte. Useful
 	* for calculating the maximum output buffer size needed for a particular
 	* input buffer.
 	*/
-	@:overload public function getMaxCharsPerByte() : Int;
+	@:overload @:public public function getMaxCharsPerByte() : Int;
 	
 	/**
 	* Returns the length, in bytes, of the input which caused a
@@ -172,19 +172,19 @@ extern class ByteToCharConverter
 	* MalformedInputException thrown by the converter.  If none have
 	* ever been thrown, returns 0.
 	*/
-	@:overload public function getBadInputLength() : Int;
+	@:overload @:public public function getBadInputLength() : Int;
 	
 	/**
 	* Returns the index of the  character just past the last character
 	* written by the previous call to convert.
 	*/
-	@:overload public function nextCharIndex() : Int;
+	@:overload @:public public function nextCharIndex() : Int;
 	
 	/**
 	* Returns the index of the byte just past the last byte successfully
 	* converted by the previous call to convert.
 	*/
-	@:overload public function nextByteIndex() : Int;
+	@:overload @:public public function nextByteIndex() : Int;
 	
 	/**
 	* Sets converter into substitution mode.  In substitution mode,
@@ -196,18 +196,18 @@ extern class ByteToCharConverter
 	* @param doSub if true, enable substitution mode.
 	* @see #setSubstitutionChars
 	*/
-	@:overload public function setSubstitutionMode(doSub : Bool) : Void;
+	@:overload @:public public function setSubstitutionMode(doSub : Bool) : Void;
 	
 	/**
 	* sets the substitution character to use
 	* @param c the substitution character
 	*/
-	@:overload public function setSubstitutionChars(c : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function setSubstitutionChars(c : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* returns a string representation of the character conversion
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

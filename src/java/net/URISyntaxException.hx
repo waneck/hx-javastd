@@ -48,7 +48,7 @@ package java.net;
 	* @throws  IllegalArgumentException
 	*          If the error index is less than <tt>-1</tt>
 	*/
-	@:overload public function new(input : String, reason : String, index : Int) : Void;
+	@:overload @:public public function new(input : String, reason : String, index : Int) : Void;
 	
 	/**
 	* Constructs an instance from the given input string and reason.  The
@@ -60,21 +60,21 @@ package java.net;
 	* @throws  NullPointerException
 	*          If either the input or reason strings are <tt>null</tt>
 	*/
-	@:overload public function new(input : String, reason : String) : Void;
+	@:overload @:public public function new(input : String, reason : String) : Void;
 	
 	/**
 	* Returns the input string.
 	*
 	* @return  The input string
 	*/
-	@:overload public function getInput() : String;
+	@:overload @:public public function getInput() : String;
 	
 	/**
 	* Returns a string explaining why the input string could not be parsed.
 	*
 	* @return  The reason string
 	*/
-	@:overload public function getReason() : String;
+	@:overload @:public public function getReason() : String;
 	
 	/**
 	* Returns an index into the input string of the position at which the
@@ -82,7 +82,7 @@ package java.net;
 	*
 	* @return  The error index
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* Returns a string describing the parse error.  The resulting string
@@ -94,7 +94,7 @@ package java.net;
 	*
 	* @return  A string describing the parse error
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

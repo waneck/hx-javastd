@@ -30,29 +30,29 @@ extern class WaveFloatFileWriter extends javax.sound.sampled.spi.AudioFileWriter
 	*
 	* @author Karl Helgason
 	*/
-	@:overload public function getAudioFileTypes() : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
+	@:overload @:public override public function getAudioFileTypes() : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
 	
-	@:overload public function getAudioFileTypes(stream : javax.sound.sampled.AudioInputStream) : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
+	@:overload @:public override public function getAudioFileTypes(stream : javax.sound.sampled.AudioInputStream) : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
 	
-	@:overload public function write(stream : javax.sound.sampled.AudioInputStream, writer : com.sun.media.sound.RIFFWriter) : Void;
+	@:overload @:public public function write(stream : javax.sound.sampled.AudioInputStream, writer : com.sun.media.sound.RIFFWriter) : Void;
 	
-	@:overload public function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.OutputStream) : Int;
+	@:overload @:public override public function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.OutputStream) : Int;
 	
-	@:overload public function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.File) : Int;
+	@:overload @:public override public function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.File) : Int;
 	
 	
 }
 @:native('com$sun$media$sound$WaveFloatFileWriter$NoCloseOutputStream') @:internal extern class WaveFloatFileWriter_NoCloseOutputStream extends java.io.OutputStream
 {
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
-	@:overload public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

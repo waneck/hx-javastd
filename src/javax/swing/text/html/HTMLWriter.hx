@@ -32,7 +32,7 @@ extern class HTMLWriter extends javax.swing.text.AbstractWriter
 	* @param doc  an HTMLDocument
 	*
 	*/
-	@:overload public function new(w : java.io.Writer, doc : javax.swing.text.html.HTMLDocument) : Void;
+	@:overload @:public public function new(w : java.io.Writer, doc : javax.swing.text.html.HTMLDocument) : Void;
 	
 	/**
 	* Creates a new HTMLWriter.
@@ -42,7 +42,7 @@ extern class HTMLWriter extends javax.swing.text.AbstractWriter
 	* @param pos the document location from which to fetch the content
 	* @param len the amount to write out
 	*/
-	@:overload public function new(w : java.io.Writer, doc : javax.swing.text.html.HTMLDocument, pos : Int, len : Int) : Void;
+	@:overload @:public public function new(w : java.io.Writer, doc : javax.swing.text.html.HTMLDocument, pos : Int, len : Int) : Void;
 	
 	/**
 	* Iterates over the
@@ -54,7 +54,7 @@ extern class HTMLWriter extends javax.swing.text.AbstractWriter
 	*            location within the document.
 	*
 	*/
-	@:overload override public function write() : Void;
+	@:overload @:public override public function write() : Void;
 	
 	/**
 	* Writes out the attribute set.  Ignores all
@@ -67,7 +67,7 @@ extern class HTMLWriter extends javax.swing.text.AbstractWriter
 	* @exception IOException on any I/O error
 	*
 	*/
-	@:overload override private function writeAttributes(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:protected override private function writeAttributes(attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Writes out all empty elements (all tags that have no
@@ -78,7 +78,7 @@ extern class HTMLWriter extends javax.swing.text.AbstractWriter
 	* @exception BadLocationException if pos represents an invalid
 	*            location within the document.
 	*/
-	@:overload private function emptyTag(elem : javax.swing.text.Element) : Void;
+	@:overload @:protected private function emptyTag(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Determines if the HTML.Tag associated with the
@@ -87,7 +87,7 @@ extern class HTMLWriter extends javax.swing.text.AbstractWriter
 	* @param attr  an AttributeSet
 	* @return  true if tag is block tag, false otherwise.
 	*/
-	@:overload private function isBlockTag(attr : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:protected private function isBlockTag(attr : javax.swing.text.AttributeSet) : Bool;
 	
 	/**
 	* Writes out a start tag for the element.
@@ -96,7 +96,7 @@ extern class HTMLWriter extends javax.swing.text.AbstractWriter
 	* @param elem   an Element
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function startTag(elem : javax.swing.text.Element) : Void;
+	@:overload @:protected private function startTag(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Writes out text that is contained in a TEXTAREA form
@@ -107,7 +107,7 @@ extern class HTMLWriter extends javax.swing.text.AbstractWriter
 	* @exception BadLocationException if pos represents an invalid
 	*            location within the document.
 	*/
-	@:overload private function textAreaContent(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:protected private function textAreaContent(attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Writes out text.  If a range is specified when the constructor
@@ -119,7 +119,7 @@ extern class HTMLWriter extends javax.swing.text.AbstractWriter
 	* @exception BadLocationException if pos represents an invalid
 	*            location within the document.
 	*/
-	@:overload override private function text(elem : javax.swing.text.Element) : Void;
+	@:overload @:protected override private function text(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Writes out the content of the SELECT form element.
@@ -127,7 +127,7 @@ extern class HTMLWriter extends javax.swing.text.AbstractWriter
 	* @param attr the AttributeSet associated with the form element
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function selectContent(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:protected private function selectContent(attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Writes out the content of the Option form element.
@@ -135,7 +135,7 @@ extern class HTMLWriter extends javax.swing.text.AbstractWriter
 	* @exception IOException on any I/O error
 	*
 	*/
-	@:overload private function writeOption(option : javax.swing.text.html.Option) : Void;
+	@:overload @:protected private function writeOption(option : javax.swing.text.html.Option) : Void;
 	
 	/**
 	* Writes out an end tag for the element.
@@ -143,7 +143,7 @@ extern class HTMLWriter extends javax.swing.text.AbstractWriter
 	* @param elem    an Element
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function endTag(elem : javax.swing.text.Element) : Void;
+	@:overload @:protected private function endTag(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Writes out comments.
@@ -153,20 +153,20 @@ extern class HTMLWriter extends javax.swing.text.AbstractWriter
 	* @exception BadLocationException if pos represents an invalid
 	*            location within the document.
 	*/
-	@:overload private function comment(elem : javax.swing.text.Element) : Void;
+	@:overload @:protected private function comment(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Returns true if the element is a
 	* synthesized element.  Currently we are only testing
 	* for the p-implied tag.
 	*/
-	@:overload private function synthesizedElement(elem : javax.swing.text.Element) : Bool;
+	@:overload @:protected private function synthesizedElement(elem : javax.swing.text.Element) : Bool;
 	
 	/**
 	* Returns true if the StyleConstants.NameAttribute is
 	* equal to the tag that is passed in as a parameter.
 	*/
-	@:overload private function matchNameAttribute(attr : javax.swing.text.AttributeSet, tag : javax.swing.text.html.HTML.HTML_Tag) : Bool;
+	@:overload @:protected private function matchNameAttribute(attr : javax.swing.text.AttributeSet, tag : javax.swing.text.html.HTML.HTML_Tag) : Bool;
 	
 	/**
 	* Searches for embedded tags in the AttributeSet
@@ -176,7 +176,7 @@ extern class HTMLWriter extends javax.swing.text.AbstractWriter
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function writeEmbeddedTags(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:protected private function writeEmbeddedTags(attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Searches the attribute set and for each tag
@@ -186,14 +186,14 @@ extern class HTMLWriter extends javax.swing.text.AbstractWriter
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function closeOutUnwantedEmbeddedTags(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:protected private function closeOutUnwantedEmbeddedTags(attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Writes the line separator. This is overriden to make sure we don't
 	* replace the newline content in case it is outside normal ascii.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override private function writeLineSeparator() : Void;
+	@:require(java3) @:overload @:protected override private function writeLineSeparator() : Void;
 	
 	/**
 	* This method is overriden to map any character entities, such as
@@ -201,7 +201,7 @@ extern class HTMLWriter extends javax.swing.text.AbstractWriter
 	* write the content.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override private function output(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:require(java3) @:overload @:protected override private function output(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	
 }

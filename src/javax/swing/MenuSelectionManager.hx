@@ -30,16 +30,16 @@ extern class MenuSelectionManager
 	*
 	* @return a MenuSelectionManager object
 	*/
-	@:overload public static function defaultManager() : javax.swing.MenuSelectionManager;
+	@:overload @:public @:static public static function defaultManager() : javax.swing.MenuSelectionManager;
 	
 	/**
 	* Only one ChangeEvent is needed per button model instance since the
 	* event's only state is the source property.  The source of events
 	* generated is always "this".
 	*/
-	@:transient private var changeEvent : javax.swing.event.ChangeEvent;
+	@:protected @:transient private var changeEvent : javax.swing.event.ChangeEvent;
 	
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
 	/**
 	* Changes the selection in the menu hierarchy.  The elements
@@ -52,34 +52,34 @@ extern class MenuSelectionManager
 	* @param path  an array of <code>MenuElement</code> objects specifying
 	*        the selected path
 	*/
-	@:overload public function setSelectedPath(path : java.NativeArray<javax.swing.MenuElement>) : Void;
+	@:overload @:public public function setSelectedPath(path : java.NativeArray<javax.swing.MenuElement>) : Void;
 	
 	/**
 	* Returns the path to the currently selected menu item
 	*
 	* @return an array of MenuElement objects representing the selected path
 	*/
-	@:overload public function getSelectedPath() : java.NativeArray<javax.swing.MenuElement>;
+	@:overload @:public public function getSelectedPath() : java.NativeArray<javax.swing.MenuElement>;
 	
 	/**
 	* Tell the menu selection to close and unselect all the menu components. Call this method
 	* when a choice has been made
 	*/
-	@:overload public function clearSelectedPath() : Void;
+	@:overload @:public public function clearSelectedPath() : Void;
 	
 	/**
 	* Adds a ChangeListener to the button.
 	*
 	* @param l the listener to add
 	*/
-	@:overload public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Removes a ChangeListener from the button.
 	*
 	* @param l the listener to remove
 	*/
-	@:overload public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ChangeListener</code>s added
@@ -89,7 +89,7 @@ extern class MenuSelectionManager
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
+	@:require(java4) @:overload @:public public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -98,7 +98,7 @@ extern class MenuSelectionManager
 	*
 	* @see EventListenerList
 	*/
-	@:overload private function fireStateChanged() : Void;
+	@:overload @:protected private function fireStateChanged() : Void;
 	
 	/**
 	* When a MenuElement receives an event from a MouseListener, it should never process the event
@@ -106,7 +106,7 @@ extern class MenuSelectionManager
 	*
 	* @param event  a MouseEvent object
 	*/
-	@:overload public function processMouseEvent(event : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function processMouseEvent(event : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Returns the component in the currently selected path
@@ -120,7 +120,7 @@ extern class MenuSelectionManager
 	*         coordinate space.  If sourcePoint is not inside a component
 	*         on the currently selected path, null is returned.
 	*/
-	@:overload public function componentForPoint(source : java.awt.Component, sourcePoint : java.awt.Point) : java.awt.Component;
+	@:overload @:public public function componentForPoint(source : java.awt.Component, sourcePoint : java.awt.Point) : java.awt.Component;
 	
 	/**
 	* When a MenuElement receives an event from a KeyListener, it should never process the event
@@ -128,12 +128,12 @@ extern class MenuSelectionManager
 	*
 	* @param e  a KeyEvent object
 	*/
-	@:overload public function processKeyEvent(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public public function processKeyEvent(e : java.awt.event.KeyEvent) : Void;
 	
 	/**
 	* Return true if c is part of the currently used menu
 	*/
-	@:overload public function isComponentPartOfCurrentMenu(c : java.awt.Component) : Bool;
+	@:overload @:public public function isComponentPartOfCurrentMenu(c : java.awt.Component) : Bool;
 	
 	
 }

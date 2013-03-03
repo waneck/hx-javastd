@@ -130,14 +130,14 @@ package java.util;
 	*
 	* @return the number of elements in this collection
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this collection contains no elements.
 	*
 	* @return <tt>true</tt> if this collection contains no elements
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this collection contains the specified element.
@@ -155,7 +155,7 @@ package java.util;
 	*         collection does not permit null elements
 	*         (<a href="#optional-restrictions">optional</a>)
 	*/
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns an iterator over the elements in this collection.  There are no
@@ -165,7 +165,7 @@ package java.util;
 	*
 	* @return an <tt>Iterator</tt> over the elements in this collection
 	*/
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public public function iterator() : java.util.Iterator<E>;
 	
 	/**
 	* Returns an array containing all of the elements in this collection.
@@ -183,7 +183,7 @@ package java.util;
 	*
 	* @return an array containing all of the elements in this collection
 	*/
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this collection;
@@ -227,7 +227,7 @@ package java.util;
 	*         this collection
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Ensures that this collection contains the specified element (optional
@@ -284,7 +284,7 @@ package java.util;
 	* @throws UnsupportedOperationException if the <tt>remove</tt> operation
 	*         is not supported by this collection
 	*/
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this collection contains all of the elements
@@ -304,7 +304,7 @@ package java.util;
 	*         or if the specified collection is null.
 	* @see    #contains(Object)
 	*/
-	@:overload public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Adds all of the elements in the specified collection to this collection
@@ -355,7 +355,7 @@ package java.util;
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Retains only the elements in this collection that are contained in the
@@ -379,7 +379,7 @@ package java.util;
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Removes all of the elements from this collection (optional operation).

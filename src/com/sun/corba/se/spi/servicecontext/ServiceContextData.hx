@@ -25,14 +25,14 @@ package com.sun.corba.se.spi.servicecontext;
 */
 extern class ServiceContextData
 {
-	@:overload public function new(cls : Class<Dynamic>) : Void;
+	@:overload @:public public function new(cls : Class<Dynamic>) : Void;
 	
 	/** Factory method used to create a ServiceContext object by
 	* unmarshalling it from the InputStream.
 	*/
-	@:overload public function makeServiceContext(is : org.omg.CORBA_2_3.portable.InputStream, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : com.sun.corba.se.spi.servicecontext.ServiceContext;
+	@:overload @:public public function makeServiceContext(is : org.omg.CORBA_2_3.portable.InputStream, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : com.sun.corba.se.spi.servicecontext.ServiceContext;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

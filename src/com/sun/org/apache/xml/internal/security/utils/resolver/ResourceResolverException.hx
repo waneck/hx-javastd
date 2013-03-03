@@ -28,7 +28,7 @@ extern class ResourceResolverException extends com.sun.org.apache.xml.internal.s
 	* @param uri
 	* @param BaseURI
 	*/
-	@:overload public function new(_msgID : String, uri : org.w3c.dom.Attr, BaseURI : String) : Void;
+	@:overload @:public public function new(_msgID : String, uri : org.w3c.dom.Attr, BaseURI : String) : Void;
 	
 	/**
 	* Constructor ResourceResolverException
@@ -38,7 +38,7 @@ extern class ResourceResolverException extends com.sun.org.apache.xml.internal.s
 	* @param uri
 	* @param BaseURI
 	*/
-	@:overload public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, uri : org.w3c.dom.Attr, BaseURI : String) : Void;
+	@:overload @:public public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, uri : org.w3c.dom.Attr, BaseURI : String) : Void;
 	
 	/**
 	* Constructor ResourceResolverException
@@ -48,7 +48,7 @@ extern class ResourceResolverException extends com.sun.org.apache.xml.internal.s
 	* @param uri
 	* @param BaseURI
 	*/
-	@:overload public function new(_msgID : String, _originalException : java.lang.Exception, uri : org.w3c.dom.Attr, BaseURI : String) : Void;
+	@:overload @:public public function new(_msgID : String, _originalException : java.lang.Exception, uri : org.w3c.dom.Attr, BaseURI : String) : Void;
 	
 	/**
 	* Constructor ResourceResolverException
@@ -59,31 +59,31 @@ extern class ResourceResolverException extends com.sun.org.apache.xml.internal.s
 	* @param uri
 	* @param BaseURI
 	*/
-	@:overload public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, _originalException : java.lang.Exception, uri : org.w3c.dom.Attr, BaseURI : String) : Void;
+	@:overload @:public public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, _originalException : java.lang.Exception, uri : org.w3c.dom.Attr, BaseURI : String) : Void;
 	
 	/**
 	*
 	* @param uri
 	*/
-	@:overload public function setURI(uri : org.w3c.dom.Attr) : Void;
+	@:overload @:public public function setURI(uri : org.w3c.dom.Attr) : Void;
 	
 	/**
 	*
 	* @return the uri
 	*/
-	@:overload public function getURI() : org.w3c.dom.Attr;
+	@:overload @:public public function getURI() : org.w3c.dom.Attr;
 	
 	/**
 	*
 	* @param BaseURI
 	*/
-	@:overload public function setBaseURI(BaseURI : String) : Void;
+	@:overload @:public public function setBaseURI(BaseURI : String) : Void;
 	
 	/**
 	*
 	* @return the basUri
 	*/
-	@:overload public function getBaseURI() : String;
+	@:overload @:public public function getBaseURI() : String;
 	
 	
 }

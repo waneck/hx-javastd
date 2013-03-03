@@ -51,7 +51,7 @@ package sun.security.action;
 	*
 	* @param theProp the name of the system property.
 	*/
-	@:overload public function new(theProp : String) : Void;
+	@:overload @:public public function new(theProp : String) : Void;
 	
 	/**
 	* Determines the boolean value of the system property whose name was
@@ -59,7 +59,7 @@ package sun.security.action;
 	*
 	* @return the <code>Boolean</code> value of the system property.
 	*/
-	@:overload public function run() : Null<Bool>;
+	@:overload @:public public function run() : Null<Bool>;
 	
 	
 }

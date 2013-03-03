@@ -33,9 +33,9 @@ package com.sun.xml.internal.txw2;
 	/**
 	* The text to be writtten.
 	*/
-	private var buffer(default, null) : java.lang.StringBuilder;
+	@:protected @:final private var buffer(default, null) : java.lang.StringBuilder;
 	
-	@:overload private function new(document : com.sun.xml.internal.txw2.Document, nsResolver : com.sun.xml.internal.txw2.NamespaceResolver, obj : Dynamic) : Void;
+	@:overload @:protected private function new(document : com.sun.xml.internal.txw2.Document, nsResolver : com.sun.xml.internal.txw2.NamespaceResolver, obj : Dynamic) : Void;
 	
 	
 }

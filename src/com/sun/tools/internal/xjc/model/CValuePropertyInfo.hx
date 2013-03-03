@@ -30,11 +30,11 @@ extern class CValuePropertyInfo extends com.sun.tools.internal.xjc.model.CSingle
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new(name : String, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations, locator : org.xml.sax.Locator, type : com.sun.tools.internal.xjc.model.TypeUse, typeName : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(name : String, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations, locator : org.xml.sax.Locator, type : com.sun.tools.internal.xjc.model.TypeUse, typeName : javax.xml.namespace.QName) : Void;
 	
-	@:overload @:final override public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:public @:final override public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
-	@:overload override public function accept<V>(visitor : com.sun.tools.internal.xjc.model.CPropertyVisitor<V>) : V;
+	@:overload @:public override public function accept<V>(visitor : com.sun.tools.internal.xjc.model.CPropertyVisitor<V>) : V;
 	
 	
 }

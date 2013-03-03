@@ -28,42 +28,42 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 	/**
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload @:abstract public function bridge() : Void;
+	@:overload @:public @:abstract public function bridge() : Void;
 	
-	private var visitor(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor;
+	@:protected @:final private var visitor(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor;
 	
-	private var context(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext;
+	@:protected @:final private var context(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext;
 	
-	private var predictor(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor.XmlVisitor_TextPredictor;
+	@:protected @:final private var predictor(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor.XmlVisitor_TextPredictor;
 	
-	private var tagName(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName;
+	@:protected @:final private var tagName(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName;
 	
-	@:overload private function new(visitor : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor) : Void;
+	@:overload @:protected private function new(visitor : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor) : Void;
 	
 	/**
 	* Gets the {@link Location}. Used for implementing the line number information.
 	* @return must not null.
 	*/
-	@:overload @:abstract private function getCurrentLocation() : javax.xml.stream.Location;
+	@:overload @:protected @:abstract private function getCurrentLocation() : javax.xml.stream.Location;
 	
 	/**
 	* Gets the QName of the current element.
 	*/
-	@:overload @:abstract private function getCurrentQName() : String;
+	@:overload @:protected @:abstract private function getCurrentQName() : String;
 	
-	@:overload @:final private function handleStartDocument(nsc : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:protected @:final private function handleStartDocument(nsc : javax.xml.namespace.NamespaceContext) : Void;
 	
-	@:overload @:final private function handleEndDocument() : Void;
+	@:overload @:protected @:final private function handleEndDocument() : Void;
 	
-	@:overload private static function fixNull(s : String) : String;
+	@:overload @:protected @:static private static function fixNull(s : String) : String;
 	
-	@:overload @:final private function getQName(prefix : String, localName : String) : String;
+	@:overload @:protected @:final private function getQName(prefix : String, localName : String) : String;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$runtime$unmarshaller$StAXConnector$TagNameImpl') @:internal extern class StAXConnector_TagNameImpl extends com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName
 {
-	@:overload override public function getQname() : String;
+	@:overload @:public override public function getQname() : String;
 	
 	
 }

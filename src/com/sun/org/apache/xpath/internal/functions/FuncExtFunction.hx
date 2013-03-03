@@ -34,28 +34,28 @@ extern class FuncExtFunction extends com.sun.org.apache.xpath.internal.functions
 	* to be offset to the current stack frame).
 	* NEEDSDOC @param globalsSize
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Return the namespace of the extension function.
 	*
 	* @return The namespace of the extension function.
 	*/
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
 	/**
 	* Return the name of the extension function.
 	*
 	* @return The name of the extension function.
 	*/
-	@:overload public function getFunctionName() : String;
+	@:overload @:public public function getFunctionName() : String;
 	
 	/**
 	* Return the method key of the extension function.
 	*
 	* @return The method key of the extension function.
 	*/
-	@:overload public function getMethodKey() : Dynamic;
+	@:overload @:public public function getMethodKey() : Dynamic;
 	
 	/**
 	* Return the nth argument passed to the extension function.
@@ -63,7 +63,7 @@ extern class FuncExtFunction extends com.sun.org.apache.xpath.internal.functions
 	* @param n The argument number index.
 	* @return The Expression object at the given index.
 	*/
-	@:overload public function getArg(n : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getArg(n : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Return the number of arguments that were passed
@@ -71,7 +71,7 @@ extern class FuncExtFunction extends com.sun.org.apache.xpath.internal.functions
 	*
 	* @return The number of arguments.
 	*/
-	@:overload public function getArgCount() : Int;
+	@:overload @:public public function getArgCount() : Int;
 	
 	/**
 	* Create a new FuncExtFunction based on the qualified name of the extension,
@@ -84,7 +84,7 @@ extern class FuncExtFunction extends com.sun.org.apache.xpath.internal.functions
 	*                  ExtensionsTable#extFunction in order to allow caching
 	*                  of the method.
 	*/
-	@:overload public function new(namespace : String, extensionName : String, methodKey : Dynamic) : Void;
+	@:overload @:public public function new(namespace : String, extensionName : String, methodKey : Dynamic) : Void;
 	
 	/**
 	* Execute the function.  The function must return
@@ -94,7 +94,7 @@ extern class FuncExtFunction extends com.sun.org.apache.xpath.internal.functions
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Set an argument expression for a function.  This method is called by the
@@ -106,7 +106,7 @@ extern class FuncExtFunction extends com.sun.org.apache.xpath.internal.functions
 	* @throws WrongNumberArgsException If the argNum parameter is beyond what
 	* is specified for this function.
 	*/
-	@:overload override public function setArg(arg : com.sun.org.apache.xpath.internal.Expression, argNum : Int) : Void;
+	@:overload @:public override public function setArg(arg : com.sun.org.apache.xpath.internal.Expression, argNum : Int) : Void;
 	
 	/**
 	* Check that the number of arguments passed to this function is correct.
@@ -116,12 +116,12 @@ extern class FuncExtFunction extends com.sun.org.apache.xpath.internal.functions
 	*
 	* @throws WrongNumberArgsException
 	*/
-	@:overload override public function checkNumberArgs(argNum : Int) : Void;
+	@:overload @:public override public function checkNumberArgs(argNum : Int) : Void;
 	
 	/**
 	* Call the visitors for the function arguments.
 	*/
-	@:overload override public function callArgVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callArgVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* Set the parent node.
@@ -130,7 +130,7 @@ extern class FuncExtFunction extends com.sun.org.apache.xpath.internal.functions
 	*
 	* @param n The parent node
 	*/
-	@:overload override public function exprSetParent(n : com.sun.org.apache.xpath.internal.ExpressionNode) : Void;
+	@:overload @:public override public function exprSetParent(n : com.sun.org.apache.xpath.internal.ExpressionNode) : Void;
 	
 	/**
 	* Constructs and throws a WrongNumberArgException with the appropriate
@@ -139,12 +139,12 @@ extern class FuncExtFunction extends com.sun.org.apache.xpath.internal.functions
 	*
 	* @throws WrongNumberArgsException
 	*/
-	@:overload override private function reportWrongNumberArgs() : Void;
+	@:overload @:protected override private function reportWrongNumberArgs() : Void;
 	
 	/**
 	* Return the name of the extesion function in string format
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -153,12 +153,12 @@ extern class FuncExtFunction extends com.sun.org.apache.xpath.internal.functions
 	/**
 	* @see ExpressionOwner#getExpression()
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see ExpressionOwner#setExpression(Expression)
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	
 }

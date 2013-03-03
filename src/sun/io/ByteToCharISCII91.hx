@@ -29,22 +29,22 @@ extern class ByteToCharISCII91 extends sun.io.ByteToCharConverter
 	* Converts ISCII91 characters to Unicode.
 	* @see sun.io.ByteToCharConverter#convert
 	*/
-	@:overload override public function convert(input : java.NativeArray<java.StdTypes.Int8>, inStart : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public override public function convert(input : java.NativeArray<java.StdTypes.Int8>, inStart : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* @see sun.io.ByteToCharConverter#flush
 	*/
-	@:overload override public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public override public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Returns the character set id for the conversion.
 	*/
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
 	/**
 	* @see sun.io.ByteToCharConverter#reset
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }

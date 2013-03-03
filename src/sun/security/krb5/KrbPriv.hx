@@ -30,9 +30,9 @@ package sun.security.krb5;
 */
 @:internal extern class KrbPriv extends sun.security.krb5.KrbAppMessage
 {
-	@:overload public function getMessage() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getMessage() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

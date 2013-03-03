@@ -36,7 +36,7 @@ package javax.xml.validation;
 	*      If this parameter is null, the default system class loader
 	*      will be used.
 	*/
-	@:overload public function new(loader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function new(loader : java.lang.ClassLoader) : Void;
 	
 	/**
 	* <p>Creates a new {@link SchemaFactory} object for the specified
@@ -51,20 +51,20 @@ package javax.xml.validation;
 	* @throws NullPointerException
 	*      If the <code>schemaLanguage</code> parameter is null.
 	*/
-	@:overload public function newFactory(schemaLanguage : String) : javax.xml.validation.SchemaFactory;
+	@:overload @:public public function newFactory(schemaLanguage : String) : javax.xml.validation.SchemaFactory;
 	
 	
 }
 /** Iterator that lazily computes one value and returns it. */
 @:native('javax$xml$validation$SchemaFactoryFinder$SingleIterator') @:internal extern class SchemaFactoryFinder_SingleIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload @:final public function remove() : Void;
+	@:overload @:public @:final public function remove() : Void;
 	
-	@:overload @:final public function hasNext() : Bool;
+	@:overload @:public @:final public function hasNext() : Bool;
 	
-	@:overload @:final public function next() : Dynamic;
+	@:overload @:public @:final public function next() : Dynamic;
 	
-	@:overload @:abstract private function value() : Dynamic;
+	@:overload @:protected @:abstract private function value() : Dynamic;
 	
 	
 }

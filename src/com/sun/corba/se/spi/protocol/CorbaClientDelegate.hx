@@ -31,7 +31,7 @@ extern class CorbaClientDelegate extends org.omg.CORBA_2_3.portable.Delegate imp
 	*
 	* @return {@link com.sun.corba.se.pept.broker.Broker Broker}
 	*/
-	@:overload public function getBroker() : com.sun.corba.se.pept.broker.Broker;
+	@:overload @:public @:public public function getBroker() : com.sun.corba.se.pept.broker.Broker;
 	
 	/**
 	* Get the
@@ -42,7 +42,7 @@ extern class CorbaClientDelegate extends org.omg.CORBA_2_3.portable.Delegate imp
 	* @return
 	* {@link com.sun.corba.se.pept.transport.ContactInfoList ContactInfoList}
 	*/
-	@:overload public function getContactInfoList() : com.sun.corba.se.pept.transport.ContactInfoList;
+	@:overload @:public @:public public function getContactInfoList() : com.sun.corba.se.pept.transport.ContactInfoList;
 	
 	
 }

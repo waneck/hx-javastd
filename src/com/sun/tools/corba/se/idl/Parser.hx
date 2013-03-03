@@ -66,36 +66,36 @@ package com.sun.tools.corba.se.idl;
 	/**
 	*
 	**/
-	@:overload public function isModuleLegalType() : Bool;
+	@:overload @:public public function isModuleLegalType() : Bool;
 	
 	/**
 	*
 	**/
-	@:overload public function isModuleLegalType(b : Bool) : Void;
+	@:overload @:public public function isModuleLegalType(b : Bool) : Void;
 	
 	/**
 	*
 	**/
-	@:overload public static function overrideName(string : String) : String;
+	@:overload @:public @:static public static function overrideName(string : String) : String;
 	
 	/**
 	*
 	**/
-	@:overload public static function typeOf(entry : com.sun.tools.corba.se.idl.SymtabEntry) : com.sun.tools.corba.se.idl.SymtabEntry;
+	@:overload @:public @:static public static function typeOf(entry : com.sun.tools.corba.se.idl.SymtabEntry) : com.sun.tools.corba.se.idl.SymtabEntry;
 	
 	/**
 	*
 	**/
-	@:overload public static function enteringInclude() : Void;
+	@:overload @:public @:static public static function enteringInclude() : Void;
 	
 	/**
 	*
 	**/
-	@:overload public static function exitingInclude() : Void;
+	@:overload @:public @:static public static function exitingInclude() : Void;
 	
-	public static var unknownNamePrefix(default, null) : String;
+	@:public @:static @:final public static var unknownNamePrefix(default, null) : String;
 	
-	private var corbaLevel : Single;
+	@:protected private var corbaLevel : Single;
 	
 	
 }

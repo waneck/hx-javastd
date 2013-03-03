@@ -32,7 +32,7 @@ package com.sun.tools.example.debug.event;
 */
 extern class LocationTriggerEventSet extends com.sun.tools.example.debug.event.LocatableEventSet
 {
-	@:overload override public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
+	@:overload @:public override public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
 	
 	
 }

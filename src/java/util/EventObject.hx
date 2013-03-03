@@ -38,7 +38,7 @@ package java.util;
 	/**
 	* The object on which the Event initially occurred.
 	*/
-	@:transient private var source : Dynamic;
+	@:protected @:transient private var source : Dynamic;
 	
 	/**
 	* Constructs a prototypical Event.
@@ -46,21 +46,21 @@ package java.util;
 	* @param    source    The object on which the Event initially occurred.
 	* @exception  IllegalArgumentException  if source is null.
 	*/
-	@:overload public function new(source : Dynamic) : Void;
+	@:overload @:public public function new(source : Dynamic) : Void;
 	
 	/**
 	* The object on which the Event initially occurred.
 	*
 	* @return   The object on which the Event initially occurred.
 	*/
-	@:overload public function getSource() : Dynamic;
+	@:overload @:public public function getSource() : Dynamic;
 	
 	/**
 	* Returns a String representation of this EventObject.
 	*
 	* @return  A a String representation of this EventObject.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

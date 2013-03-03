@@ -25,11 +25,11 @@ package com.sun.beans.finder;
 */
 extern class PersistenceDelegateFinder extends com.sun.beans.finder.InstanceFinder<java.beans.PersistenceDelegate>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function register(type : Class<Dynamic>, delegate : java.beans.PersistenceDelegate) : Void;
+	@:overload @:public public function register(type : Class<Dynamic>, delegate : java.beans.PersistenceDelegate) : Void;
 	
-	@:overload public function find(type : Class<Dynamic>) : java.beans.PersistenceDelegate;
+	@:overload @:public override public function find(type : Class<Dynamic>) : java.beans.PersistenceDelegate;
 	
 	
 }

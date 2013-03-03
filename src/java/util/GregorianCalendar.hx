@@ -45,7 +45,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	*
 	* @see #ERA
 	*/
-	public static var BC(default, null) : Int;
+	@:public @:static @:final public static var BC(default, null) : Int;
 	
 	/**
 	* Value of the <code>ERA</code> field indicating
@@ -55,13 +55,13 @@ extern class GregorianCalendar extends java.util.Calendar
 	*
 	* @see #ERA
 	*/
-	public static var AD(default, null) : Int;
+	@:public @:static @:final public static var AD(default, null) : Int;
 	
 	/**
 	* Constructs a default <code>GregorianCalendar</code> using the current time
 	* in the default time zone with the default locale.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>GregorianCalendar</code> based on the current time
@@ -69,7 +69,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	*
 	* @param zone the given time zone.
 	*/
-	@:overload public function new(zone : java.util.TimeZone) : Void;
+	@:overload @:public public function new(zone : java.util.TimeZone) : Void;
 	
 	/**
 	* Constructs a <code>GregorianCalendar</code> based on the current time
@@ -77,7 +77,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	*
 	* @param aLocale the given locale.
 	*/
-	@:overload public function new(aLocale : java.util.Locale) : Void;
+	@:overload @:public public function new(aLocale : java.util.Locale) : Void;
 	
 	/**
 	* Constructs a <code>GregorianCalendar</code> based on the current time
@@ -86,7 +86,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* @param zone the given time zone.
 	* @param aLocale the given locale.
 	*/
-	@:overload public function new(zone : java.util.TimeZone, aLocale : java.util.Locale) : Void;
+	@:overload @:public public function new(zone : java.util.TimeZone, aLocale : java.util.Locale) : Void;
 	
 	/**
 	* Constructs a <code>GregorianCalendar</code> with the given date set
@@ -97,7 +97,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* Month value is 0-based. e.g., 0 for January.
 	* @param dayOfMonth the value used to set the <code>DAY_OF_MONTH</code> calendar field in the calendar.
 	*/
-	@:overload public function new(year : Int, month : Int, dayOfMonth : Int) : Void;
+	@:overload @:public public function new(year : Int, month : Int, dayOfMonth : Int) : Void;
 	
 	/**
 	* Constructs a <code>GregorianCalendar</code> with the given date
@@ -112,7 +112,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* @param minute the value used to set the <code>MINUTE</code> calendar field
 	* in the calendar.
 	*/
-	@:overload public function new(year : Int, month : Int, dayOfMonth : Int, hourOfDay : Int, minute : Int) : Void;
+	@:overload @:public public function new(year : Int, month : Int, dayOfMonth : Int, hourOfDay : Int, minute : Int) : Void;
 	
 	/**
 	* Constructs a GregorianCalendar with the given date
@@ -129,7 +129,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* @param second the value used to set the <code>SECOND</code> calendar field
 	* in the calendar.
 	*/
-	@:overload public function new(year : Int, month : Int, dayOfMonth : Int, hourOfDay : Int, minute : Int, second : Int) : Void;
+	@:overload @:public public function new(year : Int, month : Int, dayOfMonth : Int, hourOfDay : Int, minute : Int, second : Int) : Void;
 	
 	/**
 	* Sets the <code>GregorianCalendar</code> change date. This is the point when the switch
@@ -142,7 +142,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	*
 	* @param date the given Gregorian cutover date.
 	*/
-	@:overload public function setGregorianChange(date : java.util.Date) : Void;
+	@:overload @:public public function setGregorianChange(date : java.util.Date) : Void;
 	
 	/**
 	* Gets the Gregorian Calendar change date.  This is the point when the
@@ -152,7 +152,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	*
 	* @return the Gregorian cutover date for this <code>GregorianCalendar</code> object.
 	*/
-	@:overload @:final public function getGregorianChange() : java.util.Date;
+	@:overload @:public @:final public function getGregorianChange() : java.util.Date;
 	
 	/**
 	* Determines if the given year is a leap year. Returns <code>true</code> if
@@ -163,7 +163,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* @param year the given year.
 	* @return <code>true</code> if the given year is a leap year; <code>false</code> otherwise.
 	*/
-	@:overload public function isLeapYear(year : Int) : Bool;
+	@:overload @:public public function isLeapYear(year : Int) : Bool;
 	
 	/**
 	* Compares this <code>GregorianCalendar</code> to the specified
@@ -179,12 +179,12 @@ extern class GregorianCalendar extends java.util.Calendar
 	* <code>false</code> otherwise.
 	* @see Calendar#compareTo(Calendar)
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Generates the hash code for this <code>GregorianCalendar</code> object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Adds the specified (signed) amount of time to the given calendar field,
@@ -214,7 +214,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* or if any calendar fields have out-of-range values in
 	* non-lenient mode.
 	*/
-	@:overload override public function add(field : Int, amount : Int) : Void;
+	@:overload @:public override public function add(field : Int, amount : Int) : Void;
 	
 	/**
 	* Adds or subtracts (up/down) a single unit of time on the given time
@@ -234,7 +234,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* @see #add(int,int)
 	* @see #set(int,int)
 	*/
-	@:overload override public function roll(field : Int, up : Bool) : Void;
+	@:overload @:public override public function roll(field : Int, up : Bool) : Void;
 	
 	/**
 	* Adds a signed amount to the specified calendar field without changing larger fields.
@@ -280,7 +280,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* @see #set(int,int)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function roll(field : Int, amount : Int) : Void;
+	@:require(java2) @:overload @:public override public function roll(field : Int, amount : Int) : Void;
 	
 	/**
 	* Returns the minimum value for the given calendar field of this
@@ -301,7 +301,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* @see #getActualMinimum(int)
 	* @see #getActualMaximum(int)
 	*/
-	@:overload override public function getMinimum(field : Int) : Int;
+	@:overload @:public override public function getMinimum(field : Int) : Int;
 	
 	/**
 	* Returns the maximum value for the given calendar field of this
@@ -322,7 +322,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* @see #getActualMinimum(int)
 	* @see #getActualMaximum(int)
 	*/
-	@:overload override public function getMaximum(field : Int) : Int;
+	@:overload @:public override public function getMaximum(field : Int) : Int;
 	
 	/**
 	* Returns the highest minimum value for the given calendar field
@@ -343,7 +343,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* @see #getActualMinimum(int)
 	* @see #getActualMaximum(int)
 	*/
-	@:overload override public function getGreatestMinimum(field : Int) : Int;
+	@:overload @:public override public function getGreatestMinimum(field : Int) : Int;
 	
 	/**
 	* Returns the lowest maximum value for the given calendar field
@@ -364,7 +364,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* @see #getActualMinimum(int)
 	* @see #getActualMaximum(int)
 	*/
-	@:overload override public function getLeastMaximum(field : Int) : Int;
+	@:overload @:public override public function getLeastMaximum(field : Int) : Int;
 	
 	/**
 	* Returns the minimum value that this calendar field could have,
@@ -393,7 +393,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* @see #getActualMaximum(int)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getActualMinimum(field : Int) : Int;
+	@:require(java2) @:overload @:public override public function getActualMinimum(field : Int) : Int;
 	
 	/**
 	* Returns the maximum value that this calendar field could have,
@@ -425,13 +425,13 @@ extern class GregorianCalendar extends java.util.Calendar
 	* @see #getActualMinimum(int)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getActualMaximum(field : Int) : Int;
+	@:require(java2) @:overload @:public override public function getActualMaximum(field : Int) : Int;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
-	@:overload override public function getTimeZone() : java.util.TimeZone;
+	@:overload @:public override public function getTimeZone() : java.util.TimeZone;
 	
-	@:overload override public function setTimeZone(zone : java.util.TimeZone) : Void;
+	@:overload @:public override public function setTimeZone(zone : java.util.TimeZone) : Void;
 	
 	/**
 	* Returns {@code true} indicating this {@code GregorianCalendar}
@@ -443,7 +443,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* @see #getWeeksInWeekYear()
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:final override public function isWeekDateSupported() : Bool;
+	@:require(java7) @:overload @:public @:final override public function isWeekDateSupported() : Bool;
 	
 	/**
 	* Returns the <a href="#week_year">week year</a> represented by this
@@ -467,7 +467,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* @see Calendar#getMinimalDaysInFirstWeek()
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function getWeekYear() : Int;
+	@:require(java7) @:overload @:public override public function getWeekYear() : Int;
 	
 	/**
 	* Sets this {@code GregorianCalendar} to the date given by the
@@ -508,7 +508,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* @see Calendar#getMinimalDaysInFirstWeek()
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function setWeekDate(weekYear : Int, weekOfYear : Int, dayOfWeek : Int) : Void;
+	@:require(java7) @:overload @:public override public function setWeekDate(weekYear : Int, weekOfYear : Int, dayOfWeek : Int) : Void;
 	
 	/**
 	* Returns the number of weeks in the <a href="#week_year">week year</a>
@@ -527,7 +527,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	* @see #getActualMaximum(int)
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function getWeeksInWeekYear() : Int;
+	@:require(java7) @:overload @:public override public function getWeeksInWeekYear() : Int;
 	
 	/**
 	* Converts the time value (millisecond offset from the <a
@@ -538,7 +538,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	*
 	* @see Calendar#complete
 	*/
-	@:overload override private function computeFields() : Void;
+	@:overload @:protected override private function computeFields() : Void;
 	
 	/**
 	* Converts calendar field values to the time value (millisecond
@@ -546,7 +546,7 @@ extern class GregorianCalendar extends java.util.Calendar
 	*
 	* @exception IllegalArgumentException if any calendar fields are invalid.
 	*/
-	@:overload override private function computeTime() : Void;
+	@:overload @:protected override private function computeTime() : Void;
 	
 	
 }

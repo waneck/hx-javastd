@@ -25,23 +25,23 @@ package com.sun.tools.classfile;
 */
 extern class ClassReader
 {
-	@:overload public function readAttribute() : com.sun.tools.classfile.Attribute;
+	@:overload @:public public function readAttribute() : com.sun.tools.classfile.Attribute;
 	
-	@:overload public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function readUnsignedByte() : Int;
+	@:overload @:public public function readUnsignedByte() : Int;
 	
-	@:overload public function readUnsignedShort() : Int;
+	@:overload @:public public function readUnsignedShort() : Int;
 	
-	@:overload public function readInt() : Int;
+	@:overload @:public public function readInt() : Int;
 	
-	@:overload public function readLong() : haxe.Int64;
+	@:overload @:public public function readLong() : haxe.Int64;
 	
-	@:overload public function readFloat() : Single;
+	@:overload @:public public function readFloat() : Single;
 	
-	@:overload public function readDouble() : Float;
+	@:overload @:public public function readDouble() : Float;
 	
-	@:overload public function readUTF() : String;
+	@:overload @:public public function readUTF() : String;
 	
 	
 }

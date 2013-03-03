@@ -47,21 +47,21 @@ extern class Ticket implements java.lang.Cloneable
 	* <a href="http://www.ietf.org/rfc/rfc4120.txt">
 	* http://www.ietf.org/rfc/rfc4120.txt</a>.
 	*/
-	public var tkt_vno : Int;
+	@:public public var tkt_vno : Int;
 	
-	public var realm : sun.security.krb5.Realm;
+	@:public public var realm : sun.security.krb5.Realm;
 	
-	public var sname : sun.security.krb5.PrincipalName;
+	@:public public var sname : sun.security.krb5.PrincipalName;
 	
-	public var encPart : sun.security.krb5.EncryptedData;
+	@:public public var encPart : sun.security.krb5.EncryptedData;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function new(new_realm : sun.security.krb5.Realm, new_sname : sun.security.krb5.PrincipalName, new_encPart : sun.security.krb5.EncryptedData) : Void;
+	@:overload @:public public function new(new_realm : sun.security.krb5.Realm, new_sname : sun.security.krb5.PrincipalName, new_encPart : sun.security.krb5.EncryptedData) : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes a Ticket object.
@@ -69,7 +69,7 @@ extern class Ticket implements java.lang.Cloneable
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Parse (unmarshal) a Ticket from a DER input stream.  This form
@@ -82,7 +82,7 @@ extern class Ticket implements java.lang.Cloneable
 	* @param optional indicate if this data field is optional
 	* @return an instance of Ticket.
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.Ticket;
+	@:overload @:public @:static public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.Ticket;
 	
 	
 }

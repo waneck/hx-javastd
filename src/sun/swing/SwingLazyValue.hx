@@ -25,15 +25,15 @@ package sun.swing;
 */
 extern class SwingLazyValue implements javax.swing.UIDefaults.UIDefaults_LazyValue
 {
-	@:overload public function new(c : String) : Void;
+	@:overload @:public public function new(c : String) : Void;
 	
-	@:overload public function new(c : String, m : String) : Void;
+	@:overload @:public public function new(c : String, m : String) : Void;
 	
-	@:overload public function new(c : String, o : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(c : String, o : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function new(c : String, m : String, o : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(c : String, m : String, o : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }

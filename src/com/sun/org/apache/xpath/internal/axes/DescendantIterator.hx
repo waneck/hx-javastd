@@ -27,7 +27,7 @@ extern class DescendantIterator extends com.sun.org.apache.xpath.internal.axes.L
 	* Create a DescendantIterator object.
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*  Get a cloned Iterator that is reset to the beginning
@@ -37,7 +37,7 @@ extern class DescendantIterator extends com.sun.org.apache.xpath.internal.axes.L
 	*
 	*  @throws CloneNotSupportedException
 	*/
-	@:overload override public function cloneWithReset() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public override public function cloneWithReset() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	*  Returns the next node in the set and advances the position of the
@@ -51,7 +51,7 @@ extern class DescendantIterator extends com.sun.org.apache.xpath.internal.axes.L
 	*    INVALID_STATE_ERR: Raised if this method is called after the
 	*   <code>detach</code> method was invoked.
 	*/
-	@:overload override public function nextNode() : Int;
+	@:overload @:public override public function nextNode() : Int;
 	
 	/**
 	* Initialize the context values for this expression
@@ -60,7 +60,7 @@ extern class DescendantIterator extends com.sun.org.apache.xpath.internal.axes.L
 	* @param context The XPath runtime context for this
 	* transformation.
 	*/
-	@:overload override public function setRoot(context : Int, environment : Dynamic) : Void;
+	@:overload @:public override public function setRoot(context : Int, environment : Dynamic) : Void;
 	
 	/**
 	* Return the first node out of the nodeset, if this expression is
@@ -70,7 +70,7 @@ extern class DescendantIterator extends com.sun.org.apache.xpath.internal.axes.L
 	* @param xctxt The XPath runtime context.
 	* @return the first node out of the nodeset, or DTM.NULL.
 	*/
-	@:overload override public function asNode(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public override public function asNode(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	*  Detaches the iterator from the set which it iterated over, releasing
@@ -79,7 +79,7 @@ extern class DescendantIterator extends com.sun.org.apache.xpath.internal.axes.L
 	* <code>nextNode</code> or<code>previousNode</code> will raise the
 	* exception INVALID_STATE_ERR.
 	*/
-	@:overload override public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	/**
 	* Returns the axis being iterated, if it is known.
@@ -87,21 +87,21 @@ extern class DescendantIterator extends com.sun.org.apache.xpath.internal.axes.L
 	* @return Axis.CHILD, etc., or -1 if the axis is not known or is of multiple
 	* types.
 	*/
-	@:overload override public function getAxis() : Int;
+	@:overload @:public override public function getAxis() : Int;
 	
 	/** The traverser to use to navigate over the descendants. */
-	@:transient private var m_traverser : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser;
+	@:transient @:protected private var m_traverser : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser;
 	
 	/** The axis that we are traversing. */
-	private var m_axis : Int;
+	@:protected private var m_axis : Int;
 	
 	/** The extended type ID, not set until setRoot. */
-	private var m_extendedTypeID : Int;
+	@:protected private var m_extendedTypeID : Int;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }

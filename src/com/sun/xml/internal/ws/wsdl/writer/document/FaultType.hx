@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.wsdl.writer.document;
 */
 extern interface FaultType extends com.sun.xml.internal.txw2.TypedXmlWriter extends com.sun.xml.internal.ws.wsdl.writer.document.Documented
 {
-	@:overload public function message(value : javax.xml.namespace.QName) : com.sun.xml.internal.ws.wsdl.writer.document.FaultType;
+	@:overload @:public public function message(value : javax.xml.namespace.QName) : com.sun.xml.internal.ws.wsdl.writer.document.FaultType;
 	
-	@:overload public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.FaultType;
+	@:overload @:public public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.FaultType;
 	
 	
 }

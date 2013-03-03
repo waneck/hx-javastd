@@ -36,12 +36,12 @@ extern class Bridge
 	* @throws SecurityException if the caller does not have the
 	* required permissions and the caller has a non-null security manager.
 	*/
-	@:overload @:final @:synchronized public static function get() : sun.corba.Bridge;
+	@:overload @:public @:static @:final @:synchronized public static function get() : sun.corba.Bridge;
 	
 	/** Obtain the latest user defined ClassLoader from the call stack.
 	* This is required by the RMI-IIOP specification.
 	*/
-	@:overload @:final public function getLatestUserDefinedLoader() : java.lang.ClassLoader;
+	@:overload @:public @:final public function getLatestUserDefinedLoader() : java.lang.ClassLoader;
 	
 	/**
 	* Fetches a field element within the given
@@ -58,7 +58,7 @@ extern class Bridge
 	* @throws RuntimeException No defined exceptions are thrown, not even
 	*         {@link NullPointerException}
 	*/
-	@:overload @:final public function getInt(o : Dynamic, offset : haxe.Int64) : Int;
+	@:overload @:public @:final public function getInt(o : Dynamic, offset : haxe.Int64) : Int;
 	
 	/**
 	* Stores a value into a given Java field.
@@ -78,75 +78,75 @@ extern class Bridge
 	* @throws RuntimeException No defined exceptions are thrown, not even
 	*         {@link NullPointerException}
 	*/
-	@:overload @:final public function putInt(o : Dynamic, offset : haxe.Int64, x : Int) : Void;
+	@:overload @:public @:final public function putInt(o : Dynamic, offset : haxe.Int64, x : Int) : Void;
 	
 	/**
 	* @see #getInt(Object, long)
 	*/
-	@:overload @:final public function getObject(o : Dynamic, offset : haxe.Int64) : Dynamic;
+	@:overload @:public @:final public function getObject(o : Dynamic, offset : haxe.Int64) : Dynamic;
 	
 	/**
 	* @see #putInt(Object, long, int)
 	*/
-	@:overload @:final public function putObject(o : Dynamic, offset : haxe.Int64, x : Dynamic) : Void;
+	@:overload @:public @:final public function putObject(o : Dynamic, offset : haxe.Int64, x : Dynamic) : Void;
 	
 	/** @see #getInt(Object, long) */
-	@:overload @:final public function getBoolean(o : Dynamic, offset : haxe.Int64) : Bool;
+	@:overload @:public @:final public function getBoolean(o : Dynamic, offset : haxe.Int64) : Bool;
 	
 	/** @see #putInt(Object, long, int) */
-	@:overload @:final public function putBoolean(o : Dynamic, offset : haxe.Int64, x : Bool) : Void;
+	@:overload @:public @:final public function putBoolean(o : Dynamic, offset : haxe.Int64, x : Bool) : Void;
 	
 	/** @see #getInt(Object, long) */
-	@:overload @:final public function getByte(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Int8;
+	@:overload @:public @:final public function getByte(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Int8;
 	
 	/** @see #putInt(Object, long, int) */
-	@:overload @:final public function putByte(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Int8) : Void;
+	@:overload @:public @:final public function putByte(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Int8) : Void;
 	
 	/** @see #getInt(Object, long) */
-	@:overload @:final public function getShort(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Int16;
+	@:overload @:public @:final public function getShort(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Int16;
 	
 	/** @see #putInt(Object, long, int) */
-	@:overload @:final public function putShort(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Int16) : Void;
+	@:overload @:public @:final public function putShort(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Int16) : Void;
 	
 	/** @see #getInt(Object, long) */
-	@:overload @:final public function getChar(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Char16;
+	@:overload @:public @:final public function getChar(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Char16;
 	
 	/** @see #putInt(Object, long, int) */
-	@:overload @:final public function putChar(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Char16) : Void;
+	@:overload @:public @:final public function putChar(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Char16) : Void;
 	
 	/** @see #getInt(Object, long) */
-	@:overload @:final public function getLong(o : Dynamic, offset : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:final public function getLong(o : Dynamic, offset : haxe.Int64) : haxe.Int64;
 	
 	/** @see #putInt(Object, long, int) */
-	@:overload @:final public function putLong(o : Dynamic, offset : haxe.Int64, x : haxe.Int64) : Void;
+	@:overload @:public @:final public function putLong(o : Dynamic, offset : haxe.Int64, x : haxe.Int64) : Void;
 	
 	/** @see #getInt(Object, long) */
-	@:overload @:final public function getFloat(o : Dynamic, offset : haxe.Int64) : Single;
+	@:overload @:public @:final public function getFloat(o : Dynamic, offset : haxe.Int64) : Single;
 	
 	/** @see #putInt(Object, long, int) */
-	@:overload @:final public function putFloat(o : Dynamic, offset : haxe.Int64, x : Single) : Void;
+	@:overload @:public @:final public function putFloat(o : Dynamic, offset : haxe.Int64, x : Single) : Void;
 	
 	/** @see #getInt(Object, long) */
-	@:overload @:final public function getDouble(o : Dynamic, offset : haxe.Int64) : Float;
+	@:overload @:public @:final public function getDouble(o : Dynamic, offset : haxe.Int64) : Float;
 	
 	/** @see #putInt(Object, long, int) */
-	@:overload @:final public function putDouble(o : Dynamic, offset : haxe.Int64, x : Float) : Void;
+	@:overload @:public @:final public function putDouble(o : Dynamic, offset : haxe.Int64, x : Float) : Void;
 	
 	/**
 	* This constant differs from all results that will ever be returned from
 	* {@link #objectFieldOffset}.
 	*/
-	public static var INVALID_FIELD_OFFSET(default, null) : haxe.Int64;
+	@:public @:static @:final public static var INVALID_FIELD_OFFSET(default, null) : haxe.Int64;
 	
 	/**
 	* Returns the offset of a non-static field.
 	*/
-	@:overload @:final public function objectFieldOffset(f : java.lang.reflect.Field) : haxe.Int64;
+	@:overload @:public @:final public function objectFieldOffset(f : java.lang.reflect.Field) : haxe.Int64;
 	
 	/** Throw the exception.
 	* The exception may be an undeclared checked exception.
 	*/
-	@:overload @:final public function throwException(ee : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function throwException(ee : java.lang.Throwable) : Void;
 	
 	/** Obtain a constructor for Class cl using constructor cons which
 	* may be the constructor defined in a superclass of cl.  This is
@@ -155,7 +155,7 @@ extern class Bridge
 	* no args constructor of the first non-Serializable superclass
 	* of the Serializable class.
 	*/
-	@:overload @:final public function newConstructorForSerialization(cl : Class<Dynamic>, cons : java.lang.reflect.Constructor<Dynamic>) : java.lang.reflect.Constructor<Dynamic>;
+	@:overload @:public @:final public function newConstructorForSerialization(cl : Class<Dynamic>, cons : java.lang.reflect.Constructor<Dynamic>) : java.lang.reflect.Constructor<Dynamic>;
 	
 	
 }

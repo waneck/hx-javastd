@@ -33,7 +33,7 @@ package sun.nio.ch;
 	* Invoked to notify channel that cancel has been invoked while holding
 	* the Future's lock.
 	*/
-	@:overload public function onCancel(task : sun.nio.ch.PendingFuture<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function onCancel(task : sun.nio.ch.PendingFuture<Dynamic, Dynamic>) : Void;
 	
 	
 }

@@ -25,21 +25,21 @@ package sun.awt.X11;
 */
 @:internal extern class GtkFileDialogPeer extends sun.awt.X11.XDialogPeer implements java.awt.peer.FileDialogPeer
 {
-	@:overload public function new(fd : java.awt.FileDialog) : Void;
+	@:overload @:public public function new(fd : java.awt.FileDialog) : Void;
 	
-	@:overload @:native override public function toFront() : Void;
+	@:overload @:public @:native override public function toFront() : Void;
 	
-	@:overload @:native override public function setBounds(x : Int, y : Int, width : Int, height : Int, op : Int) : Void;
+	@:overload @:public @:native override public function setBounds(x : Int, y : Int, width : Int, height : Int, op : Int) : Void;
 	
-	@:overload override public function setVisible(b : Bool) : Void;
+	@:overload @:public override public function setVisible(b : Bool) : Void;
 	
-	@:overload override public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
-	@:overload public function setDirectory(dir : String) : Void;
+	@:overload @:public public function setDirectory(dir : String) : Void;
 	
-	@:overload public function setFile(file : String) : Void;
+	@:overload @:public public function setFile(file : String) : Void;
 	
-	@:overload public function setFilenameFilter(filter : java.io.FilenameFilter) : Void;
+	@:overload @:public public function setFilenameFilter(filter : java.io.FilenameFilter) : Void;
 	
 	
 }

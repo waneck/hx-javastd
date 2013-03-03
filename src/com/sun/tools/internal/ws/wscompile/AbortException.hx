@@ -36,7 +36,7 @@ package com.sun.tools.internal.ws.wscompile;
 */
 extern class AbortException extends java.lang.RuntimeException
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

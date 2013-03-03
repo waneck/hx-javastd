@@ -27,31 +27,31 @@ extern class TransferProtocolClient extends sun.net.NetworkClient
 {
 	/** Array of strings (usually 1 entry) for the last reply
 	from the server. */
-	private var serverResponse : java.util.Vector<Dynamic>;
+	@:protected private var serverResponse : java.util.Vector<Dynamic>;
 	
 	/** code for last reply */
-	private var lastReplyCode : Int;
+	@:protected private var lastReplyCode : Int;
 	
 	/**
 	* Pulls the response from the server and returns the code as a
 	* number. Returns -1 on failure.
 	*/
-	@:overload public function readServerResponse() : Int;
+	@:overload @:public public function readServerResponse() : Int;
 	
 	/** Sends command <i>cmd</i> to the server. */
-	@:overload public function sendServer(cmd : String) : Void;
+	@:overload @:public public function sendServer(cmd : String) : Void;
 	
 	/** converts the server response into a string. */
-	@:overload public function getResponseString() : String;
+	@:overload @:public public function getResponseString() : String;
 	
 	/** Returns all server response strings. */
-	@:overload public function getResponseStrings() : java.util.Vector<Dynamic>;
+	@:overload @:public public function getResponseStrings() : java.util.Vector<Dynamic>;
 	
 	/** standard constructor to host <i>host</i>, port <i>port</i>. */
-	@:overload public function new(host : String, port : Int) : Void;
+	@:overload @:public public function new(host : String, port : Int) : Void;
 	
 	/** creates an uninitialized instance of this class. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

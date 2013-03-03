@@ -36,9 +36,9 @@ package com.sun.tools.corba.se.idl.constExpr;
 //// NOTES:
 extern class Negative extends com.sun.tools.corba.se.idl.constExpr.UnaryExpr
 {
-	@:overload private function new(operand : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
+	@:overload @:protected private function new(operand : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
 	
-	@:overload public function evaluate() : Dynamic;
+	@:overload @:public override public function evaluate() : Dynamic;
 	
 	
 }

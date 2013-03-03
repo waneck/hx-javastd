@@ -25,21 +25,21 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class AttGroupDeclImpl extends com.sun.xml.internal.xsom.impl.AttributesHolder implements com.sun.xml.internal.xsom.XSAttGroupDecl
 {
-	@:overload public function new(_parent : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _name : String, _wildcard : com.sun.xml.internal.xsom.impl.WildcardImpl) : Void;
+	@:overload @:public public function new(_parent : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _name : String, _wildcard : com.sun.xml.internal.xsom.impl.WildcardImpl) : Void;
 	
-	@:overload public function new(_parent : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _name : String) : Void;
+	@:overload @:public public function new(_parent : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _name : String) : Void;
 	
-	@:overload public function setWildcard(wc : com.sun.xml.internal.xsom.impl.WildcardImpl) : Void;
+	@:overload @:public override public function setWildcard(wc : com.sun.xml.internal.xsom.impl.WildcardImpl) : Void;
 	
-	@:overload public function getAttributeWildcard() : com.sun.xml.internal.xsom.XSWildcard;
+	@:overload @:public public function getAttributeWildcard() : com.sun.xml.internal.xsom.XSWildcard;
 	
-	@:overload public function getAttributeUse(nsURI : String, localName : String) : com.sun.xml.internal.xsom.XSAttributeUse;
+	@:overload @:public public function getAttributeUse(nsURI : String, localName : String) : com.sun.xml.internal.xsom.XSAttributeUse;
 	
-	@:overload public function redefine(ag : com.sun.xml.internal.xsom.impl.AttGroupDeclImpl) : Void;
+	@:overload @:public public function redefine(ag : com.sun.xml.internal.xsom.impl.AttGroupDeclImpl) : Void;
 	
-	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
-	@:overload public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
+	@:overload @:public override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
 	
 	
 }

@@ -46,21 +46,21 @@ package com.sun.xml.internal.rngom.digested;
 */
 @:internal extern class IncludeImpl extends com.sun.xml.internal.rngom.digested.GrammarBuilderImpl implements com.sun.xml.internal.rngom.ast.builder.Include<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>
 {
-	@:overload public function new(p : com.sun.xml.internal.rngom.digested.DGrammarPattern, parent : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, sb : com.sun.xml.internal.rngom.digested.DSchemaBuilderImpl) : Void;
+	@:overload @:public public function new(p : com.sun.xml.internal.rngom.digested.DGrammarPattern, parent : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, sb : com.sun.xml.internal.rngom.digested.DSchemaBuilderImpl) : Void;
 	
-	@:overload override public function define(name : String, combine : com.sun.xml.internal.rngom.ast.builder.GrammarSection.GrammarSection_Combine, pattern : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload @:public override public function define(name : String, combine : com.sun.xml.internal.rngom.ast.builder.GrammarSection.GrammarSection_Combine, pattern : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function endInclude(current : com.sun.xml.internal.rngom.parse.Parseable, uri : String, ns : String, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload @:public public function endInclude(current : com.sun.xml.internal.rngom.parse.Parseable, uri : String, ns : String, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$rngom$digested$IncludeImpl$IncludedGrammarImpl') @:internal extern class IncludeImpl_IncludedGrammarImpl extends com.sun.xml.internal.rngom.digested.GrammarBuilderImpl implements com.sun.xml.internal.rngom.ast.builder.IncludedGrammar<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>
 {
-	@:overload public function new(p : com.sun.xml.internal.rngom.digested.DGrammarPattern, parent : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, sb : com.sun.xml.internal.rngom.digested.DSchemaBuilderImpl) : Void;
+	@:overload @:public public function new(p : com.sun.xml.internal.rngom.digested.DGrammarPattern, parent : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, sb : com.sun.xml.internal.rngom.digested.DSchemaBuilderImpl) : Void;
 	
-	@:overload override public function define(name : String, combine : com.sun.xml.internal.rngom.ast.builder.GrammarSection.GrammarSection_Combine, pattern : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload @:public override public function define(name : String, combine : com.sun.xml.internal.rngom.ast.builder.GrammarSection.GrammarSection_Combine, pattern : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function endIncludedGrammar(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function endIncludedGrammar(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
 	
 }

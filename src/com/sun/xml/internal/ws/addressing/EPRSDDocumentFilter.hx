@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.addressing;
 */
 extern class EPRSDDocumentFilter implements com.sun.xml.internal.ws.api.server.SDDocumentFilter
 {
-	@:overload public function new(endpoint : com.sun.xml.internal.ws.server.WSEndpointImpl<Dynamic>) : Void;
+	@:overload @:public public function new(endpoint : com.sun.xml.internal.ws.server.WSEndpointImpl<Dynamic>) : Void;
 	
-	@:overload public function filter(doc : com.sun.xml.internal.ws.api.server.SDDocument, w : javax.xml.stream.XMLStreamWriter) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public public function filter(doc : com.sun.xml.internal.ws.api.server.SDDocument, w : javax.xml.stream.XMLStreamWriter) : javax.xml.stream.XMLStreamWriter;
 	
 	
 }

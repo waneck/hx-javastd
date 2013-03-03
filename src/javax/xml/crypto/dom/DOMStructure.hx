@@ -34,19 +34,19 @@ extern class DOMStructure implements javax.xml.crypto.XMLStructure
 	* @param node the node
 	* @throws NullPointerException if <code>node</code> is <code>null</code>
 	*/
-	@:overload public function new(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Returns the node contained in this <code>DOMStructure</code>.
 	*
 	* @return the node
 	*/
-	@:overload public function getNode() : org.w3c.dom.Node;
+	@:overload @:public public function getNode() : org.w3c.dom.Node;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function isFeatureSupported(feature : String) : Bool;
+	@:overload @:public public function isFeatureSupported(feature : String) : Bool;
 	
 	
 }

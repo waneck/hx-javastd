@@ -26,7 +26,7 @@ package com.sun.org.apache.xalan.internal.xsltc.cmdline.getopt;
 */
 @:internal extern class MissingOptArgException extends com.sun.org.apache.xalan.internal.xsltc.cmdline.getopt.GetOptsException
 {
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

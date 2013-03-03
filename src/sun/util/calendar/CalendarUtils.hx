@@ -34,7 +34,7 @@ extern class CalendarUtils
 	* calendar system.
 	* @see CalendarDate#isLeapYear
 	*/
-	@:overload @:final public static function isGregorianLeapYear(gregorianYear : Int) : Bool;
+	@:overload @:public @:static @:final public static function isGregorianLeapYear(gregorianYear : Int) : Bool;
 	
 	/**
 	* Returns whether the specified year is a leap year in the Julian
@@ -46,7 +46,7 @@ extern class CalendarUtils
 	* calendar system.
 	* @see CalendarDate#isLeapYear
 	*/
-	@:overload @:final public static function isJulianLeapYear(normalizedJulianYear : Int) : Bool;
+	@:overload @:public @:static @:final public static function isJulianLeapYear(normalizedJulianYear : Int) : Bool;
 	
 	/**
 	* Divides two integers and returns the floor of the quotient.
@@ -57,7 +57,7 @@ extern class CalendarUtils
 	* @param d a divisor that must be greater than 0
 	* @return the floor of the quotient
 	*/
-	@:overload @:final public static function floorDivide(n : haxe.Int64, d : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:static @:final public static function floorDivide(n : haxe.Int64, d : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Divides two integers and returns the floor of the quotient.
@@ -68,7 +68,7 @@ extern class CalendarUtils
 	* @param d a divisor that must be greater than 0
 	* @return the floor of the quotient
 	*/
-	@:overload @:final public static function floorDivide(n : Int, d : Int) : Int;
+	@:overload @:public @:static @:final public static function floorDivide(n : Int, d : Int) : Int;
 	
 	/**
 	* Divides two integers and returns the floor of the quotient and
@@ -83,7 +83,7 @@ extern class CalendarUtils
 	* <code>mod(n, d)</code> is returned.
 	* @return the floor of the quotient.
 	*/
-	@:overload @:final public static function floorDivide(n : Int, d : Int, r : java.NativeArray<Int>) : Int;
+	@:overload @:public @:static @:final public static function floorDivide(n : Int, d : Int, r : java.NativeArray<Int>) : Int;
 	
 	/**
 	* Divides two integers and returns the floor of the quotient and
@@ -98,22 +98,22 @@ extern class CalendarUtils
 	* <code>mod(n, d)</code> is returned.
 	* @return the floor of the quotient.
 	*/
-	@:overload @:final public static function floorDivide(n : haxe.Int64, d : Int, r : java.NativeArray<Int>) : Int;
+	@:overload @:public @:static @:final public static function floorDivide(n : haxe.Int64, d : Int, r : java.NativeArray<Int>) : Int;
 	
-	@:overload @:final public static function mod(x : haxe.Int64, y : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:static @:final public static function mod(x : haxe.Int64, y : haxe.Int64) : haxe.Int64;
 	
-	@:overload @:final public static function mod(x : Int, y : Int) : Int;
+	@:overload @:public @:static @:final public static function mod(x : Int, y : Int) : Int;
 	
-	@:overload @:final public static function amod(x : Int, y : Int) : Int;
+	@:overload @:public @:static @:final public static function amod(x : Int, y : Int) : Int;
 	
-	@:overload @:final public static function amod(x : haxe.Int64, y : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:static @:final public static function amod(x : haxe.Int64, y : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Mimics sprintf(buf, "%0*d", decaimal, width).
 	*/
-	@:overload @:final public static function sprintf0d(sb : java.lang.StringBuilder, value : Int, width : Int) : java.lang.StringBuilder;
+	@:overload @:public @:static @:final public static function sprintf0d(sb : java.lang.StringBuilder, value : Int, width : Int) : java.lang.StringBuilder;
 	
-	@:overload @:final public static function sprintf0d(sb : java.lang.StringBuffer, value : Int, width : Int) : java.lang.StringBuffer;
+	@:overload @:public @:static @:final public static function sprintf0d(sb : java.lang.StringBuffer, value : Int, width : Int) : java.lang.StringBuffer;
 	
 	
 }

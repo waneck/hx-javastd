@@ -46,7 +46,7 @@ extern class FileOutputStream extends java.io.OutputStream
 	*               to the file.
 	* @see        java.lang.SecurityManager#checkWrite(java.lang.String)
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a file output stream to write to the file with the specified
@@ -74,7 +74,7 @@ extern class FileOutputStream extends java.io.OutputStream
 	* @see        java.lang.SecurityManager#checkWrite(java.lang.String)
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function new(name : String, append : Bool) : Void;
+	@:require(java1) @:overload @:public public function new(name : String, append : Bool) : Void;
 	
 	/**
 	* Creates a file output stream to write to the file represented by
@@ -101,7 +101,7 @@ extern class FileOutputStream extends java.io.OutputStream
 	* @see        java.lang.SecurityException
 	* @see        java.lang.SecurityManager#checkWrite(java.lang.String)
 	*/
-	@:overload public function new(file : java.io.File) : Void;
+	@:overload @:public public function new(file : java.io.File) : Void;
 	
 	/**
 	* Creates a file output stream to write to the file represented by
@@ -132,7 +132,7 @@ extern class FileOutputStream extends java.io.OutputStream
 	* @see        java.lang.SecurityManager#checkWrite(java.lang.String)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(file : java.io.File, append : Bool) : Void;
+	@:require(java4) @:overload @:public public function new(file : java.io.File, append : Bool) : Void;
 	
 	/**
 	* Creates a file output stream to write to the specified file
@@ -157,7 +157,7 @@ extern class FileOutputStream extends java.io.OutputStream
 	*               write access to the file descriptor
 	* @see        java.lang.SecurityManager#checkWrite(java.io.FileDescriptor)
 	*/
-	@:overload public function new(fdObj : java.io.FileDescriptor) : Void;
+	@:overload @:public public function new(fdObj : java.io.FileDescriptor) : Void;
 	
 	/**
 	* Writes the specified byte to this file output stream. Implements
@@ -166,7 +166,7 @@ extern class FileOutputStream extends java.io.OutputStream
 	* @param      b   the byte to be written.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
 	/**
 	* Writes <code>b.length</code> bytes from the specified byte array
@@ -175,7 +175,7 @@ extern class FileOutputStream extends java.io.OutputStream
 	* @param      b   the data.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Writes <code>len</code> bytes from the specified byte array
@@ -186,7 +186,7 @@ extern class FileOutputStream extends java.io.OutputStream
 	* @param      len   the number of bytes to write.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Closes this file output stream and releases any system resources
@@ -201,7 +201,7 @@ extern class FileOutputStream extends java.io.OutputStream
 	* @revised 1.4
 	* @spec JSR-51
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Returns the file descriptor associated with this stream.
@@ -213,7 +213,7 @@ extern class FileOutputStream extends java.io.OutputStream
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FileDescriptor
 	*/
-	@:overload @:final public function getFD() : java.io.FileDescriptor;
+	@:overload @:public @:final public function getFD() : java.io.FileDescriptor;
 	
 	/**
 	* Returns the unique {@link java.nio.channels.FileChannel FileChannel}
@@ -232,7 +232,7 @@ extern class FileOutputStream extends java.io.OutputStream
 	* @since 1.4
 	* @spec JSR-51
 	*/
-	@:require(java4) @:overload public function getChannel() : java.nio.channels.FileChannel;
+	@:require(java4) @:overload @:public public function getChannel() : java.nio.channels.FileChannel;
 	
 	/**
 	* Cleans up the connection to the file, and ensures that the
@@ -242,7 +242,7 @@ extern class FileOutputStream extends java.io.OutputStream
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FileInputStream#close()
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

@@ -30,15 +30,15 @@ package javax.swing.plaf.basic;
 */
 extern class BasicViewportUI extends javax.swing.plaf.ViewportUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installDefaults(c : javax.swing.JComponent) : Void;
+	@:overload @:protected private function installDefaults(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function uninstallDefaults(c : javax.swing.JComponent) : Void;
+	@:overload @:protected private function uninstallDefaults(c : javax.swing.JComponent) : Void;
 	
 	
 }

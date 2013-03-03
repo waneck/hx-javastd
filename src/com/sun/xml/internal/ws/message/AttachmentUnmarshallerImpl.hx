@@ -25,11 +25,11 @@ package com.sun.xml.internal.ws.message;
 */
 extern class AttachmentUnmarshallerImpl extends javax.xml.bind.attachment.AttachmentUnmarshaller
 {
-	@:overload public function new(attachments : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
+	@:overload @:public public function new(attachments : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
 	
-	@:overload override public function getAttachmentAsDataHandler(cid : String) : javax.activation.DataHandler;
+	@:overload @:public override public function getAttachmentAsDataHandler(cid : String) : javax.activation.DataHandler;
 	
-	@:overload override public function getAttachmentAsByteArray(cid : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getAttachmentAsByteArray(cid : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

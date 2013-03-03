@@ -25,19 +25,19 @@ package com.sun.xml.internal.stream.events;
 */
 extern class EndElementEvent extends com.sun.xml.internal.stream.events.DummyEvent implements javax.xml.stream.events.EndElement
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
-	@:overload public function new(prefix : String, uri : String, localpart : String) : Void;
+	@:overload @:public public function new(prefix : String, uri : String, localpart : String) : Void;
 	
-	@:overload public function new(qname : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(qname : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function setName(qname : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setName(qname : javax.xml.namespace.QName) : Void;
 	
-	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload @:protected override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	/** Returns an Iterator of namespaces that have gone out
 	* of scope.  Returns an empty iterator if no namespaces have gone
@@ -45,11 +45,11 @@ extern class EndElementEvent extends com.sun.xml.internal.stream.events.DummyEve
 	* @return an Iterator over Namespace interfaces, or an
 	* empty iterator
 	*/
-	@:overload public function getNamespaces() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getNamespaces() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function nameAsString() : String;
+	@:overload @:public public function nameAsString() : String;
 	
 	
 }

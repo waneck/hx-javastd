@@ -29,70 +29,70 @@ package sun.font;
 */
 extern class GraphicComponent implements sun.font.TextLineComponent implements sun.font.Decoration.Decoration_Label
 {
-	public static var GRAPHIC_LEADING(default, null) : Single;
+	@:public @:static @:final public static var GRAPHIC_LEADING(default, null) : Single;
 	
 	/**
 	* Create a new GraphicComponent.  start and limit are indices
 	* into charLtoV and levels.  charsLtoV and levels may be adopted.
 	*/
-	@:overload public function new(graphic : java.awt.font.GraphicAttribute, decorator : sun.font.Decoration, charsLtoV : java.NativeArray<Int>, levels : java.NativeArray<java.StdTypes.Int8>, start : Int, limit : Int, baseTx : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public public function new(graphic : java.awt.font.GraphicAttribute, decorator : sun.font.Decoration, charsLtoV : java.NativeArray<Int>, levels : java.NativeArray<java.StdTypes.Int8>, start : Int, limit : Int, baseTx : java.awt.geom.AffineTransform) : Void;
 	
-	@:overload public function isSimple() : Bool;
+	@:overload @:public public function isSimple() : Bool;
 	
-	@:overload public function getPixelBounds(frc : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
+	@:overload @:public public function getPixelBounds(frc : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
 	
-	@:overload public function handleGetVisualBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function handleGetVisualBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload public function getCoreMetrics() : sun.font.CoreMetrics;
+	@:overload @:public public function getCoreMetrics() : sun.font.CoreMetrics;
 	
-	@:overload public static function createCoreMetrics(graphic : java.awt.font.GraphicAttribute) : sun.font.CoreMetrics;
+	@:overload @:public @:static public static function createCoreMetrics(graphic : java.awt.font.GraphicAttribute) : sun.font.CoreMetrics;
 	
-	@:overload public function getItalicAngle() : Single;
+	@:overload @:public public function getItalicAngle() : Single;
 	
-	@:overload public function getVisualBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getVisualBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload public function handleGetOutline(x : Single, y : Single) : java.awt.Shape;
+	@:overload @:public public function handleGetOutline(x : Single, y : Single) : java.awt.Shape;
 	
-	@:overload public function getBaselineTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public public function getBaselineTransform() : java.awt.geom.AffineTransform;
 	
-	@:overload public function getOutline(x : Single, y : Single) : java.awt.Shape;
+	@:overload @:public public function getOutline(x : Single, y : Single) : java.awt.Shape;
 	
-	@:overload public function handleDraw(g2d : java.awt.Graphics2D, x : Single, y : Single) : Void;
+	@:overload @:public public function handleDraw(g2d : java.awt.Graphics2D, x : Single, y : Single) : Void;
 	
-	@:overload public function draw(g2d : java.awt.Graphics2D, x : Single, y : Single) : Void;
+	@:overload @:public public function draw(g2d : java.awt.Graphics2D, x : Single, y : Single) : Void;
 	
-	@:overload public function getCharVisualBounds(index : Int) : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getCharVisualBounds(index : Int) : java.awt.geom.Rectangle2D;
 	
-	@:overload public function getNumCharacters() : Int;
+	@:overload @:public public function getNumCharacters() : Int;
 	
-	@:overload public function getCharX(index : Int) : Single;
+	@:overload @:public public function getCharX(index : Int) : Single;
 	
-	@:overload public function getCharY(index : Int) : Single;
+	@:overload @:public public function getCharY(index : Int) : Single;
 	
-	@:overload public function getCharAdvance(index : Int) : Single;
+	@:overload @:public public function getCharAdvance(index : Int) : Single;
 	
-	@:overload public function caretAtOffsetIsValid(index : Int) : Bool;
+	@:overload @:public public function caretAtOffsetIsValid(index : Int) : Bool;
 	
-	@:overload public function handleGetCharVisualBounds(index : Int) : java.awt.geom.Rectangle2D;
+	@:overload @:public public function handleGetCharVisualBounds(index : Int) : java.awt.geom.Rectangle2D;
 	
-	@:overload public function getLineBreakIndex(start : Int, width : Single) : Int;
+	@:overload @:public public function getLineBreakIndex(start : Int, width : Single) : Int;
 	
-	@:overload public function getAdvanceBetween(start : Int, limit : Int) : Single;
+	@:overload @:public public function getAdvanceBetween(start : Int, limit : Int) : Single;
 	
-	@:overload public function getLogicalBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getLogicalBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload public function getAdvance() : Single;
+	@:overload @:public public function getAdvance() : Single;
 	
-	@:overload public function getItalicBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getItalicBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload public function getSubset(start : Int, limit : Int, dir : Int) : sun.font.TextLineComponent;
+	@:overload @:public public function getSubset(start : Int, limit : Int, dir : Int) : sun.font.TextLineComponent;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Return the number of justification records this uses.
 	*/
-	@:overload public function getNumJustificationInfos() : Int;
+	@:overload @:public public function getNumJustificationInfos() : Int;
 	
 	/**
 	* Return GlyphJustificationInfo objects for the characters between
@@ -101,7 +101,7 @@ extern class GraphicComponent implements sun.font.TextLineComponent implements s
 	* getNumJustificationInfos will be set.  If a position corresponds
 	* to a character outside the provided range, it is set to null.
 	*/
-	@:overload public function getJustificationInfos(infos : java.NativeArray<java.awt.font.GlyphJustificationInfo>, infoStart : Int, charStart : Int, charLimit : Int) : Void;
+	@:overload @:public public function getJustificationInfos(infos : java.NativeArray<java.awt.font.GlyphJustificationInfo>, infoStart : Int, charStart : Int, charLimit : Int) : Void;
 	
 	/**
 	* Apply deltas to the data in this component, starting at offset
@@ -114,7 +114,7 @@ extern class GraphicComponent implements sun.font.TextLineComponent implements s
 	* the new component requires rejustification (ligatures were
 	* formed or split), flags[0] will be set on exit.
 	*/
-	@:overload public function applyJustificationDeltas(deltas : java.NativeArray<Single>, deltaStart : Int, flags : java.NativeArray<Bool>) : sun.font.TextLineComponent;
+	@:overload @:public public function applyJustificationDeltas(deltas : java.NativeArray<Single>, deltaStart : Int, flags : java.NativeArray<Bool>) : sun.font.TextLineComponent;
 	
 	
 }

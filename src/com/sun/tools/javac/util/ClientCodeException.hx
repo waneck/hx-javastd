@@ -34,7 +34,7 @@ package com.sun.tools.javac.util;
 */
 extern class ClientCodeException extends java.lang.RuntimeException
 {
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

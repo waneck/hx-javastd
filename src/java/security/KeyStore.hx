@@ -183,7 +183,7 @@ package java.security;
 	* @param provider the provider.
 	* @param type the keystore type.
 	*/
-	@:overload private function new(keyStoreSpi : java.security.KeyStoreSpi, provider : java.security.Provider, type : String) : Void;
+	@:overload @:protected private function new(keyStoreSpi : java.security.KeyStoreSpi, provider : java.security.Provider, type : String) : Void;
 	
 	/**
 	* Returns a keystore object of the specified type.
@@ -211,7 +211,7 @@ package java.security;
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(type : String) : java.security.KeyStore;
+	@:overload @:public @:static public static function getInstance(type : String) : java.security.KeyStore;
 	
 	/**
 	* Returns a keystore object of the specified type.
@@ -246,7 +246,7 @@ package java.security;
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(type : String, provider : String) : java.security.KeyStore;
+	@:overload @:public @:static public static function getInstance(type : String, provider : String) : java.security.KeyStore;
 	
 	/**
 	* Returns a keystore object of the specified type.
@@ -276,7 +276,7 @@ package java.security;
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInstance(type : String, provider : java.security.Provider) : java.security.KeyStore;
+	@:require(java4) @:overload @:public @:static public static function getInstance(type : String, provider : java.security.Provider) : java.security.KeyStore;
 	
 	/**
 	* Returns the default keystore type as specified in the Java security
@@ -301,21 +301,21 @@ package java.security;
 	* Java security properties file, or the string &quot;jks&quot;
 	* if no such property exists.
 	*/
-	@:overload @:final public static function getDefaultType() : String;
+	@:overload @:public @:final @:static public static function getDefaultType() : String;
 	
 	/**
 	* Returns the provider of this keystore.
 	*
 	* @return the provider of this keystore.
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Returns the type of this keystore.
 	*
 	* @return the type of this keystore.
 	*/
-	@:overload @:final public function getType() : String;
+	@:overload @:public @:final public function getType() : String;
 	
 	/**
 	* Returns the key associated with the given alias, using the given
@@ -337,7 +337,7 @@ package java.security;
 	* @exception UnrecoverableKeyException if the key cannot be recovered
 	* (e.g., the given password is wrong).
 	*/
-	@:overload @:final public function getKey(alias : String, password : java.NativeArray<java.StdTypes.Char16>) : java.security.Key;
+	@:overload @:public @:final public function getKey(alias : String, password : java.NativeArray<java.StdTypes.Char16>) : java.security.Key;
 	
 	/**
 	* Returns the certificate chain associated with the given alias.
@@ -355,7 +355,7 @@ package java.security;
 	* @exception KeyStoreException if the keystore has not been initialized
 	* (loaded).
 	*/
-	@:overload @:final public function getCertificateChain(alias : String) : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public @:final public function getCertificateChain(alias : String) : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the certificate associated with the given alias.
@@ -381,7 +381,7 @@ package java.security;
 	* @exception KeyStoreException if the keystore has not been initialized
 	* (loaded).
 	*/
-	@:overload @:final public function getCertificate(alias : String) : java.security.cert.Certificate;
+	@:overload @:public @:final public function getCertificate(alias : String) : java.security.cert.Certificate;
 	
 	/**
 	* Returns the creation date of the entry identified by the given alias.
@@ -394,7 +394,7 @@ package java.security;
 	* @exception KeyStoreException if the keystore has not been initialized
 	* (loaded).
 	*/
-	@:overload @:final public function getCreationDate(alias : String) : java.util.Date;
+	@:overload @:public @:final public function getCreationDate(alias : String) : java.util.Date;
 	
 	/**
 	* Assigns the given key to the given alias, protecting it with the given
@@ -419,7 +419,7 @@ package java.security;
 	* (loaded), the given key cannot be protected, or this operation fails
 	* for some other reason
 	*/
-	@:overload @:final public function setKeyEntry(alias : String, key : java.security.Key, password : java.NativeArray<java.StdTypes.Char16>, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
+	@:overload @:public @:final public function setKeyEntry(alias : String, key : java.security.Key, password : java.NativeArray<java.StdTypes.Char16>, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
 	
 	/**
 	* Assigns the given key (that has already been protected) to the given
@@ -445,7 +445,7 @@ package java.security;
 	* @exception KeyStoreException if the keystore has not been initialized
 	* (loaded), or if this operation fails for some other reason.
 	*/
-	@:overload @:final public function setKeyEntry(alias : String, key : java.NativeArray<java.StdTypes.Int8>, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
+	@:overload @:public @:final public function setKeyEntry(alias : String, key : java.NativeArray<java.StdTypes.Int8>, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
 	
 	/**
 	* Assigns the given trusted certificate to the given alias.
@@ -465,7 +465,7 @@ package java.security;
 	* entry containing a trusted certificate,
 	* or this operation fails for some other reason.
 	*/
-	@:overload @:final public function setCertificateEntry(alias : String, cert : java.security.cert.Certificate) : Void;
+	@:overload @:public @:final public function setCertificateEntry(alias : String, cert : java.security.cert.Certificate) : Void;
 	
 	/**
 	* Deletes the entry identified by the given alias from this keystore.
@@ -475,7 +475,7 @@ package java.security;
 	* @exception KeyStoreException if the keystore has not been initialized,
 	* or if the entry cannot be removed.
 	*/
-	@:overload @:final public function deleteEntry(alias : String) : Void;
+	@:overload @:public @:final public function deleteEntry(alias : String) : Void;
 	
 	/**
 	* Lists all the alias names of this keystore.
@@ -485,7 +485,7 @@ package java.security;
 	* @exception KeyStoreException if the keystore has not been initialized
 	* (loaded).
 	*/
-	@:overload @:final public function aliases() : java.util.Enumeration<String>;
+	@:overload @:public @:final public function aliases() : java.util.Enumeration<String>;
 	
 	/**
 	* Checks if the given alias exists in this keystore.
@@ -497,7 +497,7 @@ package java.security;
 	* @exception KeyStoreException if the keystore has not been initialized
 	* (loaded).
 	*/
-	@:overload @:final public function containsAlias(alias : String) : Bool;
+	@:overload @:public @:final public function containsAlias(alias : String) : Bool;
 	
 	/**
 	* Retrieves the number of entries in this keystore.
@@ -507,7 +507,7 @@ package java.security;
 	* @exception KeyStoreException if the keystore has not been initialized
 	* (loaded).
 	*/
-	@:overload @:final public function size() : Int;
+	@:overload @:public @:final public function size() : Int;
 	
 	/**
 	* Returns true if the entry identified by the given alias
@@ -523,7 +523,7 @@ package java.security;
 	* @exception KeyStoreException if the keystore has not been initialized
 	* (loaded).
 	*/
-	@:overload @:final public function isKeyEntry(alias : String) : Bool;
+	@:overload @:public @:final public function isKeyEntry(alias : String) : Bool;
 	
 	/**
 	* Returns true if the entry identified by the given alias
@@ -539,7 +539,7 @@ package java.security;
 	* @exception KeyStoreException if the keystore has not been initialized
 	* (loaded).
 	*/
-	@:overload @:final public function isCertificateEntry(alias : String) : Bool;
+	@:overload @:public @:final public function isCertificateEntry(alias : String) : Bool;
 	
 	/**
 	* Returns the (alias) name of the first keystore entry whose certificate
@@ -567,7 +567,7 @@ package java.security;
 	* @exception KeyStoreException if the keystore has not been initialized
 	* (loaded).
 	*/
-	@:overload @:final public function getCertificateAlias(cert : java.security.cert.Certificate) : String;
+	@:overload @:public @:final public function getCertificateAlias(cert : java.security.cert.Certificate) : String;
 	
 	/**
 	* Stores this keystore to the given output stream, and protects its
@@ -584,7 +584,7 @@ package java.security;
 	* @exception CertificateException if any of the certificates included in
 	* the keystore data could not be stored
 	*/
-	@:overload @:final public function store(stream : java.io.OutputStream, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public @:final public function store(stream : java.io.OutputStream, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Stores this keystore using the given <code>LoadStoreParameter</code>.
@@ -606,7 +606,7 @@ package java.security;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function store(param : java.security.KeyStore.KeyStore_LoadStoreParameter) : Void;
+	@:require(java5) @:overload @:public @:final public function store(param : java.security.KeyStore.KeyStore_LoadStoreParameter) : Void;
 	
 	/**
 	* Loads this KeyStore from the given input stream.
@@ -641,7 +641,7 @@ package java.security;
 	* @exception CertificateException if any of the certificates in the
 	* keystore could not be loaded
 	*/
-	@:overload @:final public function load(stream : java.io.InputStream, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public @:final public function load(stream : java.io.InputStream, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Loads this keystore using the given <code>LoadStoreParameter</code>.
@@ -669,7 +669,7 @@ package java.security;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function load(param : java.security.KeyStore.KeyStore_LoadStoreParameter) : Void;
+	@:require(java5) @:overload @:public @:final public function load(param : java.security.KeyStore.KeyStore_LoadStoreParameter) : Void;
 	
 	/**
 	* Gets a keystore <code>Entry</code> for the specified alias
@@ -699,7 +699,7 @@ package java.security;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function getEntry(alias : String, protParam : java.security.KeyStore.KeyStore_ProtectionParameter) : java.security.KeyStore.KeyStore_Entry;
+	@:require(java5) @:overload @:public @:final public function getEntry(alias : String, protParam : java.security.KeyStore.KeyStore_ProtectionParameter) : java.security.KeyStore.KeyStore_Entry;
 	
 	/**
 	* Saves a keystore <code>Entry</code> under the specified alias.
@@ -725,7 +725,7 @@ package java.security;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function setEntry(alias : String, entry : java.security.KeyStore.KeyStore_Entry, protParam : java.security.KeyStore.KeyStore_ProtectionParameter) : Void;
+	@:require(java5) @:overload @:public @:final public function setEntry(alias : String, entry : java.security.KeyStore.KeyStore_Entry, protParam : java.security.KeyStore.KeyStore_ProtectionParameter) : Void;
 	
 	/**
 	* Determines if the keystore <code>Entry</code> for the specified
@@ -747,7 +747,7 @@ package java.security;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function entryInstanceOf(alias : String, entryClass : Class<java.security.KeyStore.KeyStore_Entry>) : Bool;
+	@:require(java5) @:overload @:public @:final public function entryInstanceOf(alias : String, entryClass : Class<java.security.KeyStore.KeyStore_Entry>) : Bool;
 	
 	
 }
@@ -767,7 +767,7 @@ package java.security;
 	*
 	* @return the parameter used to protect keystore data, or null
 	*/
-	@:overload public function getProtectionParameter() : java.security.KeyStore.KeyStore_ProtectionParameter;
+	@:overload @:public public function getProtectionParameter() : java.security.KeyStore.KeyStore_ProtectionParameter;
 	
 	
 }
@@ -802,7 +802,7 @@ package java.security;
 	*
 	* @param password the password, which may be <code>null</code>
 	*/
-	@:overload public function new(password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Gets the password.
@@ -817,7 +817,7 @@ package java.security;
 	* @exception IllegalStateException if the password has
 	*              been cleared (destroyed)
 	*/
-	@:overload @:synchronized public function getPassword() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public @:synchronized public function getPassword() : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Clears the password.
@@ -825,14 +825,14 @@ package java.security;
 	* @exception DestroyFailedException if this method was unable
 	*      to clear the password
 	*/
-	@:overload @:synchronized public function destroy() : Void;
+	@:overload @:public @:synchronized public function destroy() : Void;
 	
 	/**
 	* Determines if password has been cleared.
 	*
 	* @return true if the password has been cleared, false otherwise
 	*/
-	@:overload @:synchronized public function isDestroyed() : Bool;
+	@:overload @:public @:synchronized public function isDestroyed() : Bool;
 	
 	
 }
@@ -850,14 +850,14 @@ package java.security;
 	* @param handler the CallbackHandler
 	* @exception NullPointerException if handler is null
 	*/
-	@:overload public function new(handler : javax.security.auth.callback.CallbackHandler) : Void;
+	@:overload @:public public function new(handler : javax.security.auth.callback.CallbackHandler) : Void;
 	
 	/**
 	* Returns the CallbackHandler.
 	*
 	* @return the CallbackHandler.
 	*/
-	@:overload public function getCallbackHandler() : javax.security.auth.callback.CallbackHandler;
+	@:overload @:public public function getCallbackHandler() : javax.security.auth.callback.CallbackHandler;
 	
 	
 }
@@ -902,14 +902,14 @@ package java.security;
 	*      does not match the algorithm of the <code>PublicKey</code>
 	*      in the end entity <code>Certificate</code> (at index 0)
 	*/
-	@:overload public function new(privateKey : java.security.PrivateKey, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
+	@:overload @:public public function new(privateKey : java.security.PrivateKey, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
 	
 	/**
 	* Gets the <code>PrivateKey</code> from this entry.
 	*
 	* @return the <code>PrivateKey</code> from this entry
 	*/
-	@:overload public function getPrivateKey() : java.security.PrivateKey;
+	@:overload @:public public function getPrivateKey() : java.security.PrivateKey;
 	
 	/**
 	* Gets the <code>Certificate</code> chain from this entry.
@@ -922,7 +922,7 @@ package java.security;
 	*      the runtime type of the returned array is
 	*      <code>X509Certificate[]</code>.
 	*/
-	@:overload public function getCertificateChain() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public public function getCertificateChain() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Gets the end entity <code>Certificate</code>
@@ -934,13 +934,13 @@ package java.security;
 	*      the runtime type of the returned certificate is
 	*      <code>X509Certificate</code>.
 	*/
-	@:overload public function getCertificate() : java.security.cert.Certificate;
+	@:overload @:public public function getCertificate() : java.security.cert.Certificate;
 	
 	/**
 	* Returns a string representation of this PrivateKeyEntry.
 	* @return a string representation of this PrivateKeyEntry.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -960,20 +960,20 @@ package java.security;
 	* @exception NullPointerException if <code>secretKey</code>
 	*      is <code>null</code>
 	*/
-	@:overload public function new(secretKey : javax.crypto.SecretKey) : Void;
+	@:overload @:public public function new(secretKey : javax.crypto.SecretKey) : Void;
 	
 	/**
 	* Gets the <code>SecretKey</code> from this entry.
 	*
 	* @return the <code>SecretKey</code> from this entry
 	*/
-	@:overload public function getSecretKey() : javax.crypto.SecretKey;
+	@:overload @:public public function getSecretKey() : javax.crypto.SecretKey;
 	
 	/**
 	* Returns a string representation of this SecretKeyEntry.
 	* @return a string representation of this SecretKeyEntry.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -994,20 +994,20 @@ package java.security;
 	* @exception NullPointerException if
 	*      <code>trustedCert</code> is <code>null</code>
 	*/
-	@:overload public function new(trustedCert : java.security.cert.Certificate) : Void;
+	@:overload @:public public function new(trustedCert : java.security.cert.Certificate) : Void;
 	
 	/**
 	* Gets the trusted <code>Certficate</code> from this entry.
 	*
 	* @return the trusted <code>Certificate</code> from this entry
 	*/
-	@:overload public function getTrustedCertificate() : java.security.cert.Certificate;
+	@:overload @:public public function getTrustedCertificate() : java.security.cert.Certificate;
 	
 	/**
 	* Returns a string representation of this TrustedCertificateEntry.
 	* @return a string representation of this TrustedCertificateEntry.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -1031,7 +1031,7 @@ package java.security;
 	/**
 	* Construct a new Builder.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the KeyStore described by this object.
@@ -1040,7 +1040,7 @@ package java.security;
 	*   operation, for example if the KeyStore could not be
 	*   instantiated or loaded
 	*/
-	@:overload @:abstract public function getKeyStore() : java.security.KeyStore;
+	@:overload @:public @:abstract public function getKeyStore() : java.security.KeyStore;
 	
 	/**
 	* Returns the ProtectionParameters that should be used to obtain
@@ -1057,7 +1057,7 @@ package java.security;
 	* @throws IllegalStateException if the getKeyStore method has
 	*   not been invoked prior to calling this method
 	*/
-	@:overload @:abstract public function getProtectionParameter(alias : String) : java.security.KeyStore.KeyStore_ProtectionParameter;
+	@:overload @:public @:abstract public function getProtectionParameter(alias : String) : java.security.KeyStore.KeyStore_ProtectionParameter;
 	
 	/**
 	* Returns a new Builder that encapsulates the given KeyStore.
@@ -1078,7 +1078,7 @@ package java.security;
 	* @throws IllegalArgumentException if the keyStore has not been
 	*   initialized
 	*/
-	@:overload public static function newInstance(keyStore : java.security.KeyStore, protectionParameter : java.security.KeyStore.KeyStore_ProtectionParameter) : java.security.KeyStore.KeyStore_Builder;
+	@:overload @:public @:static public static function newInstance(keyStore : java.security.KeyStore, protectionParameter : java.security.KeyStore.KeyStore_ProtectionParameter) : java.security.KeyStore.KeyStore_Builder;
 	
 	/**
 	* Returns a new Builder object.
@@ -1123,7 +1123,7 @@ package java.security;
 	*   of either PasswordProtection or CallbackHandlerProtection; or
 	*   if file does not exist or does not refer to a normal file
 	*/
-	@:overload public static function newInstance(type : String, provider : java.security.Provider, file : java.io.File, protection : java.security.KeyStore.KeyStore_ProtectionParameter) : java.security.KeyStore.KeyStore_Builder;
+	@:overload @:public @:static public static function newInstance(type : String, provider : java.security.Provider, file : java.io.File, protection : java.security.KeyStore.KeyStore_ProtectionParameter) : java.security.KeyStore.KeyStore_Builder;
 	
 	/**
 	* Returns a new Builder object.
@@ -1152,21 +1152,21 @@ package java.security;
 	* @param protection the ProtectionParameter securing the Keystore
 	* @throws NullPointerException if type or protection is null
 	*/
-	@:overload public static function newInstance(type : String, provider : java.security.Provider, protection : java.security.KeyStore.KeyStore_ProtectionParameter) : java.security.KeyStore.KeyStore_Builder;
+	@:overload @:public @:static public static function newInstance(type : String, provider : java.security.Provider, protection : java.security.KeyStore.KeyStore_ProtectionParameter) : java.security.KeyStore.KeyStore_Builder;
 	
 	
 }
 @:native('java$security$KeyStore$Builder$FileBuilder') @:internal extern class KeyStore_Builder_FileBuilder extends java.security.KeyStore.KeyStore_Builder
 {
-	@:overload @:synchronized override public function getKeyStore() : java.security.KeyStore;
+	@:overload @:public @:synchronized override public function getKeyStore() : java.security.KeyStore;
 	
-	@:overload @:synchronized override public function getProtectionParameter(alias : String) : java.security.KeyStore.KeyStore_ProtectionParameter;
+	@:overload @:public @:synchronized override public function getProtectionParameter(alias : String) : java.security.KeyStore.KeyStore_ProtectionParameter;
 	
 	
 }
 @:native('java$security$KeyStore$SimpleLoadStoreParameter') @:internal extern class KeyStore_SimpleLoadStoreParameter implements java.security.KeyStore.KeyStore_LoadStoreParameter
 {
-	@:overload public function getProtectionParameter() : java.security.KeyStore.KeyStore_ProtectionParameter;
+	@:overload @:public public function getProtectionParameter() : java.security.KeyStore.KeyStore_ProtectionParameter;
 	
 	
 }

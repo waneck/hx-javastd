@@ -43,7 +43,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param memberDetailsTree the content tree representing member details
 	* @return content tree for the method details header
 	*/
-	@:overload public function getMethodDetailsTreeHeader(classDoc : com.sun.javadoc.ClassDoc, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMethodDetailsTreeHeader(classDoc : com.sun.javadoc.ClassDoc, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the method documentation tree header.
@@ -52,7 +52,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param methodDetailsTree the content tree representing method details
 	* @return content tree for the method documentation header
 	*/
-	@:overload public function getMethodDocTreeHeader(method : com.sun.javadoc.MethodDoc, methodDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMethodDocTreeHeader(method : com.sun.javadoc.MethodDoc, methodDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the signature for the given method.
@@ -60,7 +60,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param method the method being documented
 	* @return content tree for the method signature
 	*/
-	@:overload public function getSignature(method : com.sun.javadoc.MethodDoc) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSignature(method : com.sun.javadoc.MethodDoc) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add the deprecated output for the given method.
@@ -68,7 +68,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param method the method being documented
 	* @param methodDocTree content tree to which the deprecated information will be added
 	*/
-	@:overload public function addDeprecated(method : com.sun.javadoc.MethodDoc, methodDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addDeprecated(method : com.sun.javadoc.MethodDoc, methodDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the comments for the given method.
@@ -77,7 +77,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param method the method being documented
 	* @param methodDocTree the content tree to which the comments will be added
 	*/
-	@:overload public function addComments(holder : com.sun.javadoc.Type, method : com.sun.javadoc.MethodDoc, methodDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addComments(holder : com.sun.javadoc.Type, method : com.sun.javadoc.MethodDoc, methodDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the tags for the given method.
@@ -85,7 +85,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param method the method being documented
 	* @param methodDocTree the content tree to which the tags will be added
 	*/
-	@:overload public function addTags(method : com.sun.javadoc.MethodDoc, methodDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addTags(method : com.sun.javadoc.MethodDoc, methodDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get the method details tree.
@@ -93,7 +93,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param methodDetailsTree the content tree representing method details
 	* @return content tree for the method details
 	*/
-	@:overload public function getMethodDetails(methodDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMethodDetails(methodDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the method documentation.
@@ -102,12 +102,12 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param isLastContent true if the content to be added is the last content
 	* @return content tree for the method documentation
 	*/
-	@:overload public function getMethodDoc(methodDocTree : com.sun.tools.doclets.internal.toolkit.Content, isLastContent : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMethodDoc(methodDocTree : com.sun.tools.doclets.internal.toolkit.Content, isLastContent : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Close the writer.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

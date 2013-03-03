@@ -54,7 +54,7 @@ extern class DataTruncation extends java.sql.SQLWarning
 	* @param dataSize the original size of the data
 	* @param transferSize the size after truncation
 	*/
-	@:overload public function new(index : Int, parameter : Bool, read : Bool, dataSize : Int, transferSize : Int) : Void;
+	@:overload @:public public function new(index : Int, parameter : Bool, read : Bool, dataSize : Int, transferSize : Int) : Void;
 	
 	/**
 	* Creates a <code>DataTruncation</code> object
@@ -77,7 +77,7 @@ extern class DataTruncation extends java.sql.SQLWarning
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(index : Int, parameter : Bool, read : Bool, dataSize : Int, transferSize : Int, cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(index : Int, parameter : Bool, read : Bool, dataSize : Int, transferSize : Int, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Retrieves the index of the column or parameter that was truncated.
@@ -87,7 +87,7 @@ extern class DataTruncation extends java.sql.SQLWarning
 	*
 	* @return the index of the truncated paramter or column value
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* Indicates whether the value truncated was a parameter value or
@@ -96,7 +96,7 @@ extern class DataTruncation extends java.sql.SQLWarning
 	* @return <code>true</code> if the value truncated was a parameter;
 	*         <code>false</code> if it was a column value
 	*/
-	@:overload public function getParameter() : Bool;
+	@:overload @:public public function getParameter() : Bool;
 	
 	/**
 	* Indicates whether or not the value was truncated on a read.
@@ -104,7 +104,7 @@ extern class DataTruncation extends java.sql.SQLWarning
 	* @return <code>true</code> if the value was truncated when read from
 	*         the database; <code>false</code> if the data was truncated on a write
 	*/
-	@:overload public function getRead() : Bool;
+	@:overload @:public public function getRead() : Bool;
 	
 	/**
 	* Gets the number of bytes of data that should have been transferred.
@@ -113,7 +113,7 @@ extern class DataTruncation extends java.sql.SQLWarning
 	*
 	* @return the number of bytes of data that should have been transferred
 	*/
-	@:overload public function getDataSize() : Int;
+	@:overload @:public public function getDataSize() : Int;
 	
 	/**
 	* Gets the number of bytes of data actually transferred.
@@ -121,7 +121,7 @@ extern class DataTruncation extends java.sql.SQLWarning
 	*
 	* @return the number of bytes of data actually transferred
 	*/
-	@:overload public function getTransferSize() : Int;
+	@:overload @:public public function getTransferSize() : Int;
 	
 	
 }

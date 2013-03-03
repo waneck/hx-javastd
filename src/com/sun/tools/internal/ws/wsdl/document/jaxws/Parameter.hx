@@ -30,41 +30,41 @@ extern class Parameter
 	* @param element
 	* @param name
 	*/
-	@:overload public function new(msgName : String, part : String, element : javax.xml.namespace.QName, name : String) : Void;
+	@:overload @:public public function new(msgName : String, part : String, element : javax.xml.namespace.QName, name : String) : Void;
 	
-	@:overload public function getMessageName() : String;
+	@:overload @:public public function getMessageName() : String;
 	
-	@:overload public function setMessageName(messageName : String) : Void;
+	@:overload @:public public function setMessageName(messageName : String) : Void;
 	
 	/**
 	* @return Returns the element.
 	*/
-	@:overload public function getElement() : javax.xml.namespace.QName;
+	@:overload @:public public function getElement() : javax.xml.namespace.QName;
 	
 	/**
 	* @param element The element to set.
 	*/
-	@:overload public function setElement(element : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setElement(element : javax.xml.namespace.QName) : Void;
 	
 	/**
 	* @return Returns the name.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* @param name The name to set.
 	*/
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	/**
 	* @return Returns the part.
 	*/
-	@:overload public function getPart() : String;
+	@:overload @:public public function getPart() : String;
 	
 	/**
 	* @param part The part to set.
 	*/
-	@:overload public function setPart(part : String) : Void;
+	@:overload @:public public function setPart(part : String) : Void;
 	
 	
 }

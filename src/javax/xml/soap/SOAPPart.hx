@@ -34,7 +34,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*           <code>SOAPPart</code> object
 	* @exception SOAPException if there is a SOAP error
 	*/
-	@:overload @:abstract public function getEnvelope() : javax.xml.soap.SOAPEnvelope;
+	@:overload @:public @:abstract public function getEnvelope() : javax.xml.soap.SOAPEnvelope;
 	
 	/**
 	* Retrieves the value of the MIME header whose name is "Content-Id".
@@ -43,7 +43,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*         named "Content-Id"
 	* @see #setContentId
 	*/
-	@:overload public function getContentId() : String;
+	@:overload @:public public function getContentId() : String;
 	
 	/**
 	* Retrieves the value of the MIME header whose name is "Content-Location".
@@ -52,7 +52,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*          name is "Content-Location"
 	* @see #setContentLocation
 	*/
-	@:overload public function getContentLocation() : String;
+	@:overload @:public public function getContentLocation() : String;
 	
 	/**
 	* Sets the value of the MIME header named "Content-Id"
@@ -65,7 +65,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* setting the content id
 	* @see #getContentId
 	*/
-	@:overload public function setContentId(contentId : String) : Void;
+	@:overload @:public public function setContentId(contentId : String) : Void;
 	
 	/**
 	* Sets the value of the MIME header "Content-Location"
@@ -78,7 +78,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*            setting the content location.
 	* @see #getContentLocation
 	*/
-	@:overload public function setContentLocation(contentLocation : String) : Void;
+	@:overload @:public public function setContentLocation(contentLocation : String) : Void;
 	
 	/**
 	* Removes all MIME headers that match the given name.
@@ -86,13 +86,13 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* @param header a <code>String</code> giving the name of the MIME header(s) to
 	*               be removed
 	*/
-	@:overload @:abstract public function removeMimeHeader(header : String) : Void;
+	@:overload @:public @:abstract public function removeMimeHeader(header : String) : Void;
 	
 	/**
 	* Removes all the <code>MimeHeader</code> objects for this
 	* <code>SOAPEnvelope</code> object.
 	*/
-	@:overload @:abstract public function removeAllMimeHeaders() : Void;
+	@:overload @:public @:abstract public function removeAllMimeHeaders() : Void;
 	
 	/**
 	* Gets all the values of the <code>MimeHeader</code> object
@@ -104,7 +104,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*         specified header
 	* @see #setMimeHeader
 	*/
-	@:overload @:abstract public function getMimeHeader(name : String) : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getMimeHeader(name : String) : java.NativeArray<String>;
 	
 	/**
 	* Changes the first header entry that matches the given header name
@@ -130,7 +130,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*            the specified mime header name or value
 	* @see #getMimeHeader
 	*/
-	@:overload @:abstract public function setMimeHeader(name : String, value : String) : Void;
+	@:overload @:public @:abstract public function setMimeHeader(name : String, value : String) : Void;
 	
 	/**
 	* Creates a <code>MimeHeader</code> object with the specified
@@ -147,7 +147,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* @exception IllegalArgumentException if there was a problem with
 	*            the specified mime header name or value
 	*/
-	@:overload @:abstract public function addMimeHeader(name : String, value : String) : Void;
+	@:overload @:public @:abstract public function addMimeHeader(name : String, value : String) : Void;
 	
 	/**
 	* Retrieves all the headers for this <code>SOAPPart</code> object
@@ -156,7 +156,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* @return  an <code>Iterator</code> object with all of the Mime
 	*          headers for this <code>SOAPPart</code> object
 	*/
-	@:overload @:abstract public function getAllMimeHeaders() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:abstract public function getAllMimeHeaders() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Retrieves all <code>MimeHeader</code> objects that match a name in
@@ -167,7 +167,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* @return  all of the MIME headers that match one of the names in the
 	*           given array, returned as an <code>Iterator</code> object
 	*/
-	@:overload @:abstract public function getMatchingMimeHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:abstract public function getMatchingMimeHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Retrieves all <code>MimeHeader</code> objects whose name does
@@ -180,7 +180,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*           given array.  The nonmatching MIME headers are returned as an
 	*           <code>Iterator</code> object.
 	*/
-	@:overload @:abstract public function getNonMatchingMimeHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:abstract public function getNonMatchingMimeHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Sets the content of the <code>SOAPEnvelope</code> object with the data
@@ -193,7 +193,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* @exception SOAPException if there is a problem in setting the source
 	* @see #getContent
 	*/
-	@:overload @:abstract public function setContent(source : javax.xml.transform.Source) : Void;
+	@:overload @:public @:abstract public function setContent(source : javax.xml.transform.Source) : Void;
 	
 	/**
 	* Returns the content of the SOAPEnvelope as a JAXP <code>Source</code>
@@ -205,13 +205,13 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*                          the specified <code>Source</code> object
 	* @see #setContent
 	*/
-	@:overload @:abstract public function getContent() : javax.xml.transform.Source;
+	@:overload @:public @:abstract public function getContent() : javax.xml.transform.Source;
 	
 	/**
 	* The first child of this node. If there is no such node, this returns
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getFirstChild() : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getFirstChild() : org.w3c.dom.Node;
 	
 	/**
 	* Rename an existing node of type <code>ELEMENT_NODE</code> or
@@ -280,27 +280,27 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   <code>namespaceURI</code> is different from "<a href='http://www.w3.org/2000/xmlns/'>http://www.w3.org/2000/xmlns/</a>".
 	* @since DOM Level 3
 	*/
-	@:overload @:public public function renameNode(n : org.w3c.dom.Node, namespaceURI : String, qualifiedName : String) : org.w3c.dom.Node;
+	@:overload @:public @:public public function renameNode(n : org.w3c.dom.Node, namespaceURI : String, qualifiedName : String) : org.w3c.dom.Node;
 	
 	/**
 	* The <code>DOMImplementation</code> object that handles this document. A
 	* DOM application may use objects from multiple implementations.
 	*/
-	@:overload @:public public function getImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload @:public @:public public function getImplementation() : org.w3c.dom.DOMImplementation;
 	
 	/**
 	*  The configuration used when <code>Document.normalizeDocument()</code>
 	* is invoked.
 	* @since DOM Level 3
 	*/
-	@:overload @:public public function getDomConfig() : org.w3c.dom.DOMConfiguration;
+	@:overload @:public @:public public function getDomConfig() : org.w3c.dom.DOMConfiguration;
 	
 	/**
 	* Returns whether this node has any children.
 	* @return Returns <code>true</code> if this node has any children,
 	*   <code>false</code> otherwise.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function hasChildNodes() : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function hasChildNodes() : Bool;
 	
 	/**
 	* Creates a <code>ProcessingInstruction</code> node given the specified
@@ -320,7 +320,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   <code>Document.xmlVersion</code> attribute.
 	*   <br>NOT_SUPPORTED_ERR: Raised if this document is an HTML document.
 	*/
-	@:overload @:public public function createProcessingInstruction(target : String, data : String) : org.w3c.dom.ProcessingInstruction;
+	@:overload @:public @:public public function createProcessingInstruction(target : String, data : String) : org.w3c.dom.ProcessingInstruction;
 	
 	/**
 	* Associate an object to a key on this node. The object can later be
@@ -336,13 +336,13 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
 	
 	/**
 	* This is a convenience attribute that allows direct access to the child
 	* node that is the document element of the document.
 	*/
-	@:overload @:public public function getDocumentElement() : org.w3c.dom.Element;
+	@:overload @:public @:public public function getDocumentElement() : org.w3c.dom.Element;
 	
 	/**
 	* Creates an <code>EntityReference</code> object. In addition, if the
@@ -369,7 +369,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   <code>Document.xmlVersion</code> attribute.
 	*   <br>NOT_SUPPORTED_ERR: Raised if this document is an HTML document.
 	*/
-	@:overload @:public public function createEntityReference(name : String) : org.w3c.dom.EntityReference;
+	@:overload @:public @:public public function createEntityReference(name : String) : org.w3c.dom.EntityReference;
 	
 	/**
 	* The parent of this node. All nodes, except <code>Attr</code>,
@@ -379,7 +379,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* tree, or if it has been removed from the tree, this is
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getParentNode() : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getParentNode() : org.w3c.dom.Node;
 	
 	/**
 	* The Document Type Declaration (see <code>DocumentType</code>)
@@ -402,7 +402,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public public function getDoctype() : org.w3c.dom.DocumentType;
+	@:overload @:public @:public public function getDoctype() : org.w3c.dom.DocumentType;
 	
 	/**
 	* An attribute specifying, as part of the <a href='http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl'>XML declaration</a>, the encoding of this document. This is <code>null</code> when
@@ -410,7 +410,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* <code>Document</code> was created in memory.
 	* @since DOM Level 3
 	*/
-	@:overload @:public public function getXmlEncoding() : String;
+	@:overload @:public @:public public function getXmlEncoding() : String;
 	
 	/**
 	* An attribute specifying, as part of the <a href='http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl'>XML declaration</a>, whether this document is standalone. This is <code>false</code> when
@@ -425,7 +425,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   "XML" feature.
 	* @since DOM Level 3
 	*/
-	@:overload @:public public function setXmlStandalone(xmlStandalone : Bool) : Void;
+	@:overload @:public @:public public function setXmlStandalone(xmlStandalone : Bool) : Void;
 	
 	/**
 	* Returns whether this node (if it is an element) has any attributes.
@@ -434,7 +434,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public @:public @:public public function hasAttributes() : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function hasAttributes() : Bool;
 	
 	/**
 	* An attribute specifying whether error checking is enforced or not. When
@@ -446,7 +446,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* <code>true</code> by default.
 	* @since DOM Level 3
 	*/
-	@:overload @:public public function setStrictErrorChecking(strictErrorChecking : Bool) : Void;
+	@:overload @:public @:public public function setStrictErrorChecking(strictErrorChecking : Bool) : Void;
 	
 	/**
 	* Look up the namespace URI associated to the given prefix, starting from
@@ -460,7 +460,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function lookupNamespaceURI(prefix : String) : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function lookupNamespaceURI(prefix : String) : String;
 	
 	/**
 	* Creates an <code>Attr</code> of the given name. Note that the
@@ -478,7 +478,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   name according to the XML version in use specified in the
 	*   <code>Document.xmlVersion</code> attribute.
 	*/
-	@:overload @:public public function createAttribute(name : String) : org.w3c.dom.Attr;
+	@:overload @:public @:public public function createAttribute(name : String) : org.w3c.dom.Attr;
 	
 	/**
 	* An attribute specifying whether error checking is enforced or not. When
@@ -490,7 +490,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* <code>true</code> by default.
 	* @since DOM Level 3
 	*/
-	@:overload @:public public function getStrictErrorChecking() : Bool;
+	@:overload @:public @:public public function getStrictErrorChecking() : Bool;
 	
 	/**
 	* Returns a <code>NodeList</code> of all the <code>Elements</code> with a
@@ -503,7 +503,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   <code>Elements</code>.
 	* @since DOM Level 2
 	*/
-	@:overload @:public public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:public public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -553,14 +553,14 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getTextContent() : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getTextContent() : String;
 	
 	/**
 	* A <code>NodeList</code> that contains all children of this node. If
 	* there are no children, this is a <code>NodeList</code> containing no
 	* nodes.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getChildNodes() : org.w3c.dom.NodeList;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getChildNodes() : org.w3c.dom.NodeList;
 	
 	/**
 	* An attribute specifying the encoding used for this document at the time
@@ -568,7 +568,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* as when the <code>Document</code> was created in memory.
 	* @since DOM Level 3
 	*/
-	@:overload @:public public function getInputEncoding() : String;
+	@:overload @:public @:public public function getInputEncoding() : String;
 	
 	/**
 	* The value of this node, depending on its type; see the table above.
@@ -578,12 +578,12 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   NO_MODIFICATION_ALLOWED_ERR: Raised when the node is readonly and if
 	*   it is not defined to be <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function setNodeValue(nodeValue : String) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function setNodeValue(nodeValue : String) : Void;
 	
 	/**
 	* A code representing the type of the underlying object, as defined above.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
 	* Compares the reference node, i.e. the node on which this method is
@@ -600,7 +600,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
 	
 	/**
 	*  An attribute specifying, as part of the <a href='http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl'>XML declaration</a>, the version number of this document. If there is no declaration and if
@@ -630,7 +630,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   does not support the "XML" feature.
 	* @since DOM Level 3
 	*/
-	@:overload @:public public function setXmlVersion(xmlVersion : String) : Void;
+	@:overload @:public @:public public function setXmlVersion(xmlVersion : String) : Void;
 	
 	/**
 	*  Puts all <code>Text</code> nodes in the full depth of the sub-tree
@@ -655,7 +655,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function normalize() : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function normalize() : Void;
 	
 	/**
 	*  Attempts to adopt a node from another document to this document. If
@@ -726,7 +726,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   readonly.
 	* @since DOM Level 3
 	*/
-	@:overload @:public public function adoptNode(source : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:public public function adoptNode(source : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Retrieves the object associated to a key on a this node. The object
@@ -738,13 +738,13 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getUserData(key : String) : Dynamic;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getUserData(key : String) : Dynamic;
 	
 	/**
 	* A <code>NamedNodeMap</code> containing the attributes of this node (if
 	* it is an <code>Element</code>) or <code>null</code> otherwise.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getAttributes() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
 	/**
 	* Tests whether two nodes are equal.
@@ -810,7 +810,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Returns whether this node is the same node as the given one.
@@ -827,7 +827,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function isSameNode(other : org.w3c.dom.Node) : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function isSameNode(other : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* The <code>Document</code> object associated with this node. This is
@@ -838,14 +838,14 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getOwnerDocument() : org.w3c.dom.Document;
 	
 	/**
 	* Creates a <code>Comment</code> node given the specified string.
 	* @param data The data for the node.
 	* @return The new <code>Comment</code> object.
 	*/
-	@:overload @:public public function createComment(data : String) : org.w3c.dom.Comment;
+	@:overload @:public @:public public function createComment(data : String) : org.w3c.dom.Comment;
 	
 	/**
 	*  This method checks if the specified <code>namespaceURI</code> is the
@@ -857,13 +857,13 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function isDefaultNamespace(namespaceURI : String) : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function isDefaultNamespace(namespaceURI : String) : Bool;
 	
 	/**
 	* The node immediately following this node. If there is no such node,
 	* this returns <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getNextSibling() : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getNextSibling() : org.w3c.dom.Node;
 	
 	/**
 	* Returns a duplicate of this node, i.e., serves as a generic copy
@@ -899,7 +899,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   itself (and its attributes, if it is an <code>Element</code>).
 	* @return The duplicate node.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Replaces the child node <code>oldChild</code> with <code>newChild</code>
@@ -935,7 +935,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Look up the prefix associated to the given namespace URI, starting from
@@ -950,7 +950,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function lookupPrefix(namespaceURI : String) : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function lookupPrefix(namespaceURI : String) : String;
 	
 	/**
 	* Creates an element of the type specified. Note that the instance
@@ -975,7 +975,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   name according to the XML version in use specified in the
 	*   <code>Document.xmlVersion</code> attribute.
 	*/
-	@:overload @:public public function createElement(tagName : String) : org.w3c.dom.Element;
+	@:overload @:public @:public public function createElement(tagName : String) : org.w3c.dom.Element;
 	
 	/**
 	* Removes the child node indicated by <code>oldChild</code> from the list
@@ -993,7 +993,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* The absolute base URI of this node or <code>null</code> if the
@@ -1007,7 +1007,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getBaseURI() : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getBaseURI() : String;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -1055,7 +1055,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function setTextContent(textContent : String) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function setTextContent(textContent : String) : Void;
 	
 	/**
 	* The namespace prefix of this node, or <code>null</code> if it is
@@ -1093,7 +1093,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public @:public @:public public function setPrefix(prefix : String) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function setPrefix(prefix : String) : Void;
 	
 	/**
 	* Creates a <code>CDATASection</code> node whose value is the specified
@@ -1103,7 +1103,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* @exception DOMException
 	*   NOT_SUPPORTED_ERR: Raised if this document is an HTML document.
 	*/
-	@:overload @:public public function createCDATASection(data : String) : org.w3c.dom.CDATASection;
+	@:overload @:public @:public public function createCDATASection(data : String) : org.w3c.dom.CDATASection;
 	
 	/**
 	*  The location of the document or <code>null</code> if undefined or if
@@ -1118,7 +1118,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* this attribute when computing <code>Node.baseURI</code>.
 	* @since DOM Level 3
 	*/
-	@:overload @:public public function getDocumentURI() : String;
+	@:overload @:public @:public public function getDocumentURI() : String;
 	
 	/**
 	* The value of this node, depending on its type; see the table above.
@@ -1129,13 +1129,13 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   fit in a <code>DOMString</code> variable on the implementation
 	*   platform.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getNodeValue() : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getNodeValue() : String;
 	
 	/**
 	* The node immediately preceding this node. If there is no such node,
 	* this returns <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getPreviousSibling() : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getPreviousSibling() : org.w3c.dom.Node;
 	
 	/**
 	*  This method returns a specialized object which implements the
@@ -1160,7 +1160,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getFeature(feature : String, version : String) : Dynamic;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getFeature(feature : String, version : String) : Dynamic;
 	
 	/**
 	* Creates an attribute of the given qualified name and namespace URI.
@@ -1227,7 +1227,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   defined by XML.
 	* @since DOM Level 2
 	*/
-	@:overload @:public public function createAttributeNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Attr;
+	@:overload @:public @:public public function createAttributeNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Returns the <code>Element</code> that has an ID attribute with the
@@ -1242,7 +1242,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* @return The matching element or <code>null</code> if there is none.
 	* @since DOM Level 2
 	*/
-	@:overload @:public public function getElementById(elementId : String) : org.w3c.dom.Element;
+	@:overload @:public @:public public function getElementById(elementId : String) : org.w3c.dom.Element;
 	
 	/**
 	* The namespace prefix of this node, or <code>null</code> if it is
@@ -1266,14 +1266,14 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getPrefix() : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getPrefix() : String;
 	
 	/**
 	* Creates a <code>Text</code> node given the specified string.
 	* @param data The data for the node.
 	* @return The new <code>Text</code> object.
 	*/
-	@:overload @:public public function createTextNode(data : String) : org.w3c.dom.Text;
+	@:overload @:public @:public public function createTextNode(data : String) : org.w3c.dom.Text;
 	
 	/**
 	* An attribute specifying, as part of the <a href='http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl'>XML declaration</a>, whether this document is standalone. This is <code>false</code> when
@@ -1285,12 +1285,12 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* constraint for standalone document declaration</a> as defined in [<a href='http://www.w3.org/TR/2004/REC-xml-20040204'>XML 1.0</a>].
 	* @since DOM Level 3
 	*/
-	@:overload @:public public function getXmlStandalone() : Bool;
+	@:overload @:public @:public public function getXmlStandalone() : Bool;
 	
 	/**
 	* The name of this node, depending on its type; see the table above.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getNodeName() : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getNodeName() : String;
 	
 	/**
 	* The namespace URI of this node, or <code>null</code> if it is
@@ -1309,7 +1309,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getNamespaceURI() : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getNamespaceURI() : String;
 	
 	/**
 	* Inserts the node <code>newChild</code> before the existing child node
@@ -1345,13 +1345,13 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Creates an empty <code>DocumentFragment</code> object.
 	* @return A new <code>DocumentFragment</code>.
 	*/
-	@:overload @:public public function createDocumentFragment() : org.w3c.dom.DocumentFragment;
+	@:overload @:public @:public public function createDocumentFragment() : org.w3c.dom.DocumentFragment;
 	
 	/**
 	* Returns a <code>NodeList</code> of all the <code>Elements</code> in
@@ -1364,7 +1364,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* @return A new <code>NodeList</code> object containing all the matched
 	*   <code>Elements</code>.
 	*/
-	@:overload @:public public function getElementsByTagName(tagname : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:public public function getElementsByTagName(tagname : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* Creates an element of the given qualified name and namespace URI.
@@ -1426,13 +1426,13 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   defined by XML.
 	* @since DOM Level 2
 	*/
-	@:overload @:public public function createElementNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Element;
+	@:overload @:public @:public public function createElementNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Element;
 	
 	/**
 	* The last child of this node. If there is no such node, this returns
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getLastChild() : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getLastChild() : org.w3c.dom.Node;
 	
 	/**
 	*  Tests whether the DOM implementation implements a specific feature and
@@ -1444,7 +1444,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public @:public @:public public function isSupported(feature : String, version : String) : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function isSupported(feature : String, version : String) : Bool;
 	
 	/**
 	* Returns the local part of the qualified name of this node.
@@ -1455,7 +1455,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getLocalName() : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function getLocalName() : String;
 	
 	/**
 	* Imports a node from another document to this document, without altering
@@ -1568,7 +1568,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   into an XML 1.0 document, for instance.
 	* @since DOM Level 2
 	*/
-	@:overload @:public public function importNode(importedNode : org.w3c.dom.Node, deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public @:public public function importNode(importedNode : org.w3c.dom.Node, deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	*  The location of the document or <code>null</code> if undefined or if
@@ -1583,7 +1583,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* this attribute when computing <code>Node.baseURI</code>.
 	* @since DOM Level 3
 	*/
-	@:overload @:public public function setDocumentURI(documentURI : String) : Void;
+	@:overload @:public @:public public function setDocumentURI(documentURI : String) : Void;
 	
 	/**
 	*  This method acts as if the document was going through a save and load
@@ -1617,7 +1617,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* cannot recover from an error.
 	* @since DOM Level 3
 	*/
-	@:overload @:public public function normalizeDocument() : Void;
+	@:overload @:public @:public public function normalizeDocument() : Void;
 	
 	/**
 	* Adds the node <code>newChild</code> to the end of the list of children
@@ -1645,7 +1645,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	*  An attribute specifying, as part of the <a href='http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl'>XML declaration</a>, the version number of this document. If there is no declaration and if
@@ -1671,7 +1671,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* number when using <code>Document.xmlVersion</code>.
 	* @since DOM Level 3
 	*/
-	@:overload @:public public function getXmlVersion() : String;
+	@:overload @:public @:public public function getXmlVersion() : String;
 	
 	
 }

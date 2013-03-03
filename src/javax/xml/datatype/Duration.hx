@@ -34,7 +34,7 @@ extern class Duration
 	* produce an object with a consistent state and may be
 	* removed in the future.</p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* <p>Return the name of the XML Schema date/time type that this instance
@@ -97,7 +97,7 @@ extern class Duration
 	*
 	* @throws IllegalStateException If the combination of set fields does not match one of the XML Schema date/time datatypes.
 	*/
-	@:overload public function getXMLSchemaType() : javax.xml.namespace.QName;
+	@:overload @:public public function getXMLSchemaType() : javax.xml.namespace.QName;
 	
 	/**
 	* Returns the sign of this duration in -1,0, or 1.
@@ -106,7 +106,7 @@ extern class Duration
 	*      -1 if this duration is negative, 0 if the duration is zero,
 	*      and 1 if the duration is positive.
 	*/
-	@:overload @:abstract public function getSign() : Int;
+	@:overload @:public @:abstract public function getSign() : Int;
 	
 	/**
 	* <p>Get the years value of this <code>Duration</code> as an <code>int</code> or <code>0</code> if not present.</p>
@@ -120,7 +120,7 @@ extern class Duration
 	*
 	* @return If the years field is present, return its value as an <code>int</code>, else return <code>0</code>.
 	*/
-	@:overload public function getYears() : Int;
+	@:overload @:public public function getYears() : Int;
 	
 	/**
 	* Obtains the value of the MONTHS field as an integer value,
@@ -131,7 +131,7 @@ extern class Duration
 	*
 	* @return Months of this <code>Duration</code>.
 	*/
-	@:overload public function getMonths() : Int;
+	@:overload @:public public function getMonths() : Int;
 	
 	/**
 	* Obtains the value of the DAYS field as an integer value,
@@ -142,7 +142,7 @@ extern class Duration
 	*
 	* @return Days of this <code>Duration</code>.
 	*/
-	@:overload public function getDays() : Int;
+	@:overload @:public public function getDays() : Int;
 	
 	/**
 	* Obtains the value of the HOURS field as an integer value,
@@ -154,7 +154,7 @@ extern class Duration
 	* @return Hours of this <code>Duration</code>.
 	*
 	*/
-	@:overload public function getHours() : Int;
+	@:overload @:public public function getHours() : Int;
 	
 	/**
 	* Obtains the value of the MINUTES field as an integer value,
@@ -166,7 +166,7 @@ extern class Duration
 	* @return Minutes of this <code>Duration</code>.
 	*
 	*/
-	@:overload public function getMinutes() : Int;
+	@:overload @:public public function getMinutes() : Int;
 	
 	/**
 	* Obtains the value of the SECONDS field as an integer value,
@@ -179,7 +179,7 @@ extern class Duration
 	*   will be discarded (for example, if the actual value is 2.5,
 	*   this method returns 2)
 	*/
-	@:overload public function getSeconds() : Int;
+	@:overload @:public public function getSeconds() : Int;
 	
 	/**
 	* <p>Returns the length of the duration in milli-seconds.</p>
@@ -211,7 +211,7 @@ extern class Duration
 	* is null.
 	*
 	*/
-	@:overload public function getTimeInMillis(startInstant : java.util.Calendar) : haxe.Int64;
+	@:overload @:public public function getTimeInMillis(startInstant : java.util.Calendar) : haxe.Int64;
 	
 	/**
 	* <p>Returns the length of the duration in milli-seconds.</p>
@@ -244,7 +244,7 @@ extern class Duration
 	*
 	* @see #getTimeInMillis(Calendar)
 	*/
-	@:overload public function getTimeInMillis(startInstant : java.util.Date) : haxe.Int64;
+	@:overload @:public public function getTimeInMillis(startInstant : java.util.Date) : haxe.Int64;
 	
 	/**
 	* Gets the value of a field.
@@ -269,7 +269,7 @@ extern class Duration
 	*
 	* @throws NullPointerException If the <code>field</code> is <code>null</code>.
 	*/
-	@:overload @:abstract public function getField(field : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field) : java.lang.Number;
+	@:overload @:public @:abstract public function getField(field : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field) : java.lang.Number;
 	
 	/**
 	* Checks if a field is set.
@@ -286,7 +286,7 @@ extern class Duration
 	* @throws NullPointerException
 	*      If the field parameter is null.
 	*/
-	@:overload @:abstract public function isSet(field : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field) : Bool;
+	@:overload @:public @:abstract public function isSet(field : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field) : Bool;
 	
 	/**
 	* <p>Computes a new duration whose value is <code>this+rhs</code>.</p>
@@ -338,7 +338,7 @@ extern class Duration
 	*
 	* @see #subtract(Duration)
 	*/
-	@:overload @:abstract public function add(rhs : javax.xml.datatype.Duration) : javax.xml.datatype.Duration;
+	@:overload @:public @:abstract public function add(rhs : javax.xml.datatype.Duration) : javax.xml.datatype.Duration;
 	
 	/**
 	* Adds this duration to a {@link Calendar} object.
@@ -379,7 +379,7 @@ extern class Duration
 	* @throws NullPointerException
 	*      if the calendar parameter is null.
 	*/
-	@:overload @:abstract public function addTo(calendar : java.util.Calendar) : Void;
+	@:overload @:public @:abstract public function addTo(calendar : java.util.Calendar) : Void;
 	
 	/**
 	* Adds this duration to a {@link Date} object.
@@ -402,7 +402,7 @@ extern class Duration
 	* @throws NullPointerException
 	*      if the date parameter is null.
 	*/
-	@:overload public function addTo(date : java.util.Date) : Void;
+	@:overload @:public public function addTo(date : java.util.Date) : Void;
 	
 	/**
 	* <p>Computes a new duration whose value is <code>this-rhs</code>.</p>
@@ -453,7 +453,7 @@ extern class Duration
 	*
 	* @see #add(Duration)
 	*/
-	@:overload public function subtract(rhs : javax.xml.datatype.Duration) : javax.xml.datatype.Duration;
+	@:overload @:public public function subtract(rhs : javax.xml.datatype.Duration) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Computes a new duration whose value is <code>factor</code> times
@@ -471,7 +471,7 @@ extern class Duration
 	*
 	* @see #multiply(BigDecimal)
 	*/
-	@:overload public function multiply(factor : Int) : javax.xml.datatype.Duration;
+	@:overload @:public public function multiply(factor : Int) : javax.xml.datatype.Duration;
 	
 	/**
 	* Computes a new duration whose value is <code>factor</code> times
@@ -520,7 +520,7 @@ extern class Duration
 	* <code>null</code>.
 	*
 	*/
-	@:overload @:abstract public function multiply(factor : java.math.BigDecimal) : javax.xml.datatype.Duration;
+	@:overload @:public @:abstract public function multiply(factor : java.math.BigDecimal) : javax.xml.datatype.Duration;
 	
 	/**
 	* Returns a new <code>Duration</code> object whose
@@ -534,7 +534,7 @@ extern class Duration
 	* @return
 	*      always return a non-null valid <code>Duration</code> object.
 	*/
-	@:overload @:abstract public function negate() : javax.xml.datatype.Duration;
+	@:overload @:public @:abstract public function negate() : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Converts the years and months fields into the days field
@@ -566,7 +566,7 @@ extern class Duration
 	*
 	* @throws NullPointerException If the startTimeInstant parameter is null.
 	*/
-	@:overload @:abstract public function normalizeWith(startTimeInstant : java.util.Calendar) : javax.xml.datatype.Duration;
+	@:overload @:public @:abstract public function normalizeWith(startTimeInstant : java.util.Calendar) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Partial order relation comparison with this <code>Duration</code> instance.</p>
@@ -598,7 +598,7 @@ extern class Duration
 	* @see #isShorterThan(Duration)
 	* @see #isLongerThan(Duration)
 	*/
-	@:overload @:abstract public function compare(duration : javax.xml.datatype.Duration) : Int;
+	@:overload @:public @:abstract public function compare(duration : javax.xml.datatype.Duration) : Int;
 	
 	/**
 	* <p>Checks if this duration object is strictly longer than
@@ -626,7 +626,7 @@ extern class Duration
 	* @see #isShorterThan(Duration)
 	* @see #compare(Duration duration)
 	*/
-	@:overload public function isLongerThan(duration : javax.xml.datatype.Duration) : Bool;
+	@:overload @:public public function isLongerThan(duration : javax.xml.datatype.Duration) : Bool;
 	
 	/**
 	* <p>Checks if this duration object is strictly shorter than
@@ -646,7 +646,7 @@ extern class Duration
 	* @see #isLongerThan(Duration duration)
 	* @see #compare(Duration duration)
 	*/
-	@:overload public function isShorterThan(duration : javax.xml.datatype.Duration) : Bool;
+	@:overload @:public public function isShorterThan(duration : javax.xml.datatype.Duration) : Bool;
 	
 	/**
 	* <p>Checks if this duration object has the same duration
@@ -686,14 +686,14 @@ extern class Duration
 	*
 	* @see #compare(Duration duration)
 	*/
-	@:overload public function equals(duration : Dynamic) : Bool;
+	@:overload @:public public function equals(duration : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code consistent with the definition of the equals method.
 	*
 	* @see Object#hashCode()
 	*/
-	@:overload @:abstract public function hashCode() : Int;
+	@:overload @:public @:abstract public function hashCode() : Int;
 	
 	/**
 	* <p>Returns a <code>String</code> representation of this <code>Duration</code> <code>Object</code>.</p>
@@ -709,7 +709,7 @@ extern class Duration
 	*
 	* @return A non-<code>null</code> valid <code>String</code> representation of this <code>Duration</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

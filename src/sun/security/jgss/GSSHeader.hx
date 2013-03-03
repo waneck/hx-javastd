@@ -46,7 +46,7 @@ extern class GSSHeader
 	* The tag defined in the GSS-API mechanism independent token
 	* format.
 	*/
-	public static var TOKEN_ID(default, null) : Int;
+	@:public @:static @:final public static var TOKEN_ID(default, null) : Int;
 	
 	/**
 	* Creates a GSSHeader instance whose encoding can be used as the
@@ -55,20 +55,20 @@ extern class GSSHeader
 	* @param mechTokenLength the length of the subsequent portion that
 	* the mechanism will be adding.
 	*/
-	@:overload public function new(mechOid : sun.security.util.ObjectIdentifier, mechTokenLength : Int) : Void;
+	@:overload @:public public function new(mechOid : sun.security.util.ObjectIdentifier, mechTokenLength : Int) : Void;
 	
 	/**
 	* Reads in a GSSHeader from an InputStream. Typically this would be
 	* used as part of reading the complete token from an InputStream
 	* that is obtained from a socket.
 	*/
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	/**
 	* Used to obtain the Oid stored in this GSSHeader instance.
 	* @return the Oid of the mechanism.
 	*/
-	@:overload public function getOid() : sun.security.util.ObjectIdentifier;
+	@:overload @:public public function getOid() : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Used to obtain the length of the mechanism specific token that
@@ -76,13 +76,13 @@ extern class GSSHeader
 	* @return the length of the mechanism specific token portion that
 	* will follow this GSSHeader.
 	*/
-	@:overload public function getMechTokenLength() : Int;
+	@:overload @:public public function getMechTokenLength() : Int;
 	
 	/**
 	* Used to obtain the length of the encoding of this GSSHeader.
 	* @return the lenght of the encoding of this GSSHeader instance.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Used to determine what the maximum possible mechanism token
@@ -97,7 +97,7 @@ extern class GSSHeader
 	* @return the maximum size of mechanism token that can be used
 	* so as to not exceed maxTotalSize with the GSS-API token
 	*/
-	@:overload public static function getMaxMechTokenSize(mechOid : sun.security.util.ObjectIdentifier, maxTotalSize : Int) : Int;
+	@:overload @:public @:static public static function getMaxMechTokenSize(mechOid : sun.security.util.ObjectIdentifier, maxTotalSize : Int) : Int;
 	
 	/**
 	* Encodes this GSSHeader instance onto the provided OutputStream.
@@ -105,7 +105,7 @@ extern class GSSHeader
 	* @return the number of bytes that are output as a result of this
 	* encoding
 	*/
-	@:overload public function encode(os : java.io.OutputStream) : Int;
+	@:overload @:public public function encode(os : java.io.OutputStream) : Int;
 	
 	
 }

@@ -30,13 +30,13 @@ extern class UnsupportedMediaException extends com.sun.xml.internal.ws.util.exce
 	* Content-Type
 	* @author Jitendra Kotamraju
 	*/
-	@:overload public function new(contentType : String, expectedContentTypes : java.util.List<String>) : Void;
+	@:overload @:public public function new(contentType : String, expectedContentTypes : java.util.List<String>) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(charset : String) : Void;
+	@:overload @:public public function new(charset : String) : Void;
 	
-	@:overload public function getDefaultResourceBundleName() : String;
+	@:overload @:public override public function getDefaultResourceBundleName() : String;
 	
 	
 }

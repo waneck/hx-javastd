@@ -36,7 +36,7 @@ extern interface Serializer
 	*
 	* @param output The output stream
 	*/
-	@:overload public function setOutputStream(output : java.io.OutputStream) : Void;
+	@:overload @:public @:public public function setOutputStream(output : java.io.OutputStream) : Void;
 	
 	/**
 	* Get the output stream where the events will be serialized to.
@@ -44,7 +44,7 @@ extern interface Serializer
 	* @return reference to the result stream, or null if only a writer was
 	* set.
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Specifies a writer to which the document should be serialized.
@@ -59,14 +59,14 @@ extern interface Serializer
 	*
 	* @param writer The output writer stream
 	*/
-	@:overload public function setWriter(writer : java.io.Writer) : Void;
+	@:overload @:public @:public public function setWriter(writer : java.io.Writer) : Void;
 	
 	/**
 	* Get the character stream where the events will be serialized to.
 	*
 	* @return Reference to the result Writer, or null.
 	*/
-	@:overload public function getWriter() : java.io.Writer;
+	@:overload @:public @:public public function getWriter() : java.io.Writer;
 	
 	/**
 	* Specifies an output format for this serializer. It the
@@ -99,14 +99,14 @@ extern interface Serializer
 	*
 	* @param format The output format to use, as a set of key/value pairs.
 	*/
-	@:overload public function setOutputFormat(format : java.util.Properties) : Void;
+	@:overload @:public @:public public function setOutputFormat(format : java.util.Properties) : Void;
 	
 	/**
 	* Returns the output format properties for this serializer.
 	*
 	* @return The output format key/value pairs in use.
 	*/
-	@:overload public function getOutputFormat() : java.util.Properties;
+	@:overload @:public @:public public function getOutputFormat() : java.util.Properties;
 	
 	/**
 	* Return a {@link ContentHandler} interface to provide SAX input to.
@@ -122,7 +122,7 @@ extern interface Serializer
 	*  or null if the serializer is not SAX 2 capable
 	* @throws IOException An I/O exception occured
 	*/
-	@:overload public function asContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function asContentHandler() : org.xml.sax.ContentHandler;
 	
 	/**
 	* Return a {@link DOMSerializer} interface into this serializer.
@@ -138,7 +138,7 @@ extern interface Serializer
 	*  or null if the serializer is not DOM capable
 	* @throws IOException An I/O exception occured
 	*/
-	@:overload public function asDOMSerializer() : com.sun.org.apache.xml.internal.serializer.DOMSerializer;
+	@:overload @:public public function asDOMSerializer() : com.sun.org.apache.xml.internal.serializer.DOMSerializer;
 	
 	/**
 	* This method resets the serializer.
@@ -150,7 +150,7 @@ extern interface Serializer
 	*
 	* @return True if serializer has been reset and can be reused
 	*/
-	@:overload public function reset() : Bool;
+	@:overload @:public public function reset() : Bool;
 	
 	
 }

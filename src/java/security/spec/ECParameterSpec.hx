@@ -38,31 +38,31 @@ extern class ECParameterSpec implements java.security.spec.AlgorithmParameterSpe
 	* @exception IllegalArgumentException if <code>n</code>
 	* or <code>h</code> is not positive.
 	*/
-	@:overload public function new(curve : java.security.spec.EllipticCurve, g : java.security.spec.ECPoint, n : java.math.BigInteger, h : Int) : Void;
+	@:overload @:public public function new(curve : java.security.spec.EllipticCurve, g : java.security.spec.ECPoint, n : java.math.BigInteger, h : Int) : Void;
 	
 	/**
 	* Returns the elliptic curve that this parameter defines.
 	* @return the elliptic curve that this parameter defines.
 	*/
-	@:overload public function getCurve() : java.security.spec.EllipticCurve;
+	@:overload @:public public function getCurve() : java.security.spec.EllipticCurve;
 	
 	/**
 	* Returns the generator which is also known as the base point.
 	* @return the generator which is also known as the base point.
 	*/
-	@:overload public function getGenerator() : java.security.spec.ECPoint;
+	@:overload @:public public function getGenerator() : java.security.spec.ECPoint;
 	
 	/**
 	* Returns the order of the generator.
 	* @return the order of the generator.
 	*/
-	@:overload public function getOrder() : java.math.BigInteger;
+	@:overload @:public public function getOrder() : java.math.BigInteger;
 	
 	/**
 	* Returns the cofactor.
 	* @return the cofactor.
 	*/
-	@:overload public function getCofactor() : Int;
+	@:overload @:public public function getCofactor() : Int;
 	
 	
 }

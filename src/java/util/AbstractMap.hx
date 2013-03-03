@@ -29,21 +29,21 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* <p>This implementation returns <tt>entrySet().size()</tt>.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* <p>This implementation returns <tt>size() == 0</tt>.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -57,7 +57,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* @throws ClassCastException   {@inheritDoc}
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public public function containsValue(value : Dynamic) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -72,7 +72,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* @throws ClassCastException   {@inheritDoc}
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -87,7 +87,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* @throws ClassCastException            {@inheritDoc}
 	* @throws NullPointerException          {@inheritDoc}
 	*/
-	@:overload public function get(key : Dynamic) : V;
+	@:overload @:public public function get(key : Dynamic) : V;
 	
 	/**
 	* {@inheritDoc}
@@ -100,7 +100,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* @throws NullPointerException          {@inheritDoc}
 	* @throws IllegalArgumentException      {@inheritDoc}
 	*/
-	@:overload public function put(key : K, value : V) : V;
+	@:overload @:public public function put(key : K, value : V) : V;
 	
 	/**
 	* {@inheritDoc}
@@ -123,7 +123,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* @throws ClassCastException            {@inheritDoc}
 	* @throws NullPointerException          {@inheritDoc}
 	*/
-	@:overload public function remove(key : Dynamic) : V;
+	@:overload @:public public function remove(key : Dynamic) : V;
 	
 	/**
 	* {@inheritDoc}
@@ -141,7 +141,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* @throws NullPointerException          {@inheritDoc}
 	* @throws IllegalArgumentException      {@inheritDoc}
 	*/
-	@:overload public function putAll(m : java.util.Map<K, V>) : Void;
+	@:overload @:public public function putAll(m : java.util.Map<K, V>) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -154,7 +154,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	*
 	* @throws UnsupportedOperationException {@inheritDoc}
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -171,7 +171,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* is performed, so there is a slight chance that multiple calls to this
 	* method will not all return the same set.
 	*/
-	@:overload public function keySet() : java.util.Set<K>;
+	@:overload @:public public function keySet() : java.util.Set<K>;
 	
 	/**
 	* {@inheritDoc}
@@ -188,9 +188,9 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* performed, so there is a slight chance that multiple calls to this
 	* method will not all return the same collection.
 	*/
-	@:overload public function values() : java.util.Collection<V>;
+	@:overload @:public public function values() : java.util.Collection<V>;
 	
-	@:overload @:abstract public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public @:abstract public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
 	/**
 	* Compares the specified object with this map for equality.  Returns
@@ -213,7 +213,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* @param o object to be compared for equality with this map
 	* @return <tt>true</tt> if the specified object is equal to this map
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this map.  The hash code of a map is
@@ -232,7 +232,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* @see Object#equals(Object)
 	* @see Set#equals(Object)
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this map.  The string representation
@@ -246,7 +246,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	*
 	* @return a string representation of this map
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a shallow copy of this <tt>AbstractMap</tt> instance: the keys
@@ -254,7 +254,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	*
 	* @return a shallow copy of this map
 	*/
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected private function clone() : Dynamic;
 	
 	
 }
@@ -277,7 +277,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* @param key the key represented by this entry
 	* @param value the value represented by this entry
 	*/
-	@:overload public function new(key : K, value : V) : Void;
+	@:overload @:public public function new(key : K, value : V) : Void;
 	
 	/**
 	* Creates an entry representing the same mapping as the
@@ -285,21 +285,21 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	*
 	* @param entry the entry to copy
 	*/
-	@:overload public function new(entry : java.util.Map.Map_Entry<K, V>) : Void;
+	@:overload @:public public function new(entry : java.util.Map.Map_Entry<K, V>) : Void;
 	
 	/**
 	* Returns the key corresponding to this entry.
 	*
 	* @return the key corresponding to this entry
 	*/
-	@:overload public function getKey() : K;
+	@:overload @:public public function getKey() : K;
 	
 	/**
 	* Returns the value corresponding to this entry.
 	*
 	* @return the value corresponding to this entry
 	*/
-	@:overload public function getValue() : V;
+	@:overload @:public public function getValue() : V;
 	
 	/**
 	* Replaces the value corresponding to this entry with the specified
@@ -308,7 +308,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* @param value new value to be stored in this entry
 	* @return the old value corresponding to the entry
 	*/
-	@:overload public function setValue(value : V) : V;
+	@:overload @:public public function setValue(value : V) : V;
 	
 	/**
 	* Compares the specified object with this entry for equality.
@@ -331,7 +331,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	*         entry
 	* @see    #hashCode
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this map entry.  The hash code
@@ -346,7 +346,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* @return the hash code value for this map entry
 	* @see    #equals
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a String representation of this map entry.  This
@@ -356,7 +356,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	*
 	* @return a String representation of this map entry
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -377,7 +377,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* @param key the key represented by this entry
 	* @param value the value represented by this entry
 	*/
-	@:overload public function new(key : K, value : V) : Void;
+	@:overload @:public public function new(key : K, value : V) : Void;
 	
 	/**
 	* Creates an entry representing the same mapping as the
@@ -385,21 +385,21 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	*
 	* @param entry the entry to copy
 	*/
-	@:overload public function new(entry : java.util.Map.Map_Entry<K, V>) : Void;
+	@:overload @:public public function new(entry : java.util.Map.Map_Entry<K, V>) : Void;
 	
 	/**
 	* Returns the key corresponding to this entry.
 	*
 	* @return the key corresponding to this entry
 	*/
-	@:overload public function getKey() : K;
+	@:overload @:public public function getKey() : K;
 	
 	/**
 	* Returns the value corresponding to this entry.
 	*
 	* @return the value corresponding to this entry
 	*/
-	@:overload public function getValue() : V;
+	@:overload @:public public function getValue() : V;
 	
 	/**
 	* Replaces the value corresponding to this entry with the specified
@@ -411,7 +411,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* @return (Does not return)
 	* @throws UnsupportedOperationException always
 	*/
-	@:overload public function setValue(value : V) : V;
+	@:overload @:public public function setValue(value : V) : V;
 	
 	/**
 	* Compares the specified object with this entry for equality.
@@ -434,7 +434,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	*         entry
 	* @see    #hashCode
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this map entry.  The hash code
@@ -449,7 +449,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	* @return the hash code value for this map entry
 	* @see    #equals
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a String representation of this map entry.  This
@@ -459,7 +459,7 @@ extern class AbstractMap<K, V> implements java.util.Map<K, V>
 	*
 	* @return a String representation of this map entry
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

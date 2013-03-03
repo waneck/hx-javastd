@@ -67,11 +67,11 @@ extern class ATHROW extends com.sun.org.apache.bcel.internal.generic.Instruction
 	/**
 	*  Throw exception
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** @return exceptions this instruction may cause
 	*/
-	@:overload public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -81,7 +81,7 @@ extern class ATHROW extends com.sun.org.apache.bcel.internal.generic.Instruction
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

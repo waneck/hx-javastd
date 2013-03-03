@@ -38,7 +38,7 @@ extern class AbstractIndexWriter extends com.sun.tools.doclets.formats.html.Html
 	/**
 	* The index of all the members with unicode character.
 	*/
-	private var indexbuilder : com.sun.tools.doclets.internal.toolkit.util.IndexBuilder;
+	@:protected private var indexbuilder : com.sun.tools.doclets.internal.toolkit.util.IndexBuilder;
 	
 	/**
 	* This constructor will be used by {@link SplitIndexWriter}. Initialises
@@ -49,7 +49,7 @@ extern class AbstractIndexWriter extends com.sun.tools.doclets.formats.html.Html
 	* @param relpath    Relative path from this file to the current directory.
 	* @param indexbuilder Unicode based Index from {@link IndexBuilder}
 	*/
-	@:overload private function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, path : String, filename : String, relpath : String, indexbuilder : com.sun.tools.doclets.internal.toolkit.util.IndexBuilder) : Void;
+	@:overload @:protected private function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, path : String, filename : String, relpath : String, indexbuilder : com.sun.tools.doclets.internal.toolkit.util.IndexBuilder) : Void;
 	
 	/**
 	* This Constructor will be used by {@link SingleIndexWriter}.
@@ -57,14 +57,14 @@ extern class AbstractIndexWriter extends com.sun.tools.doclets.formats.html.Html
 	* @param filename   Name of the file which is getting genrated.
 	* @param indexbuilder Unicode based Index form {@link IndexBuilder}
 	*/
-	@:overload private function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String, indexbuilder : com.sun.tools.doclets.internal.toolkit.util.IndexBuilder) : Void;
+	@:overload @:protected private function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String, indexbuilder : com.sun.tools.doclets.internal.toolkit.util.IndexBuilder) : Void;
 	
 	/**
 	* Get the index label for navigation bar.
 	*
 	* @return a content tree for the tree label
 	*/
-	@:overload override private function getNavLinkIndex() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkIndex() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add the member information for the unicode character along with the
@@ -74,7 +74,7 @@ extern class AbstractIndexWriter extends com.sun.tools.doclets.formats.html.Html
 	* @param memberlist List of members for the unicode character
 	* @param contentTree the content tree to which the information will be added
 	*/
-	@:overload private function addContents(unicode : Null<java.StdTypes.Char16>, memberlist : java.util.List<com.sun.javadoc.Doc>, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addContents(unicode : Null<java.StdTypes.Char16>, memberlist : java.util.List<com.sun.javadoc.Doc>, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add one line summary comment for the package.
@@ -82,7 +82,7 @@ extern class AbstractIndexWriter extends com.sun.tools.doclets.formats.html.Html
 	* @param pkg the package to be documented
 	* @param dlTree the content tree to which the description will be added
 	*/
-	@:overload private function addDescription(pkg : com.sun.javadoc.PackageDoc, dlTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addDescription(pkg : com.sun.javadoc.PackageDoc, dlTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add one line summary comment for the class.
@@ -90,7 +90,7 @@ extern class AbstractIndexWriter extends com.sun.tools.doclets.formats.html.Html
 	* @param cd the class being documented
 	* @param dlTree the content tree to which the description will be added
 	*/
-	@:overload private function addDescription(cd : com.sun.javadoc.ClassDoc, dlTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addDescription(cd : com.sun.javadoc.ClassDoc, dlTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the classkind(class, interface, exception, error of the class
@@ -99,7 +99,7 @@ extern class AbstractIndexWriter extends com.sun.tools.doclets.formats.html.Html
 	* @param cd the class being documented
 	* @param contentTree the content tree to which the class info will be added
 	*/
-	@:overload private function addClassInfo(cd : com.sun.javadoc.ClassDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addClassInfo(cd : com.sun.javadoc.ClassDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add description for Class, Field, Method or Constructor.
@@ -107,7 +107,7 @@ extern class AbstractIndexWriter extends com.sun.tools.doclets.formats.html.Html
 	* @param member MemberDoc for the member of the Class Kind
 	* @param dlTree the content tree to which the description will be added
 	*/
-	@:overload private function addDescription(member : com.sun.javadoc.MemberDoc, dlTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addDescription(member : com.sun.javadoc.MemberDoc, dlTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add comment for each element in the index. If the element is deprecated
@@ -118,7 +118,7 @@ extern class AbstractIndexWriter extends com.sun.tools.doclets.formats.html.Html
 	* @param element Index element
 	* @param contentTree the content tree to which the comment will be added
 	*/
-	@:overload private function addComment(element : com.sun.javadoc.ProgramElementDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addComment(element : com.sun.javadoc.ProgramElementDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add description about the Static Varible/Method/Constructor for a
@@ -127,7 +127,7 @@ extern class AbstractIndexWriter extends com.sun.tools.doclets.formats.html.Html
 	* @param member MemberDoc for the member within the Class Kind
 	* @param contentTree the content tree to which the member description will be added
 	*/
-	@:overload private function addMemberDesc(member : com.sun.javadoc.MemberDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addMemberDesc(member : com.sun.javadoc.MemberDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }

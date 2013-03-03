@@ -28,7 +28,7 @@ extern class JDK13Services
 	/** Set the period provider lists are cached.
 	This method is only intended for testing.
 	*/
-	@:overload public static function setCachingPeriod(seconds : Int) : Void;
+	@:overload @:public @:static public static function setCachingPeriod(seconds : Int) : Void;
 	
 	/** Obtains a List containing installed instances of the
 	providers for the requested service.
@@ -45,7 +45,7 @@ extern class JDK13Services
 	@return A List of providers of the requested type. This List is
 	immutable.
 	*/
-	@:overload @:synchronized public static function getProviders(serviceClass : Class<Dynamic>) : java.util.List<Dynamic>;
+	@:overload @:public @:static @:synchronized public static function getProviders(serviceClass : Class<Dynamic>) : java.util.List<Dynamic>;
 	
 	/** Obtain the provider class name part of a default provider property.
 	@param typeClass The type of the default provider property. This
@@ -56,7 +56,7 @@ extern class JDK13Services
 	(the part before the hash sign), if available. If the property is
 	not set or the value has no provider class name part, null is returned.
 	*/
-	@:overload @:synchronized public static function getDefaultProviderClassName(typeClass : Class<Dynamic>) : String;
+	@:overload @:public @:static @:synchronized public static function getDefaultProviderClassName(typeClass : Class<Dynamic>) : String;
 	
 	/** Obtain the instance name part of a default provider property.
 	@param typeClass The type of the default provider property. This
@@ -67,15 +67,15 @@ extern class JDK13Services
 	part after the hash sign), if available. If the property is not set
 	or the value has no instance name part, null is returned.
 	*/
-	@:overload @:synchronized public static function getDefaultInstanceName(typeClass : Class<Dynamic>) : String;
+	@:overload @:public @:static @:synchronized public static function getDefaultInstanceName(typeClass : Class<Dynamic>) : String;
 	
 	
 }
 @:native('com$sun$media$sound$JDK13Services$ProviderCache') @:internal extern class JDK13Services_ProviderCache
 {
-	public var lastUpdate : haxe.Int64;
+	@:public public var lastUpdate : haxe.Int64;
 	
-	public var providers : java.util.List<Dynamic>;
+	@:public public var providers : java.util.List<Dynamic>;
 	
 	
 }

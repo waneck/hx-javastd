@@ -29,7 +29,7 @@ extern class SolidTextRenderer extends sun.java2d.pipe.GlyphListLoopPipe impleme
 	* A delegate pipe of SG2D for drawing text with
 	* a solid source colour to an opaque destination.
 	*/
-	@:overload override private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList) : Void;
+	@:overload @:protected override private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList) : Void;
 	
 	
 }

@@ -46,9 +46,9 @@ package com.sun.xml.internal.rngom.binary;
 */
 extern class InterleavePattern extends com.sun.xml.internal.rngom.binary.BinaryPattern
 {
-	@:overload override public function accept(visitor : com.sun.xml.internal.rngom.binary.visitor.PatternVisitor) : Void;
+	@:overload @:public override public function accept(visitor : com.sun.xml.internal.rngom.binary.visitor.PatternVisitor) : Void;
 	
-	@:overload override public function apply(f : com.sun.xml.internal.rngom.binary.visitor.PatternFunction) : Dynamic;
+	@:overload @:public override public function apply(f : com.sun.xml.internal.rngom.binary.visitor.PatternFunction) : Dynamic;
 	
 	
 }

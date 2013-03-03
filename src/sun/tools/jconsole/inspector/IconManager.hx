@@ -25,11 +25,11 @@ package sun.tools.jconsole.inspector;
 */
 extern class IconManager
 {
-	public static var MBEAN : javax.swing.Icon;
+	@:public @:static public static var MBEAN : javax.swing.Icon;
 	
-	public static var MBEANSERVERDELEGATE : javax.swing.Icon;
+	@:public @:static public static var MBEANSERVERDELEGATE : javax.swing.Icon;
 	
-	public static var DEFAULT_XOBJECT : javax.swing.Icon;
+	@:public @:static public static var DEFAULT_XOBJECT : javax.swing.Icon;
 	
 	
 }

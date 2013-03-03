@@ -25,9 +25,9 @@ package com.sun.java.swing.plaf.gtk;
 */
 @:internal extern class GTKStyle extends javax.swing.plaf.synth.SynthStyle implements com.sun.java.swing.plaf.gtk.GTKConstants
 {
-	@:overload public function installDefaults(context : javax.swing.plaf.synth.SynthContext) : Void;
+	@:overload @:public override public function installDefaults(context : javax.swing.plaf.synth.SynthContext) : Void;
 	
-	@:overload public function getGraphicsUtils(context : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthGraphicsUtils;
+	@:overload @:public override public function getGraphicsUtils(context : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthGraphicsUtils;
 	
 	/**
 	* Returns a <code>SynthPainter</code> that will route the appropriate
@@ -36,13 +36,13 @@ package com.sun.java.swing.plaf.gtk;
 	* @param state SynthContext indentifying requestor
 	* @return SynthPainter
 	*/
-	@:overload public function getPainter(state : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthPainter;
+	@:overload @:public override public function getPainter(state : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthPainter;
 	
-	@:overload private function getColorForState(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
+	@:overload @:protected override private function getColorForState(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
 	
-	@:overload public function getColor(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
+	@:overload @:public override public function getColor(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
 	
-	@:overload private function getFontForState(context : javax.swing.plaf.synth.SynthContext) : java.awt.Font;
+	@:overload @:protected override private function getFontForState(context : javax.swing.plaf.synth.SynthContext) : java.awt.Font;
 	
 	/**
 	* Returns the Insets. If <code>insets</code> is non-null the resulting
@@ -53,7 +53,7 @@ package com.sun.java.swing.plaf.gtk;
 	* @param insets Where to place Insets
 	* @return Insets.
 	*/
-	@:overload public function getInsets(state : javax.swing.plaf.synth.SynthContext, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getInsets(state : javax.swing.plaf.synth.SynthContext, insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* Returns the value to initialize the opacity property of the Component
@@ -63,9 +63,9 @@ package com.sun.java.swing.plaf.gtk;
 	* @param context SynthContext indentifying requestor
 	* @return opaque Whether or not the JComponent is opaque.
 	*/
-	@:overload public function isOpaque(context : javax.swing.plaf.synth.SynthContext) : Bool;
+	@:overload @:public override public function isOpaque(context : javax.swing.plaf.synth.SynthContext) : Bool;
 	
-	@:overload public function get(context : javax.swing.plaf.synth.SynthContext, key : Dynamic) : Dynamic;
+	@:overload @:public override public function get(context : javax.swing.plaf.synth.SynthContext, key : Dynamic) : Dynamic;
 	
 	
 }
@@ -77,7 +77,7 @@ package com.sun.java.swing.plaf.gtk;
 	* @param type icon type (GtkIconSize value)
 	* @return a Dimension object, or null if lsize is invalid
 	*/
-	@:overload public static function getIconSize(type : Int) : java.awt.Dimension;
+	@:overload @:public @:static public static function getIconSize(type : Int) : java.awt.Dimension;
 	
 	/**
 	* Change icon size in a type to size mapping. This is called by code
@@ -87,7 +87,7 @@ package com.sun.java.swing.plaf.gtk;
 	* @param w the new icon width
 	* @param h the new icon height
 	*/
-	@:overload public static function setIconSize(type : Int, w : Int, h : Int) : Void;
+	@:overload @:public @:static public static function setIconSize(type : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Return icon type (GtkIconSize value) given a symbolic name which can
@@ -96,7 +96,7 @@ package com.sun.java.swing.plaf.gtk;
 	* @param size symbolic name, e.g. gtk-button
 	* @return icon type. Valid types are 1 to 6
 	*/
-	@:overload public static function getIconType(size : String) : Int;
+	@:overload @:public @:static public static function getIconType(size : String) : Int;
 	
 	
 }
@@ -105,11 +105,11 @@ package com.sun.java.swing.plaf.gtk;
 */
 @:native('com$sun$java$swing$plaf$gtk$GTKStyle$GTKStockIcon') @:internal extern class GTKStyle_GTKStockIcon extends sun.swing.plaf.synth.SynthIcon
 {
-	@:overload override public function paintIcon(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function paintIcon(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getIconWidth(context : javax.swing.plaf.synth.SynthContext) : Int;
+	@:overload @:public override public function getIconWidth(context : javax.swing.plaf.synth.SynthContext) : Int;
 	
-	@:overload override public function getIconHeight(context : javax.swing.plaf.synth.SynthContext) : Int;
+	@:overload @:public override public function getIconHeight(context : javax.swing.plaf.synth.SynthContext) : Int;
 	
 	
 }
@@ -120,7 +120,7 @@ package com.sun.java.swing.plaf.gtk;
 */
 @:native('com$sun$java$swing$plaf$gtk$GTKStyle$GTKLazyValue') @:internal extern class GTKStyle_GTKLazyValue implements javax.swing.UIDefaults.UIDefaults_LazyValue
 {
-	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }

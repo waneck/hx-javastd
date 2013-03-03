@@ -29,13 +29,13 @@ extern class CorbanameUrl
 	* Returns a possibly empty but non-null string that is the "string_name"
 	* portion of the URL.
 	*/
-	@:overload public function getStringName() : String;
+	@:overload @:public public function getStringName() : String;
 	
-	@:overload public function getCosName() : javax.naming.Name;
+	@:overload @:public public function getCosName() : javax.naming.Name;
 	
-	@:overload public function getLocation() : String;
+	@:overload @:public public function getLocation() : String;
 	
-	@:overload public function new(url : String) : Void;
+	@:overload @:public public function new(url : String) : Void;
 	
 	
 }

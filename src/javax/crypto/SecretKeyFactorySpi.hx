@@ -58,7 +58,7 @@ package javax.crypto;
 	* @exception InvalidKeySpecException if the given key specification
 	* is inappropriate for this secret-key factory to produce a secret key.
 	*/
-	@:overload @:abstract private function engineGenerateSecret(keySpec : java.security.spec.KeySpec) : javax.crypto.SecretKey;
+	@:overload @:protected @:abstract private function engineGenerateSecret(keySpec : java.security.spec.KeySpec) : javax.crypto.SecretKey;
 	
 	/**
 	* Returns a specification (key material) of the given key
@@ -81,7 +81,7 @@ package javax.crypto;
 	* (e.g., the given key has an algorithm or format not supported by this
 	* secret-key factory).
 	*/
-	@:overload @:abstract private function engineGetKeySpec(key : javax.crypto.SecretKey, keySpec : Class<Dynamic>) : java.security.spec.KeySpec;
+	@:overload @:protected @:abstract private function engineGetKeySpec(key : javax.crypto.SecretKey, keySpec : Class<Dynamic>) : java.security.spec.KeySpec;
 	
 	/**
 	* Translates a key object, whose provider may be unknown or
@@ -95,7 +95,7 @@ package javax.crypto;
 	* @exception InvalidKeyException if the given key cannot be processed
 	* by this secret-key factory.
 	*/
-	@:overload @:abstract private function engineTranslateKey(key : javax.crypto.SecretKey) : javax.crypto.SecretKey;
+	@:overload @:protected @:abstract private function engineTranslateKey(key : javax.crypto.SecretKey) : javax.crypto.SecretKey;
 	
 	
 }

@@ -29,13 +29,13 @@ extern interface ReferenceCountingDevice
 	* This method is similar to MidiDevice.getReceiver(). However, by calling this one,
 	* the device is opened implicitly. This is needed by MidiSystem.getReceiver().
 	*/
-	@:overload public function getReceiverReferenceCounting() : javax.sound.midi.Receiver;
+	@:overload @:public public function getReceiverReferenceCounting() : javax.sound.midi.Receiver;
 	
 	/** Retrieve a Transmitter that opens the device implicitly.
 	* This method is similar to MidiDevice.getTransmitter(). However, by calling this one,
 	* the device is opened implicitly. This is needed by MidiSystem.getTransmitter().
 	*/
-	@:overload public function getTransmitterReferenceCounting() : javax.sound.midi.Transmitter;
+	@:overload @:public public function getTransmitterReferenceCounting() : javax.sound.midi.Transmitter;
 	
 	
 }

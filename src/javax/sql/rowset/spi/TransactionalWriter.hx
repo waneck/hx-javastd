@@ -35,7 +35,7 @@ extern interface TransactionalWriter extends javax.sql.RowSetWriter
 	*         <code>Connection</code> object within this <code>CachedRowSet</code>
 	*         object is in auto-commit mode
 	*/
-	@:overload public function commit() : Void;
+	@:overload @:public public function commit() : Void;
 	
 	/**
 	* Undoes all changes made in the current transaction. This method should be
@@ -44,7 +44,7 @@ extern interface TransactionalWriter extends javax.sql.RowSetWriter
 	* @throws SQLException if a database access error occurs or the <code>Connection</code>
 	*         object within this <code>CachedRowSet</code> object is in auto-commit mode
 	*/
-	@:overload public function rollback() : Void;
+	@:overload @:public public function rollback() : Void;
 	
 	/**
 	* Undoes all changes made in the current transaction made prior to the given
@@ -57,7 +57,7 @@ extern interface TransactionalWriter extends javax.sql.RowSetWriter
 	* @throws SQLException if a database access error occurs or the <code>Connection</code>
 	*         object within this <code>CachedRowSet</code> object is in auto-commit mode
 	*/
-	@:overload public function rollback(s : java.sql.Savepoint) : Void;
+	@:overload @:public public function rollback(s : java.sql.Savepoint) : Void;
 	
 	
 }

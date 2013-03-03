@@ -35,7 +35,7 @@ extern interface EventFilter
 	* @param event the event to test
 	* @return true if this filter accepts this event, false otherwise
 	*/
-	@:overload public function accept(event : javax.xml.stream.events.XMLEvent) : Bool;
+	@:overload @:public public function accept(event : javax.xml.stream.events.XMLEvent) : Bool;
 	
 	
 }

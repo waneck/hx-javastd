@@ -47,13 +47,13 @@ package javax.accessibility;
 extern class AccessibleTextSequence
 {
 	/* The start index of the text sequence */
-	public var startIndex : Int;
+	@:public public var startIndex : Int;
 	
 	/** The end index of the text sequence */
-	public var endIndex : Int;
+	@:public public var endIndex : Int;
 	
 	/** The text */
-	public var text : String;
+	@:public public var text : String;
 	
 	/**
 	* Constructs an <code>AccessibleTextSequence</code> with the given
@@ -65,7 +65,7 @@ extern class AccessibleTextSequence
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(start : Int, end : Int, txt : String) : Void;
+	@:require(java6) @:overload @:public public function new(start : Int, end : Int, txt : String) : Void;
 	
 	
 }

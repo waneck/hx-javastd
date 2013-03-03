@@ -36,7 +36,7 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	* @param visible   The initial visibility.
 	*
 	*/
-	@:overload public function new(peer : java.beans.beancontext.BeanContextServices, lcle : java.util.Locale, dTime : Bool, visible : Bool) : Void;
+	@:overload @:public public function new(peer : java.beans.beancontext.BeanContextServices, lcle : java.util.Locale, dTime : Bool, visible : Bool) : Void;
 	
 	/**
 	* Create an instance using the specified Locale and design mode.
@@ -45,7 +45,7 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	* @param lcle      The current Locale for this BeanContext.
 	* @param dtime     The initial state, true if in design mode, false if runtime.
 	*/
-	@:overload public function new(peer : java.beans.beancontext.BeanContextServices, lcle : java.util.Locale, dtime : Bool) : Void;
+	@:overload @:public public function new(peer : java.beans.beancontext.BeanContextServices, lcle : java.util.Locale, dtime : Bool) : Void;
 	
 	/**
 	* Create an instance using the specified locale
@@ -53,19 +53,19 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	* @param peer      The peer BeanContext we are supplying an implementation for, if null the this object is its own peer
 	* @param lcle      The current Locale for this BeanContext.
 	*/
-	@:overload public function new(peer : java.beans.beancontext.BeanContextServices, lcle : java.util.Locale) : Void;
+	@:overload @:public public function new(peer : java.beans.beancontext.BeanContextServices, lcle : java.util.Locale) : Void;
 	
 	/**
 	* Create an instance with a peer
 	*
 	* @param peer      The peer BeanContext we are supplying an implementation for, if null the this object is its own peer
 	*/
-	@:overload public function new(peer : java.beans.beancontext.BeanContextServices) : Void;
+	@:overload @:public public function new(peer : java.beans.beancontext.BeanContextServices) : Void;
 	
 	/**
 	* Create an instance that is not a delegate of another object
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* called by BeanContextSupport superclass during construction and
@@ -74,7 +74,7 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	* subclasses may envelope this method, but should not override it or
 	* call it directly.
 	*/
-	@:overload override public function initialize() : Void;
+	@:overload @:public override public function initialize() : Void;
 	
 	/**
 	* Gets the <tt>BeanContextServices</tt> associated with this
@@ -83,7 +83,7 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	* @return the instance of <tt>BeanContext</tt>
 	* this object is providing the implementation for.
 	*/
-	@:overload public function getBeanContextServicesPeer() : java.beans.beancontext.BeanContextServices;
+	@:overload @:public public function getBeanContextServicesPeer() : java.beans.beancontext.BeanContextServices;
 	
 	/**
 	* <p>
@@ -95,67 +95,67 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	* @param targetChild the child to create the Child on behalf of
 	* @param peer        the peer if the targetChild and peer are related by BeanContextProxy
 	*/
-	@:overload override private function createBCSChild(targetChild : Dynamic, peer : Dynamic) : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild;
+	@:overload @:protected override private function createBCSChild(targetChild : Dynamic, peer : Dynamic) : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild;
 	
 	/**
 	* subclasses can override this method to create new subclasses of
 	* BCSSServiceProvider without having to overrride addService() in
 	* order to instantiate.
 	*/
-	@:overload private function createBCSSServiceProvider(sc : Class<Dynamic>, bcsp : java.beans.beancontext.BeanContextServiceProvider) : java.beans.beancontext.BeanContextServicesSupport.BeanContextServicesSupport_BCSSServiceProvider;
+	@:overload @:protected private function createBCSSServiceProvider(sc : Class<Dynamic>, bcsp : java.beans.beancontext.BeanContextServiceProvider) : java.beans.beancontext.BeanContextServicesSupport.BeanContextServicesSupport_BCSSServiceProvider;
 	
 	/**
 	* add a BeanContextServicesListener
 	*
 	* @throws NullPointerException
 	*/
-	@:overload public function addBeanContextServicesListener(bcsl : java.beans.beancontext.BeanContextServicesListener) : Void;
+	@:overload @:public public function addBeanContextServicesListener(bcsl : java.beans.beancontext.BeanContextServicesListener) : Void;
 	
 	/**
 	* remove a BeanContextServicesListener
 	*/
-	@:overload public function removeBeanContextServicesListener(bcsl : java.beans.beancontext.BeanContextServicesListener) : Void;
+	@:overload @:public public function removeBeanContextServicesListener(bcsl : java.beans.beancontext.BeanContextServicesListener) : Void;
 	
 	/**
 	* add a service
 	*/
-	@:overload public function addService(serviceClass : Class<Dynamic>, bcsp : java.beans.beancontext.BeanContextServiceProvider) : Bool;
+	@:overload @:public public function addService(serviceClass : Class<Dynamic>, bcsp : java.beans.beancontext.BeanContextServiceProvider) : Bool;
 	
 	/**
 	* add a service
 	*/
-	@:overload private function addService(serviceClass : Class<Dynamic>, bcsp : java.beans.beancontext.BeanContextServiceProvider, fireEvent : Bool) : Bool;
+	@:overload @:protected private function addService(serviceClass : Class<Dynamic>, bcsp : java.beans.beancontext.BeanContextServiceProvider, fireEvent : Bool) : Bool;
 	
 	/**
 	* remove a service
 	*/
-	@:overload public function revokeService(serviceClass : Class<Dynamic>, bcsp : java.beans.beancontext.BeanContextServiceProvider, revokeCurrentServicesNow : Bool) : Void;
+	@:overload @:public public function revokeService(serviceClass : Class<Dynamic>, bcsp : java.beans.beancontext.BeanContextServiceProvider, revokeCurrentServicesNow : Bool) : Void;
 	
 	/**
 	* has a service, which may be delegated
 	*/
-	@:overload @:synchronized public function hasService(serviceClass : Class<Dynamic>) : Bool;
+	@:overload @:public @:synchronized public function hasService(serviceClass : Class<Dynamic>) : Bool;
 	
 	/**
 	* obtain a service which may be delegated
 	*/
-	@:overload public function getService(child : java.beans.beancontext.BeanContextChild, requestor : Dynamic, serviceClass : Class<Dynamic>, serviceSelector : Dynamic, bcsrl : java.beans.beancontext.BeanContextServiceRevokedListener) : Dynamic;
+	@:overload @:public public function getService(child : java.beans.beancontext.BeanContextChild, requestor : Dynamic, serviceClass : Class<Dynamic>, serviceSelector : Dynamic, bcsrl : java.beans.beancontext.BeanContextServiceRevokedListener) : Dynamic;
 	
 	/**
 	* release a service
 	*/
-	@:overload public function releaseService(child : java.beans.beancontext.BeanContextChild, requestor : Dynamic, service : Dynamic) : Void;
+	@:overload @:public public function releaseService(child : java.beans.beancontext.BeanContextChild, requestor : Dynamic, service : Dynamic) : Void;
 	
 	/**
 	* @return an iterator for all the currently registered service classes.
 	*/
-	@:overload public function getCurrentServiceClasses() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getCurrentServiceClasses() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* @return an iterator for all the currently available service selectors
 	* (if any) available for the specified service.
 	*/
-	@:overload public function getCurrentServiceSelectors(serviceClass : Class<Dynamic>) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getCurrentServiceSelectors(serviceClass : Class<Dynamic>) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* BeanContextServicesListener callback, propagates event to all
@@ -166,7 +166,7 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	* subclasses may override or envelope this method to implement their
 	* own propagation semantics.
 	*/
-	@:overload override public function serviceAvailable(bcssae : java.beans.beancontext.BeanContextServiceAvailableEvent) : Void;
+	@:overload @:public override public function serviceAvailable(bcssae : java.beans.beancontext.BeanContextServiceAvailableEvent) : Void;
 	
 	/**
 	* BeanContextServicesListener callback, propagates event to all
@@ -177,7 +177,7 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	* subclasses may override or envelope this method to implement their
 	* own propagation semantics.
 	*/
-	@:overload override public function serviceRevoked(bcssre : java.beans.beancontext.BeanContextServiceRevokedEvent) : Void;
+	@:overload @:public override public function serviceRevoked(bcssre : java.beans.beancontext.BeanContextServiceRevokedEvent) : Void;
 	
 	/**
 	* Gets the <tt>BeanContextServicesListener</tt> (if any) of the specified
@@ -186,7 +186,7 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	* @param child the specified child
 	* @return the BeanContextServicesListener (if any) of the specified child
 	*/
-	@:overload @:final private static function getChildBeanContextServicesListener(child : Dynamic) : java.beans.beancontext.BeanContextServicesListener;
+	@:overload @:protected @:static @:final private static function getChildBeanContextServicesListener(child : Dynamic) : java.beans.beancontext.BeanContextServicesListener;
 	
 	/**
 	* called from superclass child removal operations after a child
@@ -198,7 +198,7 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	* subclasses may envelope this method in order to implement their
 	* own child removal side-effects.
 	*/
-	@:overload override private function childJustRemovedHook(child : Dynamic, bcsc : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild) : Void;
+	@:overload @:protected override private function childJustRemovedHook(child : Dynamic, bcsc : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild) : Void;
 	
 	/**
 	* called from setBeanContext to notify a BeanContextChild
@@ -208,7 +208,7 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	*
 	* subclasses may envelope this method to implement their own semantics.
 	*/
-	@:overload @:synchronized override private function releaseBeanContextResources() : Void;
+	@:overload @:protected @:synchronized override private function releaseBeanContextResources() : Void;
 	
 	/**
 	* called from setBeanContext to notify a BeanContextChild
@@ -216,12 +216,12 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	*
 	* subclasses may envelope this method to implement their own semantics.
 	*/
-	@:overload @:synchronized override private function initializeBeanContextResources() : Void;
+	@:overload @:protected @:synchronized override private function initializeBeanContextResources() : Void;
 	
 	/**
 	* Fires a <tt>BeanContextServiceEvent</tt> notifying of a new service.
 	*/
-	@:overload @:final private function fireServiceAdded(serviceClass : Class<Dynamic>) : Void;
+	@:overload @:protected @:final private function fireServiceAdded(serviceClass : Class<Dynamic>) : Void;
 	
 	/**
 	* Fires a <tt>BeanContextServiceAvailableEvent</tt> indicating that a new
@@ -229,21 +229,21 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	*
 	* @param bcssae the <tt>BeanContextServiceAvailableEvent</tt>
 	*/
-	@:overload @:final private function fireServiceAdded(bcssae : java.beans.beancontext.BeanContextServiceAvailableEvent) : Void;
+	@:overload @:protected @:final private function fireServiceAdded(bcssae : java.beans.beancontext.BeanContextServiceAvailableEvent) : Void;
 	
 	/**
 	* Fires a <tt>BeanContextServiceEvent</tt> notifying of a service being revoked.
 	*
 	* @param bcsre the <tt>BeanContextServiceRevokedEvent</tt>
 	*/
-	@:overload @:final private function fireServiceRevoked(bcsre : java.beans.beancontext.BeanContextServiceRevokedEvent) : Void;
+	@:overload @:protected @:final private function fireServiceRevoked(bcsre : java.beans.beancontext.BeanContextServiceRevokedEvent) : Void;
 	
 	/**
 	* Fires a <tt>BeanContextServiceRevokedEvent</tt>
 	* indicating that a particular service is
 	* no longer available.
 	*/
-	@:overload @:final private function fireServiceRevoked(serviceClass : Class<Dynamic>, revokeNow : Bool) : Void;
+	@:overload @:protected @:final private function fireServiceRevoked(serviceClass : Class<Dynamic>, revokeNow : Bool) : Void;
 	
 	/**
 	* called from BeanContextSupport writeObject before it serializes the
@@ -255,7 +255,7 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	* subclasses may envelope this method to insert their own serialization
 	* processing that has to occur prior to serialization of the children
 	*/
-	@:overload @:synchronized override private function bcsPreSerializationHook(oos : java.io.ObjectOutputStream) : Void;
+	@:overload @:protected @:synchronized override private function bcsPreSerializationHook(oos : java.io.ObjectOutputStream) : Void;
 	
 	/**
 	* called from BeanContextSupport readObject before it deserializes the
@@ -268,28 +268,28 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	* subclasses may envelope this method to insert their own serialization
 	* processing that has to occur prior to serialization of the children
 	*/
-	@:overload @:synchronized override private function bcsPreDeserializationHook(ois : java.io.ObjectInputStream) : Void;
+	@:overload @:protected @:synchronized override private function bcsPreDeserializationHook(ois : java.io.ObjectInputStream) : Void;
 	
 	/**
 	* all accesses to the <code> protected transient HashMap services </code>
 	* field should be synchronized on that object
 	*/
-	@:transient private var services : java.util.HashMap<Dynamic, Dynamic>;
+	@:protected @:transient private var services : java.util.HashMap<Dynamic, Dynamic>;
 	
 	/**
 	* The number of instances of a serializable <tt>BeanContextServceProvider</tt>.
 	*/
-	@:transient private var serializable : Int;
+	@:protected @:transient private var serializable : Int;
 	
 	/**
 	* Delegate for the <tt>BeanContextServiceProvider</tt>.
 	*/
-	@:transient private var proxy : java.beans.beancontext.BeanContextServicesSupport.BeanContextServicesSupport_BCSSProxyServiceProvider;
+	@:protected @:transient private var proxy : java.beans.beancontext.BeanContextServicesSupport.BeanContextServicesSupport_BCSSProxyServiceProvider;
 	
 	/**
 	* List of <tt>BeanContextServicesListener</tt> objects.
 	*/
-	@:transient private var bcsListeners : java.util.ArrayList<Dynamic>;
+	@:protected @:transient private var bcsListeners : java.util.ArrayList<Dynamic>;
 	
 	
 }
@@ -326,12 +326,12 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 */
 @:native('java$beans$beancontext$BeanContextServicesSupport$BCSSServiceProvider') extern class BeanContextServicesSupport_BCSSServiceProvider implements java.io.Serializable
 {
-	@:overload private function getServiceProvider() : java.beans.beancontext.BeanContextServiceProvider;
+	@:overload @:protected private function getServiceProvider() : java.beans.beancontext.BeanContextServiceProvider;
 	
 	/*
 	* fields
 	*/
-	private var serviceProvider : java.beans.beancontext.BeanContextServiceProvider;
+	@:protected private var serviceProvider : java.beans.beancontext.BeanContextServiceProvider;
 	
 	
 }
@@ -341,13 +341,13 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 */
 @:native('java$beans$beancontext$BeanContextServicesSupport$BCSSProxyServiceProvider') extern class BeanContextServicesSupport_BCSSProxyServiceProvider implements java.beans.beancontext.BeanContextServiceProvider implements java.beans.beancontext.BeanContextServiceRevokedListener
 {
-	@:overload public function getService(bcs : java.beans.beancontext.BeanContextServices, requestor : Dynamic, serviceClass : Class<Dynamic>, serviceSelector : Dynamic) : Dynamic;
+	@:overload @:public public function getService(bcs : java.beans.beancontext.BeanContextServices, requestor : Dynamic, serviceClass : Class<Dynamic>, serviceSelector : Dynamic) : Dynamic;
 	
-	@:overload public function releaseService(bcs : java.beans.beancontext.BeanContextServices, requestor : Dynamic, service : Dynamic) : Void;
+	@:overload @:public public function releaseService(bcs : java.beans.beancontext.BeanContextServices, requestor : Dynamic, service : Dynamic) : Void;
 	
-	@:overload public function getCurrentServiceSelectors(bcs : java.beans.beancontext.BeanContextServices, serviceClass : Class<Dynamic>) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getCurrentServiceSelectors(bcs : java.beans.beancontext.BeanContextServices, serviceClass : Class<Dynamic>) : java.util.Iterator<Dynamic>;
 	
-	@:overload public function serviceRevoked(bcsre : java.beans.beancontext.BeanContextServiceRevokedEvent) : Void;
+	@:overload @:public public function serviceRevoked(bcsre : java.beans.beancontext.BeanContextServiceRevokedEvent) : Void;
 	
 	
 }

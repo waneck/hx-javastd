@@ -32,7 +32,7 @@ extern class BridgePermission extends java.security.BasicPermission
 	*
 	* @param name the name of the BridgePermission.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a new BridgePermission object with the specified name.
@@ -43,7 +43,7 @@ extern class BridgePermission extends java.security.BasicPermission
 	* @param name the name of the BridgePermission.
 	* @param actions should be null.
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	
 }

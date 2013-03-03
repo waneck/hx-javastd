@@ -25,25 +25,25 @@ package sun.swing.table;
 */
 extern class DefaultTableCellHeaderRenderer extends javax.swing.table.DefaultTableCellRenderer implements javax.swing.plaf.UIResource
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function setHorizontalTextPosition(textPosition : Int) : Void;
+	@:overload @:public override public function setHorizontalTextPosition(textPosition : Int) : Void;
 	
-	@:overload public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
+	@:overload @:public override public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
 	
-	@:overload public static function getColumnSortOrder(table : javax.swing.JTable, column : Int) : javax.swing.SortOrder;
+	@:overload @:public @:static public static function getColumnSortOrder(table : javax.swing.JTable, column : Int) : javax.swing.SortOrder;
 	
-	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('sun$swing$table$DefaultTableCellHeaderRenderer$EmptyIcon') @:internal extern class DefaultTableCellHeaderRenderer_EmptyIcon implements javax.swing.Icon implements java.io.Serializable
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }

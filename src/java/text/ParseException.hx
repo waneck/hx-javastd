@@ -52,12 +52,12 @@ extern class ParseException extends java.lang.Exception
 	* @param s the detail message
 	* @param errorOffset the position where the error is found while parsing.
 	*/
-	@:overload public function new(s : String, errorOffset : Int) : Void;
+	@:overload @:public public function new(s : String, errorOffset : Int) : Void;
 	
 	/**
 	* Returns the position where the error was found.
 	*/
-	@:overload public function getErrorOffset() : Int;
+	@:overload @:public public function getErrorOffset() : Int;
 	
 	
 }

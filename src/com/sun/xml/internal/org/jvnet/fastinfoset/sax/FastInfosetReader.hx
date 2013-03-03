@@ -47,7 +47,7 @@ extern interface FastInfosetReader extends org.xml.sax.XMLReader extends com.sun
 	*
 	* @param s The byte stream to parse from.
 	*/
-	@:overload public function parse(s : java.io.InputStream) : Void;
+	@:overload @:public public function parse(s : java.io.InputStream) : Void;
 	
 	/**
 	* Allow an application to register a lexical handler.
@@ -59,7 +59,7 @@ extern interface FastInfosetReader extends org.xml.sax.XMLReader extends com.sun
 	* @param handler The lexical handler.
 	* @see #getLexicalHandler
 	*/
-	@:overload public function setLexicalHandler(handler : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public public function setLexicalHandler(handler : org.xml.sax.ext.LexicalHandler) : Void;
 	
 	/**
 	* Return the current lexical handler.
@@ -68,7 +68,7 @@ extern interface FastInfosetReader extends org.xml.sax.XMLReader extends com.sun
 	*         has been registered.
 	* @see #setLexicalHandler
 	*/
-	@:overload public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
+	@:overload @:public public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
 	
 	/**
 	* Allow an application to register a DTD declaration handler.
@@ -80,7 +80,7 @@ extern interface FastInfosetReader extends org.xml.sax.XMLReader extends com.sun
 	* @param handler The DTD declaration handler.
 	* @see #getLexicalHandler
 	*/
-	@:overload public function setDeclHandler(handler : org.xml.sax.ext.DeclHandler) : Void;
+	@:overload @:public public function setDeclHandler(handler : org.xml.sax.ext.DeclHandler) : Void;
 	
 	/**
 	* Return the current DTD declaration handler.
@@ -89,7 +89,7 @@ extern interface FastInfosetReader extends org.xml.sax.XMLReader extends com.sun
 	*         has been registered.
 	* @see #setLexicalHandler
 	*/
-	@:overload public function getDeclHandler() : org.xml.sax.ext.DeclHandler;
+	@:overload @:public public function getDeclHandler() : org.xml.sax.ext.DeclHandler;
 	
 	/**
 	* Allow an application to register an encoding algorithm handler.
@@ -101,7 +101,7 @@ extern interface FastInfosetReader extends org.xml.sax.XMLReader extends com.sun
 	* @param handler The encoding algorithm handler.
 	* @see #getEncodingAlgorithmContentHandler
 	*/
-	@:overload public function setEncodingAlgorithmContentHandler(handler : com.sun.xml.internal.org.jvnet.fastinfoset.sax.EncodingAlgorithmContentHandler) : Void;
+	@:overload @:public public function setEncodingAlgorithmContentHandler(handler : com.sun.xml.internal.org.jvnet.fastinfoset.sax.EncodingAlgorithmContentHandler) : Void;
 	
 	/**
 	* Return the current encoding algorithm handler.
@@ -110,7 +110,7 @@ extern interface FastInfosetReader extends org.xml.sax.XMLReader extends com.sun
 	*         has been registered.
 	* @see #setEncodingAlgorithmContentHandler
 	*/
-	@:overload public function getEncodingAlgorithmContentHandler() : com.sun.xml.internal.org.jvnet.fastinfoset.sax.EncodingAlgorithmContentHandler;
+	@:overload @:public public function getEncodingAlgorithmContentHandler() : com.sun.xml.internal.org.jvnet.fastinfoset.sax.EncodingAlgorithmContentHandler;
 	
 	/**
 	* Allow an application to register a primitive type handler.
@@ -122,7 +122,7 @@ extern interface FastInfosetReader extends org.xml.sax.XMLReader extends com.sun
 	* @param handler The primitive type handler.
 	* @see #getPrimitiveTypeContentHandler
 	*/
-	@:overload public function setPrimitiveTypeContentHandler(handler : com.sun.xml.internal.org.jvnet.fastinfoset.sax.PrimitiveTypeContentHandler) : Void;
+	@:overload @:public public function setPrimitiveTypeContentHandler(handler : com.sun.xml.internal.org.jvnet.fastinfoset.sax.PrimitiveTypeContentHandler) : Void;
 	
 	/**
 	* Return the current primitive type handler.
@@ -131,7 +131,7 @@ extern interface FastInfosetReader extends org.xml.sax.XMLReader extends com.sun
 	*         has been registered.
 	* @see #setPrimitiveTypeContentHandler
 	*/
-	@:overload public function getPrimitiveTypeContentHandler() : com.sun.xml.internal.org.jvnet.fastinfoset.sax.PrimitiveTypeContentHandler;
+	@:overload @:public public function getPrimitiveTypeContentHandler() : com.sun.xml.internal.org.jvnet.fastinfoset.sax.PrimitiveTypeContentHandler;
 	
 	
 }

@@ -30,13 +30,13 @@ package sun.tools.jconsole;
 */
 extern class TimeComboBox extends javax.swing.JComboBox<Dynamic> implements java.awt.event.ItemListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function new(plotterArray : java.NativeArray<sun.tools.jconsole.Plotter>) : Void;
+	@:overload @:public public function new(plotterArray : java.NativeArray<sun.tools.jconsole.Plotter>) : Void;
 	
-	@:overload public function addPlotter(plotter : sun.tools.jconsole.Plotter) : Void;
+	@:overload @:public public function addPlotter(plotter : sun.tools.jconsole.Plotter) : Void;
 	
-	@:overload public function itemStateChanged(ev : java.awt.event.ItemEvent) : Void;
+	@:overload @:public public function itemStateChanged(ev : java.awt.event.ItemEvent) : Void;
 	
-	@:overload public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

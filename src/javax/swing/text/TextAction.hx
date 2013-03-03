@@ -30,7 +30,7 @@ extern class TextAction extends javax.swing.AbstractAction
 	*
 	* @param name the name of the action
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Determines the component to use for the action.
@@ -41,7 +41,7 @@ extern class TextAction extends javax.swing.AbstractAction
 	* @param e the ActionEvent
 	* @return the component
 	*/
-	@:overload @:final private function getTextComponent(e : java.awt.event.ActionEvent) : javax.swing.text.JTextComponent;
+	@:overload @:protected @:final private function getTextComponent(e : java.awt.event.ActionEvent) : javax.swing.text.JTextComponent;
 	
 	/**
 	* Takes one list of
@@ -57,7 +57,7 @@ extern class TextAction extends javax.swing.AbstractAction
 	*              <code>null</code>
 	* @return the augmented list
 	*/
-	@:overload @:final public static function augmentList(list1 : java.NativeArray<javax.swing.Action>, list2 : java.NativeArray<javax.swing.Action>) : java.NativeArray<javax.swing.Action>;
+	@:overload @:public @:static @:final public static function augmentList(list1 : java.NativeArray<javax.swing.Action>, list2 : java.NativeArray<javax.swing.Action>) : java.NativeArray<javax.swing.Action>;
 	
 	/**
 	* Fetches the text component that currently has focus.
@@ -68,7 +68,7 @@ extern class TextAction extends javax.swing.AbstractAction
 	*
 	* @return the component
 	*/
-	@:overload @:final private function getFocusedComponent() : javax.swing.text.JTextComponent;
+	@:overload @:protected @:final private function getFocusedComponent() : javax.swing.text.JTextComponent;
 	
 	
 }

@@ -34,7 +34,7 @@ extern interface XMLString
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload @:abstract public function dispatchCharactersEvents(ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public @:abstract public function dispatchCharactersEvents(ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Directly call the
@@ -45,7 +45,7 @@ extern interface XMLString
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload @:abstract public function dispatchAsComment(lh : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public @:abstract public function dispatchAsComment(lh : org.xml.sax.ext.LexicalHandler) : Void;
 	
 	/**
 	* Conditionally trim all leading and trailing whitespace in the specified String.
@@ -61,7 +61,7 @@ extern interface XMLString
 	* @param   doublePunctuationSpaces    Use double spaces for punctuation?
 	* @return              The trimmed string.
 	*/
-	@:overload public function fixWhiteSpace(trimHead : Bool, trimTail : Bool, doublePunctuationSpaces : Bool) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function fixWhiteSpace(trimHead : Bool, trimTail : Bool, doublePunctuationSpaces : Bool) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Returns the length of this string.
@@ -69,7 +69,7 @@ extern interface XMLString
 	* @return  the length of the sequence of characters represented by this
 	*          object.
 	*/
-	@:overload @:abstract public function length() : Int;
+	@:overload @:public @:abstract public function length() : Int;
 	
 	/**
 	* Returns the character at the specified index. An index ranges
@@ -84,7 +84,7 @@ extern interface XMLString
 	*             argument is negative or not less than the length of this
 	*             string.
 	*/
-	@:overload @:abstract public function charAt(index : Int) : java.StdTypes.Char16;
+	@:overload @:public @:abstract public function charAt(index : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Copies characters from this string into the destination character
@@ -107,7 +107,7 @@ extern interface XMLString
 	*                <code>dst.length</code></ul>
 	* @exception NullPointerException if <code>dst</code> is <code>null</code>
 	*/
-	@:overload @:abstract public function getChars(srcBegin : Int, srcEnd : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstBegin : Int) : Void;
+	@:overload @:public @:abstract public function getChars(srcBegin : Int, srcEnd : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstBegin : Int) : Void;
 	
 	/**
 	* Compares this string to the specified object.
@@ -122,7 +122,7 @@ extern interface XMLString
 	* @see     java.lang.String#compareTo(java.lang.String)
 	* @see     java.lang.String#equalsIgnoreCase(java.lang.String)
 	*/
-	@:overload @:abstract public function equals(anObject : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
+	@:overload @:public @:abstract public function equals(anObject : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
 	
 	/**
 	* Compares this string to the specified <code>String</code>.
@@ -137,7 +137,7 @@ extern interface XMLString
 	* @see     java.lang.String#compareTo(java.lang.String)
 	* @see     java.lang.String#equalsIgnoreCase(java.lang.String)
 	*/
-	@:overload @:abstract public function equals(anotherString : String) : Bool;
+	@:overload @:public @:abstract public function equals(anotherString : String) : Bool;
 	
 	/**
 	* Compares this <code>String</code> to another <code>String</code>,
@@ -154,7 +154,7 @@ extern interface XMLString
 	* @see     java.lang.Character#toLowerCase(char)
 	* @see java.lang.Character#toUpperCase(char)
 	*/
-	@:overload @:abstract public function equalsIgnoreCase(anotherString : String) : Bool;
+	@:overload @:public @:abstract public function equalsIgnoreCase(anotherString : String) : Bool;
 	
 	/**
 	* Compares two strings lexicographically.
@@ -168,7 +168,7 @@ extern interface XMLString
 	* @exception java.lang.NullPointerException if <code>anotherString</code>
 	*          is <code>null</code>.
 	*/
-	@:overload @:abstract public function compareTo(anotherString : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
+	@:overload @:public @:abstract public function compareTo(anotherString : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
 	
 	/**
 	* Compares two strings lexicographically, ignoring case considerations.
@@ -188,7 +188,7 @@ extern interface XMLString
 	* @see     java.text.Collator#compare(String, String)
 	* @since   1.2
 	*/
-	@:require(java2) @:overload @:abstract public function compareToIgnoreCase(str : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
+	@:require(java2) @:overload @:public @:abstract public function compareToIgnoreCase(str : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
 	
 	/**
 	* Tests if this string starts with the specified prefix beginning
@@ -209,7 +209,7 @@ extern interface XMLString
 	* @exception java.lang.NullPointerException if <code>prefix</code> is
 	*          <code>null</code>.
 	*/
-	@:overload @:abstract public function startsWith(prefix : String, toffset : Int) : Bool;
+	@:overload @:public @:abstract public function startsWith(prefix : String, toffset : Int) : Bool;
 	
 	/**
 	* Tests if this string starts with the specified prefix beginning
@@ -230,7 +230,7 @@ extern interface XMLString
 	* @exception java.lang.NullPointerException if <code>prefix</code> is
 	*          <code>null</code>.
 	*/
-	@:overload @:abstract public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString, toffset : Int) : Bool;
+	@:overload @:public @:abstract public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString, toffset : Int) : Bool;
 	
 	/**
 	* Tests if this string starts with the specified prefix.
@@ -247,7 +247,7 @@ extern interface XMLString
 	*          <code>null</code>.
 	* @since   JDK1. 0
 	*/
-	@:overload @:abstract public function startsWith(prefix : String) : Bool;
+	@:overload @:public @:abstract public function startsWith(prefix : String) : Bool;
 	
 	/**
 	* Tests if this string starts with the specified prefix.
@@ -264,7 +264,7 @@ extern interface XMLString
 	*          <code>null</code>.
 	* @since   JDK1. 0
 	*/
-	@:overload @:abstract public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
+	@:overload @:public @:abstract public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
 	
 	/**
 	* Tests if this string ends with the specified suffix.
@@ -279,7 +279,7 @@ extern interface XMLString
 	* @exception java.lang.NullPointerException if <code>suffix</code> is
 	*          <code>null</code>.
 	*/
-	@:overload @:abstract public function endsWith(suffix : String) : Bool;
+	@:overload @:public @:abstract public function endsWith(suffix : String) : Bool;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -298,7 +298,7 @@ extern interface XMLString
 	*          character sequence represented by this object, or
 	*          <code>-1</code> if the character does not occur.
 	*/
-	@:overload @:abstract public function indexOf(ch : Int) : Int;
+	@:overload @:public @:abstract public function indexOf(ch : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -328,7 +328,7 @@ extern interface XMLString
 	*          than or equal to <code>fromIndex</code>, or <code>-1</code>
 	*          if the character does not occur.
 	*/
-	@:overload @:abstract public function indexOf(ch : Int, fromIndex : Int) : Int;
+	@:overload @:public @:abstract public function indexOf(ch : Int, fromIndex : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the last occurrence of the
@@ -345,7 +345,7 @@ extern interface XMLString
 	*          character sequence represented by this object, or
 	*          <code>-1</code> if the character does not occur.
 	*/
-	@:overload @:abstract public function lastIndexOf(ch : Int) : Int;
+	@:overload @:public @:abstract public function lastIndexOf(ch : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the last occurrence of the
@@ -370,7 +370,7 @@ extern interface XMLString
 	*          than or equal to <code>fromIndex</code>, or <code>-1</code>
 	*          if the character does not occur before that point.
 	*/
-	@:overload @:abstract public function lastIndexOf(ch : Int, fromIndex : Int) : Int;
+	@:overload @:public @:abstract public function lastIndexOf(ch : Int, fromIndex : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -389,7 +389,7 @@ extern interface XMLString
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload @:abstract public function indexOf(str : String) : Int;
+	@:overload @:public @:abstract public function indexOf(str : String) : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -408,7 +408,7 @@ extern interface XMLString
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload @:abstract public function indexOf(str : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
+	@:overload @:public @:abstract public function indexOf(str : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -436,7 +436,7 @@ extern interface XMLString
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>
 	*/
-	@:overload @:abstract public function indexOf(str : String, fromIndex : Int) : Int;
+	@:overload @:public @:abstract public function indexOf(str : String, fromIndex : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the rightmost occurrence
@@ -456,7 +456,7 @@ extern interface XMLString
 	* @exception java.lang.NullPointerException  if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload @:abstract public function lastIndexOf(str : String) : Int;
+	@:overload @:public @:abstract public function lastIndexOf(str : String) : Int;
 	
 	/**
 	* Returns the index within this string of the last occurrence of
@@ -478,7 +478,7 @@ extern interface XMLString
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload @:abstract public function lastIndexOf(str : String, fromIndex : Int) : Int;
+	@:overload @:public @:abstract public function lastIndexOf(str : String, fromIndex : Int) : Int;
 	
 	/**
 	* Returns a new string that is a substring of this string. The
@@ -497,7 +497,7 @@ extern interface XMLString
 	*             <code>beginIndex</code> is negative or larger than the
 	*             length of this <code>String</code> object.
 	*/
-	@:overload @:abstract public function substring(beginIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public @:abstract public function substring(beginIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Returns a new string that is a substring of this string. The
@@ -515,7 +515,7 @@ extern interface XMLString
 	*             <code>beginIndex</code> is larger than
 	*             <code>endIndex</code>.
 	*/
-	@:overload @:abstract public function substring(beginIndex : Int, endIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public @:abstract public function substring(beginIndex : Int, endIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Concatenates the specified string to the end of this string.
@@ -527,7 +527,7 @@ extern interface XMLString
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload @:abstract public function concat(str : String) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public @:abstract public function concat(str : String) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Converts all of the characters in this <code>String</code> to lower
@@ -538,7 +538,7 @@ extern interface XMLString
 	* @see     java.lang.Character#toLowerCase(char)
 	* @see     java.lang.String#toUpperCase(Locale)
 	*/
-	@:overload @:abstract public function toLowerCase(locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public @:abstract public function toLowerCase(locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Converts all of the characters in this <code>String</code> to lower
@@ -550,7 +550,7 @@ extern interface XMLString
 	* @see     java.lang.Character#toLowerCase(char)
 	* @see     java.lang.String#toLowerCase(Locale)
 	*/
-	@:overload @:abstract public function toLowerCase() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public @:abstract public function toLowerCase() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Converts all of the characters in this <code>String</code> to upper
@@ -560,7 +560,7 @@ extern interface XMLString
 	* @see     java.lang.Character#toUpperCase(char)
 	* @see     java.lang.String#toLowerCase(Locale)
 	*/
-	@:overload @:abstract public function toUpperCase(locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public @:abstract public function toUpperCase(locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Converts all of the characters in this <code>String</code> to upper
@@ -588,7 +588,7 @@ extern interface XMLString
 	* @see     java.lang.Character#toUpperCase(char)
 	* @see     java.lang.String#toUpperCase(Locale)
 	*/
-	@:overload @:abstract public function toUpperCase() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public @:abstract public function toUpperCase() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Removes white space from both ends of this string.
@@ -619,14 +619,14 @@ extern interface XMLString
 	*
 	* @return  this string, with white space removed from the front and end.
 	*/
-	@:overload @:abstract public function trim() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public @:abstract public function trim() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Tell if this object contains a java String object.
 	*
 	* @return true if this XMLString can return a string without creating one.
 	*/
-	@:overload @:abstract public function hasString() : Bool;
+	@:overload @:public @:abstract public function hasString() : Bool;
 	
 	/**
 	* Convert a string to a double -- Allowed input is in fixed
@@ -635,7 +635,7 @@ extern interface XMLString
 	* @return A double value representation of the string, or return Double.NaN
 	* if the string can not be converted.
 	*/
-	@:overload public function toDouble() : Float;
+	@:overload @:public public function toDouble() : Float;
 	
 	
 }

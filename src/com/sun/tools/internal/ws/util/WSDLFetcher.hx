@@ -25,7 +25,7 @@ package com.sun.tools.internal.ws.util;
 */
 extern class WSDLFetcher
 {
-	@:overload public function new(options : com.sun.tools.internal.ws.wscompile.WsimportOptions, listener : com.sun.tools.internal.ws.wscompile.WsimportListener) : Void;
+	@:overload @:public public function new(options : com.sun.tools.internal.ws.wscompile.WsimportOptions, listener : com.sun.tools.internal.ws.wscompile.WsimportListener) : Void;
 	
 	/**
 	*  Fetches the wsdls in the DOMForest to the options.destDir
@@ -35,7 +35,7 @@ extern class WSDLFetcher
 	* @throws XMLStreamException
 	* @throws FileNotFoundException
 	*/
-	@:overload public function fetchWsdls(forest : com.sun.tools.internal.ws.wsdl.parser.MetadataFinder) : String;
+	@:overload @:public public function fetchWsdls(forest : com.sun.tools.internal.ws.wsdl.parser.MetadataFinder) : String;
 	
 	
 }

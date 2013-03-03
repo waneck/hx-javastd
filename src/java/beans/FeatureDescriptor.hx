@@ -28,21 +28,21 @@ extern class FeatureDescriptor
 	/**
 	* Constructs a <code>FeatureDescriptor</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Gets the programmatic name of this feature.
 	*
 	* @return The programmatic name of the property/method/event
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Sets the programmatic name of this feature.
 	*
 	* @param name  The programmatic name of the property/method/event
 	*/
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	/**
 	* Gets the localized display name of this feature.
@@ -50,7 +50,7 @@ extern class FeatureDescriptor
 	* @return The localized display name for the property/method/event.
 	*  This defaults to the same as its programmatic name from getName.
 	*/
-	@:overload public function getDisplayName() : String;
+	@:overload @:public public function getDisplayName() : String;
 	
 	/**
 	* Sets the localized display name of this feature.
@@ -58,7 +58,7 @@ extern class FeatureDescriptor
 	* @param displayName  The localized display name for the
 	*          property/method/event.
 	*/
-	@:overload public function setDisplayName(displayName : String) : Void;
+	@:overload @:public public function setDisplayName(displayName : String) : Void;
 	
 	/**
 	* The "expert" flag is used to distinguish between those features that are
@@ -66,7 +66,7 @@ extern class FeatureDescriptor
 	*
 	* @return True if this feature is intended for use by experts only.
 	*/
-	@:overload public function isExpert() : Bool;
+	@:overload @:public public function isExpert() : Bool;
 	
 	/**
 	* The "expert" flag is used to distinguish between features that are
@@ -74,7 +74,7 @@ extern class FeatureDescriptor
 	*
 	* @param expert True if this feature is intended for use by experts only.
 	*/
-	@:overload public function setExpert(expert : Bool) : Void;
+	@:overload @:public public function setExpert(expert : Bool) : Void;
 	
 	/**
 	* The "hidden" flag is used to identify features that are intended only
@@ -82,7 +82,7 @@ extern class FeatureDescriptor
 	*
 	* @return True if this feature should be hidden from human users.
 	*/
-	@:overload public function isHidden() : Bool;
+	@:overload @:public public function isHidden() : Bool;
 	
 	/**
 	* The "hidden" flag is used to identify features that are intended only
@@ -90,7 +90,7 @@ extern class FeatureDescriptor
 	*
 	* @param hidden  True if this feature should be hidden from human users.
 	*/
-	@:overload public function setHidden(hidden : Bool) : Void;
+	@:overload @:public public function setHidden(hidden : Bool) : Void;
 	
 	/**
 	* The "preferred" flag is used to identify features that are particularly
@@ -98,7 +98,7 @@ extern class FeatureDescriptor
 	*
 	* @return True if this feature should be preferentially shown to human users.
 	*/
-	@:overload public function isPreferred() : Bool;
+	@:overload @:public public function isPreferred() : Bool;
 	
 	/**
 	* The "preferred" flag is used to identify features that are particularly
@@ -107,7 +107,7 @@ extern class FeatureDescriptor
 	* @param preferred  True if this feature should be preferentially shown
 	*                   to human users.
 	*/
-	@:overload public function setPreferred(preferred : Bool) : Void;
+	@:overload @:public public function setPreferred(preferred : Bool) : Void;
 	
 	/**
 	* Gets the short description of this feature.
@@ -115,7 +115,7 @@ extern class FeatureDescriptor
 	* @return  A localized short description associated with this
 	*   property/method/event.  This defaults to be the display name.
 	*/
-	@:overload public function getShortDescription() : String;
+	@:overload @:public public function getShortDescription() : String;
 	
 	/**
 	* You can associate a short descriptive string with a feature.  Normally
@@ -123,7 +123,7 @@ extern class FeatureDescriptor
 	* @param text  A (localized) short description to be associated with
 	* this property/method/event.
 	*/
-	@:overload public function setShortDescription(text : String) : Void;
+	@:overload @:public public function setShortDescription(text : String) : Void;
 	
 	/**
 	* Associate a named attribute with this feature.
@@ -131,7 +131,7 @@ extern class FeatureDescriptor
 	* @param attributeName  The locale-independent name of the attribute
 	* @param value  The value.
 	*/
-	@:overload public function setValue(attributeName : String, value : Dynamic) : Void;
+	@:overload @:public public function setValue(attributeName : String, value : Dynamic) : Void;
 	
 	/**
 	* Retrieve a named attribute with this feature.
@@ -140,7 +140,7 @@ extern class FeatureDescriptor
 	* @return  The value of the attribute.  May be null if
 	*     the attribute is unknown.
 	*/
-	@:overload public function getValue(attributeName : String) : Dynamic;
+	@:overload @:public public function getValue(attributeName : String) : Dynamic;
 	
 	/**
 	* Gets an enumeration of the locale-independent names of this
@@ -149,7 +149,7 @@ extern class FeatureDescriptor
 	* @return  An enumeration of the locale-independent names of any
 	*    attributes that have been registered with setValue.
 	*/
-	@:overload public function attributeNames() : java.util.Enumeration<String>;
+	@:overload @:public public function attributeNames() : java.util.Enumeration<String>;
 	
 	/**
 	* Returns a string representation of the object.
@@ -158,7 +158,7 @@ extern class FeatureDescriptor
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function toString() : String;
+	@:require(java7) @:overload @:public public function toString() : String;
 	
 	
 }

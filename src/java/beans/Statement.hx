@@ -40,7 +40,7 @@ extern class Statement
 	* @param methodName  the name of the method to invoke on the specified target
 	* @param arguments  the array of arguments to invoke the specified method
 	*/
-	@:overload public function new(target : Dynamic, methodName : String, arguments : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(target : Dynamic, methodName : String, arguments : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Returns the target object of this statement.
@@ -50,7 +50,7 @@ extern class Statement
 	*
 	* @return the target object of this statement
 	*/
-	@:overload public function getTarget() : Dynamic;
+	@:overload @:public public function getTarget() : Dynamic;
 	
 	/**
 	* Returns the name of the method to invoke.
@@ -60,7 +60,7 @@ extern class Statement
 	*
 	* @return the name of the method
 	*/
-	@:overload public function getMethodName() : String;
+	@:overload @:public public function getMethodName() : String;
 	
 	/**
 	* Returns the arguments for the method to invoke.
@@ -70,7 +70,7 @@ extern class Statement
 	*
 	* @return the array of arguments
 	*/
-	@:overload public function getArguments() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getArguments() : java.NativeArray<Dynamic>;
 	
 	/**
 	* The {@code execute} method finds a method whose name is the same
@@ -110,12 +110,12 @@ extern class Statement
 	*
 	* @see java.lang.reflect.Method
 	*/
-	@:overload public function execute() : Void;
+	@:overload @:public public function execute() : Void;
 	
 	/**
 	* Prints the value of this statement using a Java-style syntax.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

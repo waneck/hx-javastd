@@ -28,7 +28,7 @@ extern interface WSDLBoundFault extends com.sun.xml.internal.ws.api.model.wsdl.W
 	/**
 	* Gives the wsdl:binding/wsdl:operation/wsdl:fault@name value
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Gives the qualified name associated with the fault. the namespace URI of the bounded fault
@@ -38,7 +38,7 @@ extern interface WSDLBoundFault extends com.sun.xml.internal.ws.api.model.wsdl.W
 	* corresponding fault in abstractwsdl:portType/wsdl:operation then the namespace URI of the fault will be that of
 	* the WSDBoundPortType.
 	*/
-	@:overload public function getQName() : javax.xml.namespace.QName;
+	@:overload @:public public function getQName() : javax.xml.namespace.QName;
 	
 	/**
 	* Gives the associated abstract fault from
@@ -48,7 +48,7 @@ extern interface WSDLBoundFault extends com.sun.xml.internal.ws.api.model.wsdl.W
 	* Maybe null if a binding fault has no corresponding fault in abstract
 	* wsdl:portType/wsdl:operation
 	*/
-	@:overload public function getFault() : com.sun.xml.internal.ws.api.model.wsdl.WSDLFault;
+	@:overload @:public public function getFault() : com.sun.xml.internal.ws.api.model.wsdl.WSDLFault;
 	
 	/**
 	* Gives the owner {@link WSDLBoundOperation}

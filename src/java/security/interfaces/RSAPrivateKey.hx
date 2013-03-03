@@ -30,7 +30,7 @@ extern interface RSAPrivateKey extends java.security.PrivateKey extends java.sec
 	*
 	* @return the private exponent
 	*/
-	@:overload public function getPrivateExponent() : java.math.BigInteger;
+	@:overload @:public public function getPrivateExponent() : java.math.BigInteger;
 	
 	
 }

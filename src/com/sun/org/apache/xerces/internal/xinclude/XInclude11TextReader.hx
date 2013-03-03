@@ -27,7 +27,7 @@ extern class XInclude11TextReader extends com.sun.org.apache.xerces.internal.xin
 	* @param handler The XIncludeHandler to use.
 	* @param bufferSize The size of this text reader's buffer.
 	*/
-	@:overload public function new(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource, handler : com.sun.org.apache.xerces.internal.xinclude.XIncludeHandler, bufferSize : Int) : Void;
+	@:overload @:public public function new(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource, handler : com.sun.org.apache.xerces.internal.xinclude.XIncludeHandler, bufferSize : Int) : Void;
 	
 	/**
 	* Returns true if the specified character is a valid XML character
@@ -35,7 +35,7 @@ extern class XInclude11TextReader extends com.sun.org.apache.xerces.internal.xin
 	*
 	* @param ch The character to check.
 	*/
-	@:overload override private function isValid(ch : Int) : Bool;
+	@:overload @:protected override private function isValid(ch : Int) : Bool;
 	
 	
 }

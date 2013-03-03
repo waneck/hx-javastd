@@ -30,7 +30,7 @@ extern class FilerException extends java.io.IOException
 	* @param s the detail message, which should include the name of
 	* the file attempting to be opened; may be {@code null}
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

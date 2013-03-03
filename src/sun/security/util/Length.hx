@@ -37,7 +37,7 @@ extern interface Length
 	* @return the length of this object
 	* @throws UnsupportedOperationException if the operation is not supported
 	*/
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
 	
 }

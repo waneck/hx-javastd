@@ -640,7 +640,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see java.sql.ResultSet
 	* @see java.sql.ResultSetMetaData
 	*/
-	@:overload public function populate(data : java.sql.ResultSet) : Void;
+	@:overload @:public public function populate(data : java.sql.ResultSet) : Void;
 	
 	/**
 	* Populates this <code>CachedRowSet</code> object with data, using the
@@ -669,7 +669,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see #populate
 	* @see java.sql.Connection
 	*/
-	@:overload public function execute(conn : java.sql.Connection) : Void;
+	@:overload @:public public function execute(conn : java.sql.Connection) : Void;
 	
 	/**
 	* Propagates row update, insert and delete changes made to this
@@ -733,7 +733,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see javax.sql.rowset.spi.SyncProviderException
 	* @see javax.sql.rowset.spi.SyncResolver
 	*/
-	@:overload public function acceptChanges() : Void;
+	@:overload @:public public function acceptChanges() : Void;
 	
 	/**
 	* Propagates all row update, insert and delete changes to the
@@ -804,7 +804,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see javax.sql.rowset.spi.SyncProviderException
 	* @see javax.sql.rowset.spi.SyncResolver
 	*/
-	@:overload public function acceptChanges(con : java.sql.Connection) : Void;
+	@:overload @:public public function acceptChanges(con : java.sql.Connection) : Void;
 	
 	/**
 	* Restores this <code>CachedRowSet</code> object to its original
@@ -825,7 +825,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	*       this <code>CachedRowSet</code> object to its previous value
 	* @see javax.sql.RowSetListener#rowSetChanged
 	*/
-	@:overload public function restoreOriginal() : Void;
+	@:overload @:public public function restoreOriginal() : Void;
 	
 	/**
 	* Releases the current contents of this <code>CachedRowSet</code>
@@ -859,7 +859,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see javax.sql.RowSetListener#rowSetChanged
 	* @see java.sql.ResultSet#close
 	*/
-	@:overload public function release() : Void;
+	@:overload @:public public function release() : Void;
 	
 	/**
 	* Cancels the deletion of the current row and notifies listeners that
@@ -882,7 +882,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see javax.sql.rowset.CachedRowSet#undoInsert
 	* @see java.sql.ResultSet#cancelRowUpdates
 	*/
-	@:overload public function undoDelete() : Void;
+	@:overload @:public public function undoDelete() : Void;
 	
 	/**
 	* Immediately removes the current row from this <code>CachedRowSet</code>
@@ -907,7 +907,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see javax.sql.rowset.CachedRowSet#undoDelete
 	* @see java.sql.ResultSet#cancelRowUpdates
 	*/
-	@:overload public function undoInsert() : Void;
+	@:overload @:public public function undoInsert() : Void;
 	
 	/**
 	* Immediately reverses the last update operation if the
@@ -927,7 +927,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see #undoInsert
 	* @see java.sql.ResultSet#cancelRowUpdates
 	*/
-	@:overload public function undoUpdate() : Void;
+	@:overload @:public public function undoUpdate() : Void;
 	
 	/**
 	* Indicates whether the designated column in the current row of this
@@ -940,7 +940,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	*     or after the last row
 	* @see java.sql.DatabaseMetaData#updatesAreDetected
 	*/
-	@:overload public function columnUpdated(idx : Int) : Bool;
+	@:overload @:public public function columnUpdated(idx : Int) : Bool;
 	
 	/**
 	* Indicates whether the designated column in the current row of this
@@ -954,7 +954,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	*      or after the last row
 	* @see java.sql.DatabaseMetaData#updatesAreDetected
 	*/
-	@:overload public function columnUpdated(columnName : String) : Bool;
+	@:overload @:public public function columnUpdated(columnName : String) : Bool;
 	
 	/**
 	* Converts this <code>CachedRowSet</code> object to a <code>Collection</code>
@@ -994,7 +994,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see #toCollection(int)
 	* @see #toCollection(String)
 	*/
-	@:overload public function toCollection() : java.util.Collection<Dynamic>;
+	@:overload @:public public function toCollection() : java.util.Collection<Dynamic>;
 	
 	/**
 	* Converts the designated column in this <code>CachedRowSet</code> object
@@ -1023,7 +1023,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see #toCollection
 	* @see #toCollection(String)
 	*/
-	@:overload public function toCollection(column : Int) : java.util.Collection<Dynamic>;
+	@:overload @:public public function toCollection(column : Int) : java.util.Collection<Dynamic>;
 	
 	/**
 	* Converts the designated column in this <code>CachedRowSet</code> object
@@ -1052,7 +1052,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see #toCollection
 	* @see #toCollection(int)
 	*/
-	@:overload public function toCollection(column : String) : java.util.Collection<Dynamic>;
+	@:overload @:public public function toCollection(column : String) : java.util.Collection<Dynamic>;
 	
 	/**
 	* Retrieves the <code>SyncProvider</code> implementation for this
@@ -1089,7 +1089,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* <code>SyncProvider</code> object
 	* @see #setSyncProvider
 	*/
-	@:overload public function getSyncProvider() : javax.sql.rowset.spi.SyncProvider;
+	@:overload @:public public function getSyncProvider() : javax.sql.rowset.spi.SyncProvider;
 	
 	/**
 	* Sets the <code>SyncProvider</code> objec for this <code>CachedRowSet</code>
@@ -1116,7 +1116,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* <code>SyncProvider</code> implementation
 	* @see #getSyncProvider
 	*/
-	@:overload public function setSyncProvider(provider : String) : Void;
+	@:overload @:public public function setSyncProvider(provider : String) : Void;
 	
 	/**
 	* Returns the number of rows in this <code>CachedRowSet</code>
@@ -1124,7 +1124,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	*
 	* @return number of rows in the rowset
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Sets the metadata for this <code>CachedRowSet</code> object with
@@ -1142,7 +1142,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @throws SQLException if invalid metadata is supplied to the
 	* rowset
 	*/
-	@:overload public function setMetaData(md : javax.sql.RowSetMetaData) : Void;
+	@:overload @:public public function setMetaData(md : javax.sql.RowSetMetaData) : Void;
 	
 	/**
 	* Returns a <code>ResultSet</code> object containing the original value of this
@@ -1171,7 +1171,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @throws SQLException if an error occurs producing the
 	* <code>ResultSet</code> object
 	*/
-	@:overload public function getOriginal() : java.sql.ResultSet;
+	@:overload @:public public function getOriginal() : java.sql.ResultSet;
 	
 	/**
 	* Returns a <code>ResultSet</code> object containing the original value for the
@@ -1190,7 +1190,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @throws SQLException if there is no current row
 	* @see #setOriginalRow
 	*/
-	@:overload public function getOriginalRow() : java.sql.ResultSet;
+	@:overload @:public public function getOriginalRow() : java.sql.ResultSet;
 	
 	/**
 	* Sets the current row in this <code>CachedRowSet</code> object as the original
@@ -1206,7 +1206,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* encountered resetting the contents of the original row
 	* @see #getOriginalRow
 	*/
-	@:overload public function setOriginalRow() : Void;
+	@:overload @:public public function setOriginalRow() : Void;
 	
 	/**
 	* Returns an identifier for the object (table) that was used to
@@ -1221,7 +1221,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @throws SQLException if an error is encountered returning the table name
 	* @see javax.sql.RowSetMetaData#getTableName
 	*/
-	@:overload public function getTableName() : String;
+	@:overload @:public public function getTableName() : String;
 	
 	/**
 	* Sets the identifier for the table from which this <code>CachedRowSet</code>
@@ -1243,7 +1243,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see javax.sql.RowSetWriter
 	* @see javax.sql.rowset.spi.SyncProvider
 	*/
-	@:overload public function setTableName(tabName : String) : Void;
+	@:overload @:public public function setTableName(tabName : String) : Void;
 	
 	/**
 	* Returns an array containing one or more column numbers indicating the columns
@@ -1259,7 +1259,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see Joinable#getMatchColumnIndexes
 	* @see Joinable#getMatchColumnNames
 	*/
-	@:overload public function getKeyColumns() : java.NativeArray<Int>;
+	@:overload @:public public function getKeyColumns() : java.NativeArray<Int>;
 	
 	/**
 	* Sets this <code>CachedRowSet</code> object's <code>keyCols</code>
@@ -1282,7 +1282,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see Joinable#setMatchColumn(int)
 
 	*/
-	@:overload public function setKeyColumns(keys : java.NativeArray<Int>) : Void;
+	@:overload @:public public function setKeyColumns(keys : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Returns a new <code>RowSet</code> object backed by the same data as
@@ -1315,7 +1315,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see javax.sql.RowSetEvent
 	* @see javax.sql.RowSetListener
 	*/
-	@:overload public function createShared() : javax.sql.RowSet;
+	@:overload @:public public function createShared() : javax.sql.RowSet;
 	
 	/**
 	* Creates a <code>RowSet</code> object that is a deep copy of the data in
@@ -1339,7 +1339,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see javax.sql.RowSetEvent
 	* @see javax.sql.RowSetListener
 	*/
-	@:overload public function createCopy() : javax.sql.rowset.CachedRowSet;
+	@:overload @:public public function createCopy() : javax.sql.rowset.CachedRowSet;
 	
 	/**
 	* Creates a <code>CachedRowSet</code> object that is an empty copy of this
@@ -1365,7 +1365,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see javax.sql.RowSetEvent
 	* @see javax.sql.RowSetListener
 	*/
-	@:overload public function createCopySchema() : javax.sql.rowset.CachedRowSet;
+	@:overload @:public public function createCopySchema() : javax.sql.rowset.CachedRowSet;
 	
 	/**
 	* Creates a <code>CachedRowSet</code> object that is a deep copy of
@@ -1391,7 +1391,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see javax.sql.RowSetEvent
 	* @see javax.sql.RowSetListener
 	*/
-	@:overload public function createCopyNoConstraints() : javax.sql.rowset.CachedRowSet;
+	@:overload @:public public function createCopyNoConstraints() : javax.sql.rowset.CachedRowSet;
 	
 	/**
 	* Retrieves the first warning reported by calls on this <code>RowSet</code> object.
@@ -1407,7 +1407,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @throws SQLException if this method is called on a closed RowSet
 	* @see RowSetWarning
 	*/
-	@:overload public function getRowSetWarnings() : javax.sql.rowset.RowSetWarning;
+	@:overload @:public public function getRowSetWarnings() : javax.sql.rowset.RowSetWarning;
 	
 	/**
 	* Retrieves a <code>boolean</code> indicating whether rows marked
@@ -1433,7 +1433,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* to determine whether rows marked for deletion are visible
 	* @see #setShowDeleted
 	*/
-	@:overload public function getShowDeleted() : Bool;
+	@:overload @:public public function getShowDeleted() : Bool;
 	
 	/**
 	* Sets the property <code>showDeleted</code> to the given
@@ -1455,7 +1455,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* to reset whether deleted rows should be visible
 	* @see #getShowDeleted
 	*/
-	@:overload public function setShowDeleted(b : Bool) : Void;
+	@:overload @:public public function setShowDeleted(b : Bool) : Void;
 	
 	/**
 	* Each <code>CachedRowSet</code> object's <code>SyncProvider</code> contains
@@ -1472,7 +1472,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* Connection object within this <code>CachedRowSet</code> is in auto-commit mode
 	* @see java.sql.Connection#setAutoCommit
 	*/
-	@:overload public function commit() : Void;
+	@:overload @:public public function commit() : Void;
 	
 	/**
 	* Each <code>CachedRowSet</code> object's <code>SyncProvider</code> contains
@@ -1485,7 +1485,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @throws SQLException if a database access error occurs or this Connection
 	* object within this <code>CachedRowSet</code> is in auto-commit mode.
 	*/
-	@:overload public function rollback() : Void;
+	@:overload @:public public function rollback() : Void;
 	
 	/**
 	* Each <code>CachedRowSet</code> object's <code>SyncProvider</code> contains
@@ -1500,7 +1500,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @throws SQLException if a database access error occurs or this Connection
 	* object within this <code>CachedRowSet</code> is in auto-commit mode.
 	*/
-	@:overload public function rollback(s : java.sql.Savepoint) : Void;
+	@:overload @:public public function rollback(s : java.sql.Savepoint) : Void;
 	
 	/**
 	* Notifies registered listeners that a RowSet object in the given RowSetEvent
@@ -1515,7 +1515,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	*     <code>CachedRowSet</code> populated should fire; the default value
 	*     is zero; cannot be less than <code>fetchSize</code> or zero
 	*/
-	@:overload public function rowSetPopulated(event : javax.sql.RowSetEvent, numRows : Int) : Void;
+	@:overload @:public public function rowSetPopulated(event : javax.sql.RowSetEvent, numRows : Int) : Void;
 	
 	/**
 	* Populates this <code>CachedRowSet</code> object with data from
@@ -1545,7 +1545,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see java.sql.ResultSet
 	* @see java.sql.ResultSetMetaData
 	*/
-	@:overload public function populate(rs : java.sql.ResultSet, startRow : Int) : Void;
+	@:overload @:public public function populate(rs : java.sql.ResultSet, startRow : Int) : Void;
 	
 	/**
 	* Sets the <code>CachedRowSet</code> object's page-size. A <code>CachedRowSet</code>
@@ -1558,14 +1558,14 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @throws SQLException if an error occurs setting the <code>CachedRowSet</code>
 	*      page size or if the page size is less than 0.
 	*/
-	@:overload public function setPageSize(size : Int) : Void;
+	@:overload @:public public function setPageSize(size : Int) : Void;
 	
 	/**
 	* Returns the page-size for the <code>CachedRowSet</code> object
 	*
 	* @return an <code>int</code> page size
 	*/
-	@:overload public function getPageSize() : Int;
+	@:overload @:public public function getPageSize() : Int;
 	
 	/**
 	* Increments the current page of the <code>CachedRowSet</code>. This causes
@@ -1577,7 +1577,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @throws SQLException if an error occurs fetching the next page, or if this
 	*     method is called prematurely before populate or execute.
 	*/
-	@:overload public function nextPage() : Bool;
+	@:overload @:public public function nextPage() : Bool;
 	
 	/**
 	* Decrements the current page of the <code>CachedRowSet</code>. This causes
@@ -1591,7 +1591,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @throws SQLException if an error occurs fetching the previous page, or if
 	*     this method is called prematurely before populate or execute.
 	*/
-	@:overload public function previousPage() : Bool;
+	@:overload @:public public function previousPage() : Bool;
 	
 	
 }

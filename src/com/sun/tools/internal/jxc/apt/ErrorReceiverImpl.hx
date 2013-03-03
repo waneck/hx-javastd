@@ -25,19 +25,19 @@ package com.sun.tools.internal.jxc.apt;
 */
 @:internal extern class ErrorReceiverImpl extends com.sun.tools.internal.xjc.ErrorReceiver
 {
-	@:overload public function new(messager : com.sun.mirror.apt.Messager, debug : Bool) : Void;
+	@:overload @:public public function new(messager : com.sun.mirror.apt.Messager, debug : Bool) : Void;
 	
-	@:overload public function new(messager : com.sun.mirror.apt.Messager) : Void;
+	@:overload @:public public function new(messager : com.sun.mirror.apt.Messager) : Void;
 	
-	@:overload public function new(env : com.sun.mirror.apt.AnnotationProcessorEnvironment) : Void;
+	@:overload @:public public function new(env : com.sun.mirror.apt.AnnotationProcessorEnvironment) : Void;
 	
-	@:overload public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function info(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function info(exception : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

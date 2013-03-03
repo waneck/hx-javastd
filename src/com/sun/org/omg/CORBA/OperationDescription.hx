@@ -31,27 +31,27 @@ package com.sun.org.omg.CORBA;
 */
 extern class OperationDescription implements org.omg.CORBA.portable.IDLEntity
 {
-	public var name : String;
+	@:public public var name : String;
 	
-	public var id : String;
+	@:public public var id : String;
 	
-	public var defined_in : String;
+	@:public public var defined_in : String;
 	
-	public var version : String;
+	@:public public var version : String;
 	
-	public var result : org.omg.CORBA.TypeCode;
+	@:public public var result : org.omg.CORBA.TypeCode;
 	
-	public var mode : com.sun.org.omg.CORBA.OperationMode;
+	@:public public var mode : com.sun.org.omg.CORBA.OperationMode;
 	
-	public var contexts : java.NativeArray<String>;
+	@:public public var contexts : java.NativeArray<String>;
 	
-	public var parameters : java.NativeArray<com.sun.org.omg.CORBA.ParameterDescription>;
+	@:public public var parameters : java.NativeArray<com.sun.org.omg.CORBA.ParameterDescription>;
 	
-	public var exceptions : java.NativeArray<com.sun.org.omg.CORBA.ExceptionDescription>;
+	@:public public var exceptions : java.NativeArray<com.sun.org.omg.CORBA.ExceptionDescription>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_name : String, _id : String, _defined_in : String, _version : String, _result : org.omg.CORBA.TypeCode, _mode : com.sun.org.omg.CORBA.OperationMode, _contexts : java.NativeArray<String>, _parameters : java.NativeArray<com.sun.org.omg.CORBA.ParameterDescription>, _exceptions : java.NativeArray<com.sun.org.omg.CORBA.ExceptionDescription>) : Void;
+	@:overload @:public public function new(_name : String, _id : String, _defined_in : String, _version : String, _result : org.omg.CORBA.TypeCode, _mode : com.sun.org.omg.CORBA.OperationMode, _contexts : java.NativeArray<String>, _parameters : java.NativeArray<com.sun.org.omg.CORBA.ParameterDescription>, _exceptions : java.NativeArray<com.sun.org.omg.CORBA.ExceptionDescription>) : Void;
 	
 	
 }

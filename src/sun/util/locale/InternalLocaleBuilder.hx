@@ -31,63 +31,63 @@ package sun.util.locale;
 */
 extern class InternalLocaleBuilder
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setLanguage(language : String) : sun.util.locale.InternalLocaleBuilder;
+	@:overload @:public public function setLanguage(language : String) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function setScript(script : String) : sun.util.locale.InternalLocaleBuilder;
+	@:overload @:public public function setScript(script : String) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function setRegion(region : String) : sun.util.locale.InternalLocaleBuilder;
+	@:overload @:public public function setRegion(region : String) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function setVariant(variant : String) : sun.util.locale.InternalLocaleBuilder;
+	@:overload @:public public function setVariant(variant : String) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function addUnicodeLocaleAttribute(attribute : String) : sun.util.locale.InternalLocaleBuilder;
+	@:overload @:public public function addUnicodeLocaleAttribute(attribute : String) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function removeUnicodeLocaleAttribute(attribute : String) : sun.util.locale.InternalLocaleBuilder;
+	@:overload @:public public function removeUnicodeLocaleAttribute(attribute : String) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function setUnicodeLocaleKeyword(key : String, type : String) : sun.util.locale.InternalLocaleBuilder;
+	@:overload @:public public function setUnicodeLocaleKeyword(key : String, type : String) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function setExtension(singleton : java.StdTypes.Char16, value : String) : sun.util.locale.InternalLocaleBuilder;
+	@:overload @:public public function setExtension(singleton : java.StdTypes.Char16, value : String) : sun.util.locale.InternalLocaleBuilder;
 	
 	/*
 	* Set extension/private subtags in a single string representation
 	*/
-	@:overload public function setExtensions(subtags : String) : sun.util.locale.InternalLocaleBuilder;
+	@:overload @:public public function setExtensions(subtags : String) : sun.util.locale.InternalLocaleBuilder;
 	
 	/*
 	* Reset Builder's internal state with the given language tag
 	*/
-	@:overload public function setLanguageTag(langtag : sun.util.locale.LanguageTag) : sun.util.locale.InternalLocaleBuilder;
+	@:overload @:public public function setLanguageTag(langtag : sun.util.locale.LanguageTag) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function setLocale(base : sun.util.locale.BaseLocale, localeExtensions : sun.util.locale.LocaleExtensions) : sun.util.locale.InternalLocaleBuilder;
+	@:overload @:public public function setLocale(base : sun.util.locale.BaseLocale, localeExtensions : sun.util.locale.LocaleExtensions) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function clear() : sun.util.locale.InternalLocaleBuilder;
+	@:overload @:public public function clear() : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function clearExtensions() : sun.util.locale.InternalLocaleBuilder;
+	@:overload @:public public function clearExtensions() : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function getBaseLocale() : sun.util.locale.BaseLocale;
+	@:overload @:public public function getBaseLocale() : sun.util.locale.BaseLocale;
 	
-	@:overload public function getLocaleExtensions() : sun.util.locale.LocaleExtensions;
+	@:overload @:public public function getLocaleExtensions() : sun.util.locale.LocaleExtensions;
 	
 	
 }
 @:native('sun$util$locale$InternalLocaleBuilder$CaseInsensitiveString') @:internal extern class InternalLocaleBuilder_CaseInsensitiveString
 {
-	@:overload public function value() : String;
+	@:overload @:public public function value() : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }
 @:native('sun$util$locale$InternalLocaleBuilder$CaseInsensitiveChar') @:internal extern class InternalLocaleBuilder_CaseInsensitiveChar
 {
-	@:overload public function value() : java.StdTypes.Char16;
+	@:overload @:public public function value() : java.StdTypes.Char16;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

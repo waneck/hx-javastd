@@ -103,7 +103,7 @@ package org.omg.CORBA;
 	*
 	* @return                  the name of this <code>Context</code> object
 	*/
-	@:overload @:abstract public function context_name() : String;
+	@:overload @:public @:abstract public function context_name() : String;
 	
 	/**
 	* Retrieves the parent of this <code>Context</code> object.
@@ -111,7 +111,7 @@ package org.omg.CORBA;
 	* @return                  the <code>Context</code> object that is the
 	*                    parent of this <code>Context</code> object
 	*/
-	@:overload @:abstract public function parent() : org.omg.CORBA.Context;
+	@:overload @:public @:abstract public function parent() : org.omg.CORBA.Context;
 	
 	/**
 	* Creates a <code>Context</code> object with the given string as its
@@ -130,7 +130,7 @@ package org.omg.CORBA;
 	* @return                  the newly-created child <code>Context</code> object
 	*                    initialized with the specified name
 	*/
-	@:overload @:abstract public function create_child(child_ctx_name : String) : org.omg.CORBA.Context;
+	@:overload @:public @:abstract public function create_child(child_ctx_name : String) : org.omg.CORBA.Context;
 	
 	/**
 	* Creates a <code>NamedValue</code> object and adds it to this
@@ -148,7 +148,7 @@ package org.omg.CORBA;
 	*                        <code>kind</code> field must be set to
 	*                        <code>TCKind.tk_string</code>.
 	*/
-	@:overload @:abstract public function set_one_value(propname : String, propvalue : org.omg.CORBA.Any) : Void;
+	@:overload @:public @:abstract public function set_one_value(propname : String, propvalue : org.omg.CORBA.Any) : Void;
 	
 	/**
 	I Sets one or more property values in this <code>Context</code>
@@ -170,7 +170,7 @@ package org.omg.CORBA;
 	* @see org.omg.CORBA.NamedValue
 	* @see org.omg.CORBA.Any
 	*/
-	@:overload @:abstract public function set_values(values : org.omg.CORBA.NVList) : Void;
+	@:overload @:public @:abstract public function set_values(values : org.omg.CORBA.NVList) : Void;
 	
 	/**
 	* Deletes from this <code>Context</code> object the
@@ -187,7 +187,7 @@ package org.omg.CORBA;
 	*
 	* @param propname          name of the property to be deleted
 	*/
-	@:overload @:abstract public function delete_values(propname : String) : Void;
+	@:overload @:public @:abstract public function delete_values(propname : String) : Void;
 	
 	/**
 	* Retrieves the <code>NamedValue</code> objects whose
@@ -228,7 +228,7 @@ package org.omg.CORBA;
 	* @see #set_values
 	* @see org.omg.CORBA.NamedValue
 	*/
-	@:overload @:abstract public function get_values(start_scope : String, op_flags : Int, pattern : String) : org.omg.CORBA.NVList;
+	@:overload @:abstract @:public public function get_values(start_scope : String, op_flags : Int, pattern : String) : org.omg.CORBA.NVList;
 	
 	
 }

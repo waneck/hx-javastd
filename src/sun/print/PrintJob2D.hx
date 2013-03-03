@@ -25,11 +25,11 @@ package sun.print;
 */
 extern class PrintJob2D extends java.awt.PrintJob implements java.awt.print.Printable implements java.lang.Runnable
 {
-	@:overload public function new(frame : java.awt.Frame, doctitle : String, props : java.util.Properties) : Void;
+	@:overload @:public public function new(frame : java.awt.Frame, doctitle : String, props : java.util.Properties) : Void;
 	
-	@:overload public function new(frame : java.awt.Frame, doctitle : String, jobAttributes : java.awt.JobAttributes, pageAttributes : java.awt.PageAttributes) : Void;
+	@:overload @:public public function new(frame : java.awt.Frame, doctitle : String, jobAttributes : java.awt.JobAttributes, pageAttributes : java.awt.PageAttributes) : Void;
 	
-	@:overload public function printDialog() : Bool;
+	@:overload @:public public function printDialog() : Bool;
 	
 	/**
 	* Gets a Graphics object that will draw to the next page.
@@ -38,7 +38,7 @@ extern class PrintJob2D extends java.awt.PrintJob implements java.awt.print.Prin
 	* the PrintGraphics interface.
 	* @see PrintGraphics
 	*/
-	@:overload public function getGraphics() : java.awt.Graphics;
+	@:overload @:public override public function getGraphics() : java.awt.Graphics;
 	
 	/**
 	* Returns the dimensions of the page in pixels.
@@ -47,30 +47,30 @@ extern class PrintJob2D extends java.awt.PrintJob implements java.awt.print.Prin
 	* Except (since 1.3) when the application specifies a resolution.
 	* In that case it it scaled accordingly.
 	*/
-	@:overload public function getPageDimension() : java.awt.Dimension;
+	@:overload @:public override public function getPageDimension() : java.awt.Dimension;
 	
 	/**
 	* Returns the resolution of the page in pixels per inch.
 	* Note that this doesn't have to correspond to the physical
 	* resolution of the printer.
 	*/
-	@:overload public function getPageResolution() : Int;
+	@:overload @:public override public function getPageResolution() : Int;
 	
 	/**
 	* Returns true if the last page will be printed first.
 	*/
-	@:overload public function lastPageFirst() : Bool;
+	@:overload @:public override public function lastPageFirst() : Bool;
 	
 	/**
 	* Ends the print job and does any necessary cleanup.
 	*/
-	@:overload @:synchronized public function end() : Void;
+	@:overload @:public @:synchronized override public function end() : Void;
 	
 	/**
 	* Ends this print job once it is no longer referenced.
 	* @see #end
 	*/
-	@:overload public function finalize() : Void;
+	@:overload @:public override public function finalize() : Void;
 	
 	/**
 	* Prints the page at the specified index into the specified
@@ -96,13 +96,13 @@ extern class PrintJob2D extends java.awt.PrintJob implements java.awt.print.Prin
 	* @exception java.awt.print.PrinterException
 	*         thrown when the print job is terminated.
 	*/
-	@:overload public function print(graphics : java.awt.Graphics, pageFormat : java.awt.print.PageFormat, pageIndex : Int) : Int;
+	@:overload @:public public function print(graphics : java.awt.Graphics, pageFormat : java.awt.print.PageFormat, pageIndex : Int) : Int;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
-	@:overload public static function mapMedia(mType : MediaType) : javax.print.attribute.standard.MediaSizeName;
+	@:overload @:public @:static public static function mapMedia(mType : MediaType) : javax.print.attribute.standard.MediaSizeName;
 	
-	@:overload public static function unMapMedia(mSize : javax.print.attribute.standard.MediaSizeName) : MediaType;
+	@:overload @:public @:static public static function unMapMedia(mSize : javax.print.attribute.standard.MediaSizeName) : MediaType;
 	
 	
 }

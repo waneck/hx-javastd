@@ -30,13 +30,13 @@ extern class ExtensionImpl extends com.sun.tools.internal.ws.wsdl.framework.Enti
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function getParent() : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible;
+	@:overload @:public public function getParent() : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible;
 	
-	@:overload public function setParent(parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible) : Void;
+	@:overload @:public public function setParent(parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible) : Void;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.wsdl.framework.ExtensionVisitor) : Void;
+	@:overload @:public public function accept(visitor : com.sun.tools.internal.ws.wsdl.framework.ExtensionVisitor) : Void;
 	
 	
 }

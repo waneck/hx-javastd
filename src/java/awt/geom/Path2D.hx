@@ -32,7 +32,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see PathIterator#WIND_EVEN_ODD
 	* @since 1.6
 	*/
-	@:require(java6) public static var WIND_EVEN_ODD(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var WIND_EVEN_ODD(default, null) : Int;
 	
 	/**
 	* A non-zero winding rule for determining the interior of a
@@ -41,7 +41,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see PathIterator#WIND_NON_ZERO
 	* @since 1.6
 	*/
-	@:require(java6) public static var WIND_NON_ZERO(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var WIND_NON_ZERO(default, null) : Int;
 	
 	/**
 	* Adds a point to the path by moving to the specified
@@ -51,7 +51,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param y the specified Y coordinate
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function moveTo(x : Float, y : Float) : Void;
+	@:require(java6) @:overload @:public @:abstract public function moveTo(x : Float, y : Float) : Void;
 	
 	/**
 	* Adds a point to the path by drawing a straight line from the
@@ -62,7 +62,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param y the specified Y coordinate
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function lineTo(x : Float, y : Float) : Void;
+	@:require(java6) @:overload @:public @:abstract public function lineTo(x : Float, y : Float) : Void;
 	
 	/**
 	* Adds a curved segment, defined by two new points, to the path by
@@ -78,7 +78,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param y2 the Y coordinate of the final end point
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function quadTo(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
+	@:require(java6) @:overload @:public @:abstract public function quadTo(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
 	
 	/**
 	* Adds a curved segment, defined by three new points, to the path by
@@ -96,7 +96,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param y3 the Y coordinate of the final end point
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function curveTo(x1 : Float, y1 : Float, x2 : Float, y2 : Float, x3 : Float, y3 : Float) : Void;
+	@:require(java6) @:overload @:public @:abstract public function curveTo(x1 : Float, y1 : Float, x2 : Float, y2 : Float, x3 : Float, y3 : Float) : Void;
 	
 	/**
 	* Closes the current subpath by drawing a straight line back to
@@ -105,7 +105,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized public function closePath() : Void;
+	@:require(java6) @:overload @:public @:final @:synchronized public function closePath() : Void;
 	
 	/**
 	* Appends the geometry of the specified {@code Shape} object to the
@@ -129,7 +129,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*                to connect the new geometry to the existing path
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function append(s : java.awt.Shape, connect : Bool) : Void;
+	@:require(java6) @:overload @:public @:final public function append(s : java.awt.Shape, connect : Bool) : Void;
 	
 	/**
 	* Appends the geometry of the specified
@@ -154,7 +154,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*                to connect the new geometry to the existing path
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function append(pi : java.awt.geom.PathIterator, connect : Bool) : Void;
+	@:require(java6) @:overload @:public @:abstract public function append(pi : java.awt.geom.PathIterator, connect : Bool) : Void;
 	
 	/**
 	* Returns the fill style winding rule.
@@ -165,7 +165,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #setWindingRule
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized public function getWindingRule() : Int;
+	@:require(java6) @:overload @:public @:final @:synchronized public function getWindingRule() : Int;
 	
 	/**
 	* Sets the winding rule for this path to the specified value.
@@ -179,7 +179,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #getWindingRule
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function setWindingRule(rule : Int) : Void;
+	@:require(java6) @:overload @:public @:final public function setWindingRule(rule : Int) : Void;
 	
 	/**
 	* Returns the coordinates most recently added to the end of the path
@@ -189,7 +189,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*         the path or {@code null} if there are no points in the path.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized public function getCurrentPoint() : java.awt.geom.Point2D;
+	@:require(java6) @:overload @:public @:final @:synchronized public function getCurrentPoint() : java.awt.geom.Point2D;
 	
 	/**
 	* Resets the path to empty.  The append position is set back to the
@@ -198,7 +198,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized public function reset() : Void;
+	@:require(java6) @:overload @:public @:final @:synchronized public function reset() : Void;
 	
 	/**
 	* Transforms the geometry of this path using the specified
@@ -209,7 +209,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param at the {@code AffineTransform} used to transform the area
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function transform(at : java.awt.geom.AffineTransform) : Void;
+	@:require(java6) @:overload @:public @:abstract public function transform(at : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Returns a new {@code Shape} representing a transformed version
@@ -232,13 +232,13 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*         {@code AffineTransform}.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized public function createTransformedShape(at : java.awt.geom.AffineTransform) : java.awt.Shape;
+	@:require(java6) @:overload @:public @:final @:synchronized public function createTransformedShape(at : java.awt.geom.AffineTransform) : java.awt.Shape;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getBounds() : java.awt.Rectangle;
+	@:require(java6) @:overload @:public @:final public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Tests if the specified coordinates are inside the closed
@@ -255,7 +255,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*         specified {@code PathIterator}; {@code false} otherwise
 	* @since 1.6
 	*/
-	@:require(java6) @:native('contains') @:overload public static function _contains(pi : java.awt.geom.PathIterator, x : Float, y : Float) : Bool;
+	@:require(java6) @:native('contains') @:overload @:public @:static public static function _contains(pi : java.awt.geom.PathIterator, x : Float, y : Float) : Bool;
 	
 	/**
 	* Tests if the specified {@link Point2D} is inside the closed
@@ -271,19 +271,19 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*         specified {@code PathIterator}; {@code false} otherwise
 	* @since 1.6
 	*/
-	@:require(java6) @:native('contains') @:overload public static function _contains(pi : java.awt.geom.PathIterator, p : java.awt.geom.Point2D) : Bool;
+	@:require(java6) @:native('contains') @:overload @:public @:static public static function _contains(pi : java.awt.geom.PathIterator, p : java.awt.geom.Point2D) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function contains(x : Float, y : Float) : Bool;
+	@:require(java6) @:overload @:public @:final public function contains(x : Float, y : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function contains(p : java.awt.geom.Point2D) : Bool;
+	@:require(java6) @:overload @:public @:final public function contains(p : java.awt.geom.Point2D) : Bool;
 	
 	/**
 	* Tests if the specified rectangular area is entirely inside the
@@ -316,7 +316,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*         the specified rectangluar area; {@code false} otherwise.
 	* @since 1.6
 	*/
-	@:require(java6) @:native('contains') @:overload public static function _contains(pi : java.awt.geom.PathIterator, x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java6) @:native('contains') @:overload @:public @:static public static function _contains(pi : java.awt.geom.PathIterator, x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* Tests if the specified {@link Rectangle2D} is entirely inside the
@@ -346,7 +346,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*         the specified {@code Rectangle2D}; {@code false} otherwise.
 	* @since 1.6
 	*/
-	@:require(java6) @:native('contains') @:overload public static function _contains(pi : java.awt.geom.PathIterator, r : java.awt.geom.Rectangle2D) : Bool;
+	@:require(java6) @:native('contains') @:overload @:public @:static public static function _contains(pi : java.awt.geom.PathIterator, r : java.awt.geom.Rectangle2D) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -367,7 +367,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java6) @:overload @:public @:final public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -388,7 +388,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function contains(r : java.awt.geom.Rectangle2D) : Bool;
+	@:require(java6) @:overload @:public @:final public function contains(r : java.awt.geom.Rectangle2D) : Bool;
 	
 	/**
 	* Tests if the interior of the specified {@link PathIterator}
@@ -422,7 +422,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*         coordinates intersect each other; {@code false} otherwise.
 	* @since 1.6
 	*/
-	@:require(java6) @:native('intersects') @:overload public static function _intersects(pi : java.awt.geom.PathIterator, x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java6) @:native('intersects') @:overload @:public @:static public static function _intersects(pi : java.awt.geom.PathIterator, x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* Tests if the interior of the specified {@link PathIterator}
@@ -452,7 +452,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*         intersect each other; {@code false} otherwise.
 	* @since 1.6
 	*/
-	@:require(java6) @:native('intersects') @:overload public static function _intersects(pi : java.awt.geom.PathIterator, r : java.awt.geom.Rectangle2D) : Bool;
+	@:require(java6) @:native('intersects') @:overload @:public @:static public static function _intersects(pi : java.awt.geom.PathIterator, r : java.awt.geom.Rectangle2D) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -472,7 +472,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java6) @:overload @:public @:final public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -492,7 +492,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function intersects(r : java.awt.geom.Rectangle2D) : Bool;
+	@:require(java6) @:overload @:public @:final public function intersects(r : java.awt.geom.Rectangle2D) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -505,7 +505,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getPathIterator(at : java.awt.geom.AffineTransform, flatness : Float) : java.awt.geom.PathIterator;
+	@:require(java6) @:overload @:public @:final public function getPathIterator(at : java.awt.geom.AffineTransform, flatness : Float) : java.awt.geom.PathIterator;
 	
 	/**
 	* Creates a new object of the same class as this object.
@@ -515,7 +515,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see        java.lang.Cloneable
 	* @since      1.6
 	*/
-	@:require(java6) @:overload @:abstract public function clone() : Dynamic;
+	@:require(java6) @:overload @:public @:abstract public function clone() : Dynamic;
 	
 	/**
 	* Returns an iterator object that iterates along the
@@ -541,7 +541,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*          traverses the geometry of the <code>Shape</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:public @:public public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
+	@:require(java2) @:overload @:public @:public @:public public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
 	
 	/**
 	* Returns a high precision and more accurate bounding box of
@@ -586,7 +586,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #getBounds
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:public @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public @:public @:public @:public @:public @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	
 }
@@ -604,7 +604,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new() : Void;
+	@:require(java6) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new empty single precision {@code Path2D} object
@@ -616,7 +616,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #WIND_NON_ZERO
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(rule : Int) : Void;
+	@:require(java6) @:overload @:public public function new(rule : Int) : Void;
 	
 	/**
 	* Constructs a new empty single precision {@code Path2D} object
@@ -633,7 +633,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #WIND_NON_ZERO
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(rule : Int, initialCapacity : Int) : Void;
+	@:require(java6) @:overload @:public public function new(rule : Int, initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs a new single precision {@code Path2D} object
@@ -644,7 +644,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param s the specified {@code Shape} object
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(s : java.awt.Shape) : Void;
+	@:require(java6) @:overload @:public public function new(s : java.awt.Shape) : Void;
 	
 	/**
 	* Constructs a new single precision {@code Path2D} object
@@ -658,13 +658,13 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param at the specified {@code AffineTransform} object
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(s : java.awt.Shape, at : java.awt.geom.AffineTransform) : Void;
+	@:require(java6) @:overload @:public public function new(s : java.awt.Shape, at : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized override public function moveTo(x : Float, y : Float) : Void;
+	@:require(java6) @:overload @:public @:final @:synchronized override public function moveTo(x : Float, y : Float) : Void;
 	
 	/**
 	* Adds a point to the path by moving to the specified
@@ -679,13 +679,13 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see Path2D#moveTo
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized public function moveTo(x : Single, y : Single) : Void;
+	@:require(java6) @:overload @:public @:final @:synchronized public function moveTo(x : Single, y : Single) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized override public function lineTo(x : Float, y : Float) : Void;
+	@:require(java6) @:overload @:public @:final @:synchronized override public function lineTo(x : Float, y : Float) : Void;
 	
 	/**
 	* Adds a point to the path by drawing a straight line from the
@@ -701,13 +701,13 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see Path2D#lineTo
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized public function lineTo(x : Single, y : Single) : Void;
+	@:require(java6) @:overload @:public @:final @:synchronized public function lineTo(x : Single, y : Single) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized override public function quadTo(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
+	@:require(java6) @:overload @:public @:final @:synchronized override public function quadTo(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
 	
 	/**
 	* Adds a curved segment, defined by two new points, to the path by
@@ -728,13 +728,13 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see Path2D#quadTo
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized public function quadTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
+	@:require(java6) @:overload @:public @:final @:synchronized public function quadTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized override public function curveTo(x1 : Float, y1 : Float, x2 : Float, y2 : Float, x3 : Float, y3 : Float) : Void;
+	@:require(java6) @:overload @:public @:final @:synchronized override public function curveTo(x1 : Float, y1 : Float, x2 : Float, y2 : Float, x3 : Float, y3 : Float) : Void;
 	
 	/**
 	* Adds a curved segment, defined by three new points, to the path by
@@ -757,25 +757,25 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see Path2D#curveTo
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized public function curveTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single, x3 : Single, y3 : Single) : Void;
+	@:require(java6) @:overload @:public @:final @:synchronized public function curveTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single, x3 : Single, y3 : Single) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final override public function append(pi : java.awt.geom.PathIterator, connect : Bool) : Void;
+	@:require(java6) @:overload @:public @:final override public function append(pi : java.awt.geom.PathIterator, connect : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final override public function transform(at : java.awt.geom.AffineTransform) : Void;
+	@:require(java6) @:overload @:public @:final override public function transform(at : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized override public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java6) @:overload @:public @:final @:synchronized override public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* {@inheritDoc}
@@ -788,7 +788,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final override public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
+	@:require(java6) @:overload @:public @:final override public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
 	
 	/**
 	* Creates a new object of the same class as this object.
@@ -798,23 +798,23 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see        java.lang.Cloneable
 	* @since      1.6
 	*/
-	@:require(java6) @:overload @:final override public function clone() : Dynamic;
+	@:require(java6) @:overload @:public @:final override public function clone() : Dynamic;
 	
 	
 }
 @:native('java$awt$geom$Path2D$Float$CopyIterator') @:internal extern class Path2D_Float_CopyIterator extends java.awt.geom.Path2D.Path2D_Iterator
 {
-	@:overload public function currentSegment(coords : java.NativeArray<Single>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Single>) : Int;
 	
-	@:overload public function currentSegment(coords : java.NativeArray<Float>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Float>) : Int;
 	
 	
 }
 @:native('java$awt$geom$Path2D$Float$TxIterator') @:internal extern class Path2D_Float_TxIterator extends java.awt.geom.Path2D.Path2D_Iterator
 {
-	@:overload public function currentSegment(coords : java.NativeArray<Single>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Single>) : Int;
 	
-	@:overload public function currentSegment(coords : java.NativeArray<Float>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Float>) : Int;
 	
 	
 }
@@ -832,7 +832,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new() : Void;
+	@:require(java6) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new empty double precision {@code Path2D} object
@@ -844,7 +844,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #WIND_NON_ZERO
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(rule : Int) : Void;
+	@:require(java6) @:overload @:public public function new(rule : Int) : Void;
 	
 	/**
 	* Constructs a new empty double precision {@code Path2D} object
@@ -861,7 +861,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #WIND_NON_ZERO
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(rule : Int, initialCapacity : Int) : Void;
+	@:require(java6) @:overload @:public public function new(rule : Int, initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs a new double precision {@code Path2D} object
@@ -872,7 +872,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param s the specified {@code Shape} object
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(s : java.awt.Shape) : Void;
+	@:require(java6) @:overload @:public public function new(s : java.awt.Shape) : Void;
 	
 	/**
 	* Constructs a new double precision {@code Path2D} object
@@ -886,49 +886,49 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param at the specified {@code AffineTransform} object
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(s : java.awt.Shape, at : java.awt.geom.AffineTransform) : Void;
+	@:require(java6) @:overload @:public public function new(s : java.awt.Shape, at : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized override public function moveTo(x : Float, y : Float) : Void;
+	@:require(java6) @:overload @:public @:final @:synchronized override public function moveTo(x : Float, y : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized override public function lineTo(x : Float, y : Float) : Void;
+	@:require(java6) @:overload @:public @:final @:synchronized override public function lineTo(x : Float, y : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized override public function quadTo(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
+	@:require(java6) @:overload @:public @:final @:synchronized override public function quadTo(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized override public function curveTo(x1 : Float, y1 : Float, x2 : Float, y2 : Float, x3 : Float, y3 : Float) : Void;
+	@:require(java6) @:overload @:public @:final @:synchronized override public function curveTo(x1 : Float, y1 : Float, x2 : Float, y2 : Float, x3 : Float, y3 : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final override public function append(pi : java.awt.geom.PathIterator, connect : Bool) : Void;
+	@:require(java6) @:overload @:public @:final override public function append(pi : java.awt.geom.PathIterator, connect : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final override public function transform(at : java.awt.geom.AffineTransform) : Void;
+	@:require(java6) @:overload @:public @:final override public function transform(at : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final @:synchronized override public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java6) @:overload @:public @:final @:synchronized override public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* {@inheritDoc}
@@ -945,7 +945,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*         of this {@code Shape}'s outline
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final override public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
+	@:require(java6) @:overload @:public @:final override public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
 	
 	/**
 	* Creates a new object of the same class as this object.
@@ -955,33 +955,33 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see        java.lang.Cloneable
 	* @since      1.6
 	*/
-	@:require(java6) @:overload @:final override public function clone() : Dynamic;
+	@:require(java6) @:overload @:public @:final override public function clone() : Dynamic;
 	
 	
 }
 @:native('java$awt$geom$Path2D$Double$CopyIterator') @:internal extern class Path2D_Double_CopyIterator extends java.awt.geom.Path2D.Path2D_Iterator
 {
-	@:overload public function currentSegment(coords : java.NativeArray<Single>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Single>) : Int;
 	
-	@:overload public function currentSegment(coords : java.NativeArray<Float>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Float>) : Int;
 	
 	
 }
 @:native('java$awt$geom$Path2D$Double$TxIterator') @:internal extern class Path2D_Double_TxIterator extends java.awt.geom.Path2D.Path2D_Iterator
 {
-	@:overload public function currentSegment(coords : java.NativeArray<Single>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Single>) : Int;
 	
-	@:overload public function currentSegment(coords : java.NativeArray<Float>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Float>) : Int;
 	
 	
 }
 @:native('java$awt$geom$Path2D$Iterator') @:internal extern class Path2D_Iterator implements java.awt.geom.PathIterator
 {
-	@:overload public function getWindingRule() : Int;
+	@:overload @:public public function getWindingRule() : Int;
 	
-	@:overload public function isDone() : Bool;
+	@:overload @:public public function isDone() : Bool;
 	
-	@:overload public function next() : Void;
+	@:overload @:public public function next() : Void;
 	
 	/**
 	* Returns the coordinates and type of the current path segment in
@@ -1004,7 +1004,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #SEG_CUBICTO
 	* @see #SEG_CLOSE
 	*/
-	@:overload public function currentSegment(coords : java.NativeArray<Float>) : Int;
+	@:overload @:public @:public public function currentSegment(coords : java.NativeArray<Float>) : Int;
 	
 	/**
 	* Returns the coordinates and type of the current path segment in
@@ -1027,7 +1027,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #SEG_CUBICTO
 	* @see #SEG_CLOSE
 	*/
-	@:overload public function currentSegment(coords : java.NativeArray<Single>) : Int;
+	@:overload @:public @:public public function currentSegment(coords : java.NativeArray<Single>) : Int;
 	
 	
 }

@@ -51,7 +51,7 @@ package java.io;
 	*                   or for some other reason cannot be opened for
 	*                   reading.
 	*/
-	@:overload public function new(fileName : String) : Void;
+	@:overload @:public public function new(fileName : String) : Void;
 	
 	/**
 	* Creates a new <tt>FileReader</tt>, given the <tt>File</tt>
@@ -63,7 +63,7 @@ package java.io;
 	*                   or for some other reason cannot be opened for
 	*                   reading.
 	*/
-	@:overload public function new(file : java.io.File) : Void;
+	@:overload @:public public function new(file : java.io.File) : Void;
 	
 	/**
 	* Creates a new <tt>FileReader</tt>, given the
@@ -71,7 +71,7 @@ package java.io;
 	*
 	* @param fd the FileDescriptor to read from
 	*/
-	@:overload public function new(fd : java.io.FileDescriptor) : Void;
+	@:overload @:public public function new(fd : java.io.FileDescriptor) : Void;
 	
 	
 }

@@ -26,27 +26,27 @@ package java.nio;
 //// -- This file was mechanically generated: Do not edit! -- //
 @:internal extern class DirectShortBufferRU extends java.nio.DirectShortBufferU implements sun.nio.ch.DirectBuffer
 {
-	@:overload override public function slice() : java.nio.ShortBuffer;
+	@:overload @:public override public function slice() : java.nio.ShortBuffer;
 	
-	@:overload override public function duplicate() : java.nio.ShortBuffer;
+	@:overload @:public override public function duplicate() : java.nio.ShortBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.ShortBuffer;
+	@:overload @:public override public function asReadOnlyBuffer() : java.nio.ShortBuffer;
 	
-	@:overload override public function put(x : java.StdTypes.Int16) : java.nio.ShortBuffer;
+	@:overload @:public override public function put(x : java.StdTypes.Int16) : java.nio.ShortBuffer;
 	
-	@:overload override public function put(i : Int, x : java.StdTypes.Int16) : java.nio.ShortBuffer;
+	@:overload @:public override public function put(i : Int, x : java.StdTypes.Int16) : java.nio.ShortBuffer;
 	
-	@:overload override public function put(src : java.nio.ShortBuffer) : java.nio.ShortBuffer;
+	@:overload @:public override public function put(src : java.nio.ShortBuffer) : java.nio.ShortBuffer;
 	
-	@:overload override public function put(src : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : java.nio.ShortBuffer;
+	@:overload @:public override public function put(src : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : java.nio.ShortBuffer;
 	
-	@:overload override public function compact() : java.nio.ShortBuffer;
+	@:overload @:public override public function compact() : java.nio.ShortBuffer;
 	
-	@:overload override public function isDirect() : Bool;
+	@:overload @:public override public function isDirect() : Bool;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload override public function order() : java.nio.ByteOrder;
+	@:overload @:public override public function order() : java.nio.ByteOrder;
 	
 	
 }

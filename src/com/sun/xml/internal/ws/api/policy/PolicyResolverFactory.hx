@@ -35,16 +35,16 @@ extern class PolicyResolverFactory
 	*
 	* @author Rama Pulavarthi
 	*/
-	@:overload @:abstract public function doCreate() : com.sun.xml.internal.ws.api.policy.PolicyResolver;
+	@:overload @:public @:abstract public function doCreate() : com.sun.xml.internal.ws.api.policy.PolicyResolver;
 	
-	@:overload public static function create() : com.sun.xml.internal.ws.api.policy.PolicyResolver;
+	@:overload @:public @:static public static function create() : com.sun.xml.internal.ws.api.policy.PolicyResolver;
 	
 	/**
 	* JAX-WS provided DEFAULT_POLICY_RESOLVER implementation that
 	*      on server-side validates that Policy has single alternative in the scope of each subject
 	*      on client-side updates with the effective policy by doing alternative selection.
 	*/
-	public static var DEFAULT_POLICY_RESOLVER(default, null) : com.sun.xml.internal.ws.api.policy.PolicyResolver;
+	@:public @:static @:final public static var DEFAULT_POLICY_RESOLVER(default, null) : com.sun.xml.internal.ws.api.policy.PolicyResolver;
 	
 	
 }

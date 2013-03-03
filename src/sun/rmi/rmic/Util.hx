@@ -39,7 +39,7 @@ extern class Util implements sun.rmi.rmic.Constants
 	* package heirarchy.  May be null, in which case the current
 	* working directory is used as the root.
 	*/
-	@:overload public static function getOutputDirectoryFor(theClass : sun.tools.java.Identifier, rootDir : java.io.File, env : sun.rmi.rmic.BatchEnvironment) : java.io.File;
+	@:overload @:public @:static public static function getOutputDirectoryFor(theClass : sun.tools.java.Identifier, rootDir : java.io.File, env : sun.rmi.rmic.BatchEnvironment) : java.io.File;
 	
 	
 }

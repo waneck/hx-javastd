@@ -29,24 +29,24 @@ extern class NamespaceImpl extends com.sun.xml.internal.stream.events.AttributeI
 	*
 	* @author  Neeraj Bajaj,K.Venugopal@sun.com  Sun Microsystems.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Creates a new instance of NamespaceImpl */
-	@:overload public function new(namespaceURI : String) : Void;
+	@:overload @:public public function new(namespaceURI : String) : Void;
 	
-	@:overload public function new(prefix : String, namespaceURI : String) : Void;
+	@:overload @:public public function new(prefix : String, namespaceURI : String) : Void;
 	
-	@:overload public function isDefaultNamespaceDeclaration() : Bool;
+	@:overload @:public public function isDefaultNamespaceDeclaration() : Bool;
 	
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
-	@:overload private function init() : Void;
+	@:overload @:protected override private function init() : Void;
 	
-	@:overload public function getEventType() : Int;
+	@:overload @:public override public function getEventType() : Int;
 	
-	@:overload public function isNamespace() : Bool;
+	@:overload @:public override public function isNamespace() : Bool;
 	
 	
 }

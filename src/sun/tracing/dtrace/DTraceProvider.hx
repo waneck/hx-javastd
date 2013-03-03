@@ -25,9 +25,9 @@ package sun.tracing.dtrace;
 */
 @:internal extern class DTraceProvider extends sun.tracing.ProviderSkeleton
 {
-	@:overload override private function createProbe(m : java.lang.reflect.Method) : sun.tracing.ProbeSkeleton;
+	@:overload @:protected override private function createProbe(m : java.lang.reflect.Method) : sun.tracing.ProbeSkeleton;
 	
-	@:overload override public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
 	/**
 	* Magic routine which creates an implementation of the user's interface.
@@ -38,11 +38,11 @@ package sun.tracing.dtrace;
 	*
 	* @return an implementation of the user's interface
 	*/
-	@:overload override public function newProxyInstance<T : com.sun.tracing.Provider>() : T;
+	@:overload @:public override public function newProxyInstance<T : com.sun.tracing.Provider>() : T;
 	
-	@:overload override public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public override public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
-	@:overload override public function getProviderName() : String;
+	@:overload @:public override public function getProviderName() : String;
 	
 	
 }

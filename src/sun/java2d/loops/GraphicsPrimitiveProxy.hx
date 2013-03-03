@@ -48,11 +48,11 @@ extern class GraphicsPrimitiveProxy extends sun.java2d.loops.GraphicsPrimitive
 	* @param relativeClassName  The name of the class this is a proxy for.
 	*          This should not include the package.
 	*/
-	@:overload public function new(owner : Class<Dynamic>, relativeClassName : String, methodSignature : String, primID : Int, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:public public function new(owner : Class<Dynamic>, relativeClassName : String, methodSignature : String, primID : Int, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload override public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	
 	
 }

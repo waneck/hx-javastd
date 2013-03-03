@@ -25,11 +25,11 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface ComplexContent extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.Annotated extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function extension() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexExtension;
+	@:overload @:public public function extension() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexExtension;
 	
-	@:overload public function restriction() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexRestriction;
+	@:overload @:public public function restriction() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexRestriction;
 	
-	@:overload public function mixed(value : Bool) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexContent;
+	@:overload @:public public function mixed(value : Bool) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexContent;
 	
 	
 }

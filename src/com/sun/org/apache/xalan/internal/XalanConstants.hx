@@ -38,7 +38,7 @@ extern class XalanConstants
 	*   </li>
 	* </ul>
 	*/
-	public static var ORACLE_FEATURE_SERVICE_MECHANISM(default, null) : String;
+	@:public @:static @:final public static var ORACLE_FEATURE_SERVICE_MECHANISM(default, null) : String;
 	
 	
 }

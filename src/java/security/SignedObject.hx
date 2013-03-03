@@ -126,7 +126,7 @@ extern class SignedObject implements java.io.Serializable
 	* @exception InvalidKeyException if the key is invalid.
 	* @exception SignatureException if signing fails.
 	*/
-	@:overload public function new(object : java.io.Serializable, signingKey : java.security.PrivateKey, signingEngine : java.security.Signature) : Void;
+	@:overload @:public public function new(object : java.io.Serializable, signingKey : java.security.PrivateKey, signingEngine : java.security.Signature) : Void;
 	
 	/**
 	* Retrieves the encapsulated object.
@@ -138,7 +138,7 @@ extern class SignedObject implements java.io.Serializable
 	* @exception ClassNotFoundException if an error occurs during
 	* de-serialization
 	*/
-	@:overload public function getObject() : Dynamic;
+	@:overload @:public public function getObject() : Dynamic;
 	
 	/**
 	* Retrieves the signature on the signed object, in the form of a
@@ -147,14 +147,14 @@ extern class SignedObject implements java.io.Serializable
 	* @return the signature. Returns a new array each time this
 	* method is called.
 	*/
-	@:overload public function getSignature() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getSignature() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the name of the signature algorithm.
 	*
 	* @return the signature algorithm name.
 	*/
-	@:overload public function getAlgorithm() : String;
+	@:overload @:public public function getAlgorithm() : String;
 	
 	/**
 	* Verifies that the signature in this SignedObject is the valid
@@ -170,7 +170,7 @@ extern class SignedObject implements java.io.Serializable
 	* @return <tt>true</tt> if the signature
 	* is valid, <tt>false</tt> otherwise
 	*/
-	@:overload public function verify(verificationKey : java.security.PublicKey, verificationEngine : java.security.Signature) : Bool;
+	@:overload @:public public function verify(verificationKey : java.security.PublicKey, verificationEngine : java.security.Signature) : Bool;
 	
 	
 }

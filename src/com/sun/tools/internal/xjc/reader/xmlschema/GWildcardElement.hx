@@ -25,11 +25,11 @@ package com.sun.tools.internal.xjc.reader.xmlschema;
 */
 @:internal extern class GWildcardElement extends com.sun.tools.internal.xjc.reader.xmlschema.GElement
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function merge(wc : com.sun.xml.internal.xsom.XSWildcard) : Void;
+	@:overload @:public public function merge(wc : com.sun.xml.internal.xsom.XSWildcard) : Void;
 	
-	@:overload public function isStrict() : Bool;
+	@:overload @:public public function isStrict() : Bool;
 	
 	
 }

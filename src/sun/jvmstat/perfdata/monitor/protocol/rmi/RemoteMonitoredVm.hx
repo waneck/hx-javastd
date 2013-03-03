@@ -43,17 +43,17 @@ package sun.jvmstat.perfdata.monitor.protocol.rmi;
 	* @param timer the timer used to run polling tasks
 	* @param interval the sampling interval
 	*/
-	@:overload public function new(rvm : sun.jvmstat.monitor.remote.RemoteVm, vmid : sun.jvmstat.monitor.VmIdentifier, timer : java.util.Timer, interval : Int) : Void;
+	@:overload @:public public function new(rvm : sun.jvmstat.monitor.remote.RemoteVm, vmid : sun.jvmstat.monitor.VmIdentifier, timer : java.util.Timer, interval : Int) : Void;
 	
 	/**
 	* Method to attach to the remote MonitoredVm.
 	*/
-	@:overload public function attach() : Void;
+	@:overload @:public public function attach() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	/**
 	* Get a copy of the remote instrumentation buffer.
@@ -64,29 +64,29 @@ package sun.jvmstat.perfdata.monitor.protocol.rmi;
 	* @throws RemoteException Thrown on any communications errors with
 	*                         the remote system.
 	*/
-	@:overload public function sample() : Void;
+	@:overload @:public public function sample() : Void;
 	
 	/**
 	* Get the proxy to the remote MonitoredVm.
 	*
 	* @return RemoteVm - the proxy to the remote MonitoredVm.
 	*/
-	@:overload public function getRemoteVm() : sun.jvmstat.monitor.remote.RemoteVm;
+	@:overload @:public public function getRemoteVm() : sun.jvmstat.monitor.remote.RemoteVm;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addVmListener(l : sun.jvmstat.monitor.event.VmListener) : Void;
+	@:overload @:public override public function addVmListener(l : sun.jvmstat.monitor.event.VmListener) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function removeVmListener(l : sun.jvmstat.monitor.event.VmListener) : Void;
+	@:overload @:public override public function removeVmListener(l : sun.jvmstat.monitor.event.VmListener) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function setInterval(newInterval : Int) : Void;
+	@:overload @:public override public function setInterval(newInterval : Int) : Void;
 	
 	
 }
@@ -97,7 +97,7 @@ package sun.jvmstat.perfdata.monitor.protocol.rmi;
 */
 @:native('sun$jvmstat$perfdata$monitor$protocol$rmi$RemoteMonitoredVm$NotifierTask') @:internal extern class RemoteMonitoredVm_NotifierTask extends sun.jvmstat.perfdata.monitor.CountedTimerTask
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }
@@ -108,7 +108,7 @@ package sun.jvmstat.perfdata.monitor.protocol.rmi;
 */
 @:native('sun$jvmstat$perfdata$monitor$protocol$rmi$RemoteMonitoredVm$SamplerTask') @:internal extern class RemoteMonitoredVm_SamplerTask extends sun.jvmstat.perfdata.monitor.CountedTimerTask
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

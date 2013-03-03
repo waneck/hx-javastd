@@ -32,13 +32,13 @@ package sun.tools.java;
 */
 extern class BinaryExceptionHandler
 {
-	public var startPC : Int;
+	@:public public var startPC : Int;
 	
-	public var endPC : Int;
+	@:public public var endPC : Int;
 	
-	public var handlerPC : Int;
+	@:public public var handlerPC : Int;
 	
-	public var exceptionClass : sun.tools.java.ClassDeclaration;
+	@:public public var exceptionClass : sun.tools.java.ClassDeclaration;
 	
 	
 }

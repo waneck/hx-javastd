@@ -29,32 +29,32 @@ extern class JAXWSExceptionBase extends javax.xml.ws.WebServiceException impleme
 	* @deprecated
 	*      Should use the localizable constructor instead.
 	*/
-	@:overload private function new(key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected private function new(key : String, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload private function new(message : String) : Void;
+	@:overload @:protected private function new(message : String) : Void;
 	
 	/**
 	* Creates a new exception that wraps the specified exception.
 	*/
-	@:overload private function new(throwable : java.lang.Throwable) : Void;
+	@:overload @:protected private function new(throwable : java.lang.Throwable) : Void;
 	
-	@:overload private function new(msg : com.sun.xml.internal.ws.util.localization.Localizable) : Void;
+	@:overload @:protected private function new(msg : com.sun.xml.internal.ws.util.localization.Localizable) : Void;
 	
-	@:overload private function new(msg : com.sun.xml.internal.ws.util.localization.Localizable, cause : java.lang.Throwable) : Void;
+	@:overload @:protected private function new(msg : com.sun.xml.internal.ws.util.localization.Localizable, cause : java.lang.Throwable) : Void;
 	
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	/**
 	* Gets the default resource bundle name for this kind of exception.
 	* Used for {@link #JAXWSExceptionBase(String, Object[])}.
 	*/
-	@:overload @:abstract private function getDefaultResourceBundleName() : String;
+	@:overload @:protected @:abstract private function getDefaultResourceBundleName() : String;
 	
-	@:overload @:final public function getKey() : String;
+	@:overload @:public @:final public function getKey() : String;
 	
-	@:overload @:final public function getArguments() : java.NativeArray<Dynamic>;
+	@:overload @:public @:final public function getArguments() : java.NativeArray<Dynamic>;
 	
-	@:overload @:final public function getResourceBundleName() : String;
+	@:overload @:public @:final public function getResourceBundleName() : String;
 	
 	
 }

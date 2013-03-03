@@ -40,7 +40,7 @@ extern interface Context
 	* @see #lookup(String)
 	* @see #lookupLink(Name)
 	*/
-	@:overload public function lookup(name : javax.naming.Name) : Dynamic;
+	@:overload @:public @:public public function lookup(name : javax.naming.Name) : Dynamic;
 	
 	/**
 	* Retrieves the named object.
@@ -50,7 +50,7 @@ extern interface Context
 	* @return  the object bound to <tt>name</tt>
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function lookup(name : String) : Dynamic;
+	@:overload @:public @:public public function lookup(name : String) : Dynamic;
 	
 	/**
 	* Binds a name to an object.
@@ -71,7 +71,7 @@ extern interface Context
 	* @see javax.naming.directory.DirContext#bind(Name, Object,
 	*          javax.naming.directory.Attributes)
 	*/
-	@:overload public function bind(name : javax.naming.Name, obj : Dynamic) : Void;
+	@:overload @:public @:public public function bind(name : javax.naming.Name, obj : Dynamic) : Void;
 	
 	/**
 	* Binds a name to an object.
@@ -86,7 +86,7 @@ extern interface Context
 	*          if object did not supply all mandatory attributes
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function bind(name : String, obj : Dynamic) : Void;
+	@:overload @:public @:public public function bind(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Binds a name to an object, overwriting any existing binding.
@@ -112,7 +112,7 @@ extern interface Context
 	*          javax.naming.directory.Attributes)
 	* @see javax.naming.directory.DirContext
 	*/
-	@:overload public function rebind(name : javax.naming.Name, obj : Dynamic) : Void;
+	@:overload @:public @:public public function rebind(name : javax.naming.Name, obj : Dynamic) : Void;
 	
 	/**
 	* Binds a name to an object, overwriting any existing binding.
@@ -126,7 +126,7 @@ extern interface Context
 	*          if object did not supply all mandatory attributes
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function rebind(name : String, obj : Dynamic) : Void;
+	@:overload @:public @:public public function rebind(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Unbinds the named object.
@@ -149,7 +149,7 @@ extern interface Context
 	* @throws  NamingException if a naming exception is encountered
 	* @see #unbind(String)
 	*/
-	@:overload public function unbind(name : javax.naming.Name) : Void;
+	@:overload @:public @:public public function unbind(name : javax.naming.Name) : Void;
 	
 	/**
 	* Unbinds the named object.
@@ -160,7 +160,7 @@ extern interface Context
 	* @throws  NameNotFoundException if an intermediate context does not exist
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function unbind(name : String) : Void;
+	@:overload @:public @:public public function unbind(name : String) : Void;
 	
 	/**
 	* Binds a new name to the object bound to an old name, and unbinds
@@ -180,7 +180,7 @@ extern interface Context
 	* @see #bind(Name, Object)
 	* @see #rebind(Name, Object)
 	*/
-	@:overload public function rename(oldName : javax.naming.Name, newName : javax.naming.Name) : Void;
+	@:overload @:public @:public public function rename(oldName : javax.naming.Name, newName : javax.naming.Name) : Void;
 	
 	/**
 	* Binds a new name to the object bound to an old name, and unbinds
@@ -194,7 +194,7 @@ extern interface Context
 	* @throws  NameAlreadyBoundException if <tt>newName</tt> is already bound
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function rename(oldName : String, newName : String) : Void;
+	@:overload @:public @:public public function rename(oldName : String, newName : String) : Void;
 	
 	/**
 	* Enumerates the names bound in the named context, along with the
@@ -215,7 +215,7 @@ extern interface Context
 	* @see #listBindings(Name)
 	* @see NameClassPair
 	*/
-	@:overload public function list(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
+	@:overload @:public @:public public function list(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
 	
 	/**
 	* Enumerates the names bound in the named context, along with the
@@ -229,7 +229,7 @@ extern interface Context
 	*          enumeration is of type <tt>NameClassPair</tt>.
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function list(name : String) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
+	@:overload @:public @:public public function list(name : String) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
 	
 	/**
 	* Enumerates the names bound in the named context, along with the
@@ -250,7 +250,7 @@ extern interface Context
 	* @see #list(Name)
 	* @see Binding
 	*/
-	@:overload public function listBindings(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.Binding>;
+	@:overload @:public @:public public function listBindings(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.Binding>;
 	
 	/**
 	* Enumerates the names bound in the named context, along with the
@@ -264,7 +264,7 @@ extern interface Context
 	*          <tt>Binding</tt>.
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function listBindings(name : String) : javax.naming.NamingEnumeration<javax.naming.Binding>;
+	@:overload @:public @:public public function listBindings(name : String) : javax.naming.NamingEnumeration<javax.naming.Binding>;
 	
 	/**
 	* Destroys the named context and removes it from the namespace.
@@ -299,7 +299,7 @@ extern interface Context
 	*
 	* @see #destroySubcontext(String)
 	*/
-	@:overload public function destroySubcontext(name : javax.naming.Name) : Void;
+	@:overload @:public @:public public function destroySubcontext(name : javax.naming.Name) : Void;
 	
 	/**
 	* Destroys the named context and removes it from the namespace.
@@ -313,7 +313,7 @@ extern interface Context
 	* @throws  ContextNotEmptyException if the named context is not empty
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function destroySubcontext(name : String) : Void;
+	@:overload @:public @:public public function destroySubcontext(name : String) : Void;
 	
 	/**
 	* Creates and binds a new context.
@@ -335,7 +335,7 @@ extern interface Context
 	* @see #createSubcontext(String)
 	* @see javax.naming.directory.DirContext#createSubcontext
 	*/
-	@:overload public function createSubcontext(name : javax.naming.Name) : javax.naming.Context;
+	@:overload @:public @:public public function createSubcontext(name : javax.naming.Name) : javax.naming.Context;
 	
 	/**
 	* Creates and binds a new context.
@@ -351,7 +351,7 @@ extern interface Context
 	*          mandatory attributes
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function createSubcontext(name : String) : javax.naming.Context;
+	@:overload @:public @:public public function createSubcontext(name : String) : javax.naming.Context;
 	
 	/**
 	* Retrieves the named object, following links except
@@ -367,7 +367,7 @@ extern interface Context
 	*
 	* @see #lookupLink(String)
 	*/
-	@:overload public function lookupLink(name : javax.naming.Name) : Dynamic;
+	@:overload @:public @:public public function lookupLink(name : javax.naming.Name) : Dynamic;
 	
 	/**
 	* Retrieves the named object, following links except
@@ -380,7 +380,7 @@ extern interface Context
 	*          terminal link (if any)
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function lookupLink(name : String) : Dynamic;
+	@:overload @:public @:public public function lookupLink(name : String) : Dynamic;
 	
 	/**
 	* Retrieves the parser associated with the named context.
@@ -401,7 +401,7 @@ extern interface Context
 	* @see #getNameParser(String)
 	* @see CompoundName
 	*/
-	@:overload public function getNameParser(name : javax.naming.Name) : javax.naming.NameParser;
+	@:overload @:public @:public public function getNameParser(name : javax.naming.Name) : javax.naming.NameParser;
 	
 	/**
 	* Retrieves the parser associated with the named context.
@@ -413,7 +413,7 @@ extern interface Context
 	*          components
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function getNameParser(name : String) : javax.naming.NameParser;
+	@:overload @:public @:public public function getNameParser(name : String) : javax.naming.NameParser;
 	
 	/**
 	* Composes the name of this context with a name relative to
@@ -449,7 +449,7 @@ extern interface Context
 	*
 	* @see #composeName(String, String)
 	*/
-	@:overload public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public @:public public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
 	
 	/**
 	* Composes the name of this context with a name relative to
@@ -463,7 +463,7 @@ extern interface Context
 	* @return  the composition of <code>prefix</code> and <code>name</code>
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function composeName(name : String, prefix : String) : String;
+	@:overload @:public @:public public function composeName(name : String, prefix : String) : String;
 	
 	/**
 	* Adds a new environment property to the environment of this
@@ -481,7 +481,7 @@ extern interface Context
 	* @see #getEnvironment()
 	* @see #removeFromEnvironment(String)
 	*/
-	@:overload public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
+	@:overload @:public @:public @:public public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
 	
 	/**
 	* Removes an environment property from the environment of this
@@ -497,7 +497,7 @@ extern interface Context
 	* @see #getEnvironment()
 	* @see #addToEnvironment(String, Object)
 	*/
-	@:overload public function removeFromEnvironment(propName : String) : Dynamic;
+	@:overload @:public @:public @:public public function removeFromEnvironment(propName : String) : Dynamic;
 	
 	/**
 	* Retrieves the environment in effect for this context.
@@ -514,7 +514,7 @@ extern interface Context
 	* @see #addToEnvironment(String, Object)
 	* @see #removeFromEnvironment(String)
 	*/
-	@:overload public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:public @:public @:public public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* Closes this context.
@@ -527,7 +527,7 @@ extern interface Context
 	*
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public @:public @:public public function close() : Void;
 	
 	/**
 	* Retrieves the full name of this context within its own namespace.
@@ -548,7 +548,7 @@ extern interface Context
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getNameInNamespace() : String;
+	@:require(java3) @:overload @:public @:public @:public public function getNameInNamespace() : String;
 	
 	/**
 	* Constant that holds the name of the environment property

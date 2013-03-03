@@ -29,7 +29,7 @@ extern class Resources
 	* Returns the text of the rmic resource for the specified key
 	* formatted with the specified arguments.
 	**/
-	@:overload public static function getText(key : String, args : java.NativeArray<String>) : String;
+	@:overload @:public @:static public static function getText(key : String, args : java.NativeArray<String>) : String;
 	
 	
 }

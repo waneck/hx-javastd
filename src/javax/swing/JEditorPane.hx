@@ -178,7 +178,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* Creates a new <code>JEditorPane</code>.
 	* The document model is set to <code>null</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>JEditorPane</code> based on a specified URL for input.
@@ -187,7 +187,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @exception IOException if the URL is <code>null</code>
 	*          or cannot be accessed
 	*/
-	@:overload public function new(initialPage : java.net.URL) : Void;
+	@:overload @:public public function new(initialPage : java.net.URL) : Void;
 	
 	/**
 	* Creates a <code>JEditorPane</code> based on a string containing
@@ -197,7 +197,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @exception IOException if the URL is <code>null</code> or
 	*          cannot be accessed
 	*/
-	@:overload public function new(url : String) : Void;
+	@:overload @:public public function new(url : String) : Void;
 	
 	/**
 	* Creates a <code>JEditorPane</code> that has been initialized
@@ -209,7 +209,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @exception NullPointerException if the <code>type</code> parameter
 	*          is <code>null</code>
 	*/
-	@:overload public function new(type : String, text : String) : Void;
+	@:overload @:public public function new(type : String, text : String) : Void;
 	
 	/**
 	* Adds a hyperlink listener for notification of any changes, for example
@@ -217,14 +217,14 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @param listener the listener
 	*/
-	@:overload @:synchronized public function addHyperlinkListener(listener : javax.swing.event.HyperlinkListener) : Void;
+	@:overload @:public @:synchronized public function addHyperlinkListener(listener : javax.swing.event.HyperlinkListener) : Void;
 	
 	/**
 	* Removes a hyperlink listener.
 	*
 	* @param listener the listener
 	*/
-	@:overload @:synchronized public function removeHyperlinkListener(listener : javax.swing.event.HyperlinkListener) : Void;
+	@:overload @:public @:synchronized public function removeHyperlinkListener(listener : javax.swing.event.HyperlinkListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>HyperLinkListener</code>s added
@@ -234,7 +234,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getHyperlinkListeners() : java.NativeArray<javax.swing.event.HyperlinkListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getHyperlinkListeners() : java.NativeArray<javax.swing.event.HyperlinkListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -247,7 +247,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @param e the event
 	* @see EventListenerList
 	*/
-	@:overload public function fireHyperlinkUpdate(e : javax.swing.event.HyperlinkEvent) : Void;
+	@:overload @:public public function fireHyperlinkUpdate(e : javax.swing.event.HyperlinkEvent) : Void;
 	
 	/**
 	* Sets the current URL being displayed.  The content type of the
@@ -314,7 +314,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*        bound: true
 	*       expert: true
 	*/
-	@:overload public function setPage(page : java.net.URL) : Void;
+	@:overload @:public public function setPage(page : java.net.URL) : Void;
 	
 	/**
 	* This method initializes from a stream.  If the kit is
@@ -331,7 +331,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @see JTextComponent#read
 	* @see #setDocument
 	*/
-	@:overload public function read(_in : java.io.InputStream, desc : Dynamic) : Void;
+	@:overload @:public public function read(_in : java.io.InputStream, desc : Dynamic) : Void;
 	
 	/**
 	* Fetches a stream for the given URL, which is about to
@@ -352,7 +352,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @param page  the URL of the page
 	*/
-	@:overload private function getStream(page : java.net.URL) : java.io.InputStream;
+	@:overload @:protected private function getStream(page : java.net.URL) : java.io.InputStream;
 	
 	/**
 	* Scrolls the view to the given reference location
@@ -369,7 +369,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @param reference the named location to scroll to
 	*/
-	@:overload public function scrollToReference(reference : String) : Void;
+	@:overload @:public public function scrollToReference(reference : String) : Void;
 	
 	/**
 	* Gets the current URL being displayed.  If a URL was
@@ -379,7 +379,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @return the URL, or <code>null</code> if none
 	*/
-	@:overload public function getPage() : java.net.URL;
+	@:overload @:public public function getPage() : java.net.URL;
 	
 	/**
 	* Sets the current URL being displayed.
@@ -388,7 +388,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @exception IOException for a <code>null</code> or invalid URL
 	*          specification
 	*/
-	@:overload public function setPage(url : String) : Void;
+	@:overload @:public public function setPage(url : String) : Void;
 	
 	/**
 	* Gets the class ID for the UI.
@@ -397,7 +397,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Creates the default editor kit (<code>PlainEditorKit</code>) for when
@@ -405,7 +405,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @return the editor kit
 	*/
-	@:overload private function createDefaultEditorKit() : javax.swing.text.EditorKit;
+	@:overload @:protected private function createDefaultEditorKit() : javax.swing.text.EditorKit;
 	
 	/**
 	* Fetches the currently installed kit for handling content.
@@ -414,7 +414,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @return the editor kit
 	*/
-	@:overload public function getEditorKit() : javax.swing.text.EditorKit;
+	@:overload @:public public function getEditorKit() : javax.swing.text.EditorKit;
 	
 	/**
 	* Gets the type of content that this editor
@@ -424,7 +424,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @return the content type, <code>null</code> if no editor kit set
 	*/
-	@:overload @:final public function getContentType() : String;
+	@:overload @:public @:final public function getContentType() : String;
 	
 	/**
 	* Sets the type of content that this editor
@@ -455,7 +455,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @throws NullPointerException if the <code>type</code> parameter
 	*          is <code>null</code>
 	*/
-	@:overload @:final public function setContentType(type : String) : Void;
+	@:overload @:public @:final public function setContentType(type : String) : Void;
 	
 	/**
 	* Sets the currently installed kit for handling
@@ -481,7 +481,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*        bound: true
 	*       expert: true
 	*/
-	@:overload public function setEditorKit(kit : javax.swing.text.EditorKit) : Void;
+	@:overload @:public public function setEditorKit(kit : javax.swing.text.EditorKit) : Void;
 	
 	/**
 	* Fetches the editor kit to use for the given type
@@ -502,7 +502,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @param type the non-<code>null</code> content type
 	* @return the editor kit
 	*/
-	@:overload public function getEditorKitForContentType(type : String) : javax.swing.text.EditorKit;
+	@:overload @:public public function getEditorKitForContentType(type : String) : javax.swing.text.EditorKit;
 	
 	/**
 	* Directly sets the editor kit to use for the given type.  A
@@ -513,7 +513,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @param type the non-<code>null</code> content type
 	* @param k the editor kit to be set
 	*/
-	@:overload public function setEditorKitForContentType(type : String, k : javax.swing.text.EditorKit) : Void;
+	@:overload @:public public function setEditorKitForContentType(type : String, k : javax.swing.text.EditorKit) : Void;
 	
 	/**
 	* Replaces the currently selected content with new content
@@ -528,7 +528,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @param content  the content to replace the selection with.  This
 	*   value can be <code>null</code>
 	*/
-	@:overload override public function replaceSelection(content : String) : Void;
+	@:overload @:public override public function replaceSelection(content : String) : Void;
 	
 	/**
 	* Creates a handler for the given type from the default registry
@@ -547,7 +547,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @return the editor kit, or <code>null</code> if there is nothing
 	*   registered for the given type
 	*/
-	@:overload public static function createEditorKitForContentType(type : String) : javax.swing.text.EditorKit;
+	@:overload @:public @:static public static function createEditorKitForContentType(type : String) : javax.swing.text.EditorKit;
 	
 	/**
 	* Establishes the default bindings of <code>type</code> to
@@ -561,7 +561,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @param type the non-<code>null</code> content type
 	* @param classname the class to load later
 	*/
-	@:overload public static function registerEditorKitForContentType(type : String, classname : String) : Void;
+	@:overload @:public @:static public static function registerEditorKitForContentType(type : String, classname : String) : Void;
 	
 	/**
 	* Establishes the default bindings of <code>type</code> to
@@ -575,7 +575,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @param classname the class to load later
 	* @param loader the <code>ClassLoader</code> to use to load the name
 	*/
-	@:overload public static function registerEditorKitForContentType(type : String, classname : String, loader : java.lang.ClassLoader) : Void;
+	@:overload @:public @:static public static function registerEditorKitForContentType(type : String, classname : String, loader : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Returns the currently registered <code>EditorKit</code>
@@ -585,7 +585,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function getEditorKitClassNameForContentType(type : String) : String;
+	@:require(java3) @:overload @:public @:static public static function getEditorKitClassNameForContentType(type : String) : String;
 	
 	/**
 	* Returns the preferred size for the <code>JEditorPane</code>.
@@ -603,7 +603,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @return a <code>Dimension</code> containing the preferred size
 	*/
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	/**
 	* Sets the text of this <code>TextComponent</code> to the specified
@@ -647,7 +647,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @beaninfo
 	* description: the text of this component
 	*/
-	@:overload override public function setText(t : String) : Void;
+	@:overload @:public override public function setText(t : String) : Void;
 	
 	/**
 	* Returns the text contained in this <code>TextComponent</code>
@@ -660,7 +660,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @return the text
 	* @see #setText
 	*/
-	@:overload override public function getText() : String;
+	@:overload @:public override public function getText() : String;
 	
 	/**
 	* Returns true if a viewport should always force the width of this
@@ -669,7 +669,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @return true if a viewport should force the Scrollables width to
 	* match its own, false otherwise
 	*/
-	@:overload override public function getScrollableTracksViewportWidth() : Bool;
+	@:overload @:public override public function getScrollableTracksViewportWidth() : Bool;
 	
 	/**
 	* Returns true if a viewport should always force the height of this
@@ -679,7 +679,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*          <code>Scrollable</code>'s height to match its own,
 	*          false otherwise
 	*/
-	@:overload override public function getScrollableTracksViewportHeight() : Bool;
+	@:overload @:public override public function getScrollableTracksViewportHeight() : Bool;
 	
 	/**
 	* Key for a client property used to indicate whether
@@ -692,7 +692,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var W3C_LENGTH_UNITS(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var W3C_LENGTH_UNITS(default, null) : String;
 	
 	/**
 	* Key for a client property used to indicate whether
@@ -706,7 +706,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var HONOR_DISPLAY_PROPERTIES(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var HONOR_DISPLAY_PROPERTIES(default, null) : String;
 	
 	/**
 	* Returns a string representation of this <code>JEditorPane</code>.
@@ -718,7 +718,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @return  a string representation of this <code>JEditorPane</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JEditorPane.
@@ -729,7 +729,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @return an AccessibleJEditorPane that serves as the
 	*         AccessibleContext of this JEditorPane
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -743,7 +743,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* to the reference (if specified).  When done, fire
 	* a page property change event.
 	*/
-	@:overload override private function doInBackground() : java.net.URL;
+	@:overload @:protected override private function doInBackground() : java.net.URL;
 	
 	
 }
@@ -774,7 +774,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload override public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
 	/**
 	* Gets the state set of this object.
@@ -783,7 +783,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* of the object
 	* @see AccessibleStateSet
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }
@@ -804,16 +804,16 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 */
 @:native('javax$swing$JEditorPane$AccessibleJEditorPaneHTML') extern class JEditorPane_AccessibleJEditorPaneHTML extends javax.swing.JEditorPane.JEditorPane_AccessibleJEditorPane
 {
-	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload @:public override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the number of accessible children of the object.
 	*
 	* @return the number of accessible children of the object.
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the specified Accessible child of the object.  The Accessible
@@ -825,7 +825,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @return the Accessible child of the object
 	* @see #getAccessibleChildrenCount
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the Accessible child, if one exists, contained at the local
@@ -835,7 +835,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @return the Accessible, if it exists, at the specified location;
 	* otherwise null
 	*/
-	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	
 }
@@ -853,14 +853,14 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	/**
 	* Make one of these puppies
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the number of links within this hypertext doc.
 	*
 	* @return number of links in this hypertext doc.
 	*/
-	@:overload public function getLinkCount() : Int;
+	@:overload @:public public function getLinkCount() : Int;
 	
 	/**
 	* Returns the index into an array of hyperlinks that
@@ -870,7 +870,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @param  charIndex index within the text
 	* @return index into the set of hyperlinks for this hypertext doc.
 	*/
-	@:overload public function getLinkIndex(charIndex : Int) : Int;
+	@:overload @:public public function getLinkIndex(charIndex : Int) : Int;
 	
 	/**
 	* Returns the index into an array of hyperlinks that
@@ -880,7 +880,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @param linkIndex into the set of hyperlinks for this hypertext doc.
 	* @return string representation of the hyperlink
 	*/
-	@:overload public function getLink(linkIndex : Int) : javax.accessibility.AccessibleHyperlink;
+	@:overload @:public public function getLink(linkIndex : Int) : javax.accessibility.AccessibleHyperlink;
 	
 	/**
 	* Returns the contiguous text within the document that
@@ -889,13 +889,13 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @param linkIndex into the set of hyperlinks for this hypertext doc.
 	* @return the contiguous text sharing the link at this index
 	*/
-	@:overload public function getLinkText(linkIndex : Int) : String;
+	@:overload @:public public function getLinkText(linkIndex : Int) : String;
 	
 	
 }
 @:native('javax$swing$JEditorPane$JEditorPaneAccessibleHypertextSupport$HTMLLink') extern class JEditorPane_JEditorPaneAccessibleHypertextSupport_HTMLLink extends javax.accessibility.AccessibleHyperlink
 {
-	@:overload public function new(e : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(e : javax.swing.text.Element) : Void;
 	
 	/**
 	* Since the document a link is associated with may have
@@ -905,7 +905,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @return a flag indicating whether this link is still valid with
 	*         respect to the AccessibleHypertext it belongs to
 	*/
-	@:overload override public function isValid() : Bool;
+	@:overload @:public override public function isValid() : Bool;
 	
 	/**
 	* Returns the number of accessible actions available in this Link
@@ -915,7 +915,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @return the zero-based number of Actions in this object
 	*/
-	@:overload override public function getAccessibleActionCount() : Int;
+	@:overload @:public override public function getAccessibleActionCount() : Int;
 	
 	/**
 	* Perform the specified Action on the object
@@ -924,7 +924,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @return true if the the action was performed; else false.
 	* @see #getAccessibleActionCount
 	*/
-	@:overload override public function doAccessibleAction(i : Int) : Bool;
+	@:overload @:public override public function doAccessibleAction(i : Int) : Bool;
 	
 	/**
 	* Return a String description of this particular
@@ -936,7 +936,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @return a String description of the action
 	* @see #getAccessibleActionCount
 	*/
-	@:overload override public function getAccessibleActionDescription(i : Int) : String;
+	@:overload @:public override public function getAccessibleActionDescription(i : Int) : String;
 	
 	/**
 	* Returns a URL object that represents the link.
@@ -945,7 +945,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @return an URL representing the HTML link itself
 	* @see #getAccessibleActionCount
 	*/
-	@:overload override public function getAccessibleActionObject(i : Int) : Dynamic;
+	@:overload @:public override public function getAccessibleActionObject(i : Int) : Dynamic;
 	
 	/**
 	* Return an object that represents the link anchor,
@@ -962,7 +962,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @return an Object representing the hypertext anchor
 	* @see #getAccessibleActionCount
 	*/
-	@:overload override public function getAccessibleActionAnchor(i : Int) : Dynamic;
+	@:overload @:public override public function getAccessibleActionAnchor(i : Int) : Dynamic;
 	
 	/**
 	* Get the index with the hypertext document at which this
@@ -970,7 +970,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @return index of start of link
 	*/
-	@:overload override public function getStartIndex() : Int;
+	@:overload @:public override public function getStartIndex() : Int;
 	
 	/**
 	* Get the index with the hypertext document at which this
@@ -978,13 +978,13 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @return index of end of link
 	*/
-	@:overload override public function getEndIndex() : Int;
+	@:overload @:public override public function getEndIndex() : Int;
 	
 	
 }
 @:native('javax$swing$JEditorPane$JEditorPaneAccessibleHypertextSupport$LinkVector') @:internal extern class JEditorPane_JEditorPaneAccessibleHypertextSupport_LinkVector extends java.util.Vector<javax.swing.JEditorPane.JEditorPane_JEditorPaneAccessibleHypertextSupport_HTMLLink>
 {
-	@:overload public function baseElementIndex(e : javax.swing.text.Element) : Int;
+	@:overload @:public public function baseElementIndex(e : javax.swing.text.Element) : Int;
 	
 	
 }
@@ -998,7 +998,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @return the view factory
 	*/
-	@:overload override public function getViewFactory() : javax.swing.text.ViewFactory;
+	@:overload @:public override public function getViewFactory() : javax.swing.text.ViewFactory;
 	
 	/**
 	* Creates a view from the given structural element of a
@@ -1008,7 +1008,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @return the view
 	* @see View
 	*/
-	@:overload public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
+	@:overload @:public public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
 	
 	
 }
@@ -1018,15 +1018,15 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 */
 @:native('javax$swing$JEditorPane$PlainEditorKit$PlainParagraph') @:internal extern class JEditorPane_PlainEditorKit_PlainParagraph extends javax.swing.text.ParagraphView
 {
-	@:overload override private function setPropertiesFromAttributes() : Void;
+	@:overload @:protected override private function setPropertiesFromAttributes() : Void;
 	
 	/**
 	* Fetch the constraining span to flow against for
 	* the given child index.
 	*/
-	@:overload override public function getFlowSpan(index : Int) : Int;
+	@:overload @:public override public function getFlowSpan(index : Int) : Int;
 	
-	@:overload override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
 	
 }
@@ -1039,13 +1039,13 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 */
 @:native('javax$swing$JEditorPane$PlainEditorKit$PlainParagraph$LogicalView') @:internal extern class JEditorPane_PlainEditorKit_PlainParagraph_LogicalView extends javax.swing.text.CompositeView
 {
-	@:overload override private function getViewIndexAtPosition(pos : Int) : Int;
+	@:overload @:protected override private function getViewIndexAtPosition(pos : Int) : Int;
 	
-	@:overload override private function updateChildren(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, f : javax.swing.text.ViewFactory) : Bool;
+	@:overload @:protected override private function updateChildren(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, f : javax.swing.text.ViewFactory) : Bool;
 	
-	@:overload override private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:protected override private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
 	
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Forward the DocumentEvent to the given child view.  This
@@ -1062,17 +1062,17 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @see #forwardUpdate
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override private function forwardUpdateToView(v : javax.swing.text.View, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:require(java3) @:overload @:protected override private function forwardUpdateToView(v : javax.swing.text.View, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
 	
-	@:overload override private function isBefore(x : Int, y : Int, alloc : java.awt.Rectangle) : Bool;
+	@:overload @:protected override private function isBefore(x : Int, y : Int, alloc : java.awt.Rectangle) : Bool;
 	
-	@:overload override private function isAfter(x : Int, y : Int, alloc : java.awt.Rectangle) : Bool;
+	@:overload @:protected override private function isAfter(x : Int, y : Int, alloc : java.awt.Rectangle) : Bool;
 	
-	@:overload override private function getViewAtPoint(x : Int, y : Int, alloc : java.awt.Rectangle) : javax.swing.text.View;
+	@:overload @:protected override private function getViewAtPoint(x : Int, y : Int, alloc : java.awt.Rectangle) : javax.swing.text.View;
 	
-	@:overload override private function childAllocation(index : Int, a : java.awt.Rectangle) : Void;
+	@:overload @:protected override private function childAllocation(index : Int, a : java.awt.Rectangle) : Void;
 	
 	
 }
@@ -1095,17 +1095,17 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 */
 @:native('javax$swing$JEditorPane$HeaderParser') @:internal extern class JEditorPane_HeaderParser
 {
-	@:overload public function new(raw : String) : Void;
+	@:overload @:public public function new(raw : String) : Void;
 	
-	@:overload public function findKey(i : Int) : String;
+	@:overload @:public public function findKey(i : Int) : String;
 	
-	@:overload public function findValue(i : Int) : String;
+	@:overload @:public public function findValue(i : Int) : String;
 	
-	@:overload public function findValue(key : String) : String;
+	@:overload @:public public function findValue(key : String) : String;
 	
-	@:overload public function findValue(k : String, Default : String) : String;
+	@:overload @:public public function findValue(k : String, Default : String) : String;
 	
-	@:overload public function findInt(k : String, Default : Int) : Int;
+	@:overload @:public public function findInt(k : String, Default : Int) : Int;
 	
 	
 }

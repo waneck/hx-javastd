@@ -25,25 +25,25 @@ package com.sun.tools.internal.xjc.model;
 */
 extern class CArrayInfo extends com.sun.tools.internal.xjc.model.AbstractCTypeInfoImpl implements com.sun.xml.internal.bind.v2.model.core.ArrayInfo<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.nav.NClass> implements com.sun.tools.internal.xjc.model.CNonElement implements com.sun.tools.internal.xjc.model.nav.NType
 {
-	@:overload public function new(model : com.sun.tools.internal.xjc.model.Model, itemType : com.sun.tools.internal.xjc.model.CNonElement, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations) : Void;
+	@:overload @:public public function new(model : com.sun.tools.internal.xjc.model.Model, itemType : com.sun.tools.internal.xjc.model.CNonElement, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations) : Void;
 	
-	@:overload public function getItemType() : com.sun.tools.internal.xjc.model.CNonElement;
+	@:overload @:public public function getItemType() : com.sun.tools.internal.xjc.model.CNonElement;
 	
-	@:overload public function getTypeName() : javax.xml.namespace.QName;
+	@:overload @:public public function getTypeName() : javax.xml.namespace.QName;
 	
-	@:overload public function isSimpleType() : Bool;
+	@:overload @:public public function isSimpleType() : Bool;
 	
-	@:overload public function getInfo() : com.sun.tools.internal.xjc.model.CNonElement;
+	@:overload @:public public function getInfo() : com.sun.tools.internal.xjc.model.CNonElement;
 	
-	@:overload public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
+	@:overload @:public override public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
 	
-	@:overload public function getType() : com.sun.tools.internal.xjc.model.nav.NType;
+	@:overload @:public override public function getType() : com.sun.tools.internal.xjc.model.nav.NType;
 	
-	@:overload public function isBoxedType() : Bool;
+	@:overload @:public public function isBoxedType() : Bool;
 	
-	@:overload public function fullName() : String;
+	@:overload @:public public function fullName() : String;
 	
-	@:overload public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public override public function getLocator() : org.xml.sax.Locator;
 	
 	
 }

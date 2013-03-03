@@ -30,7 +30,7 @@ extern interface MetaEventListener extends java.util.EventListener
 	* a <code>MetaMessage</code> in the <code>{@link Sequence}</code> it is processing.
 	* @param meta the meta-message that the sequencer encountered
 	*/
-	@:overload public function meta(meta : javax.sound.midi.MetaMessage) : Void;
+	@:overload @:public public function meta(meta : javax.sound.midi.MetaMessage) : Void;
 	
 	
 }

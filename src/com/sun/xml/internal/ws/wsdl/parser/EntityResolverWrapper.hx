@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.wsdl.parser;
 */
 @:internal extern class EntityResolverWrapper implements com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver
 {
-	@:overload public function new(core : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function new(core : org.xml.sax.EntityResolver) : Void;
 	
-	@:overload public function resolveEntity(publicId : String, systemId : String) : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser;
+	@:overload @:public public function resolveEntity(publicId : String, systemId : String) : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser;
 	
 	
 }

@@ -28,13 +28,13 @@ extern class ClientTransportException extends com.sun.xml.internal.ws.util.excep
 	/**
 	* @author WS Development Team
 	*/
-	@:overload public function new(msg : com.sun.xml.internal.ws.util.localization.Localizable) : Void;
+	@:overload @:public public function new(msg : com.sun.xml.internal.ws.util.localization.Localizable) : Void;
 	
-	@:overload public function new(msg : com.sun.xml.internal.ws.util.localization.Localizable, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(msg : com.sun.xml.internal.ws.util.localization.Localizable, cause : java.lang.Throwable) : Void;
 	
-	@:overload public function new(throwable : java.lang.Throwable) : Void;
+	@:overload @:public public function new(throwable : java.lang.Throwable) : Void;
 	
-	@:overload public function getDefaultResourceBundleName() : String;
+	@:overload @:public override public function getDefaultResourceBundleName() : String;
 	
 	
 }

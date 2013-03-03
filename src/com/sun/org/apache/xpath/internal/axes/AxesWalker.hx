@@ -28,9 +28,9 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	*
 	* @param locPathIterator non-null reference to the parent iterator.
 	*/
-	@:overload public function new(locPathIterator : com.sun.org.apache.xpath.internal.axes.LocPathIterator, axis : Int) : Void;
+	@:overload @:public public function new(locPathIterator : com.sun.org.apache.xpath.internal.axes.LocPathIterator, axis : Int) : Void;
 	
-	@:overload @:final public function wi() : com.sun.org.apache.xpath.internal.axes.WalkingIterator;
+	@:overload @:public @:final public function wi() : com.sun.org.apache.xpath.internal.axes.WalkingIterator;
 	
 	/**
 	* Initialize an AxesWalker during the parse of the XPath expression.
@@ -42,7 +42,7 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function init(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int, stepType : Int) : Void;
+	@:overload @:public public function init(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int, stepType : Int) : Void;
 	
 	/**
 	* Get a cloned AxesWalker.
@@ -51,14 +51,14 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	*
 	* @throws CloneNotSupportedException
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Detaches the walker from the set which it iterated over, releasing
 	* any computational resources and placing the iterator in the INVALID
 	* state.
 	*/
-	@:overload public function detach() : Void;
+	@:overload @:public public function detach() : Void;
 	
 	/**
 	* The root node of the TreeWalker, as specified in setRoot(int root).
@@ -66,13 +66,13 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	*
 	* @return The context node of the step.
 	*/
-	@:overload public function getRoot() : Int;
+	@:overload @:public public function getRoot() : Int;
 	
 	/**
 	* Get the analysis bits for this walker, as defined in the WalkerFactory.
 	* @return One of WalkerFactory#BIT_DESCENDANT, etc.
 	*/
-	@:overload public function getAnalysisBits() : Int;
+	@:overload @:public public function getAnalysisBits() : Int;
 	
 	/**
 	* Set the root node of the TreeWalker.
@@ -80,7 +80,7 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	*
 	* @param root The context node of this step.
 	*/
-	@:overload public function setRoot(root : Int) : Void;
+	@:overload @:public public function setRoot(root : Int) : Void;
 	
 	/**
 	* The node at which the TreeWalker is currently positioned.
@@ -96,7 +96,7 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	* @return The node at which the TreeWalker is currently positioned, only null
 	* if setRoot has not yet been called.
 	*/
-	@:overload @:final public function getCurrentNode() : Int;
+	@:overload @:public @:final public function getCurrentNode() : Int;
 	
 	/**
 	* Set the next walker in the location step chain.
@@ -104,7 +104,7 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	*
 	* @param walker Reference to AxesWalker derivative, or may be null.
 	*/
-	@:overload public function setNextWalker(walker : com.sun.org.apache.xpath.internal.axes.AxesWalker) : Void;
+	@:overload @:public public function setNextWalker(walker : com.sun.org.apache.xpath.internal.axes.AxesWalker) : Void;
 	
 	/**
 	* Get the next walker in the location step chain.
@@ -112,7 +112,7 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	*
 	* @return Reference to AxesWalker derivative, or null.
 	*/
-	@:overload public function getNextWalker() : com.sun.org.apache.xpath.internal.axes.AxesWalker;
+	@:overload @:public public function getNextWalker() : com.sun.org.apache.xpath.internal.axes.AxesWalker;
 	
 	/**
 	* Set or clear the previous walker reference in the location step chain.
@@ -121,7 +121,7 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	* @param walker Reference to previous walker reference in the location
 	*               step chain, or null.
 	*/
-	@:overload public function setPrevWalker(walker : com.sun.org.apache.xpath.internal.axes.AxesWalker) : Void;
+	@:overload @:public public function setPrevWalker(walker : com.sun.org.apache.xpath.internal.axes.AxesWalker) : Void;
 	
 	/**
 	* Get the previous walker reference in the location step chain.
@@ -130,14 +130,14 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	* @return Reference to previous walker reference in the location
 	*               step chain, or null.
 	*/
-	@:overload public function getPrevWalker() : com.sun.org.apache.xpath.internal.axes.AxesWalker;
+	@:overload @:public public function getPrevWalker() : com.sun.org.apache.xpath.internal.axes.AxesWalker;
 	
 	/**
 	* Get the next node in document order on the axes.
 	*
 	* @return the next node in document order on the axes, or null.
 	*/
-	@:overload private function getNextNode() : Int;
+	@:overload @:protected private function getNextNode() : Int;
 	
 	/**
 	*  Moves the <code>TreeWalker</code> to the next visible node in document
@@ -148,7 +148,7 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	* @return  The new node, or <code>null</code> if the current node has no
 	*   next node  in the TreeWalker's logical view.
 	*/
-	@:overload public function nextNode() : Int;
+	@:overload @:public public function nextNode() : Int;
 	
 	/**
 	* Get the index of the last node that can be itterated to.
@@ -158,21 +158,21 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	*
 	* @return the index of the last node that can be itterated to.
 	*/
-	@:overload override public function getLastPos(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public override public function getLastPos(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Set the DTM for this walker.
 	*
 	* @param dtm Non-null reference to a DTM.
 	*/
-	@:overload public function setDefaultDTM(dtm : com.sun.org.apache.xml.internal.dtm.DTM) : Void;
+	@:overload @:public public function setDefaultDTM(dtm : com.sun.org.apache.xml.internal.dtm.DTM) : Void;
 	
 	/**
 	* Get the DTM for this walker.
 	*
 	* @return Non-null reference to a DTM.
 	*/
-	@:overload public function getDTM(node : Int) : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public public function getDTM(node : Int) : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Returns true if all the nodes in the iteration well be returned in document
@@ -181,7 +181,7 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	*
 	* @return true as a default.
 	*/
-	@:overload public function isDocOrdered() : Bool;
+	@:overload @:public public function isDocOrdered() : Bool;
 	
 	/**
 	* Returns the axis being iterated, if it is known.
@@ -189,7 +189,7 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	* @return Axis.CHILD, etc., or -1 if the axis is not known or is of multiple
 	* types.
 	*/
-	@:overload public function getAxis() : Int;
+	@:overload @:public public function getAxis() : Int;
 	
 	/**
 	* This will traverse the heararchy, calling the visitor for
@@ -200,32 +200,32 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	*              rewritten if needed.
 	* @param visitor The visitor whose appropriate method will be called.
 	*/
-	@:overload override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see ExpressionOwner#getExpression()
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see ExpressionOwner#setExpression(Expression)
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	/** The next walker in the location step chain.
 	*  @serial  */
-	private var m_nextWalker : com.sun.org.apache.xpath.internal.axes.AxesWalker;
+	@:protected private var m_nextWalker : com.sun.org.apache.xpath.internal.axes.AxesWalker;
 	
 	/** The traversal axis from where the nodes will be filtered. */
-	private var m_axis : Int;
+	@:protected private var m_axis : Int;
 	
 	/** The DTM inner traversal class, that corresponds to the super axis. */
-	private var m_traverser : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser;
+	@:protected private var m_traverser : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser;
 	
 	
 }

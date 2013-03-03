@@ -69,13 +69,13 @@ extern class Method extends com.sun.org.apache.bcel.internal.classfile.FieldOrMe
 	* Empty constructor, all attributes have to be defined via `setXXX'
 	* methods. Use at your own risk.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.Method) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.Method) : Void;
 	
 	/**
 	* @param access_flags Access rights of method
@@ -84,7 +84,7 @@ extern class Method extends com.sun.org.apache.bcel.internal.classfile.FieldOrMe
 	* @param attributes Collection of attributes
 	* @param constant_pool Array of constants
 	*/
-	@:overload public function new(access_flags : Int, name_index : Int, signature_index : Int, attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function new(access_flags : Int, name_index : Int, signature_index : Int, attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -93,28 +93,28 @@ extern class Method extends com.sun.org.apache.bcel.internal.classfile.FieldOrMe
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* @return Code attribute of method, if any
 	*/
-	@:overload @:final public function getCode() : com.sun.org.apache.bcel.internal.classfile.Code;
+	@:overload @:public @:final public function getCode() : com.sun.org.apache.bcel.internal.classfile.Code;
 	
 	/**
 	* @return ExceptionTable attribute of method, if any, i.e., list all
 	* exceptions the method may throw not exception handlers!
 	*/
-	@:overload @:final public function getExceptionTable() : com.sun.org.apache.bcel.internal.classfile.ExceptionTable;
+	@:overload @:public @:final public function getExceptionTable() : com.sun.org.apache.bcel.internal.classfile.ExceptionTable;
 	
 	/** @return LocalVariableTable of code attribute if any, i.e. the call is forwarded
 	* to the Code atribute.
 	*/
-	@:overload @:final public function getLocalVariableTable() : com.sun.org.apache.bcel.internal.classfile.LocalVariableTable;
+	@:overload @:public @:final public function getLocalVariableTable() : com.sun.org.apache.bcel.internal.classfile.LocalVariableTable;
 	
 	/** @return LineNumberTable of code attribute if any, i.e. the call is forwarded
 	* to the Code atribute.
 	*/
-	@:overload @:final public function getLineNumberTable() : com.sun.org.apache.bcel.internal.classfile.LineNumberTable;
+	@:overload @:public @:final public function getLineNumberTable() : com.sun.org.apache.bcel.internal.classfile.LineNumberTable;
 	
 	/**
 	* Return string representation close to declaration format,
@@ -122,22 +122,22 @@ extern class Method extends com.sun.org.apache.bcel.internal.classfile.FieldOrMe
 	*
 	* @return String representation of the method.
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/**
 	* @return deep copy of this method
 	*/
-	@:overload @:final public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Method;
+	@:overload @:public @:final public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Method;
 	
 	/**
 	* @return return type of method
 	*/
-	@:overload public function getReturnType() : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getReturnType() : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/**
 	* @return array of method argument types
 	*/
-	@:overload public function getArgumentTypes() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>;
+	@:overload @:public public function getArgumentTypes() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>;
 	
 	
 }

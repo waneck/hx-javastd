@@ -25,15 +25,15 @@ package com.sun.xml.internal.bind.v2.model.nav;
 */
 @:internal extern class WildcardTypeImpl implements java.lang.reflect.WildcardType
 {
-	@:overload public function new(ub : java.NativeArray<java.lang.reflect.Type>, lb : java.NativeArray<java.lang.reflect.Type>) : Void;
+	@:overload @:public public function new(ub : java.NativeArray<java.lang.reflect.Type>, lb : java.NativeArray<java.lang.reflect.Type>) : Void;
 	
-	@:overload public function getUpperBounds() : java.NativeArray<java.lang.reflect.Type>;
+	@:overload @:public public function getUpperBounds() : java.NativeArray<java.lang.reflect.Type>;
 	
-	@:overload public function getLowerBounds() : java.NativeArray<java.lang.reflect.Type>;
+	@:overload @:public public function getLowerBounds() : java.NativeArray<java.lang.reflect.Type>;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

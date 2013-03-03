@@ -27,15 +27,15 @@ package sun.nio.cs.ext;
 */
 extern class IBM33722 extends java.nio.charset.Charset implements sun.nio.cs.HistoricallyNamedCharset
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function historicalName() : String;
+	@:overload @:public public function historicalName() : String;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	/**
 	* These accessors are temporarily supplied while sun.io
@@ -44,35 +44,35 @@ extern class IBM33722 extends java.nio.charset.Charset implements sun.nio.cs.His
 	* two co-existing implementations. When sun.io converters
 	* are made extinct these will be unncessary and should be removed
 	*/
-	@:overload public function getDecoderSingleByteMappings() : String;
+	@:overload @:public public function getDecoderSingleByteMappings() : String;
 	
-	@:overload public function getDecoderMappingTableG1() : String;
+	@:overload @:public public function getDecoderMappingTableG1() : String;
 	
-	@:overload public function getDecoderMappingTableG2() : String;
+	@:overload @:public public function getDecoderMappingTableG2() : String;
 	
-	@:overload public function getDecoderMappingTableG3() : String;
+	@:overload @:public public function getDecoderMappingTableG3() : String;
 	
-	@:overload public function getEncoderIndex1() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getEncoderIndex1() : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public function getEncoderIndex2() : String;
+	@:overload @:public public function getEncoderIndex2() : String;
 	
-	@:overload public function getEncoderIndex2a() : String;
+	@:overload @:public public function getEncoderIndex2a() : String;
 	
-	@:overload public function getEncoderIndex2b() : String;
+	@:overload @:public public function getEncoderIndex2b() : String;
 	
 	
 }
 @:native('sun$nio$cs$ext$IBM33722$Decoder') extern class IBM33722_Decoder extends java.nio.charset.CharsetDecoder
 {
-	@:overload public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:public public function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
 	
 }
 @:native('sun$nio$cs$ext$IBM33722$Encoder') extern class IBM33722_Encoder extends sun.nio.cs.ext.SimpleEUCEncoder
 {
-	@:overload public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:public public function new(cs : java.nio.charset.Charset) : Void;
 	
 	
 }

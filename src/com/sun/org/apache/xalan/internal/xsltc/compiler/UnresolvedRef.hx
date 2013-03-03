@@ -23,15 +23,15 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class UnresolvedRef extends com.sun.org.apache.xalan.internal.xsltc.compiler.VariableRefBase
 {
-	@:overload public function new(name : com.sun.org.apache.xalan.internal.xsltc.compiler.QName) : Void;
+	@:overload @:public public function new(name : com.sun.org.apache.xalan.internal.xsltc.compiler.QName) : Void;
 	
-	@:overload public function getName() : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
+	@:overload @:public public function getName() : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
 	
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

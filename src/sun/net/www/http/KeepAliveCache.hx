@@ -28,28 +28,28 @@ extern class KeepAliveCache extends java.util.HashMap<sun.net.www.http.KeepAlive
 	/**
 	* Constructor
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Register this URL and HttpClient (that supports keep-alive) with the cache
 	* @param url  The URL contains info about the host and port
 	* @param http The HttpClient to be cached
 	*/
-	@:overload @:synchronized public function put(url : java.net.URL, obj : Dynamic, http : sun.net.www.http.HttpClient) : Void;
+	@:overload @:public @:synchronized public function put(url : java.net.URL, obj : Dynamic, http : sun.net.www.http.HttpClient) : Void;
 	
 	/* remove an obsolete HttpClient from its VectorCache */
-	@:overload @:synchronized public function remove(h : sun.net.www.http.HttpClient, obj : Dynamic) : Void;
+	@:overload @:public @:synchronized public function remove(h : sun.net.www.http.HttpClient, obj : Dynamic) : Void;
 	
 	/**
 	* Check to see if this URL has a cached HttpClient
 	*/
-	@:overload @:synchronized public function get(url : java.net.URL, obj : Dynamic) : sun.net.www.http.HttpClient;
+	@:overload @:public @:synchronized public function get(url : java.net.URL, obj : Dynamic) : sun.net.www.http.HttpClient;
 	
 	/* Sleeps for an alloted timeout, then checks for timed out connections.
 	* Errs on the side of caution (leave connections idle for a relatively
 	* short time).
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
@@ -64,18 +64,18 @@ extern class KeepAliveCache extends java.util.HashMap<sun.net.www.http.KeepAlive
 	*
 	* @param url the URL containing the protocol, host and port information
 	*/
-	@:overload public function new(url : java.net.URL, obj : Dynamic) : Void;
+	@:overload @:public public function new(url : java.net.URL, obj : Dynamic) : Void;
 	
 	/**
 	* Determine whether or not two objects of this type are equal
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* The hashCode() for this object is the string hashCode() of
 	* concatenation of the protocol, host name and port.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

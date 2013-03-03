@@ -35,7 +35,7 @@ extern class PrinterAbortException extends java.awt.print.PrinterException
 	* Constructs a new <code>PrinterAbortException</code> with no
 	* detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>PrinterAbortException</code> with
@@ -43,7 +43,7 @@ extern class PrinterAbortException extends java.awt.print.PrinterException
 	* @param msg the message to be generated when a
 	* <code>PrinterAbortException</code> is thrown
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

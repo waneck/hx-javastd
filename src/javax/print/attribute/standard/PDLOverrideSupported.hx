@@ -30,14 +30,14 @@ extern class PDLOverrideSupported extends javax.print.attribute.EnumSyntax imple
 	* take precedence over embedded instructions in the documents' print
 	* data.
 	*/
-	public static var NOT_ATTEMPTED(default, null) : javax.print.attribute.standard.PDLOverrideSupported;
+	@:public @:static @:final public static var NOT_ATTEMPTED(default, null) : javax.print.attribute.standard.PDLOverrideSupported;
 	
 	/**
 	* The printer attempts to make the external job attribute values take
 	* precedence over embedded instructions in the documents' print data,
 	* however there is no guarantee.
 	*/
-	public static var ATTEMPTED(default, null) : javax.print.attribute.standard.PDLOverrideSupported;
+	@:public @:static @:final public static var ATTEMPTED(default, null) : javax.print.attribute.standard.PDLOverrideSupported;
 	
 	/**
 	* Construct a new PDL override supported enumeration value with the given
@@ -45,17 +45,17 @@ extern class PDLOverrideSupported extends javax.print.attribute.EnumSyntax imple
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class PDLOverrideSupported.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class PDLOverrideSupported.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -67,7 +67,7 @@ extern class PDLOverrideSupported extends javax.print.attribute.EnumSyntax imple
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -78,7 +78,7 @@ extern class PDLOverrideSupported extends javax.print.attribute.EnumSyntax imple
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

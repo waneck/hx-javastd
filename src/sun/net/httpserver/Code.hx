@@ -25,77 +25,77 @@ package sun.net.httpserver;
 */
 @:internal extern class Code
 {
-	public static var HTTP_CONTINUE(default, null) : Int;
+	@:public @:static @:final public static var HTTP_CONTINUE(default, null) : Int;
 	
-	public static var HTTP_OK(default, null) : Int;
+	@:public @:static @:final public static var HTTP_OK(default, null) : Int;
 	
-	public static var HTTP_CREATED(default, null) : Int;
+	@:public @:static @:final public static var HTTP_CREATED(default, null) : Int;
 	
-	public static var HTTP_ACCEPTED(default, null) : Int;
+	@:public @:static @:final public static var HTTP_ACCEPTED(default, null) : Int;
 	
-	public static var HTTP_NOT_AUTHORITATIVE(default, null) : Int;
+	@:public @:static @:final public static var HTTP_NOT_AUTHORITATIVE(default, null) : Int;
 	
-	public static var HTTP_NO_CONTENT(default, null) : Int;
+	@:public @:static @:final public static var HTTP_NO_CONTENT(default, null) : Int;
 	
-	public static var HTTP_RESET(default, null) : Int;
+	@:public @:static @:final public static var HTTP_RESET(default, null) : Int;
 	
-	public static var HTTP_PARTIAL(default, null) : Int;
+	@:public @:static @:final public static var HTTP_PARTIAL(default, null) : Int;
 	
-	public static var HTTP_MULT_CHOICE(default, null) : Int;
+	@:public @:static @:final public static var HTTP_MULT_CHOICE(default, null) : Int;
 	
-	public static var HTTP_MOVED_PERM(default, null) : Int;
+	@:public @:static @:final public static var HTTP_MOVED_PERM(default, null) : Int;
 	
-	public static var HTTP_MOVED_TEMP(default, null) : Int;
+	@:public @:static @:final public static var HTTP_MOVED_TEMP(default, null) : Int;
 	
-	public static var HTTP_SEE_OTHER(default, null) : Int;
+	@:public @:static @:final public static var HTTP_SEE_OTHER(default, null) : Int;
 	
-	public static var HTTP_NOT_MODIFIED(default, null) : Int;
+	@:public @:static @:final public static var HTTP_NOT_MODIFIED(default, null) : Int;
 	
-	public static var HTTP_USE_PROXY(default, null) : Int;
+	@:public @:static @:final public static var HTTP_USE_PROXY(default, null) : Int;
 	
-	public static var HTTP_BAD_REQUEST(default, null) : Int;
+	@:public @:static @:final public static var HTTP_BAD_REQUEST(default, null) : Int;
 	
-	public static var HTTP_UNAUTHORIZED(default, null) : Int;
+	@:public @:static @:final public static var HTTP_UNAUTHORIZED(default, null) : Int;
 	
-	public static var HTTP_PAYMENT_REQUIRED(default, null) : Int;
+	@:public @:static @:final public static var HTTP_PAYMENT_REQUIRED(default, null) : Int;
 	
-	public static var HTTP_FORBIDDEN(default, null) : Int;
+	@:public @:static @:final public static var HTTP_FORBIDDEN(default, null) : Int;
 	
-	public static var HTTP_NOT_FOUND(default, null) : Int;
+	@:public @:static @:final public static var HTTP_NOT_FOUND(default, null) : Int;
 	
-	public static var HTTP_BAD_METHOD(default, null) : Int;
+	@:public @:static @:final public static var HTTP_BAD_METHOD(default, null) : Int;
 	
-	public static var HTTP_NOT_ACCEPTABLE(default, null) : Int;
+	@:public @:static @:final public static var HTTP_NOT_ACCEPTABLE(default, null) : Int;
 	
-	public static var HTTP_PROXY_AUTH(default, null) : Int;
+	@:public @:static @:final public static var HTTP_PROXY_AUTH(default, null) : Int;
 	
-	public static var HTTP_CLIENT_TIMEOUT(default, null) : Int;
+	@:public @:static @:final public static var HTTP_CLIENT_TIMEOUT(default, null) : Int;
 	
-	public static var HTTP_CONFLICT(default, null) : Int;
+	@:public @:static @:final public static var HTTP_CONFLICT(default, null) : Int;
 	
-	public static var HTTP_GONE(default, null) : Int;
+	@:public @:static @:final public static var HTTP_GONE(default, null) : Int;
 	
-	public static var HTTP_LENGTH_REQUIRED(default, null) : Int;
+	@:public @:static @:final public static var HTTP_LENGTH_REQUIRED(default, null) : Int;
 	
-	public static var HTTP_PRECON_FAILED(default, null) : Int;
+	@:public @:static @:final public static var HTTP_PRECON_FAILED(default, null) : Int;
 	
-	public static var HTTP_ENTITY_TOO_LARGE(default, null) : Int;
+	@:public @:static @:final public static var HTTP_ENTITY_TOO_LARGE(default, null) : Int;
 	
-	public static var HTTP_REQ_TOO_LONG(default, null) : Int;
+	@:public @:static @:final public static var HTTP_REQ_TOO_LONG(default, null) : Int;
 	
-	public static var HTTP_UNSUPPORTED_TYPE(default, null) : Int;
+	@:public @:static @:final public static var HTTP_UNSUPPORTED_TYPE(default, null) : Int;
 	
-	public static var HTTP_INTERNAL_ERROR(default, null) : Int;
+	@:public @:static @:final public static var HTTP_INTERNAL_ERROR(default, null) : Int;
 	
-	public static var HTTP_NOT_IMPLEMENTED(default, null) : Int;
+	@:public @:static @:final public static var HTTP_NOT_IMPLEMENTED(default, null) : Int;
 	
-	public static var HTTP_BAD_GATEWAY(default, null) : Int;
+	@:public @:static @:final public static var HTTP_BAD_GATEWAY(default, null) : Int;
 	
-	public static var HTTP_UNAVAILABLE(default, null) : Int;
+	@:public @:static @:final public static var HTTP_UNAVAILABLE(default, null) : Int;
 	
-	public static var HTTP_GATEWAY_TIMEOUT(default, null) : Int;
+	@:public @:static @:final public static var HTTP_GATEWAY_TIMEOUT(default, null) : Int;
 	
-	public static var HTTP_VERSION(default, null) : Int;
+	@:public @:static @:final public static var HTTP_VERSION(default, null) : Int;
 	
 	
 }

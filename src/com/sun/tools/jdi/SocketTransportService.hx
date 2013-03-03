@@ -28,50 +28,50 @@ extern class SocketTransportService extends com.sun.jdi.connect.spi.TransportSer
 	/**
 	* No-arg constructor
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* The name of this transport service
 	*/
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
 	/**
 	* Return localized description of this transport service
 	*/
-	@:overload override public function description() : String;
+	@:overload @:public override public function description() : String;
 	
 	/**
 	* Return the capabilities of this transport service
 	*/
-	@:overload override public function capabilities() : com.sun.jdi.connect.spi.TransportService.TransportService_Capabilities;
+	@:overload @:public override public function capabilities() : com.sun.jdi.connect.spi.TransportService.TransportService_Capabilities;
 	
 	/**
 	* Attach to the specified address with optional attach and handshake
 	* timeout.
 	*/
-	@:overload override public function attach(address : String, attachTimeout : haxe.Int64, handshakeTimeout : haxe.Int64) : com.sun.jdi.connect.spi.Connection;
+	@:overload @:public override public function attach(address : String, attachTimeout : haxe.Int64, handshakeTimeout : haxe.Int64) : com.sun.jdi.connect.spi.Connection;
 	
 	/**
 	* Listen on the specified address
 	*/
-	@:overload override public function startListening(address : String) : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey;
+	@:overload @:public override public function startListening(address : String) : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey;
 	
 	/**
 	* Listen on the default address
 	*/
-	@:overload override public function startListening() : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey;
+	@:overload @:public override public function startListening() : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey;
 	
 	/**
 	* Stop the listener
 	*/
-	@:overload override public function stopListening(listener : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey) : Void;
+	@:overload @:public override public function stopListening(listener : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey) : Void;
 	
 	/**
 	* Accept a connection from a debuggee and handshake with it.
 	*/
-	@:overload override public function accept(listener : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey, acceptTimeout : haxe.Int64, handshakeTimeout : haxe.Int64) : com.sun.jdi.connect.spi.Connection;
+	@:overload @:public override public function accept(listener : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey, acceptTimeout : haxe.Int64, handshakeTimeout : haxe.Int64) : com.sun.jdi.connect.spi.Connection;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -85,21 +85,21 @@ extern class SocketTransportService extends com.sun.jdi.connect.spi.TransportSer
 	* Returns the string representation of the address that this
 	* listen key represents.
 	*/
-	@:overload override public function address() : String;
+	@:overload @:public override public function address() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:internal extern class SocketConnection extends com.sun.jdi.connect.spi.Connection
 {
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload public function isOpen() : Bool;
+	@:overload @:public override public function isOpen() : Bool;
 	
-	@:overload public function readPacket() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function readPacket() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function writePacket(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function writePacket(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }
@@ -108,13 +108,13 @@ extern class SocketTransportService extends com.sun.jdi.connect.spi.TransportSer
 	/*
 	* The capabilities of the socket transport service
 	*/
-	@:overload override public function supportsMultipleConnections() : Bool;
+	@:overload @:public override public function supportsMultipleConnections() : Bool;
 	
-	@:overload override public function supportsAttachTimeout() : Bool;
+	@:overload @:public override public function supportsAttachTimeout() : Bool;
 	
-	@:overload override public function supportsAcceptTimeout() : Bool;
+	@:overload @:public override public function supportsAcceptTimeout() : Bool;
 	
-	@:overload override public function supportsHandshakeTimeout() : Bool;
+	@:overload @:public override public function supportsHandshakeTimeout() : Bool;
 	
 	
 }

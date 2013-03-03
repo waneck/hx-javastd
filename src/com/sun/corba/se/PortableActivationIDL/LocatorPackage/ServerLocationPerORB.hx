@@ -7,13 +7,13 @@ package com.sun.corba.se.PortableActivationIDL.LocatorPackage;
 */
 extern class ServerLocationPerORB implements org.omg.CORBA.portable.IDLEntity
 {
-	public var hostname : String;
+	@:public public var hostname : String;
 	
-	public var ports : java.NativeArray<com.sun.corba.se.PortableActivationIDL.EndPointInfo>;
+	@:public public var ports : java.NativeArray<com.sun.corba.se.PortableActivationIDL.EndPointInfo>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_hostname : String, _ports : java.NativeArray<com.sun.corba.se.PortableActivationIDL.EndPointInfo>) : Void;
+	@:overload @:public public function new(_hostname : String, _ports : java.NativeArray<com.sun.corba.se.PortableActivationIDL.EndPointInfo>) : Void;
 	
 	
 }

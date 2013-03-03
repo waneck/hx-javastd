@@ -48,21 +48,21 @@ package com.sun.management;
 	* be available to the running process in bytes,
 	* or <tt>-1</tt> if this operation is not supported.
 	*/
-	@:overload public function getCommittedVirtualMemorySize() : haxe.Int64;
+	@:overload @:public public function getCommittedVirtualMemorySize() : haxe.Int64;
 	
 	/**
 	* Returns the total amount of swap space in bytes.
 	*
 	* @return the total amount of swap space in bytes.
 	*/
-	@:overload public function getTotalSwapSpaceSize() : haxe.Int64;
+	@:overload @:public public function getTotalSwapSpaceSize() : haxe.Int64;
 	
 	/**
 	* Returns the amount of free swap space in bytes.
 	*
 	* @return the amount of free swap space in bytes.
 	*/
-	@:overload public function getFreeSwapSpaceSize() : haxe.Int64;
+	@:overload @:public public function getFreeSwapSpaceSize() : haxe.Int64;
 	
 	/**
 	* Returns the CPU time used by the process on which the Java
@@ -74,21 +74,21 @@ package com.sun.management;
 	* @return the CPU time used by the process in nanoseconds,
 	* or <tt>-1</tt> if this operation is not supported.
 	*/
-	@:overload public function getProcessCpuTime() : haxe.Int64;
+	@:overload @:public public function getProcessCpuTime() : haxe.Int64;
 	
 	/**
 	* Returns the amount of free physical memory in bytes.
 	*
 	* @return the amount of free physical memory in bytes.
 	*/
-	@:overload public function getFreePhysicalMemorySize() : haxe.Int64;
+	@:overload @:public public function getFreePhysicalMemorySize() : haxe.Int64;
 	
 	/**
 	* Returns the total amount of physical memory in bytes.
 	*
 	* @return the total amount of physical memory in  bytes.
 	*/
-	@:overload public function getTotalPhysicalMemorySize() : haxe.Int64;
+	@:overload @:public public function getTotalPhysicalMemorySize() : haxe.Int64;
 	
 	/**
 	* Returns the "recent cpu usage" for the whole system. This value is a
@@ -104,7 +104,7 @@ package com.sun.management;
 	* value if not available.
 	* @since   1.7
 	*/
-	@:require(java7) @:overload public function getSystemCpuLoad() : Float;
+	@:require(java7) @:overload @:public public function getSystemCpuLoad() : Float;
 	
 	/**
 	* Returns the "recent cpu usage" for the Java Virtual Machine process.
@@ -122,7 +122,7 @@ package com.sun.management;
 	* a negative value if not available.
 	* @since   1.7
 	*/
-	@:require(java7) @:overload public function getProcessCpuLoad() : Float;
+	@:require(java7) @:overload @:public public function getProcessCpuLoad() : Float;
 	
 	
 }

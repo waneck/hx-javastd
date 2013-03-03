@@ -550,7 +550,7 @@ package java.util;
 	*
 	* @return the number of elements in this deque
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Returns an iterator over the elements in this deque in proper sequence.

@@ -32,9 +32,9 @@ package com.sun.tools.example.debug.bdi;
 */
 extern class SpecErrorEvent extends com.sun.tools.example.debug.bdi.SpecEvent
 {
-	@:overload public function new(eventRequestSpec : com.sun.tools.example.debug.bdi.EventRequestSpec, reason : java.lang.Exception) : Void;
+	@:overload @:public public function new(eventRequestSpec : com.sun.tools.example.debug.bdi.EventRequestSpec, reason : java.lang.Exception) : Void;
 	
-	@:overload public function getReason() : java.lang.Exception;
+	@:overload @:public public function getReason() : java.lang.Exception;
 	
 	
 }

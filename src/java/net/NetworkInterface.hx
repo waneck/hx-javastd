@@ -30,7 +30,7 @@ extern class NetworkInterface
 	*
 	* @return the name of this network interface
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Convenience method to return an Enumeration with all or a
@@ -45,7 +45,7 @@ extern class NetworkInterface
 	* @return an Enumeration object with all or a subset of the InetAddresses
 	* bound to this network interface
 	*/
-	@:overload public function getInetAddresses() : java.util.Enumeration<java.net.InetAddress>;
+	@:overload @:public public function getInetAddresses() : java.util.Enumeration<java.net.InetAddress>;
 	
 	/**
 	* Get a List of all or a subset of the <code>InterfaceAddresses</code>
@@ -60,7 +60,7 @@ extern class NetworkInterface
 	*         InterfaceAddresss of this network interface
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getInterfaceAddresses() : java.util.List<java.net.InterfaceAddress>;
+	@:require(java6) @:overload @:public public function getInterfaceAddresses() : java.util.List<java.net.InterfaceAddress>;
 	
 	/**
 	* Get an Enumeration with all the subinterfaces (also known as virtual
@@ -72,7 +72,7 @@ extern class NetworkInterface
 	* of this network interface
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getSubInterfaces() : java.util.Enumeration<java.net.NetworkInterface>;
+	@:require(java6) @:overload @:public public function getSubInterfaces() : java.util.Enumeration<java.net.NetworkInterface>;
 	
 	/**
 	* Returns the parent NetworkInterface of this interface if this is
@@ -82,7 +82,7 @@ extern class NetworkInterface
 	* @return The <code>NetworkInterface</code> this interface is attached to.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getParent() : java.net.NetworkInterface;
+	@:require(java6) @:overload @:public public function getParent() : java.net.NetworkInterface;
 	
 	/**
 	* Returns the index of this network interface. The index is an integer greater
@@ -95,7 +95,7 @@ extern class NetworkInterface
 	* @see #getByIndex(int)
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getIndex() : Int;
+	@:require(java7) @:overload @:public public function getIndex() : Int;
 	
 	/**
 	* Get the display name of this network interface.
@@ -105,7 +105,7 @@ extern class NetworkInterface
 	* @return a non-empty string representing the display name of this network
 	*         interface, or null if no display name is available.
 	*/
-	@:overload public function getDisplayName() : String;
+	@:overload @:public public function getDisplayName() : String;
 	
 	/**
 	* Searches for the network interface with the specified name.
@@ -123,7 +123,7 @@ extern class NetworkInterface
 	* @throws  NullPointerException
 	*          If the specified name is <tt>null</tt>.
 	*/
-	@:overload public static function getByName(name : String) : java.net.NetworkInterface;
+	@:overload @:public @:static public static function getByName(name : String) : java.net.NetworkInterface;
 	
 	/**
 	* Get a network interface given its index.
@@ -136,7 +136,7 @@ extern class NetworkInterface
 	* @see #getIndex()
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getByIndex(index : Int) : java.net.NetworkInterface;
+	@:require(java7) @:overload @:public @:static public static function getByIndex(index : Int) : java.net.NetworkInterface;
 	
 	/**
 	* Convenience method to search for a network interface that
@@ -160,7 +160,7 @@ extern class NetworkInterface
 	* @throws  NullPointerException
 	*          If the specified address is <tt>null</tt>.
 	*/
-	@:overload public static function getByInetAddress(addr : java.net.InetAddress) : java.net.NetworkInterface;
+	@:overload @:public @:static public static function getByInetAddress(addr : java.net.InetAddress) : java.net.NetworkInterface;
 	
 	/**
 	* Returns all the interfaces on this machine. Returns null if no
@@ -172,7 +172,7 @@ extern class NetworkInterface
 	* @return an Enumeration of NetworkInterfaces found on this machine
 	* @exception  SocketException  if an I/O error occurs.
 	*/
-	@:overload public static function getNetworkInterfaces() : java.util.Enumeration<java.net.NetworkInterface>;
+	@:overload @:public @:static public static function getNetworkInterfaces() : java.util.Enumeration<java.net.NetworkInterface>;
 	
 	/**
 	* Returns whether a network interface is up and running.
@@ -181,7 +181,7 @@ extern class NetworkInterface
 	* @exception       SocketException if an I/O error occurs.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function isUp() : Bool;
+	@:require(java6) @:overload @:public public function isUp() : Bool;
 	
 	/**
 	* Returns whether a network interface is a loopback interface.
@@ -190,7 +190,7 @@ extern class NetworkInterface
 	* @exception       SocketException if an I/O error occurs.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function isLoopback() : Bool;
+	@:require(java6) @:overload @:public public function isLoopback() : Bool;
 	
 	/**
 	* Returns whether a network interface is a point to point interface.
@@ -202,7 +202,7 @@ extern class NetworkInterface
 	* @exception       SocketException if an I/O error occurs.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function isPointToPoint() : Bool;
+	@:require(java6) @:overload @:public public function isPointToPoint() : Bool;
 	
 	/**
 	* Returns whether a network interface supports multicasting or not.
@@ -211,7 +211,7 @@ extern class NetworkInterface
 	* @exception       SocketException if an I/O error occurs.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function supportsMulticast() : Bool;
+	@:require(java6) @:overload @:public public function supportsMulticast() : Bool;
 	
 	/**
 	* Returns the hardware address (usually MAC) of the interface if it
@@ -227,7 +227,7 @@ extern class NetworkInterface
 	* @exception       SocketException if an I/O error occurs.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getHardwareAddress() : java.NativeArray<java.StdTypes.Int8>;
+	@:require(java6) @:overload @:public public function getHardwareAddress() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the Maximum Transmission Unit (MTU) of this interface.
@@ -236,7 +236,7 @@ extern class NetworkInterface
 	* @exception       SocketException if an I/O error occurs.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getMTU() : Int;
+	@:require(java6) @:overload @:public public function getMTU() : Int;
 	
 	/**
 	* Returns whether this interface is a virtual interface (also called
@@ -251,7 +251,7 @@ extern class NetworkInterface
 	* @return <code>true</code> if this interface is a virtual interface.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function isVirtual() : Bool;
+	@:require(java6) @:overload @:public public function isVirtual() : Bool;
 	
 	/**
 	* Compares this object against the specified object.
@@ -267,11 +267,11 @@ extern class NetworkInterface
 	*          <code>false</code> otherwise.
 	* @see     java.net.InetAddress#getAddress()
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

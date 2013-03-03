@@ -31,9 +31,9 @@ package sun.net.www.protocol.http.logging;
 */
 extern class HttpLogFormatter extends java.util.logging.SimpleFormatter
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function format(record : java.util.logging.LogRecord) : String;
+	@:overload @:public override public function format(record : java.util.logging.LogRecord) : String;
 	
 	
 }

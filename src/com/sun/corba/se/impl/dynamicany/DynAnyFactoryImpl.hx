@@ -25,13 +25,13 @@ package com.sun.corba.se.impl.dynamicany;
 */
 extern class DynAnyFactoryImpl extends org.omg.CORBA.LocalObject implements org.omg.DynamicAny.DynAnyFactory
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function create_dyn_any(any : org.omg.CORBA.Any) : org.omg.DynamicAny.DynAny;
+	@:overload @:public public function create_dyn_any(any : org.omg.CORBA.Any) : org.omg.DynamicAny.DynAny;
 	
-	@:overload public function create_dyn_any_from_type_code(type : org.omg.CORBA.TypeCode) : org.omg.DynamicAny.DynAny;
+	@:overload @:public public function create_dyn_any_from_type_code(type : org.omg.CORBA.TypeCode) : org.omg.DynamicAny.DynAny;
 	
-	@:overload public function _ids() : java.NativeArray<String>;
+	@:overload @:public public function _ids() : java.NativeArray<String>;
 	
 	
 }

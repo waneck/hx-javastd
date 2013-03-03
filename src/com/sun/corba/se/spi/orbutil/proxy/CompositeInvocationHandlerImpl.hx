@@ -25,11 +25,11 @@ package com.sun.corba.se.spi.orbutil.proxy;
 */
 extern class CompositeInvocationHandlerImpl implements com.sun.corba.se.spi.orbutil.proxy.CompositeInvocationHandler
 {
-	@:overload public function addInvocationHandler(interf : Class<Dynamic>, handler : java.lang.reflect.InvocationHandler) : Void;
+	@:overload @:public public function addInvocationHandler(interf : Class<Dynamic>, handler : java.lang.reflect.InvocationHandler) : Void;
 	
-	@:overload public function setDefaultHandler(handler : java.lang.reflect.InvocationHandler) : Void;
+	@:overload @:public public function setDefaultHandler(handler : java.lang.reflect.InvocationHandler) : Void;
 	
-	@:overload public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

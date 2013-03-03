@@ -30,9 +30,9 @@ extern class ModelUnmarshaller extends com.sun.xml.internal.ws.policy.sourcemode
 	*
 	* @return {@link PolicyModelGenerator} instance
 	*/
-	@:overload public static function getUnmarshaller() : com.sun.xml.internal.ws.api.policy.ModelUnmarshaller;
+	@:overload @:public @:static public static function getUnmarshaller() : com.sun.xml.internal.ws.api.policy.ModelUnmarshaller;
 	
-	@:overload private function createSourceModel(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, id : String, name : String) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
+	@:overload @:protected override private function createSourceModel(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, id : String, name : String) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	
 }

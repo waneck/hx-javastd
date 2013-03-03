@@ -28,7 +28,7 @@ extern class MTOMFeature extends javax.xml.ws.WebServiceFeature
 	/**
 	* Constant value identifying the MTOMFeature
 	*/
-	public static var ID(default, null) : String;
+	@:public @:static @:final public static var ID(default, null) : String;
 	
 	/**
 	* Property for MTOM threshold value. This property serves as a hint when
@@ -36,20 +36,20 @@ extern class MTOMFeature extends javax.xml.ws.WebServiceFeature
 	* as attachment.
 	* The value of this property MUST always be >= 0. Default value is 0.
 	*/
-	private var threshold : Int;
+	@:protected private var threshold : Int;
 	
 	/**
 	* Create an <code>MTOMFeature</code>.
 	* The instance created will be enabled.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an <code>MTOMFeature</code>.
 	*
 	* @param enabled specifies if this feature should be enabled or not
 	*/
-	@:overload public function new(enabled : Bool) : Void;
+	@:overload @:public public function new(enabled : Bool) : Void;
 	
 	/**
 	* Creates an <code>MTOMFeature</code>.
@@ -60,7 +60,7 @@ extern class MTOMFeature extends javax.xml.ws.WebServiceFeature
 	*
 	* @throws WebServiceException if threshold is < 0
 	*/
-	@:overload public function new(threshold : Int) : Void;
+	@:overload @:public public function new(threshold : Int) : Void;
 	
 	/**
 	* Creates an <code>MTOMFeature</code>.
@@ -71,12 +71,12 @@ extern class MTOMFeature extends javax.xml.ws.WebServiceFeature
 	*
 	* @throws WebServiceException if threshold is < 0
 	*/
-	@:overload public function new(enabled : Bool, threshold : Int) : Void;
+	@:overload @:public public function new(enabled : Bool, threshold : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
 	/**
 	* Gets the threshold value used to determine when binary data
@@ -84,7 +84,7 @@ extern class MTOMFeature extends javax.xml.ws.WebServiceFeature
 	*
 	* @return the current threshold size in bytes
 	*/
-	@:overload public function getThreshold() : Int;
+	@:overload @:public public function getThreshold() : Int;
 	
 	
 }

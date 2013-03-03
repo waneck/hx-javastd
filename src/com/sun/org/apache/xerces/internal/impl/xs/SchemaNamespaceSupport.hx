@@ -30,9 +30,9 @@ extern class SchemaNamespaceSupport extends com.sun.org.apache.xerces.internal.u
 	* @author Neil Graham, IBM
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(nSupport : com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport) : Void;
+	@:overload @:public public function new(nSupport : com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport) : Void;
 	
 	/**
 	* This method takes a set of Strings, as stored in a
@@ -45,16 +45,16 @@ extern class SchemaNamespaceSupport extends com.sun.org.apache.xerces.internal.u
 	* It's worth noting that the context from which the strings are
 	* being imported had better be using the same SymbolTable.
 	*/
-	@:overload public function setEffectiveContext(namespaceDecls : java.NativeArray<String>) : Void;
+	@:overload @:public public function setEffectiveContext(namespaceDecls : java.NativeArray<String>) : Void;
 	
 	/**
 	* This method returns an array of Strings, as would be stored in
 	* a NamespaceSupport object.  This array contains all
 	* declarations except those at the global level.
 	*/
-	@:overload public function getEffectiveLocalContext() : java.NativeArray<String>;
+	@:overload @:public public function getEffectiveLocalContext() : java.NativeArray<String>;
 	
-	@:overload public function makeGlobal() : Void;
+	@:overload @:public public function makeGlobal() : Void;
 	
 	
 }

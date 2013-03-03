@@ -28,7 +28,7 @@ extern class PositiveExpression extends sun.tools.tree.UnaryExpression
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, right : sun.tools.tree.Expression) : Void;
+	@:overload @:public public function new(where : haxe.Int64, right : sun.tools.tree.Expression) : Void;
 	
 	
 }

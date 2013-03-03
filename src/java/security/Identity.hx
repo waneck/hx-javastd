@@ -56,7 +56,7 @@ extern class Identity implements java.security.Principal implements java.io.Seri
 	/**
 	* Constructor for serialization only.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs an identity with the specified name and scope.
@@ -67,28 +67,28 @@ extern class Identity implements java.security.Principal implements java.io.Seri
 	* @exception KeyManagementException if there is already an identity
 	* with the same name in the scope.
 	*/
-	@:overload public function new(name : String, scope : java.security.IdentityScope) : Void;
+	@:overload @:public public function new(name : String, scope : java.security.IdentityScope) : Void;
 	
 	/**
 	* Constructs an identity with the specified name and no scope.
 	*
 	* @param name the identity name.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Returns this identity's name.
 	*
 	* @return the name of this identity.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	/**
 	* Returns this identity's scope.
 	*
 	* @return the scope of this identity.
 	*/
-	@:overload @:final public function getScope() : java.security.IdentityScope;
+	@:overload @:public @:final public function getScope() : java.security.IdentityScope;
 	
 	/**
 	* Returns this identity's public key.
@@ -97,10 +97,10 @@ extern class Identity implements java.security.Principal implements java.io.Seri
 	*
 	* @see #setPublicKey
 	*/
-	@:overload public function getPublicKey() : java.security.PublicKey;
+	@:overload @:public public function getPublicKey() : java.security.PublicKey;
 	
 	/* Should we throw an exception if this is already set? */
-	@:overload public function setPublicKey(key : java.security.PublicKey) : Void;
+	@:overload @:public public function setPublicKey(key : java.security.PublicKey) : Void;
 	
 	/**
 	* Specifies a general information string for this identity.
@@ -118,7 +118,7 @@ extern class Identity implements java.security.Principal implements java.io.Seri
 	* @see #getInfo
 	* @see SecurityManager#checkSecurityAccess
 	*/
-	@:overload public function setInfo(info : String) : Void;
+	@:overload @:public public function setInfo(info : String) : Void;
 	
 	/**
 	* Returns general information previously specified for this identity.
@@ -127,7 +127,7 @@ extern class Identity implements java.security.Principal implements java.io.Seri
 	*
 	* @see #setInfo
 	*/
-	@:overload public function getInfo() : String;
+	@:overload @:public public function getInfo() : String;
 	
 	/**
 	* Adds a certificate for this identity. If the identity has a public
@@ -151,7 +151,7 @@ extern class Identity implements java.security.Principal implements java.io.Seri
 	*
 	* @see SecurityManager#checkSecurityAccess
 	*/
-	@:overload public function addCertificate(certificate : java.security.Certificate) : Void;
+	@:overload @:public public function addCertificate(certificate : java.security.Certificate) : Void;
 	
 	/**
 	* Removes a certificate from this identity.
@@ -171,14 +171,14 @@ extern class Identity implements java.security.Principal implements java.io.Seri
 	*
 	* @see SecurityManager#checkSecurityAccess
 	*/
-	@:overload public function removeCertificate(certificate : java.security.Certificate) : Void;
+	@:overload @:public public function removeCertificate(certificate : java.security.Certificate) : Void;
 	
 	/**
 	* Returns a copy of all the certificates for this identity.
 	*
 	* @return a copy of all the certificates for this identity.
 	*/
-	@:overload public function certificates() : java.NativeArray<java.security.Certificate>;
+	@:overload @:public public function certificates() : java.NativeArray<java.security.Certificate>;
 	
 	/**
 	* Tests for equality between the specified object and this identity.
@@ -195,7 +195,7 @@ extern class Identity implements java.security.Principal implements java.io.Seri
 	*
 	* @see #identityEquals
 	*/
-	@:overload @:final public function equals(identity : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(identity : Dynamic) : Bool;
 	
 	/**
 	* Tests for equality between the specified identity and this identity.
@@ -210,7 +210,7 @@ extern class Identity implements java.security.Principal implements java.io.Seri
 	*
 	* @see #equals
 	*/
-	@:overload private function identityEquals(identity : java.security.Identity) : Bool;
+	@:overload @:protected private function identityEquals(identity : java.security.Identity) : Bool;
 	
 	/**
 	* Returns a short string describing this identity, telling its
@@ -229,7 +229,7 @@ extern class Identity implements java.security.Principal implements java.io.Seri
 	*
 	* @see SecurityManager#checkSecurityAccess
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a string representation of this identity, with
@@ -253,14 +253,14 @@ extern class Identity implements java.security.Principal implements java.io.Seri
 	* @see #toString
 	* @see SecurityManager#checkSecurityAccess
 	*/
-	@:overload public function toString(detailed : Bool) : String;
+	@:overload @:public public function toString(detailed : Bool) : String;
 	
 	/**
 	* Returns a hashcode for this identity.
 	*
 	* @return a hashcode for this identity.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

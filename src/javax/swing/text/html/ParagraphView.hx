@@ -30,7 +30,7 @@ extern class ParagraphView extends javax.swing.text.ParagraphView
 	*
 	* @param elem the element that this view is responsible for
 	*/
-	@:overload override public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public override public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Establishes the parent view for this view.  This is
@@ -49,23 +49,23 @@ extern class ParagraphView extends javax.swing.text.ParagraphView
 	*  being removed from a parent it was previously added
 	*  to
 	*/
-	@:overload override public function setParent(parent : javax.swing.text.View) : Void;
+	@:overload @:public override public function setParent(parent : javax.swing.text.View) : Void;
 	
 	/**
 	* Fetches the attributes to use when rendering.  This is
 	* implemented to multiplex the attributes specified in the
 	* model with a StyleSheet.
 	*/
-	@:overload public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public override public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Sets up the paragraph from css attributes instead of
 	* the values found in StyleConstants (i.e. which are used
 	* by the superclass).  Since
 	*/
-	@:overload override private function setPropertiesFromAttributes() : Void;
+	@:overload @:protected override private function setPropertiesFromAttributes() : Void;
 	
-	@:overload private function getStyleSheet() : javax.swing.text.html.StyleSheet;
+	@:overload @:protected private function getStyleSheet() : javax.swing.text.html.StyleSheet;
 	
 	/**
 	* Calculate the needs for the paragraph along the minor axis.
@@ -85,7 +85,7 @@ extern class ParagraphView extends javax.swing.text.ParagraphView
 	* @return      the new or adjusted {@code SizeRequirements} object
 	* @throws IllegalArgumentException  if the {@code axis} parameter is invalid
 	*/
-	@:overload override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
 	/**
 	* Indicates whether or not this view should be
@@ -97,7 +97,7 @@ extern class ParagraphView extends javax.swing.text.ParagraphView
 	*
 	* @return true if the paragraph should be displayed
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public override public function isVisible() : Bool;
 	
 	/**
 	* Renders using the given rendering surface and area on that
@@ -108,7 +108,7 @@ extern class ParagraphView extends javax.swing.text.ParagraphView
 	* @param a the allocated region to render into
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
 	
 	/**
 	* Determines the preferred span for this view.  Returns
@@ -123,7 +123,7 @@ extern class ParagraphView extends javax.swing.text.ParagraphView
 	*           the parent may choose to resize or break the view
 	* @see javax.swing.text.ParagraphView#getPreferredSpan
 	*/
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the minimum span for this view along an
@@ -135,7 +135,7 @@ extern class ParagraphView extends javax.swing.text.ParagraphView
 	* @return  the minimum span the view can be rendered into
 	* @see javax.swing.text.ParagraphView#getMinimumSpan
 	*/
-	@:overload override public function getMinimumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMinimumSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the maximum span for this view along an
@@ -147,7 +147,7 @@ extern class ParagraphView extends javax.swing.text.ParagraphView
 	* @return  the maximum span the view can be rendered into
 	* @see javax.swing.text.ParagraphView#getMaximumSpan
 	*/
-	@:overload override public function getMaximumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMaximumSpan(axis : Int) : Single;
 	
 	
 }

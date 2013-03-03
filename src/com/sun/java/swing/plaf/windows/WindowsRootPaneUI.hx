@@ -25,13 +25,13 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsRootPaneUI extends javax.swing.plaf.basic.BasicRootPaneUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsRootPaneUI$AltProcessor') @:internal extern class WindowsRootPaneUI_AltProcessor implements java.awt.KeyEventPostProcessor
 {
-	@:overload public function postProcessKeyEvent(ev : java.awt.event.KeyEvent) : Bool;
+	@:overload @:public public function postProcessKeyEvent(ev : java.awt.event.KeyEvent) : Bool;
 	
 	
 }

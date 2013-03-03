@@ -28,7 +28,7 @@ extern class ServiceContext
 	/** Simple default constructor used when subclass is constructed
 	* from its representation.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/** Stream constructor used when subclass is constructed from an
 	* InputStream.  This constructor must be called by super( stream )
@@ -37,30 +37,30 @@ extern class ServiceContext
 	* Note that the service context id has been consumed from the input
 	* stream before this object is constructed.
 	*/
-	@:overload private function new(s : org.omg.CORBA_2_3.portable.InputStream, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
+	@:overload @:protected private function new(s : org.omg.CORBA_2_3.portable.InputStream, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
 	
 	/** Returns Service context id.  Must be overloaded in subclass.
 	*/
-	@:overload @:abstract public function getId() : Int;
+	@:overload @:public @:abstract public function getId() : Int;
 	
 	/** Write the service context to an output stream.  This method
 	* must be used for writing the service context to a request or reply
 	* header.
 	*/
-	@:overload public function write(s : org.omg.CORBA_2_3.portable.OutputStream, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
+	@:overload @:public public function write(s : org.omg.CORBA_2_3.portable.OutputStream, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
 	
 	/** Writes the data used to represent the subclasses service context
 	* into an encapsulation stream.  Must be overloaded in subclass.
 	*/
-	@:overload @:abstract private function writeData(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:protected @:abstract private function writeData(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	/** in is the stream containing the service context representation.
 	* It is constructed by the stream constructor, and available for use
 	* in the subclass stream constructor.
 	*/
-	//private var _in : org.omg.CORBA_2_3.portable.InputStream;
+	//@:protected private var _in : org.omg.CORBA_2_3.portable.InputStream;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

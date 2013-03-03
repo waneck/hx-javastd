@@ -28,9 +28,9 @@ extern interface BootAMXMBean
 	/**
 	Start AMX and return the ObjectName of DomainRoot.
 	*/
-	@:overload public function bootAMX() : javax.management.ObjectName;
+	@:overload @:public public function bootAMX() : javax.management.ObjectName;
 	
-	@:overload public function getJMXServiceURLs() : java.NativeArray<javax.management.remote.JMXServiceURL>;
+	@:overload @:public public function getJMXServiceURLs() : java.NativeArray<javax.management.remote.JMXServiceURL>;
 	
 	
 }

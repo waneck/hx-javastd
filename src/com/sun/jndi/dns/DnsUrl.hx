@@ -29,15 +29,15 @@ extern class DnsUrl extends com.sun.jndi.toolkit.url.Uri
 	* Given a space-separated list of DNS URLs, returns an array of DnsUrl
 	* objects.
 	*/
-	@:overload public static function fromList(urlList : String) : java.NativeArray<com.sun.jndi.dns.DnsUrl>;
+	@:overload @:public @:static public static function fromList(urlList : String) : java.NativeArray<com.sun.jndi.dns.DnsUrl>;
 	
-	@:overload public function new(url : String) : Void;
+	@:overload @:public public function new(url : String) : Void;
 	
 	/**
 	* Returns the domain of this URL, or "." if none is provided.
 	* Never null.
 	*/
-	@:overload public function getDomain() : String;
+	@:overload @:public public function getDomain() : String;
 	
 	
 }

@@ -26,22 +26,22 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Handles calls with no parameter (current node is implicit parameter).
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	*
 	*/
-	@:overload override public function getDefaultPriority() : Float;
+	@:overload @:public override public function getDefaultPriority() : Float;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload override public function reduceKernelPattern() : Void;
+	@:overload @:public override public function reduceKernelPattern() : Void;
 	
-	@:overload override public function isWildcard() : Bool;
+	@:overload @:public override public function isWildcard() : Bool;
 	
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

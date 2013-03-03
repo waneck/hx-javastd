@@ -37,45 +37,45 @@ package com.sun.media.sound;
 */
 extern class ModelStandardTransform implements com.sun.media.sound.ModelTransform
 {
-	public static var DIRECTION_MIN2MAX(default, null) : Bool;
+	@:public @:static @:final public static var DIRECTION_MIN2MAX(default, null) : Bool;
 	
-	public static var DIRECTION_MAX2MIN(default, null) : Bool;
+	@:public @:static @:final public static var DIRECTION_MAX2MIN(default, null) : Bool;
 	
-	public static var POLARITY_UNIPOLAR(default, null) : Bool;
+	@:public @:static @:final public static var POLARITY_UNIPOLAR(default, null) : Bool;
 	
-	public static var POLARITY_BIPOLAR(default, null) : Bool;
+	@:public @:static @:final public static var POLARITY_BIPOLAR(default, null) : Bool;
 	
-	public static var TRANSFORM_LINEAR(default, null) : Int;
+	@:public @:static @:final public static var TRANSFORM_LINEAR(default, null) : Int;
 	
-	public static var TRANSFORM_CONCAVE(default, null) : Int;
+	@:public @:static @:final public static var TRANSFORM_CONCAVE(default, null) : Int;
 	
-	public static var TRANSFORM_CONVEX(default, null) : Int;
+	@:public @:static @:final public static var TRANSFORM_CONVEX(default, null) : Int;
 	
-	public static var TRANSFORM_SWITCH(default, null) : Int;
+	@:public @:static @:final public static var TRANSFORM_SWITCH(default, null) : Int;
 	
-	public static var TRANSFORM_ABSOLUTE(default, null) : Int;
+	@:public @:static @:final public static var TRANSFORM_ABSOLUTE(default, null) : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(direction : Bool) : Void;
+	@:overload @:public public function new(direction : Bool) : Void;
 	
-	@:overload public function new(direction : Bool, polarity : Bool) : Void;
+	@:overload @:public public function new(direction : Bool, polarity : Bool) : Void;
 	
-	@:overload public function new(direction : Bool, polarity : Bool, transform : Int) : Void;
+	@:overload @:public public function new(direction : Bool, polarity : Bool, transform : Int) : Void;
 	
-	@:overload public function transform(value : Float) : Float;
+	@:overload @:public public function transform(value : Float) : Float;
 	
-	@:overload public function getDirection() : Bool;
+	@:overload @:public public function getDirection() : Bool;
 	
-	@:overload public function setDirection(direction : Bool) : Void;
+	@:overload @:public public function setDirection(direction : Bool) : Void;
 	
-	@:overload public function getPolarity() : Bool;
+	@:overload @:public public function getPolarity() : Bool;
 	
-	@:overload public function setPolarity(polarity : Bool) : Void;
+	@:overload @:public public function setPolarity(polarity : Bool) : Void;
 	
-	@:overload public function getTransform() : Int;
+	@:overload @:public public function getTransform() : Int;
 	
-	@:overload public function setTransform(transform : Int) : Void;
+	@:overload @:public public function setTransform(transform : Int) : Void;
 	
 	
 }

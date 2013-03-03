@@ -28,28 +28,28 @@ extern class NewArrayExpression extends sun.tools.tree.NaryExpression
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, right : sun.tools.tree.Expression, args : java.NativeArray<sun.tools.tree.Expression>) : Void;
+	@:overload @:public public function new(where : haxe.Int64, right : sun.tools.tree.Expression, args : java.NativeArray<sun.tools.tree.Expression>) : Void;
 	
-	@:overload public function new(where : haxe.Int64, right : sun.tools.tree.Expression, args : java.NativeArray<sun.tools.tree.Expression>, init : sun.tools.tree.Expression) : Void;
+	@:overload @:public public function new(where : haxe.Int64, right : sun.tools.tree.Expression, args : java.NativeArray<sun.tools.tree.Expression>, init : sun.tools.tree.Expression) : Void;
 	
 	/**
 	* Check
 	*/
-	@:overload public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
+	@:overload @:public override public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
 	
-	@:overload public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload @:public override public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* Inline
 	*/
-	//@:overload public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	//@:overload @:public override public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload @:public override public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* Code
 	*/
-	@:overload public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	
 }

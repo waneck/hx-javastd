@@ -36,7 +36,7 @@ package com.sun.crypto.provider;
 	* @param provider the provider
 	* @param transformation the transformation
 	*/
-	@:overload private function new(cipherSpi : javax.crypto.CipherSpi, provider : java.security.Provider, transformation : String) : Void;
+	@:overload @:protected private function new(cipherSpi : javax.crypto.CipherSpi, provider : java.security.Provider, transformation : String) : Void;
 	
 	
 }

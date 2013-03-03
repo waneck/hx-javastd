@@ -25,41 +25,41 @@ package com.sun.corba.se.impl.interceptors;
 */
 extern class ClientRequestInfoImpl extends com.sun.corba.se.impl.interceptors.RequestInfoImpl implements org.omg.PortableInterceptor.ClientRequestInfo
 {
-	private var piCurrentPushed : Bool;
+	@:protected private var piCurrentPushed : Bool;
 	
 	/*
 	**********************************************************************
 	* Access protection
 	**********************************************************************/
-	private static var MID_TARGET(default, null) : Int;
+	@:protected @:static @:final private static var MID_TARGET(default, null) : Int;
 	
-	private static var MID_EFFECTIVE_TARGET(default, null) : Int;
+	@:protected @:static @:final private static var MID_EFFECTIVE_TARGET(default, null) : Int;
 	
-	private static var MID_EFFECTIVE_PROFILE(default, null) : Int;
+	@:protected @:static @:final private static var MID_EFFECTIVE_PROFILE(default, null) : Int;
 	
-	private static var MID_RECEIVED_EXCEPTION(default, null) : Int;
+	@:protected @:static @:final private static var MID_RECEIVED_EXCEPTION(default, null) : Int;
 	
-	private static var MID_RECEIVED_EXCEPTION_ID(default, null) : Int;
+	@:protected @:static @:final private static var MID_RECEIVED_EXCEPTION_ID(default, null) : Int;
 	
-	private static var MID_GET_EFFECTIVE_COMPONENT(default, null) : Int;
+	@:protected @:static @:final private static var MID_GET_EFFECTIVE_COMPONENT(default, null) : Int;
 	
-	private static var MID_GET_EFFECTIVE_COMPONENTS(default, null) : Int;
+	@:protected @:static @:final private static var MID_GET_EFFECTIVE_COMPONENTS(default, null) : Int;
 	
-	private static var MID_GET_REQUEST_POLICY(default, null) : Int;
+	@:protected @:static @:final private static var MID_GET_REQUEST_POLICY(default, null) : Int;
 	
-	private static var MID_ADD_REQUEST_SERVICE_CONTEXT(default, null) : Int;
+	@:protected @:static @:final private static var MID_ADD_REQUEST_SERVICE_CONTEXT(default, null) : Int;
 	
 	/**
 	* Creates a new ClientRequestInfo implementation.
 	* The constructor is package scope since no other package need create
 	* an instance of this class.
 	*/
-	@:overload private function new(myORB : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:protected private function new(myORB : com.sun.corba.se.spi.orb.ORB) : Void;
 	
 	/**
 	* The object which the client called to perform the operation.
 	*/
-	@:overload public function target() : org.omg.CORBA.Object;
+	@:overload @:public public function target() : org.omg.CORBA.Object;
 	
 	/**
 	* The actual object on which the operation will be invoked.  If the
@@ -67,7 +67,7 @@ extern class ClientRequestInfoImpl extends com.sun.corba.se.impl.interceptors.Re
 	* effective_target will contain the forwarded IOR while target will
 	* remain unchanged.
 	*/
-	@:overload public function effective_target() : org.omg.CORBA.Object;
+	@:overload @:public public function effective_target() : org.omg.CORBA.Object;
 	
 	/**
 	* The profile that will be used to send the request.  If a location
@@ -75,17 +75,17 @@ extern class ClientRequestInfoImpl extends com.sun.corba.se.impl.interceptors.Re
 	* profile change accordingly, then this profile will be that located
 	* profile.
 	*/
-	@:overload public function effective_profile() : org.omg.IOP.TaggedProfile;
+	@:overload @:public public function effective_profile() : org.omg.IOP.TaggedProfile;
 	
 	/**
 	* Contains the exception to be returned to the client.
 	*/
-	@:overload public function received_exception() : org.omg.CORBA.Any;
+	@:overload @:public public function received_exception() : org.omg.CORBA.Any;
 	
 	/**
 	* The CORBA::RepositoryId of the exception to be returned to the client.
 	*/
-	@:overload public function received_exception_id() : String;
+	@:overload @:public public function received_exception_id() : String;
 	
 	/**
 	* Returns the IOP::TaggedComponent with the given ID from the profile
@@ -93,18 +93,18 @@ extern class ClientRequestInfoImpl extends com.sun.corba.se.impl.interceptors.Re
 	* given component ID, it is undefined which component this operation
 	* returns (get_effective_component should be called instead).
 	*/
-	@:overload public function get_effective_component(id : Int) : org.omg.IOP.TaggedComponent;
+	@:overload @:public public function get_effective_component(id : Int) : org.omg.IOP.TaggedComponent;
 	
 	/**
 	* Returns all the tagged components with the given ID from the profile
 	* selected for this request.
 	*/
-	@:overload public function get_effective_components(id : Int) : java.NativeArray<org.omg.IOP.TaggedComponent>;
+	@:overload @:public public function get_effective_components(id : Int) : java.NativeArray<org.omg.IOP.TaggedComponent>;
 	
 	/**
 	* Returns the given policy in effect for this operation.
 	*/
-	@:overload public function get_request_policy(type : Int) : org.omg.CORBA.Policy;
+	@:overload @:public public function get_request_policy(type : Int) : org.omg.CORBA.Policy;
 	
 	/**
 	* Allows interceptors to add service contexts to the request.
@@ -112,96 +112,96 @@ extern class ClientRequestInfoImpl extends com.sun.corba.se.impl.interceptors.Re
 	* There is no declaration of the order of the service contexts.  They
 	* may or may not appear in the order they are added.
 	*/
-	@:overload public function add_request_service_context(service_context : org.omg.IOP.ServiceContext, replace : Bool) : Void;
+	@:overload @:public public function add_request_service_context(service_context : org.omg.IOP.ServiceContext, replace : Bool) : Void;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload public function request_id() : Int;
+	@:overload @:public override public function request_id() : Int;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload public function operation() : String;
+	@:overload @:public override public function operation() : String;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload public function arguments() : java.NativeArray<org.omg.Dynamic.Parameter>;
+	@:overload @:public override public function arguments() : java.NativeArray<org.omg.Dynamic.Parameter>;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload public function exceptions() : java.NativeArray<org.omg.CORBA.TypeCode>;
+	@:overload @:public override public function exceptions() : java.NativeArray<org.omg.CORBA.TypeCode>;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload public function contexts() : java.NativeArray<String>;
+	@:overload @:public override public function contexts() : java.NativeArray<String>;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload public function operation_context() : java.NativeArray<String>;
+	@:overload @:public override public function operation_context() : java.NativeArray<String>;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload public function result() : org.omg.CORBA.Any;
+	@:overload @:public override public function result() : org.omg.CORBA.Any;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload public function response_expected() : Bool;
+	@:overload @:public override public function response_expected() : Bool;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload public function forward_reference() : org.omg.CORBA.Object;
+	@:overload @:public override public function forward_reference() : org.omg.CORBA.Object;
 	
-	@:overload private function setLocatedIOR(ior : com.sun.corba.se.spi.ior.IOR) : Void;
+	@:overload @:protected private function setLocatedIOR(ior : com.sun.corba.se.spi.ior.IOR) : Void;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload public function get_request_service_context(id : Int) : org.omg.IOP.ServiceContext;
+	@:overload @:public override public function get_request_service_context(id : Int) : org.omg.IOP.ServiceContext;
 	
 	/**
 	* does not contain an etry for that ID, BAD_PARAM with a minor code of
 	* TBD_BP is raised.
 	*/
-	@:overload public function get_reply_service_context(id : Int) : org.omg.IOP.ServiceContext;
+	@:overload @:public override public function get_reply_service_context(id : Int) : org.omg.IOP.ServiceContext;
 	
-	@:overload public function connection() : com.sun.corba.se.spi.legacy.connection.Connection;
+	@:overload @:public override public function connection() : com.sun.corba.se.spi.legacy.connection.Connection;
 	
 	/*
 	**********************************************************************
 	* Package-scope interfaces
 	**********************************************************************/
-	@:overload private function setInfo(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
+	@:overload @:protected private function setInfo(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
 	
 	/**
 	* Overridden from RequestInfoImpl.  Calls the super class, then
 	* sets the ending point call depending on the reply status.
 	*/
-	@:overload private function setReplyStatus(replyStatus : java.StdTypes.Int16) : Void;
+	@:overload @:protected override private function setReplyStatus(replyStatus : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Sets DII request object in the RequestInfoObject.
 	*/
-	@:overload private function setDIIRequest(req : org.omg.CORBA.Request) : Void;
+	@:overload @:protected private function setDIIRequest(req : org.omg.CORBA.Request) : Void;
 	
 	/**
 	* Keeps track of whether initiate was called for a DII request.  The ORB
 	* needs to know this so it knows whether to ignore a second call to
 	* initiateClientPIRequest or not.
 	*/
-	@:overload private function setDIIInitiate(diiInitiate : Bool) : Void;
+	@:overload @:protected private function setDIIInitiate(diiInitiate : Bool) : Void;
 	
 	/**
 	* See comment for setDIIInitiate
 	*/
-	@:overload private function isDIIInitiate() : Bool;
+	@:overload @:protected private function isDIIInitiate() : Bool;
 	
 	/**
 	* The PICurrent stack should only be popped if it was pushed.
@@ -209,21 +209,21 @@ extern class ClientRequestInfoImpl extends com.sun.corba.se.impl.interceptors.Re
 	* after the stub's entry to _request but before the push
 	* end up in _releaseReply which will try to pop unless told not to.
 	*/
-	@:overload private function setPICurrentPushed(piCurrentPushed : Bool) : Void;
+	@:overload @:protected private function setPICurrentPushed(piCurrentPushed : Bool) : Void;
 	
-	@:overload private function isPICurrentPushed() : Bool;
+	@:overload @:protected private function isPICurrentPushed() : Bool;
 	
 	/**
 	* Overridden from RequestInfoImpl.
 	*/
-	@:overload private function setException(exception : java.lang.Exception) : Void;
+	@:overload @:protected override private function setException(exception : java.lang.Exception) : Void;
 	
-	@:overload private function getIsOneWay() : Bool;
+	@:overload @:protected private function getIsOneWay() : Bool;
 	
 	/**
 	* See description for RequestInfoImpl.checkAccess
 	*/
-	@:overload private function checkAccess(methodID : Int) : Void;
+	@:overload @:protected override private function checkAccess(methodID : Int) : Void;
 	
 	
 }

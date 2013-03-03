@@ -26,58 +26,58 @@ package com.sun.tools.apt.main;
 extern class AptJavaCompiler extends com.sun.tools.javac.main.JavaCompiler
 {
 	/** The context key for the compiler. */
-	private static var compilerKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.apt.main.AptJavaCompiler>;
+	@:protected @:static @:final private static var compilerKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.apt.main.AptJavaCompiler>;
 	
 	/** Get the JavaCompiler instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.main.AptJavaCompiler;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.main.AptJavaCompiler;
 	
-	@:overload public function getSourceFileNames() : java.util.Set<String>;
+	@:overload @:public public function getSourceFileNames() : java.util.Set<String>;
 	
 	/** List of names of generated class files.
 	*/
-	@:overload public function getClassFileNames() : java.util.Set<String>;
+	@:overload @:public public function getClassFileNames() : java.util.Set<String>;
 	
-	@:overload public function getAggregateGenFiles() : java.util.Set<java.io.File>;
+	@:overload @:public public function getAggregateGenFiles() : java.util.Set<java.io.File>;
 	
 	/** Construct a new compiler from a shared context.
 	*/
-	@:overload public function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:public public function new(context : com.sun.tools.javac.util.Context) : Void;
 	
 	/** Emit class files. This switch is always set, except for the first
 	*  phase of retrofitting, where signatures are parsed.
 	*/
-	public var classOutput : Bool;
+	@:public public var classOutput : Bool;
 	
 	/** The internal printing annotation processor should be used.
 	*/
-	public var print : Bool;
+	@:public public var print : Bool;
 	
 	/** Compilation should not be done after annotation processing.
 	*/
-	public var nocompile : Bool;
+	@:public public var nocompile : Bool;
 	
 	/** Are class files being treated as declarations
 	*/
-	public var classesAsDecls : Bool;
+	@:public public var classesAsDecls : Bool;
 	
 	/** Try to open input stream with given name.
 	*  Report an error if this fails.
 	*  @param filename   The file name of the input stream to be opened.
 	*/
-	@:overload public function readSource(filename : javax.tools.JavaFileObject) : java.lang.CharSequence;
+	@:overload @:public override public function readSource(filename : javax.tools.JavaFileObject) : java.lang.CharSequence;
 	
 	/** Parse contents of input stream.
 	*  @param filename     The name of the file from which input stream comes.
 	*  @param input        The input stream to be parsed.
 	*/
-	@:overload private function parse(filename : javax.tools.JavaFileObject, content : java.lang.CharSequence) : JCCompilationUnit;
+	@:overload @:protected override private function parse(filename : javax.tools.JavaFileObject, content : java.lang.CharSequence) : JCCompilationUnit;
 	
-	@:overload private function keepComments() : Bool;
+	@:overload @:protected override private function keepComments() : Bool;
 	
 	/** Main method: compile a list of files, return all compiled classes
 	*  @param filenames     The names of all files to be compiled.
 	*/
-	@:overload public function compile(filenames : com.sun.tools.javac.util.List<String>, origOptions : java.util.Map<String, String>, aptCL : java.lang.ClassLoader, providedFactory : com.sun.mirror.apt.AnnotationProcessorFactory, productiveFactories : java.util.Set<Class<com.sun.mirror.apt.AnnotationProcessorFactory>>, aggregateGenFiles : java.util.Set<java.io.File>) : com.sun.tools.javac.util.List<ClassSymbol>;
+	@:overload @:public public function compile(filenames : com.sun.tools.javac.util.List<String>, origOptions : java.util.Map<String, String>, aptCL : java.lang.ClassLoader, providedFactory : com.sun.mirror.apt.AnnotationProcessorFactory, productiveFactories : java.util.Set<Class<com.sun.mirror.apt.AnnotationProcessorFactory>>, aggregateGenFiles : java.util.Set<java.io.File>) : com.sun.tools.javac.util.List<ClassSymbol>;
 	
 	
 }

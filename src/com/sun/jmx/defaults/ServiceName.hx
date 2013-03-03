@@ -35,7 +35,7 @@ package com.sun.jmx.defaults;
 	* <BR>
 	* The value is <CODE>JMImplementation:type=MBeanServerDelegate</CODE>.
 	*/
-	public static var DELEGATE(default, null) : String;
+	@:public @:static @:final public static var DELEGATE(default, null) : String;
 	
 	/**
 	* The default key properties for registering the class loader of the
@@ -43,42 +43,42 @@ package com.sun.jmx.defaults;
 	* <BR>
 	* The value is <CODE>type=MLet</CODE>.
 	*/
-	public static var MLET(default, null) : String;
+	@:public @:static @:final public static var MLET(default, null) : String;
 	
 	/**
 	* The default domain.
 	* <BR>
 	* The value is <CODE>DefaultDomain</CODE>.
 	*/
-	public static var DOMAIN(default, null) : String;
+	@:public @:static @:final public static var DOMAIN(default, null) : String;
 	
 	/**
 	* The name of the JMX specification implemented by this product.
 	* <BR>
 	* The value is <CODE>Java Management Extensions</CODE>.
 	*/
-	public static var JMX_SPEC_NAME(default, null) : String;
+	@:public @:static @:final public static var JMX_SPEC_NAME(default, null) : String;
 	
 	/**
 	* The version of the JMX specification implemented by this product.
 	* <BR>
 	* The value is <CODE>1.4</CODE>.
 	*/
-	public static var JMX_SPEC_VERSION(default, null) : String;
+	@:public @:static @:final public static var JMX_SPEC_VERSION(default, null) : String;
 	
 	/**
 	* The vendor of the JMX specification implemented by this product.
 	* <BR>
 	* The value is <CODE>Oracle Corporation</CODE>.
 	*/
-	public static var JMX_SPEC_VENDOR(default, null) : String;
+	@:public @:static @:final public static var JMX_SPEC_VENDOR(default, null) : String;
 	
 	/**
 	* The name of this product implementing the  JMX specification.
 	* <BR>
 	* The value is <CODE>JMX</CODE>.
 	*/
-	public static var JMX_IMPL_NAME(default, null) : String;
+	@:public @:static @:final public static var JMX_IMPL_NAME(default, null) : String;
 	
 	/**
 	* The name of the vendor of this product implementing the
@@ -86,7 +86,7 @@ package com.sun.jmx.defaults;
 	* <BR>
 	* The value is <CODE>Oracle Corporation</CODE>.
 	*/
-	public static var JMX_IMPL_VENDOR(default, null) : String;
+	@:public @:static @:final public static var JMX_IMPL_VENDOR(default, null) : String;
 	
 	
 }

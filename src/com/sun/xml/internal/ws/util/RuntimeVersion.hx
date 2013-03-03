@@ -31,12 +31,12 @@ extern class RuntimeVersion
 	* @author Kohsuke Kawaguchi
 	* @author Jitendra Kotamraju
 	*/
-	public static var VERSION(default, null) : com.sun.xml.internal.ws.util.Version;
+	@:public @:static @:final public static var VERSION(default, null) : com.sun.xml.internal.ws.util.Version;
 	
 	/**
 	* Get JAX-WS version
 	*/
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
 	
 }

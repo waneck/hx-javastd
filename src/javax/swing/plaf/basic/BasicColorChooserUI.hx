@@ -30,60 +30,60 @@ extern class BasicColorChooserUI extends javax.swing.plaf.ColorChooserUI
 	*
 	* @since 1.5
 	*/
-	@:require(java5) private var chooser : javax.swing.JColorChooser;
+	@:require(java5) @:protected private var chooser : javax.swing.JColorChooser;
 	
-	private var defaultChoosers : java.NativeArray<javax.swing.colorchooser.AbstractColorChooserPanel>;
+	@:protected private var defaultChoosers : java.NativeArray<javax.swing.colorchooser.AbstractColorChooserPanel>;
 	
-	private var previewListener : javax.swing.event.ChangeListener;
+	@:protected private var previewListener : javax.swing.event.ChangeListener;
 	
-	private var propertyChangeListener : java.beans.PropertyChangeListener;
+	@:protected private var propertyChangeListener : java.beans.PropertyChangeListener;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload private function createDefaultChoosers() : java.NativeArray<javax.swing.colorchooser.AbstractColorChooserPanel>;
+	@:overload @:protected private function createDefaultChoosers() : java.NativeArray<javax.swing.colorchooser.AbstractColorChooserPanel>;
 	
-	@:overload private function uninstallDefaultChoosers() : Void;
+	@:overload @:protected private function uninstallDefaultChoosers() : Void;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installPreviewPanel() : Void;
+	@:overload @:protected private function installPreviewPanel() : Void;
 	
 	/**
 	* Removes installed preview panel from the UI delegate.
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload private function uninstallPreviewPanel() : Void;
+	@:require(java7) @:overload @:protected private function uninstallPreviewPanel() : Void;
 	
-	@:overload private function installDefaults() : Void;
+	@:overload @:protected private function installDefaults() : Void;
 	
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected private function uninstallDefaults() : Void;
 	
-	@:overload private function installListeners() : Void;
+	@:overload @:protected private function installListeners() : Void;
 	
-	@:overload private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	@:overload @:protected private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
 	
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected private function uninstallListeners() : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicColorChooserUI$Handler') @:internal extern class BasicColorChooserUI_Handler implements javax.swing.event.ChangeListener implements java.awt.event.MouseListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function stateChanged(evt : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(evt : javax.swing.event.ChangeEvent) : Void;
 	
-	@:overload public function mousePressed(evt : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(evt : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(evt : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(evt : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseClicked(evt : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(evt : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(evt : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(evt : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(evt : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(evt : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -93,7 +93,7 @@ extern class BasicColorChooserUI extends javax.swing.plaf.ColorChooserUI
 */
 @:native('javax$swing$plaf$basic$BasicColorChooserUI$PropertyHandler') extern class BasicColorChooserUI_PropertyHandler implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

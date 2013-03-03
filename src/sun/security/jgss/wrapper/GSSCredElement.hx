@@ -25,25 +25,25 @@ package sun.security.jgss.wrapper;
 */
 extern class GSSCredElement implements sun.security.jgss.spi.GSSCredentialSpi
 {
-	@:overload public function getProvider() : java.security.Provider;
+	@:overload @:public public function getProvider() : java.security.Provider;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload public function getName() : sun.security.jgss.wrapper.GSSNameElement;
+	@:overload @:public public function getName() : sun.security.jgss.wrapper.GSSNameElement;
 	
-	@:overload public function getInitLifetime() : Int;
+	@:overload @:public public function getInitLifetime() : Int;
 	
-	@:overload public function getAcceptLifetime() : Int;
+	@:overload @:public public function getAcceptLifetime() : Int;
 	
-	@:overload public function isInitiatorCredential() : Bool;
+	@:overload @:public public function isInitiatorCredential() : Bool;
 	
-	@:overload public function isAcceptorCredential() : Bool;
+	@:overload @:public public function isAcceptorCredential() : Bool;
 	
-	@:overload public function getMechanism() : org.ietf.jgss.Oid;
+	@:overload @:public public function getMechanism() : org.ietf.jgss.Oid;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

@@ -44,7 +44,7 @@ extern interface Accessible
 	* is not Accessible, the developer should override the
 	* getAccessibleContext method to return null.
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }

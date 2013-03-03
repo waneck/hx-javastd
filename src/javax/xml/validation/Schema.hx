@@ -70,7 +70,7 @@ package javax.xml.validation;
 	* <p>
 	* The constructor does nothing.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates a new {@link Validator} for this {@link Schema}.
@@ -85,7 +85,7 @@ package javax.xml.validation;
 	* @return
 	*      Always return a non-null valid object.
 	*/
-	@:overload @:abstract public function newValidator() : javax.xml.validation.Validator;
+	@:overload @:public @:abstract public function newValidator() : javax.xml.validation.Validator;
 	
 	/**
 	* Creates a new {@link ValidatorHandler} for this {@link Schema}.
@@ -97,7 +97,7 @@ package javax.xml.validation;
 	* @return
 	*      Always return a non-null valid object.
 	*/
-	@:overload @:abstract public function newValidatorHandler() : javax.xml.validation.ValidatorHandler;
+	@:overload @:public @:abstract public function newValidatorHandler() : javax.xml.validation.ValidatorHandler;
 	
 	
 }

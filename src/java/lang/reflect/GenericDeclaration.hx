@@ -44,7 +44,7 @@ package java.lang.reflect;
 	*     the format specified in
 	*     <cite>The Java&trade; Virtual Machine Specification</cite>
 	*/
-	@:overload public function getTypeParameters() : java.NativeArray<java.lang.reflect.TypeVariable<Dynamic>>;
+	@:overload @:public public function getTypeParameters() : java.NativeArray<java.lang.reflect.TypeVariable<Dynamic>>;
 	
 	
 }

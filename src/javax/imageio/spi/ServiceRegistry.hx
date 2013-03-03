@@ -36,7 +36,7 @@ extern class ServiceRegistry
 	* @exception IllegalArgumentException if
 	* <code>categories</code> is <code>null</code>.
 	*/
-	@:overload public function new(categories : java.util.Iterator<Class<Dynamic>>) : Void;
+	@:overload @:public public function new(categories : java.util.Iterator<Class<Dynamic>>) : Void;
 	
 	/**
 	* Searches for implementations of a particular service class
@@ -72,7 +72,7 @@ extern class ServiceRegistry
 	* @exception IllegalArgumentException if
 	* <code>providerClass</code> is <code>null</code>.
 	*/
-	@:overload public static function lookupProviders<T>(providerClass : Class<T>, loader : java.lang.ClassLoader) : java.util.Iterator<T>;
+	@:overload @:public @:static public static function lookupProviders<T>(providerClass : Class<T>, loader : java.lang.ClassLoader) : java.util.Iterator<T>;
 	
 	/**
 	* Locates and incrementally instantiates the available providers
@@ -96,7 +96,7 @@ extern class ServiceRegistry
 	* @exception IllegalArgumentException if
 	* <code>providerClass</code> is <code>null</code>.
 	*/
-	@:overload public static function lookupProviders<T>(providerClass : Class<T>) : java.util.Iterator<T>;
+	@:overload @:public @:static public static function lookupProviders<T>(providerClass : Class<T>) : java.util.Iterator<T>;
 	
 	/**
 	* Returns an <code>Iterator</code> of <code>Class</code> objects
@@ -106,7 +106,7 @@ extern class ServiceRegistry
 	* @return an <code>Iterator</code> containing
 	* <code>Class</code>objects.
 	*/
-	@:overload public function getCategories() : java.util.Iterator<Class<Dynamic>>;
+	@:overload @:public public function getCategories() : java.util.Iterator<Class<Dynamic>>;
 	
 	/**
 	* Adds a service provider object to the registry.  The provider
@@ -133,7 +133,7 @@ extern class ServiceRegistry
 	* @exception ClassCastException if provider does not implement
 	* the <code>Class</code> defined by <code>category</code>.
 	*/
-	@:overload public function registerServiceProvider<T>(provider : T, category : Class<T>) : Bool;
+	@:overload @:public public function registerServiceProvider<T>(provider : T, category : Class<T>) : Bool;
 	
 	/**
 	* Adds a service provider object to the registry.  The provider
@@ -153,7 +153,7 @@ extern class ServiceRegistry
 	* @exception IllegalArgumentException if
 	* <code>provider</code> is <code>null</code>.
 	*/
-	@:overload public function registerServiceProvider(provider : Dynamic) : Void;
+	@:overload @:public public function registerServiceProvider(provider : Dynamic) : Void;
 	
 	/**
 	* Adds a set of service provider objects, taken from an
@@ -175,7 +175,7 @@ extern class ServiceRegistry
 	* @exception IllegalArgumentException if <code>providers</code>
 	* is <code>null</code> or contains a <code>null</code> entry.
 	*/
-	@:overload public function registerServiceProviders(providers : java.util.Iterator<Dynamic>) : Void;
+	@:overload @:public public function registerServiceProviders(providers : java.util.Iterator<Dynamic>) : Void;
 	
 	/**
 	* Removes a service provider object from the given category.  If
@@ -205,7 +205,7 @@ extern class ServiceRegistry
 	* @exception ClassCastException if provider does not implement
 	* the class defined by <code>category</code>.
 	*/
-	@:overload public function deregisterServiceProvider<T>(provider : T, category : Class<T>) : Bool;
+	@:overload @:public public function deregisterServiceProvider<T>(provider : T, category : Class<T>) : Bool;
 	
 	/**
 	* Removes a service provider object from all categories that
@@ -216,7 +216,7 @@ extern class ServiceRegistry
 	* @exception IllegalArgumentException if <code>provider</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function deregisterServiceProvider(provider : Dynamic) : Void;
+	@:overload @:public public function deregisterServiceProvider(provider : Dynamic) : Void;
 	
 	/**
 	* Returns <code>true</code> if <code>provider</code> is currently
@@ -230,7 +230,7 @@ extern class ServiceRegistry
 	* @exception IllegalArgumentException if <code>provider</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function contains(provider : Dynamic) : Bool;
+	@:overload @:public public function contains(provider : Dynamic) : Bool;
 	
 	/**
 	* Returns an <code>Iterator</code> containing all registered
@@ -252,7 +252,7 @@ extern class ServiceRegistry
 	* @exception IllegalArgumentException if there is no category
 	* corresponding to <code>category</code>.
 	*/
-	@:overload public function getServiceProviders<T>(category : Class<T>, useOrdering : Bool) : java.util.Iterator<T>;
+	@:overload @:public public function getServiceProviders<T>(category : Class<T>, useOrdering : Bool) : java.util.Iterator<T>;
 	
 	/**
 	* Returns an <code>Iterator</code> containing service provider
@@ -276,7 +276,7 @@ extern class ServiceRegistry
 	* @exception IllegalArgumentException if there is no category
 	* corresponding to <code>category</code>.
 	*/
-	@:overload public function getServiceProviders<T>(category : Class<T>, filter : javax.imageio.spi.ServiceRegistry.ServiceRegistry_Filter, useOrdering : Bool) : java.util.Iterator<T>;
+	@:overload @:public public function getServiceProviders<T>(category : Class<T>, filter : javax.imageio.spi.ServiceRegistry.ServiceRegistry_Filter, useOrdering : Bool) : java.util.Iterator<T>;
 	
 	/**
 	* Returns the currently registered service provider object that
@@ -295,7 +295,7 @@ extern class ServiceRegistry
 	* @exception IllegalArgumentException if <code>providerClass</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function getServiceProviderByClass<T>(providerClass : Class<T>) : T;
+	@:overload @:public public function getServiceProviderByClass<T>(providerClass : Class<T>) : T;
 	
 	/**
 	* Sets a pairwise ordering between two service provider objects
@@ -324,7 +324,7 @@ extern class ServiceRegistry
 	* @exception IllegalArgumentException if there is no category
 	* corresponding to <code>category</code>.
 	*/
-	@:overload public function setOrdering<T>(category : Class<T>, firstProvider : T, secondProvider : T) : Bool;
+	@:overload @:public public function setOrdering<T>(category : Class<T>, firstProvider : T, secondProvider : T) : Bool;
 	
 	/**
 	* Sets a pairwise ordering between two service provider objects
@@ -351,7 +351,7 @@ extern class ServiceRegistry
 	* @exception IllegalArgumentException if there is no category
 	* corresponding to <code>category</code>.
 	*/
-	@:overload public function unsetOrdering<T>(category : Class<T>, firstProvider : T, secondProvider : T) : Bool;
+	@:overload @:public public function unsetOrdering<T>(category : Class<T>, firstProvider : T, secondProvider : T) : Bool;
 	
 	/**
 	* Deregisters all service provider object currently registered
@@ -362,13 +362,13 @@ extern class ServiceRegistry
 	* @exception IllegalArgumentException if there is no category
 	* corresponding to <code>category</code>.
 	*/
-	@:overload public function deregisterAll(category : Class<Dynamic>) : Void;
+	@:overload @:public public function deregisterAll(category : Class<Dynamic>) : Void;
 	
 	/**
 	* Deregisters all currently registered service providers from all
 	* categories.
 	*/
-	@:overload public function deregisterAll() : Void;
+	@:overload @:public public function deregisterAll() : Void;
 	
 	/**
 	* Finalizes this object prior to garbage collection.  The
@@ -379,7 +379,7 @@ extern class ServiceRegistry
 	* @exception Throwable if an error occurs during superclass
 	* finalization.
 	*/
-	@:overload public function finalize() : Void;
+	@:overload @:public public function finalize() : Void;
 	
 	
 }
@@ -410,42 +410,42 @@ extern class ServiceRegistry
 }
 @:internal extern class SubRegistry
 {
-	@:overload public function new(registry : javax.imageio.spi.ServiceRegistry, category : Class<Dynamic>) : Void;
+	@:overload @:public public function new(registry : javax.imageio.spi.ServiceRegistry, category : Class<Dynamic>) : Void;
 	
-	@:overload public function registerServiceProvider(provider : Dynamic) : Bool;
+	@:overload @:public public function registerServiceProvider(provider : Dynamic) : Bool;
 	
 	/**
 	* If the provider was not previously registered, do nothing.
 	*
 	* @return true if the provider was previously registered.
 	*/
-	@:overload public function deregisterServiceProvider(provider : Dynamic) : Bool;
+	@:overload @:public public function deregisterServiceProvider(provider : Dynamic) : Bool;
 	
-	@:overload public function contains(provider : Dynamic) : Bool;
+	@:overload @:public public function contains(provider : Dynamic) : Bool;
 	
-	@:overload public function setOrdering(firstProvider : Dynamic, secondProvider : Dynamic) : Bool;
+	@:overload @:public public function setOrdering(firstProvider : Dynamic, secondProvider : Dynamic) : Bool;
 	
-	@:overload public function unsetOrdering(firstProvider : Dynamic, secondProvider : Dynamic) : Bool;
+	@:overload @:public public function unsetOrdering(firstProvider : Dynamic, secondProvider : Dynamic) : Bool;
 	
-	@:overload public function getServiceProviders(useOrdering : Bool) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getServiceProviders(useOrdering : Bool) : java.util.Iterator<Dynamic>;
 	
-	@:overload public function getServiceProviderByClass<T>(providerClass : Class<T>) : T;
+	@:overload @:public public function getServiceProviderByClass<T>(providerClass : Class<T>) : T;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function finalize() : Void;
+	@:overload @:public public function finalize() : Void;
 	
 	
 }
 @:internal extern class FilterIterator<T> implements java.util.Iterator<T>
 {
-	@:overload public function new(iter : java.util.Iterator<T>, filter : javax.imageio.spi.ServiceRegistry.ServiceRegistry_Filter) : Void;
+	@:overload @:public public function new(iter : java.util.Iterator<T>, filter : javax.imageio.spi.ServiceRegistry.ServiceRegistry_Filter) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : T;
+	@:overload @:public public function next() : T;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

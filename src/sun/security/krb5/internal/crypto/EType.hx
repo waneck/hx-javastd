@@ -30,51 +30,51 @@ package sun.security.krb5.internal.crypto;
 */
 extern class EType
 {
-	@:overload public static function getInstance(eTypeConst : Int) : sun.security.krb5.internal.crypto.EType;
+	@:overload @:public @:static public static function getInstance(eTypeConst : Int) : sun.security.krb5.internal.crypto.EType;
 	
-	@:overload @:abstract public function eType() : Int;
+	@:overload @:public @:abstract public function eType() : Int;
 	
-	@:overload @:abstract public function minimumPadSize() : Int;
+	@:overload @:public @:abstract public function minimumPadSize() : Int;
 	
-	@:overload @:abstract public function confounderSize() : Int;
+	@:overload @:public @:abstract public function confounderSize() : Int;
 	
-	@:overload @:abstract public function checksumType() : Int;
+	@:overload @:public @:abstract public function checksumType() : Int;
 	
-	@:overload @:abstract public function checksumSize() : Int;
+	@:overload @:public @:abstract public function checksumSize() : Int;
 	
-	@:overload @:abstract public function blockSize() : Int;
+	@:overload @:public @:abstract public function blockSize() : Int;
 	
-	@:overload @:abstract public function keyType() : Int;
+	@:overload @:public @:abstract public function keyType() : Int;
 	
-	@:overload @:abstract public function keySize() : Int;
+	@:overload @:public @:abstract public function keySize() : Int;
 	
-	@:overload @:abstract public function encrypt(data : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function encrypt(data : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:abstract public function encrypt(data : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function encrypt(data : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:abstract public function decrypt(cipher : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function decrypt(cipher : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:abstract public function decrypt(cipher : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function decrypt(cipher : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function dataSize(data : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public public function dataSize(data : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload public function padSize(data : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public public function padSize(data : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload public function startOfChecksum() : Int;
+	@:overload @:public public function startOfChecksum() : Int;
 	
-	@:overload public function startOfData() : Int;
+	@:overload @:public public function startOfData() : Int;
 	
-	@:overload public function startOfPad(data : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public public function startOfPad(data : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload public function decryptedData(data : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function decryptedData(data : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function getBuiltInDefaults() : java.NativeArray<Int>;
+	@:overload @:public @:static public static function getBuiltInDefaults() : java.NativeArray<Int>;
 	
 	/**
 	* Retrieves the default etypes from the configuration file, or
 	* if that's not available, return the built-in list of default etypes.
 	*/
-	@:overload public static function getDefaults(configName : String) : java.NativeArray<Int>;
+	@:overload @:public @:static public static function getDefaults(configName : String) : java.NativeArray<Int>;
 	
 	/**
 	* Retrieve the default etypes from the configuration file for
@@ -84,13 +84,13 @@ extern class EType
 	* to decrypt an AS-REP, we should only ask for etypes for which
 	* we have keys.
 	*/
-	@:overload public static function getDefaults(configName : String, keys : java.NativeArray<sun.security.krb5.EncryptionKey>) : java.NativeArray<Int>;
+	@:overload @:public @:static public static function getDefaults(configName : String, keys : java.NativeArray<sun.security.krb5.EncryptionKey>) : java.NativeArray<Int>;
 	
-	@:overload public static function isSupported(eTypeConst : Int, config : java.NativeArray<Int>) : Bool;
+	@:overload @:public @:static public static function isSupported(eTypeConst : Int, config : java.NativeArray<Int>) : Bool;
 	
-	@:overload public static function isSupported(eTypeConst : Int) : Bool;
+	@:overload @:public @:static public static function isSupported(eTypeConst : Int) : Bool;
 	
-	@:overload public static function toString(type : Int) : String;
+	@:overload @:public @:static public static function toString(type : Int) : String;
 	
 	
 }

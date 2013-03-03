@@ -28,7 +28,7 @@ package javax.management;
 	/**
 	* Basic Constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Applies the ClassAttributeValueExp on an MBean. Returns the name of
@@ -41,14 +41,14 @@ package javax.management;
 	* @exception BadAttributeValueExpException
 	* @exception InvalidApplicationException
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
+	@:overload @:public override public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
 	
 	/**
 	* Returns the string "Class" representing its value
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload private function getValue(name : javax.management.ObjectName) : Dynamic;
+	@:overload @:protected private function getValue(name : javax.management.ObjectName) : Dynamic;
 	
 	
 }

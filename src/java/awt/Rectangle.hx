@@ -33,7 +33,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @see #getLocation()
 	* @since 1.0
 	*/
-	@:require(java0) public var x : Int;
+	@:require(java0) @:public public var x : Int;
 	
 	/**
 	* The Y coordinate of the upper-left corner of the <code>Rectangle</code>.
@@ -43,7 +43,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @see #getLocation()
 	* @since 1.0
 	*/
-	@:require(java0) public var y : Int;
+	@:require(java0) @:public public var y : Int;
 	
 	/**
 	* The width of the <code>Rectangle</code>.
@@ -52,7 +52,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @see #getSize()
 	* @since 1.0
 	*/
-	@:require(java0) public var width : Int;
+	@:require(java0) @:public public var width : Int;
 	
 	/**
 	* The height of the <code>Rectangle</code>.
@@ -62,14 +62,14 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @see #getSize()
 	* @since 1.0
 	*/
-	@:require(java0) public var height : Int;
+	@:require(java0) @:public public var height : Int;
 	
 	/**
 	* Constructs a new <code>Rectangle</code> whose upper-left corner
 	* is at (0,&nbsp;0) in the coordinate space, and whose width and
 	* height are both zero.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>Rectangle</code>, initialized to match
@@ -78,7 +78,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	*           to a newly constructed <code>Rectangle</code>
 	* @since 1.1
 	*/
-	@:require(java1) @:overload public function new(r : java.awt.Rectangle) : Void;
+	@:require(java1) @:overload @:public public function new(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Constructs a new <code>Rectangle</code> whose upper-left corner is
@@ -91,7 +91,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @param     height   the height of the <code>Rectangle</code>
 	* @since 1.0
 	*/
-	@:require(java0) @:overload public function new(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java0) @:overload @:public public function new(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Constructs a new <code>Rectangle</code> whose upper-left corner
@@ -100,7 +100,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @param width the width of the <code>Rectangle</code>
 	* @param height the height of the <code>Rectangle</code>
 	*/
-	@:overload public function new(width : Int, height : Int) : Void;
+	@:overload @:public public function new(width : Int, height : Int) : Void;
 	
 	/**
 	* Constructs a new <code>Rectangle</code> whose upper-left corner is
@@ -112,7 +112,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @param d a <code>Dimension</code>, representing the
 	* width and height of the <code>Rectangle</code>
 	*/
-	@:overload public function new(p : java.awt.Point, d : java.awt.Dimension) : Void;
+	@:overload @:public public function new(p : java.awt.Point, d : java.awt.Dimension) : Void;
 	
 	/**
 	* Constructs a new <code>Rectangle</code> whose upper-left corner is the
@@ -120,7 +120,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @param p a <code>Point</code> that is the top left corner
 	* of the <code>Rectangle</code>
 	*/
-	@:overload public function new(p : java.awt.Point) : Void;
+	@:overload @:public public function new(p : java.awt.Point) : Void;
 	
 	/**
 	* Constructs a new <code>Rectangle</code> whose top left corner is
@@ -128,35 +128,35 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* by the <code>Dimension</code> argument.
 	* @param d a <code>Dimension</code>, specifying width and height
 	*/
-	@:overload public function new(d : java.awt.Dimension) : Void;
+	@:overload @:public public function new(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the X coordinate of the bounding <code>Rectangle</code> in
 	* <code>double</code> precision.
 	* @return the X coordinate of the bounding <code>Rectangle</code>.
 	*/
-	@:overload override public function getX() : Float;
+	@:overload @:public override public function getX() : Float;
 	
 	/**
 	* Returns the Y coordinate of the bounding <code>Rectangle</code> in
 	* <code>double</code> precision.
 	* @return the Y coordinate of the bounding <code>Rectangle</code>.
 	*/
-	@:overload override public function getY() : Float;
+	@:overload @:public override public function getY() : Float;
 	
 	/**
 	* Returns the width of the bounding <code>Rectangle</code> in
 	* <code>double</code> precision.
 	* @return the width of the bounding <code>Rectangle</code>.
 	*/
-	@:overload override public function getWidth() : Float;
+	@:overload @:public override public function getWidth() : Float;
 	
 	/**
 	* Returns the height of the bounding <code>Rectangle</code> in
 	* <code>double</code> precision.
 	* @return the height of the bounding <code>Rectangle</code>.
 	*/
-	@:overload override public function getHeight() : Float;
+	@:overload @:public override public function getHeight() : Float;
 	
 	/**
 	* Gets the bounding <code>Rectangle</code> of this <code>Rectangle</code>.
@@ -171,13 +171,13 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @see       #setBounds(int, int, int, int)
 	* @since     1.1
 	*/
-	@:require(java1) @:overload override public function getBounds() : java.awt.Rectangle;
+	@:require(java1) @:overload @:public override public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public override public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Sets the bounding <code>Rectangle</code> of this <code>Rectangle</code>
@@ -190,7 +190,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @see       java.awt.Component#setBounds(java.awt.Rectangle)
 	* @since     1.1
 	*/
-	@:require(java1) @:overload public function setBounds(r : java.awt.Rectangle) : Void;
+	@:require(java1) @:overload @:public public function setBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Sets the bounding <code>Rectangle</code> of this
@@ -210,7 +210,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @see       java.awt.Component#setBounds(int, int, int, int)
 	* @since     1.1
 	*/
-	@:require(java1) @:overload public function setBounds(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java1) @:overload @:public public function setBounds(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Sets the bounds of this {@code Rectangle} to the integer bounds
@@ -227,7 +227,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @param width the width of the specified rectangle
 	* @param height the new height of the specified rectangle
 	*/
-	@:overload override public function setRect(x : Float, y : Float, width : Float, height : Float) : Void;
+	@:overload @:public override public function setRect(x : Float, y : Float, width : Float, height : Float) : Void;
 	
 	/**
 	* Sets the bounding <code>Rectangle</code> of this
@@ -244,7 +244,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setBounds(int, int, int, int)</code>.
 	*/
-	@:overload public function reshape(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function reshape(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Returns the location of this <code>Rectangle</code>.
@@ -258,7 +258,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @see       #setLocation(int, int)
 	* @since     1.1
 	*/
-	@:require(java1) @:overload public function getLocation() : java.awt.Point;
+	@:require(java1) @:overload @:public public function getLocation() : java.awt.Point;
 	
 	/**
 	* Moves this <code>Rectangle</code> to the specified location.
@@ -271,7 +271,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @see       #getLocation
 	* @since     1.1
 	*/
-	@:require(java1) @:overload public function setLocation(p : java.awt.Point) : Void;
+	@:require(java1) @:overload @:public public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* Moves this <code>Rectangle</code> to the specified location.
@@ -284,7 +284,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @see       java.awt.Component#setLocation(int, int)
 	* @since     1.1
 	*/
-	@:require(java1) @:overload public function setLocation(x : Int, y : Int) : Void;
+	@:require(java1) @:overload @:public public function setLocation(x : Int, y : Int) : Void;
 	
 	/**
 	* Moves this <code>Rectangle</code> to the specified location.
@@ -294,7 +294,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setLocation(int, int)</code>.
 	*/
-	@:overload public function move(x : Int, y : Int) : Void;
+	@:overload @:public public function move(x : Int, y : Int) : Void;
 	
 	/**
 	* Translates this <code>Rectangle</code> the indicated distance,
@@ -307,7 +307,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @see       java.awt.Rectangle#setLocation(int, int)
 	* @see       java.awt.Rectangle#setLocation(java.awt.Point)
 	*/
-	@:overload public function translate(dx : Int, dy : Int) : Void;
+	@:overload @:public public function translate(dx : Int, dy : Int) : Void;
 	
 	/**
 	* Gets the size of this <code>Rectangle</code>, represented by
@@ -322,7 +322,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @see       #setSize(int, int)
 	* @since     1.1
 	*/
-	@:require(java1) @:overload public function getSize() : java.awt.Dimension;
+	@:require(java1) @:overload @:public public function getSize() : java.awt.Dimension;
 	
 	/**
 	* Sets the size of this <code>Rectangle</code> to match the
@@ -335,7 +335,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @see       #getSize
 	* @since     1.1
 	*/
-	@:require(java1) @:overload public function setSize(d : java.awt.Dimension) : Void;
+	@:require(java1) @:overload @:public public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Sets the size of this <code>Rectangle</code> to the specified
@@ -349,7 +349,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @see       #getSize
 	* @since     1.1
 	*/
-	@:require(java1) @:overload public function setSize(width : Int, height : Int) : Void;
+	@:require(java1) @:overload @:public public function setSize(width : Int, height : Int) : Void;
 	
 	/**
 	* Sets the size of this <code>Rectangle</code> to the specified
@@ -360,7 +360,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setSize(int, int)</code>.
 	*/
-	@:overload public function resize(width : Int, height : Int) : Void;
+	@:overload @:public public function resize(width : Int, height : Int) : Void;
 	
 	/**
 	* Checks whether or not this <code>Rectangle</code> contains the
@@ -371,7 +371,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	*            <code>false</code> otherwise.
 	* @since     1.1
 	*/
-	@:require(java1) @:overload public function contains(p : java.awt.Point) : Bool;
+	@:require(java1) @:overload @:public public function contains(p : java.awt.Point) : Bool;
 	
 	/**
 	* Checks whether or not this <code>Rectangle</code> contains the
@@ -385,7 +385,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	*            <code>false</code> otherwise.
 	* @since     1.1
 	*/
-	@:require(java1) @:overload public function contains(x : Int, y : Int) : Bool;
+	@:require(java1) @:overload @:public public function contains(x : Int, y : Int) : Bool;
 	
 	/**
 	* Checks whether or not this <code>Rectangle</code> entirely contains
@@ -397,7 +397,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	*            <code>false</code> otherwise
 	* @since     1.2
 	*/
-	@:require(java2) @:overload public function contains(r : java.awt.Rectangle) : Bool;
+	@:require(java2) @:overload @:public public function contains(r : java.awt.Rectangle) : Bool;
 	
 	/**
 	* Checks whether this <code>Rectangle</code> entirely contains
@@ -414,7 +414,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	*            <code>false</code> otherwise.
 	* @since     1.1
 	*/
-	@:require(java1) @:overload public function contains(X : Int, Y : Int, W : Int, H : Int) : Bool;
+	@:require(java1) @:overload @:public public function contains(X : Int, Y : Int, W : Int, H : Int) : Bool;
 	
 	/**
 	* Checks whether or not this <code>Rectangle</code> contains the
@@ -429,7 +429,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>contains(int, int)</code>.
 	*/
-	@:overload public function inside(X : Int, Y : Int) : Bool;
+	@:overload @:public public function inside(X : Int, Y : Int) : Bool;
 	
 	/**
 	* Determines whether or not this <code>Rectangle</code> and the specified
@@ -441,7 +441,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	*            and this <code>Rectangle</code> intersect;
 	*            <code>false</code> otherwise.
 	*/
-	@:overload public function intersects(r : java.awt.Rectangle) : Bool;
+	@:overload @:public public function intersects(r : java.awt.Rectangle) : Bool;
 	
 	/**
 	* Computes the intersection of this <code>Rectangle</code> with the
@@ -456,7 +456,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	*            this <code>Rectangle</code>; or if the rectangles
 	*            do not intersect, an empty rectangle.
 	*/
-	@:overload public function intersection(r : java.awt.Rectangle) : java.awt.Rectangle;
+	@:overload @:public public function intersection(r : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	/**
 	* Computes the union of this <code>Rectangle</code> with the
@@ -481,7 +481,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	*            the specified <code>Rectangle</code> and this
 	*            <code>Rectangle</code>.
 	*/
-	@:overload public function union(r : java.awt.Rectangle) : java.awt.Rectangle;
+	@:overload @:public public function union(r : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	/**
 	* Adds a point, specified by the integer arguments {@code newx,newy}
@@ -510,7 +510,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @param newx the X coordinate of the new point
 	* @param newy the Y coordinate of the new point
 	*/
-	@:overload public function add(newx : Int, newy : Int) : Void;
+	@:overload @:public public function add(newx : Int, newy : Int) : Void;
 	
 	/**
 	* Adds the specified {@code Point} to the bounds of this
@@ -539,7 +539,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @param pt the new <code>Point</code> to add to this
 	*           <code>Rectangle</code>
 	*/
-	@:overload public function add(pt : java.awt.Point) : Void;
+	@:overload @:public public function add(pt : java.awt.Point) : Void;
 	
 	/**
 	* Adds a <code>Rectangle</code> to this <code>Rectangle</code>.
@@ -564,7 +564,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* that dimension.
 	* @param  r the specified <code>Rectangle</code>
 	*/
-	@:overload public function add(r : java.awt.Rectangle) : Void;
+	@:overload @:public public function add(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Resizes the <code>Rectangle</code> both horizontally and vertically.
@@ -589,31 +589,31 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @param h the horizontal expansion
 	* @param v the vertical expansion
 	*/
-	@:overload public function grow(h : Int, v : Int) : Void;
+	@:overload @:public public function grow(h : Int, v : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function isEmpty() : Bool;
+	@:require(java2) @:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function outcode(x : Float, y : Float) : Int;
+	@:require(java2) @:overload @:public override public function outcode(x : Float, y : Float) : Int;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function createIntersection(r : java.awt.geom.Rectangle2D) : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public override public function createIntersection(r : java.awt.geom.Rectangle2D) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function createUnion(r : java.awt.geom.Rectangle2D) : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public override public function createUnion(r : java.awt.geom.Rectangle2D) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Checks whether two rectangles are equal.
@@ -627,7 +627,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @return    <code>true</code> if the objects are equal;
 	*            <code>false</code> otherwise.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a <code>String</code> representing this
@@ -635,7 +635,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @return a <code>String</code> representing this
 	*               <code>Rectangle</code> object's coordinate and size values.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

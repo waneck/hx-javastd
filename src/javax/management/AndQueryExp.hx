@@ -35,22 +35,22 @@ package javax.management;
 	/**
 	* Default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new AndQueryExp with q1 and q2 QueryExp.
 	*/
-	@:overload public function new(q1 : javax.management.QueryExp, q2 : javax.management.QueryExp) : Void;
+	@:overload @:public public function new(q1 : javax.management.QueryExp, q2 : javax.management.QueryExp) : Void;
 	
 	/**
 	* Returns the left query expression.
 	*/
-	@:overload public function getLeftExp() : javax.management.QueryExp;
+	@:overload @:public public function getLeftExp() : javax.management.QueryExp;
 	
 	/**
 	* Returns the right query expression.
 	*/
-	@:overload public function getRightExp() : javax.management.QueryExp;
+	@:overload @:public public function getRightExp() : javax.management.QueryExp;
 	
 	/**
 	* Applies the AndQueryExp on a MBean.
@@ -66,12 +66,12 @@ package javax.management;
 	* @exception InvalidApplicationException  An attempt has been made to apply a subquery expression to a
 	* managed object or a qualified attribute expression to a managed object of the wrong class.
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function apply(name : javax.management.ObjectName) : Bool;
 	
 	/**
 	* Returns a string representation of this AndQueryExp
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

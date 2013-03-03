@@ -32,29 +32,29 @@ package sun.tools.jps;
 */
 @:require(java5) extern class Arguments
 {
-	@:overload public static function printUsage(ps : java.io.PrintStream) : Void;
+	@:overload @:public @:static public static function printUsage(ps : java.io.PrintStream) : Void;
 	
-	@:overload public function new(args : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(args : java.NativeArray<String>) : Void;
 	
-	@:overload public function isDebug() : Bool;
+	@:overload @:public public function isDebug() : Bool;
 	
-	@:overload public function printStackTrace() : Bool;
+	@:overload @:public public function printStackTrace() : Bool;
 	
-	@:overload public function isHelp() : Bool;
+	@:overload @:public public function isHelp() : Bool;
 	
-	@:overload public function isQuiet() : Bool;
+	@:overload @:public public function isQuiet() : Bool;
 	
-	@:overload public function showLongPaths() : Bool;
+	@:overload @:public public function showLongPaths() : Bool;
 	
-	@:overload public function showVmArgs() : Bool;
+	@:overload @:public public function showVmArgs() : Bool;
 	
-	@:overload public function showVmFlags() : Bool;
+	@:overload @:public public function showVmFlags() : Bool;
 	
-	@:overload public function showMainArgs() : Bool;
+	@:overload @:public public function showMainArgs() : Bool;
 	
-	@:overload public function hostname() : String;
+	@:overload @:public public function hostname() : String;
 	
-	@:overload public function hostId() : sun.jvmstat.monitor.HostIdentifier;
+	@:overload @:public public function hostId() : sun.jvmstat.monitor.HostIdentifier;
 	
 	
 }

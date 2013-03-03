@@ -70,7 +70,7 @@ package java.util;
 	* Constructs a ConcurrentModificationException with no
 	* detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a {@code ConcurrentModificationException} with the
@@ -78,7 +78,7 @@ package java.util;
 	*
 	* @param message the detail message pertaining to this exception.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructs a new exception with the specified cause and a detail
@@ -91,7 +91,7 @@ package java.util;
 	*         unknown.)
 	* @since  1.7
 	*/
-	@:require(java7) @:overload public function new(cause : java.lang.Throwable) : Void;
+	@:require(java7) @:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a new exception with the specified detail message and
@@ -109,7 +109,7 @@ package java.util;
 	*         unknown.)
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:require(java7) @:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	
 }

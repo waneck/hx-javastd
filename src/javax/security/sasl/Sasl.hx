@@ -41,7 +41,7 @@ extern class Sasl
 	* server. If this property is absent, the default qop is <tt>"auth"</tt>.
 	* The value of this constant is <tt>"javax.security.sasl.qop"</tt>.
 	*/
-	public static var QOP(default, null) : String;
+	@:public @:static @:final public static var QOP(default, null) : String;
 	
 	/**
 	* The name of a property that specifies the cipher strength to use.
@@ -63,7 +63,7 @@ extern class Sasl
 	* <tt>"high,medium,low"</tt>.
 	* The value of this constant is <tt>"javax.security.sasl.strength"</tt>.
 	*/
-	public static var STRENGTH(default, null) : String;
+	@:public @:static @:final public static var STRENGTH(default, null) : String;
 	
 	/**
 	* The name of a property that specifies whether the
@@ -74,7 +74,7 @@ extern class Sasl
 	* <br>The value of this constant is
 	* <tt>"javax.security.sasl.server.authentication"</tt>.
 	*/
-	public static var SERVER_AUTH(default, null) : String;
+	@:public @:static @:final public static var SERVER_AUTH(default, null) : String;
 	
 	/**
 	* The name of a property that specifies the maximum size of the receive
@@ -84,7 +84,7 @@ extern class Sasl
 	* is defined by the mechanism.
 	* <br>The value of this constant is <tt>"javax.security.sasl.maxbuffer"</tt>.
 	*/
-	public static var MAX_BUFFER(default, null) : String;
+	@:public @:static @:final public static var MAX_BUFFER(default, null) : String;
 	
 	/**
 	* The name of a property that specifies the maximum size of the raw send
@@ -94,7 +94,7 @@ extern class Sasl
 	* during the authentication exchange.
 	* <br>The value of this constant is <tt>"javax.security.sasl.rawsendsize"</tt>.
 	*/
-	public static var RAW_SEND_SIZE(default, null) : String;
+	@:public @:static @:final public static var RAW_SEND_SIZE(default, null) : String;
 	
 	/**
 	* The name of a property that specifies whether to reuse previously
@@ -121,7 +121,7 @@ extern class Sasl
 	* criteria for reuseability. Such customizations are
 	* implementation-dependent.
 	*/
-	public static var REUSE(default, null) : String;
+	@:public @:static @:final public static var REUSE(default, null) : String;
 	
 	/**
 	* The name of a property that specifies
@@ -133,7 +133,7 @@ extern class Sasl
 	* <br>The value of this constant is
 	* <tt>"javax.security.sasl.policy.noplaintext"</tt>.
 	*/
-	public static var POLICY_NOPLAINTEXT(default, null) : String;
+	@:public @:static @:final public static var POLICY_NOPLAINTEXT(default, null) : String;
 	
 	/**
 	* The name of a property that specifies whether
@@ -146,7 +146,7 @@ extern class Sasl
 	* <br>The value of this constant is
 	* <tt>"javax.security.sasl.policy.noactive"</tt>.
 	*/
-	public static var POLICY_NOACTIVE(default, null) : String;
+	@:public @:static @:final public static var POLICY_NOACTIVE(default, null) : String;
 	
 	/**
 	* The name of a property that specifies whether
@@ -159,7 +159,7 @@ extern class Sasl
 	* The value of this constant is
 	* <tt>"javax.security.sasl.policy.nodictionary"</tt>.
 	*/
-	public static var POLICY_NODICTIONARY(default, null) : String;
+	@:public @:static @:final public static var POLICY_NODICTIONARY(default, null) : String;
 	
 	/**
 	* The name of a property that specifies whether mechanisms that accept
@@ -171,7 +171,7 @@ extern class Sasl
 	* The value of this constant is
 	* <tt>"javax.security.sasl.policy.noanonymous"</tt>.
 	*/
-	public static var POLICY_NOANONYMOUS(default, null) : String;
+	@:public @:static @:final public static var POLICY_NOANONYMOUS(default, null) : String;
 	
 	/**
 	* The name of a property that specifies whether mechanisms that implement
@@ -186,7 +186,7 @@ extern class Sasl
 	* The value of this constant is
 	* <tt>"javax.security.sasl.policy.forward"</tt>.
 	*/
-	public static var POLICY_FORWARD_SECRECY(default, null) : String;
+	@:public @:static @:final public static var POLICY_FORWARD_SECRECY(default, null) : String;
 	
 	/**
 	* The name of a property that specifies whether
@@ -198,7 +198,7 @@ extern class Sasl
 	* The value of this constant is
 	* <tt>"javax.security.sasl.policy.credentials"</tt>.
 	*/
-	public static var POLICY_PASS_CREDENTIALS(default, null) : String;
+	@:public @:static @:final public static var POLICY_PASS_CREDENTIALS(default, null) : String;
 	
 	/**
 	* The name of a property that specifies the credentials to use.
@@ -211,7 +211,7 @@ extern class Sasl
 	* The value of this constant is
 	* <tt>"javax.security.sasl.credentials"</tt>.
 	*/
-	public static var CREDENTIALS(default, null) : String;
+	@:public @:static @:final public static var CREDENTIALS(default, null) : String;
 	
 	/**
 	* Creates a <tt>SaslClient</tt> using the parameters supplied.
@@ -290,7 +290,7 @@ extern class Sasl
 	*@exception SaslException If cannot create a <tt>SaslClient</tt> because
 	* of an error.
 	*/
-	@:overload public static function createSaslClient(mechanisms : java.NativeArray<String>, authorizationId : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslClient;
+	@:overload @:public @:static public static function createSaslClient(mechanisms : java.NativeArray<String>, authorizationId : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslClient;
 	
 	/**
 	* Creates a <tt>SaslServer</tt> for the specified mechanism.
@@ -360,7 +360,7 @@ extern class Sasl
 	*@exception SaslException If cannot create a <tt>SaslServer</tt> because
 	* of an error.
 	**/
-	@:overload public static function createSaslServer(mechanism : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslServer;
+	@:overload @:public @:static public static function createSaslServer(mechanism : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslServer;
 	
 	/**
 	* Gets an enumeration of known factories for producing <tt>SaslClient</tt>.
@@ -370,7 +370,7 @@ extern class Sasl
 	* <tt>SaslClient</tt>.
 	* @see #createSaslClient
 	*/
-	@:overload public static function getSaslClientFactories() : java.util.Enumeration<javax.security.sasl.SaslClientFactory>;
+	@:overload @:public @:static public static function getSaslClientFactories() : java.util.Enumeration<javax.security.sasl.SaslClientFactory>;
 	
 	/**
 	* Gets an enumeration of known factories for producing <tt>SaslServer</tt>.
@@ -380,7 +380,7 @@ extern class Sasl
 	* <tt>SaslServer</tt>.
 	* @see #createSaslServer
 	*/
-	@:overload public static function getSaslServerFactories() : java.util.Enumeration<javax.security.sasl.SaslServerFactory>;
+	@:overload @:public @:static public static function getSaslServerFactories() : java.util.Enumeration<javax.security.sasl.SaslServerFactory>;
 	
 	
 }

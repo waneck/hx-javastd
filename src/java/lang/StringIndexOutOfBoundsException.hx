@@ -41,7 +41,7 @@ package java.lang;
 	*
 	* @since   JDK1.0.
 	*/
-	@:require(java0) @:overload public function new() : Void;
+	@:require(java0) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>StringIndexOutOfBoundsException</code> with
@@ -49,7 +49,7 @@ package java.lang;
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs a new <code>StringIndexOutOfBoundsException</code>
@@ -57,7 +57,7 @@ package java.lang;
 	*
 	* @param   index   the illegal index.
 	*/
-	@:overload public function new(index : Int) : Void;
+	@:overload @:public public function new(index : Int) : Void;
 	
 	
 }

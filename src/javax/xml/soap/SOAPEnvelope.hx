@@ -107,7 +107,7 @@ extern interface SOAPEnvelope extends javax.xml.soap.SOAPElement
 	*         local name, namespace prefix, and namespace URI
 	* @throws SOAPException if there is a SOAP error
 	*/
-	@:overload @:abstract public function createName(localName : String, prefix : String, uri : String) : javax.xml.soap.Name;
+	@:overload @:public @:abstract public function createName(localName : String, prefix : String, uri : String) : javax.xml.soap.Name;
 	
 	/**
 	* Creates a new <code>Name</code> object initialized with the
@@ -121,7 +121,7 @@ extern interface SOAPEnvelope extends javax.xml.soap.SOAPElement
 	*         local name
 	* @throws SOAPException if there is a SOAP error
 	*/
-	@:overload @:abstract public function createName(localName : String) : javax.xml.soap.Name;
+	@:overload @:public @:abstract public function createName(localName : String) : javax.xml.soap.Name;
 	
 	/**
 	* Returns the <code>SOAPHeader</code> object for
@@ -139,7 +139,7 @@ extern interface SOAPEnvelope extends javax.xml.soap.SOAPElement
 	* @exception SOAPException if there is a problem obtaining the
 	*            <code>SOAPHeader</code> object
 	*/
-	@:overload public function getHeader() : javax.xml.soap.SOAPHeader;
+	@:overload @:public public function getHeader() : javax.xml.soap.SOAPHeader;
 	
 	/**
 	* Returns the <code>SOAPBody</code> object associated with this
@@ -158,7 +158,7 @@ extern interface SOAPEnvelope extends javax.xml.soap.SOAPElement
 	* @exception SOAPException if there is a problem obtaining the
 	*            <code>SOAPBody</code> object
 	*/
-	@:overload public function getBody() : javax.xml.soap.SOAPBody;
+	@:overload @:public public function getBody() : javax.xml.soap.SOAPBody;
 	
 	/**
 	* Creates a <code>SOAPHeader</code> object and sets it as the
@@ -175,7 +175,7 @@ extern interface SOAPEnvelope extends javax.xml.soap.SOAPElement
 	*            <code>SOAPEnvelope</code> object already contains a
 	*            valid <code>SOAPHeader</code> object
 	*/
-	@:overload public function addHeader() : javax.xml.soap.SOAPHeader;
+	@:overload @:public public function addHeader() : javax.xml.soap.SOAPHeader;
 	
 	/**
 	* Creates a <code>SOAPBody</code> object and sets it as the
@@ -192,7 +192,7 @@ extern interface SOAPEnvelope extends javax.xml.soap.SOAPElement
 	*            <code>SOAPEnvelope</code> object already contains a
 	*            valid <code>SOAPBody</code> object
 	*/
-	@:overload public function addBody() : javax.xml.soap.SOAPBody;
+	@:overload @:public public function addBody() : javax.xml.soap.SOAPBody;
 	
 	
 }

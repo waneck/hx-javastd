@@ -36,9 +36,9 @@ extern class AbstractReferenceFinderImpl extends org.xml.sax.helpers.XMLFilterIm
 	* @author
 	*  Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	private var parent(default, null) : com.sun.tools.internal.xjc.reader.internalizer.DOMForest;
+	@:protected @:final private var parent(default, null) : com.sun.tools.internal.xjc.reader.internalizer.DOMForest;
 	
-	@:overload private function new(_parent : com.sun.tools.internal.xjc.reader.internalizer.DOMForest) : Void;
+	@:overload @:protected private function new(_parent : com.sun.tools.internal.xjc.reader.internalizer.DOMForest) : Void;
 	
 	/**
 	* IF the given element contains a reference to an external resource,
@@ -51,11 +51,11 @@ extern class AbstractReferenceFinderImpl extends org.xml.sax.helpers.XMLFilterIm
 	* @return
 	*      It's OK to return a relative URL.
 	*/
-	@:overload @:abstract private function findExternalResource(nsURI : String, localName : String, atts : org.xml.sax.Attributes) : String;
+	@:overload @:protected @:abstract private function findExternalResource(nsURI : String, localName : String, atts : org.xml.sax.Attributes) : String;
 	
-	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	
 }

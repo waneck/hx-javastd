@@ -36,7 +36,7 @@ package com.sun.net.httpserver;
 */
 @:require(java6) extern class Filter
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Asks this filter to pre/post-process the given exchange. The filter
@@ -63,13 +63,13 @@ package com.sun.net.httpserver;
 	*          caught, must be rethrown again.
 	* @throws NullPointerException if either exchange or chain are <code>null</code>
 	*/
-	@:overload @:abstract public function doFilter(exchange : com.sun.net.httpserver.HttpExchange, chain : com.sun.net.httpserver.Filter.Filter_Chain) : Void;
+	@:overload @:public @:abstract public function doFilter(exchange : com.sun.net.httpserver.HttpExchange, chain : com.sun.net.httpserver.Filter.Filter_Chain) : Void;
 	
 	/**
 	* returns a short description of this Filter
 	* @return a string describing the Filter
 	*/
-	@:overload @:abstract public function description() : String;
+	@:overload @:public @:abstract public function description() : String;
 	
 	
 }
@@ -80,7 +80,7 @@ package com.sun.net.httpserver;
 */
 @:native('com$sun$net$httpserver$Filter$Chain') extern class Filter_Chain
 {
-	@:overload public function new(filters : java.util.List<com.sun.net.httpserver.Filter>, handler : com.sun.net.httpserver.HttpHandler) : Void;
+	@:overload @:public public function new(filters : java.util.List<com.sun.net.httpserver.Filter>, handler : com.sun.net.httpserver.HttpHandler) : Void;
 	
 	/**
 	* calls the next filter in the chain, or else
@@ -94,7 +94,7 @@ package com.sun.net.httpserver;
 	* @throws IOException let exceptions pass up the stack
 	* @throws NullPointerException if exchange is <code>null</code>
 	*/
-	@:overload public function doFilter(exchange : com.sun.net.httpserver.HttpExchange) : Void;
+	@:overload @:public public function doFilter(exchange : com.sun.net.httpserver.HttpExchange) : Void;
 	
 	
 }

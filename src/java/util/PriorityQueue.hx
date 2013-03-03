@@ -82,7 +82,7 @@ package java.util;
 	* capacity (11) that orders its elements according to their
 	* {@linkplain Comparable natural ordering}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a {@code PriorityQueue} with the specified initial
@@ -93,7 +93,7 @@ package java.util;
 	* @throws IllegalArgumentException if {@code initialCapacity} is less
 	*         than 1
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Creates a {@code PriorityQueue} with the specified initial capacity
@@ -106,7 +106,7 @@ package java.util;
 	* @throws IllegalArgumentException if {@code initialCapacity} is
 	*         less than 1
 	*/
-	@:overload public function new(initialCapacity : Int, comparator : java.util.Comparator<E>) : Void;
+	@:overload @:public public function new(initialCapacity : Int, comparator : java.util.Comparator<E>) : Void;
 	
 	/**
 	* Creates a {@code PriorityQueue} containing the elements in the
@@ -124,7 +124,7 @@ package java.util;
 	* @throws NullPointerException if the specified collection or any
 	*         of its elements are null
 	*/
-	@:overload public function new(c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	/**
 	* Creates a {@code PriorityQueue} containing the elements in the
@@ -140,7 +140,7 @@ package java.util;
 	* @throws NullPointerException if the specified priority queue or any
 	*         of its elements are null
 	*/
-	@:overload public function new(c : java.util.PriorityQueue<E>) : Void;
+	@:overload @:public public function new(c : java.util.PriorityQueue<E>) : Void;
 	
 	/**
 	* Creates a {@code PriorityQueue} containing the elements in the
@@ -155,7 +155,7 @@ package java.util;
 	* @throws NullPointerException if the specified sorted set or any
 	*         of its elements are null
 	*/
-	@:overload public function new(c : java.util.SortedSet<E>) : Void;
+	@:overload @:public public function new(c : java.util.SortedSet<E>) : Void;
 	
 	/**
 	* Inserts the specified element into this priority queue.
@@ -166,7 +166,7 @@ package java.util;
 	*         according to the priority queue's ordering
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element into this priority queue.
@@ -177,9 +177,9 @@ package java.util;
 	*         according to the priority queue's ordering
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function offer(e : E) : Bool;
+	@:overload @:public override public function offer(e : E) : Bool;
 	
-	@:overload override public function peek() : E;
+	@:overload @:public override public function peek() : E;
 	
 	/**
 	* Removes a single instance of the specified element from this queue,
@@ -192,7 +192,7 @@ package java.util;
 	* @param o element to be removed from this queue, if present
 	* @return {@code true} if this queue changed as a result of the call
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Returns {@code true} if this queue contains the specified element.
@@ -202,7 +202,7 @@ package java.util;
 	* @param o object to be checked for containment in this queue
 	* @return {@code true} if this queue contains the specified element
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns an array containing all of the elements in this queue.
@@ -217,7 +217,7 @@ package java.util;
 	*
 	* @return an array containing all of the elements in this queue
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this queue; the
@@ -256,7 +256,7 @@ package java.util;
 	*         this queue
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Returns an iterator over the elements in this queue. The iterator
@@ -264,17 +264,17 @@ package java.util;
 	*
 	* @return an iterator over the elements in this queue
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Removes all of the elements from this priority queue.
 	* The queue will be empty after this call returns.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload override public function poll() : E;
+	@:overload @:public override public function poll() : E;
 	
 	/**
 	* Returns the comparator used to order the elements in this
@@ -285,17 +285,17 @@ package java.util;
 	*         {@code null} if this queue is sorted according to the
 	*         natural ordering of its elements
 	*/
-	@:overload public function comparator() : java.util.Comparator<E>;
+	@:overload @:public public function comparator() : java.util.Comparator<E>;
 	
 	
 }
 @:native('java$util$PriorityQueue$Itr') @:internal extern class PriorityQueue_Itr implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

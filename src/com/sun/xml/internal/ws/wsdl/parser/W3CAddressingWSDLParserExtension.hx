@@ -30,17 +30,17 @@ extern class W3CAddressingWSDLParserExtension extends com.sun.xml.internal.ws.ap
 	*
 	* @author Arun Gupta
 	*/
-	@:overload public function bindingElements(binding : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundPortType, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload @:public override public function bindingElements(binding : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundPortType, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload public function portElements(port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload @:public override public function portElements(port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload public function bindingOperationElements(operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload @:public override public function bindingOperationElements(operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload public function portTypeOperationInputAttributes(input : com.sun.xml.internal.ws.api.model.wsdl.WSDLInput, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public override public function portTypeOperationInputAttributes(input : com.sun.xml.internal.ws.api.model.wsdl.WSDLInput, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload public function portTypeOperationOutputAttributes(output : com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public override public function portTypeOperationOutputAttributes(output : com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload public function portTypeOperationFaultAttributes(fault : com.sun.xml.internal.ws.api.model.wsdl.WSDLFault, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public override public function portTypeOperationFaultAttributes(fault : com.sun.xml.internal.ws.api.model.wsdl.WSDLFault, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
 	/**
 	* Process wsdl:portType operation after the entire WSDL model has been populated.
@@ -52,24 +52,24 @@ extern class W3CAddressingWSDLParserExtension extends com.sun.xml.internal.ws.ap
 	* </ul>
 	* @param context
 	*/
-	@:overload public function finished(context : com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtensionContext) : Void;
+	@:overload @:public override public function finished(context : com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtensionContext) : Void;
 	
-	@:overload private function getNamespaceURI() : String;
+	@:overload @:protected private function getNamespaceURI() : String;
 	
-	@:overload private function getWsdlActionTag() : javax.xml.namespace.QName;
+	@:overload @:protected private function getWsdlActionTag() : javax.xml.namespace.QName;
 	
 	/**
 	* Patch the default value of wsaw:Anonymous=optional if none is specified
 	*
 	* @param binding WSDLBoundPortTypeImpl
 	*/
-	@:overload private function patchAnonymousDefault(binding : com.sun.xml.internal.ws.model.wsdl.WSDLBoundPortTypeImpl) : Void;
+	@:overload @:protected private function patchAnonymousDefault(binding : com.sun.xml.internal.ws.model.wsdl.WSDLBoundPortTypeImpl) : Void;
 	
-	@:overload @:final private static function buildAction(name : String, o : com.sun.xml.internal.ws.api.model.wsdl.WSDLOperation, isFault : Bool) : String;
+	@:overload @:protected @:static @:final private static function buildAction(name : String, o : com.sun.xml.internal.ws.api.model.wsdl.WSDLOperation, isFault : Bool) : String;
 	
-	private static var COLON_DELIMITER(default, null) : String;
+	@:protected @:static @:final private static var COLON_DELIMITER(default, null) : String;
 	
-	private static var SLASH_DELIMITER(default, null) : String;
+	@:protected @:static @:final private static var SLASH_DELIMITER(default, null) : String;
 	
 	
 }

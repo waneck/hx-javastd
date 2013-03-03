@@ -30,7 +30,7 @@ extern interface InputMethodContext extends java.awt.im.InputMethodRequests
 	* and dispatches it to the client component. For arguments,
 	* see {@link java.awt.event.InputMethodEvent#InputMethodEvent}.
 	*/
-	@:overload public function dispatchInputMethodEvent(id : Int, text : java.text.AttributedCharacterIterator, committedCharacterCount : Int, caret : java.awt.font.TextHitInfo, visiblePosition : java.awt.font.TextHitInfo) : Void;
+	@:overload @:public public function dispatchInputMethodEvent(id : Int, text : java.text.AttributedCharacterIterator, committedCharacterCount : Int, caret : java.awt.font.TextHitInfo, visiblePosition : java.awt.font.TextHitInfo) : Void;
 	
 	/**
 	* Creates a top-level window for use by the input method.
@@ -62,7 +62,7 @@ extern interface InputMethodContext extends java.awt.im.InputMethodRequests
 	* @exception HeadlessException if <code>GraphicsEnvironment.isHeadless
 	*              </code> returns <code>true</code>
 	*/
-	@:overload public function createInputMethodWindow(title : String, attachToInputContext : Bool) : java.awt.Window;
+	@:overload @:public public function createInputMethodWindow(title : String, attachToInputContext : Bool) : java.awt.Window;
 	
 	/**
 	* Creates a top-level Swing JFrame for use by the input method.
@@ -96,7 +96,7 @@ extern interface InputMethodContext extends java.awt.im.InputMethodRequests
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function createInputMethodJFrame(title : String, attachToInputContext : Bool) : javax.swing.JFrame;
+	@:require(java4) @:overload @:public public function createInputMethodJFrame(title : String, attachToInputContext : Bool) : javax.swing.JFrame;
 	
 	/**
 	* Enables or disables notification of the current client window's
@@ -111,7 +111,7 @@ extern interface InputMethodContext extends java.awt.im.InputMethodRequests
 	* enabled or disabled
 	* @param enable true to enable, false to disable
 	*/
-	@:overload public function enableClientWindowNotification(inputMethod : java.awt.im.spi.InputMethod, enable : Bool) : Void;
+	@:overload @:public public function enableClientWindowNotification(inputMethod : java.awt.im.spi.InputMethod, enable : Bool) : Void;
 	
 	
 }

@@ -37,13 +37,13 @@ package com.sun.java.swing.plaf.motif;
 */
 extern class MotifCheckBoxUI extends com.sun.java.swing.plaf.motif.MotifRadioButtonUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function getPropertyPrefix() : String;
+	@:overload @:public override public function getPropertyPrefix() : String;
 	
-	@:overload public function installDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:public override public function installDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
 	
 	
 }

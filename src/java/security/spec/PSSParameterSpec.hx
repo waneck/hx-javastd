@@ -29,7 +29,7 @@ extern class PSSParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* The PSS parameter set with all default values.
 	* @since 1.5
 	*/
-	@:require(java5) public static var DEFAULT(default, null) : java.security.spec.PSSParameterSpec;
+	@:require(java5) @:public @:static @:final public static var DEFAULT(default, null) : java.security.spec.PSSParameterSpec;
 	
 	/**
 	* Creates a new <code>PSSParameterSpec</code> as defined in
@@ -51,7 +51,7 @@ extern class PSSParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* or <code>trailerField</code> is less than 0.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(mdName : String, mgfName : String, mgfSpec : java.security.spec.AlgorithmParameterSpec, saltLen : Int, trailerField : Int) : Void;
+	@:require(java5) @:overload @:public public function new(mdName : String, mgfName : String, mgfSpec : java.security.spec.AlgorithmParameterSpec, saltLen : Int, trailerField : Int) : Void;
 	
 	/**
 	* Creates a new <code>PSSParameterSpec</code>
@@ -63,7 +63,7 @@ extern class PSSParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* @exception IllegalArgumentException if <code>saltLen</code> is
 	* less than 0.
 	*/
-	@:overload public function new(saltLen : Int) : Void;
+	@:overload @:public public function new(saltLen : Int) : Void;
 	
 	/**
 	* Returns the message digest algorithm name.
@@ -71,7 +71,7 @@ extern class PSSParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* @return the message digest algorithm name.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getDigestAlgorithm() : String;
+	@:require(java5) @:overload @:public public function getDigestAlgorithm() : String;
 	
 	/**
 	* Returns the mask generation function algorithm name.
@@ -80,7 +80,7 @@ extern class PSSParameterSpec implements java.security.spec.AlgorithmParameterSp
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getMGFAlgorithm() : String;
+	@:require(java5) @:overload @:public public function getMGFAlgorithm() : String;
 	
 	/**
 	* Returns the parameters for the mask generation function.
@@ -88,14 +88,14 @@ extern class PSSParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* @return the parameters for the mask generation function.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getMGFParameters() : java.security.spec.AlgorithmParameterSpec;
+	@:require(java5) @:overload @:public public function getMGFParameters() : java.security.spec.AlgorithmParameterSpec;
 	
 	/**
 	* Returns the salt length in bits.
 	*
 	* @return the salt length.
 	*/
-	@:overload public function getSaltLength() : Int;
+	@:overload @:public public function getSaltLength() : Int;
 	
 	/**
 	* Returns the value for the trailer field, i.e. bc in PKCS#1 v2.1.
@@ -103,7 +103,7 @@ extern class PSSParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* @return the value for the trailer field, i.e. bc in PKCS#1 v2.1.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getTrailerField() : Int;
+	@:require(java5) @:overload @:public public function getTrailerField() : Int;
 	
 	
 }

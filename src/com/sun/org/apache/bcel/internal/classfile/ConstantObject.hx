@@ -67,7 +67,7 @@ extern interface ConstantObject
 {
 	/** @return object representing the constant, e.g., Long for ConstantLong
 	*/
-	@:overload @:abstract public function getConstantValue(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Dynamic;
+	@:overload @:public @:abstract public function getConstantValue(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Dynamic;
 	
 	
 }

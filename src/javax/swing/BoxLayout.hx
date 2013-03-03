@@ -28,26 +28,26 @@ extern class BoxLayout implements java.awt.LayoutManager2 implements java.io.Ser
 	/**
 	* Specifies that components should be laid out left to right.
 	*/
-	public static var X_AXIS(default, null) : Int;
+	@:public @:static @:final public static var X_AXIS(default, null) : Int;
 	
 	/**
 	* Specifies that components should be laid out top to bottom.
 	*/
-	public static var Y_AXIS(default, null) : Int;
+	@:public @:static @:final public static var Y_AXIS(default, null) : Int;
 	
 	/**
 	* Specifies that components should be laid out in the direction of
 	* a line of text as determined by the target container's
 	* <code>ComponentOrientation</code> property.
 	*/
-	public static var LINE_AXIS(default, null) : Int;
+	@:public @:static @:final public static var LINE_AXIS(default, null) : Int;
 	
 	/**
 	* Specifies that components should be laid out in the direction that
 	* lines flow across a page as determined by the target container's
 	* <code>ComponentOrientation</code> property.
 	*/
-	public static var PAGE_AXIS(default, null) : Int;
+	@:public @:static @:final public static var PAGE_AXIS(default, null) : Int;
 	
 	/**
 	* Creates a layout manager that will lay out components along the
@@ -62,7 +62,7 @@ extern class BoxLayout implements java.awt.LayoutManager2 implements java.io.Ser
 	*
 	* @exception AWTError  if the value of <code>axis</code> is invalid
 	*/
-	@:overload public function new(target : java.awt.Container, axis : Int) : Void;
+	@:overload @:public public function new(target : java.awt.Container, axis : Int) : Void;
 	
 	/**
 	* Returns the container that uses this layout manager.
@@ -71,7 +71,7 @@ extern class BoxLayout implements java.awt.LayoutManager2 implements java.io.Ser
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getTarget() : java.awt.Container;
+	@:require(java6) @:overload @:public @:final public function getTarget() : java.awt.Container;
 	
 	/**
 	* Returns the axis that was used to lay out components.
@@ -85,7 +85,7 @@ extern class BoxLayout implements java.awt.LayoutManager2 implements java.io.Ser
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getAxis() : Int;
+	@:require(java6) @:overload @:public @:final public function getAxis() : Int;
 	
 	/**
 	* Indicates that a child has changed its layout related information,
@@ -101,7 +101,7 @@ extern class BoxLayout implements java.awt.LayoutManager2 implements java.io.Ser
 	* @exception AWTError  if the target isn't the container specified to the
 	*                      BoxLayout constructor
 	*/
-	@:overload @:synchronized public function invalidateLayout(target : java.awt.Container) : Void;
+	@:overload @:public @:synchronized public function invalidateLayout(target : java.awt.Container) : Void;
 	
 	/**
 	* Not used by this class.
@@ -109,14 +109,14 @@ extern class BoxLayout implements java.awt.LayoutManager2 implements java.io.Ser
 	* @param name the name of the component
 	* @param comp the component
 	*/
-	@:overload public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
 	
 	/**
 	* Not used by this class.
 	*
 	* @param comp the component
 	*/
-	@:overload public function removeLayoutComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(comp : java.awt.Component) : Void;
 	
 	/**
 	* Not used by this class.
@@ -124,7 +124,7 @@ extern class BoxLayout implements java.awt.LayoutManager2 implements java.io.Ser
 	* @param comp the component
 	* @param constraints constraints
 	*/
-	@:overload public function addLayoutComponent(comp : java.awt.Component, constraints : Dynamic) : Void;
+	@:overload @:public public function addLayoutComponent(comp : java.awt.Component, constraints : Dynamic) : Void;
 	
 	/**
 	* Returns the preferred dimensions for this layout, given the components
@@ -138,7 +138,7 @@ extern class BoxLayout implements java.awt.LayoutManager2 implements java.io.Ser
 	* @see #minimumLayoutSize
 	* @see #maximumLayoutSize
 	*/
-	@:overload public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the minimum dimensions needed to lay out the components
@@ -151,7 +151,7 @@ extern class BoxLayout implements java.awt.LayoutManager2 implements java.io.Ser
 	* @see #preferredLayoutSize
 	* @see #maximumLayoutSize
 	*/
-	@:overload public function minimumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the maximum dimensions the target container can use
@@ -164,7 +164,7 @@ extern class BoxLayout implements java.awt.LayoutManager2 implements java.io.Ser
 	* @see #preferredLayoutSize
 	* @see #minimumLayoutSize
 	*/
-	@:overload public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the alignment along the X axis for the container.
@@ -177,7 +177,7 @@ extern class BoxLayout implements java.awt.LayoutManager2 implements java.io.Ser
 	* @exception AWTError  if the target isn't the container specified to the
 	*                      BoxLayout constructor
 	*/
-	@:overload @:synchronized public function getLayoutAlignmentX(target : java.awt.Container) : Single;
+	@:overload @:public @:synchronized public function getLayoutAlignmentX(target : java.awt.Container) : Single;
 	
 	/**
 	* Returns the alignment along the Y axis for the container.
@@ -190,7 +190,7 @@ extern class BoxLayout implements java.awt.LayoutManager2 implements java.io.Ser
 	* @exception AWTError  if the target isn't the container specified to the
 	*                      BoxLayout constructor
 	*/
-	@:overload @:synchronized public function getLayoutAlignmentY(target : java.awt.Container) : Single;
+	@:overload @:public @:synchronized public function getLayoutAlignmentY(target : java.awt.Container) : Single;
 	
 	/**
 	* Called by the AWT <!-- XXX CHECK! --> when the specified container
@@ -201,7 +201,7 @@ extern class BoxLayout implements java.awt.LayoutManager2 implements java.io.Ser
 	* @exception AWTError  if the target isn't the container specified to the
 	*                      BoxLayout constructor
 	*/
-	@:overload public function layoutContainer(target : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(target : java.awt.Container) : Void;
 	
 	
 }

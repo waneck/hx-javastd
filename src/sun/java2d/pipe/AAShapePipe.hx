@@ -25,23 +25,23 @@ package sun.java2d.pipe;
 */
 extern class AAShapePipe implements sun.java2d.pipe.ShapeDrawPipe implements sun.java2d.pipe.ParallelogramPipe
 {
-	@:overload public function new(pipe : sun.java2d.pipe.CompositePipe) : Void;
+	@:overload @:public public function new(pipe : sun.java2d.pipe.CompositePipe) : Void;
 	
-	@:overload public function draw(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
+	@:overload @:public public function draw(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
 	
-	@:overload public function fill(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
+	@:overload @:public public function fill(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
 	
-	@:overload public function fillParallelogram(sg : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
+	@:overload @:public public function fillParallelogram(sg : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
 	
-	@:overload public function drawParallelogram(sg : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float) : Void;
+	@:overload @:public public function drawParallelogram(sg : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float) : Void;
 	
-	@:overload @:synchronized public static function getAlphaTile(len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:synchronized @:static public static function getAlphaTile(len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:synchronized public static function dropAlphaTile(t : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:synchronized @:static public static function dropAlphaTile(t : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function renderPath(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape, bs : java.awt.BasicStroke) : Void;
+	@:overload @:public public function renderPath(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape, bs : java.awt.BasicStroke) : Void;
 	
-	@:overload public function renderTiles(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape, aatg : sun.java2d.pipe.AATileGenerator, abox : java.NativeArray<Int>) : Void;
+	@:overload @:public public function renderTiles(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape, aatg : sun.java2d.pipe.AATileGenerator, abox : java.NativeArray<Int>) : Void;
 	
 	
 }

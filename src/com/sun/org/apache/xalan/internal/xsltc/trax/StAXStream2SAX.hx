@@ -25,107 +25,107 @@ package com.sun.org.apache.xalan.internal.xsltc.trax;
 */
 extern class StAXStream2SAX implements org.xml.sax.XMLReader implements org.xml.sax.Locator
 {
-	@:overload public function new(staxSrc : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function new(staxSrc : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload public function getContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function getContentHandler() : org.xml.sax.ContentHandler;
 	
-	@:overload public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload public function parse(unused : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function parse(unused : org.xml.sax.InputSource) : Void;
 	
-	@:overload public function parse() : Void;
-	
-	/**
-	* This class is only used internally so this method should never
-	* be called.
-	*/
-	@:overload public function parse(sysId : String) : Void;
-	
-	@:overload public function bridge() : Void;
+	@:overload @:public public function parse() : Void;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function getDTDHandler() : org.xml.sax.DTDHandler;
+	@:overload @:public public function parse(sysId : String) : Void;
+	
+	@:overload @:public public function bridge() : Void;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public public function getDTDHandler() : org.xml.sax.DTDHandler;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function getFeature(name : String) : Bool;
+	@:overload @:public public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public public function getFeature(name : String) : Bool;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
+	@:overload @:public public function setFeature(name : String, value : Bool) : Void;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function setErrorHandler(handler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public public function setErrorHandler(handler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function setProperty(name : String, value : Dynamic) : Void;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getPublicId() : String;
+	
+	/**
+	* This class is only used internally so this method should never
+	* be called.
+	*/
+	@:overload @:public public function getSystemId() : String;
 	
 	
 }

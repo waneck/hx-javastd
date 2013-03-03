@@ -25,9 +25,9 @@ package com.sun.imageio.plugins.jpeg;
 */
 extern class JPEGStreamMetadataFormatResources extends com.sun.imageio.plugins.jpeg.JPEGMetadataFormatResources
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:protected override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

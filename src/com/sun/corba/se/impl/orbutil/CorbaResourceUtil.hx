@@ -25,17 +25,17 @@ package com.sun.corba.se.impl.orbutil;
 */
 extern class CorbaResourceUtil
 {
-	@:overload public static function getString(key : String) : String;
+	@:overload @:public @:static public static function getString(key : String) : String;
 	
-	@:overload public static function getText(key : String) : String;
+	@:overload @:public @:static public static function getText(key : String) : String;
 	
-	@:overload public static function getText(key : String, num : Int) : String;
+	@:overload @:public @:static public static function getText(key : String, num : Int) : String;
 	
-	@:overload public static function getText(key : String, arg0 : String) : String;
+	@:overload @:public @:static public static function getText(key : String, arg0 : String) : String;
 	
-	@:overload public static function getText(key : String, arg0 : String, arg1 : String) : String;
+	@:overload @:public @:static public static function getText(key : String, arg0 : String, arg1 : String) : String;
 	
-	@:overload public static function getText(key : String, arg0 : String, arg1 : String, arg2 : String) : String;
+	@:overload @:public @:static public static function getText(key : String, arg0 : String, arg1 : String, arg2 : String) : String;
 	
 	
 }

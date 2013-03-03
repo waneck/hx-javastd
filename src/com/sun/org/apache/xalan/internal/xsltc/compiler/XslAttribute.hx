@@ -26,24 +26,24 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Returns the name of the attribute
 	*/
-	@:overload public function getName() : com.sun.org.apache.xalan.internal.xsltc.compiler.AttributeValue;
+	@:overload @:public public function getName() : com.sun.org.apache.xalan.internal.xsltc.compiler.AttributeValue;
 	
 	/**
 	* Displays the contents of the attribute
 	*/
-	@:overload public function display(indent : Int) : Void;
+	@:overload @:public override public function display(indent : Int) : Void;
 	
 	/**
 	* Parses the attribute's contents. Special care taken for namespaces.
 	*/
-	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	*
 	*/
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

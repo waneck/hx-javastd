@@ -57,7 +57,7 @@ package javax.swing.plaf.metal;
 	* @param c the JRootPane the RootPaneUI will be created for
 	* @return the RootPaneUI implementation for the passed in JRootPane
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Invokes supers implementation of <code>installUI</code> to install
@@ -73,7 +73,7 @@ package javax.swing.plaf.metal;
 	*
 	* @param c the JRootPane to install state onto
 	*/
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Invokes supers implementation to uninstall any of its state. This will
@@ -86,7 +86,7 @@ package javax.swing.plaf.metal;
 	*
 	* @param c the JRootPane to uninstall state from
 	*/
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Invoked when a property changes. <code>MetalRootPaneUI</code> is
@@ -106,7 +106,7 @@ package javax.swing.plaf.metal;
 	* @param e A PropertyChangeEvent object describing the event source
 	*          and the property that has changed.
 	*/
-	@:overload override public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public override public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -123,7 +123,7 @@ package javax.swing.plaf.metal;
 	* @param the Container for which this layout manager is being used
 	* @return a Dimension object containing the layout's preferred size
 	*/
-	@:overload public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the minimum amount of space the layout needs.
@@ -131,7 +131,7 @@ package javax.swing.plaf.metal;
 	* @param the Container for which this layout manager is being used
 	* @return a Dimension object containing the layout's minimum size
 	*/
-	@:overload public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the maximum amount of space the layout can use.
@@ -139,7 +139,7 @@ package javax.swing.plaf.metal;
 	* @param the Container for which this layout manager is being used
 	* @return a Dimension object containing the layout's maximum size
 	*/
-	@:overload public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Instructs the layout manager to perform the layout for the specified
@@ -147,19 +147,19 @@ package javax.swing.plaf.metal;
 	*
 	* @param the Container for which this layout manager is being used
 	*/
-	@:overload public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(parent : java.awt.Container) : Void;
 	
-	@:overload public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
 	
-	@:overload public function removeLayoutComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(comp : java.awt.Component) : Void;
 	
-	@:overload public function addLayoutComponent(comp : java.awt.Component, constraints : Dynamic) : Void;
+	@:overload @:public public function addLayoutComponent(comp : java.awt.Component, constraints : Dynamic) : Void;
 	
-	@:overload public function getLayoutAlignmentX(target : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentX(target : java.awt.Container) : Single;
 	
-	@:overload public function getLayoutAlignmentY(target : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentY(target : java.awt.Container) : Single;
 	
-	@:overload public function invalidateLayout(target : java.awt.Container) : Void;
+	@:overload @:public public function invalidateLayout(target : java.awt.Container) : Void;
 	
 	
 }
@@ -170,19 +170,19 @@ package javax.swing.plaf.metal;
 */
 @:native('javax$swing$plaf$metal$MetalRootPaneUI$MouseInputHandler') @:internal extern class MetalRootPaneUI_MouseInputHandler implements javax.swing.event.MouseInputListener
 {
-	@:overload public function mousePressed(ev : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(ev : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(ev : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(ev : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseMoved(ev : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseMoved(ev : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseDragged(ev : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(ev : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(ev : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(ev : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(ev : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(ev : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseClicked(ev : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(ev : java.awt.event.MouseEvent) : Void;
 	
 	
 }

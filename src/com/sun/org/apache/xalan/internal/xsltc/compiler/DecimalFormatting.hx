@@ -26,18 +26,18 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* No type check needed for the <xsl:decimal-formatting/> element
 	*/
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Parse the name of the <xsl:decimal-formatting/> element
 	*/
-	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* This method is called when the constructor is compiled in
 	* Stylesheet.compileConstructor() and not as the syntax tree is traversed.
 	*/
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Creates the default, nameless, DecimalFormat object in
@@ -45,7 +45,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* This should be called for every stylesheet, and the entry
 	* may be overridden by later nameless xsl:decimal-format instructions.
 	*/
-	@:overload public static function translateDefaultDFS(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public @:static public static function translateDefaultDFS(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

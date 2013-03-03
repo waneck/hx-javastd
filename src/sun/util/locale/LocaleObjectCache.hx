@@ -31,17 +31,17 @@ package sun.util.locale;
 */
 extern class LocaleObjectCache<K, V>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(initialCapacity : Int, loadFactor : Single, concurrencyLevel : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single, concurrencyLevel : Int) : Void;
 	
-	@:overload public function get(key : K) : V;
+	@:overload @:public public function get(key : K) : V;
 	
-	@:overload private function put(key : K, value : V) : V;
+	@:overload @:protected private function put(key : K, value : V) : V;
 	
-	@:overload @:abstract private function createObject(key : K) : V;
+	@:overload @:protected @:abstract private function createObject(key : K) : V;
 	
-	@:overload private function normalizeKey(key : K) : K;
+	@:overload @:protected private function normalizeKey(key : K) : K;
 	
 	
 }

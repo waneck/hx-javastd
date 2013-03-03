@@ -35,11 +35,11 @@ extern class Convert
 {
 	/** Convert string to integer.
 	*/
-	@:overload public static function string2int(s : String, radix : Int) : Int;
+	@:overload @:public @:static public static function string2int(s : String, radix : Int) : Int;
 	
 	/** Convert string to long integer.
 	*/
-	@:overload public static function string2long(s : String, radix : Int) : haxe.Int64;
+	@:overload @:public @:static public static function string2long(s : String, radix : Int) : haxe.Int64;
 	
 	/** Convert `len' bytes from utf8 to characters.
 	*  Parameters are as in System.arraycopy
@@ -51,33 +51,33 @@ extern class Convert
 	*                    are written.
 	*  @param len        The maximum number of bytes to convert.
 	*/
-	@:overload public static function utf2chars(src : java.NativeArray<java.StdTypes.Int8>, sindex : Int, dst : java.NativeArray<java.StdTypes.Char16>, dindex : Int, len : Int) : Int;
+	@:overload @:public @:static public static function utf2chars(src : java.NativeArray<java.StdTypes.Int8>, sindex : Int, dst : java.NativeArray<java.StdTypes.Char16>, dindex : Int, len : Int) : Int;
 	
 	/** Return bytes in Utf8 representation as an array of characters.
 	*  @param src        The array holding the bytes.
 	*  @param sindex     The start index from which bytes are converted.
 	*  @param len        The maximum number of bytes to convert.
 	*/
-	@:overload public static function utf2chars(src : java.NativeArray<java.StdTypes.Int8>, sindex : Int, len : Int) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public @:static public static function utf2chars(src : java.NativeArray<java.StdTypes.Int8>, sindex : Int, len : Int) : java.NativeArray<java.StdTypes.Char16>;
 	
 	/** Return all bytes of a given array in Utf8 representation
 	*  as an array of characters.
 	*  @param src        The array holding the bytes.
 	*/
-	@:overload public static function utf2chars(src : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public @:static public static function utf2chars(src : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Char16>;
 	
 	/** Return bytes in Utf8 representation as a string.
 	*  @param src        The array holding the bytes.
 	*  @param sindex     The start index from which bytes are converted.
 	*  @param len        The maximum number of bytes to convert.
 	*/
-	@:overload public static function utf2string(src : java.NativeArray<java.StdTypes.Int8>, sindex : Int, len : Int) : String;
+	@:overload @:public @:static public static function utf2string(src : java.NativeArray<java.StdTypes.Int8>, sindex : Int, len : Int) : String;
 	
 	/** Return all bytes of a given array in Utf8 representation
 	*  as a string.
 	*  @param src        The array holding the bytes.
 	*/
-	@:overload public static function utf2string(src : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public @:static public static function utf2string(src : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	/** Copy characters in source array to bytes in target array,
 	*  converting them to Utf8 representation.
@@ -90,55 +90,55 @@ extern class Convert
 	*                    are written.
 	*  @param len        The maximum number of characters to convert.
 	*/
-	@:overload public static function chars2utf(src : java.NativeArray<java.StdTypes.Char16>, sindex : Int, dst : java.NativeArray<java.StdTypes.Int8>, dindex : Int, len : Int) : Int;
+	@:overload @:public @:static public static function chars2utf(src : java.NativeArray<java.StdTypes.Char16>, sindex : Int, dst : java.NativeArray<java.StdTypes.Int8>, dindex : Int, len : Int) : Int;
 	
 	/** Return characters as an array of bytes in Utf8 representation.
 	*  @param src        The array holding the characters.
 	*  @param sindex     The start index from which characters are converted.
 	*  @param len        The maximum number of characters to convert.
 	*/
-	@:overload public static function chars2utf(src : java.NativeArray<java.StdTypes.Char16>, sindex : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function chars2utf(src : java.NativeArray<java.StdTypes.Char16>, sindex : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** Return all characters in given array as an array of bytes
 	*  in Utf8 representation.
 	*  @param src        The array holding the characters.
 	*/
-	@:overload public static function chars2utf(src : java.NativeArray<java.StdTypes.Char16>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function chars2utf(src : java.NativeArray<java.StdTypes.Char16>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** Return string as an array of bytes in in Utf8 representation.
 	*/
-	@:overload public static function string2utf(s : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function string2utf(s : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Escapes each character in a string that has an escape sequence or
 	* is non-printable ASCII.  Leaves non-ASCII characters alone.
 	*/
-	@:overload public static function quote(s : String) : String;
+	@:overload @:public @:static public static function quote(s : String) : String;
 	
 	/**
 	* Escapes a character if it has an escape sequence or is
 	* non-printable ASCII.  Leaves non-ASCII characters alone.
 	*/
-	@:overload public static function quote(ch : java.StdTypes.Char16) : String;
+	@:overload @:public @:static public static function quote(ch : java.StdTypes.Char16) : String;
 	
 	/** Escape all unicode characters in string.
 	*/
-	@:overload public static function escapeUnicode(s : String) : String;
+	@:overload @:public @:static public static function escapeUnicode(s : String) : String;
 	
 	/** Return the last part of a class name.
 	*/
-	@:overload public static function shortName(classname : com.sun.tools.javac.util.Name) : com.sun.tools.javac.util.Name;
+	@:overload @:public @:static public static function shortName(classname : com.sun.tools.javac.util.Name) : com.sun.tools.javac.util.Name;
 	
-	@:overload public static function shortName(classname : String) : String;
+	@:overload @:public @:static public static function shortName(classname : String) : String;
 	
 	/** Return the package name of a class name, excluding the trailing '.',
 	*  "" if not existent.
 	*/
-	@:overload public static function packagePart(classname : com.sun.tools.javac.util.Name) : com.sun.tools.javac.util.Name;
+	@:overload @:public @:static public static function packagePart(classname : com.sun.tools.javac.util.Name) : com.sun.tools.javac.util.Name;
 	
-	@:overload public static function packagePart(classname : String) : String;
+	@:overload @:public @:static public static function packagePart(classname : String) : String;
 	
-	@:overload public static function enclosingCandidates(name : com.sun.tools.javac.util.Name) : com.sun.tools.javac.util.List<com.sun.tools.javac.util.Name>;
+	@:overload @:public @:static public static function enclosingCandidates(name : com.sun.tools.javac.util.Name) : com.sun.tools.javac.util.List<com.sun.tools.javac.util.Name>;
 	
 	
 }

@@ -33,7 +33,7 @@ extern class RemoteObjectInvocationHandler extends java.rmi.server.RemoteObject 
 	*
 	* @throws NullPointerException if <code>ref</code> is <code>null</code>
 	**/
-	@:overload public function new(ref : java.rmi.server.RemoteRef) : Void;
+	@:overload @:public public function new(ref : java.rmi.server.RemoteRef) : Void;
 	
 	/**
 	* Processes a method invocation made on the encapsulating
@@ -96,7 +96,7 @@ extern class RemoteObjectInvocationHandler extends java.rmi.server.RemoteObject 
 	* @throws  Throwable the exception to throw from the method invocation
 	* on the proxy instance
 	**/
-	@:overload public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }
@@ -106,7 +106,7 @@ extern class RemoteObjectInvocationHandler extends java.rmi.server.RemoteObject 
 **/
 @:native('java$rmi$server$RemoteObjectInvocationHandler$MethodToHash_Maps') @:internal extern class RemoteObjectInvocationHandler_MethodToHash_Maps extends sun.rmi.server.WeakClassHashMap<java.util.Map<java.lang.reflect.Method, Null<haxe.Int64>>>
 {
-	@:overload private function computeValue(remoteClass : Class<Dynamic>) : java.util.Map<java.lang.reflect.Method, Null<haxe.Int64>>;
+	@:overload @:protected override private function computeValue(remoteClass : Class<Dynamic>) : java.util.Map<java.lang.reflect.Method, Null<haxe.Int64>>;
 	
 	
 }

@@ -31,23 +31,23 @@ package com.sun.corba.se.impl.oa.toa;
 */
 extern class TransientObjectManager
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload @:synchronized public function storeServant(servant : Dynamic, servantData : Dynamic) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:synchronized public function storeServant(servant : Dynamic, servantData : Dynamic) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:synchronized public function lookupServant(transientKey : java.NativeArray<java.StdTypes.Int8>) : Dynamic;
+	@:overload @:public @:synchronized public function lookupServant(transientKey : java.NativeArray<java.StdTypes.Int8>) : Dynamic;
 	
-	@:overload @:synchronized public function lookupServantData(transientKey : java.NativeArray<java.StdTypes.Int8>) : Dynamic;
+	@:overload @:public @:synchronized public function lookupServantData(transientKey : java.NativeArray<java.StdTypes.Int8>) : Dynamic;
 	
-	@:overload @:synchronized public function deleteServant(transientKey : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:synchronized public function deleteServant(transientKey : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:synchronized public function getKey(servant : Dynamic) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:synchronized public function getKey(servant : Dynamic) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:internal extern class Element
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

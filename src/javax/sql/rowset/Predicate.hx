@@ -111,7 +111,7 @@ extern interface Predicate
 	* @return <code>true</code> if there are more rows in the filter;
 	*     <code>false</code> otherwise
 	*/
-	@:overload public function evaluate(rs : javax.sql.RowSet) : Bool;
+	@:overload @:public public function evaluate(rs : javax.sql.RowSet) : Bool;
 	
 	/**
 	* This method is called by a <code>FilteredRowSet</code> object
@@ -131,7 +131,7 @@ extern interface Predicate
 	*     <code>false</code> otherwise
 	* @throws SQLException if the column is not part of filtering criteria
 	*/
-	@:overload public function evaluate(value : Dynamic, column : Int) : Bool;
+	@:overload @:public public function evaluate(value : Dynamic, column : Int) : Bool;
 	
 	/**
 	* This method is called by the <code>FilteredRowSet</code> object
@@ -153,7 +153,7 @@ extern interface Predicate
 	*
 	* @throws SQLException if the column is not part of filtering criteria
 	*/
-	@:overload public function evaluate(value : Dynamic, columnName : String) : Bool;
+	@:overload @:public public function evaluate(value : Dynamic, columnName : String) : Bool;
 	
 	
 }

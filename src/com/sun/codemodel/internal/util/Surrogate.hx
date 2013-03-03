@@ -25,57 +25,57 @@ package com.sun.codemodel.internal.util;
 */
 @:internal extern class Surrogate
 {
-	public static var MIN_HIGH(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var MIN_HIGH(default, null) : java.StdTypes.Char16;
 	
-	public static var MAX_HIGH(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var MAX_HIGH(default, null) : java.StdTypes.Char16;
 	
-	public static var MIN_LOW(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var MIN_LOW(default, null) : java.StdTypes.Char16;
 	
-	public static var MAX_LOW(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var MAX_LOW(default, null) : java.StdTypes.Char16;
 	
-	public static var MIN(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var MIN(default, null) : java.StdTypes.Char16;
 	
-	public static var MAX(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var MAX(default, null) : java.StdTypes.Char16;
 	
-	public static var UCS4_MIN(default, null) : Int;
+	@:public @:static @:final public static var UCS4_MIN(default, null) : Int;
 	
-	public static var UCS4_MAX(default, null) : Int;
+	@:public @:static @:final public static var UCS4_MAX(default, null) : Int;
 	
 	/**
 	* Tells whether or not the given UTF-16 value is a high surrogate.
 	*/
-	@:overload public static function isHigh(c : Int) : Bool;
+	@:overload @:public @:static public static function isHigh(c : Int) : Bool;
 	
 	/**
 	* Tells whether or not the given UTF-16 value is a low surrogate.
 	*/
-	@:overload public static function isLow(c : Int) : Bool;
+	@:overload @:public @:static public static function isLow(c : Int) : Bool;
 	
 	/**
 	* Tells whether or not the given UTF-16 value is a surrogate character,
 	*/
-	@:overload public static function is(c : Int) : Bool;
+	@:overload @:public @:static public static function is(c : Int) : Bool;
 	
 	/**
 	* Tells whether or not the given UCS-4 character must be represented as a
 	* surrogate pair in UTF-16.
 	*/
-	@:overload public static function neededFor(uc : Int) : Bool;
+	@:overload @:public @:static public static function neededFor(uc : Int) : Bool;
 	
 	/**
 	* Returns the high UTF-16 surrogate for the given UCS-4 character.
 	*/
-	@:overload public static function high(uc : Int) : java.StdTypes.Char16;
+	@:overload @:public @:static public static function high(uc : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Returns the low UTF-16 surrogate for the given UCS-4 character.
 	*/
-	@:overload public static function low(uc : Int) : java.StdTypes.Char16;
+	@:overload @:public @:static public static function low(uc : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Converts the given surrogate pair into a 32-bit UCS-4 character.
 	*/
-	@:overload public static function toUCS4(c : java.StdTypes.Char16, d : java.StdTypes.Char16) : Int;
+	@:overload @:public @:static public static function toUCS4(c : java.StdTypes.Char16, d : java.StdTypes.Char16) : Int;
 	
 	
 }
@@ -85,36 +85,36 @@ package com.sun.codemodel.internal.util;
 */
 @:native('com$sun$codemodel$internal$util$Surrogate$Parser') extern class Surrogate_Parser
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the UCS-4 character previously parsed.
 	*/
-	@:overload public function character() : Int;
+	@:overload @:public public function character() : Int;
 	
 	/**
 	* Tells whether or not the previously-parsed UCS-4 character was
 	* originally represented by a surrogate pair.
 	*/
-	@:overload public function isPair() : Bool;
+	@:overload @:public public function isPair() : Bool;
 	
 	/**
 	* Returns the number of UTF-16 characters consumed by the previous
 	* parse.
 	*/
-	@:overload public function increment() : Int;
+	@:overload @:public public function increment() : Int;
 	
 	/**
 	* If the previous parse operation detected an error, return the object
 	* describing that error.
 	*/
-	@:overload public function error() : java.nio.charset.CoderResult;
+	@:overload @:public public function error() : java.nio.charset.CoderResult;
 	
 	/**
 	* Returns an unmappable-input result object, with the appropriate
 	* input length, for the previously-parsed character.
 	*/
-	@:overload public function unmappableResult() : java.nio.charset.CoderResult;
+	@:overload @:public public function unmappableResult() : java.nio.charset.CoderResult;
 	
 	/**
 	* Parses a UCS-4 character from the given source buffer, handling
@@ -129,7 +129,7 @@ package com.sun.codemodel.internal.util;
 	*           -1, in which case error() will return a descriptive result
 	*           object
 	*/
-	@:overload public function parse(c : java.StdTypes.Char16, _in : java.nio.CharBuffer) : Int;
+	@:overload @:public public function parse(c : java.StdTypes.Char16, _in : java.nio.CharBuffer) : Int;
 	
 	/**
 	* Parses a UCS-4 character from the given source buffer, handling
@@ -146,7 +146,7 @@ package com.sun.codemodel.internal.util;
 	*           -1, in which case error() will return a descriptive result
 	*           object
 	*/
-	@:overload public function parse(c : java.StdTypes.Char16, ia : java.NativeArray<java.StdTypes.Char16>, ip : Int, il : Int) : Int;
+	@:overload @:public public function parse(c : java.StdTypes.Char16, ia : java.NativeArray<java.StdTypes.Char16>, ip : Int, il : Int) : Int;
 	
 	
 }
@@ -157,13 +157,13 @@ package com.sun.codemodel.internal.util;
 */
 @:native('com$sun$codemodel$internal$util$Surrogate$Generator') extern class Surrogate_Generator
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* If the previous generation operation detected an error, return the
 	* object describing that error.
 	*/
-	@:overload public function error() : java.nio.charset.CoderResult;
+	@:overload @:public public function error() : java.nio.charset.CoderResult;
 	
 	/**
 	* Generates one or two UTF-16 characters to represent the given UCS-4
@@ -179,7 +179,7 @@ package com.sun.codemodel.internal.util;
 	*           written to the destination buffer, or -1, in which case
 	*           error() will return a descriptive result object
 	*/
-	@:overload public function generate(uc : Int, len : Int, dst : java.nio.CharBuffer) : Int;
+	@:overload @:public public function generate(uc : Int, len : Int, dst : java.nio.CharBuffer) : Int;
 	
 	/**
 	* Generates one or two UTF-16 characters to represent the given UCS-4
@@ -197,7 +197,7 @@ package com.sun.codemodel.internal.util;
 	*           written to the destination buffer, or -1, in which case
 	*           error() will return a descriptive result object
 	*/
-	@:overload public function generate(uc : Int, len : Int, da : java.NativeArray<java.StdTypes.Char16>, dp : Int, dl : Int) : Int;
+	@:overload @:public public function generate(uc : Int, len : Int, da : java.NativeArray<java.StdTypes.Char16>, dp : Int, dl : Int) : Int;
 	
 	
 }

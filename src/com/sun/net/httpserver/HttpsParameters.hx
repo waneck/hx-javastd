@@ -25,18 +25,18 @@ package com.sun.net.httpserver;
 */
 extern class HttpsParameters
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the HttpsConfigurator for this HttpsParameters.
 	*/
-	@:overload @:abstract public function getHttpsConfigurator() : com.sun.net.httpserver.HttpsConfigurator;
+	@:overload @:public @:abstract public function getHttpsConfigurator() : com.sun.net.httpserver.HttpsConfigurator;
 	
 	/**
 	* Returns the address of the remote client initiating the
 	* connection.
 	*/
-	@:overload @:abstract public function getClientAddress() : java.net.InetSocketAddress;
+	@:overload @:public @:abstract public function getClientAddress() : java.net.InetSocketAddress;
 	
 	/**
 	* Sets the SSLParameters to use for this HttpsParameters.
@@ -49,7 +49,7 @@ extern class HttpsParameters
 	* @throws IllegalArgumentException if any of the parameters are
 	*   invalid or unsupported.
 	*/
-	@:overload @:abstract public function setSSLParameters(params : javax.net.ssl.SSLParameters) : Void;
+	@:overload @:public @:abstract public function setSSLParameters(params : javax.net.ssl.SSLParameters) : Void;
 	
 	/**
 	* Returns a copy of the array of ciphersuites or null if none
@@ -58,14 +58,14 @@ extern class HttpsParameters
 	* @return a copy of the array of ciphersuites or null if none
 	* have been set.
 	*/
-	@:overload public function getCipherSuites() : java.NativeArray<String>;
+	@:overload @:public public function getCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Sets the array of ciphersuites.
 	*
 	* @param cipherSuites the array of ciphersuites (or null)
 	*/
-	@:overload public function setCipherSuites(cipherSuites : java.NativeArray<String>) : Void;
+	@:overload @:public public function setCipherSuites(cipherSuites : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns a copy of the array of protocols or null if none
@@ -74,21 +74,21 @@ extern class HttpsParameters
 	* @return a copy of the array of protocols or null if none
 	* have been set.
 	*/
-	@:overload public function getProtocols() : java.NativeArray<String>;
+	@:overload @:public public function getProtocols() : java.NativeArray<String>;
 	
 	/**
 	* Sets the array of protocols.
 	*
 	* @param protocols the array of protocols (or null)
 	*/
-	@:overload public function setProtocols(protocols : java.NativeArray<String>) : Void;
+	@:overload @:public public function setProtocols(protocols : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns whether client authentication should be requested.
 	*
 	* @return whether client authentication should be requested.
 	*/
-	@:overload public function getWantClientAuth() : Bool;
+	@:overload @:public public function getWantClientAuth() : Bool;
 	
 	/**
 	* Sets whether client authentication should be requested. Calling
@@ -96,14 +96,14 @@ extern class HttpsParameters
 	*
 	* @param wantClientAuth whether client authentication should be requested
 	*/
-	@:overload public function setWantClientAuth(wantClientAuth : Bool) : Void;
+	@:overload @:public public function setWantClientAuth(wantClientAuth : Bool) : Void;
 	
 	/**
 	* Returns whether client authentication should be required.
 	*
 	* @return whether client authentication should be required.
 	*/
-	@:overload public function getNeedClientAuth() : Bool;
+	@:overload @:public public function getNeedClientAuth() : Bool;
 	
 	/**
 	* Sets whether client authentication should be required. Calling
@@ -111,7 +111,7 @@ extern class HttpsParameters
 	*
 	* @param needClientAuth whether client authentication should be required
 	*/
-	@:overload public function setNeedClientAuth(needClientAuth : Bool) : Void;
+	@:overload @:public public function setNeedClientAuth(needClientAuth : Bool) : Void;
 	
 	
 }

@@ -37,23 +37,23 @@ package sun.security.pkcs11;
 */
 @:require(java5) @:internal extern class P11Digest extends java.security.MessageDigestSpi implements java.lang.Cloneable
 {
-	@:overload private function engineGetDigestLength() : Int;
+	@:overload @:protected override private function engineGetDigestLength() : Int;
 	
-	@:overload private function engineReset() : Void;
+	@:overload @:protected override private function engineReset() : Void;
 	
-	@:overload private function engineDigest() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineDigest() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineDigest(digest : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : Int;
+	@:overload @:protected override private function engineDigest(digest : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : Int;
 	
-	@:overload private function engineUpdate(_in : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(_in : java.StdTypes.Int8) : Void;
 	
-	@:overload private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : Void;
 	
-	@:overload private function implUpdate(key : javax.crypto.SecretKey) : Void;
+	@:overload @:protected private function implUpdate(key : javax.crypto.SecretKey) : Void;
 	
-	@:overload private function engineUpdate(byteBuffer : java.nio.ByteBuffer) : Void;
+	@:overload @:protected override private function engineUpdate(byteBuffer : java.nio.ByteBuffer) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

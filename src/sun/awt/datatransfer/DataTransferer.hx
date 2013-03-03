@@ -28,12 +28,12 @@ extern class DataTransferer
 	/**
 	* Cached value of Class.forName("[C");
 	*/
-	public static var charArrayClass(default, null) : Class<Dynamic>;
+	@:public @:static @:final public static var charArrayClass(default, null) : Class<Dynamic>;
 	
 	/**
 	* Cached value of Class.forName("[B");
 	*/
-	public static var byteArrayClass(default, null) : Class<Dynamic>;
+	@:public @:static @:final public static var byteArrayClass(default, null) : Class<Dynamic>;
 	
 	/**
 	* The <code>DataFlavor</code> representing plain text with Unicode
@@ -43,7 +43,7 @@ extern class DataTransferer
 	*     mimeType            = "text/plain; charset=Unicode"
 	* </pre>
 	*/
-	public static var plainTextStringFlavor(default, null) : java.awt.datatransfer.DataFlavor;
+	@:public @:static @:final public static var plainTextStringFlavor(default, null) : java.awt.datatransfer.DataFlavor;
 	
 	/**
 	* The <code>DataFlavor</code> representing a Java text encoding String
@@ -53,19 +53,19 @@ extern class DataTransferer
 	*     mimeType            = "application/x-java-text-encoding"
 	* </pre>
 	*/
-	public static var javaTextEncodingFlavor(default, null) : java.awt.datatransfer.DataFlavor;
+	@:public @:static @:final public static var javaTextEncodingFlavor(default, null) : java.awt.datatransfer.DataFlavor;
 	
 	/**
 	* The accessor method for the singleton DataTransferer instance. Note
 	* that in a headless environment, there may be no DataTransferer instance;
 	* instead, null will be returned.
 	*/
-	@:overload public static function getInstance() : sun.awt.datatransfer.DataTransferer;
+	@:overload @:public @:static public static function getInstance() : sun.awt.datatransfer.DataTransferer;
 	
 	/**
 	* Converts an arbitrary text encoding to its canonical name.
 	*/
-	@:overload public static function canonicalName(encoding : String) : String;
+	@:overload @:public @:static public static function canonicalName(encoding : String) : String;
 	
 	/**
 	* If the specified flavor is a text flavor which supports the "charset"
@@ -74,44 +74,44 @@ extern class DataTransferer
 	* text DataFlavors, and for non-charset text flavors, this method returns
 	* null.
 	*/
-	@:overload public static function getTextCharset(flavor : java.awt.datatransfer.DataFlavor) : String;
+	@:overload @:public @:static public static function getTextCharset(flavor : java.awt.datatransfer.DataFlavor) : String;
 	
 	/**
 	* Returns the platform's default character encoding.
 	*/
-	@:overload public static function getDefaultTextCharset() : String;
+	@:overload @:public @:static public static function getDefaultTextCharset() : String;
 	
 	/**
 	* Tests only whether the flavor's MIME type supports the charset
 	* parameter. Must only be called for flavors with a primary type of
 	* "text".
 	*/
-	@:overload public static function doesSubtypeSupportCharset(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public @:static public static function doesSubtypeSupportCharset(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
-	@:overload public static function doesSubtypeSupportCharset(subType : String, charset : String) : Bool;
+	@:overload @:public @:static public static function doesSubtypeSupportCharset(subType : String, charset : String) : Bool;
 	
 	/**
 	* Returns whether this flavor is a text type which supports the
 	* 'charset' parameter.
 	*/
-	@:overload public static function isFlavorCharsetTextType(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public @:static public static function isFlavorCharsetTextType(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Returns whether this flavor is a text type which does not support the
 	* 'charset' parameter.
 	*/
-	@:overload public static function isFlavorNoncharsetTextType(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public @:static public static function isFlavorNoncharsetTextType(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Determines whether this JRE can both encode and decode text in the
 	* specified encoding.
 	*/
-	@:overload public static function isEncodingSupported(encoding : String) : Bool;
+	@:overload @:public @:static public static function isEncodingSupported(encoding : String) : Bool;
 	
 	/**
 	* Returns {@code true} if the given type is a java.rmi.Remote.
 	*/
-	@:overload public static function isRemote(type : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function isRemote(type : Class<Dynamic>) : Bool;
 	
 	/**
 	* Returns an Iterator which traverses a SortedSet of Strings which are
@@ -120,19 +120,19 @@ extern class DataTransferer
 	* So as to avoid loading all available character converters, optional,
 	* non-standard, character sets are not included.
 	*/
-	@:overload public static function standardEncodings() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:static public static function standardEncodings() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Converts a FlavorMap to a FlavorTable.
 	*/
-	@:overload public static function adaptFlavorMap(map : java.awt.datatransfer.FlavorMap) : java.awt.datatransfer.FlavorTable;
+	@:overload @:public @:static public static function adaptFlavorMap(map : java.awt.datatransfer.FlavorMap) : java.awt.datatransfer.FlavorTable;
 	
 	/**
 	* Returns the default Unicode encoding for the platform. The encoding
 	* need not be canonical. This method is only used by the archaic function
 	* DataFlavor.getTextPlainUnicodeFlavor().
 	*/
-	@:overload @:abstract public function getDefaultUnicodeEncoding() : String;
+	@:overload @:public @:abstract public function getDefaultUnicodeEncoding() : String;
 	
 	/**
 	* This method is called for text flavor mappings established while parsing
@@ -140,15 +140,15 @@ extern class DataTransferer
 	* parameters which are not officially part of the MIME type. They are
 	* MIME parameters specific to the flavormap.properties file format.
 	*/
-	@:overload public function registerTextFlavorProperties(nat : String, charset : String, eoln : String, terminators : String) : Void;
+	@:overload @:public public function registerTextFlavorProperties(nat : String, charset : String, eoln : String, terminators : String) : Void;
 	
 	/**
 	* Determines whether the native corresponding to the specified long format
 	* was listed in the flavormap.properties file.
 	*/
-	@:overload private function isTextFormat(format : haxe.Int64) : Bool;
+	@:overload @:protected private function isTextFormat(format : haxe.Int64) : Bool;
 	
-	@:overload private function getCharsetForTextFormat(lFormat : Null<haxe.Int64>) : String;
+	@:overload @:protected private function getCharsetForTextFormat(lFormat : Null<haxe.Int64>) : String;
 	
 	/**
 	* Specifies whether text imported from the native system in the specified
@@ -156,25 +156,25 @@ extern class DataTransferer
 	* 'nativeCharsets' should be ignored, and instead, the Transferable should
 	* be queried for its javaTextEncodingFlavor data for the correct encoding.
 	*/
-	@:overload @:abstract public function isLocaleDependentTextFormat(format : haxe.Int64) : Bool;
+	@:overload @:public @:abstract public function isLocaleDependentTextFormat(format : haxe.Int64) : Bool;
 	
 	/**
 	* Determines whether the DataFlavor corresponding to the specified long
 	* format is DataFlavor.javaFileListFlavor.
 	*/
-	@:overload @:abstract public function isFileFormat(format : haxe.Int64) : Bool;
+	@:overload @:public @:abstract public function isFileFormat(format : haxe.Int64) : Bool;
 	
 	/**
 	* Determines whether the DataFlavor corresponding to the specified long
 	* format is DataFlavor.imageFlavor.
 	*/
-	@:overload @:abstract public function isImageFormat(format : haxe.Int64) : Bool;
+	@:overload @:public @:abstract public function isImageFormat(format : haxe.Int64) : Bool;
 	
 	/**
 	* Determines whether the format is a URI list we can convert to
 	* a DataFlavor.javaFileListFlavor.
 	*/
-	@:overload private function isURIListFormat(format : haxe.Int64) : Bool;
+	@:overload @:protected private function isURIListFormat(format : haxe.Int64) : Bool;
 	
 	/**
 	* Returns a Map whose keys are all of the possible formats into which the
@@ -185,7 +185,7 @@ extern class DataTransferer
 	* The map keys are sorted according to the native formats preference
 	* order.
 	*/
-	@:overload public function getFormatsForTransferable(contents : java.awt.datatransfer.Transferable, map : java.awt.datatransfer.FlavorTable) : java.util.SortedMap<Dynamic, Dynamic>;
+	@:overload @:public public function getFormatsForTransferable(contents : java.awt.datatransfer.Transferable, map : java.awt.datatransfer.FlavorTable) : java.util.SortedMap<Dynamic, Dynamic>;
 	
 	/**
 	* Returns a Map whose keys are all of the possible formats into which data
@@ -196,7 +196,7 @@ extern class DataTransferer
 	* The map keys are sorted according to the native formats preference
 	* order.
 	*/
-	@:overload public function getFormatsForFlavor(flavor : java.awt.datatransfer.DataFlavor, map : java.awt.datatransfer.FlavorTable) : java.util.SortedMap<Dynamic, Dynamic>;
+	@:overload @:public public function getFormatsForFlavor(flavor : java.awt.datatransfer.DataFlavor, map : java.awt.datatransfer.FlavorTable) : java.util.SortedMap<Dynamic, Dynamic>;
 	
 	/**
 	* Returns a Map whose keys are all of the possible formats into which data
@@ -212,17 +212,17 @@ extern class DataTransferer
 	*            DataFlavors and data formats
 	* @throws NullPointerException if flavors or map is <code>null</code>
 	*/
-	@:overload public function getFormatsForFlavors(flavors : java.NativeArray<java.awt.datatransfer.DataFlavor>, map : java.awt.datatransfer.FlavorTable) : java.util.SortedMap<Dynamic, Dynamic>;
+	@:overload @:public public function getFormatsForFlavors(flavors : java.NativeArray<java.awt.datatransfer.DataFlavor>, map : java.awt.datatransfer.FlavorTable) : java.util.SortedMap<Dynamic, Dynamic>;
 	
 	/**
 	* Reduces the Map output for the root function to an array of the
 	* Map's keys.
 	*/
-	@:overload public function getFormatsForTransferableAsArray(contents : java.awt.datatransfer.Transferable, map : java.awt.datatransfer.FlavorTable) : java.NativeArray<haxe.Int64>;
+	@:overload @:public public function getFormatsForTransferableAsArray(contents : java.awt.datatransfer.Transferable, map : java.awt.datatransfer.FlavorTable) : java.NativeArray<haxe.Int64>;
 	
-	@:overload public function getFormatsForFlavorAsArray(flavor : java.awt.datatransfer.DataFlavor, map : java.awt.datatransfer.FlavorTable) : java.NativeArray<haxe.Int64>;
+	@:overload @:public public function getFormatsForFlavorAsArray(flavor : java.awt.datatransfer.DataFlavor, map : java.awt.datatransfer.FlavorTable) : java.NativeArray<haxe.Int64>;
 	
-	@:overload public function getFormatsForFlavorsAsArray(flavors : java.NativeArray<java.awt.datatransfer.DataFlavor>, map : java.awt.datatransfer.FlavorTable) : java.NativeArray<haxe.Int64>;
+	@:overload @:public public function getFormatsForFlavorsAsArray(flavors : java.NativeArray<java.awt.datatransfer.DataFlavor>, map : java.awt.datatransfer.FlavorTable) : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* Returns a Map whose keys are all of the possible DataFlavors into which
@@ -230,7 +230,7 @@ extern class DataTransferer
 	* is the format in which the Clipboard or dropped data should be requested
 	* when converting to the DataFlavor.
 	*/
-	@:overload public function getFlavorsForFormat(format : haxe.Int64, map : java.awt.datatransfer.FlavorTable) : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function getFlavorsForFormat(format : haxe.Int64, map : java.awt.datatransfer.FlavorTable) : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* Returns a Map whose keys are all of the possible DataFlavors into which
@@ -238,7 +238,7 @@ extern class DataTransferer
 	* is the format in which the Clipboard or dropped data should be requested
 	* when converting to the DataFlavor.
 	*/
-	@:overload public function getFlavorsForFormats(formats : java.NativeArray<haxe.Int64>, map : java.awt.datatransfer.FlavorTable) : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function getFlavorsForFormats(formats : java.NativeArray<haxe.Int64>, map : java.awt.datatransfer.FlavorTable) : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* Returns a Set of all DataFlavors for which
@@ -252,7 +252,7 @@ extern class DataTransferer
 	*            DataFlavors and data formats
 	* @throws NullPointerException if formats or map is <code>null</code>
 	*/
-	@:overload public function getFlavorsForFormatsAsSet(formats : java.NativeArray<haxe.Int64>, map : java.awt.datatransfer.FlavorTable) : java.util.Set<Dynamic>;
+	@:overload @:public public function getFlavorsForFormatsAsSet(formats : java.NativeArray<haxe.Int64>, map : java.awt.datatransfer.FlavorTable) : java.util.Set<Dynamic>;
 	
 	/**
 	* Returns an array of all DataFlavors for which
@@ -268,7 +268,7 @@ extern class DataTransferer
 	*            DataFlavors and data formats
 	* @throws NullPointerException if map is <code>null</code>
 	*/
-	@:overload public function getFlavorsForFormatAsArray(format : haxe.Int64, map : java.awt.datatransfer.FlavorTable) : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getFlavorsForFormatAsArray(format : haxe.Int64, map : java.awt.datatransfer.FlavorTable) : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Returns an array of all DataFlavors for which
@@ -285,31 +285,31 @@ extern class DataTransferer
 	*            DataFlavors and data formats
 	* @throws NullPointerException if formats or map is <code>null</code>
 	*/
-	@:overload public function getFlavorsForFormatsAsArray(formats : java.NativeArray<haxe.Int64>, map : java.awt.datatransfer.FlavorTable) : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getFlavorsForFormatsAsArray(formats : java.NativeArray<haxe.Int64>, map : java.awt.datatransfer.FlavorTable) : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Looks-up or registers the String native with the native data transfer
 	* system and returns a long format corresponding to that native.
 	*/
-	@:overload @:abstract private function getFormatForNativeAsLong(str : String) : Null<haxe.Int64>;
+	@:overload @:protected @:abstract private function getFormatForNativeAsLong(str : String) : Null<haxe.Int64>;
 	
 	/**
 	* Looks-up the String native corresponding to the specified long format in
 	* the native data transfer system.
 	*/
-	@:overload @:abstract private function getNativeForFormat(format : haxe.Int64) : String;
+	@:overload @:protected @:abstract private function getNativeForFormat(format : haxe.Int64) : String;
 	
 	/**
 	* Primary translation function for translating a Transferable into
 	* a byte array, given a source DataFlavor and target format.
 	*/
-	@:overload public function translateTransferable(contents : java.awt.datatransfer.Transferable, flavor : java.awt.datatransfer.DataFlavor, format : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function translateTransferable(contents : java.awt.datatransfer.Transferable, flavor : java.awt.datatransfer.DataFlavor, format : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:abstract private function convertFileListToBytes(fileList : java.util.ArrayList<String>) : java.io.ByteArrayOutputStream;
+	@:overload @:protected @:abstract private function convertFileListToBytes(fileList : java.util.ArrayList<String>) : java.io.ByteArrayOutputStream;
 	
-	@:overload public function translateBytes(bytes : java.NativeArray<java.StdTypes.Int8>, flavor : java.awt.datatransfer.DataFlavor, format : haxe.Int64, localeTransferable : java.awt.datatransfer.Transferable) : Dynamic;
+	@:overload @:public public function translateBytes(bytes : java.NativeArray<java.StdTypes.Int8>, flavor : java.awt.datatransfer.DataFlavor, format : haxe.Int64, localeTransferable : java.awt.datatransfer.Transferable) : Dynamic;
 	
-	@:overload public function translateStream(str : java.io.InputStream, flavor : java.awt.datatransfer.DataFlavor, format : haxe.Int64, localeTransferable : java.awt.datatransfer.Transferable) : Dynamic;
+	@:overload @:public public function translateStream(str : java.io.InputStream, flavor : java.awt.datatransfer.DataFlavor, format : haxe.Int64, localeTransferable : java.awt.datatransfer.Transferable) : Dynamic;
 	
 	/**
 	* Primary translation function for translating either a byte array or
@@ -321,23 +321,23 @@ extern class DataTransferer
 	* immediately if necessary. The opposite conversion is expensive,
 	* so avoid it if possible.
 	*/
-	@:overload private function translateBytesOrStream(str : java.io.InputStream, bytes : java.NativeArray<java.StdTypes.Int8>, flavor : java.awt.datatransfer.DataFlavor, format : haxe.Int64, localeTransferable : java.awt.datatransfer.Transferable) : Dynamic;
+	@:overload @:protected private function translateBytesOrStream(str : java.io.InputStream, bytes : java.NativeArray<java.StdTypes.Int8>, flavor : java.awt.datatransfer.DataFlavor, format : haxe.Int64, localeTransferable : java.awt.datatransfer.Transferable) : Dynamic;
 	
 	/**
 	* Decodes a byte array into a set of String filenames.
 	*/
-	@:overload @:abstract private function dragQueryFile(bytes : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
+	@:overload @:protected @:abstract private function dragQueryFile(bytes : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
 	/**
 	* Decodes URIs from either a byte array or a stream.
 	*/
-	@:overload private function dragQueryURIs(stream : java.io.InputStream, bytes : java.NativeArray<java.StdTypes.Int8>, format : haxe.Int64, localeTransferable : java.awt.datatransfer.Transferable) : java.NativeArray<java.net.URI>;
+	@:overload @:protected private function dragQueryURIs(stream : java.io.InputStream, bytes : java.NativeArray<java.StdTypes.Int8>, format : haxe.Int64, localeTransferable : java.awt.datatransfer.Transferable) : java.NativeArray<java.net.URI>;
 	
 	/**
 	* Translates either a byte array or an input stream which contain
 	* platform-specific image data in the given format into an Image.
 	*/
-	@:overload @:abstract private function platformImageBytesOrStreamToImage(str : java.io.InputStream, bytes : java.NativeArray<java.StdTypes.Int8>, format : haxe.Int64) : java.awt.Image;
+	@:overload @:protected @:abstract private function platformImageBytesOrStreamToImage(str : java.io.InputStream, bytes : java.NativeArray<java.StdTypes.Int8>, format : haxe.Int64) : java.awt.Image;
 	
 	/**
 	* Translates either a byte array or an input stream which contain
@@ -345,13 +345,13 @@ extern class DataTransferer
 	*
 	* @param mimeType image MIME type, such as: image/png, image/jpeg, image/gif
 	*/
-	@:overload private function standardImageBytesOrStreamToImage(inputStream : java.io.InputStream, bytes : java.NativeArray<java.StdTypes.Int8>, mimeType : String) : java.awt.Image;
+	@:overload @:protected private function standardImageBytesOrStreamToImage(inputStream : java.io.InputStream, bytes : java.NativeArray<java.StdTypes.Int8>, mimeType : String) : java.awt.Image;
 	
 	/**
 	* Translates a Java Image into a byte array which contains platform-
 	* specific image data in the given format.
 	*/
-	@:overload @:abstract private function imageToPlatformBytes(image : java.awt.Image, format : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:abstract private function imageToPlatformBytes(image : java.awt.Image, format : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Translates a Java Image into a byte array which contains
@@ -359,15 +359,15 @@ extern class DataTransferer
 	*
 	* @param mimeType image MIME type, such as: image/png, image/jpeg
 	*/
-	@:overload private function imageToStandardBytes(image : java.awt.Image, mimeType : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected private function imageToStandardBytes(image : java.awt.Image, mimeType : String) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function imageToStandardBytesImpl(renderedImage : java.awt.image.RenderedImage, mimeType : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected private function imageToStandardBytesImpl(renderedImage : java.awt.image.RenderedImage, mimeType : String) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function convertData(source : Dynamic, contents : java.awt.datatransfer.Transferable, format : haxe.Int64, formatMap : java.util.Map<Dynamic, Dynamic>, isToolkitThread : Bool) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function convertData(source : Dynamic, contents : java.awt.datatransfer.Transferable, format : haxe.Int64, formatMap : java.util.Map<Dynamic, Dynamic>, isToolkitThread : Bool) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function processDataConversionRequests() : Void;
+	@:overload @:public public function processDataConversionRequests() : Void;
 	
-	@:overload @:abstract public function getToolkitThreadBlockedHandler() : sun.awt.datatransfer.ToolkitThreadBlockedHandler;
+	@:overload @:public @:abstract public function getToolkitThreadBlockedHandler() : sun.awt.datatransfer.ToolkitThreadBlockedHandler;
 	
 	/**
 	* Helper function to reduce a Map with Long keys to a long array.
@@ -375,20 +375,20 @@ extern class DataTransferer
 	* The map keys are sorted according to the native formats preference
 	* order.
 	*/
-	@:overload public static function keysToLongArray(map : java.util.SortedMap<Dynamic, Dynamic>) : java.NativeArray<haxe.Int64>;
+	@:overload @:public @:static public static function keysToLongArray(map : java.util.SortedMap<Dynamic, Dynamic>) : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* Helper function to reduce a Map with DataFlavor keys to a DataFlavor
 	* array. The array will be sorted according to
 	* <code>DataFlavorComparator</code>.
 	*/
-	@:overload public static function keysToDataFlavorArray(map : java.util.Map<Dynamic, Dynamic>) : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public @:static public static function keysToDataFlavorArray(map : java.util.Map<Dynamic, Dynamic>) : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Helper function to convert a Set of DataFlavors to a sorted array.
 	* The array will be sorted according to <code>DataFlavorComparator</code>.
 	*/
-	@:overload public static function setToSortedDataFlavorArray(flavorsSet : java.util.Set<Dynamic>) : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public @:static public static function setToSortedDataFlavorArray(flavorsSet : java.util.Set<Dynamic>) : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Helper function to convert a Set of DataFlavors to a sorted array.
@@ -396,26 +396,26 @@ extern class DataTransferer
 	* <code>DataFlavorComparator</code> created with the specified
 	* flavor-to-native map as an argument.
 	*/
-	@:overload public static function setToSortedDataFlavorArray(flavorsSet : java.util.Set<Dynamic>, flavorToNativeMap : java.util.Map<Dynamic, Dynamic>) : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public @:static public static function setToSortedDataFlavorArray(flavorsSet : java.util.Set<Dynamic>, flavorToNativeMap : java.util.Map<Dynamic, Dynamic>) : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Helper function to convert an InputStream to a byte[] array.
 	*/
-	@:overload private static function inputStreamToByteArray(str : java.io.InputStream) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:static private static function inputStreamToByteArray(str : java.io.InputStream) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns platform-specific mappings for the specified native.
 	* If there are no platform-specific mappings for this native, the method
 	* returns an empty <code>List</code>.
 	*/
-	@:overload public function getPlatformMappingsForNative(nat : String) : java.util.List<Dynamic>;
+	@:overload @:public public function getPlatformMappingsForNative(nat : String) : java.util.List<Dynamic>;
 	
 	/**
 	* Returns platform-specific mappings for the specified flavor.
 	* If there are no platform-specific mappings for this flavor, the method
 	* returns an empty <code>List</code>.
 	*/
-	@:overload public function getPlatformMappingsForFlavor(df : java.awt.datatransfer.DataFlavor) : java.util.List<Dynamic>;
+	@:overload @:public public function getPlatformMappingsForFlavor(df : java.awt.datatransfer.DataFlavor) : java.util.List<Dynamic>;
 	
 	
 }
@@ -432,33 +432,35 @@ extern class DataTransferer
 */
 @:native('sun$awt$datatransfer$DataTransferer$ReencodingInputStream') extern class DataTransferer_ReencodingInputStream extends java.io.InputStream
 {
-	private var wrapped : java.io.BufferedReader;
+	@:protected private var wrapped : java.io.BufferedReader;
 	
-	//private var _in(default, null) : java.NativeArray<java.StdTypes.Char16>;
+	//@:protected @:final private var _in(default, null) : java.NativeArray<java.StdTypes.Char16>;
 	
-	private var out : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var out : java.NativeArray<java.StdTypes.Int8>;
 	
-	private var encoder : java.nio.charset.CharsetEncoder;
+	@:protected private var encoder : java.nio.charset.CharsetEncoder;
 	
-	private var inBuf : java.nio.CharBuffer;
+	@:protected private var inBuf : java.nio.CharBuffer;
 	
-	private var outBuf : java.nio.ByteBuffer;
+	@:protected private var outBuf : java.nio.ByteBuffer;
 	
-	private var eoln : java.NativeArray<java.StdTypes.Char16>;
+	@:protected private var eoln : java.NativeArray<java.StdTypes.Char16>;
 	
-	private var numTerminators : Int;
+	@:protected private var numTerminators : Int;
 	
-	private var eos : Bool;
+	@:protected private var eos : Bool;
 	
-	private var index : Int;
+	@:protected private var index : Int;
 	
-	@:overload public function new(bytestream : java.io.InputStream, format : haxe.Int64, targetEncoding : String, localeTransferable : java.awt.datatransfer.Transferable) : Void;
+	@:protected private var limit : Int;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public public function new(bytestream : java.io.InputStream, format : haxe.Int64, targetEncoding : String, localeTransferable : java.awt.datatransfer.Transferable) : Void;
 	
-	@:overload override public function available() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function available() : Int;
+	
+	@:overload @:public override public function close() : Void;
 	
 	
 }
@@ -471,18 +473,18 @@ extern class DataTransferer
 	/**
 	* The best Object (e.g., DataFlavor) will be the last in sequence.
 	*/
-	public static var SELECT_BEST(default, null) : Bool;
+	@:public @:static @:final public static var SELECT_BEST(default, null) : Bool;
 	
 	/**
 	* The best Object (e.g., DataFlavor) will be the first in sequence.
 	*/
-	public static var SELECT_WORST(default, null) : Bool;
+	@:public @:static @:final public static var SELECT_WORST(default, null) : Bool;
 	
-	private var order(default, null) : Bool;
+	@:protected @:final private var order(default, null) : Bool;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(order : Bool) : Void;
+	@:overload @:public public function new(order : Bool) : Void;
 	
 	/**
 	* Helper method to compare two objects by their Integer indices in the
@@ -497,7 +499,7 @@ extern class DataTransferer
 	*             first object is mapped to a less, equal to, or greater
 	*             index than the second.
 	*/
-	@:overload private static function compareIndices(indexMap : java.util.Map<Dynamic, Dynamic>, obj1 : Dynamic, obj2 : Dynamic, fallbackIndex : Null<Int>) : Int;
+	@:overload @:protected @:static private static function compareIndices(indexMap : java.util.Map<Dynamic, Dynamic>, obj1 : Dynamic, obj2 : Dynamic, fallbackIndex : Null<Int>) : Int;
 	
 	/**
 	* Helper method to compare two objects by their Long indices in the
@@ -512,7 +514,7 @@ extern class DataTransferer
 	*             first object is mapped to a less, equal to, or greater
 	*             index than the second.
 	*/
-	@:overload private static function compareLongs(indexMap : java.util.Map<Dynamic, Dynamic>, obj1 : Dynamic, obj2 : Dynamic, fallbackIndex : Null<haxe.Int64>) : Int;
+	@:overload @:protected @:static private static function compareLongs(indexMap : java.util.Map<Dynamic, Dynamic>, obj1 : Dynamic, obj2 : Dynamic, fallbackIndex : Null<haxe.Int64>) : Int;
 	
 	/**
 	* Compares its two arguments for order.  Returns a negative integer,
@@ -554,7 +556,7 @@ extern class DataTransferer
 	* @throws ClassCastException if the arguments' types prevent them from
 	*         being compared by this comparator.
 	*/
-	@:overload public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
+	@:overload @:public public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
 	
 	
 }
@@ -567,9 +569,9 @@ extern class DataTransferer
 */
 @:native('sun$awt$datatransfer$DataTransferer$CharsetComparator') extern class DataTransferer_CharsetComparator extends sun.awt.datatransfer.DataTransferer.DataTransferer_IndexedComparator
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(order : Bool) : Void;
+	@:overload @:public public function new(order : Bool) : Void;
 	
 	/**
 	* Compares two String objects. Returns a negative integer, zero,
@@ -586,7 +588,7 @@ extern class DataTransferer
 	* @throws NullPointerException if either of the arguments is
 	*         <code>null</code>.
 	*/
-	@:overload override public function compare(obj1 : Dynamic, obj2 : Dynamic) : Int;
+	@:overload @:public override public function compare(obj1 : Dynamic, obj2 : Dynamic) : Int;
 	
 	/**
 	* Compares charsets. Returns a negative integer, zero, or a positive
@@ -611,7 +613,7 @@ extern class DataTransferer
 	*             first argument is worse, equal to, or better than the
 	*             second.
 	*/
-	@:overload private function compareCharsets(charset1 : String, charset2 : String) : Int;
+	@:overload @:protected private function compareCharsets(charset1 : String, charset2 : String) : Int;
 	
 	/**
 	* Returns encoding for the specified charset according to the
@@ -629,7 +631,7 @@ extern class DataTransferer
 	* @param charset the charset.
 	* @return an encoding for this charset.
 	*/
-	@:overload private static function getEncoding(charset : String) : String;
+	@:overload @:protected @:static private static function getEncoding(charset : String) : String;
 	
 	
 }
@@ -646,17 +648,17 @@ extern class DataTransferer
 */
 @:native('sun$awt$datatransfer$DataTransferer$DataFlavorComparator') extern class DataTransferer_DataFlavorComparator extends sun.awt.datatransfer.DataTransferer.DataTransferer_IndexedComparator
 {
-	private var flavorToFormatMap(default, null) : java.util.Map<Dynamic, Dynamic>;
+	@:protected @:final private var flavorToFormatMap(default, null) : java.util.Map<Dynamic, Dynamic>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(order : Bool) : Void;
+	@:overload @:public public function new(order : Bool) : Void;
 	
-	@:overload public function new(map : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(map : java.util.Map<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function new(map : java.util.Map<Dynamic, Dynamic>, order : Bool) : Void;
+	@:overload @:public public function new(map : java.util.Map<Dynamic, Dynamic>, order : Bool) : Void;
 	
-	@:overload override public function compare(obj1 : Dynamic, obj2 : Dynamic) : Int;
+	@:overload @:public override public function compare(obj1 : Dynamic, obj2 : Dynamic) : Int;
 	
 	
 }
@@ -675,11 +677,11 @@ extern class DataTransferer
 */
 @:native('sun$awt$datatransfer$DataTransferer$IndexOrderComparator') extern class DataTransferer_IndexOrderComparator extends sun.awt.datatransfer.DataTransferer.DataTransferer_IndexedComparator
 {
-	@:overload public function new(indexMap : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(indexMap : java.util.Map<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function new(indexMap : java.util.Map<Dynamic, Dynamic>, order : Bool) : Void;
+	@:overload @:public public function new(indexMap : java.util.Map<Dynamic, Dynamic>, order : Bool) : Void;
 	
-	@:overload override public function compare(obj1 : Dynamic, obj2 : Dynamic) : Int;
+	@:overload @:public override public function compare(obj1 : Dynamic, obj2 : Dynamic) : Int;
 	
 	
 }

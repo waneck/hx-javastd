@@ -31,29 +31,29 @@ extern interface MessageHandlerContext extends javax.xml.ws.handler.MessageConte
 	* @return The contained message; returns <code>null</code> if no
 	*         message is present in this message context
 	*/
-	@:overload public function getMessage() : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public public function getMessage() : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Sets the message in this message context
 	*/
-	@:overload public function setMessage(message : com.sun.xml.internal.ws.api.message.Message) : Void;
+	@:overload @:public public function setMessage(message : com.sun.xml.internal.ws.api.message.Message) : Void;
 	
 	/**
 	* @see javax.xml.ws.handler.soap.SOAPMessageContext#getRoles()
 	*/
-	@:overload public function getRoles() : java.util.Set<String>;
+	@:overload @:public public function getRoles() : java.util.Set<String>;
 	
 	/**
 	* Provides access to <code>WSBinding</code> which can be used in various ways.
 	* for example: <code>WSBinding#getSOAPVersion</code> to get SOAP version of the binding.
 	*              <code>WSBinding#isFeatureEnabled(AddressingFeature)</code> to check if addressing is enabled
 	*/
-	@:overload public function getWSBinding() : com.sun.xml.internal.ws.api.WSBinding;
+	@:overload @:public public function getWSBinding() : com.sun.xml.internal.ws.api.WSBinding;
 	
 	/**
 	* Provides access to <code>SEIModel</code>.
 	*/
-	@:overload public function getSEIModel() : com.sun.xml.internal.ws.api.model.SEIModel;
+	@:overload @:public public function getSEIModel() : com.sun.xml.internal.ws.api.model.SEIModel;
 	
 	/**
 	* Gets the {@link WSDLPort} that represents the port.
@@ -61,7 +61,7 @@ extern interface MessageHandlerContext extends javax.xml.ws.handler.MessageConte
 	*      returns the WSDLModel of the port that the client/endpoint binds to.
 	*      null when the Service is not configured with WSDL information.
 	*/
-	@:overload public function getPort() : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
+	@:overload @:public public function getPort() : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
 	
 	
 }

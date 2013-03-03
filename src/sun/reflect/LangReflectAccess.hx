@@ -29,50 +29,50 @@ extern interface LangReflectAccess
 {
 	/** Creates a new java.lang.reflect.Field. Access checks as per
 	java.lang.reflect.AccessibleObject are not overridden. */
-	@:overload public function newField(declaringClass : Class<Dynamic>, name : String, type : Class<Dynamic>, modifiers : Int, slot : Int, signature : String, annotations : java.NativeArray<java.StdTypes.Int8>) : java.lang.reflect.Field;
+	@:overload @:public public function newField(declaringClass : Class<Dynamic>, name : String, type : Class<Dynamic>, modifiers : Int, slot : Int, signature : String, annotations : java.NativeArray<java.StdTypes.Int8>) : java.lang.reflect.Field;
 	
 	/** Creates a new java.lang.reflect.Method. Access checks as per
 	java.lang.reflect.AccessibleObject are not overridden. */
-	@:overload public function newMethod(declaringClass : Class<Dynamic>, name : String, parameterTypes : java.NativeArray<Class<Dynamic>>, returnType : Class<Dynamic>, checkedExceptions : java.NativeArray<Class<Dynamic>>, modifiers : Int, slot : Int, signature : String, annotations : java.NativeArray<java.StdTypes.Int8>, parameterAnnotations : java.NativeArray<java.StdTypes.Int8>, annotationDefault : java.NativeArray<java.StdTypes.Int8>) : java.lang.reflect.Method;
+	@:overload @:public public function newMethod(declaringClass : Class<Dynamic>, name : String, parameterTypes : java.NativeArray<Class<Dynamic>>, returnType : Class<Dynamic>, checkedExceptions : java.NativeArray<Class<Dynamic>>, modifiers : Int, slot : Int, signature : String, annotations : java.NativeArray<java.StdTypes.Int8>, parameterAnnotations : java.NativeArray<java.StdTypes.Int8>, annotationDefault : java.NativeArray<java.StdTypes.Int8>) : java.lang.reflect.Method;
 	
 	/** Creates a new java.lang.reflect.Constructor. Access checks as
 	per java.lang.reflect.AccessibleObject are not overridden. */
-	@:overload public function newConstructor<T>(declaringClass : Class<T>, parameterTypes : java.NativeArray<Class<Dynamic>>, checkedExceptions : java.NativeArray<Class<Dynamic>>, modifiers : Int, slot : Int, signature : String, annotations : java.NativeArray<java.StdTypes.Int8>, parameterAnnotations : java.NativeArray<java.StdTypes.Int8>) : java.lang.reflect.Constructor<T>;
+	@:overload @:public public function newConstructor<T>(declaringClass : Class<T>, parameterTypes : java.NativeArray<Class<Dynamic>>, checkedExceptions : java.NativeArray<Class<Dynamic>>, modifiers : Int, slot : Int, signature : String, annotations : java.NativeArray<java.StdTypes.Int8>, parameterAnnotations : java.NativeArray<java.StdTypes.Int8>) : java.lang.reflect.Constructor<T>;
 	
 	/** Gets the MethodAccessor object for a java.lang.reflect.Method */
-	@:overload public function getMethodAccessor(m : java.lang.reflect.Method) : sun.reflect.MethodAccessor;
+	@:overload @:public public function getMethodAccessor(m : java.lang.reflect.Method) : sun.reflect.MethodAccessor;
 	
 	/** Sets the MethodAccessor object for a java.lang.reflect.Method */
-	@:overload public function setMethodAccessor(m : java.lang.reflect.Method, accessor : sun.reflect.MethodAccessor) : Void;
+	@:overload @:public public function setMethodAccessor(m : java.lang.reflect.Method, accessor : sun.reflect.MethodAccessor) : Void;
 	
 	/** Gets the ConstructorAccessor object for a
 	java.lang.reflect.Constructor */
-	@:overload public function getConstructorAccessor(c : java.lang.reflect.Constructor<Dynamic>) : sun.reflect.ConstructorAccessor;
+	@:overload @:public public function getConstructorAccessor(c : java.lang.reflect.Constructor<Dynamic>) : sun.reflect.ConstructorAccessor;
 	
 	/** Sets the ConstructorAccessor object for a
 	java.lang.reflect.Constructor */
-	@:overload public function setConstructorAccessor(c : java.lang.reflect.Constructor<Dynamic>, accessor : sun.reflect.ConstructorAccessor) : Void;
+	@:overload @:public public function setConstructorAccessor(c : java.lang.reflect.Constructor<Dynamic>, accessor : sun.reflect.ConstructorAccessor) : Void;
 	
 	/** Gets the "slot" field from a Constructor (used for serialization) */
-	@:overload public function getConstructorSlot(c : java.lang.reflect.Constructor<Dynamic>) : Int;
+	@:overload @:public public function getConstructorSlot(c : java.lang.reflect.Constructor<Dynamic>) : Int;
 	
 	/** Gets the "signature" field from a Constructor (used for serialization) */
-	@:overload public function getConstructorSignature(c : java.lang.reflect.Constructor<Dynamic>) : String;
+	@:overload @:public public function getConstructorSignature(c : java.lang.reflect.Constructor<Dynamic>) : String;
 	
 	/** Gets the "annotations" field from a Constructor (used for serialization) */
-	@:overload public function getConstructorAnnotations(c : java.lang.reflect.Constructor<Dynamic>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getConstructorAnnotations(c : java.lang.reflect.Constructor<Dynamic>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** Gets the "parameterAnnotations" field from a Constructor (used for serialization) */
-	@:overload public function getConstructorParameterAnnotations(c : java.lang.reflect.Constructor<Dynamic>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getConstructorParameterAnnotations(c : java.lang.reflect.Constructor<Dynamic>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** Makes a "child" copy of a Method */
-	@:overload public function copyMethod(arg : java.lang.reflect.Method) : java.lang.reflect.Method;
+	@:overload @:public public function copyMethod(arg : java.lang.reflect.Method) : java.lang.reflect.Method;
 	
 	/** Makes a "child" copy of a Field */
-	@:overload public function copyField(arg : java.lang.reflect.Field) : java.lang.reflect.Field;
+	@:overload @:public public function copyField(arg : java.lang.reflect.Field) : java.lang.reflect.Field;
 	
 	/** Makes a "child" copy of a Constructor */
-	@:overload public function copyConstructor<T>(arg : java.lang.reflect.Constructor<T>) : java.lang.reflect.Constructor<T>;
+	@:overload @:public public function copyConstructor<T>(arg : java.lang.reflect.Constructor<T>) : java.lang.reflect.Constructor<T>;
 	
 	
 }

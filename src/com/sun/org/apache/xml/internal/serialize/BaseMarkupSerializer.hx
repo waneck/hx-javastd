@@ -92,38 +92,38 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @see Serializer
 	* @see LSSerializer
 	*/
-	private var features : java.StdTypes.Int16;
+	@:protected private var features : java.StdTypes.Int16;
 	
-	private var fDOMErrorHandler : org.w3c.dom.DOMErrorHandler;
+	@:protected private var fDOMErrorHandler : org.w3c.dom.DOMErrorHandler;
 	
-	private var fDOMError(default, null) : com.sun.org.apache.xerces.internal.dom.DOMErrorImpl;
+	@:protected @:final private var fDOMError(default, null) : com.sun.org.apache.xerces.internal.dom.DOMErrorImpl;
 	
-	private var fDOMFilter : org.w3c.dom.ls.LSSerializerFilter;
+	@:protected private var fDOMFilter : org.w3c.dom.ls.LSSerializerFilter;
 	
-	private var _encodingInfo : com.sun.org.apache.xml.internal.serialize.EncodingInfo;
+	@:protected private var _encodingInfo : com.sun.org.apache.xml.internal.serialize.EncodingInfo;
 	
 	/**
 	* If the document has been started (header serialized), this
 	* flag is set to true so it's not started twice.
 	*/
-	private var _started : Bool;
+	@:protected private var _started : Bool;
 	
 	/**
 	* Association between namespace URIs (keys) and prefixes (values).
 	* Accumulated here prior to starting an element and placing this
 	* list in the element state.
 	*/
-	private var _prefixes : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var _prefixes : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* The system identifier of the document type, if known.
 	*/
-	private var _docTypePublicId : String;
+	@:protected private var _docTypePublicId : String;
 	
 	/**
 	* The system identifier of the document type, if known.
 	*/
-	private var _docTypeSystemId : String;
+	@:protected private var _docTypeSystemId : String;
 	
 	/**
 	* The output format associated with this serializer. This will never
@@ -131,23 +131,23 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* the default one for this document type will be used. The format
 	* object is never changed by the serializer.
 	*/
-	private var _format : com.sun.org.apache.xml.internal.serialize.OutputFormat;
+	@:protected private var _format : com.sun.org.apache.xml.internal.serialize.OutputFormat;
 	
 	/**
 	* The printer used for printing text parts.
 	*/
-	private var _printer : com.sun.org.apache.xml.internal.serialize.Printer;
+	@:protected private var _printer : com.sun.org.apache.xml.internal.serialize.Printer;
 	
 	/**
 	* True if indenting printer.
 	*/
-	private var _indenting : Bool;
+	@:protected private var _indenting : Bool;
 	
 	/** Temporary buffer to store character data */
-	private var fStrBuffer(default, null) : java.lang.StringBuffer;
+	@:protected @:final private var fStrBuffer(default, null) : java.lang.StringBuffer;
 	
 	/** Current node that is being processed  */
-	private var fCurrentNode : org.w3c.dom.Node;
+	@:protected private var fCurrentNode : org.w3c.dom.Node;
 	
 	/**
 	* Protected constructor can only be used by derived class.
@@ -155,23 +155,23 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* by calling {@link #setOutputCharStream} or {@link #setOutputByteStream}
 	* first
 	*/
-	@:overload private function new(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:protected private function new(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
-	@:overload public function asDocumentHandler() : org.xml.sax.DocumentHandler;
+	@:overload @:public public function asDocumentHandler() : org.xml.sax.DocumentHandler;
 	
-	@:overload public function asContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function asContentHandler() : org.xml.sax.ContentHandler;
 	
-	@:overload public function asDOMSerializer() : com.sun.org.apache.xml.internal.serialize.DOMSerializer;
+	@:overload @:public public function asDOMSerializer() : com.sun.org.apache.xml.internal.serialize.DOMSerializer;
 	
-	@:overload public function setOutputByteStream(output : java.io.OutputStream) : Void;
+	@:overload @:public public function setOutputByteStream(output : java.io.OutputStream) : Void;
 	
-	@:overload public function setOutputCharStream(writer : java.io.Writer) : Void;
+	@:overload @:public public function setOutputCharStream(writer : java.io.Writer) : Void;
 	
-	@:overload public function setOutputFormat(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public public function setOutputFormat(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
-	@:overload public function reset() : Bool;
+	@:overload @:public public function reset() : Bool;
 	
-	@:overload private function prepare() : Void;
+	@:overload @:protected private function prepare() : Void;
 	
 	/**
 	* Serializes the DOM element using the previously specified
@@ -182,7 +182,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @throws IOException An I/O exception occured while
 	*   serializing
 	*/
-	@:overload public function serialize(elem : org.w3c.dom.Element) : Void;
+	@:overload @:public public function serialize(elem : org.w3c.dom.Element) : Void;
 	
 	/**
 	* Serializes a node using the previously specified
@@ -192,7 +192,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @param node Node to serialize
 	* @throws IOException An I/O exception occured while serializing
 	*/
-	@:overload public function serialize(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function serialize(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Serializes the DOM document fragmnt using the previously specified
@@ -203,7 +203,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @throws IOException An I/O exception occured while
 	*   serializing
 	*/
-	@:overload public function serialize(frag : org.w3c.dom.DocumentFragment) : Void;
+	@:overload @:public public function serialize(frag : org.w3c.dom.DocumentFragment) : Void;
 	
 	/**
 	* Serializes the DOM document using the previously specified
@@ -214,33 +214,33 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @throws IOException An I/O exception occured while
 	*   serializing
 	*/
-	@:overload public function serialize(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public public function serialize(doc : org.w3c.dom.Document) : Void;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
-	@:overload public function characters(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function ignorableWhitespace(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload @:final public function processingInstruction(target : String, code : String) : Void;
+	@:overload @:public @:final public function processingInstruction(target : String, code : String) : Void;
 	
-	@:overload public function processingInstructionIO(target : String, code : String) : Void;
+	@:overload @:public public function processingInstructionIO(target : String, code : String) : Void;
 	
-	@:overload public function comment(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function comment(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function comment(text : String) : Void;
+	@:overload @:public public function comment(text : String) : Void;
 	
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
-	@:overload public function startNonEscaping() : Void;
+	@:overload @:public public function startNonEscaping() : Void;
 	
-	@:overload public function endNonEscaping() : Void;
+	@:overload @:public public function endNonEscaping() : Void;
 	
-	@:overload public function startPreserving() : Void;
+	@:overload @:public public function startPreserving() : Void;
 	
-	@:overload public function endPreserving() : Void;
+	@:overload @:public public function endPreserving() : Void;
 	
 	/**
 	* Called at the end of the document to wrap it up.
@@ -250,35 +250,35 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @throws SAXException An I/O exception occured during
 	*  serializing
 	*/
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
-	@:overload public function startEntity(name : String) : Void;
+	@:overload @:public public function startEntity(name : String) : Void;
 	
-	@:overload public function endEntity(name : String) : Void;
+	@:overload @:public public function endEntity(name : String) : Void;
 	
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
-	@:overload @:final public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public @:final public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
-	@:overload public function elementDecl(name : String, model : String) : Void;
+	@:overload @:public public function elementDecl(name : String, model : String) : Void;
 	
-	@:overload public function attributeDecl(eName : String, aName : String, type : String, valueDefault : String, value : String) : Void;
+	@:overload @:public public function attributeDecl(eName : String, aName : String, type : String, valueDefault : String, value : String) : Void;
 	
-	@:overload public function internalEntityDecl(name : String, value : String) : Void;
+	@:overload @:public public function internalEntityDecl(name : String, value : String) : Void;
 	
-	@:overload public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
+	@:overload @:public public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
 	
-	@:overload public function notationDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function notationDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Serialize the DOM node. This method is shared across XML, HTML and XHTML
@@ -290,15 +290,15 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @throws IOException An I/O exception occured while
 	*   serializing
 	*/
-	@:overload private function serializeNode(node : org.w3c.dom.Node) : Void;
+	@:overload @:protected private function serializeNode(node : org.w3c.dom.Node) : Void;
 	
 	/* Serializes XML Declaration, according to 'xml-declaration' property.
 	*/
-	@:overload private function serializeDocument() : Void;
+	@:overload @:protected private function serializeDocument() : Void;
 	
 	/* Serializes DTD, if present.
 	*/
-	@:overload private function serializeDTD(name : String) : Void;
+	@:overload @:protected private function serializeDTD(name : String) : Void;
 	
 	/**
 	* Must be called by a method about to print any type of content.
@@ -310,7 +310,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @throws IOException An I/O exception occured while
 	*   serializing
 	*/
-	@:overload private function content() : com.sun.org.apache.xml.internal.serialize.ElementState;
+	@:overload @:protected private function content() : com.sun.org.apache.xml.internal.serialize.ElementState;
 	
 	/**
 	* Called to print the text contents in the prevailing element format.
@@ -324,7 +324,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @throws IOException An I/O exception occured while
 	*   serializing
 	*/
-	@:overload private function characters(text : String) : Void;
+	@:overload @:protected private function characters(text : String) : Void;
 	
 	/**
 	* Returns the suitable entity reference for this character value,
@@ -334,7 +334,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @param ch Character value
 	* @return Character entity name, or null
 	*/
-	@:overload @:abstract private function getEntityRef(ch : Int) : String;
+	@:overload @:protected @:abstract private function getEntityRef(ch : Int) : String;
 	
 	/**
 	* Called to serializee the DOM element. The element is serialized based on
@@ -344,7 +344,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @throws IOException An I/O exception occured while
 	*   serializing
 	*/
-	@:overload @:abstract private function serializeElement(elem : org.w3c.dom.Element) : Void;
+	@:overload @:protected @:abstract private function serializeElement(elem : org.w3c.dom.Element) : Void;
 	
 	/**
 	* Comments and PIs cannot be serialized before the root element,
@@ -357,11 +357,11 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @throws IOException An I/O exception occured while
 	*   serializing
 	*/
-	@:overload private function serializePreRoot() : Void;
+	@:overload @:protected private function serializePreRoot() : Void;
 	
-	@:overload private function printCDATAText(text : String) : Void;
+	@:overload @:protected private function printCDATAText(text : String) : Void;
 	
-	@:overload private function surrogates(high : Int, low : Int) : Void;
+	@:overload @:protected private function surrogates(high : Int, low : Int) : Void;
 	
 	/**
 	* Called to print additional text with whitespace handling.
@@ -376,9 +376,9 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @param preserveSpace Space preserving flag
 	* @param unescaped Print unescaped
 	*/
-	@:overload private function printText(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, preserveSpace : Bool, unescaped : Bool) : Void;
+	@:overload @:protected private function printText(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, preserveSpace : Bool, unescaped : Bool) : Void;
 	
-	@:overload private function printText(text : String, preserveSpace : Bool, unescaped : Bool) : Void;
+	@:overload @:protected private function printText(text : String, preserveSpace : Bool, unescaped : Bool) : Void;
 	
 	/**
 	* Print a document type public or system identifier URL.
@@ -387,9 +387,9 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	*
 	* @param url The document type url to print
 	*/
-	@:overload private function printDoctypeURL(url : String) : Void;
+	@:overload @:protected private function printDoctypeURL(url : String) : Void;
 	
-	@:overload private function printEscaped(ch : Int) : Void;
+	@:overload @:protected private function printEscaped(ch : Int) : Void;
 	
 	/**
 	* Escapes a string so it may be printed as text content or attribute
@@ -399,14 +399,14 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	*
 	* @param source The string to escape
 	*/
-	@:overload private function printEscaped(source : String) : Void;
+	@:overload @:protected private function printEscaped(source : String) : Void;
 	
 	/**
 	* Return the state of the current element.
 	*
 	* @return Current element state
 	*/
-	@:overload private function getElementState() : com.sun.org.apache.xml.internal.serialize.ElementState;
+	@:overload @:protected private function getElementState() : com.sun.org.apache.xml.internal.serialize.ElementState;
 	
 	/**
 	* Enter a new element state for the specified element.
@@ -415,7 +415,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	*
 	* @return Current element state, or null
 	*/
-	@:overload private function enterElementState(namespaceURI : String, localName : String, rawName : String, preserveSpace : Bool) : com.sun.org.apache.xml.internal.serialize.ElementState;
+	@:overload @:protected private function enterElementState(namespaceURI : String, localName : String, rawName : String, preserveSpace : Bool) : com.sun.org.apache.xml.internal.serialize.ElementState;
 	
 	/**
 	* Leave the current element state and return to the
@@ -424,7 +424,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	*
 	* @return Previous element state
 	*/
-	@:overload private function leaveElementState() : com.sun.org.apache.xml.internal.serialize.ElementState;
+	@:overload @:protected private function leaveElementState() : com.sun.org.apache.xml.internal.serialize.ElementState;
 	
 	/**
 	* Returns true if in the state of the document.
@@ -433,7 +433,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	*
 	* @return True if in the state of the document
 	*/
-	@:overload private function isDocumentState() : Bool;
+	@:overload @:protected private function isDocumentState() : Bool;
 	
 	/**
 	* Returns the namespace prefix for the specified URI.
@@ -443,7 +443,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @param namespaceURI The namespace URI
 	* @return The namespace prefix if known, or null
 	*/
-	@:overload private function getPrefix(namespaceURI : String) : String;
+	@:overload @:protected private function getPrefix(namespaceURI : String) : String;
 	
 	/**
 	* The method modifies global DOM error object
@@ -453,9 +453,9 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @param type
 	* @return a DOMError
 	*/
-	@:overload private function modifyDOMError(message : String, severity : java.StdTypes.Int16, type : String, node : org.w3c.dom.Node) : org.w3c.dom.DOMError;
+	@:overload @:protected private function modifyDOMError(message : String, severity : java.StdTypes.Int16, type : String, node : org.w3c.dom.Node) : org.w3c.dom.DOMError;
 	
-	@:overload private function fatalError(message : String) : Void;
+	@:overload @:protected private function fatalError(message : String) : Void;
 	
 	/**
 	* DOM level 3:
@@ -463,7 +463,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	*
 	* @param node The node to check for unbound namespace prefices
 	*/
-	@:overload private function checkUnboundNamespacePrefixedNode(node : org.w3c.dom.Node) : Void;
+	@:overload @:protected private function checkUnboundNamespacePrefixedNode(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Receive notification of the beginning of an element.
@@ -529,7 +529,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @see org.xml.sax.Attributes
 	* @see org.xml.sax.helpers.AttributesImpl
 	*/
-	@:overload @:public @:public public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public @:public @:public @:public @:public public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -546,7 +546,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @exception org.xml.sax.SAXException Any SAX exception, possibly
 	*            wrapping another exception.
 	*/
-	@:overload @:abstract @:public public function endElement(name : String) : Void;
+	@:overload @:public @:abstract @:public public function endElement(name : String) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -569,7 +569,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload @:public @:public public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public @:public @:public @:public @:public public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Receive notification of the beginning of an element.
@@ -593,7 +593,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @see #endElement
 	* @see org.xml.sax.AttributeList
 	*/
-	@:overload @:abstract @:public public function startElement(name : String, atts : org.xml.sax.AttributeList) : Void;
+	@:overload @:public @:abstract @:public public function startElement(name : String, atts : org.xml.sax.AttributeList) : Void;
 	
 	
 }

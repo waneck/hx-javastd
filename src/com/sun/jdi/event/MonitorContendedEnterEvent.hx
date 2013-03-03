@@ -45,14 +45,14 @@ package com.sun.jdi.event;
 	* @return a {@link ThreadReference} which mirrors the event's thread in
 	* the target VM.
 	*/
-	@:overload public function thread() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function thread() : com.sun.jdi.ThreadReference;
 	
 	/**
 	* Returns the method that was entered.
 	*
 	* @return an {@link ObjectReference} for the monitor.
 	*/
-	@:overload public function monitor() : com.sun.jdi.ObjectReference;
+	@:overload @:public public function monitor() : com.sun.jdi.ObjectReference;
 	
 	
 }

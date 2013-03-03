@@ -31,7 +31,7 @@ extern class GetBooleanSecurityPropertyAction implements java.security.Privilege
 	*
 	* @param theProp the name of the security property
 	*/
-	@:overload public function new(theProp : String) : Void;
+	@:overload @:public public function new(theProp : String) : Void;
 	
 	/**
 	* Determines the boolean value of the security property whose name was
@@ -39,7 +39,7 @@ extern class GetBooleanSecurityPropertyAction implements java.security.Privilege
 	*
 	* @return the <code>Boolean</code> value of the security property.
 	*/
-	@:overload public function run() : Null<Bool>;
+	@:overload @:public public function run() : Null<Bool>;
 	
 	
 }

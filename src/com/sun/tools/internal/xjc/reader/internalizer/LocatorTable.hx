@@ -25,13 +25,13 @@ package com.sun.tools.internal.xjc.reader.internalizer;
 */
 extern class LocatorTable
 {
-	@:overload public function storeStartLocation(e : org.w3c.dom.Element, loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function storeStartLocation(e : org.w3c.dom.Element, loc : org.xml.sax.Locator) : Void;
 	
-	@:overload public function storeEndLocation(e : org.w3c.dom.Element, loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function storeEndLocation(e : org.w3c.dom.Element, loc : org.xml.sax.Locator) : Void;
 	
-	@:overload public function getStartLocation(e : org.w3c.dom.Element) : org.xml.sax.Locator;
+	@:overload @:public public function getStartLocation(e : org.w3c.dom.Element) : org.xml.sax.Locator;
 	
-	@:overload public function getEndLocation(e : org.w3c.dom.Element) : org.xml.sax.Locator;
+	@:overload @:public public function getEndLocation(e : org.w3c.dom.Element) : org.xml.sax.Locator;
 	
 	
 }

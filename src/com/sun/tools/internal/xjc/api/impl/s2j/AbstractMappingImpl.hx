@@ -30,24 +30,24 @@ package com.sun.tools.internal.xjc.api.impl.s2j;
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	private var parent(default, null) : com.sun.tools.internal.xjc.api.impl.s2j.JAXBModelImpl;
+	@:protected @:final private var parent(default, null) : com.sun.tools.internal.xjc.api.impl.s2j.JAXBModelImpl;
 	
-	private var clazz(default, null) : InfoT;
+	@:protected @:final private var clazz(default, null) : InfoT;
 	
-	@:overload private function new(parent : com.sun.tools.internal.xjc.api.impl.s2j.JAXBModelImpl, clazz : InfoT) : Void;
+	@:overload @:protected private function new(parent : com.sun.tools.internal.xjc.api.impl.s2j.JAXBModelImpl, clazz : InfoT) : Void;
 	
-	@:overload @:final public function getElement() : javax.xml.namespace.QName;
+	@:overload @:public @:final public function getElement() : javax.xml.namespace.QName;
 	
-	@:overload @:final public function getClazz() : String;
+	@:overload @:public @:final public function getClazz() : String;
 	
-	@:overload @:final public function getWrapperStyleDrilldown() : java.util.List<com.sun.tools.internal.xjc.api.Property>;
+	@:overload @:public @:final public function getWrapperStyleDrilldown() : java.util.List<com.sun.tools.internal.xjc.api.Property>;
 	
-	@:overload @:abstract private function calcDrilldown() : java.util.List<com.sun.tools.internal.xjc.api.Property>;
+	@:overload @:protected @:abstract private function calcDrilldown() : java.util.List<com.sun.tools.internal.xjc.api.Property>;
 	
 	/**
 	* Derived classes can use this method to implement {@link #calcDrilldown}.
 	*/
-	@:overload private function buildDrilldown(typeBean : com.sun.tools.internal.xjc.model.CClassInfo) : java.util.List<com.sun.tools.internal.xjc.api.Property>;
+	@:overload @:protected private function buildDrilldown(typeBean : com.sun.tools.internal.xjc.model.CClassInfo) : java.util.List<com.sun.tools.internal.xjc.api.Property>;
 	
 	/**
 	* Returns the fully-qualified name of the java class for the type of this element.
@@ -59,7 +59,7 @@ package com.sun.tools.internal.xjc.api.impl.s2j;
 	* @return
 	*      never be null.
 	*/
-	@:overload public function getType() : com.sun.tools.internal.xjc.api.TypeAndAnnotation;
+	@:overload @:public public function getType() : com.sun.tools.internal.xjc.api.TypeAndAnnotation;
 	
 	
 }

@@ -40,7 +40,7 @@ extern interface LogicalMessage
 	*  @return The contained message payload; returns <code>null</code> if no
 	*          payload is present in this message.
 	**/
-	@:overload public function getPayload() : javax.xml.transform.Source;
+	@:overload @:public public function getPayload() : javax.xml.transform.Source;
 	
 	/** Sets the message payload
 	*
@@ -50,7 +50,7 @@ extern interface LogicalMessage
 	*  @throws java.lang.UnsupportedOperationException If this
 	*          operation is not supported
 	**/
-	@:overload public function setPayload(payload : javax.xml.transform.Source) : Void;
+	@:overload @:public public function setPayload(payload : javax.xml.transform.Source) : Void;
 	
 	/** Gets the message payload as a JAXB object. Note that there is no
 	*  connection between the returned object and the message payload,
@@ -64,7 +64,7 @@ extern interface LogicalMessage
 	*     JAXBContext to unmarshall the payload. The cause of
 	*     the WebServiceException is the original JAXBException.
 	**/
-	@:overload public function getPayload(context : javax.xml.bind.JAXBContext) : Dynamic;
+	@:overload @:public public function getPayload(context : javax.xml.bind.JAXBContext) : Dynamic;
 	
 	/** Sets the message payload
 	*
@@ -77,7 +77,7 @@ extern interface LogicalMessage
 	*     JAXBContext to marshall the payload. The cause of
 	*     the WebServiceException is the original JAXBException.
 	**/
-	@:overload public function setPayload(payload : Dynamic, context : javax.xml.bind.JAXBContext) : Void;
+	@:overload @:public public function setPayload(payload : Dynamic, context : javax.xml.bind.JAXBContext) : Void;
 	
 	
 }

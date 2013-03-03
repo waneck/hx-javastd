@@ -47,7 +47,7 @@ extern interface ConstrainableGraphics
 	* the object by calling the constrain() method more times, but
 	* you can never enlarge its restricted maximum clip.
 	*/
-	@:overload public function constrain(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function constrain(x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	
 }

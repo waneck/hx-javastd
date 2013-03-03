@@ -41,7 +41,7 @@ package sun.text.resources;
 */
 extern class CollationData_zh_HK extends sun.util.EmptyListResourceBundle
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

@@ -42,7 +42,7 @@ extern interface ProgramElementDoc extends com.sun.javadoc.Doc
 	* @return a ClassDoc for this element's containing class or interface.
 	* If this is a top-level class or interface, return null.
 	*/
-	@:overload public function containingClass() : com.sun.javadoc.ClassDoc;
+	@:overload @:public @:public public function containingClass() : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Get the package that this program element is contained in.
@@ -51,7 +51,7 @@ extern interface ProgramElementDoc extends com.sun.javadoc.Doc
 	* If in the unnamed package, this PackageDoc will have the
 	* name "".
 	*/
-	@:overload public function containingPackage() : com.sun.javadoc.PackageDoc;
+	@:overload @:public @:public public function containingPackage() : com.sun.javadoc.PackageDoc;
 	
 	/**
 	* Get the fully qualified name of this program element.
@@ -63,14 +63,14 @@ extern interface ProgramElementDoc extends com.sun.javadoc.Doc
 	*
 	* @return the qualified name of the program element as a String.
 	*/
-	@:overload public function qualifiedName() : String;
+	@:overload @:public @:public @:public public function qualifiedName() : String;
 	
 	/**
 	* Get the modifier specifier integer.
 	*
 	* @see java.lang.reflect.Modifier
 	*/
-	@:overload public function modifierSpecifier() : Int;
+	@:overload @:public @:public public function modifierSpecifier() : Int;
 	
 	/**
 	* Get modifiers string.
@@ -81,7 +81,7 @@ extern interface ProgramElementDoc extends com.sun.javadoc.Doc
 	* return "public abstract".
 	* Annotations are not included.
 	*/
-	@:overload public function modifiers() : String;
+	@:overload @:public @:public public function modifiers() : String;
 	
 	/**
 	* Get the annotations of this program element.
@@ -90,37 +90,37 @@ extern interface ProgramElementDoc extends com.sun.javadoc.Doc
 	* @return the annotations of this program element.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function annotations() : java.NativeArray<com.sun.javadoc.AnnotationDesc>;
+	@:require(java5) @:overload @:public @:public public function annotations() : java.NativeArray<com.sun.javadoc.AnnotationDesc>;
 	
 	/**
 	* Return true if this program element is public.
 	*/
-	@:overload public function isPublic() : Bool;
+	@:overload @:public @:public public function isPublic() : Bool;
 	
 	/**
 	* Return true if this program element is protected.
 	*/
-	@:overload public function isProtected() : Bool;
+	@:overload @:public @:public public function isProtected() : Bool;
 	
 	/**
 	* Return true if this program element is private.
 	*/
-	@:overload public function isPrivate() : Bool;
+	@:overload @:public @:public public function isPrivate() : Bool;
 	
 	/**
 	* Return true if this program element is package private.
 	*/
-	@:overload public function isPackagePrivate() : Bool;
+	@:overload @:public @:public public function isPackagePrivate() : Bool;
 	
 	/**
 	* Return true if this program element is static.
 	*/
-	@:overload public function isStatic() : Bool;
+	@:overload @:public @:public public function isStatic() : Bool;
 	
 	/**
 	* Return true if this program element is final.
 	*/
-	@:overload public function isFinal() : Bool;
+	@:overload @:public @:public public function isFinal() : Bool;
 	
 	
 }

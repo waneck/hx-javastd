@@ -25,7 +25,7 @@ package com.sun.corba.se.spi.orbutil.closure;
 */
 extern interface Closure
 {
-	@:overload public function evaluate() : Dynamic;
+	@:overload @:public public function evaluate() : Dynamic;
 	
 	
 }

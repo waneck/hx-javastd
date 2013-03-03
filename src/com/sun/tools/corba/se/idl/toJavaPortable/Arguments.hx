@@ -45,51 +45,51 @@ extern class Arguments extends com.sun.tools.corba.se.idl.Arguments
 	/**
 	* Public, zero-argument constructor.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function parseOtherArgs(args : java.NativeArray<String>, properties : java.util.Properties) : Void;
+	@:overload @:protected override private function parseOtherArgs(args : java.NativeArray<String>, properties : java.util.Properties) : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function collectUnknownArg(args : java.NativeArray<String>, i : Int, unknownArgs : java.util.Vector<Dynamic>) : Int;
+	@:overload @:protected private function collectUnknownArg(args : java.NativeArray<String>, i : Int, unknownArgs : java.util.Vector<Dynamic>) : Int;
 	
 	/**
 	*
 	**/
-	@:overload private function packageFromProps(props : java.util.Properties) : Void;
+	@:overload @:protected private function packageFromProps(props : java.util.Properties) : Void;
 	
 	/**
 	* d57482 <klr> method added so default emitter check could be overriden.
 	**/
-	@:overload private function setDefaultEmitter() : Void;
+	@:overload @:protected private function setDefaultEmitter() : Void;
 	
-	@:overload private function setNameModifiers(skeletonPattern : String, tiePattern : String) : Void;
+	@:overload @:protected private function setNameModifiers(skeletonPattern : String, tiePattern : String) : Void;
 	
-	public var packages : java.util.Hashtable<Dynamic, Dynamic>;
+	@:public public var packages : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	public var separator : String;
+	@:public public var separator : String;
 	
-	public static var None(default, null) : Int;
+	@:public @:static @:final public static var None(default, null) : Int;
 	
-	public var emit : Int;
+	@:public public var emit : Int;
 	
-	public var TIEServer : Bool;
+	@:public public var TIEServer : Bool;
 	
-	public var POAServer : Bool;
+	@:public public var POAServer : Bool;
 	
-	public var LocalOptimization : Bool;
+	@:public public var LocalOptimization : Bool;
 	
-	public var skeletonNameModifier : com.sun.tools.corba.se.idl.toJavaPortable.NameModifier;
+	@:public public var skeletonNameModifier : com.sun.tools.corba.se.idl.toJavaPortable.NameModifier;
 	
-	public var tieNameModifier : com.sun.tools.corba.se.idl.toJavaPortable.NameModifier;
+	@:public public var tieNameModifier : com.sun.tools.corba.se.idl.toJavaPortable.NameModifier;
 	
-	public var packageTranslation : java.util.Hashtable<Dynamic, Dynamic>;
+	@:public public var packageTranslation : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	public var targetDir : String;
+	@:public public var targetDir : String;
 	
 	
 }

@@ -30,15 +30,15 @@ package javax.swing.plaf.basic;
 */
 extern class BasicPanelUI extends javax.swing.plaf.PanelUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installDefaults(p : javax.swing.JPanel) : Void;
+	@:overload @:protected private function installDefaults(p : javax.swing.JPanel) : Void;
 	
-	@:overload private function uninstallDefaults(p : javax.swing.JPanel) : Void;
+	@:overload @:protected private function uninstallDefaults(p : javax.swing.JPanel) : Void;
 	
 	/**
 	* Returns the baseline.
@@ -48,7 +48,7 @@ extern class BasicPanelUI extends javax.swing.plaf.PanelUI
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
+	@:require(java6) @:overload @:public override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
 	
 	/**
 	* Returns an enum indicating how the baseline of the component
@@ -58,7 +58,7 @@ extern class BasicPanelUI extends javax.swing.plaf.PanelUI
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
+	@:require(java6) @:overload @:public override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
 	
 	
 }

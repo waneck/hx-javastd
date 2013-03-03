@@ -57,7 +57,7 @@ package java.security;
 	* @exception UnrecoverableKeyException if the key cannot be recovered
 	* (e.g., the given password is wrong).
 	*/
-	@:overload @:abstract public function engineGetKey(alias : String, password : java.NativeArray<java.StdTypes.Char16>) : java.security.Key;
+	@:overload @:public @:abstract public function engineGetKey(alias : String, password : java.NativeArray<java.StdTypes.Char16>) : java.security.Key;
 	
 	/**
 	* Returns the certificate chain associated with the given alias.
@@ -72,7 +72,7 @@ package java.security;
 	* and the root certificate authority last), or null if the given alias
 	* does not exist or does not contain a certificate chain
 	*/
-	@:overload @:abstract public function engineGetCertificateChain(alias : String) : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public @:abstract public function engineGetCertificateChain(alias : String) : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the certificate associated with the given alias.
@@ -95,7 +95,7 @@ package java.security;
 	* @return the certificate, or null if the given alias does not exist or
 	* does not contain a certificate.
 	*/
-	@:overload @:abstract public function engineGetCertificate(alias : String) : java.security.cert.Certificate;
+	@:overload @:public @:abstract public function engineGetCertificate(alias : String) : java.security.cert.Certificate;
 	
 	/**
 	* Returns the creation date of the entry identified by the given alias.
@@ -105,7 +105,7 @@ package java.security;
 	* @return the creation date of this entry, or null if the given alias does
 	* not exist
 	*/
-	@:overload @:abstract public function engineGetCreationDate(alias : String) : java.util.Date;
+	@:overload @:public @:abstract public function engineGetCreationDate(alias : String) : java.util.Date;
 	
 	/**
 	* Assigns the given key to the given alias, protecting it with the given
@@ -129,7 +129,7 @@ package java.security;
 	* @exception KeyStoreException if the given key cannot be protected, or
 	* this operation fails for some other reason
 	*/
-	@:overload @:abstract public function engineSetKeyEntry(alias : String, key : java.security.Key, password : java.NativeArray<java.StdTypes.Char16>, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
+	@:overload @:public @:abstract public function engineSetKeyEntry(alias : String, key : java.security.Key, password : java.NativeArray<java.StdTypes.Char16>, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
 	
 	/**
 	* Assigns the given key (that has already been protected) to the given
@@ -152,7 +152,7 @@ package java.security;
 	*
 	* @exception KeyStoreException if this operation fails.
 	*/
-	@:overload @:abstract public function engineSetKeyEntry(alias : String, key : java.NativeArray<java.StdTypes.Int8>, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
+	@:overload @:public @:abstract public function engineSetKeyEntry(alias : String, key : java.NativeArray<java.StdTypes.Int8>, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
 	
 	/**
 	* Assigns the given certificate to the given alias.
@@ -171,7 +171,7 @@ package java.security;
 	* not identify an entry containing a trusted certificate,
 	* or this operation fails for some other reason.
 	*/
-	@:overload @:abstract public function engineSetCertificateEntry(alias : String, cert : java.security.cert.Certificate) : Void;
+	@:overload @:public @:abstract public function engineSetCertificateEntry(alias : String, cert : java.security.cert.Certificate) : Void;
 	
 	/**
 	* Deletes the entry identified by the given alias from this keystore.
@@ -180,14 +180,14 @@ package java.security;
 	*
 	* @exception KeyStoreException if the entry cannot be removed.
 	*/
-	@:overload @:abstract public function engineDeleteEntry(alias : String) : Void;
+	@:overload @:public @:abstract public function engineDeleteEntry(alias : String) : Void;
 	
 	/**
 	* Lists all the alias names of this keystore.
 	*
 	* @return enumeration of the alias names
 	*/
-	@:overload @:abstract public function engineAliases() : java.util.Enumeration<String>;
+	@:overload @:public @:abstract public function engineAliases() : java.util.Enumeration<String>;
 	
 	/**
 	* Checks if the given alias exists in this keystore.
@@ -196,14 +196,14 @@ package java.security;
 	*
 	* @return true if the alias exists, false otherwise
 	*/
-	@:overload @:abstract public function engineContainsAlias(alias : String) : Bool;
+	@:overload @:public @:abstract public function engineContainsAlias(alias : String) : Bool;
 	
 	/**
 	* Retrieves the number of entries in this keystore.
 	*
 	* @return the number of entries in this keystore
 	*/
-	@:overload @:abstract public function engineSize() : Int;
+	@:overload @:public @:abstract public function engineSize() : Int;
 	
 	/**
 	* Returns true if the entry identified by the given alias
@@ -216,7 +216,7 @@ package java.security;
 	* @return true if the entry identified by the given alias is a
 	* key-related, false otherwise.
 	*/
-	@:overload @:abstract public function engineIsKeyEntry(alias : String) : Bool;
+	@:overload @:public @:abstract public function engineIsKeyEntry(alias : String) : Bool;
 	
 	/**
 	* Returns true if the entry identified by the given alias
@@ -229,7 +229,7 @@ package java.security;
 	* @return true if the entry identified by the given alias contains a
 	* trusted certificate, false otherwise.
 	*/
-	@:overload @:abstract public function engineIsCertificateEntry(alias : String) : Bool;
+	@:overload @:public @:abstract public function engineIsCertificateEntry(alias : String) : Bool;
 	
 	/**
 	* Returns the (alias) name of the first keystore entry whose certificate
@@ -254,7 +254,7 @@ package java.security;
 	* @return the alias name of the first entry with matching certificate,
 	* or null if no such entry exists in this keystore.
 	*/
-	@:overload @:abstract public function engineGetCertificateAlias(cert : java.security.cert.Certificate) : String;
+	@:overload @:public @:abstract public function engineGetCertificateAlias(cert : java.security.cert.Certificate) : String;
 	
 	/**
 	* Stores this keystore to the given output stream, and protects its
@@ -269,7 +269,7 @@ package java.security;
 	* @exception CertificateException if any of the certificates included in
 	* the keystore data could not be stored
 	*/
-	@:overload @:abstract public function engineStore(stream : java.io.OutputStream, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public @:abstract public function engineStore(stream : java.io.OutputStream, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Stores this keystore using the given
@@ -290,7 +290,7 @@ package java.security;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function engineStore(param : java.security.KeyStore.KeyStore_LoadStoreParameter) : Void;
+	@:require(java5) @:overload @:public public function engineStore(param : java.security.KeyStore.KeyStore_LoadStoreParameter) : Void;
 	
 	/**
 	* Loads the keystore from the given input stream.
@@ -318,7 +318,7 @@ package java.security;
 	* @exception CertificateException if any of the certificates in the
 	* keystore could not be loaded
 	*/
-	@:overload @:abstract public function engineLoad(stream : java.io.InputStream, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public @:abstract public function engineLoad(stream : java.io.InputStream, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Loads the keystore using the given
@@ -347,7 +347,7 @@ package java.security;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function engineLoad(param : java.security.KeyStore.KeyStore_LoadStoreParameter) : Void;
+	@:require(java5) @:overload @:public public function engineLoad(param : java.security.KeyStore.KeyStore_LoadStoreParameter) : Void;
 	
 	/**
 	* Gets a <code>KeyStore.Entry</code> for the specified alias
@@ -373,7 +373,7 @@ package java.security;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function engineGetEntry(alias : String, protParam : java.security.KeyStore.KeyStore_ProtectionParameter) : java.security.KeyStore.KeyStore_Entry;
+	@:require(java5) @:overload @:public public function engineGetEntry(alias : String, protParam : java.security.KeyStore.KeyStore_ProtectionParameter) : java.security.KeyStore.KeyStore_Entry;
 	
 	/**
 	* Saves a <code>KeyStore.Entry</code> under the specified alias.
@@ -393,7 +393,7 @@ package java.security;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function engineSetEntry(alias : String, entry : java.security.KeyStore.KeyStore_Entry, protParam : java.security.KeyStore.KeyStore_ProtectionParameter) : Void;
+	@:require(java5) @:overload @:public public function engineSetEntry(alias : String, entry : java.security.KeyStore.KeyStore_Entry, protParam : java.security.KeyStore.KeyStore_ProtectionParameter) : Void;
 	
 	/**
 	* Determines if the keystore <code>Entry</code> for the specified
@@ -409,7 +409,7 @@ package java.security;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function engineEntryInstanceOf(alias : String, entryClass : Class<java.security.KeyStore.KeyStore_Entry>) : Bool;
+	@:require(java5) @:overload @:public public function engineEntryInstanceOf(alias : String, entryClass : Class<java.security.KeyStore.KeyStore_Entry>) : Bool;
 	
 	
 }

@@ -25,7 +25,7 @@ package sun.font;
 */
 @:internal extern class NullFontScaler extends sun.font.FontScaler
 {
-	@:overload public function new(font : sun.font.Font2D, indexInCollection : Int, supportsCJK : Bool, filesize : Int) : Void;
+	@:overload @:public public function new(font : sun.font.Font2D, indexInCollection : Int, supportsCJK : Bool, filesize : Int) : Void;
 	
 	
 }

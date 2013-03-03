@@ -59,7 +59,7 @@ extern class OpenMBeanOperationInfoSupport extends javax.management.MBeanOperati
 	* @throws ArrayStoreException If {@code signature} is not an
 	* array of instances of a subclass of {@code MBeanParameterInfo}.
 	*/
-	@:overload public function new(name : String, description : String, signature : java.NativeArray<javax.management.openmbean.OpenMBeanParameterInfo>, returnOpenType : javax.management.openmbean.OpenType<Dynamic>, impact : Int) : Void;
+	@:overload @:public public function new(name : String, description : String, signature : java.NativeArray<javax.management.openmbean.OpenMBeanParameterInfo>, returnOpenType : javax.management.openmbean.OpenType<Dynamic>, impact : Int) : Void;
 	
 	/**
 	* <p>Constructs an {@code OpenMBeanOperationInfoSupport}
@@ -98,14 +98,14 @@ extern class OpenMBeanOperationInfoSupport extends javax.management.MBeanOperati
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(name : String, description : String, signature : java.NativeArray<javax.management.openmbean.OpenMBeanParameterInfo>, returnOpenType : javax.management.openmbean.OpenType<Dynamic>, impact : Int, descriptor : javax.management.Descriptor) : Void;
+	@:require(java6) @:overload @:public public function new(name : String, description : String, signature : java.NativeArray<javax.management.openmbean.OpenMBeanParameterInfo>, returnOpenType : javax.management.openmbean.OpenType<Dynamic>, impact : Int, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Returns the <i>open type</i> of the values returned by the
 	* operation described by this {@code OpenMBeanOperationInfo}
 	* instance.
 	*/
-	@:overload public function getReturnOpenType() : javax.management.openmbean.OpenType<Dynamic>;
+	@:overload @:public public function getReturnOpenType() : javax.management.openmbean.OpenType<Dynamic>;
 	
 	/**
 	* <p>Compares the specified {@code obj} parameter with this
@@ -135,7 +135,7 @@ extern class OpenMBeanOperationInfoSupport extends javax.management.MBeanOperati
 	* @return {@code true} if the specified object is equal to this
 	* {@code OpenMBeanOperationInfoSupport} instance.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* <p>Returns the hash code value for this {@code
@@ -168,7 +168,7 @@ extern class OpenMBeanOperationInfoSupport extends javax.management.MBeanOperati
 	* @return the hash code value for this {@code
 	* OpenMBeanOperationInfoSupport} instance
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* <p>Returns a string representation of this {@code
@@ -188,7 +188,7 @@ extern class OpenMBeanOperationInfoSupport extends javax.management.MBeanOperati
 	* @return a string representation of this {@code
 	* OpenMBeanOperationInfoSupport} instance
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

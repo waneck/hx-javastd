@@ -25,44 +25,44 @@ package com.sun.tools.internal.xjc.model;
 */
 extern class CElementPropertyInfo extends com.sun.tools.internal.xjc.model.CPropertyInfo implements com.sun.xml.internal.bind.v2.model.core.ElementPropertyInfo<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.nav.NClass>
 {
-	@:overload public function new(name : String, collection : com.sun.tools.internal.xjc.model.CElementPropertyInfo.CElementPropertyInfo_CollectionMode, id : com.sun.xml.internal.bind.v2.model.core.ID, expectedMimeType : javax.activation.MimeType, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations, locator : org.xml.sax.Locator, required : Bool) : Void;
+	@:overload @:public public function new(name : String, collection : com.sun.tools.internal.xjc.model.CElementPropertyInfo.CElementPropertyInfo_CollectionMode, id : com.sun.xml.internal.bind.v2.model.core.ID, expectedMimeType : javax.activation.MimeType, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations, locator : org.xml.sax.Locator, required : Bool) : Void;
 	
-	@:overload public function id() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload @:public override public function id() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
-	@:overload public function getTypes() : java.util.List<com.sun.tools.internal.xjc.model.CTypeRef>;
+	@:overload @:public public function getTypes() : java.util.List<com.sun.tools.internal.xjc.model.CTypeRef>;
 	
-	@:overload public function ref() : java.util.List<com.sun.tools.internal.xjc.model.CNonElement>;
+	@:overload @:public override public function ref() : java.util.List<com.sun.tools.internal.xjc.model.CNonElement>;
 	
-	@:overload public function getSchemaType() : javax.xml.namespace.QName;
+	@:overload @:public override public function getSchemaType() : javax.xml.namespace.QName;
 	
 	/**
 	* XJC never uses the wrapper element. Always return null.
 	*/
-	@:overload public function getXmlName() : javax.xml.namespace.QName;
+	@:overload @:public public function getXmlName() : javax.xml.namespace.QName;
 	
-	@:overload public function isCollectionRequired() : Bool;
+	@:overload @:public public function isCollectionRequired() : Bool;
 	
-	@:overload public function isCollectionNillable() : Bool;
+	@:overload @:public public function isCollectionNillable() : Bool;
 	
-	@:overload public function isRequired() : Bool;
+	@:overload @:public public function isRequired() : Bool;
 	
-	@:overload public function isValueList() : Bool;
+	@:overload @:public public function isValueList() : Bool;
 	
-	@:overload public function isUnboxable() : Bool;
+	@:overload @:public override public function isUnboxable() : Bool;
 	
-	@:overload public function isOptionalPrimitive() : Bool;
+	@:overload @:public override public function isOptionalPrimitive() : Bool;
 	
-	@:overload public function accept<V>(visitor : com.sun.tools.internal.xjc.model.CPropertyVisitor<V>) : V;
+	@:overload @:public override public function accept<V>(visitor : com.sun.tools.internal.xjc.model.CPropertyVisitor<V>) : V;
 	
-	@:overload public function getAdapter() : com.sun.tools.internal.xjc.model.CAdapter;
+	@:overload @:public override public function getAdapter() : com.sun.tools.internal.xjc.model.CAdapter;
 	
-	@:overload public function setAdapter(a : com.sun.tools.internal.xjc.model.CAdapter) : Void;
+	@:overload @:public public function setAdapter(a : com.sun.tools.internal.xjc.model.CAdapter) : Void;
 	
-	@:overload @:final public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:public @:final override public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
-	@:overload public function getExpectedMimeType() : javax.activation.MimeType;
+	@:overload @:public override public function getExpectedMimeType() : javax.activation.MimeType;
 	
-	@:overload public function collectElementNames(table : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.model.CPropertyInfo>) : javax.xml.namespace.QName;
+	@:overload @:public override public function collectElementNames(table : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.model.CPropertyInfo>) : javax.xml.namespace.QName;
 	
 	
 }

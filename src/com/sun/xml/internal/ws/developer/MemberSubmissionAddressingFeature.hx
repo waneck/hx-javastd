@@ -28,18 +28,18 @@ extern class MemberSubmissionAddressingFeature extends javax.xml.ws.WebServiceFe
 	/**
 	* Constant value identifying the MemberSubmissionAddressingFeature
 	*/
-	public static var ID(default, null) : String;
+	@:public @:static @:final public static var ID(default, null) : String;
 	
 	/**
 	* Constant ID for the <code>required</code> feature parameter
 	*/
-	public static var IS_REQUIRED(default, null) : String;
+	@:public @:static @:final public static var IS_REQUIRED(default, null) : String;
 	
 	/**
 	* Create an MemberSubmissionAddressingFeature
 	* The instance created will be enabled.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create an MemberSubmissionAddressingFeature
@@ -47,7 +47,7 @@ extern class MemberSubmissionAddressingFeature extends javax.xml.ws.WebServiceFe
 	* @param enabled specifies whether this feature should
 	*                be enabled or not.
 	*/
-	@:overload public function new(enabled : Bool) : Void;
+	@:overload @:public public function new(enabled : Bool) : Void;
 	
 	/**
 	* Create an <code>MemberSubmissionAddressingFeature</code>
@@ -58,7 +58,7 @@ extern class MemberSubmissionAddressingFeature extends javax.xml.ws.WebServiceFe
 	* for the <code>required</code> attribute on the
 	* <code>wsaw:UsingAddressing</code> element.
 	*/
-	@:overload public function new(enabled : Bool, required : Bool) : Void;
+	@:overload @:public public function new(enabled : Bool, required : Bool) : Void;
 	
 	/**
 	* Create an <code>MemberSubmissionAddressingFeature</code>
@@ -71,17 +71,17 @@ extern class MemberSubmissionAddressingFeature extends javax.xml.ws.WebServiceFe
 	* @param validation specifies the value that will be used
 	* for validation for the incoming messages. If LAX, messages are not strictly checked for conformance with  the spec.
 	*/
-	@:overload public function new(enabled : Bool, required : Bool, validation : MemberSubmissionAddressing.Validation) : Void;
+	@:overload @:public public function new(enabled : Bool, required : Bool, validation : MemberSubmissionAddressing.Validation) : Void;
 	
-	@:overload override public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
-	@:overload public function isRequired() : Bool;
+	@:overload @:public public function isRequired() : Bool;
 	
-	@:overload public function setRequired(required : Bool) : Void;
+	@:overload @:public public function setRequired(required : Bool) : Void;
 	
-	@:overload public function setValidation(validation : MemberSubmissionAddressing.Validation) : Void;
+	@:overload @:public public function setValidation(validation : MemberSubmissionAddressing.Validation) : Void;
 	
-	@:overload public function getValidation() : MemberSubmissionAddressing.Validation;
+	@:overload @:public public function getValidation() : MemberSubmissionAddressing.Validation;
 	
 	
 }

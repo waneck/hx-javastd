@@ -33,7 +33,7 @@ extern class PerfStringVariableMonitor extends sun.jvmstat.perfdata.monitor.Perf
 	* @param supported support level indicator
 	* @param bb the buffer containing the string instrument data.
 	*/
-	@:overload public function new(name : String, supported : Bool, bb : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function new(name : String, supported : Bool, bb : java.nio.ByteBuffer) : Void;
 	
 	/**
 	* Constructor to create a StringMonitor object for the variable
@@ -44,7 +44,7 @@ extern class PerfStringVariableMonitor extends sun.jvmstat.perfdata.monitor.Perf
 	* @param supported support level indicator
 	* @param maxLength the maximum length of the string data.
 	*/
-	@:overload public function new(name : String, supported : Bool, bb : java.nio.ByteBuffer, maxLength : Int) : Void;
+	@:overload @:public public function new(name : String, supported : Bool, bb : java.nio.ByteBuffer, maxLength : Int) : Void;
 	
 	
 }

@@ -20,60 +20,60 @@ package com.sun.org.apache.xerces.internal.impl.xs.opti;
 */
 extern class ElementImpl extends com.sun.org.apache.xerces.internal.impl.xs.opti.DefaultElement
 {
-	@:overload public function new(line : Int, column : Int, offset : Int) : Void;
+	@:overload @:public public function new(line : Int, column : Int, offset : Int) : Void;
 	
-	@:overload public function new(line : Int, column : Int) : Void;
+	@:overload @:public public function new(line : Int, column : Int) : Void;
 	
-	@:overload public function new(prefix : String, localpart : String, rawname : String, uri : String, line : Int, column : Int, offset : Int) : Void;
+	@:overload @:public public function new(prefix : String, localpart : String, rawname : String, uri : String, line : Int, column : Int, offset : Int) : Void;
 	
-	@:overload public function new(prefix : String, localpart : String, rawname : String, uri : String, line : Int, column : Int) : Void;
+	@:overload @:public public function new(prefix : String, localpart : String, rawname : String, uri : String, line : Int, column : Int) : Void;
 	
-	@:overload public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload @:public override public function getOwnerDocument() : org.w3c.dom.Document;
 	
-	@:overload public function getParentNode() : org.w3c.dom.Node;
+	@:overload @:public override public function getParentNode() : org.w3c.dom.Node;
 	
-	@:overload public function hasChildNodes() : Bool;
+	@:overload @:public override public function hasChildNodes() : Bool;
 	
-	@:overload public function getFirstChild() : org.w3c.dom.Node;
+	@:overload @:public override public function getFirstChild() : org.w3c.dom.Node;
 	
-	@:overload public function getLastChild() : org.w3c.dom.Node;
+	@:overload @:public override public function getLastChild() : org.w3c.dom.Node;
 	
-	@:overload public function getPreviousSibling() : org.w3c.dom.Node;
+	@:overload @:public override public function getPreviousSibling() : org.w3c.dom.Node;
 	
-	@:overload public function getNextSibling() : org.w3c.dom.Node;
+	@:overload @:public override public function getNextSibling() : org.w3c.dom.Node;
 	
-	@:overload public function getAttributes() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public override public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
-	@:overload public function hasAttributes() : Bool;
+	@:overload @:public override public function hasAttributes() : Bool;
 	
-	@:overload public function getTagName() : String;
+	@:overload @:public override public function getTagName() : String;
 	
-	@:overload public function getAttribute(name : String) : String;
+	@:overload @:public override public function getAttribute(name : String) : String;
 	
-	@:overload public function getAttributeNode(name : String) : org.w3c.dom.Attr;
+	@:overload @:public override public function getAttributeNode(name : String) : org.w3c.dom.Attr;
 	
-	@:overload public function getAttributeNS(namespaceURI : String, localName : String) : String;
+	@:overload @:public override public function getAttributeNS(namespaceURI : String, localName : String) : String;
 	
-	@:overload public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
+	@:overload @:public override public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
 	
-	@:overload public function hasAttribute(name : String) : Bool;
+	@:overload @:public override public function hasAttribute(name : String) : Bool;
 	
-	@:overload public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
+	@:overload @:public override public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
 	
-	@:overload public function setAttribute(name : String, value : String) : Void;
+	@:overload @:public override public function setAttribute(name : String, value : String) : Void;
 	
 	/** Returns the line number. */
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/** Returns the column number. */
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	/** Returns the character offset. */
-	@:overload public function getCharacterOffset() : Int;
+	@:overload @:public public function getCharacterOffset() : Int;
 	
-	@:overload public function getAnnotation() : String;
+	@:overload @:public public function getAnnotation() : String;
 	
-	@:overload public function getSyntheticAnnotation() : String;
+	@:overload @:public public function getSyntheticAnnotation() : String;
 	
 	
 }

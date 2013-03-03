@@ -47,7 +47,7 @@ package javax.accessibility;
 	* @return the zero-based row of the table if one exists;
 	* otherwise -1.
 	*/
-	@:overload public function getAccessibleRow(index : Int) : Int;
+	@:overload @:public public function getAccessibleRow(index : Int) : Int;
 	
 	/**
 	* Returns the column number of an index in the table.
@@ -57,7 +57,7 @@ package javax.accessibility;
 	* @return the zero-based column of the table if one exists;
 	* otherwise -1.
 	*/
-	@:overload public function getAccessibleColumn(index : Int) : Int;
+	@:overload @:public public function getAccessibleColumn(index : Int) : Int;
 	
 	/*
 	* Returns the index at a row and column in the table.
@@ -68,7 +68,7 @@ package javax.accessibility;
 	* otherwise -1.  The index is  the table cell offset from
 	* row == 0 and column == 0.
 	*/
-	@:overload public function getAccessibleIndex(r : Int, c : Int) : Int;
+	@:overload @:public public function getAccessibleIndex(r : Int, c : Int) : Int;
 	
 	
 }

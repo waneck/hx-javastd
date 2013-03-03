@@ -28,9 +28,9 @@ package sun.net.spi.nameservice.dns;
 */
 extern class DNSNameService implements sun.net.spi.nameservice.NameService
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function lookupAllHostAddr(host : String) : java.NativeArray<java.net.InetAddress>;
+	@:overload @:public public function lookupAllHostAddr(host : String) : java.NativeArray<java.net.InetAddress>;
 	
 	/**
 	* Reverse lookup code. I.E: find a host name from an IP address.
@@ -38,17 +38,17 @@ extern class DNSNameService implements sun.net.spi.nameservice.NameService
 	* IPv6 addresses can be in IP6.ARPA or IP6.INT.
 	* In both cases the address has to be converted into a dotted form.
 	*/
-	@:overload public function getHostByAddr(addr : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public public function getHostByAddr(addr : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	
 }
 @:native('sun$net$spi$nameservice$dns$DNSNameService$ThreadContext') @:internal extern class DNSNameService_ThreadContext
 {
-	@:overload public function new(dirCtxt : javax.naming.directory.DirContext, nsList : java.util.List<String>) : Void;
+	@:overload @:public public function new(dirCtxt : javax.naming.directory.DirContext, nsList : java.util.List<String>) : Void;
 	
-	@:overload public function dirContext() : javax.naming.directory.DirContext;
+	@:overload @:public public function dirContext() : javax.naming.directory.DirContext;
 	
-	@:overload public function nameservers() : java.util.List<String>;
+	@:overload @:public public function nameservers() : java.util.List<String>;
 	
 	
 }

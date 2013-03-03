@@ -27,9 +27,9 @@ package com.sun.tools.internal.xjc;
 ////import java.lang.reflect.Method;
 extern class SchemaCache
 {
-	@:overload public function new(source : java.net.URL) : Void;
+	@:overload @:public public function new(source : java.net.URL) : Void;
 	
-	@:overload public function newValidator() : javax.xml.validation.ValidatorHandler;
+	@:overload @:public public function newValidator() : javax.xml.validation.ValidatorHandler;
 	
 	
 }

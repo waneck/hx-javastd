@@ -31,14 +31,14 @@ extern class XBaseMenuWindow extends sun.awt.X11.XWindow
 	* We need to check if the user has moved mouse after input grab.
 	* If yes - hide the PopupMenu. If no - do nothing
 	*/
-	private var grabInputPoint : java.awt.Point;
+	@:protected private var grabInputPoint : java.awt.Point;
 	
-	private var hasPointerMoved : Bool;
+	@:protected private var hasPointerMoved : Bool;
 	
 	/**
 	* Returns parent menu window (not the X-heirarchy parent window)
 	*/
-	@:overload @:abstract private function getParentMenuWindow() : sun.awt.X11.XBaseMenuWindow;
+	@:overload @:protected @:abstract private function getParentMenuWindow() : sun.awt.X11.XBaseMenuWindow;
 	
 	/**
 	* Performs mapping of items in window.
@@ -48,7 +48,7 @@ extern class XBaseMenuWindow extends sun.awt.X11.XWindow
 	* This function should return default menu data
 	* if errors occur
 	*/
-	@:overload @:abstract private function map() : sun.awt.X11.XBaseMenuWindow.XBaseMenuWindow_MappingData;
+	@:overload @:protected @:abstract private function map() : sun.awt.X11.XBaseMenuWindow.XBaseMenuWindow_MappingData;
 	
 	/**
 	* Calculates placement of submenu window
@@ -59,20 +59,20 @@ extern class XBaseMenuWindow extends sun.awt.X11.XWindow
 	* in local coordinates
 	* @param windowSize the desired size of submenu's window
 	*/
-	@:overload @:abstract private function getSubmenuBounds(itemBounds : java.awt.Rectangle, windowSize : java.awt.Dimension) : java.awt.Rectangle;
+	@:overload @:protected @:abstract private function getSubmenuBounds(itemBounds : java.awt.Rectangle, windowSize : java.awt.Dimension) : java.awt.Rectangle;
 	
 	/**
 	* This function is to be called if it's likely that size
 	* of items was changed. It can be called from any thread
 	* in any locked state, so it should not take locks
 	*/
-	@:overload @:abstract private function updateSize() : Void;
+	@:overload @:protected @:abstract private function updateSize() : Void;
 	
 	/**
 	* This function is called to clear all saved
 	* size data.
 	*/
-	@:overload private function resetMapping() : Void;
+	@:overload @:protected private function resetMapping() : Void;
 	
 	/**
 	* Adds item to end of items vector.
@@ -80,56 +80,56 @@ extern class XBaseMenuWindow extends sun.awt.X11.XWindow
 	* check for adding duplicate items
 	* @param item item to add
 	*/
-	@:overload public function addItem(item : java.awt.MenuItem) : Void;
+	@:overload @:public public function addItem(item : java.awt.MenuItem) : Void;
 	
 	/**
 	* Removes item at the specified index from items vector.
 	* @param index the position of the item to be removed
 	*/
-	@:overload public function delItem(index : Int) : Void;
+	@:overload @:public public function delItem(index : Int) : Void;
 	
 	/**
 	* Clears items vector and loads specified vector
 	* @param items vector to be loaded
 	*/
-	@:overload public function reloadItems(items : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function reloadItems(items : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* Filters X events
 	*/
-	@:overload override private function isEventDisabled(e : sun.awt.X11.XEvent) : Bool;
+	@:overload @:protected override private function isEventDisabled(e : sun.awt.X11.XEvent) : Bool;
 	
 	/**
 	* Invokes disposal procedure on eventHandlerThread
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
 	/**
 	* Performs disposal of menu window.
 	* Should be called only on eventHandlerThread
 	*/
-	@:overload private function doDispose() : Void;
+	@:overload @:protected private function doDispose() : Void;
 	
 	/**
 	* The implementation of base window performs processing
 	* of paint events only. This behaviour is changed in
 	* descendants.
 	*/
-	@:overload private function handleEvent(event : java.awt.AWTEvent) : Void;
+	@:overload @:protected private function handleEvent(event : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Save location of pointer for further use
 	* then invoke superclass
 	*/
-	@:overload override public function grabInput() : Bool;
+	@:overload @:public override public function grabInput() : Bool;
 	
 	
 }
 @:native('sun$awt$X11$XBaseMenuWindow$MappingData') @:internal extern class XBaseMenuWindow_MappingData implements java.lang.Cloneable
 {
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function getItems() : java.NativeArray<sun.awt.X11.XMenuItemPeer>;
+	@:overload @:public public function getItems() : java.NativeArray<sun.awt.X11.XMenuItemPeer>;
 	
 	
 }

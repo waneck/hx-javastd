@@ -29,36 +29,36 @@ package sun.security.krb5.internal.ccache;
 */
 extern class CredentialsCache
 {
-	@:overload public static function getInstance(principal : sun.security.krb5.PrincipalName) : sun.security.krb5.internal.ccache.CredentialsCache;
+	@:overload @:public @:static public static function getInstance(principal : sun.security.krb5.PrincipalName) : sun.security.krb5.internal.ccache.CredentialsCache;
 	
-	@:overload public static function getInstance(cache : String) : sun.security.krb5.internal.ccache.CredentialsCache;
+	@:overload @:public @:static public static function getInstance(cache : String) : sun.security.krb5.internal.ccache.CredentialsCache;
 	
-	@:overload public static function getInstance(principal : sun.security.krb5.PrincipalName, cache : String) : sun.security.krb5.internal.ccache.CredentialsCache;
+	@:overload @:public @:static public static function getInstance(principal : sun.security.krb5.PrincipalName, cache : String) : sun.security.krb5.internal.ccache.CredentialsCache;
 	
 	/**
 	* Gets the default credentials cache.
 	*/
-	@:overload public static function getInstance() : sun.security.krb5.internal.ccache.CredentialsCache;
+	@:overload @:public @:static public static function getInstance() : sun.security.krb5.internal.ccache.CredentialsCache;
 	
-	@:overload public static function create(principal : sun.security.krb5.PrincipalName, name : String) : sun.security.krb5.internal.ccache.CredentialsCache;
+	@:overload @:public @:static public static function create(principal : sun.security.krb5.PrincipalName, name : String) : sun.security.krb5.internal.ccache.CredentialsCache;
 	
-	@:overload public static function create(principal : sun.security.krb5.PrincipalName) : sun.security.krb5.internal.ccache.CredentialsCache;
+	@:overload @:public @:static public static function create(principal : sun.security.krb5.PrincipalName) : sun.security.krb5.internal.ccache.CredentialsCache;
 	
-	@:overload public static function cacheName() : String;
+	@:overload @:public @:static public static function cacheName() : String;
 	
-	@:overload @:abstract public function getPrimaryPrincipal() : sun.security.krb5.PrincipalName;
+	@:overload @:public @:abstract public function getPrimaryPrincipal() : sun.security.krb5.PrincipalName;
 	
-	@:overload @:abstract public function update(c : sun.security.krb5.Credentials) : Void;
+	@:overload @:public @:abstract public function update(c : sun.security.krb5.Credentials) : Void;
 	
-	@:overload @:abstract public function save() : Void;
+	@:overload @:public @:abstract public function save() : Void;
 	
-	@:overload @:abstract public function getCredsList() : java.NativeArray<sun.security.krb5.Credentials>;
+	@:overload @:public @:abstract public function getCredsList() : java.NativeArray<sun.security.krb5.Credentials>;
 	
-	@:overload @:abstract public function getDefaultCreds() : sun.security.krb5.Credentials;
+	@:overload @:public @:abstract public function getDefaultCreds() : sun.security.krb5.Credentials;
 	
-	@:overload @:abstract public function getCreds(sname : sun.security.krb5.PrincipalName, srealm : sun.security.krb5.Realm) : sun.security.krb5.Credentials;
+	@:overload @:public @:abstract public function getCreds(sname : sun.security.krb5.PrincipalName, srealm : sun.security.krb5.Realm) : sun.security.krb5.Credentials;
 	
-	@:overload @:abstract public function getCreds(options : sun.security.krb5.internal.LoginOptions, sname : sun.security.krb5.PrincipalName, srealm : sun.security.krb5.Realm) : sun.security.krb5.Credentials;
+	@:overload @:public @:abstract public function getCreds(options : sun.security.krb5.internal.LoginOptions, sname : sun.security.krb5.PrincipalName, srealm : sun.security.krb5.Realm) : sun.security.krb5.Credentials;
 	
 	
 }

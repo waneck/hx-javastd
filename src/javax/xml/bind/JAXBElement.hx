@@ -26,10 +26,10 @@ package javax.xml.bind;
 extern class JAXBElement<T> implements java.io.Serializable
 {
 	/** xml element tag name */
-	private var name(default, null) : javax.xml.namespace.QName;
+	@:final @:protected private var name(default, null) : javax.xml.namespace.QName;
 	
 	/** Java datatype binding for xml element declaration's type. */
-	private var declaredType(default, null) : Class<T>;
+	@:final @:protected private var declaredType(default, null) : Class<T>;
 	
 	/** Scope of xml element declaration representing this xml element instance.
 	*  Can be one of the following values:
@@ -38,14 +38,14 @@ extern class JAXBElement<T> implements java.io.Serializable
 	*     representation of complex type defintion containing
 	*     xml element declaration.
 	*/
-	private var scope(default, null) : Class<Dynamic>;
+	@:final @:protected private var scope(default, null) : Class<Dynamic>;
 	
 	/** xml element value.
 	Represents content model and attributes of an xml element instance. */
-	private var value : T;
+	@:protected private var value : T;
 	
 	/** true iff the xml element instance has xsi:nil="true". */
-	private var nil : Bool;
+	@:protected private var nil : Bool;
 	
 	/**
 	* <p>Construct an xml element instance.</p>
@@ -60,24 +60,24 @@ extern class JAXBElement<T> implements java.io.Serializable
 	* @see #getScope()
 	* @see #isTypeSubstituted()
 	*/
-	@:overload public function new(name : javax.xml.namespace.QName, declaredType : Class<T>, scope : Class<Dynamic>, value : T) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, declaredType : Class<T>, scope : Class<Dynamic>, value : T) : Void;
 	
 	/**
 	* Construct an xml element instance.
 	*
 	* This is just a convenience method for <tt>new JAXBElement(name,declaredType,GlobalScope.class,value)</tt>
 	*/
-	@:overload public function new(name : javax.xml.namespace.QName, declaredType : Class<T>, value : T) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, declaredType : Class<T>, value : T) : Void;
 	
 	/**
 	* Returns the Java binding of the xml element declaration's type attribute.
 	*/
-	@:overload public function getDeclaredType() : Class<T>;
+	@:overload @:public public function getDeclaredType() : Class<T>;
 	
 	/**
 	* Returns the xml element tag name.
 	*/
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
 	/**
 	* <p>Set the content model and attributes of this xml element.</p>
@@ -87,7 +87,7 @@ extern class JAXBElement<T> implements java.io.Serializable
 	*
 	* @see #isTypeSubstituted()
 	*/
-	@:overload public function setValue(t : T) : Void;
+	@:overload @:public public function setValue(t : T) : Void;
 	
 	/**
 	* <p>Return the content model and attribute values for this element.</p>
@@ -95,7 +95,7 @@ extern class JAXBElement<T> implements java.io.Serializable
 	* <p>See {@link #isNil()} for a description of a property constraint when
 	* this value is <tt>null</tt></p>
 	*/
-	@:overload public function getValue() : T;
+	@:overload @:public public function getValue() : T;
 	
 	/**
 	* Returns scope of xml element declaration.
@@ -103,7 +103,7 @@ extern class JAXBElement<T> implements java.io.Serializable
 	* @see #isGlobalScope()
 	* @return <tt>GlobalScope.class</tt> if this element is of global scope.
 	*/
-	@:overload public function getScope() : Class<Dynamic>;
+	@:overload @:public public function getScope() : Class<Dynamic>;
 	
 	/**
 	* <p>Returns <tt>true</tt> iff this element instance content model
@@ -114,25 +114,25 @@ extern class JAXBElement<T> implements java.io.Serializable
 	* {@link #getValue()} can contain a non-null value for attribute(s). It is
 	* valid for a nil xml element to have attribute(s).</p>
 	*/
-	@:overload public function isNil() : Bool;
+	@:overload @:public public function isNil() : Bool;
 	
 	/**
 	* <p>Set whether this element has nil content.</p>
 	*
 	* @see #isNil()
 	*/
-	@:overload public function setNil(value : Bool) : Void;
+	@:overload @:public public function setNil(value : Bool) : Void;
 	
 	/**
 	* Returns true iff this xml element declaration is global.
 	*/
-	@:overload public function isGlobalScope() : Bool;
+	@:overload @:public public function isGlobalScope() : Bool;
 	
 	/**
 	* Returns true iff this xml element instance's value has a different
 	* type than xml element declaration's declared type.
 	*/
-	@:overload public function isTypeSubstituted() : Bool;
+	@:overload @:public public function isTypeSubstituted() : Bool;
 	
 	
 }

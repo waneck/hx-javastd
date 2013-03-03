@@ -31,9 +31,9 @@ package sun.tools.jstat;
 */
 @:require(java5) extern class OptionLister
 {
-	@:overload public function new(sources : java.util.List<java.net.URL>) : Void;
+	@:overload @:public public function new(sources : java.util.List<java.net.URL>) : Void;
 	
-	@:overload public function print(ps : java.io.PrintStream) : Void;
+	@:overload @:public public function print(ps : java.io.PrintStream) : Void;
 	
 	
 }

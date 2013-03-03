@@ -33,7 +33,7 @@ extern class Constants
 	/**
 	* WS SI Logging Domain
 	*/
-	public static var LoggingDomain(default, null) : String;
+	@:public @:static @:final public static var LoggingDomain(default, null) : String;
 	
 	
 }

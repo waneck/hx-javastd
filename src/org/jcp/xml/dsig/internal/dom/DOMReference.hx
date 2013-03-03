@@ -49,46 +49,46 @@ extern class DOMReference extends org.jcp.xml.dsig.internal.dom.DOMStructure imp
 	* @throws ClassCastException if any of the <code>transforms</code> are
 	*    not of type <code>Transform</code>
 	*/
-	@:overload public function new(uri : String, type : String, dm : javax.xml.crypto.dsig.DigestMethod, transforms : java.util.List<Dynamic>, id : String, provider : java.security.Provider) : Void;
+	@:overload @:public public function new(uri : String, type : String, dm : javax.xml.crypto.dsig.DigestMethod, transforms : java.util.List<Dynamic>, id : String, provider : java.security.Provider) : Void;
 	
-	@:overload public function new(uri : String, type : String, dm : javax.xml.crypto.dsig.DigestMethod, appliedTransforms : java.util.List<Dynamic>, result : javax.xml.crypto.Data, transforms : java.util.List<Dynamic>, id : String, provider : java.security.Provider) : Void;
+	@:overload @:public public function new(uri : String, type : String, dm : javax.xml.crypto.dsig.DigestMethod, appliedTransforms : java.util.List<Dynamic>, result : javax.xml.crypto.Data, transforms : java.util.List<Dynamic>, id : String, provider : java.security.Provider) : Void;
 	
-	@:overload public function new(uri : String, type : String, dm : javax.xml.crypto.dsig.DigestMethod, appliedTransforms : java.util.List<Dynamic>, result : javax.xml.crypto.Data, transforms : java.util.List<Dynamic>, id : String, digestValue : java.NativeArray<java.StdTypes.Int8>, provider : java.security.Provider) : Void;
+	@:overload @:public public function new(uri : String, type : String, dm : javax.xml.crypto.dsig.DigestMethod, appliedTransforms : java.util.List<Dynamic>, result : javax.xml.crypto.Data, transforms : java.util.List<Dynamic>, id : String, digestValue : java.NativeArray<java.StdTypes.Int8>, provider : java.security.Provider) : Void;
 	
 	/**
 	* Creates a <code>DOMReference</code> from an element.
 	*
 	* @param refElem a Reference element
 	*/
-	@:overload public function new(refElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
+	@:overload @:public public function new(refElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
 	
-	@:overload public function getDigestMethod() : javax.xml.crypto.dsig.DigestMethod;
+	@:overload @:public public function getDigestMethod() : javax.xml.crypto.dsig.DigestMethod;
 	
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
-	@:overload public function getURI() : String;
+	@:overload @:public public function getURI() : String;
 	
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function getTransforms() : java.util.List<Dynamic>;
+	@:overload @:public public function getTransforms() : java.util.List<Dynamic>;
 	
-	@:overload public function getDigestValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getDigestValue() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getCalculatedDigestValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getCalculatedDigestValue() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
-	@:overload public function digest(signContext : javax.xml.crypto.dsig.XMLSignContext) : Void;
+	@:overload @:public public function digest(signContext : javax.xml.crypto.dsig.XMLSignContext) : Void;
 	
-	@:overload public function validate(validateContext : javax.xml.crypto.dsig.XMLValidateContext) : Bool;
+	@:overload @:public public function validate(validateContext : javax.xml.crypto.dsig.XMLValidateContext) : Bool;
 	
-	@:overload public function getDereferencedData() : javax.xml.crypto.Data;
+	@:overload @:public public function getDereferencedData() : javax.xml.crypto.Data;
 	
-	@:overload public function getDigestInputStream() : java.io.InputStream;
+	@:overload @:public public function getDigestInputStream() : java.io.InputStream;
 	
-	@:overload public function getHere() : org.w3c.dom.Node;
+	@:overload @:public public function getHere() : org.w3c.dom.Node;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }

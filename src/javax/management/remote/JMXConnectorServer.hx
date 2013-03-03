@@ -31,7 +31,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* any, must be an object that implements the interface {@link
 	* JMXAuthenticator}.</p>
 	*/
-	public static var AUTHENTICATOR(default, null) : String;
+	@:public @:static @:final public static var AUTHENTICATOR(default, null) : String;
 	
 	/**
 	* <p>Constructs a connector server that will be registered as an
@@ -40,7 +40,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* methods when creating, within an MBean server, a connector
 	* server that makes it available remotely.</p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* <p>Constructs a connector server that is attached to the given
@@ -52,7 +52,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* is attached to.  Null if this connector server will be attached
 	* to an MBean server by being registered in it.
 	*/
-	@:overload public function new(mbeanServer : javax.management.MBeanServer) : Void;
+	@:overload @:public public function new(mbeanServer : javax.management.MBeanServer) : Void;
 	
 	/**
 	* <p>Returns the MBean server that this connector server is
@@ -61,11 +61,11 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* @return the MBean server that this connector server is attached
 	* to, or null if it is not yet attached to an MBean server.
 	*/
-	@:overload @:synchronized public function getMBeanServer() : javax.management.MBeanServer;
+	@:overload @:public @:synchronized public function getMBeanServer() : javax.management.MBeanServer;
 	
-	@:overload @:synchronized public function setMBeanServerForwarder(mbsf : javax.management.remote.MBeanServerForwarder) : Void;
+	@:overload @:public @:synchronized public function setMBeanServerForwarder(mbsf : javax.management.remote.MBeanServerForwarder) : Void;
 	
-	@:overload public function getConnectionIds() : java.NativeArray<String>;
+	@:overload @:public public function getConnectionIds() : java.NativeArray<String>;
 	
 	/**
 	* <p>Returns a client stub for this connector server.  A client
@@ -109,7 +109,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* @exception IOException if a communications problem means that a
 	* stub cannot be created.
 	**/
-	@:overload public function toJMXConnector(env : java.util.Map<String, Dynamic>) : javax.management.remote.JMXConnector;
+	@:overload @:public public function toJMXConnector(env : java.util.Map<String, Dynamic>) : javax.management.remote.JMXConnector;
 	
 	/**
 	* <p>Returns an array indicating the notifications that this MBean
@@ -122,7 +122,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	*
 	* @return the array of possible notifications.
 	*/
-	@:overload override public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload @:public override public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
 	/**
 	* <p>Called by a subclass when a new client connection is opened.
@@ -146,7 +146,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* @exception NullPointerException if <code>connectionId</code> is
 	* null.
 	*/
-	@:overload private function connectionOpened(connectionId : String, message : String, userData : Dynamic) : Void;
+	@:overload @:protected private function connectionOpened(connectionId : String, message : String, userData : Dynamic) : Void;
 	
 	/**
 	* <p>Called by a subclass when a client connection is closed
@@ -168,7 +168,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* @exception NullPointerException if <code>connectionId</code>
 	* is null.
 	*/
-	@:overload private function connectionClosed(connectionId : String, message : String, userData : Dynamic) : Void;
+	@:overload @:protected private function connectionClosed(connectionId : String, message : String, userData : Dynamic) : Void;
 	
 	/**
 	* <p>Called by a subclass when a client connection fails.
@@ -190,7 +190,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* @exception NullPointerException if <code>connectionId</code> is
 	* null.
 	*/
-	@:overload private function connectionFailed(connectionId : String, message : String, userData : Dynamic) : Void;
+	@:overload @:protected private function connectionFailed(connectionId : String, message : String, userData : Dynamic) : Void;
 	
 	/**
 	* <p>Called by an MBean server when this connector server is
@@ -213,9 +213,9 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* @exception NullPointerException if <code>mbs</code> or
 	* <code>name</code> is null.
 	*/
-	@:overload @:synchronized public function preRegister(mbs : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
+	@:overload @:public @:synchronized public function preRegister(mbs : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
 	
-	@:overload public function postRegister(registrationDone : Null<Bool>) : Void;
+	@:overload @:public public function postRegister(registrationDone : Null<Bool>) : Void;
 	
 	/**
 	* <p>Called by an MBean server when this connector server is
@@ -230,9 +230,9 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	*
 	* @exception IOException if thrown by the {@link #stop stop} method.
 	*/
-	@:overload @:synchronized public function preDeregister() : Void;
+	@:overload @:public @:synchronized public function preDeregister() : Void;
 	
-	@:overload public function postDeregister() : Void;
+	@:overload @:public public function postDeregister() : Void;
 	
 	/**
 	* <p>The attributes for this connector server.</p>
@@ -242,7 +242,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* are omitted from this map.  If there are no serializable
 	* attributes, the returned map is empty.
 	*/
-	@:overload @:public public function getAttributes() : java.util.Map<String, Dynamic>;
+	@:overload @:public @:public public function getAttributes() : java.util.Map<String, Dynamic>;
 	
 	/**
 	* <p>Deactivates the connector server, that is, stops listening for
@@ -279,7 +279,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* closed except possibly those that generated exceptions when the
 	* server attempted to close them.
 	*/
-	@:overload @:public public function stop() : Void;
+	@:overload @:public @:public public function stop() : Void;
 	
 	/**
 	* <p>Activates the connector server, that is, starts listening for
@@ -294,7 +294,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* @exception IllegalStateException if the connector server has
 	* not been attached to an MBean server.
 	*/
-	@:overload @:public public function start() : Void;
+	@:overload @:public @:public public function start() : Void;
 	
 	/**
 	* <p>The address of this object.</p>
@@ -302,7 +302,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* @return the address of this object, or null if it
 	* does not have one.
 	*/
-	@:overload @:public public function getAddress() : javax.management.remote.JMXServiceURL;
+	@:overload @:public @:public public function getAddress() : javax.management.remote.JMXServiceURL;
 	
 	/**
 	* <p>Determines whether the connector server is active.  A connector
@@ -313,7 +313,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	*
 	* @return true if the connector server is active.
 	*/
-	@:overload @:public public function isActive() : Bool;
+	@:overload @:public @:public public function isActive() : Bool;
 	
 	
 }

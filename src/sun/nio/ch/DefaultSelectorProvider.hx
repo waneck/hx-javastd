@@ -28,7 +28,7 @@ extern class DefaultSelectorProvider
 	/**
 	* Returns the default SelectorProvider.
 	*/
-	@:overload public static function create() : java.nio.channels.spi.SelectorProvider;
+	@:overload @:public @:static public static function create() : java.nio.channels.spi.SelectorProvider;
 	
 	
 }

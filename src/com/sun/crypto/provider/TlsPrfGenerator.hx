@@ -25,13 +25,13 @@ package com.sun.crypto.provider;
 */
 @:internal extern class TlsPrfGenerator extends javax.crypto.KeyGeneratorSpi
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function engineInit(random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineInit(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineInit(keysize : Int, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(keysize : Int, random : java.security.SecureRandom) : Void;
 	
 	
 }
@@ -51,7 +51,7 @@ package com.sun.crypto.provider;
 */
 @:native('com$sun$crypto$provider$TlsPrfGenerator$V12') extern class TlsPrfGenerator_V12 extends com.sun.crypto.provider.TlsPrfGenerator
 {
-	@:overload override private function engineGenerateKey() : javax.crypto.SecretKey;
+	@:overload @:protected override private function engineGenerateKey() : javax.crypto.SecretKey;
 	
 	
 }
@@ -60,7 +60,7 @@ package com.sun.crypto.provider;
 */
 @:native('com$sun$crypto$provider$TlsPrfGenerator$V10') extern class TlsPrfGenerator_V10 extends com.sun.crypto.provider.TlsPrfGenerator
 {
-	@:overload override private function engineGenerateKey() : javax.crypto.SecretKey;
+	@:overload @:protected override private function engineGenerateKey() : javax.crypto.SecretKey;
 	
 	
 }

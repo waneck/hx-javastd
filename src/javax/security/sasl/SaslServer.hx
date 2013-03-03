@@ -90,7 +90,7 @@ SASL_BIND_IN_PROGRESS);
 	* (e.g. "CRAM-MD5", "GSSAPI").
 	* @return A non-null string representing the IANA-registered mechanism name.
 	*/
-	@:overload @:abstract public function getMechanismName() : String;
+	@:overload @:public @:abstract public function getMechanismName() : String;
 	
 	/**
 	* Evaluates the response data and generates a challenge.
@@ -115,7 +115,7 @@ SASL_BIND_IN_PROGRESS);
 	* @exception SaslException If an error occurred while processing
 	* the response or generating a challenge.
 	*/
-	@:overload @:abstract public function evaluateResponse(response : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function evaluateResponse(response : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Determines whether the authentication exchange has completed.
@@ -124,7 +124,7 @@ SASL_BIND_IN_PROGRESS);
 	* authentication has completed successfully or should be continued.
 	* @return true if the authentication exchange has completed; false otherwise.
 	*/
-	@:overload @:abstract public function isComplete() : Bool;
+	@:overload @:public @:abstract public function isComplete() : Bool;
 	
 	/**
 	* Reports the authorization ID in effect for the client of this
@@ -133,7 +133,7 @@ SASL_BIND_IN_PROGRESS);
 	* @return The authorization ID of the client.
 	* @exception IllegalStateException if this authentication session has not completed
 	*/
-	@:overload public function getAuthorizationID() : String;
+	@:overload @:public public function getAuthorizationID() : String;
 	
 	/**
 	* Unwraps a byte array received from the client.
@@ -159,7 +159,7 @@ SASL_BIND_IN_PROGRESS);
 	* not completed, or if the negotiated quality of protection
 	* has neither integrity nor privacy
 	*/
-	@:overload @:abstract public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Wraps a byte array to be sent to the client.
@@ -184,7 +184,7 @@ SASL_BIND_IN_PROGRESS);
 	* not completed, or if the negotiated quality of protection has
 	* neither integrity nor privacy.
 	*/
-	@:overload @:abstract public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the negotiated property.
@@ -197,7 +197,7 @@ SASL_BIND_IN_PROGRESS);
 	* not negotiated or is not applicable to this mechanism.
 	* @exception IllegalStateException if this authentication exchange has not completed
 	*/
-	@:overload @:abstract public function getNegotiatedProperty(propName : String) : Dynamic;
+	@:overload @:public @:abstract public function getNegotiatedProperty(propName : String) : Dynamic;
 	
 	/**
 	* Disposes of any system resources or security-sensitive information
@@ -206,7 +206,7 @@ SASL_BIND_IN_PROGRESS);
 	* @throws SaslException If a problem was encountered while disposing
 	* the resources.
 	*/
-	@:overload @:abstract public function dispose() : Void;
+	@:overload @:public @:abstract public function dispose() : Void;
 	
 	
 }

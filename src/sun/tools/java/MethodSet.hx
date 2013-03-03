@@ -39,41 +39,41 @@ extern class MethodSet
 	/**
 	* Creates a brand new MethodSet
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the number of distinct methods stored in the MethodSet.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Adds `method' to the MethodSet.  No method of the same signature
 	* should be already defined.
 	*/
-	@:overload public function add(method : sun.tools.java.MemberDefinition) : Void;
+	@:overload @:public public function add(method : sun.tools.java.MemberDefinition) : Void;
 	
 	/**
 	* Adds `method' to the MethodSet, replacing any previous definition
 	* with the same signature.
 	*/
-	@:overload public function replace(method : sun.tools.java.MemberDefinition) : Void;
+	@:overload @:public public function replace(method : sun.tools.java.MemberDefinition) : Void;
 	
 	/**
 	* If the MethodSet contains a method with the same signature
 	* then lookup() returns it.  Otherwise, this method returns null.
 	*/
-	@:overload public function lookupSig(name : sun.tools.java.Identifier, type : sun.tools.java.Type) : sun.tools.java.MemberDefinition;
+	@:overload @:public public function lookupSig(name : sun.tools.java.Identifier, type : sun.tools.java.Type) : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Returns an Iterator of all methods contained in the
 	* MethodSet which have a given name.
 	*/
-	@:overload public function lookupName(name : sun.tools.java.Identifier) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function lookupName(name : sun.tools.java.Identifier) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns an Iterator of all methods in the MethodSet
 	*/
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function iterator() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* After freeze() is called, the MethodSet becomes (mostly)
@@ -81,17 +81,17 @@ extern class MethodSet
 	* CompilerErrors.  Note that the entries themselves are still
 	* (unfortunately) open for mischievous and wanton modification.
 	*/
-	@:overload public function freeze() : Void;
+	@:overload @:public public function freeze() : Void;
 	
 	/**
 	* Tells whether freeze() has been called on this MethodSet.
 	*/
-	@:overload public function isFrozen() : Bool;
+	@:overload @:public public function isFrozen() : Bool;
 	
 	/**
 	* Returns a (big) string representation of this MethodSet
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

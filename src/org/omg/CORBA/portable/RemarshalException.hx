@@ -39,7 +39,7 @@ extern class RemarshalException extends java.lang.Exception
 	/**
 	* Constructs a RemarshalException.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

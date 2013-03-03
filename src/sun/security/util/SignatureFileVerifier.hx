@@ -32,12 +32,12 @@ extern class SignatureFileVerifier
 	*
 	* @param rawBytes the raw bytes of the signature block file
 	*/
-	@:overload public function new(signerCache : java.util.ArrayList<java.NativeArray<java.security.CodeSigner>>, md : sun.security.util.ManifestDigester, name : String, rawBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(signerCache : java.util.ArrayList<java.NativeArray<java.security.CodeSigner>>, md : sun.security.util.ManifestDigester, name : String, rawBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* returns true if we need the .SF file
 	*/
-	@:overload public function needSignatureFileBytes() : Bool;
+	@:overload @:public public function needSignatureFileBytes() : Bool;
 	
 	/**
 	* returns true if we need this .SF file.
@@ -45,13 +45,13 @@ extern class SignatureFileVerifier
 	* @param name the name of the .SF file without the extension
 	*
 	*/
-	@:overload public function needSignatureFile(name : String) : Bool;
+	@:overload @:public public function needSignatureFile(name : String) : Bool;
 	
 	/**
 	* used to set the raw bytes of the .SF file when it
 	* is external to the signature block file.
 	*/
-	@:overload public function setSignatureFile(sfBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setSignatureFile(sfBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Utility method used by JarVerifier and JarSigner
@@ -62,7 +62,7 @@ extern class SignatureFileVerifier
 	* @return true if the input file name is a supported
 	*          Signature File or PKCS7 block file name
 	*/
-	@:overload public static function isBlockOrSF(s : String) : Bool;
+	@:overload @:public @:static public static function isBlockOrSF(s : String) : Bool;
 	
 	/**
 	* process the signature block file. Goes through the .SF file
@@ -71,7 +71,7 @@ extern class SignatureFileVerifier
 	*
 	*
 	*/
-	@:overload public function process(signers : java.util.Hashtable<String, java.NativeArray<java.security.CodeSigner>>, manifestDigests : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function process(signers : java.util.Hashtable<String, java.NativeArray<java.security.CodeSigner>>, manifestDigests : java.util.List<Dynamic>) : Void;
 	
 	
 }

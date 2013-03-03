@@ -52,7 +52,7 @@ package javax.accessibility;
 	* @return the text string if the indices are valid.
 	* Otherwise, null is returned.
 	*/
-	@:overload public function getTextRange(startIndex : Int, endIndex : Int) : String;
+	@:overload @:public public function getTextRange(startIndex : Int, endIndex : Int) : String;
 	
 	/**
 	* Returns the <code>AccessibleTextSequence</code> at a given index.
@@ -68,7 +68,7 @@ package javax.accessibility;
 	* @see AccessibleText#WORD
 	* @see AccessibleText#SENTENCE
 	*/
-	@:overload public function getTextSequenceAt(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
+	@:overload @:public public function getTextSequenceAt(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
 	
 	/**
 	* Returns the <code>AccessibleTextSequence</code> after a given index.
@@ -84,7 +84,7 @@ package javax.accessibility;
 	* @see AccessibleText#WORD
 	* @see AccessibleText#SENTENCE
 	*/
-	@:overload public function getTextSequenceAfter(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
+	@:overload @:public public function getTextSequenceAfter(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
 	
 	/**
 	* Returns the <code>AccessibleTextSequence</code> before a given index.
@@ -100,7 +100,7 @@ package javax.accessibility;
 	* @see AccessibleText#WORD
 	* @see AccessibleText#SENTENCE
 	*/
-	@:overload public function getTextSequenceBefore(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
+	@:overload @:public public function getTextSequenceBefore(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
 	
 	/**
 	* Returns the bounding rectangle of the text between two indices.
@@ -110,7 +110,7 @@ package javax.accessibility;
 	* @return the bounding rectangle of the text if the indices are valid.
 	* Otherwise, null is returned.
 	*/
-	@:overload public function getTextBounds(startIndex : Int, endIndex : Int) : java.awt.Rectangle;
+	@:overload @:public public function getTextBounds(startIndex : Int, endIndex : Int) : java.awt.Rectangle;
 	
 	
 }

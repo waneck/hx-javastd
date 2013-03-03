@@ -32,7 +32,7 @@ extern interface HotspotMemoryMBean
 	* @return a list of internal counters maintained in the VM
 	* for the memory system.
 	*/
-	@:overload public function getInternalMemoryCounters() : java.util.List<sun.management.counter.Counter>;
+	@:overload @:public public function getInternalMemoryCounters() : java.util.List<sun.management.counter.Counter>;
 	
 	
 }

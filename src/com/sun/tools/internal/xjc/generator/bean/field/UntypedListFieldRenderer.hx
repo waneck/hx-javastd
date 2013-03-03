@@ -25,11 +25,11 @@ package com.sun.tools.internal.xjc.generator.bean.field;
 */
 extern class UntypedListFieldRenderer implements com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer
 {
-	@:overload private function new(coreList : com.sun.codemodel.internal.JClass) : Void;
+	@:overload @:protected private function new(coreList : com.sun.codemodel.internal.JClass) : Void;
 	
-	@:overload private function new(coreList : com.sun.codemodel.internal.JClass, dummy : Bool, content : Bool) : Void;
+	@:overload @:protected private function new(coreList : com.sun.codemodel.internal.JClass, dummy : Bool, content : Bool) : Void;
 	
-	@:overload public function generate(context : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : com.sun.tools.internal.xjc.outline.FieldOutline;
+	@:overload @:public public function generate(context : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : com.sun.tools.internal.xjc.outline.FieldOutline;
 	
 	
 }

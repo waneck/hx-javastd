@@ -31,19 +31,19 @@ extern class ManageReferralControl extends com.sun.jndi.ldap.BasicControl
 	*
 	* @serial
 	*/
-	public static var OID(default, null) : String;
+	@:public @:static @:final public static var OID(default, null) : String;
 	
 	/**
 	* Constructs a manage referral critical control.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a manage referral control.
 	*
 	* @param   criticality The control's criticality setting.
 	*/
-	@:overload public function new(criticality : Bool) : Void;
+	@:overload @:public public function new(criticality : Bool) : Void;
 	
 	
 }

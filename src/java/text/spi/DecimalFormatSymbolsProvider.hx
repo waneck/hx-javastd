@@ -29,7 +29,7 @@ extern class DecimalFormatSymbolsProvider extends java.util.spi.LocaleServicePro
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns a new <code>DecimalFormatSymbols</code> instance for the
@@ -44,7 +44,7 @@ extern class DecimalFormatSymbolsProvider extends java.util.spi.LocaleServicePro
 	* @return a <code>DecimalFormatSymbols</code> instance.
 	* @see java.text.DecimalFormatSymbols#getInstance(java.util.Locale)
 	*/
-	@:overload @:abstract public function getInstance(locale : java.util.Locale) : java.text.DecimalFormatSymbols;
+	@:overload @:public @:abstract public function getInstance(locale : java.util.Locale) : java.text.DecimalFormatSymbols;
 	
 	
 }

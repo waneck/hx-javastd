@@ -25,19 +25,19 @@ package com.sun.corba.se.spi.servicecontext;
 */
 extern class SendingContextServiceContext extends com.sun.corba.se.spi.servicecontext.ServiceContext
 {
-	@:overload public function new(ior : com.sun.corba.se.spi.ior.IOR) : Void;
+	@:overload @:public public function new(ior : com.sun.corba.se.spi.ior.IOR) : Void;
 	
-	@:overload public function new(is : org.omg.CORBA_2_3.portable.InputStream, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
+	@:overload @:public public function new(is : org.omg.CORBA_2_3.portable.InputStream, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
 	
-	public static var SERVICE_CONTEXT_ID(default, null) : Int;
+	@:public @:static @:final public static var SERVICE_CONTEXT_ID(default, null) : Int;
 	
-	@:overload public function getId() : Int;
+	@:overload @:public override public function getId() : Int;
 	
-	@:overload public function writeData(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public override public function writeData(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload public function getIOR() : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public public function getIOR() : com.sun.corba.se.spi.ior.IOR;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

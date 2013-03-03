@@ -28,7 +28,7 @@ extern class ObjectFactoryGenerator
 	/**
 	* Returns a reference to the generated (public) ObjectFactory
 	*/
-	@:overload @:abstract public function getObjectFactory() : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public @:abstract public function getObjectFactory() : com.sun.codemodel.internal.JDefinedClass;
 	
 	
 }

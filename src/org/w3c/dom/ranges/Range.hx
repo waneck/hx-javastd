@@ -46,7 +46,7 @@ extern interface Range
 	*   INVALID_STATE_ERR: Raised if <code>detach()</code> has already been
 	*   invoked on this object.
 	*/
-	@:overload public function getStartContainer() : org.w3c.dom.Node;
+	@:overload @:public public function getStartContainer() : org.w3c.dom.Node;
 	
 	/**
 	* Offset within the starting node of the Range.
@@ -54,7 +54,7 @@ extern interface Range
 	*   INVALID_STATE_ERR: Raised if <code>detach()</code> has already been
 	*   invoked on this object.
 	*/
-	@:overload public function getStartOffset() : Int;
+	@:overload @:public public function getStartOffset() : Int;
 	
 	/**
 	* Node within which the Range ends
@@ -62,7 +62,7 @@ extern interface Range
 	*   INVALID_STATE_ERR: Raised if <code>detach()</code> has already been
 	*   invoked on this object.
 	*/
-	@:overload public function getEndContainer() : org.w3c.dom.Node;
+	@:overload @:public public function getEndContainer() : org.w3c.dom.Node;
 	
 	/**
 	* Offset within the ending node of the Range.
@@ -70,7 +70,7 @@ extern interface Range
 	*   INVALID_STATE_ERR: Raised if <code>detach()</code> has already been
 	*   invoked on this object.
 	*/
-	@:overload public function getEndOffset() : Int;
+	@:overload @:public public function getEndOffset() : Int;
 	
 	/**
 	* TRUE if the Range is collapsed
@@ -78,7 +78,7 @@ extern interface Range
 	*   INVALID_STATE_ERR: Raised if <code>detach()</code> has already been
 	*   invoked on this object.
 	*/
-	@:overload public function getCollapsed() : Bool;
+	@:overload @:public public function getCollapsed() : Bool;
 	
 	/**
 	* The deepest common ancestor container of the Range's two
@@ -87,7 +87,7 @@ extern interface Range
 	*   INVALID_STATE_ERR: Raised if <code>detach()</code> has already been
 	*   invoked on this object.
 	*/
-	@:overload public function getCommonAncestorContainer() : org.w3c.dom.Node;
+	@:overload @:public public function getCommonAncestorContainer() : org.w3c.dom.Node;
 	
 	/**
 	* Sets the attributes describing the start of the Range.
@@ -109,7 +109,7 @@ extern interface Range
 	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>refNode</code> was created
 	*   from a different document than the one that created this range.
 	*/
-	@:overload public function setStart(refNode : org.w3c.dom.Node, offset : Int) : Void;
+	@:overload @:public public function setStart(refNode : org.w3c.dom.Node, offset : Int) : Void;
 	
 	/**
 	* Sets the attributes describing the end of a Range.
@@ -131,7 +131,7 @@ extern interface Range
 	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>refNode</code> was created
 	*   from a different document than the one that created this range.
 	*/
-	@:overload public function setEnd(refNode : org.w3c.dom.Node, offset : Int) : Void;
+	@:overload @:public public function setEnd(refNode : org.w3c.dom.Node, offset : Int) : Void;
 	
 	/**
 	* Sets the start position to be before a node
@@ -147,7 +147,7 @@ extern interface Range
 	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>refNode</code> was created
 	*   from a different document than the one that created this range.
 	*/
-	@:overload public function setStartBefore(refNode : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setStartBefore(refNode : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Sets the start position to be after a node
@@ -163,7 +163,7 @@ extern interface Range
 	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>refNode</code> was created
 	*   from a different document than the one that created this range.
 	*/
-	@:overload public function setStartAfter(refNode : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setStartAfter(refNode : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Sets the end position to be before a node.
@@ -179,7 +179,7 @@ extern interface Range
 	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>refNode</code> was created
 	*   from a different document than the one that created this range.
 	*/
-	@:overload public function setEndBefore(refNode : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setEndBefore(refNode : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Sets the end of a Range to be after a node
@@ -195,7 +195,7 @@ extern interface Range
 	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>refNode</code> was created
 	*   from a different document than the one that created this range.
 	*/
-	@:overload public function setEndAfter(refNode : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setEndAfter(refNode : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Collapse a Range onto one of its boundary-points
@@ -205,7 +205,7 @@ extern interface Range
 	*   INVALID_STATE_ERR: Raised if <code>detach()</code> has already been
 	*   invoked on this object.
 	*/
-	@:overload public function collapse(toStart : Bool) : Void;
+	@:overload @:public public function collapse(toStart : Bool) : Void;
 	
 	/**
 	* Select a node and its contents
@@ -221,7 +221,7 @@ extern interface Range
 	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>refNode</code> was created
 	*   from a different document than the one that created this range.
 	*/
-	@:overload public function selectNode(refNode : org.w3c.dom.Node) : Void;
+	@:overload @:public public function selectNode(refNode : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Select the contents within a node
@@ -235,7 +235,7 @@ extern interface Range
 	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>refNode</code> was created
 	*   from a different document than the one that created this range.
 	*/
-	@:overload public function selectNodeContents(refNode : org.w3c.dom.Node) : Void;
+	@:overload @:public public function selectNodeContents(refNode : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Compare the boundary-points of two Ranges in a document.
@@ -252,7 +252,7 @@ extern interface Range
 	*   <br>INVALID_STATE_ERR: Raised if <code>detach()</code> has already
 	*   been invoked on this object.
 	*/
-	@:overload public function compareBoundaryPoints(how : java.StdTypes.Int16, sourceRange : org.w3c.dom.ranges.Range) : java.StdTypes.Int16;
+	@:overload @:public public function compareBoundaryPoints(how : java.StdTypes.Int16, sourceRange : org.w3c.dom.ranges.Range) : java.StdTypes.Int16;
 	
 	/**
 	* Removes the contents of a Range from the containing document or
@@ -265,7 +265,7 @@ extern interface Range
 	*   <br>INVALID_STATE_ERR: Raised if <code>detach()</code> has already
 	*   been invoked on this object.
 	*/
-	@:overload public function deleteContents() : Void;
+	@:overload @:public public function deleteContents() : Void;
 	
 	/**
 	* Moves the contents of a Range from the containing document or document
@@ -280,7 +280,7 @@ extern interface Range
 	*   <br>INVALID_STATE_ERR: Raised if <code>detach()</code> has already
 	*   been invoked on this object.
 	*/
-	@:overload public function extractContents() : org.w3c.dom.DocumentFragment;
+	@:overload @:public public function extractContents() : org.w3c.dom.DocumentFragment;
 	
 	/**
 	* Duplicates the contents of a Range
@@ -292,7 +292,7 @@ extern interface Range
 	*   <br>INVALID_STATE_ERR: Raised if <code>detach()</code> has already
 	*   been invoked on this object.
 	*/
-	@:overload public function cloneContents() : org.w3c.dom.DocumentFragment;
+	@:overload @:public public function cloneContents() : org.w3c.dom.DocumentFragment;
 	
 	/**
 	* Inserts a node into the Document or DocumentFragment at the start of
@@ -320,7 +320,7 @@ extern interface Range
 	*   INVALID_NODE_TYPE_ERR: Raised if <code>newNode</code> is an Attr,
 	*   Entity, Notation, or Document node.
 	*/
-	@:overload public function insertNode(newNode : org.w3c.dom.Node) : Void;
+	@:overload @:public public function insertNode(newNode : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Reparents the contents of the Range to the given node and inserts the
@@ -345,7 +345,7 @@ extern interface Range
 	*   <br>INVALID_NODE_TYPE_ERR: Raised if <code> node</code> is an Attr,
 	*   Entity, DocumentType, Notation, Document, or DocumentFragment node.
 	*/
-	@:overload public function surroundContents(newParent : org.w3c.dom.Node) : Void;
+	@:overload @:public public function surroundContents(newParent : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Produces a new Range whose boundary-points are equal to the
@@ -355,7 +355,7 @@ extern interface Range
 	*   INVALID_STATE_ERR: Raised if <code>detach()</code> has already been
 	*   invoked on this object.
 	*/
-	@:overload public function cloneRange() : org.w3c.dom.ranges.Range;
+	@:overload @:public public function cloneRange() : org.w3c.dom.ranges.Range;
 	
 	/**
 	* Called to indicate that the Range is no longer in use and that the
@@ -367,7 +367,7 @@ extern interface Range
 	*   INVALID_STATE_ERR: Raised if <code>detach()</code> has already been
 	*   invoked on this object.
 	*/
-	@:overload public function detach() : Void;
+	@:overload @:public public function detach() : Void;
 	
 	
 }

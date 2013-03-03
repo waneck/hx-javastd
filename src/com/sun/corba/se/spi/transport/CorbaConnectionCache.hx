@@ -28,7 +28,7 @@ package com.sun.corba.se.spi.transport;
 */
 extern interface CorbaConnectionCache
 {
-	@:overload public function getMonitoringName() : String;
+	@:overload @:public public function getMonitoringName() : String;
 	
 	
 }

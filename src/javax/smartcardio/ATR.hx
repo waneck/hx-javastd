@@ -46,14 +46,14 @@ package javax.smartcardio;
 	* @param atr the byte array containing the answer-to-reset bytes
 	* @throws NullPointerException if <code>atr</code> is null
 	*/
-	@:overload public function new(atr : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(atr : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns a copy of the bytes in this ATR.
 	*
 	* @return a copy of the bytes in this ATR.
 	*/
-	@:overload public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a copy of the historical bytes in this ATR.
@@ -62,14 +62,14 @@ package javax.smartcardio;
 	*
 	* @return a copy of the historical bytes in this ATR.
 	*/
-	@:overload public function getHistoricalBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getHistoricalBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a string representation of this ATR.
 	*
 	* @return a String representation of this ATR.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares the specified object with this ATR for equality.
@@ -79,14 +79,14 @@ package javax.smartcardio;
 	* @param obj the object to be compared for equality with this ATR
 	* @return true if the specified object is equal to this ATR
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this ATR.
 	*
 	* @return the hash code value for this ATR.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

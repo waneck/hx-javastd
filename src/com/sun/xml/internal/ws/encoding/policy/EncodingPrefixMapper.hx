@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.encoding.policy;
 */
 extern class EncodingPrefixMapper implements com.sun.xml.internal.ws.policy.spi.PrefixMapper
 {
-	@:overload public function getPrefixMap() : java.util.Map<String, String>;
+	@:overload @:public public function getPrefixMap() : java.util.Map<String, String>;
 	
 	
 }

@@ -31,19 +31,19 @@ package com.sun.tools.internal.ws.wsdl.document.jaxws;
 */
 extern class Exception
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : com.sun.tools.internal.ws.wsdl.document.jaxws.CustomName) : Void;
+	@:overload @:public public function new(name : com.sun.tools.internal.ws.wsdl.document.jaxws.CustomName) : Void;
 	
 	/**
 	* @return Returns the className.
 	*/
-	@:overload public function getClassName() : com.sun.tools.internal.ws.wsdl.document.jaxws.CustomName;
+	@:overload @:public public function getClassName() : com.sun.tools.internal.ws.wsdl.document.jaxws.CustomName;
 	
 	/**
 	* @param className The className to set.
 	*/
-	@:overload public function setClassName(className : com.sun.tools.internal.ws.wsdl.document.jaxws.CustomName) : Void;
+	@:overload @:public public function setClassName(className : com.sun.tools.internal.ws.wsdl.document.jaxws.CustomName) : Void;
 	
 	
 }

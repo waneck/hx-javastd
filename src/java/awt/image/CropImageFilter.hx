@@ -34,7 +34,7 @@ extern class CropImageFilter extends java.awt.image.ImageFilter
 	* @param w the width of the rectangle to be extracted
 	* @param h the height of the rectangle to be extracted
 	*/
-	@:overload public function new(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function new(x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Passes along  the properties from the source object after adding a
@@ -49,7 +49,7 @@ extern class CropImageFilter extends java.awt.image.ImageFilter
 	* this method directly since that operation could interfere
 	* with the filtering operation.
 	*/
-	@:overload public function setProperties(props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public override public function setProperties(props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Override the source image's dimensions and pass the dimensions
@@ -63,7 +63,7 @@ extern class CropImageFilter extends java.awt.image.ImageFilter
 	* with the filtering operation.
 	* @see ImageConsumer
 	*/
-	@:overload public function setDimensions(w : Int, h : Int) : Void;
+	@:overload @:public override public function setDimensions(w : Int, h : Int) : Void;
 	
 	/**
 	* Determine whether the delivered byte pixels intersect the region to
@@ -77,7 +77,7 @@ extern class CropImageFilter extends java.awt.image.ImageFilter
 	* this method directly since that operation could interfere
 	* with the filtering operation.
 	*/
-	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Void;
+	@:overload @:public override public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Void;
 	
 	/**
 	* Determine if the delivered int pixels intersect the region to
@@ -91,7 +91,7 @@ extern class CropImageFilter extends java.awt.image.ImageFilter
 	* this method directly since that operation could interfere
 	* with the filtering operation.
 	*/
-	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
+	@:overload @:public override public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
 	
 	
 }

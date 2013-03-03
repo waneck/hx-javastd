@@ -33,7 +33,7 @@ extern class XBooleanStatic extends com.sun.org.apache.xpath.internal.objects.XB
 	*
 	* @param b The value of the object
 	*/
-	@:overload public function new(b : Bool) : Void;
+	@:overload @:public public function new(b : Bool) : Void;
 	
 	/**
 	* Tell if two objects are functionally equal.
@@ -44,7 +44,7 @@ extern class XBooleanStatic extends com.sun.org.apache.xpath.internal.objects.XB
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload @:public override public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	
 }

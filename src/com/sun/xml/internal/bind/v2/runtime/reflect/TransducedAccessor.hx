@@ -28,7 +28,7 @@ extern class TransducedAccessor<BeanT>
 	/**
 	* @see Transducer#useNamespace()
 	*/
-	@:overload public function useNamespace() : Bool;
+	@:overload @:public public function useNamespace() : Bool;
 	
 	/**
 	* Obtain the value of the field and declares the namespace URIs used in
@@ -36,7 +36,7 @@ extern class TransducedAccessor<BeanT>
 	*
 	* @see Transducer#declareNamespace(Object, XMLSerializer)
 	*/
-	@:overload public function declareNamespace(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public public function declareNamespace(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
 	/**
 	* Prints the responsible field of the given bean to the writer.
@@ -47,7 +47,7 @@ extern class TransducedAccessor<BeanT>
 	* @return
 	*      if the accessor didn't yield a value, return null.
 	*/
-	@:overload @:abstract public function print(o : BeanT) : java.lang.CharSequence;
+	@:overload @:public @:abstract public function print(o : BeanT) : java.lang.CharSequence;
 	
 	/**
 	* Parses the text value into the responsible field of the given bean.
@@ -65,12 +65,12 @@ extern class TransducedAccessor<BeanT>
 	*      if the parse method found an error, the error is reported, and then
 	*      the processing is aborted.
 	*/
-	@:overload @:abstract public function parse(o : BeanT, lexical : java.lang.CharSequence) : Void;
+	@:overload @:public @:abstract public function parse(o : BeanT, lexical : java.lang.CharSequence) : Void;
 	
 	/**
 	* Checks if the field has a value.
 	*/
-	@:overload @:abstract public function hasValue(o : BeanT) : Bool;
+	@:overload @:public @:abstract public function hasValue(o : BeanT) : Bool;
 	
 	/**
 	* Gets the {@link TransducedAccessor} appropriately configured for
@@ -79,7 +79,7 @@ extern class TransducedAccessor<BeanT>
 	* <p>
 	* This allows the implementation to use an optimized code.
 	*/
-	@:overload public static function get<T>(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, ref : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElementRef) : com.sun.xml.internal.bind.v2.runtime.reflect.TransducedAccessor<T>;
+	@:overload @:public @:static public static function get<T>(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, ref : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElementRef) : com.sun.xml.internal.bind.v2.runtime.reflect.TransducedAccessor<T>;
 	
 	/**
 	* Convenience method to write the value as a text inside an element
@@ -90,25 +90,25 @@ extern class TransducedAccessor<BeanT>
 	* The callee assumes that there's an associated value in the field.
 	* No @xsi:type handling is expected.
 	*/
-	@:overload @:abstract public function writeLeafElement(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, tagName : com.sun.xml.internal.bind.v2.runtime.Name, o : BeanT, fieldName : String) : Void;
+	@:overload @:public @:abstract public function writeLeafElement(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, tagName : com.sun.xml.internal.bind.v2.runtime.Name, o : BeanT, fieldName : String) : Void;
 	
 	/**
 	* Invokes one of the {@link XMLSerializer#text(String, String)} method
 	* with the representation of data bested suited for this transduced accessor.
 	*/
-	@:overload @:abstract public function writeText(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, o : BeanT, fieldName : String) : Void;
+	@:overload @:public @:abstract public function writeText(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, o : BeanT, fieldName : String) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$runtime$reflect$TransducedAccessor$CompositeContextDependentTransducedAccessorImpl') @:internal extern class TransducedAccessor_CompositeContextDependentTransducedAccessorImpl<BeanT, ValueT> extends com.sun.xml.internal.bind.v2.runtime.reflect.TransducedAccessor.TransducedAccessor_CompositeTransducedAccessorImpl<BeanT, ValueT>
 {
-	@:overload public function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, xducer : com.sun.xml.internal.bind.v2.runtime.Transducer<ValueT>, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>) : Void;
+	@:overload @:public public function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, xducer : com.sun.xml.internal.bind.v2.runtime.Transducer<ValueT>, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>) : Void;
 	
-	@:overload override public function useNamespace() : Bool;
+	@:overload @:public override public function useNamespace() : Bool;
 	
-	@:overload override public function declareNamespace(bean : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public override public function declareNamespace(bean : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload override public function writeLeafElement(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, tagName : com.sun.xml.internal.bind.v2.runtime.Name, o : BeanT, fieldName : String) : Void;
+	@:overload @:public override public function writeLeafElement(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, tagName : com.sun.xml.internal.bind.v2.runtime.Name, o : BeanT, fieldName : String) : Void;
 	
 	
 }
@@ -118,21 +118,21 @@ extern class TransducedAccessor<BeanT>
 */
 @:native('com$sun$xml$internal$bind$v2$runtime$reflect$TransducedAccessor$CompositeTransducedAccessorImpl') extern class TransducedAccessor_CompositeTransducedAccessorImpl<BeanT, ValueT> extends com.sun.xml.internal.bind.v2.runtime.reflect.TransducedAccessor<BeanT>
 {
-	private var xducer(default, null) : com.sun.xml.internal.bind.v2.runtime.Transducer<ValueT>;
+	@:protected @:final private var xducer(default, null) : com.sun.xml.internal.bind.v2.runtime.Transducer<ValueT>;
 	
-	private var acc(default, null) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>;
+	@:protected @:final private var acc(default, null) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>;
 	
-	@:overload public function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, xducer : com.sun.xml.internal.bind.v2.runtime.Transducer<ValueT>, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>) : Void;
+	@:overload @:public public function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, xducer : com.sun.xml.internal.bind.v2.runtime.Transducer<ValueT>, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>) : Void;
 	
-	@:overload override public function print(bean : BeanT) : java.lang.CharSequence;
+	@:overload @:public override public function print(bean : BeanT) : java.lang.CharSequence;
 	
-	@:overload override public function parse(bean : BeanT, lexical : java.lang.CharSequence) : Void;
+	@:overload @:public override public function parse(bean : BeanT, lexical : java.lang.CharSequence) : Void;
 	
-	@:overload override public function hasValue(bean : BeanT) : Bool;
+	@:overload @:public override public function hasValue(bean : BeanT) : Bool;
 	
-	@:overload override public function writeLeafElement(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, tagName : com.sun.xml.internal.bind.v2.runtime.Name, o : BeanT, fieldName : String) : Void;
+	@:overload @:public override public function writeLeafElement(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, tagName : com.sun.xml.internal.bind.v2.runtime.Name, o : BeanT, fieldName : String) : Void;
 	
-	@:overload override public function writeText(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, o : BeanT, fieldName : String) : Void;
+	@:overload @:public override public function writeText(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, o : BeanT, fieldName : String) : Void;
 	
 	
 }
@@ -144,13 +144,13 @@ extern class TransducedAccessor<BeanT>
 */
 @:native('com$sun$xml$internal$bind$v2$runtime$reflect$TransducedAccessor$IDREFTransducedAccessorImpl') @:internal extern class TransducedAccessor_IDREFTransducedAccessorImpl<BeanT, TargetT> extends com.sun.xml.internal.bind.v2.runtime.reflect.DefaultTransducedAccessor<BeanT>
 {
-	@:overload public function new(acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, TargetT>) : Void;
+	@:overload @:public public function new(acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, TargetT>) : Void;
 	
-	@:overload override public function print(bean : BeanT) : String;
+	@:overload @:public override public function print(bean : BeanT) : String;
 	
-	@:overload override public function parse(bean : BeanT, lexical : java.lang.CharSequence) : Void;
+	@:overload @:public override public function parse(bean : BeanT, lexical : java.lang.CharSequence) : Void;
 	
-	@:overload override public function hasValue(bean : BeanT) : Bool;
+	@:overload @:public override public function hasValue(bean : BeanT) : Bool;
 	
 	
 }

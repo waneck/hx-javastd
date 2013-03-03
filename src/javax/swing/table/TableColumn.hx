@@ -29,32 +29,32 @@ extern class TableColumn implements java.io.Serializable
 	* Warning: The value of this constant, "columWidth" is wrong as the
 	* name of the property is "columnWidth".
 	*/
-	public static var COLUMN_WIDTH_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var COLUMN_WIDTH_PROPERTY(default, null) : String;
 	
 	/**
 	* Obsolete as of Java 2 platform v1.3.  Please use string literals to identify
 	* properties.
 	*/
-	public static var HEADER_VALUE_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var HEADER_VALUE_PROPERTY(default, null) : String;
 	
 	/**
 	* Obsolete as of Java 2 platform v1.3.  Please use string literals to identify
 	* properties.
 	*/
-	public static var HEADER_RENDERER_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var HEADER_RENDERER_PROPERTY(default, null) : String;
 	
 	/**
 	* Obsolete as of Java 2 platform v1.3.  Please use string literals to identify
 	* properties.
 	*/
-	public static var CELL_RENDERER_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var CELL_RENDERER_PROPERTY(default, null) : String;
 	
 	/**
 	* The index of the column in the model which is to be displayed by
 	* this <code>TableColumn</code>. As columns are moved around in the
 	* view <code>modelIndex</code> remains constant.
 	*/
-	private var modelIndex : Int;
+	@:protected private var modelIndex : Int;
 	
 	/**
 	*  This object is not used internally by the drawing machinery of
@@ -66,37 +66,37 @@ extern class TableColumn implements java.io.Serializable
 	*  <code>getColumnIndex()</code> method in the
 	*  <code>DefaultTableColumnModel</code>.
 	*/
-	private var identifier : Dynamic;
+	@:protected private var identifier : Dynamic;
 	
 	/** The width of the column. */
-	private var width : Int;
+	@:protected private var width : Int;
 	
 	/** The minimum width of the column. */
-	private var minWidth : Int;
+	@:protected private var minWidth : Int;
 	
 	/** The maximum width of the column. */
-	private var maxWidth : Int;
+	@:protected private var maxWidth : Int;
 	
 	/** The renderer used to draw the header of the column. */
-	private var headerRenderer : javax.swing.table.TableCellRenderer;
+	@:protected private var headerRenderer : javax.swing.table.TableCellRenderer;
 	
 	/** The header value of the column. */
-	private var headerValue : Dynamic;
+	@:protected private var headerValue : Dynamic;
 	
 	/** The renderer used to draw the data cells of the column. */
-	private var cellRenderer : javax.swing.table.TableCellRenderer;
+	@:protected private var cellRenderer : javax.swing.table.TableCellRenderer;
 	
 	/** The editor used to edit the data cells of the column. */
-	private var cellEditor : javax.swing.table.TableCellEditor;
+	@:protected private var cellEditor : javax.swing.table.TableCellEditor;
 	
 	/** If true, the user is allowed to resize the column; the default is true. */
-	private var isResizable : Bool;
+	@:protected private var isResizable : Bool;
 	
 	/*
 	*  Counter used to disable posting of resizing notifications until the
 	*  end of the resize.
 	*/
-	@:transient private var resizedPostingDisableCount : Int;
+	@:transient @:protected private var resizedPostingDisableCount : Int;
 	
 	/**
 	*  Cover method, using a default model index of 0,
@@ -105,21 +105,21 @@ extern class TableColumn implements java.io.Serializable
 	*  This method is intended for serialization.
 	*  @see #TableColumn(int, int, TableCellRenderer, TableCellEditor)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*  Cover method, using a default width of 75, a <code>null</code>
 	*  renderer and a <code>null</code> editor.
 	*  @see #TableColumn(int, int, TableCellRenderer, TableCellEditor)
 	*/
-	@:overload public function new(modelIndex : Int) : Void;
+	@:overload @:public public function new(modelIndex : Int) : Void;
 	
 	/**
 	*  Cover method, using a <code>null</code> renderer and a
 	*  <code>null</code> editor.
 	*  @see #TableColumn(int, int, TableCellRenderer, TableCellEditor)
 	*/
-	@:overload public function new(modelIndex : Int, width : Int) : Void;
+	@:overload @:public public function new(modelIndex : Int, width : Int) : Void;
 	
 	/**
 	*  Creates and initializes an instance of
@@ -158,7 +158,7 @@ extern class TableColumn implements java.io.Serializable
 	* @see JTable#getCellRenderer(int, int)
 	* @see JTable#getCellEditor(int, int)
 	*/
-	@:overload public function new(modelIndex : Int, width : Int, cellRenderer : javax.swing.table.TableCellRenderer, cellEditor : javax.swing.table.TableCellEditor) : Void;
+	@:overload @:public public function new(modelIndex : Int, width : Int, cellRenderer : javax.swing.table.TableCellRenderer, cellEditor : javax.swing.table.TableCellEditor) : Void;
 	
 	/**
 	* Sets the model index for this column. The model index is the
@@ -170,13 +170,13 @@ extern class TableColumn implements java.io.Serializable
 	*  bound: true
 	*  description: The model index.
 	*/
-	@:overload public function setModelIndex(modelIndex : Int) : Void;
+	@:overload @:public public function setModelIndex(modelIndex : Int) : Void;
 	
 	/**
 	* Returns the model index for this column.
 	* @return the <code>modelIndex</code> property
 	*/
-	@:overload public function getModelIndex() : Int;
+	@:overload @:public public function getModelIndex() : Int;
 	
 	/**
 	* Sets the <code>TableColumn</code>'s identifier to
@@ -191,7 +191,7 @@ extern class TableColumn implements java.io.Serializable
 	*  bound: true
 	*  description: A unique identifier for this column.
 	*/
-	@:overload public function setIdentifier(identifier : Dynamic) : Void;
+	@:overload @:public public function setIdentifier(identifier : Dynamic) : Void;
 	
 	/**
 	*  Returns the <code>identifier</code> object for this column.
@@ -204,7 +204,7 @@ extern class TableColumn implements java.io.Serializable
 	* @return  the <code>identifier</code> property
 	* @see     #setIdentifier
 	*/
-	@:overload public function getIdentifier() : Dynamic;
+	@:overload @:public public function getIdentifier() : Dynamic;
 	
 	/**
 	* Sets the <code>Object</code> whose string representation will be
@@ -217,7 +217,7 @@ extern class TableColumn implements java.io.Serializable
 	*  bound: true
 	*  description: The text to be used by the header renderer.
 	*/
-	@:overload public function setHeaderValue(headerValue : Dynamic) : Void;
+	@:overload @:public public function setHeaderValue(headerValue : Dynamic) : Void;
 	
 	/**
 	* Returns the <code>Object</code> used as the value for the header
@@ -226,7 +226,7 @@ extern class TableColumn implements java.io.Serializable
 	* @return  the <code>headerValue</code> property
 	* @see     #setHeaderValue
 	*/
-	@:overload public function getHeaderValue() : Dynamic;
+	@:overload @:public public function getHeaderValue() : Dynamic;
 	
 	/**
 	* Sets the <code>TableCellRenderer</code> used to draw the
@@ -243,7 +243,7 @@ extern class TableColumn implements java.io.Serializable
 	*  bound: true
 	*  description: The header renderer.
 	*/
-	@:overload public function setHeaderRenderer(headerRenderer : javax.swing.table.TableCellRenderer) : Void;
+	@:overload @:public public function setHeaderRenderer(headerRenderer : javax.swing.table.TableCellRenderer) : Void;
 	
 	/**
 	* Returns the <code>TableCellRenderer</code> used to draw the header of the
@@ -257,7 +257,7 @@ extern class TableColumn implements java.io.Serializable
 	* @see     #setHeaderValue
 	* @see     javax.swing.table.JTableHeader#getDefaultRenderer()
 	*/
-	@:overload public function getHeaderRenderer() : javax.swing.table.TableCellRenderer;
+	@:overload @:public public function getHeaderRenderer() : javax.swing.table.TableCellRenderer;
 	
 	/**
 	* Sets the <code>TableCellRenderer</code> used by <code>JTable</code>
@@ -269,7 +269,7 @@ extern class TableColumn implements java.io.Serializable
 	*  bound: true
 	*  description: The renderer to use for cell values.
 	*/
-	@:overload public function setCellRenderer(cellRenderer : javax.swing.table.TableCellRenderer) : Void;
+	@:overload @:public public function setCellRenderer(cellRenderer : javax.swing.table.TableCellRenderer) : Void;
 	
 	/**
 	* Returns the <code>TableCellRenderer</code> used by the
@@ -286,7 +286,7 @@ extern class TableColumn implements java.io.Serializable
 	* @see     #setCellRenderer
 	* @see     JTable#setDefaultRenderer
 	*/
-	@:overload public function getCellRenderer() : javax.swing.table.TableCellRenderer;
+	@:overload @:public public function getCellRenderer() : javax.swing.table.TableCellRenderer;
 	
 	/**
 	* Sets the editor to used by when a cell in this column is edited.
@@ -297,7 +297,7 @@ extern class TableColumn implements java.io.Serializable
 	*  bound: true
 	*  description: The editor to use for cell values.
 	*/
-	@:overload public function setCellEditor(cellEditor : javax.swing.table.TableCellEditor) : Void;
+	@:overload @:public public function setCellEditor(cellEditor : javax.swing.table.TableCellEditor) : Void;
 	
 	/**
 	* Returns the <code>TableCellEditor</code> used by the
@@ -311,7 +311,7 @@ extern class TableColumn implements java.io.Serializable
 	* @see     #setCellEditor
 	* @see     JTable#setDefaultEditor
 	*/
-	@:overload public function getCellEditor() : javax.swing.table.TableCellEditor;
+	@:overload @:public public function getCellEditor() : javax.swing.table.TableCellEditor;
 	
 	/**
 	* This method should not be used to set the widths of columns in the
@@ -335,7 +335,7 @@ extern class TableColumn implements java.io.Serializable
 	*  bound: true
 	*  description: The width of the column.
 	*/
-	@:overload public function setWidth(width : Int) : Void;
+	@:overload @:public public function setWidth(width : Int) : Void;
 	
 	/**
 	* Returns the width of the <code>TableColumn</code>. The default width is
@@ -344,7 +344,7 @@ extern class TableColumn implements java.io.Serializable
 	* @return  the <code>width</code> property
 	* @see     #setWidth
 	*/
-	@:overload public function getWidth() : Int;
+	@:overload @:public public function getWidth() : Int;
 	
 	/**
 	* Sets this column's preferred width to <code>preferredWidth</code>.
@@ -363,7 +363,7 @@ extern class TableColumn implements java.io.Serializable
 	*  bound: true
 	*  description: The preferred width of the column.
 	*/
-	@:overload public function setPreferredWidth(preferredWidth : Int) : Void;
+	@:overload @:public public function setPreferredWidth(preferredWidth : Int) : Void;
 	
 	/**
 	* Returns the preferred width of the <code>TableColumn</code>.
@@ -372,7 +372,7 @@ extern class TableColumn implements java.io.Serializable
 	* @return  the <code>preferredWidth</code> property
 	* @see     #setPreferredWidth
 	*/
-	@:overload public function getPreferredWidth() : Int;
+	@:overload @:public public function getPreferredWidth() : Int;
 	
 	/**
 	* Sets the <code>TableColumn</code>'s minimum width to
@@ -396,7 +396,7 @@ extern class TableColumn implements java.io.Serializable
 	*  bound: true
 	*  description: The minimum width of the column.
 	*/
-	@:overload public function setMinWidth(minWidth : Int) : Void;
+	@:overload @:public public function setMinWidth(minWidth : Int) : Void;
 	
 	/**
 	* Returns the minimum width for the <code>TableColumn</code>. The
@@ -407,7 +407,7 @@ extern class TableColumn implements java.io.Serializable
 	* @see     #setMinWidth
 	* @see     #TableColumn(int, int, TableCellRenderer, TableCellEditor)
 	*/
-	@:overload public function getMinWidth() : Int;
+	@:overload @:public public function getMinWidth() : Int;
 	
 	/**
 	* Sets the <code>TableColumn</code>'s maximum width to
@@ -429,7 +429,7 @@ extern class TableColumn implements java.io.Serializable
 	*  bound: true
 	*  description: The maximum width of the column.
 	*/
-	@:overload public function setMaxWidth(maxWidth : Int) : Void;
+	@:overload @:public public function setMaxWidth(maxWidth : Int) : Void;
 	
 	/**
 	* Returns the maximum width for the <code>TableColumn</code>. The
@@ -440,7 +440,7 @@ extern class TableColumn implements java.io.Serializable
 	* @return  the <code>maxWidth</code> property
 	* @see     #setMaxWidth
 	*/
-	@:overload public function getMaxWidth() : Int;
+	@:overload @:public public function getMaxWidth() : Int;
 	
 	/**
 	* Sets whether this column can be resized.
@@ -451,7 +451,7 @@ extern class TableColumn implements java.io.Serializable
 	*  bound: true
 	*  description: Whether or not this column can be resized.
 	*/
-	@:overload public function setResizable(isResizable : Bool) : Void;
+	@:overload @:public public function setResizable(isResizable : Bool) : Void;
 	
 	/**
 	* Returns true if the user is allowed to resize the
@@ -462,7 +462,7 @@ extern class TableColumn implements java.io.Serializable
 	* @return  the <code>isResizable</code> property
 	* @see     #setResizable
 	*/
-	@:overload public function getResizable() : Bool;
+	@:overload @:public public function getResizable() : Bool;
 	
 	/**
 	* Resizes the <code>TableColumn</code> to fit the width of its header cell.
@@ -476,7 +476,7 @@ extern class TableColumn implements java.io.Serializable
 	*
 	* @see     #setPreferredWidth
 	*/
-	@:overload public function sizeWidthToFit() : Void;
+	@:overload @:public public function sizeWidthToFit() : Void;
 	
 	/**
 	* This field was not used in previous releases and there are
@@ -484,7 +484,7 @@ extern class TableColumn implements java.io.Serializable
 	*
 	* @deprecated as of Java 2 platform v1.3
 	*/
-	@:overload public function disableResizedPosting() : Void;
+	@:overload @:public public function disableResizedPosting() : Void;
 	
 	/**
 	* This field was not used in previous releases and there are
@@ -492,7 +492,7 @@ extern class TableColumn implements java.io.Serializable
 	*
 	* @deprecated as of Java 2 platform v1.3
 	*/
-	@:overload public function enableResizedPosting() : Void;
+	@:overload @:public public function enableResizedPosting() : Void;
 	
 	/**
 	* Adds a <code>PropertyChangeListener</code> to the listener list.
@@ -509,7 +509,7 @@ extern class TableColumn implements java.io.Serializable
 	* @param listener  the listener to be added
 	*
 	*/
-	@:overload @:synchronized public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a <code>PropertyChangeListener</code> from the listener list.
@@ -519,7 +519,7 @@ extern class TableColumn implements java.io.Serializable
 	* @param listener  the listener to be removed
 	*
 	*/
-	@:overload @:synchronized public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>PropertyChangeListener</code>s added
@@ -529,7 +529,7 @@ extern class TableColumn implements java.io.Serializable
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	/**
 	* As of Java 2 platform v1.3, this method is not called by the <code>TableColumn</code>
@@ -542,7 +542,7 @@ extern class TableColumn implements java.io.Serializable
 	* @return the default header renderer
 	* @see javax.swing.table.JTableHeader#createDefaultRenderer()
 	*/
-	@:overload private function createDefaultHeaderRenderer() : javax.swing.table.TableCellRenderer;
+	@:overload @:protected private function createDefaultHeaderRenderer() : javax.swing.table.TableCellRenderer;
 	
 	
 }

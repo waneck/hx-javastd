@@ -25,21 +25,21 @@ package com.sun.tools.javah;
 */
 extern class JavahTask implements com.sun.tools.javah.NativeHeaderTool.NativeHeaderTool_NativeHeaderTask
 {
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
-	@:overload public function setLog(log : java.io.PrintWriter) : Void;
+	@:overload @:public public function setLog(log : java.io.PrintWriter) : Void;
 	
-	@:overload public function setLog(s : java.io.OutputStream) : Void;
+	@:overload @:public public function setLog(s : java.io.OutputStream) : Void;
 	
-	@:overload public function setDiagnosticListener(dl : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>) : Void;
+	@:overload @:public public function setDiagnosticListener(dl : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>) : Void;
 	
-	@:overload public function setDiagnosticListener(s : java.io.OutputStream) : Void;
+	@:overload @:public public function setDiagnosticListener(s : java.io.OutputStream) : Void;
 	
-	@:overload public function handleOptions(args : java.NativeArray<String>) : Void;
+	@:overload @:public public function handleOptions(args : java.NativeArray<String>) : Void;
 	
-	@:overload public function call() : Null<Bool>;
+	@:overload @:public public function call() : Null<Bool>;
 	
-	@:overload public function run() : Bool;
+	@:overload @:public public function run() : Bool;
 	
 	
 }
@@ -69,11 +69,11 @@ extern class JavahTask implements com.sun.tools.javah.NativeHeaderTool.NativeHea
 }
 @:native('com$sun$tools$javah$JavahTask$JavahProcessor') @:internal extern class JavahTask_JavahProcessor extends javax.annotation.processing.AbstractProcessor
 {
-	@:overload override public function getSupportedSourceVersion() : javax.lang.model.SourceVersion;
+	@:overload @:public override public function getSupportedSourceVersion() : javax.lang.model.SourceVersion;
 	
-	@:overload override public function init(pEnv : javax.annotation.processing.ProcessingEnvironment) : Void;
+	@:overload @:public override public function init(pEnv : javax.annotation.processing.ProcessingEnvironment) : Void;
 	
-	@:overload override public function process(annotations : java.util.Set<javax.lang.model.element.TypeElement>, roundEnv : javax.annotation.processing.RoundEnvironment) : Bool;
+	@:overload @:public override public function process(annotations : java.util.Set<javax.lang.model.element.TypeElement>, roundEnv : javax.annotation.processing.RoundEnvironment) : Bool;
 	
 	
 }

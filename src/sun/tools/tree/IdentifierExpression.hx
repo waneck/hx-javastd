@@ -28,73 +28,73 @@ extern class IdentifierExpression extends sun.tools.tree.Expression
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, id : sun.tools.java.Identifier) : Void;
+	@:overload @:public public function new(where : haxe.Int64, id : sun.tools.java.Identifier) : Void;
 	
-	@:overload public function new(id : sun.tools.java.IdentifierToken) : Void;
+	@:overload @:public public function new(id : sun.tools.java.IdentifierToken) : Void;
 	
-	@:overload public function new(where : haxe.Int64, field : sun.tools.java.MemberDefinition) : Void;
+	@:overload @:public public function new(where : haxe.Int64, field : sun.tools.java.MemberDefinition) : Void;
 	
-	@:overload public function getImplementation() : sun.tools.tree.Expression;
+	@:overload @:public override public function getImplementation() : sun.tools.tree.Expression;
 	
 	/**
 	* Check if the expression is equal to a value
 	*/
-	@:overload public function equals(id : sun.tools.java.Identifier) : Bool;
+	@:overload @:public override public function equals(id : sun.tools.java.Identifier) : Bool;
 	
 	/**
 	* Check expression
 	*/
-	@:overload public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
+	@:overload @:public override public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
 	
 	/**
 	* Check the expression if it appears on the LHS of an assignment
 	*/
-	@:overload public function checkLHS(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
+	@:overload @:public override public function checkLHS(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
 	
 	/**
 	* Check the expression if it appears on the LHS of an op= expression
 	*/
-	@:overload public function checkAssignOp(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, outside : sun.tools.tree.Expression) : sun.tools.tree.Vset;
+	@:overload @:public override public function checkAssignOp(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, outside : sun.tools.tree.Expression) : sun.tools.tree.Vset;
 	
 	/**
 	* Return an accessor if one is needed for assignments to this expression.
 	*/
-	@:overload public function getAssigner(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
+	@:overload @:public override public function getAssigner(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
 	
 	/**
 	* Return an updater if one is needed for assignments to this expression.
 	*/
-	@:overload public function getUpdater(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
+	@:overload @:public override public function getUpdater(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
 	
 	/**
 	* Check if the present name is part of a scoping prefix.
 	*/
-	@:overload public function checkAmbigName(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, loc : sun.tools.tree.UnaryExpression) : sun.tools.tree.Vset;
+	@:overload @:public override public function checkAmbigName(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, loc : sun.tools.tree.UnaryExpression) : sun.tools.tree.Vset;
 	
 	/**
 	* Check if constant:  Will it inline away?
 	*/
-	@:overload public function isConstant() : Bool;
+	@:overload @:public override public function isConstant() : Bool;
 	
 	/**
 	* Inline
 	*/
-	//@:overload public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	//@:overload @:public override public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload @:public override public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload public function inlineLHS(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload @:public override public function inlineLHS(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload @:public override public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
+	@:overload @:public override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
 	
-	@:overload public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Print
 	*/
-	@:overload public function print(out : java.io.PrintStream) : Void;
+	@:overload @:public override public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

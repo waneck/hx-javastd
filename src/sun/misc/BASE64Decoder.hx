@@ -26,15 +26,15 @@ package sun.misc;
 extern class BASE64Decoder extends sun.misc.CharacterDecoder
 {
 	/** This class has 4 bytes per atom */
-	@:overload override private function bytesPerAtom() : Int;
+	@:overload @:protected override private function bytesPerAtom() : Int;
 	
 	/** Any multiple of 4 will do, 72 might be common */
-	@:overload override private function bytesPerLine() : Int;
+	@:overload @:protected override private function bytesPerLine() : Int;
 	
 	/**
 	* Decode one BASE64 atom into 1, 2, or 3 bytes of data.
 	*/
-	@:overload override private function decodeAtom(inStream : java.io.PushbackInputStream, outStream : java.io.OutputStream, rem : Int) : Void;
+	@:overload @:protected override private function decodeAtom(inStream : java.io.PushbackInputStream, outStream : java.io.OutputStream, rem : Int) : Void;
 	
 	
 }

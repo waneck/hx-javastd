@@ -28,20 +28,20 @@ extern class FloatingDecimal
 	/*
 	* FIRST IMPORTANT CONSTRUCTOR: DOUBLE
 	*/
-	@:overload public function new(d : Float) : Void;
+	@:overload @:public public function new(d : Float) : Void;
 	
 	/*
 	* SECOND IMPORTANT CONSTRUCTOR: SINGLE
 	*/
-	@:overload public function new(f : Single) : Void;
+	@:overload @:public public function new(f : Single) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function toJavaFormatString() : String;
+	@:overload @:public public function toJavaFormatString() : String;
 	
-	@:overload public function appendTo(buf : java.lang.Appendable) : Void;
+	@:overload @:public public function appendTo(buf : java.lang.Appendable) : Void;
 	
-	@:overload public static function readJavaFormatString(_in : String) : sun.misc.FloatingDecimal;
+	@:overload @:public @:static public static function readJavaFormatString(_in : String) : sun.misc.FloatingDecimal;
 	
 	/*
 	* Take a FloatingDecimal, which we presumably just scanned in,
@@ -51,7 +51,7 @@ extern class FloatingDecimal
 	* ROUNDING DIRECTION in case the result is really destined
 	* for a single-precision float.
 	*/
-	@:overload @:strictfp public function doubleValue() : Float;
+	@:overload @:public @:strictfp public function doubleValue() : Float;
 	
 	/*
 	* Take a FloatingDecimal, which we presumably just scanned in,
@@ -62,25 +62,25 @@ extern class FloatingDecimal
 	* to a float has another rounding error, IN THE WRONG DIRECTION,
 	* ( because of the preference to a zero low-order bit ).
 	*/
-	@:overload @:strictfp public function floatValue() : Single;
+	@:overload @:public @:strictfp public function floatValue() : Single;
 	
 	
 }
 @:internal extern class FDBigInt
 {
-	@:overload public function new(v : Int) : Void;
+	@:overload @:public public function new(v : Int) : Void;
 	
-	@:overload public function new(v : haxe.Int64) : Void;
+	@:overload @:public public function new(v : haxe.Int64) : Void;
 	
-	@:overload public function new(other : sun.misc.FloatingDecimal.FDBigInt) : Void;
+	@:overload @:public public function new(other : sun.misc.FloatingDecimal.FDBigInt) : Void;
 	
-	@:overload public function new(seed : haxe.Int64, digit : java.NativeArray<java.StdTypes.Char16>, nd0 : Int, nd : Int) : Void;
+	@:overload @:public public function new(seed : haxe.Int64, digit : java.NativeArray<java.StdTypes.Char16>, nd0 : Int, nd : Int) : Void;
 	
 	/*
 	* Left shift by c bits.
 	* Shifts this in place.
 	*/
-	@:overload public function lshiftMe(c : Int) : Void;
+	@:overload @:public public function lshiftMe(c : Int) : Void;
 	
 	/*
 	* normalize this number by shifting until
@@ -93,37 +93,37 @@ extern class FloatingDecimal
 	* the dividend not span up into another word of precision.
 	* (This needs to be explained more clearly!)
 	*/
-	@:overload public function normalizeMe() : Int;
+	@:overload @:public public function normalizeMe() : Int;
 	
 	/*
 	* Multiply a FDBigInt by an int.
 	* Result is a new FDBigInt.
 	*/
-	@:overload public function mult(iv : Int) : sun.misc.FloatingDecimal.FDBigInt;
+	@:overload @:public public function mult(iv : Int) : sun.misc.FloatingDecimal.FDBigInt;
 	
 	/*
 	* Multiply a FDBigInt by an int and add another int.
 	* Result is computed in place.
 	* Hope it fits!
 	*/
-	@:overload public function multaddMe(iv : Int, addend : Int) : Void;
+	@:overload @:public public function multaddMe(iv : Int, addend : Int) : Void;
 	
 	/*
 	* Multiply a FDBigInt by another FDBigInt.
 	* Result is a new FDBigInt.
 	*/
-	@:overload public function mult(other : sun.misc.FloatingDecimal.FDBigInt) : sun.misc.FloatingDecimal.FDBigInt;
+	@:overload @:public public function mult(other : sun.misc.FloatingDecimal.FDBigInt) : sun.misc.FloatingDecimal.FDBigInt;
 	
 	/*
 	* Add one FDBigInt to another. Return a FDBigInt
 	*/
-	@:overload public function add(other : sun.misc.FloatingDecimal.FDBigInt) : sun.misc.FloatingDecimal.FDBigInt;
+	@:overload @:public public function add(other : sun.misc.FloatingDecimal.FDBigInt) : sun.misc.FloatingDecimal.FDBigInt;
 	
 	/*
 	* Subtract one FDBigInt from another. Return a FDBigInt
 	* Assert that the result is positive.
 	*/
-	@:overload public function sub(other : sun.misc.FloatingDecimal.FDBigInt) : sun.misc.FloatingDecimal.FDBigInt;
+	@:overload @:public public function sub(other : sun.misc.FloatingDecimal.FDBigInt) : sun.misc.FloatingDecimal.FDBigInt;
 	
 	/*
 	* Compare FDBigInt with another FDBigInt. Return an integer
@@ -131,7 +131,7 @@ extern class FloatingDecimal
 	*  0: this == other
 	* <0: this < other
 	*/
-	@:overload public function cmp(other : sun.misc.FloatingDecimal.FDBigInt) : Int;
+	@:overload @:public public function cmp(other : sun.misc.FloatingDecimal.FDBigInt) : Int;
 	
 	/*
 	* Compute
@@ -144,11 +144,11 @@ extern class FloatingDecimal
 	* Also assume, of course, that the result, q, can be expressed
 	* as an integer, 0 <= q < 10.
 	*/
-	@:overload public function quoRemIteration(S : sun.misc.FloatingDecimal.FDBigInt) : Int;
+	@:overload @:public public function quoRemIteration(S : sun.misc.FloatingDecimal.FDBigInt) : Int;
 	
-	@:overload public function longValue() : haxe.Int64;
+	@:overload @:public public function longValue() : haxe.Int64;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

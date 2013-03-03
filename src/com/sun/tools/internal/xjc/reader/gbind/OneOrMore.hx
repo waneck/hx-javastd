@@ -30,9 +30,9 @@ package com.sun.tools.internal.xjc.reader.gbind;
 */
 extern class OneOrMore extends com.sun.tools.internal.xjc.reader.gbind.Expression
 {
-	@:overload public function new(child : com.sun.tools.internal.xjc.reader.gbind.Expression) : Void;
+	@:overload @:public public function new(child : com.sun.tools.internal.xjc.reader.gbind.Expression) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -29,14 +29,14 @@ extern class DTMNamedNodeMap implements org.w3c.dom.NamedNodeMap
 	* @param dtm The DTM Reference, must be non-null.
 	* @param element The DTM element handle.
 	*/
-	@:overload public function new(dtm : com.sun.org.apache.xml.internal.dtm.DTM, element : Int) : Void;
+	@:overload @:public public function new(dtm : com.sun.org.apache.xml.internal.dtm.DTM, element : Int) : Void;
 	
 	/**
 	* Return the number of Attributes on this Element
 	*
 	* @return The number of nodes in this map.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Retrieves a node specified by name.
@@ -45,7 +45,7 @@ extern class DTMNamedNodeMap implements org.w3c.dom.NamedNodeMap
 	*   <code>nodeName</code>, or <code>null</code> if it does not identify
 	*   any node in this map.
 	*/
-	@:overload public function getNamedItem(name : String) : org.w3c.dom.Node;
+	@:overload @:public public function getNamedItem(name : String) : org.w3c.dom.Node;
 	
 	/**
 	* Returns the <code>index</code>th item in the map. If <code>index</code>
@@ -55,7 +55,7 @@ extern class DTMNamedNodeMap implements org.w3c.dom.NamedNodeMap
 	* @return The node at the <code>index</code>th position in the map, or
 	*   <code>null</code> if that is not a valid index.
 	*/
-	@:overload public function item(i : Int) : org.w3c.dom.Node;
+	@:overload @:public public function item(i : Int) : org.w3c.dom.Node;
 	
 	/**
 	* Adds a node using its <code>nodeName</code> attribute. If a node with
@@ -81,7 +81,7 @@ extern class DTMNamedNodeMap implements org.w3c.dom.NamedNodeMap
 	*   <code>Element</code> object. The DOM user must explicitly clone
 	*   <code>Attr</code> nodes to re-use them in other elements.
 	*/
-	@:overload public function setNamedItem(newNode : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function setNamedItem(newNode : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Removes a node specified by name. When this map contains the attributes
@@ -98,7 +98,7 @@ extern class DTMNamedNodeMap implements org.w3c.dom.NamedNodeMap
 	*   this map.
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this map is readonly.
 	*/
-	@:overload public function removeNamedItem(name : String) : org.w3c.dom.Node;
+	@:overload @:public public function removeNamedItem(name : String) : org.w3c.dom.Node;
 	
 	/**
 	* Retrieves a node specified by local name and namespace URI. HTML-only
@@ -111,7 +111,7 @@ extern class DTMNamedNodeMap implements org.w3c.dom.NamedNodeMap
 	*   identify any node in this map.
 	* @since DOM Level 2
 	*/
-	@:overload public function getNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
+	@:overload @:public public function getNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
 	
 	/**
 	* Adds a node using its <code>namespaceURI</code> and
@@ -136,7 +136,7 @@ extern class DTMNamedNodeMap implements org.w3c.dom.NamedNodeMap
 	*   <code>Attr</code> nodes to re-use them in other elements.
 	* @since DOM Level 2
 	*/
-	@:overload public function setNamedItemNS(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function setNamedItemNS(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Removes a node specified by local name and namespace URI. A removed
@@ -158,7 +158,7 @@ extern class DTMNamedNodeMap implements org.w3c.dom.NamedNodeMap
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this map is readonly.
 	* @since DOM Level 2
 	*/
-	@:overload public function removeNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
+	@:overload @:public public function removeNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
 	
 	
 }
@@ -174,7 +174,7 @@ extern class DTMNamedNodeMap implements org.w3c.dom.NamedNodeMap
 	* @param code
 	* @param message
 	*/
-	@:overload public function new(code : java.StdTypes.Int16, message : String) : Void;
+	@:overload @:public public function new(code : java.StdTypes.Int16, message : String) : Void;
 	
 	/**
 	* Constructor DTMException
@@ -182,7 +182,7 @@ extern class DTMNamedNodeMap implements org.w3c.dom.NamedNodeMap
 	*
 	* @param code
 	*/
-	@:overload public function new(code : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(code : java.StdTypes.Int16) : Void;
 	
 	
 }

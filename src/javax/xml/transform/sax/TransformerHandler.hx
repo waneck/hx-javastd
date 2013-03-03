@@ -34,21 +34,21 @@ extern interface TransformerHandler extends org.xml.sax.ContentHandler extends o
 	*
 	* @throws IllegalArgumentException if result is invalid for some reason.
 	*/
-	@:overload public function setResult(result : javax.xml.transform.Result) : Void;
+	@:overload @:public public function setResult(result : javax.xml.transform.Result) : Void;
 	
 	/**
 	* Set the base ID (URI or system ID) from where relative
 	* URLs will be resolved.
 	* @param systemID Base URI for the source tree.
 	*/
-	@:overload public function setSystemId(systemID : String) : Void;
+	@:overload @:public public function setSystemId(systemID : String) : Void;
 	
 	/**
 	* Get the base ID (URI or system ID) from where relative
 	* URLs will be resolved.
 	* @return The systemID that was set with {@link #setSystemId}.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* <p>Get the <code>Transformer</code> associated with this handler, which
@@ -57,7 +57,7 @@ extern interface TransformerHandler extends org.xml.sax.ContentHandler extends o
 	* @return <code>Transformer</code> associated with this
 	*   <code>TransformerHandler</code>.
 	*/
-	@:overload public function getTransformer() : javax.xml.transform.Transformer;
+	@:overload @:public public function getTransformer() : javax.xml.transform.Transformer;
 	
 	
 }

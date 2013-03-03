@@ -25,15 +25,15 @@ package com.sun.xml.internal.bind.v2.model.impl;
 */
 @:internal extern class RuntimeValuePropertyInfoImpl extends com.sun.xml.internal.bind.v2.model.impl.ValuePropertyInfoImpl<java.lang.reflect.Type, Class<Dynamic>, java.lang.reflect.Field, java.lang.reflect.Method> implements com.sun.xml.internal.bind.v2.model.runtime.RuntimeValuePropertyInfo
 {
-	@:overload public function elementOnlyContent() : Bool;
+	@:overload @:public public function elementOnlyContent() : Bool;
 	
-	@:overload override public function getSource() : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo;
+	@:overload @:public override public function getSource() : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo;
 	
-	@:overload override public function getTarget() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
+	@:overload @:public override public function getTarget() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
 	
-	@:overload override public function ref() : java.util.List<com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement>;
+	@:overload @:public override public function ref() : java.util.List<com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement>;
 	
-	@:overload override public function link() : Void;
+	@:overload @:public override public function link() : Void;
 	
 	
 }

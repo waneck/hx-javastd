@@ -33,7 +33,7 @@ extern interface Modeler
 	*
 	* @exception ModelerException
 	*/
-	@:overload public function buildModel() : com.sun.tools.internal.ws.processor.model.Model;
+	@:overload @:public public function buildModel() : com.sun.tools.internal.ws.processor.model.Model;
 	
 	
 }

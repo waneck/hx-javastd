@@ -28,41 +28,41 @@ extern class XMLStreamBuffer
 	/**
 	* In scope namespaces on a fragment
 	*/
-	private var _inscopeNamespaces : java.util.Map<String, String>;
+	@:protected private var _inscopeNamespaces : java.util.Map<String, String>;
 	
 	/**
 	* True if the buffer was created from a parser that interns Strings
 	* as specified by the SAX interning features
 	*/
-	private var _hasInternedStrings : Bool;
+	@:protected private var _hasInternedStrings : Bool;
 	
 	/**
 	* Fragmented array to hold structural information
 	*/
-	private var _structure : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<java.StdTypes.Int8>>;
+	@:protected private var _structure : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<java.StdTypes.Int8>>;
 	
-	private var _structurePtr : Int;
+	@:protected private var _structurePtr : Int;
 	
 	/**
 	* Fragmented array to hold structural information as strings
 	*/
-	private var _structureStrings : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<String>>;
+	@:protected private var _structureStrings : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<String>>;
 	
-	private var _structureStringsPtr : Int;
+	@:protected private var _structureStringsPtr : Int;
 	
 	/**
 	* Fragmented array to hold content information in a shared char[]
 	*/
-	private var _contentCharactersBuffer : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<java.StdTypes.Char16>>;
+	@:protected private var _contentCharactersBuffer : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<java.StdTypes.Char16>>;
 	
-	private var _contentCharactersBufferPtr : Int;
+	@:protected private var _contentCharactersBufferPtr : Int;
 	
 	/**
 	* Fragmented array to hold content information as objects
 	*/
-	private var _contentObjects : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<Dynamic>>;
+	@:protected private var _contentObjects : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<Dynamic>>;
 	
-	private var _contentObjectsPtr : Int;
+	@:protected private var _contentObjectsPtr : Int;
 	
 	/**
 	* Number of trees in this stream buffer.
@@ -76,12 +76,12 @@ extern class XMLStreamBuffer
 	* because this {@link XMLStreamBuffer} maybe a view of a portion of another bigger
 	* {@link XMLStreamBuffer}.
 	*/
-	private var treeCount : Int;
+	@:protected private var treeCount : Int;
 	
 	/**
 	* The system identifier associated with the buffer
 	*/
-	private var systemId : String;
+	@:protected private var systemId : String;
 	
 	/**
 	* Is the buffer created by creator.
@@ -89,7 +89,7 @@ extern class XMLStreamBuffer
 	* @return
 	* <code>true</code> if the buffer has been created.
 	*/
-	@:overload @:final public function isCreated() : Bool;
+	@:overload @:public @:final public function isCreated() : Bool;
 	
 	/**
 	* Is the buffer a representation of a fragment of an XML infoset.
@@ -98,7 +98,7 @@ extern class XMLStreamBuffer
 	* <code>true</code> if the buffer is a representation of a fragment
 	* of an XML infoset.
 	*/
-	@:overload @:final public function isFragment() : Bool;
+	@:overload @:public @:final public function isFragment() : Bool;
 	
 	/**
 	* Is the buffer a representation of a fragment of an XML infoset
@@ -108,19 +108,19 @@ extern class XMLStreamBuffer
 	* <code>true</code> if the buffer a representation
 	* of a fragment of an XML infoset that is an element (and its contents).
 	*/
-	@:overload @:final public function isElementFragment() : Bool;
+	@:overload @:public @:final public function isElementFragment() : Bool;
 	
 	/**
 	* Returns ture if this buffer represents a forest, which is
 	* are more than one adjacent XML elements.
 	*/
-	@:overload @:final public function isForest() : Bool;
+	@:overload @:public @:final public function isForest() : Bool;
 	
 	/**
 	* Get the system identifier associated with the buffer.
 	* @return The system identifier.
 	*/
-	@:overload @:final public function getSystemId() : String;
+	@:overload @:public @:final public function getSystemId() : String;
 	
 	/**
 	* Get the in-scope namespaces.
@@ -140,7 +140,7 @@ extern class XMLStreamBuffer
 	*      The in-scope namespaces of the XMLStreamBuffer.
 	*      Prefix to namespace URI.
 	*/
-	@:overload @:final public function getInscopeNamespaces() : java.util.Map<String, String>;
+	@:overload @:public @:final public function getInscopeNamespaces() : java.util.Map<String, String>;
 	
 	/**
 	* Has the buffer been created using Strings that have been interned
@@ -161,7 +161,7 @@ extern class XMLStreamBuffer
 	* <code>true</code> if the buffer has been created using Strings that
 	* have been interned.
 	*/
-	@:overload @:final public function hasInternedStrings() : Bool;
+	@:overload @:public @:final public function hasInternedStrings() : Bool;
 	
 	/**
 	* Read the contents of the buffer as a {@link XMLStreamReader}.
@@ -169,7 +169,7 @@ extern class XMLStreamBuffer
 	* @return
 	* A an instance of a {@link StreamReaderBufferProcessor}. Always non-null.
 	*/
-	@:overload @:final public function readAsXMLStreamReader() : com.sun.xml.internal.stream.buffer.stax.StreamReaderBufferProcessor;
+	@:overload @:public @:final public function readAsXMLStreamReader() : com.sun.xml.internal.stream.buffer.stax.StreamReaderBufferProcessor;
 	
 	/**
 	* Write the contents of the buffer to an XMLStreamWriter.
@@ -185,13 +185,13 @@ extern class XMLStreamBuffer
 	*      nor {@link XMLStreamWriter#writeEndDocument()}. This is desirable behavior when
 	*      you are writing the contents of a buffer into a bigger document.
 	*/
-	@:overload @:final public function writeToXMLStreamWriter(writer : javax.xml.stream.XMLStreamWriter, writeAsFragment : Bool) : Void;
+	@:overload @:public @:final public function writeToXMLStreamWriter(writer : javax.xml.stream.XMLStreamWriter, writeAsFragment : Bool) : Void;
 	
 	/**
 	* @deprecated
 	*      Use {@link #writeToXMLStreamWriter(XMLStreamWriter, boolean)}
 	*/
-	@:overload @:final public function writeToXMLStreamWriter(writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public @:final public function writeToXMLStreamWriter(writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Reads the contents of the buffer from a {@link XMLReader}.
@@ -201,7 +201,7 @@ extern class XMLStreamBuffer
 	* @deprecated
 	*      Use {@link #readAsXMLReader(boolean)}
 	*/
-	@:overload @:final public function readAsXMLReader() : com.sun.xml.internal.stream.buffer.sax.SAXBufferProcessor;
+	@:overload @:public @:final public function readAsXMLReader() : com.sun.xml.internal.stream.buffer.sax.SAXBufferProcessor;
 	
 	/**
 	* Reads the contents of the buffer from a {@link XMLReader}.
@@ -212,7 +212,7 @@ extern class XMLStreamBuffer
 	* @return
 	*      A an instance of a {@link SAXBufferProcessor}.
 	*/
-	@:overload @:final public function readAsXMLReader(produceFragmentEvent : Bool) : com.sun.xml.internal.stream.buffer.sax.SAXBufferProcessor;
+	@:overload @:public @:final public function readAsXMLReader(produceFragmentEvent : Bool) : com.sun.xml.internal.stream.buffer.sax.SAXBufferProcessor;
 	
 	/**
 	* Write the contents of the buffer to a {@link ContentHandler}.
@@ -231,13 +231,13 @@ extern class XMLStreamBuffer
 	* @throws SAXException
 	*      if a parsing fails, or if {@link ContentHandler} throws a {@link SAXException}.
 	*/
-	@:overload @:final public function writeTo(handler : org.xml.sax.ContentHandler, produceFragmentEvent : Bool) : Void;
+	@:overload @:public @:final public function writeTo(handler : org.xml.sax.ContentHandler, produceFragmentEvent : Bool) : Void;
 	
 	/**
 	* @deprecated
 	*      Use {@link #writeTo(ContentHandler,boolean)}
 	*/
-	@:overload @:final public function writeTo(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public @:final public function writeTo(handler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Write the contents of the buffer to a {@link ContentHandler} with errors
@@ -257,9 +257,9 @@ extern class XMLStreamBuffer
 	*      if a parsing fails and {@link ErrorHandler} throws a {@link SAXException},
 	*      or if {@link ContentHandler} throws a {@link SAXException}.
 	*/
-	@:overload @:final public function writeTo(handler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, produceFragmentEvent : Bool) : Void;
+	@:overload @:public @:final public function writeTo(handler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, produceFragmentEvent : Bool) : Void;
 	
-	@:overload @:final public function writeTo(handler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public @:final public function writeTo(handler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Writes out the contents of this buffer as DOM node and append that to the given node.
@@ -269,7 +269,7 @@ extern class XMLStreamBuffer
 	* @return
 	*      The newly added child node.
 	*/
-	@:overload @:final public function writeTo(n : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:final public function writeTo(n : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Create a new buffer from a XMLStreamReader.
@@ -279,7 +279,7 @@ extern class XMLStreamBuffer
 	* @return XMLStreamBuffer the created buffer
 	* @see MutableXMLStreamBuffer#createFromXMLStreamReader(XMLStreamReader)
 	*/
-	@:overload public static function createNewBufferFromXMLStreamReader(reader : javax.xml.stream.XMLStreamReader) : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
+	@:overload @:public @:static public static function createNewBufferFromXMLStreamReader(reader : javax.xml.stream.XMLStreamReader) : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
 	
 	/**
 	* Create a new buffer from a {@link XMLReader} and {@link InputStream}.
@@ -291,7 +291,7 @@ extern class XMLStreamBuffer
 	* @return XMLStreamBuffer the created buffer
 	* @see MutableXMLStreamBuffer#createFromXMLReader(XMLReader, InputStream)
 	*/
-	@:overload public static function createNewBufferFromXMLReader(reader : org.xml.sax.XMLReader, _in : java.io.InputStream) : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
+	@:overload @:public @:static public static function createNewBufferFromXMLReader(reader : org.xml.sax.XMLReader, _in : java.io.InputStream) : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
 	
 	/**
 	* Create a new buffer from a {@link XMLReader} and {@link InputStream}.
@@ -305,23 +305,23 @@ extern class XMLStreamBuffer
 	* @return XMLStreamBuffer the created buffer
 	* @see MutableXMLStreamBuffer#createFromXMLReader(XMLReader, InputStream, String)
 	*/
-	@:overload public static function createNewBufferFromXMLReader(reader : org.xml.sax.XMLReader, _in : java.io.InputStream, systemId : String) : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
+	@:overload @:public @:static public static function createNewBufferFromXMLReader(reader : org.xml.sax.XMLReader, _in : java.io.InputStream, systemId : String) : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
 	
-	@:overload @:final private function getStructure() : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<java.StdTypes.Int8>>;
+	@:overload @:protected @:final private function getStructure() : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<java.StdTypes.Int8>>;
 	
-	@:overload @:final private function getStructurePtr() : Int;
+	@:overload @:protected @:final private function getStructurePtr() : Int;
 	
-	@:overload @:final private function getStructureStrings() : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<String>>;
+	@:overload @:protected @:final private function getStructureStrings() : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<String>>;
 	
-	@:overload @:final private function getStructureStringsPtr() : Int;
+	@:overload @:protected @:final private function getStructureStringsPtr() : Int;
 	
-	@:overload @:final private function getContentCharactersBuffer() : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<java.StdTypes.Char16>>;
+	@:overload @:protected @:final private function getContentCharactersBuffer() : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<java.StdTypes.Char16>>;
 	
-	@:overload @:final private function getContentCharactersBufferPtr() : Int;
+	@:overload @:protected @:final private function getContentCharactersBufferPtr() : Int;
 	
-	@:overload @:final private function getContentObjects() : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<Dynamic>>;
+	@:overload @:protected @:final private function getContentObjects() : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<Dynamic>>;
 	
-	@:overload @:final private function getContentObjectsPtr() : Int;
+	@:overload @:protected @:final private function getContentObjectsPtr() : Int;
 	
 	
 }

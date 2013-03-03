@@ -25,53 +25,53 @@ package com.sun.corba.se.impl.presentation.rmi;
 */
 extern class PresentationManagerImpl implements com.sun.corba.se.spi.presentation.rmi.PresentationManager
 {
-	@:overload public function new(useDynamicStubs : Bool) : Void;
+	@:overload @:public public function new(useDynamicStubs : Bool) : Void;
 	
-	@:overload @:synchronized public function getDynamicMethodMarshaller(method : java.lang.reflect.Method) : com.sun.corba.se.spi.presentation.rmi.DynamicMethodMarshaller;
+	@:overload @:public @:synchronized public function getDynamicMethodMarshaller(method : java.lang.reflect.Method) : com.sun.corba.se.spi.presentation.rmi.DynamicMethodMarshaller;
 	
-	@:overload @:synchronized public function getClassData(cls : Class<Dynamic>) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData;
+	@:overload @:public @:synchronized public function getClassData(cls : Class<Dynamic>) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData;
 	
-	@:overload public function getStubFactoryFactory(isDynamic : Bool) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactoryFactory;
+	@:overload @:public public function getStubFactoryFactory(isDynamic : Bool) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactoryFactory;
 	
-	@:overload public function setStubFactoryFactory(isDynamic : Bool, sff : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactoryFactory) : Void;
+	@:overload @:public public function setStubFactoryFactory(isDynamic : Bool, sff : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactoryFactory) : Void;
 	
-	@:overload public function getTie() : javax.rmi.CORBA.Tie;
+	@:overload @:public public function getTie() : javax.rmi.CORBA.Tie;
 	
-	@:overload public function useDynamicStubs() : Bool;
+	@:overload @:public public function useDynamicStubs() : Bool;
 	
 	
 }
 @:native('com$sun$corba$se$impl$presentation$rmi$PresentationManagerImpl$ClassDataImpl') @:internal extern class PresentationManagerImpl_ClassDataImpl implements com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData
 {
-	@:overload public function new(cls : Class<Dynamic>) : Void;
+	@:overload @:public public function new(cls : Class<Dynamic>) : Void;
 	
-	@:overload public function getMyClass() : Class<Dynamic>;
+	@:overload @:public public function getMyClass() : Class<Dynamic>;
 	
-	@:overload public function getIDLNameTranslator() : com.sun.corba.se.spi.presentation.rmi.IDLNameTranslator;
+	@:overload @:public public function getIDLNameTranslator() : com.sun.corba.se.spi.presentation.rmi.IDLNameTranslator;
 	
-	@:overload public function getTypeIds() : java.NativeArray<String>;
+	@:overload @:public public function getTypeIds() : java.NativeArray<String>;
 	
-	@:overload public function getInvocationHandlerFactory() : com.sun.corba.se.spi.orbutil.proxy.InvocationHandlerFactory;
+	@:overload @:public public function getInvocationHandlerFactory() : com.sun.corba.se.spi.orbutil.proxy.InvocationHandlerFactory;
 	
-	@:overload public function getDictionary() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function getDictionary() : java.util.Map<Dynamic, Dynamic>;
 	
 	
 }
 @:native('com$sun$corba$se$impl$presentation$rmi$PresentationManagerImpl$NodeImpl') @:internal extern class PresentationManagerImpl_NodeImpl implements com.sun.corba.se.impl.orbutil.graph.Node
 {
-	@:overload public function getInterface() : Class<Dynamic>;
+	@:overload @:public public function getInterface() : Class<Dynamic>;
 	
-	@:overload public function new(interf : Class<Dynamic>) : Void;
+	@:overload @:public public function new(interf : Class<Dynamic>) : Void;
 	
-	@:overload public function getTypeId() : String;
+	@:overload @:public public function getTypeId() : String;
 	
-	@:overload public function getChildren() : java.util.Set<Dynamic>;
+	@:overload @:public public function getChildren() : java.util.Set<Dynamic>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

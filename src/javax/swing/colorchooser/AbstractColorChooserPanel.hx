@@ -48,18 +48,18 @@ extern class AbstractColorChooserPanel extends javax.swing.JPanel
 	* you to set up the initial state of your chooser.
 	* Override this method to update your <code>ChooserPanel</code>.
 	*/
-	@:overload @:abstract public function updateChooser() : Void;
+	@:overload @:public @:abstract public function updateChooser() : Void;
 	
 	/**
 	* Builds a new chooser panel.
 	*/
-	@:overload @:abstract private function buildChooser() : Void;
+	@:overload @:protected @:abstract private function buildChooser() : Void;
 	
 	/**
 	* Returns a string containing the display name of the panel.
 	* @return the name of the display panel
 	*/
-	@:overload @:abstract public function getDisplayName() : String;
+	@:overload @:public @:abstract public function getDisplayName() : String;
 	
 	/**
 	* Provides a hint to the look and feel as to the
@@ -78,7 +78,7 @@ extern class AbstractColorChooserPanel extends javax.swing.JPanel
 	* @see #getDisplayedMnemonicIndex
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getMnemonic() : Int;
+	@:require(java4) @:overload @:public public function getMnemonic() : Int;
 	
 	/**
 	* Provides a hint to the look and feel as to the index of the character in
@@ -102,19 +102,19 @@ extern class AbstractColorChooserPanel extends javax.swing.JPanel
 	* @see #getMnemonic
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getDisplayedMnemonicIndex() : Int;
+	@:require(java4) @:overload @:public public function getDisplayedMnemonicIndex() : Int;
 	
 	/**
 	* Returns the small display icon for the panel.
 	* @return the small display icon
 	*/
-	@:overload @:abstract public function getSmallDisplayIcon() : javax.swing.Icon;
+	@:overload @:public @:abstract public function getSmallDisplayIcon() : javax.swing.Icon;
 	
 	/**
 	* Returns the large display icon for the panel.
 	* @return the large display icon
 	*/
-	@:overload @:abstract public function getLargeDisplayIcon() : javax.swing.Icon;
+	@:overload @:public @:abstract public function getLargeDisplayIcon() : javax.swing.Icon;
 	
 	/**
 	* Invoked when the panel is added to the chooser.
@@ -123,32 +123,32 @@ extern class AbstractColorChooserPanel extends javax.swing.JPanel
 	* @exception RuntimeException  if the chooser panel has already been
 	*                          installed
 	*/
-	@:overload public function installChooserPanel(enclosingChooser : javax.swing.JColorChooser) : Void;
+	@:overload @:public public function installChooserPanel(enclosingChooser : javax.swing.JColorChooser) : Void;
 	
 	/**
 	* Invoked when the panel is removed from the chooser.
 	* If override this, be sure to call <code>super</code>.
 	*/
-	@:overload public function uninstallChooserPanel(enclosingChooser : javax.swing.JColorChooser) : Void;
+	@:overload @:public public function uninstallChooserPanel(enclosingChooser : javax.swing.JColorChooser) : Void;
 	
 	/**
 	* Returns the model that the chooser panel is editing.
 	* @return the <code>ColorSelectionModel</code> model this panel
 	*         is editing
 	*/
-	@:overload public function getColorSelectionModel() : javax.swing.colorchooser.ColorSelectionModel;
+	@:overload @:public public function getColorSelectionModel() : javax.swing.colorchooser.ColorSelectionModel;
 	
 	/**
 	* Returns the color that is currently selected.
 	* @return the <code>Color</code> that is selected
 	*/
-	@:overload private function getColorFromModel() : java.awt.Color;
+	@:overload @:protected private function getColorFromModel() : java.awt.Color;
 	
 	/**
 	* Draws the panel.
 	* @param g  the <code>Graphics</code> object
 	*/
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	
 }

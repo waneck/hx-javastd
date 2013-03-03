@@ -29,7 +29,7 @@ extern class DateFormatSymbolsProvider extends java.util.spi.LocaleServiceProvid
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns a new <code>DateFormatSymbols</code> instance for the
@@ -44,7 +44,7 @@ extern class DateFormatSymbolsProvider extends java.util.spi.LocaleServiceProvid
 	* @return a <code>DateFormatSymbols</code> instance.
 	* @see java.text.DateFormatSymbols#getInstance(java.util.Locale)
 	*/
-	@:overload @:abstract public function getInstance(locale : java.util.Locale) : java.text.DateFormatSymbols;
+	@:overload @:public @:abstract public function getInstance(locale : java.util.Locale) : java.text.DateFormatSymbols;
 	
 	
 }

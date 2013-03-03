@@ -52,7 +52,7 @@ extern class DropTargetDropEvent extends java.awt.dnd.DropTargetEvent
 	*         a bitwise mask of <code>DnDConstants</code>.
 	* @throws <code>IllegalArgumentException</code> if dtc is <code>null</code>.
 	*/
-	@:overload public function new(dtc : java.awt.dnd.DropTargetContext, cursorLocn : java.awt.Point, dropAction : Int, srcActions : Int) : Void;
+	@:overload @:public public function new(dtc : java.awt.dnd.DropTargetContext, cursorLocn : java.awt.Point, dropAction : Int, srcActions : Int) : Void;
 	
 	/**
 	* Construct a <code>DropTargetEvent</code> given the
@@ -79,7 +79,7 @@ extern class DropTargetDropEvent extends java.awt.dnd.DropTargetEvent
 	*         a bitwise mask of <code>DnDConstants</code>.
 	* @throws <code>IllegalArgumentException</code> if dtc is <code>null</code>.
 	*/
-	@:overload public function new(dtc : java.awt.dnd.DropTargetContext, cursorLocn : java.awt.Point, dropAction : Int, srcActions : Int, isLocal : Bool) : Void;
+	@:overload @:public public function new(dtc : java.awt.dnd.DropTargetContext, cursorLocn : java.awt.Point, dropAction : Int, srcActions : Int, isLocal : Bool) : Void;
 	
 	/**
 	* This method returns a <code>Point</code>
@@ -88,14 +88,14 @@ extern class DropTargetDropEvent extends java.awt.dnd.DropTargetEvent
 	* <P>
 	* @return the current <code>Cursor</code> location in Component's coords.
 	*/
-	@:overload public function getLocation() : java.awt.Point;
+	@:overload @:public public function getLocation() : java.awt.Point;
 	
 	/**
 	* This method returns the current DataFlavors.
 	* <P>
 	* @return current DataFlavors
 	*/
-	@:overload public function getCurrentDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getCurrentDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* This method returns the currently available
@@ -103,7 +103,7 @@ extern class DropTargetDropEvent extends java.awt.dnd.DropTargetEvent
 	* <P>
 	* @return the currently available DataFlavors as a java.util.List
 	*/
-	@:overload public function getCurrentDataFlavorsAsList() : java.util.List<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getCurrentDataFlavorsAsList() : java.util.List<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* This method returns a <code>boolean</code> indicating if the
@@ -114,21 +114,21 @@ extern class DropTargetDropEvent extends java.awt.dnd.DropTargetEvent
 	* <P>
 	* @return if the DataFlavor specified is available from the source
 	*/
-	@:overload public function isDataFlavorSupported(df : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public public function isDataFlavorSupported(df : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* This method returns the source drop actions.
 	*
 	* @return the source drop actions.
 	*/
-	@:overload public function getSourceActions() : Int;
+	@:overload @:public public function getSourceActions() : Int;
 	
 	/**
 	* This method returns the user drop action.
 	*
 	* @return the user drop actions.
 	*/
-	@:overload public function getDropAction() : Int;
+	@:overload @:public public function getDropAction() : Int;
 	
 	/**
 	* This method returns the <code>Transferable</code> object
@@ -136,19 +136,19 @@ extern class DropTargetDropEvent extends java.awt.dnd.DropTargetEvent
 	* <P>
 	* @return the <code>Transferable</code> associated with the drop
 	*/
-	@:overload public function getTransferable() : java.awt.datatransfer.Transferable;
+	@:overload @:public public function getTransferable() : java.awt.datatransfer.Transferable;
 	
 	/**
 	* accept the drop, using the specified action.
 	* <P>
 	* @param dropAction the specified action
 	*/
-	@:overload public function acceptDrop(dropAction : Int) : Void;
+	@:overload @:public public function acceptDrop(dropAction : Int) : Void;
 	
 	/**
 	* reject the Drop.
 	*/
-	@:overload public function rejectDrop() : Void;
+	@:overload @:public public function rejectDrop() : Void;
 	
 	/**
 	* This method notifies the <code>DragSource</code>
@@ -156,7 +156,7 @@ extern class DropTargetDropEvent extends java.awt.dnd.DropTargetEvent
 	* <P>
 	* @param success a <code>boolean</code> indicating that the drop transfer(s) are completed.
 	*/
-	@:overload public function dropComplete(success : Bool) : Void;
+	@:overload @:public public function dropComplete(success : Bool) : Void;
 	
 	/**
 	* This method returns an <code>int</code> indicating if
@@ -164,7 +164,7 @@ extern class DropTargetDropEvent extends java.awt.dnd.DropTargetEvent
 	* <P>
 	* @return if the Source is in the same JVM
 	*/
-	@:overload public function isLocalTransfer() : Bool;
+	@:overload @:public public function isLocalTransfer() : Bool;
 	
 	
 }

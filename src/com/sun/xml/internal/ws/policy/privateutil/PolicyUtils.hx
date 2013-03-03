@@ -37,7 +37,7 @@ extern class PolicyUtils
 	* @return the name of the method that is on the {@code methodIndexInStack}
 	*         position in the call stack of the current {@link Thread}.
 	*/
-	@:overload public static function getStackMethodName(methodIndexInStack : Int) : String;
+	@:overload @:public @:static public static function getStackMethodName(methodIndexInStack : Int) : String;
 	
 	/**
 	* Function returns the name of the caller method for the method executing this
@@ -45,7 +45,7 @@ extern class PolicyUtils
 	*
 	* @return caller method name from the call stack of the current {@link Thread}.
 	*/
-	@:overload public static function getCallerMethodName() : String;
+	@:overload @:public @:static public static function getCallerMethodName() : String;
 	
 	
 }
@@ -58,7 +58,7 @@ extern class PolicyUtils
 	*
 	* @param resource resource to be closed
 	*/
-	@:overload public static function closeResource(resource : java.io.Closeable) : Void;
+	@:overload @:public @:static public static function closeResource(resource : java.io.Closeable) : Void;
 	
 	/**
 	* If the {@code reader} is not {@code null}, this method will try to close the
@@ -67,7 +67,7 @@ extern class PolicyUtils
 	*
 	* @param reader resource to be closed
 	*/
-	@:overload public static function closeResource(reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public @:static public static function closeResource(reader : javax.xml.stream.XMLStreamReader) : Void;
 	
 	
 }
@@ -80,7 +80,7 @@ extern class PolicyUtils
 	* System-specific line separator character retrieved from the Java system property
 	* <code>line.separator</code>
 	*/
-	public static var NEW_LINE(default, null) : String;
+	@:public @:final @:static public static var NEW_LINE(default, null) : String;
 	
 	/**
 	* Method creates indent string consisting of as many {@code TAB} characters as specified by {@code indentLevel} parameter
@@ -89,7 +89,7 @@ extern class PolicyUtils
 	* @return indentation string as specified by indentation level
 	*
 	*/
-	@:overload public static function createIndent(indentLevel : Int) : String;
+	@:overload @:public @:static public static function createIndent(indentLevel : Int) : String;
 	
 	
 }
@@ -102,21 +102,21 @@ extern class PolicyUtils
 	* 1. namespace (not null String)
 	* 2. local name (not null String)
 	*/
-	public static var QNAME_COMPARATOR(default, null) : java.util.Comparator<javax.xml.namespace.QName>;
+	@:public @:static @:final public static var QNAME_COMPARATOR(default, null) : java.util.Comparator<javax.xml.namespace.QName>;
 	
 	/**
 	* Compares two boolean values in the following way: {@code false < true}
 	*
 	* @return {@code -1} if {@code b1 < b2}, {@code 0} if {@code b1 == b2}, {@code 1} if {@code b1 > b2}
 	*/
-	@:overload public static function compareBoolean(b1 : Bool, b2 : Bool) : Int;
+	@:overload @:public @:static public static function compareBoolean(b1 : Bool, b2 : Bool) : Int;
 	
 	/**
 	* Compares two String values, that may possibly be null in the following way: {@code null < "string value"}
 	*
 	* @return {@code -1} if {@code s1 < s2}, {@code 0} if {@code s1 == s2}, {@code 1} if {@code s1 > s2}
 	*/
-	@:overload public static function compareNullableStrings(s1 : String, s2 : String) : Int;
+	@:overload @:public @:static public static function compareNullableStrings(s1 : String, s2 : String) : Int;
 	
 	
 }
@@ -131,7 +131,7 @@ extern class PolicyUtils
 	*        processing and return {@code null} when an empty option is encountered
 	* @return TODO
 	*/
-	@:overload public static function combine<E, T : java.util.Collection<E>, U : java.util.Collection<E>>(initialBase : U, options : java.util.Collection<T>, ignoreEmptyOption : Bool) : java.util.Collection<java.util.Collection<E>>;
+	@:overload @:public @:static public static function combine<E, T : java.util.Collection<E>, U : java.util.Collection<E>>(initialBase : U, options : java.util.Collection<T>, ignoreEmptyOption : Bool) : java.util.Collection<java.util.Collection<E>>;
 	
 	
 }
@@ -143,12 +143,12 @@ extern class PolicyUtils
 	/**
 	* Reflectively invokes specified method on the specified target
 	*/
-	@:overload public static function invoke<T>(target : Dynamic, methodName : String, resultClass : Class<T>, parameters : java.NativeArray<Dynamic>) : T;
+	@:overload @:public @:static public static function invoke<T>(target : Dynamic, methodName : String, resultClass : Class<T>, parameters : java.NativeArray<Dynamic>) : T;
 	
 	/**
 	* Reflectively invokes specified method on the specified target
 	*/
-	@:overload public static function invoke<T>(target : Dynamic, methodName : String, resultClass : Class<T>, parameters : java.NativeArray<Dynamic>, parameterTypes : java.NativeArray<Class<Dynamic>>) : T;
+	@:overload @:public @:static public static function invoke<T>(target : Dynamic, methodName : String, resultClass : Class<T>, parameters : java.NativeArray<Dynamic>, parameterTypes : java.NativeArray<Class<Dynamic>>) : T;
 	
 	
 }
@@ -165,7 +165,7 @@ extern class PolicyUtils
 	* @return generated config file resource name
 	* @throw PolicyException If configFileIdentifier is null.
 	*/
-	@:overload public static function generateFullName(configFileIdentifier : String) : String;
+	@:overload @:public @:static public static function generateFullName(configFileIdentifier : String) : String;
 	
 	/**
 	* Returns a URL pointing to the given config file. The file name is
@@ -176,7 +176,7 @@ extern class PolicyUtils
 	* @param configFileName The name of the file resource
 	* @param context A ServletContext object. May not be null.
 	*/
-	@:overload public static function loadFromContext(configFileName : String, context : Dynamic) : java.net.URL;
+	@:overload @:public @:static public static function loadFromContext(configFileName : String, context : Dynamic) : java.net.URL;
 	
 	/**
 	* Returns a URL pointing to the given config file. The file is looked up as
@@ -186,7 +186,7 @@ extern class PolicyUtils
 	*
 	* @param configFileName the name of the file resource. May not be {@code null}.
 	*/
-	@:overload public static function loadFromClasspath(configFileName : String) : java.net.URL;
+	@:overload @:public @:static public static function loadFromClasspath(configFileName : String) : java.net.URL;
 	
 	
 }
@@ -220,7 +220,7 @@ extern class PolicyUtils
 	*                                   or names a provider class that cannot be found and instantiated
 	* @see #load(Class)
 	*/
-	@:overload public static function load<T>(serviceClass : Class<T>, loader : java.lang.ClassLoader) : java.NativeArray<T>;
+	@:overload @:public @:static public static function load<T>(serviceClass : Class<T>, loader : java.lang.ClassLoader) : java.NativeArray<T>;
 	
 	/**
 	* Locates and incrementally instantiates the available providers of a
@@ -239,13 +239,13 @@ extern class PolicyUtils
 	*                                   or names a provider class that cannot be found and instantiated
 	* @see #load(Class, ClassLoader)
 	*/
-	@:overload public static function load<T>(serviceClass : Class<T>) : java.NativeArray<T>;
+	@:overload @:public @:static public static function load<T>(serviceClass : Class<T>) : java.NativeArray<T>;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$policy$privateutil$PolicyUtils$Rfc2396') extern class PolicyUtils_Rfc2396
 {
-	@:overload public static function unquote(quoted : String) : String;
+	@:overload @:public @:static public static function unquote(quoted : String) : String;
 	
 	
 }

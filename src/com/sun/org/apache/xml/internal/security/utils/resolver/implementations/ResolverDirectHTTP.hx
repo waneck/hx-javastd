@@ -21,7 +21,7 @@ package com.sun.org.apache.xml.internal.security.utils.resolver.implementations;
 */
 extern class ResolverDirectHTTP extends com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolverSpi
 {
-	@:overload public function engineIsThreadSafe() : Bool;
+	@:overload @:public override public function engineIsThreadSafe() : Bool;
 	
 	/**
 	* Method resolve
@@ -33,7 +33,7 @@ extern class ResolverDirectHTTP extends com.sun.org.apache.xml.internal.security
 	* @return
 	* $todo$ calculate the correct URI from the attribute and the BaseURI
 	*/
-	@:overload public function engineResolve(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public override public function engineResolve(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* We resolve http URIs <I>without</I> fragment...
@@ -42,12 +42,12 @@ extern class ResolverDirectHTTP extends com.sun.org.apache.xml.internal.security
 	* @param BaseURI
 	*  @return true if can be resolved
 	*/
-	@:overload public function engineCanResolve(uri : org.w3c.dom.Attr, BaseURI : String) : Bool;
+	@:overload @:public override public function engineCanResolve(uri : org.w3c.dom.Attr, BaseURI : String) : Bool;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function engineGetPropertyKeys() : java.NativeArray<String>;
+	@:overload @:public override public function engineGetPropertyKeys() : java.NativeArray<String>;
 	
 	
 }

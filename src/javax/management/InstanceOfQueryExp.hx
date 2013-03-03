@@ -36,14 +36,14 @@ package javax.management;
 	* @param classNameValue The {@link StringValueExp} returning the name of
 	*        the class of which selected MBeans should be instances.
 	*/
-	@:overload public function new(classNameValue : javax.management.StringValueExp) : Void;
+	@:overload @:public public function new(classNameValue : javax.management.StringValueExp) : Void;
 	
 	/**
 	* Returns the class name.
 	* @returns The {@link StringValueExp} returning the name of
 	*        the class of which selected MBeans should be instances.
 	*/
-	@:overload public function getClassNameValue() : javax.management.StringValueExp;
+	@:overload @:public public function getClassNameValue() : javax.management.StringValueExp;
 	
 	/**
 	* Applies the InstanceOf on a MBean.
@@ -56,13 +56,13 @@ package javax.management;
 	* @exception BadStringOperationException
 	* @exception BadBinaryOpValueExpException
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function apply(name : javax.management.ObjectName) : Bool;
 	
 	/**
 	* Returns a string representation of this InstanceOfQueryExp.
 	* @return a string representation of this InstanceOfQueryExp.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

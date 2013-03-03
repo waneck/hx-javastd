@@ -23,80 +23,80 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	/**
 	* The node precedes the reference node.
 	*/
-	public static var TREE_POSITION_PRECEDING(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TREE_POSITION_PRECEDING(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* The node follows the reference node.
 	*/
-	public static var TREE_POSITION_FOLLOWING(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TREE_POSITION_FOLLOWING(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* The node is an ancestor of the reference node.
 	*/
-	public static var TREE_POSITION_ANCESTOR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TREE_POSITION_ANCESTOR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* The node is a descendant of the reference node.
 	*/
-	public static var TREE_POSITION_DESCENDANT(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TREE_POSITION_DESCENDANT(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* The two nodes have an equivalent position. This is the case of two
 	* attributes that have the same <code>ownerElement</code>, and two
 	* nodes that are the same.
 	*/
-	public static var TREE_POSITION_EQUIVALENT(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TREE_POSITION_EQUIVALENT(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* The two nodes are the same. Two nodes that are the same have an
 	* equivalent position, though the reverse may not be true.
 	*/
-	public static var TREE_POSITION_SAME_NODE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TREE_POSITION_SAME_NODE(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* The two nodes are disconnected, they do not have any common ancestor.
 	* This is the case of two nodes that are not in the same document.
 	*/
-	public static var TREE_POSITION_DISCONNECTED(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TREE_POSITION_DISCONNECTED(default, null) : java.StdTypes.Int16;
 	
-	public static var DOCUMENT_POSITION_DISCONNECTED(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var DOCUMENT_POSITION_DISCONNECTED(default, null) : java.StdTypes.Int16;
 	
-	public static var DOCUMENT_POSITION_PRECEDING(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var DOCUMENT_POSITION_PRECEDING(default, null) : java.StdTypes.Int16;
 	
-	public static var DOCUMENT_POSITION_FOLLOWING(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var DOCUMENT_POSITION_FOLLOWING(default, null) : java.StdTypes.Int16;
 	
-	public static var DOCUMENT_POSITION_CONTAINS(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var DOCUMENT_POSITION_CONTAINS(default, null) : java.StdTypes.Int16;
 	
-	public static var DOCUMENT_POSITION_IS_CONTAINED(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var DOCUMENT_POSITION_IS_CONTAINED(default, null) : java.StdTypes.Int16;
 	
-	public static var DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC(default, null) : java.StdTypes.Int16;
 	
 	/** Element definition node type. */
-	public static var ELEMENT_DEFINITION_NODE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var ELEMENT_DEFINITION_NODE(default, null) : java.StdTypes.Int16;
 	
-	private var ownerNode : com.sun.org.apache.xerces.internal.dom.NodeImpl;
+	@:protected private var ownerNode : com.sun.org.apache.xerces.internal.dom.NodeImpl;
 	
-	private var flags : java.StdTypes.Int16;
+	@:protected private var flags : java.StdTypes.Int16;
 	
-	private static var READONLY(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var READONLY(default, null) : java.StdTypes.Int16;
 	
-	private static var SYNCDATA(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var SYNCDATA(default, null) : java.StdTypes.Int16;
 	
-	private static var SYNCCHILDREN(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var SYNCCHILDREN(default, null) : java.StdTypes.Int16;
 	
-	private static var OWNED(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var OWNED(default, null) : java.StdTypes.Int16;
 	
-	private static var FIRSTCHILD(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var FIRSTCHILD(default, null) : java.StdTypes.Int16;
 	
-	private static var SPECIFIED(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var SPECIFIED(default, null) : java.StdTypes.Int16;
 	
-	private static var IGNORABLEWS(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var IGNORABLEWS(default, null) : java.StdTypes.Int16;
 	
-	private static var HASSTRING(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var HASSTRING(default, null) : java.StdTypes.Int16;
 	
-	private static var NORMALIZED(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var NORMALIZED(default, null) : java.StdTypes.Int16;
 	
-	private static var ID(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var ID(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* No public constructor; only subclasses of Node should be
@@ -104,33 +104,33 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* <p>
 	* Every Node knows what Document it belongs to.
 	*/
-	@:overload private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl) : Void;
+	@:overload @:protected private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl) : Void;
 	
 	/** Constructor for serialization. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* A short integer indicating what type of node this is. The named
 	* constants for this value are defined in the org.w3c.dom.Node interface.
 	*/
-	@:overload @:abstract public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public @:abstract public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
 	* the name of this node.
 	*/
-	@:overload @:abstract public function getNodeName() : String;
+	@:overload @:public @:abstract public function getNodeName() : String;
 	
 	/**
 	* Returns the node value.
 	* @throws DOMException(DOMSTRING_SIZE_ERR)
 	*/
-	@:overload public function getNodeValue() : String;
+	@:overload @:public public function getNodeValue() : String;
 	
 	/**
 	* Sets the node value.
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR)
 	*/
-	@:overload public function setNodeValue(x : String) : Void;
+	@:overload @:public public function setNodeValue(x : String) : Void;
 	
 	/**
 	* Adds a child node to the end of the list of children for this node.
@@ -152,7 +152,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR) if this node is
 	* read-only.
 	*/
-	@:overload public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Returns a duplicate of a given node. You can consider this a
@@ -177,19 +177,19 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* is read-only, to permit applications using only the DOM API to obtain
 	* editable copies of locked portions of the tree.
 	*/
-	@:overload public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Find the Document that this Node belongs to (the document in
 	* whose context the Node was created). The Node may or may not
 	* currently be part of that Document's actual contents.
 	*/
-	@:overload public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload @:public public function getOwnerDocument() : org.w3c.dom.Document;
 	
 	/**
 	* Returns the node number
 	*/
-	@:overload private function getNodeNumber() : Int;
+	@:overload @:protected private function getNodeNumber() : Int;
 	
 	/**
 	* Obtain the DOM-tree parent of this node, or null if it is not
@@ -197,13 +197,13 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* created or removed). Note that Document, DocumentFragment, and
 	* Attribute will never have parents.
 	*/
-	@:overload public function getParentNode() : org.w3c.dom.Node;
+	@:overload @:public public function getParentNode() : org.w3c.dom.Node;
 	
 	/** The next child of this node's parent, or null if none */
-	@:overload public function getNextSibling() : org.w3c.dom.Node;
+	@:overload @:public public function getNextSibling() : org.w3c.dom.Node;
 	
 	/** The previous child of this node's parent, or null if none */
-	@:overload public function getPreviousSibling() : org.w3c.dom.Node;
+	@:overload @:public public function getPreviousSibling() : org.w3c.dom.Node;
 	
 	/**
 	* Return the collection of attributes associated with this node,
@@ -212,7 +212,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	*
 	* @see ElementImpl
 	*/
-	@:overload public function getAttributes() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
 	/**
 	*  Returns whether this node (if it is an element) has any attributes.
@@ -221,7 +221,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* @since DOM Level 2
 	* @see ElementImpl
 	*/
-	@:overload public function hasAttributes() : Bool;
+	@:overload @:public public function hasAttributes() : Bool;
 	
 	/**
 	* Test whether this node has any children. Convenience shorthand
@@ -230,7 +230,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* By default we do not have any children, ParentNode overrides this.
 	* @see ParentNode
 	*/
-	@:overload public function hasChildNodes() : Bool;
+	@:overload @:public public function hasChildNodes() : Bool;
 	
 	/**
 	* Obtain a NodeList enumerating all children of this node. If there
@@ -245,21 +245,21 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* provide their own getChildNodes() support. Other DOMs may solve this
 	* differently.
 	*/
-	@:overload public function getChildNodes() : org.w3c.dom.NodeList;
+	@:overload @:public public function getChildNodes() : org.w3c.dom.NodeList;
 	
 	/** The first child of this Node, or null if none.
 	* <P>
 	* By default we do not have any children, ParentNode overrides this.
 	* @see ParentNode
 	*/
-	@:overload public function getFirstChild() : org.w3c.dom.Node;
+	@:overload @:public public function getFirstChild() : org.w3c.dom.Node;
 	
 	/** The first child of this Node, or null if none.
 	* <P>
 	* By default we do not have any children, ParentNode overrides this.
 	* @see ParentNode
 	*/
-	@:overload public function getLastChild() : org.w3c.dom.Node;
+	@:overload @:public public function getLastChild() : org.w3c.dom.Node;
 	
 	/**
 	* Move one or more node(s) to our list of children. Note that this
@@ -292,7 +292,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR) if this node is
 	* read-only.
 	*/
-	@:overload public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Remove a child from this Node. The removed child's subtree
@@ -309,7 +309,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR) if this node is
 	* read-only.
 	*/
-	@:overload public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Make newChild occupy the location that oldChild used to
@@ -335,7 +335,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR) if this node is
 	* read-only.
 	*/
-	@:overload public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* NodeList method: Count the immediate children of this node
@@ -345,7 +345,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	*
 	* @return int
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* NodeList method: Return the Nth immediate child of this node, or
@@ -357,7 +357,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* @return org.w3c.dom.Node
 	* @param Index int
 	*/
-	@:overload public function item(index : Int) : org.w3c.dom.Node;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.Node;
 	
 	/**
 	* Puts all <code>Text</code> nodes in the full depth of the sub-tree
@@ -377,7 +377,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* children. It is up to implementors or Node to override normalize()
 	* to take action.
 	*/
-	@:overload public function normalize() : Void;
+	@:overload @:public public function normalize() : Void;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -394,7 +394,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* the specified feature is supported, false otherwise.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function isSupported(feature : String, version : String) : Bool;
+	@:overload @:public public function isSupported(feature : String, version : String) : Bool;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -413,7 +413,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* @see AttrNSImpl
 	* @see ElementNSImpl
 	*/
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -429,7 +429,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* @see AttrNSImpl
 	* @see ElementNSImpl
 	*/
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
 	/**
 	*  Introduced in DOM Level 2. <p>
@@ -452,7 +452,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* @see AttrNSImpl
 	* @see ElementNSImpl
 	*/
-	@:overload public function setPrefix(prefix : String) : Void;
+	@:overload @:public public function setPrefix(prefix : String) : Void;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -466,13 +466,13 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* @see AttrNSImpl
 	* @see ElementNSImpl
 	*/
-	@:overload public function getLocalName() : String;
+	@:overload @:public public function getLocalName() : String;
 	
-	@:overload public function addEventListener(type : String, listener : org.w3c.dom.events.EventListener, useCapture : Bool) : Void;
+	@:overload @:public public function addEventListener(type : String, listener : org.w3c.dom.events.EventListener, useCapture : Bool) : Void;
 	
-	@:overload public function removeEventListener(type : String, listener : org.w3c.dom.events.EventListener, useCapture : Bool) : Void;
+	@:overload @:public public function removeEventListener(type : String, listener : org.w3c.dom.events.EventListener, useCapture : Bool) : Void;
 	
-	@:overload public function dispatchEvent(event : org.w3c.dom.events.Event) : Bool;
+	@:overload @:public public function dispatchEvent(event : org.w3c.dom.events.Event) : Bool;
 	
 	/**
 	* The absolute base URI of this node or <code>null</code> if undefined.
@@ -498,7 +498,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* Yes. (F2F 26 Sep 2001)
 	* @since DOM Level 3
 	*/
-	@:overload public function getBaseURI() : String;
+	@:overload @:public public function getBaseURI() : String;
 	
 	/**
 	* Compares a node with this node with regard to their position in the
@@ -510,7 +510,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* @since DOM Level 3
 	* @deprecated
 	*/
-	@:overload public function compareTreePosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
+	@:overload @:public public function compareTreePosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
 	
 	/**
 	* Compares a node with this node with regard to their position in the
@@ -520,7 +520,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	*   node.
 	* @since DOM Level 3
 	*/
-	@:overload public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
+	@:overload @:public public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -585,7 +585,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	*   platform.
 	* @since DOM Level 3
 	*/
-	@:overload public function getTextContent() : String;
+	@:overload @:public public function getTextContent() : String;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -632,7 +632,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	*   platform.
 	* @since DOM Level 3
 	*/
-	@:overload public function setTextContent(textContent : String) : Void;
+	@:overload @:public public function setTextContent(textContent : String) : Void;
 	
 	/**
 	* Returns whether this node is the same node as the given one.
@@ -648,7 +648,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	*   <code>false</code> otherwise.
 	* @since DOM Level 3
 	*/
-	@:overload public function isSameNode(other : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function isSameNode(other : org.w3c.dom.Node) : Bool;
 	
 	/**
 	*  DOM Level 3: Experimental
@@ -659,7 +659,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	*   is the default namespace, <code>false</code> otherwise.
 	* @since DOM Level 3
 	*/
-	@:overload public function isDefaultNamespace(namespaceURI : String) : Bool;
+	@:overload @:public public function isDefaultNamespace(namespaceURI : String) : Bool;
 	
 	/**
 	*
@@ -669,7 +669,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* @param namespaceURI
 	* @return the prefix for the namespace
 	*/
-	@:overload public function lookupPrefix(namespaceURI : String) : String;
+	@:overload @:public public function lookupPrefix(namespaceURI : String) : String;
 	
 	/**
 	* DOM Level 3 - Experimental:
@@ -680,7 +680,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	* @return th URI for the namespace
 	* @since DOM Level 3
 	*/
-	@:overload public function lookupNamespaceURI(specifiedPrefix : String) : String;
+	@:overload @:public public function lookupNamespaceURI(specifiedPrefix : String) : String;
 	
 	/**
 	* Tests whether two nodes are equal.
@@ -724,12 +724,12 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	*   <code>true</code> otherwise <code>false</code>.
 	* @since DOM Level 3
 	*/
-	@:overload public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* @since DOM Level 3
 	*/
-	@:overload public function getFeature(feature : String, version : String) : Dynamic;
+	@:overload @:public public function getFeature(feature : String, version : String) : Dynamic;
 	
 	/**
 	* Associate an object to a key on this node. The object can later be
@@ -744,7 +744,7 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	*   the given key on this node, or <code>null</code> if there was none.
 	* @since DOM Level 3
 	*/
-	@:overload public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
+	@:overload @:public public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
 	
 	/**
 	* Retrieves the object associated to a key on a this node. The object
@@ -755,9 +755,9 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	*   on this node, or <code>null</code> if there was none.
 	* @since DOM Level 3
 	*/
-	@:overload public function getUserData(key : String) : Dynamic;
+	@:overload @:public public function getUserData(key : String) : Dynamic;
 	
-	@:overload private function getUserDataRecord() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:protected private function getUserDataRecord() : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* NON-DOM: PR-DOM-Level-1-19980818 mentions readonly nodes in conjunction
@@ -777,13 +777,13 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	*  not change the state of an EntityReference or its children,
 	*  which are always read-only.
 	*/
-	@:overload public function setReadOnly(readOnly : Bool, deep : Bool) : Void;
+	@:overload @:public public function setReadOnly(readOnly : Bool, deep : Bool) : Void;
 	
 	/**
 	* NON-DOM: Returns true if this node is read-only. This is a
 	* shallow check.
 	*/
-	@:overload public function getReadOnly() : Bool;
+	@:overload @:public public function getReadOnly() : Bool;
 	
 	/**
 	* NON-DOM: As an alternative to subclassing the DOM, this implementation
@@ -797,40 +797,40 @@ extern class NodeImpl implements org.w3c.dom.Node implements org.w3c.dom.NodeLis
 	*
 	* @param data the object to store or null to remove any existing reference
 	*/
-	@:overload public function setUserData(data : Dynamic) : Void;
+	@:overload @:public public function setUserData(data : Dynamic) : Void;
 	
 	/**
 	* NON-DOM:
 	* Returns the user data associated to this node.
 	*/
-	@:overload public function getUserData() : Dynamic;
+	@:overload @:public public function getUserData() : Dynamic;
 	
 	/**
 	* Denotes that this node has changed.
 	*/
-	@:overload private function changed() : Void;
+	@:overload @:protected private function changed() : Void;
 	
 	/**
 	* Returns the number of changes to this node.
 	*/
-	@:overload private function changes() : Int;
+	@:overload @:protected private function changes() : Int;
 	
 	/**
 	* Override this method in subclass to hook in efficient
 	* internal data structure.
 	*/
-	@:overload private function synchronizeData() : Void;
+	@:overload @:protected private function synchronizeData() : Void;
 	
 	/**
 	* For non-child nodes, the node which "points" to this node.
 	* For example, the owning element for an attribute
 	*/
-	@:overload private function getContainer() : org.w3c.dom.Node;
+	@:overload @:protected private function getContainer() : org.w3c.dom.Node;
 	
-	@:overload @:final public function needsSyncChildren(value : Bool) : Void;
+	@:overload @:public @:final public function needsSyncChildren(value : Bool) : Void;
 	
 	/** NON-DOM method for debugging convenience. */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

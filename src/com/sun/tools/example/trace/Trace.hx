@@ -35,7 +35,7 @@ extern class Trace
 	/**
 	* main
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

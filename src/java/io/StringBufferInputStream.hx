@@ -45,28 +45,28 @@ package java.io;
 	/**
 	* The string from which bytes are read.
 	*/
-	private var buffer : String;
+	@:protected private var buffer : String;
 	
 	/**
 	* The index of the next character to read from the input stream buffer.
 	*
 	* @see        java.io.StringBufferInputStream#buffer
 	*/
-	private var pos : Int;
+	@:protected private var pos : Int;
 	
 	/**
 	* The number of valid characters in the input stream buffer.
 	*
 	* @see        java.io.StringBufferInputStream#buffer
 	*/
-	private var count : Int;
+	@:protected private var count : Int;
 	
 	/**
 	* Creates a string input stream to read data from the specified string.
 	*
 	* @param      s   the underlying input buffer.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Reads the next byte of data from this input stream. The value
@@ -82,7 +82,7 @@ package java.io;
 	* @return     the next byte of data, or <code>-1</code> if the end of the
 	*             stream is reached.
 	*/
-	@:overload @:synchronized public function read() : Int;
+	@:overload @:public @:synchronized override public function read() : Int;
 	
 	/**
 	* Reads up to <code>len</code> bytes of data from this input stream
@@ -100,7 +100,7 @@ package java.io;
 	*             <code>-1</code> if there is no more data because the end of
 	*             the stream has been reached.
 	*/
-	@:overload @:synchronized public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips <code>n</code> bytes of input from this input stream. Fewer
@@ -109,7 +109,7 @@ package java.io;
 	* @param      n   the number of bytes to be skipped.
 	* @return     the actual number of bytes skipped.
 	*/
-	@:overload @:synchronized public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:synchronized override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the number of bytes that can be read from the input
@@ -118,13 +118,13 @@ package java.io;
 	* @return     the value of <code>count&nbsp;-&nbsp;pos</code>, which is the
 	*             number of bytes remaining to be read from the input buffer.
 	*/
-	@:overload @:synchronized public function available() : Int;
+	@:overload @:public @:synchronized override public function available() : Int;
 	
 	/**
 	* Resets the input stream to begin reading from the first character
 	* of this input stream's underlying buffer.
 	*/
-	@:overload @:synchronized public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
 	
 }

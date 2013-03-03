@@ -25,27 +25,27 @@ package sun.security.ssl;
 */
 extern class KerberosClientKeyExchange extends sun.security.ssl.HandshakeMessage
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(serverName : String, isLoopback : Bool, acc : java.security.AccessControlContext, protocolVersion : sun.security.ssl.ProtocolVersion, rand : java.security.SecureRandom) : Void;
+	@:overload @:public public function new(serverName : String, isLoopback : Bool, acc : java.security.AccessControlContext, protocolVersion : sun.security.ssl.ProtocolVersion, rand : java.security.SecureRandom) : Void;
 	
-	@:overload public function new(protocolVersion : sun.security.ssl.ProtocolVersion, clientVersion : sun.security.ssl.ProtocolVersion, rand : java.security.SecureRandom, input : sun.security.ssl.HandshakeInStream, serverKeys : java.NativeArray<javax.crypto.SecretKey>) : Void;
+	@:overload @:public public function new(protocolVersion : sun.security.ssl.ProtocolVersion, clientVersion : sun.security.ssl.ProtocolVersion, rand : java.security.SecureRandom, input : sun.security.ssl.HandshakeInStream, serverKeys : java.NativeArray<javax.crypto.SecretKey>) : Void;
 	
-	@:overload public function messageLength() : Int;
+	@:overload @:public public function messageLength() : Int;
 	
-	@:overload public function send(s : sun.security.ssl.HandshakeOutStream) : Void;
+	@:overload @:public public function send(s : sun.security.ssl.HandshakeOutStream) : Void;
 	
-	@:overload public function print(p : java.io.PrintStream) : Void;
+	@:overload @:public public function print(p : java.io.PrintStream) : Void;
 	
-	@:overload public function init(serverName : String, isLoopback : Bool, acc : java.security.AccessControlContext, protocolVersion : sun.security.ssl.ProtocolVersion, rand : java.security.SecureRandom) : Void;
+	@:overload @:public public function init(serverName : String, isLoopback : Bool, acc : java.security.AccessControlContext, protocolVersion : sun.security.ssl.ProtocolVersion, rand : java.security.SecureRandom) : Void;
 	
-	@:overload public function init(protocolVersion : sun.security.ssl.ProtocolVersion, clientVersion : sun.security.ssl.ProtocolVersion, rand : java.security.SecureRandom, input : sun.security.ssl.HandshakeInStream, serverKeys : java.NativeArray<javax.crypto.SecretKey>) : Void;
+	@:overload @:public public function init(protocolVersion : sun.security.ssl.ProtocolVersion, clientVersion : sun.security.ssl.ProtocolVersion, rand : java.security.SecureRandom, input : sun.security.ssl.HandshakeInStream, serverKeys : java.NativeArray<javax.crypto.SecretKey>) : Void;
 	
-	@:overload public function getUnencryptedPreMasterSecret() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getUnencryptedPreMasterSecret() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getPeerPrincipal() : java.security.Principal;
+	@:overload @:public public function getPeerPrincipal() : java.security.Principal;
 	
-	@:overload public function getLocalPrincipal() : java.security.Principal;
+	@:overload @:public public function getLocalPrincipal() : java.security.Principal;
 	
 	
 }

@@ -25,20 +25,20 @@ package com.sun.corba.se.impl.dynamicany;
 */
 extern class DynFixedImpl extends com.sun.corba.se.impl.dynamicany.DynAnyBasicImpl implements org.omg.DynamicAny.DynFixed
 {
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, any : org.omg.CORBA.Any, copyValue : Bool) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, any : org.omg.CORBA.Any, copyValue : Bool) : Void;
 	
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
 	
 	/*
 	public int component_count() {
 	return 0;
 	}
 */
-	@:overload public function get_value() : String;
+	@:overload @:public public function get_value() : String;
 	
-	@:overload public function set_value(val : String) : Bool;
+	@:overload @:public public function set_value(val : String) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -21,68 +21,68 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class TreeWalkerImpl implements org.w3c.dom.traversal.TreeWalker
 {
 	/** Public constructor */
-	@:overload public function new(root : org.w3c.dom.Node, whatToShow : Int, nodeFilter : org.w3c.dom.traversal.NodeFilter, entityReferenceExpansion : Bool) : Void;
+	@:overload @:public public function new(root : org.w3c.dom.Node, whatToShow : Int, nodeFilter : org.w3c.dom.traversal.NodeFilter, entityReferenceExpansion : Bool) : Void;
 	
-	@:overload public function getRoot() : org.w3c.dom.Node;
+	@:overload @:public public function getRoot() : org.w3c.dom.Node;
 	
 	/** Return the whatToShow value */
-	@:overload public function getWhatToShow() : Int;
+	@:overload @:public public function getWhatToShow() : Int;
 	
-	@:overload public function setWhatShow(whatToShow : Int) : Void;
+	@:overload @:public public function setWhatShow(whatToShow : Int) : Void;
 	
 	/** Return the NodeFilter */
-	@:overload public function getFilter() : org.w3c.dom.traversal.NodeFilter;
+	@:overload @:public public function getFilter() : org.w3c.dom.traversal.NodeFilter;
 	
 	/** Return whether children entity references are included in the iterator. */
-	@:overload public function getExpandEntityReferences() : Bool;
+	@:overload @:public public function getExpandEntityReferences() : Bool;
 	
 	/** Return the current Node. */
-	@:overload public function getCurrentNode() : org.w3c.dom.Node;
+	@:overload @:public public function getCurrentNode() : org.w3c.dom.Node;
 	
 	/** Return the current Node. */
-	@:overload public function setCurrentNode(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setCurrentNode(node : org.w3c.dom.Node) : Void;
 	
 	/** Return the parent Node from the current node,
 	*  after applying filter, whatToshow.
 	*  If result is not null, set the current Node.
 	*/
-	@:overload public function parentNode() : org.w3c.dom.Node;
+	@:overload @:public public function parentNode() : org.w3c.dom.Node;
 	
 	/** Return the first child Node from the current node,
 	*  after applying filter, whatToshow.
 	*  If result is not null, set the current Node.
 	*/
-	@:overload public function firstChild() : org.w3c.dom.Node;
+	@:overload @:public public function firstChild() : org.w3c.dom.Node;
 	
 	/** Return the last child Node from the current node,
 	*  after applying filter, whatToshow.
 	*  If result is not null, set the current Node.
 	*/
-	@:overload public function lastChild() : org.w3c.dom.Node;
+	@:overload @:public public function lastChild() : org.w3c.dom.Node;
 	
 	/** Return the previous sibling Node from the current node,
 	*  after applying filter, whatToshow.
 	*  If result is not null, set the current Node.
 	*/
-	@:overload public function previousSibling() : org.w3c.dom.Node;
+	@:overload @:public public function previousSibling() : org.w3c.dom.Node;
 	
 	/** Return the next sibling Node from the current node,
 	*  after applying filter, whatToshow.
 	*  If result is not null, set the current Node.
 	*/
-	@:overload public function nextSibling() : org.w3c.dom.Node;
+	@:overload @:public public function nextSibling() : org.w3c.dom.Node;
 	
 	/** Return the previous Node from the current node,
 	*  after applying filter, whatToshow.
 	*  If result is not null, set the current Node.
 	*/
-	@:overload public function previousNode() : org.w3c.dom.Node;
+	@:overload @:public public function previousNode() : org.w3c.dom.Node;
 	
 	/** Return the next Node from the current node,
 	*  after applying filter, whatToshow.
 	*  If result is not null, set the current Node.
 	*/
-	@:overload public function nextNode() : org.w3c.dom.Node;
+	@:overload @:public public function nextNode() : org.w3c.dom.Node;
 	
 	
 }

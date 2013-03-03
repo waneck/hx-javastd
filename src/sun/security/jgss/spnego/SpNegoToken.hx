@@ -41,12 +41,12 @@ package sun.security.jgss.spnego;
 	* The object identifier corresponding to the SPNEGO GSS-API
 	* mechanism.
 	*/
-	public static var OID : sun.security.util.ObjectIdentifier;
+	@:public @:static public static var OID : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Creates SPNEGO token of the specified type.
 	*/
-	@:overload private function new(tokenType : Int) : Void;
+	@:overload @:protected private function new(tokenType : Int) : Void;
 	
 	
 }

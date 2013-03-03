@@ -30,15 +30,15 @@ package com.sun.media.sound;
 */
 extern class SoftLanczosResampler extends com.sun.media.sound.SoftAbstractResampler
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function sinc(x : Float) : Float;
+	@:overload @:public @:static public static function sinc(x : Float) : Float;
 	
-	@:overload public static function sincTable(size : Int, offset : Single) : java.NativeArray<Single>;
+	@:overload @:public @:static public static function sincTable(size : Int, offset : Single) : java.NativeArray<Single>;
 	
-	@:overload override public function getPadding() : Int;
+	@:overload @:public override public function getPadding() : Int;
 	
-	@:overload override public function interpolate(_in : java.NativeArray<Single>, in_offset : java.NativeArray<Single>, in_end : Single, startpitch : java.NativeArray<Single>, pitchstep : Single, out : java.NativeArray<Single>, out_offset : java.NativeArray<Int>, out_end : Int) : Void;
+	@:overload @:public override public function interpolate(_in : java.NativeArray<Single>, in_offset : java.NativeArray<Single>, in_end : Single, startpitch : java.NativeArray<Single>, pitchstep : Single, out : java.NativeArray<Single>, out_offset : java.NativeArray<Int>, out_end : Int) : Void;
 	
 	
 }

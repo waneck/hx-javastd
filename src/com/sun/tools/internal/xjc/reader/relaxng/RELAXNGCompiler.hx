@@ -25,9 +25,9 @@ package com.sun.tools.internal.xjc.reader.relaxng;
 */
 extern class RELAXNGCompiler
 {
-	@:overload public static function build(grammar : com.sun.xml.internal.rngom.digested.DPattern, codeModel : com.sun.codemodel.internal.JCodeModel, opts : com.sun.tools.internal.xjc.Options) : com.sun.tools.internal.xjc.model.Model;
+	@:overload @:public @:static public static function build(grammar : com.sun.xml.internal.rngom.digested.DPattern, codeModel : com.sun.codemodel.internal.JCodeModel, opts : com.sun.tools.internal.xjc.Options) : com.sun.tools.internal.xjc.model.Model;
 	
-	@:overload public function new(grammar : com.sun.xml.internal.rngom.digested.DPattern, codeModel : com.sun.codemodel.internal.JCodeModel, opts : com.sun.tools.internal.xjc.Options) : Void;
+	@:overload @:public public function new(grammar : com.sun.xml.internal.rngom.digested.DPattern, codeModel : com.sun.codemodel.internal.JCodeModel, opts : com.sun.tools.internal.xjc.Options) : Void;
 	
 	
 }

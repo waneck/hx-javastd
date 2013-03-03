@@ -37,7 +37,7 @@ extern class JarSignerResources_zh_CN extends java.util.ListResourceBundle
 	*
 	* @return the contents of this <code>ResourceBundle</code>.
 	*/
-	@:overload public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:public override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

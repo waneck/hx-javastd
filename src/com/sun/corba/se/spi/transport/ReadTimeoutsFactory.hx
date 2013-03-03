@@ -25,7 +25,7 @@ package com.sun.corba.se.spi.transport;
 */
 extern interface ReadTimeoutsFactory
 {
-	@:overload public function create(initial_wait_time : Int, max_wait_time : Int, max_giop_hdr_wait_time : Int, backoff_percent_factor : Int) : com.sun.corba.se.spi.transport.ReadTimeouts;
+	@:overload @:public public function create(initial_wait_time : Int, max_wait_time : Int, max_giop_hdr_wait_time : Int, backoff_percent_factor : Int) : com.sun.corba.se.spi.transport.ReadTimeouts;
 	
 	
 }

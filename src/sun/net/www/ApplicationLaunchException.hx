@@ -31,7 +31,7 @@ package sun.net.www;
 */
 extern class ApplicationLaunchException extends java.lang.Exception
 {
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	
 }

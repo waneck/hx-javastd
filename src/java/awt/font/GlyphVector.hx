@@ -35,7 +35,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	* <code>GlyphVector</code>.
 	* @see Font
 	*/
-	@:overload @:abstract public function getFont() : java.awt.Font;
+	@:overload @:public @:abstract public function getFont() : java.awt.Font;
 	
 	/**
 	* Returns the {@link FontRenderContext} associated with this
@@ -45,20 +45,20 @@ extern class GlyphVector implements java.lang.Cloneable
 	* @see FontRenderContext
 	* @see Font
 	*/
-	@:overload @:abstract public function getFontRenderContext() : java.awt.font.FontRenderContext;
+	@:overload @:public @:abstract public function getFontRenderContext() : java.awt.font.FontRenderContext;
 	
 	/**
 	* Assigns default positions to each glyph in this
 	* <code>GlyphVector</code>. This can destroy information
 	* generated during initial layout of this <code>GlyphVector</code>.
 	*/
-	@:overload @:abstract public function performDefaultLayout() : Void;
+	@:overload @:public @:abstract public function performDefaultLayout() : Void;
 	
 	/**
 	* Returns the number of glyphs in this <code>GlyphVector</code>.
 	* @return number of glyphs in this <code>GlyphVector</code>.
 	*/
-	@:overload @:abstract public function getNumGlyphs() : Int;
+	@:overload @:public @:abstract public function getNumGlyphs() : Int;
 	
 	/**
 	* Returns the glyphcode of the specified glyph.
@@ -74,7 +74,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	* is less than 0 or greater than or equal to the
 	* number of glyphs in this <code>GlyphVector</code>
 	*/
-	@:overload @:abstract public function getGlyphCode(glyphIndex : Int) : Int;
+	@:overload @:public @:abstract public function getGlyphCode(glyphIndex : Int) : Int;
 	
 	/**
 	* Returns an array of glyphcodes for the specified glyphs.
@@ -98,7 +98,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	*   greater than the number of glyphs in this
 	*   <code>GlyphVector</code>
 	*/
-	@:overload @:abstract public function getGlyphCodes(beginGlyphIndex : Int, numEntries : Int, codeReturn : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public @:abstract public function getGlyphCodes(beginGlyphIndex : Int, numEntries : Int, codeReturn : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
 	/**
 	* Returns the character index of the specified glyph.
@@ -110,7 +110,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	* @return the index of the first character represented by the glyph
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getGlyphCharIndex(glyphIndex : Int) : Int;
+	@:require(java4) @:overload @:public public function getGlyphCharIndex(glyphIndex : Int) : Int;
 	
 	/**
 	* Returns the character indices of the specified glyphs.
@@ -128,7 +128,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	* @return an array of character indices, one per glyph.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getGlyphCharIndices(beginGlyphIndex : Int, numEntries : Int, codeReturn : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:require(java4) @:overload @:public public function getGlyphCharIndices(beginGlyphIndex : Int, numEntries : Int, codeReturn : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
 	/**
 	* Returns the logical bounds of this <code>GlyphVector</code>.
@@ -137,7 +137,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	* @return a {@link Rectangle2D} that is the logical bounds of this
 	* <code>GlyphVector</code>.
 	*/
-	@:overload @:abstract public function getLogicalBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public @:abstract public function getLogicalBounds() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns the visual bounds of this <code>GlyphVector</code>
@@ -148,7 +148,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	* @return a <code>Rectangle2D</code> that is the bounding box
 	* of this <code>GlyphVector</code>.
 	*/
-	@:overload @:abstract public function getVisualBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public @:abstract public function getVisualBounds() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns the pixel bounds of this <code>GlyphVector</code> when
@@ -168,7 +168,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	* @return a <code>Rectangle</code> bounding the pixels that would be affected.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getPixelBounds(renderFRC : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
+	@:require(java4) @:overload @:public public function getPixelBounds(renderFRC : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
 	
 	/**
 	* Returns a <code>Shape</code> whose interior corresponds to the
@@ -176,7 +176,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	* @return a <code>Shape</code> that is the outline of this
 	* <code>GlyphVector</code>.
 	*/
-	@:overload @:abstract public function getOutline() : java.awt.Shape;
+	@:overload @:public @:abstract public function getOutline() : java.awt.Shape;
 	
 	/**
 	* Returns a <code>Shape</code> whose interior corresponds to the
@@ -188,7 +188,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	*   <code>GlyphVector</code> when rendered at the specified
 	*   coordinates.
 	*/
-	@:overload @:abstract public function getOutline(x : Single, y : Single) : java.awt.Shape;
+	@:overload @:public @:abstract public function getOutline(x : Single, y : Single) : java.awt.Shape;
 	
 	/**
 	* Returns a <code>Shape</code> whose interior corresponds to the
@@ -204,7 +204,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	*   is less than 0 or greater than or equal to the number
 	*   of glyphs in this <code>GlyphVector</code>
 	*/
-	@:overload @:abstract public function getGlyphOutline(glyphIndex : Int) : java.awt.Shape;
+	@:overload @:public @:abstract public function getGlyphOutline(glyphIndex : Int) : java.awt.Shape;
 	
 	/**
 	* Returns a <code>Shape</code> whose interior corresponds to the
@@ -224,7 +224,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	*   of glyphs in this <code>GlyphVector</code>
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getGlyphOutline(glyphIndex : Int, x : Single, y : Single) : java.awt.Shape;
+	@:require(java4) @:overload @:public public function getGlyphOutline(glyphIndex : Int, x : Single, y : Single) : java.awt.Shape;
 	
 	/**
 	* Returns the position of the specified glyph relative to the
@@ -241,7 +241,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	*   in this <code>GlyphVector</code>
 	* @see #setGlyphPosition
 	*/
-	@:overload @:abstract public function getGlyphPosition(glyphIndex : Int) : java.awt.geom.Point2D;
+	@:overload @:public @:abstract public function getGlyphPosition(glyphIndex : Int) : java.awt.geom.Point2D;
 	
 	/**
 	* Sets the position of the specified glyph within this
@@ -258,7 +258,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	*   in this <code>GlyphVector</code>
 	* @see #getGlyphPosition
 	*/
-	@:overload @:abstract public function setGlyphPosition(glyphIndex : Int, newPos : java.awt.geom.Point2D) : Void;
+	@:overload @:public @:abstract public function setGlyphPosition(glyphIndex : Int, newPos : java.awt.geom.Point2D) : Void;
 	
 	/**
 	* Returns the transform of the specified glyph within this
@@ -274,7 +274,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	*   of glyphs in this <code>GlyphVector</code>
 	* @see #setGlyphTransform
 	*/
-	@:overload @:abstract public function getGlyphTransform(glyphIndex : Int) : java.awt.geom.AffineTransform;
+	@:overload @:public @:abstract public function getGlyphTransform(glyphIndex : Int) : java.awt.geom.AffineTransform;
 	
 	/**
 	* Sets the transform of the specified glyph within this
@@ -291,7 +291,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	*   of glyphs in this <code>GlyphVector</code>
 	* @see #getGlyphTransform
 	*/
-	@:overload @:abstract public function setGlyphTransform(glyphIndex : Int, newTX : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public @:abstract public function setGlyphTransform(glyphIndex : Int, newTX : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Returns flags describing the global state of the GlyphVector.
@@ -309,14 +309,14 @@ extern class GlyphVector implements java.lang.Cloneable
 	* @see #FLAG_MASK
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getLayoutFlags() : Int;
+	@:require(java4) @:overload @:public public function getLayoutFlags() : Int;
 	
 	/**
 	* A flag used with getLayoutFlags that indicates that this <code>GlyphVector</code> has
 	* per-glyph transforms.
 	* @since 1.4
 	*/
-	@:require(java4) public static var FLAG_HAS_TRANSFORMS(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var FLAG_HAS_TRANSFORMS(default, null) : Int;
 	
 	/**
 	* A flag used with getLayoutFlags that indicates that this <code>GlyphVector</code> has
@@ -324,7 +324,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	* accumulated default advances of the glyphs (for example, if kerning has been done).
 	* @since 1.4
 	*/
-	@:require(java4) public static var FLAG_HAS_POSITION_ADJUSTMENTS(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var FLAG_HAS_POSITION_ADJUSTMENTS(default, null) : Int;
 	
 	/**
 	* A flag used with getLayoutFlags that indicates that this <code>GlyphVector</code> has
@@ -333,7 +333,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	* although generally they will be.
 	* @since 1.4
 	*/
-	@:require(java4) public static var FLAG_RUN_RTL(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var FLAG_RUN_RTL(default, null) : Int;
 	
 	/**
 	* A flag used with getLayoutFlags that indicates that this <code>GlyphVector</code> has
@@ -341,14 +341,14 @@ extern class GlyphVector implements java.lang.Cloneable
 	* strictly ascending or descending order matching the run direction).
 	* @since 1.4
 	*/
-	@:require(java4) public static var FLAG_COMPLEX_GLYPHS(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var FLAG_COMPLEX_GLYPHS(default, null) : Int;
 	
 	/**
 	* A mask for supported flags from getLayoutFlags.  Only bits covered by the mask
 	* should be tested.
 	* @since 1.4
 	*/
-	@:require(java4) public static var FLAG_MASK(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var FLAG_MASK(default, null) : Int;
 	
 	/**
 	* Returns an array of glyph positions for the specified glyphs.
@@ -379,7 +379,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	*   is greater than the number of glyphs in this
 	*   <code>GlyphVector</code> plus one
 	*/
-	@:overload @:abstract public function getGlyphPositions(beginGlyphIndex : Int, numEntries : Int, positionReturn : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public @:abstract public function getGlyphPositions(beginGlyphIndex : Int, numEntries : Int, positionReturn : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Returns the logical bounds of the specified glyph within this
@@ -400,7 +400,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	*   of glyphs in this <code>GlyphVector</code>
 	* @see #getGlyphVisualBounds
 	*/
-	@:overload @:abstract public function getGlyphLogicalBounds(glyphIndex : Int) : java.awt.Shape;
+	@:overload @:public @:abstract public function getGlyphLogicalBounds(glyphIndex : Int) : java.awt.Shape;
 	
 	/**
 	* Returns the visual bounds of the specified glyph within the
@@ -417,7 +417,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	*   of glyphs in this <code>GlyphVector</code>
 	* @see #getGlyphLogicalBounds
 	*/
-	@:overload @:abstract public function getGlyphVisualBounds(glyphIndex : Int) : java.awt.Shape;
+	@:overload @:public @:abstract public function getGlyphVisualBounds(glyphIndex : Int) : java.awt.Shape;
 	
 	/**
 	* Returns the pixel bounds of the glyph at index when this
@@ -437,7 +437,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	* @return a <code>Rectangle</code> bounding the pixels that would be affected.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getGlyphPixelBounds(index : Int, renderFRC : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
+	@:require(java4) @:overload @:public public function getGlyphPixelBounds(index : Int, renderFRC : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
 	
 	/**
 	* Returns the metrics of the glyph at the specified index into
@@ -451,7 +451,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	*   is less than 0 or greater than or equal to the number
 	*   of glyphs in this <code>GlyphVector</code>
 	*/
-	@:overload @:abstract public function getGlyphMetrics(glyphIndex : Int) : java.awt.font.GlyphMetrics;
+	@:overload @:public @:abstract public function getGlyphMetrics(glyphIndex : Int) : java.awt.font.GlyphMetrics;
 	
 	/**
 	* Returns the justification information for the glyph at
@@ -467,7 +467,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	*   is less than 0 or greater than or equal to the number
 	*   of glyphs in this <code>GlyphVector</code>
 	*/
-	@:overload @:abstract public function getGlyphJustificationInfo(glyphIndex : Int) : java.awt.font.GlyphJustificationInfo;
+	@:overload @:public @:abstract public function getGlyphJustificationInfo(glyphIndex : Int) : java.awt.font.GlyphJustificationInfo;
 	
 	/**
 	* Tests if the specified <code>GlyphVector</code> exactly
@@ -477,7 +477,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	*   <code>GlyphVector</code> equals this <code>GlyphVector</code>;
 	*   <code>false</code> otherwise.
 	*/
-	@:overload @:abstract public function equals(set : java.awt.font.GlyphVector) : Bool;
+	@:overload @:public @:abstract public function equals(set : java.awt.font.GlyphVector) : Bool;
 	
 	
 }

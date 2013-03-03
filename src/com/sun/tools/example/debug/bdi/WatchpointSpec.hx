@@ -32,11 +32,11 @@ package com.sun.tools.example.debug.bdi;
 */
 extern class WatchpointSpec extends com.sun.tools.example.debug.bdi.EventRequestSpec
 {
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function errorMessageFor(e : java.lang.Exception) : String;
+	@:overload @:public override public function errorMessageFor(e : java.lang.Exception) : String;
 	
 	
 }

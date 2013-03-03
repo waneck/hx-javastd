@@ -25,17 +25,17 @@ package sun.java2d.jules;
 */
 extern class JulesPathBuf
 {
-	@:overload public static function isCairoAvailable() : Bool;
+	@:overload @:public @:static public static function isCairoAvailable() : Bool;
 	
-	@:overload public function tesselateFill(s : java.awt.Shape, at : java.awt.geom.AffineTransform, clip : sun.java2d.pipe.Region) : sun.java2d.jules.TrapezoidList;
+	@:overload @:public public function tesselateFill(s : java.awt.Shape, at : java.awt.geom.AffineTransform, clip : sun.java2d.pipe.Region) : sun.java2d.jules.TrapezoidList;
 	
-	@:overload public function tesselateStroke(s : java.awt.Shape, bs : java.awt.BasicStroke, thin : Bool, adjust : Bool, antialias : Bool, at : java.awt.geom.AffineTransform, clip : sun.java2d.pipe.Region) : sun.java2d.jules.TrapezoidList;
+	@:overload @:public public function tesselateStroke(s : java.awt.Shape, bs : java.awt.BasicStroke, thin : Bool, adjust : Bool, antialias : Bool, at : java.awt.geom.AffineTransform, clip : sun.java2d.pipe.Region) : sun.java2d.jules.TrapezoidList;
 	
-	@:overload private function floatToDoubleArray(dashArrayFloat : java.NativeArray<Single>) : java.NativeArray<Float>;
+	@:overload @:protected private function floatToDoubleArray(dashArrayFloat : java.NativeArray<Single>) : java.NativeArray<Float>;
 	
-	@:overload private function convertPathData(s : java.awt.Shape, at : java.awt.geom.AffineTransform) : Int;
+	@:overload @:protected private function convertPathData(s : java.awt.Shape, at : java.awt.geom.AffineTransform) : Int;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

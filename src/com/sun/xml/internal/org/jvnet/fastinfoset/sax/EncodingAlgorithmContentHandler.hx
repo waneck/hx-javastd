@@ -55,7 +55,7 @@ extern interface EncodingAlgorithmContentHandler
 	*            wrapping another exception
 	* @see com.sun.xml.internal.org.jvnet.fastinfoset.EncodingAlgorithmIndexes
 	*/
-	@:overload public function octets(URI : String, algorithm : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
+	@:overload @:public public function octets(URI : String, algorithm : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of encoding algorithm data as an object.
@@ -71,7 +71,7 @@ extern interface EncodingAlgorithmContentHandler
 	*            wrapping another exception
 	* @see com.sun.xml.internal.org.jvnet.fastinfoset.EncodingAlgorithmIndexes
 	*/
-	@:overload public function object(URI : String, algorithm : Int, o : Dynamic) : Void;
+	@:overload @:public public function object(URI : String, algorithm : Int, o : Dynamic) : Void;
 	
 	
 }

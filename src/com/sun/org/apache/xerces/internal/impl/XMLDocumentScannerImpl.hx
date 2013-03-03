@@ -20,95 +20,95 @@ package com.sun.org.apache.xerces.internal.impl;
 extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl
 {
 	/** Scanner state: XML declaration. */
-	private static var SCANNER_STATE_XML_DECL(default, null) : Int;
+	@:protected @:static @:final private static var SCANNER_STATE_XML_DECL(default, null) : Int;
 	
 	/** Scanner state: prolog. */
-	private static var SCANNER_STATE_PROLOG(default, null) : Int;
+	@:protected @:static @:final private static var SCANNER_STATE_PROLOG(default, null) : Int;
 	
 	/** Scanner state: trailing misc. */
-	private static var SCANNER_STATE_TRAILING_MISC(default, null) : Int;
+	@:protected @:static @:final private static var SCANNER_STATE_TRAILING_MISC(default, null) : Int;
 	
 	/** Scanner state: DTD internal declarations. */
-	private static var SCANNER_STATE_DTD_INTERNAL_DECLS(default, null) : Int;
+	@:protected @:static @:final private static var SCANNER_STATE_DTD_INTERNAL_DECLS(default, null) : Int;
 	
 	/** Scanner state: open DTD external subset. */
-	private static var SCANNER_STATE_DTD_EXTERNAL(default, null) : Int;
+	@:protected @:static @:final private static var SCANNER_STATE_DTD_EXTERNAL(default, null) : Int;
 	
 	/** Scanner state: DTD external declarations. */
-	private static var SCANNER_STATE_DTD_EXTERNAL_DECLS(default, null) : Int;
+	@:protected @:static @:final private static var SCANNER_STATE_DTD_EXTERNAL_DECLS(default, null) : Int;
 	
 	/** Scanner state: NO MORE ELEMENTS. */
-	private static var SCANNER_STATE_NO_SUCH_ELEMENT_EXCEPTION(default, null) : Int;
+	@:protected @:static @:final private static var SCANNER_STATE_NO_SUCH_ELEMENT_EXCEPTION(default, null) : Int;
 	
 	/** Property identifier document scanner: */
-	private static var DOCUMENT_SCANNER(default, null) : String;
+	@:protected @:static @:final private static var DOCUMENT_SCANNER(default, null) : String;
 	
 	/** Feature identifier: load external DTD. */
-	private static var LOAD_EXTERNAL_DTD(default, null) : String;
+	@:protected @:static @:final private static var LOAD_EXTERNAL_DTD(default, null) : String;
 	
 	/** Feature identifier: load external DTD. */
-	private static var DISALLOW_DOCTYPE_DECL_FEATURE(default, null) : String;
+	@:protected @:static @:final private static var DISALLOW_DOCTYPE_DECL_FEATURE(default, null) : String;
 	
 	/** Property identifier: DTD scanner. */
-	private static var DTD_SCANNER(default, null) : String;
+	@:protected @:static @:final private static var DTD_SCANNER(default, null) : String;
 	
-	private static var VALIDATION_MANAGER(default, null) : String;
+	@:protected @:static @:final private static var VALIDATION_MANAGER(default, null) : String;
 	
 	/** property identifier:  NamespaceContext */
-	private static var NAMESPACE_CONTEXT(default, null) : String;
+	@:protected @:static @:final private static var NAMESPACE_CONTEXT(default, null) : String;
 	
 	/** DTD scanner. */
-	private var fDTDScanner : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDScanner;
+	@:protected private var fDTDScanner : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDScanner;
 	
 	/** Validation manager . */
-	private var fValidationManager : com.sun.org.apache.xerces.internal.impl.validation.ValidationManager;
+	@:protected private var fValidationManager : com.sun.org.apache.xerces.internal.impl.validation.ValidationManager;
 	
-	private var fDTDDecl : com.sun.org.apache.xerces.internal.util.XMLStringBuffer;
+	@:protected private var fDTDDecl : com.sun.org.apache.xerces.internal.util.XMLStringBuffer;
 	
-	private var fReadingDTD : Bool;
+	@:protected private var fReadingDTD : Bool;
 	
-	private var fAddedListener : Bool;
+	@:protected private var fAddedListener : Bool;
 	
 	/** Doctype name. */
-	private var fDoctypeName : String;
+	@:protected private var fDoctypeName : String;
 	
 	/** Doctype declaration public identifier. */
-	private var fDoctypePublicId : String;
+	@:protected private var fDoctypePublicId : String;
 	
 	/** Doctype declaration system identifier. */
-	private var fDoctypeSystemId : String;
+	@:protected private var fDoctypeSystemId : String;
 	
 	/** Namespace support. */
-	private var fNamespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext;
+	@:protected private var fNamespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext;
 	
 	/** Load external DTD. */
-	private var fLoadExternalDTD : Bool;
+	@:protected private var fLoadExternalDTD : Bool;
 	
 	/** Seen doctype declaration. */
-	private var fSeenDoctypeDecl : Bool;
+	@:protected private var fSeenDoctypeDecl : Bool;
 	
-	private var fScanEndElement : Bool;
+	@:protected private var fScanEndElement : Bool;
 	
 	/** XML declaration driver. */
-	private var fXMLDeclDriver : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
+	@:protected private var fXMLDeclDriver : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	/** Prolog driver. */
-	private var fPrologDriver : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
+	@:protected private var fPrologDriver : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	/** DTD driver. */
-	private var fDTDDriver : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
+	@:protected private var fDTDDriver : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	/** Trailing miscellaneous section driver. */
-	private var fTrailingMiscDriver : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
+	@:protected private var fTrailingMiscDriver : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
-	private var fStartPos : Int;
+	@:protected private var fStartPos : Int;
 	
-	private var fEndPos : Int;
+	@:protected private var fEndPos : Int;
 	
-	private var fSeenInternalSubset : Bool;
+	@:protected private var fSeenInternalSubset : Bool;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets the input source.
@@ -117,12 +117,12 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	*
 	* @throws IOException Thrown on i/o error.
 	*/
-	@:overload public function setInputSource(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public override public function setInputSource(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**return the state of the scanner */
-	@:overload public function getScannetState() : Int;
+	@:overload @:public public function getScannetState() : Int;
 	
-	@:overload override public function reset(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public override public function reset(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* Resets the component. The component can query the component manager
@@ -138,14 +138,14 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	*                      SAXNotRecognizedException or a
 	*                      SAXNotSupportedException.
 	*/
-	@:overload override public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public override public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/**
 	* Returns a list of feature identifiers that are recognized by
 	* this component. This method may return null if no features
 	* are recognized by this component.
 	*/
-	@:overload override public function getRecognizedFeatures() : java.NativeArray<String>;
+	@:overload @:public override public function getRecognizedFeatures() : java.NativeArray<String>;
 	
 	/**
 	* Sets the state of a feature. This method is called by the component
@@ -162,14 +162,14 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	* @throws SAXNotSupportedException The component should not throw
 	*                                  this exception.
 	*/
-	@:overload override public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload @:public override public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* Returns a list of property identifiers that are recognized by
 	* this component. This method may return null if no properties
 	* are recognized by this component.
 	*/
-	@:overload override public function getRecognizedProperties() : java.NativeArray<String>;
+	@:overload @:public override public function getRecognizedProperties() : java.NativeArray<String>;
 	
 	/**
 	* Sets the value of a property. This method is called by the component
@@ -186,7 +186,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	* @throws SAXNotSupportedException The component should not throw
 	*                                  this exception.
 	*/
-	@:overload override public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public override public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/**
 	* Returns the default state for a feature, or null if this
@@ -197,7 +197,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload override public function getFeatureDefault(featureId : String) : Null<Bool>;
+	@:require(java2) @:overload @:public override public function getFeatureDefault(featureId : String) : Null<Bool>;
 	
 	/**
 	* Returns the default state for a property, or null if this
@@ -208,7 +208,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload override public function getPropertyDefault(propertyId : String) : Dynamic;
+	@:require(java2) @:overload @:public override public function getPropertyDefault(propertyId : String) : Dynamic;
 	
 	/**
 	* This method notifies of the start of an entity. The DTD has the
@@ -225,7 +225,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function startEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function startEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies the end of an entity. The DTD has the pseudo-name
@@ -236,38 +236,38 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function endEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function endEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function getDTDDecl() : com.sun.org.apache.xerces.internal.util.XMLStringBuffer;
+	@:overload @:public public function getDTDDecl() : com.sun.org.apache.xerces.internal.util.XMLStringBuffer;
 	
-	@:overload public function getCharacterEncodingScheme() : String;
+	@:overload @:public public function getCharacterEncodingScheme() : String;
 	
 	/** return the next state on the input
 	*
 	* @return int
 	*/
-	@:overload public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
-	@:overload public function getNamespaceContext() : com.sun.org.apache.xerces.internal.xni.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : com.sun.org.apache.xerces.internal.xni.NamespaceContext;
 	
 	/** Creates a content driver. */
-	@:overload private function createContentDriver() : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
+	@:overload @:protected override private function createContentDriver() : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	/** Scans a doctype declaration. */
-	@:overload private function scanDoctypeDecl(supportDTD : Bool) : Bool;
+	@:overload @:protected private function scanDoctypeDecl(supportDTD : Bool) : Bool;
 	
 	/** Set the scanner state after scanning DTD */
-	@:overload private function setEndDTDScanState() : Void;
+	@:overload @:protected private function setEndDTDScanState() : Void;
 	
 	/** Returns the scanner state name. */
-	@:overload private function getScannerStateName(state : Int) : String;
+	@:overload @:protected override private function getScannerStateName(state : Int) : String;
 	
 	/**
 	* receives callbacks from {@link XMLEntityReader } when buffer
 	* is being changed.
 	* @param refreshPosition
 	*/
-	@:overload public function refresh(refreshPosition : Int) : Void;
+	@:overload @:public override public function refresh(refreshPosition : Int) : Void;
 	
 	
 }
@@ -284,7 +284,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 */
 @:native('com$sun$org$apache$xerces$internal$impl$XMLDocumentScannerImpl$XMLDeclDriver') extern class XMLDocumentScannerImpl_XMLDeclDriver implements com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver
 {
-	@:overload public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
 	
 }
@@ -311,7 +311,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	* @throws IOException  Thrown on i/o error.
 	* @throws XNIException Thrown on parse error.
 	*/
-	@:overload public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
 	
 }
@@ -322,7 +322,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 */
 @:native('com$sun$org$apache$xerces$internal$impl$XMLDocumentScannerImpl$DTDDriver') extern class XMLDocumentScannerImpl_DTDDriver implements com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver
 {
-	@:overload public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
 	/**
 	* Dispatch an XML "event".
@@ -336,7 +336,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	* @throws IOException  Thrown on i/o error.
 	* @throws XNIException Thrown on parse error.
 	*/
-	@:overload public function dispatch(complete : Bool) : Bool;
+	@:overload @:public public function dispatch(complete : Bool) : Bool;
 	
 	
 }
@@ -356,7 +356,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	* @return True if the "DOCTYPE" was scanned; false if "DOCTYPE"
 	*          was not scanned.
 	*/
-	@:overload private function scanForDoctypeHook() : Bool;
+	@:overload @:protected override private function scanForDoctypeHook() : Bool;
 	
 	/**
 	* Element depth iz zero. This methos is a hook for subclasses
@@ -371,7 +371,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	*          driver. A return value of false indicates that
 	*          the content driver should continue as normal.
 	*/
-	@:overload private function elementDepthIsZeroHook() : Bool;
+	@:overload @:protected override private function elementDepthIsZeroHook() : Bool;
 	
 	/**
 	* Scan for root element hook. This method is a hook for
@@ -385,7 +385,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	*          driver. A return value of false indicates that
 	*          the content driver should continue as normal.
 	*/
-	@:overload private function scanRootElementHook() : Bool;
+	@:overload @:protected override private function scanRootElementHook() : Bool;
 	
 	/**
 	* End of file hook. This method is a hook for subclasses to
@@ -394,9 +394,9 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	* However, when scanning a full XML document, an end of file
 	* is always premature.
 	*/
-	@:overload private function endOfFileHook(e : java.io.EOFException) : Void;
+	@:overload @:protected override private function endOfFileHook(e : java.io.EOFException) : Void;
 	
-	@:overload private function resolveExternalSubsetAndRead() : Void;
+	@:overload @:protected private function resolveExternalSubsetAndRead() : Void;
 	
 	
 }
@@ -408,7 +408,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 */
 @:native('com$sun$org$apache$xerces$internal$impl$XMLDocumentScannerImpl$TrailingMiscDriver') extern class XMLDocumentScannerImpl_TrailingMiscDriver implements com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver
 {
-	@:overload public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
 	
 }

@@ -29,7 +29,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* Text/CDATASection nodes in the DOM have been coalesced into a
 	* single DTM Text node); this table points only to the first in
 	* that sequence. */
-	private var m_nodes : java.util.Vector<Dynamic>;
+	@:protected private var m_nodes : java.util.Vector<Dynamic>;
 	
 	/**
 	* Construct a DOM2DTM object from a DOM node.
@@ -43,7 +43,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param doIndexing true if the caller considers it worth it to use
 	*                   indexing schemes.
 	*/
-	@:overload public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, domSource : javax.xml.transform.dom.DOMSource, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool) : Void;
+	@:overload @:public public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, domSource : javax.xml.transform.dom.DOMSource, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool) : Void;
 	
 	/**
 	* Construct the node map from the node.
@@ -57,12 +57,12 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @return The index identity of the node that was added.
 	*/
-	@:overload private function addNode(node : org.w3c.dom.Node, parentIndex : Int, previousSibling : Int, forceNodeType : Int) : Int;
+	@:overload @:protected private function addNode(node : org.w3c.dom.Node, parentIndex : Int, previousSibling : Int, forceNodeType : Int) : Int;
 	
 	/**
 	* Get the number of nodes that have been added.
 	*/
-	@:overload public function getNumberOfNodes() : Int;
+	@:overload @:public override public function getNumberOfNodes() : Int;
 	
 	/**
 	* This method iterates to the next node that will be added to the table.
@@ -72,7 +72,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @return The true if a next node is found or false if
 	*         there are no more nodes.
 	*/
-	@:overload private function nextNode() : Bool;
+	@:overload @:protected override private function nextNode() : Bool;
 	
 	/**
 	* Return an DOM node for the given node.
@@ -81,7 +81,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @return A node representation of the DTM node.
 	*/
-	@:overload public function getNode(nodeHandle : Int) : org.w3c.dom.Node;
+	@:overload @:public override public function getNode(nodeHandle : Int) : org.w3c.dom.Node;
 	
 	/**
 	* Get a Node from an identity index.
@@ -90,7 +90,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* NEEDSDOC ($objectName$) @return
 	*/
-	@:overload private function lookupNode(nodeIdentity : Int) : org.w3c.dom.Node;
+	@:overload @:protected private function lookupNode(nodeIdentity : Int) : org.w3c.dom.Node;
 	
 	/**
 	* Get the next node identity value in the list, and call the iterator
@@ -99,7 +99,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param identity The node identity (index).
 	* @return identity+1, or DTM.NULL.
 	*/
-	@:overload private function getNextNodeIdentity(identity : Int) : Int;
+	@:overload @:protected override private function getNextNodeIdentity(identity : Int) : Int;
 	
 	/** Get the handle from a Node. This is a more robust version of
 	* getHandleFromNode, intended to be usable by the public.
@@ -114,7 +114,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param node A node, which may be null.
 	*
 	* @return The node handle or <code>DTM.NULL</code>.  */
-	@:overload public function getHandleOfNode(node : org.w3c.dom.Node) : Int;
+	@:overload @:public public function getHandleOfNode(node : org.w3c.dom.Node) : Int;
 	
 	/**
 	* Retrieves an attribute node by by qualified name and namespace URI.
@@ -128,7 +128,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*   <code>nodeName</code>) or <code>DTM.NULL</code> if there is no such
 	*   attribute.
 	*/
-	@:overload public function getAttributeNode(nodeHandle : Int, namespaceURI : String, name : String) : Int;
+	@:overload @:public override public function getAttributeNode(nodeHandle : Int, namespaceURI : String, name : String) : Int;
 	
 	/**
 	* Get the string-value of a node as a String object
@@ -139,7 +139,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @return A string object that represents the string-value of the given node.
 	*/
-	@:overload public function getStringValue(nodeHandle : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public override public function getStringValue(nodeHandle : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Determine if the string-value of a node is whitespace
@@ -148,7 +148,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @return Return true if the given node is whitespace.
 	*/
-	@:overload public function isWhitespace(nodeHandle : Int) : Bool;
+	@:overload @:public public function isWhitespace(nodeHandle : Int) : Bool;
 	
 	/**
 	* Retrieve the text content of a DOM subtree, appending it into a
@@ -172,7 +172,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param buf FastStringBuffer into which the contents of the text
 	* nodes are to be concatenated.
 	*/
-	@:overload private static function getNodeData(node : org.w3c.dom.Node, buf : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
+	@:overload @:protected @:static private static function getNodeData(node : org.w3c.dom.Node, buf : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
 	
 	/**
 	* Given a node handle, return its DOM-style node name. This will
@@ -183,7 +183,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* %REVIEW% Document when empty string is possible...
 	* %REVIEW-COMMENT% It should never be empty, should it?
 	*/
-	@:overload public function getNodeName(nodeHandle : Int) : String;
+	@:overload @:public override public function getNodeName(nodeHandle : Int) : String;
 	
 	/**
 	* Given a node handle, return the XPath node name.  This should be
@@ -193,7 +193,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param nodeHandle the id of the node.
 	* @return String Name of this node, which may be an empty string.
 	*/
-	@:overload public function getNodeNameX(nodeHandle : Int) : String;
+	@:overload @:public override public function getNodeNameX(nodeHandle : Int) : String;
 	
 	/**
 	* Given a node handle, return its XPath-style localname.
@@ -203,7 +203,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param nodeHandle the id of the node.
 	* @return String Local name of this node.
 	*/
-	@:overload public function getLocalName(nodeHandle : Int) : String;
+	@:overload @:public override public function getLocalName(nodeHandle : Int) : String;
 	
 	/**
 	* Given a namespace handle, return the prefix that the namespace decl is
@@ -217,7 +217,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @return String prefix of this node's name, or "" if no explicit
 	* namespace prefix was given.
 	*/
-	@:overload public function getPrefix(nodeHandle : Int) : String;
+	@:overload @:public override public function getPrefix(nodeHandle : Int) : String;
 	
 	/**
 	* Given a node handle, return its DOM-style namespace URI
@@ -230,7 +230,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @return String URI value of this node's namespace, or null if no
 	* namespace was resolved.
 	*/
-	@:overload public function getNamespaceURI(nodeHandle : Int) : String;
+	@:overload @:public override public function getNamespaceURI(nodeHandle : Int) : String;
 	
 	/**
 	* Given a node handle, return its node value. This is mostly
@@ -241,7 +241,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @return String Value of this node, or null if not
 	* meaningful for this node type.
 	*/
-	@:overload public function getNodeValue(nodeHandle : Int) : String;
+	@:overload @:public override public function getNodeValue(nodeHandle : Int) : String;
 	
 	/**
 	*   A document type declaration information item has the following properties:
@@ -251,7 +251,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @return the system identifier String object, or null if there is none.
 	*/
-	@:overload public function getDocumentTypeDeclarationSystemIdentifier() : String;
+	@:overload @:public override public function getDocumentTypeDeclarationSystemIdentifier() : String;
 	
 	/**
 	* Return the public identifier of the external subset,
@@ -261,7 +261,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @return the public identifier String object, or null if there is none.
 	*/
-	@:overload public function getDocumentTypeDeclarationPublicIdentifier() : String;
+	@:overload @:public override public function getDocumentTypeDeclarationPublicIdentifier() : String;
 	
 	/**
 	* Returns the <code>Element</code> whose <code>ID</code> is given by
@@ -280,7 +280,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param elementId The unique <code>id</code> value for an element.
 	* @return The handle of the matching element.
 	*/
-	@:overload public function getElementById(elementId : String) : Int;
+	@:overload @:public override public function getElementById(elementId : String) : Int;
 	
 	/**
 	* The getUnparsedEntityURI function returns the URI of the unparsed
@@ -316,7 +316,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @return String containing the URI of the Unparsed Entity, or an
 	* empty string if no such entity exists.
 	*/
-	@:overload public function getUnparsedEntityURI(name : String) : String;
+	@:overload @:public override public function getUnparsedEntityURI(name : String) : String;
 	
 	/**
 	*     5. [specified] A flag indicating whether this attribute was actually
@@ -327,7 +327,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @return <code>true</code> if the attribute was specified;
 	*         <code>false</code> if it was defaulted.
 	*/
-	@:overload public function isAttributeSpecified(attributeHandle : Int) : Bool;
+	@:overload @:public override public function isAttributeSpecified(attributeHandle : Int) : Bool;
 	
 	/** Bind an IncrementalSAXSource to this DTM. NOT RELEVANT for DOM2DTM, since
 	* we're wrapped around an existing DOM.
@@ -335,7 +335,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param source The IncrementalSAXSource that we want to recieve events from
 	* on demand.
 	*/
-	@:overload public function setIncrementalSAXSource(source : com.sun.org.apache.xml.internal.dtm.ref.IncrementalSAXSource) : Void;
+	@:overload @:public public function setIncrementalSAXSource(source : com.sun.org.apache.xml.internal.dtm.ref.IncrementalSAXSource) : Void;
 	
 	/** getContentHandler returns "our SAX builder" -- the thing that
 	* someone else should send SAX events to in order to extend this
@@ -346,7 +346,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* the IncrmentalSAXSource if we're bound to one and should receive
 	* the SAX stream via it for incremental build purposes...
 	* */
-	@:overload override public function getContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public override public function getContentHandler() : org.xml.sax.ContentHandler;
 	
 	/**
 	* Return this DTM's lexical handler.
@@ -358,42 +358,42 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* the IncrementalSAXSource if we're bound to one and should receive
 	* the SAX stream via it for incremental build purposes...
 	*/
-	@:overload override public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
+	@:overload @:public override public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
 	
 	/**
 	* Return this DTM's EntityResolver.
 	*
 	* @return null if this model doesn't respond to SAX entity ref events.
 	*/
-	@:overload override public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public override public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
 	/**
 	* Return this DTM's DTDHandler.
 	*
 	* @return null if this model doesn't respond to SAX dtd events.
 	*/
-	@:overload override public function getDTDHandler() : org.xml.sax.DTDHandler;
+	@:overload @:public override public function getDTDHandler() : org.xml.sax.DTDHandler;
 	
 	/**
 	* Return this DTM's ErrorHandler.
 	*
 	* @return null if this model doesn't respond to SAX error events.
 	*/
-	@:overload override public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public override public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
 	/**
 	* Return this DTM's DeclHandler.
 	*
 	* @return null if this model doesn't respond to SAX Decl events.
 	*/
-	@:overload override public function getDeclHandler() : org.xml.sax.ext.DeclHandler;
+	@:overload @:public override public function getDeclHandler() : org.xml.sax.ext.DeclHandler;
 	
 	/** @return true iff we're building this model incrementally (eg
 	* we're partnered with a IncrementalSAXSource) and thus require that the
 	* transformation and the parse run simultaneously. Guidance to the
 	* DTMManager.
 	* */
-	@:overload override public function needsTwoThreads() : Bool;
+	@:overload @:public override public function needsTwoThreads() : Bool;
 	
 	/**
 	* Directly call the
@@ -408,7 +408,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function dispatchCharactersEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler, normalize : Bool) : Void;
+	@:overload @:public override public function dispatchCharactersEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler, normalize : Bool) : Void;
 	
 	/**
 	* Retrieve the text content of a DOM subtree, appending it into a
@@ -430,7 +430,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param node Node whose subtree is to be walked, gathering the
 	* contents of all Text or CDATASection nodes.
 	*/
-	@:overload private static function dispatchNodeData(node : org.w3c.dom.Node, ch : org.xml.sax.ContentHandler, depth : Int) : Void;
+	@:overload @:protected @:static private static function dispatchNodeData(node : org.w3c.dom.Node, ch : org.xml.sax.ContentHandler, depth : Int) : Void;
 	
 	/**
 	* Directly create SAX parser events from a subtree.
@@ -440,7 +440,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function dispatchToEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public override public function dispatchToEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* For the moment all the run time properties are ignored by this
@@ -449,7 +449,7 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param property a <code>String</code> value
 	* @param value an <code>Object</code> value
 	*/
-	@:overload override public function setProperty(property : String, value : Dynamic) : Void;
+	@:overload @:public override public function setProperty(property : String, value : Dynamic) : Void;
 	
 	/**
 	* No source information is available for DOM2DTM, so return
@@ -458,13 +458,13 @@ extern class DOM2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param node an <code>int</code> value
 	* @return null
 	*/
-	@:overload override public function getSourceLocatorFor(node : Int) : javax.xml.transform.SourceLocator;
+	@:overload @:public override public function getSourceLocatorFor(node : Int) : javax.xml.transform.SourceLocator;
 	
 	
 }
 @:native('com$sun$org$apache$xml$internal$dtm$ref$dom2dtm$DOM2DTM$CharacterNodeHandler') extern interface DOM2DTM_CharacterNodeHandler
 {
-	@:overload public function characters(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function characters(node : org.w3c.dom.Node) : Void;
 	
 	
 }

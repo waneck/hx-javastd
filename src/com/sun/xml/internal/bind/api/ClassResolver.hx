@@ -50,7 +50,7 @@ extern class ClassResolver
 	*      reproted to {@link ValidationEventHandler} (just like any other error
 	*      during the unmarshalling.)
 	*/
-	@:overload @:abstract public function resolveElementName(nsUri : String, localName : String) : Class<Dynamic>;
+	@:overload @:public @:abstract public function resolveElementName(nsUri : String, localName : String) : Class<Dynamic>;
 	
 	
 }

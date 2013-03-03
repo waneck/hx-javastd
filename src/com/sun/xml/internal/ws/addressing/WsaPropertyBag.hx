@@ -31,7 +31,7 @@ extern class WsaPropertyBag extends com.sun.xml.internal.ws.api.PropertySet
 	* @return
 	*      null if the incoming SOAP message didn't have the header.
 	*/
-	@:overload public function getTo() : String;
+	@:overload @:public public function getTo() : String;
 	
 	/**
 	* Gets the <tt>wsa:From</tt> header.
@@ -39,7 +39,7 @@ extern class WsaPropertyBag extends com.sun.xml.internal.ws.api.PropertySet
 	* @return
 	*      null if the incoming SOAP message didn't have the header.
 	*/
-	@:overload public function getFrom() : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
+	@:overload @:public public function getFrom() : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
 	
 	/**
 	* Gets the <tt>wsa:Action</tt> header content as String.
@@ -47,7 +47,7 @@ extern class WsaPropertyBag extends com.sun.xml.internal.ws.api.PropertySet
 	* @return
 	*      null if the incoming SOAP message didn't have the header.
 	*/
-	@:overload public function getAction() : String;
+	@:overload @:public public function getAction() : String;
 	
 	/**
 	* Gets the <tt>wsa:MessageID</tt> header content as String.
@@ -55,9 +55,9 @@ extern class WsaPropertyBag extends com.sun.xml.internal.ws.api.PropertySet
 	* @return
 	*      null if the incoming SOAP message didn't have the header.
 	*/
-	@:overload public function getMessageID() : String;
+	@:overload @:public public function getMessageID() : String;
 	
-	@:overload private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
+	@:overload @:protected override private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
 	
 }

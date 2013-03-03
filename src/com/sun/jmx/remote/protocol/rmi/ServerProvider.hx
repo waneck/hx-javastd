@@ -25,7 +25,7 @@ package com.sun.jmx.remote.protocol.rmi;
 */
 extern class ServerProvider implements javax.management.remote.JMXConnectorServerProvider
 {
-	@:overload public function newJMXConnectorServer(serviceURL : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>, mbeanServer : javax.management.MBeanServer) : javax.management.remote.JMXConnectorServer;
+	@:overload @:public public function newJMXConnectorServer(serviceURL : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>, mbeanServer : javax.management.MBeanServer) : javax.management.remote.JMXConnectorServer;
 	
 	
 }

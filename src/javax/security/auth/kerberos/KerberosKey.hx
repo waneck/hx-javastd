@@ -36,7 +36,7 @@ extern class KerberosKey implements javax.crypto.SecretKey implements javax.secu
 	* Kerberos protocol specification.
 	* @param versionNum the version number of this secret key
 	*/
-	@:overload public function new(principal : javax.security.auth.kerberos.KerberosPrincipal, keyBytes : java.NativeArray<java.StdTypes.Int8>, keyType : Int, versionNum : Int) : Void;
+	@:overload @:public public function new(principal : javax.security.auth.kerberos.KerberosPrincipal, keyBytes : java.NativeArray<java.StdTypes.Int8>, keyType : Int, versionNum : Int) : Void;
 	
 	/**
 	* Constructs a KerberosKey from a principal's password.
@@ -49,28 +49,28 @@ extern class KerberosKey implements javax.crypto.SecretKey implements javax.secu
 	* @throws IllegalArgumentException if the name of the
 	* algorithm passed is unsupported.
 	*/
-	@:overload public function new(principal : javax.security.auth.kerberos.KerberosPrincipal, password : java.NativeArray<java.StdTypes.Char16>, algorithm : String) : Void;
+	@:overload @:public public function new(principal : javax.security.auth.kerberos.KerberosPrincipal, password : java.NativeArray<java.StdTypes.Char16>, algorithm : String) : Void;
 	
 	/**
 	* Returns the principal that this key belongs to.
 	*
 	* @return the principal this key belongs to.
 	*/
-	@:overload @:final public function getPrincipal() : javax.security.auth.kerberos.KerberosPrincipal;
+	@:overload @:public @:final public function getPrincipal() : javax.security.auth.kerberos.KerberosPrincipal;
 	
 	/**
 	* Returns the key version number.
 	*
 	* @return the key version number.
 	*/
-	@:overload @:final public function getVersionNumber() : Int;
+	@:overload @:public @:final public function getVersionNumber() : Int;
 	
 	/**
 	* Returns the key type for this long-term key.
 	*
 	* @return the key type.
 	*/
-	@:overload @:final public function getKeyType() : Int;
+	@:overload @:public @:final public function getKeyType() : Int;
 	
 	/**
 	* Returns the standard algorithm name for this key. For
@@ -83,21 +83,21 @@ extern class KerberosKey implements javax.crypto.SecretKey implements javax.secu
 	*
 	* @return the name of the algorithm associated with this key.
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Returns the name of the encoding format for this secret key.
 	*
 	* @return the String "RAW"
 	*/
-	@:overload @:final public function getFormat() : String;
+	@:overload @:public @:final public function getFormat() : String;
 	
 	/**
 	* Returns the key material of this secret key.
 	*
 	* @return the key material
 	*/
-	@:overload @:final public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Destroys this key. A call to any of its other methods after this
@@ -106,12 +106,12 @@ extern class KerberosKey implements javax.crypto.SecretKey implements javax.secu
 	* @throws DestroyFailedException if some error occurs while destorying
 	* this key.
 	*/
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	/** Determines if this key has been destroyed.*/
-	@:overload public function isDestroyed() : Bool;
+	@:overload @:public public function isDestroyed() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hashcode for this KerberosKey.
@@ -119,7 +119,7 @@ extern class KerberosKey implements javax.crypto.SecretKey implements javax.secu
 	* @return a hashCode() for the <code>KerberosKey</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function hashCode() : Int;
+	@:require(java6) @:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares the specified Object with this KerberosKey for equality.
@@ -133,7 +133,7 @@ extern class KerberosKey implements javax.crypto.SecretKey implements javax.secu
 	* objects has been destroyed.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function equals(other : Dynamic) : Bool;
+	@:require(java6) @:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	
 }

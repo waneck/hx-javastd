@@ -26,10 +26,10 @@ package java.util.zip;
 extern class DeflaterInputStream extends java.io.FilterInputStream
 {
 	/** Compressor for this stream. */
-	private var def(default, null) : java.util.zip.Deflater;
+	@:protected @:final private var def(default, null) : java.util.zip.Deflater;
 	
 	/** Input buffer for reading compressed data. */
-	private var buf(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:protected @:final private var buf(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Creates a new input stream with a default compressor and buffer
@@ -38,7 +38,7 @@ extern class DeflaterInputStream extends java.io.FilterInputStream
 	* @param in input stream to read the uncompressed data to
 	* @throws NullPointerException if {@code in} is null
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Creates a new input stream with the specified compressor and a
@@ -48,7 +48,7 @@ extern class DeflaterInputStream extends java.io.FilterInputStream
 	* @param defl compressor ("deflater") for this stream
 	* @throws NullPointerException if {@code in} or {@code defl} is null
 	*/
-	@:overload public function new(_in : java.io.InputStream, defl : java.util.zip.Deflater) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, defl : java.util.zip.Deflater) : Void;
 	
 	/**
 	* Creates a new input stream with the specified compressor and buffer
@@ -60,7 +60,7 @@ extern class DeflaterInputStream extends java.io.FilterInputStream
 	* @throws IllegalArgumentException if {@code bufLen} is <= 0
 	* @throws NullPointerException if {@code in} or {@code defl} is null
 	*/
-	@:overload public function new(_in : java.io.InputStream, defl : java.util.zip.Deflater, bufLen : Int) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, defl : java.util.zip.Deflater, bufLen : Int) : Void;
 	
 	/**
 	* Closes this input stream and its underlying input stream, discarding
@@ -68,7 +68,7 @@ extern class DeflaterInputStream extends java.io.FilterInputStream
 	*
 	* @throws IOException if an I/O error occurs
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Reads a single byte of compressed data from the input stream.
@@ -79,7 +79,7 @@ extern class DeflaterInputStream extends java.io.FilterInputStream
 	* @throws IOException if an I/O error occurs or if this stream is
 	* already closed
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads compressed data into a byte array.
@@ -95,7 +95,7 @@ extern class DeflaterInputStream extends java.io.FilterInputStream
 	* @throws IOException if an I/O error occurs or if this input stream is
 	* already closed
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips over and discards data from the input stream.
@@ -109,7 +109,7 @@ extern class DeflaterInputStream extends java.io.FilterInputStream
 	* @throws IOException if an I/O error occurs or if this stream is
 	* already closed
 	*/
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns 0 after EOF has been reached, otherwise always return 1.
@@ -121,7 +121,7 @@ extern class DeflaterInputStream extends java.io.FilterInputStream
 	* @throws IOException if an I/O error occurs or if this stream is
 	* already closed
 	*/
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	/**
 	* Always returns {@code false} because this input stream does not support
@@ -129,21 +129,21 @@ extern class DeflaterInputStream extends java.io.FilterInputStream
 	*
 	* @return false, always
 	*/
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	/**
 	* <i>This operation is not supported</i>.
 	*
 	* @param limit maximum bytes that can be read before invalidating the position marker
 	*/
-	@:overload override public function mark(limit : Int) : Void;
+	@:overload @:public override public function mark(limit : Int) : Void;
 	
 	/**
 	* <i>This operation is not supported</i>.
 	*
 	* @throws IOException always thrown
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }

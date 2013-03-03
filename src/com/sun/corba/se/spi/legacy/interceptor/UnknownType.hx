@@ -25,9 +25,9 @@ package com.sun.corba.se.spi.legacy.interceptor;
 */
 extern class UnknownType extends java.lang.Exception
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

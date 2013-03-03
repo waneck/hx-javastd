@@ -29,59 +29,59 @@ extern class PresentationDirection extends javax.print.attribute.EnumSyntax impl
 	* Pages are laid out in columns starting at the top left,
 	* proceeeding towards the bottom & right.
 	*/
-	public static var TOBOTTOM_TORIGHT(default, null) : javax.print.attribute.standard.PresentationDirection;
+	@:public @:static @:final public static var TOBOTTOM_TORIGHT(default, null) : javax.print.attribute.standard.PresentationDirection;
 	
 	/**
 	* Pages are laid out in columns starting at the top right,
 	* proceeeding towards the bottom & left.
 	*/
-	public static var TOBOTTOM_TOLEFT(default, null) : javax.print.attribute.standard.PresentationDirection;
+	@:public @:static @:final public static var TOBOTTOM_TOLEFT(default, null) : javax.print.attribute.standard.PresentationDirection;
 	
 	/**
 	* Pages are laid out in columns starting at the bottom left,
 	* proceeeding towards the top & right.
 	*/
-	public static var TOTOP_TORIGHT(default, null) : javax.print.attribute.standard.PresentationDirection;
+	@:public @:static @:final public static var TOTOP_TORIGHT(default, null) : javax.print.attribute.standard.PresentationDirection;
 	
 	/**
 	* Pages are laid out in columns starting at the bottom right,
 	* proceeeding towards the top & left.
 	*/
-	public static var TOTOP_TOLEFT(default, null) : javax.print.attribute.standard.PresentationDirection;
+	@:public @:static @:final public static var TOTOP_TOLEFT(default, null) : javax.print.attribute.standard.PresentationDirection;
 	
 	/**
 	* Pages are laid out in rows starting at the top left,
 	* proceeeding towards the right & bottom.
 	*/
-	public static var TORIGHT_TOBOTTOM(default, null) : javax.print.attribute.standard.PresentationDirection;
+	@:public @:static @:final public static var TORIGHT_TOBOTTOM(default, null) : javax.print.attribute.standard.PresentationDirection;
 	
 	/**
 	* Pages are laid out in rows starting at the bottom left,
 	* proceeeding towards the right & top.
 	*/
-	public static var TORIGHT_TOTOP(default, null) : javax.print.attribute.standard.PresentationDirection;
+	@:public @:static @:final public static var TORIGHT_TOTOP(default, null) : javax.print.attribute.standard.PresentationDirection;
 	
 	/**
 	* Pages are laid out in rows starting at the top right,
 	* proceeeding towards the left & bottom.
 	*/
-	public static var TOLEFT_TOBOTTOM(default, null) : javax.print.attribute.standard.PresentationDirection;
+	@:public @:static @:final public static var TOLEFT_TOBOTTOM(default, null) : javax.print.attribute.standard.PresentationDirection;
 	
 	/**
 	* Pages are laid out in rows starting at the bottom right,
 	* proceeeding towards the left & top.
 	*/
-	public static var TOLEFT_TOTOP(default, null) : javax.print.attribute.standard.PresentationDirection;
+	@:public @:static @:final public static var TOLEFT_TOTOP(default, null) : javax.print.attribute.standard.PresentationDirection;
 	
 	/**
 	* Returns the string table for class PresentationDirection.
 	*/
-	@:overload private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class PresentationDirection.
 	*/
-	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -93,7 +93,7 @@ extern class PresentationDirection extends javax.print.attribute.EnumSyntax impl
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -104,7 +104,7 @@ extern class PresentationDirection extends javax.print.attribute.EnumSyntax impl
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

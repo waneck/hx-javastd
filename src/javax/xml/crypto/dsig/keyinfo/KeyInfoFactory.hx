@@ -31,7 +31,7 @@ extern class KeyInfoFactory
 	/**
 	* Default constructor, for invocation by subclasses.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns a <code>KeyInfoFactory</code> that supports the
@@ -60,7 +60,7 @@ extern class KeyInfoFactory
 	*    <code>KeyInfoFactory</code> implementation for the specified mechanism
 	* @see Provider
 	*/
-	@:overload public static function getInstance(mechanismType : String) : javax.xml.crypto.dsig.keyinfo.KeyInfoFactory;
+	@:overload @:public @:static public static function getInstance(mechanismType : String) : javax.xml.crypto.dsig.keyinfo.KeyInfoFactory;
 	
 	/**
 	* Returns a <code>KeyInfoFactory</code> that supports the
@@ -83,7 +83,7 @@ extern class KeyInfoFactory
 	*    specified <code>Provider</code> object
 	* @see Provider
 	*/
-	@:overload public static function getInstance(mechanismType : String, provider : java.security.Provider) : javax.xml.crypto.dsig.keyinfo.KeyInfoFactory;
+	@:overload @:public @:static public static function getInstance(mechanismType : String, provider : java.security.Provider) : javax.xml.crypto.dsig.keyinfo.KeyInfoFactory;
 	
 	/**
 	* Returns a <code>KeyInfoFactory</code> that supports the
@@ -110,7 +110,7 @@ extern class KeyInfoFactory
 	*    specified provider
 	* @see Provider
 	*/
-	@:overload public static function getInstance(mechanismType : String, provider : String) : javax.xml.crypto.dsig.keyinfo.KeyInfoFactory;
+	@:overload @:public @:static public static function getInstance(mechanismType : String, provider : String) : javax.xml.crypto.dsig.keyinfo.KeyInfoFactory;
 	
 	/**
 	* Returns a <code>KeyInfoFactory</code> that supports the
@@ -132,7 +132,7 @@ extern class KeyInfoFactory
 	*    <code>KeyInfoFactory</code> implementation for the DOM mechanism
 	* @see Provider
 	*/
-	@:overload public static function getInstance() : javax.xml.crypto.dsig.keyinfo.KeyInfoFactory;
+	@:overload @:public @:static public static function getInstance() : javax.xml.crypto.dsig.keyinfo.KeyInfoFactory;
 	
 	/**
 	* Returns the type of the XML processing mechanism and representation
@@ -141,14 +141,14 @@ extern class KeyInfoFactory
 	* @return the XML processing mechanism type supported by this
 	*    <code>KeyInfoFactory</code>
 	*/
-	@:overload @:final public function getMechanismType() : String;
+	@:overload @:public @:final public function getMechanismType() : String;
 	
 	/**
 	* Returns the provider of this <code>KeyInfoFactory</code>.
 	*
 	* @return the provider of this <code>KeyInfoFactory</code>
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Creates a <code>KeyInfo</code> containing the specified list of
@@ -163,7 +163,7 @@ extern class KeyInfoFactory
 	* @throws ClassCastException if <code>content</code> contains any entries
 	*    that are not of type {@link XMLStructure}
 	*/
-	@:overload @:abstract public function newKeyInfo(content : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
+	@:overload @:public @:abstract public function newKeyInfo(content : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
 	
 	/**
 	* Creates a <code>KeyInfo</code> containing the specified list of key
@@ -182,7 +182,7 @@ extern class KeyInfoFactory
 	* @throws ClassCastException if <code>content</code> contains any entries
 	*    that are not of type {@link XMLStructure}
 	*/
-	@:overload @:abstract public function newKeyInfo(content : java.util.List<Dynamic>, id : String) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
+	@:overload @:public @:abstract public function newKeyInfo(content : java.util.List<Dynamic>, id : String) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
 	
 	/**
 	* Creates a <code>KeyName</code> from the specified name.
@@ -191,7 +191,7 @@ extern class KeyInfoFactory
 	* @return a <code>KeyName</code>
 	* @throws NullPointerException if <code>name</code> is <code>null</code>
 	*/
-	@:overload @:abstract public function newKeyName(name : String) : javax.xml.crypto.dsig.keyinfo.KeyName;
+	@:overload @:public @:abstract public function newKeyName(name : String) : javax.xml.crypto.dsig.keyinfo.KeyName;
 	
 	/**
 	* Creates a <code>KeyValue</code> from the specified public key.
@@ -202,7 +202,7 @@ extern class KeyInfoFactory
 	*    recognized or supported by this <code>KeyInfoFactory</code>
 	* @throws NullPointerException if <code>key</code> is <code>null</code>
 	*/
-	@:overload @:abstract public function newKeyValue(key : java.security.PublicKey) : javax.xml.crypto.dsig.keyinfo.KeyValue;
+	@:overload @:public @:abstract public function newKeyValue(key : java.security.PublicKey) : javax.xml.crypto.dsig.keyinfo.KeyValue;
 	
 	/**
 	* Creates a <code>PGPData</code> from the specified PGP public key
@@ -216,7 +216,7 @@ extern class KeyInfoFactory
 	* @throws IllegalArgumentException if the key id is not in the correct
 	*    format
 	*/
-	@:overload @:abstract public function newPGPData(keyId : java.NativeArray<java.StdTypes.Int8>) : javax.xml.crypto.dsig.keyinfo.PGPData;
+	@:overload @:public @:abstract public function newPGPData(keyId : java.NativeArray<java.StdTypes.Int8>) : javax.xml.crypto.dsig.keyinfo.PGPData;
 	
 	/**
 	* Creates a <code>PGPData</code> from the specified PGP public key
@@ -243,7 +243,7 @@ extern class KeyInfoFactory
 	* @throws ClassCastException if <code>other</code> contains any
 	*    entries that are not of type {@link XMLStructure}
 	*/
-	@:overload @:abstract public function newPGPData(keyId : java.NativeArray<java.StdTypes.Int8>, keyPacket : java.NativeArray<java.StdTypes.Int8>, other : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.PGPData;
+	@:overload @:public @:abstract public function newPGPData(keyId : java.NativeArray<java.StdTypes.Int8>, keyPacket : java.NativeArray<java.StdTypes.Int8>, other : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.PGPData;
 	
 	/**
 	* Creates a <code>PGPData</code> from the specified PGP key material
@@ -265,7 +265,7 @@ extern class KeyInfoFactory
 	* @throws ClassCastException if <code>other</code> contains any
 	*    entries that are not of type {@link XMLStructure}
 	*/
-	@:overload @:abstract public function newPGPData(keyPacket : java.NativeArray<java.StdTypes.Int8>, other : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.PGPData;
+	@:overload @:public @:abstract public function newPGPData(keyPacket : java.NativeArray<java.StdTypes.Int8>, other : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.PGPData;
 	
 	/**
 	* Creates a <code>RetrievalMethod</code> from the specified URI.
@@ -277,7 +277,7 @@ extern class KeyInfoFactory
 	* @throws IllegalArgumentException if <code>uri</code> is not RFC 2396
 	*    compliant
 	*/
-	@:overload @:abstract public function newRetrievalMethod(uri : String) : javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
+	@:overload @:public @:abstract public function newRetrievalMethod(uri : String) : javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
 	
 	/**
 	* Creates a <code>RetrievalMethod</code> from the specified parameters.
@@ -296,7 +296,7 @@ extern class KeyInfoFactory
 	* @throws ClassCastException if <code>transforms</code> contains any
 	*    entries that are not of type {@link Transform}
 	*/
-	@:overload @:abstract public function newRetrievalMethod(uri : String, type : String, transforms : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
+	@:overload @:public @:abstract public function newRetrievalMethod(uri : String, type : String, transforms : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
 	
 	/**
 	* Creates a <code>X509Data</code> containing the specified list of
@@ -320,7 +320,7 @@ extern class KeyInfoFactory
 	* @throws ClassCastException if <code>content</code> contains any entries
 	*    that are not of one of the valid types mentioned above
 	*/
-	@:overload @:abstract public function newX509Data(content : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.X509Data;
+	@:overload @:public @:abstract public function newX509Data(content : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.X509Data;
 	
 	/**
 	* Creates an <code>X509IssuerSerial</code> from the specified X.500 issuer
@@ -337,7 +337,7 @@ extern class KeyInfoFactory
 	* @throws IllegalArgumentException if the issuer name is not RFC 2253
 	*    compliant or one of the attribute type keywords is not recognized.
 	*/
-	@:overload @:abstract public function newX509IssuerSerial(issuerName : String, serialNumber : java.math.BigInteger) : javax.xml.crypto.dsig.keyinfo.X509IssuerSerial;
+	@:overload @:public @:abstract public function newX509IssuerSerial(issuerName : String, serialNumber : java.math.BigInteger) : javax.xml.crypto.dsig.keyinfo.X509IssuerSerial;
 	
 	/**
 	* Indicates whether a specified feature is supported.
@@ -347,7 +347,7 @@ extern class KeyInfoFactory
 	*    <code>false</code> otherwise
 	* @throws NullPointerException if <code>feature</code> is <code>null</code>
 	*/
-	@:overload @:abstract public function isFeatureSupported(feature : String) : Bool;
+	@:overload @:public @:abstract public function isFeatureSupported(feature : String) : Bool;
 	
 	/**
 	* Returns a reference to the <code>URIDereferencer</code> that is used by
@@ -355,7 +355,7 @@ extern class KeyInfoFactory
 	*
 	* @return a reference to the default <code>URIDereferencer</code>
 	*/
-	@:overload @:abstract public function getURIDereferencer() : javax.xml.crypto.URIDereferencer;
+	@:overload @:public @:abstract public function getURIDereferencer() : javax.xml.crypto.URIDereferencer;
 	
 	/**
 	* Unmarshals a new <code>KeyInfo</code> instance from a
@@ -372,7 +372,7 @@ extern class KeyInfoFactory
 	* @throws MarshalException if an unrecoverable exception occurs during
 	*   unmarshalling
 	*/
-	@:overload @:abstract public function unmarshalKeyInfo(xmlStructure : javax.xml.crypto.XMLStructure) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
+	@:overload @:public @:abstract public function unmarshalKeyInfo(xmlStructure : javax.xml.crypto.XMLStructure) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
 	
 	
 }

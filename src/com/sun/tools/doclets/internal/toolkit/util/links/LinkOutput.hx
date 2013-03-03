@@ -36,7 +36,7 @@ package com.sun.tools.doclets.internal.toolkit.util.links;
 	*
 	* @param o the object to append.
 	*/
-	@:overload public function append(o : Dynamic) : Void;
+	@:overload @:public public function append(o : Dynamic) : Void;
 	
 	
 }

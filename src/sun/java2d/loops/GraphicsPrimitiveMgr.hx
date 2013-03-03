@@ -28,32 +28,32 @@ package sun.java2d.loops;
 */
 extern class GraphicsPrimitiveMgr
 {
-	@:overload @:synchronized public static function register(newPrimitives : java.NativeArray<sun.java2d.loops.GraphicsPrimitive>) : Void;
+	@:overload @:public @:synchronized @:static public static function register(newPrimitives : java.NativeArray<sun.java2d.loops.GraphicsPrimitive>) : Void;
 	
-	@:overload @:synchronized public static function registerGeneral(gen : sun.java2d.loops.GraphicsPrimitive) : Void;
+	@:overload @:public @:synchronized @:static public static function registerGeneral(gen : sun.java2d.loops.GraphicsPrimitive) : Void;
 	
-	@:overload @:synchronized public static function locate(primTypeID : Int, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public @:synchronized @:static public static function locate(primTypeID : Int, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload @:synchronized public static function locate(primTypeID : Int, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public @:synchronized @:static public static function locate(primTypeID : Int, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload @:synchronized public static function locatePrim(primTypeID : Int, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public @:synchronized @:static public static function locatePrim(primTypeID : Int, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
 	
 	/**
 	* Test that all of the GraphicsPrimitiveProxy objects actually
 	* resolve to something.  Throws a RuntimeException if anything
 	* is wrong, an has no effect if all is well.
 	*/
-	@:overload public static function testPrimitiveInstantiation() : Void;
+	@:overload @:public @:static public static function testPrimitiveInstantiation() : Void;
 	
-	@:overload public static function testPrimitiveInstantiation(verbose : Bool) : Void;
+	@:overload @:public @:static public static function testPrimitiveInstantiation(verbose : Bool) : Void;
 	
-	@:overload public static function main(argv : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(argv : java.NativeArray<String>) : Void;
 	
 	
 }
 @:native('sun$java2d$loops$GraphicsPrimitiveMgr$PrimitiveSpec') @:internal extern class GraphicsPrimitiveMgr_PrimitiveSpec
 {
-	public var uniqueID : Int;
+	@:public public var uniqueID : Int;
 	
 	
 }

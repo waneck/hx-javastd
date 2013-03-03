@@ -83,7 +83,7 @@ extern interface LSParserFilter
 	* </ul> Returning
 	*   any other values will result in unspecified behavior.
 	*/
-	@:overload public function startElement(elementArg : org.w3c.dom.Element) : java.StdTypes.Int16;
+	@:overload @:public public function startElement(elementArg : org.w3c.dom.Element) : java.StdTypes.Int16;
 	
 	/**
 	* This method will be called by the parser at the completion of the
@@ -127,7 +127,7 @@ extern interface LSParserFilter
 	* </li>
 	* </ul>
 	*/
-	@:overload public function acceptNode(nodeArg : org.w3c.dom.Node) : java.StdTypes.Int16;
+	@:overload @:public public function acceptNode(nodeArg : org.w3c.dom.Node) : java.StdTypes.Int16;
 	
 	/**
 	*  Tells the <code>LSParser</code> what types of nodes to show to the
@@ -142,7 +142,7 @@ extern interface LSParserFilter
 	* <br> The constants used here are defined in [<a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113'>DOM Level 2 Traversal and      Range</a>]
 	* .
 	*/
-	@:overload public function getWhatToShow() : Int;
+	@:overload @:public public function getWhatToShow() : Int;
 	
 	
 }

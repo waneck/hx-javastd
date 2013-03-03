@@ -25,17 +25,17 @@ package com.sun.tools.internal.xjc.util;
 */
 extern class StringCutter
 {
-	@:overload public function new(s : String, ignoreWhitespace : Bool) : Void;
+	@:overload @:public public function new(s : String, ignoreWhitespace : Bool) : Void;
 	
-	@:overload public function skip(regexp : String) : Void;
+	@:overload @:public public function skip(regexp : String) : Void;
 	
-	@:overload public function next(regexp : String) : String;
+	@:overload @:public public function next(regexp : String) : String;
 	
-	@:overload public function until(regexp : String) : String;
+	@:overload @:public public function until(regexp : String) : String;
 	
-	@:overload public function peek() : java.StdTypes.Char16;
+	@:overload @:public public function peek() : java.StdTypes.Char16;
 	
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
 	
 }

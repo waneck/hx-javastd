@@ -25,15 +25,15 @@ package com.sun.xml.internal.ws.transport.http.server;
 */
 extern class HttpEndpoint extends com.sun.xml.internal.ws.api.server.HttpEndpoint
 {
-	@:overload public function new(executor : java.util.concurrent.Executor, adapter : com.sun.xml.internal.ws.transport.http.HttpAdapter) : Void;
+	@:overload @:public public function new(executor : java.util.concurrent.Executor, adapter : com.sun.xml.internal.ws.transport.http.HttpAdapter) : Void;
 	
-	@:overload override public function publish(address : String) : Void;
+	@:overload @:public override public function publish(address : String) : Void;
 	
-	@:overload public function publish(serverContext : Dynamic) : Void;
+	@:overload @:public public function publish(serverContext : Dynamic) : Void;
 	
-	@:overload override public function stop() : Void;
+	@:overload @:public override public function stop() : Void;
 	
-	@:overload public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>, referenceParameters : java.NativeArray<org.w3c.dom.Element>) : T;
+	@:overload @:public public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>, referenceParameters : java.NativeArray<org.w3c.dom.Element>) : T;
 	
 	
 }

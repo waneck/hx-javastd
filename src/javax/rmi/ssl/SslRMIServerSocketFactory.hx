@@ -33,7 +33,7 @@ extern class SslRMIServerSocketFactory implements java.rmi.server.RMIServerSocke
 	* factory have the default cipher suites and protocol versions
 	* enabled and do not require client authentication.</p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* <p>Creates a new <code>SslRMIServerSocketFactory</code> with
@@ -65,7 +65,7 @@ extern class SslRMIServerSocketFactory implements java.rmi.server.RMIServerSocke
 	* @see SSLSocket#setEnabledProtocols
 	* @see SSLSocket#setNeedClientAuth
 	*/
-	@:overload public function new(enabledCipherSuites : java.NativeArray<String>, enabledProtocols : java.NativeArray<String>, needClientAuth : Bool) : Void;
+	@:overload @:public public function new(enabledCipherSuites : java.NativeArray<String>, enabledProtocols : java.NativeArray<String>, needClientAuth : Bool) : Void;
 	
 	/**
 	* <p>Creates a new <code>SslRMIServerSocketFactory</code> with the
@@ -105,7 +105,7 @@ extern class SslRMIServerSocketFactory implements java.rmi.server.RMIServerSocke
 	* @see SSLSocket#setNeedClientAuth
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(context : javax.net.ssl.SSLContext, enabledCipherSuites : java.NativeArray<String>, enabledProtocols : java.NativeArray<String>, needClientAuth : Bool) : Void;
+	@:require(java7) @:overload @:public public function new(context : javax.net.ssl.SSLContext, enabledCipherSuites : java.NativeArray<String>, enabledProtocols : java.NativeArray<String>, needClientAuth : Bool) : Void;
 	
 	/**
 	* <p>Returns the names of the cipher suites enabled on SSL
@@ -117,7 +117,7 @@ extern class SslRMIServerSocketFactory implements java.rmi.server.RMIServerSocke
 	*
 	* @see SSLSocket#setEnabledCipherSuites
 	*/
-	@:overload @:final public function getEnabledCipherSuites() : java.NativeArray<String>;
+	@:overload @:public @:final public function getEnabledCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* <p>Returns the names of the protocol versions enabled on SSL
@@ -130,7 +130,7 @@ extern class SslRMIServerSocketFactory implements java.rmi.server.RMIServerSocke
 	*
 	* @see SSLSocket#setEnabledProtocols
 	*/
-	@:overload @:final public function getEnabledProtocols() : java.NativeArray<String>;
+	@:overload @:public @:final public function getEnabledProtocols() : java.NativeArray<String>;
 	
 	/**
 	* <p>Returns <code>true</code> if client authentication is
@@ -141,14 +141,14 @@ extern class SslRMIServerSocketFactory implements java.rmi.server.RMIServerSocke
 	*
 	* @see SSLSocket#setNeedClientAuth
 	*/
-	@:overload @:final public function getNeedClientAuth() : Bool;
+	@:overload @:public @:final public function getNeedClientAuth() : Bool;
 	
 	/**
 	* <p>Creates a server socket that accepts SSL connections
 	* configured according to this factory's SSL socket configuration
 	* parameters.</p>
 	*/
-	@:overload public function createServerSocket(port : Int) : java.net.ServerSocket;
+	@:overload @:public public function createServerSocket(port : Int) : java.net.ServerSocket;
 	
 	/**
 	* <p>Indicates whether some other object is "equal to" this one.</p>
@@ -161,7 +161,7 @@ extern class SslRMIServerSocketFactory implements java.rmi.server.RMIServerSocke
 	* {@link #hashCode()}) if it adds instance state that affects
 	* equality.</p>
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* <p>Returns a hash code value for this
@@ -170,7 +170,7 @@ extern class SslRMIServerSocketFactory implements java.rmi.server.RMIServerSocke
 	* @return a hash code value for this
 	* <code>SslRMIServerSocketFactory</code>.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

@@ -65,11 +65,11 @@ extern class Introspector
 	* consult the
 	*  <a href="http://java.sun.com/products/javabeans/docs/index.html">JavaBeans&trade; specification</a>.
 	*/
-	public static var USE_ALL_BEANINFO(default, null) : Int;
+	@:public @:final @:static public static var USE_ALL_BEANINFO(default, null) : Int;
 	
-	public static var IGNORE_IMMEDIATE_BEANINFO(default, null) : Int;
+	@:public @:final @:static public static var IGNORE_IMMEDIATE_BEANINFO(default, null) : Int;
 	
-	public static var IGNORE_ALL_BEANINFO(default, null) : Int;
+	@:public @:final @:static public static var IGNORE_ALL_BEANINFO(default, null) : Int;
 	
 	/**
 	* Introspect on a Java Bean and learn about all its properties, exposed
@@ -85,7 +85,7 @@ extern class Introspector
 	* @see #flushCaches
 	* @see #flushFromCaches
 	*/
-	@:native('getBeanInfo') @:overload public static function _getBeanInfo(beanClass : Class<Dynamic>) : java.beans.BeanInfo;
+	@:native('getBeanInfo') @:overload @:public @:static public static function _getBeanInfo(beanClass : Class<Dynamic>) : java.beans.BeanInfo;
 	
 	/**
 	* Introspect on a Java bean and learn about all its properties, exposed
@@ -108,7 +108,7 @@ extern class Introspector
 	* @exception IntrospectionException if an exception occurs during
 	*              introspection.
 	*/
-	@:native('getBeanInfo') @:overload public static function _getBeanInfo(beanClass : Class<Dynamic>, flags : Int) : java.beans.BeanInfo;
+	@:native('getBeanInfo') @:overload @:public @:static public static function _getBeanInfo(beanClass : Class<Dynamic>, flags : Int) : java.beans.BeanInfo;
 	
 	/**
 	* Introspect on a Java bean and learn all about its properties, exposed
@@ -125,7 +125,7 @@ extern class Introspector
 	* @exception IntrospectionException if an exception occurs during
 	*              introspection.
 	*/
-	@:native('getBeanInfo') @:overload public static function _getBeanInfo(beanClass : Class<Dynamic>, stopClass : Class<Dynamic>) : java.beans.BeanInfo;
+	@:native('getBeanInfo') @:overload @:public @:static public static function _getBeanInfo(beanClass : Class<Dynamic>, stopClass : Class<Dynamic>) : java.beans.BeanInfo;
 	
 	/**
 	* Introspect on a Java Bean and learn about all its properties,
@@ -155,7 +155,7 @@ extern class Introspector
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:native('getBeanInfo') @:overload public static function _getBeanInfo(beanClass : Class<Dynamic>, stopClass : Class<Dynamic>, flags : Int) : java.beans.BeanInfo;
+	@:require(java7) @:native('getBeanInfo') @:overload @:public @:static public static function _getBeanInfo(beanClass : Class<Dynamic>, stopClass : Class<Dynamic>, flags : Int) : java.beans.BeanInfo;
 	
 	/**
 	* Utility method to take a string and convert it to normal Java variable
@@ -170,7 +170,7 @@ extern class Introspector
 	* @param  name The string to be decapitalized.
 	* @return  The decapitalized version of the string.
 	*/
-	@:overload public static function decapitalize(name : String) : String;
+	@:overload @:public @:static public static function decapitalize(name : String) : String;
 	
 	/**
 	* Gets the list of package names that will be used for
@@ -181,7 +181,7 @@ extern class Introspector
 	*          for this array is implementation-dependent; e.g.
 	*          Sun implementation initially sets to {"sun.beans.infos"}.
 	*/
-	@:overload public static function getBeanInfoSearchPath() : java.NativeArray<String>;
+	@:overload @:public @:static public static function getBeanInfoSearchPath() : java.NativeArray<String>;
 	
 	/**
 	* Change the list of package names that will be used for
@@ -198,7 +198,7 @@ extern class Introspector
 	*              of system properties.
 	* @see SecurityManager#checkPropertiesAccess
 	*/
-	@:overload public static function setBeanInfoSearchPath(path : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function setBeanInfoSearchPath(path : java.NativeArray<String>) : Void;
 	
 	/**
 	* Flush all of the Introspector's internal caches.  This method is
@@ -206,7 +206,7 @@ extern class Introspector
 	* tools that update existing "Class" objects in-place and need
 	* to make the Introspector re-analyze existing Class objects.
 	*/
-	@:overload public static function flushCaches() : Void;
+	@:overload @:public @:static public static function flushCaches() : Void;
 	
 	/**
 	* Flush the Introspector's internal cached information for a given class.
@@ -223,27 +223,27 @@ extern class Introspector
 	* @param clz  Class object to be flushed.
 	* @throws NullPointerException If the Class object is null.
 	*/
-	@:overload public static function flushFromCaches(clz : Class<Dynamic>) : Void;
+	@:overload @:public @:static public static function flushFromCaches(clz : Class<Dynamic>) : Void;
 	
 	
 }
 @:internal extern class GenericBeanInfo extends java.beans.SimpleBeanInfo
 {
-	@:overload public function new(beanDescriptor : java.beans.BeanDescriptor, events : java.NativeArray<java.beans.EventSetDescriptor>, defaultEvent : Int, properties : java.NativeArray<java.beans.PropertyDescriptor>, defaultProperty : Int, methods : java.NativeArray<java.beans.MethodDescriptor>, targetBeanInfo : java.beans.BeanInfo) : Void;
+	@:overload @:public public function new(beanDescriptor : java.beans.BeanDescriptor, events : java.NativeArray<java.beans.EventSetDescriptor>, defaultEvent : Int, properties : java.NativeArray<java.beans.PropertyDescriptor>, defaultProperty : Int, methods : java.NativeArray<java.beans.MethodDescriptor>, targetBeanInfo : java.beans.BeanInfo) : Void;
 	
-	@:overload public function getPropertyDescriptors() : java.NativeArray<java.beans.PropertyDescriptor>;
+	@:overload @:public override public function getPropertyDescriptors() : java.NativeArray<java.beans.PropertyDescriptor>;
 	
-	@:overload public function getDefaultPropertyIndex() : Int;
+	@:overload @:public override public function getDefaultPropertyIndex() : Int;
 	
-	@:overload public function getEventSetDescriptors() : java.NativeArray<java.beans.EventSetDescriptor>;
+	@:overload @:public override public function getEventSetDescriptors() : java.NativeArray<java.beans.EventSetDescriptor>;
 	
-	@:overload public function getDefaultEventIndex() : Int;
+	@:overload @:public override public function getDefaultEventIndex() : Int;
 	
-	@:overload public function getMethodDescriptors() : java.NativeArray<java.beans.MethodDescriptor>;
+	@:overload @:public override public function getMethodDescriptors() : java.NativeArray<java.beans.MethodDescriptor>;
 	
-	@:overload public function getBeanDescriptor() : java.beans.BeanDescriptor;
+	@:overload @:public override public function getBeanDescriptor() : java.beans.BeanDescriptor;
 	
-	@:overload public function getIcon(iconKind : Int) : java.awt.Image;
+	@:overload @:public override public function getIcon(iconKind : Int) : java.awt.Image;
 	
 	
 }

@@ -28,42 +28,42 @@ extern class ReferenceUriSchemesSupported extends javax.print.attribute.EnumSynt
 	/**
 	* File Transfer Protocol (FTP).
 	*/
-	public static var FTP(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
+	@:public @:static @:final public static var FTP(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
 	
 	/**
 	* HyperText Transfer Protocol (HTTP).
 	*/
-	public static var HTTP(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
+	@:public @:static @:final public static var HTTP(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
 	
 	/**
 	* Secure HyperText Transfer Protocol (HTTPS).
 	*/
-	public static var HTTPS(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
+	@:public @:static @:final public static var HTTPS(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
 	
 	/**
 	* Gopher Protocol.
 	*/
-	public static var GOPHER(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
+	@:public @:static @:final public static var GOPHER(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
 	
 	/**
 	* USENET news.
 	*/
-	public static var NEWS(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
+	@:public @:static @:final public static var NEWS(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
 	
 	/**
 	* USENET news using Network News Transfer Protocol (NNTP).
 	*/
-	public static var NNTP(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
+	@:public @:static @:final public static var NNTP(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
 	
 	/**
 	* Wide Area Information Server (WAIS) protocol.
 	*/
-	public static var WAIS(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
+	@:public @:static @:final public static var WAIS(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
 	
 	/**
 	* Host-specific file names.
 	*/
-	public static var FILE(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
+	@:public @:static @:final public static var FILE(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
 	
 	/**
 	* Construct a new reference URI scheme enumeration value with the given
@@ -71,18 +71,18 @@ extern class ReferenceUriSchemesSupported extends javax.print.attribute.EnumSynt
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class ReferenceUriSchemesSupported.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class
 	* ReferenceUriSchemesSupported.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -94,7 +94,7 @@ extern class ReferenceUriSchemesSupported extends javax.print.attribute.EnumSynt
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -106,7 +106,7 @@ extern class ReferenceUriSchemesSupported extends javax.print.attribute.EnumSynt
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

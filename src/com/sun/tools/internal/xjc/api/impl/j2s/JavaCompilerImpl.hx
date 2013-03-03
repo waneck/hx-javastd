@@ -28,15 +28,15 @@ extern class JavaCompilerImpl implements com.sun.tools.internal.xjc.api.JavaComp
 	/**
 	* @author Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	@:overload public function bind(rootClasses : java.util.Collection<com.sun.tools.internal.xjc.api.Reference>, additionalElementDecls : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.api.Reference>, defaultNamespaceRemap : String, env : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.tools.internal.xjc.api.J2SJAXBModel;
+	@:overload @:public public function bind(rootClasses : java.util.Collection<com.sun.tools.internal.xjc.api.Reference>, additionalElementDecls : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.api.Reference>, defaultNamespaceRemap : String, env : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.tools.internal.xjc.api.J2SJAXBModel;
 	
 	
 }
 @:native('com$sun$tools$internal$xjc$api$impl$j2s$JavaCompilerImpl$ErrorHandlerImpl') @:internal extern class JavaCompilerImpl_ErrorHandlerImpl implements com.sun.xml.internal.bind.v2.model.core.ErrorHandler
 {
-	@:overload public function new(messager : com.sun.mirror.apt.Messager) : Void;
+	@:overload @:public public function new(messager : com.sun.mirror.apt.Messager) : Void;
 	
-	@:overload public function error(e : com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationException) : Void;
+	@:overload @:public public function error(e : com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationException) : Void;
 	
 	
 }

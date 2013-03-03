@@ -32,11 +32,11 @@ package com.sun.jndi.rmi.registry;
 */
 extern class ReferenceWrapper extends java.rmi.server.UnicastRemoteObject implements com.sun.jndi.rmi.registry.RemoteReference
 {
-	private var wrappee : javax.naming.Reference;
+	@:protected private var wrappee : javax.naming.Reference;
 	
-	@:overload public function new(wrappee : javax.naming.Reference) : Void;
+	@:overload @:public public function new(wrappee : javax.naming.Reference) : Void;
 	
-	@:overload public function getReference() : javax.naming.Reference;
+	@:overload @:public public function getReference() : javax.naming.Reference;
 	
 	
 }

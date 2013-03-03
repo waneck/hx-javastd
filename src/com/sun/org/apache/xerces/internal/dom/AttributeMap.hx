@@ -21,7 +21,7 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class AttributeMap extends com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl
 {
 	/** Constructs a named node map. */
-	@:overload private function new(ownerNode : com.sun.org.apache.xerces.internal.dom.ElementImpl, defaults : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl) : Void;
+	@:overload @:protected private function new(ownerNode : com.sun.org.apache.xerces.internal.dom.ElementImpl, defaults : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl) : Void;
 	
 	/**
 	* Adds an attribute using its nodeName attribute.
@@ -32,7 +32,7 @@ extern class AttributeMap extends com.sun.org.apache.xerces.internal.dom.NamedNo
 	*      An Attr node to store in this map.
 	* @exception org.w3c.dom.DOMException The exception description.
 	*/
-	@:overload public function setNamedItem(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public override public function setNamedItem(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Adds an attribute using its namespaceURI and localName.
@@ -41,10 +41,10 @@ extern class AttributeMap extends com.sun.org.apache.xerces.internal.dom.NamedNo
 	*      returned, otherwise null is returned.
 	* @param arg A node to store in a named node map.
 	*/
-	@:overload public function setNamedItemNS(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public override public function setNamedItemNS(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/***/
-	@:overload public function removeNamedItem(name : String) : org.w3c.dom.Node;
+	@:overload @:public override public function removeNamedItem(name : String) : org.w3c.dom.Node;
 	
 	/**
 	* NON-DOM: Remove the node object
@@ -58,13 +58,13 @@ extern class AttributeMap extends com.sun.org.apache.xerces.internal.dom.NamedNo
 	* @return Removed node
 	* @exception DOMException
 	*/
-	@:overload private function removeItem(item : org.w3c.dom.Node, addDefault : Bool) : org.w3c.dom.Node;
+	@:overload @:protected private function removeItem(item : org.w3c.dom.Node, addDefault : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Internal removeNamedItem method allowing to specify whether an exception
 	* must be thrown if the specified name is not found.
 	*/
-	@:overload @:final private function internalRemoveNamedItem(name : String, raiseEx : Bool) : org.w3c.dom.Node;
+	@:overload @:final @:protected private function internalRemoveNamedItem(name : String, raiseEx : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -82,33 +82,33 @@ extern class AttributeMap extends com.sun.org.apache.xerces.internal.dom.NamedNo
 	* @throws              NOT_FOUND_ERR: Raised if there is no node named
 	*                      name in the map.
 	*/
-	@:overload public function removeNamedItemNS(namespaceURI : String, name : String) : org.w3c.dom.Node;
+	@:overload @:public override public function removeNamedItemNS(namespaceURI : String, name : String) : org.w3c.dom.Node;
 	
 	/**
 	* Internal removeNamedItemNS method allowing to specify whether an
 	* exception must be thrown if the specified local name and namespace URI
 	* is not found.
 	*/
-	@:overload @:final private function internalRemoveNamedItemNS(namespaceURI : String, name : String, raiseEx : Bool) : org.w3c.dom.Node;
+	@:overload @:final @:protected private function internalRemoveNamedItemNS(namespaceURI : String, name : String, raiseEx : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Cloning a NamedNodeMap is a DEEP OPERATION; it always clones
 	* all the nodes contained in the map.
 	*/
-	@:overload public function cloneMap(ownerNode : com.sun.org.apache.xerces.internal.dom.NodeImpl) : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl;
+	@:overload @:public override public function cloneMap(ownerNode : com.sun.org.apache.xerces.internal.dom.NodeImpl) : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl;
 	
 	/**
 	* Override parent's method to set the ownerNode correctly
 	*/
-	@:overload private function cloneContent(srcmap : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl) : Void;
+	@:overload @:protected override private function cloneContent(srcmap : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl) : Void;
 	
 	/**
 	* Get this AttributeMap in sync with the given "defaults" map.
 	* @param defaults The default attributes map to sync with.
 	*/
-	@:overload private function reconcileDefaults(defaults : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl) : Void;
+	@:overload @:protected private function reconcileDefaults(defaults : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl) : Void;
 	
-	@:overload @:final private function addItem(arg : org.w3c.dom.Node) : Int;
+	@:overload @:protected @:final override private function addItem(arg : org.w3c.dom.Node) : Int;
 	
 	
 }

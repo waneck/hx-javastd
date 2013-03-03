@@ -28,26 +28,26 @@ extern class BIElement
 	/**
 	* Gets the source location where this element is declared.
 	*/
-	@:overload public function getLocation() : org.xml.sax.Locator;
+	@:overload @:public public function getLocation() : org.xml.sax.Locator;
 	
 	/**
 	* The bean representation for this element.
 	*/
-	public var clazz(default, null) : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:public @:final public var clazz(default, null) : com.sun.tools.internal.xjc.model.CClassInfo;
 	
 	/** Gets the element name. */
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/**
 	* Checks if the element type is "class".
 	* If false, that means this element will be a value.
 	*/
-	@:overload public function isClass() : Bool;
+	@:overload @:public public function isClass() : Bool;
 	
 	/**
 	* Checks if this element is designated as a root element.
 	*/
-	@:overload public function isRoot() : Bool;
+	@:overload @:public public function isRoot() : Bool;
 	
 	/**
 	* Gets the JClass object that represents this declaration.
@@ -56,7 +56,7 @@ extern class BIElement
 	* This method returns null if this declaration
 	* is an element-property declaration.
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Creates constructor declarations for this element.
@@ -68,7 +68,7 @@ extern class BIElement
 	* @param   src
 	*      The ClassItem object that corresponds to this declaration
 	*/
-	@:overload public function declareConstructors(src : com.sun.tools.internal.xjc.model.CClassInfo) : Void;
+	@:overload @:public public function declareConstructors(src : com.sun.tools.internal.xjc.model.CClassInfo) : Void;
 	
 	/**
 	* Gets the conversion method for this element.
@@ -81,7 +81,7 @@ extern class BIElement
 	*        If the convert attribute is not specified, this
 	*        method returns null.
 	*/
-	@:overload public function getConversion() : com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIConversion;
+	@:overload @:public public function getConversion() : com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIConversion;
 	
 	/**
 	* Resolves the conversion name to the conversion declaration.
@@ -92,12 +92,12 @@ extern class BIElement
 	* @return
 	*        A non-null valid BIConversion object.
 	*/
-	@:overload public function conversion(name : String) : com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIConversion;
+	@:overload @:public public function conversion(name : String) : com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIConversion;
 	
 	/**
 	* Iterates all content-property declarations (except 'rest').
 	*/
-	@:overload public function getContents() : java.util.List<com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIContent>;
+	@:overload @:public public function getContents() : java.util.List<com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIContent>;
 	
 	/**
 	* Gets the attribute-property declaration, if any.
@@ -105,17 +105,17 @@ extern class BIElement
 	* @return
 	*      null if attribute declaration was not given by that name.
 	*/
-	@:overload public function attribute(name : String) : com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIAttribute;
+	@:overload @:public public function attribute(name : String) : com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIAttribute;
 	
 	/**
 	* Gets the 'rest' content-property declaration, if any.
 	* @return
 	*      if there is no 'rest' declaration, return null.
 	*/
-	@:overload public function getRest() : com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIContent;
+	@:overload @:public public function getRest() : com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIContent;
 	
 	/** Gets the location where this declaration is declared. */
-	@:overload public function getSourceLocation() : org.xml.sax.Locator;
+	@:overload @:public public function getSourceLocation() : org.xml.sax.Locator;
 	
 	
 }

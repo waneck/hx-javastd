@@ -36,7 +36,7 @@ package com.sun.net.httpserver;
 {
 	/**
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* creates a HttpsServer instance which is initially not bound to any local address/port.
@@ -45,7 +45,7 @@ package com.sun.net.httpserver;
 	* The server must also have a HttpsConfigurator established with {@link #setHttpsConfigurator(HttpsConfigurator)}
 	* @throws IOException
 	*/
-	@:overload public static function create() : com.sun.net.httpserver.HttpsServer;
+	@:overload @:public @:static public static function create() : com.sun.net.httpserver.HttpsServer;
 	
 	/**
 	* Create a <code>HttpsServer</code> instance which will bind to the
@@ -65,20 +65,20 @@ package com.sun.net.httpserver;
 	*          or if the server is already bound.
 	* @throws IOException
 	*/
-	@:overload public static function create(addr : java.net.InetSocketAddress, backlog : Int) : com.sun.net.httpserver.HttpsServer;
+	@:overload @:public @:static public static function create(addr : java.net.InetSocketAddress, backlog : Int) : com.sun.net.httpserver.HttpsServer;
 	
 	/**
 	* Sets this server's {@link HttpsConfigurator} object.
 	* @param config the HttpsConfigurator to set
 	* @throws NullPointerException if config is null.
 	*/
-	@:overload @:abstract public function setHttpsConfigurator(config : com.sun.net.httpserver.HttpsConfigurator) : Void;
+	@:overload @:public @:abstract public function setHttpsConfigurator(config : com.sun.net.httpserver.HttpsConfigurator) : Void;
 	
 	/**
 	* Gets this server's {@link HttpsConfigurator} object, if it has been set.
 	* @return the HttpsConfigurator for this server, or <code>null</code> if not set.
 	*/
-	@:overload @:abstract public function getHttpsConfigurator() : com.sun.net.httpserver.HttpsConfigurator;
+	@:overload @:public @:abstract public function getHttpsConfigurator() : com.sun.net.httpserver.HttpsConfigurator;
 	
 	
 }

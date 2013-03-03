@@ -21,10 +21,10 @@ package com.sun.org.apache.xerces.internal.xni.parser;
 extern class XMLConfigurationException extends com.sun.org.apache.xerces.internal.xni.XNIException
 {
 	/** Exception type. */
-	private var fType : com.sun.org.apache.xerces.internal.util.Status;
+	@:protected private var fType : com.sun.org.apache.xerces.internal.util.Status;
 	
 	/** Identifier. */
-	private var fIdentifier : String;
+	@:protected private var fIdentifier : String;
 	
 	/**
 	* Constructs a configuration exception with the specified type
@@ -33,7 +33,7 @@ extern class XMLConfigurationException extends com.sun.org.apache.xerces.interna
 	* @param type       The type of the exception.
 	* @param identifier The feature or property identifier.
 	*/
-	@:overload public function new(type : com.sun.org.apache.xerces.internal.util.Status, identifier : String) : Void;
+	@:overload @:public public function new(type : com.sun.org.apache.xerces.internal.util.Status, identifier : String) : Void;
 	
 	/**
 	* Constructs a configuration exception with the specified type,
@@ -43,15 +43,15 @@ extern class XMLConfigurationException extends com.sun.org.apache.xerces.interna
 	* @param identifier The feature or property identifier.
 	* @param message    The error message.
 	*/
-	@:overload public function new(type : com.sun.org.apache.xerces.internal.util.Status, identifier : String, message : String) : Void;
+	@:overload @:public public function new(type : com.sun.org.apache.xerces.internal.util.Status, identifier : String, message : String) : Void;
 	
 	/**
 	* Returns the exception type.
 	*/
-	@:overload public function getType() : com.sun.org.apache.xerces.internal.util.Status;
+	@:overload @:public public function getType() : com.sun.org.apache.xerces.internal.util.Status;
 	
 	/** Returns the feature or property identifier. */
-	@:overload public function getIdentifier() : String;
+	@:overload @:public public function getIdentifier() : String;
 	
 	
 }

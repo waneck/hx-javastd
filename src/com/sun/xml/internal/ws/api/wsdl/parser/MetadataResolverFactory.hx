@@ -30,7 +30,7 @@ extern class MetadataResolverFactory
 	*
 	* @param resolver
 	*/
-	@:overload @:abstract public function metadataResolver(resolver : org.xml.sax.EntityResolver) : com.sun.xml.internal.ws.api.wsdl.parser.MetaDataResolver;
+	@:overload @:public @:abstract public function metadataResolver(resolver : org.xml.sax.EntityResolver) : com.sun.xml.internal.ws.api.wsdl.parser.MetaDataResolver;
 	
 	
 }

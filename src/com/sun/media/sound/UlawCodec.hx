@@ -28,24 +28,24 @@ extern class UlawCodec extends com.sun.media.sound.SunCodec
 	/**
 	* Constructs a new ULAW codec object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*/
-	@:overload override public function getTargetEncodings(sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
+	@:overload @:public override public function getTargetEncodings(sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
 	
 	/**
 	*/
-	@:overload override public function getTargetFormats(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat>;
+	@:overload @:public override public function getTargetFormats(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat>;
 	
 	/**
 	*/
-	@:overload override public function getAudioInputStream(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public override public function getAudioInputStream(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
 	
 	/**
 	* use old code...
 	*/
-	@:overload override public function getAudioInputStream(targetFormat : javax.sound.sampled.AudioFormat, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public override public function getAudioInputStream(targetFormat : javax.sound.sampled.AudioFormat, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
 	
 	
 }
@@ -55,11 +55,11 @@ extern class UlawCodec extends com.sun.media.sound.SunCodec
 	* Note that this won't actually read anything; must read in
 	* two-byte units.
 	*/
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	
 }

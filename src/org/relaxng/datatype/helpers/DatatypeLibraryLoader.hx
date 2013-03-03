@@ -34,31 +34,31 @@ package org.relaxng.datatype.helpers;
 */
 extern class DatatypeLibraryLoader implements org.relaxng.datatype.DatatypeLibraryFactory
 {
-	@:overload public function createDatatypeLibrary(uri : String) : org.relaxng.datatype.DatatypeLibrary;
+	@:overload @:public public function createDatatypeLibrary(uri : String) : org.relaxng.datatype.DatatypeLibrary;
 	
 	
 }
 @:native('org$relaxng$datatype$helpers$DatatypeLibraryLoader$Service') @:internal extern class DatatypeLibraryLoader_Service
 {
-	@:overload public function new(cls : Class<Dynamic>) : Void;
+	@:overload @:public public function new(cls : Class<Dynamic>) : Void;
 	
-	@:overload public function getProviders() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getProviders() : java.util.Enumeration<Dynamic>;
 	
 	
 }
 @:native('org$relaxng$datatype$helpers$DatatypeLibraryLoader$Service$ProviderEnumeration') @:internal extern class DatatypeLibraryLoader_Service_ProviderEnumeration implements java.util.Enumeration<Dynamic>
 {
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
 	
 }
 @:native('org$relaxng$datatype$helpers$DatatypeLibraryLoader$Service$Singleton') @:internal extern class DatatypeLibraryLoader_Service_Singleton implements java.util.Enumeration<Dynamic>
 {
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
 	
 }

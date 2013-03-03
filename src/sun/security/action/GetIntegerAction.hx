@@ -68,7 +68,7 @@ package sun.security.action;
 	*
 	* @param theProp the name of the system property.
 	*/
-	@:overload public function new(theProp : String) : Void;
+	@:overload @:public public function new(theProp : String) : Void;
 	
 	/**
 	* Constructor that takes the name of the system property and the default
@@ -77,7 +77,7 @@ package sun.security.action;
 	* @param theProp the name of the system property.
 	* @param defaulVal the default value.
 	*/
-	@:overload public function new(theProp : String, defaultVal : Int) : Void;
+	@:overload @:public public function new(theProp : String, defaultVal : Int) : Void;
 	
 	/**
 	* Determines the integer value of the system property whose name was
@@ -91,7 +91,7 @@ package sun.security.action;
 	*
 	* @return the <code>Integer</code> value of the property.
 	*/
-	@:overload public function run() : Null<Int>;
+	@:overload @:public public function run() : Null<Int>;
 	
 	
 }

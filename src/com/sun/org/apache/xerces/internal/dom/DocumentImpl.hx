@@ -21,34 +21,34 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl implements org.w3c.dom.traversal.DocumentTraversal implements org.w3c.dom.events.DocumentEvent implements org.w3c.dom.ranges.DocumentRange
 {
 	/** Iterators */
-	private var iterators : java.util.Vector<Dynamic>;
+	@:protected private var iterators : java.util.Vector<Dynamic>;
 	
 	/** Ranges */
-	private var ranges : java.util.Vector<Dynamic>;
+	@:protected private var ranges : java.util.Vector<Dynamic>;
 	
 	/** Table for event listeners registered to this document nodes. */
-	private var eventListeners : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var eventListeners : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/** Bypass mutation events firing. */
-	private var mutationEvents : Bool;
+	@:protected private var mutationEvents : Bool;
 	
 	/**
 	* NON-DOM: Actually creating a Document is outside the DOM's spec,
 	* since it has to operate in terms of a particular implementation.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Constructor. */
-	@:overload public function new(grammarAccess : Bool) : Void;
+	@:overload @:public public function new(grammarAccess : Bool) : Void;
 	
 	/**
 	* For DOM2 support.
 	* The createDocument factory method is in DOMImplementation.
 	*/
-	@:overload public function new(doctype : org.w3c.dom.DocumentType) : Void;
+	@:overload @:public public function new(doctype : org.w3c.dom.DocumentType) : Void;
 	
 	/** For DOM2 support. */
-	@:overload public function new(doctype : org.w3c.dom.DocumentType, grammarAccess : Bool) : Void;
+	@:overload @:public public function new(doctype : org.w3c.dom.DocumentType, grammarAccess : Bool) : Void;
 	
 	/**
 	* Deep-clone a document, including fixing ownerDoc for the cloned
@@ -59,7 +59,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* @return org.w3c.dom.Node
 	* @param deep boolean, iff true replicate children
 	*/
-	@:overload override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Retrieve information describing the abilities of this particular
@@ -67,7 +67,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* using DOMs retrieved from several different sources, potentially
 	* with different underlying representations.
 	*/
-	@:overload public function getImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload @:public override public function getImplementation() : org.w3c.dom.DOMImplementation;
 	
 	/**
 	* NON-DOM extension:
@@ -79,7 +79,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* @param whatToShow The whatToShow mask.
 	* @param filter The NodeFilter installed. Null means no filter.
 	*/
-	@:overload public function createNodeIterator(root : org.w3c.dom.Node, whatToShow : java.StdTypes.Int16, filter : org.w3c.dom.traversal.NodeFilter) : org.w3c.dom.traversal.NodeIterator;
+	@:overload @:public public function createNodeIterator(root : org.w3c.dom.Node, whatToShow : java.StdTypes.Int16, filter : org.w3c.dom.traversal.NodeFilter) : org.w3c.dom.traversal.NodeIterator;
 	
 	/**
 	* Create and return a NodeIterator. The NodeIterator is
@@ -93,7 +93,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	*                                 EntityReference nodes
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function createNodeIterator(root : org.w3c.dom.Node, whatToShow : Int, filter : org.w3c.dom.traversal.NodeFilter, entityReferenceExpansion : Bool) : org.w3c.dom.traversal.NodeIterator;
+	@:overload @:public public function createNodeIterator(root : org.w3c.dom.Node, whatToShow : Int, filter : org.w3c.dom.traversal.NodeFilter, entityReferenceExpansion : Bool) : org.w3c.dom.traversal.NodeIterator;
 	
 	/**
 	* NON-DOM extension:
@@ -103,7 +103,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* @param whatToShow The whatToShow mask.
 	* @param filter The NodeFilter installed. Null means no filter.
 	*/
-	@:overload public function createTreeWalker(root : org.w3c.dom.Node, whatToShow : java.StdTypes.Int16, filter : org.w3c.dom.traversal.NodeFilter) : org.w3c.dom.traversal.TreeWalker;
+	@:overload @:public public function createTreeWalker(root : org.w3c.dom.Node, whatToShow : java.StdTypes.Int16, filter : org.w3c.dom.traversal.NodeFilter) : org.w3c.dom.traversal.TreeWalker;
 	
 	/**
 	* Create and return a TreeWalker.
@@ -115,11 +115,11 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	*                                 EntityReference nodes
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function createTreeWalker(root : org.w3c.dom.Node, whatToShow : Int, filter : org.w3c.dom.traversal.NodeFilter, entityReferenceExpansion : Bool) : org.w3c.dom.traversal.TreeWalker;
+	@:overload @:public public function createTreeWalker(root : org.w3c.dom.Node, whatToShow : Int, filter : org.w3c.dom.traversal.NodeFilter, entityReferenceExpansion : Bool) : org.w3c.dom.traversal.TreeWalker;
 	
 	/**
 	*/
-	@:overload public function createRange() : org.w3c.dom.ranges.Range;
+	@:overload @:public public function createRange() : org.w3c.dom.ranges.Range;
 	
 	/**
 	* Introduced in DOM Level 2. Optional. <p>
@@ -140,7 +140,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* does not support the type of Event interface requested
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function createEvent(type : String) : org.w3c.dom.events.Event;
+	@:overload @:public public function createEvent(type : String) : org.w3c.dom.events.Event;
 	
 	/**
 	* Store event listener registered on a given node
@@ -148,12 +148,12 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* node here won't be GC'ed as long as some listener is registered on it,
 	* since the eventsListeners table will have a reference to the node.
 	*/
-	@:overload private function setEventListeners(n : com.sun.org.apache.xerces.internal.dom.NodeImpl, listeners : java.util.Vector<Dynamic>) : Void;
+	@:overload @:protected private function setEventListeners(n : com.sun.org.apache.xerces.internal.dom.NodeImpl, listeners : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* Retreive event listener registered on a given node
 	*/
-	@:overload private function getEventListeners(n : com.sun.org.apache.xerces.internal.dom.NodeImpl) : java.util.Vector<Dynamic>;
+	@:overload @:protected private function getEventListeners(n : com.sun.org.apache.xerces.internal.dom.NodeImpl) : java.util.Vector<Dynamic>;
 	
 	/**
 	* Introduced in DOM Level 2. <p> Register an event listener with this
@@ -166,7 +166,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* @param useCapture True iff listener is registered on
 	*  capturing phase rather than at-target or bubbling
 	*/
-	@:overload private function addEventListener(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, type : String, listener : org.w3c.dom.events.EventListener, useCapture : Bool) : Void;
+	@:overload @:protected override private function addEventListener(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, type : String, listener : org.w3c.dom.events.EventListener, useCapture : Bool) : Void;
 	
 	/**
 	* Introduced in DOM Level 2. <p> Deregister an event listener previously
@@ -179,9 +179,9 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* @param useCapture True iff listener is registered on
 	*  capturing phase rather than at-target or bubbling
 	*/
-	@:overload private function removeEventListener(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, type : String, listener : org.w3c.dom.events.EventListener, useCapture : Bool) : Void;
+	@:overload @:protected override private function removeEventListener(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, type : String, listener : org.w3c.dom.events.EventListener, useCapture : Bool) : Void;
 	
-	@:overload private function copyEventListeners(src : com.sun.org.apache.xerces.internal.dom.NodeImpl, tgt : com.sun.org.apache.xerces.internal.dom.NodeImpl) : Void;
+	@:overload @:protected override private function copyEventListeners(src : com.sun.org.apache.xerces.internal.dom.NodeImpl, tgt : com.sun.org.apache.xerces.internal.dom.NodeImpl) : Void;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -233,7 +233,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* @return true if the event's <code>preventDefault()</code>
 	*              method was invoked by an EventListener; otherwise false.
 	*/
-	@:overload private function dispatchEvent(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, event : org.w3c.dom.events.Event) : Bool;
+	@:overload @:protected override private function dispatchEvent(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, event : org.w3c.dom.events.Event) : Bool;
 	
 	/**
 	* NON-DOM INTERNAL: DOMNodeInsertedIntoDocument and ...RemovedFrom...
@@ -250,7 +250,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* @param n target node (that was directly inserted or removed)
 	* @param e event to be sent to that node and its subtree
 	*/
-	@:overload private function dispatchEventToSubtree(n : org.w3c.dom.Node, e : org.w3c.dom.events.Event) : Void;
+	@:overload @:protected private function dispatchEventToSubtree(n : org.w3c.dom.Node, e : org.w3c.dom.events.Event) : Void;
 	
 	/**
 	* Dispatches event to the target node's descendents recursively
@@ -258,7 +258,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* @param n node to dispatch to
 	* @param e event to be sent to that node and its subtree
 	*/
-	@:overload private function dispatchingEventToSubtree(n : org.w3c.dom.Node, e : org.w3c.dom.events.Event) : Void;
+	@:overload @:protected private function dispatchingEventToSubtree(n : org.w3c.dom.Node, e : org.w3c.dom.events.Event) : Void;
 	
 	/**
 	* NON-DOM INTERNAL: Convenience wrapper for calling
@@ -267,7 +267,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* @param node node to dispatch to
 	* @param ea description of Attr affected by current operation
 	*/
-	@:overload private function dispatchAggregateEvents(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, ea : com.sun.org.apache.xerces.internal.dom.DocumentImpl.DocumentImpl_EnclosingAttr) : Void;
+	@:overload @:protected private function dispatchAggregateEvents(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, ea : com.sun.org.apache.xerces.internal.dom.DocumentImpl.DocumentImpl_EnclosingAttr) : Void;
 	
 	/**
 	* NON-DOM INTERNAL: Generate the "aggregated" post-mutation events
@@ -293,7 +293,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* @param change Type of modification to the attr. See
 	* MutationEvent.attrChange
 	*/
-	@:overload private function dispatchAggregateEvents(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, enclosingAttr : com.sun.org.apache.xerces.internal.dom.AttrImpl, oldvalue : String, change : java.StdTypes.Int16) : Void;
+	@:overload @:protected private function dispatchAggregateEvents(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, enclosingAttr : com.sun.org.apache.xerces.internal.dom.AttrImpl, oldvalue : String, change : java.StdTypes.Int16) : Void;
 	
 	/**
 	* NON-DOM INTERNAL: Pre-mutation context check, in
@@ -302,7 +302,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* @param node node to get enclosing attribute for
 	* @return either a description of that Attr, or null if none such.
 	*/
-	@:overload private function saveEnclosingAttr(node : com.sun.org.apache.xerces.internal.dom.NodeImpl) : Void;
+	@:overload @:protected private function saveEnclosingAttr(node : com.sun.org.apache.xerces.internal.dom.NodeImpl) : Void;
 	
 	
 }

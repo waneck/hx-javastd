@@ -29,78 +29,78 @@ extern class Operation extends com.sun.tools.internal.ws.processor.model.ModelOb
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function new(operation : com.sun.tools.internal.ws.processor.model.Operation, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(operation : com.sun.tools.internal.ws.processor.model.Operation, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function setName(n : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setName(n : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getUniqueName() : String;
+	@:overload @:public public function getUniqueName() : String;
 	
-	@:overload public function setUniqueName(s : String) : Void;
+	@:overload @:public public function setUniqueName(s : String) : Void;
 	
-	@:overload public function getRequest() : com.sun.tools.internal.ws.processor.model.Request;
+	@:overload @:public public function getRequest() : com.sun.tools.internal.ws.processor.model.Request;
 	
-	@:overload public function setRequest(r : com.sun.tools.internal.ws.processor.model.Request) : Void;
+	@:overload @:public public function setRequest(r : com.sun.tools.internal.ws.processor.model.Request) : Void;
 	
-	@:overload public function getResponse() : com.sun.tools.internal.ws.processor.model.Response;
+	@:overload @:public public function getResponse() : com.sun.tools.internal.ws.processor.model.Response;
 	
-	@:overload public function setResponse(r : com.sun.tools.internal.ws.processor.model.Response) : Void;
+	@:overload @:public public function setResponse(r : com.sun.tools.internal.ws.processor.model.Response) : Void;
 	
-	@:overload public function isOverloaded() : Bool;
+	@:overload @:public public function isOverloaded() : Bool;
 	
-	@:overload public function addFault(f : com.sun.tools.internal.ws.processor.model.Fault) : Void;
+	@:overload @:public public function addFault(f : com.sun.tools.internal.ws.processor.model.Fault) : Void;
 	
-	@:overload public function getFaults() : java.util.Iterator<com.sun.tools.internal.ws.processor.model.Fault>;
+	@:overload @:public public function getFaults() : java.util.Iterator<com.sun.tools.internal.ws.processor.model.Fault>;
 	
-	@:overload public function getFaultsSet() : java.util.Set<com.sun.tools.internal.ws.processor.model.Fault>;
+	@:overload @:public public function getFaultsSet() : java.util.Set<com.sun.tools.internal.ws.processor.model.Fault>;
 	
 	/* serialization */
-	@:overload public function setFaultsSet(s : java.util.Set<com.sun.tools.internal.ws.processor.model.Fault>) : Void;
+	@:overload @:public public function setFaultsSet(s : java.util.Set<com.sun.tools.internal.ws.processor.model.Fault>) : Void;
 	
-	@:overload public function getAllFaults() : java.util.Iterator<com.sun.tools.internal.ws.processor.model.Fault>;
+	@:overload @:public public function getAllFaults() : java.util.Iterator<com.sun.tools.internal.ws.processor.model.Fault>;
 	
-	@:overload public function getAllFaultsSet() : java.util.Set<com.sun.tools.internal.ws.processor.model.Fault>;
+	@:overload @:public public function getAllFaultsSet() : java.util.Set<com.sun.tools.internal.ws.processor.model.Fault>;
 	
-	@:overload public function getFaultCount() : Int;
+	@:overload @:public public function getFaultCount() : Int;
 	
-	@:overload public function getAllFaultBlocks() : java.util.Set<com.sun.tools.internal.ws.processor.model.Block>;
+	@:overload @:public public function getAllFaultBlocks() : java.util.Set<com.sun.tools.internal.ws.processor.model.Block>;
 	
-	@:overload public function getJavaMethod() : com.sun.tools.internal.ws.processor.model.java.JavaMethod;
+	@:overload @:public public function getJavaMethod() : com.sun.tools.internal.ws.processor.model.java.JavaMethod;
 	
-	@:overload public function setJavaMethod(i : com.sun.tools.internal.ws.processor.model.java.JavaMethod) : Void;
+	@:overload @:public public function setJavaMethod(i : com.sun.tools.internal.ws.processor.model.java.JavaMethod) : Void;
 	
-	@:overload public function getSOAPAction() : String;
+	@:overload @:public public function getSOAPAction() : String;
 	
-	@:overload public function setSOAPAction(s : String) : Void;
+	@:overload @:public public function setSOAPAction(s : String) : Void;
 	
-	@:overload public function getStyle() : com.sun.tools.internal.ws.wsdl.document.soap.SOAPStyle;
+	@:overload @:public public function getStyle() : com.sun.tools.internal.ws.wsdl.document.soap.SOAPStyle;
 	
-	@:overload public function setStyle(s : com.sun.tools.internal.ws.wsdl.document.soap.SOAPStyle) : Void;
+	@:overload @:public public function setStyle(s : com.sun.tools.internal.ws.wsdl.document.soap.SOAPStyle) : Void;
 	
-	@:overload public function getUse() : com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse;
+	@:overload @:public public function getUse() : com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse;
 	
-	@:overload public function setUse(u : com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse) : Void;
+	@:overload @:public public function setUse(u : com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse) : Void;
 	
-	@:overload public function isWrapped() : Bool;
+	@:overload @:public public function isWrapped() : Bool;
 	
-	@:overload public function setWrapped(isWrapped : Bool) : Void;
+	@:overload @:public public function setWrapped(isWrapped : Bool) : Void;
 	
-	@:overload override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
+	@:overload @:public override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
 	
-	@:overload public function setCustomizedName(name : String) : Void;
+	@:overload @:public public function setCustomizedName(name : String) : Void;
 	
-	@:overload public function getCustomizedName() : String;
+	@:overload @:public public function getCustomizedName() : String;
 	
-	@:overload public function getJavaMethodName() : String;
+	@:overload @:public public function getJavaMethodName() : String;
 	
-	@:overload public function getWSDLPortTypeOperation() : com.sun.tools.internal.ws.wsdl.document.Operation;
+	@:overload @:public public function getWSDLPortTypeOperation() : com.sun.tools.internal.ws.wsdl.document.Operation;
 	
-	@:overload public function setWSDLPortTypeOperation(wsdlOperation : com.sun.tools.internal.ws.wsdl.document.Operation) : Void;
+	@:overload @:public public function setWSDLPortTypeOperation(wsdlOperation : com.sun.tools.internal.ws.wsdl.document.Operation) : Void;
 	
 	
 }

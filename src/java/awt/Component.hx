@@ -30,7 +30,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* Specifies an alignment to the top of the component.
 	* @see     #getAlignmentY
 	*/
-	public static var TOP_ALIGNMENT(default, null) : Single;
+	@:public @:static @:final public static var TOP_ALIGNMENT(default, null) : Single;
 	
 	/**
 	* Ease-of-use constant for <code>getAlignmentY</code> and
@@ -39,28 +39,28 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see     #getAlignmentX
 	* @see     #getAlignmentY
 	*/
-	public static var CENTER_ALIGNMENT(default, null) : Single;
+	@:public @:static @:final public static var CENTER_ALIGNMENT(default, null) : Single;
 	
 	/**
 	* Ease-of-use constant for <code>getAlignmentY</code>.
 	* Specifies an alignment to the bottom of the component.
 	* @see     #getAlignmentY
 	*/
-	public static var BOTTOM_ALIGNMENT(default, null) : Single;
+	@:public @:static @:final public static var BOTTOM_ALIGNMENT(default, null) : Single;
 	
 	/**
 	* Ease-of-use constant for <code>getAlignmentX</code>.
 	* Specifies an alignment to the left side of the component.
 	* @see     #getAlignmentX
 	*/
-	public static var LEFT_ALIGNMENT(default, null) : Single;
+	@:public @:static @:final public static var LEFT_ALIGNMENT(default, null) : Single;
 	
 	/**
 	* Ease-of-use constant for <code>getAlignmentX</code>.
 	* Specifies an alignment to the right side of the component.
 	* @see     #getAlignmentX
 	*/
-	public static var RIGHT_ALIGNMENT(default, null) : Single;
+	@:public @:static @:final public static var RIGHT_ALIGNMENT(default, null) : Single;
 	
 	/**
 	* Constructs a new component. Class <code>Component</code> can be
@@ -69,7 +69,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* hosted by a native container somewhere higher up in the component
 	* tree (for example, by a <code>Frame</code> object).
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Gets the name of the component.
@@ -77,7 +77,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see    #setName
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getName() : String;
+	@:require(java1) @:overload @:public public function getName() : String;
 	
 	/**
 	* Sets the name of the component to the specified string.
@@ -86,21 +86,21 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #getName
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function setName(name : String) : Void;
+	@:require(java1) @:overload @:public public function setName(name : String) : Void;
 	
 	/**
 	* Gets the parent of this component.
 	* @return the parent container of this component
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload public function getParent() : java.awt.Container;
+	@:require(java0) @:overload @:public public function getParent() : java.awt.Container;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* programs should not directly manipulate peers;
 	* replaced by <code>boolean isDisplayable()</code>.
 	*/
-	@:overload public function getPeer() : java.awt.peer.ComponentPeer;
+	@:overload @:public public function getPeer() : java.awt.peer.ComponentPeer;
 	
 	/**
 	* Associate a <code>DropTarget</code> with this component.
@@ -110,13 +110,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #isEnabled
 	* @param dt The DropTarget
 	*/
-	@:overload @:synchronized public function setDropTarget(dt : java.awt.dnd.DropTarget) : Void;
+	@:overload @:public @:synchronized public function setDropTarget(dt : java.awt.dnd.DropTarget) : Void;
 	
 	/**
 	* Gets the <code>DropTarget</code> associated with this
 	* <code>Component</code>.
 	*/
-	@:overload @:synchronized public function getDropTarget() : java.awt.dnd.DropTarget;
+	@:overload @:public @:synchronized public function getDropTarget() : java.awt.dnd.DropTarget;
 	
 	/**
 	* Gets the <code>GraphicsConfiguration</code> associated with this
@@ -133,7 +133,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*          <code>Component</code> or <code>null</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getGraphicsConfiguration() : java.awt.GraphicsConfiguration;
+	@:require(java3) @:overload @:public public function getGraphicsConfiguration() : java.awt.GraphicsConfiguration;
 	
 	/**
 	* Gets this component's locking object (the object that owns the thread
@@ -141,7 +141,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* operations.
 	* @return this component's locking object
 	*/
-	@:overload @:final public function getTreeLock() : Dynamic;
+	@:overload @:public @:final public function getTreeLock() : Dynamic;
 	
 	/**
 	* Gets the toolkit of this component. Note that
@@ -151,7 +151,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @return  the toolkit of this component
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload public function getToolkit() : java.awt.Toolkit;
+	@:require(java0) @:overload @:public public function getToolkit() : java.awt.Toolkit;
 	
 	/**
 	* Determines whether this component is valid. A component is valid
@@ -166,7 +166,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #invalidate
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload public function isValid() : Bool;
+	@:require(java0) @:overload @:public public function isValid() : Bool;
 	
 	/**
 	* Determines whether this component is displayable. A component is
@@ -192,7 +192,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see Window#dispose
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function isDisplayable() : Bool;
+	@:require(java2) @:overload @:public public function isDisplayable() : Bool;
 	
 	/**
 	* Determines whether this component should be visible when its
@@ -204,7 +204,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #setVisible
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload public function isVisible() : Bool;
+	@:require(java0) @:overload @:public public function isVisible() : Bool;
 	
 	/**
 	* Returns the position of the mouse pointer in this <code>Component</code>'s
@@ -233,7 +233,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @return    mouse coordinates relative to this <code>Component</code>, or null
 	* @since     1.5
 	*/
-	@:require(java5) @:overload public function getMousePosition() : java.awt.Point;
+	@:require(java5) @:overload @:public public function getMousePosition() : java.awt.Point;
 	
 	/**
 	* Determines whether this component is showing on screen. This means
@@ -253,7 +253,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #setVisible
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload public function isShowing() : Bool;
+	@:require(java0) @:overload @:public public function isShowing() : Bool;
 	
 	/**
 	* Determines whether this component is enabled. An enabled component
@@ -265,7 +265,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #setEnabled
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload public function isEnabled() : Bool;
+	@:require(java0) @:overload @:public public function isEnabled() : Bool;
 	
 	/**
 	* Enables or disables this component, depending on the value of the
@@ -284,25 +284,25 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #isLightweight
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function setEnabled(b : Bool) : Void;
+	@:require(java1) @:overload @:public public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setEnabled(boolean)</code>.
 	*/
-	@:overload public function enable() : Void;
+	@:overload @:public public function enable() : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setEnabled(boolean)</code>.
 	*/
-	@:overload public function enable(b : Bool) : Void;
+	@:overload @:public public function enable(b : Bool) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setEnabled(boolean)</code>.
 	*/
-	@:overload public function disable() : Void;
+	@:overload @:public public function disable() : Void;
 	
 	/**
 	* Returns true if this component is painted to an offscreen image
@@ -312,7 +312,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*
 	* @return false by default
 	*/
-	@:overload public function isDoubleBuffered() : Bool;
+	@:overload @:public public function isDoubleBuffered() : Bool;
 	
 	/**
 	* Enables or disables input method support for this component. If input
@@ -326,7 +326,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #processKeyEvent
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function enableInputMethods(enable : Bool) : Void;
+	@:require(java2) @:overload @:public public function enableInputMethods(enable : Bool) : Void;
 	
 	/**
 	* Shows or hides this component depending on the value of parameter
@@ -341,25 +341,25 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #invalidate
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function setVisible(b : Bool) : Void;
+	@:require(java1) @:overload @:public public function setVisible(b : Bool) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setVisible(boolean)</code>.
 	*/
-	@:overload public function show() : Void;
+	@:overload @:public public function show() : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setVisible(boolean)</code>.
 	*/
-	@:overload public function show(b : Bool) : Void;
+	@:overload @:public public function show(b : Bool) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setVisible(boolean)</code>.
 	*/
-	@:overload public function hide() : Void;
+	@:overload @:public public function hide() : Void;
 	
 	/**
 	* Gets the foreground color of this component.
@@ -371,7 +371,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @beaninfo
 	*       bound: true
 	*/
-	@:require(java0) @:overload public function getForeground() : java.awt.Color;
+	@:require(java0) @:overload @:public public function getForeground() : java.awt.Color;
 	
 	/**
 	* Sets the foreground color of this component.
@@ -382,7 +382,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #getForeground
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload public function setForeground(c : java.awt.Color) : Void;
+	@:require(java0) @:overload @:public public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* Returns whether the foreground color has been explicitly set for this
@@ -393,7 +393,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*         set for this Component; <code>false</code> otherwise.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isForegroundSet() : Bool;
+	@:require(java4) @:overload @:public public function isForegroundSet() : Bool;
 	
 	/**
 	* Gets the background color of this component.
@@ -403,7 +403,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #setBackground
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload public function getBackground() : java.awt.Color;
+	@:require(java0) @:overload @:public public function getBackground() : java.awt.Color;
 	
 	/**
 	* Sets the background color of this component.
@@ -420,7 +420,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @beaninfo
 	*       bound: true
 	*/
-	@:require(java0) @:overload public function setBackground(c : java.awt.Color) : Void;
+	@:require(java0) @:overload @:public public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Returns whether the background color has been explicitly set for this
@@ -431,7 +431,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*         set for this Component; <code>false</code> otherwise.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isBackgroundSet() : Bool;
+	@:require(java4) @:overload @:public public function isBackgroundSet() : Bool;
 	
 	/**
 	* Gets the font of this component.
@@ -440,7 +440,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #setFont
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload public function getFont() : java.awt.Font;
+	@:require(java0) @:overload @:public public function getFont() : java.awt.Font;
 	
 	/**
 	* Sets the font of this component.
@@ -457,7 +457,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @beaninfo
 	*       bound: true
 	*/
-	@:require(java0) @:overload public function setFont(f : java.awt.Font) : Void;
+	@:require(java0) @:overload @:public public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Returns whether the font has been explicitly set for this Component. If
@@ -468,7 +468,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*         Component; <code>false</code> otherwise.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isFontSet() : Bool;
+	@:require(java4) @:overload @:public public function isFontSet() : Bool;
 	
 	/**
 	* Gets the locale of this component.
@@ -481,7 +481,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*          from the containing parent
 	* @since  JDK1.1
 	*/
-	@:require(java1) @:overload public function getLocale() : java.util.Locale;
+	@:require(java1) @:overload @:public public function getLocale() : java.util.Locale;
 	
 	/**
 	* Sets the locale of this component.  This is a bound property.
@@ -494,7 +494,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #invalidate
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function setLocale(l : java.util.Locale) : Void;
+	@:require(java1) @:overload @:public public function setLocale(l : java.util.Locale) : Void;
 	
 	/**
 	* Gets the instance of <code>ColorModel</code> used to display
@@ -505,7 +505,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see Toolkit#getColorModel()
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload public function getColorModel() : java.awt.image.ColorModel;
+	@:require(java0) @:overload @:public public function getColorModel() : java.awt.image.ColorModel;
 	
 	/**
 	* Gets the location of this component in the form of a
@@ -527,7 +527,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #getLocationOnScreen
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getLocation() : java.awt.Point;
+	@:require(java1) @:overload @:public public function getLocation() : java.awt.Point;
 	
 	/**
 	* Gets the location of this component in the form of a point
@@ -541,13 +541,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #setLocation
 	* @see #getLocation
 	*/
-	@:overload public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public public function getLocationOnScreen() : java.awt.Point;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getLocation()</code>.
 	*/
-	@:overload public function location() : java.awt.Point;
+	@:overload @:public public function location() : java.awt.Point;
 	
 	/**
 	* Moves this component to a new location. The top-left corner of
@@ -566,13 +566,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #invalidate
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function setLocation(x : Int, y : Int) : Void;
+	@:require(java1) @:overload @:public public function setLocation(x : Int, y : Int) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setLocation(int, int)</code>.
 	*/
-	@:overload public function move(x : Int, y : Int) : Void;
+	@:overload @:public public function move(x : Int, y : Int) : Void;
 	
 	/**
 	* Moves this component to a new location. The top-left corner of
@@ -590,7 +590,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #invalidate
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function setLocation(p : java.awt.Point) : Void;
+	@:require(java1) @:overload @:public public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* Returns the size of this component in the form of a
@@ -604,13 +604,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #setSize
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getSize() : java.awt.Dimension;
+	@:require(java1) @:overload @:public public function getSize() : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getSize()</code>.
 	*/
-	@:overload public function size() : java.awt.Dimension;
+	@:overload @:public public function size() : java.awt.Dimension;
 	
 	/**
 	* Resizes this component so that it has width <code>width</code>
@@ -626,13 +626,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #invalidate
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function setSize(width : Int, height : Int) : Void;
+	@:require(java1) @:overload @:public public function setSize(width : Int, height : Int) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setSize(int, int)</code>.
 	*/
-	@:overload public function resize(width : Int, height : Int) : Void;
+	@:overload @:public public function resize(width : Int, height : Int) : Void;
 	
 	/**
 	* Resizes this component so that it has width <code>d.width</code>
@@ -649,13 +649,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #invalidate
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function setSize(d : java.awt.Dimension) : Void;
+	@:require(java1) @:overload @:public public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setSize(Dimension)</code>.
 	*/
-	@:overload public function resize(d : java.awt.Dimension) : Void;
+	@:overload @:public public function resize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Gets the bounds of this component in the form of a
@@ -667,13 +667,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #getLocation
 	* @see #getSize
 	*/
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getBounds()</code>.
 	*/
-	@:overload public function bounds() : java.awt.Rectangle;
+	@:overload @:public public function bounds() : java.awt.Rectangle;
 	
 	/**
 	* Moves and resizes this component. The new location of the top-left
@@ -696,13 +696,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #invalidate
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function setBounds(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java1) @:overload @:public public function setBounds(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setBounds(int, int, int, int)</code>.
 	*/
-	@:overload public function reshape(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function reshape(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Moves and resizes this component to conform to the new
@@ -724,7 +724,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #invalidate
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function setBounds(r : java.awt.Rectangle) : Void;
+	@:require(java1) @:overload @:public public function setBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Returns the current x coordinate of the components origin.
@@ -736,7 +736,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @return the current x coordinate of the components origin
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getX() : Int;
+	@:require(java2) @:overload @:public public function getX() : Int;
 	
 	/**
 	* Returns the current y coordinate of the components origin.
@@ -748,7 +748,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @return the current y coordinate of the components origin
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getY() : Int;
+	@:require(java2) @:overload @:public public function getY() : Int;
 	
 	/**
 	* Returns the current width of this component.
@@ -760,7 +760,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @return the current width of this component
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getWidth() : Int;
+	@:require(java2) @:overload @:public public function getWidth() : Int;
 	
 	/**
 	* Returns the current height of this component.
@@ -772,7 +772,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @return the current height of this component
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getHeight() : Int;
+	@:require(java2) @:overload @:public public function getHeight() : Int;
 	
 	/**
 	* Stores the bounds of this component into "return value" <b>rv</b> and
@@ -785,7 +785,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @param rv the return value, modified to the components bounds
 	* @return rv
 	*/
-	@:overload public function getBounds(rv : java.awt.Rectangle) : java.awt.Rectangle;
+	@:overload @:public public function getBounds(rv : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	/**
 	* Stores the width/height of this component into "return value" <b>rv</b>
@@ -797,7 +797,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @param rv the return value, modified to the components size
 	* @return rv
 	*/
-	@:overload public function getSize(rv : java.awt.Dimension) : java.awt.Dimension;
+	@:overload @:public public function getSize(rv : java.awt.Dimension) : java.awt.Dimension;
 	
 	/**
 	* Stores the x,y origin of this component into "return value" <b>rv</b>
@@ -810,7 +810,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @param rv the return value, modified to the components location
 	* @return rv
 	*/
-	@:overload public function getLocation(rv : java.awt.Point) : java.awt.Point;
+	@:overload @:public public function getLocation(rv : java.awt.Point) : java.awt.Point;
 	
 	/**
 	* Returns true if this component is completely opaque, returns
@@ -829,7 +829,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #isLightweight
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function isOpaque() : Bool;
+	@:require(java2) @:overload @:public public function isOpaque() : Bool;
 	
 	/**
 	* A lightweight component doesn't have a native toolkit peer.
@@ -847,7 +847,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #isDisplayable
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function isLightweight() : Bool;
+	@:require(java2) @:overload @:public public function isLightweight() : Bool;
 	
 	/**
 	* Sets the preferred size of this component to a constant
@@ -860,7 +860,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #isPreferredSizeSet
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setPreferredSize(preferredSize : java.awt.Dimension) : Void;
+	@:require(java5) @:overload @:public public function setPreferredSize(preferredSize : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns true if the preferred size has been set to a
@@ -870,7 +870,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*         with a non-null value.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isPreferredSizeSet() : Bool;
+	@:require(java5) @:overload @:public public function isPreferredSizeSet() : Bool;
 	
 	/**
 	* Gets the preferred size of this component.
@@ -878,13 +878,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #getMinimumSize
 	* @see LayoutManager
 	*/
-	@:overload public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public public function getPreferredSize() : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getPreferredSize()</code>.
 	*/
-	@:overload public function preferredSize() : java.awt.Dimension;
+	@:overload @:public public function preferredSize() : java.awt.Dimension;
 	
 	/**
 	* Sets the minimum size of this component to a constant
@@ -897,7 +897,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #isMinimumSizeSet
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setMinimumSize(minimumSize : java.awt.Dimension) : Void;
+	@:require(java5) @:overload @:public public function setMinimumSize(minimumSize : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns whether or not <code>setMinimumSize</code> has been
@@ -907,7 +907,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*              non-null value.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isMinimumSizeSet() : Bool;
+	@:require(java5) @:overload @:public public function isMinimumSizeSet() : Bool;
 	
 	/**
 	* Gets the mininimum size of this component.
@@ -915,13 +915,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #getPreferredSize
 	* @see LayoutManager
 	*/
-	@:overload public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public public function getMinimumSize() : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getMinimumSize()</code>.
 	*/
-	@:overload public function minimumSize() : java.awt.Dimension;
+	@:overload @:public public function minimumSize() : java.awt.Dimension;
 	
 	/**
 	* Sets the maximum size of this component to a constant
@@ -935,7 +935,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #isMaximumSizeSet
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setMaximumSize(maximumSize : java.awt.Dimension) : Void;
+	@:require(java5) @:overload @:public public function setMaximumSize(maximumSize : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns true if the maximum size has been set to a non-<code>null</code>
@@ -945,7 +945,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*          false otherwise
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isMaximumSizeSet() : Bool;
+	@:require(java5) @:overload @:public public function isMaximumSizeSet() : Bool;
 	
 	/**
 	* Gets the maximum size of this component.
@@ -954,7 +954,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #getPreferredSize
 	* @see LayoutManager
 	*/
-	@:overload public function getMaximumSize() : java.awt.Dimension;
+	@:overload @:public public function getMaximumSize() : java.awt.Dimension;
 	
 	/**
 	* Returns the alignment along the x axis.  This specifies how
@@ -963,7 +963,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* where 0 represents alignment along the origin, 1 is aligned
 	* the furthest away from the origin, 0.5 is centered, etc.
 	*/
-	@:overload public function getAlignmentX() : Single;
+	@:overload @:public public function getAlignmentX() : Single;
 	
 	/**
 	* Returns the alignment along the y axis.  This specifies how
@@ -972,7 +972,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* where 0 represents alignment along the origin, 1 is aligned
 	* the furthest away from the origin, 0.5 is centered, etc.
 	*/
-	@:overload public function getAlignmentY() : Single;
+	@:overload @:public public function getAlignmentY() : Single;
 	
 	/**
 	* Returns the baseline.  The baseline is measured from the top of
@@ -998,7 +998,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see java.awt.FontMetrics
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getBaseline(width : Int, height : Int) : Int;
+	@:require(java6) @:overload @:public public function getBaseline(width : Int, height : Int) : Int;
 	
 	/**
 	* Returns an enum indicating how the baseline of the component
@@ -1021,7 +1021,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getBaselineResizeBehavior() : java.awt.Component.Component_BaselineResizeBehavior;
+	@:require(java6) @:overload @:public public function getBaselineResizeBehavior() : java.awt.Component.Component_BaselineResizeBehavior;
 	
 	/**
 	* Prompts the layout manager to lay out this component. This is
@@ -1030,13 +1030,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #validate
 	* @see LayoutManager
 	*/
-	@:overload public function doLayout() : Void;
+	@:overload @:public public function doLayout() : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>doLayout()</code>.
 	*/
-	@:overload public function layout() : Void;
+	@:overload @:public public function layout() : Void;
 	
 	/**
 	* Validates this component.
@@ -1050,7 +1050,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       Container#validate
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function validate() : Void;
+	@:require(java0) @:overload @:public public function validate() : Void;
 	
 	/**
 	* Invalidates this component and its ancestors.
@@ -1074,7 +1074,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       java.awt.Container#isValidateRoot
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function invalidate() : Void;
+	@:require(java0) @:overload @:public public function invalidate() : Void;
 	
 	/**
 	* Revalidates the component hierarchy up to the nearest validate root.
@@ -1092,7 +1092,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see Container#isValidateRoot
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function revalidate() : Void;
+	@:require(java7) @:overload @:public public function revalidate() : Void;
 	
 	/**
 	* Creates a graphics context for this component. This method will
@@ -1103,7 +1103,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #paint
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function getGraphics() : java.awt.Graphics;
+	@:require(java0) @:overload @:public public function getGraphics() : java.awt.Graphics;
 	
 	/**
 	* Gets the font metrics for the specified font.
@@ -1124,7 +1124,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       Toolkit#getFontMetrics(Font)
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function getFontMetrics(font : java.awt.Font) : java.awt.FontMetrics;
+	@:require(java0) @:overload @:public public function getFontMetrics(font : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Sets the cursor image to the specified cursor.  This cursor
@@ -1151,7 +1151,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       Cursor
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function setCursor(cursor : java.awt.Cursor) : Void;
+	@:require(java1) @:overload @:public public function setCursor(cursor : java.awt.Cursor) : Void;
 	
 	/**
 	* Gets the cursor set in the component. If the component does
@@ -1161,7 +1161,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #setCursor
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getCursor() : java.awt.Cursor;
+	@:require(java1) @:overload @:public public function getCursor() : java.awt.Cursor;
 	
 	/**
 	* Returns whether the cursor has been explicitly set for this Component.
@@ -1172,7 +1172,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*         Component; <code>false</code> otherwise.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isCursorSet() : Bool;
+	@:require(java4) @:overload @:public public function isCursorSet() : Bool;
 	
 	/**
 	* Paints this component.
@@ -1198,7 +1198,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #update
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function paint(g : java.awt.Graphics) : Void;
+	@:require(java0) @:overload @:public public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Updates this component.
@@ -1233,7 +1233,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #repaint()
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function update(g : java.awt.Graphics) : Void;
+	@:require(java0) @:overload @:public public function update(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Paints this component and all of its subcomponents.
@@ -1247,7 +1247,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #paint
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function paintAll(g : java.awt.Graphics) : Void;
+	@:require(java0) @:overload @:public public function paintAll(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Repaints this component.
@@ -1267,7 +1267,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #update(Graphics)
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function repaint() : Void;
+	@:require(java0) @:overload @:public public function repaint() : Void;
 	
 	/**
 	* Repaints the component.  If this component is a lightweight
@@ -1284,7 +1284,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #update(Graphics)
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload public function repaint(tm : haxe.Int64) : Void;
+	@:require(java0) @:overload @:public public function repaint(tm : haxe.Int64) : Void;
 	
 	/**
 	* Repaints the specified rectangle of this component.
@@ -1306,7 +1306,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #update(Graphics)
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function repaint(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java0) @:overload @:public public function repaint(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Repaints the specified rectangle of this component within
@@ -1330,7 +1330,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #update(Graphics)
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function repaint(tm : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java0) @:overload @:public public function repaint(tm : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Prints this component. Applications should override this method
@@ -1348,7 +1348,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #paint(Graphics)
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function print(g : java.awt.Graphics) : Void;
+	@:require(java0) @:overload @:public public function print(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Prints this component and all of its subcomponents.
@@ -1361,7 +1361,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #print(Graphics)
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function printAll(g : java.awt.Graphics) : Void;
+	@:require(java0) @:overload @:public public function printAll(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Repaints the component when the image has changed.
@@ -1409,7 +1409,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see     java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function imageUpdate(img : java.awt.Image, infoflags : Int, x : Int, y : Int, w : Int, h : Int) : Bool;
+	@:require(java0) @:overload @:public public function imageUpdate(img : java.awt.Image, infoflags : Int, x : Int, y : Int, w : Int, h : Int) : Bool;
 	
 	/**
 	* Creates an image from the specified image producer.
@@ -1417,7 +1417,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @return    the image produced
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function createImage(producer : java.awt.image.ImageProducer) : java.awt.Image;
+	@:require(java0) @:overload @:public public function createImage(producer : java.awt.image.ImageProducer) : java.awt.Image;
 	
 	/**
 	* Creates an off-screen drawable image
@@ -1433,7 +1433,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see GraphicsEnvironment#isHeadless
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function createImage(width : Int, height : Int) : java.awt.Image;
+	@:require(java0) @:overload @:public public function createImage(width : Int, height : Int) : java.awt.Image;
 	
 	/**
 	* Creates a volatile off-screen drawable image
@@ -1450,7 +1450,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see GraphicsEnvironment#isHeadless
 	* @since     1.4
 	*/
-	@:require(java4) @:overload public function createVolatileImage(width : Int, height : Int) : java.awt.image.VolatileImage;
+	@:require(java4) @:overload @:public public function createVolatileImage(width : Int, height : Int) : java.awt.image.VolatileImage;
 	
 	/**
 	* Creates a volatile off-screen drawable image, with the given capabilities.
@@ -1467,7 +1467,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see java.awt.image.VolatileImage
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function createVolatileImage(width : Int, height : Int, caps : java.awt.ImageCapabilities) : java.awt.image.VolatileImage;
+	@:require(java4) @:overload @:public public function createVolatileImage(width : Int, height : Int, caps : java.awt.ImageCapabilities) : java.awt.image.VolatileImage;
 	
 	/**
 	* Prepares an image for rendering on this component.  The image
@@ -1481,7 +1481,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*           prepared; <code>false</code> otherwise
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function prepareImage(image : java.awt.Image, observer : java.awt.image.ImageObserver) : Bool;
+	@:require(java0) @:overload @:public public function prepareImage(image : java.awt.Image, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Prepares an image for rendering on this component at the
@@ -1501,7 +1501,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       java.awt.image.ImageObserver
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function prepareImage(image : java.awt.Image, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:require(java0) @:overload @:public public function prepareImage(image : java.awt.Image, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Returns the status of the construction of a screen representation
@@ -1525,7 +1525,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      java.awt.image.ImageObserver
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload public function checkImage(image : java.awt.Image, observer : java.awt.image.ImageObserver) : Int;
+	@:require(java0) @:overload @:public public function checkImage(image : java.awt.Image, observer : java.awt.image.ImageObserver) : Int;
 	
 	/**
 	* Returns the status of the construction of a screen representation
@@ -1559,7 +1559,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      java.awt.image.ImageObserver
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload public function checkImage(image : java.awt.Image, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Int;
+	@:require(java0) @:overload @:public public function checkImage(image : java.awt.Image, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Int;
 	
 	/**
 	* Sets whether or not paint messages received from the operating system
@@ -1578,7 +1578,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see java.awt.image.BufferStrategy
 	* @see GraphicsDevice#setFullScreenWindow
 	*/
-	@:require(java4) @:overload public function setIgnoreRepaint(ignoreRepaint : Bool) : Void;
+	@:require(java4) @:overload @:public public function setIgnoreRepaint(ignoreRepaint : Bool) : Void;
 	
 	/**
 	* @return whether or not paint messages received from the operating system
@@ -1587,7 +1587,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @since 1.4
 	* @see #setIgnoreRepaint
 	*/
-	@:require(java4) @:overload public function getIgnoreRepaint() : Bool;
+	@:require(java4) @:overload @:public public function getIgnoreRepaint() : Bool;
 	
 	/**
 	* Checks whether this component "contains" the specified point,
@@ -1598,13 +1598,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #getComponentAt(int, int)
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function contains(x : Int, y : Int) : Bool;
+	@:require(java1) @:overload @:public public function contains(x : Int, y : Int) : Bool;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by contains(int, int).
 	*/
-	@:overload public function inside(x : Int, y : Int) : Bool;
+	@:overload @:public public function inside(x : Int, y : Int) : Bool;
 	
 	/**
 	* Checks whether this component "contains" the specified point,
@@ -1615,7 +1615,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #getComponentAt(Point)
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function contains(p : java.awt.Point) : Bool;
+	@:require(java1) @:overload @:public public function contains(p : java.awt.Point) : Bool;
 	
 	/**
 	* Determines if this component or one of its immediate
@@ -1638,13 +1638,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #contains(int, int)
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function getComponentAt(x : Int, y : Int) : java.awt.Component;
+	@:require(java0) @:overload @:public public function getComponentAt(x : Int, y : Int) : java.awt.Component;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by getComponentAt(int, int).
 	*/
-	@:overload public function locate(x : Int, y : Int) : java.awt.Component;
+	@:overload @:public public function locate(x : Int, y : Int) : java.awt.Component;
 	
 	/**
 	* Returns the component or subcomponent that contains the
@@ -1653,13 +1653,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       java.awt.Component#contains
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function getComponentAt(p : java.awt.Point) : java.awt.Component;
+	@:require(java1) @:overload @:public public function getComponentAt(p : java.awt.Point) : java.awt.Component;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>dispatchEvent(AWTEvent e)</code>.
 	*/
-	@:overload public function deliverEvent(e : java.awt.Event) : Void;
+	@:overload @:public public function deliverEvent(e : java.awt.Event) : Void;
 	
 	/**
 	* Dispatches an event to this component or one of its sub components.
@@ -1667,13 +1667,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* events which have been enabled for the <code>Component</code>.
 	* @param e the event
 	*/
-	@:overload @:final public function dispatchEvent(e : java.awt.AWTEvent) : Void;
+	@:overload @:public @:final public function dispatchEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by dispatchEvent(AWTEvent).
 	*/
-	@:overload public function postEvent(e : java.awt.Event) : Bool;
+	@:overload @:public public function postEvent(e : java.awt.Event) : Bool;
 	
 	/**
 	* Adds the specified component listener to receive component events from
@@ -1690,7 +1690,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getComponentListeners
 	* @since    JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function addComponentListener(l : java.awt.event.ComponentListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function addComponentListener(l : java.awt.event.ComponentListener) : Void;
 	
 	/**
 	* Removes the specified component listener so that it no longer
@@ -1708,7 +1708,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getComponentListeners
 	* @since    JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeComponentListener(l : java.awt.event.ComponentListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeComponentListener(l : java.awt.event.ComponentListener) : Void;
 	
 	/**
 	* Returns an array of all the component listeners
@@ -1722,7 +1722,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #removeComponentListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getComponentListeners() : java.NativeArray<java.awt.event.ComponentListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getComponentListeners() : java.NativeArray<java.awt.event.ComponentListener>;
 	
 	/**
 	* Adds the specified focus listener to receive focus events from
@@ -1739,7 +1739,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getFocusListeners
 	* @since    JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Removes the specified focus listener so that it no longer
@@ -1758,7 +1758,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getFocusListeners
 	* @since    JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Returns an array of all the focus listeners
@@ -1772,7 +1772,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #removeFocusListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getFocusListeners() : java.NativeArray<java.awt.event.FocusListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getFocusListeners() : java.NativeArray<java.awt.event.FocusListener>;
 	
 	/**
 	* Adds the specified hierarchy listener to receive hierarchy changed
@@ -1790,7 +1790,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getHierarchyListeners
 	* @since    1.3
 	*/
-	@:require(java3) @:overload public function addHierarchyListener(l : java.awt.event.HierarchyListener) : Void;
+	@:require(java3) @:overload @:public public function addHierarchyListener(l : java.awt.event.HierarchyListener) : Void;
 	
 	/**
 	* Removes the specified hierarchy listener so that it no longer
@@ -1809,7 +1809,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getHierarchyListeners
 	* @since    1.3
 	*/
-	@:require(java3) @:overload public function removeHierarchyListener(l : java.awt.event.HierarchyListener) : Void;
+	@:require(java3) @:overload @:public public function removeHierarchyListener(l : java.awt.event.HierarchyListener) : Void;
 	
 	/**
 	* Returns an array of all the hierarchy listeners
@@ -1823,7 +1823,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #removeHierarchyListener
 	* @since    1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getHierarchyListeners() : java.NativeArray<java.awt.event.HierarchyListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getHierarchyListeners() : java.NativeArray<java.awt.event.HierarchyListener>;
 	
 	/**
 	* Adds the specified hierarchy bounds listener to receive hierarchy
@@ -1841,7 +1841,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getHierarchyBoundsListeners
 	* @since    1.3
 	*/
-	@:require(java3) @:overload public function addHierarchyBoundsListener(l : java.awt.event.HierarchyBoundsListener) : Void;
+	@:require(java3) @:overload @:public public function addHierarchyBoundsListener(l : java.awt.event.HierarchyBoundsListener) : Void;
 	
 	/**
 	* Removes the specified hierarchy bounds listener so that it no longer
@@ -1860,7 +1860,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getHierarchyBoundsListeners
 	* @since    1.3
 	*/
-	@:require(java3) @:overload public function removeHierarchyBoundsListener(l : java.awt.event.HierarchyBoundsListener) : Void;
+	@:require(java3) @:overload @:public public function removeHierarchyBoundsListener(l : java.awt.event.HierarchyBoundsListener) : Void;
 	
 	/**
 	* Returns an array of all the hierarchy bounds listeners
@@ -1874,7 +1874,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #removeHierarchyBoundsListener
 	* @since    1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getHierarchyBoundsListeners() : java.NativeArray<java.awt.event.HierarchyBoundsListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getHierarchyBoundsListeners() : java.NativeArray<java.awt.event.HierarchyBoundsListener>;
 	
 	/**
 	* Adds the specified key listener to receive key events from
@@ -1890,7 +1890,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getKeyListeners
 	* @since    JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function addKeyListener(l : java.awt.event.KeyListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function addKeyListener(l : java.awt.event.KeyListener) : Void;
 	
 	/**
 	* Removes the specified key listener so that it no longer
@@ -1909,7 +1909,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getKeyListeners
 	* @since    JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeKeyListener(l : java.awt.event.KeyListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeKeyListener(l : java.awt.event.KeyListener) : Void;
 	
 	/**
 	* Returns an array of all the key listeners
@@ -1923,7 +1923,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #removeKeyListener
 	* @since    1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getKeyListeners() : java.NativeArray<java.awt.event.KeyListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getKeyListeners() : java.NativeArray<java.awt.event.KeyListener>;
 	
 	/**
 	* Adds the specified mouse listener to receive mouse events from
@@ -1940,7 +1940,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getMouseListeners
 	* @since    JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function addMouseListener(l : java.awt.event.MouseListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function addMouseListener(l : java.awt.event.MouseListener) : Void;
 	
 	/**
 	* Removes the specified mouse listener so that it no longer
@@ -1959,7 +1959,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getMouseListeners
 	* @since    JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeMouseListener(l : java.awt.event.MouseListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeMouseListener(l : java.awt.event.MouseListener) : Void;
 	
 	/**
 	* Returns an array of all the mouse listeners
@@ -1973,7 +1973,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #removeMouseListener
 	* @since    1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getMouseListeners() : java.NativeArray<java.awt.event.MouseListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getMouseListeners() : java.NativeArray<java.awt.event.MouseListener>;
 	
 	/**
 	* Adds the specified mouse motion listener to receive mouse motion
@@ -1990,7 +1990,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getMouseMotionListeners
 	* @since    JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function addMouseMotionListener(l : java.awt.event.MouseMotionListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function addMouseMotionListener(l : java.awt.event.MouseMotionListener) : Void;
 	
 	/**
 	* Removes the specified mouse motion listener so that it no longer
@@ -2009,7 +2009,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getMouseMotionListeners
 	* @since    JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeMouseMotionListener(l : java.awt.event.MouseMotionListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeMouseMotionListener(l : java.awt.event.MouseMotionListener) : Void;
 	
 	/**
 	* Returns an array of all the mouse motion listeners
@@ -2023,7 +2023,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #removeMouseMotionListener
 	* @since    1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getMouseMotionListeners() : java.NativeArray<java.awt.event.MouseMotionListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getMouseMotionListeners() : java.NativeArray<java.awt.event.MouseMotionListener>;
 	
 	/**
 	* Adds the specified mouse wheel listener to receive mouse wheel events
@@ -2045,7 +2045,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getMouseWheelListeners
 	* @since    1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function addMouseWheelListener(l : java.awt.event.MouseWheelListener) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function addMouseWheelListener(l : java.awt.event.MouseWheelListener) : Void;
 	
 	/**
 	* Removes the specified mouse wheel listener so that it no longer
@@ -2063,7 +2063,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getMouseWheelListeners
 	* @since    1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function removeMouseWheelListener(l : java.awt.event.MouseWheelListener) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function removeMouseWheelListener(l : java.awt.event.MouseWheelListener) : Void;
 	
 	/**
 	* Returns an array of all the mouse wheel listeners
@@ -2077,7 +2077,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #removeMouseWheelListener
 	* @since    1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getMouseWheelListeners() : java.NativeArray<java.awt.event.MouseWheelListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getMouseWheelListeners() : java.NativeArray<java.awt.event.MouseWheelListener>;
 	
 	/**
 	* Adds the specified input method listener to receive
@@ -2098,7 +2098,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getInputMethodRequests
 	* @since    1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function addInputMethodListener(l : java.awt.event.InputMethodListener) : Void;
+	@:require(java2) @:overload @:public @:synchronized public function addInputMethodListener(l : java.awt.event.InputMethodListener) : Void;
 	
 	/**
 	* Removes the specified input method listener so that it no longer
@@ -2117,7 +2117,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #getInputMethodListeners
 	* @since    1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function removeInputMethodListener(l : java.awt.event.InputMethodListener) : Void;
+	@:require(java2) @:overload @:public @:synchronized public function removeInputMethodListener(l : java.awt.event.InputMethodListener) : Void;
 	
 	/**
 	* Returns an array of all the input method listeners
@@ -2131,7 +2131,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      #removeInputMethodListener
 	* @since    1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getInputMethodListeners() : java.NativeArray<java.awt.event.InputMethodListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getInputMethodListeners() : java.NativeArray<java.awt.event.InputMethodListener>;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -2175,7 +2175,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Gets the input method request handler which supports
@@ -2189,7 +2189,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #addInputMethodListener
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getInputMethodRequests() : java.awt.im.InputMethodRequests;
+	@:require(java2) @:overload @:public public function getInputMethodRequests() : java.awt.im.InputMethodRequests;
 	
 	/**
 	* Gets the input context used by this component for handling
@@ -2202,7 +2202,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*          <code>null</code> if no context can be determined
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getInputContext() : java.awt.im.InputContext;
+	@:require(java2) @:overload @:public public function getInputContext() : java.awt.im.InputContext;
 	
 	/**
 	* Enables the events defined by the specified event mask parameter
@@ -2221,7 +2221,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see        AWTEvent
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload @:final private function enableEvents(eventsToEnable : haxe.Int64) : Void;
+	@:require(java1) @:overload @:protected @:final private function enableEvents(eventsToEnable : haxe.Int64) : Void;
 	
 	/**
 	* Disables the events defined by the specified event mask parameter
@@ -2230,7 +2230,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see        #enableEvents
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload @:final private function disableEvents(eventsToDisable : haxe.Int64) : Void;
+	@:require(java1) @:overload @:protected @:final private function disableEvents(eventsToDisable : haxe.Int64) : Void;
 	
 	/**
 	* Potentially coalesce an event being posted with an existing
@@ -2258,7 +2258,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @return a coalesced event, or <code>null</code> indicating that no
 	*          coalescing was done
 	*/
-	@:overload private function coalesceEvents(existingEvent : java.awt.AWTEvent, newEvent : java.awt.AWTEvent) : java.awt.AWTEvent;
+	@:overload @:protected private function coalesceEvents(existingEvent : java.awt.AWTEvent, newEvent : java.awt.AWTEvent) : java.awt.AWTEvent;
 	
 	/**
 	* Processes events occurring on this component. By default this
@@ -2280,7 +2280,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #processMouseWheelEvent
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:require(java1) @:overload @:protected private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes component events occurring on this component by
@@ -2306,7 +2306,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see         #enableEvents
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload private function processComponentEvent(e : java.awt.event.ComponentEvent) : Void;
+	@:require(java1) @:overload @:protected private function processComponentEvent(e : java.awt.event.ComponentEvent) : Void;
 	
 	/**
 	* Processes focus events occurring on this component by
@@ -2350,7 +2350,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see         #dispatchEvent
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload private function processFocusEvent(e : java.awt.event.FocusEvent) : Void;
+	@:require(java1) @:overload @:protected private function processFocusEvent(e : java.awt.event.FocusEvent) : Void;
 	
 	/**
 	* Processes key events occurring on this component by
@@ -2403,7 +2403,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see         #isShowing
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload private function processKeyEvent(e : java.awt.event.KeyEvent) : Void;
+	@:require(java1) @:overload @:protected private function processKeyEvent(e : java.awt.event.KeyEvent) : Void;
 	
 	/**
 	* Processes mouse events occurring on this component by
@@ -2429,7 +2429,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see         #enableEvents
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload private function processMouseEvent(e : java.awt.event.MouseEvent) : Void;
+	@:require(java1) @:overload @:protected private function processMouseEvent(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Processes mouse motion events occurring on this component by
@@ -2455,7 +2455,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see         #enableEvents
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload private function processMouseMotionEvent(e : java.awt.event.MouseEvent) : Void;
+	@:require(java1) @:overload @:protected private function processMouseMotionEvent(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Processes mouse wheel events occurring on this component by
@@ -2485,7 +2485,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see         #enableEvents
 	* @since       1.4
 	*/
-	@:require(java4) @:overload private function processMouseWheelEvent(e : java.awt.event.MouseWheelEvent) : Void;
+	@:require(java4) @:overload @:protected private function processMouseWheelEvent(e : java.awt.event.MouseWheelEvent) : Void;
 	
 	/**
 	* Processes input method events occurring on this component by
@@ -2511,7 +2511,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see         #enableEvents
 	* @since       1.2
 	*/
-	@:require(java2) @:overload private function processInputMethodEvent(e : java.awt.event.InputMethodEvent) : Void;
+	@:require(java2) @:overload @:protected private function processInputMethodEvent(e : java.awt.event.InputMethodEvent) : Void;
 	
 	/**
 	* Processes hierarchy events occurring on this component by
@@ -2537,7 +2537,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see         #enableEvents
 	* @since       1.3
 	*/
-	@:require(java3) @:overload private function processHierarchyEvent(e : java.awt.event.HierarchyEvent) : Void;
+	@:require(java3) @:overload @:protected private function processHierarchyEvent(e : java.awt.event.HierarchyEvent) : Void;
 	
 	/**
 	* Processes hierarchy bounds events occurring on this component by
@@ -2563,68 +2563,68 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see         #enableEvents
 	* @since       1.3
 	*/
-	@:require(java3) @:overload private function processHierarchyBoundsEvent(e : java.awt.event.HierarchyEvent) : Void;
+	@:require(java3) @:overload @:protected private function processHierarchyBoundsEvent(e : java.awt.event.HierarchyEvent) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1
 	* replaced by processEvent(AWTEvent).
 	*/
-	@:overload public function handleEvent(evt : java.awt.Event) : Bool;
+	@:overload @:public public function handleEvent(evt : java.awt.Event) : Bool;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by processMouseEvent(MouseEvent).
 	*/
-	@:overload public function mouseDown(evt : java.awt.Event, x : Int, y : Int) : Bool;
+	@:overload @:public public function mouseDown(evt : java.awt.Event, x : Int, y : Int) : Bool;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by processMouseMotionEvent(MouseEvent).
 	*/
-	@:overload public function mouseDrag(evt : java.awt.Event, x : Int, y : Int) : Bool;
+	@:overload @:public public function mouseDrag(evt : java.awt.Event, x : Int, y : Int) : Bool;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by processMouseEvent(MouseEvent).
 	*/
-	@:overload public function mouseUp(evt : java.awt.Event, x : Int, y : Int) : Bool;
+	@:overload @:public public function mouseUp(evt : java.awt.Event, x : Int, y : Int) : Bool;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by processMouseMotionEvent(MouseEvent).
 	*/
-	@:overload public function mouseMove(evt : java.awt.Event, x : Int, y : Int) : Bool;
+	@:overload @:public public function mouseMove(evt : java.awt.Event, x : Int, y : Int) : Bool;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by processMouseEvent(MouseEvent).
 	*/
-	@:overload public function mouseEnter(evt : java.awt.Event, x : Int, y : Int) : Bool;
+	@:overload @:public public function mouseEnter(evt : java.awt.Event, x : Int, y : Int) : Bool;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by processMouseEvent(MouseEvent).
 	*/
-	@:overload public function mouseExit(evt : java.awt.Event, x : Int, y : Int) : Bool;
+	@:overload @:public public function mouseExit(evt : java.awt.Event, x : Int, y : Int) : Bool;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by processKeyEvent(KeyEvent).
 	*/
-	@:overload public function keyDown(evt : java.awt.Event, key : Int) : Bool;
+	@:overload @:public public function keyDown(evt : java.awt.Event, key : Int) : Bool;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by processKeyEvent(KeyEvent).
 	*/
-	@:overload public function keyUp(evt : java.awt.Event, key : Int) : Bool;
+	@:overload @:public public function keyUp(evt : java.awt.Event, key : Int) : Bool;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* should register this component as ActionListener on component
 	* which fires action events.
 	*/
-	@:overload public function action(evt : java.awt.Event, what : Dynamic) : Bool;
+	@:overload @:public public function action(evt : java.awt.Event, what : Dynamic) : Bool;
 	
 	/**
 	* Makes this <code>Component</code> displayable by connecting it to a
@@ -2640,7 +2640,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #invalidate
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload public function addNotify() : Void;
+	@:require(java0) @:overload @:public public function addNotify() : Void;
 	
 	/**
 	* Makes this <code>Component</code> undisplayable by destroying it native
@@ -2655,19 +2655,19 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #addNotify
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload public function removeNotify() : Void;
+	@:require(java0) @:overload @:public public function removeNotify() : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by processFocusEvent(FocusEvent).
 	*/
-	@:overload public function gotFocus(evt : java.awt.Event, what : Dynamic) : Bool;
+	@:overload @:public public function gotFocus(evt : java.awt.Event, what : Dynamic) : Bool;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by processFocusEvent(FocusEvent).
 	*/
-	@:overload public function lostFocus(evt : java.awt.Event, what : Dynamic) : Bool;
+	@:overload @:public public function lostFocus(evt : java.awt.Event, what : Dynamic) : Bool;
 	
 	/**
 	* Returns whether this <code>Component</code> can become the focus
@@ -2679,7 +2679,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @since JDK1.1
 	* @deprecated As of 1.4, replaced by <code>isFocusable()</code>.
 	*/
-	@:require(java1) @:overload public function isFocusTraversable() : Bool;
+	@:require(java1) @:overload @:public public function isFocusTraversable() : Bool;
 	
 	/**
 	* Returns whether this Component can be focused.
@@ -2689,7 +2689,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #setFocusable
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isFocusable() : Bool;
+	@:require(java4) @:overload @:public public function isFocusable() : Bool;
 	
 	/**
 	* Sets the focusable state of this Component to the specified value. This
@@ -2701,7 +2701,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @beaninfo
 	*       bound: true
 	*/
-	@:require(java4) @:overload public function setFocusable(focusable : Bool) : Void;
+	@:require(java4) @:overload @:public public function setFocusable(focusable : Bool) : Void;
 	
 	/**
 	* Sets the focus traversal keys for a given traversal operation for this
@@ -2773,7 +2773,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @beaninfo
 	*       bound: true
 	*/
-	@:require(java4) @:overload public function setFocusTraversalKeys(id : Int, keystrokes : java.util.Set<java.awt.AWTKeyStroke>) : Void;
+	@:require(java4) @:overload @:public public function setFocusTraversalKeys(id : Int, keystrokes : java.util.Set<java.awt.AWTKeyStroke>) : Void;
 	
 	/**
 	* Returns the Set of focus traversal keys for a given traversal operation
@@ -2801,7 +2801,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*         KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getFocusTraversalKeys(id : Int) : java.util.Set<java.awt.AWTKeyStroke>;
+	@:require(java4) @:overload @:public public function getFocusTraversalKeys(id : Int) : java.util.Set<java.awt.AWTKeyStroke>;
 	
 	/**
 	* Returns whether the Set of focus traversal keys for the given focus
@@ -2821,7 +2821,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*         KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function areFocusTraversalKeysSet(id : Int) : Bool;
+	@:require(java4) @:overload @:public public function areFocusTraversalKeysSet(id : Int) : Bool;
 	
 	/**
 	* Sets whether focus traversal keys are enabled for this Component.
@@ -2839,7 +2839,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @beaninfo
 	*       bound: true
 	*/
-	@:require(java4) @:overload public function setFocusTraversalKeysEnabled(focusTraversalKeysEnabled : Bool) : Void;
+	@:require(java4) @:overload @:public public function setFocusTraversalKeysEnabled(focusTraversalKeysEnabled : Bool) : Void;
 	
 	/**
 	* Returns whether focus traversal keys are enabled for this Component.
@@ -2854,7 +2854,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #getFocusTraversalKeys
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getFocusTraversalKeysEnabled() : Bool;
+	@:require(java4) @:overload @:public public function getFocusTraversalKeysEnabled() : Bool;
 	
 	/**
 	* Requests that this Component get the input focus, and that this
@@ -2890,7 +2890,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see KeyboardFocusManager#clearGlobalFocusOwner
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload public function requestFocus() : Void;
+	@:require(java0) @:overload @:public public function requestFocus() : Void;
 	
 	/**
 	* Requests that this <code>Component</code> get the input focus,
@@ -2951,7 +2951,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see KeyboardFocusManager#clearGlobalFocusOwner
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function requestFocus(temporary : Bool) : Bool;
+	@:require(java4) @:overload @:protected private function requestFocus(temporary : Bool) : Bool;
 	
 	/**
 	* Requests that this Component get the input focus, if this
@@ -2997,7 +2997,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see KeyboardFocusManager#clearGlobalFocusOwner
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function requestFocusInWindow() : Bool;
+	@:require(java4) @:overload @:public public function requestFocusInWindow() : Bool;
 	
 	/**
 	* Requests that this <code>Component</code> get the input focus,
@@ -3056,7 +3056,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see KeyboardFocusManager#clearGlobalFocusOwner
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function requestFocusInWindow(temporary : Bool) : Bool;
+	@:require(java4) @:overload @:protected private function requestFocusInWindow(temporary : Bool) : Bool;
 	
 	/**
 	* Returns the Container which is the focus cycle root of this Component's
@@ -3072,7 +3072,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see Container#isFocusCycleRoot()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getFocusCycleRootAncestor() : java.awt.Container;
+	@:require(java4) @:overload @:public public function getFocusCycleRootAncestor() : java.awt.Container;
 	
 	/**
 	* Returns whether the specified Container is the focus cycle root of this
@@ -3086,7 +3086,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see Container#isFocusCycleRoot()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isFocusCycleRoot(container : java.awt.Container) : Bool;
+	@:require(java4) @:overload @:public public function isFocusCycleRoot(container : java.awt.Container) : Bool;
 	
 	/**
 	* Transfers the focus to the next component, as though this Component were
@@ -3094,13 +3094,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #requestFocus()
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function transferFocus() : Void;
+	@:require(java1) @:overload @:public public function transferFocus() : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by transferFocus().
 	*/
-	@:overload public function nextFocus() : Void;
+	@:overload @:public public function nextFocus() : Void;
 	
 	/**
 	* Transfers the focus to the previous component, as though this Component
@@ -3108,7 +3108,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #requestFocus()
 	* @since     1.4
 	*/
-	@:require(java4) @:overload public function transferFocusBackward() : Void;
+	@:require(java4) @:overload @:public public function transferFocusBackward() : Void;
 	
 	/**
 	* Transfers the focus up one focus traversal cycle. Typically, the focus
@@ -3123,7 +3123,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       Container#setFocusCycleRoot(boolean)
 	* @since     1.4
 	*/
-	@:require(java4) @:overload public function transferFocusUpCycle() : Void;
+	@:require(java4) @:overload @:public public function transferFocusUpCycle() : Void;
 	
 	/**
 	* Returns <code>true</code> if this <code>Component</code> is the
@@ -3134,7 +3134,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*         focus owner; <code>false</code> otherwise
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function hasFocus() : Bool;
+	@:require(java2) @:overload @:public public function hasFocus() : Bool;
 	
 	/**
 	* Returns <code>true</code> if this <code>Component</code> is the
@@ -3144,7 +3144,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*     focus owner; <code>false</code> otherwise
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isFocusOwner() : Bool;
+	@:require(java4) @:overload @:public public function isFocusOwner() : Bool;
 	
 	/**
 	* Adds the specified popup menu to the component.
@@ -3153,7 +3153,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @exception NullPointerException if {@code popup} is {@code null}
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function add(popup : java.awt.PopupMenu) : Void;
+	@:require(java1) @:overload @:public public function add(popup : java.awt.PopupMenu) : Void;
 	
 	/**
 	* Removes the specified popup menu from the component.
@@ -3161,7 +3161,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #add(PopupMenu)
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function remove(popup : java.awt.MenuComponent) : Void;
+	@:require(java1) @:overload @:public public function remove(popup : java.awt.MenuComponent) : Void;
 	
 	/**
 	* Returns a string representing the state of this component. This
@@ -3173,14 +3173,14 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @return  a string representation of this component's state
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload private function paramString() : String;
+	@:require(java0) @:overload @:protected private function paramString() : String;
 	
 	/**
 	* Returns a string representation of this component and its values.
 	* @return    a string representation of this component
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function toString() : String;
+	@:require(java0) @:overload @:public public function toString() : String;
 	
 	/**
 	* Prints a listing of this component to the standard system output
@@ -3188,7 +3188,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       java.lang.System#out
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function list() : Void;
+	@:require(java0) @:overload @:public public function list() : Void;
 	
 	/**
 	* Prints a listing of this component to the specified output
@@ -3197,7 +3197,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @throws   NullPointerException if {@code out} is {@code null}
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload public function list(out : java.io.PrintStream) : Void;
+	@:require(java0) @:overload @:public public function list(out : java.io.PrintStream) : Void;
 	
 	/**
 	* Prints out a list, starting at the specified indentation, to the
@@ -3208,7 +3208,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @throws    NullPointerException if {@code out} is {@code null}
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function list(out : java.io.PrintStream, indent : Int) : Void;
+	@:require(java0) @:overload @:public public function list(out : java.io.PrintStream, indent : Int) : Void;
 	
 	/**
 	* Prints a listing to the specified print writer.
@@ -3216,7 +3216,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @throws NullPointerException if {@code out} is {@code null}
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function list(out : java.io.PrintWriter) : Void;
+	@:require(java1) @:overload @:public public function list(out : java.io.PrintWriter) : Void;
 	
 	/**
 	* Prints out a list, starting at the specified indentation, to
@@ -3227,7 +3227,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       java.io.PrintStream#println(java.lang.Object)
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function list(out : java.io.PrintWriter, indent : Int) : Void;
+	@:require(java1) @:overload @:public public function list(out : java.io.PrintWriter, indent : Int) : Void;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list. The listener is
@@ -3263,7 +3263,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #getPropertyChangeListeners
 	* @see #addPropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)
 	*/
-	@:overload public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a PropertyChangeListener from the listener list. This method
@@ -3278,7 +3278,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #getPropertyChangeListeners
 	* @see #removePropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
 	*/
-	@:overload public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the property change listeners
@@ -3294,7 +3294,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see      java.beans.PropertyChangeSupport#getPropertyChangeListeners
 	* @since    1.4
 	*/
-	@:require(java4) @:overload public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:require(java4) @:overload @:public public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list for a specific
@@ -3327,7 +3327,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #getPropertyChangeListeners(java.lang.String)
 	* @see #addPropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)
 	*/
-	@:overload public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a <code>PropertyChangeListener</code> from the listener
@@ -3345,7 +3345,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #getPropertyChangeListeners(java.lang.String)
 	* @see #removePropertyChangeListener(java.beans.PropertyChangeListener)
 	*/
-	@:overload public function removePropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the listeners which have been associated
@@ -3361,7 +3361,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #getPropertyChangeListeners
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getPropertyChangeListeners(propertyName : String) : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:require(java4) @:overload @:public public function getPropertyChangeListeners(propertyName : String) : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	/**
 	* Support for reporting bound property changes for Object properties.
@@ -3373,7 +3373,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @param oldValue the property's previous value
 	* @param newValue the property's new value
 	*/
-	@:overload private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:protected private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Support for reporting bound property changes for boolean properties.
@@ -3386,7 +3386,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @param newValue the property's new value
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function firePropertyChange(propertyName : String, oldValue : Bool, newValue : Bool) : Void;
+	@:require(java4) @:overload @:protected private function firePropertyChange(propertyName : String, oldValue : Bool, newValue : Bool) : Void;
 	
 	/**
 	* Support for reporting bound property changes for integer properties.
@@ -3399,7 +3399,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @param newValue the property's new value
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function firePropertyChange(propertyName : String, oldValue : Int, newValue : Int) : Void;
+	@:require(java4) @:overload @:protected private function firePropertyChange(propertyName : String, oldValue : Int, newValue : Int) : Void;
 	
 	/**
 	* Reports a bound property change.
@@ -3412,7 +3412,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*          java.lang.Object)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function firePropertyChange(propertyName : String, oldValue : java.StdTypes.Int8, newValue : java.StdTypes.Int8) : Void;
+	@:require(java5) @:overload @:public public function firePropertyChange(propertyName : String, oldValue : java.StdTypes.Int8, newValue : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Reports a bound property change.
@@ -3425,7 +3425,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*          java.lang.Object)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function firePropertyChange(propertyName : String, oldValue : java.StdTypes.Char16, newValue : java.StdTypes.Char16) : Void;
+	@:require(java5) @:overload @:public public function firePropertyChange(propertyName : String, oldValue : java.StdTypes.Char16, newValue : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Reports a bound property change.
@@ -3438,7 +3438,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*          java.lang.Object)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function firePropertyChange(propertyName : String, oldValue : java.StdTypes.Int16, newValue : java.StdTypes.Int16) : Void;
+	@:require(java5) @:overload @:public public function firePropertyChange(propertyName : String, oldValue : java.StdTypes.Int16, newValue : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Reports a bound property change.
@@ -3451,7 +3451,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*          java.lang.Object)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function firePropertyChange(propertyName : String, oldValue : haxe.Int64, newValue : haxe.Int64) : Void;
+	@:require(java5) @:overload @:public public function firePropertyChange(propertyName : String, oldValue : haxe.Int64, newValue : haxe.Int64) : Void;
 	
 	/**
 	* Reports a bound property change.
@@ -3464,7 +3464,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*          java.lang.Object)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function firePropertyChange(propertyName : String, oldValue : Single, newValue : Single) : Void;
+	@:require(java5) @:overload @:public public function firePropertyChange(propertyName : String, oldValue : Single, newValue : Single) : Void;
 	
 	/**
 	* Reports a bound property change.
@@ -3477,7 +3477,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*          java.lang.Object)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function firePropertyChange(propertyName : String, oldValue : Float, newValue : Float) : Void;
+	@:require(java5) @:overload @:public public function firePropertyChange(propertyName : String, oldValue : Float, newValue : Float) : Void;
 	
 	/**
 	* Sets the language-sensitive orientation that is to be used to order
@@ -3508,7 +3508,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @beaninfo
 	*       bound: true
 	*/
-	@:overload public function setComponentOrientation(o : java.awt.ComponentOrientation) : Void;
+	@:overload @:public public function setComponentOrientation(o : java.awt.ComponentOrientation) : Void;
 	
 	/**
 	* Retrieves the language-sensitive orientation that is to be used to order
@@ -3521,7 +3521,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*
 	* @author Laura Werner, IBM
 	*/
-	@:overload public function getComponentOrientation() : java.awt.ComponentOrientation;
+	@:overload @:public public function getComponentOrientation() : java.awt.ComponentOrientation;
 	
 	/**
 	* Sets the <code>ComponentOrientation</code> property of this component
@@ -3539,7 +3539,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #invalidate
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function applyComponentOrientation(orientation : java.awt.ComponentOrientation) : Void;
+	@:require(java4) @:overload @:public public function applyComponentOrientation(orientation : java.awt.ComponentOrientation) : Void;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated
@@ -3554,7 +3554,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*    <code>Component</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -3673,28 +3673,28 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	/**
 	* The number of buffers
 	*/
-	private var numBuffers : Int;
+	@:protected private var numBuffers : Int;
 	
 	/**
 	* The buffering capabilities
 	*/
-	private var caps : java.awt.BufferCapabilities;
+	@:protected private var caps : java.awt.BufferCapabilities;
 	
 	/**
 	* The drawing buffer
 	*/
-	private var drawBuffer : java.awt.Image;
+	@:protected private var drawBuffer : java.awt.Image;
 	
 	/**
 	* The drawing buffer as a volatile image
 	*/
-	private var drawVBuffer : java.awt.image.VolatileImage;
+	@:protected private var drawVBuffer : java.awt.image.VolatileImage;
 	
 	/**
 	* Whether or not the drawing buffer has been recently restored from
 	* a lost state.
 	*/
-	private var validatedContents : Bool;
+	@:protected private var validatedContents : Bool;
 	
 	/**
 	* Creates a new flipping buffer strategy for this component.
@@ -3713,7 +3713,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* {@code true}.
 	* @see #createBuffers(int, BufferCapabilities)
 	*/
-	@:overload private function new(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
+	@:overload @:protected private function new(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
 	
 	/**
 	* Creates one or more complex, flipping buffers with the given
@@ -3731,14 +3731,14 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* <code>true</code>.
 	* @see java.awt.BufferCapabilities#isPageFlipping()
 	*/
-	@:overload private function createBuffers(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
+	@:overload @:protected private function createBuffers(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
 	
 	/**
 	* @return direct access to the back buffer, as an image.
 	* @exception IllegalStateException if the buffers have not yet
 	* been created
 	*/
-	@:overload private function getBackBuffer() : java.awt.Image;
+	@:overload @:protected private function getBackBuffer() : java.awt.Image;
 	
 	/**
 	* Flipping moves the contents of the back buffer to the front buffer,
@@ -3751,17 +3751,17 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* been created
 	* @see java.awt.BufferCapabilities#getFlipContents()
 	*/
-	@:overload private function flip(flipAction : java.awt.BufferCapabilities.BufferCapabilities_FlipContents) : Void;
+	@:overload @:protected private function flip(flipAction : java.awt.BufferCapabilities.BufferCapabilities_FlipContents) : Void;
 	
 	/**
 	* Destroys the buffers created through this object
 	*/
-	@:overload private function destroyBuffers() : Void;
+	@:overload @:protected private function destroyBuffers() : Void;
 	
 	/**
 	* @return the buffering capabilities of this strategy
 	*/
-	@:overload override public function getCapabilities() : java.awt.BufferCapabilities;
+	@:overload @:public override public function getCapabilities() : java.awt.BufferCapabilities;
 	
 	/**
 	* @return the graphics on the drawing buffer.  This method may not
@@ -3769,36 +3769,36 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* threads should be handled at the application level.  Disposal of the
 	* graphics object must be handled by the application.
 	*/
-	@:overload override public function getDrawGraphics() : java.awt.Graphics;
+	@:overload @:public override public function getDrawGraphics() : java.awt.Graphics;
 	
 	/**
 	* Restore the drawing buffer if it has been lost
 	*/
-	@:overload private function revalidate() : Void;
+	@:overload @:protected private function revalidate() : Void;
 	
 	/**
 	* @return whether the drawing buffer was lost since the last call to
 	* <code>getDrawGraphics</code>
 	*/
-	@:overload override public function contentsLost() : Bool;
+	@:overload @:public override public function contentsLost() : Bool;
 	
 	/**
 	* @return whether the drawing buffer was recently restored from a lost
 	* state and reinitialized to the default background color (white)
 	*/
-	@:overload override public function contentsRestored() : Bool;
+	@:overload @:public override public function contentsRestored() : Bool;
 	
 	/**
 	* Makes the next available buffer visible by either blitting or
 	* flipping.
 	*/
-	@:overload override public function show() : Void;
+	@:overload @:public override public function show() : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function dispose() : Void;
+	@:require(java6) @:overload @:public override public function dispose() : Void;
 	
 	
 }
@@ -3813,25 +3813,25 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	/**
 	* The buffering capabilities
 	*/
-	private var caps : java.awt.BufferCapabilities;
+	@:protected private var caps : java.awt.BufferCapabilities;
 	
 	/**
 	* The back buffers
 	*/
-	private var backBuffers : java.NativeArray<java.awt.image.VolatileImage>;
+	@:protected private var backBuffers : java.NativeArray<java.awt.image.VolatileImage>;
 	
 	/**
 	* Whether or not the drawing buffer has been recently restored from
 	* a lost state.
 	*/
-	private var validatedContents : Bool;
+	@:protected private var validatedContents : Bool;
 	
 	/**
 	* Size of the back buffers
 	*/
-	private var width : Int;
+	@:protected private var width : Int;
 	
-	private var height : Int;
+	@:protected private var height : Int;
 	
 	/**
 	* Creates a new blt buffer strategy around a component
@@ -3839,50 +3839,50 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* front buffer
 	* @param caps the capabilities of the buffers
 	*/
-	@:overload private function new(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
+	@:overload @:protected private function new(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function dispose() : Void;
+	@:require(java6) @:overload @:public override public function dispose() : Void;
 	
 	/**
 	* Creates the back buffers
 	*/
-	@:overload private function createBackBuffers(numBuffers : Int) : Void;
+	@:overload @:protected private function createBackBuffers(numBuffers : Int) : Void;
 	
 	/**
 	* @return the buffering capabilities of this strategy
 	*/
-	@:overload override public function getCapabilities() : java.awt.BufferCapabilities;
+	@:overload @:public override public function getCapabilities() : java.awt.BufferCapabilities;
 	
 	/**
 	* @return the draw graphics
 	*/
-	@:overload override public function getDrawGraphics() : java.awt.Graphics;
+	@:overload @:public override public function getDrawGraphics() : java.awt.Graphics;
 	
 	/**
 	* Makes the next available buffer visible.
 	*/
-	@:overload override public function show() : Void;
+	@:overload @:public override public function show() : Void;
 	
 	/**
 	* Restore the drawing buffer if it has been lost
 	*/
-	@:overload private function revalidate() : Void;
+	@:overload @:protected private function revalidate() : Void;
 	
 	/**
 	* @return whether the drawing buffer was lost since the last call to
 	* <code>getDrawGraphics</code>
 	*/
-	@:overload override public function contentsLost() : Bool;
+	@:overload @:public override public function contentsLost() : Bool;
 	
 	/**
 	* @return whether the drawing buffer was recently restored from a lost
 	* state and reinitialized to the default background color (white)
 	*/
-	@:overload override public function contentsRestored() : Bool;
+	@:overload @:public override public function contentsRestored() : Bool;
 	
 	
 }
@@ -3891,11 +3891,11 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 */
 @:native('java$awt$Component$FlipSubRegionBufferStrategy') @:internal extern class Component_FlipSubRegionBufferStrategy extends java.awt.Component.Component_FlipBufferStrategy implements sun.awt.SubRegionShowable
 {
-	@:overload private function new(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
+	@:overload @:protected private function new(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
 	
-	@:overload public function show(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public public function show(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
-	@:overload public function showIfNotLost(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Bool;
+	@:overload @:public public function showIfNotLost(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Bool;
 	
 	
 }
@@ -3907,11 +3907,11 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 */
 @:native('java$awt$Component$BltSubRegionBufferStrategy') @:internal extern class Component_BltSubRegionBufferStrategy extends java.awt.Component.Component_BltBufferStrategy implements sun.awt.SubRegionShowable
 {
-	@:overload private function new(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
+	@:overload @:protected private function new(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
 	
-	@:overload public function show(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public public function show(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
-	@:overload public function showIfNotLost(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Bool;
+	@:overload @:public public function showIfNotLost(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Bool;
 	
 	
 }
@@ -3926,23 +3926,23 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 */
 @:require(java4) @:native('java$awt$Component$SingleBufferStrategy') @:internal extern class Component_SingleBufferStrategy extends java.awt.image.BufferStrategy
 {
-	@:overload public function new(caps : java.awt.BufferCapabilities) : Void;
+	@:overload @:public public function new(caps : java.awt.BufferCapabilities) : Void;
 	
-	@:overload override public function getCapabilities() : java.awt.BufferCapabilities;
+	@:overload @:public override public function getCapabilities() : java.awt.BufferCapabilities;
 	
-	@:overload override public function getDrawGraphics() : java.awt.Graphics;
+	@:overload @:public override public function getDrawGraphics() : java.awt.Graphics;
 	
-	@:overload override public function contentsLost() : Bool;
+	@:overload @:public override public function contentsLost() : Bool;
 	
-	@:overload override public function contentsRestored() : Bool;
+	@:overload @:public override public function contentsRestored() : Bool;
 	
-	@:overload override public function show() : Void;
+	@:overload @:public override public function show() : Void;
 	
 	
 }
 @:native('java$awt$Component$DummyRequestFocusController') @:internal extern class Component_DummyRequestFocusController implements sun.awt.RequestFocusController
 {
-	@:overload public function acceptRequestFocus(from : java.awt.Component, to : java.awt.Component, temporary : Bool, focusedWindowChangeAllowed : Bool, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Bool;
+	@:overload @:public public function acceptRequestFocus(from : java.awt.Component, to : java.awt.Component, temporary : Bool, focusedWindowChangeAllowed : Bool, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Bool;
 	
 	
 }
@@ -3961,18 +3961,18 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* Though the class is abstract, this should be called by
 	* all sub-classes.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	private var accessibleAWTComponentHandler : java.awt.event.ComponentListener;
+	@:protected private var accessibleAWTComponentHandler : java.awt.event.ComponentListener;
 	
-	private var accessibleAWTFocusHandler : java.awt.event.FocusListener;
+	@:protected private var accessibleAWTFocusHandler : java.awt.event.FocusListener;
 	
 	/**
 	* Adds a <code>PropertyChangeListener</code> to the listener list.
 	*
 	* @param listener  the property change listener to be added
 	*/
-	@:overload override public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Remove a PropertyChangeListener from the listener list.
@@ -3981,7 +3981,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*
 	* @param listener  The PropertyChangeListener to be removed
 	*/
-	@:overload override public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Gets the accessible name of this object.  This should almost never
@@ -3998,7 +3998,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*         object does not have a name
 	* @see javax.accessibility.AccessibleContext#setAccessibleName
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Gets the accessible description of this object.  This should be
@@ -4015,7 +4015,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*        <code>null</code> if this object does not have a description
 	* @see javax.accessibility.AccessibleContext#setAccessibleDescription
 	*/
-	@:overload override public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
 	/**
 	* Gets the role of this object.
@@ -4024,7 +4024,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*      describing the role of the object
 	* @see javax.accessibility.AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the state of this object.
@@ -4033,7 +4033,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*       containing the current state set of the object
 	* @see javax.accessibility.AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the <code>Accessible</code> parent of this object.
@@ -4044,7 +4044,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*      object -- can be <code>null</code> if this
 	*      object does not have an <code>Accessible</code> parent
 	*/
-	@:overload override public function getAccessibleParent() : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleParent() : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the index of this object in its accessible parent.
@@ -4053,7 +4053,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*    object does not have an accessible parent
 	* @see #getAccessibleParent
 	*/
-	@:overload override public function getAccessibleIndexInParent() : Int;
+	@:overload @:public override public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -4062,7 +4062,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*
 	* @return the number of accessible children in the object
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the nth <code>Accessible</code> child of the object.
@@ -4070,14 +4070,14 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @param i zero-based index of child
 	* @return the nth <code>Accessible</code> child of the object
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the locale of this object.
 	*
 	* @return the locale of this object
 	*/
-	@:overload override public function getLocale() : java.util.Locale;
+	@:overload @:public override public function getLocale() : java.util.Locale;
 	
 	/**
 	* Gets the <code>AccessibleComponent</code> associated
@@ -4086,7 +4086,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*
 	* @return the component
 	*/
-	@:overload override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
+	@:overload @:public override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
 	
 	/**
 	* Gets the background color of this object.
@@ -4094,7 +4094,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @return the background color, if supported, of the object;
 	*      otherwise, <code>null</code>
 	*/
-	@:overload public function getBackground() : java.awt.Color;
+	@:overload @:public public function getBackground() : java.awt.Color;
 	
 	/**
 	* Sets the background color of this object.
@@ -4103,7 +4103,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @param c the new <code>Color</code> for the background
 	* @see Component#isOpaque
 	*/
-	@:overload public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Gets the foreground color of this object.
@@ -4111,14 +4111,14 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @return the foreground color, if supported, of the object;
 	*     otherwise, <code>null</code>
 	*/
-	@:overload public function getForeground() : java.awt.Color;
+	@:overload @:public public function getForeground() : java.awt.Color;
 	
 	/**
 	* Sets the foreground color of this object.
 	*
 	* @param c the new <code>Color</code> for the foreground
 	*/
-	@:overload public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* Gets the <code>Cursor</code> of this object.
@@ -4126,7 +4126,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @return the <code>Cursor</code>, if supported,
 	*     of the object; otherwise, <code>null</code>
 	*/
-	@:overload public function getCursor() : java.awt.Cursor;
+	@:overload @:public public function getCursor() : java.awt.Cursor;
 	
 	/**
 	* Sets the <code>Cursor</code> of this object.
@@ -4136,7 +4136,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* changing the mouse cursor shape.
 	* @param cursor the new <code>Cursor</code> for the object
 	*/
-	@:overload public function setCursor(cursor : java.awt.Cursor) : Void;
+	@:overload @:public public function setCursor(cursor : java.awt.Cursor) : Void;
 	
 	/**
 	* Gets the <code>Font</code> of this object.
@@ -4144,14 +4144,14 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @return the <code>Font</code>, if supported,
 	*    for the object; otherwise, <code>null</code>
 	*/
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public public function getFont() : java.awt.Font;
 	
 	/**
 	* Sets the <code>Font</code> of this object.
 	*
 	* @param f the new <code>Font</code> for the object
 	*/
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Gets the <code>FontMetrics</code> of this object.
@@ -4161,21 +4161,21 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*     the object; otherwise, <code>null</code>
 	* @see #getFont
 	*/
-	@:overload public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Determines if the object is enabled.
 	*
 	* @return true if object is enabled; otherwise, false
 	*/
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
 	/**
 	* Sets the enabled state of the object.
 	*
 	* @param b if true, enables this object; otherwise, disables it
 	*/
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Determines if the object is visible.  Note: this means that the
@@ -4186,14 +4186,14 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*
 	* @return true if object is visible; otherwise, false
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
 	/**
 	* Sets the visible state of the object.
 	*
 	* @param b if true, shows this object; otherwise, hides it
 	*/
-	@:overload public function setVisible(b : Bool) : Void;
+	@:overload @:public public function setVisible(b : Bool) : Void;
 	
 	/**
 	* Determines if the object is showing.  This is determined by checking
@@ -4204,7 +4204,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*
 	* @return true if object is showing; otherwise, false
 	*/
-	@:overload public function isShowing() : Bool;
+	@:overload @:public public function isShowing() : Bool;
 	
 	/**
 	* Checks whether the specified point is within this object's bounds,
@@ -4215,7 +4215,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*     coordinate system of the object
 	* @return true if object contains <code>Point</code>; otherwise false
 	*/
-	@:overload public function contains(p : java.awt.Point) : Bool;
+	@:overload @:public public function contains(p : java.awt.Point) : Bool;
 	
 	/**
 	* Returns the location of the object on the screen.
@@ -4223,7 +4223,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @return location of object on screen -- can be
 	*    <code>null</code> if this object is not on the screen
 	*/
-	@:overload public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public public function getLocationOnScreen() : java.awt.Point;
 	
 	/**
 	* Gets the location of the object relative to the parent in the form
@@ -4234,13 +4234,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* the object's bounds in the coordinate space of the screen;
 	* <code>null</code> if this object or its parent are not on the screen
 	*/
-	@:overload public function getLocation() : java.awt.Point;
+	@:overload @:public public function getLocation() : java.awt.Point;
 	
 	/**
 	* Sets the location of the object relative to the parent.
 	* @param p  the coordinates of the object
 	*/
-	@:overload public function setLocation(p : java.awt.Point) : Void;
+	@:overload @:public public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* Gets the bounds of this object in the form of a Rectangle object.
@@ -4250,7 +4250,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @return a rectangle indicating this component's bounds;
 	*   <code>null</code> if this object is not on the screen
 	*/
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Sets the bounds of this object in the form of a
@@ -4260,7 +4260,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*
 	* @param r a rectangle indicating this component's bounds
 	*/
-	@:overload public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload @:public public function setBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Returns the size of this object in the form of a
@@ -4273,14 +4273,14 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*     the size of this component; <code>null</code> if
 	*     this object is not on the screen
 	*/
-	@:overload public function getSize() : java.awt.Dimension;
+	@:overload @:public public function getSize() : java.awt.Dimension;
 	
 	/**
 	* Resizes this object so that it has width and height.
 	*
 	* @param d - the dimension specifying the new size of the object
 	*/
-	@:overload public function setSize(d : java.awt.Dimension) : Void;
+	@:overload @:public public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the <code>Accessible</code> child,
@@ -4294,19 +4294,19 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @return the <code>Accessible</code>, if it exists,
 	*      at the specified location; else <code>null</code>
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns whether this object can accept focus or not.
 	*
 	* @return true if object can accept focus; otherwise false
 	*/
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public public function isFocusTraversable() : Bool;
 	
 	/**
 	* Requests focus for this object.
 	*/
-	@:overload public function requestFocus() : Void;
+	@:overload @:public public function requestFocus() : Void;
 	
 	/**
 	* Adds the specified focus listener to receive focus events from this
@@ -4314,7 +4314,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*
 	* @param l the focus listener
 	*/
-	@:overload public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Removes the specified focus listener so it no longer receives focus
@@ -4322,7 +4322,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	*
 	* @param l the focus listener
 	*/
-	@:overload public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	
 }
@@ -4333,13 +4333,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 */
 @:require(java3) @:native('java$awt$Component$AccessibleAWTComponent$AccessibleAWTComponentHandler') extern class Component_AccessibleAWTComponent_AccessibleAWTComponentHandler implements java.awt.event.ComponentListener
 {
-	@:overload public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentShown(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentShown(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentResized(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentResized(e : java.awt.event.ComponentEvent) : Void;
 	
 	
 }
@@ -4350,9 +4350,9 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 */
 @:require(java3) @:native('java$awt$Component$AccessibleAWTComponent$AccessibleAWTFocusHandler') extern class Component_AccessibleAWTComponent_AccessibleAWTFocusHandler implements java.awt.event.FocusListener
 {
-	@:overload public function focusGained(event : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(event : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusLost(event : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(event : java.awt.event.FocusEvent) : Void;
 	
 	
 }

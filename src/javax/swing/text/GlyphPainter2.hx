@@ -44,12 +44,12 @@ package javax.swing.text;
 	* @author  Timothy Prinzing
 	* @see GlyphView
 	*/
-	@:overload public function new(layout : java.awt.font.TextLayout) : Void;
+	@:overload @:public public function new(layout : java.awt.font.TextLayout) : Void;
 	
 	/**
 	* Create a painter to use for the given GlyphView.
 	*/
-	@:overload override public function getPainter(v : javax.swing.text.GlyphView, p0 : Int, p1 : Int) : javax.swing.text.GlyphView.GlyphView_GlyphPainter;
+	@:overload @:public override public function getPainter(v : javax.swing.text.GlyphView, p0 : Int, p1 : Int) : javax.swing.text.GlyphView.GlyphView_GlyphPainter;
 	
 	/**
 	* Determine the span the glyphs given a start location
@@ -57,21 +57,21 @@ package javax.swing.text;
 	* has no tabs (i.e. TextLayout doesn't deal with tab
 	* expansion).
 	*/
-	@:overload override public function getSpan(v : javax.swing.text.GlyphView, p0 : Int, p1 : Int, e : javax.swing.text.TabExpander, x : Single) : Single;
+	@:overload @:public override public function getSpan(v : javax.swing.text.GlyphView, p0 : Int, p1 : Int, e : javax.swing.text.TabExpander, x : Single) : Single;
 	
-	@:overload override public function getHeight(v : javax.swing.text.GlyphView) : Single;
+	@:overload @:public override public function getHeight(v : javax.swing.text.GlyphView) : Single;
 	
 	/**
 	* Fetch the ascent above the baseline for the glyphs
 	* corresponding to the given range in the model.
 	*/
-	@:overload override public function getAscent(v : javax.swing.text.GlyphView) : Single;
+	@:overload @:public override public function getAscent(v : javax.swing.text.GlyphView) : Single;
 	
 	/**
 	* Fetch the descent below the baseline for the glyphs
 	* corresponding to the given range in the model.
 	*/
-	@:overload override public function getDescent(v : javax.swing.text.GlyphView) : Single;
+	@:overload @:public override public function getDescent(v : javax.swing.text.GlyphView) : Single;
 	
 	/**
 	* Paint the glyphs for the given view.  This is implemented
@@ -79,9 +79,9 @@ package javax.swing.text;
 	* is required by TextLayout (and this should be the case if
 	* running on the JDK).
 	*/
-	@:overload override public function paint(v : javax.swing.text.GlyphView, g : java.awt.Graphics, a : java.awt.Shape, p0 : Int, p1 : Int) : Void;
+	@:overload @:public override public function paint(v : javax.swing.text.GlyphView, g : java.awt.Graphics, a : java.awt.Shape, p0 : Int, p1 : Int) : Void;
 	
-	@:overload override public function modelToView(v : javax.swing.text.GlyphView, pos : Int, bias : javax.swing.text.Position.Position_Bias, a : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public override public function modelToView(v : javax.swing.text.GlyphView, pos : Int, bias : javax.swing.text.Position.Position_Bias, a : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -98,7 +98,7 @@ package javax.swing.text;
 	*  given point of view
 	* @see View#viewToModel
 	*/
-	@:overload override public function viewToModel(v : javax.swing.text.GlyphView, x : Single, y : Single, a : java.awt.Shape, biasReturn : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function viewToModel(v : javax.swing.text.GlyphView, x : Single, y : Single, a : java.awt.Shape, biasReturn : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Determines the model location that represents the
@@ -119,7 +119,7 @@ package javax.swing.text;
 	* @return the maximum model location possible for a break.
 	* @see View#breakView
 	*/
-	@:overload override public function getBoundedPosition(v : javax.swing.text.GlyphView, p0 : Int, x : Single, len : Single) : Int;
+	@:overload @:public override public function getBoundedPosition(v : javax.swing.text.GlyphView, p0 : Int, x : Single, len : Single) : Int;
 	
 	/**
 	* Provides a way to determine the next visually represented model
@@ -140,7 +140,7 @@ package javax.swing.text;
 	* @exception BadLocationException
 	* @exception IllegalArgumentException for an invalid direction
 	*/
-	@:overload override public function getNextVisualPositionFrom(v : javax.swing.text.GlyphView, pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function getNextVisualPositionFrom(v : javax.swing.text.GlyphView, pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	
 }

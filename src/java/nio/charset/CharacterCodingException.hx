@@ -37,7 +37,7 @@ package java.nio.charset;
 	/**
 	* Constructs an instance of this class.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

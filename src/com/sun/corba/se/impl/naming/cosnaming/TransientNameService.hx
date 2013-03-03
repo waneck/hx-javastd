@@ -34,7 +34,7 @@ extern class TransientNameService
 	* @exception org.omg.CORBA.INITIALIZE Thrown if
 	* the TransientNameService cannot initialize.
 	*/
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
 	/**
 	* Constructs a new TransientNameService, and creates an initial
@@ -45,13 +45,13 @@ extern class TransientNameService
 	* @exception org.omg.CORBA.INITIALIZE Thrown if
 	* the TransientNameService cannot initialize.
 	*/
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, serviceName : String) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, serviceName : String) : Void;
 	
 	/**
 	* Return the initial NamingContext.
 	* @return the object reference for the initial NamingContext.
 	*/
-	@:overload public function initialNamingContext() : org.omg.CORBA.Object;
+	@:overload @:public public function initialNamingContext() : org.omg.CORBA.Object;
 	
 	
 }

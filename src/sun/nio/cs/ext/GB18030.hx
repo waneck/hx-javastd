@@ -27,45 +27,45 @@ package sun.nio.cs.ext;
 */
 extern class GB18030 extends java.nio.charset.Charset
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getDecoderIndex1() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getDecoderIndex1() : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public function getDecoderIndex2() : java.NativeArray<String>;
+	@:overload @:public public function getDecoderIndex2() : java.NativeArray<String>;
 	
-	@:overload public function getSubDecoderIndex1() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getSubDecoderIndex1() : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public function getSubDecoderIndex2() : java.NativeArray<String>;
+	@:overload @:public public function getSubDecoderIndex2() : java.NativeArray<String>;
 	
-	@:overload public function getEncoderIndex1() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getEncoderIndex1() : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public function getEncoderIndex2() : java.NativeArray<String>;
+	@:overload @:public public function getEncoderIndex2() : java.NativeArray<String>;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	
 }
 @:native('sun$nio$cs$ext$GB18030$Decoder') @:internal extern class GB18030_Decoder extends java.nio.charset.CharsetDecoder
 {
-	@:overload private function decodeDouble(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
+	@:overload @:protected private function decodeDouble(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
 	
-	@:overload override private function implReset() : Void;
+	@:overload @:protected override private function implReset() : Void;
 	
-	@:overload override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
 	
 }
 @:native('sun$nio$cs$ext$GB18030$Encoder') @:internal extern class GB18030_Encoder extends java.nio.charset.CharsetEncoder
 {
-	@:overload override public function canEncode(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canEncode(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload override private function implReset() : Void;
+	@:overload @:protected override private function implReset() : Void;
 	
-	@:overload override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
 	
 }

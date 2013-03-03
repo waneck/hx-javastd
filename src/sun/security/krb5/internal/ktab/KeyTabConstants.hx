@@ -35,21 +35,21 @@ package sun.security.krb5.internal.ktab;
 */
 extern interface KeyTabConstants
 {
-	public var principalComponentSize(default, null) : Int;
+	@:final public var principalComponentSize(default, null) : Int;
 	
-	public var realmSize(default, null) : Int;
+	@:final public var realmSize(default, null) : Int;
 	
-	public var principalSize(default, null) : Int;
+	@:final public var principalSize(default, null) : Int;
 	
-	public var principalTypeSize(default, null) : Int;
+	@:final public var principalTypeSize(default, null) : Int;
 	
-	public var timestampSize(default, null) : Int;
+	@:final public var timestampSize(default, null) : Int;
 	
-	public var keyVersionSize(default, null) : Int;
+	@:final public var keyVersionSize(default, null) : Int;
 	
-	public var keyTypeSize(default, null) : Int;
+	@:final public var keyTypeSize(default, null) : Int;
 	
-	public var keySize(default, null) : Int;
+	@:final public var keySize(default, null) : Int;
 	
 	
 }

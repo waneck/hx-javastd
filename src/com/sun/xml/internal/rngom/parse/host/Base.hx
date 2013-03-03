@@ -51,9 +51,9 @@ extern class Base
 	* @author
 	*      Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	//@:overload private function _cast(ann : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.parse.host.AnnotationsHost;
+	//@:overload @:protected private function _cast(ann : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.parse.host.AnnotationsHost;
 	
-	//@:overload private function _cast(loc : com.sun.xml.internal.rngom.ast.om.Location) : com.sun.xml.internal.rngom.parse.host.LocationHost;
+	//@:overload @:protected private function _cast(loc : com.sun.xml.internal.rngom.ast.om.Location) : com.sun.xml.internal.rngom.parse.host.LocationHost;
 	
 	
 }

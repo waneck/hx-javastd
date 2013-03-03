@@ -46,19 +46,19 @@ package com.sun.xml.internal.rngom.nc;
 */
 extern class NsNameExceptNameClass extends com.sun.xml.internal.rngom.nc.NameClass
 {
-	@:overload public function new(namespaceURI : String, nameClass : com.sun.xml.internal.rngom.nc.NameClass) : Void;
+	@:overload @:public public function new(namespaceURI : String, nameClass : com.sun.xml.internal.rngom.nc.NameClass) : Void;
 	
-	@:overload override public function contains(name : javax.xml.namespace.QName) : Bool;
+	@:overload @:public override public function contains(name : javax.xml.namespace.QName) : Bool;
 	
-	@:overload override public function containsSpecificity(name : javax.xml.namespace.QName) : Int;
+	@:overload @:public override public function containsSpecificity(name : javax.xml.namespace.QName) : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload override public function accept<V>(visitor : com.sun.xml.internal.rngom.nc.NameClassVisitor<V>) : V;
+	@:overload @:public override public function accept<V>(visitor : com.sun.xml.internal.rngom.nc.NameClassVisitor<V>) : V;
 	
-	@:overload override public function isOpen() : Bool;
+	@:overload @:public override public function isOpen() : Bool;
 	
 	
 }

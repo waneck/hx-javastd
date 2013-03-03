@@ -25,19 +25,19 @@ package com.sun.tools.internal.xjc.reader.xmlschema.ct;
 */
 @:internal extern class CTBuilder
 {
-	private var builder(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.ct.ComplexTypeFieldBuilder;
+	@:protected @:final private var builder(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.ct.ComplexTypeFieldBuilder;
 	
-	private var selector(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.ClassSelector;
+	@:protected @:final private var selector(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.ClassSelector;
 	
-	private var simpleTypeBuilder(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.SimpleTypeBuilder;
+	@:protected @:final private var simpleTypeBuilder(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.SimpleTypeBuilder;
 	
-	private var errorReceiver(default, null) : com.sun.tools.internal.xjc.ErrorReceiver;
+	@:protected @:final private var errorReceiver(default, null) : com.sun.tools.internal.xjc.ErrorReceiver;
 	
-	private var green(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.BindGreen;
+	@:protected @:final private var green(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.BindGreen;
 	
-	private var schemas(default, null) : com.sun.xml.internal.xsom.XSSchemaSet;
+	@:protected @:final private var schemas(default, null) : com.sun.xml.internal.xsom.XSSchemaSet;
 	
-	private var bgmBuilder(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder;
+	@:protected @:final private var bgmBuilder(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder;
 	
 	
 }

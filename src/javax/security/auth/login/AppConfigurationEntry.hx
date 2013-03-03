@@ -48,7 +48,7 @@ extern class AppConfigurationEntry
 	*                  is not either REQUIRED, REQUISITE, SUFFICIENT
 	*                  or OPTIONAL, or if <code>options</code> is null.
 	*/
-	@:overload public function new(loginModuleName : String, controlFlag : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag, options : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function new(loginModuleName : String, controlFlag : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag, options : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* Get the class name of the configured <code>LoginModule</code>.
@@ -56,7 +56,7 @@ extern class AppConfigurationEntry
 	* @return the class name of the configured <code>LoginModule</code> as
 	*          a String.
 	*/
-	@:overload public function getLoginModuleName() : String;
+	@:overload @:public public function getLoginModuleName() : String;
 	
 	/**
 	* Return the controlFlag
@@ -67,7 +67,7 @@ extern class AppConfigurationEntry
 	*          (either REQUIRED, REQUISITE, SUFFICIENT, or OPTIONAL)
 	*          for this <code>LoginModule</code>.
 	*/
-	@:overload public function getControlFlag() : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag;
+	@:overload @:public public function getControlFlag() : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag;
 	
 	/**
 	* Get the options configured for this <code>LoginModule</code>.
@@ -75,7 +75,7 @@ extern class AppConfigurationEntry
 	* @return the options configured for this <code>LoginModule</code>
 	*          as an unmodifiable <code>Map</code>.
 	*/
-	@:overload public function getOptions() : java.util.Map<String, Dynamic>;
+	@:overload @:public public function getOptions() : java.util.Map<String, Dynamic>;
 	
 	
 }
@@ -88,22 +88,22 @@ extern class AppConfigurationEntry
 	/**
 	* Required <code>LoginModule</code>.
 	*/
-	public static var REQUIRED(default, null) : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag;
+	@:public @:static @:final public static var REQUIRED(default, null) : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag;
 	
 	/**
 	* Requisite <code>LoginModule</code>.
 	*/
-	public static var REQUISITE(default, null) : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag;
+	@:public @:static @:final public static var REQUISITE(default, null) : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag;
 	
 	/**
 	* Sufficient <code>LoginModule</code>.
 	*/
-	public static var SUFFICIENT(default, null) : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag;
+	@:public @:static @:final public static var SUFFICIENT(default, null) : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag;
 	
 	/**
 	* Optional <code>LoginModule</code>.
 	*/
-	public static var OPTIONAL(default, null) : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag;
+	@:public @:static @:final public static var OPTIONAL(default, null) : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag;
 	
 	/**
 	* Return a String representation of this controlFlag.
@@ -114,7 +114,7 @@ extern class AppConfigurationEntry
 	*
 	* @return a String representation of this controlFlag.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

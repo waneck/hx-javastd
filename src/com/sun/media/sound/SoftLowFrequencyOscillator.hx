@@ -30,15 +30,15 @@ package com.sun.media.sound;
 */
 extern class SoftLowFrequencyOscillator implements com.sun.media.sound.SoftProcess
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function init(synth : com.sun.media.sound.SoftSynthesizer) : Void;
+	@:overload @:public public function init(synth : com.sun.media.sound.SoftSynthesizer) : Void;
 	
-	@:overload public function processControlLogic() : Void;
+	@:overload @:public public function processControlLogic() : Void;
 	
-	@:overload public function get(instance : Int, name : String) : java.NativeArray<Float>;
+	@:overload @:public public function get(instance : Int, name : String) : java.NativeArray<Float>;
 	
 	
 }

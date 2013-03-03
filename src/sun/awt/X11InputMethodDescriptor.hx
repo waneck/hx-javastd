@@ -25,32 +25,32 @@ package sun.awt;
 */
 extern class X11InputMethodDescriptor implements java.awt.im.spi.InputMethodDescriptor
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* @see java.awt.im.spi.InputMethodDescriptor#getAvailableLocales
 	*/
-	@:overload public function getAvailableLocales() : java.NativeArray<java.util.Locale>;
+	@:overload @:public public function getAvailableLocales() : java.NativeArray<java.util.Locale>;
 	
 	/**
 	* @see java.awt.im.spi.InputMethodDescriptor#hasDynamicLocaleList
 	*/
-	@:overload public function hasDynamicLocaleList() : Bool;
+	@:overload @:public public function hasDynamicLocaleList() : Bool;
 	
 	/**
 	* @see java.awt.im.spi.InputMethodDescriptor#getInputMethodDisplayName
 	*/
-	@:overload @:synchronized public function getInputMethodDisplayName(inputLocale : java.util.Locale, displayLanguage : java.util.Locale) : String;
+	@:overload @:public @:synchronized public function getInputMethodDisplayName(inputLocale : java.util.Locale, displayLanguage : java.util.Locale) : String;
 	
 	/**
 	* @see java.awt.im.spi.InputMethodDescriptor#getInputMethodIcon
 	*/
-	@:overload public function getInputMethodIcon(inputLocale : java.util.Locale) : java.awt.Image;
+	@:overload @:public public function getInputMethodIcon(inputLocale : java.util.Locale) : java.awt.Image;
 	
 	/**
 	* @see java.awt.im.spi.InputMethodDescriptor#createInputMethod
 	*/
-	@:overload @:abstract public function createInputMethod() : java.awt.im.spi.InputMethod;
+	@:overload @:public @:abstract public function createInputMethod() : java.awt.im.spi.InputMethod;
 	
 	
 }

@@ -25,9 +25,9 @@ package com.sun.tools.jdi;
 */
 extern class VoidTypeImpl extends com.sun.tools.jdi.TypeImpl implements com.sun.jdi.VoidType
 {
-	@:overload override public function signature() : String;
+	@:overload @:public override public function signature() : String;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

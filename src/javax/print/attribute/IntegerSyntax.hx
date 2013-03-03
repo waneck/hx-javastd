@@ -30,7 +30,7 @@ extern class IntegerSyntax implements java.io.Serializable implements java.lang.
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Construct a new integer attribute with the given integer value, which
@@ -45,13 +45,13 @@ extern class IntegerSyntax implements java.io.Serializable implements java.lang.
 	*     <CODE>lowerBound</CODE> or greater than
 	*     <CODE>upperBound</CODE>.
 	*/
-	@:overload private function new(value : Int, lowerBound : Int, upperBound : Int) : Void;
+	@:overload @:protected private function new(value : Int, lowerBound : Int, upperBound : Int) : Void;
 	
 	/**
 	* Returns this integer attribute's integer value.
 	* @return the integer value
 	*/
-	@:overload public function getValue() : Int;
+	@:overload @:public public function getValue() : Int;
 	
 	/**
 	* Returns whether this integer attribute is equivalent to the passed in
@@ -71,20 +71,20 @@ extern class IntegerSyntax implements java.io.Serializable implements java.lang.
 	* @return  True if <CODE>object</CODE> is equivalent to this integer
 	*          attribute, false otherwise.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for this integer attribute. The hash code is
 	* just this integer attribute's integer value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string value corresponding to this integer attribute. The
 	* string value is just this integer attribute's integer value converted to
 	* a string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -29,7 +29,7 @@ package com.sun.org.apache.xerces.internal.impl.xs.models;
 */
 extern class XSCMRepeatingLeaf extends com.sun.org.apache.xerces.internal.impl.xs.models.XSCMLeaf
 {
-	@:overload public function new(type : Int, leaf : Dynamic, minOccurs : Int, maxOccurs : Int, id : Int, position : Int) : Void;
+	@:overload @:public public function new(type : Int, leaf : Dynamic, minOccurs : Int, maxOccurs : Int, id : Int, position : Int) : Void;
 	
 	
 }

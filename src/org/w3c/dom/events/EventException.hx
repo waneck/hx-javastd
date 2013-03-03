@@ -46,9 +46,9 @@ package org.w3c.dom.events;
 */
 extern class EventException extends java.lang.RuntimeException
 {
-	@:overload public function new(code : java.StdTypes.Int16, message : String) : Void;
+	@:overload @:public public function new(code : java.StdTypes.Int16, message : String) : Void;
 	
-	public var code : java.StdTypes.Int16;
+	@:public public var code : java.StdTypes.Int16;
 	
 	/**
 	*  If the <code>Event</code>'s type was not specified by initializing the
@@ -56,7 +56,7 @@ extern class EventException extends java.lang.RuntimeException
 	* as <code>null</code> or an empty string will also trigger this
 	* exception.
 	*/
-	public static var UNSPECIFIED_EVENT_TYPE_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var UNSPECIFIED_EVENT_TYPE_ERR(default, null) : java.StdTypes.Int16;
 	
 	
 }

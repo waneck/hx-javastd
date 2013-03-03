@@ -30,13 +30,13 @@ extern class AccelDeviceEventNotifier
 	* resources associated with the device which are required for the device
 	* to be reset.
 	*/
-	public static var DEVICE_RESET(default, null) : Int;
+	@:public @:static @:final public static var DEVICE_RESET(default, null) : Int;
 	
 	/**
 	* A device is about to be disposed. The listeners have to release all
 	* resources associated with the device.
 	*/
-	public static var DEVICE_DISPOSED(default, null) : Int;
+	@:public @:static @:final public static var DEVICE_DISPOSED(default, null) : Int;
 	
 	/**
 	* Called to indicate that a device event had occured.
@@ -49,7 +49,7 @@ extern class AccelDeviceEventNotifier
 	* @see #DEVICE_DISPOSED
 	* @see #DEVICE_RESET
 	*/
-	@:overload @:final public static function eventOccured(screen : Int, eventType : Int) : Void;
+	@:overload @:public @:static @:final public static function eventOccured(screen : Int, eventType : Int) : Void;
 	
 	/**
 	* Adds the listener associated with a device on particular screen.
@@ -61,14 +61,14 @@ extern class AccelDeviceEventNotifier
 	* @param screen the screen number indicating which device the listener is
 	* interested in.
 	*/
-	@:overload @:final public static function addListener(l : sun.java2d.pipe.hw.AccelDeviceEventListener, screen : Int) : Void;
+	@:overload @:public @:static @:final public static function addListener(l : sun.java2d.pipe.hw.AccelDeviceEventListener, screen : Int) : Void;
 	
 	/**
 	* Removes the listener.
 	*
 	* @param l the listener
 	*/
-	@:overload @:final public static function removeListener(l : sun.java2d.pipe.hw.AccelDeviceEventListener) : Void;
+	@:overload @:public @:static @:final public static function removeListener(l : sun.java2d.pipe.hw.AccelDeviceEventListener) : Void;
 	
 	
 }

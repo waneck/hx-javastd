@@ -25,19 +25,19 @@ package com.sun.xml.internal.org.jvnet.mimepull;
 */
 @:internal extern class FileData implements com.sun.xml.internal.org.jvnet.mimepull.Data
 {
-	@:overload public function read() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function read() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/*
 	* This shouldn't be called
 	*/
-	@:overload public function writeTo(file : com.sun.xml.internal.org.jvnet.mimepull.DataFile) : haxe.Int64;
+	@:overload @:public public function writeTo(file : com.sun.xml.internal.org.jvnet.mimepull.DataFile) : haxe.Int64;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/*
 	* Always create FileData
 	*/
-	@:overload public function createNext(dataHead : com.sun.xml.internal.org.jvnet.mimepull.DataHead, buf : java.nio.ByteBuffer) : com.sun.xml.internal.org.jvnet.mimepull.Data;
+	@:overload @:public public function createNext(dataHead : com.sun.xml.internal.org.jvnet.mimepull.DataHead, buf : java.nio.ByteBuffer) : com.sun.xml.internal.org.jvnet.mimepull.Data;
 	
 	
 }

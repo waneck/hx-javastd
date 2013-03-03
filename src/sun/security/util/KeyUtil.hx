@@ -32,7 +32,7 @@ extern class KeyUtil
 	* @return the key size of the given key object in bits, or -1 if the
 	*       key size is not accessible
 	*/
-	@:overload @:final public static function getKeySize(key : java.security.Key) : Int;
+	@:overload @:public @:static @:final public static function getKeySize(key : java.security.Key) : Int;
 	
 	/**
 	* Returns whether the key is valid or not.
@@ -45,7 +45,7 @@ extern class KeyUtil
 	* @throws NullPointerException if {@code publicKey} is null
 	* @throws InvalidKeyException if {@code publicKey} is invalid
 	*/
-	@:overload @:final public static function validate(key : java.security.Key) : Void;
+	@:overload @:public @:static @:final public static function validate(key : java.security.Key) : Void;
 	
 	/**
 	* Returns whether the key spec is valid or not.
@@ -58,7 +58,7 @@ extern class KeyUtil
 	* @throws NullPointerException if {@code keySpec} is null
 	* @throws InvalidKeyException if {@code keySpec} is invalid
 	*/
-	@:overload @:final public static function validate(keySpec : java.security.spec.KeySpec) : Void;
+	@:overload @:public @:static @:final public static function validate(keySpec : java.security.spec.KeySpec) : Void;
 	
 	/**
 	* Returns whether the specified provider is Oracle provider or not.
@@ -70,7 +70,7 @@ extern class KeyUtil
 	* @return true if, and only if, the provider of the specified
 	*         {@code providerName} is Oracle provider
 	*/
-	@:overload @:final public static function isOracleJCEProvider(providerName : String) : Bool;
+	@:overload @:public @:static @:final public static function isOracleJCEProvider(providerName : String) : Bool;
 	
 	
 }

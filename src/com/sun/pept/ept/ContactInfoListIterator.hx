@@ -43,7 +43,7 @@ extern interface ContactInfoListIterator
 	* @return a boolean with ...
 	* </p>
 	*/
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
 	/**
 	* <p>
@@ -53,7 +53,7 @@ extern interface ContactInfoListIterator
 	* @return a ContactInfo with ...
 	* </p>
 	*/
-	@:overload public function next() : com.sun.pept.ept.ContactInfo;
+	@:overload @:public public function next() : com.sun.pept.ept.ContactInfo;
 	
 	
 }

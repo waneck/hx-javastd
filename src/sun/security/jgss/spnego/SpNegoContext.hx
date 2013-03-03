@@ -36,86 +36,86 @@ package sun.security.jgss.spnego;
 	* Constructor for SpNegoContext to be called on the context initiator's
 	* side.
 	*/
-	@:overload public function new(factory : sun.security.jgss.spnego.SpNegoMechFactory, peerName : sun.security.jgss.spi.GSSNameSpi, myCred : sun.security.jgss.spi.GSSCredentialSpi, lifetime : Int) : Void;
+	@:overload @:public public function new(factory : sun.security.jgss.spnego.SpNegoMechFactory, peerName : sun.security.jgss.spi.GSSNameSpi, myCred : sun.security.jgss.spi.GSSCredentialSpi, lifetime : Int) : Void;
 	
 	/**
 	* Constructor for SpNegoContext to be called on the context acceptor's
 	* side.
 	*/
-	@:overload public function new(factory : sun.security.jgss.spnego.SpNegoMechFactory, myCred : sun.security.jgss.spi.GSSCredentialSpi) : Void;
+	@:overload @:public public function new(factory : sun.security.jgss.spnego.SpNegoMechFactory, myCred : sun.security.jgss.spi.GSSCredentialSpi) : Void;
 	
 	/**
 	* Constructor for SpNegoContext to import a previously exported context.
 	*/
-	@:overload public function new(factory : sun.security.jgss.spnego.SpNegoMechFactory, interProcessToken : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(factory : sun.security.jgss.spnego.SpNegoMechFactory, interProcessToken : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Requests that confidentiality be available.
 	*/
-	@:overload @:final public function requestConf(value : Bool) : Void;
+	@:overload @:public @:final public function requestConf(value : Bool) : Void;
 	
 	/**
 	* Is confidentiality available?
 	*/
-	@:overload @:final public function getConfState() : Bool;
+	@:overload @:public @:final public function getConfState() : Bool;
 	
 	/**
 	* Requests that integrity be available.
 	*/
-	@:overload @:final public function requestInteg(value : Bool) : Void;
+	@:overload @:public @:final public function requestInteg(value : Bool) : Void;
 	
 	/**
 	* Requests that deleg policy be respected.
 	*/
-	@:overload @:final public function requestDelegPolicy(value : Bool) : Void;
+	@:overload @:public @:final public function requestDelegPolicy(value : Bool) : Void;
 	
 	/**
 	* Is integrity available?
 	*/
-	@:overload @:final public function getIntegState() : Bool;
+	@:overload @:public @:final public function getIntegState() : Bool;
 	
 	/**
 	* Is deleg policy respected?
 	*/
-	@:overload @:final public function getDelegPolicyState() : Bool;
+	@:overload @:public @:final public function getDelegPolicyState() : Bool;
 	
 	/**
 	* Requests that credential delegation be done during context
 	* establishment.
 	*/
-	@:overload @:final public function requestCredDeleg(value : Bool) : Void;
+	@:overload @:public @:final public function requestCredDeleg(value : Bool) : Void;
 	
 	/**
 	* Is credential delegation enabled?
 	*/
-	@:overload @:final public function getCredDelegState() : Bool;
+	@:overload @:public @:final public function getCredDelegState() : Bool;
 	
 	/**
 	* Requests that mutual authentication be done during context
 	* establishment. Since this is fromm the client's perspective, it
 	* essentially requests that the server be authenticated.
 	*/
-	@:overload @:final public function requestMutualAuth(value : Bool) : Void;
+	@:overload @:public @:final public function requestMutualAuth(value : Bool) : Void;
 	
 	/**
 	* Is mutual authentication enabled? Since this is from the client's
 	* perspective, it essentially meas that the server is being
 	* authenticated.
 	*/
-	@:overload @:final public function getMutualAuthState() : Bool;
+	@:overload @:public @:final public function getMutualAuthState() : Bool;
 	
 	/**
 	* Returns the mechanism oid.
 	*
 	* @return the Oid of this context
 	*/
-	@:overload @:final public function getMech() : org.ietf.jgss.Oid;
+	@:overload @:public @:final public function getMech() : org.ietf.jgss.Oid;
 	
-	@:overload @:final public function getNegotiatedMech() : org.ietf.jgss.Oid;
+	@:overload @:public @:final public function getNegotiatedMech() : org.ietf.jgss.Oid;
 	
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
-	@:overload @:final public function dispose() : Void;
+	@:overload @:public @:final public function dispose() : Void;
 	
 	/**
 	* Tests if this is the initiator side of the context.
@@ -123,7 +123,7 @@ package sun.security.jgss.spnego;
 	* @return boolean indicating if this is initiator (true)
 	*  or target (false)
 	*/
-	@:overload @:final public function isInitiator() : Bool;
+	@:overload @:public @:final public function isInitiator() : Bool;
 	
 	/**
 	* Tests if the context can be used for per-message service.
@@ -133,7 +133,7 @@ package sun.security.jgss.spnego;
 	* @return boolean indicating if per-message methods can
 	*  be called.
 	*/
-	@:overload @:final public function isProtReady() : Bool;
+	@:overload @:public @:final public function isProtReady() : Bool;
 	
 	/**
 	* Initiator context establishment call. This method may be
@@ -148,7 +148,7 @@ package sun.security.jgss.spnego;
 	* to its peer for processing.
 	* @exception GSSException
 	*/
-	@:overload @:final public function initSecContext(is : java.io.InputStream, mechTokenSize : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function initSecContext(is : java.io.InputStream, mechTokenSize : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Acceptor's context establishment call. This method may be
@@ -162,19 +162,19 @@ package sun.security.jgss.spnego;
 	* to its peer for processing.
 	* @exception GSSException
 	*/
-	@:overload @:final public function acceptSecContext(is : java.io.InputStream, mechTokenSize : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function acceptSecContext(is : java.io.InputStream, mechTokenSize : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:final public function isEstablished() : Bool;
+	@:overload @:public @:final public function isEstablished() : Bool;
 	
-	@:overload @:final public function isMechContextEstablished() : Bool;
+	@:overload @:public @:final public function isMechContextEstablished() : Bool;
 	
-	@:overload @:final public function export() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function export() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Sets the channel bindings to be used during context
 	* establishment.
 	*/
-	@:overload @:final public function setChannelBinding(channelBinding : org.ietf.jgss.ChannelBinding) : Void;
+	@:overload @:public @:final public function setChannelBinding(channelBinding : org.ietf.jgss.ChannelBinding) : Void;
 	
 	/*
 	* Anonymity is a little different in that after an application
@@ -184,50 +184,50 @@ package sun.security.jgss.spnego;
 	* perspective, it essentially requests that the initiator be
 	* anonymous.
 	*/
-	@:overload @:final public function requestAnonymity(value : Bool) : Void;
+	@:overload @:public @:final public function requestAnonymity(value : Bool) : Void;
 	
-	@:overload @:final public function getAnonymityState() : Bool;
+	@:overload @:public @:final public function getAnonymityState() : Bool;
 	
 	/**
 	* Requests the desired lifetime. Can only be used on the context
 	* initiator's side.
 	*/
-	@:overload public function requestLifetime(lifetime : Int) : Void;
+	@:overload @:public public function requestLifetime(lifetime : Int) : Void;
 	
 	/**
 	* The lifetime remaining for this context.
 	*/
-	@:overload @:final public function getLifetime() : Int;
+	@:overload @:public @:final public function getLifetime() : Int;
 	
-	@:overload @:final public function isTransferable() : Bool;
+	@:overload @:public @:final public function isTransferable() : Bool;
 	
 	/**
 	* Requests that sequence checking be done on the GSS wrap and MIC
 	* tokens.
 	*/
-	@:overload @:final public function requestSequenceDet(value : Bool) : Void;
+	@:overload @:public @:final public function requestSequenceDet(value : Bool) : Void;
 	
 	/**
 	* Is sequence checking enabled on the GSS Wrap and MIC tokens?
 	* We enable sequence checking if replay detection is enabled.
 	*/
-	@:overload @:final public function getSequenceDetState() : Bool;
+	@:overload @:public @:final public function getSequenceDetState() : Bool;
 	
 	/**
 	* Requests that replay detection be done on the GSS wrap and MIC
 	* tokens.
 	*/
-	@:overload @:final public function requestReplayDet(value : Bool) : Void;
+	@:overload @:public @:final public function requestReplayDet(value : Bool) : Void;
 	
 	/**
 	* Is replay detection enabled on the GSS wrap and MIC tokens?
 	* We enable replay detection if sequence checking is enabled.
 	*/
-	@:overload @:final public function getReplayDetState() : Bool;
+	@:overload @:public @:final public function getReplayDetState() : Bool;
 	
-	@:overload @:final public function getTargName() : sun.security.jgss.spi.GSSNameSpi;
+	@:overload @:public @:final public function getTargName() : sun.security.jgss.spi.GSSNameSpi;
 	
-	@:overload @:final public function getSrcName() : sun.security.jgss.spi.GSSNameSpi;
+	@:overload @:public @:final public function getSrcName() : sun.security.jgss.spi.GSSNameSpi;
 	
 	/**
 	* Returns the delegated credential for the context. This
@@ -239,30 +239,30 @@ package sun.security.jgss.spnego;
 	* @exception GSSException
 	* @see GSSContext#getDelegCredState
 	*/
-	@:overload @:final public function getDelegCred() : sun.security.jgss.spi.GSSCredentialSpi;
+	@:overload @:public @:final public function getDelegCred() : sun.security.jgss.spi.GSSCredentialSpi;
 	
-	@:overload @:final public function getWrapSizeLimit(qop : Int, confReq : Bool, maxTokSize : Int) : Int;
+	@:overload @:public @:final public function getWrapSizeLimit(qop : Int, confReq : Bool, maxTokSize : Int) : Int;
 	
-	@:overload @:final public function wrap(inBuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function wrap(inBuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:final public function wrap(is : java.io.InputStream, os : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public @:final public function wrap(is : java.io.InputStream, os : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
 	
-	@:overload @:final public function unwrap(inBuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function unwrap(inBuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:final public function unwrap(is : java.io.InputStream, os : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public @:final public function unwrap(is : java.io.InputStream, os : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
 	
-	@:overload @:final public function getMIC(inMsg : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getMIC(inMsg : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:final public function getMIC(is : java.io.InputStream, os : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public @:final public function getMIC(is : java.io.InputStream, os : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
 	
-	@:overload @:final public function verifyMIC(inTok : java.NativeArray<java.StdTypes.Int8>, tokOffset : Int, tokLen : Int, inMsg : java.NativeArray<java.StdTypes.Int8>, msgOffset : Int, msgLen : Int, msgProp : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public @:final public function verifyMIC(inTok : java.NativeArray<java.StdTypes.Int8>, tokOffset : Int, tokLen : Int, inMsg : java.NativeArray<java.StdTypes.Int8>, msgOffset : Int, msgLen : Int, msgProp : org.ietf.jgss.MessageProp) : Void;
 	
-	@:overload @:final public function verifyMIC(is : java.io.InputStream, msgStr : java.io.InputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public @:final public function verifyMIC(is : java.io.InputStream, msgStr : java.io.InputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
 	
 	/**
 	* Retrieve attribute of the context for {@code type}.
 	*/
-	@:overload public function inquireSecContext(type : com.sun.security.jgss.InquireType) : Dynamic;
+	@:overload @:public public function inquireSecContext(type : com.sun.security.jgss.InquireType) : Dynamic;
 	
 	
 }

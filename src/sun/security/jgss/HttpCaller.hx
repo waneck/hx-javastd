@@ -25,9 +25,9 @@ package sun.security.jgss;
 */
 extern class HttpCaller extends sun.security.jgss.GSSCaller
 {
-	@:overload public function new(hci : sun.net.www.protocol.http.HttpCallerInfo) : Void;
+	@:overload @:public public function new(hci : sun.net.www.protocol.http.HttpCallerInfo) : Void;
 	
-	@:overload public function info() : sun.net.www.protocol.http.HttpCallerInfo;
+	@:overload @:public public function info() : sun.net.www.protocol.http.HttpCallerInfo;
 	
 	
 }

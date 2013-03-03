@@ -37,9 +37,9 @@ package com.sun.tools.corba.se.idl;
 //// -D62023<daz> Cast char to byte for JDK 1.2 compatability.
 extern class InvalidCharacter extends java.io.IOException
 {
-	@:overload public function new(filename : String, line : String, lineNumber : Int, pos : Int, ch : java.StdTypes.Char16) : Void;
+	@:overload @:public public function new(filename : String, line : String, lineNumber : Int, pos : Int, ch : java.StdTypes.Char16) : Void;
 	
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

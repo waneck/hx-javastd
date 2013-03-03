@@ -28,14 +28,14 @@ extern class PolicyModelGenerator
 	/**
 	* This protected constructor avoids direct instantiation from outside of the class
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Factory method that returns a {@link PolicyModelGenerator} instance.
 	*
 	* @return {@link PolicyModelGenerator} instance
 	*/
-	@:overload public static function getGenerator() : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator;
+	@:overload @:public @:static public static function getGenerator() : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator;
 	
 	/**
 	* Allows derived classes to create instances of the package private
@@ -44,7 +44,7 @@ extern class PolicyModelGenerator
 	* @param creator An implementation of the PolicySourceModelCreator.
 	* @return An instance of CompactModelGenerator.
 	*/
-	@:overload private static function getCompactGenerator(creator : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator.PolicyModelGenerator_PolicySourceModelCreator) : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator;
+	@:overload @:protected @:static private static function getCompactGenerator(creator : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator.PolicyModelGenerator_PolicySourceModelCreator) : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator;
 	
 	/**
 	* Allows derived classes to create instances of the package private
@@ -53,7 +53,7 @@ extern class PolicyModelGenerator
 	* @param creator An implementation of the PolicySourceModelCreator.
 	* @return An instance of NormalizedModelGenerator.
 	*/
-	@:overload private static function getNormalizedGenerator(creator : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator.PolicyModelGenerator_PolicySourceModelCreator) : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator;
+	@:overload @:protected @:static private static function getNormalizedGenerator(creator : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator.PolicyModelGenerator_PolicySourceModelCreator) : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator;
 	
 	/**
 	* This method translates a {@link Policy} into a
@@ -66,7 +66,7 @@ extern class PolicyModelGenerator
 	* null.
 	* @throws PolicyException in case Policy translation fails.
 	*/
-	@:overload @:abstract public function translate(policy : com.sun.xml.internal.ws.policy.Policy) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
+	@:overload @:public @:abstract public function translate(policy : com.sun.xml.internal.ws.policy.Policy) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	/**
 	* Iterates through a nested policy and returns the corresponding policy info model.
@@ -75,7 +75,7 @@ extern class PolicyModelGenerator
 	* @param policy The nested policy.
 	* @return The nested policy translated to the policy info model.
 	*/
-	@:overload @:abstract private function translate(parentAssertion : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode, policy : com.sun.xml.internal.ws.policy.NestedPolicy) : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
+	@:overload @:protected @:abstract private function translate(parentAssertion : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode, policy : com.sun.xml.internal.ws.policy.NestedPolicy) : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	/**
 	* Add the contents of the assertion set as child node to the given model node.
@@ -84,7 +84,7 @@ extern class PolicyModelGenerator
 	*     May not be null.
 	* @param assertions The assertions that are to be added to the node. May not be null.
 	*/
-	@:overload private function translate(node : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode, assertions : com.sun.xml.internal.ws.policy.AssertionSet) : Void;
+	@:overload @:protected private function translate(node : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode, assertions : com.sun.xml.internal.ws.policy.AssertionSet) : Void;
 	
 	/**
 	* Iterates through all contained assertions and adds them to the info model.
@@ -92,7 +92,7 @@ extern class PolicyModelGenerator
 	* @param assertionParametersIterator The contained assertions.
 	* @param assertionNode The node to which the assertions are added as child nodes
 	*/
-	@:overload private function translate(assertionNode : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode, assertionParametersIterator : java.util.Iterator<com.sun.xml.internal.ws.policy.PolicyAssertion>) : Void;
+	@:overload @:protected private function translate(assertionNode : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode, assertionParametersIterator : java.util.Iterator<com.sun.xml.internal.ws.policy.PolicyAssertion>) : Void;
 	
 	
 }
@@ -108,7 +108,7 @@ extern class PolicyModelGenerator
 	* @param policy The policy that underlies the created PolicySourceModel.
 	* @return An instance of the PolicySourceModel.
 	*/
-	@:overload private function create(policy : com.sun.xml.internal.ws.policy.Policy) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
+	@:overload @:protected private function create(policy : com.sun.xml.internal.ws.policy.Policy) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	
 }

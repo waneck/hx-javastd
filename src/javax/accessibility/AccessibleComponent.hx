@@ -52,7 +52,7 @@ extern interface AccessibleComponent
 	* otherwise, null
 	* @see #setBackground
 	*/
-	@:overload public function getBackground() : java.awt.Color;
+	@:overload @:public @:public @:public public function getBackground() : java.awt.Color;
 	
 	/**
 	* Sets the background color of this object.
@@ -60,7 +60,7 @@ extern interface AccessibleComponent
 	* @param c the new Color for the background
 	* @see #setBackground
 	*/
-	@:overload public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public @:public @:public public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Gets the foreground color of this object.
@@ -69,7 +69,7 @@ extern interface AccessibleComponent
 	* otherwise, null
 	* @see #setForeground
 	*/
-	@:overload public function getForeground() : java.awt.Color;
+	@:overload @:public @:public @:public public function getForeground() : java.awt.Color;
 	
 	/**
 	* Sets the foreground color of this object.
@@ -77,7 +77,7 @@ extern interface AccessibleComponent
 	* @param c the new Color for the foreground
 	* @see #getForeground
 	*/
-	@:overload public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public @:public @:public public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* Gets the Cursor of this object.
@@ -85,7 +85,7 @@ extern interface AccessibleComponent
 	* @return the Cursor, if supported, of the object; otherwise, null
 	* @see #setCursor
 	*/
-	@:overload public function getCursor() : java.awt.Cursor;
+	@:overload @:public @:public @:public public function getCursor() : java.awt.Cursor;
 	
 	/**
 	* Sets the Cursor of this object.
@@ -93,7 +93,7 @@ extern interface AccessibleComponent
 	* @param cursor  the new Cursor for the object
 	* @see #getCursor
 	*/
-	@:overload public function setCursor(cursor : java.awt.Cursor) : Void;
+	@:overload @:public @:public @:public public function setCursor(cursor : java.awt.Cursor) : Void;
 	
 	/**
 	* Gets the Font of this object.
@@ -101,7 +101,7 @@ extern interface AccessibleComponent
 	* @return the Font,if supported, for the object; otherwise, null
 	* @see #setFont
 	*/
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public @:public @:public public function getFont() : java.awt.Font;
 	
 	/**
 	* Sets the Font of this object.
@@ -109,7 +109,7 @@ extern interface AccessibleComponent
 	* @param f the new Font for the object
 	* @see #getFont
 	*/
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public @:public @:public public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Gets the FontMetrics of this object.
@@ -118,7 +118,7 @@ extern interface AccessibleComponent
 	* @return the FontMetrics, if supported, the object; otherwise, null
 	* @see #getFont
 	*/
-	@:overload public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public @:public @:public public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Determines if the object is enabled.  Objects that are enabled
@@ -131,7 +131,7 @@ extern interface AccessibleComponent
 	* @see AccessibleState#ENABLED
 	* @see AccessibleStateSet
 	*/
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public @:public @:public public function isEnabled() : Bool;
 	
 	/**
 	* Sets the enabled state of the object.
@@ -139,7 +139,7 @@ extern interface AccessibleComponent
 	* @param b if true, enables this object; otherwise, disables it
 	* @see #isEnabled
 	*/
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public @:public @:public public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Determines if the object is visible.  Note: this means that the
@@ -156,7 +156,7 @@ extern interface AccessibleComponent
 	* @see AccessibleState#VISIBLE
 	* @see AccessibleStateSet
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public @:public @:public public function isVisible() : Bool;
 	
 	/**
 	* Sets the visible state of the object.
@@ -164,7 +164,7 @@ extern interface AccessibleComponent
 	* @param b if true, shows this object; otherwise, hides it
 	* @see #isVisible
 	*/
-	@:overload public function setVisible(b : Bool) : Void;
+	@:overload @:public @:public @:public public function setVisible(b : Bool) : Void;
 	
 	/**
 	* Determines if the object is showing.  This is determined by checking
@@ -175,7 +175,7 @@ extern interface AccessibleComponent
 	*
 	* @return true if object is showing; otherwise, false
 	*/
-	@:overload public function isShowing() : Bool;
+	@:overload @:public @:public @:public public function isShowing() : Bool;
 	
 	/**
 	* Checks whether the specified point is within this object's bounds,
@@ -186,7 +186,7 @@ extern interface AccessibleComponent
 	* @return true if object contains Point; otherwise false
 	* @see #getBounds
 	*/
-	@:overload public function contains(p : java.awt.Point) : Bool;
+	@:overload @:public @:public @:public public function contains(p : java.awt.Point) : Bool;
 	
 	/**
 	* Returns the location of the object on the screen.
@@ -196,7 +196,7 @@ extern interface AccessibleComponent
 	* @see #getBounds
 	* @see #getLocation
 	*/
-	@:overload public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public @:public @:public public function getLocationOnScreen() : java.awt.Point;
 	
 	/**
 	* Gets the location of the object relative to the parent in the form
@@ -209,14 +209,14 @@ extern interface AccessibleComponent
 	* @see #getBounds
 	* @see #getLocationOnScreen
 	*/
-	@:overload public function getLocation() : java.awt.Point;
+	@:overload @:public @:public @:public public function getLocation() : java.awt.Point;
 	
 	/**
 	* Sets the location of the object relative to the parent.
 	* @param p the new position for the top-left corner
 	* @see #getLocation
 	*/
-	@:overload public function setLocation(p : java.awt.Point) : Void;
+	@:overload @:public @:public @:public public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* Gets the bounds of this object in the form of a Rectangle object.
@@ -227,7 +227,7 @@ extern interface AccessibleComponent
 	* this object is not on the screen.
 	* @see #contains
 	*/
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public @:public @:public public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Sets the bounds of this object in the form of a Rectangle object.
@@ -237,7 +237,7 @@ extern interface AccessibleComponent
 	* @param r rectangle indicating this component's bounds
 	* @see #getBounds
 	*/
-	@:overload public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload @:public @:public @:public public function setBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Returns the size of this object in the form of a Dimension object.
@@ -249,7 +249,7 @@ extern interface AccessibleComponent
 	* null if this object is not on the screen
 	* @see #setSize
 	*/
-	@:overload public function getSize() : java.awt.Dimension;
+	@:overload @:public @:public @:public public function getSize() : java.awt.Dimension;
 	
 	/**
 	* Resizes this object so that it has width and height.
@@ -257,7 +257,7 @@ extern interface AccessibleComponent
 	* @param d The dimension specifying the new size of the object.
 	* @see #getSize
 	*/
-	@:overload public function setSize(d : java.awt.Dimension) : Void;
+	@:overload @:public @:public @:public public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the Accessible child, if one exists, contained at the local
@@ -267,7 +267,7 @@ extern interface AccessibleComponent
 	* @return the Accessible, if it exists, at the specified location;
 	* otherwise null
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public @:public @:public public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns whether this object can accept focus or not.   Objects that
@@ -280,7 +280,7 @@ extern interface AccessibleComponent
 	* @see AccessibleState#FOCUSED
 	* @see AccessibleStateSet
 	*/
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public @:public @:public public function isFocusTraversable() : Bool;
 	
 	/**
 	* Requests focus for this object.  If this object cannot accept focus,
@@ -288,7 +288,7 @@ extern interface AccessibleComponent
 	* focus.
 	* @see #isFocusTraversable
 	*/
-	@:overload public function requestFocus() : Void;
+	@:overload @:public @:public @:public public function requestFocus() : Void;
 	
 	/**
 	* Adds the specified focus listener to receive focus events from this
@@ -297,7 +297,7 @@ extern interface AccessibleComponent
 	* @param l the focus listener
 	* @see #removeFocusListener
 	*/
-	@:overload public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public @:public @:public public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Removes the specified focus listener so it no longer receives focus
@@ -306,7 +306,7 @@ extern interface AccessibleComponent
 	* @param l the focus listener
 	* @see #addFocusListener
 	*/
-	@:overload public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public @:public @:public public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	
 }

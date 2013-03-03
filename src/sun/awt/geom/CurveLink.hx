@@ -25,35 +25,35 @@ package sun.awt.geom;
 */
 @:internal extern class CurveLink
 {
-	@:overload public function new(curve : sun.awt.geom.Curve, ystart : Float, yend : Float, etag : Int) : Void;
+	@:overload @:public public function new(curve : sun.awt.geom.Curve, ystart : Float, yend : Float, etag : Int) : Void;
 	
-	@:overload public function absorb(link : sun.awt.geom.CurveLink) : Bool;
+	@:overload @:public public function absorb(link : sun.awt.geom.CurveLink) : Bool;
 	
-	@:overload public function absorb(curve : sun.awt.geom.Curve, ystart : Float, yend : Float, etag : Int) : Bool;
+	@:overload @:public public function absorb(curve : sun.awt.geom.Curve, ystart : Float, yend : Float, etag : Int) : Bool;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function getCurve() : sun.awt.geom.Curve;
+	@:overload @:public public function getCurve() : sun.awt.geom.Curve;
 	
-	@:overload public function getSubCurve() : sun.awt.geom.Curve;
+	@:overload @:public public function getSubCurve() : sun.awt.geom.Curve;
 	
-	@:overload public function getMoveto() : sun.awt.geom.Curve;
+	@:overload @:public public function getMoveto() : sun.awt.geom.Curve;
 	
-	@:overload public function getXTop() : Float;
+	@:overload @:public public function getXTop() : Float;
 	
-	@:overload public function getYTop() : Float;
+	@:overload @:public public function getYTop() : Float;
 	
-	@:overload public function getXBot() : Float;
+	@:overload @:public public function getXBot() : Float;
 	
-	@:overload public function getYBot() : Float;
+	@:overload @:public public function getYBot() : Float;
 	
-	@:overload public function getX() : Float;
+	@:overload @:public public function getX() : Float;
 	
-	@:overload public function getEdgeTag() : Int;
+	@:overload @:public public function getEdgeTag() : Int;
 	
-	@:overload public function setNext(link : sun.awt.geom.CurveLink) : Void;
+	@:overload @:public public function setNext(link : sun.awt.geom.CurveLink) : Void;
 	
-	@:overload public function getNext() : sun.awt.geom.CurveLink;
+	@:overload @:public public function getNext() : sun.awt.geom.CurveLink;
 	
 	
 }

@@ -25,19 +25,19 @@ package com.sun.tools.internal.xjc.reader.dtd;
 */
 @:internal extern class Messages
 {
-	public static var ERR_NO_ROOT_ELEMENT(default, null) : String;
+	@:public @:static @:final public static var ERR_NO_ROOT_ELEMENT(default, null) : String;
 	
-	public static var ERR_UNDEFINED_ELEMENT_IN_BINDINFO(default, null) : String;
+	@:public @:static @:final public static var ERR_UNDEFINED_ELEMENT_IN_BINDINFO(default, null) : String;
 	
-	public static var ERR_CONVERSION_FOR_NON_VALUE_ELEMENT(default, null) : String;
+	@:public @:static @:final public static var ERR_CONVERSION_FOR_NON_VALUE_ELEMENT(default, null) : String;
 	
-	public static var ERR_CONTENT_PROPERTY_PARTICLE_MISMATCH(default, null) : String;
+	@:public @:static @:final public static var ERR_CONTENT_PROPERTY_PARTICLE_MISMATCH(default, null) : String;
 	
-	public static var ERR_CONTENT_PROPERTY_DECLARATION_TOO_SHORT(default, null) : String;
+	@:public @:static @:final public static var ERR_CONTENT_PROPERTY_DECLARATION_TOO_SHORT(default, null) : String;
 	
-	public static var ERR_BINDINFO_NON_EXISTENT_ELEMENT_DECLARATION(default, null) : String;
+	@:public @:static @:final public static var ERR_BINDINFO_NON_EXISTENT_ELEMENT_DECLARATION(default, null) : String;
 	
-	public static var ERR_BINDINFO_NON_EXISTENT_INTERFACE_MEMBER(default, null) : String;
+	@:public @:static @:final public static var ERR_BINDINFO_NON_EXISTENT_INTERFACE_MEMBER(default, null) : String;
 	
 	
 }

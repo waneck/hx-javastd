@@ -29,38 +29,38 @@ extern class ExtendedBufferCapabilities extends java.awt.BufferCapabilities
 	* Creates an ExtendedBufferCapabilities object with front/back/flip caps
 	* from the passed cap, and VSYNC_DEFAULT v-sync mode.
 	*/
-	@:overload public function new(caps : java.awt.BufferCapabilities) : Void;
+	@:overload @:public public function new(caps : java.awt.BufferCapabilities) : Void;
 	
 	/**
 	* Creates an ExtendedBufferCapabilities instance with front/back/flip caps
 	* from the passed caps, and VSYNC_DEFAULT v-sync mode.
 	*/
-	@:overload public function new(front : java.awt.ImageCapabilities, back : java.awt.ImageCapabilities, flip : java.awt.BufferCapabilities.BufferCapabilities_FlipContents) : Void;
+	@:overload @:public public function new(front : java.awt.ImageCapabilities, back : java.awt.ImageCapabilities, flip : java.awt.BufferCapabilities.BufferCapabilities_FlipContents) : Void;
 	
 	/**
 	* Creates an ExtendedBufferCapabilities instance with front/back/flip caps
 	* from the passed image/flip caps, and the v-sync type.
 	*/
-	@:overload public function new(front : java.awt.ImageCapabilities, back : java.awt.ImageCapabilities, flip : java.awt.BufferCapabilities.BufferCapabilities_FlipContents, t : sun.java2d.pipe.hw.ExtendedBufferCapabilities.ExtendedBufferCapabilities_VSyncType) : Void;
+	@:overload @:public public function new(front : java.awt.ImageCapabilities, back : java.awt.ImageCapabilities, flip : java.awt.BufferCapabilities.BufferCapabilities_FlipContents, t : sun.java2d.pipe.hw.ExtendedBufferCapabilities.ExtendedBufferCapabilities_VSyncType) : Void;
 	
 	/**
 	* Creates an ExtendedBufferCapabilities instance with front/back/flip caps
 	* from the passed cap, and the passed v-sync mode.
 	*/
-	@:overload public function new(caps : java.awt.BufferCapabilities, t : sun.java2d.pipe.hw.ExtendedBufferCapabilities.ExtendedBufferCapabilities_VSyncType) : Void;
+	@:overload @:public public function new(caps : java.awt.BufferCapabilities, t : sun.java2d.pipe.hw.ExtendedBufferCapabilities.ExtendedBufferCapabilities_VSyncType) : Void;
 	
 	/**
 	* Creates an ExtendedBufferCapabilities instance with front/back/flip caps
 	* from the object, and passed v-sync mode.
 	*/
-	@:overload public function derive(t : sun.java2d.pipe.hw.ExtendedBufferCapabilities.ExtendedBufferCapabilities_VSyncType) : sun.java2d.pipe.hw.ExtendedBufferCapabilities;
+	@:overload @:public public function derive(t : sun.java2d.pipe.hw.ExtendedBufferCapabilities.ExtendedBufferCapabilities_VSyncType) : sun.java2d.pipe.hw.ExtendedBufferCapabilities;
 	
 	/**
 	* Returns the type of v-sync requested by this capabilities instance.
 	*/
-	@:overload public function getVSync() : sun.java2d.pipe.hw.ExtendedBufferCapabilities.ExtendedBufferCapabilities_VSyncType;
+	@:overload @:public public function getVSync() : sun.java2d.pipe.hw.ExtendedBufferCapabilities.ExtendedBufferCapabilities_VSyncType;
 	
-	@:overload @:final override public function isPageFlipping() : Bool;
+	@:overload @:public @:final override public function isPageFlipping() : Bool;
 	
 	
 }

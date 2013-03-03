@@ -30,64 +30,64 @@ package com.sun.tools.hat.internal.model;
 */
 extern class JavaHeapObject extends com.sun.tools.hat.internal.model.JavaThing
 {
-	@:overload @:abstract public function getClazz() : com.sun.tools.hat.internal.model.JavaClass;
+	@:overload @:public @:abstract public function getClazz() : com.sun.tools.hat.internal.model.JavaClass;
 	
-	@:overload @:abstract override public function getSize() : Int;
+	@:overload @:public @:abstract override public function getSize() : Int;
 	
-	@:overload @:abstract public function getId() : haxe.Int64;
+	@:overload @:public @:abstract public function getId() : haxe.Int64;
 	
 	/**
 	* Do any initialization this thing needs after its data is read in.
 	* Subclasses that override this should call super.resolve().
 	*/
-	@:overload public function resolve(snapshot : com.sun.tools.hat.internal.model.Snapshot) : Void;
+	@:overload @:public public function resolve(snapshot : com.sun.tools.hat.internal.model.Snapshot) : Void;
 	
 	/**
 	* @return the id of this thing as hex string
 	*/
-	@:overload public function getIdString() : String;
+	@:overload @:public public function getIdString() : String;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* @return the StackTrace of the point of allocation of this object,
 	*          or null if unknown
 	*/
-	@:overload public function getAllocatedFrom() : com.sun.tools.hat.internal.model.StackTrace;
+	@:overload @:public public function getAllocatedFrom() : com.sun.tools.hat.internal.model.StackTrace;
 	
-	@:overload public function isNew() : Bool;
+	@:overload @:public public function isNew() : Bool;
 	
 	/**
 	* Tell the visitor about all of the objects we refer to
 	*/
-	@:overload public function visitReferencedObjects(v : com.sun.tools.hat.internal.model.JavaHeapObjectVisitor) : Void;
+	@:overload @:public public function visitReferencedObjects(v : com.sun.tools.hat.internal.model.JavaHeapObjectVisitor) : Void;
 	
 	/**
 	* If the rootset includes this object, return a Root describing one
 	* of the reasons why.
 	*/
-	@:overload public function getRoot() : com.sun.tools.hat.internal.model.Root;
+	@:overload @:public public function getRoot() : com.sun.tools.hat.internal.model.Root;
 	
 	/**
 	* Tell who refers to us.
 	*
 	* @return an Enumeration of JavaHeapObject instances
 	*/
-	@:overload public function getReferers() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getReferers() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Given other, which the caller promises is in referers, determines if
 	* the reference is only a weak reference.
 	*/
-	@:overload public function refersOnlyWeaklyTo(ss : com.sun.tools.hat.internal.model.Snapshot, other : com.sun.tools.hat.internal.model.JavaThing) : Bool;
+	@:overload @:public public function refersOnlyWeaklyTo(ss : com.sun.tools.hat.internal.model.Snapshot, other : com.sun.tools.hat.internal.model.JavaThing) : Bool;
 	
 	/**
 	* Describe the reference that this thing has to target.  This will only
 	* be called if target is in the array returned by getChildrenForRootset.
 	*/
-	@:overload public function describeReferenceTo(target : com.sun.tools.hat.internal.model.JavaThing, ss : com.sun.tools.hat.internal.model.Snapshot) : String;
+	@:overload @:public public function describeReferenceTo(target : com.sun.tools.hat.internal.model.JavaThing, ss : com.sun.tools.hat.internal.model.Snapshot) : String;
 	
-	@:overload override public function isHeapAllocated() : Bool;
+	@:overload @:public override public function isHeapAllocated() : Bool;
 	
 	
 }

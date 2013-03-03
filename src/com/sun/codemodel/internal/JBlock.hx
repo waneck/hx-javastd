@@ -25,15 +25,15 @@ package com.sun.codemodel.internal;
 */
 extern class JBlock implements com.sun.codemodel.internal.JGenerable implements com.sun.codemodel.internal.JStatement
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(bracesRequired : Bool, indentRequired : Bool) : Void;
+	@:overload @:public public function new(bracesRequired : Bool, indentRequired : Bool) : Void;
 	
 	/**
 	* Returns a read-only view of {@link JStatement}s and {@link JDeclaration}
 	* in this block.
 	*/
-	@:overload public function getContents() : java.util.List<Dynamic>;
+	@:overload @:public public function getContents() : java.util.List<Dynamic>;
 	
 	/**
 	* Gets the current position to which new statements will be inserted.
@@ -43,7 +43,7 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	*
 	* @see #pos(int)
 	*/
-	@:overload public function pos() : Int;
+	@:overload @:public public function pos() : Int;
 	
 	/**
 	* Sets the current position.
@@ -55,13 +55,13 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	*
 	* @see #pos()
 	*/
-	@:overload public function pos(newPos : Int) : Int;
+	@:overload @:public public function pos(newPos : Int) : Int;
 	
 	/**
 	* Returns true if this block is empty and does not contain
 	* any statement.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Adds a local variable declaration to this block
@@ -74,7 +74,7 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	*
 	* @return Newly generated JVar
 	*/
-	@:overload public function decl(type : com.sun.codemodel.internal.JType, name : String) : com.sun.codemodel.internal.JVar;
+	@:overload @:public public function decl(type : com.sun.codemodel.internal.JType, name : String) : com.sun.codemodel.internal.JVar;
 	
 	/**
 	* Adds a local variable declaration to this block
@@ -90,7 +90,7 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	*
 	* @return Newly generated JVar
 	*/
-	@:overload public function decl(type : com.sun.codemodel.internal.JType, name : String, init : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JVar;
+	@:overload @:public public function decl(type : com.sun.codemodel.internal.JType, name : String, init : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JVar;
 	
 	/**
 	* Adds a local variable declaration to this block
@@ -109,7 +109,7 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	*
 	* @return Newly generated JVar
 	*/
-	@:overload public function decl(mods : Int, type : com.sun.codemodel.internal.JType, name : String, init : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JVar;
+	@:overload @:public public function decl(mods : Int, type : com.sun.codemodel.internal.JType, name : String, init : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JVar;
 	
 	/**
 	* Creates an assignment statement and adds it to this block.
@@ -120,9 +120,9 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	* @param exp
 	*        Right hand side expression
 	*/
-	@:overload public function assign(lhs : com.sun.codemodel.internal.JAssignmentTarget, exp : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JBlock;
+	@:overload @:public public function assign(lhs : com.sun.codemodel.internal.JAssignmentTarget, exp : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JBlock;
 	
-	@:overload public function assignPlus(lhs : com.sun.codemodel.internal.JAssignmentTarget, exp : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JBlock;
+	@:overload @:public public function assignPlus(lhs : com.sun.codemodel.internal.JAssignmentTarget, exp : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JBlock;
 	
 	/**
 	* Creates an invocation statement and adds it to this block.
@@ -136,7 +136,7 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	*
 	* @return Newly generated JInvocation
 	*/
-	@:overload public function invoke(expr : com.sun.codemodel.internal.JExpression, method : String) : com.sun.codemodel.internal.JInvocation;
+	@:overload @:public public function invoke(expr : com.sun.codemodel.internal.JExpression, method : String) : com.sun.codemodel.internal.JInvocation;
 	
 	/**
 	* Creates an invocation statement and adds it to this block.
@@ -150,12 +150,12 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	*
 	* @return Newly generated JInvocation
 	*/
-	@:overload public function invoke(expr : com.sun.codemodel.internal.JExpression, method : com.sun.codemodel.internal.JMethod) : com.sun.codemodel.internal.JInvocation;
+	@:overload @:public public function invoke(expr : com.sun.codemodel.internal.JExpression, method : com.sun.codemodel.internal.JMethod) : com.sun.codemodel.internal.JInvocation;
 	
 	/**
 	* Creates a static invocation statement.
 	*/
-	@:overload public function staticInvoke(type : com.sun.codemodel.internal.JClass, method : String) : com.sun.codemodel.internal.JInvocation;
+	@:overload @:public public function staticInvoke(type : com.sun.codemodel.internal.JClass, method : String) : com.sun.codemodel.internal.JInvocation;
 	
 	/**
 	* Creates an invocation statement and adds it to this block.
@@ -165,7 +165,7 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	*
 	* @return Newly generated JInvocation
 	*/
-	@:overload public function invoke(method : String) : com.sun.codemodel.internal.JInvocation;
+	@:overload @:public public function invoke(method : String) : com.sun.codemodel.internal.JInvocation;
 	
 	/**
 	* Creates an invocation statement and adds it to this block.
@@ -175,7 +175,7 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	*
 	* @return Newly generated JInvocation
 	*/
-	@:overload public function invoke(method : com.sun.codemodel.internal.JMethod) : com.sun.codemodel.internal.JInvocation;
+	@:overload @:public public function invoke(method : com.sun.codemodel.internal.JMethod) : com.sun.codemodel.internal.JInvocation;
 	
 	/**
 	* Adds a statement to this block
@@ -185,7 +185,7 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	*
 	* @return This block
 	*/
-	@:overload public function add(s : com.sun.codemodel.internal.JStatement) : com.sun.codemodel.internal.JBlock;
+	@:overload @:public public function add(s : com.sun.codemodel.internal.JStatement) : com.sun.codemodel.internal.JBlock;
 	
 	/**
 	* Create an If statement and add it to this block
@@ -195,80 +195,80 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	*
 	* @return Newly generated conditional statement
 	*/
-	@:overload public function _if(expr : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JConditional;
+	@:overload @:public public function _if(expr : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JConditional;
 	
 	/**
 	* Create a For statement and add it to this block
 	*
 	* @return Newly generated For statement
 	*/
-	@:overload public function _for() : com.sun.codemodel.internal.JForLoop;
+	@:overload @:public public function _for() : com.sun.codemodel.internal.JForLoop;
 	
 	/**
 	* Create a While statement and add it to this block
 	*
 	* @return Newly generated While statement
 	*/
-	@:overload public function _while(test : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JWhileLoop;
+	@:overload @:public public function _while(test : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JWhileLoop;
 	
 	/**
 	* Create a switch/case statement and add it to this block
 	*/
-	@:overload public function _switch(test : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JSwitch;
+	@:overload @:public public function _switch(test : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JSwitch;
 	
 	/**
 	* Create a Do statement and add it to this block
 	*
 	* @return Newly generated Do statement
 	*/
-	@:overload public function _do(test : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JDoLoop;
+	@:overload @:public public function _do(test : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JDoLoop;
 	
 	/**
 	* Create a Try statement and add it to this block
 	*
 	* @return Newly generated Try statement
 	*/
-	@:overload public function _try() : com.sun.codemodel.internal.JTryBlock;
+	@:overload @:public public function _try() : com.sun.codemodel.internal.JTryBlock;
 	
 	/**
 	* Create a return statement and add it to this block
 	*/
-	@:overload public function _return() : Void;
+	@:overload @:public public function _return() : Void;
 	
 	/**
 	* Create a return statement and add it to this block
 	*/
-	@:overload public function _return(exp : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:public public function _return(exp : com.sun.codemodel.internal.JExpression) : Void;
 	
 	/**
 	* Create a throw statement and add it to this block
 	*/
-	@:overload public function _throw(exp : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:public public function _throw(exp : com.sun.codemodel.internal.JExpression) : Void;
 	
 	/**
 	* Create a break statement and add it to this block
 	*/
-	@:overload public function _break() : Void;
+	@:overload @:public public function _break() : Void;
 	
-	@:overload public function _break(label : com.sun.codemodel.internal.JLabel) : Void;
+	@:overload @:public public function _break(label : com.sun.codemodel.internal.JLabel) : Void;
 	
 	/**
 	* Create a label, which can be referenced from
 	* <code>continue</code> and <code>break</code> statements.
 	*/
-	@:overload public function label(name : String) : com.sun.codemodel.internal.JLabel;
+	@:overload @:public public function label(name : String) : com.sun.codemodel.internal.JLabel;
 	
 	/**
 	* Create a continue statement and add it to this block
 	*/
-	@:overload public function _continue(label : com.sun.codemodel.internal.JLabel) : Void;
+	@:overload @:public public function _continue(label : com.sun.codemodel.internal.JLabel) : Void;
 	
-	@:overload public function _continue() : Void;
+	@:overload @:public public function _continue() : Void;
 	
 	/**
 	* Create a sub-block and add it to this block
 	*/
-	@:overload public function block() : com.sun.codemodel.internal.JBlock;
+	@:overload @:public public function block() : com.sun.codemodel.internal.JBlock;
 	
 	/**
 	* Creates a "literal" statement directly.
@@ -281,9 +281,9 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	* For example, you can invoke this method as:
 	* <code>directStatement("a=b+c;")</code>.
 	*/
-	@:overload public function directStatement(source : String) : com.sun.codemodel.internal.JStatement;
+	@:overload @:public public function directStatement(source : String) : com.sun.codemodel.internal.JStatement;
 	
-	@:overload public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	/**
 	* Creates an enhanced For statement based on j2se 1.5 JLS
@@ -292,9 +292,9 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	* @return Newly generated enhanced For statement per j2se 1.5
 	* specification
 	*/
-	@:overload public function forEach(varType : com.sun.codemodel.internal.JType, name : String, collection : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JForEach;
+	@:overload @:public public function forEach(varType : com.sun.codemodel.internal.JType, name : String, collection : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JForEach;
 	
-	@:overload public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

@@ -31,9 +31,9 @@ extern class Const
 	* <p>
 	* It can take multiple file names separately by {@link File#pathSeparator}.
 	*/
-	public static var CONFIG_FILE_OPTION(default, null) : String;
+	@:public @:static @:final public static var CONFIG_FILE_OPTION(default, null) : String;
 	
-	public static var DEBUG_OPTION(default, null) : String;
+	@:public @:static @:final public static var DEBUG_OPTION(default, null) : String;
 	
 	
 }

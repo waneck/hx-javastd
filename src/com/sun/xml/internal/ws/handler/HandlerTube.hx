@@ -25,24 +25,24 @@ package com.sun.xml.internal.ws.handler;
 */
 extern class HandlerTube extends com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterTubeImpl
 {
-	private var handlers : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>;
+	@:protected private var handlers : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>;
 	
-	private var port(default, null) : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
+	@:protected @:final private var port(default, null) : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
 	
-	@:overload public function new(next : com.sun.xml.internal.ws.api.pipe.Tube, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort) : Void;
+	@:overload @:public public function new(next : com.sun.xml.internal.ws.api.pipe.Tube, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort) : Void;
 	
-	@:overload public function new(next : com.sun.xml.internal.ws.api.pipe.Tube, cousinTube : com.sun.xml.internal.ws.handler.HandlerTube) : Void;
+	@:overload @:public public function new(next : com.sun.xml.internal.ws.api.pipe.Tube, cousinTube : com.sun.xml.internal.ws.handler.HandlerTube) : Void;
 	
 	/**
 	* Copy constructor for {@link Tube#copy(TubeCloner)}.
 	*/
-	@:overload private function new(that : com.sun.xml.internal.ws.handler.HandlerTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload @:protected private function new(that : com.sun.xml.internal.ws.handler.HandlerTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
-	@:overload override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
 	/**
 	* Must be overridden by HandlerTube that drives other handler tubes for processing a message.
@@ -54,7 +54,7 @@ extern class HandlerTube extends com.sun.xml.internal.ws.api.pipe.helper.Abstrac
 	* If its a top HandlerTube, should override by calling #close(MessaggeContext);
 	*
 	*/
-	@:overload private function initiateClosing(mc : javax.xml.ws.handler.MessageContext) : Void;
+	@:overload @:protected private function initiateClosing(mc : javax.xml.ws.handler.MessageContext) : Void;
 	
 	/**
 	* Calls close on previously invoked handlers.
@@ -64,19 +64,19 @@ extern class HandlerTube extends com.sun.xml.internal.ws.api.pipe.helper.Abstrac
 	* On Client, SOAPHandlers are closed first and then LogicalHandlers
 	* On Server, LogicalHandlers are closed first and then SOAPHandlers
 	*/
-	@:overload @:final public function close(msgContext : javax.xml.ws.handler.MessageContext) : Void;
+	@:overload @:final @:public public function close(msgContext : javax.xml.ws.handler.MessageContext) : Void;
 	
 	/**
 	* Called by close(MessageContext mc) in a Client Handlertube
 	*/
-	@:overload private function closeClientsideHandlers(msgContext : javax.xml.ws.handler.MessageContext) : Void;
+	@:overload @:protected private function closeClientsideHandlers(msgContext : javax.xml.ws.handler.MessageContext) : Void;
 	
 	/**
 	* Called by close(MessageContext mc) in a Server Handlertube
 	*/
-	@:overload private function closeServersideHandlers(msgContext : javax.xml.ws.handler.MessageContext) : Void;
+	@:overload @:protected private function closeServersideHandlers(msgContext : javax.xml.ws.handler.MessageContext) : Void;
 	
-	@:overload @:final public function isHandlerChainEmpty() : Bool;
+	@:overload @:final @:public public function isHandlerChainEmpty() : Bool;
 	
 	
 }
@@ -86,7 +86,7 @@ extern class HandlerTube extends com.sun.xml.internal.ws.api.pipe.helper.Abstrac
 */
 @:native('com$sun$xml$internal$ws$handler$HandlerTube$HandlerTubeExchange') @:internal extern class HandlerTube_HandlerTubeExchange
 {
-	@:overload public function isHandleFalse() : Bool;
+	@:overload @:public public function isHandleFalse() : Bool;
 	
 	
 }

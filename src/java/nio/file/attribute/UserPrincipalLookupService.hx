@@ -28,7 +28,7 @@ extern class UserPrincipalLookupService
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Lookup a user principal by name.
@@ -46,7 +46,7 @@ extern class UserPrincipalLookupService
 	*          In the case of the default provider, and a security manager is
 	*          installed, it checks {@link RuntimePermission}<tt>("lookupUserInformation")</tt>
 	*/
-	@:overload @:abstract public function lookupPrincipalByName(name : String) : java.nio.file.attribute.UserPrincipal;
+	@:overload @:public @:abstract public function lookupPrincipalByName(name : String) : java.nio.file.attribute.UserPrincipal;
 	
 	/**
 	* Lookup a group principal by group name.
@@ -70,7 +70,7 @@ extern class UserPrincipalLookupService
 	*          In the case of the default provider, and a security manager is
 	*          installed, it checks {@link RuntimePermission}<tt>("lookupUserInformation")</tt>
 	*/
-	@:overload @:abstract public function lookupPrincipalByGroupName(group : String) : java.nio.file.attribute.GroupPrincipal;
+	@:overload @:public @:abstract public function lookupPrincipalByGroupName(group : String) : java.nio.file.attribute.GroupPrincipal;
 	
 	
 }

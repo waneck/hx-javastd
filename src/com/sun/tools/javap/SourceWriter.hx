@@ -25,13 +25,13 @@ package com.sun.tools.javap;
 */
 extern class SourceWriter extends com.sun.tools.javap.InstructionDetailWriter
 {
-	@:overload private function new(context : com.sun.tools.javap.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javap.Context) : Void;
 	
-	@:overload public function reset(cf : com.sun.tools.classfile.ClassFile, attr : com.sun.tools.classfile.Code_attribute) : Void;
+	@:overload @:public public function reset(cf : com.sun.tools.classfile.ClassFile, attr : com.sun.tools.classfile.Code_attribute) : Void;
 	
-	@:overload public function writeDetails(instr : com.sun.tools.classfile.Instruction) : Void;
+	@:overload @:public public function writeDetails(instr : com.sun.tools.classfile.Instruction) : Void;
 	
-	@:overload public function hasSource() : Bool;
+	@:overload @:public public function hasSource() : Bool;
 	
 	
 }

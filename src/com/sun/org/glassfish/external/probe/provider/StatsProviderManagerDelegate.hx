@@ -29,11 +29,11 @@ package com.sun.org.glassfish.external.probe.provider;
 */
 extern interface StatsProviderManagerDelegate
 {
-	@:overload public function register(spInfo : com.sun.org.glassfish.external.probe.provider.StatsProviderInfo) : Void;
+	@:overload @:public public function register(spInfo : com.sun.org.glassfish.external.probe.provider.StatsProviderInfo) : Void;
 	
-	@:overload public function unregister(statsProvider : Dynamic) : Void;
+	@:overload @:public public function unregister(statsProvider : Dynamic) : Void;
 	
-	@:overload public function hasListeners(probeStr : String) : Bool;
+	@:overload @:public public function hasListeners(probeStr : String) : Bool;
 	
 	
 }

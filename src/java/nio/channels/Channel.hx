@@ -30,7 +30,7 @@ extern interface Channel extends java.io.Closeable
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload @:public @:public @:public public function isOpen() : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function isOpen() : Bool;
 	
 	/**
 	* Closes this channel.
@@ -49,7 +49,7 @@ extern interface Channel extends java.io.Closeable
 	*
 	* @throws  IOException  If an I/O error occurs
 	*/
-	@:overload @:public @:public @:public public function close() : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public public function close() : Void;
 	
 	
 }

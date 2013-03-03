@@ -32,43 +32,43 @@ package sun.management;
 */
 @:internal extern class MemoryPoolImpl implements java.lang.management.MemoryPoolMXBean
 {
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function isValid() : Bool;
+	@:overload @:public public function isValid() : Bool;
 	
-	@:overload public function getType() : java.lang.management.MemoryType;
+	@:overload @:public public function getType() : java.lang.management.MemoryType;
 	
-	@:overload public function getUsage() : java.lang.management.MemoryUsage;
+	@:overload @:public public function getUsage() : java.lang.management.MemoryUsage;
 	
-	@:overload @:synchronized public function getPeakUsage() : java.lang.management.MemoryUsage;
+	@:overload @:public @:synchronized public function getPeakUsage() : java.lang.management.MemoryUsage;
 	
-	@:overload @:synchronized public function getUsageThreshold() : haxe.Int64;
+	@:overload @:public @:synchronized public function getUsageThreshold() : haxe.Int64;
 	
-	@:overload public function setUsageThreshold(newThreshold : haxe.Int64) : Void;
+	@:overload @:public public function setUsageThreshold(newThreshold : haxe.Int64) : Void;
 	
-	@:overload public function getMemoryManagerNames() : java.NativeArray<String>;
+	@:overload @:public public function getMemoryManagerNames() : java.NativeArray<String>;
 	
-	@:overload public function resetPeakUsage() : Void;
+	@:overload @:public public function resetPeakUsage() : Void;
 	
-	@:overload public function isUsageThresholdExceeded() : Bool;
+	@:overload @:public public function isUsageThresholdExceeded() : Bool;
 	
-	@:overload public function getUsageThresholdCount() : haxe.Int64;
+	@:overload @:public public function getUsageThresholdCount() : haxe.Int64;
 	
-	@:overload public function isUsageThresholdSupported() : Bool;
+	@:overload @:public public function isUsageThresholdSupported() : Bool;
 	
-	@:overload @:synchronized public function getCollectionUsageThreshold() : haxe.Int64;
+	@:overload @:public @:synchronized public function getCollectionUsageThreshold() : haxe.Int64;
 	
-	@:overload public function setCollectionUsageThreshold(newThreshold : haxe.Int64) : Void;
+	@:overload @:public public function setCollectionUsageThreshold(newThreshold : haxe.Int64) : Void;
 	
-	@:overload public function isCollectionUsageThresholdExceeded() : Bool;
+	@:overload @:public public function isCollectionUsageThresholdExceeded() : Bool;
 	
-	@:overload public function getCollectionUsageThresholdCount() : haxe.Int64;
+	@:overload @:public public function getCollectionUsageThresholdCount() : haxe.Int64;
 	
-	@:overload public function getCollectionUsage() : java.lang.management.MemoryUsage;
+	@:overload @:public public function getCollectionUsage() : java.lang.management.MemoryUsage;
 	
-	@:overload public function isCollectionUsageThresholdSupported() : Bool;
+	@:overload @:public public function isCollectionUsageThresholdSupported() : Bool;
 	
-	@:overload public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
 	
 }

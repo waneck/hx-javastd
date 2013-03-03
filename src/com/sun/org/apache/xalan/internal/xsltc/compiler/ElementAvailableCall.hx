@@ -27,31 +27,31 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* @author Jacek Ambroziak
 	* @author Santiago Pericas-Geertsen
 	*/
-	@:overload public function new(fname : com.sun.org.apache.xalan.internal.xsltc.compiler.QName, arguments : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function new(fname : com.sun.org.apache.xalan.internal.xsltc.compiler.QName, arguments : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* Force the argument to this function to be a literal string.
 	*/
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Returns an object representing the compile-time evaluation
 	* of an expression. We are only using this for function-available
 	* and element-available at this time.
 	*/
-	@:overload override public function evaluateAtCompileTime() : Dynamic;
+	@:overload @:public override public function evaluateAtCompileTime() : Dynamic;
 	
 	/**
 	* Returns the result that this function will return
 	*/
-	@:overload public function getResult() : Bool;
+	@:overload @:public public function getResult() : Bool;
 	
 	/**
 	* Calls to 'element-available' are resolved at compile time since
 	* the namespaces declared in the stylsheet are not available at run
 	* time. Consequently, arguments to this function must be literals.
 	*/
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

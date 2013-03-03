@@ -23,19 +23,19 @@ package com.sun.org.apache.xalan.internal.xsltc.runtime;
 */
 extern class Attributes implements org.xml.sax.AttributeList
 {
-	@:overload public function new(document : com.sun.org.apache.xalan.internal.xsltc.DOM, element : Int) : Void;
+	@:overload @:public public function new(document : com.sun.org.apache.xalan.internal.xsltc.DOM, element : Int) : Void;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
-	@:overload public function getName(i : Int) : String;
+	@:overload @:public public function getName(i : Int) : String;
 	
-	@:overload public function getType(i : Int) : String;
+	@:overload @:public public function getType(i : Int) : String;
 	
-	@:overload public function getType(name : String) : String;
+	@:overload @:public public function getType(name : String) : String;
 	
-	@:overload public function getValue(i : Int) : String;
+	@:overload @:public public function getValue(i : Int) : String;
 	
-	@:overload public function getValue(name : String) : String;
+	@:overload @:public public function getValue(name : String) : String;
 	
 	
 }

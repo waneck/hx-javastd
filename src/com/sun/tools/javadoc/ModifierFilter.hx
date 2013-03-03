@@ -39,7 +39,7 @@ extern class ModifierFilter
 	* constructors of this class to specify package private
 	* access. This is needed since there is no Modifier.PACKAGE.
 	*/
-	public static var PACKAGE(default, null) : haxe.Int64;
+	@:public @:static @:final public static var PACKAGE(default, null) : haxe.Int64;
 	
 	/**
 	* All access modifiers.
@@ -47,7 +47,7 @@ extern class ModifierFilter
 	* constructors of this class to specify all access modifiers,
 	* Same as PRIVATE | PROTECTED | PUBLIC | PACKAGE.
 	*/
-	public static var ALL_ACCESS(default, null) : haxe.Int64;
+	@:public @:static @:final public static var ALL_ACCESS(default, null) : haxe.Int64;
 	
 	/**
 	* Constructor - Specify a filter.
@@ -57,7 +57,7 @@ extern class ModifierFilter
 	*                  bits must be on in the modifier bits to
 	*                  pass the filter.
 	*/
-	@:overload public function new(oneOf : haxe.Int64) : Void;
+	@:overload @:public public function new(oneOf : haxe.Int64) : Void;
 	
 	/**
 	* Constructor - Specify a filter.
@@ -79,7 +79,7 @@ extern class ModifierFilter
 	* @param   must    All bits specified must be on.
 	* @param   cannot  None of the bits specified can be on.
 	*/
-	@:overload public function new(oneOf : haxe.Int64, must : haxe.Int64, cannot : haxe.Int64) : Void;
+	@:overload @:public public function new(oneOf : haxe.Int64, must : haxe.Int64, cannot : haxe.Int64) : Void;
 	
 	/**
 	* Filter on modifier bits.
@@ -88,7 +88,7 @@ extern class ModifierFilter
 	*
 	* @return                  Whether the modifierBits pass this filter.
 	*/
-	@:overload public function checkModifier(modifierBits : Int) : Bool;
+	@:overload @:public public function checkModifier(modifierBits : Int) : Bool;
 	
 	
 }

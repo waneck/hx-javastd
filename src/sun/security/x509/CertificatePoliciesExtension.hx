@@ -29,14 +29,14 @@ extern class CertificatePoliciesExtension extends java.security.cert.Extension i
 	* Identifier for this attribute, to be used with the
 	* get, set, delete methods of Certificate, x509 type.
 	*/
-	public static var IDENT(default, null) : String;
+	@:public @:static @:final public static var IDENT(default, null) : String;
 	
 	/**
 	* Attribute names.
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
-	public static var POLICIES(default, null) : String;
+	@:public @:static @:final public static var POLICIES(default, null) : String;
 	
 	/**
 	* Create a CertificatePoliciesExtension object from
@@ -44,7 +44,7 @@ extern class CertificatePoliciesExtension extends java.security.cert.Extension i
 	*
 	* @param certPolicies the List of PolicyInformation.
 	*/
-	@:overload public function new(certPolicies : java.util.List<sun.security.x509.PolicyInformation>) : Void;
+	@:overload @:public public function new(certPolicies : java.util.List<sun.security.x509.PolicyInformation>) : Void;
 	
 	/**
 	* Create a CertificatePoliciesExtension object from
@@ -53,7 +53,7 @@ extern class CertificatePoliciesExtension extends java.security.cert.Extension i
 	* @param critical true if the extension is to be treated as critical.
 	* @param certPolicies the List of PolicyInformation.
 	*/
-	@:overload public function new(critical : Null<Bool>, certPolicies : java.util.List<sun.security.x509.PolicyInformation>) : Void;
+	@:overload @:public public function new(critical : Null<Bool>, certPolicies : java.util.List<sun.security.x509.PolicyInformation>) : Void;
 	
 	/**
 	* Create the extension from its DER encoded value and criticality.
@@ -63,12 +63,12 @@ extern class CertificatePoliciesExtension extends java.security.cert.Extension i
 	* @exception ClassCastException if value is not an array of bytes
 	* @exception IOException on error.
 	*/
-	@:overload public function new(critical : Null<Bool>, value : Dynamic) : Void;
+	@:overload @:public public function new(critical : Null<Bool>, value : Dynamic) : Void;
 	
 	/**
 	* Return the extension as user readable string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Write the extension to the DerOutputStream.
@@ -76,33 +76,33 @@ extern class CertificatePoliciesExtension extends java.security.cert.Extension i
 	* @param out the DerOutputStream to write the extension to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public override public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Set the attribute value.
 	*/
-	@:overload public function set(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function set(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Get the attribute value.
 	*/
-	@:overload public function get(name : String) : Dynamic;
+	@:overload @:public public function get(name : String) : Dynamic;
 	
 	/**
 	* Delete the attribute value.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this
 	* attribute.
 	*/
-	@:overload public function getElements() : java.util.Enumeration<String>;
+	@:overload @:public public function getElements() : java.util.Enumeration<String>;
 	
 	/**
 	* Return the name of this attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.dynamicany;
 */
 extern class DynValueImpl extends com.sun.corba.se.impl.dynamicany.DynValueCommonImpl implements org.omg.DynamicAny.DynValue
 {
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, any : org.omg.CORBA.Any, copyValue : Bool) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, any : org.omg.CORBA.Any, copyValue : Bool) : Void;
 	
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
 	
 	
 }

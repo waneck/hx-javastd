@@ -30,9 +30,9 @@ package com.sun.tools.internal.ws.wsdl.document.soap;
 */
 extern class SOAPUse
 {
-	public static var LITERAL(default, null) : com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse;
+	@:public @:static @:final public static var LITERAL(default, null) : com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse;
 	
-	public static var ENCODED(default, null) : com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse;
+	@:public @:static @:final public static var ENCODED(default, null) : com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse;
 	
 	
 }

@@ -25,7 +25,7 @@ package sun.nio.fs;
 */
 extern class DefaultFileTypeDetector
 {
-	@:overload public static function create() : java.nio.file.spi.FileTypeDetector;
+	@:overload @:public @:static public static function create() : java.nio.file.spi.FileTypeDetector;
 	
 	
 }

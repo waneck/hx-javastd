@@ -46,9 +46,9 @@ package sun.text.normalizer;
 */
 extern class UBiDiProps
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:final @:synchronized public static function getSingleton() : sun.text.normalizer.UBiDiProps;
+	@:overload @:public @:static @:final @:synchronized public static function getSingleton() : sun.text.normalizer.UBiDiProps;
 	
 	/**
 	* Get a singleton dummy object, one that works with no real data.
@@ -56,15 +56,15 @@ extern class UBiDiProps
 	* Using the dummy can reduce checks for available data after an initial failure.
 	* Port of ucase_getDummy().
 	*/
-	@:overload @:final @:synchronized public static function getDummy() : sun.text.normalizer.UBiDiProps;
+	@:overload @:public @:static @:final @:synchronized public static function getDummy() : sun.text.normalizer.UBiDiProps;
 	
-	@:overload @:final public function getClass(c : Int) : Int;
+	@:overload @:public @:final public function getClass(c : Int) : Int;
 	
 	
 }
 @:native('sun$text$normalizer$UBiDiProps$IsAcceptable') @:internal extern class UBiDiProps_IsAcceptable implements sun.text.normalizer.ICUBinary.ICUBinary_Authenticate
 {
-	@:overload public function isDataVersionAcceptable(version : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public public function isDataVersionAcceptable(version : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	
 }

@@ -41,87 +41,87 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 {
 	/** Useful constant for language.
 	*/
-	public static var ENGLISH(default, null) : java.util.Locale;
+	@:static @:public @:final public static var ENGLISH(default, null) : java.util.Locale;
 	
 	/** Useful constant for language.
 	*/
-	public static var FRENCH(default, null) : java.util.Locale;
+	@:static @:public @:final public static var FRENCH(default, null) : java.util.Locale;
 	
 	/** Useful constant for language.
 	*/
-	public static var GERMAN(default, null) : java.util.Locale;
+	@:static @:public @:final public static var GERMAN(default, null) : java.util.Locale;
 	
 	/** Useful constant for language.
 	*/
-	public static var ITALIAN(default, null) : java.util.Locale;
+	@:static @:public @:final public static var ITALIAN(default, null) : java.util.Locale;
 	
 	/** Useful constant for language.
 	*/
-	public static var JAPANESE(default, null) : java.util.Locale;
+	@:static @:public @:final public static var JAPANESE(default, null) : java.util.Locale;
 	
 	/** Useful constant for language.
 	*/
-	public static var KOREAN(default, null) : java.util.Locale;
+	@:static @:public @:final public static var KOREAN(default, null) : java.util.Locale;
 	
 	/** Useful constant for language.
 	*/
-	public static var CHINESE(default, null) : java.util.Locale;
+	@:static @:public @:final public static var CHINESE(default, null) : java.util.Locale;
 	
 	/** Useful constant for language.
 	*/
-	public static var SIMPLIFIED_CHINESE(default, null) : java.util.Locale;
+	@:static @:public @:final public static var SIMPLIFIED_CHINESE(default, null) : java.util.Locale;
 	
 	/** Useful constant for language.
 	*/
-	public static var TRADITIONAL_CHINESE(default, null) : java.util.Locale;
+	@:static @:public @:final public static var TRADITIONAL_CHINESE(default, null) : java.util.Locale;
 	
 	/** Useful constant for country.
 	*/
-	public static var FRANCE(default, null) : java.util.Locale;
+	@:static @:public @:final public static var FRANCE(default, null) : java.util.Locale;
 	
 	/** Useful constant for country.
 	*/
-	public static var GERMANY(default, null) : java.util.Locale;
+	@:static @:public @:final public static var GERMANY(default, null) : java.util.Locale;
 	
 	/** Useful constant for country.
 	*/
-	public static var ITALY(default, null) : java.util.Locale;
+	@:static @:public @:final public static var ITALY(default, null) : java.util.Locale;
 	
 	/** Useful constant for country.
 	*/
-	public static var JAPAN(default, null) : java.util.Locale;
+	@:static @:public @:final public static var JAPAN(default, null) : java.util.Locale;
 	
 	/** Useful constant for country.
 	*/
-	public static var KOREA(default, null) : java.util.Locale;
+	@:static @:public @:final public static var KOREA(default, null) : java.util.Locale;
 	
 	/** Useful constant for country.
 	*/
-	public static var CHINA(default, null) : java.util.Locale;
+	@:static @:public @:final public static var CHINA(default, null) : java.util.Locale;
 	
 	/** Useful constant for country.
 	*/
-	public static var PRC(default, null) : java.util.Locale;
+	@:static @:public @:final public static var PRC(default, null) : java.util.Locale;
 	
 	/** Useful constant for country.
 	*/
-	public static var TAIWAN(default, null) : java.util.Locale;
+	@:static @:public @:final public static var TAIWAN(default, null) : java.util.Locale;
 	
 	/** Useful constant for country.
 	*/
-	public static var UK(default, null) : java.util.Locale;
+	@:static @:public @:final public static var UK(default, null) : java.util.Locale;
 	
 	/** Useful constant for country.
 	*/
-	public static var US(default, null) : java.util.Locale;
+	@:static @:public @:final public static var US(default, null) : java.util.Locale;
 	
 	/** Useful constant for country.
 	*/
-	public static var CANADA(default, null) : java.util.Locale;
+	@:static @:public @:final public static var CANADA(default, null) : java.util.Locale;
 	
 	/** Useful constant for country.
 	*/
-	public static var CANADA_FRENCH(default, null) : java.util.Locale;
+	@:static @:public @:final public static var CANADA_FRENCH(default, null) : java.util.Locale;
 	
 	/**
 	* Useful constant for the root locale.  The root locale is the locale whose
@@ -131,7 +131,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var ROOT(default, null) : java.util.Locale;
+	@:require(java6) @:static @:public @:final public static var ROOT(default, null) : java.util.Locale;
 	
 	/**
 	* The key for the private use extension ('x').
@@ -140,7 +140,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @see Builder#setExtension(char, String)
 	* @since 1.7
 	*/
-	@:require(java7) public static var PRIVATE_USE_EXTENSION(default, null) : java.StdTypes.Char16;
+	@:require(java7) @:static @:public @:final public static var PRIVATE_USE_EXTENSION(default, null) : java.StdTypes.Char16;
 	
 	/**
 	* The key for Unicode locale extension ('u').
@@ -149,7 +149,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @see Builder#setExtension(char, String)
 	* @since 1.7
 	*/
-	@:require(java7) public static var UNICODE_LOCALE_EXTENSION(default, null) : java.StdTypes.Char16;
+	@:require(java7) @:static @:public @:final public static var UNICODE_LOCALE_EXTENSION(default, null) : java.StdTypes.Char16;
 	
 	/**
 	* Construct a locale from language, country and variant.
@@ -177,7 +177,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* See the <code>Locale</code> class description for the details.
 	* @exception NullPointerException thrown if any argument is null.
 	*/
-	@:overload public function new(language : String, country : String, variant : String) : Void;
+	@:overload @:public public function new(language : String, country : String, variant : String) : Void;
 	
 	/**
 	* Construct a locale from language and country.
@@ -201,7 +201,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* See the <code>Locale</code> class description about valid country values.
 	* @exception NullPointerException thrown if either argument is null.
 	*/
-	@:overload public function new(language : String, country : String) : Void;
+	@:overload @:public public function new(language : String, country : String) : Void;
 	
 	/**
 	* Construct a locale from a language code.
@@ -223,7 +223,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @exception NullPointerException thrown if argument is null.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(language : String) : Void;
+	@:require(java4) @:overload @:public public function new(language : String) : Void;
 	
 	/**
 	* Gets the current value of the default locale for this instance
@@ -237,7 +237,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	*
 	* @return the default locale for this instance of the Java Virtual Machine
 	*/
-	@:overload public static function getDefault() : java.util.Locale;
+	@:overload @:public @:static public static function getDefault() : java.util.Locale;
 	
 	/**
 	* Gets the current value of the default locale for the specified Category
@@ -255,7 +255,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @see #setDefault(Locale.Category, Locale)
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getDefault(category : java.util.Locale.Locale_Category) : java.util.Locale;
+	@:require(java7) @:overload @:public @:static public static function getDefault(category : java.util.Locale.Locale_Category) : java.util.Locale;
 	
 	/**
 	* Sets the default locale for this instance of the Java Virtual Machine.
@@ -285,7 +285,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @see SecurityManager#checkPermission
 	* @see java.util.PropertyPermission
 	*/
-	@:overload @:synchronized public static function setDefault(newLocale : java.util.Locale) : Void;
+	@:overload @:public @:static @:synchronized public static function setDefault(newLocale : java.util.Locale) : Void;
 	
 	/**
 	* Sets the default locale for the specified Category for this instance
@@ -315,7 +315,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @see #getDefault(Locale.Category)
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:synchronized public static function setDefault(category : java.util.Locale.Locale_Category, newLocale : java.util.Locale) : Void;
+	@:require(java7) @:overload @:public @:static @:synchronized public static function setDefault(category : java.util.Locale.Locale_Category, newLocale : java.util.Locale) : Void;
 	
 	/**
 	* Returns an array of all installed locales.
@@ -327,7 +327,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	*
 	* @return An array of installed locales.
 	*/
-	@:overload public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
+	@:overload @:public @:static public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
 	
 	/**
 	* Returns a list of all 2-letter country codes defined in ISO 3166.
@@ -338,7 +338,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* Therefore, the list returned by this method does not contain ALL valid
 	* codes that can be used to create Locales.
 	*/
-	@:overload public static function getISOCountries() : java.NativeArray<String>;
+	@:overload @:public @:static public static function getISOCountries() : java.NativeArray<String>;
 	
 	/**
 	* Returns a list of all 2-letter language codes defined in ISO 639.
@@ -354,7 +354,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* not contain ALL valid codes that can be used to create Locales.
 	* </ul>
 	*/
-	@:overload public static function getISOLanguages() : java.NativeArray<String>;
+	@:overload @:public @:static public static function getISOLanguages() : java.NativeArray<String>;
 	
 	/**
 	* Returns the language code of this Locale.
@@ -375,7 +375,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @return The language code, or the empty string if none is defined.
 	* @see #getDisplayLanguage
 	*/
-	@:overload public function getLanguage() : String;
+	@:overload @:public public function getLanguage() : String;
 	
 	/**
 	* Returns the script for this locale, which should
@@ -387,7 +387,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @see #getDisplayScript
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getScript() : String;
+	@:require(java7) @:overload @:public public function getScript() : String;
 	
 	/**
 	* Returns the country/region code for this locale, which should
@@ -397,7 +397,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @return The country/region code, or the empty string if none is defined.
 	* @see #getDisplayCountry
 	*/
-	@:overload public function getCountry() : String;
+	@:overload @:public public function getCountry() : String;
 	
 	/**
 	* Returns the variant code for this locale.
@@ -405,7 +405,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @return The variant code, or the empty string if none is defined.
 	* @see #getDisplayVariant
 	*/
-	@:overload public function getVariant() : String;
+	@:overload @:public public function getVariant() : String;
 	
 	/**
 	* Returns the extension (or private use) value associated with
@@ -422,7 +422,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @see #UNICODE_LOCALE_EXTENSION
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getExtension(key : java.StdTypes.Char16) : String;
+	@:require(java7) @:overload @:public public function getExtension(key : java.StdTypes.Char16) : String;
 	
 	/**
 	* Returns the set of extension keys associated with this locale, or the
@@ -433,7 +433,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* no extensions.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getExtensionKeys() : java.util.Set<Null<java.StdTypes.Char16>>;
+	@:require(java7) @:overload @:public public function getExtensionKeys() : java.util.Set<Null<java.StdTypes.Char16>>;
 	
 	/**
 	* Returns the set of unicode locale attributes associated with
@@ -443,7 +443,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @return The set of attributes.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getUnicodeLocaleAttributes() : java.util.Set<String>;
+	@:require(java7) @:overload @:public public function getUnicodeLocaleAttributes() : java.util.Set<String>;
 	
 	/**
 	* Returns the Unicode locale type associated with the specified Unicode locale key
@@ -459,7 +459,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @throws NullPointerException if <code>key</code> is null
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getUnicodeLocaleType(key : String) : String;
+	@:require(java7) @:overload @:public public function getUnicodeLocaleType(key : String) : String;
 	
 	/**
 	* Returns the set of Unicode locale keys defined by this locale, or the empty set if
@@ -469,7 +469,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* no Unicode locale keywords.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getUnicodeLocaleKeys() : java.util.Set<String>;
+	@:require(java7) @:overload @:public public function getUnicodeLocaleKeys() : java.util.Set<String>;
 	
 	/**
 	* Returns a string representation of this <code>Locale</code>
@@ -513,7 +513,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @see #getDisplayName
 	* @see #toLanguageTag
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/**
 	* Returns a well-formed IETF BCP 47 language tag representing
@@ -582,7 +582,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @see #forLanguageTag(String)
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function toLanguageTag() : String;
+	@:require(java7) @:overload @:public public function toLanguageTag() : String;
 	
 	/**
 	* Returns a locale for the specified IETF BCP 47 language tag string.
@@ -704,7 +704,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @see java.util.Locale.Builder#setLanguageTag(String)
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function forLanguageTag(languageTag : String) : java.util.Locale;
+	@:require(java7) @:overload @:public @:static public static function forLanguageTag(languageTag : String) : java.util.Locale;
 	
 	/**
 	* Returns a three-letter abbreviation of this locale's language.
@@ -720,7 +720,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @exception MissingResourceException Throws MissingResourceException if
 	* three-letter language abbreviation is not available for this locale.
 	*/
-	@:overload public function getISO3Language() : String;
+	@:overload @:public public function getISO3Language() : String;
 	
 	/**
 	* Returns a three-letter abbreviation for this locale's country.
@@ -735,7 +735,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @exception MissingResourceException Throws MissingResourceException if the
 	* three-letter country abbreviation is not available for this locale.
 	*/
-	@:overload public function getISO3Country() : String;
+	@:overload @:public public function getISO3Country() : String;
 	
 	/**
 	* Returns a name for the locale's language that is appropriate for display to the
@@ -749,7 +749,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* this function falls back on the English name, and uses the ISO code as a last-resort
 	* value.  If the locale doesn't specify a language, this function returns the empty string.
 	*/
-	@:overload @:final public function getDisplayLanguage() : String;
+	@:overload @:public @:final public function getDisplayLanguage() : String;
 	
 	/**
 	* Returns a name for the locale's language that is appropriate for display to the
@@ -766,7 +766,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	*
 	* @exception NullPointerException if <code>inLocale</code> is <code>null</code>
 	*/
-	@:overload public function getDisplayLanguage(inLocale : java.util.Locale) : String;
+	@:overload @:public public function getDisplayLanguage(inLocale : java.util.Locale) : String;
 	
 	/**
 	* Returns a name for the the locale's script that is appropriate for display to
@@ -776,7 +776,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @return the display name of the script code for the current default locale
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getDisplayScript() : String;
+	@:require(java7) @:overload @:public public function getDisplayScript() : String;
 	
 	/**
 	* Returns a name for the locale's script that is appropriate
@@ -788,7 +788,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @throws NullPointerException if <code>inLocale</code> is <code>null</code>
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getDisplayScript(inLocale : java.util.Locale) : String;
+	@:require(java7) @:overload @:public public function getDisplayScript(inLocale : java.util.Locale) : String;
 	
 	/**
 	* Returns a name for the locale's country that is appropriate for display to the
@@ -802,7 +802,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* this function falls back on the English name, and uses the ISO code as a last-resort
 	* value.  If the locale doesn't specify a country, this function returns the empty string.
 	*/
-	@:overload @:final public function getDisplayCountry() : String;
+	@:overload @:public @:final public function getDisplayCountry() : String;
 	
 	/**
 	* Returns a name for the locale's country that is appropriate for display to the
@@ -819,14 +819,14 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	*
 	* @exception NullPointerException if <code>inLocale</code> is <code>null</code>
 	*/
-	@:overload public function getDisplayCountry(inLocale : java.util.Locale) : String;
+	@:overload @:public public function getDisplayCountry(inLocale : java.util.Locale) : String;
 	
 	/**
 	* Returns a name for the locale's variant code that is appropriate for display to the
 	* user.  If possible, the name will be localized for the default locale.  If the locale
 	* doesn't specify a variant code, this function returns the empty string.
 	*/
-	@:overload @:final public function getDisplayVariant() : String;
+	@:overload @:public @:final public function getDisplayVariant() : String;
 	
 	/**
 	* Returns a name for the locale's variant code that is appropriate for display to the
@@ -835,7 +835,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	*
 	* @exception NullPointerException if <code>inLocale</code> is <code>null</code>
 	*/
-	@:overload public function getDisplayVariant(inLocale : java.util.Locale) : String;
+	@:overload @:public public function getDisplayVariant(inLocale : java.util.Locale) : String;
 	
 	/**
 	* Returns a name for the locale that is appropriate for display to the
@@ -854,7 +854,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* language, sacript, country, and variant fields are all empty,
 	* this function returns the empty string.
 	*/
-	@:overload @:final public function getDisplayName() : String;
+	@:overload @:public @:final public function getDisplayName() : String;
 	
 	/**
 	* Returns a name for the locale that is appropriate for display
@@ -876,19 +876,19 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	*
 	* @throws NullPointerException if <code>inLocale</code> is <code>null</code>
 	*/
-	@:overload public function getDisplayName(inLocale : java.util.Locale) : String;
+	@:overload @:public public function getDisplayName(inLocale : java.util.Locale) : String;
 	
 	/**
 	* Overrides Cloneable.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Override hashCode.
 	* Since Locales are often used in hashtables, caches the value
 	* for speed.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns true if this Locale is equal to another object.  A Locale is
@@ -897,21 +897,21 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	*
 	* @return true if this Locale is equal to the specified object.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }
 @:native('java$util$Locale$Cache') @:internal extern class Locale_Cache extends sun.util.locale.LocaleObjectCache<java.util.Locale.Locale_LocaleKey, java.util.Locale>
 {
-	@:overload private function createObject(key : java.util.Locale.Locale_LocaleKey) : java.util.Locale;
+	@:overload @:protected private function createObject(key : java.util.Locale.Locale_LocaleKey) : java.util.Locale;
 	
 	
 }
 @:native('java$util$Locale$LocaleKey') @:internal extern class Locale_LocaleKey
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
@@ -921,7 +921,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 */
 @:native('java$util$Locale$LocaleNameGetter') @:internal extern class Locale_LocaleNameGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.util.spi.LocaleNameProvider, String>
 {
-	@:overload public function getObject(localeNameProvider : java.util.spi.LocaleNameProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : String;
+	@:overload @:public public function getObject(localeNameProvider : java.util.spi.LocaleNameProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : String;
 	
 	
 }
@@ -989,7 +989,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* fields, extensions, and private use information is the
 	* empty string.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Resets the <code>Builder</code> to match the provided
@@ -1011,7 +1011,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* any ill-formed fields.
 	* @throws NullPointerException if <code>locale</code> is null.
 	*/
-	@:overload public function setLocale(locale : java.util.Locale) : java.util.Locale.Locale_Builder;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : java.util.Locale.Locale_Builder;
 	
 	/**
 	* Resets the Builder to match the provided IETF BCP 47
@@ -1030,7 +1030,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @throws IllformedLocaleException if <code>languageTag</code> is ill-formed
 	* @see Locale#forLanguageTag(String)
 	*/
-	@:overload public function setLanguageTag(languageTag : String) : java.util.Locale.Locale_Builder;
+	@:overload @:public public function setLanguageTag(languageTag : String) : java.util.Locale.Locale_Builder;
 	
 	/**
 	* Sets the language.  If <code>language</code> is the empty string or
@@ -1045,7 +1045,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @return This builder.
 	* @throws IllformedLocaleException if <code>language</code> is ill-formed
 	*/
-	@:overload public function setLanguage(language : String) : java.util.Locale.Locale_Builder;
+	@:overload @:public public function setLanguage(language : String) : java.util.Locale.Locale_Builder;
 	
 	/**
 	* Sets the script. If <code>script</code> is null or the empty string,
@@ -1059,7 +1059,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @return This builder.
 	* @throws IllformedLocaleException if <code>script</code> is ill-formed
 	*/
-	@:overload public function setScript(script : String) : java.util.Locale.Locale_Builder;
+	@:overload @:public public function setScript(script : String) : java.util.Locale.Locale_Builder;
 	
 	/**
 	* Sets the region.  If region is null or the empty string, the region
@@ -1077,7 +1077,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @return This builder.
 	* @throws IllformedLocaleException if <code>region</code> is ill-formed
 	*/
-	@:overload public function setRegion(region : String) : java.util.Locale.Locale_Builder;
+	@:overload @:public public function setRegion(region : String) : java.util.Locale.Locale_Builder;
 	
 	/**
 	* Sets the variant.  If variant is null or the empty string, the
@@ -1097,7 +1097,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @return This builder.
 	* @throws IllformedLocaleException if <code>variant</code> is ill-formed
 	*/
-	@:overload public function setVariant(variant : String) : java.util.Locale.Locale_Builder;
+	@:overload @:public public function setVariant(variant : String) : java.util.Locale.Locale_Builder;
 	
 	/**
 	* Sets the extension for the given key. If the value is null or the
@@ -1122,7 +1122,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* or <code>value</code> is ill-formed
 	* @see #setUnicodeLocaleKeyword(String, String)
 	*/
-	@:overload public function setExtension(key : java.StdTypes.Char16, value : String) : java.util.Locale.Locale_Builder;
+	@:overload @:public public function setExtension(key : java.StdTypes.Char16, value : String) : java.util.Locale.Locale_Builder;
 	
 	/**
 	* Sets the Unicode locale keyword type for the given key.  If the type
@@ -1145,7 +1145,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @throws NullPointerException if <code>key</code> is null
 	* @see #setExtension(char, String)
 	*/
-	@:overload public function setUnicodeLocaleKeyword(key : String, type : String) : java.util.Locale.Locale_Builder;
+	@:overload @:public public function setUnicodeLocaleKeyword(key : String, type : String) : java.util.Locale.Locale_Builder;
 	
 	/**
 	* Adds a unicode locale attribute, if not already present, otherwise
@@ -1159,7 +1159,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @throws IllformedLocaleException if <code>attribute</code> is ill-formed
 	* @see #setExtension(char, String)
 	*/
-	@:overload public function addUnicodeLocaleAttribute(attribute : String) : java.util.Locale.Locale_Builder;
+	@:overload @:public public function addUnicodeLocaleAttribute(attribute : String) : java.util.Locale.Locale_Builder;
 	
 	/**
 	* Removes a unicode locale attribute, if present, otherwise has no
@@ -1175,14 +1175,14 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @throws IllformedLocaleException if <code>attribute</code> is ill-formed
 	* @see #setExtension(char, String)
 	*/
-	@:overload public function removeUnicodeLocaleAttribute(attribute : String) : java.util.Locale.Locale_Builder;
+	@:overload @:public public function removeUnicodeLocaleAttribute(attribute : String) : java.util.Locale.Locale_Builder;
 	
 	/**
 	* Resets the builder to its initial, empty state.
 	*
 	* @return This builder.
 	*/
-	@:overload public function clear() : java.util.Locale.Locale_Builder;
+	@:overload @:public public function clear() : java.util.Locale.Locale_Builder;
 	
 	/**
 	* Resets the extensions to their initial, empty state.
@@ -1191,7 +1191,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	* @return This builder.
 	* @see #setExtension(char, String)
 	*/
-	@:overload public function clearExtensions() : java.util.Locale.Locale_Builder;
+	@:overload @:public public function clearExtensions() : java.util.Locale.Locale_Builder;
 	
 	/**
 	* Returns an instance of <code>Locale</code> created from the fields set
@@ -1203,7 +1203,7 @@ extern class Locale implements java.lang.Cloneable implements java.io.Serializab
 	*
 	* @return A Locale.
 	*/
-	@:overload public function build() : java.util.Locale;
+	@:overload @:public public function build() : java.util.Locale;
 	
 	
 }

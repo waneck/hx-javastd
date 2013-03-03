@@ -40,21 +40,21 @@ package javax.swing.plaf.metal;
 */
 @:internal extern class MetalSplitPaneDivider extends javax.swing.plaf.basic.BasicSplitPaneDivider
 {
-	@:overload public function new(ui : javax.swing.plaf.basic.BasicSplitPaneUI) : Void;
+	@:overload @:public public function new(ui : javax.swing.plaf.basic.BasicSplitPaneUI) : Void;
 	
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Creates and return an instance of JButton that can be used to
 	* collapse the left component in the metal split pane.
 	*/
-	@:overload private function createLeftOneTouchButton() : javax.swing.JButton;
+	@:overload @:protected override private function createLeftOneTouchButton() : javax.swing.JButton;
 	
 	/**
 	* Creates and return an instance of JButton that can be used to
 	* collapse the right component in the metal split pane.
 	*/
-	@:overload private function createRightOneTouchButton() : javax.swing.JButton;
+	@:overload @:protected override private function createRightOneTouchButton() : javax.swing.JButton;
 	
 	
 }
@@ -67,15 +67,15 @@ package javax.swing.plaf.metal;
 */
 @:native('javax$swing$plaf$metal$MetalSplitPaneDivider$MetalDividerLayout') extern class MetalSplitPaneDivider_MetalDividerLayout implements java.awt.LayoutManager
 {
-	@:overload public function layoutContainer(c : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(c : java.awt.Container) : Void;
 	
-	@:overload public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
-	@:overload public function addLayoutComponent(string : String, c : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(string : String, c : java.awt.Component) : Void;
 	
 	
 }

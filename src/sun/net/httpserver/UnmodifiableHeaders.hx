@@ -25,40 +25,40 @@ package sun.net.httpserver;
 */
 @:internal extern class UnmodifiableHeaders extends com.sun.net.httpserver.Headers
 {
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload override public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public override public function containsKey(key : Dynamic) : Bool;
 	
-	@:overload override public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public override public function containsValue(value : Dynamic) : Bool;
 	
-	@:overload override public function get(key : Dynamic) : java.util.List<String>;
+	@:overload @:public override public function get(key : Dynamic) : java.util.List<String>;
 	
-	@:overload override public function getFirst(key : String) : String;
+	@:overload @:public override public function getFirst(key : String) : String;
 	
-	@:overload override public function put(key : String, value : java.util.List<String>) : java.util.List<String>;
+	@:overload @:public override public function put(key : String, value : java.util.List<String>) : java.util.List<String>;
 	
-	@:overload override public function add(key : String, value : String) : Void;
+	@:overload @:public override public function add(key : String, value : String) : Void;
 	
-	@:overload override public function set(key : String, value : String) : Void;
+	@:overload @:public override public function set(key : String, value : String) : Void;
 	
-	@:overload override public function remove(key : Dynamic) : java.util.List<String>;
+	@:overload @:public override public function remove(key : Dynamic) : java.util.List<String>;
 	
-	@:overload override public function putAll(t : java.util.Map<String, java.util.List<String>>) : Void;
+	@:overload @:public override public function putAll(t : java.util.Map<String, java.util.List<String>>) : Void;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload override public function keySet() : java.util.Set<String>;
+	@:overload @:public override public function keySet() : java.util.Set<String>;
 	
-	@:overload override public function values() : java.util.Collection<java.util.List<String>>;
+	@:overload @:public override public function values() : java.util.Collection<java.util.List<String>>;
 	
 	/* TODO check that contents of set are not modifable : security */
-	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, java.util.List<String>>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, java.util.List<String>>>;
 	
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

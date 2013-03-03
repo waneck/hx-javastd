@@ -55,7 +55,7 @@ package java.lang;
 	* @param parentValue the parent thread's value
 	* @return the child thread's initial value
 	*/
-	@:overload private function childValue(parentValue : T) : T;
+	@:overload @:protected private function childValue(parentValue : T) : T;
 	
 	
 }

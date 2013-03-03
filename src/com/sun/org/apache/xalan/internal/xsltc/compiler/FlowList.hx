@@ -23,26 +23,26 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 extern class FlowList
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(bh : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function new(bh : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
-	@:overload public function new(list : com.sun.org.apache.xalan.internal.xsltc.compiler.FlowList) : Void;
+	@:overload @:public public function new(list : com.sun.org.apache.xalan.internal.xsltc.compiler.FlowList) : Void;
 	
-	@:overload public function add(bh : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : com.sun.org.apache.xalan.internal.xsltc.compiler.FlowList;
+	@:overload @:public public function add(bh : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : com.sun.org.apache.xalan.internal.xsltc.compiler.FlowList;
 	
-	@:overload public function append(right : com.sun.org.apache.xalan.internal.xsltc.compiler.FlowList) : com.sun.org.apache.xalan.internal.xsltc.compiler.FlowList;
+	@:overload @:public public function append(right : com.sun.org.apache.xalan.internal.xsltc.compiler.FlowList) : com.sun.org.apache.xalan.internal.xsltc.compiler.FlowList;
 	
 	/**
 	* Back patch a flow list. All instruction handles must be branch handles.
 	*/
-	@:overload public function backPatch(target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function backPatch(target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* Redirect the handles from oldList to newList. "This" flow list
 	* is assumed to be relative to oldList.
 	*/
-	@:overload public function copyAndRedirect(oldList : com.sun.org.apache.bcel.internal.generic.InstructionList, newList : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.xalan.internal.xsltc.compiler.FlowList;
+	@:overload @:public public function copyAndRedirect(oldList : com.sun.org.apache.bcel.internal.generic.InstructionList, newList : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.xalan.internal.xsltc.compiler.FlowList;
 	
 	
 }

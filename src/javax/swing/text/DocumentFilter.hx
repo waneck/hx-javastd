@@ -74,7 +74,7 @@ package javax.swing.text;
 	*   was not a valid part of the document.  The location in the exception
 	*   is the first bad position encountered.
 	*/
-	@:overload public function remove(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int) : Void;
+	@:overload @:public public function remove(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int) : Void;
 	
 	/**
 	* Invoked prior to insertion of text into the
@@ -92,7 +92,7 @@ package javax.swing.text;
 	* @exception BadLocationException  the given insert position is not a
 	*   valid position within the document
 	*/
-	@:overload public function insertString(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, string : String, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function insertString(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, string : String, attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Invoked prior to replacing a region of text in the
@@ -109,7 +109,7 @@ package javax.swing.text;
 	* @exception BadLocationException  the given insert position is not a
 	*   valid position within the document
 	*/
-	@:overload public function replace(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int, text : String, attrs : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function replace(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int, text : String, attrs : javax.swing.text.AttributeSet) : Void;
 	
 	
 }
@@ -128,7 +128,7 @@ package javax.swing.text;
 	*
 	* @return Document that remove/insertString will operate on
 	*/
-	@:overload @:abstract public function getDocument() : javax.swing.text.Document;
+	@:overload @:public @:abstract public function getDocument() : javax.swing.text.Document;
 	
 	/**
 	* Removes the specified region of text, bypassing the
@@ -140,7 +140,7 @@ package javax.swing.text;
 	*   was not a valid part of the document.  The location in the
 	*   exception is the first bad position encountered.
 	*/
-	@:overload @:abstract public function remove(offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function remove(offset : Int, length : Int) : Void;
 	
 	/**
 	* Inserts the specified text, bypassing the
@@ -154,7 +154,7 @@ package javax.swing.text;
 	* @exception BadLocationException  the given insert position is not a
 	*   valid position within the document
 	*/
-	@:overload @:abstract public function insertString(offset : Int, string : String, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public @:abstract public function insertString(offset : Int, string : String, attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Deletes the region of text from <code>offset</code> to
@@ -169,7 +169,7 @@ package javax.swing.text;
 	* @exception BadLocationException  the given insert is not a
 	*   valid position within the document
 	*/
-	@:overload @:abstract public function replace(offset : Int, length : Int, string : String, attrs : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public @:abstract public function replace(offset : Int, length : Int, string : String, attrs : javax.swing.text.AttributeSet) : Void;
 	
 	
 }

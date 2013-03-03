@@ -29,13 +29,13 @@ package sun.awt.X11;
 */
 @:internal extern class XHorizontalScrollbar extends sun.awt.X11.XScrollbar
 {
-	@:overload public function new(sb : sun.awt.X11.XScrollbarClient) : Void;
+	@:overload @:public public function new(sb : sun.awt.X11.XScrollbarClient) : Void;
 	
-	@:overload public function setSize(width : Int, height : Int) : Void;
+	@:overload @:public override public function setSize(width : Int, height : Int) : Void;
 	
-	@:overload private function rebuildArrows() : Void;
+	@:overload @:protected override private function rebuildArrows() : Void;
 	
-	@:overload private function getThumbArea() : java.awt.Rectangle;
+	@:overload @:protected override private function getThumbArea() : java.awt.Rectangle;
 	
 	
 }

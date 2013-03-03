@@ -31,22 +31,22 @@ extern class BasicAttribute implements javax.naming.directory.Attribute
 	* have been overridden.
 	* @serial
 	*/
-	private var attrID : String;
+	@:protected private var attrID : String;
 	
 	/**
 	* Holds the attribute's values. Initialized by public constructors.
 	* Cannot be null unless methods in BasicAttribute that use
 	* values have been overridden.
 	*/
-	@:transient private var values : java.util.Vector<Dynamic>;
+	@:protected @:transient private var values : java.util.Vector<Dynamic>;
 	
 	/**
 	* A flag for recording whether this attribute's values are ordered.
 	* @serial
 	*/
-	private var ordered : Bool;
+	@:protected private var ordered : Bool;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Determines whether obj is equal to this attribute.
@@ -74,7 +74,7 @@ extern class BasicAttribute implements javax.naming.directory.Attribute
 	* @see #hashCode
 	* @see #contains
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Calculates the hash code of this attribute.
@@ -90,7 +90,7 @@ extern class BasicAttribute implements javax.naming.directory.Attribute
 	* @return an int representing the hash code of this attribute.
 	* @see #equals
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Generates the string representation of this attribute.
@@ -99,14 +99,14 @@ extern class BasicAttribute implements javax.naming.directory.Attribute
 	* interpreted programmatically.
 	* @return The non-null string representation of this attribute.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Constructs a new instance of an unordered attribute with no value.
 	*
 	* @param id The attribute's id. It cannot be null.
 	*/
-	@:overload public function new(id : String) : Void;
+	@:overload @:public public function new(id : String) : Void;
 	
 	/**
 	* Constructs a new instance of an unordered attribute with a single value.
@@ -115,7 +115,7 @@ extern class BasicAttribute implements javax.naming.directory.Attribute
 	* @param value The attribute's value. If null, a null
 	*        value is added to the attribute.
 	*/
-	@:overload public function new(id : String, value : Dynamic) : Void;
+	@:overload @:public public function new(id : String, value : Dynamic) : Void;
 	
 	/**
 	* Constructs a new instance of a possibly ordered attribute with no value.
@@ -124,7 +124,7 @@ extern class BasicAttribute implements javax.naming.directory.Attribute
 	* @param ordered true means the attribute's values will be ordered;
 	* false otherwise.
 	*/
-	@:overload public function new(id : String, ordered : Bool) : Void;
+	@:overload @:public public function new(id : String, ordered : Bool) : Void;
 	
 	/**
 	* Constructs a new instance of a possibly ordered attribute with a
@@ -136,7 +136,7 @@ extern class BasicAttribute implements javax.naming.directory.Attribute
 	* @param ordered true means the attribute's values will be ordered;
 	* false otherwise.
 	*/
-	@:overload public function new(id : String, value : Dynamic, ordered : Bool) : Void;
+	@:overload @:public public function new(id : String, value : Dynamic, ordered : Bool) : Void;
 	
 	/**
 	* Retrieves an enumeration of this attribute's values.
@@ -146,7 +146,7 @@ extern class BasicAttribute implements javax.naming.directory.Attribute
 	* A subclass may override this to retrieve the values dynamically
 	* from the directory.
 	*/
-	@:overload public function getAll() : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:public public function getAll() : javax.naming.NamingEnumeration<Dynamic>;
 	
 	/**
 	* Retrieves one of this attribute's values.
@@ -156,11 +156,11 @@ extern class BasicAttribute implements javax.naming.directory.Attribute
 	* A subclass may override this to retrieve the value dynamically
 	* from the directory.
 	*/
-	@:overload public function get() : Dynamic;
+	@:overload @:public public function get() : Dynamic;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function getID() : String;
+	@:overload @:public public function getID() : String;
 	
 	/**
 	* Determines whether a value is in this attribute.
@@ -172,7 +172,7 @@ extern class BasicAttribute implements javax.naming.directory.Attribute
 	* <tt>Object.equals()</tt>.
 	* A subclass may use schema information to determine equality.
 	*/
-	@:overload public function contains(attrVal : Dynamic) : Bool;
+	@:overload @:public public function contains(attrVal : Dynamic) : Bool;
 	
 	/**
 	* Adds a new value to this attribute.
@@ -183,7 +183,7 @@ extern class BasicAttribute implements javax.naming.directory.Attribute
 	* <tt>Object.equals()</tt>.
 	* A subclass may use schema information to determine equality.
 	*/
-	@:overload public function add(attrVal : Dynamic) : Bool;
+	@:overload @:public public function add(attrVal : Dynamic) : Bool;
 	
 	/**
 	* Removes a specified value from this attribute.
@@ -194,19 +194,19 @@ extern class BasicAttribute implements javax.naming.directory.Attribute
 	* <tt>Object.equals()</tt>.
 	* A subclass may use schema information to determine equality.
 	*/
-	@:overload public function remove(attrval : Dynamic) : Bool;
+	@:overload @:public public function remove(attrval : Dynamic) : Bool;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function isOrdered() : Bool;
+	@:overload @:public public function isOrdered() : Bool;
 	
-	@:overload public function get(ix : Int) : Dynamic;
+	@:overload @:public public function get(ix : Int) : Dynamic;
 	
-	@:overload public function remove(ix : Int) : Dynamic;
+	@:overload @:public public function remove(ix : Int) : Dynamic;
 	
-	@:overload public function add(ix : Int, attrVal : Dynamic) : Void;
+	@:overload @:public public function add(ix : Int, attrVal : Dynamic) : Void;
 	
-	@:overload public function set(ix : Int, attrVal : Dynamic) : Dynamic;
+	@:overload @:public public function set(ix : Int, attrVal : Dynamic) : Dynamic;
 	
 	/**
 	* Retrieves the syntax definition associated with this attribute.
@@ -214,7 +214,7 @@ extern class BasicAttribute implements javax.naming.directory.Attribute
 	* This method by default throws OperationNotSupportedException. A subclass
 	* should override this method if it supports schema.
 	*/
-	@:overload public function getAttributeSyntaxDefinition() : javax.naming.directory.DirContext;
+	@:overload @:public public function getAttributeSyntaxDefinition() : javax.naming.directory.DirContext;
 	
 	/**
 	* Retrieves this attribute's schema definition.
@@ -222,21 +222,21 @@ extern class BasicAttribute implements javax.naming.directory.Attribute
 	* This method by default throws OperationNotSupportedException. A subclass
 	* should override this method if it supports schema.
 	*/
-	@:overload public function getAttributeDefinition() : javax.naming.directory.DirContext;
+	@:overload @:public public function getAttributeDefinition() : javax.naming.directory.DirContext;
 	
 	
 }
 @:native('javax$naming$directory$BasicAttribute$ValuesEnumImpl') @:internal extern class BasicAttribute_ValuesEnumImpl implements javax.naming.NamingEnumeration<Dynamic>
 {
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function hasMore() : Bool;
+	@:overload @:public public function hasMore() : Bool;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

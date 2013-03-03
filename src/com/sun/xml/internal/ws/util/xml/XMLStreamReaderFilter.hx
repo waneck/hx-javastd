@@ -28,101 +28,101 @@ extern class XMLStreamReaderFilter implements com.sun.xml.internal.ws.api.stream
 	/**
 	* The underlying {@link XMLStreamReader} that does the parsing of the root part.
 	*/
-	private var reader : javax.xml.stream.XMLStreamReader;
+	@:protected private var reader : javax.xml.stream.XMLStreamReader;
 	
-	@:overload public function new(core : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function new(core : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload public function onRecycled() : Void;
+	@:overload @:public public function onRecycled() : Void;
 	
-	@:overload public function getAttributeCount() : Int;
+	@:overload @:public public function getAttributeCount() : Int;
 	
-	@:overload public function getEventType() : Int;
+	@:overload @:public public function getEventType() : Int;
 	
-	@:overload public function getNamespaceCount() : Int;
+	@:overload @:public public function getNamespaceCount() : Int;
 	
-	@:overload public function getTextLength() : Int;
+	@:overload @:public public function getTextLength() : Int;
 	
-	@:overload public function getTextStart() : Int;
+	@:overload @:public public function getTextStart() : Int;
 	
-	@:overload public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
-	@:overload public function nextTag() : Int;
+	@:overload @:public public function nextTag() : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function hasName() : Bool;
+	@:overload @:public public function hasName() : Bool;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function hasText() : Bool;
+	@:overload @:public public function hasText() : Bool;
 	
-	@:overload public function isCharacters() : Bool;
+	@:overload @:public public function isCharacters() : Bool;
 	
-	@:overload public function isEndElement() : Bool;
+	@:overload @:public public function isEndElement() : Bool;
 	
-	@:overload public function isStandalone() : Bool;
+	@:overload @:public public function isStandalone() : Bool;
 	
-	@:overload public function isStartElement() : Bool;
+	@:overload @:public public function isStartElement() : Bool;
 	
-	@:overload public function isWhiteSpace() : Bool;
+	@:overload @:public public function isWhiteSpace() : Bool;
 	
-	@:overload public function standaloneSet() : Bool;
+	@:overload @:public public function standaloneSet() : Bool;
 	
-	@:overload public function getTextCharacters() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getTextCharacters() : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload public function isAttributeSpecified(index : Int) : Bool;
+	@:overload @:public public function isAttributeSpecified(index : Int) : Bool;
 	
-	@:overload public function getTextCharacters(sourceStart : Int, target : java.NativeArray<java.StdTypes.Char16>, targetStart : Int, length : Int) : Int;
+	@:overload @:public public function getTextCharacters(sourceStart : Int, target : java.NativeArray<java.StdTypes.Char16>, targetStart : Int, length : Int) : Int;
 	
-	@:overload public function getCharacterEncodingScheme() : String;
+	@:overload @:public public function getCharacterEncodingScheme() : String;
 	
-	@:overload public function getElementText() : String;
+	@:overload @:public public function getElementText() : String;
 	
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
-	@:overload public function getLocalName() : String;
+	@:overload @:public public function getLocalName() : String;
 	
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
-	@:overload public function getPIData() : String;
+	@:overload @:public public function getPIData() : String;
 	
-	@:overload public function getPITarget() : String;
+	@:overload @:public public function getPITarget() : String;
 	
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
-	@:overload public function getAttributeLocalName(index : Int) : String;
+	@:overload @:public public function getAttributeLocalName(index : Int) : String;
 	
-	@:overload public function getAttributeNamespace(index : Int) : String;
+	@:overload @:public public function getAttributeNamespace(index : Int) : String;
 	
-	@:overload public function getAttributePrefix(index : Int) : String;
+	@:overload @:public public function getAttributePrefix(index : Int) : String;
 	
-	@:overload public function getAttributeType(index : Int) : String;
+	@:overload @:public public function getAttributeType(index : Int) : String;
 	
-	@:overload public function getAttributeValue(index : Int) : String;
+	@:overload @:public public function getAttributeValue(index : Int) : String;
 	
-	@:overload public function getNamespacePrefix(index : Int) : String;
+	@:overload @:public public function getNamespacePrefix(index : Int) : String;
 	
-	@:overload public function getNamespaceURI(index : Int) : String;
+	@:overload @:public public function getNamespaceURI(index : Int) : String;
 	
-	@:overload public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function getAttributeName(index : Int) : javax.xml.namespace.QName;
+	@:overload @:public public function getAttributeName(index : Int) : javax.xml.namespace.QName;
 	
-	@:overload public function getLocation() : javax.xml.stream.Location;
+	@:overload @:public public function getLocation() : javax.xml.stream.Location;
 	
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
-	@:overload public function require(type : Int, namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function require(type : Int, namespaceURI : String, localName : String) : Void;
 	
-	@:overload public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public public function getNamespaceURI(prefix : String) : String;
 	
-	@:overload public function getAttributeValue(namespaceURI : String, localName : String) : String;
+	@:overload @:public public function getAttributeValue(namespaceURI : String, localName : String) : String;
 	
 	
 }

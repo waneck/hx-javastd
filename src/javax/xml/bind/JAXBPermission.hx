@@ -32,7 +32,7 @@ extern class JAXBPermission extends java.security.BasicPermission
 	* The name of the JAXBPermission. As of 2.2 only "setDatatypeConverter"
 	* is defined.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	
 }

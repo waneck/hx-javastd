@@ -172,7 +172,7 @@ package java.net;
 	* an IP multicast address
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function isMulticastAddress() : Bool;
+	@:require(java1) @:overload @:public public function isMulticastAddress() : Bool;
 	
 	/**
 	* Utility routine to check if the InetAddress in a wildcard address.
@@ -180,7 +180,7 @@ package java.net;
 	*         a wildcard address.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isAnyLocalAddress() : Bool;
+	@:require(java4) @:overload @:public public function isAnyLocalAddress() : Bool;
 	
 	/**
 	* Utility routine to check if the InetAddress is a loopback address.
@@ -189,7 +189,7 @@ package java.net;
 	* a loopback address; or false otherwise.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isLoopbackAddress() : Bool;
+	@:require(java4) @:overload @:public public function isLoopbackAddress() : Bool;
 	
 	/**
 	* Utility routine to check if the InetAddress is an link local address.
@@ -198,7 +198,7 @@ package java.net;
 	* a link local address; or false if address is not a link local unicast address.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isLinkLocalAddress() : Bool;
+	@:require(java4) @:overload @:public public function isLinkLocalAddress() : Bool;
 	
 	/**
 	* Utility routine to check if the InetAddress is a site local address.
@@ -207,7 +207,7 @@ package java.net;
 	* a site local address; or false if address is not a site local unicast address.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isSiteLocalAddress() : Bool;
+	@:require(java4) @:overload @:public public function isSiteLocalAddress() : Bool;
 	
 	/**
 	* Utility routine to check if the multicast address has global scope.
@@ -217,7 +217,7 @@ package java.net;
 	*         of global scope or it is not a multicast address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isMCGlobal() : Bool;
+	@:require(java4) @:overload @:public public function isMCGlobal() : Bool;
 	
 	/**
 	* Utility routine to check if the multicast address has node scope.
@@ -227,7 +227,7 @@ package java.net;
 	*         of node-local scope or it is not a multicast address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isMCNodeLocal() : Bool;
+	@:require(java4) @:overload @:public public function isMCNodeLocal() : Bool;
 	
 	/**
 	* Utility routine to check if the multicast address has link scope.
@@ -237,7 +237,7 @@ package java.net;
 	*         of link-local scope or it is not a multicast address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isMCLinkLocal() : Bool;
+	@:require(java4) @:overload @:public public function isMCLinkLocal() : Bool;
 	
 	/**
 	* Utility routine to check if the multicast address has site scope.
@@ -247,7 +247,7 @@ package java.net;
 	*         of site-local scope or it is not a multicast address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isMCSiteLocal() : Bool;
+	@:require(java4) @:overload @:public public function isMCSiteLocal() : Bool;
 	
 	/**
 	* Utility routine to check if the multicast address has organization scope.
@@ -258,7 +258,7 @@ package java.net;
 	*         or it is not a multicast address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isMCOrgLocal() : Bool;
+	@:require(java4) @:overload @:public public function isMCOrgLocal() : Bool;
 	
 	/**
 	* Test whether that address is reachable. Best effort is made by the
@@ -280,7 +280,7 @@ package java.net;
 	* @throws  IllegalArgumentException if <code>timeout</code> is negative.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isReachable(timeout : Int) : Bool;
+	@:require(java5) @:overload @:public public function isReachable(timeout : Int) : Bool;
 	
 	/**
 	* Test whether that address is reachable. Best effort is made by the
@@ -313,7 +313,7 @@ package java.net;
 	* @throws IOException if a network error occurs
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isReachable(netif : java.net.NetworkInterface, ttl : Int, timeout : Int) : Bool;
+	@:require(java5) @:overload @:public public function isReachable(netif : java.net.NetworkInterface, ttl : Int, timeout : Int) : Bool;
 	
 	/**
 	* Gets the host name for this IP address.
@@ -340,7 +340,7 @@ package java.net;
 	* @see InetAddress#getCanonicalHostName
 	* @see SecurityManager#checkConnect
 	*/
-	@:overload public function getHostName() : String;
+	@:overload @:public public function getHostName() : String;
 	
 	/**
 	* Gets the fully qualified domain name for this IP address.
@@ -363,7 +363,7 @@ package java.net;
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getCanonicalHostName() : String;
+	@:require(java4) @:overload @:public public function getCanonicalHostName() : String;
 	
 	/**
 	* Returns the raw IP address of this <code>InetAddress</code>
@@ -372,7 +372,7 @@ package java.net;
 	*
 	* @return  the raw IP address of this object.
 	*/
-	@:overload public function getAddress() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getAddress() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the IP address string in textual presentation.
@@ -380,14 +380,14 @@ package java.net;
 	* @return  the raw IP address in a string format.
 	* @since   JDK1.0.2
 	*/
-	@:require(java0) @:overload public function getHostAddress() : String;
+	@:require(java0) @:overload @:public public function getHostAddress() : String;
 	
 	/**
 	* Returns a hashcode for this IP address.
 	*
 	* @return  a hash code value for this IP address.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this object against the specified object.
@@ -405,7 +405,7 @@ package java.net;
 	*          <code>false</code> otherwise.
 	* @see     java.net.InetAddress#getAddress()
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Converts this IP address to a <code>String</code>. The
@@ -417,7 +417,7 @@ package java.net;
 	*
 	* @return  a string representation of this IP address.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Creates an InetAddress based on the provided host name and IP address.
@@ -441,7 +441,7 @@ package java.net;
 	* @exception  UnknownHostException  if IP address is of illegal length
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getByAddress(host : String, addr : java.NativeArray<java.StdTypes.Int8>) : java.net.InetAddress;
+	@:require(java4) @:overload @:public @:static public static function getByAddress(host : String, addr : java.NativeArray<java.StdTypes.Int8>) : java.net.InetAddress;
 	
 	/**
 	* Determines the IP address of a host, given the host's name.
@@ -471,7 +471,7 @@ package java.net;
 	* @exception  SecurityException if a security manager exists
 	*             and its checkConnect method doesn't allow the operation
 	*/
-	@:overload public static function getByName(host : String) : java.net.InetAddress;
+	@:overload @:public @:static public static function getByName(host : String) : java.net.InetAddress;
 	
 	/**
 	* Given the name of a host, returns an array of its IP addresses,
@@ -512,7 +512,7 @@ package java.net;
 	*
 	* @see SecurityManager#checkConnect
 	*/
-	@:overload public static function getAllByName(host : String) : java.NativeArray<java.net.InetAddress>;
+	@:overload @:public @:static public static function getAllByName(host : String) : java.NativeArray<java.net.InetAddress>;
 	
 	/**
 	* Returns the loopback address.
@@ -525,7 +525,7 @@ package java.net;
 	* @return  the InetAddress loopback instance.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getLoopbackAddress() : java.net.InetAddress;
+	@:require(java7) @:overload @:public @:static public static function getLoopbackAddress() : java.net.InetAddress;
 	
 	/**
 	* Returns an <code>InetAddress</code> object given the raw IP address .
@@ -543,7 +543,7 @@ package java.net;
 	* @exception  UnknownHostException  if IP address is of illegal length
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getByAddress(addr : java.NativeArray<java.StdTypes.Int8>) : java.net.InetAddress;
+	@:require(java4) @:overload @:public @:static public static function getByAddress(addr : java.NativeArray<java.StdTypes.Int8>) : java.net.InetAddress;
 	
 	/**
 	* Returns the address of the local host. This is achieved by retrieving
@@ -568,7 +568,7 @@ package java.net;
 	* @see SecurityManager#checkConnect
 	* @see java.net.InetAddress#getByName(java.lang.String)
 	*/
-	@:overload public static function getLocalHost() : java.net.InetAddress;
+	@:overload @:public @:static public static function getLocalHost() : java.net.InetAddress;
 	
 	
 }
@@ -588,20 +588,20 @@ package java.net;
 	/**
 	* Create cache
 	*/
-	@:overload public function new(type : java.net.InetAddress.InetAddress_Cache_Type) : Void;
+	@:overload @:public public function new(type : java.net.InetAddress.InetAddress_Cache_Type) : Void;
 	
 	/**
 	* Add an entry to the cache. If there's already an
 	* entry then for this host then the entry will be
 	* replaced.
 	*/
-	@:overload public function put(host : String, addresses : java.NativeArray<java.net.InetAddress>) : java.net.InetAddress.InetAddress_Cache;
+	@:overload @:public public function put(host : String, addresses : java.NativeArray<java.net.InetAddress>) : java.net.InetAddress.InetAddress_Cache;
 	
 	/**
 	* Query the cache for the specific host. If found then
 	* return its CacheEntry, or null if not found.
 	*/
-	@:overload public function get(host : String) : java.net.InetAddress.InetAddress_CacheEntry;
+	@:overload @:public public function get(host : String) : java.net.InetAddress.InetAddress_CacheEntry;
 	
 	
 }

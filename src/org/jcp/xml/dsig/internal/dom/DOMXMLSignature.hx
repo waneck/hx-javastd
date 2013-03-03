@@ -47,7 +47,7 @@ extern class DOMXMLSignature extends javax.xml.crypto.dom.DOMStructure implement
 	*  omit)
 	* @throws NullPointerException if <code>si</code> is <code>null</code>
 	*/
-	@:overload public function new(si : javax.xml.crypto.dsig.SignedInfo, ki : javax.xml.crypto.dsig.keyinfo.KeyInfo, objs : java.util.List<Dynamic>, id : String, signatureValueId : String) : Void;
+	@:overload @:public public function new(si : javax.xml.crypto.dsig.SignedInfo, ki : javax.xml.crypto.dsig.keyinfo.KeyInfo, objs : java.util.List<Dynamic>, id : String, signatureValueId : String) : Void;
 	
 	/**
 	* Creates a <code>DOMXMLSignature</code> from XML.
@@ -55,43 +55,43 @@ extern class DOMXMLSignature extends javax.xml.crypto.dom.DOMStructure implement
 	* @param sigElem Signature element
 	* @throws MarshalException if XMLSignature cannot be unmarshalled
 	*/
-	@:overload public function new(sigElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
+	@:overload @:public public function new(sigElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
 	
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
-	@:overload public function getKeyInfo() : javax.xml.crypto.dsig.keyinfo.KeyInfo;
+	@:overload @:public public function getKeyInfo() : javax.xml.crypto.dsig.keyinfo.KeyInfo;
 	
-	@:overload public function getSignedInfo() : javax.xml.crypto.dsig.SignedInfo;
+	@:overload @:public public function getSignedInfo() : javax.xml.crypto.dsig.SignedInfo;
 	
-	@:overload public function getObjects() : java.util.List<Dynamic>;
+	@:overload @:public public function getObjects() : java.util.List<Dynamic>;
 	
-	@:overload public function getSignatureValue() : javax.xml.crypto.dsig.XMLSignature.XMLSignature_SignatureValue;
+	@:overload @:public public function getSignatureValue() : javax.xml.crypto.dsig.XMLSignature.XMLSignature_SignatureValue;
 	
-	@:overload public function getKeySelectorResult() : javax.xml.crypto.KeySelectorResult;
+	@:overload @:public public function getKeySelectorResult() : javax.xml.crypto.KeySelectorResult;
 	
-	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
-	@:overload public function marshal(parent : org.w3c.dom.Node, nextSibling : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public public function marshal(parent : org.w3c.dom.Node, nextSibling : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
-	@:overload public function validate(vc : javax.xml.crypto.dsig.XMLValidateContext) : Bool;
+	@:overload @:public public function validate(vc : javax.xml.crypto.dsig.XMLValidateContext) : Bool;
 	
-	@:overload public function sign(signContext : javax.xml.crypto.dsig.XMLSignContext) : Void;
+	@:overload @:public public function sign(signContext : javax.xml.crypto.dsig.XMLSignContext) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }
 @:native('org$jcp$xml$dsig$internal$dom$DOMXMLSignature$DOMSignatureValue') extern class DOMXMLSignature_DOMSignatureValue extends javax.xml.crypto.dom.DOMStructure implements javax.xml.crypto.dsig.XMLSignature.XMLSignature_SignatureValue
 {
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
-	@:overload public function getValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getValue() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function validate(validateContext : javax.xml.crypto.dsig.XMLValidateContext) : Bool;
+	@:overload @:public public function validate(validateContext : javax.xml.crypto.dsig.XMLValidateContext) : Bool;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
 	
 }

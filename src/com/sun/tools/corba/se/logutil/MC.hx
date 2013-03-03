@@ -34,7 +34,7 @@ extern class MC
 	* @throws FileNotFoundException if the input file can not be found.
 	* @throws IOException if an I/O error occurs.
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

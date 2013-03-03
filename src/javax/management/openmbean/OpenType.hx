@@ -51,12 +51,12 @@ extern class OpenType<T> implements java.io.Serializable
 	</pre>
 	*
 	*/
-	public static var ALLOWED_CLASSNAMES_LIST(default, null) : java.util.List<String>;
+	@:public @:static @:final public static var ALLOWED_CLASSNAMES_LIST(default, null) : java.util.List<String>;
 	
 	/**
 	* @deprecated Use {@link #ALLOWED_CLASSNAMES_LIST ALLOWED_CLASSNAMES_LIST} instead.
 	*/
-	public static var ALLOWED_CLASSNAMES(default, null) : java.NativeArray<String>;
+	@:public @:static @:final public static var ALLOWED_CLASSNAMES(default, null) : java.NativeArray<String>;
 	
 	/**
 	* Constructs an <code>OpenType</code> instance (actually a subclass instance as <code>OpenType</code> is abstract),
@@ -83,7 +83,7 @@ extern class OpenType<T> implements java.io.Serializable
 	* <br>&nbsp;
 	* @throws OpenDataException  if <var>className</var> is not one of the allowed Java class names for open data
 	*/
-	@:overload private function new(className : String, typeName : String, description : String) : Void;
+	@:overload @:protected private function new(className : String, typeName : String, description : String) : Void;
 	
 	/**
 	* Returns the fully qualified Java class name of the open data values
@@ -103,21 +103,21 @@ extern class OpenType<T> implements java.io.Serializable
 	*
 	* @return the class name.
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Returns the name of this <code>OpenType</code> instance.
 	*
 	* @return the type name.
 	*/
-	@:overload public function getTypeName() : String;
+	@:overload @:public public function getTypeName() : String;
 	
 	/**
 	* Returns the text description of this <code>OpenType</code> instance.
 	*
 	* @return the description.
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	/**
 	* Returns <code>true</code> if the open data values this open
@@ -125,7 +125,7 @@ extern class OpenType<T> implements java.io.Serializable
 	*
 	* @return true if this is an array type.
 	*/
-	@:overload public function isArray() : Bool;
+	@:overload @:public public function isArray() : Bool;
 	
 	/**
 	* Tests whether <var>obj</var> is a value for this open type.
@@ -135,7 +135,7 @@ extern class OpenType<T> implements java.io.Serializable
 	* @return <code>true</code> if <var>obj</var> is a value for this
 	* open type, <code>false</code> otherwise.
 	*/
-	@:overload @:abstract public function isValue(obj : Dynamic) : Bool;
+	@:overload @:public @:abstract public function isValue(obj : Dynamic) : Bool;
 	
 	/**
 	* Compares the specified <code>obj</code> parameter with this
@@ -145,16 +145,16 @@ extern class OpenType<T> implements java.io.Serializable
 	*
 	* @return true if this object and <code>obj</code> are equal.
 	*/
-	@:overload @:abstract public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:abstract public function equals(obj : Dynamic) : Bool;
 	
-	@:overload @:abstract public function hashCode() : Int;
+	@:overload @:public @:abstract public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this open type instance.
 	*
 	* @return the string representation.
 	*/
-	@:overload @:abstract public function toString() : String;
+	@:overload @:public @:abstract public function toString() : String;
 	
 	
 }

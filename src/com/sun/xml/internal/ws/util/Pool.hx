@@ -34,12 +34,12 @@ extern class Pool<T>
 	* @return
 	*      always non-null.
 	*/
-	@:overload @:final public function take() : T;
+	@:overload @:public @:final public function take() : T;
 	
 	/**
 	* Returns an object back to the pool.
 	*/
-	@:overload @:final public function recycle(t : T) : Void;
+	@:overload @:public @:final public function recycle(t : T) : Void;
 	
 	/**
 	* Creates a new instance of object.
@@ -52,7 +52,7 @@ extern class Pool<T>
 	* Also note that multiple threads may call this method
 	* concurrently.
 	*/
-	@:overload @:abstract private function create() : T;
+	@:overload @:protected @:abstract private function create() : T;
 	
 	
 }
@@ -61,9 +61,9 @@ extern class Pool<T>
 */
 @:native('com$sun$xml$internal$ws$util$Pool$Marshaller') extern class Pool_Marshaller extends com.sun.xml.internal.ws.util.Pool<javax.xml.bind.Marshaller>
 {
-	@:overload public function new(context : javax.xml.bind.JAXBContext) : Void;
+	@:overload @:public public function new(context : javax.xml.bind.JAXBContext) : Void;
 	
-	@:overload override private function create() : javax.xml.bind.Marshaller;
+	@:overload @:protected override private function create() : javax.xml.bind.Marshaller;
 	
 	
 }
@@ -72,9 +72,9 @@ extern class Pool<T>
 */
 @:native('com$sun$xml$internal$ws$util$Pool$Unmarshaller') extern class Pool_Unmarshaller extends com.sun.xml.internal.ws.util.Pool<javax.xml.bind.Unmarshaller>
 {
-	@:overload public function new(context : javax.xml.bind.JAXBContext) : Void;
+	@:overload @:public public function new(context : javax.xml.bind.JAXBContext) : Void;
 	
-	@:overload override private function create() : javax.xml.bind.Unmarshaller;
+	@:overload @:protected override private function create() : javax.xml.bind.Unmarshaller;
 	
 	
 }
@@ -83,9 +83,9 @@ extern class Pool<T>
 */
 @:native('com$sun$xml$internal$ws$util$Pool$TubePool') extern class Pool_TubePool extends com.sun.xml.internal.ws.util.Pool<com.sun.xml.internal.ws.api.pipe.Tube>
 {
-	@:overload public function new(master : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
+	@:overload @:public public function new(master : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload override private function create() : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:protected override private function create() : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	
 }

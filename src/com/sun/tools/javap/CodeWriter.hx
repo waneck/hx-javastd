@@ -25,15 +25,15 @@ package com.sun.tools.javap;
 */
 @:internal extern class CodeWriter extends com.sun.tools.javap.BasicWriter
 {
-	@:overload private function new(context : com.sun.tools.javap.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javap.Context) : Void;
 	
-	@:overload public function writeVerboseHeader(attr : com.sun.tools.classfile.Code_attribute, constant_pool : com.sun.tools.classfile.ConstantPool) : Void;
+	@:overload @:public public function writeVerboseHeader(attr : com.sun.tools.classfile.Code_attribute, constant_pool : com.sun.tools.classfile.ConstantPool) : Void;
 	
-	@:overload public function writeInstrs(attr : com.sun.tools.classfile.Code_attribute) : Void;
+	@:overload @:public public function writeInstrs(attr : com.sun.tools.classfile.Code_attribute) : Void;
 	
-	@:overload public function writeInstr(instr : com.sun.tools.classfile.Instruction) : Void;
+	@:overload @:public public function writeInstr(instr : com.sun.tools.classfile.Instruction) : Void;
 	
-	@:overload public function writeExceptionTable(attr : com.sun.tools.classfile.Code_attribute) : Void;
+	@:overload @:public public function writeExceptionTable(attr : com.sun.tools.classfile.Code_attribute) : Void;
 	
 	
 }

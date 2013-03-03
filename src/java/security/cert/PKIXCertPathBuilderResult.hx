@@ -39,7 +39,7 @@ extern class PKIXCertPathBuilderResult extends java.security.cert.PKIXCertPathVa
 	* <code>trustAnchor</code> or <code>subjectPublicKey</code> parameters
 	* are <code>null</code>
 	*/
-	@:overload public function new(certPath : java.security.cert.CertPath, trustAnchor : java.security.cert.TrustAnchor, policyTree : java.security.cert.PolicyNode, subjectPublicKey : java.security.PublicKey) : Void;
+	@:overload @:public public function new(certPath : java.security.cert.CertPath, trustAnchor : java.security.cert.TrustAnchor, policyTree : java.security.cert.PolicyNode, subjectPublicKey : java.security.PublicKey) : Void;
 	
 	/**
 	* Returns the built and validated certification path. The
@@ -51,7 +51,7 @@ extern class PKIXCertPathBuilderResult extends java.security.cert.PKIXCertPathVa
 	* @return the built and validated <code>CertPath</code> (never
 	* <code>null</code>)
 	*/
-	@:overload public function getCertPath() : java.security.cert.CertPath;
+	@:overload @:public public function getCertPath() : java.security.cert.CertPath;
 	
 	/**
 	* Return a printable representation of this
@@ -60,7 +60,7 @@ extern class PKIXCertPathBuilderResult extends java.security.cert.PKIXCertPathVa
 	* @return a <code>String</code> describing the contents of this
 	*         <code>PKIXCertPathBuilderResult</code>
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

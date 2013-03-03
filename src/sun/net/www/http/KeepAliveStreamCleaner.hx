@@ -35,15 +35,15 @@ package sun.net.www.http;
 	*
 	* @author Chris Hegarty
 	*/
-	private static var MAX_DATA_REMAINING : Int;
+	@:protected @:static private static var MAX_DATA_REMAINING : Int;
 	
-	private static var MAX_CAPACITY : Int;
+	@:protected @:static private static var MAX_CAPACITY : Int;
 	
-	private static var TIMEOUT(default, null) : Int;
+	@:protected @:static @:final private static var TIMEOUT(default, null) : Int;
 	
-	@:overload public function offer(e : KeepAliveCleanerEntry) : Bool;
+	@:overload @:public public function offer(e : KeepAliveCleanerEntry) : Bool;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

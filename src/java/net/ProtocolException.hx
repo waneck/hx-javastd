@@ -31,12 +31,12 @@ extern class ProtocolException extends java.io.IOException
 	*
 	* @param   host   the detail message.
 	*/
-	@:overload public function new(host : String) : Void;
+	@:overload @:public public function new(host : String) : Void;
 	
 	/**
 	* Constructs a new <code>ProtocolException</code> with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

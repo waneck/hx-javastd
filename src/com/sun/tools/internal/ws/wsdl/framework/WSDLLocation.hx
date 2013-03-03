@@ -32,15 +32,15 @@ package com.sun.tools.internal.ws.wsdl.framework;
 */
 extern class WSDLLocation
 {
-	@:overload public function push() : Void;
+	@:overload @:public public function push() : Void;
 	
-	@:overload public function pop() : Void;
+	@:overload @:public public function pop() : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function getLocation() : String;
+	@:overload @:public public function getLocation() : String;
 	
-	@:overload public function setLocation(loc : String) : Void;
+	@:overload @:public public function setLocation(loc : String) : Void;
 	
 	
 }

@@ -25,27 +25,27 @@ package com.sun.corba.se.impl.ior;
 */
 extern class IORTemplateImpl extends com.sun.corba.se.spi.ior.IdentifiableContainerBase implements com.sun.corba.se.spi.ior.IORTemplate
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload public function getObjectKeyTemplate() : com.sun.corba.se.spi.ior.ObjectKeyTemplate;
+	@:overload @:public public function getObjectKeyTemplate() : com.sun.corba.se.spi.ior.ObjectKeyTemplate;
 	
-	@:overload public function new(oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate) : Void;
+	@:overload @:public public function new(oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate) : Void;
 	
-	@:overload public function makeIOR(orb : com.sun.corba.se.spi.orb.ORB, typeid : String, oid : com.sun.corba.se.spi.ior.ObjectId) : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public public function makeIOR(orb : com.sun.corba.se.spi.orb.ORB, typeid : String, oid : com.sun.corba.se.spi.ior.ObjectId) : com.sun.corba.se.spi.ior.IOR;
 	
-	@:overload public function isEquivalent(other : com.sun.corba.se.spi.ior.IORFactory) : Bool;
+	@:overload @:public public function isEquivalent(other : com.sun.corba.se.spi.ior.IORFactory) : Bool;
 	
 	/** Ensure that this IORTemplate and all of its profiles can not be
 	* modified.  This overrides the method inherited from
 	* FreezableList through IdentifiableContainerBase.
 	*/
-	@:overload public function makeImmutable() : Void;
+	@:overload @:public override public function makeImmutable() : Void;
 	
-	@:overload public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload public function new(is : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	@:overload @:public public function new(is : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
 	
 }

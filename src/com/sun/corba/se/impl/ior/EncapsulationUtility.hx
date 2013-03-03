@@ -28,18 +28,18 @@ extern class EncapsulationUtility
 	/** Read the count from is, then read count Identifiables from
 	* is using the factory.  Add each constructed Identifiable to container.
 	*/
-	@:overload public static function readIdentifiableSequence(container : java.util.List<Dynamic>, finder : com.sun.corba.se.spi.ior.IdentifiableFactoryFinder, istr : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	@:overload @:public @:static public static function readIdentifiableSequence(container : java.util.List<Dynamic>, finder : com.sun.corba.se.spi.ior.IdentifiableFactoryFinder, istr : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
 	/** Write all Identifiables that we contain to os.  The total
 	* length must be written before this method is called.
 	*/
-	@:overload public static function writeIdentifiableSequence(container : java.util.List<Dynamic>, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public @:static public static function writeIdentifiableSequence(container : java.util.List<Dynamic>, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	/** Helper method that is used to extract data from an output
 	* stream and write the data to another output stream.  Defined
 	* as static so that it can be used in another class.
 	*/
-	@:overload public static function writeOutputStream(dataStream : org.omg.CORBA_2_3.portable.OutputStream, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:static @:public public static function writeOutputStream(dataStream : org.omg.CORBA_2_3.portable.OutputStream, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	/** Helper method to read the octet array from is, deencapsulate it,
 	* and return
@@ -47,14 +47,14 @@ extern class EncapsulationUtility
 	* constructor of a derived class to obtain the correct stream
 	* for unmarshalling data.
 	*/
-	@:overload public static function getEncapsulationStream(is : org.omg.CORBA_2_3.portable.InputStream) : org.omg.CORBA_2_3.portable.InputStream;
+	@:overload @:static @:public public static function getEncapsulationStream(is : org.omg.CORBA_2_3.portable.InputStream) : org.omg.CORBA_2_3.portable.InputStream;
 	
 	/** Helper method that reads an octet array from an input stream.
 	* Defined as static here so that it can be used in another class.
 	*/
-	@:overload public static function readOctets(is : org.omg.CORBA_2_3.portable.InputStream) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:static @:public public static function readOctets(is : org.omg.CORBA_2_3.portable.InputStream) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function writeEncapsulation(obj : com.sun.corba.se.spi.ior.WriteContents, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:static @:public public static function writeEncapsulation(obj : com.sun.corba.se.spi.ior.WriteContents, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	
 }

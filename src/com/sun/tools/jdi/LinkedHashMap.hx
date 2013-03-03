@@ -98,7 +98,7 @@ extern class LinkedHashMap extends java.util.AbstractMap<Dynamic, Dynamic> imple
 	*               than or equal to zero, or if the load factor is less than
 	*               or equal to zero.
 	*/
-	@:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
 	/**
 	* Constructs a new, empty LinkedHashMap with the specified initial capacity
@@ -106,13 +106,13 @@ extern class LinkedHashMap extends java.util.AbstractMap<Dynamic, Dynamic> imple
 	*
 	* @param   initialCapacity   the initial capacity of the LinkedHashMap.
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs a new, empty LinkedHashMap with a default capacity and load
 	* factor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new LinkedHashMap with the same mappings as the given
@@ -120,17 +120,17 @@ extern class LinkedHashMap extends java.util.AbstractMap<Dynamic, Dynamic> imple
 	* of mappings in the given Map or 11 (whichever is greater), and a
 	* default load factor.
 	*/
-	@:overload public function new(t : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(t : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Returns the number of key-value mappings in this Map.
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns true if this Map contains no key-value mappings.
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns true if this LinkedHashMap maps one or more keys to the specified
@@ -138,7 +138,7 @@ extern class LinkedHashMap extends java.util.AbstractMap<Dynamic, Dynamic> imple
 	*
 	* @param value value whose presence in this Map is to be tested.
 	*/
-	@:overload override public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public override public function containsValue(value : Dynamic) : Bool;
 	
 	/**
 	* Returns true if this LinkedHashMap contains a mapping for the specified
@@ -146,7 +146,7 @@ extern class LinkedHashMap extends java.util.AbstractMap<Dynamic, Dynamic> imple
 	*
 	* @param key key whose presence in this Map is to be tested.
 	*/
-	@:overload override public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public override public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Returns the value to which this LinkedHashMap maps the specified key.
@@ -158,7 +158,7 @@ extern class LinkedHashMap extends java.util.AbstractMap<Dynamic, Dynamic> imple
 	*
 	* @param key key whose associated value is to be returned.
 	*/
-	@:overload override public function get(key : Dynamic) : Dynamic;
+	@:overload @:public override public function get(key : Dynamic) : Dynamic;
 	
 	/**
 	* Returns the position of the mapping for the specified key
@@ -167,7 +167,7 @@ extern class LinkedHashMap extends java.util.AbstractMap<Dynamic, Dynamic> imple
 	* @param key the specified key.
 	* @return index of the key mapping.
 	*/
-	@:overload public function indexOf(key : Dynamic) : Int;
+	@:overload @:public public function indexOf(key : Dynamic) : Int;
 	
 	/**
 	* Associates the specified value with the specified key in this
@@ -186,7 +186,7 @@ extern class LinkedHashMap extends java.util.AbstractMap<Dynamic, Dynamic> imple
 	*         the LinkedHashMap previously associated null with the specified
 	*         key.
 	*/
-	@:overload public function put(index : Int, key : Dynamic, value : Dynamic) : Dynamic;
+	@:overload @:public public function put(index : Int, key : Dynamic, value : Dynamic) : Dynamic;
 	
 	/**
 	* Associates the specified value with the specified key in this
@@ -201,7 +201,7 @@ extern class LinkedHashMap extends java.util.AbstractMap<Dynamic, Dynamic> imple
 	*         the LinkedHashMap previously associated null with the specified
 	*         key.
 	*/
-	@:overload override public function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:overload @:public override public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
 	/**
 	* Removes the mapping for this key from this LinkedHashMap if present.
@@ -213,7 +213,7 @@ extern class LinkedHashMap extends java.util.AbstractMap<Dynamic, Dynamic> imple
 	*         the LinkedHashMap previously associated null with the specified
 	*         key.
 	*/
-	@:overload override public function remove(key : Dynamic) : Dynamic;
+	@:overload @:public override public function remove(key : Dynamic) : Dynamic;
 	
 	/**
 	* Copies all of the mappings from the specified Map to this LinkedHashMap
@@ -222,18 +222,18 @@ extern class LinkedHashMap extends java.util.AbstractMap<Dynamic, Dynamic> imple
 	*
 	* @param t Mappings to be stored in this Map.
 	*/
-	@:overload override public function putAll(t : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public override public function putAll(t : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Removes all mappings from this LinkedHashMap.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns a shallow copy of this LinkedHashMap. The keys and values
 	* themselves are not cloned.
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Returns a Set view of the keys contained in this LinkedHashMap.  The Set
@@ -243,7 +243,7 @@ extern class LinkedHashMap extends java.util.AbstractMap<Dynamic, Dynamic> imple
 	* Iterator.remove, Set.remove, removeAll retainAll, and clear operations.
 	* It does not support the add or addAll operations.
 	*/
-	@:overload override public function keySet() : java.util.Set<Dynamic>;
+	@:overload @:public override public function keySet() : java.util.Set<Dynamic>;
 	
 	/**
 	* Returns a Collection view of the values contained in this LinkedHashMap.
@@ -254,7 +254,7 @@ extern class LinkedHashMap extends java.util.AbstractMap<Dynamic, Dynamic> imple
 	* Collection.remove, removeAll, retainAll and clear operations.  It does
 	* not support the add or addAll operations.
 	*/
-	@:overload override public function values() : java.util.Collection<Dynamic>;
+	@:overload @:public override public function values() : java.util.Collection<Dynamic>;
 	
 	/**
 	* Returns a Collection view of the mappings contained in this
@@ -268,7 +268,7 @@ extern class LinkedHashMap extends java.util.AbstractMap<Dynamic, Dynamic> imple
 	*
 	* @see   java.util.Map.Entry
 	*/
-	@:overload override public function entrySet() : java.util.Set<Dynamic>;
+	@:overload @:public override public function entrySet() : java.util.Set<Dynamic>;
 	
 	/**
 	* Compares the specified Object with this Map for equality.
@@ -293,7 +293,7 @@ extern class LinkedHashMap extends java.util.AbstractMap<Dynamic, Dynamic> imple
 	* @return true if the specified Object is equal to this Map.
 	*
 	*/
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
 	
 }
@@ -302,27 +302,27 @@ extern class LinkedHashMap extends java.util.AbstractMap<Dynamic, Dynamic> imple
 */
 @:native('com$sun$tools$jdi$LinkedHashMap$Entry') @:internal extern class LinkedHashMap_Entry implements java.util.Map.Map_Entry<Dynamic, Dynamic>
 {
-	@:overload public function getKey() : Dynamic;
+	@:overload @:public public function getKey() : Dynamic;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
-	@:overload public function setValue(value : Dynamic) : Dynamic;
+	@:overload @:public public function setValue(value : Dynamic) : Dynamic;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$jdi$LinkedHashMap$HashIterator') @:internal extern class LinkedHashMap_HashIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

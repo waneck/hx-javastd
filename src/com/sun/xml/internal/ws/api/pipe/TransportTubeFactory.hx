@@ -44,7 +44,7 @@ extern class TransportTubeFactory
 	*      back to the user application, and no further {@link TransportTubeFactory}s
 	*      are consulted.
 	*/
-	@:overload @:abstract public function doCreate(context : com.sun.xml.internal.ws.api.pipe.ClientTubeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public @:abstract public function doCreate(context : com.sun.xml.internal.ws.api.pipe.ClientTubeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	/**
 	* Locates {@link TransportTubeFactory}s and create a suitable transport {@link Tube}.
@@ -54,7 +54,7 @@ extern class TransportTubeFactory
 	* @return
 	*      Always non-null, since we fall back to our default {@link Tube}.
 	*/
-	@:overload public static function create(classLoader : java.lang.ClassLoader, context : com.sun.xml.internal.ws.api.pipe.ClientTubeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public @:static public static function create(classLoader : java.lang.ClassLoader, context : com.sun.xml.internal.ws.api.pipe.ClientTubeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	
 }

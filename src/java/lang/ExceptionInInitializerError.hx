@@ -47,7 +47,7 @@ package java.lang;
 	* throwable object.
 	* A detail message is a String that describes this particular exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>ExceptionInInitializerError</code> class by
@@ -57,7 +57,7 @@ package java.lang;
 	*
 	* @param thrown The exception thrown
 	*/
-	@:overload public function new(thrown : java.lang.Throwable) : Void;
+	@:overload @:public public function new(thrown : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs an ExceptionInInitializerError with the specified detail
@@ -69,7 +69,7 @@ package java.lang;
 	*
 	* @param s the detail message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Returns the exception that occurred during a static initialization that
@@ -84,7 +84,7 @@ package java.lang;
 	*         if this <code>ExceptionInInitializerError</code> has no saved
 	*         throwable object.
 	*/
-	@:overload public function getException() : java.lang.Throwable;
+	@:overload @:public public function getException() : java.lang.Throwable;
 	
 	/**
 	* Returns the cause of this error (the exception that occurred
@@ -94,7 +94,7 @@ package java.lang;
 	*          cause is nonexistent or unknown.
 	* @since   1.4
 	*/
-	@:require(java4) @:overload public function getCause() : java.lang.Throwable;
+	@:require(java4) @:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

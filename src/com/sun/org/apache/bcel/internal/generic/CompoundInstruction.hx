@@ -73,7 +73,7 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern interface CompoundInstruction
 {
-	@:overload public function getInstructionList() : com.sun.org.apache.bcel.internal.generic.InstructionList;
+	@:overload @:public public function getInstructionList() : com.sun.org.apache.bcel.internal.generic.InstructionList;
 	
 	
 }

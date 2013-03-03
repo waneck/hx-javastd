@@ -28,11 +28,11 @@ extern class DirectAudioDeviceProvider extends javax.sound.sampled.spi.MixerProv
 	/**
 	* Required public no-arg constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getMixerInfo() : java.NativeArray<javax.sound.sampled.Mixer.Mixer_Info>;
+	@:overload @:public override public function getMixerInfo() : java.NativeArray<javax.sound.sampled.Mixer.Mixer_Info>;
 	
-	@:overload public function getMixer(info : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.Mixer;
+	@:overload @:public override public function getMixer(info : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.Mixer;
 	
 	
 }

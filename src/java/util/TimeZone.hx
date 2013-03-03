@@ -41,7 +41,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* A style specifier for <code>getDisplayName()</code> indicating
@@ -49,7 +49,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @see #LONG
 	* @since 1.2
 	*/
-	@:require(java2) public static var SHORT(default, null) : Int;
+	@:require(java2) @:public @:static @:final public static var SHORT(default, null) : Int;
 	
 	/**
 	* A style specifier for <code>getDisplayName()</code> indicating
@@ -57,7 +57,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @see #SHORT
 	* @since 1.2
 	*/
-	@:require(java2) public static var LONG(default, null) : Int;
+	@:require(java2) @:public @:static @:final public static var LONG(default, null) : Int;
 	
 	/**
 	* Gets the time zone offset, for current date, modified in case of
@@ -82,7 +82,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @see Calendar#ZONE_OFFSET
 	* @see Calendar#DST_OFFSET
 	*/
-	@:overload @:abstract public function getOffset(era : Int, year : Int, month : Int, day : Int, dayOfWeek : Int, milliseconds : Int) : Int;
+	@:overload @:public @:abstract public function getOffset(era : Int, year : Int, month : Int, day : Int, dayOfWeek : Int, milliseconds : Int) : Int;
 	
 	/**
 	* Returns the offset of this time zone from UTC at the specified
@@ -101,7 +101,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @see Calendar#DST_OFFSET
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getOffset(date : haxe.Int64) : Int;
+	@:require(java4) @:overload @:public public function getOffset(date : haxe.Int64) : Int;
 	
 	/**
 	* Sets the base time zone offset to GMT.
@@ -115,7 +115,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	*
 	* @param offsetMillis the given base time zone offset to GMT.
 	*/
-	@:overload @:abstract public function setRawOffset(offsetMillis : Int) : Void;
+	@:overload @:abstract @:public public function setRawOffset(offsetMillis : Int) : Void;
 	
 	/**
 	* Returns the amount of time in milliseconds to add to UTC to get
@@ -133,20 +133,20 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @return the amount of raw offset time in milliseconds to add to UTC.
 	* @see Calendar#ZONE_OFFSET
 	*/
-	@:overload @:abstract public function getRawOffset() : Int;
+	@:overload @:public @:abstract public function getRawOffset() : Int;
 	
 	/**
 	* Gets the ID of this time zone.
 	* @return the ID of this time zone.
 	*/
-	@:overload public function getID() : String;
+	@:overload @:public public function getID() : String;
 	
 	/**
 	* Sets the time zone ID. This does not change any other data in
 	* the time zone object.
 	* @param ID the new time zone ID.
 	*/
-	@:overload public function setID(ID : String) : Void;
+	@:overload @:public public function setID(ID : String) : Void;
 	
 	/**
 	* Returns a long standard time name of this {@code TimeZone} suitable for
@@ -164,7 +164,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @see Locale#getDefault(Locale.Category)
 	* @see Locale.Category
 	*/
-	@:require(java2) @:overload @:final public function getDisplayName() : String;
+	@:require(java2) @:overload @:public @:final public function getDisplayName() : String;
 	
 	/**
 	* Returns a long standard time name of this {@code TimeZone} suitable for
@@ -181,7 +181,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @since 1.2
 	* @see #getDisplayName(boolean, int, Locale)
 	*/
-	@:require(java2) @:overload @:final public function getDisplayName(locale : java.util.Locale) : String;
+	@:require(java2) @:overload @:public @:final public function getDisplayName(locale : java.util.Locale) : String;
 	
 	/**
 	* Returns a name in the specified {@code style} of this {@code TimeZone}
@@ -207,7 +207,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @see Locale.Category
 	* @see java.text.DateFormatSymbols#getZoneStrings()
 	*/
-	@:require(java2) @:overload @:final public function getDisplayName(daylight : Bool, style : Int) : String;
+	@:require(java2) @:overload @:public @:final public function getDisplayName(daylight : Bool, style : Int) : String;
 	
 	/**
 	* Returns a name in the specified {@code style} of this {@code TimeZone}
@@ -237,7 +237,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @since 1.2
 	* @see java.text.DateFormatSymbols#getZoneStrings()
 	*/
-	@:require(java2) @:overload public function getDisplayName(daylight : Bool, style : Int, locale : java.util.Locale) : String;
+	@:require(java2) @:overload @:public public function getDisplayName(daylight : Bool, style : Int, locale : java.util.Locale) : String;
 	
 	/**
 	* Returns the amount of time to be added to local standard time
@@ -265,7 +265,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @see #getOffset(int,int,int,int,int,int)
 	* @see Calendar#ZONE_OFFSET
 	*/
-	@:require(java4) @:overload public function getDSTSavings() : Int;
+	@:require(java4) @:overload @:public public function getDSTSavings() : Int;
 	
 	/**
 	* Queries if this {@code TimeZone} uses Daylight Saving Time.
@@ -282,7 +282,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @see #inDaylightTime(Date)
 	* @see Calendar#DST_OFFSET
 	*/
-	@:overload @:abstract public function useDaylightTime() : Bool;
+	@:overload @:public @:abstract public function useDaylightTime() : Bool;
 	
 	/**
 	* Returns {@code true} if this {@code TimeZone} is currently in
@@ -302,7 +302,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @see #inDaylightTime(Date)
 	* @see Calendar#DST_OFFSET
 	*/
-	@:require(java7) @:overload public function observesDaylightTime() : Bool;
+	@:require(java7) @:overload @:public public function observesDaylightTime() : Bool;
 	
 	/**
 	* Queries if the given {@code date} is in Daylight Saving Time in
@@ -312,7 +312,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @return {@code true} if the given date is in Daylight Saving Time,
 	*         {@code false}, otherwise.
 	*/
-	@:overload @:abstract public function inDaylightTime(date : java.util.Date) : Bool;
+	@:overload @:abstract @:public public function inDaylightTime(date : java.util.Date) : Bool;
 	
 	/**
 	* Gets the <code>TimeZone</code> for the given ID.
@@ -325,7 +325,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @return the specified <code>TimeZone</code>, or the GMT zone if the given ID
 	* cannot be understood.
 	*/
-	@:overload @:synchronized public static function getTimeZone(ID : String) : java.util.TimeZone;
+	@:overload @:public @:static @:synchronized public static function getTimeZone(ID : String) : java.util.TimeZone;
 	
 	/**
 	* Gets the available IDs according to the given time zone offset in milliseconds.
@@ -336,13 +336,13 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* both have GMT-07:00, but differ in daylight saving behavior.
 	* @see #getRawOffset()
 	*/
-	@:overload @:synchronized public static function getAvailableIDs(rawOffset : Int) : java.NativeArray<String>;
+	@:overload @:public @:static @:synchronized public static function getAvailableIDs(rawOffset : Int) : java.NativeArray<String>;
 	
 	/**
 	* Gets all the available IDs supported.
 	* @return an array of IDs.
 	*/
-	@:overload @:synchronized public static function getAvailableIDs() : java.NativeArray<String>;
+	@:overload @:public @:static @:synchronized public static function getAvailableIDs() : java.NativeArray<String>;
 	
 	/**
 	* Gets the default <code>TimeZone</code> for this host.
@@ -351,7 +351,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @return a default <code>TimeZone</code>.
 	* @see #setDefault
 	*/
-	@:overload public static function getDefault() : java.util.TimeZone;
+	@:overload @:public @:static public static function getDefault() : java.util.TimeZone;
 	
 	/**
 	* Sets the <code>TimeZone</code> that is
@@ -361,7 +361,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @param zone the new default time zone
 	* @see #getDefault
 	*/
-	@:overload public static function setDefault(zone : java.util.TimeZone) : Void;
+	@:overload @:public @:static public static function setDefault(zone : java.util.TimeZone) : Void;
 	
 	/**
 	* Returns true if this zone has the same rule and offset as another zone.
@@ -372,14 +372,14 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* with the possible exception of the ID
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function hasSameRules(other : java.util.TimeZone) : Bool;
+	@:require(java2) @:overload @:public public function hasSameRules(other : java.util.TimeZone) : Bool;
 	
 	/**
 	* Creates a copy of this <code>TimeZone</code>.
 	*
 	* @return a clone of this <code>TimeZone</code>
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

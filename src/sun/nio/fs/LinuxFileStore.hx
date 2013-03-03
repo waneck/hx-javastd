@@ -25,9 +25,9 @@ package sun.nio.fs;
 */
 @:internal extern class LinuxFileStore extends sun.nio.fs.UnixFileStore
 {
-	@:overload override public function supportsFileAttributeView(type : Class<java.nio.file.attribute.FileAttributeView>) : Bool;
+	@:overload @:public override public function supportsFileAttributeView(type : Class<java.nio.file.attribute.FileAttributeView>) : Bool;
 	
-	@:overload override public function supportsFileAttributeView(name : String) : Bool;
+	@:overload @:public override public function supportsFileAttributeView(name : String) : Bool;
 	
 	
 }

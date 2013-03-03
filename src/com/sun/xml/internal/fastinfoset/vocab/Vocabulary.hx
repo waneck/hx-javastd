@@ -27,43 +27,43 @@ package com.sun.xml.internal.fastinfoset.vocab;
 */
 extern class Vocabulary
 {
-	public static var RESTRICTED_ALPHABET(default, null) : Int;
+	@:public @:static @:final public static var RESTRICTED_ALPHABET(default, null) : Int;
 	
-	public static var ENCODING_ALGORITHM(default, null) : Int;
+	@:public @:static @:final public static var ENCODING_ALGORITHM(default, null) : Int;
 	
-	public static var PREFIX(default, null) : Int;
+	@:public @:static @:final public static var PREFIX(default, null) : Int;
 	
-	public static var NAMESPACE_NAME(default, null) : Int;
+	@:public @:static @:final public static var NAMESPACE_NAME(default, null) : Int;
 	
-	public static var LOCAL_NAME(default, null) : Int;
+	@:public @:static @:final public static var LOCAL_NAME(default, null) : Int;
 	
-	public static var OTHER_NCNAME(default, null) : Int;
+	@:public @:static @:final public static var OTHER_NCNAME(default, null) : Int;
 	
-	public static var OTHER_URI(default, null) : Int;
+	@:public @:static @:final public static var OTHER_URI(default, null) : Int;
 	
-	public static var ATTRIBUTE_VALUE(default, null) : Int;
+	@:public @:static @:final public static var ATTRIBUTE_VALUE(default, null) : Int;
 	
-	public static var OTHER_STRING(default, null) : Int;
+	@:public @:static @:final public static var OTHER_STRING(default, null) : Int;
 	
-	public static var CHARACTER_CONTENT_CHUNK(default, null) : Int;
+	@:public @:static @:final public static var CHARACTER_CONTENT_CHUNK(default, null) : Int;
 	
-	public static var ELEMENT_NAME(default, null) : Int;
+	@:public @:static @:final public static var ELEMENT_NAME(default, null) : Int;
 	
-	public static var ATTRIBUTE_NAME(default, null) : Int;
+	@:public @:static @:final public static var ATTRIBUTE_NAME(default, null) : Int;
 	
-	private var _hasInitialReadOnlyVocabulary : Bool;
+	@:protected private var _hasInitialReadOnlyVocabulary : Bool;
 	
-	private var _referencedVocabularyURI : String;
+	@:protected private var _referencedVocabularyURI : String;
 	
-	@:overload public function hasInitialVocabulary() : Bool;
+	@:overload @:public public function hasInitialVocabulary() : Bool;
 	
-	@:overload private function setInitialReadOnlyVocabulary(hasInitialReadOnlyVocabulary : Bool) : Void;
+	@:overload @:protected private function setInitialReadOnlyVocabulary(hasInitialReadOnlyVocabulary : Bool) : Void;
 	
-	@:overload public function hasExternalVocabulary() : Bool;
+	@:overload @:public public function hasExternalVocabulary() : Bool;
 	
-	@:overload public function getExternalVocabularyURI() : String;
+	@:overload @:public public function getExternalVocabularyURI() : String;
 	
-	@:overload private function setExternalVocabularyURI(referencedVocabularyURI : String) : Void;
+	@:overload @:protected private function setExternalVocabularyURI(referencedVocabularyURI : String) : Void;
 	
 	
 }

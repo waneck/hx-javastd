@@ -33,7 +33,7 @@ extern class Runtime
 	* @return  the <code>Runtime</code> object associated with the current
 	*          Java application.
 	*/
-	@:overload public static function getRuntime() : java.lang.Runtime;
+	@:overload @:public @:static public static function getRuntime() : java.lang.Runtime;
 	
 	/**
 	* Terminates the currently running Java virtual machine by initiating its
@@ -75,7 +75,7 @@ extern class Runtime
 	* @see #runFinalizersOnExit
 	* @see #halt(int)
 	*/
-	@:overload public function exit(status : Int) : Void;
+	@:overload @:public public function exit(status : Int) : Void;
 	
 	/**
 	* Registers a new virtual-machine shutdown hook.
@@ -171,7 +171,7 @@ extern class Runtime
 	* @see #exit(int)
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function addShutdownHook(hook : java.lang.Thread) : Void;
+	@:require(java3) @:overload @:public public function addShutdownHook(hook : java.lang.Thread) : Void;
 	
 	/**
 	* De-registers a previously-registered virtual-machine shutdown hook. <p>
@@ -193,7 +193,7 @@ extern class Runtime
 	* @see #exit(int)
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function removeShutdownHook(hook : java.lang.Thread) : Bool;
+	@:require(java3) @:overload @:public public function removeShutdownHook(hook : java.lang.Thread) : Bool;
 	
 	/**
 	* Forcibly terminates the currently running Java virtual machine.  This
@@ -223,7 +223,7 @@ extern class Runtime
 	* @see #removeShutdownHook
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function halt(status : Int) : Void;
+	@:require(java3) @:overload @:public public function halt(status : Int) : Void;
 	
 	/**
 	* Enable or disable finalization on exit; doing so specifies that the
@@ -251,7 +251,7 @@ extern class Runtime
 	* @see     java.lang.SecurityManager#checkExit(int)
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public static function runFinalizersOnExit(value : Bool) : Void;
+	@:require(java1) @:overload @:public @:static public static function runFinalizersOnExit(value : Bool) : Void;
 	
 	/**
 	* Executes the specified string command in a separate process.
@@ -282,7 +282,7 @@ extern class Runtime
 	* @see     #exec(String[], String[], File)
 	* @see     ProcessBuilder
 	*/
-	@:overload public function exec(command : String) : java.lang.Process;
+	@:overload @:public public function exec(command : String) : java.lang.Process;
 	
 	/**
 	* Executes the specified string command in a separate process with the
@@ -321,7 +321,7 @@ extern class Runtime
 	* @see     #exec(String[], String[], File)
 	* @see     ProcessBuilder
 	*/
-	@:overload public function exec(command : String, envp : java.NativeArray<String>) : java.lang.Process;
+	@:overload @:public public function exec(command : String, envp : java.NativeArray<String>) : java.lang.Process;
 	
 	/**
 	* Executes the specified string command in a separate process with the
@@ -373,7 +373,7 @@ extern class Runtime
 	* @see     ProcessBuilder
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function exec(command : String, envp : java.NativeArray<String>, dir : java.io.File) : java.lang.Process;
+	@:require(java3) @:overload @:public public function exec(command : String, envp : java.NativeArray<String>, dir : java.io.File) : java.lang.Process;
 	
 	/**
 	* Executes the specified command and arguments in a separate process.
@@ -406,7 +406,7 @@ extern class Runtime
 	*
 	* @see     ProcessBuilder
 	*/
-	@:overload public function exec(cmdarray : java.NativeArray<String>) : java.lang.Process;
+	@:overload @:public public function exec(cmdarray : java.NativeArray<String>) : java.lang.Process;
 	
 	/**
 	* Executes the specified command and arguments in a separate process
@@ -447,7 +447,7 @@ extern class Runtime
 	*
 	* @see     ProcessBuilder
 	*/
-	@:overload public function exec(cmdarray : java.NativeArray<String>, envp : java.NativeArray<String>) : java.lang.Process;
+	@:overload @:public public function exec(cmdarray : java.NativeArray<String>, envp : java.NativeArray<String>) : java.lang.Process;
 	
 	/**
 	* Executes the specified command and arguments in a separate process with
@@ -532,7 +532,7 @@ extern class Runtime
 	* @see     ProcessBuilder
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function exec(cmdarray : java.NativeArray<String>, envp : java.NativeArray<String>, dir : java.io.File) : java.lang.Process;
+	@:require(java3) @:overload @:public public function exec(cmdarray : java.NativeArray<String>, envp : java.NativeArray<String>, dir : java.io.File) : java.lang.Process;
 	
 	/**
 	* Returns the number of processors available to the Java virtual machine.
@@ -546,7 +546,7 @@ extern class Runtime
 	*          machine; never smaller than one
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:native public function availableProcessors() : Int;
+	@:require(java4) @:overload @:public @:native public function availableProcessors() : Int;
 	
 	/**
 	* Returns the amount of free memory in the Java Virtual Machine.
@@ -557,7 +557,7 @@ extern class Runtime
 	* @return  an approximation to the total amount of memory currently
 	*          available for future allocated objects, measured in bytes.
 	*/
-	@:overload @:native public function freeMemory() : haxe.Int64;
+	@:overload @:public @:native public function freeMemory() : haxe.Int64;
 	
 	/**
 	* Returns the total amount of memory in the Java virtual machine.
@@ -570,7 +570,7 @@ extern class Runtime
 	* @return  the total amount of memory currently available for current
 	*          and future objects, measured in bytes.
 	*/
-	@:overload @:native public function totalMemory() : haxe.Int64;
+	@:overload @:public @:native public function totalMemory() : haxe.Int64;
 	
 	/**
 	* Returns the maximum amount of memory that the Java virtual machine will
@@ -581,7 +581,7 @@ extern class Runtime
 	*          attempt to use, measured in bytes
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:native public function maxMemory() : haxe.Int64;
+	@:require(java4) @:overload @:public @:native public function maxMemory() : haxe.Int64;
 	
 	/**
 	* Runs the garbage collector.
@@ -599,7 +599,7 @@ extern class Runtime
 	* The method {@link System#gc()} is the conventional and convenient
 	* means of invoking this method.
 	*/
-	@:overload @:native public function gc() : Void;
+	@:overload @:public @:native public function gc() : Void;
 	
 	/**
 	* Runs the finalization methods of any objects pending finalization.
@@ -619,7 +619,7 @@ extern class Runtime
 	*
 	* @see     java.lang.Object#finalize()
 	*/
-	@:overload public function runFinalization() : Void;
+	@:overload @:public public function runFinalization() : Void;
 	
 	/**
 	* Enables/Disables tracing of instructions.
@@ -639,7 +639,7 @@ extern class Runtime
 	* @param   on   <code>true</code> to enable instruction tracing;
 	*               <code>false</code> to disable this feature.
 	*/
-	@:overload @:native public function traceInstructions(on : Bool) : Void;
+	@:overload @:public @:native public function traceInstructions(on : Bool) : Void;
 	
 	/**
 	* Enables/Disables tracing of method calls.
@@ -657,7 +657,7 @@ extern class Runtime
 	* @param   on   <code>true</code> to enable instruction tracing;
 	*               <code>false</code> to disable this feature.
 	*/
-	@:overload @:native public function traceMethodCalls(on : Bool) : Void;
+	@:overload @:public @:native public function traceMethodCalls(on : Bool) : Void;
 	
 	/**
 	* Loads the specified filename as a dynamic library. The filename
@@ -687,7 +687,7 @@ extern class Runtime
 	* @see        java.lang.SecurityException
 	* @see        java.lang.SecurityManager#checkLink(java.lang.String)
 	*/
-	@:overload public function load(filename : String) : Void;
+	@:overload @:public public function load(filename : String) : Void;
 	
 	/**
 	* Loads the dynamic library with the specified library name.
@@ -726,7 +726,7 @@ extern class Runtime
 	* @see        java.lang.SecurityException
 	* @see        java.lang.SecurityManager#checkLink(java.lang.String)
 	*/
-	@:overload public function loadLibrary(libname : String) : Void;
+	@:overload @:public public function loadLibrary(libname : String) : Void;
 	
 	/**
 	* Creates a localized version of an input stream. This method takes
@@ -749,7 +749,7 @@ extern class Runtime
 	* the <code>InputStreamReader</code> and <code>BufferedReader</code>
 	* classes.
 	*/
-	@:overload public function getLocalizedInputStream(_in : java.io.InputStream) : java.io.InputStream;
+	@:overload @:public public function getLocalizedInputStream(_in : java.io.InputStream) : java.io.InputStream;
 	
 	/**
 	* Creates a localized version of an output stream. This method
@@ -774,7 +774,7 @@ extern class Runtime
 	* @see        java.io.OutputStreamWriter#OutputStreamWriter(java.io.OutputStream)
 	* @see        java.io.PrintWriter#PrintWriter(java.io.OutputStream)
 	*/
-	@:overload public function getLocalizedOutputStream(out : java.io.OutputStream) : java.io.OutputStream;
+	@:overload @:public public function getLocalizedOutputStream(out : java.io.OutputStream) : java.io.OutputStream;
 	
 	
 }

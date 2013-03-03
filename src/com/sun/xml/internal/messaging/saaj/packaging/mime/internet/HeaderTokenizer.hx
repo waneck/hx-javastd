@@ -42,12 +42,12 @@ extern class HeaderTokenizer
 	/**
 	* RFC822 specials
 	*/
-	public static var RFC822(default, null) : String;
+	@:public @:final @:static public static var RFC822(default, null) : String;
 	
 	/**
 	* MIME specials
 	*/
-	public static var MIME(default, null) : String;
+	@:public @:final @:static public static var MIME(default, null) : String;
 	
 	/**
 	* Constructor that takes a rfc822 style header.
@@ -60,7 +60,7 @@ extern class HeaderTokenizer
 	* @param   skipComments  If true, comments are skipped and
 	*                          not returned as tokens
 	*/
-	@:overload public function new(header : String, delimiters : String, skipComments : Bool) : Void;
+	@:overload @:public public function new(header : String, delimiters : String, skipComments : Bool) : Void;
 	
 	/**
 	* Constructor. Comments are ignored and not returned as tokens
@@ -68,14 +68,14 @@ extern class HeaderTokenizer
 	* @param   header  The header that is tokenized
 	* @param   delimiters  The delimiters to be used
 	*/
-	@:overload public function new(header : String, delimiters : String) : Void;
+	@:overload @:public public function new(header : String, delimiters : String) : Void;
 	
 	/**
 	* Constructor. The RFC822 defined delimiters - RFC822 - are
 	* used to delimit ATOMS. Also comments are skipped and not
 	* returned as tokens
 	*/
-	@:overload public function new(header : String) : Void;
+	@:overload @:public public function new(header : String) : Void;
 	
 	/**
 	* Parses the next token from this String. <p>
@@ -86,7 +86,7 @@ extern class HeaderTokenizer
 	* @return          the next Token
 	* @exception       ParseException if the parse fails
 	*/
-	@:overload public function next() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.HeaderTokenizer.HeaderTokenizer_Token;
+	@:overload @:public public function next() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.HeaderTokenizer.HeaderTokenizer_Token;
 	
 	/**
 	* Peek at the next token, without actually removing the token
@@ -97,7 +97,7 @@ extern class HeaderTokenizer
 	* @return          the next Token
 	* @exception       ParseException if the parse fails
 	*/
-	@:overload public function peek() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.HeaderTokenizer.HeaderTokenizer_Token;
+	@:overload @:public public function peek() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.HeaderTokenizer.HeaderTokenizer_Token;
 	
 	/**
 	* Return the rest of the Header.
@@ -105,7 +105,7 @@ extern class HeaderTokenizer
 	* @return String   rest of header. null is returned if we are
 	*                  already at end of header
 	*/
-	@:overload public function getRemainder() : String;
+	@:overload @:public public function getRemainder() : String;
 	
 	
 }
@@ -118,32 +118,32 @@ extern class HeaderTokenizer
 	/**
 	* Token type indicating an ATOM.
 	*/
-	public static var ATOM(default, null) : Int;
+	@:public @:static @:final public static var ATOM(default, null) : Int;
 	
 	/**
 	* Token type indicating a quoted string. The value
 	* field contains the string without the quotes.
 	*/
-	public static var QUOTEDSTRING(default, null) : Int;
+	@:public @:static @:final public static var QUOTEDSTRING(default, null) : Int;
 	
 	/**
 	* Token type indicating a comment. The value field
 	* contains the comment string without the comment
 	* start and end symbols.
 	*/
-	public static var COMMENT(default, null) : Int;
+	@:public @:static @:final public static var COMMENT(default, null) : Int;
 	
 	/**
 	* Token type indicating end of input.
 	*/
-	public static var EOF(default, null) : Int;
+	@:public @:static @:final public static var EOF(default, null) : Int;
 	
 	/**
 	* Constructor.
 	* @param       type    Token type
 	* @param       value   Token value
 	*/
-	@:overload public function new(type : Int, value : String) : Void;
+	@:overload @:public public function new(type : Int, value : String) : Void;
 	
 	/**
 	* Return the type of the token. If the token represents a
@@ -161,7 +161,7 @@ extern class HeaderTokenizer
 	* <li><code>EOF</code> End of header
 	* </ul>
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Returns the value of the token just read. When the current
@@ -171,7 +171,7 @@ extern class HeaderTokenizer
 	*
 	* @return      token value
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	
 }

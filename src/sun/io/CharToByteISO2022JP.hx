@@ -28,22 +28,22 @@ extern class CharToByteISO2022JP extends sun.io.CharToByteJIS0208
 	/**
 	* Bytes for substitute for unmappable input.
 	*/
-	private var subBytesEscape : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var subBytesEscape : java.NativeArray<java.StdTypes.Int8>;
 	
-	private var subBytesMode : Int;
+	@:protected private var subBytesMode : Int;
 	
-	@:overload override public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public override public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
 	
-	@:overload override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outOff : Int, outEnd : Int) : Int;
+	@:overload @:public override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outOff : Int, outEnd : Int) : Int;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* returns the maximum number of bytes needed to convert a char
 	*/
-	@:overload override public function getMaxBytesPerChar() : Int;
+	@:overload @:public override public function getMaxBytesPerChar() : Int;
 	
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
 	
 }

@@ -25,21 +25,21 @@ package sun.awt.X11;
 */
 extern class InfoWindow extends java.awt.Window
 {
-	@:overload private function new(parent : java.awt.Frame, borderColor : java.awt.Color) : Void;
+	@:overload @:protected private function new(parent : java.awt.Frame, borderColor : java.awt.Color) : Void;
 	
-	@:overload override public function add(c : java.awt.Component) : java.awt.Component;
+	@:overload @:public override public function add(c : java.awt.Component) : java.awt.Component;
 	
-	@:overload private function setCloser(action : java.lang.Runnable, time : Int) : Void;
+	@:overload @:protected private function setCloser(action : java.lang.Runnable, time : Int) : Void;
 	
-	@:overload private function show(corner : java.awt.Point, indent : Int) : Void;
+	@:overload @:protected private function show(corner : java.awt.Point, indent : Int) : Void;
 	
-	@:overload public function hide() : Void;
+	@:overload @:public override public function hide() : Void;
 	
 	
 }
 @:native('sun$awt$X11$InfoWindow$Closer') @:internal extern class InfoWindow_Closer implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
@@ -55,11 +55,11 @@ extern class InfoWindow extends java.awt.Window
 }
 @:native('sun$awt$X11$InfoWindow$Tooltip') extern class InfoWindow_Tooltip extends sun.awt.X11.InfoWindow
 {
-	@:overload public function new(parent : java.awt.Frame, target : Dynamic, liveArguments : sun.awt.X11.InfoWindow.InfoWindow_Balloon_LiveArguments) : Void;
+	@:overload @:public public function new(parent : java.awt.Frame, target : Dynamic, liveArguments : sun.awt.X11.InfoWindow.InfoWindow_Balloon_LiveArguments) : Void;
 	
-	@:overload public function enter() : Void;
+	@:overload @:public public function enter() : Void;
 	
-	@:overload public function exit() : Void;
+	@:overload @:public public function exit() : Void;
 	
 	
 }
@@ -72,11 +72,11 @@ extern class InfoWindow extends java.awt.Window
 }
 @:native('sun$awt$X11$InfoWindow$Balloon') extern class InfoWindow_Balloon extends sun.awt.X11.InfoWindow
 {
-	@:overload public function new(parent : java.awt.Frame, target : Dynamic, liveArguments : sun.awt.X11.InfoWindow.InfoWindow_Balloon_LiveArguments) : Void;
+	@:overload @:public public function new(parent : java.awt.Frame, target : Dynamic, liveArguments : sun.awt.X11.InfoWindow.InfoWindow_Balloon_LiveArguments) : Void;
 	
-	@:overload public function display(caption : String, text : String, messageType : String) : Void;
+	@:overload @:public public function display(caption : String, text : String, messageType : String) : Void;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
 	
 }
@@ -89,13 +89,13 @@ extern class InfoWindow extends java.awt.Window
 }
 @:native('sun$awt$X11$InfoWindow$Balloon$ActionPerformer') @:internal extern class InfoWindow_Balloon_ActionPerformer extends java.awt.event.MouseAdapter
 {
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
 @:native('sun$awt$X11$InfoWindow$Balloon$Displayer') @:internal extern class InfoWindow_Balloon_Displayer extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

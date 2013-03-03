@@ -30,7 +30,7 @@ extern class GTKKeybindings
 	*
 	* @param table The UiDefaults table to install into
 	*/
-	@:overload public static function installKeybindings(table : javax.swing.UIDefaults) : Void;
+	@:overload @:public @:static public static function installKeybindings(table : javax.swing.UIDefaults) : Void;
 	
 	
 }

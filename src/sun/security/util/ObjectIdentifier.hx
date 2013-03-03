@@ -29,13 +29,13 @@ extern class ObjectIdentifier implements java.io.Serializable
 	* Constructs, from a string.  This string should be of the form 1.23.56.
 	* Validity check included.
 	*/
-	@:overload public function new(oid : String) : Void;
+	@:overload @:public public function new(oid : String) : Void;
 	
 	/**
 	* Constructor, from an array of integers.
 	* Validity check included.
 	*/
-	@:overload public function new(values : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(values : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Constructor, from an ASN.1 encoded input stream.
@@ -49,7 +49,7 @@ extern class ObjectIdentifier implements java.io.Serializable
 	* @param in DER-encoded data holding an object ID
 	* @exception IOException indicates a decoding error
 	*/
-	@:overload public function new(_in : sun.security.util.DerInputStream) : Void;
+	@:overload @:public public function new(_in : sun.security.util.DerInputStream) : Void;
 	
 	/**
 	* This method is kept for compatibility reasons. The new implementation
@@ -60,21 +60,21 @@ extern class ObjectIdentifier implements java.io.Serializable
 	* Old doc: Create a new ObjectIdentifier for internal use. The values are
 	* neither checked nor cloned.
 	*/
-	@:overload public static function newInternal(values : java.NativeArray<Int>) : sun.security.util.ObjectIdentifier;
+	@:overload @:public @:static public static function newInternal(values : java.NativeArray<Int>) : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* @deprecated Use equals((Object)oid)
 	*/
-	@:overload public function equals(other : sun.security.util.ObjectIdentifier) : Bool;
+	@:overload @:public public function equals(other : sun.security.util.ObjectIdentifier) : Bool;
 	
 	/**
 	* Compares this identifier with another, for equality.
 	*
 	* @return true iff the names are identical.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string form of the object ID.  The format is the
@@ -82,7 +82,7 @@ extern class ObjectIdentifier implements java.io.Serializable
 	* user-friendly descriptive strings, since those strings
 	* will not be understood everywhere.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

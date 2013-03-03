@@ -35,7 +35,7 @@ extern interface SunPrinterJobService
 	* platform's built-in subclass of PrinterJob.
 	* ie the same class as the caller.
 	*/
-	@:overload public function usesClass(c : Class<Dynamic>) : Bool;
+	@:overload @:public public function usesClass(c : Class<Dynamic>) : Bool;
 	
 	
 }

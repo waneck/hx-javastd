@@ -28,22 +28,22 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	/**
 	* {@link PropertyInfo} implementation backed by a field.
 	*/
-	private var field(default, null) : FieldT;
+	@:protected @:final private var field(default, null) : FieldT;
 	
-	@:overload public function readAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>) : A;
+	@:overload @:public public function readAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>) : A;
 	
-	@:overload public function hasAnnotation(annotationType : Class<java.lang.annotation.Annotation>) : Bool;
+	@:overload @:public public function hasAnnotation(annotationType : Class<java.lang.annotation.Annotation>) : Bool;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getRawType() : TypeT;
+	@:overload @:public public function getRawType() : TypeT;
 	
 	/**
 	* Use the enclosing class as the upsream {@link Location}.
 	*/
-	@:overload public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
+	@:overload @:public public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
-	@:overload public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
 	
 }

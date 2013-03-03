@@ -37,14 +37,14 @@ package com.sun.tools.corba.se.idl;
 extern class UnionBranch
 {
 	/** The type definition for the branch. */
-	//public var _typedef : com.sun.tools.corba.se.idl.TypedefEntry;
+	//@:public public var _typedef : com.sun.tools.corba.se.idl.TypedefEntry;
 	
 	/** A vector of Expression's, one for each label in the order in which
 	they appear in the IDL file.  The default branch has no label. */
-	public var labels : java.util.Vector<Dynamic>;
+	@:public public var labels : java.util.Vector<Dynamic>;
 	
 	/** true if this is the default branch. */
-	public var isDefault : Bool;
+	@:public public var isDefault : Bool;
 	
 	
 }

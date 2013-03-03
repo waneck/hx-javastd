@@ -26,19 +26,19 @@ package sun.awt.image;
 extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 {
 	/** private band offset for use by native code */
-	private var bandOffset : Int;
+	@:protected private var bandOffset : Int;
 	
 	/** Data offsets for each band of image data. */
-	private var dataOffsets : java.NativeArray<Int>;
+	@:protected private var dataOffsets : java.NativeArray<Int>;
 	
 	/** Scanline stride of the image data contained in this Raster. */
-	private var scanlineStride : Int;
+	@:protected private var scanlineStride : Int;
 	
 	/** Pixel stride of the image data contained in this Raster. */
-	private var pixelStride : Int;
+	@:protected private var pixelStride : Int;
 	
 	/** The image data array. */
-	private var data : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var data : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Constructs a ByteComponentRaster with the given SampleModel.
@@ -49,7 +49,7 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	* @param sampleModel     The SampleModel that specifies the layout.
 	* @param origin          The Point that specified the origin.
 	*/
-	@:overload public function new(sampleModel : java.awt.image.SampleModel, origin : java.awt.Point) : Void;
+	@:overload @:public public function new(sampleModel : java.awt.image.SampleModel, origin : java.awt.Point) : Void;
 	
 	/**
 	* Constructs a ByteComponentRaster with the given SampleModel
@@ -62,7 +62,7 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	* @param dataBuffer      The DataBufferShort that contains the image data.
 	* @param origin          The Point that specifies the origin.
 	*/
-	@:overload public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, origin : java.awt.Point) : Void;
+	@:overload @:public public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, origin : java.awt.Point) : Void;
 	
 	/**
 	* Constructs a ByteComponentRaster with the given SampleModel,
@@ -83,14 +83,14 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	* @param origin          The Point that specifies the origin.
 	* @param parent          The parent (if any) of this raster.
 	*/
-	@:overload public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, origin : java.awt.Point, parent : sun.awt.image.ByteComponentRaster) : Void;
+	@:overload @:public public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, origin : java.awt.Point, parent : sun.awt.image.ByteComponentRaster) : Void;
 	
 	/**
 	* Returns a copy of the data offsets array. For each band the data offset
 	* is the index into the band's data array, of the first sample of the
 	* band.
 	*/
-	@:overload public function getDataOffsets() : java.NativeArray<Int>;
+	@:overload @:public public function getDataOffsets() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the data offset for the specified band.  The data offset
@@ -98,25 +98,25 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	* in which the first sample of the first scanline is stored.
 	* @param band  The band whose offset is returned.
 	*/
-	@:overload public function getDataOffset(band : Int) : Int;
+	@:overload @:public public function getDataOffset(band : Int) : Int;
 	
 	/**
 	* Returns the scanline stride -- the number of data array elements between
 	* a given sample and the sample in the same column of the next row in the
 	* same band.
 	*/
-	@:overload public function getScanlineStride() : Int;
+	@:overload @:public public function getScanlineStride() : Int;
 	
 	/**
 	* Returns pixel stride -- the number of data array elements between two
 	* samples for the same band on the same scanline.
 	*/
-	@:overload public function getPixelStride() : Int;
+	@:overload @:public public function getPixelStride() : Int;
 	
 	/**
 	* Returns a reference to the data array.
 	*/
-	@:overload public function getDataStorage() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getDataStorage() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the data elements for all bands at the specified
@@ -134,7 +134,7 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	* @return         An object reference to an array of type defined by
 	*                 getTransferType() with the request pixel data.
 	*/
-	@:overload override public function getDataElements(x : Int, y : Int, obj : Dynamic) : Dynamic;
+	@:overload @:public override public function getDataElements(x : Int, y : Int, obj : Dynamic) : Dynamic;
 	
 	/**
 	* Returns an array of data elements from the specified rectangular
@@ -162,7 +162,7 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	* @return         An object reference to an array of type defined by
 	*                 getTransferType() with the request pixel data.
 	*/
-	@:overload override public function getDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic) : Dynamic;
+	@:overload @:public override public function getDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic) : Dynamic;
 	
 	/**
 	* Returns a byte array of data elements from the specified rectangular
@@ -183,7 +183,7 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	*                 at the specified location are returned in this array.
 	* @return         Data array with data elements for all bands.
 	*/
-	@:overload public function getByteData(x : Int, y : Int, w : Int, h : Int, band : Int, outData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getByteData(x : Int, y : Int, w : Int, h : Int, band : Int, outData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a byte array of data elements from the specified rectangular
@@ -206,7 +206,7 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	*                 at the specified location are returned in this array.
 	* @return         Data array with data elements for all bands.
 	*/
-	@:overload public function getByteData(x : Int, y : Int, w : Int, h : Int, outData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getByteData(x : Int, y : Int, w : Int, h : Int, outData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Stores the data elements for all bands at the specified location.
@@ -220,7 +220,7 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	*                 getTransferType() and length getNumDataElements()
 	*                 containing the pixel data to place at x,y.
 	*/
-	@:overload override public function setDataElements(x : Int, y : Int, obj : Dynamic) : Void;
+	@:overload @:public override public function setDataElements(x : Int, y : Int, obj : Dynamic) : Void;
 	
 	/**
 	* Stores the Raster data at the specified location.
@@ -230,7 +230,7 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	* @param y          The Y coordinate of the pixel location.
 	* @param inRaster   Raster of data to place at x,y location.
 	*/
-	@:overload override public function setDataElements(x : Int, y : Int, inRaster : java.awt.image.Raster) : Void;
+	@:overload @:public override public function setDataElements(x : Int, y : Int, inRaster : java.awt.image.Raster) : Void;
 	
 	/**
 	* Stores an array of data elements into the specified rectangular
@@ -254,7 +254,7 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	*                 containing the pixel data to place between x,y and
 	*                 x+h, y+h.
 	*/
-	@:overload override public function setDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic) : Void;
+	@:overload @:public override public function setDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic) : Void;
 	
 	/**
 	* Stores a byte array of data elements into the specified rectangular
@@ -274,7 +274,7 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	* @param band     The band to set.
 	* @param inData   The data elements to be stored.
 	*/
-	@:overload public function putByteData(x : Int, y : Int, w : Int, h : Int, band : Int, inData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function putByteData(x : Int, y : Int, w : Int, h : Int, band : Int, inData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Stores a byte array of data elements into the specified rectangular
@@ -293,7 +293,7 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	* @param h        Height of the pixel rectangle.
 	* @param inData   The data elements to be stored.
 	*/
-	@:overload public function putByteData(x : Int, y : Int, w : Int, h : Int, inData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function putByteData(x : Int, y : Int, w : Int, h : Int, inData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Creates a subraster given a region of the raster.  The x and y
@@ -314,7 +314,7 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	* @exception RasterFormatException
 	*            if the specified bounding box is outside of the parent raster.
 	*/
-	@:overload override public function createChild(x : Int, y : Int, width : Int, height : Int, x0 : Int, y0 : Int, bandList : java.NativeArray<Int>) : java.awt.image.Raster;
+	@:overload @:public override public function createChild(x : Int, y : Int, width : Int, height : Int, x0 : Int, y0 : Int, bandList : java.NativeArray<Int>) : java.awt.image.Raster;
 	
 	/**
 	* Creates a Writable subRaster given a region of the Raster. The x and y
@@ -335,13 +335,13 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	* @exception RasterFormatException
 	*            if the specified bounding box is outside of the parent Raster.
 	*/
-	@:overload override public function createWritableChild(x : Int, y : Int, width : Int, height : Int, x0 : Int, y0 : Int, bandList : java.NativeArray<Int>) : java.awt.image.WritableRaster;
+	@:overload @:public override public function createWritableChild(x : Int, y : Int, width : Int, height : Int, x0 : Int, y0 : Int, bandList : java.NativeArray<Int>) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a Raster with the same layout but using a different
 	* width and height, and with new zeroed data arrays.
 	*/
-	@:overload override public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
+	@:overload @:public override public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a Raster with the same layout and the same
@@ -349,7 +349,7 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	* the Raster is a subRaster, this will call
 	* createCompatibleRaster(width, height).
 	*/
-	@:overload override public function createCompatibleWritableRaster() : java.awt.image.WritableRaster;
+	@:overload @:public override public function createCompatibleWritableRaster() : java.awt.image.WritableRaster;
 	
 	/**
 	* Verify that the layout parameters are consistent with the data.
@@ -362,9 +362,9 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	* @throws RasterFormatException if an integer overflow is detected,
 	* or if data buffer has not enough capacity.
 	*/
-	@:overload @:final private function verify() : Void;
+	@:overload @:protected @:final private function verify() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

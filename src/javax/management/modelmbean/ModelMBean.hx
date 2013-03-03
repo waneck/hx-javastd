@@ -56,7 +56,7 @@ extern interface ModelMBean extends javax.management.DynamicMBean extends javax.
 	* </ul>
 	*
 	**/
-	@:overload public function setModelMBeanInfo(inModelMBeanInfo : javax.management.modelmbean.ModelMBeanInfo) : Void;
+	@:overload @:public public function setModelMBeanInfo(inModelMBeanInfo : javax.management.modelmbean.ModelMBeanInfo) : Void;
 	
 	/**
 	* Sets the instance handle of the object against which to
@@ -77,7 +77,7 @@ extern interface ModelMBean extends javax.management.DynamicMBean extends javax.
 	* @exception InvalidTargetObjectTypeException The managed resource type cannot be processed by the
 	* ModelMBean or JMX Agent.
 	*/
-	@:overload public function setManagedResource(mr : Dynamic, mr_type : String) : Void;
+	@:overload @:public public function setManagedResource(mr : Dynamic, mr_type : String) : Void;
 	
 	
 }

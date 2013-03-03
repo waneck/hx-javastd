@@ -30,9 +30,9 @@ package sun.security.krb5.internal.util;
 */
 extern class KrbDataInputStream extends java.io.BufferedInputStream
 {
-	@:overload public function setNativeByteOrder() : Void;
+	@:overload @:public public function setNativeByteOrder() : Void;
 	
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	/**
 	* Reads up to the specific number of bytes from this input stream.
@@ -40,9 +40,9 @@ extern class KrbDataInputStream extends java.io.BufferedInputStream
 	* @return the int value of this byte array.
 	* @exception IOException.
 	*/
-	@:overload public function read(num : Int) : Int;
+	@:overload @:public public function read(num : Int) : Int;
 	
-	@:overload public function readVersion() : Int;
+	@:overload @:public public function readVersion() : Int;
 	
 	
 }

@@ -25,11 +25,11 @@ package com.sun.media.sound;
 */
 extern class ModelPatch extends javax.sound.midi.Patch
 {
-	@:overload public function new(bank : Int, program : Int) : Void;
+	@:overload @:public public function new(bank : Int, program : Int) : Void;
 	
-	@:overload public function new(bank : Int, program : Int, percussion : Bool) : Void;
+	@:overload @:public public function new(bank : Int, program : Int, percussion : Bool) : Void;
 	
-	@:overload public function isPercussion() : Bool;
+	@:overload @:public public function isPercussion() : Bool;
 	
 	
 }

@@ -31,9 +31,9 @@ package com.sun.corba.se.impl.util;
 */
 @:internal extern class IdentityHashtableEnumerator implements java.util.Enumeration<Dynamic>
 {
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
 	
 }

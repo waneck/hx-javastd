@@ -29,17 +29,17 @@ package com.sun.java.util.jar.pack;
 */
 @:internal extern class ClassReader
 {
-	@:overload public function setAttrDefs(attrDefs : java.util.Map<com.sun.java.util.jar.pack.Attribute.Attribute_Layout, com.sun.java.util.jar.pack.Attribute>) : Void;
+	@:overload @:public public function setAttrDefs(attrDefs : java.util.Map<com.sun.java.util.jar.pack.Attribute.Attribute_Layout, com.sun.java.util.jar.pack.Attribute>) : Void;
 	
-	@:overload public function setAttrCommands(attrCommands : java.util.Map<com.sun.java.util.jar.pack.Attribute.Attribute_Layout, String>) : Void;
+	@:overload @:public public function setAttrCommands(attrCommands : java.util.Map<com.sun.java.util.jar.pack.Attribute.Attribute_Layout, String>) : Void;
 	
 	
 }
 @:native('com$sun$java$util$jar$pack$ClassReader$ClassFormatException') @:internal extern class ClassReader_ClassFormatException extends java.io.IOException
 {
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	
 }

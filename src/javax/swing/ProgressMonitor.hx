@@ -74,7 +74,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @see JDialog
 	* @see JOptionPane
 	*/
-	@:overload public function new(parentComponent : java.awt.Component, message : Dynamic, note : String, min : Int, max : Int) : Void;
+	@:overload @:public public function new(parentComponent : java.awt.Component, message : Dynamic, note : String, min : Int, max : Int) : Void;
 	
 	/**
 	* Indicate the progress of the operation being monitored.
@@ -86,14 +86,14 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @see #setMaximum
 	* @see #close
 	*/
-	@:overload public function setProgress(nv : Int) : Void;
+	@:overload @:public public function setProgress(nv : Int) : Void;
 	
 	/**
 	* Indicate that the operation is complete.  This happens automatically
 	* when the value set by setProgress is >= max, but it may be called
 	* earlier if the operation ends early.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Returns the minimum value -- the lower end of the progress value.
@@ -101,7 +101,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return an int representing the minimum value
 	* @see #setMinimum
 	*/
-	@:overload public function getMinimum() : Int;
+	@:overload @:public public function getMinimum() : Int;
 	
 	/**
 	* Specifies the minimum value.
@@ -109,7 +109,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @param m  an int specifying the minimum value
 	* @see #getMinimum
 	*/
-	@:overload public function setMinimum(m : Int) : Void;
+	@:overload @:public public function setMinimum(m : Int) : Void;
 	
 	/**
 	* Returns the maximum value -- the higher end of the progress value.
@@ -117,7 +117,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return an int representing the maximum value
 	* @see #setMaximum
 	*/
-	@:overload public function getMaximum() : Int;
+	@:overload @:public public function getMaximum() : Int;
 	
 	/**
 	* Specifies the maximum value.
@@ -125,12 +125,12 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @param m  an int specifying the maximum value
 	* @see #getMaximum
 	*/
-	@:overload public function setMaximum(m : Int) : Void;
+	@:overload @:public public function setMaximum(m : Int) : Void;
 	
 	/**
 	* Returns true if the user hits the Cancel button in the progress dialog.
 	*/
-	@:overload public function isCanceled() : Bool;
+	@:overload @:public public function isCanceled() : Bool;
 	
 	/**
 	* Specifies the amount of time to wait before deciding whether or
@@ -140,7 +140,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	*        in milliseconds
 	* @see #getMillisToDecideToPopup
 	*/
-	@:overload public function setMillisToDecideToPopup(millisToDecideToPopup : Int) : Void;
+	@:overload @:public public function setMillisToDecideToPopup(millisToDecideToPopup : Int) : Void;
 	
 	/**
 	* Returns the amount of time this object waits before deciding whether
@@ -148,7 +148,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	*
 	* @see #setMillisToDecideToPopup
 	*/
-	@:overload public function getMillisToDecideToPopup() : Int;
+	@:overload @:public public function getMillisToDecideToPopup() : Int;
 	
 	/**
 	* Specifies the amount of time it will take for the popup to appear.
@@ -158,14 +158,14 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @param millisToPopup  an int specifying the time in milliseconds
 	* @see #getMillisToPopup
 	*/
-	@:overload public function setMillisToPopup(millisToPopup : Int) : Void;
+	@:overload @:public public function setMillisToPopup(millisToPopup : Int) : Void;
 	
 	/**
 	* Returns the amount of time it will take for the popup to appear.
 	*
 	* @see #setMillisToPopup
 	*/
-	@:overload public function getMillisToPopup() : Int;
+	@:overload @:public public function getMillisToPopup() : Int;
 	
 	/**
 	* Specifies the additional note that is displayed along with the
@@ -175,7 +175,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @param note  a String specifying the note to display
 	* @see #getNote
 	*/
-	@:overload public function setNote(note : String) : Void;
+	@:overload @:public public function setNote(note : String) : Void;
 	
 	/**
 	* Specifies the additional note that is displayed along with the
@@ -184,13 +184,13 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return a String specifying the note to display
 	* @see #setNote
 	*/
-	@:overload public function getNote() : String;
+	@:overload @:public public function getNote() : String;
 	
 	/**
 	* The <code>AccessibleContext</code> for the <code>ProgressMonitor</code>
 	* @since 1.5
 	*/
-	@:require(java5) private var accessibleContext : javax.accessibility.AccessibleContext;
+	@:require(java5) @:protected private var accessibleContext : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> for the
@@ -200,15 +200,15 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* <code>ProgressMonitor</code>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java5) @:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
 @:native('javax$swing$ProgressMonitor$ProgressOptionPane') @:internal extern class ProgressMonitor_ProgressOptionPane extends javax.swing.JOptionPane
 {
-	@:overload override public function getMaxCharactersPerLineCount() : Int;
+	@:overload @:public override public function getMaxCharactersPerLineCount() : Int;
 	
-	@:overload override public function createDialog(parentComponent : java.awt.Component, title : String) : javax.swing.JDialog;
+	@:overload @:public override public function createDialog(parentComponent : java.awt.Component, title : String) : javax.swing.JDialog;
 	
 	/**
 	* Gets the AccessibleContext for the ProgressOptionPane
@@ -216,7 +216,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return the AccessibleContext for the ProgressOptionPane
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java5) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -230,7 +230,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	/**
 	* AccessibleProgressMonitor constructor
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Invoked when the target of the listener has changed its state.
@@ -238,7 +238,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @param e  a <code>ChangeEvent</code> object. Must not be null.
 	* @throws NullPointerException if the parameter is null.
 	*/
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	/**
 	* This method gets called when a bound property is changed.
@@ -247,7 +247,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* the event source and the property that has changed. Must not be null.
 	* @throws NullPointerException if the parameter is null.
 	*/
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* Gets the accessibleName property of this object.  The accessibleName
@@ -264,7 +264,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Gets the accessibleDescription property of this object.  The
@@ -278,7 +278,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	*
 	* @see #setAccessibleDescription
 	*/
-	@:overload public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
 	/**
 	* Gets the role of this object.  The role of the object is the generic
@@ -298,7 +298,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the state set of this object.  The AccessibleStateSet of an object
@@ -312,7 +312,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @see AccessibleState
 	* @see #addPropertyChangeListener
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the Accessible parent of this object.
@@ -320,7 +320,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return the Accessible parent of this object; null if this
 	* object does not have an Accessible parent
 	*/
-	@:overload public function getAccessibleParent() : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleParent() : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the 0-based index of this object in its accessible parent.
@@ -332,14 +332,14 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @see #getAccessibleChildrenCount
 	* @see #getAccessibleChild
 	*/
-	@:overload public function getAccessibleIndexInParent() : Int;
+	@:overload @:public override public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Returns the number of accessible children of the object.
 	*
 	* @return the number of accessible children of the object.
 	*/
-	@:overload public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the specified Accessible child of the object.  The Accessible
@@ -351,7 +351,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return the Accessible child of the object
 	* @see #getAccessibleChildrenCount
 	*/
-	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the locale of the component. If the component does not have a
@@ -365,7 +365,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* added to a containment hierarchy such that the locale can be
 	* determined from the containing parent.
 	*/
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public override public function getLocale() : java.util.Locale;
 	
 	/**
 	* Gets the AccessibleComponent associated with this object that has a
@@ -374,7 +374,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return AccessibleComponent if supported by object; else return null
 	* @see AccessibleComponent
 	*/
-	@:overload public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
+	@:overload @:public override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
 	
 	/**
 	* Gets the AccessibleValue associated with this object that supports a
@@ -383,7 +383,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return AccessibleValue if supported by object; else return null
 	* @see AccessibleValue
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Gets the AccessibleText associated with this object presenting
@@ -392,7 +392,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return AccessibleText if supported by object; else return null
 	* @see AccessibleText
 	*/
-	@:overload public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload @:public override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Given a point in local coordinates, return the zero-based index
@@ -403,7 +403,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return the zero-based index of the character under Point p; if
 	* Point is invalid return -1.
 	*/
-	@:overload public function getIndexAtPoint(p : java.awt.Point) : Int;
+	@:overload @:public public function getIndexAtPoint(p : java.awt.Point) : Int;
 	
 	/**
 	* Determines the bounding box of the character at the given
@@ -414,14 +414,14 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return the screen coordinates of the character's bounding box,
 	* if index is invalid return an empty rectangle.
 	*/
-	@:overload public function getCharacterBounds(i : Int) : java.awt.Rectangle;
+	@:overload @:public public function getCharacterBounds(i : Int) : java.awt.Rectangle;
 	
 	/**
 	* Returns the number of characters (valid indicies)
 	*
 	* @return the number of characters
 	*/
-	@:overload public function getCharCount() : Int;
+	@:overload @:public public function getCharCount() : Int;
 	
 	/**
 	* Returns the zero-based offset of the caret.
@@ -430,7 +430,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* value as the offset (the caret is between two characters).
 	* @return the zero-based offset of the caret.
 	*/
-	@:overload public function getCaretPosition() : Int;
+	@:overload @:public public function getCaretPosition() : Int;
 	
 	/**
 	* Returns the String at a given index.
@@ -439,7 +439,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @param index an index within the text
 	* @return the letter, word, or sentence
 	*/
-	@:overload public function getAtIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getAtIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the String after a given index.
@@ -448,7 +448,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @param index an index within the text
 	* @return the letter, word, or sentence
 	*/
-	@:overload public function getAfterIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getAfterIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the String before a given index.
@@ -457,7 +457,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @param index an index within the text
 	* @return the letter, word, or sentence
 	*/
-	@:overload public function getBeforeIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getBeforeIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the AttributeSet for a given character at a given index
@@ -465,7 +465,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @param i the zero-based index into the text
 	* @return the AttributeSet of the character
 	*/
-	@:overload public function getCharacterAttribute(i : Int) : javax.swing.text.AttributeSet;
+	@:overload @:public public function getCharacterAttribute(i : Int) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Returns the start offset within the selected text.
@@ -474,7 +474,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	*
 	* @return the index into the text of the start of the selection
 	*/
-	@:overload public function getSelectionStart() : Int;
+	@:overload @:public public function getSelectionStart() : Int;
 	
 	/**
 	* Returns the end offset within the selected text.
@@ -483,14 +483,14 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	*
 	* @return the index into teh text of the end of the selection
 	*/
-	@:overload public function getSelectionEnd() : Int;
+	@:overload @:public public function getSelectionEnd() : Int;
 	
 	/**
 	* Returns the portion of the text that is selected.
 	*
 	* @return the String portion of the text that is selected
 	*/
-	@:overload public function getSelectedText() : String;
+	@:overload @:public public function getSelectedText() : String;
 	
 	
 }

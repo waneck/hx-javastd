@@ -39,7 +39,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	/**
 	* The name of this builder.
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
 	/**
 	* Construct a new ConstructorBuilder.
@@ -48,17 +48,17 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param classDoc the class whoses members are being documented.
 	* @param writer the doclet specific writer.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc, writer : com.sun.tools.doclets.internal.toolkit.ConstructorWriter) : com.sun.tools.doclets.internal.toolkit.builders.ConstructorBuilder;
+	@:overload @:public @:static public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc, writer : com.sun.tools.doclets.internal.toolkit.ConstructorWriter) : com.sun.tools.doclets.internal.toolkit.builders.ConstructorBuilder;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function hasMembersToDocument() : Bool;
+	@:overload @:public override public function hasMembersToDocument() : Bool;
 	
 	/**
 	* Returns a list of constructors that will be documented for the given class.
@@ -67,14 +67,14 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	*
 	* @return a list of constructors that will be documented.
 	*/
-	@:overload public function members(classDoc : com.sun.javadoc.ClassDoc) : java.util.List<com.sun.javadoc.ProgramElementDoc>;
+	@:overload @:public public function members(classDoc : com.sun.javadoc.ClassDoc) : java.util.List<com.sun.javadoc.ProgramElementDoc>;
 	
 	/**
 	* Return the constructor writer for this builder.
 	*
 	* @return the constructor writer for this builder.
 	*/
-	@:overload public function getWriter() : com.sun.tools.doclets.internal.toolkit.ConstructorWriter;
+	@:overload @:public public function getWriter() : com.sun.tools.doclets.internal.toolkit.ConstructorWriter;
 	
 	/**
 	* Build the constructor documentation.
@@ -82,7 +82,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param memberDetailsTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildConstructorDoc(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildConstructorDoc(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the signature.
@@ -90,7 +90,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param constructorDocTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildSignature(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, constructorDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildSignature(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, constructorDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the deprecation information.
@@ -98,7 +98,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param constructorDocTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildDeprecationInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, constructorDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildDeprecationInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, constructorDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the comments for the constructor.  Do nothing if
@@ -107,7 +107,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param constructorDocTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildConstructorComments(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, constructorDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildConstructorComments(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, constructorDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the tag information.
@@ -115,7 +115,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param constructorDocTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildTagInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, constructorDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildTagInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, constructorDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }

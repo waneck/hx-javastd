@@ -34,7 +34,7 @@ extern class KeyTab
 	* @return the keytab instance
 	* @throws NullPointerException if the {@code file} argument is null
 	*/
-	@:overload public static function getInstance(file : java.io.File) : javax.security.auth.kerberos.KeyTab;
+	@:overload @:public @:static public static function getInstance(file : java.io.File) : javax.security.auth.kerberos.KeyTab;
 	
 	/**
 	* Returns the default {@code KeyTab} instance.
@@ -44,7 +44,7 @@ extern class KeyTab
 	* does not read it.
 	* @return the default keytab instance.
 	*/
-	@:overload public static function getInstance() : javax.security.auth.kerberos.KeyTab;
+	@:overload @:public @:static public static function getInstance() : javax.security.auth.kerberos.KeyTab;
 	
 	/**
 	* Returns fresh keys for the given Kerberos principal.
@@ -84,7 +84,7 @@ extern class KeyTab
 	* @throws SecurityException if a security manager exists and the read
 	* access to the keytab file is not permitted
 	*/
-	@:overload public function getKeys(principal : javax.security.auth.kerberos.KerberosPrincipal) : java.NativeArray<javax.security.auth.kerberos.KerberosKey>;
+	@:overload @:public public function getKeys(principal : javax.security.auth.kerberos.KerberosPrincipal) : java.NativeArray<javax.security.auth.kerberos.KerberosKey>;
 	
 	/**
 	* Checks if the keytab file exists. Implementation of this method
@@ -97,16 +97,16 @@ extern class KeyTab
 	* @throws SecurityException if a security manager exists and the read
 	* access to the keytab file is not permitted
 	*/
-	@:overload public function exists() : Bool;
+	@:overload @:public public function exists() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hashcode for this KeyTab.
 	*
 	* @return a hashCode() for the <code>KeyTab</code>
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares the specified Object with this KeyTab for equality.
@@ -117,7 +117,7 @@ extern class KeyTab
 	* @param other the Object to compare to
 	* @return true if the specified object is equal to this KeyTab
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	
 }

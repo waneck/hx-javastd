@@ -31,77 +31,77 @@ package com.sun.corba.se.impl.corba;
 */
 extern class RequestImpl extends org.omg.CORBA.Request
 {
-	private var _target : org.omg.CORBA.Object;
+	@:protected private var _target : org.omg.CORBA.Object;
 	
-	private var _opName : String;
+	@:protected private var _opName : String;
 	
-	private var _arguments : org.omg.CORBA.NVList;
+	@:protected private var _arguments : org.omg.CORBA.NVList;
 	
-	private var _exceptions : org.omg.CORBA.ExceptionList;
+	@:protected private var _exceptions : org.omg.CORBA.ExceptionList;
 	
-	private var _env : org.omg.CORBA.Environment;
+	@:protected private var _env : org.omg.CORBA.Environment;
 	
-	private var _orb : com.sun.corba.se.spi.orb.ORB;
+	@:protected private var _orb : com.sun.corba.se.spi.orb.ORB;
 	
-	private var _isOneWay : Bool;
+	@:protected private var _isOneWay : Bool;
 	
-	private var gotResponse : Bool;
+	@:protected private var gotResponse : Bool;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, targetObject : org.omg.CORBA.Object, ctx : org.omg.CORBA.Context, operationName : String, argumentList : org.omg.CORBA.NVList, resultContainer : org.omg.CORBA.NamedValue, exceptionList : org.omg.CORBA.ExceptionList, ctxList : org.omg.CORBA.ContextList) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, targetObject : org.omg.CORBA.Object, ctx : org.omg.CORBA.Context, operationName : String, argumentList : org.omg.CORBA.NVList, resultContainer : org.omg.CORBA.NamedValue, exceptionList : org.omg.CORBA.ExceptionList, ctxList : org.omg.CORBA.ContextList) : Void;
 	
-	@:overload override public function target() : org.omg.CORBA.Object;
+	@:overload @:public override public function target() : org.omg.CORBA.Object;
 	
-	@:overload override public function operation() : String;
+	@:overload @:public override public function operation() : String;
 	
-	@:overload override public function arguments() : org.omg.CORBA.NVList;
+	@:overload @:public override public function arguments() : org.omg.CORBA.NVList;
 	
-	@:overload override public function result() : org.omg.CORBA.NamedValue;
+	@:overload @:public override public function result() : org.omg.CORBA.NamedValue;
 	
-	@:overload override public function env() : org.omg.CORBA.Environment;
+	@:overload @:public override public function env() : org.omg.CORBA.Environment;
 	
-	@:overload override public function exceptions() : org.omg.CORBA.ExceptionList;
+	@:overload @:public override public function exceptions() : org.omg.CORBA.ExceptionList;
 	
-	@:overload override public function contexts() : org.omg.CORBA.ContextList;
+	@:overload @:public override public function contexts() : org.omg.CORBA.ContextList;
 	
-	@:overload @:synchronized override public function ctx() : org.omg.CORBA.Context;
+	@:overload @:public @:synchronized override public function ctx() : org.omg.CORBA.Context;
 	
-	@:overload @:synchronized override public function ctx(newCtx : org.omg.CORBA.Context) : Void;
+	@:overload @:public @:synchronized override public function ctx(newCtx : org.omg.CORBA.Context) : Void;
 	
-	@:overload @:synchronized override public function add_in_arg() : org.omg.CORBA.Any;
+	@:overload @:public @:synchronized override public function add_in_arg() : org.omg.CORBA.Any;
 	
-	@:overload @:synchronized override public function add_named_in_arg(name : String) : org.omg.CORBA.Any;
+	@:overload @:public @:synchronized override public function add_named_in_arg(name : String) : org.omg.CORBA.Any;
 	
-	@:overload @:synchronized override public function add_inout_arg() : org.omg.CORBA.Any;
+	@:overload @:public @:synchronized override public function add_inout_arg() : org.omg.CORBA.Any;
 	
-	@:overload @:synchronized override public function add_named_inout_arg(name : String) : org.omg.CORBA.Any;
+	@:overload @:public @:synchronized override public function add_named_inout_arg(name : String) : org.omg.CORBA.Any;
 	
-	@:overload @:synchronized override public function add_out_arg() : org.omg.CORBA.Any;
+	@:overload @:public @:synchronized override public function add_out_arg() : org.omg.CORBA.Any;
 	
-	@:overload @:synchronized override public function add_named_out_arg(name : String) : org.omg.CORBA.Any;
+	@:overload @:public @:synchronized override public function add_named_out_arg(name : String) : org.omg.CORBA.Any;
 	
-	@:overload @:synchronized override public function set_return_type(tc : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:public @:synchronized override public function set_return_type(tc : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload @:synchronized override public function return_value() : org.omg.CORBA.Any;
+	@:overload @:public @:synchronized override public function return_value() : org.omg.CORBA.Any;
 	
-	@:overload @:synchronized public function add_exception(exceptionType : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:public @:synchronized public function add_exception(exceptionType : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload @:synchronized override public function invoke() : Void;
+	@:overload @:public @:synchronized override public function invoke() : Void;
 	
-	@:overload @:synchronized override public function send_oneway() : Void;
+	@:overload @:public @:synchronized override public function send_oneway() : Void;
 	
-	@:overload @:synchronized override public function send_deferred() : Void;
+	@:overload @:public @:synchronized override public function send_deferred() : Void;
 	
-	@:overload @:synchronized override public function poll_response() : Bool;
+	@:overload @:public @:synchronized override public function poll_response() : Bool;
 	
-	@:overload @:synchronized override public function get_response() : Void;
+	@:overload @:public @:synchronized override public function get_response() : Void;
 	
 	/*
 	* The doInvocation operation is where the real mechanics of
 	* performing the request invocation is done.
 	*/
-	@:overload private function doInvocation() : Void;
+	@:overload @:protected private function doInvocation() : Void;
 	
-	@:overload public function unmarshalReply(is : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function unmarshalReply(is : org.omg.CORBA.portable.InputStream) : Void;
 	
 	
 }

@@ -42,93 +42,93 @@ package com.sun.net.ssl;
 }
 @:internal extern class SSLContextSpiWrapper extends com.sun.net.ssl.SSLContextSpi
 {
-	@:overload private function engineInit(kma : java.NativeArray<com.sun.net.ssl.KeyManager>, tma : java.NativeArray<com.sun.net.ssl.TrustManager>, sr : java.security.SecureRandom) : Void;
+	@:overload @:protected private function engineInit(kma : java.NativeArray<com.sun.net.ssl.KeyManager>, tma : java.NativeArray<com.sun.net.ssl.TrustManager>, sr : java.security.SecureRandom) : Void;
 	
-	@:overload private function engineGetSocketFactory() : javax.net.ssl.SSLSocketFactory;
+	@:overload @:protected override private function engineGetSocketFactory() : javax.net.ssl.SSLSocketFactory;
 	
-	@:overload private function engineGetServerSocketFactory() : javax.net.ssl.SSLServerSocketFactory;
+	@:overload @:protected override private function engineGetServerSocketFactory() : javax.net.ssl.SSLServerSocketFactory;
 	
 	
 }
 @:internal extern class TrustManagerFactorySpiWrapper extends com.sun.net.ssl.TrustManagerFactorySpi
 {
-	@:overload override private function engineInit(ks : java.security.KeyStore) : Void;
+	@:overload @:protected override private function engineInit(ks : java.security.KeyStore) : Void;
 	
-	@:overload override private function engineGetTrustManagers() : java.NativeArray<com.sun.net.ssl.TrustManager>;
+	@:overload @:protected override private function engineGetTrustManagers() : java.NativeArray<com.sun.net.ssl.TrustManager>;
 	
 	
 }
 @:internal extern class KeyManagerFactorySpiWrapper extends com.sun.net.ssl.KeyManagerFactorySpi
 {
-	@:overload override private function engineInit(ks : java.security.KeyStore, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:protected override private function engineInit(ks : java.security.KeyStore, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
-	@:overload override private function engineGetKeyManagers() : java.NativeArray<com.sun.net.ssl.KeyManager>;
+	@:overload @:protected override private function engineGetKeyManagers() : java.NativeArray<com.sun.net.ssl.KeyManager>;
 	
 	
 }
 @:internal extern class X509KeyManagerJavaxWrapper implements javax.net.ssl.X509KeyManager
 {
-	@:overload public function getClientAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
+	@:overload @:public public function getClientAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
 	
-	@:overload public function chooseClientAlias(keyTypes : java.NativeArray<String>, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
-	
-	/*
-	* JSSE 1.0.x was only socket based, but it's possible someone might
-	* want to install a really old provider.  We should at least
-	* try to be nice.
-	*/
-	@:overload public function chooseEngineClientAlias(keyTypes : java.NativeArray<String>, issuers : java.NativeArray<java.security.Principal>, engine : javax.net.ssl.SSLEngine) : String;
-	
-	@:overload public function getServerAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
-	
-	@:overload public function chooseServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
+	@:overload @:public public function chooseClientAlias(keyTypes : java.NativeArray<String>, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
 	
 	/*
 	* JSSE 1.0.x was only socket based, but it's possible someone might
 	* want to install a really old provider.  We should at least
 	* try to be nice.
 	*/
-	@:overload public function chooseEngineServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>, engine : javax.net.ssl.SSLEngine) : String;
+	@:overload @:public public function chooseEngineClientAlias(keyTypes : java.NativeArray<String>, issuers : java.NativeArray<java.security.Principal>, engine : javax.net.ssl.SSLEngine) : String;
 	
-	@:overload public function getCertificateChain(alias : String) : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public public function getServerAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
 	
-	@:overload public function getPrivateKey(alias : String) : java.security.PrivateKey;
+	@:overload @:public public function chooseServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
+	
+	/*
+	* JSSE 1.0.x was only socket based, but it's possible someone might
+	* want to install a really old provider.  We should at least
+	* try to be nice.
+	*/
+	@:overload @:public public function chooseEngineServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>, engine : javax.net.ssl.SSLEngine) : String;
+	
+	@:overload @:public public function getCertificateChain(alias : String) : java.NativeArray<java.security.cert.X509Certificate>;
+	
+	@:overload @:public public function getPrivateKey(alias : String) : java.security.PrivateKey;
 	
 	
 }
 @:internal extern class X509TrustManagerJavaxWrapper implements javax.net.ssl.X509TrustManager
 {
-	@:overload public function checkClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String) : Void;
+	@:overload @:public public function checkClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String) : Void;
 	
-	@:overload public function checkServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String) : Void;
+	@:overload @:public public function checkServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String) : Void;
 	
-	@:overload public function getAcceptedIssuers() : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public public function getAcceptedIssuers() : java.NativeArray<java.security.cert.X509Certificate>;
 	
 	
 }
 @:internal extern class X509KeyManagerComSunWrapper implements com.sun.net.ssl.X509KeyManager
 {
-	@:overload public function getClientAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
+	@:overload @:public public function getClientAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
 	
-	@:overload public function chooseClientAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>) : String;
+	@:overload @:public public function chooseClientAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>) : String;
 	
-	@:overload public function getServerAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
+	@:overload @:public public function getServerAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
 	
-	@:overload public function chooseServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>) : String;
+	@:overload @:public public function chooseServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>) : String;
 	
-	@:overload public function getCertificateChain(alias : String) : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public public function getCertificateChain(alias : String) : java.NativeArray<java.security.cert.X509Certificate>;
 	
-	@:overload public function getPrivateKey(alias : String) : java.security.PrivateKey;
+	@:overload @:public public function getPrivateKey(alias : String) : java.security.PrivateKey;
 	
 	
 }
 @:internal extern class X509TrustManagerComSunWrapper implements com.sun.net.ssl.X509TrustManager
 {
-	@:overload public function isClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>) : Bool;
+	@:overload @:public public function isClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>) : Bool;
 	
-	@:overload public function isServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>) : Bool;
+	@:overload @:public public function isServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>) : Bool;
 	
-	@:overload public function getAcceptedIssuers() : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public public function getAcceptedIssuers() : java.NativeArray<java.security.cert.X509Certificate>;
 	
 	
 }

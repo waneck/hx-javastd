@@ -27,24 +27,24 @@ extern class CatalogManager
 	* <p>This field is public so that objects that have access to this
 	* CatalogManager can use this debug object.</p>
 	*/
-	public var debug : com.sun.org.apache.xml.internal.resolver.helpers.Debug;
+	@:public public var debug : com.sun.org.apache.xml.internal.resolver.helpers.Debug;
 	
 	/** Constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Constructor that specifies an explicit property file. */
-	@:overload public function new(propertyFile : String) : Void;
+	@:overload @:public public function new(propertyFile : String) : Void;
 	
 	/** Set the bootstrap resolver.*/
-	@:overload public function setBootstrapResolver(resolver : com.sun.org.apache.xml.internal.resolver.helpers.BootstrapResolver) : Void;
+	@:overload @:public public function setBootstrapResolver(resolver : com.sun.org.apache.xml.internal.resolver.helpers.BootstrapResolver) : Void;
 	
 	/** Get the bootstrap resolver.*/
-	@:overload public function getBootstrapResolver() : com.sun.org.apache.xml.internal.resolver.helpers.BootstrapResolver;
+	@:overload @:public public function getBootstrapResolver() : com.sun.org.apache.xml.internal.resolver.helpers.BootstrapResolver;
 	
 	/**
 	* Allow access to the static CatalogManager
 	*/
-	@:overload public static function getStaticManager() : com.sun.org.apache.xml.internal.resolver.CatalogManager;
+	@:overload @:public @:static public static function getStaticManager() : com.sun.org.apache.xml.internal.resolver.CatalogManager;
 	
 	/**
 	* How are missing properties handled?
@@ -53,7 +53,7 @@ extern class CatalogManager
 	* not be reported. Otherwise, a message will be sent to System.err.
 	* </p>
 	*/
-	@:overload public function getIgnoreMissingProperties() : Bool;
+	@:overload @:public public function getIgnoreMissingProperties() : Bool;
 	
 	/**
 	* How should missing properties be handled?
@@ -62,7 +62,7 @@ extern class CatalogManager
 	* not be reported. Otherwise, a message will be sent to System.err.
 	* </p>
 	*/
-	@:overload public function setIgnoreMissingProperties(ignore : Bool) : Void;
+	@:overload @:public public function setIgnoreMissingProperties(ignore : Bool) : Void;
 	
 	/**
 	* How are missing properties handled?
@@ -73,24 +73,24 @@ extern class CatalogManager
 	*
 	* @deprecated No longer static; use get/set methods.
 	*/
-	@:overload public function ignoreMissingProperties(ignore : Bool) : Void;
+	@:overload @:public public function ignoreMissingProperties(ignore : Bool) : Void;
 	
 	/**
 	* What is the current verbosity?
 	*/
-	@:overload public function getVerbosity() : Int;
+	@:overload @:public public function getVerbosity() : Int;
 	
 	/**
 	* Set the current verbosity.
 	*/
-	@:overload public function setVerbosity(verbosity : Int) : Void;
+	@:overload @:public public function setVerbosity(verbosity : Int) : Void;
 	
 	/**
 	* What is the current verbosity?
 	*
 	* @deprecated No longer static; use get/set methods.
 	*/
-	@:overload public function verbosity() : Int;
+	@:overload @:public public function verbosity() : Int;
 	
 	/**
 	* Get the relativeCatalogs setting.
@@ -112,21 +112,21 @@ extern class CatalogManager
 	* @return The relativeCatalogs setting from the propertyFile or the
 	* defaultRelativeCatalogs.
 	*/
-	@:overload public function getRelativeCatalogs() : Bool;
+	@:overload @:public public function getRelativeCatalogs() : Bool;
 	
 	/**
 	* Set the relativeCatalogs setting.
 	*
 	* @see #getRelativeCatalogs()
 	*/
-	@:overload public function setRelativeCatalogs(relative : Bool) : Void;
+	@:overload @:public public function setRelativeCatalogs(relative : Bool) : Void;
 	
 	/**
 	* Get the relativeCatalogs setting.
 	*
 	* @deprecated No longer static; use get/set methods.
 	*/
-	@:overload public function relativeCatalogs() : Bool;
+	@:overload @:public public function relativeCatalogs() : Bool;
 	
 	/**
 	* Return the current list of catalog files.
@@ -134,12 +134,12 @@ extern class CatalogManager
 	* @return A vector of the catalog file names or null if no catalogs
 	* are available in the properties.
 	*/
-	@:overload public function getCatalogFiles() : java.util.Vector<Dynamic>;
+	@:overload @:public public function getCatalogFiles() : java.util.Vector<Dynamic>;
 	
 	/**
 	* Set the list of catalog files.
 	*/
-	@:overload public function setCatalogFiles(fileList : String) : Void;
+	@:overload @:public public function setCatalogFiles(fileList : String) : Void;
 	
 	/**
 	* Return the current list of catalog files.
@@ -149,19 +149,19 @@ extern class CatalogManager
 	*
 	* @deprecated No longer static; use get/set methods.
 	*/
-	@:overload public function catalogFiles() : java.util.Vector<Dynamic>;
+	@:overload @:public public function catalogFiles() : java.util.Vector<Dynamic>;
 	
 	/**
 	* Return the current prefer public setting.
 	*
 	* @return True if public identifiers are preferred.
 	*/
-	@:overload public function getPreferPublic() : Bool;
+	@:overload @:public public function getPreferPublic() : Bool;
 	
 	/**
 	* Set the prefer public setting.
 	*/
-	@:overload public function setPreferPublic(preferPublic : Bool) : Void;
+	@:overload @:public public function setPreferPublic(preferPublic : Bool) : Void;
 	
 	/**
 	* Return the current prefer public setting.
@@ -170,31 +170,31 @@ extern class CatalogManager
 	*
 	* @deprecated No longer static; use get/set methods.
 	*/
-	@:overload public function preferPublic() : Bool;
+	@:overload @:public public function preferPublic() : Bool;
 	
 	/**
 	* Get the current use static catalog setting.
 	*/
-	@:overload public function getUseStaticCatalog() : Bool;
+	@:overload @:public public function getUseStaticCatalog() : Bool;
 	
 	/**
 	* Set the use static catalog setting.
 	*/
-	@:overload public function setUseStaticCatalog(useStatic : Bool) : Void;
+	@:overload @:public public function setUseStaticCatalog(useStatic : Bool) : Void;
 	
 	/**
 	* Get the current use static catalog setting.
 	*
 	* @deprecated No longer static; use get/set methods.
 	*/
-	@:overload public function staticCatalog() : Bool;
+	@:overload @:public public function staticCatalog() : Bool;
 	
 	/**
 	* Get a new catalog instance.
 	*
 	* This method always returns a new instance of the underlying catalog class.
 	*/
-	@:overload public function getPrivateCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
+	@:overload @:public public function getPrivateCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
 	
 	/**
 	* Get a catalog instance.
@@ -202,7 +202,7 @@ extern class CatalogManager
 	* If this manager uses static catalogs, the same static catalog will
 	* always be returned. Otherwise a new catalog will be returned.
 	*/
-	@:overload public function getCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
+	@:overload @:public public function getCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
 	
 	/**
 	* <p>Obtain the oasisXMLCatalogPI setting from the properties.</p>
@@ -213,49 +213,49 @@ extern class CatalogManager
 	* @return The oasisXMLCatalogPI setting from the propertyFile or the
 	* defaultOasisXMLCatalogPI.
 	*/
-	@:overload public function queryAllowOasisXMLCatalogPI() : Bool;
+	@:overload @:public public function queryAllowOasisXMLCatalogPI() : Bool;
 	
 	/**
 	* Get the current XML Catalog PI setting.
 	*/
-	@:overload public function getAllowOasisXMLCatalogPI() : Bool;
+	@:overload @:public public function getAllowOasisXMLCatalogPI() : Bool;
 	
-	@:overload public function useServicesMechanism() : Bool;
+	@:overload @:public public function useServicesMechanism() : Bool;
 	
 	/**
 	* Set the XML Catalog PI setting
 	*/
-	@:overload public function setAllowOasisXMLCatalogPI(allowPI : Bool) : Void;
+	@:overload @:public public function setAllowOasisXMLCatalogPI(allowPI : Bool) : Void;
 	
 	/**
 	* Get the current XML Catalog PI setting.
 	*
 	* @deprecated No longer static; use get/set methods.
 	*/
-	@:overload public function allowOasisXMLCatalogPI() : Bool;
+	@:overload @:public public function allowOasisXMLCatalogPI() : Bool;
 	
 	/**
 	* Obtain the Catalog class name setting from the properties.
 	*
 	*/
-	@:overload public function queryCatalogClassName() : String;
+	@:overload @:public public function queryCatalogClassName() : String;
 	
 	/**
 	* Get the current Catalog class name.
 	*/
-	@:overload public function getCatalogClassName() : String;
+	@:overload @:public public function getCatalogClassName() : String;
 	
 	/**
 	* Set the Catalog class name.
 	*/
-	@:overload public function setCatalogClassName(className : String) : Void;
+	@:overload @:public public function setCatalogClassName(className : String) : Void;
 	
 	/**
 	* Get the current Catalog class name.
 	*
 	* @deprecated No longer static; use get/set methods.
 	*/
-	@:overload public function catalogClassName() : String;
+	@:overload @:public public function catalogClassName() : String;
 	
 	
 }

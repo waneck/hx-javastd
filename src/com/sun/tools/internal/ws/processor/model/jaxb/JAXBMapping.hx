@@ -28,21 +28,21 @@ extern class JAXBMapping
 	/**
 	* Default constructor for the persistence.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* @see Mapping#getElement()
 	*/
-	@:overload public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function setElementName(elementName : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setElementName(elementName : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getType() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBTypeAndAnnotation;
+	@:overload @:public public function getType() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBTypeAndAnnotation;
 	
 	/**
 	* @see Mapping#getWrapperStyleDrilldown()
 	*/
-	@:overload public function getWrapperStyleDrilldown() : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.JAXBProperty>;
+	@:overload @:public public function getWrapperStyleDrilldown() : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.JAXBProperty>;
 	
 	
 }

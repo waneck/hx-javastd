@@ -29,21 +29,21 @@ extern class SheetDialog
 }
 @:native('sun$tools$jconsole$SheetDialog$SlideAndFadeGlassPane') @:internal extern class SheetDialog_SlideAndFadeGlassPane extends javax.swing.JPanel
 {
-	@:overload public function show(optionPane : sun.tools.jconsole.SheetDialog.SheetDialog_SheetOptionPane) : Void;
+	@:overload @:public public function show(optionPane : sun.tools.jconsole.SheetDialog.SheetDialog_SheetOptionPane) : Void;
 	
-	@:overload public function hide(optionPane : sun.tools.jconsole.SheetDialog.SheetDialog_SheetOptionPane) : Void;
+	@:overload @:public public function hide(optionPane : sun.tools.jconsole.SheetDialog.SheetDialog_SheetOptionPane) : Void;
 	
-	@:overload public function setGrayLevel(gray : Int) : Void;
+	@:overload @:public public function setGrayLevel(gray : Int) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$SheetDialog$SheetOptionPane') @:internal extern class SheetDialog_SheetOptionPane extends javax.swing.JOptionPane
 {
-	@:overload public function setVisible(visible : Bool) : Void;
+	@:overload @:public override public function setVisible(visible : Bool) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	
 }

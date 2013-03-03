@@ -54,7 +54,7 @@ package javax.sound.sampled;
 	* <code>LineEvent</code> methods to obtain information about the event.
 	* @param event a line event that describes the change
 	*/
-	@:overload public function update(event : javax.sound.sampled.LineEvent) : Void;
+	@:overload @:public public function update(event : javax.sound.sampled.LineEvent) : Void;
 	
 	
 }

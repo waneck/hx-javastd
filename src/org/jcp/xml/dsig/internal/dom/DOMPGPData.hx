@@ -44,7 +44,7 @@ extern class DOMPGPData extends org.jcp.xml.dsig.internal.dom.DOMStructure imple
 	* @throws ClassCastException if <code>other</code> contains any
 	*    entries that are not of type {@link XMLStructure}
 	*/
-	@:overload public function new(keyPacket : java.NativeArray<java.StdTypes.Int8>, other : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function new(keyPacket : java.NativeArray<java.StdTypes.Int8>, other : java.util.List<Dynamic>) : Void;
 	
 	/**
 	* Creates a <code>DOMPGPData</code> containing the specified key id and
@@ -66,22 +66,22 @@ extern class DOMPGPData extends org.jcp.xml.dsig.internal.dom.DOMStructure imple
 	* @throws ClassCastException if <code>other</code> contains any
 	*    entries that are not of type {@link XMLStructure}
 	*/
-	@:overload public function new(keyId : java.NativeArray<java.StdTypes.Int8>, keyPacket : java.NativeArray<java.StdTypes.Int8>, other : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function new(keyId : java.NativeArray<java.StdTypes.Int8>, keyPacket : java.NativeArray<java.StdTypes.Int8>, other : java.util.List<Dynamic>) : Void;
 	
 	/**
 	* Creates a <code>DOMPGPData</code> from an element.
 	*
 	* @param pdElem a PGPData element
 	*/
-	@:overload public function new(pdElem : org.w3c.dom.Element) : Void;
+	@:overload @:public public function new(pdElem : org.w3c.dom.Element) : Void;
 	
-	@:overload public function getKeyId() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getKeyId() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getKeyPacket() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getKeyPacket() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getExternalElements() : java.util.List<Dynamic>;
+	@:overload @:public public function getExternalElements() : java.util.List<Dynamic>;
 	
-	@:overload override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
 	
 }

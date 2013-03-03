@@ -32,7 +32,7 @@ extern class ECFieldF2m implements java.security.spec.ECField
 	* @exception IllegalArgumentException if <code>m</code>
 	* is not positive.
 	*/
-	@:overload public function new(m : Int) : Void;
+	@:overload @:public public function new(m : Int) : Void;
 	
 	/**
 	* Creates an elliptic curve characteristic 2 finite
@@ -56,7 +56,7 @@ extern class ECFieldF2m implements java.security.spec.ECField
 	* is not positive, or <code>rp</code> does not represent
 	* a valid reduction polynomial.
 	*/
-	@:overload public function new(m : Int, rp : java.math.BigInteger) : Void;
+	@:overload @:public public function new(m : Int, rp : java.math.BigInteger) : Void;
 	
 	/**
 	* Creates an elliptic curve characteristic 2 finite
@@ -84,14 +84,14 @@ extern class ECFieldF2m implements java.security.spec.ECField
 	* are not between <code>m</code>-1 and 1 (inclusive)
 	* and in descending order.
 	*/
-	@:overload public function new(m : Int, ks : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(m : Int, ks : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Returns the field size in bits which is <code>m</code>
 	* for this characteristic 2 finite field.
 	* @return the field size in bits.
 	*/
-	@:overload public function getFieldSize() : Int;
+	@:overload @:public public function getFieldSize() : Int;
 	
 	/**
 	* Returns the value <code>m</code> of this characteristic
@@ -99,7 +99,7 @@ extern class ECFieldF2m implements java.security.spec.ECField
 	* @return <code>m</code> with 2^<code>m</code> being the
 	* number of elements.
 	*/
-	@:overload public function getM() : Int;
+	@:overload @:public public function getM() : Int;
 	
 	/**
 	* Returns a BigInteger whose i-th bit corresponds to the
@@ -109,7 +109,7 @@ extern class ECFieldF2m implements java.security.spec.ECField
 	* i-th coefficient of the reduction polynomial for polynomial
 	* basis or null for normal basis.
 	*/
-	@:overload public function getReductionPolynomial() : java.math.BigInteger;
+	@:overload @:public public function getReductionPolynomial() : java.math.BigInteger;
 	
 	/**
 	* Returns an integer array which contains the order of the
@@ -120,7 +120,7 @@ extern class ECFieldF2m implements java.security.spec.ECField
 	* basis or null for normal basis. A new array is returned
 	* each time this method is called.
 	*/
-	@:overload public function getMidTermsOfReductionPolynomial() : java.NativeArray<Int>;
+	@:overload @:public public function getMidTermsOfReductionPolynomial() : java.NativeArray<Int>;
 	
 	/**
 	* Compares this finite field for equality with the
@@ -130,14 +130,14 @@ extern class ECFieldF2m implements java.security.spec.ECField
 	* of ECFieldF2m and both <code>m</code> and the reduction
 	* polynomial match, false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for this characteristic 2
 	* finite field.
 	* @return a hash code value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

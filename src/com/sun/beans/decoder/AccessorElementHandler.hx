@@ -48,21 +48,21 @@ package com.sun.beans.decoder;
 	* @param name   the attribute name
 	* @param value  the attribute value
 	*/
-	@:overload override public function addAttribute(name : String, value : String) : Void;
+	@:overload @:public override public function addAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Adds the argument that is used to set the value of this element.
 	*
 	* @param argument  the value of the element that contained in this one
 	*/
-	@:overload @:final override private function addArgument(argument : Dynamic) : Void;
+	@:overload @:protected @:final override private function addArgument(argument : Dynamic) : Void;
 	
 	/**
 	* Returns the value of this element.
 	*
 	* @return the value of this element
 	*/
-	@:overload @:final override private function getValueObject() : com.sun.beans.decoder.ValueObject;
+	@:overload @:protected @:final override private function getValueObject() : com.sun.beans.decoder.ValueObject;
 	
 	/**
 	* Returns the value of the entity with specified {@code name}.
@@ -70,7 +70,7 @@ package com.sun.beans.decoder;
 	* @param name  the name of the accessible entity
 	* @return the value of the specified entity
 	*/
-	@:overload @:abstract private function getValue(name : String) : Dynamic;
+	@:overload @:protected @:abstract private function getValue(name : String) : Dynamic;
 	
 	/**
 	* Sets the new value for the entity with specified {@code name}.
@@ -78,7 +78,7 @@ package com.sun.beans.decoder;
 	* @param name   the name of the accessible entity
 	* @param value  the new value for the specified entity
 	*/
-	@:overload @:abstract private function setValue(name : String, value : Dynamic) : Void;
+	@:overload @:protected @:abstract private function setValue(name : String, value : Dynamic) : Void;
 	
 	
 }

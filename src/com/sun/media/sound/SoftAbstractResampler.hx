@@ -25,11 +25,11 @@ package com.sun.media.sound;
 */
 extern class SoftAbstractResampler implements com.sun.media.sound.SoftResampler
 {
-	@:overload @:abstract public function getPadding() : Int;
+	@:overload @:public @:abstract public function getPadding() : Int;
 	
-	@:overload @:abstract public function interpolate(_in : java.NativeArray<Single>, in_offset : java.NativeArray<Single>, in_end : Single, pitch : java.NativeArray<Single>, pitchstep : Single, out : java.NativeArray<Single>, out_offset : java.NativeArray<Int>, out_end : Int) : Void;
+	@:overload @:public @:abstract public function interpolate(_in : java.NativeArray<Single>, in_offset : java.NativeArray<Single>, in_end : Single, pitch : java.NativeArray<Single>, pitchstep : Single, out : java.NativeArray<Single>, out_offset : java.NativeArray<Int>, out_end : Int) : Void;
 	
-	@:overload public function openStreamer() : com.sun.media.sound.SoftResamplerStreamer;
+	@:overload @:public public function openStreamer() : com.sun.media.sound.SoftResamplerStreamer;
 	
 	
 }
@@ -40,23 +40,23 @@ extern class SoftAbstractResampler implements com.sun.media.sound.SoftResampler
 */
 @:native('com$sun$media$sound$SoftAbstractResampler$ModelAbstractResamplerStream') @:internal extern class SoftAbstractResampler_ModelAbstractResamplerStream implements com.sun.media.sound.SoftResamplerStreamer
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function noteOn(channel : javax.sound.midi.MidiChannel, voice : javax.sound.midi.VoiceStatus, noteNumber : Int, velocity : Int) : Void;
+	@:overload @:public public function noteOn(channel : javax.sound.midi.MidiChannel, voice : javax.sound.midi.VoiceStatus, noteNumber : Int, velocity : Int) : Void;
 	
-	@:overload public function noteOff(velocity : Int) : Void;
+	@:overload @:public public function noteOff(velocity : Int) : Void;
 	
-	@:overload public function open(osc : com.sun.media.sound.ModelWavetable, outputsamplerate : Single) : Void;
+	@:overload @:public public function open(osc : com.sun.media.sound.ModelWavetable, outputsamplerate : Single) : Void;
 	
-	@:overload public function setPitch(pitch : Single) : Void;
+	@:overload @:public public function setPitch(pitch : Single) : Void;
 	
-	@:overload public function nextBuffer() : Void;
+	@:overload @:public public function nextBuffer() : Void;
 	
-	@:overload public function reverseBuffers() : Void;
+	@:overload @:public public function reverseBuffers() : Void;
 	
-	@:overload public function read(buffer : java.NativeArray<java.NativeArray<Single>>, offset : Int, len : Int) : Int;
+	@:overload @:public public function read(buffer : java.NativeArray<java.NativeArray<Single>>, offset : Int, len : Int) : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

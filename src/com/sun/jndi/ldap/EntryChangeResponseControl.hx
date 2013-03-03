@@ -54,27 +54,27 @@ extern class EntryChangeResponseControl extends com.sun.jndi.ldap.BasicControl
 	* The entry-change response control's assigned object identifier
 	* is 2.16.840.1.113730.3.4.7.
 	*/
-	public static var OID(default, null) : String;
+	@:public @:static @:final public static var OID(default, null) : String;
 	
 	/**
 	* Indicates an entry which has been added.
 	*/
-	public static var ADD(default, null) : Int;
+	@:public @:static @:final public static var ADD(default, null) : Int;
 	
 	/**
 	* Indicates an entry which has been deleted.
 	*/
-	public static var DELETE(default, null) : Int;
+	@:public @:static @:final public static var DELETE(default, null) : Int;
 	
 	/**
 	* Indicates an entry which has been modified.
 	*/
-	public static var MODIFY(default, null) : Int;
+	@:public @:static @:final public static var MODIFY(default, null) : Int;
 	
 	/**
 	* Indicates an entry which has been renamed.
 	*/
-	public static var RENAME(default, null) : Int;
+	@:public @:static @:final public static var RENAME(default, null) : Int;
 	
 	/**
 	* Constructs a new instance of EntryChangeResponseControl.
@@ -86,14 +86,14 @@ extern class EntryChangeResponseControl extends com.sun.jndi.ldap.BasicControl
 	* @exception               IOException if an error is encountered
 	*                          while decoding the control's value.
 	*/
-	@:overload public function new(id : String, criticality : Bool, value : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(id : String, criticality : Bool, value : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Retrieves the type of change that occurred.
 	*
 	* @return    The type of change.
 	*/
-	@:overload public function getChangeType() : Int;
+	@:overload @:public public function getChangeType() : Int;
 	
 	/**
 	* Retrieves the previous distinguished name of the entry before it was
@@ -101,7 +101,7 @@ extern class EntryChangeResponseControl extends com.sun.jndi.ldap.BasicControl
 	*
 	* @return    The previous distinguished name or null if not applicable.
 	*/
-	@:overload public function getPreviousDN() : String;
+	@:overload @:public public function getPreviousDN() : String;
 	
 	/**
 	* Retrieves the change number assigned by the server for this change.
@@ -109,7 +109,7 @@ extern class EntryChangeResponseControl extends com.sun.jndi.ldap.BasicControl
 	*
 	* @return    The change number or -1 if unsupported.
 	*/
-	@:overload public function getChangeNumber() : haxe.Int64;
+	@:overload @:public public function getChangeNumber() : haxe.Int64;
 	
 	
 }

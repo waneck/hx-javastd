@@ -33,7 +33,7 @@ extern class InvalidTargetObjectTypeException extends java.lang.Exception
 	/**
 	* Default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor from a string.
@@ -41,7 +41,7 @@ extern class InvalidTargetObjectTypeException extends java.lang.Exception
 	* @param s String value that will be incorporated in the message for
 	*    this exception.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructor taking an exception and a string.
@@ -53,7 +53,7 @@ extern class InvalidTargetObjectTypeException extends java.lang.Exception
 	* @param s String value that will be incorporated in message for
 	*    this exception.
 	*/
-	@:overload public function new(e : java.lang.Exception, s : String) : Void;
+	@:overload @:public public function new(e : java.lang.Exception, s : String) : Void;
 	
 	
 }

@@ -48,7 +48,7 @@ extern interface StyleSheet
 	* the <code>LINK</code> element in HTML 4.0, and the type
 	* pseudo-attribute for the XML style sheet processing instruction.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	*  <code>false</code> if the style sheet is applied to the document.
@@ -58,7 +58,7 @@ extern interface StyleSheet
 	* attribute is false. So, if the media doesn't apply to the current
 	* user agent, the <code>disabled</code> attribute is ignored.
 	*/
-	@:overload public function getDisabled() : Bool;
+	@:overload @:public public function getDisabled() : Bool;
 	
 	/**
 	*  <code>false</code> if the style sheet is applied to the document.
@@ -68,7 +68,7 @@ extern interface StyleSheet
 	* attribute is false. So, if the media doesn't apply to the current
 	* user agent, the <code>disabled</code> attribute is ignored.
 	*/
-	@:overload public function setDisabled(disabled : Bool) : Void;
+	@:overload @:public public function setDisabled(disabled : Bool) : Void;
 	
 	/**
 	*  The node that associates this style sheet with the document. For HTML,
@@ -77,7 +77,7 @@ extern interface StyleSheet
 	* style sheets that are included by other style sheets, the value of
 	* this attribute is <code>null</code>.
 	*/
-	@:overload public function getOwnerNode() : org.w3c.dom.Node;
+	@:overload @:public public function getOwnerNode() : org.w3c.dom.Node;
 	
 	/**
 	*  For style sheet languages that support the concept of style sheet
@@ -86,7 +86,7 @@ extern interface StyleSheet
 	* style sheet language does not support inclusion, the value of this
 	* attribute is <code>null</code>.
 	*/
-	@:overload public function getParentStyleSheet() : org.w3c.dom.stylesheets.StyleSheet;
+	@:overload @:public public function getParentStyleSheet() : org.w3c.dom.stylesheets.StyleSheet;
 	
 	/**
 	*  If the style sheet is a linked style sheet, the value of its attribute
@@ -95,7 +95,7 @@ extern interface StyleSheet
 	* <code>LINK</code> element in HTML 4.0, and the href pseudo-attribute
 	* for the XML style sheet processing instruction.
 	*/
-	@:overload public function getHref() : String;
+	@:overload @:public public function getHref() : String;
 	
 	/**
 	*  The advisory title. The title is often specified in the
@@ -103,7 +103,7 @@ extern interface StyleSheet
 	* <code>LINK</code> element in HTML 4.0, and the title pseudo-attribute
 	* for the XML style sheet processing instruction.
 	*/
-	@:overload public function getTitle() : String;
+	@:overload @:public public function getTitle() : String;
 	
 	/**
 	*  The intended destination media for style information. The media is
@@ -114,7 +114,7 @@ extern interface StyleSheet
 	* instruction . Modifying the media list may cause a change to the
 	* attribute <code>disabled</code>.
 	*/
-	@:overload public function getMedia() : org.w3c.dom.stylesheets.MediaList;
+	@:overload @:public public function getMedia() : org.w3c.dom.stylesheets.MediaList;
 	
 	
 }

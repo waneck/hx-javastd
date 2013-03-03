@@ -29,7 +29,7 @@ package java.security;
 	* Create an empty UnresolvedPermissionCollection object.
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Adds a permission to this UnresolvedPermissionCollection.
@@ -37,13 +37,13 @@ package java.security;
 	*
 	* @param permission the Permission object to add.
 	*/
-	@:overload override public function add(permission : java.security.Permission) : Void;
+	@:overload @:public override public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* always returns false for unresolved permissions
 	*
 	*/
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Returns an enumeration of all the UnresolvedPermission lists in the
@@ -51,7 +51,7 @@ package java.security;
 	*
 	* @return an enumeration of all the UnresolvedPermission objects.
 	*/
-	@:overload override public function elements() : java.util.Enumeration<java.security.Permission>;
+	@:overload @:public override public function elements() : java.util.Enumeration<java.security.Permission>;
 	
 	
 }

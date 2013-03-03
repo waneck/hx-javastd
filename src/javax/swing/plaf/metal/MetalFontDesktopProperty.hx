@@ -34,12 +34,12 @@ package javax.swing.plaf.metal;
 	* Overriden to create a Font with the size coming from the desktop
 	* and the style and name coming from DefaultMetalTheme.
 	*/
-	@:overload private function configureValue(value : Dynamic) : Dynamic;
+	@:overload @:protected override private function configureValue(value : Dynamic) : Dynamic;
 	
 	/**
 	* Returns the default font.
 	*/
-	@:overload private function getDefaultValue() : Dynamic;
+	@:overload @:protected override private function getDefaultValue() : Dynamic;
 	
 	
 }

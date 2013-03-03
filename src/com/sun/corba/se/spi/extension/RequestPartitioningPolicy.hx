@@ -25,19 +25,19 @@ package com.sun.corba.se.spi.extension;
 */
 extern class RequestPartitioningPolicy extends org.omg.CORBA.LocalObject implements org.omg.CORBA.Policy
 {
-	public static var DEFAULT_VALUE(default, null) : Int;
+	@:public @:final @:static public static var DEFAULT_VALUE(default, null) : Int;
 	
-	@:overload public function new(value : Int) : Void;
+	@:overload @:public public function new(value : Int) : Void;
 	
-	@:overload public function getValue() : Int;
+	@:overload @:public public function getValue() : Int;
 	
-	@:overload public function policy_type() : Int;
+	@:overload @:public public function policy_type() : Int;
 	
-	@:overload public function copy() : org.omg.CORBA.Policy;
+	@:overload @:public public function copy() : org.omg.CORBA.Policy;
 	
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

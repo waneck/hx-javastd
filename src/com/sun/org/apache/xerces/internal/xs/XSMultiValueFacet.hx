@@ -27,17 +27,17 @@ extern interface XSMultiValueFacet extends com.sun.org.apache.xerces.internal.xs
 	* The name of the facet, i.e. <code>FACET_ENUMERATION</code> and
 	* <code>FACET_PATTERN</code> (see <code>XSSimpleTypeDefinition</code>).
 	*/
-	@:overload public function getFacetKind() : java.StdTypes.Int16;
+	@:overload @:public public function getFacetKind() : java.StdTypes.Int16;
 	
 	/**
 	* Values of this facet.
 	*/
-	@:overload public function getLexicalFacetValues() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getLexicalFacetValues() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
 	/**
 	* A sequence of [annotations] or an empty <code>XSObjectList</code>.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	
 }

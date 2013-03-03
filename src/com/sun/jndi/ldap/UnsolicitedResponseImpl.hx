@@ -31,7 +31,7 @@ package com.sun.jndi.ldap;
 	* @return A possibly null object identifier string representing the LDAP
 	*         <tt>ExtendedResponse.responseName</tt> component.
 	*/
-	@:overload public function getID() : String;
+	@:overload @:public public function getID() : String;
 	
 	/**
 	* Retrieves the ASN.1 BER encoded value of the LDAP extended operation
@@ -44,7 +44,7 @@ package com.sun.jndi.ldap;
 	*         contents of the LDAP <tt>ExtendedResponse.response</tt>
 	*         component.
 	*/
-	@:overload public function getEncodedValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncodedValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the referral(s) sent by the server.
@@ -52,7 +52,7 @@ package com.sun.jndi.ldap;
 	* @return A possibly null array of referrals, each of which is represented
 	* by a URL string. If null, no referral was sent by the server.
 	*/
-	@:overload public function getReferrals() : java.NativeArray<String>;
+	@:overload @:public public function getReferrals() : java.NativeArray<String>;
 	
 	/**
 	* Retrieves the exception as constructed using information
@@ -61,9 +61,9 @@ package com.sun.jndi.ldap;
 	* sent by the server. If null, a "success" status was indicated by
 	* the server.
 	*/
-	@:overload public function getException() : javax.naming.NamingException;
+	@:overload @:public public function getException() : javax.naming.NamingException;
 	
-	@:overload public function getControls() : java.NativeArray<javax.naming.ldap.Control>;
+	@:overload @:public public function getControls() : java.NativeArray<javax.naming.ldap.Control>;
 	
 	
 }

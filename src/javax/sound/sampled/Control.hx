@@ -45,19 +45,19 @@ package javax.sound.sampled;
 	* Constructs a Control with the specified type.
 	* @param type the kind of control desired
 	*/
-	@:overload private function new(type : javax.sound.sampled.Control.Control_Type) : Void;
+	@:overload @:protected private function new(type : javax.sound.sampled.Control.Control_Type) : Void;
 	
 	/**
 	* Obtains the control's type.
 	* @return the control's type.
 	*/
-	@:overload public function getType() : javax.sound.sampled.Control.Control_Type;
+	@:overload @:public public function getType() : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Obtains a String describing the control type and its current state.
 	* @return a String representation of the Control.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -74,17 +74,17 @@ package javax.sound.sampled;
 	* labelling the control in an application, such as "Gain" or "Balance."
 	* @param name  the name of the new control type.
 	*/
-	@:overload private function new(name : String) : Void;
+	@:overload @:protected private function new(name : String) : Void;
 	
 	/**
 	* Finalizes the equals method
 	*/
-	@:overload @:final public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Finalizes the hashCode method
 	*/
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
 	/**
 	* Provides the <code>String</code> representation of the control type.  This <code>String</code> is
@@ -92,7 +92,7 @@ package javax.sound.sampled;
 	*
 	* @return the control type name
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	
 }

@@ -29,97 +29,97 @@ extern class CompositeType
 	* algorithm is a general algorithm that uses a CompositeContext
 	* to do the rendering.
 	*/
-	public static var DESC_ANY(default, null) : String;
+	@:public @:static @:final public static var DESC_ANY(default, null) : String;
 	
 	/**
 	* constant used to describe the Graphics.setXORMode() algorithm
 	*/
-	public static var DESC_XOR(default, null) : String;
+	@:public @:static @:final public static var DESC_XOR(default, null) : String;
 	
 	/**
 	* constants used to describe the various AlphaComposite
 	* algorithms.
 	*/
-	public static var DESC_CLEAR(default, null) : String;
+	@:public @:static @:final public static var DESC_CLEAR(default, null) : String;
 	
-	public static var DESC_SRC(default, null) : String;
+	@:public @:static @:final public static var DESC_SRC(default, null) : String;
 	
-	public static var DESC_DST(default, null) : String;
+	@:public @:static @:final public static var DESC_DST(default, null) : String;
 	
-	public static var DESC_SRC_OVER(default, null) : String;
+	@:public @:static @:final public static var DESC_SRC_OVER(default, null) : String;
 	
-	public static var DESC_DST_OVER(default, null) : String;
+	@:public @:static @:final public static var DESC_DST_OVER(default, null) : String;
 	
-	public static var DESC_SRC_IN(default, null) : String;
+	@:public @:static @:final public static var DESC_SRC_IN(default, null) : String;
 	
-	public static var DESC_DST_IN(default, null) : String;
+	@:public @:static @:final public static var DESC_DST_IN(default, null) : String;
 	
-	public static var DESC_SRC_OUT(default, null) : String;
+	@:public @:static @:final public static var DESC_SRC_OUT(default, null) : String;
 	
-	public static var DESC_DST_OUT(default, null) : String;
+	@:public @:static @:final public static var DESC_DST_OUT(default, null) : String;
 	
-	public static var DESC_SRC_ATOP(default, null) : String;
+	@:public @:static @:final public static var DESC_SRC_ATOP(default, null) : String;
 	
-	public static var DESC_DST_ATOP(default, null) : String;
+	@:public @:static @:final public static var DESC_DST_ATOP(default, null) : String;
 	
-	public static var DESC_ALPHA_XOR(default, null) : String;
+	@:public @:static @:final public static var DESC_ALPHA_XOR(default, null) : String;
 	
 	/**
 	* constants used to describe the two common cases of
 	* AlphaComposite algorithms that are simpler if there
 	* is not extraAlpha.
 	*/
-	public static var DESC_SRC_NO_EA(default, null) : String;
+	@:public @:static @:final public static var DESC_SRC_NO_EA(default, null) : String;
 	
-	public static var DESC_SRC_OVER_NO_EA(default, null) : String;
+	@:public @:static @:final public static var DESC_SRC_OVER_NO_EA(default, null) : String;
 	
 	/**
 	* constant used to describe an algorithm that implements all 8 of
 	* the Porter-Duff rules in one Primitive.
 	*/
-	public static var DESC_ANY_ALPHA(default, null) : String;
+	@:public @:static @:final public static var DESC_ANY_ALPHA(default, null) : String;
 	
 	/**
 	* The root CompositeType object for all chains of algorithm descriptions.
 	*/
-	public static var Any(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var Any(default, null) : sun.java2d.loops.CompositeType;
 	
 	/*
 	* START OF CompositeeType OBJECTS FOR THE VARIOUS CONSTANTS
 	*/
-	public static var General(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var General(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var AnyAlpha(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var AnyAlpha(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var Xor(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var Xor(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var Clear(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var Clear(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var Src(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var Src(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var Dst(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var Dst(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var SrcOver(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var SrcOver(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var DstOver(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var DstOver(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var SrcIn(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var SrcIn(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var DstIn(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var DstIn(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var SrcOut(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var SrcOut(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var DstOut(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var DstOut(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var SrcAtop(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var SrcAtop(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var DstAtop(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var DstAtop(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var AlphaXor(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var AlphaXor(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var SrcNoEa(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var SrcNoEa(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var SrcOverNoEa(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var SrcOverNoEa(default, null) : sun.java2d.loops.CompositeType;
 	
 	/*
 	* A special CompositeType for the case where we are filling in
@@ -133,7 +133,7 @@ extern class CompositeType
 	* in the following order:
 	*    SrcNoEa, Src, SrcOverNoEa, SrcOver, AnyAlpha
 	*/
-	public static var OpaqueSrcOverNoEa(default, null) : sun.java2d.loops.CompositeType;
+	@:public @:static @:final public static var OpaqueSrcOverNoEa(default, null) : sun.java2d.loops.CompositeType;
 	
 	/**
 	* Return a new CompositeType object which uses this object as its
@@ -142,29 +142,29 @@ extern class CompositeType
 	* by desc, then this object will define the more general
 	* compositing algorithm that can be used instead.
 	*/
-	@:overload public function deriveSubType(desc : String) : sun.java2d.loops.CompositeType;
+	@:overload @:public public function deriveSubType(desc : String) : sun.java2d.loops.CompositeType;
 	
 	/**
 	* Return a CompositeType object for the specified AlphaComposite
 	* rule.
 	*/
-	@:overload public static function forAlphaComposite(ac : java.awt.AlphaComposite) : sun.java2d.loops.CompositeType;
+	@:overload @:public @:static public static function forAlphaComposite(ac : java.awt.AlphaComposite) : sun.java2d.loops.CompositeType;
 	
-	@:overload @:synchronized @:final public static function makeUniqueID(desc : String) : Int;
+	@:overload @:public @:synchronized @:static @:final public static function makeUniqueID(desc : String) : Int;
 	
-	@:overload public function getUniqueID() : Int;
+	@:overload @:public public function getUniqueID() : Int;
 	
-	@:overload public function getDescriptor() : String;
+	@:overload @:public public function getDescriptor() : String;
 	
-	@:overload public function getSuperType() : sun.java2d.loops.CompositeType;
+	@:overload @:public public function getSuperType() : sun.java2d.loops.CompositeType;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function isDerivedFrom(other : sun.java2d.loops.CompositeType) : Bool;
+	@:overload @:public public function isDerivedFrom(other : sun.java2d.loops.CompositeType) : Bool;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -25,35 +25,35 @@ package com.sun.corba.se.spi.presentation.rmi;
 */
 extern class StubAdapter
 {
-	@:overload public static function isStubClass(cls : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function isStubClass(cls : Class<Dynamic>) : Bool;
 	
-	@:overload public static function isStub(stub : Dynamic) : Bool;
+	@:overload @:public @:static public static function isStub(stub : Dynamic) : Bool;
 	
-	@:overload public static function setDelegate(stub : Dynamic, delegate : org.omg.CORBA.portable.Delegate) : Void;
+	@:overload @:public @:static public static function setDelegate(stub : Dynamic, delegate : org.omg.CORBA.portable.Delegate) : Void;
 	
 	/** Use implicit activation to get an object reference for the servant.
 	*/
-	@:overload public static function activateServant(servant : org.omg.PortableServer.Servant) : org.omg.CORBA.Object;
+	@:overload @:public @:static public static function activateServant(servant : org.omg.PortableServer.Servant) : org.omg.CORBA.Object;
 	
 	/** Given any Tie, return the corresponding object refernce, activating
 	* the Servant if necessary.
 	*/
-	@:overload public static function activateTie(tie : javax.rmi.CORBA.Tie) : org.omg.CORBA.Object;
+	@:overload @:public @:static public static function activateTie(tie : javax.rmi.CORBA.Tie) : org.omg.CORBA.Object;
 	
 	/** This also gets the delegate from a Servant by
 	* using Servant._this_object()
 	*/
-	@:overload public static function getDelegate(stub : Dynamic) : org.omg.CORBA.portable.Delegate;
+	@:overload @:public @:static public static function getDelegate(stub : Dynamic) : org.omg.CORBA.portable.Delegate;
 	
-	@:overload public static function getORB(stub : Dynamic) : org.omg.CORBA.ORB;
+	@:overload @:public @:static public static function getORB(stub : Dynamic) : org.omg.CORBA.ORB;
 	
-	@:overload public static function getTypeIds(stub : Dynamic) : java.NativeArray<String>;
+	@:overload @:public @:static public static function getTypeIds(stub : Dynamic) : java.NativeArray<String>;
 	
-	@:overload public static function connect(stub : Dynamic, orb : org.omg.CORBA.ORB) : Void;
+	@:overload @:public @:static public static function connect(stub : Dynamic, orb : org.omg.CORBA.ORB) : Void;
 	
-	@:overload public static function isLocal(stub : Dynamic) : Bool;
+	@:overload @:public @:static public static function isLocal(stub : Dynamic) : Bool;
 	
-	@:overload public static function request(stub : Dynamic, operation : String, responseExpected : Bool) : org.omg.CORBA.portable.OutputStream;
+	@:overload @:public @:static public static function request(stub : Dynamic, operation : String, responseExpected : Bool) : org.omg.CORBA.portable.OutputStream;
 	
 	
 }

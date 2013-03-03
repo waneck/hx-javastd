@@ -31,29 +31,29 @@ extern class JPEGImageReader extends javax.imageio.ImageReader
 	* This usually signals that the stream is corrupted, but
 	* everything up to the last MCU should be usable.
 	*/
-	private static var WARNING_NO_EOI(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_NO_EOI(default, null) : Int;
 	
 	/**
 	* Warning code to be passed to warningOccurred to indicate
 	* that a JFIF segment was encountered inside a JFXX JPEG
 	* thumbnail and is being ignored.
 	*/
-	private static var WARNING_NO_JFIF_IN_THUMB(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_NO_JFIF_IN_THUMB(default, null) : Int;
 	
 	/**
 	* Warning code to be passed to warningOccurred to indicate
 	* that embedded ICC profile is invalid and will be ignored.
 	*/
-	private static var WARNING_IGNORE_INVALID_ICC(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_IGNORE_INVALID_ICC(default, null) : Int;
 	
-	@:overload public function new(originator : javax.imageio.spi.ImageReaderSpi) : Void;
+	@:overload @:public public function new(originator : javax.imageio.spi.ImageReaderSpi) : Void;
 	
 	/**
 	* Called by the native code or other classes to signal a warning.
 	* The code is used to lookup a localized message to be used when
 	* sending warnings to listeners.
 	*/
-	@:overload private function warningOccurred(code : Int) : Void;
+	@:overload @:protected private function warningOccurred(code : Int) : Void;
 	
 	/**
 	* The library has it's own error facility that emits warning messages.
@@ -68,81 +68,81 @@ extern class JPEGImageReader extends javax.imageio.ImageReader
 	* that actually occur in the JPEG library.  For now, this prevents
 	* library warnings from being printed to stderr.
 	*/
-	@:overload private function warningWithMessage(msg : String) : Void;
+	@:overload @:protected private function warningWithMessage(msg : String) : Void;
 	
-	@:overload override public function setInput(input : Dynamic, seekForwardOnly : Bool, ignoreMetadata : Bool) : Void;
+	@:overload @:public override public function setInput(input : Dynamic, seekForwardOnly : Bool, ignoreMetadata : Bool) : Void;
 	
-	@:overload override public function getNumImages(allowSearch : Bool) : Int;
+	@:overload @:public override public function getNumImages(allowSearch : Bool) : Int;
 	
-	@:overload override public function getWidth(imageIndex : Int) : Int;
+	@:overload @:public override public function getWidth(imageIndex : Int) : Int;
 	
-	@:overload override public function getHeight(imageIndex : Int) : Int;
+	@:overload @:public override public function getHeight(imageIndex : Int) : Int;
 	
-	@:overload override public function getRawImageType(imageIndex : Int) : javax.imageio.ImageTypeSpecifier;
+	@:overload @:public override public function getRawImageType(imageIndex : Int) : javax.imageio.ImageTypeSpecifier;
 	
-	@:overload override public function getImageTypes(imageIndex : Int) : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function getImageTypes(imageIndex : Int) : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function getDefaultReadParam() : javax.imageio.ImageReadParam;
+	@:overload @:public override public function getDefaultReadParam() : javax.imageio.ImageReadParam;
 	
-	@:overload override public function getStreamMetadata() : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getStreamMetadata() : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function getImageMetadata(imageIndex : Int) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getImageMetadata(imageIndex : Int) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function read(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.BufferedImage;
+	@:overload @:public override public function read(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.BufferedImage;
 	
-	@:overload override public function abort() : Void;
+	@:overload @:public override public function abort() : Void;
 	
-	@:overload override public function canReadRaster() : Bool;
+	@:overload @:public override public function canReadRaster() : Bool;
 	
-	@:overload override public function readRaster(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.Raster;
+	@:overload @:public override public function readRaster(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.Raster;
 	
-	@:overload override public function readerSupportsThumbnails() : Bool;
+	@:overload @:public override public function readerSupportsThumbnails() : Bool;
 	
-	@:overload override public function getNumThumbnails(imageIndex : Int) : Int;
+	@:overload @:public override public function getNumThumbnails(imageIndex : Int) : Int;
 	
-	@:overload override public function getThumbnailWidth(imageIndex : Int, thumbnailIndex : Int) : Int;
+	@:overload @:public override public function getThumbnailWidth(imageIndex : Int, thumbnailIndex : Int) : Int;
 	
-	@:overload override public function getThumbnailHeight(imageIndex : Int, thumbnailIndex : Int) : Int;
+	@:overload @:public override public function getThumbnailHeight(imageIndex : Int, thumbnailIndex : Int) : Int;
 	
-	@:overload override public function readThumbnail(imageIndex : Int, thumbnailIndex : Int) : java.awt.image.BufferedImage;
+	@:overload @:public override public function readThumbnail(imageIndex : Int, thumbnailIndex : Int) : java.awt.image.BufferedImage;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload override public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
 	
 }
 @:native('com$sun$imageio$plugins$jpeg$JPEGImageReader$JPEGReaderDisposerRecord') @:internal extern class JPEGImageReader_JPEGReaderDisposerRecord implements sun.java2d.DisposerRecord
 {
-	@:overload public function new(pData : haxe.Int64) : Void;
+	@:overload @:public public function new(pData : haxe.Int64) : Void;
 	
-	@:overload @:synchronized public function dispose() : Void;
+	@:overload @:public @:synchronized public function dispose() : Void;
 	
 	
 }
 @:internal extern class ImageTypeIterator implements java.util.Iterator<javax.imageio.ImageTypeSpecifier>
 {
-	@:overload public function new(producers : java.util.Iterator<com.sun.imageio.plugins.jpeg.JPEGImageReader.ImageTypeProducer>) : Void;
+	@:overload @:public public function new(producers : java.util.Iterator<com.sun.imageio.plugins.jpeg.JPEGImageReader.ImageTypeProducer>) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : javax.imageio.ImageTypeSpecifier;
+	@:overload @:public public function next() : javax.imageio.ImageTypeSpecifier;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }
 @:internal extern class ImageTypeProducer
 {
-	@:overload public function new(csCode : Int) : Void;
+	@:overload @:public public function new(csCode : Int) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:synchronized public function getType() : javax.imageio.ImageTypeSpecifier;
+	@:overload @:public @:synchronized public function getType() : javax.imageio.ImageTypeSpecifier;
 	
-	@:overload @:synchronized public static function getTypeProducer(csCode : Int) : com.sun.imageio.plugins.jpeg.JPEGImageReader.ImageTypeProducer;
+	@:overload @:public @:synchronized @:static public static function getTypeProducer(csCode : Int) : com.sun.imageio.plugins.jpeg.JPEGImageReader.ImageTypeProducer;
 	
-	@:overload private function produce() : javax.imageio.ImageTypeSpecifier;
+	@:overload @:protected private function produce() : javax.imageio.ImageTypeSpecifier;
 	
 	
 }

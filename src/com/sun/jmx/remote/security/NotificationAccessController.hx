@@ -39,7 +39,7 @@ extern interface NotificationAccessController
 	* authenticated subject does not have the rights to add a listener
 	* to the supplied MBean.
 	*/
-	@:overload public function addNotificationListener(connectionId : String, name : javax.management.ObjectName, subject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function addNotificationListener(connectionId : String, name : javax.management.ObjectName, subject : javax.security.auth.Subject) : Void;
 	
 	/**
 	* This method is called when a remote
@@ -57,7 +57,7 @@ extern interface NotificationAccessController
 	* authenticated subject does not have the rights to remove a listener
 	* from the supplied MBean.
 	*/
-	@:overload public function removeNotificationListener(connectionId : String, name : javax.management.ObjectName, subject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function removeNotificationListener(connectionId : String, name : javax.management.ObjectName, subject : javax.security.auth.Subject) : Void;
 	
 	/**
 	* This method is called before the
@@ -76,7 +76,7 @@ extern interface NotificationAccessController
 	* the supplied authenticated subject does not have the
 	* rights to receive the notification.
 	*/
-	@:overload public function fetchNotification(connectionId : String, name : javax.management.ObjectName, notification : javax.management.Notification, subject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function fetchNotification(connectionId : String, name : javax.management.ObjectName, notification : javax.management.Notification, subject : javax.security.auth.Subject) : Void;
 	
 	
 }

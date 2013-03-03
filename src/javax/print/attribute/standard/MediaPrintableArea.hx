@@ -29,13 +29,13 @@ extern class MediaPrintableArea implements javax.print.attribute.DocAttribute im
 	* Value to indicate units of inches (in). It is actually the conversion
 	* factor by which to multiply inches to yield &#181;m (25400).
 	*/
-	public static var INCH(default, null) : Int;
+	@:public @:static @:final public static var INCH(default, null) : Int;
 	
 	/**
 	* Value to indicate units of millimeters (mm). It is actually the
 	* conversion factor by which to multiply mm to yield &#181;m (1000).
 	*/
-	public static var MM(default, null) : Int;
+	@:public @:static @:final public static var MM(default, null) : Int;
 	
 	/**
 	* Constructs a MediaPrintableArea object from floating point values.
@@ -50,7 +50,7 @@ extern class MediaPrintableArea implements javax.print.attribute.DocAttribute im
 	*     or <CODE>w</CODE> <= 0 or <CODE>h</CODE> <= 0 or
 	*     <CODE>units</CODE> < 1.
 	*/
-	@:overload public function new(x : Single, y : Single, w : Single, h : Single, units : Int) : Void;
+	@:overload @:public public function new(x : Single, y : Single, w : Single, h : Single, units : Int) : Void;
 	
 	/**
 	* Constructs a MediaPrintableArea object from integer values.
@@ -65,7 +65,7 @@ extern class MediaPrintableArea implements javax.print.attribute.DocAttribute im
 	*     or <CODE>w</CODE> <= 0 or <CODE>h</CODE> <= 0 or
 	*     <CODE>units</CODE> < 1.
 	*/
-	@:overload public function new(x : Int, y : Int, w : Int, h : Int, units : Int) : Void;
+	@:overload @:public public function new(x : Int, y : Int, w : Int, h : Int, units : Int) : Void;
 	
 	/**
 	* Get the printable area as an array of 4 values in the order
@@ -79,7 +79,7 @@ extern class MediaPrintableArea implements javax.print.attribute.DocAttribute im
 	* @exception  IllegalArgumentException
 	*     (unchecked exception) Thrown if <CODE>units</CODE> < 1.
 	*/
-	@:overload public function getPrintableArea(units : Int) : java.NativeArray<Single>;
+	@:overload @:public public function getPrintableArea(units : Int) : java.NativeArray<Single>;
 	
 	/**
 	* Get the x location of the origin of the printable area in the
@@ -94,7 +94,7 @@ extern class MediaPrintableArea implements javax.print.attribute.DocAttribute im
 	* @exception  IllegalArgumentException
 	*     (unchecked exception) Thrown if <CODE>units</CODE> < 1.
 	*/
-	@:overload public function getX(units : Int) : Single;
+	@:overload @:public public function getX(units : Int) : Single;
 	
 	/**
 	* Get the y location of the origin of the printable area in the
@@ -109,7 +109,7 @@ extern class MediaPrintableArea implements javax.print.attribute.DocAttribute im
 	* @exception  IllegalArgumentException
 	*     (unchecked exception) Thrown if <CODE>units</CODE> < 1.
 	*/
-	@:overload public function getY(units : Int) : Single;
+	@:overload @:public public function getY(units : Int) : Single;
 	
 	/**
 	* Get the width of the printable area in the specified units.
@@ -122,7 +122,7 @@ extern class MediaPrintableArea implements javax.print.attribute.DocAttribute im
 	* @exception  IllegalArgumentException
 	*     (unchecked exception) Thrown if <CODE>units</CODE> < 1.
 	*/
-	@:overload public function getWidth(units : Int) : Single;
+	@:overload @:public public function getWidth(units : Int) : Single;
 	
 	/**
 	* Get the height of the printable area in the specified units.
@@ -135,7 +135,7 @@ extern class MediaPrintableArea implements javax.print.attribute.DocAttribute im
 	* @exception  IllegalArgumentException
 	*     (unchecked exception) Thrown if <CODE>units</CODE> < 1.
 	*/
-	@:overload public function getHeight(units : Int) : Single;
+	@:overload @:public public function getHeight(units : Int) : Single;
 	
 	/**
 	* Returns whether this media margins attribute is equivalent to the passed
@@ -155,7 +155,7 @@ extern class MediaPrintableArea implements javax.print.attribute.DocAttribute im
 	* @return  True if <CODE>object</CODE> is equivalent to this media margins
 	*          attribute, false otherwise.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -167,7 +167,7 @@ extern class MediaPrintableArea implements javax.print.attribute.DocAttribute im
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -179,7 +179,7 @@ extern class MediaPrintableArea implements javax.print.attribute.DocAttribute im
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	/**
 	* Returns a string version of this rectangular size attribute in the
@@ -197,17 +197,17 @@ extern class MediaPrintableArea implements javax.print.attribute.DocAttribute im
 	* @exception  IllegalArgumentException
 	*     (unchecked exception) Thrown if <CODE>units</CODE> < 1.
 	*/
-	@:overload public function toString(units : Int, unitsName : String) : String;
+	@:overload @:public public function toString(units : Int, unitsName : String) : String;
 	
 	/**
 	* Returns a string version of this rectangular size attribute in mm.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hash code value for this attribute.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

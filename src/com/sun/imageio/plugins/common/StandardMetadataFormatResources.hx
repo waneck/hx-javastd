@@ -25,9 +25,9 @@ package com.sun.imageio.plugins.common;
 */
 extern class StandardMetadataFormatResources extends java.util.ListResourceBundle
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:protected override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

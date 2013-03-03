@@ -28,12 +28,12 @@ extern class DenseIntMapImpl
 	/** If key >= 0, return the value bound to key, or null if none.
 	* Throws IllegalArgumentException if key <0.
 	*/
-	@:overload public function get(key : Int) : Dynamic;
+	@:overload @:public public function get(key : Int) : Dynamic;
 	
 	/** If key >= 0, bind value to the key.
 	* Throws IllegalArgumentException if key <0.
 	*/
-	@:overload public function set(key : Int, value : Dynamic) : Void;
+	@:overload @:public public function set(key : Int, value : Dynamic) : Void;
 	
 	
 }

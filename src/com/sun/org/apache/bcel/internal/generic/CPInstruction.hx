@@ -68,18 +68,18 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class CPInstruction extends com.sun.org.apache.bcel.internal.generic.Instruction implements com.sun.org.apache.bcel.internal.generic.TypedInstruction implements com.sun.org.apache.bcel.internal.generic.IndexedInstruction
 {
-	private var index : Int;
+	@:protected private var index : Int;
 	
 	/**
 	* @param index to constant pool
 	*/
-	@:overload private function new(opcode : java.StdTypes.Int16, index : Int) : Void;
+	@:overload @:protected private function new(opcode : java.StdTypes.Int16, index : Int) : Void;
 	
 	/**
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload @:public override public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* Long output format:
@@ -90,34 +90,34 @@ extern class CPInstruction extends com.sun.org.apache.bcel.internal.generic.Inst
 	* @param verbose long/short format switch
 	* @return mnemonic for instruction
 	*/
-	@:overload public function toString(verbose : Bool) : String;
+	@:overload @:public override public function toString(verbose : Bool) : String;
 	
 	/**
 	* @return mnemonic for instruction with symbolic references resolved
 	*/
-	@:overload public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
+	@:overload @:public override public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
 	
 	/**
 	* Read needed data (i.e., index) from file.
 	* @param bytes input stream
 	* @param wide wide prefix?
 	*/
-	@:overload private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload @:protected override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
 	/**
 	* @return index in constant pool referred by this instruction.
 	*/
-	@:overload @:final public function getIndex() : Int;
+	@:overload @:public @:final public function getIndex() : Int;
 	
 	/**
 	* Set the index to constant pool.
 	* @param index in  constant pool.
 	*/
-	@:overload public function setIndex(index : Int) : Void;
+	@:overload @:public public function setIndex(index : Int) : Void;
 	
 	/** @return type related with this instruction.
 	*/
-	@:overload public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	
 }

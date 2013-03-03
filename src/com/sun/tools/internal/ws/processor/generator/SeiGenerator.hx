@@ -25,11 +25,11 @@ package com.sun.tools.internal.ws.processor.generator;
 */
 extern class SeiGenerator extends com.sun.tools.internal.ws.processor.generator.GeneratorBase
 {
-	@:overload public static function generate(model : com.sun.tools.internal.ws.processor.model.Model, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver, extensions : java.NativeArray<com.sun.tools.internal.ws.api.TJavaGeneratorExtension>) : Void;
+	@:overload @:public @:static public static function generate(model : com.sun.tools.internal.ws.processor.model.Model, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver, extensions : java.NativeArray<com.sun.tools.internal.ws.api.TJavaGeneratorExtension>) : Void;
 	
-	@:overload public function visit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
+	@:overload @:public override public function visit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
 	
-	@:overload public function visit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
+	@:overload @:public override public function visit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
 	
 	
 }

@@ -28,12 +28,12 @@ extern class TimeZoneNameUtility
 	/**
 	* get time zone localized strings. Enumerate all keys.
 	*/
-	@:overload @:final public static function getZoneStrings(locale : java.util.Locale) : java.NativeArray<java.NativeArray<String>>;
+	@:overload @:public @:static @:final public static function getZoneStrings(locale : java.util.Locale) : java.NativeArray<java.NativeArray<String>>;
 	
 	/**
 	* Retrieve display names for a time zone ID.
 	*/
-	@:overload @:final public static function retrieveDisplayNames(id : String, locale : java.util.Locale) : java.NativeArray<String>;
+	@:overload @:public @:static @:final public static function retrieveDisplayNames(id : String, locale : java.util.Locale) : java.NativeArray<String>;
 	
 	
 }
@@ -43,7 +43,7 @@ extern class TimeZoneNameUtility
 */
 @:native('sun$util$TimeZoneNameUtility$TimeZoneNameGetter') @:internal extern class TimeZoneNameUtility_TimeZoneNameGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.util.spi.TimeZoneNameProvider, java.NativeArray<String>>
 {
-	@:overload public function getObject(timeZoneNameProvider : java.util.spi.TimeZoneNameProvider, locale : java.util.Locale, requestID : String, params : java.NativeArray<Dynamic>) : java.NativeArray<String>;
+	@:overload @:public public function getObject(timeZoneNameProvider : java.util.spi.TimeZoneNameProvider, locale : java.util.Locale, requestID : String, params : java.NativeArray<Dynamic>) : java.NativeArray<String>;
 	
 	
 }

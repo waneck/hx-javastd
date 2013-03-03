@@ -38,7 +38,7 @@ extern interface Codec
 	*      null if the MIME type can't be determined by the <code>Codec</code>
 	*      implementation. Otherwise the MIME type is returned.
 	*/
-	@:overload public function getMimeType() : String;
+	@:overload @:public public function getMimeType() : String;
 	
 	/**
 	* If the MIME content-type of the encoding is known statically
@@ -89,7 +89,7 @@ extern interface Codec
 	* TODO: for the convenience of implementation, write
 	* an adapter that wraps {@link WritableByteChannel} to {@link OutputStream}.
 	*/
-	@:overload public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
 	/**
 	* Creates a copy of this {@link Codec}.

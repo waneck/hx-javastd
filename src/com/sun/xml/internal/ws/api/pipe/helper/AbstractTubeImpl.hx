@@ -28,38 +28,58 @@ extern class AbstractTubeImpl implements com.sun.xml.internal.ws.api.pipe.Tube i
 	/**
 	* Default constructor.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Copy constructor.
 	*/
-	@:overload private function new(that : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload @:protected private function new(that : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
-	@:overload @:final private function doInvoke(next : com.sun.xml.internal.ws.api.pipe.Tube, packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:protected @:final private function doInvoke(next : com.sun.xml.internal.ws.api.pipe.Tube, packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload @:final private function doInvokeAndForget(next : com.sun.xml.internal.ws.api.pipe.Tube, packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:protected @:final private function doInvokeAndForget(next : com.sun.xml.internal.ws.api.pipe.Tube, packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload @:final private function doReturnWith(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:protected @:final private function doReturnWith(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload @:final private function doSuspend() : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:protected @:final private function doSuspend() : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload @:final private function doSuspend(next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:protected @:final private function doSuspend(next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload @:final private function doThrow(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:protected @:final private function doThrow(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
 	/**
 	* "Dual stack" compatibility mechanism.
 	* Allows {@link Tube} to be invoked from a {@link Pipe}.
 	*/
-	@:overload public function process(p : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public public function process(p : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	/**
 	* Needs to be implemented by the derived class, but we can't make it abstract
 	* without upsetting javac.
 	*/
-	@:overload @:final public function copy(cloner : com.sun.xml.internal.ws.api.pipe.PipeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl;
+	@:overload @:public @:final public function copy(cloner : com.sun.xml.internal.ws.api.pipe.PipeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl;
 	
-	@:overload @:abstract public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl;
+	@:overload @:public @:abstract public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl;
+	
+	/**
+	* Invoked before the last copy of the pipeline is about to be discarded,
+	* to give {@link Pipe}s a chance to clean up any resources.
+	*
+	* <p>
+	* This can be used to invoke {@link PreDestroy} lifecycle methods
+	* on user handler. The invocation of it is optional on the client side,
+	* but mandatory on the server side.
+	*
+	* <p>
+	* When multiple copies of pipelines are created, this method is called
+	* only on one of them.
+	*
+	* @throws WebServiceException
+	*      If the clean up fails, {@link WebServiceException} can be thrown.
+	*      This exception will be propagated to users (if this is client),
+	*      or recorded (if this is server.)
+	*/
+	@:overload @:public public function preDestroy() : Void;
 	
 	/**
 	* Acts on a request and perform some protocol specific operation.
@@ -117,7 +137,7 @@ extern class AbstractTubeImpl implements com.sun.xml.internal.ws.api.pipe.Tube i
 	*      A {@link NextAction} object that represents the next action
 	*      to be taken by the JAX-WS runtime.
 	*/
-	@:overload public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
 	/**
 	* Acts on a exception and performs some clean up operations.
@@ -149,7 +169,7 @@ extern class AbstractTubeImpl implements com.sun.xml.internal.ws.api.pipe.Tube i
 	*      A {@link NextAction} object that represents the next action
 	*      to be taken by the JAX-WS runtime.
 	*/
-	@:overload public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
 	/**
 	* Acts on a response and performs some protocol specific operation.
@@ -175,7 +195,7 @@ extern class AbstractTubeImpl implements com.sun.xml.internal.ws.api.pipe.Tube i
 	*      A {@link NextAction} object that represents the next action
 	*      to be taken by the JAX-WS runtime.
 	*/
-	@:overload public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class DESedeKeySpec implements java.security.spec.KeySpec
 	/**
 	* The constant which defines the length of a DESede key in bytes.
 	*/
-	public static var DES_EDE_KEY_LEN(default, null) : Int;
+	@:public @:static @:final public static var DES_EDE_KEY_LEN(default, null) : Int;
 	
 	/**
 	* Creates a DESedeKeySpec object using the first 24 bytes in
@@ -45,7 +45,7 @@ extern class DESedeKeySpec implements java.security.spec.KeySpec
 	* @exception InvalidKeyException if the given key material is shorter
 	* than 24 bytes.
 	*/
-	@:overload public function new(key : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(key : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Creates a DESedeKeySpec object using the first 24 bytes in
@@ -65,7 +65,7 @@ extern class DESedeKeySpec implements java.security.spec.KeySpec
 	* @exception InvalidKeyException if the given key material, starting at
 	* <code>offset</code> inclusive, is shorter than 24 bytes
 	*/
-	@:overload public function new(key : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Void;
+	@:overload @:public public function new(key : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Void;
 	
 	/**
 	* Returns the DES-EDE key.
@@ -73,7 +73,7 @@ extern class DESedeKeySpec implements java.security.spec.KeySpec
 	* @return the DES-EDE key. Returns a new array
 	* each time this method is called.
 	*/
-	@:overload public function getKey() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getKey() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Checks if the given DES-EDE key, starting at <code>offset</code>
@@ -88,7 +88,7 @@ extern class DESedeKeySpec implements java.security.spec.KeySpec
 	* @exception InvalidKeyException if the given key material, starting at
 	* <code>offset</code> inclusive, is shorter than 24 bytes
 	*/
-	@:overload public static function isParityAdjusted(key : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Bool;
+	@:overload @:public @:static public static function isParityAdjusted(key : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Bool;
 	
 	
 }

@@ -35,7 +35,7 @@ extern class HexBin
 	* @param binaryData array of byte to encode
 	* @return return encoded string
 	*/
-	@:overload public static function encode(binaryData : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:static @:public public static function encode(binaryData : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	/**
 	* Decode hex string to a byte array
@@ -43,7 +43,7 @@ extern class HexBin
 	* @param encoded encoded string
 	* @return return array of byte to encode
 	*/
-	@:overload public static function decode(encoded : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:static @:public public static function decode(encoded : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

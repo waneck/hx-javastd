@@ -42,7 +42,7 @@ package java.nio.file;
 	* @param   file
 	*          a string identifying the file or {@code null} if not known
 	*/
-	@:overload public function new(file : String) : Void;
+	@:overload @:public public function new(file : String) : Void;
 	
 	/**
 	* Constructs an instance of this class.
@@ -54,7 +54,7 @@ package java.nio.file;
 	* @param   reason
 	*          a reason message with additional information or {@code null}
 	*/
-	@:overload public function new(file : String, other : String, reason : String) : Void;
+	@:overload @:public public function new(file : String, other : String, reason : String) : Void;
 	
 	
 }

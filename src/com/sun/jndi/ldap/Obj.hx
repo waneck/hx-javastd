@@ -32,9 +32,9 @@ package com.sun.jndi.ldap;
 */
 @:native('com$sun$jndi$ldap$Obj$LoaderInputStream') @:internal extern class Obj_LoaderInputStream extends java.io.ObjectInputStream
 {
-	@:overload override private function resolveClass(desc : java.io.ObjectStreamClass) : Class<Dynamic>;
+	@:overload @:protected override private function resolveClass(desc : java.io.ObjectStreamClass) : Class<Dynamic>;
 	
-	@:overload override private function resolveProxyClass(interfaces : java.NativeArray<String>) : Class<Dynamic>;
+	@:overload @:protected override private function resolveProxyClass(interfaces : java.NativeArray<String>) : Class<Dynamic>;
 	
 	
 }

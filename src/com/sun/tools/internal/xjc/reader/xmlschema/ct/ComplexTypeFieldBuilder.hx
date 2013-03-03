@@ -28,7 +28,7 @@ extern class ComplexTypeFieldBuilder extends com.sun.tools.internal.xjc.reader.x
 	/**
 	* Binds a complex type to a field expression.
 	*/
-	@:overload public function build(type : com.sun.xml.internal.xsom.XSComplexType) : Void;
+	@:overload @:public public function build(type : com.sun.xml.internal.xsom.XSComplexType) : Void;
 	
 	/**
 	* Records the binding mode of the given complex type.
@@ -43,13 +43,13 @@ extern class ComplexTypeFieldBuilder extends com.sun.tools.internal.xjc.reader.x
 	* For this reason, we have to record how each complex type is being
 	* bound.
 	*/
-	@:overload public function recordBindingMode(type : com.sun.xml.internal.xsom.XSComplexType, flag : com.sun.tools.internal.xjc.reader.xmlschema.ct.ComplexTypeBindingMode) : Void;
+	@:overload @:public public function recordBindingMode(type : com.sun.xml.internal.xsom.XSComplexType, flag : com.sun.tools.internal.xjc.reader.xmlschema.ct.ComplexTypeBindingMode) : Void;
 	
 	/**
 	* Obtains the binding mode recorded through
 	* {@link #recordBindingMode(XSComplexType, ComplexTypeBindingMode)}.
 	*/
-	@:overload private function getBindingMode(type : com.sun.xml.internal.xsom.XSComplexType) : com.sun.tools.internal.xjc.reader.xmlschema.ct.ComplexTypeBindingMode;
+	@:overload @:protected private function getBindingMode(type : com.sun.xml.internal.xsom.XSComplexType) : com.sun.tools.internal.xjc.reader.xmlschema.ct.ComplexTypeBindingMode;
 	
 	
 }

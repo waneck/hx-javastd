@@ -33,24 +33,24 @@ extern class SOAPBindingImpl extends com.sun.xml.internal.ws.api.model.soap.SOAP
 	*
 	* @author Vivek Pandey
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(sb : com.sun.xml.internal.ws.api.model.soap.SOAPBinding) : Void;
+	@:overload @:public public function new(sb : com.sun.xml.internal.ws.api.model.soap.SOAPBinding) : Void;
 	
 	/**
 	* @param style The style to set.
 	*/
-	@:overload public function setStyle(style : Style) : Void;
+	@:overload @:public public function setStyle(style : Style) : Void;
 	
 	/**
 	* @param version
 	*/
-	@:overload public function setSOAPVersion(version : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
+	@:overload @:public public function setSOAPVersion(version : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
 	/**
 	* @param soapAction The soapAction to set.
 	*/
-	@:overload public function setSOAPAction(soapAction : String) : Void;
+	@:overload @:public public function setSOAPAction(soapAction : String) : Void;
 	
 	
 }

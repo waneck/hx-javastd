@@ -31,12 +31,12 @@ package sun.nio.fs;
 */
 @:internal extern class AbstractPoller implements java.lang.Runnable
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Starts the poller thread
 	*/
-	@:overload public function start() : Void;
+	@:overload @:public public function start() : Void;
 	
 	/**
 	* When an object implementing interface <code>Runnable</code> is used
@@ -49,7 +49,7 @@ package sun.nio.fs;
 	*
 	* @see     java.lang.Thread#run()
 	*/
-	@:overload @:abstract public function run() : Void;
+	@:overload @:public @:abstract @:public public function run() : Void;
 	
 	
 }

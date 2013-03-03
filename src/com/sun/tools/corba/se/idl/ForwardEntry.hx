@@ -39,13 +39,13 @@ extern class ForwardEntry extends com.sun.tools.corba.se.idl.SymtabEntry impleme
 	/**
 	* This is the symbol table entry for forward declarations of interfaces.
 	**/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.ForwardEntry) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.ForwardEntry) : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/** Invoke the forward declaration generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -53,16 +53,16 @@ extern class ForwardEntry extends com.sun.tools.corba.se.idl.SymtabEntry impleme
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload @:public override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the interface generator.
 	@returns an object which implements the InterfaceGen interface.
 	@see InterfaceGen */
-	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload @:public override public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
-	@:overload public function getInterfaceType() : Int;
+	@:overload @:public public function getInterfaceType() : Int;
 	
-	@:overload public function setInterfaceType(type : Int) : Void;
+	@:overload @:public public function setInterfaceType(type : Int) : Void;
 	
 	
 }

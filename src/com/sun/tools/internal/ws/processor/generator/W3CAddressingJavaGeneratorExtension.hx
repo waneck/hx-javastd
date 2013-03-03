@@ -31,7 +31,7 @@ extern class W3CAddressingJavaGeneratorExtension extends com.sun.tools.internal.
 	*
 	* @author Arun Gupta
 	*/
-	@:overload public function writeMethodAnnotations(two : com.sun.tools.internal.ws.api.wsdl.TWSDLOperation, jMethod : com.sun.codemodel.internal.JMethod) : Void;
+	@:overload @:public override public function writeMethodAnnotations(two : com.sun.tools.internal.ws.api.wsdl.TWSDLOperation, jMethod : com.sun.codemodel.internal.JMethod) : Void;
 	
 	
 }

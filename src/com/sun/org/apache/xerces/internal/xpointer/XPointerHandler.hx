@@ -43,50 +43,50 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @xerces.internal
 	*
 	*/
-	private var fXPointerParts : java.util.Vector<Dynamic>;
+	@:protected private var fXPointerParts : java.util.Vector<Dynamic>;
 	
-	private var fXPointerPart : com.sun.org.apache.xerces.internal.xpointer.XPointerPart;
+	@:protected private var fXPointerPart : com.sun.org.apache.xerces.internal.xpointer.XPointerPart;
 	
-	private var fFoundMatchingPtrPart : Bool;
+	@:protected private var fFoundMatchingPtrPart : Bool;
 	
-	private var fXPointerErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
+	@:protected private var fXPointerErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
 	
-	private var fErrorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
+	@:protected private var fErrorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
 	
-	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
-	private var fIsXPointerResolved : Bool;
+	@:protected private var fIsXPointerResolved : Bool;
 	
-	private var fFixupBase : Bool;
+	@:protected private var fFixupBase : Bool;
 	
-	private var fFixupLang : Bool;
+	@:protected private var fFixupLang : Bool;
 	
 	/**
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, errorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler, errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, errorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler, errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter) : Void;
 	
 	/**
 	* Parses the XPointer framework expression and delegates scheme specific parsing.
 	*
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerProcessor#parseXPointer(java.lang.String)
 	*/
-	@:overload public function parseXPointer(xpointer : String) : Void;
+	@:overload @:public public function parseXPointer(xpointer : String) : Void;
 	
 	/**
 	*
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerProcessor#resolveXPointer(com.sun.org.apache.xerces.internal.xni.QName, com.sun.org.apache.xerces.internal.xni.XMLAttributes, com.sun.org.apache.xerces.internal.xni.Augmentations, int event)
 	*/
-	@:overload public function resolveXPointer(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations, event : Int) : Bool;
+	@:overload @:public public function resolveXPointer(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations, event : Int) : Bool;
 	
 	/**
 	* Returns true if the Node fragment is resolved.
 	*
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerProcessor#isFragmentResolved()
 	*/
-	@:overload public function isFragmentResolved() : Bool;
+	@:overload @:public public function isFragmentResolved() : Bool;
 	
 	/**
 	* Returns true if the XPointer expression resolves to a non-element child
@@ -95,39 +95,39 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerPart#isChildFragmentResolved()
 	*
 	*/
-	@:overload public function isChildFragmentResolved() : Bool;
+	@:overload @:public public function isChildFragmentResolved() : Bool;
 	
 	/**
 	* Returns true if the XPointer successfully found a sub-resource .
 	*
 	* @see com.sun.org.apache.xerces.internal.xpointer.XPointerProcessor#isFragmentResolved()
 	*/
-	@:overload public function isXPointerResolved() : Bool;
+	@:overload @:public public function isXPointerResolved() : Bool;
 	
 	/**
 	* Returns the pointer part used to resolve the document fragment.
 	*
 	* @return String - The pointer part used to resolve the document fragment.
 	*/
-	@:overload public function getXPointerPart() : com.sun.org.apache.xerces.internal.xpointer.XPointerPart;
+	@:overload @:public public function getXPointerPart() : com.sun.org.apache.xerces.internal.xpointer.XPointerPart;
 	
 	/**
 	* Initializes error handling objects
 	*
 	*/
-	@:overload private function initErrorReporter() : Void;
+	@:overload @:protected private function initErrorReporter() : Void;
 	
 	/**
 	* Initializes the XPointer Processor;
 	*/
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
 	/**
 	* Returns a Vector of XPointerPart objects
 	*
 	* @return A Vector of XPointerPart objects.
 	*/
-	@:overload public function getPointerParts() : java.util.Vector<Dynamic>;
+	@:overload @:public public function getPointerParts() : java.util.Vector<Dynamic>;
 	
 	/**
 	* If the comment is a child of a matched element, then pass else return.
@@ -138,7 +138,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by application to signal an error.
 	*/
-	@:overload public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A processing instruction. Processing instructions consist of a
@@ -158,7 +158,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of an element.
@@ -170,7 +170,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An empty element.
@@ -182,7 +182,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Character content.
@@ -193,7 +193,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Ignorable whitespace. For this method to be called, the document
@@ -209,7 +209,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of an element.
@@ -220,7 +220,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of a CDATA section.
@@ -230,7 +230,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload public function startCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function startCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a CDATA section.
@@ -240,7 +240,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload public function endCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function endCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* <p>
@@ -259,7 +259,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	*                                  it is <strong>really</strong>
 	*                                  a critical error.
 	*/
-	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public override public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	
 }
@@ -290,7 +290,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* XPath expression. This is a convenient way of allowing only
 	* a subset of XPath.
 	*/
-	@:overload private function addToken(tokens : com.sun.org.apache.xerces.internal.xpointer.XPointerHandler.XPointerHandler_Tokens, token : Int) : Void;
+	@:overload @:protected private function addToken(tokens : com.sun.org.apache.xerces.internal.xpointer.XPointerHandler.XPointerHandler_Tokens, token : Int) : Void;
 	
 	
 }

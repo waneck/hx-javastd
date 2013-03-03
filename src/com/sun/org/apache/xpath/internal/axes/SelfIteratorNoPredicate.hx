@@ -28,7 +28,7 @@ extern class SelfIteratorNoPredicate extends com.sun.org.apache.xpath.internal.a
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*  Returns the next node in the set and advances the position of the
@@ -38,7 +38,7 @@ extern class SelfIteratorNoPredicate extends com.sun.org.apache.xpath.internal.a
 	* @return  The next <code>Node</code> in the set being iterated over, or
 	*   <code>null</code> if there are no more members in that set.
 	*/
-	@:overload override public function nextNode() : Int;
+	@:overload @:public override public function nextNode() : Int;
 	
 	/**
 	* Return the first node out of the nodeset, if this expression is
@@ -48,7 +48,7 @@ extern class SelfIteratorNoPredicate extends com.sun.org.apache.xpath.internal.a
 	* @param xctxt The XPath runtime context.
 	* @return the first node out of the nodeset, or DTM.NULL.
 	*/
-	@:overload override public function asNode(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public override public function asNode(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Get the index of the last node that can be itterated to.
@@ -58,7 +58,7 @@ extern class SelfIteratorNoPredicate extends com.sun.org.apache.xpath.internal.a
 	*
 	* @return the index of the last node that can be itterated to.
 	*/
-	@:overload override public function getLastPos(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public override public function getLastPos(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	
 }

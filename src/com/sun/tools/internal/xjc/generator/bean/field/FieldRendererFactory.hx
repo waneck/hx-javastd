@@ -45,23 +45,23 @@ extern class FieldRendererFactory
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function getDefault() : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
+	@:overload @:public public function getDefault() : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
 	
-	@:overload public function getArray() : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
+	@:overload @:public public function getArray() : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
 	
-	@:overload public function getRequiredUnboxed() : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
+	@:overload @:public public function getRequiredUnboxed() : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
 	
-	@:overload public function getSingle() : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
+	@:overload @:public public function getSingle() : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
 	
-	@:overload public function getSinglePrimitiveAccess() : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
+	@:overload @:public public function getSinglePrimitiveAccess() : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
 	
-	@:overload public function getList(coreList : com.sun.codemodel.internal.JClass) : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
+	@:overload @:public public function getList(coreList : com.sun.codemodel.internal.JClass) : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
 	
-	@:overload public function getContentList(coreList : com.sun.codemodel.internal.JClass) : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
+	@:overload @:public public function getContentList(coreList : com.sun.codemodel.internal.JClass) : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
 	
-	@:overload public function getDummyList(coreList : com.sun.codemodel.internal.JClass) : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
+	@:overload @:public public function getDummyList(coreList : com.sun.codemodel.internal.JClass) : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
 	
-	@:overload public function getConst(fallback : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer) : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
+	@:overload @:public public function getConst(fallback : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer) : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
 	
 	
 }

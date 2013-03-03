@@ -29,7 +29,7 @@ extern class SaslException extends java.io.IOException
 	* Constructs a new instance of <tt>SaslException</tt>.
 	* The root exception and the detailed message are null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new instance of <tt>SaslException</tt> with a detailed message.
@@ -38,7 +38,7 @@ extern class SaslException extends java.io.IOException
 	*
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload public function new(detail : String) : Void;
+	@:overload @:public public function new(detail : String) : Void;
 	
 	/**
 	* Constructs a new instance of <tt>SaslException</tt> with a detailed message
@@ -56,19 +56,19 @@ extern class SaslException extends java.io.IOException
 	* @see java.lang.Throwable#getMessage
 	* @see #getCause
 	*/
-	@:overload public function new(detail : String, ex : java.lang.Throwable) : Void;
+	@:overload @:public public function new(detail : String, ex : java.lang.Throwable) : Void;
 	
 	/*
 	* Override Throwable.getCause() to ensure deserialized object from
 	* JSR 28 would return same value for getCause() (i.e., _exception).
 	*/
-	@:overload public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	/*
 	* Override Throwable.initCause() to match getCause() by updating
 	* _exception as well.
 	*/
-	@:overload public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
+	@:overload @:public override public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
 	
 	/**
 	* Returns the string representation of this exception.
@@ -81,7 +81,7 @@ extern class SaslException extends java.io.IOException
 	* @return The non-null string representation of this exception.
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

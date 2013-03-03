@@ -69,7 +69,7 @@ extern interface CancelablePrintJob extends javax.print.DocPrintJob
 	* application execution.
 	* @throws PrintException if the job could not be successfully cancelled.
 	*/
-	@:overload public function cancel() : Void;
+	@:overload @:public public function cancel() : Void;
 	
 	
 }

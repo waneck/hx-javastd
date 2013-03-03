@@ -38,12 +38,12 @@ extern class SpecialInterfaceType extends sun.rmi.rmic.iiop.InterfaceType
 	* return value will be null, and errors will have been reported to the
 	* supplied BatchEnvironment.
 	*/
-	@:overload public static function forSpecial(theClass : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack) : sun.rmi.rmic.iiop.SpecialInterfaceType;
+	@:overload @:public @:static public static function forSpecial(theClass : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack) : sun.rmi.rmic.iiop.SpecialInterfaceType;
 	
 	/**
 	* Return a string describing this type.
 	*/
-	@:overload public function getTypeDescription() : String;
+	@:overload @:public override public function getTypeDescription() : String;
 	
 	
 }

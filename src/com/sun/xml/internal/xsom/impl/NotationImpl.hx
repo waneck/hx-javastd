@@ -30,15 +30,15 @@ extern class NotationImpl extends com.sun.xml.internal.xsom.impl.DeclarationImpl
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _name : String, _publicId : String, _systemId : String) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _name : String, _publicId : String, _systemId : String) : Void;
 	
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
-	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
-	@:overload public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
+	@:overload @:public override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
 	
 	
 }

@@ -29,7 +29,7 @@ extern class EncodingInfo
 	* @param ch the char in question.
 	* @xsl.usage internal
 	*/
-	@:overload public function isInEncoding(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function isInEncoding(ch : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* This is not a public API. It returns true if the
@@ -38,7 +38,7 @@ extern class EncodingInfo
 	* @param low a char that is the low char of a high/low surrogate pair.
 	* @xsl.usage internal
 	*/
-	@:overload public function isInEncoding(high : java.StdTypes.Char16, low : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function isInEncoding(high : java.StdTypes.Char16, low : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Create an EncodingInfo object based on the ISO name and Java name.
@@ -49,7 +49,7 @@ extern class EncodingInfo
 	* @param name reference to the ISO name.
 	* @param javaName reference to the Java encoding name.
 	*/
-	@:overload public function new(name : String, javaName : String) : Void;
+	@:overload @:public public function new(name : String, javaName : String) : Void;
 	
 	
 }
@@ -67,13 +67,13 @@ extern class EncodingInfo
 	/**
 	* Returns true if the char is in the encoding
 	*/
-	@:overload public function isInEncoding(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function isInEncoding(ch : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Returns true if the high/low surrogate pair forms
 	* a character that is in the encoding.
 	*/
-	@:overload public function isInEncoding(high : java.StdTypes.Char16, low : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function isInEncoding(high : java.StdTypes.Char16, low : java.StdTypes.Char16) : Bool;
 	
 	
 }
@@ -82,9 +82,9 @@ extern class EncodingInfo
 */
 @:native('com$sun$org$apache$xml$internal$serializer$EncodingInfo$EncodingImpl') @:internal extern class EncodingInfo_EncodingImpl implements com.sun.org.apache.xml.internal.serializer.EncodingInfo.EncodingInfo_InEncoding
 {
-	@:overload public function isInEncoding(ch1 : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function isInEncoding(ch1 : java.StdTypes.Char16) : Bool;
 	
-	@:overload public function isInEncoding(high : java.StdTypes.Char16, low : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function isInEncoding(high : java.StdTypes.Char16, low : java.StdTypes.Char16) : Bool;
 	
 	
 }

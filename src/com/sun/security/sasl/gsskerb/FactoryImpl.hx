@@ -25,13 +25,13 @@ package com.sun.security.sasl.gsskerb;
 */
 extern class FactoryImpl implements javax.security.sasl.SaslClientFactory implements javax.security.sasl.SaslServerFactory
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function createSaslClient(mechs : java.NativeArray<String>, authorizationId : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslClient;
+	@:overload @:public public function createSaslClient(mechs : java.NativeArray<String>, authorizationId : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslClient;
 	
-	@:overload public function createSaslServer(mech : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslServer;
+	@:overload @:public public function createSaslServer(mech : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslServer;
 	
-	@:overload public function getMechanismNames(props : java.util.Map<String, Dynamic>) : java.NativeArray<String>;
+	@:overload @:public public function getMechanismNames(props : java.util.Map<String, Dynamic>) : java.NativeArray<String>;
 	
 	
 }

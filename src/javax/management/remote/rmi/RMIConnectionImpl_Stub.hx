@@ -3,61 +3,61 @@ package javax.management.remote.rmi;
 //// Contents subject to change without notice.
 extern class RMIConnectionImpl_Stub extends java.rmi.server.RemoteStub implements javax.management.remote.rmi.RMIConnection
 {
-	@:overload public function new(ref : java.rmi.server.RemoteRef) : Void;
+	@:overload @:public public function new(ref : java.rmi.server.RemoteRef) : Void;
 	
-	@:overload public function addNotificationListener($param_ObjectName_1 : javax.management.ObjectName, $param_ObjectName_2 : javax.management.ObjectName, $param_MarshalledObject_3 : java.rmi.MarshalledObject<Dynamic>, $param_MarshalledObject_4 : java.rmi.MarshalledObject<Dynamic>, $param_Subject_5 : javax.security.auth.Subject) : Void;
+	@:overload @:public public function addNotificationListener($param_ObjectName_1 : javax.management.ObjectName, $param_ObjectName_2 : javax.management.ObjectName, $param_MarshalledObject_3 : java.rmi.MarshalledObject<Dynamic>, $param_MarshalledObject_4 : java.rmi.MarshalledObject<Dynamic>, $param_Subject_5 : javax.security.auth.Subject) : Void;
 	
-	@:overload public function addNotificationListeners($param_arrayOf_ObjectName_1 : java.NativeArray<javax.management.ObjectName>, $param_arrayOf_MarshalledObject_2 : java.NativeArray<java.rmi.MarshalledObject<Dynamic>>, $param_arrayOf_Subject_3 : java.NativeArray<javax.security.auth.Subject>) : java.NativeArray<Null<Int>>;
+	@:overload @:public public function addNotificationListeners($param_arrayOf_ObjectName_1 : java.NativeArray<javax.management.ObjectName>, $param_arrayOf_MarshalledObject_2 : java.NativeArray<java.rmi.MarshalledObject<Dynamic>>, $param_arrayOf_Subject_3 : java.NativeArray<javax.security.auth.Subject>) : java.NativeArray<Null<Int>>;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function createMBean($param_String_1 : String, $param_ObjectName_2 : javax.management.ObjectName, $param_MarshalledObject_3 : java.rmi.MarshalledObject<Dynamic>, $param_arrayOf_String_4 : java.NativeArray<String>, $param_Subject_5 : javax.security.auth.Subject) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean($param_String_1 : String, $param_ObjectName_2 : javax.management.ObjectName, $param_MarshalledObject_3 : java.rmi.MarshalledObject<Dynamic>, $param_arrayOf_String_4 : java.NativeArray<String>, $param_Subject_5 : javax.security.auth.Subject) : javax.management.ObjectInstance;
 	
-	@:overload public function createMBean($param_String_1 : String, $param_ObjectName_2 : javax.management.ObjectName, $param_ObjectName_3 : javax.management.ObjectName, $param_MarshalledObject_4 : java.rmi.MarshalledObject<Dynamic>, $param_arrayOf_String_5 : java.NativeArray<String>, $param_Subject_6 : javax.security.auth.Subject) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean($param_String_1 : String, $param_ObjectName_2 : javax.management.ObjectName, $param_ObjectName_3 : javax.management.ObjectName, $param_MarshalledObject_4 : java.rmi.MarshalledObject<Dynamic>, $param_arrayOf_String_5 : java.NativeArray<String>, $param_Subject_6 : javax.security.auth.Subject) : javax.management.ObjectInstance;
 	
-	@:overload public function createMBean($param_String_1 : String, $param_ObjectName_2 : javax.management.ObjectName, $param_ObjectName_3 : javax.management.ObjectName, $param_Subject_4 : javax.security.auth.Subject) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean($param_String_1 : String, $param_ObjectName_2 : javax.management.ObjectName, $param_ObjectName_3 : javax.management.ObjectName, $param_Subject_4 : javax.security.auth.Subject) : javax.management.ObjectInstance;
 	
-	@:overload public function createMBean($param_String_1 : String, $param_ObjectName_2 : javax.management.ObjectName, $param_Subject_3 : javax.security.auth.Subject) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean($param_String_1 : String, $param_ObjectName_2 : javax.management.ObjectName, $param_Subject_3 : javax.security.auth.Subject) : javax.management.ObjectInstance;
 	
-	@:overload public function fetchNotifications($param_long_1 : haxe.Int64, $param_int_2 : Int, $param_long_3 : haxe.Int64) : javax.management.remote.NotificationResult;
+	@:overload @:public public function fetchNotifications($param_long_1 : haxe.Int64, $param_int_2 : Int, $param_long_3 : haxe.Int64) : javax.management.remote.NotificationResult;
 	
-	@:overload public function getAttribute($param_ObjectName_1 : javax.management.ObjectName, $param_String_2 : String, $param_Subject_3 : javax.security.auth.Subject) : Dynamic;
+	@:overload @:public public function getAttribute($param_ObjectName_1 : javax.management.ObjectName, $param_String_2 : String, $param_Subject_3 : javax.security.auth.Subject) : Dynamic;
 	
-	@:overload public function getAttributes($param_ObjectName_1 : javax.management.ObjectName, $param_arrayOf_String_2 : java.NativeArray<String>, $param_Subject_3 : javax.security.auth.Subject) : javax.management.AttributeList;
+	@:overload @:public public function getAttributes($param_ObjectName_1 : javax.management.ObjectName, $param_arrayOf_String_2 : java.NativeArray<String>, $param_Subject_3 : javax.security.auth.Subject) : javax.management.AttributeList;
 	
-	@:overload public function getConnectionId() : String;
+	@:overload @:public public function getConnectionId() : String;
 	
-	@:overload public function getDefaultDomain($param_Subject_1 : javax.security.auth.Subject) : String;
+	@:overload @:public public function getDefaultDomain($param_Subject_1 : javax.security.auth.Subject) : String;
 	
-	@:overload public function getDomains($param_Subject_1 : javax.security.auth.Subject) : java.NativeArray<String>;
+	@:overload @:public public function getDomains($param_Subject_1 : javax.security.auth.Subject) : java.NativeArray<String>;
 	
-	@:overload public function getMBeanCount($param_Subject_1 : javax.security.auth.Subject) : Null<Int>;
+	@:overload @:public public function getMBeanCount($param_Subject_1 : javax.security.auth.Subject) : Null<Int>;
 	
-	@:overload public function getMBeanInfo($param_ObjectName_1 : javax.management.ObjectName, $param_Subject_2 : javax.security.auth.Subject) : javax.management.MBeanInfo;
+	@:overload @:public public function getMBeanInfo($param_ObjectName_1 : javax.management.ObjectName, $param_Subject_2 : javax.security.auth.Subject) : javax.management.MBeanInfo;
 	
-	@:overload public function getObjectInstance($param_ObjectName_1 : javax.management.ObjectName, $param_Subject_2 : javax.security.auth.Subject) : javax.management.ObjectInstance;
+	@:overload @:public public function getObjectInstance($param_ObjectName_1 : javax.management.ObjectName, $param_Subject_2 : javax.security.auth.Subject) : javax.management.ObjectInstance;
 	
-	@:overload public function invoke($param_ObjectName_1 : javax.management.ObjectName, $param_String_2 : String, $param_MarshalledObject_3 : java.rmi.MarshalledObject<Dynamic>, $param_arrayOf_String_4 : java.NativeArray<String>, $param_Subject_5 : javax.security.auth.Subject) : Dynamic;
+	@:overload @:public public function invoke($param_ObjectName_1 : javax.management.ObjectName, $param_String_2 : String, $param_MarshalledObject_3 : java.rmi.MarshalledObject<Dynamic>, $param_arrayOf_String_4 : java.NativeArray<String>, $param_Subject_5 : javax.security.auth.Subject) : Dynamic;
 	
-	@:overload public function isInstanceOf($param_ObjectName_1 : javax.management.ObjectName, $param_String_2 : String, $param_Subject_3 : javax.security.auth.Subject) : Bool;
+	@:overload @:public public function isInstanceOf($param_ObjectName_1 : javax.management.ObjectName, $param_String_2 : String, $param_Subject_3 : javax.security.auth.Subject) : Bool;
 	
-	@:overload public function isRegistered($param_ObjectName_1 : javax.management.ObjectName, $param_Subject_2 : javax.security.auth.Subject) : Bool;
+	@:overload @:public public function isRegistered($param_ObjectName_1 : javax.management.ObjectName, $param_Subject_2 : javax.security.auth.Subject) : Bool;
 	
-	@:overload public function queryMBeans($param_ObjectName_1 : javax.management.ObjectName, $param_MarshalledObject_2 : java.rmi.MarshalledObject<Dynamic>, $param_Subject_3 : javax.security.auth.Subject) : java.util.Set<Dynamic>;
+	@:overload @:public public function queryMBeans($param_ObjectName_1 : javax.management.ObjectName, $param_MarshalledObject_2 : java.rmi.MarshalledObject<Dynamic>, $param_Subject_3 : javax.security.auth.Subject) : java.util.Set<Dynamic>;
 	
-	@:overload public function queryNames($param_ObjectName_1 : javax.management.ObjectName, $param_MarshalledObject_2 : java.rmi.MarshalledObject<Dynamic>, $param_Subject_3 : javax.security.auth.Subject) : java.util.Set<Dynamic>;
+	@:overload @:public public function queryNames($param_ObjectName_1 : javax.management.ObjectName, $param_MarshalledObject_2 : java.rmi.MarshalledObject<Dynamic>, $param_Subject_3 : javax.security.auth.Subject) : java.util.Set<Dynamic>;
 	
-	@:overload public function removeNotificationListener($param_ObjectName_1 : javax.management.ObjectName, $param_ObjectName_2 : javax.management.ObjectName, $param_MarshalledObject_3 : java.rmi.MarshalledObject<Dynamic>, $param_MarshalledObject_4 : java.rmi.MarshalledObject<Dynamic>, $param_Subject_5 : javax.security.auth.Subject) : Void;
+	@:overload @:public public function removeNotificationListener($param_ObjectName_1 : javax.management.ObjectName, $param_ObjectName_2 : javax.management.ObjectName, $param_MarshalledObject_3 : java.rmi.MarshalledObject<Dynamic>, $param_MarshalledObject_4 : java.rmi.MarshalledObject<Dynamic>, $param_Subject_5 : javax.security.auth.Subject) : Void;
 	
-	@:overload public function removeNotificationListener($param_ObjectName_1 : javax.management.ObjectName, $param_ObjectName_2 : javax.management.ObjectName, $param_Subject_3 : javax.security.auth.Subject) : Void;
+	@:overload @:public public function removeNotificationListener($param_ObjectName_1 : javax.management.ObjectName, $param_ObjectName_2 : javax.management.ObjectName, $param_Subject_3 : javax.security.auth.Subject) : Void;
 	
-	@:overload public function removeNotificationListeners($param_ObjectName_1 : javax.management.ObjectName, $param_arrayOf_Integer_2 : java.NativeArray<Null<Int>>, $param_Subject_3 : javax.security.auth.Subject) : Void;
+	@:overload @:public public function removeNotificationListeners($param_ObjectName_1 : javax.management.ObjectName, $param_arrayOf_Integer_2 : java.NativeArray<Null<Int>>, $param_Subject_3 : javax.security.auth.Subject) : Void;
 	
-	@:overload public function setAttribute($param_ObjectName_1 : javax.management.ObjectName, $param_MarshalledObject_2 : java.rmi.MarshalledObject<Dynamic>, $param_Subject_3 : javax.security.auth.Subject) : Void;
+	@:overload @:public public function setAttribute($param_ObjectName_1 : javax.management.ObjectName, $param_MarshalledObject_2 : java.rmi.MarshalledObject<Dynamic>, $param_Subject_3 : javax.security.auth.Subject) : Void;
 	
-	@:overload public function setAttributes($param_ObjectName_1 : javax.management.ObjectName, $param_MarshalledObject_2 : java.rmi.MarshalledObject<Dynamic>, $param_Subject_3 : javax.security.auth.Subject) : javax.management.AttributeList;
+	@:overload @:public public function setAttributes($param_ObjectName_1 : javax.management.ObjectName, $param_MarshalledObject_2 : java.rmi.MarshalledObject<Dynamic>, $param_Subject_3 : javax.security.auth.Subject) : javax.management.AttributeList;
 	
-	@:overload public function unregisterMBean($param_ObjectName_1 : javax.management.ObjectName, $param_Subject_2 : javax.security.auth.Subject) : Void;
+	@:overload @:public public function unregisterMBean($param_ObjectName_1 : javax.management.ObjectName, $param_Subject_2 : javax.security.auth.Subject) : Void;
 	
 	
 }

@@ -34,7 +34,7 @@ extern class MonitoringFactories
 	* @return a MonitoredObjectFactory
 	* </p>
 	*/
-	@:overload public static function getMonitoredObjectFactory() : com.sun.corba.se.spi.monitoring.MonitoredObjectFactory;
+	@:overload @:public @:static public static function getMonitoredObjectFactory() : com.sun.corba.se.spi.monitoring.MonitoredObjectFactory;
 	
 	/**
 	* <p>
@@ -52,7 +52,7 @@ extern class MonitoringFactories
 	* @return a MonitoredAttributeInfoFactory
 	* </p>
 	*/
-	@:overload public static function getMonitoredAttributeInfoFactory() : com.sun.corba.se.spi.monitoring.MonitoredAttributeInfoFactory;
+	@:overload @:public @:static public static function getMonitoredAttributeInfoFactory() : com.sun.corba.se.spi.monitoring.MonitoredAttributeInfoFactory;
 	
 	/**
 	* <p>
@@ -68,7 +68,7 @@ extern class MonitoringFactories
 	* @return a MonitoredManagerFactory
 	* </p>
 	*/
-	@:overload public static function getMonitoringManagerFactory() : com.sun.corba.se.spi.monitoring.MonitoringManagerFactory;
+	@:overload @:public @:static public static function getMonitoringManagerFactory() : com.sun.corba.se.spi.monitoring.MonitoringManagerFactory;
 	
 	
 }

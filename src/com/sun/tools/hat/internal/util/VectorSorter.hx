@@ -49,12 +49,12 @@ extern class VectorSorter
 	/**
 	* Sort the given vector, using c for comparison
 	**/
-	@:overload public static function sort(v : java.util.Vector<Dynamic>, c : com.sun.tools.hat.internal.util.Comparer) : Void;
+	@:overload @:static @:public public static function sort(v : java.util.Vector<Dynamic>, c : com.sun.tools.hat.internal.util.Comparer) : Void;
 	
 	/**
 	* Sort a vector of strings, using String.compareTo()
 	**/
-	@:overload public static function sortVectorOfStrings(v : java.util.Vector<Dynamic>) : Void;
+	@:overload @:static @:public public static function sortVectorOfStrings(v : java.util.Vector<Dynamic>) : Void;
 	
 	
 }

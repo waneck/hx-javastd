@@ -33,49 +33,49 @@ package com.sun.tools.javap;
 */
 extern class ConstantWriter extends com.sun.tools.javap.BasicWriter
 {
-	@:overload public static function instance(context : com.sun.tools.javap.Context) : com.sun.tools.javap.ConstantWriter;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javap.Context) : com.sun.tools.javap.ConstantWriter;
 	
-	@:overload private function new(context : com.sun.tools.javap.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javap.Context) : Void;
 	
-	@:overload private function writeConstantPool() : Void;
+	@:overload @:protected private function writeConstantPool() : Void;
 	
-	@:overload private function writeConstantPool(constant_pool : com.sun.tools.classfile.ConstantPool) : Void;
+	@:overload @:protected private function writeConstantPool(constant_pool : com.sun.tools.classfile.ConstantPool) : Void;
 	
-	@:overload private function write(cpx : Int) : Void;
+	@:overload @:protected private function write(cpx : Int) : Void;
 	
 	
 }
 @:native('com$sun$tools$javap$ConstantWriter$StringValueVisitor') @:internal extern class ConstantWriter_StringValueVisitor implements com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<String, java.lang.Void>
 {
-	@:overload public function visit(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo) : String;
+	@:overload @:public public function visit(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo) : String;
 	
-	@:overload public function visitClass(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Class_info, p : java.lang.Void) : String;
+	@:overload @:public public function visitClass(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Class_info, p : java.lang.Void) : String;
 	
-	@:overload public function visitDouble(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Double_info, p : java.lang.Void) : String;
+	@:overload @:public public function visitDouble(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Double_info, p : java.lang.Void) : String;
 	
-	@:overload public function visitFieldref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Fieldref_info, p : java.lang.Void) : String;
+	@:overload @:public public function visitFieldref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Fieldref_info, p : java.lang.Void) : String;
 	
-	@:overload public function visitFloat(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Float_info, p : java.lang.Void) : String;
+	@:overload @:public public function visitFloat(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Float_info, p : java.lang.Void) : String;
 	
-	@:overload public function visitInteger(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Integer_info, p : java.lang.Void) : String;
+	@:overload @:public public function visitInteger(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Integer_info, p : java.lang.Void) : String;
 	
-	@:overload public function visitInterfaceMethodref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_InterfaceMethodref_info, p : java.lang.Void) : String;
+	@:overload @:public public function visitInterfaceMethodref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_InterfaceMethodref_info, p : java.lang.Void) : String;
 	
-	@:overload public function visitInvokeDynamic(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_InvokeDynamic_info, p : java.lang.Void) : String;
+	@:overload @:public public function visitInvokeDynamic(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_InvokeDynamic_info, p : java.lang.Void) : String;
 	
-	@:overload public function visitLong(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Long_info, p : java.lang.Void) : String;
+	@:overload @:public public function visitLong(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Long_info, p : java.lang.Void) : String;
 	
-	@:overload public function visitNameAndType(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_NameAndType_info, p : java.lang.Void) : String;
+	@:overload @:public public function visitNameAndType(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_NameAndType_info, p : java.lang.Void) : String;
 	
-	@:overload public function visitMethodHandle(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_MethodHandle_info, p : java.lang.Void) : String;
+	@:overload @:public public function visitMethodHandle(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_MethodHandle_info, p : java.lang.Void) : String;
 	
-	@:overload public function visitMethodType(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_MethodType_info, p : java.lang.Void) : String;
+	@:overload @:public public function visitMethodType(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_MethodType_info, p : java.lang.Void) : String;
 	
-	@:overload public function visitMethodref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Methodref_info, p : java.lang.Void) : String;
+	@:overload @:public public function visitMethodref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Methodref_info, p : java.lang.Void) : String;
 	
-	@:overload public function visitString(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_String_info, p : java.lang.Void) : String;
+	@:overload @:public public function visitString(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_String_info, p : java.lang.Void) : String;
 	
-	@:overload public function visitUtf8(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Utf8_info, p : java.lang.Void) : String;
+	@:overload @:public public function visitUtf8(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Utf8_info, p : java.lang.Void) : String;
 	
 	
 }

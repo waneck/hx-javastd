@@ -48,7 +48,7 @@ package java.util;
 	/**
 	* Creates an empty Stack.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Pushes an item onto the top of this stack. This has exactly
@@ -60,7 +60,7 @@ package java.util;
 	* @return  the <code>item</code> argument.
 	* @see     java.util.Vector#addElement
 	*/
-	@:overload public function push(item : E) : E;
+	@:overload @:public public function push(item : E) : E;
 	
 	/**
 	* Removes the object at the top of this stack and returns that
@@ -70,7 +70,7 @@ package java.util;
 	*          of the <tt>Vector</tt> object).
 	* @throws  EmptyStackException  if this stack is empty.
 	*/
-	@:overload @:synchronized public function pop() : E;
+	@:overload @:public @:synchronized public function pop() : E;
 	
 	/**
 	* Looks at the object at the top of this stack without removing it
@@ -80,7 +80,7 @@ package java.util;
 	*          of the <tt>Vector</tt> object).
 	* @throws  EmptyStackException  if this stack is empty.
 	*/
-	@:overload @:synchronized public function peek() : E;
+	@:overload @:public @:synchronized public function peek() : E;
 	
 	/**
 	* Tests if this stack is empty.
@@ -88,7 +88,7 @@ package java.util;
 	* @return  <code>true</code> if and only if this stack contains
 	*          no items; <code>false</code> otherwise.
 	*/
-	@:overload public function empty() : Bool;
+	@:overload @:public public function empty() : Bool;
 	
 	/**
 	* Returns the 1-based position where an object is on this stack.
@@ -104,7 +104,7 @@ package java.util;
 	*          the object is located; the return value <code>-1</code>
 	*          indicates that the object is not on the stack.
 	*/
-	@:overload @:synchronized public function search(o : Dynamic) : Int;
+	@:overload @:public @:synchronized public function search(o : Dynamic) : Int;
 	
 	
 }

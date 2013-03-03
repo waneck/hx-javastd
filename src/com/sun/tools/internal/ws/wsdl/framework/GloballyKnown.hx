@@ -30,11 +30,11 @@ package com.sun.tools.internal.ws.wsdl.framework;
 */
 extern interface GloballyKnown extends com.sun.tools.internal.ws.wsdl.framework.Elemental
 {
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:overload @:public public function getKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	@:overload public function getDefining() : com.sun.tools.internal.ws.wsdl.framework.Defining;
+	@:overload @:public public function getDefining() : com.sun.tools.internal.ws.wsdl.framework.Defining;
 	
 	
 }

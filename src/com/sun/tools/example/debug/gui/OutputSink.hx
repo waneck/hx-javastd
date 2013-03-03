@@ -35,7 +35,7 @@ package com.sun.tools.example.debug.gui;
 //// to a typescript. It should be an interface, not a class.
 extern class OutputSink extends java.io.PrintWriter
 {
-	@:overload public function show() : Void;
+	@:overload @:public public function show() : Void;
 	
 	
 }

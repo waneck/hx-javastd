@@ -29,9 +29,9 @@ extern class MissingAddressingHeaderException extends javax.xml.ws.WebServiceExc
 	*
 	* @param name QName of the missing WS-Addressing Header
 	*/
-	@:overload public function new(name : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, p : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, p : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	/**
 	* Gets the QName of the missing WS-Addressing Header.
@@ -39,7 +39,7 @@ extern class MissingAddressingHeaderException extends javax.xml.ws.WebServiceExc
 	* @return
 	*      never null.
 	*/
-	@:overload public function getMissingHeaderQName() : javax.xml.namespace.QName;
+	@:overload @:public public function getMissingHeaderQName() : javax.xml.namespace.QName;
 	
 	/**
 	* The {@link Packet} in which a header was missing.
@@ -47,7 +47,7 @@ extern class MissingAddressingHeaderException extends javax.xml.ws.WebServiceExc
 	* <p>
 	* This object can be used to deep-inspect the problematic SOAP message.
 	*/
-	@:overload public function getPacket() : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public public function getPacket() : com.sun.xml.internal.ws.api.message.Packet;
 	
 	
 }

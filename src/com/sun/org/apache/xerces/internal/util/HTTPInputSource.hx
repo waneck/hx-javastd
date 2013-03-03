@@ -21,10 +21,10 @@ package com.sun.org.apache.xerces.internal.util;
 extern class HTTPInputSource extends com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource
 {
 	/** Preference for whether HTTP redirects should be followed. **/
-	private var fFollowRedirects : Bool;
+	@:protected private var fFollowRedirects : Bool;
 	
 	/** HTTP request properties. **/
-	private var fHTTPRequestProperties : java.util.Map<Dynamic, Dynamic>;
+	@:protected private var fHTTPRequestProperties : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* Constructs an input source from just the public and system
@@ -41,7 +41,7 @@ extern class HTTPInputSource extends com.sun.org.apache.xerces.internal.xni.pars
 	*                     always be set to the fully expanded URI of the
 	*                     base system identifier, if possible.
 	*/
-	@:overload public function new(publicId : String, systemId : String, baseSystemId : String) : Void;
+	@:overload @:public public function new(publicId : String, systemId : String, baseSystemId : String) : Void;
 	
 	/**
 	* Constructs an input source from a XMLResourceIdentifier
@@ -50,7 +50,7 @@ extern class HTTPInputSource extends com.sun.org.apache.xerces.internal.xni.pars
 	*
 	* @param resourceIdentifier the XMLResourceIdentifier containing the information
 	*/
-	@:overload public function new(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : Void;
+	@:overload @:public public function new(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : Void;
 	
 	/**
 	* Constructs an input source from a byte stream.
@@ -67,7 +67,7 @@ extern class HTTPInputSource extends com.sun.org.apache.xerces.internal.xni.pars
 	* @param byteStream   The byte stream.
 	* @param encoding     The encoding of the byte stream, if known.
 	*/
-	@:overload public function new(publicId : String, systemId : String, baseSystemId : String, byteStream : java.io.InputStream, encoding : String) : Void;
+	@:overload @:public public function new(publicId : String, systemId : String, baseSystemId : String, byteStream : java.io.InputStream, encoding : String) : Void;
 	
 	/**
 	* Constructs an input source from a character stream.
@@ -85,19 +85,19 @@ extern class HTTPInputSource extends com.sun.org.apache.xerces.internal.xni.pars
 	* @param encoding     The original encoding of the byte stream
 	*                     used by the reader, if known.
 	*/
-	@:overload public function new(publicId : String, systemId : String, baseSystemId : String, charStream : java.io.Reader, encoding : String) : Void;
+	@:overload @:public public function new(publicId : String, systemId : String, baseSystemId : String, charStream : java.io.Reader, encoding : String) : Void;
 	
 	/**
 	* Returns the preference whether HTTP redirects should
 	* be followed. By default HTTP redirects will be followed.
 	*/
-	@:overload public function getFollowHTTPRedirects() : Bool;
+	@:overload @:public public function getFollowHTTPRedirects() : Bool;
 	
 	/**
 	* Sets the preference whether HTTP redirects should
 	* be followed. By default HTTP redirects will be followed.
 	*/
-	@:overload public function setFollowHTTPRedirects(followRedirects : Bool) : Void;
+	@:overload @:public public function setFollowHTTPRedirects(followRedirects : Bool) : Void;
 	
 	/**
 	* Returns the value of the request property
@@ -108,7 +108,7 @@ extern class HTTPInputSource extends com.sun.org.apache.xerces.internal.xni.pars
 	* <code>null</code> if this property has not
 	* been set
 	*/
-	@:overload public function getHTTPRequestProperty(key : String) : String;
+	@:overload @:public public function getHTTPRequestProperty(key : String) : String;
 	
 	/**
 	* Returns an iterator for the request properties this
@@ -120,7 +120,7 @@ extern class HTTPInputSource extends com.sun.org.apache.xerces.internal.xni.pars
 	* @return an iterator for the request properties this
 	* input source contains
 	*/
-	@:overload public function getHTTPRequestProperties() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getHTTPRequestProperties() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Sets the value of the request property
@@ -129,7 +129,7 @@ extern class HTTPInputSource extends com.sun.org.apache.xerces.internal.xni.pars
 	* @param key the name of the request property
 	* @param value the value of the request property
 	*/
-	@:overload public function setHTTPRequestProperty(key : String, value : String) : Void;
+	@:overload @:public public function setHTTPRequestProperty(key : String, value : String) : Void;
 	
 	
 }

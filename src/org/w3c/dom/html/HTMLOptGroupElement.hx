@@ -49,17 +49,17 @@ extern interface HTMLOptGroupElement extends org.w3c.dom.html.HTMLElement
 	*  The control is unavailable in this context. See the  disabled
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getDisabled() : Bool;
+	@:overload @:public public function getDisabled() : Bool;
 	
-	@:overload public function setDisabled(disabled : Bool) : Void;
+	@:overload @:public public function setDisabled(disabled : Bool) : Void;
 	
 	/**
 	*  Assigns a label to this option group. See the  label attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getLabel() : String;
+	@:overload @:public public function getLabel() : String;
 	
-	@:overload public function setLabel(label : String) : Void;
+	@:overload @:public public function setLabel(label : String) : Void;
 	
 	
 }

@@ -30,23 +30,23 @@ package sun.io;
 */
 extern class ByteToCharISO2022 extends sun.io.ByteToCharConverter
 {
-	private var SODesignator : java.NativeArray<String>;
+	@:protected private var SODesignator : java.NativeArray<String>;
 	
-	private var SS2Designator : java.NativeArray<String>;
+	@:protected private var SS2Designator : java.NativeArray<String>;
 	
-	private var SS3Designator : java.NativeArray<String>;
+	@:protected private var SS3Designator : java.NativeArray<String>;
 	
-	private var SOConverter : java.NativeArray<sun.io.ByteToCharConverter>;
+	@:protected private var SOConverter : java.NativeArray<sun.io.ByteToCharConverter>;
 	
-	private var SS2Converter : java.NativeArray<sun.io.ByteToCharConverter>;
+	@:protected private var SS2Converter : java.NativeArray<sun.io.ByteToCharConverter>;
 	
-	private var SS3Converter : java.NativeArray<sun.io.ByteToCharConverter>;
+	@:protected private var SS3Converter : java.NativeArray<sun.io.ByteToCharConverter>;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload override public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public override public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
 	
-	@:overload @:final override public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
+	@:overload @:public @:final override public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
 	
 	
 }

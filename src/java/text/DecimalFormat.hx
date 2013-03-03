@@ -52,7 +52,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @see java.text.NumberFormat#getCurrencyInstance
 	* @see java.text.NumberFormat#getPercentInstance
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a DecimalFormat using the given pattern and the symbols
@@ -72,7 +72,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @see java.text.NumberFormat#getCurrencyInstance
 	* @see java.text.NumberFormat#getPercentInstance
 	*/
-	@:overload public function new(pattern : String) : Void;
+	@:overload @:public public function new(pattern : String) : Void;
 	
 	/**
 	* Creates a DecimalFormat using the given pattern and symbols.
@@ -95,7 +95,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @see java.text.NumberFormat#getPercentInstance
 	* @see java.text.DecimalFormatSymbols
 	*/
-	@:overload public function new(pattern : String, symbols : java.text.DecimalFormatSymbols) : Void;
+	@:overload @:public public function new(pattern : String, symbols : java.text.DecimalFormatSymbols) : Void;
 	
 	/**
 	* Formats a number and appends the resulting text to the given string
@@ -117,7 +117,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	*                   mode being set to RoundingMode.UNNECESSARY
 	* @see              java.text.FieldPosition
 	*/
-	@:overload @:final public function format(number : Dynamic, toAppendTo : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload @:public @:final override public function format(number : Dynamic, toAppendTo : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Formats a double to produce a string.
@@ -130,7 +130,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @return The formatted number string
 	* @see java.text.FieldPosition
 	*/
-	@:overload public function format(number : Float, result : java.lang.StringBuffer, fieldPosition : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload @:public override public function format(number : Float, result : java.lang.StringBuffer, fieldPosition : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Format a long to produce a string.
@@ -143,7 +143,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @return The formatted number string
 	* @see java.text.FieldPosition
 	*/
-	@:overload public function format(number : haxe.Int64, result : java.lang.StringBuffer, fieldPosition : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload @:public override public function format(number : haxe.Int64, result : java.lang.StringBuffer, fieldPosition : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Formats an Object producing an <code>AttributedCharacterIterator</code>.
@@ -164,7 +164,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @return AttributedCharacterIterator describing the formatted value.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function formatToCharacterIterator(obj : Dynamic) : java.text.AttributedCharacterIterator;
+	@:require(java4) @:overload @:public override public function formatToCharacterIterator(obj : Dynamic) : java.text.AttributedCharacterIterator;
 	
 	/**
 	* Parses text from a string to produce a <code>Number</code>.
@@ -222,7 +222,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @exception  NullPointerException if <code>text</code> or
 	*             <code>pos</code> is null.
 	*/
-	@:overload public function parse(text : String, pos : java.text.ParsePosition) : java.lang.Number;
+	@:overload @:public override public function parse(text : String, pos : java.text.ParsePosition) : java.lang.Number;
 	
 	/**
 	* Returns a copy of the decimal format symbols, which is generally not
@@ -230,7 +230,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @return a copy of the desired DecimalFormatSymbols
 	* @see java.text.DecimalFormatSymbols
 	*/
-	@:overload public function getDecimalFormatSymbols() : java.text.DecimalFormatSymbols;
+	@:overload @:public public function getDecimalFormatSymbols() : java.text.DecimalFormatSymbols;
 	
 	/**
 	* Sets the decimal format symbols, which is generally not changed
@@ -238,55 +238,55 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @param newSymbols desired DecimalFormatSymbols
 	* @see java.text.DecimalFormatSymbols
 	*/
-	@:overload public function setDecimalFormatSymbols(newSymbols : java.text.DecimalFormatSymbols) : Void;
+	@:overload @:public public function setDecimalFormatSymbols(newSymbols : java.text.DecimalFormatSymbols) : Void;
 	
 	/**
 	* Get the positive prefix.
 	* <P>Examples: +123, $123, sFr123
 	*/
-	@:overload public function getPositivePrefix() : String;
+	@:overload @:public public function getPositivePrefix() : String;
 	
 	/**
 	* Set the positive prefix.
 	* <P>Examples: +123, $123, sFr123
 	*/
-	@:overload public function setPositivePrefix(newValue : String) : Void;
+	@:overload @:public public function setPositivePrefix(newValue : String) : Void;
 	
 	/**
 	* Get the negative prefix.
 	* <P>Examples: -123, ($123) (with negative suffix), sFr-123
 	*/
-	@:overload public function getNegativePrefix() : String;
+	@:overload @:public public function getNegativePrefix() : String;
 	
 	/**
 	* Set the negative prefix.
 	* <P>Examples: -123, ($123) (with negative suffix), sFr-123
 	*/
-	@:overload public function setNegativePrefix(newValue : String) : Void;
+	@:overload @:public public function setNegativePrefix(newValue : String) : Void;
 	
 	/**
 	* Get the positive suffix.
 	* <P>Example: 123%
 	*/
-	@:overload public function getPositiveSuffix() : String;
+	@:overload @:public public function getPositiveSuffix() : String;
 	
 	/**
 	* Set the positive suffix.
 	* <P>Example: 123%
 	*/
-	@:overload public function setPositiveSuffix(newValue : String) : Void;
+	@:overload @:public public function setPositiveSuffix(newValue : String) : Void;
 	
 	/**
 	* Get the negative suffix.
 	* <P>Examples: -123%, ($123) (with positive suffixes)
 	*/
-	@:overload public function getNegativeSuffix() : String;
+	@:overload @:public public function getNegativeSuffix() : String;
 	
 	/**
 	* Set the negative suffix.
 	* <P>Examples: 123%
 	*/
-	@:overload public function setNegativeSuffix(newValue : String) : Void;
+	@:overload @:public public function setNegativeSuffix(newValue : String) : Void;
 	
 	/**
 	* Gets the multiplier for use in percent, per mille, and similar
@@ -294,7 +294,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	*
 	* @see #setMultiplier(int)
 	*/
-	@:overload public function getMultiplier() : Int;
+	@:overload @:public public function getMultiplier() : Int;
 	
 	/**
 	* Sets the multiplier for use in percent, per mille, and similar
@@ -309,7 +309,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	*
 	* @see #getMultiplier
 	*/
-	@:overload public function setMultiplier(newValue : Int) : Void;
+	@:overload @:public public function setMultiplier(newValue : Int) : Void;
 	
 	/**
 	* Return the grouping size. Grouping size is the number of digits between
@@ -319,7 +319,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @see java.text.NumberFormat#isGroupingUsed
 	* @see java.text.DecimalFormatSymbols#getGroupingSeparator
 	*/
-	@:overload public function getGroupingSize() : Int;
+	@:overload @:public public function getGroupingSize() : Int;
 	
 	/**
 	* Set the grouping size. Grouping size is the number of digits between
@@ -331,21 +331,21 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @see java.text.NumberFormat#setGroupingUsed
 	* @see java.text.DecimalFormatSymbols#setGroupingSeparator
 	*/
-	@:overload public function setGroupingSize(newValue : Int) : Void;
+	@:overload @:public public function setGroupingSize(newValue : Int) : Void;
 	
 	/**
 	* Allows you to get the behavior of the decimal separator with integers.
 	* (The decimal separator will always appear with decimals.)
 	* <P>Example: Decimal ON: 12345 -> 12345.; OFF: 12345 -> 12345
 	*/
-	@:overload public function isDecimalSeparatorAlwaysShown() : Bool;
+	@:overload @:public public function isDecimalSeparatorAlwaysShown() : Bool;
 	
 	/**
 	* Allows you to set the behavior of the decimal separator with integers.
 	* (The decimal separator will always appear with decimals.)
 	* <P>Example: Decimal ON: 12345 -> 12345.; OFF: 12345 -> 12345
 	*/
-	@:overload public function setDecimalSeparatorAlwaysShown(newValue : Bool) : Void;
+	@:overload @:public public function setDecimalSeparatorAlwaysShown(newValue : Bool) : Void;
 	
 	/**
 	* Returns whether the {@link #parse(java.lang.String, java.text.ParsePosition)}
@@ -353,7 +353,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @see #setParseBigDecimal
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isParseBigDecimal() : Bool;
+	@:require(java5) @:overload @:public public function isParseBigDecimal() : Bool;
 	
 	/**
 	* Sets whether the {@link #parse(java.lang.String, java.text.ParsePosition)}
@@ -361,36 +361,36 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @see #isParseBigDecimal
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setParseBigDecimal(newValue : Bool) : Void;
+	@:require(java5) @:overload @:public public function setParseBigDecimal(newValue : Bool) : Void;
 	
 	/**
 	* Standard override; no change in semantics.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Overrides equals
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Overrides hashCode
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Synthesizes a pattern string that represents the current state
 	* of this Format object.
 	* @see #applyPattern
 	*/
-	@:overload public function toPattern() : String;
+	@:overload @:public public function toPattern() : String;
 	
 	/**
 	* Synthesizes a localized pattern string that represents the current
 	* state of this Format object.
 	* @see #applyPattern
 	*/
-	@:overload public function toLocalizedPattern() : String;
+	@:overload @:public public function toLocalizedPattern() : String;
 	
 	/**
 	* Apply the given pattern to this Format object.  A pattern is a
@@ -413,7 +413,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @exception NullPointerException if <code>pattern</code> is null
 	* @exception IllegalArgumentException if the given pattern is invalid.
 	*/
-	@:overload public function applyPattern(pattern : String) : Void;
+	@:overload @:public public function applyPattern(pattern : String) : Void;
 	
 	/**
 	* Apply the given pattern to this Format object.  The pattern
@@ -437,7 +437,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @exception NullPointerException if <code>pattern</code> is null
 	* @exception IllegalArgumentException if the given pattern is invalid.
 	*/
-	@:overload public function applyLocalizedPattern(pattern : String) : Void;
+	@:overload @:public public function applyLocalizedPattern(pattern : String) : Void;
 	
 	/**
 	* Sets the maximum number of digits allowed in the integer portion of a
@@ -447,7 +447,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* 309 is used. Negative input values are replaced with 0.
 	* @see NumberFormat#setMaximumIntegerDigits
 	*/
-	@:overload public function setMaximumIntegerDigits(newValue : Int) : Void;
+	@:overload @:public override public function setMaximumIntegerDigits(newValue : Int) : Void;
 	
 	/**
 	* Sets the minimum number of digits allowed in the integer portion of a
@@ -457,7 +457,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* 309 is used. Negative input values are replaced with 0.
 	* @see NumberFormat#setMinimumIntegerDigits
 	*/
-	@:overload public function setMinimumIntegerDigits(newValue : Int) : Void;
+	@:overload @:public override public function setMinimumIntegerDigits(newValue : Int) : Void;
 	
 	/**
 	* Sets the maximum number of digits allowed in the fraction portion of a
@@ -467,7 +467,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* 340 is used. Negative input values are replaced with 0.
 	* @see NumberFormat#setMaximumFractionDigits
 	*/
-	@:overload public function setMaximumFractionDigits(newValue : Int) : Void;
+	@:overload @:public override public function setMaximumFractionDigits(newValue : Int) : Void;
 	
 	/**
 	* Sets the minimum number of digits allowed in the fraction portion of a
@@ -477,7 +477,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* 340 is used. Negative input values are replaced with 0.
 	* @see NumberFormat#setMinimumFractionDigits
 	*/
-	@:overload public function setMinimumFractionDigits(newValue : Int) : Void;
+	@:overload @:public override public function setMinimumFractionDigits(newValue : Int) : Void;
 	
 	/**
 	* Gets the maximum number of digits allowed in the integer portion of a
@@ -487,7 +487,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* 309 is used.
 	* @see #setMaximumIntegerDigits
 	*/
-	@:overload public function getMaximumIntegerDigits() : Int;
+	@:overload @:public override public function getMaximumIntegerDigits() : Int;
 	
 	/**
 	* Gets the minimum number of digits allowed in the integer portion of a
@@ -497,7 +497,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* 309 is used.
 	* @see #setMinimumIntegerDigits
 	*/
-	@:overload public function getMinimumIntegerDigits() : Int;
+	@:overload @:public override public function getMinimumIntegerDigits() : Int;
 	
 	/**
 	* Gets the maximum number of digits allowed in the fraction portion of a
@@ -507,7 +507,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* 340 is used.
 	* @see #setMaximumFractionDigits
 	*/
-	@:overload public function getMaximumFractionDigits() : Int;
+	@:overload @:public override public function getMaximumFractionDigits() : Int;
 	
 	/**
 	* Gets the minimum number of digits allowed in the fraction portion of a
@@ -517,7 +517,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* 340 is used.
 	* @see #setMinimumFractionDigits
 	*/
-	@:overload public function getMinimumFractionDigits() : Int;
+	@:overload @:public override public function getMinimumFractionDigits() : Int;
 	
 	/**
 	* Gets the currency used by this decimal format when formatting
@@ -529,7 +529,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @return the currency used by this decimal format, or <code>null</code>
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getCurrency() : java.util.Currency;
+	@:require(java4) @:overload @:public override public function getCurrency() : java.util.Currency;
 	
 	/**
 	* Sets the currency used by this number format when formatting
@@ -543,7 +543,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @exception NullPointerException if <code>currency</code> is null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setCurrency(currency : java.util.Currency) : Void;
+	@:require(java4) @:overload @:public override public function setCurrency(currency : java.util.Currency) : Void;
 	
 	/**
 	* Gets the {@link java.math.RoundingMode} used in this DecimalFormat.
@@ -552,7 +552,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @see #setRoundingMode(RoundingMode)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getRoundingMode() : java.math.RoundingMode;
+	@:require(java6) @:overload @:public override public function getRoundingMode() : java.math.RoundingMode;
 	
 	/**
 	* Sets the {@link java.math.RoundingMode} used in this DecimalFormat.
@@ -562,7 +562,7 @@ extern class DecimalFormat extends java.text.NumberFormat
 	* @exception NullPointerException if <code>roundingMode</code> is null.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setRoundingMode(roundingMode : java.math.RoundingMode) : Void;
+	@:require(java6) @:overload @:public override public function setRoundingMode(roundingMode : java.math.RoundingMode) : Void;
 	
 	
 }

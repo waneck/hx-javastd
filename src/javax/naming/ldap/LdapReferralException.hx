@@ -32,13 +32,13 @@ extern class LdapReferralException extends javax.naming.ReferralException
 	* @param   explanation     Additional detail about this exception. Can be null.
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload private function new(explanation : String) : Void;
+	@:overload @:protected private function new(explanation : String) : Void;
 	
 	/**
 	* Constructs a new instance of LdapReferralException.
 	* All fields are set to null.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Retrieves the context at which to continue the method using the
@@ -60,7 +60,7 @@ extern class LdapReferralException extends javax.naming.ReferralException
 	* Call either <tt>retryReferral()</tt> or <tt>skipReferral()</tt>
 	* to continue processing referrals.
 	*/
-	@:overload @:abstract override public function getReferralContext() : javax.naming.Context;
+	@:overload @:public @:abstract override public function getReferralContext() : javax.naming.Context;
 	
 	/**
 	* Retrieves the context at which to continue the method using
@@ -84,7 +84,7 @@ extern class LdapReferralException extends javax.naming.ReferralException
 	* Call either <tt>retryReferral()</tt> or <tt>skipReferral()</tt>
 	* to continue processing referrals.
 	*/
-	@:overload @:abstract override public function getReferralContext(env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
+	@:overload @:public @:abstract override public function getReferralContext(env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
 	
 	/**
 	* Retrieves the context at which to continue the method using
@@ -122,7 +122,7 @@ extern class LdapReferralException extends javax.naming.ReferralException
 	* Call either <tt>retryReferral()</tt> or <tt>skipReferral()</tt>
 	* to continue processing referrals.
 	*/
-	@:overload @:abstract public function getReferralContext(env : java.util.Hashtable<Dynamic, Dynamic>, reqCtls : java.NativeArray<javax.naming.ldap.Control>) : javax.naming.Context;
+	@:overload @:public @:abstract public function getReferralContext(env : java.util.Hashtable<Dynamic, Dynamic>, reqCtls : java.NativeArray<javax.naming.ldap.Control>) : javax.naming.Context;
 	
 	
 }

@@ -37,14 +37,14 @@ package com.sun.management;
 	*
 	* @return the number of open file descriptors.
 	*/
-	@:overload public function getOpenFileDescriptorCount() : haxe.Int64;
+	@:overload @:public public function getOpenFileDescriptorCount() : haxe.Int64;
 	
 	/**
 	* Returns the maximum number of file descriptors.
 	*
 	* @return the maximum number of file descriptors.
 	*/
-	@:overload public function getMaxFileDescriptorCount() : haxe.Int64;
+	@:overload @:public public function getMaxFileDescriptorCount() : haxe.Int64;
 	
 	
 }

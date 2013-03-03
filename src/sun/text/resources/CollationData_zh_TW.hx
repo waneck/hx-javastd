@@ -41,7 +41,7 @@ package sun.text.resources;
 */
 extern class CollationData_zh_TW extends java.util.ListResourceBundle
 {
-	@:overload @:final override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:protected @:final override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

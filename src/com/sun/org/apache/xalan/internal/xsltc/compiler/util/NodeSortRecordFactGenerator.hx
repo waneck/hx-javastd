@@ -27,13 +27,13 @@ extern class NodeSortRecordFactGenerator extends com.sun.org.apache.xalan.intern
 	* Generator for subclasses of NodeSortRecordFactory.
 	* @author Santiago Pericas-Geertsen
 	*/
-	@:overload public function new(className : String, superClassName : String, fileName : String, accessFlags : Int, interfaces : java.NativeArray<String>, stylesheet : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet) : Void;
+	@:overload @:public public function new(className : String, superClassName : String, fileName : String, accessFlags : Int, interfaces : java.NativeArray<String>, stylesheet : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet) : Void;
 	
 	/**
 	* Returns <tt>true</tt> since this class is external to the
 	* translet.
 	*/
-	@:overload override public function isExternal() : Bool;
+	@:overload @:public override public function isExternal() : Bool;
 	
 	
 }

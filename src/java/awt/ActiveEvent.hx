@@ -53,7 +53,7 @@ package java.awt;
 	* Dispatch the event to its target, listeners of the events source,
 	* or do whatever it is this event is supposed to do.
 	*/
-	@:overload public function dispatch() : Void;
+	@:overload @:public public function dispatch() : Void;
 	
 	
 }

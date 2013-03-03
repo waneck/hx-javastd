@@ -20,19 +20,19 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 */
 @:internal extern class DOMValidatorHelper implements com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorHelper implements com.sun.org.apache.xerces.internal.impl.validation.EntityState
 {
-	@:overload public function new(componentManager : com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaValidatorComponentManager) : Void;
+	@:overload @:public public function new(componentManager : com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaValidatorComponentManager) : Void;
 	
 	/*
 	* ValidatorHelper methods
 	*/
-	@:overload public function validate(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
+	@:overload @:public public function validate(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
 	
 	/*
 	* EntityState methods
 	*/
-	@:overload public function isEntityDeclared(name : String) : Bool;
+	@:overload @:public public function isEntityDeclared(name : String) : Bool;
 	
-	@:overload public function isEntityUnparsed(name : String) : Bool;
+	@:overload @:public public function isEntityUnparsed(name : String) : Bool;
 	
 	
 }
@@ -46,34 +46,34 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 	* series of tuples containing the namespace binding information:
 	* &lt;prefix, uri&gt;.
 	*/
-	private var fNamespace : java.NativeArray<String>;
+	@:protected private var fNamespace : java.NativeArray<String>;
 	
 	/** The size of the namespace information array. */
-	private var fNamespaceSize : Int;
+	@:protected private var fNamespaceSize : Int;
 	
 	/**
 	* Flag indicating whether the namespace context
 	* has been from the root node's ancestors.
 	*/
-	private var fDOMContextBuilt : Bool;
+	@:protected private var fDOMContextBuilt : Bool;
 	
-	@:overload public function pushContext() : Void;
+	@:overload @:public public function pushContext() : Void;
 	
-	@:overload public function popContext() : Void;
+	@:overload @:public public function popContext() : Void;
 	
-	@:overload public function declarePrefix(prefix : String, uri : String) : Bool;
+	@:overload @:public public function declarePrefix(prefix : String, uri : String) : Bool;
 	
-	@:overload public function getURI(prefix : String) : String;
+	@:overload @:public public function getURI(prefix : String) : String;
 	
-	@:overload public function getPrefix(uri : String) : String;
+	@:overload @:public public function getPrefix(uri : String) : String;
 	
-	@:overload public function getDeclaredPrefixCount() : Int;
+	@:overload @:public public function getDeclaredPrefixCount() : Int;
 	
-	@:overload public function getDeclaredPrefixAt(index : Int) : String;
+	@:overload @:public public function getDeclaredPrefixAt(index : Int) : String;
 	
-	@:overload public function getAllPrefixes() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getAllPrefixes() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

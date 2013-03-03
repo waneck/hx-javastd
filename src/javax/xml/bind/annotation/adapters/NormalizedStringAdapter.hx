@@ -39,20 +39,20 @@ package javax.xml.bind.annotation.adapters;
 	* Replace any tab, CR, and LF by a whitespace character ' ',
 	* as specified in <a href="http://www.w3.org/TR/xmlschema-2/#rf-whiteSpace">the whitespace facet 'replace'</a>
 	*/
-	@:overload public function unmarshal(text : String) : String;
+	@:overload @:public public function unmarshal(text : String) : String;
 	
 	/**
 	* No-op.
 	*
 	* Just return the same string given as the parameter.
 	*/
-	@:overload public function marshal(s : String) : String;
+	@:overload @:public public function marshal(s : String) : String;
 	
 	/**
 	* Returns true if the specified char is a white space character
 	* but not 0x20.
 	*/
-	@:overload private static function isWhiteSpaceExceptSpace(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:protected @:static private static function isWhiteSpaceExceptSpace(ch : java.StdTypes.Char16) : Bool;
 	
 	
 }

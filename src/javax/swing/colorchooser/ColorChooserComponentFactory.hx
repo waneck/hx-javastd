@@ -25,9 +25,9 @@ package javax.swing.colorchooser;
 */
 extern class ColorChooserComponentFactory
 {
-	@:overload public static function getDefaultChooserPanels() : java.NativeArray<javax.swing.colorchooser.AbstractColorChooserPanel>;
+	@:overload @:public @:static public static function getDefaultChooserPanels() : java.NativeArray<javax.swing.colorchooser.AbstractColorChooserPanel>;
 	
-	@:overload public static function getPreviewPanel() : javax.swing.JComponent;
+	@:overload @:public @:static public static function getPreviewPanel() : javax.swing.JComponent;
 	
 	
 }

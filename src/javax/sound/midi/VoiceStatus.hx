@@ -87,7 +87,7 @@ extern class VoiceStatus
 	* See the explanation of
 	* <A HREF="#description_of_active">active and inactive voices</A>.
 	*/
-	public var active : Bool;
+	@:public public var active : Bool;
 	
 	/**
 	* The MIDI channel on which this voice is playing.  The value is a
@@ -97,7 +97,7 @@ extern class VoiceStatus
 	* @see MidiChannel
 	* @see #active
 	*/
-	public var channel : Int;
+	@:public public var channel : Int;
 	
 	/**
 	* The bank number of the instrument that this voice is currently using.
@@ -110,7 +110,7 @@ extern class VoiceStatus
 	* @see #active
 	* @see MidiChannel#programChange(int, int)
 	*/
-	public var bank : Int;
+	@:public public var bank : Int;
 	
 	/**
 	* The program number of the instrument that this voice is currently using.
@@ -121,7 +121,7 @@ extern class VoiceStatus
 	* @see Patch
 	* @see #active
 	*/
-	public var program : Int;
+	@:public public var program : Int;
 	
 	/**
 	* The MIDI note that this voice is playing.  The range for an active voice
@@ -131,7 +131,7 @@ extern class VoiceStatus
 	* @see MidiChannel#noteOn
 	* @see #active
 	*/
-	public var note : Int;
+	@:public public var note : Int;
 	
 	/**
 	* The current MIDI volume level for the voice.
@@ -146,7 +146,7 @@ extern class VoiceStatus
 	*
 	* @see #active
 	*/
-	public var volume : Int;
+	@:public public var volume : Int;
 	
 	
 }

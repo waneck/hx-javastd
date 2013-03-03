@@ -43,12 +43,12 @@ extern interface CSSMediaRule extends org.w3c.dom.css.CSSRule
 	/**
 	*  A list of media types for this rule.
 	*/
-	@:overload public function getMedia() : org.w3c.dom.stylesheets.MediaList;
+	@:overload @:public public function getMedia() : org.w3c.dom.stylesheets.MediaList;
 	
 	/**
 	*  A list of all CSS rules contained within the media block.
 	*/
-	@:overload public function getCssRules() : org.w3c.dom.css.CSSRuleList;
+	@:overload @:public public function getCssRules() : org.w3c.dom.css.CSSRuleList;
 	
 	/**
 	*  Used to insert a new rule into the media block.
@@ -73,7 +73,7 @@ extern interface CSSMediaRule extends org.w3c.dom.css.CSSRule
 	*   <br>SYNTAX_ERR: Raised if the specified rule has a syntax error and
 	*   is unparsable.
 	*/
-	@:overload public function insertRule(rule : String, index : Int) : Int;
+	@:overload @:public public function insertRule(rule : String, index : Int) : Int;
 	
 	/**
 	*  Used to delete a rule from the media block.
@@ -85,7 +85,7 @@ extern interface CSSMediaRule extends org.w3c.dom.css.CSSRule
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this media rule is
 	*   readonly.
 	*/
-	@:overload public function deleteRule(index : Int) : Void;
+	@:overload @:public public function deleteRule(index : Int) : Void;
 	
 	
 }

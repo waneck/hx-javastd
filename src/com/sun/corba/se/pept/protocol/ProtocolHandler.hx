@@ -36,7 +36,7 @@ extern interface ProtocolHandler
 	*
 	* @return deprecated
 	*/
-	@:overload public function handleRequest(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Bool;
+	@:overload @:public public function handleRequest(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Bool;
 	
 	
 }

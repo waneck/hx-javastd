@@ -83,18 +83,18 @@ extern interface PresentationManager
 	* @param expectedClass The expected stub type (may be null or unused).
 	* @param classLoader The classLoader to use (may be null).
 	*/
-	@:overload public function createStubFactory(className : String, isIDLStub : Bool, remoteCodeBase : String, expectedClass : Class<Dynamic>, classLoader : java.lang.ClassLoader) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory;
+	@:overload @:public public function createStubFactory(className : String, isIDLStub : Bool, remoteCodeBase : String, expectedClass : Class<Dynamic>, classLoader : java.lang.ClassLoader) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory;
 	
 	/** Return a Tie for the given class.
 	*/
-	@:overload public function getTie(cls : Class<Dynamic>) : javax.rmi.CORBA.Tie;
+	@:overload @:public public function getTie(cls : Class<Dynamic>) : javax.rmi.CORBA.Tie;
 	
 	/** Return whether or not this StubFactoryFactory creates StubFactory
 	* instances that create dynamic stubs and ties.  At the top level,
 	* true indicates that rmic -iiop is not needed for generating stubs
 	* or ties.
 	*/
-	@:overload public function createsDynamicStubs() : Bool;
+	@:overload @:public public function createsDynamicStubs() : Bool;
 	
 	
 }
@@ -106,7 +106,7 @@ extern interface PresentationManager
 	/** Create a new dynamic stub.  It has the type that was
 	* used to create this factory.
 	*/
-	@:overload public function makeStub() : org.omg.CORBA.Object;
+	@:overload @:public public function makeStub() : org.omg.CORBA.Object;
 	
 	/** Return the repository ID information for all Stubs
 	* created by this stub factory.

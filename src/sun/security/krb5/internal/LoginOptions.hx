@@ -68,25 +68,25 @@ extern class LoginOptions extends sun.security.krb5.internal.KDCOptions
 	* <a href="http://www.ietf.org/rfc/rfc4120.txt">
 	* http://www.ietf.org/rfc/rfc4120.txt</a>.
 	*/
-	public static var RESERVED(default, null) : Int;
+	@:public @:static @:final public static var RESERVED(default, null) : Int;
 	
-	public static var FORWARDABLE(default, null) : Int;
+	@:public @:static @:final public static var FORWARDABLE(default, null) : Int;
 	
-	public static var PROXIABLE(default, null) : Int;
+	@:public @:static @:final public static var PROXIABLE(default, null) : Int;
 	
-	public static var ALLOW_POSTDATE(default, null) : Int;
+	@:public @:static @:final public static var ALLOW_POSTDATE(default, null) : Int;
 	
-	public static var RENEWABLE(default, null) : Int;
+	@:public @:static @:final public static var RENEWABLE(default, null) : Int;
 	
-	public static var RENEWABLE_OK(default, null) : Int;
+	@:public @:static @:final public static var RENEWABLE_OK(default, null) : Int;
 	
-	public static var ENC_TKT_IN_SKEY(default, null) : Int;
+	@:public @:static @:final public static var ENC_TKT_IN_SKEY(default, null) : Int;
 	
-	public static var RENEW(default, null) : Int;
+	@:public @:static @:final public static var RENEW(default, null) : Int;
 	
-	public static var VALIDATE(default, null) : Int;
+	@:public @:static @:final public static var VALIDATE(default, null) : Int;
 	
-	public static var MAX(default, null) : Int;
+	@:public @:static @:final public static var MAX(default, null) : Int;
 	
 	
 }

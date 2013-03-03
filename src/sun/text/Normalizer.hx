@@ -29,7 +29,7 @@ extern class Normalizer
 	* Option to select Unicode 3.2 (without corrigendum 4 corrections) for
 	* normalization.
 	*/
-	public static var UNICODE_3_2(default, null) : Int;
+	@:public @:static @:final public static var UNICODE_3_2(default, null) : Int;
 	
 	/**
 	* Normalize a sequence of char values.
@@ -47,7 +47,7 @@ extern class Normalizer
 	* @throws NullPointerException If <code>src</code> or <code>form</code>
 	* is null.
 	*/
-	@:overload public static function normalize(src : java.lang.CharSequence, form : java.text.Normalizer.Normalizer_Form, option : Int) : String;
+	@:overload @:public @:static public static function normalize(src : java.lang.CharSequence, form : java.text.Normalizer.Normalizer_Form, option : Int) : String;
 	
 	/**
 	* Determines if the given sequence of char values is normalized.
@@ -64,14 +64,14 @@ extern class Normalizer
 	* @throws NullPointerException If <code>src</code> or <code>form</code>
 	* is null.
 	*/
-	@:overload public static function isNormalized(src : java.lang.CharSequence, form : java.text.Normalizer.Normalizer_Form, option : Int) : Bool;
+	@:overload @:public @:static public static function isNormalized(src : java.lang.CharSequence, form : java.text.Normalizer.Normalizer_Form, option : Int) : Bool;
 	
 	/**
 	* Returns the combining class of the given character
 	* @param ch character to retrieve combining class of
 	* @return combining class of the given character
 	*/
-	@:overload @:final public static function getCombiningClass(ch : Int) : Int;
+	@:overload @:public @:static @:final public static function getCombiningClass(ch : Int) : Int;
 	
 	
 }

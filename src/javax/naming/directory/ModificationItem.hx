@@ -52,7 +52,7 @@ package javax.naming.directory;
 	* @exception IllegalArgumentException If attr is null, or if mod_op is
 	*         not one of the ones specified above.
 	*/
-	@:overload public function new(mod_op : Int, attr : javax.naming.directory.Attribute) : Void;
+	@:overload @:public public function new(mod_op : Int, attr : javax.naming.directory.Attribute) : Void;
 	
 	/**
 	* Retrieves the modification code of this modification item.
@@ -61,13 +61,13 @@ package javax.naming.directory;
 	*         DirContext.REPLACE_ATTRIBUTE
 	*         DirContext.REMOVE_ATTRIBUTE
 	*/
-	@:overload public function getModificationOp() : Int;
+	@:overload @:public public function getModificationOp() : Int;
 	
 	/**
 	* Retrieves the attribute associated with this modification item.
 	* @return The non-null attribute to use for the modification.
 	*/
-	@:overload public function getAttribute() : javax.naming.directory.Attribute;
+	@:overload @:public public function getAttribute() : javax.naming.directory.Attribute;
 	
 	/**
 	* Generates the string representation of this modification item,
@@ -77,7 +77,7 @@ package javax.naming.directory;
 	*
 	* @return The non-null string representation of this modification item.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

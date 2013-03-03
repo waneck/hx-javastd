@@ -28,27 +28,27 @@ package sun.awt.X11;
 	/*
 	* @param returnValue the drop action selected by the Java drop target.
 	*/
-	@:overload private function eventProcessed(e : sun.awt.dnd.SunDropTargetEvent, returnValue : Int, dispatcherDone : Bool) : Void;
+	@:overload @:protected override private function eventProcessed(e : sun.awt.dnd.SunDropTargetEvent, returnValue : Int, dispatcherDone : Bool) : Void;
 	
-	@:overload private function doDropDone(success : Bool, dropAction : Int, isLocal : Bool) : Void;
+	@:overload @:protected override private function doDropDone(success : Bool, dropAction : Int, isLocal : Bool) : Void;
 	
-	@:overload private function getNativeData(format : haxe.Int64) : Dynamic;
+	@:overload @:protected override private function getNativeData(format : haxe.Int64) : Dynamic;
 	
-	@:overload private function processEnterMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
+	@:overload @:protected override private function processEnterMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
 	
-	@:overload private function processExitMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
+	@:overload @:protected override private function processExitMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
 	
-	@:overload private function processMotionMessage(event : sun.awt.dnd.SunDropTargetEvent, operationChanged : Bool) : Void;
+	@:overload @:protected override private function processMotionMessage(event : sun.awt.dnd.SunDropTargetEvent, operationChanged : Bool) : Void;
 	
-	@:overload private function processDropMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
+	@:overload @:protected override private function processDropMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
 	
-	@:overload public function forwardEventToEmbedded(embedded : haxe.Int64, ctxt : haxe.Int64, eventID : Int) : Void;
+	@:overload @:public public function forwardEventToEmbedded(embedded : haxe.Int64, ctxt : haxe.Int64, eventID : Int) : Void;
 	
 	
 }
 @:native('sun$awt$X11$XDropTargetContextPeer$XDropTargetProtocolListenerImpl') @:internal extern class XDropTargetContextPeer_XDropTargetProtocolListenerImpl implements sun.awt.X11.XDropTargetProtocolListener
 {
-	@:overload public function handleDropTargetNotification(xwindow : sun.awt.X11.XWindow, x : Int, y : Int, dropAction : Int, actions : Int, formats : java.NativeArray<haxe.Int64>, nativeCtxt : haxe.Int64, eventID : Int) : Void;
+	@:overload @:public public function handleDropTargetNotification(xwindow : sun.awt.X11.XWindow, x : Int, y : Int, dropAction : Int, actions : Int, formats : java.NativeArray<haxe.Int64>, nativeCtxt : haxe.Int64, eventID : Int) : Void;
 	
 	
 }

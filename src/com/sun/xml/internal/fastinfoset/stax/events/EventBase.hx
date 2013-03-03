@@ -28,32 +28,32 @@ package com.sun.xml.internal.fastinfoset.stax.events;
 extern class EventBase implements javax.xml.stream.events.XMLEvent
 {
 	/* Event type this event corresponds to */
-	private var _eventType : Int;
+	@:protected private var _eventType : Int;
 	
-	private var _location : javax.xml.stream.Location;
+	@:protected private var _location : javax.xml.stream.Location;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(eventType : Int) : Void;
+	@:overload @:public public function new(eventType : Int) : Void;
 	
 	/**
 	* Returns an integer code for this event.
 	*/
-	@:overload public function getEventType() : Int;
+	@:overload @:public public function getEventType() : Int;
 	
-	@:overload private function setEventType(eventType : Int) : Void;
+	@:overload @:protected private function setEventType(eventType : Int) : Void;
 	
-	@:overload public function isStartElement() : Bool;
+	@:overload @:public public function isStartElement() : Bool;
 	
-	@:overload public function isEndElement() : Bool;
+	@:overload @:public public function isEndElement() : Bool;
 	
-	@:overload public function isEntityReference() : Bool;
+	@:overload @:public public function isEntityReference() : Bool;
 	
-	@:overload public function isProcessingInstruction() : Bool;
+	@:overload @:public public function isProcessingInstruction() : Bool;
 	
-	@:overload public function isStartDocument() : Bool;
+	@:overload @:public public function isStartDocument() : Bool;
 	
-	@:overload public function isEndDocument() : Bool;
+	@:overload @:public public function isEndDocument() : Bool;
 	
 	/**
 	* Return the location of this event.  The Location
@@ -61,27 +61,27 @@ extern class EventBase implements javax.xml.stream.events.XMLEvent
 	* will retain its information.
 	* @see javax.xml.stream.Location
 	*/
-	@:overload public function getLocation() : javax.xml.stream.Location;
+	@:overload @:public public function getLocation() : javax.xml.stream.Location;
 	
-	@:overload public function setLocation(loc : javax.xml.stream.Location) : Void;
+	@:overload @:public public function setLocation(loc : javax.xml.stream.Location) : Void;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/** Returns this event as Characters, may result in
 	* a class cast exception if this event is not Characters.
 	*/
-	@:overload public function asCharacters() : javax.xml.stream.events.Characters;
+	@:overload @:public public function asCharacters() : javax.xml.stream.events.Characters;
 	
 	/** Returns this event as an end  element event, may result in
 	* a class cast exception if this event is not a end element.
 	*/
-	@:overload public function asEndElement() : javax.xml.stream.events.EndElement;
+	@:overload @:public public function asEndElement() : javax.xml.stream.events.EndElement;
 	
 	/**
 	* Returns this event as a start element event, may result in
 	* a class cast exception if this event is not a start element.
 	*/
-	@:overload public function asStartElement() : javax.xml.stream.events.StartElement;
+	@:overload @:public public function asStartElement() : javax.xml.stream.events.StartElement;
 	
 	/**
 	* This method is provided for implementations to provide
@@ -89,22 +89,22 @@ extern class EventBase implements javax.xml.stream.events.XMLEvent
 	* It is optional and will return null if no information
 	* is available.
 	*/
-	@:overload public function getSchemaType() : javax.xml.namespace.QName;
+	@:overload @:public public function getSchemaType() : javax.xml.namespace.QName;
 	
 	/** A utility function to check if this event is an Attribute.
 	* @see javax.xml.stream.events.Attribute
 	*/
-	@:overload public function isAttribute() : Bool;
+	@:overload @:public public function isAttribute() : Bool;
 	
 	/** A utility function to check if this event is Characters.
 	* @see javax.xml.stream.events.Characters
 	*/
-	@:overload public function isCharacters() : Bool;
+	@:overload @:public public function isCharacters() : Bool;
 	
 	/** A utility function to check if this event is a Namespace.
 	* @see javax.xml.stream.events.Namespace
 	*/
-	@:overload public function isNamespace() : Bool;
+	@:overload @:public public function isNamespace() : Bool;
 	
 	/**
 	* This method will write the XMLEvent as per the XML 1.0 specification as Unicode characters.
@@ -122,7 +122,7 @@ extern class EventBase implements javax.xml.stream.events.XMLEvent
 	* @param writer The writer that will output the data
 	* @throws XMLStreamException if there is a fatal error writing the event
 	*/
-	@:overload public function writeAsEncodedUnicode(writer : java.io.Writer) : Void;
+	@:overload @:public public function writeAsEncodedUnicode(writer : java.io.Writer) : Void;
 	
 	
 }

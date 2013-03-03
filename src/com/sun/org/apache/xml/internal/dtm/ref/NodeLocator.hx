@@ -30,13 +30,13 @@ extern class NodeLocator implements javax.xml.transform.SourceLocator
 	* @author <a href="mailto:ovidiu@cup.hp.com">Ovidiu Predescu</a>
 	* @since May 23, 2001
 	*/
-	private var m_publicId : String;
+	@:protected private var m_publicId : String;
 	
-	private var m_systemId : String;
+	@:protected private var m_systemId : String;
 	
-	private var m_lineNumber : Int;
+	@:protected private var m_lineNumber : Int;
 	
-	private var m_columnNumber : Int;
+	@:protected private var m_columnNumber : Int;
 	
 	/**
 	* Creates a new <code>NodeLocator</code> instance.
@@ -46,28 +46,28 @@ extern class NodeLocator implements javax.xml.transform.SourceLocator
 	* @param lineNumber an <code>int</code> value
 	* @param columnNumber an <code>int</code> value
 	*/
-	@:overload public function new(publicId : String, systemId : String, lineNumber : Int, columnNumber : Int) : Void;
+	@:overload @:public public function new(publicId : String, systemId : String, lineNumber : Int, columnNumber : Int) : Void;
 	
 	/**
 	* <code>getPublicId</code> returns the public ID of the node.
 	*
 	* @return a <code>String</code> value
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* <code>getSystemId</code> returns the system ID of the node.
 	*
 	* @return a <code>String</code> value
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* <code>getLineNumber</code> returns the line number of the node.
 	*
 	* @return an <code>int</code> value
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* <code>getColumnNumber</code> returns the column number of the
@@ -75,7 +75,7 @@ extern class NodeLocator implements javax.xml.transform.SourceLocator
 	*
 	* @return an <code>int</code> value
 	*/
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	/**
 	* <code>toString</code> returns a string representation of this
@@ -83,7 +83,7 @@ extern class NodeLocator implements javax.xml.transform.SourceLocator
 	*
 	* @return a <code>String</code> value
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

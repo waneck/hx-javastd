@@ -65,7 +65,7 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	* @param doc StyledDocument
 	*
 	*/
-	@:overload public function new(w : java.io.Writer, doc : javax.swing.text.StyledDocument) : Void;
+	@:overload @:public public function new(w : java.io.Writer, doc : javax.swing.text.StyledDocument) : Void;
 	
 	/**
 	* Creates a new MinimalHTMLWriter.
@@ -77,7 +77,7 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	* @param len The amount to write out.
 	*
 	*/
-	@:overload public function new(w : java.io.Writer, doc : javax.swing.text.StyledDocument, pos : Int, len : Int) : Void;
+	@:overload @:public public function new(w : java.io.Writer, doc : javax.swing.text.StyledDocument, pos : Int, len : Int) : Void;
 	
 	/**
 	* Generates HTML output
@@ -88,7 +88,7 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	*            location within the document.
 	*
 	*/
-	@:overload override public function write() : Void;
+	@:overload @:public override public function write() : Void;
 	
 	/**
 	* Writes out all the attributes for the
@@ -102,14 +102,14 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload override private function writeAttributes(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:protected override private function writeAttributes(attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Writes out text.
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload override private function text(elem : javax.swing.text.Element) : Void;
+	@:overload @:protected override private function text(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Writes out a start tag appropriately
@@ -117,7 +117,7 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function writeStartTag(tag : String) : Void;
+	@:overload @:protected private function writeStartTag(tag : String) : Void;
 	
 	/**
 	* Writes out an end tag appropriately
@@ -125,7 +125,7 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function writeEndTag(endTag : String) : Void;
+	@:overload @:protected private function writeEndTag(endTag : String) : Void;
 	
 	/**
 	* Writes out the &lt;head&gt; and &lt;style&gt;
@@ -138,7 +138,7 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function writeHeader() : Void;
+	@:overload @:protected private function writeHeader() : Void;
 	
 	/**
 	* Writes out all the named styles as the
@@ -146,7 +146,7 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function writeStyles() : Void;
+	@:overload @:protected private function writeStyles() : Void;
 	
 	/**
 	* Iterates over the elements in the document
@@ -156,7 +156,7 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function writeBody() : Void;
+	@:overload @:protected private function writeBody() : Void;
 	
 	/**
 	* Emits an end tag for a &lt;p&gt;
@@ -166,7 +166,7 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function writeEndParagraph() : Void;
+	@:overload @:protected private function writeEndParagraph() : Void;
 	
 	/**
 	* Emits the start tag for a paragraph. If
@@ -177,7 +177,7 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function writeStartParagraph(elem : javax.swing.text.Element) : Void;
+	@:overload @:protected private function writeStartParagraph(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Responsible for writing out other non-text leaf
@@ -185,7 +185,7 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function writeLeaf(elem : javax.swing.text.Element) : Void;
+	@:overload @:protected private function writeLeaf(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Responsible for handling Icon Elements;
@@ -198,20 +198,20 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	*
 	* @param elem element of type StyleConstants.IconElementName
 	*/
-	@:overload private function writeImage(elem : javax.swing.text.Element) : Void;
+	@:overload @:protected private function writeImage(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Responsible for handling Component Elements;
 	* deliberately unimplemented.
 	* How this method is implemented is a matter of policy.
 	*/
-	@:overload private function writeComponent(elem : javax.swing.text.Element) : Void;
+	@:overload @:protected private function writeComponent(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Returns true if the element is a text element.
 	*
 	*/
-	@:overload private function isText(elem : javax.swing.text.Element) : Bool;
+	@:overload @:protected private function isText(elem : javax.swing.text.Element) : Bool;
 	
 	/**
 	* Writes out the attribute set
@@ -221,7 +221,7 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	* @exception BadLocationException if pos represents an invalid
 	*            location within the document.
 	*/
-	@:overload private function writeContent(elem : javax.swing.text.Element, needsIndenting : Bool) : Void;
+	@:overload @:protected private function writeContent(elem : javax.swing.text.Element, needsIndenting : Bool) : Void;
 	
 	/**
 	* Generates
@@ -230,7 +230,7 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function writeHTMLTags(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:protected private function writeHTMLTags(attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Writes out the remaining
@@ -243,12 +243,12 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function writeNonHTMLAttributes(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:protected private function writeNonHTMLAttributes(attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Returns true if we are currently in a &lt;font&gt; tag.
 	*/
-	@:overload private function inFontTag() : Bool;
+	@:overload @:protected private function inFontTag() : Bool;
 	
 	/**
 	* This is no longer used, instead &lt;span&gt; will be written out.
@@ -257,7 +257,7 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function endFontTag() : Void;
+	@:overload @:protected private function endFontTag() : Void;
 	
 	/**
 	* This is no longer used, instead &lt;span&gt; will be written out.
@@ -270,7 +270,7 @@ extern class MinimalHTMLWriter extends javax.swing.text.AbstractWriter
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function startFontTag(style : String) : Void;
+	@:overload @:protected private function startFontTag(style : String) : Void;
 	
 	
 }

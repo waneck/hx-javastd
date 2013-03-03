@@ -53,7 +53,7 @@ package java.rmi.server;
 	* @see java.rmi.server.RMISocketFactory#setFailureHandler(RMIFailureHandler)
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function failure(ex : java.lang.Exception) : Bool;
+	@:require(java1) @:overload @:public public function failure(ex : java.lang.Exception) : Bool;
 	
 	
 }

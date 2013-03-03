@@ -28,12 +28,12 @@ extern class RSAKeyGenParameterSpec implements java.security.spec.AlgorithmParam
 	/**
 	* The public-exponent value F0 = 3.
 	*/
-	public static var F0(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var F0(default, null) : java.math.BigInteger;
 	
 	/**
 	* The public exponent-value F4 = 65537.
 	*/
-	public static var F4(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var F4(default, null) : java.math.BigInteger;
 	
 	/**
 	* Constructs a new <code>RSAParameterSpec</code> object from the
@@ -42,21 +42,21 @@ extern class RSAKeyGenParameterSpec implements java.security.spec.AlgorithmParam
 	* @param keysize the modulus size (specified in number of bits)
 	* @param publicExponent the public exponent
 	*/
-	@:overload public function new(keysize : Int, publicExponent : java.math.BigInteger) : Void;
+	@:overload @:public public function new(keysize : Int, publicExponent : java.math.BigInteger) : Void;
 	
 	/**
 	* Returns the keysize.
 	*
 	* @return the keysize.
 	*/
-	@:overload public function getKeysize() : Int;
+	@:overload @:public public function getKeysize() : Int;
 	
 	/**
 	* Returns the public-exponent value.
 	*
 	* @return the public-exponent value.
 	*/
-	@:overload public function getPublicExponent() : java.math.BigInteger;
+	@:overload @:public public function getPublicExponent() : java.math.BigInteger;
 	
 	
 }

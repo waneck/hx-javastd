@@ -35,7 +35,7 @@ extern class EffectiveAlternativeSelector
 	* @throws PolicyException Most likely an internal error if a policy could not be read or set on the policy map
 	* @see EffectivePolicyModifier which the map is bound to
 	*/
-	@:overload public static function doSelection(modifier : com.sun.xml.internal.ws.policy.EffectivePolicyModifier) : Void;
+	@:overload @:public @:static public static function doSelection(modifier : com.sun.xml.internal.ws.policy.EffectivePolicyModifier) : Void;
 	
 	/**
 	* This method is intended to be called by extension classes that need to
@@ -45,7 +45,7 @@ extern class EffectiveAlternativeSelector
 	* @param validationProcessor
 	* @throws PolicyException
 	*/
-	@:overload private static function selectAlternatives(modifier : com.sun.xml.internal.ws.policy.EffectivePolicyModifier, validationProcessor : com.sun.xml.internal.ws.policy.AssertionValidationProcessor) : Void;
+	@:overload @:protected @:static private static function selectAlternatives(modifier : com.sun.xml.internal.ws.policy.EffectivePolicyModifier, validationProcessor : com.sun.xml.internal.ws.policy.AssertionValidationProcessor) : Void;
 	
 	
 }

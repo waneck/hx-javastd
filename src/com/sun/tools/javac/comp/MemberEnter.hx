@@ -34,55 +34,55 @@ extern class MemberEnter extends com.sun.tools.javac.tree.JCTree.JCTree_Visitor 
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	private static var memberEnterKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.MemberEnter>;
+	@:protected @:static @:final private static var memberEnterKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.MemberEnter>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.MemberEnter;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.MemberEnter;
 	
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
 	/** Visitor argument: the current environment
 	*/
-	private var env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
+	@:protected private var env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
 	/** Enter field and method definitions and process import
 	*  clauses, catching any completion failure exceptions.
 	*/
-	@:overload private function memberEnter(tree : com.sun.tools.javac.tree.JCTree, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : Void;
+	@:overload @:protected private function memberEnter(tree : com.sun.tools.javac.tree.JCTree, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : Void;
 	
-	@:overload override public function visitTopLevel(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit) : Void;
+	@:overload @:public override public function visitTopLevel(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit) : Void;
 	
-	@:overload override public function visitImport(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCImport) : Void;
+	@:overload @:public override public function visitImport(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCImport) : Void;
 	
-	@:overload override public function visitMethodDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl) : Void;
+	@:overload @:public override public function visitMethodDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl) : Void;
 	
-	@:overload override public function visitVarDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl) : Void;
+	@:overload @:public override public function visitVarDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl) : Void;
 	
 	/** Default member enter visitor method: do nothing
 	*/
-	@:overload override public function visitTree(tree : com.sun.tools.javac.tree.JCTree) : Void;
+	@:overload @:public override public function visitTree(tree : com.sun.tools.javac.tree.JCTree) : Void;
 	
-	@:overload override public function visitErroneous(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCErroneous) : Void;
+	@:overload @:public override public function visitErroneous(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCErroneous) : Void;
 	
-	@:overload public function getMethodEnv(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
+	@:overload @:public public function getMethodEnv(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
-	@:overload public function getInitEnv(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
+	@:overload @:public public function getInitEnv(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
 	/** Complete entering a class.
 	*  @param sym         The symbol of the class to be completed.
 	*/
-	@:overload public function complete(sym : com.sun.tools.javac.code.Symbol) : Void;
+	@:overload @:public public function complete(sym : com.sun.tools.javac.code.Symbol) : Void;
 	
 	
 }
 @:native('com$sun$tools$javac$comp$MemberEnter$Synthesizer') @:internal extern class MemberEnter_Synthesizer extends com.sun.tools.javac.tree.JCTree.JCTree_Visitor
 {
-	@:overload override public function visitTree(tree : com.sun.tools.javac.tree.JCTree) : Void;
+	@:overload @:public override public function visitTree(tree : com.sun.tools.javac.tree.JCTree) : Void;
 	
-	@:overload override public function visitIdent(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCIdent) : Void;
+	@:overload @:public override public function visitIdent(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCIdent) : Void;
 	
-	@:overload override public function visitSelect(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
+	@:overload @:public override public function visitSelect(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
 	
-	@:overload override public function visitTypeApply(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeApply) : Void;
+	@:overload @:public override public function visitTypeApply(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeApply) : Void;
 	
 	
 }

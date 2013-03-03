@@ -29,11 +29,11 @@ package com.sun.xml.internal.messaging.saaj.soap.ver1_2;
 */
 extern class DetailEntry1_2Impl extends com.sun.xml.internal.messaging.saaj.soap.impl.DetailEntryImpl
 {
-	@:overload public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, qname : javax.xml.soap.Name) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, qname : javax.xml.soap.Name) : Void;
 	
-	@:overload public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, qname : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, qname : javax.xml.namespace.QName) : Void;
 	
-	@:overload override public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
 	
 }

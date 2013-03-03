@@ -72,7 +72,7 @@ extern class CK_PKCS5_PBKD2_PARAMS
 	*   CK_PKCS5_PBKDF2_SALT_SOURCE_TYPE saltSource;
 	* </PRE>
 	*/
-	public var saltSource : haxe.Int64;
+	@:public public var saltSource : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -81,7 +81,7 @@ extern class CK_PKCS5_PBKD2_PARAMS
 	*   CK_ULONG ulSaltSourceDataLen;
 	* </PRE>
 	*/
-	public var pSaltSourceData : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var pSaltSourceData : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -89,7 +89,7 @@ extern class CK_PKCS5_PBKD2_PARAMS
 	*   CK_ULONG iterations;
 	* </PRE>
 	*/
-	public var iterations : haxe.Int64;
+	@:public public var iterations : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -97,7 +97,7 @@ extern class CK_PKCS5_PBKD2_PARAMS
 	*   CK_PKCS5_PBKD2_PSEUDO_RANDOM_FUNCTION_TYPE prf;
 	* </PRE>
 	*/
-	public var prf : haxe.Int64;
+	@:public public var prf : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -106,14 +106,14 @@ extern class CK_PKCS5_PBKD2_PARAMS
 	*   CK_ULONG ulPrfDataLen;
 	* </PRE>
 	*/
-	public var pPrfData : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var pPrfData : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the string representation of CK_PKCS5_PBKD2_PARAMS.
 	*
 	* @return the string representation of CK_PKCS5_PBKD2_PARAMS
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

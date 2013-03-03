@@ -28,18 +28,18 @@ extern class AbstractFileTypeDetector extends java.nio.file.spi.FileTypeDetector
 	/**
 	* Base implementation of FileTypeDetector
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Invokes the appropriate probe method to guess a file's content type,
 	* and checks that the content type's syntax is valid.
 	*/
-	@:overload @:final override public function probeContentType(file : java.nio.file.Path) : String;
+	@:overload @:public @:final override public function probeContentType(file : java.nio.file.Path) : String;
 	
 	/**
 	* Probes the given file to guess its content type.
 	*/
-	@:overload @:abstract private function implProbeContentType(file : java.nio.file.Path) : String;
+	@:overload @:protected @:abstract private function implProbeContentType(file : java.nio.file.Path) : String;
 	
 	
 }

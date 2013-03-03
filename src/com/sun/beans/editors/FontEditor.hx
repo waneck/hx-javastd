@@ -25,35 +25,35 @@ package com.sun.beans.editors;
 */
 extern class FontEditor extends java.awt.Panel implements java.beans.PropertyEditor
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function preferredSize() : java.awt.Dimension;
+	@:overload @:public override public function preferredSize() : java.awt.Dimension;
 	
-	@:overload public function setValue(o : Dynamic) : Void;
+	@:overload @:public public function setValue(o : Dynamic) : Void;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
-	@:overload public function getJavaInitializationString() : String;
+	@:overload @:public public function getJavaInitializationString() : String;
 	
-	@:overload override public function action(e : java.awt.Event, arg : Dynamic) : Bool;
+	@:overload @:public override public function action(e : java.awt.Event, arg : Dynamic) : Bool;
 	
-	@:overload public function isPaintable() : Bool;
+	@:overload @:public public function isPaintable() : Bool;
 	
-	@:overload public function paintValue(gfx : java.awt.Graphics, box : java.awt.Rectangle) : Void;
+	@:overload @:public public function paintValue(gfx : java.awt.Graphics, box : java.awt.Rectangle) : Void;
 	
-	@:overload public function getAsText() : String;
+	@:overload @:public public function getAsText() : String;
 	
-	@:overload public function setAsText(text : String) : Void;
+	@:overload @:public public function setAsText(text : String) : Void;
 	
-	@:overload public function getTags() : java.NativeArray<String>;
+	@:overload @:public public function getTags() : java.NativeArray<String>;
 	
-	@:overload public function getCustomEditor() : java.awt.Component;
+	@:overload @:public public function getCustomEditor() : java.awt.Component;
 	
-	@:overload public function supportsCustomEditor() : Bool;
+	@:overload @:public public function supportsCustomEditor() : Bool;
 	
-	@:overload override public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload override public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
 	
 }

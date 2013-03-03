@@ -33,11 +33,11 @@ package java.awt;
 */
 @:require(java4) extern class HeadlessException extends java.lang.UnsupportedOperationException
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

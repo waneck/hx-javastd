@@ -51,7 +51,7 @@ extern class RenderingEngine
 	* @return an instance of {@code RenderingEngine}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:synchronized public static function getInstance() : sun.java2d.pipe.RenderingEngine;
+	@:require(java7) @:overload @:public @:static @:synchronized public static function getInstance() : sun.java2d.pipe.RenderingEngine;
 	
 	/**
 	* Create a widened path as specified by the parameters.
@@ -70,7 +70,7 @@ extern class RenderingEngine
 	* @return the widened path stored in a new {@code Shape} object
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function createStrokedShape(src : java.awt.Shape, width : Single, caps : Int, join : Int, miterlimit : Single, dashes : java.NativeArray<Single>, dashphase : Single) : java.awt.Shape;
+	@:require(java7) @:overload @:public @:abstract public function createStrokedShape(src : java.awt.Shape, width : Single, caps : Int, join : Int, miterlimit : Single, dashes : java.NativeArray<Single>, dashphase : Single) : java.awt.Shape;
 	
 	/**
 	* Sends the geometry for a widened path as specified by the parameters
@@ -99,7 +99,7 @@ extern class RenderingEngine
 	*                 the widened geometry to
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function strokeTo(src : java.awt.Shape, at : java.awt.geom.AffineTransform, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, antialias : Bool, consumer : sun.awt.geom.PathConsumer2D) : Void;
+	@:require(java7) @:overload @:public @:abstract public function strokeTo(src : java.awt.Shape, at : java.awt.geom.AffineTransform, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, antialias : Bool, consumer : sun.awt.geom.PathConsumer2D) : Void;
 	
 	/**
 	* Construct an antialiased tile generator for the given shape with
@@ -148,7 +148,7 @@ extern class RenderingEngine
 	*         for tile coverages, or null if there is no output to render
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function getAATileGenerator(s : java.awt.Shape, at : java.awt.geom.AffineTransform, clip : sun.java2d.pipe.Region, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
+	@:require(java7) @:overload @:public @:abstract public function getAATileGenerator(s : java.awt.Shape, at : java.awt.geom.AffineTransform, clip : sun.java2d.pipe.Region, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
 	
 	/**
 	* Construct an antialiased tile generator for the given parallelogram
@@ -209,14 +209,14 @@ extern class RenderingEngine
 	*         for tile coverages, or null if there is no output to render
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function getAATileGenerator(x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float, clip : sun.java2d.pipe.Region, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
+	@:require(java7) @:overload @:public @:abstract public function getAATileGenerator(x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float, clip : sun.java2d.pipe.Region, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
 	
 	/**
 	* Returns the minimum pen width that the antialiasing rasterizer
 	* can represent without dropouts occuring.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function getMinimumAAPenSize() : Single;
+	@:require(java7) @:overload @:public @:abstract public function getMinimumAAPenSize() : Single;
 	
 	/**
 	* Utility method to feed a {@link PathConsumer2D} object from a
@@ -224,23 +224,23 @@ extern class RenderingEngine
 	* This method deals with the details of running the iterator and
 	* feeding the consumer a segment at a time.
 	*/
-	@:overload public static function feedConsumer(pi : java.awt.geom.PathIterator, consumer : sun.awt.geom.PathConsumer2D) : Void;
+	@:overload @:public @:static public static function feedConsumer(pi : java.awt.geom.PathIterator, consumer : sun.awt.geom.PathConsumer2D) : Void;
 	
 	
 }
 @:native('sun$java2d$pipe$RenderingEngine$Tracer') @:internal extern class RenderingEngine_Tracer extends sun.java2d.pipe.RenderingEngine
 {
-	@:overload public function new(target : sun.java2d.pipe.RenderingEngine) : Void;
+	@:overload @:public public function new(target : sun.java2d.pipe.RenderingEngine) : Void;
 	
-	@:overload override public function createStrokedShape(src : java.awt.Shape, width : Single, caps : Int, join : Int, miterlimit : Single, dashes : java.NativeArray<Single>, dashphase : Single) : java.awt.Shape;
+	@:overload @:public override public function createStrokedShape(src : java.awt.Shape, width : Single, caps : Int, join : Int, miterlimit : Single, dashes : java.NativeArray<Single>, dashphase : Single) : java.awt.Shape;
 	
-	@:overload override public function strokeTo(src : java.awt.Shape, at : java.awt.geom.AffineTransform, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, antialias : Bool, consumer : sun.awt.geom.PathConsumer2D) : Void;
+	@:overload @:public override public function strokeTo(src : java.awt.Shape, at : java.awt.geom.AffineTransform, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, antialias : Bool, consumer : sun.awt.geom.PathConsumer2D) : Void;
 	
-	@:overload override public function getMinimumAAPenSize() : Single;
+	@:overload @:public override public function getMinimumAAPenSize() : Single;
 	
-	@:overload override public function getAATileGenerator(s : java.awt.Shape, at : java.awt.geom.AffineTransform, clip : sun.java2d.pipe.Region, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
+	@:overload @:public override public function getAATileGenerator(s : java.awt.Shape, at : java.awt.geom.AffineTransform, clip : sun.java2d.pipe.Region, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
 	
-	@:overload override public function getAATileGenerator(x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float, clip : sun.java2d.pipe.Region, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
+	@:overload @:public override public function getAATileGenerator(x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float, clip : sun.java2d.pipe.Region, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
 	
 	
 }

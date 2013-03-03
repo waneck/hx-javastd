@@ -28,18 +28,18 @@ extern class ByteArrayOutputStreamEx extends java.io.ByteArrayOutputStream
 	/**
 	* {@link ByteArrayOutputStream} with access to its raw buffer.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
-	@:overload public function set(dt : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Base64Data, mimeType : String) : Void;
+	@:overload @:public public function set(dt : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Base64Data, mimeType : String) : Void;
 	
-	@:overload public function getBuffer() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBuffer() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Reads the given {@link InputStream} completely into the buffer.
 	*/
-	@:overload public function readFrom(is : java.io.InputStream) : Void;
+	@:overload @:public public function readFrom(is : java.io.InputStream) : Void;
 	
 	
 }

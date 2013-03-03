@@ -49,9 +49,9 @@ package com.sun.xml.internal.rngom.digested;
 */
 extern class DOptionalPattern extends com.sun.xml.internal.rngom.digested.DUnaryPattern
 {
-	@:overload public function isNullable() : Bool;
+	@:overload @:public override public function isNullable() : Bool;
 	
-	@:overload public function accept(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<Dynamic>) : Dynamic;
+	@:overload @:public override public function accept(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<Dynamic>) : Dynamic;
 	
 	
 }

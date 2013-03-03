@@ -43,7 +43,7 @@ extern class MBeanServerFileAccessController extends com.sun.jmx.remote.security
 	* @exception IllegalArgumentException if any of the supplied access
 	* level values differs from "readonly" or "readwrite".
 	*/
-	@:overload public function new(accessFileName : String) : Void;
+	@:overload @:public public function new(accessFileName : String) : Void;
 	
 	/**
 	* <p>Create a new MBeanServerAccessController that forwards all the
@@ -64,7 +64,7 @@ extern class MBeanServerFileAccessController extends com.sun.jmx.remote.security
 	* @exception IllegalArgumentException if any of the supplied access
 	* level values differs from "readonly" or "readwrite".
 	*/
-	@:overload public function new(accessFileName : String, mbs : javax.management.MBeanServer) : Void;
+	@:overload @:public public function new(accessFileName : String, mbs : javax.management.MBeanServer) : Void;
 	
 	/**
 	* <p>Create a new MBeanServerAccessController that forwards all the
@@ -88,7 +88,7 @@ extern class MBeanServerFileAccessController extends com.sun.jmx.remote.security
 	* <code>null</code> or if any of the supplied access level values differs
 	* from "readonly" or "readwrite".
 	*/
-	@:overload public function new(accessFileProps : java.util.Properties) : Void;
+	@:overload @:public public function new(accessFileProps : java.util.Properties) : Void;
 	
 	/**
 	* <p>Create a new MBeanServerAccessController that forwards all the
@@ -114,31 +114,31 @@ extern class MBeanServerFileAccessController extends com.sun.jmx.remote.security
 	* <code>null</code> or if any of the supplied access level values differs
 	* from "readonly" or "readwrite".
 	*/
-	@:overload public function new(accessFileProps : java.util.Properties, mbs : javax.management.MBeanServer) : Void;
+	@:overload @:public public function new(accessFileProps : java.util.Properties, mbs : javax.management.MBeanServer) : Void;
 	
 	/**
 	* Check if the caller can do read operations. This method does
 	* nothing if so, otherwise throws SecurityException.
 	*/
-	@:overload public function checkRead() : Void;
+	@:overload @:public override public function checkRead() : Void;
 	
 	/**
 	* Check if the caller can do write operations.  This method does
 	* nothing if so, otherwise throws SecurityException.
 	*/
-	@:overload public function checkWrite() : Void;
+	@:overload @:public override public function checkWrite() : Void;
 	
 	/**
 	* Check if the caller can create MBeans or instances of the given class.
 	* This method does nothing if so, otherwise throws SecurityException.
 	*/
-	@:overload public function checkCreate(className : String) : Void;
+	@:overload @:public override public function checkCreate(className : String) : Void;
 	
 	/**
 	* Check if the caller can do unregister operations.  This method does
 	* nothing if so, otherwise throws SecurityException.
 	*/
-	@:overload public function checkUnregister(name : javax.management.ObjectName) : Void;
+	@:overload @:public override public function checkUnregister(name : javax.management.ObjectName) : Void;
 	
 	/**
 	* <p>Refresh the set of username/access level entries.</p>
@@ -162,7 +162,7 @@ extern class MBeanServerFileAccessController extends com.sun.jmx.remote.security
 	* @exception IllegalArgumentException if any of the supplied access
 	* level values differs from "readonly" or "readwrite".
 	*/
-	@:overload @:synchronized public function refresh() : Void;
+	@:overload @:public @:synchronized public function refresh() : Void;
 	
 	
 }

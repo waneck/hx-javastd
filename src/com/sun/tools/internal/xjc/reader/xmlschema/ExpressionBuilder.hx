@@ -29,21 +29,21 @@ extern class ExpressionBuilder implements com.sun.xml.internal.xsom.visitor.XSTe
 	* Visits {@link XSParticle} and creates a corresponding {@link Expression} tree.
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public static function createTree(p : com.sun.xml.internal.xsom.XSParticle) : com.sun.tools.internal.xjc.reader.gbind.Expression;
+	@:overload @:public @:static public static function createTree(p : com.sun.xml.internal.xsom.XSParticle) : com.sun.tools.internal.xjc.reader.gbind.Expression;
 	
 	/**
 	* We can only have one {@link XmlAnyElement} property,
 	* so all the wildcards need to be treated as one node.
 	*/
-	@:overload public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : com.sun.tools.internal.xjc.reader.gbind.Expression;
+	@:overload @:public public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : com.sun.tools.internal.xjc.reader.gbind.Expression;
 	
-	@:overload public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : com.sun.tools.internal.xjc.reader.gbind.Expression;
+	@:overload @:public public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : com.sun.tools.internal.xjc.reader.gbind.Expression;
 	
-	@:overload public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : com.sun.tools.internal.xjc.reader.gbind.Expression;
+	@:overload @:public public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : com.sun.tools.internal.xjc.reader.gbind.Expression;
 	
-	@:overload public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : com.sun.tools.internal.xjc.reader.gbind.Element;
+	@:overload @:public public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : com.sun.tools.internal.xjc.reader.gbind.Element;
 	
-	@:overload public function particle(p : com.sun.xml.internal.xsom.XSParticle) : com.sun.tools.internal.xjc.reader.gbind.Expression;
+	@:overload @:public public function particle(p : com.sun.xml.internal.xsom.XSParticle) : com.sun.tools.internal.xjc.reader.gbind.Expression;
 	
 	
 }

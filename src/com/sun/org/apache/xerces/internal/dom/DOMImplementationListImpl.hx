@@ -23,26 +23,26 @@ extern class DOMImplementationListImpl implements org.w3c.dom.DOMImplementationL
 	/**
 	* Construct an empty list of DOMImplementations
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct an empty list of DOMImplementations
 	*/
-	@:overload public function new(params : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function new(params : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* Returns the indexth item in the collection.
 	*
 	* @param index The index of the DOMImplemetation from the list to return.
 	*/
-	@:overload public function item(index : Int) : org.w3c.dom.DOMImplementation;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.DOMImplementation;
 	
 	/**
 	* Returns the number of DOMImplementations in the list.
 	*
 	* @return An integer indicating the number of DOMImplementations.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	
 }

@@ -35,7 +35,7 @@ package java.lang.ref;
 	/**
 	* Constructs a new reference-object queue.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Polls this queue to see if a reference object is available.  If one is
@@ -45,7 +45,7 @@ package java.lang.ref;
 	* @return  A reference object, if one was immediately available,
 	*          otherwise <code>null</code>
 	*/
-	@:overload public function poll() : java.lang.ref.Reference<T>;
+	@:overload @:public public function poll() : java.lang.ref.Reference<T>;
 	
 	/**
 	* Removes the next reference object in this queue, blocking until either
@@ -67,7 +67,7 @@ package java.lang.ref;
 	* @throws  InterruptedException
 	*          If the timeout wait is interrupted
 	*/
-	@:overload public function remove(timeout : haxe.Int64) : java.lang.ref.Reference<T>;
+	@:overload @:public public function remove(timeout : haxe.Int64) : java.lang.ref.Reference<T>;
 	
 	/**
 	* Removes the next reference object in this queue, blocking until one
@@ -76,7 +76,7 @@ package java.lang.ref;
 	* @return A reference object, blocking until one becomes available
 	* @throws  InterruptedException  If the wait is interrupted
 	*/
-	@:overload public function remove() : java.lang.ref.Reference<T>;
+	@:overload @:public public function remove() : java.lang.ref.Reference<T>;
 	
 	
 }

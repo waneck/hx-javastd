@@ -53,21 +53,21 @@ package java.util.concurrent.atomic;
 	* @param initialRef the initial reference
 	* @param initialMark the initial mark
 	*/
-	@:overload public function new(initialRef : V, initialMark : Bool) : Void;
+	@:overload @:public public function new(initialRef : V, initialMark : Bool) : Void;
 	
 	/**
 	* Returns the current value of the reference.
 	*
 	* @return the current value of the reference
 	*/
-	@:overload public function getReference() : V;
+	@:overload @:public public function getReference() : V;
 	
 	/**
 	* Returns the current value of the mark.
 	*
 	* @return the current value of the mark
 	*/
-	@:overload public function isMarked() : Bool;
+	@:overload @:public public function isMarked() : Bool;
 	
 	/**
 	* Returns the current values of both the reference and the mark.
@@ -77,7 +77,7 @@ package java.util.concurrent.atomic;
 	* {@code markholder[0]} will hold the value of the mark.
 	* @return the current value of the reference
 	*/
-	@:overload public function get(markHolder : java.NativeArray<Bool>) : V;
+	@:overload @:public public function get(markHolder : java.NativeArray<Bool>) : V;
 	
 	/**
 	* Atomically sets the value of both the reference and mark
@@ -95,7 +95,7 @@ package java.util.concurrent.atomic;
 	* @param newMark the new value for the mark
 	* @return true if successful
 	*/
-	@:overload public function weakCompareAndSet(expectedReference : V, newReference : V, expectedMark : Bool, newMark : Bool) : Bool;
+	@:overload @:public public function weakCompareAndSet(expectedReference : V, newReference : V, expectedMark : Bool, newMark : Bool) : Bool;
 	
 	/**
 	* Atomically sets the value of both the reference and mark
@@ -109,7 +109,7 @@ package java.util.concurrent.atomic;
 	* @param newMark the new value for the mark
 	* @return true if successful
 	*/
-	@:overload public function compareAndSet(expectedReference : V, newReference : V, expectedMark : Bool, newMark : Bool) : Bool;
+	@:overload @:public public function compareAndSet(expectedReference : V, newReference : V, expectedMark : Bool, newMark : Bool) : Bool;
 	
 	/**
 	* Unconditionally sets the value of both the reference and mark.
@@ -117,7 +117,7 @@ package java.util.concurrent.atomic;
 	* @param newReference the new value for the reference
 	* @param newMark the new value for the mark
 	*/
-	@:overload public function set(newReference : V, newMark : Bool) : Void;
+	@:overload @:public public function set(newReference : V, newMark : Bool) : Void;
 	
 	/**
 	* Atomically sets the value of the mark to the given update value
@@ -132,7 +132,7 @@ package java.util.concurrent.atomic;
 	* @param newMark the new value for the mark
 	* @return true if successful
 	*/
-	@:overload public function attemptMark(expectedReference : V, newMark : Bool) : Bool;
+	@:overload @:public public function attemptMark(expectedReference : V, newMark : Bool) : Bool;
 	
 	
 }

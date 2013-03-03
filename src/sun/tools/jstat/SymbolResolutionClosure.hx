@@ -25,9 +25,9 @@ package sun.tools.jstat;
 */
 extern class SymbolResolutionClosure implements sun.tools.jstat.Closure
 {
-	@:overload public function new(ee : sun.tools.jstat.ExpressionEvaluator) : Void;
+	@:overload @:public public function new(ee : sun.tools.jstat.ExpressionEvaluator) : Void;
 	
-	@:overload public function visit(o : Dynamic, hasNext : Bool) : Void;
+	@:overload @:public public function visit(o : Dynamic, hasNext : Bool) : Void;
 	
 	
 }

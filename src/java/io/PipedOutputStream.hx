@@ -49,7 +49,7 @@ package java.io;
 	* @param      snk   The piped input stream to connect to.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function new(snk : java.io.PipedInputStream) : Void;
+	@:overload @:public public function new(snk : java.io.PipedInputStream) : Void;
 	
 	/**
 	* Creates a piped output stream that is not yet connected to a
@@ -59,7 +59,7 @@ package java.io;
 	* @see     java.io.PipedInputStream#connect(java.io.PipedOutputStream)
 	* @see     java.io.PipedOutputStream#connect(java.io.PipedInputStream)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Connects this piped output stream to a receiver. If this object
@@ -79,7 +79,7 @@ package java.io;
 	* @param      snk   the piped input stream to connect to.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:synchronized public function connect(snk : java.io.PipedInputStream) : Void;
+	@:overload @:public @:synchronized public function connect(snk : java.io.PipedInputStream) : Void;
 	
 	/**
 	* Writes the specified <code>byte</code> to the piped output stream.
@@ -91,7 +91,7 @@ package java.io;
 	*          {@link #connect(java.io.PipedInputStream) unconnected},
 	*          closed, or if an I/O error occurs.
 	*/
-	@:overload public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
 	/**
 	* Writes <code>len</code> bytes from the specified byte array
@@ -106,7 +106,7 @@ package java.io;
 	*          {@link #connect(java.io.PipedInputStream) unconnected},
 	*          closed, or if an I/O error occurs.
 	*/
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Flushes this output stream and forces any buffered output bytes
@@ -115,7 +115,7 @@ package java.io;
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload @:synchronized public function flush() : Void;
+	@:overload @:public @:synchronized override public function flush() : Void;
 	
 	/**
 	* Closes this piped output stream and releases any system resources
@@ -124,7 +124,7 @@ package java.io;
 	*
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

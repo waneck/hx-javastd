@@ -29,7 +29,7 @@ extern class JarURLConnection extends java.net.URLConnection
 	* The connection to the JAR file URL, if the connection has been
 	* initiated. This should be set by connect.
 	*/
-	private var jarFileURLConnection : java.net.URLConnection;
+	@:protected private var jarFileURLConnection : java.net.URLConnection;
 	
 	/**
 	* Creates the new JarURLConnection to the specified URL.
@@ -38,14 +38,14 @@ extern class JarURLConnection extends java.net.URLConnection
 	* could be found in a specification string or the
 	* string could not be parsed.
 	*/
-	@:overload private function new(url : java.net.URL) : Void;
+	@:overload @:protected private function new(url : java.net.URL) : Void;
 	
 	/**
 	* Returns the URL for the Jar file for this connection.
 	*
 	* @return the URL for the Jar file for this connection.
 	*/
-	@:overload public function getJarFileURL() : java.net.URL;
+	@:overload @:public public function getJarFileURL() : java.net.URL;
 	
 	/**
 	* Return the entry name for this connection. This method
@@ -54,7 +54,7 @@ extern class JarURLConnection extends java.net.URLConnection
 	*
 	* @return the entry name for this connection, if any.
 	*/
-	@:overload public function getEntryName() : String;
+	@:overload @:public public function getEntryName() : String;
 	
 	/**
 	* Return the JAR file for this connection.
@@ -68,7 +68,7 @@ extern class JarURLConnection extends java.net.URLConnection
 	*
 	* @see #connect
 	*/
-	@:overload @:abstract public function getJarFile() : java.util.jar.JarFile;
+	@:overload @:public @:abstract public function getJarFile() : java.util.jar.JarFile;
 	
 	/**
 	* Returns the Manifest for this connection, or null if none.
@@ -81,7 +81,7 @@ extern class JarURLConnection extends java.net.URLConnection
 	*
 	* @see #getJarFile
 	*/
-	@:overload public function getManifest() : java.util.jar.Manifest;
+	@:overload @:public public function getManifest() : java.util.jar.Manifest;
 	
 	/**
 	* Return the JAR entry object for this connection, if any. This
@@ -97,7 +97,7 @@ extern class JarURLConnection extends java.net.URLConnection
 	* @see #getJarFile
 	* @see #getJarEntry
 	*/
-	@:overload public function getJarEntry() : java.util.jar.JarEntry;
+	@:overload @:public public function getJarEntry() : java.util.jar.JarEntry;
 	
 	/**
 	* Return the Attributes object for this connection if the URL
@@ -111,7 +111,7 @@ extern class JarURLConnection extends java.net.URLConnection
 	*
 	* @see #getJarEntry
 	*/
-	@:overload public function getAttributes() : java.util.jar.Attributes;
+	@:overload @:public public function getAttributes() : java.util.jar.Attributes;
 	
 	/**
 	* Returns the main Attributes for the JAR file for this
@@ -126,7 +126,7 @@ extern class JarURLConnection extends java.net.URLConnection
 	* @see #getJarFile
 	* @see #getManifest
 	*/
-	@:overload public function getMainAttributes() : java.util.jar.Attributes;
+	@:overload @:public public function getMainAttributes() : java.util.jar.Attributes;
 	
 	/**
 	* Return the Certificate object for this connection if the URL
@@ -144,7 +144,7 @@ extern class JarURLConnection extends java.net.URLConnection
 	*
 	* @see #getJarEntry
 	*/
-	@:overload public function getCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public public function getCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	
 }

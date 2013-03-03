@@ -35,7 +35,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	* @param doIndexing true if the caller considers it worth it to use
 	*                   indexing schemes.
 	*/
-	@:overload public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool) : Void;
+	@:overload @:public public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool) : Void;
 	
 	/**
 	* Construct a DTMDefaultBaseTraversers object from a DOM node.
@@ -52,7 +52,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	* @param usePrevsib true if we want to build the previous sibling node array.
 	* @param newNameTable true if we want to use a new ExpandedNameTable for this DTM.
 	*/
-	@:overload public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool, blocksize : Int, usePrevsib : Bool, newNameTable : Bool) : Void;
+	@:overload @:public public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool, blocksize : Int, usePrevsib : Bool, newNameTable : Bool) : Void;
 	
 	/**
 	* This returns a stateless "traverser", that can navigate
@@ -62,7 +62,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return A DTMAxisTraverser, or null if the given axis isn't supported.
 	*/
-	@:overload override public function getAxisTraverser(axis : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser;
+	@:overload @:public override public function getAxisTraverser(axis : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser;
 	
 	
 }
@@ -79,7 +79,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node that is matched
@@ -91,7 +91,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -109,7 +109,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int) : Int;
+	@:overload @:public override public function first(context : Int) : Int;
 	
 	/**
 	* By the nature of the stateless traversal, the context node can not be
@@ -123,7 +123,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function first(context : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -140,7 +140,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node that is matched
@@ -152,7 +152,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -173,7 +173,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return The node ID or NULL if not found.
 	*/
-	@:overload private function getNextIndexed(axisRoot : Int, nextPotential : Int, expandedTypeID : Int) : Int;
+	@:overload @:protected private function getNextIndexed(axisRoot : Int, nextPotential : Int, expandedTypeID : Int) : Int;
 	
 	/**
 	* By the nature of the stateless traversal, the context node can not be
@@ -187,7 +187,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	* that the traversal starts from.
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int) : Int;
+	@:overload @:public override public function first(context : Int) : Int;
 	
 	/**
 	* By the nature of the stateless traversal, the context node can not be
@@ -203,7 +203,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function first(context : Int, expandedTypeID : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node.
@@ -213,7 +213,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node that is matched
@@ -225,7 +225,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -245,7 +245,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	* @return true if it is OK to call the
 	*         {@link #getNextIndexed(int, int, int) getNextIndexed} method.
 	*/
-	@:overload @:final private function isIndexed(expandedTypeID : Int) : Bool;
+	@:overload @:protected @:final private function isIndexed(expandedTypeID : Int) : Bool;
 	
 	/**
 	* Tell if a node is outside the axis being traversed.  This method must be
@@ -257,7 +257,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return true if the given node falls outside the axis being traversed.
 	*/
-	@:overload @:abstract private function isAfterAxis(axisRoot : Int, identity : Int) : Bool;
+	@:overload @:protected @:abstract private function isAfterAxis(axisRoot : Int, identity : Int) : Bool;
 	
 	/**
 	* Tell if the axis has been fully processed to tell if a the wait for
@@ -268,7 +268,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return true if the axis has been fully processed.
 	*/
-	@:overload @:abstract private function axisHasBeenProcessed(axisRoot : Int) : Bool;
+	@:overload @:protected @:abstract private function axisHasBeenProcessed(axisRoot : Int) : Bool;
 	
 	/**
 	* Get the next indexed node that matches the expanded type ID.  Before
@@ -282,7 +282,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return The node ID or NULL if not found.
 	*/
-	@:overload private function getNextIndexed(axisRoot : Int, nextPotential : Int, expandedTypeID : Int) : Int;
+	@:overload @:protected private function getNextIndexed(axisRoot : Int, nextPotential : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -299,7 +299,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return The first potential node that can be in the traversal.
 	*/
-	@:overload private function getFirstPotential(identity : Int) : Int;
+	@:overload @:protected private function getFirstPotential(identity : Int) : Int;
 	
 	/**
 	* Tell if the axis has been fully processed to tell if a the wait for
@@ -309,7 +309,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return true if the axis has been fully processed.
 	*/
-	@:overload override private function axisHasBeenProcessed(axisRoot : Int) : Bool;
+	@:overload @:protected override private function axisHasBeenProcessed(axisRoot : Int) : Bool;
 	
 	/**
 	* Get the subtree root identity from the handle that was passed in by
@@ -319,7 +319,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	* @param handle handle to the root context.
 	* @return identity of the root of the subtree.
 	*/
-	@:overload private function getSubtreeRoot(handle : Int) : Int;
+	@:overload @:protected private function getSubtreeRoot(handle : Int) : Int;
 	
 	/**
 	* Tell if this node identity is a descendant.  Assumes that
@@ -333,7 +333,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	* @param identity The index number of the node in question.
 	* @return true if the index is a descendant of _startNode.
 	*/
-	@:overload private function isDescendant(subtreeRootIdentity : Int, identity : Int) : Bool;
+	@:overload @:protected private function isDescendant(subtreeRootIdentity : Int, identity : Int) : Bool;
 	
 	/**
 	* Tell if a node is outside the axis being traversed.  This method must be
@@ -345,7 +345,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return true if the given node falls outside the axis being traversed.
 	*/
-	@:overload override private function isAfterAxis(axisRoot : Int, identity : Int) : Bool;
+	@:overload @:protected override private function isAfterAxis(axisRoot : Int, identity : Int) : Bool;
 	
 	/**
 	* By the nature of the stateless traversal, the context node can not be
@@ -361,7 +361,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function first(context : Int, expandedTypeID : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node.
@@ -371,7 +371,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node that is matched
@@ -383,7 +383,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -400,7 +400,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return The axis context.
 	*/
-	@:overload override private function getFirstPotential(identity : Int) : Int;
+	@:overload @:protected override private function getFirstPotential(identity : Int) : Int;
 	
 	/**
 	* By the nature of the stateless traversal, the context node can not be
@@ -411,7 +411,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int) : Int;
+	@:overload @:public override public function first(context : Int) : Int;
 	
 	
 }
@@ -428,7 +428,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int) : Int;
 	
 	
 }
@@ -444,7 +444,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	* that the traversal starts from.
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int) : Int;
+	@:overload @:public override public function first(context : Int) : Int;
 	
 	/**
 	* Get the first of the following.
@@ -455,7 +455,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function first(context : Int, expandedTypeID : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node.
@@ -465,7 +465,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node that is matched
@@ -477,7 +477,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -494,7 +494,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node that is matched
@@ -506,7 +506,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -523,7 +523,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node that is matched
@@ -535,7 +535,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -552,7 +552,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node that is matched
@@ -564,7 +564,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -585,7 +585,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	* that the traversal starts from.
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int) : Int;
+	@:overload @:public override public function first(context : Int) : Int;
 	
 	/**
 	* By the nature of the stateless traversal, the context node can not be
@@ -601,7 +601,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(current : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function first(current : Int, expandedTypeID : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node.
@@ -611,7 +611,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node that is matched
@@ -623,7 +623,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -641,7 +641,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	* @param currentIdent The node in question.
 	* @return true if the currentIdent node is an ancestor of contextIdent.
 	*/
-	@:overload private function isAncestor(contextIdent : Int, currentIdent : Int) : Bool;
+	@:overload @:protected private function isAncestor(contextIdent : Int, currentIdent : Int) : Bool;
 	
 	/**
 	* Traverse to the next node after the current node.
@@ -651,7 +651,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node that is matched
@@ -663,7 +663,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -681,7 +681,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node that is matched
@@ -693,7 +693,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -710,7 +710,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node that is matched
@@ -722,7 +722,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -740,7 +740,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int) : Int;
+	@:overload @:public override public function first(context : Int) : Int;
 	
 	/**
 	* By the nature of the stateless traversal, the context node can not be
@@ -754,7 +754,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function first(context : Int, expandedTypeID : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node.
@@ -764,7 +764,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return Always return NULL for this axis.
 	*/
-	@:overload override public function next(context : Int, current : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node that is matched
@@ -776,7 +776,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -792,7 +792,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int) : Int;
+	@:overload @:public override public function first(context : Int) : Int;
 	
 	/**
 	* Return the root if it matches the expanded type ID.
@@ -802,7 +802,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function first(context : Int, expandedTypeID : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node.
@@ -812,7 +812,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node that is matched
@@ -824,7 +824,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -842,7 +842,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function first(context : Int, expandedTypeID : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node.
@@ -852,7 +852,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return Always return NULL for this axis.
 	*/
-	@:overload override public function next(context : Int, current : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node that is matched
@@ -864,7 +864,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the next node in the iteration, or DTM.NULL.
 	*/
-	@:overload override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function next(context : Int, current : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -882,14 +882,14 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return The identity argument.
 	*/
-	@:overload override private function getFirstPotential(identity : Int) : Int;
+	@:overload @:protected override private function getFirstPotential(identity : Int) : Int;
 	
 	/**
 	* Get the first potential identity that can be returned.
 	* @param handle handle to the root context.
 	* @return identity of the root of the subtree.
 	*/
-	@:overload override private function getSubtreeRoot(handle : Int) : Int;
+	@:overload @:protected override private function getSubtreeRoot(handle : Int) : Int;
 	
 	/**
 	* Return the root.
@@ -898,7 +898,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int) : Int;
+	@:overload @:public override public function first(context : Int) : Int;
 	
 	/**
 	* By the nature of the stateless traversal, the context node can not be
@@ -914,7 +914,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function first(context : Int, expandedTypeID : Int) : Int;
 	
 	
 }
@@ -932,14 +932,14 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return The identity argument.
 	*/
-	@:overload override private function getFirstPotential(identity : Int) : Int;
+	@:overload @:protected override private function getFirstPotential(identity : Int) : Int;
 	
 	/**
 	* Get the first potential identity that can be returned.
 	* @param handle handle to the root context.
 	* @return identity of the root of the subtree.
 	*/
-	@:overload override private function getSubtreeRoot(handle : Int) : Int;
+	@:overload @:protected override private function getSubtreeRoot(handle : Int) : Int;
 	
 	/**
 	* Return the root.
@@ -948,7 +948,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int) : Int;
+	@:overload @:public override public function first(context : Int) : Int;
 	
 	/**
 	* By the nature of the stateless traversal, the context node can not be
@@ -964,7 +964,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload override public function first(context : Int, expandedTypeID : Int) : Int;
+	@:overload @:public override public function first(context : Int, expandedTypeID : Int) : Int;
 	
 	
 }

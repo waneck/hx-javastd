@@ -174,14 +174,14 @@ package java.nio;
 	*
 	* @return  The capacity of this buffer
 	*/
-	@:overload @:final public function capacity() : Int;
+	@:overload @:public @:final public function capacity() : Int;
 	
 	/**
 	* Returns this buffer's position. </p>
 	*
 	* @return  The position of this buffer
 	*/
-	@:overload @:final public function position() : Int;
+	@:overload @:public @:final public function position() : Int;
 	
 	/**
 	* Sets this buffer's position.  If the mark is defined and larger than the
@@ -196,14 +196,14 @@ package java.nio;
 	* @throws  IllegalArgumentException
 	*          If the preconditions on <tt>newPosition</tt> do not hold
 	*/
-	@:overload @:final public function position(newPosition : Int) : java.nio.Buffer;
+	@:overload @:public @:final public function position(newPosition : Int) : java.nio.Buffer;
 	
 	/**
 	* Returns this buffer's limit. </p>
 	*
 	* @return  The limit of this buffer
 	*/
-	@:overload @:final public function limit() : Int;
+	@:overload @:public @:final public function limit() : Int;
 	
 	/**
 	* Sets this buffer's limit.  If the position is larger than the new limit
@@ -219,14 +219,14 @@ package java.nio;
 	* @throws  IllegalArgumentException
 	*          If the preconditions on <tt>newLimit</tt> do not hold
 	*/
-	@:overload @:final public function limit(newLimit : Int) : java.nio.Buffer;
+	@:overload @:public @:final public function limit(newLimit : Int) : java.nio.Buffer;
 	
 	/**
 	* Sets this buffer's mark at its position. </p>
 	*
 	* @return  This buffer
 	*/
-	@:overload @:final public function mark() : java.nio.Buffer;
+	@:overload @:public @:final public function mark() : java.nio.Buffer;
 	
 	/**
 	* Resets this buffer's position to the previously-marked position.
@@ -239,7 +239,7 @@ package java.nio;
 	* @throws  InvalidMarkException
 	*          If the mark has not been set
 	*/
-	@:overload @:final public function reset() : java.nio.Buffer;
+	@:overload @:public @:final public function reset() : java.nio.Buffer;
 	
 	/**
 	* Clears this buffer.  The position is set to zero, the limit is set to
@@ -258,7 +258,7 @@ package java.nio;
 	*
 	* @return  This buffer
 	*/
-	@:overload @:final public function clear() : java.nio.Buffer;
+	@:overload @:public @:final public function clear() : java.nio.Buffer;
 	
 	/**
 	* Flips this buffer.  The limit is set to the current position and then
@@ -281,7 +281,7 @@ package java.nio;
 	*
 	* @return  This buffer
 	*/
-	@:overload @:final public function flip() : java.nio.Buffer;
+	@:overload @:public @:final public function flip() : java.nio.Buffer;
 	
 	/**
 	* Rewinds this buffer.  The position is set to zero and the mark is
@@ -298,7 +298,7 @@ package java.nio;
 	*
 	* @return  This buffer
 	*/
-	@:overload @:final public function rewind() : java.nio.Buffer;
+	@:overload @:public @:final public function rewind() : java.nio.Buffer;
 	
 	/**
 	* Returns the number of elements between the current position and the
@@ -306,7 +306,7 @@ package java.nio;
 	*
 	* @return  The number of elements remaining in this buffer
 	*/
-	@:overload @:final public function remaining() : Int;
+	@:overload @:public @:final public function remaining() : Int;
 	
 	/**
 	* Tells whether there are any elements between the current position and
@@ -315,14 +315,14 @@ package java.nio;
 	* @return  <tt>true</tt> if, and only if, there is at least one element
 	*          remaining in this buffer
 	*/
-	@:overload @:final public function hasRemaining() : Bool;
+	@:overload @:public @:final public function hasRemaining() : Bool;
 	
 	/**
 	* Tells whether or not this buffer is read-only. </p>
 	*
 	* @return  <tt>true</tt> if, and only if, this buffer is read-only
 	*/
-	@:overload @:abstract public function isReadOnly() : Bool;
+	@:overload @:public @:abstract public function isReadOnly() : Bool;
 	
 	/**
 	* Tells whether or not this buffer is backed by an accessible
@@ -337,7 +337,7 @@ package java.nio;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function hasArray() : Bool;
+	@:require(java6) @:overload @:public @:abstract public function hasArray() : Bool;
 	
 	/**
 	* Returns the array that backs this
@@ -364,7 +364,7 @@ package java.nio;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function array() : Dynamic;
+	@:require(java6) @:overload @:public @:abstract public function array() : Dynamic;
 	
 	/**
 	* Returns the offset within this buffer's backing array of the first
@@ -388,7 +388,7 @@ package java.nio;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function arrayOffset() : Int;
+	@:require(java6) @:overload @:public @:abstract public function arrayOffset() : Int;
 	
 	/**
 	* Tells whether or not this buffer is
@@ -398,7 +398,7 @@ package java.nio;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function isDirect() : Bool;
+	@:require(java6) @:overload @:public @:abstract public function isDirect() : Bool;
 	
 	
 }

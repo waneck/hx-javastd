@@ -51,7 +51,7 @@ package javax.management;
 	*
 	* @see #getDescriptor
 	*/
-	@:overload public function setDescriptor(inDescriptor : javax.management.Descriptor) : Void;
+	@:overload @:public public function setDescriptor(inDescriptor : javax.management.Descriptor) : Void;
 	
 	
 }

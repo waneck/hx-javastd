@@ -87,7 +87,7 @@ package java.util;
 	* Constructs a new, empty set; the backing <tt>HashMap</tt> instance has
 	* default initial capacity (16) and load factor (0.75).
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new set containing the elements in the specified
@@ -98,7 +98,7 @@ package java.util;
 	* @param c the collection whose elements are to be placed into this set
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload public function new(c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	/**
 	* Constructs a new, empty set; the backing <tt>HashMap</tt> instance has
@@ -109,7 +109,7 @@ package java.util;
 	* @throws     IllegalArgumentException if the initial capacity is less
 	*             than zero, or if the load factor is nonpositive
 	*/
-	@:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
 	/**
 	* Constructs a new, empty set; the backing <tt>HashMap</tt> instance has
@@ -119,7 +119,7 @@ package java.util;
 	* @throws     IllegalArgumentException if the initial capacity is less
 	*             than zero
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Returns an iterator over the elements in this set.  The elements
@@ -128,21 +128,21 @@ package java.util;
 	* @return an Iterator over the elements in this set
 	* @see ConcurrentModificationException
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
 	/**
 	* Returns the number of elements in this set (its cardinality).
 	*
 	* @return the number of elements in this set (its cardinality)
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this set contains no elements.
 	*
 	* @return <tt>true</tt> if this set contains no elements
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this set contains the specified element.
@@ -153,7 +153,7 @@ package java.util;
 	* @param o element whose presence in this set is to be tested
 	* @return <tt>true</tt> if this set contains the specified element
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Adds the specified element to this set if it is not already present.
@@ -167,7 +167,7 @@ package java.util;
 	* @return <tt>true</tt> if this set did not already contain the specified
 	* element
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* Removes the specified element from this set if it is present.
@@ -181,13 +181,13 @@ package java.util;
 	* @param o object to be removed from this set, if present
 	* @return <tt>true</tt> if the set contained the specified element
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Removes all of the elements from this set.
 	* The set will be empty after this call returns.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns a shallow copy of this <tt>HashSet</tt> instance: the elements
@@ -195,7 +195,7 @@ package java.util;
 	*
 	* @return a shallow copy of this set
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

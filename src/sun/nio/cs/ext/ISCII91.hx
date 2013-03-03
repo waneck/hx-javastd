@@ -27,24 +27,15 @@ package sun.nio.cs.ext;
 */
 extern class ISCII91 extends java.nio.charset.Charset implements sun.nio.cs.HistoricallyNamedCharset
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function historicalName() : String;
+	@:overload @:public public function historicalName() : String;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
-	
-	/**
-	* This accessor is temporarily supplied while sun.io
-	* converters co-exist with the sun.nio.cs.{ext} charset coders
-	* These facilitate sharing of conversion tables between the
-	* two co-existing implementations. When sun.io converters
-	* are made extinct these will be unnecessary and should be removed
-	*/
-	@:overload public static function getDirectMapTable() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	/**
 	* This accessor is temporarily supplied while sun.io
@@ -53,23 +44,32 @@ extern class ISCII91 extends java.nio.charset.Charset implements sun.nio.cs.Hist
 	* two co-existing implementations. When sun.io converters
 	* are made extinct these will be unnecessary and should be removed
 	*/
-	@:overload public static function getEncoderMappingTable() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function getDirectMapTable() : java.NativeArray<java.StdTypes.Char16>;
+	
+	/**
+	* This accessor is temporarily supplied while sun.io
+	* converters co-exist with the sun.nio.cs.{ext} charset coders
+	* These facilitate sharing of conversion tables between the
+	* two co-existing implementations. When sun.io converters
+	* are made extinct these will be unnecessary and should be removed
+	*/
+	@:overload @:public @:static public static function getEncoderMappingTable() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('sun$nio$cs$ext$ISCII91$Decoder') @:internal extern class ISCII91_Decoder extends java.nio.charset.CharsetDecoder
 {
-	@:overload override private function implFlush(out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function implFlush(out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
 	
 }
 @:native('sun$nio$cs$ext$ISCII91$Encoder') @:internal extern class ISCII91_Encoder extends java.nio.charset.CharsetEncoder
 {
-	@:overload override public function canEncode(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canEncode(ch : java.StdTypes.Char16) : Bool;
 	
-	@:overload override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
 	
 }

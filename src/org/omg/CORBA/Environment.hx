@@ -38,19 +38,19 @@ package org.omg.CORBA;
 	*
 	* @return                  the exception in this <code>Environment</code> object
 	*/
-	@:overload @:abstract public function exception() : java.lang.Exception;
+	@:overload @:public @:abstract public function exception() : java.lang.Exception;
 	
 	/**
 	* Inserts the given exception into this <code>Environment</code> object.
 	*
 	* @param except            the exception to be set
 	*/
-	@:overload @:abstract public function exception(except : java.lang.Exception) : Void;
+	@:overload @:public @:abstract public function exception(except : java.lang.Exception) : Void;
 	
 	/**
 	* Clears this <code>Environment</code> object of its exception.
 	*/
-	@:overload @:abstract public function clear() : Void;
+	@:overload @:public @:abstract public function clear() : Void;
 	
 	
 }

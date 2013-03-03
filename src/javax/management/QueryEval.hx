@@ -40,7 +40,7 @@ extern class QueryEval implements java.io.Serializable
 	*
 	* @see #getMBeanServer
 	*/
-	@:overload public function setMBeanServer(s : javax.management.MBeanServer) : Void;
+	@:overload @:public public function setMBeanServer(s : javax.management.MBeanServer) : Void;
 	
 	/**
 	* <p>Return the MBean server that was most recently given to the
@@ -55,7 +55,7 @@ extern class QueryEval implements java.io.Serializable
 	* @see #setMBeanServer
 	*
 	*/
-	@:overload public static function getMBeanServer() : javax.management.MBeanServer;
+	@:overload @:public @:static public static function getMBeanServer() : javax.management.MBeanServer;
 	
 	
 }

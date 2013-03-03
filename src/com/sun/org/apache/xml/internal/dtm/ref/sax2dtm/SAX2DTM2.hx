@@ -46,15 +46,15 @@ package com.sun.org.apache.xml.internal.dtm.ref.sax2dtm;
 */
 extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX2DTM
 {
-	private var m_extendedTypes : java.NativeArray<com.sun.org.apache.xml.internal.dtm.ref.ExtendedType>;
+	@:protected private var m_extendedTypes : java.NativeArray<com.sun.org.apache.xml.internal.dtm.ref.ExtendedType>;
 	
-	private var m_values : java.util.Vector<Dynamic>;
+	@:protected private var m_values : java.util.Vector<Dynamic>;
 	
-	private var m_SHIFT : Int;
+	@:protected private var m_SHIFT : Int;
 	
-	private var m_MASK : Int;
+	@:protected private var m_MASK : Int;
 	
-	private var m_blocksize : Int;
+	@:protected private var m_blocksize : Int;
 	
 	/** %OPT% If the offset and length of a Text node are within certain limits,
 	* we store a bitwise encoded value into an int, using 10 bits (max. 1024)
@@ -62,25 +62,25 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* calls for each getStringValueX() and dispatchCharacterEvents() call by
 	* doing this.
 	*/
-	private static var TEXT_LENGTH_BITS(default, null) : Int;
+	@:protected @:final @:static private static var TEXT_LENGTH_BITS(default, null) : Int;
 	
-	private static var TEXT_OFFSET_BITS(default, null) : Int;
+	@:protected @:final @:static private static var TEXT_OFFSET_BITS(default, null) : Int;
 	
-	private static var TEXT_LENGTH_MAX(default, null) : Int;
+	@:protected @:final @:static private static var TEXT_LENGTH_MAX(default, null) : Int;
 	
-	private static var TEXT_OFFSET_MAX(default, null) : Int;
+	@:protected @:final @:static private static var TEXT_OFFSET_MAX(default, null) : Int;
 	
-	private var m_buildIdIndex : Bool;
+	@:protected private var m_buildIdIndex : Bool;
 	
 	/**
 	* Construct a SAX2DTM2 object using the default block size.
 	*/
-	@:overload public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool) : Void;
+	@:overload @:public public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool) : Void;
 	
 	/**
 	* Construct a SAX2DTM2 object using the given block size.
 	*/
-	@:overload public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool, blocksize : Int, usePrevsib : Bool, buildIdIndex : Bool, newNameTable : Bool) : Void;
+	@:overload @:public public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool, blocksize : Int, usePrevsib : Bool, buildIdIndex : Bool, newNameTable : Bool) : Void;
 	
 	/**
 	* Override DTMDefaultBase._exptype() by dropping the incremental code.
@@ -88,7 +88,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* <p>This one is less efficient than _exptype2. It is only used during
 	* DTM building. _exptype2 is used after the document is fully built.
 	*/
-	@:overload @:final override public function _exptype(identity : Int) : Int;
+	@:overload @:public @:final override public function _exptype(identity : Int) : Int;
 	
 	/**
 	* The optimized version of DTMDefaultBase._exptype().
@@ -96,7 +96,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @param identity A node identity, which <em>must not</em> be equal to
 	*        <code>DTM.NULL</code>
 	*/
-	@:overload @:final public function _exptype2(identity : Int) : Int;
+	@:overload @:public @:final public function _exptype2(identity : Int) : Int;
 	
 	/**
 	* The optimized version of DTMDefaultBase._nextsib().
@@ -104,7 +104,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @param identity A node identity, which <em>must not</em> be equal to
 	*        <code>DTM.NULL</code>
 	*/
-	@:overload @:final public function _nextsib2(identity : Int) : Int;
+	@:overload @:public @:final public function _nextsib2(identity : Int) : Int;
 	
 	/**
 	* The optimized version of DTMDefaultBase._firstch().
@@ -112,7 +112,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @param identity A node identity, which <em>must not</em> be equal to
 	*        <code>DTM.NULL</code>
 	*/
-	@:overload @:final public function _firstch2(identity : Int) : Int;
+	@:overload @:public @:final public function _firstch2(identity : Int) : Int;
 	
 	/**
 	* The optimized version of DTMDefaultBase._parent().
@@ -120,7 +120,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @param identity A node identity, which <em>must not</em> be equal to
 	*        <code>DTM.NULL</code>
 	*/
-	@:overload @:final public function _parent2(identity : Int) : Int;
+	@:overload @:public @:final public function _parent2(identity : Int) : Int;
 	
 	/**
 	* The optimized version of DTMDefaultBase._type().
@@ -128,7 +128,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @param identity A node identity, which <em>must not</em> be equal to
 	*        <code>DTM.NULL</code>
 	*/
-	@:overload @:final public function _type2(identity : Int) : Int;
+	@:overload @:public @:final public function _type2(identity : Int) : Int;
 	
 	/**
 	* The optimized version of DTMDefaultBase.getExpandedTypeID(int).
@@ -136,12 +136,12 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* <p>This one is only used by DOMAdapter.getExpandedTypeID(int), which
 	* is mostly called from the compiled translets.
 	*/
-	@:overload @:final public function getExpandedTypeID2(nodeHandle : Int) : Int;
+	@:overload @:public @:final public function getExpandedTypeID2(nodeHandle : Int) : Int;
 	
 	/**
 	* Return the node type from the expanded type
 	*/
-	@:overload @:final public function _exptype2Type(exptype : Int) : Int;
+	@:overload @:public @:final public function _exptype2Type(exptype : Int) : Int;
 	
 	/**
 	* Get a prefix either from the uri mapping, or just make
@@ -151,7 +151,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return The prefix if there is one, or null.
 	*/
-	@:overload public function getIdForNamespace(uri : String) : Int;
+	@:overload @:public override public function getIdForNamespace(uri : String) : Int;
 	
 	/**
 	* Override SAX2DTM.startElement()
@@ -176,7 +176,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#startElement
 	*/
-	@:overload public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -198,7 +198,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#endElement
 	*/
-	@:overload public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Report an XML comment anywhere in the document.
@@ -212,7 +212,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @param length The number of characters to use from the array.
 	* @throws SAXException The application may raise an exception.
 	*/
-	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of the beginning of the document.
@@ -221,7 +221,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#startDocument
 	*/
-	@:overload public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
 	/**
 	* Receive notification of the end of the document.
@@ -230,7 +230,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#endDocument
 	*/
-	@:overload public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
 	/**
 	* Construct the node map from the node.
@@ -245,13 +245,13 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return The index identity of the node that was added.
 	*/
-	@:overload @:final private function addNode(type : Int, expandedTypeID : Int, parentIndex : Int, previousSibling : Int, dataOrPrefix : Int, canHaveFirstChild : Bool) : Int;
+	@:overload @:protected @:final override private function addNode(type : Int, expandedTypeID : Int, parentIndex : Int, previousSibling : Int, dataOrPrefix : Int, canHaveFirstChild : Bool) : Int;
 	
 	/**
 	* Check whether accumulated text should be stripped; if not,
 	* append the appropriate flavor of text/cdata node.
 	*/
-	@:overload @:final private function charactersFlush() : Void;
+	@:overload @:protected @:final override private function charactersFlush() : Void;
 	
 	/**
 	* Override the processingInstruction() interface in SAX2DTM2.
@@ -269,7 +269,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#processingInstruction
 	*/
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public override public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* The optimized version of DTMDefaultBase.getFirstAttribute().
@@ -279,7 +279,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @param nodeHandle int Handle of the node.
 	* @return Handle of first attribute, or DTM.NULL to indicate none exists.
 	*/
-	@:overload @:final override public function getFirstAttribute(nodeHandle : Int) : Int;
+	@:overload @:public @:final override public function getFirstAttribute(nodeHandle : Int) : Int;
 	
 	/**
 	* The optimized version of DTMDefaultBase.getFirstAttributeIdentity(int).
@@ -289,7 +289,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @param identity int identity of the node.
 	* @return Identity of first attribute, or DTM.NULL to indicate none exists.
 	*/
-	@:overload override private function getFirstAttributeIdentity(identity : Int) : Int;
+	@:overload @:protected override private function getFirstAttributeIdentity(identity : Int) : Int;
 	
 	/**
 	* The optimized version of DTMDefaultBase.getNextAttributeIdentity(int).
@@ -303,7 +303,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* or DTM.NULL to indicate none exists.
 	*
 	*/
-	@:overload override private function getNextAttributeIdentity(identity : Int) : Int;
+	@:overload @:protected override private function getNextAttributeIdentity(identity : Int) : Int;
 	
 	/**
 	* The optimized version of DTMDefaultBase.getTypedAttribute(int, int).
@@ -316,7 +316,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @return Handle of attribute of the required type, or DTM.NULL to indicate
 	* none exists.
 	*/
-	@:overload @:final override private function getTypedAttribute(nodeHandle : Int, attType : Int) : Int;
+	@:overload @:protected @:final override private function getTypedAttribute(nodeHandle : Int, attType : Int) : Int;
 	
 	/**
 	* Override SAX2DTM.getLocalName() in SAX2DTM2.
@@ -328,7 +328,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @param nodeHandle the id of the node.
 	* @return String Local name of this node.
 	*/
-	@:overload override public function getLocalName(nodeHandle : Int) : String;
+	@:overload @:public override public function getLocalName(nodeHandle : Int) : String;
 	
 	/**
 	* The optimized version of SAX2DTM.getNodeNameX().
@@ -339,7 +339,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @param nodeHandle the id of the node.
 	* @return String Name of this node, which may be an empty string.
 	*/
-	@:overload @:final override public function getNodeNameX(nodeHandle : Int) : String;
+	@:overload @:public @:final override public function getNodeNameX(nodeHandle : Int) : String;
 	
 	/**
 	* The optimized version of SAX2DTM.getNodeName().
@@ -352,7 +352,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* %REVIEW% Document when empty string is possible...
 	* %REVIEW-COMMENT% It should never be empty, should it?
 	*/
-	@:overload override public function getNodeName(nodeHandle : Int) : String;
+	@:overload @:public override public function getNodeName(nodeHandle : Int) : String;
 	
 	/**
 	* Override SAX2DTM.getStringValue(int)
@@ -371,7 +371,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A string object that represents the string-value of the given node.
 	*/
-	@:overload override public function getStringValue(nodeHandle : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public override public function getStringValue(nodeHandle : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* The optimized version of SAX2DTM.getStringValue(int).
@@ -387,12 +387,12 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A string object that represents the string-value of the given node.
 	*/
-	@:overload @:final public function getStringValueX(nodeHandle : Int) : String;
+	@:overload @:public @:final public function getStringValueX(nodeHandle : Int) : String;
 	
 	/**
 	* Returns the string value of the entire tree
 	*/
-	@:overload public function getStringValue() : String;
+	@:overload @:public public function getStringValue() : String;
 	
 	/**
 	* The optimized version of SAX2DTM.dispatchCharactersEvents(int, ContentHandler, boolean).
@@ -413,7 +413,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @throws SAXException
 	*/
-	@:overload @:final override public function dispatchCharactersEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler, normalize : Bool) : Void;
+	@:overload @:public @:final override public function dispatchCharactersEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler, normalize : Bool) : Void;
 	
 	/**
 	* Given a node handle, return its node value. This is mostly
@@ -424,12 +424,12 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @return String Value of this node, or null if not
 	* meaningful for this node type.
 	*/
-	@:overload override public function getNodeValue(nodeHandle : Int) : String;
+	@:overload @:public override public function getNodeValue(nodeHandle : Int) : String;
 	
 	/**
 	* Copy the String value of a Text node to a SerializationHandler
 	*/
-	@:overload @:final private function copyTextNode(nodeID : Int, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler) : Void;
+	@:overload @:protected @:final private function copyTextNode(nodeID : Int, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler) : Void;
 	
 	/**
 	* Copy an Element node to a SerializationHandler.
@@ -439,7 +439,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @param handler The SerializationHandler
 	* @return The qualified name of the Element node.
 	*/
-	@:overload @:final private function copyElement(nodeID : Int, exptype : Int, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler) : String;
+	@:overload @:protected @:final private function copyElement(nodeID : Int, exptype : Int, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler) : String;
 	
 	/**
 	* Copy  namespace nodes.
@@ -449,7 +449,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @param inScope  true if all namespaces in scope should be copied,
 	*  false if only the namespace declarations should be copied.
 	*/
-	@:overload @:final private function copyNS(nodeID : Int, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler, inScope : Bool) : Void;
+	@:overload @:protected @:final private function copyNS(nodeID : Int, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler, inScope : Bool) : Void;
 	
 	/**
 	* Return the next namespace node following the given base node.
@@ -458,7 +458,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* element, attribute or namespace node.
 	* @return The namespace node immediately following the base node.
 	*/
-	@:overload @:final private function getNextNamespaceNode2(baseID : Int) : Int;
+	@:overload @:protected @:final private function getNextNamespaceNode2(baseID : Int) : Int;
 	
 	/**
 	* Copy  attribute nodes from an element .
@@ -466,7 +466,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @param nodeID The Element node identity
 	* @param handler The SerializationHandler
 	*/
-	@:overload @:final private function copyAttributes(nodeID : Int, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler) : Void;
+	@:overload @:protected @:final private function copyAttributes(nodeID : Int, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler) : Void;
 	
 	/**
 	* Copy an Attribute node to a SerializationHandler
@@ -475,7 +475,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @param exptype The expanded type of the Element node
 	* @param handler The SerializationHandler
 	*/
-	@:overload @:final private function copyAttribute(nodeID : Int, exptype : Int, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler) : Void;
+	@:overload @:protected @:final private function copyAttribute(nodeID : Int, exptype : Int, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler) : Void;
 	
 	
 }
@@ -496,7 +496,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
@@ -504,7 +504,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @return The next node handle in the iteration, or END if no more
 	* are available.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -523,7 +523,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Set the node type of the parent that we're looking for.
@@ -535,7 +535,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return ParentIterator configured with the type filter set.
 	*/
-	@:overload public function setNodeType(type : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function setNodeType(type : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration. In this case, we return
@@ -543,7 +543,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -561,7 +561,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @param nodeType The extended type ID being requested.
 	*/
-	@:overload public function new(nodeType : Int) : Void;
+	@:overload @:public public function new(nodeType : Int) : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -571,19 +571,19 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	/**
 	* Return the node at the given position.
 	*/
-	@:overload override public function getNodeByPosition(position : Int) : Int;
+	@:overload @:public override public function getNodeByPosition(position : Int) : Int;
 	
 	
 }
@@ -598,14 +598,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @param nodeType The extended type ID being requested.
 	*/
-	@:overload public function new(nodeType : Int) : Void;
+	@:overload @:public public function new(nodeType : Int) : Void;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -622,14 +622,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -644,14 +644,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @param type The extended type ID being requested.
 	*/
-	@:overload public function new(type : Int) : Void;
+	@:overload @:public public function new(type : Int) : Void;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -668,14 +668,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -690,7 +690,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @param nodeType The extended type ID that is requested.
 	*/
-	@:overload public function new(nodeType : Int) : Void;
+	@:overload @:public public function new(nodeType : Int) : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -700,14 +700,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -719,14 +719,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	/**
 	* The node identity of _startNode for this iterator
 	*/
-	private var _startNodeID : Int;
+	@:protected private var _startNodeID : Int;
 	
 	/**
 	* True if this iterator has a reversed axis.
 	*
 	* @return true.
 	*/
-	@:overload override public function isReverse() : Bool;
+	@:overload @:public override public function isReverse() : Bool;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -736,14 +736,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -759,19 +759,19 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @param type The extended type ID being requested.
 	*/
-	@:overload public function new(type : Int) : Void;
+	@:overload @:public public function new(type : Int) : Void;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	/**
 	* Return the index of the last node in this iterator.
 	*/
-	@:overload override public function getLast() : Int;
+	@:overload @:public override public function getLast() : Int;
 	
 	
 }
@@ -786,26 +786,32 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* The stack of start node + ancestors up to the root of the tree,
 	*  which we must avoid.
 	*/
-	private var _stack : java.NativeArray<Int>;
+	@:protected private var _stack : java.NativeArray<Int>;
 	
 	/** (not sure yet... -sb) */
-	private var _sp : Int;
+	@:protected private var _sp : Int;
 	
-	private var _markedsp : Int;
+	@:protected private var _oldsp : Int;
+	
+	@:protected private var _markedsp : Int;
+	
+	@:protected private var _markedNode : Int;
+	
+	@:protected private var _markedDescendant : Int;
 	
 	/**
 	* True if this iterator has a reversed axis.
 	*
 	* @return true since this iterator is a reversed axis.
 	*/
-	@:overload override public function isReverse() : Bool;
+	@:overload @:public override public function isReverse() : Bool;
 	
 	/**
 	* Returns a deep copy of this iterator.   The cloned iterator is not reset.
 	*
 	* @return a deep copy of this iterator.
 	*/
-	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -815,14 +821,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	/**
 	* Resets the iterator to the last start node.
@@ -830,11 +836,11 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @return A DTMAxisIterator, which may or may not be the same as this
 	*         iterator.
 	*/
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function setMark() : Void;
+	@:overload @:public override public function setMark() : Void;
 	
-	@:overload override public function gotoMark() : Void;
+	@:overload @:public override public function gotoMark() : Void;
 	
 	
 }
@@ -851,14 +857,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @param type The extended type ID being requested.
 	*/
-	@:overload public function new(type : Int) : Void;
+	@:overload @:public public function new(type : Int) : Void;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -867,7 +873,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 */
 @:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$FollowingIterator') extern class SAX2DTM2_FollowingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -877,14 +883,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -899,14 +905,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @param type The extended type ID being requested.
 	*/
-	@:overload public function new(type : Int) : Void;
+	@:overload @:public public function new(type : Int) : Void;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -922,21 +928,21 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return The root node of the iteration.
 	*/
-	@:overload override public function getStartNode() : Int;
+	@:overload @:public override public function getStartNode() : Int;
 	
 	/**
 	* True if this iterator has a reversed axis.
 	*
 	* @return true since this iterator is a reversed axis.
 	*/
-	@:overload @:final override public function isReverse() : Bool;
+	@:overload @:public @:final override public function isReverse() : Bool;
 	
 	/**
 	* Returns a deep copy of this iterator.  The cloned iterator is not reset.
 	*
 	* @return a deep copy of this iterator.
 	*/
-	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -946,7 +952,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Resets the iterator to the last start node.
@@ -954,18 +960,18 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @return A DTMAxisIterator, which may or may not be the same as this
 	*         iterator.
 	*/
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
-	@:overload override public function setMark() : Void;
+	@:overload @:public override public function setMark() : Void;
 	
-	@:overload override public function gotoMark() : Void;
+	@:overload @:public override public function gotoMark() : Void;
 	
 	
 }
@@ -980,7 +986,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @param type The extended type ID being requested.
 	*/
-	@:overload public function new(type : Int) : Void;
+	@:overload @:public public function new(type : Int) : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -990,18 +996,18 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Return the node at the given position.
 	*/
-	@:overload override public function getNodeByPosition(position : Int) : Int;
+	@:overload @:public override public function getNodeByPosition(position : Int) : Int;
 	
 	/**
 	* Returns the position of the last node within the iteration, as
 	* defined by XPath.
 	*/
-	@:overload override public function getLast() : Int;
+	@:overload @:public override public function getLast() : Int;
 	
 	
 }
@@ -1018,7 +1024,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Tell if this node identity is a descendant.  Assumes that
@@ -1034,20 +1040,20 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @param identity The index number of the node in question.
 	* @return true if the index is a descendant of _startNode.
 	*/
-	@:overload @:final private function isDescendant(identity : Int) : Bool;
+	@:overload @:protected @:final private function isDescendant(identity : Int) : Bool;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	/**
 	* Reset.
 	*
 	*/
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	
 }
@@ -1062,14 +1068,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @param nodeType Extended type ID being requested.
 	*/
-	@:overload public function new(nodeType : Int) : Void;
+	@:overload @:public public function new(nodeType : Int) : Void;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -1084,14 +1090,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @param nodeType The extended type ID being requested.
 	*/
-	@:overload public function new(nodeType : Int) : Void;
+	@:overload @:public public function new(nodeType : Int) : Void;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }

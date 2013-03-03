@@ -31,31 +31,31 @@ extern class RuntimeInlineAnnotationReader extends com.sun.xml.internal.bind.v2.
 	*
 	* @author Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	@:overload public function getFieldAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>, field : java.lang.reflect.Field, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
+	@:overload @:public public function getFieldAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>, field : java.lang.reflect.Field, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	
-	@:overload public function hasFieldAnnotation(annotationType : Class<java.lang.annotation.Annotation>, field : java.lang.reflect.Field) : Bool;
+	@:overload @:public public function hasFieldAnnotation(annotationType : Class<java.lang.annotation.Annotation>, field : java.lang.reflect.Field) : Bool;
 	
-	@:overload public function hasClassAnnotation(clazz : Class<Dynamic>, annotationType : Class<java.lang.annotation.Annotation>) : Bool;
+	@:overload @:public public function hasClassAnnotation(clazz : Class<Dynamic>, annotationType : Class<java.lang.annotation.Annotation>) : Bool;
 	
-	@:overload public function getAllFieldAnnotations(field : java.lang.reflect.Field, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : java.NativeArray<java.lang.annotation.Annotation>;
+	@:overload @:public public function getAllFieldAnnotations(field : java.lang.reflect.Field, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : java.NativeArray<java.lang.annotation.Annotation>;
 	
-	@:overload public function getMethodAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>, method : java.lang.reflect.Method, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
+	@:overload @:public public function getMethodAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>, method : java.lang.reflect.Method, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	
-	@:overload public function hasMethodAnnotation(annotation : Class<java.lang.annotation.Annotation>, method : java.lang.reflect.Method) : Bool;
+	@:overload @:public public function hasMethodAnnotation(annotation : Class<java.lang.annotation.Annotation>, method : java.lang.reflect.Method) : Bool;
 	
-	@:overload public function getAllMethodAnnotations(method : java.lang.reflect.Method, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : java.NativeArray<java.lang.annotation.Annotation>;
+	@:overload @:public public function getAllMethodAnnotations(method : java.lang.reflect.Method, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : java.NativeArray<java.lang.annotation.Annotation>;
 	
-	@:overload public function getMethodParameterAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>, method : java.lang.reflect.Method, paramIndex : Int, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
+	@:overload @:public public function getMethodParameterAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>, method : java.lang.reflect.Method, paramIndex : Int, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	
-	@:overload public function getClassAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>, clazz : Class<Dynamic>, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
+	@:overload @:public public function getClassAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>, clazz : Class<Dynamic>, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	
-	@:overload public function getPackageAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>, clazz : Class<Dynamic>, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
+	@:overload @:public public function getPackageAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>, clazz : Class<Dynamic>, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	
-	@:overload override public function getClassValue(a : java.lang.annotation.Annotation, name : String) : Class<Dynamic>;
+	@:overload @:public override public function getClassValue(a : java.lang.annotation.Annotation, name : String) : Class<Dynamic>;
 	
-	@:overload override public function getClassArrayValue(a : java.lang.annotation.Annotation, name : String) : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public override public function getClassArrayValue(a : java.lang.annotation.Annotation, name : String) : java.NativeArray<Class<Dynamic>>;
 	
-	@:overload private function fullName(m : java.lang.reflect.Method) : String;
+	@:overload @:protected private function fullName(m : java.lang.reflect.Method) : String;
 	
 	
 }

@@ -32,12 +32,12 @@ extern class HttpReceiveSocket extends sun.rmi.transport.proxy.WrappedSocket imp
 	* @param in the InputStream to use for this socket (can be null)
 	* @param out the OutputStream to use for this socket (can be null)
 	*/
-	@:overload public function new(socket : java.net.Socket, _in : java.io.InputStream, out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(socket : java.net.Socket, _in : java.io.InputStream, out : java.io.OutputStream) : Void;
 	
 	/**
 	* Indicate that this socket is not reusable.
 	*/
-	@:overload public function isReusable() : Bool;
+	@:overload @:public public function isReusable() : Bool;
 	
 	/**
 	* Get the address to which this socket is connected.  "null" is always
@@ -49,22 +49,22 @@ extern class HttpReceiveSocket extends sun.rmi.transport.proxy.WrappedSocket imp
 	* case the remote object makes access control decisions based on the
 	* "client host" of a remote call; see bugid 4399040).
 	*/
-	@:overload public function getInetAddress() : java.net.InetAddress;
+	@:overload @:public override public function getInetAddress() : java.net.InetAddress;
 	
 	/**
 	* Get an OutputStream for this socket.
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public override public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Close the socket.
 	*/
-	@:overload @:synchronized public function close() : Void;
+	@:overload @:public @:synchronized override public function close() : Void;
 	
 	/**
 	* Return string representation of the socket.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

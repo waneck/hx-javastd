@@ -44,7 +44,7 @@ extern class ClassFinder
 	* @see ClassLoader#getSystemClassLoader()
 	* @see Thread#getContextClassLoader()
 	*/
-	@:overload public static function findClass(name : String) : Class<Dynamic>;
+	@:overload @:public @:static public static function findClass(name : String) : Class<Dynamic>;
 	
 	/**
 	* Returns the {@code Class} object associated with
@@ -67,7 +67,7 @@ extern class ClassFinder
 	* @see #findClass(String,ClassLoader)
 	* @see Class#forName(String,boolean,ClassLoader)
 	*/
-	@:overload public static function findClass(name : String, loader : java.lang.ClassLoader) : Class<Dynamic>;
+	@:overload @:public @:static public static function findClass(name : String, loader : java.lang.ClassLoader) : Class<Dynamic>;
 	
 	/**
 	* Returns the {@code Class} object associated
@@ -92,7 +92,7 @@ extern class ClassFinder
 	*
 	* @see #resolveClass(String,ClassLoader)
 	*/
-	@:overload public static function resolveClass(name : String) : Class<Dynamic>;
+	@:overload @:public @:static public static function resolveClass(name : String) : Class<Dynamic>;
 	
 	/**
 	* Returns the {@code Class} object associated with
@@ -122,7 +122,7 @@ extern class ClassFinder
 	* @see #findClass(String,ClassLoader)
 	* @see PrimitiveTypeMap#getType(String)
 	*/
-	@:overload public static function resolveClass(name : String, loader : java.lang.ClassLoader) : Class<Dynamic>;
+	@:overload @:public @:static public static function resolveClass(name : String, loader : java.lang.ClassLoader) : Class<Dynamic>;
 	
 	
 }

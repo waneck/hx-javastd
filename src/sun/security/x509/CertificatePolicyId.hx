@@ -36,24 +36,24 @@ extern class CertificatePolicyId
 	*
 	* @param id the ObjectIdentifier for the policy id.
 	*/
-	@:overload public function new(id : sun.security.util.ObjectIdentifier) : Void;
+	@:overload @:public public function new(id : sun.security.util.ObjectIdentifier) : Void;
 	
 	/**
 	* Create the object from its Der encoded value.
 	*
 	* @param val the DER encoded value for the same.
 	*/
-	@:overload public function new(val : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(val : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Return the value of the CertificatePolicyId as an ObjectIdentifier.
 	*/
-	@:overload public function getIdentifier() : sun.security.util.ObjectIdentifier;
+	@:overload @:public public function getIdentifier() : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Returns a printable representation of the CertificatePolicyId.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Write the CertificatePolicyId to the DerOutputStream.
@@ -61,7 +61,7 @@ extern class CertificatePolicyId
 	* @param out the DerOutputStream to write the object to.
 	* @exception IOException on errors.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Compares this CertificatePolicyId with another, for
@@ -70,14 +70,14 @@ extern class CertificatePolicyId
 	*
 	* @return true iff the ids are identical.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for this object.
 	*
 	* @return a hash code value
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

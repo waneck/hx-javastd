@@ -49,7 +49,7 @@ package com.sun.xml.internal.bind.api;
 	*
 	* @since 2.0 EA1
 	*/
-	@:require(java0) @:overload @:abstract public function get(bean : B) : V;
+	@:require(java0) @:overload @:public @:abstract public function get(bean : B) : V;
 	
 	/**
 	* Sets the value of the property of the given bean object.
@@ -65,7 +65,7 @@ package com.sun.xml.internal.bind.api;
 	*
 	* @since 2.0 EA1
 	*/
-	@:require(java0) @:overload @:abstract public function set(bean : B, value : V) : Void;
+	@:require(java0) @:overload @:public @:abstract public function set(bean : B, value : V) : Void;
 	
 	
 }

@@ -41,7 +41,7 @@ extern class BASE64DecoderStream extends java.io.FilterInputStream
 	* Create a BASE64 decoder that decodes the specified input stream
 	* @param in        the input stream
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Read the next decoded byte from this input stream. The byte
@@ -56,7 +56,7 @@ extern class BASE64DecoderStream extends java.io.FilterInputStream
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads up to <code>len</code> decoded bytes of data from this input stream
@@ -72,13 +72,13 @@ extern class BASE64DecoderStream extends java.io.FilterInputStream
 	*             the stream has been reached.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function read(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Tests if this input stream supports marks. Currently this class
 	* does not support marks
 	*/
-	@:overload public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	/**
 	* Returns the number of bytes that can be read from this input
@@ -86,7 +86,7 @@ extern class BASE64DecoderStream extends java.io.FilterInputStream
 	* a close approximation in case the original encoded stream
 	* contains embedded CRLFs; since the CRLFs are discarded, not decoded
 	*/
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	/**
 	* Base64 decode a byte array.  No line breaks are allowed.
@@ -97,7 +97,7 @@ extern class BASE64DecoderStream extends java.io.FilterInputStream
 	* NOTE: inbuf may only contain valid base64 characters.
 	*       Whitespace is not ignored.
 	*/
-	@:native('decode') @:overload public static function _decode(inbuf : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:native('decode') @:overload @:public @:static public static function _decode(inbuf : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

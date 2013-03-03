@@ -34,17 +34,17 @@ package org.omg.CORBA;
 */
 extern class PolicyListHolder implements org.omg.CORBA.portable.Streamable
 {
-	public var value : java.NativeArray<org.omg.CORBA.Policy>;
+	@:public public var value : java.NativeArray<org.omg.CORBA.Policy>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(initialValue : java.NativeArray<org.omg.CORBA.Policy>) : Void;
+	@:overload @:public public function new(initialValue : java.NativeArray<org.omg.CORBA.Policy>) : Void;
 	
-	@:overload public function _read(i : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function _read(i : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload public function _write(o : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function _write(o : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload public function _type() : org.omg.CORBA.TypeCode;
+	@:overload @:public public function _type() : org.omg.CORBA.TypeCode;
 	
 	
 }

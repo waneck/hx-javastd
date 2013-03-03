@@ -36,7 +36,7 @@ extern class UnknownAnnotationValueException extends javax.lang.model.UnknownEnt
 	* @param av the unknown annotation value, may be {@code null}
 	* @param p an additional parameter, may be {@code null}
 	*/
-	@:overload public function new(av : javax.lang.model.element.AnnotationValue, p : Dynamic) : Void;
+	@:overload @:public public function new(av : javax.lang.model.element.AnnotationValue, p : Dynamic) : Void;
 	
 	/**
 	* Returns the unknown annotation value.
@@ -45,14 +45,14 @@ extern class UnknownAnnotationValueException extends javax.lang.model.UnknownEnt
 	*
 	* @return the unknown element, or {@code null} if unavailable
 	*/
-	@:overload public function getUnknownAnnotationValue() : javax.lang.model.element.AnnotationValue;
+	@:overload @:public public function getUnknownAnnotationValue() : javax.lang.model.element.AnnotationValue;
 	
 	/**
 	* Returns the additional argument.
 	*
 	* @return the additional argument
 	*/
-	@:overload public function getArgument() : Dynamic;
+	@:overload @:public public function getArgument() : Dynamic;
 	
 	
 }

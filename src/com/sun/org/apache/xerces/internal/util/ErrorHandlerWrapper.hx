@@ -21,19 +21,19 @@ package com.sun.org.apache.xerces.internal.util;
 extern class ErrorHandlerWrapper implements com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler
 {
 	/** The SAX error handler. */
-	private var fErrorHandler : org.xml.sax.ErrorHandler;
+	@:protected private var fErrorHandler : org.xml.sax.ErrorHandler;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Wraps the specified SAX error handler. */
-	@:overload public function new(errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function new(errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/** Sets the SAX error handler. */
-	@:overload public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/** Returns the SAX error handler. */
-	@:overload public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
 	/**
 	* Reports a warning. Warnings are non-fatal and can be safely ignored
@@ -51,7 +51,7 @@ extern class ErrorHandlerWrapper implements com.sun.org.apache.xerces.internal.x
 	* @throws XNIException Thrown to signal that the parser should stop
 	*                      parsing the document.
 	*/
-	@:overload public function warning(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
+	@:overload @:public public function warning(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
 	
 	/**
 	* Reports an error. Errors are non-fatal and usually signify that the
@@ -69,7 +69,7 @@ extern class ErrorHandlerWrapper implements com.sun.org.apache.xerces.internal.x
 	* @throws XNIException Thrown to signal that the parser should stop
 	*                      parsing the document.
 	*/
-	@:overload public function error(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
+	@:overload @:public public function error(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
 	
 	/**
 	* Report a fatal error. Fatal errors usually occur when the document
@@ -95,18 +95,18 @@ extern class ErrorHandlerWrapper implements com.sun.org.apache.xerces.internal.x
 	* @throws XNIException Thrown to signal that the parser should stop
 	*                      parsing the document.
 	*/
-	@:overload public function fatalError(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
+	@:overload @:public public function fatalError(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
 	
 	/** Creates a SAXParseException from an XMLParseException. */
-	@:overload private static function createSAXParseException(exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : org.xml.sax.SAXParseException;
+	@:overload @:protected @:static private static function createSAXParseException(exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : org.xml.sax.SAXParseException;
 	
 	/** Creates an XMLParseException from a SAXParseException. */
-	@:overload private static function createXMLParseException(exception : org.xml.sax.SAXParseException) : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException;
+	@:overload @:protected @:static private static function createXMLParseException(exception : org.xml.sax.SAXParseException) : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException;
 	
 	/** Creates an XNIException from a SAXException.
 	NOTE:  care should be taken *not* to call this with a SAXParseException; this will
 	lose information!!! */
-	@:overload private static function createXNIException(exception : org.xml.sax.SAXException) : com.sun.org.apache.xerces.internal.xni.XNIException;
+	@:overload @:protected @:static private static function createXNIException(exception : org.xml.sax.SAXException) : com.sun.org.apache.xerces.internal.xni.XNIException;
 	
 	
 }

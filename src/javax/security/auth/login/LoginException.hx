@@ -34,7 +34,7 @@ extern class LoginException extends java.security.GeneralSecurityException
 	* Constructs a LoginException with no detail message. A detail
 	* message is a String that describes this particular exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a LoginException with the specified detail message.
@@ -45,7 +45,7 @@ extern class LoginException extends java.security.GeneralSecurityException
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

@@ -49,7 +49,7 @@ extern class ContentSigner
 	* @throws NullPointerException The exception is thrown if parameters is
 	*         null.
 	*/
-	@:overload @:abstract public function generateSignedData(parameters : com.sun.jarsigner.ContentSignerParameters, omitContent : Bool, applyTimestamp : Bool) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function generateSignedData(parameters : com.sun.jarsigner.ContentSignerParameters, omitContent : Bool, applyTimestamp : Bool) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

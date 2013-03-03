@@ -37,7 +37,7 @@ extern interface Bindings extends java.util.Map<String, Dynamic>
 	* @throws NullPointerException if the name is null.
 	* @throws IllegalArgumentException if the name is empty String.
 	*/
-	@:overload public function put(name : String, value : Dynamic) : Dynamic;
+	@:overload @:public public function put(name : String, value : Dynamic) : Dynamic;
 	
 	/**
 	* Adds all the mappings in a given <code>Map</code> to this <code>Bindings</code>.
@@ -48,7 +48,7 @@ extern interface Bindings extends java.util.Map<String, Dynamic>
 	* @throws IllegalArgumentException
 	*         if some key in the map is an empty String.
 	*/
-	@:overload public function putAll(toMerge : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function putAll(toMerge : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* Returns <tt>true</tt> if this map contains a mapping for the specified
@@ -65,7 +65,7 @@ extern interface Bindings extends java.util.Map<String, Dynamic>
 	* @throws ClassCastException if key is not String
 	* @throws IllegalArgumentException if key is empty String
 	*/
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public @:public public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Returns the value to which this map maps the specified key.  Returns
@@ -88,7 +88,7 @@ extern interface Bindings extends java.util.Map<String, Dynamic>
 	* @throws ClassCastException if key is not String
 	* @throws IllegalArgumentException if key is empty String
 	*/
-	@:overload public function get(key : Dynamic) : Dynamic;
+	@:overload @:public public function get(key : Dynamic) : Dynamic;
 	
 	/**
 	* Removes the mapping for this key from this map if it is present
@@ -112,7 +112,7 @@ extern interface Bindings extends java.util.Map<String, Dynamic>
 	* @throws ClassCastException if key is not String
 	* @throws IllegalArgumentException if key is empty String
 	*/
-	@:overload public function remove(key : Dynamic) : Dynamic;
+	@:overload @:public public function remove(key : Dynamic) : Dynamic;
 	
 	
 }

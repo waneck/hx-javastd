@@ -33,18 +33,18 @@ package com.sun.tools.doclets.formats.html;
 */
 extern class HtmlSerialFieldWriter extends com.sun.tools.doclets.formats.html.FieldWriterImpl implements com.sun.tools.doclets.internal.toolkit.SerializedFormWriter.SerializedFormWriter_SerialFieldWriter
 {
-	@:overload public function new(writer : com.sun.tools.doclets.formats.html.SubWriterHolderWriter, classdoc : com.sun.javadoc.ClassDoc) : Void;
+	@:overload @:public public function new(writer : com.sun.tools.doclets.formats.html.SubWriterHolderWriter, classdoc : com.sun.javadoc.ClassDoc) : Void;
 	
-	@:overload public function members(cd : com.sun.javadoc.ClassDoc) : java.util.List<com.sun.javadoc.FieldDoc>;
+	@:overload @:public public function members(cd : com.sun.javadoc.ClassDoc) : java.util.List<com.sun.javadoc.FieldDoc>;
 	
-	@:overload private function printTypeLinkNoDimension(type : com.sun.javadoc.Type) : Void;
+	@:overload @:protected private function printTypeLinkNoDimension(type : com.sun.javadoc.Type) : Void;
 	
 	/**
 	* Return the header for serializable fields section.
 	*
 	* @return a content tree for the header
 	*/
-	@:overload public function getSerializableFieldsHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSerializableFieldsHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Return the header for serializable fields content section.
@@ -52,7 +52,7 @@ extern class HtmlSerialFieldWriter extends com.sun.tools.doclets.formats.html.Fi
 	* @param isLastContent true if the cotent being documented is the last content.
 	* @return a content tree for the header
 	*/
-	@:overload public function getFieldsContentHeader(isLastContent : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getFieldsContentHeader(isLastContent : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add serializable fields.
@@ -62,7 +62,7 @@ extern class HtmlSerialFieldWriter extends com.sun.tools.doclets.formats.html.Fi
 	*        content tree
 	* @return a content tree for the serializable fields content
 	*/
-	@:overload public function getSerializableFields(heading : String, serializableFieldsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSerializableFields(heading : String, serializableFieldsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add the member header.
@@ -73,7 +73,7 @@ extern class HtmlSerialFieldWriter extends com.sun.tools.doclets.formats.html.Fi
 	* @param firldName name of the field to be added
 	* @param contentTree the content tree to which the member header will be added
 	*/
-	@:overload public function addMemberHeader(fieldType : com.sun.javadoc.ClassDoc, fieldTypeStr : String, fieldDimensions : String, fieldName : String, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addMemberHeader(fieldType : com.sun.javadoc.ClassDoc, fieldTypeStr : String, fieldDimensions : String, fieldName : String, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the deprecated information for this member.
@@ -81,7 +81,7 @@ extern class HtmlSerialFieldWriter extends com.sun.tools.doclets.formats.html.Fi
 	* @param field the field to document.
 	* @param contentTree the tree to which the deprecated info will be added
 	*/
-	@:overload public function addMemberDeprecatedInfo(field : com.sun.javadoc.FieldDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addMemberDeprecatedInfo(field : com.sun.javadoc.FieldDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the description text for this member.
@@ -89,7 +89,7 @@ extern class HtmlSerialFieldWriter extends com.sun.tools.doclets.formats.html.Fi
 	* @param field the field to document.
 	* @param contentTree the tree to which the deprecated info will be added
 	*/
-	@:overload public function addMemberDescription(field : com.sun.javadoc.FieldDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addMemberDescription(field : com.sun.javadoc.FieldDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the description text for this member represented by the tag.
@@ -97,7 +97,7 @@ extern class HtmlSerialFieldWriter extends com.sun.tools.doclets.formats.html.Fi
 	* @param serialFieldTag the field to document (represented by tag)
 	* @param contentTree the tree to which the deprecated info will be added
 	*/
-	@:overload public function addMemberDescription(serialFieldTag : com.sun.javadoc.SerialFieldTag, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addMemberDescription(serialFieldTag : com.sun.javadoc.SerialFieldTag, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the tag information for this member.
@@ -105,7 +105,7 @@ extern class HtmlSerialFieldWriter extends com.sun.tools.doclets.formats.html.Fi
 	* @param field the field to document.
 	* @param contentTree the tree to which the member tags info will be added
 	*/
-	@:overload public function addMemberTags(field : com.sun.javadoc.FieldDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addMemberTags(field : com.sun.javadoc.FieldDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Check to see if overview details should be printed. If
@@ -115,7 +115,7 @@ extern class HtmlSerialFieldWriter extends com.sun.tools.doclets.formats.html.Fi
 	* @param field the field to check overview details for.
 	* @return true if overview details need to be printed
 	*/
-	@:overload public function shouldPrintOverview(field : com.sun.javadoc.FieldDoc) : Bool;
+	@:overload @:public public function shouldPrintOverview(field : com.sun.javadoc.FieldDoc) : Bool;
 	
 	
 }

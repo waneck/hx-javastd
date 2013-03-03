@@ -67,7 +67,7 @@ extern class ClassGen extends com.sun.org.apache.bcel.internal.classfile.AccessF
 	* @param interfaces implemented interfaces
 	* @param cp constant pool to use
 	*/
-	@:overload public function new(class_name : String, super_class_name : String, file_name : String, access_flags : Int, interfaces : java.NativeArray<String>, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
+	@:overload @:public public function new(class_name : String, super_class_name : String, file_name : String, access_flags : Int, interfaces : java.NativeArray<String>, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
 	
 	/** Convenience constructor to set up some important values initially.
 	*
@@ -77,62 +77,62 @@ extern class ClassGen extends com.sun.org.apache.bcel.internal.classfile.AccessF
 	* @param access_flags access qualifiers
 	* @param interfaces implemented interfaces
 	*/
-	@:overload public function new(class_name : String, super_class_name : String, file_name : String, access_flags : Int, interfaces : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(class_name : String, super_class_name : String, file_name : String, access_flags : Int, interfaces : java.NativeArray<String>) : Void;
 	
 	/**
 	* Initialize with existing class.
 	* @param clazz JavaClass object (e.g. read from file)
 	*/
-	@:overload public function new(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
+	@:overload @:public public function new(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
 	
 	/**
 	* @return the (finally) built up Java class object.
 	*/
-	@:overload public function getJavaClass() : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function getJavaClass() : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
 	/**
 	* Add an interface to this class, i.e., this class has to implement it.
 	* @param name interface to implement (fully qualified class name)
 	*/
-	@:overload public function addInterface(name : String) : Void;
+	@:overload @:public public function addInterface(name : String) : Void;
 	
 	/**
 	* Remove an interface from this class.
 	* @param name interface to remove (fully qualified name)
 	*/
-	@:overload public function removeInterface(name : String) : Void;
+	@:overload @:public public function removeInterface(name : String) : Void;
 	
 	/**
 	* @return major version number of class file
 	*/
-	@:overload public function getMajor() : Int;
+	@:overload @:public public function getMajor() : Int;
 	
 	/** Set major version number of class file, default value is 45 (JDK 1.1)
 	* @param major major version number
 	*/
-	@:overload public function setMajor(major : Int) : Void;
+	@:overload @:public public function setMajor(major : Int) : Void;
 	
 	/** Set minor version number of class file, default value is 3 (JDK 1.1)
 	* @param minor minor version number
 	*/
-	@:overload public function setMinor(minor : Int) : Void;
+	@:overload @:public public function setMinor(minor : Int) : Void;
 	
 	/**
 	* @return minor version number of class file
 	*/
-	@:overload public function getMinor() : Int;
+	@:overload @:public public function getMinor() : Int;
 	
 	/**
 	* Add an attribute to this class.
 	* @param a attribute to add
 	*/
-	@:overload public function addAttribute(a : com.sun.org.apache.bcel.internal.classfile.Attribute) : Void;
+	@:overload @:public public function addAttribute(a : com.sun.org.apache.bcel.internal.classfile.Attribute) : Void;
 	
 	/**
 	* Add a method to this class.
 	* @param m method to add
 	*/
-	@:overload public function addMethod(m : com.sun.org.apache.bcel.internal.classfile.Method) : Void;
+	@:overload @:public public function addMethod(m : com.sun.org.apache.bcel.internal.classfile.Method) : Void;
 	
 	/**
 	* Convenience method.
@@ -140,105 +140,105 @@ extern class ClassGen extends com.sun.org.apache.bcel.internal.classfile.AccessF
 	* Add an empty constructor to this class that does nothing but calling super().
 	* @param access rights for constructor
 	*/
-	@:overload public function addEmptyConstructor(access_flags : Int) : Void;
+	@:overload @:public public function addEmptyConstructor(access_flags : Int) : Void;
 	
 	/**
 	* Add a field to this class.
 	* @param f field to add
 	*/
-	@:overload public function addField(f : com.sun.org.apache.bcel.internal.classfile.Field) : Void;
+	@:overload @:public public function addField(f : com.sun.org.apache.bcel.internal.classfile.Field) : Void;
 	
-	@:overload public function containsField(f : com.sun.org.apache.bcel.internal.classfile.Field) : Bool;
+	@:overload @:public public function containsField(f : com.sun.org.apache.bcel.internal.classfile.Field) : Bool;
 	
 	/** @return field object with given name, or null
 	*/
-	@:overload public function containsField(name : String) : com.sun.org.apache.bcel.internal.classfile.Field;
+	@:overload @:public public function containsField(name : String) : com.sun.org.apache.bcel.internal.classfile.Field;
 	
 	/** @return method object with given name and signature, or null
 	*/
-	@:overload public function containsMethod(name : String, signature : String) : com.sun.org.apache.bcel.internal.classfile.Method;
+	@:overload @:public public function containsMethod(name : String, signature : String) : com.sun.org.apache.bcel.internal.classfile.Method;
 	
 	/**
 	* Remove an attribute from this class.
 	* @param a attribute to remove
 	*/
-	@:overload public function removeAttribute(a : com.sun.org.apache.bcel.internal.classfile.Attribute) : Void;
+	@:overload @:public public function removeAttribute(a : com.sun.org.apache.bcel.internal.classfile.Attribute) : Void;
 	
 	/**
 	* Remove a method from this class.
 	* @param m method to remove
 	*/
-	@:overload public function removeMethod(m : com.sun.org.apache.bcel.internal.classfile.Method) : Void;
+	@:overload @:public public function removeMethod(m : com.sun.org.apache.bcel.internal.classfile.Method) : Void;
 	
 	/** Replace given method with new one. If the old one does not exist
 	* add the new_ method to the class anyway.
 	*/
-	@:overload public function replaceMethod(old : com.sun.org.apache.bcel.internal.classfile.Method, new_ : com.sun.org.apache.bcel.internal.classfile.Method) : Void;
+	@:overload @:public public function replaceMethod(old : com.sun.org.apache.bcel.internal.classfile.Method, new_ : com.sun.org.apache.bcel.internal.classfile.Method) : Void;
 	
 	/** Replace given field with new one. If the old one does not exist
 	* add the new_ field to the class anyway.
 	*/
-	@:overload public function replaceField(old : com.sun.org.apache.bcel.internal.classfile.Field, new_ : com.sun.org.apache.bcel.internal.classfile.Field) : Void;
+	@:overload @:public public function replaceField(old : com.sun.org.apache.bcel.internal.classfile.Field, new_ : com.sun.org.apache.bcel.internal.classfile.Field) : Void;
 	
 	/**
 	* Remove a field to this class.
 	* @param f field to remove
 	*/
-	@:overload public function removeField(f : com.sun.org.apache.bcel.internal.classfile.Field) : Void;
+	@:overload @:public public function removeField(f : com.sun.org.apache.bcel.internal.classfile.Field) : Void;
 	
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
-	@:overload public function getSuperclassName() : String;
+	@:overload @:public public function getSuperclassName() : String;
 	
-	@:overload public function getFileName() : String;
+	@:overload @:public public function getFileName() : String;
 	
-	@:overload public function setClassName(name : String) : Void;
+	@:overload @:public public function setClassName(name : String) : Void;
 	
-	@:overload public function setSuperclassName(name : String) : Void;
+	@:overload @:public public function setSuperclassName(name : String) : Void;
 	
-	@:overload public function getMethods() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Method>;
+	@:overload @:public public function getMethods() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Method>;
 	
-	@:overload public function setMethods(methods : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Method>) : Void;
+	@:overload @:public public function setMethods(methods : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Method>) : Void;
 	
-	@:overload public function setMethodAt(method : com.sun.org.apache.bcel.internal.classfile.Method, pos : Int) : Void;
+	@:overload @:public public function setMethodAt(method : com.sun.org.apache.bcel.internal.classfile.Method, pos : Int) : Void;
 	
-	@:overload public function getMethodAt(pos : Int) : com.sun.org.apache.bcel.internal.classfile.Method;
+	@:overload @:public public function getMethodAt(pos : Int) : com.sun.org.apache.bcel.internal.classfile.Method;
 	
-	@:overload public function getInterfaceNames() : java.NativeArray<String>;
+	@:overload @:public public function getInterfaceNames() : java.NativeArray<String>;
 	
-	@:overload public function getInterfaces() : java.NativeArray<Int>;
+	@:overload @:public public function getInterfaces() : java.NativeArray<Int>;
 	
-	@:overload public function getFields() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Field>;
+	@:overload @:public public function getFields() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Field>;
 	
-	@:overload public function getAttributes() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>;
+	@:overload @:public public function getAttributes() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>;
 	
-	@:overload public function getConstantPool() : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen;
+	@:overload @:public public function getConstantPool() : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen;
 	
-	@:overload public function setConstantPool(constant_pool : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
+	@:overload @:public public function setConstantPool(constant_pool : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
 	
-	@:overload public function setClassNameIndex(class_name_index : Int) : Void;
+	@:overload @:public public function setClassNameIndex(class_name_index : Int) : Void;
 	
-	@:overload public function setSuperclassNameIndex(superclass_name_index : Int) : Void;
+	@:overload @:public public function setSuperclassNameIndex(superclass_name_index : Int) : Void;
 	
-	@:overload public function getSuperclassNameIndex() : Int;
+	@:overload @:public public function getSuperclassNameIndex() : Int;
 	
-	@:overload public function getClassNameIndex() : Int;
+	@:overload @:public public function getClassNameIndex() : Int;
 	
 	/** Add observer for this object.
 	*/
-	@:overload public function addObserver(o : com.sun.org.apache.bcel.internal.generic.ClassObserver) : Void;
+	@:overload @:public public function addObserver(o : com.sun.org.apache.bcel.internal.generic.ClassObserver) : Void;
 	
 	/** Remove observer for this object.
 	*/
-	@:overload public function removeObserver(o : com.sun.org.apache.bcel.internal.generic.ClassObserver) : Void;
+	@:overload @:public public function removeObserver(o : com.sun.org.apache.bcel.internal.generic.ClassObserver) : Void;
 	
 	/** Call notify() method on all observers. This method is not called
 	* automatically whenever the state has changed, but has to be
 	* called by the user after he has finished editing the object.
 	*/
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

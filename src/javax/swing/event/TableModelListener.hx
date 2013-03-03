@@ -29,7 +29,7 @@ extern interface TableModelListener extends java.util.EventListener
 	* This fine grain notification tells listeners the exact range
 	* of cells, rows, or columns that changed.
 	*/
-	@:overload public function tableChanged(e : javax.swing.event.TableModelEvent) : Void;
+	@:overload @:public public function tableChanged(e : javax.swing.event.TableModelEvent) : Void;
 	
 	
 }

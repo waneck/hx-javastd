@@ -163,7 +163,7 @@ extern interface TypeInfoSet<T, C, F, M>
 	*
 	* TODO: not sure if this actually works. We don't really know what are T,C.
 	*/
-	@:overload public function dump(out : javax.xml.transform.Result) : Void;
+	@:overload @:public public function dump(out : javax.xml.transform.Result) : Void;
 	
 	
 }

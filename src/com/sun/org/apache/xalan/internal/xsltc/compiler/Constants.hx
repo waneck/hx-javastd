@@ -27,15 +27,15 @@ extern interface Constants extends com.sun.org.apache.bcel.internal.generic.Inst
 	* @author Jacek Ambroziak
 	* @author Santiago Pericas-Geertsen
 	*/
-	public var INTERNAL(default, null) : Int;
+	@:public @:final public var INTERNAL(default, null) : Int;
 	
-	public var UNSUPPORTED(default, null) : Int;
+	@:public @:final public var UNSUPPORTED(default, null) : Int;
 	
-	public var FATAL(default, null) : Int;
+	@:public @:final public var FATAL(default, null) : Int;
 	
-	public var ERROR(default, null) : Int;
+	@:public @:final public var ERROR(default, null) : Int;
 	
-	public var WARNING(default, null) : Int;
+	@:public @:final public var WARNING(default, null) : Int;
 	
 	
 }

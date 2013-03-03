@@ -37,7 +37,7 @@ package sun.nio.ch;
 */
 @:require(java4) @:internal extern class PollArrayWrapper extends sun.nio.ch.AbstractPollArrayWrapper
 {
-	@:overload public function interrupt() : Void;
+	@:overload @:public public function interrupt() : Void;
 	
 	
 }

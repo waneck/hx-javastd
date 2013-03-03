@@ -32,9 +32,9 @@ extern class RMIHttpToCGISocketFactory extends java.rmi.server.RMISocketFactory
 	* normal HTTP server, to a CGI program which forwards the request to
 	* the actual specified port on the socket.
 	*/
-	@:overload public function createSocket(host : String, port : Int) : java.net.Socket;
+	@:overload @:public override public function createSocket(host : String, port : Int) : java.net.Socket;
 	
-	@:overload public function createServerSocket(port : Int) : java.net.ServerSocket;
+	@:overload @:public override public function createServerSocket(port : Int) : java.net.ServerSocket;
 	
 	
 }

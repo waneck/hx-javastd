@@ -45,7 +45,7 @@ extern interface ContactInfo extends com.sun.pept.ept.EPTFactory
 	* @param messageInfo ...
 	* </p>
 	*/
-	@:overload public function getConnection(messageInfo : com.sun.pept.ept.MessageInfo) : com.sun.pept.transport.Connection;
+	@:overload @:public public function getConnection(messageInfo : com.sun.pept.ept.MessageInfo) : com.sun.pept.transport.Connection;
 	
 	
 }

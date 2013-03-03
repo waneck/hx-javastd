@@ -30,7 +30,7 @@ extern interface ApacheData extends javax.xml.crypto.Data
 	/**
 	* Returns the XMLSignatureInput.
 	*/
-	@:overload public function getXMLSignatureInput() : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public public function getXMLSignatureInput() : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	
 }

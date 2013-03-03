@@ -39,28 +39,28 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	/**
 	* The root element of the constant summary XML is {@value}.
 	*/
-	public static var ROOT(default, null) : String;
+	@:public @:static @:final public static var ROOT(default, null) : String;
 	
 	/**
 	* The maximum number of package directories shown in the constant
 	* value index.
 	*/
-	public static var MAX_CONSTANT_VALUE_INDEX_LENGTH(default, null) : Int;
+	@:public @:static @:final public static var MAX_CONSTANT_VALUE_INDEX_LENGTH(default, null) : Int;
 	
 	/**
 	* The writer used to write the results.
 	*/
-	private var writer : com.sun.tools.doclets.internal.toolkit.ConstantsSummaryWriter;
+	@:protected private var writer : com.sun.tools.doclets.internal.toolkit.ConstantsSummaryWriter;
 	
 	/**
 	* The set of ClassDocs that have constant fields.
 	*/
-	private var classDocsWithConstFields : java.util.Set<com.sun.javadoc.ClassDoc>;
+	@:protected private var classDocsWithConstFields : java.util.Set<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* The set of printed package headers.
 	*/
-	private var printedPackageHeaders : java.util.Set<String>;
+	@:protected private var printedPackageHeaders : java.util.Set<String>;
 	
 	/**
 	* Construct a ConstantsSummaryBuilder.
@@ -69,17 +69,17 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	*                      of the doclet.
 	* @param writer        the writer for the summary.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, writer : com.sun.tools.doclets.internal.toolkit.ConstantsSummaryWriter) : com.sun.tools.doclets.internal.toolkit.builders.ConstantsSummaryBuilder;
+	@:overload @:public @:static public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, writer : com.sun.tools.doclets.internal.toolkit.ConstantsSummaryWriter) : com.sun.tools.doclets.internal.toolkit.builders.ConstantsSummaryBuilder;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function build() : Void;
+	@:overload @:public override public function build() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Build the constant summary.
@@ -87,7 +87,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param contentTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildConstantSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildConstantSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the list of packages.
@@ -95,7 +95,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param contentTree the content tree to which the content list will be added
 	*/
-	@:overload public function buildContents(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildContents(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summary for each documented package.
@@ -103,7 +103,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param contentTree the tree to which the summaries will be added
 	*/
-	@:overload public function buildConstantSummaries(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildConstantSummaries(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the header for the given package.
@@ -111,7 +111,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param summariesTree the tree to which the package header will be added
 	*/
-	@:overload public function buildPackageHeader(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, summariesTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildPackageHeader(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, summariesTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summary for the current class.
@@ -119,7 +119,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param summariesTree the tree to which the class constant summary will be added
 	*/
-	@:overload public function buildClassConstantSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, summariesTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildClassConstantSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, summariesTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summary of constant members in the class.
@@ -128,7 +128,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param classConstantTree the tree to which the constant members table
 	*                          will be added
 	*/
-	@:overload public function buildConstantMembers(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classConstantTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildConstantMembers(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classConstantTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }
@@ -143,23 +143,23 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	/**
 	* The map used to get the visible variables.
 	*/
-	private var visibleMemberMapFields : com.sun.tools.doclets.internal.toolkit.util.VisibleMemberMap;
+	@:protected private var visibleMemberMapFields : com.sun.tools.doclets.internal.toolkit.util.VisibleMemberMap;
 	
 	/**
 	* The map used to get the visible variables.
 	*/
-	private var visibleMemberMapEnumConst : com.sun.tools.doclets.internal.toolkit.util.VisibleMemberMap;
+	@:protected private var visibleMemberMapEnumConst : com.sun.tools.doclets.internal.toolkit.util.VisibleMemberMap;
 	
 	/**
 	* The classdoc that we are examining constants for.
 	*/
-	private var classdoc : com.sun.javadoc.ClassDoc;
+	@:protected private var classdoc : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Construct a ConstantFieldSubWriter.
 	* @param classdoc the classdoc that we are examining constants for.
 	*/
-	@:overload public function new(classdoc : com.sun.javadoc.ClassDoc) : Void;
+	@:overload @:public public function new(classdoc : com.sun.javadoc.ClassDoc) : Void;
 	
 	/**
 	* Builds the table of constants for a given class.
@@ -168,14 +168,14 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param classConstantTree the tree to which the class constants table
 	*                          will be added
 	*/
-	@:overload private function buildMembersSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classConstantTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function buildMembersSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classConstantTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Return the list of visible constant fields for the given classdoc.
 	* @param cd the classdoc to examine.
 	* @return the list of visible constant fields for the given classdoc.
 	*/
-	@:overload private function members() : java.util.List<com.sun.javadoc.FieldDoc>;
+	@:overload @:protected private function members() : java.util.List<com.sun.javadoc.FieldDoc>;
 	
 	
 }

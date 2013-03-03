@@ -34,7 +34,7 @@ package sun.security.krb5;
 */
 extern class KrbCryptoException extends sun.security.krb5.KrbException
 {
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

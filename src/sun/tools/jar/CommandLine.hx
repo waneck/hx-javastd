@@ -35,7 +35,7 @@ extern class CommandLine
 	* files are not supported. The '@' character itself can be quoted with
 	* the sequence '@@'.
 	*/
-	@:overload public static function parse(args : java.NativeArray<String>) : java.NativeArray<String>;
+	@:overload @:public @:static public static function parse(args : java.NativeArray<String>) : java.NativeArray<String>;
 	
 	
 }

@@ -39,9 +39,9 @@ package sun.security.pkcs11.wrapper;
 */
 @:require(java7) extern class CK_AES_CTR_PARAMS
 {
-	@:overload public function new(cb : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(cb : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

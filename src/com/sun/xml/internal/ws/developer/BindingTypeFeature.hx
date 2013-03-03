@@ -31,13 +31,13 @@ extern class BindingTypeFeature extends javax.xml.ws.WebServiceFeature
 	*
 	* @author Jitendra Kotamraju
 	*/
-	public static var ID(default, null) : String;
+	@:public @:static @:final public static var ID(default, null) : String;
 	
-	@:overload public function new(bindingId : String) : Void;
+	@:overload @:public public function new(bindingId : String) : Void;
 	
-	@:overload public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
-	@:overload public function getBindingId() : String;
+	@:overload @:public public function getBindingId() : String;
 	
 	
 }

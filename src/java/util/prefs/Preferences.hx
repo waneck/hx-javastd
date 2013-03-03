@@ -28,17 +28,17 @@ extern class Preferences
 	/**
 	* Maximum length of string allowed as a key (80 characters).
 	*/
-	public static var MAX_KEY_LENGTH(default, null) : Int;
+	@:public @:static @:final public static var MAX_KEY_LENGTH(default, null) : Int;
 	
 	/**
 	* Maximum length of string allowed as a value (8192 characters).
 	*/
-	public static var MAX_VALUE_LENGTH(default, null) : Int;
+	@:public @:static @:final public static var MAX_VALUE_LENGTH(default, null) : Int;
 	
 	/**
 	* Maximum length of a node name (80 characters).
 	*/
-	public static var MAX_NAME_LENGTH(default, null) : Int;
+	@:public @:static @:final public static var MAX_NAME_LENGTH(default, null) : Int;
 	
 	/**
 	* Returns the preference node from the calling user's preference tree
@@ -80,7 +80,7 @@ extern class Preferences
 	*         it denies <tt>RuntimePermission("preferences")</tt>.
 	* @see    RuntimePermission
 	*/
-	@:overload public static function userNodeForPackage(c : Class<Dynamic>) : java.util.prefs.Preferences;
+	@:overload @:public @:static public static function userNodeForPackage(c : Class<Dynamic>) : java.util.prefs.Preferences;
 	
 	/**
 	* Returns the preference node from the system preference tree that is
@@ -122,7 +122,7 @@ extern class Preferences
 	*         it denies <tt>RuntimePermission("preferences")</tt>.
 	* @see    RuntimePermission
 	*/
-	@:overload public static function systemNodeForPackage(c : Class<Dynamic>) : java.util.prefs.Preferences;
+	@:overload @:public @:static public static function systemNodeForPackage(c : Class<Dynamic>) : java.util.prefs.Preferences;
 	
 	/**
 	* Returns the root preference node for the calling user.
@@ -132,7 +132,7 @@ extern class Preferences
 	*         it denies <tt>RuntimePermission("preferences")</tt>.
 	* @see    RuntimePermission
 	*/
-	@:overload public static function userRoot() : java.util.prefs.Preferences;
+	@:overload @:public @:static public static function userRoot() : java.util.prefs.Preferences;
 	
 	/**
 	* Returns the root preference node for the system.
@@ -142,13 +142,13 @@ extern class Preferences
 	*         it denies <tt>RuntimePermission("preferences")</tt>.
 	* @see    RuntimePermission
 	*/
-	@:overload public static function systemRoot() : java.util.prefs.Preferences;
+	@:overload @:public @:static public static function systemRoot() : java.util.prefs.Preferences;
 	
 	/**
 	* Sole constructor. (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Associates the specified value with the specified key in this
@@ -163,7 +163,7 @@ extern class Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload @:abstract public function put(key : String, value : String) : Void;
+	@:overload @:public @:abstract public function put(key : String, value : String) : Void;
 	
 	/**
 	* Returns the value associated with the specified key in this preference
@@ -186,7 +186,7 @@ extern class Preferences
 	* @throws NullPointerException if <tt>key</tt> is <tt>null</tt>.  (A
 	*         <tt>null</tt> value for <tt>def</tt> <i>is</i> permitted.)
 	*/
-	@:overload @:abstract public function get(key : String, def : String) : String;
+	@:overload @:public @:abstract public function get(key : String, def : String) : String;
 	
 	/**
 	* Removes the value associated with the specified key in this preference
@@ -202,7 +202,7 @@ extern class Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload @:abstract public function remove(key : String) : Void;
+	@:overload @:public @:abstract public function remove(key : String) : Void;
 	
 	/**
 	* Removes all of the preferences (key-value associations) in this
@@ -221,7 +221,7 @@ extern class Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @see #removeNode()
 	*/
-	@:overload @:abstract public function clear() : Void;
+	@:overload @:public @:abstract public function clear() : Void;
 	
 	/**
 	* Associates a string representing the specified int value with the
@@ -239,7 +239,7 @@ extern class Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @see #getInt(String,int)
 	*/
-	@:overload @:abstract public function putInt(key : String, value : Int) : Void;
+	@:overload @:public @:abstract public function putInt(key : String, value : Int) : Void;
 	
 	/**
 	* Returns the int value represented by the string associated with the
@@ -271,7 +271,7 @@ extern class Preferences
 	* @see #putInt(String,int)
 	* @see #get(String,String)
 	*/
-	@:overload @:abstract public function getInt(key : String, def : Int) : Int;
+	@:overload @:public @:abstract public function getInt(key : String, def : Int) : Int;
 	
 	/**
 	* Associates a string representing the specified long value with the
@@ -289,7 +289,7 @@ extern class Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @see #getLong(String,long)
 	*/
-	@:overload @:abstract public function putLong(key : String, value : haxe.Int64) : Void;
+	@:overload @:public @:abstract public function putLong(key : String, value : haxe.Int64) : Void;
 	
 	/**
 	* Returns the long value represented by the string associated with the
@@ -321,7 +321,7 @@ extern class Preferences
 	* @see #putLong(String,long)
 	* @see #get(String,String)
 	*/
-	@:overload @:abstract public function getLong(key : String, def : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:abstract public function getLong(key : String, def : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Associates a string representing the specified boolean value with the
@@ -340,7 +340,7 @@ extern class Preferences
 	* @see #getBoolean(String,boolean)
 	* @see #get(String,String)
 	*/
-	@:overload @:abstract public function putBoolean(key : String, value : Bool) : Void;
+	@:overload @:public @:abstract public function putBoolean(key : String, value : Bool) : Void;
 	
 	/**
 	* Returns the boolean value represented by the string associated with the
@@ -376,7 +376,7 @@ extern class Preferences
 	* @see #get(String,String)
 	* @see #putBoolean(String,boolean)
 	*/
-	@:overload @:abstract public function getBoolean(key : String, def : Bool) : Bool;
+	@:overload @:public @:abstract public function getBoolean(key : String, def : Bool) : Bool;
 	
 	/**
 	* Associates a string representing the specified float value with the
@@ -394,7 +394,7 @@ extern class Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @see #getFloat(String,float)
 	*/
-	@:overload @:abstract public function putFloat(key : String, value : Single) : Void;
+	@:overload @:public @:abstract public function putFloat(key : String, value : Single) : Void;
 	
 	/**
 	* Returns the float value represented by the string associated with the
@@ -425,7 +425,7 @@ extern class Preferences
 	* @see #putFloat(String,float)
 	* @see #get(String,String)
 	*/
-	@:overload @:abstract public function getFloat(key : String, def : Single) : Single;
+	@:overload @:public @:abstract public function getFloat(key : String, def : Single) : Single;
 	
 	/**
 	* Associates a string representing the specified double value with the
@@ -443,7 +443,7 @@ extern class Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @see #getDouble(String,double)
 	*/
-	@:overload @:abstract public function putDouble(key : String, value : Float) : Void;
+	@:overload @:public @:abstract public function putDouble(key : String, value : Float) : Void;
 	
 	/**
 	* Returns the double value represented by the string associated with the
@@ -474,7 +474,7 @@ extern class Preferences
 	* @see #putDouble(String,double)
 	* @see #get(String,String)
 	*/
-	@:overload @:abstract public function getDouble(key : String, def : Float) : Float;
+	@:overload @:public @:abstract public function getDouble(key : String, def : Float) : Float;
 	
 	/**
 	* Associates a string representing the specified byte array with the
@@ -499,7 +499,7 @@ extern class Preferences
 	* @see #getByteArray(String,byte[])
 	* @see #get(String,String)
 	*/
-	@:overload @:abstract public function putByteArray(key : String, value : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:abstract public function putByteArray(key : String, value : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the byte array value represented by the string associated with
@@ -538,7 +538,7 @@ extern class Preferences
 	* @see #get(String,String)
 	* @see #putByteArray(String,byte[])
 	*/
-	@:overload @:abstract public function getByteArray(key : String, def : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getByteArray(key : String, def : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns all of the keys that have an associated value in this
@@ -558,7 +558,7 @@ extern class Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload @:abstract public function keys() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function keys() : java.NativeArray<String>;
 	
 	/**
 	* Returns the names of the children of this preference node, relative to
@@ -572,7 +572,7 @@ extern class Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload @:abstract public function childrenNames() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function childrenNames() : java.NativeArray<String>;
 	
 	/**
 	* Returns the parent of this preference node, or <tt>null</tt> if this is
@@ -582,7 +582,7 @@ extern class Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload @:abstract public function parent() : java.util.prefs.Preferences;
+	@:overload @:public @:abstract public function parent() : java.util.prefs.Preferences;
 	
 	/**
 	* Returns the named preference node in the same tree as this node,
@@ -606,7 +606,7 @@ extern class Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @see #flush()
 	*/
-	@:overload @:abstract public function node(pathName : String) : java.util.prefs.Preferences;
+	@:overload @:public @:abstract public function node(pathName : String) : java.util.prefs.Preferences;
 	
 	/**
 	* Returns true if the named preference node exists in the same tree
@@ -634,7 +634,7 @@ extern class Preferences
 	*         removed with the {@link #removeNode()} method and
 	*         <tt>pathName</tt> is not the empty string (<tt>""</tt>).
 	*/
-	@:overload @:abstract public function nodeExists(pathName : String) : Bool;
+	@:overload @:public @:abstract public function nodeExists(pathName : String) : Bool;
 	
 	/**
 	* Removes this preference node and all of its descendants, invalidating
@@ -666,21 +666,21 @@ extern class Preferences
 	*         the root node.
 	* @see #flush()
 	*/
-	@:overload @:abstract public function removeNode() : Void;
+	@:overload @:public @:abstract public function removeNode() : Void;
 	
 	/**
 	* Returns this preference node's name, relative to its parent.
 	*
 	* @return this preference node's name, relative to its parent.
 	*/
-	@:overload @:abstract public function name() : String;
+	@:overload @:public @:abstract public function name() : String;
 	
 	/**
 	* Returns this preference node's absolute path name.
 	*
 	* @return this preference node's absolute path name.
 	*/
-	@:overload @:abstract public function absolutePath() : String;
+	@:overload @:public @:abstract public function absolutePath() : String;
 	
 	/**
 	* Returns <tt>true</tt> if this preference node is in the user
@@ -690,14 +690,14 @@ extern class Preferences
 	*         preference tree, <tt>false</tt> if it's in the system
 	*         preference tree.
 	*/
-	@:overload @:abstract public function isUserNode() : Bool;
+	@:overload @:public @:abstract public function isUserNode() : Bool;
 	
 	/**
 	* Returns a string representation of this preferences node,
 	* as if computed by the expression:<tt>(this.isUserNode() ? "User" :
 	* "System") + " Preference Node: " + this.absolutePath()</tt>.
 	*/
-	@:overload @:abstract public function toString() : String;
+	@:overload @:public @:abstract public function toString() : String;
 	
 	/**
 	* Forces any changes in the contents of this preference node and its
@@ -723,7 +723,7 @@ extern class Preferences
 	*         communicate with it.
 	* @see    #sync()
 	*/
-	@:overload @:abstract public function flush() : Void;
+	@:overload @:public @:abstract public function flush() : Void;
 	
 	/**
 	* Ensures that future reads from this preference node and its
@@ -740,7 +740,7 @@ extern class Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @see    #flush()
 	*/
-	@:overload @:abstract public function sync() : Void;
+	@:overload @:public @:abstract public function sync() : Void;
 	
 	/**
 	* Registers the specified listener to receive <i>preference change
@@ -766,7 +766,7 @@ extern class Preferences
 	* @see #removePreferenceChangeListener(PreferenceChangeListener)
 	* @see #addNodeChangeListener(NodeChangeListener)
 	*/
-	@:overload @:abstract public function addPreferenceChangeListener(pcl : java.util.prefs.PreferenceChangeListener) : Void;
+	@:overload @:public @:abstract public function addPreferenceChangeListener(pcl : java.util.prefs.PreferenceChangeListener) : Void;
 	
 	/**
 	* Removes the specified preference change listener, so it no longer
@@ -779,7 +779,7 @@ extern class Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @see #addPreferenceChangeListener(PreferenceChangeListener)
 	*/
-	@:overload @:abstract public function removePreferenceChangeListener(pcl : java.util.prefs.PreferenceChangeListener) : Void;
+	@:overload @:public @:abstract public function removePreferenceChangeListener(pcl : java.util.prefs.PreferenceChangeListener) : Void;
 	
 	/**
 	* Registers the specified listener to receive <i>node change events</i>
@@ -810,7 +810,7 @@ extern class Preferences
 	* @see #removeNodeChangeListener(NodeChangeListener)
 	* @see #addPreferenceChangeListener(PreferenceChangeListener)
 	*/
-	@:overload @:abstract public function addNodeChangeListener(ncl : java.util.prefs.NodeChangeListener) : Void;
+	@:overload @:public @:abstract public function addNodeChangeListener(ncl : java.util.prefs.NodeChangeListener) : Void;
 	
 	/**
 	* Removes the specified <tt>NodeChangeListener</tt>, so it no longer
@@ -823,7 +823,7 @@ extern class Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @see #addNodeChangeListener(NodeChangeListener)
 	*/
-	@:overload @:abstract public function removeNodeChangeListener(ncl : java.util.prefs.NodeChangeListener) : Void;
+	@:overload @:public @:abstract public function removeNodeChangeListener(ncl : java.util.prefs.NodeChangeListener) : Void;
 	
 	/**
 	* Emits on the specified output stream an XML document representing all
@@ -853,7 +853,7 @@ extern class Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload @:abstract public function exportNode(os : java.io.OutputStream) : Void;
+	@:overload @:public @:abstract public function exportNode(os : java.io.OutputStream) : Void;
 	
 	/**
 	* Emits an XML document representing all of the preferences contained
@@ -884,7 +884,7 @@ extern class Preferences
 	* @see    #importPreferences(InputStream)
 	* @see    #exportNode(OutputStream)
 	*/
-	@:overload @:abstract public function exportSubtree(os : java.io.OutputStream) : Void;
+	@:overload @:public @:abstract public function exportSubtree(os : java.io.OutputStream) : Void;
 	
 	/**
 	* Imports all of the preferences represented by the XML document on the
@@ -918,7 +918,7 @@ extern class Preferences
 	*         it denies <tt>RuntimePermission("preferences")</tt>.
 	* @see    RuntimePermission
 	*/
-	@:overload public static function importPreferences(is : java.io.InputStream) : Void;
+	@:overload @:public @:static public static function importPreferences(is : java.io.InputStream) : Void;
 	
 	
 }

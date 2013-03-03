@@ -25,55 +25,55 @@ package com.sun.media.sound;
 */
 extern class SimpleInstrument extends com.sun.media.sound.ModelInstrument
 {
-	private var preset : Int;
+	@:protected private var preset : Int;
 	
-	private var bank : Int;
+	@:protected private var bank : Int;
 	
-	private var percussion : Bool;
+	@:protected private var percussion : Bool;
 	
-	private var name : String;
+	@:protected private var name : String;
 	
-	private var parts : java.util.List<com.sun.media.sound.SimpleInstrument.SimpleInstrument_SimpleInstrumentPart>;
+	@:protected private var parts : java.util.List<com.sun.media.sound.SimpleInstrument.SimpleInstrument_SimpleInstrumentPart>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function add(performers : java.NativeArray<com.sun.media.sound.ModelPerformer>, keyFrom : Int, keyTo : Int, velFrom : Int, velTo : Int, exclusiveClass : Int) : Void;
+	@:overload @:public public function add(performers : java.NativeArray<com.sun.media.sound.ModelPerformer>, keyFrom : Int, keyTo : Int, velFrom : Int, velTo : Int, exclusiveClass : Int) : Void;
 	
-	@:overload public function add(performers : java.NativeArray<com.sun.media.sound.ModelPerformer>, keyFrom : Int, keyTo : Int, velFrom : Int, velTo : Int) : Void;
+	@:overload @:public public function add(performers : java.NativeArray<com.sun.media.sound.ModelPerformer>, keyFrom : Int, keyTo : Int, velFrom : Int, velTo : Int) : Void;
 	
-	@:overload public function add(performers : java.NativeArray<com.sun.media.sound.ModelPerformer>, keyFrom : Int, keyTo : Int) : Void;
+	@:overload @:public public function add(performers : java.NativeArray<com.sun.media.sound.ModelPerformer>, keyFrom : Int, keyTo : Int) : Void;
 	
-	@:overload public function add(performers : java.NativeArray<com.sun.media.sound.ModelPerformer>) : Void;
+	@:overload @:public public function add(performers : java.NativeArray<com.sun.media.sound.ModelPerformer>) : Void;
 	
-	@:overload public function add(performer : com.sun.media.sound.ModelPerformer, keyFrom : Int, keyTo : Int, velFrom : Int, velTo : Int, exclusiveClass : Int) : Void;
+	@:overload @:public public function add(performer : com.sun.media.sound.ModelPerformer, keyFrom : Int, keyTo : Int, velFrom : Int, velTo : Int, exclusiveClass : Int) : Void;
 	
-	@:overload public function add(performer : com.sun.media.sound.ModelPerformer, keyFrom : Int, keyTo : Int, velFrom : Int, velTo : Int) : Void;
+	@:overload @:public public function add(performer : com.sun.media.sound.ModelPerformer, keyFrom : Int, keyTo : Int, velFrom : Int, velTo : Int) : Void;
 	
-	@:overload public function add(performer : com.sun.media.sound.ModelPerformer, keyFrom : Int, keyTo : Int) : Void;
+	@:overload @:public public function add(performer : com.sun.media.sound.ModelPerformer, keyFrom : Int, keyTo : Int) : Void;
 	
-	@:overload public function add(performer : com.sun.media.sound.ModelPerformer) : Void;
+	@:overload @:public public function add(performer : com.sun.media.sound.ModelPerformer) : Void;
 	
-	@:overload public function add(ins : com.sun.media.sound.ModelInstrument, keyFrom : Int, keyTo : Int, velFrom : Int, velTo : Int, exclusiveClass : Int) : Void;
+	@:overload @:public public function add(ins : com.sun.media.sound.ModelInstrument, keyFrom : Int, keyTo : Int, velFrom : Int, velTo : Int, exclusiveClass : Int) : Void;
 	
-	@:overload public function add(ins : com.sun.media.sound.ModelInstrument, keyFrom : Int, keyTo : Int, velFrom : Int, velTo : Int) : Void;
+	@:overload @:public public function add(ins : com.sun.media.sound.ModelInstrument, keyFrom : Int, keyTo : Int, velFrom : Int, velTo : Int) : Void;
 	
-	@:overload public function add(ins : com.sun.media.sound.ModelInstrument, keyFrom : Int, keyTo : Int) : Void;
+	@:overload @:public public function add(ins : com.sun.media.sound.ModelInstrument, keyFrom : Int, keyTo : Int) : Void;
 	
-	@:overload public function add(ins : com.sun.media.sound.ModelInstrument) : Void;
+	@:overload @:public public function add(ins : com.sun.media.sound.ModelInstrument) : Void;
 	
-	@:overload override public function getPerformers() : java.NativeArray<com.sun.media.sound.ModelPerformer>;
+	@:overload @:public override public function getPerformers() : java.NativeArray<com.sun.media.sound.ModelPerformer>;
 	
-	@:overload override public function getData() : Dynamic;
+	@:overload @:public override public function getData() : Dynamic;
 	
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
-	@:overload override public function getPatch() : com.sun.media.sound.ModelPatch;
+	@:overload @:public override public function getPatch() : com.sun.media.sound.ModelPatch;
 	
-	@:overload public function setPatch(patch : javax.sound.midi.Patch) : Void;
+	@:overload @:public public function setPatch(patch : javax.sound.midi.Patch) : Void;
 	
 	
 }

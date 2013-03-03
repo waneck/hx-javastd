@@ -35,7 +35,7 @@ extern class MBeanTrustPermission extends java.security.BasicPermission
 	* @throws IllegalArgumentException if <code>name</code> is neither
 	* "register" nor "*".
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/** <p>Create a new MBeanTrustPermission with the given name.</p>
 	@param name the name of the permission. It must be
@@ -48,7 +48,7 @@ extern class MBeanTrustPermission extends java.security.BasicPermission
 	* "register" nor "*"; or if <code>actions</code> is a non-null
 	* non-empty string.
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	
 }

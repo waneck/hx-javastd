@@ -32,7 +32,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @see #getUpdatePolicy
 	* @since 1.5
 	*/
-	@:require(java5) public static var UPDATE_WHEN_ON_EDT(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var UPDATE_WHEN_ON_EDT(default, null) : Int;
 	
 	/**
 	* Indicates that the caret should remain at the same
@@ -45,7 +45,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @see #getUpdatePolicy
 	* @since 1.5
 	*/
-	@:require(java5) public static var NEVER_UPDATE(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var NEVER_UPDATE(default, null) : Int;
 	
 	/**
 	* Indicates that the caret position is to be <b>always</b>
@@ -57,12 +57,12 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @see #getUpdatePolicy
 	* @since 1.5
 	*/
-	@:require(java5) public static var ALWAYS_UPDATE(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var ALWAYS_UPDATE(default, null) : Int;
 	
 	/**
 	* Constructs a default caret.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets the caret movement policy on the document updates. Normally
@@ -116,7 +116,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setUpdatePolicy(policy : Int) : Void;
+	@:require(java5) @:overload @:public public function setUpdatePolicy(policy : Int) : Void;
 	
 	/**
 	* Gets the caret movement policy on document updates.
@@ -131,7 +131,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getUpdatePolicy() : Int;
+	@:require(java5) @:overload @:public public function getUpdatePolicy() : Int;
 	
 	/**
 	* Gets the text editor component that this caret is
@@ -139,7 +139,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	*
 	* @return the component
 	*/
-	@:overload @:final private function getComponent() : javax.swing.text.JTextComponent;
+	@:overload @:protected @:final private function getComponent() : javax.swing.text.JTextComponent;
 	
 	/**
 	* Cause the caret to be painted.  The repaint
@@ -151,7 +151,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* <A HREF="http://java.sun.com/docs/books/tutorial/uiswing/misc/threads.html">How
 	* to Use Threads</A> for more information.
 	*/
-	@:overload @:final @:synchronized private function repaint() : Void;
+	@:overload @:protected @:final @:synchronized private function repaint() : Void;
 	
 	/**
 	* Damages the area surrounding the caret to cause
@@ -163,7 +163,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param r  the current location of the caret
 	* @see #paint
 	*/
-	@:overload @:synchronized private function damage(r : java.awt.Rectangle) : Void;
+	@:overload @:protected @:synchronized private function damage(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Scrolls the associated view (if necessary) to make
@@ -175,14 +175,14 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	*
 	* @param nloc the new position to scroll to
 	*/
-	@:overload private function adjustVisibility(nloc : java.awt.Rectangle) : Void;
+	@:overload @:protected private function adjustVisibility(nloc : java.awt.Rectangle) : Void;
 	
 	/**
 	* Gets the painter for the Highlighter.
 	*
 	* @return the painter
 	*/
-	@:overload private function getSelectionPainter() : javax.swing.text.Highlighter.Highlighter_HighlightPainter;
+	@:overload @:protected private function getSelectionPainter() : javax.swing.text.Highlighter.Highlighter_HighlightPainter;
 	
 	/**
 	* Tries to set the position of the caret from
@@ -190,7 +190,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	*
 	* @param e the mouse event
 	*/
-	@:overload private function positionCaret(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:protected private function positionCaret(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Tries to move the position of the caret from
@@ -200,7 +200,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	*
 	* @param e the mouse event
 	*/
-	@:overload private function moveCaret(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:protected private function moveCaret(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Called when the component containing the caret gains
@@ -210,7 +210,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param e the focus event
 	* @see FocusListener#focusGained
 	*/
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
 	/**
 	* Called when the component containing the caret loses
@@ -220,7 +220,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param e the focus event
 	* @see FocusListener#focusLost
 	*/
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
 	/**
 	* Called when the mouse is clicked.  If the click was generated
@@ -230,7 +230,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param e the mouse event
 	* @see MouseListener#mouseClicked
 	*/
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* If button 1 is pressed, this is implemented to
@@ -244,7 +244,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param e the mouse event
 	* @see MouseListener#mousePressed
 	*/
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Called when the mouse is released.
@@ -252,7 +252,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param e the mouse event
 	* @see MouseListener#mouseReleased
 	*/
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Called when the mouse enters a region.
@@ -260,7 +260,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param e the mouse event
 	* @see MouseListener#mouseEntered
 	*/
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Called when the mouse exits a region.
@@ -268,7 +268,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param e the mouse event
 	* @see MouseListener#mouseExited
 	*/
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Moves the caret position
@@ -280,7 +280,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param e the mouse event
 	* @see MouseMotionListener#mouseDragged
 	*/
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Called when the mouse is moved.
@@ -288,7 +288,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param e the mouse event
 	* @see MouseMotionListener#mouseMoved
 	*/
-	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Renders the caret as a vertical line.  If this is reimplemented
@@ -306,7 +306,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param g the graphics context
 	* @see #damage
 	*/
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Called when the UI is being installed into the
@@ -319,7 +319,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param c the component
 	* @see Caret#install
 	*/
-	@:overload public function install(c : javax.swing.text.JTextComponent) : Void;
+	@:overload @:public public function install(c : javax.swing.text.JTextComponent) : Void;
 	
 	/**
 	* Called when the UI is being removed from the
@@ -329,7 +329,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param c the component
 	* @see Caret#deinstall
 	*/
-	@:overload public function deinstall(c : javax.swing.text.JTextComponent) : Void;
+	@:overload @:public public function deinstall(c : javax.swing.text.JTextComponent) : Void;
 	
 	/**
 	* Adds a listener to track whenever the caret position has
@@ -338,7 +338,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param l the listener
 	* @see Caret#addChangeListener
 	*/
-	@:overload public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Removes a listener that was tracking caret position changes.
@@ -346,7 +346,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param l the listener
 	* @see Caret#removeChangeListener
 	*/
-	@:overload public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the change listeners
@@ -361,7 +361,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
+	@:require(java4) @:overload @:public public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -371,7 +371,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	*
 	* @see EventListenerList
 	*/
-	@:overload private function fireStateChanged() : Void;
+	@:overload @:protected private function fireStateChanged() : Void;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -409,21 +409,21 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Changes the selection visibility.
 	*
 	* @param vis the new visibility
 	*/
-	@:overload public function setSelectionVisible(vis : Bool) : Void;
+	@:overload @:public public function setSelectionVisible(vis : Bool) : Void;
 	
 	/**
 	* Checks whether the current selection is visible.
 	*
 	* @return true if the selection is visible
 	*/
-	@:overload public function isSelectionVisible() : Bool;
+	@:overload @:public public function isSelectionVisible() : Bool;
 	
 	/**
 	* Determines if the caret is currently active.
@@ -439,7 +439,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isActive() : Bool;
+	@:require(java5) @:overload @:public public function isActive() : Bool;
 	
 	/**
 	* Indicates whether or not the caret is currently visible. As the
@@ -458,7 +458,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @see Caret#isVisible
 	* @see #isActive
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
 	/**
 	* Sets the caret visibility, and repaints the caret.
@@ -494,7 +494,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @see #isActive
 	* @see Caret#setVisible
 	*/
-	@:overload public function setVisible(e : Bool) : Void;
+	@:overload @:public public function setVisible(e : Bool) : Void;
 	
 	/**
 	* Sets the caret blink rate.
@@ -502,7 +502,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param rate the rate in milliseconds, 0 to stop blinking
 	* @see Caret#setBlinkRate
 	*/
-	@:overload public function setBlinkRate(rate : Int) : Void;
+	@:overload @:public public function setBlinkRate(rate : Int) : Void;
 	
 	/**
 	* Gets the caret blink rate.
@@ -511,7 +511,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	*  zero the caret will not blink.
 	* @see Caret#getBlinkRate
 	*/
-	@:overload public function getBlinkRate() : Int;
+	@:overload @:public public function getBlinkRate() : Int;
 	
 	/**
 	* Fetches the current position of the caret.
@@ -519,7 +519,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @return the position &gt;= 0
 	* @see Caret#getDot
 	*/
-	@:overload public function getDot() : Int;
+	@:overload @:public public function getDot() : Int;
 	
 	/**
 	* Fetches the current position of the mark.  If there is a selection,
@@ -528,7 +528,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @return the position &gt;= 0
 	* @see Caret#getMark
 	*/
-	@:overload public function getMark() : Int;
+	@:overload @:public public function getMark() : Int;
 	
 	/**
 	* Sets the caret position and mark to the specified position,
@@ -539,7 +539,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @see #setDot(int, Position.Bias)
 	* @see Caret#setDot
 	*/
-	@:overload public function setDot(dot : Int) : Void;
+	@:overload @:public public function setDot(dot : Int) : Void;
 	
 	/**
 	* Moves the caret position to the specified position,
@@ -549,7 +549,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @see #moveDot(int, javax.swing.text.Position.Bias)
 	* @see Caret#moveDot
 	*/
-	@:overload public function moveDot(dot : Int) : Void;
+	@:overload @:public public function moveDot(dot : Int) : Void;
 	
 	/**
 	* Moves the caret position to the specified position, with the
@@ -561,7 +561,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @see Caret#moveDot
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function moveDot(dot : Int, dotBias : javax.swing.text.Position.Position_Bias) : Void;
+	@:require(java6) @:overload @:public public function moveDot(dot : Int, dotBias : javax.swing.text.Position.Position_Bias) : Void;
 	
 	/**
 	* Sets the caret position and mark to the specified position, with the
@@ -574,7 +574,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @see Caret#setDot
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setDot(dot : Int, dotBias : javax.swing.text.Position.Position_Bias) : Void;
+	@:require(java6) @:overload @:public public function setDot(dot : Int, dotBias : javax.swing.text.Position.Position_Bias) : Void;
 	
 	/**
 	* Returns the bias of the caret position.
@@ -582,7 +582,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @return the bias of the caret position
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getDotBias() : javax.swing.text.Position.Position_Bias;
+	@:require(java6) @:overload @:public public function getDotBias() : javax.swing.text.Position.Position_Bias;
 	
 	/**
 	* Returns the bias of the mark.
@@ -590,7 +590,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @return the bias of the mark
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getMarkBias() : javax.swing.text.Position.Position_Bias;
+	@:require(java6) @:overload @:public public function getMarkBias() : javax.swing.text.Position.Position_Bias;
 	
 	/**
 	* Saves the current caret position.  This is used when
@@ -600,7 +600,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param p the position
 	* @see #getMagicCaretPosition
 	*/
-	@:overload public function setMagicCaretPosition(p : java.awt.Point) : Void;
+	@:overload @:public public function setMagicCaretPosition(p : java.awt.Point) : Void;
 	
 	/**
 	* Gets the saved caret position.
@@ -608,7 +608,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @return the position
 	* see #setMagicCaretPosition
 	*/
-	@:overload public function getMagicCaretPosition() : java.awt.Point;
+	@:overload @:public public function getMagicCaretPosition() : java.awt.Point;
 	
 	/**
 	* Compares this object to the specified object.
@@ -620,14 +620,14 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @return    <code>true</code> if the objects are equal;
 	*            <code>false</code> otherwise
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* The event listener list.
 	*/
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
 	/**
 	* The change event for the model.
@@ -635,13 +635,13 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* event's only (read-only) state is the source property.  The source
 	* of events generated here is always "this".
 	*/
-	@:transient private var changeEvent : javax.swing.event.ChangeEvent;
+	@:protected @:transient private var changeEvent : javax.swing.event.ChangeEvent;
 	
 	
 }
 @:native('javax$swing$text$DefaultCaret$SafeScroller') @:internal extern class DefaultCaret_SafeScroller implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
@@ -654,7 +654,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	*
 	* @param e the action event
 	*/
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	/**
 	* Updates the dot and mark if they were changed by
@@ -663,7 +663,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param e the document event
 	* @see DocumentListener#insertUpdate
 	*/
-	@:overload public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	/**
 	* Updates the dot and mark if they were changed
@@ -672,7 +672,7 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param e the document event
 	* @see DocumentListener#removeUpdate
 	*/
-	@:overload public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	/**
 	* Gives notification that an attribute or set of attributes changed.
@@ -680,28 +680,28 @@ extern class DefaultCaret extends java.awt.Rectangle implements javax.swing.text
 	* @param e the document event
 	* @see DocumentListener#changedUpdate
 	*/
-	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	/**
 	* This method gets called when a bound property is changed.
 	* We are looking for document changes on the editor.
 	*/
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* Toggles the visibility of the selection when ownership is lost.
 	*/
-	@:overload public function lostOwnership(clipboard : java.awt.datatransfer.Clipboard, contents : java.awt.datatransfer.Transferable) : Void;
+	@:overload @:public public function lostOwnership(clipboard : java.awt.datatransfer.Clipboard, contents : java.awt.datatransfer.Transferable) : Void;
 	
 	
 }
 @:native('javax$swing$text$DefaultCaret$DefaultFilterBypass') @:internal extern class DefaultCaret_DefaultFilterBypass extends javax.swing.text.NavigationFilter.NavigationFilter_FilterBypass
 {
-	@:overload override public function getCaret() : javax.swing.text.Caret;
+	@:overload @:public override public function getCaret() : javax.swing.text.Caret;
 	
-	@:overload override public function setDot(dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
+	@:overload @:public override public function setDot(dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
 	
-	@:overload override public function moveDot(dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
+	@:overload @:public override public function moveDot(dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
 	
 	
 }

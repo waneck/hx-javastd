@@ -30,44 +30,44 @@ extern class MBeanInstantiator
 	* instantiate an MBean of this class in the MBeanServer.
 	* e.g. it must have a public constructor, be a concrete class...
 	*/
-	@:overload public function testCreation(c : Class<Dynamic>) : Void;
+	@:overload @:public public function testCreation(c : Class<Dynamic>) : Void;
 	
 	/**
 	* Loads the class with the specified name using this object's
 	* Default Loader Repository.
 	**/
-	@:overload public function findClassWithDefaultLoaderRepository(className : String) : Class<Dynamic>;
+	@:overload @:public public function findClassWithDefaultLoaderRepository(className : String) : Class<Dynamic>;
 	
 	/**
 	* Gets the class for the specified class name using the MBean
 	* Interceptor's classloader
 	*/
-	@:overload public function findClass(className : String, loader : java.lang.ClassLoader) : Class<Dynamic>;
+	@:overload @:public public function findClass(className : String, loader : java.lang.ClassLoader) : Class<Dynamic>;
 	
 	/**
 	* Gets the class for the specified class name using the specified
 	* class loader
 	*/
-	@:overload public function findClass(className : String, aLoader : javax.management.ObjectName) : Class<Dynamic>;
+	@:overload @:public public function findClass(className : String, aLoader : javax.management.ObjectName) : Class<Dynamic>;
 	
 	/**
 	* Return an array of Class corresponding to the given signature, using
 	* the specified class loader.
 	*/
-	@:overload public function findSignatureClasses(signature : java.NativeArray<String>, loader : java.lang.ClassLoader) : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function findSignatureClasses(signature : java.NativeArray<String>, loader : java.lang.ClassLoader) : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Instantiates an object given its class, using its empty constructor.
 	* The call returns a reference to the newly created object.
 	*/
-	@:overload public function instantiate(theClass : Class<Dynamic>) : Dynamic;
+	@:overload @:public public function instantiate(theClass : Class<Dynamic>) : Dynamic;
 	
 	/**
 	* Instantiates an object given its class, the parameters and
 	* signature of its constructor The call returns a reference to
 	* the newly created object.
 	*/
-	@:overload public function instantiate(theClass : Class<Dynamic>, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>, loader : java.lang.ClassLoader) : Dynamic;
+	@:overload @:public public function instantiate(theClass : Class<Dynamic>, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>, loader : java.lang.ClassLoader) : Dynamic;
 	
 	/**
 	* De-serializes a byte array in the context of a classloader.
@@ -80,7 +80,7 @@ extern class MBeanInstantiator
 	* @exception OperationsException Any of the usual Input/Output related
 	* exceptions.
 	*/
-	@:overload public function deserialize(loader : java.lang.ClassLoader, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
+	@:overload @:public public function deserialize(loader : java.lang.ClassLoader, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
 	
 	/**
 	* De-serializes a byte array in the context of a given MBean class loader.
@@ -106,7 +106,7 @@ extern class MBeanInstantiator
 	* @exception ReflectionException The specified class could not be loaded
 	* by the specified class loader.
 	*/
-	@:overload public function deserialize(className : String, loaderName : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>, loader : java.lang.ClassLoader) : java.io.ObjectInputStream;
+	@:overload @:public public function deserialize(className : String, loaderName : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>, loader : java.lang.ClassLoader) : java.io.ObjectInputStream;
 	
 	/**
 	* Instantiates an object using the list of all class loaders registered
@@ -130,7 +130,7 @@ extern class MBeanInstantiator
 	* <CODE>java.lang.IllegalArgumentException</CODE>: the className passed in
 	* parameter is null.
 	*/
-	@:overload public function instantiate(className : String) : Dynamic;
+	@:overload @:public public function instantiate(className : String) : Dynamic;
 	
 	/**
 	* Instantiates an object using the class Loader specified by its
@@ -158,7 +158,7 @@ extern class MBeanInstantiator
 	* <CODE>java.lang.IllegalArgumentException</CODE>: the className passed in
 	* parameter is null.
 	*/
-	@:overload public function instantiate(className : String, loaderName : javax.management.ObjectName, loader : java.lang.ClassLoader) : Dynamic;
+	@:overload @:public public function instantiate(className : String, loaderName : javax.management.ObjectName, loader : java.lang.ClassLoader) : Dynamic;
 	
 	/**
 	* Instantiates an object using the list of all class loaders registered
@@ -186,7 +186,7 @@ extern class MBeanInstantiator
 	* <CODE>java.lang.IllegalArgumentException</CODE>: the className passed in
 	* parameter is null.
 	*/
-	@:overload public function instantiate(className : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>, loader : java.lang.ClassLoader) : Dynamic;
+	@:overload @:public public function instantiate(className : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>, loader : java.lang.ClassLoader) : Dynamic;
 	
 	/**
 	* Instantiates an object. The class loader to be used is identified by its
@@ -219,12 +219,12 @@ extern class MBeanInstantiator
 	* <CODE>java.lang.IllegalArgumentException</CODE>: the className passed in
 	* parameter is null.
 	*/
-	@:overload public function instantiate(className : String, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>, loader : java.lang.ClassLoader) : Dynamic;
+	@:overload @:public public function instantiate(className : String, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>, loader : java.lang.ClassLoader) : Dynamic;
 	
 	/**
 	* Return the Default Loader Repository used by this instantiator object.
 	**/
-	@:overload public function getClassLoaderRepository() : com.sun.jmx.mbeanserver.ModifiableClassLoaderRepository;
+	@:overload @:public public function getClassLoaderRepository() : com.sun.jmx.mbeanserver.ModifiableClassLoaderRepository;
 	
 	
 }

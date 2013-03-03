@@ -25,31 +25,31 @@ package com.sun.media.sound;
 */
 extern class ModelConnectionBlock
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(scale : Float, destination : com.sun.media.sound.ModelDestination) : Void;
+	@:overload @:public public function new(scale : Float, destination : com.sun.media.sound.ModelDestination) : Void;
 	
-	@:overload public function new(source : com.sun.media.sound.ModelSource, destination : com.sun.media.sound.ModelDestination) : Void;
+	@:overload @:public public function new(source : com.sun.media.sound.ModelSource, destination : com.sun.media.sound.ModelDestination) : Void;
 	
-	@:overload public function new(source : com.sun.media.sound.ModelSource, scale : Float, destination : com.sun.media.sound.ModelDestination) : Void;
+	@:overload @:public public function new(source : com.sun.media.sound.ModelSource, scale : Float, destination : com.sun.media.sound.ModelDestination) : Void;
 	
-	@:overload public function new(source : com.sun.media.sound.ModelSource, control : com.sun.media.sound.ModelSource, destination : com.sun.media.sound.ModelDestination) : Void;
+	@:overload @:public public function new(source : com.sun.media.sound.ModelSource, control : com.sun.media.sound.ModelSource, destination : com.sun.media.sound.ModelDestination) : Void;
 	
-	@:overload public function new(source : com.sun.media.sound.ModelSource, control : com.sun.media.sound.ModelSource, scale : Float, destination : com.sun.media.sound.ModelDestination) : Void;
+	@:overload @:public public function new(source : com.sun.media.sound.ModelSource, control : com.sun.media.sound.ModelSource, scale : Float, destination : com.sun.media.sound.ModelDestination) : Void;
 	
-	@:overload public function getDestination() : com.sun.media.sound.ModelDestination;
+	@:overload @:public public function getDestination() : com.sun.media.sound.ModelDestination;
 	
-	@:overload public function setDestination(destination : com.sun.media.sound.ModelDestination) : Void;
+	@:overload @:public public function setDestination(destination : com.sun.media.sound.ModelDestination) : Void;
 	
-	@:overload public function getScale() : Float;
+	@:overload @:public public function getScale() : Float;
 	
-	@:overload public function setScale(scale : Float) : Void;
+	@:overload @:public public function setScale(scale : Float) : Void;
 	
-	@:overload public function getSources() : java.NativeArray<com.sun.media.sound.ModelSource>;
+	@:overload @:public public function getSources() : java.NativeArray<com.sun.media.sound.ModelSource>;
 	
-	@:overload public function setSources(source : java.NativeArray<com.sun.media.sound.ModelSource>) : Void;
+	@:overload @:public public function setSources(source : java.NativeArray<com.sun.media.sound.ModelSource>) : Void;
 	
-	@:overload public function addSource(source : com.sun.media.sound.ModelSource) : Void;
+	@:overload @:public public function addSource(source : com.sun.media.sound.ModelSource) : Void;
 	
 	
 }

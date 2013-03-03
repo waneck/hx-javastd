@@ -29,13 +29,13 @@ extern class GraphicsEnvironment
 	* This is an abstract class and cannot be instantiated directly.
 	* Instances must be obtained from a suitable factory or query method.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the local <code>GraphicsEnvironment</code>.
 	* @return the local <code>GraphicsEnvironment</code>
 	*/
-	@:overload @:synchronized public static function getLocalGraphicsEnvironment() : java.awt.GraphicsEnvironment;
+	@:overload @:public @:static @:synchronized public static function getLocalGraphicsEnvironment() : java.awt.GraphicsEnvironment;
 	
 	/**
 	* Tests whether or not a display, keyboard, and mouse can be
@@ -49,7 +49,7 @@ extern class GraphicsEnvironment
 	* @see java.awt.HeadlessException
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function isHeadless() : Bool;
+	@:require(java4) @:overload @:public @:static public static function isHeadless() : Bool;
 	
 	/**
 	* Returns whether or not a display, keyboard, and mouse can be
@@ -64,7 +64,7 @@ extern class GraphicsEnvironment
 	* @see #isHeadless
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isHeadlessInstance() : Bool;
+	@:require(java4) @:overload @:public public function isHeadlessInstance() : Bool;
 	
 	/**
 	* Returns an array of all of the screen <code>GraphicsDevice</code>
@@ -74,7 +74,7 @@ extern class GraphicsEnvironment
 	* @exception HeadlessException if isHeadless() returns true
 	* @see #isHeadless()
 	*/
-	@:overload @:abstract public function getScreenDevices() : java.NativeArray<java.awt.GraphicsDevice>;
+	@:overload @:public @:abstract public function getScreenDevices() : java.NativeArray<java.awt.GraphicsDevice>;
 	
 	/**
 	* Returns the default screen <code>GraphicsDevice</code>.
@@ -83,7 +83,7 @@ extern class GraphicsEnvironment
 	* @exception HeadlessException if isHeadless() returns true
 	* @see #isHeadless()
 	*/
-	@:overload @:abstract public function getDefaultScreenDevice() : java.awt.GraphicsDevice;
+	@:overload @:public @:abstract public function getDefaultScreenDevice() : java.awt.GraphicsDevice;
 	
 	/**
 	* Returns a <code>Graphics2D</code> object for rendering into the
@@ -93,7 +93,7 @@ extern class GraphicsEnvironment
 	* the specified <code>BufferedImage</code>
 	* @throws NullPointerException if <code>img</code> is null
 	*/
-	@:overload @:abstract public function createGraphics(img : java.awt.image.BufferedImage) : java.awt.Graphics2D;
+	@:overload @:public @:abstract public function createGraphics(img : java.awt.image.BufferedImage) : java.awt.Graphics2D;
 	
 	/**
 	* Returns an array containing a one-point size instance of all fonts
@@ -121,7 +121,7 @@ extern class GraphicsEnvironment
 	* @see java.awt.Font#getFontName
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getAllFonts() : java.NativeArray<java.awt.Font>;
+	@:require(java2) @:overload @:public @:abstract public function getAllFonts() : java.NativeArray<java.awt.Font>;
 	
 	/**
 	* Returns an array containing the names of all font families in this
@@ -142,7 +142,7 @@ extern class GraphicsEnvironment
 	* @see java.awt.Font#getFamily
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getAvailableFontFamilyNames() : java.NativeArray<String>;
+	@:require(java2) @:overload @:public @:abstract public function getAvailableFontFamilyNames() : java.NativeArray<String>;
 	
 	/**
 	* Returns an array containing the names of all font families in this
@@ -166,7 +166,7 @@ extern class GraphicsEnvironment
 	* @see java.awt.Font#getFamily
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getAvailableFontFamilyNames(l : java.util.Locale) : java.NativeArray<String>;
+	@:require(java2) @:overload @:public @:abstract public function getAvailableFontFamilyNames(l : java.util.Locale) : java.NativeArray<String>;
 	
 	/**
 	* Registers a <i>created</i> <code>Font</code>in this
@@ -199,7 +199,7 @@ extern class GraphicsEnvironment
 	* @throws NullPointerException if <code>font</code> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function registerFont(font : java.awt.Font) : Bool;
+	@:require(java6) @:overload @:public public function registerFont(font : java.awt.Font) : Bool;
 	
 	/**
 	* Indicates a preference for locale-specific fonts in the mapping of
@@ -221,7 +221,7 @@ extern class GraphicsEnvironment
 	* be called before user interface initialisation.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function preferLocaleFonts() : Void;
+	@:require(java5) @:overload @:public public function preferLocaleFonts() : Void;
 	
 	/**
 	* Indicates a preference for proportional over non-proportional (e.g.
@@ -239,7 +239,7 @@ extern class GraphicsEnvironment
 	* be called before user interface initialisation.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function preferProportionalFonts() : Void;
+	@:require(java5) @:overload @:public public function preferProportionalFonts() : Void;
 	
 	/**
 	* Returns the Point where Windows should be centered.
@@ -251,7 +251,7 @@ extern class GraphicsEnvironment
 	* @see #getMaximumWindowBounds
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getCenterPoint() : java.awt.Point;
+	@:require(java4) @:overload @:public public function getCenterPoint() : java.awt.Point;
 	
 	/**
 	* Returns the maximum bounds for centered Windows.
@@ -272,7 +272,7 @@ extern class GraphicsEnvironment
 	* @see Toolkit#getScreenInsets
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getMaximumWindowBounds() : java.awt.Rectangle;
+	@:require(java4) @:overload @:public public function getMaximumWindowBounds() : java.awt.Rectangle;
 	
 	
 }

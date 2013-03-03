@@ -55,7 +55,7 @@ extern interface DocumentRange
 	*   this Document, or with DocumentFragments and Attrs for which this
 	*   Document is the <code>ownerDocument</code>.
 	*/
-	@:overload public function createRange() : org.w3c.dom.ranges.Range;
+	@:overload @:public public function createRange() : org.w3c.dom.ranges.Range;
 	
 	
 }

@@ -25,15 +25,15 @@ package com.sun.xml.internal.ws.protocol.soap;
 */
 @:internal extern class MUTube extends com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterTubeImpl
 {
-	private static var logger(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var logger(default, null) : java.util.logging.Logger;
 	
-	private var soapVersion(default, null) : com.sun.xml.internal.ws.api.SOAPVersion;
+	@:protected @:final private var soapVersion(default, null) : com.sun.xml.internal.ws.api.SOAPVersion;
 	
-	private var binding : com.sun.xml.internal.ws.binding.SOAPBindingImpl;
+	@:protected private var binding : com.sun.xml.internal.ws.binding.SOAPBindingImpl;
 	
-	@:overload private function new(binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
+	@:overload @:protected private function new(binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload private function new(that : com.sun.xml.internal.ws.protocol.soap.MUTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload @:protected private function new(that : com.sun.xml.internal.ws.protocol.soap.MUTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
 	/**
 	* @param headers HeaderList that needs MU processing
@@ -43,7 +43,7 @@ package com.sun.xml.internal.ws.protocol.soap;
 	* @return returns the headers that have mustUnderstand attribute and are not understood
 	*         by the binding.
 	*/
-	@:overload @:final public function getMisUnderstoodHeaders(headers : com.sun.xml.internal.ws.api.message.HeaderList, roles : java.util.Set<String>, handlerKnownHeaders : java.util.Set<javax.xml.namespace.QName>) : java.util.Set<javax.xml.namespace.QName>;
+	@:overload @:public @:final public function getMisUnderstoodHeaders(headers : com.sun.xml.internal.ws.api.message.HeaderList, roles : java.util.Set<String>, handlerKnownHeaders : java.util.Set<javax.xml.namespace.QName>) : java.util.Set<javax.xml.namespace.QName>;
 	
 	
 }

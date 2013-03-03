@@ -25,14 +25,14 @@ package com.sun.xml.internal.ws.transport.http.server;
 */
 @:internal extern class PortableHttpHandler extends javax.xml.ws.spi.http.HttpHandler
 {
-	@:overload public function new(adapter : com.sun.xml.internal.ws.transport.http.HttpAdapter, executor : java.util.concurrent.Executor) : Void;
+	@:overload @:public public function new(adapter : com.sun.xml.internal.ws.transport.http.HttpAdapter, executor : java.util.concurrent.Executor) : Void;
 	
 	/**
 	* Called by HttpServer when there is a matching request for the context
 	*/
-	@:overload public function handle(msg : javax.xml.ws.spi.http.HttpExchange) : Void;
+	@:overload @:public override public function handle(msg : javax.xml.ws.spi.http.HttpExchange) : Void;
 	
-	@:overload public function handleExchange(msg : javax.xml.ws.spi.http.HttpExchange) : Void;
+	@:overload @:public public function handleExchange(msg : javax.xml.ws.spi.http.HttpExchange) : Void;
 	
 	
 }
@@ -42,7 +42,7 @@ package com.sun.xml.internal.ws.transport.http.server;
 */
 @:native('com$sun$xml$internal$ws$transport$http$server$PortableHttpHandler$HttpHandlerRunnable') @:internal extern class PortableHttpHandler_HttpHandlerRunnable implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

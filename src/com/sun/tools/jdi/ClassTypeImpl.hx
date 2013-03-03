@@ -25,29 +25,29 @@ package com.sun.tools.jdi;
 */
 extern class ClassTypeImpl extends com.sun.tools.jdi.ReferenceTypeImpl implements com.sun.jdi.ClassType
 {
-	@:overload private function new(aVm : com.sun.jdi.VirtualMachine, aRef : haxe.Int64) : Void;
+	@:overload @:protected private function new(aVm : com.sun.jdi.VirtualMachine, aRef : haxe.Int64) : Void;
 	
-	@:overload public function superclass() : com.sun.jdi.ClassType;
+	@:overload @:public public function superclass() : com.sun.jdi.ClassType;
 	
-	@:overload public function interfaces() : java.util.List<com.sun.jdi.InterfaceType>;
+	@:overload @:public public function interfaces() : java.util.List<com.sun.jdi.InterfaceType>;
 	
-	@:overload public function allInterfaces() : java.util.List<com.sun.jdi.InterfaceType>;
+	@:overload @:public public function allInterfaces() : java.util.List<com.sun.jdi.InterfaceType>;
 	
-	@:overload public function subclasses() : java.util.List<com.sun.jdi.ClassType>;
+	@:overload @:public public function subclasses() : java.util.List<com.sun.jdi.ClassType>;
 	
-	@:overload public function isEnum() : Bool;
+	@:overload @:public public function isEnum() : Bool;
 	
-	@:overload public function setValue(field : com.sun.jdi.Field, value : com.sun.jdi.Value) : Void;
+	@:overload @:public public function setValue(field : com.sun.jdi.Field, value : com.sun.jdi.Value) : Void;
 	
-	@:overload public function invokeMethod(threadIntf : com.sun.jdi.ThreadReference, methodIntf : com.sun.jdi.Method, origArguments : java.util.List<com.sun.jdi.Value>, options : Int) : com.sun.jdi.Value;
+	@:overload @:public public function invokeMethod(threadIntf : com.sun.jdi.ThreadReference, methodIntf : com.sun.jdi.Method, origArguments : java.util.List<com.sun.jdi.Value>, options : Int) : com.sun.jdi.Value;
 	
-	@:overload public function newInstance(threadIntf : com.sun.jdi.ThreadReference, methodIntf : com.sun.jdi.Method, origArguments : java.util.List<com.sun.jdi.Value>, options : Int) : com.sun.jdi.ObjectReference;
+	@:overload @:public public function newInstance(threadIntf : com.sun.jdi.ThreadReference, methodIntf : com.sun.jdi.Method, origArguments : java.util.List<com.sun.jdi.Value>, options : Int) : com.sun.jdi.ObjectReference;
 	
-	@:overload public function concreteMethodByName(name : String, signature : String) : com.sun.jdi.Method;
+	@:overload @:public public function concreteMethodByName(name : String, signature : String) : com.sun.jdi.Method;
 	
-	@:overload override public function allMethods() : java.util.List<com.sun.jdi.Method>;
+	@:overload @:public override public function allMethods() : java.util.List<com.sun.jdi.Method>;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

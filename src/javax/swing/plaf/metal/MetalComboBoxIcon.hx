@@ -28,17 +28,17 @@ extern class MetalComboBoxIcon implements javax.swing.Icon implements java.io.Se
 	/**
 	* Paints the horizontal bars for the
 	*/
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
 	/**
 	* Created a stub to satisfy the interface.
 	*/
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
 	/**
 	* Created a stub to satisfy the interface.
 	*/
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }

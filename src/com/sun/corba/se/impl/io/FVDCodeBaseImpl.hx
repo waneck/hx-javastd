@@ -31,17 +31,17 @@ package com.sun.corba.se.impl.io;
 */
 extern class FVDCodeBaseImpl extends _CodeBaseImplBase
 {
-	@:overload public function get_ir() : com.sun.org.omg.CORBA.Repository;
+	@:overload @:public public function get_ir() : com.sun.org.omg.CORBA.Repository;
 	
-	@:overload public function implementation(x : String) : String;
+	@:overload @:public public function implementation(x : String) : String;
 	
-	@:overload public function implementations(x : java.NativeArray<String>) : java.NativeArray<String>;
+	@:overload @:public public function implementations(x : java.NativeArray<String>) : java.NativeArray<String>;
 	
-	@:overload public function meta(x : String) : com.sun.org.omg.CORBA.ValueDefPackage.FullValueDescription;
+	@:overload @:public public function meta(x : String) : com.sun.org.omg.CORBA.ValueDefPackage.FullValueDescription;
 	
-	@:overload public function metas(x : java.NativeArray<String>) : java.NativeArray<com.sun.org.omg.CORBA.ValueDefPackage.FullValueDescription>;
+	@:overload @:public public function metas(x : java.NativeArray<String>) : java.NativeArray<com.sun.org.omg.CORBA.ValueDefPackage.FullValueDescription>;
 	
-	@:overload public function bases(x : String) : java.NativeArray<String>;
+	@:overload @:public public function bases(x : String) : java.NativeArray<String>;
 	
 	
 }

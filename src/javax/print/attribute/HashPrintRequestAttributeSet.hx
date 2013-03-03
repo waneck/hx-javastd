@@ -28,7 +28,7 @@ extern class HashPrintRequestAttributeSet extends javax.print.attribute.HashAttr
 	/**
 	* Construct a new, empty print request attribute set.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a new print request attribute set,
@@ -39,7 +39,7 @@ extern class HashPrintRequestAttributeSet extends javax.print.attribute.HashAttr
 	* @exception  NullPointerException
 	*     (unchecked exception) Thrown if <CODE>attribute</CODE> is null.
 	*/
-	@:overload public function new(attribute : javax.print.attribute.PrintRequestAttribute) : Void;
+	@:overload @:public public function new(attribute : javax.print.attribute.PrintRequestAttribute) : Void;
 	
 	/**
 	* Construct a new print request attribute set, initially populated with
@@ -56,7 +56,7 @@ extern class HashPrintRequestAttributeSet extends javax.print.attribute.HashAttr
 	*     (unchecked exception)
 	* Thrown if any element of <CODE>attributes</CODE> is null.
 	*/
-	@:overload public function new(attributes : java.NativeArray<javax.print.attribute.PrintRequestAttribute>) : Void;
+	@:overload @:public public function new(attributes : java.NativeArray<javax.print.attribute.PrintRequestAttribute>) : Void;
 	
 	/**
 	* Construct a new attribute set, initially populated with the
@@ -71,7 +71,7 @@ extern class HashPrintRequestAttributeSet extends javax.print.attribute.HashAttr
 	* <CODE>attributes</CODE> is not an instance of
 	* <CODE>(PrintRequestAttributeSe</CODE>.
 	*/
-	@:overload public function new(attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
+	@:overload @:public public function new(attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
 	
 	
 }

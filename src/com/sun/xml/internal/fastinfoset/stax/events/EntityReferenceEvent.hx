@@ -27,28 +27,28 @@ package com.sun.xml.internal.fastinfoset.stax.events;
 */
 extern class EntityReferenceEvent extends com.sun.xml.internal.fastinfoset.stax.events.EventBase implements javax.xml.stream.events.EntityReference
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(entityName : String, entityDeclaration : javax.xml.stream.events.EntityDeclaration) : Void;
+	@:overload @:public public function new(entityName : String, entityDeclaration : javax.xml.stream.events.EntityDeclaration) : Void;
 	
 	/**
 	* The name of the entity
 	* @return the entity's name, may not be null
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return the declaration of this entity.
 	*/
-	@:overload public function getDeclaration() : javax.xml.stream.events.EntityDeclaration;
+	@:overload @:public public function getDeclaration() : javax.xml.stream.events.EntityDeclaration;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
-	@:overload public function setDeclaration(declaration : javax.xml.stream.events.EntityDeclaration) : Void;
+	@:overload @:public public function setDeclaration(declaration : javax.xml.stream.events.EntityDeclaration) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
 	
 }

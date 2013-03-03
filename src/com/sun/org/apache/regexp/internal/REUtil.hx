@@ -33,7 +33,7 @@ extern class REUtil
 	* @return The regular expression object
 	* @exception RESyntaxException thrown in case of error
 	*/
-	@:overload public static function createRE(expression : String, matchFlags : Int) : com.sun.org.apache.regexp.internal.RE;
+	@:overload @:public @:static public static function createRE(expression : String, matchFlags : Int) : com.sun.org.apache.regexp.internal.RE;
 	
 	/**
 	* Creates a regular expression, permitting simple or complex syntax
@@ -42,7 +42,7 @@ extern class REUtil
 	* @return The regular expression object
 	* @exception RESyntaxException thrown in case of error
 	*/
-	@:overload public static function createRE(expression : String) : com.sun.org.apache.regexp.internal.RE;
+	@:overload @:public @:static public static function createRE(expression : String) : com.sun.org.apache.regexp.internal.RE;
 	
 	
 }

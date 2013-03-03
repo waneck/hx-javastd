@@ -29,9 +29,9 @@ extern class SAAJUtil
 	*
 	* @author vbkumarjayanti
 	*/
-	@:overload public static function getSystemBoolean(arg : String) : Bool;
+	@:overload @:public @:static public static function getSystemBoolean(arg : String) : Bool;
 	
-	@:overload public static function getSystemProperty(arg : String) : String;
+	@:overload @:public @:static public static function getSystemProperty(arg : String) : String;
 	
 	
 }

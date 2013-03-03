@@ -28,22 +28,22 @@ extern class AudioInputStream extends java.io.InputStream
 	/**
 	* The format of the audio data contained in the stream.
 	*/
-	private var format : javax.sound.sampled.AudioFormat;
+	@:protected private var format : javax.sound.sampled.AudioFormat;
 	
 	/**
 	* This stream's length, in sample frames.
 	*/
-	private var frameLength : haxe.Int64;
+	@:protected private var frameLength : haxe.Int64;
 	
 	/**
 	* The size of each frame, in bytes.
 	*/
-	private var frameSize : Int;
+	@:protected private var frameSize : Int;
 	
 	/**
 	* The current position in this stream, in sample frames (zero-based).
 	*/
-	private var framePos : haxe.Int64;
+	@:protected private var framePos : haxe.Int64;
 	
 	/**
 	* Constructs an audio input stream that has the requested format and length in sample frames,
@@ -53,7 +53,7 @@ extern class AudioInputStream extends java.io.InputStream
 	* @param format the format of this stream's audio data
 	* @param length the length in sample frames of the data in this stream
 	*/
-	@:overload public function new(stream : java.io.InputStream, format : javax.sound.sampled.AudioFormat, length : haxe.Int64) : Void;
+	@:overload @:public public function new(stream : java.io.InputStream, format : javax.sound.sampled.AudioFormat, length : haxe.Int64) : Void;
 	
 	/**
 	* Constructs an audio input stream that reads its data from the target
@@ -62,19 +62,19 @@ extern class AudioInputStream extends java.io.InputStream
 	* @param line the target data line from which this stream obtains its data.
 	* @see AudioSystem#NOT_SPECIFIED
 	*/
-	@:overload public function new(line : javax.sound.sampled.TargetDataLine) : Void;
+	@:overload @:public public function new(line : javax.sound.sampled.TargetDataLine) : Void;
 	
 	/**
 	* Obtains the audio format of the sound data in this audio input stream.
 	* @return an audio format object describing this stream's format
 	*/
-	@:overload public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public public function getFormat() : javax.sound.sampled.AudioFormat;
 	
 	/**
 	* Obtains the length of the stream, expressed in sample frames rather than bytes.
 	* @return the length in sample frames
 	*/
-	@:overload public function getFrameLength() : haxe.Int64;
+	@:overload @:public public function getFrameLength() : haxe.Int64;
 	
 	/**
 	* Reads the next byte of data from the audio input stream.  The audio input
@@ -88,7 +88,7 @@ extern class AudioInputStream extends java.io.InputStream
 	* @see #available
 	* <p>
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads some number of bytes from the audio input stream and stores them into
@@ -108,7 +108,7 @@ extern class AudioInputStream extends java.io.InputStream
 	* @see #read()
 	* @see #available
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Reads up to a specified maximum number of bytes of data from the audio
@@ -130,7 +130,7 @@ extern class AudioInputStream extends java.io.InputStream
 	* @see #skip
 	* @see #available
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips over and discards a specified number of bytes from this
@@ -141,7 +141,7 @@ extern class AudioInputStream extends java.io.InputStream
 	* @see #read
 	* @see #available
 	*/
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the maximum number of bytes that can be read (or skipped over) from this
@@ -157,14 +157,14 @@ extern class AudioInputStream extends java.io.InputStream
 	* @see #read()
 	* @see #skip
 	*/
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	/**
 	* Closes this audio input stream and releases any system resources associated
 	* with the stream.
 	* @throws IOException if an input or output error occurs
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Marks the current position in this audio input stream.
@@ -173,7 +173,7 @@ extern class AudioInputStream extends java.io.InputStream
 	* @see #reset
 	* @see #markSupported
 	*/
-	@:overload override public function mark(readlimit : Int) : Void;
+	@:overload @:public override public function mark(readlimit : Int) : Void;
 	
 	/**
 	* Repositions this audio input stream to the position it had at the time its
@@ -182,7 +182,7 @@ extern class AudioInputStream extends java.io.InputStream
 	* @see #mark
 	* @see #markSupported
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* Tests whether this audio input stream supports the <code>mark</code> and
@@ -192,7 +192,7 @@ extern class AudioInputStream extends java.io.InputStream
 	* @see #mark
 	* @see #reset
 	*/
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	
 }
@@ -201,13 +201,13 @@ extern class AudioInputStream extends java.io.InputStream
 */
 @:native('javax$sound$sampled$AudioInputStream$TargetDataLineInputStream') @:internal extern class AudioInputStream_TargetDataLineInputStream extends java.io.InputStream
 {
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	
 }

@@ -28,17 +28,17 @@ extern class CharArrayWriter extends java.io.Writer
 	/**
 	* The buffer where data is stored.
 	*/
-	private var buf : java.NativeArray<java.StdTypes.Char16>;
+	@:protected private var buf : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* The number of chars in the buffer.
 	*/
-	private var count : Int;
+	@:protected private var count : Int;
 	
 	/**
 	* Creates a new CharArrayWriter.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new CharArrayWriter with the specified initial size.
@@ -46,12 +46,12 @@ extern class CharArrayWriter extends java.io.Writer
 	* @param initialSize  an int specifying the initial buffer size.
 	* @exception IllegalArgumentException if initialSize is negative
 	*/
-	@:overload public function new(initialSize : Int) : Void;
+	@:overload @:public public function new(initialSize : Int) : Void;
 	
 	/**
 	* Writes a character to the buffer.
 	*/
-	@:overload override public function write(c : Int) : Void;
+	@:overload @:public override public function write(c : Int) : Void;
 	
 	/**
 	* Writes characters to the buffer.
@@ -59,7 +59,7 @@ extern class CharArrayWriter extends java.io.Writer
 	* @param off       the start offset in the data
 	* @param len       the number of chars that are written
 	*/
-	@:overload override public function write(c : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(c : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
 	/**
 	* Write a portion of a string to the buffer.
@@ -67,7 +67,7 @@ extern class CharArrayWriter extends java.io.Writer
 	* @param  off  Offset from which to start reading characters
 	* @param  len  Number of characters to be written
 	*/
-	@:overload override public function write(str : String, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(str : String, off : Int, len : Int) : Void;
 	
 	/**
 	* Writes the contents of the buffer to another character stream.
@@ -75,7 +75,7 @@ extern class CharArrayWriter extends java.io.Writer
 	* @param out       the output stream to write to
 	* @throws IOException If an I/O error occurs.
 	*/
-	@:overload public function writeTo(out : java.io.Writer) : Void;
+	@:overload @:public public function writeTo(out : java.io.Writer) : Void;
 	
 	/**
 	* Appends the specified character sequence to this writer.
@@ -101,7 +101,7 @@ extern class CharArrayWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence) : java.io.CharArrayWriter;
+	@:require(java5) @:overload @:public override public function append(csq : java.lang.CharSequence) : java.io.CharArrayWriter;
 	
 	/**
 	* Appends a subsequence of the specified character sequence to this writer.
@@ -135,7 +135,7 @@ extern class CharArrayWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.io.CharArrayWriter;
+	@:require(java5) @:overload @:public override public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.io.CharArrayWriter;
 	
 	/**
 	* Appends the specified character to this writer.
@@ -153,45 +153,45 @@ extern class CharArrayWriter extends java.io.Writer
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function append(c : java.StdTypes.Char16) : java.io.CharArrayWriter;
+	@:require(java5) @:overload @:public override public function append(c : java.StdTypes.Char16) : java.io.CharArrayWriter;
 	
 	/**
 	* Resets the buffer so that you can use it again without
 	* throwing away the already allocated buffer.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Returns a copy of the input data.
 	*
 	* @return an array of chars copied from the input data.
 	*/
-	@:overload public function toCharArray() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function toCharArray() : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Returns the current size of the buffer.
 	*
 	* @return an int representing the current size of the buffer.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Converts input data to a string.
 	* @return the string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Flush the stream.
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* Close the stream.  This method does not release the buffer, since its
 	* contents might still be required. Note: Invoking this method in this class
 	* will have no effect.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

@@ -25,18 +25,18 @@ package com.sun.xml.internal.bind.unmarshaller;
 */
 extern class DOMScanner implements com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx implements com.sun.xml.internal.bind.unmarshaller.InfosetScanner<Dynamic>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Configures the locator object that the SAX {@link ContentHandler} will see.
 	*/
-	@:overload public function setLocator(loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setLocator(loc : org.xml.sax.Locator) : Void;
 	
-	@:overload public function scan(node : Dynamic) : Void;
+	@:overload @:public public function scan(node : Dynamic) : Void;
 	
-	@:overload public function scan(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public public function scan(doc : org.w3c.dom.Document) : Void;
 	
-	@:overload public function scan(e : org.w3c.dom.Element) : Void;
+	@:overload @:public public function scan(e : org.w3c.dom.Element) : Void;
 	
 	/**
 	* Parses a subtree starting from the element e and
@@ -45,7 +45,7 @@ extern class DOMScanner implements com.sun.xml.internal.bind.v2.runtime.unmarsha
 	* @deprecated in JAXB 2.0
 	*      Use {@link #scan(Element)}
 	*/
-	@:overload public function parse(e : org.w3c.dom.Element, handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function parse(e : org.w3c.dom.Element, handler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Similar to the parse method but it visits the ancestor nodes
@@ -54,36 +54,36 @@ extern class DOMScanner implements com.sun.xml.internal.bind.v2.runtime.unmarsha
 	* @deprecated in JAXB 2.0
 	*      Use {@link #scan(Element)}
 	*/
-	@:overload public function parseWithContext(e : org.w3c.dom.Element, handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function parseWithContext(e : org.w3c.dom.Element, handler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Visits an element and its subtree.
 	*/
-	@:overload public function visit(e : org.w3c.dom.Element) : Void;
+	@:overload @:public public function visit(e : org.w3c.dom.Element) : Void;
 	
 	/**
 	* The same as {@link #getCurrentElement()} but
 	* better typed.
 	*/
-	@:overload public function getCurrentLocation() : org.w3c.dom.Node;
+	@:overload @:public public function getCurrentLocation() : org.w3c.dom.Node;
 	
-	@:overload public function getCurrentElement() : Dynamic;
+	@:overload @:public public function getCurrentElement() : Dynamic;
 	
-	@:overload public function getLocator() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx;
+	@:overload @:public public function getLocator() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx;
 	
-	@:overload public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload public function getContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function getContentHandler() : org.xml.sax.ContentHandler;
 	
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
-	@:overload public function getLocation() : javax.xml.bind.ValidationEventLocator;
+	@:overload @:public public function getLocation() : javax.xml.bind.ValidationEventLocator;
 	
 	
 }

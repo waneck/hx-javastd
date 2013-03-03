@@ -30,25 +30,25 @@ package com.sun.jndi.toolkit.dir;
 */
 extern class ContextEnumerator implements javax.naming.NamingEnumeration<Dynamic>
 {
-	@:overload public function new(context : javax.naming.Context) : Void;
+	@:overload @:public public function new(context : javax.naming.Context) : Void;
 	
-	@:overload public function new(context : javax.naming.Context, scope : Int) : Void;
+	@:overload @:public public function new(context : javax.naming.Context, scope : Int) : Void;
 	
-	@:overload private function new(context : javax.naming.Context, scope : Int, contextName : String, returnSelf : Bool) : Void;
+	@:overload @:protected private function new(context : javax.naming.Context, scope : Int, contextName : String, returnSelf : Bool) : Void;
 	
-	@:overload private function getImmediateChildren(ctx : javax.naming.Context) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected private function getImmediateChildren(ctx : javax.naming.Context) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload private function newEnumerator(ctx : javax.naming.Context, scope : Int, contextName : String, returnSelf : Bool) : com.sun.jndi.toolkit.dir.ContextEnumerator;
+	@:overload @:protected private function newEnumerator(ctx : javax.naming.Context, scope : Int, contextName : String, returnSelf : Bool) : com.sun.jndi.toolkit.dir.ContextEnumerator;
 	
-	@:overload public function hasMore() : Bool;
+	@:overload @:public public function hasMore() : Bool;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

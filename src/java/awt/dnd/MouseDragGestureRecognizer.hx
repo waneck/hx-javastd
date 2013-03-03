@@ -40,7 +40,7 @@ extern class MouseDragGestureRecognizer extends java.awt.dnd.DragGestureRecogniz
 	* @param dgl The DragGestureListener to notify when a gesture is detected
 	*
 	*/
-	@:overload private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component, act : Int, dgl : java.awt.dnd.DragGestureListener) : Void;
+	@:overload @:protected private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component, act : Int, dgl : java.awt.dnd.DragGestureListener) : Void;
 	
 	/**
 	* Construct a new <code>MouseDragGestureRecognizer</code>
@@ -53,7 +53,7 @@ extern class MouseDragGestureRecognizer extends java.awt.dnd.DragGestureRecogniz
 	* @param c   The Component to observe
 	* @param act The actions permitted for this drag
 	*/
-	@:overload private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component, act : Int) : Void;
+	@:overload @:protected private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component, act : Int) : Void;
 	
 	/**
 	* Construct a new <code>MouseDragGestureRecognizer</code>
@@ -64,7 +64,7 @@ extern class MouseDragGestureRecognizer extends java.awt.dnd.DragGestureRecogniz
 	* @param ds  The DragSource for the Component c
 	* @param c   The Component to observe
 	*/
-	@:overload private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component) : Void;
+	@:overload @:protected private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component) : Void;
 	
 	/**
 	* Construct a new <code>MouseDragGestureRecognizer</code>
@@ -72,26 +72,26 @@ extern class MouseDragGestureRecognizer extends java.awt.dnd.DragGestureRecogniz
 	* <P>
 	* @param ds  The DragSource for the Component
 	*/
-	@:overload private function new(ds : java.awt.dnd.DragSource) : Void;
+	@:overload @:protected private function new(ds : java.awt.dnd.DragSource) : Void;
 	
 	/**
 	* register this DragGestureRecognizer's Listeners with the Component
 	*/
-	@:overload override private function registerListeners() : Void;
+	@:overload @:protected override private function registerListeners() : Void;
 	
 	/**
 	* unregister this DragGestureRecognizer's Listeners with the Component
 	*
 	* subclasses must override this method
 	*/
-	@:overload override private function unregisterListeners() : Void;
+	@:overload @:protected override private function unregisterListeners() : Void;
 	
 	/**
 	* Invoked when the mouse has been clicked on a component.
 	* <P>
 	* @param e the <code>MouseEvent</code>
 	*/
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when a mouse button has been
@@ -99,35 +99,35 @@ extern class MouseDragGestureRecognizer extends java.awt.dnd.DragGestureRecogniz
 	* <P>
 	* @param e the <code>MouseEvent</code>
 	*/
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when a mouse button has been released on a component.
 	* <P>
 	* @param e the <code>MouseEvent</code>
 	*/
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse enters a component.
 	* <P>
 	* @param e the <code>MouseEvent</code>
 	*/
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse exits a component.
 	* <P>
 	* @param e the <code>MouseEvent</code>
 	*/
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when a mouse button is pressed on a component.
 	* <P>
 	* @param e the <code>MouseEvent</code>
 	*/
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse button has been moved on a component
@@ -135,7 +135,7 @@ extern class MouseDragGestureRecognizer extends java.awt.dnd.DragGestureRecogniz
 	* <P>
 	* @param e the <code>MouseEvent</code>
 	*/
-	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

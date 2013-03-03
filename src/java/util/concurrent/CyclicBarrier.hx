@@ -139,7 +139,7 @@ package java.util.concurrent;
 	*        tripped, or {@code null} if there is no action
 	* @throws IllegalArgumentException if {@code parties} is less than 1
 	*/
-	@:overload public function new(parties : Int, barrierAction : java.lang.Runnable) : Void;
+	@:overload @:public public function new(parties : Int, barrierAction : java.lang.Runnable) : Void;
 	
 	/**
 	* Creates a new <tt>CyclicBarrier</tt> that will trip when the
@@ -150,14 +150,14 @@ package java.util.concurrent;
 	*        before the barrier is tripped
 	* @throws IllegalArgumentException if {@code parties} is less than 1
 	*/
-	@:overload public function new(parties : Int) : Void;
+	@:overload @:public public function new(parties : Int) : Void;
 	
 	/**
 	* Returns the number of parties required to trip this barrier.
 	*
 	* @return the number of parties required to trip this barrier
 	*/
-	@:overload public function getParties() : Int;
+	@:overload @:public public function getParties() : Int;
 	
 	/**
 	* Waits until all {@linkplain #getParties parties} have invoked
@@ -213,7 +213,7 @@ package java.util.concurrent;
 	*         broken when {@code await} was called, or the barrier
 	*         action (if present) failed due an exception.
 	*/
-	@:overload public function await() : Int;
+	@:overload @:public public function await() : Int;
 	
 	/**
 	* Waits until all {@linkplain #getParties parties} have invoked
@@ -277,7 +277,7 @@ package java.util.concurrent;
 	*         when {@code await} was called, or the barrier action (if
 	*         present) failed due an exception
 	*/
-	@:overload public function await(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Int;
+	@:overload @:public public function await(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Int;
 	
 	/**
 	* Queries if this barrier is in a broken state.
@@ -287,7 +287,7 @@ package java.util.concurrent;
 	*         construction or the last reset, or a barrier action
 	*         failed due to an exception; {@code false} otherwise.
 	*/
-	@:overload public function isBroken() : Bool;
+	@:overload @:public public function isBroken() : Bool;
 	
 	/**
 	* Resets the barrier to its initial state.  If any parties are
@@ -298,7 +298,7 @@ package java.util.concurrent;
 	* and choose one to perform the reset.  It may be preferable to
 	* instead create a new barrier for subsequent use.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Returns the number of parties currently waiting at the barrier.
@@ -306,7 +306,7 @@ package java.util.concurrent;
 	*
 	* @return the number of parties currently blocked in {@link #await}
 	*/
-	@:overload public function getNumberWaiting() : Int;
+	@:overload @:public public function getNumberWaiting() : Int;
 	
 	
 }

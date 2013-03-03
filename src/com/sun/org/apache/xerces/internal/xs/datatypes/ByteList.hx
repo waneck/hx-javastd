@@ -24,7 +24,7 @@ extern interface ByteList extends java.util.List<Dynamic>
 	* The number of <code>byte</code>s in the list. The range of
 	* valid child object indices is 0 to <code>length-1</code> inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Checks if the <code>byte</code> <code>item</code> is a
@@ -34,7 +34,7 @@ extern interface ByteList extends java.util.List<Dynamic>
 	* @return  True if this list contains the <code>byte</code>
 	*   <code>item</code>.
 	*/
-	@:overload public function contains(item : java.StdTypes.Int8) : Bool;
+	@:overload @:public public function contains(item : java.StdTypes.Int8) : Bool;
 	
 	/**
 	* Returns the <code>index</code>th item in the collection. The index
@@ -46,7 +46,7 @@ extern interface ByteList extends java.util.List<Dynamic>
 	*   INDEX_SIZE_ERR: if <code>index</code> is greater than or equal to the
 	*   number of objects in the list or less than zero.
 	*/
-	@:overload public function item(index : Int) : java.StdTypes.Int8;
+	@:overload @:public public function item(index : Int) : java.StdTypes.Int8;
 	
 	
 }

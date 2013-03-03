@@ -25,21 +25,21 @@ package com.sun.tools.internal.ws.wscompile;
 */
 extern class WsgenTool implements com.sun.mirror.apt.AnnotationProcessorFactory
 {
-	@:overload public function new(out : java.io.OutputStream, container : com.sun.xml.internal.ws.api.server.Container) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, container : com.sun.xml.internal.ws.api.server.Container) : Void;
 	
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
-	@:overload public function run(args : java.NativeArray<String>) : Bool;
+	@:overload @:public public function run(args : java.NativeArray<String>) : Bool;
 	
-	@:overload public function buildModel(endpoint : String, listener : com.sun.tools.internal.ws.wscompile.WsgenTool.WsgenTool_Listener) : Bool;
+	@:overload @:public public function buildModel(endpoint : String, listener : com.sun.tools.internal.ws.wscompile.WsgenTool.WsgenTool_Listener) : Bool;
 	
-	@:overload private function usage(options : com.sun.tools.internal.ws.wscompile.WsgenOptions) : Void;
+	@:overload @:protected private function usage(options : com.sun.tools.internal.ws.wscompile.WsgenOptions) : Void;
 	
-	@:overload public function supportedOptions() : java.util.Collection<String>;
+	@:overload @:public public function supportedOptions() : java.util.Collection<String>;
 	
-	@:overload public function supportedAnnotationTypes() : java.util.Collection<String>;
+	@:overload @:public public function supportedAnnotationTypes() : java.util.Collection<String>;
 	
-	@:overload public function getProcessorFor(set : java.util.Set<com.sun.mirror.declaration.AnnotationTypeDeclaration>, apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.apt.AnnotationProcessor;
+	@:overload @:public public function getProcessorFor(set : java.util.Set<com.sun.mirror.declaration.AnnotationTypeDeclaration>, apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.apt.AnnotationProcessor;
 	
 	
 }
@@ -87,17 +87,17 @@ extern class WsgenTool implements com.sun.mirror.apt.AnnotationProcessorFactory
 }
 @:native('com$sun$tools$internal$ws$wscompile$WsgenTool$Listener') @:internal extern class WsgenTool_Listener extends com.sun.tools.internal.ws.wscompile.WsimportListener
 {
-	@:overload public function generatedFile(fileName : String) : Void;
+	@:overload @:public override public function generatedFile(fileName : String) : Void;
 	
-	@:overload public function message(msg : String) : Void;
+	@:overload @:public override public function message(msg : String) : Void;
 	
-	@:overload public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function info(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function info(exception : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

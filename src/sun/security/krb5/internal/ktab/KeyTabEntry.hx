@@ -29,17 +29,17 @@ package sun.security.krb5.internal.ktab;
 */
 extern class KeyTabEntry implements sun.security.krb5.internal.ktab.KeyTabConstants
 {
-	@:overload public function new(new_service : sun.security.krb5.PrincipalName, new_realm : sun.security.krb5.Realm, new_time : sun.security.krb5.internal.KerberosTime, new_keyVersion : Int, new_keyType : Int, new_keyblock : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(new_service : sun.security.krb5.PrincipalName, new_realm : sun.security.krb5.Realm, new_time : sun.security.krb5.internal.KerberosTime, new_keyVersion : Int, new_keyType : Int, new_keyblock : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function getService() : sun.security.krb5.PrincipalName;
+	@:overload @:public public function getService() : sun.security.krb5.PrincipalName;
 	
-	@:overload public function getKey() : sun.security.krb5.EncryptionKey;
+	@:overload @:public public function getKey() : sun.security.krb5.EncryptionKey;
 	
-	@:overload public function getKeyString() : String;
+	@:overload @:public public function getKeyString() : String;
 	
-	@:overload public function entryLength() : Int;
+	@:overload @:public public function entryLength() : Int;
 	
-	@:overload public function getTimeStamp() : sun.security.krb5.internal.KerberosTime;
+	@:overload @:public public function getTimeStamp() : sun.security.krb5.internal.KerberosTime;
 	
 	
 }

@@ -31,13 +31,13 @@ package sun.security.pkcs11;
 */
 @:require(java6) @:internal extern class P11TlsRsaPremasterSecretGenerator extends javax.crypto.KeyGeneratorSpi
 {
-	@:overload override private function engineInit(random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineInit(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineInit(keysize : Int, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(keysize : Int, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineGenerateKey() : javax.crypto.SecretKey;
+	@:overload @:protected override private function engineGenerateKey() : javax.crypto.SecretKey;
 	
 	
 }

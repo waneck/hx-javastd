@@ -25,11 +25,11 @@ package com.sun.tools.internal.xjc.reader.dtd.bindinfo;
 */
 @:internal extern class DOMBuilder extends com.sun.xml.internal.bind.marshaller.SAX2DOMEx
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function startElement(namespace : String, localName : String, qName : String, attrs : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespace : String, localName : String, qName : String, attrs : org.xml.sax.Attributes) : Void;
 	
 	
 }

@@ -28,13 +28,13 @@ package com.sun.xml.internal.fastinfoset.stax.events;
 extern class StAXEventAllocatorBase implements javax.xml.stream.util.XMLEventAllocator
 {
 	/** Creates a new instance of XMLEventAllocator */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* This method creates an instance of the XMLEventAllocator. This
 	* allows the XMLInputFactory to allocate a new instance per reader.
 	*/
-	@:overload public function newInstance() : javax.xml.stream.util.XMLEventAllocator;
+	@:overload @:public public function newInstance() : javax.xml.stream.util.XMLEventAllocator;
 	
 	/**
 	* This method allocates an event given the current state of the XMLStreamReader.
@@ -43,7 +43,7 @@ extern class StAXEventAllocatorBase implements javax.xml.stream.util.XMLEventAll
 	* @param streamReader The XMLStreamReader to allocate from
 	* @return the event corresponding to the current reader state
 	*/
-	@:overload public function allocate(streamReader : javax.xml.stream.XMLStreamReader) : javax.xml.stream.events.XMLEvent;
+	@:overload @:public public function allocate(streamReader : javax.xml.stream.XMLStreamReader) : javax.xml.stream.events.XMLEvent;
 	
 	/**
 	* This method allocates an event or set of events given the current state of
@@ -52,13 +52,13 @@ extern class StAXEventAllocatorBase implements javax.xml.stream.util.XMLEventAll
 	* @param streamReader The XMLStreamReader to allocate from
 	* @param consumer The XMLEventConsumer to add to.
 	*/
-	@:overload public function allocate(streamReader : javax.xml.stream.XMLStreamReader, consumer : javax.xml.stream.util.XMLEventConsumer) : Void;
+	@:overload @:public public function allocate(streamReader : javax.xml.stream.XMLStreamReader, consumer : javax.xml.stream.util.XMLEventConsumer) : Void;
 	
-	@:overload private function addAttributes(event : com.sun.xml.internal.fastinfoset.stax.events.StartElementEvent, streamReader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:protected private function addAttributes(event : com.sun.xml.internal.fastinfoset.stax.events.StartElementEvent, streamReader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload private function addNamespaces(event : com.sun.xml.internal.fastinfoset.stax.events.StartElementEvent, streamReader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:protected private function addNamespaces(event : com.sun.xml.internal.fastinfoset.stax.events.StartElementEvent, streamReader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload private function addNamespaces(event : com.sun.xml.internal.fastinfoset.stax.events.EndElementEvent, streamReader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:protected private function addNamespaces(event : com.sun.xml.internal.fastinfoset.stax.events.EndElementEvent, streamReader : javax.xml.stream.XMLStreamReader) : Void;
 	
 	
 }

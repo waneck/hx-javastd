@@ -40,7 +40,7 @@ package com.sun.jdi;
 	* @see ThreadReference#ownedMonitorsAndFrames
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function monitor() : com.sun.jdi.ObjectReference;
+	@:require(java6) @:overload @:public public function monitor() : com.sun.jdi.ObjectReference;
 	
 	/**
 	* Returns the stack depth at which this monitor was
@@ -54,7 +54,7 @@ package com.sun.jdi;
 	* the stack frame is no longer valid.
 	* @see ThreadReference#ownedMonitorsAndFrames
 	*/
-	@:overload public function stackDepth() : Int;
+	@:overload @:public public function stackDepth() : Int;
 	
 	/**
 	* Returns a {@link ThreadReference} object for the thread that

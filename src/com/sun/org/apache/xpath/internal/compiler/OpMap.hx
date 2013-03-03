@@ -26,28 +26,28 @@ extern class OpMap
 	/**
 	* The current pattern string, for diagnostics purposes
 	*/
-	private var m_currentPattern : String;
+	@:protected private var m_currentPattern : String;
 	
 	/**
 	* Return the expression as a string for diagnostics.
 	*
 	* @return The expression string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Return the expression as a string for diagnostics.
 	*
 	* @return The expression string.
 	*/
-	@:overload public function getPatternString() : String;
+	@:overload @:public public function getPatternString() : String;
 	
 	/**
 	* Get the XPath as a list of tokens.
 	*
 	* @return ObjectVector of tokens.
 	*/
-	@:overload public function getTokenQueue() : com.sun.org.apache.xml.internal.utils.ObjectVector;
+	@:overload @:public public function getTokenQueue() : com.sun.org.apache.xml.internal.utils.ObjectVector;
 	
 	/**
 	* Get the XPath as a list of tokens.
@@ -56,14 +56,14 @@ extern class OpMap
 	*
 	* @return The token, normally a string.
 	*/
-	@:overload public function getToken(pos : Int) : Dynamic;
+	@:overload @:public public function getToken(pos : Int) : Dynamic;
 	
 	/**
 	* Get size of the token queue.
 	*
 	* @return The size of the token queue.
 	*/
-	@:overload public function getTokenQueueSize() : Int;
+	@:overload @:public public function getTokenQueueSize() : Int;
 	
 	/**
 	* Get the opcode list that describes the XPath operations.  It contains
@@ -73,14 +73,14 @@ extern class OpMap
 	*
 	* @return An IntVector that is the opcode list that describes the XPath operations.
 	*/
-	@:overload public function getOpMap() : com.sun.org.apache.xpath.internal.compiler.OpMapVector;
+	@:overload @:public public function getOpMap() : com.sun.org.apache.xpath.internal.compiler.OpMapVector;
 	
 	/**
 	* The length is always the opcode position + 1.
 	* Length is always expressed as the opcode+length bytes,
 	* so it is always 2 or greater.
 	*/
-	public static var MAPINDEX_LENGTH(default, null) : Int;
+	@:public @:static @:final public static var MAPINDEX_LENGTH(default, null) : Int;
 	
 	/**
 	* Given an operation position, return the current op.
@@ -88,7 +88,7 @@ extern class OpMap
 	* @param opPos index into op map.
 	* @return the op that corresponds to the opPos argument.
 	*/
-	@:overload public function getOp(opPos : Int) : Int;
+	@:overload @:public public function getOp(opPos : Int) : Int;
 	
 	/**
 	* Set the op at index to the given int.
@@ -96,7 +96,7 @@ extern class OpMap
 	* @param opPos index into op map.
 	* @param value Value to set
 	*/
-	@:overload public function setOp(opPos : Int, value : Int) : Void;
+	@:overload @:public public function setOp(opPos : Int, value : Int) : Void;
 	
 	/**
 	* Given an operation position, return the end position, i.e. the
@@ -106,7 +106,7 @@ extern class OpMap
 	*              entry following.
 	* @return position of next operation in m_opMap.
 	*/
-	@:overload public function getNextOpPos(opPos : Int) : Int;
+	@:overload @:public public function getNextOpPos(opPos : Int) : Int;
 	
 	/**
 	* Given a location step position, return the end position, i.e. the
@@ -115,7 +115,7 @@ extern class OpMap
 	* @param opPos the position of a location step.
 	* @return the position of the next location step.
 	*/
-	@:overload public function getNextStepPos(opPos : Int) : Int;
+	@:overload @:public public function getNextStepPos(opPos : Int) : Int;
 	
 	/**
 	* Given an operation position, return the end position, i.e. the
@@ -125,7 +125,7 @@ extern class OpMap
 	* @param opPos index to operation, for which there is a size entry following.
 	* @return position of next operation in m_opMap.
 	*/
-	@:native('getNextOpPos') @:overload public static function _getNextOpPos(opMap : java.NativeArray<Int>, opPos : Int) : Int;
+	@:native('getNextOpPos') @:overload @:public @:static public static function _getNextOpPos(opMap : java.NativeArray<Int>, opPos : Int) : Int;
 	
 	/**
 	* Given an FROM_stepType position, return the position of the
@@ -139,7 +139,7 @@ extern class OpMap
 	* @param opPos position of FROM_stepType op.
 	* @return position of predicate in FROM_stepType structure.
 	*/
-	@:overload public function getFirstPredicateOpPos(opPos : Int) : Int;
+	@:overload @:public public function getFirstPredicateOpPos(opPos : Int) : Int;
 	
 	/**
 	* Tell the user of an error, and probably throw an
@@ -154,7 +154,7 @@ extern class OpMap
 	* @throws TransformerException if the current ErrorListoner determines to
 	*                              throw an exception.
 	*/
-	@:overload public function error(msg : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function error(msg : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Go to the first child of a given operation.
@@ -163,7 +163,7 @@ extern class OpMap
 	*
 	* @return The position of the first child of the operation.
 	*/
-	@:overload public static function getFirstChildPos(opPos : Int) : Int;
+	@:overload @:public @:static public static function getFirstChildPos(opPos : Int) : Int;
 	
 	/**
 	* Get the length of an operation.
@@ -172,7 +172,7 @@ extern class OpMap
 	*
 	* @return The size of the operation.
 	*/
-	@:overload public function getArgLength(opPos : Int) : Int;
+	@:overload @:public public function getArgLength(opPos : Int) : Int;
 	
 	/**
 	* Given a location step, get the length of that step.
@@ -181,7 +181,7 @@ extern class OpMap
 	*
 	* @return The length of the step.
 	*/
-	@:overload public function getArgLengthOfStep(opPos : Int) : Int;
+	@:overload @:public public function getArgLengthOfStep(opPos : Int) : Int;
 	
 	/**
 	* Get the first child position of a given location step.
@@ -190,7 +190,7 @@ extern class OpMap
 	*
 	* @return The first child position of the step.
 	*/
-	@:overload public static function getFirstChildPosOfStep(opPos : Int) : Int;
+	@:overload @:public @:static public static function getFirstChildPosOfStep(opPos : Int) : Int;
 	
 	/**
 	* Get the test type of the step, i.e. NODETYPE_XXX value.
@@ -199,7 +199,7 @@ extern class OpMap
 	*
 	* @return NODETYPE_XXX value.
 	*/
-	@:overload public function getStepTestType(opPosOfStep : Int) : Int;
+	@:overload @:public public function getStepTestType(opPosOfStep : Int) : Int;
 	
 	/**
 	* Get the namespace of the step.
@@ -208,7 +208,7 @@ extern class OpMap
 	*
 	* @return The step's namespace, NodeTest.WILD, or null for null namespace.
 	*/
-	@:overload public function getStepNS(opPosOfStep : Int) : String;
+	@:overload @:public public function getStepNS(opPosOfStep : Int) : String;
 	
 	/**
 	* Get the local name of the step.
@@ -216,7 +216,7 @@ extern class OpMap
 	*
 	* @return OpCodes.EMPTY, OpCodes.ELEMWILDCARD, or the local name.
 	*/
-	@:overload public function getStepLocalName(opPosOfStep : Int) : String;
+	@:overload @:public public function getStepLocalName(opPosOfStep : Int) : String;
 	
 	
 }

@@ -45,7 +45,7 @@ extern class InvalidPathException extends java.lang.IllegalArgumentException
 	* @throws  IllegalArgumentException
 	*          if the error index is less than <tt>-1</tt>
 	*/
-	@:overload public function new(input : String, reason : String, index : Int) : Void;
+	@:overload @:public public function new(input : String, reason : String, index : Int) : Void;
 	
 	/**
 	* Constructs an instance from the given input string and reason.  The
@@ -57,21 +57,21 @@ extern class InvalidPathException extends java.lang.IllegalArgumentException
 	* @throws  NullPointerException
 	*          if either the input or reason strings are <tt>null</tt>
 	*/
-	@:overload public function new(input : String, reason : String) : Void;
+	@:overload @:public public function new(input : String, reason : String) : Void;
 	
 	/**
 	* Returns the input string.
 	*
 	* @return  the input string
 	*/
-	@:overload public function getInput() : String;
+	@:overload @:public public function getInput() : String;
 	
 	/**
 	* Returns a string explaining why the input string was rejected.
 	*
 	* @return  the reason string
 	*/
-	@:overload public function getReason() : String;
+	@:overload @:public public function getReason() : String;
 	
 	/**
 	* Returns an index into the input string of the position at which the
@@ -79,7 +79,7 @@ extern class InvalidPathException extends java.lang.IllegalArgumentException
 	*
 	* @return  the error index
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* Returns a string describing the error.  The resulting string
@@ -91,7 +91,7 @@ extern class InvalidPathException extends java.lang.IllegalArgumentException
 	*
 	* @return  a string describing the error
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

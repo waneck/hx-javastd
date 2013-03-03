@@ -35,7 +35,7 @@ extern interface SubRegionShowable
 	/**
 	* Shows the specific subregion.
 	*/
-	@:overload public function show(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public public function show(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
 	/**
 	* Shows the specified region if the buffer is not lost and the dimensions
@@ -43,7 +43,7 @@ extern interface SubRegionShowable
 	*
 	* @return true if successful
 	*/
-	@:overload public function showIfNotLost(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Bool;
+	@:overload @:public public function showIfNotLost(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Bool;
 	
 	
 }

@@ -30,28 +30,28 @@ extern class HandlerAnnotationInfo
 	*
 	* @return A list of jax-ws handler objects.
 	*/
-	@:overload public function getHandlers() : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>;
+	@:overload @:public public function getHandlers() : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>;
 	
 	/**
 	* This method should only be called by HandlerAnnotationProcessor.
 	*
 	* @param handlers The handlers specified by the handler chain descriptor.
 	*/
-	@:overload public function setHandlers(handlers : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
+	@:overload @:public public function setHandlers(handlers : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
 	
 	/**
 	* Return the roles contained in the handler chain descriptor.
 	*
 	* @return A set of roles.
 	*/
-	@:overload public function getRoles() : java.util.Set<String>;
+	@:overload @:public public function getRoles() : java.util.Set<String>;
 	
 	/**
 	* This method should only be called by HandlerAnnotationProcessor.
 	*
 	* @param roles The roles contained in the handler chain descriptor.
 	*/
-	@:overload public function setRoles(roles : java.util.Set<String>) : Void;
+	@:overload @:public public function setRoles(roles : java.util.Set<String>) : Void;
 	
 	
 }

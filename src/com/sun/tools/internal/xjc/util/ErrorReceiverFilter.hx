@@ -33,21 +33,21 @@ extern class ErrorReceiverFilter extends com.sun.tools.internal.xjc.ErrorReceive
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(h : com.sun.xml.internal.bind.api.ErrorListener) : Void;
+	@:overload @:public public function new(h : com.sun.xml.internal.bind.api.ErrorListener) : Void;
 	
-	@:overload public function setErrorReceiver(handler : com.sun.xml.internal.bind.api.ErrorListener) : Void;
+	@:overload @:public public function setErrorReceiver(handler : com.sun.xml.internal.bind.api.ErrorListener) : Void;
 	
-	@:overload @:final public function hadError() : Bool;
+	@:overload @:public @:final public function hadError() : Bool;
 	
-	@:overload public function info(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function info(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

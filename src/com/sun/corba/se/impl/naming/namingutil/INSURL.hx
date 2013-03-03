@@ -31,17 +31,17 @@ package com.sun.corba.se.impl.naming.namingutil;
 */
 extern interface INSURL
 {
-	@:overload public function getRIRFlag() : Bool;
+	@:overload @:public public function getRIRFlag() : Bool;
 	
-	@:overload public function getEndpointInfo() : java.util.List<Dynamic>;
+	@:overload @:public public function getEndpointInfo() : java.util.List<Dynamic>;
 	
-	@:overload public function getKeyString() : String;
+	@:overload @:public public function getKeyString() : String;
 	
-	@:overload public function getStringifiedName() : String;
+	@:overload @:public public function getStringifiedName() : String;
 	
-	@:overload public function isCorbanameURL() : Bool;
+	@:overload @:public public function isCorbanameURL() : Bool;
 	
-	@:overload public function dPrint() : Void;
+	@:overload @:public public function dPrint() : Void;
 	
 	
 }

@@ -32,50 +32,50 @@ extern class TagInfoset
 	*
 	* URIs/prefixes can be null (StAX-style)
 	*/
-	public var ns(default, null) : java.NativeArray<String>;
+	@:public @:final public var ns(default, null) : java.NativeArray<String>;
 	
 	/**
 	* Attributes on this tag. Read-only.
 	*/
-	public var atts(default, null) : org.xml.sax.helpers.AttributesImpl;
+	@:public @:final public var atts(default, null) : org.xml.sax.helpers.AttributesImpl;
 	
 	/**
 	* Prefix of the start tag in stax-style.
 	*/
-	public var prefix(default, null) : String;
+	@:public @:final public var prefix(default, null) : String;
 	
 	/**
 	* Namespace URI of the start tag in stax-style.
 	*/
-	public var nsUri(default, null) : String;
+	@:public @:final public var nsUri(default, null) : String;
 	
 	/**
 	* Local name of the start tag.
 	*/
-	public var localName(default, null) : String;
+	@:public @:final public var localName(default, null) : String;
 	
-	@:overload public function new(nsUri : String, localName : String, prefix : String, atts : org.xml.sax.helpers.AttributesImpl, ns : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(nsUri : String, localName : String, prefix : String, atts : org.xml.sax.helpers.AttributesImpl, ns : java.NativeArray<String>) : Void;
 	
 	/**
 	* Fills a {@link TagInfoset} object by the current element
 	* that the reader points to.
 	*/
-	@:overload public function new(reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function new(reader : javax.xml.stream.XMLStreamReader) : Void;
 	
 	/**
 	* Writes the start element event.
 	*/
-	@:overload public function writeStart(contentHandler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function writeStart(contentHandler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Writes the end element event.
 	*/
-	@:overload public function writeEnd(contentHandler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function writeEnd(contentHandler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Writes the start element event.
 	*/
-	@:overload public function writeStart(w : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function writeStart(w : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	
 }

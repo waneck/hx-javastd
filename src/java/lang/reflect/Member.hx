@@ -43,7 +43,7 @@ extern interface Member
 	* @return an object representing the declaring class of the
 	* underlying member
 	*/
-	@:overload public function getDeclaringClass() : Class<Dynamic>;
+	@:overload @:public public function getDeclaringClass() : Class<Dynamic>;
 	
 	/**
 	* Returns the simple name of the underlying member or constructor
@@ -51,7 +51,7 @@ extern interface Member
 	*
 	* @return the simple name of the underlying member
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the Java language modifiers for the member or
@@ -62,7 +62,7 @@ extern interface Member
 	* @return the Java language modifiers for the underlying member
 	* @see Modifier
 	*/
-	@:overload public function getModifiers() : Int;
+	@:overload @:public public function getModifiers() : Int;
 	
 	/**
 	* Returns {@code true} if this member was introduced by
@@ -72,7 +72,7 @@ extern interface Member
 	* the compiler.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isSynthetic() : Bool;
+	@:require(java5) @:overload @:public public function isSynthetic() : Bool;
 	
 	
 }

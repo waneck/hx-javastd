@@ -31,49 +31,49 @@ package sun.util.locale;
 */
 extern class BaseLocale
 {
-	public static var SEP(default, null) : String;
+	@:public @:static @:final public static var SEP(default, null) : String;
 	
-	@:overload public static function createInstance(language : String, region : String) : sun.util.locale.BaseLocale;
+	@:overload @:public @:static public static function createInstance(language : String, region : String) : sun.util.locale.BaseLocale;
 	
-	@:overload public static function getInstance(language : String, script : String, region : String, variant : String) : sun.util.locale.BaseLocale;
+	@:overload @:public @:static public static function getInstance(language : String, script : String, region : String, variant : String) : sun.util.locale.BaseLocale;
 	
-	@:overload public function getLanguage() : String;
+	@:overload @:public public function getLanguage() : String;
 	
-	@:overload public function getScript() : String;
+	@:overload @:public public function getScript() : String;
 	
-	@:overload public function getRegion() : String;
+	@:overload @:public public function getRegion() : String;
 	
-	@:overload public function getVariant() : String;
+	@:overload @:public public function getVariant() : String;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
 @:native('sun$util$locale$BaseLocale$Key') @:internal extern class BaseLocale_Key implements java.lang.Comparable<sun.util.locale.BaseLocale.BaseLocale_Key>
 {
-	@:overload public function new(language : String, script : String, region : String, variant : String) : Void;
+	@:overload @:public public function new(language : String, script : String, region : String, variant : String) : Void;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function compareTo(other : sun.util.locale.BaseLocale.BaseLocale_Key) : Int;
+	@:overload @:public public function compareTo(other : sun.util.locale.BaseLocale.BaseLocale_Key) : Int;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public static function normalize(key : sun.util.locale.BaseLocale.BaseLocale_Key) : sun.util.locale.BaseLocale.BaseLocale_Key;
+	@:overload @:public @:static public static function normalize(key : sun.util.locale.BaseLocale.BaseLocale_Key) : sun.util.locale.BaseLocale.BaseLocale_Key;
 	
 	
 }
 @:native('sun$util$locale$BaseLocale$Cache') @:internal extern class BaseLocale_Cache extends sun.util.locale.LocaleObjectCache<sun.util.locale.BaseLocale.BaseLocale_Key, sun.util.locale.BaseLocale>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload private function normalizeKey(key : sun.util.locale.BaseLocale.BaseLocale_Key) : sun.util.locale.BaseLocale.BaseLocale_Key;
+	@:overload @:protected private function normalizeKey(key : sun.util.locale.BaseLocale.BaseLocale_Key) : sun.util.locale.BaseLocale.BaseLocale_Key;
 	
-	@:overload private function createObject(key : sun.util.locale.BaseLocale.BaseLocale_Key) : sun.util.locale.BaseLocale;
+	@:overload @:protected private function createObject(key : sun.util.locale.BaseLocale.BaseLocale_Key) : sun.util.locale.BaseLocale;
 	
 	
 }

@@ -29,43 +29,43 @@ package sun.nio.fs;
 }
 @:native('sun$nio$fs$UnixFileAttributeViews$Basic') @:internal extern class UnixFileAttributeViews_Basic extends sun.nio.fs.AbstractBasicFileAttributeView
 {
-	private var file(default, null) : sun.nio.fs.UnixPath;
+	@:protected @:final private var file(default, null) : sun.nio.fs.UnixPath;
 	
-	private var followLinks(default, null) : Bool;
+	@:protected @:final private var followLinks(default, null) : Bool;
 	
-	@:overload override public function readAttributes() : java.nio.file.attribute.BasicFileAttributes;
+	@:overload @:public override public function readAttributes() : java.nio.file.attribute.BasicFileAttributes;
 	
-	@:overload override public function setTimes(lastModifiedTime : java.nio.file.attribute.FileTime, lastAccessTime : java.nio.file.attribute.FileTime, createTime : java.nio.file.attribute.FileTime) : Void;
+	@:overload @:public override public function setTimes(lastModifiedTime : java.nio.file.attribute.FileTime, lastAccessTime : java.nio.file.attribute.FileTime, createTime : java.nio.file.attribute.FileTime) : Void;
 	
 	
 }
 @:native('sun$nio$fs$UnixFileAttributeViews$Posix') @:internal extern class UnixFileAttributeViews_Posix extends sun.nio.fs.UnixFileAttributeViews.UnixFileAttributeViews_Basic implements java.nio.file.attribute.PosixFileAttributeView
 {
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload override public function setAttribute(attribute : String, value : Dynamic) : Void;
+	@:overload @:public override public function setAttribute(attribute : String, value : Dynamic) : Void;
 	
-	@:overload override public function readAttributes(requested : java.NativeArray<String>) : java.util.Map<String, Dynamic>;
+	@:overload @:public override public function readAttributes(requested : java.NativeArray<String>) : java.util.Map<String, Dynamic>;
 	
-	@:overload override public function readAttributes() : sun.nio.fs.UnixFileAttributes;
+	@:overload @:public override public function readAttributes() : sun.nio.fs.UnixFileAttributes;
 	
-	@:overload public function setPermissions(perms : java.util.Set<java.nio.file.attribute.PosixFilePermission>) : Void;
+	@:overload @:public public function setPermissions(perms : java.util.Set<java.nio.file.attribute.PosixFilePermission>) : Void;
 	
-	@:overload public function setOwner(owner : java.nio.file.attribute.UserPrincipal) : Void;
+	@:overload @:public public function setOwner(owner : java.nio.file.attribute.UserPrincipal) : Void;
 	
-	@:overload public function getOwner() : java.nio.file.attribute.UserPrincipal;
+	@:overload @:public public function getOwner() : java.nio.file.attribute.UserPrincipal;
 	
-	@:overload public function setGroup(group : java.nio.file.attribute.GroupPrincipal) : Void;
+	@:overload @:public public function setGroup(group : java.nio.file.attribute.GroupPrincipal) : Void;
 	
 	
 }
 @:native('sun$nio$fs$UnixFileAttributeViews$Unix') @:internal extern class UnixFileAttributeViews_Unix extends sun.nio.fs.UnixFileAttributeViews.UnixFileAttributeViews_Posix
 {
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload override public function setAttribute(attribute : String, value : Dynamic) : Void;
+	@:overload @:public override public function setAttribute(attribute : String, value : Dynamic) : Void;
 	
-	@:overload override public function readAttributes(requested : java.NativeArray<String>) : java.util.Map<String, Dynamic>;
+	@:overload @:public override public function readAttributes(requested : java.NativeArray<String>) : java.util.Map<String, Dynamic>;
 	
 	
 }

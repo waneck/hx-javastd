@@ -25,33 +25,33 @@ package sun.font;
 */
 extern class FontFamily
 {
-	private var familyName : String;
+	@:protected private var familyName : String;
 	
-	private var plain : sun.font.Font2D;
+	@:protected private var plain : sun.font.Font2D;
 	
-	private var bold : sun.font.Font2D;
+	@:protected private var bold : sun.font.Font2D;
 	
-	private var italic : sun.font.Font2D;
+	@:protected private var italic : sun.font.Font2D;
 	
-	private var bolditalic : sun.font.Font2D;
+	@:protected private var bolditalic : sun.font.Font2D;
 	
-	private var logicalFont : Bool;
+	@:protected private var logicalFont : Bool;
 	
-	private var familyRank : Int;
+	@:protected private var familyRank : Int;
 	
-	@:overload public static function getFamily(name : String) : sun.font.FontFamily;
+	@:overload @:public @:static public static function getFamily(name : String) : sun.font.FontFamily;
 	
-	@:overload public static function getAllFamilyNames() : java.NativeArray<String>;
+	@:overload @:public @:static public static function getAllFamilyNames() : java.NativeArray<String>;
 	
-	@:overload public function new(name : String, isLogFont : Bool, rank : Int) : Void;
+	@:overload @:public public function new(name : String, isLogFont : Bool, rank : Int) : Void;
 	
-	@:overload public function getFamilyName() : String;
+	@:overload @:public public function getFamilyName() : String;
 	
-	@:overload public function getRank() : Int;
+	@:overload @:public public function getRank() : Int;
 	
-	@:overload public function setFont(font : sun.font.Font2D, style : Int) : Void;
+	@:overload @:public public function setFont(font : sun.font.Font2D, style : Int) : Void;
 	
-	@:overload public function getFontWithExactStyleMatch(style : Int) : sun.font.Font2D;
+	@:overload @:public public function getFontWithExactStyleMatch(style : Int) : sun.font.Font2D;
 	
 	/* REMIND: if the callers of this method are operating in an
 	* environment in which not all fonts are registered, the returned
@@ -61,11 +61,11 @@ extern class FontFamily
 	* registered all the styles of a font, since they would all be in the
 	* same location.
 	*/
-	@:overload public function getFont(style : Int) : sun.font.Font2D;
+	@:overload @:public public function getFont(style : Int) : sun.font.Font2D;
 	
-	@:overload @:synchronized public static function getLocaleFamily(name : String) : sun.font.FontFamily;
+	@:overload @:public @:static @:synchronized public static function getLocaleFamily(name : String) : sun.font.FontFamily;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

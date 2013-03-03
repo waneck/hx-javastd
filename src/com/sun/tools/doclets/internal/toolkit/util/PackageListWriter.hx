@@ -40,7 +40,7 @@ extern class PackageListWriter extends java.io.PrintWriter
 	*
 	* @param configuration the current configuration of the doclet.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
 	
 	/**
 	* Generate the package index.
@@ -48,9 +48,9 @@ extern class PackageListWriter extends java.io.PrintWriter
 	* @param configuration the current configuration of the doclet.
 	* @throws DocletAbortException
 	*/
-	@:overload public static function generate(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
+	@:overload @:public @:static public static function generate(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
 	
-	@:overload private function generatePackageListFile(root : com.sun.javadoc.RootDoc) : Void;
+	@:overload @:protected private function generatePackageListFile(root : com.sun.javadoc.RootDoc) : Void;
 	
 	
 }

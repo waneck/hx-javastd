@@ -50,7 +50,7 @@ extern class EventHandler implements java.lang.reflect.InvocationHandler
 	* @see #getEventPropertyName
 	* @see #getListenerMethodName
 	*/
-	@:overload public function new(target : Dynamic, action : String, eventPropertyName : String, listenerMethodName : String) : Void;
+	@:overload @:public public function new(target : Dynamic, action : String, eventPropertyName : String, listenerMethodName : String) : Void;
 	
 	/**
 	* Returns the object to which this event handler will send a message.
@@ -58,7 +58,7 @@ extern class EventHandler implements java.lang.reflect.InvocationHandler
 	* @return the target of this event handler
 	* @see #EventHandler(Object, String, String, String)
 	*/
-	@:overload public function getTarget() : Dynamic;
+	@:overload @:public public function getTarget() : Dynamic;
 	
 	/**
 	* Returns the name of the target's writable property
@@ -69,7 +69,7 @@ extern class EventHandler implements java.lang.reflect.InvocationHandler
 	* @return the action of this event handler
 	* @see #EventHandler(Object, String, String, String)
 	*/
-	@:overload public function getAction() : String;
+	@:overload @:public public function getAction() : String;
 	
 	/**
 	* Returns the property of the event that should be
@@ -79,7 +79,7 @@ extern class EventHandler implements java.lang.reflect.InvocationHandler
 	*
 	* @see #EventHandler(Object, String, String, String)
 	*/
-	@:overload public function getEventPropertyName() : String;
+	@:overload @:public public function getEventPropertyName() : String;
 	
 	/**
 	* Returns the name of the method that will trigger the action.
@@ -90,7 +90,7 @@ extern class EventHandler implements java.lang.reflect.InvocationHandler
 	*
 	* @see #EventHandler(Object, String, String, String)
 	*/
-	@:overload public function getListenerMethodName() : String;
+	@:overload @:public public function getListenerMethodName() : String;
 	
 	/**
 	* Extract the appropriate property value from the event and
@@ -103,7 +103,7 @@ extern class EventHandler implements java.lang.reflect.InvocationHandler
 	*
 	* @see EventHandler
 	*/
-	@:overload public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, arguments : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, arguments : java.NativeArray<Dynamic>) : Dynamic;
 	
 	/**
 	* Creates an implementation of <code>listenerInterface</code> in which
@@ -139,7 +139,7 @@ extern class EventHandler implements java.lang.reflect.InvocationHandler
 	*
 	* @see #create(Class, Object, String, String)
 	*/
-	@:overload public static function create<T>(listenerInterface : Class<T>, target : Dynamic, action : String) : T;
+	@:overload @:public @:static public static function create<T>(listenerInterface : Class<T>, target : Dynamic, action : String) : T;
 	
 	/**
 	/**
@@ -192,7 +192,7 @@ extern class EventHandler implements java.lang.reflect.InvocationHandler
 	*
 	* @see #create(Class, Object, String, String, String)
 	*/
-	@:overload public static function create<T>(listenerInterface : Class<T>, target : Dynamic, action : String, eventPropertyName : String) : T;
+	@:overload @:public @:static public static function create<T>(listenerInterface : Class<T>, target : Dynamic, action : String, eventPropertyName : String) : T;
 	
 	/**
 	* Creates an implementation of <code>listenerInterface</code> in which
@@ -277,7 +277,7 @@ extern class EventHandler implements java.lang.reflect.InvocationHandler
 	*
 	* @see EventHandler
 	*/
-	@:overload public static function create<T>(listenerInterface : Class<T>, target : Dynamic, action : String, eventPropertyName : String, listenerMethodName : String) : T;
+	@:overload @:public @:static public static function create<T>(listenerInterface : Class<T>, target : Dynamic, action : String, eventPropertyName : String, listenerMethodName : String) : T;
 	
 	
 }

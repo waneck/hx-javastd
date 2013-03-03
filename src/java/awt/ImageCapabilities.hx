@@ -34,7 +34,7 @@ package java.awt;
 	* Creates a new object for specifying image capabilities.
 	* @param accelerated whether or not an accelerated image is desired
 	*/
-	@:overload public function new(accelerated : Bool) : Void;
+	@:overload @:public public function new(accelerated : Bool) : Void;
 	
 	/**
 	* Returns <code>true</code> if the object whose capabilities are
@@ -45,7 +45,7 @@ package java.awt;
 	* pixmaps, VRAM, AGP.  This is the general acceleration method (as
 	* opposed to residing in system memory).
 	*/
-	@:overload public function isAccelerated() : Bool;
+	@:overload @:public public function isAccelerated() : Bool;
 	
 	/**
 	* Returns <code>true</code> if the <code>VolatileImage</code>
@@ -54,12 +54,12 @@ package java.awt;
 	* @return whether or not a volatile image is subject to losing its surfaces
 	* at the whim of the operating system.
 	*/
-	@:overload public function isTrueVolatile() : Bool;
+	@:overload @:public public function isTrueVolatile() : Bool;
 	
 	/**
 	* @return a copy of this ImageCapabilities object.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

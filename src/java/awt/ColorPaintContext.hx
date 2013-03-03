@@ -25,13 +25,13 @@ package java.awt;
 */
 @:internal extern class ColorPaintContext implements java.awt.PaintContext
 {
-	@:overload private function new(color : Int, cm : java.awt.image.ColorModel) : Void;
+	@:overload @:protected private function new(color : Int, cm : java.awt.image.ColorModel) : Void;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload public function getColorModel() : java.awt.image.ColorModel;
+	@:overload @:public public function getColorModel() : java.awt.image.ColorModel;
 	
-	@:overload @:synchronized public function getRaster(x : Int, y : Int, w : Int, h : Int) : java.awt.image.Raster;
+	@:overload @:public @:synchronized public function getRaster(x : Int, y : Int, w : Int, h : Int) : java.awt.image.Raster;
 	
 	
 }

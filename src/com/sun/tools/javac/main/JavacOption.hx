@@ -84,23 +84,23 @@ extern interface JavacOption
 */
 @:native('com$sun$tools$javac$main$JavacOption$Option') @:internal extern class JavacOption_Option implements com.sun.tools.javac.main.JavacOption
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function hasArg() : Bool;
+	@:overload @:public public function hasArg() : Bool;
 	
-	@:overload public function matches(option : String) : Bool;
+	@:overload @:public public function matches(option : String) : Bool;
 	
 	/** Process the option (with arg). Return true if error detected.
 	*/
-	@:overload public function process(options : com.sun.tools.javac.util.Options, option : String, arg : String) : Bool;
+	@:overload @:public public function process(options : com.sun.tools.javac.util.Options, option : String, arg : String) : Bool;
 	
 	/** Process the option (without arg). Return true if error detected.
 	*/
-	@:overload public function process(options : com.sun.tools.javac.util.Options, option : String) : Bool;
+	@:overload @:public public function process(options : com.sun.tools.javac.util.Options, option : String) : Bool;
 	
-	@:overload public function getKind() : com.sun.tools.javac.main.JavacOption.JavacOption_OptionKind;
+	@:overload @:public public function getKind() : com.sun.tools.javac.main.JavacOption.JavacOption_OptionKind;
 	
-	@:overload public function getName() : com.sun.tools.javac.main.OptionName;
+	@:overload @:public public function getName() : com.sun.tools.javac.main.OptionName;
 	
 	
 }
@@ -108,7 +108,7 @@ extern interface JavacOption
 */
 @:native('com$sun$tools$javac$main$JavacOption$XOption') @:internal extern class JavacOption_XOption extends com.sun.tools.javac.main.JavacOption.JavacOption_Option
 {
-	@:overload override public function getKind() : com.sun.tools.javac.main.JavacOption.JavacOption_OptionKind;
+	@:overload @:public override public function getKind() : com.sun.tools.javac.main.JavacOption.JavacOption_OptionKind;
 	
 	
 }
@@ -116,7 +116,7 @@ extern interface JavacOption
 */
 @:native('com$sun$tools$javac$main$JavacOption$HiddenOption') @:internal extern class JavacOption_HiddenOption extends com.sun.tools.javac.main.JavacOption.JavacOption_Option
 {
-	@:overload override public function getKind() : com.sun.tools.javac.main.JavacOption.JavacOption_OptionKind;
+	@:overload @:public override public function getKind() : com.sun.tools.javac.main.JavacOption.JavacOption_OptionKind;
 	
 	
 }

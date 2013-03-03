@@ -34,7 +34,7 @@ extern class PolicySourceModel implements java.lang.Cloneable
 	* @param nsVersion The policy version
 	* @return Newly created policy source model instance.
 	*/
-	@:overload public static function createPolicySourceModel(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
+	@:overload @:public @:static public static function createPolicySourceModel(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	/**
 	* Factory method that creates new policy source model instance and initializes it according to parameters provided.
@@ -47,7 +47,7 @@ extern class PolicySourceModel implements java.lang.Cloneable
 	* @param policyName global policy identifier - absolute policy expression URI. May be {@code null}.
 	* @return Newly created policy source model instance with its name and id properly set.
 	*/
-	@:overload public static function createPolicySourceModel(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, policyId : String, policyName : String) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
+	@:overload @:public @:static public static function createPolicySourceModel(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, policyId : String, policyName : String) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	/**
 	* Constructor that creates a new policy source model instance with given
@@ -60,35 +60,35 @@ extern class PolicySourceModel implements java.lang.Cloneable
 	* @param policyName Absolute IRI of policy expression. May be {@code null}.
 	* @param prefixMappers A collection of PrefixMappers to be used with this instance. May be {@code null}.
 	*/
-	@:overload private function new(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, policyId : String, policyName : String, prefixMappers : java.util.Collection<com.sun.xml.internal.ws.policy.spi.PrefixMapper>) : Void;
+	@:overload @:protected private function new(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, policyId : String, policyName : String, prefixMappers : java.util.Collection<com.sun.xml.internal.ws.policy.spi.PrefixMapper>) : Void;
 	
 	/**
 	* Returns a root node of this policy source model. It is allways of POLICY type.
 	*
 	* @return root policy source model node - allways of POLICY type.
 	*/
-	@:overload public function getRootNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
+	@:overload @:public public function getRootNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	/**
 	* Returns a policy name of this policy source model.
 	*
 	* @return policy name.
 	*/
-	@:overload public function getPolicyName() : String;
+	@:overload @:public public function getPolicyName() : String;
 	
 	/**
 	* Returns a policy ID of this policy source model.
 	*
 	* @return policy ID.
 	*/
-	@:overload public function getPolicyId() : String;
+	@:overload @:public public function getPolicyId() : String;
 	
 	/**
 	* Returns an original namespace version of this policy source model.
 	*
 	* @return namespace version.
 	*/
-	@:overload public function getNamespaceVersion() : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion;
+	@:overload @:public public function getNamespaceVersion() : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion;
 	
 	/**
 	* An {@code Object.equals(Object obj)} method override.
@@ -96,12 +96,12 @@ extern class PolicySourceModel implements java.lang.Cloneable
 	* When child nodes are tested for equality, the parent policy source model is not considered. Thus two different
 	* policy source models instances may be equal based on their node content.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* An {@code Object.hashCode()} method override.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of the object. In general, the <code>toString</code> method
@@ -109,9 +109,9 @@ extern class PolicySourceModel implements java.lang.Cloneable
 	*
 	* @return  a string representation of the object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload private function clone() : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
+	@:overload @:protected private function clone() : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	/**
 	* Returns a boolean value indicating whether this policy source model contains references to another policy source models.
@@ -121,7 +121,7 @@ extern class PolicySourceModel implements java.lang.Cloneable
 	*
 	* @return {@code true} or {code false} depending on whether this policy source model contains references to another policy source models.
 	*/
-	@:overload public function containsPolicyReferences() : Bool;
+	@:overload @:public public function containsPolicyReferences() : Bool;
 	
 	/**
 	* Expands current policy model. This means, that if this model contains any (unexpanded) policy references, then the method expands those
@@ -137,7 +137,7 @@ extern class PolicySourceModel implements java.lang.Cloneable
 	* @param context a policy source model context holding the set of unmarshalled policy source models within the same context.
 	* @throws PolicyException Thrown if a referenced policy could not be resolved
 	*/
-	@:overload @:synchronized public function expand(context : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModelContext) : Void;
+	@:overload @:public @:synchronized public function expand(context : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModelContext) : Void;
 	
 	
 }

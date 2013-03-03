@@ -43,7 +43,7 @@ package java.util;
 	* @param  c
 	*         The illegal Unicode code point
 	*/
-	@:overload public function new(c : Int) : Void;
+	@:overload @:public public function new(c : Int) : Void;
 	
 	/**
 	* Returns the illegal code point as defined by {@link
@@ -51,9 +51,9 @@ package java.util;
 	*
 	* @return  The illegal Unicode code point
 	*/
-	@:overload public function getCodePoint() : Int;
+	@:overload @:public public function getCodePoint() : Int;
 	
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

@@ -41,7 +41,7 @@ extern class MidiUnavailableException extends java.lang.Exception
 	* Constructs a <code>MidiUnavailableException</code> that has
 	* <code>null</code> as its error detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*  Constructs a <code>MidiUnavailableException</code> with the
@@ -49,7 +49,7 @@ extern class MidiUnavailableException extends java.lang.Exception
 	*
 	* @param message the string to display as an error detail message
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

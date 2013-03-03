@@ -28,37 +28,37 @@ extern class Krb5Helper
 	/**
 	* Returns true if Kerberos is available.
 	*/
-	@:overload public static function isAvailable() : Bool;
+	@:overload @:public @:static public static function isAvailable() : Bool;
 	
 	/**
 	* Returns the Subject associated with client-side of the SSL socket.
 	*/
-	@:overload public static function getClientSubject(acc : java.security.AccessControlContext) : javax.security.auth.Subject;
+	@:overload @:public @:static public static function getClientSubject(acc : java.security.AccessControlContext) : javax.security.auth.Subject;
 	
 	/**
 	* Returns the Subject associated with server-side of the SSL socket.
 	*/
-	@:overload public static function getServerSubject(acc : java.security.AccessControlContext) : javax.security.auth.Subject;
+	@:overload @:public @:static public static function getServerSubject(acc : java.security.AccessControlContext) : javax.security.auth.Subject;
 	
 	/**
 	* Returns the KerberosKeys for the default server-side principal.
 	*/
-	@:overload public static function getServerKeys(acc : java.security.AccessControlContext) : java.NativeArray<javax.crypto.SecretKey>;
+	@:overload @:public @:static public static function getServerKeys(acc : java.security.AccessControlContext) : java.NativeArray<javax.crypto.SecretKey>;
 	
 	/**
 	* Returns the server-side principal name associated with the KerberosKey.
 	*/
-	@:overload public static function getServerPrincipalName(kerberosKey : javax.crypto.SecretKey) : String;
+	@:overload @:public @:static public static function getServerPrincipalName(kerberosKey : javax.crypto.SecretKey) : String;
 	
 	/**
 	* Returns the hostname embedded in the principal name.
 	*/
-	@:overload public static function getPrincipalHostName(principal : java.security.Principal) : String;
+	@:overload @:public @:static public static function getPrincipalHostName(principal : java.security.Principal) : String;
 	
 	/**
 	* Returns a ServicePermission for the principal name and action.
 	*/
-	@:overload public static function getServicePermission(principalName : String, action : String) : java.security.Permission;
+	@:overload @:public @:static public static function getServicePermission(principalName : String, action : String) : java.security.Permission;
 	
 	
 }

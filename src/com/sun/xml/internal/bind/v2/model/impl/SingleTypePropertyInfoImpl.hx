@@ -25,19 +25,19 @@ package com.sun.xml.internal.bind.v2.model.impl;
 */
 @:internal extern class SingleTypePropertyInfoImpl<T, C, F, M> extends com.sun.xml.internal.bind.v2.model.impl.PropertyInfoImpl<T, C, F, M>
 {
-	@:overload public function new(classInfo : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>, seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : Void;
+	@:overload @:public public function new(classInfo : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>, seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : Void;
 	
-	@:overload override public function ref() : java.util.List<com.sun.xml.internal.bind.v2.model.core.NonElement<T, C>>;
+	@:overload @:public override public function ref() : java.util.List<com.sun.xml.internal.bind.v2.model.core.NonElement<T, C>>;
 	
-	@:overload public function getTarget() : com.sun.xml.internal.bind.v2.model.core.NonElement<T, C>;
+	@:overload @:public public function getTarget() : com.sun.xml.internal.bind.v2.model.core.NonElement<T, C>;
 	
-	@:overload public function getSource() : com.sun.xml.internal.bind.v2.model.core.PropertyInfo<T, C>;
+	@:overload @:public public function getSource() : com.sun.xml.internal.bind.v2.model.core.PropertyInfo<T, C>;
 	
-	@:overload override public function link() : Void;
+	@:overload @:public override public function link() : Void;
 	
-	@:overload public function getAccessor() : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
+	@:overload @:public public function getAccessor() : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
 	
-	@:overload public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<Dynamic>;
+	@:overload @:public public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<Dynamic>;
 	
 	
 }

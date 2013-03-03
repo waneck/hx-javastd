@@ -29,40 +29,40 @@ extern class XMLEventWriterImpl implements javax.xml.stream.XMLEventWriter
 	*
 	* @param streamWriter
 	*/
-	@:overload public function new(streamWriter : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function new(streamWriter : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	*
 	* @param xMLEventReader
 	* @throws XMLStreamException
 	*/
-	@:overload public function add(xMLEventReader : javax.xml.stream.XMLEventReader) : Void;
+	@:overload @:public public function add(xMLEventReader : javax.xml.stream.XMLEventReader) : Void;
 	
 	/**
 	*
 	* @param xMLEvent
 	* @throws XMLStreamException
 	*/
-	@:overload public function add(xMLEvent : javax.xml.stream.events.XMLEvent) : Void;
+	@:overload @:public public function add(xMLEvent : javax.xml.stream.events.XMLEvent) : Void;
 	
 	/**
 	*
 	* @throws XMLStreamException
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	*
 	* @throws XMLStreamException will inturn call flush on the stream to which data is being
 	* written.
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
 	
 	/**
 	*
@@ -70,21 +70,21 @@ extern class XMLEventWriterImpl implements javax.xml.stream.XMLEventWriter
 	* @throws XMLStreamException
 	* @return prefix associated with the URI.
 	*/
-	@:overload public function getPrefix(namespaceURI : String) : String;
+	@:overload @:public public function getPrefix(namespaceURI : String) : String;
 	
 	/**
 	*
 	* @param uri Namespace URI
 	* @throws XMLStreamException
 	*/
-	@:overload public function setDefaultNamespace(uri : String) : Void;
+	@:overload @:public public function setDefaultNamespace(uri : String) : Void;
 	
 	/**
 	*
 	* @param namespaceContext Namespace Context
 	* @throws XMLStreamException
 	*/
-	@:overload public function setNamespaceContext(namespaceContext : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public public function setNamespaceContext(namespaceContext : javax.xml.namespace.NamespaceContext) : Void;
 	
 	/**
 	*
@@ -92,7 +92,7 @@ extern class XMLEventWriterImpl implements javax.xml.stream.XMLEventWriter
 	* @param uri Namespace URI
 	* @throws XMLStreamException
 	*/
-	@:overload public function setPrefix(prefix : String, uri : String) : Void;
+	@:overload @:public public function setPrefix(prefix : String, uri : String) : Void;
 	
 	
 }

@@ -37,52 +37,52 @@ extern class AnnotationTypeOptionalMemberWriterImpl extends com.sun.tools.doclet
 	* @param writer         the writer that will write the output.
 	* @param annotationType the AnnotationType that holds this member.
 	*/
-	@:overload public function new(writer : com.sun.tools.doclets.formats.html.SubWriterHolderWriter, annotationType : com.sun.javadoc.AnnotationTypeDoc) : Void;
+	@:overload @:public public function new(writer : com.sun.tools.doclets.formats.html.SubWriterHolderWriter, annotationType : com.sun.javadoc.AnnotationTypeDoc) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getMemberSummaryHeader(classDoc : com.sun.javadoc.ClassDoc, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public override public function getMemberSummaryHeader(classDoc : com.sun.javadoc.ClassDoc, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addDefaultValueInfo(member : com.sun.javadoc.MemberDoc, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addDefaultValueInfo(member : com.sun.javadoc.MemberDoc, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addSummaryLabel(memberTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public override public function addSummaryLabel(memberTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getTableSummary() : String;
+	@:overload @:public override public function getTableSummary() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getCaption() : String;
+	@:overload @:public override public function getCaption() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getSummaryTableHeader(member : com.sun.javadoc.ProgramElementDoc) : java.NativeArray<String>;
+	@:overload @:public override public function getSummaryTableHeader(member : com.sun.javadoc.ProgramElementDoc) : java.NativeArray<String>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addSummaryAnchor(cd : com.sun.javadoc.ClassDoc, memberTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public override public function addSummaryAnchor(cd : com.sun.javadoc.ClassDoc, memberTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload private function getNavSummaryLink(cd : com.sun.javadoc.ClassDoc, link : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavSummaryLink(cd : com.sun.javadoc.ClassDoc, link : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

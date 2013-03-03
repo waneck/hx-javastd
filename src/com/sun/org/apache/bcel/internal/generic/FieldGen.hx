@@ -68,7 +68,7 @@ extern class FieldGen extends com.sun.org.apache.bcel.internal.generic.FieldGenO
 	* @param name field name
 	* @param cp constant pool
 	*/
-	@:overload public function new(access_flags : Int, type : com.sun.org.apache.bcel.internal.generic.Type, name : String, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
+	@:overload @:public public function new(access_flags : Int, type : com.sun.org.apache.bcel.internal.generic.Type, name : String, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
 	
 	/**
 	* Instantiate from existing field.
@@ -76,56 +76,56 @@ extern class FieldGen extends com.sun.org.apache.bcel.internal.generic.FieldGenO
 	* @param field Field object
 	* @param cp constant pool (must contain the same entries as the field's constant pool)
 	*/
-	@:overload public function new(field : com.sun.org.apache.bcel.internal.classfile.Field, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
+	@:overload @:public public function new(field : com.sun.org.apache.bcel.internal.classfile.Field, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
 	
 	/**
 	* Set (optional) initial value of field, otherwise it will be set to null/0/false
 	* by the JVM automatically.
 	*/
-	@:overload public function setInitValue(str : String) : Void;
+	@:overload @:public public function setInitValue(str : String) : Void;
 	
-	@:overload public function setInitValue(l : haxe.Int64) : Void;
+	@:overload @:public public function setInitValue(l : haxe.Int64) : Void;
 	
-	@:overload public function setInitValue(i : Int) : Void;
+	@:overload @:public public function setInitValue(i : Int) : Void;
 	
-	@:overload public function setInitValue(s : java.StdTypes.Int16) : Void;
+	@:overload @:public public function setInitValue(s : java.StdTypes.Int16) : Void;
 	
-	@:overload public function setInitValue(c : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setInitValue(c : java.StdTypes.Char16) : Void;
 	
-	@:overload public function setInitValue(b : java.StdTypes.Int8) : Void;
+	@:overload @:public public function setInitValue(b : java.StdTypes.Int8) : Void;
 	
-	@:overload public function setInitValue(b : Bool) : Void;
+	@:overload @:public public function setInitValue(b : Bool) : Void;
 	
-	@:overload public function setInitValue(f : Single) : Void;
+	@:overload @:public public function setInitValue(f : Single) : Void;
 	
-	@:overload public function setInitValue(d : Float) : Void;
+	@:overload @:public public function setInitValue(d : Float) : Void;
 	
 	/** Remove any initial value.
 	*/
-	@:overload public function cancelInitValue() : Void;
+	@:overload @:public public function cancelInitValue() : Void;
 	
 	/**
 	* Get field object after having set up all necessary values.
 	*/
-	@:overload public function getField() : com.sun.org.apache.bcel.internal.classfile.Field;
+	@:overload @:public public function getField() : com.sun.org.apache.bcel.internal.classfile.Field;
 	
-	@:overload override public function getSignature() : String;
+	@:overload @:public override public function getSignature() : String;
 	
 	/** Add observer for this object.
 	*/
-	@:overload public function addObserver(o : com.sun.org.apache.bcel.internal.generic.FieldObserver) : Void;
+	@:overload @:public public function addObserver(o : com.sun.org.apache.bcel.internal.generic.FieldObserver) : Void;
 	
 	/** Remove observer for this object.
 	*/
-	@:overload public function removeObserver(o : com.sun.org.apache.bcel.internal.generic.FieldObserver) : Void;
+	@:overload @:public public function removeObserver(o : com.sun.org.apache.bcel.internal.generic.FieldObserver) : Void;
 	
 	/** Call notify() method on all observers. This method is not called
 	* automatically whenever the state has changed, but has to be
 	* called by the user after he has finished editing the object.
 	*/
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
-	@:overload public function getInitValue() : String;
+	@:overload @:public public function getInitValue() : String;
 	
 	/**
 	* Return string representation close to declaration format,
@@ -133,11 +133,11 @@ extern class FieldGen extends com.sun.org.apache.bcel.internal.generic.FieldGenO
 	*
 	* @return String representation of field
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/** @return deep copy of this field
 	*/
-	@:overload public function copy(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.FieldGen;
+	@:overload @:public public function copy(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.FieldGen;
 	
 	
 }

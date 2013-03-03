@@ -28,12 +28,12 @@ extern interface XSQName
 	/**
 	* @return com.sun.org.apache.xerces.internal.xni.QName class instance
 	*/
-	@:overload public function getXNIQName() : com.sun.org.apache.xerces.internal.xni.QName;
+	@:overload @:public public function getXNIQName() : com.sun.org.apache.xerces.internal.xni.QName;
 	
 	/**
 	* @return javax.xml.namespace.QName class instance
 	*/
-	@:overload public function getJAXPQName() : javax.xml.namespace.QName;
+	@:overload @:public public function getJAXPQName() : javax.xml.namespace.QName;
 	
 	
 }

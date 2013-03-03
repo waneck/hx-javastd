@@ -29,12 +29,12 @@ extern class FunctionPattern extends com.sun.org.apache.xpath.internal.patterns.
 	*
 	* NEEDSDOC @param expr
 	*/
-	@:overload public function new(expr : com.sun.org.apache.xpath.internal.Expression, axis : Int, predaxis : Int) : Void;
+	@:overload @:public public function new(expr : com.sun.org.apache.xpath.internal.Expression, axis : Int, predaxis : Int) : Void;
 	
 	/**
 	* Static calc of match score.
 	*/
-	@:overload @:final override public function calcScore() : Void;
+	@:overload @:public @:final override public function calcScore() : Void;
 	
 	/**
 	* This function is used to fixup variables from QNames to stack frame
@@ -46,7 +46,7 @@ extern class FunctionPattern extends com.sun.org.apache.xpath.internal.patterns.
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Test a node to see if it matches the given node test.
@@ -61,7 +61,7 @@ extern class FunctionPattern extends com.sun.org.apache.xpath.internal.patterns.
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, context : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, context : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Test a node to see if it matches the given node test.
@@ -76,7 +76,7 @@ extern class FunctionPattern extends com.sun.org.apache.xpath.internal.patterns.
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, context : Int, dtm : com.sun.org.apache.xml.internal.dtm.DTM, expType : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, context : Int, dtm : com.sun.org.apache.xml.internal.dtm.DTM, expType : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Test a node to see if it matches the given node test.
@@ -91,12 +91,12 @@ extern class FunctionPattern extends com.sun.org.apache.xpath.internal.patterns.
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Call the visitor for the function.
 	*/
-	@:overload override private function callSubtreeVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:protected override private function callSubtreeVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	
 }
@@ -105,12 +105,12 @@ extern class FunctionPattern extends com.sun.org.apache.xpath.internal.patterns.
 	/**
 	* @see ExpressionOwner#getExpression()
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see ExpressionOwner#setExpression(Expression)
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	
 }

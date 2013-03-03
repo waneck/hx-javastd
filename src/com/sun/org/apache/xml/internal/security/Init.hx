@@ -22,20 +22,20 @@ package com.sun.org.apache.xml.internal.security;
 extern class Init
 {
 	/** The namespace for CONF file **/
-	public static var CONF_NS(default, null) : String;
+	@:public @:static @:final public static var CONF_NS(default, null) : String;
 	
 	/**
 	* Method isInitialized
 	* @return true if the librairy is already initialized.
 	*
 	*/
-	@:overload @:final public static function isInitialized() : Bool;
+	@:overload @:public @:static @:final public static function isInitialized() : Bool;
 	
 	/**
 	* Method init
 	*
 	*/
-	@:overload @:synchronized public static function init() : Void;
+	@:overload @:public @:synchronized @:static public static function init() : Void;
 	
 	
 }

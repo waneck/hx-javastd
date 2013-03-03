@@ -42,42 +42,42 @@ extern class GeneralSubtrees implements java.lang.Cloneable
 	/**
 	* The default constructor for the class.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create the object from the passed DER encoded form.
 	*
 	* @param val the DER encoded form of the same.
 	*/
-	@:overload public function new(val : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(val : sun.security.util.DerValue) : Void;
 	
-	@:overload public function get(index : Int) : sun.security.x509.GeneralSubtree;
+	@:overload @:public public function get(index : Int) : sun.security.x509.GeneralSubtree;
 	
-	@:overload public function remove(index : Int) : Void;
+	@:overload @:public public function remove(index : Int) : Void;
 	
-	@:overload public function add(tree : sun.security.x509.GeneralSubtree) : Void;
+	@:overload @:public public function add(tree : sun.security.x509.GeneralSubtree) : Void;
 	
-	@:overload public function contains(tree : sun.security.x509.GeneralSubtree) : Bool;
+	@:overload @:public public function contains(tree : sun.security.x509.GeneralSubtree) : Bool;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function iterator() : java.util.Iterator<sun.security.x509.GeneralSubtree>;
+	@:overload @:public public function iterator() : java.util.Iterator<sun.security.x509.GeneralSubtree>;
 	
-	@:overload public function trees() : java.util.List<sun.security.x509.GeneralSubtree>;
+	@:overload @:public public function trees() : java.util.List<sun.security.x509.GeneralSubtree>;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Return a printable string of the GeneralSubtree.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Encode the GeneralSubtrees.
 	*
 	* @params out the DerOutputStrean to encode this object to.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Compare two general subtrees by comparing the subtrees
@@ -86,9 +86,9 @@ extern class GeneralSubtrees implements java.lang.Cloneable
 	* @param other GeneralSubtrees to compare to this
 	* @returns true if match
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* intersect this GeneralSubtrees with other.  This function
@@ -122,14 +122,14 @@ extern class GeneralSubtrees implements java.lang.Cloneable
 	*          of the same type but did not share the same subtree between
 	*          this and other. Returns null if no such.
 	*/
-	@:overload public function intersect(other : sun.security.x509.GeneralSubtrees) : sun.security.x509.GeneralSubtrees;
+	@:overload @:public public function intersect(other : sun.security.x509.GeneralSubtrees) : sun.security.x509.GeneralSubtrees;
 	
 	/**
 	* construct union of this GeneralSubtrees with other.
 	*
 	* @param other GeneralSubtrees to be united with this
 	*/
-	@:overload public function union(other : sun.security.x509.GeneralSubtrees) : Void;
+	@:overload @:public public function union(other : sun.security.x509.GeneralSubtrees) : Void;
 	
 	/**
 	* reduce this GeneralSubtrees by contents of another.  This function
@@ -139,7 +139,7 @@ extern class GeneralSubtrees implements java.lang.Cloneable
 	*
 	* @param excluded GeneralSubtrees
 	*/
-	@:overload public function reduce(excluded : sun.security.x509.GeneralSubtrees) : Void;
+	@:overload @:public public function reduce(excluded : sun.security.x509.GeneralSubtrees) : Void;
 	
 	
 }

@@ -54,25 +54,25 @@ package org.omg.CORBA;
 	* The constant indicating that a method completed running
 	* before a <code>SystemException</code> was thrown.
 	*/
-	public static var _COMPLETED_YES(default, null) : Int;
+	@:public @:static @:final public static var _COMPLETED_YES(default, null) : Int;
 	
 	/**
 	* An instance of <code>CompletionStatus</code> initialized with
 	* the constant <code>_COMPLETED_YES</code>.
 	*/
-	public static var COMPLETED_YES(default, null) : org.omg.CORBA.CompletionStatus;
+	@:public @:static @:final public static var COMPLETED_YES(default, null) : org.omg.CORBA.CompletionStatus;
 	
 	/**
 	* An instance of <code>CompletionStatus</code> initialized with
 	* the constant <code>_COMPLETED_NO</code>.
 	*/
-	public static var COMPLETED_NO(default, null) : org.omg.CORBA.CompletionStatus;
+	@:public @:static @:final public static var COMPLETED_NO(default, null) : org.omg.CORBA.CompletionStatus;
 	
 	/**
 	* An instance of <code>CompletionStatus</code> initialized with
 	* the constant <code>_COMPLETED_MAYBE</code>.
 	*/
-	public static var COMPLETED_MAYBE(default, null) : org.omg.CORBA.CompletionStatus;
+	@:public @:static @:final public static var COMPLETED_MAYBE(default, null) : org.omg.CORBA.CompletionStatus;
 	
 	/**
 	* Retrieves the value of this <code>CompletionStatus</code> object.
@@ -82,7 +82,7 @@ package org.omg.CORBA;
 	*          <code>_COMPLETED_MAYBE</code>
 	*
 	*/
-	@:overload public function value() : Int;
+	@:overload @:public public function value() : Int;
 	
 	/**
 	* Creates a <code>CompletionStatus</code> object from the given <code>int</code>.
@@ -98,7 +98,7 @@ package org.omg.CORBA;
 	* @exception org.omg.CORBA.BAD_PARAM  if the argument given is not one of the
 	*            <code>int</code> constants defined in <code>CompletionStatus</code>
 	*/
-	@:overload public static function from_int(i : Int) : org.omg.CORBA.CompletionStatus;
+	@:overload @:public @:static public static function from_int(i : Int) : org.omg.CORBA.CompletionStatus;
 	
 	
 }

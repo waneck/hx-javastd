@@ -39,19 +39,19 @@ extern class AtomicBoolean implements java.io.Serializable
 	*
 	* @param initialValue the initial value
 	*/
-	@:overload public function new(initialValue : Bool) : Void;
+	@:overload @:public public function new(initialValue : Bool) : Void;
 	
 	/**
 	* Creates a new {@code AtomicBoolean} with initial value {@code false}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the current value.
 	*
 	* @return the current value
 	*/
-	@:overload @:final public function get() : Bool;
+	@:overload @:public @:final public function get() : Bool;
 	
 	/**
 	* Atomically sets the value to the given updated value
@@ -62,7 +62,7 @@ extern class AtomicBoolean implements java.io.Serializable
 	* @return true if successful. False return indicates that
 	* the actual value was not equal to the expected value.
 	*/
-	@:overload @:final public function compareAndSet(expect : Bool, update : Bool) : Bool;
+	@:overload @:public @:final public function compareAndSet(expect : Bool, update : Bool) : Bool;
 	
 	/**
 	* Atomically sets the value to the given updated value
@@ -76,14 +76,14 @@ extern class AtomicBoolean implements java.io.Serializable
 	* @param update the new value
 	* @return true if successful.
 	*/
-	@:overload public function weakCompareAndSet(expect : Bool, update : Bool) : Bool;
+	@:overload @:public public function weakCompareAndSet(expect : Bool, update : Bool) : Bool;
 	
 	/**
 	* Unconditionally sets to the given value.
 	*
 	* @param newValue the new value
 	*/
-	@:overload @:final public function set(newValue : Bool) : Void;
+	@:overload @:public @:final public function set(newValue : Bool) : Void;
 	
 	/**
 	* Eventually sets to the given value.
@@ -91,7 +91,7 @@ extern class AtomicBoolean implements java.io.Serializable
 	* @param newValue the new value
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function lazySet(newValue : Bool) : Void;
+	@:require(java6) @:overload @:public @:final public function lazySet(newValue : Bool) : Void;
 	
 	/**
 	* Atomically sets to the given value and returns the previous value.
@@ -99,13 +99,13 @@ extern class AtomicBoolean implements java.io.Serializable
 	* @param newValue the new value
 	* @return the previous value
 	*/
-	@:overload @:final public function getAndSet(newValue : Bool) : Bool;
+	@:overload @:public @:final public function getAndSet(newValue : Bool) : Bool;
 	
 	/**
 	* Returns the String representation of the current value.
 	* @return the String representation of the current value.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

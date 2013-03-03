@@ -32,7 +32,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	* @see #OUTLINE_DRAG_MODE
 	* @see #setDragMode
 	*/
-	public static var LIVE_DRAG_MODE(default, null) : Int;
+	@:public @:static @:final public static var LIVE_DRAG_MODE(default, null) : Int;
 	
 	/**
 	* Indicates that an outline only of the item being dragged
@@ -41,12 +41,12 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	* @see #LIVE_DRAG_MODE
 	* @see #setDragMode
 	*/
-	public static var OUTLINE_DRAG_MODE(default, null) : Int;
+	@:public @:static @:final public static var OUTLINE_DRAG_MODE(default, null) : Int;
 	
 	/**
 	* Creates a new <code>JDesktopPane</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the L&F object that renders this component.
@@ -54,7 +54,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	* @return the <code>DesktopPaneUI</code> object that
 	*   renders this component
 	*/
-	@:overload public function getUI() : javax.swing.plaf.DesktopPaneUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.DesktopPaneUI;
 	
 	/**
 	* Sets the L&F object that renders this component.
@@ -67,7 +67,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.DesktopPaneUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.DesktopPaneUI) : Void;
 	
 	/**
 	* Sets the "dragging style" used by the desktop pane.
@@ -86,7 +86,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	*               OUTLINE_DRAG_MODE JDesktopPane.OUTLINE_DRAG_MODE
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setDragMode(dragMode : Int) : Void;
+	@:require(java3) @:overload @:public public function setDragMode(dragMode : Int) : Void;
 	
 	/**
 	* Gets the current "dragging style" used by the desktop pane.
@@ -95,13 +95,13 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	* @see #setDragMode
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getDragMode() : Int;
+	@:require(java3) @:overload @:public public function getDragMode() : Int;
 	
 	/**
 	* Returns the <code>DesktopManger</code> that handles
 	* desktop-specific UI actions.
 	*/
-	@:overload public function getDesktopManager() : javax.swing.DesktopManager;
+	@:overload @:public public function getDesktopManager() : javax.swing.DesktopManager;
 	
 	/**
 	* Sets the <code>DesktopManger</code> that will handle
@@ -115,7 +115,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	*  description: Desktop manager to handle the internal frames in the
 	*               desktop pane.
 	*/
-	@:overload public function setDesktopManager(d : javax.swing.DesktopManager) : Void;
+	@:overload @:public public function setDesktopManager(d : javax.swing.DesktopManager) : Void;
 	
 	/**
 	* Notification from the <code>UIManager</code> that the L&F has changed.
@@ -124,7 +124,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -133,7 +133,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Returns all <code>JInternalFrames</code> currently displayed in the
@@ -141,7 +141,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	*
 	* @return an array of <code>JInternalFrame</code> objects
 	*/
-	@:overload public function getAllFrames() : java.NativeArray<javax.swing.JInternalFrame>;
+	@:overload @:public public function getAllFrames() : java.NativeArray<javax.swing.JInternalFrame>;
 	
 	/** Returns the currently active <code>JInternalFrame</code>
 	* in this <code>JDesktopPane</code>, or <code>null</code>
@@ -151,7 +151,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	*   <code>null</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getSelectedFrame() : javax.swing.JInternalFrame;
+	@:require(java3) @:overload @:public public function getSelectedFrame() : javax.swing.JInternalFrame;
 	
 	/** Sets the currently active <code>JInternalFrame</code>
 	*  in this <code>JDesktopPane</code>. This method is used to bridge
@@ -164,7 +164,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	* @param f the internal frame that's currently selected
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setSelectedFrame(f : javax.swing.JInternalFrame) : Void;
+	@:require(java3) @:overload @:public public function setSelectedFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/**
 	* Returns all <code>JInternalFrames</code> currently displayed in the
@@ -175,7 +175,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	* @return an array of <code>JInternalFrame</code> objects
 	* @see JLayeredPane
 	*/
-	@:overload public function getAllFramesInLayer(layer : Int) : java.NativeArray<javax.swing.JInternalFrame>;
+	@:overload @:public public function getAllFramesInLayer(layer : Int) : java.NativeArray<javax.swing.JInternalFrame>;
 	
 	/**
 	* Selects the next <code>JInternalFrame</code> in this desktop pane.
@@ -187,31 +187,31 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	*         if nothing was selected
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function selectFrame(forward : Bool) : javax.swing.JInternalFrame;
+	@:require(java6) @:overload @:public public function selectFrame(forward : Bool) : javax.swing.JInternalFrame;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:require(java6) @:overload @:protected override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function remove(index : Int) : Void;
+	@:require(java6) @:overload @:public override public function remove(index : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function removeAll() : Void;
+	@:require(java6) @:overload @:public override public function removeAll() : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setComponentZOrder(comp : java.awt.Component, index : Int) : Void;
+	@:require(java6) @:overload @:public override public function setComponentZOrder(comp : java.awt.Component, index : Int) : Void;
 	
 	/**
 	* Returns a string representation of this <code>JDesktopPane</code>.
@@ -222,7 +222,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	*
 	* @return  a string representation of this <code>JDesktopPane</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with this
@@ -234,13 +234,13 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	* @return an <code>AccessibleJDesktopPane</code> that serves as the
 	*         <code>AccessibleContext</code> of this <code>JDesktopPane</code>
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
 @:native('javax$swing$JDesktopPane$ComponentPosition') @:internal extern class JDesktopPane_ComponentPosition implements java.lang.Comparable<javax.swing.JDesktopPane.JDesktopPane_ComponentPosition>
 {
-	@:overload public function compareTo(o : javax.swing.JDesktopPane.JDesktopPane_ComponentPosition) : Int;
+	@:overload @:public public function compareTo(o : javax.swing.JDesktopPane.JDesktopPane_ComponentPosition) : Int;
 	
 	
 }
@@ -268,7 +268,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

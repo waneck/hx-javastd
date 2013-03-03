@@ -25,15 +25,15 @@ package com.sun.xml.internal.ws.model.wsdl;
 */
 extern class WSDLBoundFaultImpl extends com.sun.xml.internal.ws.model.wsdl.AbstractExtensibleImpl implements com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundFault
 {
-	@:overload public function new(xsr : javax.xml.stream.XMLStreamReader, name : String, owner : com.sun.xml.internal.ws.model.wsdl.WSDLBoundOperationImpl) : Void;
+	@:overload @:public public function new(xsr : javax.xml.stream.XMLStreamReader, name : String, owner : com.sun.xml.internal.ws.model.wsdl.WSDLBoundOperationImpl) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getQName() : javax.xml.namespace.QName;
+	@:overload @:public public function getQName() : javax.xml.namespace.QName;
 	
-	@:overload public function getFault() : com.sun.xml.internal.ws.api.model.wsdl.WSDLFault;
+	@:overload @:public public function getFault() : com.sun.xml.internal.ws.api.model.wsdl.WSDLFault;
 	
-	@:overload public function getBoundOperation() : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
+	@:overload @:public public function getBoundOperation() : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
 	
 	
 }

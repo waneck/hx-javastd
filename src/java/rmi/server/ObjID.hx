@@ -26,16 +26,16 @@ package java.rmi.server;
 extern class ObjID implements java.io.Serializable
 {
 	/** Object number for well-known <code>ObjID</code> of the registry. */
-	public static var REGISTRY_ID(default, null) : Int;
+	@:public @:static @:final public static var REGISTRY_ID(default, null) : Int;
 	
 	/** Object number for well-known <code>ObjID</code> of the activator. */
-	public static var ACTIVATOR_ID(default, null) : Int;
+	@:public @:static @:final public static var ACTIVATOR_ID(default, null) : Int;
 	
 	/**
 	* Object number for well-known <code>ObjID</code> of
 	* the distributed garbage collector.
 	*/
-	public static var DGC_ID(default, null) : Int;
+	@:public @:static @:final public static var DGC_ID(default, null) : Int;
 	
 	/**
 	* Generates a unique object identifier.
@@ -46,7 +46,7 @@ extern class ObjID implements java.io.Serializable
 	* strong random number generator to choose the object number of the
 	* returned <code>ObjID</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a "well-known" object identifier.
@@ -57,7 +57,7 @@ extern class ObjID implements java.io.Serializable
 	*
 	* @param   objNum object number for well-known object identifier
 	*/
-	@:overload public function new(objNum : Int) : Void;
+	@:overload @:public public function new(objNum : Int) : Void;
 	
 	/**
 	* Marshals a binary representation of this <code>ObjID</code> to
@@ -75,7 +75,7 @@ extern class ObjID implements java.io.Serializable
 	* @throws  IOException if an I/O error occurs while performing
 	* this operation
 	*/
-	@:overload public function write(out : java.io.ObjectOutput) : Void;
+	@:overload @:public public function write(out : java.io.ObjectOutput) : Void;
 	
 	/**
 	* Constructs and returns a new <code>ObjID</code> instance by
@@ -98,7 +98,7 @@ extern class ObjID implements java.io.Serializable
 	* @throws  IOException if an I/O error occurs while performing
 	* this operation
 	*/
-	@:overload public static function read(_in : java.io.ObjectInput) : java.rmi.server.ObjID;
+	@:overload @:public @:static public static function read(_in : java.io.ObjectInput) : java.rmi.server.ObjID;
 	
 	/**
 	* Returns the hash code value for this object identifier, the
@@ -106,7 +106,7 @@ extern class ObjID implements java.io.Serializable
 	*
 	* @return  the hash code value for this object identifier
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares the specified object with this <code>ObjID</code> for
@@ -121,14 +121,14 @@ extern class ObjID implements java.io.Serializable
 	* @return  <code>true</code> if the given object is equivalent to
 	* this one, and <code>false</code> otherwise
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/*
 	* The address space identifier is only included in the string
 	* representation if it does not denote the local address space
 	* (or if the randomIDs property was set).
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

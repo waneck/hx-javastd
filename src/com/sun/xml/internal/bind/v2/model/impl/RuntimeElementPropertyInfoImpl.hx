@@ -25,15 +25,15 @@ package com.sun.xml.internal.bind.v2.model.impl;
 */
 @:internal extern class RuntimeElementPropertyInfoImpl extends com.sun.xml.internal.bind.v2.model.impl.ElementPropertyInfoImpl<java.lang.reflect.Type, Class<Dynamic>, java.lang.reflect.Field, java.lang.reflect.Method> implements com.sun.xml.internal.bind.v2.model.runtime.RuntimeElementPropertyInfo
 {
-	@:overload public function getAccessor() : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
+	@:overload @:public public function getAccessor() : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
 	
-	@:overload public function elementOnlyContent() : Bool;
+	@:overload @:public public function elementOnlyContent() : Bool;
 	
-	@:overload override public function ref() : java.util.List<com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfo>;
+	@:overload @:public override public function ref() : java.util.List<com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfo>;
 	
-	@:overload private function createTypeRef(name : javax.xml.namespace.QName, type : java.lang.reflect.Type, isNillable : Bool, defaultValue : String) : com.sun.xml.internal.bind.v2.model.impl.RuntimeTypeRefImpl;
+	@:overload @:protected private function createTypeRef(name : javax.xml.namespace.QName, type : java.lang.reflect.Type, isNillable : Bool, defaultValue : String) : com.sun.xml.internal.bind.v2.model.impl.RuntimeTypeRefImpl;
 	
-	@:overload override public function getTypes() : java.util.List<com.sun.xml.internal.bind.v2.model.impl.RuntimeTypeRefImpl>;
+	@:overload @:public override public function getTypes() : java.util.List<com.sun.xml.internal.bind.v2.model.impl.RuntimeTypeRefImpl>;
 	
 	
 }

@@ -48,23 +48,23 @@ extern class EncKrbPrivPart
 	* <a href="http://www.ietf.org/rfc/rfc4120.txt">
 	* http://www.ietf.org/rfc/rfc4120.txt</a>.
 	*/
-	public var userData : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var userData : java.NativeArray<java.StdTypes.Int8>;
 	
-	public var timestamp : sun.security.krb5.internal.KerberosTime;
+	@:public public var timestamp : sun.security.krb5.internal.KerberosTime;
 	
-	public var usec : Null<Int>;
+	@:public public var usec : Null<Int>;
 	
-	public var seqNumber : Null<Int>;
+	@:public public var seqNumber : Null<Int>;
 	
-	public var sAddress : sun.security.krb5.internal.HostAddress;
+	@:public public var sAddress : sun.security.krb5.internal.HostAddress;
 	
-	public var rAddress : sun.security.krb5.internal.HostAddress;
+	@:public public var rAddress : sun.security.krb5.internal.HostAddress;
 	
-	@:overload public function new(new_userData : java.NativeArray<java.StdTypes.Int8>, new_timestamp : sun.security.krb5.internal.KerberosTime, new_usec : Null<Int>, new_seqNumber : Null<Int>, new_sAddress : sun.security.krb5.internal.HostAddress, new_rAddress : sun.security.krb5.internal.HostAddress) : Void;
+	@:overload @:public public function new(new_userData : java.NativeArray<java.StdTypes.Int8>, new_timestamp : sun.security.krb5.internal.KerberosTime, new_usec : Null<Int>, new_seqNumber : Null<Int>, new_sAddress : sun.security.krb5.internal.HostAddress, new_rAddress : sun.security.krb5.internal.HostAddress) : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes an EncKrbPrivPart object.
@@ -72,7 +72,7 @@ extern class EncKrbPrivPart
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

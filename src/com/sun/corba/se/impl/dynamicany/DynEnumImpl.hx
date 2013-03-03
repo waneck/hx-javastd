@@ -25,21 +25,21 @@ package com.sun.corba.se.impl.dynamicany;
 */
 extern class DynEnumImpl extends com.sun.corba.se.impl.dynamicany.DynAnyBasicImpl implements org.omg.DynamicAny.DynEnum
 {
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, anAny : org.omg.CORBA.Any, copyValue : Bool) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, anAny : org.omg.CORBA.Any, copyValue : Bool) : Void;
 	
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload public function component_count() : Int;
+	@:overload @:public override public function component_count() : Int;
 	
-	@:overload public function current_component() : org.omg.DynamicAny.DynAny;
+	@:overload @:public override public function current_component() : org.omg.DynamicAny.DynAny;
 	
-	@:overload public function get_as_string() : String;
+	@:overload @:public public function get_as_string() : String;
 	
-	@:overload public function set_as_string(value : String) : Void;
+	@:overload @:public public function set_as_string(value : String) : Void;
 	
-	@:overload public function get_as_ulong() : Int;
+	@:overload @:public public function get_as_ulong() : Int;
 	
-	@:overload public function set_as_ulong(value : Int) : Void;
+	@:overload @:public public function set_as_ulong(value : Int) : Void;
 	
 	
 }

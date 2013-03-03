@@ -53,7 +53,7 @@ extern class PrivilegedActionException extends java.lang.Exception
 	*
 	* @param exception The exception thrown
 	*/
-	@:overload public function new(exception : java.lang.Exception) : Void;
+	@:overload @:public public function new(exception : java.lang.Exception) : Void;
 	
 	/**
 	* Returns the exception thrown by the privileged computation that
@@ -70,7 +70,7 @@ extern class PrivilegedActionException extends java.lang.Exception
 	* @see AccessController#doPrivileged(PrivilegedExceptionAction,
 	*                                            AccessControlContext)
 	*/
-	@:overload public function getException() : java.lang.Exception;
+	@:overload @:public public function getException() : java.lang.Exception;
 	
 	/**
 	* Returns the cause of this exception (the exception thrown by
@@ -80,9 +80,9 @@ extern class PrivilegedActionException extends java.lang.Exception
 	* @return  the cause of this exception.
 	* @since   1.4
 	*/
-	@:require(java4) @:overload public function getCause() : java.lang.Throwable;
+	@:require(java4) @:overload @:public override public function getCause() : java.lang.Throwable;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

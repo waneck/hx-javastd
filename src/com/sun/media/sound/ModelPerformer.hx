@@ -25,51 +25,51 @@ package com.sun.media.sound;
 */
 extern class ModelPerformer
 {
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
-	@:overload public function getConnectionBlocks() : java.util.List<com.sun.media.sound.ModelConnectionBlock>;
+	@:overload @:public public function getConnectionBlocks() : java.util.List<com.sun.media.sound.ModelConnectionBlock>;
 	
-	@:overload public function setConnectionBlocks(connectionBlocks : java.util.List<com.sun.media.sound.ModelConnectionBlock>) : Void;
+	@:overload @:public public function setConnectionBlocks(connectionBlocks : java.util.List<com.sun.media.sound.ModelConnectionBlock>) : Void;
 	
-	@:overload public function getOscillators() : java.util.List<com.sun.media.sound.ModelOscillator>;
+	@:overload @:public public function getOscillators() : java.util.List<com.sun.media.sound.ModelOscillator>;
 	
-	@:overload public function getExclusiveClass() : Int;
+	@:overload @:public public function getExclusiveClass() : Int;
 	
-	@:overload public function setExclusiveClass(exclusiveClass : Int) : Void;
+	@:overload @:public public function setExclusiveClass(exclusiveClass : Int) : Void;
 	
-	@:overload public function isSelfNonExclusive() : Bool;
+	@:overload @:public public function isSelfNonExclusive() : Bool;
 	
-	@:overload public function setSelfNonExclusive(selfNonExclusive : Bool) : Void;
+	@:overload @:public public function setSelfNonExclusive(selfNonExclusive : Bool) : Void;
 	
-	@:overload public function getKeyFrom() : Int;
+	@:overload @:public public function getKeyFrom() : Int;
 	
-	@:overload public function setKeyFrom(keyFrom : Int) : Void;
+	@:overload @:public public function setKeyFrom(keyFrom : Int) : Void;
 	
-	@:overload public function getKeyTo() : Int;
+	@:overload @:public public function getKeyTo() : Int;
 	
-	@:overload public function setKeyTo(keyTo : Int) : Void;
+	@:overload @:public public function setKeyTo(keyTo : Int) : Void;
 	
-	@:overload public function getVelFrom() : Int;
+	@:overload @:public public function getVelFrom() : Int;
 	
-	@:overload public function setVelFrom(velFrom : Int) : Void;
+	@:overload @:public public function setVelFrom(velFrom : Int) : Void;
 	
-	@:overload public function getVelTo() : Int;
+	@:overload @:public public function getVelTo() : Int;
 	
-	@:overload public function setVelTo(velTo : Int) : Void;
+	@:overload @:public public function setVelTo(velTo : Int) : Void;
 	
-	@:overload public function isReleaseTriggered() : Bool;
+	@:overload @:public public function isReleaseTriggered() : Bool;
 	
-	@:overload public function setReleaseTriggered(value : Bool) : Void;
+	@:overload @:public public function setReleaseTriggered(value : Bool) : Void;
 	
-	@:overload public function getUserObject() : Dynamic;
+	@:overload @:public public function getUserObject() : Dynamic;
 	
-	@:overload public function setUserObject(object : Dynamic) : Void;
+	@:overload @:public public function setUserObject(object : Dynamic) : Void;
 	
-	@:overload public function isDefaultConnectionsEnabled() : Bool;
+	@:overload @:public public function isDefaultConnectionsEnabled() : Bool;
 	
-	@:overload public function setDefaultConnectionsEnabled(addDefaultConnections : Bool) : Void;
+	@:overload @:public public function setDefaultConnectionsEnabled(addDefaultConnections : Bool) : Void;
 	
 	
 }

@@ -32,7 +32,7 @@ extern class SCDynamicStoreConfig
 	* @return
 	* @throws IOException
 	*/
-	@:overload public static function getConfig() : java.util.Hashtable<String, Dynamic>;
+	@:overload @:public @:static public static function getConfig() : java.util.Hashtable<String, Dynamic>;
 	
 	
 }

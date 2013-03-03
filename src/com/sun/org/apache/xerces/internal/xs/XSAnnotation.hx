@@ -37,12 +37,12 @@ extern interface XSAnnotation extends com.sun.org.apache.xerces.internal.xs.XSOb
 	* @return  True if the <code>target</code> is a recognized type and
 	*   supported by this implementation, otherwise false.
 	*/
-	@:overload public function writeAnnotation(target : Dynamic, targetType : java.StdTypes.Int16) : Bool;
+	@:overload @:public public function writeAnnotation(target : Dynamic, targetType : java.StdTypes.Int16) : Bool;
 	
 	/**
 	* A text representation of the annotation.
 	*/
-	@:overload public function getAnnotationString() : String;
+	@:overload @:public public function getAnnotationString() : String;
 	
 	
 }

@@ -25,31 +25,31 @@ package javax.swing.plaf.metal;
 */
 extern class MetalDesktopIconUI extends javax.swing.plaf.basic.BasicDesktopIconUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
-	@:overload override private function installComponents() : Void;
+	@:overload @:protected override private function installComponents() : Void;
 	
-	@:overload override private function uninstallComponents() : Void;
+	@:overload @:protected override private function uninstallComponents() : Void;
 	
-	@:overload override private function installListeners() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
-	@:overload override private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	
 }
 @:native('javax$swing$plaf$metal$MetalDesktopIconUI$TitleListener') @:internal extern class MetalDesktopIconUI_TitleListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

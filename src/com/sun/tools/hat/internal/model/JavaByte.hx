@@ -35,9 +35,9 @@ package com.sun.tools.hat.internal.model;
 */
 extern class JavaByte extends com.sun.tools.hat.internal.model.JavaValue
 {
-	@:overload public function new(value : java.StdTypes.Int8) : Void;
+	@:overload @:public public function new(value : java.StdTypes.Int8) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

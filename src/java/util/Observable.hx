@@ -60,7 +60,7 @@ package java.util;
 @:require(java0) extern class Observable
 {
 	/** Construct an Observable with zero Observers. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Adds an observer to the set of observers for this object, provided
@@ -71,14 +71,14 @@ package java.util;
 	* @param   o   an observer to be added.
 	* @throws NullPointerException   if the parameter o is null.
 	*/
-	@:overload @:synchronized public function addObserver(o : java.util.Observer) : Void;
+	@:overload @:public @:synchronized public function addObserver(o : java.util.Observer) : Void;
 	
 	/**
 	* Deletes an observer from the set of observers of this object.
 	* Passing <CODE>null</CODE> to this method will have no effect.
 	* @param   o   the observer to be deleted.
 	*/
-	@:overload @:synchronized public function deleteObserver(o : java.util.Observer) : Void;
+	@:overload @:public @:synchronized public function deleteObserver(o : java.util.Observer) : Void;
 	
 	/**
 	* If this object has changed, as indicated by the
@@ -96,7 +96,7 @@ package java.util;
 	* @see     java.util.Observable#hasChanged()
 	* @see     java.util.Observer#update(java.util.Observable, java.lang.Object)
 	*/
-	@:overload public function notifyObservers() : Void;
+	@:overload @:public public function notifyObservers() : Void;
 	
 	/**
 	* If this object has changed, as indicated by the
@@ -112,18 +112,18 @@ package java.util;
 	* @see     java.util.Observable#hasChanged()
 	* @see     java.util.Observer#update(java.util.Observable, java.lang.Object)
 	*/
-	@:overload public function notifyObservers(arg : Dynamic) : Void;
+	@:overload @:public public function notifyObservers(arg : Dynamic) : Void;
 	
 	/**
 	* Clears the observer list so that this object no longer has any observers.
 	*/
-	@:overload @:synchronized public function deleteObservers() : Void;
+	@:overload @:public @:synchronized public function deleteObservers() : Void;
 	
 	/**
 	* Marks this <tt>Observable</tt> object as having been changed; the
 	* <tt>hasChanged</tt> method will now return <tt>true</tt>.
 	*/
-	@:overload @:synchronized private function setChanged() : Void;
+	@:overload @:protected @:synchronized private function setChanged() : Void;
 	
 	/**
 	* Indicates that this object has no longer changed, or that it has
@@ -135,7 +135,7 @@ package java.util;
 	* @see     java.util.Observable#notifyObservers()
 	* @see     java.util.Observable#notifyObservers(java.lang.Object)
 	*/
-	@:overload @:synchronized private function clearChanged() : Void;
+	@:overload @:protected @:synchronized private function clearChanged() : Void;
 	
 	/**
 	* Tests if this object has changed.
@@ -147,14 +147,14 @@ package java.util;
 	* @see     java.util.Observable#clearChanged()
 	* @see     java.util.Observable#setChanged()
 	*/
-	@:overload @:synchronized public function hasChanged() : Bool;
+	@:overload @:public @:synchronized public function hasChanged() : Bool;
 	
 	/**
 	* Returns the number of observers of this <tt>Observable</tt> object.
 	*
 	* @return  the number of observers of this object.
 	*/
-	@:overload @:synchronized public function countObservers() : Int;
+	@:overload @:public @:synchronized public function countObservers() : Int;
 	
 	
 }

@@ -100,7 +100,7 @@ extern class SimpleFormatter extends java.util.logging.Formatter
 	* @param record the log record to be formatted.
 	* @return a formatted log record
 	*/
-	@:overload @:synchronized override public function format(record : java.util.logging.LogRecord) : String;
+	@:overload @:public @:synchronized override public function format(record : java.util.logging.LogRecord) : String;
 	
 	
 }

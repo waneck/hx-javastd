@@ -32,7 +32,7 @@ extern class JInfo
 	* mechanism is the -flag option to set or print a command line option of a
 	* running application. All other options are mapped to SA tools.
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

@@ -63,21 +63,21 @@ package com.sun.org.apache.bcel.internal.classfile;
 */
 extern class FieldOrMethod extends com.sun.org.apache.bcel.internal.classfile.AccessFlags implements java.lang.Cloneable implements com.sun.org.apache.bcel.internal.classfile.Node
 {
-	private var name_index : Int;
+	@:protected private var name_index : Int;
 	
-	private var signature_index : Int;
+	@:protected private var signature_index : Int;
 	
-	private var attributes_count : Int;
+	@:protected private var attributes_count : Int;
 	
-	private var attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>;
+	@:protected private var attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>;
 	
-	private var constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
+	@:protected private var constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
 	
 	/**
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload private function new(c : com.sun.org.apache.bcel.internal.classfile.FieldOrMethod) : Void;
+	@:overload @:protected private function new(c : com.sun.org.apache.bcel.internal.classfile.FieldOrMethod) : Void;
 	
 	/**
 	* Construct object from file stream.
@@ -85,7 +85,7 @@ extern class FieldOrMethod extends com.sun.org.apache.bcel.internal.classfile.Ac
 	* @throws IOException
 	* @throws ClassFormatException
 	*/
-	@:overload private function new(file : java.io.DataInputStream, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:protected private function new(file : java.io.DataInputStream, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* @param access_flags Access rights of method
@@ -94,7 +94,7 @@ extern class FieldOrMethod extends com.sun.org.apache.bcel.internal.classfile.Ac
 	* @param attributes Collection of attributes
 	* @param constant_pool Array of constants
 	*/
-	@:overload private function new(access_flags : Int, name_index : Int, signature_index : Int, attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:protected private function new(access_flags : Int, name_index : Int, signature_index : Int, attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Dump object to file stream on binary format.
@@ -102,64 +102,64 @@ extern class FieldOrMethod extends com.sun.org.apache.bcel.internal.classfile.Ac
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Collection of object attributes.
 	*/
-	@:overload @:final public function getAttributes() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>;
+	@:overload @:public @:final public function getAttributes() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>;
 	
 	/**
 	* @param attributes Collection of object attributes.
 	*/
-	@:overload @:final public function setAttributes(attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>) : Void;
+	@:overload @:public @:final public function setAttributes(attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>) : Void;
 	
 	/**
 	* @return Constant pool used by this object.
 	*/
-	@:overload @:final public function getConstantPool() : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
+	@:overload @:public @:final public function getConstantPool() : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
 	
 	/**
 	* @param constant_pool Constant pool to be used for this object.
 	*/
-	@:overload @:final public function setConstantPool(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public @:final public function setConstantPool(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* @return Index in constant pool of object's name.
 	*/
-	@:overload @:final public function getNameIndex() : Int;
+	@:overload @:public @:final public function getNameIndex() : Int;
 	
 	/**
 	* @param name_index Index in constant pool of object's name.
 	*/
-	@:overload @:final public function setNameIndex(name_index : Int) : Void;
+	@:overload @:public @:final public function setNameIndex(name_index : Int) : Void;
 	
 	/**
 	* @return Index in constant pool of field signature.
 	*/
-	@:overload @:final public function getSignatureIndex() : Int;
+	@:overload @:public @:final public function getSignatureIndex() : Int;
 	
 	/**
 	* @param signature_index Index in constant pool of field signature.
 	*/
-	@:overload @:final public function setSignatureIndex(signature_index : Int) : Void;
+	@:overload @:public @:final public function setSignatureIndex(signature_index : Int) : Void;
 	
 	/**
 	* @return Name of object, i.e., method name or field name
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	/**
 	* @return String representation of object's type signature (java style)
 	*/
-	@:overload @:final public function getSignature() : String;
+	@:overload @:public @:final public function getSignature() : String;
 	
 	/**
 	* @return deep copy of this field
 	*/
-	@:overload private function copy_(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.FieldOrMethod;
+	@:overload @:protected private function copy_(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.FieldOrMethod;
 	
-	@:overload @:public public function accept(obj : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public @:public public function accept(obj : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	
 }

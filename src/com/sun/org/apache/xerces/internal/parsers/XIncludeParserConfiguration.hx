@@ -21,29 +21,29 @@ package com.sun.org.apache.xerces.internal.parsers;
 extern class XIncludeParserConfiguration extends com.sun.org.apache.xerces.internal.parsers.XML11Configuration
 {
 	/** Feature identifier: allow notation and unparsed entity events to be sent out of order. */
-	private static var ALLOW_UE_AND_NOTATION_EVENTS(default, null) : String;
+	@:protected @:static @:final private static var ALLOW_UE_AND_NOTATION_EVENTS(default, null) : String;
 	
 	/** Feature identifier: fixup base URIs. */
-	private static var XINCLUDE_FIXUP_BASE_URIS(default, null) : String;
+	@:protected @:static @:final private static var XINCLUDE_FIXUP_BASE_URIS(default, null) : String;
 	
 	/** Feature identifier: fixup language. */
-	private static var XINCLUDE_FIXUP_LANGUAGE(default, null) : String;
+	@:protected @:static @:final private static var XINCLUDE_FIXUP_LANGUAGE(default, null) : String;
 	
 	/** Property identifier: error reporter. */
-	private static var XINCLUDE_HANDLER(default, null) : String;
+	@:protected @:static @:final private static var XINCLUDE_HANDLER(default, null) : String;
 	
 	/** Property identifier: error reporter. */
-	private static var NAMESPACE_CONTEXT(default, null) : String;
+	@:protected @:static @:final private static var NAMESPACE_CONTEXT(default, null) : String;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table.
 	*
 	* @param symbolTable The symbol table to use.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table and
@@ -53,7 +53,7 @@ extern class XIncludeParserConfiguration extends com.sun.org.apache.xerces.inter
 	* @param symbolTable The symbol table to use.
 	* @param grammarPool The grammar pool to use.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table,
@@ -64,14 +64,14 @@ extern class XIncludeParserConfiguration extends com.sun.org.apache.xerces.inter
 	* @param grammarPool    The grammar pool to use.
 	* @param parentSettings The parent settings.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool, parentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool, parentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/** Configures the pipeline. */
-	@:overload override private function configurePipeline() : Void;
+	@:overload @:protected override private function configurePipeline() : Void;
 	
-	@:overload override private function configureXML11Pipeline() : Void;
+	@:overload @:protected override private function configureXML11Pipeline() : Void;
 	
-	@:overload override public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public override public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	
 }

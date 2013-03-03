@@ -25,19 +25,19 @@ package sun.net.www.protocol.mailto;
 */
 extern class MailToURLConnection extends java.net.URLConnection
 {
-	@:overload override public function connect() : Void;
+	@:overload @:public override public function connect() : Void;
 	
-	@:overload @:synchronized override public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public @:synchronized override public function getOutputStream() : java.io.OutputStream;
 	
-	@:overload override public function getPermission() : java.security.Permission;
+	@:overload @:public override public function getPermission() : java.security.Permission;
 	
-	@:overload override public function setConnectTimeout(timeout : Int) : Void;
+	@:overload @:public override public function setConnectTimeout(timeout : Int) : Void;
 	
-	@:overload override public function getConnectTimeout() : Int;
+	@:overload @:public override public function getConnectTimeout() : Int;
 	
-	@:overload override public function setReadTimeout(timeout : Int) : Void;
+	@:overload @:public override public function setReadTimeout(timeout : Int) : Void;
 	
-	@:overload override public function getReadTimeout() : Int;
+	@:overload @:public override public function getReadTimeout() : Int;
 	
 	
 }

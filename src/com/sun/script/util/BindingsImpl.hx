@@ -32,19 +32,19 @@ extern class BindingsImpl extends com.sun.script.util.BindingsBase
 	* @author Mike Grogan
 	* @since 1.6
 	*/
-	@:require(java6) private var global : javax.script.Bindings;
+	@:require(java6) @:protected private var global : javax.script.Bindings;
 	
-	private var local : javax.script.Bindings;
+	@:protected private var local : javax.script.Bindings;
 	
-	@:overload public function setGlobal(n : javax.script.Bindings) : Void;
+	@:overload @:public public function setGlobal(n : javax.script.Bindings) : Void;
 	
-	@:overload public function setLocal(n : javax.script.Bindings) : Void;
+	@:overload @:public public function setLocal(n : javax.script.Bindings) : Void;
 	
-	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, Dynamic>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, Dynamic>>;
 	
-	@:overload override public function get(key : Dynamic) : Dynamic;
+	@:overload @:public override public function get(key : Dynamic) : Dynamic;
 	
-	@:overload override public function remove(key : Dynamic) : Dynamic;
+	@:overload @:public override public function remove(key : Dynamic) : Dynamic;
 	
 	
 }

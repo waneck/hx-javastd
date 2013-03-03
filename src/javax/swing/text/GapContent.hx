@@ -28,7 +28,7 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	/**
 	* Creates a new GapContent object.  Initial size defaults to 10.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new GapContent object, with the initial
@@ -38,18 +38,18 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	*
 	* @param initialLength the initial size
 	*/
-	@:overload public function new(initialLength : Int) : Void;
+	@:overload @:public public function new(initialLength : Int) : Void;
 	
 	/**
 	* Allocate an array to store items of the type
 	* appropriate (which is determined by the subclass).
 	*/
-	@:overload override private function allocateArray(len : Int) : Dynamic;
+	@:overload @:protected override private function allocateArray(len : Int) : Dynamic;
 	
 	/**
 	* Get the length of the allocated array.
 	*/
-	@:overload override private function getArrayLength() : Int;
+	@:overload @:protected override private function getArrayLength() : Int;
 	
 	/**
 	* Returns the length of the content.
@@ -57,7 +57,7 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	* @return the length >= 1
 	* @see AbstractDocument.Content#length
 	*/
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
 	/**
 	* Inserts a string into the content.
@@ -68,7 +68,7 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	* @exception BadLocationException if the specified position is invalid
 	* @see AbstractDocument.Content#insertString
 	*/
-	@:overload public function insertString(where : Int, str : String) : javax.swing.undo.UndoableEdit;
+	@:overload @:public public function insertString(where : Int, str : String) : javax.swing.undo.UndoableEdit;
 	
 	/**
 	* Removes part of the content.
@@ -79,7 +79,7 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	* @exception BadLocationException if the specified position is invalid
 	* @see AbstractDocument.Content#remove
 	*/
-	@:overload public function remove(where : Int, nitems : Int) : javax.swing.undo.UndoableEdit;
+	@:overload @:public public function remove(where : Int, nitems : Int) : javax.swing.undo.UndoableEdit;
 	
 	/**
 	* Retrieves a portion of the content.
@@ -90,7 +90,7 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	* @exception BadLocationException if the specified position is invalid
 	* @see AbstractDocument.Content#getString
 	*/
-	@:overload public function getString(where : Int, len : Int) : String;
+	@:overload @:public public function getString(where : Int, len : Int) : String;
 	
 	/**
 	* Retrieves a portion of the content.  If the desired content spans
@@ -104,7 +104,7 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	* @exception BadLocationException if the specified position is invalid
 	* @see AbstractDocument.Content#getChars
 	*/
-	@:overload public function getChars(where : Int, len : Int, chars : javax.swing.text.Segment) : Void;
+	@:overload @:public public function getChars(where : Int, len : Int, chars : javax.swing.text.Segment) : Void;
 	
 	/**
 	* Creates a position within the content that will
@@ -114,13 +114,13 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	* @return the position
 	* @exception BadLocationException if the specified position is invalid
 	*/
-	@:overload public function createPosition(offset : Int) : javax.swing.text.Position;
+	@:overload @:public public function createPosition(offset : Int) : javax.swing.text.Position;
 	
 	/**
 	* Make the gap bigger, moving any necessary data and updating
 	* the appropriate marks
 	*/
-	@:overload override private function shiftEnd(newSize : Int) : Void;
+	@:overload @:protected override private function shiftEnd(newSize : Int) : Void;
 	
 	/**
 	* Move the start of the gap to a new location,
@@ -128,13 +128,13 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	* moves the data in the array and updates the
 	* marks accordingly.
 	*/
-	@:overload override private function shiftGap(newGapStart : Int) : Void;
+	@:overload @:protected override private function shiftGap(newGapStart : Int) : Void;
 	
 	/**
 	* Resets all the marks that have an offset of 0 to have an index of
 	* zero as well.
 	*/
-	@:overload private function resetMarksAtZero() : Void;
+	@:overload @:protected private function resetMarksAtZero() : Void;
 	
 	/**
 	* Adjust the gap end downward.  This doesn't move
@@ -144,7 +144,7 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	* to the end of the gap (their location has been
 	* removed).
 	*/
-	@:overload override private function shiftGapStartDown(newGapStart : Int) : Void;
+	@:overload @:protected override private function shiftGapStartDown(newGapStart : Int) : Void;
 	
 	/**
 	* Adjust the gap end upward.  This doesn't move
@@ -154,7 +154,7 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	* to the end of the gap (their location has been
 	* removed).
 	*/
-	@:overload override private function shiftGapEndUp(newGapEnd : Int) : Void;
+	@:overload @:protected override private function shiftGapEndUp(newGapEnd : Int) : Void;
 	
 	/**
 	* Returns a Vector containing instances of UndoPosRef for the
@@ -168,7 +168,7 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	* @param length the length >= 0
 	* @return the set of instances
 	*/
-	@:overload private function getPositionsInRange(v : java.util.Vector<Dynamic>, offset : Int, length : Int) : java.util.Vector<Dynamic>;
+	@:overload @:protected private function getPositionsInRange(v : java.util.Vector<Dynamic>, offset : Int, length : Int) : java.util.Vector<Dynamic>;
 	
 	/**
 	* Resets the location for all the UndoPosRef instances
@@ -179,7 +179,7 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	*
 	* @param positions the UndoPosRef instances to reset
 	*/
-	@:overload private function updateUndoPositions(positions : java.util.Vector<Dynamic>, offset : Int, length : Int) : Void;
+	@:overload @:protected private function updateUndoPositions(positions : java.util.Vector<Dynamic>, offset : Int, length : Int) : Void;
 	
 	
 }
@@ -199,15 +199,15 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	* is held by the mark, so it is adjusted according
 	* to it's relationship to the gap.
 	*/
-	@:overload @:final public function getOffset() : Int;
+	@:overload @:public @:final public function getOffset() : Int;
 	
 	
 }
 @:native('javax$swing$text$GapContent$StickyPosition') @:internal extern class GapContent_StickyPosition implements javax.swing.text.Position
 {
-	@:overload @:final public function getOffset() : Int;
+	@:overload @:public @:final public function getOffset() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -217,32 +217,32 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	* Allocate an array to store items of the type
 	* appropriate (which is determined by the subclass).
 	*/
-	@:overload override private function allocateArray(len : Int) : Dynamic;
+	@:overload @:protected override private function allocateArray(len : Int) : Dynamic;
 	
 	/**
 	* Get the length of the allocated array
 	*/
-	@:overload override private function getArrayLength() : Int;
+	@:overload @:protected override private function getArrayLength() : Int;
 	
 	/**
 	* Returns the number of marks currently held
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Inserts a mark into the vector
 	*/
-	@:overload public function insertElementAt(m : javax.swing.text.GapContent.GapContent_MarkData, index : Int) : Void;
+	@:overload @:public public function insertElementAt(m : javax.swing.text.GapContent.GapContent_MarkData, index : Int) : Void;
 	
 	/**
 	* Add a mark to the end
 	*/
-	@:overload public function addElement(m : javax.swing.text.GapContent.GapContent_MarkData) : Void;
+	@:overload @:public public function addElement(m : javax.swing.text.GapContent.GapContent_MarkData) : Void;
 	
 	/**
 	* Fetches the mark at the given index
 	*/
-	@:overload public function elementAt(index : Int) : javax.swing.text.GapContent.GapContent_MarkData;
+	@:overload @:public public function elementAt(index : Int) : javax.swing.text.GapContent.GapContent_MarkData;
 	
 	/**
 	* Replaces the elements in the specified range with the passed
@@ -250,7 +250,7 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	* do not account for the gap, they are the same as would be used
 	* int <code>elementAt</code>.
 	*/
-	@:overload private function replaceRange(start : Int, end : Int, marks : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected private function replaceRange(start : Int, end : Int, marks : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
@@ -267,13 +267,13 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	* @param endOffset end location of inserted string.
 	* @param g1 resulting end of gap.
 	*/
-	@:overload private function resetLocation(endOffset : Int, g1 : Int) : Void;
+	@:overload @:protected private function resetLocation(endOffset : Int, g1 : Int) : Void;
 	
 	/** Previous Offset of rec. */
-	private var undoLocation : Int;
+	@:protected private var undoLocation : Int;
 	
 	/** Mark to reset offset. */
-	private var rec : javax.swing.text.GapContent.GapContent_MarkData;
+	@:protected private var rec : javax.swing.text.GapContent.GapContent_MarkData;
 	
 	
 }
@@ -282,25 +282,25 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 */
 @:native('javax$swing$text$GapContent$InsertUndo') @:internal extern class GapContent_InsertUndo extends javax.swing.undo.AbstractUndoableEdit
 {
-	@:overload private function new(offset : Int, length : Int) : Void;
+	@:overload @:protected private function new(offset : Int, length : Int) : Void;
 	
-	@:overload public function undo() : Void;
+	@:overload @:public override public function undo() : Void;
 	
-	@:overload public function redo() : Void;
+	@:overload @:public override public function redo() : Void;
 	
 	/** Where string was inserted. */
-	private var offset : Int;
+	@:protected private var offset : Int;
 	
 	/** Length of string inserted. */
-	private var length : Int;
+	@:protected private var length : Int;
 	
 	/** The string that was inserted. This will only be valid after an
 	* undo. */
-	private var string : String;
+	@:protected private var string : String;
 	
 	/** An array of instances of UndoPosRef for the Positions in the
 	* range that was removed, valid after undo. */
-	private var posRefs : java.util.Vector<Dynamic>;
+	@:protected private var posRefs : java.util.Vector<Dynamic>;
 	
 	
 }
@@ -309,24 +309,24 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 */
 @:native('javax$swing$text$GapContent$RemoveUndo') @:internal extern class GapContent_RemoveUndo extends javax.swing.undo.AbstractUndoableEdit
 {
-	@:overload private function new(offset : Int, string : String) : Void;
+	@:overload @:protected private function new(offset : Int, string : String) : Void;
 	
-	@:overload public function undo() : Void;
+	@:overload @:public override public function undo() : Void;
 	
-	@:overload public function redo() : Void;
+	@:overload @:public override public function redo() : Void;
 	
 	/** Where the string was removed from. */
-	private var offset : Int;
+	@:protected private var offset : Int;
 	
 	/** Length of string removed. */
-	private var length : Int;
+	@:protected private var length : Int;
 	
 	/** The string that was removed. This is valid when redo is valid. */
-	private var string : String;
+	@:protected private var string : String;
 	
 	/** An array of instances of UndoPosRef for the Positions in the
 	* range that was removed, valid before undo. */
-	private var posRefs : java.util.Vector<Dynamic>;
+	@:protected private var posRefs : java.util.Vector<Dynamic>;
 	
 	
 }

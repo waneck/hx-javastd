@@ -25,17 +25,17 @@ package com.sun.tools.internal.xjc.reader.internalizer;
 */
 @:internal extern class ContentHandlerNamespacePrefixAdapter extends org.xml.sax.helpers.XMLFilterImpl
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(parent : org.xml.sax.XMLReader) : Void;
+	@:overload @:public public function new(parent : org.xml.sax.XMLReader) : Void;
 	
-	@:overload override public function getFeature(name : String) : Bool;
+	@:overload @:public override public function getFeature(name : String) : Bool;
 	
-	@:overload override public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public override public function setFeature(name : String, value : Bool) : Void;
 	
-	@:overload override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	
 }

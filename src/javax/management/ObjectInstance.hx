@@ -41,7 +41,7 @@ extern class ObjectInstance implements java.io.Serializable
 	* parameter does not have the right format.
 	*
 	*/
-	@:overload public function new(objectName : String, className : String) : Void;
+	@:overload @:public public function new(objectName : String, className : String) : Void;
 	
 	/**
 	* Allows an object instance to be created given an object name and
@@ -57,7 +57,7 @@ extern class ObjectInstance implements java.io.Serializable
 	* from the <CODE>MBeanInfo</CODE> it provides.
 	*
 	*/
-	@:overload public function new(objectName : javax.management.ObjectName, className : String) : Void;
+	@:overload @:public public function new(objectName : javax.management.ObjectName, className : String) : Void;
 	
 	/**
 	* Compares the current object instance with another object instance.
@@ -67,30 +67,30 @@ extern class ObjectInstance implements java.io.Serializable
 	*
 	* @return  True if the two object instances are equal, otherwise false.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the object name part.
 	*
 	* @return the object name.
 	*/
-	@:overload public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
 	/**
 	* Returns the class part.
 	*
 	* @return the class name.
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Returns a string representing this ObjectInstance object. The format of this string
 	* is not specified, but users can expect that two ObjectInstances return the same
 	* string if and only if they are equal.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

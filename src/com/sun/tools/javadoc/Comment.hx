@@ -28,7 +28,7 @@ package com.sun.tools.javadoc;
 	/**
 	* Return text for this Doc comment.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

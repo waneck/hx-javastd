@@ -46,7 +46,7 @@ extern class CharsetEncoder
 	* @throws  IllegalArgumentException
 	*          If the preconditions on the parameters do not hold
 	*/
-	@:overload private function new(cs : java.nio.charset.Charset, averageBytesPerChar : Single, maxBytesPerChar : Single, replacement : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, averageBytesPerChar : Single, maxBytesPerChar : Single, replacement : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Initializes a new encoder.  The new encoder will have the given
@@ -64,14 +64,14 @@ extern class CharsetEncoder
 	* @throws  IllegalArgumentException
 	*          If the preconditions on the parameters do not hold
 	*/
-	@:overload private function new(cs : java.nio.charset.Charset, averageBytesPerChar : Single, maxBytesPerChar : Single) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, averageBytesPerChar : Single, maxBytesPerChar : Single) : Void;
 	
 	/**
 	* Returns the charset that created this encoder.  </p>
 	*
 	* @return  This encoder's charset
 	*/
-	@:overload @:final public function charset() : java.nio.charset.Charset;
+	@:overload @:public @:final public function charset() : java.nio.charset.Charset;
 	
 	/**
 	* Returns this encoder's replacement value. </p>
@@ -79,7 +79,7 @@ extern class CharsetEncoder
 	* @return  This encoder's current replacement,
 	*          which is never <tt>null</tt> and is never empty
 	*/
-	@:overload @:final public function replacement() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function replacement() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Changes this encoder's replacement value.
@@ -106,7 +106,7 @@ extern class CharsetEncoder
 	* @throws  IllegalArgumentException
 	*          If the preconditions on the parameter do not hold
 	*/
-	@:overload @:final public function replaceWith(newReplacement : java.NativeArray<java.StdTypes.Int8>) : java.nio.charset.CharsetEncoder;
+	@:overload @:public @:final public function replaceWith(newReplacement : java.NativeArray<java.StdTypes.Int8>) : java.nio.charset.CharsetEncoder;
 	
 	/**
 	* Reports a change to this encoder's replacement value.
@@ -117,7 +117,7 @@ extern class CharsetEncoder
 	*
 	* @param  newReplacement
 	*/
-	@:overload private function implReplaceWith(newReplacement : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected private function implReplaceWith(newReplacement : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Tells whether or not the given byte array is a legal replacement value
@@ -135,14 +135,14 @@ extern class CharsetEncoder
 	* @return  <tt>true</tt> if, and only if, the given byte array
 	*          is a legal replacement value for this encoder
 	*/
-	@:overload public function isLegalReplacement(repl : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public public function isLegalReplacement(repl : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/**
 	* Returns this encoder's current action for malformed-input errors.  </p>
 	*
 	* @return The current malformed-input action, which is never <tt>null</tt>
 	*/
-	@:overload public function malformedInputAction() : java.nio.charset.CodingErrorAction;
+	@:overload @:public public function malformedInputAction() : java.nio.charset.CodingErrorAction;
 	
 	/**
 	* Changes this encoder's action for malformed-input errors.  </p>
@@ -157,7 +157,7 @@ extern class CharsetEncoder
 	* @throws IllegalArgumentException
 	*         If the precondition on the parameter does not hold
 	*/
-	@:overload @:final public function onMalformedInput(newAction : java.nio.charset.CodingErrorAction) : java.nio.charset.CharsetEncoder;
+	@:overload @:public @:final public function onMalformedInput(newAction : java.nio.charset.CodingErrorAction) : java.nio.charset.CharsetEncoder;
 	
 	/**
 	* Reports a change to this encoder's malformed-input action.
@@ -166,7 +166,7 @@ extern class CharsetEncoder
 	* should be overridden by encoders that require notification of changes to
 	* the malformed-input action.  </p>
 	*/
-	@:overload private function implOnMalformedInput(newAction : java.nio.charset.CodingErrorAction) : Void;
+	@:overload @:protected private function implOnMalformedInput(newAction : java.nio.charset.CodingErrorAction) : Void;
 	
 	/**
 	* Returns this encoder's current action for unmappable-character errors.
@@ -175,7 +175,7 @@ extern class CharsetEncoder
 	* @return The current unmappable-character action, which is never
 	*         <tt>null</tt>
 	*/
-	@:overload public function unmappableCharacterAction() : java.nio.charset.CodingErrorAction;
+	@:overload @:public public function unmappableCharacterAction() : java.nio.charset.CodingErrorAction;
 	
 	/**
 	* Changes this encoder's action for unmappable-character errors.
@@ -190,7 +190,7 @@ extern class CharsetEncoder
 	* @throws IllegalArgumentException
 	*         If the precondition on the parameter does not hold
 	*/
-	@:overload @:final public function onUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : java.nio.charset.CharsetEncoder;
+	@:overload @:public @:final public function onUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : java.nio.charset.CharsetEncoder;
 	
 	/**
 	* Reports a change to this encoder's unmappable-character action.
@@ -199,7 +199,7 @@ extern class CharsetEncoder
 	* should be overridden by encoders that require notification of changes to
 	* the unmappable-character action.  </p>
 	*/
-	@:overload private function implOnUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : Void;
+	@:overload @:protected private function implOnUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : Void;
 	
 	/**
 	* Returns the average number of bytes that will be produced for each
@@ -209,7 +209,7 @@ extern class CharsetEncoder
 	* @return  The average number of bytes produced
 	*          per character of input
 	*/
-	@:overload @:final public function averageBytesPerChar() : Single;
+	@:overload @:public @:final public function averageBytesPerChar() : Single;
 	
 	/**
 	* Returns the maximum number of bytes that will be produced for each
@@ -219,7 +219,7 @@ extern class CharsetEncoder
 	* @return  The maximum number of bytes that will be produced per
 	*          character of input
 	*/
-	@:overload @:final public function maxBytesPerChar() : Single;
+	@:overload @:public @:final public function maxBytesPerChar() : Single;
 	
 	/**
 	* Encodes as many characters as possible from the given input buffer,
@@ -319,7 +319,7 @@ extern class CharsetEncoder
 	*          If an invocation of the encodeLoop method threw
 	*          an unexpected exception
 	*/
-	@:overload @:final public function encode(_in : java.nio.CharBuffer, out : java.nio.ByteBuffer, endOfInput : Bool) : java.nio.charset.CoderResult;
+	@:overload @:public @:final public function encode(_in : java.nio.CharBuffer, out : java.nio.ByteBuffer, endOfInput : Bool) : java.nio.charset.CoderResult;
 	
 	/**
 	* Flushes this encoder.
@@ -360,7 +360,7 @@ extern class CharsetEncoder
 	*          with a value of <tt>true</tt> for the <tt>endOfInput</tt>
 	*          parameter
 	*/
-	@:overload @:final public function flush(out : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:public @:final public function flush(out : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
 	/**
 	* Flushes this encoder.
@@ -376,7 +376,7 @@ extern class CharsetEncoder
 	* @return  A coder-result object, either {@link CoderResult#UNDERFLOW} or
 	*          {@link CoderResult#OVERFLOW}
 	*/
-	@:overload private function implFlush(out : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected private function implFlush(out : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
 	/**
 	* Resets this encoder, clearing any internal state.
@@ -388,7 +388,7 @@ extern class CharsetEncoder
 	* @return  This encoder
 	*
 	*/
-	@:overload @:final public function reset() : java.nio.charset.CharsetEncoder;
+	@:overload @:public @:final public function reset() : java.nio.charset.CharsetEncoder;
 	
 	/**
 	* Resets this encoder, clearing any charset-specific internal state.
@@ -396,7 +396,7 @@ extern class CharsetEncoder
 	* <p> The default implementation of this method does nothing.  This method
 	* should be overridden by encoders that maintain internal state.  </p>
 	*/
-	@:overload private function implReset() : Void;
+	@:overload @:protected private function implReset() : Void;
 	
 	/**
 	* Encodes one or more characters into one or more bytes.
@@ -433,7 +433,7 @@ extern class CharsetEncoder
 	*
 	* @return  A coder-result object describing the reason for termination
 	*/
-	@:overload @:abstract private function encodeLoop(_in : java.nio.CharBuffer, out : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected @:abstract private function encodeLoop(_in : java.nio.CharBuffer, out : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
 	/**
 	* Convenience method that encodes the remaining content of a single input
@@ -466,7 +466,7 @@ extern class CharsetEncoder
 	*          the current unmappable-character action is {@link
 	*          CodingErrorAction#REPORT}
 	*/
-	@:overload @:final public function encode(_in : java.nio.CharBuffer) : java.nio.ByteBuffer;
+	@:overload @:public @:final public function encode(_in : java.nio.CharBuffer) : java.nio.ByteBuffer;
 	
 	/**
 	* Tells whether or not this encoder can encode the given character.
@@ -491,7 +491,7 @@ extern class CharsetEncoder
 	* @throws  IllegalStateException
 	*          If an encoding operation is already in progress
 	*/
-	@:overload public function canEncode(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function canEncode(c : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Tells whether or not this encoder can encode the given character
@@ -515,7 +515,7 @@ extern class CharsetEncoder
 	* @throws  IllegalStateException
 	*          If an encoding operation is already in progress
 	*/
-	@:overload public function canEncode(cs : java.lang.CharSequence) : Bool;
+	@:overload @:public public function canEncode(cs : java.lang.CharSequence) : Bool;
 	
 	
 }

@@ -25,53 +25,53 @@ package sun.misc;
 */
 extern class SharedSecrets
 {
-	@:overload public static function javaUtilJarAccess() : sun.misc.JavaUtilJarAccess;
+	@:overload @:public @:static public static function javaUtilJarAccess() : sun.misc.JavaUtilJarAccess;
 	
-	@:overload public static function setJavaUtilJarAccess(access : sun.misc.JavaUtilJarAccess) : Void;
+	@:overload @:public @:static public static function setJavaUtilJarAccess(access : sun.misc.JavaUtilJarAccess) : Void;
 	
-	@:overload public static function setJavaLangAccess(jla : sun.misc.JavaLangAccess) : Void;
+	@:overload @:public @:static public static function setJavaLangAccess(jla : sun.misc.JavaLangAccess) : Void;
 	
-	@:overload public static function getJavaLangAccess() : sun.misc.JavaLangAccess;
+	@:overload @:public @:static public static function getJavaLangAccess() : sun.misc.JavaLangAccess;
 	
-	@:overload public static function setJavaNetAccess(jna : sun.misc.JavaNetAccess) : Void;
+	@:overload @:public @:static public static function setJavaNetAccess(jna : sun.misc.JavaNetAccess) : Void;
 	
-	@:overload public static function getJavaNetAccess() : sun.misc.JavaNetAccess;
+	@:overload @:public @:static public static function getJavaNetAccess() : sun.misc.JavaNetAccess;
 	
-	@:overload public static function setJavaNetHttpCookieAccess(a : sun.misc.JavaNetHttpCookieAccess) : Void;
+	@:overload @:public @:static public static function setJavaNetHttpCookieAccess(a : sun.misc.JavaNetHttpCookieAccess) : Void;
 	
-	@:overload public static function getJavaNetHttpCookieAccess() : sun.misc.JavaNetHttpCookieAccess;
+	@:overload @:public @:static public static function getJavaNetHttpCookieAccess() : sun.misc.JavaNetHttpCookieAccess;
 	
-	@:overload public static function setJavaNioAccess(jna : sun.misc.JavaNioAccess) : Void;
+	@:overload @:public @:static public static function setJavaNioAccess(jna : sun.misc.JavaNioAccess) : Void;
 	
-	@:overload public static function getJavaNioAccess() : sun.misc.JavaNioAccess;
+	@:overload @:public @:static public static function getJavaNioAccess() : sun.misc.JavaNioAccess;
 	
-	@:overload public static function setJavaIOAccess(jia : sun.misc.JavaIOAccess) : Void;
+	@:overload @:public @:static public static function setJavaIOAccess(jia : sun.misc.JavaIOAccess) : Void;
 	
-	@:overload public static function getJavaIOAccess() : sun.misc.JavaIOAccess;
+	@:overload @:public @:static public static function getJavaIOAccess() : sun.misc.JavaIOAccess;
 	
-	@:overload public static function setJavaIOFileDescriptorAccess(jiofda : sun.misc.JavaIOFileDescriptorAccess) : Void;
+	@:overload @:public @:static public static function setJavaIOFileDescriptorAccess(jiofda : sun.misc.JavaIOFileDescriptorAccess) : Void;
 	
-	@:overload public static function getJavaIOFileDescriptorAccess() : sun.misc.JavaIOFileDescriptorAccess;
+	@:overload @:public @:static public static function getJavaIOFileDescriptorAccess() : sun.misc.JavaIOFileDescriptorAccess;
 	
-	@:overload public static function setJavaSecurityProtectionDomainAccess(jspda : sun.misc.JavaSecurityProtectionDomainAccess) : Void;
+	@:overload @:public @:static public static function setJavaSecurityProtectionDomainAccess(jspda : sun.misc.JavaSecurityProtectionDomainAccess) : Void;
 	
-	@:overload public static function getJavaSecurityProtectionDomainAccess() : sun.misc.JavaSecurityProtectionDomainAccess;
+	@:overload @:public @:static public static function getJavaSecurityProtectionDomainAccess() : sun.misc.JavaSecurityProtectionDomainAccess;
 	
-	@:overload public static function setJavaSecurityAccess(jsa : sun.misc.JavaSecurityAccess) : Void;
+	@:overload @:public @:static public static function setJavaSecurityAccess(jsa : sun.misc.JavaSecurityAccess) : Void;
 	
-	@:overload public static function getJavaSecurityAccess() : sun.misc.JavaSecurityAccess;
+	@:overload @:public @:static public static function getJavaSecurityAccess() : sun.misc.JavaSecurityAccess;
 	
-	@:overload public static function setJavaxSecurityAuthKerberosAccess(jsaka : sun.misc.JavaxSecurityAuthKerberosAccess) : Void;
+	@:overload @:public @:static public static function setJavaxSecurityAuthKerberosAccess(jsaka : sun.misc.JavaxSecurityAuthKerberosAccess) : Void;
 	
-	@:overload public static function getJavaxSecurityAuthKerberosAccess() : sun.misc.JavaxSecurityAuthKerberosAccess;
+	@:overload @:public @:static public static function getJavaxSecurityAuthKerberosAccess() : sun.misc.JavaxSecurityAuthKerberosAccess;
 	
-	@:overload public static function setJavaUtilZipAccess(access : sun.misc.JavaUtilZipAccess) : Void;
+	@:overload @:public @:static public static function setJavaUtilZipAccess(access : sun.misc.JavaUtilZipAccess) : Void;
 	
-	@:overload public static function getJavaUtilZipAccess() : sun.misc.JavaUtilZipAccess;
+	@:overload @:public @:static public static function getJavaUtilZipAccess() : sun.misc.JavaUtilZipAccess;
 	
-	@:overload public static function setJavaAWTAccess(jaa : sun.misc.JavaAWTAccess) : Void;
+	@:overload @:public @:static public static function setJavaAWTAccess(jaa : sun.misc.JavaAWTAccess) : Void;
 	
-	@:overload public static function getJavaAWTAccess() : sun.misc.JavaAWTAccess;
+	@:overload @:public @:static public static function getJavaAWTAccess() : sun.misc.JavaAWTAccess;
 	
 	
 }

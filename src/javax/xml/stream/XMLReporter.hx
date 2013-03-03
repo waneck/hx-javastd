@@ -57,7 +57,7 @@ package javax.xml.stream;
 	* @throws XMLStreamException
 
 	*/
-	@:overload public function report(message : String, errorType : String, relatedInformation : Dynamic, location : javax.xml.stream.Location) : Void;
+	@:overload @:public public function report(message : String, errorType : String, relatedInformation : Dynamic, location : javax.xml.stream.Location) : Void;
 	
 	
 }

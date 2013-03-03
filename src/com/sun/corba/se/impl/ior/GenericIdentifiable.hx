@@ -25,21 +25,21 @@ package com.sun.corba.se.impl.ior;
 */
 extern class GenericIdentifiable implements com.sun.corba.se.spi.ior.Identifiable
 {
-	@:overload public function new(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	@:overload @:public public function new(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
-	@:overload public function getId() : Int;
+	@:overload @:public public function getId() : Int;
 	
-	@:overload public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function new(id : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(id : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function getData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

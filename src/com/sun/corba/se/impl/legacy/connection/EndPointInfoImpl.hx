@@ -25,37 +25,37 @@ package com.sun.corba.se.impl.legacy.connection;
 */
 extern class EndPointInfoImpl implements com.sun.corba.se.spi.transport.SocketInfo implements com.sun.corba.se.spi.legacy.connection.LegacyServerSocketEndPointInfo
 {
-	private var type : String;
+	@:protected private var type : String;
 	
-	private var hostname : String;
+	@:protected private var hostname : String;
 	
-	private var port : Int;
+	@:protected private var port : Int;
 	
-	private var locatorPort : Int;
+	@:protected private var locatorPort : Int;
 	
-	private var name : String;
+	@:protected private var name : String;
 	
-	@:overload public function new(type : String, port : Int, hostname : String) : Void;
+	@:overload @:public public function new(type : String, port : Int, hostname : String) : Void;
 	
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function getHost() : String;
+	@:overload @:public public function getHost() : String;
 	
-	@:overload public function getHostName() : String;
+	@:overload @:public public function getHostName() : String;
 	
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
-	@:overload public function getLocatorPort() : Int;
+	@:overload @:public public function getLocatorPort() : Int;
 	
-	@:overload public function setLocatorPort(port : Int) : Void;
+	@:overload @:public public function setLocatorPort(port : Int) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

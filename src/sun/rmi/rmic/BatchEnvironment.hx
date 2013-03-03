@@ -34,47 +34,47 @@ extern class BatchEnvironment extends sun.tools.javac.BatchEnvironment
 	/**
 	* Create a ClassPath object for rmic from a class path string.
 	*/
-	@:overload public static function createClassPath(classPathString : String) : sun.tools.java.ClassPath;
+	@:overload @:public @:static public static function createClassPath(classPathString : String) : sun.tools.java.ClassPath;
 	
 	/**
 	* Create a ClassPath object for rmic from the relevant command line
 	* options for class path, boot class path, and extension directories.
 	*/
-	@:overload public static function createClassPath(classPathString : String, sysClassPathString : String, extDirsString : String) : sun.tools.java.ClassPath;
+	@:overload @:public @:static public static function createClassPath(classPathString : String, sysClassPathString : String, extDirsString : String) : sun.tools.java.ClassPath;
 	
 	/**
 	* Create a BatchEnvironment for rmic with the given class path,
 	* stream for messages and Main.
 	*/
-	@:overload public function new(out : java.io.OutputStream, path : sun.tools.java.ClassPath, main : sun.rmi.rmic.Main) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, path : sun.tools.java.ClassPath, main : sun.rmi.rmic.Main) : Void;
 	
 	/**
 	* Get the instance of Main which created this environment.
 	*/
-	@:overload public function getMain() : sun.rmi.rmic.Main;
+	@:overload @:public public function getMain() : sun.rmi.rmic.Main;
 	
 	/**
 	* Get the ClassPath.
 	*/
-	@:overload public function getClassPath() : sun.tools.java.ClassPath;
+	@:overload @:public public function getClassPath() : sun.tools.java.ClassPath;
 	
 	/**
 	* Remember a generated source file generated so that it
 	* can be removed later, if appropriate.
 	*/
-	@:overload public function addGeneratedFile(file : java.io.File) : Void;
+	@:overload @:public public function addGeneratedFile(file : java.io.File) : Void;
 	
 	/**
 	* Delete all the generated source files made during the execution
 	* of this environment (those that have been registered with the
 	* "addGeneratedFile" method).
 	*/
-	@:overload public function deleteGeneratedFiles() : Void;
+	@:overload @:public public function deleteGeneratedFiles() : Void;
 	
 	/**
 	* Release resources, if any.
 	*/
-	@:overload public function shutdown() : Void;
+	@:overload @:public override public function shutdown() : Void;
 	
 	/**
 	* Return the formatted, localized string for a named error message
@@ -82,9 +82,9 @@ extern class BatchEnvironment extends sun.tools.javac.BatchEnvironment
 	* being with "rmic.", look up the error message in rmic's resource
 	* bundle; otherwise, defer to java's superclass method.
 	*/
-	@:overload public function errorString(err : String, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : String;
+	@:overload @:public override public function errorString(err : String, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : String;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }
@@ -97,57 +97,57 @@ extern class BatchEnvironment extends sun.tools.javac.BatchEnvironment
 */
 @:native('sun$rmi$rmic$BatchEnvironment$Path') @:internal extern class BatchEnvironment_Path extends java.util.LinkedHashSet<String>
 {
-	@:overload public function expandJarClassPaths(x : Bool) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
+	@:overload @:public public function expandJarClassPaths(x : Bool) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
 	
-	@:overload public function emptyPathDefault(x : String) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
+	@:overload @:public public function emptyPathDefault(x : String) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function addDirectories(dirs : String, warn : Bool) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
+	@:overload @:public public function addDirectories(dirs : String, warn : Bool) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
 	
-	@:overload public function addDirectories(dirs : String) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
+	@:overload @:public public function addDirectories(dirs : String) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
 	
-	@:overload public function addFiles(files : String, warn : Bool) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
+	@:overload @:public public function addFiles(files : String, warn : Bool) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
 	
-	@:overload public function addFiles(files : String) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
+	@:overload @:public public function addFiles(files : String) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
 	
 	
 }
 @:native('sun$rmi$rmic$BatchEnvironment$Path$PathIterator') @:internal extern class BatchEnvironment_Path_PathIterator implements java.util.Collection<String>
 {
-	@:overload public function new(path : String, emptyPathDefault : String) : Void;
+	@:overload @:public public function new(path : String, emptyPathDefault : String) : Void;
 	
-	@:overload public function new(path : String) : Void;
+	@:overload @:public public function new(path : String) : Void;
 	
-	@:overload public function iterator() : java.util.Iterator<String>;
+	@:overload @:public public function iterator() : java.util.Iterator<String>;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public public function contains(o : Dynamic) : Bool;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload public function add(o : String) : Bool;
+	@:overload @:public public function add(o : String) : Bool;
 	
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public public function remove(o : Dynamic) : Bool;
 	
-	@:overload public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function addAll(c : java.util.Collection<String>) : Bool;
+	@:overload @:public public function addAll(c : java.util.Collection<String>) : Bool;
 	
-	@:overload public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

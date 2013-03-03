@@ -45,7 +45,7 @@ extern interface Stub
 	* @param delegate ...
 	* </p>
 	*/
-	@:overload public function _setDelegate(delegate : com.sun.pept.Delegate) : Void;
+	@:overload @:public public function _setDelegate(delegate : com.sun.pept.Delegate) : Void;
 	
 	/**
 	* <p>
@@ -55,7 +55,7 @@ extern interface Stub
 	* @return a Delegate with ...
 	* </p>
 	*/
-	@:overload public function _getDelegate() : com.sun.pept.Delegate;
+	@:overload @:public public function _getDelegate() : com.sun.pept.Delegate;
 	
 	
 }

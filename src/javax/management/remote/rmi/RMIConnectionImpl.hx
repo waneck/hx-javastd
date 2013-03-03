@@ -48,63 +48,63 @@ extern class RMIConnectionImpl implements javax.management.remote.rmi.RMIConnect
 	* <code>RMIServerImpl</code>.  Can be null, equivalent to an
 	* empty map.
 	*/
-	@:overload public function new(rmiServer : javax.management.remote.rmi.RMIServerImpl, connectionId : String, defaultClassLoader : java.lang.ClassLoader, subject : javax.security.auth.Subject, env : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function new(rmiServer : javax.management.remote.rmi.RMIServerImpl, connectionId : String, defaultClassLoader : java.lang.ClassLoader, subject : javax.security.auth.Subject, env : java.util.Map<String, Dynamic>) : Void;
 	
-	@:overload public function getConnectionId() : String;
+	@:overload @:public public function getConnectionId() : String;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function unreferenced() : Void;
+	@:overload @:public public function unreferenced() : Void;
 	
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
 	
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
 	
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, params : java.rmi.MarshalledObject<Dynamic>, signature : java.NativeArray<String>, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, params : java.rmi.MarshalledObject<Dynamic>, signature : java.NativeArray<String>, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
 	
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, params : java.rmi.MarshalledObject<Dynamic>, signature : java.NativeArray<String>, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, params : java.rmi.MarshalledObject<Dynamic>, signature : java.NativeArray<String>, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
 	
-	@:overload public function unregisterMBean(name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function unregisterMBean(name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : Void;
 	
-	@:overload public function getObjectInstance(name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
+	@:overload @:public public function getObjectInstance(name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
 	
-	@:overload public function queryMBeans(name : javax.management.ObjectName, query : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : java.util.Set<javax.management.ObjectInstance>;
+	@:overload @:public public function queryMBeans(name : javax.management.ObjectName, query : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : java.util.Set<javax.management.ObjectInstance>;
 	
-	@:overload public function queryNames(name : javax.management.ObjectName, query : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : java.util.Set<javax.management.ObjectName>;
+	@:overload @:public public function queryNames(name : javax.management.ObjectName, query : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : java.util.Set<javax.management.ObjectName>;
 	
-	@:overload public function isRegistered(name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : Bool;
+	@:overload @:public public function isRegistered(name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : Bool;
 	
-	@:overload public function getMBeanCount(delegationSubject : javax.security.auth.Subject) : Null<Int>;
+	@:overload @:public public function getMBeanCount(delegationSubject : javax.security.auth.Subject) : Null<Int>;
 	
-	@:overload public function getAttribute(name : javax.management.ObjectName, attribute : String, delegationSubject : javax.security.auth.Subject) : Dynamic;
+	@:overload @:public public function getAttribute(name : javax.management.ObjectName, attribute : String, delegationSubject : javax.security.auth.Subject) : Dynamic;
 	
-	@:overload public function getAttributes(name : javax.management.ObjectName, attributes : java.NativeArray<String>, delegationSubject : javax.security.auth.Subject) : javax.management.AttributeList;
+	@:overload @:public public function getAttributes(name : javax.management.ObjectName, attributes : java.NativeArray<String>, delegationSubject : javax.security.auth.Subject) : javax.management.AttributeList;
 	
-	@:overload public function setAttribute(name : javax.management.ObjectName, attribute : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function setAttribute(name : javax.management.ObjectName, attribute : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : Void;
 	
-	@:overload public function setAttributes(name : javax.management.ObjectName, attributes : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : javax.management.AttributeList;
+	@:overload @:public public function setAttributes(name : javax.management.ObjectName, attributes : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : javax.management.AttributeList;
 	
-	@:overload public function invoke(name : javax.management.ObjectName, operationName : String, params : java.rmi.MarshalledObject<Dynamic>, signature : java.NativeArray<String>, delegationSubject : javax.security.auth.Subject) : Dynamic;
+	@:overload @:public public function invoke(name : javax.management.ObjectName, operationName : String, params : java.rmi.MarshalledObject<Dynamic>, signature : java.NativeArray<String>, delegationSubject : javax.security.auth.Subject) : Dynamic;
 	
-	@:overload public function getDefaultDomain(delegationSubject : javax.security.auth.Subject) : String;
+	@:overload @:public public function getDefaultDomain(delegationSubject : javax.security.auth.Subject) : String;
 	
-	@:overload public function getDomains(delegationSubject : javax.security.auth.Subject) : java.NativeArray<String>;
+	@:overload @:public public function getDomains(delegationSubject : javax.security.auth.Subject) : java.NativeArray<String>;
 	
-	@:overload public function getMBeanInfo(name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : javax.management.MBeanInfo;
+	@:overload @:public public function getMBeanInfo(name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : javax.management.MBeanInfo;
 	
-	@:overload public function isInstanceOf(name : javax.management.ObjectName, className : String, delegationSubject : javax.security.auth.Subject) : Bool;
+	@:overload @:public public function isInstanceOf(name : javax.management.ObjectName, className : String, delegationSubject : javax.security.auth.Subject) : Bool;
 	
-	@:overload public function addNotificationListeners(names : java.NativeArray<javax.management.ObjectName>, filters : java.NativeArray<java.rmi.MarshalledObject<Dynamic>>, delegationSubjects : java.NativeArray<javax.security.auth.Subject>) : java.NativeArray<Null<Int>>;
+	@:overload @:public public function addNotificationListeners(names : java.NativeArray<javax.management.ObjectName>, filters : java.NativeArray<java.rmi.MarshalledObject<Dynamic>>, delegationSubjects : java.NativeArray<javax.security.auth.Subject>) : java.NativeArray<Null<Int>>;
 	
-	@:overload public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : java.rmi.MarshalledObject<Dynamic>, handback : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : java.rmi.MarshalledObject<Dynamic>, handback : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : Void;
 	
-	@:overload public function removeNotificationListeners(name : javax.management.ObjectName, listenerIDs : java.NativeArray<Null<Int>>, delegationSubject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function removeNotificationListeners(name : javax.management.ObjectName, listenerIDs : java.NativeArray<Null<Int>>, delegationSubject : javax.security.auth.Subject) : Void;
 	
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : Void;
 	
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : java.rmi.MarshalledObject<Dynamic>, handback : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : java.rmi.MarshalledObject<Dynamic>, handback : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : Void;
 	
-	@:overload public function fetchNotifications(clientSequenceNumber : haxe.Int64, maxNotifications : Int, timeout : haxe.Int64) : javax.management.remote.NotificationResult;
+	@:overload @:public public function fetchNotifications(clientSequenceNumber : haxe.Int64, maxNotifications : Int, timeout : haxe.Int64) : javax.management.remote.NotificationResult;
 	
 	/**
 	* <p>Returns a string representation of this object.  In general,
@@ -115,41 +115,41 @@ extern class RMIConnectionImpl implements javax.management.remote.rmi.RMIConnect
 	*
 	* @return a String representation of this object.
 	**/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('javax$management$remote$rmi$RMIConnectionImpl$PrivilegedOperation') @:internal extern class RMIConnectionImpl_PrivilegedOperation implements java.security.PrivilegedExceptionAction<Dynamic>
 {
-	@:overload public function new(operation : Int, params : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(operation : Int, params : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function run() : Dynamic;
+	@:overload @:public public function run() : Dynamic;
 	
 	
 }
 @:native('javax$management$remote$rmi$RMIConnectionImpl$RMIServerCommunicatorAdmin') @:internal extern class RMIConnectionImpl_RMIServerCommunicatorAdmin extends com.sun.jmx.remote.internal.ServerCommunicatorAdmin
 {
-	@:overload public function new(timeout : haxe.Int64) : Void;
+	@:overload @:public public function new(timeout : haxe.Int64) : Void;
 	
-	@:overload override private function doStop() : Void;
+	@:overload @:protected override private function doStop() : Void;
 	
 	
 }
 @:native('javax$management$remote$rmi$RMIConnectionImpl$SetCcl') @:internal extern class RMIConnectionImpl_SetCcl implements java.security.PrivilegedExceptionAction<java.lang.ClassLoader>
 {
-	@:overload public function run() : java.lang.ClassLoader;
+	@:overload @:public public function run() : java.lang.ClassLoader;
 	
 	
 }
 @:native('javax$management$remote$rmi$RMIConnectionImpl$CombinedClassLoader') @:internal extern class RMIConnectionImpl_CombinedClassLoader extends java.lang.ClassLoader
 {
-	@:overload private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
+	@:overload @:protected override private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
 	
 	
 }
 @:native('javax$management$remote$rmi$RMIConnectionImpl$CombinedClassLoader$ClassLoaderWrapper') @:internal extern class RMIConnectionImpl_CombinedClassLoader_ClassLoaderWrapper extends java.lang.ClassLoader
 {
-	@:overload private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
+	@:overload @:protected override private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
 	
 	
 }

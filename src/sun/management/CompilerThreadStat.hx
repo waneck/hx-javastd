@@ -33,7 +33,7 @@ extern class CompilerThreadStat implements java.io.Serializable
 	*
 	* @return the name of the compiler thread.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the number of compile tasks performed by the compiler thread
@@ -41,7 +41,7 @@ extern class CompilerThreadStat implements java.io.Serializable
 	*
 	* @return the number of compile tasks performed by the compiler thread.
 	*/
-	@:overload public function getCompileTaskCount() : haxe.Int64;
+	@:overload @:public public function getCompileTaskCount() : haxe.Int64;
 	
 	/**
 	* Returns the accumulated elapsed time spent by the compiler thread
@@ -49,7 +49,7 @@ extern class CompilerThreadStat implements java.io.Serializable
 	*
 	* @return the accumulated elapsed time spent by the compiler thread.
 	*/
-	@:overload public function getCompileTime() : haxe.Int64;
+	@:overload @:public public function getCompileTime() : haxe.Int64;
 	
 	/**
 	* Returns the information about the last method compiled by
@@ -58,9 +58,9 @@ extern class CompilerThreadStat implements java.io.Serializable
 	* @return a {@link MethodInfo} object for the last method
 	* compiled by the compiler thread.
 	*/
-	@:overload public function getLastCompiledMethodInfo() : sun.management.MethodInfo;
+	@:overload @:public public function getLastCompiledMethodInfo() : sun.management.MethodInfo;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

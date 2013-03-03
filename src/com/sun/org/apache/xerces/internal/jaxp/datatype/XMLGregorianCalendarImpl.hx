@@ -37,7 +37,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	*
 	* @see #toGregorianCalendar(TimeZone, Locale, XMLGregorianCalendar)
 	*/
-	public static var LEAP_YEAR_DEFAULT(default, null) : javax.xml.datatype.XMLGregorianCalendar;
+	@:public @:static @:final public static var LEAP_YEAR_DEFAULT(default, null) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	/**
 	* Constructs a new XMLGregorianCalendar object.
@@ -56,13 +56,13 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* @throws NullPointerException
 	*      If the given string is null.
 	*/
-	@:overload private function new(lexicalRepresentation : String) : Void;
+	@:overload @:protected private function new(lexicalRepresentation : String) : Void;
 	
 	/**
 	* <p>Create an instance with all date/time datatype fields set to
 	* {@link DatatypeConstants#FIELD_UNDEFINED} or null respectively.</p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* <p>Private constructor allowing for complete value spaces allowed by
@@ -81,7 +81,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* @param timezone of <code>XMLGregorianCalendar</code> to be created.
 	*
 	*/
-	@:overload private function new(year : java.math.BigInteger, month : Int, day : Int, hour : Int, minute : Int, second : Int, fractionalSecond : java.math.BigDecimal, timezone : Int) : Void;
+	@:overload @:protected private function new(year : java.math.BigInteger, month : Int, day : Int, hour : Int, minute : Int, second : Int, fractionalSecond : java.math.BigDecimal, timezone : Int) : Void;
 	
 	/**
 	* <p>Convert a <code>java.util.GregorianCalendar</code> to XML Schema 1.0
@@ -140,7 +140,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	*
 	* @param cal <code>java.util.GregorianCalendar</code> used to create <code>XMLGregorianCalendar</code>
 	*/
-	@:overload public function new(cal : java.util.GregorianCalendar) : Void;
+	@:overload @:public public function new(cal : java.util.GregorianCalendar) : Void;
 	
 	/**
 	* <p>Create a Java representation of XML Schema builtin datatype <code>dateTime</code>.
@@ -163,7 +163,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload public static function createDateTime(year : java.math.BigInteger, month : Int, day : Int, hours : Int, minutes : Int, seconds : Int, fractionalSecond : java.math.BigDecimal, timezone : Int) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload @:public @:static public static function createDateTime(year : java.math.BigInteger, month : Int, day : Int, hours : Int, minutes : Int, seconds : Int, fractionalSecond : java.math.BigDecimal, timezone : Int) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	/**
 	* <p>Create a Java instance of XML Schema builtin datatype dateTime.</p>
@@ -182,7 +182,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	*
 	* @see DatatypeConstants#FIELD_UNDEFINED
 	*/
-	@:overload public static function createDateTime(year : Int, month : Int, day : Int, hour : Int, minute : Int, second : Int) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload @:public @:static public static function createDateTime(year : Int, month : Int, day : Int, hour : Int, minute : Int, second : Int) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	/**
 	* <p>Create a Java representation of XML Schema builtin datatype <code>dateTime</code>.
@@ -204,7 +204,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	*
 	* @see DatatypeConstants#FIELD_UNDEFINED
 	*/
-	@:overload public static function createDateTime(year : Int, month : Int, day : Int, hours : Int, minutes : Int, seconds : Int, milliseconds : Int, timezone : Int) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload @:public @:static public static function createDateTime(year : Int, month : Int, day : Int, hours : Int, minutes : Int, seconds : Int, milliseconds : Int, timezone : Int) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	/**
 	* <p>Create a Java representation of XML Schema builtin datatype <code>date</code> or <code>g*</code>.</p>
@@ -226,7 +226,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload public static function createDate(year : Int, month : Int, day : Int, timezone : Int) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload @:public @:static public static function createDate(year : Int, month : Int, day : Int, timezone : Int) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	/**
 	* Create a Java instance of XML Schema builtin datatype <code>time</code>.
@@ -243,7 +243,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload public static function createTime(hours : Int, minutes : Int, seconds : Int, timezone : Int) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload @:public @:static public static function createTime(hours : Int, minutes : Int, seconds : Int, timezone : Int) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	/**
 	* <p>Create a Java instance of XML Schema builtin datatype time.</p>
@@ -262,7 +262,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload public static function createTime(hours : Int, minutes : Int, seconds : Int, fractionalSecond : java.math.BigDecimal, timezone : Int) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload @:public @:static public static function createTime(hours : Int, minutes : Int, seconds : Int, fractionalSecond : java.math.BigDecimal, timezone : Int) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	/**
 	* <p>Create a Java instance of XML Schema builtin datatype time.</p>
@@ -281,7 +281,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload public static function createTime(hours : Int, minutes : Int, seconds : Int, milliseconds : Int, timezone : Int) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload @:public @:static public static function createTime(hours : Int, minutes : Int, seconds : Int, milliseconds : Int, timezone : Int) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	/**
 	* <p>Return high order component for XML Schema 1.0 dateTime datatype field for
@@ -296,7 +296,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* @see #getYear()
 	* @see #getEonAndYear()
 	*/
-	@:overload override public function getEon() : java.math.BigInteger;
+	@:overload @:public override public function getEon() : java.math.BigInteger;
 	
 	/**
 	* <p>Return low order component for XML Schema 1.0 dateTime datatype field for
@@ -310,7 +310,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* @see #getEon()
 	* @see #getEonAndYear()
 	*/
-	@:overload override public function getYear() : Int;
+	@:overload @:public override public function getYear() : Int;
 	
 	/**
 	* <p>Return XML Schema 1.0 dateTime datatype field for
@@ -327,7 +327,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* @see #getEon()
 	* @see #getYear()
 	*/
-	@:overload override public function getEonAndYear() : java.math.BigInteger;
+	@:overload @:public override public function getEonAndYear() : java.math.BigInteger;
 	
 	/**
 	* <p>Return number of month or {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -338,7 +338,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* @return year  of this <code>XMLGregorianCalendar</code>.
 	*
 	*/
-	@:overload override public function getMonth() : Int;
+	@:overload @:public override public function getMonth() : Int;
 	
 	/**
 	* Return day in month or {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -348,7 +348,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	*
 	* @see #setDay(int)
 	*/
-	@:overload override public function getDay() : Int;
+	@:overload @:public override public function getDay() : Int;
 	
 	/**
 	* Return timezone offset in minutes or
@@ -359,7 +359,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	*
 	* @see #setTimezone(int)
 	*/
-	@:overload override public function getTimezone() : Int;
+	@:overload @:public override public function getTimezone() : Int;
 	
 	/**
 	* Return hours or {@link DatatypeConstants#FIELD_UNDEFINED}.
@@ -369,7 +369,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* <a href="#datetimefield-hour">hour field of date/time field mapping table</a>.</p>
 	* @see #setTime(int, int, int)
 	*/
-	@:overload override public function getHour() : Int;
+	@:overload @:public override public function getHour() : Int;
 	
 	/**
 	* Return minutes or {@link DatatypeConstants#FIELD_UNDEFINED}.<\p>
@@ -379,7 +379,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* <a href="#datetimefield-minute">minute field of date/time field mapping table</a>.</p>
 	* @see #setTime(int, int, int)
 	*/
-	@:overload override public function getMinute() : Int;
+	@:overload @:public override public function getMinute() : Int;
 	
 	/**
 	* <p>Return seconds or {@link DatatypeConstants#FIELD_UNDEFINED}.<\p>
@@ -399,7 +399,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* @see #getMillisecond()
 	* @see #setTime(int, int, int)
 	*/
-	@:overload override public function getSecond() : Int;
+	@:overload @:public override public function getSecond() : Int;
 	
 	/**
 	* <p>Return millisecond precision of {@link #getFractionalSecond()}.<\p>
@@ -420,7 +420,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* @see #getFractionalSecond()
 	* @see #setTime(int, int, int)
 	*/
-	@:overload override public function getMillisecond() : Int;
+	@:overload @:public override public function getMillisecond() : Int;
 	
 	/**
 	* <p>Return fractional seconds.</p>
@@ -439,7 +439,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* @see #getSecond()
 	* @see #setTime(int, int, int, BigDecimal)
 	*/
-	@:overload override public function getFractionalSecond() : java.math.BigDecimal;
+	@:overload @:public override public function getFractionalSecond() : java.math.BigDecimal;
 	
 	/**
 	* <p>Set low and high order component of XSD <code>dateTime</code> year field.</p>
@@ -452,7 +452,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* outside value constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload override public function setYear(year : java.math.BigInteger) : Void;
+	@:overload @:public override public function setYear(year : java.math.BigInteger) : Void;
 	
 	/**
 	* <p>Set year of XSD <code>dateTime</code> year field.</p>
@@ -467,7 +467,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* @param year value constraints are summarized in <a href="#datetimefield-year">year field of date/time field mapping table</a>.
 	*   If year is {@link DatatypeConstants#FIELD_UNDEFINED}, then eon is set to <code>null</code>.
 	*/
-	@:overload override public function setYear(year : Int) : Void;
+	@:overload @:public override public function setYear(year : Int) : Void;
 	
 	/**
 	* <p>Set month.</p>
@@ -480,7 +480,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* outside value constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload override public function setMonth(month : Int) : Void;
+	@:overload @:public override public function setMonth(month : Int) : Void;
 	
 	/**
 	* <p>Set days in month.</p>
@@ -493,7 +493,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* outside value constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload override public function setDay(day : Int) : Void;
+	@:overload @:public override public function setDay(day : Int) : Void;
 	
 	/**
 	* <p>Set the number of minutes in the timezone offset.</p>
@@ -507,7 +507,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* outside value constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload override public function setTimezone(offset : Int) : Void;
+	@:overload @:public override public function setTimezone(offset : Int) : Void;
 	
 	/**
 	* <p>Set time as one unit.</p>
@@ -525,13 +525,13 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* outside value constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload override public function setTime(hour : Int, minute : Int, second : Int) : Void;
+	@:overload @:public override public function setTime(hour : Int, minute : Int, second : Int) : Void;
 	
-	@:overload override public function setHour(hour : Int) : Void;
+	@:overload @:public override public function setHour(hour : Int) : Void;
 	
-	@:overload override public function setMinute(minute : Int) : Void;
+	@:overload @:public override public function setMinute(minute : Int) : Void;
 	
-	@:overload override public function setSecond(second : Int) : Void;
+	@:overload @:public override public function setSecond(second : Int) : Void;
 	
 	/**
 	* <p>Set time as one unit, including the optional infinite precison
@@ -550,7 +550,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* outside value constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload override public function setTime(hour : Int, minute : Int, second : Int, fractional : java.math.BigDecimal) : Void;
+	@:overload @:public override public function setTime(hour : Int, minute : Int, second : Int, fractional : java.math.BigDecimal) : Void;
 	
 	/**
 	* <p>Set time as one unit, including optional milliseconds.</p>
@@ -568,7 +568,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* outside value constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload override public function setTime(hour : Int, minute : Int, second : Int, millisecond : Int) : Void;
+	@:overload @:public override public function setTime(hour : Int, minute : Int, second : Int, millisecond : Int) : Void;
 	
 	/**
 	* <p>Compare two instances of W3C XML Schema 1.0 date/time datatypes
@@ -591,7 +591,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* @throws NullPointerException if <code>lhs</code> or <code>rhs</code>
 	* parameters are null.
 	*/
-	@:overload override public function compare(rhs : javax.xml.datatype.XMLGregorianCalendar) : Int;
+	@:overload @:public override public function compare(rhs : javax.xml.datatype.XMLGregorianCalendar) : Int;
 	
 	/**
 	* <p>Normalize this instance to UTC.</p>
@@ -599,7 +599,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* <p>2000-03-04T23:00:00+03:00 normalizes to 2000-03-04T20:00:00Z</p>
 	* <p>Implements W3C XML Schema Part 2, Section 3.2.7.3 (A).</p>
 	*/
-	@:overload override public function normalize() : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload @:public override public function normalize() : javax.xml.datatype.XMLGregorianCalendar;
 	
 	/**
 	* <p>Indicates whether parameter <code>obj</code> is "equal to" this one.</p>
@@ -608,14 +608,14 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	*
 	* @return <code>true</code> when <code>compare(this,(XMLGregorianCalendar)obj) == EQUAL.</code>.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* <p>Returns a hash code consistent with the definition of the equals method.</p>
 	*
 	* @return hash code of this object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* <p>Constructs a new XMLGregorianCalendar object by
@@ -647,7 +647,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* @throws NullPointerException
 	*      If the given string is null.
 	*/
-	@:overload public static function parse(lexicalRepresentation : String) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload @:public @:static public static function parse(lexicalRepresentation : String) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	/**
 	* <p>Return the lexical representation of <code>this</code> instance.
@@ -663,7 +663,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* @throws java.lang.IllegalStateException if the combination of set fields
 	*    does not match one of the eight defined XML Schema builtin date/time datatypes.
 	*/
-	@:overload override public function toXMLFormat() : String;
+	@:overload @:public override public function toXMLFormat() : String;
 	
 	/**
 	* <p>Return the name of the XML Schema date/time type that this instance
@@ -776,13 +776,13 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	*   {@link DatatypeConstants#GMONTH} or
 	*   {@link DatatypeConstants#GDAY}.
 	*/
-	@:overload override public function getXMLSchemaType() : javax.xml.namespace.QName;
+	@:overload @:public override public function getXMLSchemaType() : javax.xml.namespace.QName;
 	
 	/**
 	* Validate instance by <code>getXMLSchemaType()</code> constraints.
 	* @return true if data values are valid.
 	*/
-	@:overload override public function isValid() : Bool;
+	@:overload @:public override public function isValid() : Bool;
 	
 	/**
 	* <p>Add <code>duration</code> to this instance.<\p>
@@ -798,7 +798,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	*
 	* @throws NullPointerException  when <code>duration</code> parameter is <code>null</code>.
 	*/
-	@:overload override public function add(duration : javax.xml.datatype.Duration) : Void;
+	@:overload @:public override public function add(duration : javax.xml.datatype.Duration) : Void;
 	
 	/**
 	* <p>Convert <code>this</code> to <code>java.util.GregorianCalendar</code>.</p>
@@ -892,7 +892,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	*
 	* @see #toGregorianCalendar(java.util.TimeZone, java.util.Locale, XMLGregorianCalendar)
 	*/
-	@:overload override public function toGregorianCalendar() : java.util.GregorianCalendar;
+	@:overload @:public override public function toGregorianCalendar() : java.util.GregorianCalendar;
 	
 	/**
 	* <p>Convert <code>this</code> along with provided parameters
@@ -946,7 +946,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	*
 	* @see #LEAP_YEAR_DEFAULT
 	*/
-	@:overload override public function toGregorianCalendar(timezone : java.util.TimeZone, aLocale : java.util.Locale, defaults : javax.xml.datatype.XMLGregorianCalendar) : java.util.GregorianCalendar;
+	@:overload @:public override public function toGregorianCalendar(timezone : java.util.TimeZone, aLocale : java.util.Locale, defaults : javax.xml.datatype.XMLGregorianCalendar) : java.util.GregorianCalendar;
 	
 	/**
 	* <p>Returns a <code>java.util.TimeZone</code> for this class.</p>
@@ -964,14 +964,14 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	*
 	* @return TimeZone for this.
 	*/
-	@:overload override public function getTimeZone(defaultZoneoffset : Int) : java.util.TimeZone;
+	@:overload @:public override public function getTimeZone(defaultZoneoffset : Int) : java.util.TimeZone;
 	
 	/**
 	* <p>Creates and returns a copy of this object.</p>
 	*
 	* @return copy of this <code>Object</code>
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* <p>Unset all fields to undefined.</p>
@@ -979,17 +979,17 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* <p>Set all int fields to {@link DatatypeConstants#FIELD_UNDEFINED} and reference fields
 	* to null.</p>
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload override public function setMillisecond(millisecond : Int) : Void;
+	@:overload @:public override public function setMillisecond(millisecond : Int) : Void;
 	
-	@:overload override public function setFractionalSecond(fractional : java.math.BigDecimal) : Void;
+	@:overload @:public override public function setFractionalSecond(fractional : java.math.BigDecimal) : Void;
 	
 	/** <p><code>reset()</code> is designed to allow the reuse of existing
 	* <code>XMLGregorianCalendar</code>s thus saving resources associated
 	*  with the creation of new <code>XMLGregorianCalendar</code>s.</p>
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }
@@ -1003,7 +1003,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	*
 	* @throws IllegalArgumentException If <code>String</code> is not formated as a legal <code>XMLGregorianCalendar</code> value.
 	*/
-	@:overload public function parse() : Void;
+	@:overload @:public public function parse() : Void;
 	
 	
 }

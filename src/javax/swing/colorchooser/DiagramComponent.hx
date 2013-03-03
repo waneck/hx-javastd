@@ -25,21 +25,21 @@ package javax.swing.colorchooser;
 */
 @:internal extern class DiagramComponent extends javax.swing.JComponent implements java.awt.event.MouseListener implements java.awt.event.MouseMotionListener
 {
-	@:overload private function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintComponent(g : java.awt.Graphics) : Void;
 	
-	@:overload public function mousePressed(event : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(event : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(event : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(event : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseClicked(event : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(event : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(event : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(event : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(event : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(event : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseMoved(event : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseMoved(event : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseDragged(event : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(event : java.awt.event.MouseEvent) : Void;
 	
 	
 }

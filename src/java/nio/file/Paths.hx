@@ -67,7 +67,7 @@ extern class Paths
 	*
 	* @see FileSystem#getPath
 	*/
-	@:overload public static function get(first : String, more : java.NativeArray<String>) : java.nio.file.Path;
+	@:overload @:public @:static public static function get(first : String, more : java.NativeArray<String>) : java.nio.file.Path;
 	
 	/**
 	* Converts the given URI to a {@link Path} object.
@@ -113,7 +113,7 @@ extern class Paths
 	*          if a security manager is installed and it denies an unspecified
 	*          permission to access the file system
 	*/
-	@:overload public static function get(uri : java.net.URI) : java.nio.file.Path;
+	@:overload @:public @:static public static function get(uri : java.net.URI) : java.nio.file.Path;
 	
 	
 }

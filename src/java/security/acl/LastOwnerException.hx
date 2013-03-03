@@ -36,7 +36,7 @@ extern class LastOwnerException extends java.lang.Exception
 	/**
 	* Constructs a LastOwnerException.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

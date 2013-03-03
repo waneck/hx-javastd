@@ -33,7 +33,7 @@ extern class PolicySubject
 	*
 	* @throws IllegalArgumentException in case any of the arguments is {@code null}.
 	*/
-	@:overload public function new(subject : Dynamic, policy : com.sun.xml.internal.ws.policy.Policy) : Void;
+	@:overload @:public public function new(subject : Dynamic, policy : com.sun.xml.internal.ws.policy.Policy) : Void;
 	
 	/**
 	* Constructs a policy subject instance.
@@ -44,7 +44,7 @@ extern class PolicySubject
 	* @throws IllegalArgumentException in case any of the arguments is {@code null} or
 	*         in case {@code policies} argument represents empty collection.
 	*/
-	@:overload public function new(subject : Dynamic, policies : java.util.Collection<com.sun.xml.internal.ws.policy.Policy>) : Void;
+	@:overload @:public public function new(subject : Dynamic, policies : java.util.Collection<com.sun.xml.internal.ws.policy.Policy>) : Void;
 	
 	/**
 	* Attaches another Policy instance to the policy subject.
@@ -53,7 +53,7 @@ extern class PolicySubject
 	*
 	* @throws IllegalArgumentException in case {@code policy} argument is {@code null}.
 	*/
-	@:overload public function attach(policy : com.sun.xml.internal.ws.policy.Policy) : Void;
+	@:overload @:public public function attach(policy : com.sun.xml.internal.ws.policy.Policy) : Void;
 	
 	/**
 	* Returns the effective policy of the subject, i.e. all policies of the subject
@@ -61,7 +61,7 @@ extern class PolicySubject
 	*
 	* @return effective policy of the subject
 	*/
-	@:overload public function getEffectivePolicy(merger : com.sun.xml.internal.ws.policy.PolicyMerger) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public public function getEffectivePolicy(merger : com.sun.xml.internal.ws.policy.PolicyMerger) : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* A unique identifier of the subject
@@ -70,12 +70,12 @@ extern class PolicySubject
 	* assigned to a scope, its identity may not matter anymore. Therefore this
 	* may be null.
 	*/
-	@:overload public function getSubject() : Dynamic;
+	@:overload @:public public function getSubject() : Dynamic;
 	
 	/**
 	* An {@code Object.toString()} method override.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -35,9 +35,9 @@ package com.sun.tools.hat.internal.model;
 */
 extern class JavaInt extends com.sun.tools.hat.internal.model.JavaValue
 {
-	@:overload public function new(value : Int) : Void;
+	@:overload @:public public function new(value : Int) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

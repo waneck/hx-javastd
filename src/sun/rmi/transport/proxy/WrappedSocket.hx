@@ -26,13 +26,13 @@ package sun.rmi.transport.proxy;
 @:internal extern class WrappedSocket extends java.net.Socket
 {
 	/** the underlying concrete socket */
-	private var socket : java.net.Socket;
+	@:protected private var socket : java.net.Socket;
 	
 	/** the input stream to return for socket */
-	//private var _in : java.io.InputStream;
+	//@:protected private var _in : java.io.InputStream;
 	
 	/** the output stream to return for socket */
-	private var out : java.io.OutputStream;
+	@:protected private var out : java.io.OutputStream;
 	
 	/**
 	* Layer on top of a pre-existing Socket object, and use specified
@@ -44,77 +44,77 @@ package sun.rmi.transport.proxy;
 	* @param in the InputStream to return to users (can be null)
 	* @param out the OutputStream to return to users (can be null)
 	*/
-	@:overload public function new(socket : java.net.Socket, _in : java.io.InputStream, out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(socket : java.net.Socket, _in : java.io.InputStream, out : java.io.OutputStream) : Void;
 	
 	/**
 	* Get the address to which the socket is connected.
 	*/
-	@:overload override public function getInetAddress() : java.net.InetAddress;
+	@:overload @:public override public function getInetAddress() : java.net.InetAddress;
 	
 	/**
 	* Get the local address to which the socket is bound.
 	*/
-	@:overload override public function getLocalAddress() : java.net.InetAddress;
+	@:overload @:public override public function getLocalAddress() : java.net.InetAddress;
 	
 	/**
 	* Get the remote port to which the socket is connected.
 	*/
-	@:overload override public function getPort() : Int;
+	@:overload @:public override public function getPort() : Int;
 	
 	/**
 	* Get the local port to which the socket is connected.
 	*/
-	@:overload override public function getLocalPort() : Int;
+	@:overload @:public override public function getLocalPort() : Int;
 	
 	/**
 	* Get an InputStream for this socket.
 	*/
-	@:overload override public function getInputStream() : java.io.InputStream;
+	@:overload @:public override public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Get an OutputStream for this socket.
 	*/
-	@:overload override public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public override public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Enable/disable TCP_NODELAY.
 	*/
-	@:overload override public function setTcpNoDelay(on : Bool) : Void;
+	@:overload @:public override public function setTcpNoDelay(on : Bool) : Void;
 	
 	/**
 	* Retrieve whether TCP_NODELAY is enabled.
 	*/
-	@:overload override public function getTcpNoDelay() : Bool;
+	@:overload @:public override public function getTcpNoDelay() : Bool;
 	
 	/**
 	* Enable/disable SO_LINGER with the specified linger time.
 	*/
-	@:overload override public function setSoLinger(on : Bool, val : Int) : Void;
+	@:overload @:public override public function setSoLinger(on : Bool, val : Int) : Void;
 	
 	/**
 	* Retrive setting for SO_LINGER.
 	*/
-	@:overload override public function getSoLinger() : Int;
+	@:overload @:public override public function getSoLinger() : Int;
 	
 	/**
 	* Enable/disable SO_TIMEOUT with the specified timeout
 	*/
-	@:overload @:synchronized override public function setSoTimeout(timeout : Int) : Void;
+	@:overload @:public @:synchronized override public function setSoTimeout(timeout : Int) : Void;
 	
 	/**
 	* Retrive setting for SO_TIMEOUT.
 	*/
-	@:overload @:synchronized override public function getSoTimeout() : Int;
+	@:overload @:public @:synchronized override public function getSoTimeout() : Int;
 	
 	/**
 	* Close the socket.
 	*/
-	@:overload @:synchronized override public function close() : Void;
+	@:overload @:public @:synchronized override public function close() : Void;
 	
 	/**
 	* Return string representation of the socket.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

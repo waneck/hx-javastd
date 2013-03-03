@@ -33,7 +33,7 @@ extern class StrokeBorder extends javax.swing.border.AbstractBorder
 	*
 	* @throws NullPointerException if the specified {@code stroke} is {@code null}
 	*/
-	@:overload public function new(stroke : java.awt.BasicStroke) : Void;
+	@:overload @:public public function new(stroke : java.awt.BasicStroke) : Void;
 	
 	/**
 	* Creates a border of the specified {@code stroke} and {@code paint}.
@@ -45,7 +45,7 @@ extern class StrokeBorder extends javax.swing.border.AbstractBorder
 	*
 	* @throws NullPointerException if the specified {@code stroke} is {@code null}
 	*/
-	@:overload public function new(stroke : java.awt.BasicStroke, paint : java.awt.Paint) : Void;
+	@:overload @:public public function new(stroke : java.awt.BasicStroke, paint : java.awt.Paint) : Void;
 	
 	/**
 	* Paints the border for the specified component
@@ -64,7 +64,7 @@ extern class StrokeBorder extends javax.swing.border.AbstractBorder
 	*
 	* @throws NullPointerException if the specified {@code g} is {@code null}
 	*/
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Reinitializes the {@code insets} parameter
@@ -81,7 +81,7 @@ extern class StrokeBorder extends javax.swing.border.AbstractBorder
 	*
 	* @see Math#ceil
 	*/
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* Returns the {@link BasicStroke} object used to stroke a shape
@@ -89,7 +89,7 @@ extern class StrokeBorder extends javax.swing.border.AbstractBorder
 	*
 	* @return the {@link BasicStroke} object
 	*/
-	@:overload public function getStroke() : java.awt.BasicStroke;
+	@:overload @:public public function getStroke() : java.awt.BasicStroke;
 	
 	/**
 	* Returns the {@link Paint} object used to generate a color
@@ -98,7 +98,7 @@ extern class StrokeBorder extends javax.swing.border.AbstractBorder
 	* @return the {@link Paint} object or {@code null}
 	*         if the {@code paint} parameter is not set
 	*/
-	@:overload public function getPaint() : java.awt.Paint;
+	@:overload @:public public function getPaint() : java.awt.Paint;
 	
 	
 }

@@ -58,7 +58,7 @@ package java.util.logging;
 	* @throws IllegalArgumentException if <code>name</code> is empty or if
 	* arguments are invalid.
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	
 }

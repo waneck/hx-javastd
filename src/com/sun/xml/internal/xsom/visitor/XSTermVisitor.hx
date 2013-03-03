@@ -31,13 +31,13 @@ extern interface XSTermVisitor
 	* @author
 	*  Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : Void;
+	@:overload @:public public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : Void;
 	
-	@:overload public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
+	@:overload @:public public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
 	
-	@:overload public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : Void;
+	@:overload @:public public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : Void;
 	
-	@:overload public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
+	@:overload @:public public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
 	
 	
 }

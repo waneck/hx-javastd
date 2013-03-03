@@ -21,17 +21,17 @@ package com.sun.org.apache.xerces.internal.impl.xs.util;
 */
 extern class XSInputSource extends com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource
 {
-	@:overload public function new(grammars : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar>) : Void;
+	@:overload @:public public function new(grammars : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar>) : Void;
 	
-	@:overload public function new(component : java.NativeArray<com.sun.org.apache.xerces.internal.xs.XSObject>) : Void;
+	@:overload @:public public function new(component : java.NativeArray<com.sun.org.apache.xerces.internal.xs.XSObject>) : Void;
 	
-	@:overload public function getGrammars() : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar>;
+	@:overload @:public public function getGrammars() : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar>;
 	
-	@:overload public function setGrammars(grammars : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar>) : Void;
+	@:overload @:public public function setGrammars(grammars : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar>) : Void;
 	
-	@:overload public function getComponents() : java.NativeArray<com.sun.org.apache.xerces.internal.xs.XSObject>;
+	@:overload @:public public function getComponents() : java.NativeArray<com.sun.org.apache.xerces.internal.xs.XSObject>;
 	
-	@:overload public function setComponents(components : java.NativeArray<com.sun.org.apache.xerces.internal.xs.XSObject>) : Void;
+	@:overload @:public public function setComponents(components : java.NativeArray<com.sun.org.apache.xerces.internal.xs.XSObject>) : Void;
 	
 	
 }

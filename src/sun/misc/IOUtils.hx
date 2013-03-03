@@ -39,7 +39,7 @@ extern class IOUtils
 	* @return bytes read
 	* @throws IOException Any IO error or a premature EOF is detected
 	*/
-	@:overload public static function readFully(is : java.io.InputStream, length : Int, readAll : Bool) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function readFully(is : java.io.InputStream, length : Int, readAll : Bool) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

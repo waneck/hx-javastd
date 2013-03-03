@@ -25,11 +25,11 @@ package sun.management;
 */
 extern class MappedMXBeanType
 {
-	@:overload @:synchronized public static function toOpenType(t : java.lang.reflect.Type) : javax.management.openmbean.OpenType<Dynamic>;
+	@:overload @:public @:static @:synchronized public static function toOpenType(t : java.lang.reflect.Type) : javax.management.openmbean.OpenType<Dynamic>;
 	
-	@:native('toJavaTypeData') @:overload public static function _toJavaTypeData(openData : Dynamic, t : java.lang.reflect.Type) : Dynamic;
+	@:native('toJavaTypeData') @:overload @:public @:static public static function _toJavaTypeData(openData : Dynamic, t : java.lang.reflect.Type) : Dynamic;
 	
-	@:native('toOpenTypeData') @:overload public static function _toOpenTypeData(data : Dynamic, t : java.lang.reflect.Type) : Dynamic;
+	@:native('toOpenTypeData') @:overload @:public @:static public static function _toOpenTypeData(data : Dynamic, t : java.lang.reflect.Type) : Dynamic;
 	
 	
 }
@@ -43,11 +43,11 @@ extern class MappedMXBeanType
 }
 @:native('sun$management$MappedMXBeanType$ArrayMXBeanType') @:internal extern class MappedMXBeanType_ArrayMXBeanType extends sun.management.MappedMXBeanType
 {
-	private var componentType : sun.management.MappedMXBeanType;
+	@:protected private var componentType : sun.management.MappedMXBeanType;
 	
-	private var baseElementType : sun.management.MappedMXBeanType;
+	@:protected private var baseElementType : sun.management.MappedMXBeanType;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	
 }
@@ -69,13 +69,13 @@ extern class MappedMXBeanType
 }
 @:native('sun$management$MappedMXBeanType$InProgress') @:internal extern class MappedMXBeanType_InProgress extends javax.management.openmbean.OpenType<Dynamic>
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
-	@:overload override public function isValue(o : Dynamic) : Bool;
+	@:overload @:public override public function isValue(o : Dynamic) : Bool;
 	
 	
 }

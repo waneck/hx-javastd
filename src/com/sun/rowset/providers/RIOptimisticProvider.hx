@@ -88,7 +88,7 @@ extern class RIOptimisticProvider extends javax.sql.rowset.spi.SyncProvider impl
 	* This provider is available to all disconnected <code>RowSet</code> implementations
 	*  as the default persistence provider.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the <code>'javax.sql.rowset.providers.RIOptimisticProvider'</code>
@@ -96,7 +96,7 @@ extern class RIOptimisticProvider extends javax.sql.rowset.spi.SyncProvider impl
 	*
 	* @return String Provider ID of this persistence provider
 	*/
-	@:overload override public function getProviderID() : String;
+	@:overload @:public override public function getProviderID() : String;
 	
 	/**
 	* Returns the <code>javax.sql.RowSetWriter</code> object for this
@@ -106,7 +106,7 @@ extern class RIOptimisticProvider extends javax.sql.rowset.spi.SyncProvider impl
 	* @return the <code>javax.sql.RowSetWriter</code> object for this
 	*     <code>RIOptimisticProvider</code> object
 	*/
-	@:overload override public function getRowSetWriter() : javax.sql.RowSetWriter;
+	@:overload @:public override public function getRowSetWriter() : javax.sql.RowSetWriter;
 	
 	/**
 	* Returns the <code>javax.sql.RowSetReader</code> object for this
@@ -116,7 +116,7 @@ extern class RIOptimisticProvider extends javax.sql.rowset.spi.SyncProvider impl
 	* @return the <code>javax.sql.RowSetReader</code> object for this
 	*     <code>RIOptimisticProvider</code> object
 	*/
-	@:overload override public function getRowSetReader() : javax.sql.RowSetReader;
+	@:overload @:public override public function getRowSetReader() : javax.sql.RowSetReader;
 	
 	/**
 	* Returns the <code>SyncProvider</code> grade of synchronization that
@@ -125,7 +125,7 @@ extern class RIOptimisticProvider extends javax.sql.rowset.spi.SyncProvider impl
 	* will only check rows that have been modified in the <code>RowSet</code>
 	* object.
 	*/
-	@:overload override public function getProviderGrade() : Int;
+	@:overload @:public override public function getProviderGrade() : Int;
 	
 	/**
 	* Modifies the data source lock severity according to the standard
@@ -142,7 +142,7 @@ extern class RIOptimisticProvider extends javax.sql.rowset.spi.SyncProvider impl
 	* @throws SyncProviderException if the parameter specified is not
 	*           <code>SyncProvider.DATASOURCE_NO_LOCK</code>
 	*/
-	@:overload override public function setDataSourceLock(datasource_lock : Int) : Void;
+	@:overload @:public override public function setDataSourceLock(datasource_lock : Int) : Void;
 	
 	/**
 	* Returns the active data source lock severity in this
@@ -152,7 +152,7 @@ extern class RIOptimisticProvider extends javax.sql.rowset.spi.SyncProvider impl
 	* @return <code>SyncProvider.DATASOURCE_NO_LOCK</code>.
 	*     The reference implementation does not support data source locks.
 	*/
-	@:overload override public function getDataSourceLock() : Int;
+	@:overload @:public override public function getDataSourceLock() : Int;
 	
 	/**
 	* Returns the supported updatable view abilities of the
@@ -163,7 +163,7 @@ extern class RIOptimisticProvider extends javax.sql.rowset.spi.SyncProvider impl
 	*     the reference implementation does not support updating tables
 	*     that are the source of a view.
 	*/
-	@:overload override public function supportsUpdatableView() : Int;
+	@:overload @:public override public function supportsUpdatableView() : Int;
 	
 	/**
 	* Returns the release version ID of the Reference Implementation Optimistic
@@ -171,7 +171,7 @@ extern class RIOptimisticProvider extends javax.sql.rowset.spi.SyncProvider impl
 	*
 	* @return the <code>String</code> detailing the version number of this SyncProvider
 	*/
-	@:overload override public function getVersion() : String;
+	@:overload @:public override public function getVersion() : String;
 	
 	/**
 	* Returns the vendor name of the Reference Implementation Optimistic
@@ -180,7 +180,7 @@ extern class RIOptimisticProvider extends javax.sql.rowset.spi.SyncProvider impl
 	* @return the <code>String</code> detailing the vendor name of this
 	*      SyncProvider
 	*/
-	@:overload override public function getVendor() : String;
+	@:overload @:public override public function getVendor() : String;
 	
 	
 }

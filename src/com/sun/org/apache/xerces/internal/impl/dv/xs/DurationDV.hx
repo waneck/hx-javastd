@@ -29,13 +29,13 @@ extern class DurationDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Ab
 	* @author Gopal Sharma, SUN Microsystem Inc.
 	* @version $Id: DurationDV.java,v 1.7 2010-11-01 04:39:47 joehw Exp $
 	*/
-	public static var DURATION_TYPE(default, null) : Int;
+	@:public @:static @:final public static var DURATION_TYPE(default, null) : Int;
 	
-	public static var YEARMONTHDURATION_TYPE(default, null) : Int;
+	@:public @:static @:final public static var YEARMONTHDURATION_TYPE(default, null) : Int;
 	
-	public static var DAYTIMEDURATION_TYPE(default, null) : Int;
+	@:public @:static @:final public static var DAYTIMEDURATION_TYPE(default, null) : Int;
 	
-	@:overload override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
+	@:overload @:public override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
 	
 	/**
 	* Parses, validates and computes normalized version of duration object
@@ -45,7 +45,7 @@ extern class DurationDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Ab
 	* @return normalized date representation
 	* @exception SchemaDateTimeException Invalid lexical representation
 	*/
-	@:overload private function parse(str : String, durationType : Int) : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData;
+	@:overload @:protected private function parse(str : String, durationType : Int) : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData;
 	
 	/**
 	* Compares 2 given durations. (refer to W3C Schema Datatypes "3.2.6 duration")
@@ -61,13 +61,13 @@ extern class DurationDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Ab
 	* If the strict parameter is false, return LESS_THAN if date1 is less than OR equal to date2 and
 	* return GREATER_THAN if date1 is greater than OR equal to date2
 	*/
-	@:overload override private function compareDates(date1 : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData, date2 : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData, strict : Bool) : java.StdTypes.Int16;
+	@:overload @:protected override private function compareDates(date1 : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData, date2 : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData, strict : Bool) : java.StdTypes.Int16;
 	
-	@:overload override private function parseSecond(buffer : String, start : Int, end : Int) : Float;
+	@:overload @:protected override private function parseSecond(buffer : String, start : Int, end : Int) : Float;
 	
-	@:overload override private function dateToString(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : String;
+	@:overload @:protected override private function dateToString(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : String;
 	
-	@:overload override private function getDuration(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : javax.xml.datatype.Duration;
+	@:overload @:protected override private function getDuration(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : javax.xml.datatype.Duration;
 	
 	
 }

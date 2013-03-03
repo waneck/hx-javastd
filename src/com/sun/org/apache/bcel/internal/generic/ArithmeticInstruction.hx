@@ -61,19 +61,19 @@ extern class ArithmeticInstruction extends com.sun.org.apache.bcel.internal.gene
 	/**
 	* @param opcode of instruction
 	*/
-	@:overload private function new(opcode : java.StdTypes.Int16) : Void;
+	@:overload @:protected private function new(opcode : java.StdTypes.Int16) : Void;
 	
 	/** @return type associated with the instruction
 	*/
-	@:overload public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/** @return how many words are consumed from stack
 	*/
-	@:overload @:public @:public @:public @:public @:public override public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public override public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	/** @return how many words are produced on stack
 	*/
-	@:overload @:public @:public @:public override public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public @:public @:public @:public override public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	
 }

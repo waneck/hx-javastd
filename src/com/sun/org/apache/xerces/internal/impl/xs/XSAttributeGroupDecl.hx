@@ -31,27 +31,27 @@ extern class XSAttributeGroupDecl implements com.sun.org.apache.xerces.internal.
 	*
 	* @version $Id: XSAttributeGroupDecl.java,v 1.7 2010-11-01 04:39:55 joehw Exp $
 	*/
-	public var fName : String;
+	@:public public var fName : String;
 	
-	public var fTargetNamespace : String;
+	@:public public var fTargetNamespace : String;
 	
-	public var fAttributeWC : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl;
+	@:public public var fAttributeWC : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl;
 	
-	public var fIDAttrName : String;
+	@:public public var fIDAttrName : String;
 	
-	public var fAnnotations : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:public public var fAnnotations : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
-	private var fAttrUses : com.sun.org.apache.xerces.internal.impl.xs.util.XSObjectListImpl;
+	@:protected private var fAttrUses : com.sun.org.apache.xerces.internal.impl.xs.util.XSObjectListImpl;
 	
-	@:overload public function addAttributeUse(attrUse : com.sun.org.apache.xerces.internal.impl.xs.XSAttributeUseImpl) : String;
+	@:overload @:public public function addAttributeUse(attrUse : com.sun.org.apache.xerces.internal.impl.xs.XSAttributeUseImpl) : String;
 	
-	@:overload public function replaceAttributeUse(oldUse : com.sun.org.apache.xerces.internal.xs.XSAttributeUse, newUse : com.sun.org.apache.xerces.internal.impl.xs.XSAttributeUseImpl) : Void;
+	@:overload @:public public function replaceAttributeUse(oldUse : com.sun.org.apache.xerces.internal.xs.XSAttributeUse, newUse : com.sun.org.apache.xerces.internal.impl.xs.XSAttributeUseImpl) : Void;
 	
-	@:overload public function getAttributeUse(namespace : String, name : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeUse;
+	@:overload @:public public function getAttributeUse(namespace : String, name : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeUse;
 	
-	@:overload public function getAttributeUseNoProhibited(namespace : String, name : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeUse;
+	@:overload @:public public function getAttributeUseNoProhibited(namespace : String, name : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeUse;
 	
-	@:overload public function removeProhibitedAttrs() : Void;
+	@:overload @:public public function removeProhibitedAttrs() : Void;
 	
 	/**
 	* Check that the attributes in this group validly restrict those from a base group.
@@ -64,52 +64,52 @@ extern class XSAttributeGroupDecl implements com.sun.org.apache.xerces.internal.
 	* @param typeName the name of the type containing this attribute group, used for error reporting purposes
 	* @param baseGroup the XSAttributeGroupDecl that is the base we are checking against
 	*/
-	@:overload public function validRestrictionOf(typeName : String, baseGroup : com.sun.org.apache.xerces.internal.impl.xs.XSAttributeGroupDecl) : java.NativeArray<Dynamic>;
+	@:overload @:public public function validRestrictionOf(typeName : String, baseGroup : com.sun.org.apache.xerces.internal.impl.xs.XSAttributeGroupDecl) : java.NativeArray<Dynamic>;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Get the type of the object, i.e ELEMENT_DECLARATION.
 	*/
-	@:overload public function getType() : java.StdTypes.Int16;
+	@:overload @:public public function getType() : java.StdTypes.Int16;
 	
 	/**
 	* The <code>name</code> of this <code>XSObject</code> depending on the
 	* <code>XSObject</code> type.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* The namespace URI of this node, or <code>null</code> if it is
 	* unspecified.  defines how a namespace URI is attached to schema
 	* components.
 	*/
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
 	/**
 	* {attribute uses} A set of attribute uses.
 	*/
-	@:overload public function getAttributeUses() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAttributeUses() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* {attribute wildcard} Optional. A wildcard.
 	*/
-	@:overload public function getAttributeWildcard() : com.sun.org.apache.xerces.internal.xs.XSWildcard;
+	@:overload @:public public function getAttributeWildcard() : com.sun.org.apache.xerces.internal.xs.XSWildcard;
 	
 	/**
 	* Optional. Annotation.
 	*/
-	@:overload public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:overload @:public public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
 	/**
 	* Optional. Annotations.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* @see org.apache.xerces.xs.XSObject#getNamespaceItem()
 	*/
-	@:overload public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
+	@:overload @:public public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
 	
 	
 }

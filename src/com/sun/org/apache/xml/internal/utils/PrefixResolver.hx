@@ -66,9 +66,9 @@ extern interface PrefixResolver
 	* the document, or has been kept up to date via some other mechanism, it
 	* may not accurately reflect that context information.
 	*/
-	@:overload public function getBaseIdentifier() : String;
+	@:overload @:public public function getBaseIdentifier() : String;
 	
-	@:overload public function handlesNullPrefixes() : Bool;
+	@:overload @:public public function handlesNullPrefixes() : Bool;
 	
 	
 }

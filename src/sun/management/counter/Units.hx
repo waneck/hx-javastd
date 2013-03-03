@@ -34,53 +34,53 @@ extern class Units implements java.io.Serializable
 	/**
 	* An Invalid Units value.
 	*/
-	public static var INVALID(default, null) : sun.management.counter.Units;
+	@:public @:static @:final public static var INVALID(default, null) : sun.management.counter.Units;
 	
 	/**
 	* Units attribute representing unit-less quantities.
 	*/
-	public static var NONE(default, null) : sun.management.counter.Units;
+	@:public @:static @:final public static var NONE(default, null) : sun.management.counter.Units;
 	
 	/**
 	* Units attribute representing Bytes.
 	*/
-	public static var BYTES(default, null) : sun.management.counter.Units;
+	@:public @:static @:final public static var BYTES(default, null) : sun.management.counter.Units;
 	
 	/**
 	* Units attribute representing Ticks.
 	*/
-	public static var TICKS(default, null) : sun.management.counter.Units;
+	@:public @:static @:final public static var TICKS(default, null) : sun.management.counter.Units;
 	
 	/**
 	* Units attribute representing a count of events.
 	*/
-	public static var EVENTS(default, null) : sun.management.counter.Units;
+	@:public @:static @:final public static var EVENTS(default, null) : sun.management.counter.Units;
 	
 	/**
 	* Units attribute representing String data. Although not really
 	* a unit of measure, this Units value serves to distinguish String
 	* instrumentation objects from instrumentation objects of other types.
 	*/
-	public static var STRING(default, null) : sun.management.counter.Units;
+	@:public @:static @:final public static var STRING(default, null) : sun.management.counter.Units;
 	
 	/**
 	* Units attribute representing Hertz (frequency).
 	*/
-	public static var HERTZ(default, null) : sun.management.counter.Units;
+	@:public @:static @:final public static var HERTZ(default, null) : sun.management.counter.Units;
 	
 	/**
 	* Returns a string describing this Unit of measurement attribute
 	*
 	* @return String - a descriptive string for this enum.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the integer representation of this Units attribute
 	*
 	* @return int - an integer representation of this Units attribute.
 	*/
-	@:overload public function intValue() : Int;
+	@:overload @:public public function intValue() : Int;
 	
 	/**
 	* Maps an integer value to its corresponding Units attribute.
@@ -91,7 +91,7 @@ extern class Units implements java.io.Serializable
 	* @return Units - the Units object for the given <code>value</code>
 	*                 or {@link Units#INVALID} if out of range.
 	*/
-	@:overload public static function toUnits(value : Int) : sun.management.counter.Units;
+	@:overload @:public @:static public static function toUnits(value : Int) : sun.management.counter.Units;
 	
 	
 }

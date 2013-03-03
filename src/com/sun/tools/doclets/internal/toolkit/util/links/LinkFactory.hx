@@ -36,7 +36,7 @@ package com.sun.tools.doclets.internal.toolkit.util.links;
 	*
 	* @return an empty instance of the link output object.
 	*/
-	@:overload @:abstract private function getOutputInstance() : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
+	@:overload @:protected @:abstract private function getOutputInstance() : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
 	
 	/**
 	* Constructs a link from the given link information.
@@ -44,7 +44,7 @@ package com.sun.tools.doclets.internal.toolkit.util.links;
 	* @param linkInfo the information about the link.
 	* @return the output of the link.
 	*/
-	@:overload public function getLinkOutput(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
+	@:overload @:public public function getLinkOutput(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
 	
 	/**
 	* Return the link to the given class.
@@ -53,7 +53,7 @@ package com.sun.tools.doclets.internal.toolkit.util.links;
 	*
 	* @return the link for the given class.
 	*/
-	@:overload @:abstract private function getClassLink(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
+	@:overload @:protected @:abstract private function getClassLink(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
 	
 	/**
 	* Return the link to the given type parameter.
@@ -61,7 +61,7 @@ package com.sun.tools.doclets.internal.toolkit.util.links;
 	* @param linkInfo     the information about the link to construct.
 	* @param typeParam the type parameter to link to.
 	*/
-	@:overload @:abstract private function getTypeParameterLink(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo, typeParam : com.sun.javadoc.Type) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
+	@:overload @:protected @:abstract private function getTypeParameterLink(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo, typeParam : com.sun.javadoc.Type) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
 	
 	/**
 	* Return the links to the type parameters.
@@ -69,7 +69,7 @@ package com.sun.tools.doclets.internal.toolkit.util.links;
 	* @param linkInfo     the information about the link to construct.
 	* @return the links to the type parameters.
 	*/
-	@:overload public function getTypeParameterLinks(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
+	@:overload @:public public function getTypeParameterLinks(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
 	
 	/**
 	* Return the links to the type parameters.
@@ -79,7 +79,7 @@ package com.sun.tools.doclets.internal.toolkit.util.links;
 	*                     the type parameters portion of the link.
 	* @return the links to the type parameters.
 	*/
-	@:overload public function getTypeParameterLinks(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo, isClassLabel : Bool) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
+	@:overload @:public public function getTypeParameterLinks(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo, isClassLabel : Bool) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
 	
 	/**
 	* Return &amp;lt;, which is used in type parameters.  Override this
@@ -87,7 +87,7 @@ package com.sun.tools.doclets.internal.toolkit.util.links;
 	*
 	* @return return &amp;lt;, which is used in type parameters.
 	*/
-	@:overload private function getLessThanString() : String;
+	@:overload @:protected private function getLessThanString() : String;
 	
 	/**
 	* Return &amp;gt;, which is used in type parameters.  Override this
@@ -95,7 +95,7 @@ package com.sun.tools.doclets.internal.toolkit.util.links;
 	*
 	* @return return &amp;gt;, which is used in type parameters.
 	*/
-	@:overload private function getGreaterThanString() : String;
+	@:overload @:protected private function getGreaterThanString() : String;
 	
 	
 }

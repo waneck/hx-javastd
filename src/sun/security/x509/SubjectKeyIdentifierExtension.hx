@@ -50,21 +50,21 @@ extern class SubjectKeyIdentifierExtension extends java.security.cert.Extension 
 	* Identifier for this attribute, to be used with the
 	* get, set, delete methods of Certificate, x509 type.
 	*/
-	public static var IDENT(default, null) : String;
+	@:public @:static @:final public static var IDENT(default, null) : String;
 	
 	/**
 	* Attribute names.
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
-	public static var KEY_ID(default, null) : String;
+	@:public @:static @:final public static var KEY_ID(default, null) : String;
 	
 	/**
 	* Create a SubjectKeyIdentifierExtension with the passed octet string.
 	* The criticality is set to False.
 	* @param octetString the octet string identifying the key identifier.
 	*/
-	@:overload public function new(octetString : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(octetString : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Create the extension from the passed DER encoded value.
@@ -74,12 +74,12 @@ extern class SubjectKeyIdentifierExtension extends java.security.cert.Extension 
 	* @exception ClassCastException if value is not an array of bytes
 	* @exception IOException on error.
 	*/
-	@:overload public function new(critical : Null<Bool>, value : Dynamic) : Void;
+	@:overload @:public public function new(critical : Null<Bool>, value : Dynamic) : Void;
 	
 	/**
 	* Returns a printable representation.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Write the extension to the OutputStream.
@@ -87,33 +87,33 @@ extern class SubjectKeyIdentifierExtension extends java.security.cert.Extension 
 	* @param out the OutputStream to write the extension to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public override public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Set the attribute value.
 	*/
-	@:overload public function set(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function set(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Get the attribute value.
 	*/
-	@:overload public function get(name : String) : Dynamic;
+	@:overload @:public public function get(name : String) : Dynamic;
 	
 	/**
 	* Delete the attribute value.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this
 	* attribute.
 	*/
-	@:overload public function getElements() : java.util.Enumeration<String>;
+	@:overload @:public public function getElements() : java.util.Enumeration<String>;
 	
 	/**
 	* Return the name of this attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

@@ -26,26 +26,26 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Handles calls with no parameter (current node is implicit parameter).
 	*/
-	@:overload public function new(fname : com.sun.org.apache.xalan.internal.xsltc.compiler.QName) : Void;
+	@:overload @:public public function new(fname : com.sun.org.apache.xalan.internal.xsltc.compiler.QName) : Void;
 	
 	/**
 	* Handles calls with one parameter (either node or node-set).
 	*/
-	@:overload public function new(fname : com.sun.org.apache.xalan.internal.xsltc.compiler.QName, arguments : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function new(fname : com.sun.org.apache.xalan.internal.xsltc.compiler.QName, arguments : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* Check that we either have no parameters or one parameter that is
 	* either a node or a node-set.
 	*/
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload override public function getType() : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function getType() : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Translate the code required for getting the node for which the
 	* QName, local-name or namespace URI should be extracted.
 	*/
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

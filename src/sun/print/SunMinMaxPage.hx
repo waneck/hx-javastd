@@ -25,15 +25,15 @@ package sun.print;
 */
 extern class SunMinMaxPage implements javax.print.attribute.PrintRequestAttribute
 {
-	@:overload public function new(min : Int, max : Int) : Void;
+	@:overload @:public public function new(min : Int, max : Int) : Void;
 	
-	@:overload @:final public function getCategory() : Class<Dynamic>;
+	@:overload @:public @:final public function getCategory() : Class<Dynamic>;
 	
-	@:overload @:final public function getMin() : Int;
+	@:overload @:public @:final public function getMin() : Int;
 	
-	@:overload @:final public function getMax() : Int;
+	@:overload @:public @:final public function getMax() : Int;
 	
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

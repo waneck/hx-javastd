@@ -28,11 +28,11 @@ extern class ClassTailor
 	/**
 	* Returns the class name in the JVM format (such as "java/lang/String")
 	*/
-	@:overload public static function toVMClassName(c : Class<Dynamic>) : String;
+	@:overload @:public @:static public static function toVMClassName(c : Class<Dynamic>) : String;
 	
-	@:overload public static function toVMTypeName(c : Class<Dynamic>) : String;
+	@:overload @:public @:static public static function toVMTypeName(c : Class<Dynamic>) : String;
 	
-	@:overload public static function tailor(templateClass : Class<Dynamic>, newClassName : String, replacements : java.NativeArray<String>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function tailor(templateClass : Class<Dynamic>, newClassName : String, replacements : java.NativeArray<String>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Customizes a class file by replacing constant pools.
@@ -46,7 +46,7 @@ extern class ClassTailor
 	*      The search strings found in the constant pool will be replaced by the corresponding
 	*      replacement string.
 	*/
-	@:overload public static function tailor(image : java.io.InputStream, templateClassName : String, newClassName : String, replacements : java.NativeArray<String>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function tailor(image : java.io.InputStream, templateClassName : String, newClassName : String, replacements : java.NativeArray<String>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

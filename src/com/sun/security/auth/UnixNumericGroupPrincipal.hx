@@ -41,7 +41,7 @@ extern class UnixNumericGroupPrincipal implements java.security.Principal implem
 	* @exception NullPointerException if the <code>name</code>
 	*                  is <code>null</code>.
 	*/
-	@:overload public function new(name : String, primaryGroup : Bool) : Void;
+	@:overload @:public public function new(name : String, primaryGroup : Bool) : Void;
 	
 	/**
 	* Create a <code>UnixNumericGroupPrincipal</code> using a
@@ -56,7 +56,7 @@ extern class UnixNumericGroupPrincipal implements java.security.Principal implem
 	*                  primary group to which this user belongs.
 	*
 	*/
-	@:overload public function new(name : haxe.Int64, primaryGroup : Bool) : Void;
+	@:overload @:public public function new(name : haxe.Int64, primaryGroup : Bool) : Void;
 	
 	/**
 	* Return the user's group identification number (GID) for this
@@ -67,7 +67,7 @@ extern class UnixNumericGroupPrincipal implements java.security.Principal implem
 	* @return the user's group identification number (GID) for this
 	*          <code>UnixNumericGroupPrincipal</code>
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return the user's group identification number (GID) for this
@@ -78,7 +78,7 @@ extern class UnixNumericGroupPrincipal implements java.security.Principal implem
 	* @return the user's group identification number (GID) for this
 	*          <code>UnixNumericGroupPrincipal</code> as a long.
 	*/
-	@:overload public function longValue() : haxe.Int64;
+	@:overload @:public public function longValue() : haxe.Int64;
 	
 	/**
 	* Return whether this group identification number (GID) represents
@@ -90,7 +90,7 @@ extern class UnixNumericGroupPrincipal implements java.security.Principal implem
 	*          the primary group to which this user belongs,
 	*          or false otherwise.
 	*/
-	@:overload public function isPrimaryGroup() : Bool;
+	@:overload @:public public function isPrimaryGroup() : Bool;
 	
 	/**
 	* Return a string representation of this
@@ -101,7 +101,7 @@ extern class UnixNumericGroupPrincipal implements java.security.Principal implem
 	* @return a string representation of this
 	*          <code>UnixNumericGroupPrincipal</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares the specified Object with this
@@ -119,7 +119,7 @@ extern class UnixNumericGroupPrincipal implements java.security.Principal implem
 	* @return true if the specified Object is equal equal to this
 	*          <code>UnixNumericGroupPrincipal</code>.
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Return a hash code for this <code>UnixNumericGroupPrincipal</code>.
@@ -128,7 +128,7 @@ extern class UnixNumericGroupPrincipal implements java.security.Principal implem
 	*
 	* @return a hash code for this <code>UnixNumericGroupPrincipal</code>.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

@@ -47,35 +47,35 @@ extern class StrikeMetrics
 	* Note that the ascent fields are typically a -ve value as we use a top-left
 	* origin user space, and text is positioned relative to its baseline.
 	*/
-	public var ascentX : Single;
+	@:public public var ascentX : Single;
 	
-	public var ascentY : Single;
+	@:public public var ascentY : Single;
 	
-	public var descentX : Single;
+	@:public public var descentX : Single;
 	
-	public var descentY : Single;
+	@:public public var descentY : Single;
 	
-	public var baselineX : Single;
+	@:public public var baselineX : Single;
 	
-	public var baselineY : Single;
+	@:public public var baselineY : Single;
 	
-	public var leadingX : Single;
+	@:public public var leadingX : Single;
 	
-	public var leadingY : Single;
+	@:public public var leadingY : Single;
 	
-	public var maxAdvanceX : Single;
+	@:public public var maxAdvanceX : Single;
 	
-	public var maxAdvanceY : Single;
+	@:public public var maxAdvanceY : Single;
 	
-	@:overload public function getAscent() : Single;
+	@:overload @:public public function getAscent() : Single;
 	
-	@:overload public function getDescent() : Single;
+	@:overload @:public public function getDescent() : Single;
 	
-	@:overload public function getLeading() : Single;
+	@:overload @:public public function getLeading() : Single;
 	
-	@:overload public function getMaxAdvance() : Single;
+	@:overload @:public public function getMaxAdvance() : Single;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

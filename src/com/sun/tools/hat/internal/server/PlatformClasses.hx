@@ -30,9 +30,9 @@ package com.sun.tools.hat.internal.server;
 */
 extern class PlatformClasses
 {
-	@:overload @:synchronized public static function getNames() : java.NativeArray<String>;
+	@:overload @:public @:static @:synchronized public static function getNames() : java.NativeArray<String>;
 	
-	@:overload public static function isPlatformClass(clazz : com.sun.tools.hat.internal.model.JavaClass) : Bool;
+	@:overload @:public @:static public static function isPlatformClass(clazz : com.sun.tools.hat.internal.model.JavaClass) : Bool;
 	
 	
 }

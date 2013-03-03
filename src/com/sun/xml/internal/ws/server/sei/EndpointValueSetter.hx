@@ -28,7 +28,7 @@ package com.sun.xml.internal.ws.server.sei;
 	/**
 	* Returns a {@link EndpointValueSetter} suitable for the given {@link Parameter}.
 	*/
-	@:overload public static function get(p : com.sun.xml.internal.ws.model.ParameterImpl) : com.sun.xml.internal.ws.server.sei.EndpointValueSetter;
+	@:overload @:public @:static public static function get(p : com.sun.xml.internal.ws.model.ParameterImpl) : com.sun.xml.internal.ws.server.sei.EndpointValueSetter;
 	
 	
 }
@@ -37,15 +37,15 @@ package com.sun.xml.internal.ws.server.sei;
 	/**
 	* Index of the argument to put the value to.
 	*/
-	private var idx(default, null) : Int;
+	@:protected @:final private var idx(default, null) : Int;
 	
-	@:overload public function new(idx : Int) : Void;
+	@:overload @:public public function new(idx : Int) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$server$sei$EndpointValueSetter$HolderParam') @:internal extern class EndpointValueSetter_HolderParam extends com.sun.xml.internal.ws.server.sei.EndpointValueSetter.EndpointValueSetter_Param
 {
-	@:overload public function new(idx : Int) : Void;
+	@:overload @:public public function new(idx : Int) : Void;
 	
 	
 }

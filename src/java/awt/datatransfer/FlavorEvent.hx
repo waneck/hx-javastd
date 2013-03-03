@@ -32,7 +32,7 @@ extern class FlavorEvent extends java.util.EventObject
 	*
 	* @throws IllegalArgumentException if the {@code source} is {@code null}
 	*/
-	@:overload public function new(source : java.awt.datatransfer.Clipboard) : Void;
+	@:overload @:public public function new(source : java.awt.datatransfer.Clipboard) : Void;
 	
 	
 }

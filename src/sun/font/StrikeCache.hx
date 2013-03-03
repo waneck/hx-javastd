@@ -25,11 +25,11 @@ package sun.font;
 */
 extern class StrikeCache
 {
-	@:overload public static function addGlyphDisposedListener(listener : sun.font.GlyphDisposedListener) : Void;
+	@:overload @:public @:static public static function addGlyphDisposedListener(listener : sun.font.GlyphDisposedListener) : Void;
 	
-	@:overload public static function getStrikeRef(strike : sun.font.FontStrike) : java.lang.ref.Reference<Dynamic>;
+	@:overload @:public @:static public static function getStrikeRef(strike : sun.font.FontStrike) : java.lang.ref.Reference<Dynamic>;
 	
-	@:overload public static function getStrikeRef(strike : sun.font.FontStrike, weak : Bool) : java.lang.ref.Reference<Dynamic>;
+	@:overload @:public @:static public static function getStrikeRef(strike : sun.font.FontStrike, weak : Bool) : java.lang.ref.Reference<Dynamic>;
 	
 	
 }
@@ -41,13 +41,13 @@ extern class StrikeCache
 }
 @:native('sun$font$StrikeCache$SoftDisposerRef') @:internal extern class StrikeCache_SoftDisposerRef extends java.lang.ref.SoftReference<Dynamic> implements sun.font.StrikeCache.StrikeCache_DisposableStrike
 {
-	@:overload public function getDisposer() : sun.font.FontStrikeDisposer;
+	@:overload @:public public function getDisposer() : sun.font.FontStrikeDisposer;
 	
 	
 }
 @:native('sun$font$StrikeCache$WeakDisposerRef') @:internal extern class StrikeCache_WeakDisposerRef extends java.lang.ref.WeakReference<Dynamic> implements sun.font.StrikeCache.StrikeCache_DisposableStrike
 {
-	@:overload public function getDisposer() : sun.font.FontStrikeDisposer;
+	@:overload @:public public function getDisposer() : sun.font.FontStrikeDisposer;
 	
 	
 }

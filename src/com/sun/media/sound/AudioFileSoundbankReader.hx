@@ -30,13 +30,13 @@ extern class AudioFileSoundbankReader extends javax.sound.midi.spi.SoundbankRead
 	*
 	* @author Karl Helgason
 	*/
-	@:overload override public function getSoundbank(url : java.net.URL) : javax.sound.midi.Soundbank;
+	@:overload @:public override public function getSoundbank(url : java.net.URL) : javax.sound.midi.Soundbank;
 	
-	@:overload override public function getSoundbank(stream : java.io.InputStream) : javax.sound.midi.Soundbank;
+	@:overload @:public override public function getSoundbank(stream : java.io.InputStream) : javax.sound.midi.Soundbank;
 	
-	@:overload public function getSoundbank(ais : javax.sound.sampled.AudioInputStream) : javax.sound.midi.Soundbank;
+	@:overload @:public public function getSoundbank(ais : javax.sound.sampled.AudioInputStream) : javax.sound.midi.Soundbank;
 	
-	@:overload override public function getSoundbank(file : java.io.File) : javax.sound.midi.Soundbank;
+	@:overload @:public override public function getSoundbank(file : java.io.File) : javax.sound.midi.Soundbank;
 	
 	
 }

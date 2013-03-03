@@ -38,7 +38,7 @@ package java.lang;
 	/**
 	* Constructs a {@code BootstrapMethodError} with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a {@code BootstrapMethodError} with the specified
@@ -46,7 +46,7 @@ package java.lang;
 	*
 	* @param s the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs a {@code BootstrapMethodError} with the specified
@@ -55,7 +55,7 @@ package java.lang;
 	* @param s the detail message.
 	* @param cause the cause, may be {@code null}.
 	*/
-	@:overload public function new(s : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(s : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a {@code BootstrapMethodError} with the specified
@@ -63,7 +63,7 @@ package java.lang;
 	*
 	* @param cause the cause, may be {@code null}.
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

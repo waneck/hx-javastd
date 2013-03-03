@@ -39,7 +39,7 @@ extern class IllegalPathStateException extends java.lang.RuntimeException
 	*
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>IllegalPathStateException</code> with the
@@ -47,7 +47,7 @@ extern class IllegalPathStateException extends java.lang.RuntimeException
 	* @param   s   the detail message
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function new(s : String) : Void;
+	@:require(java2) @:overload @:public public function new(s : String) : Void;
 	
 	
 }

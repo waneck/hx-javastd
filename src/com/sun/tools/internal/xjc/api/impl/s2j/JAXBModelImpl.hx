@@ -25,17 +25,17 @@ package com.sun.tools.internal.xjc.api.impl.s2j;
 */
 @:internal extern class JAXBModelImpl implements com.sun.tools.internal.xjc.api.S2JJAXBModel
 {
-	@:overload public function generateCode(extensions : java.NativeArray<com.sun.tools.internal.xjc.Plugin>, errorListener : com.sun.tools.internal.xjc.api.ErrorListener) : com.sun.codemodel.internal.JCodeModel;
+	@:overload @:public public function generateCode(extensions : java.NativeArray<com.sun.tools.internal.xjc.Plugin>, errorListener : com.sun.tools.internal.xjc.api.ErrorListener) : com.sun.codemodel.internal.JCodeModel;
 	
-	@:overload public function getAllObjectFactories() : java.util.List<com.sun.codemodel.internal.JClass>;
+	@:overload @:public public function getAllObjectFactories() : java.util.List<com.sun.codemodel.internal.JClass>;
 	
-	@:overload @:final public function get(elementName : javax.xml.namespace.QName) : com.sun.tools.internal.xjc.api.Mapping;
+	@:overload @:public @:final public function get(elementName : javax.xml.namespace.QName) : com.sun.tools.internal.xjc.api.Mapping;
 	
-	@:overload @:final public function getMappings() : java.util.Collection<com.sun.tools.internal.xjc.api.Mapping>;
+	@:overload @:public @:final public function getMappings() : java.util.Collection<com.sun.tools.internal.xjc.api.Mapping>;
 	
-	@:overload public function getJavaType(xmlTypeName : javax.xml.namespace.QName) : com.sun.tools.internal.xjc.api.TypeAndAnnotation;
+	@:overload @:public public function getJavaType(xmlTypeName : javax.xml.namespace.QName) : com.sun.tools.internal.xjc.api.TypeAndAnnotation;
 	
-	@:overload @:final public function getClassList() : java.util.List<String>;
+	@:overload @:public @:final public function getClassList() : java.util.List<String>;
 	
 	
 }

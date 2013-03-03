@@ -25,9 +25,9 @@ package com.sun.tools.jdi;
 */
 extern class StringReferenceImpl extends com.sun.tools.jdi.ObjectReferenceImpl implements com.sun.jdi.StringReference
 {
-	@:overload public function value() : String;
+	@:overload @:public public function value() : String;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

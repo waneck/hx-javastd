@@ -29,17 +29,17 @@ package sun.security.krb5.internal.crypto;
 */
 extern class DesCbcMd5EType extends sun.security.krb5.internal.crypto.DesCbcEType
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function eType() : Int;
+	@:overload @:public override public function eType() : Int;
 	
-	@:overload public function minimumPadSize() : Int;
+	@:overload @:public override public function minimumPadSize() : Int;
 	
-	@:overload public function confounderSize() : Int;
+	@:overload @:public override public function confounderSize() : Int;
 	
-	@:overload public function checksumType() : Int;
+	@:overload @:public override public function checksumType() : Int;
 	
-	@:overload public function checksumSize() : Int;
+	@:overload @:public override public function checksumSize() : Int;
 	
 	/**
 	* Calculates checksum using MD5.
@@ -49,7 +49,7 @@ extern class DesCbcMd5EType extends sun.security.krb5.internal.crypto.DesCbcETyp
 	*
 	* @modified by Yanni Zhang, 12/06/99.
 	*/
-	@:overload private function calculateChecksum(data : java.NativeArray<java.StdTypes.Int8>, size : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function calculateChecksum(data : java.NativeArray<java.StdTypes.Int8>, size : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

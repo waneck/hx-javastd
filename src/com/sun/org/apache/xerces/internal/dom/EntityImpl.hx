@@ -21,82 +21,82 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class EntityImpl extends com.sun.org.apache.xerces.internal.dom.ParentNode implements org.w3c.dom.Entity
 {
 	/** Entity name. */
-	private var name : String;
+	@:protected private var name : String;
 	
 	/** Public identifier. */
-	private var publicId : String;
+	@:protected private var publicId : String;
 	
 	/** System identifier. */
-	private var systemId : String;
+	@:protected private var systemId : String;
 	
 	/** Encoding */
-	private var encoding : String;
+	@:protected private var encoding : String;
 	
 	/** Input Encoding */
-	private var inputEncoding : String;
+	@:protected private var inputEncoding : String;
 	
 	/** Version */
-	private var version : String;
+	@:protected private var version : String;
 	
 	/** Notation name. */
-	private var notationName : String;
+	@:protected private var notationName : String;
 	
 	/** base uri*/
-	private var baseURI : String;
+	@:protected private var baseURI : String;
 	
 	/** Factory constructor. */
-	@:overload public function new(ownerDoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, name : String) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, name : String) : Void;
 	
 	/**
 	* A short integer indicating what type of node this is. The named
 	* constants for this value are defined in the org.w3c.dom.Node interface.
 	*/
-	@:overload override public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public override public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the entity name
 	*/
-	@:overload override public function getNodeName() : String;
+	@:overload @:public override public function getNodeName() : String;
 	
 	/**
 	* Sets the node value.
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR)
 	*/
-	@:overload override public function setNodeValue(x : String) : Void;
+	@:overload @:public override public function setNodeValue(x : String) : Void;
 	
 	/**
 	* The namespace prefix of this node
 	* @exception DOMException
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
 	*/
-	@:overload override public function setPrefix(prefix : String) : Void;
+	@:overload @:public override public function setPrefix(prefix : String) : Void;
 	
 	/** Clone node. */
-	@:overload override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* The public identifier associated with the entity. If not specified,
 	* this will be null.
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* The system identifier associated with the entity. If not specified,
 	* this will be null.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* DOM Level 3 WD - experimental
 	* the version number of this entity, when it is an external parsed entity.
 	*/
-	@:overload public function getXmlVersion() : String;
+	@:overload @:public public function getXmlVersion() : String;
 	
 	/**
 	* DOM Level 3 WD - experimental
 	* the encoding of this entity, when it is an external parsed entity.
 	*/
-	@:overload public function getXmlEncoding() : String;
+	@:overload @:public public function getXmlEncoding() : String;
 	
 	/**
 	* Unparsed entities -- which contain non-XML data -- have a
@@ -104,12 +104,12 @@ extern class EntityImpl extends com.sun.org.apache.xerces.internal.dom.ParentNod
 	* Parsed entities, which <em>are</em> in XML format, don't need this and
 	* set it to null.
 	*/
-	@:overload public function getNotationName() : String;
+	@:overload @:public public function getNotationName() : String;
 	
 	/**
 	* DOM Level 2: The public identifier associated with the entity. If not specified,
 	* this will be null. */
-	@:overload public function setPublicId(id : String) : Void;
+	@:overload @:public public function setPublicId(id : String) : Void;
 	
 	/**
 	* NON-DOM
@@ -118,7 +118,7 @@ extern class EntityImpl extends com.sun.org.apache.xerces.internal.dom.ParentNod
 	* This is null otherwise
 	*
 	*/
-	@:overload public function setXmlEncoding(value : String) : Void;
+	@:overload @:public public function setXmlEncoding(value : String) : Void;
 	
 	/**
 	* An attribute specifying the encoding used for this entity at the tiome
@@ -127,12 +127,12 @@ extern class EntityImpl extends com.sun.org.apache.xerces.internal.dom.ParentNod
 	* is not known..
 	* @since DOM Level 3
 	*/
-	@:overload public function getInputEncoding() : String;
+	@:overload @:public public function getInputEncoding() : String;
 	
 	/**
 	* NON-DOM, used to set the input encoding.
 	*/
-	@:overload public function setInputEncoding(inputEncoding : String) : Void;
+	@:overload @:public public function setInputEncoding(inputEncoding : String) : Void;
 	
 	/**
 	* NON-DOM
@@ -140,13 +140,13 @@ extern class EntityImpl extends com.sun.org.apache.xerces.internal.dom.ParentNod
 	* the version number of this entity, when it is an external parsed entity.
 	* This is null otherwise
 	*/
-	@:overload public function setXmlVersion(value : String) : Void;
+	@:overload @:public public function setXmlVersion(value : String) : Void;
 	
 	/**
 	* DOM Level 2: The system identifier associated with the entity. If not
 	* specified, this will be null.
 	*/
-	@:overload public function setSystemId(id : String) : Void;
+	@:overload @:public public function setSystemId(id : String) : Void;
 	
 	/**
 	* DOM Level 2: Unparsed entities -- which contain non-XML data -- have a
@@ -154,7 +154,7 @@ extern class EntityImpl extends com.sun.org.apache.xerces.internal.dom.ParentNod
 	* Parsed entities, which <em>are</em> in XML format, don't need this and
 	* set it to null.
 	*/
-	@:overload public function setNotationName(name : String) : Void;
+	@:overload @:public public function setNotationName(name : String) : Void;
 	
 	/**
 	* Returns the absolute base URI of this node or null if the implementation
@@ -164,10 +164,10 @@ extern class EntityImpl extends com.sun.org.apache.xerces.internal.dom.ParentNod
 	* @return The absolute base URI of this node or null.
 	* @since DOM Level 3
 	*/
-	@:overload override public function getBaseURI() : String;
+	@:overload @:public override public function getBaseURI() : String;
 	
 	/** NON-DOM: set base uri*/
-	@:overload public function setBaseURI(uri : String) : Void;
+	@:overload @:public public function setBaseURI(uri : String) : Void;
 	
 	
 }

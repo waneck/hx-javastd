@@ -22,30 +22,30 @@ package com.sun.org.apache.xml.internal.security.transforms.implementations;
 extern class TransformEnvelopedSignature extends com.sun.org.apache.xml.internal.security.transforms.TransformSpi
 {
 	/** Field implementedTransformURI */
-	public static var implementedTransformURI(default, null) : String;
+	@:public @:static @:final public static var implementedTransformURI(default, null) : String;
 	
 	/**
 	* Method engineGetURI
 	*
 	* @inheritDoc
 	*/
-	@:overload override private function engineGetURI() : String;
+	@:overload @:protected override private function engineGetURI() : String;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:protected override private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	
 }
 @:native('com$sun$org$apache$xml$internal$security$transforms$implementations$TransformEnvelopedSignature$EnvelopedNodeFilter') @:internal extern class TransformEnvelopedSignature_EnvelopedNodeFilter implements com.sun.org.apache.xml.internal.security.signature.NodeFilter
 {
-	@:overload public function isNodeIncludeDO(n : org.w3c.dom.Node, level : Int) : Int;
+	@:overload @:public public function isNodeIncludeDO(n : org.w3c.dom.Node, level : Int) : Int;
 	
 	/**
 	* @see com.sun.org.apache.xml.internal.security.signature.NodeFilter#isNodeInclude(org.w3c.dom.Node)
 	*/
-	@:overload public function isNodeInclude(n : org.w3c.dom.Node) : Int;
+	@:overload @:public public function isNodeInclude(n : org.w3c.dom.Node) : Int;
 	
 	
 }

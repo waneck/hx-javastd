@@ -26,18 +26,18 @@ package sun.rmi.transport.proxy;
 extern class RMIMasterSocketFactory extends java.rmi.server.RMISocketFactory
 {
 	/** default factory to initally use for direct socket connection */
-	private var initialFactory : java.rmi.server.RMISocketFactory;
+	@:protected private var initialFactory : java.rmi.server.RMISocketFactory;
 	
 	/** ordered list of factories to try as alternate connection
 	* mechanisms if a direct socket connections fails */
-	private var altFactoryList : java.util.Vector<Dynamic>;
+	@:protected private var altFactoryList : java.util.Vector<Dynamic>;
 	
 	/**
 	* Create a RMIMasterSocketFactory object.  Establish order of
 	* connection mechanisms to attempt on createSocket, if a direct
 	* socket connection fails.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a new client socket.  If we remember connecting to this host
@@ -45,12 +45,12 @@ extern class RMIMasterSocketFactory extends java.rmi.server.RMISocketFactory
 	* try using a direct socket connection and then the alternate factories
 	* in the order specified in altFactoryList.
 	*/
-	@:overload override public function createSocket(host : String, port : Int) : java.net.Socket;
+	@:overload @:public override public function createSocket(host : String, port : Int) : java.net.Socket;
 	
 	/**
 	* Create a new server socket.
 	*/
-	@:overload override public function createServerSocket(port : Int) : java.net.ServerSocket;
+	@:overload @:public override public function createServerSocket(port : Int) : java.net.ServerSocket;
 	
 	
 }
@@ -65,7 +65,7 @@ extern class RMIMasterSocketFactory extends java.rmi.server.RMISocketFactory
 	* Attempt socket connection in separate thread.  If successful,
 	* notify master waiting,
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

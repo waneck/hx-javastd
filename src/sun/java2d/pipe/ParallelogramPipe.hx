@@ -45,7 +45,7 @@ extern interface ParallelogramPipe
 	* primitive (such as for calculating the user space bounds for the
 	* Paint.createContext() method).
 	*/
-	@:overload public function fillParallelogram(sg : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
+	@:overload @:public public function fillParallelogram(sg : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
 	
 	/**
 	* Draw a Parallelogram with the indicated line widths
@@ -58,7 +58,7 @@ extern interface ParallelogramPipe
 	* same parallelogram by lw/2 pixels and filling the
 	* difference between the outer and inner parallelograms.
 	*/
-	@:overload public function drawParallelogram(sg : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float) : Void;
+	@:overload @:public public function drawParallelogram(sg : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float) : Void;
 	
 	
 }

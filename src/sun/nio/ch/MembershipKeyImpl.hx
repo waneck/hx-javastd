@@ -25,23 +25,23 @@ package sun.nio.ch;
 */
 @:internal extern class MembershipKeyImpl extends java.nio.channels.MembershipKey
 {
-	@:overload public function isValid() : Bool;
+	@:overload @:public override public function isValid() : Bool;
 	
-	@:overload public function drop() : Void;
+	@:overload @:public override public function drop() : Void;
 	
-	@:overload public function channel() : java.nio.channels.MulticastChannel;
+	@:overload @:public override public function channel() : java.nio.channels.MulticastChannel;
 	
-	@:overload public function group() : java.net.InetAddress;
+	@:overload @:public override public function group() : java.net.InetAddress;
 	
-	@:overload public function networkInterface() : java.net.NetworkInterface;
+	@:overload @:public override public function networkInterface() : java.net.NetworkInterface;
 	
-	@:overload public function sourceAddress() : java.net.InetAddress;
+	@:overload @:public override public function sourceAddress() : java.net.InetAddress;
 	
-	@:overload public function block(toBlock : java.net.InetAddress) : java.nio.channels.MembershipKey;
+	@:overload @:public override public function block(toBlock : java.net.InetAddress) : java.nio.channels.MembershipKey;
 	
-	@:overload public function unblock(toUnblock : java.net.InetAddress) : java.nio.channels.MembershipKey;
+	@:overload @:public override public function unblock(toUnblock : java.net.InetAddress) : java.nio.channels.MembershipKey;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

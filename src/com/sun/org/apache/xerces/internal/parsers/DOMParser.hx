@@ -21,39 +21,39 @@ package com.sun.org.apache.xerces.internal.parsers;
 extern class DOMParser extends com.sun.org.apache.xerces.internal.parsers.AbstractDOMParser
 {
 	/** Feature identifier: EntityResolver2. */
-	private static var USE_ENTITY_RESOLVER2(default, null) : String;
+	@:protected @:static @:final private static var USE_ENTITY_RESOLVER2(default, null) : String;
 	
-	private static var REPORT_WHITESPACE(default, null) : String;
+	@:protected @:static @:final private static var REPORT_WHITESPACE(default, null) : String;
 	
 	/** Property identifier: symbol table. */
-	private static var SYMBOL_TABLE(default, null) : String;
+	@:protected @:static @:final private static var SYMBOL_TABLE(default, null) : String;
 	
 	/** Property identifier: XML grammar pool. */
-	private static var XMLGRAMMAR_POOL(default, null) : String;
+	@:protected @:static @:final private static var XMLGRAMMAR_POOL(default, null) : String;
 	
 	/** Use EntityResolver2. */
-	private var fUseEntityResolver2 : Bool;
+	@:protected private var fUseEntityResolver2 : Bool;
 	
 	/**
 	* Constructs a DOM parser using the specified parser configuration.
 	*/
-	@:overload public function new(config : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration) : Void;
+	@:overload @:public public function new(config : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration) : Void;
 	
 	/**
 	* Constructs a DOM parser using the dtd/xml schema parser configuration.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a DOM parser using the specified symbol table.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
 	/**
 	* Constructs a DOM parser using the specified symbol table and
 	* grammar pool.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
 	
 	/**
 	* Parses the input source specified by the given system identifier.
@@ -68,7 +68,7 @@ extern class DOMParser extends com.sun.org.apache.xerces.internal.parsers.Abstra
 	* @exception org.xml.sax.SAXException Throws exception on SAX error.
 	* @exception java.io.IOException Throws exception on i/o error.
 	*/
-	@:overload public function parse(systemId : String) : Void;
+	@:overload @:public public function parse(systemId : String) : Void;
 	
 	/**
 	* parse
@@ -78,7 +78,7 @@ extern class DOMParser extends com.sun.org.apache.xerces.internal.parsers.Abstra
 	* @exception org.xml.sax.SAXException
 	* @exception java.io.IOException
 	*/
-	@:overload public function parse(inputSource : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function parse(inputSource : org.xml.sax.InputSource) : Void;
 	
 	/**
 	* Sets the resolver used to resolve external entities. The EntityResolver
@@ -87,7 +87,7 @@ extern class DOMParser extends com.sun.org.apache.xerces.internal.parsers.Abstra
 	* @param resolver The new entity resolver. Passing a null value will
 	*                 uninstall the currently installed resolver.
 	*/
-	@:overload public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
 	
 	/**
 	* Return the current entity resolver.
@@ -96,7 +96,7 @@ extern class DOMParser extends com.sun.org.apache.xerces.internal.parsers.Abstra
 	*         has been registered.
 	* @see #setEntityResolver
 	*/
-	@:overload public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
 	/**
 	* Allow an application to register an error event handler.
@@ -116,7 +116,7 @@ extern class DOMParser extends com.sun.org.apache.xerces.internal.parsers.Abstra
 	*            argument is null.
 	* @see #getErrorHandler
 	*/
-	@:overload public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Return the current error handler.
@@ -125,7 +125,7 @@ extern class DOMParser extends com.sun.org.apache.xerces.internal.parsers.Abstra
 	*         has been registered.
 	* @see #setErrorHandler
 	*/
-	@:overload public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
 	/**
 	* Set the state of any feature in a SAX2 parser.  The parser
@@ -141,7 +141,7 @@ extern class DOMParser extends com.sun.org.apache.xerces.internal.parsers.Abstra
 	*            requested feature is known, but the requested
 	*            state is not supported.
 	*/
-	@:overload public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload @:public public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* Query the state of a feature.
@@ -157,7 +157,7 @@ extern class DOMParser extends com.sun.org.apache.xerces.internal.parsers.Abstra
 	* @exception SAXNotSupportedException If the
 	*            requested feature is known but not supported.
 	*/
-	@:overload override public function getFeature(featureId : String) : Bool;
+	@:overload @:public override public function getFeature(featureId : String) : Bool;
 	
 	/**
 	* Set the value of any property in a SAX2 parser.  The parser
@@ -174,7 +174,7 @@ extern class DOMParser extends com.sun.org.apache.xerces.internal.parsers.Abstra
 	*            requested property is known, but the requested
 	*            value is not supported.
 	*/
-	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/**
 	* Query the value of a property.
@@ -190,12 +190,12 @@ extern class DOMParser extends com.sun.org.apache.xerces.internal.parsers.Abstra
 	* @exception SAXNotSupportedException If the
 	*            requested property is known but not supported.
 	*/
-	@:overload public function getProperty(propertyId : String) : Dynamic;
+	@:overload @:public public function getProperty(propertyId : String) : Dynamic;
 	
 	/**
 	* Returns this parser's XMLParserConfiguration.
 	*/
-	@:overload public function getXMLParserConfiguration() : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration;
+	@:overload @:public public function getXMLParserConfiguration() : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration;
 	
 	
 }

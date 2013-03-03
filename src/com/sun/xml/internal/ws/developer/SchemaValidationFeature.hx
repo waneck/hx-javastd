@@ -28,48 +28,48 @@ extern class SchemaValidationFeature extends javax.xml.ws.WebServiceFeature
 	/**
 	* Constant value identifying the SchemaValidationFeature
 	*/
-	public static var ID(default, null) : String;
+	@:public @:static @:final public static var ID(default, null) : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create an <code>SchemaValidationFeature</code>.
 	* The instance created will be enabled.
 	*/
-	@:overload public function new(clazz : Class<com.sun.xml.internal.ws.developer.ValidationErrorHandler>) : Void;
+	@:overload @:public public function new(clazz : Class<com.sun.xml.internal.ws.developer.ValidationErrorHandler>) : Void;
 	
 	/**
 	* @since JAX-WS RI 2.2.2
 	*/
-	@:require(java2) @:overload public function new(inbound : Bool, outbound : Bool) : Void;
+	@:require(java2) @:overload @:public public function new(inbound : Bool, outbound : Bool) : Void;
 	
 	/**
 	* @since JAX-WS RI 2.2.2
 	*/
-	@:require(java2) @:overload public function new(inbound : Bool, outbound : Bool, clazz : Class<com.sun.xml.internal.ws.developer.ValidationErrorHandler>) : Void;
+	@:require(java2) @:overload @:public public function new(inbound : Bool, outbound : Bool, clazz : Class<com.sun.xml.internal.ws.developer.ValidationErrorHandler>) : Void;
 	
-	@:overload override public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
 	/**
 	* Invalid schema instances are rejected, a SOAP fault message is created
 	* for any invalid request and response message. If it is set to false, schema
 	* validation messages are just logged.
 	*/
-	@:overload public function getErrorHandler() : Class<com.sun.xml.internal.ws.developer.ValidationErrorHandler>;
+	@:overload @:public public function getErrorHandler() : Class<com.sun.xml.internal.ws.developer.ValidationErrorHandler>;
 	
 	/**
 	* Turns validation on/off for inbound messages
 	*
 	* @since JAX-WS RI 2.2.2
 	*/
-	@:require(java2) @:overload public function isInbound() : Bool;
+	@:require(java2) @:overload @:public public function isInbound() : Bool;
 	
 	/**
 	* Turns validation on/off for outbound messages
 	*
 	* @since JAX-WS RI 2.2.2
 	*/
-	@:require(java2) @:overload public function isOutbound() : Bool;
+	@:require(java2) @:overload @:public public function isOutbound() : Bool;
 	
 	
 }

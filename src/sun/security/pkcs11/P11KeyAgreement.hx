@@ -25,17 +25,17 @@ package sun.security.pkcs11;
 */
 @:internal extern class P11KeyAgreement extends javax.crypto.KeyAgreementSpi
 {
-	@:overload override private function engineInit(key : java.security.Key, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(key : java.security.Key, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineDoPhase(key : java.security.Key, lastPhase : Bool) : java.security.Key;
+	@:overload @:protected override private function engineDoPhase(key : java.security.Key, lastPhase : Bool) : java.security.Key;
 	
-	@:overload override private function engineGenerateSecret() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineGenerateSecret() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineGenerateSecret(sharedSecret : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Int;
+	@:overload @:protected override private function engineGenerateSecret(sharedSecret : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Int;
 	
-	@:overload override private function engineGenerateSecret(algorithm : String) : javax.crypto.SecretKey;
+	@:overload @:protected override private function engineGenerateSecret(algorithm : String) : javax.crypto.SecretKey;
 	
 	
 }

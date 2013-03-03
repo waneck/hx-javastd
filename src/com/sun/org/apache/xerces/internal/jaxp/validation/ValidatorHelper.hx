@@ -26,7 +26,7 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 	*
 	* @author Michael Glavassevich, IBM
 	*/
-	@:overload public function validate(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
+	@:overload @:public public function validate(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
 	
 	
 }

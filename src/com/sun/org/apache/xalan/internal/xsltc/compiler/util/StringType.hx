@@ -27,17 +27,17 @@ extern class StringType extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	* @author Jacek Ambroziak
 	* @author Santiago Pericas-Geertsen
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload override public function identicalTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Bool;
+	@:overload @:public override public function identicalTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Bool;
 	
-	@:overload override public function toSignature() : String;
+	@:overload @:public override public function toSignature() : String;
 	
-	@:overload override public function isSimple() : Bool;
+	@:overload @:public override public function isSimple() : Bool;
 	
-	@:overload override public function toJCType() : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public override public function toJCType() : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/**
 	* Translates a string into an object of internal type <code>type</code>.
@@ -46,14 +46,14 @@ extern class StringType extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	*
 	* @see     com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type#translateTo
 	*/
-	@:overload override public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
+	@:overload @:public override public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
 	
 	/**
 	* Translates a string into a synthesized boolean.
 	*
 	* @see     com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type#translateTo
 	*/
-	@:overload public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.BooleanType) : Void;
+	@:overload @:public public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.BooleanType) : Void;
 	
 	/**
 	* Translates a string into a real by calling stringToReal() from the
@@ -61,7 +61,7 @@ extern class StringType extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	*
 	* @see     com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type#translateTo
 	*/
-	@:overload public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.RealType) : Void;
+	@:overload @:public public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.RealType) : Void;
 	
 	/**
 	* Translates a string into a non-synthesized boolean. It does not push a
@@ -70,7 +70,7 @@ extern class StringType extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	*
 	* @see     com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type#translateToDesynthesized
 	*/
-	@:overload override public function translateToDesynthesized(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.BooleanType) : com.sun.org.apache.xalan.internal.xsltc.compiler.FlowList;
+	@:overload @:public override public function translateToDesynthesized(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.BooleanType) : com.sun.org.apache.xalan.internal.xsltc.compiler.FlowList;
 	
 	/**
 	* Expects a string on the stack and pushes a boxed string.
@@ -78,40 +78,40 @@ extern class StringType extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	*
 	* @see     com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type#translateTo
 	*/
-	@:overload public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ReferenceType) : Void;
+	@:overload @:public public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ReferenceType) : Void;
 	
 	/**
 	* Translates a internal string into an external (Java) string.
 	*
 	* @see     com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type#translateFrom
 	*/
-	@:overload override public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, clazz : Class<Dynamic>) : Void;
+	@:overload @:public override public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, clazz : Class<Dynamic>) : Void;
 	
 	/**
 	* Translates an external (primitive) Java type into a string.
 	*
 	* @see     com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type#translateFrom
 	*/
-	@:overload override public function translateFrom(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, clazz : Class<Dynamic>) : Void;
+	@:overload @:public override public function translateFrom(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, clazz : Class<Dynamic>) : Void;
 	
 	/**
 	* Translates an object of this type to its boxed representation.
 	*/
-	@:overload override public function translateBox(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translateBox(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Translates an object of this type to its unboxed representation.
 	*/
-	@:overload override public function translateUnBox(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translateUnBox(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Returns the class name of an internal type's external representation.
 	*/
-	@:overload override public function getClassName() : String;
+	@:overload @:public override public function getClassName() : String;
 	
-	@:overload override public function LOAD(slot : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public override public function LOAD(slot : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload override public function STORE(slot : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public override public function STORE(slot : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	
 }

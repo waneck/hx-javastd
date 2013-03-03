@@ -25,27 +25,27 @@ package com.sun.naming.internal;
 */
 extern class VersionHelper
 {
-	public static var INITIAL_CONTEXT_FACTORY(default, null) : Int;
+	@:public @:final @:static public static var INITIAL_CONTEXT_FACTORY(default, null) : Int;
 	
-	public static var OBJECT_FACTORIES(default, null) : Int;
+	@:public @:final @:static public static var OBJECT_FACTORIES(default, null) : Int;
 	
-	public static var URL_PKG_PREFIXES(default, null) : Int;
+	@:public @:final @:static public static var URL_PKG_PREFIXES(default, null) : Int;
 	
-	public static var STATE_FACTORIES(default, null) : Int;
+	@:public @:final @:static public static var STATE_FACTORIES(default, null) : Int;
 	
-	public static var PROVIDER_URL(default, null) : Int;
+	@:public @:final @:static public static var PROVIDER_URL(default, null) : Int;
 	
-	public static var DNS_URL(default, null) : Int;
+	@:public @:final @:static public static var DNS_URL(default, null) : Int;
 	
-	public static var CONTROL_FACTORIES(default, null) : Int;
+	@:public @:final @:static public static var CONTROL_FACTORIES(default, null) : Int;
 	
-	@:overload public static function getVersionHelper() : com.sun.naming.internal.VersionHelper;
+	@:overload @:public @:static public static function getVersionHelper() : com.sun.naming.internal.VersionHelper;
 	
-	@:overload @:abstract public function loadClass(className : String) : Class<Dynamic>;
+	@:overload @:public @:abstract public function loadClass(className : String) : Class<Dynamic>;
 	
-	@:overload @:abstract public function loadClass(className : String, codebase : String) : Class<Dynamic>;
+	@:overload @:public @:abstract public function loadClass(className : String, codebase : String) : Class<Dynamic>;
 	
-	@:overload private static function getUrlArray(codebase : String) : java.NativeArray<java.net.URL>;
+	@:overload @:static @:protected private static function getUrlArray(codebase : String) : java.NativeArray<java.net.URL>;
 	
 	
 }

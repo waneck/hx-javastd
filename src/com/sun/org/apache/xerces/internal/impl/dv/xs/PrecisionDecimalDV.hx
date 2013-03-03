@@ -23,20 +23,20 @@ package com.sun.org.apache.xerces.internal.impl.dv.xs;
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.impl.dv.xs.TypeValidator#getAllowedFacets()
 	*/
-	@:overload override public function getAllowedFacets() : java.StdTypes.Int16;
+	@:overload @:public override public function getAllowedFacets() : java.StdTypes.Int16;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.impl.dv.xs.TypeValidator#getActualValue(java.lang.String, com.sun.org.apache.xerces.internal.impl.dv.ValidationContext)
 	*/
-	@:overload override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
+	@:overload @:public override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
 	
-	@:overload override public function compare(value1 : Dynamic, value2 : Dynamic) : Int;
+	@:overload @:public override public function compare(value1 : Dynamic, value2 : Dynamic) : Int;
 	
-	@:overload override public function getFractionDigits(value : Dynamic) : Int;
+	@:overload @:public override public function getFractionDigits(value : Dynamic) : Int;
 	
-	@:overload override public function getTotalDigits(value : Dynamic) : Int;
+	@:overload @:public override public function getTotalDigits(value : Dynamic) : Int;
 	
-	@:overload override public function isIdentical(value1 : Dynamic, value2 : Dynamic) : Bool;
+	@:overload @:public override public function isIdentical(value1 : Dynamic, value2 : Dynamic) : Bool;
 	
 	
 }
@@ -50,17 +50,17 @@ package com.sun.org.apache.xerces.internal.impl.dv.xs;
 */
 @:native('com$sun$org$apache$xerces$internal$impl$dv$xs$PrecisionDecimalDV$XPrecisionDecimal') @:internal extern class PrecisionDecimalDV_XPrecisionDecimal
 {
-	@:overload public function equals(val : Dynamic) : Bool;
+	@:overload @:public public function equals(val : Dynamic) : Bool;
 	
-	@:overload public function compareTo(val : com.sun.org.apache.xerces.internal.impl.dv.xs.PrecisionDecimalDV.PrecisionDecimalDV_XPrecisionDecimal) : Int;
+	@:overload @:public public function compareTo(val : com.sun.org.apache.xerces.internal.impl.dv.xs.PrecisionDecimalDV.PrecisionDecimalDV_XPrecisionDecimal) : Int;
 	
-	@:overload @:synchronized public function toString() : String;
+	@:overload @:public @:synchronized public function toString() : String;
 	
 	/**
 	* @param decimal
 	* @return
 	*/
-	@:overload public function isIdentical(decimal : com.sun.org.apache.xerces.internal.impl.dv.xs.PrecisionDecimalDV.PrecisionDecimalDV_XPrecisionDecimal) : Bool;
+	@:overload @:public public function isIdentical(decimal : com.sun.org.apache.xerces.internal.impl.dv.xs.PrecisionDecimalDV.PrecisionDecimalDV_XPrecisionDecimal) : Bool;
 	
 	
 }

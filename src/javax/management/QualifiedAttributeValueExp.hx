@@ -39,18 +39,18 @@ package javax.management;
 	* Basic Constructor.
 	* @deprecated see {@link AttributeValueExp#AttributeValueExp()}
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new QualifiedAttributeValueExp representing the specified object
 	* attribute, named attr with class name className.
 	*/
-	@:overload public function new(className : String, attr : String) : Void;
+	@:overload @:public public function new(className : String, attr : String) : Void;
 	
 	/**
 	* Returns a string representation of the class name of the attribute.
 	*/
-	@:overload public function getAttrClassName() : String;
+	@:overload @:public public function getAttrClassName() : String;
 	
 	/**
 	* Applies the QualifiedAttributeValueExp to an MBean.
@@ -64,12 +64,12 @@ package javax.management;
 	* @exception BadAttributeValueExpException
 	* @exception InvalidApplicationException
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
+	@:overload @:public override public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
 	
 	/**
 	* Returns the string representing its value
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

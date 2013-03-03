@@ -37,24 +37,24 @@ package javax.swing;
 	/**
 	* Stops autoscroll events from happening on the specified component.
 	*/
-	@:overload public static function stop(c : javax.swing.JComponent) : Void;
+	@:overload @:public @:static public static function stop(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Stops autoscroll events from happening on the specified component.
 	*/
-	@:overload public static function isRunning(c : javax.swing.JComponent) : Bool;
+	@:overload @:public @:static public static function isRunning(c : javax.swing.JComponent) : Bool;
 	
 	/**
 	* Invoked when a mouse dragged event occurs, will start the autoscroller
 	* if necessary.
 	*/
-	@:overload public static function processMouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:static public static function processMouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* ActionListener method. Invoked when the Timer fires. This will scroll
 	* if necessary.
 	*/
-	@:overload public function actionPerformed(x : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(x : java.awt.event.ActionEvent) : Void;
 	
 	
 }

@@ -41,11 +41,11 @@ extern class StreamingDataHandler extends javax.activation.DataHandler implement
 	*
 	* @author Jitendra Kotamraju
 	*/
-	@:overload public function new(o : Dynamic, s : String) : Void;
+	@:overload @:public public function new(o : Dynamic, s : String) : Void;
 	
-	@:overload public function new(url : java.net.URL) : Void;
+	@:overload @:public public function new(url : java.net.URL) : Void;
 	
-	@:overload public function new(dataSource : javax.activation.DataSource) : Void;
+	@:overload @:public public function new(dataSource : javax.activation.DataSource) : Void;
 	
 	/**
 	* Works like {@link #getInputStream()} except that this method
@@ -77,7 +77,7 @@ extern class StreamingDataHandler extends javax.activation.DataHandler implement
 	* @throws IOException
 	*      if any i/o error
 	*/
-	@:overload @:abstract public function readOnce() : java.io.InputStream;
+	@:overload @:public @:abstract public function readOnce() : java.io.InputStream;
 	
 	/**
 	* Obtains the BLOB into a specified file.
@@ -115,7 +115,7 @@ extern class StreamingDataHandler extends javax.activation.DataHandler implement
 	* calling this method multiple times will cause
 	* undefined behavior.
 	*/
-	@:overload @:abstract public function moveTo(dst : java.io.File) : Void;
+	@:overload @:public @:abstract public function moveTo(dst : java.io.File) : Void;
 	
 	/**
 	* Releases any resources associated with this DataHandler.
@@ -123,7 +123,7 @@ extern class StreamingDataHandler extends javax.activation.DataHandler implement
 	* file will be deleted.) After calling this method, it is
 	* illegal to call any other methods.
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
 	
 }

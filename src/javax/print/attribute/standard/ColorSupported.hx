@@ -28,13 +28,13 @@ extern class ColorSupported extends javax.print.attribute.EnumSyntax implements 
 	/**
 	* The printer is not capable of any type of color printing.
 	*/
-	public static var NOT_SUPPORTED(default, null) : javax.print.attribute.standard.ColorSupported;
+	@:public @:static @:final public static var NOT_SUPPORTED(default, null) : javax.print.attribute.standard.ColorSupported;
 	
 	/**
 	* The printer is capable of some type of color printing, such as
 	* highlight color or full process color.
 	*/
-	public static var SUPPORTED(default, null) : javax.print.attribute.standard.ColorSupported;
+	@:public @:static @:final public static var SUPPORTED(default, null) : javax.print.attribute.standard.ColorSupported;
 	
 	/**
 	* Construct a new color supported enumeration value with the given
@@ -42,17 +42,17 @@ extern class ColorSupported extends javax.print.attribute.EnumSyntax implements 
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class ColorSupported.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class ColorSupported.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -63,7 +63,7 @@ extern class ColorSupported extends javax.print.attribute.EnumSyntax implements 
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -73,7 +73,7 @@ extern class ColorSupported extends javax.print.attribute.EnumSyntax implements 
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

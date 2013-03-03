@@ -37,7 +37,7 @@ extern class Graphics
 	* @see        java.awt.Graphics#create()
 	* @see        java.awt.Component#getGraphics
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates a new <code>Graphics</code> object that is
@@ -45,7 +45,7 @@ extern class Graphics
 	* @return     a new graphics context that is a copy of
 	*                       this graphics context.
 	*/
-	@:overload @:abstract public function create() : java.awt.Graphics;
+	@:overload @:public @:abstract public function create() : java.awt.Graphics;
 	
 	/**
 	* Creates a new <code>Graphics</code> object based on this
@@ -81,7 +81,7 @@ extern class Graphics
 	* @see        java.awt.Graphics#translate
 	* @see        java.awt.Graphics#clipRect
 	*/
-	@:overload public function create(x : Int, y : Int, width : Int, height : Int) : java.awt.Graphics;
+	@:overload @:public public function create(x : Int, y : Int, width : Int, height : Int) : java.awt.Graphics;
 	
 	/**
 	* Translates the origin of the graphics context to the point
@@ -94,7 +94,7 @@ extern class Graphics
 	* @param  x   the <i>x</i> coordinate.
 	* @param  y   the <i>y</i> coordinate.
 	*/
-	@:overload @:abstract public function translate(x : Int, y : Int) : Void;
+	@:overload @:public @:abstract public function translate(x : Int, y : Int) : Void;
 	
 	/**
 	* Gets this graphics context's current color.
@@ -102,7 +102,7 @@ extern class Graphics
 	* @see       java.awt.Color
 	* @see       java.awt.Graphics#setColor(Color)
 	*/
-	@:overload @:abstract public function getColor() : java.awt.Color;
+	@:overload @:public @:abstract public function getColor() : java.awt.Color;
 	
 	/**
 	* Sets this graphics context's current color to the specified
@@ -112,7 +112,7 @@ extern class Graphics
 	* @see       java.awt.Color
 	* @see       java.awt.Graphics#getColor
 	*/
-	@:overload @:abstract public function setColor(c : java.awt.Color) : Void;
+	@:overload @:public @:abstract public function setColor(c : java.awt.Color) : Void;
 	
 	/**
 	* Sets the paint mode of this graphics context to overwrite the
@@ -121,7 +121,7 @@ extern class Graphics
 	* overwrite mode.  All subsequent rendering operations will
 	* overwrite the destination with the current color.
 	*/
-	@:overload @:abstract public function setPaintMode() : Void;
+	@:overload @:public @:abstract public function setPaintMode() : Void;
 	
 	/**
 	* Sets the paint mode of this graphics context to alternate between
@@ -138,7 +138,7 @@ extern class Graphics
 	* drawn twice, then all pixels are restored to their original values.
 	* @param     c1 the XOR alternation color
 	*/
-	@:overload @:abstract public function setXORMode(c1 : java.awt.Color) : Void;
+	@:overload @:public @:abstract public function setXORMode(c1 : java.awt.Color) : Void;
 	
 	/**
 	* Gets the current font.
@@ -146,7 +146,7 @@ extern class Graphics
 	* @see       java.awt.Font
 	* @see       java.awt.Graphics#setFont(Font)
 	*/
-	@:overload @:abstract public function getFont() : java.awt.Font;
+	@:overload @:public @:abstract public function getFont() : java.awt.Font;
 	
 	/**
 	* Sets this graphics context's font to the specified font.
@@ -158,7 +158,7 @@ extern class Graphics
 	* @see     java.awt.Graphics#drawBytes(byte[], int, int, int, int)
 	* @see     java.awt.Graphics#drawChars(char[], int, int, int, int)
 	*/
-	@:overload @:abstract public function setFont(font : java.awt.Font) : Void;
+	@:overload @:public @:abstract public function setFont(font : java.awt.Font) : Void;
 	
 	/**
 	* Gets the font metrics of the current font.
@@ -168,7 +168,7 @@ extern class Graphics
 	* @see       java.awt.FontMetrics
 	* @see       java.awt.Graphics#getFontMetrics(Font)
 	*/
-	@:overload public function getFontMetrics() : java.awt.FontMetrics;
+	@:overload @:public public function getFontMetrics() : java.awt.FontMetrics;
 	
 	/**
 	* Gets the font metrics for the specified font.
@@ -178,7 +178,7 @@ extern class Graphics
 	* @see       java.awt.FontMetrics
 	* @see       java.awt.Graphics#getFontMetrics()
 	*/
-	@:overload @:abstract public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public @:abstract public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Returns the bounding rectangle of the current clipping area.
@@ -197,7 +197,7 @@ extern class Graphics
 	* @see         java.awt.Graphics#setClip(Shape)
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload @:abstract public function getClipBounds() : java.awt.Rectangle;
+	@:require(java1) @:overload @:public @:abstract public function getClipBounds() : java.awt.Rectangle;
 	
 	/**
 	* Intersects the current clip with the specified rectangle.
@@ -218,7 +218,7 @@ extern class Graphics
 	* @see #setClip(int, int, int, int)
 	* @see #setClip(Shape)
 	*/
-	@:overload @:abstract public function clipRect(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public @:abstract public function clipRect(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Sets the current clip to the rectangle specified by the given
@@ -235,7 +235,7 @@ extern class Graphics
 	* @see         java.awt.Graphics#getClip
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload @:abstract public function setClip(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java1) @:overload @:public @:abstract public function setClip(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Gets the current clipping area.
@@ -253,7 +253,7 @@ extern class Graphics
 	* @see         java.awt.Graphics#setClip(Shape)
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload @:abstract public function getClip() : java.awt.Shape;
+	@:require(java1) @:overload @:public @:abstract public function getClip() : java.awt.Shape;
 	
 	/**
 	* Sets the current clipping area to an arbitrary clip shape.
@@ -271,7 +271,7 @@ extern class Graphics
 	* @see         java.awt.Graphics#setClip(int, int, int, int)
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload @:abstract public function setClip(clip : java.awt.Shape) : Void;
+	@:require(java1) @:overload @:public @:abstract public function setClip(clip : java.awt.Shape) : Void;
 	
 	/**
 	* Copies an area of the component by a distance specified by
@@ -292,7 +292,7 @@ extern class Graphics
 	* @param       dx the horizontal distance to copy the pixels.
 	* @param       dy the vertical distance to copy the pixels.
 	*/
-	@:overload @:abstract public function copyArea(x : Int, y : Int, width : Int, height : Int, dx : Int, dy : Int) : Void;
+	@:overload @:public @:abstract public function copyArea(x : Int, y : Int, width : Int, height : Int, dx : Int, dy : Int) : Void;
 	
 	/**
 	* Draws a line, using the current color, between the points
@@ -303,7 +303,7 @@ extern class Graphics
 	* @param   x2  the second point's <i>x</i> coordinate.
 	* @param   y2  the second point's <i>y</i> coordinate.
 	*/
-	@:overload @:abstract public function drawLine(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public @:abstract public function drawLine(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
 	/**
 	* Fills the specified rectangle.
@@ -324,7 +324,7 @@ extern class Graphics
 	* @see           java.awt.Graphics#clearRect
 	* @see           java.awt.Graphics#drawRect
 	*/
-	@:overload @:abstract public function fillRect(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public @:abstract public function fillRect(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Draws the outline of the specified rectangle.
@@ -342,7 +342,7 @@ extern class Graphics
 	* @see          java.awt.Graphics#fillRect
 	* @see          java.awt.Graphics#clearRect
 	*/
-	@:overload public function drawRect(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function drawRect(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Clears the specified rectangle by filling it with the background
@@ -363,7 +363,7 @@ extern class Graphics
 	* @see         java.awt.Graphics#setPaintMode
 	* @see         java.awt.Graphics#setXORMode(java.awt.Color)
 	*/
-	@:overload @:abstract public function clearRect(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public @:abstract public function clearRect(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Draws an outlined round-cornered rectangle using this graphics
@@ -381,7 +381,7 @@ extern class Graphics
 	*                    at the four corners.
 	* @see        java.awt.Graphics#fillRoundRect
 	*/
-	@:overload @:abstract public function drawRoundRect(x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
+	@:overload @:public @:abstract public function drawRoundRect(x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
 	
 	/**
 	* Fills the specified rounded corner rectangle with the current color.
@@ -399,7 +399,7 @@ extern class Graphics
 	*                     of the arc at the four corners.
 	* @see         java.awt.Graphics#drawRoundRect
 	*/
-	@:overload @:abstract public function fillRoundRect(x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
+	@:overload @:public @:abstract public function fillRoundRect(x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
 	
 	/**
 	* Draws a 3-D highlighted outline of the specified rectangle.
@@ -420,7 +420,7 @@ extern class Graphics
 	*                      or sunk into the surface.
 	* @see         java.awt.Graphics#fill3DRect
 	*/
-	@:overload public function draw3DRect(x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
+	@:overload @:public public function draw3DRect(x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
 	
 	/**
 	* Paints a 3-D highlighted rectangle filled with the current color.
@@ -437,7 +437,7 @@ extern class Graphics
 	*                      or etched into the surface.
 	* @see         java.awt.Graphics#draw3DRect
 	*/
-	@:overload public function fill3DRect(x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
+	@:overload @:public public function fill3DRect(x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
 	
 	/**
 	* Draws the outline of an oval.
@@ -456,7 +456,7 @@ extern class Graphics
 	* @param       height the height of the oval to be drawn.
 	* @see         java.awt.Graphics#fillOval
 	*/
-	@:overload @:abstract public function drawOval(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public @:abstract public function drawOval(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Fills an oval bounded by the specified rectangle with the
@@ -469,7 +469,7 @@ extern class Graphics
 	* @param       height the height of the oval to be filled.
 	* @see         java.awt.Graphics#drawOval
 	*/
-	@:overload @:abstract public function fillOval(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public @:abstract public function fillOval(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Draws the outline of a circular or elliptical arc
@@ -508,7 +508,7 @@ extern class Graphics
 	*                    relative to the start angle.
 	* @see         java.awt.Graphics#fillArc
 	*/
-	@:overload @:abstract public function drawArc(x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
+	@:overload @:public @:abstract public function drawArc(x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
 	
 	/**
 	* Fills a circular or elliptical arc covering the specified rectangle.
@@ -546,7 +546,7 @@ extern class Graphics
 	*                    relative to the start angle.
 	* @see         java.awt.Graphics#drawArc
 	*/
-	@:overload @:abstract public function fillArc(x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
+	@:overload @:public @:abstract public function fillArc(x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
 	
 	/**
 	* Draws a sequence of connected lines defined by
@@ -560,7 +560,7 @@ extern class Graphics
 	* @see         java.awt.Graphics#drawPolygon(int[], int[], int)
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload @:abstract public function drawPolyline(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:require(java1) @:overload @:public @:abstract public function drawPolyline(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
 	/**
 	* Draws a closed polygon defined by
@@ -581,7 +581,7 @@ extern class Graphics
 	* @see          java.awt.Graphics#fillPolygon
 	* @see          java.awt.Graphics#drawPolyline
 	*/
-	@:overload @:abstract public function drawPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:overload @:public @:abstract public function drawPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
 	/**
 	* Draws the outline of a polygon defined by the specified
@@ -590,7 +590,7 @@ extern class Graphics
 	* @see          java.awt.Graphics#fillPolygon
 	* @see          java.awt.Graphics#drawPolyline
 	*/
-	@:overload public function drawPolygon(p : java.awt.Polygon) : Void;
+	@:overload @:public public function drawPolygon(p : java.awt.Polygon) : Void;
 	
 	/**
 	* Fills a closed polygon defined by
@@ -612,7 +612,7 @@ extern class Graphics
 	* @param        nPoints   a the total number of points.
 	* @see          java.awt.Graphics#drawPolygon(int[], int[], int)
 	*/
-	@:overload @:abstract public function fillPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:overload @:public @:abstract public function fillPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
 	/**
 	* Fills the polygon defined by the specified Polygon object with
@@ -623,7 +623,7 @@ extern class Graphics
 	* @param        p the polygon to fill.
 	* @see          java.awt.Graphics#drawPolygon(int[], int[], int)
 	*/
-	@:overload public function fillPolygon(p : java.awt.Polygon) : Void;
+	@:overload @:public public function fillPolygon(p : java.awt.Polygon) : Void;
 	
 	/**
 	* Draws the text given by the specified string, using this
@@ -637,7 +637,7 @@ extern class Graphics
 	* @see         java.awt.Graphics#drawBytes
 	* @see         java.awt.Graphics#drawChars
 	*/
-	@:overload @:abstract public function drawString(str : String, x : Int, y : Int) : Void;
+	@:overload @:public @:abstract public function drawString(str : String, x : Int, y : Int) : Void;
 	
 	/**
 	* Renders the text of the specified iterator applying its attributes
@@ -654,7 +654,7 @@ extern class Graphics
 	* @see         java.awt.Graphics#drawBytes
 	* @see         java.awt.Graphics#drawChars
 	*/
-	@:overload @:abstract public function drawString(iterator : java.text.AttributedCharacterIterator, x : Int, y : Int) : Void;
+	@:overload @:public @:abstract public function drawString(iterator : java.text.AttributedCharacterIterator, x : Int, y : Int) : Void;
 	
 	/**
 	* Draws the text given by the specified character array, using this
@@ -674,7 +674,7 @@ extern class Graphics
 	* @see         java.awt.Graphics#drawBytes
 	* @see         java.awt.Graphics#drawString
 	*/
-	@:overload public function drawChars(data : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, x : Int, y : Int) : Void;
+	@:overload @:public public function drawChars(data : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, x : Int, y : Int) : Void;
 	
 	/**
 	* Draws the text given by the specified byte array, using this
@@ -697,7 +697,7 @@ extern class Graphics
 	* @see         java.awt.Graphics#drawChars
 	* @see         java.awt.Graphics#drawString
 	*/
-	@:overload public function drawBytes(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int, x : Int, y : Int) : Void;
+	@:overload @:public public function drawBytes(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int, x : Int, y : Int) : Void;
 	
 	/**
 	* Draws as much of the specified image as is currently available.
@@ -731,7 +731,7 @@ extern class Graphics
 	* @see      java.awt.image.ImageObserver
 	* @see      java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	*/
-	@:overload @:abstract public function drawImage(img : java.awt.Image, x : Int, y : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public @:abstract public function drawImage(img : java.awt.Image, x : Int, y : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws as much of the specified image as has already been scaled
@@ -769,7 +769,7 @@ extern class Graphics
 	* @see      java.awt.image.ImageObserver
 	* @see      java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	*/
-	@:overload @:abstract public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public @:abstract public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws as much of the specified image as is currently available.
@@ -809,7 +809,7 @@ extern class Graphics
 	* @see      java.awt.image.ImageObserver
 	* @see      java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	*/
-	@:overload @:abstract public function drawImage(img : java.awt.Image, x : Int, y : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public @:abstract public function drawImage(img : java.awt.Image, x : Int, y : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws as much of the specified image as has already been scaled
@@ -852,7 +852,7 @@ extern class Graphics
 	* @see      java.awt.image.ImageObserver
 	* @see      java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	*/
-	@:overload @:abstract public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public @:abstract public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws as much of the specified area of the specified image as is
@@ -904,7 +904,7 @@ extern class Graphics
 	* @see         java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload @:abstract public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:require(java1) @:overload @:public @:abstract public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws as much of the specified area of the specified image as is
@@ -962,7 +962,7 @@ extern class Graphics
 	* @see         java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload @:abstract public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:require(java1) @:overload @:public @:abstract public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Disposes of this graphics context and releases
@@ -991,20 +991,20 @@ extern class Graphics
 	* @see         java.awt.Component#getGraphics
 	* @see         java.awt.Graphics#create
 	*/
-	@:overload @:abstract public function dispose() : Void;
+	@:overload @:public @:abstract public function dispose() : Void;
 	
 	/**
 	* Disposes of this graphics context once it is no longer referenced.
 	* @see #dispose
 	*/
-	@:overload public function finalize() : Void;
+	@:overload @:public public function finalize() : Void;
 	
 	/**
 	* Returns a <code>String</code> object representing this
 	*                        <code>Graphics</code> object's value.
 	* @return       a string representation of this graphics context.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the bounding rectangle of the current clipping area.
@@ -1013,7 +1013,7 @@ extern class Graphics
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getClipBounds()</code>.
 	*/
-	@:overload public function getClipRect() : java.awt.Rectangle;
+	@:overload @:public public function getClipRect() : java.awt.Rectangle;
 	
 	/**
 	* Returns true if the specified rectangular area might intersect
@@ -1041,7 +1041,7 @@ extern class Graphics
 	*         the bounds of the current clip; <code>false</code>
 	*         otherwise.
 	*/
-	@:overload public function hitClip(x : Int, y : Int, width : Int, height : Int) : Bool;
+	@:overload @:public public function hitClip(x : Int, y : Int, width : Int, height : Int) : Bool;
 	
 	/**
 	* Returns the bounding rectangle of the current clipping area.
@@ -1059,7 +1059,7 @@ extern class Graphics
 	*              overwritten.
 	* @return      the bounding rectangle of the current clipping area.
 	*/
-	@:overload public function getClipBounds(r : java.awt.Rectangle) : java.awt.Rectangle;
+	@:overload @:public public function getClipBounds(r : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	
 }

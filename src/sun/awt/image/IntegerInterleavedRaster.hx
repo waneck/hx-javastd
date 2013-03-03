@@ -34,7 +34,7 @@ extern class IntegerInterleavedRaster extends sun.awt.image.IntegerComponentRast
 	*  @param sampleModel     The SampleModel that specifies the layout.
 	*  @param origin          The Point that specified the origin.
 	*/
-	@:overload public function new(sampleModel : java.awt.image.SampleModel, origin : java.awt.Point) : Void;
+	@:overload @:public public function new(sampleModel : java.awt.image.SampleModel, origin : java.awt.Point) : Void;
 	
 	/**
 	* Constructs a IntegerInterleavedRaster with the given SampleModel
@@ -46,7 +46,7 @@ extern class IntegerInterleavedRaster extends sun.awt.image.IntegerComponentRast
 	* @param dataBuffer      The DataBufferInt that contains the image data.
 	* @param origin          The Point that specifies the origin.
 	*/
-	@:overload public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, origin : java.awt.Point) : Void;
+	@:overload @:public public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, origin : java.awt.Point) : Void;
 	
 	/**
 	* Constructs a IntegerInterleavedRaster with the given SampleModel,
@@ -66,38 +66,38 @@ extern class IntegerInterleavedRaster extends sun.awt.image.IntegerComponentRast
 	* @param origin          The Point that specifies the origin.
 	* @param parent          The parent (if any) of this raster.
 	*/
-	@:overload public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, origin : java.awt.Point, parent : sun.awt.image.IntegerInterleavedRaster) : Void;
+	@:overload @:public public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, origin : java.awt.Point, parent : sun.awt.image.IntegerInterleavedRaster) : Void;
 	
 	/**
 	* Returns a copy of the data offsets array. For each band the data offset
 	* is the index into the band's data array, of the first sample of the
 	* band.
 	*/
-	@:overload override public function getDataOffsets() : java.NativeArray<Int>;
+	@:overload @:public override public function getDataOffsets() : java.NativeArray<Int>;
 	
 	/**
 	* Returns data offset for the specified band.  The data offset
 	* is the index into the data array in which the first sample
 	* of the first scanline is stored.
 	*/
-	@:overload override public function getDataOffset(band : Int) : Int;
+	@:overload @:public override public function getDataOffset(band : Int) : Int;
 	
 	/**
 	* Returns the scanline stride -- the number of data array elements between
 	* a given sample and the sample in the same column of the next row.
 	*/
-	@:overload override public function getScanlineStride() : Int;
+	@:overload @:public override public function getScanlineStride() : Int;
 	
 	/**
 	* Returns pixel stride -- the number of data array elements  between two
 	* samples for the same band on the same scanline.
 	*/
-	@:overload override public function getPixelStride() : Int;
+	@:overload @:public override public function getPixelStride() : Int;
 	
 	/**
 	* Returns a reference to the data array.
 	*/
-	@:overload override public function getDataStorage() : java.NativeArray<Int>;
+	@:overload @:public override public function getDataStorage() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the data elements for all bands at the specified
@@ -115,7 +115,7 @@ extern class IntegerInterleavedRaster extends sun.awt.image.IntegerComponentRast
 	* @return         An object reference to an array of type defined by
 	*                 getTransferType() with the request pixel data.
 	*/
-	@:overload override public function getDataElements(x : Int, y : Int, obj : Dynamic) : Dynamic;
+	@:overload @:public override public function getDataElements(x : Int, y : Int, obj : Dynamic) : Dynamic;
 	
 	/**
 	* Returns an array  of data elements from the specified rectangular
@@ -143,7 +143,7 @@ extern class IntegerInterleavedRaster extends sun.awt.image.IntegerComponentRast
 	* @return         An object reference to an array of type defined by
 	*                 getTransferType() with the request pixel data.
 	*/
-	@:overload override public function getDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic) : Dynamic;
+	@:overload @:public override public function getDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic) : Dynamic;
 	
 	/**
 	* Stores the data elements for all bands at the specified location.
@@ -157,7 +157,7 @@ extern class IntegerInterleavedRaster extends sun.awt.image.IntegerComponentRast
 	*                 getTransferType() and length getNumDataElements()
 	*                 containing the pixel data to place at x,y.
 	*/
-	@:overload override public function setDataElements(x : Int, y : Int, obj : Dynamic) : Void;
+	@:overload @:public override public function setDataElements(x : Int, y : Int, obj : Dynamic) : Void;
 	
 	/**
 	* Stores the Raster data at the specified location.
@@ -168,7 +168,7 @@ extern class IntegerInterleavedRaster extends sun.awt.image.IntegerComponentRast
 	* @param y          The Y coordinate of the pixel location.
 	* @param inRaster   Raster of data to place at x,y location.
 	*/
-	@:overload override public function setDataElements(x : Int, y : Int, inRaster : java.awt.image.Raster) : Void;
+	@:overload @:public override public function setDataElements(x : Int, y : Int, inRaster : java.awt.image.Raster) : Void;
 	
 	/**
 	* Stores an array of data elements into the specified rectangular
@@ -192,7 +192,7 @@ extern class IntegerInterleavedRaster extends sun.awt.image.IntegerComponentRast
 	*                 containing the pixel data to place between x,y and
 	*                 x+h, y+h.
 	*/
-	@:overload override public function setDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic) : Void;
+	@:overload @:public override public function setDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic) : Void;
 	
 	/**
 	* Creates a subraster given a region of the raster.  The x and y
@@ -213,7 +213,7 @@ extern class IntegerInterleavedRaster extends sun.awt.image.IntegerComponentRast
 	* @exception RasterFormatException
 	*            if the specified bounding box is outside of the parent raster.
 	*/
-	@:overload override public function createWritableChild(x : Int, y : Int, width : Int, height : Int, x0 : Int, y0 : Int, bandList : java.NativeArray<Int>) : java.awt.image.WritableRaster;
+	@:overload @:public override public function createWritableChild(x : Int, y : Int, width : Int, height : Int, x0 : Int, y0 : Int, bandList : java.NativeArray<Int>) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a subraster given a region of the raster.  The x and y
@@ -233,13 +233,13 @@ extern class IntegerInterleavedRaster extends sun.awt.image.IntegerComponentRast
 	* @exception RasterFormatException
 	*            if the specified bounding box is outside of the parent raster.
 	*/
-	@:overload override public function createChild(x : Int, y : Int, width : Int, height : Int, x0 : Int, y0 : Int, bandList : java.NativeArray<Int>) : java.awt.image.Raster;
+	@:overload @:public override public function createChild(x : Int, y : Int, width : Int, height : Int, x0 : Int, y0 : Int, bandList : java.NativeArray<Int>) : java.awt.image.Raster;
 	
 	/**
 	* Creates a raster with the same band layout but using a different
 	* width and height, and with new zeroed data arrays.
 	*/
-	@:overload override public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
+	@:overload @:public override public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a raster with the same data layout and the same
@@ -247,9 +247,9 @@ extern class IntegerInterleavedRaster extends sun.awt.image.IntegerComponentRast
 	* the raster is a subraster, this will call
 	* createCompatibleRaster(width, height).
 	*/
-	@:overload override public function createCompatibleWritableRaster() : java.awt.image.WritableRaster;
+	@:overload @:public override public function createCompatibleWritableRaster() : java.awt.image.WritableRaster;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

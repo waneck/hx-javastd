@@ -28,7 +28,7 @@ extern class XSDFACM implements com.sun.org.apache.xerces.internal.impl.xs.model
 	*
 	* @exception RuntimeException Thrown if DFA can't be built.
 	*/
-	@:overload public function new(syntaxTree : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode, leafCount : Int) : Void;
+	@:overload @:public public function new(syntaxTree : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode, leafCount : Int) : Void;
 	
 	/**
 	* check whether the given state is one of the final states
@@ -37,7 +37,7 @@ extern class XSDFACM implements com.sun.org.apache.xerces.internal.impl.xs.model
 	*
 	* @return whether it's a final state
 	*/
-	@:overload public function isFinalState(state : Int) : Bool;
+	@:overload @:public public function isFinalState(state : Int) : Bool;
 	
 	/**
 	* one transition only
@@ -53,11 +53,11 @@ extern class XSDFACM implements com.sun.org.apache.xerces.internal.impl.xs.model
 	*
 	* @exception RuntimeException thrown on error
 	*/
-	@:overload public function oneTransition(curElem : com.sun.org.apache.xerces.internal.xni.QName, state : java.NativeArray<Int>, subGroupHandler : com.sun.org.apache.xerces.internal.impl.xs.SubstitutionGroupHandler) : Dynamic;
+	@:overload @:public public function oneTransition(curElem : com.sun.org.apache.xerces.internal.xni.QName, state : java.NativeArray<Int>, subGroupHandler : com.sun.org.apache.xerces.internal.impl.xs.SubstitutionGroupHandler) : Dynamic;
 	
-	@:overload public function startContentModel() : java.NativeArray<Int>;
+	@:overload @:public public function startContentModel() : java.NativeArray<Int>;
 	
-	@:overload public function endContentModel(state : java.NativeArray<Int>) : Bool;
+	@:overload @:public public function endContentModel(state : java.NativeArray<Int>) : Bool;
 	
 	/**
 	* check whether this content violates UPA constraint.
@@ -65,7 +65,7 @@ extern class XSDFACM implements com.sun.org.apache.xerces.internal.impl.xs.model
 	* @param subGroupHandler the substitution group handler
 	* @return true if this content model contains other or list wildcard
 	*/
-	@:overload public function checkUniqueParticleAttribution(subGroupHandler : com.sun.org.apache.xerces.internal.impl.xs.SubstitutionGroupHandler) : Bool;
+	@:overload @:public public function checkUniqueParticleAttribution(subGroupHandler : com.sun.org.apache.xerces.internal.impl.xs.SubstitutionGroupHandler) : Bool;
 	
 	/**
 	* Check which elements are valid to appear at this point. This method also
@@ -76,7 +76,7 @@ extern class XSDFACM implements com.sun.org.apache.xerces.internal.impl.xs.model
 	* @return       a Vector whose entries are instances of
 	*               either XSWildcardDecl or XSElementDecl.
 	*/
-	@:overload public function whatCanGoHere(state : java.NativeArray<Int>) : java.util.Vector<Dynamic>;
+	@:overload @:public public function whatCanGoHere(state : java.NativeArray<Int>) : java.util.Vector<Dynamic>;
 	
 	/**
 	* Used by constant space algorithm for a{n,m} for n > 1 and
@@ -91,15 +91,15 @@ extern class XSDFACM implements com.sun.org.apache.xerces.internal.impl.xs.model
 	* is associated with the error code that preceeds it in
 	* the list.
 	*/
-	@:overload public function checkMinMaxBounds() : java.util.ArrayList<Dynamic>;
+	@:overload @:public public function checkMinMaxBounds() : java.util.ArrayList<Dynamic>;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$impl$xs$models$XSDFACM$Occurence') @:internal extern class XSDFACM_Occurence
 {
-	@:overload public function new(leaf : com.sun.org.apache.xerces.internal.impl.xs.models.XSCMRepeatingLeaf, elemIndex : Int) : Void;
+	@:overload @:public public function new(leaf : com.sun.org.apache.xerces.internal.impl.xs.models.XSCMRepeatingLeaf, elemIndex : Int) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

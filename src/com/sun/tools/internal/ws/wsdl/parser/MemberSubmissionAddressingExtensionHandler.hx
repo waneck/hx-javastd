@@ -28,15 +28,15 @@ extern class MemberSubmissionAddressingExtensionHandler extends com.sun.tools.in
 	/**
 	* @author Arun Gupta
 	*/
-	@:overload public function new(extensionHandlerMap : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>) : Void;
+	@:overload @:public public function new(extensionHandlerMap : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>) : Void;
 	
-	@:overload public function new(extensionHandlerMap : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>, env : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function new(extensionHandlerMap : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>, env : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload override public function getNamespaceURI() : String;
+	@:overload @:public override public function getNamespaceURI() : String;
 	
-	@:overload override private function getWSDLExtensionQName() : javax.xml.namespace.QName;
+	@:overload @:protected override private function getWSDLExtensionQName() : javax.xml.namespace.QName;
 	
-	@:overload override public function handlePortExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload @:public override public function handlePortExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	
 }

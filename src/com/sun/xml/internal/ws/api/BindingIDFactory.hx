@@ -44,7 +44,7 @@ extern class BindingIDFactory
 	*      No further {@link BindingIDFactory} will be consulted, and
 	*      {@link BindingID#parse(String)} will throw the exception.
 	*/
-	@:overload @:abstract public function parse(lexical : String) : com.sun.xml.internal.ws.api.BindingID;
+	@:overload @:public @:abstract public function parse(lexical : String) : com.sun.xml.internal.ws.api.BindingID;
 	
 	
 }

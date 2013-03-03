@@ -68,29 +68,29 @@ extern interface Message
 	
 	public var GIOPFragment : java.StdTypes.Int8;
 	
-	@:overload public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:overload @:public public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
 	@:overload public function getEncodingVersion() : java.StdTypes.Int8;
 	
-	@:overload public function isLittleEndian() : Bool;
+	@:overload @:public public function isLittleEndian() : Bool;
 	
-	@:overload public function moreFragmentsToFollow() : Bool;
+	@:overload @:public public function moreFragmentsToFollow() : Bool;
 	
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
-	@:overload public function getSize() : Int;
+	@:overload @:public public function getSize() : Int;
 	
 	@:overload public function getByteBuffer() : java.nio.ByteBuffer;
 	
 	@:overload public function getThreadPoolToUse() : Int;
 	
-	@:overload public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload public function setSize(byteBuffer : java.nio.ByteBuffer, size : Int) : Void;
+	@:overload @:public public function setSize(byteBuffer : java.nio.ByteBuffer, size : Int) : Void;
 	
-	@:overload public function createFragmentMessage() : com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage;
+	@:overload @:public public function createFragmentMessage() : com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage;
 	
 	//@:overload public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
 	

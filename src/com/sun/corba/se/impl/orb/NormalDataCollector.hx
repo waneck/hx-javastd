@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.orb;
 */
 extern class NormalDataCollector extends com.sun.corba.se.impl.orb.DataCollectorBase
 {
-	@:overload public function new(args : java.NativeArray<String>, props : java.util.Properties, localHostName : String, configurationHostName : String) : Void;
+	@:overload @:public public function new(args : java.NativeArray<String>, props : java.util.Properties, localHostName : String, configurationHostName : String) : Void;
 	
-	@:overload public function isApplet() : Bool;
+	@:overload @:public override public function isApplet() : Bool;
 	
-	@:overload private function collect() : Void;
+	@:overload @:protected override private function collect() : Void;
 	
 	
 }

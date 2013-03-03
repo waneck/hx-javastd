@@ -43,9 +43,9 @@ package com.sun.jmx.mbeanserver;
 */
 @:require(java6) @:native('com$sun$jmx$mbeanserver$MBeanAnalyzer$MBeanVisitor') @:internal extern interface MBeanAnalyzer_MBeanVisitor<M>
 {
-	@:overload public function visitAttribute(attributeName : String, getter : M, setter : M) : Void;
+	@:overload @:public public function visitAttribute(attributeName : String, getter : M, setter : M) : Void;
 	
-	@:overload public function visitOperation(operationName : String, operation : M) : Void;
+	@:overload @:public public function visitOperation(operationName : String, operation : M) : Void;
 	
 	
 }
@@ -65,9 +65,9 @@ package com.sun.jmx.mbeanserver;
 **/
 @:native('com$sun$jmx$mbeanserver$MBeanAnalyzer$MethodOrder') @:internal extern class MBeanAnalyzer_MethodOrder implements java.util.Comparator<java.lang.reflect.Method>
 {
-	@:overload public function compare(a : java.lang.reflect.Method, b : java.lang.reflect.Method) : Int;
+	@:overload @:public public function compare(a : java.lang.reflect.Method, b : java.lang.reflect.Method) : Int;
 	
-	public static var instance(default, null) : com.sun.jmx.mbeanserver.MBeanAnalyzer.MBeanAnalyzer_MethodOrder;
+	@:public @:final @:static public static var instance(default, null) : com.sun.jmx.mbeanserver.MBeanAnalyzer.MBeanAnalyzer_MethodOrder;
 	
 	
 }

@@ -25,11 +25,11 @@ package javax.swing.text;
 */
 extern class ChangedCharSetException extends java.io.IOException
 {
-	@:overload public function new(charSetSpec : String, charSetKey : Bool) : Void;
+	@:overload @:public public function new(charSetSpec : String, charSetKey : Bool) : Void;
 	
-	@:overload public function getCharSetSpec() : String;
+	@:overload @:public public function getCharSetSpec() : String;
 	
-	@:overload public function keyEqualsCharSet() : Bool;
+	@:overload @:public public function keyEqualsCharSet() : Bool;
 	
 	
 }

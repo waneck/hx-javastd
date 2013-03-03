@@ -25,19 +25,19 @@ package sun.awt;
 */
 extern class PeerEvent extends java.awt.event.InvocationEvent
 {
-	public static var PRIORITY_EVENT(default, null) : haxe.Int64;
+	@:public @:static @:final public static var PRIORITY_EVENT(default, null) : haxe.Int64;
 	
-	public static var ULTIMATE_PRIORITY_EVENT(default, null) : haxe.Int64;
+	@:public @:static @:final public static var ULTIMATE_PRIORITY_EVENT(default, null) : haxe.Int64;
 	
-	public static var LOW_PRIORITY_EVENT(default, null) : haxe.Int64;
+	@:public @:static @:final public static var LOW_PRIORITY_EVENT(default, null) : haxe.Int64;
 	
-	@:overload public function new(source : Dynamic, runnable : java.lang.Runnable, flags : haxe.Int64) : Void;
+	@:overload @:public public function new(source : Dynamic, runnable : java.lang.Runnable, flags : haxe.Int64) : Void;
 	
-	@:overload public function new(source : Dynamic, runnable : java.lang.Runnable, notifier : Dynamic, catchExceptions : Bool, flags : haxe.Int64) : Void;
+	@:overload @:public public function new(source : Dynamic, runnable : java.lang.Runnable, notifier : Dynamic, catchExceptions : Bool, flags : haxe.Int64) : Void;
 	
-	@:overload public function getFlags() : haxe.Int64;
+	@:overload @:public public function getFlags() : haxe.Int64;
 	
-	@:overload public function coalesceEvents(newEvent : sun.awt.PeerEvent) : sun.awt.PeerEvent;
+	@:overload @:public public function coalesceEvents(newEvent : sun.awt.PeerEvent) : sun.awt.PeerEvent;
 	
 	
 }

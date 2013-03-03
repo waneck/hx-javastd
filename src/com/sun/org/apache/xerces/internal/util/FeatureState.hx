@@ -30,31 +30,31 @@ package com.sun.org.apache.xerces.internal.util;
 */
 extern class FeatureState
 {
-	public var status(default, null) : com.sun.org.apache.xerces.internal.util.Status;
+	@:public @:final public var status(default, null) : com.sun.org.apache.xerces.internal.util.Status;
 	
-	public var state(default, null) : Bool;
+	@:public @:final public var state(default, null) : Bool;
 	
-	public static var SET_ENABLED(default, null) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:public @:static @:final public static var SET_ENABLED(default, null) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
-	public static var SET_DISABLED(default, null) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:public @:static @:final public static var SET_DISABLED(default, null) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
-	public static var UNKNOWN(default, null) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:public @:static @:final public static var UNKNOWN(default, null) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
-	public static var RECOGNIZED(default, null) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:public @:static @:final public static var RECOGNIZED(default, null) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
-	public static var NOT_SUPPORTED(default, null) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:public @:static @:final public static var NOT_SUPPORTED(default, null) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
-	public static var NOT_RECOGNIZED(default, null) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:public @:static @:final public static var NOT_RECOGNIZED(default, null) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
-	public static var NOT_ALLOWED(default, null) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:public @:static @:final public static var NOT_ALLOWED(default, null) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
-	@:overload public function new(status : com.sun.org.apache.xerces.internal.util.Status, state : Bool) : Void;
+	@:overload @:public public function new(status : com.sun.org.apache.xerces.internal.util.Status, state : Bool) : Void;
 	
-	@:overload public static function of(status : com.sun.org.apache.xerces.internal.util.Status) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:overload @:public @:static public static function of(status : com.sun.org.apache.xerces.internal.util.Status) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
-	@:overload public static function is(value : Bool) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:overload @:public @:static public static function is(value : Bool) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
-	@:overload public function isExceptional() : Bool;
+	@:overload @:public public function isExceptional() : Bool;
 	
 	
 }

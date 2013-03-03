@@ -43,41 +43,41 @@ exception statement from your version.
 	* TargetDataLine
 	* 
 	*/
-	private static var DEFAULT_BUFFER_SIZE(default, null) : Int;
+	@:protected @:static @:final private static var DEFAULT_BUFFER_SIZE(default, null) : Int;
 	
-	private var streamName : String;
+	@:protected private var streamName : String;
 	
-	private var isStarted : Bool;
+	@:protected private var isStarted : Bool;
 	
-	private var dataWritten : Bool;
+	@:protected private var dataWritten : Bool;
 	
-	private var supportedFormats : java.NativeArray<javax.sound.sampled.AudioFormat>;
+	@:protected private var supportedFormats : java.NativeArray<javax.sound.sampled.AudioFormat>;
 	
-	private var currentFormat : javax.sound.sampled.AudioFormat;
+	@:protected private var currentFormat : javax.sound.sampled.AudioFormat;
 	
-	private var defaultFormat : javax.sound.sampled.AudioFormat;
+	@:protected private var defaultFormat : javax.sound.sampled.AudioFormat;
 	
-	private var sendEvents : Bool;
+	@:protected private var sendEvents : Bool;
 	
-	private var framesSinceOpen : haxe.Int64;
+	@:protected private var framesSinceOpen : haxe.Int64;
 	
-	private var eventLoop : org.classpath.icedtea.pulseaudio.EventLoop;
+	@:protected private var eventLoop : org.classpath.icedtea.pulseaudio.EventLoop;
 	
-	private var semaphore : java.util.concurrent.Semaphore;
+	@:protected private var semaphore : java.util.concurrent.Semaphore;
 	
-	private var stream : org.classpath.icedtea.pulseaudio.Stream;
+	@:protected private var stream : org.classpath.icedtea.pulseaudio.Stream;
 	
-	@:overload private function open(format : javax.sound.sampled.AudioFormat, bufferSize : Int) : Void;
+	@:overload @:protected private function open(format : javax.sound.sampled.AudioFormat, bufferSize : Int) : Void;
 	
-	@:overload private function open(format : javax.sound.sampled.AudioFormat) : Void;
+	@:overload @:protected private function open(format : javax.sound.sampled.AudioFormat) : Void;
 	
-	@:overload override public function open() : Void;
+	@:overload @:public override public function open() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload public function start() : Void;
+	@:overload @:public public function start() : Void;
 	
-	@:overload @:synchronized public function stop() : Void;
+	@:overload @:public @:synchronized public function stop() : Void;
 	
 	/*
 	* TODO
@@ -95,41 +95,41 @@ exception statement from your version.
 	* HOWEVER, the javadocs say the opposite thing! (need help from the jck =
 	* official spec)
 	*/
-	@:overload public function isActive() : Bool;
+	@:overload @:public public function isActive() : Bool;
 	
-	@:overload public function isRunning() : Bool;
+	@:overload @:public public function isRunning() : Bool;
 	
-	@:overload @:abstract private function connectLine(bufferSize : Int, masterStream : org.classpath.icedtea.pulseaudio.Stream) : Void;
+	@:overload @:protected @:abstract private function connectLine(bufferSize : Int, masterStream : org.classpath.icedtea.pulseaudio.Stream) : Void;
 	
-	@:overload public function getStream() : org.classpath.icedtea.pulseaudio.Stream;
+	@:overload @:public public function getStream() : org.classpath.icedtea.pulseaudio.Stream;
 	
-	@:overload public function getBufferSize() : Int;
+	@:overload @:public public function getBufferSize() : Int;
 	
-	@:overload public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public public function getFormat() : javax.sound.sampled.AudioFormat;
 	
-	@:overload public function getLevel() : Single;
+	@:overload @:public public function getLevel() : Single;
 	
 	/**
 	* 
 	* @param streamName
 	*            the name of this audio stream
 	*/
-	@:overload public function setName(streamName : String) : Void;
+	@:overload @:public public function setName(streamName : String) : Void;
 	
 	/**
 	* 
 	* @return the name of this audio stream/clip
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getBytesInBuffer() : Int;
+	@:overload @:public public function getBytesInBuffer() : Int;
 	
 	/**
 	* Obtains the <code>Line.Info</code> object describing this
 	* line.
 	* @return description of the line
 	*/
-	@:overload @:public override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload @:public @:public @:public @:public override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* Obtains a control of the specified type,
@@ -142,7 +142,7 @@ exception statement from your version.
 	* @see #getControls
 	* @see #isControlSupported(Control.Type control)
 	*/
-	@:overload override public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
+	@:overload @:public @:public @:public @:public override public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
 	
 	/**
 	* Obtains the current position in the audio data, in microseconds.
@@ -155,7 +155,7 @@ exception statement from your version.
 	*
 	* @return the number of microseconds of data processed since the line was opened
 	*/
-	@:overload @:public public function getMicrosecondPosition() : haxe.Int64;
+	@:overload @:public @:public public function getMicrosecondPosition() : haxe.Int64;
 	
 	/**
 	* Obtains the current position in the audio data, in sample frames.
@@ -165,7 +165,7 @@ exception statement from your version.
 	* @return the number of frames already processed since the line was opened
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:public public function getLongFramePosition() : haxe.Int64;
+	@:require(java5) @:overload @:public @:public @:public public function getLongFramePosition() : haxe.Int64;
 	
 	/**
 	* Adds a listener to this line.  Whenever the line's status changes, the
@@ -176,7 +176,7 @@ exception statement from your version.
 	* @see LineListener#update
 	* @see LineEvent
 	*/
-	@:overload override public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public @:public @:public @:public override public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	/**
 	* Obtains the current position in the audio data, in sample frames.
@@ -188,7 +188,7 @@ exception statement from your version.
 	* @return the number of frames already processed since the line was opened
 	* @see #getLongFramePosition()
 	*/
-	@:overload @:public public function getFramePosition() : Int;
+	@:overload @:public @:public @:public public function getFramePosition() : Int;
 	
 	/**
 	* Flushes queued data from the line.  The flushed data is discarded.
@@ -204,7 +204,7 @@ exception statement from your version.
 	* @see #stop()
 	* @see #drain()
 	*/
-	@:overload @:public public function flush() : Void;
+	@:overload @:public @:public public function flush() : Void;
 	
 	/**
 	* Indicates whether the line supports a control of the specified type.
@@ -213,7 +213,7 @@ exception statement from your version.
 	* @return <code>true</code> if at least one control of the specified type is
 	* supported, otherwise <code>false</code>.
 	*/
-	@:overload override public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
+	@:overload @:public @:public @:public @:public override public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
 	
 	/**
 	* Obtains the number of bytes of data currently available to the
@@ -234,7 +234,7 @@ exception statement from your version.
 	*
 	* @return the amount of data available, in bytes
 	*/
-	@:overload @:public public function available() : Int;
+	@:overload @:public @:public public function available() : Int;
 	
 	/**
 	* Obtains the set of controls associated with this line.
@@ -243,7 +243,7 @@ exception statement from your version.
 	* @return the array of controls
 	* @see #getControl
 	*/
-	@:overload override public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
+	@:overload @:public @:public @:public @:public override public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
 	
 	/**
 	* Drains queued data from the line by continuing data I/O until the
@@ -258,7 +258,7 @@ exception statement from your version.
 	*
 	* @see #flush()
 	*/
-	@:overload @:public public function drain() : Void;
+	@:overload @:public @:public public function drain() : Void;
 	
 	/**
 	* Indicates whether the line is open, meaning that it has reserved
@@ -269,14 +269,14 @@ exception statement from your version.
 	* @see #open()
 	* @see #close()
 	*/
-	@:overload override public function isOpen() : Bool;
+	@:overload @:public @:public @:public override public function isOpen() : Bool;
 	
 	/**
 	* Removes the specified listener from this line's list of listeners.
 	* @param listener listener to remove
 	* @see #addLineListener
 	*/
-	@:overload override public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public @:public @:public @:public override public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	
 }

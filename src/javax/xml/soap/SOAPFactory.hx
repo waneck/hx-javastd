@@ -45,7 +45,7 @@ extern class SOAPFactory
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function createElement(domElement : org.w3c.dom.Element) : javax.xml.soap.SOAPElement;
+	@:require(java3) @:overload @:public public function createElement(domElement : org.w3c.dom.Element) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Creates a <code>SOAPElement</code> object initialized with the
@@ -65,7 +65,7 @@ extern class SOAPFactory
 	*            <code>SOAPElement</code> object
 	* @see SOAPFactory#createElement(javax.xml.namespace.QName)
 	*/
-	@:overload @:abstract public function createElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:abstract public function createElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Creates a <code>SOAPElement</code> object initialized with the
@@ -86,7 +86,7 @@ extern class SOAPFactory
 	* @see SOAPFactory#createElement(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function createElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:require(java3) @:overload @:public public function createElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Creates a <code>SOAPElement</code> object initialized with the
@@ -101,7 +101,7 @@ extern class SOAPFactory
 	* @exception SOAPException if there is an error in creating the
 	*            <code>SOAPElement</code> object
 	*/
-	@:overload @:abstract public function createElement(localName : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:abstract public function createElement(localName : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object with the given
@@ -120,7 +120,7 @@ extern class SOAPFactory
 	* @exception SOAPException if there is an error in creating the
 	*            <code>SOAPElement</code> object
 	*/
-	@:overload @:abstract public function createElement(localName : String, prefix : String, uri : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:abstract public function createElement(localName : String, prefix : String, uri : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Creates a new <code>Detail</code> object which serves as a container
@@ -135,7 +135,7 @@ extern class SOAPFactory
 	* @throws UnsupportedOperationException if the protocol specified
 	*         for the SOAPFactory was <code>DYNAMIC_SOAP_PROTOCOL</code>
 	*/
-	@:overload @:abstract public function createDetail() : javax.xml.soap.Detail;
+	@:overload @:public @:abstract public function createDetail() : javax.xml.soap.Detail;
 	
 	/**
 	*Creates a new <code>SOAPFault</code> object initialized with the given <code>reasonText</code>
@@ -146,7 +146,7 @@ extern class SOAPFactory
 	*@throws SOAPException if there is a SOAP error
 	*@since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:abstract public function createFault(reasonText : String, faultCode : javax.xml.namespace.QName) : javax.xml.soap.SOAPFault;
+	@:require(java3) @:overload @:public @:abstract public function createFault(reasonText : String, faultCode : javax.xml.namespace.QName) : javax.xml.soap.SOAPFault;
 	
 	/**
 	*Creates a new default <code>SOAPFault</code> object
@@ -154,7 +154,7 @@ extern class SOAPFactory
 	*@throws SOAPException if there is a SOAP error
 	*@since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:abstract public function createFault() : javax.xml.soap.SOAPFault;
+	@:require(java3) @:overload @:public @:abstract public function createFault() : javax.xml.soap.SOAPFault;
 	
 	/**
 	* Creates a new <code>Name</code> object initialized with the
@@ -171,7 +171,7 @@ extern class SOAPFactory
 	*         local name, namespace prefix, and namespace URI
 	* @throws SOAPException if there is a SOAP error
 	*/
-	@:overload @:abstract public function createName(localName : String, prefix : String, uri : String) : javax.xml.soap.Name;
+	@:overload @:public @:abstract public function createName(localName : String, prefix : String, uri : String) : javax.xml.soap.Name;
 	
 	/**
 	* Creates a new <code>Name</code> object initialized with the
@@ -186,7 +186,7 @@ extern class SOAPFactory
 	*         local name
 	* @throws SOAPException if there is a SOAP error
 	*/
-	@:overload @:abstract public function createName(localName : String) : javax.xml.soap.Name;
+	@:overload @:public @:abstract public function createName(localName : String) : javax.xml.soap.Name;
 	
 	/**
 	* Creates a new <code>SOAPFactory</code> object that is an instance of
@@ -209,7 +209,7 @@ extern class SOAPFactory
 	*            default <code>SOAPFactory</code>
 	* @see SAAJMetaFactory
 	*/
-	@:overload public static function newInstance() : javax.xml.soap.SOAPFactory;
+	@:overload @:public @:static public static function newInstance() : javax.xml.soap.SOAPFactory;
 	
 	/**
 	* Creates a new <code>SOAPFactory</code> object that is an instance of
@@ -230,7 +230,7 @@ extern class SOAPFactory
 	* @see SAAJMetaFactory
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public static function newInstance(protocol : String) : javax.xml.soap.SOAPFactory;
+	@:require(java3) @:overload @:public @:static public static function newInstance(protocol : String) : javax.xml.soap.SOAPFactory;
 	
 	
 }

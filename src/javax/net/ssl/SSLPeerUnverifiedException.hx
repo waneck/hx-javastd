@@ -43,7 +43,7 @@ package javax.net.ssl;
 	*
 	* @param reason describes the problem.
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	
 }

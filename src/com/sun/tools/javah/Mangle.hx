@@ -25,11 +25,11 @@ package com.sun.tools.javah;
 */
 extern class Mangle
 {
-	@:overload @:final public function mangle(name : java.lang.CharSequence, mtype : Int) : String;
+	@:overload @:public @:final public function mangle(name : java.lang.CharSequence, mtype : Int) : String;
 	
-	@:overload public function mangleMethod(method : javax.lang.model.element.ExecutableElement, clazz : javax.lang.model.element.TypeElement, mtype : Int) : String;
+	@:overload @:public public function mangleMethod(method : javax.lang.model.element.ExecutableElement, clazz : javax.lang.model.element.TypeElement, mtype : Int) : String;
 	
-	@:overload @:final public function mangleChar(ch : java.StdTypes.Char16) : String;
+	@:overload @:public @:final public function mangleChar(ch : java.StdTypes.Char16) : String;
 	
 	
 }
@@ -47,21 +47,21 @@ extern class Mangle
 */
 @:native('com$sun$tools$javah$Mangle$Type') extern class Mangle_Type
 {
-	public static var CLASS(default, null) : Int;
+	@:public @:static @:final public static var CLASS(default, null) : Int;
 	
-	public static var FIELDSTUB(default, null) : Int;
+	@:public @:static @:final public static var FIELDSTUB(default, null) : Int;
 	
-	public static var FIELD(default, null) : Int;
+	@:public @:static @:final public static var FIELD(default, null) : Int;
 	
-	public static var JNI(default, null) : Int;
+	@:public @:static @:final public static var JNI(default, null) : Int;
 	
-	public static var SIGNATURE(default, null) : Int;
+	@:public @:static @:final public static var SIGNATURE(default, null) : Int;
 	
-	public static var METHOD_JDK_1(default, null) : Int;
+	@:public @:static @:final public static var METHOD_JDK_1(default, null) : Int;
 	
-	public static var METHOD_JNI_SHORT(default, null) : Int;
+	@:public @:static @:final public static var METHOD_JNI_SHORT(default, null) : Int;
 	
-	public static var METHOD_JNI_LONG(default, null) : Int;
+	@:public @:static @:final public static var METHOD_JNI_LONG(default, null) : Int;
 	
 	
 }

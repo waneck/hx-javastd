@@ -68,14 +68,14 @@ extern class Attribute
 	/**
 	* The type of this attribute.
 	*/
-	public var type(default, null) : String;
+	@:public @:final public var type(default, null) : String;
 	
 	/**
 	* Constructs a new empty attribute.
 	*
 	* @param type the type of the attribute.
 	*/
-	@:overload private function new(type : String) : Void;
+	@:overload @:protected private function new(type : String) : Void;
 	
 	/**
 	* Returns <tt>true</tt> if this type of attribute is unknown. The default
@@ -83,14 +83,14 @@ extern class Attribute
 	*
 	* @return <tt>true</tt> if this type of attribute is unknown.
 	*/
-	@:overload public function isUnknown() : Bool;
+	@:overload @:public public function isUnknown() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this type of attribute is a code attribute.
 	*
 	* @return <tt>true</tt> if this type of attribute is a code attribute.
 	*/
-	@:overload public function isCodeAttribute() : Bool;
+	@:overload @:public public function isCodeAttribute() : Bool;
 	
 	/**
 	* Returns the labels corresponding to this attribute.
@@ -98,7 +98,7 @@ extern class Attribute
 	* @return the labels corresponding to this attribute, or <tt>null</tt> if
 	*         this attribute is not a code attribute that contains labels.
 	*/
-	@:overload private function getLabels() : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Label>;
+	@:overload @:protected private function getLabels() : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Label>;
 	
 	/**
 	* Reads a {@link #type type} attribute. This method must return a <i>new</i>
@@ -126,7 +126,7 @@ extern class Attribute
 	* @return a <i>new</i> {@link Attribute} object corresponding to the given
 	*         bytes.
 	*/
-	@:overload private function read(cr : com.sun.xml.internal.ws.org.objectweb.asm.ClassReader, off : Int, len : Int, buf : java.NativeArray<java.StdTypes.Char16>, codeOff : Int, labels : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Label>) : com.sun.xml.internal.ws.org.objectweb.asm.Attribute;
+	@:overload @:protected private function read(cr : com.sun.xml.internal.ws.org.objectweb.asm.ClassReader, off : Int, len : Int, buf : java.NativeArray<java.StdTypes.Char16>, codeOff : Int, labels : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Label>) : com.sun.xml.internal.ws.org.objectweb.asm.Attribute;
 	
 	/**
 	* Returns the byte array form of this attribute.
@@ -148,7 +148,7 @@ extern class Attribute
 	*        not a code attribute.
 	* @return the byte array form of this attribute.
 	*/
-	@:overload private function write(cw : com.sun.xml.internal.ws.org.objectweb.asm.ClassWriter, code : java.NativeArray<java.StdTypes.Int8>, len : Int, maxStack : Int, maxLocals : Int) : com.sun.xml.internal.ws.org.objectweb.asm.ByteVector;
+	@:overload @:protected private function write(cw : com.sun.xml.internal.ws.org.objectweb.asm.ClassWriter, code : java.NativeArray<java.StdTypes.Int8>, len : Int, maxStack : Int, maxLocals : Int) : com.sun.xml.internal.ws.org.objectweb.asm.ByteVector;
 	
 	
 }

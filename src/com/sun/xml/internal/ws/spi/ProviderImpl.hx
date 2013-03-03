@@ -28,29 +28,29 @@ extern class ProviderImpl extends javax.xml.ws.spi.Provider
 	/**
 	* Convenient singleton instance.
 	*/
-	public static var INSTANCE(default, null) : com.sun.xml.internal.ws.spi.ProviderImpl;
+	@:public @:static @:final public static var INSTANCE(default, null) : com.sun.xml.internal.ws.spi.ProviderImpl;
 	
-	@:overload override public function createEndpoint(bindingId : String, implementor : Dynamic) : javax.xml.ws.Endpoint;
+	@:overload @:public override public function createEndpoint(bindingId : String, implementor : Dynamic) : javax.xml.ws.Endpoint;
 	
-	@:overload override public function createServiceDelegate(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName, serviceClass : Class<Dynamic>) : javax.xml.ws.spi.ServiceDelegate;
+	@:overload @:public override public function createServiceDelegate(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName, serviceClass : Class<Dynamic>) : javax.xml.ws.spi.ServiceDelegate;
 	
-	@:overload override public function createServiceDelegate(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName, serviceClass : Class<Dynamic>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.spi.ServiceDelegate;
+	@:overload @:public override public function createServiceDelegate(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName, serviceClass : Class<Dynamic>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.spi.ServiceDelegate;
 	
-	@:overload override public function createAndPublishEndpoint(address : String, implementor : Dynamic) : javax.xml.ws.Endpoint;
+	@:overload @:public override public function createAndPublishEndpoint(address : String, implementor : Dynamic) : javax.xml.ws.Endpoint;
 	
-	@:overload override public function createEndpoint(bindingId : String, implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
+	@:overload @:public override public function createEndpoint(bindingId : String, implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
 	
-	@:overload override public function createAndPublishEndpoint(address : String, implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
+	@:overload @:public override public function createAndPublishEndpoint(address : String, implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
 	
-	@:overload override public function createEndpoint(bindingId : String, implementorClass : Class<Dynamic>, invoker : javax.xml.ws.spi.Invoker, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
+	@:overload @:public override public function createEndpoint(bindingId : String, implementorClass : Class<Dynamic>, invoker : javax.xml.ws.spi.Invoker, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
 	
-	@:overload override public function readEndpointReference(eprInfoset : javax.xml.transform.Source) : javax.xml.ws.EndpointReference;
+	@:overload @:public override public function readEndpointReference(eprInfoset : javax.xml.transform.Source) : javax.xml.ws.EndpointReference;
 	
-	@:overload override public function getPort<T>(endpointReference : javax.xml.ws.EndpointReference, clazz : Class<T>, webServiceFeatures : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
+	@:overload @:public override public function getPort<T>(endpointReference : javax.xml.ws.EndpointReference, clazz : Class<T>, webServiceFeatures : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
 	
-	@:overload override public function createW3CEndpointReference(address : String, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, metadata : java.util.List<org.w3c.dom.Element>, wsdlDocumentLocation : String, referenceParameters : java.util.List<org.w3c.dom.Element>) : javax.xml.ws.wsaddressing.W3CEndpointReference;
+	@:overload @:public override public function createW3CEndpointReference(address : String, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, metadata : java.util.List<org.w3c.dom.Element>, wsdlDocumentLocation : String, referenceParameters : java.util.List<org.w3c.dom.Element>) : javax.xml.ws.wsaddressing.W3CEndpointReference;
 	
-	@:overload override public function createW3CEndpointReference(address : String, interfaceName : javax.xml.namespace.QName, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, metadata : java.util.List<org.w3c.dom.Element>, wsdlDocumentLocation : String, referenceParameters : java.util.List<org.w3c.dom.Element>, elements : java.util.List<org.w3c.dom.Element>, attributes : java.util.Map<javax.xml.namespace.QName, String>) : javax.xml.ws.wsaddressing.W3CEndpointReference;
+	@:overload @:public override public function createW3CEndpointReference(address : String, interfaceName : javax.xml.namespace.QName, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, metadata : java.util.List<org.w3c.dom.Element>, wsdlDocumentLocation : String, referenceParameters : java.util.List<org.w3c.dom.Element>, elements : java.util.List<org.w3c.dom.Element>, attributes : java.util.Map<javax.xml.namespace.QName, String>) : javax.xml.ws.wsaddressing.W3CEndpointReference;
 	
 	
 }

@@ -28,26 +28,26 @@ package com.sun.xml.internal.ws.model.wsdl;
 	/**
 	* @author Kohsuke Kawaguchi
 	*/
-	private var features : com.sun.xml.internal.ws.binding.WebServiceFeatureList;
+	@:protected private var features : com.sun.xml.internal.ws.binding.WebServiceFeatureList;
 	
-	@:overload private function new(xsr : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:protected private function new(xsr : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload private function new(systemId : String, lineNumber : Int) : Void;
+	@:overload @:protected private function new(systemId : String, lineNumber : Int) : Void;
 	
-	@:overload @:final public function addFeature(feature : javax.xml.ws.WebServiceFeature) : Void;
+	@:overload @:public @:final public function addFeature(feature : javax.xml.ws.WebServiceFeature) : Void;
 	
-	@:overload public function getFeatures() : com.sun.xml.internal.ws.binding.WebServiceFeatureList;
+	@:overload @:public public function getFeatures() : com.sun.xml.internal.ws.binding.WebServiceFeatureList;
 	
-	@:overload @:final public function getFeature(id : String) : javax.xml.ws.WebServiceFeature;
+	@:overload @:public @:final public function getFeature(id : String) : javax.xml.ws.WebServiceFeature;
 	
-	@:overload public function getFeature<F : javax.xml.ws.WebServiceFeature>(featureType : Class<F>) : F;
+	@:overload @:public public function getFeature<F : javax.xml.ws.WebServiceFeature>(featureType : Class<F>) : F;
 	
 	/**
 	* Gets the source location information in the parsed WSDL.
 	*
 	* This is useful when producing error messages.
 	*/
-	@:overload override public function getLocation() : org.xml.sax.Locator;
+	@:overload @:public @:public override public function getLocation() : org.xml.sax.Locator;
 	
 	
 }

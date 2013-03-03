@@ -34,7 +34,7 @@ extern class PendingException extends java.lang.RuntimeException
 	* Constructs a PendingException with no detail message. A detail
 	* message is a String that describes this particular exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a PendingException with the specified detail message.
@@ -45,7 +45,7 @@ extern class PendingException extends java.lang.RuntimeException
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

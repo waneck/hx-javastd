@@ -29,7 +29,7 @@ package com.sun.org.apache.xml.internal.serializer;
 	* method takes a String rather than a character array.
 	* @throws SAXException
 	*/
-	@:overload public function comment(comment : String) : Void;
+	@:overload @:public public function comment(comment : String) : Void;
 	
 	
 }

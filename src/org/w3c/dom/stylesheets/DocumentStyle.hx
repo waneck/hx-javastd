@@ -56,7 +56,7 @@ extern interface DocumentStyle
 	* elements. In XML, this includes external style sheets, included via
 	* style sheet processing instructions (see [XML StyleSheet]).
 	*/
-	@:overload public function getStyleSheets() : org.w3c.dom.stylesheets.StyleSheetList;
+	@:overload @:public public function getStyleSheets() : org.w3c.dom.stylesheets.StyleSheetList;
 	
 	
 }

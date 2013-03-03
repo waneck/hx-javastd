@@ -42,27 +42,27 @@ extern class GraphicAttribute
 	/**
 	* Aligns top of graphic to top of line.
 	*/
-	public static var TOP_ALIGNMENT(default, null) : Int;
+	@:public @:static @:final public static var TOP_ALIGNMENT(default, null) : Int;
 	
 	/**
 	* Aligns bottom of graphic to bottom of line.
 	*/
-	public static var BOTTOM_ALIGNMENT(default, null) : Int;
+	@:public @:static @:final public static var BOTTOM_ALIGNMENT(default, null) : Int;
 	
 	/**
 	* Aligns origin of graphic to roman baseline of line.
 	*/
-	public static var ROMAN_BASELINE(default, null) : Int;
+	@:public @:static @:final public static var ROMAN_BASELINE(default, null) : Int;
 	
 	/**
 	* Aligns origin of graphic to center baseline of line.
 	*/
-	public static var CENTER_BASELINE(default, null) : Int;
+	@:public @:static @:final public static var CENTER_BASELINE(default, null) : Int;
 	
 	/**
 	* Aligns origin of graphic to hanging baseline of line.
 	*/
-	public static var HANGING_BASELINE(default, null) : Int;
+	@:public @:static @:final public static var HANGING_BASELINE(default, null) : Int;
 	
 	/**
 	* Constructs a <code>GraphicAttribute</code>.
@@ -72,7 +72,7 @@ extern class GraphicAttribute
 	* @throws IllegalArgumentException if alignment is not one of the
 	* five defined values.
 	*/
-	@:overload private function new(alignment : Int) : Void;
+	@:overload @:protected private function new(alignment : Int) : Void;
 	
 	/**
 	* Returns the ascent of this <code>GraphicAttribute</code>.  A
@@ -80,7 +80,7 @@ extern class GraphicAttribute
 	* @return the ascent of this <code>GraphicAttribute</code>.
 	* @see #getBounds()
 	*/
-	@:overload @:abstract public function getAscent() : Single;
+	@:overload @:public @:abstract public function getAscent() : Single;
 	
 	/**
 	* Returns the descent of this <code>GraphicAttribute</code>.  A
@@ -88,7 +88,7 @@ extern class GraphicAttribute
 	* @return the descent of this <code>GraphicAttribute</code>.
 	* @see #getBounds()
 	*/
-	@:overload @:abstract public function getDescent() : Single;
+	@:overload @:public @:abstract public function getDescent() : Single;
 	
 	/**
 	* Returns the advance of this <code>GraphicAttribute</code>.  The
@@ -99,7 +99,7 @@ extern class GraphicAttribute
 	* @return the advance of this <code>GraphicAttribute</code>.
 	* @see #getBounds()
 	*/
-	@:overload @:abstract public function getAdvance() : Single;
+	@:overload @:public @:abstract public function getAdvance() : Single;
 	
 	/**
 	* Returns a {@link Rectangle2D} that encloses all of the
@@ -112,7 +112,7 @@ extern class GraphicAttribute
 	* @return a <code>Rectangle2D</code> that encloses all of the bits
 	* rendered by this <code>GraphicAttribute</code>.
 	*/
-	@:overload public function getBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getBounds() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Return a {@link java.awt.Shape} that represents the region that
@@ -129,7 +129,7 @@ extern class GraphicAttribute
 	*   suitable for stroking or filling.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getOutline(tx : java.awt.geom.AffineTransform) : java.awt.Shape;
+	@:require(java6) @:overload @:public public function getOutline(tx : java.awt.geom.AffineTransform) : java.awt.Shape;
 	
 	/**
 	* Renders this <code>GraphicAttribute</code> at the specified
@@ -139,7 +139,7 @@ extern class GraphicAttribute
 	* @param x the user-space X coordinate where the graphic is rendered
 	* @param y the user-space Y coordinate where the graphic is rendered
 	*/
-	@:overload @:abstract public function draw(graphics : java.awt.Graphics2D, x : Single, y : Single) : Void;
+	@:overload @:public @:abstract public function draw(graphics : java.awt.Graphics2D, x : Single, y : Single) : Void;
 	
 	/**
 	* Returns the alignment of this <code>GraphicAttribute</code>.
@@ -147,7 +147,7 @@ extern class GraphicAttribute
 	* or bottom of a line.
 	* @return the alignment of this <code>GraphicAttribute</code>.
 	*/
-	@:overload @:final public function getAlignment() : Int;
+	@:overload @:public @:final public function getAlignment() : Int;
 	
 	/**
 	* Returns the justification information for this
@@ -157,7 +157,7 @@ extern class GraphicAttribute
 	* @return a {@link GlyphJustificationInfo} object that contains the
 	* justification information for this <code>GraphicAttribute</code>.
 	*/
-	@:overload public function getJustificationInfo() : java.awt.font.GlyphJustificationInfo;
+	@:overload @:public public function getJustificationInfo() : java.awt.font.GlyphJustificationInfo;
 	
 	
 }

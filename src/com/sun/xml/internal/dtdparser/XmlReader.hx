@@ -33,7 +33,7 @@ package com.sun.xml.internal.dtdparser;
 	* @param in the input stream from which the reader is constructed
 	* @throws IOException on error, such as unrecognized encoding
 	*/
-	@:overload public static function createReader(_in : java.io.InputStream) : java.io.Reader;
+	@:overload @:public @:static public static function createReader(_in : java.io.InputStream) : java.io.Reader;
 	
 	/**
 	* Creates a reader supporting the given encoding, mapping
@@ -45,27 +45,27 @@ package com.sun.xml.internal.dtdparser;
 	*                 if null, auto-detection is used.
 	* @throws IOException on error, including unrecognized encoding
 	*/
-	@:overload public static function createReader(_in : java.io.InputStream, encoding : String) : java.io.Reader;
+	@:overload @:public @:static public static function createReader(_in : java.io.InputStream, encoding : String) : java.io.Reader;
 	
 	/**
 	* Returns the standard name of the encoding in use
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	* Reads the number of characters read into the buffer, or -1 on EOF.
 	*/
-	@:overload override public function read(buf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(buf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
 	
 	/**
 	* Reads a single character.
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Returns true iff the reader supports mark/reset.
 	*/
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	/**
 	* Sets a mark allowing a limited number of characters to
@@ -73,59 +73,61 @@ package com.sun.xml.internal.dtdparser;
 	*
 	* @param value how many characters may be "peeked".
 	*/
-	@:overload override public function mark(value : Int) : Void;
+	@:overload @:public override public function mark(value : Int) : Void;
 	
 	/**
 	* Resets the current position to the last marked position.
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* Skips a specified number of characters.
 	*/
-	@:overload override public function skip(value : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(value : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns true iff input characters are known to be ready.
 	*/
-	@:overload override public function ready() : Bool;
+	@:overload @:public override public function ready() : Bool;
 	
 	/**
 	* Closes the reader.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$dtdparser$XmlReader$BaseReader') @:internal extern class XmlReader_BaseReader extends java.io.Reader
 {
-	private var instream : java.io.InputStream;
+	@:protected private var instream : java.io.InputStream;
 	
-	private var buffer : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var buffer : java.NativeArray<java.StdTypes.Int8>;
 	
-	private var start : Int;
+	@:protected private var start : Int;
 	
-	@:overload override public function ready() : Bool;
+	@:protected private var finish : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function ready() : Bool;
+	
+	@:overload @:public override public function close() : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$dtdparser$XmlReader$Utf8Reader') @:internal extern class XmlReader_Utf8Reader extends com.sun.xml.internal.dtdparser.XmlReader.XmlReader_BaseReader
 {
-	@:overload override public function read(buf : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : Int;
+	@:overload @:public override public function read(buf : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : Int;
 	
 	
 }
 @:native('com$sun$xml$internal$dtdparser$XmlReader$AsciiReader') @:internal extern class XmlReader_AsciiReader extends com.sun.xml.internal.dtdparser.XmlReader.XmlReader_BaseReader
 {
-	@:overload override public function read(buf : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : Int;
+	@:overload @:public override public function read(buf : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : Int;
 	
 	
 }
 @:native('com$sun$xml$internal$dtdparser$XmlReader$Iso8859_1Reader') @:internal extern class XmlReader_Iso8859_1Reader extends com.sun.xml.internal.dtdparser.XmlReader.XmlReader_BaseReader
 {
-	@:overload override public function read(buf : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : Int;
+	@:overload @:public override public function read(buf : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : Int;
 	
 	
 }

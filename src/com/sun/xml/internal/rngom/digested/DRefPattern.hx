@@ -49,21 +49,21 @@ package com.sun.xml.internal.rngom.digested;
 */
 extern class DRefPattern extends com.sun.xml.internal.rngom.digested.DPattern
 {
-	@:overload public function new(target : com.sun.xml.internal.rngom.digested.DDefine) : Void;
+	@:overload @:public public function new(target : com.sun.xml.internal.rngom.digested.DDefine) : Void;
 	
-	@:overload public function isNullable() : Bool;
+	@:overload @:public override public function isNullable() : Bool;
 	
 	/**
 	* Gets the {@link DDefine} that this block refers to.
 	*/
-	@:overload public function getTarget() : com.sun.xml.internal.rngom.digested.DDefine;
+	@:overload @:public public function getTarget() : com.sun.xml.internal.rngom.digested.DDefine;
 	
 	/**
 	* Gets the name of the target.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function accept(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<Dynamic>) : Dynamic;
+	@:overload @:public override public function accept(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<Dynamic>) : Dynamic;
 	
 	
 }

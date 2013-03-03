@@ -36,7 +36,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload @:abstract public function equal(a : org.omg.CORBA.Any) : Bool;
+	@:overload @:abstract @:public public function equal(a : org.omg.CORBA.Any) : Bool;
 	
 	/**
 	* Returns type information for the element contained in this
@@ -45,7 +45,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @return          the <code>TypeCode</code> object containing type information
 	*                about the value contained in this <code>Any</code> object
 	*/
-	@:overload @:abstract public function type() : org.omg.CORBA.TypeCode;
+	@:overload @:abstract @:public public function type() : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Sets this <code>Any</code> object's <code>type</code> field
@@ -62,7 +62,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*                information for the value in
 	*                this <code>Any</code> object
 	*/
-	@:overload @:abstract public function type(t : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:abstract @:public public function type(t : org.omg.CORBA.TypeCode) : Void;
 	
 	/**
 	* Reads off (unmarshals) the value of an <code>Any</code> object from
@@ -79,7 +79,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*                    not consistent with the value that was contained
 	*                    in the input stream
 	*/
-	@:overload @:abstract public function read_value(is : org.omg.CORBA.portable.InputStream, t : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:abstract @:public public function read_value(is : org.omg.CORBA.portable.InputStream, t : org.omg.CORBA.TypeCode) : Void;
 	
 	/**
 	* Writes out the value of this <code>Any</code> object
@@ -97,7 +97,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*                of this <code>Any</code> object
 	*
 	*/
-	@:overload @:abstract public function write_value(os : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:abstract @:public public function write_value(os : org.omg.CORBA.portable.OutputStream) : Void;
 	
 	/**
 	* Creates an output stream into which this <code>Any</code> object's
@@ -105,7 +105,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*
 	* @return          the newly-created <code>OutputStream</code>
 	*/
-	@:overload @:abstract public function create_output_stream() : org.omg.CORBA.portable.OutputStream;
+	@:overload @:abstract @:public public function create_output_stream() : org.omg.CORBA.portable.OutputStream;
 	
 	/**
 	* Creates an input stream from which this <code>Any</code> object's value
@@ -113,7 +113,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*
 	* @return          the newly-created <code>InputStream</code>
 	*/
-	@:overload @:abstract public function create_input_stream() : org.omg.CORBA.portable.InputStream;
+	@:overload @:abstract @:public public function create_input_stream() : org.omg.CORBA.portable.InputStream;
 	
 	/**
 	* Extracts the <code>short</code> in this
@@ -124,7 +124,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than a <code>short</code> or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_short() : java.StdTypes.Int16;
+	@:overload @:abstract @:public public function extract_short() : java.StdTypes.Int16;
 	
 	/**
 	* Inserts the given <code>short</code>
@@ -133,7 +133,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @param s         the <code>short</code> to insert into this
 	*                <code>Any</code> object
 	*/
-	@:overload @:abstract public function insert_short(s : java.StdTypes.Int16) : Void;
+	@:overload @:abstract @:public public function insert_short(s : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Extracts the <code>int</code> in this
@@ -144,7 +144,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than an <code>int</code> or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_long() : Int;
+	@:overload @:abstract @:public public function extract_long() : Int;
 	
 	/**
 	* Inserts the given <code>int</code>
@@ -153,7 +153,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @param l         the <code>int</code> to insert into this
 	*                <code>Any</code> object
 	*/
-	@:overload @:abstract public function insert_long(l : Int) : Void;
+	@:overload @:abstract @:public public function insert_long(l : Int) : Void;
 	
 	/**
 	* Extracts the <code>long</code> in this
@@ -164,7 +164,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than a <code>long</code> or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_longlong() : haxe.Int64;
+	@:overload @:abstract @:public public function extract_longlong() : haxe.Int64;
 	
 	/**
 	* Inserts the given <code>long</code>
@@ -173,7 +173,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @param l         the <code>long</code> to insert into this
 	*                <code>Any</code> object
 	*/
-	@:overload @:abstract public function insert_longlong(l : haxe.Int64) : Void;
+	@:overload @:abstract @:public public function insert_longlong(l : haxe.Int64) : Void;
 	
 	/**
 	* Extracts the <code>short</code> in this
@@ -184,7 +184,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than a <code>short</code> or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_ushort() : java.StdTypes.Int16;
+	@:overload @:abstract @:public public function extract_ushort() : java.StdTypes.Int16;
 	
 	/**
 	* Inserts the given <code>short</code>
@@ -193,7 +193,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @param s         the <code>short</code> to insert into this
 	*                <code>Any</code> object
 	*/
-	@:overload @:abstract public function insert_ushort(s : java.StdTypes.Int16) : Void;
+	@:overload @:abstract @:public public function insert_ushort(s : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Extracts the <code>int</code> in this
@@ -204,7 +204,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than an <code>int</code> or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_ulong() : Int;
+	@:overload @:abstract @:public public function extract_ulong() : Int;
 	
 	/**
 	* Inserts the given <code>int</code>
@@ -213,7 +213,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @param l         the <code>int</code> to insert into this
 	*                <code>Any</code> object
 	*/
-	@:overload @:abstract public function insert_ulong(l : Int) : Void;
+	@:overload @:abstract @:public public function insert_ulong(l : Int) : Void;
 	
 	/**
 	* Extracts the <code>long</code> in this
@@ -224,7 +224,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than a <code>long</code> or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_ulonglong() : haxe.Int64;
+	@:overload @:abstract @:public public function extract_ulonglong() : haxe.Int64;
 	
 	/**
 	* Inserts the given <code>long</code>
@@ -233,7 +233,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @param l         the <code>long</code> to insert into this
 	*                <code>Any</code> object
 	*/
-	@:overload @:abstract public function insert_ulonglong(l : haxe.Int64) : Void;
+	@:overload @:abstract @:public public function insert_ulonglong(l : haxe.Int64) : Void;
 	
 	/**
 	* Extracts the <code>float</code> in this
@@ -244,7 +244,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than a <code>float</code> or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_float() : Single;
+	@:overload @:abstract @:public public function extract_float() : Single;
 	
 	/**
 	* Inserts the given <code>float</code>
@@ -253,7 +253,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @param f         the <code>float</code> to insert into this
 	*                <code>Any</code> object
 	*/
-	@:overload @:abstract public function insert_float(f : Single) : Void;
+	@:overload @:abstract @:public public function insert_float(f : Single) : Void;
 	
 	/**
 	* Extracts the <code>double</code> in this
@@ -264,7 +264,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than a <code>double</code> or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_double() : Float;
+	@:overload @:abstract @:public public function extract_double() : Float;
 	
 	/**
 	* Inserts the given <code>double</code>
@@ -273,7 +273,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @param d         the <code>double</code> to insert into this
 	*                <code>Any</code> object
 	*/
-	@:overload @:abstract public function insert_double(d : Float) : Void;
+	@:overload @:abstract @:public public function insert_double(d : Float) : Void;
 	
 	/**
 	* Extracts the <code>boolean</code> in this
@@ -284,7 +284,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than a <code>boolean</code> or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_boolean() : Bool;
+	@:overload @:abstract @:public public function extract_boolean() : Bool;
 	
 	/**
 	* Inserts the given <code>boolean</code>
@@ -293,7 +293,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @param b         the <code>boolean</code> to insert into this
 	*                <code>Any</code> object
 	*/
-	@:overload @:abstract public function insert_boolean(b : Bool) : Void;
+	@:overload @:abstract @:public public function insert_boolean(b : Bool) : Void;
 	
 	/**
 	* Extracts the <code>char</code> in this
@@ -304,7 +304,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than a <code>char</code> or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_char() : java.StdTypes.Char16;
+	@:overload @:abstract @:public public function extract_char() : java.StdTypes.Char16;
 	
 	/**
 	* Inserts the given <code>char</code>
@@ -315,7 +315,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @exception DATA_CONVERSION if there is a data conversion
 	*            error
 	*/
-	@:overload @:abstract public function insert_char(c : java.StdTypes.Char16) : Void;
+	@:overload @:abstract @:public public function insert_char(c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Extracts the <code>char</code> in this
@@ -326,7 +326,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than a <code>char</code> or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_wchar() : java.StdTypes.Char16;
+	@:overload @:abstract @:public public function extract_wchar() : java.StdTypes.Char16;
 	
 	/**
 	* Inserts the given <code>char</code>
@@ -335,7 +335,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @param c         the <code>char</code> to insert into this
 	*                <code>Any</code> object
 	*/
-	@:overload @:abstract public function insert_wchar(c : java.StdTypes.Char16) : Void;
+	@:overload @:abstract @:public public function insert_wchar(c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Extracts the <code>byte</code> in this
@@ -346,7 +346,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than a <code>byte</code> or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_octet() : java.StdTypes.Int8;
+	@:overload @:abstract @:public public function extract_octet() : java.StdTypes.Int8;
 	
 	/**
 	* Inserts the given <code>byte</code>
@@ -355,7 +355,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @param b         the <code>byte</code> to insert into this
 	*                <code>Any</code> object
 	*/
-	@:overload @:abstract public function insert_octet(b : java.StdTypes.Int8) : Void;
+	@:overload @:abstract @:public public function insert_octet(b : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Extracts the <code>Any</code> object in this
@@ -366,7 +366,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than an <code>Any</code> object or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_any() : org.omg.CORBA.Any;
+	@:overload @:abstract @:public public function extract_any() : org.omg.CORBA.Any;
 	
 	/**
 	* Inserts the given <code>Any</code> object
@@ -375,7 +375,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @param a         the <code>Any</code> object to insert into this
 	*                <code>Any</code> object
 	*/
-	@:overload @:abstract public function insert_any(a : org.omg.CORBA.Any) : Void;
+	@:overload @:abstract @:public public function insert_any(a : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* Extracts the <code>org.omg.CORBA.Object</code> in this
@@ -388,7 +388,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              <code>org.omg.CORBA.Object</code> or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_Object() : org.omg.CORBA.Object;
+	@:overload @:abstract @:public public function extract_Object() : org.omg.CORBA.Object;
 	
 	/**
 	* Inserts the given <code>org.omg.CORBA.Object</code> object
@@ -397,7 +397,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @param o         the <code>org.omg.CORBA.Object</code> object to insert into this
 	*                <code>Any</code> object
 	*/
-	@:overload @:abstract public function insert_Object(o : org.omg.CORBA.Object) : Void;
+	@:overload @:abstract @:public public function insert_Object(o : org.omg.CORBA.Object) : Void;
 	
 	/**
 	* Extracts the <code>java.io.Serializable</code> object in this
@@ -410,7 +410,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              object or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_Value() : java.io.Serializable;
+	@:overload @:abstract @:public public function extract_Value() : java.io.Serializable;
 	
 	/**
 	* Inserts the given <code>java.io.Serializable</code> object
@@ -419,7 +419,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @param v         the <code>java.io.Serializable</code> object to insert into this
 	*                <code>Any</code> object
 	*/
-	@:overload @:abstract public function insert_Value(v : java.io.Serializable) : Void;
+	@:overload @:abstract @:public public function insert_Value(v : java.io.Serializable) : Void;
 	
 	/**
 	* Inserts the given <code>java.io.Serializable</code> object
@@ -434,7 +434,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @throws MARSHAL if the ORB has a problem marshalling or
 	*          unmarshalling parameters
 	*/
-	@:overload @:abstract public function insert_Value(v : java.io.Serializable, t : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:abstract @:public public function insert_Value(v : java.io.Serializable, t : org.omg.CORBA.TypeCode) : Void;
 	
 	/**
 	* Inserts the given <code>org.omg.CORBA.Object</code> object
@@ -449,7 +449,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*            <code>Any</code> object
 	*
 	*/
-	@:overload @:abstract public function insert_Object(o : org.omg.CORBA.Object, t : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:abstract @:public public function insert_Object(o : org.omg.CORBA.Object, t : org.omg.CORBA.TypeCode) : Void;
 	
 	/**
 	* Extracts the <code>String</code> object in this
@@ -460,7 +460,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than a <code>String</code> object or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_string() : String;
+	@:overload @:abstract @:public public function extract_string() : String;
 	
 	/**
 	* Inserts the given <code>String</code> object
@@ -472,7 +472,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @exception MARSHAL if the ORB has a problem marshalling or
 	*             unmarshalling parameters
 	*/
-	@:overload @:abstract public function insert_string(s : String) : Void;
+	@:overload @:abstract @:public public function insert_string(s : String) : Void;
 	
 	/**
 	* Extracts the <code>String</code> object in this
@@ -483,7 +483,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than a <code>String</code> object or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_wstring() : String;
+	@:overload @:abstract @:public public function extract_wstring() : String;
 	
 	/**
 	* Inserts the given <code>String</code> object
@@ -494,7 +494,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @exception MARSHAL if the ORB has a problem marshalling or
 	*             unmarshalling parameters
 	*/
-	@:overload @:abstract public function insert_wstring(s : String) : Void;
+	@:overload @:abstract @:public public function insert_wstring(s : String) : Void;
 	
 	/**
 	* Extracts the <code>TypeCode</code> object in this
@@ -505,7 +505,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than a <code>TypeCode</code> object or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_TypeCode() : org.omg.CORBA.TypeCode;
+	@:overload @:abstract @:public public function extract_TypeCode() : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Inserts the given <code>TypeCode</code> object
@@ -514,7 +514,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @param t         the <code>TypeCode</code> object to insert into this
 	*                <code>Any</code> object
 	*/
-	@:overload @:abstract public function insert_TypeCode(t : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:abstract @:public public function insert_TypeCode(t : org.omg.CORBA.TypeCode) : Void;
 	
 	/**
 	* Extracts the <code>Principal</code> object in this
@@ -530,7 +530,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*      comments for unimplemented features</a>
 	* @deprecated Deprecated by CORBA 2.2.
 	*/
-	@:overload public function extract_Principal() : org.omg.CORBA.Principal;
+	@:overload @:public public function extract_Principal() : org.omg.CORBA.Principal;
 	
 	/**
 	* Inserts the given <code>Principal</code> object
@@ -543,7 +543,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*      comments for unimplemented features</a>
 	* @deprecated Deprecated by CORBA 2.2.
 	*/
-	@:overload public function insert_Principal(p : org.omg.CORBA.Principal) : Void;
+	@:overload @:public public function insert_Principal(p : org.omg.CORBA.Principal) : Void;
 	
 	/**
 	* Extracts a <code>Streamable</code> from this <code>Any</code> object's
@@ -555,7 +555,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function extract_Streamable() : org.omg.CORBA.portable.Streamable;
+	@:overload @:public public function extract_Streamable() : org.omg.CORBA.portable.Streamable;
 	
 	/**
 	* Inserts the given <code>Streamable</code> object
@@ -568,7 +568,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function insert_Streamable(s : org.omg.CORBA.portable.Streamable) : Void;
+	@:overload @:public public function insert_Streamable(s : org.omg.CORBA.portable.Streamable) : Void;
 	
 	/**
 	* Extracts the <code>java.math.BigDecimal</code> object in this
@@ -583,7 +583,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function extract_fixed() : java.math.BigDecimal;
+	@:overload @:public public function extract_fixed() : java.math.BigDecimal;
 	
 	/**
 	* Throws an <a href="package-summary.html#NO_IMPLEMENT">
@@ -597,7 +597,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function insert_fixed(value : java.math.BigDecimal) : Void;
+	@:overload @:public public function insert_fixed(value : java.math.BigDecimal) : Void;
 	
 	/**
 	* Throws an <a href="package-summary.html#NO_IMPLEMENT">
@@ -616,7 +616,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function insert_fixed(value : java.math.BigDecimal, type : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:public public function insert_fixed(value : java.math.BigDecimal, type : org.omg.CORBA.TypeCode) : Void;
 	
 	
 }

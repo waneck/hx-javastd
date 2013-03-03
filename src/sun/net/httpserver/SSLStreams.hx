@@ -36,7 +36,7 @@ package sun.net.httpserver;
 	* all of the given user data has been sent and any handshake has been
 	* completed. Caller should check if engine has been closed.
 	*/
-	@:overload public function sendData(src : java.nio.ByteBuffer) : sun.net.httpserver.SSLStreams.SSLStreams_WrapperResult;
+	@:overload @:public public function sendData(src : java.nio.ByteBuffer) : sun.net.httpserver.SSLStreams.SSLStreams_WrapperResult;
 	
 	/**
 	* read data thru the engine into the given ByteBuffer. If the
@@ -44,17 +44,17 @@ package sun.net.httpserver;
 	* and returned. This call handles handshaking automatically.
 	* Caller should check if engine has been closed.
 	*/
-	@:overload public function recvData(dst : java.nio.ByteBuffer) : sun.net.httpserver.SSLStreams.SSLStreams_WrapperResult;
+	@:overload @:public public function recvData(dst : java.nio.ByteBuffer) : sun.net.httpserver.SSLStreams.SSLStreams_WrapperResult;
 	
 	
 }
 @:native('sun$net$httpserver$SSLStreams$Parameters') @:internal extern class SSLStreams_Parameters extends com.sun.net.httpserver.HttpsParameters
 {
-	@:overload override public function getClientAddress() : java.net.InetSocketAddress;
+	@:overload @:public override public function getClientAddress() : java.net.InetSocketAddress;
 	
-	@:overload override public function getHttpsConfigurator() : com.sun.net.httpserver.HttpsConfigurator;
+	@:overload @:public override public function getHttpsConfigurator() : com.sun.net.httpserver.HttpsConfigurator;
 	
-	@:overload override public function setSSLParameters(p : javax.net.ssl.SSLParameters) : Void;
+	@:overload @:public override public function setSSLParameters(p : javax.net.ssl.SSLParameters) : Void;
 	
 	
 }
@@ -89,26 +89,26 @@ package sun.net.httpserver;
 */
 @:native('sun$net$httpserver$SSLStreams$InputStream') @:internal extern class SSLStreams_InputStream extends java.io.InputStream
 {
-	@:overload override public function read(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload override public function skip(s : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(s : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* close the SSL connection. All data must have been consumed
 	* before this is called. Otherwise an exception will be thrown.
 	* [Note. May need to revisit this. not quite the normal close() symantics
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload override public function read(buf : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public override public function read(buf : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	
 }
@@ -119,15 +119,15 @@ package sun.net.httpserver;
 */
 @:native('sun$net$httpserver$SSLStreams$OutputStream') @:internal extern class SSLStreams_OutputStream extends java.io.OutputStream
 {
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

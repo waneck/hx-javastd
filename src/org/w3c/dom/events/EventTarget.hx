@@ -75,7 +75,7 @@ extern interface EventTarget
 	*   are bubbling upward through the tree will not trigger an
 	*   <code>EventListener</code> designated to use capture.
 	*/
-	@:overload public function addEventListener(type : String, listener : org.w3c.dom.events.EventListener, useCapture : Bool) : Void;
+	@:overload @:public public function addEventListener(type : String, listener : org.w3c.dom.events.EventListener, useCapture : Bool) : Void;
 	
 	/**
 	* This method allows the removal of event listeners from the event
@@ -97,7 +97,7 @@ extern interface EventTarget
 	*   does not affect a non-capturing version of the same listener, and
 	*   vice versa.
 	*/
-	@:overload public function removeEventListener(type : String, listener : org.w3c.dom.events.EventListener, useCapture : Bool) : Void;
+	@:overload @:public public function removeEventListener(type : String, listener : org.w3c.dom.events.EventListener, useCapture : Bool) : Void;
 	
 	/**
 	* This method allows the dispatch of events into the implementations
@@ -119,7 +119,7 @@ extern interface EventTarget
 	*   <code>Event</code>'s type as <code>null</code> or an empty string
 	*   will also trigger this exception.
 	*/
-	@:overload public function dispatchEvent(evt : org.w3c.dom.events.Event) : Bool;
+	@:overload @:public public function dispatchEvent(evt : org.w3c.dom.events.Event) : Bool;
 	
 	
 }

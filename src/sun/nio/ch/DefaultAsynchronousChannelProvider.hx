@@ -28,7 +28,7 @@ extern class DefaultAsynchronousChannelProvider
 	/**
 	* Returns the default AsynchronousChannelProvider.
 	*/
-	@:overload public static function create() : java.nio.channels.spi.AsynchronousChannelProvider;
+	@:overload @:public @:static public static function create() : java.nio.channels.spi.AsynchronousChannelProvider;
 	
 	
 }

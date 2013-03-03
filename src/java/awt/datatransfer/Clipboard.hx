@@ -25,23 +25,23 @@ package java.awt.datatransfer;
 */
 extern class Clipboard
 {
-	private var owner : java.awt.datatransfer.ClipboardOwner;
+	@:protected private var owner : java.awt.datatransfer.ClipboardOwner;
 	
-	private var contents : java.awt.datatransfer.Transferable;
+	@:protected private var contents : java.awt.datatransfer.Transferable;
 	
 	/**
 	* Creates a clipboard object.
 	*
 	* @see java.awt.Toolkit#getSystemClipboard
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Returns the name of this clipboard object.
 	*
 	* @see java.awt.Toolkit#getSystemClipboard
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Sets the current contents of the clipboard to the specified
@@ -68,7 +68,7 @@ extern class Clipboard
 	* @throws IllegalStateException if the clipboard is currently unavailable
 	* @see java.awt.Toolkit#getSystemClipboard
 	*/
-	@:overload @:synchronized public function setContents(contents : java.awt.datatransfer.Transferable, owner : java.awt.datatransfer.ClipboardOwner) : Void;
+	@:overload @:public @:synchronized public function setContents(contents : java.awt.datatransfer.Transferable, owner : java.awt.datatransfer.ClipboardOwner) : Void;
 	
 	/**
 	* Returns a transferable object representing the current contents
@@ -84,7 +84,7 @@ extern class Clipboard
 	* @throws IllegalStateException if the clipboard is currently unavailable
 	* @see java.awt.Toolkit#getSystemClipboard
 	*/
-	@:overload @:synchronized public function getContents(requestor : Dynamic) : java.awt.datatransfer.Transferable;
+	@:overload @:public @:synchronized public function getContents(requestor : Dynamic) : java.awt.datatransfer.Transferable;
 	
 	/**
 	* Returns an array of <code>DataFlavor</code>s in which the current
@@ -99,7 +99,7 @@ extern class Clipboard
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getAvailableDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:require(java5) @:overload @:public public function getAvailableDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Returns whether or not the current contents of this clipboard can be
@@ -116,7 +116,7 @@ extern class Clipboard
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isDataFlavorAvailable(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:require(java5) @:overload @:public public function isDataFlavorAvailable(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Returns an object representing the current contents of this clipboard
@@ -140,7 +140,7 @@ extern class Clipboard
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
+	@:require(java5) @:overload @:public public function getData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
 	
 	/**
 	* Registers the specified <code>FlavorListener</code> to receive
@@ -156,7 +156,7 @@ extern class Clipboard
 	* @see FlavorEvent
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized public function addFlavorListener(listener : java.awt.datatransfer.FlavorListener) : Void;
+	@:require(java5) @:overload @:public @:synchronized public function addFlavorListener(listener : java.awt.datatransfer.FlavorListener) : Void;
 	
 	/**
 	* Removes the specified <code>FlavorListener</code> so that it no longer
@@ -175,7 +175,7 @@ extern class Clipboard
 	* @see FlavorEvent
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized public function removeFlavorListener(listener : java.awt.datatransfer.FlavorListener) : Void;
+	@:require(java5) @:overload @:public @:synchronized public function removeFlavorListener(listener : java.awt.datatransfer.FlavorListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>FlavorListener</code>s currently
@@ -189,7 +189,7 @@ extern class Clipboard
 	* @see FlavorEvent
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized public function getFlavorListeners() : java.NativeArray<java.awt.datatransfer.FlavorListener>;
+	@:require(java5) @:overload @:public @:synchronized public function getFlavorListeners() : java.NativeArray<java.awt.datatransfer.FlavorListener>;
 	
 	
 }

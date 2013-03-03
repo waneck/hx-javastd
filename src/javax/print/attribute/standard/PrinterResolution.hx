@@ -40,7 +40,7 @@ extern class PrinterResolution extends javax.print.attribute.ResolutionSyntax im
 	*     (unchecked exception) Thrown if <CODE>crossFeedResolution</CODE> <
 	*     1 or <CODE>feedResolution</CODE> < 1 or <CODE>units</CODE> < 1.
 	*/
-	@:overload public function new(crossFeedResolution : Int, feedResolution : Int, units : Int) : Void;
+	@:overload @:public public function new(crossFeedResolution : Int, feedResolution : Int, units : Int) : Void;
 	
 	/**
 	* Returns whether this printer resolution attribute is equivalent to the
@@ -64,7 +64,7 @@ extern class PrinterResolution extends javax.print.attribute.ResolutionSyntax im
 	* @return  True if <CODE>object</CODE> is equivalent to this printer
 	*          resolution attribute, false otherwise.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public override public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -75,7 +75,7 @@ extern class PrinterResolution extends javax.print.attribute.ResolutionSyntax im
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -86,7 +86,7 @@ extern class PrinterResolution extends javax.print.attribute.ResolutionSyntax im
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

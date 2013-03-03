@@ -33,9 +33,9 @@ extern class DefaultMenuLayout extends javax.swing.BoxLayout implements javax.sw
 	*
 	* @author Georges Saab
 	*/
-	@:overload public function new(target : java.awt.Container, axis : Int) : Void;
+	@:overload @:public public function new(target : java.awt.Container, axis : Int) : Void;
 	
-	@:overload override public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public override public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	
 }

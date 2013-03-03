@@ -28,7 +28,7 @@ extern interface FontSupport
 	/**
 	* Returns the current font configuration.
 	*/
-	@:overload public function getFontConfiguration() : sun.awt.FontConfiguration;
+	@:overload @:public public function getFontConfiguration() : sun.awt.FontConfiguration;
 	
 	
 }

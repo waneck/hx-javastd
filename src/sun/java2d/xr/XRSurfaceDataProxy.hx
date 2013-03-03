@@ -29,17 +29,17 @@ extern class XRSurfaceDataProxy extends sun.java2d.SurfaceDataProxy implements j
 	* The proxy class contains the logic if to replace a SurfaceData with a
 	* cached X11 Pixmap and the code to create the accelerated surfaces.
 	*/
-	@:overload public static function createProxy(srcData : sun.java2d.SurfaceData, dstConfig : sun.java2d.xr.XRGraphicsConfig) : sun.java2d.SurfaceDataProxy;
+	@:overload @:public @:static public static function createProxy(srcData : sun.java2d.SurfaceData, dstConfig : sun.java2d.xr.XRGraphicsConfig) : sun.java2d.SurfaceDataProxy;
 	
-	@:overload public function new(x11gc : sun.java2d.xr.XRGraphicsConfig) : Void;
+	@:overload @:public public function new(x11gc : sun.java2d.xr.XRGraphicsConfig) : Void;
 	
-	@:overload override public function validateSurfaceData(srcData : sun.java2d.SurfaceData, cachedData : sun.java2d.SurfaceData, w : Int, h : Int) : sun.java2d.SurfaceData;
+	@:overload @:public override public function validateSurfaceData(srcData : sun.java2d.SurfaceData, cachedData : sun.java2d.SurfaceData, w : Int, h : Int) : sun.java2d.SurfaceData;
 	
-	@:overload public function new(x11gc : sun.java2d.xr.XRGraphicsConfig, transparency : Int) : Void;
+	@:overload @:public public function new(x11gc : sun.java2d.xr.XRGraphicsConfig, transparency : Int) : Void;
 	
-	@:overload override public function isSupportedOperation(srcData : sun.java2d.SurfaceData, txtype : Int, comp : sun.java2d.loops.CompositeType, bgColor : java.awt.Color) : Bool;
+	@:overload @:public override public function isSupportedOperation(srcData : sun.java2d.SurfaceData, txtype : Int, comp : sun.java2d.loops.CompositeType, bgColor : java.awt.Color) : Bool;
 	
-	@:overload public function getTransparency() : Int;
+	@:overload @:public public function getTransparency() : Int;
 	
 	
 }

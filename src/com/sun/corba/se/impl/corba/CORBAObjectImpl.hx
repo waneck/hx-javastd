@@ -34,7 +34,7 @@ package com.sun.corba.se.impl.corba;
 ////
 extern class CORBAObjectImpl extends org.omg.CORBA_2_3.portable.ObjectImpl
 {
-	@:overload override public function _ids() : java.NativeArray<String>;
+	@:overload @:public override public function _ids() : java.NativeArray<String>;
 	
 	
 }

@@ -46,13 +46,13 @@ package com.sun.xml.internal.rngom.digested;
 */
 extern class DContainerPattern extends com.sun.xml.internal.rngom.digested.DPattern implements java.lang.Iterable<com.sun.xml.internal.rngom.digested.DPattern>
 {
-	@:overload public function firstChild() : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function firstChild() : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function lastChild() : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function lastChild() : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function countChildren() : Int;
+	@:overload @:public public function countChildren() : Int;
 	
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.rngom.digested.DPattern>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.rngom.digested.DPattern>;
 	
 	
 }

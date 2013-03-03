@@ -34,20 +34,20 @@ package com.sun.media.sound;
 */
 extern class DataPusher implements java.lang.Runnable
 {
-	@:overload public function new(sourceLine : javax.sound.sampled.SourceDataLine, format : javax.sound.sampled.AudioFormat, audioData : java.NativeArray<java.StdTypes.Int8>, byteLength : Int) : Void;
+	@:overload @:public public function new(sourceLine : javax.sound.sampled.SourceDataLine, format : javax.sound.sampled.AudioFormat, audioData : java.NativeArray<java.StdTypes.Int8>, byteLength : Int) : Void;
 	
-	@:overload public function new(sourceLine : javax.sound.sampled.SourceDataLine, ais : javax.sound.sampled.AudioInputStream) : Void;
+	@:overload @:public public function new(sourceLine : javax.sound.sampled.SourceDataLine, ais : javax.sound.sampled.AudioInputStream) : Void;
 	
-	@:overload @:synchronized public function start() : Void;
+	@:overload @:public @:synchronized public function start() : Void;
 	
-	@:overload @:synchronized public function start(loop : Bool) : Void;
+	@:overload @:public @:synchronized public function start(loop : Bool) : Void;
 	
-	@:overload @:synchronized public function stop() : Void;
+	@:overload @:public @:synchronized public function stop() : Void;
 	
 	/**
 	* Write data to the source data line.
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

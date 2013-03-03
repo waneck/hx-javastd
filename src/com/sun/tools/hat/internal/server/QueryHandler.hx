@@ -34,47 +34,47 @@ package com.sun.tools.hat.internal.server;
 	*
 	* @author      Bill Foote
 	*/
-	private var urlStart : String;
+	@:protected private var urlStart : String;
 	
-	private var query : String;
+	@:protected private var query : String;
 	
-	private var out : java.io.PrintWriter;
+	@:protected private var out : java.io.PrintWriter;
 	
-	private var snapshot : com.sun.tools.hat.internal.model.Snapshot;
+	@:protected private var snapshot : com.sun.tools.hat.internal.model.Snapshot;
 	
-	@:overload private function encodeForURL(s : String) : String;
+	@:overload @:protected private function encodeForURL(s : String) : String;
 	
-	@:overload private function startHtml(title : String) : Void;
+	@:overload @:protected private function startHtml(title : String) : Void;
 	
-	@:overload private function endHtml() : Void;
+	@:overload @:protected private function endHtml() : Void;
 	
-	@:overload private function error(msg : String) : Void;
+	@:overload @:protected private function error(msg : String) : Void;
 	
-	@:overload private function printAnchorStart() : Void;
+	@:overload @:protected private function printAnchorStart() : Void;
 	
-	@:overload private function printThingAnchorTag(id : haxe.Int64) : Void;
+	@:overload @:protected private function printThingAnchorTag(id : haxe.Int64) : Void;
 	
-	@:overload private function printObject(obj : com.sun.tools.hat.internal.model.JavaObject) : Void;
+	@:overload @:protected private function printObject(obj : com.sun.tools.hat.internal.model.JavaObject) : Void;
 	
-	@:overload private function printThing(thing : com.sun.tools.hat.internal.model.JavaThing) : Void;
+	@:overload @:protected private function printThing(thing : com.sun.tools.hat.internal.model.JavaThing) : Void;
 	
-	@:overload private function printRoot(root : com.sun.tools.hat.internal.model.Root) : Void;
+	@:overload @:protected private function printRoot(root : com.sun.tools.hat.internal.model.Root) : Void;
 	
-	@:overload private function printClass(clazz : com.sun.tools.hat.internal.model.JavaClass) : Void;
+	@:overload @:protected private function printClass(clazz : com.sun.tools.hat.internal.model.JavaClass) : Void;
 	
-	@:overload private function encodeForURL(clazz : com.sun.tools.hat.internal.model.JavaClass) : String;
+	@:overload @:protected private function encodeForURL(clazz : com.sun.tools.hat.internal.model.JavaClass) : String;
 	
-	@:overload private function printField(field : com.sun.tools.hat.internal.model.JavaField) : Void;
+	@:overload @:protected private function printField(field : com.sun.tools.hat.internal.model.JavaField) : Void;
 	
-	@:overload private function printStatic(member : com.sun.tools.hat.internal.model.JavaStatic) : Void;
+	@:overload @:protected private function printStatic(member : com.sun.tools.hat.internal.model.JavaStatic) : Void;
 	
-	@:overload private function printStackTrace(_trace : com.sun.tools.hat.internal.model.StackTrace) : Void;
+	@:overload @:protected private function printStackTrace(_trace : com.sun.tools.hat.internal.model.StackTrace) : Void;
 	
-	@:overload private function printHex(addr : haxe.Int64) : Void;
+	@:overload @:protected private function printHex(addr : haxe.Int64) : Void;
 	
-	@:overload private function parseHex(value : String) : haxe.Int64;
+	@:overload @:protected private function parseHex(value : String) : haxe.Int64;
 	
-	@:overload private function print(str : String) : Void;
+	@:overload @:protected private function print(str : String) : Void;
 	
 	
 }

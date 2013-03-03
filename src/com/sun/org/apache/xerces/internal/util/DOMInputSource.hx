@@ -20,15 +20,15 @@ package com.sun.org.apache.xerces.internal.util;
 */
 extern class DOMInputSource extends com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(node : org.w3c.dom.Node) : Void;
 	
-	@:overload public function new(node : org.w3c.dom.Node, systemId : String) : Void;
+	@:overload @:public public function new(node : org.w3c.dom.Node, systemId : String) : Void;
 	
-	@:overload public function getNode() : org.w3c.dom.Node;
+	@:overload @:public public function getNode() : org.w3c.dom.Node;
 	
-	@:overload public function setNode(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setNode(node : org.w3c.dom.Node) : Void;
 	
 	
 }

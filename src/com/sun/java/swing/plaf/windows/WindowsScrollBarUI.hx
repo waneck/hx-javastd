@@ -31,37 +31,37 @@ extern class WindowsScrollBarUI extends javax.swing.plaf.basic.BasicScrollBarUI
 	* @param c the text field
 	* @return the UI
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function configureScrollBarColors() : Void;
+	@:overload @:protected override private function configureScrollBarColors() : Void;
 	
-	@:overload override private function createDecreaseButton(orientation : Int) : javax.swing.JButton;
+	@:overload @:protected override private function createDecreaseButton(orientation : Int) : javax.swing.JButton;
 	
-	@:overload override private function createIncreaseButton(orientation : Int) : javax.swing.JButton;
-	
-	/**
-	* {@inheritDoc}
-	* @since 1.6
-	*/
-	@:require(java6) @:overload override private function createArrowButtonListener() : javax.swing.plaf.basic.BasicScrollBarUI.BasicScrollBarUI_ArrowButtonListener;
-	
-	@:overload override private function paintTrack(g : java.awt.Graphics, c : javax.swing.JComponent, trackBounds : java.awt.Rectangle) : Void;
-	
-	@:overload override private function paintThumb(g : java.awt.Graphics, c : javax.swing.JComponent, thumbBounds : java.awt.Rectangle) : Void;
-	
-	@:overload override private function paintDecreaseHighlight(g : java.awt.Graphics) : Void;
-	
-	@:overload override private function paintIncreaseHighlight(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function createIncreaseButton(orientation : Int) : javax.swing.JButton;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function setThumbRollover(active : Bool) : Void;
+	@:require(java6) @:overload @:protected override private function createArrowButtonListener() : javax.swing.plaf.basic.BasicScrollBarUI.BasicScrollBarUI_ArrowButtonListener;
+	
+	@:overload @:protected override private function paintTrack(g : java.awt.Graphics, c : javax.swing.JComponent, trackBounds : java.awt.Rectangle) : Void;
+	
+	@:overload @:protected override private function paintThumb(g : java.awt.Graphics, c : javax.swing.JComponent, thumbBounds : java.awt.Rectangle) : Void;
+	
+	@:overload @:protected override private function paintDecreaseHighlight(g : java.awt.Graphics) : Void;
+	
+	@:overload @:protected override private function paintIncreaseHighlight(g : java.awt.Graphics) : Void;
+	
+	/**
+	* {@inheritDoc}
+	* @since 1.6
+	*/
+	@:require(java6) @:overload @:protected override private function setThumbRollover(active : Bool) : Void;
 	
 	
 }
@@ -72,13 +72,13 @@ extern class WindowsScrollBarUI extends javax.swing.plaf.basic.BasicScrollBarUI
 */
 @:native('com$sun$java$swing$plaf$windows$WindowsScrollBarUI$WindowsArrowButton') @:internal extern class WindowsScrollBarUI_WindowsArrowButton extends javax.swing.plaf.basic.BasicArrowButton
 {
-	@:overload public function new(direction : Int, background : java.awt.Color, shadow : java.awt.Color, darkShadow : java.awt.Color, highlight : java.awt.Color) : Void;
+	@:overload @:public public function new(direction : Int, background : java.awt.Color, shadow : java.awt.Color, darkShadow : java.awt.Color, highlight : java.awt.Color) : Void;
 	
-	@:overload public function new(direction : Int) : Void;
+	@:overload @:public public function new(direction : Int) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	
 }
@@ -94,15 +94,15 @@ extern class WindowsScrollBarUI extends javax.swing.plaf.basic.BasicScrollBarUI
 */
 @:native('com$sun$java$swing$plaf$windows$WindowsScrollBarUI$Grid') @:internal extern class WindowsScrollBarUI_Grid
 {
-	@:overload public static function getGrid(fg : java.awt.Color, bg : java.awt.Color) : com.sun.java.swing.plaf.windows.WindowsScrollBarUI.WindowsScrollBarUI_Grid;
+	@:overload @:public @:static public static function getGrid(fg : java.awt.Color, bg : java.awt.Color) : com.sun.java.swing.plaf.windows.WindowsScrollBarUI.WindowsScrollBarUI_Grid;
 	
-	@:overload public function new(fg : java.awt.Color, bg : java.awt.Color) : Void;
+	@:overload @:public public function new(fg : java.awt.Color, bg : java.awt.Color) : Void;
 	
 	/**
 	* Paints the grid into the specified Graphics at the specified
 	* location.
 	*/
-	@:overload public function paint(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paint(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	
 }

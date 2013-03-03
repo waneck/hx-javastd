@@ -34,7 +34,7 @@ extern class Messages
 	* @return The formatted message string.
 	* @xsl.usage internal
 	*/
-	@:overload @:final public function createMessage(msgKey : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:final public function createMessage(msgKey : String, args : java.NativeArray<Dynamic>) : String;
 	
 	
 }

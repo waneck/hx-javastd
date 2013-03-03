@@ -49,7 +49,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	*    if the given <var>implementation</var> does not implement the
 	*    specified interface.
 	**/
-	@:overload public function new<T>(implementation : T, mbeanInterface : Class<T>) : Void;
+	@:overload @:public public function new<T>(implementation : T, mbeanInterface : Class<T>) : Void;
 	
 	/**
 	* <p>Make a DynamicMBean out of <var>this</var>, using the specified
@@ -66,7 +66,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	*    does not follow JMX design patterns for Management Interfaces, or
 	*    if <var>this</var> does not implement the specified interface.
 	**/
-	@:overload private function new(mbeanInterface : Class<Dynamic>) : Void;
+	@:overload @:protected private function new(mbeanInterface : Class<Dynamic>) : Void;
 	
 	/**
 	* <p>Make a DynamicMBean out of the object
@@ -99,7 +99,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	*
 	* @since 1.6
 	**/
-	@:require(java6) @:overload public function new<T>(implementation : T, mbeanInterface : Class<T>, isMXBean : Bool) : Void;
+	@:require(java6) @:overload @:public public function new<T>(implementation : T, mbeanInterface : Class<T>, isMXBean : Bool) : Void;
 	
 	/**
 	* <p>Make a DynamicMBean out of <var>this</var>, using the specified
@@ -124,7 +124,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	*
 	* @since 1.6
 	**/
-	@:require(java6) @:overload private function new(mbeanInterface : Class<Dynamic>, isMXBean : Bool) : Void;
+	@:require(java6) @:overload @:protected private function new(mbeanInterface : Class<Dynamic>, isMXBean : Bool) : Void;
 	
 	/**
 	* <p>Replace the implementation object wrapped in this object.</p>
@@ -144,7 +144,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	*
 	* @see #getImplementation
 	**/
-	@:overload public function setImplementation(implementation : Dynamic) : Void;
+	@:overload @:public public function setImplementation(implementation : Dynamic) : Void;
 	
 	/**
 	* Get the implementation of this Standard MBean (or MXBean).
@@ -152,29 +152,29 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	*
 	* @see #setImplementation
 	**/
-	@:overload public function getImplementation() : Dynamic;
+	@:overload @:public public function getImplementation() : Dynamic;
 	
 	/**
 	* Get the Management Interface of this Standard MBean (or MXBean).
 	* @return The management interface of this Standard MBean (or MXBean).
 	**/
-	@:overload @:final public function getMBeanInterface() : Class<Dynamic>;
+	@:overload @:public @:final public function getMBeanInterface() : Class<Dynamic>;
 	
 	/**
 	* Get the class of the implementation of this Standard MBean (or MXBean).
 	* @return The class of the implementation of this Standard MBean (or MXBean).
 	**/
-	@:overload public function getImplementationClass() : Class<Dynamic>;
+	@:overload @:public public function getImplementationClass() : Class<Dynamic>;
 	
-	@:overload public function getAttribute(attribute : String) : Dynamic;
+	@:overload @:public public function getAttribute(attribute : String) : Dynamic;
 	
-	@:overload public function setAttribute(attribute : javax.management.Attribute) : Void;
+	@:overload @:public public function setAttribute(attribute : javax.management.Attribute) : Void;
 	
-	@:overload public function getAttributes(attributes : java.NativeArray<String>) : javax.management.AttributeList;
+	@:overload @:public public function getAttributes(attributes : java.NativeArray<String>) : javax.management.AttributeList;
 	
-	@:overload public function setAttributes(attributes : javax.management.AttributeList) : javax.management.AttributeList;
+	@:overload @:public public function setAttributes(attributes : javax.management.AttributeList) : javax.management.AttributeList;
 	
-	@:overload public function invoke(actionName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function invoke(actionName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
 	/**
 	* Get the {@link MBeanInfo} for this MBean.
@@ -198,7 +198,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	* @return The cached MBeanInfo for that MBean, if not null, or a
 	*         newly built MBeanInfo if none was cached.
 	**/
-	@:overload public function getMBeanInfo() : javax.management.MBeanInfo;
+	@:overload @:public public function getMBeanInfo() : javax.management.MBeanInfo;
 	
 	/**
 	* Customization hook:
@@ -211,7 +211,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	* @param info The default MBeanInfo derived by reflection.
 	* @return the class name for the new MBeanInfo.
 	**/
-	@:overload private function getClassName(info : javax.management.MBeanInfo) : String;
+	@:overload @:protected private function getClassName(info : javax.management.MBeanInfo) : String;
 	
 	/**
 	* Customization hook:
@@ -224,7 +224,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	* @param info The default MBeanInfo derived by reflection.
 	* @return the description for the new MBeanInfo.
 	**/
-	@:overload private function getDescription(info : javax.management.MBeanInfo) : String;
+	@:overload @:protected private function getDescription(info : javax.management.MBeanInfo) : String;
 	
 	/**
 	* <p>Customization hook:
@@ -244,7 +244,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	* @param info The default MBeanFeatureInfo derived by reflection.
 	* @return the description for the given MBeanFeatureInfo.
 	**/
-	@:overload private function getDescription(info : javax.management.MBeanFeatureInfo) : String;
+	@:overload @:protected private function getDescription(info : javax.management.MBeanFeatureInfo) : String;
 	
 	/**
 	* Customization hook:
@@ -258,7 +258,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	* @param info The default MBeanAttributeInfo derived by reflection.
 	* @return the description for the given MBeanAttributeInfo.
 	**/
-	@:overload private function getDescription(info : javax.management.MBeanAttributeInfo) : String;
+	@:overload @:protected private function getDescription(info : javax.management.MBeanAttributeInfo) : String;
 	
 	/**
 	* Customization hook:
@@ -273,7 +273,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	* @param info The default MBeanConstructorInfo derived by reflection.
 	* @return the description for the given MBeanConstructorInfo.
 	**/
-	@:overload private function getDescription(info : javax.management.MBeanConstructorInfo) : String;
+	@:overload @:protected private function getDescription(info : javax.management.MBeanConstructorInfo) : String;
 	
 	/**
 	* Customization hook:
@@ -291,7 +291,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	*        etc...).
 	* @return the description for the given MBeanParameterInfo.
 	**/
-	@:overload private function getDescription(ctor : javax.management.MBeanConstructorInfo, param : javax.management.MBeanParameterInfo, sequence : Int) : String;
+	@:overload @:protected private function getDescription(ctor : javax.management.MBeanConstructorInfo, param : javax.management.MBeanParameterInfo, sequence : Int) : String;
 	
 	/**
 	* Customization hook:
@@ -309,7 +309,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	*        etc...).
 	* @return the name for the given MBeanParameterInfo.
 	**/
-	@:overload private function getParameterName(ctor : javax.management.MBeanConstructorInfo, param : javax.management.MBeanParameterInfo, sequence : Int) : String;
+	@:overload @:protected private function getParameterName(ctor : javax.management.MBeanConstructorInfo, param : javax.management.MBeanParameterInfo, sequence : Int) : String;
 	
 	/**
 	* Customization hook:
@@ -323,7 +323,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	* @param info The default MBeanOperationInfo derived by reflection.
 	* @return the description for the given MBeanOperationInfo.
 	**/
-	@:overload private function getDescription(info : javax.management.MBeanOperationInfo) : String;
+	@:overload @:protected private function getDescription(info : javax.management.MBeanOperationInfo) : String;
 	
 	/**
 	* Customization hook:
@@ -336,7 +336,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	* @param info The default MBeanOperationInfo derived by reflection.
 	* @return the impact flag for the given MBeanOperationInfo.
 	**/
-	@:overload private function getImpact(info : javax.management.MBeanOperationInfo) : Int;
+	@:overload @:protected private function getImpact(info : javax.management.MBeanOperationInfo) : Int;
 	
 	/**
 	* Customization hook:
@@ -354,7 +354,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	*        etc...).
 	* @return the name to use for the given MBeanParameterInfo.
 	**/
-	@:overload private function getParameterName(op : javax.management.MBeanOperationInfo, param : javax.management.MBeanParameterInfo, sequence : Int) : String;
+	@:overload @:protected private function getParameterName(op : javax.management.MBeanOperationInfo, param : javax.management.MBeanParameterInfo, sequence : Int) : String;
 	
 	/**
 	* Customization hook:
@@ -372,7 +372,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	*        etc...).
 	* @return the description for the given MBeanParameterInfo.
 	**/
-	@:overload private function getDescription(op : javax.management.MBeanOperationInfo, param : javax.management.MBeanParameterInfo, sequence : Int) : String;
+	@:overload @:protected private function getDescription(op : javax.management.MBeanOperationInfo, param : javax.management.MBeanParameterInfo, sequence : Int) : String;
 	
 	/**
 	* Customization hook:
@@ -395,7 +395,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	*        <var>ctors</var> is returned.
 	* @return the MBeanConstructorInfo[] for the new MBeanInfo.
 	**/
-	@:overload private function getConstructors(ctors : java.NativeArray<javax.management.MBeanConstructorInfo>, impl : Dynamic) : java.NativeArray<javax.management.MBeanConstructorInfo>;
+	@:overload @:protected private function getConstructors(ctors : java.NativeArray<javax.management.MBeanConstructorInfo>, impl : Dynamic) : java.NativeArray<javax.management.MBeanConstructorInfo>;
 	
 	/**
 	* Customization hook:
@@ -409,7 +409,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	*
 	* @see #cacheMBeanInfo(MBeanInfo)
 	**/
-	@:overload private function getCachedMBeanInfo() : javax.management.MBeanInfo;
+	@:overload @:protected private function getCachedMBeanInfo() : javax.management.MBeanInfo;
 	
 	/**
 	* Customization hook:
@@ -428,7 +428,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	* previously cached value is discarded.  This parameter may be
 	* null, in which case there is no new cached value.
 	**/
-	@:overload private function cacheMBeanInfo(info : javax.management.MBeanInfo) : Void;
+	@:overload @:protected private function cacheMBeanInfo(info : javax.management.MBeanInfo) : Void;
 	
 	/**
 	* <p>Allows the MBean to perform any operations it needs before
@@ -474,7 +474,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
+	@:require(java6) @:overload @:public public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
 	
 	/**
 	* <p>Allows the MBean to perform any operations needed after having been
@@ -495,7 +495,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function postRegister(registrationDone : Null<Bool>) : Void;
+	@:require(java6) @:overload @:public public function postRegister(registrationDone : Null<Bool>) : Void;
 	
 	/**
 	* <p>Allows the MBean to perform any operations it needs before
@@ -512,7 +512,7 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function preDeregister() : Void;
+	@:require(java6) @:overload @:public public function preDeregister() : Void;
 	
 	/**
 	* <p>Allows the MBean to perform any operations needed after having been
@@ -529,13 +529,13 @@ extern class StandardMBean implements javax.management.DynamicMBean implements j
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function postDeregister() : Void;
+	@:require(java6) @:overload @:public public function postDeregister() : Void;
 	
 	
 }
 @:native('javax$management$StandardMBean$MBeanInfoSafeAction') @:internal extern class StandardMBean_MBeanInfoSafeAction implements java.security.PrivilegedAction<Null<Bool>>
 {
-	@:overload public function run() : Null<Bool>;
+	@:overload @:public public function run() : Null<Bool>;
 	
 	
 }

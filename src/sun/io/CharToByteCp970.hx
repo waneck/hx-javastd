@@ -26,9 +26,9 @@ package sun.io;
 //// EUC_Simple is the same as DBCS_ASCII
 extern class CharToByteCp970 extends sun.io.CharToByteDBCS_ASCII
 {
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

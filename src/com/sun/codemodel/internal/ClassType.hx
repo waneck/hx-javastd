@@ -32,13 +32,13 @@ package com.sun.codemodel.internal;
 */
 extern class ClassType
 {
-	public static var CLASS(default, null) : com.sun.codemodel.internal.ClassType;
+	@:public @:static @:final public static var CLASS(default, null) : com.sun.codemodel.internal.ClassType;
 	
-	public static var INTERFACE(default, null) : com.sun.codemodel.internal.ClassType;
+	@:public @:static @:final public static var INTERFACE(default, null) : com.sun.codemodel.internal.ClassType;
 	
-	public static var ANNOTATION_TYPE_DECL(default, null) : com.sun.codemodel.internal.ClassType;
+	@:public @:static @:final public static var ANNOTATION_TYPE_DECL(default, null) : com.sun.codemodel.internal.ClassType;
 	
-	public static var ENUM(default, null) : com.sun.codemodel.internal.ClassType;
+	@:public @:static @:final public static var ENUM(default, null) : com.sun.codemodel.internal.ClassType;
 	
 	
 }

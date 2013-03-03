@@ -103,7 +103,7 @@ extern class FormView extends javax.swing.text.ComponentView implements java.awt
 	* @deprecated As of 1.3, value now comes from UIManager property
 	*             FormView.submitButtonText
 	*/
-	public static var SUBMIT(default, null) : String;
+	@:public @:static @:final public static var SUBMIT(default, null) : String;
 	
 	/**
 	* If a value attribute is not specified for a FORM input element
@@ -112,21 +112,21 @@ extern class FormView extends javax.swing.text.ComponentView implements java.awt
 	* @deprecated As of 1.3, value comes from UIManager UIManager property
 	*             FormView.resetButtonText
 	*/
-	public static var RESET(default, null) : String;
+	@:public @:static @:final public static var RESET(default, null) : String;
 	
 	/**
 	* Creates a new FormView object.
 	*
 	* @param elem the element to decorate
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Create the component.  This is basically a
 	* big switch statement based upon the tag type
 	* and html attributes of the associated element.
 	*/
-	@:overload override private function createComponent() : java.awt.Component;
+	@:overload @:protected override private function createComponent() : java.awt.Component;
 	
 	/**
 	* Determines the maximum span for this view along an
@@ -142,7 +142,7 @@ extern class FormView extends javax.swing.text.ComponentView implements java.awt
 	*           The parent may choose to resize or break the view.
 	* @exception IllegalArgumentException for an invalid axis
 	*/
-	@:overload override public function getMaximumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMaximumSpan(axis : Int) : Single;
 	
 	/**
 	* Responsible for processeing the ActionEvent.
@@ -158,13 +158,13 @@ extern class FormView extends javax.swing.text.ComponentView implements java.awt
 	*
 	* @param evt the ActionEvent.
 	*/
-	@:overload public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
 	/**
 	* This method is responsible for submitting the form data.
 	* A thread is forked to undertake the submission.
 	*/
-	@:overload private function submitData(data : String) : Void;
+	@:overload @:protected private function submitData(data : String) : Void;
 	
 	/**
 	* This method is called to submit a form in response
@@ -173,7 +173,7 @@ extern class FormView extends javax.swing.text.ComponentView implements java.awt
 	*
 	* @param imageData the mouse click coordinates.
 	*/
-	@:overload private function imageSubmit(imageData : String) : Void;
+	@:overload @:protected private function imageSubmit(imageData : String) : Void;
 	
 	
 }
@@ -186,7 +186,7 @@ extern class FormView extends javax.swing.text.ComponentView implements java.awt
 */
 @:native('javax$swing$text$html$FormView$MouseEventListener') extern class FormView_MouseEventListener extends java.awt.event.MouseAdapter
 {
-	@:overload public function mouseReleased(evt : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseReleased(evt : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -198,7 +198,7 @@ extern class FormView extends javax.swing.text.ComponentView implements java.awt
 */
 @:native('javax$swing$text$html$FormView$BrowseFileAction') @:internal extern class FormView_BrowseFileAction implements java.awt.event.ActionListener
 {
-	@:overload public function actionPerformed(ae : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(ae : java.awt.event.ActionEvent) : Void;
 	
 	
 }

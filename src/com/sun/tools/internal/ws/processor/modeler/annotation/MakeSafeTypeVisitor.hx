@@ -28,21 +28,21 @@ extern class MakeSafeTypeVisitor extends com.sun.istack.internal.tools.APTTypeVi
 	/**
 	* Creates a new instance of MakeSafeTypeVisitor
 	*/
-	@:overload public function new(apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : Void;
+	@:overload @:public public function new(apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : Void;
 	
-	@:overload private function onArrayType(type : com.sun.mirror.type.ArrayType, apTypes : com.sun.mirror.util.Types) : com.sun.mirror.type.TypeMirror;
+	@:overload @:protected private function onArrayType(type : com.sun.mirror.type.ArrayType, apTypes : com.sun.mirror.util.Types) : com.sun.mirror.type.TypeMirror;
 	
-	@:overload private function onPrimitiveType(type : com.sun.mirror.type.PrimitiveType, apTypes : com.sun.mirror.util.Types) : com.sun.mirror.type.TypeMirror;
+	@:overload @:protected private function onPrimitiveType(type : com.sun.mirror.type.PrimitiveType, apTypes : com.sun.mirror.util.Types) : com.sun.mirror.type.TypeMirror;
 	
-	@:overload private function onClassType(type : com.sun.mirror.type.ClassType, apTypes : com.sun.mirror.util.Types) : com.sun.mirror.type.TypeMirror;
+	@:overload @:protected private function onClassType(type : com.sun.mirror.type.ClassType, apTypes : com.sun.mirror.util.Types) : com.sun.mirror.type.TypeMirror;
 	
-	@:overload private function onInterfaceType(type : com.sun.mirror.type.InterfaceType, apTypes : com.sun.mirror.util.Types) : com.sun.mirror.type.TypeMirror;
+	@:overload @:protected private function onInterfaceType(type : com.sun.mirror.type.InterfaceType, apTypes : com.sun.mirror.util.Types) : com.sun.mirror.type.TypeMirror;
 	
-	@:overload private function onTypeVariable(type : com.sun.mirror.type.TypeVariable, apTypes : com.sun.mirror.util.Types) : com.sun.mirror.type.TypeMirror;
+	@:overload @:protected private function onTypeVariable(type : com.sun.mirror.type.TypeVariable, apTypes : com.sun.mirror.util.Types) : com.sun.mirror.type.TypeMirror;
 	
-	@:overload private function onVoidType(type : com.sun.mirror.type.VoidType, apTypes : com.sun.mirror.util.Types) : com.sun.mirror.type.TypeMirror;
+	@:overload @:protected private function onVoidType(type : com.sun.mirror.type.VoidType, apTypes : com.sun.mirror.util.Types) : com.sun.mirror.type.TypeMirror;
 	
-	@:overload private function onWildcard(type : com.sun.mirror.type.WildcardType, apTypes : com.sun.mirror.util.Types) : com.sun.mirror.type.TypeMirror;
+	@:overload @:protected private function onWildcard(type : com.sun.mirror.type.WildcardType, apTypes : com.sun.mirror.util.Types) : com.sun.mirror.type.TypeMirror;
 	
 	
 }

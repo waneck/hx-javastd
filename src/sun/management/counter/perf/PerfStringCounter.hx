@@ -25,18 +25,18 @@ package sun.management.counter.perf;
 */
 extern class PerfStringCounter extends sun.management.counter.perf.PerfByteArrayCounter implements sun.management.counter.StringCounter
 {
-	@:overload override public function isVector() : Bool;
+	@:overload @:public override public function isVector() : Bool;
 	
-	@:overload override public function getVectorLength() : Int;
+	@:overload @:public override public function getVectorLength() : Int;
 	
-	@:overload override public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
-	@:overload public function stringValue() : String;
+	@:overload @:public public function stringValue() : String;
 	
 	/**
 	* Serialize as a snapshot object.
 	*/
-	@:overload override private function writeReplace() : Dynamic;
+	@:overload @:protected override private function writeReplace() : Dynamic;
 	
 	
 }

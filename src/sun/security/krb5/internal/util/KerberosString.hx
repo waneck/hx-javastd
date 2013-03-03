@@ -34,15 +34,15 @@ extern class KerberosString
 	* only affects the byte encoding, the tag of the ASN.1 type is still
 	* GeneralString.
 	*/
-	public static var MSNAME(default, null) : Bool;
+	@:public @:static @:final public static var MSNAME(default, null) : Bool;
 	
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
-	@:overload public function new(der : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(der : sun.security.util.DerValue) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function toDerValue() : sun.security.util.DerValue;
+	@:overload @:public public function toDerValue() : sun.security.util.DerValue;
 	
 	
 }

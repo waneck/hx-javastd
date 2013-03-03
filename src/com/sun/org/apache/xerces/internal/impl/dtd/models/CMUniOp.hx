@@ -67,13 +67,13 @@ extern class CMUniOp extends com.sun.org.apache.xerces.internal.impl.dtd.models.
 	* @xerces.internal
 	*
 	*/
-	@:overload public function new(type : Int, childNode : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode) : Void;
+	@:overload @:public public function new(type : Int, childNode : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode) : Void;
 	
-	@:overload override public function isNullable() : Bool;
+	@:overload @:public override public function isNullable() : Bool;
 	
-	@:overload override private function calcFirstPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
+	@:overload @:protected override private function calcFirstPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
-	@:overload override private function calcLastPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
+	@:overload @:protected override private function calcLastPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
 	
 }

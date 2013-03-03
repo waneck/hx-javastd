@@ -26,48 +26,48 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Creates a new test sequence given a set of patterns and a mode.
 	*/
-	@:overload public function new(patterns : java.util.Vector<Dynamic>, mode : com.sun.org.apache.xalan.internal.xsltc.compiler.Mode) : Void;
+	@:overload @:public public function new(patterns : java.util.Vector<Dynamic>, mode : com.sun.org.apache.xalan.internal.xsltc.compiler.Mode) : Void;
 	
-	@:overload public function new(patterns : java.util.Vector<Dynamic>, kernelType : Int, mode : com.sun.org.apache.xalan.internal.xsltc.compiler.Mode) : Void;
+	@:overload @:public public function new(patterns : java.util.Vector<Dynamic>, kernelType : Int, mode : com.sun.org.apache.xalan.internal.xsltc.compiler.Mode) : Void;
 	
 	/**
 	* Returns a string representation of this test sequence. Notice
 	* that test sequences are mutable, so the value returned by this
 	* method is different before and after calling reduce().
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the instruction list for this test sequence
 	*/
-	@:overload public function getInstructionList() : com.sun.org.apache.bcel.internal.generic.InstructionList;
+	@:overload @:public public function getInstructionList() : com.sun.org.apache.bcel.internal.generic.InstructionList;
 	
 	/**
 	* Return the highest priority for a pattern in this test
 	* sequence. This is either the priority of the first or
 	* of the default pattern.
 	*/
-	@:overload public function getPriority() : Float;
+	@:overload @:public public function getPriority() : Float;
 	
 	/**
 	* Returns the position of the highest priority pattern in
 	* this test sequence.
 	*/
-	@:overload public function getPosition() : Int;
+	@:overload @:public public function getPosition() : Int;
 	
 	/**
 	* Reduce the patterns in this test sequence. Creates a new
 	* vector of patterns and sets the default pattern if it
 	* finds a patterns that is fully reduced.
 	*/
-	@:overload public function reduce() : Void;
+	@:overload @:public public function reduce() : Void;
 	
 	/**
 	* Returns, by reference, the templates that are included in
 	* this test sequence. Note that a single template can occur
 	* in several test sequences if its pattern is a union.
 	*/
-	@:overload public function findTemplates(templates : java.util.Dictionary<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function findTemplates(templates : java.util.Dictionary<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Compile the code for this test sequence. Compile patterns
@@ -75,7 +75,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* can be share by multiple test sequences, instruction lists
 	* must be copied before backpatching.
 	*/
-	@:overload public function compile(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, continuation : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function compile(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, continuation : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	
 }

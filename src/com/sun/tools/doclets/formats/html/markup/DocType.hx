@@ -35,14 +35,14 @@ extern class DocType extends com.sun.tools.doclets.internal.toolkit.Content
 	*
 	* @return a content tree for transitional DocType
 	*/
-	@:overload public static function Transitional() : com.sun.tools.doclets.formats.html.markup.DocType;
+	@:overload @:public @:static public static function Transitional() : com.sun.tools.doclets.formats.html.markup.DocType;
 	
 	/**
 	* Construct and return a HTML 4.01 frameset DocType content
 	*
 	* @return a content tree for frameset DocType
 	*/
-	@:overload public static function Frameset() : com.sun.tools.doclets.formats.html.markup.DocType;
+	@:overload @:public @:static public static function Frameset() : com.sun.tools.doclets.formats.html.markup.DocType;
 	
 	/**
 	* This method is not supported by the class.
@@ -52,7 +52,7 @@ extern class DocType extends com.sun.tools.doclets.internal.toolkit.Content
 	*                              DocletAbortException because it
 	*                              is not supported.
 	*/
-	@:overload public function addContent(content : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public override public function addContent(content : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* This method is not supported by the class.
@@ -62,17 +62,17 @@ extern class DocType extends com.sun.tools.doclets.internal.toolkit.Content
 	*                              DocletAbortException because it
 	*                              is not supported.
 	*/
-	@:overload public function addContent(stringContent : String) : Void;
+	@:overload @:public override public function addContent(stringContent : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function write(contentBuilder : java.lang.StringBuilder) : Void;
+	@:overload @:public override public function write(contentBuilder : java.lang.StringBuilder) : Void;
 	
 	
 }

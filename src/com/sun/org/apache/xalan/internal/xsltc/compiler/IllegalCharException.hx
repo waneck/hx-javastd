@@ -27,7 +27,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class IllegalCharException extends java.lang.Exception
 {
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

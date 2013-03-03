@@ -31,7 +31,7 @@ extern class TypeUtil
 	* @param types
 	*      set of {@link JType} objects.
 	*/
-	@:overload public static function getCommonBaseType(codeModel : com.sun.codemodel.internal.JCodeModel, types : java.util.Collection<com.sun.codemodel.internal.JType>) : com.sun.codemodel.internal.JType;
+	@:overload @:public @:static public static function getCommonBaseType(codeModel : com.sun.codemodel.internal.JCodeModel, types : java.util.Collection<com.sun.codemodel.internal.JType>) : com.sun.codemodel.internal.JType;
 	
 	/**
 	* Computes the common base type of types.
@@ -43,13 +43,13 @@ extern class TypeUtil
 	* To make the result deterministic across differente JVMs, we have to
 	* use a Set whose ordering is deterministic.
 	*/
-	@:overload public static function getCommonBaseType(codeModel : com.sun.codemodel.internal.JCodeModel, t : java.NativeArray<com.sun.codemodel.internal.JType>) : com.sun.codemodel.internal.JType;
+	@:overload @:public @:static public static function getCommonBaseType(codeModel : com.sun.codemodel.internal.JCodeModel, t : java.NativeArray<com.sun.codemodel.internal.JType>) : com.sun.codemodel.internal.JType;
 	
 	/**
 	* Obtains a {@link JType} object for the string representation
 	* of a type.
 	*/
-	@:overload public static function getType(codeModel : com.sun.codemodel.internal.JCodeModel, typeName : String, errorHandler : com.sun.tools.internal.xjc.ErrorReceiver, errorSource : org.xml.sax.Locator) : com.sun.codemodel.internal.JType;
+	@:overload @:public @:static public static function getType(codeModel : com.sun.codemodel.internal.JCodeModel, typeName : String, errorHandler : com.sun.tools.internal.xjc.ErrorReceiver, errorSource : org.xml.sax.Locator) : com.sun.codemodel.internal.JType;
 	
 	
 }

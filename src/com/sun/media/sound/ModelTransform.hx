@@ -30,7 +30,7 @@ package com.sun.media.sound;
 */
 extern interface ModelTransform
 {
-	@:overload @:abstract public function transform(value : Float) : Float;
+	@:overload @:abstract @:public public function transform(value : Float) : Float;
 	
 	
 }

@@ -31,15 +31,15 @@ package sun.awt.X11;
 @:internal extern class XAWTXSettings extends sun.awt.XSettings implements sun.awt.X11.XMSelectionListener
 {
 	/* The maximal length of the property data. */
-	public static var MAX_LENGTH(default, null) : haxe.Int64;
+	@:public @:static @:final public static var MAX_LENGTH(default, null) : haxe.Int64;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function ownerDeath(screen : Int, sel : sun.awt.X11.XMSelection, deadOwner : haxe.Int64) : Void;
+	@:overload @:public public function ownerDeath(screen : Int, sel : sun.awt.X11.XMSelection, deadOwner : haxe.Int64) : Void;
 	
-	@:overload public function ownerChanged(screen : Int, sel : sun.awt.X11.XMSelection, newOwner : haxe.Int64, data : haxe.Int64, timestamp : haxe.Int64) : Void;
+	@:overload @:public public function ownerChanged(screen : Int, sel : sun.awt.X11.XMSelection, newOwner : haxe.Int64, data : haxe.Int64, timestamp : haxe.Int64) : Void;
 	
-	@:overload public function selectionChanged(screen : Int, sel : sun.awt.X11.XMSelection, owner : haxe.Int64, event : sun.awt.X11.XPropertyEvent) : Void;
+	@:overload @:public public function selectionChanged(screen : Int, sel : sun.awt.X11.XMSelection, owner : haxe.Int64, event : sun.awt.X11.XPropertyEvent) : Void;
 	
 	
 }

@@ -26,14 +26,14 @@ extern class ToXMLStream extends com.sun.org.apache.xml.internal.serializer.ToSt
 	/**
 	* Default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Copy properties from another SerializerToXML.
 	*
 	* @param xmlListener non-null reference to a SerializerToXML object.
 	*/
-	@:overload public function CopyFrom(xmlListener : com.sun.org.apache.xml.internal.serializer.ToXMLStream) : Void;
+	@:overload @:public public function CopyFrom(xmlListener : com.sun.org.apache.xml.internal.serializer.ToXMLStream) : Void;
 	
 	/**
 	* Receive notification of the beginning of a document.
@@ -43,7 +43,7 @@ extern class ToXMLStream extends com.sun.org.apache.xml.internal.serializer.ToSt
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function startDocumentInternal() : Void;
+	@:overload @:public override public function startDocumentInternal() : Void;
 	
 	/**
 	* Receive notification of the end of a document.
@@ -53,7 +53,7 @@ extern class ToXMLStream extends com.sun.org.apache.xml.internal.serializer.ToSt
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
 	/**
 	* Starts a whitespace preserving section. All characters printed
@@ -67,7 +67,7 @@ extern class ToXMLStream extends com.sun.org.apache.xml.internal.serializer.ToSt
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function startPreserving() : Void;
+	@:overload @:public public function startPreserving() : Void;
 	
 	/**
 	* Ends a whitespace preserving section.
@@ -76,7 +76,7 @@ extern class ToXMLStream extends com.sun.org.apache.xml.internal.serializer.ToSt
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function endPreserving() : Void;
+	@:overload @:public public function endPreserving() : Void;
 	
 	/**
 	* Receive notification of a processing instruction.
@@ -89,7 +89,7 @@ extern class ToXMLStream extends com.sun.org.apache.xml.internal.serializer.ToSt
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public override public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* Receive notivication of a entityReference.
@@ -98,7 +98,7 @@ extern class ToXMLStream extends com.sun.org.apache.xml.internal.serializer.ToSt
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function entityReference(name : String) : Void;
+	@:overload @:public override public function entityReference(name : String) : Void;
 	
 	/**
 	* This method is used to add an attribute to the currently open element.
@@ -110,7 +110,7 @@ extern class ToXMLStream extends com.sun.org.apache.xml.internal.serializer.ToSt
 	* ASCII printable characters characters in the range 32 to 127 inclusive.
 	* @param flags the bit values of this integer give optimization information.
 	*/
-	@:overload override public function addUniqueAttribute(name : String, value : String, flags : Int) : Void;
+	@:overload @:public override public function addUniqueAttribute(name : String, value : String, flags : Int) : Void;
 	
 	/**
 	* Add an attribute to the current element.
@@ -123,12 +123,12 @@ extern class ToXMLStream extends com.sun.org.apache.xml.internal.serializer.ToSt
 	* false if declared within the elements opening tag.
 	* @throws SAXException
 	*/
-	@:overload public function addAttribute(uri : String, localName : String, rawName : String, type : String, value : String, xslAttribute : Bool) : Void;
+	@:overload @:public override public function addAttribute(uri : String, localName : String, rawName : String, type : String, value : String, xslAttribute : Bool) : Void;
 	
 	/**
 	* @see ExtendedContentHandler#endElement(String)
 	*/
-	@:overload override public function endElement(elemName : String) : Void;
+	@:overload @:public override public function endElement(elemName : String) : Void;
 	
 	/**
 	* This method is used to notify the serializer of a namespace mapping (or node)
@@ -137,14 +137,14 @@ extern class ToXMLStream extends com.sun.org.apache.xml.internal.serializer.ToSt
 	* element that is soon to be seen with a startElement() call. The official SAX call
 	* does not apply to the current element, hence the reason for this method.
 	*/
-	@:overload public function namespaceAfterStartElement(prefix : String, uri : String) : Void;
+	@:overload @:public override public function namespaceAfterStartElement(prefix : String, uri : String) : Void;
 	
 	/**
 	* From XSLTC
 	* Declare a prefix to point to a namespace URI. Inform SAX handler
 	* if this is a new prefix mapping.
 	*/
-	@:overload private function pushNamespace(prefix : String, uri : String) : Bool;
+	@:overload @:protected private function pushNamespace(prefix : String, uri : String) : Bool;
 	
 	/**
 	* Try's to reset the super class and reset this class for
@@ -153,7 +153,7 @@ extern class ToXMLStream extends com.sun.org.apache.xml.internal.serializer.ToSt
 	*
 	* @return true if the class was successfuly reset.
 	*/
-	@:overload public function reset() : Bool;
+	@:overload @:public override public function reset() : Bool;
 	
 	
 }

@@ -28,30 +28,30 @@ package javax.swing.text;
 	/**
 	* Returns the shared SegmentCache.
 	*/
-	@:overload public static function getSharedInstance() : javax.swing.text.SegmentCache;
+	@:overload @:public @:static public static function getSharedInstance() : javax.swing.text.SegmentCache;
 	
 	/**
 	* A convenience method to get a Segment from the shared
 	* <code>SegmentCache</code>.
 	*/
-	@:overload public static function getSharedSegment() : javax.swing.text.Segment;
+	@:overload @:public @:static public static function getSharedSegment() : javax.swing.text.Segment;
 	
 	/**
 	* A convenience method to release a Segment to the shared
 	* <code>SegmentCache</code>.
 	*/
-	@:overload public static function releaseSharedSegment(segment : javax.swing.text.Segment) : Void;
+	@:overload @:public @:static public static function releaseSharedSegment(segment : javax.swing.text.Segment) : Void;
 	
 	/**
 	* Creates and returns a SegmentCache.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns a <code>Segment</code>. When done, the <code>Segment</code>
 	* should be recycled by invoking <code>releaseSegment</code>.
 	*/
-	@:overload public function getSegment() : javax.swing.text.Segment;
+	@:overload @:public public function getSegment() : javax.swing.text.Segment;
 	
 	/**
 	* Releases a Segment. You should not use a Segment after you release it,
@@ -62,7 +62,7 @@ package javax.swing.text;
 	* </pre>
 	* Will likely result in very bad things happening!
 	*/
-	@:overload public function releaseSegment(segment : javax.swing.text.Segment) : Void;
+	@:overload @:public public function releaseSegment(segment : javax.swing.text.Segment) : Void;
 	
 	
 }

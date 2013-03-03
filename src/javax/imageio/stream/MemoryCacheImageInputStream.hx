@@ -34,13 +34,13 @@ extern class MemoryCacheImageInputStream extends javax.imageio.stream.ImageInput
 	* @exception IllegalArgumentException if <code>stream</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function new(stream : java.io.InputStream) : Void;
+	@:overload @:public public function new(stream : java.io.InputStream) : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function flushBefore(pos : haxe.Int64) : Void;
+	@:overload @:public override public function flushBefore(pos : haxe.Int64) : Void;
 	
 	/**
 	* Returns <code>true</code> since this
@@ -52,7 +52,7 @@ extern class MemoryCacheImageInputStream extends javax.imageio.stream.ImageInput
 	* @see #isCachedMemory
 	* @see #isCachedFile
 	*/
-	@:overload override public function isCached() : Bool;
+	@:overload @:public override public function isCached() : Bool;
 	
 	/**
 	* Returns <code>false</code> since this
@@ -63,7 +63,7 @@ extern class MemoryCacheImageInputStream extends javax.imageio.stream.ImageInput
 	* @see #isCached
 	* @see #isCachedMemory
 	*/
-	@:overload override public function isCachedFile() : Bool;
+	@:overload @:public override public function isCachedFile() : Bool;
 	
 	/**
 	* Returns <code>true</code> since this
@@ -74,26 +74,26 @@ extern class MemoryCacheImageInputStream extends javax.imageio.stream.ImageInput
 	* @see #isCached
 	* @see #isCachedFile
 	*/
-	@:overload override public function isCachedMemory() : Bool;
+	@:overload @:public override public function isCachedMemory() : Bool;
 	
 	/**
 	* Closes this <code>MemoryCacheImageInputStream</code>, freeing
 	* the cache.  The source <code>InputStream</code> is not closed.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function finalize() : Void;
+	@:overload @:protected override private function finalize() : Void;
 	
 	
 }
 @:native('javax$imageio$stream$MemoryCacheImageInputStream$StreamDisposerRecord') @:internal extern class MemoryCacheImageInputStream_StreamDisposerRecord implements sun.java2d.DisposerRecord
 {
-	@:overload public function new(cache : javax.imageio.stream.MemoryCache) : Void;
+	@:overload @:public public function new(cache : javax.imageio.stream.MemoryCache) : Void;
 	
-	@:overload @:synchronized public function dispose() : Void;
+	@:overload @:public @:synchronized public function dispose() : Void;
 	
 	
 }

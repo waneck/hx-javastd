@@ -25,17 +25,17 @@ package com.sun.jndi.ldap;
 */
 extern class LdapCtx extends com.sun.jndi.toolkit.ctx.ComponentDirContext implements javax.naming.event.EventDirContext implements javax.naming.ldap.LdapContext
 {
-	public static var DEFAULT_PORT(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_PORT(default, null) : Int;
 	
-	public static var DEFAULT_SSL_PORT(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_SSL_PORT(default, null) : Int;
 	
-	public static var DEFAULT_HOST(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_HOST(default, null) : String;
 	
-	@:overload public function new(dn : String, host : String, port_number : Int, props : java.util.Hashtable<Dynamic, Dynamic>, useSsl : Bool) : Void;
+	@:overload @:public public function new(dn : String, host : String, port_number : Int, props : java.util.Hashtable<Dynamic, Dynamic>, useSsl : Bool) : Void;
 	
-	@:overload public function newInstance(reqCtls : java.NativeArray<javax.naming.ldap.Control>) : javax.naming.ldap.LdapContext;
+	@:overload @:public public function newInstance(reqCtls : java.NativeArray<javax.naming.ldap.Control>) : javax.naming.ldap.LdapContext;
 	
-	@:overload override private function c_bind(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function c_bind(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
 	/*
 	* attrs == null
@@ -49,9 +49,9 @@ extern class LdapCtx extends com.sun.jndi.toolkit.ctx.ComponentDirContext implem
 	*      attrs += objAttrs
 	*      create entry using attrs
 	*/
-	@:overload override private function c_bind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function c_bind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload override private function c_rebind(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function c_rebind(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
 	/*
 	* attrs == null
@@ -68,70 +68,70 @@ extern class LdapCtx extends com.sun.jndi.toolkit.ctx.ComponentDirContext implem
 	*      attrs += objAttrs
 	*      create entry using attrs
 	*/
-	@:overload override private function c_rebind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function c_rebind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload override private function c_unbind(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function c_unbind(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload override private function c_rename(oldName : javax.naming.Name, newName : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function c_rename(oldName : javax.naming.Name, newName : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload override private function c_createSubcontext(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.Context;
+	@:overload @:protected override private function c_createSubcontext(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.Context;
 	
-	@:overload override private function c_createSubcontext(name : javax.naming.Name, attrs : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.directory.DirContext;
+	@:overload @:protected override private function c_createSubcontext(name : javax.naming.Name, attrs : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.directory.DirContext;
 	
-	@:overload override private function c_destroySubcontext(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function c_destroySubcontext(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload override private function c_lookupLink(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
+	@:overload @:protected override private function c_lookupLink(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
 	
-	@:overload override private function c_lookup(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
+	@:overload @:protected override private function c_lookup(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
 	
-	@:overload override private function c_list(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected override private function c_list(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload override private function c_listBindings(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected override private function c_listBindings(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload override private function c_getNameParser(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NameParser;
+	@:overload @:protected override private function c_getNameParser(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NameParser;
 	
-	@:overload override public function getNameInNamespace() : String;
+	@:overload @:public override public function getNameInNamespace() : String;
 	
-	@:overload override public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public override public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
 	
-	@:overload override private function c_getAttributes(name : javax.naming.Name, attrIds : java.NativeArray<String>, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.directory.Attributes;
+	@:overload @:protected override private function c_getAttributes(name : javax.naming.Name, attrIds : java.NativeArray<String>, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.directory.Attributes;
 	
-	@:overload override private function c_modifyAttributes(name : javax.naming.Name, mod_op : Int, attrs : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function c_modifyAttributes(name : javax.naming.Name, mod_op : Int, attrs : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload override private function c_modifyAttributes(name : javax.naming.Name, mods : java.NativeArray<javax.naming.directory.ModificationItem>, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function c_modifyAttributes(name : javax.naming.Name, mods : java.NativeArray<javax.naming.directory.ModificationItem>, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload override private function c_getSchema(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.directory.DirContext;
+	@:overload @:protected override private function c_getSchema(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.directory.DirContext;
 	
-	@:overload override private function c_getSchemaClassDefinition(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.directory.DirContext;
+	@:overload @:protected override private function c_getSchemaClassDefinition(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.directory.DirContext;
 	
-	@:overload private function c_search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected private function c_search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload override private function c_search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected override private function c_search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload override private function c_search(name : javax.naming.Name, filter : String, cons : javax.naming.directory.SearchControls, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected override private function c_search(name : javax.naming.Name, filter : String, cons : javax.naming.directory.SearchControls, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload override private function c_search(name : javax.naming.Name, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected override private function c_search(name : javax.naming.Name, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
 	/**
 	* Override with noncloning version.
 	*/
-	@:overload private function p_getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:protected override private function p_getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	@:overload override public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:public override public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	@:overload override public function removeFromEnvironment(propName : String) : Dynamic;
+	@:overload @:public override public function removeFromEnvironment(propName : String) : Dynamic;
 	
-	@:overload override public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
+	@:overload @:public override public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
-	@:overload @:synchronized override public function close() : Void;
+	@:overload @:synchronized @:public override public function close() : Void;
 	
-	@:overload public function reconnect(connCtls : java.NativeArray<javax.naming.ldap.Control>) : Void;
+	@:overload @:public public function reconnect(connCtls : java.NativeArray<javax.naming.ldap.Control>) : Void;
 	
-	@:overload private function processReturnCode(answer : com.sun.jndi.ldap.LdapResult) : Void;
+	@:overload @:protected private function processReturnCode(answer : com.sun.jndi.ldap.LdapResult) : Void;
 	
-	@:overload private function processReturnCode(res : com.sun.jndi.ldap.LdapResult, resolvedName : javax.naming.Name, resolvedObj : Dynamic, remainName : javax.naming.Name, envprops : java.util.Hashtable<Dynamic, Dynamic>, fullDN : String) : Void;
+	@:overload @:protected private function processReturnCode(res : com.sun.jndi.ldap.LdapResult, resolvedName : javax.naming.Name, resolvedObj : Dynamic, remainName : javax.naming.Name, envprops : java.util.Hashtable<Dynamic, Dynamic>, fullDN : String) : Void;
 	
 	/**
 	* Maps an LDAP error code to an appropriate NamingException.
@@ -142,17 +142,17 @@ extern class LdapCtx extends com.sun.jndi.toolkit.ctx.ComponentDirContext implem
 	*
 	* @return A NamingException or null if the error code indicates success.
 	*/
-	@:overload public static function mapErrorCode(errorCode : Int, errorMessage : String) : javax.naming.NamingException;
+	@:overload @:public @:static public static function mapErrorCode(errorCode : Int, errorMessage : String) : javax.naming.NamingException;
 	
-	@:overload public function extendedOperation(request : javax.naming.ldap.ExtendedRequest) : javax.naming.ldap.ExtendedResponse;
+	@:overload @:public public function extendedOperation(request : javax.naming.ldap.ExtendedRequest) : javax.naming.ldap.ExtendedResponse;
 	
-	@:overload public function setRequestControls(reqCtls : java.NativeArray<javax.naming.ldap.Control>) : Void;
+	@:overload @:public public function setRequestControls(reqCtls : java.NativeArray<javax.naming.ldap.Control>) : Void;
 	
-	@:overload public function getRequestControls() : java.NativeArray<javax.naming.ldap.Control>;
+	@:overload @:public public function getRequestControls() : java.NativeArray<javax.naming.ldap.Control>;
 	
-	@:overload public function getConnectControls() : java.NativeArray<javax.naming.ldap.Control>;
+	@:overload @:public public function getConnectControls() : java.NativeArray<javax.naming.ldap.Control>;
 	
-	@:overload public function getResponseControls() : java.NativeArray<javax.naming.ldap.Control>;
+	@:overload @:public public function getResponseControls() : java.NativeArray<javax.naming.ldap.Control>;
 	
 	/*
 	* Access to eventSupport need not be synchronized even though the
@@ -161,21 +161,21 @@ extern class LdapCtx extends com.sun.jndi.toolkit.ctx.ComponentDirContext implem
 	* eventSupport.addNamingListener() must have been called before
 	* the Connection thread can call back to this ctx.
 	*/
-	@:overload public function addNamingListener(nm : javax.naming.Name, scope : Int, l : javax.naming.event.NamingListener) : Void;
+	@:overload @:public public function addNamingListener(nm : javax.naming.Name, scope : Int, l : javax.naming.event.NamingListener) : Void;
 	
-	@:overload public function addNamingListener(nm : String, scope : Int, l : javax.naming.event.NamingListener) : Void;
+	@:overload @:public public function addNamingListener(nm : String, scope : Int, l : javax.naming.event.NamingListener) : Void;
 	
-	@:overload public function removeNamingListener(l : javax.naming.event.NamingListener) : Void;
+	@:overload @:public public function removeNamingListener(l : javax.naming.event.NamingListener) : Void;
 	
-	@:overload public function addNamingListener(nm : String, filter : String, ctls : javax.naming.directory.SearchControls, l : javax.naming.event.NamingListener) : Void;
+	@:overload @:public public function addNamingListener(nm : String, filter : String, ctls : javax.naming.directory.SearchControls, l : javax.naming.event.NamingListener) : Void;
 	
-	@:overload public function addNamingListener(nm : javax.naming.Name, filter : String, ctls : javax.naming.directory.SearchControls, l : javax.naming.event.NamingListener) : Void;
+	@:overload @:public public function addNamingListener(nm : javax.naming.Name, filter : String, ctls : javax.naming.directory.SearchControls, l : javax.naming.event.NamingListener) : Void;
 	
-	@:overload public function addNamingListener(nm : javax.naming.Name, filter : String, filterArgs : java.NativeArray<Dynamic>, ctls : javax.naming.directory.SearchControls, l : javax.naming.event.NamingListener) : Void;
+	@:overload @:public public function addNamingListener(nm : javax.naming.Name, filter : String, filterArgs : java.NativeArray<Dynamic>, ctls : javax.naming.directory.SearchControls, l : javax.naming.event.NamingListener) : Void;
 	
-	@:overload public function addNamingListener(nm : String, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, ctls : javax.naming.directory.SearchControls, l : javax.naming.event.NamingListener) : Void;
+	@:overload @:public public function addNamingListener(nm : String, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, ctls : javax.naming.directory.SearchControls, l : javax.naming.event.NamingListener) : Void;
 	
-	@:overload public function targetMustExist() : Bool;
+	@:overload @:public public function targetMustExist() : Bool;
 	
 	
 }

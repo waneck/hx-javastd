@@ -25,35 +25,35 @@ package com.sun.java.util.jar.pack;
 */
 extern class DriverResource extends java.util.ListResourceBundle
 {
-	public static var VERSION(default, null) : String;
+	@:public @:static @:final public static var VERSION(default, null) : String;
 	
-	public static var BAD_ARGUMENT(default, null) : String;
+	@:public @:static @:final public static var BAD_ARGUMENT(default, null) : String;
 	
-	public static var BAD_OPTION(default, null) : String;
+	@:public @:static @:final public static var BAD_OPTION(default, null) : String;
 	
-	public static var BAD_REPACK_OUTPUT(default, null) : String;
+	@:public @:static @:final public static var BAD_REPACK_OUTPUT(default, null) : String;
 	
-	public static var DETECTED_ZIP_COMMENT(default, null) : String;
+	@:public @:static @:final public static var DETECTED_ZIP_COMMENT(default, null) : String;
 	
-	public static var SKIP_FOR_REPACKED(default, null) : String;
+	@:public @:static @:final public static var SKIP_FOR_REPACKED(default, null) : String;
 	
-	public static var WRITE_PACK_FILE(default, null) : String;
+	@:public @:static @:final public static var WRITE_PACK_FILE(default, null) : String;
 	
-	public static var WIRTE_PACKGZ_FILE(default, null) : String;
+	@:public @:static @:final public static var WIRTE_PACKGZ_FILE(default, null) : String;
 	
-	public static var SKIP_FOR_MOVE_FAILED(default, null) : String;
+	@:public @:static @:final public static var SKIP_FOR_MOVE_FAILED(default, null) : String;
 	
-	public static var PACK_HELP(default, null) : String;
+	@:public @:static @:final public static var PACK_HELP(default, null) : String;
 	
-	public static var UNPACK_HELP(default, null) : String;
+	@:public @:static @:final public static var UNPACK_HELP(default, null) : String;
 	
-	public static var MORE_INFO(default, null) : String;
+	@:public @:static @:final public static var MORE_INFO(default, null) : String;
 	
-	public static var DUPLICATE_OPTION(default, null) : String;
+	@:public @:static @:final public static var DUPLICATE_OPTION(default, null) : String;
 	
-	public static var BAD_SPEC(default, null) : String;
+	@:public @:static @:final public static var BAD_SPEC(default, null) : String;
 	
-	@:overload private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:protected override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

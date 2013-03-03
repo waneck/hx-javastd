@@ -46,13 +46,13 @@ extern class UnknownException extends org.omg.CORBA.SystemException
 	* A throwable--the original exception that was wrapped in a CORBA
 	* UnknownException.
 	*/
-	public var originalEx : java.lang.Throwable;
+	@:public public var originalEx : java.lang.Throwable;
 	
 	/**
 	* Constructs an UnknownException object.
 	* @param ex a Throwable object--to be wrapped in this exception.
 	*/
-	@:overload public function new(ex : java.lang.Throwable) : Void;
+	@:overload @:public public function new(ex : java.lang.Throwable) : Void;
 	
 	
 }

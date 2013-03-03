@@ -36,15 +36,15 @@ extern class ExtensionInfo
 	* public static values returned by the isCompatible method
 	* </p>
 	*/
-	public static var COMPATIBLE(default, null) : Int;
+	@:public @:static @:final public static var COMPATIBLE(default, null) : Int;
 	
-	public static var REQUIRE_SPECIFICATION_UPGRADE(default, null) : Int;
+	@:public @:static @:final public static var REQUIRE_SPECIFICATION_UPGRADE(default, null) : Int;
 	
-	public static var REQUIRE_IMPLEMENTATION_UPGRADE(default, null) : Int;
+	@:public @:static @:final public static var REQUIRE_IMPLEMENTATION_UPGRADE(default, null) : Int;
 	
-	public static var REQUIRE_VENDOR_SWITCH(default, null) : Int;
+	@:public @:static @:final public static var REQUIRE_VENDOR_SWITCH(default, null) : Int;
 	
-	public static var INCOMPATIBLE(default, null) : Int;
+	@:public @:static @:final public static var INCOMPATIBLE(default, null) : Int;
 	
 	/**
 	* <p>
@@ -52,28 +52,28 @@ extern class ExtensionInfo
 	* extension may be installed and requested.
 	* <p>
 	*/
-	public var title : String;
+	@:public public var title : String;
 	
-	public var name : String;
+	@:public public var name : String;
 	
-	public var specVersion : String;
+	@:public public var specVersion : String;
 	
-	public var specVendor : String;
+	@:public public var specVendor : String;
 	
-	public var implementationVersion : String;
+	@:public public var implementationVersion : String;
 	
-	public var vendor : String;
+	@:public public var vendor : String;
 	
-	public var vendorId : String;
+	@:public public var vendorId : String;
 	
-	public var url : String;
+	@:public public var url : String;
 	
 	/**
 	* <p>
 	* Create a new uninitialized extension information object
 	* </p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* <p>
@@ -89,7 +89,7 @@ extern class ExtensionInfo
 	* @param extensionKey unique extension key in the manifest
 	* @param attr Attributes of a manifest file
 	*/
-	@:overload public function new(extensionKey : String, attr : java.util.jar.Attributes) : Void;
+	@:overload @:public public function new(extensionKey : String, attr : java.util.jar.Attributes) : Void;
 	
 	/**
 	* <p>
@@ -100,7 +100,7 @@ extern class ExtensionInfo
 	*
 	* @param the requested extension information to compare to
 	*/
-	@:overload public function isCompatibleWith(ei : sun.misc.ExtensionInfo) : Int;
+	@:overload @:public public function isCompatibleWith(ei : sun.misc.ExtensionInfo) : Int;
 	
 	/**
 	* <p>
@@ -108,7 +108,7 @@ extern class ExtensionInfo
 	* extension
 	* </p>
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -28,11 +28,11 @@ package com.sun.org.apache.xml.internal.utils.res;
 */
 extern class LongArrayWrapper
 {
-	@:overload public function new(arg : java.NativeArray<haxe.Int64>) : Void;
+	@:overload @:public public function new(arg : java.NativeArray<haxe.Int64>) : Void;
 	
-	@:overload public function getLong(index : Int) : haxe.Int64;
+	@:overload @:public public function getLong(index : Int) : haxe.Int64;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	
 }

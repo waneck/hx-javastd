@@ -62,48 +62,48 @@ package com.sun.org.apache.xerces.internal.util;
 extern class XMLStringBuffer extends com.sun.org.apache.xerces.internal.xni.XMLString
 {
 	/** Default buffer size (32). */
-	public static var DEFAULT_SIZE(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_SIZE(default, null) : Int;
 	
 	/**
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*
 	*
 	* @param size
 	*/
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
 	/** Constructs a string buffer from a char. */
-	@:overload public function new(c : java.StdTypes.Char16) : Void;
+	@:overload @:public public function new(c : java.StdTypes.Char16) : Void;
 	
 	/** Constructs a string buffer from a String. */
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/** Constructs a string buffer from the specified character array. */
-	@:overload public function new(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:public public function new(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
 	/** Constructs a string buffer from the specified XMLString. */
-	@:overload public function new(s : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
+	@:overload @:public public function new(s : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
 	
 	/** Clears the string buffer. */
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* append
 	*
 	* @param c
 	*/
-	@:overload public function append(c : java.StdTypes.Char16) : Void;
+	@:overload @:public public function append(c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* append
 	*
 	* @param s
 	*/
-	@:overload public function append(s : String) : Void;
+	@:overload @:public public function append(s : String) : Void;
 	
 	/**
 	* append
@@ -112,14 +112,14 @@ extern class XMLStringBuffer extends com.sun.org.apache.xerces.internal.xni.XMLS
 	* @param offset
 	* @param length
 	*/
-	@:overload public function append(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:public public function append(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* append
 	*
 	* @param s
 	*/
-	@:overload public function append(s : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
+	@:overload @:public public function append(s : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
 	
 	
 }

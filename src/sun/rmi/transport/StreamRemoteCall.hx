@@ -25,38 +25,38 @@ package sun.rmi.transport;
 */
 extern class StreamRemoteCall implements java.rmi.server.RemoteCall
 {
-	@:overload public function new(c : sun.rmi.transport.Connection) : Void;
+	@:overload @:public public function new(c : sun.rmi.transport.Connection) : Void;
 	
-	@:overload public function new(c : sun.rmi.transport.Connection, id : java.rmi.server.ObjID, op : Int, hash : haxe.Int64) : Void;
+	@:overload @:public public function new(c : sun.rmi.transport.Connection, id : java.rmi.server.ObjID, op : Int, hash : haxe.Int64) : Void;
 	
 	/**
 	* Return the connection associated with this call.
 	*/
-	@:overload public function getConnection() : sun.rmi.transport.Connection;
+	@:overload @:public public function getConnection() : sun.rmi.transport.Connection;
 	
 	/**
 	* Return the output stream the stub/skeleton should put arguments/results
 	* into.
 	*/
-	@:overload public function getOutputStream() : java.io.ObjectOutput;
+	@:overload @:public public function getOutputStream() : java.io.ObjectOutput;
 	
 	/**
 	* Release the outputStream  Currently, will not complain if the
 	* output stream is released more than once.
 	*/
-	@:overload public function releaseOutputStream() : Void;
+	@:overload @:public public function releaseOutputStream() : Void;
 	
 	/**
 	* Get the InputStream the stub/skeleton should get results/arguments
 	* from.
 	*/
-	@:overload public function getInputStream() : java.io.ObjectInput;
+	@:overload @:public public function getInputStream() : java.io.ObjectInput;
 	
 	/**
 	* Release the input stream, this would allow some transports to release
 	* the channel early.
 	*/
-	@:overload public function releaseInputStream() : Void;
+	@:overload @:public public function releaseInputStream() : Void;
 	
 	/**
 	* Returns an output stream (may put out header information
@@ -67,27 +67,27 @@ extern class StreamRemoteCall implements java.rmi.server.RemoteCall
 	* acquired
 	* @exception IOException For any other problem with I/O.
 	*/
-	@:overload public function getResultStream(success : Bool) : java.io.ObjectOutput;
+	@:overload @:public public function getResultStream(success : Bool) : java.io.ObjectOutput;
 	
 	/**
 	* Do whatever it takes to execute the call.
 	*/
-	@:overload public function executeCall() : Void;
+	@:overload @:public public function executeCall() : Void;
 	
 	/**
 	* Routine that causes the stack traces of remote exceptions to be
 	* filled in with the current stack trace on the client.  Detail
 	* exceptions are filled in iteratively.
 	*/
-	@:overload private function exceptionReceivedFromServer(ex : java.lang.Exception) : Void;
+	@:overload @:protected private function exceptionReceivedFromServer(ex : java.lang.Exception) : Void;
 	
 	/*
 	* method to retrieve possible server side exceptions (which will
 	* be throw from exceptionReceivedFromServer(...) )
 	*/
-	@:overload public function getServerException() : java.lang.Exception;
+	@:overload @:public public function getServerException() : java.lang.Exception;
 	
-	@:overload public function done() : Void;
+	@:overload @:public public function done() : Void;
 	
 	
 }

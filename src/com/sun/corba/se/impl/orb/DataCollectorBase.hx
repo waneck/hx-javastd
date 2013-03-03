@@ -25,39 +25,39 @@ package com.sun.corba.se.impl.orb;
 */
 extern class DataCollectorBase implements com.sun.corba.se.spi.orb.DataCollector
 {
-	private var localHostName : String;
+	@:protected private var localHostName : String;
 	
-	private var configurationHostName : String;
+	@:protected private var configurationHostName : String;
 	
-	@:overload public function new(props : java.util.Properties, localHostName : String, configurationHostName : String) : Void;
+	@:overload @:public public function new(props : java.util.Properties, localHostName : String, configurationHostName : String) : Void;
 	
-	@:overload public function initialHostIsLocal() : Bool;
+	@:overload @:public public function initialHostIsLocal() : Bool;
 	
-	@:overload public function setParser(parser : com.sun.corba.se.spi.orb.PropertyParser) : Void;
+	@:overload @:public public function setParser(parser : com.sun.corba.se.spi.orb.PropertyParser) : Void;
 	
-	@:overload public function getProperties() : java.util.Properties;
+	@:overload @:public public function getProperties() : java.util.Properties;
 	
-	@:overload @:abstract public function isApplet() : Bool;
+	@:overload @:public @:abstract public function isApplet() : Bool;
 	
-	@:overload @:abstract private function collect() : Void;
+	@:overload @:protected @:abstract private function collect() : Void;
 	
-	@:overload private function checkPropertyDefaults() : Void;
+	@:overload @:protected private function checkPropertyDefaults() : Void;
 	
-	@:overload private function findPropertiesFromArgs(params : java.NativeArray<String>) : Void;
+	@:overload @:protected private function findPropertiesFromArgs(params : java.NativeArray<String>) : Void;
 	
-	@:overload private function findPropertiesFromApplet(app : java.applet.Applet) : Void;
+	@:overload @:protected private function findPropertiesFromApplet(app : java.applet.Applet) : Void;
 	
-	@:overload private function findPropertiesFromFile() : Void;
+	@:overload @:protected private function findPropertiesFromFile() : Void;
 	
-	@:overload private function findPropertiesFromProperties() : Void;
+	@:overload @:protected private function findPropertiesFromProperties() : Void;
 	
-	@:overload private function findPropertiesFromSystem() : Void;
+	@:overload @:protected private function findPropertiesFromSystem() : Void;
 	
 	
 }
 @:internal extern class PropertyCallback
 {
-	@:overload @:abstract public function get(name : String) : String;
+	@:overload @:abstract @:public public function get(name : String) : String;
 	
 	
 }

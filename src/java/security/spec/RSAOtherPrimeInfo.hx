@@ -39,28 +39,28 @@ extern class RSAOtherPrimeInfo
 	* <code>crtCoefficient</code>, is null.
 	*
 	*/
-	@:overload public function new(prime : java.math.BigInteger, primeExponent : java.math.BigInteger, crtCoefficient : java.math.BigInteger) : Void;
+	@:overload @:public public function new(prime : java.math.BigInteger, primeExponent : java.math.BigInteger, crtCoefficient : java.math.BigInteger) : Void;
 	
 	/**
 	* Returns the prime.
 	*
 	* @return the prime.
 	*/
-	@:overload @:final public function getPrime() : java.math.BigInteger;
+	@:overload @:public @:final public function getPrime() : java.math.BigInteger;
 	
 	/**
 	* Returns the prime's exponent.
 	*
 	* @return the primeExponent.
 	*/
-	@:overload @:final public function getExponent() : java.math.BigInteger;
+	@:overload @:public @:final public function getExponent() : java.math.BigInteger;
 	
 	/**
 	* Returns the prime's crtCoefficient.
 	*
 	* @return the crtCoefficient.
 	*/
-	@:overload @:final public function getCrtCoefficient() : java.math.BigInteger;
+	@:overload @:public @:final public function getCrtCoefficient() : java.math.BigInteger;
 	
 	
 }

@@ -28,60 +28,60 @@ package sun.nio.ch;
 	/**
 	* Base implementation of AsynchronousFileChannel.
 	*/
-	private var closeLock(default, null) : java.util.concurrent.locks.ReadWriteLock;
+	@:protected @:final private var closeLock(default, null) : java.util.concurrent.locks.ReadWriteLock;
 	
-	@:volatile private var closed : Bool;
+	@:protected @:volatile private var closed : Bool;
 	
-	private var fdObj(default, null) : java.io.FileDescriptor;
+	@:protected @:final private var fdObj(default, null) : java.io.FileDescriptor;
 	
-	private var reading(default, null) : Bool;
+	@:protected @:final private var reading(default, null) : Bool;
 	
-	private var writing(default, null) : Bool;
+	@:protected @:final private var writing(default, null) : Bool;
 	
-	@:overload private function new(fdObj : java.io.FileDescriptor, reading : Bool, writing : Bool, executor : java.util.concurrent.ExecutorService) : Void;
+	@:overload @:protected private function new(fdObj : java.io.FileDescriptor, reading : Bool, writing : Bool, executor : java.util.concurrent.ExecutorService) : Void;
 	
-	@:overload @:final override public function isOpen() : Bool;
+	@:overload @:public @:final override public function isOpen() : Bool;
 	
 	/**
 	* Marks the beginning of an I/O operation.
 	*
 	* @throws  ClosedChannelException  If channel is closed
 	*/
-	@:overload @:final private function begin() : Void;
+	@:overload @:protected @:final private function begin() : Void;
 	
 	/**
 	* Marks the end of an I/O operation.
 	*/
-	@:overload @:final private function end() : Void;
+	@:overload @:protected @:final private function end() : Void;
 	
 	/**
 	* Marks end of I/O operation
 	*/
-	@:overload @:final private function end(completed : Bool) : Void;
+	@:overload @:protected @:final private function end(completed : Bool) : Void;
 	
-	@:overload @:final public function lock(position : haxe.Int64, size : haxe.Int64, shared : Bool) : java.util.concurrent.Future<java.nio.channels.FileLock>;
+	@:overload @:public @:final override public function lock(position : haxe.Int64, size : haxe.Int64, shared : Bool) : java.util.concurrent.Future<java.nio.channels.FileLock>;
 	
-	@:overload @:final public function lock<A>(position : haxe.Int64, size : haxe.Int64, shared : Bool, attachment : A, handler : java.nio.channels.CompletionHandler<java.nio.channels.FileLock, A>) : Void;
+	@:overload @:public @:final override public function lock<A>(position : haxe.Int64, size : haxe.Int64, shared : Bool, attachment : A, handler : java.nio.channels.CompletionHandler<java.nio.channels.FileLock, A>) : Void;
 	
 	/**
 	* Adds region to lock table
 	*/
-	@:overload @:final private function addToFileLockTable(position : haxe.Int64, size : haxe.Int64, shared : Bool) : sun.nio.ch.FileLockImpl;
+	@:overload @:protected @:final private function addToFileLockTable(position : haxe.Int64, size : haxe.Int64, shared : Bool) : sun.nio.ch.FileLockImpl;
 	
-	@:overload @:final private function removeFromFileLockTable(fli : sun.nio.ch.FileLockImpl) : Void;
+	@:overload @:protected @:final private function removeFromFileLockTable(fli : sun.nio.ch.FileLockImpl) : Void;
 	
 	/**
 	* Releases the given file lock.
 	*/
-	@:overload @:abstract private function implRelease(fli : sun.nio.ch.FileLockImpl) : Void;
+	@:overload @:protected @:abstract private function implRelease(fli : sun.nio.ch.FileLockImpl) : Void;
 	
-	@:overload @:final public function read(dst : java.nio.ByteBuffer, position : haxe.Int64) : java.util.concurrent.Future<Null<Int>>;
+	@:overload @:public @:final override public function read(dst : java.nio.ByteBuffer, position : haxe.Int64) : java.util.concurrent.Future<Null<Int>>;
 	
-	@:overload @:final public function read<A>(dst : java.nio.ByteBuffer, position : haxe.Int64, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
+	@:overload @:public @:final override public function read<A>(dst : java.nio.ByteBuffer, position : haxe.Int64, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
 	
-	@:overload @:final public function write(src : java.nio.ByteBuffer, position : haxe.Int64) : java.util.concurrent.Future<Null<Int>>;
+	@:overload @:public @:final override public function write(src : java.nio.ByteBuffer, position : haxe.Int64) : java.util.concurrent.Future<Null<Int>>;
 	
-	@:overload @:final public function write<A>(src : java.nio.ByteBuffer, position : haxe.Int64, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
+	@:overload @:public @:final override public function write<A>(src : java.nio.ByteBuffer, position : haxe.Int64, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
 	
 	
 }

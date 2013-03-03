@@ -48,14 +48,14 @@ extern class TransformAttribute implements java.io.Serializable
 	* @param transform the specified {@link AffineTransform} to be wrapped,
 	* or null.
 	*/
-	@:overload public function new(transform : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public public function new(transform : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Returns a copy of the wrapped transform.
 	* @return a <code>AffineTransform</code> that is a copy of the wrapped
 	* transform of this <code>TransformAttribute</code>.
 	*/
-	@:overload public function getTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public public function getTransform() : java.awt.geom.AffineTransform;
 	
 	/**
 	* Returns <code>true</code> if the wrapped transform is
@@ -64,18 +64,18 @@ extern class TransformAttribute implements java.io.Serializable
 	* an identity transform; <code>false</code> otherwise.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isIdentity() : Bool;
+	@:require(java4) @:overload @:public public function isIdentity() : Bool;
 	
 	/**
 	* A <code>TransformAttribute</code> representing the identity transform.
 	* @since 1.6
 	*/
-	@:require(java6) public static var IDENTITY(default, null) : java.awt.font.TransformAttribute;
+	@:require(java6) @:public @:static @:final public static var IDENTITY(default, null) : java.awt.font.TransformAttribute;
 	
 	/**
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function hashCode() : Int;
+	@:require(java6) @:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns <code>true</code> if rhs is a <code>TransformAttribute</code>
@@ -87,7 +87,7 @@ extern class TransformAttribute implements java.io.Serializable
 	* transform.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function equals(rhs : Dynamic) : Bool;
+	@:require(java6) @:overload @:public public function equals(rhs : Dynamic) : Bool;
 	
 	
 }

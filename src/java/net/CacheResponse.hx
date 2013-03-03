@@ -34,7 +34,7 @@ extern class CacheResponse
 	* @throws IOException if an I/O error occurs
 	*            while getting the response headers
 	*/
-	@:overload @:abstract public function getHeaders() : java.util.Map<String, java.util.List<String>>;
+	@:overload @:public @:abstract public function getHeaders() : java.util.Map<String, java.util.List<String>>;
 	
 	/**
 	* Returns the response body as an InputStream.
@@ -44,7 +44,7 @@ extern class CacheResponse
 	* @throws IOException if an I/O error occurs while
 	*         getting the response body
 	*/
-	@:overload @:abstract public function getBody() : java.io.InputStream;
+	@:overload @:public @:abstract public function getBody() : java.io.InputStream;
 	
 	
 }

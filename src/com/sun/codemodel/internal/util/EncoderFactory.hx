@@ -36,7 +36,7 @@ extern class EncoderFactory
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload public static function createEncoder(encodin : String) : java.nio.charset.CharsetEncoder;
+	@:overload @:public @:static public static function createEncoder(encodin : String) : java.nio.charset.CharsetEncoder;
 	
 	
 }

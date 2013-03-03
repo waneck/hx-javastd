@@ -33,27 +33,27 @@ extern class JavacTool implements javax.tools.JavaCompiler
 	* @see javax.tools.ToolProvider
 	* @see #create
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Static factory method for creating new instances of this tool.
 	* @return new instance of this tool
 	*/
-	@:overload public static function create() : com.sun.tools.javac.api.JavacTool;
+	@:overload @:public @:static public static function create() : com.sun.tools.javac.api.JavacTool;
 	
-	@:overload public function setOption(name : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function setOption(name : String, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function setExtendedOption(name : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function setExtendedOption(name : String, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function getStandardFileManager(diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, locale : java.util.Locale, charset : java.nio.charset.Charset) : com.sun.tools.javac.file.JavacFileManager;
+	@:overload @:public public function getStandardFileManager(diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, locale : java.util.Locale, charset : java.nio.charset.Charset) : com.sun.tools.javac.file.JavacFileManager;
 	
-	@:overload public function getTask(out : java.io.Writer, fileManager : javax.tools.JavaFileManager, diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, options : java.lang.Iterable<String>, classes : java.lang.Iterable<String>, compilationUnits : java.lang.Iterable<javax.tools.JavaFileObject>) : com.sun.source.util.JavacTask;
+	@:overload @:public public function getTask(out : java.io.Writer, fileManager : javax.tools.JavaFileManager, diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, options : java.lang.Iterable<String>, classes : java.lang.Iterable<String>, compilationUnits : java.lang.Iterable<javax.tools.JavaFileObject>) : com.sun.source.util.JavacTask;
 	
-	@:overload public function run(_in : java.io.InputStream, out : java.io.OutputStream, err : java.io.OutputStream, arguments : java.NativeArray<String>) : Int;
+	@:overload @:public public function run(_in : java.io.InputStream, out : java.io.OutputStream, err : java.io.OutputStream, arguments : java.NativeArray<String>) : Int;
 	
-	@:overload public function getSourceVersions() : java.util.Set<javax.lang.model.SourceVersion>;
+	@:overload @:public public function getSourceVersions() : java.util.Set<javax.lang.model.SourceVersion>;
 	
-	@:overload public function isSupportedOption(option : String) : Int;
+	@:overload @:public public function isSupportedOption(option : String) : Int;
 	
 	
 }

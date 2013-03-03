@@ -38,19 +38,19 @@ package sun.security.provider.certpath;
 */
 @:require(java4) @:internal extern class PolicyNodeImpl implements java.security.cert.PolicyNode
 {
-	@:overload public function getParent() : java.security.cert.PolicyNode;
+	@:overload @:public public function getParent() : java.security.cert.PolicyNode;
 	
-	@:overload public function getChildren() : java.util.Iterator<sun.security.provider.certpath.PolicyNodeImpl>;
+	@:overload @:public public function getChildren() : java.util.Iterator<sun.security.provider.certpath.PolicyNodeImpl>;
 	
-	@:overload public function getDepth() : Int;
+	@:overload @:public public function getDepth() : Int;
 	
-	@:overload public function getValidPolicy() : String;
+	@:overload @:public public function getValidPolicy() : String;
 	
-	@:overload public function getPolicyQualifiers() : java.util.Set<java.security.cert.PolicyQualifierInfo>;
+	@:overload @:public public function getPolicyQualifiers() : java.util.Set<java.security.cert.PolicyQualifierInfo>;
 	
-	@:overload public function getExpectedPolicies() : java.util.Set<String>;
+	@:overload @:public public function getExpectedPolicies() : java.util.Set<String>;
 	
-	@:overload public function isCritical() : Bool;
+	@:overload @:public public function isCritical() : Bool;
 	
 	/**
 	* Return a printable representation of the PolicyNode.
@@ -59,7 +59,7 @@ package sun.security.provider.certpath;
 	*
 	* @return a String describing the contents of the Policy Node
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

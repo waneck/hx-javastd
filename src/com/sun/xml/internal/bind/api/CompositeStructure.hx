@@ -45,9 +45,9 @@ package com.sun.xml.internal.bind.api;
 */
 extern class CompositeStructure
 {
-	public var bridges : java.NativeArray<com.sun.xml.internal.bind.api.Bridge<Dynamic>>;
+	@:public public var bridges : java.NativeArray<com.sun.xml.internal.bind.api.Bridge<Dynamic>>;
 	
-	public var values : java.NativeArray<Dynamic>;
+	@:public public var values : java.NativeArray<Dynamic>;
 	
 	
 }

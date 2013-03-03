@@ -95,7 +95,7 @@ extern class MethodGen extends com.sun.org.apache.bcel.internal.generic.FieldGen
 	* abstract or native methods
 	* @param cp constant pool
 	*/
-	@:overload public function new(access_flags : Int, return_type : com.sun.org.apache.bcel.internal.generic.Type, arg_types : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>, arg_names : java.NativeArray<String>, method_name : String, class_name : String, il : com.sun.org.apache.bcel.internal.generic.InstructionList, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
+	@:overload @:public public function new(access_flags : Int, return_type : com.sun.org.apache.bcel.internal.generic.Type, arg_types : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>, arg_names : java.NativeArray<String>, method_name : String, class_name : String, il : com.sun.org.apache.bcel.internal.generic.InstructionList, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
 	
 	/**
 	* Instantiate from existing method.
@@ -104,7 +104,7 @@ extern class MethodGen extends com.sun.org.apache.bcel.internal.generic.FieldGen
 	* @param class_name class name containing this method
 	* @param cp constant pool
 	*/
-	@:overload public function new(m : com.sun.org.apache.bcel.internal.classfile.Method, class_name : String, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
+	@:overload @:public public function new(m : com.sun.org.apache.bcel.internal.classfile.Method, class_name : String, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
 	
 	/**
 	* Adds a local variable to this method.
@@ -118,7 +118,7 @@ extern class MethodGen extends com.sun.org.apache.bcel.internal.generic.FieldGen
 	* @return new local variable object
 	* @see LocalVariable
 	*/
-	@:overload public function addLocalVariable(name : String, type : com.sun.org.apache.bcel.internal.generic.Type, slot : Int, start : com.sun.org.apache.bcel.internal.generic.InstructionHandle, end : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : com.sun.org.apache.bcel.internal.generic.LocalVariableGen;
+	@:overload @:public public function addLocalVariable(name : String, type : com.sun.org.apache.bcel.internal.generic.Type, slot : Int, start : com.sun.org.apache.bcel.internal.generic.InstructionHandle, end : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : com.sun.org.apache.bcel.internal.generic.LocalVariableGen;
 	
 	/**
 	* Adds a local variable to this method and assigns an index automatically.
@@ -132,18 +132,18 @@ extern class MethodGen extends com.sun.org.apache.bcel.internal.generic.FieldGen
 	* @return new local variable object
 	* @see LocalVariable
 	*/
-	@:overload public function addLocalVariable(name : String, type : com.sun.org.apache.bcel.internal.generic.Type, start : com.sun.org.apache.bcel.internal.generic.InstructionHandle, end : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : com.sun.org.apache.bcel.internal.generic.LocalVariableGen;
+	@:overload @:public public function addLocalVariable(name : String, type : com.sun.org.apache.bcel.internal.generic.Type, start : com.sun.org.apache.bcel.internal.generic.InstructionHandle, end : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : com.sun.org.apache.bcel.internal.generic.LocalVariableGen;
 	
 	/**
 	* Remove a local variable, its slot will not be reused, if you do not use addLocalVariable
 	* with an explicit index argument.
 	*/
-	@:overload public function removeLocalVariable(l : com.sun.org.apache.bcel.internal.generic.LocalVariableGen) : Void;
+	@:overload @:public public function removeLocalVariable(l : com.sun.org.apache.bcel.internal.generic.LocalVariableGen) : Void;
 	
 	/**
 	* Remove all local variables.
 	*/
-	@:overload public function removeLocalVariables() : Void;
+	@:overload @:public public function removeLocalVariables() : Void;
 	
 	/*
 	* If the range of the variable has not been set yet, it will be set to be valid from
@@ -151,12 +151,12 @@ extern class MethodGen extends com.sun.org.apache.bcel.internal.generic.FieldGen
 	*
 	* @return array of declared local variables sorted by index
 	*/
-	@:overload public function getLocalVariables() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.LocalVariableGen>;
+	@:overload @:public public function getLocalVariables() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.LocalVariableGen>;
 	
 	/**
 	* @return `LocalVariableTable' attribute of all the local variables of this method.
 	*/
-	@:overload public function getLocalVariableTable(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.classfile.LocalVariableTable;
+	@:overload @:public public function getLocalVariableTable(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.classfile.LocalVariableTable;
 	
 	/**
 	* Give an instruction a line number corresponding to the source code line.
@@ -165,27 +165,27 @@ extern class MethodGen extends com.sun.org.apache.bcel.internal.generic.FieldGen
 	* @return new line number object
 	* @see LineNumber
 	*/
-	@:overload public function addLineNumber(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, src_line : Int) : com.sun.org.apache.bcel.internal.generic.LineNumberGen;
+	@:overload @:public public function addLineNumber(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, src_line : Int) : com.sun.org.apache.bcel.internal.generic.LineNumberGen;
 	
 	/**
 	* Remove a line number.
 	*/
-	@:overload public function removeLineNumber(l : com.sun.org.apache.bcel.internal.generic.LineNumberGen) : Void;
+	@:overload @:public public function removeLineNumber(l : com.sun.org.apache.bcel.internal.generic.LineNumberGen) : Void;
 	
 	/**
 	* Remove all line numbers.
 	*/
-	@:overload public function removeLineNumbers() : Void;
+	@:overload @:public public function removeLineNumbers() : Void;
 	
 	/*
 	* @return array of line numbers
 	*/
-	@:overload public function getLineNumbers() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.LineNumberGen>;
+	@:overload @:public public function getLineNumbers() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.LineNumberGen>;
 	
 	/**
 	* @return `LineNumberTable' attribute of all the local variables of this method.
 	*/
-	@:overload public function getLineNumberTable(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.classfile.LineNumberTable;
+	@:overload @:public public function getLineNumberTable(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.classfile.LineNumberTable;
 	
 	/**
 	* Add an exception handler, i.e., specify region where a handler is active and an
@@ -198,44 +198,44 @@ extern class MethodGen extends com.sun.org.apache.bcel.internal.generic.FieldGen
 	* exception is handled
 	* @return new exception handler object
 	*/
-	@:overload public function addExceptionHandler(start_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle, end_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle, handler_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle, catch_type : com.sun.org.apache.bcel.internal.generic.ObjectType) : com.sun.org.apache.bcel.internal.generic.CodeExceptionGen;
+	@:overload @:public public function addExceptionHandler(start_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle, end_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle, handler_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle, catch_type : com.sun.org.apache.bcel.internal.generic.ObjectType) : com.sun.org.apache.bcel.internal.generic.CodeExceptionGen;
 	
 	/**
 	* Remove an exception handler.
 	*/
-	@:overload public function removeExceptionHandler(c : com.sun.org.apache.bcel.internal.generic.CodeExceptionGen) : Void;
+	@:overload @:public public function removeExceptionHandler(c : com.sun.org.apache.bcel.internal.generic.CodeExceptionGen) : Void;
 	
 	/**
 	* Remove all line numbers.
 	*/
-	@:overload public function removeExceptionHandlers() : Void;
+	@:overload @:public public function removeExceptionHandlers() : Void;
 	
 	/*
 	* @return array of declared exception handlers
 	*/
-	@:overload public function getExceptionHandlers() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.CodeExceptionGen>;
+	@:overload @:public public function getExceptionHandlers() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.CodeExceptionGen>;
 	
 	/**
 	* Add an exception possibly thrown by this method.
 	*
 	* @param class_name (fully qualified) name of exception
 	*/
-	@:overload public function addException(class_name : String) : Void;
+	@:overload @:public public function addException(class_name : String) : Void;
 	
 	/**
 	* Remove an exception.
 	*/
-	@:overload public function removeException(c : String) : Void;
+	@:overload @:public public function removeException(c : String) : Void;
 	
 	/**
 	* Remove all exceptions.
 	*/
-	@:overload public function removeExceptions() : Void;
+	@:overload @:public public function removeExceptions() : Void;
 	
 	/*
 	* @return array of thrown exceptions
 	*/
-	@:overload public function getExceptions() : java.NativeArray<String>;
+	@:overload @:public public function getExceptions() : java.NativeArray<String>;
 	
 	/**
 	* Add an attribute to the code. Currently, the JVM knows about the
@@ -246,22 +246,22 @@ extern class MethodGen extends com.sun.org.apache.bcel.internal.generic.FieldGen
 	*
 	* @param a attribute to be added
 	*/
-	@:overload public function addCodeAttribute(a : com.sun.org.apache.bcel.internal.classfile.Attribute) : Void;
+	@:overload @:public public function addCodeAttribute(a : com.sun.org.apache.bcel.internal.classfile.Attribute) : Void;
 	
 	/**
 	* Remove a code attribute.
 	*/
-	@:overload public function removeCodeAttribute(a : com.sun.org.apache.bcel.internal.classfile.Attribute) : Void;
+	@:overload @:public public function removeCodeAttribute(a : com.sun.org.apache.bcel.internal.classfile.Attribute) : Void;
 	
 	/**
 	* Remove all code attributes.
 	*/
-	@:overload public function removeCodeAttributes() : Void;
+	@:overload @:public public function removeCodeAttributes() : Void;
 	
 	/**
 	* @return all attributes of this method.
 	*/
-	@:overload public function getCodeAttributes() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>;
+	@:overload @:public public function getCodeAttributes() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>;
 	
 	/**
 	* Get method object. Never forget to call setMaxStack() or setMaxStack(max), respectively,
@@ -269,96 +269,96 @@ extern class MethodGen extends com.sun.org.apache.bcel.internal.generic.FieldGen
 	*
 	* @return method object
 	*/
-	@:overload public function getMethod() : com.sun.org.apache.bcel.internal.classfile.Method;
+	@:overload @:public public function getMethod() : com.sun.org.apache.bcel.internal.classfile.Method;
 	
 	/**
 	* Remove all NOPs from the instruction list (if possible) and update every
 	* object refering to them, i.e., branch instructions, local variables and
 	* exception handlers.
 	*/
-	@:overload public function removeNOPs() : Void;
+	@:overload @:public public function removeNOPs() : Void;
 	
 	/**
 	* Set maximum number of local variables.
 	*/
-	@:overload public function setMaxLocals(m : Int) : Void;
+	@:overload @:public public function setMaxLocals(m : Int) : Void;
 	
-	@:overload public function getMaxLocals() : Int;
+	@:overload @:public public function getMaxLocals() : Int;
 	
 	/**
 	* Set maximum stack size for this method.
 	*/
-	@:overload public function setMaxStack(m : Int) : Void;
+	@:overload @:public public function setMaxStack(m : Int) : Void;
 	
-	@:overload public function getMaxStack() : Int;
+	@:overload @:public public function getMaxStack() : Int;
 	
 	/** @return class that contains this method
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
-	@:overload public function setClassName(class_name : String) : Void;
+	@:overload @:public public function setClassName(class_name : String) : Void;
 	
-	@:overload public function setReturnType(return_type : com.sun.org.apache.bcel.internal.generic.Type) : Void;
+	@:overload @:public public function setReturnType(return_type : com.sun.org.apache.bcel.internal.generic.Type) : Void;
 	
-	@:overload public function getReturnType() : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getReturnType() : com.sun.org.apache.bcel.internal.generic.Type;
 	
-	@:overload public function setArgumentTypes(arg_types : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>) : Void;
+	@:overload @:public public function setArgumentTypes(arg_types : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>) : Void;
 	
-	@:overload public function getArgumentTypes() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>;
+	@:overload @:public public function getArgumentTypes() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>;
 	
-	@:overload public function setArgumentType(i : Int, type : com.sun.org.apache.bcel.internal.generic.Type) : Void;
+	@:overload @:public public function setArgumentType(i : Int, type : com.sun.org.apache.bcel.internal.generic.Type) : Void;
 	
-	@:overload public function getArgumentType(i : Int) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getArgumentType(i : Int) : com.sun.org.apache.bcel.internal.generic.Type;
 	
-	@:overload public function setArgumentNames(arg_names : java.NativeArray<String>) : Void;
+	@:overload @:public public function setArgumentNames(arg_names : java.NativeArray<String>) : Void;
 	
-	@:overload public function getArgumentNames() : java.NativeArray<String>;
+	@:overload @:public public function getArgumentNames() : java.NativeArray<String>;
 	
-	@:overload public function setArgumentName(i : Int, name : String) : Void;
+	@:overload @:public public function setArgumentName(i : Int, name : String) : Void;
 	
-	@:overload public function getArgumentName(i : Int) : String;
+	@:overload @:public public function getArgumentName(i : Int) : String;
 	
-	@:overload public function getInstructionList() : com.sun.org.apache.bcel.internal.generic.InstructionList;
+	@:overload @:public public function getInstructionList() : com.sun.org.apache.bcel.internal.generic.InstructionList;
 	
-	@:overload public function setInstructionList(il : com.sun.org.apache.bcel.internal.generic.InstructionList) : Void;
+	@:overload @:public public function setInstructionList(il : com.sun.org.apache.bcel.internal.generic.InstructionList) : Void;
 	
-	@:overload override public function getSignature() : String;
+	@:overload @:public override public function getSignature() : String;
 	
 	/**
 	* Computes max. stack size by performing control flow analysis.
 	*/
-	@:overload public function setMaxStack() : Void;
+	@:overload @:public public function setMaxStack() : Void;
 	
 	/**
 	* Compute maximum number of local variables.
 	*/
-	@:overload public function setMaxLocals() : Void;
+	@:overload @:public public function setMaxLocals() : Void;
 	
 	/** Do not/Do produce attributes code attributesLineNumberTable and
 	* LocalVariableTable, like javac -O
 	*/
-	@:overload public function stripAttributes(flag : Bool) : Void;
+	@:overload @:public public function stripAttributes(flag : Bool) : Void;
 	
 	/**
 	* Computes stack usage of an instruction list by performing control flow analysis.
 	*
 	* @return maximum stack depth used by method
 	*/
-	@:native('getMaxStack') @:overload public static function _getMaxStack(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, il : com.sun.org.apache.bcel.internal.generic.InstructionList, et : java.NativeArray<com.sun.org.apache.bcel.internal.generic.CodeExceptionGen>) : Int;
+	@:native('getMaxStack') @:overload @:public @:static public static function _getMaxStack(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, il : com.sun.org.apache.bcel.internal.generic.InstructionList, et : java.NativeArray<com.sun.org.apache.bcel.internal.generic.CodeExceptionGen>) : Int;
 	
 	/** Add observer for this object.
 	*/
-	@:overload public function addObserver(o : com.sun.org.apache.bcel.internal.generic.MethodObserver) : Void;
+	@:overload @:public public function addObserver(o : com.sun.org.apache.bcel.internal.generic.MethodObserver) : Void;
 	
 	/** Remove observer for this object.
 	*/
-	@:overload public function removeObserver(o : com.sun.org.apache.bcel.internal.generic.MethodObserver) : Void;
+	@:overload @:public public function removeObserver(o : com.sun.org.apache.bcel.internal.generic.MethodObserver) : Void;
 	
 	/** Call notify() method on all observers. This method is not called
 	* automatically whenever the state has changed, but has to be
 	* called by the user after he has finished editing the object.
 	*/
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
 	/**
 	* Return string representation close to declaration format,
@@ -366,11 +366,11 @@ extern class MethodGen extends com.sun.org.apache.bcel.internal.generic.FieldGen
 	*
 	* @return String representation of the method.
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/** @return deep copy of this method
 	*/
-	@:overload public function copy(class_name : String, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.MethodGen;
+	@:overload @:public public function copy(class_name : String, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.MethodGen;
 	
 	
 }
@@ -380,9 +380,9 @@ extern class MethodGen extends com.sun.org.apache.bcel.internal.generic.FieldGen
 }
 @:native('com$sun$org$apache$bcel$internal$generic$MethodGen$BranchStack') @:internal extern class MethodGen_BranchStack
 {
-	@:overload public function push(target : com.sun.org.apache.bcel.internal.generic.InstructionHandle, stackDepth : Int) : Void;
+	@:overload @:public public function push(target : com.sun.org.apache.bcel.internal.generic.InstructionHandle, stackDepth : Int) : Void;
 	
-	@:overload public function pop() : com.sun.org.apache.bcel.internal.generic.MethodGen.MethodGen_BranchTarget;
+	@:overload @:public public function pop() : com.sun.org.apache.bcel.internal.generic.MethodGen.MethodGen_BranchTarget;
 	
 	
 }

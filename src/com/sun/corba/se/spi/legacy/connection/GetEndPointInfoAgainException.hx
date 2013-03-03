@@ -25,9 +25,9 @@ package com.sun.corba.se.spi.legacy.connection;
 */
 extern class GetEndPointInfoAgainException extends java.lang.Exception
 {
-	@:overload public function new(socketInfo : com.sun.corba.se.spi.transport.SocketInfo) : Void;
+	@:overload @:public public function new(socketInfo : com.sun.corba.se.spi.transport.SocketInfo) : Void;
 	
-	@:overload public function getEndPointInfo() : com.sun.corba.se.spi.transport.SocketInfo;
+	@:overload @:public public function getEndPointInfo() : com.sun.corba.se.spi.transport.SocketInfo;
 	
 	
 }

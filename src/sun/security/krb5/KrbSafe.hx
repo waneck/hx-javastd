@@ -30,13 +30,13 @@ package sun.security.krb5;
 */
 @:internal extern class KrbSafe extends sun.security.krb5.KrbAppMessage
 {
-	@:overload public function new(userData : java.NativeArray<java.StdTypes.Int8>, creds : sun.security.krb5.Credentials, subKey : sun.security.krb5.EncryptionKey, timestamp : sun.security.krb5.internal.KerberosTime, seqNumber : sun.security.krb5.internal.SeqNumber, saddr : sun.security.krb5.internal.HostAddress, raddr : sun.security.krb5.internal.HostAddress) : Void;
+	@:overload @:public public function new(userData : java.NativeArray<java.StdTypes.Int8>, creds : sun.security.krb5.Credentials, subKey : sun.security.krb5.EncryptionKey, timestamp : sun.security.krb5.internal.KerberosTime, seqNumber : sun.security.krb5.internal.SeqNumber, saddr : sun.security.krb5.internal.HostAddress, raddr : sun.security.krb5.internal.HostAddress) : Void;
 	
-	@:overload public function new(msg : java.NativeArray<java.StdTypes.Int8>, creds : sun.security.krb5.Credentials, subKey : sun.security.krb5.EncryptionKey, seqNumber : sun.security.krb5.internal.SeqNumber, saddr : sun.security.krb5.internal.HostAddress, raddr : sun.security.krb5.internal.HostAddress, timestampRequired : Bool, seqNumberRequired : Bool) : Void;
+	@:overload @:public public function new(msg : java.NativeArray<java.StdTypes.Int8>, creds : sun.security.krb5.Credentials, subKey : sun.security.krb5.EncryptionKey, seqNumber : sun.security.krb5.internal.SeqNumber, saddr : sun.security.krb5.internal.HostAddress, raddr : sun.security.krb5.internal.HostAddress, timestampRequired : Bool, seqNumberRequired : Bool) : Void;
 	
-	@:overload public function getMessage() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getMessage() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

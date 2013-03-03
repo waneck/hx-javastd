@@ -27,15 +27,15 @@ package com.sun.xml.internal.fastinfoset.sax;
 */
 extern class SystemIdResolver
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function getAbsoluteURIFromRelative(localPath : String) : String;
+	@:overload @:public @:static public static function getAbsoluteURIFromRelative(localPath : String) : String;
 	
-	@:overload public static function isAbsoluteURI(systemId : String) : Bool;
+	@:overload @:public @:static public static function isAbsoluteURI(systemId : String) : Bool;
 	
-	@:overload public static function isAbsolutePath(systemId : String) : Bool;
+	@:overload @:public @:static public static function isAbsolutePath(systemId : String) : Bool;
 	
-	@:overload public static function getAbsoluteURI(systemId : String) : String;
+	@:overload @:public @:static public static function getAbsoluteURI(systemId : String) : String;
 	
 	
 }

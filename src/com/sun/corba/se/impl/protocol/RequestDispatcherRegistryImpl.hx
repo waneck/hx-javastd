@@ -25,31 +25,31 @@ package com.sun.corba.se.impl.protocol;
 */
 extern class RequestDispatcherRegistryImpl implements com.sun.corba.se.spi.protocol.RequestDispatcherRegistry
 {
-	private var defaultId : Int;
+	@:protected private var defaultId : Int;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, defaultId : Int) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, defaultId : Int) : Void;
 	
-	@:overload @:synchronized public function registerClientRequestDispatcher(csc : com.sun.corba.se.pept.protocol.ClientRequestDispatcher, scid : Int) : Void;
+	@:overload @:public @:synchronized public function registerClientRequestDispatcher(csc : com.sun.corba.se.pept.protocol.ClientRequestDispatcher, scid : Int) : Void;
 	
-	@:overload @:synchronized public function registerLocalClientRequestDispatcherFactory(csc : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcherFactory, scid : Int) : Void;
+	@:overload @:public @:synchronized public function registerLocalClientRequestDispatcherFactory(csc : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcherFactory, scid : Int) : Void;
 	
-	@:overload @:synchronized public function registerServerRequestDispatcher(ssc : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher, scid : Int) : Void;
+	@:overload @:public @:synchronized public function registerServerRequestDispatcher(ssc : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher, scid : Int) : Void;
 	
-	@:overload @:synchronized public function registerServerRequestDispatcher(scc : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher, name : String) : Void;
+	@:overload @:public @:synchronized public function registerServerRequestDispatcher(scc : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher, name : String) : Void;
 	
-	@:overload @:synchronized public function registerObjectAdapterFactory(oaf : com.sun.corba.se.spi.oa.ObjectAdapterFactory, scid : Int) : Void;
+	@:overload @:public @:synchronized public function registerObjectAdapterFactory(oaf : com.sun.corba.se.spi.oa.ObjectAdapterFactory, scid : Int) : Void;
 	
-	@:overload public function getServerRequestDispatcher(scid : Int) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
+	@:overload @:public public function getServerRequestDispatcher(scid : Int) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
 	
-	@:overload public function getServerRequestDispatcher(name : String) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
+	@:overload @:public public function getServerRequestDispatcher(name : String) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
 	
-	@:overload public function getLocalClientRequestDispatcherFactory(scid : Int) : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcherFactory;
+	@:overload @:public public function getLocalClientRequestDispatcherFactory(scid : Int) : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcherFactory;
 	
-	@:overload public function getClientRequestDispatcher(scid : Int) : com.sun.corba.se.pept.protocol.ClientRequestDispatcher;
+	@:overload @:public public function getClientRequestDispatcher(scid : Int) : com.sun.corba.se.pept.protocol.ClientRequestDispatcher;
 	
-	@:overload public function getObjectAdapterFactory(scid : Int) : com.sun.corba.se.spi.oa.ObjectAdapterFactory;
+	@:overload @:public public function getObjectAdapterFactory(scid : Int) : com.sun.corba.se.spi.oa.ObjectAdapterFactory;
 	
-	@:overload public function getObjectAdapterFactories() : java.util.Set<Dynamic>;
+	@:overload @:public public function getObjectAdapterFactories() : java.util.Set<Dynamic>;
 	
 	
 }

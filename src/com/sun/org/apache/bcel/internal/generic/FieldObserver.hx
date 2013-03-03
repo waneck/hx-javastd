@@ -64,7 +64,7 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern interface FieldObserver
 {
-	@:overload public function notify(field : com.sun.org.apache.bcel.internal.generic.FieldGen) : Void;
+	@:overload @:public public function notify(field : com.sun.org.apache.bcel.internal.generic.FieldGen) : Void;
 	
 	
 }

@@ -31,11 +31,11 @@ package sun.tools.jstat;
 */
 @:require(java5) extern class OptionFinder
 {
-	@:overload public function new(optionsSources : java.util.List<java.net.URL>) : Void;
+	@:overload @:public public function new(optionsSources : java.util.List<java.net.URL>) : Void;
 	
-	@:overload public function getOptionFormat(option : String, useTimestamp : Bool) : sun.tools.jstat.OptionFormat;
+	@:overload @:public public function getOptionFormat(option : String, useTimestamp : Bool) : sun.tools.jstat.OptionFormat;
 	
-	@:overload private function getOptionFormat(option : String, sources : java.util.List<java.net.URL>) : sun.tools.jstat.OptionFormat;
+	@:overload @:protected private function getOptionFormat(option : String, sources : java.util.List<java.net.URL>) : sun.tools.jstat.OptionFormat;
 	
 	
 }

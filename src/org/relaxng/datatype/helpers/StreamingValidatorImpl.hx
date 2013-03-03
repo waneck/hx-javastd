@@ -56,13 +56,13 @@ package org.relaxng.datatype.helpers;
 */
 extern class StreamingValidatorImpl implements org.relaxng.datatype.DatatypeStreamingValidator
 {
-	@:overload public function addCharacters(buf : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload @:public public function addCharacters(buf : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
-	@:overload public function isValid() : Bool;
+	@:overload @:public public function isValid() : Bool;
 	
-	@:overload public function checkValid() : Void;
+	@:overload @:public public function checkValid() : Void;
 	
-	@:overload public function new(baseType : org.relaxng.datatype.Datatype, context : org.relaxng.datatype.ValidationContext) : Void;
+	@:overload @:public public function new(baseType : org.relaxng.datatype.Datatype, context : org.relaxng.datatype.ValidationContext) : Void;
 	
 	
 }

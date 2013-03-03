@@ -33,7 +33,7 @@ extern class AuthProvider extends java.security.Provider
 	* @param version the provider version number.
 	* @param info a description of the provider and its services.
 	*/
-	@:overload private function new(name : String, version : Float, info : String) : Void;
+	@:overload @:protected private function new(name : String, version : Float, info : String) : Void;
 	
 	/**
 	* Log in to this provider.
@@ -66,7 +66,7 @@ extern class AuthProvider extends java.security.Provider
 	*  where <i>name</i> is the value returned by
 	*  this provider's <code>getName</code> method
 	*/
-	@:overload @:abstract public function login(subject : javax.security.auth.Subject, handler : javax.security.auth.callback.CallbackHandler) : Void;
+	@:overload @:public @:abstract public function login(subject : javax.security.auth.Subject, handler : javax.security.auth.callback.CallbackHandler) : Void;
 	
 	/**
 	* Log out from this provider.
@@ -78,7 +78,7 @@ extern class AuthProvider extends java.security.Provider
 	*  where <i>name</i> is the value returned by
 	*  this provider's <code>getName</code> method
 	*/
-	@:overload @:abstract public function logout() : Void;
+	@:overload @:public @:abstract public function logout() : Void;
 	
 	/**
 	* Set a <code>CallbackHandler</code>.
@@ -103,7 +103,7 @@ extern class AuthProvider extends java.security.Provider
 	*  where <i>name</i> is the value returned by
 	*  this provider's <code>getName</code> method
 	*/
-	@:overload @:abstract public function setCallbackHandler(handler : javax.security.auth.callback.CallbackHandler) : Void;
+	@:overload @:public @:abstract public function setCallbackHandler(handler : javax.security.auth.callback.CallbackHandler) : Void;
 	
 	
 }

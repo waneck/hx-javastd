@@ -25,21 +25,21 @@ package com.sun.media.sound;
 */
 extern class JavaSoundAudioClip implements java.applet.AudioClip implements javax.sound.midi.MetaEventListener implements javax.sound.sampled.LineListener
 {
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
-	@:overload @:synchronized public function play() : Void;
+	@:overload @:public @:synchronized public function play() : Void;
 	
-	@:overload @:synchronized public function loop() : Void;
+	@:overload @:public @:synchronized public function loop() : Void;
 	
-	@:overload @:synchronized public function stop() : Void;
+	@:overload @:public @:synchronized public function stop() : Void;
 	
-	@:overload @:synchronized public function update(event : javax.sound.sampled.LineEvent) : Void;
+	@:overload @:public @:synchronized public function update(event : javax.sound.sampled.LineEvent) : Void;
 	
-	@:overload @:synchronized public function meta(message : javax.sound.midi.MetaMessage) : Void;
+	@:overload @:public @:synchronized public function meta(message : javax.sound.midi.MetaMessage) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }
@@ -49,9 +49,9 @@ extern class JavaSoundAudioClip implements java.applet.AudioClip implements java
 */
 @:native('com$sun$media$sound$JavaSoundAudioClip$DirectBAOS') @:internal extern class JavaSoundAudioClip_DirectBAOS extends java.io.ByteArrayOutputStream
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getInternalBuffer() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getInternalBuffer() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

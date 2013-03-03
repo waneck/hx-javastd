@@ -30,9 +30,9 @@ extern class ProviderInvokerTube<T> extends com.sun.xml.internal.ws.server.Invok
 	*
 	* @author Jitendra Kotamraju
 	*/
-	private var argsBuilder : com.sun.xml.internal.ws.server.provider.ProviderArgumentsBuilder<T>;
+	@:protected private var argsBuilder : com.sun.xml.internal.ws.server.provider.ProviderArgumentsBuilder<T>;
 	
-	@:overload public static function create<T>(implType : Class<T>, binding : com.sun.xml.internal.ws.api.WSBinding, invoker : com.sun.xml.internal.ws.api.server.Invoker) : com.sun.xml.internal.ws.server.provider.ProviderInvokerTube<T>;
+	@:overload @:public @:static public static function create<T>(implType : Class<T>, binding : com.sun.xml.internal.ws.api.WSBinding, invoker : com.sun.xml.internal.ws.api.server.Invoker) : com.sun.xml.internal.ws.server.provider.ProviderInvokerTube<T>;
 	
 	
 }

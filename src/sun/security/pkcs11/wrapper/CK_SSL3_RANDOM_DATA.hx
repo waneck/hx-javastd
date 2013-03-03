@@ -71,7 +71,7 @@ extern class CK_SSL3_RANDOM_DATA
 	*   CK_ULONG ulClientRandomLen;
 	* </PRE>
 	*/
-	public var pClientRandom : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var pClientRandom : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -80,16 +80,16 @@ extern class CK_SSL3_RANDOM_DATA
 	*   CK_ULONG ulServerRandomLen;
 	* </PRE>
 	*/
-	public var pServerRandom : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var pServerRandom : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function new(clientRandom : java.NativeArray<java.StdTypes.Int8>, serverRandom : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(clientRandom : java.NativeArray<java.StdTypes.Int8>, serverRandom : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the string representation of CK_SSL3_RANDOM_DATA.
 	*
 	* @return the string representation of CK_SSL3_RANDOM_DATA
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

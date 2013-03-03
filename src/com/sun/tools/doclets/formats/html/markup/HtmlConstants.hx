@@ -28,147 +28,147 @@ extern class HtmlConstants
 	/**
 	* Marker to identify start of top navigation bar.
 	*/
-	public static var START_OF_TOP_NAVBAR(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_TOP_NAVBAR(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify start of bottom navigation bar.
 	*/
-	public static var START_OF_BOTTOM_NAVBAR(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_BOTTOM_NAVBAR(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify end of top navigation bar.
 	*/
-	public static var END_OF_TOP_NAVBAR(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var END_OF_TOP_NAVBAR(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify end of bottom navigation bar.
 	*/
-	public static var END_OF_BOTTOM_NAVBAR(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var END_OF_BOTTOM_NAVBAR(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify start of class data.
 	*/
-	public static var START_OF_CLASS_DATA(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_CLASS_DATA(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify end of class data.
 	*/
-	public static var END_OF_CLASS_DATA(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var END_OF_CLASS_DATA(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify start of nested class summary.
 	*/
-	public static var START_OF_NESTED_CLASS_SUMMARY(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_NESTED_CLASS_SUMMARY(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify start of annotation type optional member summary.
 	*/
-	public static var START_OF_ANNOTATION_TYPE_OPTIONAL_MEMBER_SUMMARY(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_ANNOTATION_TYPE_OPTIONAL_MEMBER_SUMMARY(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify start of annotation type required member summary.
 	*/
-	public static var START_OF_ANNOTATION_TYPE_REQUIRED_MEMBER_SUMMARY(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_ANNOTATION_TYPE_REQUIRED_MEMBER_SUMMARY(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify start of constructor summary.
 	*/
-	public static var START_OF_CONSTRUCTOR_SUMMARY(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_CONSTRUCTOR_SUMMARY(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify start of enum constants summary.
 	*/
-	public static var START_OF_ENUM_CONSTANT_SUMMARY(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_ENUM_CONSTANT_SUMMARY(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify start of field summary.
 	*/
-	public static var START_OF_FIELD_SUMMARY(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_FIELD_SUMMARY(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify start of properties summary.
 	*/
-	public static var START_OF_PROPERTY_SUMMARY(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_PROPERTY_SUMMARY(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify start of method summary.
 	*/
-	public static var START_OF_METHOD_SUMMARY(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_METHOD_SUMMARY(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify start of annotation type details.
 	*/
-	public static var START_OF_ANNOTATION_TYPE_DETAILS(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_ANNOTATION_TYPE_DETAILS(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify start of method details.
 	*/
-	public static var START_OF_METHOD_DETAILS(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_METHOD_DETAILS(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify start of field details.
 	*/
-	public static var START_OF_FIELD_DETAILS(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_FIELD_DETAILS(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify start of property details.
 	*/
-	public static var START_OF_PROPERTY_DETAILS(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_PROPERTY_DETAILS(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify start of constructor details.
 	*/
-	public static var START_OF_CONSTRUCTOR_DETAILS(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_CONSTRUCTOR_DETAILS(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Marker to identify start of enum constants details.
 	*/
-	public static var START_OF_ENUM_CONSTANT_DETAILS(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var START_OF_ENUM_CONSTANT_DETAILS(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Html tag for the page title heading.
 	*/
-	public static var TITLE_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
+	@:public @:static @:final public static var TITLE_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
 	
 	/**
 	* Html tag for the class page title heading.
 	*/
-	public static var CLASS_PAGE_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
+	@:public @:static @:final public static var CLASS_PAGE_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
 	
 	/**
 	* Html tag for the content heading.
 	*/
-	public static var CONTENT_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
+	@:public @:static @:final public static var CONTENT_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
 	
 	/**
 	* Html tag for the package name heading.
 	*/
-	public static var PACKAGE_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
+	@:public @:static @:final public static var PACKAGE_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
 	
 	/**
 	* Html tag for the member summary heading.
 	*/
-	public static var SUMMARY_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
+	@:public @:static @:final public static var SUMMARY_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
 	
 	/**
 	* Html tag for the inherited member summary heading.
 	*/
-	public static var INHERITED_SUMMARY_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
+	@:public @:static @:final public static var INHERITED_SUMMARY_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
 	
 	/**
 	* Html tag for the member details heading.
 	*/
-	public static var DETAILS_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
+	@:public @:static @:final public static var DETAILS_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
 	
 	/**
 	* Html tag for the serialized member heading.
 	*/
-	public static var SERIALIZED_MEMBER_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
+	@:public @:static @:final public static var SERIALIZED_MEMBER_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
 	
 	/**
 	* Html tag for the member heading.
 	*/
-	public static var MEMBER_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
+	@:public @:static @:final public static var MEMBER_HEADING(default, null) : com.sun.tools.doclets.formats.html.markup.HtmlTag;
 	
 	
 }

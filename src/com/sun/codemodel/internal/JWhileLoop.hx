@@ -28,11 +28,11 @@ package com.sun.codemodel.internal;
 */
 extern class JWhileLoop implements com.sun.codemodel.internal.JStatement
 {
-	@:overload public function test() : com.sun.codemodel.internal.JExpression;
+	@:overload @:public public function test() : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public function body() : com.sun.codemodel.internal.JBlock;
+	@:overload @:public public function body() : com.sun.codemodel.internal.JBlock;
 	
-	@:overload public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

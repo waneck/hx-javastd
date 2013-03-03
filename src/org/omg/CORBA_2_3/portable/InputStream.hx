@@ -44,14 +44,14 @@ package org.omg.CORBA_2_3.portable;
 	* Unmarshalls a value type from the input stream.
 	* @return the value type unmarshalled from the input stream
 	*/
-	@:overload public function read_value() : java.io.Serializable;
+	@:overload @:public public function read_value() : java.io.Serializable;
 	
 	/**
 	* Unmarshalls a value type from the input stream.
 	* @param clz is the declared type of the value to be unmarshalled
 	* @return the value unmarshalled from the input stream
 	*/
-	@:overload public function read_value(clz : Class<Dynamic>) : java.io.Serializable;
+	@:overload @:public public function read_value(clz : Class<Dynamic>) : java.io.Serializable;
 	
 	/**
 	* Unmarshalls a value type from the input stream.
@@ -59,14 +59,14 @@ package org.omg.CORBA_2_3.portable;
 	* unmarshalling the value type
 	* @return the value unmarshalled from the input stream
 	*/
-	@:overload public function read_value(factory : org.omg.CORBA.portable.BoxedValueHelper) : java.io.Serializable;
+	@:overload @:public public function read_value(factory : org.omg.CORBA.portable.BoxedValueHelper) : java.io.Serializable;
 	
 	/**
 	* Unmarshalls a value type from the input stream.
 	* @param rep_id identifies the type of the value to be unmarshalled
 	* @return value type unmarshalled from the input stream
 	*/
-	@:overload public function read_value(rep_id : String) : java.io.Serializable;
+	@:overload @:public public function read_value(rep_id : String) : java.io.Serializable;
 	
 	/**
 	* Unmarshalls a value type from the input stream.
@@ -75,13 +75,13 @@ package org.omg.CORBA_2_3.portable;
 	* CustomMarshal.unmarshal() to unmarshal the value.
 	* @return value type unmarshalled from the input stream
 	*/
-	@:overload public function read_value(value : java.io.Serializable) : java.io.Serializable;
+	@:overload @:public public function read_value(value : java.io.Serializable) : java.io.Serializable;
 	
 	/**
 	* Unmarshal the value object or a suitable stub object.
 	* @return ORB runtime returns the value object or a suitable stub object.
 	*/
-	@:overload public function read_abstract_interface() : Dynamic;
+	@:overload @:public public function read_abstract_interface() : Dynamic;
 	
 	/**
 	* Unmarshal the class object or the stub class corresponding to the passed type.
@@ -89,7 +89,7 @@ package org.omg.CORBA_2_3.portable;
 	* the type that is statically expected.
 	* @return ORB runtime returns the value object or a suitable stub object.
 	*/
-	@:overload public function read_abstract_interface(clz : Class<Dynamic>) : Dynamic;
+	@:overload @:public public function read_abstract_interface(clz : Class<Dynamic>) : Dynamic;
 	
 	
 }

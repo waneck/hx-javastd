@@ -48,7 +48,7 @@ package java.util;
 	* and {@code false} otherwise
 	* @see Object#equals(Object)
 	*/
-	@:overload public static function equals(a : Dynamic, b : Dynamic) : Bool;
+	@:overload @:public @:static public static function equals(a : Dynamic, b : Dynamic) : Bool;
 	
 	/**
 	* Returns {@code true} if the arguments are deeply equal to each other
@@ -67,7 +67,7 @@ package java.util;
 	* @see Arrays#deepEquals(Object[], Object[])
 	* @see Objects#equals(Object, Object)
 	*/
-	@:overload public static function deepEquals(a : Dynamic, b : Dynamic) : Bool;
+	@:overload @:public @:static public static function deepEquals(a : Dynamic, b : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code of a non-{@code null} argument and 0 for
@@ -78,7 +78,7 @@ package java.util;
 	* a {@code null} argument
 	* @see Object#hashCode
 	*/
-	@:overload public static function hashCode(o : Dynamic) : Int;
+	@:overload @:public @:static public static function hashCode(o : Dynamic) : Int;
 	
 	/**
 	* Generates a hash code for a sequence of input values. The hash
@@ -106,7 +106,7 @@ package java.util;
 	* @see Arrays#hashCode(Object[])
 	* @see List#hashCode
 	*/
-	@:overload public static function hash(values : java.NativeArray<Dynamic>) : Int;
+	@:overload @:public @:static public static function hash(values : java.NativeArray<Dynamic>) : Int;
 	
 	/**
 	* Returns the result of calling {@code toString} for a non-{@code
@@ -118,7 +118,7 @@ package java.util;
 	* @see Object#toString
 	* @see String#valueOf(Object)
 	*/
-	@:overload public static function toString(o : Dynamic) : String;
+	@:overload @:public @:static public static function toString(o : Dynamic) : String;
 	
 	/**
 	* Returns the result of calling {@code toString} on the first
@@ -133,7 +133,7 @@ package java.util;
 	* otherwise.
 	* @see Objects#toString(Object)
 	*/
-	@:overload public static function toString(o : Dynamic, nullDefault : String) : String;
+	@:overload @:public @:static public static function toString(o : Dynamic, nullDefault : String) : String;
 	
 	/**
 	* Returns 0 if the arguments are identical and {@code
@@ -155,7 +155,7 @@ package java.util;
 	* @see Comparable
 	* @see Comparator
 	*/
-	@:overload public static function compare<T>(a : T, b : T, c : java.util.Comparator<T>) : Int;
+	@:overload @:public @:static public static function compare<T>(a : T, b : T, c : java.util.Comparator<T>) : Int;
 	
 	/**
 	* Checks that the specified object reference is not {@code null}. This
@@ -172,7 +172,7 @@ package java.util;
 	* @return {@code obj} if not {@code null}
 	* @throws NullPointerException if {@code obj} is {@code null}
 	*/
-	@:overload public static function requireNonNull<T>(obj : T) : T;
+	@:overload @:public @:static public static function requireNonNull<T>(obj : T) : T;
 	
 	/**
 	* Checks that the specified object reference is not {@code null} and
@@ -193,7 +193,7 @@ package java.util;
 	* @return {@code obj} if not {@code null}
 	* @throws NullPointerException if {@code obj} is {@code null}
 	*/
-	@:overload public static function requireNonNull<T>(obj : T, message : String) : T;
+	@:overload @:public @:static public static function requireNonNull<T>(obj : T, message : String) : T;
 	
 	
 }

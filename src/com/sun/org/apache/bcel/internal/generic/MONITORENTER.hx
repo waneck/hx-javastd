@@ -64,9 +64,9 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class MONITORENTER extends com.sun.org.apache.bcel.internal.generic.Instruction implements com.sun.org.apache.bcel.internal.generic.ExceptionThrower implements com.sun.org.apache.bcel.internal.generic.StackConsumer
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -76,7 +76,7 @@ extern class MONITORENTER extends com.sun.org.apache.bcel.internal.generic.Instr
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

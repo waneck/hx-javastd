@@ -45,14 +45,14 @@ extern class EDIPartyName implements sun.security.x509.GeneralNameInterface
 	* @param assignerName the name of the assigner
 	* @param partyName the name of the EDI party.
 	*/
-	@:overload public function new(assignerName : String, partyName : String) : Void;
+	@:overload @:public public function new(assignerName : String, partyName : String) : Void;
 	
 	/**
 	* Create the EDIPartyName object from the specified name.
 	*
 	* @param partyName the name of the EDI party.
 	*/
-	@:overload public function new(partyName : String) : Void;
+	@:overload @:public public function new(partyName : String) : Void;
 	
 	/**
 	* Create the EDIPartyName object from the passed encoded Der value.
@@ -60,12 +60,12 @@ extern class EDIPartyName implements sun.security.x509.GeneralNameInterface
 	* @param derValue the encoded DER EDIPartyName.
 	* @exception IOException on error.
 	*/
-	@:overload public function new(derValue : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(derValue : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Return the type of the GeneralName.
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Encode the EDI party name into the DerOutputStream.
@@ -73,21 +73,21 @@ extern class EDIPartyName implements sun.security.x509.GeneralNameInterface
 	* @param out the DER stream to encode the EDIPartyName to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Return the assignerName
 	*
 	* @returns String assignerName
 	*/
-	@:overload public function getAssignerName() : String;
+	@:overload @:public public function getAssignerName() : String;
 	
 	/**
 	* Return the partyName
 	*
 	* @returns String partyName
 	*/
-	@:overload public function getPartyName() : String;
+	@:overload @:public public function getPartyName() : String;
 	
 	/**
 	* Compare this EDIPartyName with another.  Does a byte-string
@@ -96,19 +96,19 @@ extern class EDIPartyName implements sun.security.x509.GeneralNameInterface
 	*
 	* @returns true if the two names match
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this EDIPartyName.
 	*
 	* @return a hash code value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Return the printable string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Return constraint type:<ul>
@@ -125,7 +125,7 @@ extern class EDIPartyName implements sun.security.x509.GeneralNameInterface
 	* @throws UnsupportedOperationException if name is same type, but comparison operations are
 	*          not supported for this name type.
 	*/
-	@:overload public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
+	@:overload @:public public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
 	
 	/**
 	* Return subtree depth of this name for purposes of determining
@@ -135,7 +135,7 @@ extern class EDIPartyName implements sun.security.x509.GeneralNameInterface
 	* @returns distance of name from root
 	* @throws UnsupportedOperationException if not supported for this name type
 	*/
-	@:overload public function subtreeDepth() : Int;
+	@:overload @:public public function subtreeDepth() : Int;
 	
 	
 }

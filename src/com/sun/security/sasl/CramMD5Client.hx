@@ -28,7 +28,7 @@ package com.sun.security.sasl;
 	/**
 	* CRAM-MD5 has no initial response.
 	*/
-	@:overload public function hasInitialResponse() : Bool;
+	@:overload @:public public function hasInitialResponse() : Bool;
 	
 	/**
 	* Processes the challenge data.
@@ -43,7 +43,7 @@ package com.sun.security.sasl;
 	* @throws SaslException If platform does not have MD5 support
 	* @throw IllegalStateException if this method is invoked more than once.
 	*/
-	@:overload public function evaluateChallenge(challengeData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function evaluateChallenge(challengeData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

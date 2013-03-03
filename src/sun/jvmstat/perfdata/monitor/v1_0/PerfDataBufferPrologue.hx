@@ -49,31 +49,31 @@ package sun.jvmstat.perfdata.monitor.v1_0;
 	*
 	* @param byteBuffer the buffer containing the binary header data
 	*/
-	@:overload public function new(byteBuffer : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function new(byteBuffer : java.nio.ByteBuffer) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function supportsAccessible() : Bool;
+	@:overload @:public override public function supportsAccessible() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function isAccessible() : Bool;
+	@:overload @:public override public function isAccessible() : Bool;
 	
 	/**
 	* Get the utilization of the instrumentation memory buffer.
 	*
 	* @return int - the utilization of the buffer
 	*/
-	@:overload public function getUsed() : Int;
+	@:overload @:public public function getUsed() : Int;
 	
 	/**
 	* Get the size of the instrumentation memory buffer.
 	*
 	* @return int - the size of the buffer
 	*/
-	@:overload public function getBufferSize() : Int;
+	@:overload @:public public function getBufferSize() : Int;
 	
 	/**
 	* Get the buffer overflow amount. This value is non-zero if the
@@ -83,7 +83,7 @@ package sun.jvmstat.perfdata.monitor.v1_0;
 	*
 	* @return int - the size of the buffer
 	*/
-	@:overload public function getOverflow() : Int;
+	@:overload @:public public function getOverflow() : Int;
 	
 	/**
 	* Get the time of last modification for the instrumentation
@@ -93,12 +93,12 @@ package sun.jvmstat.perfdata.monitor.v1_0;
 	* the addition or deletion of instrumentation objects. Updates to
 	* counter values are not structural modifications.
 	*/
-	@:overload public function getModificationTimeStamp() : haxe.Int64;
+	@:overload @:public public function getModificationTimeStamp() : haxe.Int64;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getSize() : Int;
+	@:overload @:public override public function getSize() : Int;
 	
 	/**
 	* Return an IntBuffer that accesses the used value. This is used
@@ -108,7 +108,7 @@ package sun.jvmstat.perfdata.monitor.v1_0;
 	*                     in the instrumentation buffer header.
 	* @see #getUsed()
 	*/
-	@:overload public function usedBuffer() : java.nio.IntBuffer;
+	@:overload @:public public function usedBuffer() : java.nio.IntBuffer;
 	
 	/**
 	* Return an IntBuffer that accesses the size value. This is used
@@ -118,7 +118,7 @@ package sun.jvmstat.perfdata.monitor.v1_0;
 	*                     in the instrumentation buffer header.
 	* @see #getBufferSize()
 	*/
-	@:overload public function sizeBuffer() : java.nio.IntBuffer;
+	@:overload @:public public function sizeBuffer() : java.nio.IntBuffer;
 	
 	/**
 	* Return an IntBuffer that accesses the overflow value. This is used
@@ -128,7 +128,7 @@ package sun.jvmstat.perfdata.monitor.v1_0;
 	*                     in the instrumentation buffer header.
 	* @see #getOverflow()
 	*/
-	@:overload public function overflowBuffer() : java.nio.IntBuffer;
+	@:overload @:public public function overflowBuffer() : java.nio.IntBuffer;
 	
 	/**
 	* Return an LongBuffer that accesses the modification timestamp value.
@@ -138,7 +138,7 @@ package sun.jvmstat.perfdata.monitor.v1_0;
 	*                      stamp value in the instrumentation buffer header.
 	* @see #getModificationTimeStamp()
 	*/
-	@:overload public function modificationTimeStampBuffer() : java.nio.LongBuffer;
+	@:overload @:public public function modificationTimeStampBuffer() : java.nio.LongBuffer;
 	
 	
 }

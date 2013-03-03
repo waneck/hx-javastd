@@ -29,11 +29,11 @@ extern class IDDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.TypeVali
 	* @author Sandy Gao, IBM
 	*
 	*/
-	@:overload override public function getAllowedFacets() : java.StdTypes.Int16;
+	@:overload @:public override public function getAllowedFacets() : java.StdTypes.Int16;
 	
-	@:overload override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
+	@:overload @:public override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
 	
-	@:overload override public function checkExtraRules(value : Dynamic, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
+	@:overload @:public override public function checkExtraRules(value : Dynamic, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
 	
 	
 }

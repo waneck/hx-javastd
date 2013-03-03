@@ -94,7 +94,7 @@ extern enum PlatformComponent
 */
 @:native('java$lang$management$PlatformComponent$MXBeanFetcher') @:internal extern interface PlatformComponent_MXBeanFetcher<T>
 {
-	@:overload public function getMXBeans() : java.util.List<T>;
+	@:overload @:public public function getMXBeans() : java.util.List<T>;
 	
 	
 }
@@ -103,7 +103,7 @@ extern enum PlatformComponent
 */
 @:native('java$lang$management$PlatformComponent$MXBeanFetcher') @:internal extern interface PlatformComponent_MXBeanFetcher<T>
 {
-	@:overload public function getMXBeans() : java.util.List<T>;
+	@:overload @:public public function getMXBeans() : java.util.List<T>;
 	
 	
 }

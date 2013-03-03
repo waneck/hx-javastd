@@ -25,17 +25,17 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 */
 extern class IntData extends com.sun.xml.internal.bind.v2.runtime.output.Pcdata
 {
-	@:overload public function reset(i : Int) : Void;
+	@:overload @:public public function reset(i : Int) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload public function length() : Int;
+	@:overload @:public override public function length() : Int;
 	
-	@:overload public function charAt(index : Int) : java.StdTypes.Char16;
+	@:overload @:public override public function charAt(index : Int) : java.StdTypes.Char16;
 	
-	@:overload public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
+	@:overload @:public override public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
 	
-	@:overload override public function writeTo(output : com.sun.xml.internal.bind.v2.runtime.output.UTF8XmlOutput) : Void;
+	@:overload @:public override public function writeTo(output : com.sun.xml.internal.bind.v2.runtime.output.UTF8XmlOutput) : Void;
 	
 	
 }

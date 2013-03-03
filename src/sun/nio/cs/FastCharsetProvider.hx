@@ -25,11 +25,11 @@ package sun.nio.cs;
 */
 extern class FastCharsetProvider extends java.nio.charset.spi.CharsetProvider
 {
-	@:overload private function new(pp : String, am : java.util.Map<String, String>, cm : java.util.Map<String, String>, c : java.util.Map<String, java.nio.charset.Charset>) : Void;
+	@:overload @:protected private function new(pp : String, am : java.util.Map<String, String>, cm : java.util.Map<String, String>, c : java.util.Map<String, java.nio.charset.Charset>) : Void;
 	
-	@:overload @:final override public function charsetForName(charsetName : String) : java.nio.charset.Charset;
+	@:overload @:public @:final override public function charsetForName(charsetName : String) : java.nio.charset.Charset;
 	
-	@:overload @:final override public function charsets() : java.util.Iterator<java.nio.charset.Charset>;
+	@:overload @:public @:final override public function charsets() : java.util.Iterator<java.nio.charset.Charset>;
 	
 	
 }

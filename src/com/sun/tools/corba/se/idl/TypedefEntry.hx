@@ -39,20 +39,20 @@ extern class TypedefEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	/**
 	* This is the symbol table entry for typedefs.
 	**/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.TypedefEntry) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.TypedefEntry) : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
 	/** This method returns a vector of Expressions, each expression
 	represents a dimension in an array.  A zero-length vector indicates
 	no array information.*/
-	@:overload public function arrayInfo() : java.util.Vector<Dynamic>;
+	@:overload @:public public function arrayInfo() : java.util.Vector<Dynamic>;
 	
-	@:overload public function addArrayInfo(e : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
+	@:overload @:public public function addArrayInfo(e : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/** Invoke the typedef generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -60,16 +60,16 @@ extern class TypedefEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload @:public override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
-	@:overload public function isReferencable() : Bool;
+	@:overload @:public override public function isReferencable() : Bool;
 	
-	@:overload public function isReferencable(value : Bool) : Void;
+	@:overload @:public override public function isReferencable(value : Bool) : Void;
 	
 	/** Access the typedef generator.
 	@returns an object which implements the TypedefGen interface.
 	@see TypedefGen */
-	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload @:public override public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	
 }

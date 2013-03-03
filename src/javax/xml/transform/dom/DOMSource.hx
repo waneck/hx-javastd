@@ -29,7 +29,7 @@ extern class DOMSource implements javax.xml.transform.Source
 	* returns true when passed this value as an argument,
 	* the Transformer supports Source input of this type.
 	*/
-	public static var FEATURE(default, null) : String;
+	@:public @:static @:final public static var FEATURE(default, null) : String;
 	
 	/**
 	* <p>Zero-argument default constructor.  If this constructor is used, and
@@ -40,7 +40,7 @@ extern class DOMSource implements javax.xml.transform.Source
 	*
 	* @see javax.xml.transform.Transformer#transform(Source xmlSource, Result outputTarget)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a new input source with a DOM node.  The operation
@@ -51,7 +51,7 @@ extern class DOMSource implements javax.xml.transform.Source
 	*
 	* @param n The DOM node that will contain the Source tree.
 	*/
-	@:overload public function new(n : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(n : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Create a new input source with a DOM node, and with the
@@ -60,21 +60,21 @@ extern class DOMSource implements javax.xml.transform.Source
 	* @param node The DOM node that will contain the Source tree.
 	* @param systemID Specifies the base URI associated with node.
 	*/
-	@:overload public function new(node : org.w3c.dom.Node, systemID : String) : Void;
+	@:overload @:public public function new(node : org.w3c.dom.Node, systemID : String) : Void;
 	
 	/**
 	* Set the node that will represents a Source DOM tree.
 	*
 	* @param node The node that is to be transformed.
 	*/
-	@:overload public function setNode(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setNode(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Get the node that represents a Source DOM tree.
 	*
 	* @return The node that is to be transformed.
 	*/
-	@:overload public function getNode() : org.w3c.dom.Node;
+	@:overload @:public public function getNode() : org.w3c.dom.Node;
 	
 	/**
 	* Set the base ID (URL or system ID) from where URLs
@@ -82,7 +82,7 @@ extern class DOMSource implements javax.xml.transform.Source
 	*
 	* @param systemID Base URL for this DOM tree.
 	*/
-	@:overload public function setSystemId(systemID : String) : Void;
+	@:overload @:public public function setSystemId(systemID : String) : Void;
 	
 	/**
 	* Get the base ID (URL or system ID) from where URLs
@@ -90,7 +90,7 @@ extern class DOMSource implements javax.xml.transform.Source
 	*
 	* @return Base URL for this DOM tree.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	
 }

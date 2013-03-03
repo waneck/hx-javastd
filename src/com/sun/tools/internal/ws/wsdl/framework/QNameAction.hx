@@ -30,7 +30,7 @@ extern interface QNameAction
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function perform(name : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function perform(name : javax.xml.namespace.QName) : Void;
 	
 	
 }

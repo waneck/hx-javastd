@@ -34,7 +34,7 @@ extern class RMIGenerator implements sun.rmi.rmic.RMIConstants implements sun.rm
 	/**
 	* Default constructor for Main to use.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Examine and consume command line arguments.
@@ -43,7 +43,7 @@ extern class RMIGenerator implements sun.rmi.rmic.RMIConstants implements sun.rm
 	* @param error Report any errors using the main.error() methods.
 	* @return true if no errors, false otherwise.
 	*/
-	@:overload public function parseArgs(argv : java.NativeArray<String>, main : sun.rmi.rmic.Main) : Bool;
+	@:overload @:public public function parseArgs(argv : java.NativeArray<String>, main : sun.rmi.rmic.Main) : Bool;
 	
 	/**
 	* Generate the source files for the stub and/or skeleton classes
@@ -55,14 +55,14 @@ extern class RMIGenerator implements sun.rmi.rmic.RMIConstants implements sun.rm
 	* @param destDir   directory for the root of the package hierarchy
 	*                  for generated files
 	*/
-	@:overload public function generate(env : sun.rmi.rmic.BatchEnvironment, cdef : sun.tools.java.ClassDefinition, destDir : java.io.File) : Void;
+	@:overload @:public public function generate(env : sun.rmi.rmic.BatchEnvironment, cdef : sun.tools.java.ClassDefinition, destDir : java.io.File) : Void;
 	
 	/**
 	* Return the File object that should be used as the source file
 	* for the given Java class, using the supplied destination
 	* directory for the top of the package hierarchy.
 	*/
-	@:overload private static function sourceFileForClass(className : sun.tools.java.Identifier, outputClassName : sun.tools.java.Identifier, destDir : java.io.File, env : sun.rmi.rmic.BatchEnvironment) : java.io.File;
+	@:overload @:protected @:static private static function sourceFileForClass(className : sun.tools.java.Identifier, outputClassName : sun.tools.java.Identifier, destDir : java.io.File, env : sun.rmi.rmic.BatchEnvironment) : java.io.File;
 	
 	
 }

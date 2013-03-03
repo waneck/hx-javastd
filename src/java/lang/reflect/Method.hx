@@ -29,13 +29,13 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	* Returns the {@code Class} object representing the class or interface
 	* that declares the method represented by this {@code Method} object.
 	*/
-	@:overload public function getDeclaringClass() : Class<Dynamic>;
+	@:overload @:public public function getDeclaringClass() : Class<Dynamic>;
 	
 	/**
 	* Returns the name of the method represented by this {@code Method}
 	* object, as a {@code String}.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the Java language modifiers for the method represented
@@ -44,7 +44,7 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	*
 	* @see Modifier
 	*/
-	@:overload public function getModifiers() : Int;
+	@:overload @:public public function getModifiers() : Int;
 	
 	/**
 	* Returns an array of {@code TypeVariable} objects that represent the
@@ -61,7 +61,7 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	*     <cite>The Java&trade; Virtual Machine Specification</cite>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getTypeParameters() : java.NativeArray<java.lang.reflect.TypeVariable<java.lang.reflect.Method>>;
+	@:require(java5) @:overload @:public public function getTypeParameters() : java.NativeArray<java.lang.reflect.TypeVariable<java.lang.reflect.Method>>;
 	
 	/**
 	* Returns a {@code Class} object that represents the formal return type
@@ -69,7 +69,7 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	*
 	* @return the return type for the method this object represents
 	*/
-	@:overload public function getReturnType() : Class<Dynamic>;
+	@:overload @:public public function getReturnType() : Class<Dynamic>;
 	
 	/**
 	* Returns a {@code Type} object that represents the formal return
@@ -95,7 +95,7 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	*     type that cannot be instantiated for any reason
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getGenericReturnType() : java.lang.reflect.Type;
+	@:require(java5) @:overload @:public public function getGenericReturnType() : java.lang.reflect.Type;
 	
 	/**
 	* Returns an array of {@code Class} objects that represent the formal
@@ -106,7 +106,7 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	* @return the parameter types for the method this object
 	* represents
 	*/
-	@:overload public function getParameterTypes() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getParameterTypes() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Returns an array of {@code Type} objects that represent the formal
@@ -135,7 +135,7 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	*     type that cannot be instantiated for any reason
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getGenericParameterTypes() : java.NativeArray<java.lang.reflect.Type>;
+	@:require(java5) @:overload @:public public function getGenericParameterTypes() : java.NativeArray<java.lang.reflect.Type>;
 	
 	/**
 	* Returns an array of {@code Class} objects that represent
@@ -147,7 +147,7 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	* @return the exception types declared as being thrown by the
 	* method this object represents
 	*/
-	@:overload public function getExceptionTypes() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getExceptionTypes() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Returns an array of {@code Type} objects that represent the
@@ -171,7 +171,7 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	*     parameterized type that cannot be instantiated for any reason
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getGenericExceptionTypes() : java.NativeArray<java.lang.reflect.Type>;
+	@:require(java5) @:overload @:public public function getGenericExceptionTypes() : java.NativeArray<java.lang.reflect.Type>;
 	
 	/**
 	* Compares this {@code Method} against the specified object.  Returns
@@ -179,14 +179,14 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	* they were declared by the same class and have the same name
 	* and formal parameter types and return type.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode for this {@code Method}.  The hashcode is computed
 	* as the exclusive-or of the hashcodes for the underlying
 	* method's declaring class name and the method's name.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string describing this {@code Method}.  The string is
@@ -210,7 +210,7 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	* {@code abstract}, {@code static}, {@code final},
 	* {@code synchronized}, {@code native}, {@code strictfp}.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a string describing this {@code Method}, including
@@ -250,7 +250,7 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function toGenericString() : String;
+	@:require(java5) @:overload @:public public function toGenericString() : String;
 	
 	/**
 	* Invokes the underlying method represented by this {@code Method}
@@ -309,7 +309,7 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	* @exception ExceptionInInitializerError if the initialization
 	* provoked by this method fails.
 	*/
-	@:overload public function invoke(obj : Dynamic, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(obj : Dynamic, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	/**
 	* Returns {@code true} if this method is a bridge
@@ -319,7 +319,7 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	* method as defined by the Java Language Specification.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isBridge() : Bool;
+	@:require(java5) @:overload @:public public function isBridge() : Bool;
 	
 	/**
 	* Returns {@code true} if this method was declared to take
@@ -330,7 +330,7 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	* take a variable number of arguments.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isVarArgs() : Bool;
+	@:require(java5) @:overload @:public public function isVarArgs() : Bool;
 	
 	/**
 	* Returns {@code true} if this method is a synthetic
@@ -340,18 +340,18 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	* method as defined by the Java Language Specification.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isSynthetic() : Bool;
+	@:require(java5) @:overload @:public public function isSynthetic() : Bool;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getAnnotation<T : java.lang.annotation.Annotation>(annotationClass : Class<T>) : T;
+	@:require(java5) @:overload @:public override public function getAnnotation<T : java.lang.annotation.Annotation>(annotationClass : Class<T>) : T;
 	
 	/**
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getDeclaredAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
+	@:require(java5) @:overload @:public override public function getDeclaredAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
 	
 	/**
 	* Returns the default value for the annotation member represented by
@@ -367,7 +367,7 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	*     default class value.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function getDefaultValue() : Dynamic;
+	@:require(java5) @:overload @:public public function getDefaultValue() : Dynamic;
 	
 	/**
 	* Returns an array of arrays that represent the annotations on the formal
@@ -385,7 +385,7 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	*    Method object
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getParameterAnnotations() : java.NativeArray<java.NativeArray<java.lang.annotation.Annotation>>;
+	@:require(java5) @:overload @:public public function getParameterAnnotations() : java.NativeArray<java.NativeArray<java.lang.annotation.Annotation>>;
 	
 	
 }

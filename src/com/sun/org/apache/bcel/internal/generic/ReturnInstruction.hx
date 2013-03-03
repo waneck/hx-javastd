@@ -61,19 +61,19 @@ extern class ReturnInstruction extends com.sun.org.apache.bcel.internal.generic.
 	/**
 	* @param opcode of instruction
 	*/
-	@:overload private function new(opcode : java.StdTypes.Int16) : Void;
+	@:overload @:protected private function new(opcode : java.StdTypes.Int16) : Void;
 	
-	@:overload public function getType() : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType() : com.sun.org.apache.bcel.internal.generic.Type;
 	
-	@:overload public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
 	/** @return type associated with the instruction
 	*/
-	@:overload public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/** @return how many words are consumed from stack
 	*/
-	@:overload @:public @:public override public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public override public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	
 }

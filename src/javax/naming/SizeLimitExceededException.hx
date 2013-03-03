@@ -29,7 +29,7 @@ extern class SizeLimitExceededException extends javax.naming.LimitExceededExcept
 	* Constructs a new instance of SizeLimitExceededException.
 	* All fields default to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new instance of SizeLimitExceededException using an
@@ -37,7 +37,7 @@ extern class SizeLimitExceededException extends javax.naming.LimitExceededExcept
 	*
 	* @param explanation Possibly null detail about this exception.
 	*/
-	@:overload public function new(explanation : String) : Void;
+	@:overload @:public public function new(explanation : String) : Void;
 	
 	
 }

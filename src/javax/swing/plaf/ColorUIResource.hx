@@ -42,13 +42,13 @@ extern class ColorUIResource extends java.awt.Color implements javax.swing.plaf.
 	* @author Hans Muller
 	*
 	*/
-	@:overload public function new(r : Int, g : Int, b : Int) : Void;
+	@:overload @:public public function new(r : Int, g : Int, b : Int) : Void;
 	
-	@:overload public function new(rgb : Int) : Void;
+	@:overload @:public public function new(rgb : Int) : Void;
 	
-	@:overload public function new(r : Single, g : Single, b : Single) : Void;
+	@:overload @:public public function new(r : Single, g : Single, b : Single) : Void;
 	
-	@:overload public function new(c : java.awt.Color) : Void;
+	@:overload @:public public function new(c : java.awt.Color) : Void;
 	
 	
 }

@@ -46,13 +46,13 @@ package com.sun.xml.internal.rngom.binary;
 */
 extern class BinaryPattern extends com.sun.xml.internal.rngom.binary.Pattern
 {
-	private var p1(default, null) : com.sun.xml.internal.rngom.binary.Pattern;
+	@:protected @:final private var p1(default, null) : com.sun.xml.internal.rngom.binary.Pattern;
 	
-	private var p2(default, null) : com.sun.xml.internal.rngom.binary.Pattern;
+	@:protected @:final private var p2(default, null) : com.sun.xml.internal.rngom.binary.Pattern;
 	
-	@:overload @:final public function getOperand1() : com.sun.xml.internal.rngom.binary.Pattern;
+	@:overload @:public @:final public function getOperand1() : com.sun.xml.internal.rngom.binary.Pattern;
 	
-	@:overload @:final public function getOperand2() : com.sun.xml.internal.rngom.binary.Pattern;
+	@:overload @:public @:final public function getOperand2() : com.sun.xml.internal.rngom.binary.Pattern;
 	
 	/**
 	* Adds all the children of this pattern to the given collection.
@@ -62,12 +62,12 @@ extern class BinaryPattern extends com.sun.xml.internal.rngom.binary.Pattern
 	* to the collection, even though internally it's represented
 	* as (A|(B|C)).
 	*/
-	@:overload @:final public function fillChildren(col : java.util.Collection<Dynamic>) : Void;
+	@:overload @:public @:final public function fillChildren(col : java.util.Collection<Dynamic>) : Void;
 	
 	/**
 	* Same as {@link #fillChildren(Collection)} but returns an array.
 	*/
-	@:overload @:final public function getChildren() : java.NativeArray<com.sun.xml.internal.rngom.binary.Pattern>;
+	@:overload @:public @:final public function getChildren() : java.NativeArray<com.sun.xml.internal.rngom.binary.Pattern>;
 	
 	
 }

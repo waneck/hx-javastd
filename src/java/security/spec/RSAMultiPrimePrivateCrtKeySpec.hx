@@ -55,49 +55,49 @@ extern class RSAMultiPrimePrivateCrtKeySpec extends java.security.spec.RSAPrivat
 	* @exception IllegalArgumentException if an empty, i.e. 0-length,
 	* <code>otherPrimeInfo</code> is specified.
 	*/
-	@:overload public function new(modulus : java.math.BigInteger, publicExponent : java.math.BigInteger, privateExponent : java.math.BigInteger, primeP : java.math.BigInteger, primeQ : java.math.BigInteger, primeExponentP : java.math.BigInteger, primeExponentQ : java.math.BigInteger, crtCoefficient : java.math.BigInteger, otherPrimeInfo : java.NativeArray<java.security.spec.RSAOtherPrimeInfo>) : Void;
+	@:overload @:public public function new(modulus : java.math.BigInteger, publicExponent : java.math.BigInteger, privateExponent : java.math.BigInteger, primeP : java.math.BigInteger, primeQ : java.math.BigInteger, primeExponentP : java.math.BigInteger, primeExponentQ : java.math.BigInteger, crtCoefficient : java.math.BigInteger, otherPrimeInfo : java.NativeArray<java.security.spec.RSAOtherPrimeInfo>) : Void;
 	
 	/**
 	* Returns the public exponent.
 	*
 	* @return the public exponent.
 	*/
-	@:overload public function getPublicExponent() : java.math.BigInteger;
+	@:overload @:public public function getPublicExponent() : java.math.BigInteger;
 	
 	/**
 	* Returns the primeP.
 	*
 	* @return the primeP.
 	*/
-	@:overload public function getPrimeP() : java.math.BigInteger;
+	@:overload @:public public function getPrimeP() : java.math.BigInteger;
 	
 	/**
 	* Returns the primeQ.
 	*
 	* @return the primeQ.
 	*/
-	@:overload public function getPrimeQ() : java.math.BigInteger;
+	@:overload @:public public function getPrimeQ() : java.math.BigInteger;
 	
 	/**
 	* Returns the primeExponentP.
 	*
 	* @return the primeExponentP.
 	*/
-	@:overload public function getPrimeExponentP() : java.math.BigInteger;
+	@:overload @:public public function getPrimeExponentP() : java.math.BigInteger;
 	
 	/**
 	* Returns the primeExponentQ.
 	*
 	* @return the primeExponentQ.
 	*/
-	@:overload public function getPrimeExponentQ() : java.math.BigInteger;
+	@:overload @:public public function getPrimeExponentQ() : java.math.BigInteger;
 	
 	/**
 	* Returns the crtCoefficient.
 	*
 	* @return the crtCoefficient.
 	*/
-	@:overload public function getCrtCoefficient() : java.math.BigInteger;
+	@:overload @:public public function getCrtCoefficient() : java.math.BigInteger;
 	
 	/**
 	* Returns a copy of the otherPrimeInfo or null if there are
@@ -106,7 +106,7 @@ extern class RSAMultiPrimePrivateCrtKeySpec extends java.security.spec.RSAPrivat
 	* @return the otherPrimeInfo. Returns a new array each
 	* time this method is called.
 	*/
-	@:overload public function getOtherPrimeInfo() : java.NativeArray<java.security.spec.RSAOtherPrimeInfo>;
+	@:overload @:public public function getOtherPrimeInfo() : java.NativeArray<java.security.spec.RSAOtherPrimeInfo>;
 	
 	
 }

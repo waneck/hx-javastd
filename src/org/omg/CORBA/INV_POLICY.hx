@@ -41,7 +41,7 @@ extern class INV_POLICY extends org.omg.CORBA.SystemException
 	* of 0, a completion state of CompletionStatus.COMPLETED_NO,
 	* and a null description.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>INV_POLICY</code> exception with the
@@ -49,7 +49,7 @@ extern class INV_POLICY extends org.omg.CORBA.SystemException
 	* a minor code of 0, and a completion state of COMPLETED_NO.
 	* @param s the String containing a detail message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs a <code>INV_POLICY</code> exception with the specified
@@ -57,7 +57,7 @@ extern class INV_POLICY extends org.omg.CORBA.SystemException
 	* @param minor the minor code
 	* @param completed the completion status
 	*/
-	@:overload public function new(minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
+	@:overload @:public public function new(minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
 	
 	/**
 	* Constructs a <code>INV_POLICY</code> exception with the
@@ -66,7 +66,7 @@ extern class INV_POLICY extends org.omg.CORBA.SystemException
 	* @param minor the minor code
 	* @param completed the completion status
 	*/
-	@:overload public function new(s : String, minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
+	@:overload @:public public function new(s : String, minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
 	
 	
 }

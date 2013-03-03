@@ -25,43 +25,43 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class ModelGroupDeclImpl extends com.sun.xml.internal.xsom.impl.DeclarationImpl implements com.sun.xml.internal.xsom.XSModelGroupDecl implements com.sun.xml.internal.xsom.impl.Ref.Ref_Term
 {
-	@:overload public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _targetNamespace : String, _name : String, _modelGroup : com.sun.xml.internal.xsom.impl.ModelGroupImpl) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _targetNamespace : String, _name : String, _modelGroup : com.sun.xml.internal.xsom.impl.ModelGroupImpl) : Void;
 	
-	@:overload public function getModelGroup() : com.sun.xml.internal.xsom.XSModelGroup;
+	@:overload @:public public function getModelGroup() : com.sun.xml.internal.xsom.XSModelGroup;
 	
 	/**
 	* This component is a redefinition of "oldMG". Fix up the internal state
 	* as such.
 	*/
-	@:overload public function redefine(oldMG : com.sun.xml.internal.xsom.impl.ModelGroupDeclImpl) : Void;
+	@:overload @:public public function redefine(oldMG : com.sun.xml.internal.xsom.impl.ModelGroupDeclImpl) : Void;
 	
-	@:overload override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
-	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSTermVisitor) : Void;
+	@:overload @:public public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSTermVisitor) : Void;
 	
-	@:overload public function apply(_function : com.sun.xml.internal.xsom.visitor.XSTermFunction<Dynamic>) : Dynamic;
+	@:overload @:public public function apply(_function : com.sun.xml.internal.xsom.visitor.XSTermFunction<Dynamic>) : Dynamic;
 	
-	@:overload public function apply<T, P>(_function : com.sun.xml.internal.xsom.visitor.XSTermFunctionWithParam<T, P>, param : P) : T;
+	@:overload @:public public function apply<T, P>(_function : com.sun.xml.internal.xsom.visitor.XSTermFunctionWithParam<T, P>, param : P) : T;
 	
-	@:overload override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
+	@:overload @:public override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
 	
-	@:overload public function isWildcard() : Bool;
+	@:overload @:public public function isWildcard() : Bool;
 	
-	@:overload public function isModelGroupDecl() : Bool;
+	@:overload @:public public function isModelGroupDecl() : Bool;
 	
-	@:overload public function isModelGroup() : Bool;
+	@:overload @:public public function isModelGroup() : Bool;
 	
-	@:overload public function isElementDecl() : Bool;
+	@:overload @:public public function isElementDecl() : Bool;
 	
-	@:overload public function asWildcard() : com.sun.xml.internal.xsom.XSWildcard;
+	@:overload @:public public function asWildcard() : com.sun.xml.internal.xsom.XSWildcard;
 	
-	@:overload public function asModelGroupDecl() : com.sun.xml.internal.xsom.XSModelGroupDecl;
+	@:overload @:public public function asModelGroupDecl() : com.sun.xml.internal.xsom.XSModelGroupDecl;
 	
-	@:overload public function asModelGroup() : com.sun.xml.internal.xsom.XSModelGroup;
+	@:overload @:public public function asModelGroup() : com.sun.xml.internal.xsom.XSModelGroup;
 	
-	@:overload public function asElementDecl() : com.sun.xml.internal.xsom.XSElementDecl;
+	@:overload @:public public function asElementDecl() : com.sun.xml.internal.xsom.XSElementDecl;
 	
-	@:overload public function getTerm() : com.sun.xml.internal.xsom.XSTerm;
+	@:overload @:public public function getTerm() : com.sun.xml.internal.xsom.XSTerm;
 	
 	
 }

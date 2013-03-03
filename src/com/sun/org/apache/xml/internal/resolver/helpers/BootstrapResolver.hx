@@ -23,25 +23,25 @@ package com.sun.org.apache.xml.internal.resolver.helpers;
 extern class BootstrapResolver implements org.xml.sax.EntityResolver implements javax.xml.transform.URIResolver
 {
 	/** URI of the W3C XML Schema for OASIS XML Catalog files. */
-	public static var xmlCatalogXSD(default, null) : String;
+	@:public @:static @:final public static var xmlCatalogXSD(default, null) : String;
 	
 	/** URI of the RELAX NG Grammar for OASIS XML Catalog files. */
-	public static var xmlCatalogRNG(default, null) : String;
+	@:public @:static @:final public static var xmlCatalogRNG(default, null) : String;
 	
 	/** Public identifier for OASIS XML Catalog files. */
-	public static var xmlCatalogPubId(default, null) : String;
+	@:public @:static @:final public static var xmlCatalogPubId(default, null) : String;
 	
 	/** System identifier for OASIS XML Catalog files. */
-	public static var xmlCatalogSysId(default, null) : String;
+	@:public @:static @:final public static var xmlCatalogSysId(default, null) : String;
 	
 	/** Constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** SAX resolveEntity API. */
-	@:overload public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
 	/** Transformer resolve API. */
-	@:overload public function resolve(href : String, base : String) : javax.xml.transform.Source;
+	@:overload @:public public function resolve(href : String, base : String) : javax.xml.transform.Source;
 	
 	
 }

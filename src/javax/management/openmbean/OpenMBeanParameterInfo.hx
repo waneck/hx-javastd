@@ -33,7 +33,7 @@ extern interface OpenMBeanParameterInfo
 	*
 	* @return the description.
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	/**
 	* Returns the name of the parameter
@@ -41,7 +41,7 @@ extern interface OpenMBeanParameterInfo
 	*
 	* @return the name.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the <i>open type</i> of the values of the parameter
@@ -49,7 +49,7 @@ extern interface OpenMBeanParameterInfo
 	*
 	* @return the open type.
 	*/
-	@:overload public function getOpenType() : javax.management.openmbean.OpenType<Dynamic>;
+	@:overload @:public public function getOpenType() : javax.management.openmbean.OpenType<Dynamic>;
 	
 	/**
 	* Returns the default value for this parameter, if it has one, or
@@ -57,7 +57,7 @@ extern interface OpenMBeanParameterInfo
 	*
 	* @return the default value.
 	*/
-	@:overload public function getDefaultValue() : Dynamic;
+	@:overload @:public public function getDefaultValue() : Dynamic;
 	
 	/**
 	* Returns the set of legal values for this parameter, if it has
@@ -65,7 +65,7 @@ extern interface OpenMBeanParameterInfo
 	*
 	* @return the set of legal values.
 	*/
-	@:overload public function getLegalValues() : java.util.Set<Dynamic>;
+	@:overload @:public public function getLegalValues() : java.util.Set<Dynamic>;
 	
 	/**
 	* Returns the minimal value for this parameter, if it has one, or
@@ -73,7 +73,7 @@ extern interface OpenMBeanParameterInfo
 	*
 	* @return the minimum value.
 	*/
-	@:overload public function getMinValue() : java.lang.Comparable<Dynamic>;
+	@:overload @:public public function getMinValue() : java.lang.Comparable<Dynamic>;
 	
 	/**
 	* Returns the maximal value for this parameter, if it has one, or
@@ -81,7 +81,7 @@ extern interface OpenMBeanParameterInfo
 	*
 	* @return the maximum value.
 	*/
-	@:overload public function getMaxValue() : java.lang.Comparable<Dynamic>;
+	@:overload @:public public function getMaxValue() : java.lang.Comparable<Dynamic>;
 	
 	/**
 	* Returns <tt>true</tt> if this parameter has a specified default
@@ -89,7 +89,7 @@ extern interface OpenMBeanParameterInfo
 	*
 	* @return true if there is a default value.
 	*/
-	@:overload public function hasDefaultValue() : Bool;
+	@:overload @:public public function hasDefaultValue() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this parameter has a specified set of
@@ -97,7 +97,7 @@ extern interface OpenMBeanParameterInfo
 	*
 	* @return true if there is a set of legal values.
 	*/
-	@:overload public function hasLegalValues() : Bool;
+	@:overload @:public public function hasLegalValues() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this parameter has a specified minimal
@@ -105,7 +105,7 @@ extern interface OpenMBeanParameterInfo
 	*
 	* @return true if there is a minimum value.
 	*/
-	@:overload public function hasMinValue() : Bool;
+	@:overload @:public public function hasMinValue() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this parameter has a specified maximal
@@ -113,7 +113,7 @@ extern interface OpenMBeanParameterInfo
 	*
 	* @return true if there is a maximum value.
 	*/
-	@:overload public function hasMaxValue() : Bool;
+	@:overload @:public public function hasMaxValue() : Bool;
 	
 	/**
 	* Tests whether <var>obj</var> is a valid value for the parameter
@@ -126,7 +126,7 @@ extern interface OpenMBeanParameterInfo
 	* <code>OpenMBeanParameterInfo</code> instance,
 	* <code>false</code> otherwise.
 	*/
-	@:overload public function isValue(obj : Dynamic) : Bool;
+	@:overload @:public public function isValue(obj : Dynamic) : Bool;
 	
 	
 }

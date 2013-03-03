@@ -30,17 +30,17 @@ extern class FileChooserUI extends javax.swing.plaf.ComponentUI
 	*
 	* @author Jeff Dinkins
 	*/
-	@:overload @:abstract public function getAcceptAllFileFilter(fc : javax.swing.JFileChooser) : javax.swing.filechooser.FileFilter;
+	@:overload @:public @:abstract public function getAcceptAllFileFilter(fc : javax.swing.JFileChooser) : javax.swing.filechooser.FileFilter;
 	
-	@:overload @:abstract public function getFileView(fc : javax.swing.JFileChooser) : javax.swing.filechooser.FileView;
+	@:overload @:public @:abstract public function getFileView(fc : javax.swing.JFileChooser) : javax.swing.filechooser.FileView;
 	
-	@:overload @:abstract public function getApproveButtonText(fc : javax.swing.JFileChooser) : String;
+	@:overload @:public @:abstract public function getApproveButtonText(fc : javax.swing.JFileChooser) : String;
 	
-	@:overload @:abstract public function getDialogTitle(fc : javax.swing.JFileChooser) : String;
+	@:overload @:public @:abstract public function getDialogTitle(fc : javax.swing.JFileChooser) : String;
 	
-	@:overload @:abstract public function rescanCurrentDirectory(fc : javax.swing.JFileChooser) : Void;
+	@:overload @:public @:abstract public function rescanCurrentDirectory(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload @:abstract public function ensureFileIsVisible(fc : javax.swing.JFileChooser, f : java.io.File) : Void;
+	@:overload @:public @:abstract public function ensureFileIsVisible(fc : javax.swing.JFileChooser, f : java.io.File) : Void;
 	
 	/**
 	* Returns default button for current <code>LookAndFeel</code>.
@@ -49,7 +49,7 @@ extern class FileChooserUI extends javax.swing.plaf.ComponentUI
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getDefaultButton(fc : javax.swing.JFileChooser) : javax.swing.JButton;
+	@:require(java7) @:overload @:public public function getDefaultButton(fc : javax.swing.JFileChooser) : javax.swing.JButton;
 	
 	
 }

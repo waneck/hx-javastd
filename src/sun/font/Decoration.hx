@@ -37,21 +37,21 @@ extern class Decoration
 	/**
 	* Return a Decoration which does nothing.
 	*/
-	@:overload public static function getPlainDecoration() : sun.font.Decoration;
+	@:overload @:public @:static public static function getPlainDecoration() : sun.font.Decoration;
 	
-	@:overload public static function getDecoration(values : sun.font.AttributeValues) : sun.font.Decoration;
+	@:overload @:public @:static public static function getDecoration(values : sun.font.AttributeValues) : sun.font.Decoration;
 	
 	/**
 	* Return a Decoration appropriate for the the given Map.
 	* @param attributes the Map used to determine the Decoration
 	*/
-	@:overload public static function getDecoration(attributes : java.util.Map<Dynamic, Dynamic>) : sun.font.Decoration;
+	@:overload @:public @:static public static function getDecoration(attributes : java.util.Map<Dynamic, Dynamic>) : sun.font.Decoration;
 	
-	@:overload public function drawTextAndDecorations(label : sun.font.Decoration.Decoration_Label, g2d : java.awt.Graphics2D, x : Single, y : Single) : Void;
+	@:overload @:public public function drawTextAndDecorations(label : sun.font.Decoration.Decoration_Label, g2d : java.awt.Graphics2D, x : Single, y : Single) : Void;
 	
-	@:overload public function getVisualBounds(label : sun.font.Decoration.Decoration_Label) : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getVisualBounds(label : sun.font.Decoration.Decoration_Label) : java.awt.geom.Rectangle2D;
 	
-	@:overload public function getCharVisualBounds(label : sun.font.Decoration.Decoration_Label, index : Int) : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getCharVisualBounds(label : sun.font.Decoration.Decoration_Label, index : Int) : java.awt.geom.Rectangle2D;
 	
 	
 }
@@ -78,15 +78,15 @@ extern class Decoration
 }
 @:native('sun$font$Decoration$DecorationImpl') @:internal extern class Decoration_DecorationImpl extends sun.font.Decoration
 {
-	@:overload public function equals(rhs : Dynamic) : Bool;
+	@:overload @:public public function equals(rhs : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload override public function drawTextAndDecorations(label : sun.font.Decoration.Decoration_Label, g2d : java.awt.Graphics2D, x : Single, y : Single) : Void;
+	@:overload @:public override public function drawTextAndDecorations(label : sun.font.Decoration.Decoration_Label, g2d : java.awt.Graphics2D, x : Single, y : Single) : Void;
 	
-	@:overload override public function getVisualBounds(label : sun.font.Decoration.Decoration_Label) : java.awt.geom.Rectangle2D;
+	@:overload @:public override public function getVisualBounds(label : sun.font.Decoration.Decoration_Label) : java.awt.geom.Rectangle2D;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

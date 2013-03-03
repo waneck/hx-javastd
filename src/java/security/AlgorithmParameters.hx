@@ -32,14 +32,14 @@ extern class AlgorithmParameters
 	* @param provider the provider
 	* @param algorithm the algorithm
 	*/
-	@:overload private function new(paramSpi : java.security.AlgorithmParametersSpi, provider : java.security.Provider, algorithm : String) : Void;
+	@:overload @:protected private function new(paramSpi : java.security.AlgorithmParametersSpi, provider : java.security.Provider, algorithm : String) : Void;
 	
 	/**
 	* Returns the name of the algorithm associated with this parameter object.
 	*
 	* @return the algorithm name.
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Returns a parameter object for the specified algorithm.
@@ -71,7 +71,7 @@ extern class AlgorithmParameters
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String) : java.security.AlgorithmParameters;
+	@:overload @:public @:static public static function getInstance(algorithm : String) : java.security.AlgorithmParameters;
 	
 	/**
 	* Returns a parameter object for the specified algorithm.
@@ -110,7 +110,7 @@ extern class AlgorithmParameters
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : String) : java.security.AlgorithmParameters;
+	@:overload @:public @:static public static function getInstance(algorithm : String, provider : String) : java.security.AlgorithmParameters;
 	
 	/**
 	* Returns a parameter object for the specified algorithm.
@@ -144,14 +144,14 @@ extern class AlgorithmParameters
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.AlgorithmParameters;
+	@:require(java4) @:overload @:public @:static public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.AlgorithmParameters;
 	
 	/**
 	* Returns the provider of this parameter object.
 	*
 	* @return the provider of this parameter object
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Initializes this parameter object using the parameters
@@ -163,7 +163,7 @@ extern class AlgorithmParameters
 	* specification is inappropriate for the initialization of this parameter
 	* object, or if this parameter object has already been initialized.
 	*/
-	@:overload @:final public function init(paramSpec : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:public @:final public function init(paramSpec : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Imports the specified parameters and decodes them according to the
@@ -176,7 +176,7 @@ extern class AlgorithmParameters
 	* @exception IOException on decoding errors, or if this parameter object
 	* has already been initialized.
 	*/
-	@:overload @:final public function init(params : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:final public function init(params : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Imports the parameters from <code>params</code> and decodes them
@@ -193,7 +193,7 @@ extern class AlgorithmParameters
 	* @exception IOException on decoding errors, or if this parameter object
 	* has already been initialized.
 	*/
-	@:overload @:final public function init(params : java.NativeArray<java.StdTypes.Int8>, format : String) : Void;
+	@:overload @:public @:final public function init(params : java.NativeArray<java.StdTypes.Int8>, format : String) : Void;
 	
 	/**
 	* Returns a (transparent) specification of this parameter object.
@@ -212,7 +212,7 @@ extern class AlgorithmParameters
 	* specification is inappropriate for this parameter object, or if this
 	* parameter object has not been initialized.
 	*/
-	@:overload @:final public function getParameterSpec<T : java.security.spec.AlgorithmParameterSpec>(paramSpec : Class<T>) : T;
+	@:overload @:public @:final public function getParameterSpec<T : java.security.spec.AlgorithmParameterSpec>(paramSpec : Class<T>) : T;
 	
 	/**
 	* Returns the parameters in their primary encoding format.
@@ -224,7 +224,7 @@ extern class AlgorithmParameters
 	* @exception IOException on encoding errors, or if this parameter object
 	* has not been initialized.
 	*/
-	@:overload @:final public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the parameters encoded in the specified scheme.
@@ -240,7 +240,7 @@ extern class AlgorithmParameters
 	* @exception IOException on encoding errors, or if this parameter object
 	* has not been initialized.
 	*/
-	@:overload @:final public function getEncoded(format : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getEncoded(format : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a formatted string describing the parameters.
@@ -248,7 +248,7 @@ extern class AlgorithmParameters
 	* @return a formatted string describing the parameters, or null if this
 	* parameter object has not been initialized.
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	
 }

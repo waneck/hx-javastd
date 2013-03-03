@@ -28,7 +28,7 @@ extern interface UsingAddressing extends com.sun.xml.internal.txw2.TypedXmlWrite
 	/**
 	* @author Arun Gupta
 	*/
-	@:overload public function required(b : Bool) : Void;
+	@:overload @:public public function required(b : Bool) : Void;
 	
 	
 }

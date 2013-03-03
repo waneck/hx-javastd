@@ -58,12 +58,12 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class LDC_W extends com.sun.org.apache.bcel.internal.generic.LDC
 {
-	@:overload public function new(index : Int) : Void;
+	@:overload @:public public function new(index : Int) : Void;
 	
 	/**
 	* Read needed data (i.e., index) from file.
 	*/
-	@:overload override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload @:protected override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
 	
 }

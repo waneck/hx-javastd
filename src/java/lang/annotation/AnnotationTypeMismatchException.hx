@@ -34,14 +34,14 @@ extern class AnnotationTypeMismatchException extends java.lang.RuntimeException
 	*        This string may, but is not required to, contain the value
 	*        as well.  The exact format of the string is unspecified.
 	*/
-	@:overload public function new(element : java.lang.reflect.Method, foundType : String) : Void;
+	@:overload @:public public function new(element : java.lang.reflect.Method, foundType : String) : Void;
 	
 	/**
 	* Returns the <tt>Method</tt> object for the incorrectly typed element.
 	*
 	* @return the <tt>Method</tt> object for the incorrectly typed element
 	*/
-	@:overload public function element() : java.lang.reflect.Method;
+	@:overload @:public public function element() : java.lang.reflect.Method;
 	
 	/**
 	* Returns the type of data found in the incorrectly typed element.
@@ -50,7 +50,7 @@ extern class AnnotationTypeMismatchException extends java.lang.RuntimeException
 	*
 	* @return the type of data found in the incorrectly typed element
 	*/
-	@:overload public function foundType() : String;
+	@:overload @:public public function foundType() : String;
 	
 	
 }

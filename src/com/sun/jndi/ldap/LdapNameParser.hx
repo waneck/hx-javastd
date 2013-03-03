@@ -25,9 +25,9 @@ package com.sun.jndi.ldap;
 */
 @:internal extern class LdapNameParser implements javax.naming.NameParser
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function parse(name : String) : javax.naming.Name;
+	@:overload @:public public function parse(name : String) : javax.naming.Name;
 	
 	
 }

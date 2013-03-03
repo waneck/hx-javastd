@@ -79,7 +79,7 @@ extern interface StateFactory
 	* @see NamingManager#getStateToBind
 	* @see DirectoryManager#getStateToBind
 	*/
-	@:overload public function getStateToBind(obj : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>) : Dynamic;
+	@:overload @:public public function getStateToBind(obj : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>) : Dynamic;
 	
 	
 }

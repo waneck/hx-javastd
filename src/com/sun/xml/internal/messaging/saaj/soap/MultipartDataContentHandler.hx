@@ -30,7 +30,7 @@ extern class MultipartDataContentHandler implements javax.activation.DataContent
 	*
 	* @return The DataFlavors
 	*/
-	@:overload public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Return the Transfer Data of type DataFlavor from InputStream.
@@ -39,17 +39,17 @@ extern class MultipartDataContentHandler implements javax.activation.DataContent
 	* @param ins The InputStream corresponding to the data
 	* @return String object
 	*/
-	@:overload public function getTransferData(df : java.awt.datatransfer.DataFlavor, ds : javax.activation.DataSource) : Dynamic;
+	@:overload @:public public function getTransferData(df : java.awt.datatransfer.DataFlavor, ds : javax.activation.DataSource) : Dynamic;
 	
 	/**
 	* Return the content.
 	*/
-	@:overload public function getContent(ds : javax.activation.DataSource) : Dynamic;
+	@:overload @:public public function getContent(ds : javax.activation.DataSource) : Dynamic;
 	
 	/**
 	* Write the object to the output stream, using the specific MIME type.
 	*/
-	@:overload public function writeTo(obj : Dynamic, mimeType : String, os : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(obj : Dynamic, mimeType : String, os : java.io.OutputStream) : Void;
 	
 	
 }

@@ -32,39 +32,39 @@ package com.sun.org.omg.CORBA.ValueDefPackage;
 //// This file has been manually _CHANGED_
 extern class FullValueDescription implements org.omg.CORBA.portable.IDLEntity
 {
-	public var name : String;
+	@:public public var name : String;
 	
-	public var id : String;
+	@:public public var id : String;
 	
-	public var is_abstract : Bool;
+	@:public public var is_abstract : Bool;
 	
-	public var is_custom : Bool;
+	@:public public var is_custom : Bool;
 	
-	public var defined_in : String;
+	@:public public var defined_in : String;
 	
-	public var version : String;
+	@:public public var version : String;
 	
-	public var operations : java.NativeArray<com.sun.org.omg.CORBA.OperationDescription>;
+	@:public public var operations : java.NativeArray<com.sun.org.omg.CORBA.OperationDescription>;
 	
-	public var attributes : java.NativeArray<com.sun.org.omg.CORBA.AttributeDescription>;
+	@:public public var attributes : java.NativeArray<com.sun.org.omg.CORBA.AttributeDescription>;
 	
-	public var members : java.NativeArray<org.omg.CORBA.ValueMember>;
+	@:public public var members : java.NativeArray<org.omg.CORBA.ValueMember>;
 	
-	public var initializers : java.NativeArray<com.sun.org.omg.CORBA.Initializer>;
+	@:public public var initializers : java.NativeArray<com.sun.org.omg.CORBA.Initializer>;
 	
-	public var supported_interfaces : java.NativeArray<String>;
+	@:public public var supported_interfaces : java.NativeArray<String>;
 	
-	public var abstract_base_values : java.NativeArray<String>;
+	@:public public var abstract_base_values : java.NativeArray<String>;
 	
-	public var is_truncatable : Bool;
+	@:public public var is_truncatable : Bool;
 	
-	public var base_value : String;
+	@:public public var base_value : String;
 	
-	public var type : org.omg.CORBA.TypeCode;
+	@:public public var type : org.omg.CORBA.TypeCode;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_name : String, _id : String, _is_abstract : Bool, _is_custom : Bool, _defined_in : String, _version : String, _operations : java.NativeArray<com.sun.org.omg.CORBA.OperationDescription>, _attributes : java.NativeArray<com.sun.org.omg.CORBA.AttributeDescription>, _members : java.NativeArray<org.omg.CORBA.ValueMember>, _initializers : java.NativeArray<com.sun.org.omg.CORBA.Initializer>, _supported_interfaces : java.NativeArray<String>, _abstract_base_values : java.NativeArray<String>, _is_truncatable : Bool, _base_value : String, _type : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:public public function new(_name : String, _id : String, _is_abstract : Bool, _is_custom : Bool, _defined_in : String, _version : String, _operations : java.NativeArray<com.sun.org.omg.CORBA.OperationDescription>, _attributes : java.NativeArray<com.sun.org.omg.CORBA.AttributeDescription>, _members : java.NativeArray<org.omg.CORBA.ValueMember>, _initializers : java.NativeArray<com.sun.org.omg.CORBA.Initializer>, _supported_interfaces : java.NativeArray<String>, _abstract_base_values : java.NativeArray<String>, _is_truncatable : Bool, _base_value : String, _type : org.omg.CORBA.TypeCode) : Void;
 	
 	
 }

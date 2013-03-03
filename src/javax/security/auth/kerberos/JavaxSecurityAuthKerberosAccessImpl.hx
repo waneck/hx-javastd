@@ -25,7 +25,7 @@ package javax.security.auth.kerberos;
 */
 @:internal extern class JavaxSecurityAuthKerberosAccessImpl implements sun.misc.JavaxSecurityAuthKerberosAccess
 {
-	@:overload public function keyTabGetEncryptionKeys(ktab : javax.security.auth.kerberos.KeyTab, principal : sun.security.krb5.PrincipalName) : java.NativeArray<sun.security.krb5.EncryptionKey>;
+	@:overload @:public public function keyTabGetEncryptionKeys(ktab : javax.security.auth.kerberos.KeyTab, principal : sun.security.krb5.PrincipalName) : java.NativeArray<sun.security.krb5.EncryptionKey>;
 	
 	
 }

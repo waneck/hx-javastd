@@ -29,23 +29,23 @@ package com.sun.java.util.jar.pack;
 	* Histogram derived from an integer array of events (int[]).
 	* @author John Rose
 	*/
-	private var matrix(default, null) : java.NativeArray<java.NativeArray<Int>>;
+	@:protected @:final private var matrix(default, null) : java.NativeArray<java.NativeArray<Int>>;
 	
-	private var totalWeight(default, null) : Int;
+	@:protected @:final private var totalWeight(default, null) : Int;
 	
-	private var values(default, null) : java.NativeArray<Int>;
+	@:protected @:final private var values(default, null) : java.NativeArray<Int>;
 	
-	private var counts(default, null) : java.NativeArray<Int>;
+	@:protected @:final private var counts(default, null) : java.NativeArray<Int>;
 	
 	/** Build a histogram given a sequence of values.
 	*  To save work, the input should be sorted, but need not be.
 	*/
-	@:overload public function new(valueSequence : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(valueSequence : java.NativeArray<Int>) : Void;
 	
-	@:overload public function new(valueSequence : java.NativeArray<Int>, start : Int, end : Int) : Void;
+	@:overload @:public public function new(valueSequence : java.NativeArray<Int>, start : Int, end : Int) : Void;
 	
 	/** Build a histogram given a compact matrix of counts and values. */
-	@:overload public function new(matrix : java.NativeArray<java.NativeArray<Int>>) : Void;
+	@:overload @:public public function new(matrix : java.NativeArray<java.NativeArray<Int>>) : Void;
 	
 	/** Histogram of int values, reported compactly as a ragged matrix,
 	*  indexed by descending frequency rank.
@@ -66,71 +66,71 @@ package com.sun.java.util.jar.pack;
 	*  is sorted in ascending order, and contains no duplicates.
 	*  That is, each sequence { valuei1, valuei2, ... } is sorted.
 	*/
-	@:overload public function getMatrix() : java.NativeArray<java.NativeArray<Int>>;
+	@:overload @:public public function getMatrix() : java.NativeArray<java.NativeArray<Int>>;
 	
-	@:overload public function getRowCount() : Int;
+	@:overload @:public public function getRowCount() : Int;
 	
-	@:overload public function getRowFrequency(rn : Int) : Int;
+	@:overload @:public public function getRowFrequency(rn : Int) : Int;
 	
-	@:overload public function getRowLength(rn : Int) : Int;
+	@:overload @:public public function getRowLength(rn : Int) : Int;
 	
-	@:overload public function getRowValue(rn : Int, vn : Int) : Int;
+	@:overload @:public public function getRowValue(rn : Int, vn : Int) : Int;
 	
-	@:overload public function getRowWeight(rn : Int) : Int;
+	@:overload @:public public function getRowWeight(rn : Int) : Int;
 	
-	@:overload public function getTotalWeight() : Int;
+	@:overload @:public public function getTotalWeight() : Int;
 	
-	@:overload public function getTotalLength() : Int;
+	@:overload @:public public function getTotalLength() : Int;
 	
 	/** Returns an array of all values, sorted. */
-	@:overload public function getAllValues() : java.NativeArray<Int>;
+	@:overload @:public public function getAllValues() : java.NativeArray<Int>;
 	
 	/** Returns an array parallel with {@link #getValues},
 	*  with a frequency for each value.
 	*/
-	@:overload public function getAllFrequencies() : java.NativeArray<Int>;
+	@:overload @:public public function getAllFrequencies() : java.NativeArray<Int>;
 	
-	@:overload public function getFrequency(value : Int) : Int;
+	@:overload @:public public function getFrequency(value : Int) : Int;
 	
-	@:overload public function getBitLength(value : Int) : Float;
+	@:overload @:public public function getBitLength(value : Int) : Float;
 	
-	@:overload public function getRowBitLength(rn : Int) : Float;
+	@:overload @:public public function getRowBitLength(rn : Int) : Float;
 	
-	@:overload public function getBitMetric() : com.sun.java.util.jar.pack.Histogram.Histogram_BitMetric;
+	@:overload @:public public function getBitMetric() : com.sun.java.util.jar.pack.Histogram.Histogram_BitMetric;
 	
 	/** bit-length is negative entropy:  -H(matrix). */
-	@:overload public function getBitLength() : Float;
+	@:overload @:public public function getBitLength() : Float;
 	
 	/** bit-length in to another coding (cross-entropy) */
-	@:overload public function getBitLength(len : com.sun.java.util.jar.pack.Histogram.Histogram_BitMetric) : Float;
+	@:overload @:public public function getBitLength(len : com.sun.java.util.jar.pack.Histogram.Histogram_BitMetric) : Float;
 	
 	/** Sort rows and columns.
 	*  Merge adjacent rows with the same key element [0].
 	*  Make a fresh copy of all of it.
 	*/
-	@:overload public function normalizeMatrix(matrix : java.NativeArray<java.NativeArray<Int>>) : java.NativeArray<java.NativeArray<Int>>;
+	@:overload @:public public function normalizeMatrix(matrix : java.NativeArray<java.NativeArray<Int>>) : java.NativeArray<java.NativeArray<Int>>;
 	
-	@:overload public function getRowTitles(name : String) : java.NativeArray<String>;
-	
-	/** Print a report of this histogram.
-	*/
-	@:overload public function print(out : java.io.PrintStream) : Void;
+	@:overload @:public public function getRowTitles(name : String) : java.NativeArray<String>;
 	
 	/** Print a report of this histogram.
 	*/
-	@:overload public function print(name : String, out : java.io.PrintStream) : Void;
+	@:overload @:public public function print(out : java.io.PrintStream) : Void;
 	
 	/** Print a report of this histogram.
 	*/
-	@:overload public function print(name : String, histTitles : java.NativeArray<String>, out : java.io.PrintStream) : Void;
+	@:overload @:public public function print(name : String, out : java.io.PrintStream) : Void;
 	
-	@:overload public static function makeByteHistogram(bytes : java.io.InputStream) : com.sun.java.util.jar.pack.Histogram;
+	/** Print a report of this histogram.
+	*/
+	@:overload @:public public function print(name : String, histTitles : java.NativeArray<String>, out : java.io.PrintStream) : Void;
+	
+	@:overload @:public @:static public static function makeByteHistogram(bytes : java.io.InputStream) : com.sun.java.util.jar.pack.Histogram;
 	
 	
 }
 @:native('com$sun$java$util$jar$pack$Histogram$BitMetric') extern interface Histogram_BitMetric
 {
-	@:overload public function getBitLength(value : Int) : Float;
+	@:overload @:public public function getBitLength(value : Int) : Float;
 	
 	
 }

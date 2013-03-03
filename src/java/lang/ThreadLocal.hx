@@ -43,12 +43,12 @@ extern class ThreadLocal<T>
 	*
 	* @return the initial value for this thread-local
 	*/
-	@:overload private function initialValue() : T;
+	@:overload @:protected private function initialValue() : T;
 	
 	/**
 	* Creates a thread local variable.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the value in the current thread's copy of this
@@ -58,7 +58,7 @@ extern class ThreadLocal<T>
 	*
 	* @return the current thread's value of this thread-local
 	*/
-	@:overload public function get() : T;
+	@:overload @:public public function get() : T;
 	
 	/**
 	* Sets the current thread's copy of this thread-local variable
@@ -69,7 +69,7 @@ extern class ThreadLocal<T>
 	* @param value the value to be stored in the current thread's copy of
 	*        this thread-local.
 	*/
-	@:overload public function set(value : T) : Void;
+	@:overload @:public public function set(value : T) : Void;
 	
 	/**
 	* Removes the current thread's value for this thread-local
@@ -82,7 +82,7 @@ extern class ThreadLocal<T>
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function remove() : Void;
+	@:require(java5) @:overload @:public public function remove() : Void;
 	
 	
 }

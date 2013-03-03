@@ -29,27 +29,27 @@ package com.sun.tools.internal.ws.processor.modeler.wsdl;
 	* @param type
 	* @param name
 	*/
-	@:overload public function new(name : String, type : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(name : String, type : javax.xml.namespace.QName) : Void;
 	
 	/**
 	* @return Returns the type.
 	*/
-	@:overload public function getType() : javax.xml.namespace.QName;
+	@:overload @:public public function getType() : javax.xml.namespace.QName;
 	
 	/**
 	* @param type The type to set.
 	*/
-	@:overload public function setType(type : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setType(type : javax.xml.namespace.QName) : Void;
 	
 	/**
 	* @return Returns the name.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* @param name The name to set.
 	*/
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	
 }

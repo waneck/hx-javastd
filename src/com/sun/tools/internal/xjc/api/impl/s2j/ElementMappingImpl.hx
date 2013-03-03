@@ -25,11 +25,11 @@ package com.sun.tools.internal.xjc.api.impl.s2j;
 */
 @:internal extern class ElementMappingImpl extends com.sun.tools.internal.xjc.api.impl.s2j.AbstractMappingImpl<com.sun.tools.internal.xjc.model.CElementInfo>
 {
-	@:overload private function new(parent : com.sun.tools.internal.xjc.api.impl.s2j.JAXBModelImpl, elementInfo : com.sun.tools.internal.xjc.model.CElementInfo) : Void;
+	@:overload @:protected private function new(parent : com.sun.tools.internal.xjc.api.impl.s2j.JAXBModelImpl, elementInfo : com.sun.tools.internal.xjc.model.CElementInfo) : Void;
 	
-	@:overload public function getType() : com.sun.tools.internal.xjc.api.TypeAndAnnotation;
+	@:overload @:public override public function getType() : com.sun.tools.internal.xjc.api.TypeAndAnnotation;
 	
-	@:overload @:final public function calcDrilldown() : java.util.List<com.sun.tools.internal.xjc.api.Property>;
+	@:overload @:public @:final override public function calcDrilldown() : java.util.List<com.sun.tools.internal.xjc.api.Property>;
 	
 	
 }

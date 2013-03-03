@@ -39,34 +39,34 @@ extern class UnionMember implements org.omg.CORBA.portable.IDLEntity
 	* <code>UnionMember</code> object.
 	* @serial
 	*/
-	public var name : String;
+	@:public public var name : String;
 	
 	/**
 	* The label of the union member described by this
 	* <code>UnionMember</code> object.
 	* @serial
 	*/
-	public var label : org.omg.CORBA.Any;
+	@:public public var label : org.omg.CORBA.Any;
 	
 	/**
 	* The type of the union member described by this
 	* <code>UnionMember</code> object.
 	* @serial
 	*/
-	public var type : org.omg.CORBA.TypeCode;
+	@:public public var type : org.omg.CORBA.TypeCode;
 	
 	/**
 	* The typedef that represents the IDL type of the union member described by this
 	* <code>UnionMember</code> object.
 	* @serial
 	*/
-	public var type_def : org.omg.CORBA.IDLType;
+	@:public public var type_def : org.omg.CORBA.IDLType;
 	
 	/**
 	* Constructs a new <code>UnionMember</code> object with its fields initialized
 	* to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>UnionMember</code> object with its fields initialized
@@ -81,7 +81,7 @@ extern class UnionMember implements org.omg.CORBA.portable.IDLEntity
 	* @param __type_def an <code>IDLType</code> object that represents the
 	*        IDL type of this <code>UnionMember</code> object
 	*/
-	@:overload public function new(__name : String, __label : org.omg.CORBA.Any, __type : org.omg.CORBA.TypeCode, __type_def : org.omg.CORBA.IDLType) : Void;
+	@:overload @:public public function new(__name : String, __label : org.omg.CORBA.Any, __type : org.omg.CORBA.TypeCode, __type_def : org.omg.CORBA.IDLType) : Void;
 	
 	
 }

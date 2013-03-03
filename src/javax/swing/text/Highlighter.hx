@@ -33,7 +33,7 @@ extern interface Highlighter
 	*
 	* @param c the JTextComponent editor
 	*/
-	@:overload public function install(c : javax.swing.text.JTextComponent) : Void;
+	@:overload @:public @:public public function install(c : javax.swing.text.JTextComponent) : Void;
 	
 	/**
 	* Called when the UI is being removed from the
@@ -42,14 +42,14 @@ extern interface Highlighter
 	*
 	* @param c the JTextComponent editor
 	*/
-	@:overload public function deinstall(c : javax.swing.text.JTextComponent) : Void;
+	@:overload @:public @:public public function deinstall(c : javax.swing.text.JTextComponent) : Void;
 	
 	/**
 	* Renders the highlights.
 	*
 	* @param g the graphics context.
 	*/
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public @:public public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Adds a highlight to the view.  Returns a tag that can be used
@@ -61,19 +61,19 @@ extern interface Highlighter
 	* @return an object that refers to the highlight
 	* @exception BadLocationException for an invalid range specification
 	*/
-	@:overload public function addHighlight(p0 : Int, p1 : Int, p : javax.swing.text.Highlighter.Highlighter_HighlightPainter) : Dynamic;
+	@:overload @:public @:public public function addHighlight(p0 : Int, p1 : Int, p : javax.swing.text.Highlighter.Highlighter_HighlightPainter) : Dynamic;
 	
 	/**
 	* Removes a highlight from the view.
 	*
 	* @param tag  which highlight to remove
 	*/
-	@:overload public function removeHighlight(tag : Dynamic) : Void;
+	@:overload @:public @:public public function removeHighlight(tag : Dynamic) : Void;
 	
 	/**
 	* Removes all highlights this highlighter is responsible for.
 	*/
-	@:overload public function removeAllHighlights() : Void;
+	@:overload @:public @:public public function removeAllHighlights() : Void;
 	
 	/**
 	* Changes the given highlight to span a different portion of
@@ -86,14 +86,14 @@ extern interface Highlighter
 	* @param p1 the end of the range >= p0
 	* @exception BadLocationException for an invalid range specification
 	*/
-	@:overload public function changeHighlight(tag : Dynamic, p0 : Int, p1 : Int) : Void;
+	@:overload @:public @:public public function changeHighlight(tag : Dynamic, p0 : Int, p1 : Int) : Void;
 	
 	/**
 	* Fetches the current list of highlights.
 	*
 	* @return the highlight list
 	*/
-	@:overload public function getHighlights() : java.NativeArray<javax.swing.text.Highlighter.Highlighter_Highlight>;
+	@:overload @:public @:public public function getHighlights() : java.NativeArray<javax.swing.text.Highlighter.Highlighter_Highlight>;
 	
 	
 }
@@ -111,7 +111,7 @@ extern interface Highlighter
 	* @param bounds the bounding box for the highlight
 	* @param c the editor
 	*/
-	@:overload public function paint(g : java.awt.Graphics, p0 : Int, p1 : Int, bounds : java.awt.Shape, c : javax.swing.text.JTextComponent) : Void;
+	@:overload @:public @:public public function paint(g : java.awt.Graphics, p0 : Int, p1 : Int, bounds : java.awt.Shape, c : javax.swing.text.JTextComponent) : Void;
 	
 	
 }
@@ -122,21 +122,21 @@ extern interface Highlighter
 	*
 	* @return the starting offset >= 0
 	*/
-	@:overload public function getStartOffset() : Int;
+	@:overload @:public public function getStartOffset() : Int;
 	
 	/**
 	* Gets the ending model offset for the highlight.
 	*
 	* @return the ending offset >= 0
 	*/
-	@:overload public function getEndOffset() : Int;
+	@:overload @:public public function getEndOffset() : Int;
 	
 	/**
 	* Gets the painter for the highlighter.
 	*
 	* @return the painter
 	*/
-	@:overload public function getPainter() : javax.swing.text.Highlighter.Highlighter_HighlightPainter;
+	@:overload @:public public function getPainter() : javax.swing.text.Highlighter.Highlighter_HighlightPainter;
 	
 	
 }

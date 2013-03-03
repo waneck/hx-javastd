@@ -21,23 +21,23 @@ package com.sun.org.apache.xerces.internal.parsers;
 extern class XMLParser
 {
 	/** Property identifier: entity resolver. */
-	private static var ENTITY_RESOLVER(default, null) : String;
+	@:protected @:static @:final private static var ENTITY_RESOLVER(default, null) : String;
 	
 	/** Property identifier: error handler. */
-	private static var ERROR_HANDLER(default, null) : String;
+	@:protected @:static @:final private static var ERROR_HANDLER(default, null) : String;
 	
 	/** The parser configuration. */
-	private var fConfiguration : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration;
+	@:protected private var fConfiguration : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration;
 	
 	/**
 	* Query the state of a feature.
 	*/
-	@:overload public function getFeature(featureId : String) : Bool;
+	@:overload @:public public function getFeature(featureId : String) : Bool;
 	
 	/**
 	* Default Constructor.
 	*/
-	@:overload private function new(config : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration) : Void;
+	@:overload @:protected private function new(config : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration) : Void;
 	
 	/**
 	* parse
@@ -47,12 +47,12 @@ extern class XMLParser
 	* @exception XNIException
 	* @exception java.io.IOException
 	*/
-	@:overload public function parse(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public public function parse(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**
 	* reset all components before parsing
 	*/
-	@:overload private function reset() : Void;
+	@:overload @:protected private function reset() : Void;
 	
 	
 }

@@ -232,7 +232,7 @@ package javax.lang.model.element;
 	* @param p   additional parameter to the visitor
 	* @return a visitor-specified result
 	*/
-	@:overload public function accept<R, P>(v : javax.lang.model.element.ElementVisitor<R, P>, p : P) : R;
+	@:overload @:public public function accept<R, P>(v : javax.lang.model.element.ElementVisitor<R, P>, p : P) : R;
 	
 	
 }

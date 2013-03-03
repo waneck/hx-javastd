@@ -25,7 +25,7 @@ extern interface XSGrammarPoolContainer
 	*
 	* @return the grammar pool contained inside the container
 	*/
-	@:overload public function getGrammarPool() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
+	@:overload @:public @:public public function getGrammarPool() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
 	
 	/**
 	* <p>Returns whether the schema components contained in this object
@@ -36,14 +36,14 @@ extern interface XSGrammarPoolContainer
 	* @return whether the schema components contained in this object
 	* can be considered to be a fully composed schema
 	*/
-	@:overload public function isFullyComposed() : Bool;
+	@:overload @:public @:public public function isFullyComposed() : Bool;
 	
 	/**
 	* Returns the initial value of a feature for validators created
 	* using this grammar pool container or null if the validators
 	* should use the default value.
 	*/
-	@:overload public function getFeature(featureId : String) : Null<Bool>;
+	@:overload @:public public function getFeature(featureId : String) : Null<Bool>;
 	
 	
 }

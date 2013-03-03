@@ -23,9 +23,9 @@ package com.sun.org.apache.xalan.internal.xsltc.dom;
 */
 extern class FilteredStepIterator extends com.sun.org.apache.xalan.internal.xsltc.dom.StepIterator
 {
-	@:overload public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, filter : com.sun.org.apache.xalan.internal.xsltc.dom.Filter) : Void;
+	@:overload @:public public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, filter : com.sun.org.apache.xalan.internal.xsltc.dom.Filter) : Void;
 	
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }

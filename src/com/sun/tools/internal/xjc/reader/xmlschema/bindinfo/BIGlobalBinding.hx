@@ -37,56 +37,56 @@ extern class BIGlobalBinding extends com.sun.tools.internal.xjc.reader.xmlschema
 	* <p>
 	* Always non-null.
 	*/
-	public var nameConverter : com.sun.xml.internal.bind.api.impl.NameConverter;
+	@:public public var nameConverter : com.sun.xml.internal.bind.api.impl.NameConverter;
 	
-	@:overload public function getSuperClass() : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function getSuperClass() : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function getSuperInterface() : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function getSuperInterface() : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function getDefaultProperty() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIProperty;
+	@:overload @:public public function getDefaultProperty() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIProperty;
 	
-	@:overload public function isJavaNamingConventionEnabled() : Bool;
+	@:overload @:public public function isJavaNamingConventionEnabled() : Bool;
 	
-	@:overload public function getSerializable() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BISerializable;
+	@:overload @:public public function getSerializable() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BISerializable;
 	
-	@:overload public function isGenerateElementClass() : Bool;
+	@:overload @:public public function isGenerateElementClass() : Bool;
 	
-	@:overload public function isGenerateMixedExtensions() : Bool;
+	@:overload @:public public function isGenerateMixedExtensions() : Bool;
 	
-	@:overload public function isChoiceContentPropertyEnabled() : Bool;
+	@:overload @:public public function isChoiceContentPropertyEnabled() : Bool;
 	
-	@:overload public function getDefaultEnumMemberSizeCap() : Int;
+	@:overload @:public public function getDefaultEnumMemberSizeCap() : Int;
 	
-	@:overload public function isSimpleMode() : Bool;
+	@:overload @:public public function isSimpleMode() : Bool;
 	
-	@:overload public function isRestrictionFreshType() : Bool;
+	@:overload @:public public function isRestrictionFreshType() : Bool;
 	
-	@:overload public function getEnumMemberMode() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.EnumMemberMode;
+	@:overload @:public public function getEnumMemberMode() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.EnumMemberMode;
 	
-	@:overload public function isSimpleTypeSubstitution() : Bool;
+	@:overload @:public public function isSimpleTypeSubstitution() : Bool;
 	
-	@:overload public function getCodeGenerationStrategy() : com.sun.tools.internal.xjc.generator.bean.ImplStructureStrategy;
+	@:overload @:public public function getCodeGenerationStrategy() : com.sun.tools.internal.xjc.generator.bean.ImplStructureStrategy;
 	
-	@:overload public function getFlattenClasses() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.LocalScoping;
+	@:overload @:public public function getFlattenClasses() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.LocalScoping;
 	
 	/**
 	* Performs error check
 	*/
-	@:overload public function errorCheck() : Void;
+	@:overload @:public public function errorCheck() : Void;
 	
-	@:overload override public function onSetOwner() : Void;
+	@:overload @:public override public function onSetOwner() : Void;
 	
 	/**
 	* Creates a bind info object with the default values
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function setParent(parent : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
+	@:overload @:public override public function setParent(parent : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
 	
 	/**
 	* Moves global BIConversion to the right object.
 	*/
-	@:overload public function dispatchGlobalConversions(schema : com.sun.xml.internal.xsom.XSSchemaSet) : Void;
+	@:overload @:public public function dispatchGlobalConversions(schema : com.sun.xml.internal.xsom.XSSchemaSet) : Void;
 	
 	/**
 	* Checks if the given XML Schema built-in type can be mapped to
@@ -94,18 +94,18 @@ extern class BIGlobalBinding extends com.sun.tools.internal.xjc.reader.xmlschema
 	*
 	* @param typeName
 	*/
-	@:overload public function canBeMappedToTypeSafeEnum(typeName : javax.xml.namespace.QName) : Bool;
+	@:overload @:public public function canBeMappedToTypeSafeEnum(typeName : javax.xml.namespace.QName) : Bool;
 	
-	@:overload public function canBeMappedToTypeSafeEnum(nsUri : String, localName : String) : Bool;
+	@:overload @:public public function canBeMappedToTypeSafeEnum(nsUri : String, localName : String) : Bool;
 	
-	@:overload public function canBeMappedToTypeSafeEnum(decl : com.sun.xml.internal.xsom.XSDeclaration) : Bool;
+	@:overload @:public public function canBeMappedToTypeSafeEnum(decl : com.sun.xml.internal.xsom.XSDeclaration) : Bool;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getName() : javax.xml.namespace.QName;
 	
-	public static var NAME(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var NAME(default, null) : javax.xml.namespace.QName;
 	
 	/* don't want to override equals to avoid overriding hashcode for this complex object, too */
-	@:overload public function isEqual(b : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIGlobalBinding) : Bool;
+	@:overload @:public public function isEqual(b : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIGlobalBinding) : Bool;
 	
 	
 }
@@ -132,7 +132,7 @@ extern class BIGlobalBinding extends com.sun.tools.internal.xjc.reader.xmlschema
 }
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BIGlobalBinding$ClassNameAdapter') @:internal extern class BIGlobalBinding_ClassNameAdapter extends com.sun.tools.internal.xjc.util.ReadOnlyAdapter<com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIGlobalBinding.BIGlobalBinding_ClassNameBean, String>
 {
-	@:overload public function unmarshal(bean : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIGlobalBinding.BIGlobalBinding_ClassNameBean) : String;
+	@:overload @:public public function unmarshal(bean : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIGlobalBinding.BIGlobalBinding_ClassNameBean) : String;
 	
 	
 }
@@ -141,9 +141,9 @@ extern class BIGlobalBinding extends com.sun.tools.internal.xjc.reader.xmlschema
 */
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BIGlobalBinding$GlobalStandardConversion') @:internal extern class BIGlobalBinding_GlobalStandardConversion extends com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion.BIConversion_User
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
@@ -152,9 +152,9 @@ extern class BIGlobalBinding extends com.sun.tools.internal.xjc.reader.xmlschema
 */
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BIGlobalBinding$GlobalVendorConversion') @:internal extern class BIGlobalBinding_GlobalVendorConversion extends com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion.BIConversion_UserAdapter
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

@@ -29,7 +29,7 @@ extern class UnsupportedDataTypeException extends java.io.IOException
 	* Constructs an UnsupportedDataTypeException with no detail
 	* message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an UnsupportedDataTypeException with the specified
@@ -37,7 +37,7 @@ extern class UnsupportedDataTypeException extends java.io.IOException
 	*
 	* @param s The detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

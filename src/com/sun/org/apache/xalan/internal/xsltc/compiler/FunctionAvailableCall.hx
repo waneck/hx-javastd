@@ -29,33 +29,33 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* a list of arguments where the arguments must be instances of
 	* LiteralExpression.
 	*/
-	@:overload public function new(fname : com.sun.org.apache.xalan.internal.xsltc.compiler.QName, arguments : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function new(fname : com.sun.org.apache.xalan.internal.xsltc.compiler.QName, arguments : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* Argument of function-available call must be literal, typecheck
 	* returns the type of function-available to be boolean.
 	*/
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Returns an object representing the compile-time evaluation
 	* of an expression. We are only using this for function-available
 	* and element-available at this time.
 	*/
-	@:overload override public function evaluateAtCompileTime() : Dynamic;
+	@:overload @:public override public function evaluateAtCompileTime() : Dynamic;
 	
 	/**
 	* Reports on whether the function specified in the argument to
 	* xslt function 'function-available' was found.
 	*/
-	@:overload public function getResult() : Bool;
+	@:overload @:public public function getResult() : Bool;
 	
 	/**
 	* Calls to 'function-available' are resolved at compile time since
 	* the namespaces declared in the stylsheet are not available at run
 	* time. Consequently, arguments to this function must be literals.
 	*/
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

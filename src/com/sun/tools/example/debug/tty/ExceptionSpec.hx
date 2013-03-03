@@ -32,15 +32,15 @@ package com.sun.tools.example.debug.tty;
 */
 @:internal extern class ExceptionSpec extends com.sun.tools.example.debug.tty.EventRequestSpec
 {
-	@:overload public function notifyCaught() : Bool;
+	@:overload @:public public function notifyCaught() : Bool;
 	
-	@:overload public function notifyUncaught() : Bool;
+	@:overload @:public public function notifyUncaught() : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

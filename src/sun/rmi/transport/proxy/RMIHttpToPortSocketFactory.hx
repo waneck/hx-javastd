@@ -31,9 +31,9 @@ extern class RMIHttpToPortSocketFactory extends java.rmi.server.RMISocketFactory
 	* forwarded through the default firewall proxy, directly to the
 	* specified port.
 	*/
-	@:overload override public function createSocket(host : String, port : Int) : java.net.Socket;
+	@:overload @:public override public function createSocket(host : String, port : Int) : java.net.Socket;
 	
-	@:overload override public function createServerSocket(port : Int) : java.net.ServerSocket;
+	@:overload @:public override public function createServerSocket(port : Int) : java.net.ServerSocket;
 	
 	
 }

@@ -32,17 +32,17 @@ package org.omg.PortableServer.ServantLocatorPackage;
 */
 extern class CookieHolder implements org.omg.CORBA.portable.Streamable
 {
-	public var value : Dynamic;
+	@:public public var value : Dynamic;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(initial : Dynamic) : Void;
+	@:overload @:public public function new(initial : Dynamic) : Void;
 	
-	@:overload public function _read(is : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function _read(is : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload public function _write(os : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function _write(os : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload public function _type() : org.omg.CORBA.TypeCode;
+	@:overload @:public public function _type() : org.omg.CORBA.TypeCode;
 	
 	
 }

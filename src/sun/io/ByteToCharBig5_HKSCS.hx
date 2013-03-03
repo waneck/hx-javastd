@@ -25,13 +25,13 @@ package sun.io;
 */
 extern class ByteToCharBig5_HKSCS extends sun.io.ByteToCharDBCS_ASCII
 {
-	private static var dec : sun.nio.cs.ext.HKSCS.HKSCS_Decoder;
+	@:protected @:static private static var dec : sun.nio.cs.ext.HKSCS.HKSCS_Decoder;
 	
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload private function decodeDouble(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
+	@:overload @:protected private function decodeDouble(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
 	
 	
 }

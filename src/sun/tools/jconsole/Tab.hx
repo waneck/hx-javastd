@@ -25,21 +25,21 @@ package sun.tools.jconsole;
 */
 extern class Tab extends javax.swing.JPanel
 {
-	private var vmPanel : sun.tools.jconsole.VMPanel;
+	@:protected private var vmPanel : sun.tools.jconsole.VMPanel;
 	
-	@:overload public function new(vmPanel : sun.tools.jconsole.VMPanel, name : String) : Void;
+	@:overload @:public public function new(vmPanel : sun.tools.jconsole.VMPanel, name : String) : Void;
 	
-	@:overload public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
+	@:overload @:public public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
 	
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
-	@:overload @:synchronized public function dispose() : Void;
+	@:overload @:public @:synchronized public function dispose() : Void;
 	
-	@:overload private function getVMPanel() : sun.tools.jconsole.VMPanel;
+	@:overload @:protected private function getVMPanel() : sun.tools.jconsole.VMPanel;
 	
-	@:overload @:synchronized public function workerAdd(job : java.lang.Runnable) : Void;
+	@:overload @:public @:synchronized public function workerAdd(job : java.lang.Runnable) : Void;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	
 }

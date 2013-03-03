@@ -67,7 +67,7 @@ extern class ALOAD extends com.sun.org.apache.bcel.internal.generic.LoadInstruct
 	/** Load reference from local variable
 	* @param n index of local variable
 	*/
-	@:overload public function new(n : Int) : Void;
+	@:overload @:public public function new(n : Int) : Void;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -77,7 +77,7 @@ extern class ALOAD extends com.sun.org.apache.bcel.internal.generic.LoadInstruct
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

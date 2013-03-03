@@ -27,21 +27,21 @@ package com.sun.xml.internal.fastinfoset.stax.events;
 */
 extern class EndElementEvent extends com.sun.xml.internal.fastinfoset.stax.events.EventBase implements javax.xml.stream.events.EndElement
 {
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(prefix : String, namespaceURI : String, localpart : String) : Void;
+	@:overload @:public public function new(prefix : String, namespaceURI : String, localpart : String) : Void;
 	
-	@:overload public function new(qname : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(qname : javax.xml.namespace.QName) : Void;
 	
 	/**
 	* Get the name of this event
 	* @return the qualified name of this event
 	*/
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function setName(qname : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setName(qname : javax.xml.namespace.QName) : Void;
 	
 	/** Returns an Iterator of namespaces that have gone out
 	* of scope.  Returns an empty iterator if no namespaces have gone
@@ -49,11 +49,11 @@ extern class EndElementEvent extends com.sun.xml.internal.fastinfoset.stax.event
 	* @return an Iterator over Namespace interfaces, or an
 	* empty iterator
 	*/
-	@:overload public function getNamespaces() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getNamespaces() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function addNamespace(namespace : javax.xml.stream.events.Namespace) : Void;
+	@:overload @:public public function addNamespace(namespace : javax.xml.stream.events.Namespace) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

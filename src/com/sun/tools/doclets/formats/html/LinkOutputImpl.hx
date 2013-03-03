@@ -34,22 +34,22 @@ package com.sun.tools.doclets.formats.html;
 	/**
 	* The output of the link.
 	*/
-	public var output : java.lang.StringBuffer;
+	@:public public var output : java.lang.StringBuffer;
 	
 	/**
 	* Construct a new LinkOutputImpl.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function append(o : Dynamic) : Void;
+	@:overload @:public public function append(o : Dynamic) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -31,7 +31,7 @@ extern class JPEGQTable
 	* these values produce "good" quality output.
 	* @see #K1Div2Luminance
 	*/
-	public static var K1Luminance(default, null) : javax.imageio.plugins.jpeg.JPEGQTable;
+	@:public @:static @:final public static var K1Luminance(default, null) : javax.imageio.plugins.jpeg.JPEGQTable;
 	
 	/**
 	* The sample luminance quantization table given in the JPEG
@@ -42,7 +42,7 @@ extern class JPEGQTable
 	* tables and quality settings are used.
 	* @see #K1Luminance
 	*/
-	public static var K1Div2Luminance(default, null) : javax.imageio.plugins.jpeg.JPEGQTable;
+	@:public @:static @:final public static var K1Div2Luminance(default, null) : javax.imageio.plugins.jpeg.JPEGQTable;
 	
 	/**
 	* The sample chrominance quantization table given in the JPEG
@@ -50,7 +50,7 @@ extern class JPEGQTable
 	* these values produce "good" quality output.
 	* @see #K2Div2Chrominance
 	*/
-	public static var K2Chrominance(default, null) : javax.imageio.plugins.jpeg.JPEGQTable;
+	@:public @:static @:final public static var K2Chrominance(default, null) : javax.imageio.plugins.jpeg.JPEGQTable;
 	
 	/**
 	* The sample chrominance quantization table given in the JPEG
@@ -61,7 +61,7 @@ extern class JPEGQTable
 	* tables and quality settings are used.
 	* @see #K2Chrominance
 	*/
-	public static var K2Div2Chrominance(default, null) : javax.imageio.plugins.jpeg.JPEGQTable;
+	@:public @:static @:final public static var K2Div2Chrominance(default, null) : javax.imageio.plugins.jpeg.JPEGQTable;
 	
 	/**
 	* Constructs a quantization table from the argument, which must
@@ -71,14 +71,14 @@ extern class JPEGQTable
 	* @throws IllegalArgumentException if <code>table</code> is
 	* <code>null</code> or <code>table.length</code> is not equal to 64.
 	*/
-	@:overload public function new(table : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(table : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Returns a copy of the current quantization table as an array
 	* of {@code int}s in natural (not zig-zag) order.
 	* @return A copy of the current quantization table.
 	*/
-	@:overload public function getTable() : java.NativeArray<Int>;
+	@:overload @:public public function getTable() : java.NativeArray<Int>;
 	
 	/**
 	* Returns a new quantization table where the values are multiplied
@@ -94,13 +94,13 @@ extern class JPEGQTable
 	* @return a new quantization table that is a linear multiple
 	* of the current table.
 	*/
-	@:overload public function getScaledInstance(scaleFactor : Single, forceBaseline : Bool) : javax.imageio.plugins.jpeg.JPEGQTable;
+	@:overload @:public public function getScaledInstance(scaleFactor : Single, forceBaseline : Bool) : javax.imageio.plugins.jpeg.JPEGQTable;
 	
 	/**
 	* Returns a {@code String} representing this quantization table.
 	* @return a {@code String} representing this quantization table.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

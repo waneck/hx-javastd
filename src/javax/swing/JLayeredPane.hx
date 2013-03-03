@@ -146,19 +146,19 @@ package javax.swing;
 extern class JLayeredPane extends javax.swing.JComponent implements javax.accessibility.Accessible
 {
 	/** Convenience object defining the Default layer. Equivalent to new Integer(0).*/
-	public static var DEFAULT_LAYER(default, null) : Null<Int>;
+	@:public @:final @:static public static var DEFAULT_LAYER(default, null) : Null<Int>;
 	
 	/** Convenience object defining the Palette layer. Equivalent to new Integer(100).*/
-	public static var PALETTE_LAYER(default, null) : Null<Int>;
+	@:public @:final @:static public static var PALETTE_LAYER(default, null) : Null<Int>;
 	
 	/** Convenience object defining the Modal layer. Equivalent to new Integer(200).*/
-	public static var MODAL_LAYER(default, null) : Null<Int>;
+	@:public @:final @:static public static var MODAL_LAYER(default, null) : Null<Int>;
 	
 	/** Convenience object defining the Popup layer. Equivalent to new Integer(300).*/
-	public static var POPUP_LAYER(default, null) : Null<Int>;
+	@:public @:final @:static public static var POPUP_LAYER(default, null) : Null<Int>;
 	
 	/** Convenience object defining the Drag layer. Equivalent to new Integer(400).*/
-	public static var DRAG_LAYER(default, null) : Null<Int>;
+	@:public @:final @:static public static var DRAG_LAYER(default, null) : Null<Int>;
 	
 	/** Convenience object defining the Frame Content layer.
 	* This layer is normally only use to positon the contentPane and menuBar
@@ -166,15 +166,15 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* Equivalent to new Integer(-30000).
 	* @see JFrame
 	*/
-	public static var FRAME_CONTENT_LAYER(default, null) : Null<Int>;
+	@:public @:final @:static public static var FRAME_CONTENT_LAYER(default, null) : Null<Int>;
 	
 	/** Bound property */
-	public static var LAYER_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var LAYER_PROPERTY(default, null) : String;
 	
 	/** Create a new JLayeredPane */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload @:protected override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Remove the indexed component from this pane.
@@ -183,14 +183,14 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @param index  an int specifying the component to remove
 	* @see #getIndexOf
 	*/
-	@:overload override public function remove(index : Int) : Void;
+	@:overload @:public override public function remove(index : Int) : Void;
 	
 	/**
 	* Removes all the components from this container.
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function removeAll() : Void;
+	@:require(java5) @:overload @:public override public function removeAll() : Void;
 	
 	/**
 	* Returns false if components in the pane can overlap, which makes
@@ -199,7 +199,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @return false if components can overlap, else true
 	* @see JComponent#isOptimizedDrawingEnabled
 	*/
-	@:overload public function isOptimizedDrawingEnabled() : Bool;
+	@:overload @:public override public function isOptimizedDrawingEnabled() : Bool;
 	
 	/** Sets the layer property on a JComponent. This method does not cause
 	* any side effects like setLayer() (painting, add/remove, etc).
@@ -210,7 +210,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @param layer  an int specifying the layer to move it to
 	* @see #setLayer
 	*/
-	@:overload public static function putLayer(c : javax.swing.JComponent, layer : Int) : Void;
+	@:overload @:public @:static public static function putLayer(c : javax.swing.JComponent, layer : Int) : Void;
 	
 	/** Gets the layer property for a JComponent, it
 	* does not cause any side effects like setLayer(). (painting, add/remove, etc)
@@ -219,7 +219,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @param c  the JComponent to check
 	* @return   an int specifying the component's layer
 	*/
-	@:native('getLayer') @:overload public static function _getLayer(c : javax.swing.JComponent) : Int;
+	@:native('getLayer') @:overload @:public @:static public static function _getLayer(c : javax.swing.JComponent) : Int;
 	
 	/** Convenience method that returns the first JLayeredPane which
 	* contains the specified component. Note that all JFrames have a
@@ -233,7 +233,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @see JFrame
 	* @see JRootPane
 	*/
-	@:overload public static function getLayeredPaneAbove(c : java.awt.Component) : javax.swing.JLayeredPane;
+	@:overload @:public @:static public static function getLayeredPaneAbove(c : java.awt.Component) : javax.swing.JLayeredPane;
 	
 	/** Sets the layer attribute on the specified component,
 	* making it the bottommost component in that layer.
@@ -243,7 +243,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @param layer an int specifying the layer to set, where
 	*              lower numbers are closer to the bottom
 	*/
-	@:overload public function setLayer(c : java.awt.Component, layer : Int) : Void;
+	@:overload @:public public function setLayer(c : java.awt.Component, layer : Int) : Void;
 	
 	/** Sets the layer attribute for the specified component and
 	* also sets its position within that layer.
@@ -255,7 +255,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	*                  layer, where 0 is the topmost position and -1
 	*                  is the bottommost position
 	*/
-	@:overload public function setLayer(c : java.awt.Component, layer : Int, position : Int) : Void;
+	@:overload @:public public function setLayer(c : java.awt.Component, layer : Int, position : Int) : Void;
 	
 	/**
 	* Returns the layer attribute for the specified Component.
@@ -263,7 +263,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @param c  the Component to check
 	* @return an int specifying the component's current layer
 	*/
-	@:overload public function getLayer(c : java.awt.Component) : Int;
+	@:overload @:public public function getLayer(c : java.awt.Component) : Int;
 	
 	/**
 	* Returns the index of the specified Component.
@@ -274,7 +274,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @param c  the Component to check
 	* @return an int specifying the component's index
 	*/
-	@:overload public function getIndexOf(c : java.awt.Component) : Int;
+	@:overload @:public public function getIndexOf(c : java.awt.Component) : Int;
 	
 	/**
 	* Moves the component to the top of the components in its current layer
@@ -283,7 +283,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @param c the Component to move
 	* @see #setPosition(Component, int)
 	*/
-	@:overload public function moveToFront(c : java.awt.Component) : Void;
+	@:overload @:public public function moveToFront(c : java.awt.Component) : Void;
 	
 	/**
 	* Moves the component to the bottom of the components in its current layer
@@ -292,7 +292,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @param c the Component to move
 	* @see #setPosition(Component, int)
 	*/
-	@:overload public function moveToBack(c : java.awt.Component) : Void;
+	@:overload @:public public function moveToBack(c : java.awt.Component) : Void;
 	
 	/**
 	* Moves the component to <code>position</code> within its current layer,
@@ -308,7 +308,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @param position  an int in the range -1..N-1, where N is the number of
 	*                  components in the component's current layer
 	*/
-	@:overload public function setPosition(c : java.awt.Component, position : Int) : Void;
+	@:overload @:public public function setPosition(c : java.awt.Component, position : Int) : Void;
 	
 	/**
 	* Get the relative position of the component within its layer.
@@ -320,7 +320,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	*
 	* @see #getComponentCountInLayer
 	*/
-	@:overload public function getPosition(c : java.awt.Component) : Int;
+	@:overload @:public public function getPosition(c : java.awt.Component) : Int;
 	
 	/** Returns the highest layer value from all current children.
 	* Returns 0 if there are no children.
@@ -328,7 +328,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @return an int indicating the layer of the topmost component in the
 	*         pane, or zero if there are no children
 	*/
-	@:overload public function highestLayer() : Int;
+	@:overload @:public public function highestLayer() : Int;
 	
 	/** Returns the lowest layer value from all current children.
 	* Returns 0 if there are no children.
@@ -336,7 +336,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @return an int indicating the layer of the bottommost component in the
 	*         pane, or zero if there are no children
 	*/
-	@:overload public function lowestLayer() : Int;
+	@:overload @:public public function lowestLayer() : Int;
 	
 	/**
 	* Returns the number of children currently in the specified layer.
@@ -344,7 +344,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @param layer  an int specifying the layer to check
 	* @return an int specifying the number of components in that layer
 	*/
-	@:overload public function getComponentCountInLayer(layer : Int) : Int;
+	@:overload @:public public function getComponentCountInLayer(layer : Int) : Int;
 	
 	/**
 	* Returns an array of the components in the specified layer.
@@ -352,21 +352,21 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @param layer  an int specifying the layer to check
 	* @return an array of Components contained in that layer
 	*/
-	@:overload public function getComponentsInLayer(layer : Int) : java.NativeArray<java.awt.Component>;
+	@:overload @:public public function getComponentsInLayer(layer : Int) : java.NativeArray<java.awt.Component>;
 	
 	/**
 	* Paints this JLayeredPane within the specified graphics context.
 	*
 	* @param g  the Graphics context within which to paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Returns the hashtable that maps components to layers.
 	*
 	* @return the Hashtable used to map components to their layers
 	*/
-	@:overload private function getComponentToLayer() : java.util.Hashtable<java.awt.Component, Null<Int>>;
+	@:overload @:protected private function getComponentToLayer() : java.util.Hashtable<java.awt.Component, Null<Int>>;
 	
 	/**
 	* Returns the Integer object associated with a specified layer.
@@ -374,7 +374,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @param layer an int specifying the layer
 	* @return an Integer object for that layer
 	*/
-	@:overload private function getObjectForLayer(layer : Int) : Null<Int>;
+	@:overload @:protected private function getObjectForLayer(layer : Int) : Null<Int>;
 	
 	/**
 	* Primitive method that determines the proper location to
@@ -386,7 +386,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	*
 	* @see #getIndexOf
 	*/
-	@:overload private function insertIndexForLayer(layer : Int, position : Int) : Int;
+	@:overload @:protected private function insertIndexForLayer(layer : Int, position : Int) : Int;
 	
 	/**
 	* Returns a string representation of this JLayeredPane. This method
@@ -397,7 +397,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	*
 	* @return  a string representation of this JLayeredPane.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JLayeredPane.
@@ -408,7 +408,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @return an AccessibleJLayeredPane that serves as the
 	*         AccessibleContext of this JLayeredPane
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -436,7 +436,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

@@ -28,23 +28,23 @@ extern class Main
 	/**
 	* Construct a compiler instance.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Construct a compiler instance.
 	*/
-	@:overload public function new(name : String, out : java.io.PrintWriter) : Void;
+	@:overload @:public public function new(name : String, out : java.io.PrintWriter) : Void;
 	
 	/** Process command line arguments: store all command line options
 	*  in `options' table and return all source filenames.
 	*  @param args    The array of command line arguments.
 	*/
-	@:overload private function processArgs(flags : java.NativeArray<String>) : java.util.List<String>;
+	@:overload @:protected private function processArgs(flags : java.NativeArray<String>) : java.util.List<String>;
 	
 	/** Programmatic interface for main function.
 	* @param args    The command line parameters.
 	*/
-	@:overload public function compile(args : java.NativeArray<String>, factory : com.sun.mirror.apt.AnnotationProcessorFactory) : Int;
+	@:overload @:public public function compile(args : java.NativeArray<String>, factory : com.sun.mirror.apt.AnnotationProcessorFactory) : Int;
 	
 	
 }
@@ -52,7 +52,7 @@ extern class Main
 */
 @:native('com$sun$tools$apt$main$Main$Option') @:internal extern class Main_Option
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

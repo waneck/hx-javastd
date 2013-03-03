@@ -30,113 +30,113 @@ See https://glassfish.dev.java.net/nonav/v3/admin/planning/V3Changes/V3_AMX_SPI.
 extern class AMX
 {
 	/** Attribute yielding the ObjectName of the parent MBean */
-	public static var ATTR_PARENT(default, null) : String;
+	@:public @:static @:final public static var ATTR_PARENT(default, null) : String;
 	
 	/** Attribute yielding the children as an ObjectName[] */
-	public static var ATTR_CHILDREN(default, null) : String;
+	@:public @:static @:final public static var ATTR_CHILDREN(default, null) : String;
 	
 	/** Attribute yielding the name of the MBean,
 	possibly differing from the name as found in the ObjectName via the
 	property {@link #NAME_KEY} */
-	public static var ATTR_NAME(default, null) : String;
+	@:public @:static @:final public static var ATTR_NAME(default, null) : String;
 	
 	/** ObjectName property for the type */
-	public static var TYPE_KEY(default, null) : String;
+	@:public @:static @:final public static var TYPE_KEY(default, null) : String;
 	
 	/** ObjectName property for the name */
-	public static var NAME_KEY(default, null) : String;
+	@:public @:static @:final public static var NAME_KEY(default, null) : String;
 	
 	/** Implied name for singletons when the name property is not present */
-	public static var NO_NAME(default, null) : String;
+	@:public @:static @:final public static var NO_NAME(default, null) : String;
 	
 	/**
 	The ObjectName property key denoting the path of the parent MBean.
 	Serves to disambiguitate the ObjectName from others
 	that might have the same type and/or name elsewhere in the hierarchy.
 	*/
-	public static var PARENT_PATH_KEY(default, null) : String;
+	@:public @:static @:final public static var PARENT_PATH_KEY(default, null) : String;
 	
 	/** Prefix for AMX descriptor fields */
-	public static var DESC_PREFIX(default, null) : String;
+	@:public @:static @:final public static var DESC_PREFIX(default, null) : String;
 	
 	/** Prefix for AMX notification types */
-	public static var NOTIFICATION_PREFIX(default, null) : String;
+	@:public @:static @:final public static var NOTIFICATION_PREFIX(default, null) : String;
 	
 	/**
 	Descriptor value defined by JMX standard: whether the MBeanInfo is *invariant* (immutable is a misnomer).
 	*/
-	public static var DESC_STD_IMMUTABLE_INFO(default, null) : String;
+	@:public @:static @:final public static var DESC_STD_IMMUTABLE_INFO(default, null) : String;
 	
 	/**
 	Descriptor value defined by JMX standard, the classname of the interface for the MBean.
 	Mainly advisory, since client code might not have access to the class.
 	*/
-	public static var DESC_STD_INTERFACE_NAME(default, null) : String;
+	@:public @:static @:final public static var DESC_STD_INTERFACE_NAME(default, null) : String;
 	
 	/**
 	Descriptor value: The generic AMX interface to be used if the class found in {@link #DESC_STD_INTERFACE_NAME}
 	cannot be loaded.  The class specified here must reside in the amx-core
 	module eg com.sun.org.glassfish.admin.amx.core eg AMXProxy or AMXConfigProxy.
 	*/
-	public static var DESC_GENERIC_INTERFACE_NAME(default, null) : String;
+	@:public @:static @:final public static var DESC_GENERIC_INTERFACE_NAME(default, null) : String;
 	
 	/**
 	Descriptor value: whether the MBean is a singleton, in spite of having a name property in its ObjectName.
 	This is mainly for compatibility; named singletons are strongly discouraged.
 	*/
-	public static var DESC_IS_SINGLETON(default, null) : String;
+	@:public @:static @:final public static var DESC_IS_SINGLETON(default, null) : String;
 	
 	/**
 	Descriptor value: whether the MBean is a global singleton eg whether in the AMX domain
 	it can be looked up by its type and is the only MBean of that type.
 	*/
-	public static var DESC_IS_GLOBAL_SINGLETON(default, null) : String;
+	@:public @:static @:final public static var DESC_IS_GLOBAL_SINGLETON(default, null) : String;
 	
 	/**
 	Descriptor value: Arbitrary string denoting the general classification of MBean.
 	Predefined values include "configuration", "monitoring", "jsr77", "utility", "other".
 	*/
-	public static var DESC_GROUP(default, null) : String;
+	@:public @:static @:final public static var DESC_GROUP(default, null) : String;
 	
 	/**
 	Descriptor value: whether new children may be added by code other than the implementation responsible for the MBean;
 	this allows extension points within the hierarchy.
 	Adding a new child means registering an MBean with an ObjectName that implies parentage via the ancestry type=name pairs.
 	*/
-	public static var DESC_SUPPORTS_ADOPTION(default, null) : String;
+	@:public @:static @:final public static var DESC_SUPPORTS_ADOPTION(default, null) : String;
 	
 	/**
 	Descriptor value: denotes the possible types of MBeans that children might be. If present, SHOULD include all possible and pre-known types.
 	An empty array indicates that child MBeans might exist, but their types cannot be predicted.
 	*/
-	public static var DESC_SUB_TYPES(default, null) : String;
+	@:public @:static @:final public static var DESC_SUB_TYPES(default, null) : String;
 	
 	/**
 	Group value indicating that the AMX is a configuration MBean.
 	*/
-	public static var GROUP_CONFIGURATION(default, null) : String;
+	@:public @:static @:final public static var GROUP_CONFIGURATION(default, null) : String;
 	
 	/**
 	Group value indicating that the AMX represents a monitoring MBean.
 	*/
-	public static var GROUP_MONITORING(default, null) : String;
+	@:public @:static @:final public static var GROUP_MONITORING(default, null) : String;
 	
 	/**
 	Group value indicating that the AMX is a utility MBean.
 	*/
-	public static var GROUP_UTILITY(default, null) : String;
+	@:public @:static @:final public static var GROUP_UTILITY(default, null) : String;
 	
 	/**
 	Group value indicating that the AMX is a JSR 77 MBean
 	(J2EE Management) .
 	*/
-	public static var GROUP_JSR77(default, null) : String;
+	@:public @:static @:final public static var GROUP_JSR77(default, null) : String;
 	
 	/**
 	Group value indicating that the AMX is not one
 	of the other types.
 	*/
-	public static var GROUP_OTHER(default, null) : String;
+	@:public @:static @:final public static var GROUP_OTHER(default, null) : String;
 	
 	
 }

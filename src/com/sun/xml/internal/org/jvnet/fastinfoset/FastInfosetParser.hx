@@ -37,14 +37,14 @@ extern interface FastInfosetParser
 	*
 	* @param stringInterning The string interning property.
 	*/
-	@:overload public function setStringInterning(stringInterning : Bool) : Void;
+	@:overload @:public public function setStringInterning(stringInterning : Bool) : Void;
 	
 	/**
 	* Return the string interning property.
 	*
 	* @return The string interning property.
 	*/
-	@:overload public function getStringInterning() : Bool;
+	@:overload @:public public function getStringInterning() : Bool;
 	
 	/**
 	* Set the buffer size.
@@ -55,28 +55,28 @@ extern interface FastInfosetParser
 	*
 	* @param bufferSize The requested buffer size.
 	*/
-	@:overload public function setBufferSize(bufferSize : Int) : Void;
+	@:overload @:public public function setBufferSize(bufferSize : Int) : Void;
 	
 	/**
 	* Get the buffer size.
 	*
 	* @return The buffer size.
 	*/
-	@:overload public function getBufferSize() : Int;
+	@:overload @:public public function getBufferSize() : Int;
 	
 	/**
 	* Sets the set of registered encoding algorithms.
 	*
 	* @param algorithms The set of registered algorithms.
 	*/
-	@:overload public function setRegisteredEncodingAlgorithms(algorithms : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function setRegisteredEncodingAlgorithms(algorithms : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Gets the set of registered encoding algorithms.
 	*
 	* @return The set of registered algorithms.
 	*/
-	@:overload public function getRegisteredEncodingAlgorithms() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function getRegisteredEncodingAlgorithms() : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* Set the map of referenced external vocabularies.
@@ -85,7 +85,7 @@ extern interface FastInfosetParser
 	*
 	* @param referencedVocabualries the map of URI to vocabulary.
 	*/
-	@:overload public function setExternalVocabularies(referencedVocabualries : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function setExternalVocabularies(referencedVocabualries : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Get the map of referenced external vocabularies.
@@ -96,7 +96,7 @@ extern interface FastInfosetParser
 	*     the same entries as the map set by {@link #setExternalVocabularies}
 	*     method.
 	*/
-	@:overload public function getExternalVocabularies() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function getExternalVocabularies() : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* Set the parse fragments property.
@@ -106,14 +106,14 @@ extern interface FastInfosetParser
 	*
 	* @param parseFragments The parse fragments property.
 	*/
-	@:overload public function setParseFragments(parseFragments : Bool) : Void;
+	@:overload @:public public function setParseFragments(parseFragments : Bool) : Void;
 	
 	/**
 	* Return the parse fragments property.
 	*
 	* @return The parse fragments property.
 	*/
-	@:overload public function getParseFragments() : Bool;
+	@:overload @:public public function getParseFragments() : Bool;
 	
 	/**
 	* Set the force stream close property.
@@ -123,14 +123,14 @@ extern interface FastInfosetParser
 	*
 	* @param needForceStreamClose The force stream close property.
 	*/
-	@:overload public function setForceStreamClose(needForceStreamClose : Bool) : Void;
+	@:overload @:public public function setForceStreamClose(needForceStreamClose : Bool) : Void;
 	
 	/**
 	* Return the force stream close property.
 	*
 	* @return The force stream close property.
 	*/
-	@:overload public function getForceStreamClose() : Bool;
+	@:overload @:public public function getForceStreamClose() : Bool;
 	
 	
 }

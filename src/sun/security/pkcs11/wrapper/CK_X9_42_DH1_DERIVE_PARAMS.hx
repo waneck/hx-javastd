@@ -69,7 +69,7 @@ extern class CK_X9_42_DH1_DERIVE_PARAMS
 	*   CK_X9_42_DH_KDF_TYPE kdf;
 	* </PRE>
 	*/
-	public var kdf : haxe.Int64;
+	@:public public var kdf : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -78,7 +78,7 @@ extern class CK_X9_42_DH1_DERIVE_PARAMS
 	*   CK_BYTE_PTR pOtherInfo;
 	* </PRE>
 	*/
-	public var pOtherInfo : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var pOtherInfo : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -87,14 +87,14 @@ extern class CK_X9_42_DH1_DERIVE_PARAMS
 	*   CK_BYTE_PTR pPublicData;
 	* </PRE>
 	*/
-	public var pPublicData : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var pPublicData : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the string representation of CK_PKCS5_PBKD2_PARAMS.
 	*
 	* @return the string representation of CK_PKCS5_PBKD2_PARAMS
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

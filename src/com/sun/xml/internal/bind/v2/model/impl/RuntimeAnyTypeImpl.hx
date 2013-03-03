@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 */
 @:internal extern class RuntimeAnyTypeImpl extends com.sun.xml.internal.bind.v2.model.impl.AnyTypeImpl<java.lang.reflect.Type, Class<Dynamic>> implements com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement
 {
-	@:overload public function getTransducer<V>() : com.sun.xml.internal.bind.v2.runtime.Transducer<V>;
+	@:overload @:public public function getTransducer<V>() : com.sun.xml.internal.bind.v2.runtime.Transducer<V>;
 	
 	
 }

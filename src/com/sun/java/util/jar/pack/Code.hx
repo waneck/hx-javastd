@@ -29,19 +29,19 @@ package com.sun.java.util.jar.pack;
 */
 @:internal extern class Code extends com.sun.java.util.jar.pack.Attribute.Attribute_Holder
 {
-	@:overload public function new(m : com.sun.java.util.jar.pack.Package.Package_Class_Method) : Void;
+	@:overload @:public public function new(m : com.sun.java.util.jar.pack.Package.Package_Class_Method) : Void;
 	
-	@:overload public function getMethod() : com.sun.java.util.jar.pack.Package.Package_Class_Method;
+	@:overload @:public public function getMethod() : com.sun.java.util.jar.pack.Package.Package_Class_Method;
 	
-	@:overload public function thisClass() : com.sun.java.util.jar.pack.Package.Package_Class;
+	@:overload @:public public function thisClass() : com.sun.java.util.jar.pack.Package.Package_Class;
 	
-	@:overload public function getPackage() : com.sun.java.util.jar.pack.Package;
+	@:overload @:public public function getPackage() : com.sun.java.util.jar.pack.Package;
 	
-	@:overload public function getCPMap() : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>;
+	@:overload @:public override public function getCPMap() : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>;
 	
-	@:overload public function trimToSize() : Void;
+	@:overload @:public override public function trimToSize() : Void;
 	
-	@:overload private function visitRefs(mode : Int, refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
+	@:overload @:protected override private function visitRefs(mode : Int, refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
 	
 	/** Encode the given BCI as an instruction boundary number.
 	*  For completeness, irregular (non-boundary) BCIs are
@@ -50,19 +50,19 @@ package com.sun.java.util.jar.pack;
 	*  and it is 1-1 everywhere.  All by itself this technique
 	*  improved zipped rt.jar compression by 2.6%.
 	*/
-	@:overload public function encodeBCI(bci : Int) : Int;
+	@:overload @:public public function encodeBCI(bci : Int) : Int;
 	
-	@:overload public function decodeBCI(bciCode : Int) : Int;
+	@:overload @:public public function decodeBCI(bciCode : Int) : Int;
 	
-	@:overload public function finishRefs(ix : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index) : Void;
+	@:overload @:public public function finishRefs(ix : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getInt(pc : Int) : Int;
+	@:overload @:public public function getInt(pc : Int) : Int;
 	
-	@:overload public function getShort(pc : Int) : Int;
+	@:overload @:public public function getShort(pc : Int) : Int;
 	
-	@:overload public function getByte(pc : Int) : Int;
+	@:overload @:public public function getByte(pc : Int) : Int;
 	
 	
 }

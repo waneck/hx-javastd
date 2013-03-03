@@ -45,7 +45,7 @@ package sun.nio.ch;
 */
 @:native('sun$nio$ch$EPollPort$EventHandlerTask') @:internal extern class EPollPort_EventHandlerTask implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

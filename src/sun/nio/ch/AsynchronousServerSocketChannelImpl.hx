@@ -28,33 +28,33 @@ package sun.nio.ch;
 	/**
 	* Base implementation of AsynchronousServerSocketChannel.
 	*/
-	private var fd(default, null) : java.io.FileDescriptor;
+	@:protected @:final private var fd(default, null) : java.io.FileDescriptor;
 	
-	@:volatile private var localAddress : java.net.SocketAddress;
+	@:protected @:volatile private var localAddress : java.net.SocketAddress;
 	
-	@:overload @:final override public function isOpen() : Bool;
+	@:overload @:public @:final override public function isOpen() : Bool;
 	
-	@:overload @:final override public function close() : Void;
+	@:overload @:public @:final override public function close() : Void;
 	
-	@:overload @:final override public function accept() : java.util.concurrent.Future<java.nio.channels.AsynchronousSocketChannel>;
+	@:overload @:public @:final override public function accept() : java.util.concurrent.Future<java.nio.channels.AsynchronousSocketChannel>;
 	
-	@:overload @:final override public function accept<A>(attachment : A, handler : java.nio.channels.CompletionHandler<java.nio.channels.AsynchronousSocketChannel, A>) : Void;
+	@:overload @:public @:final override public function accept<A>(attachment : A, handler : java.nio.channels.CompletionHandler<java.nio.channels.AsynchronousSocketChannel, A>) : Void;
 	
-	@:overload @:final public function onCancel(task : sun.nio.ch.PendingFuture<Dynamic, Dynamic>) : Void;
+	@:overload @:public @:final public function onCancel(task : sun.nio.ch.PendingFuture<Dynamic, Dynamic>) : Void;
 	
-	@:overload @:final override public function bind(local : java.net.SocketAddress, backlog : Int) : java.nio.channels.AsynchronousServerSocketChannel;
+	@:overload @:public @:final override public function bind(local : java.net.SocketAddress, backlog : Int) : java.nio.channels.AsynchronousServerSocketChannel;
 	
-	@:overload @:final override public function getLocalAddress() : java.net.SocketAddress;
+	@:overload @:public @:final override public function getLocalAddress() : java.net.SocketAddress;
 	
-	@:overload @:final override public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.AsynchronousServerSocketChannel;
+	@:overload @:public @:final override public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.AsynchronousServerSocketChannel;
 	
-	@:overload @:final override public function getOption<T>(name : java.net.SocketOption<T>) : T;
+	@:overload @:public @:final override public function getOption<T>(name : java.net.SocketOption<T>) : T;
 	
-	@:overload @:final override public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
+	@:overload @:public @:final override public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
 	
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
-	@:overload public function group() : sun.nio.ch.AsynchronousChannelGroupImpl;
+	@:overload @:public public function group() : sun.nio.ch.AsynchronousChannelGroupImpl;
 	
 	
 }

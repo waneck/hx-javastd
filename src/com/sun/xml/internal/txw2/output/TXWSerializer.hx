@@ -31,31 +31,31 @@ extern class TXWSerializer implements com.sun.xml.internal.txw2.output.XmlSerial
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	public var txw(default, null) : com.sun.xml.internal.txw2.TypedXmlWriter;
+	@:public @:final public var txw(default, null) : com.sun.xml.internal.txw2.TypedXmlWriter;
 	
-	@:overload public function new(txw : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
+	@:overload @:public public function new(txw : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
-	@:overload public function beginStartTag(uri : String, localName : String, prefix : String) : Void;
+	@:overload @:public public function beginStartTag(uri : String, localName : String, prefix : String) : Void;
 	
-	@:overload public function writeAttribute(uri : String, localName : String, prefix : String, value : java.lang.StringBuilder) : Void;
+	@:overload @:public public function writeAttribute(uri : String, localName : String, prefix : String, value : java.lang.StringBuilder) : Void;
 	
-	@:overload public function writeXmlns(prefix : String, uri : String) : Void;
+	@:overload @:public public function writeXmlns(prefix : String, uri : String) : Void;
 	
-	@:overload public function endStartTag(uri : String, localName : String, prefix : String) : Void;
+	@:overload @:public public function endStartTag(uri : String, localName : String, prefix : String) : Void;
 	
-	@:overload public function endTag() : Void;
+	@:overload @:public public function endTag() : Void;
 	
-	@:overload public function text(text : java.lang.StringBuilder) : Void;
+	@:overload @:public public function text(text : java.lang.StringBuilder) : Void;
 	
-	@:overload public function cdata(text : java.lang.StringBuilder) : Void;
+	@:overload @:public public function cdata(text : java.lang.StringBuilder) : Void;
 	
-	@:overload public function comment(comment : java.lang.StringBuilder) : Void;
+	@:overload @:public public function comment(comment : java.lang.StringBuilder) : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	
 }

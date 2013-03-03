@@ -30,10 +30,10 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	* event's only (read-only) state is the source property.  The source
 	* of events generated here is always "this".
 	*/
-	@:transient private var changeEvent : javax.swing.event.ChangeEvent;
+	@:protected @:transient private var changeEvent : javax.swing.event.ChangeEvent;
 	
 	/** The listeners waiting for model changes. */
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
 	/**
 	* Initializes all of the properties with default values.
@@ -46,7 +46,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	* <li><code>adjusting</code> = false
 	* </ul>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Initializes value, extent, minimum and maximum. Adjusting is false.
@@ -56,7 +56,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	* min &lt;= value &lt;= value+extent &lt;= max
 	* </pre>
 	*/
-	@:overload public function new(value : Int, extent : Int, min : Int, max : Int) : Void;
+	@:overload @:public public function new(value : Int, extent : Int, min : Int, max : Int) : Void;
 	
 	/**
 	* Returns the model's current value.
@@ -64,7 +64,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	* @see #setValue
 	* @see BoundedRangeModel#getValue
 	*/
-	@:overload public function getValue() : Int;
+	@:overload @:public public function getValue() : Int;
 	
 	/**
 	* Returns the model's extent.
@@ -72,7 +72,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	* @see #setExtent
 	* @see BoundedRangeModel#getExtent
 	*/
-	@:overload public function getExtent() : Int;
+	@:overload @:public public function getExtent() : Int;
 	
 	/**
 	* Returns the model's minimum.
@@ -80,7 +80,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	* @see #setMinimum
 	* @see BoundedRangeModel#getMinimum
 	*/
-	@:overload public function getMinimum() : Int;
+	@:overload @:public public function getMinimum() : Int;
 	
 	/**
 	* Returns the model's maximum.
@@ -88,7 +88,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	* @see #setMaximum
 	* @see BoundedRangeModel#getMaximum
 	*/
-	@:overload public function getMaximum() : Int;
+	@:overload @:public public function getMaximum() : Int;
 	
 	/**
 	* Sets the current value of the model. For a slider, that
@@ -100,7 +100,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	*
 	* @see BoundedRangeModel#setValue
 	*/
-	@:overload public function setValue(n : Int) : Void;
+	@:overload @:public public function setValue(n : Int) : Void;
 	
 	/**
 	* Sets the extent to <I>n</I> after ensuring that <I>n</I>
@@ -111,7 +111,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	* </pre>
 	* @see BoundedRangeModel#setExtent
 	*/
-	@:overload public function setExtent(n : Int) : Void;
+	@:overload @:public public function setExtent(n : Int) : Void;
 	
 	/**
 	* Sets the minimum to <I>n</I> after ensuring that <I>n</I>
@@ -122,7 +122,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	* @see #getMinimum
 	* @see BoundedRangeModel#setMinimum
 	*/
-	@:overload public function setMinimum(n : Int) : Void;
+	@:overload @:public public function setMinimum(n : Int) : Void;
 	
 	/**
 	* Sets the maximum to <I>n</I> after ensuring that <I>n</I>
@@ -132,7 +132,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	* </pre>
 	* @see BoundedRangeModel#setMaximum
 	*/
-	@:overload public function setMaximum(n : Int) : Void;
+	@:overload @:public public function setMaximum(n : Int) : Void;
 	
 	/**
 	* Sets the <code>valueIsAdjusting</code> property.
@@ -141,7 +141,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	* @see #setValue
 	* @see BoundedRangeModel#setValueIsAdjusting
 	*/
-	@:overload public function setValueIsAdjusting(b : Bool) : Void;
+	@:overload @:public public function setValueIsAdjusting(b : Bool) : Void;
 	
 	/**
 	* Returns true if the value is in the process of changing
@@ -151,7 +151,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	* @see #setValue
 	* @see BoundedRangeModel#getValueIsAdjusting
 	*/
-	@:overload public function getValueIsAdjusting() : Bool;
+	@:overload @:public public function getValueIsAdjusting() : Bool;
 	
 	/**
 	* Sets all of the <code>BoundedRangeModel</code> properties after forcing
@@ -169,7 +169,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	* @see #setMaximum
 	* @see #setValueIsAdjusting
 	*/
-	@:overload public function setRangeProperties(newValue : Int, newExtent : Int, newMin : Int, newMax : Int, adjusting : Bool) : Void;
+	@:overload @:public public function setRangeProperties(newValue : Int, newExtent : Int, newMin : Int, newMax : Int, adjusting : Bool) : Void;
 	
 	/**
 	* Adds a <code>ChangeListener</code>.  The change listeners are run each
@@ -179,7 +179,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	* @see #removeChangeListener
 	* @see BoundedRangeModel#addChangeListener
 	*/
-	@:overload public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Removes a <code>ChangeListener</code>.
@@ -188,7 +188,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	* @see #addChangeListener
 	* @see BoundedRangeModel#removeChangeListener
 	*/
-	@:overload public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the change listeners
@@ -203,7 +203,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
+	@:require(java4) @:overload @:public public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
 	
 	/**
 	* Runs each <code>ChangeListener</code>'s <code>stateChanged</code> method.
@@ -211,13 +211,13 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	* @see #setRangeProperties
 	* @see EventListenerList
 	*/
-	@:overload private function fireStateChanged() : Void;
+	@:overload @:protected private function fireStateChanged() : Void;
 	
 	/**
 	* Returns a string that displays all of the
 	* <code>BoundedRangeModel</code> properties.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns an array of all the objects currently registered as
@@ -254,7 +254,7 @@ extern class DefaultBoundedRangeModel implements javax.swing.BoundedRangeModel i
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	
 }

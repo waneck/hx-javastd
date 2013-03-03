@@ -83,7 +83,7 @@ package com.sun.jdi;
 	* @param name Permission name. Must be "virtualMachineManager".
 	* @throws IllegalArgumentException if the name argument is invalid.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Constructs a new JDIPermission object.
@@ -92,7 +92,7 @@ package com.sun.jdi;
 	* @param actions Must be either null or the empty string.
 	* @throws IllegalArgumentException if arguments are invalid.
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	
 }

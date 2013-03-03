@@ -38,7 +38,7 @@ extern interface DTMFilter
 	* @param whatToShow one of SHOW_XXX values.
 	* @return one of FILTER_ACCEPT, FILTER_REJECT, or FILTER_SKIP.
 	*/
-	@:overload public function acceptNode(nodeHandle : Int, whatToShow : Int) : java.StdTypes.Int16;
+	@:overload @:public public function acceptNode(nodeHandle : Int, whatToShow : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Test whether a specified node is visible in the logical view of a
@@ -70,7 +70,7 @@ extern interface DTMFilter
 	*                     by 0xFFFF in the namespace and/or localname
 	*                     portion of the expandedName.
 	* @return one of FILTER_ACCEPT, FILTER_REJECT, or FILTER_SKIP.  */
-	@:overload public function acceptNode(nodeHandle : Int, whatToShow : Int, expandedName : Int) : java.StdTypes.Int16;
+	@:overload @:public public function acceptNode(nodeHandle : Int, whatToShow : Int, expandedName : Int) : java.StdTypes.Int16;
 	
 	
 }

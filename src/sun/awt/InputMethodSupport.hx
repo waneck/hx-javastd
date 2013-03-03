@@ -28,7 +28,7 @@ extern interface InputMethodSupport
 	/**
 	* Returns a new input method adapter descriptor for native input methods.
 	*/
-	@:overload public function getInputMethodAdapterDescriptor() : java.awt.im.spi.InputMethodDescriptor;
+	@:overload @:public public function getInputMethodAdapterDescriptor() : java.awt.im.spi.InputMethodDescriptor;
 	
 	/**
 	* Returns a new input method window for the platform

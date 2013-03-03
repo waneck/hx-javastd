@@ -34,60 +34,60 @@ package sun.awt.image;
 */
 extern class SunVolatileImage extends java.awt.image.VolatileImage implements sun.java2d.DestSurfaceProvider
 {
-	private var volSurfaceManager : sun.awt.image.VolatileSurfaceManager;
+	@:protected private var volSurfaceManager : sun.awt.image.VolatileSurfaceManager;
 	
-	private var comp : java.awt.Component;
+	@:protected private var comp : java.awt.Component;
 	
-	@:overload private function new(comp : java.awt.Component, graphicsConfig : java.awt.GraphicsConfiguration, width : Int, height : Int, context : Dynamic, transparency : Int, caps : java.awt.ImageCapabilities, accType : Int) : Void;
+	@:overload @:protected private function new(comp : java.awt.Component, graphicsConfig : java.awt.GraphicsConfiguration, width : Int, height : Int, context : Dynamic, transparency : Int, caps : java.awt.ImageCapabilities, accType : Int) : Void;
 	
-	@:overload public function new(comp : java.awt.Component, width : Int, height : Int) : Void;
+	@:overload @:public public function new(comp : java.awt.Component, width : Int, height : Int) : Void;
 	
-	@:overload public function new(comp : java.awt.Component, width : Int, height : Int, context : Dynamic) : Void;
+	@:overload @:public public function new(comp : java.awt.Component, width : Int, height : Int, context : Dynamic) : Void;
 	
-	@:overload public function new(graphicsConfig : java.awt.GraphicsConfiguration, width : Int, height : Int, transparency : Int, caps : java.awt.ImageCapabilities) : Void;
+	@:overload @:public public function new(graphicsConfig : java.awt.GraphicsConfiguration, width : Int, height : Int, transparency : Int, caps : java.awt.ImageCapabilities) : Void;
 	
-	@:overload override public function getWidth() : Int;
+	@:overload @:public override public function getWidth() : Int;
 	
-	@:overload override public function getHeight() : Int;
+	@:overload @:public override public function getHeight() : Int;
 	
-	@:overload public function getGraphicsConfig() : java.awt.GraphicsConfiguration;
+	@:overload @:public public function getGraphicsConfig() : java.awt.GraphicsConfiguration;
 	
-	@:overload public function updateGraphicsConfig() : Void;
+	@:overload @:public public function updateGraphicsConfig() : Void;
 	
-	@:overload public function getComponent() : java.awt.Component;
+	@:overload @:public public function getComponent() : java.awt.Component;
 	
-	@:overload public function getForcedAccelSurfaceType() : Int;
+	@:overload @:public public function getForcedAccelSurfaceType() : Int;
 	
-	@:overload private function createSurfaceManager(context : Dynamic, caps : java.awt.ImageCapabilities) : sun.awt.image.VolatileSurfaceManager;
+	@:overload @:protected private function createSurfaceManager(context : Dynamic, caps : java.awt.ImageCapabilities) : sun.awt.image.VolatileSurfaceManager;
 	
-	@:overload override public function createGraphics() : java.awt.Graphics2D;
+	@:overload @:public override public function createGraphics() : java.awt.Graphics2D;
 	
-	@:overload public function getProperty(name : String, observer : java.awt.image.ImageObserver) : Dynamic;
+	@:overload @:public override public function getProperty(name : String, observer : java.awt.image.ImageObserver) : Dynamic;
 	
-	@:overload public function getWidth(observer : java.awt.image.ImageObserver) : Int;
+	@:overload @:public override public function getWidth(observer : java.awt.image.ImageObserver) : Int;
 	
-	@:overload public function getHeight(observer : java.awt.image.ImageObserver) : Int;
+	@:overload @:public override public function getHeight(observer : java.awt.image.ImageObserver) : Int;
 	
 	/**
 	* This method creates a BufferedImage intended for use as a "snapshot"
 	* or a backup surface.
 	*/
-	@:overload public function getBackupImage() : java.awt.image.BufferedImage;
+	@:overload @:public public function getBackupImage() : java.awt.image.BufferedImage;
 	
-	@:overload override public function getSnapshot() : java.awt.image.BufferedImage;
+	@:overload @:public override public function getSnapshot() : java.awt.image.BufferedImage;
 	
-	@:overload override public function validate(gc : java.awt.GraphicsConfiguration) : Int;
+	@:overload @:public override public function validate(gc : java.awt.GraphicsConfiguration) : Int;
 	
-	@:overload override public function contentsLost() : Bool;
+	@:overload @:public override public function contentsLost() : Bool;
 	
-	@:overload override public function getCapabilities() : java.awt.ImageCapabilities;
+	@:overload @:public override public function getCapabilities() : java.awt.ImageCapabilities;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @see sun.java2d.DestSurfaceProvider#getDestSurface
 	*/
-	@:overload public function getDestSurface() : sun.java2d.Surface;
+	@:overload @:public public function getDestSurface() : sun.java2d.Surface;
 	
 	
 }

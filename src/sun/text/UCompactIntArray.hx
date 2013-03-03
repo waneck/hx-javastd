@@ -29,16 +29,16 @@ extern class UCompactIntArray implements java.lang.Cloneable
 	* Default constructor for UCompactIntArray, the default value of the
 	* compact array is 0.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(defaultValue : Int) : Void;
+	@:overload @:public public function new(defaultValue : Int) : Void;
 	
 	/**
 	* Get the mapped value of a Unicode character.
 	* @param index the character to get the mapped value with
 	* @return the mapped value of the given character
 	*/
-	@:overload public function elementAt(index : Int) : Int;
+	@:overload @:public public function elementAt(index : Int) : Int;
 	
 	/**
 	* Set a new value for a Unicode character.
@@ -46,14 +46,14 @@ extern class UCompactIntArray implements java.lang.Cloneable
 	* @param index the character to set the mapped value with
 	* @param value the new mapped value
 	*/
-	@:overload public function setElementAt(index : Int, value : Int) : Void;
+	@:overload @:public public function setElementAt(index : Int, value : Int) : Void;
 	
 	/**
 	* Compact the array.
 	*/
-	@:overload public function compact() : Void;
+	@:overload @:public public function compact() : Void;
 	
-	@:overload public function getKSize() : Int;
+	@:overload @:public public function getKSize() : Int;
 	
 	
 }

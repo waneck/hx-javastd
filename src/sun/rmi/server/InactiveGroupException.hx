@@ -30,7 +30,7 @@ extern class InactiveGroupException extends java.rmi.activation.ActivationExcept
 	*
 	* @param s the detail message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

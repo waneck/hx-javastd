@@ -69,7 +69,7 @@ extern interface Element extends org.w3c.dom.Node
 	* the <code>tagName</code> of an HTML element in the canonical
 	* uppercase form, regardless of the case in the source HTML document.
 	*/
-	@:overload @:public @:public public function getTagName() : String;
+	@:overload @:public @:public @:public @:public public function getTagName() : String;
 	
 	/**
 	* Retrieves an attribute value by name.
@@ -77,7 +77,7 @@ extern interface Element extends org.w3c.dom.Node
 	* @return The <code>Attr</code> value as a string, or the empty string
 	*   if that attribute does not have a specified or default value.
 	*/
-	@:overload @:public @:public public function getAttribute(name : String) : String;
+	@:overload @:public @:public @:public @:public public function getAttribute(name : String) : String;
 	
 	/**
 	* Adds a new attribute. If an attribute with that name is already present
@@ -101,7 +101,7 @@ extern interface Element extends org.w3c.dom.Node
 	*   <code>Document.xmlVersion</code> attribute.
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
 	*/
-	@:overload @:public @:public public function setAttribute(name : String, value : String) : Void;
+	@:overload @:public @:public @:public @:public public function setAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Removes an attribute by name. If a default value for the removed
@@ -118,7 +118,7 @@ extern interface Element extends org.w3c.dom.Node
 	* @exception DOMException
 	*   NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
 	*/
-	@:overload @:public @:public public function removeAttribute(name : String) : Void;
+	@:overload @:public @:public @:public @:public public function removeAttribute(name : String) : Void;
 	
 	/**
 	* Retrieves an attribute node by name.
@@ -130,7 +130,7 @@ extern interface Element extends org.w3c.dom.Node
 	*   <code>nodeName</code>) or <code>null</code> if there is no such
 	*   attribute.
 	*/
-	@:overload @:public @:public public function getAttributeNode(name : String) : org.w3c.dom.Attr;
+	@:overload @:public @:public @:public @:public public function getAttributeNode(name : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Adds a new attribute node. If an attribute with that name (
@@ -152,7 +152,7 @@ extern interface Element extends org.w3c.dom.Node
 	*   explicitly clone <code>Attr</code> nodes to re-use them in other
 	*   elements.
 	*/
-	@:overload @:public @:public public function setAttributeNode(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public @:public @:public @:public public function setAttributeNode(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	* Removes the specified attribute node. If a default value for the
@@ -171,7 +171,7 @@ extern interface Element extends org.w3c.dom.Node
 	*   <br>NOT_FOUND_ERR: Raised if <code>oldAttr</code> is not an attribute
 	*   of the element.
 	*/
-	@:overload @:public @:public public function removeAttributeNode(oldAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public @:public @:public @:public public function removeAttributeNode(oldAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	* Returns a <code>NodeList</code> of all descendant <code>Elements</code>
@@ -180,7 +180,7 @@ extern interface Element extends org.w3c.dom.Node
 	*   matches all tags.
 	* @return A list of matching <code>Element</code> nodes.
 	*/
-	@:overload @:public @:public public function getElementsByTagName(name : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:public @:public @:public public function getElementsByTagName(name : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* Retrieves an attribute value by local name and namespace URI.
@@ -198,7 +198,7 @@ extern interface Element extends org.w3c.dom.Node
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public public function getAttributeNS(namespaceURI : String, localName : String) : String;
+	@:overload @:public @:public @:public @:public public function getAttributeNS(namespaceURI : String, localName : String) : String;
 	
 	/**
 	* Adds a new attribute. If an attribute with the same local name and
@@ -242,7 +242,7 @@ extern interface Element extends org.w3c.dom.Node
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public public function setAttributeNS(namespaceURI : String, qualifiedName : String, value : String) : Void;
+	@:overload @:public @:public @:public @:public public function setAttributeNS(namespaceURI : String, qualifiedName : String, value : String) : Void;
 	
 	/**
 	* Removes an attribute by local name and namespace URI. If a default
@@ -268,7 +268,7 @@ extern interface Element extends org.w3c.dom.Node
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public public function removeAttributeNS(namespaceURI : String, localName : String) : Void;
+	@:overload @:public @:public @:public @:public public function removeAttributeNS(namespaceURI : String, localName : String) : Void;
 	
 	/**
 	* Retrieves an <code>Attr</code> node by local name and namespace URI.
@@ -287,7 +287,7 @@ extern interface Element extends org.w3c.dom.Node
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
+	@:overload @:public @:public @:public @:public public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Adds a new attribute. If an attribute with that local name and that
@@ -315,7 +315,7 @@ extern interface Element extends org.w3c.dom.Node
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public public function setAttributeNodeNS(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public @:public @:public @:public public function setAttributeNodeNS(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	* Returns a <code>NodeList</code> of all the descendant
@@ -333,7 +333,7 @@ extern interface Element extends org.w3c.dom.Node
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:public @:public @:public public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* Returns <code>true</code> when an attribute with a given name is
@@ -345,7 +345,7 @@ extern interface Element extends org.w3c.dom.Node
 	*    otherwise.
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public public function hasAttribute(name : String) : Bool;
+	@:overload @:public @:public @:public @:public public function hasAttribute(name : String) : Bool;
 	
 	/**
 	* Returns <code>true</code> when an attribute with a given local name and
@@ -366,13 +366,13 @@ extern interface Element extends org.w3c.dom.Node
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
+	@:overload @:public @:public @:public @:public public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
 	
 	/**
 	*  The type information associated with this element.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
+	@:overload @:public @:public @:public @:public public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
 	
 	/**
 	*  If the parameter <code>isId</code> is <code>true</code>, this method
@@ -394,7 +394,7 @@ extern interface Element extends org.w3c.dom.Node
 	*   of this element.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function setIdAttribute(name : String, isId : Bool) : Void;
+	@:overload @:public @:public @:public @:public public function setIdAttribute(name : String, isId : Bool) : Void;
 	
 	/**
 	*  If the parameter <code>isId</code> is <code>true</code>, this method
@@ -415,7 +415,7 @@ extern interface Element extends org.w3c.dom.Node
 	*   of this element.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function setIdAttributeNS(namespaceURI : String, localName : String, isId : Bool) : Void;
+	@:overload @:public @:public @:public @:public public function setIdAttributeNS(namespaceURI : String, localName : String, isId : Bool) : Void;
 	
 	/**
 	*  If the parameter <code>isId</code> is <code>true</code>, this method
@@ -435,7 +435,7 @@ extern interface Element extends org.w3c.dom.Node
 	*   of this element.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function setIdAttributeNode(idAttr : org.w3c.dom.Attr, isId : Bool) : Void;
+	@:overload @:public @:public @:public @:public public function setIdAttributeNode(idAttr : org.w3c.dom.Attr, isId : Bool) : Void;
 	
 	
 }

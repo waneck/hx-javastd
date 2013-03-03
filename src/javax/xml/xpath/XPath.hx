@@ -38,7 +38,7 @@ extern interface XPath
 	* It is guaranteed to have a functionally equal <code>XPathFunctionResolver</code>, <code>XPathVariableResolver</code>
 	* and <code>NamespaceContext</code>.</p>
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* <p>Establish a variable resolver.</p>
@@ -49,7 +49,7 @@ extern interface XPath
 	*
 	*  @throws NullPointerException If <code>resolver</code> is <code>null</code>.
 	*/
-	@:overload public function setXPathVariableResolver(resolver : javax.xml.xpath.XPathVariableResolver) : Void;
+	@:overload @:public public function setXPathVariableResolver(resolver : javax.xml.xpath.XPathVariableResolver) : Void;
 	
 	/**
 	* <p>Return the current variable resolver.</p>
@@ -58,7 +58,7 @@ extern interface XPath
 	*
 	* @return Current variable resolver.
 	*/
-	@:overload public function getXPathVariableResolver() : javax.xml.xpath.XPathVariableResolver;
+	@:overload @:public public function getXPathVariableResolver() : javax.xml.xpath.XPathVariableResolver;
 	
 	/**
 	* <p>Establish a function resolver.</p>
@@ -69,7 +69,7 @@ extern interface XPath
 	*
 	* @throws NullPointerException If <code>resolver</code> is <code>null</code>.
 	*/
-	@:overload public function setXPathFunctionResolver(resolver : javax.xml.xpath.XPathFunctionResolver) : Void;
+	@:overload @:public public function setXPathFunctionResolver(resolver : javax.xml.xpath.XPathFunctionResolver) : Void;
 	
 	/**
 	* <p>Return the current function resolver.</p>
@@ -78,7 +78,7 @@ extern interface XPath
 	*
 	* @return Current function resolver.
 	*/
-	@:overload public function getXPathFunctionResolver() : javax.xml.xpath.XPathFunctionResolver;
+	@:overload @:public public function getXPathFunctionResolver() : javax.xml.xpath.XPathFunctionResolver;
 	
 	/**
 	* <p>Establish a namespace context.</p>
@@ -89,7 +89,7 @@ extern interface XPath
 	*
 	* @throws NullPointerException If <code>nsContext</code> is <code>null</code>.
 	*/
-	@:overload public function setNamespaceContext(nsContext : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public public function setNamespaceContext(nsContext : javax.xml.namespace.NamespaceContext) : Void;
 	
 	/**
 	* <p>Return the current namespace context.</p>
@@ -98,7 +98,7 @@ extern interface XPath
 	*
 	* @return Current Namespace context.
 	*/
-	@:overload public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
 	
 	/**
 	* <p>Compile an XPath expression for later evaluation.</p>
@@ -122,7 +122,7 @@ extern interface XPath
 	* @throws XPathExpressionException If <code>expression</code> cannot be compiled.
 	* @throws NullPointerException If <code>expression</code> is <code>null</code>.
 	*/
-	@:overload public function compile(expression : String) : javax.xml.xpath.XPathExpression;
+	@:overload @:public public function compile(expression : String) : javax.xml.xpath.XPathExpression;
 	
 	/**
 	* <p>Evaluate an <code>XPath</code> expression in the specified context and return the result as the specified type.</p>
@@ -154,7 +154,7 @@ extern interface XPath
 	* @throws IllegalArgumentException If <code>returnType</code> is not one of the types defined in {@link XPathConstants}.
 	* @throws NullPointerException If <code>expression</code> or <code>returnType</code> is <code>null</code>.
 	*/
-	@:overload public function evaluate(expression : String, item : Dynamic, returnType : javax.xml.namespace.QName) : Dynamic;
+	@:overload @:public public function evaluate(expression : String, item : Dynamic, returnType : javax.xml.namespace.QName) : Dynamic;
 	
 	/**
 	* <p>Evaluate an XPath expression in the specified context and return the result as a <code>String</code>.</p>
@@ -179,7 +179,7 @@ extern interface XPath
 	* @throws XPathExpressionException If <code>expression</code> cannot be evaluated.
 	* @throws NullPointerException If <code>expression</code> is <code>null</code>.
 	*/
-	@:overload public function evaluate(expression : String, item : Dynamic) : String;
+	@:overload @:public public function evaluate(expression : String, item : Dynamic) : String;
 	
 	/**
 	* <p>Evaluate an XPath expression in the context of the specified <code>InputSource</code>
@@ -208,7 +208,7 @@ extern interface XPath
 	* @throws NullPointerException If <code>expression</code>, <code>source</code> or <code>returnType</code>
 	*   is <code>null</code>.
 	*/
-	@:overload public function evaluate(expression : String, source : org.xml.sax.InputSource, returnType : javax.xml.namespace.QName) : Dynamic;
+	@:overload @:public public function evaluate(expression : String, source : org.xml.sax.InputSource, returnType : javax.xml.namespace.QName) : Dynamic;
 	
 	/**
 	* <p>Evaluate an XPath expression in the context of the specified <code>InputSource</code>
@@ -232,7 +232,7 @@ extern interface XPath
 	* @throws XPathExpressionException If expression cannot be evaluated.
 	* @throws NullPointerException If <code>expression</code> or <code>source</code> is <code>null</code>.
 	*/
-	@:overload public function evaluate(expression : String, source : org.xml.sax.InputSource) : String;
+	@:overload @:public public function evaluate(expression : String, source : org.xml.sax.InputSource) : String;
 	
 	
 }

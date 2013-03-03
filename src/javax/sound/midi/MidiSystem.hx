@@ -36,7 +36,7 @@ extern class MidiSystem
 	* for each installed MIDI device.  If no such devices are installed,
 	* an array of length 0 is returned.
 	*/
-	@:overload public static function getMidiDeviceInfo() : java.NativeArray<javax.sound.midi.MidiDevice.MidiDevice_Info>;
+	@:overload @:public @:static public static function getMidiDeviceInfo() : java.NativeArray<javax.sound.midi.MidiDevice.MidiDevice_Info>;
 	
 	/**
 	* Obtains the requested MIDI device.
@@ -49,7 +49,7 @@ extern class MidiSystem
 	* a MIDI device installed on the system
 	* @see #getMidiDeviceInfo
 	*/
-	@:overload public static function getMidiDevice(info : javax.sound.midi.MidiDevice.MidiDevice_Info) : javax.sound.midi.MidiDevice;
+	@:overload @:public @:static public static function getMidiDevice(info : javax.sound.midi.MidiDevice.MidiDevice_Info) : javax.sound.midi.MidiDevice;
 	
 	/**
 	* Obtains a MIDI receiver from an external MIDI port
@@ -89,7 +89,7 @@ extern class MidiSystem
 	*         available due to resource restrictions,
 	*         or no device providing receivers is installed in the system
 	*/
-	@:overload public static function getReceiver() : javax.sound.midi.Receiver;
+	@:overload @:public @:static public static function getReceiver() : javax.sound.midi.Receiver;
 	
 	/**
 	* Obtains a MIDI transmitter from an external MIDI port
@@ -126,7 +126,7 @@ extern class MidiSystem
 	*         available due to resource restrictions,
 	*         or no device providing transmitters is installed in the system
 	*/
-	@:overload public static function getTransmitter() : javax.sound.midi.Transmitter;
+	@:overload @:public @:static public static function getTransmitter() : javax.sound.midi.Transmitter;
 	
 	/**
 	* Obtains the default synthesizer.
@@ -142,7 +142,7 @@ extern class MidiSystem
 	*         available due to resource restrictions,
 	*         or no synthesizer is installed in the system
 	*/
-	@:overload public static function getSynthesizer() : javax.sound.midi.Synthesizer;
+	@:overload @:public @:static public static function getSynthesizer() : javax.sound.midi.Synthesizer;
 	
 	/**
 	* Obtains the default <code>Sequencer</code>, connected to
@@ -180,7 +180,7 @@ extern class MidiSystem
 	* @see #getSynthesizer
 	* @see #getReceiver
 	*/
-	@:overload public static function getSequencer() : javax.sound.midi.Sequencer;
+	@:overload @:public @:static public static function getSequencer() : javax.sound.midi.Sequencer;
 	
 	/**
 	* Obtains the default <code>Sequencer</code>, optionally
@@ -225,7 +225,7 @@ extern class MidiSystem
 	* @see #getReceiver
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getSequencer(connected : Bool) : javax.sound.midi.Sequencer;
+	@:require(java5) @:overload @:public @:static public static function getSequencer(connected : Bool) : javax.sound.midi.Sequencer;
 	
 	/**
 	* Constructs a MIDI sound bank by reading it from the specified stream.
@@ -245,7 +245,7 @@ extern class MidiSystem
 	* @see InputStream#markSupported
 	* @see InputStream#mark
 	*/
-	@:overload public static function getSoundbank(stream : java.io.InputStream) : javax.sound.midi.Soundbank;
+	@:overload @:public @:static public static function getSoundbank(stream : java.io.InputStream) : javax.sound.midi.Soundbank;
 	
 	/**
 	* Constructs a <code>Soundbank</code> by reading it from the specified URL.
@@ -257,7 +257,7 @@ extern class MidiSystem
 	* soundbank data recognized by the system
 	* @throws IOException if an I/O error occurred when loading the soundbank
 	*/
-	@:overload public static function getSoundbank(url : java.net.URL) : javax.sound.midi.Soundbank;
+	@:overload @:public @:static public static function getSoundbank(url : java.net.URL) : javax.sound.midi.Soundbank;
 	
 	/**
 	* Constructs a <code>Soundbank</code> by reading it from the specified
@@ -270,7 +270,7 @@ extern class MidiSystem
 	* point to valid MIDI soundbank data recognized by the system
 	* @throws IOException if an I/O error occurred when loading the soundbank
 	*/
-	@:overload public static function getSoundbank(file : java.io.File) : javax.sound.midi.Soundbank;
+	@:overload @:public @:static public static function getSoundbank(file : java.io.File) : javax.sound.midi.Soundbank;
 	
 	/**
 	* Obtains the MIDI file format of the data in the specified input stream.
@@ -304,7 +304,7 @@ extern class MidiSystem
 	* @see InputStream#markSupported
 	* @see InputStream#mark
 	*/
-	@:overload public static function getMidiFileFormat(stream : java.io.InputStream) : javax.sound.midi.MidiFileFormat;
+	@:overload @:public @:static public static function getMidiFileFormat(stream : java.io.InputStream) : javax.sound.midi.MidiFileFormat;
 	
 	/**
 	* Obtains the MIDI file format of the data in the specified URL.  The URL
@@ -328,7 +328,7 @@ extern class MidiSystem
 	* @see #getMidiFileFormat(InputStream)
 	* @see #getMidiFileFormat(File)
 	*/
-	@:overload public static function getMidiFileFormat(url : java.net.URL) : javax.sound.midi.MidiFileFormat;
+	@:overload @:public @:static public static function getMidiFileFormat(url : java.net.URL) : javax.sound.midi.MidiFileFormat;
 	
 	/**
 	* Obtains the MIDI file format of the specified <code>File</code>.  The
@@ -352,7 +352,7 @@ extern class MidiSystem
 	* @see #getMidiFileFormat(InputStream)
 	* @see #getMidiFileFormat(URL)
 	*/
-	@:overload public static function getMidiFileFormat(file : java.io.File) : javax.sound.midi.MidiFileFormat;
+	@:overload @:public @:static public static function getMidiFileFormat(file : java.io.File) : javax.sound.midi.MidiFileFormat;
 	
 	/**
 	* Obtains a MIDI sequence from the specified input stream.  The stream must
@@ -385,7 +385,7 @@ extern class MidiSystem
 	* @see InputStream#markSupported
 	* @see InputStream#mark
 	*/
-	@:overload public static function getSequence(stream : java.io.InputStream) : javax.sound.midi.Sequence;
+	@:overload @:public @:static public static function getSequence(stream : java.io.InputStream) : javax.sound.midi.Sequence;
 	
 	/**
 	* Obtains a MIDI sequence from the specified URL.  The URL must
@@ -407,7 +407,7 @@ extern class MidiSystem
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs while accessing the URL
 	*/
-	@:overload public static function getSequence(url : java.net.URL) : javax.sound.midi.Sequence;
+	@:overload @:public @:static public static function getSequence(url : java.net.URL) : javax.sound.midi.Sequence;
 	
 	/**
 	* Obtains a MIDI sequence from the specified <code>File</code>.
@@ -429,7 +429,7 @@ extern class MidiSystem
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload public static function getSequence(file : java.io.File) : javax.sound.midi.Sequence;
+	@:overload @:public @:static public static function getSequence(file : java.io.File) : javax.sound.midi.Sequence;
 	
 	/**
 	* Obtains the set of MIDI file types for which file writing support is
@@ -437,7 +437,7 @@ extern class MidiSystem
 	* @return array of unique file types.  If no file types are supported,
 	* an array of length 0 is returned.
 	*/
-	@:overload public static function getMidiFileTypes() : java.NativeArray<Int>;
+	@:overload @:public @:static public static function getMidiFileTypes() : java.NativeArray<Int>;
 	
 	/**
 	* Indicates whether file writing support for the specified MIDI file type
@@ -446,7 +446,7 @@ extern class MidiSystem
 	* @return <code>true</code> if the file type is supported,
 	* otherwise <code>false</code>
 	*/
-	@:overload public static function isFileTypeSupported(fileType : Int) : Bool;
+	@:overload @:public @:static public static function isFileTypeSupported(fileType : Int) : Bool;
 	
 	/**
 	* Obtains the set of MIDI file types that the system can write from the
@@ -456,7 +456,7 @@ extern class MidiSystem
 	* @return the set of unique supported file types.  If no file types are supported,
 	* returns an array of length 0.
 	*/
-	@:overload public static function getMidiFileTypes(sequence : javax.sound.midi.Sequence) : java.NativeArray<Int>;
+	@:overload @:public @:static public static function getMidiFileTypes(sequence : javax.sound.midi.Sequence) : java.NativeArray<Int>;
 	
 	/**
 	* Indicates whether a MIDI file of the file type specified can be written
@@ -467,7 +467,7 @@ extern class MidiSystem
 	* @return <code>true</code> if the file type is supported for this
 	* sequence, otherwise <code>false</code>
 	*/
-	@:overload public static function isFileTypeSupported(fileType : Int, sequence : javax.sound.midi.Sequence) : Bool;
+	@:overload @:public @:static public static function isFileTypeSupported(fileType : Int, sequence : javax.sound.midi.Sequence) : Bool;
 	
 	/**
 	* Writes a stream of bytes representing a file of the MIDI file type
@@ -482,7 +482,7 @@ extern class MidiSystem
 	* @see #isFileTypeSupported(int, Sequence)
 	* @see     #getMidiFileTypes(Sequence)
 	*/
-	@:overload public static function write(_in : javax.sound.midi.Sequence, fileType : Int, out : java.io.OutputStream) : Int;
+	@:overload @:public @:static public static function write(_in : javax.sound.midi.Sequence, fileType : Int, out : java.io.OutputStream) : Int;
 	
 	/**
 	* Writes a stream of bytes representing a file of the MIDI file type
@@ -497,7 +497,7 @@ extern class MidiSystem
 	* @see #isFileTypeSupported(int, Sequence)
 	* @see     #getMidiFileTypes(Sequence)
 	*/
-	@:overload public static function write(_in : javax.sound.midi.Sequence, type : Int, out : java.io.File) : Int;
+	@:overload @:public @:static public static function write(_in : javax.sound.midi.Sequence, type : Int, out : java.io.File) : Int;
 	
 	
 }

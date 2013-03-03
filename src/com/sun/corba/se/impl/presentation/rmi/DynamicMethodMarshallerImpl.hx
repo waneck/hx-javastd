@@ -25,45 +25,49 @@ package com.sun.corba.se.impl.presentation.rmi;
 */
 extern class DynamicMethodMarshallerImpl implements com.sun.corba.se.spi.presentation.rmi.DynamicMethodMarshaller
 {
-	@:overload public static function makeReaderWriter(cls : Class<Dynamic>) : com.sun.corba.se.impl.presentation.rmi.DynamicMethodMarshallerImpl.DynamicMethodMarshallerImpl_ReaderWriter;
+	@:overload @:public @:static public static function makeReaderWriter(cls : Class<Dynamic>) : com.sun.corba.se.impl.presentation.rmi.DynamicMethodMarshallerImpl.DynamicMethodMarshallerImpl_ReaderWriter;
 	
-	@:overload public function new(method : java.lang.reflect.Method) : Void;
+	@:overload @:public public function new(method : java.lang.reflect.Method) : Void;
 	
-	@:overload public function getMethod() : java.lang.reflect.Method;
+	@:overload @:public public function getMethod() : java.lang.reflect.Method;
 	
-	@:overload public function copyArguments(args : java.NativeArray<Dynamic>, orb : com.sun.corba.se.spi.orb.ORB) : java.NativeArray<Dynamic>;
+	@:overload @:public public function copyArguments(args : java.NativeArray<Dynamic>, orb : com.sun.corba.se.spi.orb.ORB) : java.NativeArray<Dynamic>;
 	
-	@:overload public function readArguments(is : org.omg.CORBA_2_3.portable.InputStream) : java.NativeArray<Dynamic>;
+	@:overload @:public public function readArguments(is : org.omg.CORBA_2_3.portable.InputStream) : java.NativeArray<Dynamic>;
 	
-	@:overload public function writeArguments(os : org.omg.CORBA_2_3.portable.OutputStream, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function writeArguments(os : org.omg.CORBA_2_3.portable.OutputStream, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function copyResult(result : Dynamic, orb : com.sun.corba.se.spi.orb.ORB) : Dynamic;
+	@:overload @:public public function copyResult(result : Dynamic, orb : com.sun.corba.se.spi.orb.ORB) : Dynamic;
 	
-	@:overload public function readResult(is : org.omg.CORBA_2_3.portable.InputStream) : Dynamic;
+	@:overload @:public public function readResult(is : org.omg.CORBA_2_3.portable.InputStream) : Dynamic;
 	
-	@:overload public function writeResult(os : org.omg.CORBA_2_3.portable.OutputStream, result : Dynamic) : Void;
+	@:overload @:public public function writeResult(os : org.omg.CORBA_2_3.portable.OutputStream, result : Dynamic) : Void;
 	
-	@:overload public function isDeclaredException(thr : java.lang.Throwable) : Bool;
+	@:overload @:public public function isDeclaredException(thr : java.lang.Throwable) : Bool;
 	
-	@:overload public function writeException(os : org.omg.CORBA_2_3.portable.OutputStream, ex : java.lang.Exception) : Void;
+	@:overload @:public public function writeException(os : org.omg.CORBA_2_3.portable.OutputStream, ex : java.lang.Exception) : Void;
 	
-	@:overload public function readException(ae : org.omg.CORBA.portable.ApplicationException) : java.lang.Exception;
+	@:overload @:public public function readException(ae : org.omg.CORBA.portable.ApplicationException) : java.lang.Exception;
 	
 	
 }
 @:native('com$sun$corba$se$impl$presentation$rmi$DynamicMethodMarshallerImpl$ReaderWriter') extern interface DynamicMethodMarshallerImpl_ReaderWriter
 {
-	@:overload public function read(is : org.omg.CORBA_2_3.portable.InputStream) : Dynamic;
+	@:overload @:public public function read(is : org.omg.CORBA_2_3.portable.InputStream) : Dynamic;
 	
-	@:overload public function write(os : org.omg.CORBA_2_3.portable.OutputStream, value : Dynamic) : Void;
+	@:overload @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream, value : Dynamic) : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$presentation$rmi$DynamicMethodMarshallerImpl$ReaderWriterBase') @:internal extern class DynamicMethodMarshallerImpl_ReaderWriterBase implements com.sun.corba.se.impl.presentation.rmi.DynamicMethodMarshallerImpl.DynamicMethodMarshallerImpl_ReaderWriter
 {
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
+	
+	@:overload @:public public function read(is : org.omg.CORBA_2_3.portable.InputStream) : Dynamic;
+	
+	@:overload @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream, value : Dynamic) : Void;
 	
 	
 }

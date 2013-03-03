@@ -25,7 +25,7 @@ package com.sun.corba.se.impl.transport;
 */
 extern class ByteBufferPoolImpl implements com.sun.corba.se.pept.transport.ByteBufferPool
 {
-	@:overload public function new(theORB : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(theORB : com.sun.corba.se.spi.orb.ORB) : Void;
 	
 	/*
 	* Locations where ByteBuffers are gotten from the pool:
@@ -33,7 +33,7 @@ extern class ByteBufferPoolImpl implements com.sun.corba.se.pept.transport.ByteB
 	* 2. ByteBufferWithInfo.growBuffer()
 	* 3. ByteBufferWithInfo(ORB, BufferManagerWrite) - constructor
 	*/
-	@:overload public function getByteBuffer(theAskSize : Int) : java.nio.ByteBuffer;
+	@:overload @:public public function getByteBuffer(theAskSize : Int) : java.nio.ByteBuffer;
 	
 	/*
 	* Locations where ByteBuffers are released to the pool:
@@ -46,9 +46,9 @@ extern class ByteBufferPoolImpl implements com.sun.corba.se.pept.transport.ByteB
 	* 7. BufferManagerRead.close()
 	* 8. CorbaMessageMediatorImpl.releaseByteBufferToPool()
 	*/
-	@:overload public function releaseByteBuffer(thebb : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function releaseByteBuffer(thebb : java.nio.ByteBuffer) : Void;
 	
-	@:overload public function activeCount() : Int;
+	@:overload @:public public function activeCount() : Int;
 	
 	
 }

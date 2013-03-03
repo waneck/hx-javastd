@@ -33,50 +33,50 @@ extern class Options
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	@:overload public static function instance(context : com.sun.tools.javap.Context) : com.sun.tools.javap.Options;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javap.Context) : com.sun.tools.javap.Options;
 	
-	@:overload private function new(context : com.sun.tools.javap.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javap.Context) : Void;
 	
 	/**
 	* Checks access of class, field or method.
 	*/
-	@:overload public function checkAccess(flags : com.sun.tools.classfile.AccessFlags) : Bool;
+	@:overload @:public public function checkAccess(flags : com.sun.tools.classfile.AccessFlags) : Bool;
 	
-	public var help : Bool;
+	@:public public var help : Bool;
 	
-	public var verbose : Bool;
+	@:public public var verbose : Bool;
 	
-	public var version : Bool;
+	@:public public var version : Bool;
 	
-	public var fullVersion : Bool;
+	@:public public var fullVersion : Bool;
 	
-	public var showFlags : Bool;
+	@:public public var showFlags : Bool;
 	
-	public var showLineAndLocalVariableTables : Bool;
+	@:public public var showLineAndLocalVariableTables : Bool;
 	
-	public var showAccess : Int;
+	@:public public var showAccess : Int;
 	
-	public var accessOptions : java.util.Set<String>;
+	@:public public var accessOptions : java.util.Set<String>;
 	
-	public var details : java.util.Set<com.sun.tools.javap.InstructionDetailWriter.InstructionDetailWriter_Kind>;
+	@:public public var details : java.util.Set<com.sun.tools.javap.InstructionDetailWriter.InstructionDetailWriter_Kind>;
 	
-	public var showDisassembled : Bool;
+	@:public public var showDisassembled : Bool;
 	
-	public var showInternalSignatures : Bool;
+	@:public public var showInternalSignatures : Bool;
 	
-	public var showAllAttrs : Bool;
+	@:public public var showAllAttrs : Bool;
 	
-	public var showConstants : Bool;
+	@:public public var showConstants : Bool;
 	
-	public var sysInfo : Bool;
+	@:public public var sysInfo : Bool;
 	
-	public var showInnerClasses : Bool;
+	@:public public var showInnerClasses : Bool;
 	
-	public var indentWidth : Int;
+	@:public public var indentWidth : Int;
 	
-	public var tabColumn : Int;
+	@:public public var tabColumn : Int;
 	
-	public var compat : Bool;
+	@:public public var compat : Bool;
 	
 	
 }

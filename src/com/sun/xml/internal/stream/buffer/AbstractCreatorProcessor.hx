@@ -28,162 +28,162 @@ extern class AbstractCreatorProcessor
 	/**
 	* Flag on a T_DOCUMENT to indicate if a fragment
 	*/
-	private static var FLAG_DOCUMENT_FRAGMENT(default, null) : Int;
+	@:protected @:static @:final private static var FLAG_DOCUMENT_FRAGMENT(default, null) : Int;
 	
 	/*
 	* Flags on T_ELEMENT, T_ATTRIBUTE, T_NAMESPACE_ATTRIBUTE
 	* to indicate namespace information is represent
 	*/
-	private static var FLAG_PREFIX(default, null) : Int;
+	@:protected @:static @:final private static var FLAG_PREFIX(default, null) : Int;
 	
-	private static var FLAG_URI(default, null) : Int;
+	@:protected @:static @:final private static var FLAG_URI(default, null) : Int;
 	
-	private static var FLAG_QUALIFIED_NAME(default, null) : Int;
+	@:protected @:static @:final private static var FLAG_QUALIFIED_NAME(default, null) : Int;
 	
 	/*
 	* Types of content for T_TEXT and T_COMMENT
 	* <p>
 	* Highest 2 bits of lower nibble are used.
 	*/
-	private static var CONTENT_TYPE_CHAR_ARRAY(default, null) : Int;
+	@:protected @:static @:final private static var CONTENT_TYPE_CHAR_ARRAY(default, null) : Int;
 	
-	private static var CONTENT_TYPE_CHAR_ARRAY_COPY(default, null) : Int;
+	@:protected @:static @:final private static var CONTENT_TYPE_CHAR_ARRAY_COPY(default, null) : Int;
 	
-	private static var CONTENT_TYPE_STRING(default, null) : Int;
+	@:protected @:static @:final private static var CONTENT_TYPE_STRING(default, null) : Int;
 	
-	private static var CONTENT_TYPE_OBJECT(default, null) : Int;
+	@:protected @:static @:final private static var CONTENT_TYPE_OBJECT(default, null) : Int;
 	
 	/*
 	* Size of the length of character content for CONTENT_TYPE_CHAR_ARRAY
 	* <p>
 	* Last bit of lower nibble is used.
 	*/
-	private static var CHAR_ARRAY_LENGTH_SMALL(default, null) : Int;
+	@:protected @:static @:final private static var CHAR_ARRAY_LENGTH_SMALL(default, null) : Int;
 	
-	private static var CHAR_ARRAY_LENGTH_MEDIUM(default, null) : Int;
+	@:protected @:static @:final private static var CHAR_ARRAY_LENGTH_MEDIUM(default, null) : Int;
 	
-	private static var CHAR_ARRAY_LENGTH_SMALL_SIZE(default, null) : Int;
+	@:protected @:static @:final private static var CHAR_ARRAY_LENGTH_SMALL_SIZE(default, null) : Int;
 	
-	private static var CHAR_ARRAY_LENGTH_MEDIUM_SIZE(default, null) : Int;
+	@:protected @:static @:final private static var CHAR_ARRAY_LENGTH_MEDIUM_SIZE(default, null) : Int;
 	
 	/*
 	* Types of value for T_ATTRIBUTE
 	* <p>
 	* Highest bit of lower nibble is used.
 	*/
-	private static var VALUE_TYPE_STRING(default, null) : Int;
+	@:protected @:static @:final private static var VALUE_TYPE_STRING(default, null) : Int;
 	
-	private static var VALUE_TYPE_OBJECT(default, null) : Int;
+	@:protected @:static @:final private static var VALUE_TYPE_OBJECT(default, null) : Int;
 	
 	/*
 	* Mask for types.
 	* <p>
 	* Highest nibble is used.
 	*/
-	private static var TYPE_MASK(default, null) : Int;
+	@:protected @:static @:final private static var TYPE_MASK(default, null) : Int;
 	
-	private static var T_DOCUMENT(default, null) : Int;
+	@:protected @:static @:final private static var T_DOCUMENT(default, null) : Int;
 	
-	private static var T_ELEMENT(default, null) : Int;
+	@:protected @:static @:final private static var T_ELEMENT(default, null) : Int;
 	
-	private static var T_ATTRIBUTE(default, null) : Int;
+	@:protected @:static @:final private static var T_ATTRIBUTE(default, null) : Int;
 	
-	private static var T_NAMESPACE_ATTRIBUTE(default, null) : Int;
+	@:protected @:static @:final private static var T_NAMESPACE_ATTRIBUTE(default, null) : Int;
 	
-	private static var T_TEXT(default, null) : Int;
+	@:protected @:static @:final private static var T_TEXT(default, null) : Int;
 	
-	private static var T_COMMENT(default, null) : Int;
+	@:protected @:static @:final private static var T_COMMENT(default, null) : Int;
 	
-	private static var T_PROCESSING_INSTRUCTION(default, null) : Int;
+	@:protected @:static @:final private static var T_PROCESSING_INSTRUCTION(default, null) : Int;
 	
-	private static var T_UNEXPANDED_ENTITY_REFERENCE(default, null) : Int;
+	@:protected @:static @:final private static var T_UNEXPANDED_ENTITY_REFERENCE(default, null) : Int;
 	
-	private static var T_END(default, null) : Int;
+	@:protected @:static @:final private static var T_END(default, null) : Int;
 	
 	/*
 	* Composed types.
 	* <p>
 	* One octet is used.
 	*/
-	private static var T_DOCUMENT_FRAGMENT(default, null) : Int;
+	@:protected @:static @:final private static var T_DOCUMENT_FRAGMENT(default, null) : Int;
 	
-	private static var T_ELEMENT_U_LN_QN(default, null) : Int;
+	@:protected @:static @:final private static var T_ELEMENT_U_LN_QN(default, null) : Int;
 	
-	private static var T_ELEMENT_P_U_LN(default, null) : Int;
+	@:protected @:static @:final private static var T_ELEMENT_P_U_LN(default, null) : Int;
 	
-	private static var T_ELEMENT_U_LN(default, null) : Int;
+	@:protected @:static @:final private static var T_ELEMENT_U_LN(default, null) : Int;
 	
-	private static var T_ELEMENT_LN(default, null) : Int;
+	@:protected @:static @:final private static var T_ELEMENT_LN(default, null) : Int;
 	
-	private static var T_NAMESPACE_ATTRIBUTE_P(default, null) : Int;
+	@:protected @:static @:final private static var T_NAMESPACE_ATTRIBUTE_P(default, null) : Int;
 	
-	private static var T_NAMESPACE_ATTRIBUTE_P_U(default, null) : Int;
+	@:protected @:static @:final private static var T_NAMESPACE_ATTRIBUTE_P_U(default, null) : Int;
 	
-	private static var T_NAMESPACE_ATTRIBUTE_U(default, null) : Int;
+	@:protected @:static @:final private static var T_NAMESPACE_ATTRIBUTE_U(default, null) : Int;
 	
-	private static var T_ATTRIBUTE_U_LN_QN(default, null) : Int;
+	@:protected @:static @:final private static var T_ATTRIBUTE_U_LN_QN(default, null) : Int;
 	
-	private static var T_ATTRIBUTE_P_U_LN(default, null) : Int;
+	@:protected @:static @:final private static var T_ATTRIBUTE_P_U_LN(default, null) : Int;
 	
-	private static var T_ATTRIBUTE_U_LN(default, null) : Int;
+	@:protected @:static @:final private static var T_ATTRIBUTE_U_LN(default, null) : Int;
 	
-	private static var T_ATTRIBUTE_LN(default, null) : Int;
+	@:protected @:static @:final private static var T_ATTRIBUTE_LN(default, null) : Int;
 	
-	private static var T_ATTRIBUTE_U_LN_QN_OBJECT(default, null) : Int;
+	@:protected @:static @:final private static var T_ATTRIBUTE_U_LN_QN_OBJECT(default, null) : Int;
 	
-	private static var T_ATTRIBUTE_P_U_LN_OBJECT(default, null) : Int;
+	@:protected @:static @:final private static var T_ATTRIBUTE_P_U_LN_OBJECT(default, null) : Int;
 	
-	private static var T_ATTRIBUTE_U_LN_OBJECT(default, null) : Int;
+	@:protected @:static @:final private static var T_ATTRIBUTE_U_LN_OBJECT(default, null) : Int;
 	
-	private static var T_ATTRIBUTE_LN_OBJECT(default, null) : Int;
+	@:protected @:static @:final private static var T_ATTRIBUTE_LN_OBJECT(default, null) : Int;
 	
-	private static var T_TEXT_AS_CHAR_ARRAY(default, null) : Int;
+	@:protected @:static @:final private static var T_TEXT_AS_CHAR_ARRAY(default, null) : Int;
 	
-	private static var T_TEXT_AS_CHAR_ARRAY_SMALL(default, null) : Int;
+	@:protected @:static @:final private static var T_TEXT_AS_CHAR_ARRAY_SMALL(default, null) : Int;
 	
-	private static var T_TEXT_AS_CHAR_ARRAY_MEDIUM(default, null) : Int;
+	@:protected @:static @:final private static var T_TEXT_AS_CHAR_ARRAY_MEDIUM(default, null) : Int;
 	
-	private static var T_TEXT_AS_CHAR_ARRAY_COPY(default, null) : Int;
+	@:protected @:static @:final private static var T_TEXT_AS_CHAR_ARRAY_COPY(default, null) : Int;
 	
-	private static var T_TEXT_AS_STRING(default, null) : Int;
+	@:protected @:static @:final private static var T_TEXT_AS_STRING(default, null) : Int;
 	
-	private static var T_TEXT_AS_OBJECT(default, null) : Int;
+	@:protected @:static @:final private static var T_TEXT_AS_OBJECT(default, null) : Int;
 	
-	private static var T_COMMENT_AS_CHAR_ARRAY(default, null) : Int;
+	@:protected @:static @:final private static var T_COMMENT_AS_CHAR_ARRAY(default, null) : Int;
 	
-	private static var T_COMMENT_AS_CHAR_ARRAY_SMALL(default, null) : Int;
+	@:protected @:static @:final private static var T_COMMENT_AS_CHAR_ARRAY_SMALL(default, null) : Int;
 	
-	private static var T_COMMENT_AS_CHAR_ARRAY_MEDIUM(default, null) : Int;
+	@:protected @:static @:final private static var T_COMMENT_AS_CHAR_ARRAY_MEDIUM(default, null) : Int;
 	
-	private static var T_COMMENT_AS_CHAR_ARRAY_COPY(default, null) : Int;
+	@:protected @:static @:final private static var T_COMMENT_AS_CHAR_ARRAY_COPY(default, null) : Int;
 	
-	private static var T_COMMENT_AS_STRING(default, null) : Int;
+	@:protected @:static @:final private static var T_COMMENT_AS_STRING(default, null) : Int;
 	
-	private static var T_END_OF_BUFFER(default, null) : Int;
+	@:protected @:static @:final private static var T_END_OF_BUFFER(default, null) : Int;
 	
-	private var _currentStructureFragment : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<java.StdTypes.Int8>>;
+	@:protected private var _currentStructureFragment : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<java.StdTypes.Int8>>;
 	
-	private var _structure : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var _structure : java.NativeArray<java.StdTypes.Int8>;
 	
-	private var _structurePtr : Int;
+	@:protected private var _structurePtr : Int;
 	
-	private var _currentStructureStringFragment : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<String>>;
+	@:protected private var _currentStructureStringFragment : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<String>>;
 	
-	private var _structureStrings : java.NativeArray<String>;
+	@:protected private var _structureStrings : java.NativeArray<String>;
 	
-	private var _structureStringsPtr : Int;
+	@:protected private var _structureStringsPtr : Int;
 	
-	private var _currentContentCharactersBufferFragment : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<java.StdTypes.Char16>>;
+	@:protected private var _currentContentCharactersBufferFragment : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<java.StdTypes.Char16>>;
 	
-	private var _contentCharactersBuffer : java.NativeArray<java.StdTypes.Char16>;
+	@:protected private var _contentCharactersBuffer : java.NativeArray<java.StdTypes.Char16>;
 	
-	private var _contentCharactersBufferPtr : Int;
+	@:protected private var _contentCharactersBufferPtr : Int;
 	
-	private var _currentContentObjectFragment : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<Dynamic>>;
+	@:protected private var _currentContentObjectFragment : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<Dynamic>>;
 	
-	private var _contentObjects : java.NativeArray<Dynamic>;
+	@:protected private var _contentObjects : java.NativeArray<Dynamic>;
 	
-	private var _contentObjectsPtr : Int;
+	@:protected private var _contentObjectsPtr : Int;
 	
 	
 }

@@ -28,7 +28,7 @@ extern interface XSNamespaceItem
 	/**
 	* [schema namespace]: A namespace name or <code>null</code> if absent.
 	*/
-	@:overload public function getSchemaNamespace() : String;
+	@:overload @:public public function getSchemaNamespace() : String;
 	
 	/**
 	* [schema components]: a list of top-level components, i.e. element
@@ -43,13 +43,13 @@ extern interface XSNamespaceItem
 	*   <code>objectType</code> or an empty <code>XSNamedMap</code> if no
 	*   such definitions exist.
 	*/
-	@:overload public function getComponents(objectType : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.xs.XSNamedMap;
+	@:overload @:public public function getComponents(objectType : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.xs.XSNamedMap;
 	
 	/**
 	*  [annotations]: a set of annotations if it exists, otherwise an empty
 	* <code>XSObjectList</code>.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* Convenience method. Returns a top-level element declaration.
@@ -57,7 +57,7 @@ extern interface XSNamespaceItem
 	* @return A top-level element declaration or <code>null</code> if such a
 	*   declaration does not exist.
 	*/
-	@:overload public function getElementDeclaration(name : String) : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
+	@:overload @:public public function getElementDeclaration(name : String) : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
 	
 	/**
 	* Convenience method. Returns a top-level attribute declaration.
@@ -65,7 +65,7 @@ extern interface XSNamespaceItem
 	* @return A top-level attribute declaration or <code>null</code> if such
 	*   a declaration does not exist.
 	*/
-	@:overload public function getAttributeDeclaration(name : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeDeclaration;
+	@:overload @:public public function getAttributeDeclaration(name : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeDeclaration;
 	
 	/**
 	* Convenience method. Returns a top-level simple or complex type
@@ -74,7 +74,7 @@ extern interface XSNamespaceItem
 	* @return An <code>XSTypeDefinition</code> or <code>null</code> if such
 	*   a definition does not exist.
 	*/
-	@:overload public function getTypeDefinition(name : String) : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
+	@:overload @:public public function getTypeDefinition(name : String) : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
 	
 	/**
 	* Convenience method. Returns a top-level attribute group definition.
@@ -82,7 +82,7 @@ extern interface XSNamespaceItem
 	* @return A top-level attribute group definition or <code>null</code> if
 	*   such a definition does not exist.
 	*/
-	@:overload public function getAttributeGroup(name : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeGroupDefinition;
+	@:overload @:public public function getAttributeGroup(name : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeGroupDefinition;
 	
 	/**
 	* Convenience method. Returns a top-level model group definition.
@@ -90,7 +90,7 @@ extern interface XSNamespaceItem
 	* @return A top-level model group definition definition or
 	*   <code>null</code> if such a definition does not exist.
 	*/
-	@:overload public function getModelGroupDefinition(name : String) : com.sun.org.apache.xerces.internal.xs.XSModelGroupDefinition;
+	@:overload @:public public function getModelGroupDefinition(name : String) : com.sun.org.apache.xerces.internal.xs.XSModelGroupDefinition;
 	
 	/**
 	* Convenience method. Returns a top-level notation declaration.
@@ -98,13 +98,13 @@ extern interface XSNamespaceItem
 	* @return A top-level notation declaration or <code>null</code> if such
 	*   a declaration does not exist.
 	*/
-	@:overload public function getNotationDeclaration(name : String) : com.sun.org.apache.xerces.internal.xs.XSNotationDeclaration;
+	@:overload @:public public function getNotationDeclaration(name : String) : com.sun.org.apache.xerces.internal.xs.XSNotationDeclaration;
 	
 	/**
 	* [document location] - a list of location URIs for the documents that
 	* contributed to the <code>XSModel</code>.
 	*/
-	@:overload public function getDocumentLocations() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getDocumentLocations() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
 	
 }

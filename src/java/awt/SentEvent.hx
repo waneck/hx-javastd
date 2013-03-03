@@ -25,7 +25,7 @@ package java.awt;
 */
 @:internal extern class SentEvent extends java.awt.AWTEvent implements java.awt.ActiveEvent
 {
-	@:overload public function dispatch() : Void;
+	@:overload @:public public function dispatch() : Void;
 	
 	
 }

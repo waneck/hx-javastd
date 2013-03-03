@@ -58,44 +58,44 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class MULTIANEWARRAY extends com.sun.org.apache.bcel.internal.generic.CPInstruction implements com.sun.org.apache.bcel.internal.generic.LoadClass implements com.sun.org.apache.bcel.internal.generic.AllocationInstruction implements com.sun.org.apache.bcel.internal.generic.ExceptionThrower
 {
-	@:overload public function new(index : Int, dimensions : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(index : Int, dimensions : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload override public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload @:public override public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* Read needed data (i.e., no. dimension) from file.
 	*/
-	@:overload override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload @:protected override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
 	/**
 	* @return number of dimensions to be created
 	*/
-	@:overload @:final public function getDimensions() : java.StdTypes.Int16;
+	@:overload @:public @:final public function getDimensions() : java.StdTypes.Int16;
 	
 	/**
 	* @return mnemonic for instruction
 	*/
-	@:overload override public function toString(verbose : Bool) : String;
+	@:overload @:public override public function toString(verbose : Bool) : String;
 	
 	/**
 	* @return mnemonic for instruction with symbolic references resolved
 	*/
-	@:overload override public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
+	@:overload @:public override public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
 	
 	/**
 	* Also works for instructions whose stack effect depends on the
 	* constant pool entry they reference.
 	* @return Number of words consumed from stack by this instruction
 	*/
-	@:overload public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public override public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
-	@:overload public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
-	@:overload public function getLoadClassType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.ObjectType;
+	@:overload @:public public function getLoadClassType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.ObjectType;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -105,7 +105,7 @@ extern class MULTIANEWARRAY extends com.sun.org.apache.bcel.internal.generic.CPI
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

@@ -69,20 +69,20 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* The data model that handles the numeric maximum value,
 	* minimum value, and current-position value for the slider.
 	*/
-	private var sliderModel : javax.swing.BoundedRangeModel;
+	@:protected private var sliderModel : javax.swing.BoundedRangeModel;
 	
 	/**
 	* The number of values between the major tick marks -- the
 	* larger marks that break up the minor tick marks.
 	*/
-	private var majorTickSpacing : Int;
+	@:protected private var majorTickSpacing : Int;
 	
 	/**
 	* The number of values between the minor tick marks -- the
 	* smaller marks that occur between the major tick marks.
 	* @see #setMinorTickSpacing
 	*/
-	private var minorTickSpacing : Int;
+	@:protected private var minorTickSpacing : Int;
 	
 	/**
 	* If true, the knob (and the data value it represents)
@@ -90,7 +90,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* positioned the knob.  The default is false.
 	* @see #setSnapToTicks
 	*/
-	private var snapToTicks : Bool;
+	@:protected private var snapToTicks : Bool;
 	
 	/**
 	* Whether the slider is horizontal or vertical
@@ -98,7 +98,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*
 	* @see #setOrientation
 	*/
-	private var orientation : Int;
+	@:protected private var orientation : Int;
 	
 	/**
 	* The changeListener (no suffix) is the listener we add to the
@@ -110,7 +110,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @see #addChangeListener
 	* @see #createChangeListener
 	*/
-	private var changeListener : javax.swing.event.ChangeListener;
+	@:protected private var changeListener : javax.swing.event.ChangeListener;
 	
 	/**
 	* Only one <code>ChangeEvent</code> is needed per slider instance since the
@@ -120,13 +120,13 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*
 	* @see #fireStateChanged
 	*/
-	@:transient private var changeEvent : javax.swing.event.ChangeEvent;
+	@:protected @:transient private var changeEvent : javax.swing.event.ChangeEvent;
 	
 	/**
 	* Creates a horizontal slider with the range 0 to 100 and
 	* an initial value of 50.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a slider using the specified orientation with the
@@ -139,7 +139,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @throws IllegalArgumentException if orientation is not one of {@code VERTICAL}, {@code HORIZONTAL}
 	* @see #setOrientation
 	*/
-	@:overload public function new(orientation : Int) : Void;
+	@:overload @:public public function new(orientation : Int) : Void;
 	
 	/**
 	* Creates a horizontal slider using the specified min and max
@@ -157,7 +157,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @see #setMinimum
 	* @see #setMaximum
 	*/
-	@:overload public function new(min : Int, max : Int) : Void;
+	@:overload @:public public function new(min : Int, max : Int) : Void;
 	
 	/**
 	* Creates a horizontal slider using the specified min, max and value.
@@ -176,7 +176,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @see #setMaximum
 	* @see #setValue
 	*/
-	@:overload public function new(min : Int, max : Int, value : Int) : Void;
+	@:overload @:public public function new(min : Int, max : Int, value : Int) : Void;
 	
 	/**
 	* Creates a slider with the specified orientation and the
@@ -203,20 +203,20 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @see #setMaximum
 	* @see #setValue
 	*/
-	@:overload public function new(orientation : Int, min : Int, max : Int, value : Int) : Void;
+	@:overload @:public public function new(orientation : Int, min : Int, max : Int, value : Int) : Void;
 	
 	/**
 	* Creates a horizontal slider using the specified
 	* BoundedRangeModel.
 	*/
-	@:overload public function new(brm : javax.swing.BoundedRangeModel) : Void;
+	@:overload @:public public function new(brm : javax.swing.BoundedRangeModel) : Void;
 	
 	/**
 	* Gets the UI object which implements the L&F for this component.
 	*
 	* @return the SliderUI object that implements the Slider L&F
 	*/
-	@:overload public function getUI() : javax.swing.plaf.SliderUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.SliderUI;
 	
 	/**
 	* Sets the UI object which implements the L&F for this component.
@@ -229,14 +229,14 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the slider's LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.SliderUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.SliderUI) : Void;
 	
 	/**
 	* Resets the UI property to a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -245,7 +245,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Subclasses that want to handle {@code ChangeEvent}s
@@ -261,7 +261,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @see javax.swing.event.ChangeListener
 	* @see javax.swing.BoundedRangeModel
 	*/
-	@:overload private function createChangeListener() : javax.swing.event.ChangeListener;
+	@:overload @:protected private function createChangeListener() : javax.swing.event.ChangeListener;
 	
 	/**
 	* Adds a ChangeListener to the slider.
@@ -270,7 +270,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @see #fireStateChanged
 	* @see #removeChangeListener
 	*/
-	@:overload public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Removes a ChangeListener from the slider.
@@ -280,7 +280,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @see #addChangeListener
 
 	*/
-	@:overload public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ChangeListener</code>s added
@@ -290,7 +290,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
+	@:require(java4) @:overload @:public public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
 	
 	/**
 	* Send a {@code ChangeEvent}, whose source is this {@code JSlider}, to
@@ -305,7 +305,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @see #addChangeListener
 	* @see EventListenerList
 	*/
-	@:overload private function fireStateChanged() : Void;
+	@:overload @:protected private function fireStateChanged() : Void;
 	
 	/**
 	* Returns the {@code BoundedRangeModel} that handles the slider's three
@@ -315,7 +315,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @see #setModel
 	* @see    BoundedRangeModel
 	*/
-	@:overload public function getModel() : javax.swing.BoundedRangeModel;
+	@:overload @:public public function getModel() : javax.swing.BoundedRangeModel;
 	
 	/**
 	* Sets the {@code BoundedRangeModel} that handles the slider's three
@@ -332,7 +332,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*       bound: true
 	* description: The sliders BoundedRangeModel.
 	*/
-	@:overload public function setModel(newModel : javax.swing.BoundedRangeModel) : Void;
+	@:overload @:public public function setModel(newModel : javax.swing.BoundedRangeModel) : Void;
 	
 	/**
 	* Returns the slider's current value
@@ -342,7 +342,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @see     #setValue
 	* @see     BoundedRangeModel#getValue
 	*/
-	@:overload public function getValue() : Int;
+	@:overload @:public public function getValue() : Int;
 	
 	/**
 	* Sets the slider's current value to {@code n}.  This method
@@ -364,7 +364,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*   preferred: true
 	* description: The sliders current value.
 	*/
-	@:overload public function setValue(n : Int) : Void;
+	@:overload @:public public function setValue(n : Int) : Void;
 	
 	/**
 	* Returns the minimum value supported by the slider
@@ -374,7 +374,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @see #setMinimum
 	* @see     BoundedRangeModel#getMinimum
 	*/
-	@:overload public function getMinimum() : Int;
+	@:overload @:public public function getMinimum() : Int;
 	
 	/**
 	* Sets the slider's minimum value to {@code minimum}.  This method
@@ -397,7 +397,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*   preferred: true
 	* description: The sliders minimum value.
 	*/
-	@:overload public function setMinimum(minimum : Int) : Void;
+	@:overload @:public public function setMinimum(minimum : Int) : Void;
 	
 	/**
 	* Returns the maximum value supported by the slider
@@ -407,7 +407,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @see #setMaximum
 	* @see BoundedRangeModel#getMaximum
 	*/
-	@:overload public function getMaximum() : Int;
+	@:overload @:public public function getMaximum() : Int;
 	
 	/**
 	* Sets the slider's maximum value to {@code maximum}.  This method
@@ -430,7 +430,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*   preferred: true
 	* description: The sliders maximum value.
 	*/
-	@:overload public function setMaximum(maximum : Int) : Void;
+	@:overload @:public public function setMaximum(maximum : Int) : Void;
 	
 	/**
 	* Returns the {@code valueIsAdjusting} property from the model.  For
@@ -440,7 +440,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @return the value of the model's {@code valueIsAdjusting} property
 	* @see #setValueIsAdjusting
 	*/
-	@:overload public function getValueIsAdjusting() : Bool;
+	@:overload @:public public function getValueIsAdjusting() : Bool;
 	
 	/**
 	* Sets the model's {@code valueIsAdjusting} property.  Slider look and
@@ -454,7 +454,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*      expert: true
 	* description: True if the slider knob is being dragged.
 	*/
-	@:overload public function setValueIsAdjusting(b : Bool) : Void;
+	@:overload @:public public function setValueIsAdjusting(b : Bool) : Void;
 	
 	/**
 	* Returns the "extent" from the <code>BoundedRangeModel</code>.
@@ -464,7 +464,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @see #setExtent
 	* @see BoundedRangeModel#getExtent
 	*/
-	@:overload public function getExtent() : Int;
+	@:overload @:public public function getExtent() : Int;
 	
 	/**
 	* Sets the size of the range "covered" by the knob.  Most look
@@ -487,7 +487,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*      expert: true
 	* description: Size of the range covered by the knob.
 	*/
-	@:overload public function setExtent(extent : Int) : Void;
+	@:overload @:public public function setExtent(extent : Int) : Void;
 	
 	/**
 	* Return this slider's vertical or horizontal orientation.
@@ -495,7 +495,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*  {@code SwingConstants.HORIZONTAL}
 	* @see #setOrientation
 	*/
-	@:overload public function getOrientation() : Int;
+	@:overload @:public public function getOrientation() : Int;
 	
 	/**
 	* Set the slider's orientation to either {@code SwingConstants.VERTICAL} or
@@ -513,20 +513,20 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*               HORIZONTAL JSlider.HORIZONTAL
 	*
 	*/
-	@:overload public function setOrientation(orientation : Int) : Void;
+	@:overload @:public public function setOrientation(orientation : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setFont(font : java.awt.Font) : Void;
+	@:require(java6) @:overload @:public override public function setFont(font : java.awt.Font) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function imageUpdate(img : java.awt.Image, infoflags : Int, x : Int, y : Int, w : Int, h : Int) : Bool;
+	@:require(java7) @:overload @:public override public function imageUpdate(img : java.awt.Image, infoflags : Int, x : Int, y : Int, w : Int, h : Int) : Bool;
 	
 	/**
 	* Returns the dictionary of what labels to draw at which values.
@@ -534,7 +534,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @return the <code>Dictionary</code> containing labels and
 	*    where to draw them
 	*/
-	@:overload public function getLabelTable() : java.util.Dictionary<Dynamic, Dynamic>;
+	@:overload @:public public function getLabelTable() : java.util.Dictionary<Dynamic, Dynamic>;
 	
 	/**
 	* Used to specify what label will be drawn at any given value.
@@ -559,7 +559,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*    attribute: visualUpdate true
 	*  description: Specifies what labels will be drawn for any given value.
 	*/
-	@:overload public function setLabelTable(labels : java.util.Dictionary<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function setLabelTable(labels : java.util.Dictionary<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Updates the UIs for the labels in the label table by calling
@@ -570,7 +570,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @see #setLabelTable
 	* @see JComponent#updateUI
 	*/
-	@:overload private function updateLabelUIs() : Void;
+	@:overload @:protected private function updateLabelUIs() : Void;
 	
 	/**
 	* Creates a {@code Hashtable} of numerical text labels, starting at the
@@ -593,7 +593,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @throws IllegalArgumentException if {@code increment} is less than or
 	*          equal to zero
 	*/
-	@:overload public function createStandardLabels(increment : Int) : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:public public function createStandardLabels(increment : Int) : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* Creates a {@code Hashtable} of numerical text labels, starting at the
@@ -618,7 +618,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*          out of range, or if {@code increment} is less than or equal
 	*          to zero
 	*/
-	@:overload public function createStandardLabels(increment : Int, start : Int) : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:public public function createStandardLabels(increment : Int, start : Int) : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* Returns true if the value-range shown for the slider is reversed,
@@ -626,7 +626,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @return true if the slider values are reversed from their normal order
 	* @see #setInverted
 	*/
-	@:overload public function getInverted() : Bool;
+	@:overload @:public public function getInverted() : Bool;
 	
 	/**
 	* Specify true to reverse the value-range shown for the slider and false to
@@ -648,7 +648,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*  description: If true reverses the slider values from their normal order
 	*
 	*/
-	@:overload public function setInverted(b : Bool) : Void;
+	@:overload @:public public function setInverted(b : Bool) : Void;
 	
 	/**
 	* This method returns the major tick spacing.  The number that is returned
@@ -660,7 +660,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @return the number of values between major ticks
 	* @see #setMajorTickSpacing
 	*/
-	@:overload public function getMajorTickSpacing() : Int;
+	@:overload @:public public function getMajorTickSpacing() : Int;
 	
 	/**
 	* This method sets the major tick spacing.  The number that is passed in
@@ -693,7 +693,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*  description: Sets the number of values between major tick marks.
 	*
 	*/
-	@:overload public function setMajorTickSpacing(n : Int) : Void;
+	@:overload @:public public function setMajorTickSpacing(n : Int) : Void;
 	
 	/**
 	* This method returns the minor tick spacing.  The number that is returned
@@ -705,7 +705,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @return the number of values between minor ticks
 	* @see #getMinorTickSpacing
 	*/
-	@:overload public function getMinorTickSpacing() : Int;
+	@:overload @:public public function getMinorTickSpacing() : Int;
 	
 	/**
 	* This method sets the minor tick spacing.  The number that is passed in
@@ -725,7 +725,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*    attribute: visualUpdate true
 	*  description: Sets the number of values between minor tick marks.
 	*/
-	@:overload public function setMinorTickSpacing(n : Int) : Void;
+	@:overload @:public public function setMinorTickSpacing(n : Int) : Void;
 	
 	/**
 	* Returns true if the knob (and the data value it represents)
@@ -735,7 +735,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @return true if the value snaps to the nearest tick mark, else false
 	* @see #setSnapToTicks
 	*/
-	@:overload public function getSnapToTicks() : Bool;
+	@:overload @:public public function getSnapToTicks() : Bool;
 	
 	/**
 	* Specifying true makes the knob (and the data value it represents)
@@ -749,14 +749,14 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*       bound: true
 	* description: If true snap the knob to the nearest tick mark.
 	*/
-	@:overload public function setSnapToTicks(b : Bool) : Void;
+	@:overload @:public public function setSnapToTicks(b : Bool) : Void;
 	
 	/**
 	* Tells if tick marks are to be painted.
 	* @return true if tick marks are painted, else false
 	* @see #setPaintTicks
 	*/
-	@:overload public function getPaintTicks() : Bool;
+	@:overload @:public public function getPaintTicks() : Bool;
 	
 	/**
 	* Determines whether tick marks are painted on the slider.
@@ -769,14 +769,14 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*    attribute: visualUpdate true
 	*  description: If true tick marks are painted on the slider.
 	*/
-	@:overload public function setPaintTicks(b : Bool) : Void;
+	@:overload @:public public function setPaintTicks(b : Bool) : Void;
 	
 	/**
 	* Tells if the track (area the slider slides in) is to be painted.
 	* @return true if track is painted, else false
 	* @see #setPaintTrack
 	*/
-	@:overload public function getPaintTrack() : Bool;
+	@:overload @:public public function getPaintTrack() : Bool;
 	
 	/**
 	* Determines whether the track is painted on the slider.
@@ -789,14 +789,14 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*    attribute: visualUpdate true
 	*  description: If true, the track is painted on the slider.
 	*/
-	@:overload public function setPaintTrack(b : Bool) : Void;
+	@:overload @:public public function setPaintTrack(b : Bool) : Void;
 	
 	/**
 	* Tells if labels are to be painted.
 	* @return true if labels are painted, else false
 	* @see #setPaintLabels
 	*/
-	@:overload public function getPaintLabels() : Bool;
+	@:overload @:public public function getPaintLabels() : Bool;
 	
 	/**
 	* Determines whether labels are painted on the slider.
@@ -820,7 +820,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*    attribute: visualUpdate true
 	*  description: If true labels are painted on the slider.
 	*/
-	@:overload public function setPaintLabels(b : Bool) : Void;
+	@:overload @:public public function setPaintLabels(b : Bool) : Void;
 	
 	/**
 	* Returns a string representation of this JSlider. This method
@@ -831,7 +831,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*
 	* @return  a string representation of this JSlider.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JSlider.
@@ -842,7 +842,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* @return an AccessibleJSlider that serves as the
 	*         AccessibleContext of this JSlider
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -852,7 +852,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 */
 @:native('javax$swing$JSlider$ModelListener') @:internal extern class JSlider_ModelListener implements javax.swing.event.ChangeListener implements java.io.Serializable
 {
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }
@@ -879,14 +879,14 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the role of this object.
 	*
 	* @return an instance of AccessibleRole describing the role of the object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the AccessibleValue associated with this object.  In the
@@ -896,35 +896,35 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Get the accessible value of this object.
 	*
 	* @return The current value of this object.
 	*/
-	@:overload public function getCurrentAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getCurrentAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Set the value of this object as a Number.
 	*
 	* @return True if the value was set.
 	*/
-	@:overload public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
+	@:overload @:public public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
 	
 	/**
 	* Get the minimum accessible value of this object.
 	*
 	* @return The minimum value of this object.
 	*/
-	@:overload public function getMinimumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMinimumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Get the maximum accessible value of this object.
 	*
 	* @return The maximum value of this object.
 	*/
-	@:overload public function getMaximumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMaximumAccessibleValue() : java.lang.Number;
 	
 	
 }

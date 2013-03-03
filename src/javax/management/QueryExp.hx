@@ -38,14 +38,14 @@ extern interface QueryExp extends java.io.Serializable
 	* @exception BadAttributeValueExpException
 	* @exception InvalidApplicationException
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function apply(name : javax.management.ObjectName) : Bool;
 	
 	/**
 	* Sets the MBean server on which the query is to be performed.
 	*
 	* @param s The MBean server on which the query is to be performed.
 	*/
-	@:overload public function setMBeanServer(s : javax.management.MBeanServer) : Void;
+	@:overload @:public public function setMBeanServer(s : javax.management.MBeanServer) : Void;
 	
 	
 }

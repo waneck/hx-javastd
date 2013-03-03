@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.runtime.reflect.opt;
 */
 @:internal extern class AccessorInjector
 {
-	private static var noOptimize(default, null) : Bool;
+	@:protected @:static @:final private static var noOptimize(default, null) : Bool;
 	
 	/**
 	* Loads the optimized class and returns it.
@@ -33,7 +33,7 @@ package com.sun.xml.internal.bind.v2.runtime.reflect.opt;
 	* @return null
 	*      if it fails for some reason.
 	*/
-	@:overload public static function prepare(beanClass : Class<Dynamic>, templateClassName : String, newClassName : String, replacements : java.NativeArray<String>) : Class<Dynamic>;
+	@:overload @:public @:static public static function prepare(beanClass : Class<Dynamic>, templateClassName : String, newClassName : String, replacements : java.NativeArray<String>) : Class<Dynamic>;
 	
 	
 }

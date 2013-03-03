@@ -63,7 +63,7 @@ extern interface TreeModel
 	*
 	* @return  the root of the tree
 	*/
-	@:overload public function getRoot() : Dynamic;
+	@:overload @:public public function getRoot() : Dynamic;
 	
 	/**
 	* Returns the child of <code>parent</code> at index <code>index</code>
@@ -77,7 +77,7 @@ extern interface TreeModel
 	* @param   parent  a node in the tree, obtained from this data source
 	* @return  the child of <code>parent</code> at index <code>index</code>
 	*/
-	@:overload public function getChild(parent : Dynamic, index : Int) : Dynamic;
+	@:overload @:public public function getChild(parent : Dynamic, index : Int) : Dynamic;
 	
 	/**
 	* Returns the number of children of <code>parent</code>.
@@ -88,7 +88,7 @@ extern interface TreeModel
 	* @param   parent  a node in the tree, obtained from this data source
 	* @return  the number of children of the node <code>parent</code>
 	*/
-	@:overload public function getChildCount(parent : Dynamic) : Int;
+	@:overload @:public public function getChildCount(parent : Dynamic) : Int;
 	
 	/**
 	* Returns <code>true</code> if <code>node</code> is a leaf.
@@ -101,7 +101,7 @@ extern interface TreeModel
 	* @param   node  a node in the tree, obtained from this data source
 	* @return  true if <code>node</code> is a leaf
 	*/
-	@:overload public function isLeaf(node : Dynamic) : Bool;
+	@:overload @:public public function isLeaf(node : Dynamic) : Bool;
 	
 	/**
 	* Messaged when the user has altered the value for the item identified
@@ -112,7 +112,7 @@ extern interface TreeModel
 	* @param path path to the node that the user has altered
 	* @param newValue the new value from the TreeCellEditor
 	*/
-	@:overload public function valueForPathChanged(path : javax.swing.tree.TreePath, newValue : Dynamic) : Void;
+	@:overload @:public public function valueForPathChanged(path : javax.swing.tree.TreePath, newValue : Dynamic) : Void;
 	
 	/**
 	* Returns the index of child in parent.  If either <code>parent</code>
@@ -126,7 +126,7 @@ extern interface TreeModel
 	*    <code>child</code> or <code>parent</code> are <code>null</code>
 	*    or don't belong to this tree model
 	*/
-	@:overload public function getIndexOfChild(parent : Dynamic, child : Dynamic) : Int;
+	@:overload @:public public function getIndexOfChild(parent : Dynamic, child : Dynamic) : Int;
 	
 	/**
 	* Adds a listener for the <code>TreeModelEvent</code>

@@ -25,15 +25,15 @@ package com.sun.xml.internal.messaging.saaj.util;
 */
 extern class JAXMStreamSource extends javax.xml.transform.stream.StreamSource
 {
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
-	@:overload public function new(rdr : java.io.Reader) : Void;
+	@:overload @:public public function new(rdr : java.io.Reader) : Void;
 	
-	@:overload override public function getInputStream() : java.io.InputStream;
+	@:overload @:public override public function getInputStream() : java.io.InputStream;
 	
-	@:overload override public function getReader() : java.io.Reader;
+	@:overload @:public override public function getReader() : java.io.Reader;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

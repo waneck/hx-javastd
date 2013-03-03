@@ -39,12 +39,12 @@ extern class ModuleGen implements com.sun.tools.corba.se.idl.ModuleGen
 	/**
 	* Public zero-argument constructor.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Generate Java code for all members of an IDL module.
 	**/
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, entry : com.sun.tools.corba.se.idl.ModuleEntry, stream : java.io.PrintWriter) : Void;
+	@:overload @:public public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, entry : com.sun.tools.corba.se.idl.ModuleEntry, stream : java.io.PrintWriter) : Void;
 	
 	
 }

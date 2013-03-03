@@ -39,12 +39,12 @@ package sun.text.resources;
 */
 extern class FormatData_zh_HK extends java.util.ListResourceBundle
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Overrides ListResourceBundle
 	*/
-	@:overload @:final private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:protected @:final override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

@@ -29,7 +29,7 @@ extern class SignedInfo extends com.sun.org.apache.xml.internal.security.signatu
 	*    be placed
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document) : Void;
 	
 	/**
 	* Constructs {@link SignedInfo} using given Canonicalization algorithm and
@@ -42,7 +42,7 @@ extern class SignedInfo extends com.sun.org.apache.xml.internal.security.signatu
 	*    Canonicalization method
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, signatureMethodURI : String, canonicalizationMethodURI : String) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, signatureMethodURI : String, canonicalizationMethodURI : String) : Void;
 	
 	/**
 	* Constructor SignedInfo
@@ -55,7 +55,7 @@ extern class SignedInfo extends com.sun.org.apache.xml.internal.security.signatu
 	*    Canonicalization method
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, signatureMethodURI : String, hMACOutputLength : Int, canonicalizationMethodURI : String) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, signatureMethodURI : String, hMACOutputLength : Int, canonicalizationMethodURI : String) : Void;
 	
 	/**
 	* @param doc
@@ -63,7 +63,7 @@ extern class SignedInfo extends com.sun.org.apache.xml.internal.security.signatu
 	* @param canonicalizationMethodElem
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, signatureMethodElem : org.w3c.dom.Element, canonicalizationMethodElem : org.w3c.dom.Element) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, signatureMethodElem : org.w3c.dom.Element, canonicalizationMethodElem : org.w3c.dom.Element) : Void;
 	
 	/**
 	* Build a {@link SignedInfo} from an {@link Element}
@@ -74,7 +74,7 @@ extern class SignedInfo extends com.sun.org.apache.xml.internal.security.signatu
 	* @see <A HREF="http://lists.w3.org/Archives/Public/w3c-ietf-xmldsig/2001OctDec/0033.html">Question</A>
 	* @see <A HREF="http://lists.w3.org/Archives/Public/w3c-ietf-xmldsig/2001OctDec/0054.html">Answer</A>
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, baseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, baseURI : String) : Void;
 	
 	/**
 	* Tests core validation process
@@ -83,7 +83,7 @@ extern class SignedInfo extends com.sun.org.apache.xml.internal.security.signatu
 	* @throws MissingResourceFailureException
 	* @throws XMLSecurityException
 	*/
-	@:overload public function verify() : Bool;
+	@:overload @:public public function verify() : Bool;
 	
 	/**
 	* Tests core validation process
@@ -93,7 +93,7 @@ extern class SignedInfo extends com.sun.org.apache.xml.internal.security.signatu
 	* @throws MissingResourceFailureException
 	* @throws XMLSecurityException
 	*/
-	@:overload public function verify(followManifests : Bool) : Bool;
+	@:overload @:public public function verify(followManifests : Bool) : Bool;
 	
 	/**
 	* Returns getCanonicalizedOctetStream
@@ -103,7 +103,7 @@ extern class SignedInfo extends com.sun.org.apache.xml.internal.security.signatu
 	* @throws InvalidCanonicalizerException
 	* @throws XMLSecurityException
 	*/
-	@:overload public function getCanonicalizedOctetStream() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getCanonicalizedOctetStream() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	*  Output the C14n stream to the give outputstream.
@@ -112,28 +112,28 @@ extern class SignedInfo extends com.sun.org.apache.xml.internal.security.signatu
 	* @throws InvalidCanonicalizerException
 	* @throws XMLSecurityException
 	*/
-	@:overload public function signInOctectStream(os : java.io.OutputStream) : Void;
+	@:overload @:public public function signInOctectStream(os : java.io.OutputStream) : Void;
 	
 	/**
 	* Returns the Canonicalization method URI
 	*
 	* @return the Canonicalization method URI
 	*/
-	@:overload public function getCanonicalizationMethodURI() : String;
+	@:overload @:public public function getCanonicalizationMethodURI() : String;
 	
 	/**
 	* Returns the Signature method URI
 	*
 	* @return the Signature method URI
 	*/
-	@:overload public function getSignatureMethodURI() : String;
+	@:overload @:public public function getSignatureMethodURI() : String;
 	
 	/**
 	* Method getSignatureMethodElement
 	* @return gets The SignatureMethod Node.
 	*
 	*/
-	@:overload public function getSignatureMethodElement() : org.w3c.dom.Element;
+	@:overload @:public public function getSignatureMethodElement() : org.w3c.dom.Element;
 	
 	/**
 	* Creates a SecretKey for the appropriate Mac algorithm based on a
@@ -142,18 +142,18 @@ extern class SignedInfo extends com.sun.org.apache.xml.internal.security.signatu
 	* @param secretKeyBytes
 	* @return the secret key for the SignedInfo element.
 	*/
-	@:overload public function createSecretKey(secretKeyBytes : java.NativeArray<java.StdTypes.Int8>) : javax.crypto.SecretKey;
+	@:overload @:public public function createSecretKey(secretKeyBytes : java.NativeArray<java.StdTypes.Int8>) : javax.crypto.SecretKey;
 	
-	@:overload private function getSignatureAlgorithm() : com.sun.org.apache.xml.internal.security.algorithms.SignatureAlgorithm;
+	@:overload @:protected private function getSignatureAlgorithm() : com.sun.org.apache.xml.internal.security.algorithms.SignatureAlgorithm;
 	
 	/**
 	* Method getBaseLocalName
 	* @inheritDoc
 	*
 	*/
-	@:overload override public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
-	@:overload public function getInclusiveNamespaces() : String;
+	@:overload @:public public function getInclusiveNamespaces() : String;
 	
 	
 }

@@ -40,7 +40,7 @@ package java.io;
 	* Create a new string writer using the default initial string-buffer
 	* size.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a new string writer using the specified initial string-buffer
@@ -53,12 +53,12 @@ package java.io;
 	* @throws IllegalArgumentException
 	*         If <tt>initialSize</tt> is negative
 	*/
-	@:overload public function new(initialSize : Int) : Void;
+	@:overload @:public public function new(initialSize : Int) : Void;
 	
 	/**
 	* Write a single character.
 	*/
-	@:overload override public function write(c : Int) : Void;
+	@:overload @:public override public function write(c : Int) : Void;
 	
 	/**
 	* Write a portion of an array of characters.
@@ -67,12 +67,12 @@ package java.io;
 	* @param  off   Offset from which to start writing characters
 	* @param  len   Number of characters to write
 	*/
-	@:overload override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
 	/**
 	* Write a string.
 	*/
-	@:overload override public function write(str : String) : Void;
+	@:overload @:public override public function write(str : String) : Void;
 	
 	/**
 	* Write a portion of a string.
@@ -81,7 +81,7 @@ package java.io;
 	* @param  off  Offset from which to start writing characters
 	* @param  len  Number of characters to write
 	*/
-	@:overload override public function write(str : String, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(str : String, off : Int, len : Int) : Void;
 	
 	/**
 	* Appends the specified character sequence to this writer.
@@ -107,7 +107,7 @@ package java.io;
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence) : java.io.StringWriter;
+	@:require(java5) @:overload @:public override public function append(csq : java.lang.CharSequence) : java.io.StringWriter;
 	
 	/**
 	* Appends a subsequence of the specified character sequence to this writer.
@@ -141,7 +141,7 @@ package java.io;
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.io.StringWriter;
+	@:require(java5) @:overload @:public override public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.io.StringWriter;
 	
 	/**
 	* Appends the specified character to this writer.
@@ -159,31 +159,31 @@ package java.io;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function append(c : java.StdTypes.Char16) : java.io.StringWriter;
+	@:require(java5) @:overload @:public override public function append(c : java.StdTypes.Char16) : java.io.StringWriter;
 	
 	/**
 	* Return the buffer's current value as a string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Return the string buffer itself.
 	*
 	* @return StringBuffer holding the current buffer value.
 	*/
-	@:overload public function getBuffer() : java.lang.StringBuffer;
+	@:overload @:public public function getBuffer() : java.lang.StringBuffer;
 	
 	/**
 	* Flush the stream.
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* Closing a <tt>StringWriter</tt> has no effect. The methods in this
 	* class can be called after the stream has been closed without generating
 	* an <tt>IOException</tt>.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

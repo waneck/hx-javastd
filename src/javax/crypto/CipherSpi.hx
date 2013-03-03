@@ -33,7 +33,7 @@ extern class CipherSpi
 	* @exception NoSuchAlgorithmException if the requested cipher mode does
 	* not exist
 	*/
-	@:overload @:abstract private function engineSetMode(mode : String) : Void;
+	@:overload @:protected @:abstract private function engineSetMode(mode : String) : Void;
 	
 	/**
 	* Sets the padding mechanism of this cipher.
@@ -43,7 +43,7 @@ extern class CipherSpi
 	* @exception NoSuchPaddingException if the requested padding mechanism
 	* does not exist
 	*/
-	@:overload @:abstract private function engineSetPadding(padding : String) : Void;
+	@:overload @:protected @:abstract private function engineSetPadding(padding : String) : Void;
 	
 	/**
 	* Returns the block size (in bytes).
@@ -51,7 +51,7 @@ extern class CipherSpi
 	* @return the block size (in bytes), or 0 if the underlying algorithm is
 	* not a block cipher
 	*/
-	@:overload @:abstract private function engineGetBlockSize() : Int;
+	@:overload @:protected @:abstract private function engineGetBlockSize() : Int;
 	
 	/**
 	* Returns the length in bytes that an output buffer would
@@ -70,7 +70,7 @@ extern class CipherSpi
 	*
 	* @return the required output buffer size (in bytes)
 	*/
-	@:overload @:abstract private function engineGetOutputSize(inputLen : Int) : Int;
+	@:overload @:protected @:abstract private function engineGetOutputSize(inputLen : Int) : Int;
 	
 	/**
 	* Returns the initialization vector (IV) in a new buffer.
@@ -82,7 +82,7 @@ extern class CipherSpi
 	* underlying algorithm does not use an IV, or if the IV has not yet
 	* been set.
 	*/
-	@:overload @:abstract private function engineGetIV() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:abstract private function engineGetIV() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the parameters used with this cipher.
@@ -95,7 +95,7 @@ extern class CipherSpi
 	* @return the parameters used with this cipher, or null if this cipher
 	* does not use any parameters.
 	*/
-	@:overload @:abstract private function engineGetParameters() : java.security.AlgorithmParameters;
+	@:overload @:protected @:abstract private function engineGetParameters() : java.security.AlgorithmParameters;
 	
 	/**
 	* Initializes this cipher with a key and a source
@@ -142,7 +142,7 @@ extern class CipherSpi
 	* algorithm parameters that cannot be
 	* determined from the given key.
 	*/
-	@:overload @:abstract private function engineInit(opmode : Int, key : java.security.Key, random : java.security.SecureRandom) : Void;
+	@:overload @:protected @:abstract private function engineInit(opmode : Int, key : java.security.Key, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this cipher with a key, a set of
@@ -192,7 +192,7 @@ extern class CipherSpi
 	* or if this cipher requires
 	* algorithm parameters and <code>params</code> is null.
 	*/
-	@:overload @:abstract private function engineInit(opmode : Int, key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:protected @:abstract private function engineInit(opmode : Int, key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this cipher with a key, a set of
@@ -242,7 +242,7 @@ extern class CipherSpi
 	* or if this cipher requires
 	* algorithm parameters and <code>params</code> is null.
 	*/
-	@:overload @:abstract private function engineInit(opmode : Int, key : java.security.Key, params : java.security.AlgorithmParameters, random : java.security.SecureRandom) : Void;
+	@:overload @:protected @:abstract private function engineInit(opmode : Int, key : java.security.Key, params : java.security.AlgorithmParameters, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Continues a multiple-part encryption or decryption operation
@@ -262,7 +262,7 @@ extern class CipherSpi
 	* cipher is a block cipher and the input data is too short to result in a
 	* new block.
 	*/
-	@:overload @:abstract private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:abstract private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Continues a multiple-part encryption or decryption operation
@@ -290,7 +290,7 @@ extern class CipherSpi
 	* @exception ShortBufferException if the given output buffer is too small
 	* to hold the result
 	*/
-	@:overload @:abstract private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int, output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
+	@:overload @:protected @:abstract private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int, output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
 	
 	/**
 	* Continues a multiple-part encryption or decryption operation
@@ -322,7 +322,7 @@ extern class CipherSpi
 	* @throws NullPointerException if either parameter is <CODE>null</CODE>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function engineUpdate(input : java.nio.ByteBuffer, output : java.nio.ByteBuffer) : Int;
+	@:require(java5) @:overload @:protected private function engineUpdate(input : java.nio.ByteBuffer, output : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* Encrypts or decrypts data in a single-part operation,
@@ -368,7 +368,7 @@ extern class CipherSpi
 	* AEAD mode (such as GCM/CCM), and the received authentication tag
 	* does not match the calculated value
 	*/
-	@:overload @:abstract private function engineDoFinal(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:abstract private function engineDoFinal(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Encrypts or decrypts data in a single-part operation,
@@ -423,7 +423,7 @@ extern class CipherSpi
 	* AEAD mode (such as GCM/CCM), and the received authentication tag
 	* does not match the calculated value
 	*/
-	@:overload @:abstract private function engineDoFinal(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int, output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
+	@:overload @:protected @:abstract private function engineDoFinal(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int, output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
 	
 	/**
 	* Encrypts or decrypts data in a single-part operation,
@@ -480,7 +480,7 @@ extern class CipherSpi
 	* @throws NullPointerException if either parameter is <CODE>null</CODE>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function engineDoFinal(input : java.nio.ByteBuffer, output : java.nio.ByteBuffer) : Int;
+	@:require(java5) @:overload @:protected private function engineDoFinal(input : java.nio.ByteBuffer, output : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* Wrap a key.
@@ -506,7 +506,7 @@ extern class CipherSpi
 	* wrap the key with this cipher (e.g., a hardware protected key is
 	* being passed to a software-only cipher).
 	*/
-	@:overload private function engineWrap(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected private function engineWrap(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Unwrap a previously wrapped key.
@@ -538,7 +538,7 @@ extern class CipherSpi
 	* represent a wrapped key of type <code>wrappedKeyType</code> for
 	* the <code>wrappedKeyAlgorithm</code>.
 	*/
-	@:overload private function engineUnwrap(wrappedKey : java.NativeArray<java.StdTypes.Int8>, wrappedKeyAlgorithm : String, wrappedKeyType : Int) : java.security.Key;
+	@:overload @:protected private function engineUnwrap(wrappedKey : java.NativeArray<java.StdTypes.Int8>, wrappedKeyAlgorithm : String, wrappedKeyType : Int) : java.security.Key;
 	
 	/**
 	* Returns the key size of the given key object in bits.
@@ -552,7 +552,7 @@ extern class CipherSpi
 	*
 	* @exception InvalidKeyException if <code>key</code> is invalid.
 	*/
-	@:overload private function engineGetKeySize(key : java.security.Key) : Int;
+	@:overload @:protected private function engineGetKeySize(key : java.security.Key) : Int;
 	
 	/**
 	* Continues a multi-part update of the Additional Authentication
@@ -578,7 +578,7 @@ extern class CipherSpi
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload private function engineUpdateAAD(src : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:require(java7) @:overload @:protected private function engineUpdateAAD(src : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* Continues a multi-part update of the Additional Authentication
@@ -607,7 +607,7 @@ extern class CipherSpi
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload private function engineUpdateAAD(src : java.nio.ByteBuffer) : Void;
+	@:require(java7) @:overload @:protected private function engineUpdateAAD(src : java.nio.ByteBuffer) : Void;
 	
 	
 }

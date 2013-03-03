@@ -26,12 +26,12 @@ package sun.security.provider.certpath;
 @:internal extern class ReverseState implements sun.security.provider.certpath.State
 {
 	/* the checker used for revocation status */
-	public var crlChecker : sun.security.provider.certpath.CrlRevocationChecker;
+	@:public public var crlChecker : sun.security.provider.certpath.CrlRevocationChecker;
 	
 	/* Flag indicating if current cert can vouch for the CRL for
 	* the next cert
 	*/
-	public var crlSign : Bool;
+	@:public public var crlSign : Bool;
 	
 	/**
 	* Returns a boolean flag indicating if the state is initial
@@ -39,12 +39,12 @@ package sun.security.provider.certpath;
 	*
 	* @return boolean flag indicating if the state is initial (just starting)
 	*/
-	@:overload public function isInitial() : Bool;
+	@:overload @:public public function isInitial() : Bool;
 	
 	/**
 	* Display state for debugging purposes
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Initialize the state.
@@ -56,21 +56,21 @@ package sun.security.provider.certpath;
 	* @param anyPolicyInhibited True, if any policy is inhibited.
 	* @param certPathCheckers the list of user-defined PKIXCertPathCheckers
 	*/
-	@:overload public function initState(maxPathLen : Int, explicitPolicyRequired : Bool, policyMappingInhibited : Bool, anyPolicyInhibited : Bool, certPathCheckers : java.util.List<java.security.cert.PKIXCertPathChecker>) : Void;
+	@:overload @:public public function initState(maxPathLen : Int, explicitPolicyRequired : Bool, policyMappingInhibited : Bool, anyPolicyInhibited : Bool, certPathCheckers : java.util.List<java.security.cert.PKIXCertPathChecker>) : Void;
 	
 	/**
 	* Update the state with the specified trust anchor.
 	*
 	* @param anchor the most-trusted CA
 	*/
-	@:overload public function updateState(anchor : java.security.cert.TrustAnchor) : Void;
+	@:overload @:public public function updateState(anchor : java.security.cert.TrustAnchor) : Void;
 	
 	/**
 	* Update the state with the next certificate added to the path.
 	*
 	* @param cert the certificate which is used to update the state
 	*/
-	@:overload public function updateState(cert : java.security.cert.X509Certificate) : Void;
+	@:overload @:public public function updateState(cert : java.security.cert.X509Certificate) : Void;
 	
 	/**
 	* Returns a boolean flag indicating if a key lacking necessary key
@@ -78,7 +78,7 @@ package sun.security.provider.certpath;
 	*
 	* @return boolean flag indicating if key lacking parameters encountered.
 	*/
-	@:overload public function keyParamsNeeded() : Bool;
+	@:overload @:public public function keyParamsNeeded() : Bool;
 	
 	/*
 	* Clone current state. The state is cloned as each cert is
@@ -89,7 +89,7 @@ package sun.security.provider.certpath;
 	* because some of them (e.g., subjKeyId) will
 	* not have their contents modified by subsequent calls to updateState.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

@@ -30,24 +30,24 @@ extern class GlobalEntity extends com.sun.tools.internal.ws.wsdl.framework.Entit
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(defining : com.sun.tools.internal.ws.wsdl.framework.Defining, locator : org.xml.sax.Locator, errorReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function new(defining : com.sun.tools.internal.ws.wsdl.framework.Defining, locator : org.xml.sax.Locator, errorReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
-	@:overload @:abstract public function getKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:overload @:public @:abstract public function getKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	@:overload public function getDefining() : com.sun.tools.internal.ws.wsdl.framework.Defining;
+	@:overload @:public public function getDefining() : com.sun.tools.internal.ws.wsdl.framework.Defining;
 	
-	@:overload @:public override public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public @:public override public function getLocator() : org.xml.sax.Locator;
 	
 	/**
 	* Interface implemented by classes that are mappable to XML elements.
 	*
 	* @author WS Development Team
 	*/
-	@:overload @:public @:public override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public @:public @:public override public function getElementName() : javax.xml.namespace.QName;
 	
 	
 }

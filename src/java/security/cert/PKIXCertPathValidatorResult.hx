@@ -37,7 +37,7 @@ extern class PKIXCertPathValidatorResult implements java.security.cert.CertPathV
 	* @throws NullPointerException if the <code>subjectPublicKey</code> or
 	* <code>trustAnchor</code> parameters are <code>null</code>
 	*/
-	@:overload public function new(trustAnchor : java.security.cert.TrustAnchor, policyTree : java.security.cert.PolicyNode, subjectPublicKey : java.security.PublicKey) : Void;
+	@:overload @:public public function new(trustAnchor : java.security.cert.TrustAnchor, policyTree : java.security.cert.PolicyNode, subjectPublicKey : java.security.PublicKey) : Void;
 	
 	/**
 	* Returns the <code>TrustAnchor</code> describing the CA that served
@@ -45,7 +45,7 @@ extern class PKIXCertPathValidatorResult implements java.security.cert.CertPathV
 	*
 	* @return the <code>TrustAnchor</code> (never <code>null</code>)
 	*/
-	@:overload public function getTrustAnchor() : java.security.cert.TrustAnchor;
+	@:overload @:public public function getTrustAnchor() : java.security.cert.TrustAnchor;
 	
 	/**
 	* Returns the root node of the valid policy tree resulting from the
@@ -64,7 +64,7 @@ extern class PKIXCertPathValidatorResult implements java.security.cert.CertPathV
 	* @return the root node of the valid policy tree, or <code>null</code>
 	* if there are no valid policies
 	*/
-	@:overload public function getPolicyTree() : java.security.cert.PolicyNode;
+	@:overload @:public public function getPolicyTree() : java.security.cert.PolicyNode;
 	
 	/**
 	* Returns the public key of the subject (target) of the certification
@@ -72,14 +72,14 @@ extern class PKIXCertPathValidatorResult implements java.security.cert.CertPathV
 	*
 	* @return the public key of the subject (never <code>null</code>)
 	*/
-	@:overload public function getPublicKey() : java.security.PublicKey;
+	@:overload @:public public function getPublicKey() : java.security.PublicKey;
 	
 	/**
 	* Returns a copy of this object.
 	*
 	* @return the copy
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Return a printable representation of this
@@ -88,7 +88,7 @@ extern class PKIXCertPathValidatorResult implements java.security.cert.CertPathV
 	* @return a <code>String</code> describing the contents of this
 	*         <code>PKIXCertPathValidatorResult</code>
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

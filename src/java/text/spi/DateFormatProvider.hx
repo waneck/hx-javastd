@@ -29,7 +29,7 @@ extern class DateFormatProvider extends java.util.spi.LocaleServiceProvider
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns a new <code>DateFormat</code> instance which formats time
@@ -49,7 +49,7 @@ extern class DateFormatProvider extends java.util.spi.LocaleServiceProvider
 	* @return a time formatter.
 	* @see java.text.DateFormat#getTimeInstance(int, java.util.Locale)
 	*/
-	@:overload @:abstract public function getTimeInstance(style : Int, locale : java.util.Locale) : java.text.DateFormat;
+	@:overload @:public @:abstract public function getTimeInstance(style : Int, locale : java.util.Locale) : java.text.DateFormat;
 	
 	/**
 	* Returns a new <code>DateFormat</code> instance which formats date
@@ -69,7 +69,7 @@ extern class DateFormatProvider extends java.util.spi.LocaleServiceProvider
 	* @return a date formatter.
 	* @see java.text.DateFormat#getDateInstance(int, java.util.Locale)
 	*/
-	@:overload @:abstract public function getDateInstance(style : Int, locale : java.util.Locale) : java.text.DateFormat;
+	@:overload @:public @:abstract public function getDateInstance(style : Int, locale : java.util.Locale) : java.text.DateFormat;
 	
 	/**
 	* Returns a new <code>DateFormat</code> instance which formats date and time
@@ -95,7 +95,7 @@ extern class DateFormatProvider extends java.util.spi.LocaleServiceProvider
 	* @return a date/time formatter.
 	* @see java.text.DateFormat#getDateTimeInstance(int, int, java.util.Locale)
 	*/
-	@:overload @:abstract public function getDateTimeInstance(dateStyle : Int, timeStyle : Int, locale : java.util.Locale) : java.text.DateFormat;
+	@:overload @:public @:abstract public function getDateTimeInstance(dateStyle : Int, timeStyle : Int, locale : java.util.Locale) : java.text.DateFormat;
 	
 	
 }

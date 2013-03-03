@@ -30,7 +30,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* connecting the two ends of the arc segment.
 	* @since 1.2
 	*/
-	@:require(java2) public static var OPEN(default, null) : Int;
+	@:require(java2) @:public @:final @:static public static var OPEN(default, null) : Int;
 	
 	/**
 	* The closure type for an arc closed by drawing a straight
@@ -38,7 +38,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* arc segment.
 	* @since 1.2
 	*/
-	@:require(java2) public static var CHORD(default, null) : Int;
+	@:require(java2) @:public @:final @:static public static var CHORD(default, null) : Int;
 	
 	/**
 	* The closure type for an arc closed by drawing straight line
@@ -46,7 +46,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* of the full ellipse and from that point to the end of the arc segment.
 	* @since 1.2
 	*/
-	@:require(java2) public static var PIE(default, null) : Int;
+	@:require(java2) @:public @:final @:static public static var PIE(default, null) : Int;
 	
 	/**
 	* This is an abstract class that cannot be instantiated directly.
@@ -62,7 +62,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @see java.awt.geom.Arc2D.Float
 	* @see java.awt.geom.Arc2D.Double
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* This is an abstract class that cannot be instantiated directly.
@@ -77,7 +77,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @see java.awt.geom.Arc2D.Double
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function new(type : Int) : Void;
+	@:require(java2) @:overload @:protected private function new(type : Int) : Void;
 	
 	/**
 	* Returns the starting angle of the arc.
@@ -87,7 +87,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @see #setAngleStart
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getAngleStart() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getAngleStart() : Float;
 	
 	/**
 	* Returns the angular extent of the arc.
@@ -97,7 +97,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @see #setAngleExtent
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getAngleExtent() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getAngleExtent() : Float;
 	
 	/**
 	* Returns the arc closure type of the arc: {@link #OPEN},
@@ -107,7 +107,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @see #setArcType
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getArcType() : Int;
+	@:require(java2) @:overload @:public public function getArcType() : Int;
 	
 	/**
 	* Returns the starting point of the arc.  This point is the
@@ -118,7 +118,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* x,y coordinates of the starting point of the arc.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getStartPoint() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public public function getStartPoint() : java.awt.geom.Point2D;
 	
 	/**
 	* Returns the ending point of the arc.  This point is the
@@ -130,7 +130,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* x,y coordinates  of the ending point of the arc.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getEndPoint() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public public function getEndPoint() : java.awt.geom.Point2D;
 	
 	/**
 	* Sets the location, size, angular extents, and closure type of
@@ -148,7 +148,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* {@link #OPEN}, {@link #CHORD}, or {@link #PIE}.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function setArc(x : Float, y : Float, w : Float, h : Float, angSt : Float, angExt : Float, closure : Int) : Void;
+	@:require(java2) @:overload @:public @:abstract public function setArc(x : Float, y : Float, w : Float, h : Float, angSt : Float, angExt : Float, closure : Int) : Void;
 	
 	/**
 	* Sets the location, size, angular extents, and closure type of
@@ -165,7 +165,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* {@link #OPEN}, {@link #CHORD}, or {@link #PIE}.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setArc(loc : java.awt.geom.Point2D, size : java.awt.geom.Dimension2D, angSt : Float, angExt : Float, closure : Int) : Void;
+	@:require(java2) @:overload @:public public function setArc(loc : java.awt.geom.Point2D, size : java.awt.geom.Dimension2D, angSt : Float, angExt : Float, closure : Int) : Void;
 	
 	/**
 	* Sets the location, size, angular extents, and closure type of
@@ -180,7 +180,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* {@link #OPEN}, {@link #CHORD}, or {@link #PIE}.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setArc(rect : java.awt.geom.Rectangle2D, angSt : Float, angExt : Float, closure : Int) : Void;
+	@:require(java2) @:overload @:public public function setArc(rect : java.awt.geom.Rectangle2D, angSt : Float, angExt : Float, closure : Int) : Void;
 	
 	/**
 	* Sets this arc to be the same as the specified arc.
@@ -188,7 +188,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @param a The <CODE>Arc2D</CODE> to use to set the arc's values.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setArc(a : java.awt.geom.Arc2D) : Void;
+	@:require(java2) @:overload @:public public function setArc(a : java.awt.geom.Arc2D) : Void;
 	
 	/**
 	* Sets the position, bounds, angular extents, and closure type of
@@ -204,7 +204,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* {@link #OPEN}, {@link #CHORD}, or {@link #PIE}.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setArcByCenter(x : Float, y : Float, radius : Float, angSt : Float, angExt : Float, closure : Int) : Void;
+	@:require(java2) @:overload @:public public function setArcByCenter(x : Float, y : Float, radius : Float, angSt : Float, angExt : Float, closure : Int) : Void;
 	
 	/**
 	* Sets the position, bounds, and angular extents of this arc to the
@@ -224,7 +224,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @param radius The radius of the arc.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setArcByTangent(p1 : java.awt.geom.Point2D, p2 : java.awt.geom.Point2D, p3 : java.awt.geom.Point2D, radius : Float) : Void;
+	@:require(java2) @:overload @:public public function setArcByTangent(p1 : java.awt.geom.Point2D, p2 : java.awt.geom.Point2D, p3 : java.awt.geom.Point2D, radius : Float) : Void;
 	
 	/**
 	* Sets the starting angle of this arc to the specified double
@@ -234,7 +234,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @see #getAngleStart
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function setAngleStart(angSt : Float) : Void;
+	@:require(java2) @:overload @:public @:abstract public function setAngleStart(angSt : Float) : Void;
 	
 	/**
 	* Sets the angular extent of this arc to the specified double
@@ -244,7 +244,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @see #getAngleExtent
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function setAngleExtent(angExt : Float) : Void;
+	@:require(java2) @:overload @:public @:abstract public function setAngleExtent(angExt : Float) : Void;
 	
 	/**
 	* Sets the starting angle of this arc to the angle that the
@@ -255,7 +255,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @see #getAngleStart
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setAngleStart(p : java.awt.geom.Point2D) : Void;
+	@:require(java2) @:overload @:public public function setAngleStart(p : java.awt.geom.Point2D) : Void;
 	
 	/**
 	* Sets the starting angle and angular extent of this arc using two
@@ -272,7 +272,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @param y2 The Y coordinate of the arc's ending point.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setAngles(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
+	@:require(java2) @:overload @:public public function setAngles(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
 	
 	/**
 	* Sets the starting angle and angular extent of this arc using
@@ -289,7 +289,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* ending point.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setAngles(p1 : java.awt.geom.Point2D, p2 : java.awt.geom.Point2D) : Void;
+	@:require(java2) @:overload @:public public function setAngles(p1 : java.awt.geom.Point2D, p2 : java.awt.geom.Point2D) : Void;
 	
 	/**
 	* Sets the closure type of this arc to the specified value:
@@ -304,7 +304,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @see #getArcType
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setArcType(type : Int) : Void;
+	@:require(java2) @:overload @:public public function setArcType(type : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -314,7 +314,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setFrame(x : Float, y : Float, w : Float, h : Float) : Void;
+	@:require(java2) @:overload @:public override public function setFrame(x : Float, y : Float, w : Float, h : Float) : Void;
 	
 	/**
 	* Returns the high-precision framing rectangle of the arc.  The framing
@@ -332,7 +332,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* framing rectangle.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public override public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Constructs a <code>Rectangle2D</code> of the appropriate precision
@@ -349,7 +349,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	*     of this arc.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract private function makeBounds(x : Float, y : Float, w : Float, h : Float) : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:protected @:abstract private function makeBounds(x : Float, y : Float, w : Float, h : Float) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Determines whether or not the specified angle is within the
@@ -361,7 +361,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* <CODE>false</CODE> if the arc doesn't contain the angle.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function containsAngle(angle : Float) : Bool;
+	@:require(java2) @:overload @:public public function containsAngle(angle : Float) : Bool;
 	
 	/**
 	* Determines whether or not the specified point is inside the boundary
@@ -375,7 +375,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* arc's bounds.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function contains(x : Float, y : Float) : Bool;
+	@:require(java2) @:overload @:public override public function contains(x : Float, y : Float) : Bool;
 	
 	/**
 	* Determines whether or not the interior of the arc intersects
@@ -390,7 +390,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* <CODE>false</CODE> if the arc doesn't intersect the rectangle.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public override public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* Determines whether or not the interior of the arc entirely contains
@@ -405,7 +405,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* <CODE>false</CODE> if the arc doesn't contain the rectangle.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public override public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* Determines whether or not the interior of the arc entirely contains
@@ -417,7 +417,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* <CODE>false</CODE> if the arc doesn't contain the rectangle.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function contains(r : java.awt.geom.Rectangle2D) : Bool;
+	@:require(java2) @:overload @:public override public function contains(r : java.awt.geom.Rectangle2D) : Bool;
 	
 	/**
 	* Returns an iteration object that defines the boundary of the
@@ -435,14 +435,14 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @return A <CODE>PathIterator</CODE> that defines the arc's boundary.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
+	@:require(java2) @:overload @:public override public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
 	
 	/**
 	* Returns the hashcode for this <code>Arc2D</code>.
 	* @return the hashcode for this <code>Arc2D</code>.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function hashCode() : Int;
+	@:require(java6) @:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Determines whether or not the specified <code>Object</code> is
@@ -458,7 +458,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	*          <code>false</code> otherwise.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function equals(obj : Dynamic) : Bool;
+	@:require(java6) @:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }
@@ -474,7 +474,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var x : Single;
+	@:require(java2) @:public public var x : Single;
 	
 	/**
 	* The Y coordinate of the upper-left corner of the framing
@@ -482,7 +482,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var y : Single;
+	@:require(java2) @:public public var y : Single;
 	
 	/**
 	* The overall width of the full ellipse of which this arc is
@@ -491,7 +491,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var width : Single;
+	@:require(java2) @:public public var width : Single;
 	
 	/**
 	* The overall height of the full ellipse of which this arc is
@@ -500,28 +500,28 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var height : Single;
+	@:require(java2) @:public public var height : Single;
 	
 	/**
 	* The starting angle of the arc in degrees.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var start : Single;
+	@:require(java2) @:public public var start : Single;
 	
 	/**
 	* The angular extent of the arc in degrees.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var extent : Single;
+	@:require(java2) @:public public var extent : Single;
 	
 	/**
 	* Constructs a new OPEN arc, initialized to location (0, 0),
 	* size (0, 0), angular extents (start = 0, extent = 0).
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new arc, initialized to location (0, 0),
@@ -532,7 +532,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* {@link #OPEN}, {@link #CHORD}, or {@link #PIE}.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(type : Int) : Void;
+	@:require(java2) @:overload @:public public function new(type : Int) : Void;
 	
 	/**
 	* Constructs a new arc, initialized to the specified location,
@@ -552,7 +552,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* {@link #OPEN}, {@link #CHORD}, or {@link #PIE}.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(x : Single, y : Single, w : Single, h : Single, start : Single, extent : Single, type : Int) : Void;
+	@:require(java2) @:overload @:public public function new(x : Single, y : Single, w : Single, h : Single, start : Single, extent : Single, type : Int) : Void;
 	
 	/**
 	* Constructs a new arc, initialized to the specified location,
@@ -567,7 +567,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* {@link #OPEN}, {@link #CHORD}, or {@link #PIE}.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(ellipseBounds : java.awt.geom.Rectangle2D, start : Single, extent : Single, type : Int) : Void;
+	@:require(java2) @:overload @:public public function new(ellipseBounds : java.awt.geom.Rectangle2D, start : Single, extent : Single, type : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -577,7 +577,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX() : Float;
+	@:require(java2) @:overload @:public override public function getX() : Float;
 	
 	/**
 	* {@inheritDoc}
@@ -587,7 +587,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY() : Float;
+	@:require(java2) @:overload @:public override public function getY() : Float;
 	
 	/**
 	* {@inheritDoc}
@@ -597,7 +597,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getWidth() : Float;
+	@:require(java2) @:overload @:public override public function getWidth() : Float;
 	
 	/**
 	* {@inheritDoc}
@@ -607,49 +607,49 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getHeight() : Float;
+	@:require(java2) @:overload @:public override public function getHeight() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getAngleStart() : Float;
+	@:require(java2) @:overload @:public override public function getAngleStart() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getAngleExtent() : Float;
+	@:require(java2) @:overload @:public override public function getAngleExtent() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function isEmpty() : Bool;
+	@:require(java2) @:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setArc(x : Float, y : Float, w : Float, h : Float, angSt : Float, angExt : Float, closure : Int) : Void;
+	@:require(java2) @:overload @:public override public function setArc(x : Float, y : Float, w : Float, h : Float, angSt : Float, angExt : Float, closure : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setAngleStart(angSt : Float) : Void;
+	@:require(java2) @:overload @:public override public function setAngleStart(angSt : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setAngleExtent(angExt : Float) : Void;
+	@:require(java2) @:overload @:public override public function setAngleExtent(angExt : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override private function makeBounds(x : Float, y : Float, w : Float, h : Float) : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:protected override private function makeBounds(x : Float, y : Float, w : Float, h : Float) : java.awt.geom.Rectangle2D;
 	
 	
 }
@@ -665,7 +665,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var x : Float;
+	@:require(java2) @:public public var x : Float;
 	
 	/**
 	* The Y coordinate of the upper-left corner of the framing
@@ -673,7 +673,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var y : Float;
+	@:require(java2) @:public public var y : Float;
 	
 	/**
 	* The overall width of the full ellipse of which this arc is
@@ -681,7 +681,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var width : Float;
+	@:require(java2) @:public public var width : Float;
 	
 	/**
 	* The overall height of the full ellipse of which this arc is
@@ -689,28 +689,28 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var height : Float;
+	@:require(java2) @:public public var height : Float;
 	
 	/**
 	* The starting angle of the arc in degrees.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var start : Float;
+	@:require(java2) @:public public var start : Float;
 	
 	/**
 	* The angular extent of the arc in degrees.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var extent : Float;
+	@:require(java2) @:public public var extent : Float;
 	
 	/**
 	* Constructs a new OPEN arc, initialized to location (0, 0),
 	* size (0, 0), angular extents (start = 0, extent = 0).
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new arc, initialized to location (0, 0),
@@ -721,7 +721,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* {@link #OPEN}, {@link #CHORD}, or {@link #PIE}.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(type : Int) : Void;
+	@:require(java2) @:overload @:public public function new(type : Int) : Void;
 	
 	/**
 	* Constructs a new arc, initialized to the specified location,
@@ -741,7 +741,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* {@link #OPEN}, {@link #CHORD}, or {@link #PIE}.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(x : Float, y : Float, w : Float, h : Float, start : Float, extent : Float, type : Int) : Void;
+	@:require(java2) @:overload @:public public function new(x : Float, y : Float, w : Float, h : Float, start : Float, extent : Float, type : Int) : Void;
 	
 	/**
 	* Constructs a new arc, initialized to the specified location,
@@ -756,7 +756,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* {@link #OPEN}, {@link #CHORD}, or {@link #PIE}.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(ellipseBounds : java.awt.geom.Rectangle2D, start : Float, extent : Float, type : Int) : Void;
+	@:require(java2) @:overload @:public public function new(ellipseBounds : java.awt.geom.Rectangle2D, start : Float, extent : Float, type : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -766,7 +766,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX() : Float;
+	@:require(java2) @:overload @:public override public function getX() : Float;
 	
 	/**
 	* {@inheritDoc}
@@ -776,7 +776,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY() : Float;
+	@:require(java2) @:overload @:public override public function getY() : Float;
 	
 	/**
 	* {@inheritDoc}
@@ -786,7 +786,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getWidth() : Float;
+	@:require(java2) @:overload @:public override public function getWidth() : Float;
 	
 	/**
 	* {@inheritDoc}
@@ -796,49 +796,49 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getHeight() : Float;
+	@:require(java2) @:overload @:public override public function getHeight() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getAngleStart() : Float;
+	@:require(java2) @:overload @:public override public function getAngleStart() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getAngleExtent() : Float;
+	@:require(java2) @:overload @:public override public function getAngleExtent() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function isEmpty() : Bool;
+	@:require(java2) @:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setArc(x : Float, y : Float, w : Float, h : Float, angSt : Float, angExt : Float, closure : Int) : Void;
+	@:require(java2) @:overload @:public override public function setArc(x : Float, y : Float, w : Float, h : Float, angSt : Float, angExt : Float, closure : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setAngleStart(angSt : Float) : Void;
+	@:require(java2) @:overload @:public override public function setAngleStart(angSt : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setAngleExtent(angExt : Float) : Void;
+	@:require(java2) @:overload @:public override public function setAngleExtent(angExt : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override private function makeBounds(x : Float, y : Float, w : Float, h : Float) : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:protected override private function makeBounds(x : Float, y : Float, w : Float, h : Float) : java.awt.geom.Rectangle2D;
 	
 	
 }

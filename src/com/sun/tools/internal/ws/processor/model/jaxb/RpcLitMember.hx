@@ -28,31 +28,31 @@ extern class RpcLitMember extends com.sun.tools.internal.ws.processor.model.Abst
 	/**
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, javaTypeName : String) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, javaTypeName : String) : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, javaTypeName : String, schemaTypeName : javax.xml.namespace.QName) : Void;
-	
-	/**
-	* @return Returns the type.
-	*/
-	@:overload public function getJavaTypeName() : String;
-	
-	/**
-	* @param type The type to set.
-	*/
-	@:overload public function setJavaTypeName(type : String) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, javaTypeName : String, schemaTypeName : javax.xml.namespace.QName) : Void;
 	
 	/**
 	* @return Returns the type.
 	*/
-	@:overload public function getSchemaTypeName() : javax.xml.namespace.QName;
+	@:overload @:public public function getJavaTypeName() : String;
 	
 	/**
 	* @param type The type to set.
 	*/
-	@:overload public function setSchemaTypeName(type : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setJavaTypeName(type : String) : Void;
+	
+	/**
+	* @return Returns the type.
+	*/
+	@:overload @:public public function getSchemaTypeName() : javax.xml.namespace.QName;
+	
+	/**
+	* @param type The type to set.
+	*/
+	@:overload @:public public function setSchemaTypeName(type : javax.xml.namespace.QName) : Void;
 	
 	
 }

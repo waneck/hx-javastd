@@ -29,48 +29,48 @@ extern class AudioDevice
 	* The default audio player. This audio player is initialized
 	* automatically.
 	*/
-	public static var device(default, null) : sun.audio.AudioDevice;
+	@:public @:static @:final public static var device(default, null) : sun.audio.AudioDevice;
 	
 	/**
 	*  Open an audio channel.
 	*/
-	@:overload @:synchronized public function openChannel(_in : java.io.InputStream) : Void;
+	@:overload @:public @:synchronized public function openChannel(_in : java.io.InputStream) : Void;
 	
 	/**
 	*  Close an audio channel.
 	*/
-	@:overload @:synchronized public function closeChannel(_in : java.io.InputStream) : Void;
+	@:overload @:public @:synchronized public function closeChannel(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Open the device (done automatically)
 	*/
-	@:overload @:synchronized public function open() : Void;
+	@:overload @:public @:synchronized public function open() : Void;
 	
 	/**
 	* Close the device (done automatically)
 	*/
-	@:overload @:synchronized public function close() : Void;
+	@:overload @:public @:synchronized public function close() : Void;
 	
 	/**
 	* Play open audio stream(s)
 	*/
-	@:overload public function play() : Void;
+	@:overload @:public public function play() : Void;
 	
 	/**
 	* Close streams
 	*/
-	@:overload @:synchronized public function closeStreams() : Void;
+	@:overload @:public @:synchronized public function closeStreams() : Void;
 	
 	/**
 	* Number of channels currently open.
 	*/
-	@:overload public function openChannels() : Int;
+	@:overload @:public public function openChannels() : Int;
 	
 	
 }
 @:native('sun$audio$AudioDevice$Info') @:internal extern class AudioDevice_Info implements javax.sound.midi.MetaEventListener
 {
-	@:overload public function meta(event : javax.sound.midi.MetaMessage) : Void;
+	@:overload @:public public function meta(event : javax.sound.midi.MetaMessage) : Void;
 	
 	
 }

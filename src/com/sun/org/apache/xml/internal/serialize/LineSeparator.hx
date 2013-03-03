@@ -27,22 +27,22 @@ extern class LineSeparator
 	/**
 	* Line separator for Unix systems (<tt>\n</tt>).
 	*/
-	public static var Unix(default, null) : String;
+	@:public @:static @:final public static var Unix(default, null) : String;
 	
 	/**
 	* Line separator for Windows systems (<tt>\r\n</tt>).
 	*/
-	public static var Windows(default, null) : String;
+	@:public @:static @:final public static var Windows(default, null) : String;
 	
 	/**
 	* Line separator for Macintosh systems (<tt>\r</tt>).
 	*/
-	public static var Macintosh(default, null) : String;
+	@:public @:static @:final public static var Macintosh(default, null) : String;
 	
 	/**
 	* Line separator for the Web (<tt>\n</tt>).
 	*/
-	public static var Web(default, null) : String;
+	@:public @:static @:final public static var Web(default, null) : String;
 	
 	
 }

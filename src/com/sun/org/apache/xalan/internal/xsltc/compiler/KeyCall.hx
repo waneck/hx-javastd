@@ -35,7 +35,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* @param fname The function name (should be 'key' or 'id')
 	* @param arguments A vector containing the arguments the the function
 	*/
-	@:overload public function new(fname : com.sun.org.apache.xalan.internal.xsltc.compiler.QName, arguments : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function new(fname : com.sun.org.apache.xalan.internal.xsltc.compiler.QName, arguments : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* If this call to key() is in a top-level element like  another variable
@@ -49,7 +49,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* between variable y and key x. Note that if 'x' is unknown statically
 	* in key('x', 1), there's nothing we can do at this point.
 	*/
-	@:overload public function addParentDependency() : Void;
+	@:overload @:public public function addParentDependency() : Void;
 	
 	/**
 	* Type check the parameters for the id() or key() function.
@@ -58,7 +58,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* @param stable The parser's symbol table
 	* @throws TypeCheckError When the parameters have illegal type
 	*/
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* This method is called when the constructor is compiled in
@@ -68,7 +68,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* @param classGen The Java class generator
 	* @param methodGen The method generator
 	*/
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

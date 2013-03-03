@@ -36,23 +36,23 @@ extern class DOMServiceProvider
 	* instance is by using the appropriate methods of the
 	* DOMService.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns true if the DOMService can determine the association
 	* between the obj and the underlying DOM in the browser.
 	*/
-	@:overload @:abstract public function canHandle(obj : Dynamic) : Bool;
+	@:overload @:public @:abstract public function canHandle(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the Document object of the DOM.
 	*/
-	@:overload @:abstract public function getDocument(obj : Dynamic) : org.w3c.dom.Document;
+	@:overload @:public @:abstract public function getDocument(obj : Dynamic) : org.w3c.dom.Document;
 	
 	/**
 	* Returns the DOMImplemenation object of the DOM.
 	*/
-	@:overload @:abstract public function getDOMImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload @:public @:abstract public function getDOMImplementation() : org.w3c.dom.DOMImplementation;
 	
 	
 }

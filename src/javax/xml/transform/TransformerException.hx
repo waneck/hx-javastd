@@ -31,7 +31,7 @@ extern class TransformerException extends java.lang.Exception
 	*
 	* @return A SourceLocator object, or null if none was specified.
 	*/
-	@:overload public function getLocator() : javax.xml.transform.SourceLocator;
+	@:overload @:public public function getLocator() : javax.xml.transform.SourceLocator;
 	
 	/**
 	* Method setLocator sets an instance of a SourceLocator
@@ -39,7 +39,7 @@ extern class TransformerException extends java.lang.Exception
 	*
 	* @param location A SourceLocator object, or null to clear the location.
 	*/
-	@:overload public function setLocator(location : javax.xml.transform.SourceLocator) : Void;
+	@:overload @:public public function setLocator(location : javax.xml.transform.SourceLocator) : Void;
 	
 	/**
 	* This method retrieves an exception that this exception wraps.
@@ -47,14 +47,14 @@ extern class TransformerException extends java.lang.Exception
 	* @return An Throwable object, or null.
 	* @see #getCause
 	*/
-	@:overload public function getException() : java.lang.Throwable;
+	@:overload @:public public function getException() : java.lang.Throwable;
 	
 	/**
 	* Returns the cause of this throwable or <code>null</code> if the
 	* cause is nonexistent or unknown.  (The cause is the throwable that
 	* caused this throwable to get thrown.)
 	*/
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	/**
 	* Initializes the <i>cause</i> of this throwable to the specified value.
@@ -80,21 +80,21 @@ extern class TransformerException extends java.lang.Exception
 	*         {@link #TransformerException(String,Throwable)}, or this method has already
 	*         been called on this throwable.
 	*/
-	@:overload @:synchronized override public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
+	@:overload @:public @:synchronized override public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
 	
 	/**
 	* Create a new TransformerException.
 	*
 	* @param message The error or warning message.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Create a new TransformerException wrapping an existing exception.
 	*
 	* @param e The exception to be wrapped.
 	*/
-	@:overload public function new(e : java.lang.Throwable) : Void;
+	@:overload @:public public function new(e : java.lang.Throwable) : Void;
 	
 	/**
 	* Wrap an existing exception in a TransformerException.
@@ -106,7 +106,7 @@ extern class TransformerException extends java.lang.Exception
 	*                use the message from the embedded exception.
 	* @param e Any exception
 	*/
-	@:overload public function new(message : String, e : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, e : java.lang.Throwable) : Void;
 	
 	/**
 	* Create a new TransformerException from a message and a Locator.
@@ -118,7 +118,7 @@ extern class TransformerException extends java.lang.Exception
 	* @param message The error or warning message.
 	* @param locator The locator object for the error or warning.
 	*/
-	@:overload public function new(message : String, locator : javax.xml.transform.SourceLocator) : Void;
+	@:overload @:public public function new(message : String, locator : javax.xml.transform.SourceLocator) : Void;
 	
 	/**
 	* Wrap an existing exception in a TransformerException.
@@ -128,7 +128,7 @@ extern class TransformerException extends java.lang.Exception
 	* @param locator The locator object for the error or warning.
 	* @param e Any exception
 	*/
-	@:overload public function new(message : String, locator : javax.xml.transform.SourceLocator, e : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, locator : javax.xml.transform.SourceLocator, e : java.lang.Throwable) : Void;
 	
 	/**
 	* Get the error message with location information
@@ -137,7 +137,7 @@ extern class TransformerException extends java.lang.Exception
 	* @return A <code>String</code> representing the error message with
 	*         location information appended.
 	*/
-	@:overload public function getMessageAndLocation() : String;
+	@:overload @:public public function getMessageAndLocation() : String;
 	
 	/**
 	* Get the location information as a string.
@@ -145,14 +145,14 @@ extern class TransformerException extends java.lang.Exception
 	* @return A string with location info, or null
 	* if there is no location information.
 	*/
-	@:overload public function getLocationAsString() : String;
+	@:overload @:public public function getLocationAsString() : String;
 	
 	/**
 	* Print the the trace of methods from where the error
 	* originated.  This will trace all nested exception
 	* objects, as well as this object.
 	*/
-	@:overload override public function printStackTrace() : Void;
+	@:overload @:public override public function printStackTrace() : Void;
 	
 	/**
 	* Print the the trace of methods from where the error
@@ -160,7 +160,7 @@ extern class TransformerException extends java.lang.Exception
 	* objects, as well as this object.
 	* @param s The stream where the dump will be sent to.
 	*/
-	@:overload override public function printStackTrace(s : java.io.PrintStream) : Void;
+	@:overload @:public override public function printStackTrace(s : java.io.PrintStream) : Void;
 	
 	/**
 	* Print the the trace of methods from where the error
@@ -168,7 +168,7 @@ extern class TransformerException extends java.lang.Exception
 	* objects, as well as this object.
 	* @param s The writer where the dump will be sent to.
 	*/
-	@:overload override public function printStackTrace(s : java.io.PrintWriter) : Void;
+	@:overload @:public override public function printStackTrace(s : java.io.PrintWriter) : Void;
 	
 	
 }

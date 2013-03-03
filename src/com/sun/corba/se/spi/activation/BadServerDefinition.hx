@@ -7,13 +7,13 @@ package com.sun.corba.se.spi.activation;
 */
 extern class BadServerDefinition extends org.omg.CORBA.UserException
 {
-	public var reason : String;
+	@:public public var reason : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_reason : String) : Void;
+	@:overload @:public public function new(_reason : String) : Void;
 	
-	@:overload public function new($reason : String, _reason : String) : Void;
+	@:overload @:public public function new($reason : String, _reason : String) : Void;
 	
 	
 }

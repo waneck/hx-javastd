@@ -87,7 +87,7 @@ package java.net;
 	* an IP multicast address
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function isMulticastAddress() : Bool;
+	@:require(java1) @:overload @:public override public function isMulticastAddress() : Bool;
 	
 	/**
 	* Utility routine to check if the InetAddress in a wildcard address.
@@ -95,10 +95,10 @@ package java.net;
 	*         a wildcard address.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isAnyLocalAddress() : Bool;
+	@:require(java4) @:overload @:public override public function isAnyLocalAddress() : Bool;
 	
 	/* 127.0.0.1 */
-	@:overload public function isLoopbackAddress() : Bool;
+	@:overload @:public override public function isLoopbackAddress() : Bool;
 	
 	/**
 	* Utility routine to check if the InetAddress is an link local address.
@@ -107,7 +107,7 @@ package java.net;
 	* a link local address; or false if address is not a link local unicast address.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isLinkLocalAddress() : Bool;
+	@:require(java4) @:overload @:public override public function isLinkLocalAddress() : Bool;
 	
 	/**
 	* Utility routine to check if the InetAddress is a site local address.
@@ -116,7 +116,7 @@ package java.net;
 	* a site local address; or false if address is not a site local unicast address.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isSiteLocalAddress() : Bool;
+	@:require(java4) @:overload @:public override public function isSiteLocalAddress() : Bool;
 	
 	/**
 	* Utility routine to check if the multicast address has global scope.
@@ -126,7 +126,7 @@ package java.net;
 	*         of global scope or it is not a multicast address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isMCGlobal() : Bool;
+	@:require(java4) @:overload @:public override public function isMCGlobal() : Bool;
 	
 	/**
 	* Utility routine to check if the multicast address has node scope.
@@ -136,7 +136,7 @@ package java.net;
 	*         of node-local scope or it is not a multicast address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isMCNodeLocal() : Bool;
+	@:require(java4) @:overload @:public override public function isMCNodeLocal() : Bool;
 	
 	/**
 	* Utility routine to check if the multicast address has link scope.
@@ -146,7 +146,7 @@ package java.net;
 	*         of link-local scope or it is not a multicast address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isMCLinkLocal() : Bool;
+	@:require(java4) @:overload @:public override public function isMCLinkLocal() : Bool;
 	
 	/**
 	* Utility routine to check if the multicast address has site scope.
@@ -156,7 +156,7 @@ package java.net;
 	*         of site-local scope or it is not a multicast address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isMCSiteLocal() : Bool;
+	@:require(java4) @:overload @:public override public function isMCSiteLocal() : Bool;
 	
 	/**
 	* Utility routine to check if the multicast address has organization scope.
@@ -167,7 +167,7 @@ package java.net;
 	*         or it is not a multicast address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isMCOrgLocal() : Bool;
+	@:require(java4) @:overload @:public override public function isMCOrgLocal() : Bool;
 	
 	/**
 	* Returns the raw IP address of this <code>InetAddress</code>
@@ -176,7 +176,7 @@ package java.net;
 	*
 	* @return  the raw IP address of this object.
 	*/
-	@:overload public function getAddress() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getAddress() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the IP address string in textual presentation form.
@@ -184,14 +184,14 @@ package java.net;
 	* @return  the raw IP address in a string format.
 	* @since   JDK1.0.2
 	*/
-	@:require(java0) @:overload public function getHostAddress() : String;
+	@:require(java0) @:overload @:public override public function getHostAddress() : String;
 	
 	/**
 	* Returns a hashcode for this IP address.
 	*
 	* @return  a hash code value for this IP address.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Compares this object against the specified object.
@@ -209,7 +209,7 @@ package java.net;
 	*          <code>false</code> otherwise.
 	* @see     java.net.InetAddress#getAddress()
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	
 }

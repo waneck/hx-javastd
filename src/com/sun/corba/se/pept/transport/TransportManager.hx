@@ -28,25 +28,25 @@ extern interface TransportManager
 	/**
 	* @author Harold Carr
 	*/
-	@:overload public function getByteBufferPool(id : Int) : com.sun.corba.se.pept.transport.ByteBufferPool;
+	@:overload @:public public function getByteBufferPool(id : Int) : com.sun.corba.se.pept.transport.ByteBufferPool;
 	
-	@:overload public function getOutboundConnectionCache(contactInfo : com.sun.corba.se.pept.transport.ContactInfo) : com.sun.corba.se.pept.transport.OutboundConnectionCache;
+	@:overload @:public public function getOutboundConnectionCache(contactInfo : com.sun.corba.se.pept.transport.ContactInfo) : com.sun.corba.se.pept.transport.OutboundConnectionCache;
 	
-	@:overload public function getOutboundConnectionCaches() : java.util.Collection<Dynamic>;
+	@:overload @:public public function getOutboundConnectionCaches() : java.util.Collection<Dynamic>;
 	
-	@:overload public function getInboundConnectionCache(acceptor : com.sun.corba.se.pept.transport.Acceptor) : com.sun.corba.se.pept.transport.InboundConnectionCache;
+	@:overload @:public public function getInboundConnectionCache(acceptor : com.sun.corba.se.pept.transport.Acceptor) : com.sun.corba.se.pept.transport.InboundConnectionCache;
 	
-	@:overload public function getInboundConnectionCaches() : java.util.Collection<Dynamic>;
+	@:overload @:public public function getInboundConnectionCaches() : java.util.Collection<Dynamic>;
 	
-	@:overload public function getSelector(id : Int) : com.sun.corba.se.pept.transport.Selector;
+	@:overload @:public public function getSelector(id : Int) : com.sun.corba.se.pept.transport.Selector;
 	
-	@:overload public function registerAcceptor(acceptor : com.sun.corba.se.pept.transport.Acceptor) : Void;
+	@:overload @:public public function registerAcceptor(acceptor : com.sun.corba.se.pept.transport.Acceptor) : Void;
 	
-	@:overload public function getAcceptors() : java.util.Collection<Dynamic>;
+	@:overload @:public public function getAcceptors() : java.util.Collection<Dynamic>;
 	
-	@:overload public function unregisterAcceptor(acceptor : com.sun.corba.se.pept.transport.Acceptor) : Void;
+	@:overload @:public public function unregisterAcceptor(acceptor : com.sun.corba.se.pept.transport.Acceptor) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

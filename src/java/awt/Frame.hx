@@ -120,72 +120,72 @@ package java.awt;
 	/**
 	* @deprecated   replaced by <code>Cursor.DEFAULT_CURSOR</code>.
 	*/
-	public static var DEFAULT_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_CURSOR(default, null) : Int;
 	
 	/**
 	* @deprecated   replaced by <code>Cursor.CROSSHAIR_CURSOR</code>.
 	*/
-	public static var CROSSHAIR_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var CROSSHAIR_CURSOR(default, null) : Int;
 	
 	/**
 	* @deprecated   replaced by <code>Cursor.TEXT_CURSOR</code>.
 	*/
-	public static var TEXT_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var TEXT_CURSOR(default, null) : Int;
 	
 	/**
 	* @deprecated   replaced by <code>Cursor.WAIT_CURSOR</code>.
 	*/
-	public static var WAIT_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var WAIT_CURSOR(default, null) : Int;
 	
 	/**
 	* @deprecated   replaced by <code>Cursor.SW_RESIZE_CURSOR</code>.
 	*/
-	public static var SW_RESIZE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var SW_RESIZE_CURSOR(default, null) : Int;
 	
 	/**
 	* @deprecated   replaced by <code>Cursor.SE_RESIZE_CURSOR</code>.
 	*/
-	public static var SE_RESIZE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var SE_RESIZE_CURSOR(default, null) : Int;
 	
 	/**
 	* @deprecated   replaced by <code>Cursor.NW_RESIZE_CURSOR</code>.
 	*/
-	public static var NW_RESIZE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var NW_RESIZE_CURSOR(default, null) : Int;
 	
 	/**
 	* @deprecated   replaced by <code>Cursor.NE_RESIZE_CURSOR</code>.
 	*/
-	public static var NE_RESIZE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var NE_RESIZE_CURSOR(default, null) : Int;
 	
 	/**
 	* @deprecated   replaced by <code>Cursor.N_RESIZE_CURSOR</code>.
 	*/
-	public static var N_RESIZE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var N_RESIZE_CURSOR(default, null) : Int;
 	
 	/**
 	* @deprecated   replaced by <code>Cursor.S_RESIZE_CURSOR</code>.
 	*/
-	public static var S_RESIZE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var S_RESIZE_CURSOR(default, null) : Int;
 	
 	/**
 	* @deprecated   replaced by <code>Cursor.W_RESIZE_CURSOR</code>.
 	*/
-	public static var W_RESIZE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var W_RESIZE_CURSOR(default, null) : Int;
 	
 	/**
 	* @deprecated   replaced by <code>Cursor.E_RESIZE_CURSOR</code>.
 	*/
-	public static var E_RESIZE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var E_RESIZE_CURSOR(default, null) : Int;
 	
 	/**
 	* @deprecated   replaced by <code>Cursor.HAND_CURSOR</code>.
 	*/
-	public static var HAND_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var HAND_CURSOR(default, null) : Int;
 	
 	/**
 	* @deprecated   replaced by <code>Cursor.MOVE_CURSOR</code>.
 	*/
-	public static var MOVE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var MOVE_CURSOR(default, null) : Int;
 	
 	/**
 	* Frame is in the "normal" state.  This symbolic constant names a
@@ -193,14 +193,14 @@ package java.awt;
 	* @see #setExtendedState(int)
 	* @see #getExtendedState
 	*/
-	public static var NORMAL(default, null) : Int;
+	@:public @:static @:final public static var NORMAL(default, null) : Int;
 	
 	/**
 	* This state bit indicates that frame is iconified.
 	* @see #setExtendedState(int)
 	* @see #getExtendedState
 	*/
-	public static var ICONIFIED(default, null) : Int;
+	@:public @:static @:final public static var ICONIFIED(default, null) : Int;
 	
 	/**
 	* This state bit indicates that frame is maximized in the
@@ -209,7 +209,7 @@ package java.awt;
 	* @see #getExtendedState
 	* @since 1.4
 	*/
-	@:require(java4) public static var MAXIMIZED_HORIZ(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var MAXIMIZED_HORIZ(default, null) : Int;
 	
 	/**
 	* This state bit indicates that frame is maximized in the
@@ -218,7 +218,7 @@ package java.awt;
 	* @see #getExtendedState
 	* @since 1.4
 	*/
-	@:require(java4) public static var MAXIMIZED_VERT(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var MAXIMIZED_VERT(default, null) : Int;
 	
 	/**
 	* This state bit mask indicates that frame is fully maximized
@@ -240,7 +240,7 @@ package java.awt;
 	* @see #getExtendedState
 	* @since 1.4
 	*/
-	@:require(java4) public static var MAXIMIZED_BOTH(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var MAXIMIZED_BOTH(default, null) : Int;
 	
 	/**
 	* Constructs a new instance of <code>Frame</code> that is
@@ -252,7 +252,7 @@ package java.awt;
 	* @see Component#setSize
 	* @see Component#setVisible(boolean)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new, initially invisible {@code Frame} with the
@@ -269,7 +269,7 @@ package java.awt;
 	* @see java.awt.GraphicsEnvironment#isHeadless()
 	* @since     1.3
 	*/
-	@:require(java3) @:overload public function new(gc : java.awt.GraphicsConfiguration) : Void;
+	@:require(java3) @:overload @:public public function new(gc : java.awt.GraphicsConfiguration) : Void;
 	
 	/**
 	* Constructs a new, initially invisible <code>Frame</code> object
@@ -284,7 +284,7 @@ package java.awt;
 	* @see java.awt.Component#setVisible(boolean)
 	* @see java.awt.GraphicsConfiguration#getBounds
 	*/
-	@:overload public function new(title : String) : Void;
+	@:overload @:public public function new(title : String) : Void;
 	
 	/**
 	* Constructs a new, initially invisible <code>Frame</code> object
@@ -307,7 +307,7 @@ package java.awt;
 	* @see java.awt.GraphicsConfiguration#getBounds
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(title : String, gc : java.awt.GraphicsConfiguration) : Void;
+	@:require(java3) @:overload @:public public function new(title : String, gc : java.awt.GraphicsConfiguration) : Void;
 	
 	/**
 	* Makes this Frame displayable by connecting it to
@@ -318,7 +318,7 @@ package java.awt;
 	* @see Component#isDisplayable
 	* @see #removeNotify
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Gets the title of the frame.  The title is displayed in the
@@ -327,7 +327,7 @@ package java.awt;
 	*                if this frame doesn't have a title.
 	* @see       #setTitle(String)
 	*/
-	@:overload public function getTitle() : String;
+	@:overload @:public public function getTitle() : String;
 	
 	/**
 	* Sets the title for this frame to the specified string.
@@ -336,7 +336,7 @@ package java.awt;
 	*              is treated as an empty string, "".
 	* @see      #getTitle
 	*/
-	@:overload public function setTitle(title : String) : Void;
+	@:overload @:public public function setTitle(title : String) : Void;
 	
 	/**
 	* Returns the image to be displayed as the icon for this frame.
@@ -353,12 +353,12 @@ package java.awt;
 	* @see       Window#getIconImages()
 	* @see       Window#setIconImages
 	*/
-	@:overload public function getIconImage() : java.awt.Image;
+	@:overload @:public public function getIconImage() : java.awt.Image;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function setIconImage(image : java.awt.Image) : Void;
+	@:overload @:public override public function setIconImage(image : java.awt.Image) : Void;
 	
 	/**
 	* Gets the menu bar for this frame.
@@ -366,7 +366,7 @@ package java.awt;
 	*                   if this frame doesn't have a menu bar.
 	* @see       #setMenuBar(MenuBar)
 	*/
-	@:overload public function getMenuBar() : java.awt.MenuBar;
+	@:overload @:public public function getMenuBar() : java.awt.MenuBar;
 	
 	/**
 	* Sets the menu bar for this frame to the specified menu bar.
@@ -375,7 +375,7 @@ package java.awt;
 	*            existing menu bar on this frame is removed.
 	* @see       #getMenuBar
 	*/
-	@:overload public function setMenuBar(mb : java.awt.MenuBar) : Void;
+	@:overload @:public public function setMenuBar(mb : java.awt.MenuBar) : Void;
 	
 	/**
 	* Indicates whether this frame is resizable by the user.
@@ -384,7 +384,7 @@ package java.awt;
 	*                        <code>false</code> otherwise.
 	* @see       java.awt.Frame#setResizable(boolean)
 	*/
-	@:overload public function isResizable() : Bool;
+	@:overload @:public public function isResizable() : Bool;
 	
 	/**
 	* Sets whether this frame is resizable by the user.
@@ -392,7 +392,7 @@ package java.awt;
 	*                       <code>false</code> otherwise.
 	* @see      java.awt.Frame#isResizable
 	*/
-	@:overload public function setResizable(resizable : Bool) : Void;
+	@:overload @:public public function setResizable(resizable : Bool) : Void;
 	
 	/**
 	* Sets the state of this frame (obsolete).
@@ -441,7 +441,7 @@ package java.awt;
 	* @see #setExtendedState(int)
 	* @see java.awt.Window#addWindowStateListener
 	*/
-	@:overload @:synchronized public function setState(state : Int) : Void;
+	@:overload @:public @:synchronized public function setState(state : Int) : Void;
 	
 	/**
 	* Sets the state of this frame. The state is
@@ -486,7 +486,7 @@ package java.awt;
 	* @since   1.4
 	* @see java.awt.Window#addWindowStateListener
 	*/
-	@:require(java4) @:overload public function setExtendedState(state : Int) : Void;
+	@:require(java4) @:overload @:public public function setExtendedState(state : Int) : Void;
 	
 	/**
 	* Gets the state of this frame (obsolete).
@@ -504,7 +504,7 @@ package java.awt;
 	* @see     #setState(int)
 	* @see     #getExtendedState
 	*/
-	@:overload @:synchronized public function getState() : Int;
+	@:overload @:public @:synchronized public function getState() : Int;
 	
 	/**
 	* Gets the state of this frame. The state is
@@ -524,7 +524,7 @@ package java.awt;
 	* @see     #setExtendedState(int)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getExtendedState() : Int;
+	@:require(java4) @:overload @:public public function getExtendedState() : Int;
 	
 	/**
 	* Sets the maximized bounds for this frame.
@@ -549,7 +549,7 @@ package java.awt;
 	* @see #getMaximizedBounds()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setMaximizedBounds(bounds : java.awt.Rectangle) : Void;
+	@:require(java4) @:overload @:public public function setMaximizedBounds(bounds : java.awt.Rectangle) : Void;
 	
 	/**
 	* Gets maximized bounds for this frame.
@@ -560,7 +560,7 @@ package java.awt;
 	* @see     #setMaximizedBounds(Rectangle)
 	* @since   1.4
 	*/
-	@:require(java4) @:overload public function getMaximizedBounds() : java.awt.Rectangle;
+	@:require(java4) @:overload @:public public function getMaximizedBounds() : java.awt.Rectangle;
 	
 	/**
 	* Disables or enables decorations for this frame.
@@ -592,7 +592,7 @@ package java.awt;
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setUndecorated(undecorated : Bool) : Void;
+	@:require(java4) @:overload @:public public function setUndecorated(undecorated : Bool) : Void;
 	
 	/**
 	* Indicates whether this frame is undecorated.
@@ -602,22 +602,22 @@ package java.awt;
 	* @see       java.awt.Frame#setUndecorated(boolean)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isUndecorated() : Bool;
+	@:require(java4) @:overload @:public public function isUndecorated() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function setOpacity(opacity : Single) : Void;
+	@:overload @:public override public function setOpacity(opacity : Single) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function setShape(shape : java.awt.Shape) : Void;
+	@:overload @:public override public function setShape(shape : java.awt.Shape) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function setBackground(bgColor : java.awt.Color) : Void;
+	@:overload @:public override public function setBackground(bgColor : java.awt.Color) : Void;
 	
 	/**
 	* Removes the specified menu bar from this frame.
@@ -625,7 +625,7 @@ package java.awt;
 	*           If <code>m</code> is <code>null</code>, then
 	*           no action is taken
 	*/
-	@:overload override public function remove(m : java.awt.MenuComponent) : Void;
+	@:overload @:public override public function remove(m : java.awt.MenuComponent) : Void;
 	
 	/**
 	* Makes this Frame undisplayable by removing its connection
@@ -636,7 +636,7 @@ package java.awt;
 	* @see Component#isDisplayable
 	* @see #addNotify
 	*/
-	@:overload override public function removeNotify() : Void;
+	@:overload @:public override public function removeNotify() : Void;
 	
 	/**
 	* Returns a string representing the state of this <code>Frame</code>.
@@ -647,19 +647,19 @@ package java.awt;
 	*
 	* @return the parameter string of this frame
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>Component.setCursor(Cursor)</code>.
 	*/
-	@:overload public function setCursor(cursorType : Int) : Void;
+	@:overload @:public public function setCursor(cursorType : Int) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>Component.getCursor()</code>.
 	*/
-	@:overload public function getCursorType() : Int;
+	@:overload @:public public function getCursorType() : Int;
 	
 	/**
 	* Returns an array of all {@code Frame}s created by this application.
@@ -681,7 +681,7 @@ package java.awt;
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function getFrames() : java.NativeArray<java.awt.Frame>;
+	@:require(java2) @:overload @:public @:static public static function getFrames() : java.NativeArray<java.awt.Frame>;
 	
 	/**
 	* Gets the AccessibleContext associated with this Frame.
@@ -693,7 +693,7 @@ package java.awt;
 	*         AccessibleContext of this Frame
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -712,7 +712,7 @@ package java.awt;
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the state of this object.
@@ -721,7 +721,7 @@ package java.awt;
 	* state set of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

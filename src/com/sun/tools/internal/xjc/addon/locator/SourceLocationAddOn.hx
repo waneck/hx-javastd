@@ -31,13 +31,13 @@ extern class SourceLocationAddOn extends com.sun.tools.internal.xjc.Plugin
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload override public function getOptionName() : String;
+	@:overload @:public override public function getOptionName() : String;
 	
-	@:overload override public function getUsage() : String;
+	@:overload @:public override public function getUsage() : String;
 	
-	@:overload override public function parseArgument(opt : com.sun.tools.internal.xjc.Options, args : java.NativeArray<String>, i : Int) : Int;
+	@:overload @:public override public function parseArgument(opt : com.sun.tools.internal.xjc.Options, args : java.NativeArray<String>, i : Int) : Int;
 	
-	@:overload override public function run(outline : com.sun.tools.internal.xjc.outline.Outline, opt : com.sun.tools.internal.xjc.Options, errorHandler : org.xml.sax.ErrorHandler) : Bool;
+	@:overload @:public override public function run(outline : com.sun.tools.internal.xjc.outline.Outline, opt : com.sun.tools.internal.xjc.Options, errorHandler : org.xml.sax.ErrorHandler) : Bool;
 	
 	
 }

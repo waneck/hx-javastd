@@ -48,7 +48,7 @@ extern interface ClipboardOwner
 	* @param clipboard the clipboard that is no longer owned
 	* @param contents the contents which this owner had placed on the clipboard
 	*/
-	@:overload public function lostOwnership(clipboard : java.awt.datatransfer.Clipboard, contents : java.awt.datatransfer.Transferable) : Void;
+	@:overload @:public public function lostOwnership(clipboard : java.awt.datatransfer.Clipboard, contents : java.awt.datatransfer.Transferable) : Void;
 	
 	
 }

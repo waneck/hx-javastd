@@ -29,7 +29,7 @@ extern class MotifGraphicsUtils implements javax.swing.SwingConstants
 	* Convenience method for drawing a grooved line
 	*
 	*/
-	@:overload public static function drawGroove(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, shadow : java.awt.Color, highlight : java.awt.Color) : Void;
+	@:overload @:public @:static public static function drawGroove(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, shadow : java.awt.Color, highlight : java.awt.Color) : Void;
 	
 	/** Draws <b>aString</b> in the rectangle defined by
 	* (<b>x</b>, <b>y</b>, <b>width</b>, <b>height</b>).
@@ -40,14 +40,14 @@ extern class MotifGraphicsUtils implements javax.swing.SwingConstants
 	* at which to begin drawing the text.
 	* @see #drawString
 	*/
-	@:overload public static function drawStringInRect(g : java.awt.Graphics, aString : String, x : Int, y : Int, width : Int, height : Int, justification : Int) : Void;
+	@:overload @:public @:static public static function drawStringInRect(g : java.awt.Graphics, aString : String, x : Int, y : Int, width : Int, height : Int, justification : Int) : Void;
 	
 	/**
 	* This method is not being used to paint menu item since
 	* 6.0 This code left for compatibility only. Do not use or
 	* override it, this will not cause any visible effect.
 	*/
-	@:overload public static function paintMenuItem(g : java.awt.Graphics, c : javax.swing.JComponent, checkIcon : javax.swing.Icon, arrowIcon : javax.swing.Icon, background : java.awt.Color, foreground : java.awt.Color, defaultTextIconGap : Int) : Void;
+	@:overload @:public @:static public static function paintMenuItem(g : java.awt.Graphics, c : javax.swing.JComponent, checkIcon : javax.swing.Icon, arrowIcon : javax.swing.Icon, background : java.awt.Color, foreground : java.awt.Color, defaultTextIconGap : Int) : Void;
 	
 	
 }

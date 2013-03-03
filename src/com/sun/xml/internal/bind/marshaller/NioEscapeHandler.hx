@@ -25,9 +25,9 @@ package com.sun.xml.internal.bind.marshaller;
 */
 extern class NioEscapeHandler implements com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler
 {
-	@:overload public function new(charsetName : String) : Void;
+	@:overload @:public public function new(charsetName : String) : Void;
 	
-	@:overload public function escape(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, isAttVal : Bool, out : java.io.Writer) : Void;
+	@:overload @:public public function escape(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, isAttVal : Bool, out : java.io.Writer) : Void;
 	
 	
 }

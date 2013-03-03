@@ -27,33 +27,33 @@ package com.sun.xml.internal.fastinfoset.algorithm;
 */
 extern class FloatEncodingAlgorithm extends com.sun.xml.internal.fastinfoset.algorithm.IEEE754FloatingPointEncodingAlgorithm
 {
-	@:overload @:final public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
+	@:overload @:public @:final override public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
 	
-	@:overload public function getOctetLengthFromPrimitiveLength(primitiveLength : Int) : Int;
+	@:overload @:public override public function getOctetLengthFromPrimitiveLength(primitiveLength : Int) : Int;
 	
-	@:overload @:final public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
+	@:overload @:public @:final override public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
 	
-	@:overload @:final public function decodeFromInputStream(s : java.io.InputStream) : Dynamic;
+	@:overload @:public @:final override public function decodeFromInputStream(s : java.io.InputStream) : Dynamic;
 	
-	@:overload public function encodeToOutputStream(data : Dynamic, s : java.io.OutputStream) : Void;
+	@:overload @:public override public function encodeToOutputStream(data : Dynamic, s : java.io.OutputStream) : Void;
 	
-	@:overload @:final public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
+	@:overload @:public @:final override public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
 	
-	@:overload @:final public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
+	@:overload @:public @:final override public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
 	
-	@:overload @:final public function decodeFromBytesToFloatArray(data : java.NativeArray<Single>, fstart : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
+	@:overload @:public @:final public function decodeFromBytesToFloatArray(data : java.NativeArray<Single>, fstart : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
 	
-	@:overload @:final public function decodeFromInputStreamToFloatArray(s : java.io.InputStream) : java.NativeArray<Single>;
+	@:overload @:public @:final public function decodeFromInputStreamToFloatArray(s : java.io.InputStream) : java.NativeArray<Single>;
 	
-	@:overload @:final public function encodeToOutputStreamFromFloatArray(fdata : java.NativeArray<Single>, s : java.io.OutputStream) : Void;
+	@:overload @:public @:final public function encodeToOutputStreamFromFloatArray(fdata : java.NativeArray<Single>, s : java.io.OutputStream) : Void;
 	
-	@:overload @:final public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
+	@:overload @:public @:final override public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	
-	@:overload @:final public function encodeToBytesFromFloatArray(fdata : java.NativeArray<Single>, fstart : Int, flength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
+	@:overload @:public @:final public function encodeToBytesFromFloatArray(fdata : java.NativeArray<Single>, fstart : Int, flength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	
-	@:overload @:final public function convertToCharactersFromFloatArray(fdata : java.NativeArray<Single>, s : java.lang.StringBuffer) : Void;
+	@:overload @:public @:final public function convertToCharactersFromFloatArray(fdata : java.NativeArray<Single>, s : java.lang.StringBuffer) : Void;
 	
-	@:overload @:final public function generateArrayFromList(array : java.util.List<Dynamic>) : java.NativeArray<Single>;
+	@:overload @:public @:final public function generateArrayFromList(array : java.util.List<Dynamic>) : java.NativeArray<Single>;
 	
 	
 }

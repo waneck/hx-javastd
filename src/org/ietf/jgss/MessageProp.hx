@@ -58,7 +58,7 @@ package org.ietf.jgss;
 	*
 	* @param privState the privacy (i.e. confidentiality) state
 	*/
-	@:overload public function new(privState : Bool) : Void;
+	@:overload @:public public function new(privState : Bool) : Void;
 	
 	/**
 	* Constructor which sets the values for the qop and privacy state.
@@ -66,7 +66,7 @@ package org.ietf.jgss;
 	* @param qop the QOP value
 	* @param privState the privacy (i.e. confidentiality) state
 	*/
-	@:overload public function new(qop : Int, privState : Bool) : Void;
+	@:overload @:public public function new(qop : Int, privState : Bool) : Void;
 	
 	/**
 	* Retrieves the QOP value.
@@ -74,7 +74,7 @@ package org.ietf.jgss;
 	* @return an int representing the QOP value
 	* @see #setQOP
 	*/
-	@:overload public function getQOP() : Int;
+	@:overload @:public public function getQOP() : Int;
 	
 	/**
 	* Retrieves the privacy state.
@@ -83,7 +83,7 @@ package org.ietf.jgss;
 	* false otherwise.
 	* @see #setPrivacy
 	*/
-	@:overload public function getPrivacy() : Bool;
+	@:overload @:public public function getPrivacy() : Bool;
 	
 	/**
 	* Sets the QOP value.
@@ -91,7 +91,7 @@ package org.ietf.jgss;
 	* @param qop the int value to set the QOP to
 	* @see #getQOP
 	*/
-	@:overload public function setQOP(qop : Int) : Void;
+	@:overload @:public public function setQOP(qop : Int) : Void;
 	
 	/**
 	* Sets the privacy state.
@@ -100,14 +100,14 @@ package org.ietf.jgss;
 	* is true, false otherwise.
 	* @see #getPrivacy
 	*/
-	@:overload public function setPrivacy(privState : Bool) : Void;
+	@:overload @:public public function setPrivacy(privState : Bool) : Void;
 	
 	/**
 	* Tests if this is a duplicate of an earlier token.
 	*
 	* @return true if this is a duplicate, false otherwise.
 	*/
-	@:overload public function isDuplicateToken() : Bool;
+	@:overload @:public public function isDuplicateToken() : Bool;
 	
 	/**
 	* Tests if this token's validity period has expired, i.e., the token
@@ -116,14 +116,14 @@ package org.ietf.jgss;
 	* @return true if the token's validity period has expired, false
 	* otherwise.
 	*/
-	@:overload public function isOldToken() : Bool;
+	@:overload @:public public function isOldToken() : Bool;
 	
 	/**
 	* Tests if a later token had already been processed.
 	*
 	* @return true if a later token had already been processed, false otherwise.
 	*/
-	@:overload public function isUnseqToken() : Bool;
+	@:overload @:public public function isUnseqToken() : Bool;
 	
 	/**
 	* Tests if an expected token was not received, i.e., one or more
@@ -132,7 +132,7 @@ package org.ietf.jgss;
 	* @return true if an expected per-message token was not received,
 	* false otherwise.
 	*/
-	@:overload public function isGapToken() : Bool;
+	@:overload @:public public function isGapToken() : Bool;
 	
 	/**
 	* Retrieves the minor status code that the underlying mechanism might
@@ -140,7 +140,7 @@ package org.ietf.jgss;
 	*
 	* @return the int minor status
 	*/
-	@:overload public function getMinorStatus() : Int;
+	@:overload @:public public function getMinorStatus() : Int;
 	
 	/**
 	* Retrieves a string explaining the minor status code.
@@ -149,7 +149,7 @@ package org.ietf.jgss;
 	* code. <code>null</code> will be returned when no minor status code
 	* has been set.
 	*/
-	@:overload public function getMinorString() : String;
+	@:overload @:public public function getMinorString() : String;
 	
 	/**
 	* This method sets the state for the supplementary information flags
@@ -169,7 +169,7 @@ package org.ietf.jgss;
 	* operation
 	* @param  minorString the textual representation of the minorStatus value
 	*/
-	@:overload public function setSupplementaryStates(duplicate : Bool, old : Bool, unseq : Bool, gap : Bool, minorStatus : Int, minorString : String) : Void;
+	@:overload @:public public function setSupplementaryStates(duplicate : Bool, old : Bool, unseq : Bool, gap : Bool, minorStatus : Int, minorString : String) : Void;
 	
 	
 }

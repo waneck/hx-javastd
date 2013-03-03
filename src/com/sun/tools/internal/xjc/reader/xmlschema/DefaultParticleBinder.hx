@@ -30,9 +30,9 @@ package com.sun.tools.internal.xjc.reader.xmlschema;
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload override public function build(p : com.sun.xml.internal.xsom.XSParticle, forcedProps : java.util.Collection<com.sun.xml.internal.xsom.XSParticle>) : Void;
+	@:overload @:public override public function build(p : com.sun.xml.internal.xsom.XSParticle, forcedProps : java.util.Collection<com.sun.xml.internal.xsom.XSParticle>) : Void;
 	
-	@:overload override public function checkFallback(p : com.sun.xml.internal.xsom.XSParticle) : Bool;
+	@:overload @:public override public function checkFallback(p : com.sun.xml.internal.xsom.XSParticle) : Bool;
 	
 	
 }
@@ -42,22 +42,22 @@ package com.sun.tools.internal.xjc.reader.xmlschema;
 */
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$DefaultParticleBinder$Checker') @:internal extern class DefaultParticleBinder_Checker implements com.sun.xml.internal.xsom.visitor.XSTermVisitor
 {
-	@:overload public function particle(p : com.sun.xml.internal.xsom.XSParticle) : Void;
+	@:overload @:public public function particle(p : com.sun.xml.internal.xsom.XSParticle) : Void;
 	
-	@:overload public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
+	@:overload @:public public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
 	
-	@:overload public function modelGroup(mg : com.sun.xml.internal.xsom.XSModelGroup) : Void;
+	@:overload @:public public function modelGroup(mg : com.sun.xml.internal.xsom.XSModelGroup) : Void;
 	
-	@:overload public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
+	@:overload @:public public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
 	
-	@:overload public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : Void;
+	@:overload @:public public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : Void;
 	
 	/**
 	* Marked particles.
 	*
 	* A map from XSParticle to its label.
 	*/
-	public var markedParticles(default, null) : java.util.Map<com.sun.xml.internal.xsom.XSParticle, String>;
+	@:public @:final public var markedParticles(default, null) : java.util.Map<com.sun.xml.internal.xsom.XSParticle, String>;
 	
 	
 }
@@ -73,15 +73,15 @@ package com.sun.tools.internal.xjc.reader.xmlschema;
 */
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$DefaultParticleBinder$Builder') @:internal extern class DefaultParticleBinder_Builder implements com.sun.xml.internal.xsom.visitor.XSTermVisitor
 {
-	@:overload public function particle(p : com.sun.xml.internal.xsom.XSParticle) : Void;
+	@:overload @:public public function particle(p : com.sun.xml.internal.xsom.XSParticle) : Void;
 	
-	@:overload public function elementDecl(e : com.sun.xml.internal.xsom.XSElementDecl) : Void;
+	@:overload @:public public function elementDecl(e : com.sun.xml.internal.xsom.XSElementDecl) : Void;
 	
-	@:overload public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : Void;
+	@:overload @:public public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : Void;
 	
-	@:overload public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
+	@:overload @:public public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
 	
-	@:overload public function modelGroup(mg : com.sun.xml.internal.xsom.XSModelGroup) : Void;
+	@:overload @:public public function modelGroup(mg : com.sun.xml.internal.xsom.XSModelGroup) : Void;
 	
 	
 }

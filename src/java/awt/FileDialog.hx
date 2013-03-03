@@ -29,13 +29,13 @@ extern class FileDialog extends java.awt.Dialog
 	* This constant value indicates that the purpose of the file
 	* dialog window is to locate a file from which to read.
 	*/
-	public static var LOAD(default, null) : Int;
+	@:public @:static @:final public static var LOAD(default, null) : Int;
 	
 	/**
 	* This constant value indicates that the purpose of the file
 	* dialog window is to locate a file to which to write.
 	*/
-	public static var SAVE(default, null) : Int;
+	@:public @:static @:final public static var SAVE(default, null) : Int;
 	
 	/**
 	* Creates a file dialog for loading a file.  The title of the
@@ -45,7 +45,7 @@ extern class FileDialog extends java.awt.Dialog
 	* @param parent the owner of the dialog
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function new(parent : java.awt.Frame) : Void;
+	@:require(java1) @:overload @:public public function new(parent : java.awt.Frame) : Void;
 	
 	/**
 	* Creates a file dialog window with the specified title for loading
@@ -56,7 +56,7 @@ extern class FileDialog extends java.awt.Dialog
 	* @param     parent   the owner of the dialog
 	* @param     title    the title of the dialog
 	*/
-	@:overload public function new(parent : java.awt.Frame, title : String) : Void;
+	@:overload @:public public function new(parent : java.awt.Frame, title : String) : Void;
 	
 	/**
 	* Creates a file dialog window with the specified title for loading
@@ -77,7 +77,7 @@ extern class FileDialog extends java.awt.Dialog
 	* @see       java.awt.FileDialog#LOAD
 	* @see       java.awt.FileDialog#SAVE
 	*/
-	@:overload public function new(parent : java.awt.Frame, title : String, mode : Int) : Void;
+	@:overload @:public public function new(parent : java.awt.Frame, title : String, mode : Int) : Void;
 	
 	/**
 	* Creates a file dialog for loading a file.  The title of the
@@ -95,7 +95,7 @@ extern class FileDialog extends java.awt.Dialog
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(parent : java.awt.Dialog) : Void;
+	@:require(java5) @:overload @:public public function new(parent : java.awt.Dialog) : Void;
 	
 	/**
 	* Creates a file dialog window with the specified title for loading
@@ -117,7 +117,7 @@ extern class FileDialog extends java.awt.Dialog
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since     1.5
 	*/
-	@:require(java5) @:overload public function new(parent : java.awt.Dialog, title : String) : Void;
+	@:require(java5) @:overload @:public public function new(parent : java.awt.Dialog, title : String) : Void;
 	
 	/**
 	* Creates a file dialog window with the specified title for loading
@@ -149,13 +149,13 @@ extern class FileDialog extends java.awt.Dialog
 	* @see       java.awt.FileDialog#SAVE
 	* @since     1.5
 	*/
-	@:require(java5) @:overload public function new(parent : java.awt.Dialog, title : String, mode : Int) : Void;
+	@:require(java5) @:overload @:public public function new(parent : java.awt.Dialog, title : String, mode : Int) : Void;
 	
 	/**
 	* Creates the file dialog's peer.  The peer allows us to change the look
 	* of the file dialog without changing its functionality.
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Indicates whether this file dialog box is for loading from a file
@@ -168,7 +168,7 @@ extern class FileDialog extends java.awt.Dialog
 	* @see      java.awt.FileDialog#SAVE
 	* @see      java.awt.FileDialog#setMode
 	*/
-	@:overload public function getMode() : Int;
+	@:overload @:public public function getMode() : Int;
 	
 	/**
 	* Sets the mode of the file dialog.  If <code>mode</code> is not
@@ -185,7 +185,7 @@ extern class FileDialog extends java.awt.Dialog
 	*                 dialog mode is supplied
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function setMode(mode : Int) : Void;
+	@:require(java1) @:overload @:public public function setMode(mode : Int) : Void;
 	
 	/**
 	* Gets the directory of this file dialog.
@@ -194,7 +194,7 @@ extern class FileDialog extends java.awt.Dialog
 	*          directory of this <code>FileDialog</code>
 	* @see       java.awt.FileDialog#setDirectory
 	*/
-	@:overload public function getDirectory() : String;
+	@:overload @:public public function getDirectory() : String;
 	
 	/**
 	* Sets the directory of this file dialog window to be the
@@ -210,7 +210,7 @@ extern class FileDialog extends java.awt.Dialog
 	* @param     dir   the specified directory
 	* @see       java.awt.FileDialog#getDirectory
 	*/
-	@:overload public function setDirectory(dir : String) : Void;
+	@:overload @:public public function setDirectory(dir : String) : Void;
 	
 	/**
 	* Gets the selected file of this file dialog.  If the user
@@ -220,7 +220,7 @@ extern class FileDialog extends java.awt.Dialog
 	*                or <code>null</code> if none is selected
 	* @see       java.awt.FileDialog#setFile
 	*/
-	@:overload public function getFile() : String;
+	@:overload @:public public function getFile() : String;
 	
 	/**
 	* Returns files that the user selects.
@@ -234,7 +234,7 @@ extern class FileDialog extends java.awt.Dialog
 	* @see       #getFile
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getFiles() : java.NativeArray<java.io.File>;
+	@:require(java7) @:overload @:public public function getFiles() : java.NativeArray<java.io.File>;
 	
 	/**
 	* Sets the selected file for this file dialog window to be the
@@ -249,7 +249,7 @@ extern class FileDialog extends java.awt.Dialog
 	* @see      #getFile
 	* @see      #getFiles
 	*/
-	@:overload public function setFile(file : String) : Void;
+	@:overload @:public public function setFile(file : String) : Void;
 	
 	/**
 	* Enables or disables multiple file selection for the file dialog.
@@ -259,7 +259,7 @@ extern class FileDialog extends java.awt.Dialog
 	* @see #isMultipleMode
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function setMultipleMode(enable : Bool) : Void;
+	@:require(java7) @:overload @:public public function setMultipleMode(enable : Bool) : Void;
 	
 	/**
 	* Returns whether the file dialog allows the multiple file selection.
@@ -269,7 +269,7 @@ extern class FileDialog extends java.awt.Dialog
 	* @see #setMultipleMode
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function isMultipleMode() : Bool;
+	@:require(java7) @:overload @:public public function isMultipleMode() : Bool;
 	
 	/**
 	* Determines this file dialog's filename filter. A filename filter
@@ -281,7 +281,7 @@ extern class FileDialog extends java.awt.Dialog
 	* @see       java.io.FilenameFilter
 	* @see       java.awt.FileDialog#setFilenameFilter
 	*/
-	@:overload public function getFilenameFilter() : java.io.FilenameFilter;
+	@:overload @:public public function getFilenameFilter() : java.io.FilenameFilter;
 	
 	/**
 	* Sets the filename filter for this file dialog window to the
@@ -293,7 +293,7 @@ extern class FileDialog extends java.awt.Dialog
 	* @see     java.io.FilenameFilter
 	* @see     java.awt.FileDialog#getFilenameFilter
 	*/
-	@:overload @:synchronized public function setFilenameFilter(filter : java.io.FilenameFilter) : Void;
+	@:overload @:public @:synchronized public function setFilenameFilter(filter : java.io.FilenameFilter) : Void;
 	
 	/**
 	* Returns a string representing the state of this <code>FileDialog</code>
@@ -304,7 +304,7 @@ extern class FileDialog extends java.awt.Dialog
 	*
 	* @return  the parameter string of this file dialog window
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	
 }

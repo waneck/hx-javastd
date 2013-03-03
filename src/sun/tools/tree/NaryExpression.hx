@@ -28,17 +28,17 @@ extern class NaryExpression extends sun.tools.tree.UnaryExpression
 	/**
 	* Create a copy of the expression for method inlining
 	*/
-	@:overload override public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload @:public override public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* The cost of inlining this expression
 	*/
-	@:overload override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
+	@:overload @:public override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
 	
 	/**
 	* Print
 	*/
-	@:overload override public function print(out : java.io.PrintStream) : Void;
+	@:overload @:public override public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

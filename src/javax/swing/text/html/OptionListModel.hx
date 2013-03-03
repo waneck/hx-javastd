@@ -25,27 +25,27 @@ package javax.swing.text.html;
 */
 @:internal extern class OptionListModel extends javax.swing.DefaultListModel<Dynamic> implements javax.swing.ListSelectionModel implements java.io.Serializable
 {
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
-	private var leadAnchorNotificationEnabled : Bool;
+	@:protected private var leadAnchorNotificationEnabled : Bool;
 	
-	@:overload public function getMinSelectionIndex() : Int;
+	@:overload @:public public function getMinSelectionIndex() : Int;
 	
-	@:overload public function getMaxSelectionIndex() : Int;
+	@:overload @:public public function getMaxSelectionIndex() : Int;
 	
-	@:overload public function getValueIsAdjusting() : Bool;
+	@:overload @:public public function getValueIsAdjusting() : Bool;
 	
-	@:overload public function getSelectionMode() : Int;
+	@:overload @:public public function getSelectionMode() : Int;
 	
-	@:overload public function setSelectionMode(selectionMode : Int) : Void;
+	@:overload @:public public function setSelectionMode(selectionMode : Int) : Void;
 	
-	@:overload public function isSelectedIndex(index : Int) : Bool;
+	@:overload @:public public function isSelectedIndex(index : Int) : Bool;
 	
-	@:overload public function isSelectionEmpty() : Bool;
+	@:overload @:public public function isSelectionEmpty() : Bool;
 	
-	@:overload public function addListSelectionListener(l : javax.swing.event.ListSelectionListener) : Void;
+	@:overload @:public public function addListSelectionListener(l : javax.swing.event.ListSelectionListener) : Void;
 	
-	@:overload public function removeListSelectionListener(l : javax.swing.event.ListSelectionListener) : Void;
+	@:overload @:public public function removeListSelectionListener(l : javax.swing.event.ListSelectionListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ListSelectionListener</code>s added
@@ -55,19 +55,19 @@ package javax.swing.text.html;
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getListSelectionListeners() : java.NativeArray<javax.swing.event.ListSelectionListener>;
+	@:require(java4) @:overload @:public public function getListSelectionListeners() : java.NativeArray<javax.swing.event.ListSelectionListener>;
 	
 	/**
 	* Notify listeners that we are beginning or ending a
 	* series of value changes
 	*/
-	@:overload private function fireValueChanged(isAdjusting : Bool) : Void;
+	@:overload @:protected private function fireValueChanged(isAdjusting : Bool) : Void;
 	
 	/**
 	* Notify ListSelectionListeners that the value of the selection,
 	* in the closed interval firstIndex,lastIndex, has changed.
 	*/
-	@:overload private function fireValueChanged(firstIndex : Int, lastIndex : Int) : Void;
+	@:overload @:protected private function fireValueChanged(firstIndex : Int, lastIndex : Int) : Void;
 	
 	/**
 	* @param firstIndex The first index in the interval.
@@ -75,13 +75,13 @@ package javax.swing.text.html;
 	* @param isAdjusting True if this is the final change in a series of them.
 	* @see EventListenerList
 	*/
-	@:overload private function fireValueChanged(firstIndex : Int, lastIndex : Int, isAdjusting : Bool) : Void;
+	@:overload @:protected private function fireValueChanged(firstIndex : Int, lastIndex : Int, isAdjusting : Bool) : Void;
 	
 	/**
 	* Sets the value of the leadAnchorNotificationEnabled flag.
 	* @see             #isLeadAnchorNotificationEnabled()
 	*/
-	@:overload public function setLeadAnchorNotificationEnabled(flag : Bool) : Void;
+	@:overload @:public public function setLeadAnchorNotificationEnabled(flag : Bool) : Void;
 	
 	/**
 	* Returns the value of the leadAnchorNotificationEnabled flag.
@@ -95,15 +95,15 @@ package javax.swing.text.html;
 	* @return          the value of the leadAnchorNotificationEnabled flag
 	* @see             #setLeadAnchorNotificationEnabled(boolean)
 	*/
-	@:overload public function isLeadAnchorNotificationEnabled() : Bool;
+	@:overload @:public public function isLeadAnchorNotificationEnabled() : Bool;
 	
-	@:overload public function clearSelection() : Void;
+	@:overload @:public public function clearSelection() : Void;
 	
-	@:overload public function setSelectionInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function setSelectionInterval(index0 : Int, index1 : Int) : Void;
 	
-	@:overload public function addSelectionInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function addSelectionInterval(index0 : Int, index1 : Int) : Void;
 	
-	@:overload public function removeSelectionInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function removeSelectionInterval(index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* Insert length indices beginning before/after index. If the value
@@ -112,7 +112,7 @@ package javax.swing.text.html;
 	* called to sync the selection model with a corresponding change
 	* in the data model.
 	*/
-	@:overload public function insertIndexInterval(index : Int, length : Int, before : Bool) : Void;
+	@:overload @:public public function insertIndexInterval(index : Int, length : Int, before : Bool) : Void;
 	
 	/**
 	* Remove the indices in the interval index0,index1 (inclusive) from
@@ -120,11 +120,11 @@ package javax.swing.text.html;
 	* model width a corresponding change in the data model.  Note
 	* that (as always) index0 can be greater than index1.
 	*/
-	@:overload public function removeIndexInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function removeIndexInterval(index0 : Int, index1 : Int) : Void;
 	
-	@:overload public function setValueIsAdjusting(isAdjusting : Bool) : Void;
+	@:overload @:public public function setValueIsAdjusting(isAdjusting : Bool) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Returns a clone of the receiver with the same selection.
@@ -135,11 +135,11 @@ package javax.swing.text.html;
 	*    both (a) implement the <code>Cloneable</code> interface
 	*    and (b) define a <code>clone</code> method
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function getAnchorSelectionIndex() : Int;
+	@:overload @:public public function getAnchorSelectionIndex() : Int;
 	
-	@:overload public function getLeadSelectionIndex() : Int;
+	@:overload @:public public function getLeadSelectionIndex() : Int;
 	
 	/**
 	* Set the anchor selection index, leaving all selection values unchanged.
@@ -147,7 +147,7 @@ package javax.swing.text.html;
 	* @see #getAnchorSelectionIndex
 	* @see #setLeadSelectionIndex
 	*/
-	@:overload public function setAnchorSelectionIndex(anchorIndex : Int) : Void;
+	@:overload @:public public function setAnchorSelectionIndex(anchorIndex : Int) : Void;
 	
 	/**
 	* Set the lead selection index, ensuring that values between the
@@ -176,7 +176,7 @@ package javax.swing.text.html;
 	* @see #getLeadSelectionIndex
 	* @see #setAnchorSelectionIndex
 	*/
-	@:overload public function setLeadSelectionIndex(leadIndex : Int) : Void;
+	@:overload @:public public function setLeadSelectionIndex(leadIndex : Int) : Void;
 	
 	/**
 	* This method is responsible for storing the state
@@ -185,13 +185,13 @@ package javax.swing.text.html;
 	* then the very last OPTION that has the selected
 	* attribute set wins.
 	*/
-	@:overload public function setInitialSelection(i : Int) : Void;
+	@:overload @:public public function setInitialSelection(i : Int) : Void;
 	
 	/**
 	* Fetches the BitSet that represents the initial
 	* set of selected items in the list.
 	*/
-	@:overload public function getInitialSelection() : java.util.BitSet;
+	@:overload @:public public function getInitialSelection() : java.util.BitSet;
 	
 	
 }

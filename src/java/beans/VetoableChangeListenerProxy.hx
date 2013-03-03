@@ -32,7 +32,7 @@ extern class VetoableChangeListenerProxy extends java.util.EventListenerProxy<ja
 	* @param propertyName  the name of the property to listen on
 	* @param listener      the listener object
 	*/
-	@:overload public function new(propertyName : String, listener : java.beans.VetoableChangeListener) : Void;
+	@:overload @:public public function new(propertyName : String, listener : java.beans.VetoableChangeListener) : Void;
 	
 	/**
 	* Forwards the property change event to the listener delegate.
@@ -42,14 +42,14 @@ extern class VetoableChangeListenerProxy extends java.util.EventListenerProxy<ja
 	* @exception PropertyVetoException if the recipient wishes the property
 	*                                  change to be rolled back
 	*/
-	@:overload public function vetoableChange(event : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function vetoableChange(event : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* Returns the name of the named property associated with the listener.
 	*
 	* @return the name of the named property associated with the listener
 	*/
-	@:overload public function getPropertyName() : String;
+	@:overload @:public public function getPropertyName() : String;
 	
 	
 }

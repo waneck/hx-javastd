@@ -29,7 +29,7 @@ extern class Sides extends javax.print.attribute.EnumSyntax implements javax.pri
 	* Imposes each consecutive print-stream page upon the same side of
 	* consecutive media sheets.
 	*/
-	public static var ONE_SIDED(default, null) : javax.print.attribute.standard.Sides;
+	@:public @:static @:final public static var ONE_SIDED(default, null) : javax.print.attribute.standard.Sides;
 	
 	/**
 	* Imposes each consecutive pair of print-stream pages upon front and back
@@ -38,7 +38,7 @@ extern class Sides extends javax.print.attribute.EnumSyntax implements javax.pri
 	* reader as if for binding on the long edge. This imposition is also
 	* known as "duplex" (see {@link #DUPLEX <CODE>DUPLEX</CODE>}).
 	*/
-	public static var TWO_SIDED_LONG_EDGE(default, null) : javax.print.attribute.standard.Sides;
+	@:public @:static @:final public static var TWO_SIDED_LONG_EDGE(default, null) : javax.print.attribute.standard.Sides;
 	
 	/**
 	* Imposes each consecutive pair of print-stream pages upon front and back
@@ -47,36 +47,36 @@ extern class Sides extends javax.print.attribute.EnumSyntax implements javax.pri
 	* reader as if for binding on the short edge. This imposition is also
 	* known as "tumble" (see {@link #TUMBLE <CODE>TUMBLE</CODE>}).
 	*/
-	public static var TWO_SIDED_SHORT_EDGE(default, null) : javax.print.attribute.standard.Sides;
+	@:public @:static @:final public static var TWO_SIDED_SHORT_EDGE(default, null) : javax.print.attribute.standard.Sides;
 	
 	/**
 	* An alias for "two sided long edge" (see {@link #TWO_SIDED_LONG_EDGE
 	* <CODE>TWO_SIDED_LONG_EDGE</CODE>}).
 	*/
-	public static var DUPLEX(default, null) : javax.print.attribute.standard.Sides;
+	@:public @:static @:final public static var DUPLEX(default, null) : javax.print.attribute.standard.Sides;
 	
 	/**
 	* An alias for "two sided short edge" (see {@link #TWO_SIDED_SHORT_EDGE
 	* <CODE>TWO_SIDED_SHORT_EDGE</CODE>}).
 	*/
-	public static var TUMBLE(default, null) : javax.print.attribute.standard.Sides;
+	@:public @:static @:final public static var TUMBLE(default, null) : javax.print.attribute.standard.Sides;
 	
 	/**
 	* Construct a new sides enumeration value with the given integer value.
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class Sides.
 	*/
-	@:overload private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class Sides.
 	*/
-	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -87,7 +87,7 @@ extern class Sides extends javax.print.attribute.EnumSyntax implements javax.pri
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -97,7 +97,7 @@ extern class Sides extends javax.print.attribute.EnumSyntax implements javax.pri
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

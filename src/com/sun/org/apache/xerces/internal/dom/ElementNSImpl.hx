@@ -21,21 +21,21 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class ElementNSImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 {
 	/** DOM2: Namespace URI. */
-	private var namespaceURI : String;
+	@:protected private var namespaceURI : String;
 	
 	/** DOM2: localName. */
-	private var localName : String;
+	@:protected private var localName : String;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* DOM2: Constructor for Namespace implementation.
 	*/
-	@:overload private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, namespaceURI : String, qualifiedName : String) : Void;
+	@:overload @:protected private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, namespaceURI : String, qualifiedName : String) : Void;
 	
-	@:overload private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, namespaceURI : String, qualifiedName : String, localName : String) : Void;
+	@:overload @:protected private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, namespaceURI : String, qualifiedName : String, localName : String) : Void;
 	
-	@:overload private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, value : String) : Void;
+	@:overload @:protected private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, value : String) : Void;
 	
 	/**
 	* NON-DOM: resets this node and sets specified values for the node
@@ -45,7 +45,7 @@ extern class ElementNSImpl extends com.sun.org.apache.xerces.internal.dom.Elemen
 	* @param qualifiedName
 	* @param localName
 	*/
-	@:overload private function setValues(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, namespaceURI : String, qualifiedName : String, localName : String) : Void;
+	@:overload @:protected private function setValues(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, namespaceURI : String, qualifiedName : String, localName : String) : Void;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -60,7 +60,7 @@ extern class ElementNSImpl extends com.sun.org.apache.xerces.internal.dom.Elemen
 	* from the Document interface, this is null.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload override public function getNamespaceURI() : String;
+	@:overload @:public override public function getNamespaceURI() : String;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -72,7 +72,7 @@ extern class ElementNSImpl extends com.sun.org.apache.xerces.internal.dom.Elemen
 	*
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload override public function getPrefix() : String;
+	@:overload @:public override public function getPrefix() : String;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -89,7 +89,7 @@ extern class ElementNSImpl extends com.sun.org.apache.xerces.internal.dom.Elemen
 	* @exception DOMException
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload override public function setPrefix(prefix : String) : Void;
+	@:overload @:public override public function setPrefix(prefix : String) : Void;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -97,23 +97,23 @@ extern class ElementNSImpl extends com.sun.org.apache.xerces.internal.dom.Elemen
 	* Returns the local part of the qualified name of this node.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload override public function getLocalName() : String;
+	@:overload @:public override public function getLocalName() : String;
 	
 	/**
 	* DOM Level 3 WD - Experimental.
 	* Retrieve baseURI
 	*/
-	@:overload override public function getBaseURI() : String;
+	@:overload @:public override public function getBaseURI() : String;
 	
 	/**
 	* @see org.w3c.dom.TypeInfo#getTypeName()
 	*/
-	@:overload override public function getTypeName() : String;
+	@:overload @:public override public function getTypeName() : String;
 	
 	/**
 	* @see org.w3c.dom.TypeInfo#getTypeNamespace()
 	*/
-	@:overload override public function getTypeNamespace() : String;
+	@:overload @:public override public function getTypeNamespace() : String;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -130,13 +130,13 @@ extern class ElementNSImpl extends com.sun.org.apache.xerces.internal.dom.Elemen
 	* @return boolean True if the type is derived by restriciton for the
 	*         reference type
 	*/
-	@:overload override public function isDerivedFrom(typeNamespaceArg : String, typeNameArg : String, derivationMethod : Int) : Bool;
+	@:overload @:public override public function isDerivedFrom(typeNamespaceArg : String, typeNameArg : String, derivationMethod : Int) : Bool;
 	
 	/**
 	* NON-DOM: setting type used by the DOM parser
 	* @see NodeImpl#setReadOnly
 	*/
-	@:overload public function setType(type : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition) : Void;
+	@:overload @:public public function setType(type : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition) : Void;
 	
 	
 }

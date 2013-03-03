@@ -31,13 +31,13 @@ extern class ExcC14NParameterSpec implements javax.xml.crypto.dsig.spec.C14NMeth
 	/**
 	* Indicates the default namespace ("#default").
 	*/
-	public static var DEFAULT(default, null) : String;
+	@:public @:static @:final public static var DEFAULT(default, null) : String;
 	
 	/**
 	* Creates a <code>ExcC14NParameterSpec</code> with an empty prefix
 	* list.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>ExcC14NParameterSpec</code> with the specified list
@@ -51,7 +51,7 @@ extern class ExcC14NParameterSpec implements javax.xml.crypto.dsig.spec.C14NMeth
 	* @throws ClassCastException if any of the entries in the list are not
 	*    of type <code>String</code>
 	*/
-	@:overload public function new(prefixList : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function new(prefixList : java.util.List<Dynamic>) : Void;
 	
 	/**
 	* Returns the inclusive namespace prefix list. Each entry in the list
@@ -63,7 +63,7 @@ extern class ExcC14NParameterSpec implements javax.xml.crypto.dsig.spec.C14NMeth
 	* @return the inclusive namespace prefix list (may be empty but never
 	*    <code>null</code>)
 	*/
-	@:overload public function getPrefixList() : java.util.List<Dynamic>;
+	@:overload @:public public function getPrefixList() : java.util.List<Dynamic>;
 	
 	
 }

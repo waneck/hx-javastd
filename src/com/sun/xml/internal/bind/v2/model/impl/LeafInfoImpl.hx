@@ -25,12 +25,12 @@ package com.sun.xml.internal.bind.v2.model.impl;
 */
 @:internal extern class LeafInfoImpl<TypeT, ClassDeclT> implements com.sun.xml.internal.bind.v2.model.core.LeafInfo<TypeT, ClassDeclT> implements com.sun.xml.internal.bind.v2.runtime.Location
 {
-	@:overload private function new(type : TypeT, typeName : javax.xml.namespace.QName) : Void;
+	@:overload @:protected private function new(type : TypeT, typeName : javax.xml.namespace.QName) : Void;
 	
 	/**
 	* A reference to the representation of the type.
 	*/
-	@:overload public function getType() : TypeT;
+	@:overload @:public public function getType() : TypeT;
 	
 	/**
 	* Leaf-type cannot be referenced from IDREF.
@@ -38,17 +38,43 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	* @deprecated
 	*      why are you calling a method whose return value is always known?
 	*/
-	@:overload @:final public function canBeReferencedByIDREF() : Bool;
+	@:overload @:public @:final public function canBeReferencedByIDREF() : Bool;
 	
-	@:overload public function getTypeName() : javax.xml.namespace.QName;
+	@:overload @:public public function getTypeName() : javax.xml.namespace.QName;
 	
-	@:overload public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
+	@:overload @:public public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
-	@:overload public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
-	@:overload public function isSimpleType() : Bool;
+	@:overload @:public public function isSimpleType() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
+	
+	/**
+	* If the class is bound to an element, return true.
+	*
+	* <p>
+	* Note that when this is true, the class is bound to both an element
+	* and a type.
+	*/
+	@:overload @:public @:public override public function isElement() : Bool;
+	
+	/**
+	* Gets the element name of the class, if the class is bound
+	* to an element.
+	*
+	* @return
+	*      non-null iff {@link #isElement()}.
+	*/
+	@:overload @:public @:public override public function getElementName() : javax.xml.namespace.QName;
+	
+	/**
+	* Returns the {@link Element} aspect of this {@link ClassInfo}.
+	*
+	* @return
+	*      null if {@link #isElement()}==false, non-null if {@link #isElement()}==true.
+	*/
+	@:overload @:public @:public override public function asElement() : com.sun.xml.internal.bind.v2.model.core.Element<Dynamic, Dynamic>;
 	
 	
 }

@@ -29,7 +29,7 @@ extern class Policy
 	* A read-only empty PermissionCollection instance.
 	* @since 1.6
 	*/
-	@:require(java6) public static var UNSUPPORTED_EMPTY_COLLECTION(default, null) : java.security.PermissionCollection;
+	@:require(java6) @:public @:static @:final public static var UNSUPPORTED_EMPTY_COLLECTION(default, null) : java.security.PermissionCollection;
 	
 	/**
 	* Returns the installed Policy object. This value should not be cached,
@@ -49,7 +49,7 @@ extern class Policy
 	* @see SecurityManager#checkPermission(Permission)
 	* @see #setPolicy(java.security.Policy)
 	*/
-	@:overload public static function getPolicy() : java.security.Policy;
+	@:overload @:public @:static public static function getPolicy() : java.security.Policy;
 	
 	/**
 	* Sets the system-wide Policy object. This method first calls
@@ -68,7 +68,7 @@ extern class Policy
 	* @see #getPolicy()
 	*
 	*/
-	@:overload public static function setPolicy(p : java.security.Policy) : Void;
+	@:overload @:public @:static public static function setPolicy(p : java.security.Policy) : Void;
 	
 	/**
 	* Returns a Policy object of the specified type.
@@ -107,7 +107,7 @@ extern class Policy
 	* @see Provider
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getInstance(type : String, params : java.security.Policy.Policy_Parameters) : java.security.Policy;
+	@:require(java6) @:overload @:public @:static public static function getInstance(type : String, params : java.security.Policy.Policy_Parameters) : java.security.Policy;
 	
 	/**
 	* Returns a Policy object of the specified type.
@@ -151,7 +151,7 @@ extern class Policy
 	* @see Provider
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getInstance(type : String, params : java.security.Policy.Policy_Parameters, provider : String) : java.security.Policy;
+	@:require(java6) @:overload @:public @:static public static function getInstance(type : String, params : java.security.Policy.Policy_Parameters, provider : String) : java.security.Policy;
 	
 	/**
 	* Returns a Policy object of the specified type.
@@ -188,7 +188,7 @@ extern class Policy
 	* @see Provider
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getInstance(type : String, params : java.security.Policy.Policy_Parameters, provider : java.security.Provider) : java.security.Policy;
+	@:require(java6) @:overload @:public @:static public static function getInstance(type : String, params : java.security.Policy.Policy_Parameters, provider : java.security.Provider) : java.security.Policy;
 	
 	/**
 	* Return the Provider of this Policy.
@@ -201,7 +201,7 @@ extern class Policy
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getProvider() : java.security.Provider;
+	@:require(java6) @:overload @:public public function getProvider() : java.security.Provider;
 	
 	/**
 	* Return the type of this Policy.
@@ -214,7 +214,7 @@ extern class Policy
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getType() : String;
+	@:require(java6) @:overload @:public public function getType() : String;
 	
 	/**
 	* Return Policy parameters.
@@ -227,7 +227,7 @@ extern class Policy
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getParameters() : java.security.Policy.Policy_Parameters;
+	@:require(java6) @:overload @:public public function getParameters() : java.security.Policy.Policy_Parameters;
 	
 	/**
 	* Return a PermissionCollection object containing the set of
@@ -255,7 +255,7 @@ extern class Policy
 	*          If this operation is not supported,
 	*          Policy.UNSUPPORTED_EMPTY_COLLECTION is returned.
 	*/
-	@:overload public function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
+	@:overload @:public public function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
 	
 	/**
 	* Return a PermissionCollection object containing the set of
@@ -291,7 +291,7 @@ extern class Policy
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getPermissions(domain : java.security.ProtectionDomain) : java.security.PermissionCollection;
+	@:require(java4) @:overload @:public public function getPermissions(domain : java.security.ProtectionDomain) : java.security.PermissionCollection;
 	
 	/**
 	* Evaluates the global policy for the permissions granted to
@@ -307,7 +307,7 @@ extern class Policy
 	* @see java.security.ProtectionDomain
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function implies(domain : java.security.ProtectionDomain, permission : java.security.Permission) : Bool;
+	@:require(java4) @:overload @:public public function implies(domain : java.security.ProtectionDomain, permission : java.security.Permission) : Bool;
 	
 	/**
 	* Refreshes/reloads the policy configuration. The behavior of this method
@@ -318,7 +318,7 @@ extern class Policy
 	* This method should be overridden if a refresh operation is supported
 	* by the policy implementation.
 	*/
-	@:overload public function refresh() : Void;
+	@:overload @:public public function refresh() : Void;
 	
 	
 }
@@ -332,19 +332,19 @@ extern class Policy
 */
 @:native('java$security$Policy$PolicyDelegate') @:internal extern class Policy_PolicyDelegate extends java.security.Policy
 {
-	@:overload override public function getType() : String;
+	@:overload @:public override public function getType() : String;
 	
-	@:overload override public function getParameters() : java.security.Policy.Policy_Parameters;
+	@:overload @:public override public function getParameters() : java.security.Policy.Policy_Parameters;
 	
-	@:overload override public function getProvider() : java.security.Provider;
+	@:overload @:public override public function getProvider() : java.security.Provider;
 	
-	@:overload override public function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
+	@:overload @:public override public function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
 	
-	@:overload override public function getPermissions(domain : java.security.ProtectionDomain) : java.security.PermissionCollection;
+	@:overload @:public override public function getPermissions(domain : java.security.ProtectionDomain) : java.security.PermissionCollection;
 	
-	@:overload override public function implies(domain : java.security.ProtectionDomain, perm : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(domain : java.security.ProtectionDomain, perm : java.security.Permission) : Bool;
 	
-	@:overload override public function refresh() : Void;
+	@:overload @:public override public function refresh() : Void;
 	
 	
 }
@@ -369,7 +369,7 @@ extern class Policy
 	/**
 	* Create a read-only empty PermissionCollection object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Adds a permission object to the current collection of permission
@@ -380,7 +380,7 @@ extern class Policy
 	* @exception SecurityException - if this PermissionCollection object
 	*                                has been marked readonly
 	*/
-	@:overload override public function add(permission : java.security.Permission) : Void;
+	@:overload @:public override public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* Checks to see if the specified permission is implied by the
@@ -391,7 +391,7 @@ extern class Policy
 	* @return true if "permission" is implied by the permissions in
 	* the collection, false if not.
 	*/
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Returns an enumeration of all the Permission objects in the
@@ -399,7 +399,7 @@ extern class Policy
 	*
 	* @return an enumeration of all the Permissions.
 	*/
-	@:overload override public function elements() : java.util.Enumeration<java.security.Permission>;
+	@:overload @:public override public function elements() : java.util.Enumeration<java.security.Permission>;
 	
 	
 }

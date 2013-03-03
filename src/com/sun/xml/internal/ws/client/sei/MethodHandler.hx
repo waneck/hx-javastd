@@ -34,9 +34,9 @@ extern class MethodHandler
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	private var owner(default, null) : com.sun.xml.internal.ws.client.sei.SEIStub;
+	@:protected @:final private var owner(default, null) : com.sun.xml.internal.ws.client.sei.SEIStub;
 	
-	@:overload private function new(owner : com.sun.xml.internal.ws.client.sei.SEIStub) : Void;
+	@:overload @:protected private function new(owner : com.sun.xml.internal.ws.client.sei.SEIStub) : Void;
 	
 	
 }

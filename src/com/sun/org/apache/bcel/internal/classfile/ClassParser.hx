@@ -78,21 +78,21 @@ extern class ClassParser
 	* @param file Input stream
 	* @param file_name File name
 	*/
-	@:overload public function new(file : java.io.InputStream, file_name : String) : Void;
+	@:overload @:public public function new(file : java.io.InputStream, file_name : String) : Void;
 	
 	/** Parse class from given .class file.
 	*
 	* @param file_name file name
 	* @throws IOException
 	*/
-	@:overload public function new(file_name : String) : Void;
+	@:overload @:public public function new(file_name : String) : Void;
 	
 	/** Parse class from given .class file in a ZIP-archive
 	*
 	* @param file_name file name
 	* @throws IOException
 	*/
-	@:overload public function new(zip_file : String, file_name : String) : Void;
+	@:overload @:public public function new(zip_file : String, file_name : String) : Void;
 	
 	/**
 	* Parse the given Java class file and return an object that represents
@@ -105,7 +105,7 @@ extern class ClassParser
 	* @throws  IOException
 	* @throws  ClassFormatException
 	*/
-	@:overload public function parse() : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function parse() : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
 	
 }

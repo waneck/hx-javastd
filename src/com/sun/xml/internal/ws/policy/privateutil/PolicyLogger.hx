@@ -34,7 +34,7 @@ extern class PolicyLogger extends com.sun.istack.internal.logging.Logger
 	* @return logger instance preconfigured for use with the component
 	* @throws NullPointerException if the componentClass parameter is {@code null}.
 	*/
-	@:overload public static function getLogger(componentClass : Class<Dynamic>) : com.sun.xml.internal.ws.policy.privateutil.PolicyLogger;
+	@:overload @:public @:static public static function getLogger(componentClass : Class<Dynamic>) : com.sun.xml.internal.ws.policy.privateutil.PolicyLogger;
 	
 	
 }

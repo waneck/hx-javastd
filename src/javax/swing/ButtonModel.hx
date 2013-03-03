@@ -114,7 +114,7 @@ extern interface ButtonModel extends java.awt.ItemSelectable
 	*
 	* @param b whether or not the button should be armed
 	*/
-	@:overload public function setArmed(b : Bool) : Void;
+	@:overload @:public public function setArmed(b : Bool) : Void;
 	
 	/**
 	* Selects or deselects the button.
@@ -122,7 +122,7 @@ extern interface ButtonModel extends java.awt.ItemSelectable
 	* @param b <code>true</code> selects the button,
 	*          <code>false</code> deselects the button
 	*/
-	@:overload public function setSelected(b : Bool) : Void;
+	@:overload @:public public function setSelected(b : Bool) : Void;
 	
 	/**
 	* Enables or disables the button.
@@ -130,7 +130,7 @@ extern interface ButtonModel extends java.awt.ItemSelectable
 	* @param b whether or not the button should be enabled
 	* @see #isEnabled
 	*/
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Sets the button to pressed or unpressed.
@@ -138,7 +138,7 @@ extern interface ButtonModel extends java.awt.ItemSelectable
 	* @param b whether or not the button should be pressed
 	* @see #isPressed
 	*/
-	@:overload public function setPressed(b : Bool) : Void;
+	@:overload @:public public function setPressed(b : Bool) : Void;
 	
 	/**
 	* Sets or clears the button's rollover state
@@ -146,7 +146,7 @@ extern interface ButtonModel extends java.awt.ItemSelectable
 	* @param b whether or not the button is in the rollover state
 	* @see #isRollover
 	*/
-	@:overload public function setRollover(b : Bool) : Void;
+	@:overload @:public public function setRollover(b : Bool) : Void;
 	
 	/**
 	* Sets the keyboard mnemonic (shortcut key or
@@ -154,7 +154,7 @@ extern interface ButtonModel extends java.awt.ItemSelectable
 	*
 	* @param key an int specifying the accelerator key
 	*/
-	@:overload public function setMnemonic(key : Int) : Void;
+	@:overload @:public public function setMnemonic(key : Int) : Void;
 	
 	/**
 	* Gets the keyboard mnemonic for the button.
@@ -162,7 +162,7 @@ extern interface ButtonModel extends java.awt.ItemSelectable
 	* @return an int specifying the accelerator key
 	* @see #setMnemonic
 	*/
-	@:overload public function getMnemonic() : Int;
+	@:overload @:public public function getMnemonic() : Int;
 	
 	/**
 	* Sets the action command string that gets sent as part of the
@@ -172,7 +172,7 @@ extern interface ButtonModel extends java.awt.ItemSelectable
 	* @see #getActionCommand
 	* @see java.awt.event.ActionEvent#getActionCommand
 	*/
-	@:overload public function setActionCommand(s : String) : Void;
+	@:overload @:public public function setActionCommand(s : String) : Void;
 	
 	/**
 	* Returns the action command string for the button.
@@ -180,7 +180,7 @@ extern interface ButtonModel extends java.awt.ItemSelectable
 	* @return the <code>String</code> that identifies the generated event
 	* @see #setActionCommand
 	*/
-	@:overload public function getActionCommand() : String;
+	@:overload @:public public function getActionCommand() : String;
 	
 	/**
 	* Identifies the group the button belongs to --
@@ -189,7 +189,7 @@ extern interface ButtonModel extends java.awt.ItemSelectable
 	*
 	* @param group the <code>ButtonGroup</code> the button belongs to
 	*/
-	@:overload public function setGroup(group : javax.swing.ButtonGroup) : Void;
+	@:overload @:public public function setGroup(group : javax.swing.ButtonGroup) : Void;
 	
 	/**
 	* Adds an <code>ActionListener</code> to the model.

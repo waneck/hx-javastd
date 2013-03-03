@@ -36,7 +36,7 @@ extern class ImagingOpException extends java.lang.RuntimeException
 	* @param s the message to generate when a
 	* <code>ImagingOpException</code> is thrown
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

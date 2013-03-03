@@ -32,11 +32,11 @@ package sun.applet;
 	/**
 	* Lets us construct one using unix-style one shot behaviors
 	*/
-	@:overload public function createAppletViewer(x : Int, y : Int, doc : java.net.URL, atts : java.util.Hashtable<Dynamic, Dynamic>) : sun.applet.TextFrame.AppletViewer;
+	@:overload @:public public function createAppletViewer(x : Int, y : Int, doc : java.net.URL, atts : java.util.Hashtable<Dynamic, Dynamic>) : sun.applet.TextFrame.AppletViewer;
 	
-	@:overload public function getBaseMenuBar() : java.awt.MenuBar;
+	@:overload @:public public function getBaseMenuBar() : java.awt.MenuBar;
 	
-	@:overload public function isStandalone() : Bool;
+	@:overload @:public public function isStandalone() : Bool;
 	
 	
 }
@@ -45,119 +45,119 @@ extern class AppletViewer extends java.awt.Frame implements java.applet.AppletCo
 	/**
 	* Create the applet viewer
 	*/
-	@:overload public function new(x : Int, y : Int, doc : java.net.URL, atts : java.util.Hashtable<Dynamic, Dynamic>, statusMsgStream : java.io.PrintStream, factory : sun.applet.AppletViewerFactory) : Void;
+	@:overload @:public public function new(x : Int, y : Int, doc : java.net.URL, atts : java.util.Hashtable<Dynamic, Dynamic>, statusMsgStream : java.io.PrintStream, factory : sun.applet.AppletViewerFactory) : Void;
 	
-	@:overload public function addMenuItem(m : java.awt.Menu, s : String) : java.awt.MenuItem;
+	@:overload @:public public function addMenuItem(m : java.awt.Menu, s : String) : java.awt.MenuItem;
 	
 	/**
 	* Get an audio clip.
 	*/
-	@:overload public function getAudioClip(url : java.net.URL) : java.applet.AudioClip;
+	@:overload @:public public function getAudioClip(url : java.net.URL) : java.applet.AudioClip;
 	
 	/**
 	* Get an image.
 	*/
-	@:overload public function getImage(url : java.net.URL) : java.awt.Image;
+	@:overload @:public public function getImage(url : java.net.URL) : java.awt.Image;
 	
 	/**
 	* Get an applet by name.
 	*/
-	@:overload public function getApplet(name : String) : java.applet.Applet;
+	@:overload @:public public function getApplet(name : String) : java.applet.Applet;
 	
 	/**
 	* Return an enumeration of all the accessible
 	* applets on this page.
 	*/
-	@:overload public function getApplets() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getApplets() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Ignore.
 	*/
-	@:overload public function showDocument(url : java.net.URL) : Void;
+	@:overload @:public public function showDocument(url : java.net.URL) : Void;
 	
 	/**
 	* Ignore.
 	*/
-	@:overload public function showDocument(url : java.net.URL, target : String) : Void;
+	@:overload @:public public function showDocument(url : java.net.URL, target : String) : Void;
 	
 	/**
 	* Show status.
 	*/
-	@:overload public function showStatus(status : String) : Void;
+	@:overload @:public public function showStatus(status : String) : Void;
 	
-	@:overload public function setStream(key : String, stream : java.io.InputStream) : Void;
+	@:overload @:public public function setStream(key : String, stream : java.io.InputStream) : Void;
 	
-	@:overload public function getStream(key : String) : java.io.InputStream;
+	@:overload @:public public function getStream(key : String) : java.io.InputStream;
 	
-	@:overload public function getStreamKeys() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getStreamKeys() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Print the HTML tag.
 	*/
-	@:overload public static function printTag(out : java.io.PrintStream, atts : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public @:static public static function printTag(out : java.io.PrintStream, atts : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Make sure the atrributes are uptodate.
 	*/
-	@:overload public function updateAtts() : Void;
+	@:overload @:public public function updateAtts() : Void;
 	
-	@:overload public function print(graphics : java.awt.Graphics, pf : java.awt.print.PageFormat, pageIndex : Int) : Int;
+	@:overload @:public public function print(graphics : java.awt.Graphics, pf : java.awt.print.PageFormat, pageIndex : Int) : Int;
 	
-	@:overload @:synchronized public static function networkProperties() : Void;
+	@:overload @:public @:static @:synchronized public static function networkProperties() : Void;
 	
 	/**
 	* Quit all viewers.
 	* Shutdown all viewers properly then
 	* exit from the program (if not stand alone)
 	*/
-	@:overload private function appletQuit() : Void;
+	@:overload @:protected private function appletQuit() : Void;
 	
 	/**
 	* Handle events.
 	*/
-	@:overload public function processUserAction(evt : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function processUserAction(evt : java.awt.event.ActionEvent) : Void;
 	
 	/**
 	* How many applets are running?
 	*/
-	@:overload public static function countApplets() : Int;
+	@:overload @:public @:static public static function countApplets() : Int;
 	
 	/**
 	* Scan spaces.
 	*/
-	@:overload public static function skipSpace(_in : java.io.Reader) : Void;
+	@:overload @:public @:static public static function skipSpace(_in : java.io.Reader) : Void;
 	
 	/**
 	* Scan identifier
 	*/
-	@:overload public static function scanIdentifier(_in : java.io.Reader) : String;
+	@:overload @:public @:static public static function scanIdentifier(_in : java.io.Reader) : String;
 	
 	/**
 	* Scan tag
 	*/
-	@:overload public static function scanTag(_in : java.io.Reader) : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:public @:static public static function scanTag(_in : java.io.Reader) : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* Scan an html file for <applet> tags
 	*/
-	@:overload public static function parse(url : java.net.URL, enc : String) : Void;
+	@:overload @:public @:static public static function parse(url : java.net.URL, enc : String) : Void;
 	
-	@:overload public static function parse(url : java.net.URL) : Void;
+	@:overload @:public @:static public static function parse(url : java.net.URL) : Void;
 	
-	@:overload public static function parse(url : java.net.URL, statusMsgStream : java.io.PrintStream, factory : sun.applet.AppletViewerFactory) : Void;
+	@:overload @:public @:static public static function parse(url : java.net.URL, statusMsgStream : java.io.PrintStream, factory : sun.applet.AppletViewerFactory) : Void;
 	
 	/**
 	* Old main entry point.
 	*
 	* @deprecated
 	*/
-	@:overload public static function main(argv : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(argv : java.NativeArray<String>) : Void;
 	
 	
 }
 @:native('sun$applet$AppletViewer$UserActionListener') @:internal extern class AppletViewer_UserActionListener implements java.awt.event.ActionListener
 {
-	@:overload public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
 	
 }

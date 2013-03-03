@@ -34,7 +34,7 @@ extern class AssertionCreationException extends com.sun.xml.internal.ws.policy.P
 	* @param assertionData the data provided for assertion creation
 	* @param  message the detail message.
 	*/
-	@:overload public function new(assertionData : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, message : String) : Void;
+	@:overload @:public public function new(assertionData : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, message : String) : Void;
 	
 	/**
 	* Constructs a new assertion creation exception with the specified detail message and cause.
@@ -46,7 +46,7 @@ extern class AssertionCreationException extends com.sun.xml.internal.ws.policy.P
 	* @param  message the detail message.
 	* @param  cause the cause.  (A {@code null} value is permitted, and indicates that the cause is nonexistent or unknown.)
 	*/
-	@:overload public function new(assertionData : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(assertionData : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a new assertion creation exception with the specified detail message and cause.
@@ -54,14 +54,14 @@ extern class AssertionCreationException extends com.sun.xml.internal.ws.policy.P
 	* @param assertionData the data provided for assertion creation
 	* @param  cause the cause.  (A {@code null} value is permitted, and indicates that the cause is nonexistent or unknown.)
 	*/
-	@:overload public function new(assertionData : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(assertionData : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Retrieves assertion data associated with the exception.
 	*
 	* @return associated assertion data (present when assertion creation failed raising this exception).
 	*/
-	@:overload public function getAssertionData() : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
+	@:overload @:public public function getAssertionData() : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
 	
 	
 }

@@ -23,39 +23,39 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class StepPattern extends com.sun.org.apache.xalan.internal.xsltc.compiler.RelativePathPattern
 {
-	private var _axis(default, null) : Int;
+	@:protected @:final private var _axis(default, null) : Int;
 	
-	private var _nodeType(default, null) : Int;
+	@:protected @:final private var _nodeType(default, null) : Int;
 	
-	private var _predicates : java.util.Vector<Dynamic>;
+	@:protected private var _predicates : java.util.Vector<Dynamic>;
 	
-	@:overload public function new(axis : Int, nodeType : Int, predicates : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function new(axis : Int, nodeType : Int, predicates : java.util.Vector<Dynamic>) : Void;
 	
-	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload public function getNodeType() : Int;
+	@:overload @:public public function getNodeType() : Int;
 	
-	@:overload public function setPriority(priority : Float) : Void;
+	@:overload @:public public function setPriority(priority : Float) : Void;
 	
-	@:overload override public function getKernelPattern() : com.sun.org.apache.xalan.internal.xsltc.compiler.StepPattern;
+	@:overload @:public override public function getKernelPattern() : com.sun.org.apache.xalan.internal.xsltc.compiler.StepPattern;
 	
-	@:overload override public function isWildcard() : Bool;
+	@:overload @:public override public function isWildcard() : Bool;
 	
-	@:overload public function setPredicates(predicates : java.util.Vector<Dynamic>) : com.sun.org.apache.xalan.internal.xsltc.compiler.StepPattern;
+	@:overload @:public public function setPredicates(predicates : java.util.Vector<Dynamic>) : com.sun.org.apache.xalan.internal.xsltc.compiler.StepPattern;
 	
-	@:overload private function hasPredicates() : Bool;
+	@:overload @:protected private function hasPredicates() : Bool;
 	
-	@:overload override public function getDefaultPriority() : Float;
+	@:overload @:public override public function getDefaultPriority() : Float;
 	
-	@:overload override public function getAxis() : Int;
+	@:overload @:public override public function getAxis() : Int;
 	
-	@:overload override public function reduceKernelPattern() : Void;
+	@:overload @:public override public function reduceKernelPattern() : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

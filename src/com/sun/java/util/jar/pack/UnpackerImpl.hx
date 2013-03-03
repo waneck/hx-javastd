@@ -29,23 +29,23 @@ extern class UnpackerImpl extends com.sun.java.util.jar.pack.TLGlobals implement
 	* Register a listener for changes to options.
 	* @param listener  An object to be invoked when a property is changed.
 	*/
-	@:overload public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Remove a listener for the PropertyChange event.
 	* @param listener  The PropertyChange listener to be removed.
 	*/
-	@:overload public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Get the set of options for the pack and unpack engines.
 	* @return A sorted association of option key strings to option values.
 	*/
-	@:overload public function properties() : java.util.SortedMap<String, String>;
+	@:overload @:public public function properties() : java.util.SortedMap<String, String>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Takes a packed-stream InputStream, and writes to a JarOutputStream. Internally
@@ -57,7 +57,7 @@ extern class UnpackerImpl extends com.sun.java.util.jar.pack.TLGlobals implement
 	* @param out a JarOutputStream.
 	* @exception IOException if an error is encountered.
 	*/
-	@:overload @:synchronized public function unpack(_in : java.io.InputStream, out : java.util.jar.JarOutputStream) : Void;
+	@:overload @:public @:synchronized public function unpack(_in : java.io.InputStream, out : java.util.jar.JarOutputStream) : Void;
 	
 	/**
 	* Takes an input File containing the pack file, and generates a JarOutputStream.
@@ -67,13 +67,13 @@ extern class UnpackerImpl extends com.sun.java.util.jar.pack.TLGlobals implement
 	* @param out a JarOutputStream.
 	* @exception IOException if an error is encountered.
 	*/
-	@:overload @:synchronized public function unpack(_in : java.io.File, out : java.util.jar.JarOutputStream) : Void;
+	@:overload @:public @:synchronized public function unpack(_in : java.io.File, out : java.util.jar.JarOutputStream) : Void;
 	
 	
 }
 @:native('com$sun$java$util$jar$pack$UnpackerImpl$DoUnpack') @:internal extern class UnpackerImpl_DoUnpack
 {
-	@:overload public function run(_in : java.io.BufferedInputStream, out : java.util.jar.JarOutputStream) : Void;
+	@:overload @:public public function run(_in : java.io.BufferedInputStream, out : java.util.jar.JarOutputStream) : Void;
 	
 	
 }

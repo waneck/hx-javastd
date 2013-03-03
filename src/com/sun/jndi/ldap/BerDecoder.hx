@@ -28,25 +28,25 @@ extern class BerDecoder extends com.sun.jndi.ldap.Ber
 	/**
 	* Creates a BER decoder that reads bytes from the specified buffer.
 	*/
-	@:overload public function new(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, bufsize : Int) : Void;
+	@:overload @:public public function new(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, bufsize : Int) : Void;
 	
 	/**
 	* Resets this decode to start parsing from the initial offset
 	* (ie., same state as after calling the constructor).
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Returns the current parse position.
 	* It points to the byte that will be parsed next.
 	* Useful for parsing sequences.
 	*/
-	@:overload public function getParsePosition() : Int;
+	@:overload @:public public function getParsePosition() : Int;
 	
 	/**
 	* Parses a possibly variable length field.
 	*/
-	@:overload public function parseLength() : Int;
+	@:overload @:public public function parseLength() : Int;
 	
 	/**
 	* Parses the next sequence in this BER buffer.
@@ -54,42 +54,42 @@ extern class BerDecoder extends com.sun.jndi.ldap.Ber
 	*          the size is not returned.
 	* @return The sequence's tag.
 	*/
-	@:overload public function parseSeq(rlen : java.NativeArray<Int>) : Int;
+	@:overload @:public public function parseSeq(rlen : java.NativeArray<Int>) : Int;
 	
 	/**
 	* Parses the next byte in this BER buffer.
 	* @return The byte parsed.
 	*/
-	@:overload public function parseByte() : Int;
+	@:overload @:public public function parseByte() : Int;
 	
 	/**
 	* Returns the next byte in this BER buffer without consuming it.
 	* @return The next byte.
 	*/
-	@:overload public function peekByte() : Int;
+	@:overload @:public public function peekByte() : Int;
 	
 	/**
 	* Parses an ASN_BOOLEAN tagged integer from this BER buffer.
 	* @return true if the tagged integer is 0; false otherwise.
 	*/
-	@:overload public function parseBoolean() : Bool;
+	@:overload @:public public function parseBoolean() : Bool;
 	
 	/**
 	* Parses an ASN_ENUMERATED tagged integer from this BER buffer.
 	* @return The tag of enumeration.
 	*/
-	@:overload public function parseEnumeration() : Int;
+	@:overload @:public public function parseEnumeration() : Int;
 	
 	/**
 	* Parses an ASN_INTEGER tagged integer from this BER buffer.
 	* @return The value of the integer.
 	*/
-	@:overload public function parseInt() : Int;
+	@:overload @:public public function parseInt() : Int;
 	
 	/**
 	* Parses a string.
 	*/
-	@:overload public function parseString(decodeUTF8 : Bool) : String;
+	@:overload @:public public function parseString(decodeUTF8 : Bool) : String;
 	
 	/**
 	* Parses a string of a given tag from this BER buffer.
@@ -103,7 +103,7 @@ extern class BerDecoder extends com.sun.jndi.ldap.Ber
 	* @param tag The tag that precedes the string.
 	* @return The non-null parsed string.
 	*/
-	@:overload public function parseStringWithTag(tag : Int, decodeUTF8 : Bool, rlen : java.NativeArray<Int>) : String;
+	@:overload @:public public function parseStringWithTag(tag : Int, decodeUTF8 : Bool, rlen : java.NativeArray<Int>) : String;
 	
 	/**
 	* Parses an octet string of a given type(tag) from this BER buffer.
@@ -119,12 +119,12 @@ extern class BerDecoder extends com.sun.jndi.ldap.Ber
 	* <tt>tag</tt>, or if length specified in the BER buffer exceeds the
 	* number of bytes left in the buffer.
 	*/
-	@:overload public function parseOctetString(tag : Int, rlen : java.NativeArray<Int>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function parseOctetString(tag : Int, rlen : java.NativeArray<Int>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the number of unparsed bytes in this BER buffer.
 	*/
-	@:overload public function bytesLeft() : Int;
+	@:overload @:public public function bytesLeft() : Int;
 	
 	
 }

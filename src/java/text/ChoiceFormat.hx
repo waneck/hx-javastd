@@ -41,24 +41,24 @@ extern class ChoiceFormat extends java.text.NumberFormat
 	* Sets the pattern.
 	* @param newPattern See the class description.
 	*/
-	@:overload public function applyPattern(newPattern : String) : Void;
+	@:overload @:public public function applyPattern(newPattern : String) : Void;
 	
 	/**
 	* Gets the pattern.
 	*/
-	@:overload public function toPattern() : String;
+	@:overload @:public public function toPattern() : String;
 	
 	/**
 	* Constructs with limits and corresponding formats based on the pattern.
 	* @see #applyPattern
 	*/
-	@:overload public function new(newPattern : String) : Void;
+	@:overload @:public public function new(newPattern : String) : Void;
 	
 	/**
 	* Constructs with the limits and the corresponding formats.
 	* @see #setChoices
 	*/
-	@:overload public function new(limits : java.NativeArray<Float>, formats : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(limits : java.NativeArray<Float>, formats : java.NativeArray<String>) : Void;
 	
 	/**
 	* Set the choices to be used in formatting.
@@ -74,19 +74,19 @@ extern class ChoiceFormat extends java.text.NumberFormat
 	* if the object is a NumberFormat, then ((NumberFormat) Y).format(X)
 	* is called. Otherwise Y.toString() is called.
 	*/
-	@:overload public function setChoices(limits : java.NativeArray<Float>, formats : java.NativeArray<String>) : Void;
+	@:overload @:public public function setChoices(limits : java.NativeArray<Float>, formats : java.NativeArray<String>) : Void;
 	
 	/**
 	* Get the limits passed in the constructor.
 	* @return the limits.
 	*/
-	@:overload public function getLimits() : java.NativeArray<Float>;
+	@:overload @:public public function getLimits() : java.NativeArray<Float>;
 	
 	/**
 	* Get the formats passed in the constructor.
 	* @return the formats.
 	*/
-	@:overload public function getFormats() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getFormats() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Specialization of format. This method really calls
@@ -95,7 +95,7 @@ extern class ChoiceFormat extends java.text.NumberFormat
 	* the range that can be stored by double. This will never be
 	* a practical limitation.
 	*/
-	@:overload public function format(number : haxe.Int64, toAppendTo : java.lang.StringBuffer, status : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload @:public override public function format(number : haxe.Int64, toAppendTo : java.lang.StringBuffer, status : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Returns pattern with formatted double.
@@ -103,7 +103,7 @@ extern class ChoiceFormat extends java.text.NumberFormat
 	* @param toAppendTo where text is appended.
 	* @param status ignore no useful status is returned.
 	*/
-	@:overload public function format(number : Float, toAppendTo : java.lang.StringBuffer, status : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload @:public override public function format(number : Float, toAppendTo : java.lang.StringBuffer, status : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Parses a Number from the input text.
@@ -117,7 +117,7 @@ extern class ChoiceFormat extends java.text.NumberFormat
 	* first index of the character that caused the parse to fail.
 	* @return A Number representing the value of the number parsed.
 	*/
-	@:overload public function parse(text : String, status : java.text.ParsePosition) : java.lang.Number;
+	@:overload @:public override public function parse(text : String, status : java.text.ParsePosition) : java.lang.Number;
 	
 	/**
 	* Finds the least double greater than d.
@@ -125,29 +125,29 @@ extern class ChoiceFormat extends java.text.NumberFormat
 	* <p>Used to make half-open intervals.
 	* @see #previousDouble
 	*/
-	@:overload @:final public static function nextDouble(d : Float) : Float;
+	@:overload @:public @:static @:final public static function nextDouble(d : Float) : Float;
 	
 	/**
 	* Finds the greatest double less than d.
 	* If NaN, returns same value.
 	* @see #nextDouble
 	*/
-	@:overload @:final public static function previousDouble(d : Float) : Float;
+	@:overload @:public @:static @:final public static function previousDouble(d : Float) : Float;
 	
 	/**
 	* Overrides Cloneable
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Generates a hash code for the message format object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Equality comparision between two
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Finds the least double greater than d (if positive == true),
@@ -160,7 +160,7 @@ extern class ChoiceFormat extends java.text.NumberFormat
 	*          Double.doubleToLongBits(double)
 	*          Double.isNaN(double)
 	*/
-	@:overload public static function nextDouble(d : Float, positive : Bool) : Float;
+	@:overload @:public @:static public static function nextDouble(d : Float, positive : Bool) : Float;
 	
 	
 }

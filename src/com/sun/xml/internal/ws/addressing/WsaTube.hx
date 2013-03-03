@@ -28,28 +28,28 @@ package com.sun.xml.internal.ws.addressing;
 	/**
 	* Port that we are processing.
 	*/
-	private var wsdlPort(default, null) : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
+	@:protected @:final private var wsdlPort(default, null) : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
 	
-	private var binding(default, null) : com.sun.xml.internal.ws.api.WSBinding;
+	@:protected @:final private var binding(default, null) : com.sun.xml.internal.ws.api.WSBinding;
 	
-	private var addressingVersion(default, null) : com.sun.xml.internal.ws.api.addressing.AddressingVersion;
+	@:protected @:final private var addressingVersion(default, null) : com.sun.xml.internal.ws.api.addressing.AddressingVersion;
 	
-	private var soapVersion(default, null) : com.sun.xml.internal.ws.api.SOAPVersion;
+	@:protected @:final private var soapVersion(default, null) : com.sun.xml.internal.ws.api.SOAPVersion;
 	
-	@:overload public function new(wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
+	@:overload @:public public function new(wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload public function new(that : com.sun.xml.internal.ws.addressing.WsaTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload @:public public function new(that : com.sun.xml.internal.ws.addressing.WsaTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
-	@:overload override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload private function getTubeHelper() : com.sun.xml.internal.ws.addressing.WsaTubeHelper;
+	@:overload @:protected private function getTubeHelper() : com.sun.xml.internal.ws.addressing.WsaTubeHelper;
 	
 	/**
 	* Validates the inbound message. If an error is found, create
 	* a fault message and returns that. Otherwise
 	* it will pass through the parameter 'packet' object to the return value.
 	*/
-	@:overload private function validateInboundHeaders(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:protected private function validateInboundHeaders(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	/**
 	* This method checks all the WS-Addressing headers are valid and as per the spec definded rules.
@@ -63,7 +63,7 @@ package com.sun.xml.internal.ws.addressing;
 	*
 	* @param packet
 	*/
-	@:overload private function checkMessageAddressingProperties(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:protected private function checkMessageAddressingProperties(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	/**
 	* Checks the cardinality of WS-Addressing headers on an inbound {@link Packet}. This method
@@ -79,13 +79,13 @@ package com.sun.xml.internal.ws.addressing;
 	* <li>an uknown WS-Addressing header is present</li>
 	* </ul>
 	*/
-	@:overload private function checkCardinality(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:protected private function checkCardinality(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload @:final private function getWSDLBoundOperation(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
+	@:overload @:protected @:final private function getWSDLBoundOperation(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
 	
-	@:overload private function validateSOAPAction(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:protected private function validateSOAPAction(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload @:abstract private function validateAction(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:protected @:abstract private function validateAction(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	/**
 	* This should be called only when Addressing is engaged.
@@ -102,7 +102,7 @@ package com.sun.xml.internal.ws.addressing;
 	* @param foundMessageId
 	* @param foundRelatesTo
 	*/
-	@:overload private function checkMandatoryHeaders(packet : com.sun.xml.internal.ws.api.message.Packet, foundAction : Bool, foundTo : Bool, foundReplyTo : Bool, foundFaultTo : Bool, foundMessageId : Bool, foundRelatesTo : Bool) : Void;
+	@:overload @:protected private function checkMandatoryHeaders(packet : com.sun.xml.internal.ws.api.message.Packet, foundAction : Bool, foundTo : Bool, foundReplyTo : Bool, foundFaultTo : Bool, foundMessageId : Bool, foundRelatesTo : Bool) : Void;
 	
 	
 }

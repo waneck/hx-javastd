@@ -28,7 +28,7 @@ package com.sun.codemodel.internal;
 */
 @:internal extern class JCast extends com.sun.codemodel.internal.JExpressionImpl
 {
-	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

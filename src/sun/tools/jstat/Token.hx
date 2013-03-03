@@ -32,21 +32,21 @@ extern class Token
 	* @author Brian Doherty
 	* @since 1.5
 	*/
-	@:require(java5) public var sval : String;
+	@:require(java5) @:public public var sval : String;
 	
-	public var nval : Float;
+	@:public public var nval : Float;
 	
-	public var ttype : Int;
+	@:public public var ttype : Int;
 	
-	@:overload public function new(ttype : Int, sval : String, nval : Float) : Void;
+	@:overload @:public public function new(ttype : Int, sval : String, nval : Float) : Void;
 	
-	@:overload public function new(ttype : Int, sval : String) : Void;
+	@:overload @:public public function new(ttype : Int, sval : String) : Void;
 	
-	@:overload public function new(ttype : Int) : Void;
+	@:overload @:public public function new(ttype : Int) : Void;
 	
-	@:overload public function toMessage() : String;
+	@:overload @:public public function toMessage() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

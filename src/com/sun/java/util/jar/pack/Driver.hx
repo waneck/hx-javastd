@@ -25,7 +25,7 @@ package com.sun.java.util.jar.pack;
 */
 @:internal extern class Driver
 {
-	@:overload public static function main(ava : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(ava : java.NativeArray<String>) : Void;
 	
 	
 }

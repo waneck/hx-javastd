@@ -28,31 +28,31 @@ package com.sun.media.sound;
 	/**
 	* Constructs a new codec object.
 	*/
-	@:overload private function new(inputEncodings : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>, outputEncodings : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>) : Void;
+	@:overload @:protected private function new(inputEncodings : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>, outputEncodings : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>) : Void;
 	
 	/**
 	*/
-	@:overload public function getSourceEncodings() : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
+	@:overload @:public override public function getSourceEncodings() : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
 	
 	/**
 	*/
-	@:overload public function getTargetEncodings() : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
+	@:overload @:public override public function getTargetEncodings() : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
 	
 	/**
 	*/
-	@:overload @:abstract public function getTargetEncodings(sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
+	@:overload @:public @:abstract override public function getTargetEncodings(sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
 	
 	/**
 	*/
-	@:overload @:abstract public function getTargetFormats(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat>;
+	@:overload @:public @:abstract override public function getTargetFormats(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat>;
 	
 	/**
 	*/
-	@:overload @:abstract public function getAudioInputStream(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public @:abstract override public function getAudioInputStream(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
 	
 	/**
 	*/
-	@:overload @:abstract public function getAudioInputStream(targetFormat : javax.sound.sampled.AudioFormat, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public @:abstract override public function getAudioInputStream(targetFormat : javax.sound.sampled.AudioFormat, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
 	
 	
 }

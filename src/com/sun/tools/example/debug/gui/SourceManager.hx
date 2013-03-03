@@ -36,47 +36,47 @@ package com.sun.tools.example.debug.gui;
 */
 extern class SourceManager
 {
-	@:overload public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
+	@:overload @:public public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
 	
-	@:overload public function new(env : com.sun.tools.example.debug.gui.Environment, sourcePath : com.sun.tools.example.debug.gui.SearchPath) : Void;
+	@:overload @:public public function new(env : com.sun.tools.example.debug.gui.Environment, sourcePath : com.sun.tools.example.debug.gui.SearchPath) : Void;
 	
 	/**
 	* Set path for access to source code.
 	*/
-	@:overload public function setSourcePath(sp : com.sun.tools.example.debug.gui.SearchPath) : Void;
+	@:overload @:public public function setSourcePath(sp : com.sun.tools.example.debug.gui.SearchPath) : Void;
 	
-	@:overload public function addSourceListener(l : com.sun.tools.example.debug.gui.SourceListener) : Void;
+	@:overload @:public public function addSourceListener(l : com.sun.tools.example.debug.gui.SourceListener) : Void;
 	
-	@:overload public function removeSourceListener(l : com.sun.tools.example.debug.gui.SourceListener) : Void;
+	@:overload @:public public function removeSourceListener(l : com.sun.tools.example.debug.gui.SourceListener) : Void;
 	
 	/**
 	* Get path for access to source code.
 	*/
-	@:overload public function getSourcePath() : com.sun.tools.example.debug.gui.SearchPath;
+	@:overload @:public public function getSourcePath() : com.sun.tools.example.debug.gui.SearchPath;
 	
 	/**
 	* Get source object associated with a Location.
 	*/
-	@:overload public function sourceForLocation(loc : com.sun.jdi.Location) : com.sun.tools.example.debug.gui.SourceModel;
+	@:overload @:public public function sourceForLocation(loc : com.sun.jdi.Location) : com.sun.tools.example.debug.gui.SourceModel;
 	
 	/**
 	* Get source object associated with a class or interface.
 	* Returns null if not available.
 	*/
-	@:overload public function sourceForClass(refType : com.sun.jdi.ReferenceType) : com.sun.tools.example.debug.gui.SourceModel;
+	@:overload @:public public function sourceForClass(refType : com.sun.jdi.ReferenceType) : com.sun.tools.example.debug.gui.SourceModel;
 	
 	/**
 	* Get source object associated with an absolute file path.
 	*/
-	@:overload public function sourceForFile(path : java.io.File) : com.sun.tools.example.debug.gui.SourceModel;
+	@:overload @:public public function sourceForFile(path : java.io.File) : com.sun.tools.example.debug.gui.SourceModel;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$SourceManager$SMClassListener') @:internal extern class SourceManager_SMClassListener extends com.sun.tools.example.debug.event.JDIAdapter implements com.sun.tools.example.debug.event.JDIListener
 {
-	@:overload public function classPrepare(e : com.sun.tools.example.debug.event.ClassPrepareEventSet) : Void;
+	@:overload @:public override public function classPrepare(e : com.sun.tools.example.debug.event.ClassPrepareEventSet) : Void;
 	
-	@:overload public function classUnload(e : com.sun.tools.example.debug.event.ClassUnloadEventSet) : Void;
+	@:overload @:public override public function classUnload(e : com.sun.tools.example.debug.event.ClassUnloadEventSet) : Void;
 	
 	
 }

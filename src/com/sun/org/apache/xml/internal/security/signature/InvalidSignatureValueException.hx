@@ -31,14 +31,14 @@ extern class InvalidSignatureValueException extends com.sun.org.apache.xml.inter
 	* Constructor InvalidSignatureValueException
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor InvalidSignatureValueException
 	*
 	* @param _msgID
 	*/
-	@:overload public function new(_msgID : String) : Void;
+	@:overload @:public public function new(_msgID : String) : Void;
 	
 	/**
 	* Constructor InvalidSignatureValueException
@@ -46,7 +46,7 @@ extern class InvalidSignatureValueException extends com.sun.org.apache.xml.inter
 	* @param _msgID
 	* @param exArgs
 	*/
-	@:overload public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Constructor InvalidSignatureValueException
@@ -54,7 +54,7 @@ extern class InvalidSignatureValueException extends com.sun.org.apache.xml.inter
 	* @param _msgID
 	* @param _originalException
 	*/
-	@:overload public function new(_msgID : String, _originalException : java.lang.Exception) : Void;
+	@:overload @:public public function new(_msgID : String, _originalException : java.lang.Exception) : Void;
 	
 	/**
 	* Constructor InvalidSignatureValueException
@@ -63,7 +63,7 @@ extern class InvalidSignatureValueException extends com.sun.org.apache.xml.inter
 	* @param exArgs
 	* @param _originalException
 	*/
-	@:overload public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, _originalException : java.lang.Exception) : Void;
+	@:overload @:public public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, _originalException : java.lang.Exception) : Void;
 	
 	
 }

@@ -28,9 +28,9 @@ package sun.nio.fs;
 */
 @:internal extern class SolarisFileSystem extends sun.nio.fs.UnixFileSystem
 {
-	@:overload override public function newWatchService() : java.nio.file.WatchService;
+	@:overload @:public override public function newWatchService() : java.nio.file.WatchService;
 	
-	@:overload override public function supportedFileAttributeViews() : java.util.Set<String>;
+	@:overload @:public override public function supportedFileAttributeViews() : java.util.Set<String>;
 	
 	
 }

@@ -25,9 +25,9 @@ package sun.net;
 */
 extern class ResourceManager
 {
-	@:overload public static function beforeUdpCreate() : Void;
+	@:overload @:public @:static public static function beforeUdpCreate() : Void;
 	
-	@:overload public static function afterUdpClose() : Void;
+	@:overload @:public @:static public static function afterUdpClose() : Void;
 	
 	
 }

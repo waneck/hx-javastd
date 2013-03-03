@@ -30,26 +30,26 @@ extern class Ref<T, C>
 	* <p>
 	* If the type is adapted, this field is the same as the adapter's default type.
 	*/
-	public var type(default, null) : T;
+	@:public @:final public var type(default, null) : T;
 	
 	/**
 	* If the reference has an adapter, non-null.
 	*/
-	public var adapter(default, null) : com.sun.xml.internal.bind.v2.model.core.Adapter<T, C>;
+	@:public @:final public var adapter(default, null) : com.sun.xml.internal.bind.v2.model.core.Adapter<T, C>;
 	
 	/**
 	* If the {@link #type} is an array and it is a value list,
 	* true.
 	*/
-	public var valueList(default, null) : Bool;
+	@:public @:final public var valueList(default, null) : Bool;
 	
-	@:overload public function new(type : T) : Void;
+	@:overload @:public public function new(type : T) : Void;
 	
-	@:overload public function new(type : T, adapter : com.sun.xml.internal.bind.v2.model.core.Adapter<T, C>, valueList : Bool) : Void;
+	@:overload @:public public function new(type : T, adapter : com.sun.xml.internal.bind.v2.model.core.Adapter<T, C>, valueList : Bool) : Void;
 	
-	@:overload public function new(builder : com.sun.xml.internal.bind.v2.model.impl.ModelBuilder<T, C, Dynamic, Dynamic>, type : T, xjta : javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter, xl : javax.xml.bind.annotation.XmlList) : Void;
+	@:overload @:public public function new(builder : com.sun.xml.internal.bind.v2.model.impl.ModelBuilder<T, C, Dynamic, Dynamic>, type : T, xjta : javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter, xl : javax.xml.bind.annotation.XmlList) : Void;
 	
-	@:overload public function new(reader : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<T, C, Dynamic, Dynamic>, nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<T, C, Dynamic, Dynamic>, type : T, xjta : javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter, xl : javax.xml.bind.annotation.XmlList) : Void;
+	@:overload @:public public function new(reader : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<T, C, Dynamic, Dynamic>, nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<T, C, Dynamic, Dynamic>, type : T, xjta : javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter, xl : javax.xml.bind.annotation.XmlList) : Void;
 	
 	
 }

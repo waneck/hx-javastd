@@ -39,7 +39,7 @@ extern interface Locator2 extends org.xml.sax.Locator
 	* the entity's text, or null if that information is not yet
 	* available in the current parsing state.
 	*/
-	@:overload public function getXMLVersion() : String;
+	@:overload @:public public function getXMLVersion() : String;
 	
 	/**
 	* Returns the name of the character encoding for the entity.
@@ -68,7 +68,7 @@ extern interface Locator2 extends org.xml.sax.Locator
 	* character stream passed through an InputSource or is otherwise
 	* not yet available in the current parsing state.
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	
 }

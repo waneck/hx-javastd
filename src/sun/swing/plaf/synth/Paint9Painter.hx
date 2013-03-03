@@ -25,30 +25,30 @@ package sun.swing.plaf.synth;
 */
 extern class Paint9Painter extends sun.swing.CachedPainter
 {
-	public static var PAINT_TOP_LEFT(default, null) : Int;
+	@:public @:static @:final public static var PAINT_TOP_LEFT(default, null) : Int;
 	
-	public static var PAINT_TOP(default, null) : Int;
+	@:public @:static @:final public static var PAINT_TOP(default, null) : Int;
 	
-	public static var PAINT_TOP_RIGHT(default, null) : Int;
+	@:public @:static @:final public static var PAINT_TOP_RIGHT(default, null) : Int;
 	
-	public static var PAINT_LEFT(default, null) : Int;
+	@:public @:static @:final public static var PAINT_LEFT(default, null) : Int;
 	
-	public static var PAINT_CENTER(default, null) : Int;
+	@:public @:static @:final public static var PAINT_CENTER(default, null) : Int;
 	
-	public static var PAINT_RIGHT(default, null) : Int;
+	@:public @:static @:final public static var PAINT_RIGHT(default, null) : Int;
 	
-	public static var PAINT_BOTTOM_RIGHT(default, null) : Int;
+	@:public @:static @:final public static var PAINT_BOTTOM_RIGHT(default, null) : Int;
 	
-	public static var PAINT_BOTTOM(default, null) : Int;
+	@:public @:static @:final public static var PAINT_BOTTOM(default, null) : Int;
 	
-	public static var PAINT_BOTTOM_LEFT(default, null) : Int;
+	@:public @:static @:final public static var PAINT_BOTTOM_LEFT(default, null) : Int;
 	
 	/**
 	* Specifies that all regions should be painted.  If this is set any
 	* other regions specified will not be painted.  For example
 	* PAINT_ALL | PAINT_CENTER will paint all but the center.
 	*/
-	public static var PAINT_ALL(default, null) : Int;
+	@:public @:static @:final public static var PAINT_ALL(default, null) : Int;
 	
 	/**
 	* Conveniance method for testing the validity of an image.
@@ -57,9 +57,9 @@ extern class Paint9Painter extends sun.swing.CachedPainter
 	* @return true if <code>image</code> is non-null and has a positive
 	*         size.
 	*/
-	@:overload public static function validImage(image : java.awt.Image) : Bool;
+	@:overload @:public @:static public static function validImage(image : java.awt.Image) : Bool;
 	
-	@:overload public function new(cacheCount : Int) : Void;
+	@:overload @:public public function new(cacheCount : Int) : Void;
 	
 	/**
 	* Paints using the algorightm specified by <code>paintType</code>.
@@ -86,16 +86,16 @@ extern class Paint9Painter extends sun.swing.CachedPainter
 	*             specified will not be painted, for example
 	*             PAINT_ALL | PAINT_CENTER paints everything but the center.
 	*/
-	@:overload public function paint(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, source : java.awt.Image, sInsets : java.awt.Insets, dInsets : java.awt.Insets, type : sun.swing.plaf.synth.Paint9Painter.Paint9Painter_PaintType, mask : Int) : Void;
+	@:overload @:public public function paint(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, source : java.awt.Image, sInsets : java.awt.Insets, dInsets : java.awt.Insets, type : sun.swing.plaf.synth.Paint9Painter.Paint9Painter_PaintType, mask : Int) : Void;
 	
-	@:overload private function paintToImage(c : java.awt.Component, destImage : java.awt.Image, g : java.awt.Graphics, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected override private function paintToImage(c : java.awt.Component, destImage : java.awt.Image, g : java.awt.Graphics, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload private function paint9(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, image : java.awt.Image, sInsets : java.awt.Insets, dInsets : java.awt.Insets, type : sun.swing.plaf.synth.Paint9Painter.Paint9Painter_PaintType, componentMask : Int) : Void;
+	@:overload @:protected private function paint9(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, image : java.awt.Image, sInsets : java.awt.Insets, dInsets : java.awt.Insets, type : sun.swing.plaf.synth.Paint9Painter.Paint9Painter_PaintType, componentMask : Int) : Void;
 	
 	/**
 	* Subclassed to always create a translucent image.
 	*/
-	@:overload private function createImage(c : java.awt.Component, w : Int, h : Int, config : java.awt.GraphicsConfiguration, args : java.NativeArray<Dynamic>) : java.awt.Image;
+	@:overload @:protected override private function createImage(c : java.awt.Component, w : Int, h : Int, config : java.awt.GraphicsConfiguration, args : java.NativeArray<Dynamic>) : java.awt.Image;
 	
 	
 }

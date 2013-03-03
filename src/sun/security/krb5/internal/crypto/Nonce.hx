@@ -30,7 +30,7 @@ package sun.security.krb5.internal.crypto;
 */
 extern class Nonce
 {
-	@:overload @:synchronized public static function value() : Int;
+	@:overload @:public @:static @:synchronized public static function value() : Int;
 	
 	
 }

@@ -31,9 +31,9 @@ package com.sun.jdi.request;
 */
 @:require(java3) extern class DuplicateRequestException extends java.lang.RuntimeException
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

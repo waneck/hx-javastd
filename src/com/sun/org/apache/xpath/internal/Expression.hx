@@ -29,7 +29,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	*
 	* @return true if traversal outside the context node's subtree can occur.
 	*/
-	@:overload public function canTraverseOutsideSubtree() : Bool;
+	@:overload @:public public function canTraverseOutsideSubtree() : Bool;
 	
 	/**
 	* Execute an expression in the XPath runtime context, and return the
@@ -44,7 +44,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	* @throws javax.xml.transform.TransformerException if a runtime exception
 	*         occurs.
 	*/
-	@:overload public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, currentNode : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, currentNode : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Execute an expression in the XPath runtime context, and return the
@@ -61,7 +61,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	* @throws javax.xml.transform.TransformerException if a runtime exception
 	*         occurs.
 	*/
-	@:overload public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, currentNode : Int, dtm : com.sun.org.apache.xml.internal.dtm.DTM, expType : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, currentNode : Int, dtm : com.sun.org.apache.xml.internal.dtm.DTM, expType : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Execute an expression in the XPath runtime context, and return the
@@ -75,7 +75,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	* @throws javax.xml.transform.TransformerException if a runtime exception
 	*         occurs.
 	*/
-	@:overload @:abstract public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public @:abstract public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Execute an expression in the XPath runtime context, and return the
@@ -91,7 +91,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	* @throws javax.xml.transform.TransformerException if a runtime exception
 	*         occurs.
 	*/
-	@:overload public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, destructiveOK : Bool) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, destructiveOK : Bool) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Evaluate expression to a number.
@@ -102,7 +102,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function num(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Float;
+	@:overload @:public public function num(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Float;
 	
 	/**
 	* Evaluate expression to a boolean.
@@ -113,7 +113,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function bool(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Bool;
+	@:overload @:public public function bool(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Bool;
 	
 	/**
 	* Cast result object to a string.
@@ -124,14 +124,14 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function xstr(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function xstr(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Tell if the expression is a nodeset expression.  In other words, tell
 	* if you can execute {@link #asNode(XPathContext) asNode} without an exception.
 	* @return true if the expression can be represented as a nodeset.
 	*/
-	@:overload public function isNodesetExpr() : Bool;
+	@:overload @:public public function isNodesetExpr() : Bool;
 	
 	/**
 	* Return the first node out of the nodeset, if this expression is
@@ -141,7 +141,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function asNode(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public public function asNode(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Given an select expression and a context, evaluate the XPath
@@ -158,7 +158,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	* @throws javax.xml.transform.TransformerException
 	* @xsl.usage experimental
 	*/
-	@:overload public function asIterator(xctxt : com.sun.org.apache.xpath.internal.XPathContext, contextNode : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public public function asIterator(xctxt : com.sun.org.apache.xpath.internal.XPathContext, contextNode : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Given an select expression and a context, evaluate the XPath
@@ -175,7 +175,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	* @throws javax.xml.transform.TransformerException
 	* @xsl.usage experimental
 	*/
-	@:overload public function asIteratorRaw(xctxt : com.sun.org.apache.xpath.internal.XPathContext, contextNode : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public public function asIteratorRaw(xctxt : com.sun.org.apache.xpath.internal.XPathContext, contextNode : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Execute an expression in the XPath runtime context, and return the
@@ -191,7 +191,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	*         occurs.
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function executeCharsToContentHandler(xctxt : com.sun.org.apache.xpath.internal.XPathContext, handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function executeCharsToContentHandler(xctxt : com.sun.org.apache.xpath.internal.XPathContext, handler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Tell if this expression returns a stable number that will not change during
@@ -201,7 +201,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	*
 	* @return true if the expression represents a stable number.
 	*/
-	@:overload public function isStableNumber() : Bool;
+	@:overload @:public public function isStableNumber() : Bool;
 	
 	/**
 	* This function is used to fixup variables from QNames to stack frame
@@ -214,7 +214,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	* to be offset to the current stack frame).
 	* NEEDSDOC @param globalsSize
 	*/
-	@:overload @:abstract public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public @:abstract public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Compare this object with another object and see
@@ -225,7 +225,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	* object's class are the same, and the data contained
 	* within both objects are considered equal.
 	*/
-	@:overload @:abstract public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public @:abstract public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	/**
 	* This is a utility method to tell if the passed in
@@ -236,7 +236,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	* @return true of the passed in class is the exact same
 	* class as this class.
 	*/
-	@:overload @:final private function isSameClass(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:protected @:final private function isSameClass(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	/**
 	* Warn the user of an problem.
@@ -253,7 +253,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function warn(xctxt : com.sun.org.apache.xpath.internal.XPathContext, msg : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function warn(xctxt : com.sun.org.apache.xpath.internal.XPathContext, msg : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Tell the user of an assertion error, and probably throw an
@@ -266,7 +266,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function assertion(b : Bool, msg : String) : Void;
+	@:overload @:public public function assertion(b : Bool, msg : String) : Void;
 	
 	/**
 	* Tell the user of an error, and probably throw an
@@ -284,30 +284,30 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function error(xctxt : com.sun.org.apache.xpath.internal.XPathContext, msg : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function error(xctxt : com.sun.org.apache.xpath.internal.XPathContext, msg : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Get the first non-Expression parent of this node.
 	* @return null or first ancestor that is not an Expression.
 	*/
-	@:overload public function getExpressionOwner() : com.sun.org.apache.xpath.internal.ExpressionNode;
+	@:overload @:public public function getExpressionOwner() : com.sun.org.apache.xpath.internal.ExpressionNode;
 	
 	/** This pair of methods are used to inform the node of its
 	parent. */
-	@:overload public function exprSetParent(n : com.sun.org.apache.xpath.internal.ExpressionNode) : Void;
+	@:overload @:public public function exprSetParent(n : com.sun.org.apache.xpath.internal.ExpressionNode) : Void;
 	
-	@:overload public function exprGetParent() : com.sun.org.apache.xpath.internal.ExpressionNode;
+	@:overload @:public public function exprGetParent() : com.sun.org.apache.xpath.internal.ExpressionNode;
 	
 	/** This method tells the node to add its argument to the node's
 	list of children.  */
-	@:overload public function exprAddChild(n : com.sun.org.apache.xpath.internal.ExpressionNode, i : Int) : Void;
+	@:overload @:public public function exprAddChild(n : com.sun.org.apache.xpath.internal.ExpressionNode, i : Int) : Void;
 	
 	/** This method returns a child node.  The children are numbered
 	from zero, left to right. */
-	@:overload public function exprGetChild(i : Int) : com.sun.org.apache.xpath.internal.ExpressionNode;
+	@:overload @:public public function exprGetChild(i : Int) : com.sun.org.apache.xpath.internal.ExpressionNode;
 	
 	/** Return the number of children the node has. */
-	@:overload public function exprGetNumChildren() : Int;
+	@:overload @:public public function exprGetNumChildren() : Int;
 	
 	/**
 	* Return the public identifier for the current document event.
@@ -320,7 +320,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	*         null if none is available.
 	* @see #getSystemId
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* Return the system identifier for the current document event.
@@ -336,7 +336,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	*         if none is available.
 	* @see #getPublicId
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* Return the line number where the current document event ends.
@@ -353,7 +353,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	* @return The line number, or -1 if none is available.
 	* @see #getColumnNumber
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* Return the character position where the current document event ends.
@@ -370,7 +370,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	* @return The column number, or -1 if none is available.
 	* @see #getLineNumber
 	*/
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	/**
 	* This will traverse the heararchy, calling the visitor for
@@ -381,7 +381,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	*              rewritten if needed.
 	* @param visitor The visitor whose appropriate method will be called.
 	*/
-	@:overload public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public @:public public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	
 }

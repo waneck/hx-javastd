@@ -28,22 +28,22 @@ extern class SocketImpl implements java.net.SocketOptions
 	/**
 	* The file descriptor object for this socket.
 	*/
-	private var fd : java.io.FileDescriptor;
+	@:protected private var fd : java.io.FileDescriptor;
 	
 	/**
 	* The IP address of the remote end of this socket.
 	*/
-	private var address : java.net.InetAddress;
+	@:protected private var address : java.net.InetAddress;
 	
 	/**
 	* The port number on the remote host to which this socket is connected.
 	*/
-	private var port : Int;
+	@:protected private var port : Int;
 	
 	/**
 	* The local port number to which this socket is connected.
 	*/
-	private var localport : Int;
+	@:protected private var localport : Int;
 	
 	/**
 	* Creates either a stream or a datagram socket.
@@ -53,7 +53,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @exception  IOException  if an I/O error occurs while creating the
 	*               socket.
 	*/
-	@:overload @:abstract private function create(stream : Bool) : Void;
+	@:overload @:protected @:abstract private function create(stream : Bool) : Void;
 	
 	/**
 	* Connects this socket to the specified port on the named host.
@@ -63,7 +63,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @exception  IOException  if an I/O error occurs when connecting to the
 	*               remote host.
 	*/
-	@:overload @:abstract private function connect(host : String, port : Int) : Void;
+	@:overload @:protected @:abstract private function connect(host : String, port : Int) : Void;
 	
 	/**
 	* Connects this socket to the specified port number on the specified host.
@@ -73,7 +73,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @exception  IOException  if an I/O error occurs when attempting a
 	*               connection.
 	*/
-	@:overload @:abstract private function connect(address : java.net.InetAddress, port : Int) : Void;
+	@:overload @:protected @:abstract private function connect(address : java.net.InetAddress, port : Int) : Void;
 	
 	/**
 	* Connects this socket to the specified port number on the specified host.
@@ -86,7 +86,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	*               connection.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:abstract private function connect(address : java.net.SocketAddress, timeout : Int) : Void;
+	@:require(java4) @:overload @:protected @:abstract private function connect(address : java.net.SocketAddress, timeout : Int) : Void;
 	
 	/**
 	* Binds this socket to the specified local IP address and port number.
@@ -95,7 +95,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @param      port   the port number.
 	* @exception  IOException  if an I/O error occurs when binding this socket.
 	*/
-	@:overload @:abstract private function bind(host : java.net.InetAddress, port : Int) : Void;
+	@:overload @:protected @:abstract private function bind(host : java.net.InetAddress, port : Int) : Void;
 	
 	/**
 	* Sets the maximum queue length for incoming connection indications
@@ -106,7 +106,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @param      backlog   the maximum length of the queue.
 	* @exception  IOException  if an I/O error occurs when creating the queue.
 	*/
-	@:overload @:abstract private function listen(backlog : Int) : Void;
+	@:overload @:protected @:abstract private function listen(backlog : Int) : Void;
 	
 	/**
 	* Accepts a connection.
@@ -115,7 +115,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @exception  IOException  if an I/O error occurs when accepting the
 	*               connection.
 	*/
-	@:overload @:abstract private function accept(s : java.net.SocketImpl) : Void;
+	@:overload @:protected @:abstract private function accept(s : java.net.SocketImpl) : Void;
 	
 	/**
 	* Returns an input stream for this socket.
@@ -124,7 +124,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @exception  IOException  if an I/O error occurs when creating the
 	*               input stream.
 	*/
-	@:overload @:abstract private function getInputStream() : java.io.InputStream;
+	@:overload @:protected @:abstract private function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Returns an output stream for this socket.
@@ -133,7 +133,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @exception  IOException  if an I/O error occurs when creating the
 	*               output stream.
 	*/
-	@:overload @:abstract private function getOutputStream() : java.io.OutputStream;
+	@:overload @:protected @:abstract private function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Returns the number of bytes that can be read from this socket
@@ -144,14 +144,14 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @exception  IOException  if an I/O error occurs when determining the
 	*               number of bytes available.
 	*/
-	@:overload @:abstract private function available() : Int;
+	@:overload @:protected @:abstract private function available() : Int;
 	
 	/**
 	* Closes this socket.
 	*
 	* @exception  IOException  if an I/O error occurs when closing this socket.
 	*/
-	@:overload @:abstract private function close() : Void;
+	@:overload @:protected @:abstract private function close() : Void;
 	
 	/**
 	* Places the input stream for this socket at "end of stream".
@@ -168,7 +168,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @see java.net.Socket#setSoLinger(boolean, int)
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function shutdownInput() : Void;
+	@:require(java3) @:overload @:protected private function shutdownInput() : Void;
 	
 	/**
 	* Disables the output stream for this socket.
@@ -186,7 +186,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @see java.net.Socket#setSoLinger(boolean, int)
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function shutdownOutput() : Void;
+	@:require(java3) @:overload @:protected private function shutdownOutput() : Void;
 	
 	/**
 	* Returns the value of this socket's <code>fd</code> field.
@@ -194,7 +194,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @return  the value of this socket's <code>fd</code> field.
 	* @see     java.net.SocketImpl#fd
 	*/
-	@:overload private function getFileDescriptor() : java.io.FileDescriptor;
+	@:overload @:protected private function getFileDescriptor() : java.io.FileDescriptor;
 	
 	/**
 	* Returns the value of this socket's <code>address</code> field.
@@ -202,7 +202,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @return  the value of this socket's <code>address</code> field.
 	* @see     java.net.SocketImpl#address
 	*/
-	@:overload private function getInetAddress() : java.net.InetAddress;
+	@:overload @:protected private function getInetAddress() : java.net.InetAddress;
 	
 	/**
 	* Returns the value of this socket's <code>port</code> field.
@@ -210,7 +210,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @return  the value of this socket's <code>port</code> field.
 	* @see     java.net.SocketImpl#port
 	*/
-	@:overload private function getPort() : Int;
+	@:overload @:protected private function getPort() : Int;
 	
 	/**
 	* Returns whether or not this SocketImpl supports sending
@@ -221,7 +221,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @see     java.net.SocketImpl#address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function supportsUrgentData() : Bool;
+	@:require(java4) @:overload @:protected private function supportsUrgentData() : Bool;
 	
 	/**
 	* Send one byte of urgent data on the socket.
@@ -231,7 +231,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	*  sending the data.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:abstract private function sendUrgentData(data : Int) : Void;
+	@:require(java4) @:overload @:protected @:abstract private function sendUrgentData(data : Int) : Void;
 	
 	/**
 	* Returns the value of this socket's <code>localport</code> field.
@@ -239,14 +239,14 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @return  the value of this socket's <code>localport</code> field.
 	* @see     java.net.SocketImpl#localport
 	*/
-	@:overload private function getLocalPort() : Int;
+	@:overload @:protected private function getLocalPort() : Int;
 	
 	/**
 	* Returns the address and port of this socket as a <code>String</code>.
 	*
 	* @return  a string representation of this socket.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Sets performance preferences for this socket.
@@ -286,7 +286,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function setPerformancePreferences(connectionTime : Int, latency : Int, bandwidth : Int) : Void;
+	@:require(java5) @:overload @:protected private function setPerformancePreferences(connectionTime : Int, latency : Int, bandwidth : Int) : Void;
 	
 	/**
 	* Enable/disable the option specified by <I>optID</I>.  If the option
@@ -329,7 +329,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	* the socket is closed, or some low-level error occurred
 	* @see #getOption(int)
 	*/
-	@:overload public function setOption(optID : Int, value : Dynamic) : Void;
+	@:overload @:public @:public @:public public function setOption(optID : Int, value : Dynamic) : Void;
 	
 	/**
 	* Fetch the value of an option.
@@ -364,7 +364,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	*         protocol stack (including the SocketImpl)
 	* @see #setOption(int, java.lang.Object)
 	*/
-	@:overload public function getOption(optID : Int) : Dynamic;
+	@:overload @:public @:public @:public public function getOption(optID : Int) : Dynamic;
 	
 	
 }

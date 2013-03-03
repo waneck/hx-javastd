@@ -44,27 +44,27 @@ extern class XMLGrammarCachingConfiguration extends com.sun.org.apache.xerces.in
 	*
 	* @version $Id: XMLGrammarCachingConfiguration.java,v 1.6 2010-11-01 04:40:10 joehw Exp $
 	*/
-	public static var BIG_PRIME(default, null) : Int;
+	@:public @:static @:final public static var BIG_PRIME(default, null) : Int;
 	
-	private static var fStaticSymbolTable(default, null) : com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
+	@:protected @:static @:final private static var fStaticSymbolTable(default, null) : com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
 	
-	private static var fStaticGrammarPool(default, null) : com.sun.org.apache.xerces.internal.util.XMLGrammarPoolImpl;
+	@:protected @:static @:final private static var fStaticGrammarPool(default, null) : com.sun.org.apache.xerces.internal.util.XMLGrammarPoolImpl;
 	
-	private static var SCHEMA_FULL_CHECKING(default, null) : String;
+	@:protected @:static @:final private static var SCHEMA_FULL_CHECKING(default, null) : String;
 	
-	private var fSchemaLoader : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader;
+	@:protected private var fSchemaLoader : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader;
 	
-	private var fDTDLoader : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDLoader;
+	@:protected private var fDTDLoader : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDLoader;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table.
 	*
 	* @param symbolTable The symbol table to use.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table and
@@ -77,7 +77,7 @@ extern class XMLGrammarCachingConfiguration extends com.sun.org.apache.xerces.in
 	* @param symbolTable The symbol table to use.
 	* @param grammarPool The grammar pool to use.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table,
@@ -91,25 +91,25 @@ extern class XMLGrammarCachingConfiguration extends com.sun.org.apache.xerces.in
 	* @param grammarPool    The grammar pool to use.
 	* @param parentSettings The parent settings.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool, parentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool, parentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/*
 	* lock the XMLGrammarPoolImpl object so that it does not
 	* accept any more grammars from the validators.
 	*/
-	@:overload public function lockGrammarPool() : Void;
+	@:overload @:public public function lockGrammarPool() : Void;
 	
 	/*
 	* clear the XMLGrammarPoolImpl object so that it does not
 	* contain any more grammars.
 	*/
-	@:overload public function clearGrammarPool() : Void;
+	@:overload @:public public function clearGrammarPool() : Void;
 	
 	/*
 	* unlock the XMLGrammarPoolImpl object so that it
 	* accepts more grammars from the validators.
 	*/
-	@:overload public function unlockGrammarPool() : Void;
+	@:overload @:public public function unlockGrammarPool() : Void;
 	
 	/**
 	* Parse a grammar from a location identified by an URI.
@@ -125,7 +125,7 @@ extern class XMLGrammarCachingConfiguration extends com.sun.org.apache.xerces.in
 	* @exception IOException thrown if an error is encountered
 	* in reading the file
 	*/
-	@:overload public function parseGrammar(type : String, uri : String) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload @:public public function parseGrammar(type : String, uri : String) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
 	/**
 	* Parse a grammar from a location identified by an
@@ -143,7 +143,7 @@ extern class XMLGrammarCachingConfiguration extends com.sun.org.apache.xerces.in
 	* @exception IOException thrown if an error is encountered
 	* in reading the file
 	*/
-	@:overload public function parseGrammar(type : String, is : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload @:public public function parseGrammar(type : String, is : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
 	
 }

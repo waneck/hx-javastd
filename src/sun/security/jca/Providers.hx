@@ -25,7 +25,7 @@ package sun.security.jca;
 */
 extern class Providers
 {
-	@:overload public static function getSunProvider() : java.security.Provider;
+	@:overload @:public @:static public static function getSunProvider() : java.security.Provider;
 	
 	/**
 	* Start JAR verification. This sets a special provider list for
@@ -33,33 +33,33 @@ extern class Providers
 	* method and you MUST call stopJarVerification() with that object
 	* once you are done.
 	*/
-	@:overload public static function startJarVerification() : Dynamic;
+	@:overload @:public @:static public static function startJarVerification() : Dynamic;
 	
 	/**
 	* Stop JAR verification. Call once you have completed JAR verification.
 	*/
-	@:overload public static function stopJarVerification(obj : Dynamic) : Void;
+	@:overload @:public @:static public static function stopJarVerification(obj : Dynamic) : Void;
 	
 	/**
 	* Return the current ProviderList. If the thread-local list is set,
 	* it is returned. Otherwise, the system wide list is returned.
 	*/
-	@:overload public static function getProviderList() : sun.security.jca.ProviderList;
+	@:overload @:public @:static public static function getProviderList() : sun.security.jca.ProviderList;
 	
 	/**
 	* Set the current ProviderList. Affects the thread-local list if set,
 	* otherwise the system wide list.
 	*/
-	@:overload public static function setProviderList(newList : sun.security.jca.ProviderList) : Void;
+	@:overload @:public @:static public static function setProviderList(newList : sun.security.jca.ProviderList) : Void;
 	
 	/**
 	* Get the full provider list with invalid providers (those that
 	* could not be loaded) removed. This is the list we need to
 	* present to applications.
 	*/
-	@:overload public static function getFullProviderList() : sun.security.jca.ProviderList;
+	@:overload @:public @:static public static function getFullProviderList() : sun.security.jca.ProviderList;
 	
-	@:overload public static function getThreadProviderList() : sun.security.jca.ProviderList;
+	@:overload @:public @:static public static function getThreadProviderList() : sun.security.jca.ProviderList;
 	
 	/**
 	* Methods to manipulate the thread local provider list. It is for use by
@@ -76,9 +76,9 @@ extern class Providers
 	*   }
 	*
 	*/
-	@:overload @:synchronized public static function beginThreadProviderList(list : sun.security.jca.ProviderList) : sun.security.jca.ProviderList;
+	@:overload @:public @:static @:synchronized public static function beginThreadProviderList(list : sun.security.jca.ProviderList) : sun.security.jca.ProviderList;
 	
-	@:overload @:synchronized public static function endThreadProviderList(list : sun.security.jca.ProviderList) : Void;
+	@:overload @:public @:static @:synchronized public static function endThreadProviderList(list : sun.security.jca.ProviderList) : Void;
 	
 	
 }

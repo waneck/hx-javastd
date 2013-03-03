@@ -56,7 +56,7 @@ extern interface NameList
 	*   <code>NameList</code>, or <code>null</code> if there is no name for
 	*   the specified index or if the index is out of range.
 	*/
-	@:overload public function getName(index : Int) : String;
+	@:overload @:public public function getName(index : Int) : String;
 	
 	/**
 	*  Returns the <code>index</code>th namespaceURI item in the collection.
@@ -65,13 +65,13 @@ extern interface NameList
 	*   <code>NameList</code>, or <code>null</code> if there is no name for
 	*   the specified index or if the index is out of range.
 	*/
-	@:overload public function getNamespaceURI(index : Int) : String;
+	@:overload @:public public function getNamespaceURI(index : Int) : String;
 	
 	/**
 	*  The number of pairs (name and namespaceURI) in the list. The range of
 	* valid child node indices is 0 to <code>length-1</code> inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	*  Test if a name is part of this <code>NameList</code>.
@@ -79,7 +79,7 @@ extern interface NameList
 	* @return  <code>true</code> if the name has been found,
 	*   <code>false</code> otherwise.
 	*/
-	@:overload public function contains(str : String) : Bool;
+	@:overload @:public public function contains(str : String) : Bool;
 	
 	/**
 	*  Test if the pair namespaceURI/name is part of this
@@ -89,7 +89,7 @@ extern interface NameList
 	* @return  <code>true</code> if the pair namespaceURI/name has been
 	*   found, <code>false</code> otherwise.
 	*/
-	@:overload public function containsNS(namespaceURI : String, name : String) : Bool;
+	@:overload @:public public function containsNS(namespaceURI : String, name : String) : Bool;
 	
 	
 }

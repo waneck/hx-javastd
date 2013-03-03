@@ -28,14 +28,14 @@ extern class SelectableChannel extends java.nio.channels.spi.AbstractInterruptib
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the provider that created this channel.
 	*
 	* @return  The provider that created this channel
 	*/
-	@:overload @:abstract public function provider() : java.nio.channels.spi.SelectorProvider;
+	@:overload @:public @:abstract public function provider() : java.nio.channels.spi.SelectorProvider;
 	
 	/**
 	* Returns an <a href="SelectionKey.html#opsets">operation set</a>
@@ -46,7 +46,7 @@ extern class SelectableChannel extends java.nio.channels.spi.AbstractInterruptib
 	*
 	* @return  The valid-operation set
 	*/
-	@:overload @:abstract public function validOps() : Int;
+	@:overload @:public @:abstract public function validOps() : Int;
 	
 	/**
 	* Tells whether or not this channel is currently registered with any
@@ -59,7 +59,7 @@ extern class SelectableChannel extends java.nio.channels.spi.AbstractInterruptib
 	*
 	* @return <tt>true</tt> if, and only if, this channel is registered
 	*/
-	@:overload @:abstract public function isRegistered() : Bool;
+	@:overload @:public @:abstract public function isRegistered() : Bool;
 	
 	/**
 	* Retrieves the key representing the channel's registration with the given
@@ -69,7 +69,7 @@ extern class SelectableChannel extends java.nio.channels.spi.AbstractInterruptib
 	*          given selector, or <tt>null</tt> if this channel is not
 	*          currently registered with that selector
 	*/
-	@:overload @:abstract public function keyFor(sel : java.nio.channels.Selector) : java.nio.channels.SelectionKey;
+	@:overload @:public @:abstract public function keyFor(sel : java.nio.channels.Selector) : java.nio.channels.SelectionKey;
 	
 	/**
 	* Registers this channel with the given selector, returning a selection
@@ -134,7 +134,7 @@ extern class SelectableChannel extends java.nio.channels.spi.AbstractInterruptib
 	* @return  A key representing the registration of this channel with
 	*          the given selector
 	*/
-	@:overload @:abstract public function register(sel : java.nio.channels.Selector, ops : Int, att : Dynamic) : java.nio.channels.SelectionKey;
+	@:overload @:public @:abstract public function register(sel : java.nio.channels.Selector, ops : Int, att : Dynamic) : java.nio.channels.SelectionKey;
 	
 	/**
 	* Registers this channel with the given selector, returning a selection
@@ -181,7 +181,7 @@ extern class SelectableChannel extends java.nio.channels.spi.AbstractInterruptib
 	* @return  A key representing the registration of this channel with
 	*          the given selector
 	*/
-	@:overload @:final public function register(sel : java.nio.channels.Selector, ops : Int) : java.nio.channels.SelectionKey;
+	@:overload @:public @:final public function register(sel : java.nio.channels.Selector, ops : Int) : java.nio.channels.SelectionKey;
 	
 	/**
 	* Adjusts this channel's blocking mode.
@@ -215,7 +215,7 @@ extern class SelectableChannel extends java.nio.channels.spi.AbstractInterruptib
 	* @throws IOException
 	*         If an I/O error occurs
 	*/
-	@:overload @:abstract public function configureBlocking(block : Bool) : java.nio.channels.SelectableChannel;
+	@:overload @:public @:abstract public function configureBlocking(block : Bool) : java.nio.channels.SelectableChannel;
 	
 	/**
 	* Tells whether or not every I/O operation on this channel will block
@@ -226,7 +226,7 @@ extern class SelectableChannel extends java.nio.channels.spi.AbstractInterruptib
 	*
 	* @return <tt>true</tt> if, and only if, this channel is in blocking mode
 	*/
-	@:overload @:abstract public function isBlocking() : Bool;
+	@:overload @:public @:abstract public function isBlocking() : Bool;
 	
 	/**
 	* Retrieves the object upon which the {@link #configureBlocking
@@ -237,14 +237,14 @@ extern class SelectableChannel extends java.nio.channels.spi.AbstractInterruptib
 	*
 	* @return  The blocking-mode lock object
 	*/
-	@:overload @:abstract public function blockingLock() : Dynamic;
+	@:overload @:public @:abstract public function blockingLock() : Dynamic;
 	
 	/**
 	* Tells whether or not this channel is open.  </p>
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload @:public override public function isOpen() : Bool;
+	@:overload @:public @:public @:public override public function isOpen() : Bool;
 	
 	/**
 	* Closes this channel.
@@ -263,7 +263,7 @@ extern class SelectableChannel extends java.nio.channels.spi.AbstractInterruptib
 	*
 	* @throws  IOException  If an I/O error occurs
 	*/
-	@:overload @:public override public function close() : Void;
+	@:overload @:public @:public @:public override public function close() : Void;
 	
 	
 }

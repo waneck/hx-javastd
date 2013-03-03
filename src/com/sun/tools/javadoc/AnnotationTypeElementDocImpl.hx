@@ -31,34 +31,34 @@ extern class AnnotationTypeElementDocImpl extends com.sun.tools.javadoc.MethodDo
 	* @author Scott Seligman
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(env : com.sun.tools.javadoc.DocEnv, sym : MethodSymbol) : Void;
+	@:require(java5) @:overload @:public public function new(env : com.sun.tools.javadoc.DocEnv, sym : MethodSymbol) : Void;
 	
-	@:overload public function new(env : com.sun.tools.javadoc.DocEnv, sym : MethodSymbol, doc : String, tree : JCMethodDecl, lineMap : com.sun.tools.javac.util.Position.Position_LineMap) : Void;
+	@:overload @:public public function new(env : com.sun.tools.javadoc.DocEnv, sym : MethodSymbol, doc : String, tree : JCMethodDecl, lineMap : com.sun.tools.javac.util.Position.Position_LineMap) : Void;
 	
 	/**
 	* Returns true, as this is an annotation type element.
 	* (For legacy doclets, return false.)
 	*/
-	@:overload override public function isAnnotationTypeElement() : Bool;
+	@:overload @:public override public function isAnnotationTypeElement() : Bool;
 	
 	/**
 	* Returns false.  Although this is technically a method, we don't
 	* consider it one for this purpose.
 	* (For legacy doclets, return true.)
 	*/
-	@:overload override public function isMethod() : Bool;
+	@:overload @:public override public function isMethod() : Bool;
 	
 	/**
 	* Returns false, even though this is indeed abstract.  See
 	* MethodDocImpl.isAbstract() for the (il)logic behind this.
 	*/
-	@:overload override public function isAbstract() : Bool;
+	@:overload @:public override public function isAbstract() : Bool;
 	
 	/**
 	* Returns the default value of this element.
 	* Returns null if this element has no default.
 	*/
-	@:overload public function defaultValue() : com.sun.javadoc.AnnotationValue;
+	@:overload @:public public function defaultValue() : com.sun.javadoc.AnnotationValue;
 	
 	
 }

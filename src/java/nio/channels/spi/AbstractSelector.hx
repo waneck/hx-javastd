@@ -28,7 +28,7 @@ extern class AbstractSelector extends java.nio.channels.Selector
 	/**
 	* Initializes a new instance of this class.  </p>
 	*/
-	@:overload private function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
+	@:overload @:protected private function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
 	
 	/**
 	* Closes this selector.
@@ -41,7 +41,7 @@ extern class AbstractSelector extends java.nio.channels.Selector
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:final override public function close() : Void;
+	@:overload @:public @:final override public function close() : Void;
 	
 	/**
 	* Closes this selector.
@@ -59,16 +59,16 @@ extern class AbstractSelector extends java.nio.channels.Selector
 	* @throws  IOException
 	*          If an I/O error occurs while closing the selector
 	*/
-	@:overload @:abstract private function implCloseSelector() : Void;
+	@:overload @:protected @:abstract private function implCloseSelector() : Void;
 	
-	@:overload @:final override public function isOpen() : Bool;
+	@:overload @:public @:final override public function isOpen() : Bool;
 	
 	/**
 	* Returns the provider that created this channel.
 	*
 	* @return  The provider that created this channel
 	*/
-	@:overload @:final override public function provider() : java.nio.channels.spi.SelectorProvider;
+	@:overload @:public @:final override public function provider() : java.nio.channels.spi.SelectorProvider;
 	
 	/**
 	* Retrieves this selector's cancelled-key set.
@@ -77,7 +77,7 @@ extern class AbstractSelector extends java.nio.channels.Selector
 	*
 	* @return  The cancelled-key set
 	*/
-	@:overload @:final private function cancelledKeys() : java.util.Set<java.nio.channels.SelectionKey>;
+	@:overload @:protected @:final private function cancelledKeys() : java.util.Set<java.nio.channels.SelectionKey>;
 	
 	/**
 	* Registers the given channel with this selector.
@@ -98,7 +98,7 @@ extern class AbstractSelector extends java.nio.channels.Selector
 	* @return  A new key representing the registration of the given channel
 	*          with this selector
 	*/
-	@:overload @:abstract private function register(ch : java.nio.channels.spi.AbstractSelectableChannel, ops : Int, att : Dynamic) : java.nio.channels.SelectionKey;
+	@:overload @:protected @:abstract private function register(ch : java.nio.channels.spi.AbstractSelectableChannel, ops : Int, att : Dynamic) : java.nio.channels.SelectionKey;
 	
 	/**
 	* Removes the given key from its channel's key set.
@@ -109,7 +109,7 @@ extern class AbstractSelector extends java.nio.channels.Selector
 	* @param  key
 	*         The selection key to be removed
 	*/
-	@:overload @:final private function deregister(key : java.nio.channels.spi.AbstractSelectionKey) : Void;
+	@:overload @:protected @:final private function deregister(key : java.nio.channels.spi.AbstractSelectionKey) : Void;
 	
 	/**
 	* Marks the beginning of an I/O operation that might block indefinitely.
@@ -124,7 +124,7 @@ extern class AbstractSelector extends java.nio.channels.Selector
 	* Thread#interrupt interrupt} method is invoked while the thread is
 	* blocked in an I/O operation upon the selector.  </p>
 	*/
-	@:overload @:final private function begin() : Void;
+	@:overload @:protected @:final private function begin() : Void;
 	
 	/**
 	* Marks the end of an I/O operation that might block indefinitely.
@@ -134,7 +134,7 @@ extern class AbstractSelector extends java.nio.channels.Selector
 	* shown <a href="#be">above</a>, in order to implement interruption for
 	* this selector.  </p>
 	*/
-	@:overload @:final private function end() : Void;
+	@:overload @:protected @:final private function end() : Void;
 	
 	
 }

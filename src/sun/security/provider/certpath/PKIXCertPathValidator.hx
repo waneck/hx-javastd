@@ -28,7 +28,7 @@ extern class PKIXCertPathValidator extends java.security.cert.CertPathValidatorS
 	/**
 	* Default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Validates a certification path consisting exclusively of
@@ -44,7 +44,7 @@ extern class PKIXCertPathValidator extends java.security.cert.CertPathValidatorS
 	* @exception InvalidAlgorithmParameterException if the specified
 	* parameters are inappropriate for this certification path validator
 	*/
-	@:overload public function engineValidate(cp : java.security.cert.CertPath, param : java.security.cert.CertPathParameters) : java.security.cert.CertPathValidatorResult;
+	@:overload @:public override public function engineValidate(cp : java.security.cert.CertPath, param : java.security.cert.CertPathParameters) : java.security.cert.CertPathValidatorResult;
 	
 	
 }

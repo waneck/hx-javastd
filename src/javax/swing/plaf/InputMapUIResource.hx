@@ -32,7 +32,7 @@ extern class InputMapUIResource extends javax.swing.InputMap implements javax.sw
 	* @author Scott Violet
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new() : Void;
+	@:require(java3) @:overload @:public public function new() : Void;
 	
 	
 }

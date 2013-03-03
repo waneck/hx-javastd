@@ -51,7 +51,7 @@ extern class PropertyChangeEvent extends java.util.EventObject
 	* @param oldValue  The old value of the property.
 	* @param newValue  The new value of the property.
 	*/
-	@:overload public function new(source : Dynamic, propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:public public function new(source : Dynamic, propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Gets the programmatic name of the property that was changed.
@@ -59,7 +59,7 @@ extern class PropertyChangeEvent extends java.util.EventObject
 	* @return  The programmatic name of the property that was changed.
 	*          May be null if multiple properties have changed.
 	*/
-	@:overload public function getPropertyName() : String;
+	@:overload @:public public function getPropertyName() : String;
 	
 	/**
 	* Gets the new value for the property, expressed as an Object.
@@ -67,7 +67,7 @@ extern class PropertyChangeEvent extends java.util.EventObject
 	* @return  The new value for the property, expressed as an Object.
 	*          May be null if multiple properties have changed.
 	*/
-	@:overload public function getNewValue() : Dynamic;
+	@:overload @:public public function getNewValue() : Dynamic;
 	
 	/**
 	* Gets the old value for the property, expressed as an Object.
@@ -75,14 +75,14 @@ extern class PropertyChangeEvent extends java.util.EventObject
 	* @return  The old value for the property, expressed as an Object.
 	*          May be null if multiple properties have changed.
 	*/
-	@:overload public function getOldValue() : Dynamic;
+	@:overload @:public public function getOldValue() : Dynamic;
 	
 	/**
 	* Sets the propagationId object for the event.
 	*
 	* @param propagationId  The propagationId object for the event.
 	*/
-	@:overload public function setPropagationId(propagationId : Dynamic) : Void;
+	@:overload @:public public function setPropagationId(propagationId : Dynamic) : Void;
 	
 	/**
 	* The "propagationId" field is reserved for future use.  In Beans 1.0
@@ -94,7 +94,7 @@ extern class PropertyChangeEvent extends java.util.EventObject
 	* @return the propagationId object associated with a bound/constrained
 	*          property update.
 	*/
-	@:overload public function getPropagationId() : Dynamic;
+	@:overload @:public public function getPropagationId() : Dynamic;
 	
 	/**
 	* Returns a string representation of the object.
@@ -103,7 +103,7 @@ extern class PropertyChangeEvent extends java.util.EventObject
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function toString() : String;
+	@:require(java7) @:overload @:public override public function toString() : String;
 	
 	
 }

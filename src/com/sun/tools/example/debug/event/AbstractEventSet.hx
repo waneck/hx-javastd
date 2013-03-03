@@ -32,13 +32,13 @@ package com.sun.tools.example.debug.event;
 */
 extern class AbstractEventSet extends java.util.EventObject implements com.sun.jdi.event.EventSet
 {
-	@:overload public static function toSpecificEventSet(jdiEventSet : com.sun.jdi.event.EventSet) : com.sun.tools.example.debug.event.AbstractEventSet;
+	@:overload @:public @:static public static function toSpecificEventSet(jdiEventSet : com.sun.jdi.event.EventSet) : com.sun.tools.example.debug.event.AbstractEventSet;
 	
-	@:overload @:abstract public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
+	@:overload @:public @:abstract public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
 	
-	@:overload public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
-	@:overload public function getVirtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public public function getVirtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	/**
 	* Returns the policy used to suspend threads in the target VM
@@ -50,22 +50,22 @@ extern class AbstractEventSet extends java.util.EventObject implements com.sun.j
 	*
 	* @return the integer suspendPolicy
 	*/
-	@:overload public function getSuspendPolicy() : Int;
+	@:overload @:public public function getSuspendPolicy() : Int;
 	
-	@:overload public function resume() : Void;
+	@:overload @:public public function resume() : Void;
 	
-	@:overload public function suspendPolicy() : Int;
+	@:overload @:public public function suspendPolicy() : Int;
 	
-	@:overload public function suspendedAll() : Bool;
+	@:overload @:public public function suspendedAll() : Bool;
 	
-	@:overload public function suspendedEventThread() : Bool;
+	@:overload @:public public function suspendedEventThread() : Bool;
 	
-	@:overload public function suspendedNone() : Bool;
+	@:overload @:public public function suspendedNone() : Bool;
 	
 	/**
 	* Return an iterator specific to {@link Event} objects.
 	*/
-	@:overload public function eventIterator() : com.sun.jdi.event.EventIterator;
+	@:overload @:public public function eventIterator() : com.sun.jdi.event.EventIterator;
 	
 	/**
 	* Returns the number of elements in this set (its cardinality).  If this
@@ -74,14 +74,14 @@ extern class AbstractEventSet extends java.util.EventObject implements com.sun.j
 	*
 	* @return the number of elements in this set (its cardinality).
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this set contains no elements.
 	*
 	* @return <tt>true</tt> if this set contains no elements.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this set contains the specified element.  More
@@ -91,7 +91,7 @@ extern class AbstractEventSet extends java.util.EventObject implements com.sun.j
 	*
 	* @return <tt>true</tt> if this set contains the specified element.
 	*/
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns an iterator over the elements in this set.  The elements are
@@ -100,7 +100,7 @@ extern class AbstractEventSet extends java.util.EventObject implements com.sun.j
 	*
 	* @return an iterator over the elements in this set.
 	*/
-	@:overload public function iterator() : java.util.Iterator<com.sun.jdi.event.Event>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.jdi.event.Event>;
 	
 	/**
 	* Returns an array containing all of the elements in this set.
@@ -108,7 +108,7 @@ extern class AbstractEventSet extends java.util.EventObject implements com.sun.j
 	*
 	* @return an array containing all of the elements in this set.
 	*/
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this set whose
@@ -124,7 +124,7 @@ extern class AbstractEventSet extends java.util.EventObject implements com.sun.j
 	* @throws    ArrayStoreException the runtime type of a is not a supertype
 	* of the runtime type of every element in this set.
 	*/
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Returns <tt>true</tt> if this set contains all of the elements of the
@@ -135,19 +135,19 @@ extern class AbstractEventSet extends java.util.EventObject implements com.sun.j
 	* @return <tt>true</tt> if this set contains all of the elements of the
 	*         specified collection.
 	*/
-	@:overload public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function add(e : com.sun.jdi.event.Event) : Bool;
+	@:overload @:public public function add(e : com.sun.jdi.event.Event) : Bool;
 	
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public public function remove(o : Dynamic) : Bool;
 	
-	@:overload public function addAll(coll : java.util.Collection<com.sun.jdi.event.Event>) : Bool;
+	@:overload @:public public function addAll(coll : java.util.Collection<com.sun.jdi.event.Event>) : Bool;
 	
-	@:overload public function removeAll(coll : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function removeAll(coll : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function retainAll(coll : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function retainAll(coll : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Adds the specified element to this set if it is not already present
@@ -179,7 +179,7 @@ extern class AbstractEventSet extends java.util.EventObject implements com.sun.j
 	* @throws IllegalArgumentException if some property of the specified element
 	*         prevents it from being added to this set
 	*/
-	@:overload public function add(e : Dynamic) : Bool;
+	@:overload @:public @:public public function add(e : Dynamic) : Bool;
 	
 	
 }

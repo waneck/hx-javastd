@@ -37,20 +37,20 @@ extern class FatalError extends java.lang.Error
 	/** Construct a <code>FatalError</code> with the specified detail message.
 	*  @param d A diagnostic containing the reason for failure.
 	*/
-	@:overload public function new(d : com.sun.tools.javac.util.JCDiagnostic) : Void;
+	@:overload @:public public function new(d : com.sun.tools.javac.util.JCDiagnostic) : Void;
 	
 	/** Construct a <code>FatalError</code> with the specified detail message
 	* and cause.
 	*  @param d A diagnostic containing the reason for failure.
 	*  @param t An exception causing the error
 	*/
-	@:overload public function new(d : com.sun.tools.javac.util.JCDiagnostic, t : java.lang.Throwable) : Void;
+	@:overload @:public public function new(d : com.sun.tools.javac.util.JCDiagnostic, t : java.lang.Throwable) : Void;
 	
 	/** Construct a <code>FatalError</code> with the specified detail message.
 	*  @param s An English(!) string describing the failure, typically because
 	*           the diagnostic resources are missing.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

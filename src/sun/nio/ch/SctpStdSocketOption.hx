@@ -26,29 +26,29 @@ package sun.nio.ch;
 extern class SctpStdSocketOption<T> implements com.sun.nio.sctp.SctpSocketOption<T>
 {
 	/* for native mapping of int options */
-	public static var SCTP_DISABLE_FRAGMENTS(default, null) : Int;
+	@:public @:static @:final public static var SCTP_DISABLE_FRAGMENTS(default, null) : Int;
 	
-	public static var SCTP_EXPLICIT_COMPLETE(default, null) : Int;
+	@:public @:static @:final public static var SCTP_EXPLICIT_COMPLETE(default, null) : Int;
 	
-	public static var SCTP_FRAGMENT_INTERLEAVE(default, null) : Int;
+	@:public @:static @:final public static var SCTP_FRAGMENT_INTERLEAVE(default, null) : Int;
 	
-	public static var SCTP_NODELAY(default, null) : Int;
+	@:public @:static @:final public static var SCTP_NODELAY(default, null) : Int;
 	
-	public static var SO_SNDBUF(default, null) : Int;
+	@:public @:static @:final public static var SO_SNDBUF(default, null) : Int;
 	
-	public static var SO_RCVBUF(default, null) : Int;
+	@:public @:static @:final public static var SO_RCVBUF(default, null) : Int;
 	
-	public static var SO_LINGER(default, null) : Int;
+	@:public @:static @:final public static var SO_LINGER(default, null) : Int;
 	
-	@:overload public function new(name : String, type : Class<T>) : Void;
+	@:overload @:public public function new(name : String, type : Class<T>) : Void;
 	
-	@:overload public function new(name : String, type : Class<T>, constValue : Int) : Void;
+	@:overload @:public public function new(name : String, type : Class<T>, constValue : Int) : Void;
 	
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function type() : Class<T>;
+	@:overload @:public public function type() : Class<T>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

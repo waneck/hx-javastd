@@ -27,11 +27,11 @@ package com.sun.xml.internal.org.jvnet.fastinfoset.sax;
 */
 extern interface RestrictedAlphabetContentHandler
 {
-	@:overload public function numericCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function numericCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function dateTimeCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function dateTimeCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function alphabetCharacters(alphabet : String, ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function alphabetCharacters(alphabet : String, ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	
 }

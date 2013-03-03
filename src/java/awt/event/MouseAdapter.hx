@@ -70,45 +70,45 @@ package java.awt.event;
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
-	
-	/**
-	* {@inheritDoc}
-	* @since 1.6
-	*/
-	@:require(java6) @:overload public function mouseWheelMoved(e : java.awt.event.MouseWheelEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:require(java6) @:overload @:public public function mouseWheelMoved(e : java.awt.event.MouseWheelEvent) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:require(java6) @:overload @:public public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	
+	/**
+	* {@inheritDoc}
+	* @since 1.6
+	*/
+	@:require(java6) @:overload @:public public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

@@ -32,19 +32,19 @@ package com.sun.tools.example.debug.gui;
 */
 extern class ClassManager
 {
-	@:overload public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
+	@:overload @:public public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
 	
-	@:overload public function new(classPath : com.sun.tools.example.debug.gui.SearchPath) : Void;
+	@:overload @:public public function new(classPath : com.sun.tools.example.debug.gui.SearchPath) : Void;
 	
 	/*
 	* Set path for access to class files.
 	*/
-	@:overload public function setClassPath(sp : com.sun.tools.example.debug.gui.SearchPath) : Void;
+	@:overload @:public public function setClassPath(sp : com.sun.tools.example.debug.gui.SearchPath) : Void;
 	
 	/*
 	* Get path for access to class files.
 	*/
-	@:overload public function getClassPath() : com.sun.tools.example.debug.gui.SearchPath;
+	@:overload @:public public function getClassPath() : com.sun.tools.example.debug.gui.SearchPath;
 	
 	
 }

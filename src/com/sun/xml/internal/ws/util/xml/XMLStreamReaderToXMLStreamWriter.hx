@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.util.xml;
 */
 extern class XMLStreamReaderToXMLStreamWriter
 {
-	//private var _in : javax.xml.stream.XMLStreamReader;
+	//@:protected private var _in : javax.xml.stream.XMLStreamReader;
 	
-	private var out : javax.xml.stream.XMLStreamWriter;
+	@:protected private var out : javax.xml.stream.XMLStreamWriter;
 	
 	/**
 	* Reads one subtree and writes it out.
@@ -36,15 +36,15 @@ extern class XMLStreamReaderToXMLStreamWriter
 	* The {@link XMLStreamWriter} never receives a start/end document event.
 	* Those need to be written separately by the caller.
 	*/
-	@:overload public function bridge(_in : javax.xml.stream.XMLStreamReader, out : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function bridge(_in : javax.xml.stream.XMLStreamReader, out : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload private function handlePI() : Void;
+	@:overload @:protected private function handlePI() : Void;
 	
-	@:overload private function handleCharacters() : Void;
+	@:overload @:protected private function handleCharacters() : Void;
 	
-	@:overload private function handleEndElement() : Void;
+	@:overload @:protected private function handleEndElement() : Void;
 	
-	@:overload private function handleStartElement() : Void;
+	@:overload @:protected private function handleStartElement() : Void;
 	
 	/**
 	* Writes out the {@code i}-th attribute of the current element.
@@ -52,17 +52,17 @@ extern class XMLStreamReaderToXMLStreamWriter
 	* <p>
 	* Used from {@link #handleStartElement()}.
 	*/
-	@:overload private function handleAttribute(i : Int) : Void;
+	@:overload @:protected private function handleAttribute(i : Int) : Void;
 	
-	@:overload private function handleDTD() : Void;
+	@:overload @:protected private function handleDTD() : Void;
 	
-	@:overload private function handleComment() : Void;
+	@:overload @:protected private function handleComment() : Void;
 	
-	@:overload private function handleEntityReference() : Void;
+	@:overload @:protected private function handleEntityReference() : Void;
 	
-	@:overload private function handleSpace() : Void;
+	@:overload @:protected private function handleSpace() : Void;
 	
-	@:overload private function handleCDATA() : Void;
+	@:overload @:protected private function handleCDATA() : Void;
 	
 	
 }

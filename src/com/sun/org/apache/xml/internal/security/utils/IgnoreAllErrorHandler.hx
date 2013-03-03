@@ -22,13 +22,13 @@ package com.sun.org.apache.xml.internal.security.utils;
 extern class IgnoreAllErrorHandler implements org.xml.sax.ErrorHandler
 {
 	/** @inheritDoc */
-	@:overload public function warning(ex : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(ex : org.xml.sax.SAXParseException) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function error(ex : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(ex : org.xml.sax.SAXParseException) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function fatalError(ex : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(ex : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

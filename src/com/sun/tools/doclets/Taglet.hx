@@ -64,7 +64,7 @@ package com.sun.tools.doclets;
 	* is used in field documentation and false
 	* otherwise.
 	*/
-	@:overload @:abstract public function inField() : Bool;
+	@:overload @:public @:abstract public function inField() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -74,7 +74,7 @@ package com.sun.tools.doclets;
 	* is used in constructor documentation and false
 	* otherwise.
 	*/
-	@:overload @:abstract public function inConstructor() : Bool;
+	@:overload @:public @:abstract public function inConstructor() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -84,7 +84,7 @@ package com.sun.tools.doclets;
 	* is used in method documentation and false
 	* otherwise.
 	*/
-	@:overload @:abstract public function inMethod() : Bool;
+	@:overload @:public @:abstract public function inMethod() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -94,7 +94,7 @@ package com.sun.tools.doclets;
 	* is used in method documentation and false
 	* otherwise.
 	*/
-	@:overload @:abstract public function inOverview() : Bool;
+	@:overload @:public @:abstract public function inOverview() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -104,7 +104,7 @@ package com.sun.tools.doclets;
 	* is used in package documentation and false
 	* otherwise.
 	*/
-	@:overload @:abstract public function inPackage() : Bool;
+	@:overload @:public @:abstract public function inPackage() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -114,7 +114,7 @@ package com.sun.tools.doclets;
 	* is used in type documentation and false
 	* otherwise.
 	*/
-	@:overload @:abstract public function inType() : Bool;
+	@:overload @:public @:abstract public function inType() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -122,13 +122,13 @@ package com.sun.tools.doclets;
 	* @return true if this <code>Taglet</code>
 	* is an inline tag and false otherwise.
 	*/
-	@:overload @:abstract public function isInlineTag() : Bool;
+	@:overload @:public @:abstract public function isInlineTag() : Bool;
 	
 	/**
 	* Return the name of this custom tag.
 	* @return the name of this custom tag.
 	*/
-	@:overload @:abstract public function getName() : String;
+	@:overload @:public @:abstract public function getName() : String;
 	
 	/**
 	* Given the <code>Tag</code> representation of this custom
@@ -137,7 +137,7 @@ package com.sun.tools.doclets;
 	* @param tag the <code>Tag</code> representation of this custom tag.
 	* @return the string representation of this <code>Tag</code>.
 	*/
-	@:overload @:abstract public function toString(tag : com.sun.javadoc.Tag) : String;
+	@:overload @:public @:abstract public function toString(tag : com.sun.javadoc.Tag) : String;
 	
 	/**
 	* Given an array of <code>Tag</code>s representing this custom
@@ -147,7 +147,7 @@ package com.sun.tools.doclets;
 	* @param tags the array of <code>Tag</code>s representing of this custom tag.
 	* @return the string representation of this <code>Tag</code>.
 	*/
-	@:overload @:abstract public function toString(tags : java.NativeArray<com.sun.javadoc.Tag>) : String;
+	@:overload @:public @:abstract public function toString(tags : java.NativeArray<com.sun.javadoc.Tag>) : String;
 	
 	
 }

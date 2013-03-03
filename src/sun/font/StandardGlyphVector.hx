@@ -25,19 +25,19 @@ package sun.font;
 */
 extern class StandardGlyphVector extends java.awt.font.GlyphVector
 {
-	@:overload public function new(font : java.awt.Font, str : String, frc : java.awt.font.FontRenderContext) : Void;
+	@:overload @:public public function new(font : java.awt.Font, str : String, frc : java.awt.font.FontRenderContext) : Void;
 	
-	@:overload public function new(font : java.awt.Font, text : java.NativeArray<java.StdTypes.Char16>, frc : java.awt.font.FontRenderContext) : Void;
+	@:overload @:public public function new(font : java.awt.Font, text : java.NativeArray<java.StdTypes.Char16>, frc : java.awt.font.FontRenderContext) : Void;
 	
-	@:overload public function new(font : java.awt.Font, text : java.NativeArray<java.StdTypes.Char16>, start : Int, count : Int, frc : java.awt.font.FontRenderContext) : Void;
+	@:overload @:public public function new(font : java.awt.Font, text : java.NativeArray<java.StdTypes.Char16>, start : Int, count : Int, frc : java.awt.font.FontRenderContext) : Void;
 	
-	@:overload public function new(font : java.awt.Font, frc : java.awt.font.FontRenderContext, glyphs : java.NativeArray<Int>, positions : java.NativeArray<Single>, indices : java.NativeArray<Int>, flags : Int) : Void;
+	@:overload @:public public function new(font : java.awt.Font, frc : java.awt.font.FontRenderContext, glyphs : java.NativeArray<Int>, positions : java.NativeArray<Single>, indices : java.NativeArray<Int>, flags : Int) : Void;
 	
-	@:overload public function initGlyphVector(font : java.awt.Font, frc : java.awt.font.FontRenderContext, glyphs : java.NativeArray<Int>, positions : java.NativeArray<Single>, indices : java.NativeArray<Int>, flags : Int) : Void;
+	@:overload @:public public function initGlyphVector(font : java.awt.Font, frc : java.awt.font.FontRenderContext, glyphs : java.NativeArray<Int>, positions : java.NativeArray<Single>, indices : java.NativeArray<Int>, flags : Int) : Void;
 	
-	@:overload public function new(font : java.awt.Font, iter : java.text.CharacterIterator, frc : java.awt.font.FontRenderContext) : Void;
+	@:overload @:public public function new(font : java.awt.Font, iter : java.text.CharacterIterator, frc : java.awt.font.FontRenderContext) : Void;
 	
-	@:overload public function new(font : java.awt.Font, glyphs : java.NativeArray<Int>, frc : java.awt.font.FontRenderContext) : Void;
+	@:overload @:public public function new(font : java.awt.Font, glyphs : java.NativeArray<Int>, frc : java.awt.font.FontRenderContext) : Void;
 	
 	/* This is called from the rendering loop. FontInfo is supplied
 	* because a GV caches a strike and glyph images suitable for its FRC.
@@ -49,103 +49,103 @@ extern class StandardGlyphVector extends java.awt.font.GlyphVector
 	* and AA!="GASP" in the FRC - since this only occurs for LCD text we don't
 	* need to check any more precisely what value is in the FRC.
 	*/
-	@:overload public static function getStandardGV(gv : java.awt.font.GlyphVector, info : sun.java2d.loops.FontInfo) : sun.font.StandardGlyphVector;
+	@:overload @:public @:static public static function getStandardGV(gv : java.awt.font.GlyphVector, info : sun.java2d.loops.FontInfo) : sun.font.StandardGlyphVector;
 	
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public override public function getFont() : java.awt.Font;
 	
-	@:overload public function getFontRenderContext() : java.awt.font.FontRenderContext;
+	@:overload @:public override public function getFontRenderContext() : java.awt.font.FontRenderContext;
 	
-	@:overload public function performDefaultLayout() : Void;
+	@:overload @:public override public function performDefaultLayout() : Void;
 	
-	@:overload public function getNumGlyphs() : Int;
+	@:overload @:public override public function getNumGlyphs() : Int;
 	
-	@:overload public function getGlyphCode(glyphIndex : Int) : Int;
+	@:overload @:public override public function getGlyphCode(glyphIndex : Int) : Int;
 	
-	@:overload public function getGlyphCodes(start : Int, count : Int, result : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public override public function getGlyphCodes(start : Int, count : Int, result : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
-	@:overload public function getGlyphCharIndex(ix : Int) : Int;
+	@:overload @:public override public function getGlyphCharIndex(ix : Int) : Int;
 	
-	@:overload public function getGlyphCharIndices(start : Int, count : Int, result : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public override public function getGlyphCharIndices(start : Int, count : Int, result : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
-	@:overload public function getLogicalBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public override public function getLogicalBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload public function getVisualBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public override public function getVisualBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload public function getPixelBounds(renderFRC : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
+	@:overload @:public override public function getPixelBounds(renderFRC : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
 	
-	@:overload public function getOutline() : java.awt.Shape;
+	@:overload @:public override public function getOutline() : java.awt.Shape;
 	
-	@:overload public function getOutline(x : Single, y : Single) : java.awt.Shape;
+	@:overload @:public override public function getOutline(x : Single, y : Single) : java.awt.Shape;
 	
-	@:overload public function getGlyphOutline(ix : Int) : java.awt.Shape;
+	@:overload @:public override public function getGlyphOutline(ix : Int) : java.awt.Shape;
 	
-	@:overload public function getGlyphOutline(ix : Int, x : Single, y : Single) : java.awt.Shape;
+	@:overload @:public override public function getGlyphOutline(ix : Int, x : Single, y : Single) : java.awt.Shape;
 	
-	@:overload public function getGlyphPosition(ix : Int) : java.awt.geom.Point2D;
+	@:overload @:public override public function getGlyphPosition(ix : Int) : java.awt.geom.Point2D;
 	
-	@:overload public function setGlyphPosition(ix : Int, pos : java.awt.geom.Point2D) : Void;
+	@:overload @:public override public function setGlyphPosition(ix : Int, pos : java.awt.geom.Point2D) : Void;
 	
-	@:overload public function getGlyphTransform(ix : Int) : java.awt.geom.AffineTransform;
+	@:overload @:public override public function getGlyphTransform(ix : Int) : java.awt.geom.AffineTransform;
 	
-	@:overload public function setGlyphTransform(ix : Int, newTX : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public override public function setGlyphTransform(ix : Int, newTX : java.awt.geom.AffineTransform) : Void;
 	
-	@:overload public function getLayoutFlags() : Int;
+	@:overload @:public override public function getLayoutFlags() : Int;
 	
-	@:overload public function getGlyphPositions(start : Int, count : Int, result : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public override public function getGlyphPositions(start : Int, count : Int, result : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
-	@:overload public function getGlyphLogicalBounds(ix : Int) : java.awt.Shape;
+	@:overload @:public override public function getGlyphLogicalBounds(ix : Int) : java.awt.Shape;
 	
-	@:overload public function getGlyphVisualBounds(ix : Int) : java.awt.Shape;
+	@:overload @:public override public function getGlyphVisualBounds(ix : Int) : java.awt.Shape;
 	
-	@:overload public function getGlyphPixelBounds(index : Int, renderFRC : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
+	@:overload @:public override public function getGlyphPixelBounds(index : Int, renderFRC : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
 	
-	@:overload public function getGlyphMetrics(ix : Int) : java.awt.font.GlyphMetrics;
+	@:overload @:public override public function getGlyphMetrics(ix : Int) : java.awt.font.GlyphMetrics;
 	
-	@:overload public function getGlyphJustificationInfo(ix : Int) : java.awt.font.GlyphJustificationInfo;
+	@:overload @:public override public function getGlyphJustificationInfo(ix : Int) : java.awt.font.GlyphJustificationInfo;
 	
-	@:overload public function equals(rhs : java.awt.font.GlyphVector) : Bool;
+	@:overload @:public override public function equals(rhs : java.awt.font.GlyphVector) : Bool;
 	
 	/**
 	* As a concrete subclass of Object that implements equality, this must
 	* implement hashCode.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Since we implement equality comparisons for GlyphVector, we implement
 	* the inherited Object.equals(Object) as well.  GlyphVector should do
 	* this, and define two glyphvectors as not equal if the classes differ.
 	*/
-	@:overload public function equals(rhs : Dynamic) : Bool;
+	@:overload @:public public function equals(rhs : Dynamic) : Bool;
 	
 	/**
 	* Sometimes I wish java had covariant return types...
 	*/
-	@:overload public function copy() : sun.font.StandardGlyphVector;
+	@:overload @:public public function copy() : sun.font.StandardGlyphVector;
 	
 	/**
 	* As a concrete subclass of GlyphVector, this must implement clone.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/*
 	* Set a multiple glyph positions at one time.  GlyphVector only
 	* provides API to set a single glyph at a time.
 	*/
-	@:overload public function setGlyphPositions(srcPositions : java.NativeArray<Single>, srcStart : Int, start : Int, count : Int) : Void;
+	@:overload @:public public function setGlyphPositions(srcPositions : java.NativeArray<Single>, srcStart : Int, start : Int, count : Int) : Void;
 	
 	/**
 	* Set all the glyph positions, including the 'after last glyph' position.
 	* The srcPositions array must be of length (numGlyphs + 1) * 2.
 	*/
-	@:overload public function setGlyphPositions(srcPositions : java.NativeArray<Single>) : Void;
+	@:overload @:public public function setGlyphPositions(srcPositions : java.NativeArray<Single>) : Void;
 	
 	/**
 	* This is a convenience overload that gets all the glyph positions, which
 	* is what you usually want to do if you're getting more than one.
 	* !!! should I bother taking result parameter?
 	*/
-	@:overload public function getGlyphPositions(result : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public public function getGlyphPositions(result : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Get transform information for the requested range of glyphs.
@@ -154,47 +154,47 @@ extern class StandardGlyphVector extends java.awt.font.GlyphVector
 	* If the passed-in result is null an array will be allocated for the caller.
 	* Each transform instance in the result array will unique, and independent of the GlyphVector's transform.
 	*/
-	@:overload public function getGlyphTransforms(start : Int, count : Int, result : java.NativeArray<java.awt.geom.AffineTransform>) : java.NativeArray<java.awt.geom.AffineTransform>;
+	@:overload @:public public function getGlyphTransforms(start : Int, count : Int, result : java.NativeArray<java.awt.geom.AffineTransform>) : java.NativeArray<java.awt.geom.AffineTransform>;
 	
 	/**
 	* Convenience overload for getGlyphTransforms(int, int, AffineTransform[], int);
 	*/
-	@:overload public function getGlyphTransforms() : java.NativeArray<java.awt.geom.AffineTransform>;
+	@:overload @:public public function getGlyphTransforms() : java.NativeArray<java.awt.geom.AffineTransform>;
 	
 	/**
 	* Set a number of glyph transforms.
 	* Original transforms are unchanged.  The array may contain nulls, and also may
 	* contain multiple references to the same transform instance.
 	*/
-	@:overload public function setGlyphTransforms(srcTransforms : java.NativeArray<java.awt.geom.AffineTransform>, srcStart : Int, start : Int, count : Int) : Void;
+	@:overload @:public public function setGlyphTransforms(srcTransforms : java.NativeArray<java.awt.geom.AffineTransform>, srcStart : Int, start : Int, count : Int) : Void;
 	
 	/**
 	* Convenience overload of setGlyphTransforms(AffineTransform[], int, int, int).
 	*/
-	@:overload public function setGlyphTransforms(srcTransforms : java.NativeArray<java.awt.geom.AffineTransform>) : Void;
+	@:overload @:public public function setGlyphTransforms(srcTransforms : java.NativeArray<java.awt.geom.AffineTransform>) : Void;
 	
 	/**
 	* For each glyph return posx, posy, advx, advy, visx, visy, visw, vish.
 	*/
-	@:overload public function getGlyphInfo() : java.NativeArray<Single>;
+	@:overload @:public public function getGlyphInfo() : java.NativeArray<Single>;
 	
 	/**
 	* !!! not used currently, but might be by getPixelbounds?
 	*/
-	@:overload public function pixellate(renderFRC : java.awt.font.FontRenderContext, loc : java.awt.geom.Point2D, pxResult : java.awt.Point) : Void;
+	@:overload @:public public function pixellate(renderFRC : java.awt.font.FontRenderContext, loc : java.awt.geom.Point2D, pxResult : java.awt.Point) : Void;
 	
 	/**
 	* A flag used with getLayoutFlags that indicates whether this <code>GlyphVector</code> uses
 	* a vertical baseline.
 	*/
-	public static var FLAG_USES_VERTICAL_BASELINE(default, null) : Int;
+	@:public @:static @:final public static var FLAG_USES_VERTICAL_BASELINE(default, null) : Int;
 	
 	/**
 	* A flag used with getLayoutFlags that indicates whether this <code>GlyphVector</code> uses
 	* vertical glyph metrics.  A <code>GlyphVector</code> can use vertical metrics on a
 	* horizontal line, or vice versa.
 	*/
-	public static var FLAG_USES_VERTICAL_METRICS(default, null) : Int;
+	@:public @:static @:final public static var FLAG_USES_VERTICAL_METRICS(default, null) : Int;
 	
 	/**
 	* A flag used with getLayoutFlags that indicates whether this <code>GlyphVector</code> uses
@@ -217,15 +217,15 @@ extern class StandardGlyphVector extends java.awt.font.GlyphVector
 	*  t  t  t   6   v
 	* </blockquote>
 	*/
-	public static var FLAG_USES_ALTERNATE_ORIENTATION(default, null) : Int;
+	@:public @:static @:final public static var FLAG_USES_ALTERNATE_ORIENTATION(default, null) : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('sun$font$StandardGlyphVector$GlyphTransformInfo') @:internal extern class StandardGlyphVector_GlyphTransformInfo
 {
-	@:overload public function equals(rhs : sun.font.StandardGlyphVector.StandardGlyphVector_GlyphTransformInfo) : Bool;
+	@:overload @:public public function equals(rhs : sun.font.StandardGlyphVector.StandardGlyphVector_GlyphTransformInfo) : Bool;
 	
 	
 }
@@ -235,21 +235,21 @@ extern class StandardGlyphVector extends java.awt.font.GlyphVector
 }
 @:native('sun$font$StandardGlyphVector$ADL') @:internal extern class StandardGlyphVector_ADL
 {
-	public var ascentX : Single;
+	@:public public var ascentX : Single;
 	
-	public var ascentY : Single;
+	@:public public var ascentY : Single;
 	
-	public var descentX : Single;
+	@:public public var descentX : Single;
 	
-	public var descentY : Single;
+	@:public public var descentY : Single;
 	
-	public var leadingX : Single;
+	@:public public var leadingX : Single;
 	
-	public var leadingY : Single;
+	@:public public var leadingY : Single;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload private function toStringBuffer(result : java.lang.StringBuffer) : java.lang.StringBuffer;
+	@:overload @:protected private function toStringBuffer(result : java.lang.StringBuffer) : java.lang.StringBuffer;
 	
 	
 }

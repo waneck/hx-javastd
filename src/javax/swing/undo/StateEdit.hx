@@ -51,27 +51,27 @@ extern class StateEdit extends javax.swing.undo.AbstractUndoableEdit
 	*
 	* @author Ray Ryan
 	*/
-	private static var RCSID(default, null) : String;
+	@:protected @:static @:final private static var RCSID(default, null) : String;
 	
 	/**
 	* The object being edited
 	*/
-	private var object : javax.swing.undo.StateEditable;
+	@:protected private var object : javax.swing.undo.StateEditable;
 	
 	/**
 	* The state information prior to the edit
 	*/
-	private var preState : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var preState : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* The state information after the edit
 	*/
-	private var postState : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var postState : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* The undo/redo presentation name
 	*/
-	private var undoRedoName : String;
+	@:protected private var undoRedoName : String;
 	
 	/**
 	* Create and return a new StateEdit.
@@ -80,7 +80,7 @@ extern class StateEdit extends javax.swing.undo.AbstractUndoableEdit
 	*
 	* @see StateEdit
 	*/
-	@:overload public function new(anObject : javax.swing.undo.StateEditable) : Void;
+	@:overload @:public public function new(anObject : javax.swing.undo.StateEditable) : Void;
 	
 	/**
 	* Create and return a new StateEdit with a presentation name.
@@ -90,35 +90,35 @@ extern class StateEdit extends javax.swing.undo.AbstractUndoableEdit
 	*
 	* @see StateEdit
 	*/
-	@:overload public function new(anObject : javax.swing.undo.StateEditable, name : String) : Void;
+	@:overload @:public public function new(anObject : javax.swing.undo.StateEditable, name : String) : Void;
 	
-	@:overload private function init(anObject : javax.swing.undo.StateEditable, name : String) : Void;
+	@:overload @:protected private function init(anObject : javax.swing.undo.StateEditable, name : String) : Void;
 	
 	/**
 	* Gets the post-edit state of the StateEditable object and
 	* ends the edit.
 	*/
-	@:overload public function end() : Void;
+	@:overload @:public public function end() : Void;
 	
 	/**
 	* Tells the edited object to apply the state prior to the edit
 	*/
-	@:overload override public function undo() : Void;
+	@:overload @:public override public function undo() : Void;
 	
 	/**
 	* Tells the edited object to apply the state after the edit
 	*/
-	@:overload override public function redo() : Void;
+	@:overload @:public override public function redo() : Void;
 	
 	/**
 	* Gets the presentation name for this edit
 	*/
-	@:overload override public function getPresentationName() : String;
+	@:overload @:public override public function getPresentationName() : String;
 	
 	/**
 	* Remove redundant key/values in state hashtables.
 	*/
-	@:overload private function removeRedundantState() : Void;
+	@:overload @:protected private function removeRedundantState() : Void;
 	
 	
 }

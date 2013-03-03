@@ -147,7 +147,7 @@ package javax.swing.text;
 	/**
 	* Creates a MaskFormatter with no mask.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>MaskFormatter</code> with the specified mask.
@@ -156,7 +156,7 @@ package javax.swing.text;
 	*
 	* @throws ParseException if mask does not contain valid mask characters
 	*/
-	@:overload public function new(mask : String) : Void;
+	@:overload @:public public function new(mask : String) : Void;
 	
 	/**
 	* Sets the mask dictating the legal characters.
@@ -165,14 +165,14 @@ package javax.swing.text;
 	*
 	* @throws ParseException if mask does not contain valid mask characters
 	*/
-	@:overload public function setMask(mask : String) : Void;
+	@:overload @:public public function setMask(mask : String) : Void;
 	
 	/**
 	* Returns the formatting mask.
 	*
 	* @return Mask dictating legal character values.
 	*/
-	@:overload public function getMask() : String;
+	@:overload @:public public function getMask() : String;
 	
 	/**
 	* Allows for further restricting of the characters that can be input.
@@ -184,14 +184,14 @@ package javax.swing.text;
 	*
 	* @param validCharacters If non-null, specifies legal characters.
 	*/
-	@:overload public function setValidCharacters(validCharacters : String) : Void;
+	@:overload @:public public function setValidCharacters(validCharacters : String) : Void;
 	
 	/**
 	* Returns the valid characters that can be input.
 	*
 	* @return Legal characters
 	*/
-	@:overload public function getValidCharacters() : String;
+	@:overload @:public public function getValidCharacters() : String;
 	
 	/**
 	* Allows for further restricting of the characters that can be input.
@@ -203,14 +203,14 @@ package javax.swing.text;
 	*
 	* @param invalidCharacters If non-null, specifies illegal characters.
 	*/
-	@:overload public function setInvalidCharacters(invalidCharacters : String) : Void;
+	@:overload @:public public function setInvalidCharacters(invalidCharacters : String) : Void;
 	
 	/**
 	* Returns the characters that are not valid for input.
 	*
 	* @return illegal characters.
 	*/
-	@:overload public function getInvalidCharacters() : String;
+	@:overload @:public public function getInvalidCharacters() : String;
 	
 	/**
 	* Sets the string to use if the value does not completely fill in
@@ -219,7 +219,7 @@ package javax.swing.text;
 	* @param placeholder String used when formatting if the value does not
 	*        completely fill the mask
 	*/
-	@:overload public function setPlaceholder(placeholder : String) : Void;
+	@:overload @:public public function setPlaceholder(placeholder : String) : Void;
 	
 	/**
 	* Returns the String to use if the value does not completely fill
@@ -228,7 +228,7 @@ package javax.swing.text;
 	* @return String used when formatting if the value does not
 	*        completely fill the mask
 	*/
-	@:overload public function getPlaceholder() : String;
+	@:overload @:public public function getPlaceholder() : String;
 	
 	/**
 	* Sets the character to use in place of characters that are not present
@@ -241,7 +241,7 @@ package javax.swing.text;
 	* @param placeholder Character used when formatting if the value does not
 	*        completely fill the mask
 	*/
-	@:overload public function setPlaceholderCharacter(placeholder : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setPlaceholderCharacter(placeholder : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Returns the character to use in place of characters that are not present
@@ -250,7 +250,7 @@ package javax.swing.text;
 	* @return Character used when formatting if the value does not
 	*        completely fill the mask
 	*/
-	@:overload public function getPlaceholderCharacter() : java.StdTypes.Char16;
+	@:overload @:public public function getPlaceholderCharacter() : java.StdTypes.Char16;
 	
 	/**
 	* If true, the returned value and set value will also contain the literal
@@ -267,7 +267,7 @@ package javax.swing.text;
 	* @param containsLiteralChars Used to indicate if literal characters in
 	*        mask should be returned in stringToValue
 	*/
-	@:overload public function setValueContainsLiteralCharacters(containsLiteralChars : Bool) : Void;
+	@:overload @:public public function setValueContainsLiteralCharacters(containsLiteralChars : Bool) : Void;
 	
 	/**
 	* Returns true if <code>stringToValue</code> should return literal
@@ -276,7 +276,7 @@ package javax.swing.text;
 	* @return True if literal characters in mask should be returned in
 	*         stringToValue
 	*/
-	@:overload public function getValueContainsLiteralCharacters() : Bool;
+	@:overload @:public public function getValueContainsLiteralCharacters() : Bool;
 	
 	/**
 	* Parses the text, returning the appropriate Object representation of
@@ -293,7 +293,7 @@ package javax.swing.text;
 	* @see #setValueContainsLiteralCharacters
 	* @return Object representation of text
 	*/
-	@:overload public function stringToValue(value : String) : Dynamic;
+	@:overload @:public override public function stringToValue(value : String) : Dynamic;
 	
 	/**
 	* Returns a String representation of the Object <code>value</code>
@@ -306,7 +306,7 @@ package javax.swing.text;
 	* @see #setValueContainsLiteralCharacters
 	* @return String representation of value
 	*/
-	@:overload public function valueToString(value : Dynamic) : String;
+	@:overload @:public override public function valueToString(value : Dynamic) : String;
 	
 	/**
 	* Installs the <code>DefaultFormatter</code> onto a particular
@@ -338,7 +338,7 @@ package javax.swing.text;
 	* @param ftf JFormattedTextField to format for, may be null indicating
 	*            uninstall from current JFormattedTextField.
 	*/
-	@:overload public function install(ftf : javax.swing.JFormattedTextField) : Void;
+	@:overload @:public override public function install(ftf : javax.swing.JFormattedTextField) : Void;
 	
 	
 }
@@ -349,7 +349,7 @@ package javax.swing.text;
 	* represents a literal character. The default implementation
 	* returns false.
 	*/
-	@:overload public function isLiteral() : Bool;
+	@:overload @:public public function isLiteral() : Bool;
 	
 	/**
 	* Returns true if <code>aChar</code> is a valid reprensentation of
@@ -359,7 +359,7 @@ package javax.swing.text;
 	* is contained in the valid characters and not contained
 	* in the invalid characters.
 	*/
-	@:overload public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Returns the character to insert for <code>aChar</code>. The
@@ -367,13 +367,13 @@ package javax.swing.text;
 	* that wish to do some sort of mapping, perhaps lower case to upper
 	* case should override this and do the necessary mapping.
 	*/
-	@:overload public function getChar(aChar : java.StdTypes.Char16) : java.StdTypes.Char16;
+	@:overload @:public public function getChar(aChar : java.StdTypes.Char16) : java.StdTypes.Char16;
 	
 	/**
 	* Appends the necessary character in <code>formatting</code> at
 	* <code>index</code> to <code>buff</code>.
 	*/
-	@:overload public function append(buff : java.lang.StringBuilder, formatting : String, index : java.NativeArray<Int>, placeholder : String) : Void;
+	@:overload @:public public function append(buff : java.lang.StringBuilder, formatting : String, index : java.NativeArray<Int>, placeholder : String) : Void;
 	
 	
 }
@@ -382,11 +382,11 @@ package javax.swing.text;
 */
 @:native('javax$swing$text$MaskFormatter$LiteralCharacter') @:internal extern class MaskFormatter_LiteralCharacter extends javax.swing.text.MaskFormatter.MaskFormatter_MaskCharacter
 {
-	@:overload public function new(fixedChar : java.StdTypes.Char16) : Void;
+	@:overload @:public public function new(fixedChar : java.StdTypes.Char16) : Void;
 	
-	@:overload override public function isLiteral() : Bool;
+	@:overload @:public override public function isLiteral() : Bool;
 	
-	@:overload override public function getChar(aChar : java.StdTypes.Char16) : java.StdTypes.Char16;
+	@:overload @:public override public function getChar(aChar : java.StdTypes.Char16) : java.StdTypes.Char16;
 	
 	
 }
@@ -395,7 +395,7 @@ package javax.swing.text;
 */
 @:native('javax$swing$text$MaskFormatter$DigitMaskCharacter') @:internal extern class MaskFormatter_DigitMaskCharacter extends javax.swing.text.MaskFormatter.MaskFormatter_MaskCharacter
 {
-	@:overload override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
 	
 	
 }
@@ -405,9 +405,9 @@ package javax.swing.text;
 */
 @:native('javax$swing$text$MaskFormatter$UpperCaseCharacter') @:internal extern class MaskFormatter_UpperCaseCharacter extends javax.swing.text.MaskFormatter.MaskFormatter_MaskCharacter
 {
-	@:overload override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
 	
-	@:overload override public function getChar(aChar : java.StdTypes.Char16) : java.StdTypes.Char16;
+	@:overload @:public override public function getChar(aChar : java.StdTypes.Char16) : java.StdTypes.Char16;
 	
 	
 }
@@ -417,9 +417,9 @@ package javax.swing.text;
 */
 @:native('javax$swing$text$MaskFormatter$LowerCaseCharacter') @:internal extern class MaskFormatter_LowerCaseCharacter extends javax.swing.text.MaskFormatter.MaskFormatter_MaskCharacter
 {
-	@:overload override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
 	
-	@:overload override public function getChar(aChar : java.StdTypes.Char16) : java.StdTypes.Char16;
+	@:overload @:public override public function getChar(aChar : java.StdTypes.Char16) : java.StdTypes.Char16;
 	
 	
 }
@@ -429,7 +429,7 @@ package javax.swing.text;
 */
 @:native('javax$swing$text$MaskFormatter$AlphaNumericCharacter') @:internal extern class MaskFormatter_AlphaNumericCharacter extends javax.swing.text.MaskFormatter.MaskFormatter_MaskCharacter
 {
-	@:overload override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
 	
 	
 }
@@ -438,7 +438,7 @@ package javax.swing.text;
 */
 @:native('javax$swing$text$MaskFormatter$CharCharacter') @:internal extern class MaskFormatter_CharCharacter extends javax.swing.text.MaskFormatter.MaskFormatter_MaskCharacter
 {
-	@:overload override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
 	
 	
 }
@@ -447,9 +447,9 @@ package javax.swing.text;
 */
 @:native('javax$swing$text$MaskFormatter$HexCharacter') @:internal extern class MaskFormatter_HexCharacter extends javax.swing.text.MaskFormatter.MaskFormatter_MaskCharacter
 {
-	@:overload override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
 	
-	@:overload override public function getChar(aChar : java.StdTypes.Char16) : java.StdTypes.Char16;
+	@:overload @:public override public function getChar(aChar : java.StdTypes.Char16) : java.StdTypes.Char16;
 	
 	
 }

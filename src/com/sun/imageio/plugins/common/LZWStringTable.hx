@@ -28,7 +28,7 @@ extern class LZWStringTable
 	/*
 	* Constructor allocate memory for string store data
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/*
 	* @param index value of -1 indicates no predecessor [used in initialisation]
@@ -37,7 +37,7 @@ extern class LZWStringTable
 	* @return 0xFFFF if no space in table left for addition of predecesor
 	* index and byte b. Else return the code allocated for combination index + b.
 	*/
-	@:overload public function addCharString(index : java.StdTypes.Int16, b : java.StdTypes.Int8) : Int;
+	@:overload @:public public function addCharString(index : java.StdTypes.Int16, b : java.StdTypes.Int8) : Int;
 	
 	/*
 	* @param index index to prefix string
@@ -45,15 +45,15 @@ extern class LZWStringTable
 	* @return b if param index is HASH_FREE. Else return the code
 	* for this prefix and byte successor
 	*/
-	@:overload public function findCharString(index : java.StdTypes.Int16, b : java.StdTypes.Int8) : java.StdTypes.Int16;
+	@:overload @:public public function findCharString(index : java.StdTypes.Int16, b : java.StdTypes.Int8) : java.StdTypes.Int16;
 	
 	/*
 	* @param codesize the size of code to be preallocated for the
 	* string store.
 	*/
-	@:overload public function clearTable(codesize : Int) : Void;
+	@:overload @:public public function clearTable(codesize : Int) : Void;
 	
-	@:overload public static function hash(index : java.StdTypes.Int16, lastbyte : java.StdTypes.Int8) : Int;
+	@:overload @:static @:public public static function hash(index : java.StdTypes.Int16, lastbyte : java.StdTypes.Int8) : Int;
 	
 	/*
 	* If expanded data doesn't fit into array only what will fit is written
@@ -75,9 +75,9 @@ extern class LZWStringTable
 	* negated is equal to the number of bytes that were used of the code being expanded.
 	* This negative value also indicates the buffer is full.
 	*/
-	@:overload public function expandCode(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, code : java.StdTypes.Int16, skipHead : Int) : Int;
+	@:overload @:public public function expandCode(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, code : java.StdTypes.Int16, skipHead : Int) : Int;
 	
-	@:overload public function dump(out : java.io.PrintStream) : Void;
+	@:overload @:public public function dump(out : java.io.PrintStream) : Void;
 	
 	
 }

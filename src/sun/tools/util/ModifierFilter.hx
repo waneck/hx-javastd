@@ -44,7 +44,7 @@ extern class ModifierFilter extends java.lang.reflect.Modifier
 	* constructors of this class to specify package private
 	* access. This is needed since there is no Modifier.PACKAGE.
 	*/
-	public static var PACKAGE(default, null) : haxe.Int64;
+	@:public @:static @:final public static var PACKAGE(default, null) : haxe.Int64;
 	
 	/**
 	* All access modifiers.
@@ -52,7 +52,7 @@ extern class ModifierFilter extends java.lang.reflect.Modifier
 	* constructors of this class to specify all access modifiers,
 	* Same as PRIVATE | PROTECTED | PUBLIC | PACKAGE.
 	*/
-	public static var ALL_ACCESS(default, null) : haxe.Int64;
+	@:public @:static @:final public static var ALL_ACCESS(default, null) : haxe.Int64;
 	
 	/**
 	* Constructor - Specify a filter.
@@ -62,7 +62,7 @@ extern class ModifierFilter extends java.lang.reflect.Modifier
 	*                  bits must be on in the modifier bits to
 	*                  pass the filter.
 	*/
-	@:overload public function new(oneOf : haxe.Int64) : Void;
+	@:overload @:public public function new(oneOf : haxe.Int64) : Void;
 	
 	/**
 	* Constructor - Specify a filter.
@@ -84,7 +84,7 @@ extern class ModifierFilter extends java.lang.reflect.Modifier
 	* @param   must    All bits specified must be on.
 	* @param   cannot  None of the bits specified can be on.
 	*/
-	@:overload public function new(oneOf : haxe.Int64, must : haxe.Int64, cannot : haxe.Int64) : Void;
+	@:overload @:public public function new(oneOf : haxe.Int64, must : haxe.Int64, cannot : haxe.Int64) : Void;
 	
 	/**
 	* Filter on modifier bits.
@@ -93,7 +93,7 @@ extern class ModifierFilter extends java.lang.reflect.Modifier
 	*
 	* @return                  Whether the modifierBits pass this filter.
 	*/
-	@:overload public function checkModifier(modifierBits : Int) : Bool;
+	@:overload @:public public function checkModifier(modifierBits : Int) : Bool;
 	
 	/**
 	* Filter a MemberDefinition.
@@ -105,7 +105,7 @@ extern class ModifierFilter extends java.lang.reflect.Modifier
 	*
 	* @see sun.tools.MemberDefinition
 	*/
-	@:overload public function checkMember(field : sun.tools.java.MemberDefinition) : Bool;
+	@:overload @:public public function checkMember(field : sun.tools.java.MemberDefinition) : Bool;
 	
 	/**
 	* Filter a ClassDefinition.
@@ -117,7 +117,7 @@ extern class ModifierFilter extends java.lang.reflect.Modifier
 	*
 	* @see sun.tools.ClassDefinition
 	*/
-	@:overload public function checkClass(cdef : sun.tools.java.ClassDefinition) : Bool;
+	@:overload @:public public function checkClass(cdef : sun.tools.java.ClassDefinition) : Bool;
 	
 	
 }

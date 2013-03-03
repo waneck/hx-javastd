@@ -47,7 +47,7 @@ extern interface CSSStyleDeclaration
 	* properties in the declaration block including the removal or addition
 	* of properties.
 	*/
-	@:overload public function getCssText() : String;
+	@:overload @:public public function getCssText() : String;
 	
 	/**
 	*  The parsable textual representation of the declaration block
@@ -61,7 +61,7 @@ extern interface CSSStyleDeclaration
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this declaration is
 	*   readonly or a property is readonly.
 	*/
-	@:overload public function setCssText(cssText : String) : Void;
+	@:overload @:public public function setCssText(cssText : String) : Void;
 	
 	/**
 	*  Used to retrieve the value of a CSS property if it has been explicitly
@@ -72,7 +72,7 @@ extern interface CSSStyleDeclaration
 	*   set for this declaration block. Returns the empty string if the
 	*   property has not been set.
 	*/
-	@:overload public function getPropertyValue(propertyName : String) : String;
+	@:overload @:public public function getPropertyValue(propertyName : String) : String;
 	
 	/**
 	*  Used to retrieve the object representation of the value of a CSS
@@ -87,7 +87,7 @@ extern interface CSSStyleDeclaration
 	*   set for this declaration block. Returns <code>null</code> if the
 	*   property has not been set.
 	*/
-	@:overload public function getPropertyCSSValue(propertyName : String) : org.w3c.dom.css.CSSValue;
+	@:overload @:public public function getPropertyCSSValue(propertyName : String) : org.w3c.dom.css.CSSValue;
 	
 	/**
 	*  Used to remove a CSS property if it has been explicitly set within
@@ -102,7 +102,7 @@ extern interface CSSStyleDeclaration
 	*   NO_MODIFICATION_ALLOWED_ERR: Raised if this declaration is readonly
 	*   or the property is readonly.
 	*/
-	@:overload public function removeProperty(propertyName : String) : String;
+	@:overload @:public public function removeProperty(propertyName : String) : String;
 	
 	/**
 	*  Used to retrieve the priority of a CSS property (e.g. the
@@ -115,7 +115,7 @@ extern interface CSSStyleDeclaration
 	*   in this declaration block and has a priority specified. The empty
 	*   string otherwise.
 	*/
-	@:overload public function getPropertyPriority(propertyName : String) : String;
+	@:overload @:public public function getPropertyPriority(propertyName : String) : String;
 	
 	/**
 	*  Used to set a property value and priority within this declaration
@@ -133,14 +133,14 @@ extern interface CSSStyleDeclaration
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this declaration is
 	*   readonly or the property is readonly.
 	*/
-	@:overload public function setProperty(propertyName : String, value : String, priority : String) : Void;
+	@:overload @:public public function setProperty(propertyName : String, value : String, priority : String) : Void;
 	
 	/**
 	*  The number of properties that have been explicitly set in this
 	* declaration block. The range of valid indices is 0 to length-1
 	* inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	*  Used to retrieve the properties that have been explicitly set in this
@@ -152,14 +152,14 @@ extern interface CSSStyleDeclaration
 	* @return  The name of the property at this ordinal position. The empty
 	*   string if no property exists at this position.
 	*/
-	@:overload public function item(index : Int) : String;
+	@:overload @:public public function item(index : Int) : String;
 	
 	/**
 	*  The CSS rule that contains this declaration block or <code>null</code>
 	* if this <code>CSSStyleDeclaration</code> is not attached to a
 	* <code>CSSRule</code>.
 	*/
-	@:overload public function getParentRule() : org.w3c.dom.css.CSSRule;
+	@:overload @:public public function getParentRule() : org.w3c.dom.css.CSSRule;
 	
 	
 }

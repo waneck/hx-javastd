@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.server.provider;
 */
 @:internal extern class SyncProviderInvokerTube<T> extends com.sun.xml.internal.ws.server.provider.ProviderInvokerTube<T>
 {
-	@:overload public function new(invoker : com.sun.xml.internal.ws.api.server.Invoker, argsBuilder : com.sun.xml.internal.ws.server.provider.ProviderArgumentsBuilder<T>) : Void;
+	@:overload @:public public function new(invoker : com.sun.xml.internal.ws.api.server.Invoker, argsBuilder : com.sun.xml.internal.ws.server.provider.ProviderArgumentsBuilder<T>) : Void;
 	
 	/*
 	* This binds the parameter for Provider endpoints and invokes the
@@ -33,11 +33,11 @@ package com.sun.xml.internal.ws.server.provider;
 	* invoke() is used to create a new {@link Message} that traverses
 	* through the Pipeline to transport.
 	*/
-	@:overload public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
 	
 }

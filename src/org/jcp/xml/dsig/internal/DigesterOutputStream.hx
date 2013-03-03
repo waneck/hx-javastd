@@ -32,7 +32,7 @@ extern class DigesterOutputStream extends java.io.OutputStream
 	*
 	* @param md the MessageDigest
 	*/
-	@:overload public function new(md : java.security.MessageDigest) : Void;
+	@:overload @:public public function new(md : java.security.MessageDigest) : Void;
 	
 	/**
 	* Creates a DigesterOutputStream.
@@ -40,27 +40,27 @@ extern class DigesterOutputStream extends java.io.OutputStream
 	* @param md the MessageDigest
 	* @param buffer if true, caches the input bytes
 	*/
-	@:overload public function new(md : java.security.MessageDigest, buffer : Bool) : Void;
+	@:overload @:public public function new(md : java.security.MessageDigest, buffer : Bool) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function write(input : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(input : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function write(input : Int) : Void;
+	@:overload @:public override public function write(input : Int) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function write(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:public override public function write(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* @return the digest value
 	*/
-	@:overload public function getDigestValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getDigestValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* @return an input stream containing the cached bytes, or
 	*    null if not cached
 	*/
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
 	
 }

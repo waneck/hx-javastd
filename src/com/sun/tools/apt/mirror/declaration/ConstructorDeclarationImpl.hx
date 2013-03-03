@@ -29,12 +29,12 @@ extern class ConstructorDeclarationImpl extends com.sun.tools.apt.mirror.declara
 	* {@inheritDoc}
 	* Returns the simple name of the declaring class.
 	*/
-	@:overload override public function getSimpleName() : String;
+	@:overload @:public override public function getSimpleName() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
 	
 	
 }

@@ -71,12 +71,12 @@ extern class Label
 	* package you must override the {@link
 	* com.sun.xml.internal.ws.org.objectweb.asm.tree.MethodNode#getLabelNode} method.
 	*/
-	public var info : Dynamic;
+	@:public public var info : Dynamic;
 	
 	/**
 	* Constructs a new label.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the offset corresponding to this label. This offset is computed
@@ -87,14 +87,14 @@ extern class Label
 	* @return the offset corresponding to this label.
 	* @throws IllegalStateException if this label is not resolved yet.
 	*/
-	@:overload public function getOffset() : Int;
+	@:overload @:public public function getOffset() : Int;
 	
 	/**
 	* Returns a string representation of this label.
 	*
 	* @return a string representation of this label.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

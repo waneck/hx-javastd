@@ -40,33 +40,33 @@ extern class CharToByteSingleByte extends sun.io.CharToByteConverter
 	/*
 	* 1st level index, provided by subclass
 	*/
-	private var index1 : java.NativeArray<java.StdTypes.Char16>;
+	@:protected private var index1 : java.NativeArray<java.StdTypes.Char16>;
 	
 	/*
 	* 2nd level index, provided by subclass
 	*/
-	private var index2 : java.NativeArray<java.StdTypes.Char16>;
+	@:protected private var index2 : java.NativeArray<java.StdTypes.Char16>;
 	
 	/*
 	* Mask to isolate bits for 1st level index, from subclass
 	*/
-	private var mask1 : Int;
+	@:protected private var mask1 : Int;
 	
 	/*
 	* Mask to isolate bits for 2nd level index, from subclass
 	*/
-	private var mask2 : Int;
+	@:protected private var mask2 : Int;
 	
 	/*
 	* Shift to isolate bits for 1st level index, from subclass
 	*/
-	private var shift : Int;
+	@:protected private var shift : Int;
 	
-	@:overload public function getIndex1() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getIndex1() : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload public function getIndex2() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getIndex2() : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload override public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public override public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Converts characters to sequences of bytes.
@@ -86,27 +86,27 @@ extern class CharToByteSingleByte extends sun.io.CharToByteConverter
 	* @throw UnsupportedCharacterException for any character that
 	* that cannot be converted to the external character set.
 	*/
-	@:overload override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outOff : Int, outEnd : Int) : Int;
+	@:overload @:public override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outOff : Int, outEnd : Int) : Int;
 	
 	/**
 	* the maximum number of bytes needed to hold a converted char
 	* @returns the maximum number of bytes needed for a converted char
 	*/
-	@:overload override public function getMaxBytesPerChar() : Int;
+	@:overload @:public override public function getMaxBytesPerChar() : Int;
 	
-	@:overload public function getNative(inputChar : java.StdTypes.Char16) : java.StdTypes.Int8;
+	@:overload @:public public function getNative(inputChar : java.StdTypes.Char16) : java.StdTypes.Int8;
 	
 	/**
 	*  Resets the converter.
 	* Call this method to reset the converter to its initial state
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* Return whether a character is mappable or not
 	* @return true if a character is mappable
 	*/
-	@:overload override public function canConvert(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canConvert(ch : java.StdTypes.Char16) : Bool;
 	
 	
 }

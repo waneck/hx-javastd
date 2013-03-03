@@ -34,29 +34,29 @@ package com.sun.xml.internal.messaging.saaj.util;
 */
 extern class TeeInputStream extends java.io.InputStream
 {
-	private var source : java.io.InputStream;
+	@:protected private var source : java.io.InputStream;
 	
-	private var copySink : java.io.OutputStream;
+	@:protected private var copySink : java.io.OutputStream;
 	
-	@:overload public function new(source : java.io.InputStream, sink : java.io.OutputStream) : Void;
+	@:overload @:public public function new(source : java.io.InputStream, sink : java.io.OutputStream) : Void;
 	
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload @:synchronized public function mark(readlimit : Int) : Void;
+	@:overload @:public @:synchronized override public function mark(readlimit : Int) : Void;
 	
-	@:overload public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload @:synchronized public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
-	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	
 }

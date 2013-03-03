@@ -26,7 +26,7 @@ extern class Canonicalizer11 extends com.sun.org.apache.xml.internal.security.c1
 	*
 	* @param includeComments
 	*/
-	@:overload public function new(includeComments : Bool) : Void;
+	@:overload @:public public function new(includeComments : Bool) : Void;
 	
 	/**
 	* Always throws a CanonicalizationException because this is inclusive c14n.
@@ -36,7 +36,7 @@ extern class Canonicalizer11 extends com.sun.org.apache.xml.internal.security.c1
 	* @return none it always fails
 	* @throws CanonicalizationException always
 	*/
-	@:overload override public function engineCanonicalizeXPathNodeSet(xpathNodeSet : java.util.Set<Dynamic>, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function engineCanonicalizeXPathNodeSet(xpathNodeSet : java.util.Set<Dynamic>, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Always throws a CanonicalizationException because this is inclusive c14n.
@@ -46,7 +46,7 @@ extern class Canonicalizer11 extends com.sun.org.apache.xml.internal.security.c1
 	* @return none it always fails
 	* @throws CanonicalizationException
 	*/
-	@:overload override public function engineCanonicalizeSubTree(rootNode : org.w3c.dom.Node, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function engineCanonicalizeSubTree(rootNode : org.w3c.dom.Node, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -25,23 +25,23 @@ package sun.io;
 */
 extern class CharToByteISO8859_1 extends sun.io.CharToByteConverter
 {
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
-	@:overload override public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public override public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
 	
 	/*
 	* Character conversion
 	*/
-	@:overload override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outOff : Int, outEnd : Int) : Int;
+	@:overload @:public override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outOff : Int, outEnd : Int) : Int;
 	
-	@:overload override public function canConvert(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canConvert(ch : java.StdTypes.Char16) : Bool;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* returns the maximum number of bytes needed to convert a char
 	*/
-	@:overload override public function getMaxBytesPerChar() : Int;
+	@:overload @:public override public function getMaxBytesPerChar() : Int;
 	
 	
 }

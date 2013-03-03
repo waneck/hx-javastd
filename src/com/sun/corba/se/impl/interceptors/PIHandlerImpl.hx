@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.interceptors;
 */
 extern class PIHandlerImpl implements com.sun.corba.se.spi.protocol.PIHandler
 {
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, args : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, args : java.NativeArray<String>) : Void;
 	
-	@:overload public function initialize() : Void;
+	@:overload @:public public function initialize() : Void;
 	
 	/**
 	*  ptc/00-08-06 p 205: "When an application calls ORB::destroy, the ORB
@@ -40,61 +40,61 @@ extern class PIHandlerImpl implements com.sun.corba.se.spi.protocol.PIHandler
 	* This must be called at the end of ORB.destroy.  Note that this is not
 	* part of the PIHandler interface, since ORBImpl implements the ORB interface.
 	*/
-	@:overload public function destroyInterceptors() : Void;
+	@:overload @:public public function destroyInterceptors() : Void;
 	
-	@:overload public function objectAdapterCreated(oa : com.sun.corba.se.spi.oa.ObjectAdapter) : Void;
+	@:overload @:public public function objectAdapterCreated(oa : com.sun.corba.se.spi.oa.ObjectAdapter) : Void;
 	
-	@:overload public function adapterManagerStateChanged(managerId : Int, newState : java.StdTypes.Int16) : Void;
+	@:overload @:public public function adapterManagerStateChanged(managerId : Int, newState : java.StdTypes.Int16) : Void;
 	
-	@:overload public function adapterStateChanged(templates : java.NativeArray<org.omg.PortableInterceptor.ObjectReferenceTemplate>, newState : java.StdTypes.Int16) : Void;
+	@:overload @:public public function adapterStateChanged(templates : java.NativeArray<org.omg.PortableInterceptor.ObjectReferenceTemplate>, newState : java.StdTypes.Int16) : Void;
 	
 	/*
 	*****************
 	* Client PI hooks
 	*****************/
-	@:overload public function disableInterceptorsThisThread() : Void;
+	@:overload @:public public function disableInterceptorsThisThread() : Void;
 	
-	@:overload public function enableInterceptorsThisThread() : Void;
+	@:overload @:public public function enableInterceptorsThisThread() : Void;
 	
-	@:overload public function invokeClientPIStartingPoint() : Void;
+	@:overload @:public public function invokeClientPIStartingPoint() : Void;
 	
-	@:overload public function makeCompletedClientRequest(replyStatus : Int, exception : java.lang.Exception) : java.lang.Exception;
+	@:overload @:public public function makeCompletedClientRequest(replyStatus : Int, exception : java.lang.Exception) : java.lang.Exception;
 	
-	@:overload public function invokeClientPIEndingPoint(replyStatus : Int, exception : java.lang.Exception) : java.lang.Exception;
+	@:overload @:public public function invokeClientPIEndingPoint(replyStatus : Int, exception : java.lang.Exception) : java.lang.Exception;
 	
-	@:overload public function handleClientPIEndingPoint(replyStatus : Int, exception : java.lang.Exception, invokeEndingPoint : Bool) : java.lang.Exception;
+	@:overload @:public public function handleClientPIEndingPoint(replyStatus : Int, exception : java.lang.Exception, invokeEndingPoint : Bool) : java.lang.Exception;
 	
-	@:overload public function initiateClientPIRequest(diiRequest : Bool) : Void;
+	@:overload @:public public function initiateClientPIRequest(diiRequest : Bool) : Void;
 	
-	@:overload public function cleanupClientPIRequest() : Void;
+	@:overload @:public public function cleanupClientPIRequest() : Void;
 	
-	@:overload public function setClientPIInfo(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
+	@:overload @:public public function setClientPIInfo(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
 	
-	@:overload public function setClientPIInfo(requestImpl : com.sun.corba.se.impl.corba.RequestImpl) : Void;
+	@:overload @:public public function setClientPIInfo(requestImpl : com.sun.corba.se.impl.corba.RequestImpl) : Void;
 	
 	/*
 	*****************
 	* Server PI hooks
 	*****************/
-	@:overload public function invokeServerPIStartingPoint() : Void;
+	@:overload @:public public function invokeServerPIStartingPoint() : Void;
 	
-	@:overload public function invokeServerPIIntermediatePoint() : Void;
+	@:overload @:public public function invokeServerPIIntermediatePoint() : Void;
 	
-	@:overload public function invokeServerPIEndingPoint(replyMessage : com.sun.corba.se.impl.protocol.giopmsgheaders.ReplyMessage) : Void;
+	@:overload @:public public function invokeServerPIEndingPoint(replyMessage : com.sun.corba.se.impl.protocol.giopmsgheaders.ReplyMessage) : Void;
 	
-	@:overload public function setServerPIInfo(exception : java.lang.Exception) : Void;
+	@:overload @:public public function setServerPIInfo(exception : java.lang.Exception) : Void;
 	
-	@:overload public function setServerPIInfo(arguments : org.omg.CORBA.NVList) : Void;
+	@:overload @:public public function setServerPIInfo(arguments : org.omg.CORBA.NVList) : Void;
 	
-	@:overload public function setServerPIExceptionInfo(exception : org.omg.CORBA.Any) : Void;
+	@:overload @:public public function setServerPIExceptionInfo(exception : org.omg.CORBA.Any) : Void;
 	
-	@:overload public function setServerPIInfo(result : org.omg.CORBA.Any) : Void;
+	@:overload @:public public function setServerPIInfo(result : org.omg.CORBA.Any) : Void;
 	
-	@:overload public function initializeServerPIInfo(request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, oa : com.sun.corba.se.spi.oa.ObjectAdapter, objectId : java.NativeArray<java.StdTypes.Int8>, oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate) : Void;
+	@:overload @:public public function initializeServerPIInfo(request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, oa : com.sun.corba.se.spi.oa.ObjectAdapter, objectId : java.NativeArray<java.StdTypes.Int8>, oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate) : Void;
 	
-	@:overload public function setServerPIInfo(servant : Dynamic, targetMostDerivedInterface : String) : Void;
+	@:overload @:public public function setServerPIInfo(servant : Dynamic, targetMostDerivedInterface : String) : Void;
 	
-	@:overload public function cleanupServerPIRequest() : Void;
+	@:overload @:public public function cleanupServerPIRequest() : Void;
 	
 	/**
 	* Called by ORBInitInfo when an interceptor needs to be registered.
@@ -108,9 +108,9 @@ extern class PIHandlerImpl implements com.sun.corba.se.spi.protocol.PIHandler
 	* @exception DuplicateName Thrown if an interceptor of the given
 	*     name already exists for the given type.
 	*/
-	@:overload public function register_interceptor(interceptor : org.omg.PortableInterceptor.Interceptor, type : Int) : Void;
+	@:overload @:public public function register_interceptor(interceptor : org.omg.PortableInterceptor.Interceptor, type : Int) : Void;
 	
-	@:overload public function getPICurrent() : org.omg.PortableInterceptor.Current;
+	@:overload @:public public function getPICurrent() : org.omg.PortableInterceptor.Current;
 	
 	/** This is the implementation of standard API defined in org.omg.CORBA.ORB
 	*  class. This method finds the Policy Factory for the given Policy Type
@@ -120,21 +120,21 @@ extern class PIHandlerImpl implements com.sun.corba.se.spi.protocol.PIHandler
 	*  _REVISIT_, Once Policy Framework work is completed, Reorganize
 	*  this method to com.sun.corba.se.spi.orb.ORB.
 	*/
-	@:overload public function create_policy(type : Int, val : org.omg.CORBA.Any) : org.omg.CORBA.Policy;
+	@:overload @:public public function create_policy(type : Int, val : org.omg.CORBA.Any) : org.omg.CORBA.Policy;
 	
 	/** This method registers the Policy Factory in the policyFactoryTable,
 	*  which is a HashMap. This method is made package private, because
 	*  it is used internally by the  Interceptors.
 	*/
-	@:overload public function registerPolicyFactory(type : Int, factory : org.omg.PortableInterceptor.PolicyFactory) : Void;
+	@:overload @:public public function registerPolicyFactory(type : Int, factory : org.omg.PortableInterceptor.PolicyFactory) : Void;
 	
-	@:overload @:synchronized public function allocateServerRequestId() : Int;
+	@:overload @:public @:synchronized public function allocateServerRequestId() : Int;
 	
 	
 }
 @:native('com$sun$corba$se$impl$interceptors$PIHandlerImpl$RequestInfoStack') @:internal extern class PIHandlerImpl_RequestInfoStack extends java.util.Stack<Dynamic>
 {
-	public var disableCount : Int;
+	@:public public var disableCount : Int;
 	
 	
 }

@@ -48,7 +48,7 @@ package sun.security.pkcs11;
 	/**
 	* Return the singleton Secmod instance.
 	*/
-	@:overload public static function getInstance() : sun.security.pkcs11.Secmod;
+	@:overload @:public @:static public static function getInstance() : sun.security.pkcs11.Secmod;
 	
 	/**
 	* Test whether this Secmod has been initialized. Returns true
@@ -60,7 +60,7 @@ package sun.security.pkcs11;
 	* @throws IOException if an incompatible version of NSS
 	*   has been loaded
 	*/
-	@:overload @:synchronized public function isInitialized() : Bool;
+	@:overload @:public @:synchronized public function isInitialized() : Bool;
 	
 	/**
 	* Initialize this Secmod.
@@ -75,9 +75,9 @@ package sun.security.pkcs11;
 	*   the specified directories are invalid, or initialization
 	*   fails for any other reason
 	*/
-	@:overload public function initialize(configDir : String, nssLibDir : String) : Void;
+	@:overload @:public public function initialize(configDir : String, nssLibDir : String) : Void;
 	
-	@:overload @:synchronized public function initialize(dbMode : sun.security.pkcs11.Secmod.Secmod_DbMode, configDir : String, nssLibDir : String) : Void;
+	@:overload @:public @:synchronized public function initialize(dbMode : sun.security.pkcs11.Secmod.Secmod_DbMode, configDir : String, nssLibDir : String) : Void;
 	
 	/**
 	* Return an immutable list of all available modules.
@@ -85,7 +85,7 @@ package sun.security.pkcs11;
 	* @throws IllegalStateException if this Secmod is misconfigured
 	*   or not initialized
 	*/
-	@:overload @:synchronized public function getModules() : java.util.List<sun.security.pkcs11.Secmod.Secmod_Module>;
+	@:overload @:public @:synchronized public function getModules() : java.util.List<sun.security.pkcs11.Secmod.Secmod_Module>;
 	
 	/**
 	* Returns the first module of the specified type. If no such
@@ -94,7 +94,7 @@ package sun.security.pkcs11;
 	* @throws IllegalStateException if this Secmod is misconfigured
 	*   or not initialized
 	*/
-	@:overload public function getModule(type : sun.security.pkcs11.Secmod.Secmod_ModuleType) : sun.security.pkcs11.Secmod.Secmod_Module;
+	@:overload @:public public function getModule(type : sun.security.pkcs11.Secmod.Secmod_ModuleType) : sun.security.pkcs11.Secmod.Secmod_Module;
 	
 	
 }
@@ -150,7 +150,7 @@ package sun.security.pkcs11;
 	* customized with additional options and then made
 	* current using the setConfiguration() method.
 	*/
-	@:overload @:synchronized public function getConfiguration() : String;
+	@:overload @:public @:synchronized public function getConfiguration() : String;
 	
 	/**
 	* Set the configuration for this module.
@@ -158,27 +158,27 @@ package sun.security.pkcs11;
 	* @throws IllegalStateException if the associated provider
 	*   instance has already been created.
 	*/
-	@:overload @:synchronized public function setConfiguration(config : String) : Void;
+	@:overload @:public @:synchronized public function setConfiguration(config : String) : Void;
 	
 	/**
 	* Return the pathname of the native library that implements
 	* this module. For example, /usr/lib/libpkcs11.so.
 	*/
-	@:overload public function getLibraryName() : String;
+	@:overload @:public public function getLibraryName() : String;
 	
 	/**
 	* Returns the type of this module.
 	*/
-	@:overload public function getType() : sun.security.pkcs11.Secmod.Secmod_ModuleType;
+	@:overload @:public public function getType() : sun.security.pkcs11.Secmod.Secmod_ModuleType;
 	
 	/**
 	* Returns the provider instance that is associated with this
 	* module. The first call to this method creates the provider
 	* instance.
 	*/
-	@:overload @:synchronized public function getProvider() : java.security.Provider;
+	@:overload @:public @:synchronized public function getProvider() : java.security.Provider;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -217,13 +217,13 @@ package sun.security.pkcs11;
 */
 @:native('sun$security$pkcs11$Secmod$KeyStoreLoadParameter') extern class Secmod_KeyStoreLoadParameter implements LoadStoreParameter
 {
-	@:overload public function new(trustType : sun.security.pkcs11.Secmod.Secmod_TrustType, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(trustType : sun.security.pkcs11.Secmod.Secmod_TrustType, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
-	@:overload public function new(trustType : sun.security.pkcs11.Secmod.Secmod_TrustType, prot : ProtectionParameter) : Void;
+	@:overload @:public public function new(trustType : sun.security.pkcs11.Secmod.Secmod_TrustType, prot : ProtectionParameter) : Void;
 	
-	@:overload public function getProtectionParameter() : ProtectionParameter;
+	@:overload @:public public function getProtectionParameter() : ProtectionParameter;
 	
-	@:overload public function getTrustType() : sun.security.pkcs11.Secmod.Secmod_TrustType;
+	@:overload @:public public function getTrustType() : sun.security.pkcs11.Secmod.Secmod_TrustType;
 	
 	
 }
@@ -233,9 +233,9 @@ package sun.security.pkcs11;
 }
 @:native('sun$security$pkcs11$Secmod$Bytes') @:internal extern class Secmod_Bytes
 {
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }

@@ -39,20 +39,20 @@ extern class StyleAssociation
 	* Returns a StyleAssociation that can be used to determine if
 	* a particular string matches the returned association.
 	*/
-	@:overload public static function createStyleAssociation(text : String, style : javax.swing.plaf.synth.SynthStyle) : sun.swing.plaf.synth.StyleAssociation;
+	@:overload @:public @:static public static function createStyleAssociation(text : String, style : javax.swing.plaf.synth.SynthStyle) : sun.swing.plaf.synth.StyleAssociation;
 	
 	/**
 	* Returns a StyleAssociation that can be used to determine if
 	* a particular string matches the returned association.
 	*/
-	@:overload public static function createStyleAssociation(text : String, style : javax.swing.plaf.synth.SynthStyle, id : Int) : sun.swing.plaf.synth.StyleAssociation;
+	@:overload @:public @:static public static function createStyleAssociation(text : String, style : javax.swing.plaf.synth.SynthStyle, id : Int) : sun.swing.plaf.synth.StyleAssociation;
 	
 	/**
 	* Returns the developer specified identifier for this association, will
 	* be <code>0</code> if an identifier was not specified when this
 	* <code>StyleAssociation</code> was created.
 	*/
-	@:overload public function getID() : Int;
+	@:overload @:public public function getID() : Int;
 	
 	/**
 	* Returns true if this <code>StyleAssociation</code> matches the
@@ -61,21 +61,21 @@ extern class StyleAssociation
 	* @return true if this <code>StyleAssociation</code> matches the
 	* passed in CharSequence.if this StyleAssociation.
 	*/
-	@:overload @:synchronized public function matches(path : java.lang.CharSequence) : Bool;
+	@:overload @:public @:synchronized public function matches(path : java.lang.CharSequence) : Bool;
 	
 	/**
 	* Returns the text used in matching the string.
 	*
 	* @return the text used in matching the string.
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
 	/**
 	* Returns the style this association is mapped to.
 	*
 	* @return the style this association is mapped to.
 	*/
-	@:overload public function getStyle() : javax.swing.plaf.synth.SynthStyle;
+	@:overload @:public public function getStyle() : javax.swing.plaf.synth.SynthStyle;
 	
 	
 }

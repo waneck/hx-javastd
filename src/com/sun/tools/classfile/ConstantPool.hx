@@ -25,53 +25,53 @@ package com.sun.tools.classfile;
 */
 extern class ConstantPool
 {
-	public static var CONSTANT_Utf8(default, null) : Int;
+	@:public @:static @:final public static var CONSTANT_Utf8(default, null) : Int;
 	
-	public static var CONSTANT_Integer(default, null) : Int;
+	@:public @:static @:final public static var CONSTANT_Integer(default, null) : Int;
 	
-	public static var CONSTANT_Float(default, null) : Int;
+	@:public @:static @:final public static var CONSTANT_Float(default, null) : Int;
 	
-	public static var CONSTANT_Long(default, null) : Int;
+	@:public @:static @:final public static var CONSTANT_Long(default, null) : Int;
 	
-	public static var CONSTANT_Double(default, null) : Int;
+	@:public @:static @:final public static var CONSTANT_Double(default, null) : Int;
 	
-	public static var CONSTANT_Class(default, null) : Int;
+	@:public @:static @:final public static var CONSTANT_Class(default, null) : Int;
 	
-	public static var CONSTANT_String(default, null) : Int;
+	@:public @:static @:final public static var CONSTANT_String(default, null) : Int;
 	
-	public static var CONSTANT_Fieldref(default, null) : Int;
+	@:public @:static @:final public static var CONSTANT_Fieldref(default, null) : Int;
 	
-	public static var CONSTANT_Methodref(default, null) : Int;
+	@:public @:static @:final public static var CONSTANT_Methodref(default, null) : Int;
 	
-	public static var CONSTANT_InterfaceMethodref(default, null) : Int;
+	@:public @:static @:final public static var CONSTANT_InterfaceMethodref(default, null) : Int;
 	
-	public static var CONSTANT_NameAndType(default, null) : Int;
+	@:public @:static @:final public static var CONSTANT_NameAndType(default, null) : Int;
 	
-	public static var CONSTANT_MethodHandle(default, null) : Int;
+	@:public @:static @:final public static var CONSTANT_MethodHandle(default, null) : Int;
 	
-	public static var CONSTANT_MethodType(default, null) : Int;
+	@:public @:static @:final public static var CONSTANT_MethodType(default, null) : Int;
 	
-	public static var CONSTANT_InvokeDynamic(default, null) : Int;
+	@:public @:static @:final public static var CONSTANT_InvokeDynamic(default, null) : Int;
 	
-	@:overload public function new(pool : java.NativeArray<com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo>) : Void;
+	@:overload @:public public function new(pool : java.NativeArray<com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo>) : Void;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function byteLength() : Int;
+	@:overload @:public public function byteLength() : Int;
 	
-	@:overload public function get(index : Int) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
+	@:overload @:public public function get(index : Int) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
 	
-	@:overload public function getUTF8Info(index : Int) : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Utf8_info;
+	@:overload @:public public function getUTF8Info(index : Int) : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Utf8_info;
 	
-	@:overload public function getClassInfo(index : Int) : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Class_info;
+	@:overload @:public public function getClassInfo(index : Int) : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Class_info;
 	
-	@:overload public function getNameAndTypeInfo(index : Int) : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_NameAndType_info;
+	@:overload @:public public function getNameAndTypeInfo(index : Int) : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_NameAndType_info;
 	
-	@:overload public function getUTF8Value(index : Int) : String;
+	@:overload @:public public function getUTF8Value(index : Int) : String;
 	
-	@:overload public function getUTF8Index(value : String) : Int;
+	@:overload @:public public function getUTF8Index(value : String) : Int;
 	
-	@:overload public function entries() : java.lang.Iterable<com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo>;
+	@:overload @:public public function entries() : java.lang.Iterable<com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo>;
 	
 	
 }
@@ -85,33 +85,33 @@ extern class ConstantPool
 */
 @:native('com$sun$tools$classfile$ConstantPool$InvalidIndex') extern class ConstantPool_InvalidIndex extends com.sun.tools.classfile.ConstantPoolException
 {
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$UnexpectedEntry') extern class ConstantPool_UnexpectedEntry extends com.sun.tools.classfile.ConstantPoolException
 {
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
-	public var expected_tag(default, null) : Int;
+	@:public @:final public var expected_tag(default, null) : Int;
 	
-	public var found_tag(default, null) : Int;
+	@:public @:final public var found_tag(default, null) : Int;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$InvalidEntry') extern class ConstantPool_InvalidEntry extends com.sun.tools.classfile.ConstantPoolException
 {
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
-	public var tag(default, null) : Int;
+	@:public @:final public var tag(default, null) : Int;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$EntryNotFound') extern class ConstantPool_EntryNotFound extends com.sun.tools.classfile.ConstantPoolException
 {
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
-	public var value(default, null) : Dynamic;
+	@:public @:final public var value(default, null) : Dynamic;
 	
 	
 }
@@ -163,51 +163,51 @@ extern class ConstantPool
 }
 @:native('com$sun$tools$classfile$ConstantPool$CPInfo') extern class ConstantPool_CPInfo
 {
-	@:overload @:abstract public function getTag() : Int;
+	@:overload @:public @:abstract public function getTag() : Int;
 	
 	/** The number of slots in the constant pool used by this entry.
 	* 2 for CONSTANT_Double and CONSTANT_Long; 1 for everything else. */
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload @:abstract public function byteLength() : Int;
+	@:overload @:public @:abstract public function byteLength() : Int;
 	
-	@:overload @:abstract public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
+	@:overload @:public @:abstract public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
 	
-	private var cp(default, null) : com.sun.tools.classfile.ConstantPool;
+	@:protected @:final private var cp(default, null) : com.sun.tools.classfile.ConstantPool;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$CPRefInfo') extern class ConstantPool_CPRefInfo extends com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo
 {
-	@:overload private function new(cp : com.sun.tools.classfile.ConstantPool, cr : com.sun.tools.classfile.ClassReader, tag : Int) : Void;
+	@:overload @:protected private function new(cp : com.sun.tools.classfile.ConstantPool, cr : com.sun.tools.classfile.ClassReader, tag : Int) : Void;
 	
-	@:overload private function new(cp : com.sun.tools.classfile.ConstantPool, tag : Int, class_index : Int, name_and_type_index : Int) : Void;
+	@:overload @:protected private function new(cp : com.sun.tools.classfile.ConstantPool, tag : Int, class_index : Int, name_and_type_index : Int) : Void;
 	
-	@:overload override public function getTag() : Int;
+	@:overload @:public override public function getTag() : Int;
 	
-	@:overload override public function byteLength() : Int;
+	@:overload @:public override public function byteLength() : Int;
 	
-	@:overload public function getClassInfo() : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Class_info;
+	@:overload @:public public function getClassInfo() : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Class_info;
 	
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
-	@:overload public function getNameAndTypeInfo() : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_NameAndType_info;
+	@:overload @:public public function getNameAndTypeInfo() : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_NameAndType_info;
 	
-	public var tag(default, null) : Int;
+	@:public @:final public var tag(default, null) : Int;
 	
-	public var class_index(default, null) : Int;
+	@:public @:final public var class_index(default, null) : Int;
 	
-	public var name_and_type_index(default, null) : Int;
+	@:public @:final public var name_and_type_index(default, null) : Int;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$CONSTANT_Class_info') extern class ConstantPool_CONSTANT_Class_info extends com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo
 {
-	@:overload public function new(cp : com.sun.tools.classfile.ConstantPool, name_index : Int) : Void;
+	@:overload @:public public function new(cp : com.sun.tools.classfile.ConstantPool, name_index : Int) : Void;
 	
-	@:overload override public function getTag() : Int;
+	@:overload @:public override public function getTag() : Int;
 	
-	@:overload override public function byteLength() : Int;
+	@:overload @:public override public function byteLength() : Int;
 	
 	/**
 	* Get the raw value of the class referenced by this constant pool entry.
@@ -215,7 +215,7 @@ extern class ConstantPool
 	* descriptor for an array class.
 	* @return the raw value of the class
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* If this constant pool entry identifies either a class or interface type,
@@ -225,227 +225,227 @@ extern class ConstantPool
 	* return null.
 	* @return the base class or interface name
 	*/
-	@:overload public function getBaseName() : String;
+	@:overload @:public public function getBaseName() : String;
 	
-	@:overload public function getDimensionCount() : Int;
+	@:overload @:public public function getDimensionCount() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
 	
-	public var name_index(default, null) : Int;
+	@:public @:final public var name_index(default, null) : Int;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$CONSTANT_Double_info') extern class ConstantPool_CONSTANT_Double_info extends com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo
 {
-	@:overload public function new(value : Float) : Void;
+	@:overload @:public public function new(value : Float) : Void;
 	
-	@:overload override public function getTag() : Int;
+	@:overload @:public override public function getTag() : Int;
 	
-	@:overload override public function byteLength() : Int;
+	@:overload @:public override public function byteLength() : Int;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
 	
-	public var value(default, null) : Float;
+	@:public @:final public var value(default, null) : Float;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$CONSTANT_Fieldref_info') extern class ConstantPool_CONSTANT_Fieldref_info extends com.sun.tools.classfile.ConstantPool.ConstantPool_CPRefInfo
 {
-	@:overload public function new(cp : com.sun.tools.classfile.ConstantPool, class_index : Int, name_and_type_index : Int) : Void;
+	@:overload @:public public function new(cp : com.sun.tools.classfile.ConstantPool, class_index : Int, name_and_type_index : Int) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$CONSTANT_Float_info') extern class ConstantPool_CONSTANT_Float_info extends com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo
 {
-	@:overload public function new(value : Single) : Void;
+	@:overload @:public public function new(value : Single) : Void;
 	
-	@:overload override public function getTag() : Int;
+	@:overload @:public override public function getTag() : Int;
 	
-	@:overload override public function byteLength() : Int;
+	@:overload @:public override public function byteLength() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
 	
-	public var value(default, null) : Single;
+	@:public @:final public var value(default, null) : Single;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$CONSTANT_Integer_info') extern class ConstantPool_CONSTANT_Integer_info extends com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo
 {
-	@:overload public function new(value : Int) : Void;
+	@:overload @:public public function new(value : Int) : Void;
 	
-	@:overload override public function getTag() : Int;
+	@:overload @:public override public function getTag() : Int;
 	
-	@:overload override public function byteLength() : Int;
+	@:overload @:public override public function byteLength() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
 	
-	public var value(default, null) : Int;
+	@:public @:final public var value(default, null) : Int;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$CONSTANT_InterfaceMethodref_info') extern class ConstantPool_CONSTANT_InterfaceMethodref_info extends com.sun.tools.classfile.ConstantPool.ConstantPool_CPRefInfo
 {
-	@:overload public function new(cp : com.sun.tools.classfile.ConstantPool, class_index : Int, name_and_type_index : Int) : Void;
+	@:overload @:public public function new(cp : com.sun.tools.classfile.ConstantPool, class_index : Int, name_and_type_index : Int) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$CONSTANT_InvokeDynamic_info') extern class ConstantPool_CONSTANT_InvokeDynamic_info extends com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo
 {
-	@:overload public function new(cp : com.sun.tools.classfile.ConstantPool, bootstrap_method_index : Int, name_and_type_index : Int) : Void;
+	@:overload @:public public function new(cp : com.sun.tools.classfile.ConstantPool, bootstrap_method_index : Int, name_and_type_index : Int) : Void;
 	
-	@:overload override public function getTag() : Int;
+	@:overload @:public override public function getTag() : Int;
 	
-	@:overload override public function byteLength() : Int;
+	@:overload @:public override public function byteLength() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
 	
-	@:overload public function getNameAndTypeInfo() : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_NameAndType_info;
+	@:overload @:public public function getNameAndTypeInfo() : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_NameAndType_info;
 	
-	public var bootstrap_method_attr_index(default, null) : Int;
+	@:public @:final public var bootstrap_method_attr_index(default, null) : Int;
 	
-	public var name_and_type_index(default, null) : Int;
+	@:public @:final public var name_and_type_index(default, null) : Int;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$CONSTANT_Long_info') extern class ConstantPool_CONSTANT_Long_info extends com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo
 {
-	@:overload public function new(value : haxe.Int64) : Void;
+	@:overload @:public public function new(value : haxe.Int64) : Void;
 	
-	@:overload override public function getTag() : Int;
+	@:overload @:public override public function getTag() : Int;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function byteLength() : Int;
+	@:overload @:public override public function byteLength() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
 	
-	public var value(default, null) : haxe.Int64;
+	@:public @:final public var value(default, null) : haxe.Int64;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$CONSTANT_MethodHandle_info') extern class ConstantPool_CONSTANT_MethodHandle_info extends com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo
 {
-	@:overload public function new(cp : com.sun.tools.classfile.ConstantPool, ref_kind : com.sun.tools.classfile.ConstantPool.ConstantPool_RefKind, member_index : Int) : Void;
+	@:overload @:public public function new(cp : com.sun.tools.classfile.ConstantPool, ref_kind : com.sun.tools.classfile.ConstantPool.ConstantPool_RefKind, member_index : Int) : Void;
 	
-	@:overload override public function getTag() : Int;
+	@:overload @:public override public function getTag() : Int;
 	
-	@:overload override public function byteLength() : Int;
+	@:overload @:public override public function byteLength() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
 	
-	@:overload public function getCPRefInfo() : com.sun.tools.classfile.ConstantPool.ConstantPool_CPRefInfo;
+	@:overload @:public public function getCPRefInfo() : com.sun.tools.classfile.ConstantPool.ConstantPool_CPRefInfo;
 	
-	public var reference_kind(default, null) : com.sun.tools.classfile.ConstantPool.ConstantPool_RefKind;
+	@:public @:final public var reference_kind(default, null) : com.sun.tools.classfile.ConstantPool.ConstantPool_RefKind;
 	
-	public var reference_index(default, null) : Int;
+	@:public @:final public var reference_index(default, null) : Int;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$CONSTANT_MethodType_info') extern class ConstantPool_CONSTANT_MethodType_info extends com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo
 {
-	@:overload public function new(cp : com.sun.tools.classfile.ConstantPool, signature_index : Int) : Void;
+	@:overload @:public public function new(cp : com.sun.tools.classfile.ConstantPool, signature_index : Int) : Void;
 	
-	@:overload override public function getTag() : Int;
+	@:overload @:public override public function getTag() : Int;
 	
-	@:overload override public function byteLength() : Int;
+	@:overload @:public override public function byteLength() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
 	
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	public var descriptor_index(default, null) : Int;
+	@:public @:final public var descriptor_index(default, null) : Int;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$CONSTANT_Methodref_info') extern class ConstantPool_CONSTANT_Methodref_info extends com.sun.tools.classfile.ConstantPool.ConstantPool_CPRefInfo
 {
-	@:overload public function new(cp : com.sun.tools.classfile.ConstantPool, class_index : Int, name_and_type_index : Int) : Void;
+	@:overload @:public public function new(cp : com.sun.tools.classfile.ConstantPool, class_index : Int, name_and_type_index : Int) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$CONSTANT_NameAndType_info') extern class ConstantPool_CONSTANT_NameAndType_info extends com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo
 {
-	@:overload public function new(cp : com.sun.tools.classfile.ConstantPool, name_index : Int, type_index : Int) : Void;
+	@:overload @:public public function new(cp : com.sun.tools.classfile.ConstantPool, name_index : Int, type_index : Int) : Void;
 	
-	@:overload override public function getTag() : Int;
+	@:overload @:public override public function getTag() : Int;
 	
-	@:overload override public function byteLength() : Int;
+	@:overload @:public override public function byteLength() : Int;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	public var name_index(default, null) : Int;
+	@:public @:final public var name_index(default, null) : Int;
 	
-	public var type_index(default, null) : Int;
+	@:public @:final public var type_index(default, null) : Int;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$CONSTANT_String_info') extern class ConstantPool_CONSTANT_String_info extends com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo
 {
-	@:overload public function new(cp : com.sun.tools.classfile.ConstantPool, string_index : Int) : Void;
+	@:overload @:public public function new(cp : com.sun.tools.classfile.ConstantPool, string_index : Int) : Void;
 	
-	@:overload override public function getTag() : Int;
+	@:overload @:public override public function getTag() : Int;
 	
-	@:overload override public function byteLength() : Int;
+	@:overload @:public override public function byteLength() : Int;
 	
-	@:overload public function getString() : String;
+	@:overload @:public public function getString() : String;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	public var string_index(default, null) : Int;
+	@:public @:final public var string_index(default, null) : Int;
 	
 	
 }
 @:native('com$sun$tools$classfile$ConstantPool$CONSTANT_Utf8_info') extern class ConstantPool_CONSTANT_Utf8_info extends com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo
 {
-	@:overload public function new(value : String) : Void;
+	@:overload @:public public function new(value : String) : Void;
 	
-	@:overload override public function getTag() : Int;
+	@:overload @:public override public function getTag() : Int;
 	
-	@:overload override public function byteLength() : Int;
+	@:overload @:public override public function byteLength() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<R, D>, data : D) : R;
 	
-	public var value(default, null) : String;
+	@:public @:final public var value(default, null) : String;
 	
 	
 }

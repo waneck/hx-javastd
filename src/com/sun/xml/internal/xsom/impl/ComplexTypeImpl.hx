@@ -25,75 +25,75 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class ComplexTypeImpl extends com.sun.xml.internal.xsom.impl.AttributesHolder implements com.sun.xml.internal.xsom.XSComplexType implements com.sun.xml.internal.xsom.impl.Ref.Ref_ComplexType
 {
-	@:overload public function new(_parent : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _name : String, _anonymous : Bool, _abstract : Bool, _derivationMethod : Int, _base : com.sun.xml.internal.xsom.impl.Ref.Ref_Type, _final : Int, _block : Int, _mixed : Bool) : Void;
+	@:overload @:public public function new(_parent : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _name : String, _anonymous : Bool, _abstract : Bool, _derivationMethod : Int, _base : com.sun.xml.internal.xsom.impl.Ref.Ref_Type, _final : Int, _block : Int, _mixed : Bool) : Void;
 	
-	@:overload public function asComplexType() : com.sun.xml.internal.xsom.XSComplexType;
+	@:overload @:public public function asComplexType() : com.sun.xml.internal.xsom.XSComplexType;
 	
-	@:overload public function isDerivedFrom(t : com.sun.xml.internal.xsom.XSType) : Bool;
+	@:overload @:public public function isDerivedFrom(t : com.sun.xml.internal.xsom.XSType) : Bool;
 	
-	@:overload public function asSimpleType() : com.sun.xml.internal.xsom.XSSimpleType;
+	@:overload @:public public function asSimpleType() : com.sun.xml.internal.xsom.XSSimpleType;
 	
-	@:overload @:final public function isSimpleType() : Bool;
+	@:overload @:public @:final public function isSimpleType() : Bool;
 	
-	@:overload @:final public function isComplexType() : Bool;
+	@:overload @:public @:final public function isComplexType() : Bool;
 	
-	@:overload public function getDerivationMethod() : Int;
+	@:overload @:public public function getDerivationMethod() : Int;
 	
-	@:overload public function getBaseType() : com.sun.xml.internal.xsom.XSType;
+	@:overload @:public public function getBaseType() : com.sun.xml.internal.xsom.XSType;
 	
 	/**
 	* Called when this complex type redefines the specified complex type.
 	*/
-	@:overload public function redefine(ct : com.sun.xml.internal.xsom.impl.ComplexTypeImpl) : Void;
+	@:overload @:public public function redefine(ct : com.sun.xml.internal.xsom.impl.ComplexTypeImpl) : Void;
 	
-	@:overload public function getRedefinedBy() : com.sun.xml.internal.xsom.XSComplexType;
+	@:overload @:public public function getRedefinedBy() : com.sun.xml.internal.xsom.XSComplexType;
 	
-	@:overload public function getRedefinedCount() : Int;
+	@:overload @:public public function getRedefinedCount() : Int;
 	
-	@:overload public function getScope() : com.sun.xml.internal.xsom.XSElementDecl;
+	@:overload @:public public function getScope() : com.sun.xml.internal.xsom.XSElementDecl;
 	
-	@:overload public function setScope(_scope : com.sun.xml.internal.xsom.XSElementDecl) : Void;
+	@:overload @:public public function setScope(_scope : com.sun.xml.internal.xsom.XSElementDecl) : Void;
 	
-	@:overload public function isAbstract() : Bool;
+	@:overload @:public public function isAbstract() : Bool;
 	
 	/**
 	* Set the local attribute wildcard.
 	*/
-	@:overload public function setWildcard(wc : com.sun.xml.internal.xsom.impl.WildcardImpl) : Void;
+	@:overload @:public override public function setWildcard(wc : com.sun.xml.internal.xsom.impl.WildcardImpl) : Void;
 	
-	@:overload public function getAttributeWildcard() : com.sun.xml.internal.xsom.XSWildcard;
+	@:overload @:public public function getAttributeWildcard() : com.sun.xml.internal.xsom.XSWildcard;
 	
-	@:overload public function isFinal(derivationMethod : Int) : Bool;
+	@:overload @:public public function isFinal(derivationMethod : Int) : Bool;
 	
-	@:overload public function isSubstitutionProhibited(method : Int) : Bool;
+	@:overload @:public public function isSubstitutionProhibited(method : Int) : Bool;
 	
-	@:overload public function setContentType(v : com.sun.xml.internal.xsom.impl.Ref.Ref_ContentType) : Void;
+	@:overload @:public public function setContentType(v : com.sun.xml.internal.xsom.impl.Ref.Ref_ContentType) : Void;
 	
-	@:overload public function getContentType() : com.sun.xml.internal.xsom.XSContentType;
+	@:overload @:public public function getContentType() : com.sun.xml.internal.xsom.XSContentType;
 	
-	@:overload public function setExplicitContent(v : com.sun.xml.internal.xsom.XSContentType) : Void;
+	@:overload @:public public function setExplicitContent(v : com.sun.xml.internal.xsom.XSContentType) : Void;
 	
-	@:overload public function getExplicitContent() : com.sun.xml.internal.xsom.XSContentType;
+	@:overload @:public public function getExplicitContent() : com.sun.xml.internal.xsom.XSContentType;
 	
-	@:overload public function isMixed() : Bool;
+	@:overload @:public public function isMixed() : Bool;
 	
-	@:overload public function getAttributeUse(nsURI : String, localName : String) : com.sun.xml.internal.xsom.XSAttributeUse;
+	@:overload @:public public function getAttributeUse(nsURI : String, localName : String) : com.sun.xml.internal.xsom.XSAttributeUse;
 	
-	@:overload public function iterateAttributeUses() : java.util.Iterator<com.sun.xml.internal.xsom.XSAttributeUse>;
+	@:overload @:public override public function iterateAttributeUses() : java.util.Iterator<com.sun.xml.internal.xsom.XSAttributeUse>;
 	
-	@:overload public function getAttributeUses() : java.util.Collection<com.sun.xml.internal.xsom.XSAttributeUse>;
+	@:overload @:public override public function getAttributeUses() : java.util.Collection<com.sun.xml.internal.xsom.XSAttributeUse>;
 	
-	@:overload public function listSubstitutables() : java.NativeArray<com.sun.xml.internal.xsom.XSType>;
+	@:overload @:public public function listSubstitutables() : java.NativeArray<com.sun.xml.internal.xsom.XSType>;
 	
-	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
-	@:overload public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSFunction<T>) : T;
+	@:overload @:public override public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSFunction<T>) : T;
 	
-	@:overload public function getType() : com.sun.xml.internal.xsom.XSComplexType;
+	@:overload @:public public function getType() : com.sun.xml.internal.xsom.XSComplexType;
 	
-	@:overload public function getSubtypes() : java.util.List<com.sun.xml.internal.xsom.XSComplexType>;
+	@:overload @:public public function getSubtypes() : java.util.List<com.sun.xml.internal.xsom.XSComplexType>;
 	
-	@:overload public function getElementDecls() : java.util.List<com.sun.xml.internal.xsom.XSElementDecl>;
+	@:overload @:public public function getElementDecls() : java.util.List<com.sun.xml.internal.xsom.XSElementDecl>;
 	
 	
 }

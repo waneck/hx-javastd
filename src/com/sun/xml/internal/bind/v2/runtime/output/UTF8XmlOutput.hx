@@ -31,65 +31,65 @@ extern class UTF8XmlOutput extends com.sun.xml.internal.bind.v2.runtime.output.X
 	* @author Kohsuke Kawaguchi
 	* @author Paul Sandoz
 	*/
-	private var out(default, null) : java.io.OutputStream;
+	@:protected @:final private var out(default, null) : java.io.OutputStream;
 	
 	/** Buffer of octets for writing. */
-	private var octetBuffer(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:protected @:final private var octetBuffer(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** Index in buffer to write to. */
-	private var octetBufferIndex : Int;
+	@:protected private var octetBufferIndex : Int;
 	
 	/**
 	* Set to true to indicate that we need to write '>'
 	* to close a start tag. Deferring the write of this char
 	* allows us to write "/>" for empty elements.
 	*/
-	private var closeStartTagPending : Bool;
+	@:protected private var closeStartTagPending : Bool;
 	
 	/**
 	*
 	* @param localNames
 	*      local names encoded in UTF-8.
 	*/
-	@:overload public function new(out : java.io.OutputStream, localNames : java.NativeArray<com.sun.xml.internal.bind.v2.runtime.output.Encoded>, escapeHandler : com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, localNames : java.NativeArray<com.sun.xml.internal.bind.v2.runtime.output.Encoded>, escapeHandler : com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler) : Void;
 	
-	@:overload public function setHeader(header : String) : Void;
+	@:overload @:public public function setHeader(header : String) : Void;
 	
-	@:overload public function startDocument(serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, fragment : Bool, nsUriIndex2prefixIndex : java.NativeArray<Int>, nsContext : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl) : Void;
+	@:overload @:public override public function startDocument(serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, fragment : Bool, nsUriIndex2prefixIndex : java.NativeArray<Int>, nsContext : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl) : Void;
 	
-	@:overload public function endDocument(fragment : Bool) : Void;
+	@:overload @:public override public function endDocument(fragment : Bool) : Void;
 	
 	/**
 	* Writes '>' to close the start tag, if necessary.
 	*/
-	@:overload @:final private function closeStartTag() : Void;
+	@:overload @:protected @:final private function closeStartTag() : Void;
 	
-	@:overload public function beginStartTag(prefix : Int, localName : String) : Void;
+	@:overload @:public override public function beginStartTag(prefix : Int, localName : String) : Void;
 	
-	@:overload public function beginStartTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
+	@:overload @:public override public function beginStartTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
 	
-	@:overload private function writeNsDecls(base : Int) : Void;
+	@:overload @:protected private function writeNsDecls(base : Int) : Void;
 	
 	/**
 	* Writes a single namespace declaration for the specified prefix.
 	*/
-	@:overload @:final private function writeNsDecl(prefixIndex : Int) : Void;
+	@:overload @:protected @:final private function writeNsDecl(prefixIndex : Int) : Void;
 	
-	@:overload public function attribute(name : com.sun.xml.internal.bind.v2.runtime.Name, value : String) : Void;
+	@:overload @:public override public function attribute(name : com.sun.xml.internal.bind.v2.runtime.Name, value : String) : Void;
 	
-	@:overload public function attribute(prefix : Int, localName : String, value : String) : Void;
+	@:overload @:public override public function attribute(prefix : Int, localName : String, value : String) : Void;
 	
-	@:overload public function endStartTag() : Void;
+	@:overload @:public override public function endStartTag() : Void;
 	
-	@:overload public function endTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
+	@:overload @:public override public function endTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
 	
-	@:overload public function endTag(prefix : Int, localName : String) : Void;
+	@:overload @:public override public function endTag(prefix : Int, localName : String) : Void;
 	
-	@:overload override public function text(value : String, needSP : Bool) : Void;
+	@:overload @:public override public function text(value : String, needSP : Bool) : Void;
 	
-	@:overload override public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needSP : Bool) : Void;
+	@:overload @:public override public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needSP : Bool) : Void;
 	
-	@:overload @:final public function text(value : Int) : Void;
+	@:overload @:public @:final public function text(value : Int) : Void;
 	
 	/**
 	* Writes the given byte[] as base64 encoded binary to the output.
@@ -98,7 +98,7 @@ extern class UTF8XmlOutput extends com.sun.xml.internal.bind.v2.runtime.output.X
 	* Being defined on this class allows this method to access the buffer directly,
 	* which translates to a better performance.
 	*/
-	@:overload public function text(data : java.NativeArray<java.StdTypes.Int8>, dataLen : Int) : Void;
+	@:overload @:public public function text(data : java.NativeArray<java.StdTypes.Int8>, dataLen : Int) : Void;
 	
 	/**
 	* Writes one byte directly into the buffer.
@@ -107,13 +107,13 @@ extern class UTF8XmlOutput extends com.sun.xml.internal.bind.v2.runtime.output.X
 	* This method can be used somewhat like the {@code text} method,
 	* but it doesn't perform character escaping.
 	*/
-	@:overload @:final public function write(i : Int) : Void;
+	@:overload @:public @:final public function write(i : Int) : Void;
 	
-	@:overload @:final private function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected @:final private function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:final private function write(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
+	@:overload @:protected @:final private function write(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
 	
-	@:overload @:final private function flushBuffer() : Void;
+	@:overload @:protected @:final private function flushBuffer() : Void;
 	
 	
 }

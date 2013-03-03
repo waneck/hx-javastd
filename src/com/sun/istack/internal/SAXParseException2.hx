@@ -31,15 +31,15 @@ extern class SAXParseException2 extends org.xml.sax.SAXParseException
 	* @author Kohsuke Kawaguchi
 	* @since 2.0 FCS
 	*/
-	@:require(java0) @:overload public function new(message : String, locator : org.xml.sax.Locator) : Void;
+	@:require(java0) @:overload @:public public function new(message : String, locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function new(message : String, locator : org.xml.sax.Locator, e : java.lang.Exception) : Void;
+	@:overload @:public public function new(message : String, locator : org.xml.sax.Locator, e : java.lang.Exception) : Void;
 	
-	@:overload public function new(message : String, publicId : String, systemId : String, lineNumber : Int, columnNumber : Int) : Void;
+	@:overload @:public public function new(message : String, publicId : String, systemId : String, lineNumber : Int, columnNumber : Int) : Void;
 	
-	@:overload public function new(message : String, publicId : String, systemId : String, lineNumber : Int, columnNumber : Int, e : java.lang.Exception) : Void;
+	@:overload @:public public function new(message : String, publicId : String, systemId : String, lineNumber : Int, columnNumber : Int, e : java.lang.Exception) : Void;
 	
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

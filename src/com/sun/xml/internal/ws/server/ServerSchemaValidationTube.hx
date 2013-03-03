@@ -25,19 +25,19 @@ package com.sun.xml.internal.ws.server;
 */
 extern class ServerSchemaValidationTube extends com.sun.xml.internal.ws.util.pipe.AbstractSchemaValidationTube
 {
-	@:overload public function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, binding : com.sun.xml.internal.ws.api.WSBinding, seiModel : com.sun.xml.internal.ws.api.model.SEIModel, wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
+	@:overload @:public public function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, binding : com.sun.xml.internal.ws.api.WSBinding, seiModel : com.sun.xml.internal.ws.api.model.SEIModel, wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload override private function getValidator() : javax.xml.validation.Validator;
+	@:overload @:protected override private function getValidator() : javax.xml.validation.Validator;
 	
-	@:overload override private function isNoValidation() : Bool;
+	@:overload @:protected override private function isNoValidation() : Bool;
 	
-	@:overload public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload private function new(that : com.sun.xml.internal.ws.server.ServerSchemaValidationTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload @:protected private function new(that : com.sun.xml.internal.ws.server.ServerSchemaValidationTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
-	@:overload public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl;
+	@:overload @:public override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl;
 	
 	
 }

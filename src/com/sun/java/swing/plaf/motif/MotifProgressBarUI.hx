@@ -28,7 +28,7 @@ extern class MotifProgressBarUI extends javax.swing.plaf.basic.BasicProgressBarU
 	/**
 	* Creates the ProgressBar's UI
 	*/
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	
 }

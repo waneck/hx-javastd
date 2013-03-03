@@ -69,7 +69,7 @@ extern class InnerClass implements java.lang.Cloneable implements com.sun.org.ap
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.InnerClass) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.InnerClass) : Void;
 	
 	/**
 	* @param inner_class_index Class index in constant pool of inner class
@@ -77,7 +77,7 @@ extern class InnerClass implements java.lang.Cloneable implements com.sun.org.ap
 	* @param inner_name_index  Name index in constant pool of inner class
 	* @param inner_access_flags Access flags of inner class
 	*/
-	@:overload public function new(inner_class_index : Int, outer_class_index : Int, inner_name_index : Int, inner_access_flags : Int) : Void;
+	@:overload @:public public function new(inner_class_index : Int, outer_class_index : Int, inner_name_index : Int, inner_access_flags : Int) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -86,7 +86,7 @@ extern class InnerClass implements java.lang.Cloneable implements com.sun.org.ap
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump inner class attribute to file stream in binary format.
@@ -94,62 +94,62 @@ extern class InnerClass implements java.lang.Cloneable implements com.sun.org.ap
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return access flags of inner class.
 	*/
-	@:overload @:final public function getInnerAccessFlags() : Int;
+	@:overload @:public @:final public function getInnerAccessFlags() : Int;
 	
 	/**
 	* @return class index of inner class.
 	*/
-	@:overload @:final public function getInnerClassIndex() : Int;
+	@:overload @:public @:final public function getInnerClassIndex() : Int;
 	
 	/**
 	* @return name index of inner class.
 	*/
-	@:overload @:final public function getInnerNameIndex() : Int;
+	@:overload @:public @:final public function getInnerNameIndex() : Int;
 	
 	/**
 	* @return class index of outer class.
 	*/
-	@:overload @:final public function getOuterClassIndex() : Int;
+	@:overload @:public @:final public function getOuterClassIndex() : Int;
 	
 	/**
 	* @param inner_access_flags.
 	*/
-	@:overload @:final public function setInnerAccessFlags(inner_access_flags : Int) : Void;
+	@:overload @:public @:final public function setInnerAccessFlags(inner_access_flags : Int) : Void;
 	
 	/**
 	* @param inner_class_index.
 	*/
-	@:overload @:final public function setInnerClassIndex(inner_class_index : Int) : Void;
+	@:overload @:public @:final public function setInnerClassIndex(inner_class_index : Int) : Void;
 	
 	/**
 	* @param inner_name_index.
 	*/
-	@:overload @:final public function setInnerNameIndex(inner_name_index : Int) : Void;
+	@:overload @:public @:final public function setInnerNameIndex(inner_name_index : Int) : Void;
 	
 	/**
 	* @param outer_class_index.
 	*/
-	@:overload @:final public function setOuterClassIndex(outer_class_index : Int) : Void;
+	@:overload @:public @:final public function setOuterClassIndex(outer_class_index : Int) : Void;
 	
 	/**
 	* @return String representation.
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/**
 	* @return Resolved string representation
 	*/
-	@:overload @:final public function toString(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
+	@:overload @:public @:final public function toString(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
 	
 	/**
 	* @return deep copy of this object
 	*/
-	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.InnerClass;
+	@:overload @:public public function copy() : com.sun.org.apache.bcel.internal.classfile.InnerClass;
 	
 	
 }

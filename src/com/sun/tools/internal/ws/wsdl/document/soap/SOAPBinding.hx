@@ -30,23 +30,23 @@ extern class SOAPBinding extends com.sun.tools.internal.ws.wsdl.framework.Extens
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function getTransport() : String;
+	@:overload @:public public function getTransport() : String;
 	
-	@:overload public function setTransport(s : String) : Void;
+	@:overload @:public public function setTransport(s : String) : Void;
 	
-	@:overload public function getStyle() : com.sun.tools.internal.ws.wsdl.document.soap.SOAPStyle;
+	@:overload @:public public function getStyle() : com.sun.tools.internal.ws.wsdl.document.soap.SOAPStyle;
 	
-	@:overload public function setStyle(s : com.sun.tools.internal.ws.wsdl.document.soap.SOAPStyle) : Void;
+	@:overload @:public public function setStyle(s : com.sun.tools.internal.ws.wsdl.document.soap.SOAPStyle) : Void;
 	
-	@:overload public function isDocument() : Bool;
+	@:overload @:public public function isDocument() : Bool;
 	
-	@:overload public function isRPC() : Bool;
+	@:overload @:public public function isRPC() : Bool;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload @:public override public function validateThis() : Void;
 	
 	
 }

@@ -32,17 +32,17 @@ package sun.tools.jstat;
 */
 @:require(java5) extern class Identifier extends sun.tools.jstat.Expression
 {
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public public function setValue(value : Dynamic) : Void;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
-	@:overload public function isResolved() : Bool;
+	@:overload @:public public function isResolved() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

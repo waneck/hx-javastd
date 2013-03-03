@@ -35,7 +35,7 @@ extern class DefaultHostnameVerifier implements javax.net.ssl.HostnameVerifier
 	*
 	* @author Xuelei Fan
 	*/
-	@:overload public function verify(hostname : String, session : javax.net.ssl.SSLSession) : Bool;
+	@:overload @:public public function verify(hostname : String, session : javax.net.ssl.SSLSession) : Bool;
 	
 	
 }

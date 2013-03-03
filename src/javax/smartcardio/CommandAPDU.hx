@@ -38,7 +38,7 @@ extern class CommandAPDU implements java.io.Serializable
 	* @throws IllegalArgumentException if apdu does not contain a valid
 	*   command APDU
 	*/
-	@:overload public function new(apdu : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(apdu : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs a CommandAPDU from a byte array containing the complete
@@ -59,7 +59,7 @@ extern class CommandAPDU implements java.io.Serializable
 	*   negative or if apduOffset + apduLength are greater than apdu.length,
 	*   or if the specified bytes are not a valid APDU
 	*/
-	@:overload public function new(apdu : java.NativeArray<java.StdTypes.Int8>, apduOffset : Int, apduLength : Int) : Void;
+	@:overload @:public public function new(apdu : java.NativeArray<java.StdTypes.Int8>, apduOffset : Int, apduLength : Int) : Void;
 	
 	/**
 	* Creates a CommandAPDU from the ByteBuffer containing the complete APDU
@@ -77,7 +77,7 @@ extern class CommandAPDU implements java.io.Serializable
 	* @throws IllegalArgumentException if apdu does not contain a valid
 	*   command APDU
 	*/
-	@:overload public function new(apdu : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function new(apdu : java.nio.ByteBuffer) : Void;
 	
 	/**
 	* Constructs a CommandAPDU from the four header bytes. This is case 1
@@ -88,7 +88,7 @@ extern class CommandAPDU implements java.io.Serializable
 	* @param p1 the parameter byte P1
 	* @param p2 the parameter byte P2
 	*/
-	@:overload public function new(cla : Int, ins : Int, p1 : Int, p2 : Int) : Void;
+	@:overload @:public public function new(cla : Int, ins : Int, p1 : Int, p2 : Int) : Void;
 	
 	/**
 	* Constructs a CommandAPDU from the four header bytes and the expected
@@ -105,7 +105,7 @@ extern class CommandAPDU implements java.io.Serializable
 	* @throws IllegalArgumentException if ne is negative or greater than
 	*   65536
 	*/
-	@:overload public function new(cla : Int, ins : Int, p1 : Int, p2 : Int, ne : Int) : Void;
+	@:overload @:public public function new(cla : Int, ins : Int, p1 : Int, p2 : Int, ne : Int) : Void;
 	
 	/**
 	* Constructs a CommandAPDU from the four header bytes and command data.
@@ -124,7 +124,7 @@ extern class CommandAPDU implements java.io.Serializable
 	*
 	* @throws IllegalArgumentException if data.length is greater than 65535
 	*/
-	@:overload public function new(cla : Int, ins : Int, p1 : Int, p2 : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(cla : Int, ins : Int, p1 : Int, p2 : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs a CommandAPDU from the four header bytes and command data.
@@ -149,7 +149,7 @@ extern class CommandAPDU implements java.io.Serializable
 	*   negative or if dataOffset + dataLength are greater than data.length
 	*   or if dataLength is greater than 65535
 	*/
-	@:overload public function new(cla : Int, ins : Int, p1 : Int, p2 : Int, data : java.NativeArray<java.StdTypes.Int8>, dataOffset : Int, dataLength : Int) : Void;
+	@:overload @:public public function new(cla : Int, ins : Int, p1 : Int, p2 : Int, data : java.NativeArray<java.StdTypes.Int8>, dataOffset : Int, dataLength : Int) : Void;
 	
 	/**
 	* Constructs a CommandAPDU from the four header bytes, command data,
@@ -171,7 +171,7 @@ extern class CommandAPDU implements java.io.Serializable
 	* @throws IllegalArgumentException if data.length is greater than 65535
 	*   or if ne is negative or greater than 65536
 	*/
-	@:overload public function new(cla : Int, ins : Int, p1 : Int, p2 : Int, data : java.NativeArray<java.StdTypes.Int8>, ne : Int) : Void;
+	@:overload @:public public function new(cla : Int, ins : Int, p1 : Int, p2 : Int, data : java.NativeArray<java.StdTypes.Int8>, ne : Int) : Void;
 	
 	/**
 	* Constructs a CommandAPDU from the four header bytes, command data,
@@ -200,35 +200,35 @@ extern class CommandAPDU implements java.io.Serializable
 	*   or if ne is negative or greater than 65536,
 	*   or if dataLength is greater than 65535
 	*/
-	@:overload public function new(cla : Int, ins : Int, p1 : Int, p2 : Int, data : java.NativeArray<java.StdTypes.Int8>, dataOffset : Int, dataLength : Int, ne : Int) : Void;
+	@:overload @:public public function new(cla : Int, ins : Int, p1 : Int, p2 : Int, data : java.NativeArray<java.StdTypes.Int8>, dataOffset : Int, dataLength : Int, ne : Int) : Void;
 	
 	/**
 	* Returns the value of the class byte CLA.
 	*
 	* @return the value of the class byte CLA.
 	*/
-	@:overload public function getCLA() : Int;
+	@:overload @:public public function getCLA() : Int;
 	
 	/**
 	* Returns the value of the instruction byte INS.
 	*
 	* @return the value of the instruction byte INS.
 	*/
-	@:overload public function getINS() : Int;
+	@:overload @:public public function getINS() : Int;
 	
 	/**
 	* Returns the value of the parameter byte P1.
 	*
 	* @return the value of the parameter byte P1.
 	*/
-	@:overload public function getP1() : Int;
+	@:overload @:public public function getP1() : Int;
 	
 	/**
 	* Returns the value of the parameter byte P2.
 	*
 	* @return the value of the parameter byte P2.
 	*/
-	@:overload public function getP2() : Int;
+	@:overload @:public public function getP2() : Int;
 	
 	/**
 	* Returns the number of data bytes in the command body (Nc) or 0 if this
@@ -238,7 +238,7 @@ extern class CommandAPDU implements java.io.Serializable
 	* @return the number of data bytes in the command body or 0 if this APDU
 	* has no body.
 	*/
-	@:overload public function getNc() : Int;
+	@:overload @:public public function getNc() : Int;
 	
 	/**
 	* Returns a copy of the data bytes in the command body. If this APDU as
@@ -247,7 +247,7 @@ extern class CommandAPDU implements java.io.Serializable
 	* @return a copy of the data bytes in the command body or the empty
 	*    byte array if this APDU has no body.
 	*/
-	@:overload public function getData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the maximum number of expected data bytes in a response
@@ -255,21 +255,21 @@ extern class CommandAPDU implements java.io.Serializable
 	*
 	* @return the maximum number of expected data bytes in a response APDU.
 	*/
-	@:overload public function getNe() : Int;
+	@:overload @:public public function getNe() : Int;
 	
 	/**
 	* Returns a copy of the bytes in this APDU.
 	*
 	* @return a copy of the bytes in this APDU.
 	*/
-	@:overload public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a string representation of this command APDU.
 	*
 	* @return a String representation of this command APDU.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares the specified object with this command APDU for equality.
@@ -279,14 +279,14 @@ extern class CommandAPDU implements java.io.Serializable
 	* @param obj the object to be compared for equality with this command APDU
 	* @return true if the specified object is equal to this command APDU
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this command APDU.
 	*
 	* @return the hash code value for this command APDU.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

@@ -27,14 +27,14 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	* Constructor UnImplNode
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Throw an error.
 	*
 	* @param msg Message Key for the error
 	*/
-	@:overload public function error(msg : String) : Void;
+	@:overload @:public public function error(msg : String) : Void;
 	
 	/**
 	* Throw an error.
@@ -42,7 +42,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	* @param msg Message Key for the error
 	* @param args Array of arguments to be used in the error message
 	*/
-	@:overload public function error(msg : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function error(msg : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
@@ -53,63 +53,63 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return false
 	*/
-	@:overload public function hasChildNodes() : Bool;
+	@:overload @:public public function hasChildNodes() : Bool;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return 0
 	*/
-	@:overload public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return null
 	*/
-	@:overload public function getParentNode() : org.w3c.dom.Node;
+	@:overload @:public public function getParentNode() : org.w3c.dom.Node;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return null
 	*/
-	@:overload public function getChildNodes() : org.w3c.dom.NodeList;
+	@:overload @:public public function getChildNodes() : org.w3c.dom.NodeList;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return null
 	*/
-	@:overload public function getFirstChild() : org.w3c.dom.Node;
+	@:overload @:public public function getFirstChild() : org.w3c.dom.Node;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return null
 	*/
-	@:overload public function getLastChild() : org.w3c.dom.Node;
+	@:overload @:public public function getLastChild() : org.w3c.dom.Node;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return null
 	*/
-	@:overload public function getNextSibling() : org.w3c.dom.Node;
+	@:overload @:public public function getNextSibling() : org.w3c.dom.Node;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.NodeList
 	*
 	* @return 0
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.NodeList
@@ -118,31 +118,31 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @return null
 	*/
-	@:overload public function item(index : Int) : org.w3c.dom.Node;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.Node;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return null
 	*/
-	@:overload public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload @:public public function getOwnerDocument() : org.w3c.dom.Document;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return null
 	*/
-	@:overload public function getTagName() : String;
+	@:overload @:public public function getTagName() : String;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return null
 	*/
-	@:overload public function getNodeName() : String;
+	@:overload @:public public function getNodeName() : String;
 	
 	/** Unimplemented. See org.w3c.dom.Node */
-	@:overload public function normalize() : Void;
+	@:overload @:public public function normalize() : Void;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Element
@@ -151,7 +151,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @return null
 	*/
-	@:overload public function getElementsByTagName(name : String) : org.w3c.dom.NodeList;
+	@:overload @:public public function getElementsByTagName(name : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Element
@@ -162,7 +162,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function removeAttributeNode(oldAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public public function removeAttributeNode(oldAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Element
@@ -173,7 +173,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function setAttributeNode(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public public function setAttributeNode(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Element
@@ -183,7 +183,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @return false
 	*/
-	@:overload public function hasAttribute(name : String) : Bool;
+	@:overload @:public public function hasAttribute(name : String) : Bool;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Element
@@ -194,7 +194,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @return false
 	*/
-	@:overload public function hasAttributeNS(name : String, x : String) : Bool;
+	@:overload @:public public function hasAttributeNS(name : String, x : String) : Bool;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Element
@@ -204,7 +204,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @return null
 	*/
-	@:overload public function getAttributeNode(name : String) : org.w3c.dom.Attr;
+	@:overload @:public public function getAttributeNode(name : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Element
@@ -213,7 +213,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function removeAttribute(name : String) : Void;
+	@:overload @:public public function removeAttribute(name : String) : Void;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Element
@@ -223,7 +223,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function setAttribute(name : String, value : String) : Void;
+	@:overload @:public public function setAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Element
@@ -232,14 +232,14 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @return null
 	*/
-	@:overload public function getAttribute(name : String) : String;
+	@:overload @:public public function getAttribute(name : String) : String;
 	
 	/**
 	* Unimplemented. Introduced in DOM Level 2.
 	*
 	* @return false
 	*/
-	@:overload public function hasAttributes() : Bool;
+	@:overload @:public public function hasAttributes() : Bool;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Element
@@ -249,7 +249,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @return null
 	*/
-	@:overload public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
+	@:overload @:public public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Element
@@ -260,7 +260,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function setAttributeNodeNS(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public public function setAttributeNodeNS(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Element
@@ -270,7 +270,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @return null
 	*/
-	@:overload public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
+	@:overload @:public public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Element
@@ -280,7 +280,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function removeAttributeNS(namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function removeAttributeNS(namespaceURI : String, localName : String) : Void;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Element
@@ -291,7 +291,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function setAttributeNS(namespaceURI : String, qualifiedName : String, value : String) : Void;
+	@:overload @:public public function setAttributeNS(namespaceURI : String, qualifiedName : String, value : String) : Void;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Element
@@ -301,14 +301,14 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @return null
 	*/
-	@:overload public function getAttributeNS(namespaceURI : String, localName : String) : String;
+	@:overload @:public public function getAttributeNS(namespaceURI : String, localName : String) : String;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return null
 	*/
-	@:overload public function getPreviousSibling() : org.w3c.dom.Node;
+	@:overload @:public public function getPreviousSibling() : org.w3c.dom.Node;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
@@ -317,7 +317,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @return null
 	*/
-	@:overload public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
@@ -326,7 +326,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function getNodeValue() : String;
+	@:overload @:public public function getNodeValue() : String;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
@@ -335,7 +335,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function setNodeValue(nodeValue : String) : Void;
+	@:overload @:public public function setNodeValue(nodeValue : String) : Void;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
@@ -344,28 +344,28 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function setValue(value : String) : Void;
+	@:overload @:public public function setValue(value : String) : Void;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return null
 	*/
-	@:overload public function getOwnerElement() : org.w3c.dom.Element;
+	@:overload @:public public function getOwnerElement() : org.w3c.dom.Element;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return False
 	*/
-	@:overload public function getSpecified() : Bool;
+	@:overload @:public public function getSpecified() : Bool;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return null
 	*/
-	@:overload public function getAttributes() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
@@ -377,7 +377,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
@@ -389,7 +389,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
@@ -400,7 +400,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Tests whether the DOM implementation implements a specific feature and
@@ -416,21 +416,21 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	* @return Returns <code>false</code>
 	* @since DOM Level 2
 	*/
-	@:overload public function isSupported(feature : String, version : String) : Bool;
+	@:overload @:public public function isSupported(feature : String, version : String) : Bool;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return null
 	*/
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return null
 	*/
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
@@ -439,35 +439,35 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function setPrefix(prefix : String) : Void;
+	@:overload @:public public function setPrefix(prefix : String) : Void;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Node
 	*
 	* @return null
 	*/
-	@:overload public function getLocalName() : String;
+	@:overload @:public public function getLocalName() : String;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Document
 	*
 	* @return null
 	*/
-	@:overload public function getDoctype() : org.w3c.dom.DocumentType;
+	@:overload @:public public function getDoctype() : org.w3c.dom.DocumentType;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Document
 	*
 	* @return null
 	*/
-	@:overload public function getImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload @:public public function getImplementation() : org.w3c.dom.DOMImplementation;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Document
 	*
 	* @return null
 	*/
-	@:overload public function getDocumentElement() : org.w3c.dom.Element;
+	@:overload @:public public function getDocumentElement() : org.w3c.dom.Element;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Document
@@ -478,14 +478,14 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function createElement(tagName : String) : org.w3c.dom.Element;
+	@:overload @:public public function createElement(tagName : String) : org.w3c.dom.Element;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Document
 	*
 	* @return null
 	*/
-	@:overload public function createDocumentFragment() : org.w3c.dom.DocumentFragment;
+	@:overload @:public public function createDocumentFragment() : org.w3c.dom.DocumentFragment;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Document
@@ -494,7 +494,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @return null
 	*/
-	@:overload public function createTextNode(data : String) : org.w3c.dom.Text;
+	@:overload @:public public function createTextNode(data : String) : org.w3c.dom.Text;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Document
@@ -503,7 +503,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @return null
 	*/
-	@:overload public function createComment(data : String) : org.w3c.dom.Comment;
+	@:overload @:public public function createComment(data : String) : org.w3c.dom.Comment;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Document
@@ -514,7 +514,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function createCDATASection(data : String) : org.w3c.dom.CDATASection;
+	@:overload @:public public function createCDATASection(data : String) : org.w3c.dom.CDATASection;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Document
@@ -526,7 +526,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function createProcessingInstruction(target : String, data : String) : org.w3c.dom.ProcessingInstruction;
+	@:overload @:public public function createProcessingInstruction(target : String, data : String) : org.w3c.dom.ProcessingInstruction;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Document
@@ -537,7 +537,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function createAttribute(name : String) : org.w3c.dom.Attr;
+	@:overload @:public public function createAttribute(name : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Document
@@ -548,7 +548,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function createEntityReference(name : String) : org.w3c.dom.EntityReference;
+	@:overload @:public public function createEntityReference(name : String) : org.w3c.dom.EntityReference;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Document
@@ -563,7 +563,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function importNode(importedNode : org.w3c.dom.Node, deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public public function importNode(importedNode : org.w3c.dom.Node, deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Document
@@ -575,7 +575,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function createElementNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Element;
+	@:overload @:public public function createElementNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Element;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Document
@@ -587,7 +587,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function createAttributeNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Attr;
+	@:overload @:public public function createAttributeNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Unimplemented. See org.w3c.dom.Document
@@ -596,7 +596,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @return null
 	*/
-	@:overload public function getElementById(elementId : String) : org.w3c.dom.Element;
+	@:overload @:public public function getElementById(elementId : String) : org.w3c.dom.Element;
 	
 	/**
 	* Set Node data
@@ -606,7 +606,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function setData(data : String) : Void;
+	@:overload @:public public function setData(data : String) : Void;
 	
 	/**
 	* Unimplemented.
@@ -618,7 +618,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function substringData(offset : Int, count : Int) : String;
+	@:overload @:public public function substringData(offset : Int, count : Int) : String;
 	
 	/**
 	* Unimplemented.
@@ -627,7 +627,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function appendData(arg : String) : Void;
+	@:overload @:public public function appendData(arg : String) : Void;
 	
 	/**
 	* Unimplemented.
@@ -637,7 +637,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function insertData(offset : Int, arg : String) : Void;
+	@:overload @:public public function insertData(offset : Int, arg : String) : Void;
 	
 	/**
 	* Unimplemented.
@@ -647,7 +647,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function deleteData(offset : Int, count : Int) : Void;
+	@:overload @:public public function deleteData(offset : Int, count : Int) : Void;
 	
 	/**
 	* Unimplemented.
@@ -658,7 +658,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function replaceData(offset : Int, count : Int, arg : String) : Void;
+	@:overload @:public public function replaceData(offset : Int, count : Int, arg : String) : Void;
 	
 	/**
 	* Unimplemented.
@@ -669,7 +669,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function splitText(offset : Int) : org.w3c.dom.Text;
+	@:overload @:public public function splitText(offset : Int) : org.w3c.dom.Text;
 	
 	/**
 	* NEEDSDOC Method adoptNode
@@ -681,7 +681,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* @throws DOMException
 	*/
-	@:overload public function adoptNode(source : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function adoptNode(source : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* <p>EXPERIMENTAL! Based on the <a
@@ -694,7 +694,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* NEEDSDOC ($objectName$) @return
 	*/
-	@:overload public function getInputEncoding() : String;
+	@:overload @:public public function getInputEncoding() : String;
 	
 	/**
 	* <p>EXPERIMENTAL! Based on the <a
@@ -707,7 +707,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* NEEDSDOC @param encoding
 	*/
-	@:overload public function setInputEncoding(encoding : String) : Void;
+	@:overload @:public public function setInputEncoding(encoding : String) : Void;
 	
 	/**
 	* <p>EXPERIMENTAL! Based on the <a
@@ -720,7 +720,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* NEEDSDOC ($objectName$) @return
 	*/
-	@:overload public function getStandalone() : Bool;
+	@:overload @:public public function getStandalone() : Bool;
 	
 	/**
 	* <p>EXPERIMENTAL! Based on the <a
@@ -733,7 +733,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* NEEDSDOC @param standalone
 	*/
-	@:overload public function setStandalone(standalone : Bool) : Void;
+	@:overload @:public public function setStandalone(standalone : Bool) : Void;
 	
 	/**
 	* <p>EXPERIMENTAL! Based on the <a
@@ -750,7 +750,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* NEEDSDOC ($objectName$) @return
 	*/
-	@:overload public function getStrictErrorChecking() : Bool;
+	@:overload @:public public function getStrictErrorChecking() : Bool;
 	
 	/**
 	* <p>EXPERIMENTAL! Based on the <a
@@ -767,7 +767,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* NEEDSDOC @param strictErrorChecking
 	*/
-	@:overload public function setStrictErrorChecking(strictErrorChecking : Bool) : Void;
+	@:overload @:public public function setStrictErrorChecking(strictErrorChecking : Bool) : Void;
 	
 	/**
 	* <p>EXPERIMENTAL! Based on the <a
@@ -780,7 +780,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* NEEDSDOC ($objectName$) @return
 	*/
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
 	/**
 	* <p>EXPERIMENTAL! Based on the <a
@@ -793,9 +793,9 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*
 	* NEEDSDOC @param version
 	*/
-	@:overload public function setVersion(version : String) : Void;
+	@:overload @:public public function setVersion(version : String) : Void;
 	
-	@:overload public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
+	@:overload @:public public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
 	
 	/**
 	* Retrieves the object associated to a key on a this node. The object
@@ -806,7 +806,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*   on this node, or <code>null</code> if there was none.
 	* @since DOM Level 3
 	*/
-	@:overload public function getUserData(key : String) : Dynamic;
+	@:overload @:public public function getUserData(key : String) : Dynamic;
 	
 	/**
 	*  This method returns a specialized object which implements the
@@ -828,7 +828,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*   childNodes, etc.
 	* @since DOM Level 3
 	*/
-	@:overload public function getFeature(feature : String, version : String) : Dynamic;
+	@:overload @:public public function getFeature(feature : String, version : String) : Dynamic;
 	
 	/**
 	* Tests whether two nodes are equal.
@@ -870,7 +870,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*   <code>true</code> otherwise <code>false</code>.
 	* @since DOM Level 3
 	*/
-	@:overload public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* DOM Level 3 - Experimental:
@@ -881,7 +881,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	* @return th URI for the namespace
 	* @since DOM Level 3
 	*/
-	@:overload public function lookupNamespaceURI(specifiedPrefix : String) : String;
+	@:overload @:public public function lookupNamespaceURI(specifiedPrefix : String) : String;
 	
 	/**
 	*  DOM Level 3: Experimental
@@ -892,7 +892,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*   is the default namespace, <code>false</code> otherwise.
 	* @since DOM Level 3
 	*/
-	@:overload public function isDefaultNamespace(namespaceURI : String) : Bool;
+	@:overload @:public public function isDefaultNamespace(namespaceURI : String) : Bool;
 	
 	/**
 	*
@@ -902,7 +902,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	* @param namespaceURI
 	* @return the prefix for the namespace
 	*/
-	@:overload public function lookupPrefix(namespaceURI : String) : String;
+	@:overload @:public public function lookupPrefix(namespaceURI : String) : String;
 	
 	/**
 	* Returns whether this node is the same node as the given one.
@@ -918,7 +918,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*   <code>false</code> otherwise.
 	* @since DOM Level 3
 	*/
-	@:overload public function isSameNode(other : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function isSameNode(other : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -965,7 +965,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*   platform.
 	* @since DOM Level 3
 	*/
-	@:overload public function setTextContent(textContent : String) : Void;
+	@:overload @:public public function setTextContent(textContent : String) : Void;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -1012,7 +1012,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*   platform.
 	* @since DOM Level 3
 	*/
-	@:overload public function getTextContent() : String;
+	@:overload @:public public function getTextContent() : String;
 	
 	/**
 	* Compares a node with this node with regard to their position in the
@@ -1022,7 +1022,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	*   node.
 	* @since DOM Level 3
 	*/
-	@:overload public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
+	@:overload @:public public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
 	
 	/**
 	* The absolute base URI of this node or <code>null</code> if undefined.
@@ -1048,34 +1048,34 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	* Yes. (F2F 26 Sep 2001)
 	* @since DOM Level 3
 	*/
-	@:overload public function getBaseURI() : String;
+	@:overload @:public public function getBaseURI() : String;
 	
 	/**
 	* DOM Level 3 WD - Experimental.
 	* Renaming node
 	*/
-	@:overload public function renameNode(n : org.w3c.dom.Node, namespaceURI : String, name : String) : org.w3c.dom.Node;
+	@:overload @:public public function renameNode(n : org.w3c.dom.Node, namespaceURI : String, name : String) : org.w3c.dom.Node;
 	
 	/**
 	*  DOM Level 3 WD - Experimental
 	*  Normalize document.
 	*/
-	@:overload public function normalizeDocument() : Void;
+	@:overload @:public public function normalizeDocument() : Void;
 	
 	/**
 	*  The configuration used when <code>Document.normalizeDocument</code> is
 	* invoked.
 	* @since DOM Level 3
 	*/
-	@:overload public function getDomConfig() : org.w3c.dom.DOMConfiguration;
+	@:overload @:public public function getDomConfig() : org.w3c.dom.DOMConfiguration;
 	
 	/**Experimental DOM Level 3 feature: documentURI */
-	private var fDocumentURI : String;
+	@:protected private var fDocumentURI : String;
 	
 	/**
 	* DOM Level 3 WD - Experimental.
 	*/
-	@:overload public function setDocumentURI(documentURI : String) : Void;
+	@:overload @:public public function setDocumentURI(documentURI : String) : Void;
 	
 	/**
 	* DOM Level 3 WD - Experimental.
@@ -1085,10 +1085,10 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	* over this attribute.
 	* @since DOM Level 3
 	*/
-	@:overload public function getDocumentURI() : String;
+	@:overload @:public public function getDocumentURI() : String;
 	
 	/**Experimental DOM Level 3 feature: Document actualEncoding */
-	private var actualEncoding : String;
+	@:protected private var actualEncoding : String;
 	
 	/**
 	* DOM Level 3 WD - Experimental.
@@ -1098,7 +1098,7 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	* defined in .
 	* @since DOM Level 3
 	*/
-	@:overload public function getActualEncoding() : String;
+	@:overload @:public public function getActualEncoding() : String;
 	
 	/**
 	* DOM Level 3 WD - Experimental.
@@ -1108,12 +1108,12 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	* defined in .
 	* @since DOM Level 3
 	*/
-	@:overload public function setActualEncoding(value : String) : Void;
+	@:overload @:public public function setActualEncoding(value : String) : Void;
 	
 	/**
 	* DOM Level 3 WD - Experimental.
 	*/
-	@:overload public function replaceWholeText(content : String) : org.w3c.dom.Text;
+	@:overload @:public public function replaceWholeText(content : String) : org.w3c.dom.Text;
 	
 	/**
 	* DOM Level 3 WD - Experimental.
@@ -1121,56 +1121,56 @@ extern class UnImplNode implements org.w3c.dom.Node implements org.w3c.dom.Eleme
 	* nodes to this node, concatenated in document order.
 	* @since DOM Level 3
 	*/
-	@:overload public function getWholeText() : String;
+	@:overload @:public public function getWholeText() : String;
 	
 	/**
 	* DOM Level 3 WD - Experimental.
 	* Returns whether this text node contains whitespace in element content,
 	* often abusively called "ignorable whitespace".
 	*/
-	@:overload public function isWhitespaceInElementContent() : Bool;
+	@:overload @:public public function isWhitespaceInElementContent() : Bool;
 	
 	/**
 	* NON-DOM: set the type of this attribute to be ID type.
 	*
 	* @param id
 	*/
-	@:overload public function setIdAttribute(id : Bool) : Void;
+	@:overload @:public public function setIdAttribute(id : Bool) : Void;
 	
 	/**
 	* DOM Level 3: register the given attribute node as an ID attribute
 	*/
-	@:overload public function setIdAttribute(name : String, makeId : Bool) : Void;
+	@:overload @:public public function setIdAttribute(name : String, makeId : Bool) : Void;
 	
 	/**
 	* DOM Level 3: register the given attribute node as an ID attribute
 	*/
-	@:overload public function setIdAttributeNode(at : org.w3c.dom.Attr, makeId : Bool) : Void;
+	@:overload @:public public function setIdAttributeNode(at : org.w3c.dom.Attr, makeId : Bool) : Void;
 	
 	/**
 	* DOM Level 3: register the given attribute node as an ID attribute
 	*/
-	@:overload public function setIdAttributeNS(namespaceURI : String, localName : String, makeId : Bool) : Void;
+	@:overload @:public public function setIdAttributeNS(namespaceURI : String, localName : String, makeId : Bool) : Void;
 	
 	/**
 	* Method getSchemaTypeInfo.
 	* @return TypeInfo
 	*/
-	@:overload public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
+	@:overload @:public public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
 	
-	@:overload public function isId() : Bool;
+	@:overload @:public public function isId() : Bool;
 	
-	@:overload public function getXmlEncoding() : String;
+	@:overload @:public public function getXmlEncoding() : String;
 	
-	@:overload public function setXmlEncoding(xmlEncoding : String) : Void;
+	@:overload @:public public function setXmlEncoding(xmlEncoding : String) : Void;
 	
-	@:overload public function getXmlStandalone() : Bool;
+	@:overload @:public public function getXmlStandalone() : Bool;
 	
-	@:overload public function setXmlStandalone(xmlStandalone : Bool) : Void;
+	@:overload @:public public function setXmlStandalone(xmlStandalone : Bool) : Void;
 	
-	@:overload public function getXmlVersion() : String;
+	@:overload @:public public function getXmlVersion() : String;
 	
-	@:overload public function setXmlVersion(xmlVersion : String) : Void;
+	@:overload @:public public function setXmlVersion(xmlVersion : String) : Void;
 	
 	
 }

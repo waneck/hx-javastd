@@ -30,13 +30,13 @@ extern class ModelGenerator extends com.sun.xml.internal.ws.policy.sourcemodel.P
 	*
 	* @return A ModelGenerator instance.
 	*/
-	@:overload public static function getGenerator() : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator;
+	@:overload @:public @:static public static function getGenerator() : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$api$policy$ModelGenerator$SourceModelCreator') extern class ModelGenerator_SourceModelCreator extends com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator.PolicyModelGenerator_PolicySourceModelCreator
 {
-	@:overload private function create(policy : com.sun.xml.internal.ws.policy.Policy) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
+	@:overload @:protected override private function create(policy : com.sun.xml.internal.ws.policy.Policy) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	
 }

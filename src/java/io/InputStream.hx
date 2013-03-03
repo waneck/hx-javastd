@@ -56,7 +56,7 @@ package java.io;
 	*             stream is reached.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:abstract public function read() : Int;
+	@:overload @:public @:abstract public function read() : Int;
 	
 	/**
 	* Reads some number of bytes from the input stream and stores them into
@@ -91,7 +91,7 @@ package java.io;
 	* @exception  NullPointerException  if <code>b</code> is <code>null</code>.
 	* @see        java.io.InputStream#read(byte[], int, int)
 	*/
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Reads up to <code>len</code> bytes of data from the input stream into
@@ -150,7 +150,7 @@ package java.io;
 	* <code>b.length - off</code>
 	* @see        java.io.InputStream#read()
 	*/
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips over and discards <code>n</code> bytes of data from this input
@@ -172,7 +172,7 @@ package java.io;
 	* @exception  IOException  if the stream does not support seek,
 	*                          or if some other I/O error occurs.
 	*/
-	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns an estimate of the number of bytes that can be read (or
@@ -200,7 +200,7 @@ package java.io;
 	*             it reaches the end of the input stream.
 	* @exception  IOException if an I/O error occurs.
 	*/
-	@:overload public function available() : Int;
+	@:overload @:public public function available() : Int;
 	
 	/**
 	* Closes this input stream and releases any system resources associated
@@ -211,7 +211,7 @@ package java.io;
 	*
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Marks the current position in this input stream. A subsequent call to
@@ -239,7 +239,7 @@ package java.io;
 	*                      the mark position becomes invalid.
 	* @see     java.io.InputStream#reset()
 	*/
-	@:overload @:synchronized public function mark(readlimit : Int) : Void;
+	@:overload @:public @:synchronized public function mark(readlimit : Int) : Void;
 	
 	/**
 	* Repositions this stream to the position at the time the
@@ -286,7 +286,7 @@ package java.io;
 	* @see     java.io.InputStream#mark(int)
 	* @see     java.io.IOException
 	*/
-	@:overload @:synchronized public function reset() : Void;
+	@:overload @:public @:synchronized public function reset() : Void;
 	
 	/**
 	* Tests if this input stream supports the <code>mark</code> and
@@ -300,7 +300,7 @@ package java.io;
 	* @see     java.io.InputStream#mark(int)
 	* @see     java.io.InputStream#reset()
 	*/
-	@:overload public function markSupported() : Bool;
+	@:overload @:public public function markSupported() : Bool;
 	
 	
 }

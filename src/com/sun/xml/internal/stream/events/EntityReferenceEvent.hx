@@ -25,19 +25,19 @@ package com.sun.xml.internal.stream.events;
 */
 extern class EntityReferenceEvent extends com.sun.xml.internal.stream.events.DummyEvent implements javax.xml.stream.events.EntityReference
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(entityName : String, entityDeclaration : javax.xml.stream.events.EntityDeclaration) : Void;
+	@:overload @:public public function new(entityName : String, entityDeclaration : javax.xml.stream.events.EntityDeclaration) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload @:protected override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
-	@:overload public function getDeclaration() : javax.xml.stream.events.EntityDeclaration;
+	@:overload @:public public function getDeclaration() : javax.xml.stream.events.EntityDeclaration;
 	
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
 	
 }

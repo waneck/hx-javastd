@@ -7,17 +7,17 @@ package org.omg.IOP;
 */
 extern class TaggedProfileHelper
 {
-	@:overload public static function insert(a : org.omg.CORBA.Any, that : org.omg.IOP.TaggedProfile) : Void;
+	@:overload @:public @:static public static function insert(a : org.omg.CORBA.Any, that : org.omg.IOP.TaggedProfile) : Void;
 	
-	@:overload public static function extract(a : org.omg.CORBA.Any) : org.omg.IOP.TaggedProfile;
+	@:overload @:public @:static public static function extract(a : org.omg.CORBA.Any) : org.omg.IOP.TaggedProfile;
 	
-	@:overload @:synchronized public static function type() : org.omg.CORBA.TypeCode;
+	@:overload @:synchronized @:public @:static public static function type() : org.omg.CORBA.TypeCode;
 	
-	@:overload public static function id() : String;
+	@:overload @:public @:static public static function id() : String;
 	
-	@:overload public static function read(istream : org.omg.CORBA.portable.InputStream) : org.omg.IOP.TaggedProfile;
+	@:overload @:public @:static public static function read(istream : org.omg.CORBA.portable.InputStream) : org.omg.IOP.TaggedProfile;
 	
-	@:overload public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : org.omg.IOP.TaggedProfile) : Void;
+	@:overload @:public @:static public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : org.omg.IOP.TaggedProfile) : Void;
 	
 	
 }

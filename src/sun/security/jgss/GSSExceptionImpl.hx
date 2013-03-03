@@ -34,25 +34,25 @@ extern class GSSExceptionImpl extends org.ietf.jgss.GSSException
 	* A constructor that takes the majorCode as well as the message that
 	* corresponds to it.
 	*/
-	@:overload public function new(majorCode : Int, majorMessage : String) : Void;
+	@:overload @:public public function new(majorCode : Int, majorMessage : String) : Void;
 	
 	/**
 	* A constructor that takes the majorCode and the exception cause.
 	*/
-	@:overload public function new(majorCode : Int, cause : java.lang.Exception) : Void;
+	@:overload @:public public function new(majorCode : Int, cause : java.lang.Exception) : Void;
 	
 	/**
 	* A constructor that takes the majorCode, the message that
 	* corresponds to it, and the exception cause.
 	*/
-	@:overload public function new(majorCode : Int, majorMessage : String, cause : java.lang.Exception) : Void;
+	@:overload @:public public function new(majorCode : Int, majorMessage : String, cause : java.lang.Exception) : Void;
 	
 	/**
 	* Returns the message that was embedded in this object, otherwise it
 	* returns the default message that an org.ietf.jgss.GSSException
 	* generates.
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

@@ -25,13 +25,13 @@ package com.sun.corba.se.impl.orb;
 */
 extern class NormalParserAction extends com.sun.corba.se.impl.orb.ParserActionBase
 {
-	@:overload public function new(propertyName : String, operation : com.sun.corba.se.spi.orb.Operation, fieldName : String) : Void;
+	@:overload @:public public function new(propertyName : String, operation : com.sun.corba.se.spi.orb.Operation, fieldName : String) : Void;
 	
 	/** Create a String[] of all suffixes of property names that
 	* match the propertyName prefix, pass this to op, and return the
 	* result.
 	*/
-	@:overload public function apply(props : java.util.Properties) : Dynamic;
+	@:overload @:public override public function apply(props : java.util.Properties) : Dynamic;
 	
 	
 }

@@ -37,9 +37,9 @@ exception statement from your version.
 */
 @:internal extern class Operation
 {
-	public static var RUNNING : haxe.Int64;
+	@:public @:static public static var RUNNING : haxe.Int64;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

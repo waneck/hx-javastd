@@ -33,27 +33,27 @@ package com.sun.org.apache.xerces.internal.impl.xs.traversers;
 	*
 	* @version $Id: XSDAbstractTraverser.java,v 1.8 2010-11-01 04:40:02 joehw Exp $
 	*/
-	private static var NO_NAME(default, null) : String;
+	@:protected @:static @:final private static var NO_NAME(default, null) : String;
 	
-	private static var NOT_ALL_CONTEXT(default, null) : Int;
+	@:protected @:static @:final private static var NOT_ALL_CONTEXT(default, null) : Int;
 	
-	private static var PROCESSING_ALL_EL(default, null) : Int;
+	@:protected @:static @:final private static var PROCESSING_ALL_EL(default, null) : Int;
 	
-	private static var GROUP_REF_WITH_ALL(default, null) : Int;
+	@:protected @:static @:final private static var GROUP_REF_WITH_ALL(default, null) : Int;
 	
-	private static var CHILD_OF_GROUP(default, null) : Int;
+	@:protected @:static @:final private static var CHILD_OF_GROUP(default, null) : Int;
 	
-	private static var PROCESSING_ALL_GP(default, null) : Int;
+	@:protected @:static @:final private static var PROCESSING_ALL_GP(default, null) : Int;
 	
-	private var fSchemaHandler : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler;
+	@:protected private var fSchemaHandler : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler;
 	
-	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
-	private var fAttrChecker : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSAttributeChecker;
+	@:protected private var fAttrChecker : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSAttributeChecker;
 	
-	private var fValidateAnnotations : Bool;
+	@:protected private var fValidateAnnotations : Bool;
 	
-	@:overload private function checkOccurrences(particle : com.sun.org.apache.xerces.internal.impl.xs.XSParticleDecl, particleName : String, parent : org.w3c.dom.Element, allContextFlags : Int, defaultVals : haxe.Int64) : com.sun.org.apache.xerces.internal.impl.xs.XSParticleDecl;
+	@:overload @:protected private function checkOccurrences(particle : com.sun.org.apache.xerces.internal.impl.xs.XSParticleDecl, particleName : String, parent : org.w3c.dom.Element, allContextFlags : Int, defaultVals : haxe.Int64) : com.sun.org.apache.xerces.internal.impl.xs.XSParticleDecl;
 	
 	
 }

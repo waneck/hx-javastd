@@ -25,20 +25,20 @@ package sun.applet;
 */
 extern class Main
 {
-	public static var theVersion(default, null) : String;
+	@:public @:static @:final public static var theVersion(default, null) : String;
 	
 	/**
 	* The main entry point into AppletViewer.
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }
 @:native('sun$applet$Main$ParseException') @:internal extern class Main_ParseException extends java.lang.RuntimeException
 {
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
-	@:overload public function new(t : java.lang.Throwable) : Void;
+	@:overload @:public public function new(t : java.lang.Throwable) : Void;
 	
 	
 }

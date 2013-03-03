@@ -39,7 +39,7 @@ extern class MonitorInfo extends java.lang.management.LockInfo
 	*    or <tt>stackDepth</tt> &lt; 0 but <tt>stackFrame</tt> is not
 	*       <tt>null</tt>.
 	*/
-	@:overload public function new(className : String, identityHashCode : Int, stackDepth : Int, stackFrame : java.lang.StackTraceElement) : Void;
+	@:overload @:public public function new(className : String, identityHashCode : Int, stackDepth : Int, stackFrame : java.lang.StackTraceElement) : Void;
 	
 	/**
 	* Returns the depth in the stack trace where the object monitor
@@ -49,7 +49,7 @@ extern class MonitorInfo extends java.lang.management.LockInfo
 	* @return the depth in the stack trace where the object monitor
 	*         was locked, or a negative number if not available.
 	*/
-	@:overload public function getLockedStackDepth() : Int;
+	@:overload @:public public function getLockedStackDepth() : Int;
 	
 	/**
 	* Returns the stack frame that locked the object monitor.
@@ -57,7 +57,7 @@ extern class MonitorInfo extends java.lang.management.LockInfo
 	* @return <tt>StackTraceElement</tt> that locked the object monitor,
 	*         or <tt>null</tt> if not available.
 	*/
-	@:overload public function getLockedStackFrame() : java.lang.StackTraceElement;
+	@:overload @:public public function getLockedStackFrame() : java.lang.StackTraceElement;
 	
 	/**
 	* Returns a <tt>MonitorInfo</tt> object represented by the
@@ -97,7 +97,7 @@ extern class MonitorInfo extends java.lang.management.LockInfo
 	*         by <tt>cd</tt> if <tt>cd</tt> is not <tt>null</tt>;
 	*         <tt>null</tt> otherwise.
 	*/
-	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : java.lang.management.MonitorInfo;
+	@:overload @:public @:static public static function from(cd : javax.management.openmbean.CompositeData) : java.lang.management.MonitorInfo;
 	
 	
 }

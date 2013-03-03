@@ -40,7 +40,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	*            cannot be instantiated or if the
 	*            org.xml.sax.driver property is not specified.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a new adapter.
@@ -52,7 +52,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @param xmlReader The SAX2 XMLReader to wrap.
 	* @exception java.lang.NullPointerException If the argument is null.
 	*/
-	@:overload public function new(xmlReader : org.xml.sax.XMLReader) : Void;
+	@:overload @:public public function new(xmlReader : org.xml.sax.XMLReader) : Void;
 	
 	/**
 	* Set the locale for error reporting.
@@ -64,7 +64,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @see org.xml.sax.Parser#setLocale
 	* @exception org.xml.sax.SAXException Thrown unless overridden.
 	*/
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
 	/**
 	* Register the entity resolver.
@@ -72,7 +72,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @param resolver The new resolver.
 	* @see org.xml.sax.Parser#setEntityResolver
 	*/
-	@:overload public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
 	
 	/**
 	* Register the DTD event handler.
@@ -80,7 +80,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @param handler The new DTD event handler.
 	* @see org.xml.sax.Parser#setDTDHandler
 	*/
-	@:overload public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
+	@:overload @:public public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
 	
 	/**
 	* Register the SAX1 document event handler.
@@ -91,7 +91,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @param handler The new SAX1 document event handler.
 	* @see org.xml.sax.Parser#setDocumentHandler
 	*/
-	@:overload public function setDocumentHandler(handler : org.xml.sax.DocumentHandler) : Void;
+	@:overload @:public public function setDocumentHandler(handler : org.xml.sax.DocumentHandler) : Void;
 	
 	/**
 	* Register the error event handler.
@@ -99,7 +99,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @param handler The new error event handler.
 	* @see org.xml.sax.Parser#setErrorHandler
 	*/
-	@:overload public function setErrorHandler(handler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function setErrorHandler(handler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Parse the document.
@@ -116,7 +116,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @see #parse(org.xml.sax.InputSource)
 	* @see org.xml.sax.Parser#parse(java.lang.String)
 	*/
-	@:overload public function parse(systemId : String) : Void;
+	@:overload @:public public function parse(systemId : String) : Void;
 	
 	/**
 	* Parse the document.
@@ -133,7 +133,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @see #parse(java.lang.String)
 	* @see org.xml.sax.Parser#parse(org.xml.sax.InputSource)
 	*/
-	@:overload public function parse(input : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function parse(input : org.xml.sax.InputSource) : Void;
 	
 	/**
 	* Set a document locator.
@@ -141,7 +141,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @param locator The document locator.
 	* @see org.xml.sax.ContentHandler#setDocumentLocator
 	*/
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Start document event.
@@ -150,7 +150,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	*            processing exception.
 	* @see org.xml.sax.ContentHandler#startDocument
 	*/
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
 	/**
 	* End document event.
@@ -159,7 +159,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	*            processing exception.
 	* @see org.xml.sax.ContentHandler#endDocument
 	*/
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
 	/**
 	* Adapt a SAX2 start prefix mapping event.
@@ -168,7 +168,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @param uri The Namespace URI being mapped to.
 	* @see org.xml.sax.ContentHandler#startPrefixMapping
 	*/
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	/**
 	* Adapt a SAX2 end prefix mapping event.
@@ -176,7 +176,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @param prefix The prefix being mapped.
 	* @see org.xml.sax.ContentHandler#endPrefixMapping
 	*/
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
 	/**
 	* Adapt a SAX2 start element event.
@@ -189,7 +189,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	*            processing exception.
 	* @see org.xml.sax.ContentHandler#endDocument
 	*/
-	@:overload public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Adapt a SAX2 end element event.
@@ -201,7 +201,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	*            processing exception.
 	* @see org.xml.sax.ContentHandler#endElement
 	*/
-	@:overload public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Adapt a SAX2 characters event.
@@ -213,7 +213,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	*            processing exception.
 	* @see org.xml.sax.ContentHandler#characters
 	*/
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Adapt a SAX2 ignorable whitespace event.
@@ -225,7 +225,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	*            processing exception.
 	* @see org.xml.sax.ContentHandler#ignorableWhitespace
 	*/
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Adapt a SAX2 processing instruction event.
@@ -236,7 +236,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	*            processing exception.
 	* @see org.xml.sax.ContentHandler#processingInstruction
 	*/
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* Adapt a SAX2 skipped entity event.
@@ -245,7 +245,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @see org.xml.sax.ContentHandler#skippedEntity
 	* @exception org.xml.sax.SAXException Throwable by subclasses.
 	*/
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
 	
 }
@@ -260,7 +260,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @return The length of the attribute list.
 	* @see org.xml.sax.AttributeList#getLength
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Return the qualified (prefixed) name of an attribute by position.
@@ -268,7 +268,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @return The qualified name.
 	* @see org.xml.sax.AttributeList#getName
 	*/
-	@:overload public function getName(i : Int) : String;
+	@:overload @:public public function getName(i : Int) : String;
 	
 	/**
 	* Return the type of an attribute by position.
@@ -276,7 +276,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @return The type.
 	* @see org.xml.sax.AttributeList#getType(int)
 	*/
-	@:overload public function getType(i : Int) : String;
+	@:overload @:public public function getType(i : Int) : String;
 	
 	/**
 	* Return the value of an attribute by position.
@@ -284,7 +284,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @return The value.
 	* @see org.xml.sax.AttributeList#getValue(int)
 	*/
-	@:overload public function getValue(i : Int) : String;
+	@:overload @:public public function getValue(i : Int) : String;
 	
 	/**
 	* Return the type of an attribute by qualified (prefixed) name.
@@ -292,7 +292,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @return The type.
 	* @see org.xml.sax.AttributeList#getType(java.lang.String)
 	*/
-	@:overload public function getType(qName : String) : String;
+	@:overload @:public public function getType(qName : String) : String;
 	
 	/**
 	* Return the value of an attribute by qualified (prefixed) name.
@@ -300,7 +300,7 @@ extern class XMLReaderAdapter implements org.xml.sax.Parser implements org.xml.s
 	* @return The value.
 	* @see org.xml.sax.AttributeList#getValue(java.lang.String)
 	*/
-	@:overload public function getValue(qName : String) : String;
+	@:overload @:public public function getValue(qName : String) : String;
 	
 	
 }

@@ -37,41 +37,41 @@ package com.sun.crypto.provider;
 	/**
 	* Returns the encoding format of this key: "X.509"
 	*/
-	@:overload public function getFormat() : String;
+	@:overload @:public public function getFormat() : String;
 	
 	/**
 	* Returns the name of the algorithm associated with this key: "DH"
 	*/
-	@:overload public function getAlgorithm() : String;
+	@:overload @:public public function getAlgorithm() : String;
 	
 	/**
 	* Get the encoding of the key.
 	*/
-	@:overload @:synchronized public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:synchronized public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the public value, <code>y</code>.
 	*
 	* @return the public value, <code>y</code>
 	*/
-	@:overload public function getY() : java.math.BigInteger;
+	@:overload @:public public function getY() : java.math.BigInteger;
 	
 	/**
 	* Returns the key parameters.
 	*
 	* @return the key parameters
 	*/
-	@:overload public function getParams() : javax.crypto.spec.DHParameterSpec;
+	@:overload @:public public function getParams() : javax.crypto.spec.DHParameterSpec;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Calculates a hash code value for the object.
 	* Objects that are equal will also have the same hashcode.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

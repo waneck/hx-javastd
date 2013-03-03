@@ -28,32 +28,32 @@ package sun.java2d.pisces;
 	/**
 	* Constant value for join style.
 	*/
-	public static var JOIN_MITER(default, null) : Int;
+	@:public @:static @:final public static var JOIN_MITER(default, null) : Int;
 	
 	/**
 	* Constant value for join style.
 	*/
-	public static var JOIN_ROUND(default, null) : Int;
+	@:public @:static @:final public static var JOIN_ROUND(default, null) : Int;
 	
 	/**
 	* Constant value for join style.
 	*/
-	public static var JOIN_BEVEL(default, null) : Int;
+	@:public @:static @:final public static var JOIN_BEVEL(default, null) : Int;
 	
 	/**
 	* Constant value for end cap style.
 	*/
-	public static var CAP_BUTT(default, null) : Int;
+	@:public @:static @:final public static var CAP_BUTT(default, null) : Int;
 	
 	/**
 	* Constant value for end cap style.
 	*/
-	public static var CAP_ROUND(default, null) : Int;
+	@:public @:static @:final public static var CAP_ROUND(default, null) : Int;
 	
 	/**
 	* Constant value for end cap style.
 	*/
-	public static var CAP_SQUARE(default, null) : Int;
+	@:public @:static @:final public static var CAP_SQUARE(default, null) : Int;
 	
 	/**
 	* Constructs a <code>Stroker</code>.
@@ -68,39 +68,39 @@ package sun.java2d.pisces;
 	* <code>JOIN_BEVEL</code>.
 	* @param miterLimit the desired miter limit
 	*/
-	@:overload public function new(pc2d : sun.awt.geom.PathConsumer2D, lineWidth : Single, capStyle : Int, joinStyle : Int, miterLimit : Single) : Void;
+	@:overload @:public public function new(pc2d : sun.awt.geom.PathConsumer2D, lineWidth : Single, capStyle : Int, joinStyle : Int, miterLimit : Single) : Void;
 	
-	@:overload public function moveTo(x0 : Single, y0 : Single) : Void;
+	@:overload @:public public function moveTo(x0 : Single, y0 : Single) : Void;
 	
-	@:overload public function lineTo(x1 : Single, y1 : Single) : Void;
+	@:overload @:public public function lineTo(x1 : Single, y1 : Single) : Void;
 	
-	@:overload public function closePath() : Void;
+	@:overload @:public public function closePath() : Void;
 	
-	@:overload public function pathDone() : Void;
+	@:overload @:public public function pathDone() : Void;
 	
-	@:overload public function curveTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single, x3 : Single, y3 : Single) : Void;
+	@:overload @:public public function curveTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single, x3 : Single, y3 : Single) : Void;
 	
-	@:overload public function quadTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
+	@:overload @:public public function quadTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
 	
-	@:overload public function getNativeConsumer() : haxe.Int64;
+	@:overload @:public public function getNativeConsumer() : haxe.Int64;
 	
 	
 }
 @:native('sun$java2d$pisces$Stroker$PolyStack') @:internal extern class Stroker_PolyStack
 {
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function pushCubic(x0 : Single, y0 : Single, x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
+	@:overload @:public public function pushCubic(x0 : Single, y0 : Single, x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
 	
-	@:overload public function pushQuad(x0 : Single, y0 : Single, x1 : Single, y1 : Single) : Void;
+	@:overload @:public public function pushQuad(x0 : Single, y0 : Single, x1 : Single, y1 : Single) : Void;
 	
-	@:overload public function pushLine(x : Single, y : Single) : Void;
+	@:overload @:public public function pushLine(x : Single, y : Single) : Void;
 	
-	@:overload public function pop(pts : java.NativeArray<Single>) : Int;
+	@:overload @:public public function pop(pts : java.NativeArray<Single>) : Int;
 	
-	@:overload public function pop(io : sun.awt.geom.PathConsumer2D) : Void;
+	@:overload @:public public function pop(io : sun.awt.geom.PathConsumer2D) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

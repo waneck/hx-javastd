@@ -40,7 +40,7 @@ extern interface SourceLocator
 	*         null if none is available.
 	* @see #getSystemId
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* Return the system identifier for the current document event.
@@ -56,7 +56,7 @@ extern interface SourceLocator
 	*         if none is available.
 	* @see #getPublicId
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* Return the line number where the current document event ends.
@@ -73,7 +73,7 @@ extern interface SourceLocator
 	* @return The line number, or -1 if none is available.
 	* @see #getColumnNumber
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* Return the character position where the current document event ends.
@@ -90,7 +90,7 @@ extern interface SourceLocator
 	* @return The column number, or -1 if none is available.
 	* @see #getLineNumber
 	*/
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	
 }

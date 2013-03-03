@@ -59,56 +59,56 @@ package com.sun.tools.javac.nio;
 */
 extern class JavacPathFileManager extends com.sun.tools.javac.util.BaseFileManager implements com.sun.tools.javac.nio.PathFileManager
 {
-	private var defaultFileSystem : java.nio.file.FileSystem;
+	@:protected private var defaultFileSystem : java.nio.file.FileSystem;
 	
 	/**
 	* Create a JavacPathFileManager using a given context, optionally registering
 	* it as the JavaFileManager for that context.
 	*/
-	@:overload public function new(context : com.sun.tools.javac.util.Context, register : Bool, charset : java.nio.charset.Charset) : Void;
+	@:overload @:public public function new(context : com.sun.tools.javac.util.Context, register : Bool, charset : java.nio.charset.Charset) : Void;
 	
 	/**
 	* Set the context for JavacPathFileManager.
 	*/
-	@:overload override private function setContext(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected override private function setContext(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function getDefaultFileSystem() : java.nio.file.FileSystem;
+	@:overload @:public public function getDefaultFileSystem() : java.nio.file.FileSystem;
 	
-	@:overload public function setDefaultFileSystem(fs : java.nio.file.FileSystem) : Void;
+	@:overload @:public public function setDefaultFileSystem(fs : java.nio.file.FileSystem) : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function getClassLoader(location : javax.tools.JavaFileManager.JavaFileManager_Location) : java.lang.ClassLoader;
+	@:overload @:public public function getClassLoader(location : javax.tools.JavaFileManager.JavaFileManager_Location) : java.lang.ClassLoader;
 	
-	@:overload override public function isDefaultBootClassPath() : Bool;
+	@:overload @:public override public function isDefaultBootClassPath() : Bool;
 	
-	@:overload public function hasLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location) : Bool;
+	@:overload @:public public function hasLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location) : Bool;
 	
-	@:overload public function getLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location) : java.lang.Iterable<java.nio.file.Path>;
+	@:overload @:public public function getLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location) : java.lang.Iterable<java.nio.file.Path>;
 	
-	@:overload public function setLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location, searchPath : java.lang.Iterable<java.nio.file.Path>) : Void;
+	@:overload @:public public function setLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location, searchPath : java.lang.Iterable<java.nio.file.Path>) : Void;
 	
-	@:overload public function getPath(fo : javax.tools.FileObject) : java.nio.file.Path;
+	@:overload @:public public function getPath(fo : javax.tools.FileObject) : java.nio.file.Path;
 	
-	@:overload public function isSameFile(a : javax.tools.FileObject, b : javax.tools.FileObject) : Bool;
+	@:overload @:public public function isSameFile(a : javax.tools.FileObject, b : javax.tools.FileObject) : Bool;
 	
-	@:overload public function list(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, kinds : java.util.Set<javax.tools.JavaFileObject.JavaFileObject_Kind>, recurse : Bool) : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload @:public public function list(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, kinds : java.util.Set<javax.tools.JavaFileObject.JavaFileObject_Kind>, recurse : Bool) : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
-	@:overload public function getJavaFileObjectsFromPaths(paths : java.lang.Iterable<java.nio.file.Path>) : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload @:public public function getJavaFileObjectsFromPaths(paths : java.lang.Iterable<java.nio.file.Path>) : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
-	@:overload public function getJavaFileObjects(paths : java.NativeArray<java.nio.file.Path>) : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload @:public public function getJavaFileObjects(paths : java.NativeArray<java.nio.file.Path>) : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
-	@:overload public function getJavaFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : javax.tools.JavaFileObject;
+	@:overload @:public public function getJavaFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : javax.tools.JavaFileObject;
 	
-	@:overload public function getFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String) : javax.tools.FileObject;
+	@:overload @:public public function getFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String) : javax.tools.FileObject;
 	
-	@:overload public function getJavaFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind, sibling : javax.tools.FileObject) : javax.tools.JavaFileObject;
+	@:overload @:public public function getJavaFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind, sibling : javax.tools.FileObject) : javax.tools.JavaFileObject;
 	
-	@:overload public function getFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String, sibling : javax.tools.FileObject) : javax.tools.FileObject;
+	@:overload @:public public function getFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String, sibling : javax.tools.FileObject) : javax.tools.FileObject;
 	
-	@:overload public function inferBinaryName(location : javax.tools.JavaFileManager.JavaFileManager_Location, fo : javax.tools.JavaFileObject) : String;
+	@:overload @:public public function inferBinaryName(location : javax.tools.JavaFileManager.JavaFileManager_Location, fo : javax.tools.JavaFileObject) : String;
 	
 	
 }

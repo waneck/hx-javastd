@@ -37,7 +37,7 @@ extern interface DynFixed extends org.omg.CORBA.Object extends org.omg.CORBA.Dyn
 	* @return the value as a byte array
 	* @see #set_value
 	*/
-	@:overload public function get_value() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function get_value() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Sets the given fixed type instance as the value for this
@@ -48,7 +48,7 @@ extern interface DynFixed extends org.omg.CORBA.Object extends org.omg.CORBA.Dyn
 	*         argument is bad
 	* @see #get_value
 	*/
-	@:overload public function set_value(val : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function set_value(val : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

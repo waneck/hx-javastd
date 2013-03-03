@@ -43,7 +43,7 @@ package sun.font;
 */
 @:internal extern class CMap
 {
-	public static var theNullCmap(default, null) : sun.font.CMap.CMap_NullCMapClass;
+	@:public @:static @:final public static var theNullCmap(default, null) : sun.font.CMap.CMap_NullCMapClass;
 	
 	
 }

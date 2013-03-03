@@ -41,7 +41,7 @@ package java.rmi.server;
 	* @deprecated no replacement
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function new(op : String) : Void;
+	@:require(java1) @:overload @:public public function new(op : String) : Void;
 	
 	/**
 	* Returns the name of the method.
@@ -49,14 +49,14 @@ package java.rmi.server;
 	* @deprecated no replacement
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getOperation() : String;
+	@:require(java1) @:overload @:public public function getOperation() : String;
 	
 	/**
 	* Returns the string representation of the operation.
 	* @deprecated no replacement
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function toString() : String;
+	@:require(java1) @:overload @:public public function toString() : String;
 	
 	
 }

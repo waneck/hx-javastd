@@ -36,7 +36,7 @@ package sun.security.jca;
 	* cache efficient. totalSize indicates the total amount of data to
 	* be buffered. Used by the engineUpdate(ByteBuffer) methods.
 	*/
-	@:overload public static function getTempArraySize(totalSize : Int) : Int;
+	@:overload @:public @:static public static function getTempArraySize(totalSize : Int) : Int;
 	
 	/**
 	* Get a SecureRandom instance. This method should me used by JDK
@@ -44,7 +44,7 @@ package sun.security.jca;
 	* iterate through the provider table to find the default SecureRandom
 	* implementation, which is fairly inefficient.
 	*/
-	@:overload public static function getSecureRandom() : java.security.SecureRandom;
+	@:overload @:public @:static public static function getSecureRandom() : java.security.SecureRandom;
 	
 	
 }

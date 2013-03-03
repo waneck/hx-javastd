@@ -32,17 +32,17 @@ extern class SupplementaryCharacterData implements java.lang.Cloneable
 	/**
 	* Creates a new SupplementaryCharacterData object with the given table.
 	*/
-	@:overload public function new(table : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(table : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Returns a corresponding value for the given supplementary code-point.
 	*/
-	@:overload public function getValue(index : Int) : Int;
+	@:overload @:public public function getValue(index : Int) : Int;
 	
 	/**
 	* Returns the data array.
 	*/
-	@:overload public function getArray() : java.NativeArray<Int>;
+	@:overload @:public public function getArray() : java.NativeArray<Int>;
 	
 	
 }

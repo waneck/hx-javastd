@@ -25,17 +25,17 @@ package com.sun.corba.se.spi.extension;
 */
 extern class CopyObjectPolicy extends org.omg.CORBA.LocalObject implements org.omg.CORBA.Policy
 {
-	@:overload public function new(value : Int) : Void;
+	@:overload @:public public function new(value : Int) : Void;
 	
-	@:overload public function getValue() : Int;
+	@:overload @:public public function getValue() : Int;
 	
-	@:overload public function policy_type() : Int;
+	@:overload @:public public function policy_type() : Int;
 	
-	@:overload public function copy() : org.omg.CORBA.Policy;
+	@:overload @:public public function copy() : org.omg.CORBA.Policy;
 	
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

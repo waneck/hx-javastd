@@ -30,12 +30,12 @@ extern class SimpleBindings implements javax.script.Bindings
 	* @param m The <code>Map</code> backing this <code>SimpleBindings</code>.
 	* @throws NullPointerException if m is null
 	*/
-	@:overload public function new(m : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function new(m : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* Default constructor uses a <code>HashMap</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets the specified key/value in the underlying <code>map</code> field.
@@ -49,7 +49,7 @@ extern class SimpleBindings implements javax.script.Bindings
 	* @throws NullPointerException if the name is null.
 	* @throws IllegalArgumentException if the name is empty.
 	*/
-	@:overload public function put(name : String, value : Dynamic) : Dynamic;
+	@:overload @:public public function put(name : String, value : Dynamic) : Dynamic;
 	
 	/**
 	* <code>putAll</code> is implemented using <code>Map.putAll</code>.
@@ -61,10 +61,10 @@ extern class SimpleBindings implements javax.script.Bindings
 	* @throws IllegalArgumentException
 	*         if some key in the map is an empty String.
 	*/
-	@:overload public function putAll(toMerge : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function putAll(toMerge : java.util.Map<String, Dynamic>) : Void;
 	
 	/** {@inheritDoc} */
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns <tt>true</tt> if this map contains a mapping for the specified
@@ -81,13 +81,13 @@ extern class SimpleBindings implements javax.script.Bindings
 	* @throws ClassCastException if key is not String
 	* @throws IllegalArgumentException if key is empty String
 	*/
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public public function containsKey(key : Dynamic) : Bool;
 	
 	/** {@inheritDoc} */
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public public function containsValue(value : Dynamic) : Bool;
 	
 	/** {@inheritDoc} */
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, Dynamic>>;
+	@:overload @:public public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, Dynamic>>;
 	
 	/**
 	* Returns the value to which this map maps the specified key.  Returns
@@ -110,13 +110,13 @@ extern class SimpleBindings implements javax.script.Bindings
 	* @throws ClassCastException if key is not String
 	* @throws IllegalArgumentException if key is empty String
 	*/
-	@:overload public function get(key : Dynamic) : Dynamic;
+	@:overload @:public public function get(key : Dynamic) : Dynamic;
 	
 	/** {@inheritDoc} */
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/** {@inheritDoc} */
-	@:overload public function keySet() : java.util.Set<String>;
+	@:overload @:public public function keySet() : java.util.Set<String>;
 	
 	/**
 	* Removes the mapping for this key from this map if it is present
@@ -140,13 +140,13 @@ extern class SimpleBindings implements javax.script.Bindings
 	* @throws ClassCastException if key is not String
 	* @throws IllegalArgumentException if key is empty String
 	*/
-	@:overload public function remove(key : Dynamic) : Dynamic;
+	@:overload @:public public function remove(key : Dynamic) : Dynamic;
 	
 	/** {@inheritDoc} */
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/** {@inheritDoc} */
-	@:overload public function values() : java.util.Collection<Dynamic>;
+	@:overload @:public public function values() : java.util.Collection<Dynamic>;
 	
 	
 }

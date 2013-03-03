@@ -28,9 +28,9 @@ extern class SctpAssociationImpl extends com.sun.nio.sctp.Association
 	/**
 	* An implementation of Association
 	*/
-	@:overload public function new(associationID : Int, maxInStreams : Int, maxOutStreams : Int) : Void;
+	@:overload @:public public function new(associationID : Int, maxInStreams : Int, maxOutStreams : Int) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

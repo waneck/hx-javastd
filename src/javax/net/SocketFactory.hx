@@ -28,14 +28,14 @@ extern class SocketFactory
 	/**
 	* Creates a <code>SocketFactory</code>.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns a copy of the environment's default socket factory.
 	*
 	* @return the default <code>SocketFactory</code>
 	*/
-	@:overload public static function getDefault() : javax.net.SocketFactory;
+	@:overload @:public @:static public static function getDefault() : javax.net.SocketFactory;
 	
 	/**
 	* Creates an unconnected socket.
@@ -46,7 +46,7 @@ extern class SocketFactory
 	* @see java.net.Socket#connect(java.net.SocketAddress, int)
 	* @see java.net.Socket#Socket()
 	*/
-	@:overload public function createSocket() : java.net.Socket;
+	@:overload @:public public function createSocket() : java.net.Socket;
 	
 	/**
 	* Creates a socket and connects it to the specified remote host
@@ -71,7 +71,7 @@ extern class SocketFactory
 	* @see SecurityManager#checkConnect
 	* @see java.net.Socket#Socket(String, int)
 	*/
-	@:overload @:abstract public function createSocket(host : String, port : Int) : java.net.Socket;
+	@:overload @:public @:abstract public function createSocket(host : String, port : Int) : java.net.Socket;
 	
 	/**
 	* Creates a socket and connects it to the specified remote host
@@ -100,7 +100,7 @@ extern class SocketFactory
 	* @see SecurityManager#checkConnect
 	* @see java.net.Socket#Socket(String, int, java.net.InetAddress, int)
 	*/
-	@:overload @:abstract public function createSocket(host : String, port : Int, localHost : java.net.InetAddress, localPort : Int) : java.net.Socket;
+	@:overload @:public @:abstract public function createSocket(host : String, port : Int, localHost : java.net.InetAddress, localPort : Int) : java.net.Socket;
 	
 	/**
 	* Creates a socket and connects it to the specified port number
@@ -124,7 +124,7 @@ extern class SocketFactory
 	* @see SecurityManager#checkConnect
 	* @see java.net.Socket#Socket(java.net.InetAddress, int)
 	*/
-	@:overload @:abstract public function createSocket(host : java.net.InetAddress, port : Int) : java.net.Socket;
+	@:overload @:public @:abstract public function createSocket(host : java.net.InetAddress, port : Int) : java.net.Socket;
 	
 	/**
 	* Creates a socket and connect it to the specified remote address
@@ -152,21 +152,21 @@ extern class SocketFactory
 	* @see java.net.Socket#Socket(java.net.InetAddress, int,
 	*     java.net.InetAddress, int)
 	*/
-	@:overload @:abstract public function createSocket(address : java.net.InetAddress, port : Int, localAddress : java.net.InetAddress, localPort : Int) : java.net.Socket;
+	@:overload @:public @:abstract public function createSocket(address : java.net.InetAddress, port : Int, localAddress : java.net.InetAddress, localPort : Int) : java.net.Socket;
 	
 	
 }
 @:internal extern class DefaultSocketFactory extends javax.net.SocketFactory
 {
-	@:overload override public function createSocket() : java.net.Socket;
+	@:overload @:public override public function createSocket() : java.net.Socket;
 	
-	@:overload override public function createSocket(host : String, port : Int) : java.net.Socket;
+	@:overload @:public override public function createSocket(host : String, port : Int) : java.net.Socket;
 	
-	@:overload override public function createSocket(address : java.net.InetAddress, port : Int) : java.net.Socket;
+	@:overload @:public override public function createSocket(address : java.net.InetAddress, port : Int) : java.net.Socket;
 	
-	@:overload override public function createSocket(host : String, port : Int, clientAddress : java.net.InetAddress, clientPort : Int) : java.net.Socket;
+	@:overload @:public override public function createSocket(host : String, port : Int, clientAddress : java.net.InetAddress, clientPort : Int) : java.net.Socket;
 	
-	@:overload override public function createSocket(address : java.net.InetAddress, port : Int, clientAddress : java.net.InetAddress, clientPort : Int) : java.net.Socket;
+	@:overload @:public override public function createSocket(address : java.net.InetAddress, port : Int, clientAddress : java.net.InetAddress, clientPort : Int) : java.net.Socket;
 	
 	
 }

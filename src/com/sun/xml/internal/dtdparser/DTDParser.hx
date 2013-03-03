@@ -45,27 +45,27 @@ extern class DTDParser
 	* @author Kohsuke KAWAGUCHI
 	* @version $Id: DTDParser.java,v 1.2 2009-04-16 15:25:49 snajper Exp $
 	*/
-	public static var TYPE_CDATA(default, null) : String;
+	@:public @:final @:static public static var TYPE_CDATA(default, null) : String;
 	
-	public static var TYPE_ID(default, null) : String;
+	@:public @:final @:static public static var TYPE_ID(default, null) : String;
 	
-	public static var TYPE_IDREF(default, null) : String;
+	@:public @:final @:static public static var TYPE_IDREF(default, null) : String;
 	
-	public static var TYPE_IDREFS(default, null) : String;
+	@:public @:final @:static public static var TYPE_IDREFS(default, null) : String;
 	
-	public static var TYPE_ENTITY(default, null) : String;
+	@:public @:final @:static public static var TYPE_ENTITY(default, null) : String;
 	
-	public static var TYPE_ENTITIES(default, null) : String;
+	@:public @:final @:static public static var TYPE_ENTITIES(default, null) : String;
 	
-	public static var TYPE_NMTOKEN(default, null) : String;
+	@:public @:final @:static public static var TYPE_NMTOKEN(default, null) : String;
 	
-	public static var TYPE_NMTOKENS(default, null) : String;
+	@:public @:final @:static public static var TYPE_NMTOKENS(default, null) : String;
 	
-	public static var TYPE_NOTATION(default, null) : String;
+	@:public @:final @:static public static var TYPE_NOTATION(default, null) : String;
 	
-	public static var TYPE_ENUMERATION(default, null) : String;
+	@:public @:final @:static public static var TYPE_ENUMERATION(default, null) : String;
 	
-	private var declaredElements(default, null) : java.util.Set<Dynamic>;
+	@:protected @:final private var declaredElements(default, null) : java.util.Set<Dynamic>;
 	
 	/**
 	* Used by applications to request locale for diagnostics.
@@ -73,12 +73,12 @@ extern class DTDParser
 	* @param l The locale to use, or null to use system defaults
 	*          (which may include only message IDs).
 	*/
-	@:overload public function setLocale(l : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(l : java.util.Locale) : Void;
 	
 	/**
 	* Returns the diagnostic locale.
 	*/
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	/**
 	* Chooses a client locale to use for diagnostics, using the first
@@ -94,45 +94,45 @@ extern class DTDParser
 	* @return The chosen locale, or null.
 	* @see MessageCatalog
 	*/
-	@:overload public function chooseLocale(languages : java.NativeArray<String>) : java.util.Locale;
+	@:overload @:public public function chooseLocale(languages : java.NativeArray<String>) : java.util.Locale;
 	
 	/**
 	* Lets applications control entity resolution.
 	*/
-	@:overload public function setEntityResolver(r : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(r : org.xml.sax.EntityResolver) : Void;
 	
 	/**
 	* Returns the object used to resolve entities
 	*/
-	@:overload public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
 	/**
 	* Used by applications to set handling of DTD parsing events.
 	*/
-	@:overload public function setDtdHandler(handler : com.sun.xml.internal.dtdparser.DTDEventListener) : Void;
+	@:overload @:public public function setDtdHandler(handler : com.sun.xml.internal.dtdparser.DTDEventListener) : Void;
 	
 	/**
 	* Returns the handler used to for DTD parsing events.
 	*/
-	@:overload public function getDtdHandler() : com.sun.xml.internal.dtdparser.DTDEventListener;
+	@:overload @:public public function getDtdHandler() : com.sun.xml.internal.dtdparser.DTDEventListener;
 	
 	/**
 	* Parse a DTD.
 	*/
-	@:overload public function parse(_in : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function parse(_in : org.xml.sax.InputSource) : Void;
 	
 	/**
 	* Parse a DTD.
 	*/
-	@:overload public function parse(uri : String) : Void;
+	@:overload @:public public function parse(uri : String) : Void;
 	
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	
 }

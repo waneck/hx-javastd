@@ -32,7 +32,7 @@ extern class SSLEngine
 	* @see     SSLContext#createSSLEngine()
 	* @see     SSLSessionContext
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructor for an <code>SSLEngine</code>.
@@ -53,7 +53,7 @@ extern class SSLEngine
 	* @see     SSLContext#createSSLEngine(String, int)
 	* @see     SSLSessionContext
 	*/
-	@:overload private function new(peerHost : String, peerPort : Int) : Void;
+	@:overload @:protected private function new(peerHost : String, peerPort : Int) : Void;
 	
 	/**
 	* Returns the host name of the peer.
@@ -64,7 +64,7 @@ extern class SSLEngine
 	* @return  the host name of the peer, or null if nothing is
 	*          available.
 	*/
-	@:overload public function getPeerHost() : String;
+	@:overload @:public public function getPeerHost() : String;
 	
 	/**
 	* Returns the port number of the peer.
@@ -75,7 +75,7 @@ extern class SSLEngine
 	* @return  the port number of the peer, or -1 if nothing is
 	*          available.
 	*/
-	@:overload public function getPeerPort() : Int;
+	@:overload @:public public function getPeerPort() : Int;
 	
 	/**
 	* Attempts to encode a buffer of plaintext application data into
@@ -108,7 +108,7 @@ extern class SSLEngine
 	*          has not yet been set.
 	* @see     #wrap(ByteBuffer [], int, int, ByteBuffer)
 	*/
-	@:overload public function wrap(src : java.nio.ByteBuffer, dst : java.nio.ByteBuffer) : javax.net.ssl.SSLEngineResult;
+	@:overload @:public public function wrap(src : java.nio.ByteBuffer, dst : java.nio.ByteBuffer) : javax.net.ssl.SSLEngineResult;
 	
 	/**
 	* Attempts to encode plaintext bytes from a sequence of data
@@ -142,7 +142,7 @@ extern class SSLEngine
 	*          has not yet been set.
 	* @see     #wrap(ByteBuffer [], int, int, ByteBuffer)
 	*/
-	@:overload public function wrap(srcs : java.NativeArray<java.nio.ByteBuffer>, dst : java.nio.ByteBuffer) : javax.net.ssl.SSLEngineResult;
+	@:overload @:public public function wrap(srcs : java.NativeArray<java.nio.ByteBuffer>, dst : java.nio.ByteBuffer) : javax.net.ssl.SSLEngineResult;
 	
 	/**
 	* Attempts to encode plaintext bytes from a subsequence of data
@@ -219,7 +219,7 @@ extern class SSLEngine
 	* @see     java.nio.channels.GatheringByteChannel#write(
 	*              ByteBuffer[], int, int)
 	*/
-	@:overload @:abstract public function wrap(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int, dst : java.nio.ByteBuffer) : javax.net.ssl.SSLEngineResult;
+	@:overload @:public @:abstract public function wrap(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int, dst : java.nio.ByteBuffer) : javax.net.ssl.SSLEngineResult;
 	
 	/**
 	* Attempts to decode SSL/TLS network data into a plaintext
@@ -252,7 +252,7 @@ extern class SSLEngine
 	*          has not yet been set.
 	* @see     #unwrap(ByteBuffer, ByteBuffer [], int, int)
 	*/
-	@:overload public function unwrap(src : java.nio.ByteBuffer, dst : java.nio.ByteBuffer) : javax.net.ssl.SSLEngineResult;
+	@:overload @:public public function unwrap(src : java.nio.ByteBuffer, dst : java.nio.ByteBuffer) : javax.net.ssl.SSLEngineResult;
 	
 	/**
 	* Attempts to decode SSL/TLS network data into a sequence of plaintext
@@ -286,7 +286,7 @@ extern class SSLEngine
 	*          has not yet been set.
 	* @see     #unwrap(ByteBuffer, ByteBuffer [], int, int)
 	*/
-	@:overload public function unwrap(src : java.nio.ByteBuffer, dsts : java.NativeArray<java.nio.ByteBuffer>) : javax.net.ssl.SSLEngineResult;
+	@:overload @:public public function unwrap(src : java.nio.ByteBuffer, dsts : java.NativeArray<java.nio.ByteBuffer>) : javax.net.ssl.SSLEngineResult;
 	
 	/**
 	* Attempts to decode SSL/TLS network data into a subsequence of
@@ -368,7 +368,7 @@ extern class SSLEngine
 	* @see     java.nio.channels.ScatteringByteChannel#read(
 	*              ByteBuffer[], int, int)
 	*/
-	@:overload @:abstract public function unwrap(src : java.nio.ByteBuffer, dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : javax.net.ssl.SSLEngineResult;
+	@:overload @:public @:abstract public function unwrap(src : java.nio.ByteBuffer, dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : javax.net.ssl.SSLEngineResult;
 	
 	/**
 	* Returns a delegated <code>Runnable</code> task for
@@ -394,7 +394,7 @@ extern class SSLEngine
 	* @return  a delegated <code>Runnable</code> task, or null
 	*          if none are available.
 	*/
-	@:overload @:abstract public function getDelegatedTask() : java.lang.Runnable;
+	@:overload @:public @:abstract public function getDelegatedTask() : java.lang.Runnable;
 	
 	/**
 	* Signals that no more inbound network data will be sent
@@ -428,7 +428,7 @@ extern class SSLEngine
 	* @see     #isInboundDone()
 	* @see     #isOutboundDone()
 	*/
-	@:overload @:abstract public function closeInbound() : Void;
+	@:overload @:public @:abstract public function closeInbound() : Void;
 	
 	/**
 	* Returns whether {@link #unwrap(ByteBuffer, ByteBuffer)} will
@@ -439,7 +439,7 @@ extern class SSLEngine
 	*          will not produce any more application data.)
 	* @see     #closeInbound()
 	*/
-	@:overload @:abstract public function isInboundDone() : Bool;
+	@:overload @:public @:abstract public function isInboundDone() : Bool;
 	
 	/**
 	* Signals that no more outbound application data will be sent
@@ -453,7 +453,7 @@ extern class SSLEngine
 	*
 	* @see     #isOutboundDone()
 	*/
-	@:overload @:abstract public function closeOutbound() : Void;
+	@:overload @:public @:abstract public function closeOutbound() : Void;
 	
 	/**
 	* Returns whether {@link #wrap(ByteBuffer, ByteBuffer)} will
@@ -470,7 +470,7 @@ extern class SSLEngine
 	* @see     #closeOutbound()
 	* @see     #closeInbound()
 	*/
-	@:overload @:abstract public function isOutboundDone() : Bool;
+	@:overload @:public @:abstract public function isOutboundDone() : Bool;
 	
 	/**
 	* Returns the names of the cipher suites which could be enabled for use
@@ -483,7 +483,7 @@ extern class SSLEngine
 	* @see     #getEnabledCipherSuites()
 	* @see     #setEnabledCipherSuites(String [])
 	*/
-	@:overload @:abstract public function getSupportedCipherSuites() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getSupportedCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Returns the names of the SSL cipher suites which are currently
@@ -500,7 +500,7 @@ extern class SSLEngine
 	* @see     #getSupportedCipherSuites()
 	* @see     #setEnabledCipherSuites(String [])
 	*/
-	@:overload @:abstract public function getEnabledCipherSuites() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getEnabledCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Sets the cipher suites enabled for use on this engine.
@@ -520,7 +520,7 @@ extern class SSLEngine
 	* @see     #getSupportedCipherSuites()
 	* @see     #getEnabledCipherSuites()
 	*/
-	@:overload @:abstract public function setEnabledCipherSuites(suites : java.NativeArray<String>) : Void;
+	@:overload @:public @:abstract public function setEnabledCipherSuites(suites : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns the names of the protocols which could be enabled for use
@@ -528,7 +528,7 @@ extern class SSLEngine
 	*
 	* @return  an array of protocols supported
 	*/
-	@:overload @:abstract public function getSupportedProtocols() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getSupportedProtocols() : java.NativeArray<String>;
 	
 	/**
 	* Returns the names of the protocol versions which are currently
@@ -537,7 +537,7 @@ extern class SSLEngine
 	* @return  an array of protocols
 	* @see     #setEnabledProtocols(String [])
 	*/
-	@:overload @:abstract public function getEnabledProtocols() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getEnabledProtocols() : java.NativeArray<String>;
 	
 	/**
 	* Set the protocol versions enabled for use on this engine.
@@ -553,7 +553,7 @@ extern class SSLEngine
 	*          when the protocols parameter is null.
 	* @see     #getEnabledProtocols()
 	*/
-	@:overload @:abstract public function setEnabledProtocols(protocols : java.NativeArray<String>) : Void;
+	@:overload @:public @:abstract public function setEnabledProtocols(protocols : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns the <code>SSLSession</code> in use in this
@@ -575,7 +575,7 @@ extern class SSLEngine
 	* @return  the <code>SSLSession</code> for this <code>SSLEngine</code>
 	* @see     SSLSession
 	*/
-	@:overload @:abstract public function getSession() : javax.net.ssl.SSLSession;
+	@:overload @:public @:abstract public function getSession() : javax.net.ssl.SSLSession;
 	
 	/**
 	* Returns the {@code SSLSession} being constructed during a SSL/TLS
@@ -613,7 +613,7 @@ extern class SSLEngine
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getHandshakeSession() : javax.net.ssl.SSLSession;
+	@:require(java7) @:overload @:public public function getHandshakeSession() : javax.net.ssl.SSLSession;
 	
 	/**
 	* Initiates handshaking (initial or renegotiation) on this SSLEngine.
@@ -645,14 +645,14 @@ extern class SSLEngine
 	*          has not yet been set.
 	* @see     SSLSession#invalidate()
 	*/
-	@:overload @:abstract public function beginHandshake() : Void;
+	@:overload @:public @:abstract public function beginHandshake() : Void;
 	
 	/**
 	* Returns the current handshake status for this <code>SSLEngine</code>.
 	*
 	* @return  the current <code>SSLEngineResult.HandshakeStatus</code>.
 	*/
-	@:overload @:abstract public function getHandshakeStatus() : javax.net.ssl.SSLEngineResult.SSLEngineResult_HandshakeStatus;
+	@:overload @:public @:abstract public function getHandshakeStatus() : javax.net.ssl.SSLEngineResult.SSLEngineResult_HandshakeStatus;
 	
 	/**
 	* Configures the engine to use client (or server) mode when
@@ -671,7 +671,7 @@ extern class SSLEngine
 	*          after the initial handshake has begun.
 	* @see     #getUseClientMode()
 	*/
-	@:overload @:abstract public function setUseClientMode(mode : Bool) : Void;
+	@:overload @:public @:abstract public function setUseClientMode(mode : Bool) : Void;
 	
 	/**
 	* Returns true if the engine is set to use client mode when
@@ -681,7 +681,7 @@ extern class SSLEngine
 	*          in "client" mode
 	* @see     #setUseClientMode(boolean)
 	*/
-	@:overload @:abstract public function getUseClientMode() : Bool;
+	@:overload @:public @:abstract public function getUseClientMode() : Bool;
 	
 	/**
 	* Configures the engine to <i>require</i> client authentication.  This
@@ -709,7 +709,7 @@ extern class SSLEngine
 	* @see     #getWantClientAuth()
 	* @see     #setUseClientMode(boolean)
 	*/
-	@:overload @:abstract public function setNeedClientAuth(need : Bool) : Void;
+	@:overload @:public @:abstract public function setNeedClientAuth(need : Bool) : Void;
 	
 	/**
 	* Returns true if the engine will <i>require</i> client authentication.
@@ -722,7 +722,7 @@ extern class SSLEngine
 	* @see     #getWantClientAuth()
 	* @see     #setUseClientMode(boolean)
 	*/
-	@:overload @:abstract public function getNeedClientAuth() : Bool;
+	@:overload @:public @:abstract public function getNeedClientAuth() : Bool;
 	
 	/**
 	* Configures the engine to <i>request</i> client authentication.
@@ -749,7 +749,7 @@ extern class SSLEngine
 	* @see     #getNeedClientAuth()
 	* @see     #setUseClientMode(boolean)
 	*/
-	@:overload @:abstract public function setWantClientAuth(want : Bool) : Void;
+	@:overload @:public @:abstract public function setWantClientAuth(want : Bool) : Void;
 	
 	/**
 	* Returns true if the engine will <i>request</i> client authentication.
@@ -762,7 +762,7 @@ extern class SSLEngine
 	* @see     #setWantClientAuth(boolean)
 	* @see     #setUseClientMode(boolean)
 	*/
-	@:overload @:abstract public function getWantClientAuth() : Bool;
+	@:overload @:public @:abstract public function getWantClientAuth() : Bool;
 	
 	/**
 	* Controls whether new SSL sessions may be established by this engine.
@@ -775,7 +775,7 @@ extern class SSLEngine
 	*          must be resumed
 	* @see     #getEnableSessionCreation()
 	*/
-	@:overload @:abstract public function setEnableSessionCreation(flag : Bool) : Void;
+	@:overload @:public @:abstract public function setEnableSessionCreation(flag : Bool) : Void;
 	
 	/**
 	* Returns true if new SSL sessions may be established by this engine.
@@ -785,7 +785,7 @@ extern class SSLEngine
 	*          must be resumed
 	* @see     #setEnableSessionCreation(boolean)
 	*/
-	@:overload @:abstract public function getEnableSessionCreation() : Bool;
+	@:overload @:public @:abstract public function getEnableSessionCreation() : Bool;
 	
 	/**
 	* Returns the SSLParameters in effect for this SSLEngine.
@@ -795,7 +795,7 @@ extern class SSLEngine
 	* @return the SSLParameters in effect for this SSLEngine.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getSSLParameters() : javax.net.ssl.SSLParameters;
+	@:require(java6) @:overload @:public public function getSSLParameters() : javax.net.ssl.SSLParameters;
 	
 	/**
 	* Applies SSLParameters to this engine.
@@ -818,7 +818,7 @@ extern class SSLEngine
 	*    the setEnabledProtocols() call fails
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setSSLParameters(params : javax.net.ssl.SSLParameters) : Void;
+	@:require(java6) @:overload @:public public function setSSLParameters(params : javax.net.ssl.SSLParameters) : Void;
 	
 	
 }

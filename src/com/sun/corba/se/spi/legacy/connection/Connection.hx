@@ -28,7 +28,7 @@ package com.sun.corba.se.spi.legacy.connection;
 */
 extern interface Connection
 {
-	@:overload public function getSocket() : java.net.Socket;
+	@:overload @:public public function getSocket() : java.net.Socket;
 	
 	
 }

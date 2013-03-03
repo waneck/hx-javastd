@@ -3905,7 +3905,7 @@ extern interface ResultSet extends java.sql.Wrapper extends java.lang.AutoClosea
 	* this method
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getObject<T>(columnIndex : Int, type : Class<T>) : T;
+	@:require(java7) @:overload @:public public function getObject<T>(columnIndex : Int, type : Class<T>) : T;
 	
 	/**
 	*<p>Retrieves the value of the designated column in the current row
@@ -3934,7 +3934,7 @@ extern interface ResultSet extends java.sql.Wrapper extends java.lang.AutoClosea
 	* this method
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getObject<T>(columnLabel : String, type : Class<T>) : T;
+	@:require(java7) @:overload @:public public function getObject<T>(columnLabel : String, type : Class<T>) : T;
 	
 	
 }

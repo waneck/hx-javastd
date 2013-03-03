@@ -34,7 +34,7 @@ extern class XSettings
 	*     settings manager.
 	* @return a <code>Map</code> of changed settings.
 	*/
-	@:overload public function update(data : java.NativeArray<java.StdTypes.Int8>) : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function update(data : java.NativeArray<java.StdTypes.Int8>) : java.util.Map<Dynamic, Dynamic>;
 	
 	
 }
@@ -46,7 +46,7 @@ extern class XSettings
 	/**
 	* Update settings.
 	*/
-	@:overload public function update() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function update() : java.util.Map<Dynamic, Dynamic>;
 	
 	
 }

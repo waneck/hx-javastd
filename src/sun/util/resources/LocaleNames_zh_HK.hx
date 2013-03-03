@@ -25,9 +25,9 @@ package sun.util.resources;
 */
 extern class LocaleNames_zh_HK extends sun.util.resources.OpenListResourceBundle
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:final override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:protected @:final override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

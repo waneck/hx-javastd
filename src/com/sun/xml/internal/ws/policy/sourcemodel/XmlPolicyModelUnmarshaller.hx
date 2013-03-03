@@ -28,12 +28,12 @@ extern class XmlPolicyModelUnmarshaller extends com.sun.xml.internal.ws.policy.s
 	/**
 	* Creates a new instance of XmlPolicyModelUnmarshaller
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* See {@link PolicyModelUnmarshaller#unmarshalModel(Object) base method documentation}.
 	*/
-	@:overload override public function unmarshalModel(storage : Dynamic) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
+	@:overload @:public override public function unmarshalModel(storage : Dynamic) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	/**
 	* Allow derived classes to pass in a custom instance of PolicySourceModel.
@@ -43,7 +43,7 @@ extern class XmlPolicyModelUnmarshaller extends com.sun.xml.internal.ws.policy.s
 	* @param name
 	* @return
 	*/
-	@:overload private function createSourceModel(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, id : String, name : String) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
+	@:overload @:protected private function createSourceModel(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, id : String, name : String) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	
 }

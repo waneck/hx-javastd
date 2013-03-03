@@ -49,9 +49,9 @@ extern interface HTMLHtmlElement extends org.w3c.dom.html.HTMLElement
 	* attribute definition in HTML 4.0. This attribute is deprecated in HTML
 	* 4.0.
 	*/
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
-	@:overload public function setVersion(version : String) : Void;
+	@:overload @:public public function setVersion(version : String) : Void;
 	
 	
 }

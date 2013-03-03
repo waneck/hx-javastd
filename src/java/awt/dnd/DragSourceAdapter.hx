@@ -66,7 +66,7 @@ package java.awt.dnd;
 	*
 	* @param dsde the <code>DragSourceDragEvent</code>
 	*/
-	@:overload public function dragEnter(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
+	@:overload @:public public function dragEnter(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
 	
 	/**
 	* Called as the cursor's hotspot moves over a platform-dependent drop site.
@@ -81,14 +81,14 @@ package java.awt.dnd;
 	*
 	* @param dsde the <code>DragSourceDragEvent</code>
 	*/
-	@:overload public function dragOver(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
+	@:overload @:public public function dragOver(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
 	
 	/**
 	* Called whenever the mouse is moved during a drag operation.
 	*
 	* @param dsde the <code>DragSourceDragEvent</code>
 	*/
-	@:overload public function dragMouseMoved(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
+	@:overload @:public public function dragMouseMoved(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
 	
 	/**
 	* Called when the user has modified the drop gesture.
@@ -99,7 +99,7 @@ package java.awt.dnd;
 	*
 	* @param dsde the <code>DragSourceDragEvent</code>
 	*/
-	@:overload public function dropActionChanged(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
+	@:overload @:public public function dropActionChanged(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
 	
 	/**
 	* Called as the cursor's hotspot exits a platform-dependent drop site.
@@ -121,7 +121,7 @@ package java.awt.dnd;
 	*
 	* @param dse the <code>DragSourceEvent</code>
 	*/
-	@:overload public function dragExit(dse : java.awt.dnd.DragSourceEvent) : Void;
+	@:overload @:public public function dragExit(dse : java.awt.dnd.DragSourceEvent) : Void;
 	
 	/**
 	* This method is invoked to signify that the Drag and Drop
@@ -135,7 +135,7 @@ package java.awt.dnd;
 	*
 	* @param dsde the <code>DragSourceDropEvent</code>
 	*/
-	@:overload public function dragDropEnd(dsde : java.awt.dnd.DragSourceDropEvent) : Void;
+	@:overload @:public public function dragDropEnd(dsde : java.awt.dnd.DragSourceDropEvent) : Void;
 	
 	
 }

@@ -29,7 +29,7 @@ package sun.nio.ch;
 	* Returns a Channel representing the inherited channel if the
 	* inherited channel is a stream connected to a network socket.
 	*/
-	@:overload @:synchronized public static function getChannel() : java.nio.channels.Channel;
+	@:overload @:public @:static @:synchronized public static function getChannel() : java.nio.channels.Channel;
 	
 	
 }
@@ -40,19 +40,19 @@ package sun.nio.ch;
 */
 @:native('sun$nio$ch$InheritedChannel$InheritedSocketChannelImpl') extern class InheritedChannel_InheritedSocketChannelImpl extends sun.nio.ch.SocketChannelImpl
 {
-	@:overload private function implCloseSelectableChannel() : Void;
+	@:overload @:protected override private function implCloseSelectableChannel() : Void;
 	
 	
 }
 @:native('sun$nio$ch$InheritedChannel$InheritedServerSocketChannelImpl') extern class InheritedChannel_InheritedServerSocketChannelImpl extends sun.nio.ch.ServerSocketChannelImpl
 {
-	@:overload private function implCloseSelectableChannel() : Void;
+	@:overload @:protected override private function implCloseSelectableChannel() : Void;
 	
 	
 }
 @:native('sun$nio$ch$InheritedChannel$InheritedDatagramChannelImpl') extern class InheritedChannel_InheritedDatagramChannelImpl extends sun.nio.ch.DatagramChannelImpl
 {
-	@:overload override private function implCloseSelectableChannel() : Void;
+	@:overload @:protected override private function implCloseSelectableChannel() : Void;
 	
 	
 }

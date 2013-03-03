@@ -29,27 +29,27 @@ package sun.audio;
 */
 extern class AudioStream extends java.io.FilterInputStream
 {
-	private var ais : javax.sound.sampled.AudioInputStream;
+	@:protected private var ais : javax.sound.sampled.AudioInputStream;
 	
-	private var format : javax.sound.sampled.AudioFormat;
+	@:protected private var format : javax.sound.sampled.AudioFormat;
 	
-	private var midiformat : javax.sound.midi.MidiFileFormat;
+	@:protected private var midiformat : javax.sound.midi.MidiFileFormat;
 	
-	private var stream : java.io.InputStream;
+	@:protected private var stream : java.io.InputStream;
 	
 	/*
 	* create the AudioStream; if we survive without throwing
 	* an exception, we should now have some subclass of
 	* ACIS with all the header info already read
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Get the data.
 	*/
-	@:overload public function getData() : sun.audio.AudioData;
+	@:overload @:public public function getData() : sun.audio.AudioData;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	
 }

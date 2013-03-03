@@ -28,9 +28,9 @@ extern interface LocalClientRequestDispatcher
 	/**
 	* @author Harold Carr
 	*/
-	@:overload public function useLocalInvocation(self : org.omg.CORBA.Object) : Bool;
+	@:overload @:public public function useLocalInvocation(self : org.omg.CORBA.Object) : Bool;
 	
-	@:overload public function is_local(self : org.omg.CORBA.Object) : Bool;
+	@:overload @:public public function is_local(self : org.omg.CORBA.Object) : Bool;
 	
 	/**
 	* Returns a Java reference to the servant which should be used for this
@@ -57,9 +57,9 @@ extern interface LocalClientRequestDispatcher
 	* this optimization (e.g. due to security, transactions, etc).
 	* The method must return null if the servant is not of the expected type.
 	*/
-	@:overload @:public public function servant_preinvoke(self : org.omg.CORBA.Object, operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
+	@:overload @:public @:public public function servant_preinvoke(self : org.omg.CORBA.Object, operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
 	
-	@:overload @:public public function servant_postinvoke(self : org.omg.CORBA.Object, servant : org.omg.CORBA.portable.ServantObject) : Void;
+	@:overload @:public @:public public function servant_postinvoke(self : org.omg.CORBA.Object, servant : org.omg.CORBA.portable.ServantObject) : Void;
 	
 	
 }

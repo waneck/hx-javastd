@@ -28,24 +28,24 @@ extern class NullExpression extends sun.tools.tree.ConstantExpression
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64) : Void;
+	@:overload @:public public function new(where : haxe.Int64) : Void;
 	
 	/**
 	* Check if the expression is equal to a value
 	*/
-	@:overload public function equals(i : Int) : Bool;
+	@:overload @:public override public function equals(i : Int) : Bool;
 	
-	@:overload public function isNull() : Bool;
+	@:overload @:public override public function isNull() : Bool;
 	
 	/**
 	* Code
 	*/
-	@:overload public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Print
 	*/
-	@:overload override public function print(out : java.io.PrintStream) : Void;
+	@:overload @:public override public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

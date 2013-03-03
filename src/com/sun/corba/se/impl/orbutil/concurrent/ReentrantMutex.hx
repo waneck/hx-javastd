@@ -38,22 +38,22 @@ Date       Who                What
 extern class ReentrantMutex implements com.sun.corba.se.impl.orbutil.concurrent.Sync
 {
 	/** The thread holding the lock **/
-	private var holder_ : java.lang.Thread;
+	@:protected private var holder_ : java.lang.Thread;
 	
 	/** number of times thread has acquired the lock **/
-	private var counter_ : Int;
+	@:protected private var counter_ : Int;
 	
-	private var debug : Bool;
+	@:protected private var debug : Bool;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(debug : Bool) : Void;
+	@:overload @:public public function new(debug : Bool) : Void;
 	
-	@:overload public function acquire() : Void;
+	@:overload @:public public function acquire() : Void;
 	
-	@:overload @:synchronized public function release() : Void;
+	@:overload @:public @:synchronized public function release() : Void;
 	
-	@:overload public function attempt(msecs : haxe.Int64) : Bool;
+	@:overload @:public public function attempt(msecs : haxe.Int64) : Bool;
 	
 	
 }

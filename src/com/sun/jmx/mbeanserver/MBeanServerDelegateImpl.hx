@@ -25,15 +25,15 @@ package com.sun.jmx.mbeanserver;
 */
 @:internal extern class MBeanServerDelegateImpl extends javax.management.MBeanServerDelegate implements javax.management.DynamicMBean implements javax.management.MBeanRegistration
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:final public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
+	@:overload @:final @:public public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
 	
-	@:overload @:final public function postRegister(registrationDone : Null<Bool>) : Void;
+	@:overload @:final @:public public function postRegister(registrationDone : Null<Bool>) : Void;
 	
-	@:overload @:final public function preDeregister() : Void;
+	@:overload @:final @:public public function preDeregister() : Void;
 	
-	@:overload @:final public function postDeregister() : Void;
+	@:overload @:final @:public public function postDeregister() : Void;
 	
 	/**
 	* Obtains the value of a specific attribute of the MBeanServerDelegate.
@@ -47,7 +47,7 @@ package com.sun.jmx.mbeanserver;
 	*            Wraps a <CODE>java.lang.Exception</CODE> thrown by the
 	*            MBean's getter.
 	*/
-	@:overload public function getAttribute(attribute : String) : Dynamic;
+	@:overload @:public public function getAttribute(attribute : String) : Dynamic;
 	
 	/**
 	* This method always fail since all MBeanServerDelegateMBean attributes
@@ -58,7 +58,7 @@ package com.sun.jmx.mbeanserver;
 	*
 	* @exception AttributeNotFoundException
 	*/
-	@:overload public function setAttribute(attribute : javax.management.Attribute) : Void;
+	@:overload @:public public function setAttribute(attribute : javax.management.Attribute) : Void;
 	
 	/**
 	* Makes it possible to get the values of several attributes of
@@ -69,7 +69,7 @@ package com.sun.jmx.mbeanserver;
 	* @return  The list of attributes retrieved.
 	*
 	*/
-	@:overload public function getAttributes(attributes : java.NativeArray<String>) : javax.management.AttributeList;
+	@:overload @:public public function getAttributes(attributes : java.NativeArray<String>) : javax.management.AttributeList;
 	
 	/**
 	* This method always return an empty list since all
@@ -82,7 +82,7 @@ package com.sun.jmx.mbeanserver;
 	*          In fact, this method always return an empty list since all
 	*          MBeanServerDelegateMBean attributes are read-only.
 	*/
-	@:overload public function setAttributes(attributes : javax.management.AttributeList) : javax.management.AttributeList;
+	@:overload @:public public function setAttributes(attributes : javax.management.AttributeList) : javax.management.AttributeList;
 	
 	/**
 	* Always fails since the MBeanServerDelegate MBean has no operation.
@@ -101,7 +101,7 @@ package com.sun.jmx.mbeanserver;
 	*      <CODE>java.lang.Exception</CODE> thrown while trying to invoke
 	*      the method.
 	*/
-	@:overload public function invoke(actionName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function invoke(actionName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
 	/**
 	* Provides the MBeanInfo describing the MBeanServerDelegate.
@@ -109,7 +109,7 @@ package com.sun.jmx.mbeanserver;
 	* @return  The MBeanInfo describing the MBeanServerDelegate.
 	*
 	*/
-	@:overload public function getMBeanInfo() : javax.management.MBeanInfo;
+	@:overload @:public public function getMBeanInfo() : javax.management.MBeanInfo;
 	
 	
 }

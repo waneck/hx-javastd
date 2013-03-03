@@ -58,37 +58,37 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class RET extends com.sun.org.apache.bcel.internal.generic.Instruction implements com.sun.org.apache.bcel.internal.generic.IndexedInstruction implements com.sun.org.apache.bcel.internal.generic.TypedInstruction
 {
-	@:overload public function new(index : Int) : Void;
+	@:overload @:public public function new(index : Int) : Void;
 	
 	/**
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload @:public override public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* Read needed data (e.g. index) from file.
 	*/
-	@:overload private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload @:protected override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
 	/**
 	* @return index of local variable containg the return address
 	*/
-	@:overload @:final public function getIndex() : Int;
+	@:overload @:public @:final public function getIndex() : Int;
 	
 	/**
 	* Set index of local variable containg the return address
 	*/
-	@:overload @:final public function setIndex(n : Int) : Void;
+	@:overload @:public @:final public function setIndex(n : Int) : Void;
 	
 	/**
 	* @return mnemonic for instruction
 	*/
-	@:overload public function toString(verbose : Bool) : String;
+	@:overload @:public override public function toString(verbose : Bool) : String;
 	
 	/** @return return address type
 	*/
-	@:overload public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -98,7 +98,7 @@ extern class RET extends com.sun.org.apache.bcel.internal.generic.Instruction im
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

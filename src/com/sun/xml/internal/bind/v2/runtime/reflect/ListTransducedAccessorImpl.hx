@@ -25,17 +25,17 @@ package com.sun.xml.internal.bind.v2.runtime.reflect;
 */
 extern class ListTransducedAccessorImpl<BeanT, ListT, ItemT, PackT> extends com.sun.xml.internal.bind.v2.runtime.reflect.DefaultTransducedAccessor<BeanT>
 {
-	@:overload public function new(xducer : com.sun.xml.internal.bind.v2.runtime.Transducer<ItemT>, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ListT>, lister : com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, ListT, ItemT, PackT>) : Void;
+	@:overload @:public public function new(xducer : com.sun.xml.internal.bind.v2.runtime.Transducer<ItemT>, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ListT>, lister : com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, ListT, ItemT, PackT>) : Void;
 	
-	@:overload override public function useNamespace() : Bool;
+	@:overload @:public override public function useNamespace() : Bool;
 	
-	@:overload override public function declareNamespace(bean : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public override public function declareNamespace(bean : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload override public function print(o : BeanT) : String;
+	@:overload @:public override public function print(o : BeanT) : String;
 	
-	@:overload override public function parse(bean : BeanT, lexical : java.lang.CharSequence) : Void;
+	@:overload @:public override public function parse(bean : BeanT, lexical : java.lang.CharSequence) : Void;
 	
-	@:overload override public function hasValue(bean : BeanT) : Bool;
+	@:overload @:public override public function hasValue(bean : BeanT) : Bool;
 	
 	
 }

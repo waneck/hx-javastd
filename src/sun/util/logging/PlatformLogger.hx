@@ -70,125 +70,125 @@ extern class PlatformLogger
 	*
 	* @since 1.7
 	*/
-	@:require(java7) public static var OFF(default, null) : Int;
+	@:require(java7) @:public @:static @:final public static var OFF(default, null) : Int;
 	
-	public static var SEVERE(default, null) : Int;
+	@:public @:static @:final public static var SEVERE(default, null) : Int;
 	
-	public static var WARNING(default, null) : Int;
+	@:public @:static @:final public static var WARNING(default, null) : Int;
 	
-	public static var INFO(default, null) : Int;
+	@:public @:static @:final public static var INFO(default, null) : Int;
 	
-	public static var CONFIG(default, null) : Int;
+	@:public @:static @:final public static var CONFIG(default, null) : Int;
 	
-	public static var FINE(default, null) : Int;
+	@:public @:static @:final public static var FINE(default, null) : Int;
 	
-	public static var FINER(default, null) : Int;
+	@:public @:static @:final public static var FINER(default, null) : Int;
 	
-	public static var FINEST(default, null) : Int;
+	@:public @:static @:final public static var FINEST(default, null) : Int;
 	
-	public static var ALL(default, null) : Int;
+	@:public @:static @:final public static var ALL(default, null) : Int;
 	
 	/**
 	* Returns a PlatformLogger of a given name.
 	*/
-	@:overload @:synchronized public static function getLogger(name : String) : sun.util.logging.PlatformLogger;
+	@:overload @:public @:static @:synchronized public static function getLogger(name : String) : sun.util.logging.PlatformLogger;
 	
 	/**
 	* Initialize java.util.logging.Logger objects for all platform loggers.
 	* This method is called from LogManager.readPrimordialConfiguration().
 	*/
-	@:overload @:synchronized public static function redirectPlatformLoggers() : Void;
+	@:overload @:public @:static @:synchronized public static function redirectPlatformLoggers() : Void;
 	
 	/**
 	* A convenience method to test if the logger is turned off.
 	* (i.e. its level is OFF).
 	*/
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
 	/**
 	* Gets the name for this platform logger.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns true if a message of the given level would actually
 	* be logged by this logger.
 	*/
-	@:overload public function isLoggable(level : Int) : Bool;
+	@:overload @:public public function isLoggable(level : Int) : Bool;
 	
 	/**
 	* Gets the current log level.  Returns 0 if the current effective level
 	* is not set (equivalent to Logger.getLevel() returns null).
 	*/
-	@:overload public function getLevel() : Int;
+	@:overload @:public public function getLevel() : Int;
 	
 	/**
 	* Sets the log level.
 	*/
-	@:overload public function setLevel(newLevel : Int) : Void;
+	@:overload @:public public function setLevel(newLevel : Int) : Void;
 	
 	/**
 	* Logs a SEVERE message.
 	*/
-	@:overload public function severe(msg : String) : Void;
+	@:overload @:public public function severe(msg : String) : Void;
 	
-	@:overload public function severe(msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public public function severe(msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload public function severe(msg : String, params : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function severe(msg : String, params : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Logs a WARNING message.
 	*/
-	@:overload public function warning(msg : String) : Void;
+	@:overload @:public public function warning(msg : String) : Void;
 	
-	@:overload public function warning(msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public public function warning(msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload public function warning(msg : String, params : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function warning(msg : String, params : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Logs an INFO message.
 	*/
-	@:overload public function info(msg : String) : Void;
+	@:overload @:public public function info(msg : String) : Void;
 	
-	@:overload public function info(msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public public function info(msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload public function info(msg : String, params : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function info(msg : String, params : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Logs a CONFIG message.
 	*/
-	@:overload public function config(msg : String) : Void;
+	@:overload @:public public function config(msg : String) : Void;
 	
-	@:overload public function config(msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public public function config(msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload public function config(msg : String, params : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function config(msg : String, params : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Logs a FINE message.
 	*/
-	@:overload public function fine(msg : String) : Void;
+	@:overload @:public public function fine(msg : String) : Void;
 	
-	@:overload public function fine(msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public public function fine(msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload public function fine(msg : String, params : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function fine(msg : String, params : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Logs a FINER message.
 	*/
-	@:overload public function finer(msg : String) : Void;
+	@:overload @:public public function finer(msg : String) : Void;
 	
-	@:overload public function finer(msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public public function finer(msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload public function finer(msg : String, params : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function finer(msg : String, params : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Logs a FINEST message.
 	*/
-	@:overload public function finest(msg : String) : Void;
+	@:overload @:public public function finest(msg : String) : Void;
 	
-	@:overload public function finest(msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public public function finest(msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload public function finest(msg : String, params : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function finest(msg : String, params : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
@@ -198,7 +198,7 @@ extern class PlatformLogger
 */
 @:native('sun$util$logging$PlatformLogger$LoggerProxy') @:internal extern class PlatformLogger_LoggerProxy
 {
-	@:overload public function isLoggable(level : Int) : Bool;
+	@:overload @:public public function isLoggable(level : Int) : Bool;
 	
 	
 }
@@ -208,7 +208,7 @@ extern class PlatformLogger
 */
 @:native('sun$util$logging$PlatformLogger$JavaLogger') @:internal extern class PlatformLogger_JavaLogger extends sun.util.logging.PlatformLogger.PlatformLogger_LoggerProxy
 {
-	@:overload override public function isLoggable(level : Int) : Bool;
+	@:overload @:public override public function isLoggable(level : Int) : Bool;
 	
 	
 }

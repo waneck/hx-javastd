@@ -57,7 +57,7 @@ extern class Perf
 	* @see  java.lang.RuntimePermission
 	* @see  #attach
 	*/
-	@:overload public static function getPerf() : sun.misc.Perf;
+	@:overload @:public @:static public static function getPerf() : sun.misc.Perf;
 	
 	/**
 	* Attach to the instrumentation buffer for the specified Java virtual
@@ -111,7 +111,7 @@ extern class Perf
 	*                           into the virtual machine's address space.
 	* @see     java.nio.ByteBuffer
 	*/
-	@:overload public function attach(lvmid : Int, mode : String) : java.nio.ByteBuffer;
+	@:overload @:public public function attach(lvmid : Int, mode : String) : java.nio.ByteBuffer;
 	
 	/**
 	* Attach to the instrumentation buffer for the specified Java virtual
@@ -135,7 +135,7 @@ extern class Perf
 	*                           into the virtual machine's address space.
 	* @see     java.nio.ByteBuffer
 	*/
-	@:overload public function attach(user : String, lvmid : Int, mode : String) : java.nio.ByteBuffer;
+	@:overload @:public public function attach(user : String, lvmid : Int, mode : String) : java.nio.ByteBuffer;
 	
 	/**
 	* Create a <code>long</code> scalar entry in the instrumentation buffer
@@ -157,7 +157,7 @@ extern class Perf
 	* see sun.misc.perf.Units
 	* @see java.nio.ByteBuffer
 	*/
-	@:overload @:native public function createLong(name : String, variability : Int, units : Int, value : haxe.Int64) : java.nio.ByteBuffer;
+	@:overload @:public @:native public function createLong(name : String, variability : Int, units : Int, value : haxe.Int64) : java.nio.ByteBuffer;
 	
 	/**
 	* Create a <code>String</code> entry in the instrumentation buffer with
@@ -189,7 +189,7 @@ extern class Perf
 	* see sun.misc.perf.Units
 	* @see java.nio.ByteBuffer
 	*/
-	@:overload public function createString(name : String, variability : Int, units : Int, value : String, maxLength : Int) : java.nio.ByteBuffer;
+	@:overload @:public public function createString(name : String, variability : Int, units : Int, value : String, maxLength : Int) : java.nio.ByteBuffer;
 	
 	/**
 	* Create a <code>String</code> entry in the instrumentation buffer with
@@ -220,7 +220,7 @@ extern class Perf
 	* see sun.misc.perf.Units
 	* @see java.nio.ByteBuffer
 	*/
-	@:overload public function createString(name : String, variability : Int, units : Int, value : String) : java.nio.ByteBuffer;
+	@:overload @:public public function createString(name : String, variability : Int, units : Int, value : String) : java.nio.ByteBuffer;
 	
 	/**
 	* Create a <code>byte</code> vector entry in the instrumentation buffer
@@ -250,7 +250,7 @@ extern class Perf
 	* see sun.misc.perf.Units
 	* @see java.nio.ByteBuffer
 	*/
-	@:overload @:native public function createByteArray(name : String, variability : Int, units : Int, value : java.NativeArray<java.StdTypes.Int8>, maxLength : Int) : java.nio.ByteBuffer;
+	@:overload @:public @:native public function createByteArray(name : String, variability : Int, units : Int, value : java.NativeArray<java.StdTypes.Int8>, maxLength : Int) : java.nio.ByteBuffer;
 	
 	/**
 	* Return the value of the High Resolution Counter.
@@ -266,7 +266,7 @@ extern class Perf
 	* @see #highResFrequency
 	* @see java.lang.System#currentTimeMillis()
 	*/
-	@:overload @:native public function highResCounter() : haxe.Int64;
+	@:overload @:public @:native public function highResCounter() : haxe.Int64;
 	
 	/**
 	* Returns the frequency of the High Resolution Counter, in ticks per
@@ -279,7 +279,7 @@ extern class Perf
 	* @return  the frequency of the High Resolution Counter.
 	* @see #highResCounter
 	*/
-	@:overload @:native public function highResFrequency() : haxe.Int64;
+	@:overload @:public @:native public function highResFrequency() : haxe.Int64;
 	
 	
 }
@@ -318,7 +318,7 @@ extern class Perf
 	*
 	* @see #getPerf
 	*/
-	@:overload public function run() : sun.misc.Perf;
+	@:overload @:public public function run() : sun.misc.Perf;
 	
 	
 }

@@ -28,41 +28,41 @@ extern class CorbaContactInfoListImpl implements com.sun.corba.se.spi.transport.
 	/**
 	* @author Harold Carr
 	*/
-	private var orb : com.sun.corba.se.spi.orb.ORB;
+	@:protected private var orb : com.sun.corba.se.spi.orb.ORB;
 	
-	private var LocalClientRequestDispatcher : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcher;
+	@:protected private var LocalClientRequestDispatcher : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcher;
 	
-	private var targetIOR : com.sun.corba.se.spi.ior.IOR;
+	@:protected private var targetIOR : com.sun.corba.se.spi.ior.IOR;
 	
-	private var effectiveTargetIOR : com.sun.corba.se.spi.ior.IOR;
+	@:protected private var effectiveTargetIOR : com.sun.corba.se.spi.ior.IOR;
 	
-	private var effectiveTargetIORContactInfoList : java.util.List<Dynamic>;
+	@:protected private var effectiveTargetIORContactInfoList : java.util.List<Dynamic>;
 	
-	private var primaryContactInfo : com.sun.corba.se.pept.transport.ContactInfo;
+	@:protected private var primaryContactInfo : com.sun.corba.se.pept.transport.ContactInfo;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, targetIOR : com.sun.corba.se.spi.ior.IOR) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, targetIOR : com.sun.corba.se.spi.ior.IOR) : Void;
 	
-	@:overload @:synchronized public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:synchronized public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload @:synchronized public function setTargetIOR(targetIOR : com.sun.corba.se.spi.ior.IOR) : Void;
+	@:overload @:public @:synchronized public function setTargetIOR(targetIOR : com.sun.corba.se.spi.ior.IOR) : Void;
 	
-	@:overload @:synchronized public function getTargetIOR() : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public @:synchronized public function getTargetIOR() : com.sun.corba.se.spi.ior.IOR;
 	
-	@:overload @:synchronized public function setEffectiveTargetIOR(effectiveTargetIOR : com.sun.corba.se.spi.ior.IOR) : Void;
+	@:overload @:public @:synchronized public function setEffectiveTargetIOR(effectiveTargetIOR : com.sun.corba.se.spi.ior.IOR) : Void;
 	
-	@:overload @:synchronized public function getEffectiveTargetIOR() : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public @:synchronized public function getEffectiveTargetIOR() : com.sun.corba.se.spi.ior.IOR;
 	
-	@:overload @:synchronized public function getLocalClientRequestDispatcher() : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcher;
+	@:overload @:public @:synchronized public function getLocalClientRequestDispatcher() : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcher;
 	
-	@:overload @:synchronized public function hashCode() : Int;
+	@:overload @:public @:synchronized public function hashCode() : Int;
 	
-	@:overload private function createContactInfoList() : Void;
+	@:overload @:protected private function createContactInfoList() : Void;
 	
-	@:overload private function addRemoteContactInfos(effectiveTargetIOR : com.sun.corba.se.spi.ior.IOR, effectiveTargetIORContactInfoList : java.util.List<Dynamic>) : Void;
+	@:overload @:protected private function addRemoteContactInfos(effectiveTargetIOR : com.sun.corba.se.spi.ior.IOR, effectiveTargetIORContactInfoList : java.util.List<Dynamic>) : Void;
 	
-	@:overload private function createContactInfo(type : String, hostname : String, port : Int) : com.sun.corba.se.pept.transport.ContactInfo;
+	@:overload @:protected private function createContactInfo(type : String, hostname : String, port : Int) : com.sun.corba.se.pept.transport.ContactInfo;
 	
 	/**
 	* setLocalSubcontract sets cached information that is set whenever
@@ -72,7 +72,7 @@ extern class CorbaContactInfoListImpl implements com.sun.corba.se.spi.transport.
 	* allows local optimization, because ServantManagers in the POA
 	* ALWAYS use local optimization ONLY (they do not have a remote case).
 	*/
-	@:overload private function setLocalSubcontract() : Void;
+	@:overload @:protected private function setLocalSubcontract() : Void;
 	
 	
 }

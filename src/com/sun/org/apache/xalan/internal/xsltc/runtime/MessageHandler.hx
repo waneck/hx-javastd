@@ -26,7 +26,7 @@ package com.sun.org.apache.xalan.internal.xsltc.runtime;
 */
 extern class MessageHandler
 {
-	@:overload public function displayMessage(msg : String) : Void;
+	@:overload @:public public function displayMessage(msg : String) : Void;
 	
 	
 }

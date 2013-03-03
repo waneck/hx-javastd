@@ -25,27 +25,27 @@ package com.sun.corba.se.impl.interceptors;
 */
 extern class ORBInitInfoImpl extends org.omg.CORBA.LocalObject implements org.omg.PortableInterceptor.ORBInitInfo implements com.sun.corba.se.spi.legacy.interceptor.ORBInitInfoExt
 {
-	public static var STAGE_PRE_INIT(default, null) : Int;
+	@:public @:static @:final public static var STAGE_PRE_INIT(default, null) : Int;
 	
-	public static var STAGE_POST_INIT(default, null) : Int;
+	@:public @:static @:final public static var STAGE_POST_INIT(default, null) : Int;
 	
-	public static var STAGE_CLOSED(default, null) : Int;
+	@:public @:static @:final public static var STAGE_CLOSED(default, null) : Int;
 	
 	/** Return the ORB behind this ORBInitInfo.  This is defined in the
 	* ORBInitInfoExt interface.
 	*/
-	@:overload public function getORB() : com.sun.corba.se.spi.orb.ORB;
+	@:overload @:public public function getORB() : com.sun.corba.se.spi.orb.ORB;
 	
 	/**
 	* This attribute contains the arguments passed to ORB_init.  They may
 	* or may not contain the ORB's arguments
 	*/
-	@:overload public function arguments() : java.NativeArray<String>;
+	@:overload @:public public function arguments() : java.NativeArray<String>;
 	
 	/**
 	* This attribute is the ID of the ORB being initialized
 	*/
-	@:overload public function orb_id() : String;
+	@:overload @:public public function orb_id() : String;
 	
 	/**
 	* This attribute is the IOP::CodecFactory.  The CodecFactory is normally
@@ -54,7 +54,7 @@ extern class ORBInitInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* when processing service contexts, will require a Codec, a means of
 	* obtaining a Codec is necessary during ORB intialization.
 	*/
-	@:overload public function codec_factory() : org.omg.IOP.CodecFactory;
+	@:overload @:public public function codec_factory() : org.omg.IOP.CodecFactory;
 	
 	/**
 	* See orbos/99-12-02, Chapter 11, Dynamic Initial References on page
@@ -65,7 +65,7 @@ extern class ORBInitInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* <p>
 	* This method may not be called during post_init.
 	*/
-	@:overload public function register_initial_reference(id : String, obj : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function register_initial_reference(id : String, obj : org.omg.CORBA.Object) : Void;
 	
 	/**
 	* This operation is only valid during post_init.  It is identical to
@@ -78,9 +78,9 @@ extern class ORBInitInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* <p>
 	* This method may not be called during pre_init.
 	*/
-	@:overload public function resolve_initial_references(id : String) : org.omg.CORBA.Object;
+	@:overload @:public public function resolve_initial_references(id : String) : org.omg.CORBA.Object;
 	
-	@:overload public function add_client_request_interceptor_with_policy(interceptor : org.omg.PortableInterceptor.ClientRequestInterceptor, policies : java.NativeArray<org.omg.CORBA.Policy>) : Void;
+	@:overload @:public public function add_client_request_interceptor_with_policy(interceptor : org.omg.PortableInterceptor.ClientRequestInterceptor, policies : java.NativeArray<org.omg.CORBA.Policy>) : Void;
 	
 	/**
 	* This operation is used to add a client-side request Interceptor to
@@ -89,9 +89,9 @@ extern class ORBInitInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* If a client-side request Interceptor has already been registered
 	* with this Interceptor's name, DuplicateName is raised.
 	*/
-	@:overload public function add_client_request_interceptor(interceptor : org.omg.PortableInterceptor.ClientRequestInterceptor) : Void;
+	@:overload @:public public function add_client_request_interceptor(interceptor : org.omg.PortableInterceptor.ClientRequestInterceptor) : Void;
 	
-	@:overload public function add_server_request_interceptor_with_policy(interceptor : org.omg.PortableInterceptor.ServerRequestInterceptor, policies : java.NativeArray<org.omg.CORBA.Policy>) : Void;
+	@:overload @:public public function add_server_request_interceptor_with_policy(interceptor : org.omg.PortableInterceptor.ServerRequestInterceptor, policies : java.NativeArray<org.omg.CORBA.Policy>) : Void;
 	
 	/**
 	* This operation is used to add a server-side request Interceptor to
@@ -100,9 +100,9 @@ extern class ORBInitInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* If a server-side request Interceptor has already been registered
 	* with this Interceptor's name, DuplicateName is raised.
 	*/
-	@:overload public function add_server_request_interceptor(interceptor : org.omg.PortableInterceptor.ServerRequestInterceptor) : Void;
+	@:overload @:public public function add_server_request_interceptor(interceptor : org.omg.PortableInterceptor.ServerRequestInterceptor) : Void;
 	
-	@:overload public function add_ior_interceptor_with_policy(interceptor : org.omg.PortableInterceptor.IORInterceptor, policies : java.NativeArray<org.omg.CORBA.Policy>) : Void;
+	@:overload @:public public function add_ior_interceptor_with_policy(interceptor : org.omg.PortableInterceptor.IORInterceptor, policies : java.NativeArray<org.omg.CORBA.Policy>) : Void;
 	
 	/**
 	* This operation is used to add an IOR Interceptor to
@@ -111,7 +111,7 @@ extern class ORBInitInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* If an IOR Interceptor has already been registered
 	* with this Interceptor's name, DuplicateName is raised.
 	*/
-	@:overload public function add_ior_interceptor(interceptor : org.omg.PortableInterceptor.IORInterceptor) : Void;
+	@:overload @:public public function add_ior_interceptor(interceptor : org.omg.PortableInterceptor.IORInterceptor) : Void;
 	
 	/**
 	* A service calls allocate_slot_id to allocate a slot on
@@ -119,7 +119,7 @@ extern class ORBInitInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	*
 	* @return The index to the slot which has been allocated.
 	*/
-	@:overload public function allocate_slot_id() : Int;
+	@:overload @:public public function allocate_slot_id() : Int;
 	
 	/**
 	* Register a PolicyFactory for the given PolicyType.
@@ -127,7 +127,7 @@ extern class ORBInitInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* If a PolicyFactory already exists for the given PolicyType,
 	* BAD_INV_ORDER is raised with a minor code of TBD_BIO+2.
 	*/
-	@:overload public function register_policy_factory(type : Int, policy_factory : org.omg.PortableInterceptor.PolicyFactory) : Void;
+	@:overload @:public public function register_policy_factory(type : Int, policy_factory : org.omg.PortableInterceptor.PolicyFactory) : Void;
 	
 	
 }

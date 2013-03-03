@@ -32,19 +32,19 @@ extern class NestedPolicy extends com.sun.xml.internal.ws.policy.Policy
 	* @return nested policy alternative represented by AssertionSet object. May return {@code null} in case the nested policy
 	* represents 'nothing allowed' policy.
 	*/
-	@:overload public function getAssertionSet() : com.sun.xml.internal.ws.policy.AssertionSet;
+	@:overload @:public public function getAssertionSet() : com.sun.xml.internal.ws.policy.AssertionSet;
 	
 	/**
 	* An {@code Object.equals(Object obj)} method override.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* An {@code Object.toString()} method override.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

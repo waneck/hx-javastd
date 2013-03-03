@@ -1,7 +1,7 @@
 package sun.awt;
 extern class X11FontManager extends sun.font.SunFontManager
 {
-	@:overload public static function getInstance() : sun.awt.X11FontManager;
+	@:overload @:public @:static public static function getInstance() : sun.awt.X11FontManager;
 	
 	/**
 	* Takes family name property in the following format:
@@ -10,9 +10,9 @@ extern class X11FontManager extends sun.font.SunFontManager
 	* This code is used to resolve font configuration fonts, and expects
 	* only to get called for these fonts.
 	*/
-	@:overload override public function getFileNameFromPlatformName(platName : String) : String;
+	@:overload @:public override public function getFileNameFromPlatformName(platName : String) : String;
 	
-	@:overload override private function getNativeNames(fontFileName : String, platformName : String) : java.NativeArray<String>;
+	@:overload @:protected override private function getNativeNames(fontFileName : String, platformName : String) : java.NativeArray<String>;
 	
 	/* NOTE: this method needs to be executed in a privileged context.
 	* The superclass constructor which is the primary caller of
@@ -20,14 +20,14 @@ extern class X11FontManager extends sun.font.SunFontManager
 	* the loadFonts() method does too. So all should be well.
 
 	*/
-	@:overload override private function registerFontDir(path : String) : Void;
+	@:overload @:protected override private function registerFontDir(path : String) : Void;
 	
-	@:overload override public function loadFonts() : Void;
+	@:overload @:public override public function loadFonts() : Void;
 	
 	/**
 	* Returns the face name for the given XLFD.
 	*/
-	@:overload public function getFileNameFromXLFD(name : String) : String;
+	@:overload @:public public function getFileNameFromXLFD(name : String) : String;
 	
 	/* Register just the paths, (it doesn't register the fonts).
 	* If a font configuration file has specified a baseFontPath
@@ -77,25 +77,25 @@ extern class X11FontManager extends sun.font.SunFontManager
 	* unconditionally making this call may be necessary, at
 	* some cost to JRE start-up
 	*/
-	@:overload override private function registerFontDirs(pathName : String) : Void;
+	@:overload @:protected override private function registerFontDirs(pathName : String) : Void;
 	
-	@:overload override private function addFontToPlatformFontPath(platformName : String) : Void;
+	@:overload @:protected override private function addFontToPlatformFontPath(platformName : String) : Void;
 	
-	@:overload override private function registerPlatformFontsUsedByFontConfiguration() : Void;
+	@:overload @:protected override private function registerPlatformFontsUsedByFontConfiguration() : Void;
 	
-	@:overload override private function createFontConfiguration() : sun.awt.FontConfiguration;
+	@:overload @:protected override private function createFontConfiguration() : sun.awt.FontConfiguration;
 	
-	@:overload override public function createFontConfiguration(preferLocaleFonts : Bool, preferPropFonts : Bool) : sun.awt.FontConfiguration;
+	@:overload @:public override public function createFontConfiguration(preferLocaleFonts : Bool, preferPropFonts : Bool) : sun.awt.FontConfiguration;
 	
-	@:overload @:synchronized @:native public function getFontPathNative(noType1Fonts : Bool) : String;
+	@:overload @:public @:synchronized @:native public function getFontPathNative(noType1Fonts : Bool) : String;
 	
-	@:overload @:synchronized override private function getFontPath(noType1Fonts : Bool) : String;
+	@:overload @:protected @:synchronized override private function getFontPath(noType1Fonts : Bool) : String;
 	
-	@:overload override public function getDefaultPlatformFont() : java.NativeArray<String>;
+	@:overload @:public override public function getDefaultPlatformFont() : java.NativeArray<String>;
 	
-	@:overload @:synchronized public function getFontConfigManager() : sun.font.FontConfigManager;
+	@:overload @:public @:synchronized public function getFontConfigManager() : sun.font.FontConfigManager;
 	
-	@:overload override private function getFontConfigFUIR(family : String, style : Int, size : Int) : javax.swing.plaf.FontUIResource;
+	@:overload @:protected override private function getFontConfigFUIR(family : String, style : Int, size : Int) : javax.swing.plaf.FontUIResource;
 	
 	
 }

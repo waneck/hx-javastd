@@ -25,17 +25,17 @@ package sun.font;
 */
 extern class FontAccess
 {
-	@:overload @:synchronized public static function setFontAccess(acc : sun.font.FontAccess) : Void;
+	@:overload @:public @:static @:synchronized public static function setFontAccess(acc : sun.font.FontAccess) : Void;
 	
-	@:overload @:synchronized public static function getFontAccess() : sun.font.FontAccess;
+	@:overload @:public @:static @:synchronized public static function getFontAccess() : sun.font.FontAccess;
 	
-	@:overload @:abstract public function getFont2D(f : java.awt.Font) : sun.font.Font2D;
+	@:overload @:public @:abstract public function getFont2D(f : java.awt.Font) : sun.font.Font2D;
 	
-	@:overload @:abstract public function setFont2D(f : java.awt.Font, h : sun.font.Font2DHandle) : Void;
+	@:overload @:public @:abstract public function setFont2D(f : java.awt.Font, h : sun.font.Font2DHandle) : Void;
 	
-	@:overload @:abstract public function setCreatedFont(f : java.awt.Font) : Void;
+	@:overload @:public @:abstract public function setCreatedFont(f : java.awt.Font) : Void;
 	
-	@:overload @:abstract public function isCreatedFont(f : java.awt.Font) : Bool;
+	@:overload @:public @:abstract public function isCreatedFont(f : java.awt.Font) : Bool;
 	
 	
 }

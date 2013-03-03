@@ -30,7 +30,7 @@ extern class ExemptionMechanismException extends java.security.GeneralSecurityEx
 	* (A detailed message is a String that describes this particular
 	* exception.)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a ExemptionMechanismException with the specified
@@ -39,7 +39,7 @@ extern class ExemptionMechanismException extends java.security.GeneralSecurityEx
 	*
 	* @param msg the detailed message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

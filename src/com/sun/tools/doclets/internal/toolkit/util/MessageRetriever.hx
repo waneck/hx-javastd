@@ -30,7 +30,7 @@ extern class MessageRetriever
 	*
 	* @param rb the esource bundle to read.
 	*/
-	@:overload public function new(rb : java.util.ResourceBundle) : Void;
+	@:overload @:public public function new(rb : java.util.ResourceBundle) : Void;
 	
 	/**
 	* Initilize the ResourceBundle with the given resource.
@@ -38,7 +38,7 @@ extern class MessageRetriever
 	* @param configuration the configuration
 	* @param resourcelocation Resource.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, resourcelocation : String) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, resourcelocation : String) : Void;
 	
 	/**
 	* Get and format message string from resource
@@ -48,7 +48,7 @@ extern class MessageRetriever
 	* @throws MissingResourceException when the key does not
 	* exist in the properties file.
 	*/
-	@:overload public function getText(key : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public public function getText(key : String, args : java.NativeArray<Dynamic>) : String;
 	
 	/**
 	* Print error message, increment error count.
@@ -57,7 +57,7 @@ extern class MessageRetriever
 	* @param key selects message from resource
 	* @param args arguments to be replaced in the message.
 	*/
-	@:overload public function error(pos : com.sun.javadoc.SourcePosition, key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function error(pos : com.sun.javadoc.SourcePosition, key : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Print error message, increment error count.
@@ -65,7 +65,7 @@ extern class MessageRetriever
 	* @param key selects message from resource
 	* @param args arguments to be replaced in the message.
 	*/
-	@:overload public function error(key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function error(key : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Print warning message, increment warning count.
@@ -74,7 +74,7 @@ extern class MessageRetriever
 	* @param key selects message from resource
 	* @param args arguments to be replaced in the message.
 	*/
-	@:overload public function warning(pos : com.sun.javadoc.SourcePosition, key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function warning(pos : com.sun.javadoc.SourcePosition, key : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Print warning message, increment warning count.
@@ -82,7 +82,7 @@ extern class MessageRetriever
 	* @param key selects message from resource
 	* @param args arguments to be replaced in the message.
 	*/
-	@:overload public function warning(key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function warning(key : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Print a message.
@@ -91,7 +91,7 @@ extern class MessageRetriever
 	* @param key selects message from resource
 	* @param args arguments to be replaced in the message.
 	*/
-	@:overload public function notice(pos : com.sun.javadoc.SourcePosition, key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function notice(pos : com.sun.javadoc.SourcePosition, key : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Print a message.
@@ -99,7 +99,7 @@ extern class MessageRetriever
 	* @param key selects message from resource
 	* @param args arguments to be replaced in the message.
 	*/
-	@:overload public function notice(key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function notice(key : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

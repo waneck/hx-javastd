@@ -25,11 +25,11 @@ package sun.java2d.jules;
 */
 extern class JulesShapePipe implements sun.java2d.pipe.ShapeDrawPipe
 {
-	@:overload public function new(compMan : sun.java2d.xr.XRCompositeManager) : Void;
+	@:overload @:public public function new(compMan : sun.java2d.xr.XRCompositeManager) : Void;
 	
-	@:overload public function draw(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
+	@:overload @:public public function draw(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
 	
-	@:overload public function fill(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
+	@:overload @:public public function fill(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
 	
 	
 }

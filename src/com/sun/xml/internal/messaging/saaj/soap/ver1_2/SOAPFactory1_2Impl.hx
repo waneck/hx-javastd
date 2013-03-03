@@ -29,13 +29,13 @@ package com.sun.xml.internal.messaging.saaj.soap.ver1_2;
 */
 extern class SOAPFactory1_2Impl extends com.sun.xml.internal.messaging.saaj.soap.SOAPFactoryImpl
 {
-	@:overload private function createDocument() : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl;
+	@:overload @:protected override private function createDocument() : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl;
 	
-	@:overload override public function createDetail() : javax.xml.soap.Detail;
+	@:overload @:public override public function createDetail() : javax.xml.soap.Detail;
 	
-	@:overload override public function createFault(reasonText : String, faultCode : javax.xml.namespace.QName) : javax.xml.soap.SOAPFault;
+	@:overload @:public override public function createFault(reasonText : String, faultCode : javax.xml.namespace.QName) : javax.xml.soap.SOAPFault;
 	
-	@:overload override public function createFault() : javax.xml.soap.SOAPFault;
+	@:overload @:public override public function createFault() : javax.xml.soap.SOAPFault;
 	
 	
 }

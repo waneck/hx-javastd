@@ -26,29 +26,29 @@ package com.sun.tools.internal.xjc.reader;
 extern class AbstractExtensionBindingChecker extends com.sun.tools.internal.xjc.util.SubtreeCutter
 {
 	/** Remembers in-scope namespace bindings. */
-	private var nsSupport(default, null) : org.xml.sax.helpers.NamespaceSupport;
+	@:protected @:final private var nsSupport(default, null) : org.xml.sax.helpers.NamespaceSupport;
 	
 	/**
 	* Set of namespace URIs that designates enabled extensions.
 	*/
-	private var enabledExtensions(default, null) : java.util.Set<String>;
+	@:protected @:final private var enabledExtensions(default, null) : java.util.Set<String>;
 	
 	/**
 	* Namespace URI of the target schema language. Elements in this
 	* namespace are always allowed.
 	*/
-	private var schemaLanguage(default, null) : String;
+	@:protected @:final private var schemaLanguage(default, null) : String;
 	
 	/**
 	* If false, any use of extensions is reported as an error.
 	*/
-	private var allowExtensions(default, null) : Bool;
+	@:protected @:final private var allowExtensions(default, null) : Bool;
 	
 	/**
 	* @param handler
 	*      This error handler will receive detected errors.
 	*/
-	@:overload public function new(schemaLanguage : String, options : com.sun.tools.internal.xjc.Options, handler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function new(schemaLanguage : String, options : com.sun.tools.internal.xjc.Options, handler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Verify that the given URI is indeed a valid extension namespace URI,
@@ -56,43 +56,43 @@ extern class AbstractExtensionBindingChecker extends com.sun.tools.internal.xjc.
 	* <p>
 	* This method does all the error handling.
 	*/
-	@:overload @:final private function checkAndEnable(uri : String) : Void;
+	@:overload @:protected @:final private function checkAndEnable(uri : String) : Void;
 	
 	/**
 	* If the tag name belongs to a plugin namespace-wise, check its local name
 	* to make sure it's correct.
 	*/
-	@:overload @:final private function verifyTagName(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:protected @:final private function verifyTagName(namespaceURI : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Checks if the given namespace URI is supported as the extension
 	* bindings.
 	*/
-	@:overload @:final private function isSupportedExtension(namespaceUri : String) : Bool;
+	@:overload @:protected @:final private function isSupportedExtension(namespaceUri : String) : Bool;
 	
 	/**
 	* Checks if the given namespace URI can be potentially recognized
 	* by this XJC.
 	*/
-	@:overload @:final private function isRecognizableExtension(namespaceUri : String) : Bool;
+	@:overload @:protected @:final private function isRecognizableExtension(namespaceUri : String) : Bool;
 	
-	@:overload override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload override public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
-	@:overload override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload override public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public override public function endPrefixMapping(prefix : String) : Void;
 	
 	/**
 	* Reports an error and returns the created SAXParseException
 	*/
-	@:overload @:final private function error(msg : String) : org.xml.sax.SAXParseException;
+	@:overload @:protected @:final private function error(msg : String) : org.xml.sax.SAXParseException;
 	
 	/**
 	* Reports a warning.
 	*/
-	@:overload @:final private function warning(msg : String) : Void;
+	@:overload @:protected @:final private function warning(msg : String) : Void;
 	
 	
 }

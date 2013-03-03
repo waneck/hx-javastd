@@ -29,14 +29,14 @@ extern class Math
 	* The {@code double} value that is closer than any other to
 	* <i>e</i>, the base of the natural logarithms.
 	*/
-	public static var E(default, null) : Float;
+	@:public @:static @:final public static var E(default, null) : Float;
 	
 	/**
 	* The {@code double} value that is closer than any other to
 	* <i>pi</i>, the ratio of the circumference of a circle to its
 	* diameter.
 	*/
-	public static var PI(default, null) : Float;
+	@:public @:static @:final public static var PI(default, null) : Float;
 	
 	/**
 	* Returns the trigonometric sine of an angle.  Special cases:
@@ -51,7 +51,7 @@ extern class Math
 	* @param   a   an angle, in radians.
 	* @return  the sine of the argument.
 	*/
-	@:overload public static function sin(a : Float) : Float;
+	@:overload @:public @:static public static function sin(a : Float) : Float;
 	
 	/**
 	* Returns the trigonometric cosine of an angle. Special cases:
@@ -64,7 +64,7 @@ extern class Math
 	* @param   a   an angle, in radians.
 	* @return  the cosine of the argument.
 	*/
-	@:overload public static function cos(a : Float) : Float;
+	@:overload @:public @:static public static function cos(a : Float) : Float;
 	
 	/**
 	* Returns the trigonometric tangent of an angle.  Special cases:
@@ -79,7 +79,7 @@ extern class Math
 	* @param   a   an angle, in radians.
 	* @return  the tangent of the argument.
 	*/
-	@:overload public static function tan(a : Float) : Float;
+	@:overload @:public @:static public static function tan(a : Float) : Float;
 	
 	/**
 	* Returns the arc sine of a value; the returned angle is in the
@@ -95,7 +95,7 @@ extern class Math
 	* @param   a   the value whose arc sine is to be returned.
 	* @return  the arc sine of the argument.
 	*/
-	@:overload public static function asin(a : Float) : Float;
+	@:overload @:public @:static public static function asin(a : Float) : Float;
 	
 	/**
 	* Returns the arc cosine of a value; the returned angle is in the
@@ -109,7 +109,7 @@ extern class Math
 	* @param   a   the value whose arc cosine is to be returned.
 	* @return  the arc cosine of the argument.
 	*/
-	@:overload public static function acos(a : Float) : Float;
+	@:overload @:public @:static public static function acos(a : Float) : Float;
 	
 	/**
 	* Returns the arc tangent of a value; the returned angle is in the
@@ -124,7 +124,7 @@ extern class Math
 	* @param   a   the value whose arc tangent is to be returned.
 	* @return  the arc tangent of the argument.
 	*/
-	@:overload public static function atan(a : Float) : Float;
+	@:overload @:public @:static public static function atan(a : Float) : Float;
 	
 	/**
 	* Converts an angle measured in degrees to an approximately
@@ -136,7 +136,7 @@ extern class Math
 	*          in radians.
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public static function toRadians(angdeg : Float) : Float;
+	@:require(java2) @:overload @:public @:static public static function toRadians(angdeg : Float) : Float;
 	
 	/**
 	* Converts an angle measured in radians to an approximately
@@ -150,7 +150,7 @@ extern class Math
 	*          in degrees.
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public static function toDegrees(angrad : Float) : Float;
+	@:require(java2) @:overload @:public @:static public static function toDegrees(angrad : Float) : Float;
 	
 	/**
 	* Returns Euler's number <i>e</i> raised to the power of a
@@ -168,7 +168,7 @@ extern class Math
 	* @return  the value <i>e</i><sup>{@code a}</sup>,
 	*          where <i>e</i> is the base of the natural logarithms.
 	*/
-	@:overload public static function exp(a : Float) : Float;
+	@:overload @:public @:static public static function exp(a : Float) : Float;
 	
 	/**
 	* Returns the natural logarithm (base <i>e</i>) of a {@code double}
@@ -187,7 +187,7 @@ extern class Math
 	* @return  the value ln&nbsp;{@code a}, the natural logarithm of
 	*          {@code a}.
 	*/
-	@:overload public static function log(a : Float) : Float;
+	@:overload @:public @:static public static function log(a : Float) : Float;
 	
 	/**
 	* Returns the base 10 logarithm of a {@code double} value.
@@ -210,7 +210,7 @@ extern class Math
 	* @return  the base 10 logarithm of  {@code a}.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function log10(a : Float) : Float;
+	@:require(java5) @:overload @:public @:static public static function log10(a : Float) : Float;
 	
 	/**
 	* Returns the correctly rounded positive square root of a
@@ -229,7 +229,7 @@ extern class Math
 	* @return  the positive square root of {@code a}.
 	*          If the argument is NaN or less than zero, the result is NaN.
 	*/
-	@:overload public static function sqrt(a : Float) : Float;
+	@:overload @:public @:static public static function sqrt(a : Float) : Float;
 	
 	/**
 	* Returns the cube root of a {@code double} value.  For
@@ -257,7 +257,7 @@ extern class Math
 	* @return  the cube root of {@code a}.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function cbrt(a : Float) : Float;
+	@:require(java5) @:overload @:public @:static public static function cbrt(a : Float) : Float;
 	
 	/**
 	* Computes the remainder operation on two arguments as prescribed
@@ -281,7 +281,7 @@ extern class Math
 	* @return  the remainder when {@code f1} is divided by
 	*          {@code f2}.
 	*/
-	@:overload public static function IEEEremainder(f1 : Float, f2 : Float) : Float;
+	@:overload @:public @:static public static function IEEEremainder(f1 : Float, f2 : Float) : Float;
 	
 	/**
 	* Returns the smallest (closest to negative infinity)
@@ -302,7 +302,7 @@ extern class Math
 	*          floating-point value that is greater than or equal to
 	*          the argument and is equal to a mathematical integer.
 	*/
-	@:overload public static function ceil(a : Float) : Float;
+	@:overload @:public @:static public static function ceil(a : Float) : Float;
 	
 	/**
 	* Returns the largest (closest to positive infinity)
@@ -319,7 +319,7 @@ extern class Math
 	*          floating-point value that less than or equal to the argument
 	*          and is equal to a mathematical integer.
 	*/
-	@:overload public static function floor(a : Float) : Float;
+	@:overload @:public @:static public static function floor(a : Float) : Float;
 	
 	/**
 	* Returns the {@code double} value that is closest in value
@@ -336,7 +336,7 @@ extern class Math
 	* @return  the closest floating-point value to {@code a} that is
 	*          equal to a mathematical integer.
 	*/
-	@:overload public static function rint(a : Float) : Float;
+	@:overload @:public @:static public static function rint(a : Float) : Float;
 	
 	/**
 	* Returns the angle <i>theta</i> from the conversion of rectangular
@@ -390,7 +390,7 @@ extern class Math
 	*          in polar coordinates that corresponds to the point
 	*          (<i>x</i>,&nbsp;<i>y</i>) in Cartesian coordinates.
 	*/
-	@:overload public static function atan2(y : Float, x : Float) : Float;
+	@:overload @:public @:static public static function atan2(y : Float, x : Float) : Float;
 	
 	/**
 	* Returns the value of the first argument raised to the power of the
@@ -515,7 +515,7 @@ extern class Math
 	* @param   b   the exponent.
 	* @return  the value {@code a}<sup>{@code b}</sup>.
 	*/
-	@:overload public static function pow(a : Float, b : Float) : Float;
+	@:overload @:public @:static public static function pow(a : Float, b : Float) : Float;
 	
 	/**
 	* Returns the closest {@code int} to the argument, with ties
@@ -537,7 +537,7 @@ extern class Math
 	* @see     java.lang.Integer#MAX_VALUE
 	* @see     java.lang.Integer#MIN_VALUE
 	*/
-	@:overload public static function round(a : Single) : Int;
+	@:overload @:public @:static public static function round(a : Single) : Int;
 	
 	/**
 	* Returns the closest {@code long} to the argument, with ties
@@ -559,7 +559,7 @@ extern class Math
 	* @see     java.lang.Long#MAX_VALUE
 	* @see     java.lang.Long#MIN_VALUE
 	*/
-	@:overload public static function round(a : Float) : haxe.Int64;
+	@:overload @:public @:static public static function round(a : Float) : haxe.Int64;
 	
 	/**
 	* Returns a {@code double} value with a positive sign, greater
@@ -584,7 +584,7 @@ extern class Math
 	* to {@code 0.0} and less than {@code 1.0}.
 	* @see Random#nextDouble()
 	*/
-	@:overload public static function random() : Float;
+	@:overload @:public @:static public static function random() : Float;
 	
 	/**
 	* Returns the absolute value of an {@code int} value.
@@ -599,7 +599,7 @@ extern class Math
 	* @param   a   the argument whose absolute value is to be determined
 	* @return  the absolute value of the argument.
 	*/
-	@:overload public static function abs(a : Int) : Int;
+	@:overload @:public @:static public static function abs(a : Int) : Int;
 	
 	/**
 	* Returns the absolute value of a {@code long} value.
@@ -614,7 +614,7 @@ extern class Math
 	* @param   a   the argument whose absolute value is to be determined
 	* @return  the absolute value of the argument.
 	*/
-	@:overload public static function abs(a : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:static public static function abs(a : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the absolute value of a {@code float} value.
@@ -631,7 +631,7 @@ extern class Math
 	* @param   a   the argument whose absolute value is to be determined
 	* @return  the absolute value of the argument.
 	*/
-	@:overload public static function abs(a : Single) : Single;
+	@:overload @:public @:static public static function abs(a : Single) : Single;
 	
 	/**
 	* Returns the absolute value of a {@code double} value.
@@ -648,7 +648,7 @@ extern class Math
 	* @param   a   the argument whose absolute value is to be determined
 	* @return  the absolute value of the argument.
 	*/
-	@:overload public static function abs(a : Float) : Float;
+	@:overload @:public @:static public static function abs(a : Float) : Float;
 	
 	/**
 	* Returns the greater of two {@code int} values. That is, the
@@ -660,7 +660,7 @@ extern class Math
 	* @param   b   another argument.
 	* @return  the larger of {@code a} and {@code b}.
 	*/
-	@:overload public static function max(a : Int, b : Int) : Int;
+	@:overload @:public @:static public static function max(a : Int, b : Int) : Int;
 	
 	/**
 	* Returns the greater of two {@code long} values. That is, the
@@ -672,7 +672,7 @@ extern class Math
 	* @param   b   another argument.
 	* @return  the larger of {@code a} and {@code b}.
 	*/
-	@:overload public static function max(a : haxe.Int64, b : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:static public static function max(a : haxe.Int64, b : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the greater of two {@code float} values.  That is,
@@ -688,7 +688,7 @@ extern class Math
 	* @param   b   another argument.
 	* @return  the larger of {@code a} and {@code b}.
 	*/
-	@:overload public static function max(a : Single, b : Single) : Single;
+	@:overload @:public @:static public static function max(a : Single, b : Single) : Single;
 	
 	/**
 	* Returns the greater of two {@code double} values.  That
@@ -704,7 +704,7 @@ extern class Math
 	* @param   b   another argument.
 	* @return  the larger of {@code a} and {@code b}.
 	*/
-	@:overload public static function max(a : Float, b : Float) : Float;
+	@:overload @:public @:static public static function max(a : Float, b : Float) : Float;
 	
 	/**
 	* Returns the smaller of two {@code int} values. That is,
@@ -716,7 +716,7 @@ extern class Math
 	* @param   b   another argument.
 	* @return  the smaller of {@code a} and {@code b}.
 	*/
-	@:overload public static function min(a : Int, b : Int) : Int;
+	@:overload @:public @:static public static function min(a : Int, b : Int) : Int;
 	
 	/**
 	* Returns the smaller of two {@code long} values. That is,
@@ -728,7 +728,7 @@ extern class Math
 	* @param   b   another argument.
 	* @return  the smaller of {@code a} and {@code b}.
 	*/
-	@:overload public static function min(a : haxe.Int64, b : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:static public static function min(a : haxe.Int64, b : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the smaller of two {@code float} values.  That is,
@@ -744,7 +744,7 @@ extern class Math
 	* @param   b   another argument.
 	* @return  the smaller of {@code a} and {@code b}.
 	*/
-	@:overload public static function min(a : Single, b : Single) : Single;
+	@:overload @:public @:static public static function min(a : Single, b : Single) : Single;
 	
 	/**
 	* Returns the smaller of two {@code double} values.  That
@@ -760,7 +760,7 @@ extern class Math
 	* @param   b   another argument.
 	* @return  the smaller of {@code a} and {@code b}.
 	*/
-	@:overload public static function min(a : Float, b : Float) : Float;
+	@:overload @:public @:static public static function min(a : Float, b : Float) : Float;
 	
 	/**
 	* Returns the size of an ulp of the argument.  An ulp of a
@@ -785,7 +785,7 @@ extern class Math
 	* @author Joseph D. Darcy
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function ulp(d : Float) : Float;
+	@:require(java5) @:overload @:public @:static public static function ulp(d : Float) : Float;
 	
 	/**
 	* Returns the size of an ulp of the argument.  An ulp of a
@@ -810,7 +810,7 @@ extern class Math
 	* @author Joseph D. Darcy
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function ulp(f : Single) : Single;
+	@:require(java5) @:overload @:public @:static public static function ulp(f : Single) : Single;
 	
 	/**
 	* Returns the signum function of the argument; zero if the argument
@@ -829,7 +829,7 @@ extern class Math
 	* @author Joseph D. Darcy
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function signum(d : Float) : Float;
+	@:require(java5) @:overload @:public @:static public static function signum(d : Float) : Float;
 	
 	/**
 	* Returns the signum function of the argument; zero if the argument
@@ -848,7 +848,7 @@ extern class Math
 	* @author Joseph D. Darcy
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function signum(f : Single) : Single;
+	@:require(java5) @:overload @:public @:static public static function signum(f : Single) : Single;
 	
 	/**
 	* Returns the hyperbolic sine of a {@code double} value.
@@ -875,7 +875,7 @@ extern class Math
 	* @return  The hyperbolic sine of {@code x}.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function sinh(x : Float) : Float;
+	@:require(java5) @:overload @:public @:static public static function sinh(x : Float) : Float;
 	
 	/**
 	* Returns the hyperbolic cosine of a {@code double} value.
@@ -901,7 +901,7 @@ extern class Math
 	* @return  The hyperbolic cosine of {@code x}.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function cosh(x : Float) : Float;
+	@:require(java5) @:overload @:public @:static public static function cosh(x : Float) : Float;
 	
 	/**
 	* Returns the hyperbolic tangent of a {@code double} value.
@@ -939,7 +939,7 @@ extern class Math
 	* @return  The hyperbolic tangent of {@code x}.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function tanh(x : Float) : Float;
+	@:require(java5) @:overload @:public @:static public static function tanh(x : Float) : Float;
 	
 	/**
 	* Returns sqrt(<i>x</i><sup>2</sup>&nbsp;+<i>y</i><sup>2</sup>)
@@ -966,7 +966,7 @@ extern class Math
 	* without intermediate overflow or underflow
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function hypot(x : Float, y : Float) : Float;
+	@:require(java5) @:overload @:public @:static public static function hypot(x : Float, y : Float) : Float;
 	
 	/**
 	* Returns <i>e</i><sup>x</sup>&nbsp;-1.  Note that for values of
@@ -1002,7 +1002,7 @@ extern class Math
 	* @return  the value <i>e</i><sup>{@code x}</sup>&nbsp;-&nbsp;1.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function expm1(x : Float) : Float;
+	@:require(java5) @:overload @:public @:static public static function expm1(x : Float) : Float;
 	
 	/**
 	* Returns the natural logarithm of the sum of the argument and 1.
@@ -1037,7 +1037,7 @@ extern class Math
 	* log of {@code x}&nbsp;+&nbsp;1
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function log1p(x : Float) : Float;
+	@:require(java5) @:overload @:public @:static public static function log1p(x : Float) : Float;
 	
 	/**
 	* Returns the first floating-point argument with the sign of the
@@ -1054,7 +1054,7 @@ extern class Math
 	* and the sign of {@code sign}.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copySign(magnitude : Float, sign : Float) : Float;
+	@:require(java6) @:overload @:public @:static public static function copySign(magnitude : Float, sign : Float) : Float;
 	
 	/**
 	* Returns the first floating-point argument with the sign of the
@@ -1071,7 +1071,7 @@ extern class Math
 	* and the sign of {@code sign}.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copySign(magnitude : Single, sign : Single) : Single;
+	@:require(java6) @:overload @:public @:static public static function copySign(magnitude : Single, sign : Single) : Single;
 	
 	/**
 	* Returns the unbiased exponent used in the representation of a
@@ -1087,7 +1087,7 @@ extern class Math
 	* @return the unbiased exponent of the argument
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getExponent(f : Single) : Int;
+	@:require(java6) @:overload @:public @:static public static function getExponent(f : Single) : Int;
 	
 	/**
 	* Returns the unbiased exponent used in the representation of a
@@ -1103,7 +1103,7 @@ extern class Math
 	* @return the unbiased exponent of the argument
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getExponent(d : Float) : Int;
+	@:require(java6) @:overload @:public @:static public static function getExponent(d : Float) : Int;
 	
 	/**
 	* Returns the floating-point number adjacent to the first
@@ -1145,7 +1145,7 @@ extern class Math
 	* direction of {@code direction}.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function nextAfter(start : Float, direction : Float) : Float;
+	@:require(java6) @:overload @:public @:static public static function nextAfter(start : Float, direction : Float) : Float;
 	
 	/**
 	* Returns the floating-point number adjacent to the first
@@ -1186,7 +1186,7 @@ extern class Math
 	* direction of {@code direction}.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function nextAfter(start : Single, direction : Float) : Single;
+	@:require(java6) @:overload @:public @:static public static function nextAfter(start : Single, direction : Float) : Single;
 	
 	/**
 	* Returns the floating-point value adjacent to {@code d} in
@@ -1213,7 +1213,7 @@ extern class Math
 	* infinity.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function nextUp(d : Float) : Float;
+	@:require(java6) @:overload @:public @:static public static function nextUp(d : Float) : Float;
 	
 	/**
 	* Returns the floating-point value adjacent to {@code f} in
@@ -1240,7 +1240,7 @@ extern class Math
 	* infinity.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function nextUp(f : Single) : Single;
+	@:require(java6) @:overload @:public @:static public static function nextUp(f : Single) : Single;
 	
 	/**
 	* Return {@code d} &times;
@@ -1272,7 +1272,7 @@ extern class Math
 	* @return {@code d} &times; 2<sup>{@code scaleFactor}</sup>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function scalb(d : Float, scaleFactor : Int) : Float;
+	@:require(java6) @:overload @:public @:static public static function scalb(d : Float, scaleFactor : Int) : Float;
 	
 	/**
 	* Return {@code f} &times;
@@ -1304,7 +1304,7 @@ extern class Math
 	* @return {@code f} &times; 2<sup>{@code scaleFactor}</sup>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function scalb(f : Single, scaleFactor : Int) : Single;
+	@:require(java6) @:overload @:public @:static public static function scalb(f : Single, scaleFactor : Int) : Single;
 	
 	
 }

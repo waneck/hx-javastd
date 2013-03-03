@@ -28,7 +28,7 @@ extern class AndExpression extends sun.tools.tree.BinaryLogicalExpression
 	/**
 	* constructor
 	*/
-	@:overload public function new(where : haxe.Int64, left : sun.tools.tree.Expression, right : sun.tools.tree.Expression) : Void;
+	@:overload @:public public function new(where : haxe.Int64, left : sun.tools.tree.Expression, right : sun.tools.tree.Expression) : Void;
 	
 	/*
 	* Check an "and" expression.
@@ -39,7 +39,7 @@ extern class AndExpression extends sun.tools.tree.BinaryLogicalExpression
 	*    cvars.vsFalse indicates variables with a known value
 	*        either the left or right hand side is false
 	*/
-	@:overload override public function checkCondition(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, cvars : sun.tools.tree.ConditionVars) : Void;
+	@:overload @:public override public function checkCondition(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, cvars : sun.tools.tree.ConditionVars) : Void;
 	
 	
 }

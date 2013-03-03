@@ -21,16 +21,16 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class DeferredElementDefinitionImpl extends com.sun.org.apache.xerces.internal.dom.ElementDefinitionImpl implements com.sun.org.apache.xerces.internal.dom.DeferredNode
 {
 	/** Node index. */
-	@:transient private var fNodeIndex : Int;
+	@:protected @:transient private var fNodeIndex : Int;
 	
 	/** Returns the node index. */
-	@:overload public function getNodeIndex() : Int;
+	@:overload @:public public function getNodeIndex() : Int;
 	
 	/** Synchronizes the data (name and value) for fast nodes. */
-	@:overload private function synchronizeData() : Void;
+	@:overload @:protected override private function synchronizeData() : Void;
 	
 	/** Synchronizes the default attribute values. */
-	@:overload private function synchronizeChildren() : Void;
+	@:overload @:protected override private function synchronizeChildren() : Void;
 	
 	
 }

@@ -100,7 +100,7 @@ extern class PermissionCollection implements java.io.Serializable
 	*                object is a homogeneous collection and the permission
 	*                is not of the correct type.
 	*/
-	@:overload @:abstract public function add(permission : java.security.Permission) : Void;
+	@:overload @:public @:abstract public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* Checks to see if the specified permission is implied by
@@ -111,14 +111,14 @@ extern class PermissionCollection implements java.io.Serializable
 	* @return true if "permission" is implied by the  permissions in
 	* the collection, false if not.
 	*/
-	@:overload @:abstract public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public @:abstract public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Returns an enumeration of all the Permission objects in the collection.
 	*
 	* @return an enumeration of all the Permissions.
 	*/
-	@:overload @:abstract public function elements() : java.util.Enumeration<java.security.Permission>;
+	@:overload @:public @:abstract public function elements() : java.util.Enumeration<java.security.Permission>;
 	
 	/**
 	* Marks this PermissionCollection object as "readonly". After
@@ -126,7 +126,7 @@ extern class PermissionCollection implements java.io.Serializable
 	* is marked as readonly, no new Permission objects can be added to it
 	* using <code>add</code>.
 	*/
-	@:overload public function setReadOnly() : Void;
+	@:overload @:public public function setReadOnly() : Void;
 	
 	/**
 	* Returns true if this PermissionCollection object is marked as readonly.
@@ -139,7 +139,7 @@ extern class PermissionCollection implements java.io.Serializable
 	* @return true if this PermissionCollection object is marked as readonly,
 	* false otherwise.
 	*/
-	@:overload public function isReadOnly() : Bool;
+	@:overload @:public public function isReadOnly() : Bool;
 	
 	/**
 	* Returns a string describing this PermissionCollection object,
@@ -163,7 +163,7 @@ extern class PermissionCollection implements java.io.Serializable
 	*         as described above.
 	*
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

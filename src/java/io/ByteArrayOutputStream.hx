@@ -28,18 +28,18 @@ extern class ByteArrayOutputStream extends java.io.OutputStream
 	/**
 	* The buffer where data is stored.
 	*/
-	private var buf : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var buf : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* The number of valid bytes in the buffer.
 	*/
-	private var count : Int;
+	@:protected private var count : Int;
 	
 	/**
 	* Creates a new byte array output stream. The buffer capacity is
 	* initially 32 bytes, though its size increases if necessary.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new byte array output stream, with a buffer capacity of
@@ -48,14 +48,14 @@ extern class ByteArrayOutputStream extends java.io.OutputStream
 	* @param   size   the initial size.
 	* @exception  IllegalArgumentException if size is negative.
 	*/
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
 	/**
 	* Writes the specified byte to this byte array output stream.
 	*
 	* @param   b   the byte to be written.
 	*/
-	@:overload @:synchronized override public function write(b : Int) : Void;
+	@:overload @:public @:synchronized override public function write(b : Int) : Void;
 	
 	/**
 	* Writes <code>len</code> bytes from the specified byte array
@@ -65,7 +65,7 @@ extern class ByteArrayOutputStream extends java.io.OutputStream
 	* @param   off   the start offset in the data.
 	* @param   len   the number of bytes to write.
 	*/
-	@:overload @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Writes the complete contents of this byte array output stream to
@@ -75,7 +75,7 @@ extern class ByteArrayOutputStream extends java.io.OutputStream
 	* @param      out   the output stream to which to write the data.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:synchronized public function writeTo(out : java.io.OutputStream) : Void;
+	@:overload @:public @:synchronized public function writeTo(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Resets the <code>count</code> field of this byte array output
@@ -85,7 +85,7 @@ extern class ByteArrayOutputStream extends java.io.OutputStream
 	*
 	* @see     java.io.ByteArrayInputStream#count
 	*/
-	@:overload @:synchronized public function reset() : Void;
+	@:overload @:public @:synchronized public function reset() : Void;
 	
 	/**
 	* Creates a newly allocated byte array. Its size is the current
@@ -95,7 +95,7 @@ extern class ByteArrayOutputStream extends java.io.OutputStream
 	* @return  the current contents of this output stream, as a byte array.
 	* @see     java.io.ByteArrayOutputStream#size()
 	*/
-	@:overload @:synchronized public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:synchronized public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the current size of the buffer.
@@ -104,7 +104,7 @@ extern class ByteArrayOutputStream extends java.io.OutputStream
 	*          of valid bytes in this output stream.
 	* @see     java.io.ByteArrayOutputStream#count
 	*/
-	@:overload @:synchronized public function size() : Int;
+	@:overload @:public @:synchronized public function size() : Int;
 	
 	/**
 	* Converts the buffer's contents into a string decoding bytes using the
@@ -121,7 +121,7 @@ extern class ByteArrayOutputStream extends java.io.OutputStream
 	* @return String decoded from the buffer's contents.
 	* @since  JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function toString() : String;
+	@:require(java1) @:overload @:public @:synchronized public function toString() : String;
 	
 	/**
 	* Converts the buffer's contents into a string by decoding the bytes using
@@ -141,7 +141,7 @@ extern class ByteArrayOutputStream extends java.io.OutputStream
 	*             If the named charset is not supported
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function toString(charsetName : String) : String;
+	@:require(java1) @:overload @:public @:synchronized public function toString(charsetName : String) : String;
 	
 	/**
 	* Creates a newly allocated string. Its size is the current size of
@@ -165,7 +165,7 @@ extern class ByteArrayOutputStream extends java.io.OutputStream
 	* @see        java.io.ByteArrayOutputStream#toString(String)
 	* @see        java.io.ByteArrayOutputStream#toString()
 	*/
-	@:overload @:synchronized public function toString(hibyte : Int) : String;
+	@:overload @:public @:synchronized public function toString(hibyte : Int) : String;
 	
 	/**
 	* Closing a <tt>ByteArrayOutputStream</tt> has no effect. The methods in
@@ -174,7 +174,7 @@ extern class ByteArrayOutputStream extends java.io.OutputStream
 	* <p>
 	*
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

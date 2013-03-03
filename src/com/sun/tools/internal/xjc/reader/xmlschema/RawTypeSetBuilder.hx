@@ -31,24 +31,24 @@ extern class RawTypeSetBuilder implements com.sun.xml.internal.xsom.visitor.XSTe
 	*      occurrence constraints on ancestors, set this to true.
 	*      this will prevent the primitive types to be generated.
 	*/
-	@:overload public static function build(p : com.sun.xml.internal.xsom.XSParticle, optional : Bool) : com.sun.tools.internal.xjc.reader.RawTypeSet;
+	@:overload @:public @:static public static function build(p : com.sun.xml.internal.xsom.XSParticle, optional : Bool) : com.sun.tools.internal.xjc.reader.RawTypeSet;
 	
-	private var builder(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder;
+	@:protected @:final private var builder(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Gets the {@link RawTypeSet.Ref}s that were built.
 	*/
-	@:overload public function getRefs() : java.util.Set<com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Ref>;
+	@:overload @:public public function getRefs() : java.util.Set<com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Ref>;
 	
-	@:overload public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : Void;
+	@:overload @:public public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : Void;
 	
-	@:overload public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
+	@:overload @:public public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
 	
-	@:overload public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : Void;
+	@:overload @:public public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : Void;
 	
-	@:overload public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
+	@:overload @:public public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
 	
 	
 }
@@ -57,15 +57,15 @@ extern class RawTypeSetBuilder implements com.sun.xml.internal.xsom.visitor.XSTe
 */
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$RawTypeSetBuilder$WildcardRef') extern class RawTypeSetBuilder_WildcardRef extends com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Ref
 {
-	@:overload override private function toTypeRef(ep : com.sun.tools.internal.xjc.model.CElementPropertyInfo) : com.sun.tools.internal.xjc.model.CTypeRef;
+	@:overload @:protected override private function toTypeRef(ep : com.sun.tools.internal.xjc.model.CElementPropertyInfo) : com.sun.tools.internal.xjc.model.CTypeRef;
 	
-	@:overload override private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
+	@:overload @:protected override private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
 	
-	@:overload override private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
+	@:overload @:protected override private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
 	
-	@:overload override private function isListOfValues() : Bool;
+	@:overload @:protected override private function isListOfValues() : Bool;
 	
-	@:overload override private function id() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload @:protected override private function id() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
 	
 }
@@ -74,19 +74,19 @@ extern class RawTypeSetBuilder implements com.sun.xml.internal.xsom.visitor.XSTe
 */
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$RawTypeSetBuilder$CClassRef') extern class RawTypeSetBuilder_CClassRef extends com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Ref
 {
-	public var target(default, null) : com.sun.tools.internal.xjc.model.CClass;
+	@:public @:final public var target(default, null) : com.sun.tools.internal.xjc.model.CClass;
 	
-	public var decl(default, null) : com.sun.xml.internal.xsom.XSElementDecl;
+	@:public @:final public var decl(default, null) : com.sun.xml.internal.xsom.XSElementDecl;
 	
-	@:overload override private function toTypeRef(ep : com.sun.tools.internal.xjc.model.CElementPropertyInfo) : com.sun.tools.internal.xjc.model.CTypeRef;
+	@:overload @:protected override private function toTypeRef(ep : com.sun.tools.internal.xjc.model.CElementPropertyInfo) : com.sun.tools.internal.xjc.model.CTypeRef;
 	
-	@:overload override private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
+	@:overload @:protected override private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
 	
-	@:overload override private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
+	@:overload @:protected override private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
 	
-	@:overload override private function isListOfValues() : Bool;
+	@:overload @:protected override private function isListOfValues() : Bool;
 	
-	@:overload override private function id() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload @:protected override private function id() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
 	
 }
@@ -95,21 +95,21 @@ extern class RawTypeSetBuilder implements com.sun.xml.internal.xsom.visitor.XSTe
 */
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$RawTypeSetBuilder$CElementInfoRef') extern class RawTypeSetBuilder_CElementInfoRef extends com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Ref
 {
-	public var target(default, null) : com.sun.tools.internal.xjc.model.CElementInfo;
+	@:public @:final public var target(default, null) : com.sun.tools.internal.xjc.model.CElementInfo;
 	
-	public var decl(default, null) : com.sun.xml.internal.xsom.XSElementDecl;
+	@:public @:final public var decl(default, null) : com.sun.xml.internal.xsom.XSElementDecl;
 	
-	@:overload override private function toTypeRef(ep : com.sun.tools.internal.xjc.model.CElementPropertyInfo) : com.sun.tools.internal.xjc.model.CTypeRef;
+	@:overload @:protected override private function toTypeRef(ep : com.sun.tools.internal.xjc.model.CElementPropertyInfo) : com.sun.tools.internal.xjc.model.CTypeRef;
 	
-	@:overload override private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
+	@:overload @:protected override private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
 	
-	@:overload override private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
+	@:overload @:protected override private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
 	
-	@:overload override private function isListOfValues() : Bool;
+	@:overload @:protected override private function isListOfValues() : Bool;
 	
-	@:overload override private function id() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload @:protected override private function id() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
-	@:overload override private function getExpectedMimeType() : javax.activation.MimeType;
+	@:overload @:protected override private function getExpectedMimeType() : javax.activation.MimeType;
 	
 	
 }
@@ -118,9 +118,9 @@ extern class RawTypeSetBuilder implements com.sun.xml.internal.xsom.visitor.XSTe
 */
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$RawTypeSetBuilder$XmlTypeRef') extern class RawTypeSetBuilder_XmlTypeRef extends com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Ref
 {
-	@:overload public function new(decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
+	@:overload @:public public function new(decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
 	
-	@:overload override private function toTypeRef(ep : com.sun.tools.internal.xjc.model.CElementPropertyInfo) : com.sun.tools.internal.xjc.model.CTypeRef;
+	@:overload @:protected override private function toTypeRef(ep : com.sun.tools.internal.xjc.model.CElementPropertyInfo) : com.sun.tools.internal.xjc.model.CTypeRef;
 	
 	/**
 	* The whole type set can be later bound to a reference property,
@@ -129,15 +129,15 @@ extern class RawTypeSetBuilder implements com.sun.xml.internal.xsom.visitor.XSTe
 	*
 	* This method generates such an element class and returns it.
 	*/
-	@:overload override private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
+	@:overload @:protected override private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
 	
-	@:overload override private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
+	@:overload @:protected override private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
 	
-	@:overload override private function isListOfValues() : Bool;
+	@:overload @:protected override private function isListOfValues() : Bool;
 	
-	@:overload override private function id() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload @:protected override private function id() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
-	@:overload override private function getExpectedMimeType() : javax.activation.MimeType;
+	@:overload @:protected override private function getExpectedMimeType() : javax.activation.MimeType;
 	
 	
 }

@@ -37,12 +37,12 @@ package javax.management;
 	*
 	* @param message the detail message.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Returns the string representing the object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

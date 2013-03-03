@@ -25,19 +25,9 @@ package javax.swing.plaf.basic;
 */
 extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 {
-	private var desktop : javax.swing.JDesktopPane;
+	@:protected private var desktop : javax.swing.JDesktopPane;
 	
-	private var desktopManager : javax.swing.DesktopManager;
-	
-	/**
-	* As of Java 2 platform v1.3 this previously undocumented field is no
-	* longer used.
-	* Key bindings are now defined by the LookAndFeel, please refer to
-	* the key bindings specification for further details.
-	*
-	* @deprecated As of 1.3.
-	*/
-	private var minimizeKey : javax.swing.KeyStroke;
+	@:protected private var desktopManager : javax.swing.DesktopManager;
 	
 	/**
 	* As of Java 2 platform v1.3 this previously undocumented field is no
@@ -47,7 +37,7 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 	*
 	* @deprecated As of 1.3.
 	*/
-	private var maximizeKey : javax.swing.KeyStroke;
+	@:protected private var minimizeKey : javax.swing.KeyStroke;
 	
 	/**
 	* As of Java 2 platform v1.3 this previously undocumented field is no
@@ -57,7 +47,7 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 	*
 	* @deprecated As of 1.3.
 	*/
-	private var closeKey : javax.swing.KeyStroke;
+	@:protected private var maximizeKey : javax.swing.KeyStroke;
 	
 	/**
 	* As of Java 2 platform v1.3 this previously undocumented field is no
@@ -67,7 +57,7 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 	*
 	* @deprecated As of 1.3.
 	*/
-	private var navigateKey : javax.swing.KeyStroke;
+	@:protected private var closeKey : javax.swing.KeyStroke;
 	
 	/**
 	* As of Java 2 platform v1.3 this previously undocumented field is no
@@ -77,19 +67,29 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 	*
 	* @deprecated As of 1.3.
 	*/
-	private var navigateKey2 : javax.swing.KeyStroke;
+	@:protected private var navigateKey : javax.swing.KeyStroke;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	/**
+	* As of Java 2 platform v1.3 this previously undocumented field is no
+	* longer used.
+	* Key bindings are now defined by the LookAndFeel, please refer to
+	* the key bindings specification for further details.
+	*
+	* @deprecated As of 1.3.
+	*/
+	@:protected private var navigateKey2 : javax.swing.KeyStroke;
 	
-	@:overload public function new() : Void;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installDefaults() : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected private function installDefaults() : Void;
+	
+	@:overload @:protected private function uninstallDefaults() : Void;
 	
 	/**
 	* Installs the <code>PropertyChangeListener</code> returned from
@@ -99,7 +99,7 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 	* @since 1.5
 	* @see #createPropertyChangeListener
 	*/
-	@:require(java5) @:overload private function installListeners() : Void;
+	@:require(java5) @:overload @:protected private function installListeners() : Void;
 	
 	/**
 	* Uninstalls the <code>PropertyChangeListener</code> returned from
@@ -109,27 +109,27 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 	* @since 1.5
 	* @see #createPropertyChangeListener
 	*/
-	@:require(java5) @:overload private function uninstallListeners() : Void;
+	@:require(java5) @:overload @:protected private function uninstallListeners() : Void;
 	
-	@:overload private function installDesktopManager() : Void;
+	@:overload @:protected private function installDesktopManager() : Void;
 	
-	@:overload private function uninstallDesktopManager() : Void;
+	@:overload @:protected private function uninstallDesktopManager() : Void;
 	
-	@:overload private function installKeyboardActions() : Void;
+	@:overload @:protected private function installKeyboardActions() : Void;
 	
-	@:overload private function registerKeyboardActions() : Void;
+	@:overload @:protected private function registerKeyboardActions() : Void;
 	
-	@:overload private function unregisterKeyboardActions() : Void;
+	@:overload @:protected private function unregisterKeyboardActions() : Void;
 	
-	@:overload private function uninstallKeyboardActions() : Void;
+	@:overload @:protected private function uninstallKeyboardActions() : Void;
 	
-	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Returns the <code>PropertyChangeListener</code> to install on
@@ -139,13 +139,13 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 	* @return The PropertyChangeListener that will be added to track
 	* changes in the desktop pane.
 	*/
-	@:require(java5) @:overload private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	@:require(java5) @:overload @:protected private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicDesktopPaneUI$Handler') @:internal extern class BasicDesktopPaneUI_Handler implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -158,9 +158,9 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 }
 @:native('javax$swing$plaf$basic$BasicDesktopPaneUI$Actions') @:internal extern class BasicDesktopPaneUI_Actions extends sun.swing.UIAction
 {
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function isEnabled(sender : Dynamic) : Bool;
+	@:overload @:public override public function isEnabled(sender : Dynamic) : Bool;
 	
 	
 }
@@ -170,9 +170,9 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 */
 @:require(java3) @:native('javax$swing$plaf$basic$BasicDesktopPaneUI$OpenAction') extern class BasicDesktopPaneUI_OpenAction extends javax.swing.AbstractAction
 {
-	@:overload override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
 	
 }
@@ -181,9 +181,9 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 */
 @:native('javax$swing$plaf$basic$BasicDesktopPaneUI$CloseAction') extern class BasicDesktopPaneUI_CloseAction extends javax.swing.AbstractAction
 {
-	@:overload override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
 	
 }
@@ -192,9 +192,9 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 */
 @:native('javax$swing$plaf$basic$BasicDesktopPaneUI$MinimizeAction') extern class BasicDesktopPaneUI_MinimizeAction extends javax.swing.AbstractAction
 {
-	@:overload override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
 	
 }
@@ -203,9 +203,9 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 */
 @:native('javax$swing$plaf$basic$BasicDesktopPaneUI$MaximizeAction') extern class BasicDesktopPaneUI_MaximizeAction extends javax.swing.AbstractAction
 {
-	@:overload override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
 	
 }
@@ -214,9 +214,9 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 */
 @:native('javax$swing$plaf$basic$BasicDesktopPaneUI$NavigateAction') extern class BasicDesktopPaneUI_NavigateAction extends javax.swing.AbstractAction
 {
-	@:overload override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
 	
 }

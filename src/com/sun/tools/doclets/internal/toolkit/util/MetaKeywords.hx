@@ -40,7 +40,7 @@ extern class MetaKeywords
 	/**
 	* Constructor
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
 	
 	/**
 	* Returns an array of strings where each element
@@ -54,23 +54,23 @@ extern class MetaKeywords
 	* Nested class members are not included because their
 	* definitions are on separate pages.
 	*/
-	@:overload public function getMetaKeywords(classdoc : com.sun.javadoc.ClassDoc) : java.NativeArray<String>;
+	@:overload @:public public function getMetaKeywords(classdoc : com.sun.javadoc.ClassDoc) : java.NativeArray<String>;
 	
 	/**
 	* Get the current class for a meta tag keyword, as the first
 	* and only element of an array list.
 	*/
-	@:overload private function getClassKeyword(classdoc : com.sun.javadoc.ClassDoc) : java.util.ArrayList<String>;
+	@:overload @:protected private function getClassKeyword(classdoc : com.sun.javadoc.ClassDoc) : java.util.ArrayList<String>;
 	
 	/**
 	* Get the package keywords.
 	*/
-	@:overload public function getMetaKeywords(packageDoc : com.sun.javadoc.PackageDoc) : java.NativeArray<String>;
+	@:overload @:public public function getMetaKeywords(packageDoc : com.sun.javadoc.PackageDoc) : java.NativeArray<String>;
 	
 	/**
 	* Get the overview keywords.
 	*/
-	@:overload public function getOverviewMetaKeywords(title : String, docTitle : String) : java.NativeArray<String>;
+	@:overload @:public public function getOverviewMetaKeywords(title : String, docTitle : String) : java.NativeArray<String>;
 	
 	/**
 	* Get members for meta tag keywords as an array,
@@ -81,7 +81,7 @@ extern class MetaKeywords
 	*
 	* @param memberdocs  array of MemberDoc objects to be added to keywords
 	*/
-	@:overload private function getMemberKeywords(memberdocs : java.NativeArray<com.sun.javadoc.MemberDoc>) : java.util.ArrayList<String>;
+	@:overload @:protected private function getMemberKeywords(memberdocs : java.NativeArray<com.sun.javadoc.MemberDoc>) : java.util.ArrayList<String>;
 	
 	
 }

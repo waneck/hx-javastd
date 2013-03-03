@@ -36,25 +36,25 @@ extern class Ellipse2D extends java.awt.geom.RectangularShape
 	* @see java.awt.geom.Ellipse2D.Double
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function new() : Void;
+	@:require(java2) @:overload @:protected private function new() : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function contains(x : Float, y : Float) : Bool;
+	@:require(java2) @:overload @:public override public function contains(x : Float, y : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public override public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public override public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* Returns an iteration object that defines the boundary of this
@@ -72,14 +72,14 @@ extern class Ellipse2D extends java.awt.geom.RectangularShape
 	*          one segment at a time.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
+	@:require(java2) @:overload @:public override public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
 	
 	/**
 	* Returns the hashcode for this <code>Ellipse2D</code>.
 	* @return the hashcode for this <code>Ellipse2D</code>.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function hashCode() : Int;
+	@:require(java6) @:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Determines whether or not the specified <code>Object</code> is
@@ -94,7 +94,7 @@ extern class Ellipse2D extends java.awt.geom.RectangularShape
 	*          <code>false</code> otherwise.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function equals(obj : Dynamic) : Bool;
+	@:require(java6) @:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }
@@ -111,7 +111,7 @@ extern class Ellipse2D extends java.awt.geom.RectangularShape
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var x : Single;
+	@:require(java2) @:public public var x : Single;
 	
 	/**
 	* The Y coordinate of the upper-left corner of the
@@ -119,28 +119,28 @@ extern class Ellipse2D extends java.awt.geom.RectangularShape
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var y : Single;
+	@:require(java2) @:public public var y : Single;
 	
 	/**
 	* The overall width of this <code>Ellipse2D</code>.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var width : Single;
+	@:require(java2) @:public public var width : Single;
 	
 	/**
 	* The overall height of this <code>Ellipse2D</code>.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var height : Single;
+	@:require(java2) @:public public var height : Single;
 	
 	/**
 	* Constructs a new <code>Ellipse2D</code>, initialized to
 	* location (0,&nbsp;0) and size (0,&nbsp;0).
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs and initializes an <code>Ellipse2D</code> from the
@@ -154,37 +154,37 @@ extern class Ellipse2D extends java.awt.geom.RectangularShape
 	* @param h the height of the framing rectangle
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(x : Single, y : Single, w : Single, h : Single) : Void;
+	@:require(java2) @:overload @:public public function new(x : Single, y : Single, w : Single, h : Single) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX() : Float;
+	@:require(java2) @:overload @:public override public function getX() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY() : Float;
+	@:require(java2) @:overload @:public override public function getY() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getWidth() : Float;
+	@:require(java2) @:overload @:public override public function getWidth() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getHeight() : Float;
+	@:require(java2) @:overload @:public override public function getHeight() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function isEmpty() : Bool;
+	@:require(java2) @:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Sets the location and size of the framing rectangle of this
@@ -198,19 +198,19 @@ extern class Ellipse2D extends java.awt.geom.RectangularShape
 	* @param h the height of the specified rectangular shape
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setFrame(x : Single, y : Single, w : Single, h : Single) : Void;
+	@:require(java2) @:overload @:public public function setFrame(x : Single, y : Single, w : Single, h : Single) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setFrame(x : Float, y : Float, w : Float, h : Float) : Void;
+	@:require(java2) @:overload @:public override public function setFrame(x : Float, y : Float, w : Float, h : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public override public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	
 }
@@ -227,7 +227,7 @@ extern class Ellipse2D extends java.awt.geom.RectangularShape
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var x : Float;
+	@:require(java2) @:public public var x : Float;
 	
 	/**
 	* The Y coordinate of the upper-left corner of the
@@ -235,28 +235,28 @@ extern class Ellipse2D extends java.awt.geom.RectangularShape
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var y : Float;
+	@:require(java2) @:public public var y : Float;
 	
 	/**
 	* The overall width of this <code>Ellipse2D</code>.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var width : Float;
+	@:require(java2) @:public public var width : Float;
 	
 	/**
 	* The overall height of the <code>Ellipse2D</code>.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var height : Float;
+	@:require(java2) @:public public var height : Float;
 	
 	/**
 	* Constructs a new <code>Ellipse2D</code>, initialized to
 	* location (0,&nbsp;0) and size (0,&nbsp;0).
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs and initializes an <code>Ellipse2D</code> from the
@@ -270,49 +270,49 @@ extern class Ellipse2D extends java.awt.geom.RectangularShape
 	* @param h the height of the framing rectangle
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(x : Float, y : Float, w : Float, h : Float) : Void;
+	@:require(java2) @:overload @:public public function new(x : Float, y : Float, w : Float, h : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX() : Float;
+	@:require(java2) @:overload @:public override public function getX() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY() : Float;
+	@:require(java2) @:overload @:public override public function getY() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getWidth() : Float;
+	@:require(java2) @:overload @:public override public function getWidth() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getHeight() : Float;
+	@:require(java2) @:overload @:public override public function getHeight() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function isEmpty() : Bool;
+	@:require(java2) @:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setFrame(x : Float, y : Float, w : Float, h : Float) : Void;
+	@:require(java2) @:overload @:public override public function setFrame(x : Float, y : Float, w : Float, h : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public override public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	
 }

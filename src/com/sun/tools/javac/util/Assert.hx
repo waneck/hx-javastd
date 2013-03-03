@@ -38,62 +38,62 @@ extern class Assert
 	/** Equivalent to
 	*   assert cond;
 	*/
-	@:overload public static function check(cond : Bool) : Void;
+	@:overload @:public @:static public static function check(cond : Bool) : Void;
 	
 	/** Equivalent to
 	*   assert (o == null);
 	*/
-	@:overload public static function checkNull(o : Dynamic) : Void;
+	@:overload @:public @:static public static function checkNull(o : Dynamic) : Void;
 	
 	/** Equivalent to
 	*   assert (t != null); return t;
 	*/
-	@:overload public static function checkNonNull<T>(t : T) : T;
+	@:overload @:public @:static public static function checkNonNull<T>(t : T) : T;
 	
 	/** Equivalent to
 	*   assert cond : value;
 	*/
-	@:overload public static function check(cond : Bool, value : Int) : Void;
+	@:overload @:public @:static public static function check(cond : Bool, value : Int) : Void;
 	
 	/** Equivalent to
 	*   assert cond : value;
 	*/
-	@:overload public static function check(cond : Bool, value : haxe.Int64) : Void;
+	@:overload @:public @:static public static function check(cond : Bool, value : haxe.Int64) : Void;
 	
 	/** Equivalent to
 	*   assert cond : value;
 	*/
-	@:overload public static function check(cond : Bool, value : Dynamic) : Void;
+	@:overload @:public @:static public static function check(cond : Bool, value : Dynamic) : Void;
 	
 	/** Equivalent to
 	*   assert cond : value;
 	*/
-	@:overload public static function check(cond : Bool, msg : String) : Void;
+	@:overload @:public @:static public static function check(cond : Bool, msg : String) : Void;
 	
 	/** Equivalent to
 	*   assert (o == null) : value;
 	*/
-	@:overload public static function checkNull(o : Dynamic, value : Dynamic) : Void;
+	@:overload @:public @:static public static function checkNull(o : Dynamic, value : Dynamic) : Void;
 	
 	/** Equivalent to
 	*   assert (o == null) : value;
 	*/
-	@:overload public static function checkNull(o : Dynamic, msg : String) : Void;
+	@:overload @:public @:static public static function checkNull(o : Dynamic, msg : String) : Void;
 	
 	/** Equivalent to
 	*   assert (o != null) : value;
 	*/
-	@:overload public static function checkNonNull<T>(t : T, msg : String) : T;
+	@:overload @:public @:static public static function checkNonNull<T>(t : T, msg : String) : T;
 	
 	/** Equivalent to
 	*   assert false;
 	*/
-	@:overload public static function error() : Void;
+	@:overload @:public @:static public static function error() : Void;
 	
 	/** Equivalent to
 	*   assert false : msg;
 	*/
-	@:overload public static function error(msg : String) : Void;
+	@:overload @:public @:static public static function error(msg : String) : Void;
 	
 	
 }

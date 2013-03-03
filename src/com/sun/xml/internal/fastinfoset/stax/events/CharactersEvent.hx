@@ -27,39 +27,39 @@ package com.sun.xml.internal.fastinfoset.stax.events;
 */
 extern class CharactersEvent extends com.sun.xml.internal.fastinfoset.stax.events.EventBase implements javax.xml.stream.events.Characters
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*
 	* @param data Character Data.
 	*/
-	@:overload public function new(data : String) : Void;
+	@:overload @:public public function new(data : String) : Void;
 	
 	/**
 	*
 	* @param data Character Data.
 	* @param isCData true if is CData
 	*/
-	@:overload public function new(data : String, isCData : Bool) : Void;
+	@:overload @:public public function new(data : String, isCData : Bool) : Void;
 	
 	/**
 	* Get the character data of this event
 	*/
-	@:overload public function getData() : String;
+	@:overload @:public public function getData() : String;
 	
-	@:overload public function setData(data : String) : Void;
+	@:overload @:public public function setData(data : String) : Void;
 	
 	/**
 	*
 	* @return boolean returns true if the data is CData
 	*/
-	@:overload public function isCData() : Bool;
+	@:overload @:public public function isCData() : Bool;
 	
 	/**
 	*
 	* @return String return the String representation of this event.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Return true if this is ignorableWhiteSpace.  If
@@ -67,7 +67,7 @@ extern class CharactersEvent extends com.sun.xml.internal.fastinfoset.stax.event
 	* be SPACE.
 	* @return boolean true if this is ignorableWhiteSpace.
 	*/
-	@:overload public function isIgnorableWhiteSpace() : Bool;
+	@:overload @:public public function isIgnorableWhiteSpace() : Bool;
 	
 	/**
 	* Returns true if this set of Characters are all whitespace.  Whitspace inside a document
@@ -75,11 +75,11 @@ extern class CharactersEvent extends com.sun.xml.internal.fastinfoset.stax.event
 	* if they are composed of only whitespace characters
 	* @return boolean true if this set of Characters are all whitespace
 	*/
-	@:overload public function isWhiteSpace() : Bool;
+	@:overload @:public public function isWhiteSpace() : Bool;
 	
-	@:overload public function setSpace(isSpace : Bool) : Void;
+	@:overload @:public public function setSpace(isSpace : Bool) : Void;
 	
-	@:overload public function setIgnorable(isIgnorable : Bool) : Void;
+	@:overload @:public public function setIgnorable(isIgnorable : Bool) : Void;
 	
 	
 }

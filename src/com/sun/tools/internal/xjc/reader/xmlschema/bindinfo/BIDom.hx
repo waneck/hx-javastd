@@ -25,10 +25,10 @@ package com.sun.tools.internal.xjc.reader.xmlschema.bindinfo;
 */
 extern class BIDom extends com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.AbstractDeclarationImpl
 {
-	@:overload @:final public function getName() : javax.xml.namespace.QName;
+	@:overload @:public @:final override public function getName() : javax.xml.namespace.QName;
 	
 	/** Name of the conversion declaration. */
-	public static var NAME(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var NAME(default, null) : javax.xml.namespace.QName;
 	
 	
 }

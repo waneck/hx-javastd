@@ -36,7 +36,7 @@ extern class GCMParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* @throws IllegalArgumentException if {@code tLen} is negative,
 	* or {@code src} is null.
 	*/
-	@:overload public function new(tLen : Int, src : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(tLen : Int, src : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs a GCMParameterSpec object using the specified
@@ -54,14 +54,14 @@ extern class GCMParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* or the sum of {@code offset} and {@code len} is greater than the
 	* length of the {@code src} byte array.
 	*/
-	@:overload public function new(tLen : Int, src : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:public public function new(tLen : Int, src : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* Returns the authentication tag length.
 	*
 	* @return the authentication tag length (in bits)
 	*/
-	@:overload public function getTLen() : Int;
+	@:overload @:public public function getTLen() : Int;
 	
 	/**
 	* Returns the Initialization Vector (IV).
@@ -69,7 +69,7 @@ extern class GCMParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* @return the IV.  Creates a new array each time this method
 	* is called.
 	*/
-	@:overload public function getIV() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getIV() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -58,7 +58,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkRead(String) checkRead}
 	*          method is invoked to check read access to the file.
 	*/
-	@:overload public static function newInputStream(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.OpenOption>) : java.io.InputStream;
+	@:overload @:public @:static public static function newInputStream(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.OpenOption>) : java.io.InputStream;
 	
 	/**
 	* Opens or creates a file, returning an output stream that may be used to
@@ -118,7 +118,7 @@ extern class Files
 	*          invoked to check delete access if the file is opened with the
 	*          {@code DELETE_ON_CLOSE} option.
 	*/
-	@:overload public static function newOutputStream(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.OpenOption>) : java.io.OutputStream;
+	@:overload @:public @:static public static function newOutputStream(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.OpenOption>) : java.io.OutputStream;
 	
 	/**
 	* Opens or creates a file, returning a seekable byte channel to access the
@@ -257,7 +257,7 @@ extern class Files
 	*
 	* @see java.nio.channels.FileChannel#open(Path,Set,FileAttribute[])
 	*/
-	@:overload public static function newByteChannel(path : java.nio.file.Path, options : java.util.Set<java.nio.file.OpenOption>, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.channels.SeekableByteChannel;
+	@:overload @:public @:static public static function newByteChannel(path : java.nio.file.Path, options : java.util.Set<java.nio.file.OpenOption>, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.channels.SeekableByteChannel;
 	
 	/**
 	* Opens or creates a file, returning a seekable byte channel to access the
@@ -297,7 +297,7 @@ extern class Files
 	*
 	* @see java.nio.channels.FileChannel#open(Path,OpenOption[])
 	*/
-	@:overload public static function newByteChannel(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.OpenOption>) : java.nio.channels.SeekableByteChannel;
+	@:overload @:public @:static public static function newByteChannel(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.OpenOption>) : java.nio.channels.SeekableByteChannel;
 	
 	/**
 	* Opens a directory, returning a {@link DirectoryStream} to iterate over
@@ -330,7 +330,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkRead(String) checkRead}
 	*          method is invoked to check read access to the directory.
 	*/
-	@:overload public static function newDirectoryStream(dir : java.nio.file.Path) : java.nio.file.DirectoryStream<java.nio.file.Path>;
+	@:overload @:public @:static public static function newDirectoryStream(dir : java.nio.file.Path) : java.nio.file.DirectoryStream<java.nio.file.Path>;
 	
 	/**
 	* Opens a directory, returning a {@link DirectoryStream} to iterate over
@@ -381,7 +381,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkRead(String) checkRead}
 	*          method is invoked to check read access to the directory.
 	*/
-	@:overload public static function newDirectoryStream(dir : java.nio.file.Path, glob : String) : java.nio.file.DirectoryStream<java.nio.file.Path>;
+	@:overload @:public @:static public static function newDirectoryStream(dir : java.nio.file.Path, glob : String) : java.nio.file.DirectoryStream<java.nio.file.Path>;
 	
 	/**
 	* Opens a directory, returning a {@link DirectoryStream} to iterate over
@@ -440,7 +440,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkRead(String) checkRead}
 	*          method is invoked to check read access to the directory.
 	*/
-	@:overload public static function newDirectoryStream(dir : java.nio.file.Path, filter : java.nio.file.DirectoryStream.DirectoryStream_Filter<java.nio.file.Path>) : java.nio.file.DirectoryStream<java.nio.file.Path>;
+	@:overload @:public @:static public static function newDirectoryStream(dir : java.nio.file.Path, filter : java.nio.file.DirectoryStream.DirectoryStream_Filter<java.nio.file.Path>) : java.nio.file.DirectoryStream<java.nio.file.Path>;
 	
 	/**
 	* Creates a new and empty file, failing if the file already exists. The
@@ -475,7 +475,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkWrite(String) checkWrite}
 	*          method is invoked to check write access to the new file.
 	*/
-	@:overload public static function createFile(path : java.nio.file.Path, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.file.Path;
+	@:overload @:public @:static public static function createFile(path : java.nio.file.Path, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.file.Path;
 	
 	/**
 	* Creates a new directory. The check for the existence of the file and the
@@ -512,7 +512,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkWrite(String) checkWrite}
 	*          method is invoked to check write access to the new directory.
 	*/
-	@:overload public static function createDirectory(dir : java.nio.file.Path, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.file.Path;
+	@:overload @:public @:static public static function createDirectory(dir : java.nio.file.Path, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.file.Path;
 	
 	/**
 	* Creates a directory by creating all nonexistent parent directories first.
@@ -558,7 +558,7 @@ extern class Files
 	*          SecurityManager#checkPropertyAccess(String) checkPropertyAccess}
 	*          method to check access to the system property {@code user.dir}
 	*/
-	@:overload public static function createDirectories(dir : java.nio.file.Path, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.file.Path;
+	@:overload @:public @:static public static function createDirectories(dir : java.nio.file.Path, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.file.Path;
 	
 	/**
 	* Creates a new empty file in the specified directory, using the given
@@ -618,7 +618,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkWrite(String) checkWrite}
 	*          method is invoked to check write access to the file.
 	*/
-	@:overload public static function createTempFile(dir : java.nio.file.Path, prefix : String, suffix : String, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.file.Path;
+	@:overload @:public @:static public static function createTempFile(dir : java.nio.file.Path, prefix : String, suffix : String, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.file.Path;
 	
 	/**
 	* Creates an empty file in the default temporary-file directory, using
@@ -656,7 +656,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkWrite(String) checkWrite}
 	*          method is invoked to check write access to the file.
 	*/
-	@:overload public static function createTempFile(prefix : String, suffix : String, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.file.Path;
+	@:overload @:public @:static public static function createTempFile(prefix : String, suffix : String, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.file.Path;
 	
 	/**
 	* Creates a new directory in the specified directory, using the given
@@ -703,7 +703,7 @@ extern class Files
 	*          method is invoked to check write access when creating the
 	*          directory.
 	*/
-	@:overload public static function createTempDirectory(dir : java.nio.file.Path, prefix : String, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.file.Path;
+	@:overload @:public @:static public static function createTempDirectory(dir : java.nio.file.Path, prefix : String, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.file.Path;
 	
 	/**
 	* Creates a new directory in the default temporary-file directory, using
@@ -738,7 +738,7 @@ extern class Files
 	*          method is invoked to check write access when creating the
 	*          directory.
 	*/
-	@:overload public static function createTempDirectory(prefix : String, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.file.Path;
+	@:overload @:public @:static public static function createTempDirectory(prefix : String, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.file.Path;
 	
 	/**
 	* Creates a symbolic link to a target <i>(optional operation)</i>.
@@ -785,7 +785,7 @@ extern class Files
 	*          or its {@link SecurityManager#checkWrite(String) checkWrite}
 	*          method denies write access to the path of the symbolic link.
 	*/
-	@:overload public static function createSymbolicLink(link : java.nio.file.Path, target : java.nio.file.Path, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.file.Path;
+	@:overload @:public @:static public static function createSymbolicLink(link : java.nio.file.Path, target : java.nio.file.Path, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.file.Path;
 	
 	/**
 	* Creates a new link (directory entry) for an existing file <i>(optional
@@ -825,7 +825,7 @@ extern class Files
 	*          method denies write access to either the link or the
 	*          existing file.
 	*/
-	@:overload public static function createLink(link : java.nio.file.Path, existing : java.nio.file.Path) : java.nio.file.Path;
+	@:overload @:public @:static public static function createLink(link : java.nio.file.Path, existing : java.nio.file.Path) : java.nio.file.Path;
 	
 	/**
 	* Deletes a file.
@@ -862,7 +862,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkDelete(String)} method
 	*          is invoked to check delete access to the file
 	*/
-	@:overload public static function delete(path : java.nio.file.Path) : Void;
+	@:overload @:public @:static public static function delete(path : java.nio.file.Path) : Void;
 	
 	/**
 	* Deletes a file if it exists.
@@ -899,7 +899,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkDelete(String)} method
 	*          is invoked to check delete access to the file.
 	*/
-	@:overload public static function deleteIfExists(path : java.nio.file.Path) : Bool;
+	@:overload @:public @:static public static function deleteIfExists(path : java.nio.file.Path) : Bool;
 	
 	/**
 	* Copy a file to a target file.
@@ -999,7 +999,7 @@ extern class Files
 	*          copied the security manager is invoked to check {@link
 	*          LinkPermission}{@code ("symbolic")}.
 	*/
-	@:overload public static function copy(source : java.nio.file.Path, target : java.nio.file.Path, options : java.NativeArray<java.nio.file.CopyOption>) : java.nio.file.Path;
+	@:overload @:public @:static public static function copy(source : java.nio.file.Path, target : java.nio.file.Path, options : java.NativeArray<java.nio.file.CopyOption>) : java.nio.file.Path;
 	
 	/**
 	* Move or rename a file to a target file.
@@ -1107,7 +1107,7 @@ extern class Files
 	*          method is invoked to check write access to both the source and
 	*          target file.
 	*/
-	@:overload public static function move(source : java.nio.file.Path, target : java.nio.file.Path, options : java.NativeArray<java.nio.file.CopyOption>) : java.nio.file.Path;
+	@:overload @:public @:static public static function move(source : java.nio.file.Path, target : java.nio.file.Path, options : java.NativeArray<java.nio.file.CopyOption>) : java.nio.file.Path;
 	
 	/**
 	* Reads the target of a symbolic link <i>(optional operation)</i>.
@@ -1135,7 +1135,7 @@ extern class Files
 	*          is installed, it checks that {@code FilePermission} has been
 	*          granted with the "{@code readlink}" action to read the link.
 	*/
-	@:overload public static function readSymbolicLink(link : java.nio.file.Path) : java.nio.file.Path;
+	@:overload @:public @:static public static function readSymbolicLink(link : java.nio.file.Path) : java.nio.file.Path;
 	
 	/**
 	* Returns the {@link FileStore} representing the file store where a file
@@ -1162,7 +1162,7 @@ extern class Files
 	*          addition it checks {@link RuntimePermission}<tt>
 	*          ("getFileStoreAttributes")</tt>
 	*/
-	@:overload public static function getFileStore(path : java.nio.file.Path) : java.nio.file.FileStore;
+	@:overload @:public @:static public static function getFileStore(path : java.nio.file.Path) : java.nio.file.FileStore;
 	
 	/**
 	* Tests if two paths locate the same file.
@@ -1203,7 +1203,7 @@ extern class Files
 	*
 	* @see java.nio.file.attribute.BasicFileAttributes#fileKey
 	*/
-	@:overload public static function isSameFile(path : java.nio.file.Path, path2 : java.nio.file.Path) : Bool;
+	@:overload @:public @:static public static function isSameFile(path : java.nio.file.Path, path2 : java.nio.file.Path) : Bool;
 	
 	/**
 	* Tells whether or not a file is considered <em>hidden</em>. The exact
@@ -1228,7 +1228,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkRead(String) checkRead}
 	*          method is invoked to check read access to the file.
 	*/
-	@:overload public static function isHidden(path : java.nio.file.Path) : Bool;
+	@:overload @:public @:static public static function isHidden(path : java.nio.file.Path) : Bool;
 	
 	/**
 	* Probes the content type of a file.
@@ -1277,7 +1277,7 @@ extern class Files
 	*          If a security manager is installed and it denies an unspecified
 	*          permission required by a file type detector implementation.
 	*/
-	@:overload public static function probeContentType(path : java.nio.file.Path) : String;
+	@:overload @:public @:static public static function probeContentType(path : java.nio.file.Path) : String;
 	
 	/**
 	* Returns a file attribute view of a given type.
@@ -1320,7 +1320,7 @@ extern class Files
 	* @return  a file attribute view of the specified type, or {@code null} if
 	*          the attribute view type is not available
 	*/
-	@:overload public static function getFileAttributeView<V : java.nio.file.attribute.FileAttributeView>(path : java.nio.file.Path, type : Class<V>, options : java.NativeArray<java.nio.file.LinkOption>) : V;
+	@:overload @:public @:static public static function getFileAttributeView<V : java.nio.file.attribute.FileAttributeView>(path : java.nio.file.Path, type : Class<V>, options : java.NativeArray<java.nio.file.LinkOption>) : V;
 	
 	/**
 	* Reads a file's attributes as a bulk operation.
@@ -1374,7 +1374,7 @@ extern class Files
 	*          method is invoked to read security sensitive attributes then the
 	*          security manager may be invoke to check for additional permissions.
 	*/
-	@:overload public static function readAttributes<A : java.nio.file.attribute.BasicFileAttributes>(path : java.nio.file.Path, type : Class<A>, options : java.NativeArray<java.nio.file.LinkOption>) : A;
+	@:overload @:public @:static public static function readAttributes<A : java.nio.file.attribute.BasicFileAttributes>(path : java.nio.file.Path, type : Class<A>, options : java.NativeArray<java.nio.file.LinkOption>) : A;
 	
 	/**
 	* Sets the value of a file attribute.
@@ -1437,7 +1437,7 @@ extern class Files
 	*          to set security sensitive attributes then the security manager
 	*          may be invoked to check for additional permissions.
 	*/
-	@:overload public static function setAttribute(path : java.nio.file.Path, attribute : String, value : Dynamic, options : java.NativeArray<java.nio.file.LinkOption>) : java.nio.file.Path;
+	@:overload @:public @:static public static function setAttribute(path : java.nio.file.Path, attribute : String, value : Dynamic, options : java.NativeArray<java.nio.file.LinkOption>) : java.nio.file.Path;
 	
 	/**
 	* Reads the value of a file attribute.
@@ -1492,7 +1492,7 @@ extern class Files
 	*          to read security sensitive attributes then the security manager
 	*          may be invoked to check for additional permissions.
 	*/
-	@:overload public static function getAttribute(path : java.nio.file.Path, attribute : String, options : java.NativeArray<java.nio.file.LinkOption>) : Dynamic;
+	@:overload @:public @:static public static function getAttribute(path : java.nio.file.Path, attribute : String, options : java.NativeArray<java.nio.file.LinkOption>) : Dynamic;
 	
 	/**
 	* Reads a set of file attributes as a bulk operation.
@@ -1573,7 +1573,7 @@ extern class Files
 	*          to read security sensitive attributes then the security manager
 	*          may be invoke to check for additional permissions.
 	*/
-	@:overload public static function readAttributes(path : java.nio.file.Path, attributes : String, options : java.NativeArray<java.nio.file.LinkOption>) : java.util.Map<String, Dynamic>;
+	@:overload @:public @:static public static function readAttributes(path : java.nio.file.Path, attributes : String, options : java.NativeArray<java.nio.file.LinkOption>) : java.util.Map<String, Dynamic>;
 	
 	/**
 	* Returns a file's POSIX file permissions.
@@ -1608,7 +1608,7 @@ extern class Files
 	*          or its {@link SecurityManager#checkRead(String) checkRead} method
 	*          denies read access to the file.
 	*/
-	@:overload public static function getPosixFilePermissions(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.LinkOption>) : java.util.Set<java.nio.file.attribute.PosixFilePermission>;
+	@:overload @:public @:static public static function getPosixFilePermissions(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.LinkOption>) : java.util.Set<java.nio.file.attribute.PosixFilePermission>;
 	
 	/**
 	* Sets a file's POSIX permissions.
@@ -1638,7 +1638,7 @@ extern class Files
 	*          or its {@link SecurityManager#checkWrite(String) checkWrite}
 	*          method denies write access to the file.
 	*/
-	@:overload public static function setPosixFilePermissions(path : java.nio.file.Path, perms : java.util.Set<java.nio.file.attribute.PosixFilePermission>) : java.nio.file.Path;
+	@:overload @:public @:static public static function setPosixFilePermissions(path : java.nio.file.Path, perms : java.util.Set<java.nio.file.attribute.PosixFilePermission>) : java.nio.file.Path;
 	
 	/**
 	* Returns the owner of a file.
@@ -1665,7 +1665,7 @@ extern class Files
 	*          or its {@link SecurityManager#checkRead(String) checkRead} method
 	*          denies read access to the file.
 	*/
-	@:overload public static function getOwner(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.LinkOption>) : java.nio.file.attribute.UserPrincipal;
+	@:overload @:public @:static public static function getOwner(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.LinkOption>) : java.nio.file.attribute.UserPrincipal;
 	
 	/**
 	* Updates the file owner.
@@ -1703,7 +1703,7 @@ extern class Files
 	* @see FileSystem#getUserPrincipalLookupService
 	* @see java.nio.file.attribute.UserPrincipalLookupService
 	*/
-	@:overload public static function setOwner(path : java.nio.file.Path, owner : java.nio.file.attribute.UserPrincipal) : java.nio.file.Path;
+	@:overload @:public @:static public static function setOwner(path : java.nio.file.Path, owner : java.nio.file.attribute.UserPrincipal) : java.nio.file.Path;
 	
 	/**
 	* Tests whether a file is a symbolic link.
@@ -1723,7 +1723,7 @@ extern class Files
 	*          installed, its {@link SecurityManager#checkRead(String) checkRead}
 	*          method denies read access to the file.
 	*/
-	@:overload public static function isSymbolicLink(path : java.nio.file.Path) : Bool;
+	@:overload @:public @:static public static function isSymbolicLink(path : java.nio.file.Path) : Bool;
 	
 	/**
 	* Tests whether a file is a directory.
@@ -1754,7 +1754,7 @@ extern class Files
 	*          installed, its {@link SecurityManager#checkRead(String) checkRead}
 	*          method denies read access to the file.
 	*/
-	@:overload public static function isDirectory(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.LinkOption>) : Bool;
+	@:overload @:public @:static public static function isDirectory(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.LinkOption>) : Bool;
 	
 	/**
 	* Tests whether a file is a regular file with opaque content.
@@ -1785,7 +1785,7 @@ extern class Files
 	*          installed, its {@link SecurityManager#checkRead(String) checkRead}
 	*          method denies read access to the file.
 	*/
-	@:overload public static function isRegularFile(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.LinkOption>) : Bool;
+	@:overload @:public @:static public static function isRegularFile(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.LinkOption>) : Bool;
 	
 	/**
 	* Returns a file's last modified time.
@@ -1815,7 +1815,7 @@ extern class Files
 	*
 	* @see BasicFileAttributes#lastModifiedTime
 	*/
-	@:overload public static function getLastModifiedTime(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.LinkOption>) : java.nio.file.attribute.FileTime;
+	@:overload @:public @:static public static function getLastModifiedTime(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.LinkOption>) : java.nio.file.attribute.FileTime;
 	
 	/**
 	* Updates a file's last modified time attribute. The file time is converted
@@ -1850,7 +1850,7 @@ extern class Files
 	*
 	* @see BasicFileAttributeView#setTimes
 	*/
-	@:overload public static function setLastModifiedTime(path : java.nio.file.Path, time : java.nio.file.attribute.FileTime) : java.nio.file.Path;
+	@:overload @:public @:static public static function setLastModifiedTime(path : java.nio.file.Path, time : java.nio.file.attribute.FileTime) : java.nio.file.Path;
 	
 	/**
 	* Returns the size of a file (in bytes). The size may differ from the
@@ -1873,7 +1873,7 @@ extern class Files
 	*
 	* @see BasicFileAttributes#size
 	*/
-	@:overload public static function size(path : java.nio.file.Path) : haxe.Int64;
+	@:overload @:public @:static public static function size(path : java.nio.file.Path) : haxe.Int64;
 	
 	/**
 	* Tests whether a file exists.
@@ -1903,7 +1903,7 @@ extern class Files
 	*
 	* @see #notExists
 	*/
-	@:overload public static function exists(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.LinkOption>) : Bool;
+	@:overload @:public @:static public static function exists(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.LinkOption>) : Bool;
 	
 	/**
 	* Tests whether the file located by this path does not exist. This method
@@ -1936,7 +1936,7 @@ extern class Files
 	*          SecurityManager#checkRead(String)} is invoked to check
 	*          read access to the file.
 	*/
-	@:overload public static function notExists(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.LinkOption>) : Bool;
+	@:overload @:public @:static public static function notExists(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.LinkOption>) : Bool;
 	
 	/**
 	* Tests whether a file is readable. This method checks that a file exists
@@ -1965,7 +1965,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkRead(String) checkRead}
 	*          is invoked to check read access to the file.
 	*/
-	@:overload public static function isReadable(path : java.nio.file.Path) : Bool;
+	@:overload @:public @:static public static function isReadable(path : java.nio.file.Path) : Bool;
 	
 	/**
 	* Tests whether a file is writable. This method checks that a file exists
@@ -1994,7 +1994,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkWrite(String) checkWrite}
 	*          is invoked to check write access to the file.
 	*/
-	@:overload public static function isWritable(path : java.nio.file.Path) : Bool;
+	@:overload @:public @:static public static function isWritable(path : java.nio.file.Path) : Bool;
 	
 	/**
 	* Tests whether a file is executable. This method checks that a file exists
@@ -2027,7 +2027,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkExec(String)
 	*          checkExec} is invoked to check execute access to the file.
 	*/
-	@:overload public static function isExecutable(path : java.nio.file.Path) : Bool;
+	@:overload @:public @:static public static function isExecutable(path : java.nio.file.Path) : Bool;
 	
 	/**
 	* Walks a file tree.
@@ -2119,7 +2119,7 @@ extern class Files
 	* @throws  IOException
 	*          if an I/O error is thrown by a visitor method
 	*/
-	@:overload public static function walkFileTree(start : java.nio.file.Path, options : java.util.Set<java.nio.file.FileVisitOption>, maxDepth : Int, visitor : java.nio.file.FileVisitor<java.nio.file.Path>) : java.nio.file.Path;
+	@:overload @:public @:static public static function walkFileTree(start : java.nio.file.Path, options : java.util.Set<java.nio.file.FileVisitOption>, maxDepth : Int, visitor : java.nio.file.FileVisitor<java.nio.file.Path>) : java.nio.file.Path;
 	
 	/**
 	* Walks a file tree.
@@ -2147,7 +2147,7 @@ extern class Files
 	* @throws  IOException
 	*          if an I/O error is thrown by a visitor method
 	*/
-	@:overload public static function walkFileTree(start : java.nio.file.Path, visitor : java.nio.file.FileVisitor<java.nio.file.Path>) : java.nio.file.Path;
+	@:overload @:public @:static public static function walkFileTree(start : java.nio.file.Path, visitor : java.nio.file.FileVisitor<java.nio.file.Path>) : java.nio.file.Path;
 	
 	/**
 	* Opens a file for reading, returning a {@code BufferedReader} that may be
@@ -2175,7 +2175,7 @@ extern class Files
 	*
 	* @see #readAllLines
 	*/
-	@:overload public static function newBufferedReader(path : java.nio.file.Path, cs : java.nio.charset.Charset) : java.io.BufferedReader;
+	@:overload @:public @:static public static function newBufferedReader(path : java.nio.file.Path, cs : java.nio.charset.Charset) : java.io.BufferedReader;
 	
 	/**
 	* Opens or creates a file for writing, returning a {@code BufferedWriter}
@@ -2213,7 +2213,7 @@ extern class Files
 	*
 	* @see #write(Path,Iterable,Charset,OpenOption[])
 	*/
-	@:overload public static function newBufferedWriter(path : java.nio.file.Path, cs : java.nio.charset.Charset, options : java.NativeArray<java.nio.file.OpenOption>) : java.io.BufferedWriter;
+	@:overload @:public @:static public static function newBufferedWriter(path : java.nio.file.Path, cs : java.nio.charset.Charset, options : java.NativeArray<java.nio.file.OpenOption>) : java.io.BufferedWriter;
 	
 	/**
 	* Copies all bytes from an input stream to a file. On return, the input
@@ -2280,7 +2280,7 @@ extern class Files
 	*          manager's {@link SecurityManager#checkDelete(String) checkDelete}
 	*          method is invoked to check that an existing file can be deleted.
 	*/
-	@:overload public static function copy(_in : java.io.InputStream, target : java.nio.file.Path, options : java.NativeArray<java.nio.file.CopyOption>) : haxe.Int64;
+	@:overload @:public @:static public static function copy(_in : java.io.InputStream, target : java.nio.file.Path, options : java.NativeArray<java.nio.file.CopyOption>) : haxe.Int64;
 	
 	/**
 	* Copies all bytes from a file to an output stream.
@@ -2315,7 +2315,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkRead(String) checkRead}
 	*          method is invoked to check read access to the file.
 	*/
-	@:overload public static function copy(source : java.nio.file.Path, out : java.io.OutputStream) : haxe.Int64;
+	@:overload @:public @:static public static function copy(source : java.nio.file.Path, out : java.io.OutputStream) : haxe.Int64;
 	
 	/**
 	* Read all the bytes from a file. The method ensures that the file is
@@ -2341,7 +2341,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkRead(String) checkRead}
 	*          method is invoked to check read access to the file.
 	*/
-	@:overload public static function readAllBytes(path : java.nio.file.Path) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function readAllBytes(path : java.nio.file.Path) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Read all lines from a file. This method ensures that the file is
@@ -2382,7 +2382,7 @@ extern class Files
 	*
 	* @see #newBufferedReader
 	*/
-	@:overload public static function readAllLines(path : java.nio.file.Path, cs : java.nio.charset.Charset) : java.util.List<String>;
+	@:overload @:public @:static public static function readAllLines(path : java.nio.file.Path, cs : java.nio.charset.Charset) : java.util.List<String>;
 	
 	/**
 	* Writes bytes to a file. The {@code options} parameter specifies how the
@@ -2425,7 +2425,7 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkWrite(String) checkWrite}
 	*          method is invoked to check write access to the file.
 	*/
-	@:overload public static function write(path : java.nio.file.Path, bytes : java.NativeArray<java.StdTypes.Int8>, options : java.NativeArray<java.nio.file.OpenOption>) : java.nio.file.Path;
+	@:overload @:public @:static public static function write(path : java.nio.file.Path, bytes : java.NativeArray<java.StdTypes.Int8>, options : java.NativeArray<java.nio.file.OpenOption>) : java.nio.file.Path;
 	
 	/**
 	* Write lines of text to a file. Each line is a char sequence and is
@@ -2467,13 +2467,13 @@ extern class Files
 	*          installed, the {@link SecurityManager#checkWrite(String) checkWrite}
 	*          method is invoked to check write access to the file.
 	*/
-	@:overload public static function write(path : java.nio.file.Path, lines : java.lang.Iterable<java.lang.CharSequence>, cs : java.nio.charset.Charset, options : java.NativeArray<java.nio.file.OpenOption>) : java.nio.file.Path;
+	@:overload @:public @:static public static function write(path : java.nio.file.Path, lines : java.lang.Iterable<java.lang.CharSequence>, cs : java.nio.charset.Charset, options : java.NativeArray<java.nio.file.OpenOption>) : java.nio.file.Path;
 	
 	
 }
 @:native('java$nio$file$Files$AcceptAllFilter') @:internal extern class Files_AcceptAllFilter implements java.nio.file.DirectoryStream.DirectoryStream_Filter<java.nio.file.Path>
 {
-	@:overload public function accept(entry : java.nio.file.Path) : Bool;
+	@:overload @:public public function accept(entry : java.nio.file.Path) : Bool;
 	
 	
 }

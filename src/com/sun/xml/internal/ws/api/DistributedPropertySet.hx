@@ -25,21 +25,21 @@ package com.sun.xml.internal.ws.api;
 */
 extern class DistributedPropertySet extends com.sun.xml.internal.ws.api.PropertySet
 {
-	@:overload public function addSatellite(satellite : com.sun.xml.internal.ws.api.PropertySet) : Void;
+	@:overload @:public public function addSatellite(satellite : com.sun.xml.internal.ws.api.PropertySet) : Void;
 	
-	@:overload public function removeSatellite(satellite : com.sun.xml.internal.ws.api.PropertySet) : Void;
+	@:overload @:public public function removeSatellite(satellite : com.sun.xml.internal.ws.api.PropertySet) : Void;
 	
-	@:overload public function copySatelliteInto(r : com.sun.xml.internal.ws.api.DistributedPropertySet) : Void;
+	@:overload @:public public function copySatelliteInto(r : com.sun.xml.internal.ws.api.DistributedPropertySet) : Void;
 	
-	@:overload public function getSatellite<T : com.sun.xml.internal.ws.api.PropertySet>(satelliteClass : Class<T>) : T;
+	@:overload @:public public function getSatellite<T : com.sun.xml.internal.ws.api.PropertySet>(satelliteClass : Class<T>) : T;
 	
-	@:overload public function get(key : Dynamic) : Dynamic;
+	@:overload @:public override public function get(key : Dynamic) : Dynamic;
 	
-	@:overload public function put(key : String, value : Dynamic) : Dynamic;
+	@:overload @:public override public function put(key : String, value : Dynamic) : Dynamic;
 	
-	@:overload public function supports(key : Dynamic) : Bool;
+	@:overload @:public override public function supports(key : Dynamic) : Bool;
 	
-	@:overload public function remove(key : Dynamic) : Dynamic;
+	@:overload @:public override public function remove(key : Dynamic) : Dynamic;
 	
 	
 }

@@ -43,7 +43,7 @@ package sun.net.ftp;
 	* @return an <code>FtpDirEntry</code> instance.
 	* @see java.net.FtpDirEntry
 	*/
-	@:overload public function parseLine(line : String) : sun.net.ftp.FtpDirEntry;
+	@:overload @:public public function parseLine(line : String) : sun.net.ftp.FtpDirEntry;
 	
 	
 }

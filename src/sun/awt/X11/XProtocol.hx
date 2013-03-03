@@ -25,9 +25,9 @@ package sun.awt.X11;
 */
 @:internal extern class XProtocol
 {
-	@:overload public function checkAnchor(anchorProp : sun.awt.X11.XAtom, anchorType : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function checkAnchor(anchorProp : sun.awt.X11.XAtom, anchorType : haxe.Int64) : haxe.Int64;
 	
-	@:overload public function checkAnchor(anchorProp : sun.awt.X11.XAtom, anchorType : sun.awt.X11.XAtom) : haxe.Int64;
+	@:overload @:public public function checkAnchor(anchorProp : sun.awt.X11.XAtom, anchorType : sun.awt.X11.XAtom) : haxe.Int64;
 	
 	
 }

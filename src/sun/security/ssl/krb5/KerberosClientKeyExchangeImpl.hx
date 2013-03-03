@@ -25,7 +25,7 @@ package sun.security.ssl.krb5;
 */
 extern class KerberosClientKeyExchangeImpl extends sun.security.ssl.KerberosClientKeyExchange
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an instance of KerberosClientKeyExchange consisting of the
@@ -39,7 +39,7 @@ extern class KerberosClientKeyExchangeImpl extends sun.security.ssl.KerberosClie
 	* @param rand random number generator to use for generating pre-master
 	*          secret
 	*/
-	@:overload override public function init(serverName : String, isLoopback : Bool, acc : java.security.AccessControlContext, protocolVersion : sun.security.ssl.ProtocolVersion, rand : java.security.SecureRandom) : Void;
+	@:overload @:public override public function init(serverName : String, isLoopback : Bool, acc : java.security.AccessControlContext, protocolVersion : sun.security.ssl.ProtocolVersion, rand : java.security.SecureRandom) : Void;
 	
 	/**
 	* Creates an instance of KerberosClientKeyExchange from its ASN.1 encoding.
@@ -53,19 +53,19 @@ extern class KerberosClientKeyExchangeImpl extends sun.security.ssl.KerberosClie
 	* @param input inputstream from which to get ASN.1-encoded KerberosWrapper
 	* @param serverKey server's master secret key
 	*/
-	@:overload override public function init(protocolVersion : sun.security.ssl.ProtocolVersion, clientVersion : sun.security.ssl.ProtocolVersion, rand : java.security.SecureRandom, input : sun.security.ssl.HandshakeInStream, secretKeys : java.NativeArray<javax.crypto.SecretKey>) : Void;
+	@:overload @:public override public function init(protocolVersion : sun.security.ssl.ProtocolVersion, clientVersion : sun.security.ssl.ProtocolVersion, rand : java.security.SecureRandom, input : sun.security.ssl.HandshakeInStream, secretKeys : java.NativeArray<javax.crypto.SecretKey>) : Void;
 	
-	@:overload override public function messageLength() : Int;
+	@:overload @:public override public function messageLength() : Int;
 	
-	@:overload override public function send(s : sun.security.ssl.HandshakeOutStream) : Void;
+	@:overload @:public override public function send(s : sun.security.ssl.HandshakeOutStream) : Void;
 	
-	@:overload override public function print(s : java.io.PrintStream) : Void;
+	@:overload @:public override public function print(s : java.io.PrintStream) : Void;
 	
-	@:overload override public function getUnencryptedPreMasterSecret() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getUnencryptedPreMasterSecret() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function getPeerPrincipal() : javax.security.auth.kerberos.KerberosPrincipal;
+	@:overload @:public override public function getPeerPrincipal() : javax.security.auth.kerberos.KerberosPrincipal;
 	
-	@:overload override public function getLocalPrincipal() : javax.security.auth.kerberos.KerberosPrincipal;
+	@:overload @:public override public function getLocalPrincipal() : javax.security.auth.kerberos.KerberosPrincipal;
 	
 	
 }

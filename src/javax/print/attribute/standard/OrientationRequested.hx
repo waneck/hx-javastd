@@ -28,7 +28,7 @@ extern class OrientationRequested extends javax.print.attribute.EnumSyntax imple
 	/**
 	* The content will be imaged across the short edge of the medium.
 	*/
-	public static var PORTRAIT(default, null) : javax.print.attribute.standard.OrientationRequested;
+	@:public @:static @:final public static var PORTRAIT(default, null) : javax.print.attribute.standard.OrientationRequested;
 	
 	/**
 	* The content will be imaged across the long edge of the medium.
@@ -39,7 +39,7 @@ extern class OrientationRequested extends javax.print.attribute.EnumSyntax imple
 	* simple finishing on the long edge is the same edge whether portrait or
 	* landscape.
 	*/
-	public static var LANDSCAPE(default, null) : javax.print.attribute.standard.OrientationRequested;
+	@:public @:static @:final public static var LANDSCAPE(default, null) : javax.print.attribute.standard.OrientationRequested;
 	
 	/**
 	* The content will be imaged across the long edge of the medium, but in
@@ -50,7 +50,7 @@ extern class OrientationRequested extends javax.print.attribute.EnumSyntax imple
 	* applications rotate landscape -90 degrees from portrait, rather than
 	* +90 degrees.
 	*/
-	public static var REVERSE_LANDSCAPE(default, null) : javax.print.attribute.standard.OrientationRequested;
+	@:public @:static @:final public static var REVERSE_LANDSCAPE(default, null) : javax.print.attribute.standard.OrientationRequested;
 	
 	/**
 	* The content will be imaged across the short edge of the medium, but in
@@ -65,7 +65,7 @@ extern class OrientationRequested extends javax.print.attribute.EnumSyntax imple
 	* right" by a simple finishing device as is common use with some
 	* Middle Eastern languages such as Hebrew.
 	*/
-	public static var REVERSE_PORTRAIT(default, null) : javax.print.attribute.standard.OrientationRequested;
+	@:public @:static @:final public static var REVERSE_PORTRAIT(default, null) : javax.print.attribute.standard.OrientationRequested;
 	
 	/**
 	* Construct a new orientation requested enumeration value with the given
@@ -73,22 +73,22 @@ extern class OrientationRequested extends javax.print.attribute.EnumSyntax imple
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class OrientationRequested.
 	*/
-	@:overload private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class OrientationRequested.
 	*/
-	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Returns the lowest integer value used by class OrientationRequested.
 	*/
-	@:overload private function getOffset() : Int;
+	@:overload @:protected override private function getOffset() : Int;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -100,7 +100,7 @@ extern class OrientationRequested extends javax.print.attribute.EnumSyntax imple
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -111,7 +111,7 @@ extern class OrientationRequested extends javax.print.attribute.EnumSyntax imple
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

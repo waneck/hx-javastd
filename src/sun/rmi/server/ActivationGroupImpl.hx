@@ -31,7 +31,7 @@ extern class ActivationGroupImpl extends java.rmi.activation.ActivationGroup
 	* @param id the group's identifier
 	* @param data ignored
 	*/
-	@:overload public function new(id : java.rmi.activation.ActivationGroupID, data : java.rmi.MarshalledObject<Dynamic>) : Void;
+	@:overload @:public public function new(id : java.rmi.activation.ActivationGroupID, data : java.rmi.MarshalledObject<Dynamic>) : Void;
 	
 	/**
 	* Creates a new instance of an activatable remote object. The
@@ -49,7 +49,7 @@ extern class ActivationGroupImpl extends java.rmi.activation.ActivationGroup
 	* @param desc the object's activation descriptor
 	* @return a marshalled object containing the activated object's stub
 	*/
-	@:overload override public function newInstance(id : java.rmi.activation.ActivationID, desc : java.rmi.activation.ActivationDesc) : java.rmi.MarshalledObject<java.rmi.Remote>;
+	@:overload @:public override public function newInstance(id : java.rmi.activation.ActivationID, desc : java.rmi.activation.ActivationDesc) : java.rmi.MarshalledObject<java.rmi.Remote>;
 	
 	/**
 	* The group's <code>inactiveObject</code> method is called
@@ -87,7 +87,7 @@ extern class ActivationGroupImpl extends java.rmi.activation.ActivationGroup
 	* be inactive)
 	* @exception RemoteException if call informing monitor fails
 	*/
-	@:overload override public function inactiveObject(id : java.rmi.activation.ActivationID) : Bool;
+	@:overload @:public override public function inactiveObject(id : java.rmi.activation.ActivationID) : Bool;
 	
 	/**
 	* The group's <code>activeObject</code> method is called when an
@@ -103,7 +103,7 @@ extern class ActivationGroupImpl extends java.rmi.activation.ActivationGroup
 	* @exception UnknownObjectException if object is not registered
 	* @exception RemoteException if call informing monitor fails
 	*/
-	@:overload override public function activeObject(id : java.rmi.activation.ActivationID, impl : java.rmi.Remote) : Void;
+	@:overload @:public override public function activeObject(id : java.rmi.activation.ActivationID, impl : java.rmi.Remote) : Void;
 	
 	
 }
@@ -113,7 +113,7 @@ extern class ActivationGroupImpl extends java.rmi.activation.ActivationGroup
 */
 @:native('sun$rmi$server$ActivationGroupImpl$ServerSocketFactoryImpl') @:internal extern class ActivationGroupImpl_ServerSocketFactoryImpl implements java.rmi.server.RMIServerSocketFactory
 {
-	@:overload public function createServerSocket(port : Int) : java.net.ServerSocket;
+	@:overload @:public public function createServerSocket(port : Int) : java.net.ServerSocket;
 	
 	
 }

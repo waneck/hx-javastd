@@ -25,25 +25,25 @@ package sun.nio.cs;
 */
 @:internal extern class UTF_16LE_BOM extends sun.nio.cs.Unicode
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function historicalName() : String;
+	@:overload @:public override public function historicalName() : String;
 	
-	@:overload public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	
 }
 @:native('sun$nio$cs$UTF_16LE_BOM$Decoder') @:internal extern class UTF_16LE_BOM_Decoder extends sun.nio.cs.UnicodeDecoder
 {
-	@:overload public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:public public function new(cs : java.nio.charset.Charset) : Void;
 	
 	
 }
 @:native('sun$nio$cs$UTF_16LE_BOM$Encoder') @:internal extern class UTF_16LE_BOM_Encoder extends sun.nio.cs.UnicodeEncoder
 {
-	@:overload public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:public public function new(cs : java.nio.charset.Charset) : Void;
 	
 	
 }

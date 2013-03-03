@@ -33,11 +33,11 @@ extern class RuntimeAnnotations_attribute extends com.sun.tools.classfile.Attrib
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	@:overload private function new(cr : com.sun.tools.classfile.ClassReader, name_index : Int, length : Int) : Void;
+	@:overload @:protected private function new(cr : com.sun.tools.classfile.ClassReader, name_index : Int, length : Int) : Void;
 	
-	@:overload private function new(name_index : Int, annotations : java.NativeArray<com.sun.tools.classfile.Annotation>) : Void;
+	@:overload @:protected private function new(name_index : Int, annotations : java.NativeArray<com.sun.tools.classfile.Annotation>) : Void;
 	
-	public var annotations(default, null) : java.NativeArray<com.sun.tools.classfile.Annotation>;
+	@:public @:final public var annotations(default, null) : java.NativeArray<com.sun.tools.classfile.Annotation>;
 	
 	
 }

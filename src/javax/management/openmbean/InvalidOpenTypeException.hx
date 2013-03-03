@@ -33,14 +33,14 @@ package javax.management.openmbean;
 @:require(java5) extern class InvalidOpenTypeException extends java.lang.IllegalArgumentException
 {
 	/** An InvalidOpenTypeException with no detail message.  */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* An InvalidOpenTypeException with a detail message.
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

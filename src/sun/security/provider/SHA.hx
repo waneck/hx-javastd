@@ -42,12 +42,12 @@ extern class SHA extends sun.security.provider.DigestBase
 	/**
 	* Creates a new SHA object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/*
 	* Clones this object.
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

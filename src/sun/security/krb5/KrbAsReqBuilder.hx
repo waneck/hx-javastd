@@ -36,7 +36,7 @@ extern class KrbAsReqBuilder
 	* This argument will neither be modified nor stored by the method.
 	* @throws KrbException
 	*/
-	@:overload public function new(cname : sun.security.krb5.PrincipalName, ktab : javax.security.auth.kerberos.KeyTab) : Void;
+	@:overload @:public public function new(cname : sun.security.krb5.PrincipalName, ktab : javax.security.auth.kerberos.KeyTab) : Void;
 	
 	/**
 	* Creates a builder to be used by {@code cname} with a known password.
@@ -49,7 +49,7 @@ extern class KrbAsReqBuilder
 	* nor stored by the method.
 	* @throws KrbException
 	*/
-	@:overload public function new(cname : sun.security.krb5.PrincipalName, pass : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(cname : sun.security.krb5.PrincipalName, pass : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Retrieves an array of secret keys for the client. This is used when
@@ -63,28 +63,28 @@ extern class KrbAsReqBuilder
 	* @throws IllegalStateException if not constructed from a password
 	* @throws KrbException
 	*/
-	@:overload public function getKeys(isInitiator : Bool) : java.NativeArray<sun.security.krb5.EncryptionKey>;
+	@:overload @:public public function getKeys(isInitiator : Bool) : java.NativeArray<sun.security.krb5.EncryptionKey>;
 	
 	/**
 	* Sets or clears options. If cleared, default options will be used
 	* at creation time.
 	* @param options
 	*/
-	@:overload public function setOptions(options : sun.security.krb5.internal.KDCOptions) : Void;
+	@:overload @:public public function setOptions(options : sun.security.krb5.internal.KDCOptions) : Void;
 	
 	/**
 	* Sets or clears target. If cleared, KrbAsReq might choose krbtgt
 	* for cname realm
 	* @param sname
 	*/
-	@:overload public function setTarget(sname : sun.security.krb5.PrincipalName) : Void;
+	@:overload @:public public function setTarget(sname : sun.security.krb5.PrincipalName) : Void;
 	
 	/**
 	* Adds or clears addresses. KrbAsReq might add some if empty
 	* field not allowed
 	* @param addresses
 	*/
-	@:overload public function setAddresses(addresses : sun.security.krb5.internal.HostAddresses) : Void;
+	@:overload @:public public function setAddresses(addresses : sun.security.krb5.internal.HostAddresses) : Void;
 	
 	/**
 	* Performs AS-REQ send and AS-REP receive.
@@ -93,22 +93,22 @@ extern class KrbAsReqBuilder
 	* @throws Asn1Exception
 	* @throws IOException
 	*/
-	@:overload public function action() : sun.security.krb5.KrbAsReqBuilder;
+	@:overload @:public public function action() : sun.security.krb5.KrbAsReqBuilder;
 	
 	/**
 	* Gets Credentials object after action
 	*/
-	@:overload public function getCreds() : sun.security.krb5.Credentials;
+	@:overload @:public public function getCreds() : sun.security.krb5.Credentials;
 	
 	/**
 	* Gets another type of Credentials after action
 	*/
-	@:overload public function getCCreds() : sun.security.krb5.internal.ccache.Credentials;
+	@:overload @:public public function getCCreds() : sun.security.krb5.internal.ccache.Credentials;
 	
 	/**
 	* Destroys the object and clears keys and password info.
 	*/
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	
 }

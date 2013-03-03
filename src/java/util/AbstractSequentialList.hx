@@ -69,7 +69,7 @@ package java.util;
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the element at the specified position in this list.
@@ -80,7 +80,7 @@ package java.util;
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function get(index : Int) : E;
+	@:overload @:public override public function get(index : Int) : E;
 	
 	/**
 	* Replaces the element at the specified position in this list with the
@@ -101,7 +101,7 @@ package java.util;
 	* @throws IllegalArgumentException      {@inheritDoc}
 	* @throws IndexOutOfBoundsException     {@inheritDoc}
 	*/
-	@:overload public function set(index : Int, element : E) : E;
+	@:overload @:public override public function set(index : Int, element : E) : E;
 	
 	/**
 	* Inserts the specified element at the specified position in this list
@@ -123,7 +123,7 @@ package java.util;
 	* @throws IllegalArgumentException      {@inheritDoc}
 	* @throws IndexOutOfBoundsException     {@inheritDoc}
 	*/
-	@:overload public function add(index : Int, element : E) : Void;
+	@:overload @:public override public function add(index : Int, element : E) : Void;
 	
 	/**
 	* Removes the element at the specified position in this list (optional
@@ -142,7 +142,7 @@ package java.util;
 	* @throws UnsupportedOperationException {@inheritDoc}
 	* @throws IndexOutOfBoundsException     {@inheritDoc}
 	*/
-	@:overload public function remove(index : Int) : E;
+	@:overload @:public override public function remove(index : Int) : E;
 	
 	/**
 	* Inserts all of the elements in the specified collection into this
@@ -173,7 +173,7 @@ package java.util;
 	* @throws IllegalArgumentException      {@inheritDoc}
 	* @throws IndexOutOfBoundsException     {@inheritDoc}
 	*/
-	@:overload public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
+	@:overload @:public override public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Returns an iterator over the elements in this list (in proper
@@ -183,7 +183,7 @@ package java.util;
 	*
 	* @return an iterator over the elements in this list (in proper sequence)
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
 	/**
 	* Returns a list iterator over the elements in this list (in proper
@@ -195,7 +195,7 @@ package java.util;
 	*         sequence)
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload @:abstract public function listIterator(index : Int) : java.util.ListIterator<E>;
+	@:overload @:public @:abstract override public function listIterator(index : Int) : java.util.ListIterator<E>;
 	
 	
 }

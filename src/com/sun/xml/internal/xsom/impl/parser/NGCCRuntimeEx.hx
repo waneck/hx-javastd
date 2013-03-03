@@ -26,28 +26,28 @@ package com.sun.xml.internal.xsom.impl.parser;
 extern class NGCCRuntimeEx extends com.sun.xml.internal.xsom.impl.parser.state.NGCCRuntime implements com.sun.xml.internal.xsom.impl.parser.PatcherManager
 {
 	/** coordinator. */
-	public var parser(default, null) : com.sun.xml.internal.xsom.impl.parser.ParserContext;
+	@:public @:final public var parser(default, null) : com.sun.xml.internal.xsom.impl.parser.ParserContext;
 	
 	/** The schema currently being parsed. */
-	public var currentSchema : com.sun.xml.internal.xsom.impl.SchemaImpl;
+	@:public public var currentSchema : com.sun.xml.internal.xsom.impl.SchemaImpl;
 	
 	/** The @finalDefault value of the current schema. */
-	public var finalDefault : Int;
+	@:public public var finalDefault : Int;
 	
 	/** The @blockDefault value of the current schema. */
-	public var blockDefault : Int;
+	@:public public var blockDefault : Int;
 	
 	/**
 	* The @elementFormDefault value of the current schema.
 	* True if local elements are qualified by default.
 	*/
-	public var elementFormDefault : Bool;
+	@:public public var elementFormDefault : Bool;
 	
 	/**
 	* The @attributeFormDefault value of the current schema.
 	* True if local attributes are qualified by default.
 	*/
-	public var attributeFormDefault : Bool;
+	@:public public var attributeFormDefault : Bool;
 	
 	/**
 	* True if the current schema is in a chameleon mode.
@@ -55,32 +55,32 @@ extern class NGCCRuntimeEx extends com.sun.xml.internal.xsom.impl.parser.state.N
 	*
 	* Life is very miserable with XML Schema, as you see.
 	*/
-	public var chameleonMode : Bool;
+	@:public public var chameleonMode : Bool;
 	
 	/**
 	* Points to the {@link SchemaDocumentImpl} that represents the
 	* schema document being parsed.
 	*/
-	public var document : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl;
+	@:public public var document : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl;
 	
-	@:overload public function checkDoubleDefError(c : com.sun.xml.internal.xsom.XSDeclaration) : Void;
+	@:overload @:public public function checkDoubleDefError(c : com.sun.xml.internal.xsom.XSDeclaration) : Void;
 	
-	@:overload public static function ignorableDuplicateComponent(c : com.sun.xml.internal.xsom.XSDeclaration) : Bool;
+	@:overload @:public @:static public static function ignorableDuplicateComponent(c : com.sun.xml.internal.xsom.XSDeclaration) : Bool;
 	
 	/* registers a patcher that will run after all the parsing has finished. */
-	@:overload public function addPatcher(patcher : com.sun.xml.internal.xsom.impl.parser.Patch) : Void;
+	@:overload @:public public function addPatcher(patcher : com.sun.xml.internal.xsom.impl.parser.Patch) : Void;
 	
-	@:overload public function addErrorChecker(patcher : com.sun.xml.internal.xsom.impl.parser.Patch) : Void;
+	@:overload @:public public function addErrorChecker(patcher : com.sun.xml.internal.xsom.impl.parser.Patch) : Void;
 	
-	@:overload public function reportError(msg : String, loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function reportError(msg : String, loc : org.xml.sax.Locator) : Void;
 	
-	@:overload public function reportError(msg : String) : Void;
+	@:overload @:public public function reportError(msg : String) : Void;
 	
 	/** Includes the specified schema. */
-	@:overload public function includeSchema(schemaLocation : String) : Void;
+	@:overload @:public public function includeSchema(schemaLocation : String) : Void;
 	
 	/** Imports the specified schema. */
-	@:overload public function importSchema(ns : String, schemaLocation : String) : Void;
+	@:overload @:public public function importSchema(ns : String, schemaLocation : String) : Void;
 	
 	/**
 	* Called when a new document is being parsed and checks
@@ -113,7 +113,7 @@ extern class NGCCRuntimeEx extends com.sun.xml.internal.xsom.impl.parser.state.N
 	* @return true if the document has already been processed and thus
 	*      needs to be skipped.
 	*/
-	@:overload public function hasAlreadyBeenRead() : Bool;
+	@:overload @:public public function hasAlreadyBeenRead() : Bool;
 	
 	/**
 	* Parses the specified entity.
@@ -122,59 +122,59 @@ extern class NGCCRuntimeEx extends com.sun.xml.internal.xsom.impl.parser.state.N
 	*      The source location of the import/include statement.
 	*      Used for reporting errors.
 	*/
-	@:overload public function parseEntity(source : org.xml.sax.InputSource, includeMode : Bool, expectedNamespace : String, importLocation : org.xml.sax.Locator) : Void;
+	@:overload @:public public function parseEntity(source : org.xml.sax.InputSource, includeMode : Bool, expectedNamespace : String, importLocation : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Creates a new instance of annotation parser.
 	*/
-	@:overload public function createAnnotationParser() : com.sun.xml.internal.xsom.parser.AnnotationParser;
+	@:overload @:public public function createAnnotationParser() : com.sun.xml.internal.xsom.parser.AnnotationParser;
 	
 	/**
 	* Gets the element name that contains the annotation element.
 	* This method works correctly only when called by the annotation handler.
 	*/
-	@:overload public function getAnnotationContextElementName() : String;
+	@:overload @:public public function getAnnotationContextElementName() : String;
 	
 	/** Creates a copy of the current locator object. */
-	@:overload public function copyLocator() : org.xml.sax.Locator;
+	@:overload @:public public function copyLocator() : org.xml.sax.Locator;
 	
-	@:overload public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
-	@:overload override public function onEnterElementConsumed(uri : String, localName : String, qname : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function onEnterElementConsumed(uri : String, localName : String, qname : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function onLeaveElementConsumed(uri : String, localName : String, qname : String) : Void;
+	@:overload @:public override public function onLeaveElementConsumed(uri : String, localName : String, qname : String) : Void;
 	
 	/** Returns an immutable snapshot of the current context. */
-	@:overload public function createValidationContext() : org.relaxng.datatype.ValidationContext;
+	@:overload @:public public function createValidationContext() : org.relaxng.datatype.ValidationContext;
 	
-	@:overload public function createXmlString(value : String) : com.sun.xml.internal.xsom.XmlString;
+	@:overload @:public public function createXmlString(value : String) : com.sun.xml.internal.xsom.XmlString;
 	
-	@:overload override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload override public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public override public function endPrefixMapping(prefix : String) : Void;
 	
 	/** Parses UName under the given context. */
-	@:overload public function parseUName(qname : String) : com.sun.xml.internal.xsom.impl.UName;
+	@:overload @:public public function parseUName(qname : String) : com.sun.xml.internal.xsom.impl.UName;
 	
-	@:overload public function parseBoolean(v : String) : Bool;
+	@:overload @:public public function parseBoolean(v : String) : Bool;
 	
-	@:overload override private function unexpectedX(token : String) : Void;
+	@:overload @:protected override private function unexpectedX(token : String) : Void;
 	
-	@:overload public function parseForeignAttributes(next : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl) : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl;
+	@:overload @:public public function parseForeignAttributes(next : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl) : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl;
 	
-	public static var XMLSchemaNSURI(default, null) : String;
+	@:public @:static @:final public static var XMLSchemaNSURI(default, null) : String;
 	
 	
 }
 @:native('com$sun$xml$internal$xsom$impl$parser$NGCCRuntimeEx$Context') @:internal extern class NGCCRuntimeEx_Context implements org.relaxng.datatype.ValidationContext
 {
-	@:overload public function resolveNamespacePrefix(p : String) : String;
+	@:overload @:public public function resolveNamespacePrefix(p : String) : String;
 	
-	@:overload public function getBaseUri() : String;
+	@:overload @:public public function getBaseUri() : String;
 	
-	@:overload public function isNotation(arg0 : String) : Bool;
+	@:overload @:public public function isNotation(arg0 : String) : Bool;
 	
-	@:overload public function isUnparsedEntity(arg0 : String) : Bool;
+	@:overload @:public public function isUnparsedEntity(arg0 : String) : Bool;
 	
 	
 }

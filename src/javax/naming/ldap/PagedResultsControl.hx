@@ -29,7 +29,7 @@ extern class PagedResultsControl extends javax.naming.ldap.BasicControl
 	* The paged-results control's assigned object identifier
 	* is 1.2.840.113556.1.4.319.
 	*/
-	public static var OID(default, null) : String;
+	@:public @:static @:final public static var OID(default, null) : String;
 	
 	/**
 	* Constructs a control to set the number of entries to be returned per
@@ -44,7 +44,7 @@ extern class PagedResultsControl extends javax.naming.ldap.BasicControl
 	* @exception IOException   If an error was encountered while encoding the
 	*                          supplied arguments into a control.
 	*/
-	@:overload public function new(pageSize : Int, criticality : Bool) : Void;
+	@:overload @:public public function new(pageSize : Int, criticality : Bool) : Void;
 	
 	/**
 	* Constructs a control to set the number of entries to be returned per
@@ -65,7 +65,7 @@ extern class PagedResultsControl extends javax.naming.ldap.BasicControl
 	* @exception IOException   If an error was encountered while encoding the
 	*                          supplied arguments into a control.
 	*/
-	@:overload public function new(pageSize : Int, cookie : java.NativeArray<java.StdTypes.Int8>, criticality : Bool) : Void;
+	@:overload @:public public function new(pageSize : Int, cookie : java.NativeArray<java.StdTypes.Int8>, criticality : Bool) : Void;
 	
 	
 }

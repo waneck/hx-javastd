@@ -30,24 +30,24 @@ extern class Segment implements java.lang.Cloneable implements java.text.Charact
 	* interest.  This array should never be modified;
 	* it is available only for efficiency.
 	*/
-	public var array : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var array : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* This is the offset into the array that
 	* the desired text begins.
 	*/
-	public var offset : Int;
+	@:public public var offset : Int;
 	
 	/**
 	* This is the number of array elements that
 	* make up the text of interest.
 	*/
-	public var count : Int;
+	@:public public var count : Int;
 	
 	/**
 	* Creates a new segment.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new segment referring to an existing array.
@@ -56,7 +56,7 @@ extern class Segment implements java.lang.Cloneable implements java.text.Charact
 	* @param offset the offset into the array
 	* @param count the number of characters
 	*/
-	@:overload public function new(array : java.NativeArray<java.StdTypes.Char16>, offset : Int, count : Int) : Void;
+	@:overload @:public public function new(array : java.NativeArray<java.StdTypes.Char16>, offset : Int, count : Int) : Void;
 	
 	/**
 	* Flag to indicate that partial returns are valid.  If the flag is true,
@@ -69,7 +69,7 @@ extern class Segment implements java.lang.Cloneable implements java.text.Charact
 	* @param p whether or not partial returns are valid.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setPartialReturn(p : Bool) : Void;
+	@:require(java4) @:overload @:public public function setPartialReturn(p : Bool) : Void;
 	
 	/**
 	* Flag to indicate that partial returns are valid.
@@ -77,14 +77,14 @@ extern class Segment implements java.lang.Cloneable implements java.text.Charact
 	* @return whether or not partial returns are valid.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isPartialReturn() : Bool;
+	@:require(java4) @:overload @:public public function isPartialReturn() : Bool;
 	
 	/**
 	* Converts a segment into a String.
 	*
 	* @return the string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Sets the position to getBeginIndex() and returns the character at that
@@ -93,7 +93,7 @@ extern class Segment implements java.lang.Cloneable implements java.text.Charact
 	* @see #getBeginIndex
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function first() : java.StdTypes.Char16;
+	@:require(java3) @:overload @:public public function first() : java.StdTypes.Char16;
 	
 	/**
 	* Sets the position to getEndIndex()-1 (getEndIndex() if the text is empty)
@@ -102,7 +102,7 @@ extern class Segment implements java.lang.Cloneable implements java.text.Charact
 	* @see #getEndIndex
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function last() : java.StdTypes.Char16;
+	@:require(java3) @:overload @:public public function last() : java.StdTypes.Char16;
 	
 	/**
 	* Gets the character at the current position (as returned by getIndex()).
@@ -111,7 +111,7 @@ extern class Segment implements java.lang.Cloneable implements java.text.Charact
 	* @see #getIndex
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function current() : java.StdTypes.Char16;
+	@:require(java3) @:overload @:public public function current() : java.StdTypes.Char16;
 	
 	/**
 	* Increments the iterator's index by one and returns the character
@@ -122,7 +122,7 @@ extern class Segment implements java.lang.Cloneable implements java.text.Charact
 	* position is off the end of the text range.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function next() : java.StdTypes.Char16;
+	@:require(java3) @:overload @:public public function next() : java.StdTypes.Char16;
 	
 	/**
 	* Decrements the iterator's index by one and returns the character
@@ -132,7 +132,7 @@ extern class Segment implements java.lang.Cloneable implements java.text.Charact
 	* position is equal to getBeginIndex().
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function previous() : java.StdTypes.Char16;
+	@:require(java3) @:overload @:public public function previous() : java.StdTypes.Char16;
 	
 	/**
 	* Sets the position to the specified position in the text and returns that
@@ -143,14 +143,14 @@ extern class Segment implements java.lang.Cloneable implements java.text.Charact
 	* @return the character at the specified position or DONE if the specified position is equal to getEndIndex()
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setIndex(position : Int) : java.StdTypes.Char16;
+	@:require(java3) @:overload @:public public function setIndex(position : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Returns the start index of the text.
 	* @return the index at which the text begins.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getBeginIndex() : Int;
+	@:require(java3) @:overload @:public public function getBeginIndex() : Int;
 	
 	/**
 	* Returns the end index of the text.  This index is the index of the first
@@ -158,39 +158,39 @@ extern class Segment implements java.lang.Cloneable implements java.text.Charact
 	* @return the index after the last character in the text
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getEndIndex() : Int;
+	@:require(java3) @:overload @:public public function getEndIndex() : Int;
 	
 	/**
 	* Returns the current index.
 	* @return the current index.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getIndex() : Int;
+	@:require(java3) @:overload @:public public function getIndex() : Int;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function charAt(index : Int) : java.StdTypes.Char16;
+	@:require(java6) @:overload @:public public function charAt(index : Int) : java.StdTypes.Char16;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function length() : Int;
+	@:require(java6) @:overload @:public public function length() : Int;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
+	@:require(java6) @:overload @:public public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
 	
 	/**
 	* Creates a shallow copy.
 	*
 	* @return the copy
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

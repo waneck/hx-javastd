@@ -30,7 +30,7 @@ package sun.awt.X11;
 	* Implementaion of interface methods
 	*
 	************************************************/
-	@:overload public function setState(t : Bool) : Void;
+	@:overload @:public public function setState(t : Bool) : Void;
 	
 	
 }

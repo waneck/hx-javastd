@@ -25,19 +25,19 @@ package sun.management;
 */
 extern class StackTraceElementCompositeData extends sun.management.LazyCompositeData
 {
-	@:overload public function getStackTraceElement() : java.lang.StackTraceElement;
+	@:overload @:public public function getStackTraceElement() : java.lang.StackTraceElement;
 	
-	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : java.lang.StackTraceElement;
+	@:overload @:public @:static public static function from(cd : javax.management.openmbean.CompositeData) : java.lang.StackTraceElement;
 	
-	@:overload public static function toCompositeData(ste : java.lang.StackTraceElement) : javax.management.openmbean.CompositeData;
+	@:overload @:public @:static public static function toCompositeData(ste : java.lang.StackTraceElement) : javax.management.openmbean.CompositeData;
 	
-	@:overload override private function getCompositeData() : javax.management.openmbean.CompositeData;
+	@:overload @:protected override private function getCompositeData() : javax.management.openmbean.CompositeData;
 	
 	/** Validate if the input CompositeData has the expected
 	* CompositeType (i.e. contain all attributes with expected
 	* names and types).
 	*/
-	@:overload public static function validateCompositeData(cd : javax.management.openmbean.CompositeData) : Void;
+	@:overload @:public @:static public static function validateCompositeData(cd : javax.management.openmbean.CompositeData) : Void;
 	
 	
 }

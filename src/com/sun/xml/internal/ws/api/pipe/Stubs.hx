@@ -33,7 +33,7 @@ extern class Stubs
 	* createDispatch(port,owner,binding,SOAPMessage.class,mode,next);
 	* </pre>
 	*/
-	@:overload public static function createSAAJDispatch(portName : javax.xml.namespace.QName, owner : com.sun.xml.internal.ws.api.WSService, binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode, next : com.sun.xml.internal.ws.api.pipe.Tube, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.xml.soap.SOAPMessage>;
+	@:overload @:public @:static public static function createSAAJDispatch(portName : javax.xml.namespace.QName, owner : com.sun.xml.internal.ws.api.WSService, binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode, next : com.sun.xml.internal.ws.api.pipe.Tube, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.xml.soap.SOAPMessage>;
 	
 	/**
 	* Creates a new {@link Dispatch} stub for {@link SOAPMessage}.
@@ -43,7 +43,7 @@ extern class Stubs
 	* createDispatch(port,owner,binding,SOAPMessage.class,mode,next);
 	* </pre>
 	*/
-	@:overload public static function createSAAJDispatch(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.xml.soap.SOAPMessage>;
+	@:overload @:public @:static public static function createSAAJDispatch(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.xml.soap.SOAPMessage>;
 	
 	/**
 	* Creates a new {@link Dispatch} stub for {@link DataSource}.
@@ -53,7 +53,7 @@ extern class Stubs
 	* createDispatch(port,owner,binding,DataSource.class,mode,next);
 	* </pre>
 	*/
-	@:overload public static function createDataSourceDispatch(portName : javax.xml.namespace.QName, owner : com.sun.xml.internal.ws.api.WSService, binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode, next : com.sun.xml.internal.ws.api.pipe.Tube, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.activation.DataSource>;
+	@:overload @:public @:static public static function createDataSourceDispatch(portName : javax.xml.namespace.QName, owner : com.sun.xml.internal.ws.api.WSService, binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode, next : com.sun.xml.internal.ws.api.pipe.Tube, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.activation.DataSource>;
 	
 	/**
 	* Creates a new {@link Dispatch} stub for {@link DataSource}.
@@ -63,7 +63,7 @@ extern class Stubs
 	* createDispatch(port,owner,binding,DataSource.class,mode,next);
 	* </pre>
 	*/
-	@:overload public static function createDataSourceDispatch(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.activation.DataSource>;
+	@:overload @:public @:static public static function createDataSourceDispatch(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.activation.DataSource>;
 	
 	/**
 	* Creates a new {@link Dispatch} stub for {@link Source}.
@@ -73,7 +73,7 @@ extern class Stubs
 	* createDispatch(port,owner,binding,Source.class,mode,next);
 	* </pre>
 	*/
-	@:overload public static function createSourceDispatch(portName : javax.xml.namespace.QName, owner : com.sun.xml.internal.ws.api.WSService, binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode, next : com.sun.xml.internal.ws.api.pipe.Tube, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.xml.transform.Source>;
+	@:overload @:public @:static public static function createSourceDispatch(portName : javax.xml.namespace.QName, owner : com.sun.xml.internal.ws.api.WSService, binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode, next : com.sun.xml.internal.ws.api.pipe.Tube, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.xml.transform.Source>;
 	
 	/**
 	* Creates a new {@link Dispatch} stub for {@link Source}.
@@ -83,7 +83,7 @@ extern class Stubs
 	* createDispatch(port,owner,binding,Source.class,mode,next);
 	* </pre>
 	*/
-	@:overload public static function createSourceDispatch(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.xml.transform.Source>;
+	@:overload @:public @:static public static function createSourceDispatch(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.xml.transform.Source>;
 	
 	/**
 	* Creates a new {@link Dispatch} stub that connects to the given pipe.
@@ -106,7 +106,7 @@ extern class Stubs
 	*      see <a href="#param">common parameters</a>
 	* TODO: are these parameters making sense?
 	*/
-	@:overload public static function createDispatch<T>(portName : javax.xml.namespace.QName, owner : com.sun.xml.internal.ws.api.WSService, binding : com.sun.xml.internal.ws.api.WSBinding, clazz : Class<T>, mode : javax.xml.ws.Service.Service_Mode, next : com.sun.xml.internal.ws.api.pipe.Tube, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<T>;
+	@:overload @:public @:static public static function createDispatch<T>(portName : javax.xml.namespace.QName, owner : com.sun.xml.internal.ws.api.WSService, binding : com.sun.xml.internal.ws.api.WSBinding, clazz : Class<T>, mode : javax.xml.ws.Service.Service_Mode, next : com.sun.xml.internal.ws.api.pipe.Tube, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<T>;
 	
 	/**
 	* Creates a new {@link Dispatch} stub that connects to the given pipe.
@@ -127,7 +127,7 @@ extern class Stubs
 	*      see <a href="#param">common parameters</a>
 	* TODO: are these parameters making sense?
 	*/
-	@:overload public static function createDispatch<T>(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, owner : com.sun.xml.internal.ws.api.WSService, binding : com.sun.xml.internal.ws.api.WSBinding, clazz : Class<T>, mode : javax.xml.ws.Service.Service_Mode, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<T>;
+	@:overload @:public @:static public static function createDispatch<T>(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, owner : com.sun.xml.internal.ws.api.WSService, binding : com.sun.xml.internal.ws.api.WSBinding, clazz : Class<T>, mode : javax.xml.ws.Service.Service_Mode, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<T>;
 	
 	/**
 	* Creates a new JAXB-based {@link Dispatch} stub that connects to the given pipe.
@@ -148,7 +148,7 @@ extern class Stubs
 	* @param epr
 	*      see <a href="#param">common parameters</a>
 	*/
-	@:overload public static function createJAXBDispatch(portName : javax.xml.namespace.QName, owner : com.sun.xml.internal.ws.api.WSService, binding : com.sun.xml.internal.ws.api.WSBinding, jaxbContext : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, next : com.sun.xml.internal.ws.api.pipe.Tube, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<Dynamic>;
+	@:overload @:public @:static public static function createJAXBDispatch(portName : javax.xml.namespace.QName, owner : com.sun.xml.internal.ws.api.WSService, binding : com.sun.xml.internal.ws.api.WSBinding, jaxbContext : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, next : com.sun.xml.internal.ws.api.pipe.Tube, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<Dynamic>;
 	
 	/**
 	* Creates a new JAXB-based {@link Dispatch} stub that connects to the given pipe.
@@ -160,7 +160,7 @@ extern class Stubs
 	*                    See {@link Service#createDispatch(QName, Class, Service.Mode)}.
 	* @param epr         see <a href="#param">common parameters</a>
 	*/
-	@:overload public static function createJAXBDispatch(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, binding : com.sun.xml.internal.ws.api.WSBinding, jaxbContext : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<Dynamic>;
+	@:overload @:public @:static public static function createJAXBDispatch(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, binding : com.sun.xml.internal.ws.api.WSBinding, jaxbContext : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<Dynamic>;
 	
 	/**
 	* Creates a new {@link Message}-based {@link Dispatch} stub that connects to the given pipe.
@@ -177,7 +177,7 @@ extern class Stubs
 	* @param epr
 	*      see <a href="#param">common parameters</a>
 	*/
-	@:overload public static function createMessageDispatch(portName : javax.xml.namespace.QName, owner : com.sun.xml.internal.ws.api.WSService, binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<com.sun.xml.internal.ws.api.message.Message>;
+	@:overload @:public @:static public static function createMessageDispatch(portName : javax.xml.namespace.QName, owner : com.sun.xml.internal.ws.api.WSService, binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<com.sun.xml.internal.ws.api.message.Message>;
 	
 	/**
 	* Creates a new {@link Message}-based {@link Dispatch} stub that connects to the given pipe.
@@ -190,7 +190,7 @@ extern class Stubs
 	* @param epr
 	*      see <a href="#param">common parameters</a>
 	*/
-	@:overload public static function createMessageDispatch(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, binding : com.sun.xml.internal.ws.api.WSBinding, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<com.sun.xml.internal.ws.api.message.Message>;
+	@:overload @:public @:static public static function createMessageDispatch(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, binding : com.sun.xml.internal.ws.api.WSBinding, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<com.sun.xml.internal.ws.api.message.Message>;
 	
 	/**
 	* Creates a new strongly-typed proxy object that implements a given port interface.
@@ -210,7 +210,7 @@ extern class Stubs
 	* @param epr
 	*      see <a href="#param">common parameters</a>
 	*/
-	@:overload public function createPortProxy<T>(service : com.sun.xml.internal.ws.api.WSService, binding : com.sun.xml.internal.ws.api.WSBinding, model : com.sun.xml.internal.ws.api.model.SEIModel, portInterface : Class<T>, next : com.sun.xml.internal.ws.api.pipe.Tube, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : T;
+	@:overload @:public public function createPortProxy<T>(service : com.sun.xml.internal.ws.api.WSService, binding : com.sun.xml.internal.ws.api.WSBinding, model : com.sun.xml.internal.ws.api.model.SEIModel, portInterface : Class<T>, next : com.sun.xml.internal.ws.api.pipe.Tube, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : T;
 	
 	/**
 	* Creates a new strongly-typed proxy object that implements a given port interface.
@@ -228,7 +228,7 @@ extern class Stubs
 	* @param epr
 	*      see <a href="#param">common parameters</a>
 	*/
-	@:overload public function createPortProxy<T>(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, binding : com.sun.xml.internal.ws.api.WSBinding, model : com.sun.xml.internal.ws.api.model.SEIModel, portInterface : Class<T>, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : T;
+	@:overload @:public public function createPortProxy<T>(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, binding : com.sun.xml.internal.ws.api.WSBinding, model : com.sun.xml.internal.ws.api.model.SEIModel, portInterface : Class<T>, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : T;
 	
 	
 }

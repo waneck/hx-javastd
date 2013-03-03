@@ -33,21 +33,21 @@ extern class ImageReadParam extends javax.imageio.IIOParam
 	* <p> <code>ImageReader</code>s that do not support setting of
 	* the source render size may ignore this value.
 	*/
-	private var sourceRenderSize : java.awt.Dimension;
+	@:protected private var sourceRenderSize : java.awt.Dimension;
 	
 	/**
 	* The current destination <code>BufferedImage</code>, or
 	* <code>null</code> if none has been set.  By default, the value
 	* is <code>null</code>.
 	*/
-	private var destination : java.awt.image.BufferedImage;
+	@:protected private var destination : java.awt.image.BufferedImage;
 	
 	/**
 	* The set of destination bands to be used, as an array of
 	* <code>int</code>s.  By default, the value is <code>null</code>,
 	* indicating all destination bands should be written in order.
 	*/
-	private var destinationBands : java.NativeArray<Int>;
+	@:protected private var destinationBands : java.NativeArray<Int>;
 	
 	/**
 	* The minimum index of a progressive pass to read from the
@@ -58,7 +58,7 @@ extern class ImageReadParam extends javax.imageio.IIOParam
 	* <p> Subclasses should ensure that this value is
 	* non-negative.
 	*/
-	private var minProgressivePass : Int;
+	@:protected private var minProgressivePass : Int;
 	
 	/**
 	* The maximum number of progressive passes to read from the
@@ -72,14 +72,14 @@ extern class ImageReadParam extends javax.imageio.IIOParam
 	* numProgressivePasses - 1</code> should not exceed
 	* <code>Integer.MAX_VALUE</code>.
 	*/
-	private var numProgressivePasses : Int;
+	@:protected private var numProgressivePasses : Int;
 	
 	/**
 	* Constructs an <code>ImageReadParam</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function setDestinationType(destinationType : javax.imageio.ImageTypeSpecifier) : Void;
+	@:overload @:public override public function setDestinationType(destinationType : javax.imageio.ImageTypeSpecifier) : Void;
 	
 	/**
 	* Supplies a <code>BufferedImage</code> to be used as the
@@ -108,7 +108,7 @@ extern class ImageReadParam extends javax.imageio.IIOParam
 	*
 	* @see #getDestination
 	*/
-	@:overload public function setDestination(destination : java.awt.image.BufferedImage) : Void;
+	@:overload @:public public function setDestination(destination : java.awt.image.BufferedImage) : Void;
 	
 	/**
 	* Returns the <code>BufferedImage</code> currently set by the
@@ -119,7 +119,7 @@ extern class ImageReadParam extends javax.imageio.IIOParam
 	*
 	* @see #setDestination
 	*/
-	@:overload public function getDestination() : java.awt.image.BufferedImage;
+	@:overload @:public public function getDestination() : java.awt.image.BufferedImage;
 	
 	/**
 	* Sets the indices of the destination bands where data
@@ -154,7 +154,7 @@ extern class ImageReadParam extends javax.imageio.IIOParam
 	* @see #getSourceBands
 	* @see ImageReader#checkReadParamBandSettings
 	*/
-	@:overload public function setDestinationBands(destinationBands : java.NativeArray<Int>) : Void;
+	@:overload @:public public function setDestinationBands(destinationBands : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Returns the set of band indices where data will be placed.
@@ -166,7 +166,7 @@ extern class ImageReadParam extends javax.imageio.IIOParam
 	*
 	* @see #setDestinationBands
 	*/
-	@:overload public function getDestinationBands() : java.NativeArray<Int>;
+	@:overload @:public public function getDestinationBands() : java.NativeArray<Int>;
 	
 	/**
 	* Returns <code>true</code> if this reader allows the source
@@ -182,7 +182,7 @@ extern class ImageReadParam extends javax.imageio.IIOParam
 	*
 	* @see #setSourceRenderSize
 	*/
-	@:overload public function canSetSourceRenderSize() : Bool;
+	@:overload @:public public function canSetSourceRenderSize() : Bool;
 	
 	/**
 	* If the image is able to be rendered at an arbitrary size, sets
@@ -219,7 +219,7 @@ extern class ImageReadParam extends javax.imageio.IIOParam
 	* @see ImageReader#getHeight
 	* @see ImageReader#getAspectRatio
 	*/
-	@:overload public function setSourceRenderSize(size : java.awt.Dimension) : Void;
+	@:overload @:public public function setSourceRenderSize(size : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the width and height of the source image as it
@@ -232,7 +232,7 @@ extern class ImageReadParam extends javax.imageio.IIOParam
 	*
 	* @see #setSourceRenderSize
 	*/
-	@:overload public function getSourceRenderSize() : java.awt.Dimension;
+	@:overload @:public public function getSourceRenderSize() : java.awt.Dimension;
 	
 	/**
 	* Sets the range of progressive passes that will be decoded.
@@ -274,7 +274,7 @@ extern class ImageReadParam extends javax.imageio.IIOParam
 	* @see #getSourceMinProgressivePass
 	* @see #getSourceMaxProgressivePass
 	*/
-	@:overload public function setSourceProgressivePasses(minPass : Int, numPasses : Int) : Void;
+	@:overload @:public public function setSourceProgressivePasses(minPass : Int, numPasses : Int) : Void;
 	
 	/**
 	* Returns the index of the first progressive pass that will be
@@ -286,7 +286,7 @@ extern class ImageReadParam extends javax.imageio.IIOParam
 	* @see #setSourceProgressivePasses
 	* @see #getSourceNumProgressivePasses
 	*/
-	@:overload public function getSourceMinProgressivePass() : Int;
+	@:overload @:public public function getSourceMinProgressivePass() : Int;
 	
 	/**
 	* If <code>getSourceNumProgressivePasses</code> is equal to
@@ -298,7 +298,7 @@ extern class ImageReadParam extends javax.imageio.IIOParam
 	* @return the index of the last pass to be read, or
 	* <code>Integer.MAX_VALUE</code>.
 	*/
-	@:overload public function getSourceMaxProgressivePass() : Int;
+	@:overload @:public public function getSourceMaxProgressivePass() : Int;
 	
 	/**
 	* Returns the number of the progressive passes that will be
@@ -311,7 +311,7 @@ extern class ImageReadParam extends javax.imageio.IIOParam
 	* @see #setSourceProgressivePasses
 	* @see #getSourceMinProgressivePass
 	*/
-	@:overload public function getSourceNumProgressivePasses() : Int;
+	@:overload @:public public function getSourceNumProgressivePasses() : Int;
 	
 	
 }

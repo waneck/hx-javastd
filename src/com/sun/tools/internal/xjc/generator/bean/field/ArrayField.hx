@@ -25,20 +25,20 @@ package com.sun.tools.internal.xjc.generator.bean.field;
 */
 @:internal extern class ArrayField extends com.sun.tools.internal.xjc.generator.bean.field.AbstractListField
 {
-	@:overload @:final private function generateArray() : Void;
+	@:overload @:protected @:final private function generateArray() : Void;
 	
-	@:overload override public function generateAccessors() : Void;
+	@:overload @:public override public function generateAccessors() : Void;
 	
-	@:overload override public function getRawType() : com.sun.codemodel.internal.JType;
+	@:overload @:public override public function getRawType() : com.sun.codemodel.internal.JType;
 	
-	@:overload override private function getCoreListType() : com.sun.codemodel.internal.JClass;
+	@:overload @:protected override private function getCoreListType() : com.sun.codemodel.internal.JClass;
 	
-	@:overload public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.generator.bean.field.AbstractField.AbstractField_Accessor;
+	@:overload @:public override public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.generator.bean.field.AbstractField.AbstractField_Accessor;
 	
 	/**
 	* Case from {@link #exposedType} to array of {@link #implType} .
 	*/
-	@:overload @:final private function castToImplTypeArray(exp : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:protected @:final private function castToImplTypeArray(exp : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	
 }
@@ -64,13 +64,13 @@ package com.sun.tools.internal.xjc.generator.bean.field;
 */
 @:native('com$sun$tools$internal$xjc$generator$bean$field$ArrayField$Accessor') @:internal extern class ArrayField_Accessor extends com.sun.tools.internal.xjc.generator.bean.field.AbstractListField.AbstractListField_Accessor
 {
-	@:overload override private function new($target : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:protected override private function new($target : com.sun.codemodel.internal.JExpression) : Void;
 	
-	@:overload public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
+	@:overload @:public override public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
 	
-	@:overload public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:public override public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
 	
-	@:overload override public function hasSetValue() : com.sun.codemodel.internal.JExpression;
+	@:overload @:public override public function hasSetValue() : com.sun.codemodel.internal.JExpression;
 	
 	
 }

@@ -29,15 +29,15 @@ extern class LocatableAnnotation implements java.lang.reflect.InvocationHandler 
 	* Wraps the annotation into a proxy so that the returned object will also implement
 	* {@link Locatable}.
 	*/
-	@:overload public static function create<A : java.lang.annotation.Annotation>(annotation : A, parentSourcePos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
+	@:overload @:public @:static public static function create<A : java.lang.annotation.Annotation>(annotation : A, parentSourcePos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	
-	@:overload public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
+	@:overload @:public public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
-	@:overload public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
-	@:overload public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

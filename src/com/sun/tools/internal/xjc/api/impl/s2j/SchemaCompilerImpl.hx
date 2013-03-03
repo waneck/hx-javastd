@@ -25,45 +25,45 @@ package com.sun.tools.internal.xjc.api.impl.s2j;
 */
 extern class SchemaCompilerImpl extends com.sun.tools.internal.xjc.ErrorReceiver implements com.sun.tools.internal.xjc.api.SchemaCompiler
 {
-	private var opts(default, null) : com.sun.tools.internal.xjc.Options;
+	@:protected @:final private var opts(default, null) : com.sun.tools.internal.xjc.Options;
 	
-	private var forest : com.sun.tools.internal.xjc.reader.internalizer.DOMForest;
+	@:protected private var forest : com.sun.tools.internal.xjc.reader.internalizer.DOMForest;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getOptions() : com.sun.tools.internal.xjc.Options;
+	@:overload @:public public function getOptions() : com.sun.tools.internal.xjc.Options;
 	
-	@:overload public function getParserHandler(systemId : String) : org.xml.sax.ContentHandler;
+	@:overload @:public public function getParserHandler(systemId : String) : org.xml.sax.ContentHandler;
 	
-	@:overload public function parseSchema(systemId : String, element : org.w3c.dom.Element) : Void;
+	@:overload @:public public function parseSchema(systemId : String, element : org.w3c.dom.Element) : Void;
 	
-	@:overload public function parseSchema(source : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function parseSchema(source : org.xml.sax.InputSource) : Void;
 	
-	@:overload public function setTargetVersion(version : com.sun.tools.internal.xjc.api.SpecVersion) : Void;
+	@:overload @:public public function setTargetVersion(version : com.sun.tools.internal.xjc.api.SpecVersion) : Void;
 	
-	@:overload public function parseSchema(systemId : String, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function parseSchema(systemId : String, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload public function setEntityResolver(entityResolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(entityResolver : org.xml.sax.EntityResolver) : Void;
 	
-	@:overload public function setDefaultPackageName(packageName : String) : Void;
+	@:overload @:public public function setDefaultPackageName(packageName : String) : Void;
 	
-	@:overload public function forcePackageName(packageName : String) : Void;
+	@:overload @:public public function forcePackageName(packageName : String) : Void;
 	
-	@:overload public function setClassNameAllocator(allocator : com.sun.tools.internal.xjc.api.ClassNameAllocator) : Void;
+	@:overload @:public public function setClassNameAllocator(allocator : com.sun.tools.internal.xjc.api.ClassNameAllocator) : Void;
 	
-	@:overload public function resetSchema() : Void;
+	@:overload @:public public function resetSchema() : Void;
 	
-	@:overload public function bind() : com.sun.tools.internal.xjc.api.impl.s2j.JAXBModelImpl;
+	@:overload @:public public function bind() : com.sun.tools.internal.xjc.api.impl.s2j.JAXBModelImpl;
 	
-	@:overload public function setErrorListener(errorListener : com.sun.xml.internal.bind.api.ErrorListener) : Void;
+	@:overload @:public public function setErrorListener(errorListener : com.sun.xml.internal.bind.api.ErrorListener) : Void;
 	
-	@:overload override public function info(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function info(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

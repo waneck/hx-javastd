@@ -47,15 +47,15 @@ extern class EncAPRepPart
 	* <a href="http://www.ietf.org/rfc/rfc4120.txt">
 	* http://www.ietf.org/rfc/rfc4120.txt</a>.
 	*/
-	public var ctime : sun.security.krb5.internal.KerberosTime;
+	@:public public var ctime : sun.security.krb5.internal.KerberosTime;
 	
-	public var cusec : Int;
+	@:public public var cusec : Int;
 	
-	@:overload public function new(new_ctime : sun.security.krb5.internal.KerberosTime, new_cusec : Int, new_subKey : sun.security.krb5.EncryptionKey, new_seqNumber : Null<Int>) : Void;
+	@:overload @:public public function new(new_ctime : sun.security.krb5.internal.KerberosTime, new_cusec : Int, new_subKey : sun.security.krb5.EncryptionKey, new_seqNumber : Null<Int>) : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes an EncAPRepPart object.
@@ -63,11 +63,11 @@ extern class EncAPRepPart
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:final public function getSubKey() : sun.security.krb5.EncryptionKey;
+	@:overload @:public @:final public function getSubKey() : sun.security.krb5.EncryptionKey;
 	
-	@:overload @:final public function getSeqNumber() : Null<Int>;
+	@:overload @:public @:final public function getSeqNumber() : Null<Int>;
 	
 	
 }

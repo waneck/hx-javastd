@@ -34,7 +34,7 @@ extern class MetaDataResolver
 	* @return {@link com.sun.xml.internal.ws.api.wsdl.parser.ServiceDescriptor} resolved from the location. It may be null in the cases when MetadataResolver
 	*         can get the metada associated with the metadata loction.
 	*/
-	@:overload @:abstract public function resolve(location : java.net.URI) : com.sun.xml.internal.ws.api.wsdl.parser.ServiceDescriptor;
+	@:overload @:public @:abstract public function resolve(location : java.net.URI) : com.sun.xml.internal.ws.api.wsdl.parser.ServiceDescriptor;
 	
 	
 }

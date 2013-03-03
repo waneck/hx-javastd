@@ -31,7 +31,7 @@ extern class IDLNameTranslatorImpl implements com.sun.corba.se.spi.presentation.
 	* @throws IllegalStateException if given class is not a valid
 	*         RMI/IIOP Remote Interface
 	*/
-	@:overload public static function get(interf : Class<Dynamic>) : com.sun.corba.se.spi.presentation.rmi.IDLNameTranslator;
+	@:overload @:public @:static public static function get(interf : Class<Dynamic>) : com.sun.corba.se.spi.presentation.rmi.IDLNameTranslator;
 	
 	/**
 	* Return an IDLNameTranslator for the given interfacex.
@@ -39,17 +39,17 @@ extern class IDLNameTranslatorImpl implements com.sun.corba.se.spi.presentation.
 	* @throws IllegalStateException if given classes are not  valid
 	*         RMI/IIOP Remote Interfaces
 	*/
-	@:overload public static function get(interfaces : java.NativeArray<Class<Dynamic>>) : com.sun.corba.se.spi.presentation.rmi.IDLNameTranslator;
+	@:overload @:public @:static public static function get(interfaces : java.NativeArray<Class<Dynamic>>) : com.sun.corba.se.spi.presentation.rmi.IDLNameTranslator;
 	
-	@:overload public static function getExceptionId(cls : Class<Dynamic>) : String;
+	@:overload @:public @:static public static function getExceptionId(cls : Class<Dynamic>) : String;
 	
-	@:overload public function getInterfaces() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getInterfaces() : java.NativeArray<Class<Dynamic>>;
 	
-	@:overload public function getMethods() : java.NativeArray<java.lang.reflect.Method>;
+	@:overload @:public public function getMethods() : java.NativeArray<java.lang.reflect.Method>;
 	
-	@:overload public function getMethod(idlName : String) : java.lang.reflect.Method;
+	@:overload @:public public function getMethod(idlName : String) : java.lang.reflect.Method;
 	
-	@:overload public function getIDLName(method : java.lang.reflect.Method) : String;
+	@:overload @:public public function getIDLName(method : java.lang.reflect.Method) : String;
 	
 	/**
 	* Returns Unicode mangling as defined in Section 1.3.2.4 of
@@ -62,11 +62,11 @@ extern class IDLNameTranslatorImpl implements com.sun.corba.se.spi.presentation.
 	* value.  So, the Java name a$b is mapped to aU0024b and
 	* x\u03bCy is mapped to xU03BCy."
 	*/
-	@:overload public static function charToUnicodeRepresentation(c : java.StdTypes.Char16) : String;
+	@:overload @:public @:static public static function charToUnicodeRepresentation(c : java.StdTypes.Char16) : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }
@@ -76,13 +76,13 @@ extern class IDLNameTranslatorImpl implements com.sun.corba.se.spi.presentation.
 */
 @:native('com$sun$corba$se$impl$presentation$rmi$IDLNameTranslatorImpl$IDLMethodInfo') @:internal extern class IDLNameTranslatorImpl_IDLMethodInfo
 {
-	public var method : java.lang.reflect.Method;
+	@:public public var method : java.lang.reflect.Method;
 	
-	public var isProperty : Bool;
+	@:public public var isProperty : Bool;
 	
-	public var originalName : String;
+	@:public public var originalName : String;
 	
-	public var mangledName : String;
+	@:public public var mangledName : String;
 	
 	
 }

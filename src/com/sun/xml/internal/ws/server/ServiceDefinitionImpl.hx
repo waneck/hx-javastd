@@ -31,13 +31,13 @@ extern class ServiceDefinitionImpl implements com.sun.xml.internal.ws.api.server
 	*      There must be at least one entry.
 	*      The first document is considered {@link #getPrimary() primary}.
 	*/
-	@:overload public function new(docs : java.util.List<com.sun.xml.internal.ws.server.SDDocumentImpl>, primaryWsdl : com.sun.xml.internal.ws.server.SDDocumentImpl) : Void;
+	@:overload @:public public function new(docs : java.util.List<com.sun.xml.internal.ws.server.SDDocumentImpl>, primaryWsdl : com.sun.xml.internal.ws.server.SDDocumentImpl) : Void;
 	
-	@:overload public function getPrimary() : com.sun.xml.internal.ws.api.server.SDDocument;
+	@:overload @:public public function getPrimary() : com.sun.xml.internal.ws.api.server.SDDocument;
 	
-	@:overload public function addFilter(filter : com.sun.xml.internal.ws.api.server.SDDocumentFilter) : Void;
+	@:overload @:public public function addFilter(filter : com.sun.xml.internal.ws.api.server.SDDocumentFilter) : Void;
 	
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.api.server.SDDocument>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.api.server.SDDocument>;
 	
 	/**
 	* Gets the {@link SDDocumentImpl} whose {@link SDDocumentImpl#getURL()}
@@ -46,7 +46,7 @@ extern class ServiceDefinitionImpl implements com.sun.xml.internal.ws.api.server
 	* @return
 	*      null if none is found.
 	*/
-	@:overload public function resolve(systemId : String) : com.sun.xml.internal.ws.api.server.SDDocument;
+	@:overload @:public public function resolve(systemId : String) : com.sun.xml.internal.ws.api.server.SDDocument;
 	
 	
 }

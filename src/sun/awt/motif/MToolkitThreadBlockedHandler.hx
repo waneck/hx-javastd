@@ -25,13 +25,13 @@ package sun.awt.motif;
 */
 @:internal extern class MToolkitThreadBlockedHandler implements sun.awt.datatransfer.ToolkitThreadBlockedHandler
 {
-	@:overload public function lock() : Void;
+	@:overload @:public public function lock() : Void;
 	
-	@:overload public function unlock() : Void;
+	@:overload @:public public function unlock() : Void;
 	
-	@:overload @:native public function enter() : Void;
+	@:overload @:public @:native public function enter() : Void;
 	
-	@:overload @:native public function exit() : Void;
+	@:overload @:public @:native public function exit() : Void;
 	
 	
 }

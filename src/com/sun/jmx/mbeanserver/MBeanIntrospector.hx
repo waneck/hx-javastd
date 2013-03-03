@@ -42,9 +42,9 @@ package com.sun.jmx.mbeanserver;
 /** A visitor that constructs the per-interface MBeanInfo. */
 @:native('com$sun$jmx$mbeanserver$MBeanIntrospector$MBeanInfoMaker') @:internal extern class MBeanIntrospector_MBeanInfoMaker implements com.sun.jmx.mbeanserver.MBeanAnalyzer.MBeanAnalyzer_MBeanVisitor<Dynamic>
 {
-	@:overload public function visitAttribute(attributeName : String, getter : Dynamic, setter : Dynamic) : Void;
+	@:overload @:public public function visitAttribute(attributeName : String, getter : Dynamic, setter : Dynamic) : Void;
 	
-	@:overload public function visitOperation(operationName : String, operation : Dynamic) : Void;
+	@:overload @:public public function visitOperation(operationName : String, operation : Dynamic) : Void;
 	
 	
 }

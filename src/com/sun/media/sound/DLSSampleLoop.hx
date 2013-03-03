@@ -30,27 +30,27 @@ package com.sun.media.sound;
 */
 extern class DLSSampleLoop
 {
-	public static var LOOP_TYPE_FORWARD(default, null) : Int;
+	@:public @:final @:static public static var LOOP_TYPE_FORWARD(default, null) : Int;
 	
-	public static var LOOP_TYPE_RELEASE(default, null) : Int;
+	@:public @:final @:static public static var LOOP_TYPE_RELEASE(default, null) : Int;
 	
-	private var type : haxe.Int64;
+	@:protected private var type : haxe.Int64;
 	
-	private var start : haxe.Int64;
+	@:protected private var start : haxe.Int64;
 	
-	private var length : haxe.Int64;
+	@:protected private var length : haxe.Int64;
 	
-	@:overload public function getLength() : haxe.Int64;
+	@:overload @:public public function getLength() : haxe.Int64;
 	
-	@:overload public function setLength(length : haxe.Int64) : Void;
+	@:overload @:public public function setLength(length : haxe.Int64) : Void;
 	
-	@:overload public function getStart() : haxe.Int64;
+	@:overload @:public public function getStart() : haxe.Int64;
 	
-	@:overload public function setStart(start : haxe.Int64) : Void;
+	@:overload @:public public function setStart(start : haxe.Int64) : Void;
 	
-	@:overload public function getType() : haxe.Int64;
+	@:overload @:public public function getType() : haxe.Int64;
 	
-	@:overload public function setType(type : haxe.Int64) : Void;
+	@:overload @:public public function setType(type : haxe.Int64) : Void;
 	
 	
 }

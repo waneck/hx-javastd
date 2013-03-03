@@ -37,7 +37,7 @@ extern interface XPathVariableResolver
 	*
 	* @throws NullPointerException If <code>variableName</code> is <code>null</code>.
 	*/
-	@:overload public function resolveVariable(variableName : javax.xml.namespace.QName) : Dynamic;
+	@:overload @:public public function resolveVariable(variableName : javax.xml.namespace.QName) : Dynamic;
 	
 	
 }

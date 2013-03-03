@@ -21,29 +21,29 @@ package com.sun.org.apache.xpath.internal.jaxp;
 //// $Id: JAXPExtensionsProvider.java,v 1.1.2.1 2005/08/01 01:30:17 jeffsuttor Exp $
 extern class JAXPExtensionsProvider implements com.sun.org.apache.xpath.internal.ExtensionsProvider
 {
-	@:overload public function new(resolver : javax.xml.xpath.XPathFunctionResolver) : Void;
+	@:overload @:public public function new(resolver : javax.xml.xpath.XPathFunctionResolver) : Void;
 	
-	@:overload public function new(resolver : javax.xml.xpath.XPathFunctionResolver, featureSecureProcessing : Bool) : Void;
+	@:overload @:public public function new(resolver : javax.xml.xpath.XPathFunctionResolver, featureSecureProcessing : Bool) : Void;
 	
 	/**
 	* Is the extension function available?
 	*/
-	@:overload public function functionAvailable(ns : String, funcName : String) : Bool;
+	@:overload @:public public function functionAvailable(ns : String, funcName : String) : Bool;
 	
 	/**
 	* Is the extension element available?
 	*/
-	@:overload public function elementAvailable(ns : String, elemName : String) : Bool;
+	@:overload @:public public function elementAvailable(ns : String, elemName : String) : Bool;
 	
 	/**
 	* Execute the extension function.
 	*/
-	@:overload public function extFunction(ns : String, funcName : String, argVec : java.util.Vector<Dynamic>, methodKey : Dynamic) : Dynamic;
+	@:overload @:public public function extFunction(ns : String, funcName : String, argVec : java.util.Vector<Dynamic>, methodKey : Dynamic) : Dynamic;
 	
 	/**
 	* Execute the extension function.
 	*/
-	@:overload public function extFunction(extFunction : com.sun.org.apache.xpath.internal.functions.FuncExtFunction, argVec : java.util.Vector<Dynamic>) : Dynamic;
+	@:overload @:public public function extFunction(extFunction : com.sun.org.apache.xpath.internal.functions.FuncExtFunction, argVec : java.util.Vector<Dynamic>) : Dynamic;
 	
 	
 }

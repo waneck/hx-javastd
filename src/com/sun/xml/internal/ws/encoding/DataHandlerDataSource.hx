@@ -25,35 +25,35 @@ package com.sun.xml.internal.ws.encoding;
 */
 extern class DataHandlerDataSource implements javax.activation.DataSource
 {
-	@:overload public function new(dh : javax.activation.DataHandler) : Void;
+	@:overload @:public public function new(dh : javax.activation.DataHandler) : Void;
 	
 	/**
 	* Returns an <code>InputStream</code> representing this object.
 	*
 	* @return the <code>InputStream</code>
 	*/
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Returns the <code>OutputStream</code> for this object.
 	*
 	* @return the <code>OutputStream</code>
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Returns the MIME type of the data represented by this object.
 	*
 	* @return the MIME type
 	*/
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
 	/**
 	* Returns the name of this object.
 	*
 	* @return the name of this object
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

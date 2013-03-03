@@ -30,19 +30,19 @@ package com.sun.tools.hat.internal.model;
 */
 extern class JavaObjectRef extends com.sun.tools.hat.internal.model.JavaThing
 {
-	@:overload public function new(id : haxe.Int64) : Void;
+	@:overload @:public public function new(id : haxe.Int64) : Void;
 	
-	@:overload public function getId() : haxe.Int64;
+	@:overload @:public public function getId() : haxe.Int64;
 	
-	@:overload override public function isHeapAllocated() : Bool;
+	@:overload @:public override public function isHeapAllocated() : Bool;
 	
-	@:overload override public function dereference(snapshot : com.sun.tools.hat.internal.model.Snapshot, field : com.sun.tools.hat.internal.model.JavaField) : com.sun.tools.hat.internal.model.JavaThing;
+	@:overload @:public override public function dereference(snapshot : com.sun.tools.hat.internal.model.Snapshot, field : com.sun.tools.hat.internal.model.JavaField) : com.sun.tools.hat.internal.model.JavaThing;
 	
-	@:overload public function dereference(snapshot : com.sun.tools.hat.internal.model.Snapshot, field : com.sun.tools.hat.internal.model.JavaField, verbose : Bool) : com.sun.tools.hat.internal.model.JavaThing;
+	@:overload @:public public function dereference(snapshot : com.sun.tools.hat.internal.model.Snapshot, field : com.sun.tools.hat.internal.model.JavaField, verbose : Bool) : com.sun.tools.hat.internal.model.JavaThing;
 	
-	@:overload override public function getSize() : Int;
+	@:overload @:public override public function getSize() : Int;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

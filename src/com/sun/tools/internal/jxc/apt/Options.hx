@@ -31,17 +31,17 @@ extern class Options
 	*
 	* @author Bhakti Mehta
 	*/
-	public var classpath : String;
+	@:public public var classpath : String;
 	
-	public var targetDir : java.io.File;
+	@:public public var targetDir : java.io.File;
 	
-	public var episodeFile : java.io.File;
+	@:public public var episodeFile : java.io.File;
 	
-	public var encoding : String;
+	@:public public var encoding : String;
 	
-	public var arguments(default, null) : java.util.List<String>;
+	@:public @:final public var arguments(default, null) : java.util.List<String>;
 	
-	@:overload public function parseArguments(args : java.NativeArray<String>) : Void;
+	@:overload @:public public function parseArguments(args : java.NativeArray<String>) : Void;
 	
 	
 }

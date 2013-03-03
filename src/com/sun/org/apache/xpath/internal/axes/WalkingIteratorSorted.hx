@@ -25,7 +25,7 @@ extern class WalkingIteratorSorted extends com.sun.org.apache.xpath.internal.axe
 {
 	/** True if the nodes will be found in document order, and this can
 	* be determined statically. */
-	private var m_inNaturalOrderStatic : Bool;
+	@:protected private var m_inNaturalOrderStatic : Bool;
 	
 	/**
 	* Create a WalkingIteratorSorted object.
@@ -33,7 +33,7 @@ extern class WalkingIteratorSorted extends com.sun.org.apache.xpath.internal.axe
 	* @param nscontext The namespace context for this iterator,
 	* should be OK if null.
 	*/
-	@:overload public function new(nscontext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
+	@:overload @:public public function new(nscontext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
 	
 	/**
 	* Returns true if all the nodes in the iteration well be returned in document
@@ -41,7 +41,7 @@ extern class WalkingIteratorSorted extends com.sun.org.apache.xpath.internal.axe
 	*
 	* @return true as a default.
 	*/
-	@:overload public function isDocOrdered() : Bool;
+	@:overload @:public override public function isDocOrdered() : Bool;
 	
 	/**
 	* This function is used to perform some extra analysis of the iterator.
@@ -53,7 +53,7 @@ extern class WalkingIteratorSorted extends com.sun.org.apache.xpath.internal.axe
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	
 }

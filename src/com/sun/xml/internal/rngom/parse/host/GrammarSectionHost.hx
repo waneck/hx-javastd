@@ -46,15 +46,15 @@ package com.sun.xml.internal.rngom.parse.host;
 */
 extern class GrammarSectionHost extends com.sun.xml.internal.rngom.parse.host.Base implements com.sun.xml.internal.rngom.ast.builder.GrammarSection<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>
 {
-	@:overload public function define(name : String, combine : com.sun.xml.internal.rngom.ast.builder.GrammarSection.GrammarSection_Combine, _pattern : com.sun.xml.internal.rngom.ast.om.ParsedPattern, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload @:public public function define(name : String, combine : com.sun.xml.internal.rngom.ast.builder.GrammarSection.GrammarSection_Combine, _pattern : com.sun.xml.internal.rngom.ast.om.ParsedPattern, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function makeDiv() : com.sun.xml.internal.rngom.ast.builder.Div<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:overload @:public public function makeDiv() : com.sun.xml.internal.rngom.ast.builder.Div<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	
-	@:overload public function makeInclude() : com.sun.xml.internal.rngom.ast.builder.Include<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:overload @:public public function makeInclude() : com.sun.xml.internal.rngom.ast.builder.Include<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	
-	@:overload public function topLevelAnnotation(_ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
+	@:overload @:public public function topLevelAnnotation(_ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
 	
-	@:overload public function topLevelComment(_comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
+	@:overload @:public public function topLevelComment(_comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
 	
 	
 }

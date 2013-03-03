@@ -50,14 +50,14 @@ package java.util;
 	* Constructs a TooManyListenersException with no detail message.
 	* A detail message is a String that describes this particular exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a TooManyListenersException with the specified detail message.
 	* A detail message is a String that describes this particular exception.
 	* @param s the detail message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

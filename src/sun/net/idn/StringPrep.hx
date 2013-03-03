@@ -48,7 +48,7 @@ extern class StringPrep
 	* @see   #prepare
 	* @draft ICU 2.8
 	*/
-	public static var DEFAULT(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT(default, null) : Int;
 	
 	/**
 	* Option to allow processing of unassigned code points in the input
@@ -56,7 +56,7 @@ extern class StringPrep
 	* @see   #prepare
 	* @draft ICU 2.8
 	*/
-	public static var ALLOW_UNASSIGNED(default, null) : Int;
+	@:public @:static @:final public static var ALLOW_UNASSIGNED(default, null) : Int;
 	
 	/**
 	* Creates an StringPrep object after reading the input stream.
@@ -67,7 +67,7 @@ extern class StringPrep
 	* @throws IOException
 	* @draft ICU 2.8
 	*/
-	@:overload public function new(inputStream : java.io.InputStream) : Void;
+	@:overload @:public public function new(inputStream : java.io.InputStream) : Void;
 	
 	/**
 	* Prepare the input buffer for use in applications with the given profile. This operation maps, normalizes(NFKC),
@@ -86,7 +86,7 @@ extern class StringPrep
 	* @throws ParseException
 	* @draft ICU 2.8
 	*/
-	@:overload public function prepare(src : sun.text.normalizer.UCharacterIterator, options : Int) : java.lang.StringBuffer;
+	@:overload @:public public function prepare(src : sun.text.normalizer.UCharacterIterator, options : Int) : java.lang.StringBuffer;
 	
 	
 }
@@ -100,13 +100,13 @@ extern class StringPrep
 	*        the folding offset
 	* @return data offset or 0 if there is no data for the lead surrogate
 	*/
-	@:overload public function getFoldingOffset(value : Int) : Int;
+	@:overload @:public public function getFoldingOffset(value : Int) : Int;
 	
 	
 }
 @:native('sun$net$idn$StringPrep$Values') @:internal extern class StringPrep_Values
 {
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

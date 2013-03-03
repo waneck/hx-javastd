@@ -43,12 +43,12 @@ package com.sun.xml.internal.ws.policy.privateutil;
 	/**
 	* Constructs a new instance with the specified detail string.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructs a new instance that wraps the specified throwable.
 	*/
-	@:overload public function new(throwable : java.lang.Throwable) : Void;
+	@:overload @:public public function new(throwable : java.lang.Throwable) : Void;
 	
 	
 }

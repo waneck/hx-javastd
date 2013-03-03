@@ -25,23 +25,23 @@ package com.sun.xml.internal.ws.model.wsdl;
 */
 extern class WSDLOutputImpl extends com.sun.xml.internal.ws.model.wsdl.AbstractExtensibleImpl implements com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput
 {
-	@:overload public function new(xsr : javax.xml.stream.XMLStreamReader, name : String, messageName : javax.xml.namespace.QName, operation : com.sun.xml.internal.ws.model.wsdl.WSDLOperationImpl) : Void;
+	@:overload @:public public function new(xsr : javax.xml.stream.XMLStreamReader, name : String, messageName : javax.xml.namespace.QName, operation : com.sun.xml.internal.ws.model.wsdl.WSDLOperationImpl) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getMessage() : com.sun.xml.internal.ws.api.model.wsdl.WSDLMessage;
+	@:overload @:public public function getMessage() : com.sun.xml.internal.ws.api.model.wsdl.WSDLMessage;
 	
-	@:overload public function getAction() : String;
+	@:overload @:public public function getAction() : String;
 	
-	@:overload public function isDefaultAction() : Bool;
+	@:overload @:public public function isDefaultAction() : Bool;
 	
-	@:overload public function setDefaultAction(defaultAction : Bool) : Void;
+	@:overload @:public public function setDefaultAction(defaultAction : Bool) : Void;
 	
-	@:overload public function getOperation() : com.sun.xml.internal.ws.api.model.wsdl.WSDLOperation;
+	@:overload @:public public function getOperation() : com.sun.xml.internal.ws.api.model.wsdl.WSDLOperation;
 	
-	@:overload public function getQName() : javax.xml.namespace.QName;
+	@:overload @:public public function getQName() : javax.xml.namespace.QName;
 	
-	@:overload public function setAction(action : String) : Void;
+	@:overload @:public public function setAction(action : String) : Void;
 	
 	
 }

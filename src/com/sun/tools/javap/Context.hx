@@ -33,11 +33,11 @@ extern class Context
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function get<T>(key : Class<T>) : T;
+	@:overload @:public public function get<T>(key : Class<T>) : T;
 	
-	@:overload public function put<T>(key : Class<T>, value : T) : T;
+	@:overload @:public public function put<T>(key : Class<T>, value : T) : T;
 	
 	
 }

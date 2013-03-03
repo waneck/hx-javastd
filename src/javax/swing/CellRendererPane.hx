@@ -58,30 +58,30 @@ extern class CellRendererPane extends java.awt.Container implements javax.access
 	/**
 	* Construct a CellRendererPane object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Overridden to avoid propagating a invalidate up the tree when the
 	* cell renderer child is configured.
 	*/
-	@:overload override public function invalidate() : Void;
+	@:overload @:public override public function invalidate() : Void;
 	
 	/**
 	* Shouldn't be called.
 	*/
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Shouldn't be called.
 	*/
-	@:overload override public function update(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics) : Void;
 	
 	/**
 	* If the specified component is already a child of this then we don't
 	* bother doing anything - stacking order doesn't matter for cell
 	* renderer components (CellRendererPane doesn't paint anyway).<
 	*/
-	@:overload override private function addImpl(x : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload @:protected override private function addImpl(x : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Paint a cell renderer component c on graphics object g.  Before the component
@@ -94,19 +94,19 @@ extern class CellRendererPane extends java.awt.Container implements javax.access
 	* equal to this.getParent(). If shouldValidate is true the component c will be
 	* validated before painted.
 	*/
-	@:overload public function paintComponent(g : java.awt.Graphics, c : java.awt.Component, p : java.awt.Container, x : Int, y : Int, w : Int, h : Int, shouldValidate : Bool) : Void;
+	@:overload @:public public function paintComponent(g : java.awt.Graphics, c : java.awt.Component, p : java.awt.Container, x : Int, y : Int, w : Int, h : Int, shouldValidate : Bool) : Void;
 	
 	/**
 	* Calls this.paintComponent(g, c, p, x, y, w, h, false).
 	*/
-	@:overload public function paintComponent(g : java.awt.Graphics, c : java.awt.Component, p : java.awt.Container, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintComponent(g : java.awt.Graphics, c : java.awt.Component, p : java.awt.Container, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Calls this.paintComponent() with the rectangles x,y,width,height fields.
 	*/
-	@:overload public function paintComponent(g : java.awt.Graphics, c : java.awt.Component, p : java.awt.Container, r : java.awt.Rectangle) : Void;
+	@:overload @:public public function paintComponent(g : java.awt.Graphics, c : java.awt.Component, p : java.awt.Container, r : java.awt.Rectangle) : Void;
 	
-	private var accessibleContext : javax.accessibility.AccessibleContext;
+	@:protected private var accessibleContext : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Gets the AccessibleContext associated with this CellRendererPane.
@@ -117,7 +117,7 @@ extern class CellRendererPane extends java.awt.Container implements javax.access
 	* @return an AccessibleCellRendererPane that serves as the
 	*         AccessibleContext of this CellRendererPane
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -134,7 +134,7 @@ extern class CellRendererPane extends java.awt.Container implements javax.access
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

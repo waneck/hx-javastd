@@ -25,73 +25,73 @@ package com.sun.tools.internal.ws.processor.model;
 */
 extern class Parameter extends com.sun.tools.internal.ws.processor.model.ModelObject
 {
-	@:overload public function new(name : String, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(name : String, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function getEntityName() : String;
+	@:overload @:public public function getEntityName() : String;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(s : String) : Void;
+	@:overload @:public public function setName(s : String) : Void;
 	
-	@:overload public function getJavaParameter() : com.sun.tools.internal.ws.processor.model.java.JavaParameter;
+	@:overload @:public public function getJavaParameter() : com.sun.tools.internal.ws.processor.model.java.JavaParameter;
 	
-	@:overload public function setJavaParameter(p : com.sun.tools.internal.ws.processor.model.java.JavaParameter) : Void;
+	@:overload @:public public function setJavaParameter(p : com.sun.tools.internal.ws.processor.model.java.JavaParameter) : Void;
 	
-	@:overload public function getType() : com.sun.tools.internal.ws.processor.model.AbstractType;
+	@:overload @:public public function getType() : com.sun.tools.internal.ws.processor.model.AbstractType;
 	
-	@:overload public function setType(t : com.sun.tools.internal.ws.processor.model.AbstractType) : Void;
+	@:overload @:public public function setType(t : com.sun.tools.internal.ws.processor.model.AbstractType) : Void;
 	
-	@:overload public function getTypeName() : String;
+	@:overload @:public public function getTypeName() : String;
 	
-	@:overload public function setTypeName(t : String) : Void;
+	@:overload @:public public function setTypeName(t : String) : Void;
 	
-	@:overload public function getBlock() : com.sun.tools.internal.ws.processor.model.Block;
+	@:overload @:public public function getBlock() : com.sun.tools.internal.ws.processor.model.Block;
 	
-	@:overload public function setBlock(d : com.sun.tools.internal.ws.processor.model.Block) : Void;
+	@:overload @:public public function setBlock(d : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
-	@:overload public function getLinkedParameter() : com.sun.tools.internal.ws.processor.model.Parameter;
+	@:overload @:public public function getLinkedParameter() : com.sun.tools.internal.ws.processor.model.Parameter;
 	
-	@:overload public function setLinkedParameter(p : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
+	@:overload @:public public function setLinkedParameter(p : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
 	
-	@:overload public function isEmbedded() : Bool;
+	@:overload @:public public function isEmbedded() : Bool;
 	
-	@:overload public function setEmbedded(b : Bool) : Void;
+	@:overload @:public public function setEmbedded(b : Bool) : Void;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
+	@:overload @:public override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
 	
-	@:overload public function getParameterIndex() : Int;
+	@:overload @:public public function getParameterIndex() : Int;
 	
-	@:overload public function setParameterIndex(parameterOrderPosition : Int) : Void;
+	@:overload @:public public function setParameterIndex(parameterOrderPosition : Int) : Void;
 	
-	@:overload public function isReturn() : Bool;
+	@:overload @:public public function isReturn() : Bool;
 	
 	/**
 	* @return Returns the customName.
 	*/
-	@:overload public function getCustomName() : String;
+	@:overload @:public public function getCustomName() : String;
 	
 	/**
 	* @param customName The customName to set.
 	*/
-	@:overload public function setCustomName(customName : String) : Void;
+	@:overload @:public public function setCustomName(customName : String) : Void;
 	
 	/**
 	* @return Returns the annotations.
 	*/
-	@:overload public function getAnnotations() : java.util.List<String>;
+	@:overload @:public public function getAnnotations() : java.util.List<String>;
 	
 	/**
 	* @param annotations The annotations to set.
 	*/
-	@:overload public function setAnnotations(annotations : java.util.List<String>) : Void;
+	@:overload @:public public function setAnnotations(annotations : java.util.List<String>) : Void;
 	
-	@:overload public function setMode(mode : Mode) : Void;
+	@:overload @:public public function setMode(mode : Mode) : Void;
 	
-	@:overload public function isIN() : Bool;
+	@:overload @:public public function isIN() : Bool;
 	
-	@:overload public function isOUT() : Bool;
+	@:overload @:public public function isOUT() : Bool;
 	
-	@:overload public function isINOUT() : Bool;
+	@:overload @:public public function isINOUT() : Bool;
 	
 	
 }

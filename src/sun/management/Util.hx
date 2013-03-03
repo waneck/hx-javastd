@@ -25,9 +25,9 @@ package sun.management;
 */
 extern class Util
 {
-	@:overload public static function newObjectName(domainAndType : String, name : String) : javax.management.ObjectName;
+	@:overload @:public @:static public static function newObjectName(domainAndType : String, name : String) : javax.management.ObjectName;
 	
-	@:overload public static function newObjectName(name : String) : javax.management.ObjectName;
+	@:overload @:public @:static public static function newObjectName(name : String) : javax.management.ObjectName;
 	
 	
 }

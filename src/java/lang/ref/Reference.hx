@@ -33,7 +33,7 @@ extern class Reference<T>
 	* @return   The object to which this reference refers, or
 	*           <code>null</code> if this reference object has been cleared
 	*/
-	@:overload public function get() : T;
+	@:overload @:public public function get() : T;
 	
 	/**
 	* Clears this reference object.  Invoking this method will not cause this
@@ -42,7 +42,7 @@ extern class Reference<T>
 	* <p> This method is invoked only by Java code; when the garbage collector
 	* clears references it does so directly, without invoking this method.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Tells whether or not this reference object has been enqueued, either by
@@ -53,7 +53,7 @@ extern class Reference<T>
 	* @return   <code>true</code> if and only if this reference object has
 	*           been enqueued
 	*/
-	@:overload public function isEnqueued() : Bool;
+	@:overload @:public public function isEnqueued() : Bool;
 	
 	/**
 	* Adds this reference object to the queue with which it is registered,
@@ -66,7 +66,7 @@ extern class Reference<T>
 	*           enqueued; <code>false</code> if it was already enqueued or if
 	*           it was not registered with a queue when it was created
 	*/
-	@:overload public function enqueue() : Bool;
+	@:overload @:public public function enqueue() : Bool;
 	
 	
 }
@@ -83,7 +83,7 @@ extern class Reference<T>
 */
 @:native('java$lang$ref$Reference$ReferenceHandler') @:internal extern class Reference_ReferenceHandler extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

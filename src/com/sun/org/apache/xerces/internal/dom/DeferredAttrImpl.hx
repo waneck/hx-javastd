@@ -64,13 +64,13 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class DeferredAttrImpl extends com.sun.org.apache.xerces.internal.dom.AttrImpl implements com.sun.org.apache.xerces.internal.dom.DeferredNode
 {
 	/** Node index. */
-	@:transient private var fNodeIndex : Int;
+	@:protected @:transient private var fNodeIndex : Int;
 	
 	/** Returns the node index. */
-	@:overload public function getNodeIndex() : Int;
+	@:overload @:public public function getNodeIndex() : Int;
 	
 	/** Synchronizes the data (name and value) for fast nodes. */
-	@:overload override private function synchronizeData() : Void;
+	@:overload @:protected override private function synchronizeData() : Void;
 	
 	/**
 	* Synchronizes the node's children with the internal structure.
@@ -78,7 +78,7 @@ extern class DeferredAttrImpl extends com.sun.org.apache.xerces.internal.dom.Att
 	* the two structures in sync. The problem gets worse when
 	* editing the tree -- this makes it a lot easier.
 	*/
-	@:overload override private function synchronizeChildren() : Void;
+	@:overload @:protected override private function synchronizeChildren() : Void;
 	
 	
 }

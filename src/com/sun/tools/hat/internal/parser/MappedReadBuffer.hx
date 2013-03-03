@@ -30,17 +30,17 @@ package com.sun.tools.hat.internal.parser;
 */
 @:internal extern class MappedReadBuffer implements com.sun.tools.hat.internal.parser.ReadBuffer
 {
-	@:overload @:synchronized public function get(pos : haxe.Int64, res : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:synchronized public function get(pos : haxe.Int64, res : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:synchronized public function getChar(pos : haxe.Int64) : java.StdTypes.Char16;
+	@:overload @:public @:synchronized public function getChar(pos : haxe.Int64) : java.StdTypes.Char16;
 	
-	@:overload @:synchronized public function getByte(pos : haxe.Int64) : java.StdTypes.Int8;
+	@:overload @:public @:synchronized public function getByte(pos : haxe.Int64) : java.StdTypes.Int8;
 	
-	@:overload @:synchronized public function getShort(pos : haxe.Int64) : java.StdTypes.Int16;
+	@:overload @:public @:synchronized public function getShort(pos : haxe.Int64) : java.StdTypes.Int16;
 	
-	@:overload @:synchronized public function getInt(pos : haxe.Int64) : Int;
+	@:overload @:public @:synchronized public function getInt(pos : haxe.Int64) : Int;
 	
-	@:overload @:synchronized public function getLong(pos : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:synchronized public function getLong(pos : haxe.Int64) : haxe.Int64;
 	
 	
 }

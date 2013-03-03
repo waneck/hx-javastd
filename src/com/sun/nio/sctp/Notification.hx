@@ -41,7 +41,7 @@ package com.sun.nio.sctp;
 	/**
 	* Returns the association that this notification is applicable to.
 	*/
-	@:overload public function association() : com.sun.nio.sctp.Association;
+	@:overload @:public public function association() : com.sun.nio.sctp.Association;
 	
 	
 }

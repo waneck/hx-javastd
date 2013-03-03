@@ -23,20 +23,20 @@ package com.sun.org.apache.xml.internal.dtm.ref;
 */
 extern class CustomStringPool extends com.sun.org.apache.xml.internal.dtm.ref.DTMStringPool
 {
-	public static var NULL(default, null) : Int;
+	@:public @:static @:final public static var NULL(default, null) : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function removeAllElements() : Void;
+	@:overload @:public override public function removeAllElements() : Void;
 	
 	/** @return string whose value is uniquely identified by this integer index.
 	* @throws java.lang.ArrayIndexOutOfBoundsException
 	*  if index doesn't map to a string.
 	* */
-	@:overload override public function indexToString(i : Int) : String;
+	@:overload @:public override public function indexToString(i : Int) : String;
 	
 	/** @return integer index uniquely identifying the value of this string. */
-	@:overload override public function stringToIndex(s : String) : Int;
+	@:overload @:public override public function stringToIndex(s : String) : Int;
 	
 	
 }

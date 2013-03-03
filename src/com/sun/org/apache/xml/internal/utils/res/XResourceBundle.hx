@@ -24,7 +24,7 @@ package com.sun.org.apache.xml.internal.utils.res;
 extern class XResourceBundle extends java.util.ListResourceBundle
 {
 	/** Error resource constants */
-	public static var ERROR_RESOURCES(default, null) : String;
+	@:public @:static @:final public static var ERROR_RESOURCES(default, null) : String;
 	
 	/**
 	* Return a named ResourceBundle for a particular locale.  This method mimics the behavior
@@ -33,14 +33,14 @@ extern class XResourceBundle extends java.util.ListResourceBundle
 	* @param className Name of local-specific subclass.
 	* @param locale the locale to prefer when searching for the bundle
 	*/
-	@:overload @:final public static function loadResourceBundle(className : String, locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.res.XResourceBundle;
+	@:overload @:public @:static @:final public static function loadResourceBundle(className : String, locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.res.XResourceBundle;
 	
 	/**
 	* Get the association list.
 	*
 	* @return The association list.
 	*/
-	@:overload override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:public override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

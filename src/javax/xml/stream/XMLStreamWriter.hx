@@ -34,7 +34,7 @@ extern interface XMLStreamWriter
 	* @param localName local name of the tag, may not be null
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeStartElement(localName : String) : Void;
+	@:overload @:public public function writeStartElement(localName : String) : Void;
 	
 	/**
 	* Writes a start tag to the output
@@ -43,7 +43,7 @@ extern interface XMLStreamWriter
 	* @throws XMLStreamException if the namespace URI has not been bound to a prefix and
 	* javax.xml.stream.isRepairingNamespaces has not been set to true
 	*/
-	@:overload public function writeStartElement(namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function writeStartElement(namespaceURI : String, localName : String) : Void;
 	
 	/**
 	* Writes a start tag to the output
@@ -52,7 +52,7 @@ extern interface XMLStreamWriter
 	* @param namespaceURI the uri to bind the prefix to, may not be null
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeStartElement(prefix : String, localName : String, namespaceURI : String) : Void;
+	@:overload @:public public function writeStartElement(prefix : String, localName : String, namespaceURI : String) : Void;
 	
 	/**
 	* Writes an empty element tag to the output
@@ -61,7 +61,7 @@ extern interface XMLStreamWriter
 	* @throws XMLStreamException if the namespace URI has not been bound to a prefix and
 	* javax.xml.stream.isRepairingNamespaces has not been set to true
 	*/
-	@:overload public function writeEmptyElement(namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function writeEmptyElement(namespaceURI : String, localName : String) : Void;
 	
 	/**
 	* Writes an empty element tag to the output
@@ -70,14 +70,14 @@ extern interface XMLStreamWriter
 	* @param namespaceURI the uri to bind the tag to, may not be null
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeEmptyElement(prefix : String, localName : String, namespaceURI : String) : Void;
+	@:overload @:public public function writeEmptyElement(prefix : String, localName : String, namespaceURI : String) : Void;
 	
 	/**
 	* Writes an empty element tag to the output
 	* @param localName local name of the tag, may not be null
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeEmptyElement(localName : String) : Void;
+	@:overload @:public public function writeEmptyElement(localName : String) : Void;
 	
 	/**
 	* Writes an end tag to the output relying on the internal
@@ -85,26 +85,26 @@ extern interface XMLStreamWriter
 	* of the event.
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeEndElement() : Void;
+	@:overload @:public public function writeEndElement() : Void;
 	
 	/**
 	* Closes any start tags and writes corresponding end tags.
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeEndDocument() : Void;
+	@:overload @:public public function writeEndDocument() : Void;
 	
 	/**
 	* Close this writer and free any resources associated with the
 	* writer.  This must not close the underlying output stream.
 	* @throws XMLStreamException
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Write any cached data to the underlying output mechanism.
 	* @throws XMLStreamException
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* Writes an attribute to the output stream without
@@ -114,7 +114,7 @@ extern interface XMLStreamWriter
 	* @throws IllegalStateException if the current state does not allow Attribute writing
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeAttribute(localName : String, value : String) : Void;
+	@:overload @:public public function writeAttribute(localName : String, value : String) : Void;
 	
 	/**
 	* Writes an attribute to the output stream
@@ -126,7 +126,7 @@ extern interface XMLStreamWriter
 	* @throws XMLStreamException if the namespace URI has not been bound to a prefix and
 	* javax.xml.stream.isRepairingNamespaces has not been set to true
 	*/
-	@:overload public function writeAttribute(prefix : String, namespaceURI : String, localName : String, value : String) : Void;
+	@:overload @:public public function writeAttribute(prefix : String, namespaceURI : String, localName : String, value : String) : Void;
 	
 	/**
 	* Writes an attribute to the output stream
@@ -137,7 +137,7 @@ extern interface XMLStreamWriter
 	* @throws XMLStreamException if the namespace URI has not been bound to a prefix and
 	* javax.xml.stream.isRepairingNamespaces has not been set to true
 	*/
-	@:overload public function writeAttribute(namespaceURI : String, localName : String, value : String) : Void;
+	@:overload @:public public function writeAttribute(namespaceURI : String, localName : String, value : String) : Void;
 	
 	/**
 	* Writes a namespace to the output stream
@@ -149,7 +149,7 @@ extern interface XMLStreamWriter
 	* @throws IllegalStateException if the current state does not allow Namespace writing
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeNamespace(prefix : String, namespaceURI : String) : Void;
+	@:overload @:public public function writeNamespace(prefix : String, namespaceURI : String) : Void;
 	
 	/**
 	* Writes the default namespace to the stream
@@ -157,21 +157,21 @@ extern interface XMLStreamWriter
 	* @throws IllegalStateException if the current state does not allow Namespace writing
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeDefaultNamespace(namespaceURI : String) : Void;
+	@:overload @:public public function writeDefaultNamespace(namespaceURI : String) : Void;
 	
 	/**
 	* Writes an xml comment with the data enclosed
 	* @param data the data contained in the comment, may be null
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeComment(data : String) : Void;
+	@:overload @:public public function writeComment(data : String) : Void;
 	
 	/**
 	* Writes a processing instruction
 	* @param target the target of the processing instruction, may not be null
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeProcessingInstruction(target : String) : Void;
+	@:overload @:public public function writeProcessingInstruction(target : String) : Void;
 	
 	/**
 	* Writes a processing instruction
@@ -179,14 +179,14 @@ extern interface XMLStreamWriter
 	* @param data the data contained in the processing instruction, may not be null
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeProcessingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function writeProcessingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* Writes a CData section
 	* @param data the data contained in the CData Section, may not be null
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeCData(data : String) : Void;
+	@:overload @:public public function writeCData(data : String) : Void;
 	
 	/**
 	* Write a DTD section.  This string represents the entire doctypedecl production
@@ -195,27 +195,27 @@ extern interface XMLStreamWriter
 	* @param dtd the DTD to be written
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeDTD(dtd : String) : Void;
+	@:overload @:public public function writeDTD(dtd : String) : Void;
 	
 	/**
 	* Writes an entity reference
 	* @param name the name of the entity
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeEntityRef(name : String) : Void;
+	@:overload @:public public function writeEntityRef(name : String) : Void;
 	
 	/**
 	* Write the XML Declaration. Defaults the XML version to 1.0, and the encoding to utf-8
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeStartDocument() : Void;
+	@:overload @:public public function writeStartDocument() : Void;
 	
 	/**
 	* Write the XML Declaration. Defaults the XML version to 1.0
 	* @param version version of the xml document
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeStartDocument(version : String) : Void;
+	@:overload @:public public function writeStartDocument(version : String) : Void;
 	
 	/**
 	* Write the XML Declaration.  Note that the encoding parameter does
@@ -227,14 +227,14 @@ extern interface XMLStreamWriter
 	* @throws XMLStreamException If given encoding does not match encoding
 	* of the underlying stream
 	*/
-	@:overload public function writeStartDocument(encoding : String, version : String) : Void;
+	@:overload @:public public function writeStartDocument(encoding : String, version : String) : Void;
 	
 	/**
 	* Write text to the output
 	* @param text the value to write
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeCharacters(text : String) : Void;
+	@:overload @:public public function writeCharacters(text : String) : Void;
 	
 	/**
 	* Write text to the output
@@ -243,14 +243,14 @@ extern interface XMLStreamWriter
 	* @param len the number of characters to write
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeCharacters(text : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload @:public public function writeCharacters(text : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
 	/**
 	* Gets the prefix the uri is bound to
 	* @return the prefix or null
 	* @throws XMLStreamException
 	*/
-	@:overload public function getPrefix(uri : String) : String;
+	@:overload @:public public function getPrefix(uri : String) : String;
 	
 	/**
 	* Sets the prefix the uri is bound to.  This prefix is bound
@@ -261,7 +261,7 @@ extern interface XMLStreamWriter
 	* @param uri the uri to bind to the prefix, may be null
 	* @throws XMLStreamException
 	*/
-	@:overload public function setPrefix(prefix : String, uri : String) : Void;
+	@:overload @:public public function setPrefix(prefix : String, uri : String) : Void;
 	
 	/**
 	* Binds a URI to the default namespace
@@ -272,7 +272,7 @@ extern interface XMLStreamWriter
 	* @param uri the uri to bind to the default namespace, may be null
 	* @throws XMLStreamException
 	*/
-	@:overload public function setDefaultNamespace(uri : String) : Void;
+	@:overload @:public public function setDefaultNamespace(uri : String) : Void;
 	
 	/**
 	* Sets the current namespace context for prefix and uri bindings.
@@ -288,13 +288,13 @@ extern interface XMLStreamWriter
 	* @param context the namespace context to use for this writer, may not be null
 	* @throws XMLStreamException
 	*/
-	@:overload public function setNamespaceContext(context : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public public function setNamespaceContext(context : javax.xml.namespace.NamespaceContext) : Void;
 	
 	/**
 	* Returns the current namespace context.
 	* @return the current NamespaceContext
 	*/
-	@:overload public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
 	
 	/**
 	* Get the value of a feature/property from the underlying implementation
@@ -303,7 +303,7 @@ extern interface XMLStreamWriter
 	* @throws IllegalArgumentException if the property is not supported
 	* @throws NullPointerException if the name is null
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	
 }

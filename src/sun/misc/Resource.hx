@@ -28,53 +28,53 @@ extern class Resource
 	/**
 	* Returns the name of the Resource.
 	*/
-	@:overload @:abstract public function getName() : String;
+	@:overload @:public @:abstract public function getName() : String;
 	
 	/**
 	* Returns the URL of the Resource.
 	*/
-	@:overload @:abstract public function getURL() : java.net.URL;
+	@:overload @:public @:abstract public function getURL() : java.net.URL;
 	
 	/**
 	* Returns the CodeSource URL for the Resource.
 	*/
-	@:overload @:abstract public function getCodeSourceURL() : java.net.URL;
+	@:overload @:public @:abstract public function getCodeSourceURL() : java.net.URL;
 	
 	/**
 	* Returns an InputStream for reading the Resource data.
 	*/
-	@:overload @:abstract public function getInputStream() : java.io.InputStream;
+	@:overload @:public @:abstract public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Returns the length of the Resource data, or -1 if unknown.
 	*/
-	@:overload @:abstract public function getContentLength() : Int;
+	@:overload @:public @:abstract public function getContentLength() : Int;
 	
 	/**
 	* Returns the Resource data as an array of bytes.
 	*/
-	@:overload public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the Resource data as a ByteBuffer, but only if the input stream
 	* was implemented on top of a ByteBuffer. Return <tt>null</tt> otherwise.
 	*/
-	@:overload public function getByteBuffer() : java.nio.ByteBuffer;
+	@:overload @:public public function getByteBuffer() : java.nio.ByteBuffer;
 	
 	/**
 	* Returns the Manifest for the Resource, or null if none.
 	*/
-	@:overload public function getManifest() : java.util.jar.Manifest;
+	@:overload @:public public function getManifest() : java.util.jar.Manifest;
 	
 	/**
 	* Returns theCertificates for the Resource, or null if none.
 	*/
-	@:overload public function getCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public public function getCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the code signers for the Resource, or null if none.
 	*/
-	@:overload public function getCodeSigners() : java.NativeArray<java.security.CodeSigner>;
+	@:overload @:public public function getCodeSigners() : java.NativeArray<java.security.CodeSigner>;
 	
 	
 }

@@ -36,7 +36,7 @@ extern class ServiceLoader<S> implements java.lang.Iterable<S>
 	* <p> This method is intended for use in situations in which new providers
 	* can be installed into a running Java virtual machine.
 	*/
-	@:overload public function reload() : Void;
+	@:overload @:public public function reload() : Void;
 	
 	/**
 	* Lazily loads the available providers of this loader's service.
@@ -78,7 +78,7 @@ extern class ServiceLoader<S> implements java.lang.Iterable<S>
 	* @return  An iterator that lazily loads providers for this loader's
 	*          service
 	*/
-	@:overload public function iterator() : java.util.Iterator<S>;
+	@:overload @:public public function iterator() : java.util.Iterator<S>;
 	
 	/**
 	* Creates a new service loader for the given service type and class
@@ -95,7 +95,7 @@ extern class ServiceLoader<S> implements java.lang.Iterable<S>
 	*
 	* @return A new service loader
 	*/
-	@:overload public static function load<S>(service : Class<S>, loader : java.lang.ClassLoader) : java.util.ServiceLoader<S>;
+	@:overload @:public @:static public static function load<S>(service : Class<S>, loader : java.lang.ClassLoader) : java.util.ServiceLoader<S>;
 	
 	/**
 	* Creates a new service loader for the given service type, using the
@@ -118,7 +118,7 @@ extern class ServiceLoader<S> implements java.lang.Iterable<S>
 	*
 	* @return A new service loader
 	*/
-	@:overload public static function load<S>(service : Class<S>) : java.util.ServiceLoader<S>;
+	@:overload @:public @:static public static function load<S>(service : Class<S>) : java.util.ServiceLoader<S>;
 	
 	/**
 	* Creates a new service loader for the given service type, using the
@@ -144,24 +144,24 @@ extern class ServiceLoader<S> implements java.lang.Iterable<S>
 	*
 	* @return A new service loader
 	*/
-	@:overload public static function loadInstalled<S>(service : Class<S>) : java.util.ServiceLoader<S>;
+	@:overload @:public @:static public static function loadInstalled<S>(service : Class<S>) : java.util.ServiceLoader<S>;
 	
 	/**
 	* Returns a string describing this service.
 	*
 	* @return  A descriptive string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('java$util$ServiceLoader$LazyIterator') @:internal extern class ServiceLoader_LazyIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

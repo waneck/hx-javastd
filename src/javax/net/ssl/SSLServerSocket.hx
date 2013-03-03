@@ -59,7 +59,7 @@ package javax.net.ssl;
 	*
 	* @throws IOException if an I/O error occurs when creating the socket
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Used only by subclasses.
@@ -85,7 +85,7 @@ package javax.net.ssl;
 	*         65535, inclusive.
 	* @see    SecurityManager#checkListen
 	*/
-	@:overload private function new(port : Int) : Void;
+	@:overload @:protected private function new(port : Int) : Void;
 	
 	/**
 	* Used only by subclasses.
@@ -118,7 +118,7 @@ package javax.net.ssl;
 	*         65535, inclusive.
 	* @see    SecurityManager#checkListen
 	*/
-	@:overload private function new(port : Int, backlog : Int) : Void;
+	@:overload @:protected private function new(port : Int, backlog : Int) : Void;
 	
 	/**
 	* Used only by subclasses.
@@ -160,7 +160,7 @@ package javax.net.ssl;
 	*         65535, inclusive.
 	* @see    SecurityManager#checkListen
 	*/
-	@:overload private function new(port : Int, backlog : Int, address : java.net.InetAddress) : Void;
+	@:overload @:protected private function new(port : Int, backlog : Int, address : java.net.InetAddress) : Void;
 	
 	/**
 	* Returns the list of cipher suites which are currently enabled
@@ -181,7 +181,7 @@ package javax.net.ssl;
 	* @see #getSupportedCipherSuites()
 	* @see #setEnabledCipherSuites(String [])
 	*/
-	@:overload @:abstract public function getEnabledCipherSuites() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getEnabledCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Sets the cipher suites enabled for use by accepted connections.
@@ -205,7 +205,7 @@ package javax.net.ssl;
 	* @see #getSupportedCipherSuites()
 	* @see #getEnabledCipherSuites()
 	*/
-	@:overload @:abstract public function setEnabledCipherSuites(suites : java.NativeArray<String>) : Void;
+	@:overload @:public @:abstract public function setEnabledCipherSuites(suites : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns the names of the cipher suites which could be enabled for use
@@ -220,7 +220,7 @@ package javax.net.ssl;
 	* @see #getEnabledCipherSuites()
 	* @see #setEnabledCipherSuites(String [])
 	*/
-	@:overload @:abstract public function getSupportedCipherSuites() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getSupportedCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Returns the names of the protocols which could be enabled for use.
@@ -229,7 +229,7 @@ package javax.net.ssl;
 	* @see #getEnabledProtocols()
 	* @see #setEnabledProtocols(String [])
 	*/
-	@:overload @:abstract public function getSupportedProtocols() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getSupportedProtocols() : java.NativeArray<String>;
 	
 	/**
 	* Returns the names of the protocols which are currently
@@ -239,7 +239,7 @@ package javax.net.ssl;
 	* @see #getSupportedProtocols()
 	* @see #setEnabledProtocols(String [])
 	*/
-	@:overload @:abstract public function getEnabledProtocols() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getEnabledProtocols() : java.NativeArray<String>;
 	
 	/**
 	* Controls which particular protocols are enabled for use by
@@ -260,7 +260,7 @@ package javax.net.ssl;
 	* @see #getEnabledProtocols()
 	* @see #getSupportedProtocols()
 	*/
-	@:overload @:abstract public function setEnabledProtocols(protocols : java.NativeArray<String>) : Void;
+	@:overload @:public @:abstract public function setEnabledProtocols(protocols : java.NativeArray<String>) : Void;
 	
 	/**
 	* Controls whether <code>accept</code>ed server-mode
@@ -293,7 +293,7 @@ package javax.net.ssl;
 	* @see #getWantClientAuth()
 	* @see #setUseClientMode(boolean)
 	*/
-	@:overload @:abstract public function setNeedClientAuth(need : Bool) : Void;
+	@:overload @:public @:abstract public function setNeedClientAuth(need : Bool) : Void;
 	
 	/**
 	* Returns true if client authentication will be <i>required</i> on
@@ -310,7 +310,7 @@ package javax.net.ssl;
 	* @see #getWantClientAuth()
 	* @see #setUseClientMode(boolean)
 	*/
-	@:overload @:abstract public function getNeedClientAuth() : Bool;
+	@:overload @:public @:abstract public function getNeedClientAuth() : Bool;
 	
 	/**
 	* Controls whether <code>accept</code>ed server-mode
@@ -343,7 +343,7 @@ package javax.net.ssl;
 	* @see #getNeedClientAuth()
 	* @see #setUseClientMode(boolean)
 	*/
-	@:overload @:abstract public function setWantClientAuth(want : Bool) : Void;
+	@:overload @:public @:abstract public function setWantClientAuth(want : Bool) : Void;
 	
 	/**
 	* Returns true if client authentication will be <i>requested</i> on
@@ -360,7 +360,7 @@ package javax.net.ssl;
 	* @see #getNeedClientAuth()
 	* @see #setUseClientMode(boolean)
 	*/
-	@:overload @:abstract public function getWantClientAuth() : Bool;
+	@:overload @:public @:abstract public function getWantClientAuth() : Bool;
 	
 	/**
 	* Controls whether accepted connections are in the (default) SSL
@@ -386,7 +386,7 @@ package javax.net.ssl;
 	*          client mode.
 	* @see #getUseClientMode()
 	*/
-	@:overload @:abstract public function setUseClientMode(mode : Bool) : Void;
+	@:overload @:public @:abstract public function setUseClientMode(mode : Bool) : Void;
 	
 	/**
 	* Returns true if accepted connections will be in SSL client mode.
@@ -394,7 +394,7 @@ package javax.net.ssl;
 	* @see #setUseClientMode(boolean)
 	* @return true if the connection should use SSL client mode.
 	*/
-	@:overload @:abstract public function getUseClientMode() : Bool;
+	@:overload @:public @:abstract public function getUseClientMode() : Bool;
 	
 	/**
 	* Controls whether new SSL sessions may be established by the
@@ -408,7 +408,7 @@ package javax.net.ssl;
 	*          must be resumed.
 	* @see #getEnableSessionCreation()
 	*/
-	@:overload @:abstract public function setEnableSessionCreation(flag : Bool) : Void;
+	@:overload @:public @:abstract public function setEnableSessionCreation(flag : Bool) : Void;
 	
 	/**
 	* Returns true if new SSL sessions may be established by the
@@ -419,7 +419,7 @@ package javax.net.ssl;
 	*          session must be resumed
 	* @see #setEnableSessionCreation(boolean)
 	*/
-	@:overload @:abstract public function getEnableSessionCreation() : Bool;
+	@:overload @:public @:abstract public function getEnableSessionCreation() : Bool;
 	
 	/**
 	* Returns the SSLParameters in effect for newly accepted connections.
@@ -432,7 +432,7 @@ package javax.net.ssl;
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getSSLParameters() : javax.net.ssl.SSLParameters;
+	@:require(java7) @:overload @:public public function getSSLParameters() : javax.net.ssl.SSLParameters;
 	
 	/**
 	* Applies SSLParameters to newly accepted connections.
@@ -458,7 +458,7 @@ package javax.net.ssl;
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function setSSLParameters(params : javax.net.ssl.SSLParameters) : Void;
+	@:require(java7) @:overload @:public public function setSSLParameters(params : javax.net.ssl.SSLParameters) : Void;
 	
 	
 }

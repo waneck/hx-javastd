@@ -35,23 +35,23 @@ package javax.management;
 	/**
 	* Basic Constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new MatchQueryExp where the specified AttributeValueExp matches
 	* the specified pattern StringValueExp.
 	*/
-	@:overload public function new(a : javax.management.AttributeValueExp, s : javax.management.StringValueExp) : Void;
+	@:overload @:public public function new(a : javax.management.AttributeValueExp, s : javax.management.StringValueExp) : Void;
 	
 	/**
 	* Returns the attribute of the query.
 	*/
-	@:overload public function getAttribute() : javax.management.AttributeValueExp;
+	@:overload @:public public function getAttribute() : javax.management.AttributeValueExp;
 	
 	/**
 	* Returns the pattern of the query.
 	*/
-	@:overload public function getPattern() : String;
+	@:overload @:public public function getPattern() : String;
 	
 	/**
 	* Applies the MatchQueryExp on a MBean.
@@ -65,12 +65,12 @@ package javax.management;
 	* @exception BadAttributeValueExpException
 	* @exception InvalidApplicationException
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function apply(name : javax.management.ObjectName) : Bool;
 	
 	/**
 	* Returns the string representing the object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -36,7 +36,7 @@ extern class DescriptorSupport implements javax.management.Descriptor
 	* Note that the created empty descriptor is not a valid descriptor
 	* (the method {@link #isValid isValid} returns <CODE>false</CODE>)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Descriptor constructor.  Takes as parameter the initial
@@ -52,7 +52,7 @@ extern class DescriptorSupport implements javax.management.Descriptor
 	* initNumFields (&lt;= 0)
 	* @exception MBeanException Wraps a distributed communication Exception.
 	*/
-	@:overload public function new(initNumFields : Int) : Void;
+	@:overload @:public public function new(initNumFields : Int) : Void;
 	
 	/**
 	* Descriptor constructor taking a Descriptor as parameter.
@@ -63,14 +63,14 @@ extern class DescriptorSupport implements javax.management.Descriptor
 	* constructed descriptor. If it is null or contains no descriptor
 	* fields, an empty Descriptor will be created.
 	*/
-	@:overload public function new(inDescr : javax.management.modelmbean.DescriptorSupport) : Void;
+	@:overload @:public public function new(inDescr : javax.management.modelmbean.DescriptorSupport) : Void;
 	
 	/* At some stage we should rewrite this code to be cleverer.  Using
 	a StringTokenizer as we do means, first, that we accept a lot of
 	bogus strings without noticing they are bogus, and second, that we
 	split the string being parsed at characters like > even if they
 	occur in the middle of a field value. */
-	@:overload public function new(inStr : String) : Void;
+	@:overload @:public public function new(inStr : String) : Void;
 	
 	/**
 	* Constructor taking field names and field values.  Neither array
@@ -93,7 +93,7 @@ extern class DescriptorSupport implements javax.management.Descriptor
 	* exception will be thrown.
 	*
 	*/
-	@:overload public function new(fieldNames : java.NativeArray<String>, fieldValues : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(fieldNames : java.NativeArray<String>, fieldValues : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Constructor taking fields in the <i>fieldName=fieldValue</i>
@@ -122,19 +122,19 @@ extern class DescriptorSupport implements javax.management.Descriptor
 	* this exception will be thrown.
 	*
 	*/
-	@:overload public function new(fields : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(fields : java.NativeArray<String>) : Void;
 	
-	@:overload @:synchronized public function getFieldValue(fieldName : String) : Dynamic;
+	@:overload @:public @:synchronized public function getFieldValue(fieldName : String) : Dynamic;
 	
-	@:overload @:synchronized public function setField(fieldName : String, fieldValue : Dynamic) : Void;
+	@:overload @:public @:synchronized public function setField(fieldName : String, fieldValue : Dynamic) : Void;
 	
-	@:overload @:synchronized public function getFields() : java.NativeArray<String>;
+	@:overload @:public @:synchronized public function getFields() : java.NativeArray<String>;
 	
-	@:overload @:synchronized public function getFieldNames() : java.NativeArray<String>;
+	@:overload @:public @:synchronized public function getFieldNames() : java.NativeArray<String>;
 	
-	@:overload @:synchronized public function getFieldValues(fieldNames : java.NativeArray<String>) : java.NativeArray<Dynamic>;
+	@:overload @:public @:synchronized public function getFieldValues(fieldNames : java.NativeArray<String>) : java.NativeArray<Dynamic>;
 	
-	@:overload @:synchronized public function setFields(fieldNames : java.NativeArray<String>, fieldValues : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public @:synchronized public function setFields(fieldNames : java.NativeArray<String>, fieldValues : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Returns a new Descriptor which is a duplicate of the Descriptor.
@@ -143,9 +143,9 @@ extern class DescriptorSupport implements javax.management.Descriptor
 	* field Names or field Values.  If the descriptor construction
 	* fails for any reason, this exception will be thrown.
 	*/
-	@:overload @:synchronized public function clone() : Dynamic;
+	@:overload @:public @:synchronized public function clone() : Dynamic;
 	
-	@:overload @:synchronized public function removeField(fieldName : String) : Void;
+	@:overload @:public @:synchronized public function removeField(fieldName : String) : Void;
 	
 	/**
 	* Compares this descriptor to the given object.  The objects are equal if
@@ -170,7 +170,7 @@ extern class DescriptorSupport implements javax.management.Descriptor
 	* otherwise.
 	*
 	*/
-	@:overload @:synchronized public function equals(o : Dynamic) : Bool;
+	@:overload @:public @:synchronized public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* <p>Returns the hash code value for this descriptor.  The hash
@@ -192,7 +192,7 @@ extern class DescriptorSupport implements javax.management.Descriptor
 	* @return A hash code value for this object.
 	*
 	*/
-	@:overload @:synchronized public function hashCode() : Int;
+	@:overload @:public @:synchronized public function hashCode() : Int;
 	
 	/**
 	* Returns true if all of the fields have legal values given their
@@ -228,7 +228,7 @@ extern class DescriptorSupport implements javax.management.Descriptor
 	* @exception RuntimeOperationsException If the validity checking
 	* fails for any reason, this exception will be thrown.
 	*/
-	@:overload @:synchronized public function isValid() : Bool;
+	@:overload @:public @:synchronized public function isValid() : Bool;
 	
 	/**
 	* <p>Returns an XML String representing the descriptor.</p>
@@ -257,7 +257,7 @@ extern class DescriptorSupport implements javax.management.Descriptor
 	* construction fails for any reason, this exception will be
 	* thrown.
 	*/
-	@:overload @:synchronized public function toXMLString() : String;
+	@:overload @:public @:synchronized public function toXMLString() : String;
 	
 	/**
 	* Returns <pv>a human readable string representing the
@@ -275,7 +275,7 @@ extern class DescriptorSupport implements javax.management.Descriptor
 	* field Names or field Values.  If the descriptor string fails
 	* for any reason, this exception will be thrown.
 	*/
-	@:overload @:synchronized public function toString() : String;
+	@:overload @:public @:synchronized public function toString() : String;
 	
 	
 }

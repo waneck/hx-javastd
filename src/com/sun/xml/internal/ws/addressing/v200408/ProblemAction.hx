@@ -26,15 +26,15 @@ package com.sun.xml.internal.ws.addressing.v200408;
 extern class ProblemAction
 {
 	/** Creates a new instance of ProblemAction */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(action : String) : Void;
+	@:overload @:public public function new(action : String) : Void;
 	
-	@:overload public function new(action : String, soapAction : String) : Void;
+	@:overload @:public public function new(action : String, soapAction : String) : Void;
 	
-	@:overload public function getAction() : String;
+	@:overload @:public public function getAction() : String;
 	
-	@:overload public function getSoapAction() : String;
+	@:overload @:public public function getSoapAction() : String;
 	
 	
 }

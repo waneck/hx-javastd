@@ -35,28 +35,28 @@ extern class AbstractFilterTubeImpl extends com.sun.xml.internal.ws.api.pipe.hel
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	private var next(default, null) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:protected @:final private var next(default, null) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
-	@:overload private function new(next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
+	@:overload @:protected private function new(next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload private function new(that : com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterTubeImpl, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
-	
-	/**
-	* Default no-op implementation.
-	*/
-	@:overload override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:protected private function new(that : com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterTubeImpl, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
 	/**
 	* Default no-op implementation.
 	*/
-	@:overload override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
 	/**
 	* Default no-op implementation.
 	*/
-	@:overload override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override public function preDestroy() : Void;
+	/**
+	* Default no-op implementation.
+	*/
+	@:overload @:public override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	
+	@:overload @:public override public function preDestroy() : Void;
 	
 	
 }

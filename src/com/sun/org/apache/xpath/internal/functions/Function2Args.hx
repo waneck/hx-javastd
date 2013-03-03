@@ -29,7 +29,7 @@ extern class Function2Args extends com.sun.org.apache.xpath.internal.functions.F
 	* @return An expression that represents the second argument passed to the
 	*         function.
 	*/
-	@:overload public function getArg1() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getArg1() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* This function is used to fixup variables from QNames to stack frame
@@ -41,7 +41,7 @@ extern class Function2Args extends com.sun.org.apache.xpath.internal.functions.F
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Set an argument expression for a function.  This method is called by the
@@ -52,7 +52,7 @@ extern class Function2Args extends com.sun.org.apache.xpath.internal.functions.F
 	*
 	* @throws WrongNumberArgsException If the argNum parameter is greater than 1.
 	*/
-	@:overload override public function setArg(arg : com.sun.org.apache.xpath.internal.Expression, argNum : Int) : Void;
+	@:overload @:public override public function setArg(arg : com.sun.org.apache.xpath.internal.Expression, argNum : Int) : Void;
 	
 	/**
 	* Check that the number of arguments passed to this function is correct.
@@ -62,7 +62,7 @@ extern class Function2Args extends com.sun.org.apache.xpath.internal.functions.F
 	*
 	* @throws WrongNumberArgsException
 	*/
-	@:overload override public function checkNumberArgs(argNum : Int) : Void;
+	@:overload @:public override public function checkNumberArgs(argNum : Int) : Void;
 	
 	/**
 	* Constructs and throws a WrongNumberArgException with the appropriate
@@ -70,7 +70,7 @@ extern class Function2Args extends com.sun.org.apache.xpath.internal.functions.F
 	*
 	* @throws WrongNumberArgsException
 	*/
-	@:overload override private function reportWrongNumberArgs() : Void;
+	@:overload @:protected override private function reportWrongNumberArgs() : Void;
 	
 	/**
 	* Tell if this expression or it's subexpressions can traverse outside
@@ -78,17 +78,17 @@ extern class Function2Args extends com.sun.org.apache.xpath.internal.functions.F
 	*
 	* @return true if traversal outside the context node's subtree can occur.
 	*/
-	@:overload override public function canTraverseOutsideSubtree() : Bool;
+	@:overload @:public override public function canTraverseOutsideSubtree() : Bool;
 	
 	/**
 	* @see com.sun.org.apache.xpath.internal.XPathVisitable#callVisitors(ExpressionOwner, XPathVisitor)
 	*/
-	@:overload override public function callArgVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callArgVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }
@@ -97,12 +97,12 @@ extern class Function2Args extends com.sun.org.apache.xpath.internal.functions.F
 	/**
 	* @see ExpressionOwner#getExpression()
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see ExpressionOwner#setExpression(Expression)
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	
 }

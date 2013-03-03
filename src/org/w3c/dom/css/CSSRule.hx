@@ -46,13 +46,13 @@ extern interface CSSRule
 	* instance of the <code>CSSRule</code> interface to the specific
 	* derived interface implied by the <code>type</code>.
 	*/
-	@:overload public function getType() : java.StdTypes.Int16;
+	@:overload @:public public function getType() : java.StdTypes.Int16;
 	
 	/**
 	*  The parsable textual representation of the rule. This reflects the
 	* current state of the rule and not its initial value.
 	*/
-	@:overload public function getCssText() : String;
+	@:overload @:public public function getCssText() : String;
 	
 	/**
 	*  The parsable textual representation of the rule. This reflects the
@@ -66,19 +66,19 @@ extern interface CSSRule
 	*   this point in the style sheet.
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if the rule is readonly.
 	*/
-	@:overload public function setCssText(cssText : String) : Void;
+	@:overload @:public public function setCssText(cssText : String) : Void;
 	
 	/**
 	*  The style sheet that contains this rule.
 	*/
-	@:overload public function getParentStyleSheet() : org.w3c.dom.css.CSSStyleSheet;
+	@:overload @:public public function getParentStyleSheet() : org.w3c.dom.css.CSSStyleSheet;
 	
 	/**
 	*  If this rule is contained inside another rule (e.g. a style rule
 	* inside an @media block), this is the containing rule. If this rule is
 	* not nested inside any other rules, this returns <code>null</code>.
 	*/
-	@:overload public function getParentRule() : org.w3c.dom.css.CSSRule;
+	@:overload @:public public function getParentRule() : org.w3c.dom.css.CSSRule;
 	
 	
 }

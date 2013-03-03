@@ -259,7 +259,7 @@ extern class BytecodeName
 	* @param s the source name
 	* @return a valid bytecode name which represents the source name
 	*/
-	@:overload public static function toBytecodeName(s : String) : String;
+	@:overload @:public @:static public static function toBytecodeName(s : String) : String;
 	
 	/** Given an unqualified bytecode name, produce the corresponding source name.
 	* The bytecode name must not contain dangerous characters.
@@ -269,7 +269,7 @@ extern class BytecodeName
 	* @throws IllegalArgumentException if the bytecode name is not {@link #isSafeBytecodeName safe}
 	* @see #isSafeBytecodeName(java.lang.String)
 	*/
-	@:overload public static function toSourceName(s : String) : String;
+	@:overload @:public @:static public static function toSourceName(s : String) : String;
 	
 	/**
 	* Given a bytecode name from a classfile, separate it into
@@ -285,7 +285,7 @@ extern class BytecodeName
 	* The name {@code ::\=:foo:\=bar\!baz} will be parsed into
 	* {@code {':', ':', "", ':', "foo", ':', "bar:baz"}}.
 	*/
-	@:overload public static function parseBytecodeName(s : String) : java.NativeArray<Dynamic>;
+	@:overload @:public @:static public static function parseBytecodeName(s : String) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Given a series of components, create a bytecode name for a classfile.
@@ -298,7 +298,7 @@ extern class BytecodeName
 	*          character, and is not an interned one-character string
 	* @throws NullPointerException if any component is null
 	*/
-	@:overload public static function unparseBytecodeName(components : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static public static function unparseBytecodeName(components : java.NativeArray<Dynamic>) : String;
 	
 	/**
 	* Given a bytecode name, produce the corresponding display name.
@@ -317,7 +317,7 @@ extern class BytecodeName
 	* @param s the original bytecode name (which may be qualified)
 	* @return a human-readable presentation
 	*/
-	@:overload public static function toDisplayName(s : String) : String;
+	@:overload @:public @:static public static function toDisplayName(s : String) : String;
 	
 	/**
 	* Report whether a simple name is safe as a bytecode name.
@@ -327,7 +327,7 @@ extern class BytecodeName
 	* @param s the proposed bytecode name
 	* @return true if the name is non-empty and all of its characters are safe
 	*/
-	@:overload public static function isSafeBytecodeName(s : String) : Bool;
+	@:overload @:public @:static public static function isSafeBytecodeName(s : String) : Bool;
 	
 	/**
 	* Report whether a character is safe in a bytecode name.
@@ -336,7 +336,7 @@ extern class BytecodeName
 	* @param s the proposed character
 	* @return true if the character is safe to use in classfiles
 	*/
-	@:overload public static function isSafeBytecodeChar(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isSafeBytecodeChar(c : java.StdTypes.Char16) : Bool;
 	
 	
 }

@@ -37,7 +37,7 @@ extern class CloseableURLClassLoader extends java.net.URLClassLoader implements 
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	@:overload public function new(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader) : Void;
+	@:overload @:public public function new(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Close any jar files that may have been opened by the class loader.
@@ -46,7 +46,7 @@ extern class CloseableURLClassLoader extends java.net.URLClassLoader implements 
 	* @throws java.io.IOException if the jar files cannot be found for any
 	* reson, or if closing the jar file itself causes an IOException.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

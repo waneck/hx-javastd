@@ -45,7 +45,7 @@ extern interface Encoder
 	* @param messageInfo ...
 	* </p>
 	*/
-	@:overload public function encodeAndSend(messageInfo : com.sun.pept.ept.MessageInfo) : Void;
+	@:overload @:public public function encodeAndSend(messageInfo : com.sun.pept.ept.MessageInfo) : Void;
 	
 	/**
 	* <p>
@@ -57,7 +57,7 @@ extern interface Encoder
 	* @param messageInfo ...
 	* </p>
 	*/
-	@:overload public function encode(messageInfo : com.sun.pept.ept.MessageInfo) : java.nio.ByteBuffer;
+	@:overload @:public public function encode(messageInfo : com.sun.pept.ept.MessageInfo) : java.nio.ByteBuffer;
 	
 	
 }

@@ -27,14 +27,14 @@ package com.sun.xml.internal.fastinfoset;
 */
 extern class Notation
 {
-	public var name(default, null) : String;
+	@:public @:final public var name(default, null) : String;
 	
-	public var systemIdentifier(default, null) : String;
+	@:public @:final public var systemIdentifier(default, null) : String;
 	
-	public var publicIdentifier(default, null) : String;
+	@:public @:final public var publicIdentifier(default, null) : String;
 	
 	/** Creates a new instance of Notation */
-	@:overload public function new(_name : String, _systemIdentifier : String, _publicIdentifier : String) : Void;
+	@:overload @:public public function new(_name : String, _systemIdentifier : String, _publicIdentifier : String) : Void;
 	
 	
 }

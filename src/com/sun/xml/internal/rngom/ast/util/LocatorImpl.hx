@@ -46,15 +46,15 @@ package com.sun.xml.internal.rngom.ast.util;
 */
 extern class LocatorImpl implements org.xml.sax.Locator implements com.sun.xml.internal.rngom.ast.om.Location
 {
-	@:overload public function new(systemId : String, lineNumber : Int, columnNumber : Int) : Void;
+	@:overload @:public public function new(systemId : String, lineNumber : Int, columnNumber : Int) : Void;
 	
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	
 }

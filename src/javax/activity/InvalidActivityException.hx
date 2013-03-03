@@ -39,14 +39,14 @@ extern class InvalidActivityException extends java.rmi.RemoteException
 	/**
 	* Constructs a new instance with null as its detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new instance with the specified detail message.
 	*
 	* @param message the detail message.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructs a new throwable with the specified cause.
@@ -54,7 +54,7 @@ extern class InvalidActivityException extends java.rmi.RemoteException
 	* @param cause a chained exception of type
 	* <code>Throwable</code>.
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a new throwable with the specified detail message and cause.
@@ -64,7 +64,7 @@ extern class InvalidActivityException extends java.rmi.RemoteException
 	* @param cause a chained exception of type
 	* <code>Throwable</code>.
 	*/
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	
 }

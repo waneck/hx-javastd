@@ -57,7 +57,7 @@ extern interface LayoutManager2 extends java.awt.LayoutManager
 	* @see java.awt.Component#getMaximumSize
 	* @see LayoutManager
 	*/
-	@:overload public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the alignment along the x axis.  This specifies how
@@ -66,7 +66,7 @@ extern interface LayoutManager2 extends java.awt.LayoutManager
 	* where 0 represents alignment along the origin, 1 is aligned
 	* the furthest away from the origin, 0.5 is centered, etc.
 	*/
-	@:overload public function getLayoutAlignmentX(target : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentX(target : java.awt.Container) : Single;
 	
 	/**
 	* Returns the alignment along the y axis.  This specifies how
@@ -75,13 +75,13 @@ extern interface LayoutManager2 extends java.awt.LayoutManager
 	* where 0 represents alignment along the origin, 1 is aligned
 	* the furthest away from the origin, 0.5 is centered, etc.
 	*/
-	@:overload public function getLayoutAlignmentY(target : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentY(target : java.awt.Container) : Single;
 	
 	/**
 	* Invalidates the layout, indicating that if the layout manager
 	* has cached information it should be discarded.
 	*/
-	@:overload public function invalidateLayout(target : java.awt.Container) : Void;
+	@:overload @:public public function invalidateLayout(target : java.awt.Container) : Void;
 	
 	
 }

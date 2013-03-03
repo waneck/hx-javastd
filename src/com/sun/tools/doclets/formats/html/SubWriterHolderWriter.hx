@@ -40,13 +40,13 @@ package com.sun.tools.doclets.formats.html;
 */
 extern class SubWriterHolderWriter extends com.sun.tools.doclets.formats.html.HtmlDocletWriter
 {
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String) : Void;
 	
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, path : String, filename : String, relpath : String) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, path : String, filename : String, relpath : String) : Void;
 	
-	@:overload public function printTypeSummaryHeader() : Void;
+	@:overload @:public public function printTypeSummaryHeader() : Void;
 	
-	@:overload public function printTypeSummaryFooter() : Void;
+	@:overload @:public public function printTypeSummaryFooter() : Void;
 	
 	/**
 	* Add the summary header.
@@ -55,7 +55,7 @@ extern class SubWriterHolderWriter extends com.sun.tools.doclets.formats.html.Ht
 	* @param cd the classdoc to be documented
 	* @param memberTree the content tree to which the summary header will be added
 	*/
-	@:overload public function addSummaryHeader(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, cd : com.sun.javadoc.ClassDoc, memberTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addSummaryHeader(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, cd : com.sun.javadoc.ClassDoc, memberTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get the summary table.
@@ -64,9 +64,9 @@ extern class SubWriterHolderWriter extends com.sun.tools.doclets.formats.html.Ht
 	* @param cd the classdoc to be documented
 	* @return the content tree for the summary table
 	*/
-	@:overload public function getSummaryTableTree(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, cd : com.sun.javadoc.ClassDoc) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSummaryTableTree(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, cd : com.sun.javadoc.ClassDoc) : com.sun.tools.doclets.internal.toolkit.Content;
 	
-	@:overload public function printTableHeadingBackground(str : String) : Void;
+	@:overload @:public public function printTableHeadingBackground(str : String) : Void;
 	
 	/**
 	* Add the inherited summary header.
@@ -75,11 +75,11 @@ extern class SubWriterHolderWriter extends com.sun.tools.doclets.formats.html.Ht
 	* @param cd the classdoc to be documented
 	* @param inheritedTree the content tree to which the inherited summary header will be added
 	*/
-	@:overload public function addInheritedSummaryHeader(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, cd : com.sun.javadoc.ClassDoc, inheritedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addInheritedSummaryHeader(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, cd : com.sun.javadoc.ClassDoc, inheritedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
-	@:overload public function printSummaryFooter(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, cd : com.sun.javadoc.ClassDoc) : Void;
+	@:overload @:public public function printSummaryFooter(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, cd : com.sun.javadoc.ClassDoc) : Void;
 	
-	@:overload public function printInheritedSummaryFooter(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, cd : com.sun.javadoc.ClassDoc) : Void;
+	@:overload @:public public function printInheritedSummaryFooter(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, cd : com.sun.javadoc.ClassDoc) : Void;
 	
 	/**
 	* Add the index comment.
@@ -87,9 +87,9 @@ extern class SubWriterHolderWriter extends com.sun.tools.doclets.formats.html.Ht
 	* @param member the member being documented
 	* @param contentTree the content tree to which the comment will be added
 	*/
-	@:overload private function addIndexComment(member : com.sun.javadoc.Doc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addIndexComment(member : com.sun.javadoc.Doc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
-	@:overload private function printIndexComment(member : com.sun.javadoc.Doc, firstSentenceTags : java.NativeArray<com.sun.javadoc.Tag>) : Void;
+	@:overload @:protected private function printIndexComment(member : com.sun.javadoc.Doc, firstSentenceTags : java.NativeArray<com.sun.javadoc.Tag>) : Void;
 	
 	/**
 	* Add the index comment.
@@ -98,7 +98,7 @@ extern class SubWriterHolderWriter extends com.sun.tools.doclets.formats.html.Ht
 	* @param firstSentenceTags the first sentence tags for the member to be documented
 	* @param tdSummary the content tree to which the comment will be added
 	*/
-	@:overload private function addIndexComment(member : com.sun.javadoc.Doc, firstSentenceTags : java.NativeArray<com.sun.javadoc.Tag>, tdSummary : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addIndexComment(member : com.sun.javadoc.Doc, firstSentenceTags : java.NativeArray<com.sun.javadoc.Tag>, tdSummary : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the summary type for the member.
@@ -107,7 +107,7 @@ extern class SubWriterHolderWriter extends com.sun.tools.doclets.formats.html.Ht
 	* @param member the member to be documented
 	* @param tdSummaryType the content tree to which the type will be added
 	*/
-	@:overload public function addSummaryType(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, member : com.sun.javadoc.ProgramElementDoc, tdSummaryType : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addSummaryType(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, member : com.sun.javadoc.ProgramElementDoc, tdSummaryType : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the summary link for the member.
@@ -116,9 +116,9 @@ extern class SubWriterHolderWriter extends com.sun.tools.doclets.formats.html.Ht
 	* @param member the member to be documented
 	* @param contentTree the content tree to which the link will be added
 	*/
-	@:overload public function addSummaryLinkComment(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, member : com.sun.javadoc.ProgramElementDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addSummaryLinkComment(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, member : com.sun.javadoc.ProgramElementDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
-	@:overload public function printSummaryLinkComment(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, member : com.sun.javadoc.ProgramElementDoc, firstSentenceTags : java.NativeArray<com.sun.javadoc.Tag>) : Void;
+	@:overload @:public public function printSummaryLinkComment(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, member : com.sun.javadoc.ProgramElementDoc, firstSentenceTags : java.NativeArray<com.sun.javadoc.Tag>) : Void;
 	
 	/**
 	* Add the summary link comment.
@@ -128,7 +128,7 @@ extern class SubWriterHolderWriter extends com.sun.tools.doclets.formats.html.Ht
 	* @param firstSentenceTags the first sentence tags for the member to be documented
 	* @param tdSummary the content tree to which the comment will be added
 	*/
-	@:overload public function addSummaryLinkComment(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, member : com.sun.javadoc.ProgramElementDoc, firstSentenceTags : java.NativeArray<com.sun.javadoc.Tag>, tdSummary : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addSummaryLinkComment(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, member : com.sun.javadoc.ProgramElementDoc, firstSentenceTags : java.NativeArray<com.sun.javadoc.Tag>, tdSummary : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the inherited member summary.
@@ -139,25 +139,25 @@ extern class SubWriterHolderWriter extends com.sun.tools.doclets.formats.html.Ht
 	* @param isFirst true if its the first link being documented
 	* @param linksTree the content tree to which the summary will be added
 	*/
-	@:overload public function addInheritedMemberSummary(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, cd : com.sun.javadoc.ClassDoc, member : com.sun.javadoc.ProgramElementDoc, isFirst : Bool, linksTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addInheritedMemberSummary(mw : com.sun.tools.doclets.formats.html.AbstractMemberWriter, cd : com.sun.javadoc.ClassDoc, member : com.sun.javadoc.ProgramElementDoc, isFirst : Bool, linksTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
-	@:overload public function printMemberHeader() : Void;
+	@:overload @:public public function printMemberHeader() : Void;
 	
-	@:overload public function printMemberFooter() : Void;
+	@:overload @:public public function printMemberFooter() : Void;
 	
 	/**
 	* Get the document content header tree
 	*
 	* @return a content tree the document content header
 	*/
-	@:overload public function getContentHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getContentHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the member header tree
 	*
 	* @return a content tree the member header
 	*/
-	@:overload public function getMemberTreeHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMemberTreeHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the member tree
@@ -165,7 +165,7 @@ extern class SubWriterHolderWriter extends com.sun.tools.doclets.formats.html.Ht
 	* @param contentTree the tree used to generate the complete member tree
 	* @return a content tree for the member
 	*/
-	@:overload public function getMemberTree(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMemberTree(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the member summary tree
@@ -173,7 +173,7 @@ extern class SubWriterHolderWriter extends com.sun.tools.doclets.formats.html.Ht
 	* @param contentTree the tree used to generate the member summary tree
 	* @return a content tree for the member summary
 	*/
-	@:overload public function getMemberSummaryTree(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMemberSummaryTree(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the member details tree
@@ -181,7 +181,7 @@ extern class SubWriterHolderWriter extends com.sun.tools.doclets.formats.html.Ht
 	* @param contentTree the tree used to generate the member details tree
 	* @return a content tree for the member details
 	*/
-	@:overload public function getMemberDetailsTree(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMemberDetailsTree(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the member tree
@@ -189,7 +189,7 @@ extern class SubWriterHolderWriter extends com.sun.tools.doclets.formats.html.Ht
 	* @param style the style class to be added to the content tree
 	* @param contentTree the tree used to generate the complete member tree
 	*/
-	@:overload public function getMemberTree(style : com.sun.tools.doclets.formats.html.markup.HtmlStyle, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMemberTree(style : com.sun.tools.doclets.formats.html.markup.HtmlStyle, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

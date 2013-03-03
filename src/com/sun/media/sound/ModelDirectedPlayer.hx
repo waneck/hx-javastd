@@ -31,7 +31,7 @@ package com.sun.media.sound;
 */
 extern interface ModelDirectedPlayer
 {
-	@:overload public function play(performerIndex : Int, connectionBlocks : java.NativeArray<com.sun.media.sound.ModelConnectionBlock>) : Void;
+	@:overload @:public public function play(performerIndex : Int, connectionBlocks : java.NativeArray<com.sun.media.sound.ModelConnectionBlock>) : Void;
 	
 	
 }

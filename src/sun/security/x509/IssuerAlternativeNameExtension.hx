@@ -45,14 +45,14 @@ extern class IssuerAlternativeNameExtension extends java.security.cert.Extension
 	* Identifier for this attribute, to be used with the
 	* get, set, delete methods of Certificate, x509 type.
 	*/
-	public static var IDENT(default, null) : String;
+	@:public @:static @:final public static var IDENT(default, null) : String;
 	
 	/**
 	* Attribute names.
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
-	public static var ISSUER_NAME(default, null) : String;
+	@:public @:static @:final public static var ISSUER_NAME(default, null) : String;
 	
 	/**
 	* Create a IssuerAlternativeNameExtension with the passed GeneralNames.
@@ -60,7 +60,7 @@ extern class IssuerAlternativeNameExtension extends java.security.cert.Extension
 	* @param names the GeneralNames for the issuer.
 	* @exception IOException on error.
 	*/
-	@:overload public function new(names : sun.security.x509.GeneralNames) : Void;
+	@:overload @:public public function new(names : sun.security.x509.GeneralNames) : Void;
 	
 	/**
 	* Create a IssuerAlternativeNameExtension with the passed criticality
@@ -70,12 +70,12 @@ extern class IssuerAlternativeNameExtension extends java.security.cert.Extension
 	* @param names the GeneralNames for the issuer.
 	* @exception IOException on error.
 	*/
-	@:overload public function new(critical : Null<Bool>, names : sun.security.x509.GeneralNames) : Void;
+	@:overload @:public public function new(critical : Null<Bool>, names : sun.security.x509.GeneralNames) : Void;
 	
 	/**
 	* Create a default IssuerAlternativeNameExtension.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create the extension from the passed DER encoded value.
@@ -85,12 +85,12 @@ extern class IssuerAlternativeNameExtension extends java.security.cert.Extension
 	* @exception ClassCastException if value is not an array of bytes
 	* @exception IOException on error.
 	*/
-	@:overload public function new(critical : Null<Bool>, value : Dynamic) : Void;
+	@:overload @:public public function new(critical : Null<Bool>, value : Dynamic) : Void;
 	
 	/**
 	* Returns a printable representation of the IssuerAlternativeName.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Write the extension to the OutputStream.
@@ -98,33 +98,33 @@ extern class IssuerAlternativeNameExtension extends java.security.cert.Extension
 	* @param out the OutputStream to write the extension to.
 	* @exception IOException on encoding error.
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public override public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Set the attribute value.
 	*/
-	@:overload public function set(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function set(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Get the attribute value.
 	*/
-	@:overload public function get(name : String) : Dynamic;
+	@:overload @:public public function get(name : String) : Dynamic;
 	
 	/**
 	* Delete the attribute value.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this
 	* attribute.
 	*/
-	@:overload public function getElements() : java.util.Enumeration<String>;
+	@:overload @:public public function getElements() : java.util.Enumeration<String>;
 	
 	/**
 	* Return the name of this attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

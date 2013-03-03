@@ -29,9 +29,9 @@ extern class FontConfigManager
 	* Instantiates a new FontConfigManager getting the default instance
 	* of FontManager from the FontManagerFactory.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function getFontConfigNames() : java.NativeArray<String>;
+	@:overload @:public @:static public static function getFontConfigNames() : java.NativeArray<String>;
 	
 	/* Called from code that needs to know what are the AA settings
 	* that apps using FC would pick up for the default desktop font.
@@ -40,20 +40,20 @@ extern class FontConfigManager
 	* Native return values map to the text aa values in sun.awt.SunHints.
 	* which is used to look up the renderinghint value object.
 	*/
-	@:overload public static function getFontConfigAAHint() : Dynamic;
+	@:overload @:public @:static public static function getFontConfigAAHint() : Dynamic;
 	
 	/* This is public solely so that for debugging purposes it can be called
 	* with other names, which might (eg) include a size, eg "sans-24"
 	* The return value is a text aa rendering hint value.
 	* Normally we should call the no-args version.
 	*/
-	@:overload public static function getFontConfigAAHint(fcFamily : String) : Dynamic;
+	@:overload @:public @:static public static function getFontConfigAAHint(fcFamily : String) : Dynamic;
 	
 	/* This does cause the native libfontconfig to be loaded and unloaded,
 	* but it does not incur the overhead of initialisation of its
 	* data structures, so shouldn't have a measurable impact.
 	*/
-	@:overload @:native public static function getFontConfigVersion() : Int;
+	@:overload @:public @:static @:native public static function getFontConfigVersion() : Int;
 	
 	/* This can be made public if it's needed to force a re-read
 	* rather than using the cached values. The re-read would be needed
@@ -61,15 +61,15 @@ extern class FontConfigManager
 	* In that event this method would need to return directly the array
 	* to be used by the caller in case it subsequently changed.
 	*/
-	@:overload @:synchronized public function initFontConfigFonts(includeFallbacks : Bool) : Void;
+	@:overload @:public @:synchronized public function initFontConfigFonts(includeFallbacks : Bool) : Void;
 	
-	@:overload public function registerFromFcInfo(fcInfo : sun.font.FontConfigManager.FontConfigManager_FcCompFont) : sun.font.PhysicalFont;
+	@:overload @:public public function registerFromFcInfo(fcInfo : sun.font.FontConfigManager.FontConfigManager_FcCompFont) : sun.font.PhysicalFont;
 	
 	/*
 	* We need to return a Composite font which has as the font in
 	* its first slot one obtained from fontconfig.
 	*/
-	@:overload public function getFontConfigFont(name : String, style : Int) : sun.font.CompositeFont;
+	@:overload @:public public function getFontConfigFont(name : String, style : Int) : sun.font.CompositeFont;
 	
 	/**
 	*
@@ -77,7 +77,7 @@ extern class FontConfigManager
 	* @param fcFamily
 	* @return
 	*/
-	@:overload public function getFontConfigFonts() : java.NativeArray<sun.font.FontConfigManager.FontConfigManager_FcCompFont>;
+	@:overload @:public public function getFontConfigFonts() : java.NativeArray<sun.font.FontConfigManager.FontConfigManager_FcCompFont>;
 	
 	
 }
@@ -85,39 +85,39 @@ extern class FontConfigManager
 */
 @:native('sun$font$FontConfigManager$FontConfigFont') extern class FontConfigManager_FontConfigFont
 {
-	public var familyName : String;
+	@:public public var familyName : String;
 	
-	public var styleStr : String;
+	@:public public var styleStr : String;
 	
-	public var fullName : String;
+	@:public public var fullName : String;
 	
-	public var fontFile : String;
+	@:public public var fontFile : String;
 	
 	
 }
 @:native('sun$font$FontConfigManager$FcCompFont') extern class FontConfigManager_FcCompFont
 {
-	public var fcName : String;
+	@:public public var fcName : String;
 	
-	public var fcFamily : String;
+	@:public public var fcFamily : String;
 	
-	public var jdkName : String;
+	@:public public var jdkName : String;
 	
-	public var style : Int;
+	@:public public var style : Int;
 	
-	public var firstFont : sun.font.FontConfigManager.FontConfigManager_FontConfigFont;
+	@:public public var firstFont : sun.font.FontConfigManager.FontConfigManager_FontConfigFont;
 	
-	public var allFonts : java.NativeArray<sun.font.FontConfigManager.FontConfigManager_FontConfigFont>;
+	@:public public var allFonts : java.NativeArray<sun.font.FontConfigManager.FontConfigManager_FontConfigFont>;
 	
-	public var compFont : sun.font.CompositeFont;
+	@:public public var compFont : sun.font.CompositeFont;
 	
 	
 }
 @:native('sun$font$FontConfigManager$FontConfigInfo') extern class FontConfigManager_FontConfigInfo
 {
-	public var fcVersion : Int;
+	@:public public var fcVersion : Int;
 	
-	public var cacheDirs : java.NativeArray<String>;
+	@:public public var cacheDirs : java.NativeArray<String>;
 	
 	
 }

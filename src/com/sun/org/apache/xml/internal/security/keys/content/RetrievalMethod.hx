@@ -22,25 +22,25 @@ package com.sun.org.apache.xml.internal.security.keys.content;
 extern class RetrievalMethod extends com.sun.org.apache.xml.internal.security.utils.SignatureElementProxy implements com.sun.org.apache.xml.internal.security.keys.content.KeyInfoContent
 {
 	/** DSA retrieval */
-	public static var TYPE_DSA(default, null) : String;
+	@:public @:static @:final public static var TYPE_DSA(default, null) : String;
 	
 	/** RSA retrieval */
-	public static var TYPE_RSA(default, null) : String;
+	@:public @:static @:final public static var TYPE_RSA(default, null) : String;
 	
 	/** PGP retrieval */
-	public static var TYPE_PGP(default, null) : String;
+	@:public @:static @:final public static var TYPE_PGP(default, null) : String;
 	
 	/** SPKI retrieval */
-	public static var TYPE_SPKI(default, null) : String;
+	@:public @:static @:final public static var TYPE_SPKI(default, null) : String;
 	
 	/** MGMT retrieval */
-	public static var TYPE_MGMT(default, null) : String;
+	@:public @:static @:final public static var TYPE_MGMT(default, null) : String;
 	
 	/** X509 retrieval */
-	public static var TYPE_X509(default, null) : String;
+	@:public @:static @:final public static var TYPE_X509(default, null) : String;
 	
 	/** RAWX509 retrieval */
-	public static var TYPE_RAWX509(default, null) : String;
+	@:public @:static @:final public static var TYPE_RAWX509(default, null) : String;
 	
 	/**
 	* Constructor RetrievalMethod
@@ -49,7 +49,7 @@ extern class RetrievalMethod extends com.sun.org.apache.xml.internal.security.ut
 	* @param BaseURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Constructor RetrievalMethod
@@ -59,14 +59,14 @@ extern class RetrievalMethod extends com.sun.org.apache.xml.internal.security.ut
 	* @param transforms
 	* @param Type
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, URI : String, transforms : com.sun.org.apache.xml.internal.security.transforms.Transforms, Type : String) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, URI : String, transforms : com.sun.org.apache.xml.internal.security.transforms.Transforms, Type : String) : Void;
 	
 	/**
 	* Method getURIAttr
 	*
 	* @return the URI attribute
 	*/
-	@:overload public function getURIAttr() : org.w3c.dom.Attr;
+	@:overload @:public public function getURIAttr() : org.w3c.dom.Attr;
 	
 	/**
 	* Method getURI
@@ -74,10 +74,10 @@ extern class RetrievalMethod extends com.sun.org.apache.xml.internal.security.ut
 	*
 	* @return URI string
 	*/
-	@:overload public function getURI() : String;
+	@:overload @:public public function getURI() : String;
 	
 	/** @return the type*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	* Method getTransforms
@@ -86,10 +86,10 @@ extern class RetrievalMethod extends com.sun.org.apache.xml.internal.security.ut
 	* @throws XMLSecurityException
 	* @return the transforamitons
 	*/
-	@:overload public function getTransforms() : com.sun.org.apache.xml.internal.security.transforms.Transforms;
+	@:overload @:public public function getTransforms() : com.sun.org.apache.xml.internal.security.transforms.Transforms;
 	
 	/** @inheritDoc */
-	@:overload public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

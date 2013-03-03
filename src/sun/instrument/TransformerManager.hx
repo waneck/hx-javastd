@@ -25,11 +25,11 @@ package sun.instrument;
 */
 extern class TransformerManager
 {
-	@:overload @:synchronized public function addTransformer(transformer : java.lang.instrument.ClassFileTransformer) : Void;
+	@:overload @:public @:synchronized public function addTransformer(transformer : java.lang.instrument.ClassFileTransformer) : Void;
 	
-	@:overload @:synchronized public function removeTransformer(transformer : java.lang.instrument.ClassFileTransformer) : Bool;
+	@:overload @:public @:synchronized public function removeTransformer(transformer : java.lang.instrument.ClassFileTransformer) : Bool;
 	
-	@:overload public function transform(loader : java.lang.ClassLoader, classname : String, classBeingRedefined : Class<Dynamic>, protectionDomain : java.security.ProtectionDomain, classfileBuffer : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function transform(loader : java.lang.ClassLoader, classname : String, classBeingRedefined : Class<Dynamic>, protectionDomain : java.security.ProtectionDomain, classfileBuffer : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

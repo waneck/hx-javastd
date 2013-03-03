@@ -36,27 +36,27 @@ package java.nio;
 */
 @:internal extern class HeapShortBufferR extends java.nio.HeapShortBuffer
 {
-	@:overload private function new(buf : java.NativeArray<java.StdTypes.Int16>, mark : Int, pos : Int, lim : Int, cap : Int, off : Int) : Void;
+	@:overload @:protected private function new(buf : java.NativeArray<java.StdTypes.Int16>, mark : Int, pos : Int, lim : Int, cap : Int, off : Int) : Void;
 	
-	@:overload override public function slice() : java.nio.ShortBuffer;
+	@:overload @:public override public function slice() : java.nio.ShortBuffer;
 	
-	@:overload override public function duplicate() : java.nio.ShortBuffer;
+	@:overload @:public override public function duplicate() : java.nio.ShortBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.ShortBuffer;
+	@:overload @:public override public function asReadOnlyBuffer() : java.nio.ShortBuffer;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload override public function put(x : java.StdTypes.Int16) : java.nio.ShortBuffer;
+	@:overload @:public override public function put(x : java.StdTypes.Int16) : java.nio.ShortBuffer;
 	
-	@:overload override public function put(i : Int, x : java.StdTypes.Int16) : java.nio.ShortBuffer;
+	@:overload @:public override public function put(i : Int, x : java.StdTypes.Int16) : java.nio.ShortBuffer;
 	
-	@:overload override public function put(src : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : java.nio.ShortBuffer;
+	@:overload @:public override public function put(src : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : java.nio.ShortBuffer;
 	
-	@:overload override public function put(src : java.nio.ShortBuffer) : java.nio.ShortBuffer;
+	@:overload @:public override public function put(src : java.nio.ShortBuffer) : java.nio.ShortBuffer;
 	
-	@:overload override public function compact() : java.nio.ShortBuffer;
+	@:overload @:public override public function compact() : java.nio.ShortBuffer;
 	
-	@:overload override public function order() : java.nio.ByteOrder;
+	@:overload @:public override public function order() : java.nio.ByteOrder;
 	
 	
 }

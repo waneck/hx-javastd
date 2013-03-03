@@ -20,14 +20,14 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 */
 @:internal extern class WeakReferenceXMLSchema extends com.sun.org.apache.xerces.internal.jaxp.validation.AbstractXMLSchema
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/*
 	* XSGrammarPoolContainer methods
 	*/
-	@:overload @:synchronized override public function getGrammarPool() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
+	@:overload @:public @:synchronized override public function getGrammarPool() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
 	
-	@:overload override public function isFullyComposed() : Bool;
+	@:overload @:public override public function isFullyComposed() : Bool;
 	
 	
 }

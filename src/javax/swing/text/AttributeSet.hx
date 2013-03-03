@@ -31,7 +31,7 @@ extern interface AttributeSet
 	*
 	* @return the number of attributes >= 0
 	*/
-	@:overload public function getAttributeCount() : Int;
+	@:overload @:public public function getAttributeCount() : Int;
 	
 	/**
 	* Checks whether the named attribute has a value specified in
@@ -41,7 +41,7 @@ extern interface AttributeSet
 	* @param attrName the attribute name
 	* @return true if the attribute has a value specified
 	*/
-	@:overload public function isDefined(attrName : Dynamic) : Bool;
+	@:overload @:public public function isDefined(attrName : Dynamic) : Bool;
 	
 	/**
 	* Determines if the two attribute sets are equivalent.
@@ -49,7 +49,7 @@ extern interface AttributeSet
 	* @param attr an attribute set
 	* @return true if the sets are equivalent
 	*/
-	@:overload public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:public public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
 	
 	/**
 	* Returns an attribute set that is guaranteed not
@@ -57,7 +57,7 @@ extern interface AttributeSet
 	*
 	* @return a copy of the attribute set
 	*/
-	@:overload public function copyAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public public function copyAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Fetches the value of the given attribute. If the value is not found
@@ -69,7 +69,7 @@ extern interface AttributeSet
 	* @param key the non-null key of the attribute binding
 	* @return the value of the attribute, or {@code null} if not found
 	*/
-	@:overload public function getAttribute(key : Dynamic) : Dynamic;
+	@:overload @:public public function getAttribute(key : Dynamic) : Dynamic;
 	
 	/**
 	* Returns an enumeration over the names of the attributes that are
@@ -83,7 +83,7 @@ extern interface AttributeSet
 	*
 	* @return the names
 	*/
-	@:overload public function getAttributeNames() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getAttributeNames() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Returns {@code true} if this set defines an attribute with the same
@@ -97,7 +97,7 @@ extern interface AttributeSet
 	* @throws NullPointerException if either {@code name} or
 	*      {@code value} is {@code null}
 	*/
-	@:overload public function containsAttribute(name : Dynamic, value : Dynamic) : Bool;
+	@:overload @:public public function containsAttribute(name : Dynamic, value : Dynamic) : Bool;
 	
 	/**
 	* Returns {@code true} if this set defines all the attributes from the
@@ -109,14 +109,14 @@ extern interface AttributeSet
 	*              values, either locally or through its resolving parent
 	* @throws NullPointerException if {@code attributes} is {@code null}
 	*/
-	@:overload public function containsAttributes(attributes : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:public public function containsAttributes(attributes : javax.swing.text.AttributeSet) : Bool;
 	
 	/**
 	* Gets the resolving parent.
 	*
 	* @return the parent
 	*/
-	@:overload public function getResolveParent() : javax.swing.text.AttributeSet;
+	@:overload @:public public function getResolveParent() : javax.swing.text.AttributeSet;
 	
 	
 }

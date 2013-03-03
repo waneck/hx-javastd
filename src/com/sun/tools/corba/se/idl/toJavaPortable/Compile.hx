@@ -48,50 +48,50 @@ extern class Compile extends com.sun.tools.corba.se.idl.Compile
 	/**
 	*
 	**/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	/**
 	*
 	**/
-	@:overload override public function start(args : java.NativeArray<String>) : Void;
+	@:overload @:public override public function start(args : java.NativeArray<String>) : Void;
 	
 	/**
 	*
 	**/
-	@:overload override private function new() : Void;
+	@:overload @:protected override private function new() : Void;
 	
-	public var _factories : com.sun.tools.corba.se.idl.toJavaPortable.Factories;
+	@:public public var _factories : com.sun.tools.corba.se.idl.toJavaPortable.Factories;
 	
-	@:overload override private function factories() : com.sun.tools.corba.se.idl.Factories;
+	@:overload @:protected override private function factories() : com.sun.tools.corba.se.idl.Factories;
 	
 	/**
 	*
 	**/
-	@:overload private function preParse() : Void;
+	@:overload @:protected private function preParse() : Void;
 	
-	@:overload private function preEmit(emitList : java.util.Enumeration<Dynamic>) : Void;
+	@:overload @:protected private function preEmit(emitList : java.util.Enumeration<Dynamic>) : Void;
 	
 	/**
 	* This method is called by preEmit once for each symbol table entry.
 	* It can be called by extenders.
 	**/
-	@:overload private function preEmitSTElement(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:protected private function preEmitSTElement(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/**
 	* This method is called by preEmit once for each emitList entry.
 	* It can be called by extenders.
 	**/
-	@:overload private function preEmitELElement(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:protected private function preEmitELElement(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
-	public var importTypes : java.util.Vector<Dynamic>;
+	@:public public var importTypes : java.util.Vector<Dynamic>;
 	
-	public var factory : com.sun.tools.corba.se.idl.SymtabFactory;
+	@:public public var factory : com.sun.tools.corba.se.idl.SymtabFactory;
 	
-	public static var typedefInfo : Int;
+	@:public @:static public static var typedefInfo : Int;
 	
-	public var list : java.util.Hashtable<Dynamic, Dynamic>;
+	@:public public var list : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	public static var compiler : com.sun.tools.corba.se.idl.Compile;
+	@:public @:static public static var compiler : com.sun.tools.corba.se.idl.Compile;
 	
 	
 }

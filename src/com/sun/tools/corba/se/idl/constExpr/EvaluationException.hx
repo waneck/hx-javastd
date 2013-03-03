@@ -36,7 +36,7 @@ package com.sun.tools.corba.se.idl.constExpr;
 //// NOTES:
 extern class EvaluationException extends java.lang.Exception
 {
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

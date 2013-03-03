@@ -30,7 +30,7 @@ extern class ManagedClientAssertion extends com.sun.xml.internal.ws.api.config.m
 	*
 	* @author Fabian Ritzmann
 	*/
-	public static var MANAGED_CLIENT_QNAME(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var MANAGED_CLIENT_QNAME(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* Return ManagedClient assertion if there is one associated with the client.
@@ -39,16 +39,16 @@ extern class ManagedClientAssertion extends com.sun.xml.internal.ws.api.config.m
 	* @return The policy assertion if found. Null otherwise.
 	* @throws WebServiceException If computing the effective policy of the port failed.
 	*/
-	@:overload public static function getAssertion(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo) : com.sun.xml.internal.ws.api.config.management.policy.ManagedClientAssertion;
+	@:overload @:public @:static public static function getAssertion(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo) : com.sun.xml.internal.ws.api.config.management.policy.ManagedClientAssertion;
 	
-	@:overload public function new(data : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>) : Void;
+	@:overload @:public public function new(data : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>) : Void;
 	
 	/**
 	* Clients cannot be managed.
 	*
 	* @return False.
 	*/
-	@:overload public function isManagementEnabled() : Bool;
+	@:overload @:public override public function isManagementEnabled() : Bool;
 	
 	
 }

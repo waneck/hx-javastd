@@ -137,7 +137,7 @@ extern interface JdbcRowSet extends javax.sql.RowSet extends javax.sql.rowset.Jo
 	*          to determine whether rows marked for deletion remain visible
 	* @see #setShowDeleted
 	*/
-	@:overload public function getShowDeleted() : Bool;
+	@:overload @:public public function getShowDeleted() : Bool;
 	
 	/**
 	* Sets the property <code>showDeleted</code> to the given
@@ -159,7 +159,7 @@ extern interface JdbcRowSet extends javax.sql.RowSet extends javax.sql.rowset.Jo
 	*          to reset whether deleted rows should be visible
 	* @see #getShowDeleted
 	*/
-	@:overload public function setShowDeleted(b : Bool) : Void;
+	@:overload @:public public function setShowDeleted(b : Bool) : Void;
 	
 	/**
 	* Retrieves the first warning reported by calls on this <code>JdbcRowSet</code>
@@ -194,7 +194,7 @@ extern interface JdbcRowSet extends javax.sql.RowSet extends javax.sql.rowset.Jo
 	* <code>JdbcRowSet</code> object
 	* @see RowSetWarning
 	*/
-	@:overload public function getRowSetWarnings() : javax.sql.rowset.RowSetWarning;
+	@:overload @:public public function getRowSetWarnings() : javax.sql.rowset.RowSetWarning;
 	
 	/**
 	* Each <code>JdbcRowSet</code> contains a <code>Connection</code> object from
@@ -211,7 +211,7 @@ extern interface JdbcRowSet extends javax.sql.RowSet extends javax.sql.rowset.Jo
 	* Connection object within this <code>JdbcRowSet</code> is in auto-commit mode
 	* @see java.sql.Connection#setAutoCommit
 	*/
-	@:overload public function commit() : Void;
+	@:overload @:public public function commit() : Void;
 	
 	/**
 	* Each <code>JdbcRowSet</code> contains a <code>Connection</code> object from
@@ -230,7 +230,7 @@ extern interface JdbcRowSet extends javax.sql.RowSet extends javax.sql.rowset.Jo
 	* @throws SQLException if a database access error occurs
 	* @see java.sql.Connection#getAutoCommit()
 	*/
-	@:overload public function getAutoCommit() : Bool;
+	@:overload @:public public function getAutoCommit() : Bool;
 	
 	/**
 	* Each <code>JdbcRowSet</code> contains a <code>Connection</code> object from
@@ -243,7 +243,7 @@ extern interface JdbcRowSet extends javax.sql.RowSet extends javax.sql.rowset.Jo
 	* @throws SQLException if a database access error occurs
 	* @see java.sql.Connection#setAutoCommit(boolean)
 	*/
-	@:overload public function setAutoCommit(autoCommit : Bool) : Void;
+	@:overload @:public public function setAutoCommit(autoCommit : Bool) : Void;
 	
 	/**
 	* Each <code>JdbcRowSet</code> contains a <code>Connection</code> object from
@@ -256,7 +256,7 @@ extern interface JdbcRowSet extends javax.sql.RowSet extends javax.sql.rowset.Jo
 	* object within this <code>JdbcRowSet</code> is in auto-commit mode.
 	* @see #rollback(Savepoint)
 	*/
-	@:overload public function rollback() : Void;
+	@:overload @:public public function rollback() : Void;
 	
 	/**
 	* Each <code>JdbcRowSet</code> contains a <code>Connection</code> object from
@@ -269,7 +269,7 @@ extern interface JdbcRowSet extends javax.sql.RowSet extends javax.sql.rowset.Jo
 	* object within this <code>JdbcRowSet</code> is in auto-commit mode.
 	* @see #rollback
 	*/
-	@:overload public function rollback(s : java.sql.Savepoint) : Void;
+	@:overload @:public public function rollback(s : java.sql.Savepoint) : Void;
 	
 	
 }

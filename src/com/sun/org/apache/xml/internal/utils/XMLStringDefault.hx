@@ -26,7 +26,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	/**
 	* Create a XMLStringDefault object from a String
 	*/
-	@:overload public function new(str : String) : Void;
+	@:overload @:public public function new(str : String) : Void;
 	
 	/**
 	* Directly call the
@@ -39,7 +39,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function dispatchCharactersEvents(ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function dispatchCharactersEvents(ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Directly call the
@@ -50,7 +50,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function dispatchAsComment(lh : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public public function dispatchAsComment(lh : org.xml.sax.ext.LexicalHandler) : Void;
 	
 	/**
 	* Conditionally trim all leading and trailing whitespace in the specified String.
@@ -66,7 +66,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @param   doublePunctuationSpaces    Use double spaces for punctuation?
 	* @return              The trimmed string.
 	*/
-	@:overload public function fixWhiteSpace(trimHead : Bool, trimTail : Bool, doublePunctuationSpaces : Bool) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function fixWhiteSpace(trimHead : Bool, trimTail : Bool, doublePunctuationSpaces : Bool) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Returns the length of this string.
@@ -74,7 +74,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @return  the length of the sequence of characters represented by this
 	*          object.
 	*/
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
 	/**
 	* Returns the character at the specified index. An index ranges
@@ -89,7 +89,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	*             argument is negative or not less than the length of this
 	*             string.
 	*/
-	@:overload public function charAt(index : Int) : java.StdTypes.Char16;
+	@:overload @:public public function charAt(index : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Copies characters from this string into the destination character
@@ -112,7 +112,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	*                <code>dst.length</code></ul>
 	* @exception NullPointerException if <code>dst</code> is <code>null</code>
 	*/
-	@:overload public function getChars(srcBegin : Int, srcEnd : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstBegin : Int) : Void;
+	@:overload @:public public function getChars(srcBegin : Int, srcEnd : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstBegin : Int) : Void;
 	
 	/**
 	* Compares this string to the specified <code>String</code>.
@@ -126,7 +126,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @see     java.lang.String#compareTo(java.lang.String)
 	* @see     java.lang.String#equalsIgnoreCase(java.lang.String)
 	*/
-	@:overload public function equals(obj2 : String) : Bool;
+	@:overload @:public public function equals(obj2 : String) : Bool;
 	
 	/**
 	* Compares this string to the specified object.
@@ -141,7 +141,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @see     java.lang.String#compareTo(java.lang.String)
 	* @see     java.lang.String#equalsIgnoreCase(java.lang.String)
 	*/
-	@:overload public function equals(anObject : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
+	@:overload @:public public function equals(anObject : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
 	
 	/**
 	* Compares this string to the specified object.
@@ -156,7 +156,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @see     java.lang.String#compareTo(java.lang.String)
 	* @see     java.lang.String#equalsIgnoreCase(java.lang.String)
 	*/
-	@:overload public function equals(anObject : Dynamic) : Bool;
+	@:overload @:public public function equals(anObject : Dynamic) : Bool;
 	
 	/**
 	* Compares this <code>String</code> to another <code>String</code>,
@@ -173,7 +173,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @see     java.lang.Character#toLowerCase(char)
 	* @see java.lang.Character#toUpperCase(char)
 	*/
-	@:overload public function equalsIgnoreCase(anotherString : String) : Bool;
+	@:overload @:public public function equalsIgnoreCase(anotherString : String) : Bool;
 	
 	/**
 	* Compares two strings lexicographically.
@@ -187,7 +187,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @exception java.lang.NullPointerException if <code>anotherString</code>
 	*          is <code>null</code>.
 	*/
-	@:overload public function compareTo(anotherString : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
+	@:overload @:public public function compareTo(anotherString : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
 	
 	/**
 	* Compares two strings lexicographically, ignoring case considerations.
@@ -207,7 +207,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @see     java.text.Collator#compare(String, String)
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function compareToIgnoreCase(str : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
+	@:require(java2) @:overload @:public public function compareToIgnoreCase(str : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
 	
 	/**
 	* Tests if this string starts with the specified prefix beginning
@@ -228,7 +228,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @exception java.lang.NullPointerException if <code>prefix</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function startsWith(prefix : String, toffset : Int) : Bool;
+	@:overload @:public public function startsWith(prefix : String, toffset : Int) : Bool;
 	
 	/**
 	* Tests if this string starts with the specified prefix beginning
@@ -249,7 +249,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @exception java.lang.NullPointerException if <code>prefix</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString, toffset : Int) : Bool;
+	@:overload @:public public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString, toffset : Int) : Bool;
 	
 	/**
 	* Tests if this string starts with the specified prefix.
@@ -266,7 +266,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	*          <code>null</code>.
 	* @since   JDK1. 0
 	*/
-	@:overload public function startsWith(prefix : String) : Bool;
+	@:overload @:public public function startsWith(prefix : String) : Bool;
 	
 	/**
 	* Tests if this string starts with the specified prefix.
@@ -283,7 +283,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	*          <code>null</code>.
 	* @since   JDK1. 0
 	*/
-	@:overload public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
+	@:overload @:public public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
 	
 	/**
 	* Tests if this string ends with the specified suffix.
@@ -298,7 +298,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @exception java.lang.NullPointerException if <code>suffix</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function endsWith(suffix : String) : Bool;
+	@:overload @:public public function endsWith(suffix : String) : Bool;
 	
 	/**
 	* Returns a hashcode for this string. The hashcode for a
@@ -313,7 +313,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	*
 	* @return  a hash code value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -332,7 +332,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	*          character sequence represented by this object, or
 	*          <code>-1</code> if the character does not occur.
 	*/
-	@:overload public function indexOf(ch : Int) : Int;
+	@:overload @:public public function indexOf(ch : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -362,7 +362,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	*          than or equal to <code>fromIndex</code>, or <code>-1</code>
 	*          if the character does not occur.
 	*/
-	@:overload public function indexOf(ch : Int, fromIndex : Int) : Int;
+	@:overload @:public public function indexOf(ch : Int, fromIndex : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the last occurrence of the
@@ -379,7 +379,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	*          character sequence represented by this object, or
 	*          <code>-1</code> if the character does not occur.
 	*/
-	@:overload public function lastIndexOf(ch : Int) : Int;
+	@:overload @:public public function lastIndexOf(ch : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the last occurrence of the
@@ -404,7 +404,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	*          than or equal to <code>fromIndex</code>, or <code>-1</code>
 	*          if the character does not occur before that point.
 	*/
-	@:overload public function lastIndexOf(ch : Int, fromIndex : Int) : Int;
+	@:overload @:public public function lastIndexOf(ch : Int, fromIndex : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -423,7 +423,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function indexOf(str : String) : Int;
+	@:overload @:public public function indexOf(str : String) : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -442,7 +442,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function indexOf(str : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
+	@:overload @:public public function indexOf(str : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -470,7 +470,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>
 	*/
-	@:overload public function indexOf(str : String, fromIndex : Int) : Int;
+	@:overload @:public public function indexOf(str : String, fromIndex : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the rightmost occurrence
@@ -490,7 +490,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @exception java.lang.NullPointerException  if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function lastIndexOf(str : String) : Int;
+	@:overload @:public public function lastIndexOf(str : String) : Int;
 	
 	/**
 	* Returns the index within this string of the last occurrence of
@@ -512,7 +512,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function lastIndexOf(str : String, fromIndex : Int) : Int;
+	@:overload @:public public function lastIndexOf(str : String, fromIndex : Int) : Int;
 	
 	/**
 	* Returns a new string that is a substring of this string. The
@@ -531,7 +531,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	*             <code>beginIndex</code> is negative or larger than the
 	*             length of this <code>String</code> object.
 	*/
-	@:overload public function substring(beginIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function substring(beginIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Returns a new string that is a substring of this string. The
@@ -549,7 +549,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	*             <code>beginIndex</code> is larger than
 	*             <code>endIndex</code>.
 	*/
-	@:overload public function substring(beginIndex : Int, endIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function substring(beginIndex : Int, endIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Concatenates the specified string to the end of this string.
@@ -561,7 +561,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function concat(str : String) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function concat(str : String) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Converts all of the characters in this <code>String</code> to lower
@@ -572,7 +572,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @see     java.lang.Character#toLowerCase(char)
 	* @see     java.lang.String#toUpperCase(Locale)
 	*/
-	@:overload public function toLowerCase(locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function toLowerCase(locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Converts all of the characters in this <code>String</code> to lower
@@ -584,7 +584,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @see     java.lang.Character#toLowerCase(char)
 	* @see     java.lang.String#toLowerCase(Locale)
 	*/
-	@:overload public function toLowerCase() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function toLowerCase() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Converts all of the characters in this <code>String</code> to upper
@@ -594,7 +594,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @see     java.lang.Character#toUpperCase(char)
 	* @see     java.lang.String#toLowerCase(Locale)
 	*/
-	@:overload public function toUpperCase(locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function toUpperCase(locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Converts all of the characters in this <code>String</code> to upper
@@ -622,7 +622,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @see     java.lang.Character#toUpperCase(char)
 	* @see     java.lang.String#toUpperCase(Locale)
 	*/
-	@:overload public function toUpperCase() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function toUpperCase() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Removes white space from both ends of this string.
@@ -653,21 +653,21 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	*
 	* @return  this string, with white space removed from the front and end.
 	*/
-	@:overload public function trim() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function trim() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* This object (which is already a string!) is itself returned.
 	*
 	* @return  the string itself.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Tell if this object contains a java String object.
 	*
 	* @return true if this XMLString can return a string without creating one.
 	*/
-	@:overload public function hasString() : Bool;
+	@:overload @:public public function hasString() : Bool;
 	
 	/**
 	* Convert a string to a double -- Allowed input is in fixed
@@ -676,7 +676,7 @@ extern class XMLStringDefault implements com.sun.org.apache.xml.internal.utils.X
 	* @return A double value representation of the string, or return Double.NaN
 	* if the string can not be converted.
 	*/
-	@:overload public function toDouble() : Float;
+	@:overload @:public public function toDouble() : Float;
 	
 	
 }

@@ -44,7 +44,7 @@ extern class DOMImplementationRegistry
 	* The system property to specify the
 	* DOMImplementationSource class names.
 	*/
-	public static var PROPERTY(default, null) : String;
+	@:public @:static @:final public static var PROPERTY(default, null) : String;
 	
 	/**
 	* Obtain a new instance of a <code>DOMImplementationRegistry</code>.
@@ -73,7 +73,7 @@ extern class DOMImplementationRegistry
 	*     If any specified class does not implement
 	* <code>DOMImplementationSource</code>
 	*/
-	@:overload public static function newInstance() : org.w3c.dom.bootstrap.DOMImplementationRegistry;
+	@:overload @:public @:static public static function newInstance() : org.w3c.dom.bootstrap.DOMImplementationRegistry;
 	
 	/**
 	* Return the first implementation that has the desired
@@ -87,7 +87,7 @@ extern class DOMImplementationRegistry
 	* @return An implementation that has the desired features,
 	*         or <code>null</code> if none found.
 	*/
-	@:overload public function getDOMImplementation(features : String) : org.w3c.dom.DOMImplementation;
+	@:overload @:public public function getDOMImplementation(features : String) : org.w3c.dom.DOMImplementation;
 	
 	/**
 	* Return a list of implementations that support the
@@ -100,14 +100,14 @@ extern class DOMImplementationRegistry
 	*            This is something like: "XML 1.0 Traversal +Events 2.0"
 	* @return A list of DOMImplementations that support the desired features.
 	*/
-	@:overload public function getDOMImplementationList(features : String) : org.w3c.dom.DOMImplementationList;
+	@:overload @:public public function getDOMImplementationList(features : String) : org.w3c.dom.DOMImplementationList;
 	
 	/**
 	* Register an implementation.
 	*
 	* @param s The source to be registered, may not be <code>null</code>
 	*/
-	@:overload public function addSource(s : org.w3c.dom.DOMImplementationSource) : Void;
+	@:overload @:public public function addSource(s : org.w3c.dom.DOMImplementationSource) : Void;
 	
 	
 }

@@ -37,7 +37,7 @@ extern class InvalidParameterException extends java.lang.IllegalArgumentExceptio
 	* A detail message is a String that describes this particular
 	* exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an InvalidParameterException with the specified
@@ -46,7 +46,7 @@ extern class InvalidParameterException extends java.lang.IllegalArgumentExceptio
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

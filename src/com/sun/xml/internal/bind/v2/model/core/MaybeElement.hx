@@ -32,7 +32,7 @@ extern interface MaybeElement<T, C> extends com.sun.xml.internal.bind.v2.model.c
 	* Note that when this is true, the class is bound to both an element
 	* and a type.
 	*/
-	@:overload public function isElement() : Bool;
+	@:overload @:public @:public public function isElement() : Bool;
 	
 	/**
 	* Gets the element name of the class, if the class is bound
@@ -41,7 +41,7 @@ extern interface MaybeElement<T, C> extends com.sun.xml.internal.bind.v2.model.c
 	* @return
 	*      non-null iff {@link #isElement()}.
 	*/
-	@:overload public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public @:public public function getElementName() : javax.xml.namespace.QName;
 	
 	/**
 	* Returns the {@link Element} aspect of this {@link ClassInfo}.
@@ -49,7 +49,7 @@ extern interface MaybeElement<T, C> extends com.sun.xml.internal.bind.v2.model.c
 	* @return
 	*      null if {@link #isElement()}==false, non-null if {@link #isElement()}==true.
 	*/
-	@:overload public function asElement() : com.sun.xml.internal.bind.v2.model.core.Element<T, C>;
+	@:overload @:public @:public public function asElement() : com.sun.xml.internal.bind.v2.model.core.Element<T, C>;
 	
 	
 }

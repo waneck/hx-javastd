@@ -25,33 +25,33 @@ package com.sun.tools.jdi;
 */
 extern class IntegerValueImpl extends com.sun.tools.jdi.PrimitiveValueImpl implements com.sun.jdi.IntegerValue
 {
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload public function compareTo(obj : com.sun.jdi.IntegerValue) : Int;
+	@:overload @:public public function compareTo(obj : com.sun.jdi.IntegerValue) : Int;
 	
-	@:overload override public function type() : com.sun.jdi.Type;
+	@:overload @:public override public function type() : com.sun.jdi.Type;
 	
-	@:overload public function value() : Int;
+	@:overload @:public public function value() : Int;
 	
-	@:overload override public function booleanValue() : Bool;
+	@:overload @:public override public function booleanValue() : Bool;
 	
-	@:overload override public function byteValue() : java.StdTypes.Int8;
+	@:overload @:public override public function byteValue() : java.StdTypes.Int8;
 	
-	@:overload override public function charValue() : java.StdTypes.Char16;
+	@:overload @:public override public function charValue() : java.StdTypes.Char16;
 	
-	@:overload override public function shortValue() : java.StdTypes.Int16;
+	@:overload @:public override public function shortValue() : java.StdTypes.Int16;
 	
-	@:overload override public function intValue() : Int;
+	@:overload @:public override public function intValue() : Int;
 	
-	@:overload override public function longValue() : haxe.Int64;
+	@:overload @:public override public function longValue() : haxe.Int64;
 	
-	@:overload override public function floatValue() : Single;
+	@:overload @:public override public function floatValue() : Single;
 	
-	@:overload override public function doubleValue() : Float;
+	@:overload @:public override public function doubleValue() : Float;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

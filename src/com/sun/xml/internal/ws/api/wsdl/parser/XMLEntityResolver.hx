@@ -37,19 +37,19 @@ extern interface XMLEntityResolver
 	/**
 	* System ID of the document being parsed.
 	*/
-	public var systemId(default, null) : java.net.URL;
+	@:public @:final public var systemId(default, null) : java.net.URL;
 	
 	/**
 	* The parser instance parsing the infoset.
 	*/
-	public var parser(default, null) : javax.xml.stream.XMLStreamReader;
+	@:public @:final public var parser(default, null) : javax.xml.stream.XMLStreamReader;
 	
-	@:overload public function new(systemId : java.net.URL, parser : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function new(systemId : java.net.URL, parser : javax.xml.stream.XMLStreamReader) : Void;
 	
 	/**
 	* Creates a {@link Parser} that reads from {@link SDDocumentSource}.
 	*/
-	@:overload public function new(doc : com.sun.xml.internal.ws.api.server.SDDocumentSource) : Void;
+	@:overload @:public public function new(doc : com.sun.xml.internal.ws.api.server.SDDocumentSource) : Void;
 	
 	
 }

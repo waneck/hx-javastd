@@ -36,28 +36,28 @@ package sun.jvmstat.perfdata.monitor;
 	/**
 	* The buffer containing the instrumentation data.
 	*/
-	private var buffer : java.nio.ByteBuffer;
+	@:protected private var buffer : java.nio.ByteBuffer;
 	
 	/**
 	* A Map of monitor objects found in the instrumentation buffer.
 	*/
-	private var monitors : java.util.Map<String, sun.jvmstat.monitor.Monitor>;
+	@:protected private var monitors : java.util.Map<String, sun.jvmstat.monitor.Monitor>;
 	
 	/**
 	* The Local Java Virtual Machine Identifier for this buffer.
 	*/
-	private var lvmid : Int;
+	@:protected private var lvmid : Int;
 	
 	/**
 	* A Map of monitor object names to aliases as read in from the alias map
 	* file.
 	*/
-	private var aliasMap : java.util.Map<String, java.util.ArrayList<String>>;
+	@:protected private var aliasMap : java.util.Map<String, java.util.ArrayList<String>>;
 	
 	/**
 	* A cache of resolved monitor aliases.
 	*/
-	private var aliasCache : java.util.Map<Dynamic, Dynamic>;
+	@:protected private var aliasCache : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* Constructor.
@@ -66,7 +66,7 @@ package sun.jvmstat.perfdata.monitor;
 	* @param lvmid the Local Java Virtual Machine Identifier for this
 	*              instrumentation buffer.
 	*/
-	@:overload private function new(buffer : java.nio.ByteBuffer, lvmid : Int) : Void;
+	@:overload @:protected private function new(buffer : java.nio.ByteBuffer, lvmid : Int) : Void;
 	
 	/**
 	* Get the Local Java Virtual Machine Identifier, or <em>lvmid</em>
@@ -74,7 +74,7 @@ package sun.jvmstat.perfdata.monitor;
 	*
 	* @return int - the lvmid
 	*/
-	@:overload public function getLocalVmId() : Int;
+	@:overload @:public public function getLocalVmId() : Int;
 	
 	/**
 	* Get a copy of the raw instrumentation data.
@@ -84,20 +84,20 @@ package sun.jvmstat.perfdata.monitor;
 	*
 	* @return byte[] - a copy of the bytes in the instrumentation buffer.
 	*/
-	@:overload public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Get the capacity of the instrumentation buffer.
 	*
 	* @return int - the capacity, or size, of the instrumentation buffer.
 	*/
-	@:overload public function getCapacity() : Int;
+	@:overload @:public public function getCapacity() : Int;
 	
 	/**
 	* Find the Monitor object for the named counter by using one of its
 	* aliases.
 	*/
-	@:overload private function findByAlias(name : String) : sun.jvmstat.monitor.Monitor;
+	@:overload @:protected private function findByAlias(name : String) : sun.jvmstat.monitor.Monitor;
 	
 	/**
 	* Find a named Instrumentation object.
@@ -118,7 +118,7 @@ package sun.jvmstat.perfdata.monitor;
 	* @throws MonitorException Thrown if an error occurs while communicating
 	*                          with the target Java Virtual Machine.
 	*/
-	@:overload public function findByName(name : String) : sun.jvmstat.monitor.Monitor;
+	@:overload @:public public function findByName(name : String) : sun.jvmstat.monitor.Monitor;
 	
 	/**
 	* Find all Instrumentation objects with names matching the given pattern.
@@ -137,7 +137,7 @@ package sun.jvmstat.perfdata.monitor;
 	*                          with the target Java Virtual Machine.
 	* @see java.util.regex.Pattern
 	*/
-	@:overload public function findByPattern(patternString : String) : java.util.List<sun.jvmstat.monitor.Monitor>;
+	@:overload @:public public function findByPattern(patternString : String) : java.util.List<sun.jvmstat.monitor.Monitor>;
 	
 	/**
 	* Get a list of the inserted and removed monitors since last called.
@@ -147,7 +147,7 @@ package sun.jvmstat.perfdata.monitor;
 	* @throws MonitorException Thrown if communications errors occur
 	*                          while communicating with the target.
 	*/
-	@:overload public function getMonitorStatus() : sun.jvmstat.perfdata.monitor.MonitorStatus;
+	@:overload @:public public function getMonitorStatus() : sun.jvmstat.perfdata.monitor.MonitorStatus;
 	
 	/**
 	* get the list of inserted and removed monitors since last called.
@@ -156,7 +156,7 @@ package sun.jvmstat.perfdata.monitor;
 	* @throws MonitorException Thrown if communications errors occur
 	*                          while communicating with the target.
 	*/
-	@:overload @:abstract private function getMonitorStatus(m : java.util.Map<String, sun.jvmstat.monitor.Monitor>) : sun.jvmstat.perfdata.monitor.MonitorStatus;
+	@:overload @:protected @:abstract private function getMonitorStatus(m : java.util.Map<String, sun.jvmstat.monitor.Monitor>) : sun.jvmstat.perfdata.monitor.MonitorStatus;
 	
 	/**
 	* build the map of Monitor objects.
@@ -165,7 +165,7 @@ package sun.jvmstat.perfdata.monitor;
 	* @throws MonitorException Thrown if communications errors occur
 	*                          while communicating with the target.
 	*/
-	@:overload @:abstract private function buildMonitorMap(m : java.util.Map<String, sun.jvmstat.monitor.Monitor>) : Void;
+	@:overload @:protected @:abstract private function buildMonitorMap(m : java.util.Map<String, sun.jvmstat.monitor.Monitor>) : Void;
 	
 	/**
 	* get the new Monitor objects from the Map of Monitor objects.
@@ -174,7 +174,7 @@ package sun.jvmstat.perfdata.monitor;
 	* @throws MonitorException Thrown if communications errors occur
 	*                          while communicating with the target.
 	*/
-	@:overload @:abstract private function getNewMonitors(m : java.util.Map<String, sun.jvmstat.monitor.Monitor>) : Void;
+	@:overload @:protected @:abstract private function getNewMonitors(m : java.util.Map<String, sun.jvmstat.monitor.Monitor>) : Void;
 	
 	
 }

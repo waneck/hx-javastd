@@ -44,7 +44,7 @@ extern class ByteArrayTagOrder implements java.util.Comparator<java.NativeArray<
 	* @exception <code>ClassCastException</code>
 	* if either argument is not a byte array.
 	*/
-	@:overload @:final public function compare(bytes1 : java.NativeArray<java.StdTypes.Int8>, bytes2 : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public @:final public function compare(bytes1 : java.NativeArray<java.StdTypes.Int8>, bytes2 : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	
 }

@@ -37,25 +37,25 @@ extern interface LocatorEx extends org.xml.sax.Locator
 */
 @:native('com$sun$xml$internal$bind$v2$runtime$unmarshaller$LocatorEx$Snapshot') extern class LocatorEx_Snapshot implements com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx implements javax.xml.bind.ValidationEventLocator
 {
-	@:overload public function new(loc : com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx) : Void;
+	@:overload @:public public function new(loc : com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx) : Void;
 	
-	@:overload public function getObject() : Dynamic;
+	@:overload @:public public function getObject() : Dynamic;
 	
-	@:overload public function getNode() : org.w3c.dom.Node;
+	@:overload @:public public function getNode() : org.w3c.dom.Node;
 	
-	@:overload public function getOffset() : Int;
+	@:overload @:public public function getOffset() : Int;
 	
-	@:overload public function getURL() : java.net.URL;
+	@:overload @:public public function getURL() : java.net.URL;
 	
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
-	@:overload public function getLocation() : javax.xml.bind.ValidationEventLocator;
+	@:overload @:public public function getLocation() : javax.xml.bind.ValidationEventLocator;
 	
 	
 }

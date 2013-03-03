@@ -28,7 +28,7 @@ extern class AbstractElementVisitor6<R, P> implements javax.lang.model.element.E
 	/**
 	* Constructor for concrete subclasses to call.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Visits any program element as if by passing itself to that
@@ -40,7 +40,7 @@ extern class AbstractElementVisitor6<R, P> implements javax.lang.model.element.E
 	* @param p  a visitor-specified parameter
 	* @return a visitor-specified result
 	*/
-	@:overload @:final public function visit(e : javax.lang.model.element.Element, p : P) : R;
+	@:overload @:public @:final public function visit(e : javax.lang.model.element.Element, p : P) : R;
 	
 	/**
 	* Visits any program element as if by passing itself to that
@@ -52,7 +52,7 @@ extern class AbstractElementVisitor6<R, P> implements javax.lang.model.element.E
 	* @param e  the element to visit
 	* @return a visitor-specified result
 	*/
-	@:overload @:final public function visit(e : javax.lang.model.element.Element) : R;
+	@:overload @:public @:final public function visit(e : javax.lang.model.element.Element) : R;
 	
 	/**
 	* {@inheritDoc}
@@ -68,7 +68,7 @@ extern class AbstractElementVisitor6<R, P> implements javax.lang.model.element.E
 	* @throws UnknownElementException
 	*          a visitor implementation may optionally throw this exception
 	*/
-	@:overload public function visitUnknown(e : javax.lang.model.element.Element, p : P) : R;
+	@:overload @:public public function visitUnknown(e : javax.lang.model.element.Element, p : P) : R;
 	
 	/**
 	* Visits a type parameter element.
@@ -76,7 +76,7 @@ extern class AbstractElementVisitor6<R, P> implements javax.lang.model.element.E
 	* @param p  a visitor-specified parameter
 	* @return a visitor-specified result
 	*/
-	@:overload public function visitTypeParameter(e : javax.lang.model.element.TypeParameterElement, p : P) : R;
+	@:overload @:public public function visitTypeParameter(e : javax.lang.model.element.TypeParameterElement, p : P) : R;
 	
 	/**
 	* Visits a package element.
@@ -84,7 +84,7 @@ extern class AbstractElementVisitor6<R, P> implements javax.lang.model.element.E
 	* @param p  a visitor-specified parameter
 	* @return a visitor-specified result
 	*/
-	@:overload public function visitPackage(e : javax.lang.model.element.PackageElement, p : P) : R;
+	@:overload @:public public function visitPackage(e : javax.lang.model.element.PackageElement, p : P) : R;
 	
 	/**
 	* Visits a variable element.
@@ -92,7 +92,7 @@ extern class AbstractElementVisitor6<R, P> implements javax.lang.model.element.E
 	* @param p  a visitor-specified parameter
 	* @return a visitor-specified result
 	*/
-	@:overload public function visitVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
+	@:overload @:public public function visitVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
 	
 	/**
 	* Visits an executable element.
@@ -100,7 +100,7 @@ extern class AbstractElementVisitor6<R, P> implements javax.lang.model.element.E
 	* @param p  a visitor-specified parameter
 	* @return a visitor-specified result
 	*/
-	@:overload public function visitExecutable(e : javax.lang.model.element.ExecutableElement, p : P) : R;
+	@:overload @:public public function visitExecutable(e : javax.lang.model.element.ExecutableElement, p : P) : R;
 	
 	/**
 	* Visits a type element.
@@ -108,7 +108,7 @@ extern class AbstractElementVisitor6<R, P> implements javax.lang.model.element.E
 	* @param p  a visitor-specified parameter
 	* @return a visitor-specified result
 	*/
-	@:overload public function visitType(e : javax.lang.model.element.TypeElement, p : P) : R;
+	@:overload @:public public function visitType(e : javax.lang.model.element.TypeElement, p : P) : R;
 	
 	
 }

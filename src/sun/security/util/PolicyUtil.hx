@@ -32,13 +32,13 @@ extern class PolicyUtil
 	* this is not a problem but in the meantime this fix helps reduce
 	* start up time noticeably for the new launcher. -- DAC
 	*/
-	@:overload public static function getInputStream(url : java.net.URL) : java.io.InputStream;
+	@:overload @:public @:static public static function getInputStream(url : java.net.URL) : java.io.InputStream;
 	
 	/**
 	* this is intended for use by policytool and the policy parser to
 	* instantiate a KeyStore from the information in the GUI/policy file
 	*/
-	@:overload public static function getKeyStore(policyUrl : java.net.URL, keyStoreName : String, keyStoreType : String, keyStoreProvider : String, storePassURL : String, debug : sun.security.util.Debug) : java.security.KeyStore;
+	@:overload @:public @:static public static function getKeyStore(policyUrl : java.net.URL, keyStoreName : String, keyStoreType : String, keyStoreProvider : String, storePassURL : String, debug : sun.security.util.Debug) : java.security.KeyStore;
 	
 	
 }

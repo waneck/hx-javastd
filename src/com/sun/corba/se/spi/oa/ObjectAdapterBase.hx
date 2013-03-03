@@ -25,59 +25,59 @@ package com.sun.corba.se.spi.oa;
 */
 extern class ObjectAdapterBase extends org.omg.CORBA.LocalObject implements com.sun.corba.se.spi.oa.ObjectAdapter
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload @:final public function iorWrapper() : com.sun.corba.se.impl.logging.POASystemException;
+	@:overload @:public @:final public function iorWrapper() : com.sun.corba.se.impl.logging.POASystemException;
 	
-	@:overload @:final public function lifecycleWrapper() : com.sun.corba.se.impl.logging.POASystemException;
+	@:overload @:public @:final public function lifecycleWrapper() : com.sun.corba.se.impl.logging.POASystemException;
 	
-	@:overload @:final public function omgLifecycleWrapper() : com.sun.corba.se.impl.logging.OMGSystemException;
+	@:overload @:public @:final public function omgLifecycleWrapper() : com.sun.corba.se.impl.logging.OMGSystemException;
 	
-	@:overload @:final public function invocationWrapper() : com.sun.corba.se.impl.logging.POASystemException;
+	@:overload @:public @:final public function invocationWrapper() : com.sun.corba.se.impl.logging.POASystemException;
 	
-	@:overload @:final public function omgInvocationWrapper() : com.sun.corba.se.impl.logging.OMGSystemException;
+	@:overload @:public @:final public function omgInvocationWrapper() : com.sun.corba.se.impl.logging.OMGSystemException;
 	
 	/*
 	* This creates the complete template.
 	* When it is done, reference creation can proceed.
 	*/
-	@:overload @:final public function initializeTemplate(oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate, notifyORB : Bool, policies : com.sun.corba.se.impl.oa.poa.Policies, codebase : String, objectAdapterManagerId : String, objectAdapterId : com.sun.corba.se.spi.ior.ObjectAdapterId) : Void;
+	@:overload @:final @:public public function initializeTemplate(oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate, notifyORB : Bool, policies : com.sun.corba.se.impl.oa.poa.Policies, codebase : String, objectAdapterManagerId : String, objectAdapterId : com.sun.corba.se.spi.ior.ObjectAdapterId) : Void;
 	
-	@:overload @:final public function makeObject(repId : String, oid : java.NativeArray<java.StdTypes.Int8>) : org.omg.CORBA.Object;
+	@:overload @:final @:public public function makeObject(repId : String, oid : java.NativeArray<java.StdTypes.Int8>) : org.omg.CORBA.Object;
 	
-	@:overload @:final public function getAdapterId() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:final @:public public function getAdapterId() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:final public function getORB() : com.sun.corba.se.spi.orb.ORB;
+	@:overload @:final @:public public function getORB() : com.sun.corba.se.spi.orb.ORB;
 	
-	@:overload @:abstract public function getEffectivePolicy(type : Int) : org.omg.CORBA.Policy;
+	@:overload @:abstract @:public public function getEffectivePolicy(type : Int) : org.omg.CORBA.Policy;
 	
-	@:overload @:final public function getIORTemplate() : com.sun.corba.se.spi.ior.IORTemplate;
+	@:overload @:final @:public public function getIORTemplate() : com.sun.corba.se.spi.ior.IORTemplate;
 	
-	@:overload @:abstract public function getManagerId() : Int;
+	@:overload @:abstract @:public public function getManagerId() : Int;
 	
-	@:overload @:abstract public function getState() : java.StdTypes.Int16;
+	@:overload @:abstract @:public public function getState() : java.StdTypes.Int16;
 	
-	@:overload @:final public function getAdapterTemplate() : org.omg.PortableInterceptor.ObjectReferenceTemplate;
+	@:overload @:final @:public public function getAdapterTemplate() : org.omg.PortableInterceptor.ObjectReferenceTemplate;
 	
-	@:overload @:final public function getCurrentFactory() : org.omg.PortableInterceptor.ObjectReferenceFactory;
+	@:overload @:final @:public public function getCurrentFactory() : org.omg.PortableInterceptor.ObjectReferenceFactory;
 	
-	@:overload @:final public function setCurrentFactory(factory : org.omg.PortableInterceptor.ObjectReferenceFactory) : Void;
+	@:overload @:final @:public public function setCurrentFactory(factory : org.omg.PortableInterceptor.ObjectReferenceFactory) : Void;
 	
-	@:overload @:abstract public function getLocalServant(objectId : java.NativeArray<java.StdTypes.Int8>) : org.omg.CORBA.Object;
+	@:overload @:abstract @:public public function getLocalServant(objectId : java.NativeArray<java.StdTypes.Int8>) : org.omg.CORBA.Object;
 	
-	@:overload @:abstract public function getInvocationServant(info : com.sun.corba.se.spi.oa.OAInvocationInfo) : Void;
+	@:overload @:abstract @:public public function getInvocationServant(info : com.sun.corba.se.spi.oa.OAInvocationInfo) : Void;
 	
-	@:overload @:abstract public function returnServant() : Void;
+	@:overload @:abstract @:public public function returnServant() : Void;
 	
-	@:overload @:abstract public function enter() : Void;
+	@:overload @:abstract @:public public function enter() : Void;
 	
-	@:overload @:abstract public function exit() : Void;
+	@:overload @:abstract @:public public function exit() : Void;
 	
-	@:overload @:abstract private function getObjectCopierFactory() : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
+	@:overload @:abstract @:protected private function getObjectCopierFactory() : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
 	
-	@:overload public function makeInvocationInfo(objectId : java.NativeArray<java.StdTypes.Int8>) : com.sun.corba.se.spi.oa.OAInvocationInfo;
+	@:overload @:public public function makeInvocationInfo(objectId : java.NativeArray<java.StdTypes.Int8>) : com.sun.corba.se.spi.oa.OAInvocationInfo;
 	
-	@:overload @:abstract public function getInterfaces(servant : org.omg.CORBA.Object, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
+	@:overload @:abstract @:public public function getInterfaces(servant : org.omg.CORBA.Object, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
 	
 }

@@ -29,11 +29,11 @@ package com.sun.java.util.jar.pack;
 	* Interface for encoding and decoding int arrays using bytewise codes.
 	* @author John Rose
 	*/
-	@:overload public function readArrayFrom(_in : java.io.InputStream, a : java.NativeArray<Int>, start : Int, end : Int) : Void;
+	@:overload @:public public function readArrayFrom(_in : java.io.InputStream, a : java.NativeArray<Int>, start : Int, end : Int) : Void;
 	
-	@:overload public function writeArrayTo(out : java.io.OutputStream, a : java.NativeArray<Int>, start : Int, end : Int) : Void;
+	@:overload @:public public function writeArrayTo(out : java.io.OutputStream, a : java.NativeArray<Int>, start : Int, end : Int) : Void;
 	
-	@:overload public function getMetaCoding(dflt : com.sun.java.util.jar.pack.Coding) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getMetaCoding(dflt : com.sun.java.util.jar.pack.Coding) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

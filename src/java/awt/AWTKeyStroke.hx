@@ -54,7 +54,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	*
 	* @see #getAWTKeyStroke
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs an <code>AWTKeyStroke</code> with the specified
@@ -70,7 +70,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	*        to a key release; <code>false</code> otherwise
 	* @see #getAWTKeyStroke
 	*/
-	@:overload private function new(keyChar : java.StdTypes.Char16, keyCode : Int, modifiers : Int, onKeyRelease : Bool) : Void;
+	@:overload @:protected private function new(keyChar : java.StdTypes.Char16, keyCode : Int, modifiers : Int, onKeyRelease : Bool) : Void;
 	
 	/**
 	* Registers a new class which the factory methods in
@@ -91,7 +91,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	*         <code>AWTKeyStroke</code>, or a class derived from
 	*         <code>AWTKeyStroke</code>
 	*/
-	@:overload private static function registerSubclass(subclass : Class<Dynamic>) : Void;
+	@:overload @:protected @:static private static function registerSubclass(subclass : Class<Dynamic>) : Void;
 	
 	/**
 	* Returns a shared instance of an <code>AWTKeyStroke</code>
@@ -101,7 +101,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	* @param keyChar the character value for a keyboard key
 	* @return an <code>AWTKeyStroke</code> object for that key
 	*/
-	@:overload public static function getAWTKeyStroke(keyChar : java.StdTypes.Char16) : java.awt.AWTKeyStroke;
+	@:overload @:public @:static public static function getAWTKeyStroke(keyChar : java.StdTypes.Char16) : java.awt.AWTKeyStroke;
 	
 	/**
 	* Returns a shared instance of an {@code AWTKeyStroke}
@@ -140,7 +140,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	*
 	* @see java.awt.event.InputEvent
 	*/
-	@:overload public static function getAWTKeyStroke(keyChar : Null<java.StdTypes.Char16>, modifiers : Int) : java.awt.AWTKeyStroke;
+	@:overload @:public @:static public static function getAWTKeyStroke(keyChar : Null<java.StdTypes.Char16>, modifiers : Int) : java.awt.AWTKeyStroke;
 	
 	/**
 	* Returns a shared instance of an <code>AWTKeyStroke</code>,
@@ -186,7 +186,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	* @see java.awt.event.KeyEvent
 	* @see java.awt.event.InputEvent
 	*/
-	@:overload public static function getAWTKeyStroke(keyCode : Int, modifiers : Int, onKeyRelease : Bool) : java.awt.AWTKeyStroke;
+	@:overload @:public @:static public static function getAWTKeyStroke(keyCode : Int, modifiers : Int, onKeyRelease : Bool) : java.awt.AWTKeyStroke;
 	
 	/**
 	* Returns a shared instance of an <code>AWTKeyStroke</code>,
@@ -227,7 +227,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	* @see java.awt.event.KeyEvent
 	* @see java.awt.event.InputEvent
 	*/
-	@:overload public static function getAWTKeyStroke(keyCode : Int, modifiers : Int) : java.awt.AWTKeyStroke;
+	@:overload @:public @:static public static function getAWTKeyStroke(keyCode : Int, modifiers : Int) : java.awt.AWTKeyStroke;
 	
 	/**
 	* Returns an <code>AWTKeyStroke</code> which represents the
@@ -243,7 +243,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	* @throws NullPointerException if <code>anEvent</code> is null
 	* @return the <code>AWTKeyStroke</code> that precipitated the event
 	*/
-	@:overload public static function getAWTKeyStrokeForEvent(anEvent : java.awt.event.KeyEvent) : java.awt.AWTKeyStroke;
+	@:overload @:public @:static public static function getAWTKeyStrokeForEvent(anEvent : java.awt.event.KeyEvent) : java.awt.AWTKeyStroke;
 	
 	/**
 	* Parses a string and returns an <code>AWTKeyStroke</code>.
@@ -272,7 +272,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	* @throws IllegalArgumentException if <code>s</code> is <code>null</code>,
 	*        or is formatted incorrectly
 	*/
-	@:overload public static function getAWTKeyStroke(s : String) : java.awt.AWTKeyStroke;
+	@:overload @:public @:static public static function getAWTKeyStroke(s : String) : java.awt.AWTKeyStroke;
 	
 	/**
 	* Returns the character for this <code>AWTKeyStroke</code>.
@@ -281,7 +281,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	* @see #getAWTKeyStroke(char)
 	* @see KeyEvent#getKeyChar
 	*/
-	@:overload @:final public function getKeyChar() : java.StdTypes.Char16;
+	@:overload @:public @:final public function getKeyChar() : java.StdTypes.Char16;
 	
 	/**
 	* Returns the numeric key code for this <code>AWTKeyStroke</code>.
@@ -290,7 +290,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	* @see #getAWTKeyStroke(int,int)
 	* @see KeyEvent#getKeyCode
 	*/
-	@:overload @:final public function getKeyCode() : Int;
+	@:overload @:public @:final public function getKeyCode() : Int;
 	
 	/**
 	* Returns the modifier keys for this <code>AWTKeyStroke</code>.
@@ -298,7 +298,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	* @return an int containing the modifiers
 	* @see #getAWTKeyStroke(int,int)
 	*/
-	@:overload @:final public function getModifiers() : Int;
+	@:overload @:public @:final public function getModifiers() : Int;
 	
 	/**
 	* Returns whether this <code>AWTKeyStroke</code> represents a key release.
@@ -307,7 +307,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	*          represents a key release; <code>false</code> otherwise
 	* @see #getAWTKeyStroke(int,int,boolean)
 	*/
-	@:overload @:final public function isOnKeyRelease() : Bool;
+	@:overload @:public @:final public function isOnKeyRelease() : Bool;
 	
 	/**
 	* Returns the type of <code>KeyEvent</code> which corresponds to
@@ -318,7 +318,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	*         or <code>KeyEvent.KEY_RELEASED</code>
 	* @see java.awt.event.KeyEvent
 	*/
-	@:overload @:final public function getKeyEventType() : Int;
+	@:overload @:public @:final public function getKeyEventType() : Int;
 	
 	/**
 	* Returns a numeric value for this object that is likely to be unique,
@@ -326,7 +326,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	*
 	* @return an int that represents this object
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns true if this object is identical to the specified object.
@@ -334,7 +334,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	* @param anObject the Object to compare this object to
 	* @return true if the objects are identical
 	*/
-	@:overload @:final public function equals(anObject : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(anObject : Dynamic) : Bool;
 	
 	/**
 	* Returns a string that displays and identifies this object's properties.
@@ -345,7 +345,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	* @return a String representation of this object
 	* @see #getAWTKeyStroke(String)
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a cached instance of <code>AWTKeyStroke</code> (or a subclass of
@@ -353,19 +353,19 @@ extern class AWTKeyStroke implements java.io.Serializable
 	*
 	* @return a cached instance which is equal to this instance
 	*/
-	@:overload private function readResolve() : Dynamic;
+	@:overload @:protected private function readResolve() : Dynamic;
 	
 	
 }
 @:internal extern class VKCollection
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:synchronized public function put(name : String, code : Null<Int>) : Void;
+	@:overload @:public @:synchronized public function put(name : String, code : Null<Int>) : Void;
 	
-	@:overload @:synchronized public function findCode(name : String) : Null<Int>;
+	@:overload @:public @:synchronized public function findCode(name : String) : Null<Int>;
 	
-	@:overload @:synchronized public function findName(code : Null<Int>) : String;
+	@:overload @:public @:synchronized public function findName(code : Null<Int>) : String;
 	
 	
 }

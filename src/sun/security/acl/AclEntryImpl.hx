@@ -36,12 +36,12 @@ extern class AclEntryImpl implements java.security.acl.AclEntry
 	* in the ACL.
 	* @param user The user that is associated with this entry.
 	*/
-	@:overload public function new(user : java.security.Principal) : Void;
+	@:overload @:public public function new(user : java.security.Principal) : Void;
 	
 	/**
 	* Construct a null ACL entry
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets the principal in the entity. If a group or a
@@ -51,19 +51,19 @@ extern class AclEntryImpl implements java.security.acl.AclEntry
 	* @return true if the principal is set, false if there is
 	* one already.
 	*/
-	@:overload public function setPrincipal(user : java.security.Principal) : Bool;
+	@:overload @:public public function setPrincipal(user : java.security.Principal) : Bool;
 	
 	/**
 	* This method sets the ACL to have negative permissions.
 	* That is the user or group is denied the permission set
 	* specified in the entry.
 	*/
-	@:overload public function setNegativePermissions() : Void;
+	@:overload @:public public function setNegativePermissions() : Void;
 	
 	/**
 	* Returns true if this is a negative ACL.
 	*/
-	@:overload public function isNegative() : Bool;
+	@:overload @:public public function isNegative() : Bool;
 	
 	/**
 	* A principal or a group can be associated with multiple
@@ -73,7 +73,7 @@ extern class AclEntryImpl implements java.security.acl.AclEntry
 	* @return true if the permission was added, false if the
 	* permission was already part of the permission set.
 	*/
-	@:overload public function addPermission(permission : java.security.acl.Permission) : Bool;
+	@:overload @:public public function addPermission(permission : java.security.acl.Permission) : Bool;
 	
 	/**
 	* The method disassociates the permission from the Principal
@@ -83,7 +83,7 @@ extern class AclEntryImpl implements java.security.acl.AclEntry
 	* @return true if the permission is removed, false if the
 	* permission is not part of the permission set.
 	*/
-	@:overload public function removePermission(permission : java.security.acl.Permission) : Bool;
+	@:overload @:public public function removePermission(permission : java.security.acl.Permission) : Bool;
 	
 	/**
 	* Checks if the passed permission is part of the allowed
@@ -93,29 +93,29 @@ extern class AclEntryImpl implements java.security.acl.AclEntry
 	* @return true if the permission passed is part of the
 	* permission set in the entry, false otherwise.
 	*/
-	@:overload public function checkPermission(permission : java.security.acl.Permission) : Bool;
+	@:overload @:public public function checkPermission(permission : java.security.acl.Permission) : Bool;
 	
 	/**
 	* return an enumeration of the permissions in this ACL entry.
 	*/
-	@:overload public function permissions() : java.util.Enumeration<java.security.acl.Permission>;
+	@:overload @:public public function permissions() : java.util.Enumeration<java.security.acl.Permission>;
 	
 	/**
 	* Return a string representation of  the contents of the ACL entry.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Clones an AclEntry.
 	*/
-	@:overload @:synchronized public function clone() : Dynamic;
+	@:overload @:public @:synchronized public function clone() : Dynamic;
 	
 	/**
 	* Return the Principal associated in this ACL entry.
 	* The method returns null if the entry uses a group
 	* instead of a principal.
 	*/
-	@:overload public function getPrincipal() : java.security.Principal;
+	@:overload @:public public function getPrincipal() : java.security.Principal;
 	
 	
 }

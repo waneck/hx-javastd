@@ -48,7 +48,7 @@ extern class X509Certificate extends javax.security.cert.Certificate
 	* @exception CertificateException if a class initialization
 	*            or certificate parsing error occurs.
 	*/
-	@:overload @:final public static function getInstance(inStream : java.io.InputStream) : javax.security.cert.X509Certificate;
+	@:overload @:public @:static @:final public static function getInstance(inStream : java.io.InputStream) : javax.security.cert.X509Certificate;
 	
 	/**
 	* Instantiates an X509Certificate object, and initializes it with
@@ -71,7 +71,7 @@ extern class X509Certificate extends javax.security.cert.Certificate
 	* @exception CertificateException if a class initialization
 	*            or certificate parsing error occurs.
 	*/
-	@:overload @:final public static function getInstance(certData : java.NativeArray<java.StdTypes.Int8>) : javax.security.cert.X509Certificate;
+	@:overload @:public @:static @:final public static function getInstance(certData : java.NativeArray<java.StdTypes.Int8>) : javax.security.cert.X509Certificate;
 	
 	/**
 	* Checks that the certificate is currently valid. It is if
@@ -96,7 +96,7 @@ extern class X509Certificate extends javax.security.cert.Certificate
 	* @exception CertificateNotYetValidException if the certificate is not
 	*            yet valid.
 	*/
-	@:overload @:abstract public function checkValidity() : Void;
+	@:overload @:public @:abstract public function checkValidity() : Void;
 	
 	/**
 	* Checks that the specified date is within the certificate's
@@ -111,7 +111,7 @@ extern class X509Certificate extends javax.security.cert.Certificate
 	*            yet valid with respect to the <code>date</code> supplied.
 	* @see #checkValidity()
 	*/
-	@:overload @:abstract public function checkValidity(date : java.util.Date) : Void;
+	@:overload @:public @:abstract public function checkValidity(date : java.util.Date) : Void;
 	
 	/**
 	* Gets the <code>version</code> (version number) value from the
@@ -123,7 +123,7 @@ extern class X509Certificate extends javax.security.cert.Certificate
 	*
 	* @return the version number from the ASN.1 encoding, i.e. 0, 1 or 2.
 	*/
-	@:overload @:abstract public function getVersion() : Int;
+	@:overload @:public @:abstract public function getVersion() : Int;
 	
 	/**
 	* Gets the <code>serialNumber</code> value from the certificate.
@@ -140,7 +140,7 @@ extern class X509Certificate extends javax.security.cert.Certificate
 	*
 	* @return the serial number.
 	*/
-	@:overload @:abstract public function getSerialNumber() : java.math.BigInteger;
+	@:overload @:public @:abstract public function getSerialNumber() : java.math.BigInteger;
 	
 	/**
 	* Gets the <code>issuer</code> (issuer distinguished name) value from
@@ -174,7 +174,7 @@ extern class X509Certificate extends javax.security.cert.Certificate
 	*
 	* @return a Principal whose name is the issuer distinguished name.
 	*/
-	@:overload @:abstract public function getIssuerDN() : java.security.Principal;
+	@:overload @:public @:abstract public function getIssuerDN() : java.security.Principal;
 	
 	/**
 	* Gets the <code>subject</code> (subject distinguished name) value
@@ -190,7 +190,7 @@ extern class X509Certificate extends javax.security.cert.Certificate
 	* @return a Principal whose name is the subject name.
 	* @see #getIssuerDN()
 	*/
-	@:overload @:abstract public function getSubjectDN() : java.security.Principal;
+	@:overload @:public @:abstract public function getSubjectDN() : java.security.Principal;
 	
 	/**
 	* Gets the <code>notBefore</code> date from the validity period of
@@ -210,7 +210,7 @@ extern class X509Certificate extends javax.security.cert.Certificate
 	* @return the start date of the validity period.
 	* @see #checkValidity()
 	*/
-	@:overload @:abstract public function getNotBefore() : java.util.Date;
+	@:overload @:public @:abstract public function getNotBefore() : java.util.Date;
 	
 	/**
 	* Gets the <code>notAfter</code> date from the validity period of
@@ -220,7 +220,7 @@ extern class X509Certificate extends javax.security.cert.Certificate
 	* @return the end date of the validity period.
 	* @see #checkValidity()
 	*/
-	@:overload @:abstract public function getNotAfter() : java.util.Date;
+	@:overload @:public @:abstract public function getNotAfter() : java.util.Date;
 	
 	/**
 	* Gets the signature algorithm name for the certificate
@@ -241,7 +241,7 @@ extern class X509Certificate extends javax.security.cert.Certificate
 	*
 	* @return the signature algorithm name.
 	*/
-	@:overload @:abstract public function getSigAlgName() : String;
+	@:overload @:public @:abstract public function getSigAlgName() : String;
 	
 	/**
 	* Gets the signature algorithm OID string from the certificate.
@@ -255,7 +255,7 @@ extern class X509Certificate extends javax.security.cert.Certificate
 	*
 	* @return the signature algorithm OID string.
 	*/
-	@:overload @:abstract public function getSigAlgOID() : String;
+	@:overload @:public @:abstract public function getSigAlgOID() : String;
 	
 	/**
 	* Gets the DER-encoded signature algorithm parameters from this
@@ -269,7 +269,7 @@ extern class X509Certificate extends javax.security.cert.Certificate
 	* @return the DER-encoded signature algorithm parameters, or
 	*         null if no parameters are present.
 	*/
-	@:overload @:abstract public function getSigAlgParams() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getSigAlgParams() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

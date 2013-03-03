@@ -34,7 +34,7 @@ extern class NTSystem
 	* Instantiate an <code>NTSystem</code> and load
 	* the native library to access the underlying system information.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Get the username for the current NT user.
@@ -43,7 +43,7 @@ extern class NTSystem
 	*
 	* @return the username for the current NT user.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Get the domain for the current NT user.
@@ -52,7 +52,7 @@ extern class NTSystem
 	*
 	* @return the domain for the current NT user.
 	*/
-	@:overload public function getDomain() : String;
+	@:overload @:public public function getDomain() : String;
 	
 	/**
 	* Get a printable SID for the current NT user's domain.
@@ -61,7 +61,7 @@ extern class NTSystem
 	*
 	* @return a printable SID for the current NT user's domain.
 	*/
-	@:overload public function getDomainSID() : String;
+	@:overload @:public public function getDomainSID() : String;
 	
 	/**
 	* Get a printable SID for the current NT user.
@@ -70,7 +70,7 @@ extern class NTSystem
 	*
 	* @return a printable SID for the current NT user.
 	*/
-	@:overload public function getUserSID() : String;
+	@:overload @:public public function getUserSID() : String;
 	
 	/**
 	* Get a printable primary group SID for the current NT user.
@@ -79,7 +79,7 @@ extern class NTSystem
 	*
 	* @return the primary group SID for the current NT user.
 	*/
-	@:overload public function getPrimaryGroupID() : String;
+	@:overload @:public public function getPrimaryGroupID() : String;
 	
 	/**
 	* Get the printable group SIDs for the current NT user.
@@ -88,7 +88,7 @@ extern class NTSystem
 	*
 	* @return the group SIDs for the current NT user.
 	*/
-	@:overload public function getGroupIDs() : java.NativeArray<String>;
+	@:overload @:public public function getGroupIDs() : java.NativeArray<String>;
 	
 	/**
 	* Get an impersonation token for the current NT user.
@@ -97,7 +97,7 @@ extern class NTSystem
 	*
 	* @return an impersonation token for the current NT user.
 	*/
-	@:overload @:synchronized public function getImpersonationToken() : haxe.Int64;
+	@:overload @:public @:synchronized public function getImpersonationToken() : haxe.Int64;
 	
 	
 }

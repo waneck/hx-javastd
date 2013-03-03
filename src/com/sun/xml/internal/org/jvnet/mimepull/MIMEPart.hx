@@ -34,14 +34,14 @@ extern class MIMEPart
 	*
 	* @return data for the part's content
 	*/
-	@:overload public function read() : java.io.InputStream;
+	@:overload @:public public function read() : java.io.InputStream;
 	
 	/**
 	* Cleans up any resources that are held by this part (for e.g. deletes
 	* the temp file that is used to serve this part's content). After
 	* calling this, one shouldn't call {@link #read()} or {@link #readOnce()}
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Can get the attachment part's content only once. The content
@@ -55,23 +55,23 @@ extern class MIMEPart
 	*
 	* @return data for the part's content
 	*/
-	@:overload public function readOnce() : java.io.InputStream;
+	@:overload @:public public function readOnce() : java.io.InputStream;
 	
-	@:overload public function moveTo(f : java.io.File) : Void;
+	@:overload @:public public function moveTo(f : java.io.File) : Void;
 	
 	/**
 	* Returns Content-ID MIME header for this attachment part
 	*
 	* @return Content-ID of the part
 	*/
-	@:overload public function getContentId() : String;
+	@:overload @:public public function getContentId() : String;
 	
 	/**
 	* Returns Content-Type MIME header for this attachment part
 	*
 	* @return Content-Type of the part
 	*/
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
 	/**
 	* Return all the values for the specified header.
@@ -81,16 +81,16 @@ extern class MIMEPart
 	* @param   name header name
 	* @return  list of header values, or null if none
 	*/
-	@:overload public function getHeader(name : String) : java.util.List<String>;
+	@:overload @:public public function getHeader(name : String) : java.util.List<String>;
 	
 	/**
 	* Return all the headers
 	*
 	* @return list of Header objects
 	*/
-	@:overload public function getAllHeaders() : java.util.List<com.sun.xml.internal.org.jvnet.mimepull.Header>;
+	@:overload @:public public function getAllHeaders() : java.util.List<com.sun.xml.internal.org.jvnet.mimepull.Header>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -25,7 +25,7 @@ package com.sun.jmx.remote.internal;
 */
 extern interface Unmarshal
 {
-	@:overload public function get(mo : java.rmi.MarshalledObject<Dynamic>) : Dynamic;
+	@:overload @:public public function get(mo : java.rmi.MarshalledObject<Dynamic>) : Dynamic;
 	
 	
 }

@@ -35,7 +35,7 @@ extern interface DOMAction
 	*
 	* @param accessor DOMAccessor
 	*/
-	@:overload public function run(accessor : com.sun.java.browser.dom.DOMAccessor) : Dynamic;
+	@:overload @:public public function run(accessor : com.sun.java.browser.dom.DOMAccessor) : Dynamic;
 	
 	
 }

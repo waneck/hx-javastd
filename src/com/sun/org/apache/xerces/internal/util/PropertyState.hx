@@ -30,27 +30,27 @@ package com.sun.org.apache.xerces.internal.util;
 */
 extern class PropertyState
 {
-	public var status(default, null) : com.sun.org.apache.xerces.internal.util.Status;
+	@:public @:final public var status(default, null) : com.sun.org.apache.xerces.internal.util.Status;
 	
-	public var state(default, null) : Dynamic;
+	@:public @:final public var state(default, null) : Dynamic;
 	
-	public static var UNKNOWN(default, null) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:public @:static @:final public static var UNKNOWN(default, null) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
-	public static var RECOGNIZED(default, null) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:public @:static @:final public static var RECOGNIZED(default, null) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
-	public static var NOT_SUPPORTED(default, null) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:public @:static @:final public static var NOT_SUPPORTED(default, null) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
-	public static var NOT_RECOGNIZED(default, null) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:public @:static @:final public static var NOT_RECOGNIZED(default, null) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
-	public static var NOT_ALLOWED(default, null) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:public @:static @:final public static var NOT_ALLOWED(default, null) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
-	@:overload public function new(status : com.sun.org.apache.xerces.internal.util.Status, state : Dynamic) : Void;
+	@:overload @:public public function new(status : com.sun.org.apache.xerces.internal.util.Status, state : Dynamic) : Void;
 	
-	@:overload public static function of(status : com.sun.org.apache.xerces.internal.util.Status) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:overload @:public @:static public static function of(status : com.sun.org.apache.xerces.internal.util.Status) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
-	@:overload public static function is(value : Dynamic) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:overload @:public @:static public static function is(value : Dynamic) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
-	@:overload public function isExceptional() : Bool;
+	@:overload @:public public function isExceptional() : Bool;
 	
 	
 }

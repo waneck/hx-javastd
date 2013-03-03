@@ -26,34 +26,34 @@ package com.sun.xml.internal.stream.events;
 extern class DTDEvent extends com.sun.xml.internal.stream.events.DummyEvent implements javax.xml.stream.events.DTD
 {
 	/** Creates a new instance of DTDEvent */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(doctypeDeclaration : String) : Void;
+	@:overload @:public public function new(doctypeDeclaration : String) : Void;
 	
-	@:overload public function setDocumentTypeDeclaration(doctypeDeclaration : String) : Void;
+	@:overload @:public public function setDocumentTypeDeclaration(doctypeDeclaration : String) : Void;
 	
-	@:overload public function getDocumentTypeDeclaration() : String;
+	@:overload @:public public function getDocumentTypeDeclaration() : String;
 	
-	@:overload public function setEntities(entites : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function setEntities(entites : java.util.List<Dynamic>) : Void;
 	
-	@:overload public function getEntities() : java.util.List<Dynamic>;
+	@:overload @:public public function getEntities() : java.util.List<Dynamic>;
 	
-	@:overload public function setNotations(notations : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function setNotations(notations : java.util.List<Dynamic>) : Void;
 	
-	@:overload public function getNotations() : java.util.List<Dynamic>;
+	@:overload @:public public function getNotations() : java.util.List<Dynamic>;
 	
 	/**
 	*Returns an implementation defined representation of the DTD.
 	* This method may return null if no representation is available.
 	*
 	*/
-	@:overload public function getProcessedDTD() : Dynamic;
+	@:overload @:public public function getProcessedDTD() : Dynamic;
 	
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload @:protected override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	
 }

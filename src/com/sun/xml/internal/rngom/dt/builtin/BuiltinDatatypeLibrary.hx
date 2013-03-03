@@ -46,9 +46,9 @@ package com.sun.xml.internal.rngom.dt.builtin;
 */
 extern class BuiltinDatatypeLibrary implements org.relaxng.datatype.DatatypeLibrary
 {
-	@:overload public function createDatatypeBuilder(type : String) : org.relaxng.datatype.DatatypeBuilder;
+	@:overload @:public public function createDatatypeBuilder(type : String) : org.relaxng.datatype.DatatypeBuilder;
 	
-	@:overload public function createDatatype(type : String) : org.relaxng.datatype.Datatype;
+	@:overload @:public public function createDatatype(type : String) : org.relaxng.datatype.Datatype;
 	
 	
 }

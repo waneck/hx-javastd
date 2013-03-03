@@ -64,7 +64,7 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern interface TypedInstruction
 {
-	@:overload public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	
 }

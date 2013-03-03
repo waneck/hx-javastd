@@ -28,16 +28,16 @@ extern class GenericTaggedComponent extends com.sun.corba.se.impl.ior.GenericIde
 	/**
 	* @author
 	*/
-	@:overload public function new(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	@:overload @:public public function new(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
-	@:overload public function new(id : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(id : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* @return org.omg.IOP.TaggedComponent
 	* @exception
 	* @author
 	*/
-	@:overload public function getIOPComponent(orb : org.omg.CORBA.ORB) : org.omg.IOP.TaggedComponent;
+	@:overload @:public public function getIOPComponent(orb : org.omg.CORBA.ORB) : org.omg.IOP.TaggedComponent;
 	
 	
 }

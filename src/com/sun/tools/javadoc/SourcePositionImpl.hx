@@ -27,26 +27,26 @@ extern class SourcePositionImpl implements com.sun.javadoc.SourcePosition
 {
 	/** The source file. Returns null if no file information is
 	*  available. */
-	@:overload public function file() : java.io.File;
+	@:overload @:public public function file() : java.io.File;
 	
 	/** The source file. Returns null if no file information is
 	*  available. */
-	@:overload public function fileObject() : javax.tools.FileObject;
+	@:overload @:public public function fileObject() : javax.tools.FileObject;
 	
 	/** The line in the source file. The first line is numbered 1;
 	*  0 means no line number information is available. */
-	@:overload public function line() : Int;
+	@:overload @:public public function line() : Int;
 	
 	/** The column in the source file. The first column is
 	*  numbered 1; 0 means no column information is available.
 	*  Columns count characters in the input stream; a tab
 	*  advances the column number to the next 8-column tab stop.
 	*/
-	@:overload public function column() : Int;
+	@:overload @:public public function column() : Int;
 	
-	@:overload public static function make(file : javax.tools.FileObject, pos : Int, lineMap : com.sun.tools.javac.util.Position.Position_LineMap) : com.sun.javadoc.SourcePosition;
+	@:overload @:public @:static public static function make(file : javax.tools.FileObject, pos : Int, lineMap : com.sun.tools.javac.util.Position.Position_LineMap) : com.sun.javadoc.SourcePosition;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

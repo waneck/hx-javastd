@@ -35,33 +35,33 @@ package sun.awt.X11;
 */
 extern class XPropertyCache
 {
-	@:overload public static function isCached(window : haxe.Int64, property : sun.awt.X11.XAtom) : Bool;
+	@:overload @:public @:static public static function isCached(window : haxe.Int64, property : sun.awt.X11.XAtom) : Bool;
 	
-	@:overload public static function getCacheEntry(window : haxe.Int64, property : sun.awt.X11.XAtom) : sun.awt.X11.XPropertyCache.XPropertyCache_PropertyCacheEntry;
+	@:overload @:public @:static public static function getCacheEntry(window : haxe.Int64, property : sun.awt.X11.XAtom) : sun.awt.X11.XPropertyCache.XPropertyCache_PropertyCacheEntry;
 	
-	@:overload public static function storeCache(entry : sun.awt.X11.XPropertyCache.XPropertyCache_PropertyCacheEntry, window : haxe.Int64, property : sun.awt.X11.XAtom) : Void;
+	@:overload @:public @:static public static function storeCache(entry : sun.awt.X11.XPropertyCache.XPropertyCache_PropertyCacheEntry, window : haxe.Int64, property : sun.awt.X11.XAtom) : Void;
 	
-	@:overload public static function clearCache(window : haxe.Int64) : Void;
+	@:overload @:public @:static public static function clearCache(window : haxe.Int64) : Void;
 	
-	@:overload public static function clearCache(window : haxe.Int64, property : sun.awt.X11.XAtom) : Void;
+	@:overload @:public @:static public static function clearCache(window : haxe.Int64, property : sun.awt.X11.XAtom) : Void;
 	
-	@:overload public static function isCachingSupported() : Bool;
+	@:overload @:public @:static public static function isCachingSupported() : Bool;
 	
 	
 }
 @:native('sun$awt$X11$XPropertyCache$PropertyCacheEntry') @:internal extern class XPropertyCache_PropertyCacheEntry
 {
-	@:overload public function new(format : Int, numberOfItems : Int, bytesAfter : haxe.Int64, data : haxe.Int64, dataLength : Int) : Void;
+	@:overload @:public public function new(format : Int, numberOfItems : Int, bytesAfter : haxe.Int64, data : haxe.Int64, dataLength : Int) : Void;
 	
-	@:overload public function getFormat() : Int;
+	@:overload @:public public function getFormat() : Int;
 	
-	@:overload public function getNumberOfItems() : Int;
+	@:overload @:public public function getNumberOfItems() : Int;
 	
-	@:overload public function getBytesAfter() : haxe.Int64;
+	@:overload @:public public function getBytesAfter() : haxe.Int64;
 	
-	@:overload public function getData() : haxe.Int64;
+	@:overload @:public public function getData() : haxe.Int64;
 	
-	@:overload public function getDataLength() : Int;
+	@:overload @:public public function getDataLength() : Int;
 	
 	
 }

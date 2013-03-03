@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.wsdl;
 */
 extern class OperationDispatcher
 {
-	@:overload public function new(wsdlModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, seiModel : com.sun.xml.internal.ws.api.model.SEIModel) : Void;
+	@:overload @:public public function new(wsdlModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, seiModel : com.sun.xml.internal.ws.api.model.SEIModel) : Void;
 	
 	/**
 	*
@@ -33,7 +33,7 @@ extern class OperationDispatcher
 	* @return QName of the wsdl operation.
 	* @throws DispatchException if a unique operartion cannot be associated with this packet.
 	*/
-	@:overload public function getWSDLOperationQName(request : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.namespace.QName;
+	@:overload @:public public function getWSDLOperationQName(request : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.namespace.QName;
 	
 	
 }

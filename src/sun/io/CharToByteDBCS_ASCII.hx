@@ -25,33 +25,33 @@ package sun.io;
 */
 extern class CharToByteDBCS_ASCII extends sun.io.CharToByteConverter
 {
-	@:overload public function new(enc : sun.nio.cs.ext.DoubleByte.DoubleByte_Encoder) : Void;
+	@:overload @:public public function new(enc : sun.nio.cs.ext.DoubleByte.DoubleByte_Encoder) : Void;
 	
 	/**
 	* flush out any residual data and reset the buffer state
 	*/
-	@:overload override public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public override public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Character conversion
 	*/
-	@:overload override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outOff : Int, outEnd : Int) : Int;
+	@:overload @:public override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outOff : Int, outEnd : Int) : Int;
 	
 	/**
 	* Resets converter to its initial state.
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* Returns the maximum number of bytes needed to convert a char.
 	*/
-	@:overload override public function getMaxBytesPerChar() : Int;
+	@:overload @:public override public function getMaxBytesPerChar() : Int;
 	
 	/**
 	* Returns true if the given character can be converted to the
 	* target character encoding.
 	*/
-	@:overload override public function canConvert(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canConvert(c : java.StdTypes.Char16) : Bool;
 	
 	
 }

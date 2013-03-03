@@ -25,17 +25,17 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class BufferManagerWriteCollect extends com.sun.corba.se.impl.encoding.BufferManagerWrite
 {
-	@:overload override public function sentFragment() : Bool;
+	@:overload @:public override public function sentFragment() : Bool;
 	
 	/**
 	* Returns the correct buffer size for this type of
 	* buffer manager as set in the ORB.
 	*/
-	@:overload override public function getBufferSize() : Int;
+	@:overload @:public override public function getBufferSize() : Int;
 	
-	@:overload override public function overflow(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
+	@:overload @:public override public function overflow(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
 	
-	@:overload override public function sendMessage() : Void;
+	@:overload @:public override public function sendMessage() : Void;
 	
 	/**
 	* Close the BufferManagerWrite - do any outstanding cleanup.
@@ -43,17 +43,17 @@ extern class BufferManagerWriteCollect extends com.sun.corba.se.impl.encoding.Bu
 	* For a BufferManagerWriteGrow any queued ByteBufferWithInfo must
 	* have its ByteBuffer released to the ByteBufferPool.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$encoding$BufferManagerWriteCollect$BufferManagerWriteCollectIterator') @:internal extern class BufferManagerWriteCollect_BufferManagerWriteCollectIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

@@ -28,11 +28,11 @@ extern class DraconianErrorHandler implements org.xml.sax.ErrorHandler
 	/**
 	* Aborts on the first error.
 	*/
-	@:overload public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function fatalError(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function warning(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(e : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

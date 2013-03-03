@@ -95,7 +95,7 @@ extern class DnsName implements javax.naming.Name
 	/**
 	* Constructs a <tt>DnsName</tt> representing the empty domain name.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <tt>DnsName</tt> representing a given domain name.
@@ -104,50 +104,50 @@ extern class DnsName implements javax.naming.Name
 	* @throws InvalidNameException if <tt>name</tt> does not conform
 	*          to DNS syntax.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Does this domain name follow <em>host name</em> syntax?
 	*/
-	@:overload public function isHostName() : Bool;
+	@:overload @:public public function isHostName() : Bool;
 	
-	@:overload public function getOctets() : java.StdTypes.Int16;
+	@:overload @:public public function getOctets() : java.StdTypes.Int16;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function compareTo(obj : Dynamic) : Int;
+	@:overload @:public public function compareTo(obj : Dynamic) : Int;
 	
-	@:overload public function startsWith(n : javax.naming.Name) : Bool;
+	@:overload @:public public function startsWith(n : javax.naming.Name) : Bool;
 	
-	@:overload public function endsWith(n : javax.naming.Name) : Bool;
+	@:overload @:public public function endsWith(n : javax.naming.Name) : Bool;
 	
-	@:overload public function get(pos : Int) : String;
+	@:overload @:public public function get(pos : Int) : String;
 	
-	@:overload public function getAll() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getAll() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function getPrefix(pos : Int) : javax.naming.Name;
+	@:overload @:public public function getPrefix(pos : Int) : javax.naming.Name;
 	
-	@:overload public function getSuffix(pos : Int) : javax.naming.Name;
+	@:overload @:public public function getSuffix(pos : Int) : javax.naming.Name;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function remove(pos : Int) : Dynamic;
+	@:overload @:public public function remove(pos : Int) : Dynamic;
 	
-	@:overload public function add(comp : String) : javax.naming.Name;
+	@:overload @:public public function add(comp : String) : javax.naming.Name;
 	
-	@:overload public function add(pos : Int, comp : String) : javax.naming.Name;
+	@:overload @:public public function add(pos : Int, comp : String) : javax.naming.Name;
 	
-	@:overload public function addAll(suffix : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function addAll(suffix : javax.naming.Name) : javax.naming.Name;
 	
-	@:overload public function addAll(pos : Int, n : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function addAll(pos : Int, n : javax.naming.Name) : javax.naming.Name;
 	
 	
 }

@@ -31,49 +31,49 @@ extern interface FastInfosetSerializer
 	* Set the {@link #IGNORE_DTD_FEATURE}.
 	* @param ignoreDTD true if the feature shall be ignored.
 	*/
-	@:overload public function setIgnoreDTD(ignoreDTD : Bool) : Void;
+	@:overload @:public public function setIgnoreDTD(ignoreDTD : Bool) : Void;
 	
 	/**
 	* Get the {@link #IGNORE_DTD_FEATURE}.
 	* @return true if the feature is ignored, false otherwise.
 	*/
-	@:overload public function getIgnoreDTD() : Bool;
+	@:overload @:public public function getIgnoreDTD() : Bool;
 	
 	/**
 	* Set the {@link #IGNORE_COMMENTS_FEATURE}.
 	* @param ignoreComments true if the feature shall be ignored.
 	*/
-	@:overload public function setIgnoreComments(ignoreComments : Bool) : Void;
+	@:overload @:public public function setIgnoreComments(ignoreComments : Bool) : Void;
 	
 	/**
 	* Get the {@link #IGNORE_COMMENTS_FEATURE}.
 	* @return true if the feature is ignored, false otherwise.
 	*/
-	@:overload public function getIgnoreComments() : Bool;
+	@:overload @:public public function getIgnoreComments() : Bool;
 	
 	/**
 	* Set the {@link #IGNORE_PROCESSING_INSTRUCTIONS_FEATURE}.
 	* @param ignoreProcesingInstructions true if the feature shall be ignored.
 	*/
-	@:overload public function setIgnoreProcesingInstructions(ignoreProcesingInstructions : Bool) : Void;
+	@:overload @:public public function setIgnoreProcesingInstructions(ignoreProcesingInstructions : Bool) : Void;
 	
 	/**
 	* Get the {@link #IGNORE_PROCESSING_INSTRUCTIONS_FEATURE}.
 	* @return true if the feature is ignored, false otherwise.
 	*/
-	@:overload public function getIgnoreProcesingInstructions() : Bool;
+	@:overload @:public public function getIgnoreProcesingInstructions() : Bool;
 	
 	/**
 	* Set the {@link #IGNORE_WHITE_SPACE_TEXT_CONTENT_FEATURE}.
 	* @param ignoreWhiteSpaceTextContent true if the feature shall be ignored.
 	*/
-	@:overload public function setIgnoreWhiteSpaceTextContent(ignoreWhiteSpaceTextContent : Bool) : Void;
+	@:overload @:public public function setIgnoreWhiteSpaceTextContent(ignoreWhiteSpaceTextContent : Bool) : Void;
 	
 	/**
 	* Get the {@link #IGNORE_WHITE_SPACE_TEXT_CONTENT_FEATURE}.
 	* @return true if the feature is ignored, false otherwise.
 	*/
-	@:overload public function getIgnoreWhiteSpaceTextContent() : Bool;
+	@:overload @:public public function getIgnoreWhiteSpaceTextContent() : Bool;
 	
 	/**
 	* Sets the character encoding scheme.
@@ -85,28 +85,28 @@ extern interface FastInfosetSerializer
 	*
 	* @param characterEncodingScheme The set of registered algorithms.
 	*/
-	@:overload public function setCharacterEncodingScheme(characterEncodingScheme : String) : Void;
+	@:overload @:public public function setCharacterEncodingScheme(characterEncodingScheme : String) : Void;
 	
 	/**
 	* Gets the character encoding scheme.
 	*
 	* @return The character encoding scheme.
 	*/
-	@:overload public function getCharacterEncodingScheme() : String;
+	@:overload @:public public function getCharacterEncodingScheme() : String;
 	
 	/**
 	* Sets the set of registered encoding algorithms.
 	*
 	* @param algorithms The set of registered algorithms.
 	*/
-	@:overload public function setRegisteredEncodingAlgorithms(algorithms : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function setRegisteredEncodingAlgorithms(algorithms : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Gets the set of registered encoding algorithms.
 	*
 	* @return The set of registered algorithms.
 	*/
-	@:overload public function getRegisteredEncodingAlgorithms() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function getRegisteredEncodingAlgorithms() : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* Gets the minimum size of character content chunks
@@ -114,7 +114,7 @@ extern interface FastInfosetSerializer
 	*
 	* @return The minimum character content chunk size.
 	*/
-	@:overload public function getMinCharacterContentChunkSize() : Int;
+	@:overload @:public public function getMinCharacterContentChunkSize() : Int;
 	
 	/**
 	* Sets the minimum size of character content chunks
@@ -122,7 +122,7 @@ extern interface FastInfosetSerializer
 	*
 	* @param size the minimum character content chunk size.
 	*/
-	@:overload public function setMinCharacterContentChunkSize(size : Int) : Void;
+	@:overload @:public public function setMinCharacterContentChunkSize(size : Int) : Void;
 	
 	/**
 	* Gets the maximum size of character content chunks
@@ -130,7 +130,7 @@ extern interface FastInfosetSerializer
 	*
 	* @return The maximum character content chunk size.
 	*/
-	@:overload public function getMaxCharacterContentChunkSize() : Int;
+	@:overload @:public public function getMaxCharacterContentChunkSize() : Int;
 	
 	/**
 	* Sets the maximum size of character content chunks
@@ -138,7 +138,7 @@ extern interface FastInfosetSerializer
 	*
 	* @param size the maximum character content chunk size.
 	*/
-	@:overload public function setMaxCharacterContentChunkSize(size : Int) : Void;
+	@:overload @:public public function setMaxCharacterContentChunkSize(size : Int) : Void;
 	
 	/**
 	* Gets the limit on the memory size, allocated for indexed character
@@ -147,7 +147,7 @@ extern interface FastInfosetSerializer
 	* @return the limit on the memory size, allocated for indexed character
 	* content chunks.
 	*/
-	@:overload public function getCharacterContentChunkMapMemoryLimit() : Int;
+	@:overload @:public public function getCharacterContentChunkMapMemoryLimit() : Int;
 	
 	/**
 	* Sets the limit on the memory size, allocated for indexed character
@@ -156,7 +156,7 @@ extern interface FastInfosetSerializer
 	* @param size the limit on the memory size, allocated for indexed character
 	* content chunks.
 	*/
-	@:overload public function setCharacterContentChunkMapMemoryLimit(size : Int) : Void;
+	@:overload @:public public function setCharacterContentChunkMapMemoryLimit(size : Int) : Void;
 	
 	/**
 	* Gets the minimum size of attribute values
@@ -164,7 +164,7 @@ extern interface FastInfosetSerializer
 	*
 	* @return The minimum attribute values size.
 	*/
-	@:overload public function getMinAttributeValueSize() : Int;
+	@:overload @:public public function getMinAttributeValueSize() : Int;
 	
 	/**
 	* Sets the minimum size of attribute values
@@ -172,7 +172,7 @@ extern interface FastInfosetSerializer
 	*
 	* @param size the minimum attribute values size.
 	*/
-	@:overload public function setMinAttributeValueSize(size : Int) : Void;
+	@:overload @:public public function setMinAttributeValueSize(size : Int) : Void;
 	
 	/**
 	* Gets the maximum size of attribute values
@@ -180,7 +180,7 @@ extern interface FastInfosetSerializer
 	*
 	* @return The maximum attribute values size.
 	*/
-	@:overload public function getMaxAttributeValueSize() : Int;
+	@:overload @:public public function getMaxAttributeValueSize() : Int;
 	
 	/**
 	* Sets the maximum size of attribute values
@@ -188,7 +188,7 @@ extern interface FastInfosetSerializer
 	*
 	* @param size the maximum attribute values size.
 	*/
-	@:overload public function setMaxAttributeValueSize(size : Int) : Void;
+	@:overload @:public public function setMaxAttributeValueSize(size : Int) : Void;
 	
 	/**
 	* Gets the limit on the memory size of Map of attribute values
@@ -196,7 +196,7 @@ extern interface FastInfosetSerializer
 	*
 	* @return The attribute value size limit.
 	*/
-	@:overload public function getAttributeValueMapMemoryLimit() : Int;
+	@:overload @:public public function getAttributeValueMapMemoryLimit() : Int;
 	
 	/**
 	* Sets the limit on the memory size of Map of attribute values
@@ -205,33 +205,33 @@ extern interface FastInfosetSerializer
 	* @param size The attribute value size limit. Any value less
 	* that a length of size limit will be indexed.
 	*/
-	@:overload public function setAttributeValueMapMemoryLimit(size : Int) : Void;
+	@:overload @:public public function setAttributeValueMapMemoryLimit(size : Int) : Void;
 	
 	/**
 	* Set the external vocabulary that shall be used when serializing.
 	*
 	* @param v the vocabulary.
 	*/
-	@:overload public function setExternalVocabulary(v : com.sun.xml.internal.org.jvnet.fastinfoset.ExternalVocabulary) : Void;
+	@:overload @:public public function setExternalVocabulary(v : com.sun.xml.internal.org.jvnet.fastinfoset.ExternalVocabulary) : Void;
 	
 	/**
 	* Set the application data to be associated with the serializer vocabulary.
 	*
 	* @param data the application data.
 	*/
-	@:overload public function setVocabularyApplicationData(data : com.sun.xml.internal.org.jvnet.fastinfoset.VocabularyApplicationData) : Void;
+	@:overload @:public public function setVocabularyApplicationData(data : com.sun.xml.internal.org.jvnet.fastinfoset.VocabularyApplicationData) : Void;
 	
 	/**
 	* Get the application data associated with the serializer vocabulary.
 	*
 	* @return the application data.
 	*/
-	@:overload public function getVocabularyApplicationData() : com.sun.xml.internal.org.jvnet.fastinfoset.VocabularyApplicationData;
+	@:overload @:public public function getVocabularyApplicationData() : com.sun.xml.internal.org.jvnet.fastinfoset.VocabularyApplicationData;
 	
 	/**
 	* Reset the serializer for reuse serializing another XML infoset.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Set the OutputStream to serialize the XML infoset to a
@@ -239,7 +239,7 @@ extern interface FastInfosetSerializer
 	*
 	* @param s the OutputStream where the fast infoset document is written to.
 	*/
-	@:overload public function setOutputStream(s : java.io.OutputStream) : Void;
+	@:overload @:public public function setOutputStream(s : java.io.OutputStream) : Void;
 	
 	
 }

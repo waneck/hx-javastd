@@ -25,13 +25,13 @@ package sun.security.jgss;
 */
 extern class GSSCredentialImpl implements org.ietf.jgss.GSSCredential
 {
-	@:overload public function new(gssManager : sun.security.jgss.GSSManagerImpl, mechElement : sun.security.jgss.spi.GSSCredentialSpi) : Void;
+	@:overload @:public public function new(gssManager : sun.security.jgss.GSSManagerImpl, mechElement : sun.security.jgss.spi.GSSCredentialSpi) : Void;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload public function getName() : org.ietf.jgss.GSSName;
+	@:overload @:public public function getName() : org.ietf.jgss.GSSName;
 	
-	@:overload public function getName(mech : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
+	@:overload @:public public function getName(mech : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
 	
 	/**
 	* Returns the remaining lifetime of this credential. The remaining
@@ -39,11 +39,11 @@ extern class GSSCredentialImpl implements org.ietf.jgss.GSSCredential
 	* for accept, across all elements contained in it. Not terribly
 	* useful, but required by GSS-API.
 	*/
-	@:overload public function getRemainingLifetime() : Int;
+	@:overload @:public public function getRemainingLifetime() : Int;
 	
-	@:overload public function getRemainingInitLifetime(mech : org.ietf.jgss.Oid) : Int;
+	@:overload @:public public function getRemainingInitLifetime(mech : org.ietf.jgss.Oid) : Int;
 	
-	@:overload public function getRemainingAcceptLifetime(mech : org.ietf.jgss.Oid) : Int;
+	@:overload @:public public function getRemainingAcceptLifetime(mech : org.ietf.jgss.Oid) : Int;
 	
 	/**
 	* Returns the usage mode for this credential. Returns
@@ -51,22 +51,22 @@ extern class GSSCredentialImpl implements org.ietf.jgss.GSSCredential
 	* INITIATE_AND_ACCEPT or if two different elements exist where one
 	* support INITIATE_ONLY and the other supports ACCEPT_ONLY.
 	*/
-	@:overload public function getUsage() : Int;
+	@:overload @:public public function getUsage() : Int;
 	
-	@:overload public function getUsage(mech : org.ietf.jgss.Oid) : Int;
+	@:overload @:public public function getUsage(mech : org.ietf.jgss.Oid) : Int;
 	
-	@:overload public function getMechs() : java.NativeArray<org.ietf.jgss.Oid>;
+	@:overload @:public public function getMechs() : java.NativeArray<org.ietf.jgss.Oid>;
 	
-	@:overload public function add(name : org.ietf.jgss.GSSName, initLifetime : Int, acceptLifetime : Int, mech : org.ietf.jgss.Oid, usage : Int) : Void;
+	@:overload @:public public function add(name : org.ietf.jgss.GSSName, initLifetime : Int, acceptLifetime : Int, mech : org.ietf.jgss.Oid, usage : Int) : Void;
 	
-	@:overload public function equals(another : Dynamic) : Bool;
+	@:overload @:public public function equals(another : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode value for this GSSCredential.
 	*
 	* @return a hashCode value
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the specified mechanism's credential-element.
@@ -78,23 +78,23 @@ extern class GSSCredentialImpl implements org.ietf.jgss.GSSCredential
 	* @return mechanism credential object
 	* @exception GSSException of invalid mechanism
 	*/
-	@:overload public function getElement(mechOid : org.ietf.jgss.Oid, initiate : Bool) : sun.security.jgss.spi.GSSCredentialSpi;
+	@:overload @:public public function getElement(mechOid : org.ietf.jgss.Oid, initiate : Bool) : sun.security.jgss.spi.GSSCredentialSpi;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('sun$security$jgss$GSSCredentialImpl$SearchKey') @:internal extern class GSSCredentialImpl_SearchKey
 {
-	@:overload public function new(mechOid : org.ietf.jgss.Oid, usage : Int) : Void;
+	@:overload @:public public function new(mechOid : org.ietf.jgss.Oid, usage : Int) : Void;
 	
-	@:overload public function getMech() : org.ietf.jgss.Oid;
+	@:overload @:public public function getMech() : org.ietf.jgss.Oid;
 	
-	@:overload public function getUsage() : Int;
+	@:overload @:public public function getUsage() : Int;
 	
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

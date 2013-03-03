@@ -30,25 +30,25 @@ extern class NullSurfaceData extends sun.java2d.SurfaceData
 	* abstract superclass.  All operations on it translate into NOP
 	* or harmless operations.
 	*/
-	public static var theInstance(default, null) : sun.java2d.SurfaceData;
+	@:public @:static @:final public static var theInstance(default, null) : sun.java2d.SurfaceData;
 	
 	/**
 	* Sets this SurfaceData object to the invalid state.  All Graphics
 	* objects must get a new SurfaceData object via the refresh method
 	* and revalidate their pipelines before continuing.
 	*/
-	@:overload override public function invalidate() : Void;
+	@:overload @:public override public function invalidate() : Void;
 	
 	/**
 	* Return a new SurfaceData object that represents the current state
 	* of the destination that this SurfaceData object describes.
 	* This method is typically called when the SurfaceData is invalidated.
 	*/
-	@:overload override public function getReplacement() : sun.java2d.SurfaceData;
+	@:overload @:public override public function getReplacement() : sun.java2d.SurfaceData;
 	
-	@:overload override public function validatePipe(sg2d : sun.java2d.SunGraphics2D) : Void;
+	@:overload @:public override public function validatePipe(sg2d : sun.java2d.SunGraphics2D) : Void;
 	
-	@:overload override public function getDeviceConfiguration() : java.awt.GraphicsConfiguration;
+	@:overload @:public override public function getDeviceConfiguration() : java.awt.GraphicsConfiguration;
 	
 	/**
 	* Return a readable Raster which contains the pixels for the
@@ -61,7 +61,7 @@ extern class NullSurfaceData extends sun.java2d.SurfaceData
 	*
 	* @see useTightBBoxes
 	*/
-	@:overload override public function getRaster(x : Int, y : Int, w : Int, h : Int) : java.awt.image.Raster;
+	@:overload @:public override public function getRaster(x : Int, y : Int, w : Int, h : Int) : java.awt.image.Raster;
 	
 	/**
 	* Does the pixel accessibility of the destination surface
@@ -74,43 +74,43 @@ extern class NullSurfaceData extends sun.java2d.SurfaceData
 	*
 	* @see getRaster
 	*/
-	@:overload override public function useTightBBoxes() : Bool;
+	@:overload @:public override public function useTightBBoxes() : Bool;
 	
 	/**
 	* Returns the pixel data for the specified Argb value packed
 	* into an integer for easy storage and conveyance.
 	*/
-	@:overload override public function pixelFor(rgb : Int) : Int;
+	@:overload @:public override public function pixelFor(rgb : Int) : Int;
 	
 	/**
 	* Returns the Argb representation for the specified integer value
 	* which is packed in the format of the associated ColorModel.
 	*/
-	@:overload override public function rgbFor(pixel : Int) : Int;
+	@:overload @:public override public function rgbFor(pixel : Int) : Int;
 	
 	/**
 	* Returns the bounds of the destination surface.
 	*/
-	@:overload override public function getBounds() : java.awt.Rectangle;
+	@:overload @:public override public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Performs Security Permissions checks to see if a Custom
 	* Composite object should be allowed access to the pixels
 	* of this surface.
 	*/
-	@:overload override private function checkCustomComposite() : Void;
+	@:overload @:protected override private function checkCustomComposite() : Void;
 	
 	/**
 	* Performs a copyarea within this surface.  Returns
 	* false if there is no algorithm to perform the copyarea
 	* given the current settings of the SunGraphics2D.
 	*/
-	@:overload override public function copyArea(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, w : Int, h : Int, dx : Int, dy : Int) : Bool;
+	@:overload @:public override public function copyArea(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, w : Int, h : Int, dx : Int, dy : Int) : Bool;
 	
 	/**
 	* Returns destination Image associated with this SurfaceData (null)
 	*/
-	@:overload override public function getDestination() : Dynamic;
+	@:overload @:public override public function getDestination() : Dynamic;
 	
 	
 }

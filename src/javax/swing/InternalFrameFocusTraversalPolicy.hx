@@ -44,7 +44,7 @@ extern class InternalFrameFocusTraversalPolicy extends java.awt.FocusTraversalPo
 	* @see JInternalFrame#getMostRecentFocusOwner
 	* @throws IllegalArgumentException if window is null
 	*/
-	@:overload public function getInitialComponent(frame : javax.swing.JInternalFrame) : java.awt.Component;
+	@:overload @:public public function getInitialComponent(frame : javax.swing.JInternalFrame) : java.awt.Component;
 	
 	
 }

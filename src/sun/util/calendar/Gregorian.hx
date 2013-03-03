@@ -25,19 +25,19 @@ package sun.util.calendar;
 */
 extern class Gregorian extends sun.util.calendar.BaseCalendar
 {
-	@:overload public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
-	@:overload public function getCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload @:public override public function getCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload public function getCalendarDate(millis : haxe.Int64) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload @:public override public function getCalendarDate(millis : haxe.Int64) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload public function getCalendarDate(millis : haxe.Int64, date : sun.util.calendar.CalendarDate) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload @:public override public function getCalendarDate(millis : haxe.Int64, date : sun.util.calendar.CalendarDate) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload public function getCalendarDate(millis : haxe.Int64, zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload @:public override public function getCalendarDate(millis : haxe.Int64, zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload public function newCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload @:public override public function newCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload public function newCalendarDate(zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload @:public override public function newCalendarDate(zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
 	
 }
@@ -49,13 +49,13 @@ extern class Gregorian extends sun.util.calendar.BaseCalendar
 */
 @:require(java5) @:native('sun$util$calendar$Gregorian$Date') @:internal extern class Gregorian_Date extends sun.util.calendar.BaseCalendar.BaseCalendar_Date
 {
-	@:overload private function new() : Void;
+	@:overload @:protected override private function new() : Void;
 	
-	@:overload private function new(zone : java.util.TimeZone) : Void;
+	@:overload @:protected override private function new(zone : java.util.TimeZone) : Void;
 	
-	@:overload public function getNormalizedYear() : Int;
+	@:overload @:public override public function getNormalizedYear() : Int;
 	
-	@:overload public function setNormalizedYear(normalizedYear : Int) : Void;
+	@:overload @:public override public function setNormalizedYear(normalizedYear : Int) : Void;
 	
 	
 }

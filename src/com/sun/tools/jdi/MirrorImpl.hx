@@ -25,13 +25,13 @@ package com.sun.tools.jdi;
 */
 @:internal extern class MirrorImpl implements com.sun.jdi.Mirror
 {
-	private var vm : com.sun.tools.jdi.VirtualMachineImpl;
+	@:protected private var vm : com.sun.tools.jdi.VirtualMachineImpl;
 	
-	@:overload public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

@@ -43,7 +43,7 @@ package sun.jvmstat.perfdata.monitor.protocol.local;
 	* Manages LocalMonitoredVm instances for which the principal
 	* has appropriate permissions.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a LocalVmManager instance for the given user.
@@ -53,7 +53,7 @@ package sun.jvmstat.perfdata.monitor.protocol.local;
 	*
 	* @param user the name of the user
 	*/
-	@:overload public function new(user : String) : Void;
+	@:overload @:public public function new(user : String) : Void;
 	
 	/**
 	* Return the current set of monitorable Java Virtual Machines.
@@ -67,7 +67,7 @@ package sun.jvmstat.perfdata.monitor.protocol.local;
 	*
 	* @return Set - the Set of monitorable Java Virtual Machines
 	*/
-	@:overload @:synchronized public function activeVms() : java.util.Set<Null<Int>>;
+	@:overload @:public @:synchronized public function activeVms() : java.util.Set<Null<Int>>;
 	
 	
 }

@@ -42,27 +42,27 @@ package sun.jvmstat.perfdata.monitor.protocol.local;
 	* @param vmid the vm identifier specifying the target JVM
 	* @param interval the sampling interval
 	*/
-	@:overload public function new(vmid : sun.jvmstat.monitor.VmIdentifier, interval : Int) : Void;
+	@:overload @:public public function new(vmid : sun.jvmstat.monitor.VmIdentifier, interval : Int) : Void;
 	
 	/**
 	* {@inheritDoc}.
 	*/
-	@:overload override public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	/**
 	* {@inheritDoc}.
 	*/
-	@:overload override public function addVmListener(l : sun.jvmstat.monitor.event.VmListener) : Void;
+	@:overload @:public override public function addVmListener(l : sun.jvmstat.monitor.event.VmListener) : Void;
 	
 	/**
 	* {@inheritDoc}.
 	*/
-	@:overload override public function removeVmListener(l : sun.jvmstat.monitor.event.VmListener) : Void;
+	@:overload @:public override public function removeVmListener(l : sun.jvmstat.monitor.event.VmListener) : Void;
 	
 	/**
 	* {@inheritDoc}.
 	*/
-	@:overload override public function setInterval(newInterval : Int) : Void;
+	@:overload @:public override public function setInterval(newInterval : Int) : Void;
 	
 	
 }
@@ -72,7 +72,7 @@ package sun.jvmstat.perfdata.monitor.protocol.local;
 */
 @:native('sun$jvmstat$perfdata$monitor$protocol$local$LocalMonitoredVm$NotifierTask') @:internal extern class LocalMonitoredVm_NotifierTask extends sun.jvmstat.perfdata.monitor.CountedTimerTask
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

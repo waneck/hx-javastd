@@ -10,23 +10,23 @@ package org.omg.CosNaming.NamingContextPackage;
 */
 extern class NotFoundReason implements org.omg.CORBA.portable.IDLEntity
 {
-	public static var _missing_node(default, null) : Int;
+	@:public @:static @:final public static var _missing_node(default, null) : Int;
 	
-	public static var missing_node(default, null) : org.omg.CosNaming.NamingContextPackage.NotFoundReason;
+	@:public @:static @:final public static var missing_node(default, null) : org.omg.CosNaming.NamingContextPackage.NotFoundReason;
 	
-	public static var _not_context(default, null) : Int;
+	@:public @:static @:final public static var _not_context(default, null) : Int;
 	
-	public static var not_context(default, null) : org.omg.CosNaming.NamingContextPackage.NotFoundReason;
+	@:public @:static @:final public static var not_context(default, null) : org.omg.CosNaming.NamingContextPackage.NotFoundReason;
 	
-	public static var _not_object(default, null) : Int;
+	@:public @:static @:final public static var _not_object(default, null) : Int;
 	
-	public static var not_object(default, null) : org.omg.CosNaming.NamingContextPackage.NotFoundReason;
+	@:public @:static @:final public static var not_object(default, null) : org.omg.CosNaming.NamingContextPackage.NotFoundReason;
 	
-	@:overload public function value() : Int;
+	@:overload @:public public function value() : Int;
 	
-	@:overload public static function from_int(value : Int) : org.omg.CosNaming.NamingContextPackage.NotFoundReason;
+	@:overload @:public @:static public static function from_int(value : Int) : org.omg.CosNaming.NamingContextPackage.NotFoundReason;
 	
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	
 }

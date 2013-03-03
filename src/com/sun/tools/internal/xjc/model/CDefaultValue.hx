@@ -34,13 +34,13 @@ extern class CDefaultValue
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload @:abstract public function compute(outline : com.sun.tools.internal.xjc.outline.Outline) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:abstract public function compute(outline : com.sun.tools.internal.xjc.outline.Outline) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Creates a new {@link CDefaultValue} that computes the default value
 	* by applying a lexical representation to a {@link TypeUse}.
 	*/
-	@:overload public static function create(typeUse : com.sun.tools.internal.xjc.model.TypeUse, defaultValue : com.sun.xml.internal.xsom.XmlString) : com.sun.tools.internal.xjc.model.CDefaultValue;
+	@:overload @:public @:static public static function create(typeUse : com.sun.tools.internal.xjc.model.TypeUse, defaultValue : com.sun.xml.internal.xsom.XmlString) : com.sun.tools.internal.xjc.model.CDefaultValue;
 	
 	
 }

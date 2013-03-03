@@ -52,37 +52,37 @@ extern class PatternWalker implements com.sun.xml.internal.rngom.binary.visitor.
 	* @author
 	*      Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	@:overload public function visitEmpty() : Void;
+	@:overload @:public public function visitEmpty() : Void;
 	
-	@:overload public function visitNotAllowed() : Void;
+	@:overload @:public public function visitNotAllowed() : Void;
 	
-	@:overload public function visitError() : Void;
+	@:overload @:public public function visitError() : Void;
 	
-	@:overload public function visitGroup(p1 : com.sun.xml.internal.rngom.binary.Pattern, p2 : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload @:public public function visitGroup(p1 : com.sun.xml.internal.rngom.binary.Pattern, p2 : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
-	@:overload private function visitBinary(p1 : com.sun.xml.internal.rngom.binary.Pattern, p2 : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload @:protected private function visitBinary(p1 : com.sun.xml.internal.rngom.binary.Pattern, p2 : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
-	@:overload public function visitInterleave(p1 : com.sun.xml.internal.rngom.binary.Pattern, p2 : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload @:public public function visitInterleave(p1 : com.sun.xml.internal.rngom.binary.Pattern, p2 : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
-	@:overload public function visitChoice(p1 : com.sun.xml.internal.rngom.binary.Pattern, p2 : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload @:public public function visitChoice(p1 : com.sun.xml.internal.rngom.binary.Pattern, p2 : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
-	@:overload public function visitOneOrMore(p : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload @:public public function visitOneOrMore(p : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
-	@:overload public function visitElement(nc : com.sun.xml.internal.rngom.nc.NameClass, content : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload @:public public function visitElement(nc : com.sun.xml.internal.rngom.nc.NameClass, content : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
-	@:overload public function visitAttribute(ns : com.sun.xml.internal.rngom.nc.NameClass, value : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload @:public public function visitAttribute(ns : com.sun.xml.internal.rngom.nc.NameClass, value : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
-	@:overload public function visitData(dt : org.relaxng.datatype.Datatype) : Void;
+	@:overload @:public public function visitData(dt : org.relaxng.datatype.Datatype) : Void;
 	
-	@:overload public function visitDataExcept(dt : org.relaxng.datatype.Datatype, except : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload @:public public function visitDataExcept(dt : org.relaxng.datatype.Datatype, except : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
-	@:overload public function visitValue(dt : org.relaxng.datatype.Datatype, obj : Dynamic) : Void;
+	@:overload @:public public function visitValue(dt : org.relaxng.datatype.Datatype, obj : Dynamic) : Void;
 	
-	@:overload public function visitText() : Void;
+	@:overload @:public public function visitText() : Void;
 	
-	@:overload public function visitList(p : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload @:public public function visitList(p : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
-	@:overload public function visitAfter(p1 : com.sun.xml.internal.rngom.binary.Pattern, p2 : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload @:public public function visitAfter(p1 : com.sun.xml.internal.rngom.binary.Pattern, p2 : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
 	
 }

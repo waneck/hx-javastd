@@ -25,11 +25,11 @@ package sun.awt.X11;
 */
 @:internal extern class XDialogPeer extends sun.awt.X11.XDecoratedPeer implements java.awt.peer.DialogPeer
 {
-	@:overload public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload @:public public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
-	@:overload override public function setVisible(vis : Bool) : Void;
+	@:overload @:public override public function setVisible(vis : Bool) : Void;
 	
-	@:overload public function blockWindows(toBlock : java.util.List<java.awt.Window>) : Void;
+	@:overload @:public public function blockWindows(toBlock : java.util.List<java.awt.Window>) : Void;
 	
 	
 }

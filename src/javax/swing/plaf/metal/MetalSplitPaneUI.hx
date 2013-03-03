@@ -42,12 +42,12 @@ extern class MetalSplitPaneUI extends javax.swing.plaf.basic.BasicSplitPaneUI
 	/**
 	* Creates a new MetalSplitPaneUI instance
 	*/
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Creates the default divider.
 	*/
-	@:overload override public function createDefaultDivider() : javax.swing.plaf.basic.BasicSplitPaneDivider;
+	@:overload @:public override public function createDefaultDivider() : javax.swing.plaf.basic.BasicSplitPaneDivider;
 	
 	
 }

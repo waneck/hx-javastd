@@ -25,39 +25,39 @@ package sun.tools.jconsole.inspector;
 */
 extern class XMBean
 {
-	@:overload public function new(objectName : javax.management.ObjectName, mbeansTab : sun.tools.jconsole.MBeansTab) : Void;
+	@:overload @:public public function new(objectName : javax.management.ObjectName, mbeansTab : sun.tools.jconsole.MBeansTab) : Void;
 	
-	@:overload public function isBroadcaster() : Null<Bool>;
+	@:overload @:public public function isBroadcaster() : Null<Bool>;
 	
-	@:overload public function invoke(operationName : String) : Dynamic;
+	@:overload @:public public function invoke(operationName : String) : Dynamic;
 	
-	@:overload public function invoke(operationName : String, params : java.NativeArray<Dynamic>, sig : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function invoke(operationName : String, params : java.NativeArray<Dynamic>, sig : java.NativeArray<String>) : Dynamic;
 	
-	@:overload public function setAttribute(attribute : javax.management.Attribute) : Void;
+	@:overload @:public public function setAttribute(attribute : javax.management.Attribute) : Void;
 	
-	@:overload public function getAttribute(attributeName : String) : Dynamic;
+	@:overload @:public public function getAttribute(attributeName : String) : Dynamic;
 	
-	@:overload public function getAttributes(attributeNames : java.NativeArray<String>) : javax.management.AttributeList;
+	@:overload @:public public function getAttributes(attributeNames : java.NativeArray<String>) : javax.management.AttributeList;
 	
-	@:overload public function getAttributes(attributeNames : java.NativeArray<javax.management.MBeanAttributeInfo>) : javax.management.AttributeList;
+	@:overload @:public public function getAttributes(attributeNames : java.NativeArray<javax.management.MBeanAttributeInfo>) : javax.management.AttributeList;
 	
-	@:overload public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
-	@:overload public function getMBeanInfo() : javax.management.MBeanInfo;
+	@:overload @:public public function getMBeanInfo() : javax.management.MBeanInfo;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
-	@:overload public function setText(text : String) : Void;
+	@:overload @:public public function setText(text : String) : Void;
 	
-	@:overload public function getIcon() : javax.swing.Icon;
+	@:overload @:public public function getIcon() : javax.swing.Icon;
 	
-	@:overload public function setIcon(icon : javax.swing.Icon) : Void;
+	@:overload @:public public function setIcon(icon : javax.swing.Icon) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

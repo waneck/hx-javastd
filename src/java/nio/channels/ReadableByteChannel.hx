@@ -81,7 +81,7 @@ extern interface ReadableByteChannel extends java.nio.channels.Channel
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:public public function read(dst : java.nio.ByteBuffer) : Int;
+	@:overload @:public @:public public function read(dst : java.nio.ByteBuffer) : Int;
 	
 	
 }

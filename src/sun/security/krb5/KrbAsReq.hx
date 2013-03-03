@@ -33,7 +33,7 @@ extern class KrbAsReq
 	/**
 	* Constructs an AS-REQ message.
 	*/
-	@:overload public function new(pakey : sun.security.krb5.EncryptionKey, options : sun.security.krb5.internal.KDCOptions, cname : sun.security.krb5.PrincipalName, sname : sun.security.krb5.PrincipalName, from : sun.security.krb5.internal.KerberosTime, till : sun.security.krb5.internal.KerberosTime, rtime : sun.security.krb5.internal.KerberosTime, eTypes : java.NativeArray<Int>, addresses : sun.security.krb5.internal.HostAddresses) : Void;
+	@:overload @:public public function new(pakey : sun.security.krb5.EncryptionKey, options : sun.security.krb5.internal.KDCOptions, cname : sun.security.krb5.PrincipalName, sname : sun.security.krb5.PrincipalName, from : sun.security.krb5.internal.KerberosTime, till : sun.security.krb5.internal.KerberosTime, rtime : sun.security.krb5.internal.KerberosTime, eTypes : java.NativeArray<Int>, addresses : sun.security.krb5.internal.HostAddresses) : Void;
 	
 	
 }

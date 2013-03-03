@@ -31,7 +31,7 @@ extern class GeneralPath extends java.awt.geom.Path2D.Path2D_Float
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>GeneralPath</code> object with the specified
@@ -43,7 +43,7 @@ extern class GeneralPath extends java.awt.geom.Path2D.Path2D_Float
 	* @see #WIND_NON_ZERO
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(rule : Int) : Void;
+	@:require(java2) @:overload @:public public function new(rule : Int) : Void;
 	
 	/**
 	* Constructs a new <code>GeneralPath</code> object with the specified
@@ -60,7 +60,7 @@ extern class GeneralPath extends java.awt.geom.Path2D.Path2D_Float
 	* @see #WIND_NON_ZERO
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(rule : Int, initialCapacity : Int) : Void;
+	@:require(java2) @:overload @:public public function new(rule : Int, initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs a new <code>GeneralPath</code> object from an arbitrary
@@ -71,7 +71,7 @@ extern class GeneralPath extends java.awt.geom.Path2D.Path2D_Float
 	* @param s the specified <code>Shape</code> object
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(s : java.awt.Shape) : Void;
+	@:require(java2) @:overload @:public public function new(s : java.awt.Shape) : Void;
 	
 	
 }

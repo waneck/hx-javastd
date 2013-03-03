@@ -25,35 +25,35 @@ package sun.instrument;
 */
 extern class InstrumentationImpl implements java.lang.instrument.Instrumentation
 {
-	@:overload public function addTransformer(transformer : java.lang.instrument.ClassFileTransformer) : Void;
+	@:overload @:public public function addTransformer(transformer : java.lang.instrument.ClassFileTransformer) : Void;
 	
-	@:overload @:synchronized public function addTransformer(transformer : java.lang.instrument.ClassFileTransformer, canRetransform : Bool) : Void;
+	@:overload @:public @:synchronized public function addTransformer(transformer : java.lang.instrument.ClassFileTransformer, canRetransform : Bool) : Void;
 	
-	@:overload @:synchronized public function removeTransformer(transformer : java.lang.instrument.ClassFileTransformer) : Bool;
+	@:overload @:public @:synchronized public function removeTransformer(transformer : java.lang.instrument.ClassFileTransformer) : Bool;
 	
-	@:overload public function isModifiableClass(theClass : Class<Dynamic>) : Bool;
+	@:overload @:public public function isModifiableClass(theClass : Class<Dynamic>) : Bool;
 	
-	@:overload public function isRetransformClassesSupported() : Bool;
+	@:overload @:public public function isRetransformClassesSupported() : Bool;
 	
-	@:overload public function retransformClasses(classes : java.NativeArray<Class<Dynamic>>) : Void;
+	@:overload @:public public function retransformClasses(classes : java.NativeArray<Class<Dynamic>>) : Void;
 	
-	@:overload public function isRedefineClassesSupported() : Bool;
+	@:overload @:public public function isRedefineClassesSupported() : Bool;
 	
-	@:overload public function redefineClasses(definitions : java.NativeArray<java.lang.instrument.ClassDefinition>) : Void;
+	@:overload @:public public function redefineClasses(definitions : java.NativeArray<java.lang.instrument.ClassDefinition>) : Void;
 	
-	@:overload public function getAllLoadedClasses() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getAllLoadedClasses() : java.NativeArray<Class<Dynamic>>;
 	
-	@:overload public function getInitiatedClasses(loader : java.lang.ClassLoader) : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getInitiatedClasses(loader : java.lang.ClassLoader) : java.NativeArray<Class<Dynamic>>;
 	
-	@:overload public function getObjectSize(objectToSize : Dynamic) : haxe.Int64;
+	@:overload @:public public function getObjectSize(objectToSize : Dynamic) : haxe.Int64;
 	
-	@:overload public function appendToBootstrapClassLoaderSearch(jarfile : java.util.jar.JarFile) : Void;
+	@:overload @:public public function appendToBootstrapClassLoaderSearch(jarfile : java.util.jar.JarFile) : Void;
 	
-	@:overload public function appendToSystemClassLoaderSearch(jarfile : java.util.jar.JarFile) : Void;
+	@:overload @:public public function appendToSystemClassLoaderSearch(jarfile : java.util.jar.JarFile) : Void;
 	
-	@:overload public function isNativeMethodPrefixSupported() : Bool;
+	@:overload @:public public function isNativeMethodPrefixSupported() : Bool;
 	
-	@:overload @:synchronized public function setNativeMethodPrefix(transformer : java.lang.instrument.ClassFileTransformer, prefix : String) : Void;
+	@:overload @:public @:synchronized public function setNativeMethodPrefix(transformer : java.lang.instrument.ClassFileTransformer, prefix : String) : Void;
 	
 	
 }

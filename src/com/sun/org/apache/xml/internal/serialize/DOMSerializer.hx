@@ -28,7 +28,7 @@ extern interface DOMSerializer
 	* @throws IOException An I/O exception occured while
 	*   serializing
 	*/
-	@:overload public function serialize(elem : org.w3c.dom.Element) : Void;
+	@:overload @:public public function serialize(elem : org.w3c.dom.Element) : Void;
 	
 	/**
 	* Serializes the DOM document. Throws an exception only if
@@ -38,7 +38,7 @@ extern interface DOMSerializer
 	* @throws IOException An I/O exception occured while
 	*   serializing
 	*/
-	@:overload public function serialize(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public public function serialize(doc : org.w3c.dom.Document) : Void;
 	
 	/**
 	* Serializes the DOM document fragment. Throws an exception
@@ -48,7 +48,7 @@ extern interface DOMSerializer
 	* @throws IOException An I/O exception occured while
 	*   serializing
 	*/
-	@:overload public function serialize(frag : org.w3c.dom.DocumentFragment) : Void;
+	@:overload @:public public function serialize(frag : org.w3c.dom.DocumentFragment) : Void;
 	
 	
 }

@@ -67,7 +67,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @revised 1.4
 	* @spec JSR-51
 	*/
-	@:overload public function new(name : String, mode : String) : Void;
+	@:overload @:public public function new(name : String, mode : String) : Void;
 	
 	/**
 	* Creates a random access file stream to read from, and optionally to
@@ -145,7 +145,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @revised 1.4
 	* @spec JSR-51
 	*/
-	@:overload public function new(file : java.io.File, mode : String) : Void;
+	@:overload @:public public function new(file : java.io.File, mode : String) : Void;
 	
 	/**
 	* Returns the opaque file descriptor object associated with this
@@ -155,7 +155,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FileDescriptor
 	*/
-	@:overload @:final public function getFD() : java.io.FileDescriptor;
+	@:overload @:public @:final public function getFD() : java.io.FileDescriptor;
 	
 	/**
 	* Returns the unique {@link java.nio.channels.FileChannel FileChannel}
@@ -175,7 +175,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @since 1.4
 	* @spec JSR-51
 	*/
-	@:require(java4) @:overload @:final public function getChannel() : java.nio.channels.FileChannel;
+	@:require(java4) @:overload @:public @:final public function getChannel() : java.nio.channels.FileChannel;
 	
 	/**
 	* Reads a byte of data from this file. The byte is returned as an
@@ -192,7 +192,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @exception  IOException  if an I/O error occurs. Not thrown if
 	*                          end-of-file has been reached.
 	*/
-	@:overload @:native public function read() : Int;
+	@:overload @:public @:native public function read() : Int;
 	
 	/**
 	* Reads up to <code>len</code> bytes of data from this file into an
@@ -219,7 +219,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* <code>len</code> is negative, or <code>len</code> is greater than
 	* <code>b.length - off</code>
 	*/
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Reads up to <code>b.length</code> bytes of data from this file
@@ -240,7 +240,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* some other I/O error occurs.
 	* @exception  NullPointerException If <code>b</code> is <code>null</code>.
 	*/
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Reads <code>b.length</code> bytes from this file into the byte
@@ -254,7 +254,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	*               all the bytes.
 	* @exception  IOException   if an I/O error occurs.
 	*/
-	@:overload @:final public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:final public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Reads exactly <code>len</code> bytes from this file into the byte
@@ -270,7 +270,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	*               all the bytes.
 	* @exception  IOException   if an I/O error occurs.
 	*/
-	@:overload @:final public function readFully(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public @:final public function readFully(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Attempts to skip over <code>n</code> bytes of input discarding the
@@ -288,7 +288,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @return     the actual number of bytes skipped.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function skipBytes(n : Int) : Int;
+	@:overload @:public public function skipBytes(n : Int) : Int;
 	
 	/**
 	* Writes the specified byte to this file. The write starts at
@@ -297,7 +297,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @param      b   the <code>byte</code> to be written.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:native public function write(b : Int) : Void;
+	@:overload @:public @:native public function write(b : Int) : Void;
 	
 	/**
 	* Writes <code>b.length</code> bytes from the specified byte array
@@ -306,7 +306,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @param      b   the data.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Writes <code>len</code> bytes from the specified byte array
@@ -317,7 +317,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @param      len   the number of bytes to write.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Returns the current offset in this file.
@@ -326,7 +326,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	*             at which the next read or write occurs.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:native public function getFilePointer() : haxe.Int64;
+	@:overload @:public @:native public function getFilePointer() : haxe.Int64;
 	
 	/**
 	* Sets the file-pointer offset, measured from the beginning of this
@@ -342,7 +342,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @exception  IOException  if <code>pos</code> is less than
 	*                          <code>0</code> or if an I/O error occurs.
 	*/
-	@:overload @:native public function seek(pos : haxe.Int64) : Void;
+	@:overload @:public @:native public function seek(pos : haxe.Int64) : Void;
 	
 	/**
 	* Returns the length of this file.
@@ -350,7 +350,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @return     the length of this file, measured in bytes.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:native public function length() : haxe.Int64;
+	@:overload @:public @:native public function length() : haxe.Int64;
 	
 	/**
 	* Sets the length of this file.
@@ -371,7 +371,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @exception  IOException  If an I/O error occurs
 	* @since      1.2
 	*/
-	@:require(java2) @:overload @:native public function setLength(newLength : haxe.Int64) : Void;
+	@:require(java2) @:overload @:public @:native public function setLength(newLength : haxe.Int64) : Void;
 	
 	/**
 	* Closes this random access file stream and releases any system
@@ -387,7 +387,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @revised 1.4
 	* @spec JSR-51
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Reads a <code>boolean</code> from this file. This method reads a
@@ -401,7 +401,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @exception  EOFException  if this file has reached the end.
 	* @exception  IOException   if an I/O error occurs.
 	*/
-	@:overload @:final public function readBoolean() : Bool;
+	@:overload @:public @:final public function readBoolean() : Bool;
 	
 	/**
 	* Reads a signed eight-bit value from this file. This method reads a
@@ -421,7 +421,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @exception  EOFException  if this file has reached the end.
 	* @exception  IOException   if an I/O error occurs.
 	*/
-	@:overload @:final public function readByte() : java.StdTypes.Int8;
+	@:overload @:public @:final public function readByte() : java.StdTypes.Int8;
 	
 	/**
 	* Reads an unsigned eight-bit number from this file. This method reads
@@ -436,7 +436,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @exception  EOFException  if this file has reached the end.
 	* @exception  IOException   if an I/O error occurs.
 	*/
-	@:overload @:final public function readUnsignedByte() : Int;
+	@:overload @:public @:final public function readUnsignedByte() : Int;
 	
 	/**
 	* Reads a signed 16-bit number from this file. The method reads two
@@ -458,7 +458,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	*               two bytes.
 	* @exception  IOException   if an I/O error occurs.
 	*/
-	@:overload @:final public function readShort() : java.StdTypes.Int16;
+	@:overload @:public @:final public function readShort() : java.StdTypes.Int16;
 	
 	/**
 	* Reads an unsigned 16-bit number from this file. This method reads
@@ -480,7 +480,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	*               two bytes.
 	* @exception  IOException   if an I/O error occurs.
 	*/
-	@:overload @:final public function readUnsignedShort() : Int;
+	@:overload @:public @:final public function readUnsignedShort() : Int;
 	
 	/**
 	* Reads a character from this file. This method reads two
@@ -502,7 +502,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	*               two bytes.
 	* @exception  IOException   if an I/O error occurs.
 	*/
-	@:overload @:final public function readChar() : java.StdTypes.Char16;
+	@:overload @:public @:final public function readChar() : java.StdTypes.Char16;
 	
 	/**
 	* Reads a signed 32-bit integer from this file. This method reads 4
@@ -524,7 +524,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	*               four bytes.
 	* @exception  IOException   if an I/O error occurs.
 	*/
-	@:overload @:final public function readInt() : Int;
+	@:overload @:public @:final public function readInt() : Int;
 	
 	/**
 	* Reads a signed 64-bit integer from this file. This method reads eight
@@ -554,7 +554,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	*               eight bytes.
 	* @exception  IOException   if an I/O error occurs.
 	*/
-	@:overload @:final public function readLong() : haxe.Int64;
+	@:overload @:public @:final public function readLong() : haxe.Int64;
 	
 	/**
 	* Reads a <code>float</code> from this file. This method reads an
@@ -575,7 +575,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @see        java.io.RandomAccessFile#readInt()
 	* @see        java.lang.Float#intBitsToFloat(int)
 	*/
-	@:overload @:final public function readFloat() : Single;
+	@:overload @:public @:final public function readFloat() : Single;
 	
 	/**
 	* Reads a <code>double</code> from this file. This method reads a
@@ -596,7 +596,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @see        java.io.RandomAccessFile#readLong()
 	* @see        java.lang.Double#longBitsToDouble(long)
 	*/
-	@:overload @:final public function readDouble() : Float;
+	@:overload @:public @:final public function readDouble() : Float;
 	
 	/**
 	* Reads the next line of text from this file.  This method successively
@@ -621,7 +621,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	*             of file is encountered before even one byte is read.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:final public function readLine() : String;
+	@:overload @:public @:final public function readLine() : String;
 	
 	/**
 	* Reads in a string from this file. The string has been encoded
@@ -648,7 +648,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	*               valid modified UTF-8 encoding of a Unicode string.
 	* @see        java.io.RandomAccessFile#readUnsignedShort()
 	*/
-	@:overload @:final public function readUTF() : String;
+	@:overload @:public @:final public function readUTF() : String;
 	
 	/**
 	* Writes a <code>boolean</code> to the file as a one-byte value. The
@@ -660,7 +660,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @param      v   a <code>boolean</code> value to be written.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:final public function writeBoolean(v : Bool) : Void;
+	@:overload @:public @:final public function writeBoolean(v : Bool) : Void;
 	
 	/**
 	* Writes a <code>byte</code> to the file as a one-byte value. The
@@ -669,7 +669,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @param      v   a <code>byte</code> value to be written.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:final public function writeByte(v : Int) : Void;
+	@:overload @:public @:final public function writeByte(v : Int) : Void;
 	
 	/**
 	* Writes a <code>short</code> to the file as two bytes, high byte first.
@@ -678,7 +678,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @param      v   a <code>short</code> to be written.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:final public function writeShort(v : Int) : Void;
+	@:overload @:public @:final public function writeShort(v : Int) : Void;
 	
 	/**
 	* Writes a <code>char</code> to the file as a two-byte value, high
@@ -688,7 +688,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @param      v   a <code>char</code> value to be written.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:final public function writeChar(v : Int) : Void;
+	@:overload @:public @:final public function writeChar(v : Int) : Void;
 	
 	/**
 	* Writes an <code>int</code> to the file as four bytes, high byte first.
@@ -697,7 +697,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @param      v   an <code>int</code> to be written.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:final public function writeInt(v : Int) : Void;
+	@:overload @:public @:final public function writeInt(v : Int) : Void;
 	
 	/**
 	* Writes a <code>long</code> to the file as eight bytes, high byte first.
@@ -706,7 +706,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @param      v   a <code>long</code> to be written.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:final public function writeLong(v : haxe.Int64) : Void;
+	@:overload @:public @:final public function writeLong(v : haxe.Int64) : Void;
 	
 	/**
 	* Converts the float argument to an <code>int</code> using the
@@ -719,7 +719,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.lang.Float#floatToIntBits(float)
 	*/
-	@:overload @:final public function writeFloat(v : Single) : Void;
+	@:overload @:public @:final public function writeFloat(v : Single) : Void;
 	
 	/**
 	* Converts the double argument to a <code>long</code> using the
@@ -732,7 +732,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.lang.Double#doubleToLongBits(double)
 	*/
-	@:overload @:final public function writeDouble(v : Float) : Void;
+	@:overload @:public @:final public function writeDouble(v : Float) : Void;
 	
 	/**
 	* Writes the string to the file as a sequence of bytes. Each
@@ -743,7 +743,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @param      s   a string of bytes to be written.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:final public function writeBytes(s : String) : Void;
+	@:overload @:public @:final public function writeBytes(s : String) : Void;
 	
 	/**
 	* Writes a string to the file as a sequence of characters. Each
@@ -755,7 +755,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.RandomAccessFile#writeChar(int)
 	*/
-	@:overload @:final public function writeChars(s : String) : Void;
+	@:overload @:public @:final public function writeChars(s : String) : Void;
 	
 	/**
 	* Writes a string to the file using
@@ -773,7 +773,7 @@ extern class RandomAccessFile implements java.io.DataOutput implements java.io.D
 	* @param      str   a string to be written.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:final public function writeUTF(str : String) : Void;
+	@:overload @:public @:final public function writeUTF(str : String) : Void;
 	
 	
 }

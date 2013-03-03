@@ -33,61 +33,61 @@ package com.sun.xml.internal.stream.dtd.nonvalidating;
 extern class XMLSimpleType
 {
 	/** TYPE_CDATA */
-	public static var TYPE_CDATA(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TYPE_CDATA(default, null) : java.StdTypes.Int16;
 	
 	/** TYPE_ENTITY */
-	public static var TYPE_ENTITY(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TYPE_ENTITY(default, null) : java.StdTypes.Int16;
 	
 	/** TYPE_ENUMERATION */
-	public static var TYPE_ENUMERATION(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TYPE_ENUMERATION(default, null) : java.StdTypes.Int16;
 	
 	/** TYPE_ID */
-	public static var TYPE_ID(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TYPE_ID(default, null) : java.StdTypes.Int16;
 	
 	/** TYPE_IDREF */
-	public static var TYPE_IDREF(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TYPE_IDREF(default, null) : java.StdTypes.Int16;
 	
 	/** TYPE_NMTOKEN */
-	public static var TYPE_NMTOKEN(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TYPE_NMTOKEN(default, null) : java.StdTypes.Int16;
 	
 	/** TYPE_NOTATION */
-	public static var TYPE_NOTATION(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TYPE_NOTATION(default, null) : java.StdTypes.Int16;
 	
 	/** TYPE_NAMED */
-	public static var TYPE_NAMED(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TYPE_NAMED(default, null) : java.StdTypes.Int16;
 	
 	/** DEFAULT_TYPE_DEFAULT */
-	public static var DEFAULT_TYPE_DEFAULT(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var DEFAULT_TYPE_DEFAULT(default, null) : java.StdTypes.Int16;
 	
 	/** DEFAULT_TYPE_FIXED */
-	public static var DEFAULT_TYPE_FIXED(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var DEFAULT_TYPE_FIXED(default, null) : java.StdTypes.Int16;
 	
 	/** DEFAULT_TYPE_IMPLIED */
-	public static var DEFAULT_TYPE_IMPLIED(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var DEFAULT_TYPE_IMPLIED(default, null) : java.StdTypes.Int16;
 	
 	/** DEFAULT_TYPE_REQUIRED */
-	public static var DEFAULT_TYPE_REQUIRED(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var DEFAULT_TYPE_REQUIRED(default, null) : java.StdTypes.Int16;
 	
 	/** type */
-	public var type : java.StdTypes.Int16;
+	@:public public var type : java.StdTypes.Int16;
 	
 	/** name */
-	public var name : String;
+	@:public public var name : String;
 	
 	/** enumeration */
-	public var enumeration : java.NativeArray<String>;
+	@:public public var enumeration : java.NativeArray<String>;
 	
 	/** list */
-	public var list : Bool;
+	@:public public var list : Bool;
 	
 	/** defaultType */
-	public var defaultType : java.StdTypes.Int16;
+	@:public public var defaultType : java.StdTypes.Int16;
 	
 	/** defaultValue */
-	public var defaultValue : String;
+	@:public public var defaultValue : String;
 	
 	/** non-normalized defaultValue */
-	public var nonNormalizedDefaultValue : String;
+	@:public public var nonNormalizedDefaultValue : String;
 	
 	/**
 	* setValues
@@ -101,15 +101,15 @@ extern class XMLSimpleType
 	* @param nonNormalizedDefaultValue
 	* @param datatypeValidator
 	*/
-	@:overload public function setValues(type : java.StdTypes.Int16, name : String, enumeration : java.NativeArray<String>, list : Bool, defaultType : java.StdTypes.Int16, defaultValue : String, nonNormalizedDefaultValue : String) : Void;
+	@:overload @:public public function setValues(type : java.StdTypes.Int16, name : String, enumeration : java.NativeArray<String>, list : Bool, defaultType : java.StdTypes.Int16, defaultValue : String, nonNormalizedDefaultValue : String) : Void;
 	
 	/** Set values. */
-	@:overload public function setValues(simpleType : com.sun.xml.internal.stream.dtd.nonvalidating.XMLSimpleType) : Void;
+	@:overload @:public public function setValues(simpleType : com.sun.xml.internal.stream.dtd.nonvalidating.XMLSimpleType) : Void;
 	
 	/**
 	* clear
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

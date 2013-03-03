@@ -28,17 +28,17 @@ package com.sun.xml.internal.bind.v2.model.nav;
 	/**
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload @:final public function visit(t : java.lang.reflect.Type, param : P) : T;
+	@:overload @:public @:final public function visit(t : java.lang.reflect.Type, param : P) : T;
 	
-	@:overload @:abstract private function onClass(c : Class<Dynamic>, param : P) : T;
+	@:overload @:protected @:abstract private function onClass(c : Class<Dynamic>, param : P) : T;
 	
-	@:overload @:abstract private function onParameterizdType(p : java.lang.reflect.ParameterizedType, param : P) : T;
+	@:overload @:protected @:abstract private function onParameterizdType(p : java.lang.reflect.ParameterizedType, param : P) : T;
 	
-	@:overload @:abstract private function onGenericArray(g : java.lang.reflect.GenericArrayType, param : P) : T;
+	@:overload @:protected @:abstract private function onGenericArray(g : java.lang.reflect.GenericArrayType, param : P) : T;
 	
-	@:overload @:abstract private function onVariable(v : java.lang.reflect.TypeVariable<Dynamic>, param : P) : T;
+	@:overload @:protected @:abstract private function onVariable(v : java.lang.reflect.TypeVariable<Dynamic>, param : P) : T;
 	
-	@:overload @:abstract private function onWildcard(w : java.lang.reflect.WildcardType, param : P) : T;
+	@:overload @:protected @:abstract private function onWildcard(w : java.lang.reflect.WildcardType, param : P) : T;
 	
 	
 }

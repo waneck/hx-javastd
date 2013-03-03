@@ -25,73 +25,73 @@ package sun.security.rsa;
 */
 extern class RSASignature extends java.security.SignatureSpi
 {
-	@:overload private function engineInitVerify(publicKey : java.security.PublicKey) : Void;
+	@:overload @:protected override private function engineInitVerify(publicKey : java.security.PublicKey) : Void;
 	
-	@:overload private function engineInitSign(privateKey : java.security.PrivateKey) : Void;
+	@:overload @:protected override private function engineInitSign(privateKey : java.security.PrivateKey) : Void;
 	
-	@:overload private function engineInitSign(privateKey : java.security.PrivateKey, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInitSign(privateKey : java.security.PrivateKey, random : java.security.SecureRandom) : Void;
 	
-	@:overload private function engineUpdate(b : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(b : java.StdTypes.Int8) : Void;
 	
-	@:overload private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload private function engineUpdate(b : java.nio.ByteBuffer) : Void;
+	@:overload @:protected override private function engineUpdate(b : java.nio.ByteBuffer) : Void;
 	
-	@:overload private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineVerify(sigBytes : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:protected override private function engineVerify(sigBytes : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/**
 	* Encode the digest, return the to-be-signed data.
 	* Also used by the PKCS#11 provider.
 	*/
-	@:overload public static function encodeSignature(oid : sun.security.util.ObjectIdentifier, digest : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function encodeSignature(oid : sun.security.util.ObjectIdentifier, digest : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Decode the signature data. Verify that the object identifier matches
 	* and return the message digest.
 	*/
-	@:overload public static function decodeSignature(oid : sun.security.util.ObjectIdentifier, signature : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function decodeSignature(oid : sun.security.util.ObjectIdentifier, signature : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineSetParameter(param : String, value : Dynamic) : Void;
+	@:overload @:protected override private function engineSetParameter(param : String, value : Dynamic) : Void;
 	
-	@:overload private function engineGetParameter(param : String) : Dynamic;
+	@:overload @:protected override private function engineGetParameter(param : String) : Dynamic;
 	
 	
 }
 @:native('sun$security$rsa$RSASignature$MD2withRSA') extern class RSASignature_MD2withRSA extends sun.security.rsa.RSASignature
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('sun$security$rsa$RSASignature$MD5withRSA') extern class RSASignature_MD5withRSA extends sun.security.rsa.RSASignature
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('sun$security$rsa$RSASignature$SHA1withRSA') extern class RSASignature_SHA1withRSA extends sun.security.rsa.RSASignature
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('sun$security$rsa$RSASignature$SHA256withRSA') extern class RSASignature_SHA256withRSA extends sun.security.rsa.RSASignature
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('sun$security$rsa$RSASignature$SHA384withRSA') extern class RSASignature_SHA384withRSA extends sun.security.rsa.RSASignature
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('sun$security$rsa$RSASignature$SHA512withRSA') extern class RSASignature_SHA512withRSA extends sun.security.rsa.RSASignature
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

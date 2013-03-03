@@ -30,7 +30,7 @@ extern class SunCertPathBuilderResult extends java.security.cert.PKIXCertPathBui
 	*
 	* @return The adjacency list containing information about the build.
 	*/
-	@:overload public function getAdjacencyList() : sun.security.provider.certpath.AdjacencyList;
+	@:overload @:public public function getAdjacencyList() : sun.security.provider.certpath.AdjacencyList;
 	
 	
 }

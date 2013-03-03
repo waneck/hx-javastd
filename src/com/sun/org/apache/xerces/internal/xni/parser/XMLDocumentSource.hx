@@ -21,10 +21,10 @@ package com.sun.org.apache.xerces.internal.xni.parser;
 extern interface XMLDocumentSource
 {
 	/** Sets the document handler. */
-	@:overload public function setDocumentHandler(handler : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler) : Void;
+	@:overload @:public public function setDocumentHandler(handler : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler) : Void;
 	
 	/** Returns the document handler */
-	@:overload public function getDocumentHandler() : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
+	@:overload @:public public function getDocumentHandler() : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
 	
 	
 }

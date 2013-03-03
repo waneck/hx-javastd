@@ -32,7 +32,7 @@ package com.sun.org.apache.xml.internal.resolver.helpers;
 */
 extern class PublicId
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Normalize a public identifier.
@@ -55,7 +55,7 @@ extern class PublicId
 	*
 	* @return The normalized identifier.
 	*/
-	@:overload public static function normalize(publicId : String) : String;
+	@:overload @:public @:static public static function normalize(publicId : String) : String;
 	
 	/**
 	* Encode a public identifier as a "publicid" URN.
@@ -67,7 +67,7 @@ extern class PublicId
 	*
 	* @return The normalized identifier.
 	*/
-	@:overload public static function encodeURN(publicId : String) : String;
+	@:overload @:public @:static public static function encodeURN(publicId : String) : String;
 	
 	/**
 	* Decode a "publicid" URN into a public identifier.
@@ -79,7 +79,7 @@ extern class PublicId
 	*
 	* @return The normalized identifier.
 	*/
-	@:overload public static function decodeURN(urn : String) : String;
+	@:overload @:public @:static public static function decodeURN(urn : String) : String;
 	
 	
 }

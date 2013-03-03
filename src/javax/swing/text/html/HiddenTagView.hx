@@ -33,43 +33,43 @@ package javax.swing.text.html;
 */
 @:internal extern class HiddenTagView extends javax.swing.text.html.EditableView implements javax.swing.event.DocumentListener
 {
-	@:overload override private function createComponent() : java.awt.Component;
+	@:overload @:protected override private function createComponent() : java.awt.Component;
 	
-	@:overload override public function getAlignment(axis : Int) : Single;
+	@:overload @:public override public function getAlignment(axis : Int) : Single;
 	
-	@:overload override public function getMinimumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMinimumSpan(axis : Int) : Single;
 	
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
-	@:overload override public function getMaximumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMaximumSpan(axis : Int) : Single;
 	
-	@:overload public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$HiddenTagView$StartTagBorder') @:internal extern class HiddenTagView_StartTagBorder implements javax.swing.border.Border implements java.io.Serializable
 {
-	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function getBorderInsets(c : java.awt.Component) : java.awt.Insets;
+	@:overload @:public public function getBorderInsets(c : java.awt.Component) : java.awt.Insets;
 	
-	@:overload public function isBorderOpaque() : Bool;
+	@:overload @:public public function isBorderOpaque() : Bool;
 	
 	
 }
 @:native('javax$swing$text$html$HiddenTagView$EndTagBorder') @:internal extern class HiddenTagView_EndTagBorder implements javax.swing.border.Border implements java.io.Serializable
 {
-	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function getBorderInsets(c : java.awt.Component) : java.awt.Insets;
+	@:overload @:public public function getBorderInsets(c : java.awt.Component) : java.awt.Insets;
 	
-	@:overload public function isBorderOpaque() : Bool;
+	@:overload @:public public function isBorderOpaque() : Bool;
 	
 	
 }

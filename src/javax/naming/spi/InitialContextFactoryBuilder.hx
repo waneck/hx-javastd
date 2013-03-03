@@ -38,7 +38,7 @@ extern interface InitialContextFactoryBuilder
 	* @return A non-null initial context factory.
 	* @exception NamingException If an initial context factory could not be created.
 	*/
-	@:overload public function createInitialContextFactory(environment : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.spi.InitialContextFactory;
+	@:overload @:public public function createInitialContextFactory(environment : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.spi.InitialContextFactory;
 	
 	
 }

@@ -26,150 +26,150 @@ package sun.awt.X11;
 //// Very much based on XListPeer from javaos
 @:internal extern class XListPeer extends sun.awt.X11.XComponentPeer implements java.awt.peer.ListPeer implements sun.awt.X11.XScrollbarClient
 {
-	public static var MARGIN(default, null) : Int;
+	@:public @:final @:static public static var MARGIN(default, null) : Int;
 	
-	public static var SPACE(default, null) : Int;
+	@:public @:final @:static public static var SPACE(default, null) : Int;
 	
-	public static var SCROLLBAR_AREA(default, null) : Int;
+	@:public @:final @:static public static var SCROLLBAR_AREA(default, null) : Int;
 	
-	public static var SCROLLBAR_WIDTH(default, null) : Int;
+	@:public @:final @:static public static var SCROLLBAR_WIDTH(default, null) : Int;
 	
-	public static var NONE(default, null) : Int;
+	@:public @:final @:static public static var NONE(default, null) : Int;
 	
-	public static var WINDOW(default, null) : Int;
+	@:public @:final @:static public static var WINDOW(default, null) : Int;
 	
-	public static var VERSCROLLBAR(default, null) : Int;
+	@:public @:final @:static public static var VERSCROLLBAR(default, null) : Int;
 	
-	public static var HORSCROLLBAR(default, null) : Int;
+	@:public @:final @:static public static var HORSCROLLBAR(default, null) : Int;
 	
-	public static var DEFAULT_VISIBLE_ROWS(default, null) : Int;
+	@:public @:final @:static public static var DEFAULT_VISIBLE_ROWS(default, null) : Int;
 	
-	public static var HORIZ_SCROLL_AMT(default, null) : Int;
+	@:public @:final @:static public static var HORIZ_SCROLL_AMT(default, null) : Int;
 	
 	/**
 	* Overridden from XWindow
 	*/
-	@:overload public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload @:public public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
-	@:overload public function postInit(params : sun.awt.X11.XCreateWindowParams) : Void;
-	
-	/* New method name for 1.1 */
-	@:overload public function add(item : String, index : Int) : Void;
+	@:overload @:public public function postInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
 	/* New method name for 1.1 */
-	@:overload public function removeAll() : Void;
+	@:overload @:public public function add(item : String, index : Int) : Void;
 	
 	/* New method name for 1.1 */
-	@:overload public function setMultipleMode(b : Bool) : Void;
+	@:overload @:public public function removeAll() : Void;
 	
 	/* New method name for 1.1 */
-	@:overload public function getPreferredSize(rows : Int) : java.awt.Dimension;
+	@:overload @:public public function setMultipleMode(b : Bool) : Void;
 	
 	/* New method name for 1.1 */
-	@:overload public function getMinimumSize(rows : Int) : java.awt.Dimension;
+	@:overload @:public public function getPreferredSize(rows : Int) : java.awt.Dimension;
+	
+	/* New method name for 1.1 */
+	@:overload @:public public function getMinimumSize(rows : Int) : java.awt.Dimension;
 	
 	/**
 	* Minimum size.
 	*/
-	@:overload override public function minimumSize() : java.awt.Dimension;
+	@:overload @:public override public function minimumSize() : java.awt.Dimension;
 	
 	/**
 	* return the preferredSize
 	*/
-	@:overload public function preferredSize(v : Int) : java.awt.Dimension;
+	@:overload @:public public function preferredSize(v : Int) : java.awt.Dimension;
 	
 	/**
 	* return the minimumsize
 	*/
-	@:overload public function minimumSize(v : Int) : java.awt.Dimension;
+	@:overload @:public public function minimumSize(v : Int) : java.awt.Dimension;
 	
-	@:overload override public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setForeground(c : java.awt.Color) : Void;
 	
-	@:overload override public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setBackground(c : java.awt.Color) : Void;
 	
-	@:overload public function repaintScrollbarRequest(scrollbar : sun.awt.X11.XScrollbar) : Void;
+	@:overload @:public public function repaintScrollbarRequest(scrollbar : sun.awt.X11.XScrollbar) : Void;
 	
 	/**
 	* Overridden for performance
 	*/
-	@:overload override public function repaint() : Void;
+	@:overload @:public override public function repaint() : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function isFocusable() : Bool;
+	@:overload @:public override public function isFocusable() : Bool;
 	
-	@:overload override public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public override public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload override public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public override public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
 	/**
 	* Layout the sub-components of the List - that is, the scrollbars and the
 	* list of items.
 	*/
-	@:overload override public function layout() : Void;
+	@:overload @:public override public function layout() : Void;
 	
-	@:overload override public function handleConfigureNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleConfigureNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload override public function handlesWheelScrolling() : Bool;
+	@:overload @:public override public function handlesWheelScrolling() : Bool;
 	
 	/**
 	* return value from the scrollbar
 	*/
-	@:overload public function notifyValue(obj : sun.awt.X11.XScrollbar, type : Int, v : Int, isAdjusting : Bool) : Void;
+	@:overload @:public public function notifyValue(obj : sun.awt.X11.XScrollbar, type : Int, v : Int, isAdjusting : Bool) : Void;
 	
 	/**
 	* set multiple selections
 	*/
-	@:overload public function setMultipleSelections(v : Bool) : Void;
+	@:overload @:public public function setMultipleSelections(v : Bool) : Void;
 	
 	/**
 	* add an item
 	* if the index of the item is < 0 or >= than items.size()
 	* then add the item to the end of the list
 	*/
-	@:overload public function addItem(item : String, i : Int) : Void;
+	@:overload @:public public function addItem(item : String, i : Int) : Void;
 	
 	/**
 	* delete items starting with s (start position) to e (end position) including s and e
 	* if s < 0 then s = 0
 	* if e >= items.size() then e = items.size() - 1
 	*/
-	@:overload public function delItems(s : Int, e : Int) : Void;
+	@:overload @:public public function delItems(s : Int, e : Int) : Void;
 	
 	/**
 	* ListPeer method
 	*/
-	@:overload public function select(index : Int) : Void;
+	@:overload @:public public function select(index : Int) : Void;
 	
 	/**
 	* ListPeer method
 	* focusedIndex isn't updated according to native (Window, Motif) behaviour
 	*/
-	@:overload public function deselect(index : Int) : Void;
+	@:overload @:public public function deselect(index : Int) : Void;
 	
 	/**
 	* ensure that the given index is visible, scrolling the List
 	* if necessary, or doing nothing if the item is already visible.
 	* The List must be repainted for changes to be visible.
 	*/
-	@:overload public function makeVisible(index : Int) : Void;
+	@:overload @:public public function makeVisible(index : Int) : Void;
 	
 	/**
 	* clear
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* return the selected indexes
 	*/
-	@:overload public function getSelectedIndexes() : java.NativeArray<Int>;
+	@:overload @:public public function getSelectedIndexes() : java.NativeArray<Int>;
 	
 	/*
 	* Fixed 5010944: List's rows overlap one another
 	* The bug is due to incorrent caching of the list item size
 	* So we should recalculate font metrics on setFont
 	*/
-	@:overload override public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public override public function setFont(f : java.awt.Font) : Void;
 	
 	
 }
@@ -182,7 +182,7 @@ package sun.awt.X11;
 */
 @:native('sun$awt$X11$XListPeer$ListPainter') @:internal extern class XListPeer_ListPainter
 {
-	@:overload public function invalidate() : Void;
+	@:overload @:public public function invalidate() : Void;
 	
 	
 }

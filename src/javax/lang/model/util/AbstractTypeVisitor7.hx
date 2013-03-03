@@ -59,7 +59,7 @@ package javax.lang.model.util;
 	/**
 	* Constructor for concrete subclasses to call.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Visits a {@code UnionType} in a manner defined by a subclass.
@@ -68,7 +68,7 @@ package javax.lang.model.util;
 	* @param p  {@inheritDoc}
 	* @return the result of the visit as defined by a subclass
 	*/
-	@:overload @:abstract public function visitUnion(t : javax.lang.model.type.UnionType, p : P) : R;
+	@:overload @:public @:abstract override public function visitUnion(t : javax.lang.model.type.UnionType, p : P) : R;
 	
 	
 }

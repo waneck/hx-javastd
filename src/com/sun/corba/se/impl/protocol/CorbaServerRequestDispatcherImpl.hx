@@ -31,9 +31,9 @@ package com.sun.corba.se.impl.protocol;
 */
 extern class CorbaServerRequestDispatcherImpl implements com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher
 {
-	private var orb : com.sun.corba.se.spi.orb.ORB;
+	@:protected private var orb : com.sun.corba.se.spi.orb.ORB;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
 	/** XXX/REVISIT:
 	* We do not want to look for a servant in the POA/ServantManager case,
@@ -58,13 +58,13 @@ extern class CorbaServerRequestDispatcherImpl implements com.sun.corba.se.spi.pr
 	* @exception OBJECT_NOT_EXIST is thrown if we know the object does not
 	* exist here, and we are not forwarding.
 	*/
-	@:overload public function locate(okey : com.sun.corba.se.spi.ior.ObjectKey) : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public public function locate(okey : com.sun.corba.se.spi.ior.ObjectKey) : com.sun.corba.se.spi.ior.IOR;
 	
-	@:overload public function dispatch(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
+	@:overload @:public public function dispatch(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
 	
-	@:overload private function getServantWithPI(request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, objectAdapter : com.sun.corba.se.spi.oa.ObjectAdapter, objectId : java.NativeArray<java.StdTypes.Int8>, oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate, operation : String) : Dynamic;
+	@:overload @:protected private function getServantWithPI(request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, objectAdapter : com.sun.corba.se.spi.oa.ObjectAdapter, objectId : java.NativeArray<java.StdTypes.Int8>, oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate, operation : String) : Dynamic;
 	
-	@:overload private function checkServerId(okey : com.sun.corba.se.spi.ior.ObjectKey) : Void;
+	@:overload @:protected private function checkServerId(okey : com.sun.corba.se.spi.ior.ObjectKey) : Void;
 	
 	/** Always throws OBJECT_NOT_EXIST if operation is not a special method.
 	* If operation is _non_existent or _not_existent, this will just
@@ -72,32 +72,32 @@ extern class CorbaServerRequestDispatcherImpl implements com.sun.corba.se.spi.pr
 	* false.  Always throws OBJECT_NOT_EXIST for any other special method.
 	* Update for issue 4385.
 	*/
-	@:overload private function handleNullServant(operation : String, nserv : com.sun.corba.se.spi.oa.NullServant) : Void;
+	@:overload @:protected private function handleNullServant(operation : String, nserv : com.sun.corba.se.spi.oa.NullServant) : Void;
 	
-	@:overload private function consumeServiceContexts(request : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
+	@:overload @:protected private function consumeServiceContexts(request : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
 	
-	@:overload private function dispatchToServant(servant : Dynamic, req : com.sun.corba.se.spi.protocol.CorbaMessageMediator, objectId : java.NativeArray<java.StdTypes.Int8>, objectAdapter : com.sun.corba.se.spi.oa.ObjectAdapter) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
+	@:overload @:protected private function dispatchToServant(servant : Dynamic, req : com.sun.corba.se.spi.protocol.CorbaMessageMediator, objectId : java.NativeArray<java.StdTypes.Int8>, objectAdapter : com.sun.corba.se.spi.oa.ObjectAdapter) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
 	
-	@:overload private function handleDynamicResult(sreq : com.sun.corba.se.impl.corba.ServerRequestImpl, req : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
+	@:overload @:protected private function handleDynamicResult(sreq : com.sun.corba.se.impl.corba.ServerRequestImpl, req : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
 	
-	@:overload private function sendingReply(req : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
+	@:overload @:protected private function sendingReply(req : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
 	
 	/** Must always be called, just after the servant's method returns.
 	*  Creates the ReplyMessage header and puts in the transaction context
 	*  if necessary.
 	*/
-	@:overload private function sendingReply(req : com.sun.corba.se.spi.protocol.CorbaMessageMediator, excany : org.omg.CORBA.Any) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
+	@:overload @:protected private function sendingReply(req : com.sun.corba.se.spi.protocol.CorbaMessageMediator, excany : org.omg.CORBA.Any) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
 	
 	/**
 	* Handles setting the connection's code sets if required.
 	* Returns true if the CodeSetContext was in the request, false
 	* otherwise.
 	*/
-	@:overload private function processCodeSetContext(request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, contexts : com.sun.corba.se.spi.servicecontext.ServiceContexts) : Bool;
+	@:overload @:protected private function processCodeSetContext(request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, contexts : com.sun.corba.se.spi.servicecontext.ServiceContexts) : Bool;
 	
-	@:overload private function dprint(msg : String) : Void;
+	@:overload @:protected private function dprint(msg : String) : Void;
 	
-	@:overload private function opAndId(mediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : String;
+	@:overload @:protected private function opAndId(mediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : String;
 	
 	
 }

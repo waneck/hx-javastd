@@ -30,14 +30,14 @@ extern class CheckedOutputStream extends java.io.FilterOutputStream
 	* @param out the output stream
 	* @param cksum the checksum
 	*/
-	@:overload public function new(out : java.io.OutputStream, cksum : java.util.zip.Checksum) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, cksum : java.util.zip.Checksum) : Void;
 	
 	/**
 	* Writes a byte. Will block until the byte is actually written.
 	* @param b the byte to be written
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
 	/**
 	* Writes an array of bytes. Will block until the bytes are
@@ -47,13 +47,13 @@ extern class CheckedOutputStream extends java.io.FilterOutputStream
 	* @param len the number of bytes to be written
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Returns the Checksum for this output stream.
 	* @return the Checksum
 	*/
-	@:overload public function getChecksum() : java.util.zip.Checksum;
+	@:overload @:public public function getChecksum() : java.util.zip.Checksum;
 	
 	
 }

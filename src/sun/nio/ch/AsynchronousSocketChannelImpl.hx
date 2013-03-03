@@ -28,55 +28,61 @@ package sun.nio.ch;
 	/**
 	* Base implementation of AsynchronousSocketChannel
 	*/
-	private var fd(default, null) : java.io.FileDescriptor;
+	@:protected @:final private var fd(default, null) : java.io.FileDescriptor;
 	
-	private var stateLock(default, null) : Dynamic;
+	@:protected @:final private var stateLock(default, null) : Dynamic;
 	
-	@:volatile private var localAddress : java.net.SocketAddress;
+	@:protected @:volatile private var localAddress : java.net.SocketAddress;
 	
-	@:volatile private var remoteAddress : java.net.SocketAddress;
+	@:protected @:volatile private var remoteAddress : java.net.SocketAddress;
 	
-	@:volatile private var state : Int;
+	@:protected @:volatile private var state : Int;
 	
-	@:overload @:final override public function isOpen() : Bool;
+	@:overload @:public @:final override public function isOpen() : Bool;
 	
-	@:overload @:final override public function close() : Void;
+	@:overload @:public @:final override public function close() : Void;
 	
-	@:overload @:final override public function connect(remote : java.net.SocketAddress) : java.util.concurrent.Future<java.lang.Void>;
+	@:overload @:public @:final override public function connect(remote : java.net.SocketAddress) : java.util.concurrent.Future<java.lang.Void>;
 	
-	@:overload @:final override public function connect<A>(remote : java.net.SocketAddress, attachment : A, handler : java.nio.channels.CompletionHandler<java.lang.Void, A>) : Void;
+	@:overload @:public @:final override public function connect<A>(remote : java.net.SocketAddress, attachment : A, handler : java.nio.channels.CompletionHandler<java.lang.Void, A>) : Void;
 	
-	@:overload @:final override public function read(dst : java.nio.ByteBuffer) : java.util.concurrent.Future<Null<Int>>;
+	@:overload @:public @:final override public function read(dst : java.nio.ByteBuffer) : java.util.concurrent.Future<Null<Int>>;
 	
-	@:overload @:final override public function read<A>(dst : java.nio.ByteBuffer, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
+	@:overload @:public @:final override public function read<A>(dst : java.nio.ByteBuffer, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
 	
-	@:overload @:final override public function read<A>(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit, attachment : A, handler : java.nio.channels.CompletionHandler<Null<haxe.Int64>, A>) : Void;
+	@:overload @:public @:final override public function read<A>(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit, attachment : A, handler : java.nio.channels.CompletionHandler<Null<haxe.Int64>, A>) : Void;
 	
-	@:overload @:final override public function write(src : java.nio.ByteBuffer) : java.util.concurrent.Future<Null<Int>>;
+	@:overload @:public @:final override public function write(src : java.nio.ByteBuffer) : java.util.concurrent.Future<Null<Int>>;
 	
-	@:overload @:final override public function write<A>(src : java.nio.ByteBuffer, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
+	@:overload @:public @:final override public function write<A>(src : java.nio.ByteBuffer, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
 	
-	@:overload @:final override public function write<A>(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit, attachment : A, handler : java.nio.channels.CompletionHandler<Null<haxe.Int64>, A>) : Void;
+	@:overload @:public @:final override public function write<A>(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit, attachment : A, handler : java.nio.channels.CompletionHandler<Null<haxe.Int64>, A>) : Void;
 	
-	@:overload @:final override public function bind(local : java.net.SocketAddress) : java.nio.channels.AsynchronousSocketChannel;
+	@:overload @:public @:final override public function bind(local : java.net.SocketAddress) : java.nio.channels.AsynchronousSocketChannel;
 	
-	@:overload @:final override public function getLocalAddress() : java.net.SocketAddress;
+	@:overload @:public @:final override public function getLocalAddress() : java.net.SocketAddress;
 	
-	@:overload @:final override public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.AsynchronousSocketChannel;
+	@:overload @:public @:final override public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.AsynchronousSocketChannel;
 	
-	@:overload @:final override public function getOption<T>(name : java.net.SocketOption<T>) : T;
+	@:overload @:public @:final override public function getOption<T>(name : java.net.SocketOption<T>) : T;
 	
-	@:overload @:final override public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
+	@:overload @:public @:final override public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
 	
-	@:overload @:final override public function getRemoteAddress() : java.net.SocketAddress;
+	@:overload @:public @:final override public function getRemoteAddress() : java.net.SocketAddress;
 	
-	@:overload @:final override public function shutdownInput() : java.nio.channels.AsynchronousSocketChannel;
+	@:overload @:public @:final override public function shutdownInput() : java.nio.channels.AsynchronousSocketChannel;
 	
-	@:overload @:final override public function shutdownOutput() : java.nio.channels.AsynchronousSocketChannel;
+	@:overload @:public @:final override public function shutdownOutput() : java.nio.channels.AsynchronousSocketChannel;
 	
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
-	@:overload public function group() : sun.nio.ch.AsynchronousChannelGroupImpl;
+	@:overload @:public @:public public function group() : sun.nio.ch.AsynchronousChannelGroupImpl;
+	
+	/**
+	* Invoked to notify channel that cancel has been invoked while holding
+	* the Future's lock.
+	*/
+	@:overload @:public public function onCancel(task : sun.nio.ch.PendingFuture<Dynamic, Dynamic>) : Void;
 	
 	
 }

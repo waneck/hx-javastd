@@ -48,9 +48,9 @@ extern interface HTMLHeadElement extends org.w3c.dom.html.HTMLElement
 	*  URI designating a metadata profile. See the  profile attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getProfile() : String;
+	@:overload @:public public function getProfile() : String;
 	
-	@:overload public function setProfile(profile : String) : Void;
+	@:overload @:public public function setProfile(profile : String) : Void;
 	
 	
 }

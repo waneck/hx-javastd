@@ -21,17 +21,17 @@ package com.sun.org.apache.xml.internal.security.utils;
 */
 extern class UnsyncByteArrayOutputStream extends java.io.OutputStream
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function write(arg0 : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(arg0 : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override public function write(arg0 : java.NativeArray<java.StdTypes.Int8>, arg1 : Int, arg2 : Int) : Void;
+	@:overload @:public override public function write(arg0 : java.NativeArray<java.StdTypes.Int8>, arg1 : Int, arg2 : Int) : Void;
 	
-	@:overload override public function write(arg0 : Int) : Void;
+	@:overload @:public override public function write(arg0 : Int) : Void;
 	
-	@:overload public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

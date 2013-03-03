@@ -25,17 +25,17 @@ package sun.awt;
 */
 extern class KeyboardFocusManagerPeerImpl implements java.awt.peer.KeyboardFocusManagerPeer
 {
-	public static var SNFH_FAILURE(default, null) : Int;
+	@:public @:static @:final public static var SNFH_FAILURE(default, null) : Int;
 	
-	public static var SNFH_SUCCESS_HANDLED(default, null) : Int;
+	@:public @:static @:final public static var SNFH_SUCCESS_HANDLED(default, null) : Int;
 	
-	public static var SNFH_SUCCESS_PROCEED(default, null) : Int;
+	@:public @:static @:final public static var SNFH_SUCCESS_PROCEED(default, null) : Int;
 	
-	private var manager : java.awt.KeyboardFocusManager;
+	@:protected private var manager : java.awt.KeyboardFocusManager;
 	
-	@:overload public function new(manager : java.awt.KeyboardFocusManager) : Void;
+	@:overload @:public public function new(manager : java.awt.KeyboardFocusManager) : Void;
 	
-	@:overload public function clearGlobalFocusOwner(activeWindow : java.awt.Window) : Void;
+	@:overload @:public public function clearGlobalFocusOwner(activeWindow : java.awt.Window) : Void;
 	
 	/*
 	* WARNING: Don't call it on the Toolkit thread.
@@ -44,20 +44,20 @@ extern class KeyboardFocusManagerPeerImpl implements java.awt.peer.KeyboardFocus
 	* 1) accepts focus on click (in general)
 	* 2) may be a focus owner (in particular)
 	*/
-	@:overload public static function shouldFocusOnClick(component : java.awt.Component) : Bool;
+	@:overload @:public @:static public static function shouldFocusOnClick(component : java.awt.Component) : Bool;
 	
 	/*
 	* Posts proper lost/gain focus events to the event queue.
 	*/
-	@:overload public static function deliverFocus(lightweightChild : java.awt.Component, target : java.awt.Component, temporary : Bool, focusedWindowChangeAllowed : Bool, time : haxe.Int64, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause, currentFocusOwner : java.awt.Component) : Bool;
+	@:overload @:public @:static public static function deliverFocus(lightweightChild : java.awt.Component, target : java.awt.Component, temporary : Bool, focusedWindowChangeAllowed : Bool, time : haxe.Int64, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause, currentFocusOwner : java.awt.Component) : Bool;
 	
-	@:overload public static function requestFocusFor(target : java.awt.Component, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Bool;
+	@:overload @:public @:static public static function requestFocusFor(target : java.awt.Component, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Bool;
 	
-	@:overload public static function shouldNativelyFocusHeavyweight(heavyweight : java.awt.Component, descendant : java.awt.Component, temporary : Bool, focusedWindowChangeAllowed : Bool, time : haxe.Int64, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Int;
+	@:overload @:public @:static public static function shouldNativelyFocusHeavyweight(heavyweight : java.awt.Component, descendant : java.awt.Component, temporary : Bool, focusedWindowChangeAllowed : Bool, time : haxe.Int64, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Int;
 	
-	@:overload public static function removeLastFocusRequest(heavyweight : java.awt.Component) : Void;
+	@:overload @:public @:static public static function removeLastFocusRequest(heavyweight : java.awt.Component) : Void;
 	
-	@:overload public static function processSynchronousLightweightTransfer(heavyweight : java.awt.Component, descendant : java.awt.Component, temporary : Bool, focusedWindowChangeAllowed : Bool, time : haxe.Int64) : Bool;
+	@:overload @:public @:static public static function processSynchronousLightweightTransfer(heavyweight : java.awt.Component, descendant : java.awt.Component, temporary : Bool, focusedWindowChangeAllowed : Bool, time : haxe.Int64) : Bool;
 	
 	/**
 	* Returns the currently focused window.
@@ -66,7 +66,7 @@ extern class KeyboardFocusManagerPeerImpl implements java.awt.peer.KeyboardFocus
 	*
 	* @see KeyboardFocusManager#getNativeFocusedWindow()
 	*/
-	@:overload public function getCurrentFocusedWindow() : java.awt.Window;
+	@:overload @:public public function getCurrentFocusedWindow() : java.awt.Window;
 	
 	/**
 	* Returns the component that currently owns the input focus.
@@ -75,7 +75,7 @@ extern class KeyboardFocusManagerPeerImpl implements java.awt.peer.KeyboardFocus
 	*
 	* @see KeyboardFocusManager#getNativeFocusOwner()
 	*/
-	@:overload public function getCurrentFocusOwner() : java.awt.Component;
+	@:overload @:public public function getCurrentFocusOwner() : java.awt.Component;
 	
 	/**
 	* Sets the component that should become the focus owner.
@@ -84,7 +84,7 @@ extern class KeyboardFocusManagerPeerImpl implements java.awt.peer.KeyboardFocus
 	*
 	* @see KeyboardFocusManager#setNativeFocusOwner(Component)
 	*/
-	@:overload public function setCurrentFocusOwner(comp : java.awt.Component) : Void;
+	@:overload @:public public function setCurrentFocusOwner(comp : java.awt.Component) : Void;
 	
 	
 }

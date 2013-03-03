@@ -20,9 +20,9 @@ package com.sun.org.apache.xerces.internal.impl.dv.xs;
 */
 extern class AnyURIDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.TypeValidator
 {
-	@:overload override public function getAllowedFacets() : java.StdTypes.Int16;
+	@:overload @:public override public function getAllowedFacets() : java.StdTypes.Int16;
 	
-	@:overload override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
+	@:overload @:public override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
 	
 	
 }

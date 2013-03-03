@@ -25,29 +25,29 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface Schema extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.SchemaTop extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function annotation() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Annotation;
+	@:overload @:public public function annotation() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Annotation;
 	
-	@:overload public function _import() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Import;
+	@:overload @:public public function _import() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Import;
 	
-	@:overload public function targetNamespace(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
+	@:overload @:public public function targetNamespace(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function lang(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
+	@:overload @:public public function lang(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function id(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
+	@:overload @:public public function id(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function elementFormDefault(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
+	@:overload @:public public function elementFormDefault(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function attributeFormDefault(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
+	@:overload @:public public function attributeFormDefault(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function blockDefault(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
+	@:overload @:public public function blockDefault(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function blockDefault(value : java.NativeArray<String>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
+	@:overload @:public public function blockDefault(value : java.NativeArray<String>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function finalDefault(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
+	@:overload @:public public function finalDefault(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function finalDefault(value : java.NativeArray<String>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
+	@:overload @:public public function finalDefault(value : java.NativeArray<String>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function version(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
+	@:overload @:public public function version(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
 	
 }

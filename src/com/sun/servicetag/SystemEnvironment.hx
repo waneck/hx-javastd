@@ -35,119 +35,119 @@ package com.sun.servicetag;
 //// (e.g. NetBeans and SunStudio) will use the version in JDK.
 extern class SystemEnvironment
 {
-	@:overload @:synchronized public static function getSystemEnvironment() : com.sun.servicetag.SystemEnvironment;
+	@:overload @:public @:static @:synchronized public static function getSystemEnvironment() : com.sun.servicetag.SystemEnvironment;
 	
 	/**
 	* Sets the hostname.
 	* @param hostname The hostname to set.
 	*/
-	@:overload public function setHostname(hostname : String) : Void;
+	@:overload @:public public function setHostname(hostname : String) : Void;
 	
 	/**
 	* Sets the OS name.
 	* @param osName The osName to set.
 	*/
-	@:overload public function setOsName(osName : String) : Void;
+	@:overload @:public public function setOsName(osName : String) : Void;
 	
 	/**
 	* Sets the OS version.
 	* @param osVersion The osVersion to set.
 	*/
-	@:overload public function setOsVersion(osVersion : String) : Void;
+	@:overload @:public public function setOsVersion(osVersion : String) : Void;
 	
 	/**
 	* Sets the OS architecture.
 	* @param osArchitecture The osArchitecture to set.
 	*/
-	@:overload public function setOsArchitecture(osArchitecture : String) : Void;
+	@:overload @:public public function setOsArchitecture(osArchitecture : String) : Void;
 	
 	/**
 	* Sets the system model.
 	* @param systemModel The systemModel to set.
 	*/
-	@:overload public function setSystemModel(systemModel : String) : Void;
+	@:overload @:public public function setSystemModel(systemModel : String) : Void;
 	
 	/**
 	* Sets the system manufacturer.
 	* @param systemManufacturer The systemManufacturer to set.
 	*/
-	@:overload public function setSystemManufacturer(systemManufacturer : String) : Void;
+	@:overload @:public public function setSystemManufacturer(systemManufacturer : String) : Void;
 	
 	/**
 	* Sets the cpu manufacturer.
 	* @param cpuManufacturer The cpuManufacturer to set.
 	*/
-	@:overload public function setCpuManufacturer(cpuManufacturer : String) : Void;
+	@:overload @:public public function setCpuManufacturer(cpuManufacturer : String) : Void;
 	
 	/**
 	* Sets the serial number.
 	* @param serialNumber The serialNumber to set.
 	*/
-	@:overload public function setSerialNumber(serialNumber : String) : Void;
+	@:overload @:public public function setSerialNumber(serialNumber : String) : Void;
 	
 	/**
 	* Sets the hostid.  Truncates to a max length of 16 chars.
 	* @param hostId The hostid to set.
 	*/
-	@:overload public function setHostId(hostId : String) : Void;
+	@:overload @:public public function setHostId(hostId : String) : Void;
 	
 	/**
 	* Returns the hostname.
 	* @return The hostname.
 	*/
-	@:overload public function getHostname() : String;
+	@:overload @:public public function getHostname() : String;
 	
 	/**
 	* Returns the osName.
 	* @return The osName.
 	*/
-	@:overload public function getOsName() : String;
+	@:overload @:public public function getOsName() : String;
 	
 	/**
 	* Returns the osVersion.
 	* @return The osVersion.
 	*/
-	@:overload public function getOsVersion() : String;
+	@:overload @:public public function getOsVersion() : String;
 	
 	/**
 	* Returns the osArchitecture.
 	* @return The osArchitecture.
 	*/
-	@:overload public function getOsArchitecture() : String;
+	@:overload @:public public function getOsArchitecture() : String;
 	
 	/**
 	* Returns the systemModel.
 	* @return The systemModel.
 	*/
-	@:overload public function getSystemModel() : String;
+	@:overload @:public public function getSystemModel() : String;
 	
 	/**
 	* Returns the systemManufacturer.
 	* @return The systemManufacturer.
 	*/
-	@:overload public function getSystemManufacturer() : String;
+	@:overload @:public public function getSystemManufacturer() : String;
 	
 	/**
 	* Returns the serialNumber.
 	* @return The serialNumber.
 	*/
-	@:overload public function getSerialNumber() : String;
+	@:overload @:public public function getSerialNumber() : String;
 	
 	/**
 	* Returns the hostId.
 	* @return The hostId.
 	*/
-	@:overload public function getHostId() : String;
+	@:overload @:public public function getHostId() : String;
 	
 	/**
 	* Returns the cpuManufacturer.
 	* @return The cpuManufacturer.
 	*/
-	@:overload public function getCpuManufacturer() : String;
+	@:overload @:public public function getCpuManufacturer() : String;
 	
-	@:overload private function getCommandOutput(command : java.NativeArray<String>) : String;
+	@:overload @:protected private function getCommandOutput(command : java.NativeArray<String>) : String;
 	
-	@:overload private function getFileContent(filename : String) : String;
+	@:overload @:protected private function getFileContent(filename : String) : String;
 	
 	
 }

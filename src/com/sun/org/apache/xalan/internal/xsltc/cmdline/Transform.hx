@@ -23,17 +23,17 @@ package com.sun.org.apache.xalan.internal.xsltc.cmdline;
 */
 extern class Transform
 {
-	@:overload public function new(className : String, fileName : String, uri : Bool, debug : Bool, iterations : Int) : Void;
+	@:overload @:public public function new(className : String, fileName : String, uri : Bool, debug : Bool, iterations : Int) : Void;
 	
-	@:overload public function getFileName() : String;
+	@:overload @:public public function getFileName() : String;
 	
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
-	@:overload public function setParameters(params : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function setParameters(params : java.util.Vector<Dynamic>) : Void;
 	
-	@:overload public static function printUsage() : Void;
+	@:overload @:public @:static public static function printUsage() : Void;
 	
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

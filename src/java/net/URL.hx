@@ -103,7 +103,7 @@ extern class URL implements java.io.Serializable
 	* @see        java.net.URLStreamHandlerFactory#createURLStreamHandler(
 	*                  java.lang.String)
 	*/
-	@:overload public function new(protocol : String, host : String, port : Int, file : String) : Void;
+	@:overload @:public public function new(protocol : String, host : String, port : Int, file : String) : Void;
 	
 	/**
 	* Creates a URL from the specified <code>protocol</code>
@@ -123,7 +123,7 @@ extern class URL implements java.io.Serializable
 	* @see        java.net.URL#URL(java.lang.String, java.lang.String,
 	*                  int, java.lang.String)
 	*/
-	@:overload public function new(protocol : String, host : String, file : String) : Void;
+	@:overload @:public public function new(protocol : String, host : String, file : String) : Void;
 	
 	/**
 	* Creates a <code>URL</code> object from the specified
@@ -164,7 +164,7 @@ extern class URL implements java.io.Serializable
 	* @see        SecurityManager#checkPermission
 	* @see        java.net.NetPermission
 	*/
-	@:overload public function new(protocol : String, host : String, port : Int, file : String, handler : java.net.URLStreamHandler) : Void;
+	@:overload @:public public function new(protocol : String, host : String, port : Int, file : String, handler : java.net.URLStreamHandler) : Void;
 	
 	/**
 	* Creates a <code>URL</code> object from the <code>String</code>
@@ -178,7 +178,7 @@ extern class URL implements java.io.Serializable
 	*               unknown protocol is found, or <tt>spec</tt> is <tt>null</tt>.
 	* @see        java.net.URL#URL(java.net.URL, java.lang.String)
 	*/
-	@:overload public function new(spec : String) : Void;
+	@:overload @:public public function new(spec : String) : Void;
 	
 	/**
 	* Creates a URL by parsing the given spec within a specified context.
@@ -227,7 +227,7 @@ extern class URL implements java.io.Serializable
 	* @see        java.net.URLStreamHandler#parseURL(java.net.URL,
 	*                  java.lang.String, int, int)
 	*/
-	@:overload public function new(context : java.net.URL, spec : String) : Void;
+	@:overload @:public public function new(context : java.net.URL, spec : String) : Void;
 	
 	/**
 	* Creates a URL by parsing the given spec with the specified handler
@@ -249,7 +249,7 @@ extern class URL implements java.io.Serializable
 	* @see        java.net.URLStreamHandler#parseURL(java.net.URL,
 	*                  java.lang.String, int, int)
 	*/
-	@:overload public function new(context : java.net.URL, spec : String, handler : java.net.URLStreamHandler) : Void;
+	@:overload @:public public function new(context : java.net.URL, spec : String, handler : java.net.URLStreamHandler) : Void;
 	
 	/**
 	* Sets the fields of the URL. This is not a public method so that
@@ -262,7 +262,7 @@ extern class URL implements java.io.Serializable
 	* @param file the file on the host
 	* @param ref the internal reference in the URL
 	*/
-	@:overload private function set(protocol : String, host : String, port : Int, file : String, ref : String) : Void;
+	@:overload @:protected private function set(protocol : String, host : String, port : Int, file : String, ref : String) : Void;
 	
 	/**
 	* Sets the specified 8 fields of the URL. This is not a public method so
@@ -279,7 +279,7 @@ extern class URL implements java.io.Serializable
 	* @param query the query part of this URL
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function set(protocol : String, host : String, port : Int, authority : String, userInfo : String, path : String, query : String, ref : String) : Void;
+	@:require(java3) @:overload @:protected private function set(protocol : String, host : String, port : Int, authority : String, userInfo : String, path : String, query : String, ref : String) : Void;
 	
 	/**
 	* Gets the query part of this <code>URL</code>.
@@ -288,7 +288,7 @@ extern class URL implements java.io.Serializable
 	* or <CODE>null</CODE> if one does not exist
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getQuery() : String;
+	@:require(java3) @:overload @:public public function getQuery() : String;
 	
 	/**
 	* Gets the path part of this <code>URL</code>.
@@ -297,7 +297,7 @@ extern class URL implements java.io.Serializable
 	* empty string if one does not exist
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getPath() : String;
+	@:require(java3) @:overload @:public public function getPath() : String;
 	
 	/**
 	* Gets the userInfo part of this <code>URL</code>.
@@ -306,7 +306,7 @@ extern class URL implements java.io.Serializable
 	* <CODE>null</CODE> if one does not exist
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getUserInfo() : String;
+	@:require(java3) @:overload @:public public function getUserInfo() : String;
 	
 	/**
 	* Gets the authority part of this <code>URL</code>.
@@ -314,14 +314,14 @@ extern class URL implements java.io.Serializable
 	* @return  the authority part of this <code>URL</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAuthority() : String;
+	@:require(java3) @:overload @:public public function getAuthority() : String;
 	
 	/**
 	* Gets the port number of this <code>URL</code>.
 	*
 	* @return  the port number, or -1 if the port is not set
 	*/
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
 	/**
 	* Gets the default port number of the protocol associated
@@ -332,14 +332,14 @@ extern class URL implements java.io.Serializable
 	* @return  the port number
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getDefaultPort() : Int;
+	@:require(java4) @:overload @:public public function getDefaultPort() : Int;
 	
 	/**
 	* Gets the protocol name of this <code>URL</code>.
 	*
 	* @return  the protocol of this <code>URL</code>.
 	*/
-	@:overload public function getProtocol() : String;
+	@:overload @:public public function getProtocol() : String;
 	
 	/**
 	* Gets the host name of this <code>URL</code>, if applicable.
@@ -349,7 +349,7 @@ extern class URL implements java.io.Serializable
 	*
 	* @return  the host name of this <code>URL</code>.
 	*/
-	@:overload public function getHost() : String;
+	@:overload @:public public function getHost() : String;
 	
 	/**
 	* Gets the file name of this <code>URL</code>.
@@ -362,7 +362,7 @@ extern class URL implements java.io.Serializable
 	* @return  the file name of this <code>URL</code>,
 	* or an empty string if one does not exist
 	*/
-	@:overload public function getFile() : String;
+	@:overload @:public public function getFile() : String;
 	
 	/**
 	* Gets the anchor (also known as the "reference") of this
@@ -371,7 +371,7 @@ extern class URL implements java.io.Serializable
 	* @return  the anchor (also known as the "reference") of this
 	*          <code>URL</code>, or <CODE>null</CODE> if one does not exist
 	*/
-	@:overload public function getRef() : String;
+	@:overload @:public public function getRef() : String;
 	
 	/**
 	* Compares this URL for equality with another object.<p>
@@ -398,7 +398,7 @@ extern class URL implements java.io.Serializable
 	* @return  <code>true</code> if the objects are the same;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Creates an integer suitable for hash table indexing.<p>
@@ -408,7 +408,7 @@ extern class URL implements java.io.Serializable
 	*
 	* @return  a hash code for this <code>URL</code>.
 	*/
-	@:overload @:synchronized public function hashCode() : Int;
+	@:overload @:public @:synchronized public function hashCode() : Int;
 	
 	/**
 	* Compares two URLs, excluding the fragment component.<p>
@@ -421,7 +421,7 @@ extern class URL implements java.io.Serializable
 	* @return  <code>true</code> if they reference the same remote object;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload public function sameFile(other : java.net.URL) : Bool;
+	@:overload @:public public function sameFile(other : java.net.URL) : Bool;
 	
 	/**
 	* Constructs a string representation of this <code>URL</code>. The
@@ -433,7 +433,7 @@ extern class URL implements java.io.Serializable
 	*                  java.lang.String)
 	* @see     java.net.URLStreamHandler#toExternalForm(java.net.URL)
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Constructs a string representation of this <code>URL</code>. The
@@ -445,7 +445,7 @@ extern class URL implements java.io.Serializable
 	*                  int, java.lang.String)
 	* @see     java.net.URLStreamHandler#toExternalForm(java.net.URL)
 	*/
-	@:overload public function toExternalForm() : String;
+	@:overload @:public public function toExternalForm() : String;
 	
 	/**
 	* Returns a {@link java.net.URI} equivalent to this URL.
@@ -460,7 +460,7 @@ extern class URL implements java.io.Serializable
 	* @return    a URI instance equivalent to this URL.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function toURI() : java.net.URI;
+	@:require(java5) @:overload @:public public function toURI() : java.net.URI;
 	
 	/**
 	* Returns a {@link java.net.URLConnection URLConnection} instance that
@@ -491,7 +491,7 @@ extern class URL implements java.io.Serializable
 	* @see        java.net.URL#URL(java.lang.String, java.lang.String,
 	*             int, java.lang.String)
 	*/
-	@:overload public function openConnection() : java.net.URLConnection;
+	@:overload @:public public function openConnection() : java.net.URLConnection;
 	
 	/**
 	* Same as {@link #openConnection()}, except that the connection will be
@@ -522,7 +522,7 @@ extern class URL implements java.io.Serializable
 	*             java.net.Proxy)
 	* @since      1.5
 	*/
-	@:require(java5) @:overload public function openConnection(proxy : java.net.Proxy) : java.net.URLConnection;
+	@:require(java5) @:overload @:public public function openConnection(proxy : java.net.Proxy) : java.net.URLConnection;
 	
 	/**
 	* Opens a connection to this <code>URL</code> and returns an
@@ -537,7 +537,7 @@ extern class URL implements java.io.Serializable
 	* @see        java.net.URL#openConnection()
 	* @see        java.net.URLConnection#getInputStream()
 	*/
-	@:overload @:final public function openStream() : java.io.InputStream;
+	@:overload @:public @:final public function openStream() : java.io.InputStream;
 	
 	/**
 	* Gets the contents of this URL. This method is a shorthand for:
@@ -549,7 +549,7 @@ extern class URL implements java.io.Serializable
 	* @exception  IOException  if an I/O exception occurs.
 	* @see        java.net.URLConnection#getContent()
 	*/
-	@:overload @:final public function getContent() : Dynamic;
+	@:overload @:public @:final public function getContent() : Dynamic;
 	
 	/**
 	* Gets the contents of this URL. This method is a shorthand for:
@@ -565,7 +565,7 @@ extern class URL implements java.io.Serializable
 	* @see        java.net.URLConnection#getContent(Class[])
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:final public function getContent(classes : java.NativeArray<Class<Dynamic>>) : Dynamic;
+	@:require(java3) @:overload @:public @:final public function getContent(classes : java.NativeArray<Class<Dynamic>>) : Dynamic;
 	
 	/**
 	* Sets an application's <code>URLStreamHandlerFactory</code>.
@@ -590,7 +590,7 @@ extern class URL implements java.io.Serializable
 	* @see        java.net.URLStreamHandlerFactory
 	* @see        SecurityManager#checkSetFactory
 	*/
-	@:overload public static function setURLStreamHandlerFactory(fac : java.net.URLStreamHandlerFactory) : Void;
+	@:overload @:public @:static public static function setURLStreamHandlerFactory(fac : java.net.URLStreamHandlerFactory) : Void;
 	
 	
 }

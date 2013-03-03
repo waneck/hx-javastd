@@ -29,13 +29,13 @@ extern class BufImgVolatileSurfaceManager extends sun.awt.image.VolatileSurfaceM
 	* This constructor simply defers to the superclass since all of the real
 	* functionality of this class is implemented in VolatileSurfaceManager.
 	*/
-	@:overload public function new(vImg : sun.awt.image.SunVolatileImage, context : Dynamic) : Void;
+	@:overload @:public public function new(vImg : sun.awt.image.SunVolatileImage, context : Dynamic) : Void;
 	
 	/**
 	* Returns false to indicate that this surface manager cannot accelerate
 	* the image.
 	*/
-	@:overload private function isAccelerationEnabled() : Bool;
+	@:overload @:protected override private function isAccelerationEnabled() : Bool;
 	
 	/**
 	* Returns null to indicate failure in creating the accelerated surface.
@@ -44,7 +44,7 @@ extern class BufImgVolatileSurfaceManager extends sun.awt.image.VolatileSurfaceM
 	* isAccelerationEnabled() method.  But we need to override this method
 	* since it is abstract in our parent class.
 	*/
-	@:overload private function initAcceleratedSurface() : sun.java2d.SurfaceData;
+	@:overload @:protected override private function initAcceleratedSurface() : sun.java2d.SurfaceData;
 	
 	
 }

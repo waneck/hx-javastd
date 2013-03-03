@@ -25,41 +25,41 @@ package com.sun.tools.internal.xjc.reader.relaxng;
 */
 @:internal extern class TypeUseBinder implements com.sun.xml.internal.rngom.digested.DPatternVisitor<com.sun.tools.internal.xjc.model.TypeUse>
 {
-	@:overload public function new(compiler : com.sun.tools.internal.xjc.reader.relaxng.RELAXNGCompiler) : Void;
+	@:overload @:public public function new(compiler : com.sun.tools.internal.xjc.reader.relaxng.RELAXNGCompiler) : Void;
 	
-	@:overload public function onGrammar(p : com.sun.xml.internal.rngom.digested.DGrammarPattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onGrammar(p : com.sun.xml.internal.rngom.digested.DGrammarPattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function onChoice(p : com.sun.xml.internal.rngom.digested.DChoicePattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onChoice(p : com.sun.xml.internal.rngom.digested.DChoicePattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function onData(p : com.sun.xml.internal.rngom.digested.DDataPattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onData(p : com.sun.xml.internal.rngom.digested.DDataPattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function onValue(p : com.sun.xml.internal.rngom.digested.DValuePattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onValue(p : com.sun.xml.internal.rngom.digested.DValuePattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function onInterleave(p : com.sun.xml.internal.rngom.digested.DInterleavePattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onInterleave(p : com.sun.xml.internal.rngom.digested.DInterleavePattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function onGroup(p : com.sun.xml.internal.rngom.digested.DGroupPattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onGroup(p : com.sun.xml.internal.rngom.digested.DGroupPattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function onNotAllowed(p : com.sun.xml.internal.rngom.digested.DNotAllowedPattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onNotAllowed(p : com.sun.xml.internal.rngom.digested.DNotAllowedPattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function onEmpty(p : com.sun.xml.internal.rngom.digested.DEmptyPattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onEmpty(p : com.sun.xml.internal.rngom.digested.DEmptyPattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function onList(p : com.sun.xml.internal.rngom.digested.DListPattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onList(p : com.sun.xml.internal.rngom.digested.DListPattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function onOneOrMore(p : com.sun.xml.internal.rngom.digested.DOneOrMorePattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onOneOrMore(p : com.sun.xml.internal.rngom.digested.DOneOrMorePattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function onZeroOrMore(p : com.sun.xml.internal.rngom.digested.DZeroOrMorePattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onZeroOrMore(p : com.sun.xml.internal.rngom.digested.DZeroOrMorePattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function onOptional(p : com.sun.xml.internal.rngom.digested.DOptionalPattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onOptional(p : com.sun.xml.internal.rngom.digested.DOptionalPattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function onRef(p : com.sun.xml.internal.rngom.digested.DRefPattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onRef(p : com.sun.xml.internal.rngom.digested.DRefPattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function onText(p : com.sun.xml.internal.rngom.digested.DTextPattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onText(p : com.sun.xml.internal.rngom.digested.DTextPattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function onAttribute(p : com.sun.xml.internal.rngom.digested.DAttributePattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onAttribute(p : com.sun.xml.internal.rngom.digested.DAttributePattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function onElement(p : com.sun.xml.internal.rngom.digested.DElementPattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onElement(p : com.sun.xml.internal.rngom.digested.DElementPattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public function onMixed(p : com.sun.xml.internal.rngom.digested.DMixedPattern) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function onMixed(p : com.sun.xml.internal.rngom.digested.DMixedPattern) : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	
 }

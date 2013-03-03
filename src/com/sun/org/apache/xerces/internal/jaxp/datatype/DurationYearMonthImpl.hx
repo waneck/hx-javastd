@@ -40,7 +40,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*    If years, months parameters are all <code>null</code>. Or if any
 	*    of those parameters are negative.
 	*/
-	@:overload public function new(isPositive : Bool, years : java.math.BigInteger, months : java.math.BigInteger) : Void;
+	@:overload @:public public function new(isPositive : Bool, years : java.math.BigInteger, months : java.math.BigInteger) : Void;
 	
 	/**
 	* <p>Construct a <code>Duration</code> of type <code>xdt:yearMonthDuration</code> using the specified
@@ -58,7 +58,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @throws IllegalArgumentException If the values are not a valid representation of a
 	* <code>Duration</code>: if any of the fields (year, month) is negative.
 	*/
-	@:overload private function new(isPositive : Bool, years : Int, months : Int) : Void;
+	@:overload @:protected private function new(isPositive : Bool, years : Int, months : Int) : Void;
 	
 	/**
 	* <p>Construct a <code>Duration</code> of type <code>xdt:yearMonthDuration</code> using the specified milliseconds as defined in
@@ -92,7 +92,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*
 	* @param durationInMilliseconds Milliseconds of <code>Duration</code> to create.
 	*/
-	@:overload private function new(durationInMilliseconds : haxe.Int64) : Void;
+	@:overload @:protected private function new(durationInMilliseconds : haxe.Int64) : Void;
 	
 	/**
 	* <p>Construct a <code>Duration</code> of type <code>xdt:yearMonthDuration</code> by parsing its <code>String</code> representation,
@@ -116,13 +116,13 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @throws UnsupportedOperationException If implementation cannot support requested values.
 	* @throws NullPointerException If <code>lexicalRepresentation</code> is <code>null</code>.
 	*/
-	@:overload private function new(lexicalRepresentation : String) : Void;
+	@:overload @:protected private function new(lexicalRepresentation : String) : Void;
 	
 	/**
 	* The value space of xs:yearMonthDuration is the set of xs:integer month values.
 	* @return the value of yearMonthDuration
 	*/
-	@:overload public function getValue() : Int;
+	@:overload @:public public function getValue() : Int;
 	
 	
 }

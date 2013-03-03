@@ -38,44 +38,44 @@ extern class BlitBg extends sun.java2d.loops.GraphicsPrimitive
 	* and the destination surface are the same surface
 	* with overlapping regions of pixels
 	*/
-	public static var methodSignature(default, null) : String;
+	@:public @:static @:final public static var methodSignature(default, null) : String;
 	
-	public static var primTypeID(default, null) : Int;
+	@:public @:static @:final public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.BlitBg;
+	@:overload @:public @:static public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.BlitBg;
 	
-	@:overload public static function getFromCache(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : sun.java2d.loops.BlitBg;
+	@:overload @:public @:static public static function getFromCache(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : sun.java2d.loops.BlitBg;
 	
-	@:overload private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:protected private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload public function new(pNativePrim : haxe.Int64, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:public public function new(pNativePrim : haxe.Int64, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
 	/**
 	* All BlitBg implementors must have this invoker method
 	*/
-	@:overload @:native public function new(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, bgColor : Int, srcx : Int, srcy : Int, dstx : Int, dsty : Int, width : Int, height : Int) : Void;
+	@:overload @:public @:native public function new(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, bgColor : Int, srcx : Int, srcy : Int, dstx : Int, dsty : Int, width : Int, height : Int) : Void;
 	
-	@:overload override public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	
 	
 }
 @:native('sun$java2d$loops$BlitBg$General') @:internal extern class BlitBg_General extends sun.java2d.loops.BlitBg
 {
-	@:overload public function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:public public function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload override public function BlitBg(srcData : sun.java2d.SurfaceData, dstData : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, bgArgb : Int, srcx : Int, srcy : Int, dstx : Int, dsty : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function BlitBg(srcData : sun.java2d.SurfaceData, dstData : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, bgArgb : Int, srcx : Int, srcy : Int, dstx : Int, dsty : Int, width : Int, height : Int) : Void;
 	
 	
 }
 @:native('sun$java2d$loops$BlitBg$TraceBlitBg') @:internal extern class BlitBg_TraceBlitBg extends sun.java2d.loops.BlitBg
 {
-	@:overload public function new(target : sun.java2d.loops.BlitBg) : Void;
+	@:overload @:public public function new(target : sun.java2d.loops.BlitBg) : Void;
 	
-	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload override public function BlitBg(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, bgColor : Int, srcx : Int, srcy : Int, dstx : Int, dsty : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function BlitBg(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, bgColor : Int, srcx : Int, srcy : Int, dstx : Int, dsty : Int, width : Int, height : Int) : Void;
 	
 	
 }

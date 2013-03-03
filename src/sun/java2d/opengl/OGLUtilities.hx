@@ -30,22 +30,22 @@ package sun.java2d.opengl;
 	* defined in the OGLSurfaceData class and are duplicated here so that
 	* clients of this API can access them more easily via reflection.
 	*/
-	public static var UNDEFINED(default, null) : Int;
+	@:public @:static @:final public static var UNDEFINED(default, null) : Int;
 	
-	public static var WINDOW(default, null) : Int;
+	@:public @:static @:final public static var WINDOW(default, null) : Int;
 	
-	public static var PBUFFER(default, null) : Int;
+	@:public @:static @:final public static var PBUFFER(default, null) : Int;
 	
-	public static var TEXTURE(default, null) : Int;
+	@:public @:static @:final public static var TEXTURE(default, null) : Int;
 	
-	public static var FLIP_BACKBUFFER(default, null) : Int;
+	@:public @:static @:final public static var FLIP_BACKBUFFER(default, null) : Int;
 	
-	public static var FBOBJECT(default, null) : Int;
+	@:public @:static @:final public static var FBOBJECT(default, null) : Int;
 	
 	/**
 	* Returns true if the current thread is the OGL QueueFlusher thread.
 	*/
-	@:overload public static function isQueueFlusherThread() : Bool;
+	@:overload @:public @:static public static function isQueueFlusherThread() : Bool;
 	
 	/**
 	* Invokes the given Runnable on the OGL QueueFlusher thread with the
@@ -73,7 +73,7 @@ package sun.java2d.opengl;
 	* there was any problem making a context current to the surface
 	* associated with the given Graphics object
 	*/
-	@:overload public static function invokeWithOGLContextCurrent(g : java.awt.Graphics, r : java.lang.Runnable) : Bool;
+	@:overload @:public @:static public static function invokeWithOGLContextCurrent(g : java.awt.Graphics, r : java.lang.Runnable) : Bool;
 	
 	/**
 	* Invokes the given Runnable on the OGL QueueFlusher thread with the
@@ -98,7 +98,7 @@ package sun.java2d.opengl;
 	* @return true if the operation completed successfully, or false if
 	* there was any problem making the shared context current
 	*/
-	@:overload public static function invokeWithOGLSharedContextCurrent(config : java.awt.GraphicsConfiguration, r : java.lang.Runnable) : Bool;
+	@:overload @:public @:static public static function invokeWithOGLSharedContextCurrent(config : java.awt.GraphicsConfiguration, r : java.lang.Runnable) : Bool;
 	
 	/**
 	* Returns the Rectangle describing the OpenGL viewport on the
@@ -120,7 +120,7 @@ package sun.java2d.opengl;
 	* destination surface and component dimensions, or null if the given
 	* Graphics object is invalid
 	*/
-	@:overload public static function getOGLViewport(g : java.awt.Graphics, componentWidth : Int, componentHeight : Int) : java.awt.Rectangle;
+	@:overload @:public @:static public static function getOGLViewport(g : java.awt.Graphics, componentWidth : Int, componentHeight : Int) : java.awt.Rectangle;
 	
 	/**
 	* Returns the Rectangle describing the OpenGL scissor box on the
@@ -139,7 +139,7 @@ package sun.java2d.opengl;
 	* Graphics object and corresponding destination surface, or null if the
 	* given Graphics object is invalid or the clip region is non-rectangular
 	*/
-	@:overload public static function getOGLScissorBox(g : java.awt.Graphics) : java.awt.Rectangle;
+	@:overload @:public @:static public static function getOGLScissorBox(g : java.awt.Graphics) : java.awt.Rectangle;
 	
 	/**
 	* Returns an Object identifier for the Java 2D surface associated with
@@ -153,7 +153,7 @@ package sun.java2d.opengl;
 	* @return an identifier for the surface associated with the given
 	* Graphics object, or null if the given Graphics object is invalid
 	*/
-	@:overload public static function getOGLSurfaceIdentifier(g : java.awt.Graphics) : Dynamic;
+	@:overload @:public @:static public static function getOGLSurfaceIdentifier(g : java.awt.Graphics) : Dynamic;
 	
 	/**
 	* Returns one of the OGL-specific surface type constants (defined in
@@ -167,7 +167,7 @@ package sun.java2d.opengl;
 	* is not associated with an OpenGL surface) this method will return
 	* <code>OGLUtilities.UNDEFINED</code>
 	*/
-	@:overload public static function getOGLSurfaceType(g : java.awt.Graphics) : Int;
+	@:overload @:public @:static public static function getOGLSurfaceType(g : java.awt.Graphics) : Int;
 	
 	/**
 	* Returns the OpenGL texture target constant (either GL_TEXTURE_2D
@@ -183,7 +183,7 @@ package sun.java2d.opengl;
 	* is not associated with an OpenGL surface), or the associated surface
 	* is not backed by an OpenGL texture, this method will return zero.
 	*/
-	@:overload public static function getOGLTextureType(g : java.awt.Graphics) : Int;
+	@:overload @:public @:static public static function getOGLTextureType(g : java.awt.Graphics) : Int;
 	
 	
 }

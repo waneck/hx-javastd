@@ -29,23 +29,23 @@ package com.sun.org.glassfish.external.probe.provider;
 */
 extern class StatsProviderInfo
 {
-	@:overload public function new(configElement : String, pp : com.sun.org.glassfish.external.probe.provider.PluginPoint, subTreeRoot : String, statsProvider : Dynamic) : Void;
+	@:overload @:public public function new(configElement : String, pp : com.sun.org.glassfish.external.probe.provider.PluginPoint, subTreeRoot : String, statsProvider : Dynamic) : Void;
 	
-	@:overload public function new(configElement : String, pp : com.sun.org.glassfish.external.probe.provider.PluginPoint, subTreeRoot : String, statsProvider : Dynamic, invokerId : String) : Void;
+	@:overload @:public public function new(configElement : String, pp : com.sun.org.glassfish.external.probe.provider.PluginPoint, subTreeRoot : String, statsProvider : Dynamic, invokerId : String) : Void;
 	
-	@:overload public function getConfigElement() : String;
+	@:overload @:public public function getConfigElement() : String;
 	
-	@:overload public function getPluginPoint() : com.sun.org.glassfish.external.probe.provider.PluginPoint;
+	@:overload @:public public function getPluginPoint() : com.sun.org.glassfish.external.probe.provider.PluginPoint;
 	
-	@:overload public function getSubTreeRoot() : String;
+	@:overload @:public public function getSubTreeRoot() : String;
 	
-	@:overload public function getStatsProvider() : Dynamic;
+	@:overload @:public public function getStatsProvider() : Dynamic;
 	
-	@:overload public function getConfigLevel() : String;
+	@:overload @:public public function getConfigLevel() : String;
 	
-	@:overload public function setConfigLevel(configLevelStr : String) : Void;
+	@:overload @:public public function setConfigLevel(configLevelStr : String) : Void;
 	
-	@:overload public function getInvokerId() : String;
+	@:overload @:public public function getInvokerId() : String;
 	
 	
 }

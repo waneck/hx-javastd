@@ -53,11 +53,11 @@ extern class CheckingSchemaBuilder extends com.sun.xml.internal.rngom.parse.host
 	* @param eh
 	*      All the errors found will be sent to this handler.
 	*/
-	@:overload public function new(sb : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, eh : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function new(sb : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, eh : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload public function new(sb : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, eh : org.xml.sax.ErrorHandler, dlf : org.relaxng.datatype.DatatypeLibraryFactory) : Void;
+	@:overload @:public public function new(sb : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, eh : org.xml.sax.ErrorHandler, dlf : org.relaxng.datatype.DatatypeLibraryFactory) : Void;
 	
-	@:overload public function expandPattern(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public override public function expandPattern(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
 	
 }

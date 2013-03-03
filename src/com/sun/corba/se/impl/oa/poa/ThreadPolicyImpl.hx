@@ -25,17 +25,17 @@ package com.sun.corba.se.impl.oa.poa;
 */
 @:internal extern class ThreadPolicyImpl extends org.omg.CORBA.LocalObject implements org.omg.PortableServer.ThreadPolicy
 {
-	@:overload public function new(value : org.omg.PortableServer.ThreadPolicyValue) : Void;
+	@:overload @:public public function new(value : org.omg.PortableServer.ThreadPolicyValue) : Void;
 	
-	@:overload public function value() : org.omg.PortableServer.ThreadPolicyValue;
+	@:overload @:public public function value() : org.omg.PortableServer.ThreadPolicyValue;
 	
-	@:overload public function policy_type() : Int;
+	@:overload @:public public function policy_type() : Int;
 	
-	@:overload public function copy() : org.omg.CORBA.Policy;
+	@:overload @:public public function copy() : org.omg.CORBA.Policy;
 	
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

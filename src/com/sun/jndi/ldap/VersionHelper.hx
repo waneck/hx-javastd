@@ -25,7 +25,7 @@ package com.sun.jndi.ldap;
 */
 @:internal extern class VersionHelper
 {
-	@:overload private static function getUrlArray(url : java.NativeArray<String>) : java.NativeArray<java.net.URL>;
+	@:overload @:static @:protected private static function getUrlArray(url : java.NativeArray<String>) : java.NativeArray<java.net.URL>;
 	
 	
 }

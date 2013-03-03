@@ -27,32 +27,32 @@ extern interface XSElementDeclaration extends com.sun.org.apache.xerces.internal
 	* [type definition]: either a simple type definition or a complex type
 	* definition.
 	*/
-	@:overload public function getTypeDefinition() : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
+	@:overload @:public public function getTypeDefinition() : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
 	
 	/**
 	* [scope]. One of <code>SCOPE_GLOBAL</code>, <code>SCOPE_LOCAL</code>, or
 	* <code>SCOPE_ABSENT</code>. If the scope is local, then the
 	* <code>enclosingCTDefinition</code> is present.
 	*/
-	@:overload public function getScope() : java.StdTypes.Int16;
+	@:overload @:public public function getScope() : java.StdTypes.Int16;
 	
 	/**
 	* The complex type definition for locally scoped declarations (see
 	* <code>scope</code>), otherwise <code>null</code> if no such
 	* definition exists.
 	*/
-	@:overload public function getEnclosingCTDefinition() : com.sun.org.apache.xerces.internal.xs.XSComplexTypeDefinition;
+	@:overload @:public public function getEnclosingCTDefinition() : com.sun.org.apache.xerces.internal.xs.XSComplexTypeDefinition;
 	
 	/**
 	* [Value constraint]: one of <code>VC_NONE, VC_DEFAULT, VC_FIXED</code>.
 	*/
-	@:overload public function getConstraintType() : java.StdTypes.Int16;
+	@:overload @:public public function getConstraintType() : java.StdTypes.Int16;
 	
 	/**
 	* [Value constraint]: the constraint value with respect to the [type
 	* definition], otherwise <code>null</code>.
 	*/
-	@:overload public function getConstraintValue() : String;
+	@:overload @:public public function getConstraintValue() : String;
 	
 	/**
 	* Value Constraint: Binding specific actual constraint value or
@@ -62,7 +62,7 @@ extern interface XSElementDeclaration extends com.sun.org.apache.xerces.internal
 	*   NOT_SUPPORTED_ERR: Raised if the implementation does not support this
 	*   method.
 	*/
-	@:overload public function getActualVC() : Dynamic;
+	@:overload @:public public function getActualVC() : Dynamic;
 	
 	/**
 	* The actual constraint value built-in datatype, e.g.
@@ -79,7 +79,7 @@ extern interface XSElementDeclaration extends com.sun.org.apache.xerces.internal
 	*   NOT_SUPPORTED_ERR: Raised if the implementation does not support this
 	*   method.
 	*/
-	@:overload public function getActualVCType() : java.StdTypes.Int16;
+	@:overload @:public public function getActualVCType() : java.StdTypes.Int16;
 	
 	/**
 	* In the case the actual constraint value represents a list, i.e. the
@@ -94,7 +94,7 @@ extern interface XSElementDeclaration extends com.sun.org.apache.xerces.internal
 	*   NOT_SUPPORTED_ERR: Raised if the implementation does not support this
 	*   method.
 	*/
-	@:overload public function getItemValueTypes() : com.sun.org.apache.xerces.internal.xs.ShortList;
+	@:overload @:public public function getItemValueTypes() : com.sun.org.apache.xerces.internal.xs.ShortList;
 	
 	/**
 	*  If nillable is true, then an element may also be valid if it carries
@@ -104,19 +104,19 @@ extern interface XSElementDeclaration extends com.sun.org.apache.xerces.internal
 	* element content despite a <code>content type</code> which would
 	* otherwise require content.
 	*/
-	@:overload public function getNillable() : Bool;
+	@:overload @:public public function getNillable() : Bool;
 	
 	/**
 	* identity-constraint definitions: a set of constraint definitions if it
 	* exists, otherwise an empty <code>XSNamedMap</code>.
 	*/
-	@:overload public function getIdentityConstraints() : com.sun.org.apache.xerces.internal.xs.XSNamedMap;
+	@:overload @:public public function getIdentityConstraints() : com.sun.org.apache.xerces.internal.xs.XSNamedMap;
 	
 	/**
 	* [substitution group affiliation]: a top-level element definition if it
 	* exists, otherwise <code>null</code>.
 	*/
-	@:overload public function getSubstitutionGroupAffiliation() : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
+	@:overload @:public public function getSubstitutionGroupAffiliation() : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
 	
 	/**
 	* Convenience method that checks if <code>exclusion</code> is a
@@ -127,7 +127,7 @@ extern interface XSElementDeclaration extends com.sun.org.apache.xerces.internal
 	* @return True if <code>exclusion</code> is a part of the substitution
 	*   group exclusion subset.
 	*/
-	@:overload public function isSubstitutionGroupExclusion(exclusion : java.StdTypes.Int16) : Bool;
+	@:overload @:public public function isSubstitutionGroupExclusion(exclusion : java.StdTypes.Int16) : Bool;
 	
 	/**
 	*  [substitution group exclusions]: the returned value is a bit
@@ -135,7 +135,7 @@ extern interface XSElementDeclaration extends com.sun.org.apache.xerces.internal
 	* <code>DERIVATION_EXTENSION, DERIVATION_RESTRICTION</code>} or
 	* <code>DERIVATION_NONE</code>.
 	*/
-	@:overload public function getSubstitutionGroupExclusions() : java.StdTypes.Int16;
+	@:overload @:public public function getSubstitutionGroupExclusions() : java.StdTypes.Int16;
 	
 	/**
 	* Convenience method that checks if <code>disallowed</code> is a
@@ -147,7 +147,7 @@ extern interface XSElementDeclaration extends com.sun.org.apache.xerces.internal
 	* @return True if <code>disallowed</code> is a part of the substitution
 	*   group exclusion subset.
 	*/
-	@:overload public function isDisallowedSubstitution(disallowed : java.StdTypes.Int16) : Bool;
+	@:overload @:public public function isDisallowedSubstitution(disallowed : java.StdTypes.Int16) : Bool;
 	
 	/**
 	*  [disallowed substitutions]: the returned value is a bit combination of
@@ -156,23 +156,23 @@ extern interface XSElementDeclaration extends com.sun.org.apache.xerces.internal
 	* } corresponding to substitutions disallowed by this
 	* <code>XSElementDeclaration</code> or <code>DERIVATION_NONE</code>.
 	*/
-	@:overload public function getDisallowedSubstitutions() : java.StdTypes.Int16;
+	@:overload @:public public function getDisallowedSubstitutions() : java.StdTypes.Int16;
 	
 	/**
 	* {abstract} A boolean.
 	*/
-	@:overload public function getAbstract() : Bool;
+	@:overload @:public public function getAbstract() : Bool;
 	
 	/**
 	* An annotation if it exists, otherwise <code>null</code>. If not null
 	* then the first [annotation] from the sequence of annotations.
 	*/
-	@:overload public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:overload @:public public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
 	/**
 	* A sequence of [annotations] or an empty <code>XSObjectList</code>.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	
 }

@@ -8,17 +8,17 @@ package org.omg.IOP;
 extern class IOR implements org.omg.CORBA.portable.IDLEntity
 {
 	/** The type id, represented as a String. */
-	public var type_id : String;
+	@:public public var type_id : String;
 	
 	/** 
 		 * An array of tagged profiles associated with this 
 		 * object reference. 
 		 */
-	public var profiles : java.NativeArray<org.omg.IOP.TaggedProfile>;
+	@:public public var profiles : java.NativeArray<org.omg.IOP.TaggedProfile>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_type_id : String, _profiles : java.NativeArray<org.omg.IOP.TaggedProfile>) : Void;
+	@:overload @:public public function new(_type_id : String, _profiles : java.NativeArray<org.omg.IOP.TaggedProfile>) : Void;
 	
 	
 }

@@ -45,80 +45,80 @@ extern interface HTMLSelectElement extends org.w3c.dom.html.HTMLElement
 	* when the multiple attribute is <code>true</code> and the string
 	* "select-one" when <code>false</code> .
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	*  The ordinal index of the selected option, starting from 0. The value
 	* -1 is returned if no element is selected. If multiple options are
 	* selected, the index of the first selected option is returned.
 	*/
-	@:overload public function getSelectedIndex() : Int;
+	@:overload @:public public function getSelectedIndex() : Int;
 	
-	@:overload public function setSelectedIndex(selectedIndex : Int) : Void;
+	@:overload @:public public function setSelectedIndex(selectedIndex : Int) : Void;
 	
 	/**
 	*  The current form control value.
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload public function setValue(value : String) : Void;
+	@:overload @:public public function setValue(value : String) : Void;
 	
 	/**
 	*  The number of options in this <code>SELECT</code> .
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	*  Returns the <code>FORM</code> element containing this control. Returns
 	* <code>null</code> if this control is not within the context of a form.
 	*/
-	@:overload public function getForm() : org.w3c.dom.html.HTMLFormElement;
+	@:overload @:public public function getForm() : org.w3c.dom.html.HTMLFormElement;
 	
 	/**
 	*  The collection of <code>OPTION</code> elements contained by this
 	* element.
 	*/
-	@:overload public function getOptions() : org.w3c.dom.html.HTMLCollection;
+	@:overload @:public public function getOptions() : org.w3c.dom.html.HTMLCollection;
 	
 	/**
 	*  The control is unavailable in this context. See the  disabled
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getDisabled() : Bool;
+	@:overload @:public public function getDisabled() : Bool;
 	
-	@:overload public function setDisabled(disabled : Bool) : Void;
+	@:overload @:public public function setDisabled(disabled : Bool) : Void;
 	
 	/**
 	*  If true, multiple <code>OPTION</code> elements may  be selected in
 	* this <code>SELECT</code> . See the  multiple attribute definition in
 	* HTML 4.0.
 	*/
-	@:overload public function getMultiple() : Bool;
+	@:overload @:public public function getMultiple() : Bool;
 	
-	@:overload public function setMultiple(multiple : Bool) : Void;
+	@:overload @:public public function setMultiple(multiple : Bool) : Void;
 	
 	/**
 	*  Form control or object name when submitted with a form. See the  name
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	/**
 	*  Number of visible rows. See the  size attribute definition in HTML 4.0.
 	*/
-	@:overload public function getSize() : Int;
+	@:overload @:public public function getSize() : Int;
 	
-	@:overload public function setSize(size : Int) : Void;
+	@:overload @:public public function setSize(size : Int) : Void;
 	
 	/**
 	*  Index that represents the element's position in the tabbing order. See
 	* the  tabindex attribute definition in HTML 4.0.
 	*/
-	@:overload public function getTabIndex() : Int;
+	@:overload @:public public function getTabIndex() : Int;
 	
-	@:overload public function setTabIndex(tabIndex : Int) : Void;
+	@:overload @:public public function setTabIndex(tabIndex : Int) : Void;
 	
 	/**
 	*  Add a new element to the collection of <code>OPTION</code> elements
@@ -134,7 +134,7 @@ extern interface HTMLSelectElement extends org.w3c.dom.html.HTMLElement
 	*    NOT_FOUND_ERR: Raised if <code>before</code> is not a descendant of
 	*   the <code>SELECT</code> element.
 	*/
-	@:overload public function add(element : org.w3c.dom.html.HTMLElement, before : org.w3c.dom.html.HTMLElement) : Void;
+	@:overload @:public public function add(element : org.w3c.dom.html.HTMLElement, before : org.w3c.dom.html.HTMLElement) : Void;
 	
 	/**
 	*  Remove an element from the collection of <code>OPTION</code> elements
@@ -142,17 +142,17 @@ extern interface HTMLSelectElement extends org.w3c.dom.html.HTMLElement
 	*  index.
 	* @param index  The index of the item to remove, starting from 0.
 	*/
-	@:overload public function remove(index : Int) : Void;
+	@:overload @:public public function remove(index : Int) : Void;
 	
 	/**
 	*  Removes keyboard focus from this element.
 	*/
-	@:overload public function blur() : Void;
+	@:overload @:public public function blur() : Void;
 	
 	/**
 	*  Gives keyboard focus to this element.
 	*/
-	@:overload public function focus() : Void;
+	@:overload @:public public function focus() : Void;
 	
 	
 }

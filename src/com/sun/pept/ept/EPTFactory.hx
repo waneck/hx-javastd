@@ -45,7 +45,7 @@ extern interface EPTFactory
 	* @param messageInfo ...
 	* </p>
 	*/
-	@:overload public function getMessageDispatcher(messageInfo : com.sun.pept.ept.MessageInfo) : com.sun.pept.protocol.MessageDispatcher;
+	@:overload @:public public function getMessageDispatcher(messageInfo : com.sun.pept.ept.MessageInfo) : com.sun.pept.protocol.MessageDispatcher;
 	
 	/**
 	* <p>
@@ -57,7 +57,7 @@ extern interface EPTFactory
 	* @param messageInfo ...
 	* </p>
 	*/
-	@:overload public function getEncoder(messageInfo : com.sun.pept.ept.MessageInfo) : com.sun.pept.encoding.Encoder;
+	@:overload @:public public function getEncoder(messageInfo : com.sun.pept.ept.MessageInfo) : com.sun.pept.encoding.Encoder;
 	
 	/**
 	* <p>
@@ -69,7 +69,7 @@ extern interface EPTFactory
 	* @param messageInfo ...
 	* </p>
 	*/
-	@:overload public function getDecoder(messageInfo : com.sun.pept.ept.MessageInfo) : com.sun.pept.encoding.Decoder;
+	@:overload @:public public function getDecoder(messageInfo : com.sun.pept.ept.MessageInfo) : com.sun.pept.encoding.Decoder;
 	
 	/**
 	* <p>
@@ -81,7 +81,7 @@ extern interface EPTFactory
 	* @param x ...
 	* </p>
 	*/
-	@:overload public function getInterceptors(x : com.sun.pept.ept.MessageInfo) : com.sun.pept.protocol.Interceptors;
+	@:overload @:public public function getInterceptors(x : com.sun.pept.ept.MessageInfo) : com.sun.pept.protocol.Interceptors;
 	
 	/**
 	* <p>
@@ -93,7 +93,7 @@ extern interface EPTFactory
 	* @param x ...
 	* </p>
 	*/
-	@:overload public function getTargetFinder(x : com.sun.pept.ept.MessageInfo) : com.sun.pept.presentation.TargetFinder;
+	@:overload @:public public function getTargetFinder(x : com.sun.pept.ept.MessageInfo) : com.sun.pept.presentation.TargetFinder;
 	
 	
 }

@@ -25,7 +25,7 @@ package sun.reflect.generics.repository;
 */
 extern class ClassRepository extends sun.reflect.generics.repository.GenericDeclRepository<sun.reflect.generics.tree.ClassSignature>
 {
-	@:overload private function parse(s : String) : sun.reflect.generics.tree.ClassSignature;
+	@:overload @:protected override private function parse(s : String) : sun.reflect.generics.tree.ClassSignature;
 	
 	/**
 	* Static factory method.
@@ -36,7 +36,7 @@ extern class ClassRepository extends sun.reflect.generics.repository.GenericDecl
 	* @return a <tt>ClassRepository</tt> that manages the generic type
 	* information represented in the signature <tt>rawSig</tt>
 	*/
-	@:overload public static function make(rawSig : String, f : sun.reflect.generics.factory.GenericsFactory) : sun.reflect.generics.repository.ClassRepository;
+	@:overload @:public @:static public static function make(rawSig : String, f : sun.reflect.generics.factory.GenericsFactory) : sun.reflect.generics.repository.ClassRepository;
 	
 	/*
 	* When queried for a particular piece of type information, the
@@ -48,9 +48,9 @@ extern class ClassRepository extends sun.reflect.generics.repository.GenericDecl
 	* a visitor, which is created by feeding it the factory
 	* with which the repository was created.
 	*/
-	@:overload public function getSuperclass() : java.lang.reflect.Type;
+	@:overload @:public public function getSuperclass() : java.lang.reflect.Type;
 	
-	@:overload public function getSuperInterfaces() : java.NativeArray<java.lang.reflect.Type>;
+	@:overload @:public public function getSuperInterfaces() : java.NativeArray<java.lang.reflect.Type>;
 	
 	
 }

@@ -25,7 +25,7 @@ package sun.nio.fs;
 */
 @:internal extern class UnixException extends java.lang.Exception
 {
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

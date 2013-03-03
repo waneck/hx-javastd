@@ -36,28 +36,28 @@ package sun.net.httpserver;
 */
 @:internal extern class LeftOverInputStream extends java.io.FilterInputStream
 {
-	private var closed : Bool;
+	@:protected private var closed : Bool;
 	
-	private var eof : Bool;
+	@:protected private var eof : Bool;
 	
-	@:overload public function new(t : sun.net.httpserver.ExchangeImpl, src : java.io.InputStream) : Void;
+	@:overload @:public public function new(t : sun.net.httpserver.ExchangeImpl, src : java.io.InputStream) : Void;
 	
 	/**
 	* if bytes are left over buffered on *the UNDERLYING* stream
 	*/
-	@:overload public function isDataBuffered() : Bool;
+	@:overload @:public public function isDataBuffered() : Bool;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload public function isClosed() : Bool;
+	@:overload @:public public function isClosed() : Bool;
 	
-	@:overload public function isEOF() : Bool;
+	@:overload @:public public function isEOF() : Bool;
 	
-	@:overload @:abstract private function readImpl(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:protected @:abstract private function readImpl(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload @:synchronized override public function read() : Int;
+	@:overload @:public @:synchronized override public function read() : Int;
 	
-	@:overload @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* read and discard up to l bytes or "eof" occurs,
@@ -65,7 +65,7 @@ package sun.net.httpserver;
 	* is at eof (ie. all bytes were read) or false if not
 	* (still bytes to be read)
 	*/
-	@:overload public function drain(l : haxe.Int64) : Bool;
+	@:overload @:public public function drain(l : haxe.Int64) : Bool;
 	
 	
 }

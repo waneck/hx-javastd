@@ -25,15 +25,15 @@ package com.sun.tools.internal.xjc.api.impl.j2s;
 */
 @:internal extern class JAXBModelImpl implements com.sun.tools.internal.xjc.api.J2SJAXBModel
 {
-	@:overload public function new(types : com.sun.xml.internal.bind.v2.model.core.TypeInfoSet<com.sun.mirror.type.TypeMirror, com.sun.mirror.declaration.TypeDeclaration, com.sun.mirror.declaration.FieldDeclaration, com.sun.mirror.declaration.MethodDeclaration>, reader : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<com.sun.mirror.type.TypeMirror, com.sun.mirror.declaration.TypeDeclaration, com.sun.mirror.declaration.FieldDeclaration, com.sun.mirror.declaration.MethodDeclaration>, rootClasses : java.util.Collection<com.sun.tools.internal.xjc.api.Reference>, additionalElementDecls : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.api.Reference>) : Void;
+	@:overload @:public public function new(types : com.sun.xml.internal.bind.v2.model.core.TypeInfoSet<com.sun.mirror.type.TypeMirror, com.sun.mirror.declaration.TypeDeclaration, com.sun.mirror.declaration.FieldDeclaration, com.sun.mirror.declaration.MethodDeclaration>, reader : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<com.sun.mirror.type.TypeMirror, com.sun.mirror.declaration.TypeDeclaration, com.sun.mirror.declaration.FieldDeclaration, com.sun.mirror.declaration.MethodDeclaration>, rootClasses : java.util.Collection<com.sun.tools.internal.xjc.api.Reference>, additionalElementDecls : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.api.Reference>) : Void;
 	
-	@:overload public function getClassList() : java.util.List<String>;
+	@:overload @:public public function getClassList() : java.util.List<String>;
 	
-	@:overload public function getXmlTypeName(javaType : com.sun.tools.internal.xjc.api.Reference) : javax.xml.namespace.QName;
+	@:overload @:public public function getXmlTypeName(javaType : com.sun.tools.internal.xjc.api.Reference) : javax.xml.namespace.QName;
 	
-	@:overload public function generateSchema(outputResolver : javax.xml.bind.SchemaOutputResolver, errorListener : com.sun.tools.internal.xjc.api.ErrorListener) : Void;
+	@:overload @:public public function generateSchema(outputResolver : javax.xml.bind.SchemaOutputResolver, errorListener : com.sun.tools.internal.xjc.api.ErrorListener) : Void;
 	
-	@:overload public function generateEpisodeFile(output : javax.xml.transform.Result) : Void;
+	@:overload @:public public function generateEpisodeFile(output : javax.xml.transform.Result) : Void;
 	
 	
 }

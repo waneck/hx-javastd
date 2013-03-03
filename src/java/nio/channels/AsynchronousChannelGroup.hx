@@ -31,14 +31,14 @@ extern class AsynchronousChannelGroup
 	* @param   provider
 	*          The asynchronous channel provider for this group
 	*/
-	@:overload private function new(provider : java.nio.channels.spi.AsynchronousChannelProvider) : Void;
+	@:overload @:protected private function new(provider : java.nio.channels.spi.AsynchronousChannelProvider) : Void;
 	
 	/**
 	* Returns the provider that created this channel group.
 	*
 	* @return  The provider that created this channel group
 	*/
-	@:overload @:final public function provider() : java.nio.channels.spi.AsynchronousChannelProvider;
+	@:overload @:public @:final public function provider() : java.nio.channels.spi.AsynchronousChannelProvider;
 	
 	/**
 	* Creates an asynchronous channel group with a fixed thread pool.
@@ -66,7 +66,7 @@ extern class AsynchronousChannelGroup
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function withFixedThreadPool(nThreads : Int, threadFactory : java.util.concurrent.ThreadFactory) : java.nio.channels.AsynchronousChannelGroup;
+	@:overload @:public @:static public static function withFixedThreadPool(nThreads : Int, threadFactory : java.util.concurrent.ThreadFactory) : java.nio.channels.AsynchronousChannelGroup;
 	
 	/**
 	* Creates an asynchronous channel group with a given thread pool that
@@ -107,7 +107,7 @@ extern class AsynchronousChannelGroup
 	*
 	* @see java.util.concurrent.Executors#newCachedThreadPool
 	*/
-	@:overload public static function withCachedThreadPool(executor : java.util.concurrent.ExecutorService, initialSize : Int) : java.nio.channels.AsynchronousChannelGroup;
+	@:overload @:public @:static public static function withCachedThreadPool(executor : java.util.concurrent.ExecutorService, initialSize : Int) : java.nio.channels.AsynchronousChannelGroup;
 	
 	/**
 	* Creates an asynchronous channel group with a given thread pool.
@@ -142,7 +142,7 @@ extern class AsynchronousChannelGroup
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function withThreadPool(executor : java.util.concurrent.ExecutorService) : java.nio.channels.AsynchronousChannelGroup;
+	@:overload @:public @:static public static function withThreadPool(executor : java.util.concurrent.ExecutorService) : java.nio.channels.AsynchronousChannelGroup;
 	
 	/**
 	* Tells whether or not this asynchronous channel group is shutdown.
@@ -150,7 +150,7 @@ extern class AsynchronousChannelGroup
 	* @return  {@code true} if this asynchronous channel group is shutdown or
 	*          has been marked for shutdown.
 	*/
-	@:overload @:abstract public function isShutdown() : Bool;
+	@:overload @:public @:abstract public function isShutdown() : Bool;
 	
 	/**
 	* Tells whether or not this group has terminated.
@@ -160,7 +160,7 @@ extern class AsynchronousChannelGroup
 	*
 	* @return  {@code true} if this group has terminated
 	*/
-	@:overload @:abstract public function isTerminated() : Bool;
+	@:overload @:public @:abstract public function isTerminated() : Bool;
 	
 	/**
 	* Initiates an orderly shutdown of the group.
@@ -172,7 +172,7 @@ extern class AsynchronousChannelGroup
 	* and all resources have been released. This method has no effect if the
 	* group is already shutdown.
 	*/
-	@:overload @:abstract public function shutdown() : Void;
+	@:overload @:public @:abstract public function shutdown() : Void;
 	
 	/**
 	* Shuts down the group and closes all open channels in the group.
@@ -190,7 +190,7 @@ extern class AsynchronousChannelGroup
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:abstract public function shutdownNow() : Void;
+	@:overload @:public @:abstract public function shutdownNow() : Void;
 	
 	/**
 	* Awaits termination of the group.
@@ -209,7 +209,7 @@ extern class AsynchronousChannelGroup
 	* @throws  InterruptedException
 	*          If interrupted while waiting
 	*/
-	@:overload @:abstract public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public @:abstract public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	
 }

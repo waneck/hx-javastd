@@ -63,7 +63,7 @@ extern class Unsafe
 	*             <code>checkPropertiesAccess</code> method doesn't allow
 	*             access to the system properties.
 	*/
-	@:overload public static function getUnsafe() : sun.misc.Unsafe;
+	@:overload @:public @:static public static function getUnsafe() : sun.misc.Unsafe;
 	
 	/**
 	* Fetches a value from a given Java variable.
@@ -119,7 +119,7 @@ extern class Unsafe
 	* @throws RuntimeException No defined exceptions are thrown, not even
 	*         {@link NullPointerException}
 	*/
-	@:overload @:native public function getInt(o : Dynamic, offset : haxe.Int64) : Int;
+	@:overload @:public @:native public function getInt(o : Dynamic, offset : haxe.Int64) : Int;
 	
 	/**
 	* Stores a value into a given Java variable.
@@ -141,13 +141,13 @@ extern class Unsafe
 	* @throws RuntimeException No defined exceptions are thrown, not even
 	*         {@link NullPointerException}
 	*/
-	@:overload @:native public function putInt(o : Dynamic, offset : haxe.Int64, x : Int) : Void;
+	@:overload @:public @:native public function putInt(o : Dynamic, offset : haxe.Int64, x : Int) : Void;
 	
 	/**
 	* Fetches a reference value from a given Java variable.
 	* @see #getInt(Object, long)
 	*/
-	@:overload @:native public function getObject(o : Dynamic, offset : haxe.Int64) : Dynamic;
+	@:overload @:public @:native public function getObject(o : Dynamic, offset : haxe.Int64) : Dynamic;
 	
 	/**
 	* Stores a reference value into a given Java variable.
@@ -159,49 +159,49 @@ extern class Unsafe
 	* are updated.
 	* @see #putInt(Object, int, int)
 	*/
-	@:overload @:native public function putObject(o : Dynamic, offset : haxe.Int64, x : Dynamic) : Void;
+	@:overload @:public @:native public function putObject(o : Dynamic, offset : haxe.Int64, x : Dynamic) : Void;
 	
 	/** @see #getInt(Object, long) */
-	@:overload @:native public function getBoolean(o : Dynamic, offset : haxe.Int64) : Bool;
+	@:overload @:public @:native public function getBoolean(o : Dynamic, offset : haxe.Int64) : Bool;
 	
 	/** @see #putInt(Object, int, int) */
-	@:overload @:native public function putBoolean(o : Dynamic, offset : haxe.Int64, x : Bool) : Void;
+	@:overload @:public @:native public function putBoolean(o : Dynamic, offset : haxe.Int64, x : Bool) : Void;
 	
 	/** @see #getInt(Object, long) */
-	@:overload @:native public function getByte(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Int8;
+	@:overload @:public @:native public function getByte(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Int8;
 	
 	/** @see #putInt(Object, int, int) */
-	@:overload @:native public function putByte(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Int8) : Void;
+	@:overload @:public @:native public function putByte(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Int8) : Void;
 	
 	/** @see #getInt(Object, long) */
-	@:overload @:native public function getShort(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Int16;
+	@:overload @:public @:native public function getShort(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Int16;
 	
 	/** @see #putInt(Object, int, int) */
-	@:overload @:native public function putShort(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Int16) : Void;
+	@:overload @:public @:native public function putShort(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Int16) : Void;
 	
 	/** @see #getInt(Object, long) */
-	@:overload @:native public function getChar(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Char16;
+	@:overload @:public @:native public function getChar(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Char16;
 	
 	/** @see #putInt(Object, int, int) */
-	@:overload @:native public function putChar(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Char16) : Void;
+	@:overload @:public @:native public function putChar(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Char16) : Void;
 	
 	/** @see #getInt(Object, long) */
-	@:overload @:native public function getLong(o : Dynamic, offset : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:native public function getLong(o : Dynamic, offset : haxe.Int64) : haxe.Int64;
 	
 	/** @see #putInt(Object, int, int) */
-	@:overload @:native public function putLong(o : Dynamic, offset : haxe.Int64, x : haxe.Int64) : Void;
+	@:overload @:public @:native public function putLong(o : Dynamic, offset : haxe.Int64, x : haxe.Int64) : Void;
 	
 	/** @see #getInt(Object, long) */
-	@:overload @:native public function getFloat(o : Dynamic, offset : haxe.Int64) : Single;
+	@:overload @:public @:native public function getFloat(o : Dynamic, offset : haxe.Int64) : Single;
 	
 	/** @see #putInt(Object, int, int) */
-	@:overload @:native public function putFloat(o : Dynamic, offset : haxe.Int64, x : Single) : Void;
+	@:overload @:public @:native public function putFloat(o : Dynamic, offset : haxe.Int64, x : Single) : Void;
 	
 	/** @see #getInt(Object, long) */
-	@:overload @:native public function getDouble(o : Dynamic, offset : haxe.Int64) : Float;
+	@:overload @:public @:native public function getDouble(o : Dynamic, offset : haxe.Int64) : Float;
 	
 	/** @see #putInt(Object, int, int) */
-	@:overload @:native public function putDouble(o : Dynamic, offset : haxe.Int64, x : Float) : Void;
+	@:overload @:public @:native public function putDouble(o : Dynamic, offset : haxe.Int64, x : Float) : Void;
 	
 	/**
 	* This method, like all others with 32-bit offsets, was native
@@ -211,109 +211,109 @@ extern class Unsafe
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function getInt(o : Dynamic, offset : Int) : Int;
+	@:overload @:public public function getInt(o : Dynamic, offset : Int) : Int;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function putInt(o : Dynamic, offset : Int, x : Int) : Void;
+	@:overload @:public public function putInt(o : Dynamic, offset : Int, x : Int) : Void;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function getObject(o : Dynamic, offset : Int) : Dynamic;
+	@:overload @:public public function getObject(o : Dynamic, offset : Int) : Dynamic;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function putObject(o : Dynamic, offset : Int, x : Dynamic) : Void;
+	@:overload @:public public function putObject(o : Dynamic, offset : Int, x : Dynamic) : Void;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function getBoolean(o : Dynamic, offset : Int) : Bool;
+	@:overload @:public public function getBoolean(o : Dynamic, offset : Int) : Bool;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function putBoolean(o : Dynamic, offset : Int, x : Bool) : Void;
+	@:overload @:public public function putBoolean(o : Dynamic, offset : Int, x : Bool) : Void;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function getByte(o : Dynamic, offset : Int) : java.StdTypes.Int8;
+	@:overload @:public public function getByte(o : Dynamic, offset : Int) : java.StdTypes.Int8;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function putByte(o : Dynamic, offset : Int, x : java.StdTypes.Int8) : Void;
+	@:overload @:public public function putByte(o : Dynamic, offset : Int, x : java.StdTypes.Int8) : Void;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function getShort(o : Dynamic, offset : Int) : java.StdTypes.Int16;
+	@:overload @:public public function getShort(o : Dynamic, offset : Int) : java.StdTypes.Int16;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function putShort(o : Dynamic, offset : Int, x : java.StdTypes.Int16) : Void;
+	@:overload @:public public function putShort(o : Dynamic, offset : Int, x : java.StdTypes.Int16) : Void;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function getChar(o : Dynamic, offset : Int) : java.StdTypes.Char16;
+	@:overload @:public public function getChar(o : Dynamic, offset : Int) : java.StdTypes.Char16;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function putChar(o : Dynamic, offset : Int, x : java.StdTypes.Char16) : Void;
+	@:overload @:public public function putChar(o : Dynamic, offset : Int, x : java.StdTypes.Char16) : Void;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function getLong(o : Dynamic, offset : Int) : haxe.Int64;
+	@:overload @:public public function getLong(o : Dynamic, offset : Int) : haxe.Int64;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function putLong(o : Dynamic, offset : Int, x : haxe.Int64) : Void;
+	@:overload @:public public function putLong(o : Dynamic, offset : Int, x : haxe.Int64) : Void;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function getFloat(o : Dynamic, offset : Int) : Single;
+	@:overload @:public public function getFloat(o : Dynamic, offset : Int) : Single;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function putFloat(o : Dynamic, offset : Int, x : Single) : Void;
+	@:overload @:public public function putFloat(o : Dynamic, offset : Int, x : Single) : Void;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function getDouble(o : Dynamic, offset : Int) : Float;
+	@:overload @:public public function getDouble(o : Dynamic, offset : Int) : Float;
 	
 	/**
 	* @deprecated As of 1.4.1, cast the 32-bit offset argument to a long.
 	* See {@link #staticFieldOffset}.
 	*/
-	@:overload public function putDouble(o : Dynamic, offset : Int, x : Float) : Void;
+	@:overload @:public public function putDouble(o : Dynamic, offset : Int, x : Float) : Void;
 	
 	/**
 	* Fetches a value from a given memory address.  If the address is zero, or
@@ -322,7 +322,7 @@ extern class Unsafe
 	*
 	* @see #allocateMemory
 	*/
-	@:overload @:native public function getByte(address : haxe.Int64) : java.StdTypes.Int8;
+	@:overload @:public @:native public function getByte(address : haxe.Int64) : java.StdTypes.Int8;
 	
 	/**
 	* Stores a value into a given memory address.  If the address is zero, or
@@ -331,43 +331,43 @@ extern class Unsafe
 	*
 	* @see #getByte(long)
 	*/
-	@:overload @:native public function putByte(address : haxe.Int64, x : java.StdTypes.Int8) : Void;
+	@:overload @:public @:native public function putByte(address : haxe.Int64, x : java.StdTypes.Int8) : Void;
 	
 	/** @see #getByte(long) */
-	@:overload @:native public function getShort(address : haxe.Int64) : java.StdTypes.Int16;
+	@:overload @:public @:native public function getShort(address : haxe.Int64) : java.StdTypes.Int16;
 	
 	/** @see #putByte(long, byte) */
-	@:overload @:native public function putShort(address : haxe.Int64, x : java.StdTypes.Int16) : Void;
+	@:overload @:public @:native public function putShort(address : haxe.Int64, x : java.StdTypes.Int16) : Void;
 	
 	/** @see #getByte(long) */
-	@:overload @:native public function getChar(address : haxe.Int64) : java.StdTypes.Char16;
+	@:overload @:public @:native public function getChar(address : haxe.Int64) : java.StdTypes.Char16;
 	
 	/** @see #putByte(long, byte) */
-	@:overload @:native public function putChar(address : haxe.Int64, x : java.StdTypes.Char16) : Void;
+	@:overload @:public @:native public function putChar(address : haxe.Int64, x : java.StdTypes.Char16) : Void;
 	
 	/** @see #getByte(long) */
-	@:overload @:native public function getInt(address : haxe.Int64) : Int;
+	@:overload @:public @:native public function getInt(address : haxe.Int64) : Int;
 	
 	/** @see #putByte(long, byte) */
-	@:overload @:native public function putInt(address : haxe.Int64, x : Int) : Void;
+	@:overload @:public @:native public function putInt(address : haxe.Int64, x : Int) : Void;
 	
 	/** @see #getByte(long) */
-	@:overload @:native public function getLong(address : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:native public function getLong(address : haxe.Int64) : haxe.Int64;
 	
 	/** @see #putByte(long, byte) */
-	@:overload @:native public function putLong(address : haxe.Int64, x : haxe.Int64) : Void;
+	@:overload @:public @:native public function putLong(address : haxe.Int64, x : haxe.Int64) : Void;
 	
 	/** @see #getByte(long) */
-	@:overload @:native public function getFloat(address : haxe.Int64) : Single;
+	@:overload @:public @:native public function getFloat(address : haxe.Int64) : Single;
 	
 	/** @see #putByte(long, byte) */
-	@:overload @:native public function putFloat(address : haxe.Int64, x : Single) : Void;
+	@:overload @:public @:native public function putFloat(address : haxe.Int64, x : Single) : Void;
 	
 	/** @see #getByte(long) */
-	@:overload @:native public function getDouble(address : haxe.Int64) : Float;
+	@:overload @:public @:native public function getDouble(address : haxe.Int64) : Float;
 	
 	/** @see #putByte(long, byte) */
-	@:overload @:native public function putDouble(address : haxe.Int64, x : Float) : Void;
+	@:overload @:public @:native public function putDouble(address : haxe.Int64, x : Float) : Void;
 	
 	/**
 	* Fetches a native pointer from a given memory address.  If the address is
@@ -383,7 +383,7 @@ extern class Unsafe
 	*
 	* @see #allocateMemory
 	*/
-	@:overload @:native public function getAddress(address : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:native public function getAddress(address : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Stores a native pointer into a given memory address.  If the address is
@@ -395,7 +395,7 @@ extern class Unsafe
 	*
 	* @see #getAddress(long)
 	*/
-	@:overload @:native public function putAddress(address : haxe.Int64, x : haxe.Int64) : Void;
+	@:overload @:public @:native public function putAddress(address : haxe.Int64, x : haxe.Int64) : Void;
 	
 	/**
 	* Allocates a new block of native memory, of the given size in bytes.  The
@@ -412,7 +412,7 @@ extern class Unsafe
 	* @see #getByte(long)
 	* @see #putByte(long, byte)
 	*/
-	@:overload @:native public function allocateMemory(bytes : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:native public function allocateMemory(bytes : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Resizes a new block of native memory, to the given size in bytes.  The
@@ -431,7 +431,7 @@ extern class Unsafe
 	*
 	* @see #allocateMemory
 	*/
-	@:overload @:native public function reallocateMemory(address : haxe.Int64, bytes : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:native public function reallocateMemory(address : haxe.Int64, bytes : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Sets all bytes in a given block of memory to a fixed value
@@ -450,7 +450,7 @@ extern class Unsafe
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:native public function setMemory(o : Dynamic, offset : haxe.Int64, bytes : haxe.Int64, value : java.StdTypes.Int8) : Void;
+	@:require(java7) @:overload @:public @:native public function setMemory(o : Dynamic, offset : haxe.Int64, bytes : haxe.Int64, value : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Sets all bytes in a given block of memory to a fixed value
@@ -459,7 +459,7 @@ extern class Unsafe
 	*
 	* <p>Equivalent to <code>setMemory(null, address, bytes, value)</code>.
 	*/
-	@:overload public function setMemory(address : haxe.Int64, bytes : haxe.Int64, value : java.StdTypes.Int8) : Void;
+	@:overload @:public public function setMemory(address : haxe.Int64, bytes : haxe.Int64, value : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Sets all bytes in a given block of memory to a copy of another
@@ -478,7 +478,7 @@ extern class Unsafe
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:native public function copyMemory(srcBase : Dynamic, srcOffset : haxe.Int64, destBase : Dynamic, destOffset : haxe.Int64, bytes : haxe.Int64) : Void;
+	@:require(java7) @:overload @:public @:native public function copyMemory(srcBase : Dynamic, srcOffset : haxe.Int64, destBase : Dynamic, destOffset : haxe.Int64, bytes : haxe.Int64) : Void;
 	
 	/**
 	* Sets all bytes in a given block of memory to a copy of another
@@ -487,7 +487,7 @@ extern class Unsafe
 	*
 	* Equivalent to <code>copyMemory(null, srcAddress, null, destAddress, bytes)</code>.
 	*/
-	@:overload public function copyMemory(srcAddress : haxe.Int64, destAddress : haxe.Int64, bytes : haxe.Int64) : Void;
+	@:overload @:public public function copyMemory(srcAddress : haxe.Int64, destAddress : haxe.Int64, bytes : haxe.Int64) : Void;
 	
 	/**
 	* Disposes of a block of native memory, as obtained from {@link
@@ -496,14 +496,14 @@ extern class Unsafe
 	*
 	* @see #allocateMemory
 	*/
-	@:overload @:native public function freeMemory(address : haxe.Int64) : Void;
+	@:overload @:public @:native public function freeMemory(address : haxe.Int64) : Void;
 	
 	/**
 	* This constant differs from all results that will ever be returned from
 	* {@link #staticFieldOffset}, {@link #objectFieldOffset},
 	* or {@link #arrayBaseOffset}.
 	*/
-	public static var INVALID_FIELD_OFFSET(default, null) : Int;
+	@:public @:static @:final public static var INVALID_FIELD_OFFSET(default, null) : Int;
 	
 	/**
 	* Returns the offset of a field, truncated to 32 bits.
@@ -519,7 +519,7 @@ extern class Unsafe
 	* @deprecated As of 1.4.1, use {@link #staticFieldOffset} for static
 	* fields and {@link #objectFieldOffset} for non-static fields.
 	*/
-	@:overload public function fieldOffset(f : java.lang.reflect.Field) : Int;
+	@:overload @:public public function fieldOffset(f : java.lang.reflect.Field) : Int;
 	
 	/**
 	* Returns the base address for accessing some static field
@@ -540,7 +540,7 @@ extern class Unsafe
 	* This method works only for JVMs which store all statics
 	* for a given class in one place.
 	*/
-	@:overload public function staticFieldBase(c : Class<Dynamic>) : Dynamic;
+	@:overload @:public public function staticFieldBase(c : Class<Dynamic>) : Dynamic;
 	
 	/**
 	* Report the location of a given field in the storage allocation of its
@@ -560,7 +560,7 @@ extern class Unsafe
 	* must preserve all bits of static field offsets.
 	* @see #getInt(Object, long)
 	*/
-	@:overload @:native public function staticFieldOffset(f : java.lang.reflect.Field) : haxe.Int64;
+	@:overload @:public @:native public function staticFieldOffset(f : java.lang.reflect.Field) : haxe.Int64;
 	
 	/**
 	* Report the location of a given static field, in conjunction with {@link
@@ -579,7 +579,7 @@ extern class Unsafe
 	* this method reports its result as a long value.
 	* @see #getInt(Object, long)
 	*/
-	@:overload @:native public function objectFieldOffset(f : java.lang.reflect.Field) : haxe.Int64;
+	@:overload @:public @:native public function objectFieldOffset(f : java.lang.reflect.Field) : haxe.Int64;
 	
 	/**
 	* Report the location of a given static field, in conjunction with {@link
@@ -591,14 +591,14 @@ extern class Unsafe
 	* not be used in any way except as argument to the get and put routines in
 	* this class.
 	*/
-	@:overload @:native public function staticFieldBase(f : java.lang.reflect.Field) : Dynamic;
+	@:overload @:public @:native public function staticFieldBase(f : java.lang.reflect.Field) : Dynamic;
 	
 	/**
 	* Ensure the given class has been initialized. This is often
 	* needed in conjunction with obtaining the static field base of a
 	* class.
 	*/
-	@:overload @:native public function ensureClassInitialized(c : Class<Dynamic>) : Void;
+	@:overload @:public @:native public function ensureClassInitialized(c : Class<Dynamic>) : Void;
 	
 	/**
 	* Report the offset of the first element in the storage allocation of a
@@ -610,34 +610,34 @@ extern class Unsafe
 	* @see #getInt(Object, long)
 	* @see #putInt(Object, long, int)
 	*/
-	@:overload @:native public function arrayBaseOffset(arrayClass : Class<Dynamic>) : Int;
+	@:overload @:public @:native public function arrayBaseOffset(arrayClass : Class<Dynamic>) : Int;
 	
 	/** The value of {@code arrayBaseOffset(boolean[].class)} */
-	public static var ARRAY_BOOLEAN_BASE_OFFSET(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_BOOLEAN_BASE_OFFSET(default, null) : Int;
 	
 	/** The value of {@code arrayBaseOffset(byte[].class)} */
-	public static var ARRAY_BYTE_BASE_OFFSET(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_BYTE_BASE_OFFSET(default, null) : Int;
 	
 	/** The value of {@code arrayBaseOffset(short[].class)} */
-	public static var ARRAY_SHORT_BASE_OFFSET(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_SHORT_BASE_OFFSET(default, null) : Int;
 	
 	/** The value of {@code arrayBaseOffset(char[].class)} */
-	public static var ARRAY_CHAR_BASE_OFFSET(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_CHAR_BASE_OFFSET(default, null) : Int;
 	
 	/** The value of {@code arrayBaseOffset(int[].class)} */
-	public static var ARRAY_INT_BASE_OFFSET(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_INT_BASE_OFFSET(default, null) : Int;
 	
 	/** The value of {@code arrayBaseOffset(long[].class)} */
-	public static var ARRAY_LONG_BASE_OFFSET(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_LONG_BASE_OFFSET(default, null) : Int;
 	
 	/** The value of {@code arrayBaseOffset(float[].class)} */
-	public static var ARRAY_FLOAT_BASE_OFFSET(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_FLOAT_BASE_OFFSET(default, null) : Int;
 	
 	/** The value of {@code arrayBaseOffset(double[].class)} */
-	public static var ARRAY_DOUBLE_BASE_OFFSET(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_DOUBLE_BASE_OFFSET(default, null) : Int;
 	
 	/** The value of {@code arrayBaseOffset(Object[].class)} */
-	public static var ARRAY_OBJECT_BASE_OFFSET(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_OBJECT_BASE_OFFSET(default, null) : Int;
 	
 	/**
 	* Report the scale factor for addressing elements in the storage
@@ -650,34 +650,34 @@ extern class Unsafe
 	* @see #getInt(Object, long)
 	* @see #putInt(Object, long, int)
 	*/
-	@:overload @:native public function arrayIndexScale(arrayClass : Class<Dynamic>) : Int;
+	@:overload @:public @:native public function arrayIndexScale(arrayClass : Class<Dynamic>) : Int;
 	
 	/** The value of {@code arrayIndexScale(boolean[].class)} */
-	public static var ARRAY_BOOLEAN_INDEX_SCALE(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_BOOLEAN_INDEX_SCALE(default, null) : Int;
 	
 	/** The value of {@code arrayIndexScale(byte[].class)} */
-	public static var ARRAY_BYTE_INDEX_SCALE(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_BYTE_INDEX_SCALE(default, null) : Int;
 	
 	/** The value of {@code arrayIndexScale(short[].class)} */
-	public static var ARRAY_SHORT_INDEX_SCALE(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_SHORT_INDEX_SCALE(default, null) : Int;
 	
 	/** The value of {@code arrayIndexScale(char[].class)} */
-	public static var ARRAY_CHAR_INDEX_SCALE(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_CHAR_INDEX_SCALE(default, null) : Int;
 	
 	/** The value of {@code arrayIndexScale(int[].class)} */
-	public static var ARRAY_INT_INDEX_SCALE(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_INT_INDEX_SCALE(default, null) : Int;
 	
 	/** The value of {@code arrayIndexScale(long[].class)} */
-	public static var ARRAY_LONG_INDEX_SCALE(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_LONG_INDEX_SCALE(default, null) : Int;
 	
 	/** The value of {@code arrayIndexScale(float[].class)} */
-	public static var ARRAY_FLOAT_INDEX_SCALE(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_FLOAT_INDEX_SCALE(default, null) : Int;
 	
 	/** The value of {@code arrayIndexScale(double[].class)} */
-	public static var ARRAY_DOUBLE_INDEX_SCALE(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_DOUBLE_INDEX_SCALE(default, null) : Int;
 	
 	/** The value of {@code arrayIndexScale(Object[].class)} */
-	public static var ARRAY_OBJECT_INDEX_SCALE(default, null) : Int;
+	@:public @:static @:final public static var ARRAY_OBJECT_INDEX_SCALE(default, null) : Int;
 	
 	/**
 	* Report the size in bytes of a native pointer, as stored via {@link
@@ -685,24 +685,24 @@ extern class Unsafe
 	* other primitive types (as stored in native memory blocks) is determined
 	* fully by their information content.
 	*/
-	@:overload @:native public function addressSize() : Int;
+	@:overload @:public @:native public function addressSize() : Int;
 	
 	/** The value of {@code addressSize()} */
-	public static var ADDRESS_SIZE(default, null) : Int;
+	@:public @:static @:final public static var ADDRESS_SIZE(default, null) : Int;
 	
 	/**
 	* Report the size in bytes of a native memory page (whatever that is).
 	* This value will always be a power of two.
 	*/
-	@:overload @:native public function pageSize() : Int;
+	@:overload @:public @:native public function pageSize() : Int;
 	
 	/**
 	* Tell the VM to define a class, without security checks.  By default, the
 	* class loader and protection domain come from the caller's class.
 	*/
-	@:overload @:native public function defineClass(name : String, b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int, loader : java.lang.ClassLoader, protectionDomain : java.security.ProtectionDomain) : Class<Dynamic>;
+	@:overload @:public @:native public function defineClass(name : String, b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int, loader : java.lang.ClassLoader, protectionDomain : java.security.ProtectionDomain) : Class<Dynamic>;
 	
-	@:overload @:native public function defineClass(name : String, b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Class<Dynamic>;
+	@:overload @:public @:native public function defineClass(name : String, b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Class<Dynamic>;
 	
 	/**
 	* Define a class but do not make it known to the class loader or system dictionary.
@@ -720,111 +720,111 @@ extern class Unsafe
 	* @params data      bytes of a class file
 	* @params cpPatches where non-null entries exist, they replace corresponding CP entries in data
 	*/
-	@:overload @:native public function defineAnonymousClass(hostClass : Class<Dynamic>, data : java.NativeArray<java.StdTypes.Int8>, cpPatches : java.NativeArray<Dynamic>) : Class<Dynamic>;
+	@:overload @:public @:native public function defineAnonymousClass(hostClass : Class<Dynamic>, data : java.NativeArray<java.StdTypes.Int8>, cpPatches : java.NativeArray<Dynamic>) : Class<Dynamic>;
 	
 	/** Allocate an instance but do not run any constructor.
 	Initializes the class if it has not yet been. */
-	@:overload @:native public function allocateInstance(cls : Class<Dynamic>) : Dynamic;
+	@:overload @:public @:native public function allocateInstance(cls : Class<Dynamic>) : Dynamic;
 	
 	/** Lock the object.  It must get unlocked via {@link #monitorExit}. */
-	@:overload @:native public function monitorEnter(o : Dynamic) : Void;
+	@:overload @:public @:native public function monitorEnter(o : Dynamic) : Void;
 	
 	/**
 	* Unlock the object.  It must have been locked via {@link
 	* #monitorEnter}.
 	*/
-	@:overload @:native public function monitorExit(o : Dynamic) : Void;
+	@:overload @:public @:native public function monitorExit(o : Dynamic) : Void;
 	
 	/**
 	* Tries to lock the object.  Returns true or false to indicate
 	* whether the lock succeeded.  If it did, the object must be
 	* unlocked via {@link #monitorExit}.
 	*/
-	@:overload @:native public function tryMonitorEnter(o : Dynamic) : Bool;
+	@:overload @:public @:native public function tryMonitorEnter(o : Dynamic) : Bool;
 	
 	/** Throw the exception without telling the verifier. */
-	@:overload @:native public function throwException(ee : java.lang.Throwable) : Void;
+	@:overload @:public @:native public function throwException(ee : java.lang.Throwable) : Void;
 	
 	/**
 	* Atomically update Java variable to <tt>x</tt> if it is currently
 	* holding <tt>expected</tt>.
 	* @return <tt>true</tt> if successful
 	*/
-	@:overload @:final @:native public function compareAndSwapObject(o : Dynamic, offset : haxe.Int64, expected : Dynamic, x : Dynamic) : Bool;
+	@:overload @:public @:final @:native public function compareAndSwapObject(o : Dynamic, offset : haxe.Int64, expected : Dynamic, x : Dynamic) : Bool;
 	
 	/**
 	* Atomically update Java variable to <tt>x</tt> if it is currently
 	* holding <tt>expected</tt>.
 	* @return <tt>true</tt> if successful
 	*/
-	@:overload @:final @:native public function compareAndSwapInt(o : Dynamic, offset : haxe.Int64, expected : Int, x : Int) : Bool;
+	@:overload @:public @:final @:native public function compareAndSwapInt(o : Dynamic, offset : haxe.Int64, expected : Int, x : Int) : Bool;
 	
 	/**
 	* Atomically update Java variable to <tt>x</tt> if it is currently
 	* holding <tt>expected</tt>.
 	* @return <tt>true</tt> if successful
 	*/
-	@:overload @:final @:native public function compareAndSwapLong(o : Dynamic, offset : haxe.Int64, expected : haxe.Int64, x : haxe.Int64) : Bool;
+	@:overload @:public @:final @:native public function compareAndSwapLong(o : Dynamic, offset : haxe.Int64, expected : haxe.Int64, x : haxe.Int64) : Bool;
 	
 	/**
 	* Fetches a reference value from a given Java variable, with volatile
 	* load semantics. Otherwise identical to {@link #getObject(Object, long)}
 	*/
-	@:overload @:native public function getObjectVolatile(o : Dynamic, offset : haxe.Int64) : Dynamic;
+	@:overload @:public @:native public function getObjectVolatile(o : Dynamic, offset : haxe.Int64) : Dynamic;
 	
 	/**
 	* Stores a reference value into a given Java variable, with
 	* volatile store semantics. Otherwise identical to {@link #putObject(Object, long, Object)}
 	*/
-	@:overload @:native public function putObjectVolatile(o : Dynamic, offset : haxe.Int64, x : Dynamic) : Void;
+	@:overload @:public @:native public function putObjectVolatile(o : Dynamic, offset : haxe.Int64, x : Dynamic) : Void;
 	
 	/** Volatile version of {@link #getInt(Object, long)}  */
-	@:overload @:native public function getIntVolatile(o : Dynamic, offset : haxe.Int64) : Int;
+	@:overload @:public @:native public function getIntVolatile(o : Dynamic, offset : haxe.Int64) : Int;
 	
 	/** Volatile version of {@link #putInt(Object, long, int)}  */
-	@:overload @:native public function putIntVolatile(o : Dynamic, offset : haxe.Int64, x : Int) : Void;
+	@:overload @:public @:native public function putIntVolatile(o : Dynamic, offset : haxe.Int64, x : Int) : Void;
 	
 	/** Volatile version of {@link #getBoolean(Object, long)}  */
-	@:overload @:native public function getBooleanVolatile(o : Dynamic, offset : haxe.Int64) : Bool;
+	@:overload @:public @:native public function getBooleanVolatile(o : Dynamic, offset : haxe.Int64) : Bool;
 	
 	/** Volatile version of {@link #putBoolean(Object, long, boolean)}  */
-	@:overload @:native public function putBooleanVolatile(o : Dynamic, offset : haxe.Int64, x : Bool) : Void;
+	@:overload @:public @:native public function putBooleanVolatile(o : Dynamic, offset : haxe.Int64, x : Bool) : Void;
 	
 	/** Volatile version of {@link #getByte(Object, long)}  */
-	@:overload @:native public function getByteVolatile(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Int8;
+	@:overload @:public @:native public function getByteVolatile(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Int8;
 	
 	/** Volatile version of {@link #putByte(Object, long, byte)}  */
-	@:overload @:native public function putByteVolatile(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Int8) : Void;
+	@:overload @:public @:native public function putByteVolatile(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Int8) : Void;
 	
 	/** Volatile version of {@link #getShort(Object, long)}  */
-	@:overload @:native public function getShortVolatile(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Int16;
+	@:overload @:public @:native public function getShortVolatile(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Int16;
 	
 	/** Volatile version of {@link #putShort(Object, long, short)}  */
-	@:overload @:native public function putShortVolatile(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Int16) : Void;
+	@:overload @:public @:native public function putShortVolatile(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Int16) : Void;
 	
 	/** Volatile version of {@link #getChar(Object, long)}  */
-	@:overload @:native public function getCharVolatile(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Char16;
+	@:overload @:public @:native public function getCharVolatile(o : Dynamic, offset : haxe.Int64) : java.StdTypes.Char16;
 	
 	/** Volatile version of {@link #putChar(Object, long, char)}  */
-	@:overload @:native public function putCharVolatile(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Char16) : Void;
+	@:overload @:public @:native public function putCharVolatile(o : Dynamic, offset : haxe.Int64, x : java.StdTypes.Char16) : Void;
 	
 	/** Volatile version of {@link #getLong(Object, long)}  */
-	@:overload @:native public function getLongVolatile(o : Dynamic, offset : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:native public function getLongVolatile(o : Dynamic, offset : haxe.Int64) : haxe.Int64;
 	
 	/** Volatile version of {@link #putLong(Object, long, long)}  */
-	@:overload @:native public function putLongVolatile(o : Dynamic, offset : haxe.Int64, x : haxe.Int64) : Void;
+	@:overload @:public @:native public function putLongVolatile(o : Dynamic, offset : haxe.Int64, x : haxe.Int64) : Void;
 	
 	/** Volatile version of {@link #getFloat(Object, long)}  */
-	@:overload @:native public function getFloatVolatile(o : Dynamic, offset : haxe.Int64) : Single;
+	@:overload @:public @:native public function getFloatVolatile(o : Dynamic, offset : haxe.Int64) : Single;
 	
 	/** Volatile version of {@link #putFloat(Object, long, float)}  */
-	@:overload @:native public function putFloatVolatile(o : Dynamic, offset : haxe.Int64, x : Single) : Void;
+	@:overload @:public @:native public function putFloatVolatile(o : Dynamic, offset : haxe.Int64, x : Single) : Void;
 	
 	/** Volatile version of {@link #getDouble(Object, long)}  */
-	@:overload @:native public function getDoubleVolatile(o : Dynamic, offset : haxe.Int64) : Float;
+	@:overload @:public @:native public function getDoubleVolatile(o : Dynamic, offset : haxe.Int64) : Float;
 	
 	/** Volatile version of {@link #putDouble(Object, long, double)}  */
-	@:overload @:native public function putDoubleVolatile(o : Dynamic, offset : haxe.Int64, x : Float) : Void;
+	@:overload @:public @:native public function putDoubleVolatile(o : Dynamic, offset : haxe.Int64, x : Float) : Void;
 	
 	/**
 	* Version of {@link #putObjectVolatile(Object, long, Object)}
@@ -833,13 +833,13 @@ extern class Unsafe
 	* underlying field is a Java volatile (or if an array cell, one
 	* that is otherwise only accessed using volatile accesses).
 	*/
-	@:overload @:native public function putOrderedObject(o : Dynamic, offset : haxe.Int64, x : Dynamic) : Void;
+	@:overload @:public @:native public function putOrderedObject(o : Dynamic, offset : haxe.Int64, x : Dynamic) : Void;
 	
 	/** Ordered/Lazy version of {@link #putIntVolatile(Object, long, int)}  */
-	@:overload @:native public function putOrderedInt(o : Dynamic, offset : haxe.Int64, x : Int) : Void;
+	@:overload @:public @:native public function putOrderedInt(o : Dynamic, offset : haxe.Int64, x : Int) : Void;
 	
 	/** Ordered/Lazy version of {@link #putLongVolatile(Object, long, long)} */
-	@:overload @:native public function putOrderedLong(o : Dynamic, offset : haxe.Int64, x : haxe.Int64) : Void;
+	@:overload @:public @:native public function putOrderedLong(o : Dynamic, offset : haxe.Int64, x : haxe.Int64) : Void;
 	
 	/**
 	* Unblock the given thread blocked on <tt>park</tt>, or, if it is
@@ -853,7 +853,7 @@ extern class Unsafe
 	* @param thread the thread to unpark.
 	*
 	*/
-	@:overload @:native public function unpark(thread : Dynamic) : Void;
+	@:overload @:public @:native public function unpark(thread : Dynamic) : Void;
 	
 	/**
 	* Block current thread, returning when a balancing
@@ -866,7 +866,7 @@ extern class Unsafe
 	* because <tt>unpark</tt> is, so it would be strange to place it
 	* elsewhere.
 	*/
-	@:overload @:native public function park(isAbsolute : Bool, time : haxe.Int64) : Void;
+	@:overload @:public @:native public function park(isAbsolute : Bool, time : haxe.Int64) : Void;
 	
 	/**
 	* Gets the load average in the system run queue assigned
@@ -883,7 +883,7 @@ extern class Unsafe
 	* @return the number of samples actually retrieved; or -1
 	*         if the load average is unobtainable.
 	*/
-	@:overload @:native public function getLoadAverage(loadavg : java.NativeArray<Float>, nelems : Int) : Int;
+	@:overload @:public @:native public function getLoadAverage(loadavg : java.NativeArray<Float>, nelems : Int) : Int;
 	
 	
 }

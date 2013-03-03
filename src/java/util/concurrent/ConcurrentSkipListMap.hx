@@ -91,7 +91,7 @@ package java.util.concurrent;
 	* Constructs a new, empty map, sorted according to the
 	* {@linkplain Comparable natural ordering} of the keys.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new, empty map, sorted according to the specified
@@ -101,7 +101,7 @@ package java.util.concurrent;
 	*        If <tt>null</tt>, the {@linkplain Comparable natural
 	*        ordering} of the keys will be used.
 	*/
-	@:overload public function new(comparator : java.util.Comparator<K>) : Void;
+	@:overload @:public public function new(comparator : java.util.Comparator<K>) : Void;
 	
 	/**
 	* Constructs a new map containing the same mappings as the given map,
@@ -114,7 +114,7 @@ package java.util.concurrent;
 	* @throws NullPointerException if the specified map or any of its keys
 	*         or values are null
 	*/
-	@:overload public function new(m : java.util.Map<K, V>) : Void;
+	@:overload @:public public function new(m : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Constructs a new map containing the same mappings and using the
@@ -125,7 +125,7 @@ package java.util.concurrent;
 	* @throws NullPointerException if the specified sorted map or any of
 	*         its keys or values are null
 	*/
-	@:overload public function new(m : java.util.SortedMap<K, V>) : Void;
+	@:overload @:public public function new(m : java.util.SortedMap<K, V>) : Void;
 	
 	/**
 	* Returns a shallow copy of this <tt>ConcurrentSkipListMap</tt>
@@ -133,7 +133,7 @@ package java.util.concurrent;
 	*
 	* @return a shallow copy of this map
 	*/
-	@:overload public function clone() : java.util.concurrent.ConcurrentSkipListMap<K, V>;
+	@:overload @:public override public function clone() : java.util.concurrent.ConcurrentSkipListMap<K, V>;
 	
 	/**
 	* Returns <tt>true</tt> if this map contains a mapping for the specified
@@ -145,7 +145,7 @@ package java.util.concurrent;
 	*         with the keys currently in the map
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public override public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Returns the value to which the specified key is mapped,
@@ -161,7 +161,7 @@ package java.util.concurrent;
 	*         with the keys currently in the map
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload public function get(key : Dynamic) : V;
+	@:overload @:public override public function get(key : Dynamic) : V;
 	
 	/**
 	* Associates the specified value with the specified key in this map.
@@ -176,7 +176,7 @@ package java.util.concurrent;
 	*         with the keys currently in the map
 	* @throws NullPointerException if the specified key or value is null
 	*/
-	@:overload public function put(key : K, value : V) : V;
+	@:overload @:public override public function put(key : K, value : V) : V;
 	
 	/**
 	* Removes the mapping for the specified key from this map if present.
@@ -188,7 +188,7 @@ package java.util.concurrent;
 	*         with the keys currently in the map
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload public function remove(key : Dynamic) : V;
+	@:overload @:public override public function remove(key : Dynamic) : V;
 	
 	/**
 	* Returns <tt>true</tt> if this map maps one or more keys to the
@@ -202,7 +202,7 @@ package java.util.concurrent;
 	*         <tt>false</tt> otherwise
 	* @throws NullPointerException if the specified value is null
 	*/
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public override public function containsValue(value : Dynamic) : Bool;
 	
 	/**
 	* Returns the number of key-value mappings in this map.  If this map
@@ -220,18 +220,18 @@ package java.util.concurrent;
 	*
 	* @return the number of elements in this map
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this map contains no key-value mappings.
 	* @return <tt>true</tt> if this map contains no key-value mappings
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Removes all of the mappings from this map.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns a {@link NavigableSet} view of the keys contained in this map.
@@ -254,9 +254,9 @@ package java.util.concurrent;
 	*
 	* @return a navigable set view of the keys in this map
 	*/
-	@:overload public function keySet() : java.util.NavigableSet<K>;
+	@:overload @:public override public function keySet() : java.util.NavigableSet<K>;
 	
-	@:overload public function navigableKeySet() : java.util.NavigableSet<K>;
+	@:overload @:public public function navigableKeySet() : java.util.NavigableSet<K>;
 	
 	/**
 	* Returns a {@link Collection} view of the values contained in this map.
@@ -276,7 +276,7 @@ package java.util.concurrent;
 	* construction of the iterator, and may (but is not guaranteed to)
 	* reflect any modifications subsequent to construction.
 	*/
-	@:overload public function values() : java.util.Collection<V>;
+	@:overload @:public override public function values() : java.util.Collection<V>;
 	
 	/**
 	* Returns a {@link Set} view of the mappings contained in this map.
@@ -302,11 +302,11 @@ package java.util.concurrent;
 	* @return a set view of the mappings contained in this map,
 	*         sorted in ascending key order
 	*/
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
-	@:overload public function descendingMap() : java.util.concurrent.ConcurrentNavigableMap<K, V>;
+	@:overload @:public public function descendingMap() : java.util.concurrent.ConcurrentNavigableMap<K, V>;
 	
-	@:overload public function descendingKeySet() : java.util.NavigableSet<K>;
+	@:overload @:public public function descendingKeySet() : java.util.NavigableSet<K>;
 	
 	/**
 	* Compares the specified object with this map for equality.
@@ -320,7 +320,7 @@ package java.util.concurrent;
 	* @param o object to be compared for equality with this map
 	* @return <tt>true</tt> if the specified object is equal to this map
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -331,7 +331,7 @@ package java.util.concurrent;
 	*         with the keys currently in the map
 	* @throws NullPointerException if the specified key or value is null
 	*/
-	@:overload public function putIfAbsent(key : K, value : V) : V;
+	@:overload @:public public function putIfAbsent(key : K, value : V) : V;
 	
 	/**
 	* {@inheritDoc}
@@ -340,7 +340,7 @@ package java.util.concurrent;
 	*         with the keys currently in the map
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload public function remove(key : Dynamic, value : Dynamic) : Bool;
+	@:overload @:public public function remove(key : Dynamic, value : Dynamic) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -349,7 +349,7 @@ package java.util.concurrent;
 	*         with the keys currently in the map
 	* @throws NullPointerException if any of the arguments are null
 	*/
-	@:overload public function replace(key : K, oldValue : V, newValue : V) : Bool;
+	@:overload @:public public function replace(key : K, oldValue : V, newValue : V) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -360,62 +360,62 @@ package java.util.concurrent;
 	*         with the keys currently in the map
 	* @throws NullPointerException if the specified key or value is null
 	*/
-	@:overload public function replace(key : K, value : V) : V;
+	@:overload @:public public function replace(key : K, value : V) : V;
 	
 	/* ------ SortedMap API methods ------ */
-	@:overload public function comparator() : java.util.Comparator<K>;
+	@:overload @:public public function comparator() : java.util.Comparator<K>;
 	
 	/**
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function firstKey() : K;
+	@:overload @:public public function firstKey() : K;
 	
 	/**
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function lastKey() : K;
+	@:overload @:public public function lastKey() : K;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if {@code fromKey} or {@code toKey} is null
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
+	@:overload @:public public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if {@code toKey} is null
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function headMap(toKey : K, inclusive : Bool) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
+	@:overload @:public public function headMap(toKey : K, inclusive : Bool) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if {@code fromKey} is null
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function tailMap(fromKey : K, inclusive : Bool) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
+	@:overload @:public public function tailMap(fromKey : K, inclusive : Bool) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if {@code fromKey} or {@code toKey} is null
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function subMap(fromKey : K, toKey : K) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
+	@:overload @:public public function subMap(fromKey : K, toKey : K) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if {@code toKey} is null
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function headMap(toKey : K) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
+	@:overload @:public public function headMap(toKey : K) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if {@code fromKey} is null
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function tailMap(fromKey : K) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
+	@:overload @:public public function tailMap(fromKey : K) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
 	
 	/**
 	* Returns a key-value mapping associated with the greatest key
@@ -426,13 +426,13 @@ package java.util.concurrent;
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload public function lowerEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public public function lowerEntry(key : K) : java.util.Map.Map_Entry<K, V>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload public function lowerKey(key : K) : K;
+	@:overload @:public public function lowerKey(key : K) : K;
 	
 	/**
 	* Returns a key-value mapping associated with the greatest key
@@ -444,14 +444,14 @@ package java.util.concurrent;
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload public function floorEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public public function floorEntry(key : K) : java.util.Map.Map_Entry<K, V>;
 	
 	/**
 	* @param key the key
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload public function floorKey(key : K) : K;
+	@:overload @:public public function floorKey(key : K) : K;
 	
 	/**
 	* Returns a key-value mapping associated with the least key
@@ -462,13 +462,13 @@ package java.util.concurrent;
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload public function ceilingEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public public function ceilingEntry(key : K) : java.util.Map.Map_Entry<K, V>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload public function ceilingKey(key : K) : K;
+	@:overload @:public public function ceilingKey(key : K) : K;
 	
 	/**
 	* Returns a key-value mapping associated with the least key
@@ -480,14 +480,14 @@ package java.util.concurrent;
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload public function higherEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public public function higherEntry(key : K) : java.util.Map.Map_Entry<K, V>;
 	
 	/**
 	* @param key the key
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload public function higherKey(key : K) : K;
+	@:overload @:public public function higherKey(key : K) : K;
 	
 	/**
 	* Returns a key-value mapping associated with the least
@@ -495,7 +495,7 @@ package java.util.concurrent;
 	* The returned entry does <em>not</em> support
 	* the <tt>Entry.setValue</tt> method.
 	*/
-	@:overload public function firstEntry() : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public public function firstEntry() : java.util.Map.Map_Entry<K, V>;
 	
 	/**
 	* Returns a key-value mapping associated with the greatest
@@ -503,7 +503,7 @@ package java.util.concurrent;
 	* The returned entry does <em>not</em> support
 	* the <tt>Entry.setValue</tt> method.
 	*/
-	@:overload public function lastEntry() : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public public function lastEntry() : java.util.Map.Map_Entry<K, V>;
 	
 	/**
 	* Removes and returns a key-value mapping associated with
@@ -511,7 +511,7 @@ package java.util.concurrent;
 	* The returned entry does <em>not</em> support
 	* the <tt>Entry.setValue</tt> method.
 	*/
-	@:overload public function pollFirstEntry() : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public public function pollFirstEntry() : java.util.Map.Map_Entry<K, V>;
 	
 	/**
 	* Removes and returns a key-value mapping associated with
@@ -519,7 +519,7 @@ package java.util.concurrent;
 	* The returned entry does <em>not</em> support
 	* the <tt>Entry.setValue</tt> method.
 	*/
-	@:overload public function pollLastEntry() : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public public function pollLastEntry() : java.util.Map.Map_Entry<K, V>;
 	
 	
 }
@@ -569,7 +569,7 @@ package java.util.concurrent;
 */
 @:native('java$util$concurrent$ConcurrentSkipListMap$ComparableUsingComparator') @:internal extern class ConcurrentSkipListMap_ComparableUsingComparator<K> implements java.lang.Comparable<K>
 {
-	@:overload public function compareTo(k2 : K) : Int;
+	@:overload @:public public function compareTo(k2 : K) : Int;
 	
 	
 }
@@ -578,9 +578,9 @@ package java.util.concurrent;
 */
 @:native('java$util$concurrent$ConcurrentSkipListMap$Iter') @:internal extern class ConcurrentSkipListMap_Iter<T> implements java.util.Iterator<T>
 {
-	@:overload @:final public function hasNext() : Bool;
+	@:overload @:public @:final public function hasNext() : Bool;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	/**
 	* Returns the next element in the iteration.
@@ -588,121 +588,121 @@ package java.util.concurrent;
 	* @return the next element in the iteration
 	* @throws NoSuchElementException if the iteration has no more elements
 	*/
-	@:overload @:public public function next() : Dynamic;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$concurrent$ConcurrentSkipListMap$ValueIterator') @:internal extern class ConcurrentSkipListMap_ValueIterator extends java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_Iter<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$concurrent$ConcurrentSkipListMap$KeyIterator') @:internal extern class ConcurrentSkipListMap_KeyIterator extends java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_Iter<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$concurrent$ConcurrentSkipListMap$EntryIterator') @:internal extern class ConcurrentSkipListMap_EntryIterator extends java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_Iter<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
+	@:overload @:public override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	
 	
 }
 @:native('java$util$concurrent$ConcurrentSkipListMap$KeySet') @:internal extern class ConcurrentSkipListMap_KeySet<E> extends java.util.AbstractSet<E> implements java.util.NavigableSet<E>
 {
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload public function lower(e : E) : E;
+	@:overload @:public public function lower(e : E) : E;
 	
-	@:overload public function floor(e : E) : E;
+	@:overload @:public public function floor(e : E) : E;
 	
-	@:overload public function ceiling(e : E) : E;
+	@:overload @:public public function ceiling(e : E) : E;
 	
-	@:overload public function higher(e : E) : E;
+	@:overload @:public public function higher(e : E) : E;
 	
-	@:overload public function comparator() : java.util.Comparator<E>;
+	@:overload @:public public function comparator() : java.util.Comparator<E>;
 	
-	@:overload public function first() : E;
+	@:overload @:public public function first() : E;
 	
-	@:overload public function last() : E;
+	@:overload @:public public function last() : E;
 	
-	@:overload public function pollFirst() : E;
+	@:overload @:public public function pollFirst() : E;
 	
-	@:overload public function pollLast() : E;
+	@:overload @:public public function pollLast() : E;
 	
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload public function descendingIterator() : java.util.Iterator<E>;
+	@:overload @:public public function descendingIterator() : java.util.Iterator<E>;
 	
-	@:overload public function subSet(fromElement : E, fromInclusive : Bool, toElement : E, toInclusive : Bool) : java.util.NavigableSet<E>;
+	@:overload @:public public function subSet(fromElement : E, fromInclusive : Bool, toElement : E, toInclusive : Bool) : java.util.NavigableSet<E>;
 	
-	@:overload public function headSet(toElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
+	@:overload @:public public function headSet(toElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
 	
-	@:overload public function tailSet(fromElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
+	@:overload @:public public function tailSet(fromElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
 	
-	@:overload public function subSet(fromElement : E, toElement : E) : java.util.NavigableSet<E>;
+	@:overload @:public public function subSet(fromElement : E, toElement : E) : java.util.NavigableSet<E>;
 	
-	@:overload public function headSet(toElement : E) : java.util.NavigableSet<E>;
+	@:overload @:public public function headSet(toElement : E) : java.util.NavigableSet<E>;
 	
-	@:overload public function tailSet(fromElement : E) : java.util.NavigableSet<E>;
+	@:overload @:public public function tailSet(fromElement : E) : java.util.NavigableSet<E>;
 	
-	@:overload public function descendingSet() : java.util.NavigableSet<E>;
+	@:overload @:public public function descendingSet() : java.util.NavigableSet<E>;
 	
 	
 }
 @:native('java$util$concurrent$ConcurrentSkipListMap$Values') @:internal extern class ConcurrentSkipListMap_Values<E> extends java.util.AbstractCollection<E>
 {
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	
 }
 @:native('java$util$concurrent$ConcurrentSkipListMap$EntrySet') @:internal extern class ConcurrentSkipListMap_EntrySet<K1, V1> extends java.util.AbstractSet<java.util.Map.Map_Entry<K1, V1>>
 {
-	@:overload public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<K1, V1>>;
+	@:overload @:public override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<K1, V1>>;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	
 }
@@ -721,87 +721,87 @@ package java.util.concurrent;
 @:native('java$util$concurrent$ConcurrentSkipListMap$SubMap') @:internal extern class ConcurrentSkipListMap_SubMap<K, V> extends java.util.AbstractMap<K, V> implements java.util.concurrent.ConcurrentNavigableMap<K, V> implements java.lang.Cloneable implements java.io.Serializable
 {
 	/* ----------------  Map API methods -------------- */
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public override public function containsKey(key : Dynamic) : Bool;
 	
-	@:overload public function get(key : Dynamic) : V;
+	@:overload @:public override public function get(key : Dynamic) : V;
 	
-	@:overload public function put(key : K, value : V) : V;
+	@:overload @:public override public function put(key : K, value : V) : V;
 	
-	@:overload public function remove(key : Dynamic) : V;
+	@:overload @:public override public function remove(key : Dynamic) : V;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public override public function containsValue(value : Dynamic) : Bool;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/* ----------------  ConcurrentMap API methods -------------- */
-	@:overload public function putIfAbsent(key : K, value : V) : V;
+	@:overload @:public public function putIfAbsent(key : K, value : V) : V;
 	
-	@:overload public function remove(key : Dynamic, value : Dynamic) : Bool;
+	@:overload @:public public function remove(key : Dynamic, value : Dynamic) : Bool;
 	
-	@:overload public function replace(key : K, oldValue : V, newValue : V) : Bool;
+	@:overload @:public public function replace(key : K, oldValue : V, newValue : V) : Bool;
 	
-	@:overload public function replace(key : K, value : V) : V;
+	@:overload @:public public function replace(key : K, value : V) : V;
 	
 	/* ----------------  SortedMap API methods -------------- */
-	@:overload public function comparator() : java.util.Comparator<K>;
+	@:overload @:public public function comparator() : java.util.Comparator<K>;
 	
-	@:overload public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap<K, V>;
+	@:overload @:public public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap<K, V>;
 	
-	@:overload public function headMap(toKey : K, inclusive : Bool) : java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap<K, V>;
+	@:overload @:public public function headMap(toKey : K, inclusive : Bool) : java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap<K, V>;
 	
-	@:overload public function tailMap(fromKey : K, inclusive : Bool) : java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap<K, V>;
+	@:overload @:public public function tailMap(fromKey : K, inclusive : Bool) : java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap<K, V>;
 	
-	@:overload public function subMap(fromKey : K, toKey : K) : java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap<K, V>;
+	@:overload @:public public function subMap(fromKey : K, toKey : K) : java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap<K, V>;
 	
-	@:overload public function headMap(toKey : K) : java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap<K, V>;
+	@:overload @:public public function headMap(toKey : K) : java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap<K, V>;
 	
-	@:overload public function tailMap(fromKey : K) : java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap<K, V>;
+	@:overload @:public public function tailMap(fromKey : K) : java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap<K, V>;
 	
-	@:overload public function descendingMap() : java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap<K, V>;
+	@:overload @:public public function descendingMap() : java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap<K, V>;
 	
 	/* ----------------  Relational methods -------------- */
-	@:overload public function ceilingEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public public function ceilingEntry(key : K) : java.util.Map.Map_Entry<K, V>;
 	
-	@:overload public function ceilingKey(key : K) : K;
+	@:overload @:public public function ceilingKey(key : K) : K;
 	
-	@:overload public function lowerEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public public function lowerEntry(key : K) : java.util.Map.Map_Entry<K, V>;
 	
-	@:overload public function lowerKey(key : K) : K;
+	@:overload @:public public function lowerKey(key : K) : K;
 	
-	@:overload public function floorEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public public function floorEntry(key : K) : java.util.Map.Map_Entry<K, V>;
 	
-	@:overload public function floorKey(key : K) : K;
+	@:overload @:public public function floorKey(key : K) : K;
 	
-	@:overload public function higherEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public public function higherEntry(key : K) : java.util.Map.Map_Entry<K, V>;
 	
-	@:overload public function higherKey(key : K) : K;
+	@:overload @:public public function higherKey(key : K) : K;
 	
-	@:overload public function firstKey() : K;
+	@:overload @:public public function firstKey() : K;
 	
-	@:overload public function lastKey() : K;
+	@:overload @:public public function lastKey() : K;
 	
-	@:overload public function firstEntry() : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public public function firstEntry() : java.util.Map.Map_Entry<K, V>;
 	
-	@:overload public function lastEntry() : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public public function lastEntry() : java.util.Map.Map_Entry<K, V>;
 	
-	@:overload public function pollFirstEntry() : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public public function pollFirstEntry() : java.util.Map.Map_Entry<K, V>;
 	
-	@:overload public function pollLastEntry() : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public public function pollLastEntry() : java.util.Map.Map_Entry<K, V>;
 	
 	/* ---------------- Submap Views -------------- */
-	@:overload public function keySet() : java.util.NavigableSet<K>;
+	@:overload @:public override public function keySet() : java.util.NavigableSet<K>;
 	
-	@:overload public function navigableKeySet() : java.util.NavigableSet<K>;
+	@:overload @:public public function navigableKeySet() : java.util.NavigableSet<K>;
 	
-	@:overload public function values() : java.util.Collection<V>;
+	@:overload @:public override public function values() : java.util.Collection<V>;
 	
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
-	@:overload public function descendingKeySet() : java.util.NavigableSet<K>;
+	@:overload @:public public function descendingKeySet() : java.util.NavigableSet<K>;
 	
 	
 }
@@ -810,9 +810,9 @@ package java.util.concurrent;
 */
 @:native('java$util$concurrent$ConcurrentSkipListMap$SubMap$SubMapIter') @:internal extern class ConcurrentSkipListMap_SubMap_SubMapIter<T> implements java.util.Iterator<T>
 {
-	@:overload @:final public function hasNext() : Bool;
+	@:overload @:public @:final public function hasNext() : Bool;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	/**
 	* Returns the next element in the iteration.
@@ -820,25 +820,25 @@ package java.util.concurrent;
 	* @return the next element in the iteration
 	* @throws NoSuchElementException if the iteration has no more elements
 	*/
-	@:overload public function next() : Dynamic;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$concurrent$ConcurrentSkipListMap$SubMap$SubMapValueIterator') @:internal extern class ConcurrentSkipListMap_SubMap_SubMapValueIterator extends java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap_SubMapIter<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$concurrent$ConcurrentSkipListMap$SubMap$SubMapKeyIterator') @:internal extern class ConcurrentSkipListMap_SubMap_SubMapKeyIterator extends java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap_SubMapIter<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$concurrent$ConcurrentSkipListMap$SubMap$SubMapEntryIterator') @:internal extern class ConcurrentSkipListMap_SubMap_SubMapEntryIterator extends java.util.concurrent.ConcurrentSkipListMap.ConcurrentSkipListMap_SubMap_SubMapIter<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
+	@:overload @:public override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	
 	
 }

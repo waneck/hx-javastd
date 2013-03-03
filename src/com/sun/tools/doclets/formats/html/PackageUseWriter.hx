@@ -38,7 +38,7 @@ extern class PackageUseWriter extends com.sun.tools.doclets.formats.html.SubWrit
 	* @throws IOException
 	* @throws DocletAbortException
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, mapper : com.sun.tools.doclets.internal.toolkit.util.ClassUseMapper, filename : String, pkgdoc : com.sun.javadoc.PackageDoc) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, mapper : com.sun.tools.doclets.internal.toolkit.util.ClassUseMapper, filename : String, pkgdoc : com.sun.javadoc.PackageDoc) : Void;
 	
 	/**
 	* Generate a class page.
@@ -47,33 +47,33 @@ extern class PackageUseWriter extends com.sun.tools.doclets.formats.html.SubWrit
 	* @param mapper        the mapping of the class usage.
 	* @param pkgdoc        the package doc being documented.
 	*/
-	@:overload public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, mapper : com.sun.tools.doclets.internal.toolkit.util.ClassUseMapper, pkgdoc : com.sun.javadoc.PackageDoc) : Void;
+	@:overload @:public @:static public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, mapper : com.sun.tools.doclets.internal.toolkit.util.ClassUseMapper, pkgdoc : com.sun.javadoc.PackageDoc) : Void;
 	
 	/**
 	* Generate the package use list.
 	*/
-	@:overload private function generatePackageUseFile() : Void;
+	@:overload @:protected private function generatePackageUseFile() : Void;
 	
 	/**
 	* Add the package use information.
 	*
 	* @param contentTree the content tree to which the package use information will be added
 	*/
-	@:overload private function addPackageUse(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addPackageUse(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the list of packages that use the given package.
 	*
 	* @param contentTree the content tree to which the package list will be added
 	*/
-	@:overload private function addPackageList(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addPackageList(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the list of classes that use the given package.
 	*
 	* @param contentTree the content tree to which the class list will be added
 	*/
-	@:overload private function addClassList(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addClassList(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add a row for the class that uses the given package.
@@ -82,7 +82,7 @@ extern class PackageUseWriter extends com.sun.tools.doclets.formats.html.SubWrit
 	* @param packageName the name of the package to which the class belongs
 	* @param contentTree the content tree to which the row will be added
 	*/
-	@:overload private function addClassRow(usedClass : com.sun.javadoc.ClassDoc, packageName : String, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addClassRow(usedClass : com.sun.javadoc.ClassDoc, packageName : String, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the package use information.
@@ -90,35 +90,35 @@ extern class PackageUseWriter extends com.sun.tools.doclets.formats.html.SubWrit
 	* @param pkg the package that used the given package
 	* @param contentTree the content tree to which the information will be added
 	*/
-	@:overload private function addPackageUse(pkg : com.sun.javadoc.PackageDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addPackageUse(pkg : com.sun.javadoc.PackageDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get the header for the package use listing.
 	*
 	* @return a content tree representing the package use header
 	*/
-	@:overload private function getPackageUseHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getPackageUseHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get this package link.
 	*
 	* @return a content tree for the package link
 	*/
-	@:overload override private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the use link.
 	*
 	* @return a content tree for the use link
 	*/
-	@:overload override private function getNavLinkClassUse() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkClassUse() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the tree link.
 	*
 	* @return a content tree for the tree link
 	*/
-	@:overload override private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

@@ -35,55 +35,55 @@ extern class Main
 	/**
 	* Construct a compiler instance.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Construct a compiler instance.
 	*/
-	@:overload public function new(name : String, out : java.io.PrintWriter) : Void;
+	@:overload @:public public function new(name : String, out : java.io.PrintWriter) : Void;
 	
 	/** The list of source files to process
 	*/
-	public var filenames : java.util.Set<java.io.File>;
+	@:public public var filenames : java.util.Set<java.io.File>;
 	
 	/** List of class files names passed on the command line
 	*/
-	public var classnames : com.sun.tools.javac.util.ListBuffer<String>;
+	@:public public var classnames : com.sun.tools.javac.util.ListBuffer<String>;
 	
-	@:overload public function getOption(flag : String) : com.sun.tools.javac.main.JavacOption.JavacOption_Option;
+	@:overload @:public public function getOption(flag : String) : com.sun.tools.javac.main.JavacOption.JavacOption_Option;
 	
-	@:overload public function setOptions(options : com.sun.tools.javac.util.Options) : Void;
+	@:overload @:public public function setOptions(options : com.sun.tools.javac.util.Options) : Void;
 	
-	@:overload public function setAPIMode(apiMode : Bool) : Void;
+	@:overload @:public public function setAPIMode(apiMode : Bool) : Void;
 	
 	/** Process command line arguments: store all command line options
 	*  in `options' table and return all source filenames.
 	*  @param flags    The array of command line arguments.
 	*/
-	@:overload public function processArgs(flags : java.NativeArray<String>) : java.util.Collection<java.io.File>;
+	@:overload @:public public function processArgs(flags : java.NativeArray<String>) : java.util.Collection<java.io.File>;
 	
-	@:overload public function processArgs(flags : java.NativeArray<String>, classNames : java.NativeArray<String>) : java.util.Collection<java.io.File>;
-	
-	/** Programmatic interface for main function.
-	* @param args    The command line parameters.
-	*/
-	@:overload public function compile(args : java.NativeArray<String>) : Int;
-	
-	@:overload public function compile(args : java.NativeArray<String>, context : com.sun.tools.javac.util.Context) : Int;
+	@:overload @:public public function processArgs(flags : java.NativeArray<String>, classNames : java.NativeArray<String>) : java.util.Collection<java.io.File>;
 	
 	/** Programmatic interface for main function.
 	* @param args    The command line parameters.
 	*/
-	@:overload public function compile(args : java.NativeArray<String>, context : com.sun.tools.javac.util.Context, fileObjects : com.sun.tools.javac.util.List<javax.tools.JavaFileObject>, processors : java.lang.Iterable<javax.annotation.processing.Processor>) : Int;
+	@:overload @:public public function compile(args : java.NativeArray<String>) : Int;
 	
-	@:overload public function compile(args : java.NativeArray<String>, classNames : java.NativeArray<String>, context : com.sun.tools.javac.util.Context, fileObjects : com.sun.tools.javac.util.List<javax.tools.JavaFileObject>, processors : java.lang.Iterable<javax.annotation.processing.Processor>) : Int;
+	@:overload @:public public function compile(args : java.NativeArray<String>, context : com.sun.tools.javac.util.Context) : Int;
+	
+	/** Programmatic interface for main function.
+	* @param args    The command line parameters.
+	*/
+	@:overload @:public public function compile(args : java.NativeArray<String>, context : com.sun.tools.javac.util.Context, fileObjects : com.sun.tools.javac.util.List<javax.tools.JavaFileObject>, processors : java.lang.Iterable<javax.annotation.processing.Processor>) : Int;
+	
+	@:overload @:public public function compile(args : java.NativeArray<String>, classNames : java.NativeArray<String>, context : com.sun.tools.javac.util.Context, fileObjects : com.sun.tools.javac.util.List<javax.tools.JavaFileObject>, processors : java.lang.Iterable<javax.annotation.processing.Processor>) : Int;
 	
 	/** Find a localized string in the resource bundle.
 	*  @param key     The key for the localized string.
 	*/
-	@:overload public static function getLocalizedString(key : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static public static function getLocalizedString(key : String, args : java.NativeArray<Dynamic>) : String;
 	
-	@:overload public static function useRawMessages(enable : Bool) : Void;
+	@:overload @:public @:static public static function useRawMessages(enable : Bool) : Void;
 	
 	
 }

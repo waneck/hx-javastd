@@ -55,13 +55,13 @@ package javax.naming;
 	* @param explanation      A possibly null message explaining the problem.
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload public function new(explanation : String) : Void;
+	@:overload @:public public function new(explanation : String) : Void;
 	
 	/**
 	* Constructs an instance of InterruptedNamingException with
 	* all name resolution fields and explanation initialized to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

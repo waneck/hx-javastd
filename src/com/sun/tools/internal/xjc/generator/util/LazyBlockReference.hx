@@ -29,9 +29,9 @@ extern class LazyBlockReference implements com.sun.tools.internal.xjc.generator.
 	* Called when a block needs to be created.
 	* Only called once in the whole life time of this object.
 	*/
-	@:overload @:abstract private function create() : com.sun.codemodel.internal.JBlock;
+	@:overload @:protected @:abstract private function create() : com.sun.codemodel.internal.JBlock;
 	
-	@:overload public function get(create : Bool) : com.sun.codemodel.internal.JBlock;
+	@:overload @:public public function get(create : Bool) : com.sun.codemodel.internal.JBlock;
 	
 	
 }

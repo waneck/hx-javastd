@@ -29,7 +29,7 @@ extern class LocaleServiceProvider
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns an array of all locales for which this locale service provider
@@ -43,7 +43,7 @@ extern class LocaleServiceProvider
 	* @return An array of all locales for which this locale service provider
 	* can provide localized objects or names.
 	*/
-	@:overload @:abstract public function getAvailableLocales() : java.NativeArray<java.util.Locale>;
+	@:overload @:public @:abstract public function getAvailableLocales() : java.NativeArray<java.util.Locale>;
 	
 	
 }

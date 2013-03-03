@@ -37,7 +37,7 @@ extern interface AsyncProvider<T>
 	*      The web service context instance that can be used to retrieve
 	*      context information about the given request.
 	*/
-	@:overload public function invoke(request : T, _callback : com.sun.xml.internal.ws.api.server.AsyncProviderCallback<T>, context : javax.xml.ws.WebServiceContext) : Void;
+	@:overload @:public public function invoke(request : T, _callback : com.sun.xml.internal.ws.api.server.AsyncProviderCallback<T>, context : javax.xml.ws.WebServiceContext) : Void;
 	
 	
 }

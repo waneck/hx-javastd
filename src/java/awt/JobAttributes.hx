@@ -69,7 +69,7 @@ package java.awt;
 	* Sides defaults to <code>SidesType.ONE_SIDED</code>. File name defaults
 	* to <code>null</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>JobAttributes</code> instance which is a copy
@@ -77,7 +77,7 @@ package java.awt;
 	*
 	* @param   obj the <code>JobAttributes</code> to copy
 	*/
-	@:overload public function new(obj : java.awt.JobAttributes) : Void;
+	@:overload @:public public function new(obj : java.awt.JobAttributes) : Void;
 	
 	/**
 	* Constructs a <code>JobAttributes</code> instance with the
@@ -121,7 +121,7 @@ package java.awt;
 	* @throws  IllegalArgumentException if one or more of the above
 	*          conditions is violated
 	*/
-	@:overload public function new(copies : Int, defaultSelection : java.awt.JobAttributes.JobAttributes_DefaultSelectionType, destination : java.awt.JobAttributes.JobAttributes_DestinationType, dialog : java.awt.JobAttributes.JobAttributes_DialogType, fileName : String, maxPage : Int, minPage : Int, multipleDocumentHandling : java.awt.JobAttributes.JobAttributes_MultipleDocumentHandlingType, pageRanges : java.NativeArray<java.NativeArray<Int>>, printer : String, sides : java.awt.JobAttributes.JobAttributes_SidesType) : Void;
+	@:overload @:public public function new(copies : Int, defaultSelection : java.awt.JobAttributes.JobAttributes_DefaultSelectionType, destination : java.awt.JobAttributes.JobAttributes_DestinationType, dialog : java.awt.JobAttributes.JobAttributes_DialogType, fileName : String, maxPage : Int, minPage : Int, multipleDocumentHandling : java.awt.JobAttributes.JobAttributes_MultipleDocumentHandlingType, pageRanges : java.NativeArray<java.NativeArray<Int>>, printer : String, sides : java.awt.JobAttributes.JobAttributes_SidesType) : Void;
 	
 	/**
 	* Creates and returns a copy of this <code>JobAttributes</code>.
@@ -129,7 +129,7 @@ package java.awt;
 	* @return  the newly created copy; it is safe to cast this Object into
 	*          a <code>JobAttributes</code>
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Sets all of the attributes of this <code>JobAttributes</code> to
@@ -137,7 +137,7 @@ package java.awt;
 	*
 	* @param   obj the <code>JobAttributes</code> to copy
 	*/
-	@:overload public function set(obj : java.awt.JobAttributes) : Void;
+	@:overload @:public public function set(obj : java.awt.JobAttributes) : Void;
 	
 	/**
 	* Returns the number of copies the application should render for jobs
@@ -146,7 +146,7 @@ package java.awt;
 	*
 	* @return  an integer greater than 0.
 	*/
-	@:overload public function getCopies() : Int;
+	@:overload @:public public function getCopies() : Int;
 	
 	/**
 	* Specifies the number of copies the application should render for jobs
@@ -157,13 +157,13 @@ package java.awt;
 	* @throws  IllegalArgumentException if <code>copies</code> is less than
 	*      or equal to 0
 	*/
-	@:overload public function setCopies(copies : Int) : Void;
+	@:overload @:public public function setCopies(copies : Int) : Void;
 	
 	/**
 	* Sets the number of copies the application should render for jobs using
 	* these attributes to the default. The default number of copies is 1.
 	*/
-	@:overload public function setCopiesToDefault() : Void;
+	@:overload @:public public function setCopiesToDefault() : Void;
 	
 	/**
 	* Specifies whether, for jobs using these attributes, the application
@@ -174,7 +174,7 @@ package java.awt;
 	* @return  DefaultSelectionType.ALL, DefaultSelectionType.RANGE, or
 	*          DefaultSelectionType.SELECTION
 	*/
-	@:overload public function getDefaultSelection() : java.awt.JobAttributes.JobAttributes_DefaultSelectionType;
+	@:overload @:public public function getDefaultSelection() : java.awt.JobAttributes.JobAttributes_DefaultSelectionType;
 	
 	/**
 	* Specifies whether, for jobs using these attributes, the application
@@ -186,7 +186,7 @@ package java.awt;
 	*          DefaultSelectionType.RANGE, or DefaultSelectionType.SELECTION.
 	* @throws  IllegalArgumentException if defaultSelection is <code>null</code>
 	*/
-	@:overload public function setDefaultSelection(defaultSelection : java.awt.JobAttributes.JobAttributes_DefaultSelectionType) : Void;
+	@:overload @:public public function setDefaultSelection(defaultSelection : java.awt.JobAttributes.JobAttributes_DefaultSelectionType) : Void;
 	
 	/**
 	* Specifies whether output will be to a printer or a file for jobs using
@@ -195,7 +195,7 @@ package java.awt;
 	*
 	* @return  DesintationType.FILE or DesintationType.PRINTER
 	*/
-	@:overload public function getDestination() : java.awt.JobAttributes.JobAttributes_DestinationType;
+	@:overload @:public public function getDestination() : java.awt.JobAttributes.JobAttributes_DestinationType;
 	
 	/**
 	* Specifies whether output will be to a printer or a file for jobs using
@@ -205,7 +205,7 @@ package java.awt;
 	* @param   destination DesintationType.FILE or DesintationType.PRINTER.
 	* @throws  IllegalArgumentException if destination is null.
 	*/
-	@:overload public function setDestination(destination : java.awt.JobAttributes.JobAttributes_DestinationType) : Void;
+	@:overload @:public public function setDestination(destination : java.awt.JobAttributes.JobAttributes_DestinationType) : Void;
 	
 	/**
 	* Returns whether, for jobs using these attributes, the user should see
@@ -221,7 +221,7 @@ package java.awt;
 	* @return  <code>DialogType.COMMON</code>, <code>DialogType.NATIVE</code>, or
 	*          <code>DialogType.NONE</code>
 	*/
-	@:overload public function getDialog() : java.awt.JobAttributes.JobAttributes_DialogType;
+	@:overload @:public public function getDialog() : java.awt.JobAttributes.JobAttributes_DialogType;
 	
 	/**
 	* Specifies whether, for jobs using these attributes, the user should see
@@ -238,7 +238,7 @@ package java.awt;
 	*          DialogType.NONE.
 	* @throws  IllegalArgumentException if dialog is null.
 	*/
-	@:overload public function setDialog(dialog : java.awt.JobAttributes.JobAttributes_DialogType) : Void;
+	@:overload @:public public function setDialog(dialog : java.awt.JobAttributes.JobAttributes_DialogType) : Void;
 	
 	/**
 	* Specifies the file name for the output file for jobs using these
@@ -246,7 +246,7 @@ package java.awt;
 	*
 	* @return  the possibly <code>null</code> file name
 	*/
-	@:overload public function getFileName() : String;
+	@:overload @:public public function getFileName() : String;
 	
 	/**
 	* Specifies the file name for the output file for jobs using these
@@ -254,7 +254,7 @@ package java.awt;
 	*
 	* @param   fileName the possibly null file name.
 	*/
-	@:overload public function setFileName(fileName : String) : Void;
+	@:overload @:public public function setFileName(fileName : String) : Void;
 	
 	/**
 	* Returns, for jobs using these attributes, the first page to be
@@ -269,7 +269,7 @@ package java.awt;
 	*          <i>toPage</i> and greater than or equal to <i>minPage</i> and
 	*          less than or equal to <i>maxPage</i>.
 	*/
-	@:overload public function getFromPage() : Int;
+	@:overload @:public public function getFromPage() : Int;
 	
 	/**
 	* Specifies, for jobs using these attributes, the first page to be
@@ -286,7 +286,7 @@ package java.awt;
 	* @throws  IllegalArgumentException if one or more of the above
 	*          conditions is violated.
 	*/
-	@:overload public function setFromPage(fromPage : Int) : Void;
+	@:overload @:public public function setFromPage(fromPage : Int) : Void;
 	
 	/**
 	* Specifies the maximum value the user can specify as the last page to
@@ -297,7 +297,7 @@ package java.awt;
 	* @return  an integer greater than zero and greater than or equal
 	*          to <i>minPage</i>.
 	*/
-	@:overload public function getMaxPage() : Int;
+	@:overload @:public public function getMaxPage() : Int;
 	
 	/**
 	* Specifies the maximum value the user can specify as the last page to
@@ -309,7 +309,7 @@ package java.awt;
 	* @throws  IllegalArgumentException if one or more of the above
 	*          conditions is violated
 	*/
-	@:overload public function setMaxPage(maxPage : Int) : Void;
+	@:overload @:public public function setMaxPage(maxPage : Int) : Void;
 	
 	/**
 	* Specifies the minimum value the user can specify as the first page to
@@ -320,7 +320,7 @@ package java.awt;
 	* @return  an integer greater than zero and less than or equal
 	*          to <i>maxPage</i>.
 	*/
-	@:overload public function getMinPage() : Int;
+	@:overload @:public public function getMinPage() : Int;
 	
 	/**
 	* Specifies the minimum value the user can specify as the first page to
@@ -332,7 +332,7 @@ package java.awt;
 	* @throws  IllegalArgumentException if one or more of the above
 	*          conditions is violated.
 	*/
-	@:overload public function setMinPage(minPage : Int) : Void;
+	@:overload @:public public function setMinPage(minPage : Int) : Void;
 	
 	/**
 	* Specifies the handling of multiple copies, including collation, for
@@ -343,7 +343,7 @@ package java.awt;
 	*     MultipleDocumentHandlingType.SEPARATE_DOCUMENTS_COLLATED_COPIES or
 	*     MultipleDocumentHandlingType.SEPARATE_DOCUMENTS_UNCOLLATED_COPIES.
 	*/
-	@:overload public function getMultipleDocumentHandling() : java.awt.JobAttributes.JobAttributes_MultipleDocumentHandlingType;
+	@:overload @:public public function getMultipleDocumentHandling() : java.awt.JobAttributes.JobAttributes_MultipleDocumentHandlingType;
 	
 	/**
 	* Specifies the handling of multiple copies, including collation, for
@@ -356,14 +356,14 @@ package java.awt;
 	*     MultipleDocumentHandlingType.SEPARATE_DOCUMENTS_UNCOLLATED_COPIES.
 	* @throws  IllegalArgumentException if multipleDocumentHandling is null.
 	*/
-	@:overload public function setMultipleDocumentHandling(multipleDocumentHandling : java.awt.JobAttributes.JobAttributes_MultipleDocumentHandlingType) : Void;
+	@:overload @:public public function setMultipleDocumentHandling(multipleDocumentHandling : java.awt.JobAttributes.JobAttributes_MultipleDocumentHandlingType) : Void;
 	
 	/**
 	* Sets the handling of multiple copies, including collation, for jobs
 	* using these attributes to the default. The default handling is
 	* MultipleDocumentHandlingType.SEPARATE_DOCUMENTS_UNCOLLATED_COPIES.
 	*/
-	@:overload public function setMultipleDocumentHandlingToDefault() : Void;
+	@:overload @:public public function setMultipleDocumentHandlingToDefault() : Void;
 	
 	/**
 	* Specifies, for jobs using these attributes, the ranges of pages to be
@@ -383,7 +383,7 @@ package java.awt;
 	*                         new int[] { 15, 19 } }),
 	*          specifies pages 1, 2, 3, 5, 15, 16, 17, 18, and 19.
 	*/
-	@:overload public function getPageRanges() : java.NativeArray<java.NativeArray<Int>>;
+	@:overload @:public public function getPageRanges() : java.NativeArray<java.NativeArray<Int>>;
 	
 	/**
 	* Specifies, for jobs using these attributes, the ranges of pages to be
@@ -410,7 +410,7 @@ package java.awt;
 	* @throws  IllegalArgumentException if one or more of the above
 	*          conditions is violated.
 	*/
-	@:overload public function setPageRanges(pageRanges : java.NativeArray<java.NativeArray<Int>>) : Void;
+	@:overload @:public public function setPageRanges(pageRanges : java.NativeArray<java.NativeArray<Int>>) : Void;
 	
 	/**
 	* Returns the destination printer for jobs using these attributes. This
@@ -418,7 +418,7 @@ package java.awt;
 	*
 	* @return  the possibly null printer name.
 	*/
-	@:overload public function getPrinter() : String;
+	@:overload @:public public function getPrinter() : String;
 	
 	/**
 	* Specifies the destination printer for jobs using these attributes.
@@ -426,7 +426,7 @@ package java.awt;
 	*
 	* @param   printer the possibly null printer name.
 	*/
-	@:overload public function setPrinter(printer : String) : Void;
+	@:overload @:public public function setPrinter(printer : String) : Void;
 	
 	/**
 	* Returns how consecutive pages should be imposed upon the sides of the
@@ -447,7 +447,7 @@ package java.awt;
 	* @return  SidesType.ONE_SIDED, SidesType.TWO_SIDED_LONG_EDGE, or
 	*          SidesType.TWO_SIDED_SHORT_EDGE.
 	*/
-	@:overload public function getSides() : java.awt.JobAttributes.JobAttributes_SidesType;
+	@:overload @:public public function getSides() : java.awt.JobAttributes.JobAttributes_SidesType;
 	
 	/**
 	* Specifies how consecutive pages should be imposed upon the sides of the
@@ -469,14 +469,14 @@ package java.awt;
 	*          SidesType.TWO_SIDED_SHORT_EDGE.
 	* @throws  IllegalArgumentException if sides is null.
 	*/
-	@:overload public function setSides(sides : java.awt.JobAttributes.JobAttributes_SidesType) : Void;
+	@:overload @:public public function setSides(sides : java.awt.JobAttributes.JobAttributes_SidesType) : Void;
 	
 	/**
 	* Sets how consecutive pages should be imposed upon the sides of the
 	* print medium for jobs using these attributes to the default. The
 	* default imposition is SidesType.ONE_SIDED.
 	*/
-	@:overload public function setSidesToDefault() : Void;
+	@:overload @:public public function setSidesToDefault() : Void;
 	
 	/**
 	* Returns, for jobs using these attributes, the last page (inclusive)
@@ -491,7 +491,7 @@ package java.awt;
 	*          to <i>toPage</i> and greater than or equal to <i>minPage</i>
 	*          and less than or equal to <i>maxPage</i>.
 	*/
-	@:overload public function getToPage() : Int;
+	@:overload @:public public function getToPage() : Int;
 	
 	/**
 	* Specifies, for jobs using these attributes, the last page (inclusive)
@@ -508,7 +508,7 @@ package java.awt;
 	* @throws  IllegalArgumentException if one or more of the above
 	*          conditions is violated.
 	*/
-	@:overload public function setToPage(toPage : Int) : Void;
+	@:overload @:public public function setToPage(toPage : Int) : Void;
 	
 	/**
 	* Determines whether two JobAttributes are equal to each other.
@@ -523,21 +523,21 @@ package java.awt;
 	* @return  whether obj is equal to this JobAttribute according to the
 	*          above criteria.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for this JobAttributes.
 	*
 	* @return  the hash code.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this JobAttributes.
 	*
 	* @return  the string representation.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -551,19 +551,19 @@ package java.awt;
 	* The <code>DefaultSelectionType</code> instance to use for
 	* specifying that all pages of the job should be printed.
 	*/
-	public static var ALL(default, null) : java.awt.JobAttributes.JobAttributes_DefaultSelectionType;
+	@:public @:static @:final public static var ALL(default, null) : java.awt.JobAttributes.JobAttributes_DefaultSelectionType;
 	
 	/**
 	* The <code>DefaultSelectionType</code> instance to use for
 	* specifying that a range of pages of the job should be printed.
 	*/
-	public static var RANGE(default, null) : java.awt.JobAttributes.JobAttributes_DefaultSelectionType;
+	@:public @:static @:final public static var RANGE(default, null) : java.awt.JobAttributes.JobAttributes_DefaultSelectionType;
 	
 	/**
 	* The <code>DefaultSelectionType</code> instance to use for
 	* specifying that the current selection should be printed.
 	*/
-	public static var SELECTION(default, null) : java.awt.JobAttributes.JobAttributes_DefaultSelectionType;
+	@:public @:static @:final public static var SELECTION(default, null) : java.awt.JobAttributes.JobAttributes_DefaultSelectionType;
 	
 	
 }
@@ -577,13 +577,13 @@ package java.awt;
 	* The <code>DestinationType</code> instance to use for
 	* specifying print to file.
 	*/
-	public static var FILE(default, null) : java.awt.JobAttributes.JobAttributes_DestinationType;
+	@:public @:static @:final public static var FILE(default, null) : java.awt.JobAttributes.JobAttributes_DestinationType;
 	
 	/**
 	* The <code>DestinationType</code> instance to use for
 	* specifying print to printer.
 	*/
-	public static var PRINTER(default, null) : java.awt.JobAttributes.JobAttributes_DestinationType;
+	@:public @:static @:final public static var PRINTER(default, null) : java.awt.JobAttributes.JobAttributes_DestinationType;
 	
 	
 }
@@ -597,19 +597,19 @@ package java.awt;
 	* The <code>DialogType</code> instance to use for
 	* specifying the cross-platform, pure Java print dialog.
 	*/
-	public static var COMMON(default, null) : java.awt.JobAttributes.JobAttributes_DialogType;
+	@:public @:static @:final public static var COMMON(default, null) : java.awt.JobAttributes.JobAttributes_DialogType;
 	
 	/**
 	* The <code>DialogType</code> instance to use for
 	* specifying the platform's native print dialog.
 	*/
-	public static var NATIVE(default, null) : java.awt.JobAttributes.JobAttributes_DialogType;
+	@:public @:static @:final public static var NATIVE(default, null) : java.awt.JobAttributes.JobAttributes_DialogType;
 	
 	/**
 	* The <code>DialogType</code> instance to use for
 	* specifying no print dialog.
 	*/
-	public static var NONE(default, null) : java.awt.JobAttributes.JobAttributes_DialogType;
+	@:public @:static @:final public static var NONE(default, null) : java.awt.JobAttributes.JobAttributes_DialogType;
 	
 	
 }
@@ -625,13 +625,13 @@ package java.awt;
 	* The <code>MultipleDocumentHandlingType</code> instance to use for specifying
 	* that the job should be divided into separate, collated copies.
 	*/
-	public static var SEPARATE_DOCUMENTS_COLLATED_COPIES(default, null) : java.awt.JobAttributes.JobAttributes_MultipleDocumentHandlingType;
+	@:public @:static @:final public static var SEPARATE_DOCUMENTS_COLLATED_COPIES(default, null) : java.awt.JobAttributes.JobAttributes_MultipleDocumentHandlingType;
 	
 	/**
 	* The <code>MultipleDocumentHandlingType</code> instance to use for specifying
 	* that the job should be divided into separate, uncollated copies.
 	*/
-	public static var SEPARATE_DOCUMENTS_UNCOLLATED_COPIES(default, null) : java.awt.JobAttributes.JobAttributes_MultipleDocumentHandlingType;
+	@:public @:static @:final public static var SEPARATE_DOCUMENTS_UNCOLLATED_COPIES(default, null) : java.awt.JobAttributes.JobAttributes_MultipleDocumentHandlingType;
 	
 	
 }
@@ -647,7 +647,7 @@ package java.awt;
 	* consecutive job pages should be printed upon the same side of
 	* consecutive media sheets.
 	*/
-	public static var ONE_SIDED(default, null) : java.awt.JobAttributes.JobAttributes_SidesType;
+	@:public @:static @:final public static var ONE_SIDED(default, null) : java.awt.JobAttributes.JobAttributes_SidesType;
 	
 	/**
 	* The <code>SidesType</code> instance to use for specifying that
@@ -656,7 +656,7 @@ package java.awt;
 	* of pages on the medium would be correct for the reader as if for
 	* binding on the long edge.
 	*/
-	public static var TWO_SIDED_LONG_EDGE(default, null) : java.awt.JobAttributes.JobAttributes_SidesType;
+	@:public @:static @:final public static var TWO_SIDED_LONG_EDGE(default, null) : java.awt.JobAttributes.JobAttributes_SidesType;
 	
 	/**
 	* The <code>SidesType</code> instance to use for specifying that
@@ -665,7 +665,7 @@ package java.awt;
 	* of pages on the medium would be correct for the reader as if for
 	* binding on the short edge.
 	*/
-	public static var TWO_SIDED_SHORT_EDGE(default, null) : java.awt.JobAttributes.JobAttributes_SidesType;
+	@:public @:static @:final public static var TWO_SIDED_SHORT_EDGE(default, null) : java.awt.JobAttributes.JobAttributes_SidesType;
 	
 	
 }

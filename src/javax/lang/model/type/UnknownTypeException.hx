@@ -35,7 +35,7 @@ extern class UnknownTypeException extends javax.lang.model.UnknownEntityExceptio
 	* @param t the unknown type, may be {@code null}
 	* @param p an additional parameter, may be {@code null}
 	*/
-	@:overload public function new(t : javax.lang.model.type.TypeMirror, p : Dynamic) : Void;
+	@:overload @:public public function new(t : javax.lang.model.type.TypeMirror, p : Dynamic) : Void;
 	
 	/**
 	* Returns the unknown type.
@@ -44,14 +44,14 @@ extern class UnknownTypeException extends javax.lang.model.UnknownEntityExceptio
 	*
 	* @return the unknown type, or {@code null} if unavailable
 	*/
-	@:overload public function getUnknownType() : javax.lang.model.type.TypeMirror;
+	@:overload @:public public function getUnknownType() : javax.lang.model.type.TypeMirror;
 	
 	/**
 	* Returns the additional argument.
 	*
 	* @return the additional argument
 	*/
-	@:overload public function getArgument() : Dynamic;
+	@:overload @:public public function getArgument() : Dynamic;
 	
 	
 }

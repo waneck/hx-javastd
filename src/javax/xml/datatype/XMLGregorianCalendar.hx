@@ -34,7 +34,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* produce an object with a consistent state and may be
 	* removed in the future.</p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* <p>Unset all fields to undefined.</p>
@@ -42,7 +42,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* <p>Set all int fields to {@link DatatypeConstants#FIELD_UNDEFINED} and reference fields
 	* to null.</p>
 	*/
-	@:overload @:abstract public function clear() : Void;
+	@:overload @:public @:abstract public function clear() : Void;
 	
 	/**
 	* <p>Reset this <code>XMLGregorianCalendar</code> to its original values.</p>
@@ -96,7 +96,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* <p><code>reset()</code> is designed to allow the reuse of existing <code>XMLGregorianCalendar</code>s
 	* thus saving resources associated with the creation of new <code>XMLGregorianCalendar</code>s.</p>
 	*/
-	@:overload @:abstract public function reset() : Void;
+	@:overload @:public @:abstract public function reset() : Void;
 	
 	/**
 	* <p>Set low and high order component of XSD <code>dateTime</code> year field.</p>
@@ -109,7 +109,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* outside value constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload @:abstract public function setYear(year : java.math.BigInteger) : Void;
+	@:overload @:public @:abstract public function setYear(year : java.math.BigInteger) : Void;
 	
 	/**
 	* <p>Set year of XSD <code>dateTime</code> year field.</p>
@@ -124,7 +124,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* @param year value constraints are summarized in <a href="#datetimefield-year">year field of date/time field mapping table</a>.
 	*   If year is {@link DatatypeConstants#FIELD_UNDEFINED}, then eon is set to <code>null</code>.
 	*/
-	@:overload @:abstract public function setYear(year : Int) : Void;
+	@:overload @:public @:abstract public function setYear(year : Int) : Void;
 	
 	/**
 	* <p>Set month.</p>
@@ -137,7 +137,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* outside value constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload @:abstract public function setMonth(month : Int) : Void;
+	@:overload @:public @:abstract public function setMonth(month : Int) : Void;
 	
 	/**
 	* <p>Set days in month.</p>
@@ -150,7 +150,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* outside value constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload @:abstract public function setDay(day : Int) : Void;
+	@:overload @:public @:abstract public function setDay(day : Int) : Void;
 	
 	/**
 	* <p>Set the number of minutes in the timezone offset.</p>
@@ -164,7 +164,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* outside value constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload @:abstract public function setTimezone(offset : Int) : Void;
+	@:overload @:public @:abstract public function setTimezone(offset : Int) : Void;
 	
 	/**
 	* <p>Set time as one unit.</p>
@@ -182,7 +182,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* outside value constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload public function setTime(hour : Int, minute : Int, second : Int) : Void;
+	@:overload @:public public function setTime(hour : Int, minute : Int, second : Int) : Void;
 	
 	/**
 	* <p>Set hours.</p>
@@ -194,7 +194,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* @throws IllegalArgumentException if <code>hour</code> parameter is outside value constraints for the field as specified in
 	*   <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload @:abstract public function setHour(hour : Int) : Void;
+	@:overload @:public @:abstract public function setHour(hour : Int) : Void;
 	
 	/**
 	* <p>Set minutes.</p>
@@ -206,7 +206,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* @throws IllegalArgumentException if <code>minute</code> parameter is outside value constraints for the field as specified in
 	*   <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload @:abstract public function setMinute(minute : Int) : Void;
+	@:overload @:public @:abstract public function setMinute(minute : Int) : Void;
 	
 	/**
 	* <p>Set seconds.</p>
@@ -218,7 +218,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* @throws IllegalArgumentException if <code>second</code> parameter is outside value constraints for the field as specified in
 	*   <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload @:abstract public function setSecond(second : Int) : Void;
+	@:overload @:public @:abstract public function setSecond(second : Int) : Void;
 	
 	/**
 	* <p>Set milliseconds.</p>
@@ -231,7 +231,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* @throws IllegalArgumentException if <code>millisecond</code> parameter is outside value constraints for the field as specified
 	*   in <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload @:abstract public function setMillisecond(millisecond : Int) : Void;
+	@:overload @:public @:abstract public function setMillisecond(millisecond : Int) : Void;
 	
 	/**
 	* <p>Set fractional seconds.</p>
@@ -244,7 +244,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* @throws IllegalArgumentException if <code>fractional</code> parameter is outside value constraints for the field as specified
 	*   in <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload @:abstract public function setFractionalSecond(fractional : java.math.BigDecimal) : Void;
+	@:overload @:public @:abstract public function setFractionalSecond(fractional : java.math.BigDecimal) : Void;
 	
 	/**
 	* <p>Set time as one unit, including the optional infinite precision
@@ -263,7 +263,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* outside value constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload public function setTime(hour : Int, minute : Int, second : Int, fractional : java.math.BigDecimal) : Void;
+	@:overload @:public public function setTime(hour : Int, minute : Int, second : Int, fractional : java.math.BigDecimal) : Void;
 	
 	/**
 	* <p>Set time as one unit, including optional milliseconds.</p>
@@ -281,7 +281,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* outside value constraints for the field as specified in
 	* <a href="#datetimefieldmapping">date/time field mapping table</a>.
 	*/
-	@:overload public function setTime(hour : Int, minute : Int, second : Int, millisecond : Int) : Void;
+	@:overload @:public public function setTime(hour : Int, minute : Int, second : Int, millisecond : Int) : Void;
 	
 	/**
 	* <p>Return high order component for XML Schema 1.0 dateTime datatype field for
@@ -296,7 +296,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* @see #getYear()
 	* @see #getEonAndYear()
 	*/
-	@:overload @:abstract public function getEon() : java.math.BigInteger;
+	@:overload @:public @:abstract public function getEon() : java.math.BigInteger;
 	
 	/**
 	* <p>Return low order component for XML Schema 1.0 dateTime datatype field for
@@ -310,7 +310,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* @see #getEon()
 	* @see #getEonAndYear()
 	*/
-	@:overload @:abstract public function getYear() : Int;
+	@:overload @:public @:abstract public function getYear() : Int;
 	
 	/**
 	* <p>Return XML Schema 1.0 dateTime datatype field for
@@ -327,7 +327,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* @see #getEon()
 	* @see #getYear()
 	*/
-	@:overload @:abstract public function getEonAndYear() : java.math.BigInteger;
+	@:overload @:public @:abstract public function getEonAndYear() : java.math.BigInteger;
 	
 	/**
 	* <p>Return number of month or {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -338,7 +338,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* @return year  of this <code>XMLGregorianCalendar</code>.
 	*
 	*/
-	@:overload @:abstract public function getMonth() : Int;
+	@:overload @:public @:abstract public function getMonth() : Int;
 	
 	/**
 	* Return day in month or {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -348,7 +348,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	*
 	* @see #setDay(int)
 	*/
-	@:overload @:abstract public function getDay() : Int;
+	@:overload @:public @:abstract public function getDay() : Int;
 	
 	/**
 	* Return timezone offset in minutes or
@@ -359,7 +359,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	*
 	* @see #setTimezone(int)
 	*/
-	@:overload @:abstract public function getTimezone() : Int;
+	@:overload @:public @:abstract public function getTimezone() : Int;
 	
 	/**
 	* Return hours or {@link DatatypeConstants#FIELD_UNDEFINED}.
@@ -369,7 +369,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* <a href="#datetimefield-hour">hour field of date/time field mapping table</a>.</p>
 	* @see #setTime(int, int, int)
 	*/
-	@:overload @:abstract public function getHour() : Int;
+	@:overload @:public @:abstract public function getHour() : Int;
 	
 	/**
 	* Return minutes or {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -379,7 +379,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* <a href="#datetimefield-minute">minute field of date/time field mapping table</a>.</p>
 	* @see #setTime(int, int, int)
 	*/
-	@:overload @:abstract public function getMinute() : Int;
+	@:overload @:public @:abstract public function getMinute() : Int;
 	
 	/**
 	* <p>Return seconds or {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -399,7 +399,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* @see #getMillisecond()
 	* @see #setTime(int, int, int)
 	*/
-	@:overload @:abstract public function getSecond() : Int;
+	@:overload @:public @:abstract public function getSecond() : Int;
 	
 	/**
 	* <p>Return millisecond precision of {@link #getFractionalSecond()}.</p>
@@ -420,7 +420,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* @see #getFractionalSecond()
 	* @see #setTime(int, int, int)
 	*/
-	@:overload public function getMillisecond() : Int;
+	@:overload @:public public function getMillisecond() : Int;
 	
 	/**
 	* <p>Return fractional seconds.</p>
@@ -439,7 +439,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* @see #getSecond()
 	* @see #setTime(int, int, int, BigDecimal)
 	*/
-	@:overload @:abstract public function getFractionalSecond() : java.math.BigDecimal;
+	@:overload @:public @:abstract public function getFractionalSecond() : java.math.BigDecimal;
 	
 	/**
 	* <p>Compare two instances of W3C XML Schema 1.0 date/time datatypes
@@ -462,7 +462,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	*
 	* @throws NullPointerException if <code>xmlGregorianCalendar</code> is null.
 	*/
-	@:overload @:abstract public function compare(xmlGregorianCalendar : javax.xml.datatype.XMLGregorianCalendar) : Int;
+	@:overload @:public @:abstract public function compare(xmlGregorianCalendar : javax.xml.datatype.XMLGregorianCalendar) : Int;
 	
 	/**
 	* <p>Normalize this instance to UTC.</p>
@@ -472,7 +472,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	*
 	* @return <code>this</code> <code>XMLGregorianCalendar</code> normalized to UTC.
 	*/
-	@:overload @:abstract public function normalize() : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload @:public @:abstract public function normalize() : javax.xml.datatype.XMLGregorianCalendar;
 	
 	/**
 	* <p>Compares this calendar to the specified object. The result is
@@ -488,14 +488,14 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* returns {@link DatatypeConstants#EQUAL},
 	* otherwise <code>false</code>.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* <p>Returns a hash code consistent with the definition of the equals method.</p>
 	*
 	* @return hash code of this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* <p>Return the lexical representation of <code>this</code> instance.
@@ -511,7 +511,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	* @throws IllegalStateException if the combination of set fields
 	*    does not match one of the eight defined XML Schema builtin date/time datatypes.
 	*/
-	@:overload @:abstract public function toXMLFormat() : String;
+	@:overload @:public @:abstract public function toXMLFormat() : String;
 	
 	/**
 	* <p>Return the name of the XML Schema date/time type that this instance
@@ -624,7 +624,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	*   {@link DatatypeConstants#GMONTH} or
 	*   {@link DatatypeConstants#GDAY}.
 	*/
-	@:overload @:abstract public function getXMLSchemaType() : javax.xml.namespace.QName;
+	@:overload @:public @:abstract public function getXMLSchemaType() : javax.xml.namespace.QName;
 	
 	/**
 	* <p>Returns a <code>String</code> representation of this <code>XMLGregorianCalendar</code> <code>Object</code>.</p>
@@ -638,13 +638,13 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	*
 	* @see #toXMLFormat()
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Validate instance by <code>getXMLSchemaType()</code> constraints.
 	* @return true if data values are valid.
 	*/
-	@:overload @:abstract public function isValid() : Bool;
+	@:overload @:public @:abstract public function isValid() : Bool;
 	
 	/**
 	* <p>Add <code>duration</code> to this instance.</p>
@@ -660,7 +660,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	*
 	* @throws NullPointerException  when <code>duration</code> parameter is <code>null</code>.
 	*/
-	@:overload @:abstract public function add(duration : javax.xml.datatype.Duration) : Void;
+	@:overload @:public @:abstract public function add(duration : javax.xml.datatype.Duration) : Void;
 	
 	/**
 	* <p>Convert this <code>XMLGregorianCalendar</code> to a {@link GregorianCalendar}.</p>
@@ -750,7 +750,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	*
 	* @see #toGregorianCalendar(java.util.TimeZone, java.util.Locale, XMLGregorianCalendar)
 	*/
-	@:overload @:abstract public function toGregorianCalendar() : java.util.GregorianCalendar;
+	@:overload @:public @:abstract public function toGregorianCalendar() : java.util.GregorianCalendar;
 	
 	/**
 	* <p>Convert this <code>XMLGregorianCalendar</code> along with provided parameters
@@ -802,7 +802,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	*                 just use <code>java.util.GregorianCalendar</code> defaults.
 	* @return a java.util.GregorianCalendar conversion of this instance.
 	*/
-	@:overload @:abstract public function toGregorianCalendar(timezone : java.util.TimeZone, aLocale : java.util.Locale, defaults : javax.xml.datatype.XMLGregorianCalendar) : java.util.GregorianCalendar;
+	@:overload @:public @:abstract public function toGregorianCalendar(timezone : java.util.TimeZone, aLocale : java.util.Locale, defaults : javax.xml.datatype.XMLGregorianCalendar) : java.util.GregorianCalendar;
 	
 	/**
 	* <p>Returns a <code>java.util.TimeZone</code> for this class.</p>
@@ -820,14 +820,14 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	*
 	* @return TimeZone for this.
 	*/
-	@:overload @:abstract public function getTimeZone(defaultZoneoffset : Int) : java.util.TimeZone;
+	@:overload @:public @:abstract public function getTimeZone(defaultZoneoffset : Int) : java.util.TimeZone;
 	
 	/**
 	* <p>Creates and returns a copy of this object.</p>
 	*
 	* @return copy of this <code>Object</code>
 	*/
-	@:overload @:abstract public function clone() : Dynamic;
+	@:overload @:public @:abstract public function clone() : Dynamic;
 	
 	
 }

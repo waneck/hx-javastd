@@ -30,9 +30,9 @@ package javax.swing.text.html;
 	*
 	* @param elem the element to represent.
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
-	@:overload override private function createComponent() : java.awt.Component;
+	@:overload @:protected override private function createComponent() : java.awt.Component;
 	
 	/**
 	* Sets the parent view for the FrameView.
@@ -42,7 +42,7 @@ package javax.swing.text.html;
 	*
 	* @param parent View
 	*/
-	@:overload override public function setParent(parent : javax.swing.text.View) : Void;
+	@:overload @:public override public function setParent(parent : javax.swing.text.View) : Void;
 	
 	/**
 	* Also determines if the FrameView should be editable
@@ -53,7 +53,7 @@ package javax.swing.text.html;
 	* @param parent View
 	* @see text.ComponentView#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
 	
 	/**
 	* Notification of a change relative to a
@@ -68,7 +68,7 @@ package javax.swing.text.html;
 	*
 	* @param HyperlinkEvent
 	*/
-	@:overload public function hyperlinkUpdate(evt : javax.swing.event.HyperlinkEvent) : Void;
+	@:overload @:public public function hyperlinkUpdate(evt : javax.swing.event.HyperlinkEvent) : Void;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -80,7 +80,7 @@ package javax.swing.text.html;
 	* @param f the factory to use to rebuild if the view has children
 	*
 	*/
-	@:overload override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Determines the minimum span for this view along an
@@ -93,7 +93,7 @@ package javax.swing.text.html;
 	* is the same as the preferred span
 	*
 	*/
-	@:overload override public function getMinimumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMinimumSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the maximum span for this view along an
@@ -106,7 +106,7 @@ package javax.swing.text.html;
 	* is the same as the preferred span
 	*
 	*/
-	@:overload override public function getMaximumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMaximumSpan(axis : Int) : Single;
 	
 	
 }
@@ -115,7 +115,7 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$FrameView$FrameEditorPane') @:internal extern class FrameView_FrameEditorPane extends javax.swing.JEditorPane implements sun.swing.text.html.FrameEditorPaneTag
 {
-	@:overload override public function getEditorKitForContentType(type : String) : javax.swing.text.EditorKit;
+	@:overload @:public override public function getEditorKitForContentType(type : String) : javax.swing.text.EditorKit;
 	
 	
 }

@@ -7,13 +7,13 @@ package com.sun.corba.se.spi.activation;
 */
 extern class EndPointInfo implements org.omg.CORBA.portable.IDLEntity
 {
-	public var endpointType : String;
+	@:public public var endpointType : String;
 	
-	public var port : Int;
+	@:public public var port : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_endpointType : String, _port : Int) : Void;
+	@:overload @:public public function new(_endpointType : String, _port : Int) : Void;
 	
 	
 }

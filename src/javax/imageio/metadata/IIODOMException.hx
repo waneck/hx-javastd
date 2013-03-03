@@ -25,74 +25,74 @@ package javax.imageio.metadata;
 */
 @:internal extern class IIODOMException extends org.w3c.dom.DOMException
 {
-	@:overload public function new(code : java.StdTypes.Int16, message : String) : Void;
+	@:overload @:public public function new(code : java.StdTypes.Int16, message : String) : Void;
 	
 	
 }
 @:internal extern class IIONamedNodeMap implements org.w3c.dom.NamedNodeMap
 {
-	@:overload public function new(nodes : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function new(nodes : java.util.List<Dynamic>) : Void;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
-	@:overload public function getNamedItem(name : String) : org.w3c.dom.Node;
+	@:overload @:public public function getNamedItem(name : String) : org.w3c.dom.Node;
 	
-	@:overload public function item(index : Int) : org.w3c.dom.Node;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.Node;
 	
-	@:overload public function removeNamedItem(name : String) : org.w3c.dom.Node;
+	@:overload @:public public function removeNamedItem(name : String) : org.w3c.dom.Node;
 	
-	@:overload public function setNamedItem(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function setNamedItem(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Equivalent to <code>getNamedItem(localName)</code>.
 	*/
-	@:overload public function getNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
+	@:overload @:public public function getNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
 	
 	/**
 	* Equivalent to <code>setNamedItem(arg)</code>.
 	*/
-	@:overload public function setNamedItemNS(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function setNamedItemNS(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Equivalent to <code>removeNamedItem(localName)</code>.
 	*/
-	@:overload public function removeNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
+	@:overload @:public public function removeNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
 	
 	
 }
 @:internal extern class IIONodeList implements org.w3c.dom.NodeList
 {
-	@:overload public function new(nodes : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function new(nodes : java.util.List<Dynamic>) : Void;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
-	@:overload public function item(index : Int) : org.w3c.dom.Node;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.Node;
 	
 	
 }
 @:internal extern class IIOAttr extends javax.imageio.metadata.IIODOMException.IIOMetadataNode implements org.w3c.dom.Attr
 {
-	@:overload public function new(owner : org.w3c.dom.Element, name : String, value : String) : Void;
+	@:overload @:public public function new(owner : org.w3c.dom.Element, name : String, value : String) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload override public function getNodeName() : String;
+	@:overload @:public override public function getNodeName() : String;
 	
-	@:overload override public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public override public function getNodeType() : java.StdTypes.Int16;
 	
-	@:overload public function getSpecified() : Bool;
+	@:overload @:public public function getSpecified() : Bool;
 	
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload override public function getNodeValue() : String;
+	@:overload @:public override public function getNodeValue() : String;
 	
-	@:overload public function setValue(value : String) : Void;
+	@:overload @:public public function setValue(value : String) : Void;
 	
-	@:overload public function setNodeValue(value : String) : Void;
+	@:overload @:public public function setNodeValue(value : String) : Void;
 	
-	@:overload public function getOwnerElement() : org.w3c.dom.Element;
+	@:overload @:public public function getOwnerElement() : org.w3c.dom.Element;
 	
-	@:overload public function setOwnerElement(owner : org.w3c.dom.Element) : Void;
+	@:overload @:public public function setOwnerElement(owner : org.w3c.dom.Element) : Void;
 	
 	/** This method is new in the DOM L3 for Attr interface.
 	* Could throw DOMException here, but its probably OK
@@ -102,7 +102,7 @@ package javax.imageio.metadata;
 	* DOMException are publically documented as such on IIOMetadataNode.
 	* @return false
 	*/
-	@:overload public function isId() : Bool;
+	@:overload @:public public function isId() : Bool;
 	
 	
 }
@@ -111,7 +111,7 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	/**
 	* Constructs an empty <code>IIOMetadataNode</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>IIOMetadataNode</code> with a given node
@@ -119,26 +119,26 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	*
 	* @param nodeName the name of the node, as a <code>String</code>.
 	*/
-	@:overload public function new(nodeName : String) : Void;
+	@:overload @:public public function new(nodeName : String) : Void;
 	
 	/**
 	* Returns the node name associated with this node.
 	*
 	* @return the node name, as a <code>String</code>.
 	*/
-	@:overload public function getNodeName() : String;
+	@:overload @:public public function getNodeName() : String;
 	
 	/**
 	* Returns the value associated with this node.
 	*
 	* @return the node value, as a <code>String</code>.
 	*/
-	@:overload public function getNodeValue() : String;
+	@:overload @:public public function getNodeValue() : String;
 	
 	/**
 	* Sets the <code>String</code> value associated with this node.
 	*/
-	@:overload public function setNodeValue(nodeValue : String) : Void;
+	@:overload @:public public function setNodeValue(nodeValue : String) : Void;
 	
 	/**
 	* Returns the node type, which is always
@@ -146,7 +146,7 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	*
 	* @return the <code>short</code> value <code>ELEMENT_NODE</code>.
 	*/
-	@:overload public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the parent of this node.  A <code>null</code> value
@@ -161,7 +161,7 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	* @see #replaceChild
 	* @see #appendChild
 	*/
-	@:overload public function getParentNode() : org.w3c.dom.Node;
+	@:overload @:public public function getParentNode() : org.w3c.dom.Node;
 	
 	/**
 	* Returns a <code>NodeList</code> that contains all children of this node.
@@ -170,7 +170,7 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	*
 	* @return the children as a <code>NodeList</code>
 	*/
-	@:overload public function getChildNodes() : org.w3c.dom.NodeList;
+	@:overload @:public public function getChildNodes() : org.w3c.dom.NodeList;
 	
 	/**
 	* Returns the first child of this node, or <code>null</code> if
@@ -179,7 +179,7 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	* @return the first child, as a <code>Node</code>, or
 	* <code>null</code>
 	*/
-	@:overload public function getFirstChild() : org.w3c.dom.Node;
+	@:overload @:public public function getFirstChild() : org.w3c.dom.Node;
 	
 	/**
 	* Returns the last child of this node, or <code>null</code> if
@@ -188,7 +188,7 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	* @return the last child, as a <code>Node</code>, or
 	* <code>null</code>.
 	*/
-	@:overload public function getLastChild() : org.w3c.dom.Node;
+	@:overload @:public public function getLastChild() : org.w3c.dom.Node;
 	
 	/**
 	* Returns the previous sibling of this node, or <code>null</code>
@@ -197,7 +197,7 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	* @return the previous sibling, as a <code>Node</code>, or
 	* <code>null</code>.
 	*/
-	@:overload public function getPreviousSibling() : org.w3c.dom.Node;
+	@:overload @:public public function getPreviousSibling() : org.w3c.dom.Node;
 	
 	/**
 	* Returns the next sibling of this node, or <code>null</code> if
@@ -206,7 +206,7 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	* @return the next sibling, as a <code>Node</code>, or
 	* <code>null</code>.
 	*/
-	@:overload public function getNextSibling() : org.w3c.dom.Node;
+	@:overload @:public public function getNextSibling() : org.w3c.dom.Node;
 	
 	/**
 	* Returns a <code>NamedNodeMap</code> containing the attributes of
@@ -215,7 +215,7 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	* @return a <code>NamedNodeMap</code> containing the attributes of
 	* this node.
 	*/
-	@:overload public function getAttributes() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
 	/**
 	* Returns <code>null</code>, since <code>IIOMetadataNode</code>s
@@ -223,7 +223,7 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	*
 	* @return <code>null</code>.
 	*/
-	@:overload public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload @:public public function getOwnerDocument() : org.w3c.dom.Document;
 	
 	/**
 	* Inserts the node <code>newChild</code> before the existing
@@ -239,7 +239,7 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	* @exception IllegalArgumentException if <code>newChild</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Replaces the child node <code>oldChild</code> with
@@ -254,7 +254,7 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	* @exception IllegalArgumentException if <code>newChild</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Removes the child node indicated by <code>oldChild</code> from
@@ -267,7 +267,7 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	* @exception IllegalArgumentException if <code>oldChild</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Adds the node <code>newChild</code> to the end of the list of
@@ -280,14 +280,14 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	* @exception IllegalArgumentException if <code>newChild</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Returns <code>true</code> if this node has child nodes.
 	*
 	* @return <code>true</code> if this node has children.
 	*/
-	@:overload public function hasChildNodes() : Bool;
+	@:overload @:public public function hasChildNodes() : Bool;
 	
 	/**
 	* Returns a duplicate of this node.  The duplicate node has no
@@ -303,13 +303,13 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	*
 	* @return the duplicate node.
 	*/
-	@:overload public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Does nothing, since <code>IIOMetadataNode</code>s do not
 	* contain <code>Text</code> children.
 	*/
-	@:overload public function normalize() : Void;
+	@:overload @:public public function normalize() : Void;
 	
 	/**
 	* Returns <code>false</code> since DOM features are not
@@ -320,12 +320,12 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	* @param feature a <code>String</code>, which is ignored.
 	* @param version a <code>String</code>, which is ignored.
 	*/
-	@:overload public function isSupported(feature : String, version : String) : Bool;
+	@:overload @:public public function isSupported(feature : String, version : String) : Bool;
 	
 	/**
 	* Returns <code>null</code>, since namespaces are not supported.
 	*/
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
 	/**
 	* Returns <code>null</code>, since namespaces are not supported.
@@ -334,7 +334,7 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	*
 	* @see #setPrefix
 	*/
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
 	/**
 	* Does nothing, since namespaces are not supported.
@@ -343,21 +343,21 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	*
 	* @see #getPrefix
 	*/
-	@:overload public function setPrefix(prefix : String) : Void;
+	@:overload @:public public function setPrefix(prefix : String) : Void;
 	
 	/**
 	* Equivalent to <code>getNodeName</code>.
 	*
 	* @return the node name, as a <code>String</code>.
 	*/
-	@:overload public function getLocalName() : String;
+	@:overload @:public public function getLocalName() : String;
 	
 	/**
 	* Equivalent to <code>getNodeName</code>.
 	*
 	* @return the node name, as a <code>String</code>
 	*/
-	@:overload public function getTagName() : String;
+	@:overload @:public public function getTagName() : String;
 	
 	/**
 	* Retrieves an attribute value by name.
@@ -365,70 +365,70 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	* @return The <code>Attr</code> value as a string, or the empty string
 	* if that attribute does not have a specified or default value.
 	*/
-	@:overload public function getAttribute(name : String) : String;
+	@:overload @:public public function getAttribute(name : String) : String;
 	
 	/**
 	* Equivalent to <code>getAttribute(localName)</code>.
 	*
 	* @see #setAttributeNS
 	*/
-	@:overload public function getAttributeNS(namespaceURI : String, localName : String) : String;
+	@:overload @:public public function getAttributeNS(namespaceURI : String, localName : String) : String;
 	
-	@:overload public function setAttribute(name : String, value : String) : Void;
+	@:overload @:public public function setAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Equivalent to <code>setAttribute(qualifiedName, value)</code>.
 	*
 	* @see #getAttributeNS
 	*/
-	@:overload public function setAttributeNS(namespaceURI : String, qualifiedName : String, value : String) : Void;
+	@:overload @:public public function setAttributeNS(namespaceURI : String, qualifiedName : String, value : String) : Void;
 	
-	@:overload public function removeAttribute(name : String) : Void;
+	@:overload @:public public function removeAttribute(name : String) : Void;
 	
 	/**
 	* Equivalent to <code>removeAttribute(localName)</code>.
 	*/
-	@:overload public function removeAttributeNS(namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function removeAttributeNS(namespaceURI : String, localName : String) : Void;
 	
-	@:overload public function getAttributeNode(name : String) : org.w3c.dom.Attr;
+	@:overload @:public public function getAttributeNode(name : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Equivalent to <code>getAttributeNode(localName)</code>.
 	*
 	* @see #setAttributeNodeNS
 	*/
-	@:overload public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
+	@:overload @:public public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
 	
-	@:overload public function setAttributeNode(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public public function setAttributeNode(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	* Equivalent to <code>setAttributeNode(newAttr)</code>.
 	*
 	* @see #getAttributeNodeNS
 	*/
-	@:overload public function setAttributeNodeNS(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public public function setAttributeNodeNS(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
-	@:overload public function removeAttributeNode(oldAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public public function removeAttributeNode(oldAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
-	@:overload public function getElementsByTagName(name : String) : org.w3c.dom.NodeList;
+	@:overload @:public public function getElementsByTagName(name : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* Equivalent to <code>getElementsByTagName(localName)</code>.
 	*/
-	@:overload public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
+	@:overload @:public public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
 	
-	@:overload public function hasAttributes() : Bool;
+	@:overload @:public public function hasAttributes() : Bool;
 	
-	@:overload public function hasAttribute(name : String) : Bool;
+	@:overload @:public public function hasAttribute(name : String) : Bool;
 	
 	/**
 	* Equivalent to <code>hasAttribute(localName)</code>.
 	*/
-	@:overload public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
+	@:overload @:public public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
-	@:overload public function item(index : Int) : org.w3c.dom.Node;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.Node;
 	
 	/**
 	* Returns the <code>Object</code> value associated with this node.
@@ -437,7 +437,7 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	*
 	* @see #setUserObject
 	*/
-	@:overload public function getUserObject() : Dynamic;
+	@:overload @:public public function getUserObject() : Dynamic;
 	
 	/**
 	* Sets the value associated with this node.
@@ -446,119 +446,119 @@ extern class IIOMetadataNode implements org.w3c.dom.Element implements org.w3c.d
 	*
 	* @see #getUserObject
 	*/
-	@:overload public function setUserObject(userObject : Dynamic) : Void;
+	@:overload @:public public function setUserObject(userObject : Dynamic) : Void;
 	
 	/**
 	* This DOM Level 3 method is not supported for {@code IIOMetadataNode}
 	* and will throw a {@code DOMException}.
 	* @throws DOMException - always.
 	*/
-	@:overload public function setIdAttribute(name : String, isId : Bool) : Void;
+	@:overload @:public public function setIdAttribute(name : String, isId : Bool) : Void;
 	
 	/**
 	* This DOM Level 3 method is not supported for {@code IIOMetadataNode}
 	* and will throw a {@code DOMException}.
 	* @throws DOMException - always.
 	*/
-	@:overload public function setIdAttributeNS(namespaceURI : String, localName : String, isId : Bool) : Void;
+	@:overload @:public public function setIdAttributeNS(namespaceURI : String, localName : String, isId : Bool) : Void;
 	
 	/**
 	* This DOM Level 3 method is not supported for {@code IIOMetadataNode}
 	* and will throw a {@code DOMException}.
 	* @throws DOMException - always.
 	*/
-	@:overload public function setIdAttributeNode(idAttr : org.w3c.dom.Attr, isId : Bool) : Void;
+	@:overload @:public public function setIdAttributeNode(idAttr : org.w3c.dom.Attr, isId : Bool) : Void;
 	
 	/**
 	* This DOM Level 3 method is not supported for {@code IIOMetadataNode}
 	* and will throw a {@code DOMException}.
 	* @throws DOMException - always.
 	*/
-	@:overload public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
+	@:overload @:public public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
 	
 	/**
 	* This DOM Level 3 method is not supported for {@code IIOMetadataNode}
 	* and will throw a {@code DOMException}.
 	* @throws DOMException - always.
 	*/
-	@:overload public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
+	@:overload @:public public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
 	
 	/**
 	* This DOM Level 3 method is not supported for {@code IIOMetadataNode}
 	* and will throw a {@code DOMException}.
 	* @throws DOMException - always.
 	*/
-	@:overload public function getUserData(key : String) : Dynamic;
+	@:overload @:public public function getUserData(key : String) : Dynamic;
 	
 	/**
 	* This DOM Level 3 method is not supported for {@code IIOMetadataNode}
 	* and will throw a {@code DOMException}.
 	* @throws DOMException - always.
 	*/
-	@:overload public function getFeature(feature : String, version : String) : Dynamic;
+	@:overload @:public public function getFeature(feature : String, version : String) : Dynamic;
 	
 	/**
 	* This DOM Level 3 method is not supported for {@code IIOMetadataNode}
 	* and will throw a {@code DOMException}.
 	* @throws DOMException - always.
 	*/
-	@:overload public function isSameNode(node : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function isSameNode(node : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* This DOM Level 3 method is not supported for {@code IIOMetadataNode}
 	* and will throw a {@code DOMException}.
 	* @throws DOMException - always.
 	*/
-	@:overload public function isEqualNode(node : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function isEqualNode(node : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* This DOM Level 3 method is not supported for {@code IIOMetadataNode}
 	* and will throw a {@code DOMException}.
 	* @throws DOMException - always.
 	*/
-	@:overload public function lookupNamespaceURI(prefix : String) : String;
+	@:overload @:public public function lookupNamespaceURI(prefix : String) : String;
 	
 	/**
 	* This DOM Level 3 method is not supported for {@code IIOMetadataNode}
 	* and will throw a {@code DOMException}.
 	* @throws DOMException - always.
 	*/
-	@:overload public function isDefaultNamespace(namespaceURI : String) : Bool;
+	@:overload @:public public function isDefaultNamespace(namespaceURI : String) : Bool;
 	
 	/**
 	* This DOM Level 3 method is not supported for {@code IIOMetadataNode}
 	* and will throw a {@code DOMException}.
 	* @throws DOMException - always.
 	*/
-	@:overload public function lookupPrefix(namespaceURI : String) : String;
+	@:overload @:public public function lookupPrefix(namespaceURI : String) : String;
 	
 	/**
 	* This DOM Level 3 method is not supported for {@code IIOMetadataNode}
 	* and will throw a {@code DOMException}.
 	* @throws DOMException - always.
 	*/
-	@:overload public function getTextContent() : String;
+	@:overload @:public public function getTextContent() : String;
 	
 	/**
 	* This DOM Level 3 method is not supported for {@code IIOMetadataNode}
 	* and will throw a {@code DOMException}.
 	* @throws DOMException - always.
 	*/
-	@:overload public function setTextContent(textContent : String) : Void;
+	@:overload @:public public function setTextContent(textContent : String) : Void;
 	
 	/**
 	* This DOM Level 3 method is not supported for {@code IIOMetadataNode}
 	* and will throw a {@code DOMException}.
 	* @throws DOMException - always.
 	*/
-	@:overload public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
+	@:overload @:public public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
 	
 	/**
 	* This DOM Level 3 method is not supported for {@code IIOMetadataNode}
 	* and will throw a {@code DOMException}.
 	* @throws DOMException - always.
 	*/
-	@:overload public function getBaseURI() : String;
+	@:overload @:public public function getBaseURI() : String;
 	
 	
 }

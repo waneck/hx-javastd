@@ -25,14 +25,14 @@ extern class XHTMLSerializer extends com.sun.org.apache.xml.internal.serialize.H
 	* calling {@link #setOutputCharStream} or {@link #setOutputByteStream}
 	* first.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new serializer. The serializer cannot be used without
 	* calling {@link #setOutputCharStream} or {@link #setOutputByteStream}
 	* first.
 	*/
-	@:overload public function new(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public public function new(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
 	/**
 	* Constructs a new serializer that writes to the specified writer
@@ -42,7 +42,7 @@ extern class XHTMLSerializer extends com.sun.org.apache.xml.internal.serialize.H
 	* @param writer The writer to use
 	* @param format The output format to use, null for the default
 	*/
-	@:overload public function new(writer : java.io.Writer, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public public function new(writer : java.io.Writer, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
 	/**
 	* Constructs a new serializer that writes to the specified output
@@ -52,9 +52,9 @@ extern class XHTMLSerializer extends com.sun.org.apache.xml.internal.serialize.H
 	* @param output The output stream to use
 	* @param format The output format to use, null for the default
 	*/
-	@:overload public function new(output : java.io.OutputStream, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public public function new(output : java.io.OutputStream, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
-	@:overload public function setOutputFormat(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public override public function setOutputFormat(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
 	
 }

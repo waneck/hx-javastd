@@ -33,7 +33,7 @@ package com.sun.script.javascript;
 */
 @:require(java6) @:internal extern class RhinoClassShutter implements ClassShutter
 {
-	@:overload public function visibleToScripts(fullClassName : String) : Bool;
+	@:overload @:public public function visibleToScripts(fullClassName : String) : Bool;
 	
 	
 }

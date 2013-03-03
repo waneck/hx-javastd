@@ -31,7 +31,7 @@ extern class LogOutputStream extends java.io.OutputStream
 	* @param fd the system dependent file descriptor
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload public function new(raf : java.io.RandomAccessFile) : Void;
+	@:overload @:public public function new(raf : java.io.RandomAccessFile) : Void;
 	
 	/**
 	* Writes a byte of data. This method will block until the byte is
@@ -39,7 +39,7 @@ extern class LogOutputStream extends java.io.OutputStream
 	* @param b the byte to be written
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
 	/**
 	* Writes an array of bytes. Will block until the bytes
@@ -47,7 +47,7 @@ extern class LogOutputStream extends java.io.OutputStream
 	* @param b the data to be written
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Writes a sub array of bytes.
@@ -56,13 +56,13 @@ extern class LogOutputStream extends java.io.OutputStream
 	* @param len       the number of bytes that are written
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Can not close a LogOutputStream, so this does nothing.
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload @:final override public function close() : Void;
+	@:overload @:public @:final override public function close() : Void;
 	
 	
 }

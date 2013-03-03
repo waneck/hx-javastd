@@ -28,7 +28,7 @@ package javax.swing.plaf.nimbus;
 	/**
 	* Paint the component using the Nimbus Table Header Background Painter
 	*/
-	@:overload private function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintComponent(g : java.awt.Graphics) : Void;
 	
 	
 }

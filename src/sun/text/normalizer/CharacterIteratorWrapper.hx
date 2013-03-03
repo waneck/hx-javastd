@@ -36,48 +36,48 @@ package sun.text.normalizer;
 */
 extern class CharacterIteratorWrapper extends sun.text.normalizer.UCharacterIterator
 {
-	@:overload public function new(iter : java.text.CharacterIterator) : Void;
+	@:overload @:public public function new(iter : java.text.CharacterIterator) : Void;
 	
 	/**
 	* @see UCharacterIterator#current()
 	*/
-	@:overload override public function current() : Int;
+	@:overload @:public override public function current() : Int;
 	
 	/**
 	* @see UCharacterIterator#getLength()
 	*/
-	@:overload override public function getLength() : Int;
+	@:overload @:public override public function getLength() : Int;
 	
 	/**
 	* @see UCharacterIterator#getIndex()
 	*/
-	@:overload override public function getIndex() : Int;
+	@:overload @:public override public function getIndex() : Int;
 	
 	/**
 	* @see UCharacterIterator#next()
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	/**
 	* @see UCharacterIterator#previous()
 	*/
-	@:overload override public function previous() : Int;
+	@:overload @:public override public function previous() : Int;
 	
 	/**
 	* @see UCharacterIterator#setIndex(int)
 	*/
-	@:overload override public function setIndex(index : Int) : Void;
+	@:overload @:public override public function setIndex(index : Int) : Void;
 	
 	/**
 	* @see UCharacterIterator#getText(char[])
 	*/
-	@:overload override public function getText(fillIn : java.NativeArray<java.StdTypes.Char16>, offset : Int) : Int;
+	@:overload @:public override public function getText(fillIn : java.NativeArray<java.StdTypes.Char16>, offset : Int) : Int;
 	
 	/**
 	* Creates a clone of this iterator.  Clones the underlying character iterator.
 	* @see UCharacterIterator#clone()
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

@@ -59,11 +59,11 @@ extern interface XSIdentityConstraint extends com.sun.xml.internal.xsom.XSCompon
 	*/
 	@:overload public function getCategory() : java.StdTypes.Int16;
 	
-	public var KEY(default, null) : java.StdTypes.Int16;
+	@:final public var KEY(default, null) : java.StdTypes.Int16;
 	
-	public var KEYREF(default, null) : java.StdTypes.Int16;
+	@:final public var KEYREF(default, null) : java.StdTypes.Int16;
 	
-	public var UNIQUE(default, null) : java.StdTypes.Int16;
+	@:final public var UNIQUE(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Returns the selector XPath expression as string.

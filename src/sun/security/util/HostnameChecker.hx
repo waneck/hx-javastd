@@ -30,15 +30,15 @@ extern class HostnameChecker
 	* required for TLS and LDAP.
 	*
 	*/
-	public static var TYPE_TLS(default, null) : java.StdTypes.Int8;
+	@:public @:final @:static public static var TYPE_TLS(default, null) : java.StdTypes.Int8;
 	
-	public static var TYPE_LDAP(default, null) : java.StdTypes.Int8;
+	@:public @:final @:static public static var TYPE_LDAP(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Get a HostnameChecker instance. checkType should be one of the
 	* TYPE_* constants defined in this class.
 	*/
-	@:overload public static function getInstance(checkType : java.StdTypes.Int8) : sun.security.util.HostnameChecker;
+	@:overload @:public @:static public static function getInstance(checkType : java.StdTypes.Int8) : sun.security.util.HostnameChecker;
 	
 	/**
 	* Perform the check.
@@ -46,17 +46,17 @@ extern class HostnameChecker
 	* @exception CertificateException if the name does not match any of
 	* the names specified in the certificate
 	*/
-	@:overload public function match(expectedName : String, cert : java.security.cert.X509Certificate) : Void;
+	@:overload @:public public function match(expectedName : String, cert : java.security.cert.X509Certificate) : Void;
 	
 	/**
 	* Perform the check for Kerberos.
 	*/
-	@:native('match') @:overload public static function _match(expectedName : String, principal : java.security.Principal) : Bool;
+	@:native('match') @:overload @:public @:static public static function _match(expectedName : String, principal : java.security.Principal) : Bool;
 	
 	/**
 	* Return the Server name from Kerberos principal.
 	*/
-	@:overload public static function getServerName(principal : java.security.Principal) : String;
+	@:overload @:public @:static public static function getServerName(principal : java.security.Principal) : String;
 	
 	/**
 	* Return the subject of a certificate as X500Name, by reparsing if
@@ -65,7 +65,7 @@ extern class HostnameChecker
 	*
 	* This method is currently used from within JSSE, do not remove.
 	*/
-	@:overload public static function getSubjectX500Name(cert : java.security.cert.X509Certificate) : sun.security.x509.X500Name;
+	@:overload @:public @:static public static function getSubjectX500Name(cert : java.security.cert.X509Certificate) : sun.security.x509.X500Name;
 	
 	
 }

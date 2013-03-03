@@ -29,29 +29,29 @@ extern class TextSerializer extends com.sun.org.apache.xml.internal.serialize.Ba
 	* calling {@link #setOutputCharStream} or {@link #setOutputByteStream}
 	* first.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setOutputFormat(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public override public function setOutputFormat(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
-	@:overload override public function startElement(namespaceURI : String, localName : String, rawName : String, attrs : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, rawName : String, attrs : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function endElement(namespaceURI : String, localName : String, rawName : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, rawName : String) : Void;
 	
-	@:overload override public function startElement(tagName : String, attrs : org.xml.sax.AttributeList) : Void;
+	@:overload @:public override public function startElement(tagName : String, attrs : org.xml.sax.AttributeList) : Void;
 	
-	@:overload override public function endElement(tagName : String) : Void;
+	@:overload @:public override public function endElement(tagName : String) : Void;
 	
-	@:overload public function endElementIO(tagName : String) : Void;
+	@:overload @:public public function endElementIO(tagName : String) : Void;
 	
-	@:overload public function processingInstructionIO(target : String, code : String) : Void;
+	@:overload @:public override public function processingInstructionIO(target : String, code : String) : Void;
 	
-	@:overload public function comment(text : String) : Void;
+	@:overload @:public override public function comment(text : String) : Void;
 	
-	@:overload public function comment(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function comment(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function characters(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload private function characters(text : String, unescaped : Bool) : Void;
+	@:overload @:protected private function characters(text : String, unescaped : Bool) : Void;
 	
 	/**
 	* Called to serialize the document's DOCTYPE by the root element.
@@ -62,25 +62,25 @@ extern class TextSerializer extends com.sun.org.apache.xml.internal.serialize.Ba
 	* (see {@link #serializePreRoot}). Pre-root will be serialized even if
 	* this is not the first root element of the document.
 	*/
-	@:overload private function startDocument(rootTagName : String) : Void;
+	@:overload @:protected private function startDocument(rootTagName : String) : Void;
 	
 	/**
 	* Called to serialize a DOM element. Equivalent to calling {@link
 	* #startElement}, {@link #endElement} and serializing everything
 	* inbetween, but better optimized.
 	*/
-	@:overload private function serializeElement(elem : org.w3c.dom.Element) : Void;
+	@:overload @:protected override private function serializeElement(elem : org.w3c.dom.Element) : Void;
 	
 	/**
 	* Serialize the DOM node. This method is unique to the Text serializer.
 	*
 	* @param node The node to serialize
 	*/
-	@:overload private function serializeNode(node : org.w3c.dom.Node) : Void;
+	@:overload @:protected override private function serializeNode(node : org.w3c.dom.Node) : Void;
 	
-	@:overload private function content() : com.sun.org.apache.xml.internal.serialize.ElementState;
+	@:overload @:protected override private function content() : com.sun.org.apache.xml.internal.serialize.ElementState;
 	
-	@:overload private function getEntityRef(ch : Int) : String;
+	@:overload @:protected override private function getEntityRef(ch : Int) : String;
 	
 	
 }

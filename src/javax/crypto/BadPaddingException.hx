@@ -30,7 +30,7 @@ extern class BadPaddingException extends java.security.GeneralSecurityException
 	* message. A detail message is a String that describes this
 	* particular exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a BadPaddingException with the specified
@@ -38,7 +38,7 @@ extern class BadPaddingException extends java.security.GeneralSecurityException
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

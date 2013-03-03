@@ -30,7 +30,7 @@ package sun.net.httpserver;
 */
 @:internal extern class HttpConnection
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

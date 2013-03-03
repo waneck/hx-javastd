@@ -28,24 +28,24 @@ extern interface Work
 	/**
 	* This method denotes the actual work that is done by the work item.
 	*/
-	@:overload public function doWork() : Void;
+	@:overload @:public public function doWork() : Void;
 	
 	/**
 	* This methods sets the time in millis in the work item, when this
 	* work item was enqueued in the work queue.
 	*/
-	@:overload public function setEnqueueTime(timeInMillis : haxe.Int64) : Void;
+	@:overload @:public public function setEnqueueTime(timeInMillis : haxe.Int64) : Void;
 	
 	/**
 	* This methods gets the time in millis in the work item, when this
 	* work item was enqueued in the work queue.
 	*/
-	@:overload public function getEnqueueTime() : haxe.Int64;
+	@:overload @:public public function getEnqueueTime() : haxe.Int64;
 	
 	/**
 	* This method will return the name of the work item.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

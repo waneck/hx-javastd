@@ -36,12 +36,12 @@ extern interface TimerMBean
 	* If the timer notification date remains earlier than the current date, this notification is just removed
 	* from the list of notifications.
 	*/
-	@:overload public function start() : Void;
+	@:overload @:public public function start() : Void;
 	
 	/**
 	* Stops the timer.
 	*/
-	@:overload public function stop() : Void;
+	@:overload @:public public function stop() : Void;
 	
 	/**
 	* Creates a new timer notification with the specified <CODE>type</CODE>, <CODE>message</CODE>
@@ -79,7 +79,7 @@ extern interface TimerMBean
 	*
 	* @see #addNotification(String, String, Object, Date, long, long)
 	*/
-	@:overload public function addNotification(type : String, message : String, userData : Dynamic, date : java.util.Date, period : haxe.Int64, nbOccurences : haxe.Int64, fixedRate : Bool) : Null<Int>;
+	@:overload @:public public function addNotification(type : String, message : String, userData : Dynamic, date : java.util.Date, period : haxe.Int64, nbOccurences : haxe.Int64, fixedRate : Bool) : Null<Int>;
 	
 	/**
 	* Creates a new timer notification with the specified <CODE>type</CODE>, <CODE>message</CODE>
@@ -113,7 +113,7 @@ extern interface TimerMBean
 	*
 	* @see #addNotification(String, String, Object, Date, long, long, boolean)
 	*/
-	@:overload public function addNotification(type : String, message : String, userData : Dynamic, date : java.util.Date, period : haxe.Int64, nbOccurences : haxe.Int64) : Null<Int>;
+	@:overload @:public public function addNotification(type : String, message : String, userData : Dynamic, date : java.util.Date, period : haxe.Int64, nbOccurences : haxe.Int64) : Null<Int>;
 	
 	/**
 	* Creates a new timer notification with the specified <CODE>type</CODE>, <CODE>message</CODE>
@@ -141,7 +141,7 @@ extern interface TimerMBean
 	* @exception java.lang.IllegalArgumentException The date is {@code null} or
 	* the period is negative.
 	*/
-	@:overload public function addNotification(type : String, message : String, userData : Dynamic, date : java.util.Date, period : haxe.Int64) : Null<Int>;
+	@:overload @:public public function addNotification(type : String, message : String, userData : Dynamic, date : java.util.Date, period : haxe.Int64) : Null<Int>;
 	
 	/**
 	* Creates a new timer notification with the specified <CODE>type</CODE>, <CODE>message</CODE>
@@ -163,7 +163,7 @@ extern interface TimerMBean
 	*
 	* @exception java.lang.IllegalArgumentException The date is {@code null}.
 	*/
-	@:overload public function addNotification(type : String, message : String, userData : Dynamic, date : java.util.Date) : Null<Int>;
+	@:overload @:public public function addNotification(type : String, message : String, userData : Dynamic, date : java.util.Date) : Null<Int>;
 	
 	/**
 	* Removes the timer notification corresponding to the specified identifier from the list of notifications.
@@ -173,7 +173,7 @@ extern interface TimerMBean
 	* @exception InstanceNotFoundException The specified identifier does not correspond to any timer notification
 	* in the list of notifications of this timer MBean.
 	*/
-	@:overload public function removeNotification(id : Null<Int>) : Void;
+	@:overload @:public public function removeNotification(id : Null<Int>) : Void;
 	
 	/**
 	* Removes all the timer notifications corresponding to the specified type from the list of notifications.
@@ -183,20 +183,20 @@ extern interface TimerMBean
 	* @exception InstanceNotFoundException The specified type does not correspond to any timer notification
 	* in the list of notifications of this timer MBean.
 	*/
-	@:overload public function removeNotifications(type : String) : Void;
+	@:overload @:public public function removeNotifications(type : String) : Void;
 	
 	/**
 	* Removes all the timer notifications from the list of notifications
 	* and resets the counter used to update the timer notification identifiers.
 	*/
-	@:overload public function removeAllNotifications() : Void;
+	@:overload @:public public function removeAllNotifications() : Void;
 	
 	/**
 	* Gets the number of timer notifications registered into the list of notifications.
 	*
 	* @return The number of timer notifications.
 	*/
-	@:overload public function getNbNotifications() : Int;
+	@:overload @:public public function getNbNotifications() : Int;
 	
 	/**
 	* Gets all timer notification identifiers registered into the list of notifications.
@@ -204,7 +204,7 @@ extern interface TimerMBean
 	* @return A vector of <CODE>Integer</CODE> objects containing all the timer notification identifiers.
 	* <BR>The vector is empty if there is no timer notification registered for this timer MBean.
 	*/
-	@:overload public function getAllNotificationIDs() : java.util.Vector<Null<Int>>;
+	@:overload @:public public function getAllNotificationIDs() : java.util.Vector<Null<Int>>;
 	
 	/**
 	* Gets all the identifiers of timer notifications corresponding to the specified type.
@@ -216,7 +216,7 @@ extern interface TimerMBean
 	* <BR>The vector is empty if there is no timer notifications registered for this timer MBean
 	* with the specified <CODE>type</CODE>.
 	*/
-	@:overload public function getNotificationIDs(type : String) : java.util.Vector<Null<Int>>;
+	@:overload @:public public function getNotificationIDs(type : String) : java.util.Vector<Null<Int>>;
 	
 	/**
 	* Gets the timer notification type corresponding to the specified identifier.
@@ -226,7 +226,7 @@ extern interface TimerMBean
 	* @return The timer notification type or null if the identifier is not mapped to any
 	* timer notification registered for this timer MBean.
 	*/
-	@:overload public function getNotificationType(id : Null<Int>) : String;
+	@:overload @:public public function getNotificationType(id : Null<Int>) : String;
 	
 	/**
 	* Gets the timer notification detailed message corresponding to the specified identifier.
@@ -236,7 +236,7 @@ extern interface TimerMBean
 	* @return The timer notification detailed message or null if the identifier is not mapped to any
 	* timer notification registered for this timer MBean.
 	*/
-	@:overload public function getNotificationMessage(id : Null<Int>) : String;
+	@:overload @:public public function getNotificationMessage(id : Null<Int>) : String;
 	
 	/**
 	* Gets the timer notification user data object corresponding to the specified identifier.
@@ -246,7 +246,7 @@ extern interface TimerMBean
 	* @return The timer notification user data object or null if the identifier is not mapped to any
 	* timer notification registered for this timer MBean.
 	*/
-	@:overload public function getNotificationUserData(id : Null<Int>) : Dynamic;
+	@:overload @:public public function getNotificationUserData(id : Null<Int>) : Dynamic;
 	
 	/**
 	* Gets a copy of the date associated to a timer notification.
@@ -256,7 +256,7 @@ extern interface TimerMBean
 	* @return A copy of the date or null if the identifier is not mapped to any
 	* timer notification registered for this timer MBean.
 	*/
-	@:overload public function getDate(id : Null<Int>) : java.util.Date;
+	@:overload @:public public function getDate(id : Null<Int>) : java.util.Date;
 	
 	/**
 	* Gets a copy of the period (in milliseconds) associated to a timer notification.
@@ -266,7 +266,7 @@ extern interface TimerMBean
 	* @return A copy of the period or null if the identifier is not mapped to any
 	* timer notification registered for this timer MBean.
 	*/
-	@:overload public function getPeriod(id : Null<Int>) : Null<haxe.Int64>;
+	@:overload @:public public function getPeriod(id : Null<Int>) : Null<haxe.Int64>;
 	
 	/**
 	* Gets a copy of the remaining number of occurrences associated to a timer notification.
@@ -276,7 +276,7 @@ extern interface TimerMBean
 	* @return A copy of the remaining number of occurrences or null if the identifier is not mapped to any
 	* timer notification registered for this timer MBean.
 	*/
-	@:overload public function getNbOccurences(id : Null<Int>) : Null<haxe.Int64>;
+	@:overload @:public public function getNbOccurences(id : Null<Int>) : Null<haxe.Int64>;
 	
 	/**
 	* Gets a copy of the flag indicating whether a periodic notification is
@@ -287,7 +287,7 @@ extern interface TimerMBean
 	* @return A copy of the flag indicating whether a periodic notification is
 	*         executed at <i>fixed-delay</i> or at <i>fixed-rate</i>.
 	*/
-	@:overload public function getFixedRate(id : Null<Int>) : Null<Bool>;
+	@:overload @:public public function getFixedRate(id : Null<Int>) : Null<Bool>;
 	
 	/**
 	* Gets the flag indicating whether or not the timer sends past notifications.
@@ -296,7 +296,7 @@ extern interface TimerMBean
 	*
 	* @see #setSendPastNotifications
 	*/
-	@:overload public function getSendPastNotifications() : Bool;
+	@:overload @:public public function getSendPastNotifications() : Bool;
 	
 	/**
 	* Sets the flag indicating whether the timer sends past notifications or not.
@@ -305,7 +305,7 @@ extern interface TimerMBean
 	*
 	* @see #getSendPastNotifications
 	*/
-	@:overload public function setSendPastNotifications(value : Bool) : Void;
+	@:overload @:public public function setSendPastNotifications(value : Bool) : Void;
 	
 	/**
 	* Tests whether the timer MBean is active.
@@ -314,14 +314,14 @@ extern interface TimerMBean
 	*
 	* @return <CODE>true</CODE> if the timer MBean is active, <CODE>false</CODE> otherwise.
 	*/
-	@:overload public function isActive() : Bool;
+	@:overload @:public public function isActive() : Bool;
 	
 	/**
 	* Tests whether the list of timer notifications is empty.
 	*
 	* @return <CODE>true</CODE> if the list of timer notifications is empty, <CODE>false</CODE> otherwise.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	
 }

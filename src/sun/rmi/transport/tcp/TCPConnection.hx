@@ -28,22 +28,22 @@ extern class TCPConnection implements sun.rmi.transport.Connection
 	/**
 	* Gets the output stream for this connection
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Release the output stream for this connection.
 	*/
-	@:overload public function releaseOutputStream() : Void;
+	@:overload @:public public function releaseOutputStream() : Void;
 	
 	/**
 	* Gets the input stream for this connection.
 	*/
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Release the input stream for this connection.
 	*/
-	@:overload public function releaseInputStream() : Void;
+	@:overload @:public public function releaseInputStream() : Void;
 	
 	/**
 	* Determine if this connection can be used for multiple operations.
@@ -51,7 +51,7 @@ extern class TCPConnection implements sun.rmi.transport.Connection
 	* this; otherwise, assume that it does provide a full-duplex
 	* persistent connection like java.net.Socket.
 	*/
-	@:overload public function isReusable() : Bool;
+	@:overload @:public public function isReusable() : Bool;
 	
 	/**
 	* Probes the connection to see if it still alive and connected to
@@ -63,16 +63,16 @@ extern class TCPConnection implements sun.rmi.transport.Connection
 	* will never misdiagnose a live connection as dead.
 	* @return true if the connection and server are recently alive
 	*/
-	@:overload public function isDead() : Bool;
+	@:overload @:public public function isDead() : Bool;
 	
 	/**
 	* Close the connection.  */
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Returns the channel for this connection.
 	*/
-	@:overload public function getChannel() : sun.rmi.transport.Channel;
+	@:overload @:public public function getChannel() : sun.rmi.transport.Channel;
 	
 	
 }

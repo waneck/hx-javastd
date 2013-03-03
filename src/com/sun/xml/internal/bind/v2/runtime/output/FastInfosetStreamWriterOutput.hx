@@ -25,31 +25,31 @@ package com.sun.xml.internal.bind.v2.runtime.output;
 */
 extern class FastInfosetStreamWriterOutput extends com.sun.xml.internal.bind.v2.runtime.output.XMLStreamWriterOutput
 {
-	@:overload public function new(out : com.sun.xml.internal.fastinfoset.stax.StAXDocumentSerializer, context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
+	@:overload @:public public function new(out : com.sun.xml.internal.fastinfoset.stax.StAXDocumentSerializer, context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
 	
-	@:overload override public function startDocument(serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, fragment : Bool, nsUriIndex2prefixIndex : java.NativeArray<Int>, nsContext : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl) : Void;
+	@:overload @:public override public function startDocument(serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, fragment : Bool, nsUriIndex2prefixIndex : java.NativeArray<Int>, nsContext : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl) : Void;
 	
-	@:overload override public function endDocument(fragment : Bool) : Void;
+	@:overload @:public override public function endDocument(fragment : Bool) : Void;
 	
-	@:overload override public function beginStartTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
+	@:overload @:public override public function beginStartTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
 	
-	@:overload public function beginStartTagWithNamespaces(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
+	@:overload @:public public function beginStartTagWithNamespaces(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
 	
-	@:overload override public function attribute(name : com.sun.xml.internal.bind.v2.runtime.Name, value : String) : Void;
+	@:overload @:public override public function attribute(name : com.sun.xml.internal.bind.v2.runtime.Name, value : String) : Void;
 	
-	@:overload override public function endStartTag() : Void;
+	@:overload @:public override public function endStartTag() : Void;
 	
-	@:overload override public function endTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
+	@:overload @:public override public function endTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
 	
-	@:overload override public function endTag(prefix : Int, localName : String) : Void;
+	@:overload @:public override public function endTag(prefix : Int, localName : String) : Void;
 	
-	@:overload override public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needsSeparatingWhitespace : Bool) : Void;
+	@:overload @:public override public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needsSeparatingWhitespace : Bool) : Void;
 	
-	@:overload override public function text(value : String, needsSeparatingWhitespace : Bool) : Void;
+	@:overload @:public override public function text(value : String, needsSeparatingWhitespace : Bool) : Void;
 	
-	@:overload override public function beginStartTag(prefix : Int, localName : String) : Void;
+	@:overload @:public override public function beginStartTag(prefix : Int, localName : String) : Void;
 	
-	@:overload override public function attribute(prefix : Int, localName : String, value : String) : Void;
+	@:overload @:public override public function attribute(prefix : Int, localName : String, value : String) : Void;
 	
 	
 }
@@ -62,7 +62,7 @@ extern class FastInfosetStreamWriterOutput extends com.sun.xml.internal.bind.v2.
 	/**
 	* Require that tables are cleared.
 	*/
-	@:overload public function requireClearTables() : Void;
+	@:overload @:public public function requireClearTables() : Void;
 	
 	/**
 	* Clear or reset the tables.
@@ -70,14 +70,14 @@ extern class FastInfosetStreamWriterOutput extends com.sun.xml.internal.bind.v2.
 	* @param initialIndexOffset the initial index offset to calculate
 	*                           the maximum possible index
 	*/
-	@:overload public function clearOrResetTables(intialIndexOffset : Int) : Void;
+	@:overload @:public public function clearOrResetTables(intialIndexOffset : Int) : Void;
 	
 	/**
 	* Increment the maximum know index value
 	* <p>
 	* The indexes are preserved.
 	*/
-	@:overload public function incrementMaxIndexValue() : Void;
+	@:overload @:public public function incrementMaxIndexValue() : Void;
 	
 	
 }
@@ -92,7 +92,7 @@ extern class FastInfosetStreamWriterOutput extends com.sun.xml.internal.bind.v2.
 	/**
 	* Clear all the tables.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

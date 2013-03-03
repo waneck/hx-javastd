@@ -32,7 +32,7 @@ extern class Image
 	* <code>setAccelerationPriority(float)</code> method.
 	* @since 1.5
 	*/
-	@:require(java5) private var accelerationPriority : Single;
+	@:require(java5) @:protected private var accelerationPriority : Single;
 	
 	/**
 	* Determines the width of the image. If the width is not yet known,
@@ -44,7 +44,7 @@ extern class Image
 	* @see       java.awt.Image#getHeight
 	* @see       java.awt.image.ImageObserver
 	*/
-	@:overload @:abstract public function getWidth(observer : java.awt.image.ImageObserver) : Int;
+	@:overload @:public @:abstract public function getWidth(observer : java.awt.image.ImageObserver) : Int;
 	
 	/**
 	* Determines the height of the image. If the height is not yet known,
@@ -56,7 +56,7 @@ extern class Image
 	* @see       java.awt.Image#getWidth
 	* @see       java.awt.image.ImageObserver
 	*/
-	@:overload @:abstract public function getHeight(observer : java.awt.image.ImageObserver) : Int;
+	@:overload @:public @:abstract public function getHeight(observer : java.awt.image.ImageObserver) : Int;
 	
 	/**
 	* Gets the object that produces the pixels for the image.
@@ -66,7 +66,7 @@ extern class Image
 	*                                  for this image.
 	* @see        java.awt.image.ImageProducer
 	*/
-	@:overload @:abstract public function getSource() : java.awt.image.ImageProducer;
+	@:overload @:public @:abstract public function getSource() : java.awt.image.ImageProducer;
 	
 	/**
 	* Creates a graphics context for drawing to an off-screen image.
@@ -77,7 +77,7 @@ extern class Image
 	* @see     java.awt.Graphics
 	* @see     java.awt.Component#createImage(int, int)
 	*/
-	@:overload @:abstract public function getGraphics() : java.awt.Graphics;
+	@:overload @:public @:abstract public function getGraphics() : java.awt.Graphics;
 	
 	/**
 	* Gets a property of this image by name.
@@ -100,13 +100,13 @@ extern class Image
 	* @see         java.awt.image.ImageObserver
 	* @see         java.awt.Image#UndefinedProperty
 	*/
-	@:overload @:abstract public function getProperty(name : String, observer : java.awt.image.ImageObserver) : Dynamic;
+	@:overload @:public @:abstract public function getProperty(name : String, observer : java.awt.image.ImageObserver) : Dynamic;
 	
 	/**
 	* The <code>UndefinedProperty</code> object should be returned whenever a
 	* property which was not defined for a particular image is fetched.
 	*/
-	public static var UndefinedProperty(default, null) : Dynamic;
+	@:public @:static @:final public static var UndefinedProperty(default, null) : Dynamic;
 	
 	/**
 	* Creates a scaled version of this image.
@@ -138,27 +138,27 @@ extern class Image
 	* @see        java.awt.Image#SCALE_AREA_AVERAGING
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getScaledInstance(width : Int, height : Int, hints : Int) : java.awt.Image;
+	@:require(java1) @:overload @:public public function getScaledInstance(width : Int, height : Int, hints : Int) : java.awt.Image;
 	
 	/**
 	* Use the default image-scaling algorithm.
 	* @since JDK1.1
 	*/
-	@:require(java1) public static var SCALE_DEFAULT(default, null) : Int;
+	@:require(java1) @:public @:static @:final public static var SCALE_DEFAULT(default, null) : Int;
 	
 	/**
 	* Choose an image-scaling algorithm that gives higher priority
 	* to scaling speed than smoothness of the scaled image.
 	* @since JDK1.1
 	*/
-	@:require(java1) public static var SCALE_FAST(default, null) : Int;
+	@:require(java1) @:public @:static @:final public static var SCALE_FAST(default, null) : Int;
 	
 	/**
 	* Choose an image-scaling algorithm that gives higher priority
 	* to image smoothness than scaling speed.
 	* @since JDK1.1
 	*/
-	@:require(java1) public static var SCALE_SMOOTH(default, null) : Int;
+	@:require(java1) @:public @:static @:final public static var SCALE_SMOOTH(default, null) : Int;
 	
 	/**
 	* Use the image scaling algorithm embodied in the
@@ -169,7 +169,7 @@ extern class Image
 	* @see        java.awt.image.ReplicateScaleFilter
 	* @since      JDK1.1
 	*/
-	@:require(java1) public static var SCALE_REPLICATE(default, null) : Int;
+	@:require(java1) @:public @:static @:final public static var SCALE_REPLICATE(default, null) : Int;
 	
 	/**
 	* Use the Area Averaging image scaling algorithm.  The
@@ -179,7 +179,7 @@ extern class Image
 	* @see java.awt.image.AreaAveragingScaleFilter
 	* @since JDK1.1
 	*/
-	@:require(java1) public static var SCALE_AREA_AVERAGING(default, null) : Int;
+	@:require(java1) @:public @:static @:final public static var SCALE_AREA_AVERAGING(default, null) : Int;
 	
 	/**
 	* Flushes all reconstructable resources being used by this Image object.
@@ -218,7 +218,7 @@ extern class Image
 	* created.
 	* </ul>
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* Returns an ImageCapabilities object which can be
@@ -242,7 +242,7 @@ extern class Image
 	* VolatileImage.getCapabilities()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getCapabilities(gc : java.awt.GraphicsConfiguration) : java.awt.ImageCapabilities;
+	@:require(java5) @:overload @:public public function getCapabilities(gc : java.awt.GraphicsConfiguration) : java.awt.ImageCapabilities;
 	
 	/**
 	* Sets a hint for this image about how important acceleration is.
@@ -264,7 +264,7 @@ extern class Image
 	* than zero or greater than 1.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setAccelerationPriority(priority : Single) : Void;
+	@:require(java5) @:overload @:public public function setAccelerationPriority(priority : Single) : Void;
 	
 	/**
 	* Returns the current value of the acceleration priority hint.
@@ -273,7 +273,7 @@ extern class Image
 	* priority value
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getAccelerationPriority() : Single;
+	@:require(java5) @:overload @:public public function getAccelerationPriority() : Single;
 	
 	
 }

@@ -30,19 +30,19 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* only when the size of the child exceeds the size of the scrollpane
 	* in the horizontal/vertical dimension.
 	*/
-	public static var SCROLLBARS_AS_NEEDED(default, null) : Int;
+	@:public @:static @:final public static var SCROLLBARS_AS_NEEDED(default, null) : Int;
 	
 	/**
 	* Specifies that horizontal/vertical scrollbars should always be
 	* shown regardless of the respective sizes of the scrollpane and child.
 	*/
-	public static var SCROLLBARS_ALWAYS(default, null) : Int;
+	@:public @:static @:final public static var SCROLLBARS_ALWAYS(default, null) : Int;
 	
 	/**
 	* Specifies that horizontal/vertical scrollbars should never be shown
 	* regardless of the respective sizes of the scrollpane and child.
 	*/
-	public static var SCROLLBARS_NEVER(default, null) : Int;
+	@:public @:static @:final public static var SCROLLBARS_NEVER(default, null) : Int;
 	
 	/**
 	* Create a new scrollpane container with a scrollbar display
@@ -51,7 +51,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	*     returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a new scrollpane container.
@@ -62,7 +62,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	*     returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(scrollbarDisplayPolicy : Int) : Void;
+	@:overload @:public public function new(scrollbarDisplayPolicy : Int) : Void;
 	
 	/**
 	* Adds the specified component to this scroll pane container.
@@ -72,19 +72,19 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* @param constraints  not applicable
 	* @param index position of child component (must be <= 0)
 	*/
-	@:overload @:final override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload @:protected @:final override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Returns the display policy for the scrollbars.
 	* @return the display policy for the scrollbars
 	*/
-	@:overload public function getScrollbarDisplayPolicy() : Int;
+	@:overload @:public public function getScrollbarDisplayPolicy() : Int;
 	
 	/**
 	* Returns the current size of the scroll pane's view port.
 	* @return the size of the view port in pixels
 	*/
-	@:overload public function getViewportSize() : java.awt.Dimension;
+	@:overload @:public public function getViewportSize() : java.awt.Dimension;
 	
 	/**
 	* Returns the height that would be occupied by a horizontal
@@ -92,7 +92,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* displayed by the scroll pane or not.
 	* @return the height of a horizontal scrollbar in pixels
 	*/
-	@:overload public function getHScrollbarHeight() : Int;
+	@:overload @:public public function getHScrollbarHeight() : Int;
 	
 	/**
 	* Returns the width that would be occupied by a vertical
@@ -100,7 +100,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* displayed by the scroll pane or not.
 	* @return the width of a vertical scrollbar in pixels
 	*/
-	@:overload public function getVScrollbarWidth() : Int;
+	@:overload @:public public function getVScrollbarWidth() : Int;
 	
 	/**
 	* Returns the <code>ScrollPaneAdjustable</code> object which
@@ -109,7 +109,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* <code>Adjustable</code> to maintain backward compatibility.
 	* @see java.awt.ScrollPaneAdjustable
 	*/
-	@:overload public function getVAdjustable() : java.awt.Adjustable;
+	@:overload @:public public function getVAdjustable() : java.awt.Adjustable;
 	
 	/**
 	* Returns the <code>ScrollPaneAdjustable</code> object which
@@ -118,7 +118,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* <code>Adjustable</code> to maintain backward compatibility.
 	* @see java.awt.ScrollPaneAdjustable
 	*/
-	@:overload public function getHAdjustable() : java.awt.Adjustable;
+	@:overload @:public public function getHAdjustable() : java.awt.Adjustable;
 	
 	/**
 	* Scrolls to the specified position within the child component.
@@ -135,7 +135,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* @throws NullPointerException if the scrollpane does not contain
 	*     a child
 	*/
-	@:overload public function setScrollPosition(x : Int, y : Int) : Void;
+	@:overload @:public public function setScrollPosition(x : Int, y : Int) : Void;
 	
 	/**
 	* Scrolls to the specified position within the child component.
@@ -151,7 +151,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* @param p the Point representing the position to scroll to
 	* @throws NullPointerException if {@code p} is {@code null}
 	*/
-	@:overload public function setScrollPosition(p : java.awt.Point) : Void;
+	@:overload @:public public function setScrollPosition(p : java.awt.Point) : Void;
 	
 	/**
 	* Returns the current x,y position within the child which is displayed
@@ -162,14 +162,14 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* @throws NullPointerException if the scrollpane does not contain
 	*     a child
 	*/
-	@:overload public function getScrollPosition() : java.awt.Point;
+	@:overload @:public public function getScrollPosition() : java.awt.Point;
 	
 	/**
 	* Sets the layout manager for this container.  This method is
 	* overridden to prevent the layout mgr from being set.
 	* @param mgr the specified layout manager
 	*/
-	@:overload @:final override public function setLayout(mgr : java.awt.LayoutManager) : Void;
+	@:overload @:public @:final override public function setLayout(mgr : java.awt.LayoutManager) : Void;
 	
 	/**
 	* Lays out this container by resizing its child to its preferred size.
@@ -179,13 +179,13 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	*
 	* @see Component#validate
 	*/
-	@:overload override public function doLayout() : Void;
+	@:overload @:public override public function doLayout() : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>doLayout()</code>.
 	*/
-	@:overload override public function layout() : Void;
+	@:overload @:public override public function layout() : Void;
 	
 	/**
 	* Prints the component in this scroll pane.
@@ -193,12 +193,12 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* @see Component#print
 	* @see Component#printAll
 	*/
-	@:overload override public function printComponents(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function printComponents(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Creates the scroll pane's peer.
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Returns a string representing the state of this
@@ -210,7 +210,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	*
 	* @return the parameter string of this scroll pane
 	*/
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	/**
 	* Process mouse wheel events that are delivered to this
@@ -222,13 +222,13 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* @param e  the mouse wheel event
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function processMouseWheelEvent(e : java.awt.event.MouseWheelEvent) : Void;
+	@:require(java4) @:overload @:protected override private function processMouseWheelEvent(e : java.awt.event.MouseWheelEvent) : Void;
 	
 	/**
 	* If wheel scrolling is enabled, we return true for MouseWheelEvents
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function eventTypeEnabled(type : Int) : Bool;
+	@:require(java4) @:overload @:protected private function eventTypeEnabled(type : Int) : Bool;
 	
 	/**
 	* Enables/disables scrolling in response to movement of the mouse wheel.
@@ -242,7 +242,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* @see java.awt.event.MouseWheelListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setWheelScrollingEnabled(handleWheel : Bool) : Void;
+	@:require(java4) @:overload @:public public function setWheelScrollingEnabled(handleWheel : Bool) : Void;
 	
 	/**
 	* Indicates whether or not scrolling will take place in response to
@@ -251,7 +251,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* @see #setWheelScrollingEnabled(boolean)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isWheelScrollingEnabled() : Bool;
+	@:require(java4) @:overload @:public public function isWheelScrollingEnabled() : Bool;
 	
 	/**
 	* Gets the AccessibleContext associated with this ScrollPane.
@@ -263,7 +263,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	*         AccessibleContext of this ScrollPane
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -272,7 +272,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	/**
 	* Invoked when the value of the adjustable has changed.
 	*/
-	@:overload public function adjustmentValueChanged(e : java.awt.event.AdjustmentEvent) : Void;
+	@:overload @:public public function adjustmentValueChanged(e : java.awt.event.AdjustmentEvent) : Void;
 	
 	
 }
@@ -292,7 +292,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }
@@ -301,7 +301,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	/**
 	* Invoked when the value of the adjustable has changed.
 	*/
-	@:overload public function adjustmentValueChanged(e : java.awt.event.AdjustmentEvent) : Void;
+	@:overload @:public public function adjustmentValueChanged(e : java.awt.event.AdjustmentEvent) : Void;
 	
 	
 }

@@ -30,29 +30,29 @@ extern class WildcardTypeImpl extends com.sun.tools.javadoc.AbstractTypeImpl imp
 	* as given by the <i>extends</i> clause.
 	* Return an empty array if no such bounds are explicitly given.
 	*/
-	@:overload public function extendsBounds() : java.NativeArray<com.sun.javadoc.Type>;
+	@:overload @:public public function extendsBounds() : java.NativeArray<com.sun.javadoc.Type>;
 	
 	/**
 	* Return the lower bounds of this wildcard type argument
 	* as given by the <i>super</i> clause.
 	* Return an empty array if no such bounds are explicitly given.
 	*/
-	@:overload public function superBounds() : java.NativeArray<com.sun.javadoc.Type>;
+	@:overload @:public public function superBounds() : java.NativeArray<com.sun.javadoc.Type>;
 	
 	/**
 	* Return the ClassDoc of the erasure of this wildcard type.
 	*/
-	@:overload override public function asClassDoc() : com.sun.javadoc.ClassDoc;
+	@:overload @:public override public function asClassDoc() : com.sun.javadoc.ClassDoc;
 	
-	@:overload override public function asWildcardType() : com.sun.javadoc.WildcardType;
+	@:overload @:public override public function asWildcardType() : com.sun.javadoc.WildcardType;
 	
-	@:overload override public function typeName() : String;
+	@:overload @:public override public function typeName() : String;
 	
-	@:overload override public function qualifiedTypeName() : String;
+	@:overload @:public override public function qualifiedTypeName() : String;
 	
-	@:overload override public function simpleTypeName() : String;
+	@:overload @:public override public function simpleTypeName() : String;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

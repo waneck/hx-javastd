@@ -32,14 +32,14 @@ extern class InputMethodManager
 	*
 	* @return the InputMethodManager instance
 	*/
-	@:overload @:final public static function getInstance() : sun.awt.im.InputMethodManager;
+	@:overload @:public @:static @:final public static function getInstance() : sun.awt.im.InputMethodManager;
 	
 	/**
 	* Gets a string for the trigger menu item that should be added to
 	* the window manager menu. If no need to display the trigger menu
 	* item, null is returned.
 	*/
-	@:overload @:abstract public function getTriggerMenuString() : String;
+	@:overload @:public @:abstract public function getTriggerMenuString() : String;
 	
 	/**
 	* Notifies InputMethodManager that input method change has been
@@ -49,7 +49,7 @@ extern class InputMethodManager
 	* @param comp Component that has accepted the change
 	* request. This component has to be a Frame or Dialog.
 	*/
-	@:overload @:abstract public function notifyChangeRequest(comp : java.awt.Component) : Void;
+	@:overload @:public @:abstract public function notifyChangeRequest(comp : java.awt.Component) : Void;
 	
 	/**
 	* Notifies InputMethodManager that input method change has been
@@ -59,19 +59,19 @@ extern class InputMethodManager
 	* @param comp Component that has accepted the change
 	* request. This component has the input focus.
 	*/
-	@:overload @:abstract public function notifyChangeRequestByHotKey(comp : java.awt.Component) : Void;
+	@:overload @:public @:abstract public function notifyChangeRequestByHotKey(comp : java.awt.Component) : Void;
 	
 	
 }
 @:internal extern class ExecutableInputMethodManager extends sun.awt.im.InputMethodManager implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
-	@:overload @:synchronized override public function notifyChangeRequest(comp : java.awt.Component) : Void;
+	@:overload @:public @:synchronized override public function notifyChangeRequest(comp : java.awt.Component) : Void;
 	
-	@:overload @:synchronized override public function notifyChangeRequestByHotKey(comp : java.awt.Component) : Void;
+	@:overload @:public @:synchronized override public function notifyChangeRequestByHotKey(comp : java.awt.Component) : Void;
 	
-	@:overload override public function getTriggerMenuString() : String;
+	@:overload @:public override public function getTriggerMenuString() : String;
 	
 	
 }

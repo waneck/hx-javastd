@@ -56,7 +56,7 @@ package java.beans;
 	*
 	* @see #DefaultPersistenceDelegate(java.lang.String[])
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a default persistence delegate for a class with a
@@ -79,7 +79,7 @@ package java.beans;
 	*
 	* @see #instantiate
 	*/
-	@:overload public function new(constructorPropertyNames : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(constructorPropertyNames : java.NativeArray<String>) : Void;
 	
 	/**
 	* If the number of arguments in the specified constructor is non-zero and
@@ -95,7 +95,7 @@ package java.beans;
 	*
 	* @see #DefaultPersistenceDelegate(String[])
 	*/
-	@:overload override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected override private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
 	/**
 	* This default implementation of the <code>instantiate</code> method returns
@@ -111,7 +111,7 @@ package java.beans;
 	*
 	* @see #DefaultPersistenceDelegate(String[])
 	*/
-	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	/**
 	* This default implementation of the <code>initialize</code> method assumes
@@ -161,7 +161,7 @@ package java.beans;
 	* @see java.beans.Introspector#getBeanInfo
 	* @see java.beans.PropertyDescriptor
 	*/
-	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }

@@ -71,7 +71,7 @@ extern interface Dependency
 	* @param classfile the class file to be examined
 	* @return the dependencies located in the given class file.
 	*/
-	@:overload public function findDependencies(classfile : com.sun.tools.classfile.ClassFile) : java.lang.Iterable<com.sun.tools.classfile.Dependency>;
+	@:overload @:public @:public public function findDependencies(classfile : com.sun.tools.classfile.ClassFile) : java.lang.Iterable<com.sun.tools.classfile.Dependency>;
 	
 	
 }

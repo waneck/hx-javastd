@@ -35,7 +35,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 */
 extern class ImplementedMethods
 {
-	@:overload public function new(method : com.sun.javadoc.MethodDoc, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
+	@:overload @:public public function new(method : com.sun.javadoc.MethodDoc, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
 	
 	/**
 	* Return the array of interface methods which the method passed in the
@@ -49,11 +49,11 @@ extern class ImplementedMethods
 	*
 	* @return MethodDoc[] Array of implemented methods.
 	*/
-	@:overload public function build(sort : Bool) : java.NativeArray<com.sun.javadoc.MethodDoc>;
+	@:overload @:public public function build(sort : Bool) : java.NativeArray<com.sun.javadoc.MethodDoc>;
 	
-	@:overload public function build() : java.NativeArray<com.sun.javadoc.MethodDoc>;
+	@:overload @:public public function build() : java.NativeArray<com.sun.javadoc.MethodDoc>;
 	
-	@:overload public function getMethodHolder(methodDoc : com.sun.javadoc.MethodDoc) : com.sun.javadoc.Type;
+	@:overload @:public public function getMethodHolder(methodDoc : com.sun.javadoc.MethodDoc) : com.sun.javadoc.Type;
 	
 	
 }

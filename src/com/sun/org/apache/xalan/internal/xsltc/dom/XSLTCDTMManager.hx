@@ -27,14 +27,14 @@ extern class XSLTCDTMManager extends com.sun.org.apache.xml.internal.dtm.ref.DTM
 	* Constructor DTMManagerDefault
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Obtain a new instance of a <code>DTMManager</code>.
 	* This static method creates a new factory instance.
 	* The current implementation just returns a new XSLTCDTMManager instance.
 	*/
-	@:overload public static function newInstance() : com.sun.org.apache.xalan.internal.xsltc.dom.XSLTCDTMManager;
+	@:overload @:public @:static public static function newInstance() : com.sun.org.apache.xalan.internal.xsltc.dom.XSLTCDTMManager;
 	
 	/**
 	* Look up the class that provides the XSLTC DTM Manager service.
@@ -51,9 +51,9 @@ extern class XSLTCDTMManager extends com.sun.org.apache.xml.internal.dtm.ref.DTM
 	* </ol>
 	* The default is <code>com.sun.org.apache.xalan.internal.xsltc.dom.XSLTCDTMManager</code>.
 	*/
-	@:overload public static function getDTMManagerClass() : Class<Dynamic>;
+	@:overload @:public @:static public static function getDTMManagerClass() : Class<Dynamic>;
 	
-	@:overload public static function getDTMManagerClass(useServicesMechanism : Bool) : Class<Dynamic>;
+	@:overload @:public @:static public static function getDTMManagerClass(useServicesMechanism : Bool) : Class<Dynamic>;
 	
 	/**
 	* Get an instance of a DTM, loaded with the content from the
@@ -76,7 +76,7 @@ extern class XSLTCDTMManager extends com.sun.org.apache.xml.internal.dtm.ref.DTM
 	*
 	* @return a non-null DTM reference.
 	*/
-	@:overload override public function getDTM(source : javax.xml.transform.Source, unique : Bool, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, incremental : Bool, doIndexing : Bool) : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public override public function getDTM(source : javax.xml.transform.Source, unique : Bool, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, incremental : Bool, doIndexing : Bool) : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Get an instance of a DTM, loaded with the content from the
@@ -100,7 +100,7 @@ extern class XSLTCDTMManager extends com.sun.org.apache.xml.internal.dtm.ref.DTM
 	*
 	* @return a non-null DTM reference.
 	*/
-	@:overload public function getDTM(source : javax.xml.transform.Source, unique : Bool, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, incremental : Bool, doIndexing : Bool, buildIdIndex : Bool) : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public public function getDTM(source : javax.xml.transform.Source, unique : Bool, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, incremental : Bool, doIndexing : Bool, buildIdIndex : Bool) : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Get an instance of a DTM, loaded with the content from the
@@ -126,7 +126,7 @@ extern class XSLTCDTMManager extends com.sun.org.apache.xml.internal.dtm.ref.DTM
 	*
 	* @return a non-null DTM reference.
 	*/
-	@:overload public function getDTM(source : javax.xml.transform.Source, unique : Bool, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, incremental : Bool, doIndexing : Bool, buildIdIndex : Bool, newNameTable : Bool) : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public public function getDTM(source : javax.xml.transform.Source, unique : Bool, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, incremental : Bool, doIndexing : Bool, buildIdIndex : Bool, newNameTable : Bool) : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Get an instance of a DTM, loaded with the content from the
@@ -155,7 +155,7 @@ extern class XSLTCDTMManager extends com.sun.org.apache.xml.internal.dtm.ref.DTM
 	*
 	* @return a non-null DTM reference.
 	*/
-	@:overload public function getDTM(source : javax.xml.transform.Source, unique : Bool, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, incremental : Bool, doIndexing : Bool, hasUserReader : Bool, size : Int, buildIdIndex : Bool) : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public public function getDTM(source : javax.xml.transform.Source, unique : Bool, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, incremental : Bool, doIndexing : Bool, hasUserReader : Bool, size : Int, buildIdIndex : Bool) : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Get an instance of a DTM, loaded with the content from the
@@ -186,7 +186,7 @@ extern class XSLTCDTMManager extends com.sun.org.apache.xml.internal.dtm.ref.DTM
 	*
 	* @return a non-null DTM reference.
 	*/
-	@:overload public function getDTM(source : javax.xml.transform.Source, unique : Bool, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, incremental : Bool, doIndexing : Bool, hasUserReader : Bool, size : Int, buildIdIndex : Bool, newNameTable : Bool) : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public public function getDTM(source : javax.xml.transform.Source, unique : Bool, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, incremental : Bool, doIndexing : Bool, hasUserReader : Bool, size : Int, buildIdIndex : Bool, newNameTable : Bool) : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	
 }

@@ -25,39 +25,39 @@ package sun.net.www;
 */
 extern class HeaderParser
 {
-	@:overload public function new(raw : String) : Void;
+	@:overload @:public public function new(raw : String) : Void;
 	
 	/**
 	* create a new HeaderParser from this, whose keys (and corresponding values)
 	* range from "start" to "end-1"
 	*/
-	@:overload public function subsequence(start : Int, end : Int) : sun.net.www.HeaderParser;
+	@:overload @:public public function subsequence(start : Int, end : Int) : sun.net.www.HeaderParser;
 	
-	@:overload public function findKey(i : Int) : String;
+	@:overload @:public public function findKey(i : Int) : String;
 	
-	@:overload public function findValue(i : Int) : String;
+	@:overload @:public public function findValue(i : Int) : String;
 	
-	@:overload public function findValue(key : String) : String;
+	@:overload @:public public function findValue(key : String) : String;
 	
-	@:overload public function findValue(k : String, Default : String) : String;
+	@:overload @:public public function findValue(k : String, Default : String) : String;
 	
-	@:overload public function keys() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function keys() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function values() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function values() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function findInt(k : String, Default : Int) : Int;
+	@:overload @:public public function findInt(k : String, Default : Int) : Int;
 	
 	
 }
 @:native('sun$net$www$HeaderParser$ParserIterator') @:internal extern class HeaderParser_ParserIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

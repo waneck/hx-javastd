@@ -28,29 +28,29 @@ package com.sun.org.glassfish.external.statistics.impl;
 */
 extern class CountStatisticImpl extends com.sun.org.glassfish.external.statistics.impl.StatisticImpl implements com.sun.org.glassfish.external.statistics.CountStatistic implements java.lang.reflect.InvocationHandler
 {
-	@:overload public function new(countVal : haxe.Int64, name : String, unit : String, desc : String, sampleTime : haxe.Int64, startTime : haxe.Int64) : Void;
+	@:overload @:public public function new(countVal : haxe.Int64, name : String, unit : String, desc : String, sampleTime : haxe.Int64, startTime : haxe.Int64) : Void;
 	
-	@:overload public function new(name : String, unit : String, desc : String) : Void;
+	@:overload @:public public function new(name : String, unit : String, desc : String) : Void;
 	
-	@:overload @:synchronized public function getStatistic() : com.sun.org.glassfish.external.statistics.CountStatistic;
+	@:overload @:public @:synchronized public function getStatistic() : com.sun.org.glassfish.external.statistics.CountStatistic;
 	
-	@:overload @:synchronized override public function getStaticAsMap() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public @:synchronized override public function getStaticAsMap() : java.util.Map<Dynamic, Dynamic>;
 	
-	@:overload @:synchronized override public function toString() : String;
+	@:overload @:public @:synchronized override public function toString() : String;
 	
-	@:overload @:synchronized public function getCount() : haxe.Int64;
+	@:overload @:public @:synchronized public function getCount() : haxe.Int64;
 	
-	@:overload @:synchronized public function setCount(countVal : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function setCount(countVal : haxe.Int64) : Void;
 	
-	@:overload @:synchronized public function increment() : Void;
+	@:overload @:public @:synchronized public function increment() : Void;
 	
-	@:overload @:synchronized public function increment(delta : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function increment(delta : haxe.Int64) : Void;
 	
-	@:overload @:synchronized public function decrement() : Void;
+	@:overload @:public @:synchronized public function decrement() : Void;
 	
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
-	@:overload public function invoke(proxy : Dynamic, m : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, m : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

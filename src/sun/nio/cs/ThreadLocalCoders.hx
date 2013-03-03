@@ -28,9 +28,9 @@ package sun.nio.cs;
 */
 extern class ThreadLocalCoders
 {
-	@:overload public static function decoderFor(name : Dynamic) : java.nio.charset.CharsetDecoder;
+	@:overload @:public @:static public static function decoderFor(name : Dynamic) : java.nio.charset.CharsetDecoder;
 	
-	@:overload public static function encoderFor(name : Dynamic) : java.nio.charset.CharsetEncoder;
+	@:overload @:public @:static public static function encoderFor(name : Dynamic) : java.nio.charset.CharsetEncoder;
 	
 	
 }

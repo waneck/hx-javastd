@@ -39,7 +39,7 @@ extern class WsimportListener implements com.sun.xml.internal.bind.api.ErrorList
 	*      file names like "org/acme/foo/Foo.java"
 	*
 	*/
-	@:overload public function generatedFile(fileName : String) : Void;
+	@:overload @:public public function generatedFile(fileName : String) : Void;
 	
 	/**
 	* Other miscellenous messages that do not have structures
@@ -48,17 +48,17 @@ extern class WsimportListener implements com.sun.xml.internal.bind.api.ErrorList
 	* This method is used like {@link java.io.PrintStream#println(String)}.
 	* The callee is expected to add '\n'.
 	*/
-	@:overload public function message(msg : String) : Void;
+	@:overload @:public public function message(msg : String) : Void;
 	
-	@:overload public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function info(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function info(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function debug(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function debug(exception : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* wsimport will periodically invoke this method to see if it should cancel a compilation.
@@ -67,7 +67,7 @@ extern class WsimportListener implements com.sun.xml.internal.bind.api.ErrorList
 	*      true if the {@link com.sun.tools.internal.ws.wscompile.WsimportListener} wants to abort the processing.
 	* @since 2.1
 	*/
-	@:require(java1) @:overload public function isCanceled() : Bool;
+	@:require(java1) @:overload @:public public function isCanceled() : Bool;
 	
 	
 }

@@ -31,7 +31,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	*
 	* @return the current number of live threads.
 	*/
-	@:overload public function getThreadCount() : Int;
+	@:overload @:public public function getThreadCount() : Int;
 	
 	/**
 	* Returns the peak live thread count since the Java virtual machine
@@ -39,7 +39,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	*
 	* @return the peak live thread count.
 	*/
-	@:overload public function getPeakThreadCount() : Int;
+	@:overload @:public public function getPeakThreadCount() : Int;
 	
 	/**
 	* Returns the total number of threads created and also started
@@ -47,14 +47,14 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	*
 	* @return the total number of threads started.
 	*/
-	@:overload public function getTotalStartedThreadCount() : haxe.Int64;
+	@:overload @:public public function getTotalStartedThreadCount() : haxe.Int64;
 	
 	/**
 	* Returns the current number of live daemon threads.
 	*
 	* @return the current number of live daemon threads.
 	*/
-	@:overload public function getDaemonThreadCount() : Int;
+	@:overload @:public public function getDaemonThreadCount() : Int;
 	
 	/**
 	* Returns all live thread IDs.
@@ -67,7 +67,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	*         exists and the caller does not have
 	*         ManagementPermission("monitor").
 	*/
-	@:overload public function getAllThreadIds() : java.NativeArray<haxe.Int64>;
+	@:overload @:public public function getAllThreadIds() : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* Returns the thread info for a thread of the specified
@@ -106,7 +106,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	*         exists and the caller does not have
 	*         ManagementPermission("monitor").
 	*/
-	@:overload public function getThreadInfo(id : haxe.Int64) : java.lang.management.ThreadInfo;
+	@:overload @:public public function getThreadInfo(id : haxe.Int64) : java.lang.management.ThreadInfo;
 	
 	/**
 	* Returns the thread info for each thread
@@ -144,7 +144,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	*         exists and the caller does not have
 	*         ManagementPermission("monitor").
 	*/
-	@:overload public function getThreadInfo(ids : java.NativeArray<haxe.Int64>) : java.NativeArray<java.lang.management.ThreadInfo>;
+	@:overload @:public public function getThreadInfo(ids : java.NativeArray<haxe.Int64>) : java.NativeArray<java.lang.management.ThreadInfo>;
 	
 	/**
 	* Returns a thread info for a thread of the specified <tt>id</tt>,
@@ -192,7 +192,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	*         ManagementPermission("monitor").
 	*
 	*/
-	@:overload public function getThreadInfo(id : haxe.Int64, maxDepth : Int) : java.lang.management.ThreadInfo;
+	@:overload @:public public function getThreadInfo(id : haxe.Int64, maxDepth : Int) : java.lang.management.ThreadInfo;
 	
 	/**
 	* Returns the thread info for each thread
@@ -245,7 +245,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	*         ManagementPermission("monitor").
 	*
 	*/
-	@:overload public function getThreadInfo(ids : java.NativeArray<haxe.Int64>, maxDepth : Int) : java.NativeArray<java.lang.management.ThreadInfo>;
+	@:overload @:public public function getThreadInfo(ids : java.NativeArray<haxe.Int64>, maxDepth : Int) : java.NativeArray<java.lang.management.ThreadInfo>;
 	
 	/**
 	* Tests if the Java virtual machine supports thread contention monitoring.
@@ -255,7 +255,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	*     if the Java virtual machine supports thread contention monitoring;
 	*   <tt>false</tt> otherwise.
 	*/
-	@:overload public function isThreadContentionMonitoringSupported() : Bool;
+	@:overload @:public public function isThreadContentionMonitoringSupported() : Bool;
 	
 	/**
 	* Tests if thread contention monitoring is enabled.
@@ -268,7 +268,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	*
 	* @see #isThreadContentionMonitoringSupported
 	*/
-	@:overload public function isThreadContentionMonitoringEnabled() : Bool;
+	@:overload @:public public function isThreadContentionMonitoringEnabled() : Bool;
 	
 	/**
 	* Enables or disables thread contention monitoring.
@@ -286,7 +286,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	*
 	* @see #isThreadContentionMonitoringSupported
 	*/
-	@:overload public function setThreadContentionMonitoringEnabled(enable : Bool) : Void;
+	@:overload @:public public function setThreadContentionMonitoringEnabled(enable : Bool) : Void;
 	
 	/**
 	* Returns the total CPU time for the current thread in nanoseconds.
@@ -315,7 +315,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	* @see #isThreadCpuTimeEnabled
 	* @see #setThreadCpuTimeEnabled
 	*/
-	@:overload public function getCurrentThreadCpuTime() : haxe.Int64;
+	@:overload @:public public function getCurrentThreadCpuTime() : haxe.Int64;
 	
 	/**
 	* Returns the CPU time that the current thread has executed
@@ -342,7 +342,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	* @see #isThreadCpuTimeEnabled
 	* @see #setThreadCpuTimeEnabled
 	*/
-	@:overload public function getCurrentThreadUserTime() : haxe.Int64;
+	@:overload @:public public function getCurrentThreadUserTime() : haxe.Int64;
 	
 	/**
 	* Returns the total CPU time for a thread of the specified ID in nanoseconds.
@@ -379,7 +379,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	* @see #isThreadCpuTimeEnabled
 	* @see #setThreadCpuTimeEnabled
 	*/
-	@:overload public function getThreadCpuTime(id : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function getThreadCpuTime(id : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the CPU time that a thread of the specified ID
@@ -414,7 +414,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	* @see #isThreadCpuTimeEnabled
 	* @see #setThreadCpuTimeEnabled
 	*/
-	@:overload public function getThreadUserTime(id : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function getThreadUserTime(id : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Tests if the Java virtual machine implementation supports CPU time
@@ -429,7 +429,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	*     measurement for any thread;
 	*   <tt>false</tt> otherwise.
 	*/
-	@:overload public function isThreadCpuTimeSupported() : Bool;
+	@:overload @:public public function isThreadCpuTimeSupported() : Bool;
 	
 	/**
 	* Tests if the Java virtual machine supports CPU time
@@ -443,7 +443,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	*     measurement for current thread;
 	*   <tt>false</tt> otherwise.
 	*/
-	@:overload public function isCurrentThreadCpuTimeSupported() : Bool;
+	@:overload @:public public function isCurrentThreadCpuTimeSupported() : Bool;
 	
 	/**
 	* Tests if thread CPU time measurement is enabled.
@@ -458,7 +458,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	* @see #isThreadCpuTimeSupported
 	* @see #isCurrentThreadCpuTimeSupported
 	*/
-	@:overload public function isThreadCpuTimeEnabled() : Bool;
+	@:overload @:public public function isThreadCpuTimeEnabled() : Bool;
 	
 	/**
 	* Enables or disables thread CPU time measurement.  The default
@@ -478,7 +478,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	* @see #isThreadCpuTimeSupported
 	* @see #isCurrentThreadCpuTimeSupported
 	*/
-	@:overload public function setThreadCpuTimeEnabled(enable : Bool) : Void;
+	@:overload @:public public function setThreadCpuTimeEnabled(enable : Bool) : Void;
 	
 	/**
 	* Finds cycles of threads that are in deadlock waiting to acquire
@@ -513,7 +513,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	*
 	* @see #findDeadlockedThreads
 	*/
-	@:overload public function findMonitorDeadlockedThreads() : java.NativeArray<haxe.Int64>;
+	@:overload @:public public function findMonitorDeadlockedThreads() : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* Resets the peak thread count to the current number of
@@ -526,7 +526,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	* @see #getPeakThreadCount
 	* @see #getThreadCount
 	*/
-	@:overload public function resetPeakThreadCount() : Void;
+	@:overload @:public public function resetPeakThreadCount() : Void;
 	
 	/**
 	* Finds cycles of threads that are in deadlock waiting to acquire
@@ -555,7 +555,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	* @see #findMonitorDeadlockedThreads
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function findDeadlockedThreads() : java.NativeArray<haxe.Int64>;
+	@:require(java6) @:overload @:public public function findDeadlockedThreads() : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* Tests if the Java virtual machine supports monitoring of
@@ -570,7 +570,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	* @see #dumpAllThreads
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function isObjectMonitorUsageSupported() : Bool;
+	@:require(java6) @:overload @:public public function isObjectMonitorUsageSupported() : Bool;
 	
 	/**
 	* Tests if the Java virtual machine supports monitoring of
@@ -586,7 +586,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	* @see #dumpAllThreads
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function isSynchronizerUsageSupported() : Bool;
+	@:require(java6) @:overload @:public public function isSynchronizerUsageSupported() : Bool;
 	
 	/**
 	* Returns the thread info for each thread
@@ -666,7 +666,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getThreadInfo(ids : java.NativeArray<haxe.Int64>, lockedMonitors : Bool, lockedSynchronizers : Bool) : java.NativeArray<java.lang.management.ThreadInfo>;
+	@:require(java6) @:overload @:public public function getThreadInfo(ids : java.NativeArray<haxe.Int64>, lockedMonitors : Bool, lockedSynchronizers : Bool) : java.NativeArray<java.lang.management.ThreadInfo>;
 	
 	/**
 	* Returns the thread info for all live threads with stack trace
@@ -705,7 +705,7 @@ extern interface ThreadMXBean extends java.lang.management.PlatformManagedObject
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function dumpAllThreads(lockedMonitors : Bool, lockedSynchronizers : Bool) : java.NativeArray<java.lang.management.ThreadInfo>;
+	@:require(java6) @:overload @:public public function dumpAllThreads(lockedMonitors : Bool, lockedSynchronizers : Bool) : java.NativeArray<java.lang.management.ThreadInfo>;
 	
 	
 }

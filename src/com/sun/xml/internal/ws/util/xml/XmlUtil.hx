@@ -25,15 +25,15 @@ package com.sun.xml.internal.ws.util.xml;
 */
 extern class XmlUtil
 {
-	@:overload public static function getPrefix(s : String) : String;
+	@:overload @:public @:static public static function getPrefix(s : String) : String;
 	
-	@:overload public static function getLocalPart(s : String) : String;
+	@:overload @:public @:static public static function getLocalPart(s : String) : String;
 	
-	@:overload public static function getAttributeOrNull(e : org.w3c.dom.Element, name : String) : String;
+	@:overload @:public @:static public static function getAttributeOrNull(e : org.w3c.dom.Element, name : String) : String;
 	
-	@:overload public static function getAttributeNSOrNull(e : org.w3c.dom.Element, name : String, nsURI : String) : String;
+	@:overload @:public @:static public static function getAttributeNSOrNull(e : org.w3c.dom.Element, name : String, nsURI : String) : String;
 	
-	@:overload public static function getAttributeNSOrNull(e : org.w3c.dom.Element, name : javax.xml.namespace.QName) : String;
+	@:overload @:public @:static public static function getAttributeNSOrNull(e : org.w3c.dom.Element, name : javax.xml.namespace.QName) : String;
 	
 	/*    public static boolean matchesTagNS(Element e, String tag, String nsURI) {
 	try {
@@ -62,40 +62,40 @@ extern class XmlUtil
 	e.getLocalName());
 	}
 	}*/
-	@:overload public static function getAllChildren(element : org.w3c.dom.Element) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:static public static function getAllChildren(element : org.w3c.dom.Element) : java.util.Iterator<Dynamic>;
 	
-	@:overload public static function getAllAttributes(element : org.w3c.dom.Element) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:static public static function getAllAttributes(element : org.w3c.dom.Element) : java.util.Iterator<Dynamic>;
 	
-	@:overload public static function parseTokenList(tokenList : String) : java.util.List<String>;
+	@:overload @:public @:static public static function parseTokenList(tokenList : String) : java.util.List<String>;
 	
-	@:overload public static function getTextForNode(node : org.w3c.dom.Node) : String;
+	@:overload @:public @:static public static function getTextForNode(node : org.w3c.dom.Node) : String;
 	
-	@:overload public static function getUTF8Stream(s : String) : java.io.InputStream;
+	@:overload @:public @:static public static function getUTF8Stream(s : String) : java.io.InputStream;
 	
 	/**
 	* Creates a new identity transformer.
 	*/
-	@:overload public static function newTransformer() : javax.xml.transform.Transformer;
+	@:overload @:public @:static public static function newTransformer() : javax.xml.transform.Transformer;
 	
 	/**
 	* Performs identity transformation.
 	*/
-	@:overload public static function identityTransform<T : javax.xml.transform.Result>(src : javax.xml.transform.Source, result : T) : T;
+	@:overload @:public @:static public static function identityTransform<T : javax.xml.transform.Result>(src : javax.xml.transform.Source, result : T) : T;
 	
 	/*
 	* Gets an EntityResolver using XML catalog
 	*/
-	@:overload public static function createEntityResolver(catalogUrl : java.net.URL) : org.xml.sax.EntityResolver;
+	@:overload @:public @:static public static function createEntityResolver(catalogUrl : java.net.URL) : org.xml.sax.EntityResolver;
 	
 	/**
 	* Gets a default EntityResolver for catalog at META-INF/jaxws-catalog.xml
 	*/
-	@:overload public static function createDefaultCatalogResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public @:static public static function createDefaultCatalogResolver() : org.xml.sax.EntityResolver;
 	
 	/**
 	* {@link ErrorHandler} that always treat the error as fatal.
 	*/
-	public static var DRACONIAN_ERROR_HANDLER(default, null) : org.xml.sax.ErrorHandler;
+	@:public @:static @:final public static var DRACONIAN_ERROR_HANDLER(default, null) : org.xml.sax.ErrorHandler;
 	
 	
 }

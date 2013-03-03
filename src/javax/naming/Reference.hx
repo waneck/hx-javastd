@@ -31,14 +31,14 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	* @serial
 	* @see java.lang.Class#getName
 	*/
-	private var className : String;
+	@:protected private var className : String;
 	
 	/**
 	* Contains the addresses contained in this Reference.
 	* Initialized by constructor.
 	* @serial
 	*/
-	private var addrs : java.util.Vector<javax.naming.RefAddr>;
+	@:protected private var addrs : java.util.Vector<javax.naming.RefAddr>;
 	
 	/**
 	* Contains the name of the factory class for creating
@@ -46,14 +46,14 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	* Initialized to null.
 	* @serial
 	*/
-	private var classFactory : String;
+	@:protected private var classFactory : String;
 	
 	/**
 	* Contains the location of the factory class.
 	* Initialized to null.
 	* @serial
 	*/
-	private var classFactoryLocation : String;
+	@:protected private var classFactoryLocation : String;
 	
 	/**
 	* Constructs a new reference for an object with class name 'className'.
@@ -63,7 +63,7 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	* @param className The non-null class name of the object to which
 	* this reference refers.
 	*/
-	@:overload public function new(className : String) : Void;
+	@:overload @:public public function new(className : String) : Void;
 	
 	/**
 	* Constructs a new reference for an object with class name 'className' and
@@ -74,7 +74,7 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	* which this reference refers.
 	* @param addr The non-null address of the object.
 	*/
-	@:overload public function new(className : String, addr : javax.naming.RefAddr) : Void;
+	@:overload @:public public function new(className : String, addr : javax.naming.RefAddr) : Void;
 	
 	/**
 	* Constructs a new reference for an object with class name 'className',
@@ -89,7 +89,7 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	* @see javax.naming.spi.ObjectFactory
 	* @see javax.naming.spi.NamingManager#getObjectInstance
 	*/
-	@:overload public function new(className : String, factory : String, factoryLocation : String) : Void;
+	@:overload @:public public function new(className : String, factory : String, factoryLocation : String) : Void;
 	
 	/**
 	* Constructs a new reference for an object with class name 'className',
@@ -105,7 +105,7 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	* @see javax.naming.spi.ObjectFactory
 	* @see javax.naming.spi.NamingManager#getObjectInstance
 	*/
-	@:overload public function new(className : String, addr : javax.naming.RefAddr, factory : String, factoryLocation : String) : Void;
+	@:overload @:public public function new(className : String, addr : javax.naming.RefAddr, factory : String, factoryLocation : String) : Void;
 	
 	/**
 	* Retrieves the class name of the object to which this reference refers.
@@ -113,7 +113,7 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	* @return The non-null fully-qualified class name of the object.
 	*         (e.g. "java.lang.String")
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Retrieves the class name of the factory of the object
@@ -122,7 +122,7 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	* @return The possibly null fully-qualified class name of the factory.
 	*         (e.g. "java.lang.String")
 	*/
-	@:overload public function getFactoryClassName() : String;
+	@:overload @:public public function getFactoryClassName() : String;
 	
 	/**
 	* Retrieves the location of the factory of the object
@@ -134,7 +134,7 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	* @return The possibly null string containing the
 	*                 location for loading in the factory's class.
 	*/
-	@:overload public function getFactoryClassLocation() : String;
+	@:overload @:public public function getFactoryClassLocation() : String;
 	
 	/**
 	* Retrieves the first address that has the address type 'addrType'.
@@ -144,7 +144,7 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	* @return The address in this reference with address type 'addrType;
 	*         null if no such address exist.
 	*/
-	@:overload public function get(addrType : String) : javax.naming.RefAddr;
+	@:overload @:public public function get(addrType : String) : javax.naming.RefAddr;
 	
 	/**
 	* Retrieves the address at index posn.
@@ -154,7 +154,7 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	* @exception ArrayIndexOutOfBoundsException If posn not in the specified
 	*         range.
 	*/
-	@:overload public function get(posn : Int) : javax.naming.RefAddr;
+	@:overload @:public public function get(posn : Int) : javax.naming.RefAddr;
 	
 	/**
 	* Retrieves an enumeration of the addresses in this reference.
@@ -166,21 +166,21 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	*         If this reference has zero addresses, an enumeration with
 	*         zero elements is returned.
 	*/
-	@:overload public function getAll() : java.util.Enumeration<javax.naming.RefAddr>;
+	@:overload @:public public function getAll() : java.util.Enumeration<javax.naming.RefAddr>;
 	
 	/**
 	* Retrieves the number of addresses in this reference.
 	*
 	* @return The nonnegative number of addresses in this reference.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Adds an address to the end of the list of addresses.
 	*
 	* @param addr The non-null address to add.
 	*/
-	@:overload public function add(addr : javax.naming.RefAddr) : Void;
+	@:overload @:public public function add(addr : javax.naming.RefAddr) : Void;
 	
 	/**
 	* Adds an address to the list of addresses at index posn.
@@ -192,7 +192,7 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	* @exception ArrayIndexOutOfBoundsException If posn not in the specified
 	*         range.
 	*/
-	@:overload public function add(posn : Int, addr : javax.naming.RefAddr) : Void;
+	@:overload @:public public function add(posn : Int, addr : javax.naming.RefAddr) : Void;
 	
 	/**
 	* Deletes the address at index posn from the list of addresses.
@@ -204,12 +204,12 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	* @exception ArrayIndexOutOfBoundsException If posn not in the specified
 	*         range.
 	*/
-	@:overload public function remove(posn : Int) : Dynamic;
+	@:overload @:public public function remove(posn : Int) : Dynamic;
 	
 	/**
 	* Deletes all addresses from this reference.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Determines whether obj is a reference with the same addresses
@@ -223,7 +223,7 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	* @param obj The possibly null object to check.
 	* @return true if obj is equal to this reference; false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Computes the hash code of this reference.
@@ -231,7 +231,7 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @return A hash code of this reference as an int.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Generates the string representation of this reference.
@@ -241,7 +241,7 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @return The non-null string representation of this reference.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Makes a copy of this reference using its class name
@@ -249,7 +249,7 @@ extern class Reference implements java.lang.Cloneable implements java.io.Seriali
 	* Changes to the newly created copy does not affect this Reference
 	* and vice versa.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

@@ -41,7 +41,7 @@ extern class GC
 	* is no longer strongly reachable may have to be inspected multiple times
 	* before it can be reclaimed.
 	*/
-	@:overload @:native public static function maxObjectInspectionAge() : haxe.Int64;
+	@:overload @:public @:static @:native public static function maxObjectInspectionAge() : haxe.Int64;
 	
 	/**
 	* Makes a new request for a garbage-collection latency of the given
@@ -55,13 +55,13 @@ extern class GC
 	* @throws  IllegalArgumentException
 	*          If the given <code>latency</code> is non-positive
 	*/
-	@:overload public static function requestLatency(latency : haxe.Int64) : sun.misc.GC.GC_LatencyRequest;
+	@:overload @:public @:static public static function requestLatency(latency : haxe.Int64) : sun.misc.GC.GC_LatencyRequest;
 	
 	/**
 	* Returns the current smallest garbage-collection latency request, or zero
 	* if there are no active requests.
 	*/
-	@:overload public static function currentLatencyTarget() : haxe.Int64;
+	@:overload @:public @:static public static function currentLatencyTarget() : haxe.Int64;
 	
 	
 }
@@ -75,10 +75,10 @@ extern class GC
 }
 @:native('sun$misc$GC$Daemon') @:internal extern class GC_Daemon extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	/* Create a new daemon thread in the root thread group */
-	@:overload public static function create() : Void;
+	@:overload @:public @:static public static function create() : Void;
 	
 	
 }
@@ -96,11 +96,11 @@ extern class GC
 	* @throws  IllegalStateException
 	*          If this request has already been cancelled
 	*/
-	@:overload public function cancel() : Void;
+	@:overload @:public public function cancel() : Void;
 	
-	@:overload public function compareTo(r : sun.misc.GC.GC_LatencyRequest) : Int;
+	@:overload @:public public function compareTo(r : sun.misc.GC.GC_LatencyRequest) : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

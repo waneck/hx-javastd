@@ -46,12 +46,12 @@ extern interface SerialFieldTag extends com.sun.javadoc.Tag extends java.lang.Co
 	/**
 	* Return the serialziable field name.
 	*/
-	@:overload public function fieldName() : String;
+	@:overload @:public public function fieldName() : String;
 	
 	/**
 	* Return the field type string.
 	*/
-	@:overload public function fieldType() : String;
+	@:overload @:public public function fieldType() : String;
 	
 	/**
 	* Return the ClassDoc for field type.
@@ -59,13 +59,13 @@ extern interface SerialFieldTag extends com.sun.javadoc.Tag extends java.lang.Co
 	* @return null if no ClassDoc for field type is visible from
 	*         containingClass context.
 	*/
-	@:overload public function fieldTypeDoc() : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function fieldTypeDoc() : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Return the field comment. If there is no serialField comment, return
 	* javadoc comment of corresponding FieldDoc.
 	*/
-	@:overload public function description() : String;
+	@:overload @:public public function description() : String;
 	
 	/**
 	* Compares this Object with the specified Object for order.  Returns a
@@ -81,7 +81,7 @@ extern interface SerialFieldTag extends com.sun.javadoc.Tag extends java.lang.Co
 	*            from being compared to this Object.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function compareTo(obj : Dynamic) : Int;
+	@:require(java2) @:overload @:public public function compareTo(obj : Dynamic) : Int;
 	
 	
 }

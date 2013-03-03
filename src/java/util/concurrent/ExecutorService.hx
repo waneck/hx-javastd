@@ -51,7 +51,7 @@ extern interface ExecutorService extends java.util.concurrent.Executor
 	*         or the security manager's <tt>checkAccess</tt> method
 	*         denies access.
 	*/
-	@:overload public function shutdown() : Void;
+	@:overload @:public public function shutdown() : Void;
 	
 	/**
 	* Attempts to stop all actively executing tasks, halts the
@@ -76,14 +76,14 @@ extern interface ExecutorService extends java.util.concurrent.Executor
 	*         or the security manager's <tt>checkAccess</tt> method
 	*         denies access.
 	*/
-	@:overload public function shutdownNow() : java.util.List<java.lang.Runnable>;
+	@:overload @:public public function shutdownNow() : java.util.List<java.lang.Runnable>;
 	
 	/**
 	* Returns <tt>true</tt> if this executor has been shut down.
 	*
 	* @return <tt>true</tt> if this executor has been shut down
 	*/
-	@:overload public function isShutdown() : Bool;
+	@:overload @:public public function isShutdown() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if all tasks have completed following shut down.
@@ -92,7 +92,7 @@ extern interface ExecutorService extends java.util.concurrent.Executor
 	*
 	* @return <tt>true</tt> if all tasks have completed following shut down
 	*/
-	@:overload public function isTerminated() : Bool;
+	@:overload @:public public function isTerminated() : Bool;
 	
 	/**
 	* Blocks until all tasks have completed execution after a shutdown
@@ -105,7 +105,7 @@ extern interface ExecutorService extends java.util.concurrent.Executor
 	*         <tt>false</tt> if the timeout elapsed before termination
 	* @throws InterruptedException if interrupted while waiting
 	*/
-	@:overload public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Submits a value-returning task for execution and returns a

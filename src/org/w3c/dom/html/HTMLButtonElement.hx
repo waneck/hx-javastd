@@ -48,52 +48,52 @@ extern interface HTMLButtonElement extends org.w3c.dom.html.HTMLElement
 	*  Returns the <code>FORM</code> element containing this control. Returns
 	* <code>null</code> if this control is not within the context of a form.
 	*/
-	@:overload public function getForm() : org.w3c.dom.html.HTMLFormElement;
+	@:overload @:public public function getForm() : org.w3c.dom.html.HTMLFormElement;
 	
 	/**
 	*  A single character access key to give access to the form control. See
 	* the  accesskey attribute definition in HTML 4.0.
 	*/
-	@:overload public function getAccessKey() : String;
+	@:overload @:public public function getAccessKey() : String;
 	
-	@:overload public function setAccessKey(accessKey : String) : Void;
+	@:overload @:public public function setAccessKey(accessKey : String) : Void;
 	
 	/**
 	*  The control is unavailable in this context. See the  disabled
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getDisabled() : Bool;
+	@:overload @:public public function getDisabled() : Bool;
 	
-	@:overload public function setDisabled(disabled : Bool) : Void;
+	@:overload @:public public function setDisabled(disabled : Bool) : Void;
 	
 	/**
 	*  Form control or object name when submitted with a form. See the  name
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	/**
 	*  Index that represents the element's position in the tabbing order. See
 	* the  tabindex attribute definition in HTML 4.0.
 	*/
-	@:overload public function getTabIndex() : Int;
+	@:overload @:public public function getTabIndex() : Int;
 	
-	@:overload public function setTabIndex(tabIndex : Int) : Void;
+	@:overload @:public public function setTabIndex(tabIndex : Int) : Void;
 	
 	/**
 	*  The type of button. See the  type attribute definition in HTML 4.0.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	*  The current form control value. See the  value attribute definition in
 	* HTML 4.0.
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload public function setValue(value : String) : Void;
+	@:overload @:public public function setValue(value : String) : Void;
 	
 	
 }

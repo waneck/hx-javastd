@@ -28,7 +28,7 @@ extern class PackageFrameWriter extends com.sun.tools.doclets.formats.html.HtmlD
 	/**
 	* The name of the output file.
 	*/
-	public static var OUTPUT_FILE_NAME(default, null) : String;
+	@:public @:static @:final public static var OUTPUT_FILE_NAME(default, null) : String;
 	
 	/**
 	* Constructor to construct PackageFrameWriter object and to generate
@@ -41,7 +41,7 @@ extern class PackageFrameWriter extends com.sun.tools.doclets.formats.html.HtmlD
 	* @param configuration the configuration of the doclet.
 	* @param packageDoc PackageDoc under consideration.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, packageDoc : com.sun.javadoc.PackageDoc) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, packageDoc : com.sun.javadoc.PackageDoc) : Void;
 	
 	/**
 	* Generate a package summary page for the left-hand bottom frame. Construct
@@ -50,7 +50,7 @@ extern class PackageFrameWriter extends com.sun.tools.doclets.formats.html.HtmlD
 	* @param configuration the current configuration of the doclet.
 	* @param packageDoc The package for which "pacakge-frame.html" is to be generated.
 	*/
-	@:overload public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, packageDoc : com.sun.javadoc.PackageDoc) : Void;
+	@:overload @:public @:static public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, packageDoc : com.sun.javadoc.PackageDoc) : Void;
 	
 	/**
 	* Add class listing for all the classes in this package. Divide class
@@ -59,7 +59,7 @@ extern class PackageFrameWriter extends com.sun.tools.doclets.formats.html.HtmlD
 	*
 	* @param contentTree the content tree to which the listing will be added
 	*/
-	@:overload private function addClassListing(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addClassListing(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add specific class kind listing. Also add label to the listing.
@@ -68,7 +68,7 @@ extern class PackageFrameWriter extends com.sun.tools.doclets.formats.html.HtmlD
 	* @param labelContent content tree of the label to be added
 	* @param contentTree the content tree to which the class kind listing will be added
 	*/
-	@:overload private function addClassKindListing(arr : java.NativeArray<com.sun.javadoc.ClassDoc>, labelContent : com.sun.tools.doclets.internal.toolkit.Content, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addClassKindListing(arr : java.NativeArray<com.sun.javadoc.ClassDoc>, labelContent : com.sun.tools.doclets.internal.toolkit.Content, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }

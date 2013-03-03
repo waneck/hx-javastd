@@ -64,27 +64,27 @@ extern class StatisticMonitoredAttribute extends com.sun.corba.se.spi.monitoring
 	* @param mutex using which clearState() and getValue() calls need to be locked.
 	* </p>
 	*/
-	@:overload public function new(name : String, desc : String, s : com.sun.corba.se.spi.monitoring.StatisticsAccumulator, mutex : Dynamic) : Void;
+	@:overload @:public public function new(name : String, desc : String, s : com.sun.corba.se.spi.monitoring.StatisticsAccumulator, mutex : Dynamic) : Void;
 	
 	/**
 	*  Gets the value from the StatisticsAccumulator, the value will be a formatted
 	*  String with the computed statistics based on the samples accumulated in the
 	*  Statistics Accumulator.
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
 	/**
 	*  Clears the state on Statistics Accumulator, After this call all samples are
 	*  treated fresh and the old sample computations are disregarded.
 	*/
-	@:overload public function clearState() : Void;
+	@:overload @:public override public function clearState() : Void;
 	
 	/**
 	*  Gets the statistics accumulator associated with StatisticMonitoredAttribute.
 	*  Usually, the user don't need to use this method as they can keep the handle
 	*  to Accumulator to collect the samples.
 	*/
-	@:overload public function getStatisticsAccumulator() : com.sun.corba.se.spi.monitoring.StatisticsAccumulator;
+	@:overload @:public public function getStatisticsAccumulator() : com.sun.corba.se.spi.monitoring.StatisticsAccumulator;
 	
 	
 }

@@ -26,7 +26,7 @@ package sun.reflect;
 extern interface MethodAccessor
 {
 	/** Matches specification in {@link java.lang.reflect.Method} */
-	@:overload public function invoke(obj : Dynamic, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(obj : Dynamic, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

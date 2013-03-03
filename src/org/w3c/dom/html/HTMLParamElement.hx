@@ -49,34 +49,34 @@ extern interface HTMLParamElement extends org.w3c.dom.html.HTMLElement
 	*  The name of a run-time parameter. See the  name attribute definition
 	* in HTML 4.0.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	/**
 	*  Content type for the <code>value</code> attribute when
 	* <code>valuetype</code> has the value "ref". See the  type attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function setType(type : String) : Void;
+	@:overload @:public public function setType(type : String) : Void;
 	
 	/**
 	*  The value of a run-time parameter. See the  value attribute definition
 	* in HTML 4.0.
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload public function setValue(value : String) : Void;
+	@:overload @:public public function setValue(value : String) : Void;
 	
 	/**
 	*  Information about the meaning of the <code>value</code> attribute
 	* value. See the  valuetype attribute definition in HTML 4.0.
 	*/
-	@:overload public function getValueType() : String;
+	@:overload @:public public function getValueType() : String;
 	
-	@:overload public function setValueType(valueType : String) : Void;
+	@:overload @:public public function setValueType(valueType : String) : Void;
 	
 	
 }

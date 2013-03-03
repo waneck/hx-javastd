@@ -25,11 +25,11 @@ package sun.java2d.jules;
 */
 extern class JulesAATileGenerator implements sun.java2d.pipe.AATileGenerator
 {
-	@:overload public function new(s : java.awt.Shape, at : java.awt.geom.AffineTransform, clip : sun.java2d.pipe.Region, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, bbox : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(s : java.awt.Shape, at : java.awt.geom.AffineTransform, clip : sun.java2d.pipe.Region, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, bbox : java.NativeArray<Int>) : Void;
 	
-	@:overload public function getAlpha(tileBuffer : java.NativeArray<java.StdTypes.Int8>, offset : Int, rowstride : Int) : Void;
+	@:overload @:public public function getAlpha(tileBuffer : java.NativeArray<java.StdTypes.Int8>, offset : Int, rowstride : Int) : Void;
 	
-	@:overload public function calculateTypicalAlpha() : Void;
+	@:overload @:public public function calculateTypicalAlpha() : Void;
 	
 	/*
 	* Optimization for large fills. Foutunatly cairo does generate an y-sorted
@@ -39,39 +39,39 @@ extern class JulesAATileGenerator implements sun.java2d.pipe.AATileGenerator
 	* traps cover the tile horizontally This also works, when a single tile
 	* coveres the whole tile.
 	*/
-	@:overload private function doTrapsCoverTile(trapList : sun.java2d.xr.GrowableIntArray, tileIndex : Int) : Bool;
+	@:overload @:protected private function doTrapsCoverTile(trapList : sun.java2d.xr.GrowableIntArray, tileIndex : Int) : Bool;
 	
-	@:overload public function getTypicalAlpha() : Int;
+	@:overload @:public public function getTypicalAlpha() : Int;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload private function rasterizeTile(tileIndex : Int, tile : sun.java2d.jules.JulesTile) : sun.java2d.jules.JulesTile;
+	@:overload @:protected private function rasterizeTile(tileIndex : Int, tile : sun.java2d.jules.JulesTile) : sun.java2d.jules.JulesTile;
 	
-	@:overload private function getXPos(arrayPos : Int) : Int;
+	@:overload @:protected private function getXPos(arrayPos : Int) : Int;
 	
-	@:overload private function getYPos(arrayPos : Int) : Int;
+	@:overload @:protected private function getYPos(arrayPos : Int) : Int;
 	
-	@:overload public function nextTile() : Void;
+	@:overload @:public public function nextTile() : Void;
 	
-	@:overload public function getTileHeight() : Int;
+	@:overload @:public public function getTileHeight() : Int;
 	
-	@:overload public function getTileWidth() : Int;
+	@:overload @:public public function getTileWidth() : Int;
 	
-	@:overload public function getTileCount() : Int;
+	@:overload @:public public function getTileCount() : Int;
 	
-	@:overload public function getTrapContainer(index : Int) : sun.java2d.jules.JulesAATileGenerator.TileTrapContainer;
+	@:overload @:public public function getTrapContainer(index : Int) : sun.java2d.jules.JulesAATileGenerator.TileTrapContainer;
 	
 	
 }
 @:internal extern class TileTrapContainer
 {
-	@:overload public function new(traps : sun.java2d.xr.GrowableIntArray) : Void;
+	@:overload @:public public function new(traps : sun.java2d.xr.GrowableIntArray) : Void;
 	
-	@:overload public function setTileAlpha(tileAlpha : Int) : Void;
+	@:overload @:public public function setTileAlpha(tileAlpha : Int) : Void;
 	
-	@:overload public function getTileAlpha() : Int;
+	@:overload @:public public function getTileAlpha() : Int;
 	
-	@:overload public function getTraps() : sun.java2d.xr.GrowableIntArray;
+	@:overload @:public public function getTraps() : sun.java2d.xr.GrowableIntArray;
 	
 	
 }

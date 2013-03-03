@@ -28,38 +28,38 @@ extern class ExprExpression extends sun.tools.tree.UnaryExpression
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, right : sun.tools.tree.Expression) : Void;
+	@:overload @:public public function new(where : haxe.Int64, right : sun.tools.tree.Expression) : Void;
 	
 	/**
 	* Check a condition.  We must pass it on to our unparenthesised form.
 	*/
-	@:overload public function checkCondition(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, cvars : sun.tools.tree.ConditionVars) : Void;
+	@:overload @:public override public function checkCondition(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, cvars : sun.tools.tree.ConditionVars) : Void;
 	
 	/**
 	* Check the expression if it appears as an lvalue.
 	* We just pass it on to our unparenthesized subexpression.
 	* (Part of fix for 4090372)
 	*/
-	@:overload public function checkAssignOp(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, outside : sun.tools.tree.Expression) : sun.tools.tree.Vset;
+	@:overload @:public override public function checkAssignOp(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, outside : sun.tools.tree.Expression) : sun.tools.tree.Vset;
 	
 	/**
 	* Delegate to our subexpression.
 	* (Part of fix for 4090372)
 	*/
-	@:overload public function getUpdater(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
+	@:overload @:public override public function getUpdater(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
 	
-	@:overload public function isNull() : Bool;
+	@:overload @:public override public function isNull() : Bool;
 	
-	@:overload public function isNonNull() : Bool;
+	@:overload @:public override public function isNonNull() : Bool;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
 	/**
 	* Delegate to our subexpression.
 	* See the comment in AddExpression#inlineValueSB() for
 	* information about this method.
 	*/
-	@:overload private function inlineValueSB(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, buffer : java.lang.StringBuffer) : java.lang.StringBuffer;
+	@:overload @:protected override private function inlineValueSB(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, buffer : java.lang.StringBuffer) : java.lang.StringBuffer;
 	
 	
 }

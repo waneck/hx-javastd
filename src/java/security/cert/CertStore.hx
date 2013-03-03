@@ -34,7 +34,7 @@ extern class CertStore
 	* @param type the type
 	* @param params the initialization parameters (may be <code>null</code>)
 	*/
-	@:overload private function new(storeSpi : java.security.cert.CertStoreSpi, provider : java.security.Provider, type : String, params : java.security.cert.CertStoreParameters) : Void;
+	@:overload @:protected private function new(storeSpi : java.security.cert.CertStoreSpi, provider : java.security.Provider, type : String, params : java.security.cert.CertStoreParameters) : Void;
 	
 	/**
 	* Returns a <code>Collection</code> of <code>Certificate</code>s that
@@ -61,7 +61,7 @@ extern class CertStore
 	*         match the specified selector (never <code>null</code>)
 	* @throws CertStoreException if an exception occurs
 	*/
-	@:overload @:final public function getCertificates(selector : java.security.cert.CertSelector) : java.util.Collection<java.security.cert.Certificate>;
+	@:overload @:public @:final public function getCertificates(selector : java.security.cert.CertSelector) : java.util.Collection<java.security.cert.Certificate>;
 	
 	/**
 	* Returns a <code>Collection</code> of <code>CRL</code>s that
@@ -88,7 +88,7 @@ extern class CertStore
 	*         match the specified selector (never <code>null</code>)
 	* @throws CertStoreException if an exception occurs
 	*/
-	@:overload @:final public function getCRLs(selector : java.security.cert.CRLSelector) : java.util.Collection<java.security.cert.CRL>;
+	@:overload @:public @:final public function getCRLs(selector : java.security.cert.CRLSelector) : java.util.Collection<java.security.cert.CRL>;
 	
 	/**
 	* Returns a <code>CertStore</code> object that implements the specified
@@ -130,7 +130,7 @@ extern class CertStore
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(type : String, params : java.security.cert.CertStoreParameters) : java.security.cert.CertStore;
+	@:overload @:public @:static public static function getInstance(type : String, params : java.security.cert.CertStoreParameters) : java.security.cert.CertStore;
 	
 	/**
 	* Returns a <code>CertStore</code> object that implements the specified
@@ -179,7 +179,7 @@ extern class CertStore
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(type : String, params : java.security.cert.CertStoreParameters, provider : String) : java.security.cert.CertStore;
+	@:overload @:public @:static public static function getInstance(type : String, params : java.security.cert.CertStoreParameters, provider : String) : java.security.cert.CertStore;
 	
 	/**
 	* Returns a <code>CertStore</code> object that implements the specified
@@ -222,7 +222,7 @@ extern class CertStore
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(type : String, params : java.security.cert.CertStoreParameters, provider : java.security.Provider) : java.security.cert.CertStore;
+	@:overload @:public @:static public static function getInstance(type : String, params : java.security.cert.CertStoreParameters, provider : java.security.Provider) : java.security.cert.CertStore;
 	
 	/**
 	* Returns the parameters used to initialize this <code>CertStore</code>.
@@ -232,21 +232,21 @@ extern class CertStore
 	* @return the parameters used to initialize this <code>CertStore</code>
 	* (may be <code>null</code>)
 	*/
-	@:overload @:final public function getCertStoreParameters() : java.security.cert.CertStoreParameters;
+	@:overload @:public @:final public function getCertStoreParameters() : java.security.cert.CertStoreParameters;
 	
 	/**
 	* Returns the type of this <code>CertStore</code>.
 	*
 	* @return the type of this <code>CertStore</code>
 	*/
-	@:overload @:final public function getType() : String;
+	@:overload @:public @:final public function getType() : String;
 	
 	/**
 	* Returns the provider of this <code>CertStore</code>.
 	*
 	* @return the provider of this <code>CertStore</code>
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Returns the default <code>CertStore</code> type as specified in the
@@ -269,7 +269,7 @@ extern class CertStore
 	* Java security properties file, or the string &quot;LDAP&quot;
 	* if no such property exists.
 	*/
-	@:overload @:final public static function getDefaultType() : String;
+	@:overload @:public @:final @:static public static function getDefaultType() : String;
 	
 	
 }

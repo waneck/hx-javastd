@@ -68,7 +68,7 @@ extern class PropertyEditorManager
 	*
 	* @see SecurityManager#checkPropertiesAccess
 	*/
-	@:overload public static function registerEditor(targetType : Class<Dynamic>, editorClass : Class<Dynamic>) : Void;
+	@:overload @:public @:static public static function registerEditor(targetType : Class<Dynamic>, editorClass : Class<Dynamic>) : Void;
 	
 	/**
 	* Locate a value editor for a given target type.
@@ -77,7 +77,7 @@ extern class PropertyEditorManager
 	* @return An editor object for the given target class.
 	* The result is null if no suitable editor can be found.
 	*/
-	@:overload public static function findEditor(targetType : Class<Dynamic>) : java.beans.PropertyEditor;
+	@:overload @:public @:static public static function findEditor(targetType : Class<Dynamic>) : java.beans.PropertyEditor;
 	
 	/**
 	* Gets the package names that will be searched for property editors.
@@ -87,7 +87,7 @@ extern class PropertyEditorManager
 	* <p>     The default value for this array is implementation-dependent,
 	*         e.g. Sun implementation initially sets to  {"sun.beans.editors"}.
 	*/
-	@:overload public static function getEditorSearchPath() : java.NativeArray<String>;
+	@:overload @:public @:static public static function getEditorSearchPath() : java.NativeArray<String>;
 	
 	/**
 	* Change the list of package names that will be used for
@@ -102,7 +102,7 @@ extern class PropertyEditorManager
 	*              of system properties.
 	* @see SecurityManager#checkPropertiesAccess
 	*/
-	@:overload public static function setEditorSearchPath(path : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function setEditorSearchPath(path : java.NativeArray<String>) : Void;
 	
 	
 }

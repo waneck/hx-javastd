@@ -31,12 +31,12 @@ package com.sun.corba.se.impl.io;
 */
 extern class ObjectStreamClass implements java.io.Serializable
 {
-	public static var kDefaultUID(default, null) : haxe.Int64;
+	@:public @:static @:final public static var kDefaultUID(default, null) : haxe.Int64;
 	
 	/**
 	* The name of the class described by this descriptor.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	/**
 	* Return the serialVersionUID for this class.
@@ -44,7 +44,7 @@ extern class ObjectStreamClass implements java.io.Serializable
 	* that have evolved from a common root class and agree to be serialized
 	* and deserialized using a common format.
 	*/
-	@:native('getSerialVersionUID') @:overload @:final public static function _getSerialVersionUID(clazz : Class<Dynamic>) : haxe.Int64;
+	@:native('getSerialVersionUID') @:overload @:public @:static @:final public static function _getSerialVersionUID(clazz : Class<Dynamic>) : haxe.Int64;
 	
 	/**
 	* Return the serialVersionUID for this class.
@@ -52,7 +52,7 @@ extern class ObjectStreamClass implements java.io.Serializable
 	* that have evolved from a common root class and agree to be serialized
 	* and deserialized using a common format.
 	*/
-	@:overload @:final public function getSerialVersionUID() : haxe.Int64;
+	@:overload @:public @:final public function getSerialVersionUID() : haxe.Int64;
 	
 	/**
 	* Return the serialVersionUID string for this class.
@@ -60,28 +60,28 @@ extern class ObjectStreamClass implements java.io.Serializable
 	* that have evolved from a common root class and agree to be serialized
 	* and deserialized using a common format.
 	*/
-	@:overload @:final public function getSerialVersionUIDStr() : String;
+	@:overload @:public @:final public function getSerialVersionUIDStr() : String;
 	
 	/**
 	* Return the actual (computed) serialVersionUID for this class.
 	*/
-	@:native('getActualSerialVersionUID') @:overload @:final public static function _getActualSerialVersionUID(clazz : Class<Dynamic>) : haxe.Int64;
+	@:native('getActualSerialVersionUID') @:overload @:public @:static @:final public static function _getActualSerialVersionUID(clazz : Class<Dynamic>) : haxe.Int64;
 	
 	/**
 	* Return the actual (computed) serialVersionUID for this class.
 	*/
-	@:overload @:final public function getActualSerialVersionUID() : haxe.Int64;
+	@:overload @:public @:final public function getActualSerialVersionUID() : haxe.Int64;
 	
 	/**
 	* Return the actual (computed) serialVersionUID for this class.
 	*/
-	@:overload @:final public function getActualSerialVersionUIDStr() : String;
+	@:overload @:public @:final public function getActualSerialVersionUIDStr() : String;
 	
 	/**
 	* Return the class in the local VM that this version is mapped to.
 	* Null is returned if there is no corresponding local class.
 	*/
-	@:overload @:final public function forClass() : Class<Dynamic>;
+	@:overload @:public @:final public function forClass() : Class<Dynamic>;
 	
 	/**
 	* Return an array of the fields of this serializable class.
@@ -90,30 +90,30 @@ extern class ObjectStreamClass implements java.io.Serializable
 	* there are no fields.
 	* @since JDK1.2
 	*/
-	@:require(java2) @:overload public function getFields() : java.NativeArray<com.sun.corba.se.impl.io.ObjectStreamField>;
+	@:require(java2) @:overload @:public public function getFields() : java.NativeArray<com.sun.corba.se.impl.io.ObjectStreamField>;
 	
-	@:overload public function hasField(field : org.omg.CORBA.ValueMember) : Bool;
+	@:overload @:public public function hasField(field : org.omg.CORBA.ValueMember) : Bool;
 	
 	/**
 	* Get the field of this class by name.
 	* @return The ObjectStreamField object of the named field or null if there
 	* is no such named field.
 	*/
-	@:overload @:final public function getField(name : String) : com.sun.corba.se.impl.io.ObjectStreamField;
+	@:overload @:public @:final public function getField(name : String) : com.sun.corba.se.impl.io.ObjectStreamField;
 	
-	@:overload public function writeReplace(value : java.io.Serializable) : java.io.Serializable;
+	@:overload @:public public function writeReplace(value : java.io.Serializable) : java.io.Serializable;
 	
-	@:overload public function readResolve(value : Dynamic) : Dynamic;
+	@:overload @:public public function readResolve(value : Dynamic) : Dynamic;
 	
 	/**
 	* Return a string describing this ObjectStreamClass.
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/**
 	* This will return null if there is no writeObject method.
 	*/
-	@:overload @:final public function getRMIIIOPOptionalDataRepId() : String;
+	@:overload @:public @:final public function getRMIIIOPOptionalDataRepId() : String;
 	
 	/* JDK 1.5 has introduced some new modifier bits (such as SYNTHETIC)
 	* that can affect the SVUID computation (see bug 4897937).  These bits
@@ -121,17 +121,17 @@ extern class ObjectStreamClass implements java.io.Serializable
 	* JDK versions can be compromised.  I am adding these masks for this
 	* purpose as discussed in the CCC for this bug (see http://ccc.sfbay/4897937).
 	*/
-	public static var CLASS_MASK(default, null) : Int;
+	@:public @:static @:final public static var CLASS_MASK(default, null) : Int;
 	
-	public static var FIELD_MASK(default, null) : Int;
+	@:public @:static @:final public static var FIELD_MASK(default, null) : Int;
 	
-	public static var METHOD_MASK(default, null) : Int;
+	@:public @:static @:final public static var METHOD_MASK(default, null) : Int;
 	
 	/**
 	* Set serialPersistentFields of a Serializable class to this value to
 	* denote that the class has no Serializable fields.
 	*/
-	public static var NO_FIELDS(default, null) : java.NativeArray<com.sun.corba.se.impl.io.ObjectStreamField>;
+	@:public @:static @:final public static var NO_FIELDS(default, null) : java.NativeArray<com.sun.corba.se.impl.io.ObjectStreamField>;
 	
 	
 }
@@ -145,25 +145,25 @@ extern class ObjectStreamClass implements java.io.Serializable
 */
 @:native('com$sun$corba$se$impl$io$ObjectStreamClass$ObjectStreamClassEntry') @:internal extern class ObjectStreamClass_ObjectStreamClassEntry
 {
-	@:overload public function get() : Dynamic;
+	@:overload @:public public function get() : Dynamic;
 	
 	
 }
 @:native('com$sun$corba$se$impl$io$ObjectStreamClass$CompareClassByName') @:internal extern class ObjectStreamClass_CompareClassByName implements java.util.Comparator<Dynamic>
 {
-	@:overload public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
+	@:overload @:public public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
 	
 	
 }
 @:native('com$sun$corba$se$impl$io$ObjectStreamClass$CompareObjStrFieldsByName') @:internal extern class ObjectStreamClass_CompareObjStrFieldsByName implements java.util.Comparator<Dynamic>
 {
-	@:overload public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
+	@:overload @:public public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
 	
 	
 }
 @:native('com$sun$corba$se$impl$io$ObjectStreamClass$CompareMemberByName') @:internal extern class ObjectStreamClass_CompareMemberByName implements java.util.Comparator<Dynamic>
 {
-	@:overload public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
+	@:overload @:public public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
 	
 	
 }
@@ -173,7 +173,7 @@ many times, so compute it only once using this data structure. */
 {
 	/* Assumes that o1 and o2 are either both methods
 	or both constructors.*/
-	@:overload public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
+	@:overload @:public public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
 	
 	
 }

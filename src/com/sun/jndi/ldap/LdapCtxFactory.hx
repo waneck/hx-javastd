@@ -28,18 +28,18 @@ extern class LdapCtxFactory implements javax.naming.spi.ObjectFactory implements
 	/**
 	* The type of each address in an LDAP reference.
 	*/
-	public static var ADDRESS_TYPE(default, null) : String;
+	@:public @:final @:static public static var ADDRESS_TYPE(default, null) : String;
 	
-	@:overload public function getObjectInstance(ref : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, env : java.util.Hashtable<Dynamic, Dynamic>) : Dynamic;
+	@:overload @:public public function getObjectInstance(ref : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, env : java.util.Hashtable<Dynamic, Dynamic>) : Dynamic;
 	
-	@:overload public function getInitialContext(envprops : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
+	@:overload @:public public function getInitialContext(envprops : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
 	
-	@:overload public static function getLdapCtxInstance(urlInfo : Dynamic, env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.directory.DirContext;
+	@:overload @:public @:static public static function getLdapCtxInstance(urlInfo : Dynamic, env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.directory.DirContext;
 	
 	/**
 	* Used by Obj and obj/RemoteToAttrs too so must be public
 	*/
-	@:overload public static function createTypeNameAttr(cl : Class<Dynamic>) : javax.naming.directory.Attribute;
+	@:overload @:public @:static public static function createTypeNameAttr(cl : Class<Dynamic>) : javax.naming.directory.Attribute;
 	
 	
 }

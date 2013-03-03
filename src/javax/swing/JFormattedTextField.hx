@@ -175,7 +175,7 @@ package javax.swing;
 	*
 	* @see #setFocusLostBehavior
 	*/
-	public static var COMMIT(default, null) : Int;
+	@:public @:static @:final public static var COMMIT(default, null) : Int;
 	
 	/**
 	* Constant identifying that when focus is lost,
@@ -185,7 +185,7 @@ package javax.swing;
 	*
 	* @see #setFocusLostBehavior
 	*/
-	public static var COMMIT_OR_REVERT(default, null) : Int;
+	@:public @:static @:final public static var COMMIT_OR_REVERT(default, null) : Int;
 	
 	/**
 	* Constant identifying that when focus is lost, editing value should
@@ -194,7 +194,7 @@ package javax.swing;
 	*
 	* @see #setFocusLostBehavior
 	*/
-	public static var REVERT(default, null) : Int;
+	@:public @:static @:final public static var REVERT(default, null) : Int;
 	
 	/**
 	* Constant identifying that when focus is lost, the edited value
@@ -202,7 +202,7 @@ package javax.swing;
 	*
 	* @see #setFocusLostBehavior
 	*/
-	public static var PERSIST(default, null) : Int;
+	@:public @:static @:final public static var PERSIST(default, null) : Int;
 	
 	/**
 	* Creates a <code>JFormattedTextField</code> with no
@@ -211,7 +211,7 @@ package javax.swing;
 	* <code>JFormattedTextField</code> to edit a particular type of
 	* value.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a JFormattedTextField with the specified value. This will
@@ -220,7 +220,7 @@ package javax.swing;
 	*
 	* @param value Initial value for the JFormattedTextField
 	*/
-	@:overload public function new(value : Dynamic) : Void;
+	@:overload @:public public function new(value : Dynamic) : Void;
 	
 	/**
 	* Creates a <code>JFormattedTextField</code>. <code>format</code> is
@@ -229,7 +229,7 @@ package javax.swing;
 	*
 	* @param format Format used to look up an AbstractFormatter
 	*/
-	@:overload public function new(format : java.text.Format) : Void;
+	@:overload @:public public function new(format : java.text.Format) : Void;
 	
 	/**
 	* Creates a <code>JFormattedTextField</code> with the specified
@@ -238,7 +238,7 @@ package javax.swing;
 	*
 	* @param formatter AbstractFormatter to use for formatting.
 	*/
-	@:overload public function new(formatter : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
+	@:overload @:public public function new(formatter : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
 	
 	/**
 	* Creates a <code>JFormattedTextField</code> with the specified
@@ -246,7 +246,7 @@ package javax.swing;
 	*
 	* @param factory AbstractFormatterFactory used for formatting.
 	*/
-	@:overload public function new(factory : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatterFactory) : Void;
+	@:overload @:public public function new(factory : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatterFactory) : Void;
 	
 	/**
 	* Creates a <code>JFormattedTextField</code> with the specified
@@ -256,7 +256,7 @@ package javax.swing;
 	*        formatting.
 	* @param currentValue Initial value to use
 	*/
-	@:overload public function new(factory : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatterFactory, currentValue : Dynamic) : Void;
+	@:overload @:public public function new(factory : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatterFactory, currentValue : Dynamic) : Void;
 	
 	/**
 	* Sets the behavior when focus is lost. This will be one of
@@ -283,7 +283,7 @@ package javax.swing;
 	*        PERSIST        JFormattedTextField.PERSIST
 	*  description: Behavior when component loses focus
 	*/
-	@:overload public function setFocusLostBehavior(behavior : Int) : Void;
+	@:overload @:public public function setFocusLostBehavior(behavior : Int) : Void;
 	
 	/**
 	* Returns the behavior when focus is lost. This will be one of
@@ -296,7 +296,7 @@ package javax.swing;
 	*
 	* @return returns behavior when focus is lost
 	*/
-	@:overload public function getFocusLostBehavior() : Int;
+	@:overload @:public public function getFocusLostBehavior() : Int;
 	
 	/**
 	* Sets the <code>AbstractFormatterFactory</code>.
@@ -324,7 +324,7 @@ package javax.swing;
 	* description: AbstractFormatterFactory, responsible for returning an
 	*              AbstractFormatter that can format the current value.
 	*/
-	@:overload public function setFormatterFactory(tf : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatterFactory) : Void;
+	@:overload @:public public function setFormatterFactory(tf : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatterFactory) : Void;
 	
 	/**
 	* Returns the current <code>AbstractFormatterFactory</code>.
@@ -333,7 +333,7 @@ package javax.swing;
 	* @return <code>AbstractFormatterFactory</code> used to determine
 	*         <code>AbstractFormatter</code>s
 	*/
-	@:overload public function getFormatterFactory() : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatterFactory;
+	@:overload @:public public function getFormatterFactory() : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatterFactory;
 	
 	/**
 	* Sets the current <code>AbstractFormatter</code>.
@@ -356,7 +356,7 @@ package javax.swing;
 	*   attribute: visualUpdate true
 	* description: TextFormatter, responsible for formatting the current value
 	*/
-	@:overload private function setFormatter(format : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
+	@:overload @:protected private function setFormatter(format : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
 	
 	/**
 	* Returns the <code>AbstractFormatter</code> that is used to format and
@@ -364,7 +364,7 @@ package javax.swing;
 	*
 	* @return AbstractFormatter used for formatting
 	*/
-	@:overload public function getFormatter() : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter;
+	@:overload @:public public function getFormatter() : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter;
 	
 	/**
 	* Sets the value that will be formatted by an
@@ -383,7 +383,7 @@ package javax.swing;
 	*   attribute: visualUpdate true
 	* description: The value to be formatted.
 	*/
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public public function setValue(value : Dynamic) : Void;
 	
 	/**
 	* Returns the last valid value. Based on the editing policy of
@@ -393,7 +393,7 @@ package javax.swing;
 	*
 	* @return Last valid value
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	/**
 	* Forces the current value to be taken from the
@@ -404,7 +404,7 @@ package javax.swing;
 	* @throws ParseException if the <code>AbstractFormatter</code> is not able
 	*         to format the current value
 	*/
-	@:overload public function commitEdit() : Void;
+	@:overload @:public public function commitEdit() : Void;
 	
 	/**
 	* Returns true if the current value being edited is valid. The value of
@@ -413,14 +413,14 @@ package javax.swing;
 	*
 	* @return true if the current value being edited is valid.
 	*/
-	@:overload public function isEditValid() : Bool;
+	@:overload @:public public function isEditValid() : Bool;
 	
 	/**
 	* Invoked when the user inputs an invalid value. This gives the
 	* component a chance to provide feedback. The default
 	* implementation beeps.
 	*/
-	@:overload private function invalidEdit() : Void;
+	@:overload @:protected private function invalidEdit() : Void;
 	
 	/**
 	* Processes any input method events, such as
@@ -430,7 +430,7 @@ package javax.swing;
 	* @param e the <code>InputMethodEvent</code>
 	* @see InputMethodEvent
 	*/
-	@:overload override private function processInputMethodEvent(e : java.awt.event.InputMethodEvent) : Void;
+	@:overload @:protected override private function processInputMethodEvent(e : java.awt.event.InputMethodEvent) : Void;
 	
 	/**
 	* Processes any focus events, such as
@@ -440,7 +440,7 @@ package javax.swing;
 	* @param e the <code>FocusEvent</code>
 	* @see FocusEvent
 	*/
-	@:overload override private function processFocusEvent(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:protected override private function processFocusEvent(e : java.awt.event.FocusEvent) : Void;
 	
 	/**
 	* Fetches the command list for the editor.  This is
@@ -451,7 +451,7 @@ package javax.swing;
 	*
 	* @return the command list
 	*/
-	@:overload override public function getActions() : java.NativeArray<javax.swing.Action>;
+	@:overload @:public override public function getActions() : java.NativeArray<javax.swing.Action>;
 	
 	/**
 	* Gets the class ID for a UI.
@@ -459,7 +459,7 @@ package javax.swing;
 	* @return the string "FormattedTextFieldUI"
 	* @see JComponent#getUIClassID
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Associates the editor with a text document.
@@ -474,7 +474,7 @@ package javax.swing;
 	*        bound: true
 	*       expert: true
 	*/
-	@:overload override public function setDocument(doc : javax.swing.text.Document) : Void;
+	@:overload @:public override public function setDocument(doc : javax.swing.text.Document) : Void;
 	
 	
 }
@@ -483,7 +483,7 @@ package javax.swing;
 */
 @:native('javax$swing$JFormattedTextField$FocusLostHandler') @:internal extern class JFormattedTextField_FocusLostHandler implements java.lang.Runnable implements java.io.Serializable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
@@ -510,7 +510,7 @@ package javax.swing;
 	*         return value implies the JFormattedTextField should behave
 	*         like a normal JTextField
 	*/
-	@:overload @:abstract public function getFormatter(tf : javax.swing.JFormattedTextField) : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter;
+	@:overload @:public @:abstract public function getFormatter(tf : javax.swing.JFormattedTextField) : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter;
 	
 	
 }
@@ -578,7 +578,7 @@ package javax.swing;
 	* @param ftf JFormattedTextField to format for, may be null indicating
 	*            uninstall from current JFormattedTextField.
 	*/
-	@:overload public function install(ftf : javax.swing.JFormattedTextField) : Void;
+	@:overload @:public public function install(ftf : javax.swing.JFormattedTextField) : Void;
 	
 	/**
 	* Uninstalls any state the <code>AbstractFormatter</code> may have
@@ -587,7 +587,7 @@ package javax.swing;
 	* and additional <code>Action</code>s installed on the
 	* <code>JFormattedTextField</code>.
 	*/
-	@:overload public function uninstall() : Void;
+	@:overload @:public public function uninstall() : Void;
 	
 	/**
 	* Parses <code>text</code> returning an arbitrary Object. Some
@@ -597,7 +597,7 @@ package javax.swing;
 	* @param text String to convert
 	* @return Object representation of text
 	*/
-	@:overload @:abstract public function stringToValue(text : String) : Dynamic;
+	@:overload @:public @:abstract public function stringToValue(text : String) : Dynamic;
 	
 	/**
 	* Returns the string value to display for <code>value</code>.
@@ -606,7 +606,7 @@ package javax.swing;
 	* @param value Value to convert
 	* @return String representation of value
 	*/
-	@:overload @:abstract public function valueToString(value : Dynamic) : String;
+	@:overload @:public @:abstract public function valueToString(value : Dynamic) : String;
 	
 	/**
 	* Returns the current <code>JFormattedTextField</code> the
@@ -614,13 +614,13 @@ package javax.swing;
 	*
 	* @return JFormattedTextField formatting for.
 	*/
-	@:overload private function getFormattedTextField() : javax.swing.JFormattedTextField;
+	@:overload @:protected private function getFormattedTextField() : javax.swing.JFormattedTextField;
 	
 	/**
 	* This should be invoked when the user types an invalid character.
 	* This forwards the call to the current JFormattedTextField.
 	*/
-	@:overload private function invalidEdit() : Void;
+	@:overload @:protected private function invalidEdit() : Void;
 	
 	/**
 	* Invoke this to update the <code>editValid</code> property of the
@@ -630,7 +630,7 @@ package javax.swing;
 	*
 	* @param valid Valid state of the JFormattedTextField
 	*/
-	@:overload private function setEditValid(valid : Bool) : Void;
+	@:overload @:protected private function setEditValid(valid : Bool) : Void;
 	
 	/**
 	* Subclass and override if you wish to provide a custom set of
@@ -639,7 +639,7 @@ package javax.swing;
 	*
 	* @return Array of Actions to install on JFormattedTextField
 	*/
-	@:overload private function getActions() : java.NativeArray<javax.swing.Action>;
+	@:overload @:protected private function getActions() : java.NativeArray<javax.swing.Action>;
 	
 	/**
 	* Subclass and override if you wish to provide a
@@ -649,7 +649,7 @@ package javax.swing;
 	*
 	* @return DocumentFilter to restrict edits
 	*/
-	@:overload private function getDocumentFilter() : javax.swing.text.DocumentFilter;
+	@:overload @:protected private function getDocumentFilter() : javax.swing.text.DocumentFilter;
 	
 	/**
 	* Subclass and override if you wish to provide a filter to restrict
@@ -659,7 +659,7 @@ package javax.swing;
 	*
 	* @return NavigationFilter to restrict navigation
 	*/
-	@:overload private function getNavigationFilter() : javax.swing.text.NavigationFilter;
+	@:overload @:protected private function getNavigationFilter() : javax.swing.text.NavigationFilter;
 	
 	/**
 	* Clones the <code>AbstractFormatter</code>. The returned instance
@@ -667,7 +667,7 @@ package javax.swing;
 	*
 	* @return Copy of the AbstractFormatter
 	*/
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected private function clone() : Dynamic;
 	
 	
 }
@@ -679,9 +679,9 @@ package javax.swing;
 */
 @:native('javax$swing$JFormattedTextField$CommitAction') @:internal extern class JFormattedTextField_CommitAction extends javax.swing.JTextField.JTextField_NotifyAction
 {
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
 	
 }
@@ -693,11 +693,11 @@ package javax.swing;
 */
 @:native('javax$swing$JFormattedTextField$CancelAction') @:internal extern class JFormattedTextField_CancelAction extends javax.swing.text.TextAction
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
 	
 }
@@ -706,11 +706,11 @@ package javax.swing;
 */
 @:native('javax$swing$JFormattedTextField$DocumentHandler') @:internal extern class JFormattedTextField_DocumentHandler implements javax.swing.event.DocumentListener implements java.io.Serializable
 {
-	@:overload public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	
 }

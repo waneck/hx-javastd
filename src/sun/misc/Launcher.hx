@@ -25,16 +25,16 @@ package sun.misc;
 */
 extern class Launcher
 {
-	@:overload public static function getLauncher() : sun.misc.Launcher;
+	@:overload @:public @:static public static function getLauncher() : sun.misc.Launcher;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/*
 	* Returns the class loader used to launch the main application.
 	*/
-	@:overload public function getClassLoader() : java.lang.ClassLoader;
+	@:overload @:public public function getClassLoader() : java.lang.ClassLoader;
 	
-	@:overload public static function getBootstrapClassPath() : sun.misc.URLClassPath;
+	@:overload @:public @:static public static function getBootstrapClassPath() : sun.misc.URLClassPath;
 	
 	
 }
@@ -47,12 +47,12 @@ extern class Launcher
 	* create an ExtClassLoader. The ExtClassLoader is created
 	* within a context that limits which files it can read
 	*/
-	@:overload public static function getExtClassLoader() : sun.misc.Launcher.Launcher_ExtClassLoader;
+	@:overload @:public @:static public static function getExtClassLoader() : sun.misc.Launcher.Launcher_ExtClassLoader;
 	
 	/*
 	* Creates a new ExtClassLoader for the specified directories.
 	*/
-	@:overload public function new(dirs : java.NativeArray<java.io.File>) : Void;
+	@:overload @:public public function new(dirs : java.NativeArray<java.io.File>) : Void;
 	
 	/*
 	* Searches the installed extension directories for the specified
@@ -61,7 +61,7 @@ extern class Launcher
 	* of the system property <code>os.arch</code>. Failing that, we
 	* look in the extension directory itself.
 	*/
-	@:overload public function findLibrary(name : String) : String;
+	@:overload @:public override public function findLibrary(name : String) : String;
 	
 	
 }
@@ -71,17 +71,17 @@ extern class Launcher
 */
 @:native('sun$misc$Launcher$AppClassLoader') @:internal extern class Launcher_AppClassLoader extends java.net.URLClassLoader
 {
-	@:overload public static function getAppClassLoader(extcl : java.lang.ClassLoader) : java.lang.ClassLoader;
+	@:overload @:public @:static public static function getAppClassLoader(extcl : java.lang.ClassLoader) : java.lang.ClassLoader;
 	
 	/**
 	* Override loadClass so we can checkPackageAccess.
 	*/
-	@:overload public function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
+	@:overload @:public override public function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
 	
 	/**
 	* allow any classes loaded from classpath to exit the VM.
 	*/
-	@:overload private function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
+	@:overload @:protected override private function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
 	
 	
 }
@@ -94,19 +94,19 @@ extern class Launcher
 */
 @:native('sun$misc$Launcher$Factory') @:internal extern class Launcher_Factory implements java.net.URLStreamHandlerFactory
 {
-	@:overload public function createURLStreamHandler(protocol : String) : java.net.URLStreamHandler;
+	@:overload @:public public function createURLStreamHandler(protocol : String) : java.net.URLStreamHandler;
 	
 	
 }
 @:internal extern class PathPermissions extends java.security.PermissionCollection
 {
-	@:overload public function add(permission : java.security.Permission) : Void;
+	@:overload @:public override public function add(permission : java.security.Permission) : Void;
 	
-	@:overload public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(permission : java.security.Permission) : Bool;
 	
-	@:overload public function elements() : java.util.Enumeration<java.security.Permission>;
+	@:overload @:public override public function elements() : java.util.Enumeration<java.security.Permission>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

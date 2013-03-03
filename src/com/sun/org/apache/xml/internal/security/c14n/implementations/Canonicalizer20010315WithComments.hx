@@ -25,13 +25,13 @@ extern class Canonicalizer20010315WithComments extends com.sun.org.apache.xml.in
 	* Constructor Canonicalizer20010315WithXPathWithComments
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** @inheritDoc */
-	@:overload @:final override public function engineGetURI() : String;
+	@:overload @:public @:final override public function engineGetURI() : String;
 	
 	/** @inheritDoc */
-	@:overload @:final override public function engineGetIncludeComments() : Bool;
+	@:overload @:public @:final override public function engineGetIncludeComments() : Bool;
 	
 	
 }

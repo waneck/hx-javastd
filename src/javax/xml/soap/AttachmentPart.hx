@@ -35,13 +35,13 @@ extern class AttachmentPart
 	*            corrupted of if there was an exception while trying
 	*            to determine the size.
 	*/
-	@:overload @:abstract public function getSize() : Int;
+	@:overload @:public @:abstract public function getSize() : Int;
 	
 	/**
 	* Clears out the content of this <code>AttachmentPart</code> object.
 	* The MIME header portion is left untouched.
 	*/
-	@:overload @:abstract public function clearContent() : Void;
+	@:overload @:public @:abstract public function clearContent() : Void;
 	
 	/**
 	* Gets the content of this <code>AttachmentPart</code> object as a Java
@@ -77,7 +77,7 @@ extern class AttachmentPart
 	*            <code>AttachmentPart</code> object or if there was a data
 	*            transformation error
 	*/
-	@:overload @:abstract public function getContent() : Dynamic;
+	@:overload @:public @:abstract public function getContent() : Dynamic;
 	
 	/**
 	* Gets the content of this <code>AttachmentPart</code> object as an
@@ -101,7 +101,7 @@ extern class AttachmentPart
 	* @since SAAJ 1.3
 	* @see #getRawContentBytes
 	*/
-	@:require(java3) @:overload @:abstract public function getRawContent() : java.io.InputStream;
+	@:require(java3) @:overload @:public @:abstract public function getRawContent() : java.io.InputStream;
 	
 	/**
 	* Gets the content of this <code>AttachmentPart</code> object as a
@@ -118,7 +118,7 @@ extern class AttachmentPart
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:abstract public function getRawContentBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:require(java3) @:overload @:public @:abstract public function getRawContentBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns an <code>InputStream</code> which can be used to obtain the
@@ -135,7 +135,7 @@ extern class AttachmentPart
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:abstract public function getBase64Content() : java.io.InputStream;
+	@:require(java3) @:overload @:public @:abstract public function getBase64Content() : java.io.InputStream;
 	
 	/**
 	* Sets the content of this attachment part to that of the given
@@ -158,7 +158,7 @@ extern class AttachmentPart
 	*
 	* @see #getContent
 	*/
-	@:overload @:abstract public function setContent(object : Dynamic, contentType : String) : Void;
+	@:overload @:public @:abstract public function setContent(object : Dynamic, contentType : String) : Void;
 	
 	/**
 	* Sets the content of this attachment part to that contained by the
@@ -177,7 +177,7 @@ extern class AttachmentPart
 	* @exception NullPointerException if <code>content</code> is null
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:abstract public function setRawContent(content : java.io.InputStream, contentType : String) : Void;
+	@:require(java3) @:overload @:public @:abstract public function setRawContent(content : java.io.InputStream, contentType : String) : Void;
 	
 	/**
 	* Sets the content of this attachment part to that contained by the
@@ -195,7 +195,7 @@ extern class AttachmentPart
 	* or content is null
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:abstract public function setRawContentBytes(content : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, contentType : String) : Void;
+	@:require(java3) @:overload @:public @:abstract public function setRawContentBytes(content : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, contentType : String) : Void;
 	
 	/**
 	* Sets the content of this attachment part from the Base64 source
@@ -216,7 +216,7 @@ extern class AttachmentPart
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:abstract public function setBase64Content(content : java.io.InputStream, contentType : String) : Void;
+	@:require(java3) @:overload @:public @:abstract public function setBase64Content(content : java.io.InputStream, contentType : String) : Void;
 	
 	/**
 	* Gets the <code>DataHandler</code> object for this <code>AttachmentPart</code>
@@ -228,7 +228,7 @@ extern class AttachmentPart
 	* @exception SOAPException if there is no data in
 	* this <code>AttachmentPart</code> object
 	*/
-	@:overload @:abstract public function getDataHandler() : javax.activation.DataHandler;
+	@:overload @:public @:abstract public function getDataHandler() : javax.activation.DataHandler;
 	
 	/**
 	* Sets the given <code>DataHandler</code> object as the data handler
@@ -243,7 +243,7 @@ extern class AttachmentPart
 	* @exception IllegalArgumentException if there was a problem with
 	*            the specified <code>DataHandler</code> object
 	*/
-	@:overload @:abstract public function setDataHandler(dataHandler : javax.activation.DataHandler) : Void;
+	@:overload @:public @:abstract public function setDataHandler(dataHandler : javax.activation.DataHandler) : Void;
 	
 	/**
 	* Gets the value of the MIME header whose name is "Content-ID".
@@ -253,7 +253,7 @@ extern class AttachmentPart
 	*          is none
 	* @see #setContentId
 	*/
-	@:overload public function getContentId() : String;
+	@:overload @:public public function getContentId() : String;
 	
 	/**
 	* Gets the value of the MIME header whose name is "Content-Location".
@@ -262,7 +262,7 @@ extern class AttachmentPart
 	*          "Content-Location" header or <code>null</code> if there
 	*          is none
 	*/
-	@:overload public function getContentLocation() : String;
+	@:overload @:public public function getContentLocation() : String;
 	
 	/**
 	* Gets the value of the MIME header whose name is "Content-Type".
@@ -271,7 +271,7 @@ extern class AttachmentPart
 	*          "Content-Type" header or <code>null</code> if there
 	*          is none
 	*/
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
 	/**
 	* Sets the MIME header whose name is "Content-ID" with the given value.
@@ -283,7 +283,7 @@ extern class AttachmentPart
 	*            the specified <code>contentId</code> value
 	* @see #getContentId
 	*/
-	@:overload public function setContentId(contentId : String) : Void;
+	@:overload @:public public function setContentId(contentId : String) : Void;
 	
 	/**
 	* Sets the MIME header whose name is "Content-Location" with the given value.
@@ -294,7 +294,7 @@ extern class AttachmentPart
 	* @exception IllegalArgumentException if there was a problem with
 	*            the specified content location
 	*/
-	@:overload public function setContentLocation(contentLocation : String) : Void;
+	@:overload @:public public function setContentLocation(contentLocation : String) : Void;
 	
 	/**
 	* Sets the MIME header whose name is "Content-Type" with the given value.
@@ -305,7 +305,7 @@ extern class AttachmentPart
 	* @exception IllegalArgumentException if there was a problem with
 	*            the specified content type
 	*/
-	@:overload public function setContentType(contentType : String) : Void;
+	@:overload @:public public function setContentType(contentType : String) : Void;
 	
 	/**
 	* Removes all MIME headers that match the given name.
@@ -313,12 +313,12 @@ extern class AttachmentPart
 	* @param header the string name of the MIME header/s to
 	*               be removed
 	*/
-	@:overload @:abstract public function removeMimeHeader(header : String) : Void;
+	@:overload @:public @:abstract public function removeMimeHeader(header : String) : Void;
 	
 	/**
 	* Removes all the MIME header entries.
 	*/
-	@:overload @:abstract public function removeAllMimeHeaders() : Void;
+	@:overload @:public @:abstract public function removeAllMimeHeaders() : Void;
 	
 	/**
 	* Gets all the values of the header identified by the given
@@ -329,7 +329,7 @@ extern class AttachmentPart
 	*         specified header
 	* @see #setMimeHeader
 	*/
-	@:overload @:abstract public function getMimeHeader(name : String) : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getMimeHeader(name : String) : java.NativeArray<String>;
 	
 	/**
 	* Changes the first header entry that matches the given name
@@ -346,7 +346,7 @@ extern class AttachmentPart
 	* @exception IllegalArgumentException if there was a problem with
 	*            the specified mime header name or value
 	*/
-	@:overload @:abstract public function setMimeHeader(name : String, value : String) : Void;
+	@:overload @:public @:abstract public function setMimeHeader(name : String, value : String) : Void;
 	
 	/**
 	* Adds a MIME header with the specified name and value to this
@@ -362,7 +362,7 @@ extern class AttachmentPart
 	* @exception IllegalArgumentException if there was a problem with
 	*            the specified mime header name or value
 	*/
-	@:overload @:abstract public function addMimeHeader(name : String, value : String) : Void;
+	@:overload @:public @:abstract public function addMimeHeader(name : String, value : String) : Void;
 	
 	/**
 	* Retrieves all the headers for this <code>AttachmentPart</code> object
@@ -371,7 +371,7 @@ extern class AttachmentPart
 	* @return  an <code>Iterator</code> object with all of the Mime
 	*          headers for this <code>AttachmentPart</code> object
 	*/
-	@:overload @:abstract public function getAllMimeHeaders() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:abstract public function getAllMimeHeaders() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Retrieves all <code>MimeHeader</code> objects that match a name in
@@ -382,7 +382,7 @@ extern class AttachmentPart
 	* @return  all of the MIME headers that match one of the names in the
 	*           given array as an <code>Iterator</code> object
 	*/
-	@:overload @:abstract public function getMatchingMimeHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:abstract public function getMatchingMimeHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Retrieves all <code>MimeHeader</code> objects whose name does
@@ -395,7 +395,7 @@ extern class AttachmentPart
 	*           given array.  The nonmatching MIME headers are returned as an
 	*           <code>Iterator</code> object.
 	*/
-	@:overload @:abstract public function getNonMatchingMimeHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:abstract public function getNonMatchingMimeHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
 	
 	
 }

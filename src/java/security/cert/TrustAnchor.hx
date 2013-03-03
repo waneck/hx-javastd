@@ -76,7 +76,7 @@ extern class TrustAnchor
 	* @throws NullPointerException if the specified
 	* <code>X509Certificate</code> is <code>null</code>
 	*/
-	@:overload public function new(trustedCert : java.security.cert.X509Certificate, nameConstraints : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(trustedCert : java.security.cert.X509Certificate, nameConstraints : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Creates an instance of <code>TrustAnchor</code> where the
@@ -105,7 +105,7 @@ extern class TrustAnchor
 	* <code>pubKey</code> parameter is <code>null</code>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(caPrincipal : javax.security.auth.x500.X500Principal, pubKey : java.security.PublicKey, nameConstraints : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:require(java5) @:overload @:public public function new(caPrincipal : javax.security.auth.x500.X500Principal, pubKey : java.security.PublicKey, nameConstraints : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Creates an instance of <code>TrustAnchor</code> where the
@@ -138,7 +138,7 @@ extern class TrustAnchor
 	* @throws NullPointerException if the specified <code>caName</code> or
 	* <code>pubKey</code> parameter is <code>null</code>
 	*/
-	@:overload public function new(caName : String, pubKey : java.security.PublicKey, nameConstraints : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(caName : String, pubKey : java.security.PublicKey, nameConstraints : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the most-trusted CA certificate.
@@ -146,7 +146,7 @@ extern class TrustAnchor
 	* @return a trusted <code>X509Certificate</code> or <code>null</code>
 	* if the trust anchor was not specified as a trusted certificate
 	*/
-	@:overload @:final public function getTrustedCert() : java.security.cert.X509Certificate;
+	@:overload @:public @:final public function getTrustedCert() : java.security.cert.X509Certificate;
 	
 	/**
 	* Returns the name of the most-trusted CA as an X500Principal.
@@ -156,7 +156,7 @@ extern class TrustAnchor
 	* public key and name or X500Principal pair
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function getCA() : javax.security.auth.x500.X500Principal;
+	@:require(java5) @:overload @:public @:final public function getCA() : javax.security.auth.x500.X500Principal;
 	
 	/**
 	* Returns the name of the most-trusted CA in RFC 2253 <code>String</code>
@@ -166,7 +166,7 @@ extern class TrustAnchor
 	* <code>null</code> if the trust anchor was not specified as a trusted
 	* public key and name or X500Principal pair
 	*/
-	@:overload @:final public function getCAName() : String;
+	@:overload @:public @:final public function getCAName() : String;
 	
 	/**
 	* Returns the public key of the most-trusted CA.
@@ -175,7 +175,7 @@ extern class TrustAnchor
 	* if the trust anchor was not specified as a trusted public key and name
 	* or X500Principal pair
 	*/
-	@:overload @:final public function getCAPublicKey() : java.security.PublicKey;
+	@:overload @:public @:final public function getCAPublicKey() : java.security.PublicKey;
 	
 	/**
 	* Returns the name constraints parameter. The specified name constraints
@@ -197,14 +197,14 @@ extern class TrustAnchor
 	*         a NameConstraints extension used for checking name constraints,
 	*         or <code>null</code> if not set.
 	*/
-	@:overload @:final public function getNameConstraints() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getNameConstraints() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a formatted string describing the <code>TrustAnchor</code>.
 	*
 	* @return a formatted string describing the <code>TrustAnchor</code>
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

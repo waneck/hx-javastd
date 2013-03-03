@@ -32,12 +32,12 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	* @exception IllegalArgumentException if the specified initial capacity
 	*            is negative
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs an empty list with an initial capacity of ten.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a list containing the elements of the specified
@@ -47,14 +47,14 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	* @param c the collection whose elements are to be placed into this list
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload public function new(c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	/**
 	* Trims the capacity of this <tt>IdentityArrayList</tt> instance to be the
 	* list's current size.  An application can use this operation to minimize
 	* the storage of an <tt>IdentityArrayList</tt> instance.
 	*/
-	@:overload public function trimToSize() : Void;
+	@:overload @:public public function trimToSize() : Void;
 	
 	/**
 	* Increases the capacity of this <tt>IdentityArrayList</tt> instance, if
@@ -63,21 +63,21 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	*
 	* @param   minCapacity   the desired minimum capacity
 	*/
-	@:overload public function ensureCapacity(minCapacity : Int) : Void;
+	@:overload @:public public function ensureCapacity(minCapacity : Int) : Void;
 	
 	/**
 	* Returns the number of elements in this list.
 	*
 	* @return the number of elements in this list
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains no elements.
 	*
 	* @return <tt>true</tt> if this list contains no elements
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains the specified element.
@@ -88,7 +88,7 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	* @param o element whose presence in this list is to be tested
 	* @return <tt>true</tt> if this list contains the specified element
 	*/
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the index of the first occurrence of the specified element
@@ -97,7 +97,7 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	* <tt>(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o == get(i))</tt>,
 	* or -1 if there is no such index.
 	*/
-	@:overload public function indexOf(o : Dynamic) : Int;
+	@:overload @:public override public function indexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns the index of the last occurrence of the specified element
@@ -106,7 +106,7 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	* <tt>(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o == get(i))</tt>,
 	* or -1 if there is no such index.
 	*/
-	@:overload public function lastIndexOf(o : Dynamic) : Int;
+	@:overload @:public override public function lastIndexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns an array containing all of the elements in this list
@@ -122,7 +122,7 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	* @return an array containing all of the elements in this list in
 	*         proper sequence
 	*/
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this list in proper
@@ -148,7 +148,7 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	*         this list
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Returns the element at the specified position in this list.
@@ -157,7 +157,7 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	* @return the element at the specified position in this list
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function get(index : Int) : E;
+	@:overload @:public override public function get(index : Int) : E;
 	
 	/**
 	* Replaces the element at the specified position in this list with
@@ -168,7 +168,7 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	* @return the element previously at the specified position
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function set(index : Int, element : E) : E;
+	@:overload @:public override public function set(index : Int, element : E) : E;
 	
 	/**
 	* Appends the specified element to the end of this list.
@@ -176,7 +176,7 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	* @param e element to be appended to this list
 	* @return <tt>true</tt> (as specified by {@link Collection#add})
 	*/
-	@:overload public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element at the specified position in this
@@ -187,7 +187,7 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	* @param element element to be inserted
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function add(index : Int, element : E) : Void;
+	@:overload @:public override public function add(index : Int, element : E) : Void;
 	
 	/**
 	* Removes the element at the specified position in this list.
@@ -198,7 +198,7 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	* @return the element that was removed from the list
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function remove(index : Int) : E;
+	@:overload @:public override public function remove(index : Int) : E;
 	
 	/**
 	* Removes the first occurrence of the specified element from this list,
@@ -213,13 +213,13 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	* @param o element to be removed from this list, if present
 	* @return <tt>true</tt> if this list contained the specified element
 	*/
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Removes all of the elements from this list.  The list will
 	* be empty after this call returns.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Appends all of the elements in the specified collection to the end of
@@ -234,7 +234,7 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	* @return <tt>true</tt> if this list changed as a result of the call
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload public function addAll(c : java.util.Collection<E>) : Bool;
+	@:overload @:public override public function addAll(c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Inserts all of the elements in the specified collection into this
@@ -251,7 +251,7 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
+	@:overload @:public override public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Removes from this list all of the elements whose index is between
@@ -266,7 +266,7 @@ extern class IdentityArrayList<E> extends java.util.AbstractList<E> implements j
 	*              range (fromIndex &lt; 0 || fromIndex &gt;= size() || toIndex
 	*              &gt; size() || toIndex &lt; fromIndex)
 	*/
-	@:overload private function removeRange(fromIndex : Int, toIndex : Int) : Void;
+	@:overload @:protected override private function removeRange(fromIndex : Int, toIndex : Int) : Void;
 	
 	
 }

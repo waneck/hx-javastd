@@ -25,25 +25,25 @@ package com.sun.xml.internal.bind.v2.model.annotation;
 */
 @:internal extern class XmlElementQuick extends com.sun.xml.internal.bind.v2.model.annotation.Quick implements javax.xml.bind.annotation.XmlElement
 {
-	@:overload public function new(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : javax.xml.bind.annotation.XmlElement) : Void;
+	@:overload @:public public function new(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : javax.xml.bind.annotation.XmlElement) : Void;
 	
-	@:overload private function getAnnotation() : java.lang.annotation.Annotation;
+	@:overload @:protected override private function getAnnotation() : java.lang.annotation.Annotation;
 	
-	@:overload private function newInstance(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : java.lang.annotation.Annotation) : com.sun.xml.internal.bind.v2.model.annotation.Quick;
+	@:overload @:protected override private function newInstance(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : java.lang.annotation.Annotation) : com.sun.xml.internal.bind.v2.model.annotation.Quick;
 	
-	@:overload public function annotationType() : Class<javax.xml.bind.annotation.XmlElement>;
+	@:overload @:public override public function annotationType() : Class<javax.xml.bind.annotation.XmlElement>;
 	
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function type() : Class<Dynamic>;
+	@:overload @:public public function type() : Class<Dynamic>;
 	
-	@:overload public function namespace() : String;
+	@:overload @:public public function namespace() : String;
 	
-	@:overload public function defaultValue() : String;
+	@:overload @:public public function defaultValue() : String;
 	
-	@:overload public function required() : Bool;
+	@:overload @:public public function required() : Bool;
 	
-	@:overload public function nillable() : Bool;
+	@:overload @:public public function nillable() : Bool;
 	
 	
 }

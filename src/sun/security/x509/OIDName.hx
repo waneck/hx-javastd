@@ -41,14 +41,14 @@ extern class OIDName implements sun.security.x509.GeneralNameInterface
 	* @param derValue the encoded DER OIDName.
 	* @exception IOException on error.
 	*/
-	@:overload public function new(derValue : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(derValue : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Create the OIDName object with the specified name.
 	*
 	* @param name the OIDName.
 	*/
-	@:overload public function new(oid : sun.security.util.ObjectIdentifier) : Void;
+	@:overload @:public public function new(oid : sun.security.util.ObjectIdentifier) : Void;
 	
 	/**
 	* Create the OIDName from the String form of the OID
@@ -56,12 +56,12 @@ extern class OIDName implements sun.security.x509.GeneralNameInterface
 	* @param name the OIDName in form "x.y.z..."
 	* @throws IOException on error
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Return the type of the GeneralName.
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Encode the OID name into the DerOutputStream.
@@ -69,31 +69,31 @@ extern class OIDName implements sun.security.x509.GeneralNameInterface
 	* @param out the DER stream to encode the OIDName to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Convert the name into user readable string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns this OID name.
 	*/
-	@:overload public function getOID() : sun.security.util.ObjectIdentifier;
+	@:overload @:public public function getOID() : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Compares this name with another, for equality.
 	*
 	* @return true iff the names are identical
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Return type of constraint inputName places on this name:<ul>
@@ -110,7 +110,7 @@ extern class OIDName implements sun.security.x509.GeneralNameInterface
 	* @throws UnsupportedOperationException if name is not exact match, but narrowing and widening are
 	*          not supported for this name type.
 	*/
-	@:overload public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
+	@:overload @:public public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
 	
 	/**
 	* Return subtree depth of this name for purposes of determining
@@ -120,7 +120,7 @@ extern class OIDName implements sun.security.x509.GeneralNameInterface
 	* @returns distance of name from root
 	* @throws UnsupportedOperationException if not supported for this name type
 	*/
-	@:overload public function subtreeDepth() : Int;
+	@:overload @:public public function subtreeDepth() : Int;
 	
 	
 }

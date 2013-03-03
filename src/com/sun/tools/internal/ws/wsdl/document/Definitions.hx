@@ -30,68 +30,68 @@ package com.sun.tools.internal.ws.wsdl.document;
 */
 extern class Definitions extends com.sun.tools.internal.ws.wsdl.framework.Entity implements com.sun.tools.internal.ws.wsdl.framework.Defining implements com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible
 {
-	@:overload public function new(document : com.sun.tools.internal.ws.wsdl.framework.AbstractDocument, locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(document : com.sun.tools.internal.ws.wsdl.framework.AbstractDocument, locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(s : String) : Void;
+	@:overload @:public public function setName(s : String) : Void;
 	
-	@:overload public function getTargetNamespaceURI() : String;
+	@:overload @:public public function getTargetNamespaceURI() : String;
 	
-	@:overload public function setTargetNamespaceURI(s : String) : Void;
+	@:overload @:public public function setTargetNamespaceURI(s : String) : Void;
 	
-	@:overload public function setTypes(t : com.sun.tools.internal.ws.wsdl.document.Types) : Void;
+	@:overload @:public public function setTypes(t : com.sun.tools.internal.ws.wsdl.document.Types) : Void;
 	
-	@:overload public function getTypes() : com.sun.tools.internal.ws.wsdl.document.Types;
+	@:overload @:public public function getTypes() : com.sun.tools.internal.ws.wsdl.document.Types;
 	
-	@:overload public function add(m : com.sun.tools.internal.ws.wsdl.document.Message) : Void;
+	@:overload @:public public function add(m : com.sun.tools.internal.ws.wsdl.document.Message) : Void;
 	
-	@:overload public function add(p : com.sun.tools.internal.ws.wsdl.document.PortType) : Void;
+	@:overload @:public public function add(p : com.sun.tools.internal.ws.wsdl.document.PortType) : Void;
 	
-	@:overload public function add(b : com.sun.tools.internal.ws.wsdl.document.Binding) : Void;
+	@:overload @:public public function add(b : com.sun.tools.internal.ws.wsdl.document.Binding) : Void;
 	
-	@:overload public function add(s : com.sun.tools.internal.ws.wsdl.document.Service) : Void;
+	@:overload @:public public function add(s : com.sun.tools.internal.ws.wsdl.document.Service) : Void;
 	
-	@:overload public function addServiceOveride(s : com.sun.tools.internal.ws.wsdl.document.Service) : Void;
+	@:overload @:public public function addServiceOveride(s : com.sun.tools.internal.ws.wsdl.document.Service) : Void;
 	
-	@:overload public function add(i : com.sun.tools.internal.ws.wsdl.document.Import) : Void;
+	@:overload @:public public function add(i : com.sun.tools.internal.ws.wsdl.document.Import) : Void;
 	
-	@:overload public function imports() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function imports() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function messages() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function messages() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function portTypes() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function portTypes() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function bindings() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function bindings() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function services() : java.util.Iterator<com.sun.tools.internal.ws.wsdl.document.Service>;
+	@:overload @:public public function services() : java.util.Iterator<com.sun.tools.internal.ws.wsdl.document.Service>;
 	
-	@:overload public function getNameValue() : String;
+	@:overload @:public public function getNameValue() : String;
 	
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
-	@:overload public function getWSDLElementName() : javax.xml.namespace.QName;
+	@:overload @:public public function getWSDLElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function getDocumentation() : com.sun.tools.internal.ws.wsdl.document.Documentation;
+	@:overload @:public public function getDocumentation() : com.sun.tools.internal.ws.wsdl.document.Documentation;
 	
-	@:overload public function setDocumentation(d : com.sun.tools.internal.ws.wsdl.document.Documentation) : Void;
+	@:overload @:public public function setDocumentation(d : com.sun.tools.internal.ws.wsdl.document.Documentation) : Void;
 	
-	@:overload public function addExtension(e : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
+	@:overload @:public public function addExtension(e : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
 	
-	@:overload public function extensions() : java.lang.Iterable<com.sun.tools.internal.ws.api.wsdl.TWSDLExtension>;
+	@:overload @:public public function extensions() : java.lang.Iterable<com.sun.tools.internal.ws.api.wsdl.TWSDLExtension>;
 	
 	/**
 	* wsdl:definition is the root hence no parent so return null.
 	*/
-	@:overload public function getParent() : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible;
+	@:overload @:public public function getParent() : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible;
 	
-	@:overload override public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
+	@:overload @:public override public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
+	@:overload @:public public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload @:public override public function validateThis() : Void;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
 	
 }

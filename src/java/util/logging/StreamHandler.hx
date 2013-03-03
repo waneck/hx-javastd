@@ -57,7 +57,7 @@ package java.util.logging;
 	/**
 	* Create a <tt>StreamHandler</tt>, with no current output stream.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a <tt>StreamHandler</tt> with a given <tt>Formatter</tt>
@@ -66,7 +66,7 @@ package java.util.logging;
 	* @param out         the target output stream
 	* @param formatter   Formatter to be used to format output
 	*/
-	@:overload public function new(out : java.io.OutputStream, formatter : java.util.logging.Formatter) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, formatter : java.util.logging.Formatter) : Void;
 	
 	/**
 	* Change the output stream.
@@ -79,7 +79,7 @@ package java.util.logging;
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have <tt>LoggingPermission("control")</tt>.
 	*/
-	@:overload @:synchronized private function setOutputStream(out : java.io.OutputStream) : Void;
+	@:overload @:protected @:synchronized private function setOutputStream(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Set (or change) the character encoding used by this <tt>Handler</tt>.
@@ -94,7 +94,7 @@ package java.util.logging;
 	* @exception  UnsupportedEncodingException if the named encoding is
 	*          not supported.
 	*/
-	@:overload override public function setEncoding(encoding : String) : Void;
+	@:overload @:public override public function setEncoding(encoding : String) : Void;
 	
 	/**
 	* Format and publish a <tt>LogRecord</tt>.
@@ -113,7 +113,7 @@ package java.util.logging;
 	* @param  record  description of the log event. A null record is
 	*                 silently ignored and is not published
 	*/
-	@:overload @:synchronized override public function publish(record : java.util.logging.LogRecord) : Void;
+	@:overload @:public @:synchronized override public function publish(record : java.util.logging.LogRecord) : Void;
 	
 	/**
 	* Check if this <tt>Handler</tt> would actually log a given <tt>LogRecord</tt>.
@@ -126,12 +126,12 @@ package java.util.logging;
 	* @return true if the <tt>LogRecord</tt> would be logged.
 	*
 	*/
-	@:overload override public function isLoggable(record : java.util.logging.LogRecord) : Bool;
+	@:overload @:public override public function isLoggable(record : java.util.logging.LogRecord) : Bool;
 	
 	/**
 	* Flush any buffered messages.
 	*/
-	@:overload @:synchronized override public function flush() : Void;
+	@:overload @:public @:synchronized override public function flush() : Void;
 	
 	/**
 	* Close the current output stream.
@@ -144,7 +144,7 @@ package java.util.logging;
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have LoggingPermission("control").
 	*/
-	@:overload @:synchronized override public function close() : Void;
+	@:overload @:public @:synchronized override public function close() : Void;
 	
 	
 }

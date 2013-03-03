@@ -30,16 +30,16 @@ package com.sun.mirror.util;
 	*
 	* @param d the declaration to visit
 	*/
-	@:overload override public function visitTypeDeclaration(d : com.sun.mirror.declaration.TypeDeclaration) : Void;
+	@:overload @:public override public function visitTypeDeclaration(d : com.sun.mirror.declaration.TypeDeclaration) : Void;
 	
 	/**
 	* Visits a class declaration.
 	*
 	* @param d the declaration to visit
 	*/
-	@:overload override public function visitClassDeclaration(d : com.sun.mirror.declaration.ClassDeclaration) : Void;
+	@:overload @:public override public function visitClassDeclaration(d : com.sun.mirror.declaration.ClassDeclaration) : Void;
 	
-	@:overload override public function visitExecutableDeclaration(d : com.sun.mirror.declaration.ExecutableDeclaration) : Void;
+	@:overload @:public override public function visitExecutableDeclaration(d : com.sun.mirror.declaration.ExecutableDeclaration) : Void;
 	
 	
 }
@@ -66,31 +66,31 @@ package com.sun.mirror.util;
 */
 @:require(java5) @:native('com$sun$mirror$util$SourceOrderDeclScanner$SourceOrderComparator') @:internal extern class SourceOrderDeclScanner_SourceOrderComparator implements java.util.Comparator<com.sun.mirror.declaration.Declaration>
 {
-	@:overload public function compare(d1 : com.sun.mirror.declaration.Declaration, d2 : com.sun.mirror.declaration.Declaration) : Int;
+	@:overload @:public public function compare(d1 : com.sun.mirror.declaration.Declaration, d2 : com.sun.mirror.declaration.Declaration) : Int;
 	
 	
 }
 @:native('com$sun$mirror$util$SourceOrderDeclScanner$SourceOrderComparator$DeclPartialOrder') @:internal extern class SourceOrderDeclScanner_SourceOrderComparator_DeclPartialOrder extends com.sun.mirror.util.SimpleDeclarationVisitor
 {
-	@:overload public function getValue() : Int;
+	@:overload @:public public function getValue() : Int;
 	
-	@:overload public function visitTypeParameterDeclaration(d : com.sun.mirror.declaration.TypeParameterDeclaration) : Void;
+	@:overload @:public override public function visitTypeParameterDeclaration(d : com.sun.mirror.declaration.TypeParameterDeclaration) : Void;
 	
-	@:overload public function visitEnumConstantDeclaration(d : com.sun.mirror.declaration.EnumConstantDeclaration) : Void;
+	@:overload @:public override public function visitEnumConstantDeclaration(d : com.sun.mirror.declaration.EnumConstantDeclaration) : Void;
 	
-	@:overload public function visitClassDeclaration(d : com.sun.mirror.declaration.ClassDeclaration) : Void;
+	@:overload @:public override public function visitClassDeclaration(d : com.sun.mirror.declaration.ClassDeclaration) : Void;
 	
-	@:overload public function visitInterfaceDeclaration(d : com.sun.mirror.declaration.InterfaceDeclaration) : Void;
+	@:overload @:public override public function visitInterfaceDeclaration(d : com.sun.mirror.declaration.InterfaceDeclaration) : Void;
 	
-	@:overload public function visitEnumDeclaration(d : com.sun.mirror.declaration.EnumDeclaration) : Void;
+	@:overload @:public override public function visitEnumDeclaration(d : com.sun.mirror.declaration.EnumDeclaration) : Void;
 	
-	@:overload public function visitAnnotationTypeDeclaration(d : com.sun.mirror.declaration.AnnotationTypeDeclaration) : Void;
+	@:overload @:public override public function visitAnnotationTypeDeclaration(d : com.sun.mirror.declaration.AnnotationTypeDeclaration) : Void;
 	
-	@:overload public function visitFieldDeclaration(d : com.sun.mirror.declaration.FieldDeclaration) : Void;
+	@:overload @:public override public function visitFieldDeclaration(d : com.sun.mirror.declaration.FieldDeclaration) : Void;
 	
-	@:overload public function visitConstructorDeclaration(d : com.sun.mirror.declaration.ConstructorDeclaration) : Void;
+	@:overload @:public override public function visitConstructorDeclaration(d : com.sun.mirror.declaration.ConstructorDeclaration) : Void;
 	
-	@:overload public function visitMethodDeclaration(d : com.sun.mirror.declaration.MethodDeclaration) : Void;
+	@:overload @:public override public function visitMethodDeclaration(d : com.sun.mirror.declaration.MethodDeclaration) : Void;
 	
 	
 }

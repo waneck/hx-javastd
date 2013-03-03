@@ -26,54 +26,54 @@ package com.sun.org.apache.xalan.internal.xsltc.util;
 */
 extern class IntegerArray
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
-	@:overload public function new(array : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(array : java.NativeArray<Int>) : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function toIntArray() : java.NativeArray<Int>;
+	@:overload @:public public function toIntArray() : java.NativeArray<Int>;
 	
-	@:overload @:final public function at(index : Int) : Int;
+	@:overload @:public @:final public function at(index : Int) : Int;
 	
-	@:overload @:final public function set(index : Int, value : Int) : Void;
+	@:overload @:public @:final public function set(index : Int, value : Int) : Void;
 	
-	@:overload public function indexOf(n : Int) : Int;
+	@:overload @:public public function indexOf(n : Int) : Int;
 	
-	@:overload @:final public function add(value : Int) : Void;
+	@:overload @:public @:final public function add(value : Int) : Void;
 	
 	/**
 	* Adds new int at the end if not already present.
 	*/
-	@:overload public function addNew(value : Int) : Void;
+	@:overload @:public public function addNew(value : Int) : Void;
 	
-	@:overload public function reverse() : Void;
+	@:overload @:public public function reverse() : Void;
 	
 	/**
 	* Merge two sorted arrays and eliminate duplicates.
 	* Elements of the other IntegerArray must not be changed.
 	*/
-	@:overload public function merge(other : com.sun.org.apache.xalan.internal.xsltc.util.IntegerArray) : Void;
+	@:overload @:public public function merge(other : com.sun.org.apache.xalan.internal.xsltc.util.IntegerArray) : Void;
 	
-	@:overload public function sort() : Void;
+	@:overload @:public public function sort() : Void;
 	
-	@:overload public function popLast() : Int;
+	@:overload @:public public function popLast() : Int;
 	
-	@:overload public function last() : Int;
+	@:overload @:public public function last() : Int;
 	
-	@:overload public function setLast(n : Int) : Void;
+	@:overload @:public public function setLast(n : Int) : Void;
 	
-	@:overload public function pop() : Void;
+	@:overload @:public public function pop() : Void;
 	
-	@:overload public function pop(n : Int) : Void;
+	@:overload @:public public function pop(n : Int) : Void;
 	
-	@:overload @:final public function cardinality() : Int;
+	@:overload @:public @:final public function cardinality() : Int;
 	
-	@:overload public function print(out : java.io.PrintStream) : Void;
+	@:overload @:public public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

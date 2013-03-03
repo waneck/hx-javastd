@@ -332,7 +332,7 @@ package java.util.concurrent;
 	*         {@code maximumPoolSize < corePoolSize}
 	* @throws NullPointerException if {@code workQueue} is null
 	*/
-	@:overload public function new(corePoolSize : Int, maximumPoolSize : Int, keepAliveTime : haxe.Int64, unit : java.util.concurrent.TimeUnit, workQueue : java.util.concurrent.BlockingQueue<java.lang.Runnable>) : Void;
+	@:overload @:public public function new(corePoolSize : Int, maximumPoolSize : Int, keepAliveTime : haxe.Int64, unit : java.util.concurrent.TimeUnit, workQueue : java.util.concurrent.BlockingQueue<java.lang.Runnable>) : Void;
 	
 	/**
 	* Creates a new {@code ThreadPoolExecutor} with the given initial
@@ -359,7 +359,7 @@ package java.util.concurrent;
 	* @throws NullPointerException if {@code workQueue}
 	*         or {@code threadFactory} is null
 	*/
-	@:overload public function new(corePoolSize : Int, maximumPoolSize : Int, keepAliveTime : haxe.Int64, unit : java.util.concurrent.TimeUnit, workQueue : java.util.concurrent.BlockingQueue<java.lang.Runnable>, threadFactory : java.util.concurrent.ThreadFactory) : Void;
+	@:overload @:public public function new(corePoolSize : Int, maximumPoolSize : Int, keepAliveTime : haxe.Int64, unit : java.util.concurrent.TimeUnit, workQueue : java.util.concurrent.BlockingQueue<java.lang.Runnable>, threadFactory : java.util.concurrent.ThreadFactory) : Void;
 	
 	/**
 	* Creates a new {@code ThreadPoolExecutor} with the given initial
@@ -386,7 +386,7 @@ package java.util.concurrent;
 	* @throws NullPointerException if {@code workQueue}
 	*         or {@code handler} is null
 	*/
-	@:overload public function new(corePoolSize : Int, maximumPoolSize : Int, keepAliveTime : haxe.Int64, unit : java.util.concurrent.TimeUnit, workQueue : java.util.concurrent.BlockingQueue<java.lang.Runnable>, handler : java.util.concurrent.RejectedExecutionHandler) : Void;
+	@:overload @:public public function new(corePoolSize : Int, maximumPoolSize : Int, keepAliveTime : haxe.Int64, unit : java.util.concurrent.TimeUnit, workQueue : java.util.concurrent.BlockingQueue<java.lang.Runnable>, handler : java.util.concurrent.RejectedExecutionHandler) : Void;
 	
 	/**
 	* Creates a new {@code ThreadPoolExecutor} with the given initial
@@ -415,7 +415,7 @@ package java.util.concurrent;
 	* @throws NullPointerException if {@code workQueue}
 	*         or {@code threadFactory} or {@code handler} is null
 	*/
-	@:overload public function new(corePoolSize : Int, maximumPoolSize : Int, keepAliveTime : haxe.Int64, unit : java.util.concurrent.TimeUnit, workQueue : java.util.concurrent.BlockingQueue<java.lang.Runnable>, threadFactory : java.util.concurrent.ThreadFactory, handler : java.util.concurrent.RejectedExecutionHandler) : Void;
+	@:overload @:public public function new(corePoolSize : Int, maximumPoolSize : Int, keepAliveTime : haxe.Int64, unit : java.util.concurrent.TimeUnit, workQueue : java.util.concurrent.BlockingQueue<java.lang.Runnable>, threadFactory : java.util.concurrent.ThreadFactory, handler : java.util.concurrent.RejectedExecutionHandler) : Void;
 	
 	/**
 	* Executes the given task sometime in the future.  The task
@@ -431,7 +431,7 @@ package java.util.concurrent;
 	*         cannot be accepted for execution
 	* @throws NullPointerException if {@code command} is null
 	*/
-	@:overload public function execute(command : java.lang.Runnable) : Void;
+	@:overload @:public override public function execute(command : java.lang.Runnable) : Void;
 	
 	/**
 	* Initiates an orderly shutdown in which previously submitted
@@ -444,7 +444,7 @@ package java.util.concurrent;
 	*
 	* @throws SecurityException {@inheritDoc}
 	*/
-	@:overload public function shutdown() : Void;
+	@:overload @:public override public function shutdown() : Void;
 	
 	/**
 	* Attempts to stop all actively executing tasks, halts the
@@ -463,9 +463,9 @@ package java.util.concurrent;
 	*
 	* @throws SecurityException {@inheritDoc}
 	*/
-	@:overload public function shutdownNow() : java.util.List<java.lang.Runnable>;
+	@:overload @:public override public function shutdownNow() : java.util.List<java.lang.Runnable>;
 	
-	@:overload public function isShutdown() : Bool;
+	@:overload @:public override public function isShutdown() : Bool;
 	
 	/**
 	* Returns true if this executor is in the process of terminating
@@ -478,17 +478,17 @@ package java.util.concurrent;
 	*
 	* @return true if terminating but not yet terminated
 	*/
-	@:overload public function isTerminating() : Bool;
+	@:overload @:public public function isTerminating() : Bool;
 	
-	@:overload public function isTerminated() : Bool;
+	@:overload @:public override public function isTerminated() : Bool;
 	
-	@:overload public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public override public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Invokes {@code shutdown} when this executor is no longer
 	* referenced and it has no threads.
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	/**
 	* Sets the thread factory used to create new threads.
@@ -497,7 +497,7 @@ package java.util.concurrent;
 	* @throws NullPointerException if threadFactory is null
 	* @see #getThreadFactory
 	*/
-	@:overload public function setThreadFactory(threadFactory : java.util.concurrent.ThreadFactory) : Void;
+	@:overload @:public public function setThreadFactory(threadFactory : java.util.concurrent.ThreadFactory) : Void;
 	
 	/**
 	* Returns the thread factory used to create new threads.
@@ -505,7 +505,7 @@ package java.util.concurrent;
 	* @return the current thread factory
 	* @see #setThreadFactory
 	*/
-	@:overload public function getThreadFactory() : java.util.concurrent.ThreadFactory;
+	@:overload @:public public function getThreadFactory() : java.util.concurrent.ThreadFactory;
 	
 	/**
 	* Sets a new handler for unexecutable tasks.
@@ -514,7 +514,7 @@ package java.util.concurrent;
 	* @throws NullPointerException if handler is null
 	* @see #getRejectedExecutionHandler
 	*/
-	@:overload public function setRejectedExecutionHandler(handler : java.util.concurrent.RejectedExecutionHandler) : Void;
+	@:overload @:public public function setRejectedExecutionHandler(handler : java.util.concurrent.RejectedExecutionHandler) : Void;
 	
 	/**
 	* Returns the current handler for unexecutable tasks.
@@ -522,7 +522,7 @@ package java.util.concurrent;
 	* @return the current handler
 	* @see #setRejectedExecutionHandler
 	*/
-	@:overload public function getRejectedExecutionHandler() : java.util.concurrent.RejectedExecutionHandler;
+	@:overload @:public public function getRejectedExecutionHandler() : java.util.concurrent.RejectedExecutionHandler;
 	
 	/**
 	* Sets the core number of threads.  This overrides any value set
@@ -535,7 +535,7 @@ package java.util.concurrent;
 	* @throws IllegalArgumentException if {@code corePoolSize < 0}
 	* @see #getCorePoolSize
 	*/
-	@:overload public function setCorePoolSize(corePoolSize : Int) : Void;
+	@:overload @:public public function setCorePoolSize(corePoolSize : Int) : Void;
 	
 	/**
 	* Returns the core number of threads.
@@ -543,7 +543,7 @@ package java.util.concurrent;
 	* @return the core number of threads
 	* @see #setCorePoolSize
 	*/
-	@:overload public function getCorePoolSize() : Int;
+	@:overload @:public public function getCorePoolSize() : Int;
 	
 	/**
 	* Starts a core thread, causing it to idly wait for work. This
@@ -553,7 +553,7 @@ package java.util.concurrent;
 	*
 	* @return {@code true} if a thread was started
 	*/
-	@:overload public function prestartCoreThread() : Bool;
+	@:overload @:public public function prestartCoreThread() : Bool;
 	
 	/**
 	* Starts all core threads, causing them to idly wait for work. This
@@ -562,7 +562,7 @@ package java.util.concurrent;
 	*
 	* @return the number of threads started
 	*/
-	@:overload public function prestartAllCoreThreads() : Int;
+	@:overload @:public public function prestartAllCoreThreads() : Int;
 	
 	/**
 	* Returns true if this pool allows core threads to time out and
@@ -577,7 +577,7 @@ package java.util.concurrent;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function allowsCoreThreadTimeOut() : Bool;
+	@:require(java6) @:overload @:public public function allowsCoreThreadTimeOut() : Bool;
 	
 	/**
 	* Sets the policy governing whether core threads may time out and
@@ -596,7 +596,7 @@ package java.util.concurrent;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function allowCoreThreadTimeOut(value : Bool) : Void;
+	@:require(java6) @:overload @:public public function allowCoreThreadTimeOut(value : Bool) : Void;
 	
 	/**
 	* Sets the maximum allowed number of threads. This overrides any
@@ -610,7 +610,7 @@ package java.util.concurrent;
 	*         less than the {@linkplain #getCorePoolSize core pool size}
 	* @see #getMaximumPoolSize
 	*/
-	@:overload public function setMaximumPoolSize(maximumPoolSize : Int) : Void;
+	@:overload @:public public function setMaximumPoolSize(maximumPoolSize : Int) : Void;
 	
 	/**
 	* Returns the maximum allowed number of threads.
@@ -618,7 +618,7 @@ package java.util.concurrent;
 	* @return the maximum allowed number of threads
 	* @see #setMaximumPoolSize
 	*/
-	@:overload public function getMaximumPoolSize() : Int;
+	@:overload @:public public function getMaximumPoolSize() : Int;
 	
 	/**
 	* Sets the time limit for which threads may remain idle before
@@ -634,7 +634,7 @@ package java.util.concurrent;
 	*         if {@code time} is zero and {@code allowsCoreThreadTimeOut}
 	* @see #getKeepAliveTime
 	*/
-	@:overload public function setKeepAliveTime(time : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Void;
+	@:overload @:public public function setKeepAliveTime(time : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Void;
 	
 	/**
 	* Returns the thread keep-alive time, which is the amount of time
@@ -645,7 +645,7 @@ package java.util.concurrent;
 	* @return the time limit
 	* @see #setKeepAliveTime
 	*/
-	@:overload public function getKeepAliveTime(unit : java.util.concurrent.TimeUnit) : haxe.Int64;
+	@:overload @:public public function getKeepAliveTime(unit : java.util.concurrent.TimeUnit) : haxe.Int64;
 	
 	/**
 	* Returns the task queue used by this executor. Access to the
@@ -655,7 +655,7 @@ package java.util.concurrent;
 	*
 	* @return the task queue
 	*/
-	@:overload public function getQueue() : java.util.concurrent.BlockingQueue<java.lang.Runnable>;
+	@:overload @:public public function getQueue() : java.util.concurrent.BlockingQueue<java.lang.Runnable>;
 	
 	/**
 	* Removes this task from the executor's internal queue if it is
@@ -673,7 +673,7 @@ package java.util.concurrent;
 	* @param task the task to remove
 	* @return true if the task was removed
 	*/
-	@:overload public function remove(task : java.lang.Runnable) : Bool;
+	@:overload @:public public function remove(task : java.lang.Runnable) : Bool;
 	
 	/**
 	* Tries to remove from the work queue all {@link Future}
@@ -685,14 +685,14 @@ package java.util.concurrent;
 	* However, this method may fail to remove tasks in
 	* the presence of interference by other threads.
 	*/
-	@:overload public function purge() : Void;
+	@:overload @:public public function purge() : Void;
 	
 	/**
 	* Returns the current number of threads in the pool.
 	*
 	* @return the number of threads
 	*/
-	@:overload public function getPoolSize() : Int;
+	@:overload @:public public function getPoolSize() : Int;
 	
 	/**
 	* Returns the approximate number of threads that are actively
@@ -700,7 +700,7 @@ package java.util.concurrent;
 	*
 	* @return the number of threads
 	*/
-	@:overload public function getActiveCount() : Int;
+	@:overload @:public public function getActiveCount() : Int;
 	
 	/**
 	* Returns the largest number of threads that have ever
@@ -708,7 +708,7 @@ package java.util.concurrent;
 	*
 	* @return the number of threads
 	*/
-	@:overload public function getLargestPoolSize() : Int;
+	@:overload @:public public function getLargestPoolSize() : Int;
 	
 	/**
 	* Returns the approximate total number of tasks that have ever been
@@ -718,7 +718,7 @@ package java.util.concurrent;
 	*
 	* @return the number of tasks
 	*/
-	@:overload public function getTaskCount() : haxe.Int64;
+	@:overload @:public public function getTaskCount() : haxe.Int64;
 	
 	/**
 	* Returns the approximate total number of tasks that have
@@ -729,7 +729,7 @@ package java.util.concurrent;
 	*
 	* @return the number of tasks
 	*/
-	@:overload public function getCompletedTaskCount() : haxe.Int64;
+	@:overload @:public public function getCompletedTaskCount() : haxe.Int64;
 	
 	/**
 	* Returns a string identifying this pool, as well as its state,
@@ -738,7 +738,7 @@ package java.util.concurrent;
 	*
 	* @return a string identifying this pool, as well as its state
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Method invoked prior to executing the given Runnable in the
@@ -754,7 +754,7 @@ package java.util.concurrent;
 	* @param t the thread that will run task {@code r}
 	* @param r the task that will be executed
 	*/
-	@:overload private function beforeExecute(t : java.lang.Thread, r : java.lang.Runnable) : Void;
+	@:overload @:protected private function beforeExecute(t : java.lang.Thread, r : java.lang.Runnable) : Void;
 	
 	/**
 	* Method invoked upon completion of execution of the given Runnable.
@@ -802,7 +802,7 @@ package java.util.concurrent;
 	* @param t the exception that caused termination, or null if
 	* execution completed normally
 	*/
-	@:overload private function afterExecute(r : java.lang.Runnable, t : java.lang.Throwable) : Void;
+	@:overload @:protected private function afterExecute(r : java.lang.Runnable, t : java.lang.Throwable) : Void;
 	
 	/**
 	* Method invoked when the Executor has terminated.  Default
@@ -810,7 +810,7 @@ package java.util.concurrent;
 	* overridings, subclasses should generally invoke
 	* {@code super.terminated} within this method.
 	*/
-	@:overload private function terminated() : Void;
+	@:overload @:protected private function terminated() : Void;
 	
 	
 }
@@ -833,21 +833,21 @@ package java.util.concurrent;
 @:native('java$util$concurrent$ThreadPoolExecutor$Worker') @:internal extern class ThreadPoolExecutor_Worker extends java.util.concurrent.locks.AbstractQueuedSynchronizer implements java.lang.Runnable
 {
 	/** Delegates main run loop to outer runWorker  */
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
-	@:overload override private function isHeldExclusively() : Bool;
+	@:overload @:protected override private function isHeldExclusively() : Bool;
 	
-	@:overload override private function tryAcquire(unused : Int) : Bool;
+	@:overload @:protected override private function tryAcquire(unused : Int) : Bool;
 	
-	@:overload override private function tryRelease(unused : Int) : Bool;
+	@:overload @:protected override private function tryRelease(unused : Int) : Bool;
 	
-	@:overload public function lock() : Void;
+	@:overload @:public public function lock() : Void;
 	
-	@:overload public function tryLock() : Bool;
+	@:overload @:public public function tryLock() : Bool;
 	
-	@:overload public function unlock() : Void;
+	@:overload @:public public function unlock() : Void;
 	
-	@:overload public function isLocked() : Bool;
+	@:overload @:public public function isLocked() : Bool;
 	
 	
 }
@@ -862,7 +862,7 @@ package java.util.concurrent;
 	/**
 	* Creates a {@code CallerRunsPolicy}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Executes task r in the caller's thread, unless the executor
@@ -871,7 +871,7 @@ package java.util.concurrent;
 	* @param r the runnable task requested to be executed
 	* @param e the executor attempting to execute this task
 	*/
-	@:overload public function rejectedExecution(r : java.lang.Runnable, e : java.util.concurrent.ThreadPoolExecutor) : Void;
+	@:overload @:public public function rejectedExecution(r : java.lang.Runnable, e : java.util.concurrent.ThreadPoolExecutor) : Void;
 	
 	
 }
@@ -884,7 +884,7 @@ package java.util.concurrent;
 	/**
 	* Creates an {@code AbortPolicy}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Always throws RejectedExecutionException.
@@ -893,7 +893,7 @@ package java.util.concurrent;
 	* @param e the executor attempting to execute this task
 	* @throws RejectedExecutionException always.
 	*/
-	@:overload public function rejectedExecution(r : java.lang.Runnable, e : java.util.concurrent.ThreadPoolExecutor) : Void;
+	@:overload @:public public function rejectedExecution(r : java.lang.Runnable, e : java.util.concurrent.ThreadPoolExecutor) : Void;
 	
 	
 }
@@ -906,7 +906,7 @@ package java.util.concurrent;
 	/**
 	* Creates a {@code DiscardPolicy}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Does nothing, which has the effect of discarding task r.
@@ -914,7 +914,7 @@ package java.util.concurrent;
 	* @param r the runnable task requested to be executed
 	* @param e the executor attempting to execute this task
 	*/
-	@:overload public function rejectedExecution(r : java.lang.Runnable, e : java.util.concurrent.ThreadPoolExecutor) : Void;
+	@:overload @:public public function rejectedExecution(r : java.lang.Runnable, e : java.util.concurrent.ThreadPoolExecutor) : Void;
 	
 	
 }
@@ -928,7 +928,7 @@ package java.util.concurrent;
 	/**
 	* Creates a {@code DiscardOldestPolicy} for the given executor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Obtains and ignores the next task that the executor
@@ -939,7 +939,7 @@ package java.util.concurrent;
 	* @param r the runnable task requested to be executed
 	* @param e the executor attempting to execute this task
 	*/
-	@:overload public function rejectedExecution(r : java.lang.Runnable, e : java.util.concurrent.ThreadPoolExecutor) : Void;
+	@:overload @:public public function rejectedExecution(r : java.lang.Runnable, e : java.util.concurrent.ThreadPoolExecutor) : Void;
 	
 	
 }

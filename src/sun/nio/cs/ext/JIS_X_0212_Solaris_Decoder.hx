@@ -27,7 +27,7 @@ package sun.nio.cs.ext;
 */
 extern class JIS_X_0212_Solaris_Decoder extends sun.nio.cs.ext.DoubleByteDecoder
 {
-	@:overload public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:public public function new(cs : java.nio.charset.Charset) : Void;
 	
 	/**
 	* These accessors are temporarily supplied while sun.io
@@ -36,11 +36,11 @@ extern class JIS_X_0212_Solaris_Decoder extends sun.nio.cs.ext.DoubleByteDecoder
 	* two co-existing implementations. When sun.io converters
 	* are made extinct these will be unncessary and should be removed
 	*/
-	@:overload public static function getIndex1() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public @:static public static function getIndex1() : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public static function getIndex2() : java.NativeArray<String>;
+	@:overload @:public @:static public static function getIndex2() : java.NativeArray<String>;
 	
-	@:overload private function convSingleByte(b : Int) : java.StdTypes.Char16;
+	@:overload @:protected private function convSingleByte(b : Int) : java.StdTypes.Char16;
 	
 	
 }

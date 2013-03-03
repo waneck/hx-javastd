@@ -36,7 +36,7 @@ package java.io;
 	*
 	* @param s  String providing the character stream.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Reads a single character.
@@ -46,7 +46,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads characters into a portion of an array.
@@ -60,7 +60,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips the specified number of characters in the stream. Returns
@@ -78,7 +78,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function skip(ns : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(ns : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Tells whether this stream is ready to be read.
@@ -87,12 +87,12 @@ package java.io;
 	*
 	* @exception  IOException  If the stream is closed
 	*/
-	@:overload override public function ready() : Bool;
+	@:overload @:public override public function ready() : Bool;
 	
 	/**
 	* Tells whether this stream supports the mark() operation, which it does.
 	*/
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	/**
 	* Marks the present position in the stream.  Subsequent calls to reset()
@@ -107,7 +107,7 @@ package java.io;
 	* @exception  IllegalArgumentException  If readAheadLimit is < 0
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function mark(readAheadLimit : Int) : Void;
+	@:overload @:public override public function mark(readAheadLimit : Int) : Void;
 	
 	/**
 	* Resets the stream to the most recent mark, or to the beginning of the
@@ -115,7 +115,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* Closes the stream and releases any system resources associated with
@@ -123,7 +123,7 @@ package java.io;
 	* ready(), mark(), or reset() invocations will throw an IOException.
 	* Closing a previously closed stream has no effect.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

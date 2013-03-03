@@ -31,25 +31,25 @@ package sun.awt.X11;
 	/**
 	* Creates empty list.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates instance of XAtomList and initializes it with
 	* the contents pointer by <code>data</code>.
 	* Uses default display to initialize atoms.
 	*/
-	@:overload public function new(data : haxe.Int64, count : Int) : Void;
+	@:overload @:public public function new(data : haxe.Int64, count : Int) : Void;
 	
 	/**
 	* Creates instance of XAtomList and initializes it with
 	* the arrays of atoms. Array can contain null atoms.
 	*/
-	@:overload public function new(atoms : java.NativeArray<sun.awt.X11.XAtom>) : Void;
+	@:overload @:public public function new(atoms : java.NativeArray<sun.awt.X11.XAtom>) : Void;
 	
 	/**
 	* Returns contents of the list as array of atoms.
 	*/
-	@:overload public function getAtoms() : java.NativeArray<sun.awt.X11.XAtom>;
+	@:overload @:public public function getAtoms() : java.NativeArray<sun.awt.X11.XAtom>;
 	
 	/**
 	* Returns contents of the list as pointer to native data
@@ -57,45 +57,45 @@ package sun.awt.X11;
 	* size of the Atom type on the platform. Caller is responsible for
 	* freeing the data by Unsafe.freeMemory when it is no longer needed.
 	*/
-	@:overload public function getAtomsData() : haxe.Int64;
+	@:overload @:public public function getAtomsData() : haxe.Int64;
 	
 	/**
 	* Returns true if this list contains the atom <code>atom</code>
 	*/
-	@:overload public function contains(atom : sun.awt.X11.XAtom) : Bool;
+	@:overload @:public public function contains(atom : sun.awt.X11.XAtom) : Bool;
 	
 	/**
 	* Add atom to the list. Does nothing if list already contains this atom.
 	*/
-	@:overload public function add(atom : sun.awt.X11.XAtom) : Void;
+	@:overload @:public public function add(atom : sun.awt.X11.XAtom) : Void;
 	
 	/**
 	* Removes atom from the list. Does nothing if arrays doesn't conaint this atom.
 	*/
-	@:overload public function remove(atom : sun.awt.X11.XAtom) : Void;
+	@:overload @:public public function remove(atom : sun.awt.X11.XAtom) : Void;
 	
 	/**
 	* Returns size of the list
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Returns a subset of a list which is intersection of this set and set build by mapping <code>mask</code> in
 	* <code>mapping</code>.
 	*/
-	@:overload public function subset(mask : Int, mapping : java.util.Map<Null<Int>, sun.awt.X11.XAtom>) : sun.awt.X11.XAtomList;
+	@:overload @:public public function subset(mask : Int, mapping : java.util.Map<Null<Int>, sun.awt.X11.XAtom>) : sun.awt.X11.XAtomList;
 	
 	/**
 	* Returns iterator for items.
 	*/
-	@:overload public function iterator() : java.util.Iterator<sun.awt.X11.XAtom>;
+	@:overload @:public public function iterator() : java.util.Iterator<sun.awt.X11.XAtom>;
 	
 	/**
 	* Merges without duplicates all the atoms from another list
 	*/
-	@:overload public function addAll(atoms : sun.awt.X11.XAtomList) : Void;
+	@:overload @:public public function addAll(atoms : sun.awt.X11.XAtomList) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

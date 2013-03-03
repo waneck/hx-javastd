@@ -25,29 +25,29 @@ package javax.swing.plaf.basic;
 */
 extern class BasicRadioButtonUI extends javax.swing.plaf.basic.BasicToggleButtonUI
 {
-	private var icon : javax.swing.Icon;
+	@:protected private var icon : javax.swing.Icon;
 	
-	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function getPropertyPrefix() : String;
+	@:overload @:protected override private function getPropertyPrefix() : String;
 	
-	@:overload override private function installDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function installDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload override private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload public function getDefaultIcon() : javax.swing.Icon;
+	@:overload @:public public function getDefaultIcon() : javax.swing.Icon;
 	
 	/**
 	* paint the radio button
 	*/
-	@:overload @:synchronized override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public @:synchronized override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload private function paintFocus(g : java.awt.Graphics, textRect : java.awt.Rectangle, size : java.awt.Dimension) : Void;
+	@:overload @:protected private function paintFocus(g : java.awt.Graphics, textRect : java.awt.Rectangle, size : java.awt.Dimension) : Void;
 	
 	/**
 	* The preferred size of the radio button
 	*/
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	
 }

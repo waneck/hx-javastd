@@ -34,9 +34,9 @@ extern class JMXServerErrorException extends java.io.IOException
 	* constructed where this parameter is null, but the standard
 	* connectors will never do so.
 	*/
-	@:overload public function new(s : String, err : java.lang.Error) : Void;
+	@:overload @:public public function new(s : String, err : java.lang.Error) : Void;
 	
-	@:overload public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

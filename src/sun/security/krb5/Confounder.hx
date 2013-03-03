@@ -30,11 +30,11 @@ package sun.security.krb5;
 */
 extern class Confounder
 {
-	@:overload public static function bytes(size : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function bytes(size : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function intValue() : Int;
+	@:overload @:public @:static public static function intValue() : Int;
 	
-	@:overload public static function longValue() : haxe.Int64;
+	@:overload @:public @:static public static function longValue() : haxe.Int64;
 	
 	
 }

@@ -43,35 +43,35 @@ extern class OpenListResourceBundle extends java.util.ResourceBundle
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload override public function handleGetObject(key : String) : Dynamic;
+	@:overload @:public override public function handleGetObject(key : String) : Dynamic;
 	
 	/**
 	* Implementation of ResourceBundle.getKeys.
 	*/
-	@:overload override public function getKeys() : java.util.Enumeration<String>;
+	@:overload @:public override public function getKeys() : java.util.Enumeration<String>;
 	
 	/**
 	* Returns a set of keys provided in this resource bundle
 	*/
-	@:overload public function handleGetKeys() : java.util.Set<String>;
+	@:overload @:public public function handleGetKeys() : java.util.Set<String>;
 	
 	/**
 	* Returns the parent bundle
 	*/
-	@:overload public function getParent() : sun.util.resources.OpenListResourceBundle;
+	@:overload @:public public function getParent() : sun.util.resources.OpenListResourceBundle;
 	
 	/**
 	* See ListResourceBundle class description.
 	*/
-	@:overload @:abstract private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:abstract @:protected private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	/**
 	* Lets subclasses provide specialized Map implementations.
 	* Default uses HashMap.
 	*/
-	@:overload private function createMap(size : Int) : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:protected private function createMap(size : Int) : java.util.Map<Dynamic, Dynamic>;
 	
 	
 }

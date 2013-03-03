@@ -28,72 +28,72 @@ extern class PerfCounter
 	/**
 	* Returns the current value of the perf counter.
 	*/
-	@:overload @:synchronized public function get() : haxe.Int64;
+	@:overload @:public @:synchronized public function get() : haxe.Int64;
 	
 	/**
 	* Sets the value of the perf counter to the given newValue.
 	*/
-	@:overload @:synchronized public function set(newValue : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function set(newValue : haxe.Int64) : Void;
 	
 	/**
 	* Adds the given value to the perf counter.
 	*/
-	@:overload @:synchronized public function add(value : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function add(value : haxe.Int64) : Void;
 	
 	/**
 	* Increments the perf counter with 1.
 	*/
-	@:overload public function increment() : Void;
+	@:overload @:public public function increment() : Void;
 	
 	/**
 	* Adds the given interval to the perf counter.
 	*/
-	@:overload public function addTime(interval : haxe.Int64) : Void;
+	@:overload @:public public function addTime(interval : haxe.Int64) : Void;
 	
 	/**
 	* Adds the elapsed time from the given start time (ns) to the perf counter.
 	*/
-	@:overload public function addElapsedTimeFrom(startTime : haxe.Int64) : Void;
+	@:overload @:public public function addElapsedTimeFrom(startTime : haxe.Int64) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Number of findClass calls
 	*/
-	@:overload public static function getFindClasses() : sun.misc.PerfCounter;
+	@:overload @:public @:static public static function getFindClasses() : sun.misc.PerfCounter;
 	
 	/**
 	* Time (ns) spent in finding classes that includes
 	* lookup and read class bytes and defineClass
 	*/
-	@:overload public static function getFindClassTime() : sun.misc.PerfCounter;
+	@:overload @:public @:static public static function getFindClassTime() : sun.misc.PerfCounter;
 	
 	/**
 	* Time (ns) spent in finding classes
 	*/
-	@:overload public static function getReadClassBytesTime() : sun.misc.PerfCounter;
+	@:overload @:public @:static public static function getReadClassBytesTime() : sun.misc.PerfCounter;
 	
 	/**
 	* Time (ns) spent in the parent delegation to
 	* the parent of the defining class loader
 	*/
-	@:overload public static function getParentDelegationTime() : sun.misc.PerfCounter;
+	@:overload @:public @:static public static function getParentDelegationTime() : sun.misc.PerfCounter;
 	
 	/**
 	* Number of zip files opened.
 	*/
-	@:overload public static function getZipFileCount() : sun.misc.PerfCounter;
+	@:overload @:public @:static public static function getZipFileCount() : sun.misc.PerfCounter;
 	
 	/**
 	* Time (ns) spent in opening the zip files that
 	* includes building the entries hash table
 	*/
-	@:overload public static function getZipFileOpenTime() : sun.misc.PerfCounter;
+	@:overload @:public @:static public static function getZipFileOpenTime() : sun.misc.PerfCounter;
 	
 	/**
 	* D3D graphic pipeline available
 	*/
-	@:overload public static function getD3DAvailable() : sun.misc.PerfCounter;
+	@:overload @:public @:static public static function getD3DAvailable() : sun.misc.PerfCounter;
 	
 	
 }

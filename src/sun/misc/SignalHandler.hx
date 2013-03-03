@@ -38,7 +38,7 @@ package sun.misc;
 	*
 	* @param sig a signal object
 	*/
-	@:overload public function handle(sig : sun.misc.Signal) : Void;
+	@:overload @:public public function handle(sig : sun.misc.Signal) : Void;
 	
 	
 }

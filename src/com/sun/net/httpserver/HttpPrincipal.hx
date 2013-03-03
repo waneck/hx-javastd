@@ -31,7 +31,7 @@ extern class HttpPrincipal implements java.security.Principal
 	* @param realm The realm.
 	* @throws NullPointerException if either username or realm are null
 	*/
-	@:overload public function new(username : String, realm : String) : Void;
+	@:overload @:public public function new(username : String, realm : String) : Void;
 	
 	/**
 	* Compares two HttpPrincipal. Returns <code>true</code>
@@ -39,34 +39,34 @@ extern class HttpPrincipal implements java.security.Principal
 	* username and realm are equal to this object's username
 	* and realm. Returns <code>false</code> otherwise.
 	*/
-	@:overload public function equals(another : Dynamic) : Bool;
+	@:overload @:public public function equals(another : Dynamic) : Bool;
 	
 	/**
 	* returns the contents of this principal in the form
 	* <i>realm:username</i>
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* returns the username this object was created with.
 	*/
-	@:overload public function getUsername() : String;
+	@:overload @:public public function getUsername() : String;
 	
 	/**
 	* returns the realm this object was created with.
 	*/
-	@:overload public function getRealm() : String;
+	@:overload @:public public function getRealm() : String;
 	
 	/**
 	* returns a hashcode for this HttpPrincipal. This is calculated
 	* as <code>(getUsername()+getRealm().hashCode()</code>
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* returns the same string as getName()
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

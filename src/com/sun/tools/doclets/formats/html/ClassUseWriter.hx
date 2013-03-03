@@ -38,51 +38,51 @@ extern class ClassUseWriter extends com.sun.tools.doclets.formats.html.SubWriter
 	* @throws IOException
 	* @throws DocletAbortException
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, mapper : com.sun.tools.doclets.internal.toolkit.util.ClassUseMapper, path : String, filename : String, relpath : String, classdoc : com.sun.javadoc.ClassDoc) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, mapper : com.sun.tools.doclets.internal.toolkit.util.ClassUseMapper, path : String, filename : String, relpath : String, classdoc : com.sun.javadoc.ClassDoc) : Void;
 	
 	/**
 	* Write out class use pages.
 	* @throws DocletAbortException
 	*/
-	@:overload public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
+	@:overload @:public @:static public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
 	
 	/**
 	* Generate a class page.
 	*/
-	@:overload public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, mapper : com.sun.tools.doclets.internal.toolkit.util.ClassUseMapper, classdoc : com.sun.javadoc.ClassDoc) : Void;
+	@:overload @:public @:static public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, mapper : com.sun.tools.doclets.internal.toolkit.util.ClassUseMapper, classdoc : com.sun.javadoc.ClassDoc) : Void;
 	
 	/**
 	* Generate the class use list.
 	*/
-	@:overload private function generateClassUseFile() : Void;
+	@:overload @:protected private function generateClassUseFile() : Void;
 	
 	/**
 	* Add the class use documentation.
 	*
 	* @param contentTree the content tree to which the class use information will be added
 	*/
-	@:overload private function addClassUse(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addClassUse(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the packages list that use the given class.
 	*
 	* @param contentTree the content tree to which the packages list will be added
 	*/
-	@:overload private function addPackageList(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addPackageList(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the package annotation list.
 	*
 	* @param contentTree the content tree to which the package annotation list will be added
 	*/
-	@:overload private function addPackageAnnotationList(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addPackageAnnotationList(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the class list that use the given class.
 	*
 	* @param contentTree the content tree to which the class list will be added
 	*/
-	@:overload private function addClassList(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addClassList(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the package use information.
@@ -90,7 +90,7 @@ extern class ClassUseWriter extends com.sun.tools.doclets.formats.html.SubWriter
 	* @param pkg the package that uses the given class
 	* @param contentTree the content tree to which the package use information will be added
 	*/
-	@:overload private function addPackageUse(pkg : com.sun.javadoc.PackageDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addPackageUse(pkg : com.sun.javadoc.PackageDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the class use information.
@@ -98,42 +98,42 @@ extern class ClassUseWriter extends com.sun.tools.doclets.formats.html.SubWriter
 	* @param pkg the package that uses the given class
 	* @param contentTree the content tree to which the class use information will be added
 	*/
-	@:overload private function addClassUse(pkg : com.sun.javadoc.PackageDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addClassUse(pkg : com.sun.javadoc.PackageDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get the header for the class use Listing.
 	*
 	* @return a content tree representing the class use header
 	*/
-	@:overload private function getClassUseHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getClassUseHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get this package link.
 	*
 	* @return a content tree for the package link
 	*/
-	@:overload override private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get class page link.
 	*
 	* @return a content tree for the class page link
 	*/
-	@:overload override private function getNavLinkClass() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkClass() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the use link.
 	*
 	* @return a content tree for the use link
 	*/
-	@:overload override private function getNavLinkClassUse() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkClassUse() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the tree link.
 	*
 	* @return a content tree for the tree link
 	*/
-	@:overload override private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

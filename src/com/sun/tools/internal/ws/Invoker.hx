@@ -28,31 +28,31 @@ extern class Invoker
 	/**
 	* Returns true if the RI appears to be loading the JAX-WS 2.1 API.
 	*/
-	@:overload public static function checkIfLoading21API() : Bool;
+	@:overload @:public @:static public static function checkIfLoading21API() : Bool;
 	
 	/**
 	* Returns true if the RI appears to be loading the JAX-WS 2.2 API.
 	*/
-	@:overload public static function checkIfLoading22API() : Bool;
+	@:overload @:public @:static public static function checkIfLoading22API() : Bool;
 	
 	/**
 	* Creates a classloader that can load JAXB/WS 2.2 API and tools.jar,
 	* and then return a classloader that can RI classes, which can see all those APIs and tools.jar.
 	*/
-	@:overload public static function createClassLoader(cl : java.lang.ClassLoader) : java.lang.ClassLoader;
+	@:overload @:public @:static public static function createClassLoader(cl : java.lang.ClassLoader) : java.lang.ClassLoader;
 	
 	/**
 	* The list of package prefixes we want the
 	* {@link MaskingClassLoader} to prevent the parent
 	* classLoader from loading
 	*/
-	public static var maskedPackages : java.NativeArray<String>;
+	@:public @:static public static var maskedPackages : java.NativeArray<String>;
 	
 	/**
 	* Escape hatch to work around IBM JDK problem.
 	* See http://www-128.ibm.com/developerworks/forums/dw_thread.jsp?nav=false&forum=367&thread=164718&cat=10
 	*/
-	public static var noSystemProxies : Bool;
+	@:public @:static public static var noSystemProxies : Bool;
 	
 	
 }

@@ -70,7 +70,7 @@ package org.xml.sax;
 	*        null).
 	* @see org.xml.sax.Locator
 	*/
-	@:overload public function new(message : String, locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(message : String, locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Wrap an existing exception in a SAXParseException.
@@ -87,7 +87,7 @@ package org.xml.sax;
 	* @param e Any exception.
 	* @see org.xml.sax.Locator
 	*/
-	@:overload public function new(message : String, locator : org.xml.sax.Locator, e : java.lang.Exception) : Void;
+	@:overload @:public public function new(message : String, locator : org.xml.sax.Locator, e : java.lang.Exception) : Void;
 	
 	/**
 	* Create a new SAXParseException.
@@ -110,7 +110,7 @@ package org.xml.sax;
 	* @param columnNumber The column number of the end of the text that
 	*                     cause the error or warning.
 	*/
-	@:overload public function new(message : String, publicId : String, systemId : String, lineNumber : Int, columnNumber : Int) : Void;
+	@:overload @:public public function new(message : String, publicId : String, systemId : String, lineNumber : Int, columnNumber : Int) : Void;
 	
 	/**
 	* Create a new SAXParseException with an embedded exception.
@@ -136,7 +136,7 @@ package org.xml.sax;
 	*                     cause the error or warning.
 	* @param e Another exception to embed in this one.
 	*/
-	@:overload public function new(message : String, publicId : String, systemId : String, lineNumber : Int, columnNumber : Int, e : java.lang.Exception) : Void;
+	@:overload @:public public function new(message : String, publicId : String, systemId : String, lineNumber : Int, columnNumber : Int, e : java.lang.Exception) : Void;
 	
 	/**
 	* Get the public identifier of the entity where the exception occurred.
@@ -145,7 +145,7 @@ package org.xml.sax;
 	*         if none is available.
 	* @see org.xml.sax.Locator#getPublicId
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* Get the system identifier of the entity where the exception occurred.
@@ -157,7 +157,7 @@ package org.xml.sax;
 	*         if none is available.
 	* @see org.xml.sax.Locator#getSystemId
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* The line number of the end of the text where the exception occurred.
@@ -168,7 +168,7 @@ package org.xml.sax;
 	*         if none is available.
 	* @see org.xml.sax.Locator#getLineNumber
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* The column number of the end of the text where the exception occurred.
@@ -179,14 +179,14 @@ package org.xml.sax;
 	*         if none is available.
 	* @see org.xml.sax.Locator#getColumnNumber
 	*/
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	/**
 	* Override toString to provide more detailed error message.
 	*
 	* @return A string representation of this exception.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

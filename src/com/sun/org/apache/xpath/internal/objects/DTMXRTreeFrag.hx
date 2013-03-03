@@ -20,15 +20,15 @@ package com.sun.org.apache.xpath.internal.objects;
 */
 extern class DTMXRTreeFrag
 {
-	@:overload public function new(dtmIdentity : Int, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Void;
+	@:overload @:public public function new(dtmIdentity : Int, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Void;
 	
-	@:overload @:final public function destruct() : Void;
+	@:overload @:public @:final public function destruct() : Void;
 	
-	@:overload @:final public function getDTMIdentity() : Int;
+	@:overload @:public @:final public function getDTMIdentity() : Int;
 	
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
-	@:overload @:final public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(obj : Dynamic) : Bool;
 	
 	
 }

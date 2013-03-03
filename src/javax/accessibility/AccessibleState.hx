@@ -35,7 +35,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* @see AccessibleRole#FRAME
 	* @see AccessibleRole#DIALOG
 	*/
-	public static var ACTIVE(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var ACTIVE(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object is currently pressed.  This is usually
@@ -44,7 +44,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* not yet released the mouse button.
 	* @see AccessibleRole#PUSH_BUTTON
 	*/
-	public static var PRESSED(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var PRESSED(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates that the object is armed.  This is usually used on buttons
@@ -52,7 +52,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* is still over the button.
 	* @see AccessibleRole#PUSH_BUTTON
 	*/
-	public static var ARMED(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var ARMED(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates the current object is busy.  This is usually used on objects
@@ -62,7 +62,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* @see AccessibleRole#SCROLL_BAR
 	* @see AccessibleRole#SLIDER
 	*/
-	public static var BUSY(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var BUSY(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object is currently checked.  This is usually used on
@@ -71,7 +71,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* @see AccessibleRole#RADIO_BUTTON
 	* @see AccessibleRole#CHECK_BOX
 	*/
-	public static var CHECKED(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var CHECKED(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates the user can change the contents of this object.  This
@@ -80,7 +80,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* are automatically editable if they are enabled.
 	* @see #ENABLED
 	*/
-	public static var EDITABLE(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var EDITABLE(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object allows progressive disclosure of its children.
@@ -90,7 +90,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* @see #COLLAPSED
 	* @see AccessibleRole#TREE
 	*/
-	public static var EXPANDABLE(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var EXPANDABLE(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object is collapsed.  This is usually paired with the
@@ -100,7 +100,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* @see #EXPANDED
 	* @see AccessibleRole#TREE
 	*/
-	public static var COLLAPSED(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var COLLAPSED(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object is expanded.  This is usually paired with the
@@ -110,7 +110,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* @see #COLLAPSED
 	* @see AccessibleRole#TREE
 	*/
-	public static var EXPANDED(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var EXPANDED(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object is enabled.  The absence of this state from an
@@ -118,7 +118,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* that is not enabled cannot be manipulated by the user.  In a graphical
 	* display, it is usually grayed out.
 	*/
-	public static var ENABLED(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var ENABLED(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object can accept keyboard focus, which means all
@@ -126,13 +126,13 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* passed to it when it has focus.
 	* @see #FOCUSED
 	*/
-	public static var FOCUSABLE(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var FOCUSABLE(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object currently has the keyboard focus.
 	* @see #FOCUSABLE
 	*/
-	public static var FOCUSED(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var FOCUSED(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object is minimized and is represented only by an
@@ -141,7 +141,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* @see AccessibleRole#FRAME
 	* @see AccessibleRole#INTERNAL_FRAME
 	*/
-	public static var ICONIFIED(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var ICONIFIED(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates something must be done with this object before the
@@ -149,7 +149,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* is usually associated only with dialogs.
 	* @see AccessibleRole#DIALOG
 	*/
-	public static var MODAL(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var MODAL(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object paints every pixel within its
@@ -161,7 +161,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* @see AccessibleContext#getAccessibleComponent
 	* @see AccessibleComponent#getBounds
 	*/
-	public static var OPAQUE(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var OPAQUE(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates the size of this object is not fixed.
@@ -170,7 +170,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* @see AccessibleComponent#getSize
 	* @see AccessibleComponent#setSize
 	*/
-	public static var RESIZABLE(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var RESIZABLE(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object allows more than one of its children to
@@ -179,7 +179,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* @see AccessibleContext#getAccessibleSelection
 	* @see AccessibleSelection
 	*/
-	public static var MULTISELECTABLE(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var MULTISELECTABLE(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object is the child of an object that allows its
@@ -190,7 +190,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* @see AccessibleContext#getAccessibleSelection
 	* @see AccessibleSelection
 	*/
-	public static var SELECTABLE(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var SELECTABLE(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object is the child of an object that allows its
@@ -201,7 +201,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* @see AccessibleContext#getAccessibleSelection
 	* @see AccessibleSelection
 	*/
-	public static var SELECTED(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var SELECTED(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object, the object's parent, the object's parent's
@@ -210,7 +210,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* be occluded by some other showing object.
 	* @see #VISIBLE
 	*/
-	public static var SHOWING(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var SHOWING(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object is visible.  Note: this means that the
@@ -219,7 +219,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* is contained by is not visible.
 	* @see #SHOWING
 	*/
-	public static var VISIBLE(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var VISIBLE(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates the orientation of this object is vertical.  This is
@@ -230,7 +230,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* @see AccessibleRole#SLIDER
 	* @see AccessibleRole#PROGRESS_BAR
 	*/
-	public static var VERTICAL(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var VERTICAL(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates the orientation of this object is horizontal.  This is
@@ -241,17 +241,17 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* @see AccessibleRole#SLIDER
 	* @see AccessibleRole#PROGRESS_BAR
 	*/
-	public static var HORIZONTAL(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var HORIZONTAL(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this (text) object can contain only a single line of text
 	*/
-	public static var SINGLE_LINE(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var SINGLE_LINE(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this (text) object can contain multiple lines of text
 	*/
-	public static var MULTI_LINE(default, null) : javax.accessibility.AccessibleState;
+	@:public @:static @:final public static var MULTI_LINE(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object is transient.  An assistive technology should
@@ -266,7 +266,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* @since 1.5
 	*
 	*/
-	@:require(java5) public static var TRANSIENT(default, null) : javax.accessibility.AccessibleState;
+	@:require(java5) @:public @:static @:final public static var TRANSIENT(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates this object is responsible for managing its
@@ -277,7 +277,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var MANAGES_DESCENDANTS(default, null) : javax.accessibility.AccessibleState;
+	@:require(java5) @:public @:static @:final public static var MANAGES_DESCENDANTS(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Indicates that the object state is indeterminate.  An example
@@ -287,7 +287,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var INDETERMINATE(default, null) : javax.accessibility.AccessibleState;
+	@:require(java5) @:public @:static @:final public static var INDETERMINATE(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* A state indicating that text is truncated by a bounding rectangle
@@ -297,7 +297,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var TRUNCATED(default, null) : javax.accessibility.AccessibleState;
+	@:require(java5) @:static @:public @:final public static var TRUNCATED(default, null) : javax.accessibility.AccessibleState;
 	
 	/**
 	* Creates a new AccessibleState using the given locale independent key.
@@ -312,7 +312,7 @@ extern class AccessibleState extends javax.accessibility.AccessibleBundle
 	* @param key the locale independent name of the state.
 	* @see AccessibleBundle#toDisplayString
 	*/
-	@:overload private function new(key : String) : Void;
+	@:overload @:protected private function new(key : String) : Void;
 	
 	
 }

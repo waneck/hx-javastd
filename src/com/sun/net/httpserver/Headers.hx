@@ -56,17 +56,17 @@ package com.sun.net.httpserver;
 */
 @:require(java6) extern class Headers implements java.util.Map<String, java.util.List<String>>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public public function containsKey(key : Dynamic) : Bool;
 	
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public public function containsValue(value : Dynamic) : Bool;
 	
-	@:overload public function get(key : Dynamic) : java.util.List<String>;
+	@:overload @:public public function get(key : Dynamic) : java.util.List<String>;
 	
 	/**
 	* returns the first value from the List of String values
@@ -74,9 +74,9 @@ package com.sun.net.httpserver;
 	* @param key the key to search for
 	* @return the first string value associated with the key
 	*/
-	@:overload public function getFirst(key : String) : String;
+	@:overload @:public public function getFirst(key : String) : String;
 	
-	@:overload public function put(key : String, value : java.util.List<String>) : java.util.List<String>;
+	@:overload @:public public function put(key : String, value : java.util.List<String>) : java.util.List<String>;
 	
 	/**
 	* adds the given value to the list of headers
@@ -85,7 +85,7 @@ package com.sun.net.httpserver;
 	* @param key the header name
 	* @param value the header value to add to the header
 	*/
-	@:overload public function add(key : String, value : String) : Void;
+	@:overload @:public public function add(key : String, value : String) : Void;
 	
 	/**
 	* sets the given value as the sole header value
@@ -94,23 +94,23 @@ package com.sun.net.httpserver;
 	* @param key the header name
 	* @param value the header value to set.
 	*/
-	@:overload public function set(key : String, value : String) : Void;
+	@:overload @:public public function set(key : String, value : String) : Void;
 	
-	@:overload public function remove(key : Dynamic) : java.util.List<String>;
+	@:overload @:public public function remove(key : Dynamic) : java.util.List<String>;
 	
-	@:overload public function putAll(t : java.util.Map<String, java.util.List<String>>) : Void;
+	@:overload @:public public function putAll(t : java.util.Map<String, java.util.List<String>>) : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function keySet() : java.util.Set<String>;
+	@:overload @:public public function keySet() : java.util.Set<String>;
 	
-	@:overload public function values() : java.util.Collection<java.util.List<String>>;
+	@:overload @:public public function values() : java.util.Collection<java.util.List<String>>;
 	
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, java.util.List<String>>>;
+	@:overload @:public public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, java.util.List<String>>>;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

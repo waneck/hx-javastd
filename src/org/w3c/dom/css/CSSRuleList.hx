@@ -53,7 +53,7 @@ extern interface CSSRuleList
 	* child rule indices is <code>0</code> to <code>length-1</code>
 	* inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	*  Used to retrieve a CSS rule by ordinal index. The order in this
@@ -65,7 +65,7 @@ extern interface CSSRuleList
 	*   <code>CSSRuleList</code>, or <code>null</code> if that is not a
 	*   valid index.
 	*/
-	@:overload public function item(index : Int) : org.w3c.dom.css.CSSRule;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.css.CSSRule;
 	
 	
 }

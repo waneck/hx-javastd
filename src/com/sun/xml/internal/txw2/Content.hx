@@ -31,7 +31,7 @@ package com.sun.xml.internal.txw2;
 	/**
 	* Called when this content is written to the output.
 	*/
-	@:overload public function written() : Void;
+	@:overload @:public public function written() : Void;
 	
 	
 }

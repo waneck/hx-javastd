@@ -32,11 +32,11 @@ package java.nio.charset;
 */
 @:require(java4) extern class MalformedInputException extends java.nio.charset.CharacterCodingException
 {
-	@:overload public function new(inputLength : Int) : Void;
+	@:overload @:public public function new(inputLength : Int) : Void;
 	
-	@:overload public function getInputLength() : Int;
+	@:overload @:public public function getInputLength() : Int;
 	
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

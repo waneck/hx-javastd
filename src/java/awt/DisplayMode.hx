@@ -56,26 +56,26 @@ package java.awt;
 	* @see #BIT_DEPTH_MULTI
 	* @see #REFRESH_RATE_UNKNOWN
 	*/
-	@:overload public function new(width : Int, height : Int, bitDepth : Int, refreshRate : Int) : Void;
+	@:overload @:public public function new(width : Int, height : Int, bitDepth : Int, refreshRate : Int) : Void;
 	
 	/**
 	* Returns the height of the display, in pixels.
 	* @return the height of the display, in pixels
 	*/
-	@:overload public function getHeight() : Int;
+	@:overload @:public public function getHeight() : Int;
 	
 	/**
 	* Returns the width of the display, in pixels.
 	* @return the width of the display, in pixels
 	*/
-	@:overload public function getWidth() : Int;
+	@:overload @:public public function getWidth() : Int;
 	
 	/**
 	* Value of the bit depth if multiple bit depths are supported in this
 	* display mode.
 	* @see #getBitDepth
 	*/
-	public static var BIT_DEPTH_MULTI(default, null) : Int;
+	@:public @:final @:static public static var BIT_DEPTH_MULTI(default, null) : Int;
 	
 	/**
 	* Returns the bit depth of the display, in bits per pixel.  This may be
@@ -85,13 +85,13 @@ package java.awt;
 	* @return the bit depth of the display, in bits per pixel.
 	* @see #BIT_DEPTH_MULTI
 	*/
-	@:overload public function getBitDepth() : Int;
+	@:overload @:public public function getBitDepth() : Int;
 	
 	/**
 	* Value of the refresh rate if not known.
 	* @see #getRefreshRate
 	*/
-	public static var REFRESH_RATE_UNKNOWN(default, null) : Int;
+	@:public @:final @:static public static var REFRESH_RATE_UNKNOWN(default, null) : Int;
 	
 	/**
 	* Returns the refresh rate of the display, in hertz.  This may be
@@ -100,23 +100,23 @@ package java.awt;
 	* @return the refresh rate of the display, in hertz.
 	* @see #REFRESH_RATE_UNKNOWN
 	*/
-	@:overload public function getRefreshRate() : Int;
+	@:overload @:public public function getRefreshRate() : Int;
 	
 	/**
 	* Returns whether the two display modes are equal.
 	* @return whether the two display modes are equal
 	*/
-	@:overload public function equals(dm : java.awt.DisplayMode) : Bool;
+	@:overload @:public public function equals(dm : java.awt.DisplayMode) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function equals(dm : Dynamic) : Bool;
+	@:overload @:public public function equals(dm : Dynamic) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class AbstractAnnotationValueVisitor7<R, P> extends javax.lang.model.util
 	/**
 	* Constructor for concrete subclasses to call.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	
 }

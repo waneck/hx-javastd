@@ -63,7 +63,7 @@ package com.sun.org.apache.bcel.internal.classfile;
 */
 extern interface Node
 {
-	@:overload public function accept(obj : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public @:public public function accept(obj : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	
 }

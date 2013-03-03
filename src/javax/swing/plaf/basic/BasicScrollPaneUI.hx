@@ -30,42 +30,42 @@ package javax.swing.plaf.basic;
 */
 extern class BasicScrollPaneUI extends javax.swing.plaf.ScrollPaneUI implements javax.swing.ScrollPaneConstants
 {
-	private var scrollpane : javax.swing.JScrollPane;
+	@:protected private var scrollpane : javax.swing.JScrollPane;
 	
-	private var vsbChangeListener : javax.swing.event.ChangeListener;
+	@:protected private var vsbChangeListener : javax.swing.event.ChangeListener;
 	
-	private var hsbChangeListener : javax.swing.event.ChangeListener;
+	@:protected private var hsbChangeListener : javax.swing.event.ChangeListener;
 	
-	private var viewportChangeListener : javax.swing.event.ChangeListener;
+	@:protected private var viewportChangeListener : javax.swing.event.ChangeListener;
 	
-	private var spPropertyChangeListener : java.beans.PropertyChangeListener;
+	@:protected private var spPropertyChangeListener : java.beans.PropertyChangeListener;
 	
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* @return new Dimension(Short.MAX_VALUE, Short.MAX_VALUE)
 	*/
-	@:overload override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload private function installDefaults(scrollpane : javax.swing.JScrollPane) : Void;
+	@:overload @:protected private function installDefaults(scrollpane : javax.swing.JScrollPane) : Void;
 	
-	@:overload private function installListeners(c : javax.swing.JScrollPane) : Void;
+	@:overload @:protected private function installListeners(c : javax.swing.JScrollPane) : Void;
 	
-	@:overload private function installKeyboardActions(c : javax.swing.JScrollPane) : Void;
+	@:overload @:protected private function installKeyboardActions(c : javax.swing.JScrollPane) : Void;
 	
-	@:overload override public function installUI(x : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(x : javax.swing.JComponent) : Void;
 	
-	@:overload private function uninstallDefaults(c : javax.swing.JScrollPane) : Void;
+	@:overload @:protected private function uninstallDefaults(c : javax.swing.JScrollPane) : Void;
 	
-	@:overload private function uninstallListeners(c : javax.swing.JComponent) : Void;
+	@:overload @:protected private function uninstallListeners(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function uninstallKeyboardActions(c : javax.swing.JScrollPane) : Void;
+	@:overload @:protected private function uninstallKeyboardActions(c : javax.swing.JScrollPane) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function syncScrollPaneWithViewport() : Void;
+	@:overload @:protected private function syncScrollPaneWithViewport() : Void;
 	
 	/**
 	* Returns the baseline.
@@ -75,7 +75,7 @@ extern class BasicScrollPaneUI extends javax.swing.plaf.ScrollPaneUI implements 
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
+	@:require(java6) @:overload @:public override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
 	
 	/**
 	* Returns an enum indicating how the baseline of the component
@@ -85,13 +85,13 @@ extern class BasicScrollPaneUI extends javax.swing.plaf.ScrollPaneUI implements 
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
+	@:require(java6) @:overload @:public override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
 	
-	@:overload private function createViewportChangeListener() : javax.swing.event.ChangeListener;
+	@:overload @:protected private function createViewportChangeListener() : javax.swing.event.ChangeListener;
 	
-	@:overload private function createHSBChangeListener() : javax.swing.event.ChangeListener;
+	@:overload @:protected private function createHSBChangeListener() : javax.swing.event.ChangeListener;
 	
-	@:overload private function createVSBChangeListener() : javax.swing.event.ChangeListener;
+	@:overload @:protected private function createVSBChangeListener() : javax.swing.event.ChangeListener;
 	
 	/**
 	* Creates an instance of MouseWheelListener, which is added to the
@@ -103,15 +103,15 @@ extern class BasicScrollPaneUI extends javax.swing.plaf.ScrollPaneUI implements 
 	* @see MouseWheelHandler
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function createMouseWheelListener() : java.awt.event.MouseWheelListener;
+	@:require(java4) @:overload @:protected private function createMouseWheelListener() : java.awt.event.MouseWheelListener;
 	
-	@:overload private function updateScrollBarDisplayPolicy(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function updateScrollBarDisplayPolicy(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function updateViewport(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function updateViewport(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function updateRowHeader(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function updateRowHeader(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function updateColumnHeader(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function updateColumnHeader(e : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* Creates an instance of PropertyChangeListener that's added to
@@ -136,7 +136,7 @@ extern class BasicScrollPaneUI extends javax.swing.plaf.ScrollPaneUI implements 
 	* @see java.beans.PropertyChangeListener
 	* @see #installUI
 	*/
-	@:overload private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	@:overload @:protected private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
 	
 	
 }
@@ -145,7 +145,7 @@ extern class BasicScrollPaneUI extends javax.swing.plaf.ScrollPaneUI implements 
 */
 @:native('javax$swing$plaf$basic$BasicScrollPaneUI$ViewportChangeHandler') extern class BasicScrollPaneUI_ViewportChangeHandler implements javax.swing.event.ChangeListener
 {
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }
@@ -154,7 +154,7 @@ extern class BasicScrollPaneUI extends javax.swing.plaf.ScrollPaneUI implements 
 */
 @:native('javax$swing$plaf$basic$BasicScrollPaneUI$HSBChangeListener') extern class BasicScrollPaneUI_HSBChangeListener implements javax.swing.event.ChangeListener
 {
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }
@@ -163,7 +163,7 @@ extern class BasicScrollPaneUI extends javax.swing.plaf.ScrollPaneUI implements 
 */
 @:native('javax$swing$plaf$basic$BasicScrollPaneUI$VSBChangeListener') extern class BasicScrollPaneUI_VSBChangeListener implements javax.swing.event.ChangeListener
 {
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }
@@ -190,29 +190,29 @@ extern class BasicScrollPaneUI extends javax.swing.plaf.ScrollPaneUI implements 
 	* @param e     MouseWheelEvent to be handled
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function mouseWheelMoved(e : java.awt.event.MouseWheelEvent) : Void;
+	@:require(java4) @:overload @:public public function mouseWheelMoved(e : java.awt.event.MouseWheelEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicScrollPaneUI$PropertyChangeHandler') extern class BasicScrollPaneUI_PropertyChangeHandler implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicScrollPaneUI$Actions') @:internal extern class BasicScrollPaneUI_Actions extends sun.swing.UIAction
 {
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicScrollPaneUI$Handler') @:internal extern class BasicScrollPaneUI_Handler implements javax.swing.event.ChangeListener implements java.beans.PropertyChangeListener implements java.awt.event.MouseWheelListener
 {
-	@:overload public function mouseWheelMoved(e : java.awt.event.MouseWheelEvent) : Void;
+	@:overload @:public public function mouseWheelMoved(e : java.awt.event.MouseWheelEvent) : Void;
 	
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

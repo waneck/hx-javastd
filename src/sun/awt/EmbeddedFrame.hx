@@ -29,35 +29,35 @@ extern class EmbeddedFrame extends java.awt.Frame implements java.awt.KeyEventDi
 	* The constants define focus traversal directions.
 	* Use them in {@code traverseIn}, {@code traverseOut} methods.
 	*/
-	private static var FORWARD(default, null) : Bool;
+	@:protected @:static @:final private static var FORWARD(default, null) : Bool;
 	
-	private static var BACKWARD(default, null) : Bool;
+	@:protected @:static @:final private static var BACKWARD(default, null) : Bool;
 	
-	@:overload public function supportsXEmbed() : Bool;
+	@:overload @:public public function supportsXEmbed() : Bool;
 	
-	@:overload private function new(supportsXEmbed : Bool) : Void;
+	@:overload @:protected private function new(supportsXEmbed : Bool) : Void;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* @deprecated This constructor will be removed in 1.5
 	*/
-	@:overload private function new(handle : Int) : Void;
+	@:overload @:protected private function new(handle : Int) : Void;
 	
-	@:overload private function new(handle : haxe.Int64) : Void;
+	@:overload @:protected private function new(handle : haxe.Int64) : Void;
 	
-	@:overload private function new(handle : haxe.Int64, supportsXEmbed : Bool) : Void;
+	@:overload @:protected private function new(handle : haxe.Int64, supportsXEmbed : Bool) : Void;
 	
 	/**
 	* Block introspection of a parent window by this child.
 	*/
-	@:overload public function getParent() : java.awt.Container;
+	@:overload @:public override public function getParent() : java.awt.Container;
 	
 	/**
 	* Needed to track which KeyboardFocusManager is current. We want to avoid memory
 	* leaks, so when KFM stops being current, we remove ourselves as listeners.
 	*/
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* Because there may be many AppContexts, and we can't be sure where this
@@ -68,7 +68,7 @@ extern class EmbeddedFrame extends java.awt.Frame implements java.awt.KeyEventDi
 	* can be handled automatically, including possible replacement of
 	* KeyboardFocusManager.
 	*/
-	@:overload public function registerListeners() : Void;
+	@:overload @:public public function registerListeners() : Void;
 	
 	/**
 	* Needed to avoid memory leak: we register this EmbeddedFrame as a listener with
@@ -76,7 +76,7 @@ extern class EmbeddedFrame extends java.awt.Frame implements java.awt.KeyEventDi
 	* reference to our EmbeddedFrame forever if the Frame is no longer in use, so we
 	* add listeners in show() and remove them in hide().
 	*/
-	@:overload override public function show() : Void;
+	@:overload @:public override public function show() : Void;
 	
 	/**
 	* Needed to avoid memory leak: we register this EmbeddedFrame as a listener with
@@ -84,7 +84,7 @@ extern class EmbeddedFrame extends java.awt.Frame implements java.awt.KeyEventDi
 	* reference to our EmbeddedFrame forever if the Frame is no longer in use, so we
 	* add listeners in show() and remove them in hide().
 	*/
-	@:overload override public function hide() : Void;
+	@:overload @:public override public function hide() : Void;
 	
 	/**
 	* Need this method to detect when the focus may have chance to leave the
@@ -92,7 +92,7 @@ extern class EmbeddedFrame extends java.awt.Frame implements java.awt.KeyEventDi
 	* from DefaultKeyboardFocusManager.processKeyEvent with some minor
 	* modifications.
 	*/
-	@:overload public function dispatchKeyEvent(e : java.awt.event.KeyEvent) : Bool;
+	@:overload @:public public function dispatchKeyEvent(e : java.awt.event.KeyEvent) : Bool;
 	
 	/**
 	* This method is called by the embedder when we should receive focus as element
@@ -112,7 +112,7 @@ extern class EmbeddedFrame extends java.awt.Frame implements java.awt.KeyEventDi
 	* @param direction FORWARD or BACKWARD
 	* @return true, if the EmbeddedFrame wants to get focus, false otherwise.
 	*/
-	@:overload public function traverseIn(direction : Bool) : Bool;
+	@:overload @:public public function traverseIn(direction : Bool) : Bool;
 	
 	/**
 	* This method is called from dispatchKeyEvent in the following two cases:
@@ -131,35 +131,35 @@ extern class EmbeddedFrame extends java.awt.Frame implements java.awt.KeyEventDi
 	* @return true, if EmbeddedFrame wants the focus to leave it,
 	*         false otherwise.
 	*/
-	@:overload private function traverseOut(direction : Bool) : Bool;
+	@:overload @:protected private function traverseOut(direction : Bool) : Bool;
 	
 	/**
 	* Block modifying any frame attributes, since they aren't applicable
 	* for EmbeddedFrames.
 	*/
-	@:overload override public function setTitle(title : String) : Void;
+	@:overload @:public override public function setTitle(title : String) : Void;
 	
-	@:overload override public function setIconImage(image : java.awt.Image) : Void;
+	@:overload @:public override public function setIconImage(image : java.awt.Image) : Void;
 	
-	@:overload override public function setIconImages(icons : java.util.List<java.awt.Image>) : Void;
+	@:overload @:public override public function setIconImages(icons : java.util.List<java.awt.Image>) : Void;
 	
-	@:overload override public function setMenuBar(mb : java.awt.MenuBar) : Void;
+	@:overload @:public override public function setMenuBar(mb : java.awt.MenuBar) : Void;
 	
-	@:overload override public function setResizable(resizable : Bool) : Void;
+	@:overload @:public override public function setResizable(resizable : Bool) : Void;
 	
-	@:overload override public function remove(m : java.awt.MenuComponent) : Void;
+	@:overload @:public override public function remove(m : java.awt.MenuComponent) : Void;
 	
-	@:overload override public function isResizable() : Bool;
+	@:overload @:public override public function isResizable() : Bool;
 	
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
-	@:overload public function setCursorAllowed(isCursorAllowed : Bool) : Void;
+	@:overload @:public public function setCursorAllowed(isCursorAllowed : Bool) : Void;
 	
-	@:overload public function isCursorAllowed() : Bool;
+	@:overload @:public public function isCursorAllowed() : Bool;
 	
-	@:overload public function getCursor() : java.awt.Cursor;
+	@:overload @:public override public function getCursor() : java.awt.Cursor;
 	
-	@:overload private function setPeer(p : java.awt.peer.ComponentPeer) : Void;
+	@:overload @:protected private function setPeer(p : java.awt.peer.ComponentPeer) : Void;
 	
 	/**
 	* Synthesize native message to activate or deactivate EmbeddedFrame window
@@ -169,7 +169,7 @@ extern class EmbeddedFrame extends java.awt.Frame implements java.awt.KeyEventDi
 	* @param doActivate  if <code>true</code>, activates the window;
 	* otherwise, deactivates the window
 	*/
-	@:overload public function synthesizeWindowActivation(doActivate : Bool) : Void;
+	@:overload @:public public function synthesizeWindowActivation(doActivate : Bool) : Void;
 	
 	/**
 	* Moves this embedded frame to a new location. The top-left corner of
@@ -197,7 +197,7 @@ extern class EmbeddedFrame extends java.awt.Frame implements java.awt.KeyEventDi
 	* @see #getBoundsPrivate
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function setLocationPrivate(x : Int, y : Int) : Void;
+	@:require(java5) @:overload @:protected private function setLocationPrivate(x : Int, y : Int) : Void;
 	
 	/**
 	* Gets the location of this embedded frame as a point specifying the
@@ -223,7 +223,7 @@ extern class EmbeddedFrame extends java.awt.Frame implements java.awt.KeyEventDi
 	* @see #getBoundsPrivate
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function getLocationPrivate() : java.awt.Point;
+	@:require(java6) @:overload @:protected private function getLocationPrivate() : java.awt.Point;
 	
 	/**
 	* Moves and resizes this embedded frame. The new location of the top-left
@@ -254,7 +254,7 @@ extern class EmbeddedFrame extends java.awt.Frame implements java.awt.KeyEventDi
 	* @see #getBoundsPrivate
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function setBoundsPrivate(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java5) @:overload @:protected private function setBoundsPrivate(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Gets the bounds of this embedded frame as a rectangle specifying the
@@ -280,15 +280,15 @@ extern class EmbeddedFrame extends java.awt.Frame implements java.awt.KeyEventDi
 	* @see #setBoundsPrivate
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function getBoundsPrivate() : java.awt.Rectangle;
+	@:require(java6) @:overload @:protected private function getBoundsPrivate() : java.awt.Rectangle;
 	
-	@:overload override public function toFront() : Void;
+	@:overload @:public override public function toFront() : Void;
 	
-	@:overload override public function toBack() : Void;
+	@:overload @:public override public function toBack() : Void;
 	
-	@:overload @:abstract public function registerAccelerator(stroke : java.awt.AWTKeyStroke) : Void;
+	@:overload @:public @:abstract public function registerAccelerator(stroke : java.awt.AWTKeyStroke) : Void;
 	
-	@:overload @:abstract public function unregisterAccelerator(stroke : java.awt.AWTKeyStroke) : Void;
+	@:overload @:public @:abstract public function unregisterAccelerator(stroke : java.awt.AWTKeyStroke) : Void;
 	
 	/**
 	* Checks if the component is in an EmbeddedFrame. If so,
@@ -297,74 +297,74 @@ extern class EmbeddedFrame extends java.awt.Frame implements java.awt.KeyEventDi
 	* @return the parent applet or {@ null}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getAppletIfAncestorOf(comp : java.awt.Component) : java.applet.Applet;
+	@:require(java6) @:overload @:public @:static public static function getAppletIfAncestorOf(comp : java.awt.Component) : java.applet.Applet;
 	
 	/**
 	* This method should be overriden in subclasses. It is
 	* called when window this frame is within should be blocked
 	* by some modal dialog.
 	*/
-	@:overload public function notifyModalBlocked(blocker : java.awt.Dialog, blocked : Bool) : Void;
+	@:overload @:public public function notifyModalBlocked(blocker : java.awt.Dialog, blocked : Bool) : Void;
 	
 	
 }
 @:native('sun$awt$EmbeddedFrame$NullEmbeddedFramePeer') @:internal extern class EmbeddedFrame_NullEmbeddedFramePeer extends sun.awt.NullComponentPeer implements java.awt.peer.FramePeer
 {
-	@:overload public function setTitle(title : String) : Void;
+	@:overload @:public public function setTitle(title : String) : Void;
 	
-	@:overload public function setIconImage(im : java.awt.Image) : Void;
+	@:overload @:public public function setIconImage(im : java.awt.Image) : Void;
 	
-	@:overload public function updateIconImages() : Void;
+	@:overload @:public public function updateIconImages() : Void;
 	
-	@:overload public function setMenuBar(mb : java.awt.MenuBar) : Void;
+	@:overload @:public public function setMenuBar(mb : java.awt.MenuBar) : Void;
 	
-	@:overload public function setResizable(resizeable : Bool) : Void;
+	@:overload @:public public function setResizable(resizeable : Bool) : Void;
 	
-	@:overload public function setState(state : Int) : Void;
+	@:overload @:public public function setState(state : Int) : Void;
 	
-	@:overload public function getState() : Int;
+	@:overload @:public public function getState() : Int;
 	
-	@:overload public function setMaximizedBounds(b : java.awt.Rectangle) : Void;
+	@:overload @:public public function setMaximizedBounds(b : java.awt.Rectangle) : Void;
 	
-	@:overload public function toFront() : Void;
+	@:overload @:public public function toFront() : Void;
 	
-	@:overload public function toBack() : Void;
+	@:overload @:public public function toBack() : Void;
 	
-	@:overload public function updateFocusableWindowState() : Void;
+	@:overload @:public public function updateFocusableWindowState() : Void;
 	
-	@:overload public function updateAlwaysOnTop() : Void;
+	@:overload @:public public function updateAlwaysOnTop() : Void;
 	
-	@:overload public function setAlwaysOnTop(alwaysOnTop : Bool) : Void;
+	@:overload @:public public function setAlwaysOnTop(alwaysOnTop : Bool) : Void;
 	
-	@:overload public function getGlobalHeavyweightFocusOwner() : java.awt.Component;
+	@:overload @:public public function getGlobalHeavyweightFocusOwner() : java.awt.Component;
 	
-	@:overload public function setBoundsPrivate(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function setBoundsPrivate(x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function getBoundsPrivate() : java.awt.Rectangle;
+	@:overload @:public public function getBoundsPrivate() : java.awt.Rectangle;
 	
-	@:overload public function setModalBlocked(blocker : java.awt.Dialog, blocked : Bool) : Void;
+	@:overload @:public public function setModalBlocked(blocker : java.awt.Dialog, blocked : Bool) : Void;
 	
 	/**
 	* @see java.awt.peer.ContainerPeer#restack
 	*/
-	@:overload public function restack() : Void;
+	@:overload @:public public function restack() : Void;
 	
 	/**
 	* @see java.awt.peer.ContainerPeer#isRestackSupported
 	*/
-	@:overload public function isRestackSupported() : Bool;
+	@:overload @:public public function isRestackSupported() : Bool;
 	
-	@:overload public function requestWindowFocus() : Bool;
+	@:overload @:public public function requestWindowFocus() : Bool;
 	
-	@:overload public function updateMinimumSize() : Void;
+	@:overload @:public public function updateMinimumSize() : Void;
 	
-	@:overload public function setOpacity(opacity : Single) : Void;
+	@:overload @:public public function setOpacity(opacity : Single) : Void;
 	
-	@:overload public function setOpaque(isOpaque : Bool) : Void;
+	@:overload @:public public function setOpaque(isOpaque : Bool) : Void;
 	
-	@:overload public function updateWindow() : Void;
+	@:overload @:public public function updateWindow() : Void;
 	
-	@:overload public function repositionSecurityWarning() : Void;
+	@:overload @:public public function repositionSecurityWarning() : Void;
 	
 	
 }

@@ -25,12 +25,12 @@ package com.sun.tools.internal.xjc.reader.xmlschema;
 */
 @:internal extern class CollisionInfo
 {
-	@:overload public function new(name : String, source1 : org.xml.sax.Locator, source2 : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(name : String, source1 : org.xml.sax.Locator, source2 : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Returns a localized message that describes the collision.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

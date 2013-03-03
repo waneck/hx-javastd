@@ -41,14 +41,14 @@ package com.sun.tools.doclets.formats.html.markup;
 	*
 	* @param filename String file name.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, filename : String) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, filename : String) : Void;
 	
-	@:overload public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, path : String, filename : String) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, path : String, filename : String) : Void;
 	
 	/**
 	* Accessor for configuration.
 	*/
-	@:overload @:abstract public function configuration() : com.sun.tools.doclets.internal.toolkit.Configuration;
+	@:overload @:public @:abstract public function configuration() : com.sun.tools.doclets.internal.toolkit.Configuration;
 	
 	/**
 	* Print Html Hyper Link.
@@ -59,7 +59,7 @@ package com.sun.tools.doclets.formats.html.markup;
 	* @param label Tag for the link.
 	* @param strong  Boolean that sets label to strong.
 	*/
-	@:overload public function printHyperLink(link : String, where : String, label : String, strong : Bool) : Void;
+	@:overload @:public public function printHyperLink(link : String, where : String, label : String, strong : Bool) : Void;
 	
 	/**
 	* Print Html Hyper Link.
@@ -69,7 +69,7 @@ package com.sun.tools.doclets.formats.html.markup;
 	* needed.
 	* @param label Tag for the link.
 	*/
-	@:overload public function printHyperLink(link : String, where : String, label : String) : Void;
+	@:overload @:public public function printHyperLink(link : String, where : String, label : String) : Void;
 	
 	/**
 	* Print Html Hyper Link.
@@ -81,7 +81,7 @@ package com.sun.tools.doclets.formats.html.markup;
 	* @param strong       Boolean that sets label to strong.
 	* @param stylename  String style of text defined in style sheet.
 	*/
-	@:overload public function printHyperLink(link : String, where : String, label : String, strong : Bool, stylename : String) : Void;
+	@:overload @:public public function printHyperLink(link : String, where : String, label : String, strong : Bool, stylename : String) : Void;
 	
 	/**
 	* Return Html Hyper Link string.
@@ -93,7 +93,7 @@ package com.sun.tools.doclets.formats.html.markup;
 	* @param strong       Boolean that sets label to strong.
 	* @return String    Hyper Link.
 	*/
-	@:overload public function getHyperLinkString(link : String, where : String, label : String, strong : Bool) : String;
+	@:overload @:public public function getHyperLinkString(link : String, where : String, label : String, strong : Bool) : String;
 	
 	/**
 	* Get Html Hyper Link string.
@@ -106,7 +106,7 @@ package com.sun.tools.doclets.formats.html.markup;
 	* @param stylename  String style of text defined in style sheet.
 	* @return String    Hyper Link.
 	*/
-	@:overload public function getHyperLinkString(link : String, where : String, label : String, strong : Bool, stylename : String) : String;
+	@:overload @:public public function getHyperLinkString(link : String, where : String, label : String, strong : Bool, stylename : String) : String;
 	
 	/**
 	* Get Html Hyper Link string.
@@ -117,7 +117,7 @@ package com.sun.tools.doclets.formats.html.markup;
 	* @param label      Tag for the link.
 	* @return a content tree for the hyper link
 	*/
-	@:overload public function getHyperLink(link : String, where : String, label : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getHyperLink(link : String, where : String, label : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get Html Hyper Link string.
@@ -132,7 +132,7 @@ package com.sun.tools.doclets.formats.html.markup;
 	* @param target     Target frame.
 	* @return String    Hyper Link.
 	*/
-	@:overload public function getHyperLinkString(link : String, where : String, label : String, strong : Bool, stylename : String, title : String, target : String) : String;
+	@:overload @:public public function getHyperLinkString(link : String, where : String, label : String, strong : Bool, stylename : String, title : String, target : String) : String;
 	
 	/**
 	* Get Html Hyper Link.
@@ -145,7 +145,7 @@ package com.sun.tools.doclets.formats.html.markup;
 	* @param target     Target frame.
 	* @return a content tree for the hyper link.
 	*/
-	@:overload public function getHyperLink(link : String, where : String, label : com.sun.tools.doclets.internal.toolkit.Content, title : String, target : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getHyperLink(link : String, where : String, label : com.sun.tools.doclets.internal.toolkit.Content, title : String, target : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get a hyperlink to a file.
@@ -154,7 +154,7 @@ package com.sun.tools.doclets.formats.html.markup;
 	* @param label Label for the link
 	* @return a content for the hyperlink to the file
 	*/
-	@:overload public function getHyperLink(link : String, label : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getHyperLink(link : String, label : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get link string without positioning in the file.
@@ -163,34 +163,34 @@ package com.sun.tools.doclets.formats.html.markup;
 	* @param label      Tag for the link.
 	* @return Strign    Hyper link.
 	*/
-	@:overload public function getHyperLinkString(link : String, label : String) : String;
+	@:overload @:public public function getHyperLinkString(link : String, label : String) : String;
 	
 	/**
 	* Print the name of the package, this class is in.
 	*
 	* @param cd    ClassDoc.
 	*/
-	@:overload public function printPkgName(cd : com.sun.javadoc.ClassDoc) : Void;
+	@:overload @:public public function printPkgName(cd : com.sun.javadoc.ClassDoc) : Void;
 	
 	/**
 	* Get the name of the package, this class is in.
 	*
 	* @param cd    ClassDoc.
 	*/
-	@:overload public function getPkgName(cd : com.sun.javadoc.ClassDoc) : String;
+	@:overload @:public public function getPkgName(cd : com.sun.javadoc.ClassDoc) : String;
 	
 	/**
 	* Keep track of member details list. Print the definition list start tag
 	* if it is not printed yet.
 	*/
-	@:overload public function printMemberDetailsListStartTag() : Void;
+	@:overload @:public public function printMemberDetailsListStartTag() : Void;
 	
 	/**
 	* Print the definition list end tag if the list start tag was printed.
 	*/
-	@:overload public function printMemberDetailsListEndTag() : Void;
+	@:overload @:public public function printMemberDetailsListEndTag() : Void;
 	
-	@:overload public function getMemberDetailsListPrinted() : Bool;
+	@:overload @:public public function getMemberDetailsListPrinted() : Bool;
 	
 	/**
 	* Print the frameset version of the Html file header.
@@ -200,34 +200,34 @@ package com.sun.tools.doclets.formats.html.markup;
 	* @param noTimeStamp If true, don't print time stamp in header
 	* @param frameset the frameset to be added to the HTML document
 	*/
-	@:overload public function printFramesetDocument(title : String, noTimeStamp : Bool, frameset : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function printFramesetDocument(title : String, noTimeStamp : Bool, frameset : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Print the appropriate spaces to format the class tree in the class page.
 	*
 	* @param len   Number of spaces.
 	*/
-	@:overload public function spaces(len : Int) : String;
+	@:overload @:public public function spaces(len : Int) : String;
 	
 	/**
 	* Print the closing &lt;/body&gt; and &lt;/html&gt; tags.
 	*/
-	@:overload public function printBodyHtmlEnd() : Void;
+	@:overload @:public public function printBodyHtmlEnd() : Void;
 	
 	/**
 	* Calls {@link #printBodyHtmlEnd()} method.
 	*/
-	@:overload public function printFooter() : Void;
+	@:overload @:public public function printFooter() : Void;
 	
 	/**
 	* Print closing &lt;/html&gt; tag.
 	*/
-	@:overload public function printFrameFooter() : Void;
+	@:overload @:public public function printFrameFooter() : Void;
 	
 	/**
 	* Print ten non-breaking spaces("&#38;nbsp;").
 	*/
-	@:overload public function printNbsps() : Void;
+	@:overload @:public public function printNbsps() : Void;
 	
 	/**
 	* Get the day and date information for today, depending upon user option.
@@ -237,7 +237,7 @@ package com.sun.tools.doclets.formats.html.markup;
 	* @see java.util.GregorianCalendar
 	* @see java.util.TimeZone
 	*/
-	@:overload public function today() : String;
+	@:overload @:public public function today() : String;
 	
 	
 }

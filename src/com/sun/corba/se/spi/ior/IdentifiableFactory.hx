@@ -28,12 +28,12 @@ extern interface IdentifiableFactory
 	/** Return the id of this factory, which is the id of the result
 	* of any create call.
 	*/
-	@:overload public function getId() : Int;
+	@:overload @:public public function getId() : Int;
 	
 	/** Construct the appropriate Identifiable object with the
 	* given id from the InputStream is.
 	*/
-	@:overload public function create(_in : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.Identifiable;
+	@:overload @:public public function create(_in : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.Identifiable;
 	
 	
 }

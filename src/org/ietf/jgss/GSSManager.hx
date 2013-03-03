@@ -30,7 +30,7 @@ extern class GSSManager
 	*
 	* @return a GSSManager implementation
 	*/
-	@:overload public static function getInstance() : org.ietf.jgss.GSSManager;
+	@:overload @:public @:static public static function getInstance() : org.ietf.jgss.GSSManager;
 	
 	/**
 	* Returns a list of mechanisms that are available to GSS-API callers
@@ -45,7 +45,7 @@ extern class GSSManager
 	* are dynamically configured, and currently no mechanisms are
 	* installed).
 	*/
-	@:overload @:abstract public function getMechs() : java.NativeArray<org.ietf.jgss.Oid>;
+	@:overload @:public @:abstract public function getMechs() : java.NativeArray<org.ietf.jgss.Oid>;
 	
 	/**
 	* Returns then name types supported by the indicated mechanism.<p>
@@ -69,7 +69,7 @@ extern class GSSManager
 	*    {@link GSSException#BAD_MECH GSSException.BAD_MECH}
 	*    {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload @:abstract public function getNamesForMech(mech : org.ietf.jgss.Oid) : java.NativeArray<org.ietf.jgss.Oid>;
+	@:overload @:public @:abstract public function getNamesForMech(mech : org.ietf.jgss.Oid) : java.NativeArray<org.ietf.jgss.Oid>;
 	
 	/**
 	* Returns a list of mechanisms that support the indicated name type.<p>
@@ -87,7 +87,7 @@ extern class GSSManager
 	*
 	* @see #getNamesForMech(Oid)
 	*/
-	@:overload @:abstract public function getMechsForName(nameType : org.ietf.jgss.Oid) : java.NativeArray<org.ietf.jgss.Oid>;
+	@:overload @:public @:abstract public function getMechsForName(nameType : org.ietf.jgss.Oid) : java.NativeArray<org.ietf.jgss.Oid>;
 	
 	/**
 	* Factory method to convert a string name from the
@@ -124,7 +124,7 @@ extern class GSSManager
 	*    {@link GSSException#BAD_MECH GSSException.BAD_MECH},
 	*    {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload @:abstract public function createName(nameStr : String, nameType : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
+	@:overload @:public @:abstract public function createName(nameStr : String, nameType : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
 	
 	/**
 	* Factory method to convert a byte array containing a
@@ -154,7 +154,7 @@ extern class GSSManager
 	*    {@link GSSException#BAD_MECH GSSException.BAD_MECH},
 	*    {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload @:abstract public function createName(name : java.NativeArray<java.StdTypes.Int8>, nameType : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
+	@:overload @:public @:abstract public function createName(name : java.NativeArray<java.StdTypes.Int8>, nameType : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
 	
 	/**
 	*  Factory method to convert a string name from the
@@ -186,7 +186,7 @@ extern class GSSManager
 	*    {@link GSSException#BAD_MECH GSSException.BAD_MECH},
 	*    {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload @:abstract public function createName(nameStr : String, nameType : org.ietf.jgss.Oid, mech : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
+	@:overload @:public @:abstract public function createName(nameStr : String, nameType : org.ietf.jgss.Oid, mech : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
 	
 	/**
 	*  Factory method to convert a byte array containing a
@@ -215,7 +215,7 @@ extern class GSSManager
 	*    {@link GSSException#BAD_MECH GSSException.BAD_MECH},
 	*    {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload @:abstract public function createName(name : java.NativeArray<java.StdTypes.Int8>, nameType : org.ietf.jgss.Oid, mech : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
+	@:overload @:public @:abstract public function createName(name : java.NativeArray<java.StdTypes.Int8>, nameType : org.ietf.jgss.Oid, mech : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
 	
 	/**
 	* Factory method for acquiring default credentials.  This will cause
@@ -250,7 +250,7 @@ extern class GSSManager
 	*    {@link GSSException#NO_CRED GSSException.NO_CRED},
 	*    {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload @:abstract public function createCredential(usage : Int) : org.ietf.jgss.GSSCredential;
+	@:overload @:public @:abstract public function createCredential(usage : Int) : org.ietf.jgss.GSSCredential;
 	
 	/**
 	* Factory method for acquiring a single mechanism credential.<p>
@@ -298,7 +298,7 @@ extern class GSSManager
 	*    {@link GSSException#NO_CRED GSSException.NO_CRED},
 	*    {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload @:abstract public function createCredential(name : org.ietf.jgss.GSSName, lifetime : Int, mech : org.ietf.jgss.Oid, usage : Int) : org.ietf.jgss.GSSCredential;
+	@:overload @:public @:abstract public function createCredential(name : org.ietf.jgss.GSSName, lifetime : Int, mech : org.ietf.jgss.Oid, usage : Int) : org.ietf.jgss.GSSCredential;
 	
 	/**
 	* Factory method for acquiring credentials over a set of
@@ -353,7 +353,7 @@ extern class GSSManager
 	*    {@link GSSException#NO_CRED GSSException.NO_CRED},
 	*    {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload @:abstract public function createCredential(name : org.ietf.jgss.GSSName, lifetime : Int, mechs : java.NativeArray<org.ietf.jgss.Oid>, usage : Int) : org.ietf.jgss.GSSCredential;
+	@:overload @:public @:abstract public function createCredential(name : org.ietf.jgss.GSSName, lifetime : Int, mechs : java.NativeArray<org.ietf.jgss.Oid>, usage : Int) : org.ietf.jgss.GSSCredential;
 	
 	/**
 	* Factory method for creating a context on the initiator's
@@ -393,7 +393,7 @@ extern class GSSManager
 	*    {@link GSSException#BAD_MECH GSSException.BAD_MECH}
 	*    {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload @:abstract public function createContext(peer : org.ietf.jgss.GSSName, mech : org.ietf.jgss.Oid, myCred : org.ietf.jgss.GSSCredential, lifetime : Int) : org.ietf.jgss.GSSContext;
+	@:overload @:public @:abstract public function createContext(peer : org.ietf.jgss.GSSName, mech : org.ietf.jgss.Oid, myCred : org.ietf.jgss.GSSCredential, lifetime : Int) : org.ietf.jgss.GSSContext;
 	
 	/**
 	* Factory method for creating a context on the acceptor' side.  The
@@ -419,7 +419,7 @@ extern class GSSManager
 	*    {@link GSSException#BAD_MECH GSSException.BAD_MECH}
 	*    {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload @:abstract public function createContext(myCred : org.ietf.jgss.GSSCredential) : org.ietf.jgss.GSSContext;
+	@:overload @:public @:abstract public function createContext(myCred : org.ietf.jgss.GSSCredential) : org.ietf.jgss.GSSContext;
 	
 	/**
 	* Factory method for creating a previously exported context.  The
@@ -453,7 +453,7 @@ extern class GSSManager
 	*    {@link GSSException#UNAUTHORIZED GSSException.UNAUTHORIZED},
 	*    {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload @:abstract public function createContext(interProcessToken : java.NativeArray<java.StdTypes.Int8>) : org.ietf.jgss.GSSContext;
+	@:overload @:public @:abstract public function createContext(interProcessToken : java.NativeArray<java.StdTypes.Int8>) : org.ietf.jgss.GSSContext;
 	
 	/**
 	* This method is used to indicate to the GSSManager that the
@@ -528,7 +528,7 @@ extern class GSSManager
 	*    {@link GSSException#UNAVAILABLE GSSException.UNAVAILABLE},
 	*    {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload @:abstract public function addProviderAtFront(p : java.security.Provider, mech : org.ietf.jgss.Oid) : Void;
+	@:overload @:public @:abstract public function addProviderAtFront(p : java.security.Provider, mech : org.ietf.jgss.Oid) : Void;
 	
 	/**
 	* This method is used to indicate to the GSSManager that the
@@ -594,7 +594,7 @@ extern class GSSManager
 	*    {@link GSSException#UNAVAILABLE GSSException.UNAVAILABLE},
 	*    {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload @:abstract public function addProviderAtEnd(p : java.security.Provider, mech : org.ietf.jgss.Oid) : Void;
+	@:overload @:public @:abstract public function addProviderAtEnd(p : java.security.Provider, mech : org.ietf.jgss.Oid) : Void;
 	
 	
 }

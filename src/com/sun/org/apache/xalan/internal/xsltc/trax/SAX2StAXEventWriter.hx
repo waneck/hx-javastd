@@ -25,41 +25,41 @@ package com.sun.org.apache.xalan.internal.xsltc.trax;
 */
 extern class SAX2StAXEventWriter extends com.sun.org.apache.xalan.internal.xsltc.trax.SAX2StAXBaseWriter
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(writer : javax.xml.stream.XMLEventWriter) : Void;
+	@:overload @:public public function new(writer : javax.xml.stream.XMLEventWriter) : Void;
 	
-	@:overload public function new(writer : javax.xml.stream.XMLEventWriter, factory : javax.xml.stream.XMLEventFactory) : Void;
+	@:overload @:public public function new(writer : javax.xml.stream.XMLEventWriter, factory : javax.xml.stream.XMLEventFactory) : Void;
 	
-	@:overload public function getEventWriter() : javax.xml.stream.XMLEventWriter;
+	@:overload @:public public function getEventWriter() : javax.xml.stream.XMLEventWriter;
 	
-	@:overload public function setEventWriter(writer : javax.xml.stream.XMLEventWriter) : Void;
+	@:overload @:public public function setEventWriter(writer : javax.xml.stream.XMLEventWriter) : Void;
 	
-	@:overload public function getEventFactory() : javax.xml.stream.XMLEventFactory;
+	@:overload @:public public function getEventFactory() : javax.xml.stream.XMLEventFactory;
 	
-	@:overload public function setEventFactory(factory : javax.xml.stream.XMLEventFactory) : Void;
+	@:overload @:public public function setEventFactory(factory : javax.xml.stream.XMLEventFactory) : Void;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
-	@:overload public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(uri : String, localName : String, qName : String) : Void;
 	
-	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public override public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload public function endCDATA() : Void;
+	@:overload @:public override public function endCDATA() : Void;
 	
-	@:overload private function createStartEvents(attributes : org.xml.sax.Attributes, events : java.NativeArray<java.util.Collection<Dynamic>>) : Void;
+	@:overload @:protected private function createStartEvents(attributes : org.xml.sax.Attributes, events : java.NativeArray<java.util.Collection<Dynamic>>) : Void;
 	
-	@:overload private function createNamespace(prefix : String, uri : String) : javax.xml.stream.events.Namespace;
+	@:overload @:protected private function createNamespace(prefix : String, uri : String) : javax.xml.stream.events.Namespace;
 	
 	
 }

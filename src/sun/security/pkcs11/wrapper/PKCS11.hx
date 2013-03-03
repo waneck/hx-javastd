@@ -57,9 +57,9 @@ package sun.security.pkcs11.wrapper;
 */
 extern class PKCS11
 {
-	@:overload public static function loadNative() : Void;
+	@:overload @:public @:static public static function loadNative() : Void;
 	
-	@:overload @:synchronized public static function getInstance(pkcs11ModulePath : String, functionList : String, pInitArgs : sun.security.pkcs11.wrapper.CK_C_INITIALIZE_ARGS, omitInitialize : Bool) : sun.security.pkcs11.wrapper.PKCS11;
+	@:overload @:public @:static @:synchronized public static function getInstance(pkcs11ModulePath : String, functionList : String, pInitArgs : sun.security.pkcs11.wrapper.CK_C_INITIALIZE_ARGS, omitInitialize : Bool) : sun.security.pkcs11.wrapper.PKCS11;
 	
 	/**
 	* C_Finalize indicates that an application is done with the
@@ -72,7 +72,7 @@ extern class PKCS11
 	* @preconditions (pReserved == null)
 	* @postconditions
 	*/
-	@:overload @:native public function C_Finalize(pReserved : Dynamic) : Void;
+	@:overload @:public @:native public function C_Finalize(pReserved : Dynamic) : Void;
 	
 	/**
 	* C_GetInfo returns general information about Cryptoki.
@@ -84,7 +84,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_GetInfo() : sun.security.pkcs11.wrapper.CK_INFO;
+	@:overload @:public @:native public function C_GetInfo() : sun.security.pkcs11.wrapper.CK_INFO;
 	
 	/**
 	* C_GetSlotList obtains a list of slots in the system.
@@ -98,7 +98,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_GetSlotList(tokenPresent : Bool) : java.NativeArray<haxe.Int64>;
+	@:overload @:public @:native public function C_GetSlotList(tokenPresent : Bool) : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* C_GetSlotInfo obtains information about a particular slot in
@@ -113,7 +113,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_GetSlotInfo(slotID : haxe.Int64) : sun.security.pkcs11.wrapper.CK_SLOT_INFO;
+	@:overload @:public @:native public function C_GetSlotInfo(slotID : haxe.Int64) : sun.security.pkcs11.wrapper.CK_SLOT_INFO;
 	
 	/**
 	* C_GetTokenInfo obtains information about a particular token
@@ -128,7 +128,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_GetTokenInfo(slotID : haxe.Int64) : sun.security.pkcs11.wrapper.CK_TOKEN_INFO;
+	@:overload @:public @:native public function C_GetTokenInfo(slotID : haxe.Int64) : sun.security.pkcs11.wrapper.CK_TOKEN_INFO;
 	
 	/**
 	* C_GetMechanismList obtains a list of mechanism types
@@ -144,7 +144,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_GetMechanismList(slotID : haxe.Int64) : java.NativeArray<haxe.Int64>;
+	@:overload @:public @:native public function C_GetMechanismList(slotID : haxe.Int64) : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* C_GetMechanismInfo obtains information about a particular
@@ -161,7 +161,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_GetMechanismInfo(slotID : haxe.Int64, type : haxe.Int64) : sun.security.pkcs11.wrapper.CK_MECHANISM_INFO;
+	@:overload @:public @:native public function C_GetMechanismInfo(slotID : haxe.Int64, type : haxe.Int64) : sun.security.pkcs11.wrapper.CK_MECHANISM_INFO;
 	
 	/**
 	* C_OpenSession opens a session between an application and a
@@ -182,7 +182,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_OpenSession(slotID : haxe.Int64, flags : haxe.Int64, pApplication : Dynamic, Notify : sun.security.pkcs11.wrapper.CK_NOTIFY) : haxe.Int64;
+	@:overload @:public @:native public function C_OpenSession(slotID : haxe.Int64, flags : haxe.Int64, pApplication : Dynamic, Notify : sun.security.pkcs11.wrapper.CK_NOTIFY) : haxe.Int64;
 	
 	/**
 	* C_CloseSession closes a session between an application and a
@@ -195,7 +195,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_CloseSession(hSession : haxe.Int64) : Void;
+	@:overload @:public @:native public function C_CloseSession(hSession : haxe.Int64) : Void;
 	
 	/**
 	* C_GetSessionInfo obtains information about the session.
@@ -209,7 +209,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_GetSessionInfo(hSession : haxe.Int64) : sun.security.pkcs11.wrapper.CK_SESSION_INFO;
+	@:overload @:public @:native public function C_GetSessionInfo(hSession : haxe.Int64) : sun.security.pkcs11.wrapper.CK_SESSION_INFO;
 	
 	/**
 	* C_GetOperationState obtains the state of the cryptographic operation
@@ -225,7 +225,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_GetOperationState(hSession : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:native public function C_GetOperationState(hSession : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* C_SetOperationState restores the state of the cryptographic
@@ -245,7 +245,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_SetOperationState(hSession : haxe.Int64, pOperationState : java.NativeArray<java.StdTypes.Int8>, hEncryptionKey : haxe.Int64, hAuthenticationKey : haxe.Int64) : Void;
+	@:overload @:public @:native public function C_SetOperationState(hSession : haxe.Int64, pOperationState : java.NativeArray<java.StdTypes.Int8>, hEncryptionKey : haxe.Int64, hAuthenticationKey : haxe.Int64) : Void;
 	
 	/**
 	* C_Login logs a user into a token.
@@ -261,7 +261,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_Login(hSession : haxe.Int64, userType : haxe.Int64, pPin : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public @:native public function C_Login(hSession : haxe.Int64, userType : haxe.Int64, pPin : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* C_Logout logs a user out from a token.
@@ -273,7 +273,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_Logout(hSession : haxe.Int64) : Void;
+	@:overload @:public @:native public function C_Logout(hSession : haxe.Int64) : Void;
 	
 	/**
 	* C_CreateObject creates a new object.
@@ -290,7 +290,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_CreateObject(hSession : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
+	@:overload @:public @:native public function C_CreateObject(hSession : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
 	
 	/**
 	* C_CopyObject copies an object, creating a new object for the
@@ -310,7 +310,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_CopyObject(hSession : haxe.Int64, hObject : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
+	@:overload @:public @:native public function C_CopyObject(hSession : haxe.Int64, hObject : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
 	
 	/**
 	* C_DestroyObject destroys an object.
@@ -324,7 +324,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_DestroyObject(hSession : haxe.Int64, hObject : haxe.Int64) : Void;
+	@:overload @:public @:native public function C_DestroyObject(hSession : haxe.Int64, hObject : haxe.Int64) : Void;
 	
 	/**
 	* C_GetAttributeValue obtains the value of one or more object
@@ -343,7 +343,7 @@ extern class PKCS11
 	* @preconditions (pTemplate <> null)
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_GetAttributeValue(hSession : haxe.Int64, hObject : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : Void;
+	@:overload @:public @:native public function C_GetAttributeValue(hSession : haxe.Int64, hObject : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : Void;
 	
 	/**
 	* C_SetAttributeValue modifies the value of one or more object
@@ -361,7 +361,7 @@ extern class PKCS11
 	* @preconditions (pTemplate <> null)
 	* @postconditions
 	*/
-	@:overload @:native public function C_SetAttributeValue(hSession : haxe.Int64, hObject : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : Void;
+	@:overload @:public @:native public function C_SetAttributeValue(hSession : haxe.Int64, hObject : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : Void;
 	
 	/**
 	* C_FindObjectsInit initializes a search for token and session
@@ -377,7 +377,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_FindObjectsInit(hSession : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : Void;
+	@:overload @:public @:native public function C_FindObjectsInit(hSession : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : Void;
 	
 	/**
 	* C_FindObjects continues a search for token and session
@@ -395,7 +395,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_FindObjects(hSession : haxe.Int64, ulMaxObjectCount : haxe.Int64) : java.NativeArray<haxe.Int64>;
+	@:overload @:public @:native public function C_FindObjects(hSession : haxe.Int64, ulMaxObjectCount : haxe.Int64) : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* C_FindObjectsFinal finishes a search for token and session
@@ -408,7 +408,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_FindObjectsFinal(hSession : haxe.Int64) : Void;
+	@:overload @:public @:native public function C_FindObjectsFinal(hSession : haxe.Int64) : Void;
 	
 	/**
 	* C_EncryptInit initializes an encryption operation.
@@ -424,7 +424,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_EncryptInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
+	@:overload @:public @:native public function C_EncryptInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
 	
 	/**
 	* C_Encrypt encrypts single-part data.
@@ -441,7 +441,7 @@ extern class PKCS11
 	* @preconditions (pData <> null)
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_Encrypt(hSession : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
+	@:overload @:public @:native public function C_Encrypt(hSession : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
 	
 	/**
 	* C_EncryptUpdate continues a multiple-part encryption
@@ -459,7 +459,7 @@ extern class PKCS11
 	* @preconditions (pPart <> null)
 	* @postconditions
 	*/
-	@:overload @:native public function C_EncryptUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, directOut : haxe.Int64, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
+	@:overload @:public @:native public function C_EncryptUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, directOut : haxe.Int64, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
 	
 	/**
 	* C_EncryptFinal finishes a multiple-part encryption
@@ -475,7 +475,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_EncryptFinal(hSession : haxe.Int64, directOut : haxe.Int64, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
+	@:overload @:public @:native public function C_EncryptFinal(hSession : haxe.Int64, directOut : haxe.Int64, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
 	
 	/**
 	* C_DecryptInit initializes a decryption operation.
@@ -491,7 +491,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_DecryptInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
+	@:overload @:public @:native public function C_DecryptInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
 	
 	/**
 	* C_Decrypt decrypts encrypted data in a single part.
@@ -509,7 +509,7 @@ extern class PKCS11
 	* @preconditions (pEncryptedPart <> null)
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_Decrypt(hSession : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
+	@:overload @:public @:native public function C_Decrypt(hSession : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
 	
 	/**
 	* C_DecryptUpdate continues a multiple-part decryption
@@ -528,7 +528,7 @@ extern class PKCS11
 	* @preconditions (pEncryptedPart <> null)
 	* @postconditions
 	*/
-	@:overload @:native public function C_DecryptUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, directOut : haxe.Int64, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
+	@:overload @:public @:native public function C_DecryptUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, directOut : haxe.Int64, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
 	
 	/**
 	* C_DecryptFinal finishes a multiple-part decryption
@@ -544,7 +544,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_DecryptFinal(hSession : haxe.Int64, directOut : haxe.Int64, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
+	@:overload @:public @:native public function C_DecryptFinal(hSession : haxe.Int64, directOut : haxe.Int64, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
 	
 	/**
 	* C_DigestInit initializes a message-digesting operation.
@@ -558,7 +558,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_DigestInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM) : Void;
+	@:overload @:public @:native public function C_DigestInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM) : Void;
 	
 	/**
 	* C_Digest digests data in a single part.
@@ -574,7 +574,7 @@ extern class PKCS11
 	* @preconditions (data <> null)
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_DigestSingle(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, digest : java.NativeArray<java.StdTypes.Int8>, digestOfs : Int, digestLen : Int) : Int;
+	@:overload @:public @:native public function C_DigestSingle(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, digest : java.NativeArray<java.StdTypes.Int8>, digestOfs : Int, digestLen : Int) : Int;
 	
 	/**
 	* C_DigestUpdate continues a multiple-part message-digesting
@@ -589,7 +589,7 @@ extern class PKCS11
 	* @preconditions (pPart <> null)
 	* @postconditions
 	*/
-	@:overload @:native public function C_DigestUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int) : Void;
+	@:overload @:public @:native public function C_DigestUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int) : Void;
 	
 	/**
 	* C_DigestKey continues a multi-part message-digesting
@@ -605,7 +605,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_DigestKey(hSession : haxe.Int64, hKey : haxe.Int64) : Void;
+	@:overload @:public @:native public function C_DigestKey(hSession : haxe.Int64, hKey : haxe.Int64) : Void;
 	
 	/**
 	* C_DigestFinal finishes a multiple-part message-digesting
@@ -620,7 +620,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_DigestFinal(hSession : haxe.Int64, pDigest : java.NativeArray<java.StdTypes.Int8>, digestOfs : Int, digestLen : Int) : Int;
+	@:overload @:public @:native public function C_DigestFinal(hSession : haxe.Int64, pDigest : java.NativeArray<java.StdTypes.Int8>, digestOfs : Int, digestLen : Int) : Int;
 	
 	/**
 	* C_SignInit initializes a signature (private key encryption)
@@ -639,7 +639,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_SignInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
+	@:overload @:public @:native public function C_SignInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
 	
 	/**
 	* C_Sign signs (encrypts with private key) data in a single
@@ -658,7 +658,7 @@ extern class PKCS11
 	* @preconditions (pData <> null)
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_Sign(hSession : haxe.Int64, pData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:native public function C_Sign(hSession : haxe.Int64, pData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* C_SignUpdate continues a multiple-part signature operation,
@@ -674,7 +674,7 @@ extern class PKCS11
 	* @preconditions (pPart <> null)
 	* @postconditions
 	*/
-	@:overload @:native public function C_SignUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int) : Void;
+	@:overload @:public @:native public function C_SignUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int) : Void;
 	
 	/**
 	* C_SignFinal finishes a multiple-part signature operation,
@@ -690,7 +690,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_SignFinal(hSession : haxe.Int64, expectedLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:native public function C_SignFinal(hSession : haxe.Int64, expectedLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* C_SignRecoverInit initializes a signature operation, where
@@ -707,7 +707,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_SignRecoverInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
+	@:overload @:public @:native public function C_SignRecoverInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
 	
 	/**
 	* C_SignRecover signs data in a single operation, where the
@@ -725,7 +725,7 @@ extern class PKCS11
 	* @preconditions (pData <> null)
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_SignRecover(hSession : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOufs : Int, outLen : Int) : Int;
+	@:overload @:public @:native public function C_SignRecover(hSession : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOufs : Int, outLen : Int) : Int;
 	
 	/**
 	* C_VerifyInit initializes a verification operation, where the
@@ -743,7 +743,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_VerifyInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
+	@:overload @:public @:native public function C_VerifyInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
 	
 	/**
 	* C_Verify verifies a signature in a single-part operation,
@@ -761,7 +761,7 @@ extern class PKCS11
 	* @preconditions (pData <> null) and (pSignature <> null)
 	* @postconditions
 	*/
-	@:overload @:native public function C_Verify(hSession : haxe.Int64, pData : java.NativeArray<java.StdTypes.Int8>, pSignature : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:native public function C_Verify(hSession : haxe.Int64, pData : java.NativeArray<java.StdTypes.Int8>, pSignature : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* C_VerifyUpdate continues a multiple-part verification
@@ -777,7 +777,7 @@ extern class PKCS11
 	* @preconditions (pPart <> null)
 	* @postconditions
 	*/
-	@:overload @:native public function C_VerifyUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int) : Void;
+	@:overload @:public @:native public function C_VerifyUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int) : Void;
 	
 	/**
 	* C_VerifyFinal finishes a multiple-part verification
@@ -792,7 +792,7 @@ extern class PKCS11
 	* @preconditions (pSignature <> null)
 	* @postconditions
 	*/
-	@:overload @:native public function C_VerifyFinal(hSession : haxe.Int64, pSignature : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:native public function C_VerifyFinal(hSession : haxe.Int64, pSignature : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* C_VerifyRecoverInit initializes a signature verification
@@ -809,7 +809,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_VerifyRecoverInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
+	@:overload @:public @:native public function C_VerifyRecoverInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
 	
 	/**
 	* C_VerifyRecover verifies a signature in a single-part
@@ -826,7 +826,7 @@ extern class PKCS11
 	* @preconditions (pSignature <> null)
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_VerifyRecover(hSession : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOufs : Int, outLen : Int) : Int;
+	@:overload @:public @:native public function C_VerifyRecover(hSession : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOufs : Int, outLen : Int) : Int;
 	
 	/**
 	* C_GenerateKey generates a secret key, creating a new key
@@ -846,7 +846,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_GenerateKey(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
+	@:overload @:public @:native public function C_GenerateKey(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
 	
 	/**
 	* C_GenerateKeyPair generates a public-key/private-key pair,
@@ -874,7 +874,7 @@ extern class PKCS11
 	* @preconditions (pMechanism <> null)
 	* @postconditions (result <> null) and (result.length == 2)
 	*/
-	@:overload @:native public function C_GenerateKeyPair(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, pPublicKeyTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>, pPrivateKeyTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : java.NativeArray<haxe.Int64>;
+	@:overload @:public @:native public function C_GenerateKeyPair(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, pPublicKeyTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>, pPrivateKeyTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* C_WrapKey wraps (i.e., encrypts) a key.
@@ -895,7 +895,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions (result <> null)
 	*/
-	@:overload @:native public function C_WrapKey(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hWrappingKey : haxe.Int64, hKey : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:native public function C_WrapKey(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hWrappingKey : haxe.Int64, hKey : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* C_UnwrapKey unwraps (decrypts) a wrapped key, creating a new
@@ -919,7 +919,7 @@ extern class PKCS11
 	* @preconditions (pWrappedKey <> null)
 	* @postconditions
 	*/
-	@:overload @:native public function C_UnwrapKey(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hUnwrappingKey : haxe.Int64, pWrappedKey : java.NativeArray<java.StdTypes.Int8>, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
+	@:overload @:public @:native public function C_UnwrapKey(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hUnwrappingKey : haxe.Int64, pWrappedKey : java.NativeArray<java.StdTypes.Int8>, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
 	
 	/**
 	* C_DeriveKey derives a key from a base key, creating a new key
@@ -941,7 +941,7 @@ extern class PKCS11
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload @:native public function C_DeriveKey(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hBaseKey : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
+	@:overload @:public @:native public function C_DeriveKey(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hBaseKey : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
 	
 	/**
 	* C_SeedRandom mixes additional seed material into the token's
@@ -956,7 +956,7 @@ extern class PKCS11
 	* @preconditions (pSeed <> null)
 	* @postconditions
 	*/
-	@:overload @:native public function C_SeedRandom(hSession : haxe.Int64, pSeed : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:native public function C_SeedRandom(hSession : haxe.Int64, pSeed : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* C_GenerateRandom generates random data.
@@ -971,14 +971,14 @@ extern class PKCS11
 	* @preconditions (randomData <> null)
 	* @postconditions
 	*/
-	@:overload @:native public function C_GenerateRandom(hSession : haxe.Int64, randomData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:native public function C_GenerateRandom(hSession : haxe.Int64, randomData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the string representation of this object.
 	*
 	* @return The string representation of object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Calls disconnect() to cleanup the native part of the wrapper. Once this
@@ -987,115 +987,115 @@ extern class PKCS11
 	*
 	* @exception Throwable If finalization fails.
 	*/
-	@:overload public function finalize() : Void;
+	@:overload @:public public function finalize() : Void;
 	
 	
 }
 @:native('sun$security$pkcs11$wrapper$PKCS11$SynchronizedPKCS11') @:internal extern class PKCS11_SynchronizedPKCS11 extends sun.security.pkcs11.wrapper.PKCS11
 {
-	@:overload @:synchronized override public function C_Finalize(pReserved : Dynamic) : Void;
+	@:overload @:public @:synchronized override public function C_Finalize(pReserved : Dynamic) : Void;
 	
-	@:overload @:synchronized override public function C_GetInfo() : sun.security.pkcs11.wrapper.CK_INFO;
+	@:overload @:public @:synchronized override public function C_GetInfo() : sun.security.pkcs11.wrapper.CK_INFO;
 	
-	@:overload @:synchronized override public function C_GetSlotList(tokenPresent : Bool) : java.NativeArray<haxe.Int64>;
+	@:overload @:public @:synchronized override public function C_GetSlotList(tokenPresent : Bool) : java.NativeArray<haxe.Int64>;
 	
-	@:overload @:synchronized override public function C_GetSlotInfo(slotID : haxe.Int64) : sun.security.pkcs11.wrapper.CK_SLOT_INFO;
+	@:overload @:public @:synchronized override public function C_GetSlotInfo(slotID : haxe.Int64) : sun.security.pkcs11.wrapper.CK_SLOT_INFO;
 	
-	@:overload @:synchronized override public function C_GetTokenInfo(slotID : haxe.Int64) : sun.security.pkcs11.wrapper.CK_TOKEN_INFO;
+	@:overload @:public @:synchronized override public function C_GetTokenInfo(slotID : haxe.Int64) : sun.security.pkcs11.wrapper.CK_TOKEN_INFO;
 	
-	@:overload @:synchronized override public function C_GetMechanismList(slotID : haxe.Int64) : java.NativeArray<haxe.Int64>;
+	@:overload @:public @:synchronized override public function C_GetMechanismList(slotID : haxe.Int64) : java.NativeArray<haxe.Int64>;
 	
-	@:overload @:synchronized override public function C_GetMechanismInfo(slotID : haxe.Int64, type : haxe.Int64) : sun.security.pkcs11.wrapper.CK_MECHANISM_INFO;
+	@:overload @:public @:synchronized override public function C_GetMechanismInfo(slotID : haxe.Int64, type : haxe.Int64) : sun.security.pkcs11.wrapper.CK_MECHANISM_INFO;
 	
-	@:overload @:synchronized override public function C_OpenSession(slotID : haxe.Int64, flags : haxe.Int64, pApplication : Dynamic, Notify : sun.security.pkcs11.wrapper.CK_NOTIFY) : haxe.Int64;
+	@:overload @:public @:synchronized override public function C_OpenSession(slotID : haxe.Int64, flags : haxe.Int64, pApplication : Dynamic, Notify : sun.security.pkcs11.wrapper.CK_NOTIFY) : haxe.Int64;
 	
-	@:overload @:synchronized override public function C_CloseSession(hSession : haxe.Int64) : Void;
+	@:overload @:public @:synchronized override public function C_CloseSession(hSession : haxe.Int64) : Void;
 	
-	@:overload @:synchronized override public function C_GetSessionInfo(hSession : haxe.Int64) : sun.security.pkcs11.wrapper.CK_SESSION_INFO;
+	@:overload @:public @:synchronized override public function C_GetSessionInfo(hSession : haxe.Int64) : sun.security.pkcs11.wrapper.CK_SESSION_INFO;
 	
-	@:overload @:synchronized override public function C_Login(hSession : haxe.Int64, userType : haxe.Int64, pPin : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public @:synchronized override public function C_Login(hSession : haxe.Int64, userType : haxe.Int64, pPin : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
-	@:overload @:synchronized override public function C_Logout(hSession : haxe.Int64) : Void;
+	@:overload @:public @:synchronized override public function C_Logout(hSession : haxe.Int64) : Void;
 	
-	@:overload @:synchronized override public function C_CreateObject(hSession : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
+	@:overload @:public @:synchronized override public function C_CreateObject(hSession : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
 	
-	@:overload @:synchronized override public function C_CopyObject(hSession : haxe.Int64, hObject : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
+	@:overload @:public @:synchronized override public function C_CopyObject(hSession : haxe.Int64, hObject : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
 	
-	@:overload @:synchronized override public function C_DestroyObject(hSession : haxe.Int64, hObject : haxe.Int64) : Void;
+	@:overload @:public @:synchronized override public function C_DestroyObject(hSession : haxe.Int64, hObject : haxe.Int64) : Void;
 	
-	@:overload @:synchronized override public function C_GetAttributeValue(hSession : haxe.Int64, hObject : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : Void;
+	@:overload @:public @:synchronized override public function C_GetAttributeValue(hSession : haxe.Int64, hObject : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : Void;
 	
-	@:overload @:synchronized override public function C_SetAttributeValue(hSession : haxe.Int64, hObject : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : Void;
+	@:overload @:public @:synchronized override public function C_SetAttributeValue(hSession : haxe.Int64, hObject : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : Void;
 	
-	@:overload @:synchronized override public function C_FindObjectsInit(hSession : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : Void;
+	@:overload @:public @:synchronized override public function C_FindObjectsInit(hSession : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : Void;
 	
-	@:overload @:synchronized override public function C_FindObjects(hSession : haxe.Int64, ulMaxObjectCount : haxe.Int64) : java.NativeArray<haxe.Int64>;
+	@:overload @:public @:synchronized override public function C_FindObjects(hSession : haxe.Int64, ulMaxObjectCount : haxe.Int64) : java.NativeArray<haxe.Int64>;
 	
-	@:overload @:synchronized override public function C_FindObjectsFinal(hSession : haxe.Int64) : Void;
+	@:overload @:public @:synchronized override public function C_FindObjectsFinal(hSession : haxe.Int64) : Void;
 	
-	@:overload @:synchronized override public function C_EncryptInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
+	@:overload @:public @:synchronized override public function C_EncryptInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
 	
-	@:overload @:synchronized override public function C_Encrypt(hSession : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
+	@:overload @:public @:synchronized override public function C_Encrypt(hSession : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
 	
-	@:overload @:synchronized override public function C_EncryptUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, directOut : haxe.Int64, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
+	@:overload @:public @:synchronized override public function C_EncryptUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, directOut : haxe.Int64, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
 	
-	@:overload @:synchronized override public function C_EncryptFinal(hSession : haxe.Int64, directOut : haxe.Int64, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
+	@:overload @:public @:synchronized override public function C_EncryptFinal(hSession : haxe.Int64, directOut : haxe.Int64, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
 	
-	@:overload @:synchronized override public function C_DecryptInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
+	@:overload @:public @:synchronized override public function C_DecryptInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
 	
-	@:overload @:synchronized override public function C_Decrypt(hSession : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
+	@:overload @:public @:synchronized override public function C_Decrypt(hSession : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
 	
-	@:overload @:synchronized override public function C_DecryptUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, directOut : haxe.Int64, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
+	@:overload @:public @:synchronized override public function C_DecryptUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, directOut : haxe.Int64, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
 	
-	@:overload @:synchronized override public function C_DecryptFinal(hSession : haxe.Int64, directOut : haxe.Int64, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
+	@:overload @:public @:synchronized override public function C_DecryptFinal(hSession : haxe.Int64, directOut : haxe.Int64, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int, outLen : Int) : Int;
 	
-	@:overload @:synchronized override public function C_DigestInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM) : Void;
+	@:overload @:public @:synchronized override public function C_DigestInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM) : Void;
 	
-	@:overload @:synchronized override public function C_DigestSingle(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, digest : java.NativeArray<java.StdTypes.Int8>, digestOfs : Int, digestLen : Int) : Int;
+	@:overload @:public @:synchronized override public function C_DigestSingle(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, digest : java.NativeArray<java.StdTypes.Int8>, digestOfs : Int, digestLen : Int) : Int;
 	
-	@:overload @:synchronized override public function C_DigestUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int) : Void;
+	@:overload @:public @:synchronized override public function C_DigestUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int) : Void;
 	
-	@:overload @:synchronized override public function C_DigestKey(hSession : haxe.Int64, hKey : haxe.Int64) : Void;
+	@:overload @:public @:synchronized override public function C_DigestKey(hSession : haxe.Int64, hKey : haxe.Int64) : Void;
 	
-	@:overload @:synchronized override public function C_DigestFinal(hSession : haxe.Int64, pDigest : java.NativeArray<java.StdTypes.Int8>, digestOfs : Int, digestLen : Int) : Int;
+	@:overload @:public @:synchronized override public function C_DigestFinal(hSession : haxe.Int64, pDigest : java.NativeArray<java.StdTypes.Int8>, digestOfs : Int, digestLen : Int) : Int;
 	
-	@:overload @:synchronized override public function C_SignInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
+	@:overload @:public @:synchronized override public function C_SignInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
 	
-	@:overload @:synchronized override public function C_Sign(hSession : haxe.Int64, pData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:synchronized override public function C_Sign(hSession : haxe.Int64, pData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:synchronized override public function C_SignUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int) : Void;
+	@:overload @:public @:synchronized override public function C_SignUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int) : Void;
 	
-	@:overload @:synchronized override public function C_SignFinal(hSession : haxe.Int64, expectedLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:synchronized override public function C_SignFinal(hSession : haxe.Int64, expectedLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:synchronized override public function C_SignRecoverInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
+	@:overload @:public @:synchronized override public function C_SignRecoverInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
 	
-	@:overload @:synchronized override public function C_SignRecover(hSession : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOufs : Int, outLen : Int) : Int;
+	@:overload @:public @:synchronized override public function C_SignRecover(hSession : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOufs : Int, outLen : Int) : Int;
 	
-	@:overload @:synchronized override public function C_VerifyInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
+	@:overload @:public @:synchronized override public function C_VerifyInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
 	
-	@:overload @:synchronized override public function C_Verify(hSession : haxe.Int64, pData : java.NativeArray<java.StdTypes.Int8>, pSignature : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:synchronized override public function C_Verify(hSession : haxe.Int64, pData : java.NativeArray<java.StdTypes.Int8>, pSignature : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:synchronized override public function C_VerifyUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int) : Void;
+	@:overload @:public @:synchronized override public function C_VerifyUpdate(hSession : haxe.Int64, directIn : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int) : Void;
 	
-	@:overload @:synchronized override public function C_VerifyFinal(hSession : haxe.Int64, pSignature : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:synchronized override public function C_VerifyFinal(hSession : haxe.Int64, pSignature : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:synchronized override public function C_VerifyRecoverInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
+	@:overload @:public @:synchronized override public function C_VerifyRecoverInit(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hKey : haxe.Int64) : Void;
 	
-	@:overload @:synchronized override public function C_VerifyRecover(hSession : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOufs : Int, outLen : Int) : Int;
+	@:overload @:public @:synchronized override public function C_VerifyRecover(hSession : haxe.Int64, _in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOufs : Int, outLen : Int) : Int;
 	
-	@:overload @:synchronized override public function C_GenerateKey(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
+	@:overload @:public @:synchronized override public function C_GenerateKey(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
 	
-	@:overload @:synchronized override public function C_GenerateKeyPair(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, pPublicKeyTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>, pPrivateKeyTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : java.NativeArray<haxe.Int64>;
+	@:overload @:public @:synchronized override public function C_GenerateKeyPair(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, pPublicKeyTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>, pPrivateKeyTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : java.NativeArray<haxe.Int64>;
 	
-	@:overload @:synchronized override public function C_WrapKey(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hWrappingKey : haxe.Int64, hKey : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:synchronized override public function C_WrapKey(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hWrappingKey : haxe.Int64, hKey : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:synchronized override public function C_UnwrapKey(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hUnwrappingKey : haxe.Int64, pWrappedKey : java.NativeArray<java.StdTypes.Int8>, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
+	@:overload @:public @:synchronized override public function C_UnwrapKey(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hUnwrappingKey : haxe.Int64, pWrappedKey : java.NativeArray<java.StdTypes.Int8>, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
 	
-	@:overload @:synchronized override public function C_DeriveKey(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hBaseKey : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
+	@:overload @:public @:synchronized override public function C_DeriveKey(hSession : haxe.Int64, pMechanism : sun.security.pkcs11.wrapper.CK_MECHANISM, hBaseKey : haxe.Int64, pTemplate : java.NativeArray<sun.security.pkcs11.wrapper.CK_ATTRIBUTE>) : haxe.Int64;
 	
-	@:overload @:synchronized override public function C_SeedRandom(hSession : haxe.Int64, pSeed : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:synchronized override public function C_SeedRandom(hSession : haxe.Int64, pSeed : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:synchronized override public function C_GenerateRandom(hSession : haxe.Int64, randomData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:synchronized override public function C_GenerateRandom(hSession : haxe.Int64, randomData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

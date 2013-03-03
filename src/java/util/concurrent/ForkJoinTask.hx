@@ -52,7 +52,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	*
 	* @return {@code this}, to simplify usage
 	*/
-	@:overload @:final public function fork() : java.util.concurrent.ForkJoinTask<V>;
+	@:overload @:public @:final public function fork() : java.util.concurrent.ForkJoinTask<V>;
 	
 	/**
 	* Returns the result of the computation when it {@link #isDone is
@@ -65,7 +65,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	*
 	* @return the computed result
 	*/
-	@:overload @:final public function join() : V;
+	@:overload @:public @:final public function join() : V;
 	
 	/**
 	* Commences performing this task, awaits its completion if
@@ -75,7 +75,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	*
 	* @return the computed result
 	*/
-	@:overload @:final public function invoke() : V;
+	@:overload @:public @:final public function invoke() : V;
 	
 	/**
 	* Forks the given tasks, returning when {@code isDone} holds for
@@ -100,7 +100,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	* @param t2 the second task
 	* @throws NullPointerException if any task is null
 	*/
-	@:overload public static function invokeAll(t1 : java.util.concurrent.ForkJoinTask<Dynamic>, t2 : java.util.concurrent.ForkJoinTask<Dynamic>) : Void;
+	@:overload @:public @:static public static function invokeAll(t1 : java.util.concurrent.ForkJoinTask<Dynamic>, t2 : java.util.concurrent.ForkJoinTask<Dynamic>) : Void;
 	
 	/**
 	* Forks the given tasks, returning when {@code isDone} holds for
@@ -123,7 +123,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	* @param tasks the tasks
 	* @throws NullPointerException if any task is null
 	*/
-	@:overload public static function invokeAll(tasks : java.NativeArray<java.util.concurrent.ForkJoinTask<Dynamic>>) : Void;
+	@:overload @:public @:static public static function invokeAll(tasks : java.NativeArray<java.util.concurrent.ForkJoinTask<Dynamic>>) : Void;
 	
 	/**
 	* Forks all tasks in the specified collection, returning when
@@ -148,7 +148,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	* @return the tasks argument, to simplify usage
 	* @throws NullPointerException if tasks or any element are null
 	*/
-	@:overload public static function invokeAll<T : java.util.concurrent.ForkJoinTask<Dynamic>>(tasks : java.util.Collection<T>) : java.util.Collection<T>;
+	@:overload @:public @:static public static function invokeAll<T : java.util.concurrent.ForkJoinTask<Dynamic>>(tasks : java.util.Collection<T>) : java.util.Collection<T>;
 	
 	/**
 	* Attempts to cancel execution of this task. This attempt will
@@ -177,18 +177,18 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	*
 	* @return {@code true} if this task is now cancelled
 	*/
-	@:overload public function cancel(mayInterruptIfRunning : Bool) : Bool;
+	@:overload @:public public function cancel(mayInterruptIfRunning : Bool) : Bool;
 	
-	@:overload @:final public function isDone() : Bool;
+	@:overload @:public @:final public function isDone() : Bool;
 	
-	@:overload @:final public function isCancelled() : Bool;
+	@:overload @:public @:final public function isCancelled() : Bool;
 	
 	/**
 	* Returns {@code true} if this task threw an exception or was cancelled.
 	*
 	* @return {@code true} if this task threw an exception or was cancelled
 	*/
-	@:overload @:final public function isCompletedAbnormally() : Bool;
+	@:overload @:public @:final public function isCompletedAbnormally() : Bool;
 	
 	/**
 	* Returns {@code true} if this task completed without throwing an
@@ -197,7 +197,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	* @return {@code true} if this task completed without throwing an
 	* exception and was not cancelled
 	*/
-	@:overload @:final public function isCompletedNormally() : Bool;
+	@:overload @:public @:final public function isCompletedNormally() : Bool;
 	
 	/**
 	* Returns the exception thrown by the base computation, or a
@@ -206,7 +206,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	*
 	* @return the exception, or {@code null} if none
 	*/
-	@:overload @:final public function getException() : java.lang.Throwable;
+	@:overload @:public @:final public function getException() : java.lang.Throwable;
 	
 	/**
 	* Completes this task abnormally, and if not already aborted or
@@ -222,7 +222,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	* {@code RuntimeException} or {@code Error}, the actual exception
 	* thrown will be a {@code RuntimeException} with cause {@code ex}.
 	*/
-	@:overload public function completeExceptionally(ex : java.lang.Throwable) : Void;
+	@:overload @:public public function completeExceptionally(ex : java.lang.Throwable) : Void;
 	
 	/**
 	* Completes this task, and if not already aborted or cancelled,
@@ -237,7 +237,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	*
 	* @param value the result value for this task
 	*/
-	@:overload public function complete(value : V) : Void;
+	@:overload @:public public function complete(value : V) : Void;
 	
 	/**
 	* Waits if necessary for the computation to complete, and then
@@ -250,7 +250,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	* @throws InterruptedException if the current thread is not a
 	* member of a ForkJoinPool and was interrupted while waiting
 	*/
-	@:overload @:final public function get() : V;
+	@:overload @:public @:final public function get() : V;
 	
 	/**
 	* Waits if necessary for at most the given time for the computation
@@ -266,7 +266,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	* member of a ForkJoinPool and was interrupted while waiting
 	* @throws TimeoutException if the wait timed out
 	*/
-	@:overload @:final public function get(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : V;
+	@:overload @:public @:final public function get(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : V;
 	
 	/**
 	* Joins this task, without returning its result or throwing its
@@ -274,14 +274,14 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	* collections of tasks when some have been cancelled or otherwise
 	* known to have aborted.
 	*/
-	@:overload @:final public function quietlyJoin() : Void;
+	@:overload @:public @:final public function quietlyJoin() : Void;
 	
 	/**
 	* Commences performing this task and awaits its completion if
 	* necessary, without returning its result or throwing its
 	* exception.
 	*/
-	@:overload @:final public function quietlyInvoke() : Void;
+	@:overload @:public @:final public function quietlyInvoke() : Void;
 	
 	/**
 	* Possibly executes tasks until the pool hosting the current task
@@ -296,7 +296,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	* result in exceptions or errors, possibly including {@code
 	* ClassCastException}.
 	*/
-	@:overload public static function helpQuiesce() : Void;
+	@:overload @:public @:static public static function helpQuiesce() : Void;
 	
 	/**
 	* Resets the internal bookkeeping state of this task, allowing a
@@ -314,7 +314,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	* unaffected. To clear this value, you can invoke {@code
 	* setRawResult(null)}.
 	*/
-	@:overload public function reinitialize() : Void;
+	@:overload @:public public function reinitialize() : Void;
 	
 	/**
 	* Returns the pool hosting the current task execution, or null
@@ -323,7 +323,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	* @see #inForkJoinPool
 	* @return the pool, or {@code null} if none
 	*/
-	@:overload public static function getPool() : java.util.concurrent.ForkJoinPool;
+	@:overload @:public @:static public static function getPool() : java.util.concurrent.ForkJoinPool;
 	
 	/**
 	* Returns {@code true} if the current thread is a {@link
@@ -333,7 +333,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	* ForkJoinWorkerThread} executing as a ForkJoinPool computation,
 	* or {@code false} otherwise
 	*/
-	@:overload public static function inForkJoinPool() : Bool;
+	@:overload @:public @:static public static function inForkJoinPool() : Bool;
 	
 	/**
 	* Tries to unschedule this task for execution. This method will
@@ -351,7 +351,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	*
 	* @return {@code true} if unforked
 	*/
-	@:overload public function tryUnfork() : Bool;
+	@:overload @:public public function tryUnfork() : Bool;
 	
 	/**
 	* Returns an estimate of the number of tasks that have been
@@ -367,7 +367,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	*
 	* @return the number of tasks
 	*/
-	@:overload public static function getQueuedTaskCount() : Int;
+	@:overload @:public @:static public static function getQueuedTaskCount() : Int;
 	
 	/**
 	* Returns an estimate of how many more locally queued tasks are
@@ -387,7 +387,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	*
 	* @return the surplus number of tasks, which may be negative
 	*/
-	@:overload public static function getSurplusQueuedTaskCount() : Int;
+	@:overload @:public @:static public static function getSurplusQueuedTaskCount() : Int;
 	
 	/**
 	* Returns the result that would be returned by {@link #join}, even
@@ -398,7 +398,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	*
 	* @return the result, or {@code null} if not completed
 	*/
-	@:overload @:abstract public function getRawResult() : V;
+	@:overload @:public @:abstract public function getRawResult() : V;
 	
 	/**
 	* Forces the given value to be returned as a result.  This method
@@ -407,7 +407,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	*
 	* @param value the value
 	*/
-	@:overload @:abstract private function setRawResult(value : V) : Void;
+	@:overload @:protected @:abstract private function setRawResult(value : V) : Void;
 	
 	/**
 	* Immediately performs the base action of this task.  This method
@@ -420,7 +420,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	*
 	* @return {@code true} if completed normally
 	*/
-	@:overload @:abstract private function exec() : Bool;
+	@:overload @:protected @:abstract private function exec() : Bool;
 	
 	/**
 	* Returns, but does not unschedule or execute, a task queued by
@@ -440,7 +440,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	*
 	* @return the next task, or {@code null} if none are available
 	*/
-	@:overload private static function peekNextLocalTask() : java.util.concurrent.ForkJoinTask<Dynamic>;
+	@:overload @:protected @:static private static function peekNextLocalTask() : java.util.concurrent.ForkJoinTask<Dynamic>;
 	
 	/**
 	* Unschedules and returns, without executing, the next task
@@ -456,7 +456,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	*
 	* @return the next task, or {@code null} if none are available
 	*/
-	@:overload private static function pollNextLocalTask() : java.util.concurrent.ForkJoinTask<Dynamic>;
+	@:overload @:protected @:static private static function pollNextLocalTask() : java.util.concurrent.ForkJoinTask<Dynamic>;
 	
 	/**
 	* Unschedules and returns, without executing, the next task
@@ -476,7 +476,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	*
 	* @return a task, or {@code null} if none are available
 	*/
-	@:overload private static function pollTask() : java.util.concurrent.ForkJoinTask<Dynamic>;
+	@:overload @:protected @:static private static function pollTask() : java.util.concurrent.ForkJoinTask<Dynamic>;
 	
 	/**
 	* Returns a new {@code ForkJoinTask} that performs the {@code run}
@@ -486,7 +486,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	* @param runnable the runnable action
 	* @return the task
 	*/
-	@:overload public static function adapt(runnable : java.lang.Runnable) : java.util.concurrent.ForkJoinTask<Dynamic>;
+	@:overload @:public @:static public static function adapt(runnable : java.lang.Runnable) : java.util.concurrent.ForkJoinTask<Dynamic>;
 	
 	/**
 	* Returns a new {@code ForkJoinTask} that performs the {@code run}
@@ -497,7 +497,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	* @param result the result upon completion
 	* @return the task
 	*/
-	@:overload public static function adapt<T>(runnable : java.lang.Runnable, result : T) : java.util.concurrent.ForkJoinTask<T>;
+	@:overload @:public @:static public static function adapt<T>(runnable : java.lang.Runnable, result : T) : java.util.concurrent.ForkJoinTask<T>;
 	
 	/**
 	* Returns a new {@code ForkJoinTask} that performs the {@code call}
@@ -508,7 +508,7 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 	* @param callable the callable action
 	* @return the task
 	*/
-	@:overload public static function adapt<T>(callable : java.util.concurrent.Callable<T>) : java.util.concurrent.ForkJoinTask<T>;
+	@:overload @:public @:static public static function adapt<T>(callable : java.util.concurrent.Callable<T>) : java.util.concurrent.ForkJoinTask<T>;
 	
 	
 }
@@ -535,13 +535,13 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 */
 @:native('java$util$concurrent$ForkJoinTask$AdaptedRunnable') @:internal extern class ForkJoinTask_AdaptedRunnable<T> extends java.util.concurrent.ForkJoinTask<T> implements java.util.concurrent.RunnableFuture<T>
 {
-	@:overload override public function getRawResult() : T;
+	@:overload @:public override public function getRawResult() : T;
 	
-	@:overload override public function setRawResult(v : T) : Void;
+	@:overload @:public override public function setRawResult(v : T) : Void;
 	
-	@:overload override public function exec() : Bool;
+	@:overload @:public override public function exec() : Bool;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
@@ -550,13 +550,13 @@ extern class ForkJoinTask<V> implements java.util.concurrent.Future<V> implement
 */
 @:native('java$util$concurrent$ForkJoinTask$AdaptedCallable') @:internal extern class ForkJoinTask_AdaptedCallable<T> extends java.util.concurrent.ForkJoinTask<T> implements java.util.concurrent.RunnableFuture<T>
 {
-	@:overload override public function getRawResult() : T;
+	@:overload @:public override public function getRawResult() : T;
 	
-	@:overload override public function setRawResult(v : T) : Void;
+	@:overload @:public override public function setRawResult(v : T) : Void;
 	
-	@:overload override public function exec() : Bool;
+	@:overload @:public override public function exec() : Bool;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

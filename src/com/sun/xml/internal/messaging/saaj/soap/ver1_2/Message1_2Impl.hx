@@ -29,23 +29,23 @@ package com.sun.xml.internal.messaging.saaj.soap.ver1_2;
 */
 extern class Message1_2Impl extends com.sun.xml.internal.messaging.saaj.soap.MessageImpl implements javax.xml.soap.SOAPConstants
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(msg : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public public function new(msg : javax.xml.soap.SOAPMessage) : Void;
 	
-	@:overload public function new(isFastInfoset : Bool, acceptFastInfoset : Bool) : Void;
+	@:overload @:public public function new(isFastInfoset : Bool, acceptFastInfoset : Bool) : Void;
 	
-	@:overload public function new(headers : javax.xml.soap.MimeHeaders, _in : java.io.InputStream) : Void;
+	@:overload @:public public function new(headers : javax.xml.soap.MimeHeaders, _in : java.io.InputStream) : Void;
 	
-	@:overload public function new(headers : javax.xml.soap.MimeHeaders, ct : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType, stat : Int, _in : java.io.InputStream) : Void;
+	@:overload @:public public function new(headers : javax.xml.soap.MimeHeaders, ct : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType, stat : Int, _in : java.io.InputStream) : Void;
 	
-	@:overload override public function getSOAPPart() : javax.xml.soap.SOAPPart;
+	@:overload @:public override public function getSOAPPart() : javax.xml.soap.SOAPPart;
 	
-	@:overload private function isCorrectSoapVersion(contentTypeId : Int) : Bool;
+	@:overload @:protected override private function isCorrectSoapVersion(contentTypeId : Int) : Bool;
 	
-	@:overload private function getExpectedContentType() : String;
+	@:overload @:protected override private function getExpectedContentType() : String;
 	
-	@:overload private function getExpectedAcceptHeader() : String;
+	@:overload @:protected override private function getExpectedAcceptHeader() : String;
 	
 	
 }

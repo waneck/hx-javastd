@@ -30,14 +30,14 @@ extern class CommandInfo
 	* @param verb The command verb this CommandInfo decribes.
 	* @param className The command's fully qualified class name.
 	*/
-	@:overload public function new(verb : String, className : String) : Void;
+	@:overload @:public public function new(verb : String, className : String) : Void;
 	
 	/**
 	* Return the command verb.
 	*
 	* @return the command verb.
 	*/
-	@:overload public function getCommandName() : String;
+	@:overload @:public public function getCommandName() : String;
 	
 	/**
 	* Return the command's class name. <i>This method MAY return null in
@@ -49,7 +49,7 @@ extern class CommandInfo
 	*
 	* @return The class name of the command, or <i>null</i>
 	*/
-	@:overload public function getCommandClass() : String;
+	@:overload @:public public function getCommandClass() : String;
 	
 	/**
 	* Return the instantiated JavaBean component.
@@ -81,7 +81,7 @@ extern class CommandInfo
 	* @see java.beans.Beans#instantiate
 	* @see javax.activation.CommandObject
 	*/
-	@:overload public function getCommandObject(dh : javax.activation.DataHandler, loader : java.lang.ClassLoader) : Dynamic;
+	@:overload @:public public function getCommandObject(dh : javax.activation.DataHandler, loader : java.lang.ClassLoader) : Dynamic;
 	
 	
 }

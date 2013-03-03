@@ -57,14 +57,14 @@ package javax.naming;
 	* @param addrType A non-null string describing the type of the address.
 	* @param addr The possibly null contents of the address in the form of a string.
 	*/
-	@:overload public function new(addrType : String, addr : String) : Void;
+	@:overload @:public public function new(addrType : String, addr : String) : Void;
 	
 	/**
 	* Retrieves the contents of this address. The result is a string.
 	*
 	* @return The possibly null address contents.
 	*/
-	@:overload public function getContent() : Dynamic;
+	@:overload @:public override public function getContent() : Dynamic;
 	
 	
 }

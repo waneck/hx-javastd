@@ -36,7 +36,7 @@ extern interface Text extends org.w3c.dom.Node extends org.w3c.dom.Text
 	* @return <code>true</code> if this <code>Text</code> object is a
 	*         comment; <code>false</code> otherwise
 	*/
-	@:overload public function isComment() : Bool;
+	@:overload @:public public function isComment() : Bool;
 	
 	
 }

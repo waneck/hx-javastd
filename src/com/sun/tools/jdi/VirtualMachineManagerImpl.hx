@@ -25,37 +25,37 @@ package com.sun.tools.jdi;
 */
 extern class VirtualMachineManagerImpl implements com.sun.tools.jdi.VirtualMachineManagerService
 {
-	@:overload public static function virtualMachineManager() : com.sun.jdi.VirtualMachineManager;
+	@:overload @:public @:static public static function virtualMachineManager() : com.sun.jdi.VirtualMachineManager;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload public function defaultConnector() : com.sun.jdi.connect.LaunchingConnector;
+	@:overload @:public public function defaultConnector() : com.sun.jdi.connect.LaunchingConnector;
 	
-	@:overload public function setDefaultConnector(connector : com.sun.jdi.connect.LaunchingConnector) : Void;
+	@:overload @:public public function setDefaultConnector(connector : com.sun.jdi.connect.LaunchingConnector) : Void;
 	
-	@:overload public function launchingConnectors() : java.util.List<com.sun.jdi.connect.LaunchingConnector>;
+	@:overload @:public public function launchingConnectors() : java.util.List<com.sun.jdi.connect.LaunchingConnector>;
 	
-	@:overload public function attachingConnectors() : java.util.List<com.sun.jdi.connect.AttachingConnector>;
+	@:overload @:public public function attachingConnectors() : java.util.List<com.sun.jdi.connect.AttachingConnector>;
 	
-	@:overload public function listeningConnectors() : java.util.List<com.sun.jdi.connect.ListeningConnector>;
+	@:overload @:public public function listeningConnectors() : java.util.List<com.sun.jdi.connect.ListeningConnector>;
 	
-	@:overload public function allConnectors() : java.util.List<com.sun.jdi.connect.Connector>;
+	@:overload @:public public function allConnectors() : java.util.List<com.sun.jdi.connect.Connector>;
 	
-	@:overload public function connectedVirtualMachines() : java.util.List<com.sun.jdi.VirtualMachine>;
+	@:overload @:public public function connectedVirtualMachines() : java.util.List<com.sun.jdi.VirtualMachine>;
 	
-	@:overload public function addConnector(connector : com.sun.jdi.connect.Connector) : Void;
+	@:overload @:public public function addConnector(connector : com.sun.jdi.connect.Connector) : Void;
 	
-	@:overload public function removeConnector(connector : com.sun.jdi.connect.Connector) : Void;
+	@:overload @:public public function removeConnector(connector : com.sun.jdi.connect.Connector) : Void;
 	
-	@:overload @:synchronized public function createVirtualMachine(connection : com.sun.jdi.connect.spi.Connection, process : java.lang.Process) : com.sun.jdi.VirtualMachine;
+	@:overload @:public @:synchronized public function createVirtualMachine(connection : com.sun.jdi.connect.spi.Connection, process : java.lang.Process) : com.sun.jdi.VirtualMachine;
 	
-	@:overload public function createVirtualMachine(connection : com.sun.jdi.connect.spi.Connection) : com.sun.jdi.VirtualMachine;
+	@:overload @:public public function createVirtualMachine(connection : com.sun.jdi.connect.spi.Connection) : com.sun.jdi.VirtualMachine;
 	
-	@:overload public function addVirtualMachine(vm : com.sun.jdi.VirtualMachine) : Void;
+	@:overload @:public public function addVirtualMachine(vm : com.sun.jdi.VirtualMachine) : Void;
 	
-	@:overload public function majorInterfaceVersion() : Int;
+	@:overload @:public public function majorInterfaceVersion() : Int;
 	
-	@:overload public function minorInterfaceVersion() : Int;
+	@:overload @:public public function minorInterfaceVersion() : Int;
 	
 	
 }

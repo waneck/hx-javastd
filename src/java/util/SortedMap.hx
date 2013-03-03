@@ -118,7 +118,7 @@ package java.util;
 	*         or {@code null} if this map uses the natural ordering
 	*         of its keys
 	*/
-	@:overload public function comparator() : java.util.Comparator<K>;
+	@:overload @:public public function comparator() : java.util.Comparator<K>;
 	
 	/**
 	* Returns a view of the portion of this map whose keys range from
@@ -258,7 +258,7 @@ package java.util;
 	* @return a collection view of the values contained in this map,
 	*         sorted in ascending key order
 	*/
-	@:overload public function values() : java.util.Collection<V>;
+	@:overload @:public public function values() : java.util.Collection<V>;
 	
 	/**
 	* Returns a {@link Set} view of the mappings contained in this map.
@@ -278,7 +278,7 @@ package java.util;
 	* @return a set view of the mappings contained in this map,
 	*         sorted in ascending key order
 	*/
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
 	
 }

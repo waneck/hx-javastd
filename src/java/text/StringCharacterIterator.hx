@@ -50,7 +50,7 @@ extern class StringCharacterIterator implements java.text.CharacterIterator
 	/**
 	* Constructs an iterator with an initial index of 0.
 	*/
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* Constructs an iterator with the specified initial index.
@@ -58,7 +58,7 @@ extern class StringCharacterIterator implements java.text.CharacterIterator
 	* @param  text   The String to be iterated over
 	* @param  pos    Initial iterator position
 	*/
-	@:overload public function new(text : String, pos : Int) : Void;
+	@:overload @:public public function new(text : String, pos : Int) : Void;
 	
 	/**
 	* Constructs an iterator over the given range of the given string, with the
@@ -69,7 +69,7 @@ extern class StringCharacterIterator implements java.text.CharacterIterator
 	* @param  end    Index of the character following the last character
 	* @param  pos    Initial iterator position
 	*/
-	@:overload public function new(text : String, begin : Int, end : Int, pos : Int) : Void;
+	@:overload @:public public function new(text : String, begin : Int, end : Int, pos : Int) : Void;
 	
 	/**
 	* Reset this iterator to point to a new string.  This package-visible
@@ -80,61 +80,61 @@ extern class StringCharacterIterator implements java.text.CharacterIterator
 	* @param  text   The String to be iterated over
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setText(text : String) : Void;
+	@:require(java2) @:overload @:public public function setText(text : String) : Void;
 	
 	/**
 	* Implements CharacterIterator.first() for String.
 	* @see CharacterIterator#first
 	*/
-	@:overload public function first() : java.StdTypes.Char16;
+	@:overload @:public public function first() : java.StdTypes.Char16;
 	
 	/**
 	* Implements CharacterIterator.last() for String.
 	* @see CharacterIterator#last
 	*/
-	@:overload public function last() : java.StdTypes.Char16;
+	@:overload @:public public function last() : java.StdTypes.Char16;
 	
 	/**
 	* Implements CharacterIterator.setIndex() for String.
 	* @see CharacterIterator#setIndex
 	*/
-	@:overload public function setIndex(p : Int) : java.StdTypes.Char16;
+	@:overload @:public public function setIndex(p : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Implements CharacterIterator.current() for String.
 	* @see CharacterIterator#current
 	*/
-	@:overload public function current() : java.StdTypes.Char16;
+	@:overload @:public public function current() : java.StdTypes.Char16;
 	
 	/**
 	* Implements CharacterIterator.next() for String.
 	* @see CharacterIterator#next
 	*/
-	@:overload public function next() : java.StdTypes.Char16;
+	@:overload @:public public function next() : java.StdTypes.Char16;
 	
 	/**
 	* Implements CharacterIterator.previous() for String.
 	* @see CharacterIterator#previous
 	*/
-	@:overload public function previous() : java.StdTypes.Char16;
+	@:overload @:public public function previous() : java.StdTypes.Char16;
 	
 	/**
 	* Implements CharacterIterator.getBeginIndex() for String.
 	* @see CharacterIterator#getBeginIndex
 	*/
-	@:overload public function getBeginIndex() : Int;
+	@:overload @:public public function getBeginIndex() : Int;
 	
 	/**
 	* Implements CharacterIterator.getEndIndex() for String.
 	* @see CharacterIterator#getEndIndex
 	*/
-	@:overload public function getEndIndex() : Int;
+	@:overload @:public public function getEndIndex() : Int;
 	
 	/**
 	* Implements CharacterIterator.getIndex() for String.
 	* @see CharacterIterator#getIndex
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* Compares the equality of two StringCharacterIterator objects.
@@ -142,19 +142,19 @@ extern class StringCharacterIterator implements java.text.CharacterIterator
 	* @return true if the given obj is the same as this
 	* StringCharacterIterator object; false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Computes a hashcode for this iterator.
 	* @return A hash code
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Creates a copy of this iterator.
 	* @return A copy of this
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

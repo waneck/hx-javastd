@@ -49,7 +49,7 @@ package sunw.util;
 */
 extern class EventObject extends java.util.EventObject
 {
-	@:overload public function new(source : Dynamic) : Void;
+	@:overload @:public override public function new(source : Dynamic) : Void;
 	
 	
 }

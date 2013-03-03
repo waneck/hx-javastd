@@ -21,16 +21,16 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class CDATASectionImpl extends com.sun.org.apache.xerces.internal.dom.TextImpl implements org.w3c.dom.CDATASection
 {
 	/** Factory constructor for creating a CDATA section. */
-	@:overload public function new(ownerDoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, data : String) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, data : String) : Void;
 	
 	/**
 	* A short integer indicating what type of node this is. The named
 	* constants for this value are defined in the org.w3c.dom.Node interface.
 	*/
-	@:overload override public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public override public function getNodeType() : java.StdTypes.Int16;
 	
 	/** Returns the node name. */
-	@:overload override public function getNodeName() : String;
+	@:overload @:public override public function getNodeName() : String;
 	
 	
 }

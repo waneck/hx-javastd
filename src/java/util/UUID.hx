@@ -77,7 +77,7 @@ package java.util;
 	* @param  leastSigBits
 	*         The least significant bits of the {@code UUID}
 	*/
-	@:overload public function new(mostSigBits : haxe.Int64, leastSigBits : haxe.Int64) : Void;
+	@:overload @:public public function new(mostSigBits : haxe.Int64, leastSigBits : haxe.Int64) : Void;
 	
 	/**
 	* Static factory to retrieve a type 4 (pseudo randomly generated) UUID.
@@ -87,7 +87,7 @@ package java.util;
 	*
 	* @return  A randomly generated {@code UUID}
 	*/
-	@:overload public static function randomUUID() : java.util.UUID;
+	@:overload @:public @:static public static function randomUUID() : java.util.UUID;
 	
 	/**
 	* Static factory to retrieve a type 3 (name based) {@code UUID} based on
@@ -98,7 +98,7 @@ package java.util;
 	*
 	* @return  A {@code UUID} generated from the specified array
 	*/
-	@:overload public static function nameUUIDFromBytes(name : java.NativeArray<java.StdTypes.Int8>) : java.util.UUID;
+	@:overload @:public @:static public static function nameUUIDFromBytes(name : java.NativeArray<java.StdTypes.Int8>) : java.util.UUID;
 	
 	/**
 	* Creates a {@code UUID} from the string standard representation as
@@ -114,21 +114,21 @@ package java.util;
 	*          described in {@link #toString}
 	*
 	*/
-	@:overload public static function fromString(name : String) : java.util.UUID;
+	@:overload @:public @:static public static function fromString(name : String) : java.util.UUID;
 	
 	/**
 	* Returns the least significant 64 bits of this UUID's 128 bit value.
 	*
 	* @return  The least significant 64 bits of this UUID's 128 bit value
 	*/
-	@:overload public function getLeastSignificantBits() : haxe.Int64;
+	@:overload @:public public function getLeastSignificantBits() : haxe.Int64;
 	
 	/**
 	* Returns the most significant 64 bits of this UUID's 128 bit value.
 	*
 	* @return  The most significant 64 bits of this UUID's 128 bit value
 	*/
-	@:overload public function getMostSignificantBits() : haxe.Int64;
+	@:overload @:public public function getMostSignificantBits() : haxe.Int64;
 	
 	/**
 	* The version number associated with this {@code UUID}.  The version
@@ -144,7 +144,7 @@ package java.util;
 	*
 	* @return  The version number of this {@code UUID}
 	*/
-	@:overload public function version() : Int;
+	@:overload @:public public function version() : Int;
 	
 	/**
 	* The variant number associated with this {@code UUID}.  The variant
@@ -161,7 +161,7 @@ package java.util;
 	*
 	* @return  The variant number of this {@code UUID}
 	*/
-	@:overload public function variant() : Int;
+	@:overload @:public public function variant() : Int;
 	
 	/**
 	* The timestamp value associated with this UUID.
@@ -178,7 +178,7 @@ package java.util;
 	* @throws UnsupportedOperationException
 	*         If this UUID is not a version 1 UUID
 	*/
-	@:overload public function timestamp() : haxe.Int64;
+	@:overload @:public public function timestamp() : haxe.Int64;
 	
 	/**
 	* The clock sequence value associated with this UUID.
@@ -196,7 +196,7 @@ package java.util;
 	* @throws  UnsupportedOperationException
 	*          If this UUID is not a version 1 UUID
 	*/
-	@:overload public function clockSequence() : Int;
+	@:overload @:public public function clockSequence() : Int;
 	
 	/**
 	* The node value associated with this UUID.
@@ -214,7 +214,7 @@ package java.util;
 	* @throws  UnsupportedOperationException
 	*          If this UUID is not a version 1 UUID
 	*/
-	@:overload public function node() : haxe.Int64;
+	@:overload @:public public function node() : haxe.Int64;
 	
 	/**
 	* Returns a {@code String} object representing this {@code UUID}.
@@ -240,14 +240,14 @@ package java.util;
 	*
 	* @return  A string representation of this {@code UUID}
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hash code for this {@code UUID}.
 	*
 	* @return  A hash code value for this {@code UUID}
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this object to the specified object.  The result is {@code
@@ -261,7 +261,7 @@ package java.util;
 	* @return  {@code true} if the objects are the same; {@code false}
 	*          otherwise
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Compares this UUID with the specified UUID.
@@ -277,7 +277,7 @@ package java.util;
 	*          greater than {@code val}
 	*
 	*/
-	@:overload public function compareTo(val : java.util.UUID) : Int;
+	@:overload @:public public function compareTo(val : java.util.UUID) : Int;
 	
 	
 }

@@ -31,15 +31,15 @@ package com.sun.media.sound;
 */
 extern interface ModelOscillator
 {
-	@:overload public function getChannels() : Int;
+	@:overload @:public public function getChannels() : Int;
 	
 	/**
 	* Attenuation is in cB.
 	* @return
 	*/
-	@:overload public function getAttenuation() : Single;
+	@:overload @:public public function getAttenuation() : Single;
 	
-	@:overload public function open(samplerate : Single) : com.sun.media.sound.ModelOscillatorStream;
+	@:overload @:public public function open(samplerate : Single) : com.sun.media.sound.ModelOscillatorStream;
 	
 	
 }

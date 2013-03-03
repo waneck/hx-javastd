@@ -39,13 +39,13 @@ extern class ValueEntry extends com.sun.tools.corba.se.idl.InterfaceEntry
 	/**
 * This is the symbol table entry for values.
 **/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.ValueEntry) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.ValueEntry) : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/** Invoke the interface generator.
 	@param symbolTable The symbol table is a hash table whose key is
@@ -53,49 +53,49 @@ extern class ValueEntry extends com.sun.tools.corba.se.idl.InterfaceEntry
 	a subclass of SymtabEntry.
 	@param stream The stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload @:public override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the value generator.
 	@returns an object which implements the ValueGen interface.
 	@see ValueGen */
-	@:overload override public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload @:public override public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	/** Add an InterfaceEntry to the list of interfaces which this value
 	supports.  During parsing, the parameter to this method COULD be a
 	ForwardEntry, but when parsing is complete, calling supports will
 	return a vector which only contains InterfaceEntry's. */
-	@:overload public function addSupport(supports : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:public public function addSupport(supports : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/** This method returns a vector of InterfaceEntry's. */
-	@:overload public function supports() : java.util.Vector<Dynamic>;
+	@:overload @:public public function supports() : java.util.Vector<Dynamic>;
 	
 	/** Add to the list of support names. */
-	@:overload public function addSupportName(name : String) : Void;
+	@:overload @:public public function addSupportName(name : String) : Void;
 	
 	/** This method returns a vector of Strings, each of which is a fully
 	qualified name of an interface. This vector corresponds to the
 	supports vector.  The first element of this vector is the name of
 	the first element of the supports vector, etc. */
-	@:overload public function supportsNames() : java.util.Vector<Dynamic>;
+	@:overload @:public public function supportsNames() : java.util.Vector<Dynamic>;
 	
-	@:overload override public function replaceForwardDecl(oldEntry : com.sun.tools.corba.se.idl.ForwardEntry, newEntry : com.sun.tools.corba.se.idl.InterfaceEntry) : Bool;
+	@:overload @:public override public function replaceForwardDecl(oldEntry : com.sun.tools.corba.se.idl.ForwardEntry, newEntry : com.sun.tools.corba.se.idl.InterfaceEntry) : Bool;
 	
-	@:overload public function initializers() : java.util.Vector<Dynamic>;
+	@:overload @:public public function initializers() : java.util.Vector<Dynamic>;
 	
 	/** Tag all methods introduced by the value type as 'value methods' so
 	they can be differentiated in the emitters from any interface methods
 	that the value type supports. */
-	@:overload public function tagMethods() : Void;
+	@:overload @:public public function tagMethods() : Void;
 	
 	/** Get the 'custom' marshaling property. */
-	@:overload public function isCustom() : Bool;
+	@:overload @:public public function isCustom() : Bool;
 	
 	/** Set the 'custom' marshaling property. */
-	@:overload public function setCustom(isCustom : Bool) : Void;
+	@:overload @:public public function setCustom(isCustom : Bool) : Void;
 	
 	/** Return whether or not the value type can be "safely" truncated to
 	its concrete parent type. */
-	@:overload public function isSafe() : Bool;
+	@:overload @:public public function isSafe() : Bool;
 	
 	
 }

@@ -66,9 +66,9 @@ package com.sun.security.sasl.gsskerb;
 	* @return A non-null byte array containing the challenge to be
 	* sent to the client, or null when no more data is to be sent.
 	*/
-	@:overload public function evaluateResponse(responseData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function evaluateResponse(responseData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getAuthorizationID() : String;
+	@:overload @:public public function getAuthorizationID() : String;
 	
 	
 }

@@ -26,33 +26,33 @@ package java.nio;
 //// -- This file was mechanically generated: Do not edit! -- //
 @:internal extern class ByteBufferAsLongBufferL extends java.nio.LongBuffer
 {
-	private var bb(default, null) : java.nio.ByteBuffer;
+	@:protected @:final private var bb(default, null) : java.nio.ByteBuffer;
 	
-	private var offset(default, null) : Int;
+	@:protected @:final private var offset(default, null) : Int;
 	
-	@:overload override public function slice() : java.nio.LongBuffer;
+	@:overload @:public override public function slice() : java.nio.LongBuffer;
 	
-	@:overload override public function duplicate() : java.nio.LongBuffer;
+	@:overload @:public override public function duplicate() : java.nio.LongBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.LongBuffer;
+	@:overload @:public override public function asReadOnlyBuffer() : java.nio.LongBuffer;
 	
-	@:overload private function ix(i : Int) : Int;
+	@:overload @:protected private function ix(i : Int) : Int;
 	
-	@:overload override public function get() : haxe.Int64;
+	@:overload @:public override public function get() : haxe.Int64;
 	
-	@:overload override public function get(i : Int) : haxe.Int64;
+	@:overload @:public override public function get(i : Int) : haxe.Int64;
 	
-	@:overload override public function put(x : haxe.Int64) : java.nio.LongBuffer;
+	@:overload @:public override public function put(x : haxe.Int64) : java.nio.LongBuffer;
 	
-	@:overload override public function put(i : Int, x : haxe.Int64) : java.nio.LongBuffer;
+	@:overload @:public override public function put(i : Int, x : haxe.Int64) : java.nio.LongBuffer;
 	
-	@:overload override public function compact() : java.nio.LongBuffer;
+	@:overload @:public override public function compact() : java.nio.LongBuffer;
 	
-	@:overload override public function isDirect() : Bool;
+	@:overload @:public override public function isDirect() : Bool;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload override public function order() : java.nio.ByteOrder;
+	@:overload @:public override public function order() : java.nio.ByteOrder;
 	
 	
 }

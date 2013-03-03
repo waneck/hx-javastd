@@ -25,17 +25,17 @@ package sun.security.x509;
 */
 extern class AVA implements sun.security.util.DerEncoder
 {
-	@:overload public function new(type : sun.security.util.ObjectIdentifier, val : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(type : sun.security.util.ObjectIdentifier, val : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Get the ObjectIdentifier of this AVA.
 	*/
-	@:overload public function getObjectIdentifier() : sun.security.util.ObjectIdentifier;
+	@:overload @:public public function getObjectIdentifier() : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Get the value of this AVA as a DerValue.
 	*/
-	@:overload public function getDerValue() : sun.security.util.DerValue;
+	@:overload @:public public function getDerValue() : sun.security.util.DerValue;
 	
 	/**
 	* Get the value of this AVA as a String.
@@ -43,21 +43,21 @@ extern class AVA implements sun.security.util.DerEncoder
 	* @exception RuntimeException if we could not obtain the string form
 	*    (should not occur)
 	*/
-	@:overload public function getValueString() : String;
+	@:overload @:public public function getValueString() : String;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode for this AVA.
 	*
 	* @return a hashcode for this AVA.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/*
 	* AVAs are encoded as a SEQUENCE of two elements.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* DER encode this object onto an output stream.
@@ -68,20 +68,20 @@ extern class AVA implements sun.security.util.DerEncoder
 	*
 	* @exception IOException on encoding error.
 	*/
-	@:overload public function derEncode(out : java.io.OutputStream) : Void;
+	@:overload @:public public function derEncode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Returns a printable form of this attribute, using RFC 1779
 	* syntax for individual attribute/value assertions.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a printable form of this attribute, using RFC 1779
 	* syntax for individual attribute/value assertions. It only
 	* emits standardised keywords.
 	*/
-	@:overload public function toRFC1779String() : String;
+	@:overload @:public public function toRFC1779String() : String;
 	
 	/**
 	* Returns a printable form of this attribute, using RFC 1779
@@ -89,14 +89,14 @@ extern class AVA implements sun.security.util.DerEncoder
 	* emits standardised keywords, as well as keywords contained in the
 	* OID/keyword map.
 	*/
-	@:overload public function toRFC1779String(oidMap : java.util.Map<String, String>) : String;
+	@:overload @:public public function toRFC1779String(oidMap : java.util.Map<String, String>) : String;
 	
 	/**
 	* Returns a printable form of this attribute, using RFC 2253
 	* syntax for individual attribute/value assertions. It only
 	* emits standardised keywords.
 	*/
-	@:overload public function toRFC2253String() : String;
+	@:overload @:public public function toRFC2253String() : String;
 	
 	/**
 	* Returns a printable form of this attribute, using RFC 2253
@@ -104,9 +104,9 @@ extern class AVA implements sun.security.util.DerEncoder
 	* emits standardised keywords, as well as keywords contained in the
 	* OID/keyword map.
 	*/
-	@:overload public function toRFC2253String(oidMap : java.util.Map<String, String>) : String;
+	@:overload @:public public function toRFC2253String(oidMap : java.util.Map<String, String>) : String;
 	
-	@:overload public function toRFC2253CanonicalString() : String;
+	@:overload @:public public function toRFC2253CanonicalString() : String;
 	
 	
 }

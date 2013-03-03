@@ -25,29 +25,29 @@ package com.sun.xml.internal.ws.policy.subject;
 */
 extern class WsdlBindingSubject
 {
-	@:overload public static function createBindingSubject(bindingName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.subject.WsdlBindingSubject;
+	@:overload @:public @:static public static function createBindingSubject(bindingName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.subject.WsdlBindingSubject;
 	
-	@:overload public static function createBindingOperationSubject(bindingName : javax.xml.namespace.QName, operationName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.subject.WsdlBindingSubject;
+	@:overload @:public @:static public static function createBindingOperationSubject(bindingName : javax.xml.namespace.QName, operationName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.subject.WsdlBindingSubject;
 	
-	@:overload public static function createBindingMessageSubject(bindingName : javax.xml.namespace.QName, operationName : javax.xml.namespace.QName, messageName : javax.xml.namespace.QName, messageType : com.sun.xml.internal.ws.policy.subject.WsdlBindingSubject.WsdlBindingSubject_WsdlMessageType) : com.sun.xml.internal.ws.policy.subject.WsdlBindingSubject;
+	@:overload @:public @:static public static function createBindingMessageSubject(bindingName : javax.xml.namespace.QName, operationName : javax.xml.namespace.QName, messageName : javax.xml.namespace.QName, messageType : com.sun.xml.internal.ws.policy.subject.WsdlBindingSubject.WsdlBindingSubject_WsdlMessageType) : com.sun.xml.internal.ws.policy.subject.WsdlBindingSubject;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function getMessageType() : com.sun.xml.internal.ws.policy.subject.WsdlBindingSubject.WsdlBindingSubject_WsdlMessageType;
+	@:overload @:public public function getMessageType() : com.sun.xml.internal.ws.policy.subject.WsdlBindingSubject.WsdlBindingSubject_WsdlMessageType;
 	
-	@:overload public function getParent() : com.sun.xml.internal.ws.policy.subject.WsdlBindingSubject;
+	@:overload @:public public function getParent() : com.sun.xml.internal.ws.policy.subject.WsdlBindingSubject;
 	
-	@:overload public function isBindingSubject() : Bool;
+	@:overload @:public public function isBindingSubject() : Bool;
 	
-	@:overload public function isBindingOperationSubject() : Bool;
+	@:overload @:public public function isBindingOperationSubject() : Bool;
 	
-	@:overload public function isBindingMessageSubject() : Bool;
+	@:overload @:public public function isBindingMessageSubject() : Bool;
 	
-	@:overload public function equals(that : Dynamic) : Bool;
+	@:overload @:public public function equals(that : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

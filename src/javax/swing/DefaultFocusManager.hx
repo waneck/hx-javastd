@@ -25,17 +25,17 @@ package javax.swing;
 */
 extern class DefaultFocusManager extends javax.swing.FocusManager
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getComponentAfter(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
+	@:overload @:public public function getComponentAfter(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
 	
-	@:overload public function getComponentBefore(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
+	@:overload @:public public function getComponentBefore(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
 	
-	@:overload public function getFirstComponent(aContainer : java.awt.Container) : java.awt.Component;
+	@:overload @:public public function getFirstComponent(aContainer : java.awt.Container) : java.awt.Component;
 	
-	@:overload public function getLastComponent(aContainer : java.awt.Container) : java.awt.Component;
+	@:overload @:public public function getLastComponent(aContainer : java.awt.Container) : java.awt.Component;
 	
-	@:overload public function compareTabOrder(a : java.awt.Component, b : java.awt.Component) : Bool;
+	@:overload @:public public function compareTabOrder(a : java.awt.Component, b : java.awt.Component) : Bool;
 	
 	
 }
@@ -45,7 +45,7 @@ extern class DefaultFocusManager extends javax.swing.FocusManager
 }
 @:internal extern class CompareTabOrderComparator implements java.util.Comparator<java.awt.Component>
 {
-	@:overload public function compare(o1 : java.awt.Component, o2 : java.awt.Component) : Int;
+	@:overload @:public public function compare(o1 : java.awt.Component, o2 : java.awt.Component) : Int;
 	
 	
 }

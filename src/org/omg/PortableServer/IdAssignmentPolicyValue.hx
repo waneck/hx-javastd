@@ -16,19 +16,19 @@ package org.omg.PortableServer;
 	 */
 extern class IdAssignmentPolicyValue implements org.omg.CORBA.portable.IDLEntity
 {
-	public static var _USER_ID(default, null) : Int;
+	@:public @:static @:final public static var _USER_ID(default, null) : Int;
 	
-	public static var USER_ID(default, null) : org.omg.PortableServer.IdAssignmentPolicyValue;
+	@:public @:static @:final public static var USER_ID(default, null) : org.omg.PortableServer.IdAssignmentPolicyValue;
 	
-	public static var _SYSTEM_ID(default, null) : Int;
+	@:public @:static @:final public static var _SYSTEM_ID(default, null) : Int;
 	
-	public static var SYSTEM_ID(default, null) : org.omg.PortableServer.IdAssignmentPolicyValue;
+	@:public @:static @:final public static var SYSTEM_ID(default, null) : org.omg.PortableServer.IdAssignmentPolicyValue;
 	
-	@:overload public function value() : Int;
+	@:overload @:public public function value() : Int;
 	
-	@:overload public static function from_int(value : Int) : org.omg.PortableServer.IdAssignmentPolicyValue;
+	@:overload @:public @:static public static function from_int(value : Int) : org.omg.PortableServer.IdAssignmentPolicyValue;
 	
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	
 }

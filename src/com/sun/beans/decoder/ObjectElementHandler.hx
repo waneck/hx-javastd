@@ -48,13 +48,13 @@ package com.sun.beans.decoder;
 	* @param name   the attribute name
 	* @param value  the attribute value
 	*/
-	@:overload @:final override public function addAttribute(name : String, value : String) : Void;
+	@:overload @:public @:final override public function addAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Calculates the value of this element
 	* if the field attribute or the idref attribute is set.
 	*/
-	@:overload @:final override public function startElement() : Void;
+	@:overload @:public @:final override public function startElement() : Void;
 	
 	/**
 	* Tests whether the value of this element can be used
@@ -64,7 +64,7 @@ package com.sun.beans.decoder;
 	*         as an argument of the element that contained in this one,
 	*         {@code false} otherwise
 	*/
-	@:overload override private function isArgument() : Bool;
+	@:overload @:protected override private function isArgument() : Bool;
 	
 	/**
 	* Creates the value of this element.
@@ -74,7 +74,7 @@ package com.sun.beans.decoder;
 	* @return the value of this element
 	* @throws Exception if calculation is failed
 	*/
-	@:overload @:final private function getValueObject(type : Class<Dynamic>, args : java.NativeArray<Dynamic>) : com.sun.beans.decoder.ValueObject;
+	@:overload @:protected @:final private function getValueObject(type : Class<Dynamic>, args : java.NativeArray<Dynamic>) : com.sun.beans.decoder.ValueObject;
 	
 	
 }

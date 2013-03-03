@@ -30,14 +30,14 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* server yet.
 	*
 	*/
-	@:overload override private function new() : Void;
+	@:overload @:protected override private function new() : Void;
 	
 	/**
 	* Creates an instance of FtpClient. The client is not connected to any
 	* server yet.
 	*
 	*/
-	@:overload public static function create() : sun.net.ftp.FtpClient;
+	@:overload @:public @:static public static function create() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Set the transfer mode to <I>passive</I>. In that mode, data connections
@@ -48,14 +48,14 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return This FtpClient
 	* @see #setActiveMode()
 	*/
-	@:overload override public function enablePassiveMode(passive : Bool) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function enablePassiveMode(passive : Bool) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Gets the current transfer mode.
 	*
 	* @return the current <code>FtpTransferMode</code>
 	*/
-	@:overload override public function isPassiveModeEnabled() : Bool;
+	@:overload @:public override public function isPassiveModeEnabled() : Bool;
 	
 	/**
 	* Sets the timeout value to use when connecting to the server,
@@ -65,7 +65,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	*
 	* @return This FtpClient
 	*/
-	@:overload override public function setConnectTimeout(timeout : Int) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function setConnectTimeout(timeout : Int) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Returns the current connection timeout value.
@@ -73,7 +73,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return the value, in milliseconds, of the current connect timeout.
 	* @see #setConnectTimeout(int)
 	*/
-	@:overload override public function getConnectTimeout() : Int;
+	@:overload @:public override public function getConnectTimeout() : Int;
 	
 	/**
 	* Sets the timeout value to use when reading from the server,
@@ -82,7 +82,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	*        operation. A value of zero or less, means use the default timeout.
 	* @return This FtpClient
 	*/
-	@:overload override public function setReadTimeout(timeout : Int) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function setReadTimeout(timeout : Int) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Returns the current read timeout value.
@@ -90,9 +90,9 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return the value, in milliseconds, of the current read timeout.
 	* @see #setReadTimeout(int)
 	*/
-	@:overload override public function getReadTimeout() : Int;
+	@:overload @:public override public function getReadTimeout() : Int;
 	
-	@:overload override public function setProxy(p : java.net.Proxy) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function setProxy(p : java.net.Proxy) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Get the proxy of this FtpClient
@@ -101,18 +101,18 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	*         if none is used.
 	* @see #setProxy(Proxy)
 	*/
-	@:overload override public function getProxy() : java.net.Proxy;
+	@:overload @:public override public function getProxy() : java.net.Proxy;
 	
 	/**
 	* Tests whether this client is connected or not to a server.
 	*
 	* @return <code>true</code> if the client is connected.
 	*/
-	@:overload override public function isConnected() : Bool;
+	@:overload @:public override public function isConnected() : Bool;
 	
-	@:overload override public function getServerAddress() : java.net.SocketAddress;
+	@:overload @:public override public function getServerAddress() : java.net.SocketAddress;
 	
-	@:overload override public function connect(dest : java.net.SocketAddress) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function connect(dest : java.net.SocketAddress) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Connects the FtpClient to the specified destination.
@@ -120,7 +120,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @param dest the address of the destination server
 	* @throws IOException if connection failed.
 	*/
-	@:overload override public function connect(dest : java.net.SocketAddress, timeout : Int) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function connect(dest : java.net.SocketAddress, timeout : Int) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Attempts to log on the server with the specified user name and password.
@@ -130,7 +130,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return <code>true</code> if the login was successful.
 	* @throws IOException if an error occured during the transmission
 	*/
-	@:overload override public function login(user : String, password : java.NativeArray<java.StdTypes.Char16>) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function login(user : String, password : java.NativeArray<java.StdTypes.Char16>) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Attempts to log on the server with the specified user name, password and
@@ -142,21 +142,21 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return <code>true</code> if the login was successful.
 	* @throws IOException if an error occurs during the transmission.
 	*/
-	@:overload override public function login(user : String, password : java.NativeArray<java.StdTypes.Char16>, account : String) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function login(user : String, password : java.NativeArray<java.StdTypes.Char16>, account : String) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Logs out the current user. This is in effect terminates the current
 	* session and the connection to the server will be closed.
 	*
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Checks whether the client is logged in to the server or not.
 	*
 	* @return <code>true</code> if the client has already completed a login.
 	*/
-	@:overload override public function isLoggedIn() : Bool;
+	@:overload @:public override public function isLoggedIn() : Bool;
 	
 	/**
 	* Changes to a specific directory on a remote FTP server
@@ -165,7 +165,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return <code>true</code> if the operation was successful.
 	* @exception <code>FtpProtocolException</code>
 	*/
-	@:overload override public function changeDirectory(remoteDirectory : String) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function changeDirectory(remoteDirectory : String) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Changes to the parent directory, sending the CDUP command to the server.
@@ -173,7 +173,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return <code>true</code> if the command was successful.
 	* @throws IOException
 	*/
-	@:overload override public function changeToParentDirectory() : sun.net.ftp.FtpClient;
+	@:overload @:public override public function changeToParentDirectory() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Returns the server current working directory, or <code>null</code> if
@@ -183,7 +183,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	*         or <code>null</code>
 	* @throws IOException
 	*/
-	@:overload override public function getWorkingDirectory() : String;
+	@:overload @:public override public function getWorkingDirectory() : String;
 	
 	/**
 	* Sets the restart offset to the specified value.  That value will be
@@ -196,7 +196,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	*        transfer. This must be a value greater than or equal to zero.
 	* @throws IllegalArgumentException if the offset is negative.
 	*/
-	@:overload override public function setRestartOffset(offset : haxe.Int64) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function setRestartOffset(offset : haxe.Int64) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Retrieves a file from the ftp server and writes it to the specified
@@ -212,7 +212,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @param local the <code>OutputStream</code> the file should be written to.
 	* @throws IOException if the transfer fails.
 	*/
-	@:overload override public function getFile(name : String, local : java.io.OutputStream) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function getFile(name : String, local : java.io.OutputStream) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Retrieves a file from the ftp server, using the RETR command, and
@@ -225,7 +225,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	*         <code>null</code> if the command was unsuccessful.
 	* @throws IOException if an error occured during the transmission.
 	*/
-	@:overload override public function getFileStream(name : String) : java.io.InputStream;
+	@:overload @:public override public function getFileStream(name : String) : java.io.InputStream;
 	
 	/**
 	* Transfers a file from the client to the server (aka a <I>put</I>)
@@ -252,7 +252,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	*         <code>null</code> if the command was unsuccessful.
 	* @throws IOException if an error occured during the transmission.
 	*/
-	@:overload override public function putFileStream(name : String, unique : Bool) : java.io.OutputStream;
+	@:overload @:public override public function putFileStream(name : String, unique : Bool) : java.io.OutputStream;
 	
 	/**
 	* Transfers a file from the client to the server (aka a <I>put</I>)
@@ -272,7 +272,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @throws IOException if an error occured during the transmission.
 	* @see #getLastFileName()
 	*/
-	@:overload override public function putFile(name : String, local : java.io.InputStream, unique : Bool) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function putFile(name : String, local : java.io.InputStream, unique : Bool) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Sends the APPE command to the server in order to transfer a data stream
@@ -286,7 +286,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return <code>true</code> if the transfer was successful.
 	* @throws IOException if an error occured during the transmission.
 	*/
-	@:overload override public function appendFile(name : String, local : java.io.InputStream) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function appendFile(name : String, local : java.io.InputStream) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Renames a file on the server.
@@ -295,7 +295,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @param to the new name for the file
 	* @throws IOException if the command fails
 	*/
-	@:overload override public function rename(from : String, to : String) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function rename(from : String, to : String) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Deletes a file on the server.
@@ -305,7 +305,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return <code>true</code> if the command was successful
 	* @throws IOException if an error occured during the exchange
 	*/
-	@:overload override public function deleteFile(name : String) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function deleteFile(name : String) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Creates a new directory on the server.
@@ -315,7 +315,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return <code>true</code> if the operation was successful.
 	* @throws IOException if an error occured during the exchange
 	*/
-	@:overload override public function makeDirectory(name : String) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function makeDirectory(name : String) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Removes a directory on the server.
@@ -326,7 +326,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return <code>true</code> if the operation was successful.
 	* @throws IOException if an error occured during the exchange.
 	*/
-	@:overload override public function removeDirectory(name : String) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function removeDirectory(name : String) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Sends a No-operation command. It's useful for testing the connection
@@ -334,7 +334,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	*
 	* @throws FtpProtocolException if the command fails
 	*/
-	@:overload override public function noop() : sun.net.ftp.FtpClient;
+	@:overload @:public override public function noop() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Sends the STAT command to the server.
@@ -351,7 +351,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	*         command failed.
 	* @throws IOException if an error occured during the transmission.
 	*/
-	@:overload override public function getStatus(name : String) : String;
+	@:overload @:public override public function getStatus(name : String) : String;
 	
 	/**
 	* Sends the FEAT command to the server and returns the list of supported
@@ -368,7 +368,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	*         if the command is not supported.
 	* @throws IOException if an error occurs during the transmission.
 	*/
-	@:overload override public function getFeatures() : java.util.List<String>;
+	@:overload @:public override public function getFeatures() : java.util.List<String>;
 	
 	/**
 	* sends the ABOR command to the server.
@@ -377,7 +377,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return <code>true</code> if the command was successful.
 	* @throws IOException if an error occured during the transmission.
 	*/
-	@:overload override public function abort() : sun.net.ftp.FtpClient;
+	@:overload @:public override public function abort() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Some methods do not wait until completion before returning, so this
@@ -412,14 +412,14 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	*         action was pending.
 	* @throws IOException
 	*/
-	@:overload override public function completePending() : sun.net.ftp.FtpClient;
+	@:overload @:public override public function completePending() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Reinitializes the USER parameters on the FTP server
 	*
 	* @throws FtpProtocolException if the command fails
 	*/
-	@:overload override public function reInit() : sun.net.ftp.FtpClient;
+	@:overload @:public override public function reInit() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Changes the transfer type (binary, ascii, ebcdic) and issue the
@@ -429,7 +429,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return This FtpClient
 	* @throws IOException if an error occurs during transmission.
 	*/
-	@:overload override public function setType(type : sun.net.ftp.FtpClient.FtpClient_TransferType) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function setType(type : sun.net.ftp.FtpClient.FtpClient_TransferType) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Issues a LIST command to the server to get the current directory
@@ -444,7 +444,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @see #changeDirectory(String)
 	* @see #listFiles(String)
 	*/
-	@:overload override public function list(path : String) : java.io.InputStream;
+	@:overload @:public override public function list(path : String) : java.io.InputStream;
 	
 	/**
 	* Issues a NLST path command to server to get the specified directory
@@ -461,7 +461,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return the <code>InputStream</code> from the resulting data connection
 	* @throws IOException if an error occurs during the transmission.
 	*/
-	@:overload override public function nameList(path : String) : java.io.InputStream;
+	@:overload @:public override public function nameList(path : String) : java.io.InputStream;
 	
 	/**
 	* Issues the SIZE [path] command to the server to get the size of a
@@ -476,7 +476,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	*         {@link #getLastReplyCode()}.
 	* @throws IOException if an error occurs during the transmission.
 	*/
-	@:overload override public function getSize(path : String) : haxe.Int64;
+	@:overload @:public override public function getSize(path : String) : haxe.Int64;
 	
 	/**
 	* Issues the MDTM [path] command to the server to get the modification
@@ -490,7 +490,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	*         can be checked with {@link #getLastReplyCode()}.
 	* @throws IOException if an error occurs during the transmission.
 	*/
-	@:overload override public function getLastModified(path : String) : java.util.Date;
+	@:overload @:public override public function getLastModified(path : String) : java.util.Date;
 	
 	/**
 	* Sets the parser used to handle the directory output to the specified
@@ -502,7 +502,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @param p The <code>FtpDirParser</code> to use.
 	* @see #listFiles(String)
 	*/
-	@:overload override public function setDirParser(p : sun.net.ftp.FtpDirParser) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function setDirParser(p : sun.net.ftp.FtpDirParser) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Issues a MLSD command to the server to get the specified directory
@@ -523,7 +523,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @see #setDirParser(FtpDirParser)
 	* @see #changeDirectory(String)
 	*/
-	@:overload override public function listFiles(path : String) : java.util.Iterator<sun.net.ftp.FtpDirEntry>;
+	@:overload @:public override public function listFiles(path : String) : java.util.Iterator<sun.net.ftp.FtpDirEntry>;
 	
 	/**
 	* Attempts to use Kerberos GSSAPI as an authentication mechanism with the
@@ -535,7 +535,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return <code>true</code> if authentication was successful.
 	* @throws IOException if an error occurs during the transmission.
 	*/
-	@:overload override public function useKerberos() : sun.net.ftp.FtpClient;
+	@:overload @:public override public function useKerberos() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Returns the Welcome string the server sent during initial connection.
@@ -543,14 +543,14 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return a <code>String</code> containing the message the server
 	*         returned during connection or <code>null</code>.
 	*/
-	@:overload override public function getWelcomeMsg() : String;
+	@:overload @:public override public function getWelcomeMsg() : String;
 	
 	/**
 	* Returns the last reply code sent by the server.
 	*
 	* @return the lastReplyCode
 	*/
-	@:overload override public function getLastReplyCode() : sun.net.ftp.FtpReplyCode;
+	@:overload @:public override public function getLastReplyCode() : sun.net.ftp.FtpReplyCode;
 	
 	/**
 	* Returns the last response string sent by the server.
@@ -558,7 +558,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return the message string, which can be quite long, last returned
 	*         by the server.
 	*/
-	@:overload override public function getLastResponseString() : String;
+	@:overload @:public override public function getLastResponseString() : String;
 	
 	/**
 	* Returns, when available, the size of the latest started transfer.
@@ -568,7 +568,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return the size of the latest transfer or -1 if either there was no
 	*         transfer or the information was unavailable.
 	*/
-	@:overload override public function getLastTransferSize() : haxe.Int64;
+	@:overload @:public override public function getLastTransferSize() : haxe.Int64;
 	
 	/**
 	* Returns, when available, the remote name of the last transfered file.
@@ -579,7 +579,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return the name the latest transfered file remote name, or
 	*         <code>null</code> if that information is unavailable.
 	*/
-	@:overload override public function getLastFileName() : String;
+	@:overload @:public override public function getLastFileName() : String;
 	
 	/**
 	* Attempts to switch to a secure, encrypted connection. This is done by
@@ -594,7 +594,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @throws IOException if an error occured during the transmission.
 	* @see #endSecureSession()
 	*/
-	@:overload override public function startSecureSession() : sun.net.ftp.FtpClient;
+	@:overload @:public override public function startSecureSession() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Sends a <code>CCC</code> command followed by a <code>PROT C</code>
@@ -605,7 +605,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @throws IOException if an error occured during transmission.
 	* @see #startSecureSession()
 	*/
-	@:overload override public function endSecureSession() : sun.net.ftp.FtpClient;
+	@:overload @:public override public function endSecureSession() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Sends the "Allocate" (ALLO) command to the server telling it to
@@ -615,7 +615,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return <code>true</code> if the operation was successful.
 	* @throws IOException if an error occured during the transmission.
 	*/
-	@:overload override public function allocate(size : haxe.Int64) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function allocate(size : haxe.Int64) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Sends the "Structure Mount" (SMNT) command to the server. This let the
@@ -627,7 +627,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return <code>true</code> if the operation was successful.
 	* @throws IOException if an error occured during the transmission.
 	*/
-	@:overload override public function structureMount(struct : String) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function structureMount(struct : String) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Sends a SYST (System) command to the server and returns the String
@@ -638,7 +638,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	*         if the operation was not successful.
 	* @throws IOException if an error occured during the transmission.
 	*/
-	@:overload override public function getSystem() : String;
+	@:overload @:public override public function getSystem() : String;
 	
 	/**
 	* Sends the HELP command to the server, with an optional command, like
@@ -650,7 +650,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	*         server, or <code>null</code> if the command failed.
 	* @throws IOException if an error occured during transmission
 	*/
-	@:overload override public function getHelp(cmd : String) : String;
+	@:overload @:public override public function getHelp(cmd : String) : String;
 	
 	/**
 	* Sends the SITE command to the server. This is used by the server
@@ -661,33 +661,33 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return <code>true</code> if the command was successful.
 	* @throws IOException if an error occured during transmission
 	*/
-	@:overload override public function siteCmd(cmd : String) : sun.net.ftp.FtpClient;
+	@:overload @:public override public function siteCmd(cmd : String) : sun.net.ftp.FtpClient;
 	
 	
 }
 @:native('sun$net$ftp$impl$FtpClient$DefaultParser') @:internal extern class FtpClient_DefaultParser implements sun.net.ftp.FtpDirParser
 {
-	@:overload public function parseLine(line : String) : sun.net.ftp.FtpDirEntry;
+	@:overload @:public public function parseLine(line : String) : sun.net.ftp.FtpDirEntry;
 	
 	
 }
 @:native('sun$net$ftp$impl$FtpClient$MLSxParser') @:internal extern class FtpClient_MLSxParser implements sun.net.ftp.FtpDirParser
 {
-	@:overload public function parseLine(line : String) : sun.net.ftp.FtpDirEntry;
+	@:overload @:public public function parseLine(line : String) : sun.net.ftp.FtpDirEntry;
 	
 	
 }
 @:native('sun$net$ftp$impl$FtpClient$FtpFileIterator') @:internal extern class FtpClient_FtpFileIterator implements java.util.Iterator<sun.net.ftp.FtpDirEntry> implements java.io.Closeable
 {
-	@:overload public function new(p : sun.net.ftp.FtpDirParser, _in : java.io.BufferedReader) : Void;
+	@:overload @:public public function new(p : sun.net.ftp.FtpDirParser, _in : java.io.BufferedReader) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : sun.net.ftp.FtpDirEntry;
+	@:overload @:public public function next() : sun.net.ftp.FtpDirEntry;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

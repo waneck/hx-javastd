@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.message.source;
 */
 @:internal extern class SourceUtils
 {
-	@:overload public function new(src : javax.xml.transform.Source) : Void;
+	@:overload @:public public function new(src : javax.xml.transform.Source) : Void;
 	
-	@:overload public function isDOMSource() : Bool;
+	@:overload @:public public function isDOMSource() : Bool;
 	
-	@:overload public function isStreamSource() : Bool;
+	@:overload @:public public function isStreamSource() : Bool;
 	
-	@:overload public function isSaxSource() : Bool;
+	@:overload @:public public function isSaxSource() : Bool;
 	
 	/**
 	* This would peek into the Source (DOMSource and SAXSource) for the localName and NamespaceURI
@@ -39,11 +39,11 @@ package com.sun.xml.internal.ws.message.source;
 	* @param src
 	* @return QName of the payload
 	*/
-	@:overload public function sniff(src : javax.xml.transform.Source) : javax.xml.namespace.QName;
+	@:overload @:public public function sniff(src : javax.xml.transform.Source) : javax.xml.namespace.QName;
 	
-	@:overload public function sniff(src : javax.xml.transform.Source, sniffer : com.sun.xml.internal.ws.message.RootElementSniffer) : javax.xml.namespace.QName;
+	@:overload @:public public function sniff(src : javax.xml.transform.Source, sniffer : com.sun.xml.internal.ws.message.RootElementSniffer) : javax.xml.namespace.QName;
 	
-	@:overload public static function serializeSource(src : javax.xml.transform.Source, writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public @:static public static function serializeSource(src : javax.xml.transform.Source, writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	
 }

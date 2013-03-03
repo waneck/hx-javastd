@@ -40,12 +40,12 @@ extern class UnknownUserException extends org.omg.CORBA.UserException
 	*  by the server.
 	* @serial
 	*/
-	public var except : org.omg.CORBA.Any;
+	@:public public var except : org.omg.CORBA.Any;
 	
 	/**
 	* Constructs an <code>UnknownUserException</code> object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>UnknownUserException</code> object that contains the given
@@ -54,7 +54,7 @@ extern class UnknownUserException extends org.omg.CORBA.UserException
 	* @param a an <code>Any</code> object that contains a user exception returned
 	*         by the server
 	*/
-	@:overload public function new(a : org.omg.CORBA.Any) : Void;
+	@:overload @:public public function new(a : org.omg.CORBA.Any) : Void;
 	
 	
 }

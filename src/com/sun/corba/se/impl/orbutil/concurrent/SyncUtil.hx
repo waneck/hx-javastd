@@ -29,7 +29,7 @@ extern class SyncUtil
 	* InterruptedException.  Useful when a mutex is being
 	* used in place of Java synchronization.
 	*/
-	@:overload public static function acquire(sync : com.sun.corba.se.impl.orbutil.concurrent.Sync) : Void;
+	@:overload @:public @:static public static function acquire(sync : com.sun.corba.se.impl.orbutil.concurrent.Sync) : Void;
 	
 	
 }

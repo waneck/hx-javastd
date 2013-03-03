@@ -31,35 +31,35 @@ package com.sun.codemodel.internal;
 */
 extern class JPrimitiveType extends com.sun.codemodel.internal.JType
 {
-	@:overload override public function owner() : com.sun.codemodel.internal.JCodeModel;
+	@:overload @:public override public function owner() : com.sun.codemodel.internal.JCodeModel;
 	
-	@:overload override public function fullName() : String;
+	@:overload @:public override public function fullName() : String;
 	
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload override public function isPrimitive() : Bool;
+	@:overload @:public override public function isPrimitive() : Bool;
 	
-	@:overload override public function array() : com.sun.codemodel.internal.JClass;
+	@:overload @:public override public function array() : com.sun.codemodel.internal.JClass;
 	
 	/**
 	* Obtains the wrapper class for this primitive type.
 	* For example, this method returns a reference to java.lang.Integer
 	* if this object represents int.
 	*/
-	@:overload override public function boxify() : com.sun.codemodel.internal.JClass;
+	@:overload @:public override public function boxify() : com.sun.codemodel.internal.JClass;
 	
 	/**
 	* @deprecated calling this method from {@link JPrimitiveType}
 	* would be meaningless, since it's always guaranteed to
 	* return <tt>this</tt>.
 	*/
-	@:overload override public function unboxify() : com.sun.codemodel.internal.JType;
+	@:overload @:public override public function unboxify() : com.sun.codemodel.internal.JType;
 	
 	/**
 	* @deprecated
 	*      Use {@link #boxify()}.
 	*/
-	@:overload public function getWrapperClass() : com.sun.codemodel.internal.JClass;
+	@:overload @:public public function getWrapperClass() : com.sun.codemodel.internal.JClass;
 	
 	/**
 	* Wraps an expression of this type to the corresponding wrapper class.
@@ -68,16 +68,16 @@ extern class JPrimitiveType extends com.sun.codemodel.internal.JType
 	*
 	* REVISIT: it's not clear how this method works for VOID.
 	*/
-	@:overload public function wrap(exp : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public public function wrap(exp : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Do the opposite of the wrap method.
 	*
 	* REVISIT: it's not clear how this method works for VOID.
 	*/
-	@:overload public function unwrap(exp : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public public function unwrap(exp : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

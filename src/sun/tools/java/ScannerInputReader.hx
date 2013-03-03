@@ -25,11 +25,11 @@ package sun.tools.java;
 */
 extern class ScannerInputReader extends java.io.FilterReader implements sun.tools.java.Constants
 {
-	@:overload public function new(env : sun.tools.java.Environment, _in : java.io.InputStream) : Void;
+	@:overload @:public public function new(env : sun.tools.java.Environment, _in : java.io.InputStream) : Void;
 	
-	@:overload override public function read(buffer : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(buffer : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	
 }

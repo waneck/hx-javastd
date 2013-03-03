@@ -94,7 +94,7 @@ extern interface GrammarSection<P, E, L, A, CL>
 */
 @:native('com$sun$xml$internal$rngom$ast$builder$GrammarSection$Combine') @:internal extern class GrammarSection_Combine
 {
-	@:overload @:final public function toString() : String;
+	@:overload @:final @:public public function toString() : String;
 	
 	
 }

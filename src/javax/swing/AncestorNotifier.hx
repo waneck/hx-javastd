@@ -32,7 +32,7 @@ package javax.swing;
 	* the fire method.
 	* @see EventListenerList
 	*/
-	@:overload private function fireAncestorAdded(source : javax.swing.JComponent, id : Int, ancestor : java.awt.Container, ancestorParent : java.awt.Container) : Void;
+	@:overload @:protected private function fireAncestorAdded(source : javax.swing.JComponent, id : Int, ancestor : java.awt.Container, ancestorParent : java.awt.Container) : Void;
 	
 	/**
 	* Notify all listeners that have registered interest for
@@ -41,7 +41,7 @@ package javax.swing;
 	* the fire method.
 	* @see EventListenerList
 	*/
-	@:overload private function fireAncestorRemoved(source : javax.swing.JComponent, id : Int, ancestor : java.awt.Container, ancestorParent : java.awt.Container) : Void;
+	@:overload @:protected private function fireAncestorRemoved(source : javax.swing.JComponent, id : Int, ancestor : java.awt.Container, ancestorParent : java.awt.Container) : Void;
 	
 	/**
 	* Notify all listeners that have registered interest for
@@ -50,17 +50,17 @@ package javax.swing;
 	* the fire method.
 	* @see EventListenerList
 	*/
-	@:overload private function fireAncestorMoved(source : javax.swing.JComponent, id : Int, ancestor : java.awt.Container, ancestorParent : java.awt.Container) : Void;
+	@:overload @:protected private function fireAncestorMoved(source : javax.swing.JComponent, id : Int, ancestor : java.awt.Container, ancestorParent : java.awt.Container) : Void;
 	
-	@:overload public function componentResized(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentResized(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentShown(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentShown(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

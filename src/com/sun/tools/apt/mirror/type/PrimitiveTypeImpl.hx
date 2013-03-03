@@ -31,12 +31,12 @@ package com.sun.tools.apt.mirror.type;
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getKind() : com.sun.mirror.type.PrimitiveType.PrimitiveType_Kind;
+	@:overload @:public public function getKind() : com.sun.mirror.type.PrimitiveType.PrimitiveType_Kind;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
 	
 	
 }

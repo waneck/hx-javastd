@@ -37,13 +37,13 @@ extern class Constants
 	/*
 	* fully-qualified names of types used by rmic
 	*/
-	public static var REMOTE(default, null) : String;
+	@:public @:static @:final public static var REMOTE(default, null) : String;
 	
-	public static var EXCEPTION(default, null) : String;
+	@:public @:static @:final public static var EXCEPTION(default, null) : String;
 	
-	public static var REMOTE_EXCEPTION(default, null) : String;
+	@:public @:static @:final public static var REMOTE_EXCEPTION(default, null) : String;
 	
-	public static var RUNTIME_EXCEPTION(default, null) : String;
+	@:public @:static @:final public static var RUNTIME_EXCEPTION(default, null) : String;
 	
 	
 }

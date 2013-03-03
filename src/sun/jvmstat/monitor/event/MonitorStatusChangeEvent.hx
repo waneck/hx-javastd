@@ -29,13 +29,13 @@ extern class MonitorStatusChangeEvent extends sun.jvmstat.monitor.event.VmEvent
 	* List of instrumentation objects inserted since the last event.
 	* Elements of this list will always be of type Monitor.
 	*/
-	private var inserted : java.util.List<Dynamic>;
+	@:protected private var inserted : java.util.List<Dynamic>;
 	
 	/**
 	* List of instrumentation objects removed since the last event.
 	* Elements of this list will always be of type Monitor.
 	*/
-	private var removed : java.util.List<Dynamic>;
+	@:protected private var removed : java.util.List<Dynamic>;
 	
 	/**
 	* Construct a new MonitorStatusChangeEvent.
@@ -46,7 +46,7 @@ extern class MonitorStatusChangeEvent extends sun.jvmstat.monitor.event.VmEvent
 	* @param removed the list of instrumentation objects removed since
 	*                the last event.
 	*/
-	@:overload public function new(vm : sun.jvmstat.monitor.MonitoredVm, inserted : java.util.List<Dynamic>, removed : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function new(vm : sun.jvmstat.monitor.MonitoredVm, inserted : java.util.List<Dynamic>, removed : java.util.List<Dynamic>) : Void;
 	
 	/**
 	* Return the list of instrumentation objects that were inserted
@@ -57,7 +57,7 @@ extern class MonitorStatusChangeEvent extends sun.jvmstat.monitor.event.VmEvent
 	*                new instrumentation was inserted, an emply List is
 	*                returned.
 	*/
-	@:overload public function getInserted() : java.util.List<Dynamic>;
+	@:overload @:public public function getInserted() : java.util.List<Dynamic>;
 	
 	/**
 	* Return the set of instrumentation objects that were removed
@@ -67,7 +67,7 @@ extern class MonitorStatusChangeEvent extends sun.jvmstat.monitor.event.VmEvent
 	*                instrumentation exported by the MonitoredHost. If no
 	*                instrumentation was removed, an emply List is returned.
 	*/
-	@:overload public function getRemoved() : java.util.List<Dynamic>;
+	@:overload @:public public function getRemoved() : java.util.List<Dynamic>;
 	
 	
 }

@@ -44,7 +44,7 @@ package java.io;
 	* @param obj the object to be written
 	* @exception IOException Any of the usual Input/Output related exceptions.
 	*/
-	@:overload public function writeObject(obj : Dynamic) : Void;
+	@:overload @:public public function writeObject(obj : Dynamic) : Void;
 	
 	/**
 	* Writes a byte. This method will block until the byte is actually
@@ -52,7 +52,7 @@ package java.io;
 	* @param b the byte
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload public function write(b : Int) : Void;
+	@:overload @:public public function write(b : Int) : Void;
 	
 	/**
 	* Writes an array of bytes. This method will block until the bytes
@@ -60,7 +60,7 @@ package java.io;
 	* @param b the data to be written
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Writes a sub array of bytes.
@@ -69,14 +69,14 @@ package java.io;
 	* @param len       the number of bytes that are written
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Flushes the stream. This will write any buffered
 	* output bytes.
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* Closes the stream. This method must be called
@@ -84,7 +84,7 @@ package java.io;
 	* stream.
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

@@ -23,23 +23,23 @@ extern class SubstitutionGroupHandler
 	/**
 	* Default constructor
 	*/
-	@:overload public function new(grammarBucket : com.sun.org.apache.xerces.internal.impl.xs.XSGrammarBucket) : Void;
+	@:overload @:public public function new(grammarBucket : com.sun.org.apache.xerces.internal.impl.xs.XSGrammarBucket) : Void;
 	
-	@:overload public function getMatchingElemDecl(element : com.sun.org.apache.xerces.internal.xni.QName, exemplar : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl) : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl;
+	@:overload @:public public function getMatchingElemDecl(element : com.sun.org.apache.xerces.internal.xni.QName, exemplar : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl) : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl;
 	
-	@:overload private function substitutionGroupOK(element : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl, exemplar : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl, blockingConstraint : java.StdTypes.Int16) : Bool;
+	@:overload @:protected private function substitutionGroupOK(element : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl, exemplar : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl, blockingConstraint : java.StdTypes.Int16) : Bool;
 	
-	@:overload public function inSubstitutionGroup(element : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl, exemplar : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl) : Bool;
+	@:overload @:public public function inSubstitutionGroup(element : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl, exemplar : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl) : Bool;
 	
 	/**
 	* clear the internal registry of substitutionGroup information
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* add a list of substitution group information.
 	*/
-	@:overload public function addSubstitutionGroup(elements : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl>) : Void;
+	@:overload @:public public function addSubstitutionGroup(elements : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl>) : Void;
 	
 	/**
 	* get all elements that can substitute the given element,
@@ -49,7 +49,7 @@ extern class SubstitutionGroupHandler
 	* the element itself. but the array returned from this method doesn't
 	* containt this element.
 	*/
-	@:overload public function getSubstitutionGroup(element : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl) : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl>;
+	@:overload @:public public function getSubstitutionGroup(element : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl) : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl>;
 	
 	
 }

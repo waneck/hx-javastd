@@ -49,7 +49,7 @@ package javax.xml.stream;
 	* @return The resource requested or null.
 	* @throws XMLStreamException if there was a failure attempting to resolve the resource.
 	*/
-	@:overload public function resolveEntity(publicID : String, systemID : String, baseURI : String, namespace : String) : Dynamic;
+	@:overload @:public public function resolveEntity(publicID : String, systemID : String, baseURI : String, namespace : String) : Dynamic;
 	
 	
 }

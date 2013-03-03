@@ -53,7 +53,7 @@ extern interface XMLGrammarPool
 	*  <code>com.sun.org.apache.xerces.internal.xni.grammars.Grammar</code> interface.
 	* @return the set of grammars the validator may put in its "bucket"
 	*/
-	@:overload public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
+	@:overload @:public public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
 	
 	/**
 	* <p>return the final set of grammars that the validator ended up
@@ -65,7 +65,7 @@ extern interface XMLGrammarPool
 	* @param grammars an array containing the set of grammars being
 	*  returned; order is not significant.
 	*/
-	@:overload public function cacheGrammars(grammarType : String, grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>) : Void;
+	@:overload @:public public function cacheGrammars(grammarType : String, grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>) : Void;
 	
 	/**
 	* <p> This method requests that the application retrieve a grammar
@@ -78,24 +78,24 @@ extern interface XMLGrammarPool
 	* @return the Grammar corresponding to this description or null if
 	*  no such Grammar is known.
 	*/
-	@:overload public function retrieveGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload @:public public function retrieveGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
 	/**
 	* Causes the XMLGrammarPool not to store any grammars when
 	* the cacheGrammars(String, Grammar[[]) method is called.
 	*/
-	@:overload public function lockPool() : Void;
+	@:overload @:public public function lockPool() : Void;
 	
 	/**
 	* Allows the XMLGrammarPool to store grammars when its cacheGrammars(String, Grammar[])
 	* method is called.  This is the default state of the object.
 	*/
-	@:overload public function unlockPool() : Void;
+	@:overload @:public public function unlockPool() : Void;
 	
 	/**
 	* Removes all grammars from the pool.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

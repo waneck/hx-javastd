@@ -25,47 +25,47 @@ package com.sun.media.sound;
 */
 extern class RIFFWriter extends java.io.OutputStream
 {
-	@:overload public function new(name : String, format : String) : Void;
+	@:overload @:public public function new(name : String, format : String) : Void;
 	
-	@:overload public function new(file : java.io.File, format : String) : Void;
+	@:overload @:public public function new(file : java.io.File, format : String) : Void;
 	
-	@:overload public function new(stream : java.io.OutputStream, format : String) : Void;
+	@:overload @:public public function new(stream : java.io.OutputStream, format : String) : Void;
 	
-	@:overload public function seek(pos : haxe.Int64) : Void;
+	@:overload @:public public function seek(pos : haxe.Int64) : Void;
 	
-	@:overload public function getFilePointer() : haxe.Int64;
+	@:overload @:public public function getFilePointer() : haxe.Int64;
 	
-	@:overload public function setWriteOverride(writeoverride : Bool) : Void;
+	@:overload @:public public function setWriteOverride(writeoverride : Bool) : Void;
 	
-	@:overload public function getWriteOverride() : Bool;
+	@:overload @:public public function getWriteOverride() : Bool;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function writeList(format : String) : com.sun.media.sound.RIFFWriter;
+	@:overload @:public public function writeList(format : String) : com.sun.media.sound.RIFFWriter;
 	
-	@:overload public function writeChunk(format : String) : com.sun.media.sound.RIFFWriter;
+	@:overload @:public public function writeChunk(format : String) : com.sun.media.sound.RIFFWriter;
 	
-	@:overload public function writeString(string : String) : Void;
+	@:overload @:public public function writeString(string : String) : Void;
 	
-	@:overload public function writeString(string : String, len : Int) : Void;
+	@:overload @:public public function writeString(string : String, len : Int) : Void;
 	
-	@:overload public function writeByte(b : Int) : Void;
+	@:overload @:public public function writeByte(b : Int) : Void;
 	
-	@:overload public function writeShort(b : java.StdTypes.Int16) : Void;
+	@:overload @:public public function writeShort(b : java.StdTypes.Int16) : Void;
 	
-	@:overload public function writeInt(b : Int) : Void;
+	@:overload @:public public function writeInt(b : Int) : Void;
 	
-	@:overload public function writeLong(b : haxe.Int64) : Void;
+	@:overload @:public public function writeLong(b : haxe.Int64) : Void;
 	
-	@:overload public function writeUnsignedByte(b : Int) : Void;
+	@:overload @:public public function writeUnsignedByte(b : Int) : Void;
 	
-	@:overload public function writeUnsignedShort(b : Int) : Void;
+	@:overload @:public public function writeUnsignedShort(b : Int) : Void;
 	
-	@:overload public function writeUnsignedInt(b : haxe.Int64) : Void;
+	@:overload @:public public function writeUnsignedInt(b : haxe.Int64) : Void;
 	
 	
 }
@@ -76,67 +76,67 @@ extern class RIFFWriter extends java.io.OutputStream
 */
 @:native('com$sun$media$sound$RIFFWriter$RandomAccessWriter') @:internal extern interface RIFFWriter_RandomAccessWriter
 {
-	@:overload public function seek(chunksizepointer : haxe.Int64) : Void;
+	@:overload @:public public function seek(chunksizepointer : haxe.Int64) : Void;
 	
-	@:overload public function getPointer() : haxe.Int64;
+	@:overload @:public public function getPointer() : haxe.Int64;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function write(b : Int) : Void;
+	@:overload @:public public function write(b : Int) : Void;
 	
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function write(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function write(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function length() : haxe.Int64;
+	@:overload @:public public function length() : haxe.Int64;
 	
-	@:overload public function setLength(i : haxe.Int64) : Void;
+	@:overload @:public public function setLength(i : haxe.Int64) : Void;
 	
 	
 }
 @:native('com$sun$media$sound$RIFFWriter$RandomAccessFileWriter') @:internal extern class RIFFWriter_RandomAccessFileWriter implements com.sun.media.sound.RIFFWriter.RIFFWriter_RandomAccessWriter
 {
-	@:overload public function new(file : java.io.File) : Void;
+	@:overload @:public public function new(file : java.io.File) : Void;
 	
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload public function seek(chunksizepointer : haxe.Int64) : Void;
+	@:overload @:public public function seek(chunksizepointer : haxe.Int64) : Void;
 	
-	@:overload public function getPointer() : haxe.Int64;
+	@:overload @:public public function getPointer() : haxe.Int64;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function write(b : Int) : Void;
+	@:overload @:public public function write(b : Int) : Void;
 	
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function write(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function write(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function length() : haxe.Int64;
+	@:overload @:public public function length() : haxe.Int64;
 	
-	@:overload public function setLength(i : haxe.Int64) : Void;
+	@:overload @:public public function setLength(i : haxe.Int64) : Void;
 	
 	
 }
 @:native('com$sun$media$sound$RIFFWriter$RandomAccessByteWriter') @:internal extern class RIFFWriter_RandomAccessByteWriter implements com.sun.media.sound.RIFFWriter.RIFFWriter_RandomAccessWriter
 {
-	@:overload public function new(stream : java.io.OutputStream) : Void;
+	@:overload @:public public function new(stream : java.io.OutputStream) : Void;
 	
-	@:overload public function seek(chunksizepointer : haxe.Int64) : Void;
+	@:overload @:public public function seek(chunksizepointer : haxe.Int64) : Void;
 	
-	@:overload public function getPointer() : haxe.Int64;
+	@:overload @:public public function getPointer() : haxe.Int64;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function write(b : Int) : Void;
+	@:overload @:public public function write(b : Int) : Void;
 	
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function write(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function write(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function length() : haxe.Int64;
+	@:overload @:public public function length() : haxe.Int64;
 	
-	@:overload public function setLength(i : haxe.Int64) : Void;
+	@:overload @:public public function setLength(i : haxe.Int64) : Void;
 	
 	
 }

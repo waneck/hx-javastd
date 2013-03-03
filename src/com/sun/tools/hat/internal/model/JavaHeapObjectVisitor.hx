@@ -35,18 +35,18 @@ package com.sun.tools.hat.internal.model;
 */
 extern interface JavaHeapObjectVisitor
 {
-	@:overload public function visit(other : com.sun.tools.hat.internal.model.JavaHeapObject) : Void;
+	@:overload @:public public function visit(other : com.sun.tools.hat.internal.model.JavaHeapObject) : Void;
 	
 	/**
 	* Should the given field be excluded from the set of things visited?
 	* @return true if it should.
 	*/
-	@:overload public function exclude(clazz : com.sun.tools.hat.internal.model.JavaClass, f : com.sun.tools.hat.internal.model.JavaField) : Bool;
+	@:overload @:public public function exclude(clazz : com.sun.tools.hat.internal.model.JavaClass, f : com.sun.tools.hat.internal.model.JavaField) : Bool;
 	
 	/**
 	* @return true iff exclude might ever return true
 	*/
-	@:overload public function mightExclude() : Bool;
+	@:overload @:public public function mightExclude() : Bool;
 	
 	
 }

@@ -30,7 +30,7 @@ package sun.net.www.protocol.file;
 */
 extern class FileURLConnection extends java.net.URLConnection
 {
-	@:overload private function new(u : java.net.URL, file : java.io.File) : Void;
+	@:overload @:protected private function new(u : java.net.URL, file : java.io.File) : Void;
 	
 	/*
 	* Note: the semantics of FileURLConnection object is that the
@@ -38,28 +38,28 @@ extern class FileURLConnection extends java.net.URLConnection
 	* getContentType, getInputStream or getContentLength reflect
 	* whatever was true when connect was called.
 	*/
-	@:overload override public function connect() : Void;
+	@:overload @:public override public function connect() : Void;
 	
-	@:overload override public function getHeaderField(name : String) : String;
+	@:overload @:public override public function getHeaderField(name : String) : String;
 	
-	@:overload override public function getHeaderField(n : Int) : String;
+	@:overload @:public override public function getHeaderField(n : Int) : String;
 	
-	@:overload override public function getContentLength() : Int;
+	@:overload @:public override public function getContentLength() : Int;
 	
-	@:overload override public function getContentLengthLong() : haxe.Int64;
+	@:overload @:public override public function getContentLengthLong() : haxe.Int64;
 	
-	@:overload override public function getHeaderFieldKey(n : Int) : String;
+	@:overload @:public override public function getHeaderFieldKey(n : Int) : String;
 	
-	@:overload public function getProperties() : sun.net.www.MessageHeader;
+	@:overload @:public public function getProperties() : sun.net.www.MessageHeader;
 	
-	@:overload override public function getLastModified() : haxe.Int64;
+	@:overload @:public override public function getLastModified() : haxe.Int64;
 	
-	@:overload @:synchronized override public function getInputStream() : java.io.InputStream;
+	@:overload @:public @:synchronized override public function getInputStream() : java.io.InputStream;
 	
 	/* since getOutputStream isn't supported, only read permission is
 	* relevant
 	*/
-	@:overload override public function getPermission() : java.security.Permission;
+	@:overload @:public override public function getPermission() : java.security.Permission;
 	
 	
 }

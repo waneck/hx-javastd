@@ -39,7 +39,7 @@ extern class JAXBSource extends javax.xml.transform.sax.SAXSource
 	* @throws JAXBException if an error is encountered while creating the
 	* JAXBSource or if either of the parameters are null.
 	*/
-	@:overload public function new(context : javax.xml.bind.JAXBContext, contentObject : Dynamic) : Void;
+	@:overload @:public public function new(context : javax.xml.bind.JAXBContext, contentObject : Dynamic) : Void;
 	
 	/**
 	* Creates a new {@link javax.xml.transform.Source} for the given content object.
@@ -56,7 +56,7 @@ extern class JAXBSource extends javax.xml.transform.sax.SAXSource
 	* @throws JAXBException if an error is encountered while creating the
 	* JAXBSource or if either of the parameters are null.
 	*/
-	@:overload public function new(marshaller : javax.xml.bind.Marshaller, contentObject : Dynamic) : Void;
+	@:overload @:public public function new(marshaller : javax.xml.bind.Marshaller, contentObject : Dynamic) : Void;
 	
 	
 }

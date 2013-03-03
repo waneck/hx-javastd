@@ -28,29 +28,29 @@ extern class EnumOutline
 	/**
 	* This {@link EnumOutline} holds information about this {@link CEnumLeafInfo}.
 	*/
-	public var target(default, null) : com.sun.tools.internal.xjc.model.CEnumLeafInfo;
+	@:public @:final public var target(default, null) : com.sun.tools.internal.xjc.model.CEnumLeafInfo;
 	
 	/**
 	* The generated enum class.
 	*/
-	public var clazz(default, null) : com.sun.codemodel.internal.JDefinedClass;
+	@:public @:final public var clazz(default, null) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Constants.
 	*/
-	public var constants(default, null) : java.util.List<com.sun.tools.internal.xjc.outline.EnumConstantOutline>;
+	@:public @:final public var constants(default, null) : java.util.List<com.sun.tools.internal.xjc.outline.EnumConstantOutline>;
 	
 	/**
 	* {@link PackageOutline} that contains this class.
 	*/
-	@:overload public function _package() : com.sun.tools.internal.xjc.outline.PackageOutline;
+	@:overload @:public public function _package() : com.sun.tools.internal.xjc.outline.PackageOutline;
 	
 	/**
 	* A {@link Outline} that encloses all the class outlines.
 	*/
-	@:overload @:abstract public function parent() : com.sun.tools.internal.xjc.outline.Outline;
+	@:overload @:public @:abstract public function parent() : com.sun.tools.internal.xjc.outline.Outline;
 	
-	@:overload private function new(target : com.sun.tools.internal.xjc.model.CEnumLeafInfo, clazz : com.sun.codemodel.internal.JDefinedClass) : Void;
+	@:overload @:protected private function new(target : com.sun.tools.internal.xjc.model.CEnumLeafInfo, clazz : com.sun.codemodel.internal.JDefinedClass) : Void;
 	
 	
 }

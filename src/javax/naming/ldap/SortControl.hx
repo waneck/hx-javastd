@@ -29,7 +29,7 @@ extern class SortControl extends javax.naming.ldap.BasicControl
 	* The server-side sort control's assigned object identifier
 	* is 1.2.840.113556.1.4.473.
 	*/
-	public static var OID(default, null) : String;
+	@:public @:static @:final public static var OID(default, null) : String;
 	
 	/**
 	* Constructs a control to sort on a single attribute in ascending order.
@@ -45,7 +45,7 @@ extern class SortControl extends javax.naming.ldap.BasicControl
 	* @exception IOException If an error was encountered while encoding the
 	*                        supplied arguments into a control.
 	*/
-	@:overload public function new(sortBy : String, criticality : Bool) : Void;
+	@:overload @:public public function new(sortBy : String, criticality : Bool) : Void;
 	
 	/**
 	* Constructs a control to sort on a list of attributes in ascending order.
@@ -63,7 +63,7 @@ extern class SortControl extends javax.naming.ldap.BasicControl
 	* @exception IOException If an error was encountered while encoding the
 	*                        supplied arguments into a control.
 	*/
-	@:overload public function new(sortBy : java.NativeArray<String>, criticality : Bool) : Void;
+	@:overload @:public public function new(sortBy : java.NativeArray<String>, criticality : Bool) : Void;
 	
 	/**
 	* Constructs a control to sort on a list of sort keys.
@@ -80,7 +80,7 @@ extern class SortControl extends javax.naming.ldap.BasicControl
 	* @exception IOException If an error was encountered while encoding the
 	*                        supplied arguments into a control.
 	*/
-	@:overload public function new(sortBy : java.NativeArray<javax.naming.ldap.SortKey>, criticality : Bool) : Void;
+	@:overload @:public public function new(sortBy : java.NativeArray<javax.naming.ldap.SortKey>, criticality : Bool) : Void;
 	
 	
 }

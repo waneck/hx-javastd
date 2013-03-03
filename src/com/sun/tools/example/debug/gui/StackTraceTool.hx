@@ -32,31 +32,31 @@ package com.sun.tools.example.debug.gui;
 */
 extern class StackTraceTool extends javax.swing.JPanel
 {
-	@:overload public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
+	@:overload @:public public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$StackTraceTool$StackTraceToolListener') @:internal extern class StackTraceTool_StackTraceToolListener implements com.sun.tools.example.debug.gui.ContextListener implements javax.swing.event.ListSelectionListener
 {
-	@:overload public function currentFrameChanged(e : com.sun.tools.example.debug.gui.CurrentFrameChangedEvent) : Void;
+	@:overload @:public public function currentFrameChanged(e : com.sun.tools.example.debug.gui.CurrentFrameChangedEvent) : Void;
 	
-	@:overload public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
+	@:overload @:public public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$StackTraceTool$StackFrameRenderer') @:internal extern class StackTraceTool_StackFrameRenderer extends javax.swing.DefaultListCellRenderer
 {
-	@:overload override public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
+	@:overload @:public override public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$StackTraceTool$StackTraceListModel') @:internal extern class StackTraceTool_StackTraceListModel extends javax.swing.AbstractListModel<Dynamic>
 {
-	@:overload public function new(tinfo : com.sun.tools.example.debug.bdi.ThreadInfo) : Void;
+	@:overload @:public public function new(tinfo : com.sun.tools.example.debug.bdi.ThreadInfo) : Void;
 	
-	@:overload override public function getElementAt(index : Int) : Dynamic;
+	@:overload @:public override public function getElementAt(index : Int) : Dynamic;
 	
-	@:overload override public function getSize() : Int;
+	@:overload @:public override public function getSize() : Int;
 	
 	
 }

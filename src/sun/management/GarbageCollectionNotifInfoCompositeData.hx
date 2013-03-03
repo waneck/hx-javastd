@@ -25,27 +25,27 @@ package sun.management;
 */
 extern class GarbageCollectionNotifInfoCompositeData extends sun.management.LazyCompositeData
 {
-	@:overload public function new(info : com.sun.management.GarbageCollectionNotificationInfo) : Void;
+	@:overload @:public public function new(info : com.sun.management.GarbageCollectionNotificationInfo) : Void;
 	
-	@:overload public function getGarbageCollectionNotifInfo() : com.sun.management.GarbageCollectionNotificationInfo;
+	@:overload @:public public function getGarbageCollectionNotifInfo() : com.sun.management.GarbageCollectionNotificationInfo;
 	
-	@:overload public static function toCompositeData(info : com.sun.management.GarbageCollectionNotificationInfo) : javax.management.openmbean.CompositeData;
+	@:overload @:public @:static public static function toCompositeData(info : com.sun.management.GarbageCollectionNotificationInfo) : javax.management.openmbean.CompositeData;
 	
-	@:overload private function getCompositeData() : javax.management.openmbean.CompositeData;
+	@:overload @:protected override private function getCompositeData() : javax.management.openmbean.CompositeData;
 	
-	@:overload public static function getGcName(cd : javax.management.openmbean.CompositeData) : String;
+	@:overload @:public @:static public static function getGcName(cd : javax.management.openmbean.CompositeData) : String;
 	
-	@:overload public static function getGcAction(cd : javax.management.openmbean.CompositeData) : String;
+	@:overload @:public @:static public static function getGcAction(cd : javax.management.openmbean.CompositeData) : String;
 	
-	@:overload public static function getGcCause(cd : javax.management.openmbean.CompositeData) : String;
+	@:overload @:public @:static public static function getGcCause(cd : javax.management.openmbean.CompositeData) : String;
 	
-	@:overload public static function getGcInfo(cd : javax.management.openmbean.CompositeData) : com.sun.management.GcInfo;
+	@:overload @:public @:static public static function getGcInfo(cd : javax.management.openmbean.CompositeData) : com.sun.management.GcInfo;
 	
 	/** Validate if the input CompositeData has the expected
 	* CompositeType (i.e. contain all attributes with expected
 	* names and types).
 	*/
-	@:overload public static function validateCompositeData(cd : javax.management.openmbean.CompositeData) : Void;
+	@:overload @:public @:static public static function validateCompositeData(cd : javax.management.openmbean.CompositeData) : Void;
 	
 	
 }

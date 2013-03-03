@@ -34,14 +34,14 @@ extern class CacheRequest
 	* @throws IOException if an I/O error occurs while
 	*         writing the response body
 	*/
-	@:overload @:abstract public function getBody() : java.io.OutputStream;
+	@:overload @:public @:abstract public function getBody() : java.io.OutputStream;
 	
 	/**
 	* Aborts the attempt to cache the response. If an IOException is
 	* encountered while reading the response or writing to the cache,
 	* the current cache store operation will be abandoned.
 	*/
-	@:overload @:abstract public function abort() : Void;
+	@:overload @:public @:abstract public function abort() : Void;
 	
 	
 }

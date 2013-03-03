@@ -28,67 +28,67 @@ extern class BatchParser extends sun.tools.java.Parser
 	/**
 	* The current package
 	*/
-	private var pkg : sun.tools.java.Identifier;
+	@:protected private var pkg : sun.tools.java.Identifier;
 	
 	/**
 	* The current imports
 	*/
-	private var imports : sun.tools.java.Imports;
+	@:protected private var imports : sun.tools.java.Imports;
 	
 	/**
 	* The classes defined in this file
 	*/
-	private var classes : java.util.Vector<Dynamic>;
+	@:protected private var classes : java.util.Vector<Dynamic>;
 	
 	/**
 	* The current class
 	*/
-	private var sourceClass : sun.tools.javac.SourceClass;
+	@:protected private var sourceClass : sun.tools.javac.SourceClass;
 	
 	/**
 	* The toplevel environment
 	*/
-	private var toplevelEnv : sun.tools.java.Environment;
+	@:protected private var toplevelEnv : sun.tools.java.Environment;
 	
 	/**
 	* Create a batch file parser
 	*/
-	@:overload public function new(env : sun.tools.java.Environment, _in : java.io.InputStream) : Void;
+	@:overload @:public public function new(env : sun.tools.java.Environment, _in : java.io.InputStream) : Void;
 	
 	/**
 	* Package declaration
 	*/
-	@:overload public function packageDeclaration(where : haxe.Int64, t : sun.tools.java.IdentifierToken) : Void;
+	@:overload @:public override public function packageDeclaration(where : haxe.Int64, t : sun.tools.java.IdentifierToken) : Void;
 	
 	/**
 	* Import class
 	*/
-	@:overload public function importClass(pos : haxe.Int64, t : sun.tools.java.IdentifierToken) : Void;
+	@:overload @:public override public function importClass(pos : haxe.Int64, t : sun.tools.java.IdentifierToken) : Void;
 	
 	/**
 	* Import package
 	*/
-	@:overload public function importPackage(pos : haxe.Int64, t : sun.tools.java.IdentifierToken) : Void;
+	@:overload @:public override public function importPackage(pos : haxe.Int64, t : sun.tools.java.IdentifierToken) : Void;
 	
 	/**
 	* Define class
 	*/
-	@:overload public function beginClass(where : haxe.Int64, doc : String, mod : Int, t : sun.tools.java.IdentifierToken, sup : sun.tools.java.IdentifierToken, interfaces : java.NativeArray<sun.tools.java.IdentifierToken>) : sun.tools.java.ClassDefinition;
+	@:overload @:public override public function beginClass(where : haxe.Int64, doc : String, mod : Int, t : sun.tools.java.IdentifierToken, sup : sun.tools.java.IdentifierToken, interfaces : java.NativeArray<sun.tools.java.IdentifierToken>) : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Report the current class under construction.
 	*/
-	@:overload public function getCurrentClass() : sun.tools.java.ClassDefinition;
+	@:overload @:public override public function getCurrentClass() : sun.tools.java.ClassDefinition;
 	
 	/**
 	* End class
 	*/
-	@:overload public function endClass(where : haxe.Int64, c : sun.tools.java.ClassDefinition) : Void;
+	@:overload @:public override public function endClass(where : haxe.Int64, c : sun.tools.java.ClassDefinition) : Void;
 	
 	/**
 	* Define a method
 	*/
-	@:overload public function defineField(where : haxe.Int64, c : sun.tools.java.ClassDefinition, doc : String, mod : Int, t : sun.tools.java.Type, name : sun.tools.java.IdentifierToken, args : java.NativeArray<sun.tools.java.IdentifierToken>, exp : java.NativeArray<sun.tools.java.IdentifierToken>, val : sun.tools.tree.Node) : Void;
+	@:overload @:public override public function defineField(where : haxe.Int64, c : sun.tools.java.ClassDefinition, doc : String, mod : Int, t : sun.tools.java.Type, name : sun.tools.java.IdentifierToken, args : java.NativeArray<sun.tools.java.IdentifierToken>, exp : java.NativeArray<sun.tools.java.IdentifierToken>, val : sun.tools.tree.Node) : Void;
 	
 	
 }

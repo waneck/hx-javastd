@@ -6,78 +6,78 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 extern class XPathParser extends com.sun.java_cup.internal.runtime.lr_parser
 {
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Constructor which sets the default scanner. */
-	@:overload public function new(s : com.sun.java_cup.internal.runtime.Scanner) : Void;
+	@:overload @:public public function new(s : com.sun.java_cup.internal.runtime.Scanner) : Void;
 	
 	/** Production table. */
-	private static var _production_table(default, null) : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>;
+	@:protected @:static @:final private static var _production_table(default, null) : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>;
 	
 	/** Access to production table. */
-	@:overload public function production_table() : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>;
+	@:overload @:public public function production_table() : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>;
 	
 	/** Parse-action table. */
-	private static var _action_table(default, null) : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>;
+	@:protected @:static @:final private static var _action_table(default, null) : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>;
 	
 	/** Access to parse-action table. */
-	@:overload public function action_table() : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>;
+	@:overload @:public public function action_table() : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>;
 	
 	/** <code>reduce_goto</code> table. */
-	private static var _reduce_table(default, null) : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>;
+	@:protected @:static @:final private static var _reduce_table(default, null) : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>;
 	
 	/** Access to <code>reduce_goto</code> table. */
-	@:overload public function reduce_table() : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>;
+	@:overload @:public public function reduce_table() : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>;
 	
 	/** Instance of action encapsulation class. */
-	private var action_obj : com.sun.org.apache.xalan.internal.xsltc.compiler.XPathParser.CUP$XPathParser$actions;
+	@:protected private var action_obj : com.sun.org.apache.xalan.internal.xsltc.compiler.XPathParser.CUP$XPathParser$actions;
 	
 	/** Action encapsulation object initializer. */
-	@:overload private function init_actions() : Void;
+	@:overload @:protected private function init_actions() : Void;
 	
 	/** Invoke a user supplied parse action. */
-	@:overload public function do_action(act_num : Int, parser : com.sun.java_cup.internal.runtime.lr_parser, stack : java.util.Stack<Dynamic>, top : Int) : com.sun.java_cup.internal.runtime.Symbol;
+	@:overload @:public public function do_action(act_num : Int, parser : com.sun.java_cup.internal.runtime.lr_parser, stack : java.util.Stack<Dynamic>, top : Int) : com.sun.java_cup.internal.runtime.Symbol;
 	
 	/** Indicates start state. */
-	@:overload public function start_state() : Int;
+	@:overload @:public public function start_state() : Int;
 	
 	/** Indicates start production. */
-	@:overload public function start_production() : Int;
+	@:overload @:public public function start_production() : Int;
 	
 	/** <code>EOF</code> Symbol index. */
-	@:overload public function EOF_sym() : Int;
+	@:overload @:public public function EOF_sym() : Int;
 	
 	/** <code>error</code> Symbol index. */
-	@:overload public function error_sym() : Int;
+	@:overload @:public public function error_sym() : Int;
 	
 	/**
 	* Used by function calls with no args.
 	*/
-	public static var EmptyArgs(default, null) : java.util.Vector<Dynamic>;
+	@:static @:public @:final public static var EmptyArgs(default, null) : java.util.Vector<Dynamic>;
 	
 	/**
 	* Reference to non-existing variable.
 	*/
-	public static var DummyVarRef(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableRef;
+	@:static @:public @:final public static var DummyVarRef(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableRef;
 	
 	/**
 	* Reference to the symbol table.
 	*/
-	public var _symbolTable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable;
+	@:public public var _symbolTable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable;
 	
-	@:overload public function new(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public public function new(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
-	@:overload public function getQNameIgnoreDefaultNs(name : String) : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
+	@:overload @:public public function getQNameIgnoreDefaultNs(name : String) : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
 	
-	@:overload public function getQName(namespace : String, prefix : String, localname : String) : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
+	@:overload @:public public function getQName(namespace : String, prefix : String, localname : String) : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
 	
-	@:overload public function setMultiDocument(flag : Bool) : Void;
+	@:overload @:public public function setMultiDocument(flag : Bool) : Void;
 	
-	@:overload public function setCallsNodeset(flag : Bool) : Void;
+	@:overload @:public public function setCallsNodeset(flag : Bool) : Void;
 	
-	@:overload public function setHasIdCall(flag : Bool) : Void;
+	@:overload @:public public function setHasIdCall(flag : Bool) : Void;
 	
 	/**
 	* This method is similar to findNodeType(int, Object) except that it
@@ -89,9 +89,9 @@ extern class XPathParser extends com.sun.java_cup.internal.runtime.lr_parser
 	* expansion to be correct, the priority of the pattern/template must be
 	* set to -0.25 (when no other predicates are present).
 	*/
-	@:overload public function createStepPattern(axis : Int, test : Dynamic, predicates : java.util.Vector<Dynamic>) : com.sun.org.apache.xalan.internal.xsltc.compiler.StepPattern;
+	@:overload @:public public function createStepPattern(axis : Int, test : Dynamic, predicates : java.util.Vector<Dynamic>) : com.sun.org.apache.xalan.internal.xsltc.compiler.StepPattern;
 	
-	@:overload public function findNodeType(axis : Int, test : Dynamic) : Int;
+	@:overload @:public public function findNodeType(axis : Int, test : Dynamic) : Int;
 	
 	/**
 	* Parse the expression passed to the current scanner. If this
@@ -104,29 +104,29 @@ extern class XPathParser extends com.sun.java_cup.internal.runtime.lr_parser
 	*                   compiled in a separate module.
 	*
 	*/
-	@:overload public function parse(expression : String, lineNumber : Int) : com.sun.java_cup.internal.runtime.Symbol;
+	@:overload @:public public function parse(expression : String, lineNumber : Int) : com.sun.java_cup.internal.runtime.Symbol;
 	
-	@:overload @:final public function addError(error : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ErrorMsg) : Void;
+	@:overload @:public @:final public function addError(error : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ErrorMsg) : Void;
 	
-	@:overload public function report_error(message : String, info : Dynamic) : Void;
+	@:overload @:public public function report_error(message : String, info : Dynamic) : Void;
 	
-	@:overload public function report_fatal_error(message : String, info : Dynamic) : Void;
+	@:overload @:public public function report_fatal_error(message : String, info : Dynamic) : Void;
 	
-	@:overload public function insertStep(step : com.sun.org.apache.xalan.internal.xsltc.compiler.Step, rlp : com.sun.org.apache.xalan.internal.xsltc.compiler.RelativeLocationPath) : com.sun.org.apache.xalan.internal.xsltc.compiler.RelativeLocationPath;
+	@:overload @:public public function insertStep(step : com.sun.org.apache.xalan.internal.xsltc.compiler.Step, rlp : com.sun.org.apache.xalan.internal.xsltc.compiler.RelativeLocationPath) : com.sun.org.apache.xalan.internal.xsltc.compiler.RelativeLocationPath;
 	
 	/**
 	* Returns true if the axis applies to elements only. The axes
 	* child, attribute, namespace, descendant result in non-empty
 	* nodesets only if the context node is of type element.
 	*/
-	@:overload public function isElementAxis(axis : Int) : Bool;
+	@:overload @:public public function isElementAxis(axis : Int) : Bool;
 	
 	
 }
 @:internal extern class CUP$XPathParser$actions
 {
 	/** Method with the actual generated action code. */
-	@:overload @:final public function CUP$XPathParser$do_action(CUP$XPathParser$act_num : Int, CUP$XPathParser$parser : com.sun.java_cup.internal.runtime.lr_parser, CUP$XPathParser$stack : java.util.Stack<Dynamic>, CUP$XPathParser$top : Int) : com.sun.java_cup.internal.runtime.Symbol;
+	@:overload @:public @:final public function CUP$XPathParser$do_action(CUP$XPathParser$act_num : Int, CUP$XPathParser$parser : com.sun.java_cup.internal.runtime.lr_parser, CUP$XPathParser$stack : java.util.Stack<Dynamic>, CUP$XPathParser$top : Int) : com.sun.java_cup.internal.runtime.Symbol;
 	
 	
 }

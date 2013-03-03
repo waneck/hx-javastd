@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.wsdl;
 */
 @:internal extern class ActionBasedOperationFinder extends com.sun.xml.internal.ws.wsdl.WSDLOperationFinder
 {
-	@:overload public function new(wsdlModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, seiModel : com.sun.xml.internal.ws.api.model.SEIModel) : Void;
+	@:overload @:public public function new(wsdlModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, seiModel : com.sun.xml.internal.ws.api.model.SEIModel) : Void;
 	
 	/**
 	*
@@ -35,7 +35,7 @@ package com.sun.xml.internal.ws.wsdl;
 	* @throws DispatchException with WSA defined fault message when it cannot find an associated WSDL operation.
 	*
 	*/
-	@:overload public function getWSDLOperationQName(request : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.namespace.QName;
+	@:overload @:public override public function getWSDLOperationQName(request : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.namespace.QName;
 	
 	
 }

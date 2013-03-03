@@ -37,7 +37,7 @@ extern class DOMValidateContext extends javax.xml.crypto.dom.DOMCryptoContext im
 	* @throws NullPointerException if <code>ks</code> or <code>node</code> is
 	*    <code>null</code>
 	*/
-	@:overload public function new(ks : javax.xml.crypto.KeySelector, node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(ks : javax.xml.crypto.KeySelector, node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Creates a <code>DOMValidateContext</code> containing the specified key
@@ -51,7 +51,7 @@ extern class DOMValidateContext extends javax.xml.crypto.dom.DOMCryptoContext im
 	* @throws NullPointerException if <code>validatingKey</code> or
 	*    <code>node</code> is <code>null</code>
 	*/
-	@:overload public function new(validatingKey : java.security.Key, node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(validatingKey : java.security.Key, node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Sets the node.
@@ -60,7 +60,7 @@ extern class DOMValidateContext extends javax.xml.crypto.dom.DOMCryptoContext im
 	* @throws NullPointerException if <code>node</code> is <code>null</code>
 	* @see #getNode
 	*/
-	@:overload public function setNode(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setNode(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Returns the node.
@@ -68,7 +68,7 @@ extern class DOMValidateContext extends javax.xml.crypto.dom.DOMCryptoContext im
 	* @return the node (never <code>null</code>)
 	* @see #setNode(Node)
 	*/
-	@:overload public function getNode() : org.w3c.dom.Node;
+	@:overload @:public public function getNode() : org.w3c.dom.Node;
 	
 	
 }

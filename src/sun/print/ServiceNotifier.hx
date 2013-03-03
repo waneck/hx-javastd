@@ -30,7 +30,7 @@ package sun.print;
 	* a minimum of 15 seconds. Ensures this won't take more than 10%
 	* of available time.
 	*/
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

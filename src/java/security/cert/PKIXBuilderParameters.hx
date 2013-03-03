@@ -44,7 +44,7 @@ extern class PKIXBuilderParameters extends java.security.cert.PKIXParameters
 	* <code>trustAnchors</code> are not of type
 	* <code>java.security.cert.TrustAnchor</code>
 	*/
-	@:overload public function new(trustAnchors : java.util.Set<java.security.cert.TrustAnchor>, targetConstraints : java.security.cert.CertSelector) : Void;
+	@:overload @:public public function new(trustAnchors : java.util.Set<java.security.cert.TrustAnchor>, targetConstraints : java.security.cert.CertSelector) : Void;
 	
 	/**
 	* Creates an instance of <code>PKIXBuilderParameters</code> that
@@ -64,7 +64,7 @@ extern class PKIXBuilderParameters extends java.security.cert.PKIXParameters
 	* @throws NullPointerException if <code>keystore</code> is
 	* <code>null</code>
 	*/
-	@:overload public function new(keystore : java.security.KeyStore, targetConstraints : java.security.cert.CertSelector) : Void;
+	@:overload @:public public function new(keystore : java.security.KeyStore, targetConstraints : java.security.cert.CertSelector) : Void;
 	
 	/**
 	* Sets the value of the maximum number of non-self-issued intermediate
@@ -96,7 +96,7 @@ extern class PKIXBuilderParameters extends java.security.cert.PKIXParameters
 	*
 	* @see #getMaxPathLength
 	*/
-	@:overload public function setMaxPathLength(maxPathLength : Int) : Void;
+	@:overload @:public public function setMaxPathLength(maxPathLength : Int) : Void;
 	
 	/**
 	* Returns the value of the maximum number of intermediate non-self-issued
@@ -108,14 +108,14 @@ extern class PKIXBuilderParameters extends java.security.cert.PKIXParameters
 	*
 	* @see #setMaxPathLength
 	*/
-	@:overload public function getMaxPathLength() : Int;
+	@:overload @:public public function getMaxPathLength() : Int;
 	
 	/**
 	* Returns a formatted string describing the parameters.
 	*
 	* @return a formatted string describing the parameters
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

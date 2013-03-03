@@ -39,68 +39,68 @@ package javax.swing.text.html.parser;
 */
 extern class AttributeList implements javax.swing.text.html.parser.DTDConstants implements java.io.Serializable
 {
-	public var name : String;
+	@:public public var name : String;
 	
-	public var type : Int;
+	@:public public var type : Int;
 	
-	public var values : java.util.Vector<Dynamic>;
+	@:public public var values : java.util.Vector<Dynamic>;
 	
-	public var modifier : Int;
+	@:public public var modifier : Int;
 	
-	public var value : String;
+	@:public public var value : String;
 	
-	public var next : javax.swing.text.html.parser.AttributeList;
-	
-	/**
-	* Create an attribute list element.
-	*/
-	@:overload public function new(name : String) : Void;
+	@:public public var next : javax.swing.text.html.parser.AttributeList;
 	
 	/**
 	* Create an attribute list element.
 	*/
-	@:overload public function new(name : String, type : Int, modifier : Int, value : String, values : java.util.Vector<Dynamic>, next : javax.swing.text.html.parser.AttributeList) : Void;
+	@:overload @:public public function new(name : String) : Void;
+	
+	/**
+	* Create an attribute list element.
+	*/
+	@:overload @:public public function new(name : String, type : Int, modifier : Int, value : String, values : java.util.Vector<Dynamic>, next : javax.swing.text.html.parser.AttributeList) : Void;
 	
 	/**
 	* @return attribute name
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* @return attribute type
 	* @see DTDConstants
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* @return attribute modifier
 	* @see DTDConstants
 	*/
-	@:overload public function getModifier() : Int;
+	@:overload @:public public function getModifier() : Int;
 	
 	/**
 	* @return possible attribute values
 	*/
-	@:overload public function getValues() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getValues() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* @return default attribute value
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	/**
 	* @return the next attribute in the list
 	*/
-	@:overload public function getNext() : javax.swing.text.html.parser.AttributeList;
+	@:overload @:public public function getNext() : javax.swing.text.html.parser.AttributeList;
 	
 	/**
 	* @return string representation
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public static function name2type(nm : String) : Int;
+	@:overload @:public @:static public static function name2type(nm : String) : Int;
 	
-	@:overload public static function type2name(tp : Int) : String;
+	@:overload @:public @:static public static function type2name(tp : Int) : String;
 	
 	
 }

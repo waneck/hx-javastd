@@ -50,14 +50,14 @@ extern class NameClass implements com.sun.xml.internal.rngom.ast.om.ParsedNameCl
 	* Returns true if the given {@link QName} is a valid name
 	* for this QName.
 	*/
-	@:overload @:abstract public function contains(name : javax.xml.namespace.QName) : Bool;
+	@:overload @:public @:abstract public function contains(name : javax.xml.namespace.QName) : Bool;
 	
-	@:overload @:abstract public function containsSpecificity(name : javax.xml.namespace.QName) : Int;
+	@:overload @:public @:abstract public function containsSpecificity(name : javax.xml.namespace.QName) : Int;
 	
 	/**
 	* Visitor pattern support.
 	*/
-	@:overload @:abstract public function accept<V>(visitor : com.sun.xml.internal.rngom.nc.NameClassVisitor<V>) : V;
+	@:overload @:public @:abstract public function accept<V>(visitor : com.sun.xml.internal.rngom.nc.NameClassVisitor<V>) : V;
 	
 	/**
 	* Returns true if the name class accepts infinite number of
@@ -67,23 +67,23 @@ extern class NameClass implements com.sun.xml.internal.rngom.ast.om.ParsedNameCl
 	* Intuitively, this method returns true if the name class is
 	* some sort of wildcard.
 	*/
-	@:overload @:abstract public function isOpen() : Bool;
+	@:overload @:public @:abstract public function isOpen() : Bool;
 	
 	/**
 	* If the name class is closed (IOW !{@link #isOpen()}),
 	* return the set of names in this name class. Otherwise the behavior
 	* is undefined.
 	*/
-	@:overload public function listNames() : java.util.Set<javax.xml.namespace.QName>;
+	@:overload @:public public function listNames() : java.util.Set<javax.xml.namespace.QName>;
 	
 	/**
 	* Returns true if the intersection between this name class
 	* and the specified name class is non-empty.
 	*/
-	@:overload @:final public function hasOverlapWith(nc2 : com.sun.xml.internal.rngom.nc.NameClass) : Bool;
+	@:overload @:public @:final public function hasOverlapWith(nc2 : com.sun.xml.internal.rngom.nc.NameClass) : Bool;
 	
 	/** Sigleton instance that represents "anyName". */
-	public static var ANY(default, null) : com.sun.xml.internal.rngom.nc.NameClass;
+	@:public @:static @:final public static var ANY(default, null) : com.sun.xml.internal.rngom.nc.NameClass;
 	
 	/**
 	* Sigleton instance that accepts no name.
@@ -100,7 +100,7 @@ extern class NameClass implements com.sun.xml.internal.rngom.ast.om.ParsedNameCl
 	*  <li>Mark element patterns with &lt;notAllowed/> content model.
 	* </ol>
 	*/
-	public static var NULL(default, null) : com.sun.xml.internal.rngom.nc.NameClass;
+	@:public @:static @:final public static var NULL(default, null) : com.sun.xml.internal.rngom.nc.NameClass;
 	
 	
 }

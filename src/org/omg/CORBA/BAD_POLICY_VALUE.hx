@@ -36,7 +36,7 @@ extern interface BAD_POLICY_VALUE
 	* in a <code>PolicyError</code> exception.
 	* @see org.omg.CORBA.PolicyError
 	*/
-	public var value(default, null) : java.StdTypes.Int16;
+	@:final public var value(default, null) : java.StdTypes.Int16;
 	
 	
 }

@@ -52,7 +52,7 @@ extern interface DocumentView
 	* The default <code>AbstractView</code> for this <code>Document</code>,
 	* or <code>null</code> if none available.
 	*/
-	@:overload public function getDefaultView() : org.w3c.dom.views.AbstractView;
+	@:overload @:public public function getDefaultView() : org.w3c.dom.views.AbstractView;
 	
 	
 }

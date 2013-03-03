@@ -57,14 +57,14 @@ extern interface ProcessingInstruction extends org.w3c.dom.Node
 	* the first token following the markup that begins the processing
 	* instruction.
 	*/
-	@:overload public function getTarget() : String;
+	@:overload @:public public function getTarget() : String;
 	
 	/**
 	* The content of this processing instruction. This is from the first non
 	* white space character after the target to the character immediately
 	* preceding the <code>?&gt;</code>.
 	*/
-	@:overload public function getData() : String;
+	@:overload @:public public function getData() : String;
 	
 	/**
 	* The content of this processing instruction. This is from the first non
@@ -73,7 +73,7 @@ extern interface ProcessingInstruction extends org.w3c.dom.Node
 	* @exception DOMException
 	*   NO_MODIFICATION_ALLOWED_ERR: Raised when the node is readonly.
 	*/
-	@:overload public function setData(data : String) : Void;
+	@:overload @:public public function setData(data : String) : Void;
 	
 	
 }

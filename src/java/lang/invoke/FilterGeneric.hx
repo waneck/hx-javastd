@@ -32,7 +32,7 @@ package java.lang.invoke;
 	* @param target the target to call with the modified argument list
 	* @return an adapter method handle
 	*/
-	@:overload public static function makeArgumentFilter(pos : Int, filter : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function makeArgumentFilter(pos : Int, filter : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
 	
 	/** Build an adapter of the given generic type, which invokes a combiner
 	*  on a selected group of leading arguments.
@@ -41,7 +41,7 @@ package java.lang.invoke;
 	* @param target the target to call with the modified argument list
 	* @return an adapter method handle
 	*/
-	@:overload public static function makeArgumentFolder(combiner : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function makeArgumentFolder(combiner : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
 	
 	/** Build an adapter of the given generic type, which invokes a filter
 	*  on the incoming arguments, reified as a group.
@@ -51,7 +51,7 @@ package java.lang.invoke;
 	* @param target the target to call with the possibly-modified argument list
 	* @return an adapter method handle
 	*/
-	@:overload public static function makeFlyby(filter : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function makeFlyby(filter : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
 	
 	/** Build an adapter of the given generic type, which invokes a collector
 	*  on the selected incoming argument and all following arguments.
@@ -60,9 +60,9 @@ package java.lang.invoke;
 	* @param target the target to call with the modified argument list
 	* @return an adapter method handle
 	*/
-	@:overload public static function makeArgumentCollector(collector : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function makeArgumentCollector(collector : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -77,20 +77,20 @@ package java.lang.invoke;
 */
 @:native('java$lang$invoke$FilterGeneric$Adapter') @:internal extern class FilterGeneric_Adapter extends java.lang.invoke.BoundMethodHandle
 {
-	private var filter(default, null) : java.lang.invoke.MethodHandle;
+	@:protected @:final private var filter(default, null) : java.lang.invoke.MethodHandle;
 	
-	private var target(default, null) : java.lang.invoke.MethodHandle;
+	@:protected @:final private var target(default, null) : java.lang.invoke.MethodHandle;
 	
-	@:overload private function isPrototype() : Bool;
+	@:overload @:protected private function isPrototype() : Bool;
 	
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function prototypeEntryPoint() : java.lang.invoke.MethodHandle;
+	@:overload @:protected private function prototypeEntryPoint() : java.lang.invoke.MethodHandle;
 	
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle, filter : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle, filter : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : Void;
 	
 	/** Make a copy of self, with new fields. */
-	@:overload @:abstract private function makeInstance(entryPoint : java.lang.invoke.MethodHandle, filter : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_Adapter;
+	@:overload @:protected @:abstract private function makeInstance(entryPoint : java.lang.invoke.MethodHandle, filter : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_Adapter;
 	
 	
 }
@@ -139,17 +139,17 @@ filter.invokeExact(av); return target.invokeExact(av[0], av[1]); }
 // */
 @:native('java$lang$invoke$FilterGeneric$F0') @:internal extern class FilterGeneric_F0 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F0;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F0;
 	
-	@:overload private function invoke_F0() : Dynamic;
+	@:overload @:protected private function invoke_F0() : Dynamic;
 	
-	@:overload private function invoke_C0() : Dynamic;
+	@:overload @:protected private function invoke_C0() : Dynamic;
 	
-	@:overload private function invoke_Y0() : Dynamic;
+	@:overload @:protected private function invoke_Y0() : Dynamic;
 	
 	
 }
@@ -311,1581 +311,1581 @@ System.out.println(VAR.transform(line));
 //}}} */
 @:native('java$lang$invoke$FilterGeneric$F1') @:internal extern class FilterGeneric_F1 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F1;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F1;
 	
-	@:overload private function invoke_V0(a0 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F2') @:internal extern class FilterGeneric_F2 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F2;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F2;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F3') @:internal extern class FilterGeneric_F3 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F3;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F3;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F4') @:internal extern class FilterGeneric_F4 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F4;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F4;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F5') @:internal extern class FilterGeneric_F5 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F5;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F5;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F6') @:internal extern class FilterGeneric_F6 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F6;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F6;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F7') @:internal extern class FilterGeneric_F7 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F7;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F7;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F8') @:internal extern class FilterGeneric_F8 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F8;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F8;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F9') @:internal extern class FilterGeneric_F9 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F9;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F9;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F10') @:internal extern class FilterGeneric_F10 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F10;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F10;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F11') @:internal extern class FilterGeneric_F11 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F11;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F11;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F12') @:internal extern class FilterGeneric_F12 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F12;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F12;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F13') @:internal extern class FilterGeneric_F13 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F13;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F13;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F14') @:internal extern class FilterGeneric_F14 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F14;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F14;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F15') @:internal extern class FilterGeneric_F15 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F15;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F15;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F16') @:internal extern class FilterGeneric_F16 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F16;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F16;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F17') @:internal extern class FilterGeneric_F17 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F17;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F17;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F18') @:internal extern class FilterGeneric_F18 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F18;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F18;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F18(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F18(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C18(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C18(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F19') @:internal extern class FilterGeneric_F19 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F19;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F19;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V18(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V18(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F18(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F18(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F19(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F19(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C18(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C18(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C19(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C19(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$lang$invoke$FilterGeneric$F20') @:internal extern class FilterGeneric_F20 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
-	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F20;
+	@:overload @:protected override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F20;
 	
-	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V18(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V18(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_V19(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_V19(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F18(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F18(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F19(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F19(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_F20(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_F20(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C1(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C2(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C3(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C4(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C5(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C6(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C7(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C8(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C9(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C10(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C11(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C12(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C13(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C14(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C15(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C16(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C17(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C18(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C18(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C19(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C19(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_C20(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_C20(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
-	@:overload private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke_Y0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	
 	
 }

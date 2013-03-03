@@ -31,37 +31,37 @@ extern class SynthOptionPaneUI extends javax.swing.plaf.basic.BasicOptionPaneUI 
 	* @param x component to create UI object for
 	* @return the UI object
 	*/
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function installListeners() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function installComponents() : Void;
+	@:overload @:protected override private function installComponents() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -75,7 +75,7 @@ extern class SynthOptionPaneUI extends javax.swing.plaf.basic.BasicOptionPaneUI 
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -86,7 +86,7 @@ extern class SynthOptionPaneUI extends javax.swing.plaf.basic.BasicOptionPaneUI 
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component. This implementation does nothing.
@@ -95,34 +95,34 @@ extern class SynthOptionPaneUI extends javax.swing.plaf.basic.BasicOptionPaneUI 
 	* @param g the {@code Graphics} object used for painting
 	* @see #update(Graphics,JComponent)
 	*/
-	@:overload private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function getSizeButtonsToSameWidth() : Bool;
+	@:overload @:protected override private function getSizeButtonsToSameWidth() : Bool;
 	
 	/**
 	* Called from {@link #installComponents} to create a {@code Container}
 	* containing the body of the message. The icon is the created by calling
 	* {@link #addIcon}.
 	*/
-	@:overload private function createMessageArea() : java.awt.Container;
+	@:overload @:protected override private function createMessageArea() : java.awt.Container;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function createSeparator() : java.awt.Container;
+	@:overload @:protected override private function createSeparator() : java.awt.Container;
 	
 	
 }

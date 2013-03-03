@@ -52,12 +52,12 @@ package java.awt.event;
 	/**
 	* Invoked when a component gains the keyboard focus.
 	*/
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
 	/**
 	* Invoked when a component loses the keyboard focus.
 	*/
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
 	
 }

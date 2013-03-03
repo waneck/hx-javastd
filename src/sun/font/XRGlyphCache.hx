@@ -30,32 +30,32 @@ package sun.font;
 */
 extern class XRGlyphCache implements sun.font.GlyphDisposedListener
 {
-	@:overload public function new(maskBuf : sun.java2d.xr.XRCompositeManager) : Void;
+	@:overload @:public public function new(maskBuf : sun.java2d.xr.XRCompositeManager) : Void;
 	
-	@:overload public function glyphDisposed(glyphPtrList : java.util.ArrayList<Null<haxe.Int64>>) : Void;
+	@:overload @:public public function glyphDisposed(glyphPtrList : java.util.ArrayList<Null<haxe.Int64>>) : Void;
 	
-	@:overload private function getFreeGlyphID() : Int;
+	@:overload @:protected private function getFreeGlyphID() : Int;
 	
-	@:overload private function getEntryForPointer(imgPtr : haxe.Int64) : sun.font.XRGlyphCacheEntry;
+	@:overload @:protected private function getEntryForPointer(imgPtr : haxe.Int64) : sun.font.XRGlyphCacheEntry;
 	
-	@:overload public function cacheGlyphs(glyphList : sun.font.GlyphList) : java.NativeArray<sun.font.XRGlyphCacheEntry>;
+	@:overload @:public public function cacheGlyphs(glyphList : sun.font.GlyphList) : java.NativeArray<sun.font.XRGlyphCacheEntry>;
 	
-	@:overload private function uploadGlyphs(glyphs : java.NativeArray<sun.font.XRGlyphCacheEntry>, uncachedGlyphs : java.util.ArrayList<sun.font.XRGlyphCacheEntry>, gl : sun.font.GlyphList, glIndices : java.NativeArray<Int>) : Void;
+	@:overload @:protected private function uploadGlyphs(glyphs : java.NativeArray<sun.font.XRGlyphCacheEntry>, uncachedGlyphs : java.util.ArrayList<sun.font.XRGlyphCacheEntry>, gl : sun.font.GlyphList, glIndices : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Seperates lcd and grayscale glyphs queued for upload, and sets the
 	* appropriate glyphset for the cache entries.
 	*/
-	@:overload private function seperateGlyphTypes(glyphList : java.util.List<sun.font.XRGlyphCacheEntry>, containsLCDGlyphs : Bool) : java.NativeArray<java.util.List<sun.font.XRGlyphCacheEntry>>;
+	@:overload @:protected private function seperateGlyphTypes(glyphList : java.util.List<sun.font.XRGlyphCacheEntry>, containsLCDGlyphs : Bool) : java.NativeArray<java.util.List<sun.font.XRGlyphCacheEntry>>;
 	
 	/**
 	* Copies the glyph-images into a continous buffer, required for uploading.
 	*/
-	@:overload private function generateGlyphImageStream(glyphList : java.util.List<sun.font.XRGlyphCacheEntry>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected private function generateGlyphImageStream(glyphList : java.util.List<sun.font.XRGlyphCacheEntry>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function containsLCDGlyphs(entries : java.util.List<sun.font.XRGlyphCacheEntry>) : Bool;
+	@:overload @:protected private function containsLCDGlyphs(entries : java.util.List<sun.font.XRGlyphCacheEntry>) : Bool;
 	
-	@:overload private function clearCache(glyps : java.NativeArray<sun.font.XRGlyphCacheEntry>) : Void;
+	@:overload @:protected private function clearCache(glyps : java.NativeArray<sun.font.XRGlyphCacheEntry>) : Void;
 	
 	
 }

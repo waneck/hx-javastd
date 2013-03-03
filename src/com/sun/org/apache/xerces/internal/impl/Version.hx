@@ -68,18 +68,18 @@ extern class Version
 {
 	/** Version string.
 	* @deprecated  getVersion() should be used instead.  */
-	public static var fVersion : String;
+	@:public @:static public static var fVersion : String;
 	
 	/* Print out the version information.
 	* @return the version of the parser.
 	*/
-	@:overload public static function getVersion() : String;
+	@:overload @:public @:static public static function getVersion() : String;
 	
 	/**
 	* Prints out the version number to System.out. This is needed
 	* for the build system.
 	*/
-	@:overload public static function main(argv : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(argv : java.NativeArray<String>) : Void;
 	
 	
 }

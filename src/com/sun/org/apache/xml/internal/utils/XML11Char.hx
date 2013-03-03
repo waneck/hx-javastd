@@ -21,31 +21,31 @@ package com.sun.org.apache.xml.internal.utils;
 extern class XML11Char
 {
 	/** XML 1.1 Valid character mask. */
-	public static var MASK_XML11_VALID(default, null) : Int;
+	@:public @:static @:final public static var MASK_XML11_VALID(default, null) : Int;
 	
 	/** XML 1.1 Space character mask. */
-	public static var MASK_XML11_SPACE(default, null) : Int;
+	@:public @:static @:final public static var MASK_XML11_SPACE(default, null) : Int;
 	
 	/** XML 1.1 Name start character mask. */
-	public static var MASK_XML11_NAME_START(default, null) : Int;
+	@:public @:static @:final public static var MASK_XML11_NAME_START(default, null) : Int;
 	
 	/** XML 1.1 Name character mask. */
-	public static var MASK_XML11_NAME(default, null) : Int;
+	@:public @:static @:final public static var MASK_XML11_NAME(default, null) : Int;
 	
 	/** XML 1.1 control character mask */
-	public static var MASK_XML11_CONTROL(default, null) : Int;
+	@:public @:static @:final public static var MASK_XML11_CONTROL(default, null) : Int;
 	
 	/** XML 1.1 content for external entities (valid - "special" chars - control chars) */
-	public static var MASK_XML11_CONTENT(default, null) : Int;
+	@:public @:static @:final public static var MASK_XML11_CONTENT(default, null) : Int;
 	
 	/** XML namespaces 1.1 NCNameStart */
-	public static var MASK_XML11_NCNAME_START(default, null) : Int;
+	@:public @:static @:final public static var MASK_XML11_NCNAME_START(default, null) : Int;
 	
 	/** XML namespaces 1.1 NCName */
-	public static var MASK_XML11_NCNAME(default, null) : Int;
+	@:public @:static @:final public static var MASK_XML11_NCNAME(default, null) : Int;
 	
 	/** XML 1.1 content for internal entities (valid - "special" chars) */
-	public static var MASK_XML11_CONTENT_INTERNAL(default, null) : Int;
+	@:public @:static @:final public static var MASK_XML11_CONTENT_INTERNAL(default, null) : Int;
 	
 	/**
 	* Returns true if the specified character is a space character
@@ -53,7 +53,7 @@ extern class XML11Char
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isXML11Space(c : Int) : Bool;
+	@:overload @:public @:static public static function isXML11Space(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character is valid. This method
@@ -65,14 +65,14 @@ extern class XML11Char
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isXML11Valid(c : Int) : Bool;
+	@:overload @:public @:static public static function isXML11Valid(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character is invalid.
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isXML11Invalid(c : Int) : Bool;
+	@:overload @:public @:static public static function isXML11Invalid(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character is valid and permitted outside
@@ -82,7 +82,7 @@ extern class XML11Char
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isXML11ValidLiteral(c : Int) : Bool;
+	@:overload @:public @:static public static function isXML11ValidLiteral(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character can be considered
@@ -90,7 +90,7 @@ extern class XML11Char
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isXML11Content(c : Int) : Bool;
+	@:overload @:public @:static public static function isXML11Content(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character can be considered
@@ -98,7 +98,7 @@ extern class XML11Char
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isXML11InternalEntityContent(c : Int) : Bool;
+	@:overload @:public @:static public static function isXML11InternalEntityContent(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character is a valid name start
@@ -107,7 +107,7 @@ extern class XML11Char
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isXML11NameStart(c : Int) : Bool;
+	@:overload @:public @:static public static function isXML11NameStart(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character is a valid name
@@ -116,7 +116,7 @@ extern class XML11Char
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isXML11Name(c : Int) : Bool;
+	@:overload @:public @:static public static function isXML11Name(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character is a valid NCName start
@@ -125,7 +125,7 @@ extern class XML11Char
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isXML11NCNameStart(c : Int) : Bool;
+	@:overload @:public @:static public static function isXML11NCNameStart(c : Int) : Bool;
 	
 	/**
 	* Returns true if the specified character is a valid NCName
@@ -134,7 +134,7 @@ extern class XML11Char
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isXML11NCName(c : Int) : Bool;
+	@:overload @:public @:static public static function isXML11NCName(c : Int) : Bool;
 	
 	/**
 	* Returns whether the given character is a valid
@@ -144,7 +144,7 @@ extern class XML11Char
 	*
 	* @param c The character to check.
 	*/
-	@:overload public static function isXML11NameHighSurrogate(c : Int) : Bool;
+	@:overload @:public @:static public static function isXML11NameHighSurrogate(c : Int) : Bool;
 	
 	/**
 	* Check to see if a string is a valid Name according to [5]
@@ -153,7 +153,7 @@ extern class XML11Char
 	* @param name string to check
 	* @return true if name is a valid Name
 	*/
-	@:overload public static function isXML11ValidName(name : String) : Bool;
+	@:overload @:public @:static public static function isXML11ValidName(name : String) : Bool;
 	
 	/**
 	* Check to see if a string is a valid NCName according to [4]
@@ -162,7 +162,7 @@ extern class XML11Char
 	* @param ncName string to check
 	* @return true if name is a valid NCName
 	*/
-	@:overload public static function isXML11ValidNCName(ncName : String) : Bool;
+	@:overload @:public @:static public static function isXML11ValidNCName(ncName : String) : Bool;
 	
 	/**
 	* Check to see if a string is a valid Nmtoken according to [7]
@@ -171,14 +171,14 @@ extern class XML11Char
 	* @param nmtoken string to check
 	* @return true if nmtoken is a valid Nmtoken
 	*/
-	@:overload public static function isXML11ValidNmtoken(nmtoken : String) : Bool;
+	@:overload @:public @:static public static function isXML11ValidNmtoken(nmtoken : String) : Bool;
 	
 	/**
 	* Simple check to determine if qname is legal. If it returns false
 	* then <param>str</param> is illegal; if it returns true then
 	* <param>str</param> is legal.
 	*/
-	@:overload public static function isXML11ValidQName(str : String) : Bool;
+	@:overload @:public @:static public static function isXML11ValidQName(str : String) : Bool;
 	
 	
 }

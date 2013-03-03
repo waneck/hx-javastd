@@ -43,9 +43,9 @@ extern class X509Factory extends java.security.cert.CertificateFactorySpi
 	* @see sun.security.x509.X509CertImpl
 	* @see sun.security.x509.X509CRLImpl
 	*/
-	public static var BEGIN_CERT(default, null) : String;
+	@:public @:static @:final public static var BEGIN_CERT(default, null) : String;
 	
-	public static var END_CERT(default, null) : String;
+	@:public @:static @:final public static var END_CERT(default, null) : String;
 	
 	/**
 	* Generates an X.509 certificate object and initializes it with
@@ -58,7 +58,7 @@ extern class X509Factory extends java.security.cert.CertificateFactorySpi
 	*
 	* @exception CertificateException on parsing errors.
 	*/
-	@:overload override public function engineGenerateCertificate(is : java.io.InputStream) : java.security.cert.Certificate;
+	@:overload @:public override public function engineGenerateCertificate(is : java.io.InputStream) : java.security.cert.Certificate;
 	
 	/**
 	* Return an interned X509CertImpl for the given certificate.
@@ -73,13 +73,13 @@ extern class X509Factory extends java.security.cert.CertificateFactorySpi
 	* generateCertificate() and for converting other X509Certificate
 	* implementations to an X509CertImpl.
 	*/
-	@:overload @:synchronized public static function intern(c : java.security.cert.X509Certificate) : sun.security.x509.X509CertImpl;
+	@:overload @:public @:static @:synchronized public static function intern(c : java.security.cert.X509Certificate) : sun.security.x509.X509CertImpl;
 	
 	/**
 	* Return an interned X509CRLImpl for the given certificate.
 	* For more information, see intern(X509Certificate).
 	*/
-	@:overload @:synchronized public static function intern(c : java.security.cert.X509CRL) : sun.security.x509.X509CRLImpl;
+	@:overload @:public @:static @:synchronized public static function intern(c : java.security.cert.X509CRL) : sun.security.x509.X509CRLImpl;
 	
 	/**
 	* Generates a <code>CertPath</code> object and initializes it with
@@ -92,7 +92,7 @@ extern class X509Factory extends java.security.cert.CertificateFactorySpi
 	* @exception CertificateException if an exception occurs while decoding
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function engineGenerateCertPath(inStream : java.io.InputStream) : java.security.cert.CertPath;
+	@:require(java4) @:overload @:public override public function engineGenerateCertPath(inStream : java.io.InputStream) : java.security.cert.CertPath;
 	
 	/**
 	* Generates a <code>CertPath</code> object and initializes it with
@@ -107,7 +107,7 @@ extern class X509Factory extends java.security.cert.CertificateFactorySpi
 	*   the encoding requested is not supported
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function engineGenerateCertPath(inStream : java.io.InputStream, encoding : String) : java.security.cert.CertPath;
+	@:require(java4) @:overload @:public override public function engineGenerateCertPath(inStream : java.io.InputStream, encoding : String) : java.security.cert.CertPath;
 	
 	/**
 	* Generates a <code>CertPath</code> object and initializes it with
@@ -123,7 +123,7 @@ extern class X509Factory extends java.security.cert.CertificateFactorySpi
 	* @exception CertificateException if an exception occurs
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function engineGenerateCertPath(certificates : java.util.List<java.security.cert.Certificate>) : java.security.cert.CertPath;
+	@:require(java4) @:overload @:public override public function engineGenerateCertPath(certificates : java.util.List<java.security.cert.Certificate>) : java.security.cert.CertPath;
 	
 	/**
 	* Returns an iteration of the <code>CertPath</code> encodings supported
@@ -137,7 +137,7 @@ extern class X509Factory extends java.security.cert.CertificateFactorySpi
 	*         <code>CertPath</code> encodings (as <code>String</code>s)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function engineGetCertPathEncodings() : java.util.Iterator<String>;
+	@:require(java4) @:overload @:public override public function engineGetCertPathEncodings() : java.util.Iterator<String>;
 	
 	/**
 	* Returns a (possibly empty) collection view of X.509 certificates read
@@ -150,7 +150,7 @@ extern class X509Factory extends java.security.cert.CertificateFactorySpi
 	*
 	* @exception CertificateException on parsing errors.
 	*/
-	@:overload override public function engineGenerateCertificates(is : java.io.InputStream) : java.util.Collection<java.security.cert.Certificate>;
+	@:overload @:public override public function engineGenerateCertificates(is : java.io.InputStream) : java.util.Collection<java.security.cert.Certificate>;
 	
 	/**
 	* Generates an X.509 certificate revocation list (CRL) object and
@@ -164,7 +164,7 @@ extern class X509Factory extends java.security.cert.CertificateFactorySpi
 	*
 	* @exception CRLException on parsing errors.
 	*/
-	@:overload override public function engineGenerateCRL(is : java.io.InputStream) : java.security.cert.CRL;
+	@:overload @:public override public function engineGenerateCRL(is : java.io.InputStream) : java.security.cert.CRL;
 	
 	/**
 	* Returns a (possibly empty) collection view of X.509 CRLs read
@@ -177,7 +177,7 @@ extern class X509Factory extends java.security.cert.CertificateFactorySpi
 	*
 	* @exception CRLException on parsing errors.
 	*/
-	@:overload override public function engineGenerateCRLs(is : java.io.InputStream) : java.util.Collection<java.security.cert.CRL>;
+	@:overload @:public override public function engineGenerateCRLs(is : java.io.InputStream) : java.util.Collection<java.security.cert.CRL>;
 	
 	
 }

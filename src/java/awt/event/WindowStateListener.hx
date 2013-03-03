@@ -28,7 +28,7 @@ extern interface WindowStateListener extends java.util.EventListener
 	/**
 	* Invoked when window state is changed.
 	*/
-	@:overload public function windowStateChanged(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowStateChanged(e : java.awt.event.WindowEvent) : Void;
 	
 	
 }

@@ -28,62 +28,62 @@ extern class X11FontMetrics extends java.awt.FontMetrics
 	/**
 	* Calculate the metrics from the given WServer and font.
 	*/
-	@:overload public function new(font : java.awt.Font) : Void;
+	@:overload @:public public function new(font : java.awt.Font) : Void;
 	
 	/**
 	* Get leading
 	*/
-	@:overload override public function getLeading() : Int;
+	@:overload @:public override public function getLeading() : Int;
 	
 	/**
 	* Get ascent.
 	*/
-	@:overload override public function getAscent() : Int;
+	@:overload @:public override public function getAscent() : Int;
 	
 	/**
 	* Get descent
 	*/
-	@:overload override public function getDescent() : Int;
+	@:overload @:public override public function getDescent() : Int;
 	
 	/**
 	* Get height
 	*/
-	@:overload override public function getHeight() : Int;
+	@:overload @:public override public function getHeight() : Int;
 	
 	/**
 	* Get maxAscent
 	*/
-	@:overload override public function getMaxAscent() : Int;
+	@:overload @:public override public function getMaxAscent() : Int;
 	
 	/**
 	* Get maxDescent
 	*/
-	@:overload override public function getMaxDescent() : Int;
+	@:overload @:public override public function getMaxDescent() : Int;
 	
 	/**
 	* Get maxAdvance
 	*/
-	@:overload override public function getMaxAdvance() : Int;
+	@:overload @:public override public function getMaxAdvance() : Int;
 	
 	/**
 	* Return the width of the specified string in this Font.
 	*/
-	@:overload override public function stringWidth(string : String) : Int;
+	@:overload @:public override public function stringWidth(string : String) : Int;
 	
 	/**
 	* Return the width of the specified char[] in this Font.
 	*/
-	@:overload override public function charsWidth(chars : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
+	@:overload @:public override public function charsWidth(chars : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
 	
 	/**
 	* Return the width of the specified byte[] in this Font.
 	*/
-	@:overload @:native override public function bytesWidth(data : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public @:native override public function bytesWidth(data : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Get the widths of the first 256 characters in the font.
 	*/
-	@:overload override public function getWidths() : java.NativeArray<Int>;
+	@:overload @:public override public function getWidths() : java.NativeArray<Int>;
 	
 	
 }

@@ -31,21 +31,21 @@ package sun.management;
 */
 @:internal extern class HotspotClassLoading implements sun.management.HotspotClassLoadingMBean
 {
-	@:overload public function getLoadedClassSize() : haxe.Int64;
+	@:overload @:public public function getLoadedClassSize() : haxe.Int64;
 	
-	@:overload public function getUnloadedClassSize() : haxe.Int64;
+	@:overload @:public public function getUnloadedClassSize() : haxe.Int64;
 	
-	@:overload public function getClassLoadingTime() : haxe.Int64;
+	@:overload @:public public function getClassLoadingTime() : haxe.Int64;
 	
-	@:overload public function getMethodDataSize() : haxe.Int64;
+	@:overload @:public public function getMethodDataSize() : haxe.Int64;
 	
-	@:overload public function getInitializedClassCount() : haxe.Int64;
+	@:overload @:public public function getInitializedClassCount() : haxe.Int64;
 	
-	@:overload public function getClassInitializationTime() : haxe.Int64;
+	@:overload @:public public function getClassInitializationTime() : haxe.Int64;
 	
-	@:overload public function getClassVerificationTime() : haxe.Int64;
+	@:overload @:public public function getClassVerificationTime() : haxe.Int64;
 	
-	@:overload public function getInternalClassLoadingCounters() : java.util.List<sun.management.counter.Counter>;
+	@:overload @:public public function getInternalClassLoadingCounters() : java.util.List<sun.management.counter.Counter>;
 	
 	
 }

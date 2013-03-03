@@ -39,36 +39,36 @@ extern class AudioSynthesizerPropertyInfo
 	* @param value the current value or class used for values.
 	*
 	*/
-	@:overload public function new(name : String, value : Dynamic) : Void;
+	@:overload @:public public function new(name : String, value : Dynamic) : Void;
 	
 	/**
 	* The name of the property.
 	*/
-	public var name : String;
+	@:public public var name : String;
 	
 	/**
 	* A brief description of the property, which may be null.
 	*/
-	public var description : String;
+	@:public public var description : String;
 	
 	/**
 	* The <code>value</code> field specifies the current value of
 	* the property.
 	*/
-	public var value : Dynamic;
+	@:public public var value : Dynamic;
 	
 	/**
 	* The <code>valueClass</code> field specifies class
 	* used in <code>value</code> field.
 	*/
-	public var valueClass : Class<Dynamic>;
+	@:public public var valueClass : Class<Dynamic>;
 	
 	/**
 	* An array of possible values if the value for the field
 	* <code>AudioSynthesizerPropertyInfo.value</code> may be selected
 	* from a particular set of values; otherwise null.
 	*/
-	public var choices : java.NativeArray<Dynamic>;
+	@:public public var choices : java.NativeArray<Dynamic>;
 	
 	
 }

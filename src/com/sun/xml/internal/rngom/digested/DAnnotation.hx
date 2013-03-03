@@ -54,9 +54,9 @@ extern class DAnnotation
 	* @return
 	*      null if no such attribute is found.
 	*/
-	@:overload public function getAttribute(nsUri : String, localName : String) : com.sun.xml.internal.rngom.digested.DAnnotation.DAnnotation_Attribute;
+	@:overload @:public public function getAttribute(nsUri : String, localName : String) : com.sun.xml.internal.rngom.digested.DAnnotation.DAnnotation_Attribute;
 	
-	@:overload public function getAttribute(n : javax.xml.namespace.QName) : com.sun.xml.internal.rngom.digested.DAnnotation.DAnnotation_Attribute;
+	@:overload @:public public function getAttribute(n : javax.xml.namespace.QName) : com.sun.xml.internal.rngom.digested.DAnnotation.DAnnotation_Attribute;
 	
 	/**
 	* Gets the read-only view of all the attributes.
@@ -65,7 +65,7 @@ extern class DAnnotation
 	*      can be empty but never null.
 	*      the returned map is read-only.
 	*/
-	@:overload public function getAttributes() : java.util.Map<javax.xml.namespace.QName, com.sun.xml.internal.rngom.digested.DAnnotation.DAnnotation_Attribute>;
+	@:overload @:public public function getAttributes() : java.util.Map<javax.xml.namespace.QName, com.sun.xml.internal.rngom.digested.DAnnotation.DAnnotation_Attribute>;
 	
 	/**
 	* Gets the read-only view of all the child elements of this annotation.
@@ -74,7 +74,7 @@ extern class DAnnotation
 	*      can be empty but never null.
 	*      the returned list is read-only.
 	*/
-	@:overload public function getChildren() : java.util.List<org.w3c.dom.Element>;
+	@:overload @:public public function getChildren() : java.util.List<org.w3c.dom.Element>;
 	
 	
 }
@@ -83,9 +83,9 @@ extern class DAnnotation
 */
 @:native('com$sun$xml$internal$rngom$digested$DAnnotation$Attribute') extern class DAnnotation_Attribute
 {
-	@:overload public function new(ns : String, localName : String, prefix : String) : Void;
+	@:overload @:public public function new(ns : String, localName : String, prefix : String) : Void;
 	
-	@:overload public function new(ns : String, localName : String, prefix : String, value : String, loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(ns : String, localName : String, prefix : String, value : String, loc : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Gets the namespace URI of this attribute.
@@ -93,7 +93,7 @@ extern class DAnnotation
 	* @return
 	*      can be empty (to represent the default namespace), but never null.
 	*/
-	@:overload public function getNs() : String;
+	@:overload @:public public function getNs() : String;
 	
 	/**
 	* Gets the local name of this attribute.
@@ -101,7 +101,7 @@ extern class DAnnotation
 	* @return
 	*      always non-null.
 	*/
-	@:overload public function getLocalName() : String;
+	@:overload @:public public function getLocalName() : String;
 	
 	/**
 	* Gets the prefix of thie attribute.
@@ -109,7 +109,7 @@ extern class DAnnotation
 	* @return
 	*      null if this attribute didn't have a prefix.
 	*/
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
 	/**
 	* Gets the attribute value.
@@ -117,7 +117,7 @@ extern class DAnnotation
 	* @return
 	*      never null.
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	/**
 	* Gets the location in the source schema file where this annotation was present.
@@ -125,7 +125,7 @@ extern class DAnnotation
 	* @return
 	*      never null.
 	*/
-	@:overload public function getLoc() : org.xml.sax.Locator;
+	@:overload @:public public function getLoc() : org.xml.sax.Locator;
 	
 	
 }

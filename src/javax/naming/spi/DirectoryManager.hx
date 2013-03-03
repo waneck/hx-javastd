@@ -37,7 +37,7 @@ extern class DirectoryManager extends javax.naming.spi.NamingManager
 	*
 	* @see NamingManager#getContinuationContext(CannotProceedException)
 	*/
-	@:overload public static function getContinuationDirContext(cpe : javax.naming.CannotProceedException) : javax.naming.directory.DirContext;
+	@:overload @:public @:static public static function getContinuationDirContext(cpe : javax.naming.CannotProceedException) : javax.naming.directory.DirContext;
 	
 	/**
 	* Creates an instance of an object for the specified object,
@@ -90,7 +90,7 @@ extern class DirectoryManager extends javax.naming.spi.NamingManager
 	* @see DirObjectFactory#getObjectInstance
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function getObjectInstance(refInfo : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>, attrs : javax.naming.directory.Attributes) : Dynamic;
+	@:require(java3) @:overload @:public @:static public static function getObjectInstance(refInfo : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>, attrs : javax.naming.directory.Attributes) : Dynamic;
 	
 	/**
 	* Retrieves the state of an object for binding when given the original
@@ -149,7 +149,7 @@ extern class DirectoryManager extends javax.naming.spi.NamingManager
 	* @see NamingManager#getStateToBind
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function getStateToBind(obj : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>, attrs : javax.naming.directory.Attributes) : javax.naming.spi.DirStateFactory.DirStateFactory_Result;
+	@:require(java3) @:overload @:public @:static public static function getStateToBind(obj : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>, attrs : javax.naming.directory.Attributes) : javax.naming.spi.DirStateFactory.DirStateFactory_Result;
 	
 	
 }

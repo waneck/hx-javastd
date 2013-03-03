@@ -30,12 +30,12 @@ package com.sun.corba.se.impl.activation;
 */
 @:require(java2) extern class ServerTableEntry
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Verify whether the server definition is valid.
 	*/
-	@:overload public function verify() : Int;
+	@:overload @:public public function verify() : Int;
 	
 	
 }

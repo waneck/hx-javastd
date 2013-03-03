@@ -30,15 +30,15 @@ extern class SmartTransformerFactoryImpl extends javax.xml.transform.sax.SAXTran
 	* com.sun.org.apache.xalan.internal.processor.TransformerFactory
 	* to return Transformer objects.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setErrorListener(listener : javax.xml.transform.ErrorListener) : Void;
+	@:overload @:public override public function setErrorListener(listener : javax.xml.transform.ErrorListener) : Void;
 	
-	@:overload public function getErrorListener() : javax.xml.transform.ErrorListener;
+	@:overload @:public override public function getErrorListener() : javax.xml.transform.ErrorListener;
 	
-	@:overload public function getAttribute(name : String) : Dynamic;
+	@:overload @:public override public function getAttribute(name : String) : Dynamic;
 	
-	@:overload public function setAttribute(name : String, value : Dynamic) : Void;
+	@:overload @:public override public function setAttribute(name : String, value : Dynamic) : Void;
 	
 	/**
 	* <p>Set a feature for this <code>SmartTransformerFactory</code> and <code>Transformer</code>s
@@ -61,7 +61,7 @@ extern class SmartTransformerFactoryImpl extends javax.xml.transform.sax.SAXTran
 	*   or the <code>Transformer</code>s or <code>Template</code>s it creates cannot support this feature.
 	* @throws NullPointerException If the <code>name</code> parameter is null.
 	*/
-	@:overload public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public override public function setFeature(name : String, value : Bool) : Void;
 	
 	/**
 	* javax.xml.transform.sax.TransformerFactory implementation.
@@ -72,20 +72,20 @@ extern class SmartTransformerFactoryImpl extends javax.xml.transform.sax.SAXTran
 	* @param name The feature name
 	* @return 'true' if feature is supported, 'false' if not
 	*/
-	@:overload public function getFeature(name : String) : Bool;
+	@:overload @:public override public function getFeature(name : String) : Bool;
 	
-	@:overload public function getURIResolver() : javax.xml.transform.URIResolver;
+	@:overload @:public override public function getURIResolver() : javax.xml.transform.URIResolver;
 	
-	@:overload public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
+	@:overload @:public override public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
 	
-	@:overload public function getAssociatedStylesheet(source : javax.xml.transform.Source, media : String, title : String, charset : String) : javax.xml.transform.Source;
+	@:overload @:public override public function getAssociatedStylesheet(source : javax.xml.transform.Source, media : String, title : String, charset : String) : javax.xml.transform.Source;
 	
 	/**
 	* Create a Transformer object that copies the input document to the
 	* result. Uses the com.sun.org.apache.xalan.internal.processor.TransformerFactory.
 	* @return A Transformer object.
 	*/
-	@:overload public function newTransformer() : javax.xml.transform.Transformer;
+	@:overload @:public override public function newTransformer() : javax.xml.transform.Transformer;
 	
 	/**
 	* Create a Transformer object that from the input stylesheet
@@ -93,7 +93,7 @@ extern class SmartTransformerFactoryImpl extends javax.xml.transform.sax.SAXTran
 	* @param source the stylesheet.
 	* @return A Transformer object.
 	*/
-	@:overload public function newTransformer(source : javax.xml.transform.Source) : javax.xml.transform.Transformer;
+	@:overload @:public override public function newTransformer(source : javax.xml.transform.Source) : javax.xml.transform.Transformer;
 	
 	/**
 	* Create a Templates object that from the input stylesheet
@@ -101,49 +101,49 @@ extern class SmartTransformerFactoryImpl extends javax.xml.transform.sax.SAXTran
 	* @param source the stylesheet.
 	* @return A Templates object.
 	*/
-	@:overload public function newTemplates(source : javax.xml.transform.Source) : javax.xml.transform.Templates;
+	@:overload @:public override public function newTemplates(source : javax.xml.transform.Source) : javax.xml.transform.Templates;
 	
 	/**
 	* Get a TemplatesHandler object that can process SAX ContentHandler
 	* events into a Templates object. Uses the
 	* com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactory.
 	*/
-	@:overload override public function newTemplatesHandler() : javax.xml.transform.sax.TemplatesHandler;
+	@:overload @:public override public function newTemplatesHandler() : javax.xml.transform.sax.TemplatesHandler;
 	
 	/**
 	* Get a TransformerHandler object that can process SAX ContentHandler
 	* events based on a copy transformer.
 	* Uses com.sun.org.apache.xalan.internal.processor.TransformerFactory.
 	*/
-	@:overload override public function newTransformerHandler() : javax.xml.transform.sax.TransformerHandler;
+	@:overload @:public override public function newTransformerHandler() : javax.xml.transform.sax.TransformerHandler;
 	
 	/**
 	* Get a TransformerHandler object that can process SAX ContentHandler
 	* events based on a transformer specified by the stylesheet Source.
 	* Uses com.sun.org.apache.xalan.internal.processor.TransformerFactory.
 	*/
-	@:overload override public function newTransformerHandler(src : javax.xml.transform.Source) : javax.xml.transform.sax.TransformerHandler;
+	@:overload @:public override public function newTransformerHandler(src : javax.xml.transform.Source) : javax.xml.transform.sax.TransformerHandler;
 	
 	/**
 	* Get a TransformerHandler object that can process SAX ContentHandler
 	* events based on a transformer specified by the stylesheet Source.
 	* Uses com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactory.
 	*/
-	@:overload override public function newTransformerHandler(templates : javax.xml.transform.Templates) : javax.xml.transform.sax.TransformerHandler;
+	@:overload @:public override public function newTransformerHandler(templates : javax.xml.transform.Templates) : javax.xml.transform.sax.TransformerHandler;
 	
 	/**
 	* Create an XMLFilter that uses the given source as the
 	* transformation instructions. Uses
 	* com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactory.
 	*/
-	@:overload override public function newXMLFilter(src : javax.xml.transform.Source) : org.xml.sax.XMLFilter;
+	@:overload @:public override public function newXMLFilter(src : javax.xml.transform.Source) : org.xml.sax.XMLFilter;
 	
 	/*
 	* Create an XMLFilter that uses the given source as the
 	* transformation instructions. Uses
 	* com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactory.
 	*/
-	@:overload override public function newXMLFilter(templates : javax.xml.transform.Templates) : org.xml.sax.XMLFilter;
+	@:overload @:public override public function newXMLFilter(templates : javax.xml.transform.Templates) : org.xml.sax.XMLFilter;
 	
 	
 }

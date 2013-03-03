@@ -29,9 +29,9 @@ extern class Request extends com.sun.tools.internal.ws.processor.model.Message
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(entity : com.sun.tools.internal.ws.wsdl.document.Message, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function new(entity : com.sun.tools.internal.ws.wsdl.document.Message, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
+	@:overload @:public override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
 	
 	
 }

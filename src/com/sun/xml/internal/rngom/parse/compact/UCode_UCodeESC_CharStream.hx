@@ -53,62 +53,62 @@ extern class UCode_UCodeESC_CharStream
 	* An implementation of interface CharStream, where the stream is assumed to
 	* contain 16-bit unicode characters.
 	*/
-	public static var staticFlag(default, null) : Bool;
+	@:public @:static @:final public static var staticFlag(default, null) : Bool;
 	
-	public var bufpos : Int;
+	@:public public var bufpos : Int;
 	
-	@:overload @:final public function BeginToken() : java.StdTypes.Char16;
+	@:overload @:public @:final public function BeginToken() : java.StdTypes.Char16;
 	
-	@:overload @:final public function readChar() : java.StdTypes.Char16;
+	@:overload @:public @:final public function readChar() : java.StdTypes.Char16;
 	
 	/**
 	* @deprecated
 	* @see #getEndColumn
 	*/
-	@:overload @:final public function getColumn() : Int;
+	@:overload @:public @:final public function getColumn() : Int;
 	
 	/**
 	* @deprecated
 	* @see #getEndLine
 	*/
-	@:overload @:final public function getLine() : Int;
+	@:overload @:public @:final public function getLine() : Int;
 	
-	@:overload @:final public function getEndColumn() : Int;
+	@:overload @:public @:final public function getEndColumn() : Int;
 	
-	@:overload @:final public function getEndLine() : Int;
+	@:overload @:public @:final public function getEndLine() : Int;
 	
-	@:overload @:final public function getBeginColumn() : Int;
+	@:overload @:public @:final public function getBeginColumn() : Int;
 	
-	@:overload @:final public function getBeginLine() : Int;
+	@:overload @:public @:final public function getBeginLine() : Int;
 	
-	@:overload @:final public function backup(amount : Int) : Void;
+	@:overload @:public @:final public function backup(amount : Int) : Void;
 	
-	@:overload public function new(dstream : java.io.Reader, startline : Int, startcolumn : Int, buffersize : Int) : Void;
+	@:overload @:public public function new(dstream : java.io.Reader, startline : Int, startcolumn : Int, buffersize : Int) : Void;
 	
-	@:overload public function new(dstream : java.io.Reader, startline : Int, startcolumn : Int) : Void;
+	@:overload @:public public function new(dstream : java.io.Reader, startline : Int, startcolumn : Int) : Void;
 	
-	@:overload public function ReInit(dstream : java.io.Reader, startline : Int, startcolumn : Int, buffersize : Int) : Void;
+	@:overload @:public public function ReInit(dstream : java.io.Reader, startline : Int, startcolumn : Int, buffersize : Int) : Void;
 	
-	@:overload public function ReInit(dstream : java.io.Reader, startline : Int, startcolumn : Int) : Void;
+	@:overload @:public public function ReInit(dstream : java.io.Reader, startline : Int, startcolumn : Int) : Void;
 	
-	@:overload public function new(dstream : java.io.InputStream, startline : Int, startcolumn : Int, buffersize : Int) : Void;
+	@:overload @:public public function new(dstream : java.io.InputStream, startline : Int, startcolumn : Int, buffersize : Int) : Void;
 	
-	@:overload public function new(dstream : java.io.InputStream, startline : Int, startcolumn : Int) : Void;
+	@:overload @:public public function new(dstream : java.io.InputStream, startline : Int, startcolumn : Int) : Void;
 	
-	@:overload public function ReInit(dstream : java.io.InputStream, startline : Int, startcolumn : Int, buffersize : Int) : Void;
+	@:overload @:public public function ReInit(dstream : java.io.InputStream, startline : Int, startcolumn : Int, buffersize : Int) : Void;
 	
-	@:overload public function ReInit(dstream : java.io.InputStream, startline : Int, startcolumn : Int) : Void;
+	@:overload @:public public function ReInit(dstream : java.io.InputStream, startline : Int, startcolumn : Int) : Void;
 	
-	@:overload @:final public function GetImage() : String;
+	@:overload @:public @:final public function GetImage() : String;
 	
-	@:overload @:final public function GetSuffix(len : Int) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public @:final public function GetSuffix(len : Int) : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload public function Done() : Void;
+	@:overload @:public public function Done() : Void;
 	
 	/**
 	* Method to adjust line and column numbers for the start of a token.<BR>
 	*/
-	@:overload public function adjustBeginLineColumn(newLine : Int, newCol : Int) : Void;
+	@:overload @:public public function adjustBeginLineColumn(newLine : Int, newCol : Int) : Void;
 	
 	
 }

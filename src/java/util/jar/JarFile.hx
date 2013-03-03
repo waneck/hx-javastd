@@ -28,7 +28,7 @@ extern class JarFile extends java.util.zip.ZipFile
 	/**
 	* The JAR manifest file name.
 	*/
-	public static var MANIFEST_NAME(default, null) : String;
+	@:public @:static @:final public static var MANIFEST_NAME(default, null) : String;
 	
 	/**
 	* Creates a new <code>JarFile</code> to read from the specified
@@ -39,7 +39,7 @@ extern class JarFile extends java.util.zip.ZipFile
 	* @throws SecurityException if access to the file is denied
 	*         by the SecurityManager
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a new <code>JarFile</code> to read from the specified
@@ -51,7 +51,7 @@ extern class JarFile extends java.util.zip.ZipFile
 	* @throws SecurityException if access to the file is denied
 	*         by the SecurityManager
 	*/
-	@:overload public function new(name : String, verify : Bool) : Void;
+	@:overload @:public public function new(name : String, verify : Bool) : Void;
 	
 	/**
 	* Creates a new <code>JarFile</code> to read from the specified
@@ -62,7 +62,7 @@ extern class JarFile extends java.util.zip.ZipFile
 	* @throws SecurityException if access to the file is denied
 	*         by the SecurityManager
 	*/
-	@:overload public function new(file : java.io.File) : Void;
+	@:overload @:public public function new(file : java.io.File) : Void;
 	
 	/**
 	* Creates a new <code>JarFile</code> to read from the specified
@@ -74,7 +74,7 @@ extern class JarFile extends java.util.zip.ZipFile
 	* @throws SecurityException if access to the file is denied
 	*         by the SecurityManager.
 	*/
-	@:overload public function new(file : java.io.File, verify : Bool) : Void;
+	@:overload @:public public function new(file : java.io.File, verify : Bool) : Void;
 	
 	/**
 	* Creates a new <code>JarFile</code> to read from the specified
@@ -92,7 +92,7 @@ extern class JarFile extends java.util.zip.ZipFile
 	*         by the SecurityManager
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(file : java.io.File, verify : Bool, mode : Int) : Void;
+	@:require(java3) @:overload @:public public function new(file : java.io.File, verify : Bool, mode : Int) : Void;
 	
 	/**
 	* Returns the jar file manifest, or <code>null</code> if none.
@@ -102,7 +102,7 @@ extern class JarFile extends java.util.zip.ZipFile
 	* @throws IllegalStateException
 	*         may be thrown if the jar file has been closed
 	*/
-	@:overload public function getManifest() : java.util.jar.Manifest;
+	@:overload @:public public function getManifest() : java.util.jar.Manifest;
 	
 	/**
 	* Returns the <code>JarEntry</code> for the given entry name or
@@ -117,7 +117,7 @@ extern class JarFile extends java.util.zip.ZipFile
 	*
 	* @see java.util.jar.JarEntry
 	*/
-	@:overload public function getJarEntry(name : String) : java.util.jar.JarEntry;
+	@:overload @:public public function getJarEntry(name : String) : java.util.jar.JarEntry;
 	
 	/**
 	* Returns the <code>ZipEntry</code> for the given entry name or
@@ -132,12 +132,12 @@ extern class JarFile extends java.util.zip.ZipFile
 	*
 	* @see java.util.zip.ZipEntry
 	*/
-	@:overload override public function getEntry(name : String) : java.util.zip.ZipEntry;
+	@:overload @:public override public function getEntry(name : String) : java.util.zip.ZipEntry;
 	
 	/**
 	* Returns an enumeration of the zip file entries.
 	*/
-	@:overload override public function entries() : java.util.Enumeration<java.util.jar.JarEntry>;
+	@:overload @:public override public function entries() : java.util.Enumeration<java.util.jar.JarEntry>;
 	
 	/**
 	* Returns an input stream for reading the contents of the specified
@@ -152,17 +152,17 @@ extern class JarFile extends java.util.zip.ZipFile
 	* @throws IllegalStateException
 	*         may be thrown if the jar file has been closed
 	*/
-	@:overload @:synchronized override public function getInputStream(ze : java.util.zip.ZipEntry) : java.io.InputStream;
+	@:overload @:public @:synchronized override public function getInputStream(ze : java.util.zip.ZipEntry) : java.io.InputStream;
 	
 	
 }
 @:native('java$util$jar$JarFile$JarFileEntry') @:internal extern class JarFile_JarFileEntry extends java.util.jar.JarEntry
 {
-	@:overload public function getAttributes() : java.util.jar.Attributes;
+	@:overload @:public override public function getAttributes() : java.util.jar.Attributes;
 	
-	@:overload public function getCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public override public function getCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
-	@:overload public function getCodeSigners() : java.NativeArray<java.security.CodeSigner>;
+	@:overload @:public override public function getCodeSigners() : java.NativeArray<java.security.CodeSigner>;
 	
 	
 }

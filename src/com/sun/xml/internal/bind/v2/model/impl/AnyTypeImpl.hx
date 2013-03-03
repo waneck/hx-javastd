@@ -25,17 +25,17 @@ package com.sun.xml.internal.bind.v2.model.impl;
 */
 @:internal extern class AnyTypeImpl<T, C> implements com.sun.xml.internal.bind.v2.model.core.NonElement<T, C>
 {
-	@:overload public function new(nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<T, C, Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<T, C, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function getTypeName() : javax.xml.namespace.QName;
+	@:overload @:public public function getTypeName() : javax.xml.namespace.QName;
 	
-	@:overload public function getType() : T;
+	@:overload @:public public function getType() : T;
 	
-	@:overload public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
+	@:overload @:public public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
-	@:overload public function isSimpleType() : Bool;
+	@:overload @:public public function isSimpleType() : Bool;
 	
-	@:overload public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
 	/**
 	* xs:anyType can be referenced from {@link XmlIDREF}.
@@ -43,7 +43,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	* @deprecated
 	*      why are you calling a method whose return value is always known?
 	*/
-	@:overload @:final public function canBeReferencedByIDREF() : Bool;
+	@:overload @:public @:final public function canBeReferencedByIDREF() : Bool;
 	
 	
 }

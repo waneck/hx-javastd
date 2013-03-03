@@ -20,32 +20,32 @@ package com.sun.org.apache.xerces.internal.util;
 */
 extern class SAXLocatorWrapper implements com.sun.org.apache.xerces.internal.xni.XMLLocator
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public public function getLocator() : org.xml.sax.Locator;
 	
 	/*
 	* XMLLocator methods
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
-	@:overload public function getLiteralSystemId() : String;
+	@:overload @:public public function getLiteralSystemId() : String;
 	
-	@:overload public function getBaseSystemId() : String;
+	@:overload @:public public function getBaseSystemId() : String;
 	
-	@:overload public function getExpandedSystemId() : String;
+	@:overload @:public public function getExpandedSystemId() : String;
 	
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
-	@:overload public function getCharacterOffset() : Int;
+	@:overload @:public public function getCharacterOffset() : Int;
 	
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
-	@:overload public function getXMLVersion() : String;
+	@:overload @:public public function getXMLVersion() : String;
 	
 	
 }

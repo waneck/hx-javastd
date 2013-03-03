@@ -40,7 +40,7 @@ package java.rmi.server;
 	* detail message.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function new() : Void;
+	@:require(java1) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>ServerNotActiveException</code> with the specified
@@ -49,7 +49,7 @@ package java.rmi.server;
 	* @param s the detail message.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function new(s : String) : Void;
+	@:require(java1) @:overload @:public public function new(s : String) : Void;
 	
 	
 }

@@ -33,22 +33,22 @@ extern interface ComboBoxEditor
 	/** Return the component that should be added to the tree hierarchy for
 	* this editor
 	*/
-	@:overload public function getEditorComponent() : java.awt.Component;
+	@:overload @:public public function getEditorComponent() : java.awt.Component;
 	
 	/** Set the item that should be edited. Cancel any editing if necessary **/
-	@:overload public function setItem(anObject : Dynamic) : Void;
+	@:overload @:public public function setItem(anObject : Dynamic) : Void;
 	
 	/** Return the edited item **/
-	@:overload public function getItem() : Dynamic;
+	@:overload @:public public function getItem() : Dynamic;
 	
 	/** Ask the editor to start editing and to select everything **/
-	@:overload public function selectAll() : Void;
+	@:overload @:public public function selectAll() : Void;
 	
 	/** Add an ActionListener. An action event is generated when the edited item changes **/
-	@:overload public function addActionListener(l : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function addActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/** Remove an ActionListener **/
-	@:overload public function removeActionListener(l : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function removeActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	
 }

@@ -29,7 +29,7 @@ package javax.swing;
 */
 @:internal extern class DebugGraphicsObserver implements java.awt.image.ImageObserver
 {
-	@:overload @:synchronized public function imageUpdate(img : java.awt.Image, infoflags : Int, x : Int, y : Int, width : Int, height : Int) : Bool;
+	@:overload @:public @:synchronized public function imageUpdate(img : java.awt.Image, infoflags : Int, x : Int, y : Int, width : Int, height : Int) : Bool;
 	
 	
 }

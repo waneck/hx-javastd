@@ -29,19 +29,19 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	* This value indicates that each row of components
 	* should be left-justified.
 	*/
-	public static var LEFT(default, null) : Int;
+	@:public @:static @:final public static var LEFT(default, null) : Int;
 	
 	/**
 	* This value indicates that each row of components
 	* should be centered.
 	*/
-	public static var CENTER(default, null) : Int;
+	@:public @:static @:final public static var CENTER(default, null) : Int;
 	
 	/**
 	* This value indicates that each row of components
 	* should be right-justified.
 	*/
-	public static var RIGHT(default, null) : Int;
+	@:public @:static @:final public static var RIGHT(default, null) : Int;
 	
 	/**
 	* This value indicates that each row of components
@@ -52,7 +52,7 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	* @see     java.awt.ComponentOrientation
 	* @since   1.2
 	*/
-	@:require(java2) public static var LEADING(default, null) : Int;
+	@:require(java2) @:public @:static @:final public static var LEADING(default, null) : Int;
 	
 	/**
 	* This value indicates that each row of components
@@ -63,13 +63,13 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	* @see     java.awt.ComponentOrientation
 	* @since   1.2
 	*/
-	@:require(java2) public static var TRAILING(default, null) : Int;
+	@:require(java2) @:public @:static @:final public static var TRAILING(default, null) : Int;
 	
 	/**
 	* Constructs a new <code>FlowLayout</code> with a centered alignment and a
 	* default 5-unit horizontal and vertical gap.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>FlowLayout</code> with the specified
@@ -80,7 +80,7 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	* or <code>FlowLayout.TRAILING</code>.
 	* @param align the alignment value
 	*/
-	@:overload public function new(align : Int) : Void;
+	@:overload @:public public function new(align : Int) : Void;
 	
 	/**
 	* Creates a new flow layout manager with the indicated alignment
@@ -98,7 +98,7 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	*                     and between the components and the
 	*                     borders of the <code>Container</code>
 	*/
-	@:overload public function new(align : Int, hgap : Int, vgap : Int) : Void;
+	@:overload @:public public function new(align : Int, hgap : Int, vgap : Int) : Void;
 	
 	/**
 	* Gets the alignment for this layout.
@@ -110,7 +110,7 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	* @see        java.awt.FlowLayout#setAlignment
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getAlignment() : Int;
+	@:require(java1) @:overload @:public public function getAlignment() : Int;
 	
 	/**
 	* Sets the alignment for this layout.
@@ -126,7 +126,7 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	* @see        #getAlignment()
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function setAlignment(align : Int) : Void;
+	@:require(java1) @:overload @:public public function setAlignment(align : Int) : Void;
 	
 	/**
 	* Gets the horizontal gap between components
@@ -139,7 +139,7 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	* @see        java.awt.FlowLayout#setHgap
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getHgap() : Int;
+	@:require(java1) @:overload @:public public function getHgap() : Int;
 	
 	/**
 	* Sets the horizontal gap between components and
@@ -152,7 +152,7 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	* @see        java.awt.FlowLayout#getHgap
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function setHgap(hgap : Int) : Void;
+	@:require(java1) @:overload @:public public function setHgap(hgap : Int) : Void;
 	
 	/**
 	* Gets the vertical gap between components and
@@ -165,7 +165,7 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	* @see        java.awt.FlowLayout#setVgap
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getVgap() : Int;
+	@:require(java1) @:overload @:public public function getVgap() : Int;
 	
 	/**
 	* Sets the vertical gap between components and between
@@ -177,7 +177,7 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	* @see        java.awt.FlowLayout#getVgap
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function setVgap(vgap : Int) : Void;
+	@:require(java1) @:overload @:public public function setVgap(vgap : Int) : Void;
 	
 	/**
 	* Sets whether or not components should be vertically aligned along their
@@ -188,7 +188,7 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	*                        vertically aligned on their baseline
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setAlignOnBaseline(alignOnBaseline : Bool) : Void;
+	@:require(java6) @:overload @:public public function setAlignOnBaseline(alignOnBaseline : Bool) : Void;
 	
 	/**
 	* Returns true if components are to be vertically aligned along
@@ -198,7 +198,7 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	*              their baseline
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getAlignOnBaseline() : Bool;
+	@:require(java6) @:overload @:public public function getAlignOnBaseline() : Bool;
 	
 	/**
 	* Adds the specified component to the layout.
@@ -206,7 +206,7 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	* @param name the name of the component
 	* @param comp the component to be added
 	*/
-	@:overload public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
 	
 	/**
 	* Removes the specified component from the layout.
@@ -214,7 +214,7 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	* @param comp the component to remove
 	* @see       java.awt.Container#removeAll
 	*/
-	@:overload public function removeLayoutComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(comp : java.awt.Component) : Void;
 	
 	/**
 	* Returns the preferred dimensions for this layout given the
@@ -227,7 +227,7 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	* @see #minimumLayoutSize
 	* @see       java.awt.Container#getPreferredSize
 	*/
-	@:overload public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the minimum dimensions needed to layout the <i>visible</i>
@@ -239,7 +239,7 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	* @see       java.awt.Container
 	* @see       java.awt.Container#doLayout
 	*/
-	@:overload public function minimumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Lays out the container. This method lets each
@@ -252,14 +252,14 @@ extern class FlowLayout implements java.awt.LayoutManager implements java.io.Ser
 	* @see Container
 	* @see       java.awt.Container#doLayout
 	*/
-	@:overload public function layoutContainer(target : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(target : java.awt.Container) : Void;
 	
 	/**
 	* Returns a string representation of this <code>FlowLayout</code>
 	* object and its values.
 	* @return     a string representation of this layout
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

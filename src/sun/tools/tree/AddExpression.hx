@@ -28,9 +28,9 @@ extern class AddExpression extends sun.tools.tree.BinaryArithmeticExpression
 	/**
 	* constructor
 	*/
-	@:overload public function new(where : haxe.Int64, left : sun.tools.tree.Expression, right : sun.tools.tree.Expression) : Void;
+	@:overload @:public public function new(where : haxe.Int64, left : sun.tools.tree.Expression, right : sun.tools.tree.Expression) : Void;
 	
-	@:overload override public function isNonNull() : Bool;
+	@:overload @:public override public function isNonNull() : Bool;
 	
 	/**
 	* Inline the value of an AddExpression.  If this AddExpression
@@ -38,7 +38,7 @@ extern class AddExpression extends sun.tools.tree.BinaryArithmeticExpression
 	* dispatch to the special method inlineValueSB, which handles
 	* the inlining more efficiently.
 	*/
-	@:overload override public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload @:public override public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* Attempt to evaluate this expression.  If this expression
@@ -85,14 +85,14 @@ extern class AddExpression extends sun.tools.tree.BinaryArithmeticExpression
 	*
 	* See also Expression#inlineValueSB() and ExprExpression#inlineValueSB().
 	*/
-	@:overload override private function inlineValueSB(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, buffer : java.lang.StringBuffer) : java.lang.StringBuffer;
+	@:overload @:protected override private function inlineValueSB(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, buffer : java.lang.StringBuffer) : java.lang.StringBuffer;
 	
 	/**
 	* The cost of inlining this expression
 	*/
-	@:overload override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
+	@:overload @:public override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
 	
-	@:overload override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	
 }

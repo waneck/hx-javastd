@@ -25,17 +25,17 @@ package sun.security.pkcs;
 */
 extern class SigningCertificateInfo
 {
-	@:overload public function new(ber : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(ber : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function parse(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function parse(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }
 @:internal extern class ESSCertId
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

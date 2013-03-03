@@ -28,43 +28,43 @@ extern class ObjectKeyTemplateBase implements com.sun.corba.se.spi.ior.ObjectKey
 	/**
 	* @author
 	*/
-	public static var JIDL_ORB_ID(default, null) : String;
+	@:public @:static @:final public static var JIDL_ORB_ID(default, null) : String;
 	
-	public static var JIDL_OAID(default, null) : com.sun.corba.se.spi.ior.ObjectAdapterId;
+	@:public @:static @:final public static var JIDL_OAID(default, null) : com.sun.corba.se.spi.ior.ObjectAdapterId;
 	
-	private var wrapper : com.sun.corba.se.impl.logging.IORSystemException;
+	@:protected private var wrapper : com.sun.corba.se.impl.logging.IORSystemException;
 	
-	@:overload public function getAdapterId() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getAdapterId() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, serverid : Int, orbid : String, oaid : com.sun.corba.se.spi.ior.ObjectAdapterId) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, serverid : Int, orbid : String, oaid : com.sun.corba.se.spi.ior.ObjectAdapterId) : Void;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function getSubcontractId() : Int;
+	@:overload @:public public function getSubcontractId() : Int;
 	
-	@:overload public function getServerId() : Int;
+	@:overload @:public public function getServerId() : Int;
 	
-	@:overload public function getORBId() : String;
+	@:overload @:public public function getORBId() : String;
 	
-	@:overload public function getObjectAdapterId() : com.sun.corba.se.spi.ior.ObjectAdapterId;
+	@:overload @:public public function getObjectAdapterId() : com.sun.corba.se.spi.ior.ObjectAdapterId;
 	
-	@:overload public function write(objectId : com.sun.corba.se.spi.ior.ObjectId, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function write(objectId : com.sun.corba.se.spi.ior.ObjectId, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload @:abstract private function writeTemplate(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:abstract @:protected private function writeTemplate(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload private function getMagic() : Int;
+	@:overload @:protected private function getMagic() : Int;
 	
-	@:overload public function setORBVersion(version : com.sun.corba.se.spi.orb.ORBVersion) : Void;
+	@:overload @:public public function setORBVersion(version : com.sun.corba.se.spi.orb.ORBVersion) : Void;
 	
-	@:overload public function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload @:public public function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	@:overload private function readObjectKey(is : org.omg.CORBA_2_3.portable.InputStream) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected private function readObjectKey(is : org.omg.CORBA_2_3.portable.InputStream) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getServerRequestDispatcher(orb : com.sun.corba.se.spi.orb.ORB, id : com.sun.corba.se.spi.ior.ObjectId) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
+	@:overload @:public public function getServerRequestDispatcher(orb : com.sun.corba.se.spi.orb.ORB, id : com.sun.corba.se.spi.ior.ObjectId) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
 	
 	
 }

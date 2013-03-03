@@ -25,21 +25,21 @@ package sun.management;
 */
 @:internal extern class GarbageCollectorImpl extends sun.management.MemoryManagerImpl implements java.lang.management.GarbageCollectorMXBean
 {
-	@:overload @:native public function getCollectionCount() : haxe.Int64;
+	@:overload @:public @:native public function getCollectionCount() : haxe.Int64;
 	
-	@:overload @:native public function getCollectionTime() : haxe.Int64;
+	@:overload @:public @:native public function getCollectionTime() : haxe.Int64;
 	
-	@:overload public function getLastGcInfo() : com.sun.management.GcInfo;
+	@:overload @:public public function getLastGcInfo() : com.sun.management.GcInfo;
 	
-	@:overload override public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload @:public override public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
-	@:overload @:synchronized override public function addNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public @:synchronized override public function addNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload @:synchronized override public function removeNotificationListener(listener : javax.management.NotificationListener) : Void;
+	@:overload @:public @:synchronized override public function removeNotificationListener(listener : javax.management.NotificationListener) : Void;
 	
-	@:overload @:synchronized override public function removeNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public @:synchronized override public function removeNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload override public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public override public function getObjectName() : javax.management.ObjectName;
 	
 	
 }

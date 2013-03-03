@@ -30,50 +30,50 @@ package sun.font;
 extern class TextSource
 {
 	/** Source character data. */
-	@:overload @:abstract public function getChars() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public @:abstract public function getChars() : java.NativeArray<java.StdTypes.Char16>;
 	
 	/** Start of source data in char array returned from getChars. */
-	@:overload @:abstract public function getStart() : Int;
+	@:overload @:public @:abstract public function getStart() : Int;
 	
 	/** Length of source data. */
-	@:overload @:abstract public function getLength() : Int;
+	@:overload @:public @:abstract public function getLength() : Int;
 	
 	/** Start of context data in char array returned from getChars. */
-	@:overload @:abstract public function getContextStart() : Int;
+	@:overload @:public @:abstract public function getContextStart() : Int;
 	
 	/** Length of context data. */
-	@:overload @:abstract public function getContextLength() : Int;
+	@:overload @:public @:abstract public function getContextLength() : Int;
 	
 	/** Return the layout flags */
-	@:overload @:abstract public function getLayoutFlags() : Int;
+	@:overload @:public @:abstract public function getLayoutFlags() : Int;
 	
 	/** Bidi level of all the characters in context. */
-	@:overload @:abstract public function getBidiLevel() : Int;
+	@:overload @:public @:abstract public function getBidiLevel() : Int;
 	
 	/** Font for source data. */
-	@:overload @:abstract public function getFont() : java.awt.Font;
+	@:overload @:public @:abstract public function getFont() : java.awt.Font;
 	
 	/** Font render context to use when measuring or rendering source data. */
-	@:overload @:abstract public function getFRC() : java.awt.font.FontRenderContext;
+	@:overload @:public @:abstract public function getFRC() : java.awt.font.FontRenderContext;
 	
 	/** Line metrics for source data. */
-	@:overload @:abstract public function getCoreMetrics() : sun.font.CoreMetrics;
+	@:overload @:public @:abstract public function getCoreMetrics() : sun.font.CoreMetrics;
 	
 	/** Get subrange of this TextSource. dir is one of the TextLineComponent constants */
-	@:overload @:abstract public function getSubSource(start : Int, length : Int, dir : Int) : sun.font.TextSource;
+	@:overload @:public @:abstract public function getSubSource(start : Int, length : Int, dir : Int) : sun.font.TextSource;
 	
 	/** Constant for toString(boolean).  Indicates that toString should not return info
 	outside of the context of this instance. */
-	public static var WITHOUT_CONTEXT(default, null) : Bool;
+	@:public @:static @:final public static var WITHOUT_CONTEXT(default, null) : Bool;
 	
 	/** Constant for toString(boolean).  Indicates that toString should return info
 	outside of the context of this instance. */
-	public static var WITH_CONTEXT(default, null) : Bool;
+	@:public @:static @:final public static var WITH_CONTEXT(default, null) : Bool;
 	
 	/** Get debugging info about this TextSource instance. Default implementation just
 	returns toString.  Subclasses should implement this to match the semantics of
 	the toString constants. */
-	@:overload @:abstract public function toString(withContext : Bool) : String;
+	@:overload @:public @:abstract public function toString(withContext : Bool) : String;
 	
 	
 }

@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.protocol.soap;
 */
 extern class ServerMUTube extends com.sun.xml.internal.ws.protocol.soap.MUTube
 {
-	@:overload public function new(tubeContext : com.sun.xml.internal.ws.api.pipe.ServerTubeAssemblerContext, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
+	@:overload @:public public function new(tubeContext : com.sun.xml.internal.ws.api.pipe.ServerTubeAssemblerContext, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload private function new(that : com.sun.xml.internal.ws.protocol.soap.ServerMUTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload @:protected private function new(that : com.sun.xml.internal.ws.protocol.soap.ServerMUTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
 	/**
 	* Do MU Header Processing on incoming message (request)
@@ -37,9 +37,9 @@ extern class ServerMUTube extends com.sun.xml.internal.ws.protocol.soap.MUTube
 	*      if all the headers in the packet are not understood, returns action such that
 	*      SOAPFault Message is sent to previous pipes.
 	*/
-	@:overload override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.protocol.soap.ServerMUTube;
+	@:overload @:public override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.protocol.soap.ServerMUTube;
 	
 	
 }

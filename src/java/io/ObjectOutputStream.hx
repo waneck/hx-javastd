@@ -48,7 +48,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @see     ObjectOutputStream#putFields()
 	* @see     ObjectInputStream#ObjectInputStream(InputStream)
 	*/
-	@:require(java4) @:overload public function new(out : java.io.OutputStream) : Void;
+	@:require(java4) @:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Provide a way for subclasses that are completely reimplementing
@@ -66,7 +66,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @see SecurityManager#checkPermission
 	* @see java.io.SerializablePermission
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Specify stream protocol version to use when writing the stream.
@@ -88,7 +88,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @see java.io.ObjectStreamConstants#PROTOCOL_VERSION_2
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function useProtocolVersion(version : Int) : Void;
+	@:require(java2) @:overload @:public public function useProtocolVersion(version : Int) : Void;
 	
 	/**
 	* Write the specified object to the ObjectOutputStream.  The class of the
@@ -111,7 +111,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException Any exception thrown by the underlying
 	*          OutputStream.
 	*/
-	@:overload @:final public function writeObject(obj : Dynamic) : Void;
+	@:overload @:public @:final public function writeObject(obj : Dynamic) : Void;
 	
 	/**
 	* Method used by subclasses to override the default writeObject method.
@@ -127,7 +127,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @see #writeObject(Object)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function writeObjectOverride(obj : Dynamic) : Void;
+	@:require(java2) @:overload @:protected private function writeObjectOverride(obj : Dynamic) : Void;
 	
 	/**
 	* Writes an "unshared" object to the ObjectOutputStream.  This method is
@@ -168,7 +168,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if an I/O error occurs during serialization
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function writeUnshared(obj : Dynamic) : Void;
+	@:require(java4) @:overload @:public public function writeUnshared(obj : Dynamic) : Void;
 	
 	/**
 	* Write the non-static and non-transient fields of the current class to
@@ -179,7 +179,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if I/O errors occur while writing to the underlying
 	*          <code>OutputStream</code>
 	*/
-	@:overload public function defaultWriteObject() : Void;
+	@:overload @:public public function defaultWriteObject() : Void;
 	
 	/**
 	* Retrieve the object used to buffer persistent fields to be written to
@@ -191,7 +191,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if I/O errors occur
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function putFields() : java.io.ObjectOutputStream.ObjectOutputStream_PutField;
+	@:require(java2) @:overload @:public public function putFields() : java.io.ObjectOutputStream.ObjectOutputStream_PutField;
 	
 	/**
 	* Write the buffered fields to the stream.
@@ -202,7 +202,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	*          not called to write the state of the object.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function writeFields() : Void;
+	@:require(java2) @:overload @:public public function writeFields() : Void;
 	
 	/**
 	* Reset will disregard the state of any objects already written to the
@@ -214,7 +214,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	*
 	* @throws  IOException if reset() is invoked while serializing an object.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Subclasses may implement this method to allow class data to be stored in
@@ -232,7 +232,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException Any exception thrown by the underlying
 	*          OutputStream.
 	*/
-	@:overload private function annotateClass(cl : Class<Dynamic>) : Void;
+	@:overload @:protected private function annotateClass(cl : Class<Dynamic>) : Void;
 	
 	/**
 	* Subclasses may implement this method to store custom data in the stream
@@ -255,7 +255,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @see ObjectInputStream#resolveProxyClass(String[])
 	* @since   1.3
 	*/
-	@:require(java3) @:overload private function annotateProxyClass(cl : Class<Dynamic>) : Void;
+	@:require(java3) @:overload @:protected private function annotateProxyClass(cl : Class<Dynamic>) : Void;
 	
 	/**
 	* This method will allow trusted subclasses of ObjectOutputStream to
@@ -295,7 +295,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException Any exception thrown by the underlying
 	*          OutputStream.
 	*/
-	@:overload private function replaceObject(obj : Dynamic) : Dynamic;
+	@:overload @:protected private function replaceObject(obj : Dynamic) : Dynamic;
 	
 	/**
 	* Enable the stream to do replacement of objects in the stream.  When
@@ -317,7 +317,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @see SecurityManager#checkPermission
 	* @see java.io.SerializablePermission
 	*/
-	@:overload private function enableReplaceObject(enable : Bool) : Bool;
+	@:overload @:protected private function enableReplaceObject(enable : Bool) : Bool;
 	
 	/**
 	* The writeStreamHeader method is provided so subclasses can append or
@@ -327,7 +327,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if I/O errors occur while writing to the underlying
 	*          stream
 	*/
-	@:overload private function writeStreamHeader() : Void;
+	@:overload @:protected private function writeStreamHeader() : Void;
 	
 	/**
 	* Write the specified class descriptor to the ObjectOutputStream.  Class
@@ -354,7 +354,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @see java.io.ObjectStreamConstants#PROTOCOL_VERSION_1
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function writeClassDescriptor(desc : java.io.ObjectStreamClass) : Void;
+	@:require(java3) @:overload @:protected private function writeClassDescriptor(desc : java.io.ObjectStreamClass) : Void;
 	
 	/**
 	* Writes a byte. This method will block until the byte is actually
@@ -363,7 +363,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @param   val the byte to be written to the stream
 	* @throws  IOException If an I/O error has occurred.
 	*/
-	@:overload override public function write(val : Int) : Void;
+	@:overload @:public override public function write(val : Int) : Void;
 	
 	/**
 	* Writes an array of bytes. This method will block until the bytes are
@@ -372,7 +372,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @param   buf the data to be written
 	* @throws  IOException If an I/O error has occurred.
 	*/
-	@:overload override public function write(buf : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(buf : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Writes a sub array of bytes.
@@ -382,7 +382,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @param   len the number of bytes that are written
 	* @throws  IOException If an I/O error has occurred.
 	*/
-	@:overload override public function write(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Flushes the stream. This will write any buffered output bytes and flush
@@ -390,7 +390,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	*
 	* @throws  IOException If an I/O error has occurred.
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* Drain any buffered data in ObjectOutputStream.  Similar to flush but
@@ -399,7 +399,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if I/O errors occur while writing to the underlying
 	*          stream
 	*/
-	@:overload private function drain() : Void;
+	@:overload @:protected private function drain() : Void;
 	
 	/**
 	* Closes the stream. This method must be called to release any resources
@@ -407,7 +407,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	*
 	* @throws  IOException If an I/O error has occurred.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Writes a boolean.
@@ -416,7 +416,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if I/O errors occur while writing to the underlying
 	*          stream
 	*/
-	@:overload public function writeBoolean(val : Bool) : Void;
+	@:overload @:public public function writeBoolean(val : Bool) : Void;
 	
 	/**
 	* Writes an 8 bit byte.
@@ -425,7 +425,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if I/O errors occur while writing to the underlying
 	*          stream
 	*/
-	@:overload public function writeByte(val : Int) : Void;
+	@:overload @:public public function writeByte(val : Int) : Void;
 	
 	/**
 	* Writes a 16 bit short.
@@ -434,7 +434,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if I/O errors occur while writing to the underlying
 	*          stream
 	*/
-	@:overload public function writeShort(val : Int) : Void;
+	@:overload @:public public function writeShort(val : Int) : Void;
 	
 	/**
 	* Writes a 16 bit char.
@@ -443,7 +443,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if I/O errors occur while writing to the underlying
 	*          stream
 	*/
-	@:overload public function writeChar(val : Int) : Void;
+	@:overload @:public public function writeChar(val : Int) : Void;
 	
 	/**
 	* Writes a 32 bit int.
@@ -452,7 +452,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if I/O errors occur while writing to the underlying
 	*          stream
 	*/
-	@:overload public function writeInt(val : Int) : Void;
+	@:overload @:public public function writeInt(val : Int) : Void;
 	
 	/**
 	* Writes a 64 bit long.
@@ -461,7 +461,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if I/O errors occur while writing to the underlying
 	*          stream
 	*/
-	@:overload public function writeLong(val : haxe.Int64) : Void;
+	@:overload @:public public function writeLong(val : haxe.Int64) : Void;
 	
 	/**
 	* Writes a 32 bit float.
@@ -470,7 +470,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if I/O errors occur while writing to the underlying
 	*          stream
 	*/
-	@:overload public function writeFloat(val : Single) : Void;
+	@:overload @:public public function writeFloat(val : Single) : Void;
 	
 	/**
 	* Writes a 64 bit double.
@@ -479,7 +479,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if I/O errors occur while writing to the underlying
 	*          stream
 	*/
-	@:overload public function writeDouble(val : Float) : Void;
+	@:overload @:public public function writeDouble(val : Float) : Void;
 	
 	/**
 	* Writes a String as a sequence of bytes.
@@ -488,7 +488,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if I/O errors occur while writing to the underlying
 	*          stream
 	*/
-	@:overload public function writeBytes(str : String) : Void;
+	@:overload @:public public function writeBytes(str : String) : Void;
 	
 	/**
 	* Writes a String as a sequence of chars.
@@ -497,7 +497,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if I/O errors occur while writing to the underlying
 	*          stream
 	*/
-	@:overload public function writeChars(str : String) : Void;
+	@:overload @:public public function writeChars(str : String) : Void;
 	
 	/**
 	* Primitive data write of this String in
@@ -512,7 +512,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if I/O errors occur while writing to the underlying
 	*          stream
 	*/
-	@:overload public function writeUTF(str : String) : Void;
+	@:overload @:public public function writeUTF(str : String) : Void;
 	
 	
 }
@@ -659,7 +659,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* are being written, or if the type of the named field is not
 	* <code>boolean</code>
 	*/
-	@:overload @:abstract public function put(name : String, val : Bool) : Void;
+	@:overload @:public @:abstract public function put(name : String, val : Bool) : Void;
 	
 	/**
 	* Put the value of the named byte field into the persistent field.
@@ -671,7 +671,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* are being written, or if the type of the named field is not
 	* <code>byte</code>
 	*/
-	@:overload @:abstract public function put(name : String, val : java.StdTypes.Int8) : Void;
+	@:overload @:public @:abstract public function put(name : String, val : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Put the value of the named char field into the persistent field.
@@ -683,7 +683,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* are being written, or if the type of the named field is not
 	* <code>char</code>
 	*/
-	@:overload @:abstract public function put(name : String, val : java.StdTypes.Char16) : Void;
+	@:overload @:public @:abstract public function put(name : String, val : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Put the value of the named short field into the persistent field.
@@ -695,7 +695,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* are being written, or if the type of the named field is not
 	* <code>short</code>
 	*/
-	@:overload @:abstract public function put(name : String, val : java.StdTypes.Int16) : Void;
+	@:overload @:public @:abstract public function put(name : String, val : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Put the value of the named int field into the persistent field.
@@ -707,7 +707,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* are being written, or if the type of the named field is not
 	* <code>int</code>
 	*/
-	@:overload @:abstract public function put(name : String, val : Int) : Void;
+	@:overload @:public @:abstract public function put(name : String, val : Int) : Void;
 	
 	/**
 	* Put the value of the named long field into the persistent field.
@@ -719,7 +719,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* are being written, or if the type of the named field is not
 	* <code>long</code>
 	*/
-	@:overload @:abstract public function put(name : String, val : haxe.Int64) : Void;
+	@:overload @:public @:abstract public function put(name : String, val : haxe.Int64) : Void;
 	
 	/**
 	* Put the value of the named float field into the persistent field.
@@ -731,7 +731,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* are being written, or if the type of the named field is not
 	* <code>float</code>
 	*/
-	@:overload @:abstract public function put(name : String, val : Single) : Void;
+	@:overload @:public @:abstract public function put(name : String, val : Single) : Void;
 	
 	/**
 	* Put the value of the named double field into the persistent field.
@@ -743,7 +743,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* are being written, or if the type of the named field is not
 	* <code>double</code>
 	*/
-	@:overload @:abstract public function put(name : String, val : Float) : Void;
+	@:overload @:public @:abstract public function put(name : String, val : Float) : Void;
 	
 	/**
 	* Put the value of the named Object field into the persistent field.
@@ -756,7 +756,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* are being written, or if the type of the named field is not a
 	* reference type
 	*/
-	@:overload @:abstract public function put(name : String, val : Dynamic) : Void;
+	@:overload @:public @:abstract public function put(name : String, val : Dynamic) : Void;
 	
 	/**
 	* Write the data and fields to the specified ObjectOutput stream,
@@ -776,7 +776,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	*         calling the {@link java.io.ObjectOutputStream#writeFields()}
 	*         method.
 	*/
-	@:overload @:abstract public function write(out : java.io.ObjectOutput) : Void;
+	@:overload @:public @:abstract public function write(out : java.io.ObjectOutput) : Void;
 	
 	
 }
@@ -785,25 +785,25 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 */
 @:native('java$io$ObjectOutputStream$PutFieldImpl') @:internal extern class ObjectOutputStream_PutFieldImpl extends java.io.ObjectOutputStream.ObjectOutputStream_PutField
 {
-	@:overload override public function put(name : String, val : Bool) : Void;
+	@:overload @:public override public function put(name : String, val : Bool) : Void;
 	
-	@:overload override public function put(name : String, val : java.StdTypes.Int8) : Void;
+	@:overload @:public override public function put(name : String, val : java.StdTypes.Int8) : Void;
 	
-	@:overload override public function put(name : String, val : java.StdTypes.Char16) : Void;
+	@:overload @:public override public function put(name : String, val : java.StdTypes.Char16) : Void;
 	
-	@:overload override public function put(name : String, val : java.StdTypes.Int16) : Void;
+	@:overload @:public override public function put(name : String, val : java.StdTypes.Int16) : Void;
 	
-	@:overload override public function put(name : String, val : Int) : Void;
+	@:overload @:public override public function put(name : String, val : Int) : Void;
 	
-	@:overload override public function put(name : String, val : Single) : Void;
+	@:overload @:public override public function put(name : String, val : Single) : Void;
 	
-	@:overload override public function put(name : String, val : haxe.Int64) : Void;
+	@:overload @:public override public function put(name : String, val : haxe.Int64) : Void;
 	
-	@:overload override public function put(name : String, val : Float) : Void;
+	@:overload @:public override public function put(name : String, val : Float) : Void;
 	
-	@:overload override public function put(name : String, val : Dynamic) : Void;
+	@:overload @:public override public function put(name : String, val : Dynamic) : Void;
 	
-	@:overload override public function write(out : java.io.ObjectOutput) : Void;
+	@:overload @:public override public function write(out : java.io.ObjectOutput) : Void;
 	
 	
 }
@@ -820,42 +820,42 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* OutputStream, except that they partition written data into data
 	* blocks when in block data mode.
 	*/
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/*
 	* The following methods are equivalent to their counterparts in
 	* DataOutputStream, except that they partition written data into data
 	* blocks when in block data mode.
 	*/
-	@:overload public function writeBoolean(v : Bool) : Void;
+	@:overload @:public public function writeBoolean(v : Bool) : Void;
 	
-	@:overload public function writeByte(v : Int) : Void;
+	@:overload @:public public function writeByte(v : Int) : Void;
 	
-	@:overload public function writeChar(v : Int) : Void;
+	@:overload @:public public function writeChar(v : Int) : Void;
 	
-	@:overload public function writeShort(v : Int) : Void;
+	@:overload @:public public function writeShort(v : Int) : Void;
 	
-	@:overload public function writeInt(v : Int) : Void;
+	@:overload @:public public function writeInt(v : Int) : Void;
 	
-	@:overload public function writeFloat(v : Single) : Void;
+	@:overload @:public public function writeFloat(v : Single) : Void;
 	
-	@:overload public function writeLong(v : haxe.Int64) : Void;
+	@:overload @:public public function writeLong(v : haxe.Int64) : Void;
 	
-	@:overload public function writeDouble(v : Float) : Void;
+	@:overload @:public public function writeDouble(v : Float) : Void;
 	
-	@:overload public function writeBytes(s : String) : Void;
+	@:overload @:public public function writeBytes(s : String) : Void;
 	
-	@:overload public function writeChars(s : String) : Void;
+	@:overload @:public public function writeChars(s : String) : Void;
 	
-	@:overload public function writeUTF(s : String) : Void;
+	@:overload @:public public function writeUTF(s : String) : Void;
 	
 	
 }
@@ -884,7 +884,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	/**
 	* Returns a string representation of this object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

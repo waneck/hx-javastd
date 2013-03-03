@@ -28,42 +28,42 @@ extern class XClipboard extends sun.awt.datatransfer.SunClipboard implements sun
 	/**
 	* Creates a system clipboard object.
 	*/
-	@:overload public function new(name : String, selectionName : String) : Void;
+	@:overload @:public public function new(name : String, selectionName : String) : Void;
 	
 	/*
 	* NOTE: This method may be called by privileged threads.
 	*       DO NOT INVOKE CLIENT CODE ON THIS THREAD!
 	*/
-	@:overload public function ownershipChanged(isOwner : Bool) : Void;
+	@:overload @:public public function ownershipChanged(isOwner : Bool) : Void;
 	
-	@:overload @:synchronized private function setContentsNative(contents : java.awt.datatransfer.Transferable) : Void;
+	@:overload @:protected @:synchronized override private function setContentsNative(contents : java.awt.datatransfer.Transferable) : Void;
 	
-	@:overload public function getID() : haxe.Int64;
+	@:overload @:public override public function getID() : haxe.Int64;
 	
-	@:overload @:synchronized public function getContents(requestor : Dynamic) : java.awt.datatransfer.Transferable;
+	@:overload @:public @:synchronized override public function getContents(requestor : Dynamic) : java.awt.datatransfer.Transferable;
 	
 	/* Caller is synchronized on this. */
-	@:overload private function clearNativeContext() : Void;
+	@:overload @:protected override private function clearNativeContext() : Void;
 	
-	@:overload private function getClipboardFormats() : java.NativeArray<haxe.Int64>;
+	@:overload @:protected override private function getClipboardFormats() : java.NativeArray<haxe.Int64>;
 	
-	@:overload private function getClipboardData(format : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function getClipboardData(format : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function registerClipboardViewerChecked() : Void;
+	@:overload @:protected override private function registerClipboardViewerChecked() : Void;
 	
-	@:overload private function unregisterClipboardViewerChecked() : Void;
+	@:overload @:protected override private function unregisterClipboardViewerChecked() : Void;
 	
 	
 }
 @:native('sun$awt$X11$XClipboard$CheckChangeTimerTask') @:internal extern class XClipboard_CheckChangeTimerTask implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
 @:native('sun$awt$X11$XClipboard$SelectionNotifyHandler') @:internal extern class XClipboard_SelectionNotifyHandler implements sun.awt.X11.XEventDispatcher
 {
-	@:overload public function dispatchEvent(ev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function dispatchEvent(ev : sun.awt.X11.XEvent) : Void;
 	
 	
 }

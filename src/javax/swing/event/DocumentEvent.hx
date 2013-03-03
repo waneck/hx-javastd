@@ -43,28 +43,28 @@ extern interface DocumentEvent
 	*
 	* @return the offset >= 0
 	*/
-	@:overload public function getOffset() : Int;
+	@:overload @:public public function getOffset() : Int;
 	
 	/**
 	* Returns the length of the change.
 	*
 	* @return the length >= 0
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Gets the document that sourced the change event.
 	*
 	* @return the document
 	*/
-	@:overload public function getDocument() : javax.swing.text.Document;
+	@:overload @:public public function getDocument() : javax.swing.text.Document;
 	
 	/**
 	* Gets the type of event.
 	*
 	* @return the type
 	*/
-	@:overload public function getType() : javax.swing.event.DocumentEvent.DocumentEvent_EventType;
+	@:overload @:public public function getType() : javax.swing.event.DocumentEvent.DocumentEvent_EventType;
 	
 	/**
 	* Gets the change information for the given element.
@@ -95,7 +95,7 @@ extern interface DocumentEvent
 	* @return the change information, or null if the
 	*   element was not modified
 	*/
-	@:overload public function getChange(elem : javax.swing.text.Element) : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange;
+	@:overload @:public public function getChange(elem : javax.swing.text.Element) : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange;
 	
 	
 }
@@ -107,24 +107,24 @@ extern interface DocumentEvent
 	/**
 	* Insert type.
 	*/
-	public static var INSERT(default, null) : javax.swing.event.DocumentEvent.DocumentEvent_EventType;
+	@:public @:static @:final public static var INSERT(default, null) : javax.swing.event.DocumentEvent.DocumentEvent_EventType;
 	
 	/**
 	* Remove type.
 	*/
-	public static var REMOVE(default, null) : javax.swing.event.DocumentEvent.DocumentEvent_EventType;
+	@:public @:static @:final public static var REMOVE(default, null) : javax.swing.event.DocumentEvent.DocumentEvent_EventType;
 	
 	/**
 	* Change type.
 	*/
-	public static var CHANGE(default, null) : javax.swing.event.DocumentEvent.DocumentEvent_EventType;
+	@:public @:static @:final public static var CHANGE(default, null) : javax.swing.event.DocumentEvent.DocumentEvent_EventType;
 	
 	/**
 	* Converts the type to a string.
 	*
 	* @return the string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -139,7 +139,7 @@ extern interface DocumentEvent
 	*
 	* @return the element
 	*/
-	@:overload public function getElement() : javax.swing.text.Element;
+	@:overload @:public public function getElement() : javax.swing.text.Element;
 	
 	/**
 	* Fetches the index within the element represented.
@@ -148,7 +148,7 @@ extern interface DocumentEvent
 	*
 	* @return the index >= 0
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* Gets the child elements that were removed from the
@@ -158,7 +158,7 @@ extern interface DocumentEvent
 	*
 	* @return the child elements
 	*/
-	@:overload public function getChildrenRemoved() : java.NativeArray<javax.swing.text.Element>;
+	@:overload @:public public function getChildrenRemoved() : java.NativeArray<javax.swing.text.Element>;
 	
 	/**
 	* Gets the child elements that were added to the given
@@ -168,7 +168,7 @@ extern interface DocumentEvent
 	*
 	* @return the child elements
 	*/
-	@:overload public function getChildrenAdded() : java.NativeArray<javax.swing.text.Element>;
+	@:overload @:public public function getChildrenAdded() : java.NativeArray<javax.swing.text.Element>;
 	
 	
 }

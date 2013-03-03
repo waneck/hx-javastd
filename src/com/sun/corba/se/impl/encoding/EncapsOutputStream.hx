@@ -25,19 +25,19 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class EncapsOutputStream extends com.sun.corba.se.impl.encoding.CDROutputStream
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, isLittleEndian : Bool) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, isLittleEndian : Bool) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion, isLittleEndian : Bool) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion, isLittleEndian : Bool) : Void;
 	
-	@:overload public function create_input_stream() : org.omg.CORBA.portable.InputStream;
+	@:overload @:public override public function create_input_stream() : org.omg.CORBA.portable.InputStream;
 	
-	@:overload private function createCharCTBConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
+	@:overload @:protected override private function createCharCTBConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
 	
-	@:overload private function createWCharCTBConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
+	@:overload @:protected override private function createWCharCTBConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
 	
 	
 }

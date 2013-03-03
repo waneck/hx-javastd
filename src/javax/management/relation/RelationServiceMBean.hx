@@ -33,7 +33,7 @@ extern interface RelationServiceMBean
 	* @exception RelationServiceNotRegisteredException  if it is not
 	* registered
 	*/
-	@:overload public function isActive() : Void;
+	@:overload @:public public function isActive() : Void;
 	
 	/**
 	* Returns the flag to indicate if when a notification is received for the
@@ -47,7 +47,7 @@ extern interface RelationServiceMBean
 	*
 	* @see #setPurgeFlag
 	*/
-	@:overload public function getPurgeFlag() : Bool;
+	@:overload @:public public function getPurgeFlag() : Bool;
 	
 	/**
 	* Sets the flag to indicate if when a notification is received for the
@@ -61,7 +61,7 @@ extern interface RelationServiceMBean
 	*
 	* @see #getPurgeFlag
 	*/
-	@:overload public function setPurgeFlag(purgeFlag : Bool) : Void;
+	@:overload @:public public function setPurgeFlag(purgeFlag : Bool) : Void;
 	
 	/**
 	* Creates a relation type (RelationTypeSupport object) with given
@@ -78,7 +78,7 @@ extern interface RelationServiceMBean
 	* <P>- no role info provided
 	* <P>- one null role info provided
 	*/
-	@:overload public function createRelationType(relationTypeName : String, roleInfoArray : java.NativeArray<javax.management.relation.RoleInfo>) : Void;
+	@:overload @:public public function createRelationType(relationTypeName : String, roleInfoArray : java.NativeArray<javax.management.relation.RoleInfo>) : Void;
 	
 	/**
 	* Adds given object as a relation type. The object is expected to
@@ -93,14 +93,14 @@ extern interface RelationServiceMBean
 	* @exception InvalidRelationTypeException  if there is already a relation
 	* type with that name
 	*/
-	@:overload public function addRelationType(relationTypeObj : javax.management.relation.RelationType) : Void;
+	@:overload @:public public function addRelationType(relationTypeObj : javax.management.relation.RelationType) : Void;
 	
 	/**
 	* Retrieves names of all known relation types.
 	*
 	* @return ArrayList of relation type names (Strings)
 	*/
-	@:overload public function getAllRelationTypeNames() : java.util.List<String>;
+	@:overload @:public public function getAllRelationTypeNames() : java.util.List<String>;
 	
 	/**
 	* Retrieves list of role infos (RoleInfo objects) of a given relation
@@ -114,7 +114,7 @@ extern interface RelationServiceMBean
 	* @exception RelationTypeNotFoundException  if there is no relation type
 	* with that name.
 	*/
-	@:overload public function getRoleInfos(relationTypeName : String) : java.util.List<javax.management.relation.RoleInfo>;
+	@:overload @:public public function getRoleInfos(relationTypeName : String) : java.util.List<javax.management.relation.RoleInfo>;
 	
 	/**
 	* Retrieves role info for given role of a given relation type.
@@ -130,7 +130,7 @@ extern interface RelationServiceMBean
 	* @exception RoleInfoNotFoundException  if the role is not part of the
 	* relation type.
 	*/
-	@:overload public function getRoleInfo(relationTypeName : String, roleInfoName : String) : javax.management.relation.RoleInfo;
+	@:overload @:public public function getRoleInfo(relationTypeName : String, roleInfoName : String) : javax.management.relation.RoleInfo;
 	
 	/**
 	* Removes given relation type from Relation Service.
@@ -145,7 +145,7 @@ extern interface RelationServiceMBean
 	* @exception RelationTypeNotFoundException  If there is no relation type
 	* with that name
 	*/
-	@:overload public function removeRelationType(relationTypeName : String) : Void;
+	@:overload @:public public function removeRelationType(relationTypeName : String) : Void;
 	
 	/**
 	* Creates a simple relation (represented by a RelationSupport object) of
@@ -180,7 +180,7 @@ extern interface RelationServiceMBean
 	* class expected for that role
 	* <P>- an MBean provided for that role does not exist
 	*/
-	@:overload public function createRelation(relationId : String, relationTypeName : String, roleList : javax.management.relation.RoleList) : Void;
+	@:overload @:public public function createRelation(relationId : String, relationTypeName : String, roleList : javax.management.relation.RoleList) : Void;
 	
 	/**
 	* Adds an MBean created by the user (and registered by him in the MBean
@@ -227,7 +227,7 @@ extern interface RelationServiceMBean
 	* @exception RoleNotFoundException  if a value is provided for a role
 	* that does not exist in the relation type
 	*/
-	@:overload public function addRelation(relationObjectName : javax.management.ObjectName) : Void;
+	@:overload @:public public function addRelation(relationObjectName : javax.management.ObjectName) : Void;
 	
 	/**
 	* If the relation is represented by an MBean (created by the user and
@@ -243,7 +243,7 @@ extern interface RelationServiceMBean
 	* @exception RelationNotFoundException there is no relation associated
 	* to that id
 	*/
-	@:overload public function isRelationMBean(relationId : String) : javax.management.ObjectName;
+	@:overload @:public public function isRelationMBean(relationId : String) : javax.management.ObjectName;
 	
 	/**
 	* Returns the relation id associated to the given ObjectName if the
@@ -256,7 +256,7 @@ extern interface RelationServiceMBean
 	*
 	* @exception IllegalArgumentException  if null parameter
 	*/
-	@:overload public function isRelation(objectName : javax.management.ObjectName) : String;
+	@:overload @:public public function isRelation(objectName : javax.management.ObjectName) : String;
 	
 	/**
 	* Checks if there is a relation identified in Relation Service with given
@@ -268,7 +268,7 @@ extern interface RelationServiceMBean
 	*
 	* @exception IllegalArgumentException  if null parameter
 	*/
-	@:overload public function hasRelation(relationId : String) : Null<Bool>;
+	@:overload @:public public function hasRelation(relationId : String) : Null<Bool>;
 	
 	/**
 	* Returns all the relation ids for all the relations handled by the
@@ -276,7 +276,7 @@ extern interface RelationServiceMBean
 	*
 	* @return ArrayList of String
 	*/
-	@:overload public function getAllRelationIds() : java.util.List<String>;
+	@:overload @:public public function getAllRelationIds() : java.util.List<String>;
 	
 	/**
 	* Checks if given Role can be read in a relation of the given type.
@@ -294,7 +294,7 @@ extern interface RelationServiceMBean
 	* @exception RelationTypeNotFoundException  if the relation type is not
 	* known in the Relation Service
 	*/
-	@:overload public function checkRoleReading(roleName : String, relationTypeName : String) : Null<Int>;
+	@:overload @:public public function checkRoleReading(roleName : String, relationTypeName : String) : Null<Int>;
 	
 	/**
 	* Checks if given Role can be set in a relation of given type.
@@ -317,7 +317,7 @@ extern interface RelationServiceMBean
 	* @exception IllegalArgumentException  if null parameter
 	* @exception RelationTypeNotFoundException  if unknown relation type
 	*/
-	@:overload public function checkRoleWriting(role : javax.management.relation.Role, relationTypeName : String, initFlag : Null<Bool>) : Null<Int>;
+	@:overload @:public public function checkRoleWriting(role : javax.management.relation.Role, relationTypeName : String, initFlag : Null<Bool>) : Null<Int>;
 	
 	/**
 	* Sends a notification (RelationNotification) for a relation creation.
@@ -336,7 +336,7 @@ extern interface RelationServiceMBean
 	* @exception RelationNotFoundException  if there is no relation for given
 	* relation id
 	*/
-	@:overload public function sendRelationCreationNotification(relationId : String) : Void;
+	@:overload @:public public function sendRelationCreationNotification(relationId : String) : Void;
 	
 	/**
 	* Sends a notification (RelationNotification) for a role update in the
@@ -360,7 +360,7 @@ extern interface RelationServiceMBean
 	* @exception RelationNotFoundException  if there is no relation for given
 	* relation id
 	*/
-	@:overload public function sendRoleUpdateNotification(relationId : String, newRole : javax.management.relation.Role, oldRoleValue : java.util.List<javax.management.ObjectName>) : Void;
+	@:overload @:public public function sendRoleUpdateNotification(relationId : String, newRole : javax.management.relation.Role, oldRoleValue : java.util.List<javax.management.ObjectName>) : Void;
 	
 	/**
 	* Sends a notification (RelationNotification) for a relation removal.
@@ -380,7 +380,7 @@ extern interface RelationServiceMBean
 	* @exception RelationNotFoundException  if there is no relation for given
 	* relation id
 	*/
-	@:overload public function sendRelationRemovalNotification(relationId : String, unregMBeanList : java.util.List<javax.management.ObjectName>) : Void;
+	@:overload @:public public function sendRelationRemovalNotification(relationId : String, unregMBeanList : java.util.List<javax.management.ObjectName>) : Void;
 	
 	/**
 	* Handles update of the Relation Service role map for the update of given
@@ -403,7 +403,7 @@ extern interface RelationServiceMBean
 	* Service is not registered in the MBean Server
 	* @exception RelationNotFoundException  if no relation for given id.
 	*/
-	@:overload public function updateRoleMap(relationId : String, newRole : javax.management.relation.Role, oldRoleValue : java.util.List<javax.management.ObjectName>) : Void;
+	@:overload @:public public function updateRoleMap(relationId : String, newRole : javax.management.relation.Role, oldRoleValue : java.util.List<javax.management.ObjectName>) : Void;
 	
 	/**
 	* Removes given relation from the Relation Service.
@@ -422,7 +422,7 @@ extern interface RelationServiceMBean
 	* @exception RelationNotFoundException  if no relation corresponding to
 	* given relation id
 	*/
-	@:overload public function removeRelation(relationId : String) : Void;
+	@:overload @:public public function removeRelation(relationId : String) : Void;
 	
 	/**
 	* Purges the relations.
@@ -450,7 +450,7 @@ extern interface RelationServiceMBean
 	* @exception RelationServiceNotRegisteredException  if the Relation
 	* Service is not registered in the MBean Server.
 	*/
-	@:overload public function purgeRelations() : Void;
+	@:overload @:public public function purgeRelations() : Void;
 	
 	/**
 	* Retrieves the relations where a given MBean is referenced.
@@ -472,7 +472,7 @@ extern interface RelationServiceMBean
 	*
 	* @exception IllegalArgumentException  if null parameter
 	*/
-	@:overload public function findReferencingRelations(mbeanName : javax.management.ObjectName, relationTypeName : String, roleName : String) : java.util.Map<String, java.util.List<String>>;
+	@:overload @:public public function findReferencingRelations(mbeanName : javax.management.ObjectName, relationTypeName : String, roleName : String) : java.util.Map<String, java.util.List<String>>;
 	
 	/**
 	* Retrieves the MBeans associated to given one in a relation.
@@ -494,7 +494,7 @@ extern interface RelationServiceMBean
 	*
 	* @exception IllegalArgumentException  if null parameter
 	*/
-	@:overload public function findAssociatedMBeans(mbeanName : javax.management.ObjectName, relationTypeName : String, roleName : String) : java.util.Map<javax.management.ObjectName, java.util.List<String>>;
+	@:overload @:public public function findAssociatedMBeans(mbeanName : javax.management.ObjectName, relationTypeName : String, roleName : String) : java.util.Map<javax.management.ObjectName, java.util.List<String>>;
 	
 	/**
 	* Returns the relation ids for relations of the given type.
@@ -507,7 +507,7 @@ extern interface RelationServiceMBean
 	* @exception RelationTypeNotFoundException  if there is no relation type
 	* with that name.
 	*/
-	@:overload public function findRelationsOfType(relationTypeName : String) : java.util.List<String>;
+	@:overload @:public public function findRelationsOfType(relationTypeName : String) : java.util.List<String>;
 	
 	/**
 	* Retrieves role value for given role name in given relation.
@@ -528,7 +528,7 @@ extern interface RelationServiceMBean
 	*
 	* @see #setRole
 	*/
-	@:overload public function getRole(relationId : String, roleName : String) : java.util.List<javax.management.ObjectName>;
+	@:overload @:public public function getRole(relationId : String, roleName : String) : java.util.List<javax.management.ObjectName>;
 	
 	/**
 	* Retrieves values of roles with given names in given relation.
@@ -547,7 +547,7 @@ extern interface RelationServiceMBean
 	*
 	* @see #setRoles
 	*/
-	@:overload public function getRoles(relationId : String, roleNameArray : java.NativeArray<String>) : javax.management.relation.RoleResult;
+	@:overload @:public public function getRoles(relationId : String, roleNameArray : java.NativeArray<String>) : javax.management.relation.RoleResult;
 	
 	/**
 	* Returns all roles present in the relation.
@@ -563,7 +563,7 @@ extern interface RelationServiceMBean
 	* @exception RelationServiceNotRegisteredException  if the Relation
 	* Service is not registered in the MBean Server
 	*/
-	@:overload public function getAllRoles(relationId : String) : javax.management.relation.RoleResult;
+	@:overload @:public public function getAllRoles(relationId : String) : javax.management.relation.RoleResult;
 	
 	/**
 	* Retrieves the number of MBeans currently referenced in the
@@ -578,7 +578,7 @@ extern interface RelationServiceMBean
 	* @exception RelationNotFoundException  if no relation with given id
 	* @exception RoleNotFoundException  if there is no role with given name
 	*/
-	@:overload public function getRoleCardinality(relationId : String, roleName : String) : Null<Int>;
+	@:overload @:public public function getRoleCardinality(relationId : String, roleName : String) : Null<Int>;
 	
 	/**
 	* Sets the given role in given relation.
@@ -614,7 +614,7 @@ extern interface RelationServiceMBean
 	*
 	* @see #getRole
 	*/
-	@:overload public function setRole(relationId : String, role : javax.management.relation.Role) : Void;
+	@:overload @:public public function setRole(relationId : String, role : javax.management.relation.Role) : Void;
 	
 	/**
 	* Sets the given roles in given relation.
@@ -637,7 +637,7 @@ extern interface RelationServiceMBean
 	*
 	* @see #getRoles
 	*/
-	@:overload public function setRoles(relationId : String, roleList : javax.management.relation.RoleList) : javax.management.relation.RoleResult;
+	@:overload @:public public function setRoles(relationId : String, roleList : javax.management.relation.RoleList) : javax.management.relation.RoleResult;
 	
 	/**
 	* Retrieves MBeans referenced in the various roles of the relation.
@@ -652,7 +652,7 @@ extern interface RelationServiceMBean
 	* @exception RelationNotFoundException  if no relation for given
 	* relation id
 	*/
-	@:overload public function getReferencedMBeans(relationId : String) : java.util.Map<javax.management.ObjectName, java.util.List<String>>;
+	@:overload @:public public function getReferencedMBeans(relationId : String) : java.util.Map<javax.management.ObjectName, java.util.List<String>>;
 	
 	/**
 	* Returns name of associated relation type for given relation.
@@ -665,7 +665,7 @@ extern interface RelationServiceMBean
 	* @exception RelationNotFoundException  if no relation for given
 	* relation id
 	*/
-	@:overload public function getRelationTypeName(relationId : String) : String;
+	@:overload @:public public function getRelationTypeName(relationId : String) : String;
 	
 	
 }

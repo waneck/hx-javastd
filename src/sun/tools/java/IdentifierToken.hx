@@ -36,31 +36,31 @@ package sun.tools.java;
 */
 extern class IdentifierToken
 {
-	@:overload public function new(where : haxe.Int64, id : sun.tools.java.Identifier) : Void;
+	@:overload @:public public function new(where : haxe.Int64, id : sun.tools.java.Identifier) : Void;
 	
 	/** Use this constructor when the identifier is synthesized.
 	* The location will be 0.
 	*/
-	@:overload public function new(id : sun.tools.java.Identifier) : Void;
+	@:overload @:public public function new(id : sun.tools.java.Identifier) : Void;
 	
-	@:overload public function new(where : haxe.Int64, id : sun.tools.java.Identifier, modifiers : Int) : Void;
+	@:overload @:public public function new(where : haxe.Int64, id : sun.tools.java.Identifier, modifiers : Int) : Void;
 	
 	/** The source location of this identifier occurrence. */
-	@:overload public function getWhere() : haxe.Int64;
+	@:overload @:public public function getWhere() : haxe.Int64;
 	
 	/** The identifier itself (possibly qualified). */
-	@:overload public function getName() : sun.tools.java.Identifier;
+	@:overload @:public public function getName() : sun.tools.java.Identifier;
 	
 	/** The modifiers associated with the occurrence, if any. */
-	@:overload public function getModifiers() : Int;
+	@:overload @:public public function getModifiers() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Return defaultWhere if id is null or id.where is missing (0).
 	* Otherwise, return id.where.
 	*/
-	@:native('getWhere') @:overload public static function _getWhere(id : sun.tools.java.IdentifierToken, defaultWhere : haxe.Int64) : haxe.Int64;
+	@:native('getWhere') @:overload @:public @:static public static function _getWhere(id : sun.tools.java.IdentifierToken, defaultWhere : haxe.Int64) : haxe.Int64;
 	
 	
 }

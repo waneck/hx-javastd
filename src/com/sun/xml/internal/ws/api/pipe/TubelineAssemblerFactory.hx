@@ -33,13 +33,13 @@ extern class TubelineAssemblerFactory
 	*                  Must not be null.
 	* @return null if this factory doesn't recognize the given binding ID.
 	*/
-	@:overload @:abstract public function doCreate(bindingId : com.sun.xml.internal.ws.api.BindingID) : com.sun.xml.internal.ws.api.pipe.TubelineAssembler;
+	@:overload @:public @:abstract public function doCreate(bindingId : com.sun.xml.internal.ws.api.BindingID) : com.sun.xml.internal.ws.api.pipe.TubelineAssembler;
 	
 	/**
 	* @deprecated
 	*      Use {@link #create(ClassLoader, BindingID, Container)}
 	*/
-	@:overload public static function create(classLoader : java.lang.ClassLoader, bindingId : com.sun.xml.internal.ws.api.BindingID) : com.sun.xml.internal.ws.api.pipe.TubelineAssembler;
+	@:overload @:public @:static public static function create(classLoader : java.lang.ClassLoader, bindingId : com.sun.xml.internal.ws.api.BindingID) : com.sun.xml.internal.ws.api.pipe.TubelineAssembler;
 	
 	/**
 	* Locates {@link TubelineAssemblerFactory}s and create
@@ -52,15 +52,15 @@ extern class TubelineAssemblerFactory
 	*      instance. This parameter should be always given on the server, but can be null.
 	* @return Always non-null, since we fall back to our default {@link TubelineAssembler}.
 	*/
-	@:overload public static function create(classLoader : java.lang.ClassLoader, bindingId : com.sun.xml.internal.ws.api.BindingID, container : com.sun.xml.internal.ws.api.server.Container) : com.sun.xml.internal.ws.api.pipe.TubelineAssembler;
+	@:overload @:public @:static public static function create(classLoader : java.lang.ClassLoader, bindingId : com.sun.xml.internal.ws.api.BindingID, container : com.sun.xml.internal.ws.api.server.Container) : com.sun.xml.internal.ws.api.pipe.TubelineAssembler;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$api$pipe$TubelineAssemblerFactory$TubelineAssemblerAdapter') @:internal extern class TubelineAssemblerFactory_TubelineAssemblerAdapter implements com.sun.xml.internal.ws.api.pipe.TubelineAssembler
 {
-	@:overload public function createClient(context : com.sun.xml.internal.ws.api.pipe.ClientTubeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public public function createClient(context : com.sun.xml.internal.ws.api.pipe.ClientTubeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
-	@:overload public function createServer(context : com.sun.xml.internal.ws.api.pipe.ServerTubeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public public function createServer(context : com.sun.xml.internal.ws.api.pipe.ServerTubeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	
 }

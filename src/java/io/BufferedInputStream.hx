@@ -30,7 +30,7 @@ extern class BufferedInputStream extends java.io.FilterInputStream
 	* it may be replaced by another array of
 	* a different size.
 	*/
-	@:volatile private var buf : java.NativeArray<java.StdTypes.Int8>;
+	@:protected @:volatile private var buf : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* The index one greater than the index of the last valid byte in
@@ -41,7 +41,7 @@ extern class BufferedInputStream extends java.io.FilterInputStream
 	* </code>contain buffered input data obtained
 	* from the underlying  input stream.
 	*/
-	private var count : Int;
+	@:protected private var count : Int;
 	
 	/**
 	* The current position in the buffer. This is the index of the next
@@ -58,7 +58,7 @@ extern class BufferedInputStream extends java.io.FilterInputStream
 	*
 	* @see     java.io.BufferedInputStream#buf
 	*/
-	private var pos : Int;
+	@:protected private var pos : Int;
 	
 	/**
 	* The value of the <code>pos</code> field at the time the last
@@ -87,7 +87,7 @@ extern class BufferedInputStream extends java.io.FilterInputStream
 	* @see     java.io.BufferedInputStream#mark(int)
 	* @see     java.io.BufferedInputStream#pos
 	*/
-	private var markpos : Int;
+	@:protected private var markpos : Int;
 	
 	/**
 	* The maximum read ahead allowed after a call to the
@@ -101,7 +101,7 @@ extern class BufferedInputStream extends java.io.FilterInputStream
 	* @see     java.io.BufferedInputStream#mark(int)
 	* @see     java.io.BufferedInputStream#reset()
 	*/
-	private var marklimit : Int;
+	@:protected private var marklimit : Int;
 	
 	/**
 	* Creates a <code>BufferedInputStream</code>
@@ -111,7 +111,7 @@ extern class BufferedInputStream extends java.io.FilterInputStream
 	*
 	* @param   in   the underlying input stream.
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Creates a <code>BufferedInputStream</code>
@@ -125,7 +125,7 @@ extern class BufferedInputStream extends java.io.FilterInputStream
 	* @param   size   the buffer size.
 	* @exception IllegalArgumentException if size <= 0.
 	*/
-	@:overload public function new(_in : java.io.InputStream, size : Int) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, size : Int) : Void;
 	
 	/**
 	* See
@@ -139,7 +139,7 @@ extern class BufferedInputStream extends java.io.FilterInputStream
 	*                          or an I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload @:synchronized override public function read() : Int;
+	@:overload @:public @:synchronized override public function read() : Int;
 	
 	/**
 	* Reads bytes from this byte-input stream into the specified byte array,
@@ -178,7 +178,7 @@ extern class BufferedInputStream extends java.io.FilterInputStream
 	*                          invoking its {@link #close()} method,
 	*                          or an I/O error occurs.
 	*/
-	@:overload @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* See the general contract of the <code>skip</code>
@@ -189,7 +189,7 @@ extern class BufferedInputStream extends java.io.FilterInputStream
 	*                          invoking its {@link #close()} method, or an
 	*                          I/O error occurs.
 	*/
-	@:overload @:synchronized override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:synchronized override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns an estimate of the number of bytes that can be read (or
@@ -208,7 +208,7 @@ extern class BufferedInputStream extends java.io.FilterInputStream
 	*                          invoking its {@link #close()} method,
 	*                          or an I/O error occurs.
 	*/
-	@:overload @:synchronized override public function available() : Int;
+	@:overload @:public @:synchronized override public function available() : Int;
 	
 	/**
 	* See the general contract of the <code>mark</code>
@@ -218,7 +218,7 @@ extern class BufferedInputStream extends java.io.FilterInputStream
 	*                      the mark position becomes invalid.
 	* @see     java.io.BufferedInputStream#reset()
 	*/
-	@:overload @:synchronized override public function mark(readlimit : Int) : Void;
+	@:overload @:public @:synchronized override public function mark(readlimit : Int) : Void;
 	
 	/**
 	* See the general contract of the <code>reset</code>
@@ -236,7 +236,7 @@ extern class BufferedInputStream extends java.io.FilterInputStream
 	*                  method, or an I/O error occurs.
 	* @see        java.io.BufferedInputStream#mark(int)
 	*/
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
 	/**
 	* Tests if this input stream supports the <code>mark</code>
@@ -249,7 +249,7 @@ extern class BufferedInputStream extends java.io.FilterInputStream
 	* @see     java.io.InputStream#mark(int)
 	* @see     java.io.InputStream#reset()
 	*/
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	/**
 	* Closes this input stream and releases any system resources
@@ -260,7 +260,7 @@ extern class BufferedInputStream extends java.io.FilterInputStream
 	*
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

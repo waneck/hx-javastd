@@ -40,21 +40,21 @@ extern class Helper24 extends com.sun.tools.corba.se.idl.toJavaPortable.Helper
 	/**
 	* Public zero-argument constructor.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Generate the heading, including package, imports, class statements,
 	* and open curly.
 	* <d62023> - don't implement ValueHelper, make non-boxed helpers abstract
 	**/
-	@:overload private function writeHeading() : Void;
+	@:overload @:protected override private function writeHeading() : Void;
 	
 	/**
 	* Generate the instance variables.
 	* <d62023> - no helper instance except for boxed valuetypes.
 	*          - move truncatable_ids to mapped class.
 	**/
-	@:overload private function writeInstVars() : Void;
+	@:overload @:protected override private function writeInstVars() : Void;
 	
 	/**
 	* <d62023> generate members of BoxedValueHelper interface if boxed
@@ -62,18 +62,18 @@ extern class Helper24 extends com.sun.tools.corba.se.idl.toJavaPortable.Helper
 	* <d62023> Hook in here to write factory methods for non-boxed ValueTypes
 	*          into Helper.
 	**/
-	@:overload private function writeValueHelperInterface() : Void;
+	@:overload @:protected override private function writeValueHelperInterface() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeHelperFactories() : Void;
+	@:overload @:protected private function writeHelperFactories() : Void;
 	
 	/**
 	* <d62023> Generate constructors only for boxed valuetype helpers
 	*            All other helpers are abstract.
 	**/
-	@:overload private function writeCtors() : Void;
+	@:overload @:protected override private function writeCtors() : Void;
 	
 	
 }

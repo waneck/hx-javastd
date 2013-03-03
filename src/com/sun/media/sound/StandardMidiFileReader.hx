@@ -25,23 +25,23 @@ package com.sun.media.sound;
 */
 extern class StandardMidiFileReader extends javax.sound.midi.spi.MidiFileReader
 {
-	@:overload override public function getMidiFileFormat(stream : java.io.InputStream) : javax.sound.midi.MidiFileFormat;
+	@:overload @:public override public function getMidiFileFormat(stream : java.io.InputStream) : javax.sound.midi.MidiFileFormat;
 	
-	@:overload override public function getMidiFileFormat(url : java.net.URL) : javax.sound.midi.MidiFileFormat;
+	@:overload @:public override public function getMidiFileFormat(url : java.net.URL) : javax.sound.midi.MidiFileFormat;
 	
-	@:overload override public function getMidiFileFormat(file : java.io.File) : javax.sound.midi.MidiFileFormat;
+	@:overload @:public override public function getMidiFileFormat(file : java.io.File) : javax.sound.midi.MidiFileFormat;
 	
-	@:overload override public function getSequence(stream : java.io.InputStream) : javax.sound.midi.Sequence;
+	@:overload @:public override public function getSequence(stream : java.io.InputStream) : javax.sound.midi.Sequence;
 	
-	@:overload override public function getSequence(url : java.net.URL) : javax.sound.midi.Sequence;
+	@:overload @:public override public function getSequence(url : java.net.URL) : javax.sound.midi.Sequence;
 	
-	@:overload override public function getSequence(file : java.io.File) : javax.sound.midi.Sequence;
+	@:overload @:public override public function getSequence(file : java.io.File) : javax.sound.midi.Sequence;
 	
 	
 }
 @:internal extern class SMFParser
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

@@ -38,43 +38,43 @@ extern class CharToByteConverter
 	/**
 	* Substitution mode flag.
 	*/
-	private var subMode : Bool;
+	@:protected private var subMode : Bool;
 	
 	/**
 	* Bytes to substitute for unmappable input.
 	*/
-	private var subBytes : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var subBytes : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Offset of next character to be converted.
 	*/
-	private var charOff : Int;
+	@:protected private var charOff : Int;
 	
 	/**
 	* Offset of next byte to be output.
 	*/
-	private var byteOff : Int;
+	@:protected private var byteOff : Int;
 	
 	/**
 	* Length of bad input that caused conversion to stop.
 	*/
-	private var badInputLength : Int;
+	@:protected private var badInputLength : Int;
 	
 	/**
 	* Create an instance of the default CharToByteConverter subclass.
 	*/
-	@:overload public static function getDefault() : sun.io.CharToByteConverter;
+	@:overload @:public @:static public static function getDefault() : sun.io.CharToByteConverter;
 	
 	/**
 	* Returns appropriate CharToByteConverter subclass instance.
 	* @param string represets encoding
 	*/
-	@:overload public static function getConverter(encoding : String) : sun.io.CharToByteConverter;
+	@:overload @:public @:static public static function getConverter(encoding : String) : sun.io.CharToByteConverter;
 	
 	/**
 	* Returns the character set id for the conversion.
 	*/
-	@:overload @:abstract public function getCharacterEncoding() : String;
+	@:overload @:public @:abstract public function getCharacterEncoding() : String;
 	
 	/**
 	* Converts an array of Unicode characters into an array of bytes
@@ -104,7 +104,7 @@ extern class CharToByteConverter
 	* @exception ConversionBufferFullException if output array is filled prior
 	* to converting all the input.
 	*/
-	@:overload @:abstract public function convert(input : java.NativeArray<java.StdTypes.Char16>, inStart : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public @:abstract public function convert(input : java.NativeArray<java.StdTypes.Char16>, inStart : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
 	
 	/*
 	* Converts any array of characters, including malformed surrogate
@@ -124,7 +124,7 @@ extern class CharToByteConverter
 	* @exception ConversionBufferFullException if output array is filled prior
 	* to converting all the input.
 	*/
-	@:overload public function convertAny(input : java.NativeArray<java.StdTypes.Char16>, inStart : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public public function convertAny(input : java.NativeArray<java.StdTypes.Char16>, inStart : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Converts an array of Unicode characters into an array of bytes
@@ -157,7 +157,7 @@ extern class CharToByteConverter
 	* @see   #setSubstitutionBytes
 	* @see   #getBadInputLength
 	*/
-	@:overload public function convertAll(input : java.NativeArray<java.StdTypes.Char16>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function convertAll(input : java.NativeArray<java.StdTypes.Char16>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Writes any remaining output to the output buffer and resets the
@@ -177,7 +177,7 @@ extern class CharToByteConverter
 	* to the output buffer and remember its state.  An additional call to
 	* flush with a new output buffer will conclude the operation.
 	*/
-	@:overload @:abstract public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public @:abstract public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Writes any remaining output to the output buffer and resets the
@@ -194,12 +194,12 @@ extern class CharToByteConverter
 	* to the output buffer and remember its state.  An additional call to
 	* flush with a new output buffer will conclude the operation.
 	*/
-	@:overload public function flushAny(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public public function flushAny(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Resets converter to its initial state.
 	*/
-	@:overload @:abstract public function reset() : Void;
+	@:overload @:public @:abstract public function reset() : Void;
 	
 	/**
 	* Returns true if the given character can be converted to the
@@ -207,14 +207,14 @@ extern class CharToByteConverter
 	* @return true if given character is translatable, false otherwise.
 	* @param c character to test
 	*/
-	@:overload public function canConvert(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function canConvert(c : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Returns the maximum number of bytes needed to convert a char. Useful
 	* for calculating the maximum output buffer size needed for a particular
 	* input buffer.
 	*/
-	@:overload @:abstract public function getMaxBytesPerChar() : Int;
+	@:overload @:public @:abstract public function getMaxBytesPerChar() : Int;
 	
 	/**
 	* Returns the length, in chars, of the input which caused a
@@ -222,20 +222,20 @@ extern class CharToByteConverter
 	* MalformedInputException thrown by the converter.  If none have
 	* ever been thrown, returns 0.
 	*/
-	@:overload public function getBadInputLength() : Int;
+	@:overload @:public public function getBadInputLength() : Int;
 	
 	/**
 	* Returns the index of the character just past
 	* the last character successfully converted by the previous call
 	* to convert.
 	*/
-	@:overload public function nextCharIndex() : Int;
+	@:overload @:public public function nextCharIndex() : Int;
 	
 	/**
 	* Returns the index of the byte just past the last byte written by
 	* the previous call to convert.
 	*/
-	@:overload public function nextByteIndex() : Int;
+	@:overload @:public public function nextByteIndex() : Int;
 	
 	/**
 	* Sets converter into substitution mode.  In substitution mode,
@@ -247,7 +247,7 @@ extern class CharToByteConverter
 	* @param doSub if true, enable substitution mode.
 	* @see #setSubstitutionBytes
 	*/
-	@:overload public function setSubstitutionMode(doSub : Bool) : Void;
+	@:overload @:public public function setSubstitutionMode(doSub : Bool) : Void;
 	
 	/**
 	* Sets the substitution bytes to use when the converter is in
@@ -262,12 +262,12 @@ extern class CharToByteConverter
 	* @see #setSubstitutionMode
 	* @see #getMaxBytesPerChar
 	*/
-	@:overload public function setSubstitutionBytes(newSubBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setSubstitutionBytes(newSubBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns a string representation of the class.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

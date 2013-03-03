@@ -31,23 +31,23 @@ package com.sun.xml.internal.dtdparser;
 	*
 	* @param initialCapacity the initial capacity of the hashtable.
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs a new, empty hashtable with a default capacity.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns the number of keys in this hashtable.
 	*
 	* @return the number of keys in this hashtable.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Returns an enumeration of the keys in this hashtable.
@@ -55,30 +55,30 @@ package com.sun.xml.internal.dtdparser;
 	* @return an enumeration of the keys in this hashtable.
 	* @see Enumeration
 	*/
-	@:overload public function keys() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function keys() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Used to view this as an enumeration; returns true if there
 	* are more keys to be enumerated.
 	*/
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
 	/**
 	* Used to view this as an enumeration; returns the next key
 	* in the enumeration.
 	*/
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
 	/**
 	* Returns the value to which the specified key is mapped in this hashtable.
 	*/
-	@:overload public function get(key : String) : Dynamic;
+	@:overload @:public public function get(key : String) : Dynamic;
 	
 	/**
 	* Returns the value to which the specified key is mapped in this
 	* hashtable ... the key isn't necessarily interned, though.
 	*/
-	@:overload public function getNonInterned(key : String) : Dynamic;
+	@:overload @:public public function getNonInterned(key : String) : Dynamic;
 	
 	/**
 	* Maps the specified <code>key</code> to the specified
@@ -88,7 +88,7 @@ package com.sun.xml.internal.dtdparser;
 	* <P>The value can be retrieved by calling the <code>get</code> method
 	* with a key that is equal to the original key.
 	*/
-	@:overload public function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:overload @:public public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
 	
 }
@@ -97,7 +97,7 @@ package com.sun.xml.internal.dtdparser;
 */
 @:native('com$sun$xml$internal$dtdparser$SimpleHashtable$Entry') @:internal extern class SimpleHashtable_Entry
 {
-	@:overload private function new(hash : Int, key : Dynamic, value : Dynamic, next : com.sun.xml.internal.dtdparser.SimpleHashtable.SimpleHashtable_Entry) : Void;
+	@:overload @:protected private function new(hash : Int, key : Dynamic, value : Dynamic, next : com.sun.xml.internal.dtdparser.SimpleHashtable.SimpleHashtable_Entry) : Void;
 	
 	
 }

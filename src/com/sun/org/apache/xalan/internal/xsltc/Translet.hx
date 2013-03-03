@@ -27,31 +27,31 @@ extern interface Translet
 	* @author Jacek Ambroziak
 	* @author Santiago Pericas-Geertsen
 	*/
-	@:overload public function transform(document : com.sun.org.apache.xalan.internal.xsltc.DOM, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler) : Void;
+	@:overload @:public public function transform(document : com.sun.org.apache.xalan.internal.xsltc.DOM, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler) : Void;
 	
-	@:overload public function transform(document : com.sun.org.apache.xalan.internal.xsltc.DOM, handlers : java.NativeArray<com.sun.org.apache.xml.internal.serializer.SerializationHandler>) : Void;
+	@:overload @:public @:public public function transform(document : com.sun.org.apache.xalan.internal.xsltc.DOM, handlers : java.NativeArray<com.sun.org.apache.xml.internal.serializer.SerializationHandler>) : Void;
 	
-	@:overload public function transform(document : com.sun.org.apache.xalan.internal.xsltc.DOM, iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler) : Void;
+	@:overload @:public public function transform(document : com.sun.org.apache.xalan.internal.xsltc.DOM, iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler) : Void;
 	
-	@:overload public function addParameter(name : String, value : Dynamic) : Dynamic;
+	@:overload @:public public function addParameter(name : String, value : Dynamic) : Dynamic;
 	
-	@:overload public function buildKeys(document : com.sun.org.apache.xalan.internal.xsltc.DOM, iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler, root : Int) : Void;
+	@:overload @:public public function buildKeys(document : com.sun.org.apache.xalan.internal.xsltc.DOM, iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler, root : Int) : Void;
 	
-	@:overload public function addAuxiliaryClass(auxClass : Class<Dynamic>) : Void;
+	@:overload @:public public function addAuxiliaryClass(auxClass : Class<Dynamic>) : Void;
 	
-	@:overload public function getAuxiliaryClass(className : String) : Class<Dynamic>;
+	@:overload @:public public function getAuxiliaryClass(className : String) : Class<Dynamic>;
 	
-	@:overload public function getNamesArray() : java.NativeArray<String>;
+	@:overload @:public public function getNamesArray() : java.NativeArray<String>;
 	
-	@:overload public function getUrisArray() : java.NativeArray<String>;
+	@:overload @:public public function getUrisArray() : java.NativeArray<String>;
 	
-	@:overload public function getTypesArray() : java.NativeArray<Int>;
+	@:overload @:public public function getTypesArray() : java.NativeArray<Int>;
 	
-	@:overload public function getNamespaceArray() : java.NativeArray<String>;
+	@:overload @:public public function getNamespaceArray() : java.NativeArray<String>;
 	
-	@:overload public function useServicesMechnism() : Bool;
+	@:overload @:public public function useServicesMechnism() : Bool;
 	
-	@:overload public function setServicesMechnism(flag : Bool) : Void;
+	@:overload @:public public function setServicesMechnism(flag : Bool) : Void;
 	
 	
 }

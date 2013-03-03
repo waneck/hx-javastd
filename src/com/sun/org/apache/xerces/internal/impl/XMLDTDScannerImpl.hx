@@ -20,37 +20,37 @@ package com.sun.org.apache.xerces.internal.impl;
 extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser.XMLDTDScanner implements com.sun.org.apache.xerces.internal.xni.parser.XMLComponent implements com.sun.org.apache.xerces.internal.impl.XMLEntityHandler
 {
 	/** Scanner state: end of input. */
-	private static var SCANNER_STATE_END_OF_INPUT(default, null) : Int;
+	@:protected @:static @:final private static var SCANNER_STATE_END_OF_INPUT(default, null) : Int;
 	
 	/** Scanner state: text declaration. */
-	private static var SCANNER_STATE_TEXT_DECL(default, null) : Int;
+	@:protected @:static @:final private static var SCANNER_STATE_TEXT_DECL(default, null) : Int;
 	
 	/** Scanner state: markup declaration. */
-	private static var SCANNER_STATE_MARKUP_DECL(default, null) : Int;
+	@:protected @:static @:final private static var SCANNER_STATE_MARKUP_DECL(default, null) : Int;
 	
 	/** DTD handler. */
-	public var fDTDHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler;
+	@:public public var fDTDHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler;
 	
 	/** DTD content model handler. */
-	private var fDTDContentModelHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler;
+	@:protected private var fDTDContentModelHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler;
 	
 	/** Scanner state. */
-	private var fScannerState : Int;
+	@:protected private var fScannerState : Int;
 	
 	/** Standalone. */
-	private var fStandalone : Bool;
+	@:protected private var fStandalone : Bool;
 	
 	/** Seen external DTD. */
-	private var fSeenExternalDTD : Bool;
+	@:protected private var fSeenExternalDTD : Bool;
 	
 	/** Seen external parameter entity. */
-	private var fSeenExternalPE : Bool;
+	@:protected private var fSeenExternalPE : Bool;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Constructor for he use of non-XMLComponentManagers. */
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter, entityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter, entityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager) : Void;
 	
 	/**
 	* Sets the input source.
@@ -59,7 +59,7 @@ extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.X
 	*
 	* @throws IOException Thrown on i/o error.
 	*/
-	@:overload public function setInputSource(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public public function setInputSource(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**
 	* Scans the external subset of the document.
@@ -74,7 +74,7 @@ extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.X
 	*
 	* @return True if there is more to scan, false otherwise.
 	*/
-	@:overload public function scanDTDExternalSubset(complete : Bool) : Bool;
+	@:overload @:public public function scanDTDExternalSubset(complete : Bool) : Bool;
 	
 	/**
 	* Scans the internal subset of the document.
@@ -96,32 +96,32 @@ extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.X
 	*
 	* @return True if there is more to scan, false otherwise.
 	*/
-	@:overload public function scanDTDInternalSubset(complete : Bool, standalone : Bool, hasExternalSubset : Bool) : Bool;
+	@:overload @:public public function scanDTDInternalSubset(complete : Bool, standalone : Bool, hasExternalSubset : Bool) : Bool;
 	
 	/**
 	* reset
 	*
 	* @param componentManager
 	*/
-	@:overload override public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public override public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload override public function reset(props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public override public function reset(props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* Returns a list of feature identifiers that are recognized by
 	* this component. This method may return null if no features
 	* are recognized by this component.
 	*/
-	@:overload override public function getRecognizedFeatures() : java.NativeArray<String>;
+	@:overload @:public override public function getRecognizedFeatures() : java.NativeArray<String>;
 	
 	/**
 	* Returns a list of property identifiers that are recognized by
 	* this component. This method may return null if no properties
 	* are recognized by this component.
 	*/
-	@:overload override public function getRecognizedProperties() : java.NativeArray<String>;
+	@:overload @:public override public function getRecognizedProperties() : java.NativeArray<String>;
 	
 	/**
 	* Returns the default state for a feature, or null if this
@@ -132,7 +132,7 @@ extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.X
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload override public function getFeatureDefault(featureId : String) : Null<Bool>;
+	@:require(java2) @:overload @:public override public function getFeatureDefault(featureId : String) : Null<Bool>;
 	
 	/**
 	* Returns the default state for a property, or null if this
@@ -143,35 +143,35 @@ extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.X
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload override public function getPropertyDefault(propertyId : String) : Dynamic;
+	@:require(java2) @:overload @:public override public function getPropertyDefault(propertyId : String) : Dynamic;
 	
 	/**
 	* setDTDHandler
 	*
 	* @param dtdHandler
 	*/
-	@:overload public function setDTDHandler(dtdHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler) : Void;
+	@:overload @:public public function setDTDHandler(dtdHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler) : Void;
 	
 	/**
 	* getDTDHandler
 	*
 	* @return the XMLDTDHandler
 	*/
-	@:overload public function getDTDHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler;
+	@:overload @:public public function getDTDHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler;
 	
 	/**
 	* setDTDContentModelHandler
 	*
 	* @param dtdContentModelHandler
 	*/
-	@:overload public function setDTDContentModelHandler(dtdContentModelHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler) : Void;
+	@:overload @:public public function setDTDContentModelHandler(dtdContentModelHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler) : Void;
 	
 	/**
 	* getDTDContentModelHandler
 	*
 	* @return XMLDTDContentModelHandler
 	*/
-	@:overload public function getDTDContentModelHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler;
+	@:overload @:public public function getDTDContentModelHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler;
 	
 	/**
 	* This method notifies of the start of an entity. The DTD has the
@@ -189,7 +189,7 @@ extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.X
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function startEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function startEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies the end of an entity. The DTD has the pseudo-name
@@ -200,16 +200,16 @@ extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.X
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function endEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function endEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Sets the scanner state.
 	*
 	* @param state The new scanner state.
 	*/
-	@:overload @:final private function setScannerState(state : Int) : Void;
+	@:overload @:protected @:final private function setScannerState(state : Int) : Void;
 	
-	@:overload @:final private function scanningInternalSubset() : Bool;
+	@:overload @:protected @:final private function scanningInternalSubset() : Bool;
 	
 	/**
 	* start a parameter entity dealing with the textdecl if there is any
@@ -217,7 +217,7 @@ extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.X
 	* @param name The name of the parameter entity to start (without the '%')
 	* @param literal Whether this is happening within a literal
 	*/
-	@:overload private function startPE(name : String, literal : Bool) : Void;
+	@:overload @:protected private function startPE(name : String, literal : Bool) : Void;
 	
 	/**
 	* Dispatch an XML "event".
@@ -231,7 +231,7 @@ extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.X
 	* @throws XNIException Thrown on parse error.
 	*
 	*/
-	@:overload @:final private function scanTextDecl() : Bool;
+	@:overload @:protected @:final private function scanTextDecl() : Bool;
 	
 	/**
 	* Scans a processing data. This is needed to handle the situation
@@ -241,7 +241,7 @@ extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.X
 	* @param target The PI target
 	* @param data The string to fill in with the data
 	*/
-	@:overload @:final private function scanPIData(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
+	@:overload @:protected @:final private function scanPIData(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
 	
 	/**
 	* Scans a comment.
@@ -252,7 +252,7 @@ extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.X
 	* <p>
 	* <strong>Note:</strong> Called after scanning past '&lt;!--'
 	*/
-	@:overload @:final private function scanComment() : Void;
+	@:overload @:protected @:final private function scanComment() : Void;
 	
 	/**
 	* Scans an element declaration
@@ -264,7 +264,7 @@ extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.X
 	* <p>
 	* <strong>Note:</strong> Called after scanning past '&lt;!ELEMENT'
 	*/
-	@:overload @:final private function scanElementDecl() : Void;
+	@:overload @:protected @:final private function scanElementDecl() : Void;
 	
 	/**
 	* Scans an attlist declaration
@@ -276,7 +276,7 @@ extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.X
 	* <p>
 	* <strong>Note:</strong> Called after scanning past '&lt;!ATTLIST'
 	*/
-	@:overload @:final private function scanAttlistDecl() : Void;
+	@:overload @:protected @:final private function scanAttlistDecl() : Void;
 	
 	/**
 	* Scans an attribute default declaration
@@ -288,7 +288,7 @@ extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.X
 	* @param name The name of the attribute being scanned.
 	* @param defaultVal The string to fill in with the default value.
 	*/
-	@:overload @:final private function scanAttDefaultDecl(elName : String, atName : String, type : String, defaultVal : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedDefaultVal : com.sun.org.apache.xerces.internal.xni.XMLString) : String;
+	@:overload @:protected @:final private function scanAttDefaultDecl(elName : String, atName : String, type : String, defaultVal : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedDefaultVal : com.sun.org.apache.xerces.internal.xni.XMLString) : String;
 	
 	/**
 	* Scans an entity value.
@@ -301,7 +301,7 @@ extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.X
 	* the use of scanCharReferenceValue), and fStringBuffer2, anything in them
 	* at the time of calling is lost.
 	*/
-	@:overload @:final private function scanEntityValue(value : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedValue : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
+	@:overload @:protected @:final private function scanEntityValue(value : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedValue : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
 	
 	/**
 	* Dispatch an XML "event".
@@ -315,9 +315,9 @@ extern class XMLDTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.X
 	* @throws XNIException Thrown on parse error.
 	*
 	*/
-	@:overload @:final private function scanDecls(complete : Bool) : Bool;
+	@:overload @:protected @:final private function scanDecls(complete : Bool) : Bool;
 	
-	@:overload public function getGrammar() : com.sun.xml.internal.stream.dtd.nonvalidating.DTDGrammar;
+	@:overload @:public public function getGrammar() : com.sun.xml.internal.stream.dtd.nonvalidating.DTDGrammar;
 	
 	
 }

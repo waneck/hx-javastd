@@ -25,13 +25,13 @@ extern class XMLSignatureInput implements java.lang.Cloneable
 	* Check if the structured is needed to be circumbented.
 	* @return true if so.
 	*/
-	@:overload public function isNeedsToBeExpanded() : Bool;
+	@:overload @:public public function isNeedsToBeExpanded() : Bool;
 	
 	/**
 	* Set if the structured is needed to be circumbented.
 	* @param needsToBeExpanded true if so.
 	*/
-	@:overload public function setNeedsToBeExpanded(needsToBeExpanded : Bool) : Void;
+	@:overload @:public public function setNeedsToBeExpanded(needsToBeExpanded : Bool) : Void;
 	
 	/**
 	* Construct a XMLSignatureInput from an octet array.
@@ -41,7 +41,7 @@ extern class XMLSignatureInput implements java.lang.Cloneable
 	* <p>NOTE: no defensive copy</p>
 	* @param inputOctets an octet array which including XML document or node
 	*/
-	@:overload public function new(inputOctets : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(inputOctets : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs a <code>XMLSignatureInput</code> from an octet stream. The
@@ -49,7 +49,7 @@ extern class XMLSignatureInput implements java.lang.Cloneable
 	*
 	* @param inputOctetStream
 	*/
-	@:overload public function new(inputOctetStream : java.io.InputStream) : Void;
+	@:overload @:public public function new(inputOctetStream : java.io.InputStream) : Void;
 	
 	/**
 	* Construct a XMLSignatureInput from a String.
@@ -59,7 +59,7 @@ extern class XMLSignatureInput implements java.lang.Cloneable
 	* @deprecated
 	* @param inputStr the input String which including XML document or node
 	*/
-	@:overload public function new(inputStr : String) : Void;
+	@:overload @:public public function new(inputStr : String) : Void;
 	
 	/**
 	* Construct a XMLSignatureInput from a String with a given encoding.
@@ -72,7 +72,7 @@ extern class XMLSignatureInput implements java.lang.Cloneable
 	* @param encoding the encoding of <code>inputStr</code>
 	* @throws UnsupportedEncodingException
 	*/
-	@:overload public function new(inputStr : String, encoding : String) : Void;
+	@:overload @:public public function new(inputStr : String, encoding : String) : Void;
 	
 	/**
 	* Construct a XMLSignatureInput from a subtree rooted by rootNode. This
@@ -80,7 +80,7 @@ extern class XMLSignatureInput implements java.lang.Cloneable
 	*
 	* @param rootNode
 	*/
-	@:overload public function new(rootNode : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(rootNode : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Constructor XMLSignatureInput
@@ -88,7 +88,7 @@ extern class XMLSignatureInput implements java.lang.Cloneable
 	* @param inputNodeSet
 	* @param usedXPathAPI
 	*/
-	@:overload public function new(inputNodeSet : java.util.Set<Dynamic>) : Void;
+	@:overload @:public public function new(inputNodeSet : java.util.Set<Dynamic>) : Void;
 	
 	/**
 	* Returns the node set from input which was specified as the parameter of
@@ -100,7 +100,7 @@ extern class XMLSignatureInput implements java.lang.Cloneable
 	* @throws ParserConfigurationException
 	* @throws CanonicalizationException
 	*/
-	@:overload public function getNodeSet() : java.util.Set<Dynamic>;
+	@:overload @:public public function getNodeSet() : java.util.Set<Dynamic>;
 	
 	/**
 	* Returns the node set from input which was specified as the parameter of
@@ -113,7 +113,7 @@ extern class XMLSignatureInput implements java.lang.Cloneable
 	* @throws ParserConfigurationException
 	* @throws CanonicalizationException
 	*/
-	@:overload public function getNodeSet(circumvent : Bool) : java.util.Set<Dynamic>;
+	@:overload @:public public function getNodeSet(circumvent : Bool) : java.util.Set<Dynamic>;
 	
 	/**
 	* Returns the Octect stream(byte Stream) from input which was specified as
@@ -123,12 +123,12 @@ extern class XMLSignatureInput implements java.lang.Cloneable
 	* the parameter of {@link XMLSignatureInput} constructor
 	* @throws IOException
 	*/
-	@:overload public function getOctetStream() : java.io.InputStream;
+	@:overload @:public public function getOctetStream() : java.io.InputStream;
 	
 	/**
 	* @return real octect stream
 	*/
-	@:overload public function getOctetStreamReal() : java.io.InputStream;
+	@:overload @:public public function getOctetStreamReal() : java.io.InputStream;
 	
 	/**
 	* Returns the byte array from input which was specified as the parameter of
@@ -140,28 +140,28 @@ extern class XMLSignatureInput implements java.lang.Cloneable
 	* @throws CanonicalizationException
 	* @throws IOException
 	*/
-	@:overload public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Determines if the object has been set up with a Node set
 	*
 	* @return true if the object has been set up with a Node set
 	*/
-	@:overload public function isNodeSet() : Bool;
+	@:overload @:public public function isNodeSet() : Bool;
 	
 	/**
 	* Determines if the object has been set up with an Element
 	*
 	* @return true if the object has been set up with a Node set
 	*/
-	@:overload public function isElement() : Bool;
+	@:overload @:public public function isElement() : Bool;
 	
 	/**
 	* Determines if the object has been set up with an octet stream
 	*
 	* @return true if the object has been set up with an octet stream
 	*/
-	@:overload public function isOctetStream() : Bool;
+	@:overload @:public public function isOctetStream() : Bool;
 	
 	/**
 	* Determines if {@link #setOutputStream} has been called with a
@@ -170,55 +170,55 @@ extern class XMLSignatureInput implements java.lang.Cloneable
 	* @return true if {@link #setOutputStream} has been called with a
 	* non-null OutputStream
 	*/
-	@:overload public function isOutputStreamSet() : Bool;
+	@:overload @:public public function isOutputStreamSet() : Bool;
 	
 	/**
 	* Determines if the object has been set up with a ByteArray
 	*
 	* @return true is the object has been set up with an octet stream
 	*/
-	@:overload public function isByteArray() : Bool;
+	@:overload @:public public function isByteArray() : Bool;
 	
 	/**
 	* Is the object correctly set up?
 	*
 	* @return true if the object has been set up correctly
 	*/
-	@:overload public function isInitialized() : Bool;
+	@:overload @:public public function isInitialized() : Bool;
 	
 	/**
 	* Returns MIMEType
 	*
 	* @return MIMEType
 	*/
-	@:overload public function getMIMEType() : String;
+	@:overload @:public public function getMIMEType() : String;
 	
 	/**
 	* Sets MIMEType
 	*
 	* @param MIMEType
 	*/
-	@:overload public function setMIMEType(MIMEType : String) : Void;
+	@:overload @:public public function setMIMEType(MIMEType : String) : Void;
 	
 	/**
 	* Return SourceURI
 	*
 	* @return SourceURI
 	*/
-	@:overload public function getSourceURI() : String;
+	@:overload @:public public function getSourceURI() : String;
 	
 	/**
 	* Sets SourceURI
 	*
 	* @param SourceURI
 	*/
-	@:overload public function setSourceURI(SourceURI : String) : Void;
+	@:overload @:public public function setSourceURI(SourceURI : String) : Void;
 	
 	/**
 	* Method toString
 	* @inheritDoc
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Method getHTMLRepresentation
@@ -226,7 +226,7 @@ extern class XMLSignatureInput implements java.lang.Cloneable
 	* @throws XMLSignatureException
 	* @return The HTML representation for this XMLSignature
 	*/
-	@:overload public function getHTMLRepresentation() : String;
+	@:overload @:public public function getHTMLRepresentation() : String;
 	
 	/**
 	* Method getHTMLRepresentation
@@ -235,66 +235,66 @@ extern class XMLSignatureInput implements java.lang.Cloneable
 	* @throws XMLSignatureException
 	* @return The HTML representation for this XMLSignature
 	*/
-	@:overload public function getHTMLRepresentation(inclusiveNamespaces : java.util.Set<Dynamic>) : String;
+	@:overload @:public public function getHTMLRepresentation(inclusiveNamespaces : java.util.Set<Dynamic>) : String;
 	
 	/**
 	* Gets the exclude node of this XMLSignatureInput
 	* @return Returns the excludeNode.
 	*/
-	@:overload public function getExcludeNode() : org.w3c.dom.Node;
+	@:overload @:public public function getExcludeNode() : org.w3c.dom.Node;
 	
 	/**
 	* Sets the exclude node of this XMLSignatureInput
 	* @param excludeNode The excludeNode to set.
 	*/
-	@:overload public function setExcludeNode(excludeNode : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setExcludeNode(excludeNode : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Gets the node of this XMLSignatureInput
 	* @return The excludeNode set.
 	*/
-	@:overload public function getSubNode() : org.w3c.dom.Node;
+	@:overload @:public public function getSubNode() : org.w3c.dom.Node;
 	
 	/**
 	* @return Returns the excludeComments.
 	*/
-	@:overload public function isExcludeComments() : Bool;
+	@:overload @:public public function isExcludeComments() : Bool;
 	
 	/**
 	* @param excludeComments The excludeComments to set.
 	*/
-	@:overload public function setExcludeComments(excludeComments : Bool) : Void;
+	@:overload @:public public function setExcludeComments(excludeComments : Bool) : Void;
 	
 	/**
 	* @param diOs
 	* @throws IOException
 	* @throws CanonicalizationException
 	*/
-	@:overload public function updateOutputStream(diOs : java.io.OutputStream) : Void;
+	@:overload @:public public function updateOutputStream(diOs : java.io.OutputStream) : Void;
 	
-	@:overload public function updateOutputStream(diOs : java.io.OutputStream, c14n11 : Bool) : Void;
+	@:overload @:public public function updateOutputStream(diOs : java.io.OutputStream, c14n11 : Bool) : Void;
 	
 	/**
 	* @param os
 	*/
-	@:overload public function setOutputStream(os : java.io.OutputStream) : Void;
+	@:overload @:public public function setOutputStream(os : java.io.OutputStream) : Void;
 	
-	@:overload private function getResetableInputStream() : java.io.InputStream;
+	@:overload @:protected private function getResetableInputStream() : java.io.InputStream;
 	
 	/**
 	* @param filter
 	*/
-	@:overload public function addNodeFilter(filter : com.sun.org.apache.xml.internal.security.signature.NodeFilter) : Void;
+	@:overload @:public public function addNodeFilter(filter : com.sun.org.apache.xml.internal.security.signature.NodeFilter) : Void;
 	
 	/**
 	* @return the node filters
 	*/
-	@:overload public function getNodeFilters() : java.util.List<Dynamic>;
+	@:overload @:public public function getNodeFilters() : java.util.List<Dynamic>;
 	
 	/**
 	* @param b
 	*/
-	@:overload public function setNodeSet(b : Bool) : Void;
+	@:overload @:public public function setNodeSet(b : Bool) : Void;
 	
 	
 }

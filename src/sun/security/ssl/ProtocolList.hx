@@ -33,7 +33,7 @@ package sun.security.ssl;
 */
 @:require(java4) @:internal extern class ProtocolList
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

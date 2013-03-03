@@ -28,24 +28,24 @@ extern class IntExpression extends sun.tools.tree.IntegerExpression
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, value : Int) : Void;
+	@:overload @:public public function new(where : haxe.Int64, value : Int) : Void;
 	
 	/**
 	* Equality, this is needed so that switch statements
 	* can put IntExpressions in a hashtable
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Hashcode, this is needed so that switch statements
 	* can put IntExpressions in a hashtable
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Print
 	*/
-	@:overload override public function print(out : java.io.PrintStream) : Void;
+	@:overload @:public override public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

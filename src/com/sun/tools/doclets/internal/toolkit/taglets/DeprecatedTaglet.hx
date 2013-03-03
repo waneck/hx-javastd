@@ -35,12 +35,12 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 */
 @:require(java5) extern class DeprecatedTaglet extends com.sun.tools.doclets.internal.toolkit.taglets.BaseTaglet
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

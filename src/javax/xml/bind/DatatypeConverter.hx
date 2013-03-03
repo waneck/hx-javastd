@@ -46,7 +46,7 @@ extern class DatatypeConverter
 	*      set the datatype converter.
 	* @see JAXBPermission
 	*/
-	@:overload public static function setDatatypeConverter(converter : javax.xml.bind.DatatypeConverterInterface) : Void;
+	@:overload @:public @:static public static function setDatatypeConverter(converter : javax.xml.bind.DatatypeConverterInterface) : Void;
 	
 	/**
 	* <p>
@@ -57,7 +57,7 @@ extern class DatatypeConverter
 	* @return
 	*     A String value represented by the string argument.
 	*/
-	@:overload public static function parseString(lexicalXSDString : String) : String;
+	@:overload @:public @:static public static function parseString(lexicalXSDString : String) : String;
 	
 	/**
 	* <p>
@@ -69,7 +69,7 @@ extern class DatatypeConverter
 	*     A BigInteger value represented by the string argument.
 	* @throws NumberFormatException <code>lexicalXSDInteger</code> is not a valid string representation of a {@link java.math.BigInteger} value.
 	*/
-	@:overload public static function parseInteger(lexicalXSDInteger : String) : java.math.BigInteger;
+	@:overload @:public @:static public static function parseInteger(lexicalXSDInteger : String) : java.math.BigInteger;
 	
 	/**
 	* <p>
@@ -81,7 +81,7 @@ extern class DatatypeConverter
 	*     A int value represented by the string argument.
 	* @throws NumberFormatException <code>lexicalXSDInt</code> is not a valid string representation of an <code>int</code> value.
 	*/
-	@:overload public static function parseInt(lexicalXSDInt : String) : Int;
+	@:overload @:public @:static public static function parseInt(lexicalXSDInt : String) : Int;
 	
 	/**
 	* <p>
@@ -93,7 +93,7 @@ extern class DatatypeConverter
 	*     A long value represented by the string argument.
 	* @throws NumberFormatException <code>lexicalXSDLong</code> is not a valid string representation of a <code>long</code> value.
 	*/
-	@:overload public static function parseLong(lexicalXSDLong : String) : haxe.Int64;
+	@:overload @:public @:static public static function parseLong(lexicalXSDLong : String) : haxe.Int64;
 	
 	/**
 	* <p>
@@ -105,7 +105,7 @@ extern class DatatypeConverter
 	*     A short value represented by the string argument.
 	* @throws NumberFormatException <code>lexicalXSDShort</code> is not a valid string representation of a <code>short</code> value.
 	*/
-	@:overload public static function parseShort(lexicalXSDShort : String) : java.StdTypes.Int16;
+	@:overload @:public @:static public static function parseShort(lexicalXSDShort : String) : java.StdTypes.Int16;
 	
 	/**
 	* <p>
@@ -117,7 +117,7 @@ extern class DatatypeConverter
 	*     A BigDecimal value represented by the string argument.
 	* @throws NumberFormatException <code>lexicalXSDDecimal</code> is not a valid string representation of {@link java.math.BigDecimal}.
 	*/
-	@:overload public static function parseDecimal(lexicalXSDDecimal : String) : java.math.BigDecimal;
+	@:overload @:public @:static public static function parseDecimal(lexicalXSDDecimal : String) : java.math.BigDecimal;
 	
 	/**
 	* <p>
@@ -129,7 +129,7 @@ extern class DatatypeConverter
 	*     A float value represented by the string argument.
 	* @throws NumberFormatException <code>lexicalXSDFloat</code> is not a valid string representation of a <code>float</code> value.
 	*/
-	@:overload public static function parseFloat(lexicalXSDFloat : String) : Single;
+	@:overload @:public @:static public static function parseFloat(lexicalXSDFloat : String) : Single;
 	
 	/**
 	* <p>
@@ -141,7 +141,7 @@ extern class DatatypeConverter
 	*     A double value represented by the string argument.
 	* @throws NumberFormatException <code>lexicalXSDDouble</code> is not a valid string representation of a <code>double</code> value.
 	*/
-	@:overload public static function parseDouble(lexicalXSDDouble : String) : Float;
+	@:overload @:public @:static public static function parseDouble(lexicalXSDDouble : String) : Float;
 	
 	/**
 	* <p>
@@ -153,7 +153,7 @@ extern class DatatypeConverter
 	*     A boolean value represented by the string argument.
 	* @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:boolean.
 	*/
-	@:overload public static function parseBoolean(lexicalXSDBoolean : String) : Bool;
+	@:overload @:public @:static public static function parseBoolean(lexicalXSDBoolean : String) : Bool;
 	
 	/**
 	* <p>
@@ -165,7 +165,7 @@ extern class DatatypeConverter
 	*     A byte value represented by the string argument.
 	* @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:byte.
 	*/
-	@:overload public static function parseByte(lexicalXSDByte : String) : java.StdTypes.Int8;
+	@:overload @:public @:static public static function parseByte(lexicalXSDByte : String) : java.StdTypes.Int8;
 	
 	/**
 	* <p>
@@ -184,7 +184,7 @@ extern class DatatypeConverter
 	* @throws IllegalArgumentException  if string parameter does not conform to XML Schema Part 2 specification or
 	*      if namespace prefix of <tt>lexicalXSDQname</tt> is not bound to a URI in NamespaceContext <tt>nsc</tt>.
 	*/
-	@:overload public static function parseQName(lexicalXSDQName : String, nsc : javax.xml.namespace.NamespaceContext) : javax.xml.namespace.QName;
+	@:overload @:public @:static public static function parseQName(lexicalXSDQName : String, nsc : javax.xml.namespace.NamespaceContext) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>
@@ -196,7 +196,7 @@ extern class DatatypeConverter
 	*     A Calendar object represented by the string argument.
 	* @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:dateTime.
 	*/
-	@:overload public static function parseDateTime(lexicalXSDDateTime : String) : java.util.Calendar;
+	@:overload @:public @:static public static function parseDateTime(lexicalXSDDateTime : String) : java.util.Calendar;
 	
 	/**
 	* <p>
@@ -208,7 +208,7 @@ extern class DatatypeConverter
 	*     An array of bytes represented by the string argument.
 	* @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:base64Binary
 	*/
-	@:overload public static function parseBase64Binary(lexicalXSDBase64Binary : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function parseBase64Binary(lexicalXSDBase64Binary : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* <p>
@@ -220,7 +220,7 @@ extern class DatatypeConverter
 	*     An array of bytes represented by the string argument.
 	* @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:hexBinary.
 	*/
-	@:overload public static function parseHexBinary(lexicalXSDHexBinary : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function parseHexBinary(lexicalXSDHexBinary : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* <p>
@@ -232,7 +232,7 @@ extern class DatatypeConverter
 	*     A long value represented by the string argument.
 	* @throws NumberFormatException if string parameter can not be parsed into a <tt>long</tt> value.
 	*/
-	@:overload public static function parseUnsignedInt(lexicalXSDUnsignedInt : String) : haxe.Int64;
+	@:overload @:public @:static public static function parseUnsignedInt(lexicalXSDUnsignedInt : String) : haxe.Int64;
 	
 	/**
 	* <p>
@@ -244,7 +244,7 @@ extern class DatatypeConverter
 	*     An int value represented by the string argument.
 	* @throws NumberFormatException if string parameter can not be parsed into an <tt>int</tt> value.
 	*/
-	@:overload public static function parseUnsignedShort(lexicalXSDUnsignedShort : String) : Int;
+	@:overload @:public @:static public static function parseUnsignedShort(lexicalXSDUnsignedShort : String) : Int;
 	
 	/**
 	* <p>
@@ -256,7 +256,7 @@ extern class DatatypeConverter
 	*     A Calendar value represented by the string argument.
 	* @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:Time.
 	*/
-	@:overload public static function parseTime(lexicalXSDTime : String) : java.util.Calendar;
+	@:overload @:public @:static public static function parseTime(lexicalXSDTime : String) : java.util.Calendar;
 	
 	/**
 	* <p>
@@ -268,7 +268,7 @@ extern class DatatypeConverter
 	*     A Calendar value represented by the string argument.
 	* @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:Date.
 	*/
-	@:overload public static function parseDate(lexicalXSDDate : String) : java.util.Calendar;
+	@:overload @:public @:static public static function parseDate(lexicalXSDDate : String) : java.util.Calendar;
 	
 	/**
 	* <p>
@@ -281,7 +281,7 @@ extern class DatatypeConverter
 	*     A string containing the lexical representation of the
 	*     simple type.
 	*/
-	@:overload public static function parseAnySimpleType(lexicalXSDAnySimpleType : String) : String;
+	@:overload @:public @:static public static function parseAnySimpleType(lexicalXSDAnySimpleType : String) : String;
 	
 	/**
 	* <p>
@@ -291,7 +291,7 @@ extern class DatatypeConverter
 	* @return
 	*     A string containing a lexical representation of xsd:string.
 	*/
-	@:overload public static function printString(val : String) : String;
+	@:overload @:public @:static public static function printString(val : String) : String;
 	
 	/**
 	* <p>
@@ -302,7 +302,7 @@ extern class DatatypeConverter
 	*     A string containing a lexical representation of xsd:integer
 	* @throws IllegalArgumentException <tt>val</tt> is null.
 	*/
-	@:overload public static function printInteger(val : java.math.BigInteger) : String;
+	@:overload @:public @:static public static function printInteger(val : java.math.BigInteger) : String;
 	
 	/**
 	* <p>
@@ -312,7 +312,7 @@ extern class DatatypeConverter
 	* @return
 	*     A string containing a lexical representation of xsd:int
 	*/
-	@:overload public static function printInt(val : Int) : String;
+	@:overload @:public @:static public static function printInt(val : Int) : String;
 	
 	/**
 	* <p>
@@ -322,7 +322,7 @@ extern class DatatypeConverter
 	* @return
 	*     A string containing a lexical representation of xsd:long
 	*/
-	@:overload public static function printLong(val : haxe.Int64) : String;
+	@:overload @:public @:static public static function printLong(val : haxe.Int64) : String;
 	
 	/**
 	* <p>
@@ -332,7 +332,7 @@ extern class DatatypeConverter
 	* @return
 	*     A string containing a lexical representation of xsd:short
 	*/
-	@:overload public static function printShort(val : java.StdTypes.Int16) : String;
+	@:overload @:public @:static public static function printShort(val : java.StdTypes.Int16) : String;
 	
 	/**
 	* <p>
@@ -343,7 +343,7 @@ extern class DatatypeConverter
 	*     A string containing a lexical representation of xsd:decimal
 	* @throws IllegalArgumentException <tt>val</tt> is null.
 	*/
-	@:overload public static function printDecimal(val : java.math.BigDecimal) : String;
+	@:overload @:public @:static public static function printDecimal(val : java.math.BigDecimal) : String;
 	
 	/**
 	* <p>
@@ -353,7 +353,7 @@ extern class DatatypeConverter
 	* @return
 	*     A string containing a lexical representation of xsd:float
 	*/
-	@:overload public static function printFloat(val : Single) : String;
+	@:overload @:public @:static public static function printFloat(val : Single) : String;
 	
 	/**
 	* <p>
@@ -363,7 +363,7 @@ extern class DatatypeConverter
 	* @return
 	*     A string containing a lexical representation of xsd:double
 	*/
-	@:overload public static function printDouble(val : Float) : String;
+	@:overload @:public @:static public static function printDouble(val : Float) : String;
 	
 	/**
 	* <p>
@@ -373,7 +373,7 @@ extern class DatatypeConverter
 	* @return
 	*     A string containing a lexical representation of xsd:boolean
 	*/
-	@:overload public static function printBoolean(val : Bool) : String;
+	@:overload @:public @:static public static function printBoolean(val : Bool) : String;
 	
 	/**
 	* <p>
@@ -383,7 +383,7 @@ extern class DatatypeConverter
 	* @return
 	*     A string containing a lexical representation of xsd:byte
 	*/
-	@:overload public static function printByte(val : java.StdTypes.Int8) : String;
+	@:overload @:public @:static public static function printByte(val : java.StdTypes.Int8) : String;
 	
 	/**
 	* <p>
@@ -397,7 +397,7 @@ extern class DatatypeConverter
 	* @throws IllegalArgumentException if <tt>val</tt> is null or
 	* if <tt>nsc</tt> is non-null or <tt>nsc.getPrefix(nsprefixFromVal)</tt> is null.
 	*/
-	@:overload public static function printQName(val : javax.xml.namespace.QName, nsc : javax.xml.namespace.NamespaceContext) : String;
+	@:overload @:public @:static public static function printQName(val : javax.xml.namespace.QName, nsc : javax.xml.namespace.NamespaceContext) : String;
 	
 	/**
 	* <p>
@@ -408,7 +408,7 @@ extern class DatatypeConverter
 	*     A string containing a lexical representation of xsd:dateTime
 	* @throws IllegalArgumentException if <tt>val</tt> is null.
 	*/
-	@:overload public static function printDateTime(val : java.util.Calendar) : String;
+	@:overload @:public @:static public static function printDateTime(val : java.util.Calendar) : String;
 	
 	/**
 	* <p>
@@ -419,7 +419,7 @@ extern class DatatypeConverter
 	*     A string containing a lexical representation of xsd:base64Binary
 	* @throws IllegalArgumentException if <tt>val</tt> is null.
 	*/
-	@:overload public static function printBase64Binary(val : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public @:static public static function printBase64Binary(val : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	/**
 	* <p>
@@ -430,7 +430,7 @@ extern class DatatypeConverter
 	*     A string containing a lexical representation of xsd:hexBinary
 	* @throws IllegalArgumentException if <tt>val</tt> is null.
 	*/
-	@:overload public static function printHexBinary(val : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public @:static public static function printHexBinary(val : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	/**
 	* <p>
@@ -440,7 +440,7 @@ extern class DatatypeConverter
 	* @return
 	*     A string containing a lexical representation of xsd:unsignedInt
 	*/
-	@:overload public static function printUnsignedInt(val : haxe.Int64) : String;
+	@:overload @:public @:static public static function printUnsignedInt(val : haxe.Int64) : String;
 	
 	/**
 	* <p>
@@ -450,7 +450,7 @@ extern class DatatypeConverter
 	* @return
 	*     A string containing a lexical representation of xsd:unsignedShort
 	*/
-	@:overload public static function printUnsignedShort(val : Int) : String;
+	@:overload @:public @:static public static function printUnsignedShort(val : Int) : String;
 	
 	/**
 	* <p>
@@ -461,7 +461,7 @@ extern class DatatypeConverter
 	*     A string containing a lexical representation of xsd:time
 	* @throws IllegalArgumentException if <tt>val</tt> is null.
 	*/
-	@:overload public static function printTime(val : java.util.Calendar) : String;
+	@:overload @:public @:static public static function printTime(val : java.util.Calendar) : String;
 	
 	/**
 	* <p>
@@ -472,7 +472,7 @@ extern class DatatypeConverter
 	*     A string containing a lexical representation of xsd:date
 	* @throws IllegalArgumentException if <tt>val</tt> is null.
 	*/
-	@:overload public static function printDate(val : java.util.Calendar) : String;
+	@:overload @:public @:static public static function printDate(val : java.util.Calendar) : String;
 	
 	/**
 	* <p>
@@ -482,7 +482,7 @@ extern class DatatypeConverter
 	* @return
 	*     A string containing a lexical representation of xsd:AnySimpleType
 	*/
-	@:overload public static function printAnySimpleType(val : String) : String;
+	@:overload @:public @:static public static function printAnySimpleType(val : String) : String;
 	
 	
 }

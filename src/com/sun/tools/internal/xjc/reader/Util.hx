@@ -31,15 +31,15 @@ extern class Util
 	* @throws IOException
 	*      if the parameter is neither.
 	*/
-	@:overload public static function getFileOrURL(fileOrURL : String) : Dynamic;
+	@:overload @:public @:static public static function getFileOrURL(fileOrURL : String) : Dynamic;
 	
 	/**
 	* Gets an InputSource from a string, which contains either
 	* a file name or an URL.
 	*/
-	@:overload public static function getInputSource(fileOrURL : String) : org.xml.sax.InputSource;
+	@:overload @:public @:static public static function getInputSource(fileOrURL : String) : org.xml.sax.InputSource;
 	
-	@:overload public static function escapeSpace(url : String) : String;
+	@:overload @:public @:static public static function escapeSpace(url : String) : String;
 	
 	
 }

@@ -35,7 +35,7 @@ extern interface ItemSelectable
 	* Returns the selected items or <code>null</code> if no
 	* items are selected.
 	*/
-	@:overload public function getSelectedObjects() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getSelectedObjects() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Adds a listener to receive item events when the state of an item is
@@ -46,7 +46,7 @@ extern interface ItemSelectable
 	* @param    l the listener to receive events
 	* @see ItemEvent
 	*/
-	@:overload public function addItemListener(l : java.awt.event.ItemListener) : Void;
+	@:overload @:public public function addItemListener(l : java.awt.event.ItemListener) : Void;
 	
 	/**
 	* Removes an item listener.
@@ -56,7 +56,7 @@ extern interface ItemSelectable
 	* @param   l the listener being removed
 	* @see ItemEvent
 	*/
-	@:overload public function removeItemListener(l : java.awt.event.ItemListener) : Void;
+	@:overload @:public public function removeItemListener(l : java.awt.event.ItemListener) : Void;
 	
 	
 }

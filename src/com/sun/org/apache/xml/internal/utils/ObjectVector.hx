@@ -34,78 +34,78 @@ package com.sun.org.apache.xml.internal.utils;
 extern class ObjectVector implements java.lang.Cloneable
 {
 	/** Size of blocks to allocate          */
-	private var m_blocksize : Int;
+	@:protected private var m_blocksize : Int;
 	
 	/** Array of objects          */
-	private var m_map : java.NativeArray<Dynamic>;
+	@:protected private var m_map : java.NativeArray<Dynamic>;
 	
 	/** Number of ints in array          */
-	private var m_firstFree : Int;
+	@:protected private var m_firstFree : Int;
 	
 	/** Size of array          */
-	private var m_mapSize : Int;
+	@:protected private var m_mapSize : Int;
 	
 	/**
 	* Default constructor.  Note that the default
 	* block size is very small, for small lists.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a IntVector, using the given block size.
 	*
 	* @param blocksize Size of block to allocate
 	*/
-	@:overload public function new(blocksize : Int) : Void;
+	@:overload @:public public function new(blocksize : Int) : Void;
 	
 	/**
 	* Construct a IntVector, using the given block size.
 	*
 	* @param blocksize Size of block to allocate
 	*/
-	@:overload public function new(blocksize : Int, increaseSize : Int) : Void;
+	@:overload @:public public function new(blocksize : Int, increaseSize : Int) : Void;
 	
 	/**
 	* Copy constructor for ObjectVector
 	*
 	* @param v Existing ObjectVector to copy
 	*/
-	@:overload public function new(v : com.sun.org.apache.xml.internal.utils.ObjectVector) : Void;
+	@:overload @:public public function new(v : com.sun.org.apache.xml.internal.utils.ObjectVector) : Void;
 	
 	/**
 	* Get the length of the list.
 	*
 	* @return length of the list
 	*/
-	@:overload @:final public function size() : Int;
+	@:overload @:public @:final public function size() : Int;
 	
 	/**
 	* Get the length of the list.
 	*
 	* @return length of the list
 	*/
-	@:overload @:final public function setSize(sz : Int) : Void;
+	@:overload @:public @:final public function setSize(sz : Int) : Void;
 	
 	/**
 	* Append an object onto the vector.
 	*
 	* @param value Object to add to the list
 	*/
-	@:overload @:final public function addElement(value : Dynamic) : Void;
+	@:overload @:public @:final public function addElement(value : Dynamic) : Void;
 	
 	/**
 	* Append several Object values onto the vector.
 	*
 	* @param value Object to add to the list
 	*/
-	@:overload @:final public function addElements(value : Dynamic, numberOfElements : Int) : Void;
+	@:overload @:public @:final public function addElements(value : Dynamic, numberOfElements : Int) : Void;
 	
 	/**
 	* Append several slots onto the vector, but do not set the values.
 	*
 	* @param numberOfElements number of slots to append
 	*/
-	@:overload @:final public function addElements(numberOfElements : Int) : Void;
+	@:overload @:public @:final public function addElements(numberOfElements : Int) : Void;
 	
 	/**
 	* Inserts the specified object in this vector at the specified index.
@@ -116,12 +116,12 @@ extern class ObjectVector implements java.lang.Cloneable
 	* @param value Object to insert
 	* @param at Index of where to insert
 	*/
-	@:overload @:final public function insertElementAt(value : Dynamic, at : Int) : Void;
+	@:overload @:public @:final public function insertElementAt(value : Dynamic, at : Int) : Void;
 	
 	/**
 	* Remove all elements objects from the list.
 	*/
-	@:overload @:final public function removeAllElements() : Void;
+	@:overload @:public @:final public function removeAllElements() : Void;
 	
 	/**
 	* Removes the first occurrence of the argument from this vector.
@@ -134,7 +134,7 @@ extern class ObjectVector implements java.lang.Cloneable
 	*
 	* @return True if the object was removed, false if it was not found
 	*/
-	@:overload @:final public function removeElement(s : Dynamic) : Bool;
+	@:overload @:public @:final public function removeElement(s : Dynamic) : Bool;
 	
 	/**
 	* Deletes the component at the specified index. Each component in
@@ -144,7 +144,7 @@ extern class ObjectVector implements java.lang.Cloneable
 	*
 	* @param i index of where to remove an object
 	*/
-	@:overload @:final public function removeElementAt(i : Int) : Void;
+	@:overload @:public @:final public function removeElementAt(i : Int) : Void;
 	
 	/**
 	* Sets the component at the specified index of this vector to be the
@@ -156,7 +156,7 @@ extern class ObjectVector implements java.lang.Cloneable
 	* @param value object to set
 	* @param index Index of where to set the object
 	*/
-	@:overload @:final public function setElementAt(value : Dynamic, index : Int) : Void;
+	@:overload @:public @:final public function setElementAt(value : Dynamic, index : Int) : Void;
 	
 	/**
 	* Get the nth element.
@@ -165,7 +165,7 @@ extern class ObjectVector implements java.lang.Cloneable
 	*
 	* @return object at given index
 	*/
-	@:overload @:final public function elementAt(i : Int) : Dynamic;
+	@:overload @:public @:final public function elementAt(i : Int) : Dynamic;
 	
 	/**
 	* Tell if the table contains the given Object.
@@ -174,7 +174,7 @@ extern class ObjectVector implements java.lang.Cloneable
 	*
 	* @return true if the object is in the list
 	*/
-	@:overload @:final public function contains(s : Dynamic) : Bool;
+	@:overload @:public @:final public function contains(s : Dynamic) : Bool;
 	
 	/**
 	* Searches for the first occurence of the given argument,
@@ -187,7 +187,7 @@ extern class ObjectVector implements java.lang.Cloneable
 	* argument in this vector at position index or later in the
 	* vector; returns -1 if the object is not found.
 	*/
-	@:overload @:final public function indexOf(elem : Dynamic, index : Int) : Int;
+	@:overload @:public @:final public function indexOf(elem : Dynamic, index : Int) : Int;
 	
 	/**
 	* Searches for the first occurence of the given argument,
@@ -199,7 +199,7 @@ extern class ObjectVector implements java.lang.Cloneable
 	* argument in this vector at position index or later in the
 	* vector; returns -1 if the object is not found.
 	*/
-	@:overload @:final public function indexOf(elem : Dynamic) : Int;
+	@:overload @:public @:final public function indexOf(elem : Dynamic) : Int;
 	
 	/**
 	* Searches for the first occurence of the given argument,
@@ -211,21 +211,21 @@ extern class ObjectVector implements java.lang.Cloneable
 	* argument in this vector at position index or later in the
 	* vector; returns -1 if the object is not found.
 	*/
-	@:overload @:final public function lastIndexOf(elem : Dynamic) : Int;
+	@:overload @:public @:final public function lastIndexOf(elem : Dynamic) : Int;
 	
 	/*
 	* Reset the array to the supplied size.
 	*
 	* @param size
 	*/
-	@:overload @:final public function setToSize(size : Int) : Void;
+	@:overload @:public @:final public function setToSize(size : Int) : Void;
 	
 	/**
 	* Returns clone of current ObjectVector
 	*
 	* @return clone of current ObjectVector
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

@@ -25,12 +25,12 @@ package sun.applet;
 */
 @:internal extern class AppletImageRef extends sun.misc.Ref
 {
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* Reconsitute the image.  Only called when the ref has been flushed.
 	*/
-	@:overload override public function reconstitute() : Dynamic;
+	@:overload @:public override public function reconstitute() : Dynamic;
 	
 	
 }

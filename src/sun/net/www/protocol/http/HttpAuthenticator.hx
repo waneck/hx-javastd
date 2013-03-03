@@ -49,7 +49,7 @@ extern interface HttpAuthenticator
 	* <-- HTTP/1.0 200 OK
 	* <B> YAY!!!</B>
 	*/
-	@:overload public function authString(u : java.net.URL, scheme : String, realm : String) : String;
+	@:overload @:public public function authString(u : java.net.URL, scheme : String, realm : String) : String;
 	
 	
 }

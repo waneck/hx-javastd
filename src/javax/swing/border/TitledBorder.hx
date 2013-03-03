@@ -53,79 +53,79 @@ extern class TitledBorder extends javax.swing.border.AbstractBorder
 	* @author David Kloba
 	* @author Amy Fowler
 	*/
-	private var title : String;
+	@:protected private var title : String;
 	
-	private var border : javax.swing.border.Border;
+	@:protected private var border : javax.swing.border.Border;
 	
-	private var titlePosition : Int;
+	@:protected private var titlePosition : Int;
 	
-	private var titleJustification : Int;
+	@:protected private var titleJustification : Int;
 	
-	private var titleFont : java.awt.Font;
+	@:protected private var titleFont : java.awt.Font;
 	
-	private var titleColor : java.awt.Color;
+	@:protected private var titleColor : java.awt.Color;
 	
 	/**
 	* Use the default vertical orientation for the title text.
 	*/
-	public static var DEFAULT_POSITION(default, null) : Int;
+	@:static @:public @:final public static var DEFAULT_POSITION(default, null) : Int;
 	
 	/** Position the title above the border's top line. */
-	public static var ABOVE_TOP(default, null) : Int;
+	@:static @:public @:final public static var ABOVE_TOP(default, null) : Int;
 	
 	/** Position the title in the middle of the border's top line. */
-	public static var TOP(default, null) : Int;
+	@:static @:public @:final public static var TOP(default, null) : Int;
 	
 	/** Position the title below the border's top line. */
-	public static var BELOW_TOP(default, null) : Int;
+	@:static @:public @:final public static var BELOW_TOP(default, null) : Int;
 	
 	/** Position the title above the border's bottom line. */
-	public static var ABOVE_BOTTOM(default, null) : Int;
+	@:static @:public @:final public static var ABOVE_BOTTOM(default, null) : Int;
 	
 	/** Position the title in the middle of the border's bottom line. */
-	public static var BOTTOM(default, null) : Int;
+	@:static @:public @:final public static var BOTTOM(default, null) : Int;
 	
 	/** Position the title below the border's bottom line. */
-	public static var BELOW_BOTTOM(default, null) : Int;
+	@:static @:public @:final public static var BELOW_BOTTOM(default, null) : Int;
 	
 	/**
 	* Use the default justification for the title text.
 	*/
-	public static var DEFAULT_JUSTIFICATION(default, null) : Int;
+	@:static @:public @:final public static var DEFAULT_JUSTIFICATION(default, null) : Int;
 	
 	/** Position title text at the left side of the border line. */
-	public static var LEFT(default, null) : Int;
+	@:static @:public @:final public static var LEFT(default, null) : Int;
 	
 	/** Position title text in the center of the border line. */
-	public static var CENTER(default, null) : Int;
+	@:static @:public @:final public static var CENTER(default, null) : Int;
 	
 	/** Position title text at the right side of the border line. */
-	public static var RIGHT(default, null) : Int;
+	@:static @:public @:final public static var RIGHT(default, null) : Int;
 	
 	/** Position title text at the left side of the border line
 	*  for left to right orientation, at the right side of the
 	*  border line for right to left orientation.
 	*/
-	public static var LEADING(default, null) : Int;
+	@:static @:public @:final public static var LEADING(default, null) : Int;
 	
 	/** Position title text at the right side of the border line
 	*  for left to right orientation, at the left side of the
 	*  border line for right to left orientation.
 	*/
-	public static var TRAILING(default, null) : Int;
+	@:static @:public @:final public static var TRAILING(default, null) : Int;
 	
-	private static var EDGE_SPACING(default, null) : Int;
+	@:static @:protected @:final private static var EDGE_SPACING(default, null) : Int;
 	
-	private static var TEXT_SPACING(default, null) : Int;
+	@:static @:protected @:final private static var TEXT_SPACING(default, null) : Int;
 	
-	private static var TEXT_INSET_H(default, null) : Int;
+	@:static @:protected @:final private static var TEXT_INSET_H(default, null) : Int;
 	
 	/**
 	* Creates a TitledBorder instance.
 	*
 	* @param title  the title the border should display
 	*/
-	@:overload public function new(title : String) : Void;
+	@:overload @:public public function new(title : String) : Void;
 	
 	/**
 	* Creates a TitledBorder instance with the specified border
@@ -133,7 +133,7 @@ extern class TitledBorder extends javax.swing.border.AbstractBorder
 	*
 	* @param border  the border
 	*/
-	@:overload public function new(border : javax.swing.border.Border) : Void;
+	@:overload @:public public function new(border : javax.swing.border.Border) : Void;
 	
 	/**
 	* Creates a TitledBorder instance with the specified border
@@ -142,7 +142,7 @@ extern class TitledBorder extends javax.swing.border.AbstractBorder
 	* @param border  the border
 	* @param title  the title the border should display
 	*/
-	@:overload public function new(border : javax.swing.border.Border, title : String) : Void;
+	@:overload @:public public function new(border : javax.swing.border.Border, title : String) : Void;
 	
 	/**
 	* Creates a TitledBorder instance with the specified border,
@@ -153,7 +153,7 @@ extern class TitledBorder extends javax.swing.border.AbstractBorder
 	* @param titleJustification the justification for the title
 	* @param titlePosition the position for the title
 	*/
-	@:overload public function new(border : javax.swing.border.Border, title : String, titleJustification : Int, titlePosition : Int) : Void;
+	@:overload @:public public function new(border : javax.swing.border.Border, title : String, titleJustification : Int, titlePosition : Int) : Void;
 	
 	/**
 	* Creates a TitledBorder instance with the specified border,
@@ -165,7 +165,7 @@ extern class TitledBorder extends javax.swing.border.AbstractBorder
 	* @param titlePosition the position for the title
 	* @param titleFont the font for rendering the title
 	*/
-	@:overload public function new(border : javax.swing.border.Border, title : String, titleJustification : Int, titlePosition : Int, titleFont : java.awt.Font) : Void;
+	@:overload @:public public function new(border : javax.swing.border.Border, title : String, titleJustification : Int, titlePosition : Int, titleFont : java.awt.Font) : Void;
 	
 	/**
 	* Creates a TitledBorder instance with the specified border,
@@ -179,7 +179,7 @@ extern class TitledBorder extends javax.swing.border.AbstractBorder
 	* @param titleFont the font of the title
 	* @param titleColor the color of the title
 	*/
-	@:overload public function new(border : javax.swing.border.Border, title : String, titleJustification : Int, titlePosition : Int, titleFont : java.awt.Font, titleColor : java.awt.Color) : Void;
+	@:overload @:public public function new(border : javax.swing.border.Border, title : String, titleJustification : Int, titlePosition : Int, titleFont : java.awt.Font, titleColor : java.awt.Color) : Void;
 	
 	/**
 	* Paints the border for the specified component with the
@@ -191,97 +191,97 @@ extern class TitledBorder extends javax.swing.border.AbstractBorder
 	* @param width the width of the painted border
 	* @param height the height of the painted border
 	*/
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Reinitialize the insets parameter with this Border's current Insets.
 	* @param c the component for which this border insets value applies
 	* @param insets the object to be reinitialized
 	*/
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* Returns whether or not the border is opaque.
 	*/
-	@:overload override public function isBorderOpaque() : Bool;
+	@:overload @:public override public function isBorderOpaque() : Bool;
 	
 	/**
 	* Returns the title of the titled border.
 	*
 	* @return the title of the titled border
 	*/
-	@:overload public function getTitle() : String;
+	@:overload @:public public function getTitle() : String;
 	
 	/**
 	* Returns the border of the titled border.
 	*
 	* @return the border of the titled border
 	*/
-	@:overload public function getBorder() : javax.swing.border.Border;
+	@:overload @:public public function getBorder() : javax.swing.border.Border;
 	
 	/**
 	* Returns the title-position of the titled border.
 	*
 	* @return the title-position of the titled border
 	*/
-	@:overload public function getTitlePosition() : Int;
+	@:overload @:public public function getTitlePosition() : Int;
 	
 	/**
 	* Returns the title-justification of the titled border.
 	*
 	* @return the title-justification of the titled border
 	*/
-	@:overload public function getTitleJustification() : Int;
+	@:overload @:public public function getTitleJustification() : Int;
 	
 	/**
 	* Returns the title-font of the titled border.
 	*
 	* @return the title-font of the titled border
 	*/
-	@:overload public function getTitleFont() : java.awt.Font;
+	@:overload @:public public function getTitleFont() : java.awt.Font;
 	
 	/**
 	* Returns the title-color of the titled border.
 	*
 	* @return the title-color of the titled border
 	*/
-	@:overload public function getTitleColor() : java.awt.Color;
+	@:overload @:public public function getTitleColor() : java.awt.Color;
 	
 	/**
 	* Sets the title of the titled border.
 	* @param title  the title for the border
 	*/
-	@:overload public function setTitle(title : String) : Void;
+	@:overload @:public public function setTitle(title : String) : Void;
 	
 	/**
 	* Sets the border of the titled border.
 	* @param border the border
 	*/
-	@:overload public function setBorder(border : javax.swing.border.Border) : Void;
+	@:overload @:public public function setBorder(border : javax.swing.border.Border) : Void;
 	
 	/**
 	* Sets the title-position of the titled border.
 	* @param titlePosition the position for the border
 	*/
-	@:overload public function setTitlePosition(titlePosition : Int) : Void;
+	@:overload @:public public function setTitlePosition(titlePosition : Int) : Void;
 	
 	/**
 	* Sets the title-justification of the titled border.
 	* @param titleJustification the justification for the border
 	*/
-	@:overload public function setTitleJustification(titleJustification : Int) : Void;
+	@:overload @:public public function setTitleJustification(titleJustification : Int) : Void;
 	
 	/**
 	* Sets the title-font of the titled border.
 	* @param titleFont the font for the border title
 	*/
-	@:overload public function setTitleFont(titleFont : java.awt.Font) : Void;
+	@:overload @:public public function setTitleFont(titleFont : java.awt.Font) : Void;
 	
 	/**
 	* Sets the title-color of the titled border.
 	* @param titleColor the color for the border title
 	*/
-	@:overload public function setTitleColor(titleColor : java.awt.Color) : Void;
+	@:overload @:public public function setTitleColor(titleColor : java.awt.Color) : Void;
 	
 	/**
 	* Returns the minimum dimensions this border requires
@@ -289,7 +289,7 @@ extern class TitledBorder extends javax.swing.border.AbstractBorder
 	* @param c the component where this border will be drawn
 	* @return the {@code Dimension} object
 	*/
-	@:overload public function getMinimumSize(c : java.awt.Component) : java.awt.Dimension;
+	@:overload @:public public function getMinimumSize(c : java.awt.Component) : java.awt.Dimension;
 	
 	/**
 	* Returns the baseline.
@@ -299,7 +299,7 @@ extern class TitledBorder extends javax.swing.border.AbstractBorder
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaseline(c : java.awt.Component, width : Int, height : Int) : Int;
+	@:require(java6) @:overload @:public override public function getBaseline(c : java.awt.Component, width : Int, height : Int) : Int;
 	
 	/**
 	* Returns an enum indicating how the baseline of the border
@@ -309,9 +309,9 @@ extern class TitledBorder extends javax.swing.border.AbstractBorder
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaselineResizeBehavior(c : java.awt.Component) : java.awt.Component.Component_BaselineResizeBehavior;
+	@:require(java6) @:overload @:public override public function getBaselineResizeBehavior(c : java.awt.Component) : java.awt.Component.Component_BaselineResizeBehavior;
 	
-	@:overload private function getFont(c : java.awt.Component) : java.awt.Font;
+	@:overload @:protected private function getFont(c : java.awt.Component) : java.awt.Font;
 	
 	
 }

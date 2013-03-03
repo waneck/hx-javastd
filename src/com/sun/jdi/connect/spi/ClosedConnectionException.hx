@@ -49,7 +49,7 @@ package com.sun.jdi.connect.spi;
 	* Constructs a <tt>ClosedConnectionException</tt> with no detail
 	* message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <tt>ClosedConnectionException</tt> with the
@@ -57,7 +57,7 @@ package com.sun.jdi.connect.spi;
 	*
 	* @param message the detail message pertaining to this exception.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

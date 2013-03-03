@@ -28,14 +28,14 @@ package javax.swing.plaf.synth;
 	/**
 	* Used to indicate the lookup should be done based on Component name.
 	*/
-	public static var NAME(default, null) : Int;
+	@:public @:static @:final public static var NAME(default, null) : Int;
 	
 	/**
 	* Used to indicate the lookup should be done based on region.
 	*/
-	public static var REGION(default, null) : Int;
+	@:public @:static @:final public static var REGION(default, null) : Int;
 	
-	@:overload @:synchronized public function addStyle(style : sun.swing.plaf.synth.DefaultSynthStyle, path : String, type : Int) : Void;
+	@:overload @:public @:synchronized public function addStyle(style : sun.swing.plaf.synth.DefaultSynthStyle, path : String, type : Int) : Void;
 	
 	/**
 	* Returns the style for the specified Component.
@@ -43,7 +43,7 @@ package javax.swing.plaf.synth;
 	* @param c Component asking for
 	* @param id ID of the Component
 	*/
-	@:overload @:synchronized override public function getStyle(c : javax.swing.JComponent, id : javax.swing.plaf.synth.Region) : javax.swing.plaf.synth.SynthStyle;
+	@:overload @:public @:synchronized override public function getStyle(c : javax.swing.JComponent, id : javax.swing.plaf.synth.Region) : javax.swing.plaf.synth.SynthStyle;
 	
 	
 }

@@ -25,25 +25,25 @@ package com.sun.corba.se.impl.orbutil.fsm;
 */
 extern class StateEngineImpl implements com.sun.corba.se.spi.orbutil.fsm.StateEngine
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function add(oldState : com.sun.corba.se.spi.orbutil.fsm.State, input : com.sun.corba.se.spi.orbutil.fsm.Input, guard : com.sun.corba.se.spi.orbutil.fsm.Guard, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
+	@:overload @:public public function add(oldState : com.sun.corba.se.spi.orbutil.fsm.State, input : com.sun.corba.se.spi.orbutil.fsm.Input, guard : com.sun.corba.se.spi.orbutil.fsm.Guard, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
 	
-	@:overload public function add(oldState : com.sun.corba.se.spi.orbutil.fsm.State, input : com.sun.corba.se.spi.orbutil.fsm.Input, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
+	@:overload @:public public function add(oldState : com.sun.corba.se.spi.orbutil.fsm.State, input : com.sun.corba.se.spi.orbutil.fsm.Input, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
 	
-	@:overload public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
+	@:overload @:public public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
 	
-	@:overload public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
+	@:overload @:public public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
 	
-	@:overload public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
+	@:overload @:public public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
 	
-	@:overload public function done() : Void;
+	@:overload @:public public function done() : Void;
 	
-	@:overload public function setDefaultAction(act : com.sun.corba.se.spi.orbutil.fsm.Action) : Void;
+	@:overload @:public public function setDefaultAction(act : com.sun.corba.se.spi.orbutil.fsm.Action) : Void;
 	
-	@:overload public function doIt(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input, debug : Bool) : Void;
+	@:overload @:public public function doIt(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input, debug : Bool) : Void;
 	
-	@:overload public function makeFSM(startState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.FSM;
+	@:overload @:public public function makeFSM(startState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.FSM;
 	
 	
 }

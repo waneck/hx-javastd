@@ -27,33 +27,33 @@ package sun.nio.cs.ext;
 */
 extern class EUC_JP_Open extends java.nio.charset.Charset implements sun.nio.cs.HistoricallyNamedCharset
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function historicalName() : String;
+	@:overload @:public public function historicalName() : String;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	
 }
 @:native('sun$nio$cs$ext$EUC_JP_Open$Decoder') @:internal extern class EUC_JP_Open_Decoder extends sun.nio.cs.ext.EUC_JP.EUC_JP_Decoder
 {
-	private var REPLACE_CHAR(default, null) : java.StdTypes.Char16;
+	@:protected @:final private var REPLACE_CHAR(default, null) : java.StdTypes.Char16;
 	
-	@:overload override private function decode0212(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
+	@:overload @:protected override private function decode0212(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
 	
-	@:overload override private function decodeDouble(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
+	@:overload @:protected override private function decodeDouble(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
 	
 	
 }
 @:native('sun$nio$cs$ext$EUC_JP_Open$Encoder') @:internal extern class EUC_JP_Open_Encoder extends sun.nio.cs.ext.EUC_JP.EUC_JP_Encoder
 {
-	@:overload override private function encodeSingle(inputChar : java.StdTypes.Char16, outputByte : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:protected override private function encodeSingle(inputChar : java.StdTypes.Char16, outputByte : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload override private function encodeDouble(ch : java.StdTypes.Char16) : Int;
+	@:overload @:protected override private function encodeDouble(ch : java.StdTypes.Char16) : Int;
 	
 	
 }

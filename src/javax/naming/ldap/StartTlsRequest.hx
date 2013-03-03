@@ -29,19 +29,19 @@ extern class StartTlsRequest implements javax.naming.ldap.ExtendedRequest
 	* The StartTLS extended request's assigned object identifier
 	* is 1.3.6.1.4.1.1466.20037.
 	*/
-	public static var OID(default, null) : String;
+	@:public @:static @:final public static var OID(default, null) : String;
 	
 	/**
 	* Constructs a StartTLS extended request.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Retrieves the StartTLS request's object identifier string.
 	*
 	* @return The object identifier string, "1.3.6.1.4.1.1466.20037".
 	*/
-	@:overload public function getID() : String;
+	@:overload @:public public function getID() : String;
 	
 	/**
 	* Retrieves the StartTLS request's ASN.1 BER encoded value.
@@ -50,7 +50,7 @@ extern class StartTlsRequest implements javax.naming.ldap.ExtendedRequest
 	*
 	* @return The null value.
 	*/
-	@:overload public function getEncodedValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncodedValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Creates an extended response object that corresponds to the
@@ -102,7 +102,7 @@ extern class StartTlsRequest implements javax.naming.ldap.ExtendedRequest
 	* @exception        NamingException If a naming exception was encountered
 	*                   while creating the StartTLS extended response object.
 	*/
-	@:overload public function createExtendedResponse(id : String, berValue : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : javax.naming.ldap.ExtendedResponse;
+	@:overload @:public public function createExtendedResponse(id : String, berValue : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : javax.naming.ldap.ExtendedResponse;
 	
 	
 }

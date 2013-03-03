@@ -20,27 +20,27 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 */
 extern class BMPattern
 {
-	@:overload public function new(pat : String, ignoreCase : Bool) : Void;
+	@:overload @:public public function new(pat : String, ignoreCase : Bool) : Void;
 	
-	@:overload public function new(pat : String, tableSize : Int, ignoreCase : Bool) : Void;
+	@:overload @:public public function new(pat : String, tableSize : Int, ignoreCase : Bool) : Void;
 	
 	/**
 	*
 	* @return -1 if <var>iterator</var> does not contain this pattern.
 	*/
-	@:overload public function matches(iterator : java.text.CharacterIterator, start : Int, limit : Int) : Int;
+	@:overload @:public public function matches(iterator : java.text.CharacterIterator, start : Int, limit : Int) : Int;
 	
 	/**
 	*
 	* @return -1 if <var>str</var> does not contain this pattern.
 	*/
-	@:overload public function matches(str : String, start : Int, limit : Int) : Int;
+	@:overload @:public public function matches(str : String, start : Int, limit : Int) : Int;
 	
 	/**
 	*
 	* @return -1 if <var>chars</char> does not contain this pattern.
 	*/
-	@:overload public function matches(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : Int;
+	@:overload @:public public function matches(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : Int;
 	
 	
 }

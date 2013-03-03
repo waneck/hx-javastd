@@ -201,18 +201,18 @@ extern class Compile
 	* checked before executing that code.
 	* <br><br>
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
-	@:overload private function factories() : com.sun.tools.corba.se.idl.Factories;
+	@:overload @:protected private function factories() : com.sun.tools.corba.se.idl.Factories;
 	
-	@:overload private function registerPragma(handler : com.sun.tools.corba.se.idl.PragmaHandler) : Void;
+	@:overload @:protected private function registerPragma(handler : com.sun.tools.corba.se.idl.PragmaHandler) : Void;
 	
 	/**
 	* Initialize the framework.
 	**/
-	@:overload private function init(args : java.NativeArray<String>) : Void;
+	@:overload @:protected private function init(args : java.NativeArray<String>) : Void;
 	
 	/**
 	* Parse the IDL file and return an enumeration of the symbols to be
@@ -220,29 +220,29 @@ extern class Compile
 	* SymtabEntry.  If any errors were encountered during parsing, null
 	* will be returned.
 	**/
-	@:overload private function parse() : java.util.Enumeration<Dynamic>;
+	@:overload @:protected private function parse() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Invoke the generators.
 	**/
-	@:overload private function generate() : Void;
+	@:overload @:protected private function generate() : Void;
 	
 	/**
 	* Start the parse/code generation process.  This method calls init,
 	* parse, generate.  If more control is desired, rather than call start,
 	* those three methods could be called explicitly.
 	**/
-	@:overload public function start(args : java.NativeArray<String>) : Void;
+	@:overload @:public public function start(args : java.NativeArray<String>) : Void;
 	
 	/**
 	* Write the version number of this compiler to standard out.
 	**/
-	@:overload private function displayVersion() : Void;
+	@:overload @:protected private function displayVersion() : Void;
 	
 	/**
 	* This is the repository of emitter arguments.
 	**/
-	public var arguments : com.sun.tools.corba.se.idl.Arguments;
+	@:public public var arguments : com.sun.tools.corba.se.idl.Arguments;
 	
 	/**
 	* This hashtable contains <real name, alias> pairs.  It is filled in by
@@ -251,14 +251,14 @@ extern class Compile
 	* an overrideNames entry of <"TRUE", "true">.  NOTE:  Do NOT change this
 	* variable to a new Hash table.  Just add elements to it.
 	**/
-	private var overrideNames : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var overrideNames : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* This is the symbol table.  It will be empty until the parse method
 	* executes.  If errors are encountered, the state of the symbol table
 	* is undefined.
 	**/
-	private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* This is a vector of strings of the form "IDLfile" or <IDLfile>.  It is
@@ -266,7 +266,7 @@ extern class Compile
 	* until the parse method executes.  If errors are encountered, the state
 	* of this vector is undefined.
 	**/
-	private var includes : java.util.Vector<Dynamic>;
+	@:protected private var includes : java.util.Vector<Dynamic>;
 	
 	/**
 	* This is a vector of IncludeEntry's.  It is a list of the files included
@@ -274,7 +274,7 @@ extern class Compile
 	* until the parse method executes.  If errors are encountered, the state of
 	* this vector is undefined.
 	**/
-	private var includeEntries : java.util.Vector<Dynamic>;
+	@:protected private var includeEntries : java.util.Vector<Dynamic>;
 	
 	
 }

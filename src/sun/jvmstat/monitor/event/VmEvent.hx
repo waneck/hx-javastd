@@ -30,14 +30,14 @@ extern class VmEvent extends java.util.EventObject
 	*
 	* @param vm the MonitoredVm source of the event.
 	*/
-	@:overload public function new(vm : sun.jvmstat.monitor.MonitoredVm) : Void;
+	@:overload @:public public function new(vm : sun.jvmstat.monitor.MonitoredVm) : Void;
 	
 	/**
 	* Return the MonitoredVm source of this event.
 	*
 	* @return MonitoredVm - the source of this event.
 	*/
-	@:overload public function getMonitoredVm() : sun.jvmstat.monitor.MonitoredVm;
+	@:overload @:public public function getMonitoredVm() : sun.jvmstat.monitor.MonitoredVm;
 	
 	
 }

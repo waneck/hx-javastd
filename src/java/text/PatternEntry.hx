@@ -40,34 +40,34 @@ package java.text;
 	/**
 	* Gets the current extension, quoted
 	*/
-	@:overload public function appendQuotedExtension(toAddTo : java.lang.StringBuffer) : Void;
+	@:overload @:public public function appendQuotedExtension(toAddTo : java.lang.StringBuffer) : Void;
 	
 	/**
 	* Gets the current chars, quoted
 	*/
-	@:overload public function appendQuotedChars(toAddTo : java.lang.StringBuffer) : Void;
+	@:overload @:public public function appendQuotedChars(toAddTo : java.lang.StringBuffer) : Void;
 	
 	/**
 	* WARNING this is used for searching in a Vector.
 	* Because Vector.indexOf doesn't take a comparator,
 	* this method is ill-defined and ignores strength.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* For debugging.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('java$text$PatternEntry$Parser') @:internal extern class PatternEntry_Parser
 {
-	@:overload public function new(pattern : String) : Void;
+	@:overload @:public public function new(pattern : String) : Void;
 	
-	@:overload public function next() : java.text.PatternEntry;
+	@:overload @:public public function next() : java.text.PatternEntry;
 	
 	
 }

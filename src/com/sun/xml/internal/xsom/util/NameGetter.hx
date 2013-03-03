@@ -29,53 +29,53 @@ extern class NameGetter implements com.sun.xml.internal.xsom.visitor.XSFunction<
 	* Initializes a NameGetter so that it will return
 	* messages in the specified locale.
 	*/
-	@:overload public function new(_locale : java.util.Locale) : Void;
+	@:overload @:public public function new(_locale : java.util.Locale) : Void;
 	
 	/**
 	* An instance that gets names in the default locale.
 	* This instance is provided just for convenience.
 	*/
-	public static var theInstance(default, null) : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>;
+	@:public @:final @:static public static var theInstance(default, null) : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>;
 	
 	/**
 	* Gets the name of the specified component in the default locale.
 	* This method is just a wrapper.
 	*/
-	@:overload public static function get(comp : com.sun.xml.internal.xsom.XSComponent) : String;
+	@:overload @:public @:static public static function get(comp : com.sun.xml.internal.xsom.XSComponent) : String;
 	
-	@:overload public function annotation(ann : com.sun.xml.internal.xsom.XSAnnotation) : String;
+	@:overload @:public public function annotation(ann : com.sun.xml.internal.xsom.XSAnnotation) : String;
 	
-	@:overload public function attGroupDecl(decl : com.sun.xml.internal.xsom.XSAttGroupDecl) : String;
+	@:overload @:public public function attGroupDecl(decl : com.sun.xml.internal.xsom.XSAttGroupDecl) : String;
 	
-	@:overload public function attributeUse(use : com.sun.xml.internal.xsom.XSAttributeUse) : String;
+	@:overload @:public public function attributeUse(use : com.sun.xml.internal.xsom.XSAttributeUse) : String;
 	
-	@:overload public function attributeDecl(decl : com.sun.xml.internal.xsom.XSAttributeDecl) : String;
+	@:overload @:public public function attributeDecl(decl : com.sun.xml.internal.xsom.XSAttributeDecl) : String;
 	
-	@:overload public function complexType(type : com.sun.xml.internal.xsom.XSComplexType) : String;
+	@:overload @:public public function complexType(type : com.sun.xml.internal.xsom.XSComplexType) : String;
 	
-	@:overload public function schema(schema : com.sun.xml.internal.xsom.XSSchema) : String;
+	@:overload @:public public function schema(schema : com.sun.xml.internal.xsom.XSSchema) : String;
 	
-	@:overload public function facet(facet : com.sun.xml.internal.xsom.XSFacet) : String;
+	@:overload @:public public function facet(facet : com.sun.xml.internal.xsom.XSFacet) : String;
 	
-	@:overload public function simpleType(simpleType : com.sun.xml.internal.xsom.XSSimpleType) : String;
+	@:overload @:public public function simpleType(simpleType : com.sun.xml.internal.xsom.XSSimpleType) : String;
 	
-	@:overload public function particle(particle : com.sun.xml.internal.xsom.XSParticle) : String;
+	@:overload @:public public function particle(particle : com.sun.xml.internal.xsom.XSParticle) : String;
 	
-	@:overload public function empty(empty : com.sun.xml.internal.xsom.XSContentType) : String;
+	@:overload @:public public function empty(empty : com.sun.xml.internal.xsom.XSContentType) : String;
 	
-	@:overload public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : String;
+	@:overload @:public public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : String;
 	
-	@:overload public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : String;
+	@:overload @:public public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : String;
 	
-	@:overload public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : String;
+	@:overload @:public public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : String;
 	
-	@:overload public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : String;
+	@:overload @:public public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : String;
 	
-	@:overload public function notation(n : com.sun.xml.internal.xsom.XSNotation) : String;
+	@:overload @:public public function notation(n : com.sun.xml.internal.xsom.XSNotation) : String;
 	
-	@:overload public function identityConstraint(decl : com.sun.xml.internal.xsom.XSIdentityConstraint) : String;
+	@:overload @:public public function identityConstraint(decl : com.sun.xml.internal.xsom.XSIdentityConstraint) : String;
 	
-	@:overload public function xpath(xpath : com.sun.xml.internal.xsom.XSXPath) : String;
+	@:overload @:public public function xpath(xpath : com.sun.xml.internal.xsom.XSXPath) : String;
 	
 	
 }

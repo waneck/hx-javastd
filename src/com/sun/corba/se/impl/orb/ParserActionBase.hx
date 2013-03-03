@@ -25,21 +25,21 @@ package com.sun.corba.se.impl.orb;
 */
 extern class ParserActionBase implements com.sun.corba.se.impl.orb.ParserAction
 {
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function new(propertyName : String, prefix : Bool, operation : com.sun.corba.se.spi.orb.Operation, fieldName : String) : Void;
+	@:overload @:public public function new(propertyName : String, prefix : Bool, operation : com.sun.corba.se.spi.orb.Operation, fieldName : String) : Void;
 	
-	@:overload public function getPropertyName() : String;
+	@:overload @:public public function getPropertyName() : String;
 	
-	@:overload public function isPrefix() : Bool;
+	@:overload @:public public function isPrefix() : Bool;
 	
-	@:overload public function getFieldName() : String;
+	@:overload @:public public function getFieldName() : String;
 	
-	@:overload @:abstract public function apply(props : java.util.Properties) : Dynamic;
+	@:overload @:public @:abstract public function apply(props : java.util.Properties) : Dynamic;
 	
-	@:overload private function getOperation() : com.sun.corba.se.spi.orb.Operation;
+	@:overload @:protected private function getOperation() : com.sun.corba.se.spi.orb.Operation;
 	
 	
 }

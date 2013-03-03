@@ -41,7 +41,7 @@ extern interface ReachableExcludes
 	* @return true iff the given field is on the hitlist of excluded
 	*          fields.
 	*/
-	@:overload public function isExcluded(fieldName : String) : Bool;
+	@:overload @:public public function isExcluded(fieldName : String) : Bool;
 	
 	
 }

@@ -35,36 +35,36 @@ extern class CompoundEdit extends javax.swing.undo.AbstractUndoableEdit
 	* The collection of <code>UndoableEdit</code>s
 	* undone/redone en masse by this <code>CompoundEdit</code>.
 	*/
-	private var edits : java.util.Vector<javax.swing.undo.UndoableEdit>;
+	@:protected private var edits : java.util.Vector<javax.swing.undo.UndoableEdit>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sends <code>undo</code> to all contained
 	* <code>UndoableEdits</code> in the reverse of
 	* the order in which they were added.
 	*/
-	@:overload override public function undo() : Void;
+	@:overload @:public override public function undo() : Void;
 	
 	/**
 	* Sends <code>redo</code> to all contained
 	* <code>UndoableEdit</code>s in the order in
 	* which they were added.
 	*/
-	@:overload override public function redo() : Void;
+	@:overload @:public override public function redo() : Void;
 	
 	/**
 	* Returns the last <code>UndoableEdit</code> in
 	* <code>edits</code>, or <code>null</code>
 	* if <code>edits</code> is empty.
 	*/
-	@:overload private function lastEdit() : javax.swing.undo.UndoableEdit;
+	@:overload @:protected private function lastEdit() : javax.swing.undo.UndoableEdit;
 	
 	/**
 	* Sends <code>die</code> to each subedit,
 	* in the reverse of the order that they were added.
 	*/
-	@:overload override public function die() : Void;
+	@:overload @:public override public function die() : Void;
 	
 	/**
 	* If this edit is <code>inProgress</code>,
@@ -81,7 +81,7 @@ extern class CompoundEdit extends javax.swing.undo.AbstractUndoableEdit
 	* @return true if the edit is <code>inProgress</code>;
 	*  otherwise returns false
 	*/
-	@:overload override public function addEdit(anEdit : javax.swing.undo.UndoableEdit) : Bool;
+	@:overload @:public override public function addEdit(anEdit : javax.swing.undo.UndoableEdit) : Bool;
 	
 	/**
 	* Sets <code>inProgress</code> to false.
@@ -89,7 +89,7 @@ extern class CompoundEdit extends javax.swing.undo.AbstractUndoableEdit
 	* @see #canUndo
 	* @see #canRedo
 	*/
-	@:overload public function end() : Void;
+	@:overload @:public public function end() : Void;
 	
 	/**
 	* Returns false if <code>isInProgress</code> or if super
@@ -97,7 +97,7 @@ extern class CompoundEdit extends javax.swing.undo.AbstractUndoableEdit
 	*
 	* @see     #isInProgress
 	*/
-	@:overload override public function canUndo() : Bool;
+	@:overload @:public override public function canUndo() : Bool;
 	
 	/**
 	* Returns false if <code>isInProgress</code> or if super
@@ -105,7 +105,7 @@ extern class CompoundEdit extends javax.swing.undo.AbstractUndoableEdit
 	*
 	* @see     #isInProgress
 	*/
-	@:overload override public function canRedo() : Bool;
+	@:overload @:public override public function canRedo() : Bool;
 	
 	/**
 	* Returns true if this edit is in progress--that is, it has not
@@ -114,14 +114,14 @@ extern class CompoundEdit extends javax.swing.undo.AbstractUndoableEdit
 	*
 	* @see     #end
 	*/
-	@:overload public function isInProgress() : Bool;
+	@:overload @:public public function isInProgress() : Bool;
 	
 	/**
 	* Returns true if any of the <code>UndoableEdit</code>s
 	* in <code>edits</code> do.
 	* Returns false if they all return false.
 	*/
-	@:overload override public function isSignificant() : Bool;
+	@:overload @:public override public function isSignificant() : Bool;
 	
 	/**
 	* Returns <code>getPresentationName</code> from the
@@ -129,7 +129,7 @@ extern class CompoundEdit extends javax.swing.undo.AbstractUndoableEdit
 	* <code>edits</code>. If <code>edits</code> is empty,
 	* calls super.
 	*/
-	@:overload override public function getPresentationName() : String;
+	@:overload @:public override public function getPresentationName() : String;
 	
 	/**
 	* Returns <code>getUndoPresentationName</code>
@@ -137,7 +137,7 @@ extern class CompoundEdit extends javax.swing.undo.AbstractUndoableEdit
 	* added to <code>edits</code>.
 	* If <code>edits</code> is empty, calls super.
 	*/
-	@:overload override public function getUndoPresentationName() : String;
+	@:overload @:public override public function getUndoPresentationName() : String;
 	
 	/**
 	* Returns <code>getRedoPresentationName</code>
@@ -145,7 +145,7 @@ extern class CompoundEdit extends javax.swing.undo.AbstractUndoableEdit
 	* added to <code>edits</code>.
 	* If <code>edits</code> is empty, calls super.
 	*/
-	@:overload override public function getRedoPresentationName() : String;
+	@:overload @:public override public function getRedoPresentationName() : String;
 	
 	/**
 	* Returns a string that displays and identifies this
@@ -153,7 +153,7 @@ extern class CompoundEdit extends javax.swing.undo.AbstractUndoableEdit
 	*
 	* @return a String representation of this object
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

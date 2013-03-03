@@ -45,7 +45,7 @@ extern class Extensions
 	*
 	* NEEDSDOC ($objectName$) @return
 	*/
-	@:overload public static function nodeset(myProcessor : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, rtf : Dynamic) : com.sun.org.apache.xpath.internal.NodeSet;
+	@:overload @:public @:static public static function nodeset(myProcessor : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, rtf : Dynamic) : com.sun.org.apache.xpath.internal.NodeSet;
 	
 	/**
 	* Returns the intersection of two node-sets.
@@ -58,7 +58,7 @@ extern class Extensions
 	* is deprecated. Please use the same function in the EXSLT sets extension
 	* (http://exslt.org/sets).
 	*/
-	@:overload public static function intersection(nl1 : org.w3c.dom.NodeList, nl2 : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function intersection(nl1 : org.w3c.dom.NodeList, nl2 : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
 	
 	/**
 	* Returns the difference between two node-sets.
@@ -71,7 +71,7 @@ extern class Extensions
 	* is deprecated. Please use the same function in the EXSLT sets extension
 	* (http://exslt.org/sets).
 	*/
-	@:overload public static function difference(nl1 : org.w3c.dom.NodeList, nl2 : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function difference(nl1 : org.w3c.dom.NodeList, nl2 : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
 	
 	/**
 	* Returns node-set containing distinct string values.
@@ -85,7 +85,7 @@ extern class Extensions
 	* is deprecated. Please use the same function in the EXSLT sets extension
 	* (http://exslt.org/sets).
 	*/
-	@:overload public static function distinct(nl : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function distinct(nl : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
 	
 	/**
 	* Returns true if both node-sets contain the same set of nodes.
@@ -94,7 +94,7 @@ extern class Extensions
 	* @param nl2 NodeList for second node-set
 	* @return true if nl1 and nl2 contain exactly the same set of nodes.
 	*/
-	@:overload public static function hasSameNodes(nl1 : org.w3c.dom.NodeList, nl2 : org.w3c.dom.NodeList) : Bool;
+	@:overload @:public @:static public static function hasSameNodes(nl1 : org.w3c.dom.NodeList, nl2 : org.w3c.dom.NodeList) : Bool;
 	
 	/**
 	* Returns the result of evaluating the argument as a string containing
@@ -113,7 +113,7 @@ extern class Extensions
 	* is deprecated. Please use the same function in the EXSLT dynamic extension
 	* (http://exslt.org/dynamic).
 	*/
-	@:overload public static function evaluate(myContext : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, xpathExpr : String) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public @:static public static function evaluate(myContext : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, xpathExpr : String) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Returns a NodeSet containing one text node for each token in the first argument.
@@ -128,7 +128,7 @@ extern class Extensions
 	* @param delims The delimiters to use.
 	* @return a NodeSet as described above.
 	*/
-	@:overload public static function tokenize(toTokenize : String, delims : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function tokenize(toTokenize : String, delims : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* Returns a NodeSet containing one text node for each token in the first argument.
@@ -143,7 +143,7 @@ extern class Extensions
 	* @param toTokenize The string to be split into text tokens.
 	* @return a NodeSet as described above.
 	*/
-	@:overload public static function tokenize(toTokenize : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function tokenize(toTokenize : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* Return a Node of basic debugging information from the
@@ -166,7 +166,7 @@ extern class Extensions
 	*                  extension mechanism.  This must be an XPathContext.
 	* @return a Node as described above.
 	*/
-	@:overload public static function checkEnvironment(myContext : com.sun.org.apache.xalan.internal.extensions.ExpressionContext) : org.w3c.dom.Node;
+	@:overload @:public @:static public static function checkEnvironment(myContext : com.sun.org.apache.xalan.internal.extensions.ExpressionContext) : org.w3c.dom.Node;
 	
 	
 }

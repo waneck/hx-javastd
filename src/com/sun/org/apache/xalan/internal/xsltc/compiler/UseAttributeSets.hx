@@ -26,24 +26,24 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Constructur - define initial attribute sets to use
 	*/
-	@:overload public function new(setNames : String, parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public public function new(setNames : String, parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* This method is made public to enable an AttributeSet object to merge
 	* itself with another AttributeSet (including any other AttributeSets
 	* the two may inherit from).
 	*/
-	@:overload public function addAttributeSets(setNames : String) : Void;
+	@:overload @:public public function addAttributeSets(setNames : String) : Void;
 	
 	/**
 	* Do nada.
 	*/
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Generate a call to the method compiled for this attribute set
 	*/
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

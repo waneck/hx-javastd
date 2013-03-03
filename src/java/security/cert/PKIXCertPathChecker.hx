@@ -28,7 +28,7 @@ extern class PKIXCertPathChecker implements java.lang.Cloneable
 	/**
 	* Default constructor.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Initializes the internal state of this <code>PKIXCertPathChecker</code>.
@@ -47,7 +47,7 @@ extern class PKIXCertPathChecker implements java.lang.Cloneable
 	* the specified order; it should never be thrown if the forward flag
 	* is false since reverse checking must be supported
 	*/
-	@:overload @:abstract public function init(forward : Bool) : Void;
+	@:overload @:public @:abstract public function init(forward : Bool) : Void;
 	
 	/**
 	* Indicates if forward checking is supported. Forward checking refers
@@ -58,7 +58,7 @@ extern class PKIXCertPathChecker implements java.lang.Cloneable
 	* @return <code>true</code> if forward checking is supported,
 	* <code>false</code> otherwise
 	*/
-	@:overload @:abstract public function isForwardCheckingSupported() : Bool;
+	@:overload @:public @:abstract public function isForwardCheckingSupported() : Bool;
 	
 	/**
 	* Returns an immutable <code>Set</code> of X.509 certificate extensions
@@ -78,7 +78,7 @@ extern class PKIXCertPathChecker implements java.lang.Cloneable
 	* <code>PKIXCertPathChecker</code>, or <code>null</code> if no
 	* extensions are supported
 	*/
-	@:overload @:abstract public function getSupportedExtensions() : java.util.Set<String>;
+	@:overload @:public @:abstract public function getSupportedExtensions() : java.util.Set<String>;
 	
 	/**
 	* Performs the check(s) on the specified certificate using its internal
@@ -93,7 +93,7 @@ extern class PKIXCertPathChecker implements java.lang.Cloneable
 	* @exception CertPathValidatorException if the specified certificate does
 	* not pass the check
 	*/
-	@:overload @:abstract public function check(cert : java.security.cert.Certificate, unresolvedCritExts : java.util.Collection<String>) : Void;
+	@:overload @:public @:abstract public function check(cert : java.security.cert.Certificate, unresolvedCritExts : java.util.Collection<String>) : Void;
 	
 	/**
 	* Returns a clone of this object. Calls the <code>Object.clone()</code>
@@ -103,7 +103,7 @@ extern class PKIXCertPathChecker implements java.lang.Cloneable
 	*
 	* @return a copy of this <code>PKIXCertPathChecker</code>
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

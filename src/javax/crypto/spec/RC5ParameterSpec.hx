@@ -33,7 +33,7 @@ extern class RC5ParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* @param rounds the number of rounds.
 	* @param wordSize the word size in bits.
 	*/
-	@:overload public function new(version : Int, rounds : Int, wordSize : Int) : Void;
+	@:overload @:public public function new(version : Int, rounds : Int, wordSize : Int) : Void;
 	
 	/**
 	* Constructs a parameter set for RC5 from the given version, number of
@@ -52,7 +52,7 @@ extern class RC5ParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* @exception IllegalArgumentException if <code>iv</code> is
 	* <code>null</code> or <code>(iv.length < 2 * (wordSize / 8))</code>
 	*/
-	@:overload public function new(version : Int, rounds : Int, wordSize : Int, iv : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(version : Int, rounds : Int, wordSize : Int, iv : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs a parameter set for RC5 from the given version, number of
@@ -77,28 +77,28 @@ extern class RC5ParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* <code>null</code> or
 	* <code>(iv.length - offset < 2 * (wordSize / 8))</code>
 	*/
-	@:overload public function new(version : Int, rounds : Int, wordSize : Int, iv : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Void;
+	@:overload @:public public function new(version : Int, rounds : Int, wordSize : Int, iv : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Void;
 	
 	/**
 	* Returns the version.
 	*
 	* @return the version.
 	*/
-	@:overload public function getVersion() : Int;
+	@:overload @:public public function getVersion() : Int;
 	
 	/**
 	* Returns the number of rounds.
 	*
 	* @return the number of rounds.
 	*/
-	@:overload public function getRounds() : Int;
+	@:overload @:public public function getRounds() : Int;
 	
 	/**
 	* Returns the word size in bits.
 	*
 	* @return the word size in bits.
 	*/
-	@:overload public function getWordSize() : Int;
+	@:overload @:public public function getWordSize() : Int;
 	
 	/**
 	* Returns the IV or null if this parameter set does not contain an IV.
@@ -106,7 +106,7 @@ extern class RC5ParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* @return the IV or null if this parameter set does not contain an IV.
 	* Returns a new array each time this method is called.
 	*/
-	@:overload public function getIV() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getIV() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Tests for equality between the specified object and this
@@ -119,13 +119,13 @@ extern class RC5ParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* @return true if the objects are considered equal, false if
 	* <code>obj</code> is null or otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Calculates a hash code value for the object.
 	* Objects that are equal will also have the same hashcode.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

@@ -25,26 +25,26 @@ package sun.management.counter.perf;
 */
 @:internal extern class PerfDataEntry
 {
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function type() : sun.management.counter.perf.PerfDataType;
+	@:overload @:public public function type() : sun.management.counter.perf.PerfDataType;
 	
-	@:overload public function units() : sun.management.counter.Units;
+	@:overload @:public public function units() : sun.management.counter.Units;
 	
-	@:overload public function flags() : Int;
+	@:overload @:public public function flags() : Int;
 	
 	/**
 	* Returns the number of elements in the data.
 	*/
-	@:overload public function vectorLength() : Int;
+	@:overload @:public public function vectorLength() : Int;
 	
-	@:overload public function variability() : sun.management.counter.Variability;
+	@:overload @:public public function variability() : sun.management.counter.Variability;
 	
-	@:overload public function byteData() : java.nio.ByteBuffer;
+	@:overload @:public public function byteData() : java.nio.ByteBuffer;
 	
-	@:overload public function longData() : java.nio.LongBuffer;
+	@:overload @:public public function longData() : java.nio.LongBuffer;
 	
 	
 }

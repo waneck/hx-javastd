@@ -29,7 +29,7 @@ package sun.security.krb5;
 */
 extern class Asn1Exception extends sun.security.krb5.KrbException
 {
-	@:overload public function new(i : Int) : Void;
+	@:overload @:public public function new(i : Int) : Void;
 	
 	
 }

@@ -25,9 +25,9 @@ package sun.security.pkcs11;
 */
 @:internal extern class P11ECKeyFactory extends sun.security.pkcs11.P11KeyFactory
 {
-	@:overload private function engineGeneratePublic(keySpec : java.security.spec.KeySpec) : java.security.PublicKey;
+	@:overload @:protected override private function engineGeneratePublic(keySpec : java.security.spec.KeySpec) : java.security.PublicKey;
 	
-	@:overload private function engineGeneratePrivate(keySpec : java.security.spec.KeySpec) : java.security.PrivateKey;
+	@:overload @:protected override private function engineGeneratePrivate(keySpec : java.security.spec.KeySpec) : java.security.PrivateKey;
 	
 	
 }

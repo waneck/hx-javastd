@@ -30,7 +30,7 @@ package com.sun.media.sound;
 */
 extern interface SoftResampler
 {
-	@:overload public function openStreamer() : com.sun.media.sound.SoftResamplerStreamer;
+	@:overload @:public public function openStreamer() : com.sun.media.sound.SoftResamplerStreamer;
 	
 	
 }

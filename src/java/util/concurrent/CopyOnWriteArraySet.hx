@@ -87,7 +87,7 @@ package java.util.concurrent;
 	/**
 	* Creates an empty set.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a set containing all of the elements of the specified
@@ -96,21 +96,21 @@ package java.util.concurrent;
 	* @param c the collection of elements to initially contain
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload public function new(c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	/**
 	* Returns the number of elements in this set.
 	*
 	* @return the number of elements in this set
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this set contains no elements.
 	*
 	* @return <tt>true</tt> if this set contains no elements
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this set contains the specified element.
@@ -121,7 +121,7 @@ package java.util.concurrent;
 	* @param o element whose presence in this set is to be tested
 	* @return <tt>true</tt> if this set contains the specified element
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns an array containing all of the elements in this set.
@@ -139,7 +139,7 @@ package java.util.concurrent;
 	*
 	* @return an array containing all the elements in this set
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this set; the
@@ -183,13 +183,13 @@ package java.util.concurrent;
 	*         set
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Removes all of the elements from this set.
 	* The set will be empty after this call returns.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Removes the specified element from this set if it is present.
@@ -203,7 +203,7 @@ package java.util.concurrent;
 	* @param o object to be removed from this set, if present
 	* @return <tt>true</tt> if this set contained the specified element
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Adds the specified element to this set if it is not already present.
@@ -217,7 +217,7 @@ package java.util.concurrent;
 	* @return <tt>true</tt> if this set did not already contain the specified
 	*         element
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this set contains all of the elements of the
@@ -230,7 +230,7 @@ package java.util.concurrent;
 	* @throws NullPointerException if the specified collection is null
 	* @see #contains(Object)
 	*/
-	@:overload override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Adds all of the elements in the specified collection to this set if
@@ -245,7 +245,7 @@ package java.util.concurrent;
 	* @throws NullPointerException if the specified collection is null
 	* @see #add(Object)
 	*/
-	@:overload override public function addAll(c : java.util.Collection<E>) : Bool;
+	@:overload @:public override public function addAll(c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Removes from this set all of its elements that are contained in the
@@ -262,7 +262,7 @@ package java.util.concurrent;
 	*         or if the specified collection is null
 	* @see #remove(Object)
 	*/
-	@:overload override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Retains only the elements in this set that are contained in the
@@ -281,7 +281,7 @@ package java.util.concurrent;
 	*         or if the specified collection is null
 	* @see #remove(Object)
 	*/
-	@:overload override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Returns an iterator over the elements contained in this set
@@ -294,7 +294,7 @@ package java.util.concurrent;
 	*
 	* @return an iterator over the elements in this set
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
 	/**
 	* Compares the specified object with this set for equality.
@@ -312,7 +312,7 @@ package java.util.concurrent;
 	* @param o object to be compared for equality with this set
 	* @return {@code true} if the specified object is equal to this set
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
 	
 }

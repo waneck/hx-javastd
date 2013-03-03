@@ -28,7 +28,7 @@ extern interface XSSimpleType extends com.sun.org.apache.xerces.internal.xs.XSSi
 	*
 	* @return   an ID representing the built-in primitive base type
 	*/
-	@:overload public function getPrimitiveKind() : java.StdTypes.Int16;
+	@:overload @:public public function getPrimitiveKind() : java.StdTypes.Int16;
 	
 	/**
 	* validate a given string against this simple type.
@@ -39,7 +39,7 @@ extern interface XSSimpleType extends com.sun.org.apache.xerces.internal.xs.XSSi
 	*
 	* @return              the actual value (QName, Boolean) of the string value
 	*/
-	@:overload public function validate(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext, validatedInfo : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo) : Dynamic;
+	@:overload @:public public function validate(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext, validatedInfo : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo) : Dynamic;
 	
 	/**
 	* validate a given string value, represented by content.toString().
@@ -52,7 +52,7 @@ extern interface XSSimpleType extends com.sun.org.apache.xerces.internal.xs.XSSi
 	*
 	* @return              the actual value (QName, Boolean) of the string value
 	*/
-	@:overload public function validate(content : Dynamic, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext, validatedInfo : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo) : Dynamic;
+	@:overload @:public public function validate(content : Dynamic, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext, validatedInfo : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo) : Dynamic;
 	
 	/**
 	* Validate an actual value against this simple type.
@@ -61,7 +61,7 @@ extern interface XSSimpleType extends com.sun.org.apache.xerces.internal.xs.XSSi
 	* @param validatedInfo used to provide the actual value and member types
 	* @exception InvalidDatatypeValueException  exception for invalid values.
 	*/
-	@:overload public function validate(context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext, validatedInfo : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo) : Void;
+	@:overload @:public public function validate(context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext, validatedInfo : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo) : Void;
 	
 	/**
 	* If this type is created from restriction, then some facets can be applied
@@ -76,7 +76,7 @@ extern interface XSSimpleType extends com.sun.org.apache.xerces.internal.xs.XSSi
 	* @param context       the validation context
 	* @exception InvalidDatatypeFacetException  exception for invalid facet values.
 	*/
-	@:overload public function applyFacets(facets : com.sun.org.apache.xerces.internal.impl.dv.XSFacets, presentFacet : java.StdTypes.Int16, fixedFacet : java.StdTypes.Int16, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
+	@:overload @:public public function applyFacets(facets : com.sun.org.apache.xerces.internal.impl.dv.XSFacets, presentFacet : java.StdTypes.Int16, fixedFacet : java.StdTypes.Int16, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
 	
 	/**
 	* Check whether two actual values are equal.
@@ -85,7 +85,7 @@ extern interface XSSimpleType extends com.sun.org.apache.xerces.internal.xs.XSSi
 	* @param value2  the second value
 	* @return        true if the two value are equal
 	*/
-	@:overload public function isEqual(value1 : Dynamic, value2 : Dynamic) : Bool;
+	@:overload @:public public function isEqual(value1 : Dynamic, value2 : Dynamic) : Bool;
 	
 	/**
 	* Check whether this type is or is derived from ID.
@@ -95,7 +95,7 @@ extern interface XSSimpleType extends com.sun.org.apache.xerces.internal.xs.XSSi
 	*
 	* @return  whether this simple type is or is derived from ID.
 	*/
-	@:overload public function isIDType() : Bool;
+	@:overload @:public public function isIDType() : Bool;
 	
 	/**
 	* Return the whitespace corresponding to this datatype.
@@ -104,7 +104,7 @@ extern interface XSSimpleType extends com.sun.org.apache.xerces.internal.xs.XSSi
 	* @exception DatatypeException
 	*                   union datatypes don't have whitespace facet associated with them
 	*/
-	@:overload public function getWhitespace() : java.StdTypes.Int16;
+	@:overload @:public public function getWhitespace() : java.StdTypes.Int16;
 	
 	
 }

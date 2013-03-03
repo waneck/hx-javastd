@@ -25,25 +25,25 @@ package sun.security.jgss.spnego;
 */
 extern class SpNegoMechFactory implements sun.security.jgss.spi.MechanismFactory
 {
-	@:overload public function new(caller : sun.security.jgss.GSSCaller) : Void;
+	@:overload @:public public function new(caller : sun.security.jgss.GSSCaller) : Void;
 	
-	@:overload public function getNameElement(nameStr : String, nameType : org.ietf.jgss.Oid) : sun.security.jgss.spi.GSSNameSpi;
+	@:overload @:public public function getNameElement(nameStr : String, nameType : org.ietf.jgss.Oid) : sun.security.jgss.spi.GSSNameSpi;
 	
-	@:overload public function getNameElement(name : java.NativeArray<java.StdTypes.Int8>, nameType : org.ietf.jgss.Oid) : sun.security.jgss.spi.GSSNameSpi;
+	@:overload @:public public function getNameElement(name : java.NativeArray<java.StdTypes.Int8>, nameType : org.ietf.jgss.Oid) : sun.security.jgss.spi.GSSNameSpi;
 	
-	@:overload public function getCredentialElement(name : sun.security.jgss.spi.GSSNameSpi, initLifetime : Int, acceptLifetime : Int, usage : Int) : sun.security.jgss.spi.GSSCredentialSpi;
+	@:overload @:public public function getCredentialElement(name : sun.security.jgss.spi.GSSNameSpi, initLifetime : Int, acceptLifetime : Int, usage : Int) : sun.security.jgss.spi.GSSCredentialSpi;
 	
-	@:overload public function getMechanismContext(peer : sun.security.jgss.spi.GSSNameSpi, myInitiatorCred : sun.security.jgss.spi.GSSCredentialSpi, lifetime : Int) : sun.security.jgss.spi.GSSContextSpi;
+	@:overload @:public public function getMechanismContext(peer : sun.security.jgss.spi.GSSNameSpi, myInitiatorCred : sun.security.jgss.spi.GSSCredentialSpi, lifetime : Int) : sun.security.jgss.spi.GSSContextSpi;
 	
-	@:overload public function getMechanismContext(myAcceptorCred : sun.security.jgss.spi.GSSCredentialSpi) : sun.security.jgss.spi.GSSContextSpi;
+	@:overload @:public public function getMechanismContext(myAcceptorCred : sun.security.jgss.spi.GSSCredentialSpi) : sun.security.jgss.spi.GSSContextSpi;
 	
-	@:overload public function getMechanismContext(exportedContext : java.NativeArray<java.StdTypes.Int8>) : sun.security.jgss.spi.GSSContextSpi;
+	@:overload @:public public function getMechanismContext(exportedContext : java.NativeArray<java.StdTypes.Int8>) : sun.security.jgss.spi.GSSContextSpi;
 	
-	@:overload @:final public function getMechanismOid() : org.ietf.jgss.Oid;
+	@:overload @:public @:final public function getMechanismOid() : org.ietf.jgss.Oid;
 	
-	@:overload public function getProvider() : java.security.Provider;
+	@:overload @:public public function getProvider() : java.security.Provider;
 	
-	@:overload public function getNameTypes() : java.NativeArray<org.ietf.jgss.Oid>;
+	@:overload @:public public function getNameTypes() : java.NativeArray<org.ietf.jgss.Oid>;
 	
 	
 }

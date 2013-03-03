@@ -29,13 +29,13 @@ package sun.net.www.protocol.ftp;
 extern class Handler extends java.net.URLStreamHandler
 {
 	/** open an ftp connection given a URL */
-	@:overload override private function getDefaultPort() : Int;
+	@:overload @:protected override private function getDefaultPort() : Int;
 	
-	@:overload override private function equals(u1 : java.net.URL, u2 : java.net.URL) : Bool;
+	@:overload @:protected override private function equals(u1 : java.net.URL, u2 : java.net.URL) : Bool;
 	
-	@:overload override private function openConnection(u : java.net.URL) : java.net.URLConnection;
+	@:overload @:protected override private function openConnection(u : java.net.URL) : java.net.URLConnection;
 	
-	@:overload override private function openConnection(u : java.net.URL, p : java.net.Proxy) : java.net.URLConnection;
+	@:overload @:protected override private function openConnection(u : java.net.URL, p : java.net.Proxy) : java.net.URLConnection;
 	
 	
 }

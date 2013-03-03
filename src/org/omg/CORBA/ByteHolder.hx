@@ -29,13 +29,13 @@ extern class ByteHolder implements org.omg.CORBA.portable.Streamable
 	* The <code>byte</code> value held by this <code>ByteHolder</code>
 	* object.
 	*/
-	public var value : java.StdTypes.Int8;
+	@:public public var value : java.StdTypes.Int8;
 	
 	/**
 	* Constructs a new <code>ByteHolder</code> object with its
 	* <code>value</code> field initialized to 0.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>ByteHolder</code> object for the given
@@ -44,7 +44,7 @@ extern class ByteHolder implements org.omg.CORBA.portable.Streamable
 	*                the <code>value</code> field of the new
 	*                <code>ByteHolder</code> object
 	*/
-	@:overload public function new(initial : java.StdTypes.Int8) : Void;
+	@:overload @:public public function new(initial : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Reads from <code>input</code> and initalizes the value in
@@ -53,7 +53,7 @@ extern class ByteHolder implements org.omg.CORBA.portable.Streamable
 	*
 	* @param input the InputStream containing CDR formatted data from the wire.
 	*/
-	@:overload public function _read(input : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function _read(input : org.omg.CORBA.portable.InputStream) : Void;
 	
 	/**
 	* Marshals to <code>output</code> the value in
@@ -61,7 +61,7 @@ extern class ByteHolder implements org.omg.CORBA.portable.Streamable
 	*
 	* @param output the OutputStream which will contain the CDR formatted data.
 	*/
-	@:overload public function _write(output : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function _write(output : org.omg.CORBA.portable.OutputStream) : Void;
 	
 	/**
 	* Returns the TypeCode corresponding to the value held in
@@ -70,7 +70,7 @@ extern class ByteHolder implements org.omg.CORBA.portable.Streamable
 	* @return    the TypeCode of the value held in
 	*               this <code>ByteHolder</code> object
 	*/
-	@:overload public function _type() : org.omg.CORBA.TypeCode;
+	@:overload @:public public function _type() : org.omg.CORBA.TypeCode;
 	
 	
 }

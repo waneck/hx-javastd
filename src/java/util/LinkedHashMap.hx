@@ -151,7 +151,7 @@ package java.util;
 	* @throws IllegalArgumentException if the initial capacity is negative
 	*         or the load factor is nonpositive
 	*/
-	@:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
 	/**
 	* Constructs an empty insertion-ordered <tt>LinkedHashMap</tt> instance
@@ -160,13 +160,13 @@ package java.util;
 	* @param  initialCapacity the initial capacity
 	* @throws IllegalArgumentException if the initial capacity is negative
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs an empty insertion-ordered <tt>LinkedHashMap</tt> instance
 	* with the default initial capacity (16) and load factor (0.75).
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an insertion-ordered <tt>LinkedHashMap</tt> instance with
@@ -177,7 +177,7 @@ package java.util;
 	* @param  m the map whose mappings are to be placed in this map
 	* @throws NullPointerException if the specified map is null
 	*/
-	@:overload public function new(m : java.util.Map<K, V>) : Void;
+	@:overload @:public public function new(m : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Constructs an empty <tt>LinkedHashMap</tt> instance with the
@@ -190,7 +190,7 @@ package java.util;
 	* @throws IllegalArgumentException if the initial capacity is negative
 	*         or the load factor is nonpositive
 	*/
-	@:overload public function new(initialCapacity : Int, loadFactor : Single, accessOrder : Bool) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single, accessOrder : Bool) : Void;
 	
 	/**
 	* Returns <tt>true</tt> if this map maps one or more keys to the
@@ -200,7 +200,7 @@ package java.util;
 	* @return <tt>true</tt> if this map maps one or more keys to the
 	*         specified value
 	*/
-	@:overload override public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public override public function containsValue(value : Dynamic) : Bool;
 	
 	/**
 	* Returns the value to which the specified key is mapped,
@@ -217,13 +217,13 @@ package java.util;
 	* The {@link #containsKey containsKey} operation may be used to
 	* distinguish these two cases.
 	*/
-	@:overload override public function get(key : Dynamic) : V;
+	@:overload @:public override public function get(key : Dynamic) : V;
 	
 	/**
 	* Removes all of the mappings from this map.
 	* The map will be empty after this call returns.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns <tt>true</tt> if this map should remove its eldest entry.
@@ -266,7 +266,7 @@ package java.util;
 	* @return   <tt>true</tt> if the eldest entry should be removed
 	*           from the map; <tt>false</tt> if it should be retained.
 	*/
-	@:overload private function removeEldestEntry(eldest : java.util.Map.Map_Entry<K, V>) : Bool;
+	@:overload @:protected private function removeEldestEntry(eldest : java.util.Map.Map_Entry<K, V>) : Bool;
 	
 	
 }
@@ -279,9 +279,9 @@ package java.util;
 }
 @:native('java$util$LinkedHashMap$LinkedHashIterator') @:internal extern class LinkedHashMap_LinkedHashIterator<T> implements java.util.Iterator<T>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	/**
 	* Returns the next element in the iteration.
@@ -289,25 +289,25 @@ package java.util;
 	* @return the next element in the iteration
 	* @throws NoSuchElementException if the iteration has no more elements
 	*/
-	@:overload public function next() : Dynamic;
+	@:overload @:public @:public @:public @:public @:public @:public public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$LinkedHashMap$KeyIterator') @:internal extern class LinkedHashMap_KeyIterator extends java.util.LinkedHashMap.LinkedHashMap_LinkedHashIterator<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$LinkedHashMap$ValueIterator') @:internal extern class LinkedHashMap_ValueIterator extends java.util.LinkedHashMap.LinkedHashMap_LinkedHashIterator<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$LinkedHashMap$EntryIterator') @:internal extern class LinkedHashMap_EntryIterator extends java.util.LinkedHashMap.LinkedHashMap_LinkedHashIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
+	@:overload @:public override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	
 	
 }

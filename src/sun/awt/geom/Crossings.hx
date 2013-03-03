@@ -25,61 +25,61 @@ package sun.awt.geom;
 */
 extern class Crossings
 {
-	public static var debug(default, null) : Bool;
+	@:public @:static @:final public static var debug(default, null) : Bool;
 	
-	@:overload public function new(xlo : Float, ylo : Float, xhi : Float, yhi : Float) : Void;
+	@:overload @:public public function new(xlo : Float, ylo : Float, xhi : Float, yhi : Float) : Void;
 	
-	@:overload @:final public function getXLo() : Float;
+	@:overload @:public @:final public function getXLo() : Float;
 	
-	@:overload @:final public function getYLo() : Float;
+	@:overload @:public @:final public function getYLo() : Float;
 	
-	@:overload @:final public function getXHi() : Float;
+	@:overload @:public @:final public function getXHi() : Float;
 	
-	@:overload @:final public function getYHi() : Float;
+	@:overload @:public @:final public function getYHi() : Float;
 	
-	@:overload @:abstract public function record(ystart : Float, yend : Float, direction : Int) : Void;
+	@:overload @:public @:abstract public function record(ystart : Float, yend : Float, direction : Int) : Void;
 	
-	@:overload public function print() : Void;
+	@:overload @:public public function print() : Void;
 	
-	@:overload @:final public function isEmpty() : Bool;
+	@:overload @:public @:final public function isEmpty() : Bool;
 	
-	@:overload @:abstract public function covers(ystart : Float, yend : Float) : Bool;
+	@:overload @:public @:abstract public function covers(ystart : Float, yend : Float) : Bool;
 	
-	@:overload public static function findCrossings(curves : java.util.Vector<Dynamic>, xlo : Float, ylo : Float, xhi : Float, yhi : Float) : sun.awt.geom.Crossings;
+	@:overload @:public @:static public static function findCrossings(curves : java.util.Vector<Dynamic>, xlo : Float, ylo : Float, xhi : Float, yhi : Float) : sun.awt.geom.Crossings;
 	
-	@:overload public static function findCrossings(pi : java.awt.geom.PathIterator, xlo : Float, ylo : Float, xhi : Float, yhi : Float) : sun.awt.geom.Crossings;
+	@:overload @:public @:static public static function findCrossings(pi : java.awt.geom.PathIterator, xlo : Float, ylo : Float, xhi : Float, yhi : Float) : sun.awt.geom.Crossings;
 	
-	@:overload public function accumulateLine(x0 : Float, y0 : Float, x1 : Float, y1 : Float) : Bool;
+	@:overload @:public public function accumulateLine(x0 : Float, y0 : Float, x1 : Float, y1 : Float) : Bool;
 	
-	@:overload public function accumulateLine(x0 : Float, y0 : Float, x1 : Float, y1 : Float, direction : Int) : Bool;
+	@:overload @:public public function accumulateLine(x0 : Float, y0 : Float, x1 : Float, y1 : Float, direction : Int) : Bool;
 	
-	@:overload public function accumulateQuad(x0 : Float, y0 : Float, coords : java.NativeArray<Float>) : Bool;
+	@:overload @:public public function accumulateQuad(x0 : Float, y0 : Float, coords : java.NativeArray<Float>) : Bool;
 	
-	@:overload public function accumulateCubic(x0 : Float, y0 : Float, coords : java.NativeArray<Float>) : Bool;
+	@:overload @:public public function accumulateCubic(x0 : Float, y0 : Float, coords : java.NativeArray<Float>) : Bool;
 	
 	
 }
 @:native('sun$awt$geom$Crossings$EvenOdd') extern class Crossings_EvenOdd extends sun.awt.geom.Crossings
 {
-	@:overload public function new(xlo : Float, ylo : Float, xhi : Float, yhi : Float) : Void;
+	@:overload @:public public function new(xlo : Float, ylo : Float, xhi : Float, yhi : Float) : Void;
 	
-	@:overload @:final override public function covers(ystart : Float, yend : Float) : Bool;
+	@:overload @:public @:final override public function covers(ystart : Float, yend : Float) : Bool;
 	
-	@:overload override public function record(ystart : Float, yend : Float, direction : Int) : Void;
+	@:overload @:public override public function record(ystart : Float, yend : Float, direction : Int) : Void;
 	
 	
 }
 @:native('sun$awt$geom$Crossings$NonZero') extern class Crossings_NonZero extends sun.awt.geom.Crossings
 {
-	@:overload public function new(xlo : Float, ylo : Float, xhi : Float, yhi : Float) : Void;
+	@:overload @:public public function new(xlo : Float, ylo : Float, xhi : Float, yhi : Float) : Void;
 	
-	@:overload @:final override public function covers(ystart : Float, yend : Float) : Bool;
+	@:overload @:public @:final override public function covers(ystart : Float, yend : Float) : Bool;
 	
-	@:overload public function remove(cur : Int) : Void;
+	@:overload @:public public function remove(cur : Int) : Void;
 	
-	@:overload public function insert(cur : Int, lo : Float, hi : Float, dir : Int) : Void;
+	@:overload @:public public function insert(cur : Int, lo : Float, hi : Float, dir : Int) : Void;
 	
-	@:overload override public function record(ystart : Float, yend : Float, direction : Int) : Void;
+	@:overload @:public override public function record(ystart : Float, yend : Float, direction : Int) : Void;
 	
 	
 }

@@ -32,7 +32,7 @@ package sun.io;
 */
 extern class ByteToCharUnicodeBigUnmarked extends sun.io.ByteToCharUnicode
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

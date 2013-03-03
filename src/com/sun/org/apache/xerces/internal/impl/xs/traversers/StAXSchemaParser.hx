@@ -21,15 +21,15 @@ package com.sun.org.apache.xerces.internal.impl.xs.traversers;
 */
 @:internal extern class StAXSchemaParser
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function reset(schemaDOMParser : com.sun.org.apache.xerces.internal.impl.xs.opti.SchemaDOMParser, symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function reset(schemaDOMParser : com.sun.org.apache.xerces.internal.impl.xs.opti.SchemaDOMParser, symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
-	@:overload public function getDocument() : org.w3c.dom.Document;
+	@:overload @:public public function getDocument() : org.w3c.dom.Document;
 	
-	@:overload public function parse(input : javax.xml.stream.XMLEventReader) : Void;
+	@:overload @:public public function parse(input : javax.xml.stream.XMLEventReader) : Void;
 	
-	@:overload public function parse(input : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function parse(input : javax.xml.stream.XMLStreamReader) : Void;
 	
 	
 }

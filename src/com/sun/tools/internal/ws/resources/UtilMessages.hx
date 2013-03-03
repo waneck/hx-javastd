@@ -25,29 +25,29 @@ package com.sun.tools.internal.ws.resources;
 */
 extern class UtilMessages
 {
-	@:overload public static function localizableSAX_2_DOM_NOTSUPPORTED_CREATEELEMENT(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableSAX_2_DOM_NOTSUPPORTED_CREATEELEMENT(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* SAX2DOMEx.DomImplDoesntSupportCreateElementNs: {0}
 	*
 	*/
-	@:overload public static function SAX_2_DOM_NOTSUPPORTED_CREATEELEMENT(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function SAX_2_DOM_NOTSUPPORTED_CREATEELEMENT(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableNULL_NAMESPACE_FOUND(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableNULL_NAMESPACE_FOUND(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Encountered error in wsdl. Check namespace of element <{0}>
 	*
 	*/
-	@:overload public static function NULL_NAMESPACE_FOUND(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function NULL_NAMESPACE_FOUND(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableHOLDER_VALUEFIELD_NOT_FOUND(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableHOLDER_VALUEFIELD_NOT_FOUND(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Could not find the field in the Holder that contains the Holder''s value: {0}
 	*
 	*/
-	@:overload public static function HOLDER_VALUEFIELD_NOT_FOUND(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function HOLDER_VALUEFIELD_NOT_FOUND(arg0 : Dynamic) : String;
 	
 	
 }

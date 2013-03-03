@@ -36,11 +36,11 @@ package com.sun.tools.corba.se.idl;
 //// NOTES:
 extern class GenFileStream extends java.io.PrintWriter
 {
-	@:overload public function new(filename : String) : Void;
+	@:overload @:public public function new(filename : String) : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	
 }

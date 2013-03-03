@@ -35,14 +35,14 @@ extern class DirectoryIteratorException extends java.util.ConcurrentModification
 	* @throws  NullPointerException
 	*          if the cause is {@code null}
 	*/
-	@:overload public function new(cause : java.io.IOException) : Void;
+	@:overload @:public public function new(cause : java.io.IOException) : Void;
 	
 	/**
 	* Returns the cause of this exception.
 	*
 	* @return  the cause
 	*/
-	@:overload public function getCause() : java.io.IOException;
+	@:overload @:public override public function getCause() : java.io.IOException;
 	
 	
 }

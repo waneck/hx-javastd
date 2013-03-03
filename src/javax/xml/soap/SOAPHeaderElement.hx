@@ -50,7 +50,7 @@ extern interface SOAPHeaderElement extends javax.xml.soap.SOAPElement
 	*
 	* @see #getActor
 	*/
-	@:overload public function setActor(actorURI : String) : Void;
+	@:overload @:public public function setActor(actorURI : String) : Void;
 	
 	/**
 	* Sets the <code>Role</code> associated with this <code>SOAPHeaderElement</code>
@@ -65,7 +65,7 @@ extern interface SOAPHeaderElement extends javax.xml.soap.SOAPElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function setRole(uri : String) : Void;
+	@:require(java3) @:overload @:public public function setRole(uri : String) : Void;
 	
 	/**
 	* Returns the uri of the <i>actor</i> attribute of this
@@ -76,7 +76,7 @@ extern interface SOAPHeaderElement extends javax.xml.soap.SOAPElement
 	* @return  a <code>String</code> giving the URI of the actor
 	* @see #setActor
 	*/
-	@:overload public function getActor() : String;
+	@:overload @:public public function getActor() : String;
 	
 	/**
 	* Returns the value of the <i>Role</i> attribute of this
@@ -89,7 +89,7 @@ extern interface SOAPHeaderElement extends javax.xml.soap.SOAPElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function getRole() : String;
+	@:require(java3) @:overload @:public public function getRole() : String;
 	
 	/**
 	* Sets the mustUnderstand attribute for this <code>SOAPHeaderElement</code>
@@ -108,7 +108,7 @@ extern interface SOAPHeaderElement extends javax.xml.soap.SOAPElement
 	* @see #getMustUnderstand
 	* @see #setRelay
 	*/
-	@:overload public function setMustUnderstand(mustUnderstand : Bool) : Void;
+	@:overload @:public public function setMustUnderstand(mustUnderstand : Bool) : Void;
 	
 	/**
 	* Returns the boolean value of the mustUnderstand attribute for this
@@ -118,7 +118,7 @@ extern interface SOAPHeaderElement extends javax.xml.soap.SOAPElement
 	*        <code>SOAPHeaderElement</code> object is turned on; <code>false</code>
 	*         otherwise
 	*/
-	@:overload public function getMustUnderstand() : Bool;
+	@:overload @:public public function getMustUnderstand() : Bool;
 	
 	/**
 	* Sets the <i>relay</i> attribute for this <code>SOAPHeaderElement</code> to be
@@ -143,7 +143,7 @@ extern interface SOAPHeaderElement extends javax.xml.soap.SOAPElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function setRelay(relay : Bool) : Void;
+	@:require(java3) @:overload @:public public function setRelay(relay : Bool) : Void;
 	
 	/**
 	* Returns the boolean value of the <i>relay</i> attribute for this
@@ -160,7 +160,7 @@ extern interface SOAPHeaderElement extends javax.xml.soap.SOAPElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function getRelay() : Bool;
+	@:require(java3) @:overload @:public public function getRelay() : Bool;
 	
 	
 }

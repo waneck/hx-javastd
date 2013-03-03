@@ -32,7 +32,7 @@ extern class HttpEndpoint
 	* @param endpoint that needs to be deployed at http server
 	* @return transport object for the endpoint
 	*/
-	@:overload public static function create(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : com.sun.xml.internal.ws.api.server.HttpEndpoint;
+	@:overload @:public @:static public static function create(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : com.sun.xml.internal.ws.api.server.HttpEndpoint;
 	
 	/**
 	* Publishes this endpoint at a localhost's http address.
@@ -40,12 +40,12 @@ extern class HttpEndpoint
 	* @param address endpoint's http address
 	*        for e.g http://localhost:8080/ctxt/pattern
 	*/
-	@:overload @:abstract public function publish(address : String) : Void;
+	@:overload @:public @:abstract public function publish(address : String) : Void;
 	
 	/**
 	* Stops the published endpoint
 	*/
-	@:overload @:abstract public function stop() : Void;
+	@:overload @:public @:abstract public function stop() : Void;
 	
 	
 }

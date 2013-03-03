@@ -31,11 +31,11 @@ extern class TabbedPaneUI extends javax.swing.plaf.ComponentUI
 	* @author Dave Moore
 	* @author Amy Fowler
 	*/
-	@:overload @:abstract public function tabForCoordinate(pane : javax.swing.JTabbedPane, x : Int, y : Int) : Int;
+	@:overload @:public @:abstract public function tabForCoordinate(pane : javax.swing.JTabbedPane, x : Int, y : Int) : Int;
 	
-	@:overload @:abstract public function getTabBounds(pane : javax.swing.JTabbedPane, index : Int) : java.awt.Rectangle;
+	@:overload @:public @:abstract public function getTabBounds(pane : javax.swing.JTabbedPane, index : Int) : java.awt.Rectangle;
 	
-	@:overload @:abstract public function getTabRunCount(pane : javax.swing.JTabbedPane) : Int;
+	@:overload @:public @:abstract public function getTabRunCount(pane : javax.swing.JTabbedPane) : Int;
 	
 	
 }

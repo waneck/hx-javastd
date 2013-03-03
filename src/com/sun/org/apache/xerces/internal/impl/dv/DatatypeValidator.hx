@@ -26,7 +26,7 @@ extern interface DatatypeValidator
 	* @param content       the string value that needs to be validated
 	* @param context       the validation context
 	*/
-	@:overload public function validate(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
+	@:overload @:public public function validate(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
 	
 	
 }

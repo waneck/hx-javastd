@@ -37,15 +37,15 @@ package com.sun.tools.corba.se.idl;
 //// -D57110<daz> Add method to verify format (CORBA 2.3).
 extern class RepositoryID
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(id : String) : Void;
+	@:overload @:public public function new(id : String) : Void;
 	
-	@:overload public function ID() : String;
+	@:overload @:public public function ID() : String;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Determine is a supplied string meets the minimal format requirement
@@ -53,7 +53,7 @@ extern class RepositoryID
 	* @return true iff supplied string has form '<format>:<string>', where
 	* <format> is any non-empty string not containing ':'.
 	**/
-	@:overload public static function hasValidForm(string : String) : Bool;
+	@:overload @:public @:static public static function hasValidForm(string : String) : Bool;
 	
 	
 }

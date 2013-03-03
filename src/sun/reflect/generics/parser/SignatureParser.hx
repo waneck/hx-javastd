@@ -35,7 +35,7 @@ extern class SignatureParser
 	* Static factory method. Produces a parser instance.
 	* @return an instance of <tt>SignatureParser</tt>
 	*/
-	@:overload public static function make() : sun.reflect.generics.parser.SignatureParser;
+	@:overload @:public @:static public static function make() : sun.reflect.generics.parser.SignatureParser;
 	
 	/**
 	* Parses a class signature (as defined in the JVMS, chapter 4)
@@ -46,7 +46,7 @@ extern class SignatureParser
 	* @throws GenericSignatureFormatError if the input is not a valid
 	* class signature
 	*/
-	@:overload public function parseClassSig(s : String) : sun.reflect.generics.tree.ClassSignature;
+	@:overload @:public public function parseClassSig(s : String) : sun.reflect.generics.tree.ClassSignature;
 	
 	/**
 	* Parses a method signature (as defined in the JVMS, chapter 4)
@@ -57,7 +57,7 @@ extern class SignatureParser
 	* @throws GenericSignatureFormatError if the input is not a valid
 	* method signature
 	*/
-	@:overload public function parseMethodSig(s : String) : sun.reflect.generics.tree.MethodTypeSignature;
+	@:overload @:public public function parseMethodSig(s : String) : sun.reflect.generics.tree.MethodTypeSignature;
 	
 	/**
 	* Parses a type signature
@@ -69,7 +69,7 @@ extern class SignatureParser
 	* @throws GenericSignatureFormatError if the input is not a valid
 	* type signature
 	*/
-	@:overload public function parseTypeSig(s : String) : sun.reflect.generics.tree.TypeSignature;
+	@:overload @:public public function parseTypeSig(s : String) : sun.reflect.generics.tree.TypeSignature;
 	
 	
 }

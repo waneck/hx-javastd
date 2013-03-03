@@ -24,77 +24,77 @@ extern class DOMLocatorImpl implements org.w3c.dom.DOMLocator
 	* The column number where the error occured,
 	* or -1 if there is no column number available.
 	*/
-	public var fColumnNumber : Int;
+	@:public public var fColumnNumber : Int;
 	
 	/**
 	* The line number where the error occured,
 	* or -1 if there is no line number available.
 	*/
-	public var fLineNumber : Int;
+	@:public public var fLineNumber : Int;
 	
 	/** related data node*/
-	public var fRelatedNode : org.w3c.dom.Node;
+	@:public public var fRelatedNode : org.w3c.dom.Node;
 	
 	/**
 	* The URI where the error occured,
 	* or null if there is no URI available.
 	*/
-	public var fUri : String;
+	@:public public var fUri : String;
 	
 	/**
 	* The byte offset into the input source this locator is pointing to or -1
 	* if there is no byte offset available
 	*/
-	public var fByteOffset : Int;
+	@:public public var fByteOffset : Int;
 	
 	/**
 	* The UTF-16, as defined in [Unicode] and Amendment 1 of [ISO/IEC 10646],
 	* offset into the input source this locator is pointing to or -1 if there
 	* is no UTF-16 offset available.
 	*/
-	public var fUtf16Offset : Int;
+	@:public public var fUtf16Offset : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(lineNumber : Int, columnNumber : Int, uri : String) : Void;
+	@:overload @:public public function new(lineNumber : Int, columnNumber : Int, uri : String) : Void;
 	
-	@:overload public function new(lineNumber : Int, columnNumber : Int, utf16Offset : Int, uri : String) : Void;
+	@:overload @:public public function new(lineNumber : Int, columnNumber : Int, utf16Offset : Int, uri : String) : Void;
 	
-	@:overload public function new(lineNumber : Int, columnNumber : Int, byteoffset : Int, relatedData : org.w3c.dom.Node, uri : String) : Void;
+	@:overload @:public public function new(lineNumber : Int, columnNumber : Int, byteoffset : Int, relatedData : org.w3c.dom.Node, uri : String) : Void;
 	
-	@:overload public function new(lineNumber : Int, columnNumber : Int, byteoffset : Int, relatedData : org.w3c.dom.Node, uri : String, utf16Offset : Int) : Void;
+	@:overload @:public public function new(lineNumber : Int, columnNumber : Int, byteoffset : Int, relatedData : org.w3c.dom.Node, uri : String, utf16Offset : Int) : Void;
 	
 	/**
 	* The line number where the error occured, or -1 if there is no line
 	* number available.
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* The column number where the error occured, or -1 if there is no column
 	* number available.
 	*/
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	/**
 	* The URI where the error occured, or null if there is no URI available.
 	*/
-	@:overload public function getUri() : String;
+	@:overload @:public public function getUri() : String;
 	
-	@:overload public function getRelatedNode() : org.w3c.dom.Node;
+	@:overload @:public public function getRelatedNode() : org.w3c.dom.Node;
 	
 	/**
 	* The byte offset into the input source this locator is pointing to or -1
 	* if there is no byte offset available
 	*/
-	@:overload public function getByteOffset() : Int;
+	@:overload @:public public function getByteOffset() : Int;
 	
 	/**
 	* The UTF-16, as defined in [Unicode] and Amendment 1 of [ISO/IEC 10646],
 	* offset into the input source this locator is pointing to or -1 if there
 	* is no UTF-16 offset available.
 	*/
-	@:overload public function getUtf16Offset() : Int;
+	@:overload @:public public function getUtf16Offset() : Int;
 	
 	
 }

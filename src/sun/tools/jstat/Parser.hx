@@ -32,16 +32,16 @@ package sun.tools.jstat;
 */
 @:require(java5) extern class Parser
 {
-	@:overload public function new(filename : String) : Void;
+	@:overload @:public public function new(filename : String) : Void;
 	
-	@:overload public function new(r : java.io.Reader) : Void;
+	@:overload @:public public function new(r : java.io.Reader) : Void;
 	
 	/**
 	* parse the specification for the given option identifier
 	*/
-	@:overload public function parse(option : String) : sun.tools.jstat.OptionFormat;
+	@:overload @:public public function parse(option : String) : sun.tools.jstat.OptionFormat;
 	
-	@:overload public function parseOptions() : java.util.Set<sun.tools.jstat.OptionFormat>;
+	@:overload @:public public function parseOptions() : java.util.Set<sun.tools.jstat.OptionFormat>;
 	
 	
 }

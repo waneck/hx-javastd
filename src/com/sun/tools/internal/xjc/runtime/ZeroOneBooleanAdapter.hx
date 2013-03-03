@@ -31,9 +31,9 @@ extern class ZeroOneBooleanAdapter extends javax.xml.bind.annotation.adapters.Xm
 	* @author Kohsuke Kawaguchi
 	* @since 2.0
 	*/
-	@:require(java0) @:overload public function unmarshal(v : String) : Null<Bool>;
+	@:require(java0) @:overload @:public public function unmarshal(v : String) : Null<Bool>;
 	
-	@:overload public function marshal(v : Null<Bool>) : String;
+	@:overload @:public public function marshal(v : Null<Bool>) : String;
 	
 	
 }

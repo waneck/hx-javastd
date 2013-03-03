@@ -25,19 +25,19 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 */
 extern class UnmarshallerChain
 {
-	public var context(default, null) : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl;
+	@:public @:final public var context(default, null) : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl;
 	
-	@:overload public function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
+	@:overload @:public public function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
 	
 	/**
 	* Allocates a new {@link Scope} offset.
 	*/
-	@:overload public function allocateOffset() : Int;
+	@:overload @:public public function allocateOffset() : Int;
 	
 	/**
 	* Gets the number of total scope offset allocated.
 	*/
-	@:overload public function getScopeSize() : Int;
+	@:overload @:public public function getScopeSize() : Int;
 	
 	
 }

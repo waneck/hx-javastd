@@ -28,13 +28,13 @@ package com.sun.xml.internal.ws.api.message.stream;
 	/**
 	* The properties of the message.
 	*/
-	public var properties(default, null) : com.sun.xml.internal.ws.api.message.Packet;
+	@:public @:final public var properties(default, null) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	/**
 	* The attachments of this message
 	* (attachments live outside a message.)
 	*/
-	public var attachments(default, null) : com.sun.xml.internal.ws.api.message.AttachmentSet;
+	@:public @:final public var attachments(default, null) : com.sun.xml.internal.ws.api.message.AttachmentSet;
 	
 	/**
 	* Create a new message.
@@ -43,7 +43,7 @@ package com.sun.xml.internal.ws.api.message.stream;
 	*      the properties of the message.
 	*
 	*/
-	@:overload private function new(properties : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:protected private function new(properties : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	/**
 	* Create a new message.
@@ -54,7 +54,7 @@ package com.sun.xml.internal.ws.api.message.stream;
 	* @param attachments
 	*      the attachments of the message.
 	*/
-	@:overload private function new(properties : com.sun.xml.internal.ws.api.message.Packet, attachments : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
+	@:overload @:protected private function new(properties : com.sun.xml.internal.ws.api.message.Packet, attachments : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
 	
 	
 }

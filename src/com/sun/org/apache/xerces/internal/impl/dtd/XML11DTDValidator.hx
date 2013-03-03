@@ -69,14 +69,14 @@ extern class XML11DTDValidator extends com.sun.org.apache.xerces.internal.impl.d
 	*
 	* @author Neil Graham
 	*/
-	private static var DTD_VALIDATOR_PROPERTY(default, null) : String;
+	@:protected @:final @:static private static var DTD_VALIDATOR_PROPERTY(default, null) : String;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function reset(manager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public override public function reset(manager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
-	@:overload override private function init() : Void;
+	@:overload @:protected override private function init() : Void;
 	
 	
 }

@@ -23,34 +23,34 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class EqualityExpr extends com.sun.org.apache.xalan.internal.xsltc.compiler.Expression
 {
-	@:overload public function new(op : Int, left : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression, right : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression) : Void;
+	@:overload @:public public function new(op : Int, left : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression, right : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression) : Void;
 	
-	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload public function getLeft() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
+	@:overload @:public public function getLeft() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
 	
-	@:overload public function getRight() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
+	@:overload @:public public function getRight() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
 	
-	@:overload public function getOp() : Bool;
+	@:overload @:public public function getOp() : Bool;
 	
 	/**
 	* Returns true if this expressions contains a call to position(). This is
 	* needed for context changes in node steps containing multiple predicates.
 	*/
-	@:overload public function hasPositionCall() : Bool;
+	@:overload @:public override public function hasPositionCall() : Bool;
 	
-	@:overload public function hasLastCall() : Bool;
+	@:overload @:public override public function hasLastCall() : Bool;
 	
 	/**
 	* Typing rules: see XSLT Reference by M. Kay page 345.
 	*/
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload public function translateDesynthesized(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translateDesynthesized(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

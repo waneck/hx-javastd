@@ -30,21 +30,21 @@ extern class ParserUtil
 	* TODO: made public just for now
 	* @author WS Development Team
 	*/
-	@:overload public static function getAttribute(reader : javax.xml.stream.XMLStreamReader, name : String) : String;
+	@:overload @:public @:static public static function getAttribute(reader : javax.xml.stream.XMLStreamReader, name : String) : String;
 	
-	@:overload public static function getAttribute(reader : javax.xml.stream.XMLStreamReader, nsUri : String, name : String) : String;
+	@:overload @:public @:static public static function getAttribute(reader : javax.xml.stream.XMLStreamReader, nsUri : String, name : String) : String;
 	
-	@:overload public static function getAttribute(reader : javax.xml.stream.XMLStreamReader, name : javax.xml.namespace.QName) : String;
+	@:overload @:public @:static public static function getAttribute(reader : javax.xml.stream.XMLStreamReader, name : javax.xml.namespace.QName) : String;
 	
-	@:overload public static function getQName(reader : javax.xml.stream.XMLStreamReader, tag : String) : javax.xml.namespace.QName;
+	@:overload @:public @:static public static function getQName(reader : javax.xml.stream.XMLStreamReader, tag : String) : javax.xml.namespace.QName;
 	
-	@:overload public static function getMandatoryNonEmptyAttribute(reader : javax.xml.stream.XMLStreamReader, name : String) : String;
+	@:overload @:public @:static public static function getMandatoryNonEmptyAttribute(reader : javax.xml.stream.XMLStreamReader, name : String) : String;
 	
-	@:overload public static function failWithFullName(key : String, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public @:static public static function failWithFullName(key : String, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload public static function failWithLocalName(key : String, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public @:static public static function failWithLocalName(key : String, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload public static function failWithLocalName(key : String, reader : javax.xml.stream.XMLStreamReader, arg : String) : Void;
+	@:overload @:public @:static public static function failWithLocalName(key : String, reader : javax.xml.stream.XMLStreamReader, arg : String) : Void;
 	
 	
 }

@@ -53,9 +53,9 @@ extern class InvalidityDateExtension extends java.security.cert.Extension implem
 	/**
 	* Attribute name and Reason codes
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
-	public static var DATE(default, null) : String;
+	@:public @:static @:final public static var DATE(default, null) : String;
 	
 	/**
 	* Create a InvalidityDateExtension with the passed in date.
@@ -63,7 +63,7 @@ extern class InvalidityDateExtension extends java.security.cert.Extension implem
 	*
 	* @param date the invalidity date
 	*/
-	@:overload public function new(date : java.util.Date) : Void;
+	@:overload @:public public function new(date : java.util.Date) : Void;
 	
 	/**
 	* Create a InvalidityDateExtension with the passed in date.
@@ -71,7 +71,7 @@ extern class InvalidityDateExtension extends java.security.cert.Extension implem
 	* @param critical true if the extension is to be treated as critical.
 	* @param date the invalidity date
 	*/
-	@:overload public function new(critical : Bool, date : java.util.Date) : Void;
+	@:overload @:public public function new(critical : Bool, date : java.util.Date) : Void;
 	
 	/**
 	* Create the extension from the passed DER encoded value of the same.
@@ -81,27 +81,27 @@ extern class InvalidityDateExtension extends java.security.cert.Extension implem
 	* @exception ClassCastException if value is not an array of bytes
 	* @exception IOException on error.
 	*/
-	@:overload public function new(critical : Null<Bool>, value : Dynamic) : Void;
+	@:overload @:public public function new(critical : Null<Bool>, value : Dynamic) : Void;
 	
 	/**
 	* Set the attribute value.
 	*/
-	@:overload public function set(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function set(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Get the attribute value.
 	*/
-	@:overload public function get(name : String) : Dynamic;
+	@:overload @:public public function get(name : String) : Dynamic;
 	
 	/**
 	* Delete the attribute value.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
 	/**
 	* Returns a printable representation of the Invalidity Date.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Write the extension to the DerOutputStream.
@@ -109,20 +109,20 @@ extern class InvalidityDateExtension extends java.security.cert.Extension implem
 	* @param out the DerOutputStream to write the extension to
 	* @exception IOException on encoding errors
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public override public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this
 	* attribute.
 	*/
-	@:overload public function getElements() : java.util.Enumeration<String>;
+	@:overload @:public public function getElements() : java.util.Enumeration<String>;
 	
 	/**
 	* Return the name of this attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public static function toImpl(ext : java.security.cert.Extension) : sun.security.x509.InvalidityDateExtension;
+	@:overload @:public @:static public static function toImpl(ext : java.security.cert.Extension) : sun.security.x509.InvalidityDateExtension;
 	
 	
 }

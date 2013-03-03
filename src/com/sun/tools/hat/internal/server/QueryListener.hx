@@ -34,11 +34,11 @@ package com.sun.tools.hat.internal.server;
 */
 extern class QueryListener implements java.lang.Runnable
 {
-	@:overload public function new(port : Int) : Void;
+	@:overload @:public public function new(port : Int) : Void;
 	
-	@:overload public function setModel(ss : com.sun.tools.hat.internal.model.Snapshot) : Void;
+	@:overload @:public public function setModel(ss : com.sun.tools.hat.internal.model.Snapshot) : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

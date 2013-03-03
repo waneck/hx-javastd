@@ -27,35 +27,35 @@ package com.sun.xml.internal.fastinfoset.stax;
 */
 extern class StAXManager
 {
-	private static var STAX_NOTATIONS(default, null) : String;
+	@:protected @:static @:final private static var STAX_NOTATIONS(default, null) : String;
 	
-	private static var STAX_ENTITIES(default, null) : String;
+	@:protected @:static @:final private static var STAX_ENTITIES(default, null) : String;
 	
-	public static var CONTEXT_READER(default, null) : Int;
+	@:public @:static @:final public static var CONTEXT_READER(default, null) : Int;
 	
-	public static var CONTEXT_WRITER(default, null) : Int;
+	@:public @:static @:final public static var CONTEXT_WRITER(default, null) : Int;
 	
 	/** Creates a new instance of StAXManager */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(context : Int) : Void;
+	@:overload @:public public function new(context : Int) : Void;
 	
-	@:overload public function new(manager : com.sun.xml.internal.fastinfoset.stax.StAXManager) : Void;
+	@:overload @:public public function new(manager : com.sun.xml.internal.fastinfoset.stax.StAXManager) : Void;
 	
 	/**
 	* public void reset(){
 	* features.clear() ;
 	* }
 	*/
-	@:overload public function containsProperty(property : String) : Bool;
+	@:overload @:public public function containsProperty(property : String) : Bool;
 	
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
-	@:overload public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(name : String, value : Dynamic) : Void;
 	
-	@:overload public function checkProperty(name : String) : Void;
+	@:overload @:public public function checkProperty(name : String) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

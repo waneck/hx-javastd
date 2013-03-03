@@ -35,47 +35,47 @@ package sun.rmi.rmic.iiop;
 	* Get a context for the given name. Name may be null, in
 	* which case this method will return the default context.
 	*/
-	@:overload @:synchronized public static function forName(name : String, allowCollisions : Bool, env : sun.rmi.rmic.iiop.BatchEnvironment) : sun.rmi.rmic.iiop.NameContext;
+	@:overload @:public @:static @:synchronized public static function forName(name : String, allowCollisions : Bool, env : sun.rmi.rmic.iiop.BatchEnvironment) : sun.rmi.rmic.iiop.NameContext;
 	
 	/**
 	* Construct a context.
 	* @param allowCollisions true if case-sensitive name collisions
 	* are allowed, false if not.
 	*/
-	@:overload public function new(allowCollisions : Bool) : Void;
+	@:overload @:public public function new(allowCollisions : Bool) : Void;
 	
 	/**
 	* Add a name to this context. If constructed with allowCollisions
 	* false and a collision occurs, this method will throw an exception
 	* in which the message contains the string: "name" and "collision".
 	*/
-	@:overload public function assertPut(name : String) : Void;
+	@:overload @:public public function assertPut(name : String) : Void;
 	
 	/**
 	* Add a name to this context..
 	*/
-	@:overload public function put(name : String) : Void;
+	@:overload @:public public function put(name : String) : Void;
 	
 	/**
 	* Get a name from the context. If it has collisions, the name
 	* will be converted as specified in section 5.2.7.
 	*/
-	@:overload public function get(name : String) : String;
+	@:overload @:public public function get(name : String) : String;
 	
 	/**
 	* Remove all entries.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }
 @:native('sun$rmi$rmic$iiop$NameContext$Name') extern class NameContext_Name
 {
-	public var name : String;
+	@:public public var name : String;
 	
-	public var collisions : Bool;
+	@:public public var collisions : Bool;
 	
-	@:overload public function new(name : String, collisions : Bool) : Void;
+	@:overload @:public public function new(name : String, collisions : Bool) : Void;
 	
 	
 }

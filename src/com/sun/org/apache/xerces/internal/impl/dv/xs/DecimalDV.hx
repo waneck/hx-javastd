@@ -29,37 +29,37 @@ extern class DecimalDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Typ
 	* @author Sandy Gao, IBM
 	*
 	*/
-	@:overload @:final override public function getAllowedFacets() : java.StdTypes.Int16;
+	@:overload @:public @:final override public function getAllowedFacets() : java.StdTypes.Int16;
 	
-	@:overload override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
+	@:overload @:public override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
 	
-	@:overload @:final override public function compare(value1 : Dynamic, value2 : Dynamic) : Int;
+	@:overload @:public @:final override public function compare(value1 : Dynamic, value2 : Dynamic) : Int;
 	
-	@:overload @:final override public function getTotalDigits(value : Dynamic) : Int;
+	@:overload @:public @:final override public function getTotalDigits(value : Dynamic) : Int;
 	
-	@:overload @:final override public function getFractionDigits(value : Dynamic) : Int;
+	@:overload @:public @:final override public function getFractionDigits(value : Dynamic) : Int;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$impl$dv$xs$DecimalDV$XDecimal') @:internal extern class DecimalDV_XDecimal implements com.sun.org.apache.xerces.internal.xs.datatypes.XSDecimal
 {
-	@:overload public function equals(val : Dynamic) : Bool;
+	@:overload @:public public function equals(val : Dynamic) : Bool;
 	
-	@:overload public function compareTo(val : com.sun.org.apache.xerces.internal.impl.dv.xs.DecimalDV.DecimalDV_XDecimal) : Int;
+	@:overload @:public public function compareTo(val : com.sun.org.apache.xerces.internal.impl.dv.xs.DecimalDV.DecimalDV_XDecimal) : Int;
 	
-	@:overload @:synchronized public function toString() : String;
+	@:overload @:public @:synchronized public function toString() : String;
 	
-	@:overload public function getBigDecimal() : java.math.BigDecimal;
+	@:overload @:public public function getBigDecimal() : java.math.BigDecimal;
 	
-	@:overload public function getBigInteger() : java.math.BigInteger;
+	@:overload @:public public function getBigInteger() : java.math.BigInteger;
 	
-	@:overload public function getLong() : haxe.Int64;
+	@:overload @:public public function getLong() : haxe.Int64;
 	
-	@:overload public function getInt() : Int;
+	@:overload @:public public function getInt() : Int;
 	
-	@:overload public function getShort() : java.StdTypes.Int16;
+	@:overload @:public public function getShort() : java.StdTypes.Int16;
 	
-	@:overload public function getByte() : java.StdTypes.Int8;
+	@:overload @:public public function getByte() : java.StdTypes.Int8;
 	
 	
 }

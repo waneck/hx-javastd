@@ -35,7 +35,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	* Locale#getDefault() default locale} for this instance of the Java
 	* virtual machine.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new formatter with the specified destination.
@@ -47,7 +47,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	*         Destination for the formatted output.  If {@code a} is
 	*         {@code null} then a {@link StringBuilder} will be created.
 	*/
-	@:overload public function new(a : java.lang.Appendable) : Void;
+	@:overload @:public public function new(a : java.lang.Appendable) : Void;
 	
 	/**
 	* Constructs a new formatter with the specified locale.
@@ -62,7 +62,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	*         formatting.  If {@code l} is {@code null} then no localization
 	*         is applied.
 	*/
-	@:overload public function new(l : java.util.Locale) : Void;
+	@:overload @:public public function new(l : java.util.Locale) : Void;
 	
 	/**
 	* Constructs a new formatter with the specified destination and locale.
@@ -76,7 +76,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	*         formatting.  If {@code l} is {@code null} then no localization
 	*         is applied.
 	*/
-	@:overload public function new(a : java.lang.Appendable, l : java.util.Locale) : Void;
+	@:overload @:public public function new(a : java.lang.Appendable, l : java.util.Locale) : Void;
 	
 	/**
 	* Constructs a new formatter with the specified file name.
@@ -105,7 +105,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	*          created, or if some other error occurs while opening or
 	*          creating the file
 	*/
-	@:overload public function new(fileName : String) : Void;
+	@:overload @:public public function new(fileName : String) : Void;
 	
 	/**
 	* Constructs a new formatter with the specified file name and charset.
@@ -137,7 +137,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	* @throws  UnsupportedEncodingException
 	*          If the named charset is not supported
 	*/
-	@:overload public function new(fileName : String, csn : String) : Void;
+	@:overload @:public public function new(fileName : String, csn : String) : Void;
 	
 	/**
 	* Constructs a new formatter with the specified file name, charset, and
@@ -172,7 +172,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	* @throws  UnsupportedEncodingException
 	*          If the named charset is not supported
 	*/
-	@:overload public function new(fileName : String, csn : String, l : java.util.Locale) : Void;
+	@:overload @:public public function new(fileName : String, csn : String, l : java.util.Locale) : Void;
 	
 	/**
 	* Constructs a new formatter with the specified file.
@@ -201,7 +201,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	*          created, or if some other error occurs while opening or
 	*          creating the file
 	*/
-	@:overload public function new(file : java.io.File) : Void;
+	@:overload @:public public function new(file : java.io.File) : Void;
 	
 	/**
 	* Constructs a new formatter with the specified file and charset.
@@ -233,7 +233,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	* @throws  UnsupportedEncodingException
 	*          If the named charset is not supported
 	*/
-	@:overload public function new(file : java.io.File, csn : String) : Void;
+	@:overload @:public public function new(file : java.io.File, csn : String) : Void;
 	
 	/**
 	* Constructs a new formatter with the specified file, charset, and
@@ -268,7 +268,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	* @throws  UnsupportedEncodingException
 	*          If the named charset is not supported
 	*/
-	@:overload public function new(file : java.io.File, csn : String, l : java.util.Locale) : Void;
+	@:overload @:public public function new(file : java.io.File, csn : String, l : java.util.Locale) : Void;
 	
 	/**
 	* Constructs a new formatter with the specified print stream.
@@ -283,7 +283,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	* @param  ps
 	*         The stream to use as the destination of this formatter.
 	*/
-	@:overload public function new(ps : java.io.PrintStream) : Void;
+	@:overload @:public public function new(ps : java.io.PrintStream) : Void;
 	
 	/**
 	* Constructs a new formatter with the specified output stream.
@@ -299,7 +299,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	*         The output stream to use as the destination of this formatter.
 	*         The output will be buffered.
 	*/
-	@:overload public function new(os : java.io.OutputStream) : Void;
+	@:overload @:public public function new(os : java.io.OutputStream) : Void;
 	
 	/**
 	* Constructs a new formatter with the specified output stream and
@@ -319,7 +319,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	* @throws  UnsupportedEncodingException
 	*          If the named charset is not supported
 	*/
-	@:overload public function new(os : java.io.OutputStream, csn : String) : Void;
+	@:overload @:public public function new(os : java.io.OutputStream, csn : String) : Void;
 	
 	/**
 	* Constructs a new formatter with the specified output stream, charset,
@@ -341,7 +341,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	* @throws  UnsupportedEncodingException
 	*          If the named charset is not supported
 	*/
-	@:overload public function new(os : java.io.OutputStream, csn : String, l : java.util.Locale) : Void;
+	@:overload @:public public function new(os : java.io.OutputStream, csn : String, l : java.util.Locale) : Void;
 	
 	/**
 	* Returns the locale set by the construction of this formatter.
@@ -356,7 +356,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	*          If this formatter has been closed by invoking its {@link
 	*          #close()} method
 	*/
-	@:overload public function locale() : java.util.Locale;
+	@:overload @:public public function locale() : java.util.Locale;
 	
 	/**
 	* Returns the destination for the output.
@@ -367,7 +367,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	*          If this formatter has been closed by invoking its {@link
 	*          #close()} method
 	*/
-	@:overload public function out() : java.lang.Appendable;
+	@:overload @:public public function out() : java.lang.Appendable;
 	
 	/**
 	* Returns the result of invoking {@code toString()} on the destination
@@ -400,7 +400,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	*          If this formatter has been closed by invoking its {@link
 	*          #close()} method
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Flushes this formatter.  If the destination implements the {@link
@@ -413,7 +413,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	*          If this formatter has been closed by invoking its {@link
 	*          #close()} method
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* Closes this formatter.  If the destination implements the {@link
@@ -427,7 +427,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	* this formatter after it has been closed will result in a {@link
 	* FormatterClosedException}.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Returns the {@code IOException} last thrown by this formatter's {@link
@@ -439,7 +439,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	* @return  The last exception thrown by the Appendable or {@code null} if
 	*          no such exception exists.
 	*/
-	@:overload public function ioException() : java.io.IOException;
+	@:overload @:public public function ioException() : java.io.IOException;
 	
 	/**
 	* Writes a formatted string to this object's destination using the
@@ -471,7 +471,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	*
 	* @return  This formatter
 	*/
-	@:overload public function format(format : String, args : java.NativeArray<Dynamic>) : java.util.Formatter;
+	@:overload @:public public function format(format : String, args : java.NativeArray<Dynamic>) : java.util.Formatter;
 	
 	/**
 	* Writes a formatted string to this object's destination using the
@@ -508,7 +508,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	*
 	* @return  This formatter
 	*/
-	@:overload public function format(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : java.util.Formatter;
+	@:overload @:public public function format(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : java.util.Formatter;
 	
 	
 }
@@ -522,11 +522,11 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 }
 @:native('java$util$Formatter$FixedString') @:internal extern class Formatter_FixedString implements java.util.Formatter.Formatter_FormatString
 {
-	@:overload public function index() : Int;
+	@:overload @:public public function index() : Int;
 	
-	@:overload public function print(arg : Dynamic, l : java.util.Locale) : Void;
+	@:overload @:public public function print(arg : Dynamic, l : java.util.Locale) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -539,45 +539,45 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 
 @:native('java$util$Formatter$FormatSpecifier') @:internal extern class Formatter_FormatSpecifier implements java.util.Formatter.Formatter_FormatString
 {
-	@:overload public function index() : Int;
+	@:overload @:public public function index() : Int;
 	
-	@:overload public function print(arg : Dynamic, l : java.util.Locale) : Void;
+	@:overload @:public public function print(arg : Dynamic, l : java.util.Locale) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('java$util$Formatter$FormatSpecifier$BigDecimalLayout') @:internal extern class Formatter_FormatSpecifier_BigDecimalLayout
 {
-	@:overload public function new(intVal : java.math.BigInteger, scale : Int, form : java.util.Formatter.Formatter_BigDecimalLayoutForm) : Void;
+	@:overload @:public public function new(intVal : java.math.BigInteger, scale : Int, form : java.util.Formatter.Formatter_BigDecimalLayoutForm) : Void;
 	
-	@:overload public function hasDot() : Bool;
+	@:overload @:public public function hasDot() : Bool;
 	
-	@:overload public function scale() : Int;
+	@:overload @:public public function scale() : Int;
 	
-	@:overload public function layoutChars() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function layoutChars() : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload public function mantissa() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function mantissa() : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload public function exponent() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function exponent() : java.NativeArray<java.StdTypes.Char16>;
 	
 	
 }
 @:native('java$util$Formatter$Flags') @:internal extern class Formatter_Flags
 {
-	@:overload public function valueOf() : Int;
+	@:overload @:public public function valueOf() : Int;
 	
-	@:overload public function contains(f : java.util.Formatter.Formatter_Flags) : Bool;
+	@:overload @:public public function contains(f : java.util.Formatter.Formatter_Flags) : Bool;
 	
-	@:overload public function dup() : java.util.Formatter.Formatter_Flags;
+	@:overload @:public public function dup() : java.util.Formatter.Formatter_Flags;
 	
-	@:overload public function remove(f : java.util.Formatter.Formatter_Flags) : java.util.Formatter.Formatter_Flags;
+	@:overload @:public public function remove(f : java.util.Formatter.Formatter_Flags) : java.util.Formatter.Formatter_Flags;
 	
-	@:overload public static function parse(s : String) : java.util.Formatter.Formatter_Flags;
+	@:overload @:public @:static public static function parse(s : String) : java.util.Formatter.Formatter_Flags;
 	
-	@:native('toString') @:overload public static function _toString(f : java.util.Formatter.Formatter_Flags) : String;
+	@:native('toString') @:overload @:public @:static public static function _toString(f : java.util.Formatter.Formatter_Flags) : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

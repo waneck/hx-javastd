@@ -31,7 +31,7 @@ extern interface Property<BeanT> extends com.sun.xml.internal.bind.v2.runtime.pr
 	* <p>
 	* ... for example by setting 0 or null.
 	*/
-	@:overload public function reset(o : BeanT) : Void;
+	@:overload @:public public function reset(o : BeanT) : Void;
 	
 	/**
 	* @see JaxBeanInfo#serializeBody(Object, XMLSerializer)
@@ -43,18 +43,18 @@ extern interface Property<BeanT> extends com.sun.xml.internal.bind.v2.runtime.pr
 	* @throws AccessorException
 	*      If thrown, caught by the caller and reported.
 	*/
-	@:overload public function serializeBody(beanT : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, outerPeer : Dynamic) : Void;
+	@:overload @:public public function serializeBody(beanT : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, outerPeer : Dynamic) : Void;
 	
 	/**
 	* @see JaxBeanInfo#serializeURIs(Object, XMLSerializer)
 	*/
-	@:overload public function serializeURIs(beanT : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public public function serializeURIs(beanT : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
 	/**
 	* Returns true if
 	* {@link #serializeURIs(Object,XMLSerializer)} performs some meaningful action.
 	*/
-	@:overload public function hasSerializeURIAction() : Bool;
+	@:overload @:public public function hasSerializeURIAction() : Bool;
 	
 	/**
 	* Gets the value of the property.
@@ -62,14 +62,14 @@ extern interface Property<BeanT> extends com.sun.xml.internal.bind.v2.runtime.pr
 	* This method is only used when the corresponding {@link PropertyInfo#id()} is {@link ID#ID},
 	* and therefore the return type is fixed to {@link String}.
 	*/
-	@:overload public function getIdValue(bean : BeanT) : String;
+	@:overload @:public public function getIdValue(bean : BeanT) : String;
 	
 	/**
 	* Gets the Kind of property
 	* @return
 	*      always non-null.
 	*/
-	@:overload public function getKind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:public public function getKind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
 	/**
 	* If this property is mapped to the specified element,
@@ -92,13 +92,13 @@ extern interface Property<BeanT> extends com.sun.xml.internal.bind.v2.runtime.pr
 	* @return
 	*      null if RETAIN_REFERENCE_TO_INFO property is not set on the {@link JAXBContext}
 	*/
-	@:overload public function getInfo() : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo;
+	@:overload @:public public function getInfo() : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo;
 	
-	@:overload public function isHiddenByOverride() : Bool;
+	@:overload @:public public function isHiddenByOverride() : Bool;
 	
-	@:overload public function setHiddenByOverride(hidden : Bool) : Void;
+	@:overload @:public public function setHiddenByOverride(hidden : Bool) : Void;
 	
-	@:overload public function getFieldName() : String;
+	@:overload @:public public function getFieldName() : String;
 	
 	
 }

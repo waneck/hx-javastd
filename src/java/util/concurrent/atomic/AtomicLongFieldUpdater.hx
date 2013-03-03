@@ -65,12 +65,12 @@ package java.util.concurrent.atomic;
 	* @throws RuntimeException with a nested reflection-based
 	* exception if the class does not hold field or is the wrong type.
 	*/
-	@:overload public static function newUpdater<U>(tclass : Class<U>, fieldName : String) : java.util.concurrent.atomic.AtomicLongFieldUpdater<U>;
+	@:overload @:public @:static public static function newUpdater<U>(tclass : Class<U>, fieldName : String) : java.util.concurrent.atomic.AtomicLongFieldUpdater<U>;
 	
 	/**
 	* Protected do-nothing constructor for use by subclasses.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Atomically sets the field of the given object managed by this updater
@@ -86,7 +86,7 @@ package java.util.concurrent.atomic;
 	* @throws ClassCastException if {@code obj} is not an instance
 	* of the class possessing the field established in the constructor.
 	*/
-	@:overload @:abstract public function compareAndSet(obj : T, expect : haxe.Int64, update : haxe.Int64) : Bool;
+	@:overload @:public @:abstract public function compareAndSet(obj : T, expect : haxe.Int64, update : haxe.Int64) : Bool;
 	
 	/**
 	* Atomically sets the field of the given object managed by this updater
@@ -106,7 +106,7 @@ package java.util.concurrent.atomic;
 	* @throws ClassCastException if {@code obj} is not an instance
 	* of the class possessing the field established in the constructor.
 	*/
-	@:overload @:abstract public function weakCompareAndSet(obj : T, expect : haxe.Int64, update : haxe.Int64) : Bool;
+	@:overload @:public @:abstract public function weakCompareAndSet(obj : T, expect : haxe.Int64, update : haxe.Int64) : Bool;
 	
 	/**
 	* Sets the field of the given object managed by this updater to the
@@ -116,7 +116,7 @@ package java.util.concurrent.atomic;
 	* @param obj An object whose field to set
 	* @param newValue the new value
 	*/
-	@:overload @:abstract public function set(obj : T, newValue : haxe.Int64) : Void;
+	@:overload @:public @:abstract public function set(obj : T, newValue : haxe.Int64) : Void;
 	
 	/**
 	* Eventually sets the field of the given object managed by this
@@ -126,7 +126,7 @@ package java.util.concurrent.atomic;
 	* @param newValue the new value
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function lazySet(obj : T, newValue : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public @:abstract public function lazySet(obj : T, newValue : haxe.Int64) : Void;
 	
 	/**
 	* Gets the current value held in the field of the given object managed
@@ -135,7 +135,7 @@ package java.util.concurrent.atomic;
 	* @param obj An object whose field to get
 	* @return the current value
 	*/
-	@:overload @:abstract public function get(obj : T) : haxe.Int64;
+	@:overload @:public @:abstract public function get(obj : T) : haxe.Int64;
 	
 	/**
 	* Atomically sets the field of the given object managed by this updater
@@ -145,7 +145,7 @@ package java.util.concurrent.atomic;
 	* @param newValue the new value
 	* @return the previous value
 	*/
-	@:overload public function getAndSet(obj : T, newValue : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function getAndSet(obj : T, newValue : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Atomically increments by one the current value of the field of the
@@ -154,7 +154,7 @@ package java.util.concurrent.atomic;
 	* @param obj An object whose field to get and set
 	* @return the previous value
 	*/
-	@:overload public function getAndIncrement(obj : T) : haxe.Int64;
+	@:overload @:public public function getAndIncrement(obj : T) : haxe.Int64;
 	
 	/**
 	* Atomically decrements by one the current value of the field of the
@@ -163,7 +163,7 @@ package java.util.concurrent.atomic;
 	* @param obj An object whose field to get and set
 	* @return the previous value
 	*/
-	@:overload public function getAndDecrement(obj : T) : haxe.Int64;
+	@:overload @:public public function getAndDecrement(obj : T) : haxe.Int64;
 	
 	/**
 	* Atomically adds the given value to the current value of the field of
@@ -173,7 +173,7 @@ package java.util.concurrent.atomic;
 	* @param delta the value to add
 	* @return the previous value
 	*/
-	@:overload public function getAndAdd(obj : T, delta : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function getAndAdd(obj : T, delta : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Atomically increments by one the current value of the field of the
@@ -182,7 +182,7 @@ package java.util.concurrent.atomic;
 	* @param obj An object whose field to get and set
 	* @return the updated value
 	*/
-	@:overload public function incrementAndGet(obj : T) : haxe.Int64;
+	@:overload @:public public function incrementAndGet(obj : T) : haxe.Int64;
 	
 	/**
 	* Atomically decrements by one the current value of the field of the
@@ -191,7 +191,7 @@ package java.util.concurrent.atomic;
 	* @param obj An object whose field to get and set
 	* @return the updated value
 	*/
-	@:overload public function decrementAndGet(obj : T) : haxe.Int64;
+	@:overload @:public public function decrementAndGet(obj : T) : haxe.Int64;
 	
 	/**
 	* Atomically adds the given value to the current value of the field of
@@ -201,35 +201,35 @@ package java.util.concurrent.atomic;
 	* @param delta the value to add
 	* @return the updated value
 	*/
-	@:overload public function addAndGet(obj : T, delta : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function addAndGet(obj : T, delta : haxe.Int64) : haxe.Int64;
 	
 	
 }
 @:native('java$util$concurrent$atomic$AtomicLongFieldUpdater$CASUpdater') @:internal extern class AtomicLongFieldUpdater_CASUpdater<T> extends java.util.concurrent.atomic.AtomicLongFieldUpdater<T>
 {
-	@:overload override public function compareAndSet(obj : T, expect : haxe.Int64, update : haxe.Int64) : Bool;
+	@:overload @:public override public function compareAndSet(obj : T, expect : haxe.Int64, update : haxe.Int64) : Bool;
 	
-	@:overload override public function weakCompareAndSet(obj : T, expect : haxe.Int64, update : haxe.Int64) : Bool;
+	@:overload @:public override public function weakCompareAndSet(obj : T, expect : haxe.Int64, update : haxe.Int64) : Bool;
 	
-	@:overload override public function set(obj : T, newValue : haxe.Int64) : Void;
+	@:overload @:public override public function set(obj : T, newValue : haxe.Int64) : Void;
 	
-	@:overload override public function lazySet(obj : T, newValue : haxe.Int64) : Void;
+	@:overload @:public override public function lazySet(obj : T, newValue : haxe.Int64) : Void;
 	
-	@:overload override public function get(obj : T) : haxe.Int64;
+	@:overload @:public override public function get(obj : T) : haxe.Int64;
 	
 	
 }
 @:native('java$util$concurrent$atomic$AtomicLongFieldUpdater$LockedUpdater') @:internal extern class AtomicLongFieldUpdater_LockedUpdater<T> extends java.util.concurrent.atomic.AtomicLongFieldUpdater<T>
 {
-	@:overload override public function compareAndSet(obj : T, expect : haxe.Int64, update : haxe.Int64) : Bool;
+	@:overload @:public override public function compareAndSet(obj : T, expect : haxe.Int64, update : haxe.Int64) : Bool;
 	
-	@:overload override public function weakCompareAndSet(obj : T, expect : haxe.Int64, update : haxe.Int64) : Bool;
+	@:overload @:public override public function weakCompareAndSet(obj : T, expect : haxe.Int64, update : haxe.Int64) : Bool;
 	
-	@:overload override public function set(obj : T, newValue : haxe.Int64) : Void;
+	@:overload @:public override public function set(obj : T, newValue : haxe.Int64) : Void;
 	
-	@:overload override public function lazySet(obj : T, newValue : haxe.Int64) : Void;
+	@:overload @:public override public function lazySet(obj : T, newValue : haxe.Int64) : Void;
 	
-	@:overload override public function get(obj : T) : haxe.Int64;
+	@:overload @:public override public function get(obj : T) : haxe.Int64;
 	
 	
 }

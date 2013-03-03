@@ -33,17 +33,17 @@ package javax.swing.text.html;
 */
 @:internal extern class CommentView extends javax.swing.text.html.HiddenTagView
 {
-	@:overload override private function createComponent() : java.awt.Component;
+	@:overload @:protected override private function createComponent() : java.awt.Component;
 	
 	
 }
 @:native('javax$swing$text$html$CommentView$CommentBorder') @:internal extern class CommentView_CommentBorder extends javax.swing.border.LineBorder
 {
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
-	@:overload override public function isBorderOpaque() : Bool;
+	@:overload @:public override public function isBorderOpaque() : Bool;
 	
 	
 }

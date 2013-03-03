@@ -45,82 +45,82 @@ package java.awt;
 	* @see      java.awt.GridBagConstraints#gridx
 	* @see      java.awt.GridBagConstraints#gridy
 	*/
-	public static var RELATIVE(default, null) : Int;
+	@:public @:static @:final public static var RELATIVE(default, null) : Int;
 	
 	/**
 	* Specifies that this component is the
 	* last component in its column or row.
 	*/
-	public static var REMAINDER(default, null) : Int;
+	@:public @:static @:final public static var REMAINDER(default, null) : Int;
 	
 	/**
 	* Do not resize the component.
 	*/
-	public static var NONE(default, null) : Int;
+	@:public @:static @:final public static var NONE(default, null) : Int;
 	
 	/**
 	* Resize the component both horizontally and vertically.
 	*/
-	public static var BOTH(default, null) : Int;
+	@:public @:static @:final public static var BOTH(default, null) : Int;
 	
 	/**
 	* Resize the component horizontally but not vertically.
 	*/
-	public static var HORIZONTAL(default, null) : Int;
+	@:public @:static @:final public static var HORIZONTAL(default, null) : Int;
 	
 	/**
 	* Resize the component vertically but not horizontally.
 	*/
-	public static var VERTICAL(default, null) : Int;
+	@:public @:static @:final public static var VERTICAL(default, null) : Int;
 	
 	/**
 	* Put the component in the center of its display area.
 	*/
-	public static var CENTER(default, null) : Int;
+	@:public @:static @:final public static var CENTER(default, null) : Int;
 	
 	/**
 	* Put the component at the top of its display area,
 	* centered horizontally.
 	*/
-	public static var NORTH(default, null) : Int;
+	@:public @:static @:final public static var NORTH(default, null) : Int;
 	
 	/**
 	* Put the component at the top-right corner of its display area.
 	*/
-	public static var NORTHEAST(default, null) : Int;
+	@:public @:static @:final public static var NORTHEAST(default, null) : Int;
 	
 	/**
 	* Put the component on the right side of its display area,
 	* centered vertically.
 	*/
-	public static var EAST(default, null) : Int;
+	@:public @:static @:final public static var EAST(default, null) : Int;
 	
 	/**
 	* Put the component at the bottom-right corner of its display area.
 	*/
-	public static var SOUTHEAST(default, null) : Int;
+	@:public @:static @:final public static var SOUTHEAST(default, null) : Int;
 	
 	/**
 	* Put the component at the bottom of its display area, centered
 	* horizontally.
 	*/
-	public static var SOUTH(default, null) : Int;
+	@:public @:static @:final public static var SOUTH(default, null) : Int;
 	
 	/**
 	* Put the component at the bottom-left corner of its display area.
 	*/
-	public static var SOUTHWEST(default, null) : Int;
+	@:public @:static @:final public static var SOUTHWEST(default, null) : Int;
 	
 	/**
 	* Put the component on the left side of its display area,
 	* centered vertically.
 	*/
-	public static var WEST(default, null) : Int;
+	@:public @:static @:final public static var WEST(default, null) : Int;
 	
 	/**
 	* Put the component at the top-left corner of its display area.
 	*/
-	public static var NORTHWEST(default, null) : Int;
+	@:public @:static @:final public static var NORTHWEST(default, null) : Int;
 	
 	/**
 	* Place the component centered along the edge of its display area
@@ -128,7 +128,7 @@ package java.awt;
 	* {@code ComponentOrientation}.  Equal to NORTH for horizontal
 	* orientations.
 	*/
-	public static var PAGE_START(default, null) : Int;
+	@:public @:static @:final public static var PAGE_START(default, null) : Int;
 	
 	/**
 	* Place the component centered along the edge of its display area
@@ -136,7 +136,7 @@ package java.awt;
 	* {@code ComponentOrientation}.  Equal to SOUTH for horizontal
 	* orientations.
 	*/
-	public static var PAGE_END(default, null) : Int;
+	@:public @:static @:final public static var PAGE_END(default, null) : Int;
 	
 	/**
 	* Place the component centered along the edge of its display area where
@@ -145,7 +145,7 @@ package java.awt;
 	* left-to-right orientations and EAST for horizontal, right-to-left
 	* orientations.
 	*/
-	public static var LINE_START(default, null) : Int;
+	@:public @:static @:final public static var LINE_START(default, null) : Int;
 	
 	/**
 	* Place the component centered along the edge of its display area where
@@ -154,7 +154,7 @@ package java.awt;
 	* left-to-right orientations and WEST for horizontal, right-to-left
 	* orientations.
 	*/
-	public static var LINE_END(default, null) : Int;
+	@:public @:static @:final public static var LINE_END(default, null) : Int;
 	
 	/**
 	* Place the component in the corner of its display area where
@@ -163,7 +163,7 @@ package java.awt;
 	* left-to-right orientations and NORTHEAST for horizontal, right-to-left
 	* orientations.
 	*/
-	public static var FIRST_LINE_START(default, null) : Int;
+	@:public @:static @:final public static var FIRST_LINE_START(default, null) : Int;
 	
 	/**
 	* Place the component in the corner of its display area where
@@ -172,7 +172,7 @@ package java.awt;
 	* left-to-right orientations and NORTHWEST for horizontal, right-to-left
 	* orientations.
 	*/
-	public static var FIRST_LINE_END(default, null) : Int;
+	@:public @:static @:final public static var FIRST_LINE_END(default, null) : Int;
 	
 	/**
 	* Place the component in the corner of its display area where
@@ -181,7 +181,7 @@ package java.awt;
 	* left-to-right orientations and SOUTHEAST for horizontal, right-to-left
 	* orientations.
 	*/
-	public static var LAST_LINE_START(default, null) : Int;
+	@:public @:static @:final public static var LAST_LINE_START(default, null) : Int;
 	
 	/**
 	* Place the component in the corner of its display area where
@@ -190,7 +190,7 @@ package java.awt;
 	* left-to-right orientations and SOUTHWEST for horizontal, right-to-left
 	* orientations.
 	*/
-	public static var LAST_LINE_END(default, null) : Int;
+	@:public @:static @:final public static var LAST_LINE_END(default, null) : Int;
 	
 	/**
 	* Possible value for the <code>anchor</code> field.  Specifies
@@ -201,7 +201,7 @@ package java.awt;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var BASELINE(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var BASELINE(default, null) : Int;
 	
 	/**
 	* Possible value for the <code>anchor</code> field.  Specifies
@@ -214,7 +214,7 @@ package java.awt;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var BASELINE_LEADING(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var BASELINE_LEADING(default, null) : Int;
 	
 	/**
 	* Possible value for the <code>anchor</code> field.  Specifies
@@ -227,7 +227,7 @@ package java.awt;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var BASELINE_TRAILING(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var BASELINE_TRAILING(default, null) : Int;
 	
 	/**
 	* Possible value for the <code>anchor</code> field.  Specifies
@@ -238,7 +238,7 @@ package java.awt;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var ABOVE_BASELINE(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var ABOVE_BASELINE(default, null) : Int;
 	
 	/**
 	* Possible value for the <code>anchor</code> field.  Specifies
@@ -251,7 +251,7 @@ package java.awt;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var ABOVE_BASELINE_LEADING(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var ABOVE_BASELINE_LEADING(default, null) : Int;
 	
 	/**
 	* Possible value for the <code>anchor</code> field.  Specifies
@@ -264,7 +264,7 @@ package java.awt;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var ABOVE_BASELINE_TRAILING(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var ABOVE_BASELINE_TRAILING(default, null) : Int;
 	
 	/**
 	* Possible value for the <code>anchor</code> field.  Specifies
@@ -275,7 +275,7 @@ package java.awt;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var BELOW_BASELINE(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var BELOW_BASELINE(default, null) : Int;
 	
 	/**
 	* Possible value for the <code>anchor</code> field.  Specifies
@@ -288,7 +288,7 @@ package java.awt;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var BELOW_BASELINE_LEADING(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var BELOW_BASELINE_LEADING(default, null) : Int;
 	
 	/**
 	* Possible value for the <code>anchor</code> field.  Specifies
@@ -301,7 +301,7 @@ package java.awt;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var BELOW_BASELINE_TRAILING(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var BELOW_BASELINE_TRAILING(default, null) : Int;
 	
 	/**
 	* Specifies the cell containing the leading edge of the component's
@@ -321,7 +321,7 @@ package java.awt;
 	* @see java.awt.GridBagConstraints#gridy
 	* @see java.awt.ComponentOrientation
 	*/
-	public var gridx : Int;
+	@:public public var gridx : Int;
 	
 	/**
 	* Specifies the cell at the top of the component's display area,
@@ -336,7 +336,7 @@ package java.awt;
 	* @see #clone()
 	* @see java.awt.GridBagConstraints#gridx
 	*/
-	public var gridy : Int;
+	@:public public var gridy : Int;
 	
 	/**
 	* Specifies the number of cells in a row for the component's
@@ -355,7 +355,7 @@ package java.awt;
 	* @see #clone()
 	* @see java.awt.GridBagConstraints#gridheight
 	*/
-	public var gridwidth : Int;
+	@:public public var gridwidth : Int;
 	
 	/**
 	* Specifies the number of cells in a column for the component's
@@ -374,7 +374,7 @@ package java.awt;
 	* @see #clone()
 	* @see java.awt.GridBagConstraints#gridwidth
 	*/
-	public var gridheight : Int;
+	@:public public var gridheight : Int;
 	
 	/**
 	* Specifies how to distribute extra horizontal space.
@@ -395,7 +395,7 @@ package java.awt;
 	* @see #clone()
 	* @see java.awt.GridBagConstraints#weighty
 	*/
-	public var weightx : Float;
+	@:public public var weightx : Float;
 	
 	/**
 	* Specifies how to distribute extra vertical space.
@@ -416,7 +416,7 @@ package java.awt;
 	* @see #clone()
 	* @see java.awt.GridBagConstraints#weightx
 	*/
-	public var weighty : Float;
+	@:public public var weighty : Float;
 	
 	/**
 	* This field is used when the component is smaller than its
@@ -448,7 +448,7 @@ package java.awt;
 	* @see #clone()
 	* @see java.awt.ComponentOrientation
 	*/
-	public var anchor : Int;
+	@:public public var anchor : Int;
 	
 	/**
 	* This field is used when the component's display area is larger
@@ -475,7 +475,7 @@ package java.awt;
 	* @serial
 	* @see #clone()
 	*/
-	public var fill : Int;
+	@:public public var fill : Int;
 	
 	/**
 	* This field specifies the external padding of the component, the
@@ -486,7 +486,7 @@ package java.awt;
 	* @serial
 	* @see #clone()
 	*/
-	public var insets : java.awt.Insets;
+	@:public public var insets : java.awt.Insets;
 	
 	/**
 	* This field specifies the internal padding of the component, how much
@@ -499,7 +499,7 @@ package java.awt;
 	* @see #clone()
 	* @see java.awt.GridBagConstraints#ipady
 	*/
-	public var ipadx : Int;
+	@:public public var ipadx : Int;
 	
 	/**
 	* This field specifies the internal padding, that is, how much
@@ -512,13 +512,13 @@ package java.awt;
 	* @see #clone()
 	* @see java.awt.GridBagConstraints#ipadx
 	*/
-	public var ipady : Int;
+	@:public public var ipady : Int;
 	
 	/**
 	* Creates a <code>GridBagConstraint</code> object with
 	* all of its fields set to their default value.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>GridBagConstraints</code> object with
@@ -554,13 +554,13 @@ package java.awt;
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(gridx : Int, gridy : Int, gridwidth : Int, gridheight : Int, weightx : Float, weighty : Float, anchor : Int, fill : Int, insets : java.awt.Insets, ipadx : Int, ipady : Int) : Void;
+	@:require(java2) @:overload @:public public function new(gridx : Int, gridy : Int, gridwidth : Int, gridheight : Int, weightx : Float, weighty : Float, anchor : Int, fill : Int, insets : java.awt.Insets, ipadx : Int, ipady : Int) : Void;
 	
 	/**
 	* Creates a copy of this grid bag constraint.
 	* @return     a copy of this grid bag constraint
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

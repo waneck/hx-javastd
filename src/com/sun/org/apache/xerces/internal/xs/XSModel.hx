@@ -29,7 +29,7 @@ extern interface XSModel
 	* name, but if there are components that do not have a target namespace
 	* , <code>null</code> is included in this list.
 	*/
-	@:overload public function getNamespaces() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getNamespaces() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
 	/**
 	* A set of namespace schema information information items (of type
@@ -39,7 +39,7 @@ extern interface XSModel
 	* in the schema had no target namespace. For more information see
 	* schema information.
 	*/
-	@:overload public function getNamespaceItems() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItemList;
+	@:overload @:public public function getNamespaceItems() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItemList;
 	
 	/**
 	* Returns a list of top-level components, i.e. element declarations,
@@ -54,7 +54,7 @@ extern interface XSModel
 	*   <code>objectType</code> or an empty <code>XSNamedMap</code> if no
 	*   such definitions exist.
 	*/
-	@:overload public function getComponents(objectType : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.xs.XSNamedMap;
+	@:overload @:public public function getComponents(objectType : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.xs.XSNamedMap;
 	
 	/**
 	* Convenience method. Returns a list of top-level component declarations
@@ -68,13 +68,13 @@ extern interface XSModel
 	*   <code>objectType</code> and defined in the specified
 	*   <code>namespace</code> or an empty <code>XSNamedMap</code>.
 	*/
-	@:overload public function getComponentsByNamespace(objectType : java.StdTypes.Int16, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSNamedMap;
+	@:overload @:public public function getComponentsByNamespace(objectType : java.StdTypes.Int16, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSNamedMap;
 	
 	/**
 	*  [annotations]: a set of annotations if it exists, otherwise an empty
 	* <code>XSObjectList</code>.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* Convenience method. Returns a top-level element declaration.
@@ -84,7 +84,7 @@ extern interface XSModel
 	* @return A top-level element declaration or <code>null</code> if such a
 	*   declaration does not exist.
 	*/
-	@:overload public function getElementDeclaration(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
+	@:overload @:public public function getElementDeclaration(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
 	
 	/**
 	* Convenience method. Returns a top-level attribute declaration.
@@ -94,7 +94,7 @@ extern interface XSModel
 	* @return A top-level attribute declaration or <code>null</code> if such
 	*   a declaration does not exist.
 	*/
-	@:overload public function getAttributeDeclaration(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeDeclaration;
+	@:overload @:public public function getAttributeDeclaration(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeDeclaration;
 	
 	/**
 	* Convenience method. Returns a top-level simple or complex type
@@ -105,7 +105,7 @@ extern interface XSModel
 	* @return An <code>XSTypeDefinition</code> or <code>null</code> if such
 	*   a definition does not exist.
 	*/
-	@:overload public function getTypeDefinition(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
+	@:overload @:public public function getTypeDefinition(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
 	
 	/**
 	* Convenience method. Returns a top-level attribute group definition.
@@ -115,7 +115,7 @@ extern interface XSModel
 	* @return A top-level attribute group definition or <code>null</code> if
 	*   such a definition does not exist.
 	*/
-	@:overload public function getAttributeGroup(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeGroupDefinition;
+	@:overload @:public public function getAttributeGroup(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeGroupDefinition;
 	
 	/**
 	* Convenience method. Returns a top-level model group definition.
@@ -125,7 +125,7 @@ extern interface XSModel
 	* @return A top-level model group definition or <code>null</code> if
 	*   such a definition does not exist.
 	*/
-	@:overload public function getModelGroupDefinition(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSModelGroupDefinition;
+	@:overload @:public public function getModelGroupDefinition(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSModelGroupDefinition;
 	
 	/**
 	* Convenience method. Returns a top-level notation declaration.
@@ -135,7 +135,7 @@ extern interface XSModel
 	* @return A top-level notation declaration or <code>null</code> if such
 	*   a declaration does not exist.
 	*/
-	@:overload public function getNotationDeclaration(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSNotationDeclaration;
+	@:overload @:public public function getNotationDeclaration(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSNotationDeclaration;
 	
 	/**
 	* Convenience method. Returns a list containing the members of the
@@ -148,7 +148,7 @@ extern interface XSModel
 	*  <code>XSObjectList</code> if the substitution group contains
 	*  no members.
 	*/
-	@:overload public function getSubstitutionGroup(head : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration) : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getSubstitutionGroup(head : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration) : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	
 }

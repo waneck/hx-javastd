@@ -110,9 +110,9 @@ package javax.crypto;
 	* Calculates a hash code value for the object.  Objects
 	* which are equal will also have the same hashcode.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

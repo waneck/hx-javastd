@@ -25,9 +25,9 @@ package java.text;
 */
 @:internal extern class CharacterIteratorFieldDelegate implements java.text.Format.Format_FieldDelegate
 {
-	@:overload public function formatted(attr : java.text.Format.Format_Field, value : Dynamic, start : Int, end : Int, buffer : java.lang.StringBuffer) : Void;
+	@:overload @:public public function formatted(attr : java.text.Format.Format_Field, value : Dynamic, start : Int, end : Int, buffer : java.lang.StringBuffer) : Void;
 	
-	@:overload public function formatted(fieldID : Int, attr : java.text.Format.Format_Field, value : Dynamic, start : Int, end : Int, buffer : java.lang.StringBuffer) : Void;
+	@:overload @:public public function formatted(fieldID : Int, attr : java.text.Format.Format_Field, value : Dynamic, start : Int, end : Int, buffer : java.lang.StringBuffer) : Void;
 	
 	/**
 	* Returns an <code>AttributedCharacterIterator</code> that can be used
@@ -35,7 +35,7 @@ package java.text;
 	*
 	* @pararm string Result of formatting.
 	*/
-	@:overload public function getIterator(string : String) : java.text.AttributedCharacterIterator;
+	@:overload @:public public function getIterator(string : String) : java.text.AttributedCharacterIterator;
 	
 	
 }

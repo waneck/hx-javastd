@@ -21,31 +21,31 @@ package com.sun.org.apache.xerces.internal.impl.xpath;
 extern class XPath
 {
 	/** Expression. */
-	private var fExpression : String;
+	@:protected private var fExpression : String;
 	
 	/** Symbol table. */
-	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
 	/** Location paths. */
-	private var fLocationPaths : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_LocationPath>;
+	@:protected private var fLocationPaths : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_LocationPath>;
 	
 	/** Constructs an XPath object from the specified expression. */
-	@:overload public function new(xpath : String, symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, context : com.sun.org.apache.xerces.internal.xni.NamespaceContext) : Void;
+	@:overload @:public public function new(xpath : String, symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, context : com.sun.org.apache.xerces.internal.xni.NamespaceContext) : Void;
 	
 	/**
 	* Returns a representation of all location paths for this XPath.
 	* XPath = locationPath ( '|' locationPath)
 	*/
-	@:overload public function getLocationPaths() : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_LocationPath>;
+	@:overload @:public public function getLocationPaths() : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_LocationPath>;
 	
 	/** Returns a representation of the first location path for this XPath. */
-	@:overload public function getLocationPath() : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_LocationPath;
+	@:overload @:public public function getLocationPath() : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_LocationPath;
 	
 	/** Returns a string representation of this object. */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/** Main program entry. */
-	@:overload public static function main(argv : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(argv : java.NativeArray<String>) : Void;
 	
 	
 }
@@ -59,19 +59,19 @@ extern class XPath
 @:native('com$sun$org$apache$xerces$internal$impl$xpath$XPath$LocationPath') extern class XPath_LocationPath implements java.lang.Cloneable
 {
 	/** List of steps. */
-	public var steps : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Step>;
+	@:public public var steps : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Step>;
 	
 	/** Creates a location path from a series of steps. */
-	@:overload public function new(steps : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Step>) : Void;
+	@:overload @:public public function new(steps : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Step>) : Void;
 	
 	/** Copy constructor. */
-	@:overload private function new(path : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_LocationPath) : Void;
+	@:overload @:protected private function new(path : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_LocationPath) : Void;
 	
 	/** Returns a string representation of this object. */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/** Returns a clone of this object. */
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }
@@ -85,22 +85,22 @@ extern class XPath
 @:native('com$sun$org$apache$xerces$internal$impl$xpath$XPath$Step') extern class XPath_Step implements java.lang.Cloneable
 {
 	/** Axis. */
-	public var axis : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Axis;
+	@:public public var axis : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Axis;
 	
 	/** Node test. */
-	public var nodeTest : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_NodeTest;
+	@:public public var nodeTest : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_NodeTest;
 	
 	/** Constructs a step from an axis and node test. */
-	@:overload public function new(axis : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Axis, nodeTest : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_NodeTest) : Void;
+	@:overload @:public public function new(axis : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Axis, nodeTest : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_NodeTest) : Void;
 	
 	/** Copy constructor. */
-	@:overload private function new(step : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Step) : Void;
+	@:overload @:protected private function new(step : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Step) : Void;
 	
 	/** Returns a string representation of this object. */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/** Returns a clone of this object. */
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }
@@ -114,31 +114,31 @@ extern class XPath
 @:native('com$sun$org$apache$xerces$internal$impl$xpath$XPath$Axis') extern class XPath_Axis implements java.lang.Cloneable
 {
 	/** Type: child. */
-	public static var CHILD(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CHILD(default, null) : java.StdTypes.Int16;
 	
 	/** Type: attribute. */
-	public static var ATTRIBUTE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var ATTRIBUTE(default, null) : java.StdTypes.Int16;
 	
 	/** Type: self. */
-	public static var SELF(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var SELF(default, null) : java.StdTypes.Int16;
 	
 	/** Type: descendant. */
-	public static var DESCENDANT(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var DESCENDANT(default, null) : java.StdTypes.Int16;
 	
 	/** Axis type. */
-	public var type : java.StdTypes.Int16;
+	@:public public var type : java.StdTypes.Int16;
 	
 	/** Constructs an axis with the specified type. */
-	@:overload public function new(type : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(type : java.StdTypes.Int16) : Void;
 	
 	/** Copy constructor. */
-	@:overload private function new(axis : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Axis) : Void;
+	@:overload @:protected private function new(axis : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Axis) : Void;
 	
 	/** Returns a string representation of this object. */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/** Returns a clone of this object. */
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }
@@ -152,40 +152,40 @@ extern class XPath
 @:native('com$sun$org$apache$xerces$internal$impl$xpath$XPath$NodeTest') extern class XPath_NodeTest implements java.lang.Cloneable
 {
 	/** Type: qualified name. */
-	public static var QNAME(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var QNAME(default, null) : java.StdTypes.Int16;
 	
 	/** Type: wildcard. */
-	public static var WILDCARD(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var WILDCARD(default, null) : java.StdTypes.Int16;
 	
 	/** Type: node. */
-	public static var NODE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var NODE(default, null) : java.StdTypes.Int16;
 	
 	/** Type: namespace */
-	public static var NAMESPACE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var NAMESPACE(default, null) : java.StdTypes.Int16;
 	
 	/** Node test type. */
-	public var type : java.StdTypes.Int16;
+	@:public public var type : java.StdTypes.Int16;
 	
 	/** Node qualified name. */
-	public var name(default, null) : com.sun.org.apache.xerces.internal.xni.QName;
+	@:public @:final public var name(default, null) : com.sun.org.apache.xerces.internal.xni.QName;
 	
 	/** Constructs a node test of type WILDCARD or NODE. */
-	@:overload public function new(type : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(type : java.StdTypes.Int16) : Void;
 	
 	/** Constructs a node test of type QName. */
-	@:overload public function new(name : com.sun.org.apache.xerces.internal.xni.QName) : Void;
+	@:overload @:public public function new(name : com.sun.org.apache.xerces.internal.xni.QName) : Void;
 	
 	/** Constructs a node test of type Namespace. */
-	@:overload public function new(prefix : String, uri : String) : Void;
+	@:overload @:public public function new(prefix : String, uri : String) : Void;
 	
 	/** Copy constructor. */
-	@:overload public function new(nodeTest : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_NodeTest) : Void;
+	@:overload @:public public function new(nodeTest : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_NodeTest) : Void;
 	
 	/** Returns a string representation of this object. */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/** Returns a clone of this object. */
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }
@@ -205,26 +205,26 @@ extern class XPath
 	*                  | NameTest | NodeType | Operator | FunctionName
 	*                  | AxisName | Literal | Number | VariableReference
 	*/
-	public static var EXPRTOKEN_OPEN_PAREN(default, null) : Int;
+	@:public @:static @:final public static var EXPRTOKEN_OPEN_PAREN(default, null) : Int;
 	
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
-	@:overload public function getTokenString(token : Int) : String;
+	@:overload @:public public function getTokenString(token : Int) : String;
 	
-	@:overload public function addToken(tokenStr : String) : Void;
+	@:overload @:public public function addToken(tokenStr : String) : Void;
 	
-	@:overload public function addToken(token : Int) : Void;
+	@:overload @:public public function addToken(token : Int) : Void;
 	
 	/**
 	* Resets the current position to the head of the token list.
 	*/
-	@:overload public function rewind() : Void;
+	@:overload @:public public function rewind() : Void;
 	
 	/**
 	* Returns true if the {@link #getNextToken()} method
 	* returns a valid token.
 	*/
-	@:overload public function hasMore() : Bool;
+	@:overload @:public public function hasMore() : Bool;
 	
 	/**
 	* Obtains the token at the current position, then advance
@@ -233,7 +233,7 @@ extern class XPath
 	* If there's no such next token, this method throws
 	* <tt>new XPathException("c-general-xpath");</tt>.
 	*/
-	@:overload public function nextToken() : Int;
+	@:overload @:public public function nextToken() : Int;
 	
 	/**
 	* Obtains the token at the current position, without advancing
@@ -242,7 +242,7 @@ extern class XPath
 	* If there's no such next token, this method throws
 	* <tt>new XPathException("c-general-xpath");</tt>.
 	*/
-	@:overload public function peekToken() : Int;
+	@:overload @:public public function peekToken() : Int;
 	
 	/**
 	* Obtains the token at the current position as a String.
@@ -251,9 +251,9 @@ extern class XPath
 	* is not a string token, this method throws
 	* <tt>new XPathException("c-general-xpath");</tt>.
 	*/
-	@:overload public function nextTokenAsString() : String;
+	@:overload @:public public function nextTokenAsString() : String;
 	
-	@:overload public function dumpTokens() : Void;
+	@:overload @:public public function dumpTokens() : Void;
 	
 	
 }
@@ -267,12 +267,12 @@ extern class XPath
 @:native('com$sun$org$apache$xerces$internal$impl$xpath$XPath$Scanner') @:internal extern class XPath_Scanner
 {
 	/** Constructs an XPath expression scanner. */
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
 	/**
 	*
 	*/
-	@:overload public function scanExpr(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, tokens : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Tokens, data : String, currentOffset : Int, endOffset : Int) : Bool;
+	@:overload @:public public function scanExpr(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, tokens : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Tokens, data : String, currentOffset : Int, endOffset : Int) : Bool;
 	
 	/**
 	* This method adds the specified token to the token list. By
@@ -282,7 +282,7 @@ extern class XPath
 	* XPath expression. This is a convenient way of allowing only
 	* a subset of XPath.
 	*/
-	@:overload private function addToken(tokens : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Tokens, token : Int) : Void;
+	@:overload @:protected private function addToken(tokens : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Tokens, token : Int) : Void;
 	
 	
 }

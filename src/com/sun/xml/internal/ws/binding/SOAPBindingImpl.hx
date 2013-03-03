@@ -28,9 +28,9 @@ package com.sun.xml.internal.ws.binding;
 */
 extern class SOAPBindingImpl extends com.sun.xml.internal.ws.binding.BindingImpl implements javax.xml.ws.soap.SOAPBinding
 {
-	public static var X_SOAP12HTTP_BINDING(default, null) : String;
+	@:public @:static @:final public static var X_SOAP12HTTP_BINDING(default, null) : String;
 	
-	private var soapVersion(default, null) : com.sun.xml.internal.ws.api.SOAPVersion;
+	@:protected @:final private var soapVersion(default, null) : com.sun.xml.internal.ws.api.SOAPVersion;
 	
 	/**
 	*  This method should be called if the binding has SOAPSEIModel
@@ -39,41 +39,41 @@ extern class SOAPBindingImpl extends com.sun.xml.internal.ws.binding.BindingImpl
 	*
 	* @param headers
 	*/
-	@:overload public function setPortKnownHeaders(headers : java.util.Set<javax.xml.namespace.QName>) : Void;
+	@:overload @:public public function setPortKnownHeaders(headers : java.util.Set<javax.xml.namespace.QName>) : Void;
 	
-	@:overload public function understandsHeader(header : javax.xml.namespace.QName) : Bool;
+	@:overload @:public public function understandsHeader(header : javax.xml.namespace.QName) : Bool;
 	
 	/**
 	* Sets the handlers on the binding and then sorts the handlers in to logical and protocol handlers.
 	* Creates a new HandlerConfiguration object and sets it on the BindingImpl. Also parses Headers understood by
 	* Protocol Handlers and sets the HandlerConfiguration.
 	*/
-	@:overload override public function setHandlerChain(chain : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
+	@:overload @:public override public function setHandlerChain(chain : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
 	
-	@:overload private function addRequiredRoles(roles : java.util.Set<String>) : Void;
+	@:overload @:protected private function addRequiredRoles(roles : java.util.Set<String>) : Void;
 	
-	@:overload public function getRoles() : java.util.Set<String>;
+	@:overload @:public public function getRoles() : java.util.Set<String>;
 	
 	/**
 	* Adds the next and other roles in case this has
 	* been called by a user without them.
 	* Creates a new HandlerConfiguration object and sets it on the BindingImpl.
 	*/
-	@:overload public function setRoles(roles : java.util.Set<String>) : Void;
+	@:overload @:public public function setRoles(roles : java.util.Set<String>) : Void;
 	
 	/**
 	* Used typically by the runtime to enable/disable Mtom optimization
 	*/
-	@:overload public function isMTOMEnabled() : Bool;
+	@:overload @:public public function isMTOMEnabled() : Bool;
 	
 	/**
 	* Client application can override if the MTOM optimization should be enabled
 	*/
-	@:overload public function setMTOMEnabled(b : Bool) : Void;
+	@:overload @:public public function setMTOMEnabled(b : Bool) : Void;
 	
-	@:overload public function getSOAPFactory() : javax.xml.soap.SOAPFactory;
+	@:overload @:public public function getSOAPFactory() : javax.xml.soap.SOAPFactory;
 	
-	@:overload public function getMessageFactory() : javax.xml.soap.MessageFactory;
+	@:overload @:public public function getMessageFactory() : javax.xml.soap.MessageFactory;
 	
 	
 }

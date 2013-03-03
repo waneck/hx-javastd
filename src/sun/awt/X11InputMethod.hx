@@ -25,7 +25,7 @@ package sun.awt;
 */
 extern class X11InputMethod extends sun.awt.im.InputMethodAdapter
 {
-	private var clientComponentWindow : java.awt.Container;
+	@:protected private var clientComponentWindow : java.awt.Container;
 	
 	/**
 	* Constructs an X11InputMethod instance. It initializes the XIM
@@ -33,22 +33,22 @@ extern class X11InputMethod extends sun.awt.im.InputMethodAdapter
 	*
 	* @exception AWTException if XOpenIM() failed.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
-	@:overload @:abstract private function openXIM() : Bool;
+	@:overload @:protected @:abstract private function openXIM() : Bool;
 	
-	@:overload private function isDisposed() : Bool;
+	@:overload @:protected private function isDisposed() : Bool;
 	
-	@:overload @:abstract private function setXICFocus(peer : java.awt.peer.ComponentPeer, value : Bool, active : Bool) : Void;
+	@:overload @:protected @:abstract private function setXICFocus(peer : java.awt.peer.ComponentPeer, value : Bool, active : Bool) : Void;
 	
 	/**
 	* Does nothing - this adapter doesn't use the input method context.
 	*
 	* @see java.awt.im.spi.InputMethod#setInputMethodContext
 	*/
-	@:overload override public function setInputMethodContext(context : java.awt.im.spi.InputMethodContext) : Void;
+	@:overload @:public override public function setInputMethodContext(context : java.awt.im.spi.InputMethodContext) : Void;
 	
 	/**
 	* Set locale to input. If input method doesn't support specified locale,
@@ -57,19 +57,19 @@ extern class X11InputMethod extends sun.awt.im.InputMethodAdapter
 	* @param lang locale to input
 	* @return the true is returned when specified locale is supported.
 	*/
-	@:overload override public function setLocale(lang : java.util.Locale) : Bool;
+	@:overload @:public override public function setLocale(lang : java.util.Locale) : Bool;
 	
 	/**
 	* Returns current input locale.
 	*/
-	@:overload override public function getLocale() : java.util.Locale;
+	@:overload @:public override public function getLocale() : java.util.Locale;
 	
 	/**
 	* Does nothing - XIM doesn't let you specify which characters you expect.
 	*
 	* @see java.awt.im.spi.InputMethod#setCharacterSubsets
 	*/
-	@:overload override public function setCharacterSubsets(subsets : java.NativeArray<java.lang.Character.Character_Subset>) : Void;
+	@:overload @:public override public function setCharacterSubsets(subsets : java.NativeArray<java.lang.Character.Character_Subset>) : Void;
 	
 	/**
 	* Dispatch event to input method. InputContext dispatch event with this
@@ -78,94 +78,94 @@ extern class X11InputMethod extends sun.awt.im.InputMethodAdapter
 	*
 	* @param e event
 	*/
-	@:overload override public function dispatchEvent(e : java.awt.AWTEvent) : Void;
+	@:overload @:public override public function dispatchEvent(e : java.awt.AWTEvent) : Void;
 	
-	@:overload @:final private function resetXICifneeded() : Void;
+	@:overload @:protected @:final private function resetXICifneeded() : Void;
 	
 	/**
 	* Activate input method.
 	*/
-	@:overload @:synchronized override public function activate() : Void;
+	@:overload @:public @:synchronized override public function activate() : Void;
 	
-	@:overload @:abstract private function createXIC() : Bool;
+	@:overload @:protected @:abstract private function createXIC() : Bool;
 	
 	/**
 	* Deactivate input method.
 	*/
-	@:overload @:synchronized override public function deactivate(isTemporary : Bool) : Void;
+	@:overload @:public @:synchronized override public function deactivate(isTemporary : Bool) : Void;
 	
 	/**
 	* Explicitly disable the native IME. Native IME is not disabled when
 	* deactivate is called.
 	*/
-	@:overload override public function disableInputMethod() : Void;
+	@:overload @:public override public function disableInputMethod() : Void;
 	
-	@:overload override public function hideWindows() : Void;
+	@:overload @:public override public function hideWindows() : Void;
 	
 	/**
 	* @see java.awt.Toolkit#mapInputMethodHighlight
 	*/
-	@:overload public static function mapInputMethodHighlight(highlight : java.awt.im.InputMethodHighlight) : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public @:static public static function mapInputMethodHighlight(highlight : java.awt.im.InputMethodHighlight) : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* @see sun.awt.im.InputMethodAdapter#setAWTFocussedComponent
 	*/
-	@:overload override private function setAWTFocussedComponent(component : java.awt.Component) : Void;
+	@:overload @:protected override private function setAWTFocussedComponent(component : java.awt.Component) : Void;
 	
 	/**
 	* @see sun.awt.im.InputMethodAdapter#stopListening
 	*/
-	@:overload override private function stopListening() : Void;
+	@:overload @:protected override private function stopListening() : Void;
 	
-	@:overload @:abstract private function getParent(client : java.awt.Component) : java.awt.Container;
+	@:overload @:protected @:abstract private function getParent(client : java.awt.Component) : java.awt.Container;
 	
 	/**
 	* Returns peer of the given client component. If the given client component
 	* doesn't have peer, peer of the native container of the client is returned.
 	*/
-	@:overload @:abstract private function getPeer(client : java.awt.Component) : java.awt.peer.ComponentPeer;
+	@:overload @:protected @:abstract private function getPeer(client : java.awt.Component) : java.awt.peer.ComponentPeer;
 	
 	/**
 	* Used to protect preedit data
 	*/
-	@:overload @:abstract private function awtLock() : Void;
+	@:overload @:protected @:abstract private function awtLock() : Void;
 	
-	@:overload @:abstract private function awtUnlock() : Void;
+	@:overload @:protected @:abstract private function awtUnlock() : Void;
 	
 	/*
 	* Subclasses should override disposeImpl() instead of dispose(). Client
 	* code should always invoke dispose(), never disposeImpl().
 	*/
-	@:overload @:synchronized private function disposeImpl() : Void;
+	@:overload @:protected @:synchronized private function disposeImpl() : Void;
 	
 	/**
 	* Frees all X Window resources associated with this object.
 	*
 	* @see java.awt.im.spi.InputMethod#dispose
 	*/
-	@:overload @:final override public function dispose() : Void;
+	@:overload @:public @:final override public function dispose() : Void;
 	
 	/**
 	* Returns null.
 	*
 	* @see java.awt.im.spi.InputMethod#getControlObject
 	*/
-	@:overload override public function getControlObject() : Dynamic;
+	@:overload @:public override public function getControlObject() : Dynamic;
 	
 	/**
 	* @see java.awt.im.spi.InputMethod#removeNotify
 	*/
-	@:overload @:synchronized override public function removeNotify() : Void;
+	@:overload @:public @:synchronized override public function removeNotify() : Void;
 	
 	/**
 	* @see java.awt.im.spi.InputMethod#setCompositionEnabled(boolean)
 	*/
-	@:overload override public function setCompositionEnabled(enable : Bool) : Void;
+	@:overload @:public override public function setCompositionEnabled(enable : Bool) : Void;
 	
 	/**
 	* @see java.awt.im.spi.InputMethod#isCompositionEnabled
 	*/
-	@:overload override public function isCompositionEnabled() : Bool;
+	@:overload @:public override public function isCompositionEnabled() : Bool;
 	
 	/**
 	* Ends any input composition that may currently be going on in this
@@ -180,7 +180,7 @@ extern class X11InputMethod extends sun.awt.im.InputMethodAdapter
 	* saved to a file or copied to the clipboard.
 	*
 	*/
-	@:overload override public function endComposition() : Void;
+	@:overload @:public override public function endComposition() : Void;
 	
 	/**
 	* Returns a string with information about the current input method server, or null.
@@ -198,12 +198,12 @@ extern class X11InputMethod extends sun.awt.im.InputMethodAdapter
 	* $HOME/.dtprofile when you run these two commands.
 	*
 	*/
-	@:overload override public function getNativeInputMethodInfo() : String;
+	@:overload @:public override public function getNativeInputMethodInfo() : String;
 	
 	/*
 	* Native methods
 	*/
-	@:overload @:native private function resetXIC() : String;
+	@:overload @:protected @:native private function resetXIC() : String;
 	
 	
 }
@@ -215,7 +215,7 @@ extern class X11InputMethod extends sun.awt.im.InputMethodAdapter
 */
 @:native('sun$awt$X11InputMethod$IntBuffer') @:internal extern class X11InputMethod_IntBuffer
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

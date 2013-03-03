@@ -32,7 +32,7 @@ package java.awt;
 	* @param nested the AWTEvent which this SequencedEvent's dispatch()
 	*        method will dispatch
 	*/
-	@:overload public function new(nested : java.awt.AWTEvent) : Void;
+	@:overload @:public public function new(nested : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Dispatches the nested event after all previous nested events have been
@@ -46,7 +46,7 @@ package java.awt;
 	* as EventQueue lock is held during dispatching.  The locks should be acquired
 	* in the same order.
 	*/
-	@:overload @:final public function dispatch() : Void;
+	@:overload @:public @:final public function dispatch() : Void;
 	
 	/**
 	* Sequenced events are dispatched in order, so we cannot dispatch
@@ -54,7 +54,7 @@ package java.awt;
 	* turn).  But while we wait for our turn to dispatch, the event
 	* could have been disposed for a number of reasons.
 	*/
-	@:overload @:final public function isFirstOrDisposed() : Bool;
+	@:overload @:public @:final public function isFirstOrDisposed() : Bool;
 	
 	
 }

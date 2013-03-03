@@ -34,19 +34,19 @@ package com.sun.org.apache.xml.internal.serializer;
 	* @param out the Writer to write to (possibly null)
 	* @param tracer the tracer to inform that characters are being written
 	*/
-	@:overload public function new(out : java.io.Writer, tracer : com.sun.org.apache.xml.internal.serializer.SerializerTrace) : Void;
+	@:overload @:public public function new(out : java.io.Writer, tracer : com.sun.org.apache.xml.internal.serializer.SerializerTrace) : Void;
 	
 	/**
 	* Flush the internal buffer and flush the Writer
 	* @see java.io.Writer#flush()
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* Flush the internal buffer and close the Writer
 	* @see java.io.Writer#close()
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Write a single character.  The character to be written is contained in
@@ -59,7 +59,7 @@ package com.sun.org.apache.xml.internal.serializer;
 	* @param c  int specifying a character to be written.
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(c : Int) : Void;
+	@:overload @:public override public function write(c : Int) : Void;
 	
 	/**
 	* Write a portion of an array of characters.
@@ -72,7 +72,7 @@ package com.sun.org.apache.xml.internal.serializer;
 	*
 	* @throws java.io.IOException
 	*/
-	@:overload override public function write(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function write(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Write a string.
@@ -81,18 +81,18 @@ package com.sun.org.apache.xml.internal.serializer;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(s : String) : Void;
+	@:overload @:public override public function write(s : String) : Void;
 	
 	/**
 	* Get the writer that this one directly wraps.
 	*/
-	@:overload public function getWriter() : java.io.Writer;
+	@:overload @:public public function getWriter() : java.io.Writer;
 	
 	/**
 	* Get the OutputStream that is the at the end of the
 	* chain of writers.
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	
 }

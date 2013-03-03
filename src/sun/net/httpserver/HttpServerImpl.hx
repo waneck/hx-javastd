@@ -25,25 +25,25 @@ package sun.net.httpserver;
 */
 extern class HttpServerImpl extends com.sun.net.httpserver.HttpServer
 {
-	@:overload override public function bind(addr : java.net.InetSocketAddress, backlog : Int) : Void;
+	@:overload @:public override public function bind(addr : java.net.InetSocketAddress, backlog : Int) : Void;
 	
-	@:overload override public function start() : Void;
+	@:overload @:public override public function start() : Void;
 	
-	@:overload override public function setExecutor(executor : java.util.concurrent.Executor) : Void;
+	@:overload @:public override public function setExecutor(executor : java.util.concurrent.Executor) : Void;
 	
-	@:overload override public function getExecutor() : java.util.concurrent.Executor;
+	@:overload @:public override public function getExecutor() : java.util.concurrent.Executor;
 	
-	@:overload override public function stop(delay : Int) : Void;
+	@:overload @:public override public function stop(delay : Int) : Void;
 	
-	@:overload override public function createContext(path : String, handler : com.sun.net.httpserver.HttpHandler) : sun.net.httpserver.HttpContextImpl;
+	@:overload @:public override public function createContext(path : String, handler : com.sun.net.httpserver.HttpHandler) : sun.net.httpserver.HttpContextImpl;
 	
-	@:overload override public function createContext(path : String) : sun.net.httpserver.HttpContextImpl;
+	@:overload @:public override public function createContext(path : String) : sun.net.httpserver.HttpContextImpl;
 	
-	@:overload override public function removeContext(path : String) : Void;
+	@:overload @:public override public function removeContext(path : String) : Void;
 	
-	@:overload override public function removeContext(context : com.sun.net.httpserver.HttpContext) : Void;
+	@:overload @:public override public function removeContext(context : com.sun.net.httpserver.HttpContext) : Void;
 	
-	@:overload override public function getAddress() : java.net.InetSocketAddress;
+	@:overload @:public override public function getAddress() : java.net.InetSocketAddress;
 	
 	
 }

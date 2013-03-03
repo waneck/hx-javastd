@@ -25,17 +25,17 @@ package sun.reflect.generics.tree;
 */
 extern class MethodTypeSignature implements sun.reflect.generics.tree.Signature
 {
-	@:overload public static function make(ftps : java.NativeArray<sun.reflect.generics.tree.FormalTypeParameter>, pts : java.NativeArray<sun.reflect.generics.tree.TypeSignature>, rt : sun.reflect.generics.tree.ReturnType, ets : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>) : sun.reflect.generics.tree.MethodTypeSignature;
+	@:overload @:public @:static public static function make(ftps : java.NativeArray<sun.reflect.generics.tree.FormalTypeParameter>, pts : java.NativeArray<sun.reflect.generics.tree.TypeSignature>, rt : sun.reflect.generics.tree.ReturnType, ets : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>) : sun.reflect.generics.tree.MethodTypeSignature;
 	
-	@:overload public function getFormalTypeParameters() : java.NativeArray<sun.reflect.generics.tree.FormalTypeParameter>;
+	@:overload @:public public function getFormalTypeParameters() : java.NativeArray<sun.reflect.generics.tree.FormalTypeParameter>;
 	
-	@:overload public function getParameterTypes() : java.NativeArray<sun.reflect.generics.tree.TypeSignature>;
+	@:overload @:public public function getParameterTypes() : java.NativeArray<sun.reflect.generics.tree.TypeSignature>;
 	
-	@:overload public function getReturnType() : sun.reflect.generics.tree.ReturnType;
+	@:overload @:public public function getReturnType() : sun.reflect.generics.tree.ReturnType;
 	
-	@:overload public function getExceptionTypes() : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>;
+	@:overload @:public public function getExceptionTypes() : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>;
 	
-	@:overload public function accept(v : sun.reflect.generics.visitor.Visitor<Dynamic>) : Void;
+	@:overload @:public public function accept(v : sun.reflect.generics.visitor.Visitor<Dynamic>) : Void;
 	
 	
 }

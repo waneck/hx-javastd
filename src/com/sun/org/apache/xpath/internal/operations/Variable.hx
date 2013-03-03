@@ -25,14 +25,14 @@ extern class Variable extends com.sun.org.apache.xpath.internal.Expression imple
 {
 	/** The qualified name of the variable.
 	*  @serial   */
-	private var m_qname : com.sun.org.apache.xml.internal.utils.QName;
+	@:protected private var m_qname : com.sun.org.apache.xml.internal.utils.QName;
 	
 	/**
 	* The index of the variable, which is either an absolute index to a
 	* global, or, if higher than the globals area, must be adjusted by adding
 	* the offset to the current stack frame.
 	*/
-	private var m_index : Int;
+	@:protected private var m_index : Int;
 	
 	/**
 	* Set the index for the variable into the stack.  For advanced use only. You
@@ -40,30 +40,30 @@ extern class Variable extends com.sun.org.apache.xpath.internal.Expression imple
 	*
 	* @param index a global or local index.
 	*/
-	@:overload public function setIndex(index : Int) : Void;
+	@:overload @:public public function setIndex(index : Int) : Void;
 	
 	/**
 	* Set the index for the variable into the stack.  For advanced use only.
 	*
 	* @return index a global or local index.
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* Set whether or not this is a global reference.  For advanced use only.
 	*
 	* @param isGlobal true if this should be a global variable reference.
 	*/
-	@:overload public function setIsGlobal(isGlobal : Bool) : Void;
+	@:overload @:public public function setIsGlobal(isGlobal : Bool) : Void;
 	
 	/**
 	* Set the index for the variable into the stack.  For advanced use only.
 	*
 	* @return true if this should be a global variable reference.
 	*/
-	@:overload public function getGlobal() : Bool;
+	@:overload @:public public function getGlobal() : Bool;
 	
-	private var m_isGlobal : Bool;
+	@:protected private var m_isGlobal : Bool;
 	
 	/**
 	* This function is used to fixup variables from QNames to stack frame
@@ -75,21 +75,21 @@ extern class Variable extends com.sun.org.apache.xpath.internal.Expression imple
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Set the qualified name of the variable.
 	*
 	* @param qname Must be a non-null reference to a qualified name.
 	*/
-	@:overload public function setQName(qname : com.sun.org.apache.xml.internal.utils.QName) : Void;
+	@:overload @:public public function setQName(qname : com.sun.org.apache.xml.internal.utils.QName) : Void;
 	
 	/**
 	* Get the qualified name of the variable.
 	*
 	* @return A non-null reference to a qualified name.
 	*/
-	@:overload public function getQName() : com.sun.org.apache.xml.internal.utils.QName;
+	@:overload @:public public function getQName() : com.sun.org.apache.xml.internal.utils.QName;
 	
 	/**
 	* Execute an expression in the XPath runtime context, and return the
@@ -103,7 +103,7 @@ extern class Variable extends com.sun.org.apache.xpath.internal.Expression imple
 	* @throws javax.xml.transform.TransformerException if a runtime exception
 	*         occurs.
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Dereference the variable, and return the reference value.  Note that lazy
@@ -117,7 +117,7 @@ extern class Variable extends com.sun.org.apache.xpath.internal.Expression imple
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, destructiveOK : Bool) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, destructiveOK : Bool) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Tell if this expression returns a stable number that will not change during
@@ -127,29 +127,29 @@ extern class Variable extends com.sun.org.apache.xpath.internal.Expression imple
 	*
 	* @return true if the expression represents a stable number.
 	*/
-	@:overload override public function isStableNumber() : Bool;
+	@:overload @:public override public function isStableNumber() : Bool;
 	
 	/**
 	* Get the analysis bits for this walker, as defined in the WalkerFactory.
 	* @return One of WalkerFactory#BIT_DESCENDANT, etc.
 	*/
-	@:overload public function getAnalysisBits() : Int;
+	@:overload @:public public function getAnalysisBits() : Int;
 	
 	/**
 	* @see com.sun.org.apache.xpath.internal.XPathVisitable#callVisitors(ExpressionOwner, XPathVisitor)
 	*/
-	@:overload override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	/**
 	* Tell if this is a psuedo variable reference, declared by Xalan instead
 	* of by the user.
 	*/
-	@:overload public function isPsuedoVarRef() : Bool;
+	@:overload @:public public function isPsuedoVarRef() : Bool;
 	
 	
 }

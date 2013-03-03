@@ -37,7 +37,7 @@ extern class EllipticCurve
 	* @exception IllegalArgumentException if <code>a</code>
 	* or <code>b</code> is not null and not in <code>field</code>.
 	*/
-	@:overload public function new(field : java.security.spec.ECField, a : java.math.BigInteger, b : java.math.BigInteger) : Void;
+	@:overload @:public public function new(field : java.security.spec.ECField, a : java.math.BigInteger, b : java.math.BigInteger) : Void;
 	
 	/**
 	* Creates an elliptic curve with the specified elliptic field
@@ -54,7 +54,7 @@ extern class EllipticCurve
 	* @exception IllegalArgumentException if <code>a</code>
 	* or <code>b</code> is not null and not in <code>field</code>.
 	*/
-	@:overload public function new(field : java.security.spec.ECField, a : java.math.BigInteger, b : java.math.BigInteger, seed : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(field : java.security.spec.ECField, a : java.math.BigInteger, b : java.math.BigInteger, seed : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the finite field <code>field</code> that this
@@ -62,21 +62,21 @@ extern class EllipticCurve
 	* @return the field <code>field</code> that this curve
 	* is over.
 	*/
-	@:overload public function getField() : java.security.spec.ECField;
+	@:overload @:public public function getField() : java.security.spec.ECField;
 	
 	/**
 	* Returns the first coefficient <code>a</code> of the
 	* elliptic curve.
 	* @return the first coefficient <code>a</code>.
 	*/
-	@:overload public function getA() : java.math.BigInteger;
+	@:overload @:public public function getA() : java.math.BigInteger;
 	
 	/**
 	* Returns the second coefficient <code>b</code> of the
 	* elliptic curve.
 	* @return the second coefficient <code>b</code>.
 	*/
-	@:overload public function getB() : java.math.BigInteger;
+	@:overload @:public public function getB() : java.math.BigInteger;
 	
 	/**
 	* Returns the seeding bytes <code>seed</code> used
@@ -84,7 +84,7 @@ extern class EllipticCurve
 	* @return the seeding bytes <code>seed</code>. A new
 	* array is returned each time this method is called.
 	*/
-	@:overload public function getSeed() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getSeed() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Compares this elliptic curve for equality with the
@@ -93,7 +93,7 @@ extern class EllipticCurve
 	* @return true if <code>obj</code> is an instance of
 	* EllipticCurve and the field, A, and B match, false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for this elliptic curve.
@@ -103,7 +103,7 @@ extern class EllipticCurve
 	*     (field.hashCode() << 6) + (a.hashCode() << 4) + (b.hashCode() << 2)
 	* </code>
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

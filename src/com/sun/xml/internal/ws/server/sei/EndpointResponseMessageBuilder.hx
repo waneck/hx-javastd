@@ -29,7 +29,7 @@ package com.sun.xml.internal.ws.server.sei;
 }
 @:native('com$sun$xml$internal$ws$server$sei$EndpointResponseMessageBuilder$Empty') @:internal extern class EndpointResponseMessageBuilder_Empty extends com.sun.xml.internal.ws.server.sei.EndpointResponseMessageBuilder
 {
-	@:overload public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
+	@:overload @:public public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
 	
 }
@@ -39,7 +39,7 @@ package com.sun.xml.internal.ws.server.sei;
 */
 @:native('com$sun$xml$internal$ws$server$sei$EndpointResponseMessageBuilder$JAXB') @:internal extern class EndpointResponseMessageBuilder_JAXB extends com.sun.xml.internal.ws.server.sei.EndpointResponseMessageBuilder
 {
-	@:overload private function new(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
+	@:overload @:protected private function new(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
 	
 }
@@ -60,14 +60,14 @@ package com.sun.xml.internal.ws.server.sei;
 	/**
 	* Where in the method argument list do they come from?
 	*/
-	private var indices(default, null) : java.NativeArray<Int>;
+	@:protected @:final private var indices(default, null) : java.NativeArray<Int>;
 	
 	/**
 	* Abstracts away the {@link Holder} handling when touching method arguments.
 	*/
-	private var getters(default, null) : java.NativeArray<com.sun.xml.internal.ws.server.sei.ValueGetter>;
+	@:protected @:final private var getters(default, null) : java.NativeArray<com.sun.xml.internal.ws.server.sei.ValueGetter>;
 	
-	@:overload private function new(wp : com.sun.xml.internal.ws.model.WrapperParameter, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
+	@:overload @:protected private function new(wp : com.sun.xml.internal.ws.model.WrapperParameter, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
 	
 }

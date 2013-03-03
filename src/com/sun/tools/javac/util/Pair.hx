@@ -32,19 +32,19 @@ package com.sun.tools.javac.util;
 */
 extern class Pair<A, B>
 {
-	public var fst(default, null) : A;
+	@:public @:final public var fst(default, null) : A;
 	
-	public var snd(default, null) : B;
+	@:public @:final public var snd(default, null) : B;
 	
-	@:overload public function new(fst : A, snd : B) : Void;
+	@:overload @:public public function new(fst : A, snd : B) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public static function of<A, B>(a : A, b : B) : com.sun.tools.javac.util.Pair<A, B>;
+	@:overload @:public @:static public static function of<A, B>(a : A, b : B) : com.sun.tools.javac.util.Pair<A, B>;
 	
 	
 }

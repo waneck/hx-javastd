@@ -26,21 +26,21 @@ package com.sun.xml.internal.stream.events;
 extern class XMLEventAllocatorImpl implements javax.xml.stream.util.XMLEventAllocator
 {
 	/** Creates a new instance of XMLEventAllocator */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function allocate(xMLStreamReader : javax.xml.stream.XMLStreamReader) : javax.xml.stream.events.XMLEvent;
+	@:overload @:public public function allocate(xMLStreamReader : javax.xml.stream.XMLStreamReader) : javax.xml.stream.events.XMLEvent;
 	
-	@:overload public function allocate(xMLStreamReader : javax.xml.stream.XMLStreamReader, xMLEventConsumer : javax.xml.stream.util.XMLEventConsumer) : Void;
+	@:overload @:public public function allocate(xMLStreamReader : javax.xml.stream.XMLStreamReader, xMLEventConsumer : javax.xml.stream.util.XMLEventConsumer) : Void;
 	
-	@:overload public function newInstance() : javax.xml.stream.util.XMLEventAllocator;
+	@:overload @:public public function newInstance() : javax.xml.stream.util.XMLEventAllocator;
 	
-	@:overload private function getNextEvent(streamReader : javax.xml.stream.XMLStreamReader) : javax.xml.stream.events.XMLEvent;
+	@:overload @:protected private function getNextEvent(streamReader : javax.xml.stream.XMLStreamReader) : javax.xml.stream.events.XMLEvent;
 	
-	@:overload private function fillAttributes(event : com.sun.xml.internal.stream.events.StartElementEvent, xmlr : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:protected private function fillAttributes(event : com.sun.xml.internal.stream.events.StartElementEvent, xmlr : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload private function fillNamespaceAttributes(event : com.sun.xml.internal.stream.events.StartElementEvent, xmlr : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:protected private function fillNamespaceAttributes(event : com.sun.xml.internal.stream.events.StartElementEvent, xmlr : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload private function fillNamespaceAttributes(event : com.sun.xml.internal.stream.events.EndElementEvent, xmlr : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:protected private function fillNamespaceAttributes(event : com.sun.xml.internal.stream.events.EndElementEvent, xmlr : javax.xml.stream.XMLStreamReader) : Void;
 	
 	
 }

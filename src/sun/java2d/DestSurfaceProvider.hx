@@ -34,7 +34,7 @@ extern interface DestSurfaceProvider
 	*
 	* @return destination surface
 	*/
-	@:overload public function getDestSurface() : sun.java2d.Surface;
+	@:overload @:public public function getDestSurface() : sun.java2d.Surface;
 	
 	
 }

@@ -29,20 +29,20 @@ extern class Response extends com.sun.tools.internal.ws.processor.model.Message
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(entity : com.sun.tools.internal.ws.wsdl.document.Message, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function new(entity : com.sun.tools.internal.ws.wsdl.document.Message, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function addFaultBlock(b : com.sun.tools.internal.ws.processor.model.Block) : Void;
+	@:overload @:public public function addFaultBlock(b : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
-	@:overload public function getFaultBlocks() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getFaultBlocks() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function getFaultBlockCount() : Int;
+	@:overload @:public public function getFaultBlockCount() : Int;
 	
 	/* serialization */
-	@:overload public function getFaultBlocksMap() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function getFaultBlocksMap() : java.util.Map<Dynamic, Dynamic>;
 	
-	@:overload public function setFaultBlocksMap(m : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function setFaultBlocksMap(m : java.util.Map<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
+	@:overload @:public override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
 	
 	
 }

@@ -28,27 +28,27 @@ extern class ItemEvent extends java.awt.AWTEvent
 	/**
 	* The first number in the range of ids used for item events.
 	*/
-	public static var ITEM_FIRST(default, null) : Int;
+	@:public @:static @:final public static var ITEM_FIRST(default, null) : Int;
 	
 	/**
 	* The last number in the range of ids used for item events.
 	*/
-	public static var ITEM_LAST(default, null) : Int;
+	@:public @:static @:final public static var ITEM_LAST(default, null) : Int;
 	
 	/**
 	* This event id indicates that an item's state changed.
 	*/
-	public static var ITEM_STATE_CHANGED(default, null) : Int;
+	@:public @:static @:final public static var ITEM_STATE_CHANGED(default, null) : Int;
 	
 	/**
 	* This state-change value indicates that an item was selected.
 	*/
-	public static var SELECTED(default, null) : Int;
+	@:public @:static @:final public static var SELECTED(default, null) : Int;
 	
 	/**
 	* This state-change-value indicates that a selected item was deselected.
 	*/
-	public static var DESELECTED(default, null) : Int;
+	@:public @:static @:final public static var DESELECTED(default, null) : Int;
 	
 	/**
 	* Constructs an <code>ItemEvent</code> object.
@@ -71,21 +71,21 @@ extern class ItemEvent extends java.awt.AWTEvent
 	* @see #getID()
 	* @see #getStateChange()
 	*/
-	@:overload public function new(source : java.awt.ItemSelectable, id : Int, item : Dynamic, stateChange : Int) : Void;
+	@:overload @:public public function new(source : java.awt.ItemSelectable, id : Int, item : Dynamic, stateChange : Int) : Void;
 	
 	/**
 	* Returns the originator of the event.
 	*
 	* @return the ItemSelectable object that originated the event.
 	*/
-	@:overload public function getItemSelectable() : java.awt.ItemSelectable;
+	@:overload @:public public function getItemSelectable() : java.awt.ItemSelectable;
 	
 	/**
 	* Returns the item affected by the event.
 	*
 	* @return the item (object) that was affected by the event
 	*/
-	@:overload public function getItem() : Dynamic;
+	@:overload @:public public function getItem() : Dynamic;
 	
 	/**
 	* Returns the type of state change (selected or deselected).
@@ -96,7 +96,7 @@ extern class ItemEvent extends java.awt.AWTEvent
 	* @see #SELECTED
 	* @see #DESELECTED
 	*/
-	@:overload public function getStateChange() : Int;
+	@:overload @:public public function getStateChange() : Int;
 	
 	/**
 	* Returns a parameter string identifying this item event.
@@ -104,7 +104,7 @@ extern class ItemEvent extends java.awt.AWTEvent
 	*
 	* @return a string identifying the event and its attributes
 	*/
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	
 }

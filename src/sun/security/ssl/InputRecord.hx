@@ -29,7 +29,7 @@ package sun.security.ssl;
 	* Prevent any more data from being read into this record,
 	* and flag the record as holding no data.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

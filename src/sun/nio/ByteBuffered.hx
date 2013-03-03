@@ -38,7 +38,7 @@ extern interface ByteBuffered
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function getByteBuffer() : java.nio.ByteBuffer;
+	@:require(java5) @:overload @:public public function getByteBuffer() : java.nio.ByteBuffer;
 	
 	
 }

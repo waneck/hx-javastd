@@ -49,7 +49,7 @@ package com.sun.xml.internal.rngom.digested;
 	/**
 	* @author Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	@:overload public function addComment(value : String, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl) : Void;
+	@:overload @:public public function addComment(value : String, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl) : Void;
 	
 	
 }

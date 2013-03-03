@@ -37,49 +37,49 @@ extern class DOMForest
 	* <p/>
 	* Set of system ids as strings.
 	*/
-	private var rootDocuments(default, null) : java.util.Set<String>;
+	@:protected @:final private var rootDocuments(default, null) : java.util.Set<String>;
 	
 	/**
 	* Contains wsdl:import(s)
 	*/
-	private var externalReferences(default, null) : java.util.Set<String>;
+	@:protected @:final private var externalReferences(default, null) : java.util.Set<String>;
 	
 	/**
 	* actual data storage map&lt;SystemId,Document>.
 	*/
-	private var core(default, null) : java.util.Map<String, org.w3c.dom.Document>;
+	@:protected @:final private var core(default, null) : java.util.Map<String, org.w3c.dom.Document>;
 	
-	private var errorReceiver(default, null) : com.sun.tools.internal.ws.wscompile.ErrorReceiver;
+	@:protected @:final private var errorReceiver(default, null) : com.sun.tools.internal.ws.wscompile.ErrorReceiver;
 	
 	/**
 	* inlined schema elements inside wsdl:type section
 	*/
-	private var inlinedSchemaElements(default, null) : java.util.List<org.w3c.dom.Element>;
+	@:protected @:final private var inlinedSchemaElements(default, null) : java.util.List<org.w3c.dom.Element>;
 	
 	/**
 	* Stores location information for all the trees in this forest.
 	*/
-	public var locatorTable(default, null) : com.sun.tools.internal.xjc.reader.internalizer.LocatorTable;
+	@:public @:final public var locatorTable(default, null) : com.sun.tools.internal.xjc.reader.internalizer.LocatorTable;
 	
-	private var entityResolver(default, null) : org.xml.sax.EntityResolver;
+	@:protected @:final private var entityResolver(default, null) : org.xml.sax.EntityResolver;
 	
 	/**
 	* Stores all the outer-most &lt;jaxb:bindings> customizations.
 	*/
-	public var outerMostBindings(default, null) : java.util.Set<org.w3c.dom.Element>;
+	@:public @:final public var outerMostBindings(default, null) : java.util.Set<org.w3c.dom.Element>;
 	
 	/**
 	* Schema language dependent part of the processing.
 	*/
-	private var logic(default, null) : com.sun.tools.internal.ws.wsdl.parser.InternalizationLogic;
+	@:protected @:final private var logic(default, null) : com.sun.tools.internal.ws.wsdl.parser.InternalizationLogic;
 	
-	private var options(default, null) : com.sun.tools.internal.ws.wscompile.WsimportOptions;
+	@:protected @:final private var options(default, null) : com.sun.tools.internal.ws.wscompile.WsimportOptions;
 	
-	@:overload public function new(logic : com.sun.tools.internal.ws.wsdl.parser.InternalizationLogic, entityResolver : org.xml.sax.EntityResolver, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function new(logic : com.sun.tools.internal.ws.wsdl.parser.InternalizationLogic, entityResolver : org.xml.sax.EntityResolver, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function getInlinedSchemaElement() : java.util.List<org.w3c.dom.Element>;
+	@:overload @:public public function getInlinedSchemaElement() : java.util.List<org.w3c.dom.Element>;
 	
-	@:overload public function parse(source : org.xml.sax.InputSource, root : Bool) : org.w3c.dom.Document;
+	@:overload @:public public function parse(source : org.xml.sax.InputSource, root : Bool) : org.w3c.dom.Document;
 	
 	/**
 	* Parses an XML at the given location (
@@ -88,47 +88,47 @@ extern class DOMForest
 	*
 	* @return the parsed DOM document object.
 	*/
-	@:overload public function parse(systemId : String, root : Bool) : org.w3c.dom.Document;
+	@:overload @:public public function parse(systemId : String, root : Bool) : org.w3c.dom.Document;
 	
-	private var resolvedCache : java.util.Map<String, String>;
+	@:protected private var resolvedCache : java.util.Map<String, String>;
 	
-	@:overload public function getReferencedEntityMap() : java.util.Map<String, String>;
+	@:overload @:public public function getReferencedEntityMap() : java.util.Map<String, String>;
 	
-	@:overload public function addExternalReferences(ref : String) : Void;
+	@:overload @:public public function addExternalReferences(ref : String) : Void;
 	
-	@:overload public function getExternalReferences() : java.util.Set<String>;
+	@:overload @:public public function getExternalReferences() : java.util.Set<String>;
 	
 	/**
 	* Gets the DOM tree associated with the specified system ID,
 	* or null if none is found.
 	*/
-	@:overload public function get(systemId : String) : org.w3c.dom.Document;
+	@:overload @:public public function get(systemId : String) : org.w3c.dom.Document;
 	
 	/**
 	* Gets all the system IDs of the documents.
 	*/
-	@:overload public function listSystemIDs() : java.NativeArray<String>;
+	@:overload @:public public function listSystemIDs() : java.NativeArray<String>;
 	
 	/**
 	* Gets the system ID from which the given DOM is parsed.
 	* <p/>
 	* Poor-man's base URI.
 	*/
-	@:overload public function getSystemId(dom : org.w3c.dom.Document) : String;
+	@:overload @:public public function getSystemId(dom : org.w3c.dom.Document) : String;
 	
 	/**
 	* Gets the first one (which is more or less random) in {@link #rootDocuments}.
 	*/
-	@:overload public function getFirstRootDocument() : String;
+	@:overload @:public public function getFirstRootDocument() : String;
 	
-	@:overload public function getRootDocuments() : java.util.Set<String>;
+	@:overload @:public public function getRootDocuments() : java.util.Set<String>;
 	
 	/**
 	* Dumps the contents of the forest to the specified stream.
 	* <p/>
 	* This is a debug method. As such, error handling is sloppy.
 	*/
-	@:overload public function dump(out : java.io.OutputStream) : Void;
+	@:overload @:public public function dump(out : java.io.OutputStream) : Void;
 	
 	
 }
@@ -137,7 +137,7 @@ extern class DOMForest
 	/**
 	* Gets the DOM that was built.
 	*/
-	@:overload public function getDocument() : org.w3c.dom.Document;
+	@:overload @:public public function getDocument() : org.w3c.dom.Document;
 	
 	
 }

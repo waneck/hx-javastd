@@ -32,11 +32,11 @@ package java.nio.charset;
 */
 @:require(java4) extern class UnmappableCharacterException extends java.nio.charset.CharacterCodingException
 {
-	@:overload public function new(inputLength : Int) : Void;
+	@:overload @:public public function new(inputLength : Int) : Void;
 	
-	@:overload public function getInputLength() : Int;
+	@:overload @:public public function getInputLength() : Int;
 	
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

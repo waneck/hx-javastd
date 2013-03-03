@@ -23,46 +23,46 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 extern class Template extends com.sun.org.apache.xalan.internal.xsltc.compiler.TopLevelElement
 {
-	@:overload public function hasParams() : Bool;
+	@:overload @:public public function hasParams() : Bool;
 	
-	@:overload public function isSimplified() : Bool;
+	@:overload @:public public function isSimplified() : Bool;
 	
-	@:overload public function setSimplified() : Void;
+	@:overload @:public public function setSimplified() : Void;
 	
-	@:overload public function isSimpleNamedTemplate() : Bool;
+	@:overload @:public public function isSimpleNamedTemplate() : Bool;
 	
-	@:overload public function addParameter(param : com.sun.org.apache.xalan.internal.xsltc.compiler.Param) : Void;
+	@:overload @:public public function addParameter(param : com.sun.org.apache.xalan.internal.xsltc.compiler.Param) : Void;
 	
-	@:overload public function getParameters() : java.util.Vector<Dynamic>;
+	@:overload @:public public function getParameters() : java.util.Vector<Dynamic>;
 	
-	@:overload public function disable() : Void;
+	@:overload @:public public function disable() : Void;
 	
-	@:overload public function disabled() : Bool;
+	@:overload @:public public function disabled() : Bool;
 	
-	@:overload public function getPriority() : Float;
+	@:overload @:public public function getPriority() : Float;
 	
-	@:overload public function getPosition() : Int;
+	@:overload @:public public function getPosition() : Int;
 	
-	@:overload public function isNamed() : Bool;
+	@:overload @:public public function isNamed() : Bool;
 	
-	@:overload public function getPattern() : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern;
+	@:overload @:public public function getPattern() : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern;
 	
-	@:overload public function getName() : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
+	@:overload @:public public function getName() : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
 	
-	@:overload public function setName(qname : com.sun.org.apache.xalan.internal.xsltc.compiler.QName) : Void;
+	@:overload @:public public function setName(qname : com.sun.org.apache.xalan.internal.xsltc.compiler.QName) : Void;
 	
-	@:overload public function getModeName() : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
+	@:overload @:public public function getModeName() : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
 	
 	/**
 	* Compare this template to another. First checks priority, then position.
 	*/
-	@:overload public function compareTo(template : Dynamic) : Int;
+	@:overload @:public public function compareTo(template : Dynamic) : Int;
 	
-	@:overload public function display(indent : Int) : Void;
+	@:overload @:public override public function display(indent : Int) : Void;
 	
-	@:overload public function getStylesheet() : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet;
+	@:overload @:public override public function getStylesheet() : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet;
 	
-	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* When the parser realises that it is dealign with a simplified stylesheet
@@ -76,11 +76,11 @@ extern class Template extends com.sun.org.apache.xalan.internal.xsltc.compiler.T
 	*  o) set the empty Stylesheet as our parent
 	*  o) set this template as the Stylesheet's only child
 	*/
-	@:overload public function parseSimplified(stylesheet : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet, parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public public function parseSimplified(stylesheet : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet, parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

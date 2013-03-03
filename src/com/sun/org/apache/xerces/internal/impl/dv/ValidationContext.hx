@@ -29,29 +29,29 @@ extern interface ValidationContext
 	* @author Sandy Gao, IBM
 	* @version $Id: ValidationContext.java,v 1.6 2010/07/23 02:09:29 joehw Exp $
 	*/
-	@:overload public function needFacetChecking() : Bool;
+	@:overload @:public public function needFacetChecking() : Bool;
 	
-	@:overload public function needExtraChecking() : Bool;
+	@:overload @:public public function needExtraChecking() : Bool;
 	
-	@:overload public function needToNormalize() : Bool;
+	@:overload @:public public function needToNormalize() : Bool;
 	
-	@:overload public function useNamespaces() : Bool;
+	@:overload @:public public function useNamespaces() : Bool;
 	
-	@:overload public function isEntityDeclared(name : String) : Bool;
+	@:overload @:public public function isEntityDeclared(name : String) : Bool;
 	
-	@:overload public function isEntityUnparsed(name : String) : Bool;
+	@:overload @:public public function isEntityUnparsed(name : String) : Bool;
 	
-	@:overload public function isIdDeclared(name : String) : Bool;
+	@:overload @:public public function isIdDeclared(name : String) : Bool;
 	
-	@:overload public function addId(name : String) : Void;
+	@:overload @:public public function addId(name : String) : Void;
 	
-	@:overload public function addIdRef(name : String) : Void;
+	@:overload @:public public function addIdRef(name : String) : Void;
 	
-	@:overload public function getSymbol(symbol : String) : String;
+	@:overload @:public public function getSymbol(symbol : String) : String;
 	
-	@:overload public function getURI(prefix : String) : String;
+	@:overload @:public public function getURI(prefix : String) : String;
 	
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	
 }

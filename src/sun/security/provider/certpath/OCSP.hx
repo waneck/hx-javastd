@@ -39,7 +39,7 @@ extern class OCSP
 	* @throws CertPathValidatorException if an exception occurs while
 	*    encoding the OCSP Request or validating the OCSP Response
 	*/
-	@:overload public static function check(cert : java.security.cert.X509Certificate, issuerCert : java.security.cert.X509Certificate) : sun.security.provider.certpath.OCSP.OCSP_RevocationStatus;
+	@:overload @:public @:static public static function check(cert : java.security.cert.X509Certificate, issuerCert : java.security.cert.X509Certificate) : sun.security.provider.certpath.OCSP.OCSP_RevocationStatus;
 	
 	/**
 	* Obtains the revocation status of a certificate using OCSP.
@@ -56,7 +56,7 @@ extern class OCSP
 	* @throws CertPathValidatorException if an exception occurs while
 	*    encoding the OCSP Request or validating the OCSP Response
 	*/
-	@:overload public static function check(cert : java.security.cert.X509Certificate, issuerCert : java.security.cert.X509Certificate, responderURI : java.net.URI, responderCert : java.security.cert.X509Certificate, date : java.util.Date) : sun.security.provider.certpath.OCSP.OCSP_RevocationStatus;
+	@:overload @:public @:static public static function check(cert : java.security.cert.X509Certificate, issuerCert : java.security.cert.X509Certificate, responderURI : java.net.URI, responderCert : java.security.cert.X509Certificate, date : java.util.Date) : sun.security.provider.certpath.OCSP.OCSP_RevocationStatus;
 	
 	/**
 	* Obtains the revocation status of a certificate using OCSP.
@@ -73,7 +73,7 @@ extern class OCSP
 	* @throws CertPathValidatorException if an exception occurs while
 	*    encoding the OCSP Request or validating the OCSP Response
 	*/
-	@:overload public static function check(cert : java.security.cert.X509Certificate, issuerCert : java.security.cert.X509Certificate, responderURI : java.net.URI, responderCerts : java.util.List<java.security.cert.X509Certificate>, date : java.util.Date) : sun.security.provider.certpath.OCSP.OCSP_RevocationStatus;
+	@:overload @:public @:static public static function check(cert : java.security.cert.X509Certificate, issuerCert : java.security.cert.X509Certificate, responderURI : java.net.URI, responderCerts : java.util.List<java.security.cert.X509Certificate>, date : java.util.Date) : sun.security.provider.certpath.OCSP.OCSP_RevocationStatus;
 	
 	/**
 	* Returns the URI of the OCSP Responder as specified in the
@@ -83,7 +83,7 @@ extern class OCSP
 	* @param cert the certificate
 	* @return the URI of the OCSP Responder, or null if not specified
 	*/
-	@:overload public static function getResponderURI(cert : java.security.cert.X509Certificate) : java.net.URI;
+	@:overload @:public @:static public static function getResponderURI(cert : java.security.cert.X509Certificate) : java.net.URI;
 	
 	
 }

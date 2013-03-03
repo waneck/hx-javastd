@@ -31,37 +31,37 @@ package com.sun.corba.se.impl.io;
 */
 extern class InputStreamHook extends java.io.ObjectInputStream
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function defaultReadObject() : Void;
+	@:overload @:public override public function defaultReadObject() : Void;
 	
-	@:overload @:abstract public function defaultReadObjectDelegate() : Void;
+	@:overload @:public @:abstract public function defaultReadObjectDelegate() : Void;
 	
-	@:overload override public function readFields() : java.io.ObjectInputStream.ObjectInputStream_GetField;
+	@:overload @:public override public function readFields() : java.io.ObjectInputStream.ObjectInputStream_GetField;
 	
-	@:overload private function setState(newState : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState) : Void;
+	@:overload @:protected private function setState(newState : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState) : Void;
 	
-	@:overload @:abstract private function getStreamFormatVersion() : java.StdTypes.Int8;
+	@:overload @:protected @:abstract private function getStreamFormatVersion() : java.StdTypes.Int8;
 	
-	@:overload @:abstract private function getOrbStream() : org.omg.CORBA_2_3.portable.InputStream;
+	@:overload @:protected @:abstract private function getOrbStream() : org.omg.CORBA_2_3.portable.InputStream;
 	
-	private var readObjectState : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState;
+	@:protected private var readObjectState : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState;
 	
-	private static var DEFAULT_STATE(default, null) : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState;
+	@:protected @:static @:final private static var DEFAULT_STATE(default, null) : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState;
 	
-	private static var IN_READ_OBJECT_OPT_DATA(default, null) : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState;
+	@:protected @:static @:final private static var IN_READ_OBJECT_OPT_DATA(default, null) : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState;
 	
-	private static var IN_READ_OBJECT_NO_MORE_OPT_DATA(default, null) : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState;
+	@:protected @:static @:final private static var IN_READ_OBJECT_NO_MORE_OPT_DATA(default, null) : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState;
 	
-	private static var IN_READ_OBJECT_DEFAULTS_SENT(default, null) : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState;
+	@:protected @:static @:final private static var IN_READ_OBJECT_DEFAULTS_SENT(default, null) : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState;
 	
-	private static var NO_READ_OBJECT_DEFAULTS_SENT(default, null) : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState;
+	@:protected @:static @:final private static var NO_READ_OBJECT_DEFAULTS_SENT(default, null) : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState;
 	
-	private static var IN_READ_OBJECT_REMOTE_NOT_CUSTOM_MARSHALED(default, null) : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState;
+	@:protected @:static @:final private static var IN_READ_OBJECT_REMOTE_NOT_CUSTOM_MARSHALED(default, null) : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState;
 	
-	private static var IN_READ_OBJECT_PAST_DEFAULTS_REMOTE_NOT_CUSTOM(default, null) : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState;
+	@:protected @:static @:final private static var IN_READ_OBJECT_PAST_DEFAULTS_REMOTE_NOT_CUSTOM(default, null) : com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState;
 	
-	@:overload private function throwOptionalDataIncompatibleException() : Void;
+	@:overload @:protected private function throwOptionalDataIncompatibleException() : Void;
 	
 	
 }
@@ -72,134 +72,134 @@ extern class InputStreamHook extends java.io.ObjectInputStream
 	*
 	* REVISIT!  This doesn't work since we have our own ObjectStreamClass.
 	*/
-	@:overload override public function getObjectStreamClass() : java.io.ObjectStreamClass;
+	@:overload @:public override public function getObjectStreamClass() : java.io.ObjectStreamClass;
 	
 	/**
 	* Return true if the named field is defaulted and has no value
 	* in this stream.
 	*/
-	@:overload override public function defaulted(name : String) : Bool;
+	@:overload @:public override public function defaulted(name : String) : Bool;
 	
 	/**
 	* Get the value of the named boolean field from the persistent field.
 	*/
-	@:overload override public function get(name : String, defvalue : Bool) : Bool;
+	@:overload @:public override public function get(name : String, defvalue : Bool) : Bool;
 	
 	/**
 	* Get the value of the named char field from the persistent fields.
 	*/
-	@:overload override public function get(name : String, defvalue : java.StdTypes.Char16) : java.StdTypes.Char16;
+	@:overload @:public override public function get(name : String, defvalue : java.StdTypes.Char16) : java.StdTypes.Char16;
 	
 	/**
 	* Get the value of the named byte field from the persistent fields.
 	*/
-	@:overload override public function get(name : String, defvalue : java.StdTypes.Int8) : java.StdTypes.Int8;
+	@:overload @:public override public function get(name : String, defvalue : java.StdTypes.Int8) : java.StdTypes.Int8;
 	
 	/**
 	* Get the value of the named short field from the persistent fields.
 	*/
-	@:overload override public function get(name : String, defvalue : java.StdTypes.Int16) : java.StdTypes.Int16;
+	@:overload @:public override public function get(name : String, defvalue : java.StdTypes.Int16) : java.StdTypes.Int16;
 	
 	/**
 	* Get the value of the named int field from the persistent fields.
 	*/
-	@:overload override public function get(name : String, defvalue : Int) : Int;
+	@:overload @:public override public function get(name : String, defvalue : Int) : Int;
 	
 	/**
 	* Get the value of the named long field from the persistent fields.
 	*/
-	@:overload override public function get(name : String, defvalue : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function get(name : String, defvalue : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Get the value of the named float field from the persistent fields.
 	*/
-	@:overload override public function get(name : String, defvalue : Single) : Single;
+	@:overload @:public override public function get(name : String, defvalue : Single) : Single;
 	
 	/**
 	* Get the value of the named double field from the persistent field.
 	*/
-	@:overload override public function get(name : String, defvalue : Float) : Float;
+	@:overload @:public override public function get(name : String, defvalue : Float) : Float;
 	
 	/**
 	* Get the value of the named Object field from the persistent field.
 	*/
-	@:overload override public function get(name : String, defvalue : Dynamic) : Dynamic;
+	@:overload @:public override public function get(name : String, defvalue : Dynamic) : Dynamic;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('com$sun$corba$se$impl$io$InputStreamHook$ReadObjectState') extern class InputStreamHook_ReadObjectState
 {
-	@:overload public function beginUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook, calledDefaultWriteObject : Bool, hasReadObject : Bool) : Void;
+	@:overload @:public public function beginUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook, calledDefaultWriteObject : Bool, hasReadObject : Bool) : Void;
 	
-	@:overload public function endUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
+	@:overload @:public public function endUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
 	
-	@:overload public function beginDefaultReadObject(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
+	@:overload @:public public function beginDefaultReadObject(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
 	
-	@:overload public function endDefaultReadObject(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
+	@:overload @:public public function endDefaultReadObject(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
 	
-	@:overload public function readData(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
+	@:overload @:public public function readData(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$io$InputStreamHook$DefaultState') extern class InputStreamHook_DefaultState extends com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState
 {
-	@:overload override public function beginUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook, calledDefaultWriteObject : Bool, hasReadObject : Bool) : Void;
+	@:overload @:public override public function beginUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook, calledDefaultWriteObject : Bool, hasReadObject : Bool) : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$io$InputStreamHook$InReadObjectRemoteDidNotUseWriteObjectState') extern class InputStreamHook_InReadObjectRemoteDidNotUseWriteObjectState extends com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState
 {
-	@:overload override public function beginUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook, calledDefaultWriteObject : Bool, hasReadObject : Bool) : Void;
+	@:overload @:public override public function beginUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook, calledDefaultWriteObject : Bool, hasReadObject : Bool) : Void;
 	
-	@:overload override public function endDefaultReadObject(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
+	@:overload @:public override public function endDefaultReadObject(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
 	
-	@:overload override public function readData(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
+	@:overload @:public override public function readData(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$io$InputStreamHook$InReadObjectPastDefaultsRemoteDidNotUseWOState') extern class InputStreamHook_InReadObjectPastDefaultsRemoteDidNotUseWOState extends com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState
 {
-	@:overload override public function beginUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook, calledDefaultWriteObject : Bool, hasReadObject : Bool) : Void;
+	@:overload @:public override public function beginUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook, calledDefaultWriteObject : Bool, hasReadObject : Bool) : Void;
 	
-	@:overload override public function beginDefaultReadObject(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
+	@:overload @:public override public function beginDefaultReadObject(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
 	
-	@:overload override public function readData(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
+	@:overload @:public override public function readData(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$io$InputStreamHook$InReadObjectDefaultsSentState') extern class InputStreamHook_InReadObjectDefaultsSentState extends com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState
 {
-	@:overload override public function beginUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook, calledDefaultWriteObject : Bool, hasReadObject : Bool) : Void;
+	@:overload @:public override public function beginUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook, calledDefaultWriteObject : Bool, hasReadObject : Bool) : Void;
 	
-	@:overload override public function endUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
+	@:overload @:public override public function endUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
 	
-	@:overload override public function endDefaultReadObject(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
+	@:overload @:public override public function endDefaultReadObject(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
 	
-	@:overload override public function readData(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
+	@:overload @:public override public function readData(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$io$InputStreamHook$InReadObjectOptionalDataState') extern class InputStreamHook_InReadObjectOptionalDataState extends com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState
 {
-	@:overload override public function beginUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook, calledDefaultWriteObject : Bool, hasReadObject : Bool) : Void;
+	@:overload @:public override public function beginUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook, calledDefaultWriteObject : Bool, hasReadObject : Bool) : Void;
 	
-	@:overload override public function endUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
+	@:overload @:public override public function endUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
 	
-	@:overload override public function beginDefaultReadObject(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
+	@:overload @:public override public function beginDefaultReadObject(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$io$InputStreamHook$InReadObjectNoMoreOptionalDataState') extern class InputStreamHook_InReadObjectNoMoreOptionalDataState extends com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_InReadObjectOptionalDataState
 {
-	@:overload override public function readData(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
+	@:overload @:public override public function readData(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$io$InputStreamHook$NoReadObjectDefaultsSentState') extern class InputStreamHook_NoReadObjectDefaultsSentState extends com.sun.corba.se.impl.io.InputStreamHook.InputStreamHook_ReadObjectState
 {
-	@:overload override public function endUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
+	@:overload @:public override public function endUnmarshalCustomValue(stream : com.sun.corba.se.impl.io.InputStreamHook) : Void;
 	
 	
 }

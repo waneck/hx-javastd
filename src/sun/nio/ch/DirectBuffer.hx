@@ -25,11 +25,11 @@ package sun.nio.ch;
 */
 extern interface DirectBuffer
 {
-	@:overload public function address() : haxe.Int64;
+	@:overload @:public public function address() : haxe.Int64;
 	
-	@:overload public function attachment() : Dynamic;
+	@:overload @:public public function attachment() : Dynamic;
 	
-	@:overload public function cleaner() : sun.misc.Cleaner;
+	@:overload @:public public function cleaner() : sun.misc.Cleaner;
 	
 	
 }

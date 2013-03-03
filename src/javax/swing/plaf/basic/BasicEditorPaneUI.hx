@@ -45,12 +45,12 @@ extern class BasicEditorPaneUI extends javax.swing.plaf.basic.BasicTextUI
 	* @param c the JTextPane component
 	* @return the UI
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Creates a new BasicEditorPaneUI.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Fetches the name used as a key to lookup properties through the
@@ -59,21 +59,21 @@ extern class BasicEditorPaneUI extends javax.swing.plaf.basic.BasicTextUI
 	*
 	* @return the name ("EditorPane")
 	*/
-	@:overload override private function getPropertyPrefix() : String;
+	@:overload @:protected override private function getPropertyPrefix() : String;
 	
 	/**
 	*{@inheritDoc}
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:require(java5) @:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	*{@inheritDoc}
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:require(java5) @:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Fetches the EditorKit for the UI.  This is whatever is
@@ -82,7 +82,7 @@ extern class BasicEditorPaneUI extends javax.swing.plaf.basic.BasicTextUI
 	* @return the editor capabilities
 	* @see TextUI#getEditorKit
 	*/
-	@:overload override public function getEditorKit(tc : javax.swing.text.JTextComponent) : javax.swing.text.EditorKit;
+	@:overload @:public override public function getEditorKit(tc : javax.swing.text.JTextComponent) : javax.swing.text.EditorKit;
 	
 	/**
 	* This method gets called when a bound property is changed
@@ -94,7 +94,7 @@ extern class BasicEditorPaneUI extends javax.swing.plaf.basic.BasicTextUI
 	*
 	* @param evt the property change event
 	*/
-	@:overload override private function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected override private function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

@@ -25,30 +25,30 @@ package com.sun.xml.internal.ws.transport.http;
 */
 extern class HttpAdapterList<T> extends java.util.AbstractList<T> implements com.sun.xml.internal.ws.transport.http.DeploymentDescriptorParser.DeploymentDescriptorParser_AdapterFactory<T>
 {
-	@:overload public function createAdapter(name : String, urlPattern : String, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : T;
+	@:overload @:public public function createAdapter(name : String, urlPattern : String, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : T;
 	
 	/**
 	* Implementations need to override this one to create a concrete class
 	* of HttpAdapter
 	*/
-	@:overload @:abstract private function createHttpAdapter(name : String, urlPattern : String, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : T;
+	@:overload @:protected @:abstract private function createHttpAdapter(name : String, urlPattern : String, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : T;
 	
 	/**
 	* Creates a PortAddressResolver that maps portname to its address
 	*/
-	@:overload public function createPortAddressResolver(baseAddress : String) : com.sun.xml.internal.ws.api.server.PortAddressResolver;
+	@:overload @:public public function createPortAddressResolver(baseAddress : String) : com.sun.xml.internal.ws.api.server.PortAddressResolver;
 	
-	@:overload override public function get(index : Int) : T;
+	@:overload @:public override public function get(index : Int) : T;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$transport$http$HttpAdapterList$PortInfo') @:internal extern class HttpAdapterList_PortInfo
 {
-	@:overload public function equals(portInfo : Dynamic) : Bool;
+	@:overload @:public public function equals(portInfo : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

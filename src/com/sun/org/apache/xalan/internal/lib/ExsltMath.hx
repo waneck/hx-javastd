@@ -39,7 +39,7 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	*
 	* @see <a href="http://www.exslt.org/">EXSLT</a>
 	*/
-	@:overload public static function max(nl : org.w3c.dom.NodeList) : Float;
+	@:overload @:public @:static public static function max(nl : org.w3c.dom.NodeList) : Float;
 	
 	/**
 	* The math:min function returns the minimum value of the nodes passed as the argument.
@@ -57,7 +57,7 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	*
 	* @see <a href="http://www.exslt.org/">EXSLT</a>
 	*/
-	@:overload public static function min(nl : org.w3c.dom.NodeList) : Float;
+	@:overload @:public @:static public static function min(nl : org.w3c.dom.NodeList) : Float;
 	
 	/**
 	* The math:highest function returns the nodes in the node set whose value is the maximum
@@ -76,7 +76,7 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	* @return node-set with nodes containing the maximum value found, an empty node-set
 	* if any node cannot be converted to a number.
 	*/
-	@:overload public static function highest(nl : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function highest(nl : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
 	
 	/**
 	* The math:lowest function returns the nodes in the node set whose value is the minimum value
@@ -95,7 +95,7 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	* if any node cannot be converted to a number.
 	*
 	*/
-	@:overload public static function lowest(nl : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function lowest(nl : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
 	
 	/**
 	* The math:abs function returns the absolute value of a number.
@@ -103,7 +103,7 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	* @param num A number
 	* @return The absolute value of the number
 	*/
-	@:overload public static function abs(num : Float) : Float;
+	@:overload @:public @:static public static function abs(num : Float) : Float;
 	
 	/**
 	* The math:acos function returns the arccosine value of a number.
@@ -111,7 +111,7 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	* @param num A number
 	* @return The arccosine value of the number
 	*/
-	@:overload public static function acos(num : Float) : Float;
+	@:overload @:public @:static public static function acos(num : Float) : Float;
 	
 	/**
 	* The math:asin function returns the arcsine value of a number.
@@ -119,7 +119,7 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	* @param num A number
 	* @return The arcsine value of the number
 	*/
-	@:overload public static function asin(num : Float) : Float;
+	@:overload @:public @:static public static function asin(num : Float) : Float;
 	
 	/**
 	* The math:atan function returns the arctangent value of a number.
@@ -127,7 +127,7 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	* @param num A number
 	* @return The arctangent value of the number
 	*/
-	@:overload public static function atan(num : Float) : Float;
+	@:overload @:public @:static public static function atan(num : Float) : Float;
 	
 	/**
 	* The math:atan2 function returns the angle ( in radians ) from the X axis to a point (y,x).
@@ -136,7 +136,7 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	* @param num2 The Y axis value
 	* @return The angle (in radians) from the X axis to a point (y,x)
 	*/
-	@:overload public static function atan2(num1 : Float, num2 : Float) : Float;
+	@:overload @:public @:static public static function atan2(num1 : Float, num2 : Float) : Float;
 	
 	/**
 	* The math:cos function returns cosine of the passed argument.
@@ -144,7 +144,7 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	* @param num A number
 	* @return The cosine value of the number
 	*/
-	@:overload public static function cos(num : Float) : Float;
+	@:overload @:public @:static public static function cos(num : Float) : Float;
 	
 	/**
 	* The math:exp function returns e (the base of natural logarithms) raised to a power.
@@ -152,7 +152,7 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	* @param num A number
 	* @return The value of e raised to the given power
 	*/
-	@:overload public static function exp(num : Float) : Float;
+	@:overload @:public @:static public static function exp(num : Float) : Float;
 	
 	/**
 	* The math:log function returns the natural logarithm of a number.
@@ -160,7 +160,7 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	* @param num A number
 	* @return The natural logarithm of the number
 	*/
-	@:overload public static function log(num : Float) : Float;
+	@:overload @:public @:static public static function log(num : Float) : Float;
 	
 	/**
 	* The math:power function returns the value of a base expression taken to a specified power.
@@ -169,14 +169,14 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	* @param num2 The power
 	* @return The value of the base expression taken to the specified power
 	*/
-	@:overload public static function power(num1 : Float, num2 : Float) : Float;
+	@:overload @:public @:static public static function power(num1 : Float, num2 : Float) : Float;
 	
 	/**
 	* The math:random function returns a random number from 0 to 1.
 	*
 	* @return A random double from 0 to 1
 	*/
-	@:overload public static function random() : Float;
+	@:overload @:public @:static public static function random() : Float;
 	
 	/**
 	* The math:sin function returns the sine of the number.
@@ -184,7 +184,7 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	* @param num A number
 	* @return The sine value of the number
 	*/
-	@:overload public static function sin(num : Float) : Float;
+	@:overload @:public @:static public static function sin(num : Float) : Float;
 	
 	/**
 	* The math:sqrt function returns the square root of a number.
@@ -192,7 +192,7 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	* @param num A number
 	* @return The square root of the number
 	*/
-	@:overload public static function sqrt(num : Float) : Float;
+	@:overload @:public @:static public static function sqrt(num : Float) : Float;
 	
 	/**
 	* The math:tan function returns the tangent of the number passed as an argument.
@@ -200,7 +200,7 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	* @param num A number
 	* @return The tangent value of the number
 	*/
-	@:overload public static function tan(num : Float) : Float;
+	@:overload @:public @:static public static function tan(num : Float) : Float;
 	
 	/**
 	* The math:constant function returns the specified constant to a set precision.
@@ -218,7 +218,7 @@ extern class ExsltMath extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	* @param precision The precision
 	* @return The value of the specified constant to the given precision
 	*/
-	@:overload public static function constant(name : String, precision : Float) : Float;
+	@:overload @:public @:static public static function constant(name : String, precision : Float) : Float;
 	
 	
 }

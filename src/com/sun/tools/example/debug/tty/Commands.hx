@@ -32,7 +32,7 @@ package com.sun.tools.example.debug.tty;
 */
 @:internal extern class Commands
 {
-	@:overload private function parseBreakpointSpec(t : java.util.StringTokenizer, atForm : String, inForm : String) : com.sun.tools.example.debug.tty.BreakpointSpec;
+	@:overload @:protected private function parseBreakpointSpec(t : java.util.StringTokenizer, atForm : String, inForm : String) : com.sun.tools.example.debug.tty.BreakpointSpec;
 	
 	
 }

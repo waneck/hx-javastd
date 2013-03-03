@@ -45,7 +45,7 @@ extern class AccessControlException extends java.lang.SecurityException
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs an <code>AccessControlException</code> with the
@@ -55,7 +55,7 @@ extern class AccessControlException extends java.lang.SecurityException
 	* @param   s   the detail message.
 	* @param   p   the permission that caused the exception.
 	*/
-	@:overload public function new(s : String, p : java.security.Permission) : Void;
+	@:overload @:public public function new(s : String, p : java.security.Permission) : Void;
 	
 	/**
 	* Gets the Permission object associated with this exeception, or
@@ -63,7 +63,7 @@ extern class AccessControlException extends java.lang.SecurityException
 	*
 	* @return the Permission object.
 	*/
-	@:overload public function getPermission() : java.security.Permission;
+	@:overload @:public public function getPermission() : java.security.Permission;
 	
 	
 }

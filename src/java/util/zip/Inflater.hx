@@ -81,12 +81,12 @@ extern class Inflater
 	*
 	* @param nowrap if true then support GZIP compatible compression
 	*/
-	@:overload public function new(nowrap : Bool) : Void;
+	@:overload @:public public function new(nowrap : Bool) : Void;
 	
 	/**
 	* Creates a new decompressor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets input data for decompression. Should be called whenever
@@ -97,7 +97,7 @@ extern class Inflater
 	* @param len the length of the input data
 	* @see Inflater#needsInput
 	*/
-	@:overload public function setInput(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function setInput(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Sets input data for decompression. Should be called whenever
@@ -106,7 +106,7 @@ extern class Inflater
 	* @param b the input data bytes
 	* @see Inflater#needsInput
 	*/
-	@:overload public function setInput(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setInput(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the preset dictionary to the given array of bytes. Should be
@@ -119,7 +119,7 @@ extern class Inflater
 	* @see Inflater#needsDictionary
 	* @see Inflater#getAdler
 	*/
-	@:overload public function setDictionary(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function setDictionary(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Sets the preset dictionary to the given array of bytes. Should be
@@ -130,7 +130,7 @@ extern class Inflater
 	* @see Inflater#needsDictionary
 	* @see Inflater#getAdler
 	*/
-	@:overload public function setDictionary(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setDictionary(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the total number of bytes remaining in the input buffer.
@@ -138,7 +138,7 @@ extern class Inflater
 	* buffer after decompression has finished.
 	* @return the total number of bytes remaining in the input buffer
 	*/
-	@:overload public function getRemaining() : Int;
+	@:overload @:public public function getRemaining() : Int;
 	
 	/**
 	* Returns true if no data remains in the input buffer. This can
@@ -146,14 +146,14 @@ extern class Inflater
 	* to provide more input.
 	* @return true if no data remains in the input buffer
 	*/
-	@:overload public function needsInput() : Bool;
+	@:overload @:public public function needsInput() : Bool;
 	
 	/**
 	* Returns true if a preset dictionary is needed for decompression.
 	* @return true if a preset dictionary is needed for decompression
 	* @see Inflater#setDictionary
 	*/
-	@:overload public function needsDictionary() : Bool;
+	@:overload @:public public function needsDictionary() : Bool;
 	
 	/**
 	* Returns true if the end of the compressed data stream has been
@@ -161,7 +161,7 @@ extern class Inflater
 	* @return true if the end of the compressed data stream has been
 	* reached
 	*/
-	@:overload public function finished() : Bool;
+	@:overload @:public public function finished() : Bool;
 	
 	/**
 	* Uncompresses bytes into specified buffer. Returns actual number
@@ -178,7 +178,7 @@ extern class Inflater
 	* @see Inflater#needsInput
 	* @see Inflater#needsDictionary
 	*/
-	@:overload public function inflate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public public function inflate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Uncompresses bytes into specified buffer. Returns actual number
@@ -193,13 +193,13 @@ extern class Inflater
 	* @see Inflater#needsInput
 	* @see Inflater#needsDictionary
 	*/
-	@:overload public function inflate(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public public function inflate(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Returns the ADLER-32 value of the uncompressed data.
 	* @return the ADLER-32 value of the uncompressed data
 	*/
-	@:overload public function getAdler() : Int;
+	@:overload @:public public function getAdler() : Int;
 	
 	/**
 	* Returns the total number of compressed bytes input so far.
@@ -210,7 +210,7 @@ extern class Inflater
 	*
 	* @return the total number of compressed bytes input so far
 	*/
-	@:overload public function getTotalIn() : Int;
+	@:overload @:public public function getTotalIn() : Int;
 	
 	/**
 	* Returns the total number of compressed bytes input so far.</p>
@@ -218,7 +218,7 @@ extern class Inflater
 	* @return the total (non-negative) number of compressed bytes input so far
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getBytesRead() : haxe.Int64;
+	@:require(java5) @:overload @:public public function getBytesRead() : haxe.Int64;
 	
 	/**
 	* Returns the total number of uncompressed bytes output so far.
@@ -229,7 +229,7 @@ extern class Inflater
 	*
 	* @return the total number of uncompressed bytes output so far
 	*/
-	@:overload public function getTotalOut() : Int;
+	@:overload @:public public function getTotalOut() : Int;
 	
 	/**
 	* Returns the total number of uncompressed bytes output so far.</p>
@@ -237,12 +237,12 @@ extern class Inflater
 	* @return the total (non-negative) number of uncompressed bytes output so far
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getBytesWritten() : haxe.Int64;
+	@:require(java5) @:overload @:public public function getBytesWritten() : haxe.Int64;
 	
 	/**
 	* Resets inflater so that a new set of input data can be processed.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Closes the decompressor and discards any unprocessed input.
@@ -251,12 +251,12 @@ extern class Inflater
 	* method. Once this method is called, the behavior of the Inflater
 	* object is undefined.
 	*/
-	@:overload public function end() : Void;
+	@:overload @:public public function end() : Void;
 	
 	/**
 	* Closes the decompressor when garbage is collected.
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

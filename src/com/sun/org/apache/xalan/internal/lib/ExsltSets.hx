@@ -37,7 +37,7 @@ extern class ExsltSets extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	*
 	* @see <a href="http://www.exslt.org/">EXSLT</a>
 	*/
-	@:overload public static function leading(nl1 : org.w3c.dom.NodeList, nl2 : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function leading(nl1 : org.w3c.dom.NodeList, nl2 : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
 	
 	/**
 	* The set:trailing function returns the nodes in the node set passed as the first argument that
@@ -53,7 +53,7 @@ extern class ExsltSets extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	*
 	* @see <a href="http://www.exslt.org/">EXSLT</a>
 	*/
-	@:overload public static function trailing(nl1 : org.w3c.dom.NodeList, nl2 : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function trailing(nl1 : org.w3c.dom.NodeList, nl2 : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
 	
 	/**
 	* The set:intersection function returns a node set comprising the nodes that are within
@@ -66,7 +66,7 @@ extern class ExsltSets extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	*
 	* @see <a href="http://www.exslt.org/">EXSLT</a>
 	*/
-	@:overload public static function intersection(nl1 : org.w3c.dom.NodeList, nl2 : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function intersection(nl1 : org.w3c.dom.NodeList, nl2 : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
 	
 	/**
 	* The set:difference function returns the difference between two node sets - those nodes that
@@ -79,7 +79,7 @@ extern class ExsltSets extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	*
 	* @see <a href="http://www.exslt.org/">EXSLT</a>
 	*/
-	@:overload public static function difference(nl1 : org.w3c.dom.NodeList, nl2 : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function difference(nl1 : org.w3c.dom.NodeList, nl2 : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
 	
 	/**
 	* The set:distinct function returns a subset of the nodes contained in the node-set NS passed
@@ -93,7 +93,7 @@ extern class ExsltSets extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	*
 	* @see <a href="http://www.exslt.org/">EXSLT</a>
 	*/
-	@:overload public static function distinct(nl : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function distinct(nl : org.w3c.dom.NodeList) : org.w3c.dom.NodeList;
 	
 	/**
 	* The set:has-same-node function returns true if the node set passed as the first argument shares
@@ -108,7 +108,7 @@ extern class ExsltSets extends com.sun.org.apache.xalan.internal.lib.ExsltBase
 	*
 	* @see <a href="http://www.exslt.org/">EXSLT</a>
 	*/
-	@:overload public static function hasSameNode(nl1 : org.w3c.dom.NodeList, nl2 : org.w3c.dom.NodeList) : Bool;
+	@:overload @:public @:static public static function hasSameNode(nl1 : org.w3c.dom.NodeList, nl2 : org.w3c.dom.NodeList) : Bool;
 	
 	
 }

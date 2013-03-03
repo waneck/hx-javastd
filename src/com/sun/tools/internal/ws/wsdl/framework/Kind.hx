@@ -30,9 +30,9 @@ package com.sun.tools.internal.ws.wsdl.framework;
 */
 extern class Kind
 {
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

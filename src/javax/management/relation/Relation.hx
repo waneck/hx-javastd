@@ -43,7 +43,7 @@ extern interface Relation
 	*
 	* @see #setRole
 	*/
-	@:overload public function getRole(roleName : String) : java.util.List<javax.management.ObjectName>;
+	@:overload @:public public function getRole(roleName : String) : java.util.List<javax.management.ObjectName>;
 	
 	/**
 	* Retrieves values of roles with given names.
@@ -62,7 +62,7 @@ extern interface Relation
 	*
 	* @see #setRoles
 	*/
-	@:overload public function getRoles(roleNameArray : java.NativeArray<String>) : javax.management.relation.RoleResult;
+	@:overload @:public public function getRoles(roleNameArray : java.NativeArray<String>) : javax.management.relation.RoleResult;
 	
 	/**
 	* Returns the number of MBeans currently referenced in the given role.
@@ -74,7 +74,7 @@ extern interface Relation
 	* @exception IllegalArgumentException  if null role name
 	* @exception RoleNotFoundException  if there is no role with given name
 	*/
-	@:overload public function getRoleCardinality(roleName : String) : Null<Int>;
+	@:overload @:public public function getRoleCardinality(roleName : String) : Null<Int>;
 	
 	/**
 	* Returns all roles present in the relation.
@@ -86,14 +86,14 @@ extern interface Relation
 	* @exception RelationServiceNotRegisteredException  if the Relation
 	* Service is not registered in the MBean Server
 	*/
-	@:overload public function getAllRoles() : javax.management.relation.RoleResult;
+	@:overload @:public public function getAllRoles() : javax.management.relation.RoleResult;
 	
 	/**
 	* Returns all roles in the relation without checking read mode.
 	*
 	* @return a RoleList.
 	*/
-	@:overload public function retrieveAllRoles() : javax.management.relation.RoleList;
+	@:overload @:public public function retrieveAllRoles() : javax.management.relation.RoleList;
 	
 	/**
 	* Sets the given role.
@@ -127,7 +127,7 @@ extern interface Relation
 	*
 	* @see #getRole
 	*/
-	@:overload public function setRole(role : javax.management.relation.Role) : Void;
+	@:overload @:public public function setRole(role : javax.management.relation.Role) : Void;
 	
 	/**
 	* Sets the given roles.
@@ -153,7 +153,7 @@ extern interface Relation
 	*
 	* @see #getRoles
 	*/
-	@:overload public function setRoles(roleList : javax.management.relation.RoleList) : javax.management.relation.RoleResult;
+	@:overload @:public public function setRoles(roleList : javax.management.relation.RoleList) : javax.management.relation.RoleResult;
 	
 	/**
 	* Callback used by the Relation Service when a MBean referenced in a role
@@ -181,7 +181,7 @@ extern interface Relation
 	* @exception RelationNotFoundException  if this method is called for a
 	* relation MBean not added in the Relation Service.
 	*/
-	@:overload public function handleMBeanUnregistration(objectName : javax.management.ObjectName, roleName : String) : Void;
+	@:overload @:public public function handleMBeanUnregistration(objectName : javax.management.ObjectName, roleName : String) : Void;
 	
 	/**
 	* Retrieves MBeans referenced in the various roles of the relation.
@@ -189,21 +189,21 @@ extern interface Relation
 	* @return a HashMap mapping:
 	* <P> ObjectName -> ArrayList of String (role names)
 	*/
-	@:overload public function getReferencedMBeans() : java.util.Map<javax.management.ObjectName, java.util.List<String>>;
+	@:overload @:public public function getReferencedMBeans() : java.util.Map<javax.management.ObjectName, java.util.List<String>>;
 	
 	/**
 	* Returns name of associated relation type.
 	*
 	* @return the name of the relation type.
 	*/
-	@:overload public function getRelationTypeName() : String;
+	@:overload @:public public function getRelationTypeName() : String;
 	
 	/**
 	* Returns ObjectName of the Relation Service handling the relation.
 	*
 	* @return the ObjectName of the Relation Service.
 	*/
-	@:overload public function getRelationServiceName() : javax.management.ObjectName;
+	@:overload @:public public function getRelationServiceName() : javax.management.ObjectName;
 	
 	/**
 	* Returns relation identifier (used to uniquely identify the relation
@@ -211,7 +211,7 @@ extern interface Relation
 	*
 	* @return the relation id.
 	*/
-	@:overload public function getRelationId() : String;
+	@:overload @:public public function getRelationId() : String;
 	
 	
 }

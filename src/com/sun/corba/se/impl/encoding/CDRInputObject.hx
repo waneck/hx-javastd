@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class CDRInputObject extends com.sun.corba.se.impl.encoding.CDRInputStream implements com.sun.corba.se.pept.encoding.InputObject
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, corbaConnection : com.sun.corba.se.spi.transport.CorbaConnection, byteBuffer : java.nio.ByteBuffer, header : com.sun.corba.se.impl.protocol.giopmsgheaders.Message) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, corbaConnection : com.sun.corba.se.spi.transport.CorbaConnection, byteBuffer : java.nio.ByteBuffer, header : com.sun.corba.se.impl.protocol.giopmsgheaders.Message) : Void;
 	
-	@:overload @:final public function getConnection() : com.sun.corba.se.spi.transport.CorbaConnection;
+	@:overload @:public @:final public function getConnection() : com.sun.corba.se.spi.transport.CorbaConnection;
 	
-	@:overload public function getMessageHeader() : com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
+	@:overload @:public public function getMessageHeader() : com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
 	
 	/**
 	* Unmarshal the extended GIOP header
@@ -37,9 +37,9 @@ extern class CDRInputObject extends com.sun.corba.se.impl.encoding.CDRInputStrea
 	* See CorbaResponseWaitingRoomImpl.waitForResponse.  It is done
 	* there in the client thread.
 	*/
-	@:overload public function unmarshalHeader() : Void;
+	@:overload @:public public function unmarshalHeader() : Void;
 	
-	@:overload @:final public function unmarshaledHeader() : Bool;
+	@:overload @:public @:final public function unmarshaledHeader() : Bool;
 	
 	/**
 	* Override the default CDR factory behavior to get the
@@ -50,15 +50,15 @@ extern class CDRInputObject extends com.sun.corba.se.impl.encoding.CDRInputStrea
 	* In the local case, there is no Connection, so use the
 	* local code sets.
 	*/
-	@:overload override private function createCharBTCConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_BTCConverter;
+	@:overload @:protected override private function createCharBTCConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_BTCConverter;
 	
-	@:overload override private function createWCharBTCConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_BTCConverter;
+	@:overload @:protected override private function createWCharBTCConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_BTCConverter;
 	
-	@:overload @:final override public function getCodeBase() : com.sun.org.omg.SendingContext.CodeBase;
+	@:overload @:public @:final override public function getCodeBase() : com.sun.org.omg.SendingContext.CodeBase;
 	
-	@:overload override public function dup() : com.sun.corba.se.impl.encoding.CDRInputStream;
+	@:overload @:public override public function dup() : com.sun.corba.se.impl.encoding.CDRInputStream;
 	
-	@:overload private function dprint(msg : String) : Void;
+	@:overload @:protected private function dprint(msg : String) : Void;
 	
 	
 }

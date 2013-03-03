@@ -33,7 +33,7 @@ extern class TextCallbackHandler implements javax.security.auth.callback.Callbac
 	* CallbackHandler.
 
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Handles the specified set of callbacks.
@@ -43,7 +43,7 @@ extern class TextCallbackHandler implements javax.security.auth.callback.Callbac
 	* @throws UnsupportedCallbackException if the callback is not an
 	* instance of NameCallback or PasswordCallback
 	*/
-	@:overload public function handle(callbacks : java.NativeArray<javax.security.auth.callback.Callback>) : Void;
+	@:overload @:public public function handle(callbacks : java.NativeArray<javax.security.auth.callback.Callback>) : Void;
 	
 	
 }

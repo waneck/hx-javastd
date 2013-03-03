@@ -33,9 +33,9 @@ extern interface ToplevelStateListener
 	* (Frame.ICONIFIED,  Frame.MAXIMIZED_BOTH, Frame.MAXIMIZED_HORIZ, Frame.MAXIMIZED_VERT)
 	* They will be invoked from different peers in order not to mix different states having same codes.
 	*/
-	@:overload public function stateChangedICCCM(oldState : Int, newState : Int) : Void;
+	@:overload @:public public function stateChangedICCCM(oldState : Int, newState : Int) : Void;
 	
-	@:overload public function stateChangedJava(oldState : Int, newState : Int) : Void;
+	@:overload @:public public function stateChangedJava(oldState : Int, newState : Int) : Void;
 	
 	
 }

@@ -25,33 +25,33 @@ package com.sun.tools.classfile;
 */
 extern class Code_attribute extends com.sun.tools.classfile.Attribute
 {
-	@:overload public function getByte(offset : Int) : Int;
+	@:overload @:public public function getByte(offset : Int) : Int;
 	
-	@:overload public function getUnsignedByte(offset : Int) : Int;
+	@:overload @:public public function getUnsignedByte(offset : Int) : Int;
 	
-	@:overload public function getShort(offset : Int) : Int;
+	@:overload @:public public function getShort(offset : Int) : Int;
 	
-	@:overload public function getUnsignedShort(offset : Int) : Int;
+	@:overload @:public public function getUnsignedShort(offset : Int) : Int;
 	
-	@:overload public function getInt(offset : Int) : Int;
+	@:overload @:public public function getInt(offset : Int) : Int;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
-	@:overload public function getInstructions() : java.lang.Iterable<com.sun.tools.classfile.Instruction>;
+	@:overload @:public public function getInstructions() : java.lang.Iterable<com.sun.tools.classfile.Instruction>;
 	
-	public var max_stack(default, null) : Int;
+	@:public @:final public var max_stack(default, null) : Int;
 	
-	public var max_locals(default, null) : Int;
+	@:public @:final public var max_locals(default, null) : Int;
 	
-	public var code_length(default, null) : Int;
+	@:public @:final public var code_length(default, null) : Int;
 	
-	public var code(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:public @:final public var code(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
-	public var exception_table_langth(default, null) : Int;
+	@:public @:final public var exception_table_langth(default, null) : Int;
 	
-	public var exception_table(default, null) : java.NativeArray<com.sun.tools.classfile.Code_attribute.Code_attribute_Exception_data>;
+	@:public @:final public var exception_table(default, null) : java.NativeArray<com.sun.tools.classfile.Code_attribute.Code_attribute_Exception_data>;
 	
-	public var attributes(default, null) : com.sun.tools.classfile.Attributes;
+	@:public @:final public var attributes(default, null) : com.sun.tools.classfile.Attributes;
 	
 	
 }
@@ -65,21 +65,21 @@ extern class Code_attribute extends com.sun.tools.classfile.Attribute
 */
 @:native('com$sun$tools$classfile$Code_attribute$InvalidIndex') extern class Code_attribute_InvalidIndex extends com.sun.tools.classfile.AttributeException
 {
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
-	public var index(default, null) : Int;
+	@:public @:final public var index(default, null) : Int;
 	
 	
 }
 @:native('com$sun$tools$classfile$Code_attribute$Exception_data') extern class Code_attribute_Exception_data
 {
-	public var start_pc(default, null) : Int;
+	@:public @:final public var start_pc(default, null) : Int;
 	
-	public var end_pc(default, null) : Int;
+	@:public @:final public var end_pc(default, null) : Int;
 	
-	public var handler_pc(default, null) : Int;
+	@:public @:final public var handler_pc(default, null) : Int;
 	
-	public var catch_type(default, null) : Int;
+	@:public @:final public var catch_type(default, null) : Int;
 	
 	
 }

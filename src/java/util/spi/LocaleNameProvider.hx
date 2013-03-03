@@ -29,7 +29,7 @@ extern class LocaleNameProvider extends java.util.spi.LocaleServiceProvider
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns a localized name for the given <a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">
@@ -54,7 +54,7 @@ extern class LocaleNameProvider extends java.util.spi.LocaleServiceProvider
 	*     getAvailableLocales()}.
 	* @see java.util.Locale#getDisplayLanguage(java.util.Locale)
 	*/
-	@:overload @:abstract public function getDisplayLanguage(languageCode : String, locale : java.util.Locale) : String;
+	@:overload @:public @:abstract public function getDisplayLanguage(languageCode : String, locale : java.util.Locale) : String;
 	
 	/**
 	* Returns a localized name for the given <a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">
@@ -82,7 +82,7 @@ extern class LocaleNameProvider extends java.util.spi.LocaleServiceProvider
 	* @see java.util.Locale#getDisplayScript(java.util.Locale)
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getDisplayScript(scriptCode : String, locale : java.util.Locale) : String;
+	@:require(java7) @:overload @:public public function getDisplayScript(scriptCode : String, locale : java.util.Locale) : String;
 	
 	/**
 	* Returns a localized name for the given <a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">
@@ -108,7 +108,7 @@ extern class LocaleNameProvider extends java.util.spi.LocaleServiceProvider
 	*     getAvailableLocales()}.
 	* @see java.util.Locale#getDisplayCountry(java.util.Locale)
 	*/
-	@:overload @:abstract public function getDisplayCountry(countryCode : String, locale : java.util.Locale) : String;
+	@:overload @:public @:abstract public function getDisplayCountry(countryCode : String, locale : java.util.Locale) : String;
 	
 	/**
 	* Returns a localized name for the given variant code and the given locale that
@@ -126,7 +126,7 @@ extern class LocaleNameProvider extends java.util.spi.LocaleServiceProvider
 	*     getAvailableLocales()}.
 	* @see java.util.Locale#getDisplayVariant(java.util.Locale)
 	*/
-	@:overload @:abstract public function getDisplayVariant(variant : String, locale : java.util.Locale) : String;
+	@:overload @:public @:abstract public function getDisplayVariant(variant : String, locale : java.util.Locale) : String;
 	
 	
 }

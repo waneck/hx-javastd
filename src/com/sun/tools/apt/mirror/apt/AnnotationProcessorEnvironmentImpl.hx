@@ -28,45 +28,45 @@ package com.sun.tools.apt.mirror.apt;
 */
 extern class AnnotationProcessorEnvironmentImpl implements com.sun.mirror.apt.AnnotationProcessorEnvironment
 {
-	@:overload public function new(spectypedecls : java.util.Collection<com.sun.mirror.declaration.TypeDeclaration>, typedecls : java.util.Collection<com.sun.mirror.declaration.TypeDeclaration>, origOptions : java.util.Map<String, String>, context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:public public function new(spectypedecls : java.util.Collection<com.sun.mirror.declaration.TypeDeclaration>, typedecls : java.util.Collection<com.sun.mirror.declaration.TypeDeclaration>, origOptions : java.util.Map<String, String>, context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function getOptions() : java.util.Map<String, String>;
+	@:overload @:public public function getOptions() : java.util.Map<String, String>;
 	
-	@:overload public function getMessager() : com.sun.mirror.apt.Messager;
+	@:overload @:public public function getMessager() : com.sun.mirror.apt.Messager;
 	
-	@:overload public function getFiler() : com.sun.mirror.apt.Filer;
+	@:overload @:public public function getFiler() : com.sun.mirror.apt.Filer;
 	
-	@:overload public function getSpecifiedTypeDeclarations() : java.util.Collection<com.sun.mirror.declaration.TypeDeclaration>;
+	@:overload @:public public function getSpecifiedTypeDeclarations() : java.util.Collection<com.sun.mirror.declaration.TypeDeclaration>;
 	
-	@:overload public function getPackage(name : String) : com.sun.mirror.declaration.PackageDeclaration;
+	@:overload @:public public function getPackage(name : String) : com.sun.mirror.declaration.PackageDeclaration;
 	
-	@:overload public function getTypeDeclaration(name : String) : com.sun.mirror.declaration.TypeDeclaration;
+	@:overload @:public public function getTypeDeclaration(name : String) : com.sun.mirror.declaration.TypeDeclaration;
 	
-	@:overload public function getTypeDeclarations() : java.util.Collection<com.sun.mirror.declaration.TypeDeclaration>;
+	@:overload @:public public function getTypeDeclarations() : java.util.Collection<com.sun.mirror.declaration.TypeDeclaration>;
 	
-	@:overload public function getDeclarationsAnnotatedWith(a : com.sun.mirror.declaration.AnnotationTypeDeclaration) : java.util.Collection<com.sun.mirror.declaration.Declaration>;
+	@:overload @:public public function getDeclarationsAnnotatedWith(a : com.sun.mirror.declaration.AnnotationTypeDeclaration) : java.util.Collection<com.sun.mirror.declaration.Declaration>;
 	
-	@:overload public function getDeclarationUtils() : com.sun.mirror.util.Declarations;
+	@:overload @:public public function getDeclarationUtils() : com.sun.mirror.util.Declarations;
 	
-	@:overload public function getTypeUtils() : com.sun.mirror.util.Types;
+	@:overload @:public public function getTypeUtils() : com.sun.mirror.util.Types;
 	
-	@:overload public function addListener(listener : com.sun.mirror.apt.AnnotationProcessorListener) : Void;
+	@:overload @:public public function addListener(listener : com.sun.mirror.apt.AnnotationProcessorListener) : Void;
 	
-	@:overload public function removeListener(listener : com.sun.mirror.apt.AnnotationProcessorListener) : Void;
+	@:overload @:public public function removeListener(listener : com.sun.mirror.apt.AnnotationProcessorListener) : Void;
 	
-	@:overload public function roundComplete() : Void;
+	@:overload @:public public function roundComplete() : Void;
 	
 	
 }
 @:native('com$sun$tools$apt$mirror$apt$AnnotationProcessorEnvironmentImpl$CollectingAP') @:internal extern class AnnotationProcessorEnvironmentImpl_CollectingAP implements com.sun.mirror.apt.AnnotationProcessor
 {
-	@:overload public function process() : Void;
+	@:overload @:public public function process() : Void;
 	
 	
 }
 @:native('com$sun$tools$apt$mirror$apt$AnnotationProcessorEnvironmentImpl$CollectingAP$CollectingVisitor') @:internal extern class AnnotationProcessorEnvironmentImpl_CollectingAP_CollectingVisitor extends com.sun.mirror.util.SimpleDeclarationVisitor
 {
-	@:overload public function visitDeclaration(d : com.sun.mirror.declaration.Declaration) : Void;
+	@:overload @:public override public function visitDeclaration(d : com.sun.mirror.declaration.Declaration) : Void;
 	
 	
 }

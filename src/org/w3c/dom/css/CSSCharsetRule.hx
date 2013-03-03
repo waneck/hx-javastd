@@ -43,7 +43,7 @@ extern interface CSSCharsetRule extends org.w3c.dom.css.CSSRule
 	/**
 	*  The encoding information used in this <code>@charset</code> rule.
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	*  The encoding information used in this <code>@charset</code> rule.
@@ -53,7 +53,7 @@ extern interface CSSCharsetRule extends org.w3c.dom.css.CSSRule
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this encoding rule is
 	*   readonly.
 	*/
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
 	
 }

@@ -33,7 +33,7 @@ extern interface DisposerTarget
 	* Returns an object which will be
 	* used as the referent in the ReferenceQueue
 	*/
-	@:overload public function getDisposerReferent() : Dynamic;
+	@:overload @:public public function getDisposerReferent() : Dynamic;
 	
 	
 }

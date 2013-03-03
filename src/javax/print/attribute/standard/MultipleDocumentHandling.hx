@@ -29,25 +29,25 @@ extern class MultipleDocumentHandling extends javax.print.attribute.EnumSyntax i
 	* Single document -- see above for <A HREF="#sdfi">further
 	* information</A>.
 	*/
-	public static var SINGLE_DOCUMENT(default, null) : javax.print.attribute.standard.MultipleDocumentHandling;
+	@:public @:static @:final public static var SINGLE_DOCUMENT(default, null) : javax.print.attribute.standard.MultipleDocumentHandling;
 	
 	/**
 	* Separate documents uncollated copies -- see above for
 	* <A HREF="#sducfi">further information</A>.
 	*/
-	public static var SEPARATE_DOCUMENTS_UNCOLLATED_COPIES(default, null) : javax.print.attribute.standard.MultipleDocumentHandling;
+	@:public @:static @:final public static var SEPARATE_DOCUMENTS_UNCOLLATED_COPIES(default, null) : javax.print.attribute.standard.MultipleDocumentHandling;
 	
 	/**
 	* Separate documents collated copies -- see above for
 	* <A HREF="#sdccfi">further information</A>.
 	*/
-	public static var SEPARATE_DOCUMENTS_COLLATED_COPIES(default, null) : javax.print.attribute.standard.MultipleDocumentHandling;
+	@:public @:static @:final public static var SEPARATE_DOCUMENTS_COLLATED_COPIES(default, null) : javax.print.attribute.standard.MultipleDocumentHandling;
 	
 	/**
 	* Single document new sheet -- see above for
 	* <A HREF="#sdnsfi">further information</A>.
 	*/
-	public static var SINGLE_DOCUMENT_NEW_SHEET(default, null) : javax.print.attribute.standard.MultipleDocumentHandling;
+	@:public @:static @:final public static var SINGLE_DOCUMENT_NEW_SHEET(default, null) : javax.print.attribute.standard.MultipleDocumentHandling;
 	
 	/**
 	* Construct a new multiple document handling enumeration value with the
@@ -55,17 +55,17 @@ extern class MultipleDocumentHandling extends javax.print.attribute.EnumSyntax i
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class MultipleDocumentHandling.
 	*/
-	@:overload private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class MultipleDocumentHandling.
 	*/
-	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -77,7 +77,7 @@ extern class MultipleDocumentHandling extends javax.print.attribute.EnumSyntax i
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -88,7 +88,7 @@ extern class MultipleDocumentHandling extends javax.print.attribute.EnumSyntax i
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

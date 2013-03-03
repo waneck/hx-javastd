@@ -29,25 +29,25 @@ extern class MBeanOperationInfo extends javax.management.MBeanFeatureInfo implem
 	* Indicates that the operation is read-like:
 	* it returns information but does not change any state.
 	*/
-	public static var INFO(default, null) : Int;
+	@:public @:static @:final public static var INFO(default, null) : Int;
 	
 	/**
 	* Indicates that the operation is write-like: it has an effect but does
 	* not return any information from the MBean.
 	*/
-	public static var ACTION(default, null) : Int;
+	@:public @:static @:final public static var ACTION(default, null) : Int;
 	
 	/**
 	* Indicates that the operation is both read-like and write-like:
 	* it has an effect, and it also returns information from the MBean.
 	*/
-	public static var ACTION_INFO(default, null) : Int;
+	@:public @:static @:final public static var ACTION_INFO(default, null) : Int;
 	
 	/**
 	* Indicates that the impact of the operation is unknown or cannot be
 	* expressed using one of the other values.
 	*/
-	public static var UNKNOWN(default, null) : Int;
+	@:public @:static @:final public static var UNKNOWN(default, null) : Int;
 	
 	/**
 	* Constructs an <CODE>MBeanOperationInfo</CODE> object.  The
@@ -59,7 +59,7 @@ extern class MBeanOperationInfo extends javax.management.MBeanFeatureInfo implem
 	* describing the MBean operation.
 	* @param description A human readable description of the operation.
 	*/
-	@:overload public function new(description : String, method : java.lang.reflect.Method) : Void;
+	@:overload @:public public function new(description : String, method : java.lang.reflect.Method) : Void;
 	
 	/**
 	* Constructs an <CODE>MBeanOperationInfo</CODE> object.
@@ -74,7 +74,7 @@ extern class MBeanOperationInfo extends javax.management.MBeanFeatureInfo implem
 	* {@link #INFO}, {@link #ACTION}, {@link #ACTION_INFO},
 	* {@link #UNKNOWN}.
 	*/
-	@:overload public function new(name : String, description : String, signature : java.NativeArray<javax.management.MBeanParameterInfo>, type : String, impact : Int) : Void;
+	@:overload @:public public function new(name : String, description : String, signature : java.NativeArray<javax.management.MBeanParameterInfo>, type : String, impact : Int) : Void;
 	
 	/**
 	* Constructs an <CODE>MBeanOperationInfo</CODE> object.
@@ -93,7 +93,7 @@ extern class MBeanOperationInfo extends javax.management.MBeanFeatureInfo implem
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(name : String, description : String, signature : java.NativeArray<javax.management.MBeanParameterInfo>, type : String, impact : Int, descriptor : javax.management.Descriptor) : Void;
+	@:require(java6) @:overload @:public public function new(name : String, description : String, signature : java.NativeArray<javax.management.MBeanParameterInfo>, type : String, impact : Int, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* <p>Returns a shallow clone of this instance.
@@ -105,14 +105,14 @@ extern class MBeanOperationInfo extends javax.management.MBeanFeatureInfo implem
 	* <p>Since this class is immutable, cloning is chiefly of interest
 	* to subclasses.</p>
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns the type of the method's return value.
 	*
 	* @return the return type.
 	*/
-	@:overload public function getReturnType() : String;
+	@:overload @:public public function getReturnType() : String;
 	
 	/**
 	* <p>Returns the list of parameters for this operation.  Each
@@ -127,7 +127,7 @@ extern class MBeanOperationInfo extends javax.management.MBeanFeatureInfo implem
 	*
 	* @return  An array of <CODE>MBeanParameterInfo</CODE> objects.
 	*/
-	@:overload public function getSignature() : java.NativeArray<javax.management.MBeanParameterInfo>;
+	@:overload @:public public function getSignature() : java.NativeArray<javax.management.MBeanParameterInfo>;
 	
 	/**
 	* Returns the impact of the method, one of
@@ -135,9 +135,9 @@ extern class MBeanOperationInfo extends javax.management.MBeanFeatureInfo implem
 	*
 	* @return the impact code.
 	*/
-	@:overload public function getImpact() : Int;
+	@:overload @:public public function getImpact() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compare this MBeanOperationInfo to another.
@@ -151,7 +151,7 @@ extern class MBeanOperationInfo extends javax.management.MBeanFeatureInfo implem
 	* to those of this MBeanConstructorInfo.  Two signature arrays
 	* are equal if their elements are pairwise equal.
 	*/
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
 	/* We do not include everything in the hashcode.  We assume that
 	if two operations are different they'll probably have different
@@ -159,7 +159,7 @@ extern class MBeanOperationInfo extends javax.management.MBeanFeatureInfo implem
 	wrong should be less than the penalty we would pay if it were
 	right and we needlessly hashed in the description and the
 	parameter array.  */
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

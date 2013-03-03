@@ -35,28 +35,28 @@ extern class DSAParameters extends java.security.AlgorithmParametersSpi
 	*
 	* @since 1.2
 	*/
-	@:require(java2) private var p : java.math.BigInteger;
+	@:require(java2) @:protected private var p : java.math.BigInteger;
 	
-	private var q : java.math.BigInteger;
+	@:protected private var q : java.math.BigInteger;
 	
-	private var g : java.math.BigInteger;
+	@:protected private var g : java.math.BigInteger;
 	
-	@:overload override private function engineInit(paramSpec : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineInit(paramSpec : java.security.spec.AlgorithmParameterSpec) : Void;
 	
-	@:overload override private function engineInit(params : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected override private function engineInit(params : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override private function engineInit(params : java.NativeArray<java.StdTypes.Int8>, decodingMethod : String) : Void;
+	@:overload @:protected override private function engineInit(params : java.NativeArray<java.StdTypes.Int8>, decodingMethod : String) : Void;
 	
-	@:overload override private function engineGetParameterSpec<T : java.security.spec.AlgorithmParameterSpec>(paramSpec : Class<T>) : T;
+	@:overload @:protected override private function engineGetParameterSpec<T : java.security.spec.AlgorithmParameterSpec>(paramSpec : Class<T>) : T;
 	
-	@:overload override private function engineGetEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineGetEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineGetEncoded(encodingMethod : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineGetEncoded(encodingMethod : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/*
 	* Returns a formatted string describing the parameters.
 	*/
-	@:overload override private function engineToString() : String;
+	@:overload @:protected override private function engineToString() : String;
 	
 	
 }

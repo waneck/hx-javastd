@@ -28,7 +28,7 @@ package com.sun.corba.se.spi.ior;
 */
 extern interface ObjectId extends com.sun.corba.se.spi.ior.Writeable
 {
-	@:overload public function getId() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getId() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -25,19 +25,19 @@ package com.sun.xml.internal.ws.transport.http.client;
 */
 @:internal extern class HttpClientTransport
 {
-	@:overload public function new(packet : com.sun.xml.internal.ws.api.message.Packet, reqHeaders : java.util.Map<String, java.util.List<String>>) : Void;
+	@:overload @:public public function new(packet : com.sun.xml.internal.ws.api.message.Packet, reqHeaders : java.util.Map<String, java.util.List<String>>) : Void;
 	
-	@:overload public function getHeaders() : java.util.Map<String, java.util.List<String>>;
+	@:overload @:public public function getHeaders() : java.util.Map<String, java.util.List<String>>;
 	
-	@:overload private function readResponse() : java.io.InputStream;
+	@:overload @:protected private function readResponse() : java.io.InputStream;
 	
-	@:overload private function readResponseCodeAndMessage() : Void;
+	@:overload @:protected private function readResponseCodeAndMessage() : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$transport$http$client$HttpClientTransport$HttpClientVerifier') @:internal extern class HttpClientTransport_HttpClientVerifier implements javax.net.ssl.HostnameVerifier
 {
-	@:overload public function verify(s : String, sslSession : javax.net.ssl.SSLSession) : Bool;
+	@:overload @:public public function verify(s : String, sslSession : javax.net.ssl.SSLSession) : Bool;
 	
 	
 }
@@ -49,7 +49,7 @@ package com.sun.xml.internal.ws.transport.http.client;
 */
 @:native('com$sun$xml$internal$ws$transport$http$client$HttpClientTransport$WSChunkedOuputStream') @:internal extern class HttpClientTransport_WSChunkedOuputStream extends java.io.FilterOutputStream
 {
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	
 }

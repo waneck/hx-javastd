@@ -27,56 +27,56 @@ package com.sun.xml.internal.fastinfoset.vocab;
 */
 extern class ParserVocabulary extends com.sun.xml.internal.fastinfoset.vocab.Vocabulary
 {
-	public static var IDENTIFYING_STRING_TABLE_MAXIMUM_ITEMS_PEOPERTY(default, null) : String;
+	@:public @:static @:final public static var IDENTIFYING_STRING_TABLE_MAXIMUM_ITEMS_PEOPERTY(default, null) : String;
 	
-	public static var NON_IDENTIFYING_STRING_TABLE_MAXIMUM_ITEMS_PEOPERTY(default, null) : String;
+	@:public @:static @:final public static var NON_IDENTIFYING_STRING_TABLE_MAXIMUM_ITEMS_PEOPERTY(default, null) : String;
 	
-	public static var NON_IDENTIFYING_STRING_TABLE_MAXIMUM_CHARACTERS_PEOPERTY(default, null) : String;
+	@:public @:static @:final public static var NON_IDENTIFYING_STRING_TABLE_MAXIMUM_CHARACTERS_PEOPERTY(default, null) : String;
 	
-	private static var IDENTIFYING_STRING_TABLE_MAXIMUM_ITEMS(default, null) : Int;
+	@:protected @:static @:final private static var IDENTIFYING_STRING_TABLE_MAXIMUM_ITEMS(default, null) : Int;
 	
-	private static var NON_IDENTIFYING_STRING_TABLE_MAXIMUM_ITEMS(default, null) : Int;
+	@:protected @:static @:final private static var NON_IDENTIFYING_STRING_TABLE_MAXIMUM_ITEMS(default, null) : Int;
 	
-	private static var NON_IDENTIFYING_STRING_TABLE_MAXIMUM_CHARACTERS(default, null) : Int;
+	@:protected @:static @:final private static var NON_IDENTIFYING_STRING_TABLE_MAXIMUM_CHARACTERS(default, null) : Int;
 	
-	public var restrictedAlphabet(default, null) : com.sun.xml.internal.fastinfoset.util.CharArrayArray;
+	@:public @:final public var restrictedAlphabet(default, null) : com.sun.xml.internal.fastinfoset.util.CharArrayArray;
 	
-	public var encodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.util.StringArray;
+	@:public @:final public var encodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.util.StringArray;
 	
-	public var namespaceName(default, null) : com.sun.xml.internal.fastinfoset.util.StringArray;
+	@:public @:final public var namespaceName(default, null) : com.sun.xml.internal.fastinfoset.util.StringArray;
 	
-	public var prefix(default, null) : com.sun.xml.internal.fastinfoset.util.PrefixArray;
+	@:public @:final public var prefix(default, null) : com.sun.xml.internal.fastinfoset.util.PrefixArray;
 	
-	public var localName(default, null) : com.sun.xml.internal.fastinfoset.util.StringArray;
+	@:public @:final public var localName(default, null) : com.sun.xml.internal.fastinfoset.util.StringArray;
 	
-	public var otherNCName(default, null) : com.sun.xml.internal.fastinfoset.util.StringArray;
+	@:public @:final public var otherNCName(default, null) : com.sun.xml.internal.fastinfoset.util.StringArray;
 	
-	public var otherURI(default, null) : com.sun.xml.internal.fastinfoset.util.StringArray;
+	@:public @:final public var otherURI(default, null) : com.sun.xml.internal.fastinfoset.util.StringArray;
 	
-	public var attributeValue(default, null) : com.sun.xml.internal.fastinfoset.util.StringArray;
+	@:public @:final public var attributeValue(default, null) : com.sun.xml.internal.fastinfoset.util.StringArray;
 	
-	public var otherString(default, null) : com.sun.xml.internal.fastinfoset.util.CharArrayArray;
+	@:public @:final public var otherString(default, null) : com.sun.xml.internal.fastinfoset.util.CharArrayArray;
 	
-	public var characterContentChunk(default, null) : com.sun.xml.internal.fastinfoset.util.ContiguousCharArrayArray;
+	@:public @:final public var characterContentChunk(default, null) : com.sun.xml.internal.fastinfoset.util.ContiguousCharArrayArray;
 	
-	public var elementName(default, null) : com.sun.xml.internal.fastinfoset.util.QualifiedNameArray;
+	@:public @:final public var elementName(default, null) : com.sun.xml.internal.fastinfoset.util.QualifiedNameArray;
 	
-	public var attributeName(default, null) : com.sun.xml.internal.fastinfoset.util.QualifiedNameArray;
+	@:public @:final public var attributeName(default, null) : com.sun.xml.internal.fastinfoset.util.QualifiedNameArray;
 	
-	public var tables(default, null) : java.NativeArray<com.sun.xml.internal.fastinfoset.util.ValueArray>;
+	@:public @:final public var tables(default, null) : java.NativeArray<com.sun.xml.internal.fastinfoset.util.ValueArray>;
 	
-	private var _readOnlyVocabulary : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary;
+	@:protected private var _readOnlyVocabulary : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary;
 	
 	/** Creates a new instance of ParserVocabulary */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(v : com.sun.xml.internal.org.jvnet.fastinfoset.Vocabulary) : Void;
+	@:overload @:public public function new(v : com.sun.xml.internal.org.jvnet.fastinfoset.Vocabulary) : Void;
 	
-	@:overload public function setInitialVocabulary(initialVocabulary : com.sun.xml.internal.fastinfoset.vocab.ParserVocabulary, clear : Bool) : Void;
+	@:overload @:public public function setInitialVocabulary(initialVocabulary : com.sun.xml.internal.fastinfoset.vocab.ParserVocabulary, clear : Bool) : Void;
 	
-	@:overload public function setReferencedVocabulary(referencedVocabularyURI : String, referencedVocabulary : com.sun.xml.internal.fastinfoset.vocab.ParserVocabulary, clear : Bool) : Void;
+	@:overload @:public public function setReferencedVocabulary(referencedVocabularyURI : String, referencedVocabulary : com.sun.xml.internal.fastinfoset.vocab.ParserVocabulary, clear : Bool) : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

@@ -23,19 +23,19 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 */
 extern class NodeSortRecordGenerator extends com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator
 {
-	@:overload public function new(className : String, superClassName : String, fileName : String, accessFlags : Int, interfaces : java.NativeArray<String>, stylesheet : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet) : Void;
+	@:overload @:public public function new(className : String, superClassName : String, fileName : String, accessFlags : Int, interfaces : java.NativeArray<String>, stylesheet : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet) : Void;
 	
 	/**
 	* The index of the translet pointer within the execution of
 	* the test method.
 	*/
-	@:overload override public function loadTranslet() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public override public function loadTranslet() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/**
 	* Returns <tt>true</tt> since this class is external to the
 	* translet.
 	*/
-	@:overload override public function isExternal() : Bool;
+	@:overload @:public override public function isExternal() : Bool;
 	
 	
 }

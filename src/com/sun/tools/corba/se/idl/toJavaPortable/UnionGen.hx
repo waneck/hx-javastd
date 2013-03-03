@@ -44,84 +44,84 @@ extern class UnionGen implements com.sun.tools.corba.se.idl.UnionGen implements 
 	/**
 	* Public zero-argument constructor.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*
 	**/
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, u : com.sun.tools.corba.se.idl.UnionEntry, s : java.io.PrintWriter) : Void;
+	@:overload @:public public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, u : com.sun.tools.corba.se.idl.UnionEntry, s : java.io.PrintWriter) : Void;
 	
 	/**
 	* Initialize members unique to this generator.
 	**/
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function openStream() : Void;
+	@:overload @:protected private function openStream() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function generateHelper() : Void;
+	@:overload @:protected private function generateHelper() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function generateHolder() : Void;
+	@:overload @:protected private function generateHolder() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeHeading() : Void;
+	@:overload @:protected private function writeHeading() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeBody() : Void;
+	@:overload @:protected private function writeBody() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeClosing() : Void;
+	@:overload @:protected private function writeClosing() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function closeStream() : Void;
+	@:overload @:protected private function closeStream() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function generateContainedTypes() : Void;
+	@:overload @:protected private function generateContainedTypes() : Void;
 	
-	@:overload public function helperType(index : Int, indent : String, tcoffsets : com.sun.tools.corba.se.idl.toJavaPortable.TCOffsets, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
+	@:overload @:public public function helperType(index : Int, indent : String, tcoffsets : com.sun.tools.corba.se.idl.toJavaPortable.TCOffsets, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
 	
-	@:overload public function type(index : Int, indent : String, tcoffsets : com.sun.tools.corba.se.idl.toJavaPortable.TCOffsets, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
+	@:overload @:public public function type(index : Int, indent : String, tcoffsets : com.sun.tools.corba.se.idl.toJavaPortable.TCOffsets, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
 	
-	@:overload public function helperRead(entryName : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
+	@:overload @:public public function helperRead(entryName : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
 	
-	@:overload public function helperWrite(entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
+	@:overload @:public public function helperWrite(entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
 	
-	@:overload public function read(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
+	@:overload @:public public function read(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
 	
 	/**
 	*
 	**/
-	@:overload public function write(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
+	@:overload @:public public function write(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
 	
-	private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	private var u : com.sun.tools.corba.se.idl.UnionEntry;
+	@:protected private var u : com.sun.tools.corba.se.idl.UnionEntry;
 	
-	private var stream : java.io.PrintWriter;
+	@:protected private var stream : java.io.PrintWriter;
 	
-	private var utype : com.sun.tools.corba.se.idl.SymtabEntry;
+	@:protected private var utype : com.sun.tools.corba.se.idl.SymtabEntry;
 	
-	private var unionIsEnum : Bool;
+	@:protected private var unionIsEnum : Bool;
 	
-	private var typePackage : String;
+	@:protected private var typePackage : String;
 	
 	
 }

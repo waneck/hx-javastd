@@ -23,64 +23,64 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 */
 extern class Util
 {
-	@:overload public static function noExtName(name : String) : String;
+	@:overload @:public @:static public static function noExtName(name : String) : String;
 	
 	/**
 	* Search for both slashes in order to support URLs and
 	* files.
 	*/
-	@:overload public static function baseName(name : String) : String;
+	@:overload @:public @:static public static function baseName(name : String) : String;
 	
 	/**
 	* Search for both slashes in order to support URLs and
 	* files.
 	*/
-	@:overload public static function pathName(name : String) : String;
+	@:overload @:public @:static public static function pathName(name : String) : String;
 	
 	/**
 	* Replace all illegal Java chars by '_'.
 	*/
-	@:overload public static function toJavaName(name : String) : String;
+	@:overload @:public @:static public static function toJavaName(name : String) : String;
 	
-	@:overload public static function getJCRefType(signature : String) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public @:static public static function getJCRefType(signature : String) : com.sun.org.apache.bcel.internal.generic.Type;
 	
-	@:overload public static function internalName(cname : String) : String;
+	@:overload @:public @:static public static function internalName(cname : String) : String;
 	
-	@:overload public static function println(s : String) : Void;
+	@:overload @:public @:static public static function println(s : String) : Void;
 	
-	@:overload public static function println(ch : java.StdTypes.Char16) : Void;
+	@:overload @:public @:static public static function println(ch : java.StdTypes.Char16) : Void;
 	
-	@:overload public static function TRACE1() : Void;
+	@:overload @:public @:static public static function TRACE1() : Void;
 	
-	@:overload public static function TRACE2() : Void;
+	@:overload @:public @:static public static function TRACE2() : Void;
 	
-	@:overload public static function TRACE3() : Void;
+	@:overload @:public @:static public static function TRACE3() : Void;
 	
 	/**
 	* Replace a certain character in a string with a new substring.
 	*/
-	@:overload public static function replace(base : String, ch : java.StdTypes.Char16, str : String) : String;
+	@:overload @:public @:static public static function replace(base : String, ch : java.StdTypes.Char16, str : String) : String;
 	
-	@:overload public static function replace(base : String, delim : String, str : java.NativeArray<String>) : String;
+	@:overload @:public @:static public static function replace(base : String, delim : String, str : java.NativeArray<String>) : String;
 	
 	/**
 	* Replace occurances of '.', '-', '/' and ':'
 	*/
-	@:overload public static function escape(input : String) : String;
+	@:overload @:public @:static public static function escape(input : String) : String;
 	
-	@:overload public static function getLocalName(qname : String) : String;
+	@:overload @:public @:static public static function getLocalName(qname : String) : String;
 	
-	@:overload public static function getPrefix(qname : String) : String;
+	@:overload @:public @:static public static function getPrefix(qname : String) : String;
 	
 	/**
 	* Checks if the string is a literal (i.e. not an AVT) or not.
 	*/
-	@:overload public static function isLiteral(str : String) : Bool;
+	@:overload @:public @:static public static function isLiteral(str : String) : Bool;
 	
 	/**
 	* Checks if the string is valid list of qnames
 	*/
-	@:overload public static function isValidQNames(str : String) : Bool;
+	@:overload @:public @:static public static function isValidQNames(str : String) : Bool;
 	
 	
 }

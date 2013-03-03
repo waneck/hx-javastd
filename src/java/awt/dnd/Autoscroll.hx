@@ -36,7 +36,7 @@ extern interface Autoscroll
 	* <P>
 	* @return the Insets
 	*/
-	@:overload public function getAutoscrollInsets() : java.awt.Insets;
+	@:overload @:public public function getAutoscrollInsets() : java.awt.Insets;
 	
 	/**
 	* notify the <code>Component</code> to autoscroll
@@ -44,7 +44,7 @@ extern interface Autoscroll
 	* @param cursorLocn A <code>Point</code> indicating the
 	* location of the cursor that triggered this operation.
 	*/
-	@:overload public function autoscroll(cursorLocn : java.awt.Point) : Void;
+	@:overload @:public public function autoscroll(cursorLocn : java.awt.Point) : Void;
 	
 	
 }

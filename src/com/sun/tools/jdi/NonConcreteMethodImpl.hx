@@ -25,25 +25,25 @@ package com.sun.tools.jdi;
 */
 extern class NonConcreteMethodImpl extends com.sun.tools.jdi.MethodImpl
 {
-	@:overload override public function location() : com.sun.jdi.Location;
+	@:overload @:public override public function location() : com.sun.jdi.Location;
 	
-	@:overload override public function allLineLocations(stratumID : String, sourceName : String) : java.util.List<com.sun.jdi.Location>;
+	@:overload @:public override public function allLineLocations(stratumID : String, sourceName : String) : java.util.List<com.sun.jdi.Location>;
 	
-	@:overload public function allLineLocations(stratum : com.sun.tools.jdi.SDE.SDE_Stratum, sourceName : String) : java.util.List<com.sun.jdi.Location>;
+	@:overload @:public public function allLineLocations(stratum : com.sun.tools.jdi.SDE.SDE_Stratum, sourceName : String) : java.util.List<com.sun.jdi.Location>;
 	
-	@:overload override public function locationsOfLine(stratumID : String, sourceName : String, lineNumber : Int) : java.util.List<com.sun.jdi.Location>;
+	@:overload @:public override public function locationsOfLine(stratumID : String, sourceName : String, lineNumber : Int) : java.util.List<com.sun.jdi.Location>;
 	
-	@:overload public function locationsOfLine(stratum : com.sun.tools.jdi.SDE.SDE_Stratum, sourceName : String, lineNumber : Int) : java.util.List<com.sun.jdi.Location>;
+	@:overload @:public public function locationsOfLine(stratum : com.sun.tools.jdi.SDE.SDE_Stratum, sourceName : String, lineNumber : Int) : java.util.List<com.sun.jdi.Location>;
 	
-	@:overload override public function locationOfCodeIndex(codeIndex : haxe.Int64) : com.sun.jdi.Location;
+	@:overload @:public override public function locationOfCodeIndex(codeIndex : haxe.Int64) : com.sun.jdi.Location;
 	
-	@:overload override public function variables() : java.util.List<com.sun.jdi.LocalVariable>;
+	@:overload @:public override public function variables() : java.util.List<com.sun.jdi.LocalVariable>;
 	
-	@:overload override public function variablesByName(name : String) : java.util.List<com.sun.jdi.LocalVariable>;
+	@:overload @:public override public function variablesByName(name : String) : java.util.List<com.sun.jdi.LocalVariable>;
 	
-	@:overload override public function arguments() : java.util.List<com.sun.jdi.LocalVariable>;
+	@:overload @:public override public function arguments() : java.util.List<com.sun.jdi.LocalVariable>;
 	
-	@:overload override public function bytecodes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function bytecodes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

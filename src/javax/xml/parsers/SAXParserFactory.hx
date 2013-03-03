@@ -28,7 +28,7 @@ extern class SAXParserFactory
 	/**
 	* <p>Protected constructor to force use of {@link #newInstance()}.</p>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Obtain a new instance of a <code>SAXParserFactory</code>. This
@@ -88,7 +88,7 @@ extern class SAXParserFactory
 	* @throws FactoryConfigurationError if the implementation is
 	*   not available or cannot be instantiated.
 	*/
-	@:overload public static function newInstance() : javax.xml.parsers.SAXParserFactory;
+	@:overload @:public @:static public static function newInstance() : javax.xml.parsers.SAXParserFactory;
 	
 	/**
 	* <p>Obtain a new instance of a <code>SAXParserFactory</code> from class name.
@@ -124,7 +124,7 @@ extern class SAXParserFactory
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function newInstance(factoryClassName : String, classLoader : java.lang.ClassLoader) : javax.xml.parsers.SAXParserFactory;
+	@:require(java6) @:overload @:public @:static public static function newInstance(factoryClassName : String, classLoader : java.lang.ClassLoader) : javax.xml.parsers.SAXParserFactory;
 	
 	/**
 	* <p>Creates a new instance of a SAXParser using the currently
@@ -136,7 +136,7 @@ extern class SAXParserFactory
 	*   be created which satisfies the requested configuration.
 	* @throws SAXException for SAX errors.
 	*/
-	@:overload @:abstract public function newSAXParser() : javax.xml.parsers.SAXParser;
+	@:overload @:public @:abstract public function newSAXParser() : javax.xml.parsers.SAXParser;
 	
 	/**
 	* Specifies that the parser produced by this code will
@@ -146,7 +146,7 @@ extern class SAXParserFactory
 	* @param awareness true if the parser produced by this code will
 	*                  provide support for XML namespaces; false otherwise.
 	*/
-	@:overload public function setNamespaceAware(awareness : Bool) : Void;
+	@:overload @:public public function setNamespaceAware(awareness : Bool) : Void;
 	
 	/**
 	* Specifies that the parser produced by this code will
@@ -172,7 +172,7 @@ extern class SAXParserFactory
 	* @param validating true if the parser produced by this code will
 	*                   validate documents as they are parsed; false otherwise.
 	*/
-	@:overload public function setValidating(validating : Bool) : Void;
+	@:overload @:public public function setValidating(validating : Bool) : Void;
 	
 	/**
 	* Indicates whether or not the factory is configured to produce
@@ -181,7 +181,7 @@ extern class SAXParserFactory
 	* @return true if the factory is configured to produce
 	*         parsers which are namespace aware; false otherwise.
 	*/
-	@:overload public function isNamespaceAware() : Bool;
+	@:overload @:public public function isNamespaceAware() : Bool;
 	
 	/**
 	* Indicates whether or not the factory is configured to produce
@@ -190,7 +190,7 @@ extern class SAXParserFactory
 	* @return true if the factory is configured to produce parsers which validate
 	*         the XML content during parse; false otherwise.
 	*/
-	@:overload public function isValidating() : Bool;
+	@:overload @:public public function isValidating() : Bool;
 	
 	/**
 	*
@@ -229,7 +229,7 @@ extern class SAXParserFactory
 	*
 	* @see org.xml.sax.XMLReader#setFeature
 	*/
-	@:overload @:abstract public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public @:abstract public function setFeature(name : String, value : Bool) : Void;
 	
 	/**
 	*
@@ -246,7 +246,7 @@ extern class SAXParserFactory
 	*
 	* @see org.xml.sax.XMLReader#getProperty
 	*/
-	@:overload @:abstract public function getFeature(name : String) : Bool;
+	@:overload @:public @:abstract public function getFeature(name : String) : Bool;
 	
 	/**
 	* Gets the {@link Schema} object specified through
@@ -264,7 +264,7 @@ extern class SAXParserFactory
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getSchema() : javax.xml.validation.Schema;
+	@:require(java5) @:overload @:public public function getSchema() : javax.xml.validation.Schema;
 	
 	/**
 	* <p>Set the {@link Schema} to be used by parsers created
@@ -313,7 +313,7 @@ extern class SAXParserFactory
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setSchema(schema : javax.xml.validation.Schema) : Void;
+	@:require(java5) @:overload @:public public function setSchema(schema : javax.xml.validation.Schema) : Void;
 	
 	/**
 	* <p>Set state of XInclude processing.</p>
@@ -332,7 +332,7 @@ extern class SAXParserFactory
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setXIncludeAware(state : Bool) : Void;
+	@:require(java5) @:overload @:public public function setXIncludeAware(state : Bool) : Void;
 	
 	/**
 	* <p>Get state of XInclude processing.</p>
@@ -344,7 +344,7 @@ extern class SAXParserFactory
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isXIncludeAware() : Bool;
+	@:require(java5) @:overload @:public public function isXIncludeAware() : Bool;
 	
 	
 }

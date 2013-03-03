@@ -25,28 +25,28 @@ package sun.nio.fs;
 */
 @:internal extern class UnixFileSystem extends java.nio.file.FileSystem
 {
-	@:overload @:final override public function provider() : java.nio.file.spi.FileSystemProvider;
+	@:overload @:public @:final override public function provider() : java.nio.file.spi.FileSystemProvider;
 	
-	@:overload @:final override public function getSeparator() : String;
+	@:overload @:public @:final override public function getSeparator() : String;
 	
-	@:overload @:final override public function isOpen() : Bool;
+	@:overload @:public @:final override public function isOpen() : Bool;
 	
-	@:overload @:final override public function isReadOnly() : Bool;
+	@:overload @:public @:final override public function isReadOnly() : Bool;
 	
-	@:overload @:final override public function close() : Void;
+	@:overload @:public @:final override public function close() : Void;
 	
 	/**
 	* Unix systems only have a single root directory (/)
 	*/
-	@:overload @:final override public function getRootDirectories() : java.lang.Iterable<java.nio.file.Path>;
+	@:overload @:public @:final override public function getRootDirectories() : java.lang.Iterable<java.nio.file.Path>;
 	
-	@:overload @:final override public function getFileStores() : java.lang.Iterable<java.nio.file.FileStore>;
+	@:overload @:public @:final override public function getFileStores() : java.lang.Iterable<java.nio.file.FileStore>;
 	
-	@:overload @:final override public function getPath(first : String, more : java.NativeArray<String>) : java.nio.file.Path;
+	@:overload @:public @:final override public function getPath(first : String, more : java.NativeArray<String>) : java.nio.file.Path;
 	
-	@:overload override public function getPathMatcher(syntaxAndInput : String) : java.nio.file.PathMatcher;
+	@:overload @:public override public function getPathMatcher(syntaxAndInput : String) : java.nio.file.PathMatcher;
 	
-	@:overload @:final override public function getUserPrincipalLookupService() : java.nio.file.attribute.UserPrincipalLookupService;
+	@:overload @:public @:final override public function getUserPrincipalLookupService() : java.nio.file.attribute.UserPrincipalLookupService;
 	
 	
 }
@@ -55,11 +55,11 @@ package sun.nio.fs;
 */
 @:native('sun$nio$fs$UnixFileSystem$FileStoreIterator') @:internal extern class UnixFileSystem_FileStoreIterator implements java.util.Iterator<java.nio.file.FileStore>
 {
-	@:overload @:synchronized public function hasNext() : Bool;
+	@:overload @:public @:synchronized public function hasNext() : Bool;
 	
-	@:overload @:synchronized public function next() : java.nio.file.FileStore;
+	@:overload @:public @:synchronized public function next() : java.nio.file.FileStore;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

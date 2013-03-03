@@ -25,7 +25,7 @@ package com.sun.jndi.rmi.registry;
 */
 extern class RegistryContext implements javax.naming.Context implements javax.naming.Referenceable
 {
-	public static var SECURITY_MGR(default, null) : String;
+	@:public @:static @:final public static var SECURITY_MGR(default, null) : String;
 	
 	/**
 	* Returns a context for the registry at a given host and port.
@@ -34,75 +34,75 @@ extern class RegistryContext implements javax.naming.Context implements javax.na
 	* Cloning of "env" is handled by caller; see comments within
 	* RegistryContextFactory.getObjectInstance(), for example.
 	*/
-	@:overload public function new(host : String, port : Int, env : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(host : String, port : Int, env : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
-	@:overload public function lookup(name : javax.naming.Name) : Dynamic;
+	@:overload @:public public function lookup(name : javax.naming.Name) : Dynamic;
 	
-	@:overload public function lookup(name : String) : Dynamic;
+	@:overload @:public public function lookup(name : String) : Dynamic;
 	
 	/**
 	* If the object to be bound is both Remote and Referenceable, binds the
 	* object itself, not its Reference.
 	*/
-	@:overload public function bind(name : javax.naming.Name, obj : Dynamic) : Void;
+	@:overload @:public public function bind(name : javax.naming.Name, obj : Dynamic) : Void;
 	
-	@:overload public function bind(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function bind(name : String, obj : Dynamic) : Void;
 	
-	@:overload public function rebind(name : javax.naming.Name, obj : Dynamic) : Void;
+	@:overload @:public public function rebind(name : javax.naming.Name, obj : Dynamic) : Void;
 	
-	@:overload public function rebind(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function rebind(name : String, obj : Dynamic) : Void;
 	
-	@:overload public function unbind(name : javax.naming.Name) : Void;
+	@:overload @:public public function unbind(name : javax.naming.Name) : Void;
 	
-	@:overload public function unbind(name : String) : Void;
+	@:overload @:public public function unbind(name : String) : Void;
 	
 	/**
 	* Rename is implemented by this sequence of operations:
 	* lookup, bind, unbind.  The sequence is not performed atomically.
 	*/
-	@:overload public function rename(oldName : javax.naming.Name, newName : javax.naming.Name) : Void;
+	@:overload @:public public function rename(oldName : javax.naming.Name, newName : javax.naming.Name) : Void;
 	
-	@:overload public function rename(name : String, newName : String) : Void;
+	@:overload @:public public function rename(name : String, newName : String) : Void;
 	
-	@:overload public function list(name : javax.naming.Name) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:public public function list(name : javax.naming.Name) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload public function list(name : String) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:public public function list(name : String) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload public function listBindings(name : javax.naming.Name) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:public public function listBindings(name : javax.naming.Name) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload public function listBindings(name : String) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:public public function listBindings(name : String) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload public function destroySubcontext(name : javax.naming.Name) : Void;
+	@:overload @:public public function destroySubcontext(name : javax.naming.Name) : Void;
 	
-	@:overload public function destroySubcontext(name : String) : Void;
+	@:overload @:public public function destroySubcontext(name : String) : Void;
 	
-	@:overload public function createSubcontext(name : javax.naming.Name) : javax.naming.Context;
+	@:overload @:public public function createSubcontext(name : javax.naming.Name) : javax.naming.Context;
 	
-	@:overload public function createSubcontext(name : String) : javax.naming.Context;
+	@:overload @:public public function createSubcontext(name : String) : javax.naming.Context;
 	
-	@:overload public function lookupLink(name : javax.naming.Name) : Dynamic;
+	@:overload @:public public function lookupLink(name : javax.naming.Name) : Dynamic;
 	
-	@:overload public function lookupLink(name : String) : Dynamic;
+	@:overload @:public public function lookupLink(name : String) : Dynamic;
 	
-	@:overload public function getNameParser(name : javax.naming.Name) : javax.naming.NameParser;
+	@:overload @:public public function getNameParser(name : javax.naming.Name) : javax.naming.NameParser;
 	
-	@:overload public function getNameParser(name : String) : javax.naming.NameParser;
+	@:overload @:public public function getNameParser(name : String) : javax.naming.NameParser;
 	
-	@:overload public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
 	
-	@:overload public function composeName(name : String, prefix : String) : String;
+	@:overload @:public public function composeName(name : String, prefix : String) : String;
 	
-	@:overload public function removeFromEnvironment(propName : String) : Dynamic;
+	@:overload @:public public function removeFromEnvironment(propName : String) : Dynamic;
 	
-	@:overload public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
+	@:overload @:public public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
 	
-	@:overload public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:public public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function getNameInNamespace() : String;
+	@:overload @:public public function getNameInNamespace() : String;
 	
 	/**
 	* Returns an RMI registry reference for this context.
@@ -115,48 +115,48 @@ extern class RegistryContext implements javax.naming.Context implements javax.na
 	*
 	* @see RegistryContextFactory
 	*/
-	@:overload public function getReference() : javax.naming.Reference;
+	@:overload @:public public function getReference() : javax.naming.Reference;
 	
 	/**
 	* Wrap a RemoteException inside a NamingException.
 	*/
-	@:overload public static function wrapRemoteException(re : java.rmi.RemoteException) : javax.naming.NamingException;
+	@:overload @:public @:static public static function wrapRemoteException(re : java.rmi.RemoteException) : javax.naming.NamingException;
 	
 	
 }
 @:internal extern class AtomicNameParser implements javax.naming.NameParser
 {
-	@:overload public function parse(name : String) : javax.naming.Name;
+	@:overload @:public public function parse(name : String) : javax.naming.Name;
 	
 	
 }
 @:internal extern class NameClassPairEnumeration implements javax.naming.NamingEnumeration<Dynamic>
 {
-	@:overload public function hasMore() : Bool;
+	@:overload @:public public function hasMore() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }
 @:internal extern class BindingEnumeration implements javax.naming.NamingEnumeration<Dynamic>
 {
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
-	@:overload public function hasMore() : Bool;
+	@:overload @:public public function hasMore() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

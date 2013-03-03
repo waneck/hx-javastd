@@ -25,125 +25,125 @@ package com.sun.xml.internal.ws.resources;
 */
 extern class DispatchMessages
 {
-	@:overload public static function localizableINVALID_NULLARG_XMLHTTP_REQUEST_METHOD(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableINVALID_NULLARG_XMLHTTP_REQUEST_METHOD(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* A XML/HTTP request using MessageContext.HTTP_REQUEST_METHOD equals {0} with a Null invocation Argument is not allowed. Must be: {1}
 	*
 	*/
-	@:overload public static function INVALID_NULLARG_XMLHTTP_REQUEST_METHOD(arg0 : Dynamic, arg1 : Dynamic) : String;
+	@:overload @:public @:static public static function INVALID_NULLARG_XMLHTTP_REQUEST_METHOD(arg0 : Dynamic, arg1 : Dynamic) : String;
 	
-	@:overload public static function localizableINVALID_SOAPMESSAGE_DISPATCH_MSGMODE(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableINVALID_SOAPMESSAGE_DISPATCH_MSGMODE(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Can not create Dispatch<SOAPMessage> of {0}. Must be {1}.
 	*
 	*/
-	@:overload public static function INVALID_SOAPMESSAGE_DISPATCH_MSGMODE(arg0 : Dynamic, arg1 : Dynamic) : String;
+	@:overload @:public @:static public static function INVALID_SOAPMESSAGE_DISPATCH_MSGMODE(arg0 : Dynamic, arg1 : Dynamic) : String;
 	
-	@:overload public static function localizableINVALID_RESPONSE_DESERIALIZATION() : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableINVALID_RESPONSE_DESERIALIZATION() : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Failed to deserialize the response.
 	*
 	*/
-	@:overload public static function INVALID_RESPONSE_DESERIALIZATION() : String;
+	@:overload @:public @:static public static function INVALID_RESPONSE_DESERIALIZATION() : String;
 	
-	@:overload public static function localizableINVALID_QUERY_LEADING_CHAR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableINVALID_QUERY_LEADING_CHAR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Leading '?' of MessageContext.QUERY_STRING: {0} is not valid. Remove '?' and run again.
 	*
 	*/
-	@:overload public static function INVALID_QUERY_LEADING_CHAR(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function INVALID_QUERY_LEADING_CHAR(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableINVALID_QUERY_STRING(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableINVALID_QUERY_STRING(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Unable to resolve endpoint address using the supplied query string: {0}.
 	*
 	*/
-	@:overload public static function INVALID_QUERY_STRING(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function INVALID_QUERY_STRING(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableDUPLICATE_PORT(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableDUPLICATE_PORT(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* WSDLPort {0} already exists. Can not create a port of the same QName.
 	*
 	*/
-	@:overload public static function DUPLICATE_PORT(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function DUPLICATE_PORT(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableINVALID_DATASOURCE_DISPATCH_BINDING(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableINVALID_DATASOURCE_DISPATCH_BINDING(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Can not create Dispatch<DataSource> with {0}. Must be: {1}
 	*
 	*/
-	@:overload public static function INVALID_DATASOURCE_DISPATCH_BINDING(arg0 : Dynamic, arg1 : Dynamic) : String;
+	@:overload @:public @:static public static function INVALID_DATASOURCE_DISPATCH_BINDING(arg0 : Dynamic, arg1 : Dynamic) : String;
 	
-	@:overload public static function localizableINVALID_DATASOURCE_DISPATCH_MSGMODE(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableINVALID_DATASOURCE_DISPATCH_MSGMODE(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Can not create Dispatch<DataSource> of Service.Mode.PAYLOAD{0}. Must be: {1}
 	*
 	*/
-	@:overload public static function INVALID_DATASOURCE_DISPATCH_MSGMODE(arg0 : Dynamic, arg1 : Dynamic) : String;
+	@:overload @:public @:static public static function INVALID_DATASOURCE_DISPATCH_MSGMODE(arg0 : Dynamic, arg1 : Dynamic) : String;
 	
-	@:overload public static function localizableINVALID_NULLARG_SOAP_MSGMODE(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableINVALID_NULLARG_SOAP_MSGMODE(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* SOAP/HTTP Binding in {0} is not allowed with a null invocation argument. Must be: {1}
 	*
 	*/
-	@:overload public static function INVALID_NULLARG_SOAP_MSGMODE(arg0 : Dynamic, arg1 : Dynamic) : String;
+	@:overload @:public @:static public static function INVALID_NULLARG_SOAP_MSGMODE(arg0 : Dynamic, arg1 : Dynamic) : String;
 	
-	@:overload public static function localizableINVALID_URI(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableINVALID_URI(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Endpoint String: {0} is and invalid URI.
 	*
 	*/
-	@:overload public static function INVALID_URI(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function INVALID_URI(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableINVALID_SOAPMESSAGE_DISPATCH_BINDING(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableINVALID_SOAPMESSAGE_DISPATCH_BINDING(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Can not create Dispatch<SOAPMessage> with {0} Binding. Must be: {1} Binding.
 	*
 	*/
-	@:overload public static function INVALID_SOAPMESSAGE_DISPATCH_BINDING(arg0 : Dynamic, arg1 : Dynamic) : String;
+	@:overload @:public @:static public static function INVALID_SOAPMESSAGE_DISPATCH_BINDING(arg0 : Dynamic, arg1 : Dynamic) : String;
 	
-	@:overload public static function localizableINVALID_URI_PATH_QUERY(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableINVALID_URI_PATH_QUERY(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Unable to construct a URI with this path info {0} and this query string {1}.
 	*
 	*/
-	@:overload public static function INVALID_URI_PATH_QUERY(arg0 : Dynamic, arg1 : Dynamic) : String;
+	@:overload @:public @:static public static function INVALID_URI_PATH_QUERY(arg0 : Dynamic, arg1 : Dynamic) : String;
 	
-	@:overload public static function localizableINVALID_RESPONSE() : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableINVALID_RESPONSE() : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* No response returned.
 	*
 	*/
-	@:overload public static function INVALID_RESPONSE() : String;
+	@:overload @:public @:static public static function INVALID_RESPONSE() : String;
 	
-	@:overload public static function localizableINVALID_URI_RESOLUTION(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableINVALID_URI_RESOLUTION(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Unable to resolve endpoint address using the supplied path: {0}.
 	*
 	*/
-	@:overload public static function INVALID_URI_RESOLUTION(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function INVALID_URI_RESOLUTION(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableINVALID_URI_DECODE() : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableINVALID_URI_DECODE() : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Unable to decode the resolved endpoint using UTF-8 encoding.
 	*
 	*/
-	@:overload public static function INVALID_URI_DECODE() : String;
+	@:overload @:public @:static public static function INVALID_URI_DECODE() : String;
 	
 	
 }

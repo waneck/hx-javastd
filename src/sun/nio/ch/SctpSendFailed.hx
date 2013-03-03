@@ -25,21 +25,21 @@ package sun.nio.ch;
 */
 extern class SctpSendFailed extends com.sun.nio.sctp.SendFailedNotification implements sun.nio.ch.SctpNotification
 {
-	@:overload public function assocId() : Int;
+	@:overload @:public public function assocId() : Int;
 	
-	@:overload public function setAssociation(association : com.sun.nio.sctp.Association) : Void;
+	@:overload @:public public function setAssociation(association : com.sun.nio.sctp.Association) : Void;
 	
-	@:overload override public function association() : com.sun.nio.sctp.Association;
+	@:overload @:public override public function association() : com.sun.nio.sctp.Association;
 	
-	@:overload override public function address() : java.net.SocketAddress;
+	@:overload @:public override public function address() : java.net.SocketAddress;
 	
-	@:overload override public function buffer() : java.nio.ByteBuffer;
+	@:overload @:public override public function buffer() : java.nio.ByteBuffer;
 	
-	@:overload override public function errorCode() : Int;
+	@:overload @:public override public function errorCode() : Int;
 	
-	@:overload override public function streamNumber() : Int;
+	@:overload @:public override public function streamNumber() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

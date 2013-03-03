@@ -50,7 +50,7 @@ extern class ORB
 	*
 	* @return the singleton ORB
 	*/
-	@:overload @:synchronized public static function init() : org.omg.CORBA.ORB;
+	@:overload @:public @:static @:synchronized public static function init() : org.omg.CORBA.ORB;
 	
 	/**
 	* Creates a new <code>ORB</code> instance for a standalone
@@ -62,7 +62,7 @@ extern class ORB
 	* @param props application-specific properties; may be <code>null</code>
 	* @return the newly-created ORB instance
 	*/
-	@:overload public static function init(args : java.NativeArray<String>, props : java.util.Properties) : org.omg.CORBA.ORB;
+	@:overload @:public @:static public static function init(args : java.NativeArray<String>, props : java.util.Properties) : org.omg.CORBA.ORB;
 	
 	/**
 	* Creates a new <code>ORB</code> instance for an applet.  This
@@ -72,7 +72,7 @@ extern class ORB
 	* @param props applet-specific properties; may be <code>null</code>
 	* @return the newly-created ORB instance
 	*/
-	@:overload public static function init(app : java.applet.Applet, props : java.util.Properties) : org.omg.CORBA.ORB;
+	@:overload @:public @:static public static function init(app : java.applet.Applet, props : java.util.Properties) : org.omg.CORBA.ORB;
 	
 	/**
 	* Allows the ORB implementation to be initialized with the given
@@ -84,7 +84,7 @@ extern class ORB
 	*             method; may be <code>null</code>
 	* @param props application-specific properties; may be <code>null</code>
 	*/
-	@:overload @:abstract private function set_parameters(args : java.NativeArray<String>, props : java.util.Properties) : Void;
+	@:overload @:abstract @:protected private function set_parameters(args : java.NativeArray<String>, props : java.util.Properties) : Void;
 	
 	/**
 	* Allows the ORB implementation to be initialized with the given
@@ -95,7 +95,7 @@ extern class ORB
 	* @param app the applet; may be <code>null</code>
 	* @param props applet-specific properties; may be <code>null</code>
 	*/
-	@:overload @:abstract private function set_parameters(app : java.applet.Applet, props : java.util.Properties) : Void;
+	@:overload @:abstract @:protected private function set_parameters(app : java.applet.Applet, props : java.util.Properties) : Void;
 	
 	/**
 	* Connects the given servant object (a Java object that is
@@ -118,7 +118,7 @@ extern class ORB
 	*
 	* @param obj The servant object reference
 	*/
-	@:overload public function connect(obj : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function connect(obj : org.omg.CORBA.Object) : Void;
 	
 	/**
 	* Destroys the ORB so that its resources can be reclaimed.
@@ -138,7 +138,7 @@ extern class ORB
 	*
 	* @throws org.omg.CORBA.BAD_INV_ORDER if the current thread is servicing an invocation
 	*/
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	/**
 	* Disconnects the given servant object from the ORB. After this method returns,
@@ -158,7 +158,7 @@ extern class ORB
 	*
 	* @param obj The servant object to be disconnected from the ORB
 	*/
-	@:overload public function disconnect(obj : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function disconnect(obj : org.omg.CORBA.Object) : Void;
 	
 	/**
 	* Returns a list of the initially available CORBA object references,
@@ -168,7 +168,7 @@ extern class ORB
 	*         the object references for CORBA services
 	*         that are initially available with this ORB
 	*/
-	@:overload @:abstract public function list_initial_services() : java.NativeArray<String>;
+	@:overload @:abstract @:public public function list_initial_services() : java.NativeArray<String>;
 	
 	/**
 	* Resolves a specific object reference from the set of available
@@ -179,7 +179,7 @@ extern class ORB
 	* @exception InvalidName if the given name is not associated with a
 	*                         known service
 	*/
-	@:overload @:abstract public function resolve_initial_references(object_name : String) : org.omg.CORBA.Object;
+	@:overload @:abstract @:public public function resolve_initial_references(object_name : String) : org.omg.CORBA.Object;
 	
 	/**
 	* Converts the given CORBA object reference to a string.
@@ -193,7 +193,7 @@ extern class ORB
 	* @param obj the object reference to stringify
 	* @return the string representing the object reference
 	*/
-	@:overload @:abstract public function object_to_string(obj : org.omg.CORBA.Object) : String;
+	@:overload @:abstract @:public public function object_to_string(obj : org.omg.CORBA.Object) : String;
 	
 	/**
 	* Converts a string produced by the method <code>object_to_string</code>
@@ -204,7 +204,7 @@ extern class ORB
 	* method <code>object_to_string</code>.
 	* @return the object reference
 	*/
-	@:overload @:abstract public function string_to_object(str : String) : org.omg.CORBA.Object;
+	@:overload @:abstract @:public public function string_to_object(str : String) : org.omg.CORBA.Object;
 	
 	/**
 	* Allocates an <code>NVList</code> with (probably) enough
@@ -218,7 +218,7 @@ extern class ORB
 	*
 	* @see NVList
 	*/
-	@:overload @:abstract public function create_list(count : Int) : org.omg.CORBA.NVList;
+	@:overload @:abstract @:public public function create_list(count : Int) : org.omg.CORBA.NVList;
 	
 	/**
 	* Creates an <code>NVList</code> initialized with argument
@@ -236,7 +236,7 @@ extern class ORB
 	*
 	* @see NVList
 	*/
-	@:overload public function create_operation_list(oper : org.omg.CORBA.Object) : org.omg.CORBA.NVList;
+	@:overload @:public public function create_operation_list(oper : org.omg.CORBA.Object) : org.omg.CORBA.NVList;
 	
 	/**
 	* Creates a <code>NamedValue</code> object
@@ -257,14 +257,14 @@ extern class ORB
 	* @return  the newly-created <code>NamedValue</code> object
 	* @see NamedValue
 	*/
-	@:overload @:abstract public function create_named_value(s : String, any : org.omg.CORBA.Any, flags : Int) : org.omg.CORBA.NamedValue;
+	@:overload @:abstract @:public public function create_named_value(s : String, any : org.omg.CORBA.Any, flags : Int) : org.omg.CORBA.NamedValue;
 	
 	/**
 	* Creates an empty <code>ExceptionList</code> object.
 	*
 	* @return  the newly-created <code>ExceptionList</code> object
 	*/
-	@:overload @:abstract public function create_exception_list() : org.omg.CORBA.ExceptionList;
+	@:overload @:abstract @:public public function create_exception_list() : org.omg.CORBA.ExceptionList;
 	
 	/**
 	* Creates an empty <code>ContextList</code> object.
@@ -273,7 +273,7 @@ extern class ORB
 	* @see ContextList
 	* @see Context
 	*/
-	@:overload @:abstract public function create_context_list() : org.omg.CORBA.ContextList;
+	@:overload @:abstract @:public public function create_context_list() : org.omg.CORBA.ContextList;
 	
 	/**
 	* Gets the default <code>Context</code> object.
@@ -281,7 +281,7 @@ extern class ORB
 	* @return the default <code>Context</code> object
 	* @see Context
 	*/
-	@:overload @:abstract public function get_default_context() : org.omg.CORBA.Context;
+	@:overload @:abstract @:public public function get_default_context() : org.omg.CORBA.Context;
 	
 	/**
 	* Creates an <code>Environment</code> object.
@@ -289,7 +289,7 @@ extern class ORB
 	* @return  the newly-created <code>Environment</code> object
 	* @see Environment
 	*/
-	@:overload @:abstract public function create_environment() : org.omg.CORBA.Environment;
+	@:overload @:abstract @:public public function create_environment() : org.omg.CORBA.Environment;
 	
 	/**
 	* Creates a new <code>org.omg.CORBA.portable.OutputStream</code> into which
@@ -297,7 +297,7 @@ extern class ORB
 	* @return          the newly-created
 	*              <code>org.omg.CORBA.portable.OutputStream</code> object
 	*/
-	@:overload @:abstract public function create_output_stream() : org.omg.CORBA.portable.OutputStream;
+	@:overload @:abstract @:public public function create_output_stream() : org.omg.CORBA.portable.OutputStream;
 	
 	/**
 	* Sends multiple dynamic (DII) requests asynchronously without expecting
@@ -306,14 +306,14 @@ extern class ORB
 	*
 	* @param req               an array of request objects
 	*/
-	@:overload @:abstract public function send_multiple_requests_oneway(req : java.NativeArray<org.omg.CORBA.Request>) : Void;
+	@:overload @:abstract @:public public function send_multiple_requests_oneway(req : java.NativeArray<org.omg.CORBA.Request>) : Void;
 	
 	/**
 	* Sends multiple dynamic (DII) requests asynchronously.
 	*
 	* @param req               an array of <code>Request</code> objects
 	*/
-	@:overload @:abstract public function send_multiple_requests_deferred(req : java.NativeArray<org.omg.CORBA.Request>) : Void;
+	@:overload @:abstract @:public public function send_multiple_requests_deferred(req : java.NativeArray<org.omg.CORBA.Request>) : Void;
 	
 	/**
 	* Finds out if any of the deferred (asynchronous) invocations have
@@ -321,7 +321,7 @@ extern class ORB
 	* @return <code>true</code> if there is a response available;
 	*         <code> false</code> otherwise
 	*/
-	@:overload @:abstract public function poll_next_response() : Bool;
+	@:overload @:abstract @:public public function poll_next_response() : Bool;
 	
 	/**
 	* Gets the next <code>Request</code> instance for which a response
@@ -333,7 +333,7 @@ extern class ORB
 	* from the one from which the original request was sent. See the
 	* OMG Transaction Service specification for details.
 	*/
-	@:overload @:abstract public function get_next_response() : org.omg.CORBA.Request;
+	@:overload @:abstract @:public public function get_next_response() : org.omg.CORBA.Request;
 	
 	/**
 	* Retrieves the <code>TypeCode</code> object that represents
@@ -343,7 +343,7 @@ extern class ORB
 	*                  desired primitive type
 	* @return          the requested <code>TypeCode</code> object
 	*/
-	@:overload @:abstract public function get_primitive_tc(tcKind : org.omg.CORBA.TCKind) : org.omg.CORBA.TypeCode;
+	@:overload @:abstract @:public public function get_primitive_tc(tcKind : org.omg.CORBA.TCKind) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Creates a <code>TypeCode</code> object representing an IDL <code>struct</code>.
@@ -356,7 +356,7 @@ extern class ORB
 	* @return          a newly-created <code>TypeCode</code> object describing
 	*              an IDL <code>struct</code>
 	*/
-	@:overload @:abstract public function create_struct_tc(id : String, name : String, members : java.NativeArray<org.omg.CORBA.StructMember>) : org.omg.CORBA.TypeCode;
+	@:overload @:abstract @:public public function create_struct_tc(id : String, name : String, members : java.NativeArray<org.omg.CORBA.StructMember>) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Creates a <code>TypeCode</code> object representing an IDL <code>union</code>.
@@ -370,7 +370,7 @@ extern class ORB
 	* @return          a newly-created <code>TypeCode</code> object describing
 	*              an IDL <code>union</code>
 	*/
-	@:overload @:abstract public function create_union_tc(id : String, name : String, discriminator_type : org.omg.CORBA.TypeCode, members : java.NativeArray<org.omg.CORBA.UnionMember>) : org.omg.CORBA.TypeCode;
+	@:overload @:abstract @:public public function create_union_tc(id : String, name : String, discriminator_type : org.omg.CORBA.TypeCode, members : java.NativeArray<org.omg.CORBA.UnionMember>) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Creates a <code>TypeCode</code> object representing an IDL <code>enum</code>.
@@ -383,7 +383,7 @@ extern class ORB
 	* @return          a newly-created <code>TypeCode</code> object describing
 	*              an IDL <code>enum</code>
 	*/
-	@:overload @:abstract public function create_enum_tc(id : String, name : String, members : java.NativeArray<String>) : org.omg.CORBA.TypeCode;
+	@:overload @:abstract @:public public function create_enum_tc(id : String, name : String, members : java.NativeArray<String>) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Creates a <code>TypeCode</code> object representing an IDL <code>alias</code>
@@ -399,7 +399,7 @@ extern class ORB
 	* @return          a newly-created <code>TypeCode</code> object describing
 	*              an IDL <code>alias</code>
 	*/
-	@:overload @:abstract public function create_alias_tc(id : String, name : String, original_type : org.omg.CORBA.TypeCode) : org.omg.CORBA.TypeCode;
+	@:overload @:abstract @:public public function create_alias_tc(id : String, name : String, original_type : org.omg.CORBA.TypeCode) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Creates a <code>TypeCode</code> object representing an IDL <code>exception</code>.
@@ -412,7 +412,7 @@ extern class ORB
 	* @return          a newly-created <code>TypeCode</code> object describing
 	*              an IDL <code>exception</code>
 	*/
-	@:overload @:abstract public function create_exception_tc(id : String, name : String, members : java.NativeArray<org.omg.CORBA.StructMember>) : org.omg.CORBA.TypeCode;
+	@:overload @:abstract @:public public function create_exception_tc(id : String, name : String, members : java.NativeArray<org.omg.CORBA.StructMember>) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Creates a <code>TypeCode</code> object representing an IDL <code>interface</code>.
@@ -424,7 +424,7 @@ extern class ORB
 	* @return          a newly-created <code>TypeCode</code> object describing
 	*              an IDL <code>interface</code>
 	*/
-	@:overload @:abstract public function create_interface_tc(id : String, name : String) : org.omg.CORBA.TypeCode;
+	@:overload @:abstract @:public public function create_interface_tc(id : String, name : String) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Creates a <code>TypeCode</code> object representing a bounded IDL
@@ -438,7 +438,7 @@ extern class ORB
 	*              a bounded IDL <code>string</code>
 	* @exception BAD_PARAM if bound is a negative value
 	*/
-	@:overload @:abstract public function create_string_tc(bound : Int) : org.omg.CORBA.TypeCode;
+	@:overload @:abstract @:public public function create_string_tc(bound : Int) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Creates a <code>TypeCode</code> object representing a bounded IDL
@@ -452,7 +452,7 @@ extern class ORB
 	*              a bounded IDL <code>wstring</code>
 	* @exception BAD_PARAM if bound is a negative value
 	*/
-	@:overload @:abstract public function create_wstring_tc(bound : Int) : org.omg.CORBA.TypeCode;
+	@:overload @:abstract @:public public function create_wstring_tc(bound : Int) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Creates a <code>TypeCode</code> object representing an IDL <code>sequence</code>.
@@ -466,7 +466,7 @@ extern class ORB
 	* @return          a newly-created <code>TypeCode</code> object describing
 	*              an IDL <code>sequence</code>
 	*/
-	@:overload @:abstract public function create_sequence_tc(bound : Int, element_type : org.omg.CORBA.TypeCode) : org.omg.CORBA.TypeCode;
+	@:overload @:abstract @:public public function create_sequence_tc(bound : Int, element_type : org.omg.CORBA.TypeCode) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Creates a <code>TypeCode</code> object representing a
@@ -490,7 +490,7 @@ extern class ORB
 	* @see #create_recursive_tc(String) create_recursive_tc
 	* @see #create_sequence_tc(int, TypeCode) create_sequence_tc
 	*/
-	@:overload @:abstract public function create_recursive_sequence_tc(bound : Int, offset : Int) : org.omg.CORBA.TypeCode;
+	@:overload @:abstract @:public public function create_recursive_sequence_tc(bound : Int, offset : Int) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Creates a <code>TypeCode</code> object representing an IDL <code>array</code>.
@@ -503,7 +503,7 @@ extern class ORB
 	* @return          a newly-created <code>TypeCode</code> object describing
 	*              an IDL <code>array</code>
 	*/
-	@:overload @:abstract public function create_array_tc(length : Int, element_type : org.omg.CORBA.TypeCode) : org.omg.CORBA.TypeCode;
+	@:overload @:abstract @:public public function create_array_tc(length : Int, element_type : org.omg.CORBA.TypeCode) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Create a <code>TypeCode</code> object for an IDL native type.
@@ -512,7 +512,7 @@ extern class ORB
 	* @param name      the name of the native type.
 	* @return          the requested TypeCode.
 	*/
-	@:overload public function create_native_tc(id : String, name : String) : org.omg.CORBA.TypeCode;
+	@:overload @:public public function create_native_tc(id : String, name : String) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Create a <code>TypeCode</code> object for an IDL abstract interface.
@@ -521,7 +521,7 @@ extern class ORB
 	* @param name      the name of the abstract interface type.
 	* @return          the requested TypeCode.
 	*/
-	@:overload public function create_abstract_interface_tc(id : String, name : String) : org.omg.CORBA.TypeCode;
+	@:overload @:public public function create_abstract_interface_tc(id : String, name : String) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Create a <code>TypeCode</code> object for an IDL fixed type.
@@ -531,7 +531,7 @@ extern class ORB
 	* @param scale     specifies the position of the decimal point.
 	* @return          the requested TypeCode.
 	*/
-	@:overload public function create_fixed_tc(digits : java.StdTypes.Int16, scale : java.StdTypes.Int16) : org.omg.CORBA.TypeCode;
+	@:overload @:public public function create_fixed_tc(digits : java.StdTypes.Int16, scale : java.StdTypes.Int16) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Create a <code>TypeCode</code> object for an IDL value type.
@@ -549,7 +549,7 @@ extern class ORB
 	* @param members            an array containing the members of the value type
 	* @return                   the requested TypeCode
 	*/
-	@:overload public function create_value_tc(id : String, name : String, type_modifier : java.StdTypes.Int16, concrete_base : org.omg.CORBA.TypeCode, members : java.NativeArray<org.omg.CORBA.ValueMember>) : org.omg.CORBA.TypeCode;
+	@:overload @:public public function create_value_tc(id : String, name : String, type_modifier : java.StdTypes.Int16, concrete_base : org.omg.CORBA.TypeCode, members : java.NativeArray<org.omg.CORBA.ValueMember>) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Create a recursive <code>TypeCode</code> object which
@@ -590,7 +590,7 @@ extern class ORB
 	* @param id                 the logical id of the referenced type
 	* @return                   the requested TypeCode
 	*/
-	@:overload public function create_recursive_tc(id : String) : org.omg.CORBA.TypeCode;
+	@:overload @:public public function create_recursive_tc(id : String) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Creates a <code>TypeCode</code> object for an IDL value box.
@@ -600,7 +600,7 @@ extern class ORB
 	* @param boxed_type         the TypeCode for the type
 	* @return                   the requested TypeCode
 	*/
-	@:overload public function create_value_box_tc(id : String, name : String, boxed_type : org.omg.CORBA.TypeCode) : org.omg.CORBA.TypeCode;
+	@:overload @:public public function create_value_box_tc(id : String, name : String, boxed_type : org.omg.CORBA.TypeCode) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Creates an IDL <code>Any</code> object initialized to
@@ -609,7 +609,7 @@ extern class ORB
 	*
 	* @return          a newly-created <code>Any</code> object
 	*/
-	@:overload @:abstract public function create_any() : org.omg.CORBA.Any;
+	@:overload @:abstract @:public public function create_any() : org.omg.CORBA.Any;
 	
 	/**
 	* Retrieves a <code>Current</code> object.
@@ -622,7 +622,7 @@ extern class ORB
 	* @return          a newly-created <code>Current</code> object
 	* @deprecated      use <code>resolve_initial_references</code>.
 	*/
-	@:overload public function get_current() : org.omg.CORBA.Current;
+	@:overload @:public public function get_current() : org.omg.CORBA.Current;
 	
 	/**
 	* This operation blocks the current thread until the ORB has
@@ -631,7 +631,7 @@ extern class ORB
 	* get all notified when the ORB shuts down.
 	*
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	/**
 	* Instructs the ORB to shut down, which causes all
@@ -662,7 +662,7 @@ extern class ORB
 	* @throws org.omg.CORBA.BAD_INV_ORDER if the current thread is servicing
 	*         an invocation
 	*/
-	@:overload public function shutdown(wait_for_completion : Bool) : Void;
+	@:overload @:public public function shutdown(wait_for_completion : Bool) : Void;
 	
 	/**
 	* Returns <code>true</code> if the ORB needs the main thread to
@@ -675,7 +675,7 @@ extern class ORB
 	*         main thread
 	*
 	*/
-	@:overload public function work_pending() : Bool;
+	@:overload @:public public function work_pending() : Bool;
 	
 	/**
 	* Performs an implementation-dependent unit of work if called
@@ -686,7 +686,7 @@ extern class ORB
 	* the main thread among the ORB and other activities.
 	*
 	*/
-	@:overload public function perform_work() : Void;
+	@:overload @:public public function perform_work() : Void;
 	
 	/**
 	* Used to obtain information about CORBA facilities and services
@@ -712,7 +712,7 @@ extern class ORB
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function get_service_information(service_type : java.StdTypes.Int16, service_info : org.omg.CORBA.ServiceInformationHolder) : Bool;
+	@:overload @:public public function get_service_information(service_type : java.StdTypes.Int16, service_info : org.omg.CORBA.ServiceInformationHolder) : Bool;
 	
 	/**
 	* Creates a new <code>DynAny</code> object from the given
@@ -726,7 +726,7 @@ extern class ORB
 	*      comments for unimplemented features</a>
 	* @deprecated Use the new <a href="../DynamicAny/DynAnyFactory.html">DynAnyFactory</a> API instead
 	*/
-	@:overload public function create_dyn_any(value : org.omg.CORBA.Any) : org.omg.CORBA.DynAny;
+	@:overload @:public public function create_dyn_any(value : org.omg.CORBA.Any) : org.omg.CORBA.DynAny;
 	
 	/**
 	* Creates a basic <code>DynAny</code> object from the given
@@ -742,7 +742,7 @@ extern class ORB
 	*      comments for unimplemented features</a>
 	* @deprecated Use the new <a href="../DynamicAny/DynAnyFactory.html">DynAnyFactory</a> API instead
 	*/
-	@:overload public function create_basic_dyn_any(type : org.omg.CORBA.TypeCode) : org.omg.CORBA.DynAny;
+	@:overload @:public public function create_basic_dyn_any(type : org.omg.CORBA.TypeCode) : org.omg.CORBA.DynAny;
 	
 	/**
 	* Creates a new <code>DynStruct</code> object from the given
@@ -758,7 +758,7 @@ extern class ORB
 	*      comments for unimplemented features</a>
 	* @deprecated Use the new <a href="../DynamicAny/DynAnyFactory.html">DynAnyFactory</a> API instead
 	*/
-	@:overload public function create_dyn_struct(type : org.omg.CORBA.TypeCode) : org.omg.CORBA.DynStruct;
+	@:overload @:public public function create_dyn_struct(type : org.omg.CORBA.TypeCode) : org.omg.CORBA.DynStruct;
 	
 	/**
 	* Creates a new <code>DynSequence</code> object from the given
@@ -774,7 +774,7 @@ extern class ORB
 	*      comments for unimplemented features</a>
 	* @deprecated Use the new <a href="../DynamicAny/DynAnyFactory.html">DynAnyFactory</a> API instead
 	*/
-	@:overload public function create_dyn_sequence(type : org.omg.CORBA.TypeCode) : org.omg.CORBA.DynSequence;
+	@:overload @:public public function create_dyn_sequence(type : org.omg.CORBA.TypeCode) : org.omg.CORBA.DynSequence;
 	
 	/**
 	* Creates a new <code>DynArray</code> object from the given
@@ -790,7 +790,7 @@ extern class ORB
 	*      comments for unimplemented features</a>
 	* @deprecated Use the new <a href="../DynamicAny/DynAnyFactory.html">DynAnyFactory</a> API instead
 	*/
-	@:overload public function create_dyn_array(type : org.omg.CORBA.TypeCode) : org.omg.CORBA.DynArray;
+	@:overload @:public public function create_dyn_array(type : org.omg.CORBA.TypeCode) : org.omg.CORBA.DynArray;
 	
 	/**
 	* Creates a new <code>DynUnion</code> object from the given
@@ -806,7 +806,7 @@ extern class ORB
 	*      comments for unimplemented features</a>
 	* @deprecated Use the new <a href="../DynamicAny/DynAnyFactory.html">DynAnyFactory</a> API instead
 	*/
-	@:overload public function create_dyn_union(type : org.omg.CORBA.TypeCode) : org.omg.CORBA.DynUnion;
+	@:overload @:public public function create_dyn_union(type : org.omg.CORBA.TypeCode) : org.omg.CORBA.DynUnion;
 	
 	/**
 	* Creates a new <code>DynEnum</code> object from the given
@@ -822,7 +822,7 @@ extern class ORB
 	*      comments for unimplemented features</a>
 	* @deprecated Use the new <a href="../DynamicAny/DynAnyFactory.html">DynAnyFactory</a> API instead
 	*/
-	@:overload public function create_dyn_enum(type : org.omg.CORBA.TypeCode) : org.omg.CORBA.DynEnum;
+	@:overload @:public public function create_dyn_enum(type : org.omg.CORBA.TypeCode) : org.omg.CORBA.DynEnum;
 	
 	/**
 	* Can be invoked to create new instances of policy objects
@@ -843,7 +843,7 @@ extern class ORB
 	*        policy is not supported or a requested initial state
 	*        for the policy is not supported.
 	*/
-	@:overload public function create_policy(type : Int, val : org.omg.CORBA.Any) : org.omg.CORBA.Policy;
+	@:overload @:public public function create_policy(type : Int, val : org.omg.CORBA.Any) : org.omg.CORBA.Policy;
 	
 	
 }

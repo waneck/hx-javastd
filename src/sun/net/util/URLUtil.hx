@@ -35,7 +35,7 @@ extern class URLUtil
 	*
 	* @see java.net.URLStreamHandler.sameFile(java.net.URL)
 	*/
-	@:overload public static function urlNoFragString(url : java.net.URL) : String;
+	@:overload @:public @:static public static function urlNoFragString(url : java.net.URL) : String;
 	
 	
 }

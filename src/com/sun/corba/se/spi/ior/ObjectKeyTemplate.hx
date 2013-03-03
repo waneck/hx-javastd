@@ -30,38 +30,38 @@ extern interface ObjectKeyTemplate extends com.sun.corba.se.spi.ior.Writeable
 	* object reference.  The template is shared between many
 	* object references.
 	*/
-	@:overload public function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload @:public public function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
 	
 	/** An ID used to determine how to perform operations on this
 	* ObjectKeyTemplate.  This id determines how to process requests
 	* on this object reference, and what object adapter type to use.
 	*/
-	@:overload public function getSubcontractId() : Int;
+	@:overload @:public public function getSubcontractId() : Int;
 	
 	/** Return the server ID for this template.
 	* For CORBA 3.0, this should be a String, but it is currently
 	* an int in the object key template.
 	*/
-	@:overload public function getServerId() : Int;
+	@:overload @:public public function getServerId() : Int;
 	
 	/** Return the ORB ID for this template.
 	*/
-	@:overload public function getORBId() : String;
+	@:overload @:public public function getORBId() : String;
 	
 	/** Return the object adapter ID for this template.
 	*/
-	@:overload public function getObjectAdapterId() : com.sun.corba.se.spi.ior.ObjectAdapterId;
+	@:overload @:public public function getObjectAdapterId() : com.sun.corba.se.spi.ior.ObjectAdapterId;
 	
 	/** Compute an adapter ID for this template than includes
 	* all of the template information.
 	* This value is cached to avoid the expense of recomputing
 	* it.
 	*/
-	@:overload public function getAdapterId() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getAdapterId() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function write(objectId : com.sun.corba.se.spi.ior.ObjectId, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function write(objectId : com.sun.corba.se.spi.ior.ObjectId, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload public function getServerRequestDispatcher(orb : com.sun.corba.se.spi.orb.ORB, id : com.sun.corba.se.spi.ior.ObjectId) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
+	@:overload @:public public function getServerRequestDispatcher(orb : com.sun.corba.se.spi.orb.ORB, id : com.sun.corba.se.spi.ior.ObjectId) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
 	
 	
 }

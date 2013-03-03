@@ -67,7 +67,7 @@ package java.util.logging;
 	* @throws IOException if we are unable to connect to the target
 	*         host and port.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a <tt>SocketHandler</tt> using a specified host and port.
@@ -84,7 +84,7 @@ package java.util.logging;
 	* @throws IOException if we are unable to connect to the target
 	*         host and port.
 	*/
-	@:overload public function new(host : String, port : Int) : Void;
+	@:overload @:public public function new(host : String, port : Int) : Void;
 	
 	/**
 	* Close this output stream.
@@ -92,7 +92,7 @@ package java.util.logging;
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have <tt>LoggingPermission("control")</tt>.
 	*/
-	@:overload @:synchronized override public function close() : Void;
+	@:overload @:public @:synchronized override public function close() : Void;
 	
 	/**
 	* Format and publish a <tt>LogRecord</tt>.
@@ -100,7 +100,7 @@ package java.util.logging;
 	* @param  record  description of the log event. A null record is
 	*                 silently ignored and is not published
 	*/
-	@:overload @:synchronized override public function publish(record : java.util.logging.LogRecord) : Void;
+	@:overload @:public @:synchronized override public function publish(record : java.util.logging.LogRecord) : Void;
 	
 	
 }

@@ -37,14 +37,14 @@ extern class ExternalVocabulary
 	/**
 	* A URI that refers to the external vocabulary.
 	*/
-	public var URI(default, null) : String;
+	@:public @:final public var URI(default, null) : String;
 	
 	/**
 	* The vocabulary that is refered to by the URI.
 	*/
-	public var vocabulary(default, null) : com.sun.xml.internal.org.jvnet.fastinfoset.Vocabulary;
+	@:public @:final public var vocabulary(default, null) : com.sun.xml.internal.org.jvnet.fastinfoset.Vocabulary;
 	
-	@:overload public function new(URI : String, vocabulary : com.sun.xml.internal.org.jvnet.fastinfoset.Vocabulary) : Void;
+	@:overload @:public public function new(URI : String, vocabulary : com.sun.xml.internal.org.jvnet.fastinfoset.Vocabulary) : Void;
 	
 	
 }

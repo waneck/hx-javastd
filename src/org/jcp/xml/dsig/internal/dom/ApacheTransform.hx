@@ -27,23 +27,23 @@ package org.jcp.xml.dsig.internal.dom;
 */
 extern class ApacheTransform extends javax.xml.crypto.dsig.TransformService
 {
-	private var ownerDoc : org.w3c.dom.Document;
+	@:protected private var ownerDoc : org.w3c.dom.Document;
 	
-	private var transformElem : org.w3c.dom.Element;
+	@:protected private var transformElem : org.w3c.dom.Element;
 	
-	private var params : javax.xml.crypto.dsig.spec.TransformParameterSpec;
+	@:protected private var params : javax.xml.crypto.dsig.spec.TransformParameterSpec;
 	
-	@:overload @:final public function getParameterSpec() : java.security.spec.AlgorithmParameterSpec;
+	@:overload @:public @:final override public function getParameterSpec() : java.security.spec.AlgorithmParameterSpec;
 	
-	@:overload public function init(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
+	@:overload @:public override public function init(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
 	
-	@:overload public function marshalParams(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
+	@:overload @:public override public function marshalParams(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
 	
-	@:overload override public function transform(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
+	@:overload @:public override public function transform(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
 	
-	@:overload override public function transform(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext, os : java.io.OutputStream) : javax.xml.crypto.Data;
+	@:overload @:public override public function transform(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext, os : java.io.OutputStream) : javax.xml.crypto.Data;
 	
-	@:overload @:final public function isFeatureSupported(feature : String) : Bool;
+	@:overload @:public @:final override public function isFeatureSupported(feature : String) : Bool;
 	
 	
 }

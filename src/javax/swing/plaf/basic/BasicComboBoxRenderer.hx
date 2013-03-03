@@ -30,13 +30,13 @@ extern class BasicComboBoxRenderer extends javax.swing.JLabel implements javax.s
 	* <code>Border</code> used by this renderer directly set it using
 	* the <code>setBorder</code> method.
 	*/
-	private static var noFocusBorder : javax.swing.border.Border;
+	@:protected @:static private static var noFocusBorder : javax.swing.border.Border;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
-	@:overload public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
+	@:overload @:public public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
 	
 	
 }

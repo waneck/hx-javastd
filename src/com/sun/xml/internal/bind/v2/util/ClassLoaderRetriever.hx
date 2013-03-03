@@ -29,7 +29,7 @@ extern class ClassLoaderRetriever
 	*
 	* @author snajper
 	*/
-	@:overload public static function getClassLoader() : java.lang.ClassLoader;
+	@:overload @:public @:static public static function getClassLoader() : java.lang.ClassLoader;
 	
 	
 }

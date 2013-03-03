@@ -33,21 +33,21 @@ extern class AttachProvider
 	*          {@link com.sun.tools.attach.AttachPermission AttachPermission}
 	*          <tt>("createAttachProvider")</tt>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Return this provider's name. </p>
 	*
 	* @return  The name of this provider
 	*/
-	@:overload @:abstract public function name() : String;
+	@:overload @:public @:abstract public function name() : String;
 	
 	/**
 	* Return this provider's type. </p>
 	*
 	* @return  The type of this provider
 	*/
-	@:overload @:abstract public function type() : String;
+	@:overload @:public @:abstract public function type() : String;
 	
 	/**
 	* Attaches to a Java virtual machine.
@@ -90,7 +90,7 @@ extern class AttachProvider
 	* @throws  NullPointerException
 	*          If <code>id</code> is <code>null</code>
 	*/
-	@:overload @:abstract public function attachVirtualMachine(id : String) : com.sun.tools.attach.VirtualMachine;
+	@:overload @:public @:abstract public function attachVirtualMachine(id : String) : com.sun.tools.attach.VirtualMachine;
 	
 	/**
 	* Attaches to a Java virtual machine.
@@ -125,7 +125,7 @@ extern class AttachProvider
 	* @throws  NullPointerException
 	*          If <code>vmd</code> is <code>null</code>
 	*/
-	@:overload public function attachVirtualMachine(vmd : com.sun.tools.attach.VirtualMachineDescriptor) : com.sun.tools.attach.VirtualMachine;
+	@:overload @:public public function attachVirtualMachine(vmd : com.sun.tools.attach.VirtualMachineDescriptor) : com.sun.tools.attach.VirtualMachine;
 	
 	/**
 	* Lists the Java virtual machines known to this provider.
@@ -140,7 +140,7 @@ extern class AttachProvider
 	* @return  The list of virtual machine descriptors which describe the
 	*          Java virtual machines known to this provider (may be empty).
 	*/
-	@:overload @:abstract public function listVirtualMachines() : java.util.List<com.sun.tools.attach.VirtualMachineDescriptor>;
+	@:overload @:public @:abstract public function listVirtualMachines() : java.util.List<com.sun.tools.attach.VirtualMachineDescriptor>;
 	
 	/**
 	* Returns a list of the installed attach providers.
@@ -176,7 +176,7 @@ extern class AttachProvider
 	*
 	* @return  A list of the installed attach providers.
 	*/
-	@:overload public static function providers() : java.util.List<com.sun.tools.attach.spi.AttachProvider>;
+	@:overload @:public @:static public static function providers() : java.util.List<com.sun.tools.attach.spi.AttachProvider>;
 	
 	
 }

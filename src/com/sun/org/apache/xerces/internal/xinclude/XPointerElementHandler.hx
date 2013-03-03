@@ -62,52 +62,52 @@ package com.sun.org.apache.xerces.internal.xinclude;
 extern class XPointerElementHandler implements com.sun.org.apache.xerces.internal.xinclude.XPointerSchema
 {
 	/** Property identifier: error handler. */
-	private static var ERROR_REPORTER(default, null) : String;
+	@:protected @:static @:final private static var ERROR_REPORTER(default, null) : String;
 	
 	/** Property identifier: grammar pool . */
-	private static var GRAMMAR_POOL(default, null) : String;
+	@:protected @:static @:final private static var GRAMMAR_POOL(default, null) : String;
 	
 	/** Property identifier: grammar pool . */
-	private static var ENTITY_RESOLVER(default, null) : String;
+	@:protected @:static @:final private static var ENTITY_RESOLVER(default, null) : String;
 	
-	private static var XPOINTER_SCHEMA(default, null) : String;
+	@:protected @:static @:final private static var XPOINTER_SCHEMA(default, null) : String;
 	
-	private var fDocumentHandler : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
+	@:protected private var fDocumentHandler : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
 	
-	private var fDocumentSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource;
+	@:protected private var fDocumentSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource;
 	
-	private var fParentXIncludeHandler : com.sun.org.apache.xerces.internal.xinclude.XIncludeHandler;
+	@:protected private var fParentXIncludeHandler : com.sun.org.apache.xerces.internal.xinclude.XIncludeHandler;
 	
-	private var fDocLocation : com.sun.org.apache.xerces.internal.xni.XMLLocator;
+	@:protected private var fDocLocation : com.sun.org.apache.xerces.internal.xni.XMLLocator;
 	
-	private var fNamespaceContext : com.sun.org.apache.xerces.internal.xinclude.XIncludeNamespaceSupport;
+	@:protected private var fNamespaceContext : com.sun.org.apache.xerces.internal.xinclude.XIncludeNamespaceSupport;
 	
-	private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
+	@:protected private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
 	
-	private var fGrammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
+	@:protected private var fGrammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
 	
-	private var fGrammarDesc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription;
+	@:protected private var fGrammarDesc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription;
 	
-	private var fDTDGrammar : com.sun.org.apache.xerces.internal.impl.dtd.DTDGrammar;
+	@:protected private var fDTDGrammar : com.sun.org.apache.xerces.internal.impl.dtd.DTDGrammar;
 	
-	private var fEntityResolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
+	@:protected private var fEntityResolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
 	
-	private var fSettings : com.sun.org.apache.xerces.internal.util.ParserConfigurationSettings;
+	@:protected private var fSettings : com.sun.org.apache.xerces.internal.util.ParserConfigurationSettings;
 	
-	private var fPointer : java.lang.StringBuffer;
+	@:protected private var fPointer : java.lang.StringBuffer;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/**
 	* Returns a list of feature identifiers that are recognized by
 	* this component. This method may return null if no features
 	* are recognized by this component.
 	*/
-	@:overload public function getRecognizedFeatures() : java.NativeArray<String>;
+	@:overload @:public public function getRecognizedFeatures() : java.NativeArray<String>;
 	
 	/**
 	* Sets the state of a feature. This method is called by the component
@@ -124,14 +124,14 @@ extern class XPointerElementHandler implements com.sun.org.apache.xerces.interna
 	* @throws SAXNotSupportedException The component should not throw
 	*                                  this exception.
 	*/
-	@:overload public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload @:public public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* Returns a list of property identifiers that are recognized by
 	* this component. This method may return null if no properties
 	* are recognized by this component.
 	*/
-	@:overload public function getRecognizedProperties() : java.NativeArray<String>;
+	@:overload @:public public function getRecognizedProperties() : java.NativeArray<String>;
 	
 	/**
 	* Sets the value of a property. This method is called by the component
@@ -148,7 +148,7 @@ extern class XPointerElementHandler implements com.sun.org.apache.xerces.interna
 	* @throws SAXNotSupportedException The component should not throw
 	*                                  this exception.
 	*/
-	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/**
 	* Returns the default state for a feature, or null if this
@@ -159,7 +159,7 @@ extern class XPointerElementHandler implements com.sun.org.apache.xerces.interna
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload public function getFeatureDefault(featureId : String) : Null<Bool>;
+	@:require(java2) @:overload @:public public function getFeatureDefault(featureId : String) : Null<Bool>;
 	
 	/**
 	* Returns the default state for a property, or null if this
@@ -170,99 +170,99 @@ extern class XPointerElementHandler implements com.sun.org.apache.xerces.interna
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload public function getPropertyDefault(propertyId : String) : Dynamic;
+	@:require(java2) @:overload @:public public function getPropertyDefault(propertyId : String) : Dynamic;
 	
-	@:overload public function setDocumentHandler(handler : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler) : Void;
+	@:overload @:public public function setDocumentHandler(handler : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler) : Void;
 	
-	@:overload public function getDocumentHandler() : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
+	@:overload @:public public function getDocumentHandler() : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
 	
 	/**
 	* set the Schema Name  eg element , xpointer
 	*/
-	@:overload public function setXPointerSchemaName(schemaName : String) : Void;
+	@:overload @:public public function setXPointerSchemaName(schemaName : String) : Void;
 	
 	/**
 	* Return  Schema Name  eg element , xpointer
 	*
 	*/
-	@:overload public function getXpointerSchemaName() : String;
+	@:overload @:public public function getXpointerSchemaName() : String;
 	
 	/**
 	* Parent Contenhandler for the this contenthandler.
 	* // not sure about the parameter type. It can be Contenthandler instead of Object type.
 	*/
-	@:overload public function setParent(parent : Dynamic) : Void;
+	@:overload @:public public function setParent(parent : Dynamic) : Void;
 	
 	/**
 	* return the Parent Contenthandler
 	*/
-	@:overload public function getParent() : Dynamic;
+	@:overload @:public public function getParent() : Dynamic;
 	
 	/**
 	* Content of the XPointer Schema. Xpath to be resolved.
 	*/
-	@:overload public function setXPointerSchemaPointer(content : String) : Void;
+	@:overload @:public public function setXPointerSchemaPointer(content : String) : Void;
 	
 	/**
 	* Return the XPointer Schema.
 	*/
-	@:overload public function getXPointerSchemaPointer() : String;
+	@:overload @:public public function getXPointerSchemaPointer() : String;
 	
-	@:overload public function isSubResourceIndentified() : Bool;
+	@:overload @:public public function isSubResourceIndentified() : Bool;
 	
-	@:overload public function getTokens() : Void;
+	@:overload @:public public function getTokens() : Void;
 	
-	@:overload public function hasMoreToken() : Bool;
+	@:overload @:public public function hasMoreToken() : Bool;
 	
-	@:overload public function getNextToken() : Bool;
+	@:overload @:public public function getNextToken() : Bool;
 	
-	@:overload public function checkStringToken(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Bool;
+	@:overload @:public public function checkStringToken(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Bool;
 	
-	@:overload public function checkIntegerToken(element : com.sun.org.apache.xerces.internal.xni.QName) : Bool;
+	@:overload @:public public function checkIntegerToken(element : com.sun.org.apache.xerces.internal.xni.QName) : Bool;
 	
-	@:overload public function addQName(element : com.sun.org.apache.xerces.internal.xni.QName) : Void;
+	@:overload @:public public function addQName(element : com.sun.org.apache.xerces.internal.xni.QName) : Void;
 	
-	@:overload public function startDocument(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, encoding : String, namespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startDocument(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, encoding : String, namespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function doctypeDecl(rootElement : String, publicId : String, systemId : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function doctypeDecl(rootElement : String, publicId : String, systemId : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function xmlDecl(version : String, encoding : String, standalone : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function xmlDecl(version : String, encoding : String, standalone : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function startGeneralEntity(name : String, resId : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startGeneralEntity(name : String, resId : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function textDecl(version : String, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function textDecl(version : String, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function endGeneralEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endGeneralEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function startCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function endCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function endDocument(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endDocument(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function setDocumentSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource) : Void;
+	@:overload @:public public function setDocumentSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource) : Void;
 	
-	@:overload public function getDocumentSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource;
+	@:overload @:public public function getDocumentSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource;
 	
-	@:overload private function reportFatalError(key : String) : Void;
+	@:overload @:protected private function reportFatalError(key : String) : Void;
 	
-	@:overload private function reportFatalError(key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected private function reportFatalError(key : String, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload private function isRootDocument() : Bool;
+	@:overload @:protected private function isRootDocument() : Bool;
 	
 	
 }

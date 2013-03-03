@@ -28,24 +28,24 @@ extern class FormattedFloatingDecimal
 	/*
 	* FIRST IMPORTANT CONSTRUCTOR: DOUBLE
 	*/
-	@:overload public function new(d : Float) : Void;
+	@:overload @:public public function new(d : Float) : Void;
 	
-	@:overload public function new(d : Float, precision : Int, form : sun.misc.FormattedFloatingDecimal.FormattedFloatingDecimal_Form) : Void;
+	@:overload @:public public function new(d : Float, precision : Int, form : sun.misc.FormattedFloatingDecimal.FormattedFloatingDecimal_Form) : Void;
 	
 	/*
 	* SECOND IMPORTANT CONSTRUCTOR: SINGLE
 	*/
-	@:overload public function new(f : Single) : Void;
+	@:overload @:public public function new(f : Single) : Void;
 	
-	@:overload public function new(f : Single, precision : Int, form : sun.misc.FormattedFloatingDecimal.FormattedFloatingDecimal_Form) : Void;
+	@:overload @:public public function new(f : Single, precision : Int, form : sun.misc.FormattedFloatingDecimal.FormattedFloatingDecimal_Form) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getExponent() : Int;
+	@:overload @:public public function getExponent() : Int;
 	
-	@:overload public function getExponentRounded() : Int;
+	@:overload @:public public function getExponentRounded() : Int;
 	
-	@:overload public function getChars(result : java.NativeArray<java.StdTypes.Char16>) : Int;
+	@:overload @:public public function getChars(result : java.NativeArray<java.StdTypes.Char16>) : Int;
 	
 	/*
 	* Take a FormattedFloatingDecimal, which we presumably just scanned in,
@@ -55,7 +55,7 @@ extern class FormattedFloatingDecimal
 	* ROUNDING DIRECTION in case the result is really destined
 	* for a single-precision float.
 	*/
-	@:overload @:strictfp public function doubleValue() : Float;
+	@:overload @:public @:strictfp public function doubleValue() : Float;
 	
 	/*
 	* Take a FormattedFloatingDecimal, which we presumably just scanned in,
@@ -66,7 +66,7 @@ extern class FormattedFloatingDecimal
 	* to a float has another rounding error, IN THE WRONG DIRECTION,
 	* ( because of the preference to a zero low-order bit ).
 	*/
-	@:overload @:strictfp public function floatValue() : Single;
+	@:overload @:public @:strictfp public function floatValue() : Single;
 	
 	
 }

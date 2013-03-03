@@ -31,11 +31,11 @@ extern class JTextFile extends com.sun.codemodel.internal.JResourceFile
 	* @author
 	*      Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload public function setContents(_contents : String) : Void;
+	@:overload @:public public function setContents(_contents : String) : Void;
 	
-	@:overload override public function build(out : java.io.OutputStream) : Void;
+	@:overload @:public override public function build(out : java.io.OutputStream) : Void;
 	
 	
 }

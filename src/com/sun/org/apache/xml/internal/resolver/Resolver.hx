@@ -27,7 +27,7 @@ extern class Resolver extends com.sun.org.apache.xml.internal.resolver.Catalog
 	*
 	* <p>URI suffix entries match URIs that end in a specified suffix.</p>
 	*/
-	public static var URISUFFIX(default, null) : Int;
+	@:public @:static @:final public static var URISUFFIX(default, null) : Int;
 	
 	/**
 	* The SYSTEMSUFFIX Catalog Entry type.
@@ -35,14 +35,14 @@ extern class Resolver extends com.sun.org.apache.xml.internal.resolver.Catalog
 	* <p>System suffix entries match system identifiers that end in a
 	* specified suffix.</p>
 	*/
-	public static var SYSTEMSUFFIX(default, null) : Int;
+	@:public @:static @:final public static var SYSTEMSUFFIX(default, null) : Int;
 	
 	/**
 	* The RESOLVER Catalog Entry type.
 	*
 	* <p>A hook for providing support for web-based backup resolvers.</p>
 	*/
-	public static var RESOLVER(default, null) : Int;
+	@:public @:static @:final public static var RESOLVER(default, null) : Int;
 	
 	/**
 	* The SYSTEMREVERSE Catalog Entry type.
@@ -52,12 +52,12 @@ extern class Resolver extends com.sun.org.apache.xml.internal.resolver.Catalog
 	* being performed. (This allows the Resolver to implement
 	* RFC2483 I2N and I2NS.)
 	*/
-	public static var SYSTEMREVERSE(default, null) : Int;
+	@:public @:static @:final public static var SYSTEMREVERSE(default, null) : Int;
 	
 	/**
 	* Setup readers.
 	*/
-	@:overload override public function setupReaders() : Void;
+	@:overload @:public override public function setupReaders() : Void;
 	
 	/**
 	* Cleanup and process a Catalog entry.
@@ -69,7 +69,7 @@ extern class Resolver extends com.sun.org.apache.xml.internal.resolver.Catalog
 	*
 	* @param entry The CatalogEntry to process.
 	*/
-	@:overload override public function addEntry(entry : com.sun.org.apache.xml.internal.resolver.CatalogEntry) : Void;
+	@:overload @:public override public function addEntry(entry : com.sun.org.apache.xml.internal.resolver.CatalogEntry) : Void;
 	
 	/**
 	* Return the applicable URI.
@@ -91,7 +91,7 @@ extern class Resolver extends com.sun.org.apache.xml.internal.resolver.Catalog
 	* subordinate catalog cannot be turned into a valid URL.
 	* @throws IOException Error reading subordinate catalog file.
 	*/
-	@:overload override public function resolveURI(uri : String) : String;
+	@:overload @:public override public function resolveURI(uri : String) : String;
 	
 	/**
 	* Return the applicable SYSTEM system identifier, resorting
@@ -116,7 +116,7 @@ extern class Resolver extends com.sun.org.apache.xml.internal.resolver.Catalog
 	* subordinate catalog cannot be turned into a valid URL.
 	* @throws IOException Error reading subordinate catalog file.
 	*/
-	@:overload override public function resolveSystem(systemId : String) : String;
+	@:overload @:public override public function resolveSystem(systemId : String) : String;
 	
 	/**
 	* Return the applicable PUBLIC or SYSTEM identifier, resorting
@@ -147,7 +147,7 @@ extern class Resolver extends com.sun.org.apache.xml.internal.resolver.Catalog
 	* match is not found in the catalog, instead null is returned
 	* to indicate that no match was found.
 	*/
-	@:overload override public function resolvePublic(publicId : String, systemId : String) : String;
+	@:overload @:public override public function resolvePublic(publicId : String, systemId : String) : String;
 	
 	/**
 	* Query an external RFC2483 resolver for a system identifier.
@@ -157,7 +157,7 @@ extern class Resolver extends com.sun.org.apache.xml.internal.resolver.Catalog
 	*
 	* @return The system identifier to use for the systemId.
 	*/
-	@:overload private function resolveExternalSystem(systemId : String, resolver : String) : String;
+	@:overload @:protected private function resolveExternalSystem(systemId : String, resolver : String) : String;
 	
 	/**
 	* Query an external RFC2483 resolver for a public identifier.
@@ -167,7 +167,7 @@ extern class Resolver extends com.sun.org.apache.xml.internal.resolver.Catalog
 	*
 	* @return The system identifier to use for the systemId.
 	*/
-	@:overload private function resolveExternalPublic(publicId : String, resolver : String) : String;
+	@:overload @:protected private function resolveExternalPublic(publicId : String, resolver : String) : String;
 	
 	/**
 	* Query an external RFC2483 resolver.
@@ -179,7 +179,7 @@ extern class Resolver extends com.sun.org.apache.xml.internal.resolver.Catalog
 	*
 	* @return The Resolver constructed.
 	*/
-	@:overload private function queryResolver(resolver : String, command : String, arg1 : String, arg2 : String) : com.sun.org.apache.xml.internal.resolver.Resolver;
+	@:overload @:protected private function queryResolver(resolver : String, command : String, arg1 : String, arg2 : String) : com.sun.org.apache.xml.internal.resolver.Resolver;
 	
 	/**
 	* Find the URNs for a given system identifier in all catalogs.
@@ -188,7 +188,7 @@ extern class Resolver extends com.sun.org.apache.xml.internal.resolver.Catalog
 	*
 	* @return A vector of URNs that map to the systemId.
 	*/
-	@:overload public function resolveAllSystemReverse(systemId : String) : java.util.Vector<Dynamic>;
+	@:overload @:public public function resolveAllSystemReverse(systemId : String) : java.util.Vector<Dynamic>;
 	
 	/**
 	* Find the URN for a given system identifier.
@@ -197,7 +197,7 @@ extern class Resolver extends com.sun.org.apache.xml.internal.resolver.Catalog
 	*
 	* @return A (single) URN that maps to the systemId.
 	*/
-	@:overload public function resolveSystemReverse(systemId : String) : String;
+	@:overload @:public public function resolveSystemReverse(systemId : String) : String;
 	
 	/**
 	* Return the applicable SYSTEM system identifiers.
@@ -226,7 +226,7 @@ extern class Resolver extends com.sun.org.apache.xml.internal.resolver.Catalog
 	* subordinate catalog cannot be turned into a valid URL.
 	* @throws IOException Error reading subordinate catalog file.
 	*/
-	@:overload public function resolveAllSystem(systemId : String) : java.util.Vector<Dynamic>;
+	@:overload @:public public function resolveAllSystem(systemId : String) : java.util.Vector<Dynamic>;
 	
 	
 }

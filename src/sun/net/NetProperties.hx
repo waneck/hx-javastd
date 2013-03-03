@@ -36,7 +36,7 @@ extern class NetProperties
 	* @return the <code>String</code> value for the property,
 	*         or <code>null</code>
 	*/
-	@:overload public static function get(key : String) : String;
+	@:overload @:static @:public public static function get(key : String) : String;
 	
 	/**
 	* Get an Integer networking system property. If no system property was
@@ -50,7 +50,7 @@ extern class NetProperties
 	* @return the <code>Integer</code> value for the property,
 	*         or <code>null</code>
 	*/
-	@:overload public static function getInteger(key : String, defval : Int) : Null<Int>;
+	@:overload @:static @:public public static function getInteger(key : String, defval : Int) : Null<Int>;
 	
 	/**
 	* Get a Boolean networking system property. If no system property was
@@ -63,7 +63,7 @@ extern class NetProperties
 	* @return the <code>Boolean</code> value for the property,
 	*         or <code>null</code>
 	*/
-	@:overload public static function getBoolean(key : String) : Null<Bool>;
+	@:overload @:static @:public public static function getBoolean(key : String) : Null<Bool>;
 	
 	
 }

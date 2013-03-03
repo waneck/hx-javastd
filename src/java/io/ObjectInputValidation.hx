@@ -40,7 +40,7 @@ package java.io;
 	*
 	* @exception InvalidObjectException If the object cannot validate itself.
 	*/
-	@:overload public function validateObject() : Void;
+	@:overload @:public public function validateObject() : Void;
 	
 	
 }

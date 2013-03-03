@@ -32,7 +32,7 @@ extern interface SunJmxMBeanServer extends javax.management.MBeanServer
 	*            are not enabled on this object.
 	* @see #interceptorsEnabled
 	*/
-	@:overload public function getMBeanInstantiator() : com.sun.jmx.mbeanserver.MBeanInstantiator;
+	@:overload @:public public function getMBeanInstantiator() : com.sun.jmx.mbeanserver.MBeanInstantiator;
 	
 	/**
 	* Tell whether {@link MBeanServerInterceptor}s are enabled on this
@@ -44,7 +44,7 @@ extern interface SunJmxMBeanServer extends javax.management.MBeanServer
 	* @see #getMBeanInstantiator
 	* @see com.sun.jmx.mbeanserver.JmxMBeanServerBuilder
 	**/
-	@:overload public function interceptorsEnabled() : Bool;
+	@:overload @:public public function interceptorsEnabled() : Bool;
 	
 	/**
 	* Return the MBeanServerInterceptor.
@@ -53,7 +53,7 @@ extern interface SunJmxMBeanServer extends javax.management.MBeanServer
 	*            are not enabled on this object.
 	* @see #interceptorsEnabled
 	**/
-	@:overload public function getMBeanServerInterceptor() : javax.management.MBeanServer;
+	@:overload @:public public function getMBeanServerInterceptor() : javax.management.MBeanServer;
 	
 	/**
 	* Set the MBeanServerInterceptor.
@@ -62,7 +62,7 @@ extern interface SunJmxMBeanServer extends javax.management.MBeanServer
 	*            are not enabled on this object.
 	* @see #interceptorsEnabled
 	**/
-	@:overload public function setMBeanServerInterceptor(interceptor : javax.management.MBeanServer) : Void;
+	@:overload @:public public function setMBeanServerInterceptor(interceptor : javax.management.MBeanServer) : Void;
 	
 	/**
 	* <p>Return the MBeanServerDelegate representing the MBeanServer.
@@ -71,7 +71,7 @@ extern interface SunJmxMBeanServer extends javax.management.MBeanServer
 	* in the returned object.</p>
 	*
 	*/
-	@:overload public function getMBeanServerDelegate() : javax.management.MBeanServerDelegate;
+	@:overload @:public public function getMBeanServerDelegate() : javax.management.MBeanServerDelegate;
 	
 	
 }

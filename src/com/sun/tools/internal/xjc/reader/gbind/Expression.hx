@@ -28,7 +28,7 @@ extern class Expression
 	/**
 	* {@link Expression} that represents epsilon, the length-0 string.
 	*/
-	public static var EPSILON(default, null) : com.sun.tools.internal.xjc.reader.gbind.Expression;
+	@:public @:static @:final public static var EPSILON(default, null) : com.sun.tools.internal.xjc.reader.gbind.Expression;
 	
 	
 }

@@ -25,38 +25,38 @@ package com.sun.tools.internal.ws.wsdl.framework;
 */
 extern class Entity implements com.sun.tools.internal.ws.wsdl.framework.Elemental
 {
-	private var errorReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver;
+	@:protected private var errorReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver;
 	
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function setErrorReceiver(errorReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function setErrorReceiver(errorReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public public function getLocator() : org.xml.sax.Locator;
 	
-	@:overload public function getProperty(key : String) : Dynamic;
+	@:overload @:public public function getProperty(key : String) : Dynamic;
 	
-	@:overload public function setProperty(key : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(key : String, value : Dynamic) : Void;
 	
-	@:overload public function removeProperty(key : String) : Void;
+	@:overload @:public public function removeProperty(key : String) : Void;
 	
-	@:overload public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
+	@:overload @:public public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
 	
-	@:overload public function withAllQNamesDo(action : com.sun.tools.internal.ws.wsdl.framework.QNameAction) : Void;
+	@:overload @:public public function withAllQNamesDo(action : com.sun.tools.internal.ws.wsdl.framework.QNameAction) : Void;
 	
-	@:overload public function withAllEntityReferencesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityReferenceAction) : Void;
+	@:overload @:public public function withAllEntityReferencesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityReferenceAction) : Void;
 	
-	@:overload @:abstract public function validateThis() : Void;
+	@:overload @:public @:abstract public function validateThis() : Void;
 	
-	@:overload private function failValidation(key : String) : Void;
+	@:overload @:protected private function failValidation(key : String) : Void;
 	
-	@:overload private function failValidation(key : String, arg : String) : Void;
+	@:overload @:protected private function failValidation(key : String, arg : String) : Void;
 	
 	/**
 	* Interface implemented by classes that are mappable to XML elements.
 	*
 	* @author WS Development Team
 	*/
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public @:public @:public override public function getElementName() : javax.xml.namespace.QName;
 	
 	
 }

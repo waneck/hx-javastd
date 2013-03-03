@@ -41,7 +41,7 @@ package com.sun.tools.javadoc;
 	* Returns null if format was not that of java reference.
 	* Return empty string if class name was not specified..
 	*/
-	@:overload public function referencedClassName() : String;
+	@:overload @:public public function referencedClassName() : String;
 	
 	/**
 	* get the package referenced by  @see. For instance,
@@ -49,7 +49,7 @@ package com.sun.tools.javadoc;
 	*      This function returns a PackageDocImpl for java.lang
 	* Returns null if no known package found.
 	*/
-	@:overload public function referencedPackage() : com.sun.javadoc.PackageDoc;
+	@:overload @:public public function referencedPackage() : com.sun.javadoc.PackageDoc;
 	
 	/**
 	* get the class referenced by the class name part of @see, For instance,
@@ -57,7 +57,7 @@ package com.sun.tools.javadoc;
 	*      This function returns a ClassDocImpl for java.lang.String.
 	* Returns null if class is not a class specified on the javadoc command line..
 	*/
-	@:overload public function referencedClass() : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function referencedClass() : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* get the name of the member referenced by the prototype part of @see,
@@ -67,7 +67,7 @@ package com.sun.tools.javadoc;
 	* Returns null if format was not that of java reference.
 	* Return empty string if member name was not specified..
 	*/
-	@:overload public function referencedMemberName() : String;
+	@:overload @:public public function referencedMemberName() : String;
 	
 	/**
 	* get the member referenced by the prototype part of @see,
@@ -76,23 +76,23 @@ package com.sun.tools.javadoc;
 	*      This function returns a MethodDocImpl for startsWith.
 	* Returns null if member could not be determined.
 	*/
-	@:overload public function referencedMember() : com.sun.javadoc.MemberDoc;
+	@:overload @:public public function referencedMember() : com.sun.javadoc.MemberDoc;
 	
 	/**
 	* Return the kind of this tag.
 	*/
-	@:overload override public function kind() : String;
+	@:overload @:public override public function kind() : String;
 	
 	/**
 	* Return the label of the see tag.
 	*/
-	@:overload public function label() : String;
+	@:overload @:public public function label() : String;
 	
 	
 }
 @:native('com$sun$tools$javadoc$SeeTagImpl$ParameterParseMachine') @:internal extern class SeeTagImpl_ParameterParseMachine
 {
-	@:overload public function parseParameters() : java.NativeArray<String>;
+	@:overload @:public public function parseParameters() : java.NativeArray<String>;
 	
 	
 }

@@ -39,7 +39,7 @@ package java.nio.charset;
 	* @param  cause
 	*         The unexpected exception that was thrown
 	*/
-	@:overload public function new(cause : java.lang.Exception) : Void;
+	@:overload @:public public function new(cause : java.lang.Exception) : Void;
 	
 	
 }

@@ -30,19 +30,19 @@ package sun.security.krb5;
 */
 extern class KrbCred
 {
-	@:overload public function new(tgt : sun.security.krb5.Credentials, serviceTicket : sun.security.krb5.Credentials, key : sun.security.krb5.EncryptionKey) : Void;
+	@:overload @:public public function new(tgt : sun.security.krb5.Credentials, serviceTicket : sun.security.krb5.Credentials, key : sun.security.krb5.EncryptionKey) : Void;
 	
-	@:overload public function new(asn1Message : java.NativeArray<java.StdTypes.Int8>, key : sun.security.krb5.EncryptionKey) : Void;
+	@:overload @:public public function new(asn1Message : java.NativeArray<java.StdTypes.Int8>, key : sun.security.krb5.EncryptionKey) : Void;
 	
 	/**
 	* Returns the delegated credentials from the peer.
 	*/
-	@:overload public function getDelegatedCreds() : java.NativeArray<sun.security.krb5.Credentials>;
+	@:overload @:public public function getDelegatedCreds() : java.NativeArray<sun.security.krb5.Credentials>;
 	
 	/**
 	* Returns the ASN.1 encoding that should be sent to the peer.
 	*/
-	@:overload public function getMessage() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getMessage() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -42,7 +42,7 @@ extern class NameCallback implements javax.security.auth.callback.Callback imple
 	* @exception IllegalArgumentException if <code>prompt</code> is null
 	*                  or if <code>prompt</code> has a length of 0.
 	*/
-	@:overload public function new(prompt : String) : Void;
+	@:overload @:public public function new(prompt : String) : Void;
 	
 	/**
 	* Construct a <code>NameCallback</code> with a prompt
@@ -60,7 +60,7 @@ extern class NameCallback implements javax.security.auth.callback.Callback imple
 	*                  if <code>defaultName</code> is null,
 	*                  or if <code>defaultName</code> has a length of 0.
 	*/
-	@:overload public function new(prompt : String, defaultName : String) : Void;
+	@:overload @:public public function new(prompt : String, defaultName : String) : Void;
 	
 	/**
 	* Get the prompt.
@@ -69,7 +69,7 @@ extern class NameCallback implements javax.security.auth.callback.Callback imple
 	*
 	* @return the prompt.
 	*/
-	@:overload public function getPrompt() : String;
+	@:overload @:public public function getPrompt() : String;
 	
 	/**
 	* Get the default name.
@@ -79,7 +79,7 @@ extern class NameCallback implements javax.security.auth.callback.Callback imple
 	* @return the default name, or null if this <code>NameCallback</code>
 	*          was not instantiated with a <code>defaultName</code>.
 	*/
-	@:overload public function getDefaultName() : String;
+	@:overload @:public public function getDefaultName() : String;
 	
 	/**
 	* Set the retrieved name.
@@ -90,7 +90,7 @@ extern class NameCallback implements javax.security.auth.callback.Callback imple
 	*
 	* @see #getName
 	*/
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	/**
 	* Get the retrieved name.
@@ -101,7 +101,7 @@ extern class NameCallback implements javax.security.auth.callback.Callback imple
 	*
 	* @see #setName
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

@@ -40,90 +40,90 @@ package com.sun.tools.corba.se.idl.toJavaPortable;
 //// -D62739   <klr> no TIE for values that support abstract interfaces, etc.
 extern class Skeleton implements com.sun.tools.corba.se.idl.toJavaPortable.AuxGen
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:public public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/**
 	* Initialize members unique to this generator.
 	**/
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
-	@:overload private function openStream() : Void;
+	@:overload @:protected private function openStream() : Void;
 	
-	@:overload private function writeHeading() : Void;
+	@:overload @:protected private function writeHeading() : Void;
 	
-	@:overload private function writeClassDeclaration() : Void;
+	@:overload @:protected private function writeClassDeclaration() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeBody() : Void;
+	@:overload @:protected private function writeBody() : Void;
 	
 	/**
 	* Close the skeleton class. The singleton ORB member is
 	* necessary only for portable skeletons.
 	**/
-	@:overload private function writeClosing() : Void;
+	@:overload @:protected private function writeClosing() : Void;
 	
 	/**
 	* Close the print stream, which flushes the stream to file.
 	**/
-	@:overload private function closeStream() : Void;
+	@:overload @:protected private function closeStream() : Void;
 	
-	@:overload private function writeCtors() : Void;
+	@:overload @:protected private function writeCtors() : Void;
 	
 	/**
 	* Build a list of all of the methods, keeping out duplicates.
 	**/
-	@:overload private function buildMethodList() : Void;
+	@:overload @:protected private function buildMethodList() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeDispatchMethod() : Void;
+	@:overload @:protected private function writeDispatchMethod() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeMethodTable() : Void;
+	@:overload @:protected private function writeMethodTable() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeMethods() : Void;
+	@:overload @:protected private function writeMethods() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeCORBAOperations() : Void;
+	@:overload @:protected private function writeCORBAOperations() : Void;
 	
-	@:overload private function writePOACORBAOperations() : Void;
+	@:overload @:protected private function writePOACORBAOperations() : Void;
 	
-	@:overload private function writeNonPOACORBAOperations() : Void;
+	@:overload @:protected private function writeNonPOACORBAOperations() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeOperations() : Void;
+	@:overload @:protected private function writeOperations() : Void;
 	
-	private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	private var i : com.sun.tools.corba.se.idl.InterfaceEntry;
+	@:protected private var i : com.sun.tools.corba.se.idl.InterfaceEntry;
 	
-	private var stream : java.io.PrintWriter;
+	@:protected private var stream : java.io.PrintWriter;
 	
-	private var tieClassName : String;
+	@:protected private var tieClassName : String;
 	
-	private var skeletonClassName : String;
+	@:protected private var skeletonClassName : String;
 	
-	private var tie : Bool;
+	@:protected private var tie : Bool;
 	
-	private var poa : Bool;
+	@:protected private var poa : Bool;
 	
-	private var methodList : java.util.Vector<Dynamic>;
+	@:protected private var methodList : java.util.Vector<Dynamic>;
 	
-	private var intfName : String;
+	@:protected private var intfName : String;
 	
 	
 }

@@ -29,21 +29,21 @@ extern class BufferManagerFactory
 	* Creates read/write buffer managers to handle over/under flow
 	* in CDR*putStream.
 	*/
-	public static var GROW(default, null) : Int;
+	@:public @:static @:final public static var GROW(default, null) : Int;
 	
-	public static var COLLECT(default, null) : Int;
+	@:public @:static @:final public static var COLLECT(default, null) : Int;
 	
-	public static var STREAM(default, null) : Int;
+	@:public @:static @:final public static var STREAM(default, null) : Int;
 	
-	@:overload public static function newBufferManagerRead(version : com.sun.corba.se.spi.ior.iiop.GIOPVersion, encodingVersion : java.StdTypes.Int8, orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.impl.encoding.BufferManagerRead;
+	@:overload @:public @:static public static function newBufferManagerRead(version : com.sun.corba.se.spi.ior.iiop.GIOPVersion, encodingVersion : java.StdTypes.Int8, orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.impl.encoding.BufferManagerRead;
 	
-	@:overload public static function newBufferManagerRead(strategy : Int, encodingVersion : java.StdTypes.Int8, orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.impl.encoding.BufferManagerRead;
+	@:overload @:public @:static public static function newBufferManagerRead(strategy : Int, encodingVersion : java.StdTypes.Int8, orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.impl.encoding.BufferManagerRead;
 	
-	@:overload public static function newBufferManagerWrite(strategy : Int, encodingVersion : java.StdTypes.Int8, orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.impl.encoding.BufferManagerWrite;
+	@:overload @:public @:static public static function newBufferManagerWrite(strategy : Int, encodingVersion : java.StdTypes.Int8, orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.impl.encoding.BufferManagerWrite;
 	
-	@:overload public static function newBufferManagerWrite(version : com.sun.corba.se.spi.ior.iiop.GIOPVersion, encodingVersion : java.StdTypes.Int8, orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.impl.encoding.BufferManagerWrite;
+	@:overload @:public @:static public static function newBufferManagerWrite(version : com.sun.corba.se.spi.ior.iiop.GIOPVersion, encodingVersion : java.StdTypes.Int8, orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.impl.encoding.BufferManagerWrite;
 	
-	@:overload public static function defaultBufferManagerRead(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.impl.encoding.BufferManagerRead;
+	@:overload @:public @:static public static function defaultBufferManagerRead(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.impl.encoding.BufferManagerRead;
 	
 	
 }

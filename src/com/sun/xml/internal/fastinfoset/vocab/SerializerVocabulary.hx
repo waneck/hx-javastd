@@ -27,49 +27,49 @@ package com.sun.xml.internal.fastinfoset.vocab;
 */
 extern class SerializerVocabulary extends com.sun.xml.internal.fastinfoset.vocab.Vocabulary
 {
-	public var restrictedAlphabet(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap;
+	@:public @:final public var restrictedAlphabet(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap;
 	
-	public var encodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap;
+	@:public @:final public var encodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap;
 	
-	public var namespaceName(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap;
+	@:public @:final public var namespaceName(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap;
 	
-	public var prefix(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap;
+	@:public @:final public var prefix(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap;
 	
-	public var localName(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap;
+	@:public @:final public var localName(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap;
 	
-	public var otherNCName(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap;
+	@:public @:final public var otherNCName(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap;
 	
-	public var otherURI(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap;
+	@:public @:final public var otherURI(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap;
 	
-	public var attributeValue(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap;
+	@:public @:final public var attributeValue(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap;
 	
-	public var otherString(default, null) : com.sun.xml.internal.fastinfoset.util.CharArrayIntMap;
+	@:public @:final public var otherString(default, null) : com.sun.xml.internal.fastinfoset.util.CharArrayIntMap;
 	
-	public var characterContentChunk(default, null) : com.sun.xml.internal.fastinfoset.util.CharArrayIntMap;
+	@:public @:final public var characterContentChunk(default, null) : com.sun.xml.internal.fastinfoset.util.CharArrayIntMap;
 	
-	public var elementName(default, null) : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap;
+	@:public @:final public var elementName(default, null) : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap;
 	
-	public var attributeName(default, null) : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap;
+	@:public @:final public var attributeName(default, null) : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap;
 	
-	public var tables(default, null) : java.NativeArray<com.sun.xml.internal.fastinfoset.util.KeyIntMap>;
+	@:public @:final public var tables(default, null) : java.NativeArray<com.sun.xml.internal.fastinfoset.util.KeyIntMap>;
 	
-	private var _useLocalNameAsKey : Bool;
+	@:protected private var _useLocalNameAsKey : Bool;
 	
-	private var _readOnlyVocabulary : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary;
+	@:protected private var _readOnlyVocabulary : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(v : com.sun.xml.internal.org.jvnet.fastinfoset.Vocabulary, useLocalNameAsKey : Bool) : Void;
+	@:overload @:public public function new(v : com.sun.xml.internal.org.jvnet.fastinfoset.Vocabulary, useLocalNameAsKey : Bool) : Void;
 	
-	@:overload public function getReadOnlyVocabulary() : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary;
+	@:overload @:public public function getReadOnlyVocabulary() : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary;
 	
-	@:overload private function setReadOnlyVocabulary(readOnlyVocabulary : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary, clear : Bool) : Void;
+	@:overload @:protected private function setReadOnlyVocabulary(readOnlyVocabulary : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary, clear : Bool) : Void;
 	
-	@:overload public function setInitialVocabulary(initialVocabulary : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary, clear : Bool) : Void;
+	@:overload @:public public function setInitialVocabulary(initialVocabulary : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary, clear : Bool) : Void;
 	
-	@:overload public function setExternalVocabulary(externalVocabularyURI : String, externalVocabulary : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary, clear : Bool) : Void;
+	@:overload @:public public function setExternalVocabulary(externalVocabularyURI : String, externalVocabulary : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary, clear : Bool) : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

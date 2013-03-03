@@ -29,13 +29,13 @@ package sun.font;
 */
 extern class SunLayoutEngine implements LayoutEngine implements LayoutEngineFactory
 {
-	@:overload public static function instance() : LayoutEngineFactory;
+	@:overload @:public @:static public static function instance() : LayoutEngineFactory;
 	
-	@:overload public function getEngine(font : sun.font.Font2D, script : Int, lang : Int) : LayoutEngine;
+	@:overload @:public public function getEngine(font : sun.font.Font2D, script : Int, lang : Int) : LayoutEngine;
 	
-	@:overload public function getEngine(key : LayoutEngineKey) : LayoutEngine;
+	@:overload @:public public function getEngine(key : LayoutEngineKey) : LayoutEngine;
 	
-	@:overload public function layout(desc : sun.font.FontStrikeDesc, mat : java.NativeArray<Single>, gmask : Int, baseIndex : Int, tr : sun.font.TextRecord, typo_flags : Int, pt : java.awt.geom.Point2D.Point2D_Float, data : GVData) : Void;
+	@:overload @:public public function layout(desc : sun.font.FontStrikeDesc, mat : java.NativeArray<Single>, gmask : Int, baseIndex : Int, tr : sun.font.TextRecord, typo_flags : Int, pt : java.awt.geom.Point2D.Point2D_Float, data : GVData) : Void;
 	
 	
 }

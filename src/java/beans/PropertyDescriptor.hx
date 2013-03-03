@@ -40,7 +40,7 @@ extern class PropertyDescriptor extends java.beans.FeatureDescriptor
 	* @exception IntrospectionException if an exception occurs during
 	*              introspection.
 	*/
-	@:overload public function new(propertyName : String, beanClass : Class<Dynamic>) : Void;
+	@:overload @:public public function new(propertyName : String, beanClass : Class<Dynamic>) : Void;
 	
 	/**
 	* This constructor takes the name of a simple property, and method
@@ -56,7 +56,7 @@ extern class PropertyDescriptor extends java.beans.FeatureDescriptor
 	* @exception IntrospectionException if an exception occurs during
 	*              introspection.
 	*/
-	@:overload public function new(propertyName : String, beanClass : Class<Dynamic>, readMethodName : String, writeMethodName : String) : Void;
+	@:overload @:public public function new(propertyName : String, beanClass : Class<Dynamic>, readMethodName : String, writeMethodName : String) : Void;
 	
 	/**
 	* This constructor takes the name of a simple property, and Method
@@ -70,7 +70,7 @@ extern class PropertyDescriptor extends java.beans.FeatureDescriptor
 	* @exception IntrospectionException if an exception occurs during
 	*              introspection.
 	*/
-	@:overload public function new(propertyName : String, readMethod : java.lang.reflect.Method, writeMethod : java.lang.reflect.Method) : Void;
+	@:overload @:public public function new(propertyName : String, readMethod : java.lang.reflect.Method, writeMethod : java.lang.reflect.Method) : Void;
 	
 	/**
 	* Returns the Java type info for the property.
@@ -84,7 +84,7 @@ extern class PropertyDescriptor extends java.beans.FeatureDescriptor
 	* @return the {@code Class} object that represents the Java type info,
 	*         or {@code null} if the type cannot be determined
 	*/
-	@:overload @:synchronized public function getPropertyType() : Class<Dynamic>;
+	@:overload @:public @:synchronized public function getPropertyType() : Class<Dynamic>;
 	
 	/**
 	* Gets the method that should be used to read the property value.
@@ -92,14 +92,14 @@ extern class PropertyDescriptor extends java.beans.FeatureDescriptor
 	* @return The method that should be used to read the property value.
 	* May return null if the property can't be read.
 	*/
-	@:overload @:synchronized public function getReadMethod() : java.lang.reflect.Method;
+	@:overload @:public @:synchronized public function getReadMethod() : java.lang.reflect.Method;
 	
 	/**
 	* Sets the method that should be used to read the property value.
 	*
 	* @param readMethod The new read method.
 	*/
-	@:overload @:synchronized public function setReadMethod(readMethod : java.lang.reflect.Method) : Void;
+	@:overload @:public @:synchronized public function setReadMethod(readMethod : java.lang.reflect.Method) : Void;
 	
 	/**
 	* Gets the method that should be used to write the property value.
@@ -107,14 +107,14 @@ extern class PropertyDescriptor extends java.beans.FeatureDescriptor
 	* @return The method that should be used to write the property value.
 	* May return null if the property can't be written.
 	*/
-	@:overload @:synchronized public function getWriteMethod() : java.lang.reflect.Method;
+	@:overload @:public @:synchronized public function getWriteMethod() : java.lang.reflect.Method;
 	
 	/**
 	* Sets the method that should be used to write the property value.
 	*
 	* @param writeMethod The new write method.
 	*/
-	@:overload @:synchronized public function setWriteMethod(writeMethod : java.lang.reflect.Method) : Void;
+	@:overload @:public @:synchronized public function setWriteMethod(writeMethod : java.lang.reflect.Method) : Void;
 	
 	/**
 	* Updates to "bound" properties will cause a "PropertyChange" event to
@@ -122,7 +122,7 @@ extern class PropertyDescriptor extends java.beans.FeatureDescriptor
 	*
 	* @return True if this is a bound property.
 	*/
-	@:overload public function isBound() : Bool;
+	@:overload @:public public function isBound() : Bool;
 	
 	/**
 	* Updates to "bound" properties will cause a "PropertyChange" event to
@@ -130,7 +130,7 @@ extern class PropertyDescriptor extends java.beans.FeatureDescriptor
 	*
 	* @param bound True if this is a bound property.
 	*/
-	@:overload public function setBound(bound : Bool) : Void;
+	@:overload @:public public function setBound(bound : Bool) : Void;
 	
 	/**
 	* Attempted updates to "Constrained" properties will cause a "VetoableChange"
@@ -138,7 +138,7 @@ extern class PropertyDescriptor extends java.beans.FeatureDescriptor
 	*
 	* @return True if this is a constrained property.
 	*/
-	@:overload public function isConstrained() : Bool;
+	@:overload @:public public function isConstrained() : Bool;
 	
 	/**
 	* Attempted updates to "Constrained" properties will cause a "VetoableChange"
@@ -146,7 +146,7 @@ extern class PropertyDescriptor extends java.beans.FeatureDescriptor
 	*
 	* @param constrained True if this is a constrained property.
 	*/
-	@:overload public function setConstrained(constrained : Bool) : Void;
+	@:overload @:public public function setConstrained(constrained : Bool) : Void;
 	
 	/**
 	* Normally PropertyEditors will be found using the PropertyEditorManager.
@@ -156,7 +156,7 @@ extern class PropertyDescriptor extends java.beans.FeatureDescriptor
 	*
 	* @param propertyEditorClass  The Class for the desired PropertyEditor.
 	*/
-	@:overload public function setPropertyEditorClass(propertyEditorClass : Class<Dynamic>) : Void;
+	@:overload @:public public function setPropertyEditorClass(propertyEditorClass : Class<Dynamic>) : Void;
 	
 	/**
 	* Gets any explicit PropertyEditor Class that has been registered
@@ -168,7 +168,7 @@ extern class PropertyDescriptor extends java.beans.FeatureDescriptor
 	*          so the PropertyEditorManager should be used to locate
 	*          a suitable PropertyEditor.
 	*/
-	@:overload public function getPropertyEditorClass() : Class<Dynamic>;
+	@:overload @:public public function getPropertyEditorClass() : Class<Dynamic>;
 	
 	/**
 	* Constructs an instance of a property editor using the current
@@ -183,7 +183,7 @@ extern class PropertyDescriptor extends java.beans.FeatureDescriptor
 	*         not been defined or cannot be created
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function createPropertyEditor(bean : Dynamic) : java.beans.PropertyEditor;
+	@:require(java5) @:overload @:public public function createPropertyEditor(bean : Dynamic) : java.beans.PropertyEditor;
 	
 	/**
 	* Compares this <code>PropertyDescriptor</code> against the specified object.
@@ -193,7 +193,7 @@ extern class PropertyDescriptor extends java.beans.FeatureDescriptor
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function equals(obj : Dynamic) : Bool;
+	@:require(java4) @:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for the object.
@@ -202,7 +202,7 @@ extern class PropertyDescriptor extends java.beans.FeatureDescriptor
 	* @return a hash code value for this object.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function hashCode() : Int;
+	@:require(java5) @:overload @:public public function hashCode() : Int;
 	
 	
 }

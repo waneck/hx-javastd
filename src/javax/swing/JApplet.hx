@@ -85,7 +85,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see #getRootPane
 	* @see #setRootPane
 	*/
-	private var rootPane : javax.swing.JRootPane;
+	@:protected private var rootPane : javax.swing.JRootPane;
 	
 	/**
 	* If true then calls to <code>add</code> and <code>setLayout</code>
@@ -96,7 +96,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	private var rootPaneCheckingEnabled : Bool;
+	@:protected private var rootPaneCheckingEnabled : Bool;
 	
 	/**
 	* Creates a swing applet instance.
@@ -109,10 +109,10 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @see JComponent#getDefaultLocale
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Called by the constructor methods to create the default rootPane. */
-	@:overload private function createRootPane() : javax.swing.JRootPane;
+	@:overload @:protected private function createRootPane() : javax.swing.JRootPane;
 	
 	/**
 	* Sets the {@code transferHandler} property, which is a mechanism to
@@ -147,7 +147,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	*       hidden: true
 	*  description: Mechanism for transfer of data into the component
 	*/
-	@:require(java6) @:overload public function setTransferHandler(newHandler : javax.swing.TransferHandler) : Void;
+	@:require(java6) @:overload @:public public function setTransferHandler(newHandler : javax.swing.TransferHandler) : Void;
 	
 	/**
 	* Gets the <code>transferHandler</code> property.
@@ -158,13 +158,13 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see #setTransferHandler
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getTransferHandler() : javax.swing.TransferHandler;
+	@:require(java6) @:overload @:public public function getTransferHandler() : javax.swing.TransferHandler;
 	
 	/**
 	* Just calls <code>paint(g)</code>.  This method was overridden to
 	* prevent an unnecessary call to clear the background.
 	*/
-	@:overload public function update(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Sets the menubar for this applet.
@@ -176,14 +176,14 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	*      hidden: true
 	* description: The menubar for accessing pulldown menus from this applet.
 	*/
-	@:overload public function setJMenuBar(menuBar : javax.swing.JMenuBar) : Void;
+	@:overload @:public public function setJMenuBar(menuBar : javax.swing.JMenuBar) : Void;
 	
 	/**
 	* Returns the menubar set on this applet.
 	*
 	* @see #setJMenuBar
 	*/
-	@:overload public function getJMenuBar() : javax.swing.JMenuBar;
+	@:overload @:public public function getJMenuBar() : javax.swing.JMenuBar;
 	
 	/**
 	* Returns whether calls to <code>add</code> and
@@ -197,7 +197,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload private function isRootPaneCheckingEnabled() : Bool;
+	@:overload @:protected private function isRootPaneCheckingEnabled() : Bool;
 	
 	/**
 	* Sets whether calls to <code>add</code> and
@@ -215,7 +215,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	*      hidden: true
 	* description: Whether the add and setLayout methods are forwarded
 	*/
-	@:overload private function setRootPaneCheckingEnabled(enabled : Bool) : Void;
+	@:overload @:protected private function setRootPaneCheckingEnabled(enabled : Bool) : Void;
 	
 	/**
 	* Adds the specified child <code>Component</code>.
@@ -236,7 +236,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload @:protected override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Removes the specified component from the container. If
@@ -250,7 +250,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see #add
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload public function remove(comp : java.awt.Component) : Void;
+	@:overload @:public override public function remove(comp : java.awt.Component) : Void;
 	
 	/**
 	* Sets the <code>LayoutManager</code>.
@@ -263,7 +263,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload public function setLayout(manager : java.awt.LayoutManager) : Void;
+	@:overload @:public override public function setLayout(manager : java.awt.LayoutManager) : Void;
 	
 	/**
 	* Returns the rootPane object for this applet.
@@ -271,7 +271,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see #setRootPane
 	* @see RootPaneContainer#getRootPane
 	*/
-	@:overload public function getRootPane() : javax.swing.JRootPane;
+	@:overload @:public public function getRootPane() : javax.swing.JRootPane;
 	
 	/**
 	* Sets the rootPane property.  This method is called by the constructor.
@@ -283,7 +283,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	*   hidden: true
 	* description: the RootPane object for this applet.
 	*/
-	@:overload private function setRootPane(root : javax.swing.JRootPane) : Void;
+	@:overload @:protected private function setRootPane(root : javax.swing.JRootPane) : Void;
 	
 	/**
 	* Returns the contentPane object for this applet.
@@ -291,7 +291,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see #setContentPane
 	* @see RootPaneContainer#getContentPane
 	*/
-	@:overload public function getContentPane() : java.awt.Container;
+	@:overload @:public public function getContentPane() : java.awt.Container;
 	
 	/**
 	* Sets the contentPane property.  This method is called by the constructor.
@@ -307,7 +307,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	*     description: The client area of the applet where child
 	*                  components are normally inserted.
 	*/
-	@:overload public function setContentPane(contentPane : java.awt.Container) : Void;
+	@:overload @:public public function setContentPane(contentPane : java.awt.Container) : Void;
 	
 	/**
 	* Returns the layeredPane object for this applet.
@@ -317,7 +317,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see #setLayeredPane
 	* @see RootPaneContainer#getLayeredPane
 	*/
-	@:overload public function getLayeredPane() : javax.swing.JLayeredPane;
+	@:overload @:public public function getLayeredPane() : javax.swing.JLayeredPane;
 	
 	/**
 	* Sets the layeredPane property.  This method is called by the constructor.
@@ -330,7 +330,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	*     hidden: true
 	*     description: The pane which holds the various applet layers.
 	*/
-	@:overload public function setLayeredPane(layeredPane : javax.swing.JLayeredPane) : Void;
+	@:overload @:public public function setLayeredPane(layeredPane : javax.swing.JLayeredPane) : Void;
 	
 	/**
 	* Returns the glassPane object for this applet.
@@ -338,7 +338,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see #setGlassPane
 	* @see RootPaneContainer#getGlassPane
 	*/
-	@:overload public function getGlassPane() : java.awt.Component;
+	@:overload @:public public function getGlassPane() : java.awt.Component;
 	
 	/**
 	* Sets the glassPane property.
@@ -352,14 +352,14 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	*     hidden: true
 	*     description: A transparent pane used for menu rendering.
 	*/
-	@:overload public function setGlassPane(glassPane : java.awt.Component) : Void;
+	@:overload @:public public function setGlassPane(glassPane : java.awt.Component) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getGraphics() : java.awt.Graphics;
+	@:require(java6) @:overload @:public override public function getGraphics() : java.awt.Graphics;
 	
 	/**
 	* Repaints the specified rectangle of this component within
@@ -374,7 +374,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see       RepaintManager
 	* @since     1.6
 	*/
-	@:require(java6) @:overload public function repaint(time : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java6) @:overload @:public override public function repaint(time : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Returns a string representation of this JApplet. This method
@@ -385,9 +385,9 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	*
 	* @return  a string representation of this JApplet.
 	*/
-	@:overload private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
-	private var accessibleContext : javax.accessibility.AccessibleContext;
+	@:protected private var accessibleContext : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Gets the AccessibleContext associated with this JApplet.
@@ -398,7 +398,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @return an AccessibleJApplet that serves as the
 	*         AccessibleContext of this JApplet
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }

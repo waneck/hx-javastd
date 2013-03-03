@@ -68,7 +68,7 @@ extern class VerifyAccess
 	* @param lookupClass the class for which the access check is being made
 	* @return true iff the the accessing class can access such a member
 	*/
-	@:overload public static function isMemberAccessible(refc : Class<Dynamic>, defc : Class<Dynamic>, mods : Int, lookupClass : Class<Dynamic>, allowedModes : Int) : Bool;
+	@:overload @:public @:static public static function isMemberAccessible(refc : Class<Dynamic>, defc : Class<Dynamic>, mods : Int, lookupClass : Class<Dynamic>, allowedModes : Int) : Bool;
 	
 	/**
 	* Evaluate the JVM linkage rules for access to the given class on behalf of caller.
@@ -81,7 +81,7 @@ extern class VerifyAccess
 	* @param refc the symbolic reference class to which access is being checked (C)
 	* @param lookupClass the class performing the lookup (D)
 	*/
-	@:overload public static function isClassAccessible(refc : Class<Dynamic>, lookupClass : Class<Dynamic>, allowedModes : Int) : Bool;
+	@:overload @:public @:static public static function isClassAccessible(refc : Class<Dynamic>, lookupClass : Class<Dynamic>, allowedModes : Int) : Bool;
 	
 	/**
 	* Test if two classes have the same class loader and package qualifier.
@@ -89,11 +89,11 @@ extern class VerifyAccess
 	* @param class2
 	* @return whether they are in the same package
 	*/
-	@:overload public static function isSamePackage(class1 : Class<Dynamic>, class2 : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function isSamePackage(class1 : Class<Dynamic>, class2 : Class<Dynamic>) : Bool;
 	
 	/** Return the package name for this class.
 	*/
-	@:overload public static function getPackageName(cls : Class<Dynamic>) : String;
+	@:overload @:public @:static public static function getPackageName(cls : Class<Dynamic>) : String;
 	
 	/**
 	* Test if two classes are defined as part of the same package member (top-level class).
@@ -102,7 +102,7 @@ extern class VerifyAccess
 	* @param class2
 	* @return whether they are identical or nested together
 	*/
-	@:overload public static function isSamePackageMember(class1 : Class<Dynamic>, class2 : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function isSamePackageMember(class1 : Class<Dynamic>, class2 : Class<Dynamic>) : Bool;
 	
 	/**
 	* Is the class loader of parentClass identical to, or an ancestor of,
@@ -111,7 +111,7 @@ extern class VerifyAccess
 	* @param childClass
 	* @return whether parentClass precedes or equals childClass in class loader order
 	*/
-	@:overload public static function classLoaderIsAncestor(parentClass : Class<Dynamic>, childClass : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function classLoaderIsAncestor(parentClass : Class<Dynamic>, childClass : Class<Dynamic>) : Bool;
 	
 	
 }

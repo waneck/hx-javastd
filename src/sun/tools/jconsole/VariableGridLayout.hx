@@ -25,19 +25,19 @@ package sun.tools.jconsole;
 */
 extern class VariableGridLayout extends java.awt.GridLayout
 {
-	@:overload public function new(rows : Int, cols : Int, hgap : Int, vgap : Int, fillRows : Bool, fillColumns : Bool) : Void;
+	@:overload @:public public function new(rows : Int, cols : Int, hgap : Int, vgap : Int, fillRows : Bool, fillColumns : Bool) : Void;
 	
-	@:overload public function setFillRow(c : javax.swing.JComponent, b : Bool) : Void;
+	@:overload @:public public function setFillRow(c : javax.swing.JComponent, b : Bool) : Void;
 	
-	@:overload public function setFillColumn(c : javax.swing.JComponent, b : Bool) : Void;
+	@:overload @:public public function setFillColumn(c : javax.swing.JComponent, b : Bool) : Void;
 	
-	@:overload public function getFillRow(c : javax.swing.JComponent) : Bool;
+	@:overload @:public public function getFillRow(c : javax.swing.JComponent) : Bool;
 	
-	@:overload public function getFillColumn(c : javax.swing.JComponent) : Bool;
+	@:overload @:public public function getFillColumn(c : javax.swing.JComponent) : Bool;
 	
-	@:overload override public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public override public function layoutContainer(parent : java.awt.Container) : Void;
 	
-	@:overload override public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public override public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	
 }

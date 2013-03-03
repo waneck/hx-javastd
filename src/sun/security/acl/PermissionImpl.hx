@@ -34,7 +34,7 @@ extern class PermissionImpl implements java.security.acl.Permission
 	* Construct a permission object using a string.
 	* @param permission the stringified version of the permission.
 	*/
-	@:overload public function new(permission : String) : Void;
+	@:overload @:public public function new(permission : String) : Void;
 	
 	/**
 	* This function returns true if the object passed matches the permission
@@ -42,20 +42,20 @@ extern class PermissionImpl implements java.security.acl.Permission
 	* @param another The Permission object to compare with.
 	* @return true if the Permission objects are equal, false otherwise
 	*/
-	@:overload public function equals(another : Dynamic) : Bool;
+	@:overload @:public public function equals(another : Dynamic) : Bool;
 	
 	/**
 	* Prints a stringified version of the permission.
 	* @return the string representation of the Permission.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hashcode for this PermissionImpl.
 	*
 	* @return a hashcode for this PermissionImpl.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

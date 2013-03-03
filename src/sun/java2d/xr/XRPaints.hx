@@ -25,13 +25,13 @@ package sun.java2d.xr;
 */
 @:internal extern class XRPaints
 {
-	@:overload public static function register(xrComp : sun.java2d.xr.XRCompositeManager) : Void;
+	@:overload @:public @:static public static function register(xrComp : sun.java2d.xr.XRCompositeManager) : Void;
 	
-	@:overload public function getGradientLength(pt1 : java.awt.geom.Point2D, pt2 : java.awt.geom.Point2D) : Int;
+	@:overload @:public public function getGradientLength(pt1 : java.awt.geom.Point2D, pt2 : java.awt.geom.Point2D) : Int;
 	
-	@:overload public function convertToIntArgbPixels(colors : java.NativeArray<java.awt.Color>, linear : Bool) : java.NativeArray<Int>;
+	@:overload @:public public function convertToIntArgbPixels(colors : java.NativeArray<java.awt.Color>, linear : Bool) : java.NativeArray<Int>;
 	
-	@:overload public function colorToIntArgbPixel(c : java.awt.Color, linear : Bool) : Int;
+	@:overload @:public public function colorToIntArgbPixel(c : java.awt.Color, linear : Bool) : Int;
 	
 	
 }

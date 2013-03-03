@@ -39,21 +39,21 @@ extern class InterfaceEntry extends com.sun.tools.corba.se.idl.SymtabEntry imple
 	/**
 	* This is the symbol table entry for interfaces.
 	**/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.InterfaceEntry) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.InterfaceEntry) : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
-	@:overload public function isAbstract() : Bool;
+	@:overload @:public public function isAbstract() : Bool;
 	
-	@:overload public function isLocal() : Bool;
+	@:overload @:public public function isLocal() : Bool;
 	
-	@:overload public function isLocalServant() : Bool;
+	@:overload @:public public function isLocalServant() : Bool;
 	
-	@:overload public function isLocalSignature() : Bool;
+	@:overload @:public public function isLocalSignature() : Bool;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/** Invoke the interface generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -61,65 +61,65 @@ extern class InterfaceEntry extends com.sun.tools.corba.se.idl.SymtabEntry imple
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload @:public override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the interface generator.
 	@returns an object which implements the InterfaceGen interface.
 	@see InterfaceGen */
-	@:overload override public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload @:public override public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	/** Add an InterfaceEntry to the list of interfaces which this interface
 	is derivedFrom.  During parsing, the parameter to this method COULD
 	be a ForwardEntry, but when parsing is complete, calling derivedFrom
 	will return a vector which only contains InterfaceEntry's. */
-	@:overload public function addDerivedFrom(derivedFrom : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:public public function addDerivedFrom(derivedFrom : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/** This method returns a vector of InterfaceEntry's. */
-	@:overload public function derivedFrom() : java.util.Vector<Dynamic>;
+	@:overload @:public public function derivedFrom() : java.util.Vector<Dynamic>;
 	
 	/** Add to the list of derivedFrom names. */
-	@:overload public function addDerivedFromName(name : String) : Void;
+	@:overload @:public public function addDerivedFromName(name : String) : Void;
 	
 	/** This method returns a vector of Strings, each of which is a fully
 	qualified name of an interface. This vector corresponds to the
 	derivedFrom vector.  The first element of this vector is the name
 	of the first element of the derivedFrom vector, etc. */
-	@:overload public function derivedFromNames() : java.util.Vector<Dynamic>;
+	@:overload @:public public function derivedFromNames() : java.util.Vector<Dynamic>;
 	
 	/** Add a method/attribute to the list of methods. */
-	@:overload public function addMethod(method : com.sun.tools.corba.se.idl.MethodEntry) : Void;
+	@:overload @:public public function addMethod(method : com.sun.tools.corba.se.idl.MethodEntry) : Void;
 	
 	/** This is a vector of MethodEntry's.  These are the methods and
 	attributes contained within this Interface. */
-	@:overload public function methods() : java.util.Vector<Dynamic>;
+	@:overload @:public public function methods() : java.util.Vector<Dynamic>;
 	
 	/** Add a symbol table entry to this interface's contained vector. */
-	@:overload public function addContained(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:public public function addContained(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/** This is a vector of SymtabEntry's.  Valid entries in this vector are:
 	AttributeEntry, ConstEntry, EnumEntry, ExceptionEntry, MethodEntry,
 	StructEntry, NativeEntry, TypedefEntry, UnionEntry.
 	Note that the methods vector is a subset of this vector. */
-	@:overload public function contained() : java.util.Vector<Dynamic>;
+	@:overload @:public public function contained() : java.util.Vector<Dynamic>;
 	
-	@:overload public function replaceForwardDecl(oldEntry : com.sun.tools.corba.se.idl.ForwardEntry, newEntry : com.sun.tools.corba.se.idl.InterfaceEntry) : Bool;
+	@:overload @:public public function replaceForwardDecl(oldEntry : com.sun.tools.corba.se.idl.ForwardEntry, newEntry : com.sun.tools.corba.se.idl.InterfaceEntry) : Bool;
 	
 	/** This method returns a vector of the elements in the state block.
 	If it is null, this is not a stateful interface.  If it is non-null,
 	but of zero length, then it is still stateful; it has no state
 	entries itself, but it has an ancestor which does. */
-	@:overload public function state() : java.util.Vector<Dynamic>;
+	@:overload @:public public function state() : java.util.Vector<Dynamic>;
 	
-	@:overload public function initState() : Void;
+	@:overload @:public public function initState() : Void;
 	
-	@:overload public function addStateElement(state : com.sun.tools.corba.se.idl.InterfaceState, scanner : com.sun.tools.corba.se.idl.Scanner) : Void;
+	@:overload @:public public function addStateElement(state : com.sun.tools.corba.se.idl.InterfaceState, scanner : com.sun.tools.corba.se.idl.Scanner) : Void;
 	
-	@:overload public function getInterfaceType() : Int;
+	@:overload @:public public function getInterfaceType() : Int;
 	
-	@:overload public function setInterfaceType(type : Int) : Void;
+	@:overload @:public public function setInterfaceType(type : Int) : Void;
 	
 	/** Get the allMethods vector. */
-	@:overload public function allMethods() : java.util.Vector<Dynamic>;
+	@:overload @:public public function allMethods() : java.util.Vector<Dynamic>;
 	
 	
 }

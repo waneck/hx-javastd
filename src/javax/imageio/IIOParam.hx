@@ -28,21 +28,21 @@ extern class IIOParam
 	/**
 	* The source region, on <code>null</code> if none is set.
 	*/
-	private var sourceRegion : java.awt.Rectangle;
+	@:protected private var sourceRegion : java.awt.Rectangle;
 	
 	/**
 	* The decimation subsampling to be applied in the horizontal
 	* direction.  By default, the value is <code>1</code>.
 	* The value must not be negative or 0.
 	*/
-	private var sourceXSubsampling : Int;
+	@:protected private var sourceXSubsampling : Int;
 	
 	/**
 	* The decimation subsampling to be applied in the vertical
 	* direction.  By default, the value is <code>1</code>.
 	* The value must not be negative or 0.
 	*/
-	private var sourceYSubsampling : Int;
+	@:protected private var sourceYSubsampling : Int;
 	
 	/**
 	* A horizontal offset to be applied to the subsampling grid before
@@ -50,7 +50,7 @@ extern class IIOParam
 	* amount from the origin of the region, or of the image if no
 	* region is specified.
 	*/
-	private var subsamplingXOffset : Int;
+	@:protected private var subsamplingXOffset : Int;
 	
 	/**
 	* A vertical offset to be applied to the subsampling grid before
@@ -58,7 +58,7 @@ extern class IIOParam
 	* amount from the origin of the region, or of the image if no
 	* region is specified.
 	*/
-	private var subsamplingYOffset : Int;
+	@:protected private var subsamplingYOffset : Int;
 	
 	/**
 	* An array of <code>int</code>s indicating which source bands
@@ -67,7 +67,7 @@ extern class IIOParam
 	* for the <code>setSourceBands</code> method.  No value should
 	* be allowed to be negative.
 	*/
-	private var sourceBands : java.NativeArray<Int>;
+	@:protected private var sourceBands : java.NativeArray<Int>;
 	
 	/**
 	* An <code>ImageTypeSpecifier</code> to be used to generate a
@@ -75,13 +75,13 @@ extern class IIOParam
 	* when writing.  If non has been setm the value will be
 	* <code>null</code>.  By default, the value is <code>null</code>.
 	*/
-	private var destinationType : javax.imageio.ImageTypeSpecifier;
+	@:protected private var destinationType : javax.imageio.ImageTypeSpecifier;
 	
 	/**
 	* The offset in the destination where the upper-left decoded
 	* pixel should be placed.  By default, the value is (0, 0).
 	*/
-	private var destinationOffset : java.awt.Point;
+	@:protected private var destinationOffset : java.awt.Point;
 	
 	/**
 	* The default <code>IIOParamController</code> that will be
@@ -95,7 +95,7 @@ extern class IIOParam
 	* @see #getDefaultController
 	* @see #activateController
 	*/
-	private var defaultController : javax.imageio.IIOParamController;
+	@:protected private var defaultController : javax.imageio.IIOParamController;
 	
 	/**
 	* The <code>IIOParamController</code> that will be
@@ -109,12 +109,12 @@ extern class IIOParam
 	* @see #hasController()
 	* @see #activateController()
 	*/
-	private var controller : javax.imageio.IIOParamController;
+	@:protected private var controller : javax.imageio.IIOParamController;
 	
 	/**
 	* Protected constructor may be called only by subclasses.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Sets the source region of interest.  The region of interest is
@@ -153,7 +153,7 @@ extern class IIOParam
 	* @see ImageReadParam#setDestinationOffset
 	* @see ImageReadParam#getDestinationOffset
 	*/
-	@:overload public function setSourceRegion(sourceRegion : java.awt.Rectangle) : Void;
+	@:overload @:public public function setSourceRegion(sourceRegion : java.awt.Rectangle) : Void;
 	
 	/**
 	* Returns the source region to be used.  The returned value is
@@ -166,7 +166,7 @@ extern class IIOParam
 	*
 	* @see #setSourceRegion
 	*/
-	@:overload public function getSourceRegion() : java.awt.Rectangle;
+	@:overload @:public public function getSourceRegion() : java.awt.Rectangle;
 	
 	/**
 	* Specifies a decimation subsampling to apply on I/O.  The
@@ -236,7 +236,7 @@ extern class IIOParam
 	* @exception IllegalStateException if the source region is such that
 	* the subsampled output would contain no pixels.
 	*/
-	@:overload public function setSourceSubsampling(sourceXSubsampling : Int, sourceYSubsampling : Int, subsamplingXOffset : Int, subsamplingYOffset : Int) : Void;
+	@:overload @:public public function setSourceSubsampling(sourceXSubsampling : Int, sourceYSubsampling : Int, subsamplingXOffset : Int, subsamplingYOffset : Int) : Void;
 	
 	/**
 	* Returns the number of source columns to advance for each pixel.
@@ -249,7 +249,7 @@ extern class IIOParam
 	* @see #setSourceSubsampling
 	* @see #getSourceYSubsampling
 	*/
-	@:overload public function getSourceXSubsampling() : Int;
+	@:overload @:public public function getSourceXSubsampling() : Int;
 	
 	/**
 	* Returns the number of rows to advance for each pixel.
@@ -262,7 +262,7 @@ extern class IIOParam
 	* @see #setSourceSubsampling
 	* @see #getSourceXSubsampling
 	*/
-	@:overload public function getSourceYSubsampling() : Int;
+	@:overload @:public public function getSourceYSubsampling() : Int;
 	
 	/**
 	* Returns the horizontal offset of the subsampling grid.
@@ -275,7 +275,7 @@ extern class IIOParam
 	* @see #setSourceSubsampling
 	* @see #getSubsamplingYOffset
 	*/
-	@:overload public function getSubsamplingXOffset() : Int;
+	@:overload @:public public function getSubsamplingXOffset() : Int;
 	
 	/**
 	* Returns the vertical offset of the subsampling grid.
@@ -288,7 +288,7 @@ extern class IIOParam
 	* @see #setSourceSubsampling
 	* @see #getSubsamplingXOffset
 	*/
-	@:overload public function getSubsamplingYOffset() : Int;
+	@:overload @:public public function getSubsamplingYOffset() : Int;
 	
 	/**
 	* Sets the indices of the source bands to be used.  Duplicate
@@ -319,7 +319,7 @@ extern class IIOParam
 	* @see ImageReadParam#setDestinationBands
 	* @see ImageReader#checkReadParamBandSettings
 	*/
-	@:overload public function setSourceBands(sourceBands : java.NativeArray<Int>) : Void;
+	@:overload @:public public function setSourceBands(sourceBands : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Returns the set of of source bands to be used. The returned
@@ -336,7 +336,7 @@ extern class IIOParam
 	*
 	* @see #setSourceBands
 	*/
-	@:overload public function getSourceBands() : java.NativeArray<Int>;
+	@:overload @:public public function getSourceBands() : java.NativeArray<Int>;
 	
 	/**
 	* Sets the desired image type for the destination image, using an
@@ -369,7 +369,7 @@ extern class IIOParam
 	*
 	* @see #getDestinationType
 	*/
-	@:overload public function setDestinationType(destinationType : javax.imageio.ImageTypeSpecifier) : Void;
+	@:overload @:public public function setDestinationType(destinationType : javax.imageio.ImageTypeSpecifier) : Void;
 	
 	/**
 	* Returns the type of image to be returned by the read, if one
@@ -383,7 +383,7 @@ extern class IIOParam
 	*
 	* @see #setDestinationType
 	*/
-	@:overload public function getDestinationType() : javax.imageio.ImageTypeSpecifier;
+	@:overload @:public public function getDestinationType() : javax.imageio.ImageTypeSpecifier;
 	
 	/**
 	* Specifies the offset in the destination image at which future
@@ -414,7 +414,7 @@ extern class IIOParam
 	* @see #getDestinationOffset
 	* @see ImageWriter#replacePixels
 	*/
-	@:overload public function setDestinationOffset(destinationOffset : java.awt.Point) : Void;
+	@:overload @:public public function setDestinationOffset(destinationOffset : java.awt.Point) : Void;
 	
 	/**
 	* Returns the offset in the destination image at which pixels are
@@ -428,7 +428,7 @@ extern class IIOParam
 	*
 	* @see #setDestinationOffset
 	*/
-	@:overload public function getDestinationOffset() : java.awt.Point;
+	@:overload @:public public function getDestinationOffset() : java.awt.Point;
 	
 	/**
 	* Sets the <code>IIOParamController</code> to be used
@@ -448,7 +448,7 @@ extern class IIOParam
 	* @see #hasController
 	* @see #activateController()
 	*/
-	@:overload public function setController(controller : javax.imageio.IIOParamController) : Void;
+	@:overload @:public public function setController(controller : javax.imageio.IIOParamController) : Void;
 	
 	/**
 	* Returns whatever <code>IIOParamController</code> is currently
@@ -465,7 +465,7 @@ extern class IIOParam
 	* @see #hasController
 	* @see #activateController()
 	*/
-	@:overload public function getController() : javax.imageio.IIOParamController;
+	@:overload @:public public function getController() : javax.imageio.IIOParamController;
 	
 	/**
 	* Returns the default <code>IIOParamController</code>, if there
@@ -481,7 +481,7 @@ extern class IIOParam
 	* @see #hasController
 	* @see #activateController()
 	*/
-	@:overload public function getDefaultController() : javax.imageio.IIOParamController;
+	@:overload @:public public function getDefaultController() : javax.imageio.IIOParamController;
 	
 	/**
 	* Returns <code>true</code> if there is a controller installed
@@ -497,7 +497,7 @@ extern class IIOParam
 	* @see #getDefaultController
 	* @see #activateController()
 	*/
-	@:overload public function hasController() : Bool;
+	@:overload @:public public function hasController() : Bool;
 	
 	/**
 	* Activates the installed <code>IIOParamController</code> for
@@ -523,7 +523,7 @@ extern class IIOParam
 	* @see #getDefaultController
 	* @see #hasController
 	*/
-	@:overload public function activateController() : Bool;
+	@:overload @:public public function activateController() : Bool;
 	
 	
 }

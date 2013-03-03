@@ -33,7 +33,7 @@ extern class WhitespaceNormalizer
 	*      The owner code model object under which a new expression
 	*      will be created.
 	*/
-	@:overload @:abstract public function generate(codeModel : com.sun.codemodel.internal.JCodeModel, literal : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:abstract public function generate(codeModel : com.sun.codemodel.internal.JCodeModel, literal : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Parses "preserve","replace" or "collapse" into
@@ -45,13 +45,13 @@ extern class WhitespaceNormalizer
 	* @exception    IllegalArgumentException
 	*        when the specified method is invalid.
 	*/
-	@:overload public static function parse(method : String) : com.sun.tools.internal.xjc.generator.util.WhitespaceNormalizer;
+	@:overload @:public @:static public static function parse(method : String) : com.sun.tools.internal.xjc.generator.util.WhitespaceNormalizer;
 	
-	public static var PRESERVE(default, null) : com.sun.tools.internal.xjc.generator.util.WhitespaceNormalizer;
+	@:public @:static @:final public static var PRESERVE(default, null) : com.sun.tools.internal.xjc.generator.util.WhitespaceNormalizer;
 	
-	public static var REPLACE(default, null) : com.sun.tools.internal.xjc.generator.util.WhitespaceNormalizer;
+	@:public @:static @:final public static var REPLACE(default, null) : com.sun.tools.internal.xjc.generator.util.WhitespaceNormalizer;
 	
-	public static var COLLAPSE(default, null) : com.sun.tools.internal.xjc.generator.util.WhitespaceNormalizer;
+	@:public @:static @:final public static var COLLAPSE(default, null) : com.sun.tools.internal.xjc.generator.util.WhitespaceNormalizer;
 	
 	
 }

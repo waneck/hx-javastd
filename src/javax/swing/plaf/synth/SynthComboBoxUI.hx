@@ -31,7 +31,7 @@ extern class SynthComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 	* @param c component to create UI object for
 	* @return the UI object
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
@@ -40,59 +40,59 @@ extern class SynthComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 	* the other installXXX methods, since several of them reference
 	* buttonHandler.
 	*/
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function installDefaults() : Void;
-	
-	/**
-	* @inheritDoc
-	*/
-	@:overload override private function installListeners() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallDefaults() : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function createPopup() : javax.swing.plaf.basic.ComboPopup;
+	@:overload @:public public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function createRenderer() : javax.swing.ListCellRenderer<Dynamic>;
+	@:overload @:protected override private function createPopup() : javax.swing.plaf.basic.ComboPopup;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function createEditor() : javax.swing.ComboBoxEditor;
+	@:overload @:protected override private function createRenderer() : javax.swing.ListCellRenderer<Dynamic>;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected override private function createEditor() : javax.swing.ComboBoxEditor;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function createArrowButton() : javax.swing.JButton;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	
+	/**
+	* @inheritDoc
+	*/
+	@:overload @:protected override private function createArrowButton() : javax.swing.JButton;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -106,7 +106,7 @@ extern class SynthComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -117,7 +117,7 @@ extern class SynthComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component.
@@ -126,17 +126,17 @@ extern class SynthComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 	* @param g the {@code Graphics} object used for painting
 	* @see #update(Graphics,JComponent)
 	*/
-	@:overload private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the currently selected item.
 	*/
-	@:overload override public function paintCurrentValue(g : java.awt.Graphics, bounds : java.awt.Rectangle, hasFocus : Bool) : Void;
+	@:overload @:public override public function paintCurrentValue(g : java.awt.Graphics, bounds : java.awt.Rectangle, hasFocus : Bool) : Void;
 	
 	/**
 	* Returns the default size of an empty display area of the combo box using
@@ -150,7 +150,7 @@ extern class SynthComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 	* @return the size of an empty display area
 	* @see #getDisplaySize
 	*/
-	@:overload override private function getDefaultSize() : java.awt.Dimension;
+	@:overload @:protected override private function getDefaultSize() : java.awt.Dimension;
 	
 	
 }
@@ -163,19 +163,19 @@ extern class SynthComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 */
 @:native('javax$swing$plaf$synth$SynthComboBoxUI$SynthComboBoxRenderer') @:internal extern class SynthComboBoxUI_SynthComboBoxRenderer extends javax.swing.JLabel implements javax.swing.ListCellRenderer<Dynamic> implements javax.swing.plaf.UIResource
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
-	@:overload public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
+	@:overload @:public public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$synth$SynthComboBoxUI$SynthComboBoxEditor') @:internal extern class SynthComboBoxUI_SynthComboBoxEditor extends javax.swing.plaf.basic.BasicComboBoxEditor.BasicComboBoxEditor_UIResource
 {
-	@:overload override public function createEditorComponent() : javax.swing.JTextField;
+	@:overload @:public override public function createEditorComponent() : javax.swing.JTextField;
 	
 	
 }
@@ -198,7 +198,7 @@ extern class SynthComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 	* visible. This is the case because a combo box looks pressed when
 	* the popup is visible, and so should the arrow button.
 	*/
-	@:overload override public function isPressed() : Bool;
+	@:overload @:public override public function isPressed() : Bool;
 	
 	/**
 	* @inheritDoc
@@ -208,7 +208,7 @@ extern class SynthComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 	* button will not look pressed when the popup is open, regardless
 	* of the result of isPressed() alone.
 	*/
-	@:overload override public function isArmed() : Bool;
+	@:overload @:public override public function isArmed() : Bool;
 	
 	/**
 	* @inheritDoc
@@ -216,31 +216,31 @@ extern class SynthComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 	* Ensures that isRollover() will return true if the combo is
 	* rolled over, or the arrowButton is rolled over.
 	*/
-	@:overload override public function isRollover() : Bool;
+	@:overload @:public override public function isRollover() : Bool;
 	
 	/**
 	* @inheritDoc
 	*
 	* Forwards pressed states to the internal "pressed" field
 	*/
-	@:overload override public function setPressed(b : Bool) : Void;
+	@:overload @:public override public function setPressed(b : Bool) : Void;
 	
 	/**
 	* @inheritDoc
 	*
 	* Forwards rollover states to the internal "over" field
 	*/
-	@:overload override public function setRollover(b : Bool) : Void;
+	@:overload @:public override public function setRollover(b : Bool) : Void;
 	
-	@:overload public function mouseEntered(mouseEvent : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(mouseEvent : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(mouseEvent : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(mouseEvent : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mousePressed(mouseEvent : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(mouseEvent : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(mouseEvent : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(mouseEvent : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* @inheritDoc
@@ -252,11 +252,11 @@ extern class SynthComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 	* This bug was only noticed when acting as a button, but may be generally
 	* present. If so, remove the if() block
 	*/
-	@:overload public function popupMenuCanceled(e : javax.swing.event.PopupMenuEvent) : Void;
+	@:overload @:public public function popupMenuCanceled(e : javax.swing.event.PopupMenuEvent) : Void;
 	
-	@:overload public function popupMenuWillBecomeVisible(e : javax.swing.event.PopupMenuEvent) : Void;
+	@:overload @:public public function popupMenuWillBecomeVisible(e : javax.swing.event.PopupMenuEvent) : Void;
 	
-	@:overload public function popupMenuWillBecomeInvisible(e : javax.swing.event.PopupMenuEvent) : Void;
+	@:overload @:public public function popupMenuWillBecomeInvisible(e : javax.swing.event.PopupMenuEvent) : Void;
 	
 	
 }
@@ -265,13 +265,13 @@ extern class SynthComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 */
 @:native('javax$swing$plaf$synth$SynthComboBoxUI$EditorFocusHandler') @:internal extern class SynthComboBoxUI_EditorFocusHandler implements java.awt.event.FocusListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function unregister() : Void;
+	@:overload @:public public function unregister() : Void;
 	
 	/** Invoked when a component gains the keyboard focus. */
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
 	/** Invoked when a component loses the keyboard focus. */
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
 	/**
 	* Called when the combos editor changes
@@ -279,7 +279,7 @@ extern class SynthComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 	* @param evt A PropertyChangeEvent object describing the event source and
 	*            the property that has changed.
 	*/
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

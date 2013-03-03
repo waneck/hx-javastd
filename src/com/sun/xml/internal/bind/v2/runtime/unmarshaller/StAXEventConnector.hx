@@ -34,13 +34,13 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 	* @param visitor
 	*                sink
 	*/
-	@:overload public function new(staxCore : javax.xml.stream.XMLEventReader, visitor : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor) : Void;
+	@:overload @:public public function new(staxCore : javax.xml.stream.XMLEventReader, visitor : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor) : Void;
 	
-	@:overload public function bridge() : Void;
+	@:overload @:public override public function bridge() : Void;
 	
-	@:overload private function getCurrentLocation() : javax.xml.stream.Location;
+	@:overload @:protected override private function getCurrentLocation() : javax.xml.stream.Location;
 	
-	@:overload private function getCurrentQName() : String;
+	@:overload @:protected override private function getCurrentQName() : String;
 	
 	
 }

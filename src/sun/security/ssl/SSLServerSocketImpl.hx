@@ -35,14 +35,14 @@ package sun.security.ssl;
 	*
 	* @return an array of cipher suite names
 	*/
-	@:overload public function getSupportedCipherSuites() : java.NativeArray<String>;
+	@:overload @:public override public function getSupportedCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Returns the list of cipher suites which are currently enabled
 	* for use by newly accepted connections.  A null return indicates
 	* that the system defaults are in effect.
 	*/
-	@:overload @:synchronized public function getEnabledCipherSuites() : java.NativeArray<String>;
+	@:overload @:synchronized @:public override public function getEnabledCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Controls which particular SSL cipher suites are enabled for use
@@ -51,9 +51,9 @@ package sun.security.ssl;
 	* @param suites Names of all the cipher suites to enable; null
 	*  means to accept system defaults.
 	*/
-	@:overload @:synchronized public function setEnabledCipherSuites(suites : java.NativeArray<String>) : Void;
+	@:overload @:synchronized @:public override public function setEnabledCipherSuites(suites : java.NativeArray<String>) : Void;
 	
-	@:overload public function getSupportedProtocols() : java.NativeArray<String>;
+	@:overload @:public override public function getSupportedProtocols() : java.NativeArray<String>;
 	
 	/**
 	* Controls which protocols are enabled for use.
@@ -64,25 +64,25 @@ package sun.security.ssl;
 	* @exception IllegalArgumentException when one of the protocols
 	*  named by the parameter is not supported.
 	*/
-	@:overload @:synchronized public function setEnabledProtocols(protocols : java.NativeArray<String>) : Void;
+	@:overload @:synchronized @:public override public function setEnabledProtocols(protocols : java.NativeArray<String>) : Void;
 	
-	@:overload @:synchronized public function getEnabledProtocols() : java.NativeArray<String>;
+	@:overload @:synchronized @:public override public function getEnabledProtocols() : java.NativeArray<String>;
 	
 	/**
 	* Controls whether the connections which are accepted must include
 	* client authentication.
 	*/
-	@:overload public function setNeedClientAuth(flag : Bool) : Void;
+	@:overload @:public override public function setNeedClientAuth(flag : Bool) : Void;
 	
-	@:overload public function getNeedClientAuth() : Bool;
+	@:overload @:public override public function getNeedClientAuth() : Bool;
 	
 	/**
 	* Controls whether the connections which are accepted should request
 	* client authentication.
 	*/
-	@:overload public function setWantClientAuth(flag : Bool) : Void;
+	@:overload @:public override public function setWantClientAuth(flag : Bool) : Void;
 	
-	@:overload public function getWantClientAuth() : Bool;
+	@:overload @:public override public function getWantClientAuth() : Bool;
 	
 	/**
 	* Makes the returned sockets act in SSL "client" mode, not the usual
@@ -90,43 +90,43 @@ package sun.security.ssl;
 	* FTP clients, which accept connections from servers and should be
 	* rejoining the already-negotiated SSL connection.
 	*/
-	@:overload public function setUseClientMode(flag : Bool) : Void;
+	@:overload @:public override public function setUseClientMode(flag : Bool) : Void;
 	
-	@:overload public function getUseClientMode() : Bool;
+	@:overload @:public override public function getUseClientMode() : Bool;
 	
 	/**
 	* Controls whether new connections may cause creation of new SSL
 	* sessions.
 	*/
-	@:overload public function setEnableSessionCreation(flag : Bool) : Void;
+	@:overload @:public override public function setEnableSessionCreation(flag : Bool) : Void;
 	
 	/**
 	* Returns true if new connections may cause creation of new SSL
 	* sessions.
 	*/
-	@:overload public function getEnableSessionCreation() : Bool;
+	@:overload @:public override public function getEnableSessionCreation() : Bool;
 	
 	/**
 	* Returns the SSLParameters in effect for newly accepted connections.
 	*/
-	@:overload @:synchronized public function getSSLParameters() : javax.net.ssl.SSLParameters;
+	@:overload @:synchronized @:public override public function getSSLParameters() : javax.net.ssl.SSLParameters;
 	
 	/**
 	* Applies SSLParameters to newly accepted connections.
 	*/
-	@:overload @:synchronized public function setSSLParameters(params : javax.net.ssl.SSLParameters) : Void;
+	@:overload @:synchronized @:public override public function setSSLParameters(params : javax.net.ssl.SSLParameters) : Void;
 	
 	/**
 	* Accept a new SSL connection.  This server identifies itself with
 	* information provided in the authentication context which was
 	* presented during construction.
 	*/
-	@:overload public function accept() : java.net.Socket;
+	@:overload @:public override public function accept() : java.net.Socket;
 	
 	/**
 	* Provides a brief description of this SSL socket.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

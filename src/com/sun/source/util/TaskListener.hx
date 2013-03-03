@@ -31,9 +31,9 @@ package com.sun.source.util;
 */
 @:require(java6) extern interface TaskListener
 {
-	@:overload public function started(e : com.sun.source.util.TaskEvent) : Void;
+	@:overload @:public public function started(e : com.sun.source.util.TaskEvent) : Void;
 	
-	@:overload public function finished(e : com.sun.source.util.TaskEvent) : Void;
+	@:overload @:public public function finished(e : com.sun.source.util.TaskEvent) : Void;
 	
 	
 }

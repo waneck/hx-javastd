@@ -26,42 +26,42 @@ package com.sun.tools.javac.util;
 extern class JavacMessages implements com.sun.tools.javac.api.Messages
 {
 	/** The context key for the JavacMessages object. */
-	public static var messagesKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.util.JavacMessages>;
+	@:public @:static @:final public static var messagesKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.util.JavacMessages>;
 	
 	/** Get the JavacMessages instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.util.JavacMessages;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.util.JavacMessages;
 	
-	@:overload public function getCurrentLocale() : java.util.Locale;
+	@:overload @:public public function getCurrentLocale() : java.util.Locale;
 	
-	@:overload public function setCurrentLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setCurrentLocale(locale : java.util.Locale) : Void;
 	
 	/** Creates a JavacMessages object.
 	*/
-	@:overload public function new(context : com.sun.tools.javac.util.Context) : Void;
-	
-	/** Creates a JavacMessages object.
-	* @param bundleName the name to identify the resource buundle of localized messages.
-	*/
-	@:overload public function new(bundleName : String) : Void;
+	@:overload @:public public function new(context : com.sun.tools.javac.util.Context) : Void;
 	
 	/** Creates a JavacMessages object.
 	* @param bundleName the name to identify the resource buundle of localized messages.
 	*/
-	@:overload public function new(bundleName : String, locale : java.util.Locale) : Void;
+	@:overload @:public public function new(bundleName : String) : Void;
 	
-	@:overload public function new() : Void;
+	/** Creates a JavacMessages object.
+	* @param bundleName the name to identify the resource buundle of localized messages.
+	*/
+	@:overload @:public public function new(bundleName : String, locale : java.util.Locale) : Void;
 	
-	@:overload public function add(bundleName : String) : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getBundles(locale : java.util.Locale) : com.sun.tools.javac.util.List<java.util.ResourceBundle>;
+	@:overload @:public public function add(bundleName : String) : Void;
+	
+	@:overload @:public public function getBundles(locale : java.util.Locale) : com.sun.tools.javac.util.List<java.util.ResourceBundle>;
 	
 	/** Gets the localized string corresponding to a key, formatted with a set of args.
 	*/
-	@:overload public function getLocalizedString(key : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public public function getLocalizedString(key : String, args : java.NativeArray<Dynamic>) : String;
 	
-	@:overload public function getLocalizedString(l : java.util.Locale, key : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public public function getLocalizedString(l : java.util.Locale, key : String, args : java.NativeArray<Dynamic>) : String;
 	
-	@:overload public static function getDefaultBundle() : java.util.ResourceBundle;
+	@:overload @:public @:static public static function getDefaultBundle() : java.util.ResourceBundle;
 	
 	
 }

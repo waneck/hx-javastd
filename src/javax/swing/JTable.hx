@@ -26,109 +26,109 @@ package javax.swing;
 extern class JTable extends javax.swing.JComponent implements javax.swing.event.TableModelListener implements javax.swing.Scrollable implements javax.swing.event.TableColumnModelListener implements javax.swing.event.ListSelectionListener implements javax.swing.event.CellEditorListener implements javax.accessibility.Accessible implements javax.swing.event.RowSorterListener
 {
 	/** Do not adjust column widths automatically; use a horizontal scrollbar instead. */
-	public static var AUTO_RESIZE_OFF(default, null) : Int;
+	@:public @:static @:final public static var AUTO_RESIZE_OFF(default, null) : Int;
 	
 	/** When a column is adjusted in the UI, adjust the next column the opposite way. */
-	public static var AUTO_RESIZE_NEXT_COLUMN(default, null) : Int;
+	@:public @:static @:final public static var AUTO_RESIZE_NEXT_COLUMN(default, null) : Int;
 	
 	/** During UI adjustment, change subsequent columns to preserve the total width;
 	* this is the default behavior. */
-	public static var AUTO_RESIZE_SUBSEQUENT_COLUMNS(default, null) : Int;
+	@:public @:static @:final public static var AUTO_RESIZE_SUBSEQUENT_COLUMNS(default, null) : Int;
 	
 	/** During all resize operations, apply adjustments to the last column only. */
-	public static var AUTO_RESIZE_LAST_COLUMN(default, null) : Int;
+	@:public @:static @:final public static var AUTO_RESIZE_LAST_COLUMN(default, null) : Int;
 	
 	/** During all resize operations, proportionately resize all columns. */
-	public static var AUTO_RESIZE_ALL_COLUMNS(default, null) : Int;
+	@:public @:static @:final public static var AUTO_RESIZE_ALL_COLUMNS(default, null) : Int;
 	
 	/** The <code>TableModel</code> of the table. */
-	private var dataModel : javax.swing.table.TableModel;
+	@:protected private var dataModel : javax.swing.table.TableModel;
 	
 	/** The <code>TableColumnModel</code> of the table. */
-	private var columnModel : javax.swing.table.TableColumnModel;
+	@:protected private var columnModel : javax.swing.table.TableColumnModel;
 	
 	/** The <code>ListSelectionModel</code> of the table, used to keep track of row selections. */
-	private var selectionModel : javax.swing.ListSelectionModel;
+	@:protected private var selectionModel : javax.swing.ListSelectionModel;
 	
 	/** The <code>TableHeader</code> working with the table. */
-	private var tableHeader : javax.swing.table.JTableHeader;
+	@:protected private var tableHeader : javax.swing.table.JTableHeader;
 	
 	/** The height in pixels of each row in the table. */
-	private var rowHeight : Int;
+	@:protected private var rowHeight : Int;
 	
 	/** The height in pixels of the margin between the cells in each row. */
-	private var rowMargin : Int;
+	@:protected private var rowMargin : Int;
 	
 	/** The color of the grid. */
-	private var gridColor : java.awt.Color;
+	@:protected private var gridColor : java.awt.Color;
 	
 	/** The table draws horizontal lines between cells if <code>showHorizontalLines</code> is true. */
-	private var showHorizontalLines : Bool;
+	@:protected private var showHorizontalLines : Bool;
 	
 	/** The table draws vertical lines between cells if <code>showVerticalLines</code> is true. */
-	private var showVerticalLines : Bool;
+	@:protected private var showVerticalLines : Bool;
 	
 	/**
 	*  Determines if the table automatically resizes the
 	*  width of the table's columns to take up the entire width of the
 	*  table, and how it does the resizing.
 	*/
-	private var autoResizeMode : Int;
+	@:protected private var autoResizeMode : Int;
 	
 	/**
 	*  The table will query the <code>TableModel</code> to build the default
 	*  set of columns if this is true.
 	*/
-	private var autoCreateColumnsFromModel : Bool;
+	@:protected private var autoCreateColumnsFromModel : Bool;
 	
 	/** Used by the <code>Scrollable</code> interface to determine the initial visible area. */
-	private var preferredViewportSize : java.awt.Dimension;
+	@:protected private var preferredViewportSize : java.awt.Dimension;
 	
 	/** True if row selection is allowed in this table. */
-	private var rowSelectionAllowed : Bool;
+	@:protected private var rowSelectionAllowed : Bool;
 	
 	/*
 	* If true, both a row selection and a column selection
 	* can be non-empty at the same time, the selected cells are the
 	* the cells whose row and column are both selected.
 	*/
-	private var cellSelectionEnabled : Bool;
+	@:protected private var cellSelectionEnabled : Bool;
 	
 	/** If editing, the <code>Component</code> that is handling the editing. */
-	@:transient private var editorComp : java.awt.Component;
+	@:transient @:protected private var editorComp : java.awt.Component;
 	
 	/**
 	* The active cell editor object, that overwrites the screen real estate
 	* occupied by the current cell and allows the user to change its contents.
 	* {@code null} if the table isn't currently editing.
 	*/
-	@:transient private var cellEditor : javax.swing.table.TableCellEditor;
+	@:transient @:protected private var cellEditor : javax.swing.table.TableCellEditor;
 	
 	/** Identifies the column of the cell being edited. */
-	@:transient private var editingColumn : Int;
+	@:transient @:protected private var editingColumn : Int;
 	
 	/** Identifies the row of the cell being edited. */
-	@:transient private var editingRow : Int;
+	@:transient @:protected private var editingRow : Int;
 	
 	/**
 	* A table of objects that display the contents of a cell,
 	* indexed by class as declared in <code>getColumnClass</code>
 	* in the <code>TableModel</code> interface.
 	*/
-	@:transient private var defaultRenderersByColumnClass : java.util.Hashtable<Dynamic, Dynamic>;
+	@:transient @:protected private var defaultRenderersByColumnClass : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* A table of objects that display and edit the contents of a cell,
 	* indexed by class as declared in <code>getColumnClass</code>
 	* in the <code>TableModel</code> interface.
 	*/
-	@:transient private var defaultEditorsByColumnClass : java.util.Hashtable<Dynamic, Dynamic>;
+	@:transient @:protected private var defaultEditorsByColumnClass : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/** The foreground color of selected cells. */
-	private var selectionForeground : java.awt.Color;
+	@:protected private var selectionForeground : java.awt.Color;
 	
 	/** The background color of selected cells. */
-	private var selectionBackground : java.awt.Color;
+	@:protected private var selectionBackground : java.awt.Color;
 	
 	/**
 	* Constructs a default <code>JTable</code> that is initialized with a default
@@ -139,7 +139,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see #createDefaultColumnModel
 	* @see #createDefaultSelectionModel
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>JTable</code> that is initialized with
@@ -150,7 +150,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see #createDefaultColumnModel
 	* @see #createDefaultSelectionModel
 	*/
-	@:overload public function new(dm : javax.swing.table.TableModel) : Void;
+	@:overload @:public public function new(dm : javax.swing.table.TableModel) : Void;
 	
 	/**
 	* Constructs a <code>JTable</code> that is initialized with
@@ -161,7 +161,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param cm        the column model for the table
 	* @see #createDefaultSelectionModel
 	*/
-	@:overload public function new(dm : javax.swing.table.TableModel, cm : javax.swing.table.TableColumnModel) : Void;
+	@:overload @:public public function new(dm : javax.swing.table.TableModel, cm : javax.swing.table.TableColumnModel) : Void;
 	
 	/**
 	* Constructs a <code>JTable</code> that is initialized with
@@ -181,7 +181,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see #createDefaultColumnModel
 	* @see #createDefaultSelectionModel
 	*/
-	@:overload public function new(dm : javax.swing.table.TableModel, cm : javax.swing.table.TableColumnModel, sm : javax.swing.ListSelectionModel) : Void;
+	@:overload @:public public function new(dm : javax.swing.table.TableModel, cm : javax.swing.table.TableColumnModel, sm : javax.swing.ListSelectionModel) : Void;
 	
 	/**
 	* Constructs a <code>JTable</code> with <code>numRows</code>
@@ -193,7 +193,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param numColumns        the number of columns the table holds
 	* @see javax.swing.table.DefaultTableModel
 	*/
-	@:overload public function new(numRows : Int, numColumns : Int) : Void;
+	@:overload @:public public function new(numRows : Int, numColumns : Int) : Void;
 	
 	/**
 	* Constructs a <code>JTable</code> to display the values in the
@@ -209,7 +209,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param rowData           the data for the new table
 	* @param columnNames       names of each column
 	*/
-	@:overload public function new(rowData : java.util.Vector<Dynamic>, columnNames : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function new(rowData : java.util.Vector<Dynamic>, columnNames : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* Constructs a <code>JTable</code> to display the values in the two dimensional array,
@@ -224,14 +224,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param rowData           the data for the new table
 	* @param columnNames       names of each column
 	*/
-	@:overload public function new(rowData : java.NativeArray<java.NativeArray<Dynamic>>, columnNames : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(rowData : java.NativeArray<java.NativeArray<Dynamic>>, columnNames : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Calls the <code>configureEnclosingScrollPane</code> method.
 	*
 	* @see #configureEnclosingScrollPane
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* If this <code>JTable</code> is the <code>viewportView</code> of an enclosing <code>JScrollPane</code>
@@ -246,14 +246,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @see #addNotify
 	*/
-	@:overload private function configureEnclosingScrollPane() : Void;
+	@:overload @:protected private function configureEnclosingScrollPane() : Void;
 	
 	/**
 	* Calls the <code>unconfigureEnclosingScrollPane</code> method.
 	*
 	* @see #unconfigureEnclosingScrollPane
 	*/
-	@:overload override public function removeNotify() : Void;
+	@:overload @:public override public function removeNotify() : Void;
 	
 	/**
 	* Reverses the effect of <code>configureEnclosingScrollPane</code>
@@ -267,7 +267,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see #configureEnclosingScrollPane
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function unconfigureEnclosingScrollPane() : Void;
+	@:require(java3) @:overload @:protected private function unconfigureEnclosingScrollPane() : Void;
 	
 	/**
 	* Equivalent to <code>new JScrollPane(aTable)</code>.
@@ -275,7 +275,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @deprecated As of Swing version 1.0.2,
 	* replaced by <code>new JScrollPane(aTable)</code>.
 	*/
-	@:overload public static function createScrollPaneForTable(aTable : javax.swing.JTable) : javax.swing.JScrollPane;
+	@:overload @:static @:public public static function createScrollPaneForTable(aTable : javax.swing.JTable) : javax.swing.JScrollPane;
 	
 	/**
 	* Sets the <code>tableHeader</code> working with this <code>JTable</code> to <code>newHeader</code>.
@@ -287,7 +287,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  bound: true
 	*  description: The JTableHeader instance which renders the column headers.
 	*/
-	@:overload public function setTableHeader(tableHeader : javax.swing.table.JTableHeader) : Void;
+	@:overload @:public public function setTableHeader(tableHeader : javax.swing.table.JTableHeader) : Void;
 	
 	/**
 	* Returns the <code>tableHeader</code> used by this <code>JTable</code>.
@@ -295,7 +295,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return  the <code>tableHeader</code> used by this table
 	* @see     #setTableHeader
 	*/
-	@:overload public function getTableHeader() : javax.swing.table.JTableHeader;
+	@:overload @:public public function getTableHeader() : javax.swing.table.JTableHeader;
 	
 	/**
 	* Sets the height, in pixels, of all cells to <code>rowHeight</code>,
@@ -311,7 +311,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  bound: true
 	*  description: The height of the specified row.
 	*/
-	@:overload public function setRowHeight(rowHeight : Int) : Void;
+	@:overload @:public public function setRowHeight(rowHeight : Int) : Void;
 	
 	/**
 	* Returns the height of a table row, in pixels.
@@ -319,7 +319,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return  the height in pixels of a table row
 	* @see     #setRowHeight
 	*/
-	@:overload public function getRowHeight() : Int;
+	@:overload @:public public function getRowHeight() : Int;
 	
 	/**
 	* Sets the height for <code>row</code> to <code>rowHeight</code>,
@@ -336,7 +336,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  description: The height in pixels of the cells in <code>row</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setRowHeight(row : Int, rowHeight : Int) : Void;
+	@:require(java3) @:overload @:public public function setRowHeight(row : Int, rowHeight : Int) : Void;
 	
 	/**
 	* Returns the height, in pixels, of the cells in <code>row</code>.
@@ -344,7 +344,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the height, in pixels, of the cells in the row
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getRowHeight(row : Int) : Int;
+	@:require(java3) @:overload @:public public function getRowHeight(row : Int) : Int;
 	
 	/**
 	* Sets the amount of empty space between cells in adjacent rows.
@@ -355,7 +355,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  bound: true
 	*  description: The amount of space between cells.
 	*/
-	@:overload public function setRowMargin(rowMargin : Int) : Void;
+	@:overload @:public public function setRowMargin(rowMargin : Int) : Void;
 	
 	/**
 	* Gets the amount of empty space, in pixels, between cells. Equivalent to:
@@ -364,7 +364,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @see     #setRowMargin
 	*/
-	@:overload public function getRowMargin() : Int;
+	@:overload @:public public function getRowMargin() : Int;
 	
 	/**
 	* Sets the <code>rowMargin</code> and the <code>columnMargin</code> --
@@ -379,7 +379,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  description: The spacing between the cells,
 	*               drawn in the background color of the JTable.
 	*/
-	@:overload public function setIntercellSpacing(intercellSpacing : java.awt.Dimension) : Void;
+	@:overload @:public public function setIntercellSpacing(intercellSpacing : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the horizontal and vertical space between cells.
@@ -388,7 +388,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return  the horizontal and vertical spacing between cells
 	* @see     #setIntercellSpacing
 	*/
-	@:overload public function getIntercellSpacing() : java.awt.Dimension;
+	@:overload @:public public function getIntercellSpacing() : java.awt.Dimension;
 	
 	/**
 	* Sets the color used to draw grid lines to <code>gridColor</code> and redisplays.
@@ -401,7 +401,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  bound: true
 	*  description: The grid color.
 	*/
-	@:overload public function setGridColor(gridColor : java.awt.Color) : Void;
+	@:overload @:public public function setGridColor(gridColor : java.awt.Color) : Void;
 	
 	/**
 	* Returns the color used to draw grid lines.
@@ -410,7 +410,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return  the color used to draw grid lines
 	* @see     #setGridColor
 	*/
-	@:overload public function getGridColor() : java.awt.Color;
+	@:overload @:public public function getGridColor() : java.awt.Color;
 	
 	/**
 	*  Sets whether the table draws grid lines around cells.
@@ -426,7 +426,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @beaninfo
 	*  description: The color used to draw the grid lines.
 	*/
-	@:overload public function setShowGrid(showGrid : Bool) : Void;
+	@:overload @:public public function setShowGrid(showGrid : Bool) : Void;
 	
 	/**
 	*  Sets whether the table draws horizontal lines between cells.
@@ -440,7 +440,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  bound: true
 	*  description: Whether horizontal lines should be drawn in between the cells.
 	*/
-	@:overload public function setShowHorizontalLines(showHorizontalLines : Bool) : Void;
+	@:overload @:public public function setShowHorizontalLines(showHorizontalLines : Bool) : Void;
 	
 	/**
 	*  Sets whether the table draws vertical lines between cells.
@@ -454,7 +454,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  bound: true
 	*  description: Whether vertical lines should be drawn in between the cells.
 	*/
-	@:overload public function setShowVerticalLines(showVerticalLines : Bool) : Void;
+	@:overload @:public public function setShowVerticalLines(showVerticalLines : Bool) : Void;
 	
 	/**
 	* Returns true if the table draws horizontal lines between cells, false if it
@@ -464,7 +464,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*          doesn't
 	* @see     #setShowHorizontalLines
 	*/
-	@:overload public function getShowHorizontalLines() : Bool;
+	@:overload @:public public function getShowHorizontalLines() : Bool;
 	
 	/**
 	* Returns true if the table draws vertical lines between cells, false if it
@@ -474,7 +474,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*          doesn't
 	* @see     #setShowVerticalLines
 	*/
-	@:overload public function getShowVerticalLines() : Bool;
+	@:overload @:public public function getShowVerticalLines() : Bool;
 	
 	/**
 	* Sets the table's auto resize mode when the table is resized.  For further
@@ -499,7 +499,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*              AUTO_RESIZE_LAST_COLUMN        JTable.AUTO_RESIZE_LAST_COLUMN
 	*              AUTO_RESIZE_ALL_COLUMNS        JTable.AUTO_RESIZE_ALL_COLUMNS
 	*/
-	@:overload public function setAutoResizeMode(mode : Int) : Void;
+	@:overload @:public public function setAutoResizeMode(mode : Int) : Void;
 	
 	/**
 	* Returns the auto resize mode of the table.  The default mode
@@ -510,7 +510,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see     #setAutoResizeMode
 	* @see     #doLayout
 	*/
-	@:overload public function getAutoResizeMode() : Int;
+	@:overload @:public public function getAutoResizeMode() : Int;
 	
 	/**
 	* Sets this table's <code>autoCreateColumnsFromModel</code> flag.
@@ -524,7 +524,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  bound: true
 	*  description: Automatically populates the columnModel when a new TableModel is submitted.
 	*/
-	@:overload public function setAutoCreateColumnsFromModel(autoCreateColumnsFromModel : Bool) : Void;
+	@:overload @:public public function setAutoCreateColumnsFromModel(autoCreateColumnsFromModel : Bool) : Void;
 	
 	/**
 	* Determines whether the table will create default columns from the model.
@@ -538,7 +538,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see     #setAutoCreateColumnsFromModel
 	* @see     #createDefaultColumnsFromModel
 	*/
-	@:overload public function getAutoCreateColumnsFromModel() : Bool;
+	@:overload @:public public function getAutoCreateColumnsFromModel() : Bool;
 	
 	/**
 	* Creates default columns for the table from
@@ -550,7 +550,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @see     #getAutoCreateColumnsFromModel
 	*/
-	@:overload public function createDefaultColumnsFromModel() : Void;
+	@:overload @:public public function createDefaultColumnsFromModel() : Void;
 	
 	/**
 	* Sets a default cell renderer to be used if no renderer has been set in
@@ -563,7 +563,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see     #getDefaultRenderer
 	* @see     #setDefaultEditor
 	*/
-	@:overload public function setDefaultRenderer(columnClass : Class<Dynamic>, renderer : javax.swing.table.TableCellRenderer) : Void;
+	@:overload @:public public function setDefaultRenderer(columnClass : Class<Dynamic>, renderer : javax.swing.table.TableCellRenderer) : Void;
 	
 	/**
 	* Returns the cell renderer to be used when no renderer has been set in
@@ -580,7 +580,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see     #setDefaultRenderer
 	* @see     #getColumnClass
 	*/
-	@:overload public function getDefaultRenderer(columnClass : Class<Dynamic>) : javax.swing.table.TableCellRenderer;
+	@:overload @:public public function getDefaultRenderer(columnClass : Class<Dynamic>) : javax.swing.table.TableCellRenderer;
 	
 	/**
 	* Sets a default cell editor to be used if no editor has been set in
@@ -597,7 +597,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see     #getDefaultEditor
 	* @see     #setDefaultRenderer
 	*/
-	@:overload public function setDefaultEditor(columnClass : Class<Dynamic>, editor : javax.swing.table.TableCellEditor) : Void;
+	@:overload @:public public function setDefaultEditor(columnClass : Class<Dynamic>, editor : javax.swing.table.TableCellEditor) : Void;
 	
 	/**
 	* Returns the editor to be used when no editor has been set in
@@ -613,7 +613,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see     #setDefaultEditor
 	* @see     #getColumnClass
 	*/
-	@:overload public function getDefaultEditor(columnClass : Class<Dynamic>) : javax.swing.table.TableCellEditor;
+	@:overload @:public public function getDefaultEditor(columnClass : Class<Dynamic>) : javax.swing.table.TableCellEditor;
 	
 	/**
 	* Turns on or off automatic drag handling. In order to enable automatic
@@ -649,7 +649,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  description: determines whether automatic drag handling is enabled
 	*        bound: false
 	*/
-	@:require(java4) @:overload public function setDragEnabled(b : Bool) : Void;
+	@:require(java4) @:overload @:public public function setDragEnabled(b : Bool) : Void;
 	
 	/**
 	* Returns whether or not automatic drag handling is enabled.
@@ -658,7 +658,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see #setDragEnabled
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getDragEnabled() : Bool;
+	@:require(java4) @:overload @:public public function getDragEnabled() : Bool;
 	
 	/**
 	* Sets the drop mode for this component. For backward compatibility,
@@ -692,7 +692,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see TransferHandler
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function setDropMode(dropMode : javax.swing.DropMode) : Void;
+	@:require(java6) @:overload @:public @:final public function setDropMode(dropMode : javax.swing.DropMode) : Void;
 	
 	/**
 	* Returns the drop mode for this component.
@@ -701,7 +701,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see #setDropMode
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getDropMode() : javax.swing.DropMode;
+	@:require(java6) @:overload @:public @:final public function getDropMode() : javax.swing.DropMode;
 	
 	/**
 	* Returns the location that this component should visually indicate
@@ -721,7 +721,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see TransferHandler#canImport(TransferHandler.TransferSupport)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getDropLocation() : javax.swing.JTable.JTable_DropLocation;
+	@:require(java6) @:overload @:public @:final public function getDropLocation() : javax.swing.JTable.JTable_DropLocation;
 	
 	/**
 	* Specifies whether a {@code RowSorter} should be created for the
@@ -742,7 +742,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  description: Whether or not to turn on sorting by default.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setAutoCreateRowSorter(autoCreateRowSorter : Bool) : Void;
+	@:require(java6) @:overload @:public public function setAutoCreateRowSorter(autoCreateRowSorter : Bool) : Void;
 	
 	/**
 	* Returns {@code true} if whenever the model changes, a new
@@ -753,7 +753,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*         the model changes
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getAutoCreateRowSorter() : Bool;
+	@:require(java6) @:overload @:public public function getAutoCreateRowSorter() : Bool;
 	
 	/**
 	* Specifies whether the selection should be updated after sorting.
@@ -768,7 +768,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  description: Whether or not to update the selection on sorting
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setUpdateSelectionOnSort(update : Bool) : Void;
+	@:require(java6) @:overload @:public public function setUpdateSelectionOnSort(update : Bool) : Void;
 	
 	/**
 	* Returns true if the selection should be updated after sorting.
@@ -776,7 +776,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return whether to update the selection on a sort
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getUpdateSelectionOnSort() : Bool;
+	@:require(java6) @:overload @:public public function getUpdateSelectionOnSort() : Bool;
 	
 	/**
 	* Sets the <code>RowSorter</code>.  <code>RowSorter</code> is used
@@ -800,7 +800,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  description: The table's RowSorter
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setRowSorter(sorter : javax.swing.RowSorter<javax.swing.table.TableModel>) : Void;
+	@:require(java6) @:overload @:public public function setRowSorter(sorter : javax.swing.RowSorter<javax.swing.table.TableModel>) : Void;
 	
 	/**
 	* Returns the object responsible for sorting.
@@ -808,7 +808,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the object responsible for sorting
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getRowSorter() : javax.swing.RowSorter<javax.swing.table.TableModel>;
+	@:require(java6) @:overload @:public public function getRowSorter() : javax.swing.RowSorter<javax.swing.table.TableModel>;
 	
 	/**
 	* Sets the table's selection mode to allow only single selections, a single
@@ -836,7 +836,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*              SINGLE_INTERVAL_SELECTION   ListSelectionModel.SINGLE_INTERVAL_SELECTION
 	*              MULTIPLE_INTERVAL_SELECTION ListSelectionModel.MULTIPLE_INTERVAL_SELECTION
 	*/
-	@:overload public function setSelectionMode(selectionMode : Int) : Void;
+	@:overload @:public public function setSelectionMode(selectionMode : Int) : Void;
 	
 	/**
 	* Sets whether the rows in this model can be selected.
@@ -848,7 +848,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*    attribute: visualUpdate true
 	*  description: If true, an entire row is selected for each selected cell.
 	*/
-	@:overload public function setRowSelectionAllowed(rowSelectionAllowed : Bool) : Void;
+	@:overload @:public public function setRowSelectionAllowed(rowSelectionAllowed : Bool) : Void;
 	
 	/**
 	* Returns true if rows can be selected.
@@ -856,7 +856,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return true if rows can be selected, otherwise false
 	* @see #setRowSelectionAllowed
 	*/
-	@:overload public function getRowSelectionAllowed() : Bool;
+	@:overload @:public public function getRowSelectionAllowed() : Bool;
 	
 	/**
 	* Sets whether the columns in this model can be selected.
@@ -868,7 +868,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*    attribute: visualUpdate true
 	*  description: If true, an entire column is selected for each selected cell.
 	*/
-	@:overload public function setColumnSelectionAllowed(columnSelectionAllowed : Bool) : Void;
+	@:overload @:public public function setColumnSelectionAllowed(columnSelectionAllowed : Bool) : Void;
 	
 	/**
 	* Returns true if columns can be selected.
@@ -876,7 +876,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return true if columns can be selected, otherwise false
 	* @see #setColumnSelectionAllowed
 	*/
-	@:overload public function getColumnSelectionAllowed() : Bool;
+	@:overload @:public public function getColumnSelectionAllowed() : Bool;
 	
 	/**
 	* Sets whether this table allows both a column selection and a
@@ -898,7 +898,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  description: Select a rectangular region of cells rather than
 	*               rows or columns.
 	*/
-	@:overload public function setCellSelectionEnabled(cellSelectionEnabled : Bool) : Void;
+	@:overload @:public public function setCellSelectionEnabled(cellSelectionEnabled : Bool) : Void;
 	
 	/**
 	* Returns true if both row and column selection models are enabled.
@@ -909,17 +909,17 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @see #setCellSelectionEnabled
 	*/
-	@:overload public function getCellSelectionEnabled() : Bool;
+	@:overload @:public public function getCellSelectionEnabled() : Bool;
 	
 	/**
 	*  Selects all rows, columns, and cells in the table.
 	*/
-	@:overload public function selectAll() : Void;
+	@:overload @:public public function selectAll() : Void;
 	
 	/**
 	* Deselects all selected columns and rows.
 	*/
-	@:overload public function clearSelection() : Void;
+	@:overload @:public public function clearSelection() : Void;
 	
 	/**
 	* Selects the rows from <code>index0</code> to <code>index1</code>,
@@ -931,7 +931,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param   index0 one end of the interval
 	* @param   index1 the other end of the interval
 	*/
-	@:overload public function setRowSelectionInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function setRowSelectionInterval(index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* Selects the columns from <code>index0</code> to <code>index1</code>,
@@ -943,7 +943,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param   index0 one end of the interval
 	* @param   index1 the other end of the interval
 	*/
-	@:overload public function setColumnSelectionInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function setColumnSelectionInterval(index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* Adds the rows from <code>index0</code> to <code>index1</code>, inclusive, to
@@ -954,7 +954,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param   index0 one end of the interval
 	* @param   index1 the other end of the interval
 	*/
-	@:overload public function addRowSelectionInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function addRowSelectionInterval(index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* Adds the columns from <code>index0</code> to <code>index1</code>,
@@ -966,7 +966,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param   index0 one end of the interval
 	* @param   index1 the other end of the interval
 	*/
-	@:overload public function addColumnSelectionInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function addColumnSelectionInterval(index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* Deselects the rows from <code>index0</code> to <code>index1</code>, inclusive.
@@ -977,7 +977,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param   index0 one end of the interval
 	* @param   index1 the other end of the interval
 	*/
-	@:overload public function removeRowSelectionInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function removeRowSelectionInterval(index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* Deselects the columns from <code>index0</code> to <code>index1</code>, inclusive.
@@ -988,20 +988,20 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param   index0 one end of the interval
 	* @param   index1 the other end of the interval
 	*/
-	@:overload public function removeColumnSelectionInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function removeColumnSelectionInterval(index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* Returns the index of the first selected row, -1 if no row is selected.
 	* @return the index of the first selected row
 	*/
-	@:overload public function getSelectedRow() : Int;
+	@:overload @:public public function getSelectedRow() : Int;
 	
 	/**
 	* Returns the index of the first selected column,
 	* -1 if no column is selected.
 	* @return the index of the first selected column
 	*/
-	@:overload public function getSelectedColumn() : Int;
+	@:overload @:public public function getSelectedColumn() : Int;
 	
 	/**
 	* Returns the indices of all selected rows.
@@ -1010,7 +1010,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*         or an empty array if no row is selected
 	* @see #getSelectedRow
 	*/
-	@:overload public function getSelectedRows() : java.NativeArray<Int>;
+	@:overload @:public public function getSelectedRows() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the indices of all selected columns.
@@ -1019,21 +1019,21 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*         or an empty array if no column is selected
 	* @see #getSelectedColumn
 	*/
-	@:overload public function getSelectedColumns() : java.NativeArray<Int>;
+	@:overload @:public public function getSelectedColumns() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the number of selected rows.
 	*
 	* @return the number of selected rows, 0 if no rows are selected
 	*/
-	@:overload public function getSelectedRowCount() : Int;
+	@:overload @:public public function getSelectedRowCount() : Int;
 	
 	/**
 	* Returns the number of selected columns.
 	*
 	* @return the number of selected columns, 0 if no columns are selected
 	*/
-	@:overload public function getSelectedColumnCount() : Int;
+	@:overload @:public public function getSelectedColumnCount() : Int;
 	
 	/**
 	* Returns true if the specified index is in the valid range of rows,
@@ -1042,7 +1042,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return true if <code>row</code> is a valid index and the row at
 	*              that index is selected (where 0 is the first row)
 	*/
-	@:overload public function isRowSelected(row : Int) : Bool;
+	@:overload @:public public function isRowSelected(row : Int) : Bool;
 	
 	/**
 	* Returns true if the specified index is in the valid range of columns,
@@ -1052,7 +1052,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return true if <code>column</code> is a valid index and the column at
 	*              that index is selected (where 0 is the first column)
 	*/
-	@:overload public function isColumnSelected(column : Int) : Bool;
+	@:overload @:public public function isColumnSelected(column : Int) : Bool;
 	
 	/**
 	* Returns true if the specified indices are in the valid range of rows
@@ -1064,7 +1064,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*              and the cell at index <code>(row, column)</code> is selected,
 	*              where the first row and first column are at index 0
 	*/
-	@:overload public function isCellSelected(row : Int, column : Int) : Bool;
+	@:overload @:public public function isCellSelected(row : Int, column : Int) : Bool;
 	
 	/**
 	* Updates the selection models of the table, depending on the state of the
@@ -1095,7 +1095,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function changeSelection(rowIndex : Int, columnIndex : Int, toggle : Bool, extend : Bool) : Void;
+	@:require(java3) @:overload @:public public function changeSelection(rowIndex : Int, columnIndex : Int, toggle : Bool, extend : Bool) : Void;
 	
 	/**
 	* Returns the foreground color for selected cells.
@@ -1104,7 +1104,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see #setSelectionForeground
 	* @see #setSelectionBackground
 	*/
-	@:overload public function getSelectionForeground() : java.awt.Color;
+	@:overload @:public public function getSelectionForeground() : java.awt.Color;
 	
 	/**
 	* Sets the foreground color for selected cells.  Cell renderers
@@ -1127,7 +1127,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*       bound: true
 	* description: A default foreground color for selected cells.
 	*/
-	@:overload public function setSelectionForeground(selectionForeground : java.awt.Color) : Void;
+	@:overload @:public public function setSelectionForeground(selectionForeground : java.awt.Color) : Void;
 	
 	/**
 	* Returns the background color for selected cells.
@@ -1136,7 +1136,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see #setSelectionBackground
 	* @see #setSelectionForeground
 	*/
-	@:overload public function getSelectionBackground() : java.awt.Color;
+	@:overload @:public public function getSelectionBackground() : java.awt.Color;
 	
 	/**
 	* Sets the background color for selected cells.  Cell renderers
@@ -1158,7 +1158,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*       bound: true
 	* description: A default background color for selected cells.
 	*/
-	@:overload public function setSelectionBackground(selectionBackground : java.awt.Color) : Void;
+	@:overload @:public public function setSelectionBackground(selectionBackground : java.awt.Color) : Void;
 	
 	/**
 	* Returns the <code>TableColumn</code> object for the column in the table
@@ -1170,7 +1170,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @param   identifier                      the identifier object
 	*/
-	@:overload public function getColumn(identifier : Dynamic) : javax.swing.table.TableColumn;
+	@:overload @:public public function getColumn(identifier : Dynamic) : javax.swing.table.TableColumn;
 	
 	/**
 	* Maps the index of the column in the view at
@@ -1184,7 +1184,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @see #convertColumnIndexToView
 	*/
-	@:overload public function convertColumnIndexToModel(viewColumnIndex : Int) : Int;
+	@:overload @:public public function convertColumnIndexToModel(viewColumnIndex : Int) : Int;
 	
 	/**
 	* Maps the index of the column in the table model at
@@ -1199,7 +1199,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @see #convertColumnIndexToModel
 	*/
-	@:overload public function convertColumnIndexToView(modelColumnIndex : Int) : Int;
+	@:overload @:public public function convertColumnIndexToView(modelColumnIndex : Int) : Int;
 	
 	/**
 	* Maps the index of the row in terms of the
@@ -1214,7 +1214,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see javax.swing.table.TableRowSorter
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function convertRowIndexToView(modelRowIndex : Int) : Int;
+	@:require(java6) @:overload @:public public function convertRowIndexToView(modelRowIndex : Int) : Int;
 	
 	/**
 	* Maps the index of the row in terms of the view to the
@@ -1230,7 +1230,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see #getRowCount
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function convertRowIndexToModel(viewRowIndex : Int) : Int;
+	@:require(java6) @:overload @:public public function convertRowIndexToModel(viewRowIndex : Int) : Int;
 	
 	/**
 	* Returns the number of rows that can be shown in the
@@ -1242,7 +1242,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the number of rows shown in the <code>JTable</code>
 	* @see #getColumnCount
 	*/
-	@:overload public function getRowCount() : Int;
+	@:overload @:public public function getRowCount() : Int;
 	
 	/**
 	* Returns the number of columns in the column model. Note that this may
@@ -1252,7 +1252,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see #getRowCount
 	* @see #removeColumn
 	*/
-	@:overload public function getColumnCount() : Int;
+	@:overload @:public public function getColumnCount() : Int;
 	
 	/**
 	* Returns the name of the column appearing in the view at
@@ -1262,7 +1262,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the name of the column at position <code>column</code>
 	in the view where the first column is column 0
 	*/
-	@:overload public function getColumnName(column : Int) : String;
+	@:overload @:public public function getColumnName(column : Int) : String;
 	
 	/**
 	* Returns the type of the column appearing in the view at
@@ -1272,7 +1272,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the type of the column at position <code>column</code>
 	*          in the view where the first column is column 0
 	*/
-	@:overload public function getColumnClass(column : Int) : Class<Dynamic>;
+	@:overload @:public public function getColumnClass(column : Int) : Class<Dynamic>;
 	
 	/**
 	* Returns the cell value at <code>row</code> and <code>column</code>.
@@ -1289,7 +1289,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param   column          the column whose value is to be queried
 	* @return  the Object at the specified cell
 	*/
-	@:overload public function getValueAt(row : Int, column : Int) : Dynamic;
+	@:overload @:public public function getValueAt(row : Int, column : Int) : Dynamic;
 	
 	/**
 	* Sets the value for the cell in the table model at <code>row</code>
@@ -1310,7 +1310,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param   column          the column of the cell to be changed
 	* @see #getValueAt
 	*/
-	@:overload public function setValueAt(aValue : Dynamic, row : Int, column : Int) : Void;
+	@:overload @:public public function setValueAt(aValue : Dynamic, row : Int, column : Int) : Void;
 	
 	/**
 	* Returns true if the cell at <code>row</code> and <code>column</code>
@@ -1331,7 +1331,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return  true if the cell is editable
 	* @see #setValueAt
 	*/
-	@:overload public function isCellEditable(row : Int, column : Int) : Bool;
+	@:overload @:public public function isCellEditable(row : Int, column : Int) : Bool;
 	
 	/**
 	*  Appends <code>aColumn</code> to the end of the array of columns held by
@@ -1359,7 +1359,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  @param  aColumn         the <code>TableColumn</code> to be added
 	*  @see    #removeColumn
 	*/
-	@:overload public function addColumn(aColumn : javax.swing.table.TableColumn) : Void;
+	@:overload @:public public function addColumn(aColumn : javax.swing.table.TableColumn) : Void;
 	
 	/**
 	*  Removes <code>aColumn</code> from this <code>JTable</code>'s
@@ -1370,7 +1370,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  @param  aColumn         the <code>TableColumn</code> to be removed
 	*  @see    #addColumn
 	*/
-	@:overload public function removeColumn(aColumn : javax.swing.table.TableColumn) : Void;
+	@:overload @:public public function removeColumn(aColumn : javax.swing.table.TableColumn) : Void;
 	
 	/**
 	* Moves the column <code>column</code> to the position currently
@@ -1381,7 +1381,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param   column                  the index of column to be moved
 	* @param   targetColumn            the new index of the column
 	*/
-	@:overload public function moveColumn(column : Int, targetColumn : Int) : Void;
+	@:overload @:public public function moveColumn(column : Int, targetColumn : Int) : Void;
 	
 	/**
 	* Returns the index of the column that <code>point</code> lies in,
@@ -1394,7 +1394,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*          [0, <code>getColumnCount()</code>-1]
 	* @see     #rowAtPoint
 	*/
-	@:overload public function columnAtPoint(point : java.awt.Point) : Int;
+	@:overload @:public public function columnAtPoint(point : java.awt.Point) : Int;
 	
 	/**
 	* Returns the index of the row that <code>point</code> lies in,
@@ -1407,7 +1407,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*          [0, <code>getRowCount()</code>-1]
 	* @see     #columnAtPoint
 	*/
-	@:overload public function rowAtPoint(point : java.awt.Point) : Int;
+	@:overload @:public public function rowAtPoint(point : java.awt.Point) : Int;
 	
 	/**
 	* Returns a rectangle for the cell that lies at the intersection of
@@ -1453,7 +1453,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*          <code>row</code>,<code>column</code>
 	* @see #getIntercellSpacing
 	*/
-	@:overload public function getCellRect(row : Int, column : Int, includeSpacing : Bool) : java.awt.Rectangle;
+	@:overload @:public public function getCellRect(row : Int, column : Int, includeSpacing : Bool) : java.awt.Rectangle;
 	
 	/**
 	* Causes this table to lay out its rows and columns.  Overridden so
@@ -1590,7 +1590,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* (maximum or minimum).
 	*
 	*/
-	@:overload override public function doLayout() : Void;
+	@:overload @:public override public function doLayout() : Void;
 	
 	/**
 	* Sizes the table columns to fit the available space.
@@ -1598,7 +1598,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* replaced by <code>doLayout()</code>.
 	* @see #doLayout
 	*/
-	@:overload public function sizeColumnsToFit(lastColumnOnly : Bool) : Void;
+	@:overload @:public public function sizeColumnsToFit(lastColumnOnly : Bool) : Void;
 	
 	/**
 	* Obsolete as of Java 2 platform v1.4.  Please use the
@@ -1607,7 +1607,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*                          necessary or -1 if there is no such column
 	* @see  #doLayout
 	*/
-	@:overload public function sizeColumnsToFit(resizingColumn : Int) : Void;
+	@:overload @:public public function sizeColumnsToFit(resizingColumn : Int) : Void;
 	
 	/**
 	* Overrides <code>JComponent</code>'s <code>getToolTipText</code>
@@ -1625,7 +1625,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @see JComponent#getToolTipText
 	*/
-	@:overload public function getToolTipText(event : java.awt.event.MouseEvent) : String;
+	@:overload @:public override public function getToolTipText(event : java.awt.event.MouseEvent) : String;
 	
 	/**
 	* Sets whether editors in this JTable get the keyboard focus
@@ -1642,7 +1642,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see #getSurrendersFocusOnKeystroke
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setSurrendersFocusOnKeystroke(surrendersFocusOnKeystroke : Bool) : Void;
+	@:require(java4) @:overload @:public public function setSurrendersFocusOnKeystroke(surrendersFocusOnKeystroke : Bool) : Void;
 	
 	/**
 	* Returns true if the editor should get the focus
@@ -1655,7 +1655,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see #setSurrendersFocusOnKeystroke
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getSurrendersFocusOnKeystroke() : Bool;
+	@:require(java4) @:overload @:public public function getSurrendersFocusOnKeystroke() : Bool;
 	
 	/**
 	* Programmatically starts editing the cell at <code>row</code> and
@@ -1669,7 +1669,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return  false if for any reason the cell cannot be edited,
 	*                or if the indices are invalid
 	*/
-	@:overload public function editCellAt(row : Int, column : Int) : Bool;
+	@:overload @:public public function editCellAt(row : Int, column : Int) : Bool;
 	
 	/**
 	* Programmatically starts editing the cell at <code>row</code> and
@@ -1688,7 +1688,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return  false if for any reason the cell cannot be edited,
 	*                or if the indices are invalid
 	*/
-	@:overload public function editCellAt(row : Int, column : Int, e : java.util.EventObject) : Bool;
+	@:overload @:public public function editCellAt(row : Int, column : Int, e : java.util.EventObject) : Bool;
 	
 	/**
 	* Returns true if a cell is being edited.
@@ -1697,7 +1697,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see     #editingColumn
 	* @see     #editingRow
 	*/
-	@:overload public function isEditing() : Bool;
+	@:overload @:public public function isEditing() : Bool;
 	
 	/**
 	* Returns the component that is handling the editing session.
@@ -1705,7 +1705,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return  Component handling editing session
 	*/
-	@:overload public function getEditorComponent() : java.awt.Component;
+	@:overload @:public public function getEditorComponent() : java.awt.Component;
 	
 	/**
 	* Returns the index of the column that contains the cell currently
@@ -1715,7 +1715,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*          being edited; returns -1 if nothing being edited
 	* @see #editingRow
 	*/
-	@:overload public function getEditingColumn() : Int;
+	@:overload @:public public function getEditingColumn() : Int;
 	
 	/**
 	* Returns the index of the row that contains the cell currently
@@ -1725,14 +1725,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*          being edited; returns -1 if nothing being edited
 	* @see #editingColumn
 	*/
-	@:overload public function getEditingRow() : Int;
+	@:overload @:public public function getEditingRow() : Int;
 	
 	/**
 	* Returns the L&F object that renders this component.
 	*
 	* @return the <code>TableUI</code> object that renders this component
 	*/
-	@:overload public function getUI() : javax.swing.plaf.TableUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.TableUI;
 	
 	/**
 	* Sets the L&F object that renders this component and repaints.
@@ -1745,7 +1745,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.TableUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.TableUI) : Void;
 	
 	/**
 	* Notification from the <code>UIManager</code> that the L&F has changed.
@@ -1754,7 +1754,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the suffix used to construct the name of the L&F class used to
@@ -1764,7 +1764,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Sets the data model for this table to <code>newModel</code> and registers
@@ -1777,7 +1777,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  bound: true
 	*  description: The model that is the source of the data for this view.
 	*/
-	@:overload public function setModel(dataModel : javax.swing.table.TableModel) : Void;
+	@:overload @:public public function setModel(dataModel : javax.swing.table.TableModel) : Void;
 	
 	/**
 	* Returns the <code>TableModel</code> that provides the data displayed by this
@@ -1786,7 +1786,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return  the <code>TableModel</code> that provides the data displayed by this <code>JTable</code>
 	* @see     #setModel
 	*/
-	@:overload public function getModel() : javax.swing.table.TableModel;
+	@:overload @:public public function getModel() : javax.swing.table.TableModel;
 	
 	/**
 	* Sets the column model for this table to <code>newModel</code> and registers
@@ -1800,7 +1800,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  bound: true
 	*  description: The object governing the way columns appear in the view.
 	*/
-	@:overload public function setColumnModel(columnModel : javax.swing.table.TableColumnModel) : Void;
+	@:overload @:public public function setColumnModel(columnModel : javax.swing.table.TableColumnModel) : Void;
 	
 	/**
 	* Returns the <code>TableColumnModel</code> that contains all column information
@@ -1809,7 +1809,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return  the object that provides the column state of the table
 	* @see     #setColumnModel
 	*/
-	@:overload public function getColumnModel() : javax.swing.table.TableColumnModel;
+	@:overload @:public public function getColumnModel() : javax.swing.table.TableColumnModel;
 	
 	/**
 	* Sets the row selection model for this table to <code>newModel</code>
@@ -1822,7 +1822,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*      bound: true
 	*      description: The selection model for rows.
 	*/
-	@:overload public function setSelectionModel(newModel : javax.swing.ListSelectionModel) : Void;
+	@:overload @:public public function setSelectionModel(newModel : javax.swing.ListSelectionModel) : Void;
 	
 	/**
 	* Returns the <code>ListSelectionModel</code> that is used to maintain row
@@ -1832,7 +1832,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*          if row selection is not allowed
 	* @see     #setSelectionModel
 	*/
-	@:overload public function getSelectionModel() : javax.swing.ListSelectionModel;
+	@:overload @:public public function getSelectionModel() : javax.swing.ListSelectionModel;
 	
 	/**
 	* <code>RowSorterListener</code> notification that the
@@ -1842,7 +1842,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @throws NullPointerException if <code>e</code> is <code>null</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function sorterChanged(e : javax.swing.event.RowSorterEvent) : Void;
+	@:require(java6) @:overload @:public public function sorterChanged(e : javax.swing.event.RowSorterEvent) : Void;
 	
 	/**
 	* Invoked when this table's <code>TableModel</code> generates
@@ -1857,7 +1857,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* <p>
 	* Note that as of 1.3, this method clears the selection, if any.
 	*/
-	@:overload public function tableChanged(e : javax.swing.event.TableModelEvent) : Void;
+	@:overload @:public public function tableChanged(e : javax.swing.event.TableModelEvent) : Void;
 	
 	/**
 	* Invoked when a column is added to the table column model.
@@ -1867,7 +1867,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @see TableColumnModelListener
 	*/
-	@:overload public function columnAdded(e : javax.swing.event.TableColumnModelEvent) : Void;
+	@:overload @:public public function columnAdded(e : javax.swing.event.TableColumnModelEvent) : Void;
 	
 	/**
 	* Invoked when a column is removed from the table column model.
@@ -1877,7 +1877,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @see TableColumnModelListener
 	*/
-	@:overload public function columnRemoved(e : javax.swing.event.TableColumnModelEvent) : Void;
+	@:overload @:public public function columnRemoved(e : javax.swing.event.TableColumnModelEvent) : Void;
 	
 	/**
 	* Invoked when a column is repositioned. If a cell is being
@@ -1889,7 +1889,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param e   the event received
 	* @see TableColumnModelListener
 	*/
-	@:overload public function columnMoved(e : javax.swing.event.TableColumnModelEvent) : Void;
+	@:overload @:public public function columnMoved(e : javax.swing.event.TableColumnModelEvent) : Void;
 	
 	/**
 	* Invoked when a column is moved due to a margin change.
@@ -1902,7 +1902,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param  e    the event received
 	* @see TableColumnModelListener
 	*/
-	@:overload public function columnMarginChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function columnMarginChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	/**
 	* Invoked when the selection model of the <code>TableColumnModel</code>
@@ -1914,7 +1914,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param  e  the event received
 	* @see TableColumnModelListener
 	*/
-	@:overload public function columnSelectionChanged(e : javax.swing.event.ListSelectionEvent) : Void;
+	@:overload @:public public function columnSelectionChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	
 	/**
 	* Invoked when the row selection changes -- repaints to show the new
@@ -1926,7 +1926,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param e   the event received
 	* @see ListSelectionListener
 	*/
-	@:overload public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
+	@:overload @:public public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	
 	/**
 	* Invoked when editing is finished. The changes are saved and the
@@ -1938,7 +1938,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param  e  the event received
 	* @see CellEditorListener
 	*/
-	@:overload public function editingStopped(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function editingStopped(e : javax.swing.event.ChangeEvent) : Void;
 	
 	/**
 	* Invoked when editing is canceled. The editor object is discarded
@@ -1950,7 +1950,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param  e  the event received
 	* @see CellEditorListener
 	*/
-	@:overload public function editingCanceled(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function editingCanceled(e : javax.swing.event.ChangeEvent) : Void;
 	
 	/**
 	* Sets the preferred size of the viewport for this table.
@@ -1961,7 +1961,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @beaninfo
 	* description: The preferred size of the viewport.
 	*/
-	@:overload public function setPreferredScrollableViewportSize(size : java.awt.Dimension) : Void;
+	@:overload @:public public function setPreferredScrollableViewportSize(size : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the preferred size of the viewport for this table.
@@ -1970,7 +1970,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*         which displays this table
 	* @see Scrollable#getPreferredScrollableViewportSize
 	*/
-	@:overload public function getPreferredScrollableViewportSize() : java.awt.Dimension;
+	@:overload @:public public function getPreferredScrollableViewportSize() : java.awt.Dimension;
 	
 	/**
 	* Returns the scroll increment (in pixels) that completely exposes one new
@@ -1986,7 +1986,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the "unit" increment for scrolling in the specified direction
 	* @see Scrollable#getScrollableUnitIncrement
 	*/
-	@:overload public function getScrollableUnitIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
+	@:overload @:public public function getScrollableUnitIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
 	
 	/**
 	* Returns <code>visibleRect.height</code> or
@@ -2001,7 +2001,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*                                  per the orientation
 	* @see Scrollable#getScrollableBlockIncrement
 	*/
-	@:overload public function getScrollableBlockIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
+	@:overload @:public public function getScrollableBlockIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
 	
 	/**
 	* Returns false if <code>autoResizeMode</code> is set to
@@ -2013,7 +2013,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*   to <code>AUTO_RESIZE_OFF</code>, otherwise returns true
 	* @see Scrollable#getScrollableTracksViewportWidth
 	*/
-	@:overload public function getScrollableTracksViewportWidth() : Bool;
+	@:overload @:public public function getScrollableTracksViewportWidth() : Bool;
 	
 	/**
 	* Returns {@code false} to indicate that the height of the viewport does
@@ -2028,7 +2028,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see #setFillsViewportHeight
 	* @see #getFillsViewportHeight
 	*/
-	@:overload public function getScrollableTracksViewportHeight() : Bool;
+	@:overload @:public public function getScrollableTracksViewportHeight() : Bool;
 	
 	/**
 	* Sets whether or not this table is always made large enough
@@ -2049,7 +2049,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*      description: Whether or not this table is always made large enough
 	*                   to fill the height of an enclosing viewport
 	*/
-	@:require(java6) @:overload public function setFillsViewportHeight(fillsViewportHeight : Bool) : Void;
+	@:require(java6) @:overload @:public public function setFillsViewportHeight(fillsViewportHeight : Bool) : Void;
 	
 	/**
 	* Returns whether or not this table is always made large enough
@@ -2060,9 +2060,9 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see #setFillsViewportHeight
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getFillsViewportHeight() : Bool;
+	@:require(java6) @:overload @:public public function getFillsViewportHeight() : Bool;
 	
-	@:overload private function processKeyBinding(ks : javax.swing.KeyStroke, e : java.awt.event.KeyEvent, condition : Int, pressed : Bool) : Bool;
+	@:overload @:protected override private function processKeyBinding(ks : javax.swing.KeyStroke, e : java.awt.event.KeyEvent, condition : Int, pressed : Bool) : Bool;
 	
 	/**
 	* Creates default cell renderers for objects, numbers, doubles, dates,
@@ -2070,18 +2070,18 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see javax.swing.table.DefaultTableCellRenderer
 	*
 	*/
-	@:overload private function createDefaultRenderers() : Void;
+	@:overload @:protected private function createDefaultRenderers() : Void;
 	
 	/**
 	* Creates default cell editors for objects, numbers, and boolean values.
 	* @see DefaultCellEditor
 	*/
-	@:overload private function createDefaultEditors() : Void;
+	@:overload @:protected private function createDefaultEditors() : Void;
 	
 	/**
 	* Initializes table properties to their default values.
 	*/
-	@:overload private function initializeLocalVars() : Void;
+	@:overload @:protected private function initializeLocalVars() : Void;
 	
 	/**
 	* Returns the default table model object, which is
@@ -2091,7 +2091,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the default table model object
 	* @see javax.swing.table.DefaultTableModel
 	*/
-	@:overload private function createDefaultDataModel() : javax.swing.table.TableModel;
+	@:overload @:protected private function createDefaultDataModel() : javax.swing.table.TableModel;
 	
 	/**
 	* Returns the default column model object, which is
@@ -2101,7 +2101,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the default column model object
 	* @see javax.swing.table.DefaultTableColumnModel
 	*/
-	@:overload private function createDefaultColumnModel() : javax.swing.table.TableColumnModel;
+	@:overload @:protected private function createDefaultColumnModel() : javax.swing.table.TableColumnModel;
 	
 	/**
 	* Returns the default selection model object, which is
@@ -2111,7 +2111,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the default selection model object
 	* @see javax.swing.DefaultListSelectionModel
 	*/
-	@:overload private function createDefaultSelectionModel() : javax.swing.ListSelectionModel;
+	@:overload @:protected private function createDefaultSelectionModel() : javax.swing.ListSelectionModel;
 	
 	/**
 	* Returns the default table header object, which is
@@ -2121,12 +2121,12 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the default table header object
 	* @see javax.swing.table.JTableHeader
 	*/
-	@:overload private function createDefaultTableHeader() : javax.swing.table.JTableHeader;
+	@:overload @:protected private function createDefaultTableHeader() : javax.swing.table.JTableHeader;
 	
 	/**
 	* Equivalent to <code>revalidate</code> followed by <code>repaint</code>.
 	*/
-	@:overload private function resizeAndRepaint() : Void;
+	@:overload @:protected private function resizeAndRepaint() : Void;
 	
 	/**
 	* Returns the active cell editor, which is {@code null} if the table
@@ -2137,7 +2137,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see #cellEditor
 	* @see #getCellEditor(int, int)
 	*/
-	@:overload public function getCellEditor() : javax.swing.table.TableCellEditor;
+	@:overload @:public public function getCellEditor() : javax.swing.table.TableCellEditor;
 	
 	/**
 	* Sets the active cell editor.
@@ -2148,7 +2148,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  bound: true
 	*  description: The table's active cell editor.
 	*/
-	@:overload public function setCellEditor(anEditor : javax.swing.table.TableCellEditor) : Void;
+	@:overload @:public public function setCellEditor(anEditor : javax.swing.table.TableCellEditor) : Void;
 	
 	/**
 	* Sets the <code>editingColumn</code> variable.
@@ -2156,7 +2156,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @see #editingColumn
 	*/
-	@:overload public function setEditingColumn(aColumn : Int) : Void;
+	@:overload @:public public function setEditingColumn(aColumn : Int) : Void;
 	
 	/**
 	* Sets the <code>editingRow</code> variable.
@@ -2164,7 +2164,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @see #editingRow
 	*/
-	@:overload public function setEditingRow(aRow : Int) : Void;
+	@:overload @:public public function setEditingRow(aRow : Int) : Void;
 	
 	/**
 	* Returns an appropriate renderer for the cell specified by this row and
@@ -2188,7 +2188,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see javax.swing.table.TableColumn#setCellRenderer
 	* @see #setDefaultRenderer
 	*/
-	@:overload public function getCellRenderer(row : Int, column : Int) : javax.swing.table.TableCellRenderer;
+	@:overload @:public public function getCellRenderer(row : Int, column : Int) : javax.swing.table.TableCellRenderer;
 	
 	/**
 	* Prepares the renderer by querying the data model for the
@@ -2216,7 +2216,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*                  where 0 is the first column
 	* @return          the <code>Component</code> under the event location
 	*/
-	@:overload public function prepareRenderer(renderer : javax.swing.table.TableCellRenderer, row : Int, column : Int) : java.awt.Component;
+	@:overload @:public public function prepareRenderer(renderer : javax.swing.table.TableCellRenderer, row : Int, column : Int) : java.awt.Component;
 	
 	/**
 	* Returns an appropriate editor for the cell specified by
@@ -2239,7 +2239,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*                  this type of cell
 	* @see DefaultCellEditor
 	*/
-	@:overload public function getCellEditor(row : Int, column : Int) : javax.swing.table.TableCellEditor;
+	@:overload @:public public function getCellEditor(row : Int, column : Int) : javax.swing.table.TableCellEditor;
 	
 	/**
 	* Prepares the editor by querying the data model for the value and
@@ -2257,13 +2257,13 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*                where 0 is the first column
 	* @return the <code>Component</code> being edited
 	*/
-	@:overload public function prepareEditor(editor : javax.swing.table.TableCellEditor, row : Int, column : Int) : java.awt.Component;
+	@:overload @:public public function prepareEditor(editor : javax.swing.table.TableCellEditor, row : Int, column : Int) : java.awt.Component;
 	
 	/**
 	* Discards the editor object and frees the real estate it used for
 	* cell rendering.
 	*/
-	@:overload public function removeEditor() : Void;
+	@:overload @:public public function removeEditor() : Void;
 	
 	/**
 	* Returns a string representation of this table. This method
@@ -2274,7 +2274,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return  a string representation of this table
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* A convenience method that displays a printing dialog, and then prints
@@ -2296,7 +2296,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function print() : Bool;
+	@:require(java5) @:overload @:public public function print() : Bool;
 	
 	/**
 	* A convenience method that displays a printing dialog, and then prints
@@ -2319,7 +2319,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function print(printMode : javax.swing.JTable.JTable_PrintMode) : Bool;
+	@:require(java5) @:overload @:public public function print(printMode : javax.swing.JTable.JTable_PrintMode) : Bool;
 	
 	/**
 	* A convenience method that displays a printing dialog, and then prints
@@ -2348,7 +2348,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function print(printMode : javax.swing.JTable.JTable_PrintMode, headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat) : Bool;
+	@:require(java5) @:overload @:public public function print(printMode : javax.swing.JTable.JTable_PrintMode, headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat) : Bool;
 	
 	/**
 	* Prints this table, as specified by the fully featured
@@ -2383,7 +2383,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function print(printMode : javax.swing.JTable.JTable_PrintMode, headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat, showPrintDialog : Bool, attr : javax.print.attribute.PrintRequestAttributeSet, interactive : Bool) : Bool;
+	@:require(java5) @:overload @:public public function print(printMode : javax.swing.JTable.JTable_PrintMode, headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat, showPrintDialog : Bool, attr : javax.print.attribute.PrintRequestAttributeSet, interactive : Bool) : Bool;
 	
 	/**
 	* Prints this <code>JTable</code>. Takes steps that the majority of
@@ -2463,7 +2463,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function print(printMode : javax.swing.JTable.JTable_PrintMode, headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat, showPrintDialog : Bool, attr : javax.print.attribute.PrintRequestAttributeSet, interactive : Bool, service : javax.print.PrintService) : Bool;
+	@:require(java6) @:overload @:public public function print(printMode : javax.swing.JTable.JTable_PrintMode, headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat, showPrintDialog : Bool, attr : javax.print.attribute.PrintRequestAttributeSet, interactive : Bool, service : javax.print.PrintService) : Bool;
 	
 	/**
 	* Return a <code>Printable</code> for use in printing this JTable.
@@ -2566,7 +2566,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getPrintable(printMode : javax.swing.JTable.JTable_PrintMode, headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat) : java.awt.print.Printable;
+	@:require(java5) @:overload @:public public function getPrintable(printMode : javax.swing.JTable.JTable_PrintMode, headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat) : java.awt.print.Printable;
 	
 	/**
 	* Gets the AccessibleContext associated with this JTable.
@@ -2577,7 +2577,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return an AccessibleJTable that serves as the
 	*         AccessibleContext of this JTable
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -2628,7 +2628,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return the drop row
 	*/
-	@:overload public function getRow() : Int;
+	@:overload @:public public function getRow() : Int;
 	
 	/**
 	* Returns the column index where a dropped item should be placed in the
@@ -2644,7 +2644,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return the drop row
 	*/
-	@:overload public function getColumn() : Int;
+	@:overload @:public public function getColumn() : Int;
 	
 	/**
 	* Returns whether or not this location represents an insert
@@ -2652,7 +2652,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return whether or not this is an insert row
 	*/
-	@:overload public function isInsertRow() : Bool;
+	@:overload @:public public function isInsertRow() : Bool;
 	
 	/**
 	* Returns whether or not this location represents an insert
@@ -2660,7 +2660,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return whether or not this is an insert column
 	*/
-	@:overload public function isInsertColumn() : Bool;
+	@:overload @:public public function isInsertColumn() : Bool;
 	
 	/**
 	* Returns a string representation of this drop location.
@@ -2670,25 +2670,25 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return a string representation of this drop location
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('javax$swing$JTable$Resizable2') @:internal extern interface JTable_Resizable2
 {
-	@:overload public function getElementCount() : Int;
+	@:overload @:public public function getElementCount() : Int;
 	
-	@:overload public function getLowerBoundAt(i : Int) : Int;
+	@:overload @:public public function getLowerBoundAt(i : Int) : Int;
 	
-	@:overload public function getUpperBoundAt(i : Int) : Int;
+	@:overload @:public public function getUpperBoundAt(i : Int) : Int;
 	
-	@:overload public function setSizeAt(newSize : Int, i : Int) : Void;
+	@:overload @:public public function setSizeAt(newSize : Int, i : Int) : Void;
 	
 	
 }
 @:native('javax$swing$JTable$Resizable3') @:internal extern interface JTable_Resizable3 extends javax.swing.JTable.JTable_Resizable2
 {
-	@:overload public function getMidPointAt(i : Int) : Int;
+	@:overload @:public public function getMidPointAt(i : Int) : Int;
 	
 	
 }
@@ -2702,36 +2702,36 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	/**
 	* Disposes any resources used by this SortManager.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* Sets the height for a row at a specified index.
 	*/
-	@:overload public function setViewRowHeight(viewIndex : Int, rowHeight : Int) : Void;
+	@:overload @:public public function setViewRowHeight(viewIndex : Int, rowHeight : Int) : Void;
 	
 	/**
 	* Invoked when the underlying model has completely changed.
 	*/
-	@:overload public function allChanged() : Void;
+	@:overload @:public public function allChanged() : Void;
 	
 	/**
 	* Invoked when the selection, on the view, has changed.
 	*/
-	@:overload public function viewSelectionChanged(e : javax.swing.event.ListSelectionEvent) : Void;
+	@:overload @:public public function viewSelectionChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	
 	/**
 	* Invoked when either the table model has changed, or the RowSorter
 	* has changed. This is invoked prior to notifying the sorter of the
 	* change.
 	*/
-	@:overload public function prepareForChange(sortEvent : javax.swing.event.RowSorterEvent, change : javax.swing.JTable.JTable_ModelChange) : Void;
+	@:overload @:public public function prepareForChange(sortEvent : javax.swing.event.RowSorterEvent, change : javax.swing.JTable.JTable_ModelChange) : Void;
 	
 	/**
 	* Inovked when either the table has changed or the sorter has changed
 	* and after the sorter has been notified. If necessary this will
 	* reapply the selection and variable row heights.
 	*/
-	@:overload public function processChange(sortEvent : javax.swing.event.RowSorterEvent, change : javax.swing.JTable.JTable_ModelChange, sorterChanged : Bool) : Void;
+	@:overload @:public public function processChange(sortEvent : javax.swing.event.RowSorterEvent, change : javax.swing.JTable.JTable_ModelChange, sorterChanged : Bool) : Void;
 	
 	
 }
@@ -2749,39 +2749,39 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 **/
 @:native('javax$swing$JTable$NumberRenderer') @:internal extern class JTable_NumberRenderer extends javax.swing.table.DefaultTableCellRenderer.DefaultTableCellRenderer_UIResource
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('javax$swing$JTable$DoubleRenderer') @:internal extern class JTable_DoubleRenderer extends javax.swing.JTable.JTable_NumberRenderer
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public override public function setValue(value : Dynamic) : Void;
 	
 	
 }
 @:native('javax$swing$JTable$DateRenderer') @:internal extern class JTable_DateRenderer extends javax.swing.table.DefaultTableCellRenderer.DefaultTableCellRenderer_UIResource
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public override public function setValue(value : Dynamic) : Void;
 	
 	
 }
 @:native('javax$swing$JTable$IconRenderer') @:internal extern class JTable_IconRenderer extends javax.swing.table.DefaultTableCellRenderer.DefaultTableCellRenderer_UIResource
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public override public function setValue(value : Dynamic) : Void;
 	
 	
 }
 @:native('javax$swing$JTable$BooleanRenderer') @:internal extern class JTable_BooleanRenderer extends javax.swing.JCheckBox implements javax.swing.table.TableCellRenderer implements javax.swing.plaf.UIResource
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
+	@:overload @:public public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
 	
 	
 }
@@ -2790,33 +2790,33 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 */
 @:native('javax$swing$JTable$GenericEditor') @:internal extern class JTable_GenericEditor extends javax.swing.DefaultCellEditor
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function stopCellEditing() : Bool;
+	@:overload @:public override public function stopCellEditing() : Bool;
 	
-	@:overload override public function getTableCellEditorComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, row : Int, column : Int) : java.awt.Component;
+	@:overload @:public override public function getTableCellEditorComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, row : Int, column : Int) : java.awt.Component;
 	
-	@:overload override public function getCellEditorValue() : Dynamic;
+	@:overload @:public override public function getCellEditorValue() : Dynamic;
 	
 	
 }
 @:native('javax$swing$JTable$NumberEditor') @:internal extern class JTable_NumberEditor extends javax.swing.JTable.JTable_GenericEditor
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('javax$swing$JTable$BooleanEditor') @:internal extern class JTable_BooleanEditor extends javax.swing.DefaultCellEditor
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('javax$swing$JTable$CellEditorRemover') @:internal extern class JTable_CellEditorRemover implements java.beans.PropertyChangeListener
 {
-	@:overload public function new(fm : java.awt.KeyboardFocusManager) : Void;
+	@:overload @:public public function new(fm : java.awt.KeyboardFocusManager) : Void;
 	
-	@:overload public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -2832,7 +2832,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @param printDelegate the <code>Printable</code> to delegate to
 	*/
-	@:overload public function new(printDelegate : java.awt.print.Printable) : Void;
+	@:overload @:public public function new(printDelegate : java.awt.print.Printable) : Void;
 	
 	/**
 	* Prints the specified page into the given {@link Graphics}
@@ -2848,7 +2848,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*          NO_SUCH_PAGE if a non-existent page index is specified
 	* @throws  PrinterException if an error causes printing to be aborted
 	*/
-	@:overload public function print(graphics : java.awt.Graphics, pageFormat : java.awt.print.PageFormat, pageIndex : Int) : Int;
+	@:overload @:public public function print(graphics : java.awt.Graphics, pageFormat : java.awt.print.PageFormat, pageIndex : Int) : Int;
 	
 	
 }
@@ -2873,60 +2873,60 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function new() : Void;
+	@:require(java5) @:overload @:protected private function new() : Void;
 	
 	/**
 	* Track changes to selection model, column model, etc. so as to
 	* be able to re-place listeners on those in order to pass on
 	* information to the Accessibility PropertyChange mechanism
 	*/
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* Track changes to the table contents
 	*/
-	@:overload public function tableChanged(e : javax.swing.event.TableModelEvent) : Void;
+	@:overload @:public public function tableChanged(e : javax.swing.event.TableModelEvent) : Void;
 	
 	/**
 	* Track changes to the table contents (row insertions)
 	*/
-	@:overload public function tableRowsInserted(e : javax.swing.event.TableModelEvent) : Void;
+	@:overload @:public public function tableRowsInserted(e : javax.swing.event.TableModelEvent) : Void;
 	
 	/**
 	* Track changes to the table contents (row deletions)
 	*/
-	@:overload public function tableRowsDeleted(e : javax.swing.event.TableModelEvent) : Void;
+	@:overload @:public public function tableRowsDeleted(e : javax.swing.event.TableModelEvent) : Void;
 	
 	/**
 	* Track changes to the table contents (column insertions)
 	*/
-	@:overload public function columnAdded(e : javax.swing.event.TableColumnModelEvent) : Void;
+	@:overload @:public public function columnAdded(e : javax.swing.event.TableColumnModelEvent) : Void;
 	
 	/**
 	* Track changes to the table contents (column deletions)
 	*/
-	@:overload public function columnRemoved(e : javax.swing.event.TableColumnModelEvent) : Void;
+	@:overload @:public public function columnRemoved(e : javax.swing.event.TableColumnModelEvent) : Void;
 	
 	/**
 	* Track changes of a column repositioning.
 	*
 	* @see TableColumnModelListener
 	*/
-	@:overload public function columnMoved(e : javax.swing.event.TableColumnModelEvent) : Void;
+	@:overload @:public public function columnMoved(e : javax.swing.event.TableColumnModelEvent) : Void;
 	
 	/**
 	* Track changes of a column moving due to margin changes.
 	*
 	* @see TableColumnModelListener
 	*/
-	@:overload public function columnMarginChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function columnMarginChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	/**
 	* Track that the selection model of the TableColumnModel changed.
 	*
 	* @see TableColumnModelListener
 	*/
-	@:overload public function columnSelectionChanged(e : javax.swing.event.ListSelectionEvent) : Void;
+	@:overload @:public public function columnSelectionChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	
 	/**
 	* Track changes to a cell's contents.
@@ -2936,7 +2936,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @see CellEditorListener
 	*/
-	@:overload public function editingStopped(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function editingStopped(e : javax.swing.event.ChangeEvent) : Void;
 	
 	/**
 	* Invoked when editing is canceled. The editor object is discarded
@@ -2944,12 +2944,12 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @see CellEditorListener
 	*/
-	@:overload public function editingCanceled(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function editingCanceled(e : javax.swing.event.ChangeEvent) : Void;
 	
 	/**
 	* Track changes to table cell selections
 	*/
-	@:overload public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
+	@:overload @:public public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	
 	/**
 	* Get the AccessibleSelection associated with this object.  In the
@@ -2959,7 +2959,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload @:public override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Gets the role of this object.
@@ -2968,7 +2968,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the <code>Accessible</code> child, if one exists,
@@ -2980,7 +2980,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the <code>Accessible</code>, if it exists,
 	*    at the specified location; else <code>null</code>
 	*/
-	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -2989,7 +2989,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return the number of accessible children in the object
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the nth <code>Accessible</code> child of the object.
@@ -2997,7 +2997,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param i zero-based index of child
 	* @return the nth Accessible child of the object
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of <code>Accessible</code> children
@@ -3006,7 +3006,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return the number of items currently selected
 	*/
-	@:overload public function getAccessibleSelectionCount() : Int;
+	@:overload @:public public function getAccessibleSelectionCount() : Int;
 	
 	/**
 	* Returns an <code>Accessible</code> representing the
@@ -3021,7 +3021,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the i-th selected child
 	* @see #getAccessibleSelectionCount
 	*/
-	@:overload public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Determines if the current child of this object is selected.
@@ -3031,7 +3031,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return true if the current child of this object is selected
 	* @see AccessibleContext#getAccessibleChild
 	*/
-	@:overload public function isAccessibleChildSelected(i : Int) : Bool;
+	@:overload @:public public function isAccessibleChildSelected(i : Int) : Bool;
 	
 	/**
 	* Adds the specified <code>Accessible</code> child of the
@@ -3047,7 +3047,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param i the zero-based index of the child
 	* @see AccessibleContext#getAccessibleChild
 	*/
-	@:overload public function addAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function addAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Removes the specified child of the object from the object's
@@ -3060,20 +3060,20 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param i the zero-based index of the child
 	* @see AccessibleContext#getAccessibleChild
 	*/
-	@:overload public function removeAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function removeAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Clears the selection in the object, so that no children in the
 	* object are selected.
 	*/
-	@:overload public function clearAccessibleSelection() : Void;
+	@:overload @:public public function clearAccessibleSelection() : Void;
 	
 	/**
 	* Causes every child of the object to be selected, but only
 	* if the <code>JTable</code> supports multiple selections,
 	* and if individual cell selection is enabled.
 	*/
-	@:overload public function selectAllAccessibleSelection() : Void;
+	@:overload @:public public function selectAllAccessibleSelection() : Void;
 	
 	/**
 	* Returns the row number of an index in the table.
@@ -3083,7 +3083,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* otherwise -1.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAccessibleRow(index : Int) : Int;
+	@:require(java4) @:overload @:public public function getAccessibleRow(index : Int) : Int;
 	
 	/**
 	* Returns the column number of an index in the table.
@@ -3093,7 +3093,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* otherwise -1.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAccessibleColumn(index : Int) : Int;
+	@:require(java4) @:overload @:public public function getAccessibleColumn(index : Int) : Int;
 	
 	/**
 	* Returns the index at a row and column in the table.
@@ -3104,7 +3104,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* otherwise -1.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAccessibleIndex(r : Int, c : Int) : Int;
+	@:require(java4) @:overload @:public public function getAccessibleIndex(r : Int, c : Int) : Int;
 	
 	/**
 	* Gets the <code>AccessibleTable</code> associated with this
@@ -3116,7 +3116,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return this object
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleTable() : javax.accessibility.AccessibleTable;
+	@:require(java3) @:overload @:public override public function getAccessibleTable() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Returns the caption for the table.
@@ -3124,7 +3124,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the caption for the table
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleCaption() : javax.accessibility.Accessible;
+	@:require(java3) @:overload @:public public function getAccessibleCaption() : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the caption for the table.
@@ -3132,7 +3132,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param a the caption for the table
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setAccessibleCaption(a : javax.accessibility.Accessible) : Void;
+	@:require(java3) @:overload @:public public function setAccessibleCaption(a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns the summary description of the table.
@@ -3140,7 +3140,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the summary description of the table
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleSummary() : javax.accessibility.Accessible;
+	@:require(java3) @:overload @:public public function getAccessibleSummary() : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the summary description of the table.
@@ -3148,21 +3148,21 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param a the summary description of the table
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setAccessibleSummary(a : javax.accessibility.Accessible) : Void;
+	@:require(java3) @:overload @:public public function setAccessibleSummary(a : javax.accessibility.Accessible) : Void;
 	
 	/*
 	* Returns the total number of rows in this table.
 	*
 	* @return the total number of rows in this table
 	*/
-	@:overload public function getAccessibleRowCount() : Int;
+	@:overload @:public public function getAccessibleRowCount() : Int;
 	
 	/*
 	* Returns the total number of columns in the table.
 	*
 	* @return the total number of columns in the table
 	*/
-	@:overload public function getAccessibleColumnCount() : Int;
+	@:overload @:public public function getAccessibleColumnCount() : Int;
 	
 	/*
 	* Returns the <code>Accessible</code> at a specified row
@@ -3173,7 +3173,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the <code>Accessible</code> at the specified row and column
 	* in the table
 	*/
-	@:overload public function getAccessibleAt(r : Int, c : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleAt(r : Int, c : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of rows occupied by the <code>Accessible</code>
@@ -3183,7 +3183,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*     at a specified row and column in the table
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleRowExtentAt(r : Int, c : Int) : Int;
+	@:require(java3) @:overload @:public public function getAccessibleRowExtentAt(r : Int, c : Int) : Int;
 	
 	/**
 	* Returns the number of columns occupied by the
@@ -3193,7 +3193,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*     at a specified row and column in the table
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleColumnExtentAt(r : Int, c : Int) : Int;
+	@:require(java3) @:overload @:public public function getAccessibleColumnExtentAt(r : Int, c : Int) : Int;
 	
 	/**
 	* Returns the row headers as an <code>AccessibleTable</code>.
@@ -3202,7 +3202,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* headers
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleRowHeader() : javax.accessibility.AccessibleTable;
+	@:require(java3) @:overload @:public public function getAccessibleRowHeader() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Sets the row headers as an <code>AccessibleTable</code>.
@@ -3211,7 +3211,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  headers
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setAccessibleRowHeader(a : javax.accessibility.AccessibleTable) : Void;
+	@:require(java3) @:overload @:public public function setAccessibleRowHeader(a : javax.accessibility.AccessibleTable) : Void;
 	
 	/**
 	* Returns the column headers as an <code>AccessibleTable</code>.
@@ -3221,7 +3221,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*          <code>null</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleColumnHeader() : javax.accessibility.AccessibleTable;
+	@:require(java3) @:overload @:public public function getAccessibleColumnHeader() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Sets the column headers as an <code>AccessibleTable</code>.
@@ -3230,7 +3230,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* column headers
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setAccessibleColumnHeader(a : javax.accessibility.AccessibleTable) : Void;
+	@:require(java3) @:overload @:public public function setAccessibleColumnHeader(a : javax.accessibility.AccessibleTable) : Void;
 	
 	/**
 	* Returns the description of the specified row in the table.
@@ -3239,7 +3239,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the description of the row
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleRowDescription(r : Int) : javax.accessibility.Accessible;
+	@:require(java3) @:overload @:public public function getAccessibleRowDescription(r : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the description text of the specified row of the table.
@@ -3248,7 +3248,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param a the description of the row
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setAccessibleRowDescription(r : Int, a : javax.accessibility.Accessible) : Void;
+	@:require(java3) @:overload @:public public function setAccessibleRowDescription(r : Int, a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns the description of the specified column in the table.
@@ -3257,7 +3257,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the description of the column
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleColumnDescription(c : Int) : javax.accessibility.Accessible;
+	@:require(java3) @:overload @:public public function getAccessibleColumnDescription(c : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the description text of the specified column of the table.
@@ -3266,7 +3266,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param a the description of the column
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setAccessibleColumnDescription(c : Int, a : javax.accessibility.Accessible) : Void;
+	@:require(java3) @:overload @:public public function setAccessibleColumnDescription(c : Int, a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns a boolean value indicating whether the accessible at a
@@ -3278,7 +3278,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*     is selected; otherwise, the boolean value false
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function isAccessibleSelected(r : Int, c : Int) : Bool;
+	@:require(java3) @:overload @:public public function isAccessibleSelected(r : Int, c : Int) : Bool;
 	
 	/**
 	* Returns a boolean value indicating whether the specified row
@@ -3289,7 +3289,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*     otherwise, false
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function isAccessibleRowSelected(r : Int) : Bool;
+	@:require(java3) @:overload @:public public function isAccessibleRowSelected(r : Int) : Bool;
 	
 	/**
 	* Returns a boolean value indicating whether the specified column
@@ -3300,7 +3300,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*     otherwise, false
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function isAccessibleColumnSelected(c : Int) : Bool;
+	@:require(java3) @:overload @:public public function isAccessibleColumnSelected(c : Int) : Bool;
 	
 	/**
 	* Returns the selected rows in a table.
@@ -3309,7 +3309,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*     zero-based row of the table
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getSelectedAccessibleRows() : java.NativeArray<Int>;
+	@:require(java3) @:overload @:public public function getSelectedAccessibleRows() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the selected columns in a table.
@@ -3318,7 +3318,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*     zero-based column of the table
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getSelectedAccessibleColumns() : java.NativeArray<Int>;
+	@:require(java3) @:overload @:public public function getSelectedAccessibleColumns() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the row at a given index into the table.
@@ -3327,7 +3327,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the row at a given index
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleRowAtIndex(i : Int) : Int;
+	@:require(java3) @:overload @:public public function getAccessibleRowAtIndex(i : Int) : Int;
 	
 	/**
 	* Returns the column at a given index into the table.
@@ -3336,7 +3336,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the column at a given index
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleColumnAtIndex(i : Int) : Int;
+	@:require(java3) @:overload @:public public function getAccessibleColumnAtIndex(i : Int) : Int;
 	
 	/**
 	* Returns the index at a given (row, column) in the table.
@@ -3346,7 +3346,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the index into the table
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleIndexAt(r : Int, c : Int) : Int;
+	@:require(java3) @:overload @:public public function getAccessibleIndexAt(r : Int, c : Int) : Int;
 	
 	
 }
@@ -3355,27 +3355,27 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 */
 @:native('javax$swing$JTable$AccessibleJTable$AccessibleJTableModelChange') extern class JTable_AccessibleJTable_AccessibleJTableModelChange implements javax.accessibility.AccessibleTableModelChange
 {
-	private var type : Int;
+	@:protected private var type : Int;
 	
-	private var firstRow : Int;
+	@:protected private var firstRow : Int;
 	
-	private var lastRow : Int;
+	@:protected private var lastRow : Int;
 	
-	private var firstColumn : Int;
+	@:protected private var firstColumn : Int;
 	
-	private var lastColumn : Int;
+	@:protected private var lastColumn : Int;
 	
-	@:overload private function new(type : Int, firstRow : Int, lastRow : Int, firstColumn : Int, lastColumn : Int) : Void;
+	@:overload @:protected private function new(type : Int, firstRow : Int, lastRow : Int, firstColumn : Int, lastColumn : Int) : Void;
 	
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
-	@:overload public function getFirstRow() : Int;
+	@:overload @:public public function getFirstRow() : Int;
 	
-	@:overload public function getLastRow() : Int;
+	@:overload @:public public function getLastRow() : Int;
 	
-	@:overload public function getFirstColumn() : Int;
+	@:overload @:public public function getFirstColumn() : Int;
 	
-	@:overload public function getLastColumn() : Int;
+	@:overload @:public public function getLastColumn() : Int;
 	
 	
 }
@@ -3389,42 +3389,42 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return the caption for the table
 	*/
-	@:overload public function getAccessibleCaption() : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleCaption() : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the caption for the table.
 	*
 	* @param a the caption for the table
 	*/
-	@:overload public function setAccessibleCaption(a : javax.accessibility.Accessible) : Void;
+	@:overload @:public public function setAccessibleCaption(a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns the summary description of the table.
 	*
 	* @return the summary description of the table
 	*/
-	@:overload public function getAccessibleSummary() : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleSummary() : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the summary description of the table
 	*
 	* @param a the summary description of the table
 	*/
-	@:overload public function setAccessibleSummary(a : javax.accessibility.Accessible) : Void;
+	@:overload @:public public function setAccessibleSummary(a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns the number of rows in the table.
 	*
 	* @return the number of rows in the table
 	*/
-	@:overload public function getAccessibleRowCount() : Int;
+	@:overload @:public public function getAccessibleRowCount() : Int;
 	
 	/**
 	* Returns the number of columns in the table.
 	*
 	* @return the number of columns in the table
 	*/
-	@:overload public function getAccessibleColumnCount() : Int;
+	@:overload @:public public function getAccessibleColumnCount() : Int;
 	
 	/**
 	* Returns the Accessible at a specified row and column
@@ -3434,7 +3434,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param column zero-based column of the table
 	* @return the Accessible at the specified row and column
 	*/
-	@:overload public function getAccessibleAt(row : Int, column : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleAt(row : Int, column : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of rows occupied by the Accessible at
@@ -3443,7 +3443,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the number of rows occupied by the Accessible at a
 	* given specified (row, column)
 	*/
-	@:overload public function getAccessibleRowExtentAt(r : Int, c : Int) : Int;
+	@:overload @:public public function getAccessibleRowExtentAt(r : Int, c : Int) : Int;
 	
 	/**
 	* Returns the number of columns occupied by the Accessible at
@@ -3452,7 +3452,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the number of columns occupied by the Accessible at a
 	* given specified row and column
 	*/
-	@:overload public function getAccessibleColumnExtentAt(r : Int, c : Int) : Int;
+	@:overload @:public public function getAccessibleColumnExtentAt(r : Int, c : Int) : Int;
 	
 	/**
 	* Returns the row headers as an AccessibleTable.
@@ -3460,7 +3460,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return an AccessibleTable representing the row
 	* headers
 	*/
-	@:overload public function getAccessibleRowHeader() : javax.accessibility.AccessibleTable;
+	@:overload @:public public function getAccessibleRowHeader() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Sets the row headers.
@@ -3468,7 +3468,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param table an AccessibleTable representing the
 	* row headers
 	*/
-	@:overload public function setAccessibleRowHeader(table : javax.accessibility.AccessibleTable) : Void;
+	@:overload @:public public function setAccessibleRowHeader(table : javax.accessibility.AccessibleTable) : Void;
 	
 	/**
 	* Returns the column headers as an AccessibleTable.
@@ -3476,7 +3476,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return an AccessibleTable representing the column
 	* headers
 	*/
-	@:overload public function getAccessibleColumnHeader() : javax.accessibility.AccessibleTable;
+	@:overload @:public public function getAccessibleColumnHeader() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Sets the column headers.
@@ -3485,7 +3485,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* column headers
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setAccessibleColumnHeader(table : javax.accessibility.AccessibleTable) : Void;
+	@:require(java3) @:overload @:public public function setAccessibleColumnHeader(table : javax.accessibility.AccessibleTable) : Void;
 	
 	/**
 	* Returns the description of the specified row in the table.
@@ -3494,7 +3494,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the description of the row
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleRowDescription(r : Int) : javax.accessibility.Accessible;
+	@:require(java3) @:overload @:public public function getAccessibleRowDescription(r : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the description text of the specified row of the table.
@@ -3503,7 +3503,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param a the description of the row
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setAccessibleRowDescription(r : Int, a : javax.accessibility.Accessible) : Void;
+	@:require(java3) @:overload @:public public function setAccessibleRowDescription(r : Int, a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns the description text of the specified column in the table.
@@ -3512,7 +3512,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the text description of the column
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleColumnDescription(c : Int) : javax.accessibility.Accessible;
+	@:require(java3) @:overload @:public public function getAccessibleColumnDescription(c : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the description text of the specified column in the table.
@@ -3521,7 +3521,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param a the text description of the column
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setAccessibleColumnDescription(c : Int, a : javax.accessibility.Accessible) : Void;
+	@:require(java3) @:overload @:public public function setAccessibleColumnDescription(c : Int, a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns a boolean value indicating whether the accessible at
@@ -3534,7 +3534,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* false
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function isAccessibleSelected(r : Int, c : Int) : Bool;
+	@:require(java3) @:overload @:public public function isAccessibleSelected(r : Int, c : Int) : Bool;
 	
 	/**
 	* Returns a boolean value indicating whether the specified row
@@ -3545,7 +3545,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* Otherwise, false.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function isAccessibleRowSelected(r : Int) : Bool;
+	@:require(java3) @:overload @:public public function isAccessibleRowSelected(r : Int) : Bool;
 	
 	/**
 	* Returns a boolean value indicating whether the specified column
@@ -3556,7 +3556,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* Otherwise, false.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function isAccessibleColumnSelected(c : Int) : Bool;
+	@:require(java3) @:overload @:public public function isAccessibleColumnSelected(c : Int) : Bool;
 	
 	/**
 	* Returns the selected rows in a table.
@@ -3565,7 +3565,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* zero-based row of the table
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getSelectedAccessibleRows() : java.NativeArray<Int>;
+	@:require(java3) @:overload @:public public function getSelectedAccessibleRows() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the selected columns in a table.
@@ -3574,7 +3574,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* zero-based column of the table
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getSelectedAccessibleColumns() : java.NativeArray<Int>;
+	@:require(java3) @:overload @:public public function getSelectedAccessibleColumns() : java.NativeArray<Int>;
 	
 	
 }
@@ -3588,7 +3588,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*  Constructs an <code>AccessibleJTableHeaderEntry</code>.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(t : javax.swing.JTable, r : Int, c : Int, i : Int) : Void;
+	@:require(java4) @:overload @:public public function new(t : javax.swing.JTable, r : Int, c : Int, i : Int) : Void;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with this
@@ -3598,7 +3598,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Gets the AccessibleContext for the table cell renderer.
@@ -3608,7 +3608,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* otherwise, returns <code>null</code>.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function getCurrentAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java6) @:overload @:protected private function getCurrentAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Gets the table cell renderer component.
@@ -3617,7 +3617,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* otherwise, returns <code>null</code>.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function getCurrentComponent() : java.awt.Component;
+	@:require(java6) @:overload @:protected private function getCurrentComponent() : java.awt.Component;
 	
 	/**
 	* Gets the accessible name of this object.
@@ -3625,14 +3625,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the localized name of the object; <code>null</code>
 	*     if this object does not have a name
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Sets the localized accessible name of this object.
 	*
 	* @param s the new localized name of the object
 	*/
-	@:overload override public function setAccessibleName(s : String) : Void;
+	@:overload @:public override public function setAccessibleName(s : String) : Void;
 	
 	/**
 	* Gets the accessible description of this object.
@@ -3641,14 +3641,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*     <code>null</code> if this object does not have
 	*     a description
 	*/
-	@:overload override public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
 	/**
 	* Sets the accessible description of this object.
 	*
 	* @param s the new localized description of the object
 	*/
-	@:overload override public function setAccessibleDescription(s : String) : Void;
+	@:overload @:public override public function setAccessibleDescription(s : String) : Void;
 	
 	/**
 	* Gets the role of this object.
@@ -3657,7 +3657,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*      describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the state set of this object.
@@ -3666,7 +3666,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*     containing the current state set of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the <code>Accessible</code> parent of this object.
@@ -3675,7 +3675,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*     <code>null</code> if this object does not
 	*     have an <code>Accessible</code> parent
 	*/
-	@:overload override public function getAccessibleParent() : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleParent() : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the index of this object in its accessible parent.
@@ -3684,14 +3684,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*     object does not have an accessible parent
 	* @see #getAccessibleParent
 	*/
-	@:overload override public function getAccessibleIndexInParent() : Int;
+	@:overload @:public override public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Returns the number of accessible children in the object.
 	*
 	* @return the number of accessible children in the object
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the specified <code>Accessible</code> child of the
@@ -3700,7 +3700,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param i zero-based index of child
 	* @return the <code>Accessible</code> child of the object
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the locale of the component. If the component
@@ -3716,7 +3716,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*    containing parent
 	* @see #setLocale
 	*/
-	@:overload override public function getLocale() : java.util.Locale;
+	@:overload @:public override public function getLocale() : java.util.Locale;
 	
 	/**
 	* Adds a <code>PropertyChangeListener</code> to the listener list.
@@ -3725,7 +3725,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param l  the <code>PropertyChangeListener</code>
 	*     to be added
 	*/
-	@:overload override public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a <code>PropertyChangeListener</code> from the
@@ -3735,7 +3735,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param l  the <code>PropertyChangeListener</code>
 	*    to be removed
 	*/
-	@:overload override public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Gets the <code>AccessibleAction</code> associated with this
@@ -3743,7 +3743,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return the <code>AccessibleAction</code>, or <code>null</code>
 	*/
-	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload @:public override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Gets the <code>AccessibleComponent</code> associated with
@@ -3752,7 +3752,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the <code>AccessibleComponent</code>, or
 	*    <code>null</code>
 	*/
-	@:overload override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
+	@:overload @:public override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
 	
 	/**
 	* Gets the <code>AccessibleSelection</code> associated with
@@ -3761,7 +3761,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the <code>AccessibleSelection</code>, or
 	*    <code>null</code>
 	*/
-	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload @:public override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Gets the <code>AccessibleText</code> associated with this
@@ -3769,7 +3769,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return the <code>AccessibleText</code>, or <code>null</code>
 	*/
-	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload @:public override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Gets the <code>AccessibleValue</code> associated with
@@ -3777,7 +3777,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return the <code>AccessibleValue</code>, or <code>null</code>
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Gets the background color of this object.
@@ -3785,14 +3785,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the background color, if supported, of the object;
 	*     otherwise, <code>null</code>
 	*/
-	@:overload public function getBackground() : java.awt.Color;
+	@:overload @:public public function getBackground() : java.awt.Color;
 	
 	/**
 	* Sets the background color of this object.
 	*
 	* @param c the new <code>Color</code> for the background
 	*/
-	@:overload public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Gets the foreground color of this object.
@@ -3800,14 +3800,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the foreground color, if supported, of the object;
 	*     otherwise, <code>null</code>
 	*/
-	@:overload public function getForeground() : java.awt.Color;
+	@:overload @:public public function getForeground() : java.awt.Color;
 	
 	/**
 	* Sets the foreground color of this object.
 	*
 	* @param c the new <code>Color</code> for the foreground
 	*/
-	@:overload public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* Gets the <code>Cursor</code> of this object.
@@ -3815,14 +3815,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the <code>Cursor</code>, if supported,
 	*    of the object; otherwise, <code>null</code>
 	*/
-	@:overload public function getCursor() : java.awt.Cursor;
+	@:overload @:public public function getCursor() : java.awt.Cursor;
 	
 	/**
 	* Sets the <code>Cursor</code> of this object.
 	*
 	* @param c the new <code>Cursor</code> for the object
 	*/
-	@:overload public function setCursor(c : java.awt.Cursor) : Void;
+	@:overload @:public public function setCursor(c : java.awt.Cursor) : Void;
 	
 	/**
 	* Gets the <code>Font</code> of this object.
@@ -3830,14 +3830,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the <code>Font</code>,if supported,
 	*   for the object; otherwise, <code>null</code>
 	*/
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public public function getFont() : java.awt.Font;
 	
 	/**
 	* Sets the <code>Font</code> of this object.
 	*
 	* @param f the new <code>Font</code> for the object
 	*/
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Gets the <code>FontMetrics</code> of this object.
@@ -3847,21 +3847,21 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*    otherwise <code>null</code>
 	* @see #getFont
 	*/
-	@:overload public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Determines if the object is enabled.
 	*
 	* @return true if object is enabled; otherwise, false
 	*/
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
 	/**
 	* Sets the enabled state of the object.
 	*
 	* @param b if true, enables this object; otherwise, disables it
 	*/
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Determines if this object is visible.  Note: this means that the
@@ -3872,14 +3872,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return true if object is visible; otherwise, false
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
 	/**
 	* Sets the visible state of the object.
 	*
 	* @param b if true, shows this object; otherwise, hides it
 	*/
-	@:overload public function setVisible(b : Bool) : Void;
+	@:overload @:public public function setVisible(b : Bool) : Void;
 	
 	/**
 	* Determines if the object is showing.  This is determined
@@ -3890,7 +3890,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return true if the object is showing; otherwise, false
 	*/
-	@:overload public function isShowing() : Bool;
+	@:overload @:public public function isShowing() : Bool;
 	
 	/**
 	* Checks whether the specified point is within this
@@ -3903,7 +3903,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return true if object contains <code>Point</code>;
 	*    otherwise false
 	*/
-	@:overload public function contains(p : java.awt.Point) : Bool;
+	@:overload @:public public function contains(p : java.awt.Point) : Bool;
 	
 	/**
 	* Returns the location of the object on the screen.
@@ -3911,7 +3911,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return location of object on screen -- can be
 	*    <code>null</code> if this object is not on the screen
 	*/
-	@:overload public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public public function getLocationOnScreen() : java.awt.Point;
 	
 	/**
 	* Gets the location of the object relative to the parent
@@ -3923,30 +3923,30 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*    coordinate space of the screen; <code>null</code> if
 	*    this object or its parent are not on the screen
 	*/
-	@:overload public function getLocation() : java.awt.Point;
+	@:overload @:public public function getLocation() : java.awt.Point;
 	
 	/**
 	* Sets the location of the object relative to the parent.
 	*/
-	@:overload public function setLocation(p : java.awt.Point) : Void;
+	@:overload @:public public function setLocation(p : java.awt.Point) : Void;
 	
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public public function getBounds() : java.awt.Rectangle;
 	
-	@:overload public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload @:public public function setBounds(r : java.awt.Rectangle) : Void;
 	
-	@:overload public function getSize() : java.awt.Dimension;
+	@:overload @:public public function getSize() : java.awt.Dimension;
 	
-	@:overload public function setSize(d : java.awt.Dimension) : Void;
+	@:overload @:public public function setSize(d : java.awt.Dimension) : Void;
 	
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public public function isFocusTraversable() : Bool;
 	
-	@:overload public function requestFocus() : Void;
+	@:overload @:public public function requestFocus() : Void;
 	
-	@:overload public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
-	@:overload public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	
 }
@@ -3963,7 +3963,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param parent header cell parent
 	* @param rendererComponent component that renders the header cell
 	*/
-	@:overload public function new(row : Int, column : Int, parent : javax.swing.table.JTableHeader, rendererComponent : java.awt.Component) : Void;
+	@:overload @:public public function new(row : Int, column : Int, parent : javax.swing.table.JTableHeader, rendererComponent : java.awt.Component) : Void;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with this
@@ -3973,7 +3973,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Gets the accessible name of this object.
@@ -3981,14 +3981,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the localized name of the object; <code>null</code>
 	*     if this object does not have a name
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Sets the localized accessible name of this object.
 	*
 	* @param s the new localized name of the object
 	*/
-	@:overload override public function setAccessibleName(s : String) : Void;
+	@:overload @:public override public function setAccessibleName(s : String) : Void;
 	
 	/**
 	* Gets the accessible description of this object.
@@ -3997,14 +3997,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*     <code>null</code> if this object does not have
 	*     a description
 	*/
-	@:overload override public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
 	/**
 	* Sets the accessible description of this object.
 	*
 	* @param s the new localized description of the object
 	*/
-	@:overload override public function setAccessibleDescription(s : String) : Void;
+	@:overload @:public override public function setAccessibleDescription(s : String) : Void;
 	
 	/**
 	* Gets the role of this object.
@@ -4013,7 +4013,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*      describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the state set of this object.
@@ -4022,7 +4022,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*     containing the current state set of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the <code>Accessible</code> parent of this object.
@@ -4031,7 +4031,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*     <code>null</code> if this object does not
 	*     have an <code>Accessible</code> parent
 	*/
-	@:overload override public function getAccessibleParent() : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleParent() : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the index of this object in its accessible parent.
@@ -4040,14 +4040,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*     object does not have an accessible parent
 	* @see #getAccessibleParent
 	*/
-	@:overload override public function getAccessibleIndexInParent() : Int;
+	@:overload @:public override public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Returns the number of accessible children in the object.
 	*
 	* @return the number of accessible children in the object
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the specified <code>Accessible</code> child of the
@@ -4056,7 +4056,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param i zero-based index of child
 	* @return the <code>Accessible</code> child of the object
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the locale of the component. If the component
@@ -4072,7 +4072,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*    containing parent
 	* @see #setLocale
 	*/
-	@:overload override public function getLocale() : java.util.Locale;
+	@:overload @:public override public function getLocale() : java.util.Locale;
 	
 	/**
 	* Adds a <code>PropertyChangeListener</code> to the listener list.
@@ -4081,7 +4081,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param l  the <code>PropertyChangeListener</code>
 	*     to be added
 	*/
-	@:overload override public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a <code>PropertyChangeListener</code> from the
@@ -4091,7 +4091,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param l  the <code>PropertyChangeListener</code>
 	*    to be removed
 	*/
-	@:overload override public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Gets the <code>AccessibleAction</code> associated with this
@@ -4099,7 +4099,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return the <code>AccessibleAction</code>, or <code>null</code>
 	*/
-	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload @:public override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Gets the <code>AccessibleComponent</code> associated with
@@ -4108,7 +4108,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the <code>AccessibleComponent</code>, or
 	*    <code>null</code>
 	*/
-	@:overload override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
+	@:overload @:public override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
 	
 	/**
 	* Gets the <code>AccessibleSelection</code> associated with
@@ -4117,7 +4117,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the <code>AccessibleSelection</code>, or
 	*    <code>null</code>
 	*/
-	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload @:public override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Gets the <code>AccessibleText</code> associated with this
@@ -4125,7 +4125,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return the <code>AccessibleText</code>, or <code>null</code>
 	*/
-	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload @:public override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Gets the <code>AccessibleValue</code> associated with
@@ -4133,7 +4133,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return the <code>AccessibleValue</code>, or <code>null</code>
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Gets the background color of this object.
@@ -4141,14 +4141,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the background color, if supported, of the object;
 	*     otherwise, <code>null</code>
 	*/
-	@:overload public function getBackground() : java.awt.Color;
+	@:overload @:public public function getBackground() : java.awt.Color;
 	
 	/**
 	* Sets the background color of this object.
 	*
 	* @param c the new <code>Color</code> for the background
 	*/
-	@:overload public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Gets the foreground color of this object.
@@ -4156,14 +4156,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the foreground color, if supported, of the object;
 	*     otherwise, <code>null</code>
 	*/
-	@:overload public function getForeground() : java.awt.Color;
+	@:overload @:public public function getForeground() : java.awt.Color;
 	
 	/**
 	* Sets the foreground color of this object.
 	*
 	* @param c the new <code>Color</code> for the foreground
 	*/
-	@:overload public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* Gets the <code>Cursor</code> of this object.
@@ -4171,14 +4171,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the <code>Cursor</code>, if supported,
 	*    of the object; otherwise, <code>null</code>
 	*/
-	@:overload public function getCursor() : java.awt.Cursor;
+	@:overload @:public public function getCursor() : java.awt.Cursor;
 	
 	/**
 	* Sets the <code>Cursor</code> of this object.
 	*
 	* @param c the new <code>Cursor</code> for the object
 	*/
-	@:overload public function setCursor(c : java.awt.Cursor) : Void;
+	@:overload @:public public function setCursor(c : java.awt.Cursor) : Void;
 	
 	/**
 	* Gets the <code>Font</code> of this object.
@@ -4186,14 +4186,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the <code>Font</code>,if supported,
 	*   for the object; otherwise, <code>null</code>
 	*/
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public public function getFont() : java.awt.Font;
 	
 	/**
 	* Sets the <code>Font</code> of this object.
 	*
 	* @param f the new <code>Font</code> for the object
 	*/
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Gets the <code>FontMetrics</code> of this object.
@@ -4203,21 +4203,21 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*    otherwise <code>null</code>
 	* @see #getFont
 	*/
-	@:overload public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Determines if the object is enabled.
 	*
 	* @return true if object is enabled; otherwise, false
 	*/
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
 	/**
 	* Sets the enabled state of the object.
 	*
 	* @param b if true, enables this object; otherwise, disables it
 	*/
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Determines if this object is visible.  Note: this means that the
@@ -4228,14 +4228,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return true if object is visible; otherwise, false
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
 	/**
 	* Sets the visible state of the object.
 	*
 	* @param b if true, shows this object; otherwise, hides it
 	*/
-	@:overload public function setVisible(b : Bool) : Void;
+	@:overload @:public public function setVisible(b : Bool) : Void;
 	
 	/**
 	* Determines if the object is showing.  This is determined
@@ -4246,7 +4246,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return true if the object is showing; otherwise, false
 	*/
-	@:overload public function isShowing() : Bool;
+	@:overload @:public public function isShowing() : Bool;
 	
 	/**
 	* Checks whether the specified point is within this
@@ -4259,7 +4259,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return true if object contains <code>Point</code>;
 	*    otherwise false
 	*/
-	@:overload public function contains(p : java.awt.Point) : Bool;
+	@:overload @:public public function contains(p : java.awt.Point) : Bool;
 	
 	/**
 	* Returns the location of the object on the screen.
@@ -4267,7 +4267,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return location of object on screen -- can be
 	*    <code>null</code> if this object is not on the screen
 	*/
-	@:overload public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public public function getLocationOnScreen() : java.awt.Point;
 	
 	/**
 	* Gets the location of the object relative to the parent
@@ -4279,14 +4279,14 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*    coordinate space of the screen; <code>null</code> if
 	*    this object or its parent are not on the screen
 	*/
-	@:overload public function getLocation() : java.awt.Point;
+	@:overload @:public public function getLocation() : java.awt.Point;
 	
 	/**
 	* Sets the location of the object relative to the parent.
 	* @param p the new position for the top-left corner
 	* @see #getLocation
 	*/
-	@:overload public function setLocation(p : java.awt.Point) : Void;
+	@:overload @:public public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* Gets the bounds of this object in the form of a Rectangle object.
@@ -4297,7 +4297,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* this object is not on the screen.
 	* @see #contains
 	*/
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Sets the bounds of this object in the form of a Rectangle object.
@@ -4307,7 +4307,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param r rectangle indicating this component's bounds
 	* @see #getBounds
 	*/
-	@:overload public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload @:public public function setBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Returns the size of this object in the form of a Dimension object.
@@ -4319,7 +4319,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* null if this object is not on the screen
 	* @see #setSize
 	*/
-	@:overload public function getSize() : java.awt.Dimension;
+	@:overload @:public public function getSize() : java.awt.Dimension;
 	
 	/**
 	* Resizes this object so that it has width and height.
@@ -4327,7 +4327,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param d The dimension specifying the new size of the object.
 	* @see #getSize
 	*/
-	@:overload public function setSize(d : java.awt.Dimension) : Void;
+	@:overload @:public public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the Accessible child, if one exists, contained at the local
@@ -4337,7 +4337,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the Accessible, if it exists, at the specified location;
 	* otherwise null
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns whether this object can accept focus or not.   Objects that
@@ -4350,7 +4350,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @see AccessibleState#FOCUSED
 	* @see AccessibleStateSet
 	*/
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public public function isFocusTraversable() : Bool;
 	
 	/**
 	* Requests focus for this object.  If this object cannot accept focus,
@@ -4358,7 +4358,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* focus.
 	* @see #isFocusTraversable
 	*/
-	@:overload public function requestFocus() : Void;
+	@:overload @:public public function requestFocus() : Void;
 	
 	/**
 	* Adds the specified focus listener to receive focus events from this
@@ -4367,7 +4367,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param l the focus listener
 	* @see #removeFocusListener
 	*/
-	@:overload public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Removes the specified focus listener so it no longer receives focus
@@ -4376,7 +4376,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param l the focus listener
 	* @see #addFocusListener
 	*/
-	@:overload public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	
 }

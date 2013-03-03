@@ -29,29 +29,29 @@ extern class W3CAddressingMetadataConstants
 	* Constants for W3C Addressing Metadata specification
 	* @author Rama Pulavarthi
 	*/
-	public static var WSAM_NAMESPACE_NAME(default, null) : String;
+	@:public @:static @:final public static var WSAM_NAMESPACE_NAME(default, null) : String;
 	
-	public static var WSAM_PREFIX_NAME(default, null) : String;
+	@:public @:static @:final public static var WSAM_PREFIX_NAME(default, null) : String;
 	
-	public static var WSAM_ACTION_QNAME(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var WSAM_ACTION_QNAME(default, null) : javax.xml.namespace.QName;
 	
-	public static var WSAM_ADDRESSING_ASSERTION_NAME(default, null) : String;
+	@:public @:static @:final public static var WSAM_ADDRESSING_ASSERTION_NAME(default, null) : String;
 	
-	public static var WSAM_ANONYMOUS_NESTED_ASSERTION_NAME(default, null) : String;
+	@:public @:static @:final public static var WSAM_ANONYMOUS_NESTED_ASSERTION_NAME(default, null) : String;
 	
-	public static var WSAM_NONANONYMOUS_NESTED_ASSERTION_NAME(default, null) : String;
+	@:public @:static @:final public static var WSAM_NONANONYMOUS_NESTED_ASSERTION_NAME(default, null) : String;
 	
-	public static var WSAM_ADDRESSING_ASSERTION(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var WSAM_ADDRESSING_ASSERTION(default, null) : javax.xml.namespace.QName;
 	
-	public static var WSAM_ANONYMOUS_NESTED_ASSERTION(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var WSAM_ANONYMOUS_NESTED_ASSERTION(default, null) : javax.xml.namespace.QName;
 	
-	public static var WSAM_NONANONYMOUS_NESTED_ASSERTION(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var WSAM_NONANONYMOUS_NESTED_ASSERTION(default, null) : javax.xml.namespace.QName;
 	
-	public static var WSAM_WSDLI_ATTRIBUTE_NAMESPACE(default, null) : String;
+	@:public @:static @:final public static var WSAM_WSDLI_ATTRIBUTE_NAMESPACE(default, null) : String;
 	
-	public static var WSAM_WSDLI_ATTRIBUTE_PREFIX(default, null) : String;
+	@:public @:static @:final public static var WSAM_WSDLI_ATTRIBUTE_PREFIX(default, null) : String;
 	
-	public static var WSAM_WSDLI_ATTRIBUTE_LOCALNAME(default, null) : String;
+	@:public @:static @:final public static var WSAM_WSDLI_ATTRIBUTE_LOCALNAME(default, null) : String;
 	
 	
 }

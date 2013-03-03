@@ -37,7 +37,7 @@ extern interface Composite
 	* @return the <code>CompositeContext</code> object used to perform the
 	* compositing operation.
 	*/
-	@:overload public function createContext(srcColorModel : java.awt.image.ColorModel, dstColorModel : java.awt.image.ColorModel, hints : java.awt.RenderingHints) : java.awt.CompositeContext;
+	@:overload @:public public function createContext(srcColorModel : java.awt.image.ColorModel, dstColorModel : java.awt.image.ColorModel, hints : java.awt.RenderingHints) : java.awt.CompositeContext;
 	
 	
 }

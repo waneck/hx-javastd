@@ -41,7 +41,7 @@ package javax.management;
 	* addNotificationListener call and resent, without modification, to the
 	* listener.
 	*/
-	@:overload public function handleNotification(notification : javax.management.Notification, handback : Dynamic) : Void;
+	@:overload @:public public function handleNotification(notification : javax.management.Notification, handback : Dynamic) : Void;
 	
 	
 }

@@ -30,11 +30,11 @@ package com.sun.xml.internal.txw2;
 */
 extern class IllegalAnnotationException extends com.sun.xml.internal.txw2.TxwException
 {
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	
 }

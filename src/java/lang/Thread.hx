@@ -28,24 +28,24 @@ extern class Thread implements java.lang.Runnable
 	/**
 	* The minimum priority that a thread can have.
 	*/
-	public static var MIN_PRIORITY(default, null) : Int;
+	@:public @:final @:static public static var MIN_PRIORITY(default, null) : Int;
 	
 	/**
 	* The default priority that is assigned to a thread.
 	*/
-	public static var NORM_PRIORITY(default, null) : Int;
+	@:public @:final @:static public static var NORM_PRIORITY(default, null) : Int;
 	
 	/**
 	* The maximum priority that a thread can have.
 	*/
-	public static var MAX_PRIORITY(default, null) : Int;
+	@:public @:final @:static public static var MAX_PRIORITY(default, null) : Int;
 	
 	/**
 	* Returns a reference to the currently executing thread object.
 	*
 	* @return  the currently executing thread.
 	*/
-	@:overload @:native public static function currentThread() : java.lang.Thread;
+	@:overload @:public @:static @:native public static function currentThread() : java.lang.Thread;
 	
 	/**
 	* A hint to the scheduler that the current thread is willing to yield
@@ -63,7 +63,7 @@ extern class Thread implements java.lang.Runnable
 	* concurrency control constructs such as the ones in the
 	* {@link java.util.concurrent.locks} package.
 	*/
-	@:overload @:native public static function yield() : Void;
+	@:overload @:public @:static @:native public static function yield() : Void;
 	
 	/**
 	* Causes the currently executing thread to sleep (temporarily cease
@@ -82,7 +82,7 @@ extern class Thread implements java.lang.Runnable
 	*          <i>interrupted status</i> of the current thread is
 	*          cleared when this exception is thrown.
 	*/
-	@:overload @:native public static function sleep(millis : haxe.Int64) : Void;
+	@:overload @:public @:static @:native public static function sleep(millis : haxe.Int64) : Void;
 	
 	/**
 	* Causes the currently executing thread to sleep (temporarily cease
@@ -106,7 +106,7 @@ extern class Thread implements java.lang.Runnable
 	*          <i>interrupted status</i> of the current thread is
 	*          cleared when this exception is thrown.
 	*/
-	@:overload public static function sleep(millis : haxe.Int64, nanos : Int) : Void;
+	@:overload @:public @:static public static function sleep(millis : haxe.Int64, nanos : Int) : Void;
 	
 	/**
 	* Throws CloneNotSupportedException as a Thread can not be meaningfully
@@ -115,7 +115,7 @@ extern class Thread implements java.lang.Runnable
 	* @throws  CloneNotSupportedException
 	*          always
 	*/
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected private function clone() : Dynamic;
 	
 	/**
 	* Allocates a new {@code Thread} object. This constructor has the same
@@ -124,7 +124,7 @@ extern class Thread implements java.lang.Runnable
 	* name. Automatically generated names are of the form
 	* {@code "Thread-"+}<i>n</i>, where <i>n</i> is an integer.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Allocates a new {@code Thread} object. This constructor has the same
@@ -138,7 +138,7 @@ extern class Thread implements java.lang.Runnable
 	*         is started. If {@code null}, this classes {@code run} method does
 	*         nothing.
 	*/
-	@:overload public function new(target : java.lang.Runnable) : Void;
+	@:overload @:public public function new(target : java.lang.Runnable) : Void;
 	
 	/**
 	* Allocates a new {@code Thread} object. This constructor has the same
@@ -163,7 +163,7 @@ extern class Thread implements java.lang.Runnable
 	*          if the current thread cannot create a thread in the specified
 	*          thread group
 	*/
-	@:overload public function new(group : java.lang.ThreadGroup, target : java.lang.Runnable) : Void;
+	@:overload @:public public function new(group : java.lang.ThreadGroup, target : java.lang.Runnable) : Void;
 	
 	/**
 	* Allocates a new {@code Thread} object. This constructor has the same
@@ -173,7 +173,7 @@ extern class Thread implements java.lang.Runnable
 	* @param   name
 	*          the name of the new thread
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Allocates a new {@code Thread} object. This constructor has the same
@@ -195,7 +195,7 @@ extern class Thread implements java.lang.Runnable
 	*          if the current thread cannot create a thread in the specified
 	*          thread group
 	*/
-	@:overload public function new(group : java.lang.ThreadGroup, name : String) : Void;
+	@:overload @:public public function new(group : java.lang.ThreadGroup, name : String) : Void;
 	
 	/**
 	* Allocates a new {@code Thread} object. This constructor has the same
@@ -209,7 +209,7 @@ extern class Thread implements java.lang.Runnable
 	* @param  name
 	*         the name of the new thread
 	*/
-	@:overload public function new(target : java.lang.Runnable, name : String) : Void;
+	@:overload @:public public function new(target : java.lang.Runnable, name : String) : Void;
 	
 	/**
 	* Allocates a new {@code Thread} object so that it has {@code target}
@@ -255,7 +255,7 @@ extern class Thread implements java.lang.Runnable
 	*          if the current thread cannot create a thread in the specified
 	*          thread group or cannot override the context class loader methods.
 	*/
-	@:overload public function new(group : java.lang.ThreadGroup, target : java.lang.Runnable, name : String) : Void;
+	@:overload @:public public function new(group : java.lang.ThreadGroup, target : java.lang.Runnable, name : String) : Void;
 	
 	/**
 	* Allocates a new {@code Thread} object so that it has {@code target}
@@ -331,7 +331,7 @@ extern class Thread implements java.lang.Runnable
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(group : java.lang.ThreadGroup, target : java.lang.Runnable, name : String, stackSize : haxe.Int64) : Void;
+	@:require(java4) @:overload @:public public function new(group : java.lang.ThreadGroup, target : java.lang.Runnable, name : String, stackSize : haxe.Int64) : Void;
 	
 	/**
 	* Causes this thread to begin execution; the Java Virtual Machine
@@ -351,7 +351,7 @@ extern class Thread implements java.lang.Runnable
 	* @see        #run()
 	* @see        #stop()
 	*/
-	@:overload @:synchronized public function start() : Void;
+	@:overload @:public @:synchronized public function start() : Void;
 	
 	/**
 	* If this thread was constructed using a separate
@@ -365,7 +365,7 @@ extern class Thread implements java.lang.Runnable
 	* @see     #stop()
 	* @see     #Thread(ThreadGroup, Runnable, String)
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	/**
 	* Forces the thread to stop executing.
@@ -433,7 +433,7 @@ extern class Thread implements java.lang.Runnable
 	*       <a href="{@docRoot}/../technotes/guides/concurrency/threadPrimitiveDeprecation.html">Why
 	*       are Thread.stop, Thread.suspend and Thread.resume Deprecated?</a>.
 	*/
-	@:overload @:final public function stop() : Void;
+	@:overload @:public @:final public function stop() : Void;
 	
 	/**
 	* Forces the thread to stop executing.
@@ -484,7 +484,7 @@ extern class Thread implements java.lang.Runnable
 	*        <a href="{@docRoot}/../technotes/guides/concurrency/threadPrimitiveDeprecation.html">Why
 	*        are Thread.stop, Thread.suspend and Thread.resume Deprecated?</a>.
 	*/
-	@:overload @:final @:synchronized public function stop(obj : java.lang.Throwable) : Void;
+	@:overload @:public @:final @:synchronized public function stop(obj : java.lang.Throwable) : Void;
 	
 	/**
 	* Interrupts this thread.
@@ -525,7 +525,7 @@ extern class Thread implements java.lang.Runnable
 	* @revised 6.0
 	* @spec JSR-51
 	*/
-	@:overload public function interrupt() : Void;
+	@:overload @:public public function interrupt() : Void;
 	
 	/**
 	* Tests whether the current thread has been interrupted.  The
@@ -544,7 +544,7 @@ extern class Thread implements java.lang.Runnable
 	* @see #isInterrupted()
 	* @revised 6.0
 	*/
-	@:overload public static function interrupted() : Bool;
+	@:overload @:public @:static public static function interrupted() : Bool;
 	
 	/**
 	* Tests whether this thread has been interrupted.  The <i>interrupted
@@ -559,7 +559,7 @@ extern class Thread implements java.lang.Runnable
 	* @see     #interrupted()
 	* @revised 6.0
 	*/
-	@:overload public function isInterrupted() : Bool;
+	@:overload @:public public function isInterrupted() : Bool;
 	
 	/**
 	* Throws {@link NoSuchMethodError}.
@@ -578,7 +578,7 @@ extern class Thread implements java.lang.Runnable
 	*     Why are Thread.stop, Thread.suspend and Thread.resume Deprecated?</a>.
 	* @throws NoSuchMethodError always
 	*/
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	/**
 	* Tests if this thread is alive. A thread is alive if it has
@@ -587,7 +587,7 @@ extern class Thread implements java.lang.Runnable
 	* @return  <code>true</code> if this thread is alive;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload @:final @:native public function isAlive() : Bool;
+	@:overload @:public @:final @:native public function isAlive() : Bool;
 	
 	/**
 	* Suspends this thread.
@@ -613,7 +613,7 @@ extern class Thread implements java.lang.Runnable
 	*   <a href="{@docRoot}/../technotes/guides/concurrency/threadPrimitiveDeprecation.html">Why
 	*   are Thread.stop, Thread.suspend and Thread.resume Deprecated?</a>.
 	*/
-	@:overload @:final public function suspend() : Void;
+	@:overload @:public @:final public function suspend() : Void;
 	
 	/**
 	* Resumes a suspended thread.
@@ -635,7 +635,7 @@ extern class Thread implements java.lang.Runnable
 	*     <a href="{@docRoot}/../technotes/guides/concurrency/threadPrimitiveDeprecation.html">Why
 	*     are Thread.stop, Thread.suspend and Thread.resume Deprecated?</a>.
 	*/
-	@:overload @:final public function resume() : Void;
+	@:overload @:public @:final public function resume() : Void;
 	
 	/**
 	* Changes the priority of this thread.
@@ -661,7 +661,7 @@ extern class Thread implements java.lang.Runnable
 	* @see        #MIN_PRIORITY
 	* @see        ThreadGroup#getMaxPriority()
 	*/
-	@:overload @:final public function setPriority(newPriority : Int) : Void;
+	@:overload @:public @:final public function setPriority(newPriority : Int) : Void;
 	
 	/**
 	* Returns this thread's priority.
@@ -669,7 +669,7 @@ extern class Thread implements java.lang.Runnable
 	* @return  this thread's priority.
 	* @see     #setPriority
 	*/
-	@:overload @:final public function getPriority() : Int;
+	@:overload @:public @:final public function getPriority() : Int;
 	
 	/**
 	* Changes the name of this thread to be equal to the argument
@@ -685,7 +685,7 @@ extern class Thread implements java.lang.Runnable
 	* @see        #getName
 	* @see        #checkAccess()
 	*/
-	@:overload @:final public function setName(name : String) : Void;
+	@:overload @:public @:final public function setName(name : String) : Void;
 	
 	/**
 	* Returns this thread's name.
@@ -693,7 +693,7 @@ extern class Thread implements java.lang.Runnable
 	* @return  this thread's name.
 	* @see     #setName(String)
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	/**
 	* Returns the thread group to which this thread belongs.
@@ -702,7 +702,7 @@ extern class Thread implements java.lang.Runnable
 	*
 	* @return  this thread's thread group.
 	*/
-	@:overload @:final public function getThreadGroup() : java.lang.ThreadGroup;
+	@:overload @:public @:final public function getThreadGroup() : java.lang.ThreadGroup;
 	
 	/**
 	* Returns an estimate of the number of active threads in the current
@@ -720,7 +720,7 @@ extern class Thread implements java.lang.Runnable
 	*          thread's thread group and in any other thread group that
 	*          has the current thread's thread group as an ancestor
 	*/
-	@:overload public static function activeCount() : Int;
+	@:overload @:public @:static public static function activeCount() : Int;
 	
 	/**
 	* Copies into the specified array every active thread in the current
@@ -748,7 +748,7 @@ extern class Thread implements java.lang.Runnable
 	*          if {@link java.lang.ThreadGroup#checkAccess} determines that
 	*          the current thread cannot access its thread group
 	*/
-	@:overload public static function enumerate(tarray : java.NativeArray<java.lang.Thread>) : Int;
+	@:overload @:public @:static public static function enumerate(tarray : java.NativeArray<java.lang.Thread>) : Int;
 	
 	/**
 	* Counts the number of stack frames in this thread. The thread must
@@ -761,7 +761,7 @@ extern class Thread implements java.lang.Runnable
 	*             which is deprecated.  Further, the results of this call
 	*             were never well-defined.
 	*/
-	@:overload @:native public function countStackFrames() : Int;
+	@:overload @:public @:native public function countStackFrames() : Int;
 	
 	/**
 	* Waits at most {@code millis} milliseconds for this thread to
@@ -784,7 +784,7 @@ extern class Thread implements java.lang.Runnable
 	*          <i>interrupted status</i> of the current thread is
 	*          cleared when this exception is thrown.
 	*/
-	@:overload @:final @:synchronized public function join(millis : haxe.Int64) : Void;
+	@:overload @:public @:final @:synchronized public function join(millis : haxe.Int64) : Void;
 	
 	/**
 	* Waits at most {@code millis} milliseconds plus
@@ -811,7 +811,7 @@ extern class Thread implements java.lang.Runnable
 	*          <i>interrupted status</i> of the current thread is
 	*          cleared when this exception is thrown.
 	*/
-	@:overload @:final @:synchronized public function join(millis : haxe.Int64, nanos : Int) : Void;
+	@:overload @:public @:final @:synchronized public function join(millis : haxe.Int64, nanos : Int) : Void;
 	
 	/**
 	* Waits for this thread to die.
@@ -828,7 +828,7 @@ extern class Thread implements java.lang.Runnable
 	*          <i>interrupted status</i> of the current thread is
 	*          cleared when this exception is thrown.
 	*/
-	@:overload @:final public function join() : Void;
+	@:overload @:public @:final public function join() : Void;
 	
 	/**
 	* Prints a stack trace of the current thread to the standard error stream.
@@ -836,7 +836,7 @@ extern class Thread implements java.lang.Runnable
 	*
 	* @see     Throwable#printStackTrace()
 	*/
-	@:overload public static function dumpStack() : Void;
+	@:overload @:public @:static public static function dumpStack() : Void;
 	
 	/**
 	* Marks this thread as either a {@linkplain #isDaemon daemon} thread
@@ -855,7 +855,7 @@ extern class Thread implements java.lang.Runnable
 	*          if {@link #checkAccess} determines that the current
 	*          thread cannot modify this thread
 	*/
-	@:overload @:final public function setDaemon(on : Bool) : Void;
+	@:overload @:public @:final public function setDaemon(on : Bool) : Void;
 	
 	/**
 	* Tests if this thread is a daemon thread.
@@ -864,7 +864,7 @@ extern class Thread implements java.lang.Runnable
 	*          <code>false</code> otherwise.
 	* @see     #setDaemon(boolean)
 	*/
-	@:overload @:final public function isDaemon() : Bool;
+	@:overload @:public @:final public function isDaemon() : Bool;
 	
 	/**
 	* Determines if the currently running thread has permission to
@@ -878,7 +878,7 @@ extern class Thread implements java.lang.Runnable
 	*               access this thread.
 	* @see        SecurityManager#checkAccess(Thread)
 	*/
-	@:overload @:final public function checkAccess() : Void;
+	@:overload @:public @:final public function checkAccess() : Void;
 	
 	/**
 	* Returns a string representation of this thread, including the
@@ -886,7 +886,7 @@ extern class Thread implements java.lang.Runnable
 	*
 	* @return  a string representation of this thread.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the context ClassLoader for this Thread. The context
@@ -914,7 +914,7 @@ extern class Thread implements java.lang.Runnable
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getContextClassLoader() : java.lang.ClassLoader;
+	@:require(java2) @:overload @:public public function getContextClassLoader() : java.lang.ClassLoader;
 	
 	/**
 	* Sets the context ClassLoader for this Thread. The context
@@ -938,7 +938,7 @@ extern class Thread implements java.lang.Runnable
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setContextClassLoader(cl : java.lang.ClassLoader) : Void;
+	@:require(java2) @:overload @:public public function setContextClassLoader(cl : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Returns <tt>true</tt> if and only if the current thread holds the
@@ -956,7 +956,7 @@ extern class Thread implements java.lang.Runnable
 	*         the specified object.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:native public static function holdsLock(obj : Dynamic) : Bool;
+	@:require(java4) @:overload @:public @:static @:native public static function holdsLock(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns an array of stack trace elements representing the stack dump
@@ -994,7 +994,7 @@ extern class Thread implements java.lang.Runnable
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getStackTrace() : java.NativeArray<java.lang.StackTraceElement>;
+	@:require(java5) @:overload @:public public function getStackTrace() : java.NativeArray<java.lang.StackTraceElement>;
 	
 	/**
 	* Returns a map of stack traces for all live threads.
@@ -1031,7 +1031,7 @@ extern class Thread implements java.lang.Runnable
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getAllStackTraces() : java.util.Map<java.lang.Thread, java.NativeArray<java.lang.StackTraceElement>>;
+	@:require(java5) @:overload @:public @:static public static function getAllStackTraces() : java.util.Map<java.lang.Thread, java.NativeArray<java.lang.StackTraceElement>>;
 	
 	/**
 	* Returns the identifier of this Thread.  The thread ID is a positive
@@ -1042,7 +1042,7 @@ extern class Thread implements java.lang.Runnable
 	* @return this thread's ID.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getId() : haxe.Int64;
+	@:require(java5) @:overload @:public public function getId() : haxe.Int64;
 	
 	/**
 	* Returns the state of this thread.
@@ -1052,7 +1052,7 @@ extern class Thread implements java.lang.Runnable
 	* @return this thread's state.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getState() : java.lang.Thread.Thread_State;
+	@:require(java5) @:overload @:public public function getState() : java.lang.Thread.Thread_State;
 	
 	/**
 	* Set the default handler invoked when a thread abruptly terminates
@@ -1088,7 +1088,7 @@ extern class Thread implements java.lang.Runnable
 	* @see ThreadGroup#uncaughtException
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function setDefaultUncaughtExceptionHandler(eh : java.lang.Thread.Thread_UncaughtExceptionHandler) : Void;
+	@:require(java5) @:overload @:public @:static public static function setDefaultUncaughtExceptionHandler(eh : java.lang.Thread.Thread_UncaughtExceptionHandler) : Void;
 	
 	/**
 	* Returns the default handler invoked when a thread abruptly terminates
@@ -1097,7 +1097,7 @@ extern class Thread implements java.lang.Runnable
 	* @since 1.5
 	* @see #setDefaultUncaughtExceptionHandler
 	*/
-	@:require(java5) @:overload public static function getDefaultUncaughtExceptionHandler() : java.lang.Thread.Thread_UncaughtExceptionHandler;
+	@:require(java5) @:overload @:public @:static public static function getDefaultUncaughtExceptionHandler() : java.lang.Thread.Thread_UncaughtExceptionHandler;
 	
 	/**
 	* Returns the handler invoked when this thread abruptly terminates
@@ -1107,7 +1107,7 @@ extern class Thread implements java.lang.Runnable
 	* has terminated, in which case <tt>null</tt> is returned.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getUncaughtExceptionHandler() : java.lang.Thread.Thread_UncaughtExceptionHandler;
+	@:require(java5) @:overload @:public public function getUncaughtExceptionHandler() : java.lang.Thread.Thread_UncaughtExceptionHandler;
 	
 	/**
 	* Set the handler invoked when this thread abruptly terminates
@@ -1124,7 +1124,7 @@ extern class Thread implements java.lang.Runnable
 	* @see ThreadGroup#uncaughtException
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setUncaughtExceptionHandler(eh : java.lang.Thread.Thread_UncaughtExceptionHandler) : Void;
+	@:require(java5) @:overload @:public public function setUncaughtExceptionHandler(eh : java.lang.Thread.Thread_UncaughtExceptionHandler) : Void;
 	
 	
 }
@@ -1274,7 +1274,7 @@ extern class Thread implements java.lang.Runnable
 	/**
 	* Returns the identity hash code of the original referent.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns true if the given object is this identical
@@ -1282,7 +1282,7 @@ extern class Thread implements java.lang.Runnable
 	* been cleared, if the given object is another WeakClassKey
 	* instance with the identical non-null referent as this one.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

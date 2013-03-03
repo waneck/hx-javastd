@@ -29,13 +29,13 @@ extern class CustomizationContextChecker extends org.xml.sax.helpers.XMLFilterIm
 	* @param _errorHandler
 	*      Detected errors will be sent to this object.
 	*/
-	@:overload public function new(_errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function new(_errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
-	@:overload override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	
 }

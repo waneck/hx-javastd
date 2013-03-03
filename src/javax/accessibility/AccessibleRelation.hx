@@ -34,7 +34,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	* @see #LABELED_BY
 	* @see #MEMBER_OF
 	*/
-	public static var LABEL_FOR(default, null) : String;
+	@:public @:static @:final public static var LABEL_FOR(default, null) : String;
 	
 	/**
 	* Indicates an object is labeled by one or more target objects.
@@ -45,7 +45,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	* @see #LABEL_FOR
 	* @see #MEMBER_OF
 	*/
-	public static var LABELED_BY(default, null) : String;
+	@:public @:static @:final public static var LABELED_BY(default, null) : String;
 	
 	/**
 	* Indicates an object is a member of a group of one or more
@@ -57,7 +57,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	* @see #LABEL_FOR
 	* @see #LABELED_BY
 	*/
-	public static var MEMBER_OF(default, null) : String;
+	@:public @:static @:final public static var MEMBER_OF(default, null) : String;
 	
 	/**
 	* Indicates an object is a controller for one or more target
@@ -69,7 +69,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	* @see #LABELED_BY
 	* @see #MEMBER_OF
 	*/
-	public static var CONTROLLER_FOR(default, null) : String;
+	@:public @:static @:final public static var CONTROLLER_FOR(default, null) : String;
 	
 	/**
 	* Indicates an object is controlled by one or more target
@@ -81,7 +81,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	* @see #LABELED_BY
 	* @see #MEMBER_OF
 	*/
-	public static var CONTROLLED_BY(default, null) : String;
+	@:public @:static @:final public static var CONTROLLED_BY(default, null) : String;
 	
 	/**
 	* Indicates an object is logically contiguous with a second
@@ -97,7 +97,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var FLOWS_TO(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var FLOWS_TO(default, null) : String;
 	
 	/**
 	* Indicates an object is logically contiguous with a second
@@ -112,7 +112,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var FLOWS_FROM(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var FLOWS_FROM(default, null) : String;
 	
 	/**
 	* Indicates that an object is a subwindow of one or more
@@ -120,7 +120,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var SUBWINDOW_OF(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var SUBWINDOW_OF(default, null) : String;
 	
 	/**
 	* Indicates that an object is a parent window of one or more
@@ -128,7 +128,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var PARENT_WINDOW_OF(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var PARENT_WINDOW_OF(default, null) : String;
 	
 	/**
 	* Indicates that an object has one or more objects
@@ -136,7 +136,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var EMBEDS(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var EMBEDS(default, null) : String;
 	
 	/**
 	* Indicates that an object is embedded in one or more
@@ -144,7 +144,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var EMBEDDED_BY(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var EMBEDDED_BY(default, null) : String;
 	
 	/**
 	* Indicates that an object is a child node of one
@@ -152,33 +152,33 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var CHILD_NODE_OF(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var CHILD_NODE_OF(default, null) : String;
 	
 	/**
 	* Identifies that the target group for a label has changed
 	*/
-	public static var LABEL_FOR_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var LABEL_FOR_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies that the objects that are doing the labeling have changed
 	*/
-	public static var LABELED_BY_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var LABELED_BY_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies that group membership has changed.
 	*/
-	public static var MEMBER_OF_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var MEMBER_OF_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies that the controller for the target object has changed
 	*/
-	public static var CONTROLLER_FOR_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var CONTROLLER_FOR_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies that the target object that is doing the controlling has
 	* changed
 	*/
-	public static var CONTROLLED_BY_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var CONTROLLED_BY_PROPERTY(default, null) : String;
 	
 	/**
 	* Indicates the FLOWS_TO relation between two objects
@@ -186,7 +186,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var FLOWS_TO_PROPERTY(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var FLOWS_TO_PROPERTY(default, null) : String;
 	
 	/**
 	* Indicates the FLOWS_FROM relation between two objects
@@ -194,7 +194,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var FLOWS_FROM_PROPERTY(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var FLOWS_FROM_PROPERTY(default, null) : String;
 	
 	/**
 	* Indicates the SUBWINDOW_OF relation between two or more objects
@@ -202,7 +202,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var SUBWINDOW_OF_PROPERTY(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var SUBWINDOW_OF_PROPERTY(default, null) : String;
 	
 	/**
 	* Indicates the PARENT_WINDOW_OF relation between two or more objects
@@ -210,7 +210,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var PARENT_WINDOW_OF_PROPERTY(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var PARENT_WINDOW_OF_PROPERTY(default, null) : String;
 	
 	/**
 	* Indicates the EMBEDS relation between two or more objects
@@ -218,7 +218,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var EMBEDS_PROPERTY(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var EMBEDS_PROPERTY(default, null) : String;
 	
 	/**
 	* Indicates the EMBEDDED_BY relation between two or more objects
@@ -226,7 +226,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var EMBEDDED_BY_PROPERTY(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var EMBEDDED_BY_PROPERTY(default, null) : String;
 	
 	/**
 	* Indicates the CHILD_NODE_OF relation between two or more objects
@@ -234,7 +234,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var CHILD_NODE_OF_PROPERTY(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var CHILD_NODE_OF_PROPERTY(default, null) : String;
 	
 	/**
 	* Create a new AccessibleRelation using the given locale independent key.
@@ -245,7 +245,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	* @param key the locale independent name of the relation.
 	* @see AccessibleBundle#toDisplayString
 	*/
-	@:overload public function new(key : String) : Void;
+	@:overload @:public public function new(key : String) : Void;
 	
 	/**
 	* Creates a new AccessibleRelation using the given locale independent key.
@@ -257,7 +257,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	* @param target the target object for this relation
 	* @see AccessibleBundle#toDisplayString
 	*/
-	@:overload public function new(key : String, target : Dynamic) : Void;
+	@:overload @:public public function new(key : String, target : Dynamic) : Void;
 	
 	/**
 	* Creates a new AccessibleRelation using the given locale independent key.
@@ -269,7 +269,7 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	* @param target the target object(s) for this relation
 	* @see AccessibleBundle#toDisplayString
 	*/
-	@:overload public function new(key : String, target : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(key : String, target : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Returns the key for this relation
@@ -282,28 +282,28 @@ extern class AccessibleRelation extends javax.accessibility.AccessibleBundle
 	* @see #LABELED_BY
 	* @see #MEMBER_OF
 	*/
-	@:overload public function getKey() : String;
+	@:overload @:public public function getKey() : String;
 	
 	/**
 	* Returns the target objects for this relation
 	*
 	* @return an array containing the target objects for this relation
 	*/
-	@:overload public function getTarget() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getTarget() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Sets the target object for this relation
 	*
 	* @param target the target object for this relation
 	*/
-	@:overload public function setTarget(target : Dynamic) : Void;
+	@:overload @:public public function setTarget(target : Dynamic) : Void;
 	
 	/**
 	* Sets the target objects for this relation
 	*
 	* @param target an array containing the target objects for this relation
 	*/
-	@:overload public function setTarget(target : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function setTarget(target : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

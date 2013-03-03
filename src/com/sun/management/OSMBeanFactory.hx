@@ -25,7 +25,7 @@ package com.sun.management;
 */
 extern class OSMBeanFactory
 {
-	@:overload @:synchronized public static function getOperatingSystemMXBean(jvm : sun.management.VMManagement) : java.lang.management.OperatingSystemMXBean;
+	@:overload @:public @:static @:synchronized public static function getOperatingSystemMXBean(jvm : sun.management.VMManagement) : java.lang.management.OperatingSystemMXBean;
 	
 	
 }

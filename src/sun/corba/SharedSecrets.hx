@@ -25,9 +25,9 @@ package sun.corba;
 */
 extern class SharedSecrets
 {
-	@:overload public static function getJavaCorbaAccess() : sun.corba.JavaCorbaAccess;
+	@:overload @:public @:static public static function getJavaCorbaAccess() : sun.corba.JavaCorbaAccess;
 	
-	@:overload public static function setJavaCorbaAccess(access : sun.corba.JavaCorbaAccess) : Void;
+	@:overload @:public @:static public static function setJavaCorbaAccess(access : sun.corba.JavaCorbaAccess) : Void;
 	
 	
 }

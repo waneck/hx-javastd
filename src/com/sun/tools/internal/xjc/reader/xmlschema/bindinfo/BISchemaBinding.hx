@@ -30,7 +30,7 @@ extern class BISchemaBinding extends com.sun.tools.internal.xjc.reader.xmlschema
 	* No ObjectFactory, no classes (the only way to bind them is by using
 	* &lt;jaxb:class ref="..."/>)
 	*/
-	public var map : Bool;
+	@:public public var map : Bool;
 	
 	/**
 	* Transforms the default name produced from XML name
@@ -42,17 +42,17 @@ extern class BISchemaBinding extends com.sun.tools.internal.xjc.reader.xmlschema
 	* @param cmp
 	*      The schema component from which the default name is derived.
 	*/
-	@:overload public function mangleClassName(name : String, cmp : com.sun.xml.internal.xsom.XSComponent) : String;
+	@:overload @:public public function mangleClassName(name : String, cmp : com.sun.xml.internal.xsom.XSComponent) : String;
 	
-	@:overload public function mangleAnonymousTypeClassName(name : String) : String;
+	@:overload @:public public function mangleAnonymousTypeClassName(name : String) : String;
 	
-	@:overload public function getPackageName() : String;
+	@:overload @:public public function getPackageName() : String;
 	
-	@:overload public function getJavadoc() : String;
+	@:overload @:public public function getJavadoc() : String;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getName() : javax.xml.namespace.QName;
 	
-	public static var NAME(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var NAME(default, null) : javax.xml.namespace.QName;
 	
 	
 }
@@ -76,12 +76,12 @@ extern class BISchemaBinding extends com.sun.tools.internal.xjc.reader.xmlschema
 */
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BISchemaBinding$NamingRule') extern class BISchemaBinding_NamingRule
 {
-	@:overload public function new(_prefix : String, _suffix : String) : Void;
+	@:overload @:public public function new(_prefix : String, _suffix : String) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Changes the name according to the rule. */
-	@:overload public function mangle(originalName : String) : String;
+	@:overload @:public public function mangle(originalName : String) : String;
 	
 	
 }

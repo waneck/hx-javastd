@@ -35,9 +35,9 @@ package sun.tools.asm;
 */
 extern class LocalVariable
 {
-	@:overload public function new(field : sun.tools.java.MemberDefinition, slot : Int) : Void;
+	@:overload @:public public function new(field : sun.tools.java.MemberDefinition, slot : Int) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

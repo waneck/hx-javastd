@@ -25,47 +25,47 @@ package com.sun.tools.javac.nio;
 */
 @:internal extern class PathFileObject implements javax.tools.JavaFileObject
 {
-	@:overload private function new(fileManager : com.sun.tools.javac.nio.JavacPathFileManager, path : java.nio.file.Path) : Void;
+	@:overload @:protected private function new(fileManager : com.sun.tools.javac.nio.JavacPathFileManager, path : java.nio.file.Path) : Void;
 	
-	@:overload public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
+	@:overload @:public public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	
-	@:overload public function isNameCompatible(simpleName : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
+	@:overload @:public public function isNameCompatible(simpleName : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
 	
-	@:overload public function getNestingKind() : javax.lang.model.element.NestingKind;
+	@:overload @:public public function getNestingKind() : javax.lang.model.element.NestingKind;
 	
-	@:overload public function getAccessLevel() : javax.lang.model.element.Modifier;
+	@:overload @:public public function getAccessLevel() : javax.lang.model.element.Modifier;
 	
-	@:overload public function toUri() : java.net.URI;
+	@:overload @:public public function toUri() : java.net.URI;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function openInputStream() : java.io.InputStream;
+	@:overload @:public public function openInputStream() : java.io.InputStream;
 	
-	@:overload public function openOutputStream() : java.io.OutputStream;
+	@:overload @:public public function openOutputStream() : java.io.OutputStream;
 	
-	@:overload public function openReader(ignoreEncodingErrors : Bool) : java.io.Reader;
+	@:overload @:public public function openReader(ignoreEncodingErrors : Bool) : java.io.Reader;
 	
-	@:overload public function getCharContent(ignoreEncodingErrors : Bool) : java.lang.CharSequence;
+	@:overload @:public public function getCharContent(ignoreEncodingErrors : Bool) : java.lang.CharSequence;
 	
-	@:overload public function openWriter() : java.io.Writer;
+	@:overload @:public public function openWriter() : java.io.Writer;
 	
-	@:overload public function getLastModified() : haxe.Int64;
+	@:overload @:public public function getLastModified() : haxe.Int64;
 	
-	@:overload public function delete() : Bool;
+	@:overload @:public public function delete() : Bool;
 	
-	@:overload public function isSameFile(other : com.sun.tools.javac.nio.PathFileObject) : Bool;
+	@:overload @:public public function isSameFile(other : com.sun.tools.javac.nio.PathFileObject) : Bool;
 	
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload private static function toBinaryName(relativePath : java.nio.file.Path) : String;
+	@:overload @:protected @:static private static function toBinaryName(relativePath : java.nio.file.Path) : String;
 	
-	@:overload private static function toBinaryName(relativePath : String, sep : String) : String;
+	@:overload @:protected @:static private static function toBinaryName(relativePath : String, sep : String) : String;
 	
-	@:overload private static function removeExtension(fileName : String) : String;
+	@:overload @:protected @:static private static function removeExtension(fileName : String) : String;
 	
 	
 }

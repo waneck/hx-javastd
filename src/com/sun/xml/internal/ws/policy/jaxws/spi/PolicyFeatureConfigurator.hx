@@ -34,7 +34,7 @@ extern interface PolicyFeatureConfigurator
 	* @return A list of features that correspond to the policy identified by the policy map key. May be empty but not null.
 	* @throws PolicyException If an error occurred
 	*/
-	@:overload public function getFeatures(key : com.sun.xml.internal.ws.policy.PolicyMapKey, policyMap : com.sun.xml.internal.ws.policy.PolicyMap) : java.util.Collection<javax.xml.ws.WebServiceFeature>;
+	@:overload @:public public function getFeatures(key : com.sun.xml.internal.ws.policy.PolicyMapKey, policyMap : com.sun.xml.internal.ws.policy.PolicyMap) : java.util.Collection<javax.xml.ws.WebServiceFeature>;
 	
 	
 }

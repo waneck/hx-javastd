@@ -29,7 +29,7 @@ extern class EnvironmentCheck
 	* {@link #checkEnvironment(PrintWriter)}.</p>
 	* @param args command line args
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	/**
 	* Programmatic entrypoint: Report on basic Java environment
@@ -55,7 +55,7 @@ extern class EnvironmentCheck
 	* problems; false if potential environment problems found
 	* @see #getEnvironmentHash()
 	*/
-	@:overload public function checkEnvironment(pw : java.io.PrintWriter) : Bool;
+	@:overload @:public public function checkEnvironment(pw : java.io.PrintWriter) : Bool;
 	
 	/**
 	* Fill a hash with basic environment settings that affect Xalan.
@@ -77,7 +77,7 @@ extern class EnvironmentCheck
 	* @return Hashtable full of useful environment info about Xalan
 	* and related system properties, etc.
 	*/
-	@:overload public function getEnvironmentHash() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:public public function getEnvironmentHash() : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* Dump a basic Xalan environment report to outWriter.
@@ -93,31 +93,31 @@ extern class EnvironmentCheck
 	* @see #appendEnvironmentReport(Node, Document, Hashtable)
 	* for an equivalent that appends to a Node instead
 	*/
-	@:overload private function writeEnvironmentReport(h : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
+	@:overload @:protected private function writeEnvironmentReport(h : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
 	/** Prefixed to hash keys that signify serious problems.  */
-	public static var ERROR(default, null) : String;
+	@:public @:static @:final public static var ERROR(default, null) : String;
 	
 	/** Added to descriptions that signify potential problems.  */
-	public static var WARNING(default, null) : String;
+	@:public @:static @:final public static var WARNING(default, null) : String;
 	
 	/** Value for any error found.  */
-	public static var ERROR_FOUND(default, null) : String;
+	@:public @:static @:final public static var ERROR_FOUND(default, null) : String;
 	
 	/** Prefixed to hash keys that signify version numbers.  */
-	public static var VERSION(default, null) : String;
+	@:public @:static @:final public static var VERSION(default, null) : String;
 	
 	/** Prefixed to hash keys that signify .jars found in classpath.  */
-	public static var FOUNDCLASSES(default, null) : String;
+	@:public @:static @:final public static var FOUNDCLASSES(default, null) : String;
 	
 	/** Marker that a class or .jar was found.  */
-	public static var CLASS_PRESENT(default, null) : String;
+	@:public @:static @:final public static var CLASS_PRESENT(default, null) : String;
 	
 	/** Marker that a class or .jar was not found.  */
-	public static var CLASS_NOTPRESENT(default, null) : String;
+	@:public @:static @:final public static var CLASS_NOTPRESENT(default, null) : String;
 	
 	/** Listing of common .jar files that include Xalan-related classes.  */
-	public var jarNames : java.NativeArray<String>;
+	@:public public var jarNames : java.NativeArray<String>;
 	
 	/**
 	* Print out report of .jars found in a classpath.
@@ -132,7 +132,7 @@ extern class EnvironmentCheck
 	* as having errors
 	* @see #checkPathForJars(String, String[])
 	*/
-	@:overload private function logFoundJars(v : java.util.Vector<Dynamic>, desc : String) : Bool;
+	@:overload @:protected private function logFoundJars(v : java.util.Vector<Dynamic>, desc : String) : Bool;
 	
 	/**
 	* Stylesheet extension entrypoint: Dump a basic Xalan
@@ -147,7 +147,7 @@ extern class EnvironmentCheck
 	* @see #writeEnvironmentReport(Hashtable)
 	* for an equivalent that writes to a PrintWriter instead
 	*/
-	@:overload public function appendEnvironmentReport(container : org.w3c.dom.Node, factory : org.w3c.dom.Document, h : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function appendEnvironmentReport(container : org.w3c.dom.Node, factory : org.w3c.dom.Document, h : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Print out report of .jars found in a classpath.
@@ -164,7 +164,7 @@ extern class EnvironmentCheck
 	* as having errors
 	* @see #checkPathForJars(String, String[])
 	*/
-	@:overload private function appendFoundJars(container : org.w3c.dom.Node, factory : org.w3c.dom.Document, v : java.util.Vector<Dynamic>, desc : String) : Bool;
+	@:overload @:protected private function appendFoundJars(container : org.w3c.dom.Node, factory : org.w3c.dom.Document, v : java.util.Vector<Dynamic>, desc : String) : Bool;
 	
 	/**
 	* Fillin hash with info about SystemProperties.
@@ -179,7 +179,7 @@ extern class EnvironmentCheck
 	* @see #jarNames
 	* @see #checkPathForJars(String, String[])
 	*/
-	@:overload private function checkSystemProperties(h : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:protected private function checkSystemProperties(h : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Cheap-o listing of specified .jars found in the classpath.
@@ -198,7 +198,7 @@ extern class EnvironmentCheck
 	* @see #appendFoundJars(Node, Document, Vector, String )
 	* @see #getApparentVersion(String, long)
 	*/
-	@:overload private function checkPathForJars(cp : String, jars : java.NativeArray<String>) : java.util.Vector<Dynamic>;
+	@:overload @:protected private function checkPathForJars(cp : String, jars : java.NativeArray<String>) : java.util.Vector<Dynamic>;
 	
 	/**
 	* Cheap-o method to determine the product version of a .jar.
@@ -218,7 +218,7 @@ extern class EnvironmentCheck
 	* @return String describing where the .jar file probably
 	* came from
 	*/
-	@:overload private function getApparentVersion(jarName : String, jarSize : haxe.Int64) : String;
+	@:overload @:protected private function getApparentVersion(jarName : String, jarSize : haxe.Int64) : String;
 	
 	/**
 	* Report version information about JAXP interfaces.
@@ -229,7 +229,7 @@ extern class EnvironmentCheck
 	*
 	* @param h Hashtable to put information in
 	*/
-	@:overload private function checkJAXPVersion(h : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:protected private function checkJAXPVersion(h : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Report product version information from Xalan-J.
@@ -238,7 +238,7 @@ extern class EnvironmentCheck
 	*
 	* @param h Hashtable to put information in
 	*/
-	@:overload private function checkProcessorVersion(h : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:protected private function checkProcessorVersion(h : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Report product version information from common parsers.
@@ -249,21 +249,21 @@ extern class EnvironmentCheck
 	*
 	* @param h Hashtable to put information in
 	*/
-	@:overload private function checkParserVersion(h : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:protected private function checkParserVersion(h : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Report product version information from Ant.
 	*
 	* @param h Hashtable to put information in
 	*/
-	@:overload private function checkAntVersion(h : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:protected private function checkAntVersion(h : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Report version info from DOM interfaces.
 	*
 	* @param h Hashtable to put information in
 	*/
-	@:overload private function checkDOML3(h : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
+	@:overload @:protected private function checkDOML3(h : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
 	/**
 	* Report version info from DOM interfaces.
@@ -274,7 +274,7 @@ extern class EnvironmentCheck
 	*
 	* @param h Hashtable to put information in
 	*/
-	@:overload private function checkDOMVersion(h : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:protected private function checkDOMVersion(h : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Report version info from SAX interfaces.
@@ -284,16 +284,16 @@ extern class EnvironmentCheck
 	*
 	* @param h Hashtable to put information in
 	*/
-	@:overload private function checkSAXVersion(h : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:protected private function checkSAXVersion(h : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/** Simple PrintWriter we send output to; defaults to System.out.  */
-	private var outWriter : java.io.PrintWriter;
+	@:protected private var outWriter : java.io.PrintWriter;
 	
 	/**
 	* Bottleneck output: calls outWriter.println(s).
 	* @param s String to print
 	*/
-	@:overload private function logMsg(s : String) : Void;
+	@:overload @:protected private function logMsg(s : String) : Void;
 	
 	
 }

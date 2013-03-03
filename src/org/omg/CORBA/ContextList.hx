@@ -61,7 +61,7 @@ package org.omg.CORBA;
 	* @return                  an <code>int</code> representing the number of
 	* <code>String</code>s in this <code>ContextList</code> object
 	*/
-	@:overload @:abstract public function count() : Int;
+	@:overload @:public @:abstract public function count() : Int;
 	
 	/**
 	* Adds a <code>String</code> object to this <code>ContextList</code>
@@ -69,7 +69,7 @@ package org.omg.CORBA;
 	*
 	* @param ctx               the <code>String</code> object to be added
 	*/
-	@:overload @:abstract public function add(ctx : String) : Void;
+	@:overload @:public @:abstract public function add(ctx : String) : Void;
 	
 	/**
 	* Returns the <code>String</code> object at the given index.
@@ -81,7 +81,7 @@ package org.omg.CORBA;
 	*                          or equal to the number of strings in this
 	*                <code>ContextList</code> object
 	*/
-	@:overload @:abstract public function item(index : Int) : String;
+	@:overload @:public @:abstract public function item(index : Int) : String;
 	
 	/**
 	* Removes the <code>String</code> object at the given index. Note that
@@ -94,7 +94,7 @@ package org.omg.CORBA;
 	*                          or equal to the number of <code>String</code> objects in
 	*                this <code>ContextList</code> object
 	*/
-	@:overload @:abstract public function remove(index : Int) : Void;
+	@:overload @:public @:abstract public function remove(index : Int) : Void;
 	
 	
 }

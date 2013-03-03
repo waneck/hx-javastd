@@ -38,7 +38,7 @@ package java.awt;
 	* @param reason a <code>String</code> message indicating why
 	*        the font is not accepted.
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	
 }

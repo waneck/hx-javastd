@@ -38,7 +38,7 @@ package com.sun.script.javascript;
 */
 @:require(java6) @:internal extern class RhinoWrapFactory extends WrapFactory
 {
-	@:overload public function wrapAsJavaObject(cx : Context, scope : Scriptable, javaObject : Dynamic, staticType : Class<Dynamic>) : Scriptable;
+	@:overload @:public public function wrapAsJavaObject(cx : Context, scope : Scriptable, javaObject : Dynamic, staticType : Class<Dynamic>) : Scriptable;
 	
 	
 }

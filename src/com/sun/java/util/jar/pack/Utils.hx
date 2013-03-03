@@ -29,19 +29,19 @@ package com.sun.java.util.jar.pack;
 }
 @:native('com$sun$java$util$jar$pack$Utils$Pack200Logger') @:internal extern class Utils_Pack200Logger
 {
-	@:overload public function warning(msg : String, param : Dynamic) : Void;
+	@:overload @:public public function warning(msg : String, param : Dynamic) : Void;
 	
-	@:overload public function warning(msg : String) : Void;
+	@:overload @:public public function warning(msg : String) : Void;
 	
-	@:overload public function info(msg : String) : Void;
+	@:overload @:public public function info(msg : String) : Void;
 	
-	@:overload public function fine(msg : String) : Void;
+	@:overload @:public public function fine(msg : String) : Void;
 	
 	
 }
 @:native('com$sun$java$util$jar$pack$Utils$NonCloser') @:internal extern class Utils_NonCloser extends java.io.FilterOutputStream
 {
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

@@ -25,7 +25,7 @@ package com.sun.tools.internal.ws.processor.generator;
 */
 extern class JavaGeneratorExtensionFacade extends com.sun.tools.internal.ws.api.TJavaGeneratorExtension
 {
-	@:overload public function writeMethodAnnotations(wsdlOperation : com.sun.tools.internal.ws.api.wsdl.TWSDLOperation, jMethod : com.sun.codemodel.internal.JMethod) : Void;
+	@:overload @:public override public function writeMethodAnnotations(wsdlOperation : com.sun.tools.internal.ws.api.wsdl.TWSDLOperation, jMethod : com.sun.codemodel.internal.JMethod) : Void;
 	
 	
 }

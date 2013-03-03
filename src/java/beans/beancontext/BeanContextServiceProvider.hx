@@ -59,7 +59,7 @@ extern interface BeanContextServiceProvider
 	*
 	* @param service the service that is to be released
 	*/
-	@:overload public function releaseService(bcs : java.beans.beancontext.BeanContextServices, requestor : Dynamic, service : Dynamic) : Void;
+	@:overload @:public public function releaseService(bcs : java.beans.beancontext.BeanContextServices, requestor : Dynamic, service : Dynamic) : Void;
 	
 	/**
 	* Invoked by <code>BeanContextServices</code>, this method

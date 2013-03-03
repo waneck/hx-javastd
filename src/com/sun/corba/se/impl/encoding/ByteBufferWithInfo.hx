@@ -25,39 +25,39 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class ByteBufferWithInfo
 {
-	public var byteBuffer : java.nio.ByteBuffer;
+	@:public public var byteBuffer : java.nio.ByteBuffer;
 	
-	public var buflen : Int;
+	@:public public var buflen : Int;
 	
-	public var needed : Int;
+	@:public public var needed : Int;
 	
-	public var fragmented : Bool;
+	@:public public var fragmented : Bool;
 	
-	@:overload public function new(orb : org.omg.CORBA.ORB, byteBuffer : java.nio.ByteBuffer, index : Int) : Void;
+	@:overload @:public public function new(orb : org.omg.CORBA.ORB, byteBuffer : java.nio.ByteBuffer, index : Int) : Void;
 	
-	@:overload public function new(orb : org.omg.CORBA.ORB, byteBuffer : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function new(orb : org.omg.CORBA.ORB, byteBuffer : java.nio.ByteBuffer) : Void;
 	
-	@:overload public function new(orb : org.omg.CORBA.ORB, bufferManager : com.sun.corba.se.impl.encoding.BufferManagerWrite) : Void;
+	@:overload @:public public function new(orb : org.omg.CORBA.ORB, bufferManager : com.sun.corba.se.impl.encoding.BufferManagerWrite) : Void;
 	
-	@:overload public function new(orb : org.omg.CORBA.ORB, bufferManager : com.sun.corba.se.impl.encoding.BufferManagerWrite, usePooledByteBuffers : Bool) : Void;
+	@:overload @:public public function new(orb : org.omg.CORBA.ORB, bufferManager : com.sun.corba.se.impl.encoding.BufferManagerWrite, usePooledByteBuffers : Bool) : Void;
 	
-	@:overload public function new(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
+	@:overload @:public public function new(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
 	
-	@:overload public function getSize() : Int;
+	@:overload @:public public function getSize() : Int;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
-	@:overload public function position() : Int;
+	@:overload @:public public function position() : Int;
 	
-	@:overload public function position(newPosition : Int) : Void;
+	@:overload @:public public function position(newPosition : Int) : Void;
 	
-	@:overload public function setLength(theLength : Int) : Void;
+	@:overload @:public public function setLength(theLength : Int) : Void;
 	
-	@:overload public function growBuffer(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function growBuffer(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload private function dprint(msg : String) : Void;
+	@:overload @:protected private function dprint(msg : String) : Void;
 	
 	
 }

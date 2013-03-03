@@ -30,7 +30,7 @@ extern class BasicAttributes implements javax.naming.directory.Attributes
 	* The character case of attribute identifiers
 	* is significant when subsequently retrieving or adding attributes.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new instance of Attributes.
@@ -41,7 +41,7 @@ extern class BasicAttributes implements javax.naming.directory.Attributes
 	*                   when retrieving or adding attributes;
 	*                   false means case is respected.
 	*/
-	@:overload public function new(ignoreCase : Bool) : Void;
+	@:overload @:public public function new(ignoreCase : Bool) : Void;
 	
 	/**
 	* Constructs a new instance of Attributes with one attribute.
@@ -53,7 +53,7 @@ extern class BasicAttributes implements javax.naming.directory.Attributes
 	* @param val The value of the attribute to add. If null, a null
 	*        value is added to the attribute.
 	*/
-	@:overload public function new(attrID : String, val : Dynamic) : Void;
+	@:overload @:public public function new(attrID : String, val : Dynamic) : Void;
 	
 	/**
 	* Constructs a new instance of Attributes with one attribute.
@@ -72,25 +72,25 @@ extern class BasicAttributes implements javax.naming.directory.Attributes
 	*                   when retrieving or adding attributes;
 	*                   false means case is respected.
 	*/
-	@:overload public function new(attrID : String, val : Dynamic, ignoreCase : Bool) : Void;
+	@:overload @:public public function new(attrID : String, val : Dynamic, ignoreCase : Bool) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function isCaseIgnored() : Bool;
+	@:overload @:public public function isCaseIgnored() : Bool;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function get(attrID : String) : javax.naming.directory.Attribute;
+	@:overload @:public public function get(attrID : String) : javax.naming.directory.Attribute;
 	
-	@:overload public function getAll() : javax.naming.NamingEnumeration<javax.naming.directory.Attribute>;
+	@:overload @:public public function getAll() : javax.naming.NamingEnumeration<javax.naming.directory.Attribute>;
 	
-	@:overload public function getIDs() : javax.naming.NamingEnumeration<String>;
+	@:overload @:public public function getIDs() : javax.naming.NamingEnumeration<String>;
 	
-	@:overload public function put(attrID : String, val : Dynamic) : javax.naming.directory.Attribute;
+	@:overload @:public public function put(attrID : String, val : Dynamic) : javax.naming.directory.Attribute;
 	
-	@:overload public function put(attr : javax.naming.directory.Attribute) : javax.naming.directory.Attribute;
+	@:overload @:public public function put(attr : javax.naming.directory.Attribute) : javax.naming.directory.Attribute;
 	
-	@:overload public function remove(attrID : String) : javax.naming.directory.Attribute;
+	@:overload @:public public function remove(attrID : String) : javax.naming.directory.Attribute;
 	
 	/**
 	* Generates the string representation of this attribute set.
@@ -100,7 +100,7 @@ extern class BasicAttributes implements javax.naming.directory.Attributes
 	*
 	* @return A non-null string listing the contents of this attribute set.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Determines whether this <tt>BasicAttributes</tt> is equal to another
@@ -120,7 +120,7 @@ extern class BasicAttributes implements javax.naming.directory.Attributes
 	* @return true If obj is equal to this BasicAttributes.
 	* @see #hashCode
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Calculates the hash code of this BasicAttributes.
@@ -136,39 +136,39 @@ extern class BasicAttributes implements javax.naming.directory.Attributes
 	* @return an int representing the hash code of this BasicAttributes instance.
 	* @see #equals
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
 @:native('javax$naming$directory$BasicAttributes$AttrEnumImpl') @:internal extern class BasicAttributes_AttrEnumImpl implements javax.naming.NamingEnumeration<javax.naming.directory.Attribute>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : javax.naming.directory.Attribute;
+	@:overload @:public public function nextElement() : javax.naming.directory.Attribute;
 	
-	@:overload public function hasMore() : Bool;
+	@:overload @:public public function hasMore() : Bool;
 	
-	@:overload public function next() : javax.naming.directory.Attribute;
+	@:overload @:public public function next() : javax.naming.directory.Attribute;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }
 @:native('javax$naming$directory$BasicAttributes$IDEnumImpl') @:internal extern class BasicAttributes_IDEnumImpl implements javax.naming.NamingEnumeration<String>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : String;
+	@:overload @:public public function nextElement() : String;
 	
-	@:overload public function hasMore() : Bool;
+	@:overload @:public public function hasMore() : Bool;
 	
-	@:overload public function next() : String;
+	@:overload @:public public function next() : String;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

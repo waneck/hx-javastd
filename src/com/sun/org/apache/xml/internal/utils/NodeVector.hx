@@ -27,19 +27,19 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	* Number of nodes in this NodeVector.
 	*  @serial
 	*/
-	private var m_firstFree : Int;
+	@:protected private var m_firstFree : Int;
 	
 	/**
 	* Default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a NodeVector, using the given block size.
 	*
 	* @param blocksize Size of blocks to allocate
 	*/
-	@:overload public function new(blocksize : Int) : Void;
+	@:overload @:public public function new(blocksize : Int) : Void;
 	
 	/**
 	* Get a cloned LocPathIterator.
@@ -48,35 +48,35 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	*
 	* @throws CloneNotSupportedException
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Get the length of the list.
 	*
 	* @return Number of nodes in this NodeVector
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Append a Node onto the vector.
 	*
 	* @param value Node to add to the vector
 	*/
-	@:overload public function addElement(value : Int) : Void;
+	@:overload @:public public function addElement(value : Int) : Void;
 	
 	/**
 	* Append a Node onto the vector.
 	*
 	* @param value Node to add to the vector
 	*/
-	@:overload @:final public function push(value : Int) : Void;
+	@:overload @:public @:final public function push(value : Int) : Void;
 	
 	/**
 	* Pop a node from the tail of the vector and return the result.
 	*
 	* @return the node at the tail of the vector
 	*/
-	@:overload @:final public function pop() : Int;
+	@:overload @:public @:final public function pop() : Int;
 	
 	/**
 	* Pop a node from the tail of the vector and return the
@@ -84,12 +84,12 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	*
 	* @return The top of the stack after it's been popped
 	*/
-	@:overload @:final public function popAndTop() : Int;
+	@:overload @:public @:final public function popAndTop() : Int;
 	
 	/**
 	* Pop a node from the tail of the vector.
 	*/
-	@:overload @:final public function popQuick() : Void;
+	@:overload @:public @:final public function popQuick() : Void;
 	
 	/**
 	* Return the node at the top of the stack without popping the stack.
@@ -98,7 +98,7 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	*
 	* @return Node at the top of the stack or null if stack is empty.
 	*/
-	@:overload @:final public function peepOrNull() : Int;
+	@:overload @:public @:final public function peepOrNull() : Int;
 	
 	/**
 	* Push a pair of nodes into the stack.
@@ -108,14 +108,14 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	* @param v1 First node to add to vector
 	* @param v2 Second node to add to vector
 	*/
-	@:overload @:final public function pushPair(v1 : Int, v2 : Int) : Void;
+	@:overload @:public @:final public function pushPair(v1 : Int, v2 : Int) : Void;
 	
 	/**
 	* Pop a pair of nodes from the tail of the stack.
 	* Special purpose method for TransformerImpl, pushElemTemplateElement.
 	* Performance critical.
 	*/
-	@:overload @:final public function popPair() : Void;
+	@:overload @:public @:final public function popPair() : Void;
 	
 	/**
 	* Set the tail of the stack to the given node.
@@ -124,7 +124,7 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	*
 	* @param n Node to set at the tail of vector
 	*/
-	@:overload @:final public function setTail(n : Int) : Void;
+	@:overload @:public @:final public function setTail(n : Int) : Void;
 	
 	/**
 	* Set the given node one position from the tail.
@@ -133,7 +133,7 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	*
 	* @param n Node to set
 	*/
-	@:overload @:final public function setTailSub1(n : Int) : Void;
+	@:overload @:public @:final public function setTailSub1(n : Int) : Void;
 	
 	/**
 	* Return the node at the tail of the vector without popping
@@ -142,7 +142,7 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	*
 	* @return Node at the tail of the vector
 	*/
-	@:overload @:final public function peepTail() : Int;
+	@:overload @:public @:final public function peepTail() : Int;
 	
 	/**
 	* Return the node one position from the tail without popping.
@@ -151,14 +151,14 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	*
 	* @return Node one away from the tail
 	*/
-	@:overload @:final public function peepTailSub1() : Int;
+	@:overload @:public @:final public function peepTailSub1() : Int;
 	
 	/**
 	* Insert a node in order in the list.
 	*
 	* @param value Node to insert
 	*/
-	@:overload public function insertInOrder(value : Int) : Void;
+	@:overload @:public public function insertInOrder(value : Int) : Void;
 	
 	/**
 	* Inserts the specified node in this vector at the specified index.
@@ -169,14 +169,14 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	* @param value Node to insert
 	* @param at Position where to insert
 	*/
-	@:overload public function insertElementAt(value : Int, at : Int) : Void;
+	@:overload @:public public function insertElementAt(value : Int, at : Int) : Void;
 	
 	/**
 	* Append the nodes to the list.
 	*
 	* @param nodes NodeVector to append to this list
 	*/
-	@:overload public function appendNodes(nodes : com.sun.org.apache.xml.internal.utils.NodeVector) : Void;
+	@:overload @:public public function appendNodes(nodes : com.sun.org.apache.xml.internal.utils.NodeVector) : Void;
 	
 	/**
 	* Inserts the specified node in this vector at the specified index.
@@ -184,12 +184,12 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	* the specified index is shifted upward to have an index one greater
 	* than the value it had previously.
 	*/
-	@:overload public function removeAllElements() : Void;
+	@:overload @:public public function removeAllElements() : Void;
 	
 	/**
 	* Set the length to zero, but don't clear the array.
 	*/
-	@:overload public function RemoveAllNoClear() : Void;
+	@:overload @:public public function RemoveAllNoClear() : Void;
 	
 	/**
 	* Removes the first occurrence of the argument from this vector.
@@ -202,7 +202,7 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	*
 	* @return True if the node was successfully removed
 	*/
-	@:overload public function removeElement(s : Int) : Bool;
+	@:overload @:public public function removeElement(s : Int) : Bool;
 	
 	/**
 	* Deletes the component at the specified index. Each component in
@@ -212,7 +212,7 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	*
 	* @param i Index of node to remove
 	*/
-	@:overload public function removeElementAt(i : Int) : Void;
+	@:overload @:public public function removeElementAt(i : Int) : Void;
 	
 	/**
 	* Sets the component at the specified index of this vector to be the
@@ -224,7 +224,7 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	* @param node Node to set
 	* @param index Index of where to set the node
 	*/
-	@:overload public function setElementAt(node : Int, index : Int) : Void;
+	@:overload @:public public function setElementAt(node : Int, index : Int) : Void;
 	
 	/**
 	* Get the nth element.
@@ -233,7 +233,7 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	*
 	* @return Node at specified index
 	*/
-	@:overload public function elementAt(i : Int) : Int;
+	@:overload @:public public function elementAt(i : Int) : Int;
 	
 	/**
 	* Tell if the table contains the given node.
@@ -242,7 +242,7 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	*
 	* @return True if the given node was found.
 	*/
-	@:overload public function contains(s : Int) : Bool;
+	@:overload @:public public function contains(s : Int) : Bool;
 	
 	/**
 	* Searches for the first occurence of the given argument,
@@ -255,7 +255,7 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	* argument in this vector at position index or later in the
 	* vector; returns -1 if the object is not found.
 	*/
-	@:overload public function indexOf(elem : Int, index : Int) : Int;
+	@:overload @:public public function indexOf(elem : Int, index : Int) : Int;
 	
 	/**
 	* Searches for the first occurence of the given argument,
@@ -267,7 +267,7 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	* argument in this vector at position index or later in the
 	* vector; returns -1 if the object is not found.
 	*/
-	@:overload public function indexOf(elem : Int) : Int;
+	@:overload @:public public function indexOf(elem : Int) : Int;
 	
 	/**
 	* Sort an array using a quicksort algorithm.
@@ -278,14 +278,14 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	*
 	* @throws Exception
 	*/
-	@:overload public function sort(a : java.NativeArray<Int>, lo0 : Int, hi0 : Int) : Void;
+	@:overload @:public public function sort(a : java.NativeArray<Int>, lo0 : Int, hi0 : Int) : Void;
 	
 	/**
 	* Sort an array using a quicksort algorithm.
 	*
 	* @throws Exception
 	*/
-	@:overload public function sort() : Void;
+	@:overload @:public public function sort() : Void;
 	
 	
 }

@@ -25,15 +25,15 @@ package com.sun.media.sound;
 */
 extern class ModelMappedInstrument extends com.sun.media.sound.ModelInstrument
 {
-	@:overload public function new(ins : com.sun.media.sound.ModelInstrument, patch : javax.sound.midi.Patch) : Void;
+	@:overload @:public public function new(ins : com.sun.media.sound.ModelInstrument, patch : javax.sound.midi.Patch) : Void;
 	
-	@:overload public function getData() : Dynamic;
+	@:overload @:public override public function getData() : Dynamic;
 	
-	@:overload override public function getPerformers() : java.NativeArray<com.sun.media.sound.ModelPerformer>;
+	@:overload @:public override public function getPerformers() : java.NativeArray<com.sun.media.sound.ModelPerformer>;
 	
-	@:overload override public function getDirector(performers : java.NativeArray<com.sun.media.sound.ModelPerformer>, channel : javax.sound.midi.MidiChannel, player : com.sun.media.sound.ModelDirectedPlayer) : com.sun.media.sound.ModelDirector;
+	@:overload @:public override public function getDirector(performers : java.NativeArray<com.sun.media.sound.ModelPerformer>, channel : javax.sound.midi.MidiChannel, player : com.sun.media.sound.ModelDirectedPlayer) : com.sun.media.sound.ModelDirector;
 	
-	@:overload override public function getChannelMixer(channel : javax.sound.midi.MidiChannel, format : javax.sound.sampled.AudioFormat) : com.sun.media.sound.ModelChannelMixer;
+	@:overload @:public override public function getChannelMixer(channel : javax.sound.midi.MidiChannel, format : javax.sound.sampled.AudioFormat) : com.sun.media.sound.ModelChannelMixer;
 	
 	
 }

@@ -40,116 +40,116 @@ extern class TreeScanner extends Visitor
 {
 	/** Visitor method: Scan a single node.
 	*/
-	@:overload public function scan(tree : com.sun.tools.javac.tree.JCTree) : Void;
+	@:overload @:public public function scan(tree : com.sun.tools.javac.tree.JCTree) : Void;
 	
 	/** Visitor method: scan a list of nodes.
 	*/
-	@:overload public function scan(trees : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>) : Void;
+	@:overload @:public public function scan(trees : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>) : Void;
 	
 	/* ***************************************************************************
 	* Visitor methods
 	****************************************************************************/
-	@:overload public function visitTopLevel(tree : JCCompilationUnit) : Void;
+	@:overload @:public public function visitTopLevel(tree : JCCompilationUnit) : Void;
 	
-	@:overload public function visitImport(tree : JCImport) : Void;
+	@:overload @:public public function visitImport(tree : JCImport) : Void;
 	
-	@:overload public function visitClassDef(tree : JCClassDecl) : Void;
+	@:overload @:public public function visitClassDef(tree : JCClassDecl) : Void;
 	
-	@:overload public function visitMethodDef(tree : JCMethodDecl) : Void;
+	@:overload @:public public function visitMethodDef(tree : JCMethodDecl) : Void;
 	
-	@:overload public function visitVarDef(tree : JCVariableDecl) : Void;
+	@:overload @:public public function visitVarDef(tree : JCVariableDecl) : Void;
 	
-	@:overload public function visitSkip(tree : JCSkip) : Void;
+	@:overload @:public public function visitSkip(tree : JCSkip) : Void;
 	
-	@:overload public function visitBlock(tree : JCBlock) : Void;
+	@:overload @:public public function visitBlock(tree : JCBlock) : Void;
 	
-	@:overload public function visitDoLoop(tree : JCDoWhileLoop) : Void;
+	@:overload @:public public function visitDoLoop(tree : JCDoWhileLoop) : Void;
 	
-	@:overload public function visitWhileLoop(tree : JCWhileLoop) : Void;
+	@:overload @:public public function visitWhileLoop(tree : JCWhileLoop) : Void;
 	
-	@:overload public function visitForLoop(tree : JCForLoop) : Void;
+	@:overload @:public public function visitForLoop(tree : JCForLoop) : Void;
 	
-	@:overload public function visitForeachLoop(tree : JCEnhancedForLoop) : Void;
+	@:overload @:public public function visitForeachLoop(tree : JCEnhancedForLoop) : Void;
 	
-	@:overload public function visitLabelled(tree : JCLabeledStatement) : Void;
+	@:overload @:public public function visitLabelled(tree : JCLabeledStatement) : Void;
 	
-	@:overload public function visitSwitch(tree : JCSwitch) : Void;
+	@:overload @:public public function visitSwitch(tree : JCSwitch) : Void;
 	
-	@:overload public function visitCase(tree : JCCase) : Void;
+	@:overload @:public public function visitCase(tree : JCCase) : Void;
 	
-	@:overload public function visitSynchronized(tree : JCSynchronized) : Void;
+	@:overload @:public public function visitSynchronized(tree : JCSynchronized) : Void;
 	
-	@:overload public function visitTry(tree : JCTry) : Void;
+	@:overload @:public public function visitTry(tree : JCTry) : Void;
 	
-	@:overload public function visitCatch(tree : JCCatch) : Void;
+	@:overload @:public public function visitCatch(tree : JCCatch) : Void;
 	
-	@:overload public function visitConditional(tree : JCConditional) : Void;
+	@:overload @:public public function visitConditional(tree : JCConditional) : Void;
 	
-	@:overload public function visitIf(tree : JCIf) : Void;
+	@:overload @:public public function visitIf(tree : JCIf) : Void;
 	
-	@:overload public function visitExec(tree : JCExpressionStatement) : Void;
+	@:overload @:public public function visitExec(tree : JCExpressionStatement) : Void;
 	
-	@:overload public function visitBreak(tree : JCBreak) : Void;
+	@:overload @:public public function visitBreak(tree : JCBreak) : Void;
 	
-	@:overload public function visitContinue(tree : JCContinue) : Void;
+	@:overload @:public public function visitContinue(tree : JCContinue) : Void;
 	
-	@:overload public function visitReturn(tree : JCReturn) : Void;
+	@:overload @:public public function visitReturn(tree : JCReturn) : Void;
 	
-	@:overload public function visitThrow(tree : JCThrow) : Void;
+	@:overload @:public public function visitThrow(tree : JCThrow) : Void;
 	
-	@:overload public function visitAssert(tree : JCAssert) : Void;
+	@:overload @:public public function visitAssert(tree : JCAssert) : Void;
 	
-	@:overload public function visitApply(tree : JCMethodInvocation) : Void;
+	@:overload @:public public function visitApply(tree : JCMethodInvocation) : Void;
 	
-	@:overload public function visitNewClass(tree : JCNewClass) : Void;
+	@:overload @:public public function visitNewClass(tree : JCNewClass) : Void;
 	
-	@:overload public function visitNewArray(tree : JCNewArray) : Void;
+	@:overload @:public public function visitNewArray(tree : JCNewArray) : Void;
 	
-	@:overload public function visitParens(tree : JCParens) : Void;
+	@:overload @:public public function visitParens(tree : JCParens) : Void;
 	
-	@:overload public function visitAssign(tree : JCAssign) : Void;
+	@:overload @:public public function visitAssign(tree : JCAssign) : Void;
 	
-	@:overload public function visitAssignop(tree : JCAssignOp) : Void;
+	@:overload @:public public function visitAssignop(tree : JCAssignOp) : Void;
 	
-	@:overload public function visitUnary(tree : JCUnary) : Void;
+	@:overload @:public public function visitUnary(tree : JCUnary) : Void;
 	
-	@:overload public function visitBinary(tree : JCBinary) : Void;
+	@:overload @:public public function visitBinary(tree : JCBinary) : Void;
 	
-	@:overload public function visitTypeCast(tree : JCTypeCast) : Void;
+	@:overload @:public public function visitTypeCast(tree : JCTypeCast) : Void;
 	
-	@:overload public function visitTypeTest(tree : JCInstanceOf) : Void;
+	@:overload @:public public function visitTypeTest(tree : JCInstanceOf) : Void;
 	
-	@:overload public function visitIndexed(tree : JCArrayAccess) : Void;
+	@:overload @:public public function visitIndexed(tree : JCArrayAccess) : Void;
 	
-	@:overload public function visitSelect(tree : JCFieldAccess) : Void;
+	@:overload @:public public function visitSelect(tree : JCFieldAccess) : Void;
 	
-	@:overload public function visitIdent(tree : JCIdent) : Void;
+	@:overload @:public public function visitIdent(tree : JCIdent) : Void;
 	
-	@:overload public function visitLiteral(tree : JCLiteral) : Void;
+	@:overload @:public public function visitLiteral(tree : JCLiteral) : Void;
 	
-	@:overload public function visitTypeIdent(tree : JCPrimitiveTypeTree) : Void;
+	@:overload @:public public function visitTypeIdent(tree : JCPrimitiveTypeTree) : Void;
 	
-	@:overload public function visitTypeArray(tree : JCArrayTypeTree) : Void;
+	@:overload @:public public function visitTypeArray(tree : JCArrayTypeTree) : Void;
 	
-	@:overload public function visitTypeApply(tree : JCTypeApply) : Void;
+	@:overload @:public public function visitTypeApply(tree : JCTypeApply) : Void;
 	
-	@:overload public function visitTypeUnion(tree : JCTypeUnion) : Void;
+	@:overload @:public public function visitTypeUnion(tree : JCTypeUnion) : Void;
 	
-	@:overload public function visitTypeParameter(tree : JCTypeParameter) : Void;
+	@:overload @:public public function visitTypeParameter(tree : JCTypeParameter) : Void;
 	
-	@:overload public function visitWildcard(tree : JCWildcard) : Void;
+	@:overload @:public public function visitWildcard(tree : JCWildcard) : Void;
 	
-	@:overload public function visitTypeBoundKind(that : TypeBoundKind) : Void;
+	@:overload @:public public function visitTypeBoundKind(that : TypeBoundKind) : Void;
 	
-	@:overload public function visitModifiers(tree : JCModifiers) : Void;
+	@:overload @:public public function visitModifiers(tree : JCModifiers) : Void;
 	
-	@:overload public function visitAnnotation(tree : JCAnnotation) : Void;
+	@:overload @:public public function visitAnnotation(tree : JCAnnotation) : Void;
 	
-	@:overload public function visitErroneous(tree : JCErroneous) : Void;
+	@:overload @:public public function visitErroneous(tree : JCErroneous) : Void;
 	
-	@:overload public function visitLetExpr(tree : LetExpr) : Void;
+	@:overload @:public public function visitLetExpr(tree : LetExpr) : Void;
 	
-	@:overload public function visitTree(tree : com.sun.tools.javac.tree.JCTree) : Void;
+	@:overload @:public public function visitTree(tree : com.sun.tools.javac.tree.JCTree) : Void;
 	
 	
 }

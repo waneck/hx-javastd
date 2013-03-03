@@ -34,17 +34,17 @@ package com.sun.tools.hat.internal.model;
 */
 extern class JavaField
 {
-	@:overload public function new(name : String, signature : String) : Void;
+	@:overload @:public public function new(name : String, signature : String) : Void;
 	
 	/**
 	* @return true if the type of this field is something that has an ID.
 	*          int fields, for exampe, don't.
 	*/
-	@:overload public function hasId() : Bool;
+	@:overload @:public public function hasId() : Bool;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getSignature() : String;
+	@:overload @:public public function getSignature() : String;
 	
 	
 }

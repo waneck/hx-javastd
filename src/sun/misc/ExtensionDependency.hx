@@ -32,14 +32,14 @@ extern class ExtensionDependency
 	* </p>
 	* @param eip ExtensionInstallationProvider implementation
 	*/
-	@:overload @:synchronized public static function addExtensionInstallationProvider(eip : sun.misc.ExtensionInstallationProvider) : Void;
+	@:overload @:public @:synchronized @:static public static function addExtensionInstallationProvider(eip : sun.misc.ExtensionInstallationProvider) : Void;
 	
 	/**
 	* <p>
 	* Unregister a previously installed installation provider
 	* </p>
 	*/
-	@:overload @:synchronized public static function removeExtensionInstallationProvider(eip : sun.misc.ExtensionInstallationProvider) : Void;
+	@:overload @:public @:synchronized @:static public static function removeExtensionInstallationProvider(eip : sun.misc.ExtensionInstallationProvider) : Void;
 	
 	/**
 	* <p>
@@ -47,13 +47,13 @@ extern class ExtensionDependency
 	* </p>
 	* @param jarFile containing the attriutes declaring the dependencies
 	*/
-	@:overload public static function checkExtensionsDependencies(jar : java.util.jar.JarFile) : Bool;
+	@:overload @:public @:static public static function checkExtensionsDependencies(jar : java.util.jar.JarFile) : Bool;
 	
 	/*
 	* Check for all declared required extensions in the jar file
 	* manifest.
 	*/
-	@:overload private function checkExtensions(jar : java.util.jar.JarFile) : Bool;
+	@:overload @:protected private function checkExtensions(jar : java.util.jar.JarFile) : Bool;
 	
 	/*
 	* <p>
@@ -64,7 +64,7 @@ extern class ExtensionDependency
 	*
 	* @return true if the dependency is satisfied by the installed extensions
 	*/
-	@:overload @:synchronized private function checkExtension(extensionName : String, attr : java.util.jar.Attributes) : Bool;
+	@:overload @:protected @:synchronized private function checkExtension(extensionName : String, attr : java.util.jar.Attributes) : Bool;
 	
 	/*
 	* <p>
@@ -78,7 +78,7 @@ extern class ExtensionDependency
 	* @param file installed extension jar file to compare the requested
 	* extension against.
 	*/
-	@:overload private function checkExtensionAgainst(extensionName : String, attr : java.util.jar.Attributes, file : java.io.File) : Bool;
+	@:overload @:protected private function checkExtensionAgainst(extensionName : String, attr : java.util.jar.Attributes, file : java.io.File) : Bool;
 	
 	/*
 	* <p>
@@ -91,7 +91,7 @@ extern class ExtensionDependency
 	*
 	* @return true if the installation is successful
 	*/
-	@:overload private function installExtension(reqInfo : sun.misc.ExtensionInfo, instInfo : sun.misc.ExtensionInfo) : Bool;
+	@:overload @:protected private function installExtension(reqInfo : sun.misc.ExtensionInfo, instInfo : sun.misc.ExtensionInfo) : Bool;
 	
 	
 }

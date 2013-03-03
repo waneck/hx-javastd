@@ -25,15 +25,15 @@ package com.sun.xml.internal.bind.v2.runtime.reflect;
 */
 @:internal extern class PrimitiveArrayListerLong<BeanT> extends com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, java.NativeArray<haxe.Int64>, Null<haxe.Int64>, com.sun.xml.internal.bind.v2.runtime.reflect.PrimitiveArrayListerLong.PrimitiveArrayListerLong_LongArrayPack>
 {
-	@:overload public function iterator(objects : java.NativeArray<haxe.Int64>, context : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : com.sun.xml.internal.bind.v2.runtime.reflect.ListIterator<Null<haxe.Int64>>;
+	@:overload @:public public function iterator(objects : java.NativeArray<haxe.Int64>, context : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : com.sun.xml.internal.bind.v2.runtime.reflect.ListIterator<Null<haxe.Int64>>;
 	
-	@:overload public function startPacking(current : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<haxe.Int64>>) : com.sun.xml.internal.bind.v2.runtime.reflect.PrimitiveArrayListerLong.PrimitiveArrayListerLong_LongArrayPack;
+	@:overload @:public override public function startPacking(current : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<haxe.Int64>>) : com.sun.xml.internal.bind.v2.runtime.reflect.PrimitiveArrayListerLong.PrimitiveArrayListerLong_LongArrayPack;
 	
-	@:overload public function addToPack(objects : com.sun.xml.internal.bind.v2.runtime.reflect.PrimitiveArrayListerLong.PrimitiveArrayListerLong_LongArrayPack, o : Null<haxe.Int64>) : Void;
+	@:overload @:public public function addToPack(objects : com.sun.xml.internal.bind.v2.runtime.reflect.PrimitiveArrayListerLong.PrimitiveArrayListerLong_LongArrayPack, o : Null<haxe.Int64>) : Void;
 	
-	@:overload public function endPacking(pack : com.sun.xml.internal.bind.v2.runtime.reflect.PrimitiveArrayListerLong.PrimitiveArrayListerLong_LongArrayPack, bean : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<haxe.Int64>>) : Void;
+	@:overload @:public public function endPacking(pack : com.sun.xml.internal.bind.v2.runtime.reflect.PrimitiveArrayListerLong.PrimitiveArrayListerLong_LongArrayPack, bean : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<haxe.Int64>>) : Void;
 	
-	@:overload public function reset(o : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<haxe.Int64>>) : Void;
+	@:overload @:public override public function reset(o : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<haxe.Int64>>) : Void;
 	
 	
 }

@@ -55,7 +55,7 @@ extern interface WSPortInfo extends javax.xml.ws.handler.PortInfo
 	* @deprecated
 	* Do not use this method as the PolicyMap API is not final yet and might change in next few months.
 	*/
-	@:overload public function getPolicyMap() : com.sun.xml.internal.ws.policy.PolicyMap;
+	@:overload @:public public function getPolicyMap() : com.sun.xml.internal.ws.policy.PolicyMap;
 	
 	
 }

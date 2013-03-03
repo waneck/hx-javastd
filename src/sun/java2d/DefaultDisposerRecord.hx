@@ -29,15 +29,15 @@ package sun.java2d;
 */
 extern class DefaultDisposerRecord implements sun.java2d.DisposerRecord
 {
-	@:overload public function new(disposerMethodPointer : haxe.Int64, dataPointer : haxe.Int64) : Void;
+	@:overload @:public public function new(disposerMethodPointer : haxe.Int64, dataPointer : haxe.Int64) : Void;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload public function getDataPointer() : haxe.Int64;
+	@:overload @:public public function getDataPointer() : haxe.Int64;
 	
-	@:overload public function getDisposerMethodPointer() : haxe.Int64;
+	@:overload @:public public function getDisposerMethodPointer() : haxe.Int64;
 	
-	@:overload @:native public static function invokeNativeDispose(disposerMethodPointer : haxe.Int64, dataPointer : haxe.Int64) : Void;
+	@:overload @:public @:static @:native public static function invokeNativeDispose(disposerMethodPointer : haxe.Int64, dataPointer : haxe.Int64) : Void;
 	
 	
 }

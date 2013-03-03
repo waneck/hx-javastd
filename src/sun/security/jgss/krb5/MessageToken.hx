@@ -29,32 +29,32 @@ package sun.security.jgss.krb5;
 	* Used to obtain the GSSHeader that was at the start of this
 	* token.
 	*/
-	@:overload @:final public function getGSSHeader() : sun.security.jgss.GSSHeader;
+	@:overload @:public @:final public function getGSSHeader() : sun.security.jgss.GSSHeader;
 	
 	/**
 	* Used to obtain the token id that was contained in this token.
 	* @return the token id in the token
 	*/
-	@:overload @:final public function getTokenId() : Int;
+	@:overload @:public @:final public function getTokenId() : Int;
 	
 	/**
 	* Used to obtain the encrypted sequence number in this token.
 	* @return the encrypted sequence number in the token
 	*/
-	@:overload @:final public function getEncSeqNumber() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getEncSeqNumber() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Used to obtain the checksum that was contained in this token.
 	* @return the checksum in the token
 	*/
-	@:overload @:final public function getChecksum() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getChecksum() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Used to determine if this token contains any encrypted data.
 	* @return true if it contains any encrypted data, false if there is only
 	* plaintext data or if there is no data.
 	*/
-	@:overload @:final public function getConfState() : Bool;
+	@:overload @:public @:final public function getConfState() : Bool;
 	
 	/**
 	* Generates the checksum field and the encrypted sequence number
@@ -90,7 +90,7 @@ package sun.security.jgss.krb5;
 	* @throws GSSException if an error occurs in the checksum calculation or
 	* encryption sequence number calculation.
 	*/
-	@:overload public function genSignAndSeqNumber(prop : org.ietf.jgss.MessageProp, optionalHeader : java.NativeArray<java.StdTypes.Int8>, data : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, optionalTrailer : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function genSignAndSeqNumber(prop : org.ietf.jgss.MessageProp, optionalHeader : java.NativeArray<java.StdTypes.Int8>, data : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, optionalTrailer : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Verifies that the checksum field and sequence number direction bytes
@@ -110,9 +110,9 @@ package sun.security.jgss.krb5;
 	* @throws GSSException if an error occurs in the checksum calculation or
 	* encryption sequence number calculation.
 	*/
-	@:overload @:final public function verifySignAndSeqNumber(optionalHeader : java.NativeArray<java.StdTypes.Int8>, data : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, optionalTrailer : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public @:final public function verifySignAndSeqNumber(optionalHeader : java.NativeArray<java.StdTypes.Int8>, data : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, optionalTrailer : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
-	@:overload @:final public function getSequenceNumber() : Int;
+	@:overload @:public @:final public function getSequenceNumber() : Int;
 	
 	/**
 	* Encodes a GSSHeader and this token onto an OutputStream.
@@ -120,18 +120,18 @@ package sun.security.jgss.krb5;
 	* @param os the OutputStream to which this should be written
 	* @throws GSSException if an error occurs while writing to the OutputStream
 	*/
-	@:overload public function encode(os : java.io.OutputStream) : Void;
+	@:overload @:public public function encode(os : java.io.OutputStream) : Void;
 	
 	/**
 	* Obtains the size of this token. Note that this excludes the size of
 	* the GSSHeader.
 	* @return token size
 	*/
-	@:overload private function getKrb5TokenSize() : Int;
+	@:overload @:protected private function getKrb5TokenSize() : Int;
 	
-	@:overload @:final private function getTokenSize() : Int;
+	@:overload @:protected @:final private function getTokenSize() : Int;
 	
-	@:native('getTokenSize') @:overload @:final private static function _getTokenSize(ch : sun.security.jgss.krb5.CipherHelper) : Int;
+	@:native('getTokenSize') @:overload @:protected @:static @:final private static function _getTokenSize(ch : sun.security.jgss.krb5.CipherHelper) : Int;
 	
 	/**
 	* Obtains the encryption algorithm that should be used in this token
@@ -143,12 +143,12 @@ package sun.security.jgss.krb5;
 	* @throws GSSException if qop is incompatible with the negotiated
 	*         session key
 	*/
-	@:overload @:abstract private function getSealAlg(confRequested : Bool, qop : Int) : Int;
+	@:overload @:protected @:abstract private function getSealAlg(confRequested : Bool, qop : Int) : Int;
 	
 	/**
 	* Determine signing algorithm based on QOP.
 	*/
-	@:overload private function getSgnAlg(qop : Int) : Int;
+	@:overload @:protected private function getSgnAlg(qop : Int) : Int;
 	
 	
 }
@@ -186,7 +186,7 @@ package sun.security.jgss.krb5;
 	* @param qop the value of the quality of protection that will be
 	* desired.
 	*/
-	@:overload public function new(tokenId : Int, conf : Bool, qop : Int) : Void;
+	@:overload @:public public function new(tokenId : Int, conf : Bool, qop : Int) : Void;
 	
 	/**
 	* Constructs a MessageTokenHeader by reading it from an InputStream
@@ -198,14 +198,14 @@ package sun.security.jgss.krb5;
 	* @throws IOException is an error occurs while reading from the
 	* InputStream
 	*/
-	@:overload public function new(is : java.io.InputStream, prop : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public public function new(is : java.io.InputStream, prop : org.ietf.jgss.MessageProp) : Void;
 	
 	/**
 	* Encodes this MessageTokenHeader onto an OutputStream
 	* @param os the OutputStream to write to
 	* @throws IOException is an error occurs while writing
 	*/
-	@:overload @:final public function encode(os : java.io.OutputStream) : Void;
+	@:overload @:public @:final public function encode(os : java.io.OutputStream) : Void;
 	
 	/**
 	* Returns the token id for the message token.
@@ -213,7 +213,7 @@ package sun.security.jgss.krb5;
 	* @see sun.security.jgss.krb5.Krb5Token#MIC_ID
 	* @see sun.security.jgss.krb5.Krb5Token#WRAP_ID
 	*/
-	@:overload @:final public function getTokenId() : Int;
+	@:overload @:public @:final public function getTokenId() : Int;
 	
 	/**
 	* Returns the sign algorithm for the message token.
@@ -221,7 +221,7 @@ package sun.security.jgss.krb5;
 	* @see sun.security.jgss.krb5.MessageToken#SIGN_DES_MAC
 	* @see sun.security.jgss.krb5.MessageToken#SIGN_DES_MAC_MD5
 	*/
-	@:overload @:final public function getSignAlg() : Int;
+	@:overload @:public @:final public function getSignAlg() : Int;
 	
 	/**
 	* Returns the seal algorithm for the message token.
@@ -229,13 +229,13 @@ package sun.security.jgss.krb5;
 	* @see sun.security.jgss.krb5.MessageToken#SEAL_ALG_DES
 	* @see sun.security.jgss.krb5.MessageToken#SEAL_ALG_NONE
 	*/
-	@:overload @:final public function getSealAlg() : Int;
+	@:overload @:public @:final public function getSealAlg() : Int;
 	
 	/**
 	* Returns the bytes of this header.
 	* @return 8 bytes that form this header
 	*/
-	@:overload @:final public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

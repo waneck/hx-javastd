@@ -42,7 +42,7 @@ extern class Printer implements com.sun.tools.javac.code.Type.Type_Visitor<Strin
 	* @param args a list of optional arguments
 	* @return localized string representation
 	*/
-	@:overload @:abstract private function localize(locale : java.util.Locale, key : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:protected @:abstract private function localize(locale : java.util.Locale, key : String, args : java.NativeArray<Dynamic>) : String;
 	
 	/**
 	* Maps a captured type into an unique identifier.
@@ -51,7 +51,7 @@ extern class Printer implements com.sun.tools.javac.code.Type.Type_Visitor<Strin
 	* @param locale locale settings
 	* @return unique id representing this captured type
 	*/
-	@:overload @:abstract private function capturedVarId(t : com.sun.tools.javac.code.Type.Type_CapturedType, locale : java.util.Locale) : String;
+	@:overload @:protected @:abstract private function capturedVarId(t : com.sun.tools.javac.code.Type.Type_CapturedType, locale : java.util.Locale) : String;
 	
 	/**
 	* Create a printer with default i18n support provided by Messages. By default,
@@ -60,7 +60,7 @@ extern class Printer implements com.sun.tools.javac.code.Type.Type_Visitor<Strin
 	* @param messages Messages class to be used for i18n
 	* @return printer visitor instance
 	*/
-	@:overload public static function createStandardPrinter(messages : com.sun.tools.javac.api.Messages) : com.sun.tools.javac.code.Printer;
+	@:overload @:public @:static public static function createStandardPrinter(messages : com.sun.tools.javac.api.Messages) : com.sun.tools.javac.code.Printer;
 	
 	/**
 	* Get a localized string representation for all the types in the input list.
@@ -69,7 +69,7 @@ extern class Printer implements com.sun.tools.javac.code.Type.Type_Visitor<Strin
 	* @param locale the locale in which the string is to be rendered
 	* @return localized string representation
 	*/
-	@:overload public function visitTypes(ts : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, locale : java.util.Locale) : String;
+	@:overload @:public public function visitTypes(ts : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, locale : java.util.Locale) : String;
 	
 	/**
 	* * Get a localized string representation for all the symbols in the input list.
@@ -78,7 +78,7 @@ extern class Printer implements com.sun.tools.javac.code.Type.Type_Visitor<Strin
 	* @param locale the locale in which the string is to be rendered
 	* @return localized string representation
 	*/
-	@:overload public function visitSymbols(ts : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Symbol>, locale : java.util.Locale) : String;
+	@:overload @:public public function visitSymbols(ts : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Symbol>, locale : java.util.Locale) : String;
 	
 	/**
 	* Get a localized string represenation for a given type.
@@ -87,7 +87,7 @@ extern class Printer implements com.sun.tools.javac.code.Type.Type_Visitor<Strin
 	* @param locale the locale in which the string is to be rendered
 	* @return localized string representation
 	*/
-	@:overload public function visit(t : com.sun.tools.javac.code.Type, locale : java.util.Locale) : String;
+	@:overload @:public public function visit(t : com.sun.tools.javac.code.Type, locale : java.util.Locale) : String;
 	
 	/**
 	* Get a localized string represenation for a given symbol.
@@ -96,29 +96,29 @@ extern class Printer implements com.sun.tools.javac.code.Type.Type_Visitor<Strin
 	* @param locale the locale in which the string is to be rendered
 	* @return localized string representation
 	*/
-	@:overload public function visit(s : com.sun.tools.javac.code.Symbol, locale : java.util.Locale) : String;
+	@:overload @:public public function visit(s : com.sun.tools.javac.code.Symbol, locale : java.util.Locale) : String;
 	
-	@:overload public function visitCapturedType(t : com.sun.tools.javac.code.Type.Type_CapturedType, locale : java.util.Locale) : String;
+	@:overload @:public public function visitCapturedType(t : com.sun.tools.javac.code.Type.Type_CapturedType, locale : java.util.Locale) : String;
 	
-	@:overload public function visitForAll(t : com.sun.tools.javac.code.Type.Type_ForAll, locale : java.util.Locale) : String;
+	@:overload @:public public function visitForAll(t : com.sun.tools.javac.code.Type.Type_ForAll, locale : java.util.Locale) : String;
 	
-	@:overload public function visitUndetVar(t : com.sun.tools.javac.code.Type.Type_UndetVar, locale : java.util.Locale) : String;
+	@:overload @:public public function visitUndetVar(t : com.sun.tools.javac.code.Type.Type_UndetVar, locale : java.util.Locale) : String;
 	
-	@:overload public function visitArrayType(t : com.sun.tools.javac.code.Type.Type_ArrayType, locale : java.util.Locale) : String;
+	@:overload @:public public function visitArrayType(t : com.sun.tools.javac.code.Type.Type_ArrayType, locale : java.util.Locale) : String;
 	
-	@:overload public function visitClassType(t : com.sun.tools.javac.code.Type.Type_ClassType, locale : java.util.Locale) : String;
+	@:overload @:public public function visitClassType(t : com.sun.tools.javac.code.Type.Type_ClassType, locale : java.util.Locale) : String;
 	
-	@:overload public function visitMethodType(t : com.sun.tools.javac.code.Type.Type_MethodType, locale : java.util.Locale) : String;
+	@:overload @:public public function visitMethodType(t : com.sun.tools.javac.code.Type.Type_MethodType, locale : java.util.Locale) : String;
 	
-	@:overload public function visitPackageType(t : com.sun.tools.javac.code.Type.Type_PackageType, locale : java.util.Locale) : String;
+	@:overload @:public public function visitPackageType(t : com.sun.tools.javac.code.Type.Type_PackageType, locale : java.util.Locale) : String;
 	
-	@:overload public function visitWildcardType(t : com.sun.tools.javac.code.Type.Type_WildcardType, locale : java.util.Locale) : String;
+	@:overload @:public public function visitWildcardType(t : com.sun.tools.javac.code.Type.Type_WildcardType, locale : java.util.Locale) : String;
 	
-	@:overload public function visitErrorType(t : com.sun.tools.javac.code.Type.Type_ErrorType, locale : java.util.Locale) : String;
+	@:overload @:public public function visitErrorType(t : com.sun.tools.javac.code.Type.Type_ErrorType, locale : java.util.Locale) : String;
 	
-	@:overload public function visitTypeVar(t : com.sun.tools.javac.code.Type.Type_TypeVar, locale : java.util.Locale) : String;
+	@:overload @:public public function visitTypeVar(t : com.sun.tools.javac.code.Type.Type_TypeVar, locale : java.util.Locale) : String;
 	
-	@:overload public function visitType(t : com.sun.tools.javac.code.Type, locale : java.util.Locale) : String;
+	@:overload @:public public function visitType(t : com.sun.tools.javac.code.Type, locale : java.util.Locale) : String;
 	
 	/**
 	* Converts a class name into a (possibly localized) string. Anonymous
@@ -130,7 +130,7 @@ extern class Printer implements com.sun.tools.javac.code.Type.Type_Visitor<Strin
 	* @param locale the locale in which the string is to be rendered
 	* @return localized string representation
 	*/
-	@:overload private function className(t : com.sun.tools.javac.code.Type.Type_ClassType, longform : Bool, locale : java.util.Locale) : String;
+	@:overload @:protected private function className(t : com.sun.tools.javac.code.Type.Type_ClassType, longform : Bool, locale : java.util.Locale) : String;
 	
 	/**
 	* Converts a set of method argument types into their corresponding
@@ -141,35 +141,57 @@ extern class Printer implements com.sun.tools.javac.code.Type.Type_Visitor<Strin
 	* @param locale the locale in which the string is to be rendered
 	* @return localized string representation
 	*/
-	@:overload private function printMethodArgs(args : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, varArgs : Bool, locale : java.util.Locale) : String;
+	@:overload @:protected private function printMethodArgs(args : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, varArgs : Bool, locale : java.util.Locale) : String;
 	
-	@:overload public function visitClassSymbol(sym : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol, locale : java.util.Locale) : String;
+	@:overload @:public public function visitClassSymbol(sym : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol, locale : java.util.Locale) : String;
 	
-	@:overload public function visitMethodSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol, locale : java.util.Locale) : String;
+	@:overload @:public public function visitMethodSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol, locale : java.util.Locale) : String;
 	
-	@:overload public function visitOperatorSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_OperatorSymbol, locale : java.util.Locale) : String;
+	@:overload @:public public function visitOperatorSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_OperatorSymbol, locale : java.util.Locale) : String;
 	
-	@:overload public function visitPackageSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol, locale : java.util.Locale) : String;
+	@:overload @:public public function visitPackageSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol, locale : java.util.Locale) : String;
 	
-	@:overload public function visitTypeSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, locale : java.util.Locale) : String;
+	@:overload @:public public function visitTypeSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, locale : java.util.Locale) : String;
 	
-	@:overload public function visitVarSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol, locale : java.util.Locale) : String;
+	@:overload @:public public function visitVarSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol, locale : java.util.Locale) : String;
 	
-	@:overload public function visitSymbol(s : com.sun.tools.javac.code.Symbol, locale : java.util.Locale) : String;
+	@:overload @:public public function visitSymbol(s : com.sun.tools.javac.code.Symbol, locale : java.util.Locale) : String;
 	
-	@:overload public function visitClassSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol, arg : Dynamic) : Dynamic;
+	@:overload @:public public function visitArrayType(t : com.sun.tools.javac.code.Type.Type_ArrayType, s : Dynamic) : Dynamic;
 	
-	@:overload public function visitPackageSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol, arg : Dynamic) : Dynamic;
+	@:overload @:public public function visitClassSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol, arg : Dynamic) : Dynamic;
 	
-	@:overload public function visitVarSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol, arg : Dynamic) : Dynamic;
+	@:overload @:public public function visitPackageSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol, arg : Dynamic) : Dynamic;
 	
-	@:overload public function visitMethodSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol, arg : Dynamic) : Dynamic;
+	@:overload @:public public function visitVarSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol, arg : Dynamic) : Dynamic;
 	
-	@:overload public function visitOperatorSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_OperatorSymbol, arg : Dynamic) : Dynamic;
+	@:overload @:public public function visitErrorType(t : com.sun.tools.javac.code.Type.Type_ErrorType, s : Dynamic) : Dynamic;
 	
-	@:overload public function visitTypeSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, arg : Dynamic) : Dynamic;
+	@:overload @:public public function visitForAll(t : com.sun.tools.javac.code.Type.Type_ForAll, s : Dynamic) : Dynamic;
 	
-	@:overload public function visitSymbol(s : com.sun.tools.javac.code.Symbol, arg : Dynamic) : Dynamic;
+	@:overload @:public public function visitMethodSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol, arg : Dynamic) : Dynamic;
+	
+	@:overload @:public public function visitOperatorSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_OperatorSymbol, arg : Dynamic) : Dynamic;
+	
+	@:overload @:public public function visitMethodType(t : com.sun.tools.javac.code.Type.Type_MethodType, s : Dynamic) : Dynamic;
+	
+	@:overload @:public public function visitUndetVar(t : com.sun.tools.javac.code.Type.Type_UndetVar, s : Dynamic) : Dynamic;
+	
+	@:overload @:public public function visitTypeSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, arg : Dynamic) : Dynamic;
+	
+	@:overload @:public public function visitClassType(t : com.sun.tools.javac.code.Type.Type_ClassType, s : Dynamic) : Dynamic;
+	
+	@:overload @:public public function visitWildcardType(t : com.sun.tools.javac.code.Type.Type_WildcardType, s : Dynamic) : Dynamic;
+	
+	@:overload @:public public function visitType(t : com.sun.tools.javac.code.Type, s : Dynamic) : Dynamic;
+	
+	@:overload @:public public function visitSymbol(s : com.sun.tools.javac.code.Symbol, arg : Dynamic) : Dynamic;
+	
+	@:overload @:public public function visitTypeVar(t : com.sun.tools.javac.code.Type.Type_TypeVar, s : Dynamic) : Dynamic;
+	
+	@:overload @:public public function visitPackageType(t : com.sun.tools.javac.code.Type.Type_PackageType, s : Dynamic) : Dynamic;
+	
+	@:overload @:public public function visitCapturedType(t : com.sun.tools.javac.code.Type.Type_CapturedType, s : Dynamic) : Dynamic;
 	
 	
 }

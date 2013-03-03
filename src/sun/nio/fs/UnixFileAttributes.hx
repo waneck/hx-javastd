@@ -25,51 +25,51 @@ package sun.nio.fs;
 */
 @:internal extern class UnixFileAttributes implements java.nio.file.attribute.PosixFileAttributes
 {
-	@:overload public function lastModifiedTime() : java.nio.file.attribute.FileTime;
+	@:overload @:public public function lastModifiedTime() : java.nio.file.attribute.FileTime;
 	
-	@:overload public function lastAccessTime() : java.nio.file.attribute.FileTime;
+	@:overload @:public public function lastAccessTime() : java.nio.file.attribute.FileTime;
 	
-	@:overload public function creationTime() : java.nio.file.attribute.FileTime;
+	@:overload @:public public function creationTime() : java.nio.file.attribute.FileTime;
 	
-	@:overload public function isRegularFile() : Bool;
+	@:overload @:public public function isRegularFile() : Bool;
 	
-	@:overload public function isDirectory() : Bool;
+	@:overload @:public public function isDirectory() : Bool;
 	
-	@:overload public function isSymbolicLink() : Bool;
+	@:overload @:public public function isSymbolicLink() : Bool;
 	
-	@:overload public function isOther() : Bool;
+	@:overload @:public public function isOther() : Bool;
 	
-	@:overload public function size() : haxe.Int64;
+	@:overload @:public public function size() : haxe.Int64;
 	
-	@:overload public function fileKey() : sun.nio.fs.UnixFileKey;
+	@:overload @:public public function fileKey() : sun.nio.fs.UnixFileKey;
 	
-	@:overload public function owner() : java.nio.file.attribute.UserPrincipal;
+	@:overload @:public public function owner() : java.nio.file.attribute.UserPrincipal;
 	
-	@:overload public function group() : java.nio.file.attribute.GroupPrincipal;
+	@:overload @:public public function group() : java.nio.file.attribute.GroupPrincipal;
 	
-	@:overload public function permissions() : java.util.Set<java.nio.file.attribute.PosixFilePermission>;
+	@:overload @:public public function permissions() : java.util.Set<java.nio.file.attribute.PosixFilePermission>;
 	
 	
 }
 @:native('sun$nio$fs$UnixFileAttributes$UnixAsBasicFileAttributes') @:internal extern class UnixFileAttributes_UnixAsBasicFileAttributes implements java.nio.file.attribute.BasicFileAttributes
 {
-	@:overload public function lastModifiedTime() : java.nio.file.attribute.FileTime;
+	@:overload @:public public function lastModifiedTime() : java.nio.file.attribute.FileTime;
 	
-	@:overload public function lastAccessTime() : java.nio.file.attribute.FileTime;
+	@:overload @:public public function lastAccessTime() : java.nio.file.attribute.FileTime;
 	
-	@:overload public function creationTime() : java.nio.file.attribute.FileTime;
+	@:overload @:public public function creationTime() : java.nio.file.attribute.FileTime;
 	
-	@:overload public function isRegularFile() : Bool;
+	@:overload @:public public function isRegularFile() : Bool;
 	
-	@:overload public function isDirectory() : Bool;
+	@:overload @:public public function isDirectory() : Bool;
 	
-	@:overload public function isSymbolicLink() : Bool;
+	@:overload @:public public function isSymbolicLink() : Bool;
 	
-	@:overload public function isOther() : Bool;
+	@:overload @:public public function isOther() : Bool;
 	
-	@:overload public function size() : haxe.Int64;
+	@:overload @:public public function size() : haxe.Int64;
 	
-	@:overload public function fileKey() : Dynamic;
+	@:overload @:public public function fileKey() : Dynamic;
 	
 	
 }

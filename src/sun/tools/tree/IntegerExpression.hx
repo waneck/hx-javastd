@@ -28,27 +28,27 @@ extern class IntegerExpression extends sun.tools.tree.ConstantExpression
 	/**
 	* See if this number fits in the given type.
 	*/
-	@:overload override public function fitsType(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, t : sun.tools.java.Type) : Bool;
+	@:overload @:public override public function fitsType(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, t : sun.tools.java.Type) : Bool;
 	
 	/**
 	* Get the value
 	*/
-	@:overload override public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
 	/**
 	* Check if the expression is equal to a value
 	*/
-	@:overload override public function equals(i : Int) : Bool;
+	@:overload @:public override public function equals(i : Int) : Bool;
 	
 	/**
 	* Check if the expression is equal to its default static value
 	*/
-	@:overload override public function equalsDefault() : Bool;
+	@:overload @:public override public function equalsDefault() : Bool;
 	
 	/**
 	* Code
 	*/
-	@:overload override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	
 }

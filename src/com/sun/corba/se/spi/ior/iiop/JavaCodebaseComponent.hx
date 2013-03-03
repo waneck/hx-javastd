@@ -28,7 +28,7 @@ extern interface JavaCodebaseComponent extends com.sun.corba.se.spi.ior.TaggedCo
 	/**
 	* @author Ken Cavanaugh
 	*/
-	@:overload public function getURLs() : String;
+	@:overload @:public public function getURLs() : String;
 	
 	
 }

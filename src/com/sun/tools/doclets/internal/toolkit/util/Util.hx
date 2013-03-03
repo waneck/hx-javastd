@@ -39,17 +39,17 @@ extern class Util
 	* A mapping between characters and their
 	* corresponding HTML escape character.
 	*/
-	public static var HTML_ESCAPE_CHARS(default, null) : java.NativeArray<java.NativeArray<String>>;
+	@:public @:static @:final public static var HTML_ESCAPE_CHARS(default, null) : java.NativeArray<java.NativeArray<String>>;
 	
 	/**
 	* Name of the resource directory.
 	*/
-	public static var RESOURCESDIR(default, null) : String;
+	@:public @:static @:final public static var RESOURCESDIR(default, null) : String;
 	
 	/**
 	* Resource bundle corresponding to the doclets.properties file.
 	*/
-	public static var RESOURCE_BUNDLE(default, null) : java.util.ResourceBundle;
+	@:public @:static @:final public static var RESOURCE_BUNDLE(default, null) : java.util.ResourceBundle;
 	
 	/**
 	* Return array of class members whose documentation is to be generated.
@@ -60,7 +60,7 @@ extern class Util
 	* @return ProgramElementDoc[] Array of eligible members for whom
 	*                             documentation is getting generated.
 	*/
-	@:overload public static function excludeDeprecatedMembers(members : java.NativeArray<com.sun.javadoc.ProgramElementDoc>) : java.NativeArray<com.sun.javadoc.ProgramElementDoc>;
+	@:overload @:public @:static public static function excludeDeprecatedMembers(members : java.NativeArray<com.sun.javadoc.ProgramElementDoc>) : java.NativeArray<com.sun.javadoc.ProgramElementDoc>;
 	
 	/**
 	* Return array of class members whose documentation is to be generated.
@@ -71,12 +71,12 @@ extern class Util
 	* @return List       List of eligible members for whom
 	*                    documentation is getting generated.
 	*/
-	@:overload public static function excludeDeprecatedMembersAsList(members : java.NativeArray<com.sun.javadoc.ProgramElementDoc>) : java.util.List<com.sun.javadoc.ProgramElementDoc>;
+	@:overload @:public @:static public static function excludeDeprecatedMembersAsList(members : java.NativeArray<com.sun.javadoc.ProgramElementDoc>) : java.util.List<com.sun.javadoc.ProgramElementDoc>;
 	
 	/**
 	* Return the list of ProgramElementDoc objects as Array.
 	*/
-	@:overload public static function toProgramElementDocArray(list : java.util.List<com.sun.javadoc.ProgramElementDoc>) : java.NativeArray<com.sun.javadoc.ProgramElementDoc>;
+	@:overload @:public @:static public static function toProgramElementDocArray(list : java.util.List<com.sun.javadoc.ProgramElementDoc>) : java.NativeArray<com.sun.javadoc.ProgramElementDoc>;
 	
 	/**
 	* Return true if a non-public member found in the given array.
@@ -84,7 +84,7 @@ extern class Util
 	* @param  members Array of members to look into.
 	* @return boolean True if non-public member found, false otherwise.
 	*/
-	@:overload public static function nonPublicMemberFound(members : java.NativeArray<com.sun.javadoc.ProgramElementDoc>) : Bool;
+	@:overload @:public @:static public static function nonPublicMemberFound(members : java.NativeArray<com.sun.javadoc.ProgramElementDoc>) : Bool;
 	
 	/**
 	* Search for the given method in the given class.
@@ -93,23 +93,23 @@ extern class Util
 	* @param  method    Method to be searched.
 	* @return MethodDoc Method found, null otherwise.
 	*/
-	@:overload public static function findMethod(cd : com.sun.javadoc.ClassDoc, method : com.sun.javadoc.MethodDoc) : com.sun.javadoc.MethodDoc;
+	@:overload @:public @:static public static function findMethod(cd : com.sun.javadoc.ClassDoc, method : com.sun.javadoc.MethodDoc) : com.sun.javadoc.MethodDoc;
 	
 	/**
 	* @param member1 the first method to compare.
 	* @param member2 the second method to compare.
 	* @return true if member1 overrides/hides or is overriden/hidden by member2.
 	*/
-	@:overload public static function executableMembersEqual(member1 : com.sun.javadoc.ExecutableMemberDoc, member2 : com.sun.javadoc.ExecutableMemberDoc) : Bool;
+	@:overload @:public @:static public static function executableMembersEqual(member1 : com.sun.javadoc.ExecutableMemberDoc, member2 : com.sun.javadoc.ExecutableMemberDoc) : Bool;
 	
 	/**
 	* According to
 	* <cite>The Java&trade; Language Specification</cite>,
 	* all the outer classes and static inner classes are core classes.
 	*/
-	@:overload public static function isCoreClass(cd : com.sun.javadoc.ClassDoc) : Bool;
+	@:overload @:public @:static public static function isCoreClass(cd : com.sun.javadoc.ClassDoc) : Bool;
 	
-	@:overload public static function matches(doc1 : com.sun.javadoc.ProgramElementDoc, doc2 : com.sun.javadoc.ProgramElementDoc) : Bool;
+	@:overload @:public @:static public static function matches(doc1 : com.sun.javadoc.ProgramElementDoc, doc2 : com.sun.javadoc.ProgramElementDoc) : Bool;
 	
 	/**
 	* Copy source file to destination file.
@@ -117,7 +117,7 @@ extern class Util
 	* @throws SecurityException
 	* @throws IOException
 	*/
-	@:overload public static function copyFile(destfile : java.io.File, srcfile : java.io.File) : Void;
+	@:overload @:public @:static public static function copyFile(destfile : java.io.File, srcfile : java.io.File) : Void;
 	
 	/**
 	* Copy the given directory contents from the source package directory
@@ -132,7 +132,7 @@ extern class Util
 	* @param dir The original directory name to copy from.
 	* @param overwrite Overwrite files if true.
 	*/
-	@:overload public static function copyDocFiles(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, path : String, dir : String, overwrite : Bool) : Void;
+	@:overload @:public @:static public static function copyDocFiles(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, path : String, dir : String, overwrite : Bool) : Void;
 	
 	/**
 	* Copy a file in the resources directory to the destination
@@ -146,7 +146,7 @@ extern class Util
 	*                       destination directory will be overwritten if
 	*                       it already exists.
 	*/
-	@:overload public static function copyResourceFile(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, resourcefile : String, overwrite : Bool) : Void;
+	@:overload @:public @:static public static function copyResourceFile(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, resourcefile : String, overwrite : Bool) : Void;
 	
 	/**
 	* Copy a file from a source directory to a destination directory
@@ -163,7 +163,7 @@ extern class Util
 	* @param replaceNewLine true if the newline needs to be replaced with platform-
 	*                  specific newline.
 	*/
-	@:overload public static function copyFile(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, file : String, source : String, destination : String, overwrite : Bool, replaceNewLine : Bool) : Void;
+	@:overload @:public @:static public static function copyFile(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, file : String, source : String, destination : String, overwrite : Bool, replaceNewLine : Bool) : Void;
 	
 	/**
 	* Given a PackageDoc, return the source path for that package.
@@ -171,7 +171,7 @@ extern class Util
 	* @param pkgDoc The package to seach the path for.
 	* @return A string representing the path to the given package.
 	*/
-	@:overload public static function getPackageSourcePath(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, pkgDoc : com.sun.javadoc.PackageDoc) : String;
+	@:overload @:public @:static public static function getPackageSourcePath(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, pkgDoc : com.sun.javadoc.PackageDoc) : String;
 	
 	/**
 	* For the class return all implemented interfaces including the
@@ -185,28 +185,28 @@ extern class Util
 	* @param  sort if true, return list of interfaces sorted alphabetically.
 	* @return List of all the required interfaces.
 	*/
-	@:overload public static function getAllInterfaces(type : com.sun.javadoc.Type, configuration : com.sun.tools.doclets.internal.toolkit.Configuration, sort : Bool) : java.util.List<com.sun.javadoc.Type>;
+	@:overload @:public @:static public static function getAllInterfaces(type : com.sun.javadoc.Type, configuration : com.sun.tools.doclets.internal.toolkit.Configuration, sort : Bool) : java.util.List<com.sun.javadoc.Type>;
 	
-	@:overload public static function getAllInterfaces(type : com.sun.javadoc.Type, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : java.util.List<com.sun.javadoc.Type>;
+	@:overload @:public @:static public static function getAllInterfaces(type : com.sun.javadoc.Type, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : java.util.List<com.sun.javadoc.Type>;
 	
 	/**
 	* Enclose in quotes, used for paths and filenames that contains spaces
 	*/
-	@:overload public static function quote(filepath : String) : String;
+	@:overload @:public @:static public static function quote(filepath : String) : String;
 	
 	/**
 	* Given a package, return it's name.
 	* @param packageDoc the package to check.
 	* @return the name of the given package.
 	*/
-	@:overload public static function getPackageName(packageDoc : com.sun.javadoc.PackageDoc) : String;
+	@:overload @:public @:static public static function getPackageName(packageDoc : com.sun.javadoc.PackageDoc) : String;
 	
 	/**
 	* Given a package, return it's file name without the extension.
 	* @param packageDoc the package to check.
 	* @return the file name of the given package.
 	*/
-	@:overload public static function getPackageFileHeadName(packageDoc : com.sun.javadoc.PackageDoc) : String;
+	@:overload @:public @:static public static function getPackageFileHeadName(packageDoc : com.sun.javadoc.PackageDoc) : String;
 	
 	/**
 	* Given a string, replace all occurraces of 'newStr' with 'oldStr'.
@@ -214,7 +214,7 @@ extern class Util
 	* @param oldStr the string to replace.
 	* @param newStr the string to insert in place of the old string.
 	*/
-	@:overload public static function replaceText(originalStr : String, oldStr : String, newStr : String) : String;
+	@:overload @:public @:static public static function replaceText(originalStr : String, oldStr : String, newStr : String) : String;
 	
 	/**
 	* Given a string, escape all special html characters and
@@ -226,7 +226,7 @@ extern class Util
 	*
 	* @see #HTML_ESCAPE_CHARS
 	*/
-	@:overload public static function escapeHtmlChars(s : String) : String;
+	@:overload @:public @:static public static function escapeHtmlChars(s : String) : String;
 	
 	/**
 	* Given a string, strips all html characters and
@@ -237,7 +237,7 @@ extern class Util
 	* stripped.
 	*
 	*/
-	@:overload public static function stripHtml(rawString : String) : String;
+	@:overload @:public @:static public static function stripHtml(rawString : String) : String;
 	
 	/**
 	* Create the directory path for the file to be generated, construct
@@ -254,7 +254,7 @@ extern class Util
 	* @see java.io.FileOutputStream
 	* @see java.io.OutputStreamWriter
 	*/
-	@:overload public static function genWriter(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, path : String, filename : String, docencoding : String) : java.io.Writer;
+	@:overload @:public @:static public static function genWriter(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, path : String, filename : String, docencoding : String) : java.io.Writer;
 	
 	/**
 	* Given an annotation, return true if it should be documented and false
@@ -264,7 +264,7 @@ extern class Util
 	*
 	* @return true return true if it should be documented and false otherwise.
 	*/
-	@:overload public static function isDocumentedAnnotation(annotationDoc : com.sun.javadoc.AnnotationTypeDoc) : Bool;
+	@:overload @:public @:static public static function isDocumentedAnnotation(annotationDoc : com.sun.javadoc.AnnotationTypeDoc) : Bool;
 	
 	/**
 	* Given a string, return an array of tokens.  The separator can be escaped
@@ -279,7 +279,7 @@ extern class Util
 	*
 	* @return an array of tokens.
 	*/
-	@:overload public static function tokenize(s : String, separator : java.StdTypes.Char16, maxTokens : Int) : java.NativeArray<String>;
+	@:overload @:public @:static public static function tokenize(s : String, separator : java.StdTypes.Char16, maxTokens : Int) : java.NativeArray<String>;
 	
 	/**
 	* Return true if this class is linkable and false if we can't link to the
@@ -294,7 +294,7 @@ extern class Util
 	* @return true if this class is linkable and false if we can't link to the
 	* desired class.
 	*/
-	@:overload public static function isLinkable(classDoc : com.sun.javadoc.ClassDoc, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Bool;
+	@:overload @:public @:static public static function isLinkable(classDoc : com.sun.javadoc.ClassDoc, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Bool;
 	
 	/**
 	* Given a class, return the closest visible super class.
@@ -304,7 +304,7 @@ extern class Util
 	* @return the closest visible super class.  Return null if it cannot
 	*         be found (i.e. classDoc is java.lang.Object).
 	*/
-	@:overload public static function getFirstVisibleSuperClass(classDoc : com.sun.javadoc.ClassDoc, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : com.sun.javadoc.Type;
+	@:overload @:public @:static public static function getFirstVisibleSuperClass(classDoc : com.sun.javadoc.ClassDoc, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : com.sun.javadoc.Type;
 	
 	/**
 	* Given a class, return the closest visible super class.
@@ -314,7 +314,7 @@ extern class Util
 	* @return the closest visible super class.  Return null if it cannot
 	*         be found (i.e. classDoc is java.lang.Object).
 	*/
-	@:overload public static function getFirstVisibleSuperClassCD(classDoc : com.sun.javadoc.ClassDoc, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : com.sun.javadoc.ClassDoc;
+	@:overload @:public @:static public static function getFirstVisibleSuperClassCD(classDoc : com.sun.javadoc.ClassDoc, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Given a ClassDoc, return the name of its type (Class, Interface, etc.).
@@ -324,7 +324,7 @@ extern class Util
 	*                      If false, the first letter of the name is capatilized.
 	* @return
 	*/
-	@:overload public static function getTypeName(config : com.sun.tools.doclets.internal.toolkit.Configuration, cd : com.sun.javadoc.ClassDoc, lowerCaseOnly : Bool) : String;
+	@:overload @:public @:static public static function getTypeName(config : com.sun.tools.doclets.internal.toolkit.Configuration, cd : com.sun.javadoc.ClassDoc, lowerCaseOnly : Bool) : String;
 	
 	/**
 	* Given a string, replace all tabs with the appropriate
@@ -332,13 +332,13 @@ extern class Util
 	* @param tabLength the length of each tab.
 	* @param s the String to scan.
 	*/
-	@:overload public static function replaceTabs(tabLength : Int, s : java.lang.StringBuilder) : Void;
+	@:overload @:public @:static public static function replaceTabs(tabLength : Int, s : java.lang.StringBuilder) : Void;
 	
 	/**
 	* The documentation for values() and valueOf() in Enums are set by the
 	* doclet.
 	*/
-	@:overload public static function setEnumDocumentation(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc) : Void;
+	@:overload @:public @:static public static function setEnumDocumentation(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc) : Void;
 	
 	/**
 	*  Return true if the given Doc is deprecated.
@@ -346,7 +346,7 @@ extern class Util
 	* @param doc the Doc to check.
 	* @return true if the given Doc is deprecated.
 	*/
-	@:overload public static function isDeprecated(doc : com.sun.javadoc.Doc) : Bool;
+	@:overload @:public @:static public static function isDeprecated(doc : com.sun.javadoc.Doc) : Bool;
 	
 	/**
 	* A convenience method to get property name from the name of the
@@ -354,7 +354,7 @@ extern class Util
 	* @param name name of the getter or setter method.
 	* @return the name of the property of the given setter of getter.
 	*/
-	@:overload public static function propertyNameFromMethodName(name : String) : String;
+	@:overload @:public @:static public static function propertyNameFromMethodName(name : String) : String;
 	
 	
 }
@@ -364,7 +364,7 @@ extern class Util
 */
 @:native('com$sun$tools$doclets$internal$toolkit$util$Util$TypeComparator') @:internal extern class Util_TypeComparator implements java.util.Comparator<com.sun.javadoc.Type>
 {
-	@:overload public function compare(type1 : com.sun.javadoc.Type, type2 : com.sun.javadoc.Type) : Int;
+	@:overload @:public public function compare(type1 : com.sun.javadoc.Type, type2 : com.sun.javadoc.Type) : Int;
 	
 	
 }

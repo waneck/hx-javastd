@@ -28,33 +28,33 @@ extern class PaletteBuilder
 	/**
 	* maximum of tree depth
 	*/
-	private static var MAXLEVEL(default, null) : Int;
+	@:protected @:static @:final private static var MAXLEVEL(default, null) : Int;
 	
-	private var src : java.awt.image.RenderedImage;
+	@:protected private var src : java.awt.image.RenderedImage;
 	
-	private var srcColorModel : java.awt.image.ColorModel;
+	@:protected private var srcColorModel : java.awt.image.ColorModel;
 	
-	private var srcRaster : java.awt.image.Raster;
+	@:protected private var srcRaster : java.awt.image.Raster;
 	
-	private var requiredSize : Int;
+	@:protected private var requiredSize : Int;
 	
-	private var root : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode;
+	@:protected private var root : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode;
 	
-	private var numNodes : Int;
+	@:protected private var numNodes : Int;
 	
-	private var maxNodes : Int;
+	@:protected private var maxNodes : Int;
 	
-	private var currLevel : Int;
+	@:protected private var currLevel : Int;
 	
-	private var currSize : Int;
+	@:protected private var currSize : Int;
 	
-	private var reduceList : java.NativeArray<com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode>;
+	@:protected private var reduceList : java.NativeArray<com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode>;
 	
-	private var palette : java.NativeArray<com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode>;
+	@:protected private var palette : java.NativeArray<com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode>;
 	
-	private var transparency : Int;
+	@:protected private var transparency : Int;
 	
-	private var transColor : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode;
+	@:protected private var transColor : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode;
 	
 	/**
 	* Creates an image representing given image
@@ -77,7 +77,7 @@ extern class PaletteBuilder
 	* @see canCreatePalette
 	*
 	*/
-	@:overload public static function createIndexedImage(src : java.awt.image.RenderedImage) : java.awt.image.RenderedImage;
+	@:overload @:public @:static public static function createIndexedImage(src : java.awt.image.RenderedImage) : java.awt.image.RenderedImage;
 	
 	/**
 	* Creates an palette representing colors from given image
@@ -96,7 +96,7 @@ extern class PaletteBuilder
 	* @see canCreatePalette
 	*
 	*/
-	@:overload public static function createIndexColorModel(img : java.awt.image.RenderedImage) : java.awt.image.IndexColorModel;
+	@:overload @:public @:static public static function createIndexColorModel(img : java.awt.image.RenderedImage) : java.awt.image.IndexColorModel;
 	
 	/**
 	* Returns <code>true</code> if PaletteBuilder is able to create
@@ -111,7 +111,7 @@ extern class PaletteBuilder
 	* @exception IllegalArgumentException if <code>type</code>
 	* is <code>null</code>.
 	*/
-	@:overload public static function canCreatePalette(type : javax.imageio.ImageTypeSpecifier) : Bool;
+	@:overload @:public @:static public static function canCreatePalette(type : javax.imageio.ImageTypeSpecifier) : Bool;
 	
 	/**
 	* Returns <code>true</code> if PaletteBuilder is able to create
@@ -126,29 +126,29 @@ extern class PaletteBuilder
 	* @exception IllegalArgumentException if <code>image</code>
 	* is <code>null</code>.
 	*/
-	@:overload public static function canCreatePalette(image : java.awt.image.RenderedImage) : Bool;
+	@:overload @:public @:static public static function canCreatePalette(image : java.awt.image.RenderedImage) : Bool;
 	
-	@:overload private function getIndexedImage() : java.awt.image.RenderedImage;
+	@:overload @:protected private function getIndexedImage() : java.awt.image.RenderedImage;
 	
-	@:overload private function new(src : java.awt.image.RenderedImage) : Void;
+	@:overload @:protected private function new(src : java.awt.image.RenderedImage) : Void;
 	
-	@:overload private function new(src : java.awt.image.RenderedImage, size : Int) : Void;
+	@:overload @:protected private function new(src : java.awt.image.RenderedImage, size : Int) : Void;
 	
-	@:overload private function findColorIndex(aNode : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode, aColor : java.awt.Color) : Int;
+	@:overload @:protected private function findColorIndex(aNode : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode, aColor : java.awt.Color) : Int;
 	
-	@:overload private function buildPalette() : Void;
+	@:overload @:protected private function buildPalette() : Void;
 	
-	@:overload private function insertNode(aNode : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode, aColor : java.awt.Color, aLevel : Int) : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode;
+	@:overload @:protected private function insertNode(aNode : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode, aColor : java.awt.Color, aLevel : Int) : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode;
 	
-	@:overload private function getIndexColorModel() : java.awt.image.IndexColorModel;
+	@:overload @:protected private function getIndexColorModel() : java.awt.image.IndexColorModel;
 	
-	@:overload private function findPaletteEntry(aNode : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode, index : Int, red : java.NativeArray<java.StdTypes.Int8>, green : java.NativeArray<java.StdTypes.Int8>, blue : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:protected private function findPaletteEntry(aNode : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode, index : Int, red : java.NativeArray<java.StdTypes.Int8>, green : java.NativeArray<java.StdTypes.Int8>, blue : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload private function getBranchIndex(aColor : java.awt.Color, aLevel : Int) : Int;
+	@:overload @:protected private function getBranchIndex(aColor : java.awt.Color, aLevel : Int) : Int;
 	
-	@:overload private function reduceTree() : Void;
+	@:overload @:protected private function reduceTree() : Void;
 	
-	@:overload private function freeTree(aNode : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode) : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode;
+	@:overload @:protected private function freeTree(aNode : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode) : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode;
 	
 	
 }
@@ -157,27 +157,27 @@ extern class PaletteBuilder
 */
 @:native('com$sun$imageio$plugins$common$PaletteBuilder$ColorNode') extern class PaletteBuilder_ColorNode
 {
-	public var isLeaf : Bool;
+	@:public public var isLeaf : Bool;
 	
-	public var childCount : Int;
+	@:public public var childCount : Int;
 	
-	public var colorCount : Int;
+	@:public public var colorCount : Int;
 	
-	public var red : haxe.Int64;
+	@:public public var red : haxe.Int64;
 	
-	public var blue : haxe.Int64;
+	@:public public var blue : haxe.Int64;
 	
-	public var green : haxe.Int64;
+	@:public public var green : haxe.Int64;
 	
-	public var paletteIndex : Int;
+	@:public public var paletteIndex : Int;
 	
-	public var level : Int;
+	@:public public var level : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getLeafChildCount() : Int;
+	@:overload @:public public function getLeafChildCount() : Int;
 	
-	@:overload public function getRGB() : Int;
+	@:overload @:public public function getRGB() : Int;
 	
 	
 }

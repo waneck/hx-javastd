@@ -31,7 +31,7 @@ extern interface XMLDTDContentModelHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startContentModel(elementName : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startContentModel(elementName : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A content model of ANY.
@@ -44,7 +44,7 @@ extern interface XMLDTDContentModelHandler
 	* @see #empty
 	* @see #startGroup
 	*/
-	@:overload public function any(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function any(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A content model of EMPTY.
@@ -57,7 +57,7 @@ extern interface XMLDTDContentModelHandler
 	* @see #any
 	* @see #startGroup
 	*/
-	@:overload public function empty(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function empty(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A start of either a mixed or children content model. A mixed
@@ -73,7 +73,7 @@ extern interface XMLDTDContentModelHandler
 	* @see #any
 	* @see #empty
 	*/
-	@:overload public function startGroup(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startGroup(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The appearance of "#PCDATA" within a group signifying a
@@ -87,7 +87,7 @@ extern interface XMLDTDContentModelHandler
 	*
 	* @see #startGroup
 	*/
-	@:overload public function pcdata(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function pcdata(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A referenced element in a mixed or children content model.
@@ -98,7 +98,7 @@ extern interface XMLDTDContentModelHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function element(elementName : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function element(elementName : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The separator between choices or sequences of a mixed or children
@@ -113,7 +113,7 @@ extern interface XMLDTDContentModelHandler
 	* @see #SEPARATOR_CHOICE
 	* @see #SEPARATOR_SEQUENCE
 	*/
-	@:overload public function separator(separator : java.StdTypes.Int16, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function separator(separator : java.StdTypes.Int16, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The occurrence count for a child in a children content model or
@@ -130,7 +130,7 @@ extern interface XMLDTDContentModelHandler
 	* @see #OCCURS_ZERO_OR_MORE
 	* @see #OCCURS_ONE_OR_MORE
 	*/
-	@:overload public function occurrence(occurrence : java.StdTypes.Int16, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function occurrence(occurrence : java.StdTypes.Int16, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a group for mixed or children content models.
@@ -140,7 +140,7 @@ extern interface XMLDTDContentModelHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endGroup(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endGroup(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a content model.
@@ -150,11 +150,11 @@ extern interface XMLDTDContentModelHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endContentModel(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endContentModel(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function setDTDContentModelSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource) : Void;
+	@:overload @:public public function setDTDContentModelSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource) : Void;
 	
-	@:overload public function getDTDContentModelSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource;
+	@:overload @:public public function getDTDContentModelSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource;
 	
 	
 }

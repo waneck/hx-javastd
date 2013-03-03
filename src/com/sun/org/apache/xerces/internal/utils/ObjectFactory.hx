@@ -38,7 +38,7 @@ extern class ObjectFactory
 	*
 	* @exception ObjectFactory.ConfigurationError
 	*/
-	@:overload public static function createObject(factoryId : String, fallbackClassName : String) : Dynamic;
+	@:overload @:public @:static public static function createObject(factoryId : String, fallbackClassName : String) : Dynamic;
 	
 	/**
 	* Finds the implementation Class object in the specified order.  The
@@ -62,35 +62,35 @@ extern class ObjectFactory
 	*
 	* @exception ObjectFactory.ConfigurationError
 	*/
-	@:overload public static function createObject(factoryId : String, propertiesFilename : String, fallbackClassName : String) : Dynamic;
+	@:overload @:public @:static public static function createObject(factoryId : String, propertiesFilename : String, fallbackClassName : String) : Dynamic;
 	
 	/**
 	* Figure out which ClassLoader to use.  For JDK 1.2 and later use
 	* the context ClassLoader.
 	*/
-	@:overload public static function findClassLoader() : java.lang.ClassLoader;
+	@:overload @:public @:static public static function findClassLoader() : java.lang.ClassLoader;
 	
 	/**
 	* Create an instance of a class using the same classloader for the ObjectFactory by default
 	* or bootclassloader when Security Manager is in place
 	*/
-	@:overload public static function newInstance(className : String, doFallback : Bool) : Dynamic;
+	@:overload @:public @:static public static function newInstance(className : String, doFallback : Bool) : Dynamic;
 	
 	/**
 	* Create an instance of a class using the specified ClassLoader
 	*/
-	@:overload public static function newInstance(className : String, cl : java.lang.ClassLoader, doFallback : Bool) : Dynamic;
+	@:overload @:public @:static public static function newInstance(className : String, cl : java.lang.ClassLoader, doFallback : Bool) : Dynamic;
 	
 	/**
 	* Find a Class using the same classloader for the ObjectFactory by default
 	* or bootclassloader when Security Manager is in place
 	*/
-	@:overload public static function findProviderClass(className : String, doFallback : Bool) : Class<Dynamic>;
+	@:overload @:public @:static public static function findProviderClass(className : String, doFallback : Bool) : Class<Dynamic>;
 	
 	/**
 	* Find a Class using the specified ClassLoader
 	*/
-	@:overload public static function findProviderClass(className : String, cl : java.lang.ClassLoader, doFallback : Bool) : Class<Dynamic>;
+	@:overload @:public @:static public static function findProviderClass(className : String, cl : java.lang.ClassLoader, doFallback : Bool) : Class<Dynamic>;
 	
 	
 }

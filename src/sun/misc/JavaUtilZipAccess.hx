@@ -25,7 +25,7 @@ package sun.misc;
 */
 extern interface JavaUtilZipAccess
 {
-	@:overload public function update(adler32 : java.util.zip.Adler32, buf : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function update(adler32 : java.util.zip.Adler32, buf : java.nio.ByteBuffer) : Void;
 	
 	
 }

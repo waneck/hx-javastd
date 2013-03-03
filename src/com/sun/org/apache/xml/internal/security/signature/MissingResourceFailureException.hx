@@ -35,7 +35,7 @@ extern class MissingResourceFailureException extends com.sun.org.apache.xml.inte
 	* @param reference
 	* @see #getReference
 	*/
-	@:overload public function new(_msgID : String, reference : com.sun.org.apache.xml.internal.security.signature.Reference) : Void;
+	@:overload @:public public function new(_msgID : String, reference : com.sun.org.apache.xml.internal.security.signature.Reference) : Void;
 	
 	/**
 	* Constructor MissingResourceFailureException
@@ -45,7 +45,7 @@ extern class MissingResourceFailureException extends com.sun.org.apache.xml.inte
 	* @param reference
 	* @see #getReference
 	*/
-	@:overload public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, reference : com.sun.org.apache.xml.internal.security.signature.Reference) : Void;
+	@:overload @:public public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, reference : com.sun.org.apache.xml.internal.security.signature.Reference) : Void;
 	
 	/**
 	* Constructor MissingResourceFailureException
@@ -55,7 +55,7 @@ extern class MissingResourceFailureException extends com.sun.org.apache.xml.inte
 	* @param reference
 	* @see #getReference
 	*/
-	@:overload public function new(_msgID : String, _originalException : java.lang.Exception, reference : com.sun.org.apache.xml.internal.security.signature.Reference) : Void;
+	@:overload @:public public function new(_msgID : String, _originalException : java.lang.Exception, reference : com.sun.org.apache.xml.internal.security.signature.Reference) : Void;
 	
 	/**
 	* Constructor MissingResourceFailureException
@@ -66,7 +66,7 @@ extern class MissingResourceFailureException extends com.sun.org.apache.xml.inte
 	* @param reference
 	* @see #getReference
 	*/
-	@:overload public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, _originalException : java.lang.Exception, reference : com.sun.org.apache.xml.internal.security.signature.Reference) : Void;
+	@:overload @:public public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, _originalException : java.lang.Exception, reference : com.sun.org.apache.xml.internal.security.signature.Reference) : Void;
 	
 	/**
 	* used to set the uninitialized {@link com.sun.org.apache.xml.internal.security.signature.Reference}
@@ -74,7 +74,7 @@ extern class MissingResourceFailureException extends com.sun.org.apache.xml.inte
 	* @param reference the Reference object
 	* @see #getReference
 	*/
-	@:overload public function setReference(reference : com.sun.org.apache.xml.internal.security.signature.Reference) : Void;
+	@:overload @:public public function setReference(reference : com.sun.org.apache.xml.internal.security.signature.Reference) : Void;
 	
 	/**
 	* used to get the uninitialized {@link com.sun.org.apache.xml.internal.security.signature.Reference}
@@ -85,7 +85,7 @@ extern class MissingResourceFailureException extends com.sun.org.apache.xml.inte
 	* @return the Reference object
 	* @see #setReference
 	*/
-	@:overload public function getReference() : com.sun.org.apache.xml.internal.security.signature.Reference;
+	@:overload @:public public function getReference() : com.sun.org.apache.xml.internal.security.signature.Reference;
 	
 	
 }

@@ -31,17 +31,17 @@ package sun.util.locale;
 */
 @:internal extern class Extension
 {
-	@:overload private function new(key : java.StdTypes.Char16) : Void;
+	@:overload @:protected private function new(key : java.StdTypes.Char16) : Void;
 	
-	@:overload private function setValue(value : String) : Void;
+	@:overload @:protected private function setValue(value : String) : Void;
 	
-	@:overload public function getKey() : java.StdTypes.Char16;
+	@:overload @:public public function getKey() : java.StdTypes.Char16;
 	
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload public function getID() : String;
+	@:overload @:public public function getID() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

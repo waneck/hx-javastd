@@ -58,17 +58,17 @@ package java.text;
 	* may be null.
 	* @param value The value of the attribute
 	*/
-	@:overload public function new(value : Dynamic) : Void;
+	@:overload @:public public function new(value : Dynamic) : Void;
 	
 	/**
 	* Returns the value of the attribute, which may be null.
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	/**
 	* Returns the String representation of this Annotation.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

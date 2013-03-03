@@ -25,14 +25,14 @@ package com.sun.xml.internal.ws.transport.http.server;
 */
 @:internal extern class WSHttpHandler implements com.sun.net.httpserver.HttpHandler
 {
-	@:overload public function new(adapter : com.sun.xml.internal.ws.transport.http.HttpAdapter, executor : java.util.concurrent.Executor) : Void;
+	@:overload @:public public function new(adapter : com.sun.xml.internal.ws.transport.http.HttpAdapter, executor : java.util.concurrent.Executor) : Void;
 	
 	/**
 	* Called by HttpServer when there is a matching request for the context
 	*/
-	@:overload public function handle(msg : com.sun.net.httpserver.HttpExchange) : Void;
+	@:overload @:public public function handle(msg : com.sun.net.httpserver.HttpExchange) : Void;
 	
-	@:overload public function handleExchange(msg : com.sun.net.httpserver.HttpExchange) : Void;
+	@:overload @:public public function handleExchange(msg : com.sun.net.httpserver.HttpExchange) : Void;
 	
 	
 }
@@ -42,7 +42,7 @@ package com.sun.xml.internal.ws.transport.http.server;
 */
 @:native('com$sun$xml$internal$ws$transport$http$server$WSHttpHandler$HttpHandlerRunnable') @:internal extern class WSHttpHandler_HttpHandlerRunnable implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

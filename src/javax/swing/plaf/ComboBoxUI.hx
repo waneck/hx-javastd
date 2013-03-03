@@ -28,17 +28,17 @@ extern class ComboBoxUI extends javax.swing.plaf.ComponentUI
 	/**
 	* Set the visiblity of the popup
 	*/
-	@:overload @:abstract public function setPopupVisible(c : javax.swing.JComboBox<Dynamic>, v : Bool) : Void;
+	@:overload @:public @:abstract public function setPopupVisible(c : javax.swing.JComboBox<Dynamic>, v : Bool) : Void;
 	
 	/**
 	* Determine the visibility of the popup
 	*/
-	@:overload @:abstract public function isPopupVisible(c : javax.swing.JComboBox<Dynamic>) : Bool;
+	@:overload @:public @:abstract public function isPopupVisible(c : javax.swing.JComboBox<Dynamic>) : Bool;
 	
 	/**
 	* Determine whether or not the combo box itself is traversable
 	*/
-	@:overload @:abstract public function isFocusTraversable(c : javax.swing.JComboBox<Dynamic>) : Bool;
+	@:overload @:public @:abstract public function isFocusTraversable(c : javax.swing.JComboBox<Dynamic>) : Bool;
 	
 	
 }

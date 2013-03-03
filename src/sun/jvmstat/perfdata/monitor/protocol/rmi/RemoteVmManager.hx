@@ -46,7 +46,7 @@ package sun.jvmstat.perfdata.monitor.protocol.rmi;
 	* @param remoteHost the remote proxy object to the RMI server on
 	*                   the remote system.
 	*/
-	@:overload public function new(remoteHost : sun.jvmstat.monitor.remote.RemoteHost) : Void;
+	@:overload @:public public function new(remoteHost : sun.jvmstat.monitor.remote.RemoteHost) : Void;
 	
 	/**
 	* Creates a RemoteVmManager instance for the given user.
@@ -60,7 +60,7 @@ package sun.jvmstat.perfdata.monitor.protocol.rmi;
 	*                   the remote system.
 	* @param user the name of the user
 	*/
-	@:overload public function new(remoteHost : sun.jvmstat.monitor.remote.RemoteHost, user : String) : Void;
+	@:overload @:public public function new(remoteHost : sun.jvmstat.monitor.remote.RemoteHost, user : String) : Void;
 	
 	/**
 	* Return the current set of monitorable Java Virtual Machines.
@@ -74,7 +74,7 @@ package sun.jvmstat.perfdata.monitor.protocol.rmi;
 	*
 	* @return Set - the Set of monitorable Java Virtual Machines
 	*/
-	@:overload public function activeVms() : java.util.Set<Null<Int>>;
+	@:overload @:public public function activeVms() : java.util.Set<Null<Int>>;
 	
 	
 }

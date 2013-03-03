@@ -23,7 +23,7 @@ package com.sun.org.apache.xalan.internal.xsltc.cmdline;
 */
 extern class Compile
 {
-	@:overload public static function printUsage() : Void;
+	@:overload @:public @:static public static function printUsage() : Void;
 	
 	/**
 	* This method implements the command line compiler. See the USAGE_STRING
@@ -32,7 +32,7 @@ extern class Compile
 	* class that contains this main() method and one xsltc.cmdline.Transform
 	* class that contains the DefaultRun stuff).
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

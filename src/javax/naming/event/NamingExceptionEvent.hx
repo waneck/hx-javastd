@@ -34,20 +34,20 @@ extern class NamingExceptionEvent extends java.util.EventObject
 	* @param exc    The non-null <tt>NamingException</tt> that was thrown.
 	*
 	*/
-	@:overload public function new(source : javax.naming.event.EventContext, exc : javax.naming.NamingException) : Void;
+	@:overload @:public public function new(source : javax.naming.event.EventContext, exc : javax.naming.NamingException) : Void;
 	
 	/**
 	* Retrieves the exception that was thrown.
 	* @return The exception that was thrown.
 	*/
-	@:overload public function getException() : javax.naming.NamingException;
+	@:overload @:public public function getException() : javax.naming.NamingException;
 	
 	/**
 	* Retrieves the <tt>EventContext</tt> that fired this event.
 	* This returns the same object as <tt>EventObject.getSource()</tt>.
 	* @return The non-null <tt>EventContext</tt> that fired this event.
 	*/
-	@:overload public function getEventContext() : javax.naming.event.EventContext;
+	@:overload @:public public function getEventContext() : javax.naming.event.EventContext;
 	
 	/**
 	* Invokes the <tt>namingExceptionThrown()</tt> method on
@@ -55,7 +55,7 @@ extern class NamingExceptionEvent extends java.util.EventObject
 	* @param listener The non-null naming listener on which to invoke
 	* the method.
 	*/
-	@:overload public function dispatch(listener : javax.naming.event.NamingListener) : Void;
+	@:overload @:public public function dispatch(listener : javax.naming.event.NamingListener) : Void;
 	
 	
 }

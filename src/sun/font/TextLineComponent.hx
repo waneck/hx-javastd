@@ -29,41 +29,41 @@ package sun.font;
 */
 extern interface TextLineComponent
 {
-	@:overload public function getCoreMetrics() : sun.font.CoreMetrics;
+	@:overload @:public public function getCoreMetrics() : sun.font.CoreMetrics;
 	
-	@:overload @:public public function draw(g2d : java.awt.Graphics2D, x : Single, y : Single) : Void;
+	@:overload @:public @:public public function draw(g2d : java.awt.Graphics2D, x : Single, y : Single) : Void;
 	
-	@:overload public function getCharVisualBounds(index : Int) : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getCharVisualBounds(index : Int) : java.awt.geom.Rectangle2D;
 	
-	@:overload @:public public function getVisualBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public @:public public function getVisualBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload @:public public function getAdvance() : Single;
+	@:overload @:public @:public public function getAdvance() : Single;
 	
-	@:overload @:public public function getOutline(x : Single, y : Single) : java.awt.Shape;
+	@:overload @:public @:public public function getOutline(x : Single, y : Single) : java.awt.Shape;
 	
-	@:overload public function getNumCharacters() : Int;
+	@:overload @:public public function getNumCharacters() : Int;
 	
-	@:overload public function getCharX(index : Int) : Single;
+	@:overload @:public public function getCharX(index : Int) : Single;
 	
-	@:overload public function getCharY(index : Int) : Single;
+	@:overload @:public public function getCharY(index : Int) : Single;
 	
-	@:overload public function getCharAdvance(index : Int) : Single;
+	@:overload @:public public function getCharAdvance(index : Int) : Single;
 	
-	@:overload public function caretAtOffsetIsValid(index : Int) : Bool;
+	@:overload @:public public function caretAtOffsetIsValid(index : Int) : Bool;
 	
-	@:overload public function getLineBreakIndex(start : Int, width : Single) : Int;
+	@:overload @:public public function getLineBreakIndex(start : Int, width : Single) : Int;
 	
-	@:overload public function getAdvanceBetween(start : Int, limit : Int) : Single;
+	@:overload @:public public function getAdvanceBetween(start : Int, limit : Int) : Single;
 	
-	@:overload @:public public function getLogicalBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public @:public public function getLogicalBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload @:public public function getItalicBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public @:public public function getItalicBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload @:public public function getBaselineTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public @:public public function getBaselineTransform() : java.awt.geom.AffineTransform;
 	
-	@:overload @:public public function isSimple() : Bool;
+	@:overload @:public @:public public function isSimple() : Bool;
 	
-	@:overload @:public public function getPixelBounds(frc : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
+	@:overload @:public @:public public function getPixelBounds(frc : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
 	
 	/**
 	* Return a TextLineComponent for the characters in the range
@@ -71,12 +71,12 @@ extern interface TextLineComponent
 	* (ie, the first character is at 0).
 	* @param dir one of the constants LEFT_TO_RIGHT, RIGHT_TO_LEFT, or UNCHANGED
 	*/
-	@:overload public function getSubset(start : Int, limit : Int, dir : Int) : sun.font.TextLineComponent;
+	@:overload @:public public function getSubset(start : Int, limit : Int, dir : Int) : sun.font.TextLineComponent;
 	
 	/**
 	* Return the number of justification records this uses.
 	*/
-	@:overload public function getNumJustificationInfos() : Int;
+	@:overload @:public public function getNumJustificationInfos() : Int;
 	
 	/**
 	* Return GlyphJustificationInfo objects for the characters between
@@ -85,7 +85,7 @@ extern interface TextLineComponent
 	* getNumJustificationInfos will be set.  If a position corresponds
 	* to a character outside the provided range, it is set to null.
 	*/
-	@:overload public function getJustificationInfos(infos : java.NativeArray<java.awt.font.GlyphJustificationInfo>, infoStart : Int, charStart : Int, charLimit : Int) : Void;
+	@:overload @:public public function getJustificationInfos(infos : java.NativeArray<java.awt.font.GlyphJustificationInfo>, infoStart : Int, charStart : Int, charLimit : Int) : Void;
 	
 	/**
 	* Apply deltas to the data in this component, starting at offset
@@ -98,7 +98,7 @@ extern interface TextLineComponent
 	* the new component requires rejustification (ligatures were
 	* formed or split), flags[0] will be set on exit.
 	*/
-	@:overload public function applyJustificationDeltas(deltas : java.NativeArray<Single>, deltaStart : Int, flags : java.NativeArray<Bool>) : sun.font.TextLineComponent;
+	@:overload @:public public function applyJustificationDeltas(deltas : java.NativeArray<Single>, deltaStart : Int, flags : java.NativeArray<Bool>) : sun.font.TextLineComponent;
 	
 	
 }

@@ -39,17 +39,17 @@ extern class SecurityConfiguration extends com.sun.org.apache.xerces.internal.pa
 	* @author Neil Graham, IBM
 	*
 	*/
-	private static var SECURITY_MANAGER_PROPERTY(default, null) : String;
+	@:protected @:static @:final private static var SECURITY_MANAGER_PROPERTY(default, null) : String;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table.
 	*
 	* @param symbolTable The symbol table to use.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table and
@@ -62,7 +62,7 @@ extern class SecurityConfiguration extends com.sun.org.apache.xerces.internal.pa
 	* @param symbolTable The symbol table to use.
 	* @param grammarPool The grammar pool to use.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table,
@@ -76,7 +76,7 @@ extern class SecurityConfiguration extends com.sun.org.apache.xerces.internal.pa
 	* @param grammarPool    The grammar pool to use.
 	* @param parentSettings The parent settings.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool, parentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool, parentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	
 }

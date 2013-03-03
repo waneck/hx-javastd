@@ -23,7 +23,7 @@ extern class RECompiler
 	/**
 	* Constructor.  Creates (initially empty) storage for a regular expression program.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Compiles a regular expression pattern into a program runnable by the pattern
@@ -35,7 +35,7 @@ extern class RECompiler
 	* @see RECompiler
 	* @see RE
 	*/
-	@:overload public function compile(pattern : String) : com.sun.org.apache.regexp.internal.REProgram;
+	@:overload @:public public function compile(pattern : String) : com.sun.org.apache.regexp.internal.REProgram;
 	
 	
 }

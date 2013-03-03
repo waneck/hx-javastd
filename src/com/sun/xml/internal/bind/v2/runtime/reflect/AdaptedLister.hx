@@ -25,25 +25,25 @@ package com.sun.xml.internal.bind.v2.runtime.reflect;
 */
 @:internal extern class AdaptedLister<BeanT, PropT, InMemItemT, OnWireItemT, PackT> extends com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, PropT, OnWireItemT, PackT>
 {
-	@:overload public function iterator(prop : PropT, context : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : com.sun.xml.internal.bind.v2.runtime.reflect.ListIterator<OnWireItemT>;
+	@:overload @:public override public function iterator(prop : PropT, context : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : com.sun.xml.internal.bind.v2.runtime.reflect.ListIterator<OnWireItemT>;
 	
-	@:overload public function startPacking(bean : BeanT, accessor : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : PackT;
+	@:overload @:public override public function startPacking(bean : BeanT, accessor : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : PackT;
 	
-	@:overload public function addToPack(pack : PackT, item : OnWireItemT) : Void;
+	@:overload @:public override public function addToPack(pack : PackT, item : OnWireItemT) : Void;
 	
-	@:overload public function endPacking(pack : PackT, bean : BeanT, accessor : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : Void;
+	@:overload @:public override public function endPacking(pack : PackT, bean : BeanT, accessor : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : Void;
 	
-	@:overload public function reset(bean : BeanT, accessor : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : Void;
+	@:overload @:public override public function reset(bean : BeanT, accessor : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$runtime$reflect$AdaptedLister$ListIteratorImpl') @:internal extern class AdaptedLister_ListIteratorImpl implements com.sun.xml.internal.bind.v2.runtime.reflect.ListIterator<Dynamic>
 {
-	@:overload public function new(core : com.sun.xml.internal.bind.v2.runtime.reflect.ListIterator<Dynamic>, serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public public function new(core : com.sun.xml.internal.bind.v2.runtime.reflect.ListIterator<Dynamic>, serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
 	
 }

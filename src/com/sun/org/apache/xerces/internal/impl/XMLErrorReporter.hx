@@ -66,14 +66,14 @@ extern class XMLErrorReporter implements com.sun.org.apache.xerces.internal.xni.
 	* that should not be considered serious enough to stop parsing or
 	* indicate an error in the document's validity.
 	*/
-	public static var SEVERITY_WARNING(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var SEVERITY_WARNING(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Severity: error. Common causes of errors are document structure and/or
 	* content that that does not conform to the grammar rules specified for
 	* the document. These are typically validation errors.
 	*/
-	public static var SEVERITY_ERROR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var SEVERITY_ERROR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Severity: fatal error. Fatal errors are errors in the syntax of the
@@ -84,28 +84,28 @@ extern class XMLErrorReporter implements com.sun.org.apache.xerces.internal.xni.
 	* <strong>Note:</strong> The parser does have a "continue after fatal
 	* error" feature but it should be used with extreme caution and care.
 	*/
-	public static var SEVERITY_FATAL_ERROR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var SEVERITY_FATAL_ERROR(default, null) : java.StdTypes.Int16;
 	
 	/** Feature identifier: continue after fatal error. */
-	private static var CONTINUE_AFTER_FATAL_ERROR(default, null) : String;
+	@:protected @:static @:final private static var CONTINUE_AFTER_FATAL_ERROR(default, null) : String;
 	
 	/** Property identifier: error handler. */
-	private static var ERROR_HANDLER(default, null) : String;
+	@:protected @:static @:final private static var ERROR_HANDLER(default, null) : String;
 	
 	/** The locale to be used to format error messages. */
-	private var fLocale : java.util.Locale;
+	@:protected private var fLocale : java.util.Locale;
 	
 	/** Mapping of Message formatters for domains. */
-	private var fMessageFormatters : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var fMessageFormatters : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/** Error handler. */
-	private var fErrorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
+	@:protected private var fErrorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
 	
 	/** Document locator. */
-	private var fLocator : com.sun.org.apache.xerces.internal.xni.XMLLocator;
+	@:protected private var fLocator : com.sun.org.apache.xerces.internal.xni.XMLLocator;
 	
 	/** Continue after fatal error feature. */
-	private var fContinueAfterFatalError : Bool;
+	@:protected private var fContinueAfterFatalError : Bool;
 	
 	/**
 	* Default error handler. This error handler is only used in the
@@ -113,31 +113,31 @@ extern class XMLErrorReporter implements com.sun.org.apache.xerces.internal.xni.
 	* "swallowed" silently. This is one of the most common "problems"
 	* reported by users of the parser.
 	*/
-	private var fDefaultErrorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
+	@:protected private var fDefaultErrorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
 	
 	/** Constructs an error reporter with a locator. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets the current locale.
 	*
 	* @param locale The new locale.
 	*/
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
 	/**
 	* Gets the current locale.
 	*
 	* @return the current Locale
 	*/
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	/**
 	* Sets the document locator.
 	*
 	* @param locator The locator.
 	*/
-	@:overload public function setDocumentLocator(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator) : Void;
 	
 	/**
 	* Registers a message formatter for the specified domain.
@@ -150,7 +150,7 @@ extern class XMLErrorReporter implements com.sun.org.apache.xerces.internal.xni.
 	* @param domain
 	* @param messageFormatter
 	*/
-	@:overload public function putMessageFormatter(domain : String, messageFormatter : com.sun.org.apache.xerces.internal.util.MessageFormatter) : Void;
+	@:overload @:public public function putMessageFormatter(domain : String, messageFormatter : com.sun.org.apache.xerces.internal.util.MessageFormatter) : Void;
 	
 	/**
 	* Returns the message formatter associated with the specified domain,
@@ -158,7 +158,7 @@ extern class XMLErrorReporter implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @param domain The domain of the message formatter.
 	*/
-	@:overload public function getMessageFormatter(domain : String) : com.sun.org.apache.xerces.internal.util.MessageFormatter;
+	@:overload @:public public function getMessageFormatter(domain : String) : com.sun.org.apache.xerces.internal.util.MessageFormatter;
 	
 	/**
 	* Removes the message formatter for the specified domain and
@@ -166,7 +166,7 @@ extern class XMLErrorReporter implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @param domain The domain of the message formatter.
 	*/
-	@:overload public function removeMessageFormatter(domain : String) : com.sun.org.apache.xerces.internal.util.MessageFormatter;
+	@:overload @:public public function removeMessageFormatter(domain : String) : com.sun.org.apache.xerces.internal.util.MessageFormatter;
 	
 	/**
 	* Reports an error. The error message passed to the error handler
@@ -184,7 +184,7 @@ extern class XMLErrorReporter implements com.sun.org.apache.xerces.internal.xni.
 	* @see #SEVERITY_ERROR
 	* @see #SEVERITY_FATAL_ERROR
 	*/
-	@:overload public function reportError(domain : String, key : String, arguments : java.NativeArray<Dynamic>, severity : java.StdTypes.Int16) : String;
+	@:overload @:public public function reportError(domain : String, key : String, arguments : java.NativeArray<Dynamic>, severity : java.StdTypes.Int16) : String;
 	
 	/**
 	* Reports an error. The error message passed to the error handler
@@ -203,7 +203,7 @@ extern class XMLErrorReporter implements com.sun.org.apache.xerces.internal.xni.
 	* @see #SEVERITY_ERROR
 	* @see #SEVERITY_FATAL_ERROR
 	*/
-	@:overload public function reportError(domain : String, key : String, arguments : java.NativeArray<Dynamic>, severity : java.StdTypes.Int16, exception : java.lang.Exception) : String;
+	@:overload @:public public function reportError(domain : String, key : String, arguments : java.NativeArray<Dynamic>, severity : java.StdTypes.Int16, exception : java.lang.Exception) : String;
 	
 	/**
 	* Reports an error at a specific location.
@@ -220,7 +220,7 @@ extern class XMLErrorReporter implements com.sun.org.apache.xerces.internal.xni.
 	* @see #SEVERITY_ERROR
 	* @see #SEVERITY_FATAL_ERROR
 	*/
-	@:overload public function reportError(location : com.sun.org.apache.xerces.internal.xni.XMLLocator, domain : String, key : String, arguments : java.NativeArray<Dynamic>, severity : java.StdTypes.Int16) : String;
+	@:overload @:public public function reportError(location : com.sun.org.apache.xerces.internal.xni.XMLLocator, domain : String, key : String, arguments : java.NativeArray<Dynamic>, severity : java.StdTypes.Int16) : String;
 	
 	/**
 	* Reports an error at a specific location.
@@ -238,7 +238,7 @@ extern class XMLErrorReporter implements com.sun.org.apache.xerces.internal.xni.
 	* @see #SEVERITY_ERROR
 	* @see #SEVERITY_FATAL_ERROR
 	*/
-	@:overload public function reportError(location : com.sun.org.apache.xerces.internal.xni.XMLLocator, domain : String, key : String, arguments : java.NativeArray<Dynamic>, severity : java.StdTypes.Int16, exception : java.lang.Exception) : String;
+	@:overload @:public public function reportError(location : com.sun.org.apache.xerces.internal.xni.XMLLocator, domain : String, key : String, arguments : java.NativeArray<Dynamic>, severity : java.StdTypes.Int16, exception : java.lang.Exception) : String;
 	
 	/**
 	* Resets the component. The component can query the component manager
@@ -254,14 +254,14 @@ extern class XMLErrorReporter implements com.sun.org.apache.xerces.internal.xni.
 	*                      SAXNotRecognizedException or a
 	*                      SAXNotSupportedException.
 	*/
-	@:overload public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/**
 	* Returns a list of feature identifiers that are recognized by
 	* this component. This method may return null if no features
 	* are recognized by this component.
 	*/
-	@:overload public function getRecognizedFeatures() : java.NativeArray<String>;
+	@:overload @:public public function getRecognizedFeatures() : java.NativeArray<String>;
 	
 	/**
 	* Sets the state of a feature. This method is called by the component
@@ -278,16 +278,16 @@ extern class XMLErrorReporter implements com.sun.org.apache.xerces.internal.xni.
 	* @throws SAXNotSupportedException The component should not throw
 	*                                  this exception.
 	*/
-	@:overload public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload @:public public function setFeature(featureId : String, state : Bool) : Void;
 	
-	@:overload public function getFeature(featureId : String) : Bool;
+	@:overload @:public public function getFeature(featureId : String) : Bool;
 	
 	/**
 	* Returns a list of property identifiers that are recognized by
 	* this component. This method may return null if no properties
 	* are recognized by this component.
 	*/
-	@:overload public function getRecognizedProperties() : java.NativeArray<String>;
+	@:overload @:public public function getRecognizedProperties() : java.NativeArray<String>;
 	
 	/**
 	* Sets the value of a property. This method is called by the component
@@ -304,7 +304,7 @@ extern class XMLErrorReporter implements com.sun.org.apache.xerces.internal.xni.
 	* @throws SAXNotSupportedException The component should not throw
 	*                                  this exception.
 	*/
-	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/**
 	* Returns the default state for a feature, or null if this
@@ -315,7 +315,7 @@ extern class XMLErrorReporter implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload public function getFeatureDefault(featureId : String) : Null<Bool>;
+	@:require(java2) @:overload @:public public function getFeatureDefault(featureId : String) : Null<Bool>;
 	
 	/**
 	* Returns the default state for a property, or null if this
@@ -326,18 +326,18 @@ extern class XMLErrorReporter implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload public function getPropertyDefault(propertyId : String) : Dynamic;
+	@:require(java2) @:overload @:public public function getPropertyDefault(propertyId : String) : Dynamic;
 	
 	/**
 	* Get the internal XMLErrrorHandler.
 	*/
-	@:overload public function getErrorHandler() : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
+	@:overload @:public public function getErrorHandler() : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
 	
 	/**
 	* Gets the internal XMLErrorHandler
 	* as SAX ErrorHandler.
 	*/
-	@:overload public function getSAXErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public public function getSAXErrorHandler() : org.xml.sax.ErrorHandler;
 	
 	
 }

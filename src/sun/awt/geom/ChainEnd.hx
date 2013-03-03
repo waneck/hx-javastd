@@ -25,23 +25,23 @@ package sun.awt.geom;
 */
 @:internal extern class ChainEnd
 {
-	@:overload public function new(first : sun.awt.geom.CurveLink, partner : sun.awt.geom.ChainEnd) : Void;
+	@:overload @:public public function new(first : sun.awt.geom.CurveLink, partner : sun.awt.geom.ChainEnd) : Void;
 	
-	@:overload public function getChain() : sun.awt.geom.CurveLink;
+	@:overload @:public public function getChain() : sun.awt.geom.CurveLink;
 	
-	@:overload public function setOtherEnd(partner : sun.awt.geom.ChainEnd) : Void;
+	@:overload @:public public function setOtherEnd(partner : sun.awt.geom.ChainEnd) : Void;
 	
-	@:overload public function getPartner() : sun.awt.geom.ChainEnd;
+	@:overload @:public public function getPartner() : sun.awt.geom.ChainEnd;
 	
 	/*
 	* Returns head of a complete chain to be added to subcurves
 	* or null if the links did not complete such a chain.
 	*/
-	@:overload public function linkTo(that : sun.awt.geom.ChainEnd) : sun.awt.geom.CurveLink;
+	@:overload @:public public function linkTo(that : sun.awt.geom.ChainEnd) : sun.awt.geom.CurveLink;
 	
-	@:overload public function addLink(newlink : sun.awt.geom.CurveLink) : Void;
+	@:overload @:public public function addLink(newlink : sun.awt.geom.CurveLink) : Void;
 	
-	@:overload public function getX() : Float;
+	@:overload @:public public function getX() : Float;
 	
 	
 }

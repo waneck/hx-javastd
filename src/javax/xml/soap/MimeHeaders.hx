@@ -29,7 +29,7 @@ extern class MimeHeaders
 	* Constructs a default <code>MimeHeaders</code> object initialized with
 	* an empty <code>Vector</code> object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns all of the values for the specified header as an array of
@@ -40,7 +40,7 @@ extern class MimeHeaders
 	*         specified header
 	* @see #setHeader
 	*/
-	@:overload public function getHeader(name : String) : java.NativeArray<String>;
+	@:overload @:public public function getHeader(name : String) : java.NativeArray<String>;
 	
 	/**
 	* Replaces the current value of the first header entry whose name matches
@@ -58,7 +58,7 @@ extern class MimeHeaders
 	* mime header name or the value being set
 	* @see #getHeader
 	*/
-	@:overload public function setHeader(name : String, value : String) : Void;
+	@:overload @:public public function setHeader(name : String, value : String) : Void;
 	
 	/**
 	* Adds a <code>MimeHeader</code> object with the specified name and value
@@ -74,7 +74,7 @@ extern class MimeHeaders
 	* @exception IllegalArgumentException if there was a problem in the
 	* mime header name or value being added
 	*/
-	@:overload public function addHeader(name : String, value : String) : Void;
+	@:overload @:public public function addHeader(name : String, value : String) : Void;
 	
 	/**
 	* Remove all <code>MimeHeader</code> objects whose name matches the
@@ -83,12 +83,12 @@ extern class MimeHeaders
 	* @param   name a <code>String</code> with the name of the header for
 	*          which to search
 	*/
-	@:overload public function removeHeader(name : String) : Void;
+	@:overload @:public public function removeHeader(name : String) : Void;
 	
 	/**
 	* Removes all the header entries from this <code>MimeHeaders</code> object.
 	*/
-	@:overload public function removeAllHeaders() : Void;
+	@:overload @:public public function removeAllHeaders() : Void;
 	
 	/**
 	* Returns all the <code>MimeHeader</code>s in this <code>MimeHeaders</code> object.
@@ -96,7 +96,7 @@ extern class MimeHeaders
 	* @return  an <code>Iterator</code> object over this <code>MimeHeaders</code>
 	*          object's list of <code>MimeHeader</code> objects
 	*/
-	@:overload public function getAllHeaders() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getAllHeaders() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns all the <code>MimeHeader</code> objects whose name matches
@@ -107,7 +107,7 @@ extern class MimeHeaders
 	* @return  an <code>Iterator</code> object over the <code>MimeHeader</code>
 	*          objects whose name matches one of the names in the given list
 	*/
-	@:overload public function getMatchingHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getMatchingHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns all of the <code>MimeHeader</code> objects whose name does not
@@ -118,17 +118,17 @@ extern class MimeHeaders
 	* @return  an <code>Iterator</code> object over the <code>MimeHeader</code>
 	*          objects whose name does not match one of the names in the given list
 	*/
-	@:overload public function getNonMatchingHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getNonMatchingHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
 	
 	
 }
 @:native('javax$xml$soap$MimeHeaders$MatchingIterator') @:internal extern class MimeHeaders_MatchingIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

@@ -36,7 +36,7 @@ extern class MethodFinder extends com.sun.beans.finder.AbstractFinder<java.lang.
 	* @throws NoSuchMethodException if method could not be found
 	*                               or some methods are found
 	*/
-	@:overload public static function findMethod(type : Class<Dynamic>, name : String, args : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Method;
+	@:overload @:public @:static public static function findMethod(type : Class<Dynamic>, name : String, args : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Method;
 	
 	/**
 	* Finds public non-static method
@@ -49,7 +49,7 @@ extern class MethodFinder extends com.sun.beans.finder.AbstractFinder<java.lang.
 	* @throws NoSuchMethodException if method could not be found
 	*                               or some methods are found
 	*/
-	@:overload public static function findInstanceMethod(type : Class<Dynamic>, name : String, args : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Method;
+	@:overload @:public @:static public static function findInstanceMethod(type : Class<Dynamic>, name : String, args : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Method;
 	
 	/**
 	* Finds public static method
@@ -62,7 +62,7 @@ extern class MethodFinder extends com.sun.beans.finder.AbstractFinder<java.lang.
 	* @throws NoSuchMethodException if method could not be found
 	*                               or some methods are found
 	*/
-	@:overload public static function findStaticMethod(type : Class<Dynamic>, name : String, args : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Method;
+	@:overload @:public @:static public static function findStaticMethod(type : Class<Dynamic>, name : String, args : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Method;
 	
 	/**
 	* Finds method that is accessible from public class or interface through class hierarchy.
@@ -72,7 +72,7 @@ extern class MethodFinder extends com.sun.beans.finder.AbstractFinder<java.lang.
 	* @throws NoSuchMethodException if method is not accessible or is not found
 	*                               in specified superclass or interface
 	*/
-	@:overload public static function findAccessibleMethod(method : java.lang.reflect.Method) : java.lang.reflect.Method;
+	@:overload @:public @:static public static function findAccessibleMethod(method : java.lang.reflect.Method) : java.lang.reflect.Method;
 	
 	/**
 	* Returns an array of {@code Class} objects
@@ -82,7 +82,7 @@ extern class MethodFinder extends com.sun.beans.finder.AbstractFinder<java.lang.
 	* @param method  the object that represents method
 	* @return the parameter types of the method
 	*/
-	@:overload private function getParameters(method : java.lang.reflect.Method) : java.NativeArray<Class<Dynamic>>;
+	@:overload @:protected private function getParameters(method : java.lang.reflect.Method) : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Returns {@code true} if and only if the method
@@ -93,7 +93,7 @@ extern class MethodFinder extends com.sun.beans.finder.AbstractFinder<java.lang.
 	*         to take a variable number of arguments;
 	*         {@code false} otherwise
 	*/
-	@:overload private function isVarArgs(method : java.lang.reflect.Method) : Bool;
+	@:overload @:protected private function isVarArgs(method : java.lang.reflect.Method) : Bool;
 	
 	/**
 	* Checks validness of the method.
@@ -104,7 +104,7 @@ extern class MethodFinder extends com.sun.beans.finder.AbstractFinder<java.lang.
 	* @return {@code true} if the method is valid,
 	*         {@code false} otherwise
 	*/
-	@:overload private function isValid(method : java.lang.reflect.Method) : Bool;
+	@:overload @:protected private function isValid(method : java.lang.reflect.Method) : Bool;
 	
 	
 }

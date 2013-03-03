@@ -24,27 +24,27 @@ package com.sun.org.apache.xml.internal.res;
 extern class XMLMessages
 {
 	/** The local object to use.  */
-	private var fLocale : java.util.Locale;
+	@:protected private var fLocale : java.util.Locale;
 	
 	/** String to use if a bad message code is used. */
-	private static var BAD_CODE(default, null) : String;
+	@:protected @:static @:final private static var BAD_CODE(default, null) : String;
 	
 	/** String to use if the message format operation failed.  */
-	private static var FORMAT_FAILED(default, null) : String;
+	@:protected @:static @:final private static var FORMAT_FAILED(default, null) : String;
 	
 	/**
 	* Set the Locale object to use.
 	*
 	* @param locale non-null reference to Locale object.
 	*/
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
 	/**
 	* Get the Locale object that is being used.
 	*
 	* @return non-null reference to Locale object.
 	*/
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	/**
 	* Creates a message from the specified key and replacement
@@ -56,7 +56,7 @@ extern class XMLMessages
 	*
 	* @return The formatted message string.
 	*/
-	@:overload @:final public static function createXMLMessage(msgKey : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static @:final public static function createXMLMessage(msgKey : String, args : java.NativeArray<Dynamic>) : String;
 	
 	/**
 	* Creates a message from the specified key and replacement
@@ -69,7 +69,7 @@ extern class XMLMessages
 	*
 	* @return The formatted message string.
 	*/
-	@:overload @:final public static function createMsg(fResourceBundle : java.util.ListResourceBundle, msgKey : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static @:final public static function createMsg(fResourceBundle : java.util.ListResourceBundle, msgKey : String, args : java.NativeArray<Dynamic>) : String;
 	
 	/**
 	* Return a named ResourceBundle for a particular locale.  This method mimics the behavior
@@ -79,7 +79,7 @@ extern class XMLMessages
 	* @return the ResourceBundle
 	* @throws MissingResourceException
 	*/
-	@:overload public static function loadResourceBundle(className : String) : java.util.ListResourceBundle;
+	@:overload @:public @:static public static function loadResourceBundle(className : String) : java.util.ListResourceBundle;
 	
 	/**
 	* Return the resource file suffic for the indicated locale
@@ -89,7 +89,7 @@ extern class XMLMessages
 	* @param locale the locale
 	* @return an String suffix which can be appended to a resource name
 	*/
-	@:overload private static function getResourceSuffix(locale : java.util.Locale) : String;
+	@:overload @:protected @:static private static function getResourceSuffix(locale : java.util.Locale) : String;
 	
 	
 }

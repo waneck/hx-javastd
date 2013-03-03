@@ -31,21 +31,21 @@ package com.sun.corba.se.impl.corba;
 */
 extern class NVListImpl extends org.omg.CORBA.NVList
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, size : Int) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, size : Int) : Void;
 	
-	@:overload override public function count() : Int;
+	@:overload @:public override public function count() : Int;
 	
-	@:overload override public function add(flags : Int) : org.omg.CORBA.NamedValue;
+	@:overload @:public override public function add(flags : Int) : org.omg.CORBA.NamedValue;
 	
-	@:overload override public function add_item(itemName : String, flags : Int) : org.omg.CORBA.NamedValue;
+	@:overload @:public override public function add_item(itemName : String, flags : Int) : org.omg.CORBA.NamedValue;
 	
-	@:overload override public function add_value(itemName : String, val : org.omg.CORBA.Any, flags : Int) : org.omg.CORBA.NamedValue;
+	@:overload @:public override public function add_value(itemName : String, val : org.omg.CORBA.Any, flags : Int) : org.omg.CORBA.NamedValue;
 	
-	@:overload override public function item(index : Int) : org.omg.CORBA.NamedValue;
+	@:overload @:public override public function item(index : Int) : org.omg.CORBA.NamedValue;
 	
-	@:overload override public function remove(index : Int) : Void;
+	@:overload @:public override public function remove(index : Int) : Void;
 	
 	
 }

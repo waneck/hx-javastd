@@ -55,33 +55,33 @@ package javax.sound.sampled;
 	* @throws IllegalArgumentException if <code>line</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function new(line : javax.sound.sampled.Line, type : javax.sound.sampled.LineEvent.LineEvent_Type, position : haxe.Int64) : Void;
+	@:overload @:public public function new(line : javax.sound.sampled.Line, type : javax.sound.sampled.LineEvent.LineEvent_Type, position : haxe.Int64) : Void;
 	
 	/**
 	* Obtains the audio line that is the source of this event.
 	* @return the line responsible for this event
 	*/
-	@:overload @:final public function getLine() : javax.sound.sampled.Line;
+	@:overload @:public @:final public function getLine() : javax.sound.sampled.Line;
 	
 	/**
 	* Obtains the event's type.
 	* @return this event's type ({@link Type#OPEN}, {@link Type#CLOSE},
 	* {@link Type#START}, or {@link Type#STOP})
 	*/
-	@:overload @:final public function getType() : javax.sound.sampled.LineEvent.LineEvent_Type;
+	@:overload @:public @:final public function getType() : javax.sound.sampled.LineEvent.LineEvent_Type;
 	
 	/*
 	* $$kk: 04.20.99: note to myself: should make sure our implementation is consistent with this.
 	* which is a reasonable definition....
 	*/
-	@:overload @:final public function getFramePosition() : haxe.Int64;
+	@:overload @:public @:final public function getFramePosition() : haxe.Int64;
 	
 	/**
 	* Obtains a string representation of the event.  The contents of the string may vary
 	* between implementations of Java Sound.
 	* @return a string describing the event.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -97,7 +97,7 @@ package javax.sound.sampled;
 	* Constructs a new event type.
 	* @param name name of the type
 	*/
-	@:overload private function new(name : String) : Void;
+	@:overload @:protected private function new(name : String) : Void;
 	
 	/**
 	* Indicates whether the specified object is equal to this event type,
@@ -106,17 +106,17 @@ package javax.sound.sampled;
 	* @return <code>true</code> if this event type is the same as
 	* <code>obj</code>; <code>false</code> otherwise
 	*/
-	@:overload @:final public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Finalizes the hashcode method.
 	*/
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
 	/**
 	* Returns the type name as the string representation.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* A type of event that is sent when a line opens, reserving system
@@ -124,7 +124,7 @@ package javax.sound.sampled;
 	* @see #CLOSE
 	* @see Line#open
 	*/
-	public static var OPEN(default, null) : javax.sound.sampled.LineEvent.LineEvent_Type;
+	@:public @:static @:final public static var OPEN(default, null) : javax.sound.sampled.LineEvent.LineEvent_Type;
 	
 	/**
 	* A type of event that is sent when a line closes, freeing the system
@@ -132,7 +132,7 @@ package javax.sound.sampled;
 	* @see #OPEN
 	* @see Line#close
 	*/
-	public static var CLOSE(default, null) : javax.sound.sampled.LineEvent.LineEvent_Type;
+	@:public @:static @:final public static var CLOSE(default, null) : javax.sound.sampled.LineEvent.LineEvent_Type;
 	
 	/**
 	* A type of event that is sent when a line begins to engage in active
@@ -141,7 +141,7 @@ package javax.sound.sampled;
 	* @see #STOP
 	* @see DataLine#start
 	*/
-	public static var START(default, null) : javax.sound.sampled.LineEvent.LineEvent_Type;
+	@:public @:static @:final public static var START(default, null) : javax.sound.sampled.LineEvent.LineEvent_Type;
 	
 	/**
 	* A type of event that is sent when a line ceases active input or output
@@ -150,7 +150,7 @@ package javax.sound.sampled;
 	* @see #START
 	* @see DataLine#stop
 	*/
-	public static var STOP(default, null) : javax.sound.sampled.LineEvent.LineEvent_Type;
+	@:public @:static @:final public static var STOP(default, null) : javax.sound.sampled.LineEvent.LineEvent_Type;
 	
 	
 }

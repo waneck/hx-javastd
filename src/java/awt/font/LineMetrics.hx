@@ -46,7 +46,7 @@ extern class LineMetrics
 	* @return the number of characters (<code>char</code> values) in the text with which
 	*         this <code>LineMetrics</code> was created.
 	*/
-	@:overload @:abstract public function getNumChars() : Int;
+	@:overload @:public @:abstract public function getNumChars() : Int;
 	
 	/**
 	* Returns the ascent of the text.  The ascent
@@ -56,7 +56,7 @@ extern class LineMetrics
 	* can extend above the ascender line.
 	* @return the ascent of the text.
 	*/
-	@:overload @:abstract public function getAscent() : Single;
+	@:overload @:public @:abstract public function getAscent() : Single;
 	
 	/**
 	* Returns the descent of the text.  The descent
@@ -67,7 +67,7 @@ extern class LineMetrics
 	* line.
 	* @return the descent of the text.
 	*/
-	@:overload @:abstract public function getDescent() : Single;
+	@:overload @:public @:abstract public function getDescent() : Single;
 	
 	/**
 	* Returns the leading of the text. The
@@ -76,7 +76,7 @@ extern class LineMetrics
 	* top of the next line.
 	* @return the leading of the text.
 	*/
-	@:overload @:abstract public function getLeading() : Single;
+	@:overload @:public @:abstract public function getLeading() : Single;
 	
 	/**
 	* Returns the height of the text.  The
@@ -84,7 +84,7 @@ extern class LineMetrics
 	* descent and the leading.
 	* @return the height of the text.
 	*/
-	@:overload @:abstract public function getHeight() : Single;
+	@:overload @:public @:abstract public function getHeight() : Single;
 	
 	/**
 	* Returns the baseline index of the text.
@@ -94,7 +94,7 @@ extern class LineMetrics
 	* {@link java.awt.Font#HANGING_BASELINE HANGING_BASELINE}.
 	* @return the baseline of the text.
 	*/
-	@:overload @:abstract public function getBaselineIndex() : Int;
+	@:overload @:public @:abstract public function getBaselineIndex() : Int;
 	
 	/**
 	* Returns the baseline offsets of the text,
@@ -108,33 +108,33 @@ extern class LineMetrics
 	* is usually positive.
 	* @return the baseline offsets of the text.
 	*/
-	@:overload @:abstract public function getBaselineOffsets() : java.NativeArray<Single>;
+	@:overload @:public @:abstract public function getBaselineOffsets() : java.NativeArray<Single>;
 	
 	/**
 	* Returns the position of the strike-through line
 	* relative to the baseline.
 	* @return the position of the strike-through line.
 	*/
-	@:overload @:abstract public function getStrikethroughOffset() : Single;
+	@:overload @:public @:abstract public function getStrikethroughOffset() : Single;
 	
 	/**
 	* Returns the thickness of the strike-through line.
 	* @return the thickness of the strike-through line.
 	*/
-	@:overload @:abstract public function getStrikethroughThickness() : Single;
+	@:overload @:public @:abstract public function getStrikethroughThickness() : Single;
 	
 	/**
 	* Returns the position of the underline relative to
 	* the baseline.
 	* @return the position of the underline.
 	*/
-	@:overload @:abstract public function getUnderlineOffset() : Single;
+	@:overload @:public @:abstract public function getUnderlineOffset() : Single;
 	
 	/**
 	* Returns the thickness of the underline.
 	* @return the thickness of the underline.
 	*/
-	@:overload @:abstract public function getUnderlineThickness() : Single;
+	@:overload @:public @:abstract public function getUnderlineThickness() : Single;
 	
 	
 }

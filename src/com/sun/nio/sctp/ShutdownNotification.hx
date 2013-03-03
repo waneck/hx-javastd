@@ -36,14 +36,14 @@ package com.sun.nio.sctp;
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the association that this notification is applicable to.
 	*
 	* @return  The association that received the shutdown
 	*/
-	@:overload @:abstract public function association() : com.sun.nio.sctp.Association;
+	@:overload @:public @:abstract public function association() : com.sun.nio.sctp.Association;
 	
 	
 }

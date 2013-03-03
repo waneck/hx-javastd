@@ -49,31 +49,31 @@ extern class Kernel implements java.lang.Cloneable
 	*         is less than the product of <code>width</code> and
 	*         <code>height</code>
 	*/
-	@:overload public function new(width : Int, height : Int, data : java.NativeArray<Single>) : Void;
+	@:overload @:public public function new(width : Int, height : Int, data : java.NativeArray<Single>) : Void;
 	
 	/**
 	* Returns the X origin of this <code>Kernel</code>.
 	* @return the X origin.
 	*/
-	@:overload @:final public function getXOrigin() : Int;
+	@:overload @:final @:public public function getXOrigin() : Int;
 	
 	/**
 	* Returns the Y origin of this <code>Kernel</code>.
 	* @return the Y origin.
 	*/
-	@:overload @:final public function getYOrigin() : Int;
+	@:overload @:final @:public public function getYOrigin() : Int;
 	
 	/**
 	* Returns the width of this <code>Kernel</code>.
 	* @return the width of this <code>Kernel</code>.
 	*/
-	@:overload @:final public function getWidth() : Int;
+	@:overload @:final @:public public function getWidth() : Int;
 	
 	/**
 	* Returns the height of this <code>Kernel</code>.
 	* @return the height of this <code>Kernel</code>.
 	*/
-	@:overload @:final public function getHeight() : Int;
+	@:overload @:final @:public public function getHeight() : Int;
 	
 	/**
 	* Returns the kernel data in row major order.
@@ -87,13 +87,13 @@ extern class Kernel implements java.lang.Cloneable
 	* @throws IllegalArgumentException if <code>data</code> is less
 	*         than the size of this <code>Kernel</code>
 	*/
-	@:overload @:final public function getKernelData(data : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:final @:public public function getKernelData(data : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Clones this object.
 	* @return a clone of this object.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

@@ -25,13 +25,13 @@ package sun.management;
 */
 @:internal extern class HotspotThread implements sun.management.HotspotThreadMBean
 {
-	@:overload @:native public function getInternalThreadCount() : Int;
+	@:overload @:public @:native public function getInternalThreadCount() : Int;
 	
-	@:overload public function getInternalThreadCpuTimes() : java.util.Map<String, Null<haxe.Int64>>;
+	@:overload @:public public function getInternalThreadCpuTimes() : java.util.Map<String, Null<haxe.Int64>>;
 	
-	@:overload @:native public function getInternalThreadTimes0(names : java.NativeArray<String>, times : java.NativeArray<haxe.Int64>) : Int;
+	@:overload @:public @:native public function getInternalThreadTimes0(names : java.NativeArray<String>, times : java.NativeArray<haxe.Int64>) : Int;
 	
-	@:overload public function getInternalThreadingCounters() : java.util.List<sun.management.counter.Counter>;
+	@:overload @:public public function getInternalThreadingCounters() : java.util.List<sun.management.counter.Counter>;
 	
 	
 }

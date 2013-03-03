@@ -36,78 +36,78 @@ extern class AppletViewerPanel extends sun.applet.AppletPanel
 	/**
 	* The document url.
 	*/
-	private var documentURL : java.net.URL;
+	@:protected private var documentURL : java.net.URL;
 	
 	/**
 	* The base url.
 	*/
-	private var baseURL : java.net.URL;
+	@:protected private var baseURL : java.net.URL;
 	
 	/**
 	* The attributes of the applet.
 	*/
-	private var atts : java.util.Hashtable<String, String>;
+	@:protected private var atts : java.util.Hashtable<String, String>;
 	
 	/**
 	* Construct an applet viewer and start the applet.
 	*/
-	@:overload private function new(documentURL : java.net.URL, atts : java.util.Hashtable<String, String>) : Void;
+	@:overload @:protected private function new(documentURL : java.net.URL, atts : java.util.Hashtable<String, String>) : Void;
 	
 	/**
 	* Get an applet parameter.
 	*/
-	@:overload override public function getParameter(name : String) : String;
+	@:overload @:public override public function getParameter(name : String) : String;
 	
 	/**
 	* Get the document url.
 	*/
-	@:overload override public function getDocumentBase() : java.net.URL;
+	@:overload @:public override public function getDocumentBase() : java.net.URL;
 	
 	/**
 	* Get the base url.
 	*/
-	@:overload override public function getCodeBase() : java.net.URL;
+	@:overload @:public override public function getCodeBase() : java.net.URL;
 	
 	/**
 	* Get the width.
 	*/
-	@:overload override public function getWidth() : Int;
+	@:overload @:public override public function getWidth() : Int;
 	
 	/**
 	* Get the height.
 	*/
-	@:overload override public function getHeight() : Int;
+	@:overload @:public override public function getHeight() : Int;
 	
 	/**
 	* Get initial_focus
 	*/
-	@:overload override public function hasInitialFocus() : Bool;
+	@:overload @:public override public function hasInitialFocus() : Bool;
 	
 	/**
 	* Get the code parameter
 	*/
-	@:overload override public function getCode() : String;
+	@:overload @:public override public function getCode() : String;
 	
 	/**
 	* Return the list of jar files if specified.
 	* Otherwise return null.
 	*/
-	@:overload override public function getJarFiles() : String;
+	@:overload @:public override public function getJarFiles() : String;
 	
 	/**
 	* Return the value of the object param
 	*/
-	@:overload override public function getSerializedObject() : String;
+	@:overload @:public override public function getSerializedObject() : String;
 	
 	/**
 	* Get the applet context. For now this is
 	* also implemented by the AppletPanel class.
 	*/
-	@:overload override public function getAppletContext() : java.applet.AppletContext;
+	@:overload @:public override public function getAppletContext() : java.applet.AppletContext;
 	
-	@:overload private static function debug(s : String) : Void;
+	@:overload @:protected @:static private static function debug(s : String) : Void;
 	
-	@:overload private static function debug(s : String, t : java.lang.Throwable) : Void;
+	@:overload @:protected @:static private static function debug(s : String, t : java.lang.Throwable) : Void;
 	
 	
 }

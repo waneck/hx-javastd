@@ -64,7 +64,7 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class LLOAD extends com.sun.org.apache.bcel.internal.generic.LoadInstruction
 {
-	@:overload public function new(n : Int) : Void;
+	@:overload @:public public function new(n : Int) : Void;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -74,7 +74,7 @@ extern class LLOAD extends com.sun.org.apache.bcel.internal.generic.LoadInstruct
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

@@ -25,20 +25,20 @@ package com.sun.xml.internal.ws.model;
 */
 extern class ParameterImpl implements com.sun.xml.internal.ws.api.model.Parameter
 {
-	@:overload public function new(parent : com.sun.xml.internal.ws.model.JavaMethodImpl, type : com.sun.xml.internal.bind.api.TypeReference, mode : Mode, index : Int) : Void;
+	@:overload @:public public function new(parent : com.sun.xml.internal.ws.model.JavaMethodImpl, type : com.sun.xml.internal.bind.api.TypeReference, mode : Mode, index : Int) : Void;
 	
-	@:overload public function getOwner() : com.sun.xml.internal.ws.model.AbstractSEIModelImpl;
+	@:overload @:public public function getOwner() : com.sun.xml.internal.ws.model.AbstractSEIModelImpl;
 	
-	@:overload public function getParent() : com.sun.xml.internal.ws.api.model.JavaMethod;
+	@:overload @:public public function getParent() : com.sun.xml.internal.ws.api.model.JavaMethod;
 	
 	/**
 	* @return Returns the name.
 	*/
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function getBridge() : com.sun.xml.internal.bind.api.Bridge<Dynamic>;
+	@:overload @:public public function getBridge() : com.sun.xml.internal.bind.api.Bridge<Dynamic>;
 	
-	@:overload private function getBridge(typeRef : com.sun.xml.internal.bind.api.TypeReference) : com.sun.xml.internal.bind.api.Bridge<Dynamic>;
+	@:overload @:protected private function getBridge(typeRef : com.sun.xml.internal.bind.api.TypeReference) : com.sun.xml.internal.bind.api.Bridge<Dynamic>;
 	
 	/**
 	* TODO: once the model gets JAXBContext, shouldn't {@link Bridge}s
@@ -46,42 +46,42 @@ extern class ParameterImpl implements com.sun.xml.internal.ws.api.model.Paramete
 	*
 	* @return Returns the TypeReference associated with this Parameter
 	*/
-	@:overload public function getTypeReference() : com.sun.xml.internal.bind.api.TypeReference;
+	@:overload @:public public function getTypeReference() : com.sun.xml.internal.bind.api.TypeReference;
 	
-	@:overload public function getMode() : Mode;
+	@:overload @:public public function getMode() : Mode;
 	
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* @return true if <tt>this instanceof {@link WrapperParameter}</tt>.
 	*/
-	@:overload public function isWrapperStyle() : Bool;
+	@:overload @:public public function isWrapperStyle() : Bool;
 	
-	@:overload public function isReturnValue() : Bool;
+	@:overload @:public public function isReturnValue() : Bool;
 	
 	/**
 	* @return the Binding for this Parameter
 	*/
-	@:overload public function getBinding() : com.sun.xml.internal.ws.api.model.ParameterBinding;
+	@:overload @:public public function getBinding() : com.sun.xml.internal.ws.api.model.ParameterBinding;
 	
 	/**
 	* @param binding
 	*/
-	@:overload public function setBinding(binding : com.sun.xml.internal.ws.api.model.ParameterBinding) : Void;
+	@:overload @:public public function setBinding(binding : com.sun.xml.internal.ws.api.model.ParameterBinding) : Void;
 	
-	@:overload public function setInBinding(binding : com.sun.xml.internal.ws.api.model.ParameterBinding) : Void;
+	@:overload @:public public function setInBinding(binding : com.sun.xml.internal.ws.api.model.ParameterBinding) : Void;
 	
-	@:overload public function setOutBinding(binding : com.sun.xml.internal.ws.api.model.ParameterBinding) : Void;
+	@:overload @:public public function setOutBinding(binding : com.sun.xml.internal.ws.api.model.ParameterBinding) : Void;
 	
-	@:overload public function getInBinding() : com.sun.xml.internal.ws.api.model.ParameterBinding;
+	@:overload @:public public function getInBinding() : com.sun.xml.internal.ws.api.model.ParameterBinding;
 	
-	@:overload public function getOutBinding() : com.sun.xml.internal.ws.api.model.ParameterBinding;
+	@:overload @:public public function getOutBinding() : com.sun.xml.internal.ws.api.model.ParameterBinding;
 	
-	@:overload public function isIN() : Bool;
+	@:overload @:public public function isIN() : Bool;
 	
-	@:overload public function isOUT() : Bool;
+	@:overload @:public public function isOUT() : Bool;
 	
-	@:overload public function isINOUT() : Bool;
+	@:overload @:public public function isINOUT() : Bool;
 	
 	/**
 	* If true, this parameter maps to the return value of a method invocation.
@@ -91,7 +91,7 @@ extern class ParameterImpl implements com.sun.xml.internal.ws.api.model.Paramete
 	* at most one such {@link ParameterImpl}. Note that there coule be none,
 	* in which case the method returns <tt>void</tt>.
 	*/
-	@:overload public function isResponse() : Bool;
+	@:overload @:public public function isResponse() : Bool;
 	
 	/**
 	* Gets the holder value if applicable. To be called for inbound client side
@@ -100,11 +100,11 @@ extern class ParameterImpl implements com.sun.xml.internal.ws.api.model.Paramete
 	* @param obj
 	* @return the holder value if applicable.
 	*/
-	@:overload public function getHolderValue(obj : Dynamic) : Dynamic;
+	@:overload @:public public function getHolderValue(obj : Dynamic) : Dynamic;
 	
-	@:overload public function getPartName() : String;
+	@:overload @:public public function getPartName() : String;
 	
-	@:overload public function setPartName(partName : String) : Void;
+	@:overload @:public public function setPartName(partName : String) : Void;
 	
 	
 }

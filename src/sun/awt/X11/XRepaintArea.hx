@@ -29,17 +29,17 @@ package sun.awt.X11;
 	* Constructs a new <code>XRepaintArea</code>
 	* @since   1.3
 	*/
-	@:require(java3) @:overload public function new() : Void;
+	@:require(java3) @:overload @:public public function new() : Void;
 	
 	/**
 	* Calls <code>Component.update(Graphics)</code> with given Graphics.
 	*/
-	@:overload override private function updateComponent(comp : java.awt.Component, g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function updateComponent(comp : java.awt.Component, g : java.awt.Graphics) : Void;
 	
 	/**
 	* Calls <code>Component.paint(Graphics)</code> with given Graphics.
 	*/
-	@:overload override private function paintComponent(comp : java.awt.Component, g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintComponent(comp : java.awt.Component, g : java.awt.Graphics) : Void;
 	
 	
 }

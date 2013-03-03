@@ -29,7 +29,7 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* The printer has created the Print Job, but the printer has not finished
 	* accessing or accepting all the print data yet.
 	*/
-	public static var JOB_INCOMING(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var JOB_INCOMING(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The printer has created the Print Job, but the printer is expecting
@@ -40,7 +40,7 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* has received all data, the printer removes the JOB_DATA_INSUFFICIENT
 	* and JOB_INCOMING reasons at the same time.
 	*/
-	public static var JOB_DATA_INSUFFICIENT(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var JOB_DATA_INSUFFICIENT(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The Printer could not access one or more documents passed by reference
@@ -55,7 +55,7 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* the printer supports doc flavors with URL print data representation
 	* objects.
 	*/
-	public static var DOCUMENT_ACCESS_ERROR(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var DOCUMENT_ACCESS_ERROR(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job was not completely submitted for some unforeseen reason.
@@ -65,12 +65,12 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* was entirely transferred to the printer, (3) the client crashed before
 	* the job was fully submitted.
 	*/
-	public static var SUBMISSION_INTERRUPTED(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var SUBMISSION_INTERRUPTED(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The printer is transmitting the job to the output device.
 	*/
-	public static var JOB_OUTGOING(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var JOB_OUTGOING(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The value of the job's {@link JobHoldUntil JobHoldUntil} attribute was
@@ -80,7 +80,7 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* no other reasons to hold the job. This value should be supported if the
 	* {@link JobHoldUntil JobHoldUntil} job template attribute is supported.
 	*/
-	public static var JOB_HOLD_UNTIL_SPECIFIED(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var JOB_HOLD_UNTIL_SPECIFIED(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* At least one of the resources needed by the job, such as media, fonts,
@@ -92,39 +92,39 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* be moved to the PENDING_HELD state, depending on implementation and/or
 	* job scheduling policy.
 	*/
-	public static var RESOURCES_ARE_NOT_READY(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var RESOURCES_ARE_NOT_READY(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The value of the printer's {@link PrinterStateReasons
 	* PrinterStateReasons} attribute contains a {@link PrinterStateReason
 	* PrinterStateReason} value of STOPPED_PARTLY.
 	*/
-	public static var PRINTER_STOPPED_PARTLY(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var PRINTER_STOPPED_PARTLY(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The value of the printer's {@link PrinterState PrinterState} attribute
 	* ia STOPPED.
 	*/
-	public static var PRINTER_STOPPED(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var PRINTER_STOPPED(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job is in the PROCESSING state, but more specifically, the printer
 	* ia interpreting the document data.
 	*/
-	public static var JOB_INTERPRETING(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var JOB_INTERPRETING(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job is in the PROCESSING state, but more specifically, the printer
 	* has queued the document data.
 	*/
-	public static var JOB_QUEUED(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var JOB_QUEUED(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job is in the PROCESSING state, but more specifically, the printer
 	* is interpreting document data and producing another electronic
 	* representation.
 	*/
-	public static var JOB_TRANSFORMING(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var JOB_TRANSFORMING(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job is in the PENDING_HELD, PENDING, or PROCESSING state, but more
@@ -137,7 +137,7 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* implementation. All implementations put the job into (or back into) the
 	* PROCESSING state when marking does begin.
 	*/
-	public static var JOB_QUEUED_FOR_MARKER(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var JOB_QUEUED_FOR_MARKER(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The output device is marking media. This value is useful for printers
@@ -147,7 +147,7 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* remains in the PROCESSING state, but the marking has not yet stopped so
 	* that impression or sheet counts are still increasing for the job.
 	*/
-	public static var JOB_PRINTING(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var JOB_PRINTING(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job was canceled by the owner of the job, i.e., by a user whose
@@ -156,7 +156,7 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* a member of the job owner's security group. This value should be
 	* supported.
 	*/
-	public static var JOB_CANCELED_BY_USER(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var JOB_CANCELED_BY_USER(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job was canceled by the operator, i.e., by a user who has been
@@ -168,14 +168,14 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* supported if the implementation permits canceling by someone other than
 	* the owner of the job.
 	*/
-	public static var JOB_CANCELED_BY_OPERATOR(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var JOB_CANCELED_BY_OPERATOR(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job was canceled by an unidentified local user, i.e., a user at a
 	* console at the device. This value should be supported if the
 	* implementation supports canceling jobs at the console.
 	*/
-	public static var JOB_CANCELED_AT_DEVICE(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var JOB_CANCELED_AT_DEVICE(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job was aborted by the system. Either the job (1) is in the process
@@ -184,7 +184,7 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* PENDING_HELD state, so that a user or operator can manually try the job
 	* again. This value should be supported.
 	*/
-	public static var ABORTED_BY_SYSTEM(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var ABORTED_BY_SYSTEM(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job was aborted by the system because the printer determined while
@@ -193,7 +193,7 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* supported, since {@link Compression Compression} is a required doc
 	* description attribute.
 	*/
-	public static var UNSUPPORTED_COMPRESSION(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var UNSUPPORTED_COMPRESSION(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job was aborted by the system because the printer encountered an
@@ -201,7 +201,7 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* this reason, the document data has already passed any tests that would
 	* have led to the UNSUPPORTED_COMPRESSION job state reason.
 	*/
-	public static var COMPRESSION_ERROR(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var COMPRESSION_ERROR(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job was aborted by the system because the document data's document
@@ -213,7 +213,7 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* specified explicitly). This value must be supported, since a doc flavor
 	* is required to be specified for each doc.
 	*/
-	public static var UNSUPPORTED_DOCUMENT_FORMAT(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var UNSUPPORTED_DOCUMENT_FORMAT(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job was aborted by the system because the printer encountered an
@@ -221,7 +221,7 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* reason, the document data has already passed any tests that would have
 	* led to the UNSUPPORTED_DOCUMENT_FORMAT job state reason.
 	*/
-	public static var DOCUMENT_FORMAT_ERROR(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var DOCUMENT_FORMAT_ERROR(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The requester has canceled the job or the printer has aborted the job,
@@ -236,31 +236,31 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* incrementing, the printer moves the job from the PROCESSING state to the
 	* CANCELED or ABORTED job states.
 	*/
-	public static var PROCESSING_TO_STOP_POINT(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var PROCESSING_TO_STOP_POINT(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The printer is off-line and accepting no jobs. All PENDING jobs are put
 	* into the PENDING_HELD state. This situation could be true if the
 	* service's or document transform's input is impaired or broken.
 	*/
-	public static var SERVICE_OFF_LINE(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var SERVICE_OFF_LINE(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job completed successfully. This value should be supported.
 	*/
-	public static var JOB_COMPLETED_SUCCESSFULLY(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var JOB_COMPLETED_SUCCESSFULLY(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job completed with warnings. This value should be supported if the
 	* implementation detects warnings.
 	*/
-	public static var JOB_COMPLETED_WITH_WARNINGS(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var JOB_COMPLETED_WITH_WARNINGS(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job completed with errors (and possibly warnings too). This value
 	* should be supported if the implementation detects errors.
 	*/
-	public static var JOB_COMPLETED_WITH_ERRORS(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var JOB_COMPLETED_WITH_ERRORS(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* This job is retained and is currently able to be restarted. If
@@ -270,7 +270,7 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* supported. <I>[The capability for restarting jobs is not in the Java
 	* Print Service API at present.]</I>
 	*/
-	public static var JOB_RESTARTABLE(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var JOB_RESTARTABLE(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* The job has been forwarded to a device or print system that is unable to
@@ -280,7 +280,7 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* printer has no additional information about the job and never will have
 	* any better information.
 	*/
-	public static var QUEUED_IN_DEVICE(default, null) : javax.print.attribute.standard.JobStateReason;
+	@:public @:static @:final public static var QUEUED_IN_DEVICE(default, null) : javax.print.attribute.standard.JobStateReason;
 	
 	/**
 	* Construct a new job state reason enumeration value with the given
@@ -288,17 +288,17 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class JobStateReason.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class JobStateReason.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -310,7 +310,7 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -321,7 +321,7 @@ extern class JobStateReason extends javax.print.attribute.EnumSyntax implements 
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

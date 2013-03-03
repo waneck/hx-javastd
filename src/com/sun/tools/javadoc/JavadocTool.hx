@@ -29,19 +29,19 @@ extern class JavadocTool extends com.sun.tools.javac.main.JavaCompiler
 	* Construct a new JavaCompiler processor, using appropriately
 	* extended phases of the underlying compiler.
 	*/
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
 	/**
 	* For javadoc, the parser needs to keep comments. Overrides method from JavaCompiler.
 	*/
-	@:overload private function keepComments() : Bool;
+	@:overload @:protected override private function keepComments() : Bool;
 	
 	/**
 	*  Construct a new javadoc tool.
 	*/
-	@:overload public static function make0(context : com.sun.tools.javac.util.Context) : com.sun.tools.javadoc.JavadocTool;
+	@:overload @:public @:static public static function make0(context : com.sun.tools.javac.util.Context) : com.sun.tools.javadoc.JavadocTool;
 	
-	@:overload public function getRootDocImpl(doclocale : String, encoding : String, filter : com.sun.tools.javadoc.ModifierFilter, javaNames : com.sun.tools.javac.util.List<String>, options : com.sun.tools.javac.util.List<java.NativeArray<String>>, breakiterator : Bool, subPackages : com.sun.tools.javac.util.List<String>, excludedPackages : com.sun.tools.javac.util.List<String>, docClasses : Bool, legacyDoclet : Bool, quiet : Bool) : com.sun.tools.javadoc.RootDocImpl;
+	@:overload @:public public function getRootDocImpl(doclocale : String, encoding : String, filter : com.sun.tools.javadoc.ModifierFilter, javaNames : com.sun.tools.javac.util.List<String>, options : com.sun.tools.javac.util.List<java.NativeArray<String>>, breakiterator : Bool, subPackages : com.sun.tools.javac.util.List<String>, excludedPackages : com.sun.tools.javac.util.List<String>, docClasses : Bool, legacyDoclet : Bool, quiet : Bool) : com.sun.tools.javadoc.RootDocImpl;
 	
 	/**
 	* Return true if given file name is a valid class name
@@ -50,7 +50,7 @@ extern class JavadocTool extends com.sun.tools.javac.main.JavaCompiler
 	* @return true if given class name is a valid class name
 	* and false otherwise.
 	*/
-	@:overload public static function isValidClassName(s : String) : Bool;
+	@:overload @:public @:static public static function isValidClassName(s : String) : Bool;
 	
 	
 }

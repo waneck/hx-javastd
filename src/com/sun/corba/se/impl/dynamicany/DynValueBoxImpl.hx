@@ -25,23 +25,23 @@ package com.sun.corba.se.impl.dynamicany;
 */
 extern class DynValueBoxImpl extends com.sun.corba.se.impl.dynamicany.DynValueCommonImpl implements org.omg.DynamicAny.DynValueBox
 {
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, any : org.omg.CORBA.Any, copyValue : Bool) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, any : org.omg.CORBA.Any, copyValue : Bool) : Void;
 	
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload public function get_boxed_value() : org.omg.CORBA.Any;
+	@:overload @:public public function get_boxed_value() : org.omg.CORBA.Any;
 	
-	@:overload public function set_boxed_value(boxed : org.omg.CORBA.Any) : Void;
+	@:overload @:public public function set_boxed_value(boxed : org.omg.CORBA.Any) : Void;
 	
-	@:overload public function get_boxed_value_as_dyn_any() : org.omg.DynamicAny.DynAny;
+	@:overload @:public public function get_boxed_value_as_dyn_any() : org.omg.DynamicAny.DynAny;
 	
-	@:overload public function set_boxed_value_as_dyn_any(boxed : org.omg.DynamicAny.DynAny) : Void;
+	@:overload @:public public function set_boxed_value_as_dyn_any(boxed : org.omg.DynamicAny.DynAny) : Void;
 	
-	@:overload override private function initializeComponentsFromAny() : Bool;
+	@:overload @:protected override private function initializeComponentsFromAny() : Bool;
 	
-	@:overload override private function initializeComponentsFromTypeCode() : Bool;
+	@:overload @:protected override private function initializeComponentsFromTypeCode() : Bool;
 	
-	@:overload override private function initializeAnyFromComponents() : Bool;
+	@:overload @:protected override private function initializeAnyFromComponents() : Bool;
 	
 	
 }

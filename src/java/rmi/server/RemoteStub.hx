@@ -38,7 +38,7 @@ package java.rmi.server;
 	/**
 	* Constructs a <code>RemoteStub</code>.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs a <code>RemoteStub</code>, with the specified remote
@@ -47,7 +47,7 @@ package java.rmi.server;
 	* @param ref the remote reference
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload private function new(ref : java.rmi.server.RemoteRef) : Void;
+	@:require(java1) @:overload @:protected private function new(ref : java.rmi.server.RemoteRef) : Void;
 	
 	/**
 	* Sets the remote reference inside the remote stub.
@@ -59,7 +59,7 @@ package java.rmi.server;
 	* is not needed since <code>RemoteStub</code>s can be created with
 	* the <code>RemoteStub(RemoteRef)</code> constructor.
 	*/
-	@:require(java1) @:overload private static function setRef(stub : java.rmi.server.RemoteStub, ref : java.rmi.server.RemoteRef) : Void;
+	@:require(java1) @:overload @:protected @:static private static function setRef(stub : java.rmi.server.RemoteStub, ref : java.rmi.server.RemoteRef) : Void;
 	
 	
 }

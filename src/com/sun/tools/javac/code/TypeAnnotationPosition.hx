@@ -32,38 +32,38 @@ package com.sun.tools.javac.code;
 */
 extern class TypeAnnotationPosition
 {
-	public var type : com.sun.tools.javac.code.TargetType;
+	@:public public var type : com.sun.tools.javac.code.TargetType;
 	
-	public var location : com.sun.tools.javac.util.List<Null<Int>>;
+	@:public public var location : com.sun.tools.javac.util.List<Null<Int>>;
 	
-	public var pos : Int;
+	@:public public var pos : Int;
 	
-	public var isValidOffset : Bool;
+	@:public public var isValidOffset : Bool;
 	
-	public var offset : Int;
+	@:public public var offset : Int;
 	
-	public var lvarOffset : java.NativeArray<Int>;
+	@:public public var lvarOffset : java.NativeArray<Int>;
 	
-	public var lvarLength : java.NativeArray<Int>;
+	@:public public var lvarLength : java.NativeArray<Int>;
 	
-	public var lvarIndex : java.NativeArray<Int>;
+	@:public public var lvarIndex : java.NativeArray<Int>;
 	
-	public var bound_index : Int;
+	@:public public var bound_index : Int;
 	
-	public var parameter_index : Int;
+	@:public public var parameter_index : Int;
 	
-	public var type_index : Int;
+	@:public public var type_index : Int;
 	
-	public var wildcard_position : com.sun.tools.javac.code.TypeAnnotationPosition;
+	@:public public var wildcard_position : com.sun.tools.javac.code.TypeAnnotationPosition;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Indicates whether the target tree of the annotation has been optimized
 	* away from classfile or not.
 	* @return true if the target has not been optimized away
 	*/
-	@:overload public function emitToClassfile() : Bool;
+	@:overload @:public public function emitToClassfile() : Bool;
 	
 	
 }

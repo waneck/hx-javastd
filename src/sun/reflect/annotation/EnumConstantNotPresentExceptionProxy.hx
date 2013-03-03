@@ -31,9 +31,9 @@ package sun.reflect.annotation;
 */
 @:require(java5) extern class EnumConstantNotPresentExceptionProxy extends sun.reflect.annotation.ExceptionProxy
 {
-	@:overload public function new(enumType : Class<java.lang.Enum<Dynamic>>, constName : String) : Void;
+	@:overload @:public public function new(enumType : Class<java.lang.Enum<Dynamic>>, constName : String) : Void;
 	
-	@:overload private function generateException() : java.lang.RuntimeException;
+	@:overload @:protected override private function generateException() : java.lang.RuntimeException;
 	
 	
 }

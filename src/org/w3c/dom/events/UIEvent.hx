@@ -44,13 +44,13 @@ extern interface UIEvent extends org.w3c.dom.events.Event
 	* The <code>view</code> attribute identifies the <code>AbstractView</code>
 	*  from which the event was generated.
 	*/
-	@:overload public function getView() : org.w3c.dom.views.AbstractView;
+	@:overload @:public public function getView() : org.w3c.dom.views.AbstractView;
 	
 	/**
 	* Specifies some detail information about the <code>Event</code>,
 	* depending on the type of event.
 	*/
-	@:overload public function getDetail() : Int;
+	@:overload @:public public function getDetail() : Int;
 	
 	/**
 	* The <code>initUIEvent</code> method is used to initialize the value of
@@ -68,7 +68,7 @@ extern interface UIEvent extends org.w3c.dom.events.Event
 	*   <code>AbstractView</code>.
 	* @param detailArg Specifies the <code>Event</code>'s detail.
 	*/
-	@:overload public function initUIEvent(typeArg : String, canBubbleArg : Bool, cancelableArg : Bool, viewArg : org.w3c.dom.views.AbstractView, detailArg : Int) : Void;
+	@:overload @:public public function initUIEvent(typeArg : String, canBubbleArg : Bool, cancelableArg : Bool, viewArg : org.w3c.dom.views.AbstractView, detailArg : Int) : Void;
 	
 	
 }

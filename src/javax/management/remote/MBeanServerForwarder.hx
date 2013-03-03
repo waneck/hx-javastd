@@ -33,7 +33,7 @@ extern interface MBeanServerForwarder extends javax.management.MBeanServer
 	*
 	* @see #setMBeanServer
 	*/
-	@:overload public function getMBeanServer() : javax.management.MBeanServer;
+	@:overload @:public public function getMBeanServer() : javax.management.MBeanServer;
 	
 	/**
 	* Sets the MBeanServer object to which requests will be forwarded
@@ -47,7 +47,7 @@ extern interface MBeanServerForwarder extends javax.management.MBeanServer
 	*
 	* @see #getMBeanServer
 	*/
-	@:overload public function setMBeanServer(mbs : javax.management.MBeanServer) : Void;
+	@:overload @:public public function setMBeanServer(mbs : javax.management.MBeanServer) : Void;
 	
 	
 }

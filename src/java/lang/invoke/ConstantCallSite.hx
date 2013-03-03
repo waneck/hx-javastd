@@ -36,7 +36,7 @@ extern class ConstantCallSite extends java.lang.invoke.CallSite
 	* @param target the target to be permanently associated with this call site
 	* @throws NullPointerException if the proposed target is null
 	*/
-	@:overload public function new(target : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:public public function new(target : java.lang.invoke.MethodHandle) : Void;
 	
 	/**
 	* Creates a call site with a permanent target, possibly bound to the call site itself.
@@ -71,7 +71,7 @@ extern class ConstantCallSite extends java.lang.invoke.CallSite
 	* @throws ClassCastException if the hook returns something other than a {@code MethodHandle}
 	* @throws Throwable anything else thrown by the the hook function
 	*/
-	@:overload private function new(targetType : java.lang.invoke.MethodType, createTargetHook : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(targetType : java.lang.invoke.MethodType, createTargetHook : java.lang.invoke.MethodHandle) : Void;
 	
 	/**
 	* Returns the target method of the call site, which behaves
@@ -82,7 +82,7 @@ extern class ConstantCallSite extends java.lang.invoke.CallSite
 	* @return the immutable linkage state of this call site, a constant method handle
 	* @throws IllegalStateException if the {@code ConstantCallSite} constructor has not completed
 	*/
-	@:overload @:final override public function getTarget() : java.lang.invoke.MethodHandle;
+	@:overload @:public @:final override public function getTarget() : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Always throws an {@link UnsupportedOperationException}.
@@ -90,7 +90,7 @@ extern class ConstantCallSite extends java.lang.invoke.CallSite
 	* @param ignore a new target proposed for the call site, which is ignored
 	* @throws UnsupportedOperationException because this kind of call site cannot change its target
 	*/
-	@:overload @:final override public function setTarget(ignore : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:public @:final override public function setTarget(ignore : java.lang.invoke.MethodHandle) : Void;
 	
 	/**
 	* Returns this call site's permanent target.
@@ -99,7 +99,7 @@ extern class ConstantCallSite extends java.lang.invoke.CallSite
 	* @return the immutable linkage state of this call site, a constant method handle
 	* @throws IllegalStateException if the {@code ConstantCallSite} constructor has not completed
 	*/
-	@:overload @:final override public function dynamicInvoker() : java.lang.invoke.MethodHandle;
+	@:overload @:public @:final override public function dynamicInvoker() : java.lang.invoke.MethodHandle;
 	
 	
 }

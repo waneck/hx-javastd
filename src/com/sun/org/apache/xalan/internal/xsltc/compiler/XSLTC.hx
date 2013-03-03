@@ -23,69 +23,69 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 extern class XSLTC
 {
-	public static var FILE_OUTPUT(default, null) : Int;
+	@:public @:static @:final public static var FILE_OUTPUT(default, null) : Int;
 	
-	public static var JAR_OUTPUT(default, null) : Int;
+	@:public @:static @:final public static var JAR_OUTPUT(default, null) : Int;
 	
-	public static var BYTEARRAY_OUTPUT(default, null) : Int;
+	@:public @:static @:final public static var BYTEARRAY_OUTPUT(default, null) : Int;
 	
-	public static var CLASSLOADER_OUTPUT(default, null) : Int;
+	@:public @:static @:final public static var CLASSLOADER_OUTPUT(default, null) : Int;
 	
-	public static var BYTEARRAY_AND_FILE_OUTPUT(default, null) : Int;
+	@:public @:static @:final public static var BYTEARRAY_AND_FILE_OUTPUT(default, null) : Int;
 	
-	public static var BYTEARRAY_AND_JAR_OUTPUT(default, null) : Int;
+	@:public @:static @:final public static var BYTEARRAY_AND_JAR_OUTPUT(default, null) : Int;
 	
 	/**
 	* XSLTC compiler constructor
 	*/
-	@:overload public function new(useServicesMechanism : Bool) : Void;
+	@:overload @:public public function new(useServicesMechanism : Bool) : Void;
 	
 	/**
 	* Set the state of the secure processing feature.
 	*/
-	@:overload public function setSecureProcessing(flag : Bool) : Void;
+	@:overload @:public public function setSecureProcessing(flag : Bool) : Void;
 	
 	/**
 	* Return the state of the secure processing feature.
 	*/
-	@:overload public function isSecureProcessing() : Bool;
+	@:overload @:public public function isSecureProcessing() : Bool;
 	
 	/**
 	* Return the state of the services mechanism feature.
 	*/
-	@:overload public function useServicesMechnism() : Bool;
+	@:overload @:public public function useServicesMechnism() : Bool;
 	
 	/**
 	* Set the state of the services mechanism feature.
 	*/
-	@:overload public function setServicesMechnism(flag : Bool) : Void;
+	@:overload @:public public function setServicesMechnism(flag : Bool) : Void;
 	
 	/**
 	* Only for user by the internal TrAX implementation.
 	*/
-	@:overload public function getParser() : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser;
+	@:overload @:public public function getParser() : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser;
 	
 	/**
 	* Only for user by the internal TrAX implementation.
 	*/
-	@:overload public function setOutputType(type : Int) : Void;
+	@:overload @:public public function setOutputType(type : Int) : Void;
 	
 	/**
 	* Only for user by the internal TrAX implementation.
 	*/
-	@:overload public function getOutputProperties() : java.util.Properties;
+	@:overload @:public public function getOutputProperties() : java.util.Properties;
 	
 	/**
 	* Initializes the compiler to compile a new stylesheet
 	*/
-	@:overload public function init() : Void;
+	@:overload @:public public function init() : Void;
 	
 	/**
 	* Defines an external SourceLoader to provide the compiler with documents
 	* referenced in xsl:include/import
 	* @param loader The SourceLoader to use for include/import
 	*/
-	@:overload public function setSourceLoader(loader : com.sun.org.apache.xalan.internal.xsltc.compiler.SourceLoader) : Void;
+	@:overload @:public public function setSourceLoader(loader : com.sun.org.apache.xalan.internal.xsltc.compiler.SourceLoader) : Void;
 	
 	/**
 	* Set a flag indicating if templates are to be inlined or not. The
@@ -93,12 +93,12 @@ extern class XSLTC
 	* stylesheets have a large number of templates (e.g. branch targets
 	* exceeding 64K or a length of a method exceeding 64K).
 	*/
-	@:overload public function setTemplateInlining(templateInlining : Bool) : Void;
+	@:overload @:public public function setTemplateInlining(templateInlining : Bool) : Void;
 	
 	/**
 	* Return the state of the template inlining feature.
 	*/
-	@:overload public function getTemplateInlining() : Bool;
+	@:overload @:public public function getTemplateInlining() : Bool;
 	
 	/**
 	* Set the parameters to use to locate the correct <?xml-stylesheet ...?>
@@ -109,20 +109,20 @@ extern class XSLTC
 	* @param title The value of the title attribute to match. May be null.
 	* @param charset The value of the charset attribute to match. May be null.
 	*/
-	@:overload public function setPIParameters(media : String, title : String, charset : String) : Void;
+	@:overload @:public public function setPIParameters(media : String, title : String, charset : String) : Void;
 	
 	/**
 	* Compiles an XSL stylesheet pointed to by a URL
 	* @param url An URL containing the input XSL stylesheet
 	*/
-	@:overload public function compile(url : java.net.URL) : Bool;
+	@:overload @:public public function compile(url : java.net.URL) : Bool;
 	
 	/**
 	* Compiles an XSL stylesheet pointed to by a URL
 	* @param url An URL containing the input XSL stylesheet
 	* @param name The name to assign to the translet class
 	*/
-	@:overload public function compile(url : java.net.URL, name : String) : Bool;
+	@:overload @:public public function compile(url : java.net.URL, name : String) : Bool;
 	
 	/**
 	* Compiles an XSL stylesheet passed in through an InputStream
@@ -130,7 +130,7 @@ extern class XSLTC
 	* @param name The name of the translet class to generate
 	* @return 'true' if the compilation was successful
 	*/
-	@:overload public function compile(stream : java.io.InputStream, name : String) : Bool;
+	@:overload @:public public function compile(stream : java.io.InputStream, name : String) : Bool;
 	
 	/**
 	* Compiles an XSL stylesheet passed in through an InputStream
@@ -138,20 +138,20 @@ extern class XSLTC
 	* @param name The name of the translet class to generate - can be null
 	* @return 'true' if the compilation was successful
 	*/
-	@:overload public function compile(input : org.xml.sax.InputSource, name : String) : Bool;
+	@:overload @:public public function compile(input : org.xml.sax.InputSource, name : String) : Bool;
 	
 	/**
 	* Compiles a set of stylesheets pointed to by a Vector of URLs
 	* @param stylesheets A Vector containing URLs pointing to the stylesheets
 	* @return 'true' if the compilation was successful
 	*/
-	@:overload public function compile(stylesheets : java.util.Vector<Dynamic>) : Bool;
+	@:overload @:public public function compile(stylesheets : java.util.Vector<Dynamic>) : Bool;
 	
 	/**
 	* Returns an array of bytecode arrays generated by a compilation.
 	* @return JVM bytecodes that represent translet class definition
 	*/
-	@:overload public function getBytecodes() : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
+	@:overload @:public public function getBytecodes() : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
 	
 	/**
 	* Compiles a stylesheet pointed to by a URL. The result is put in a
@@ -161,7 +161,7 @@ extern class XSLTC
 	* @param outputType The output type
 	* @return JVM bytecodes that represent translet class definition
 	*/
-	@:overload public function compile(name : String, input : org.xml.sax.InputSource, outputType : Int) : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
+	@:overload @:public public function compile(name : String, input : org.xml.sax.InputSource, outputType : Int) : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
 	
 	/**
 	* Compiles a stylesheet pointed to by a URL. The result is put in a
@@ -170,60 +170,60 @@ extern class XSLTC
 	* @param input An InputSource that will pass in the stylesheet contents
 	* @return JVM bytecodes that represent translet class definition
 	*/
-	@:overload public function compile(name : String, input : org.xml.sax.InputSource) : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
+	@:overload @:public public function compile(name : String, input : org.xml.sax.InputSource) : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
 	
 	/**
 	* Set the XMLReader to use for parsing the next input stylesheet
 	* @param reader XMLReader (SAX2 parser) to use
 	*/
-	@:overload public function setXMLReader(reader : org.xml.sax.XMLReader) : Void;
+	@:overload @:public public function setXMLReader(reader : org.xml.sax.XMLReader) : Void;
 	
 	/**
 	* Get the XMLReader to use for parsing the next input stylesheet
 	*/
-	@:overload public function getXMLReader() : org.xml.sax.XMLReader;
+	@:overload @:public public function getXMLReader() : org.xml.sax.XMLReader;
 	
 	/**
 	* Get a Vector containing all compile error messages
 	* @return A Vector containing all compile error messages
 	*/
-	@:overload public function getErrors() : java.util.Vector<Dynamic>;
+	@:overload @:public public function getErrors() : java.util.Vector<Dynamic>;
 	
 	/**
 	* Get a Vector containing all compile warning messages
 	* @return A Vector containing all compile error messages
 	*/
-	@:overload public function getWarnings() : java.util.Vector<Dynamic>;
+	@:overload @:public public function getWarnings() : java.util.Vector<Dynamic>;
 	
 	/**
 	* Print all compile error messages to standard output
 	*/
-	@:overload public function printErrors() : Void;
+	@:overload @:public public function printErrors() : Void;
 	
 	/**
 	* Print all compile warning messages to standard output
 	*/
-	@:overload public function printWarnings() : Void;
+	@:overload @:public public function printWarnings() : Void;
 	
 	/**
 	* This method is called by the XPathParser when it encounters a call
 	* to the document() function. Affects the DOM used by the translet.
 	*/
-	@:overload private function setMultiDocument(flag : Bool) : Void;
+	@:overload @:protected private function setMultiDocument(flag : Bool) : Void;
 	
-	@:overload public function isMultiDocument() : Bool;
+	@:overload @:public public function isMultiDocument() : Bool;
 	
 	/**
 	* This method is called by the XPathParser when it encounters a call
 	* to the nodeset() extension function. Implies multi document.
 	*/
-	@:overload private function setCallsNodeset(flag : Bool) : Void;
+	@:overload @:protected private function setCallsNodeset(flag : Bool) : Void;
 	
-	@:overload public function callsNodeset() : Bool;
+	@:overload @:public public function callsNodeset() : Bool;
 	
-	@:overload private function setHasIdCall(flag : Bool) : Void;
+	@:overload @:protected private function setHasIdCall(flag : Bool) : Void;
 	
-	@:overload public function hasIdCall() : Bool;
+	@:overload @:public public function hasIdCall() : Bool;
 	
 	/**
 	* Set the class name for the generated translet. This class name is
@@ -231,104 +231,104 @@ extern class XSLTC
 	* compile(Vector urls) method.
 	* @param className The name to assign to the translet class
 	*/
-	@:overload public function setClassName(className : String) : Void;
+	@:overload @:public public function setClassName(className : String) : Void;
 	
 	/**
 	* Get the class name for the generated translet.
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Set the destination directory for the translet.
 	* The current working directory will be used by default.
 	*/
-	@:overload public function setDestDirectory(dstDirName : String) : Bool;
+	@:overload @:public public function setDestDirectory(dstDirName : String) : Bool;
 	
 	/**
 	* Set an optional package name for the translet and auxiliary classes
 	*/
-	@:overload public function setPackageName(packageName : String) : Void;
+	@:overload @:public public function setPackageName(packageName : String) : Void;
 	
 	/**
 	* Set the name of an optional JAR-file to dump the translet and
 	* auxiliary classes to
 	*/
-	@:overload public function setJarFileName(jarFileName : String) : Void;
+	@:overload @:public public function setJarFileName(jarFileName : String) : Void;
 	
-	@:overload public function getJarFileName() : String;
+	@:overload @:public public function getJarFileName() : String;
 	
 	/**
 	* Set the top-level stylesheet
 	*/
-	@:overload public function setStylesheet(stylesheet : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet) : Void;
+	@:overload @:public public function setStylesheet(stylesheet : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet) : Void;
 	
 	/**
 	* Returns the top-level stylesheet
 	*/
-	@:overload public function getStylesheet() : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet;
+	@:overload @:public public function getStylesheet() : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet;
 	
 	/**
 	* Registers an attribute and gives it a type so that it can be mapped to
 	* DOM attribute types at run-time.
 	*/
-	@:overload public function registerAttribute(name : com.sun.org.apache.xalan.internal.xsltc.compiler.QName) : Int;
+	@:overload @:public public function registerAttribute(name : com.sun.org.apache.xalan.internal.xsltc.compiler.QName) : Int;
 	
 	/**
 	* Registers an element and gives it a type so that it can be mapped to
 	* DOM element types at run-time.
 	*/
-	@:overload public function registerElement(name : com.sun.org.apache.xalan.internal.xsltc.compiler.QName) : Int;
+	@:overload @:public public function registerElement(name : com.sun.org.apache.xalan.internal.xsltc.compiler.QName) : Int;
 	
 	/**
 	* Registers a namespace prefix and gives it a type so that it can be mapped to
 	* DOM namespace types at run-time.
 	*/
-	@:overload public function registerNamespacePrefix(name : com.sun.org.apache.xalan.internal.xsltc.compiler.QName) : Int;
+	@:overload @:public public function registerNamespacePrefix(name : com.sun.org.apache.xalan.internal.xsltc.compiler.QName) : Int;
 	
 	/**
 	* Registers a namespace and gives it a type so that it can be mapped to
 	* DOM namespace types at run-time.
 	*/
-	@:overload public function registerNamespace(namespaceURI : String) : Int;
+	@:overload @:public public function registerNamespace(namespaceURI : String) : Int;
 	
-	@:overload public function nextModeSerial() : Int;
+	@:overload @:public public function nextModeSerial() : Int;
 	
-	@:overload public function nextStylesheetSerial() : Int;
+	@:overload @:public public function nextStylesheetSerial() : Int;
 	
-	@:overload public function nextStepPatternSerial() : Int;
+	@:overload @:public public function nextStepPatternSerial() : Int;
 	
-	@:overload public function getNumberFieldIndexes() : java.NativeArray<Int>;
+	@:overload @:public public function getNumberFieldIndexes() : java.NativeArray<Int>;
 	
-	@:overload public function nextHelperClassSerial() : Int;
+	@:overload @:public public function nextHelperClassSerial() : Int;
 	
-	@:overload public function nextAttributeSetSerial() : Int;
+	@:overload @:public public function nextAttributeSetSerial() : Int;
 	
-	@:overload public function getNamesIndex() : java.util.Vector<Dynamic>;
+	@:overload @:public public function getNamesIndex() : java.util.Vector<Dynamic>;
 	
-	@:overload public function getNamespaceIndex() : java.util.Vector<Dynamic>;
+	@:overload @:public public function getNamespaceIndex() : java.util.Vector<Dynamic>;
 	
 	/**
 	* Returns a unique name for every helper class needed to
 	* execute a translet.
 	*/
-	@:overload public function getHelperClassName() : String;
+	@:overload @:public public function getHelperClassName() : String;
 	
-	@:overload public function dumpClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
+	@:overload @:public public function dumpClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
 	
 	/**
 	* Generate output JAR-file and packages
 	*/
-	@:overload public function outputToJar() : Void;
+	@:overload @:public public function outputToJar() : Void;
 	
 	/**
 	* Turn debugging messages on/off
 	*/
-	@:overload public function setDebug(debug : Bool) : Void;
+	@:overload @:public public function setDebug(debug : Bool) : Void;
 	
 	/**
 	* Get current debugging message setting
 	*/
-	@:overload public function debug() : Bool;
+	@:overload @:public public function debug() : Bool;
 	
 	/**
 	* Retrieve a string representation of the character data to be stored
@@ -338,13 +338,13 @@ extern class XSLTC
 	* @return String The character data to be stored in the corresponding
 	*               <code>char[]</code>.
 	*/
-	@:overload public function getCharacterData(index : Int) : String;
+	@:overload @:public public function getCharacterData(index : Int) : String;
 	
 	/**
 	* Get the number of char[] arrays, thus far, that will be created to
 	* store literal text in the stylesheet.
 	*/
-	@:overload public function getCharacterDataCount() : Int;
+	@:overload @:public public function getCharacterDataCount() : Int;
 	
 	/**
 	* Add literal text to char arrays that will be used to store character
@@ -353,7 +353,7 @@ extern class XSLTC
 	*                Pre-condition:  <code>newData.length() &le; 21845</code>
 	* @return int offset at which character data will be stored
 	*/
-	@:overload public function addCharacterData(newData : String) : Int;
+	@:overload @:public public function addCharacterData(newData : String) : Int;
 	
 	
 }

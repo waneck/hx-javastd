@@ -36,7 +36,7 @@ extern interface DynArray extends org.omg.CORBA.Object extends org.omg.CORBA.Dyn
 	*         for this <code>DynArray</code> object
 	* @see #set_elements
 	*/
-	@:overload public function get_elements() : java.NativeArray<org.omg.CORBA.Any>;
+	@:overload @:public public function get_elements() : java.NativeArray<org.omg.CORBA.Any>;
 	
 	/**
 	* Sets the value of this
@@ -46,7 +46,7 @@ extern interface DynArray extends org.omg.CORBA.Object extends org.omg.CORBA.Dyn
 	* @exception InvalidSeq if the sequence is bad
 	* @see #get_elements
 	*/
-	@:overload public function set_elements(value : java.NativeArray<org.omg.CORBA.Any>) : Void;
+	@:overload @:public public function set_elements(value : java.NativeArray<org.omg.CORBA.Any>) : Void;
 	
 	
 }

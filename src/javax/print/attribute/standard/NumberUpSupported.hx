@@ -43,7 +43,7 @@ extern class NumberUpSupported extends javax.print.attribute.SetOfIntegerSyntax 
 	*    thrown if <CODE>members</CODE> is a zero-length array or if any
 	*    member of the set is less than 1.
 	*/
-	@:overload public function new(members : java.NativeArray<java.NativeArray<Int>>) : Void;
+	@:overload @:public public function new(members : java.NativeArray<java.NativeArray<Int>>) : Void;
 	
 	/**
 	* Construct a new number up supported attribute containing a single
@@ -55,7 +55,7 @@ extern class NumberUpSupported extends javax.print.attribute.SetOfIntegerSyntax 
 	*     (Unchecked exception) Thrown if <CODE>member</CODE> is less than
 	*     1.
 	*/
-	@:overload public function new(member : Int) : Void;
+	@:overload @:public public function new(member : Int) : Void;
 	
 	/**
 	* Construct a new number up supported attribute containing a single range
@@ -70,7 +70,7 @@ extern class NumberUpSupported extends javax.print.attribute.SetOfIntegerSyntax 
 	*     non-null range is specified with <CODE>lowerBound</CODE> less than
 	*     1.
 	*/
-	@:overload public function new(lowerBound : Int, upperBound : Int) : Void;
+	@:overload @:public public function new(lowerBound : Int, upperBound : Int) : Void;
 	
 	/**
 	* Returns whether this number up supported attribute is equivalent to the
@@ -91,7 +91,7 @@ extern class NumberUpSupported extends javax.print.attribute.SetOfIntegerSyntax 
 	* @return  True if <CODE>object</CODE> is equivalent to this number up
 	*          supported attribute, false otherwise.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public override public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -103,7 +103,7 @@ extern class NumberUpSupported extends javax.print.attribute.SetOfIntegerSyntax 
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -114,7 +114,7 @@ extern class NumberUpSupported extends javax.print.attribute.SetOfIntegerSyntax 
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

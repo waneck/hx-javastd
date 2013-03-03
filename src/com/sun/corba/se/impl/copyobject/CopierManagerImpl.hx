@@ -25,17 +25,17 @@ package com.sun.corba.se.impl.copyobject;
 */
 extern class CopierManagerImpl implements com.sun.corba.se.spi.copyobject.CopierManager
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function setDefaultId(id : Int) : Void;
+	@:overload @:public public function setDefaultId(id : Int) : Void;
 	
-	@:overload public function getDefaultId() : Int;
+	@:overload @:public public function getDefaultId() : Int;
 	
-	@:overload public function getObjectCopierFactory(id : Int) : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
+	@:overload @:public public function getObjectCopierFactory(id : Int) : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
 	
-	@:overload public function getDefaultObjectCopierFactory() : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
+	@:overload @:public public function getDefaultObjectCopierFactory() : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
 	
-	@:overload public function registerObjectCopierFactory(factory : com.sun.corba.se.spi.copyobject.ObjectCopierFactory, id : Int) : Void;
+	@:overload @:public public function registerObjectCopierFactory(factory : com.sun.corba.se.spi.copyobject.ObjectCopierFactory, id : Int) : Void;
 	
 	
 }

@@ -28,13 +28,13 @@ extern class BIXPluginCustomization extends com.sun.tools.internal.xjc.reader.xm
 	/**
 	* Customization element.
 	*/
-	public var element(default, null) : org.w3c.dom.Element;
+	@:public @:final public var element(default, null) : org.w3c.dom.Element;
 	
-	@:overload public function new(e : org.w3c.dom.Element, _loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(e : org.w3c.dom.Element, _loc : org.xml.sax.Locator) : Void;
 	
-	@:overload override public function onSetOwner() : Void;
+	@:overload @:public override public function onSetOwner() : Void;
 	
-	@:overload @:final override public function getName() : javax.xml.namespace.QName;
+	@:overload @:public @:final override public function getName() : javax.xml.namespace.QName;
 	
 	
 }

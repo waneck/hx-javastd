@@ -31,7 +31,7 @@ package sun.io;
 */
 extern class ByteToCharUnicodeBig extends sun.io.ByteToCharUnicode
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

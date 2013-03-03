@@ -25,7 +25,7 @@ package sun.security.jgss.krb5;
 */
 @:internal extern class InitialToken extends sun.security.jgss.krb5.Krb5Token
 {
-	@:overload @:abstract public function encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
@@ -35,18 +35,18 @@ package sun.security.jgss.krb5;
 	* Called on the initiator side when creating the
 	* InitSecContextToken.
 	*/
-	@:overload public function new(context : sun.security.jgss.krb5.Krb5Context, tgt : sun.security.krb5.Credentials, serviceTicket : sun.security.krb5.Credentials) : Void;
+	@:overload @:public public function new(context : sun.security.jgss.krb5.Krb5Context, tgt : sun.security.krb5.Credentials, serviceTicket : sun.security.krb5.Credentials) : Void;
 	
 	/**
 	* Called on the acceptor side when reading an InitSecContextToken.
 	*/
-	@:overload public function new(context : sun.security.jgss.krb5.Krb5Context, checksum : sun.security.krb5.Checksum, key : sun.security.krb5.EncryptionKey, subKey : sun.security.krb5.EncryptionKey) : Void;
+	@:overload @:public public function new(context : sun.security.jgss.krb5.Krb5Context, checksum : sun.security.krb5.Checksum, key : sun.security.krb5.EncryptionKey, subKey : sun.security.krb5.EncryptionKey) : Void;
 	
-	@:overload public function getChecksum() : sun.security.krb5.Checksum;
+	@:overload @:public public function getChecksum() : sun.security.krb5.Checksum;
 	
-	@:overload public function getDelegatedCreds() : sun.security.krb5.Credentials;
+	@:overload @:public public function getDelegatedCreds() : sun.security.krb5.Credentials;
 	
-	@:overload public function setContextFlags(context : sun.security.jgss.krb5.Krb5Context) : Void;
+	@:overload @:public public function setContextFlags(context : sun.security.jgss.krb5.Krb5Context) : Void;
 	
 	
 }

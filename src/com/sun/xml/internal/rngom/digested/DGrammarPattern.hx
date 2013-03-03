@@ -49,7 +49,7 @@ extern class DGrammarPattern extends com.sun.xml.internal.rngom.digested.DPatter
 	/**
 	* Gets the start pattern.
 	*/
-	@:overload public function getStart() : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function getStart() : com.sun.xml.internal.rngom.digested.DPattern;
 	
 	/**
 	* Gets the named pattern by its name.
@@ -57,16 +57,16 @@ extern class DGrammarPattern extends com.sun.xml.internal.rngom.digested.DPatter
 	* @return
 	*      null if not found.
 	*/
-	@:overload public function get(name : String) : com.sun.xml.internal.rngom.digested.DDefine;
+	@:overload @:public public function get(name : String) : com.sun.xml.internal.rngom.digested.DDefine;
 	
 	/**
 	* Iterates all the {@link DDefine}s in this grammar.
 	*/
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.rngom.digested.DDefine>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.rngom.digested.DDefine>;
 	
-	@:overload public function isNullable() : Bool;
+	@:overload @:public override public function isNullable() : Bool;
 	
-	@:overload public function accept<V>(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<V>) : V;
+	@:overload @:public override public function accept<V>(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<V>) : V;
 	
 	
 }

@@ -27,44 +27,44 @@ extern class XPathException extends javax.xml.transform.TransformerException
 	* Get the stylesheet node from where this error originated.
 	* @return The stylesheet node from where this error originated, or null.
 	*/
-	@:overload public function getStylesheetNode() : Dynamic;
+	@:overload @:public public function getStylesheetNode() : Dynamic;
 	
 	/**
 	* Set the stylesheet node from where this error originated.
 	* @param styleNode The stylesheet node from where this error originated, or null.
 	*/
-	@:overload public function setStylesheetNode(styleNode : Dynamic) : Void;
+	@:overload @:public public function setStylesheetNode(styleNode : Dynamic) : Void;
 	
 	/** A nested exception.
 	*  @serial   */
-	private var m_exception : java.lang.Exception;
+	@:protected private var m_exception : java.lang.Exception;
 	
 	/**
 	* Create an XPathException object that holds
 	* an error message.
 	* @param message The error message.
 	*/
-	@:overload public function new(message : String, ex : com.sun.org.apache.xpath.internal.ExpressionNode) : Void;
+	@:overload @:public public function new(message : String, ex : com.sun.org.apache.xpath.internal.ExpressionNode) : Void;
 	
 	/**
 	* Create an XPathException object that holds
 	* an error message.
 	* @param message The error message.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Get the XSLT ElemVariable that this sub-expression references.  In order for
 	* this to work, the SourceLocator must be the owning ElemTemplateElement.
 	* @return The dereference to the ElemVariable, or null if not found.
 	*/
-	@:overload public function getStylesheetNode(ex : com.sun.org.apache.xpath.internal.ExpressionNode) : org.w3c.dom.Node;
+	@:overload @:public public function getStylesheetNode(ex : com.sun.org.apache.xpath.internal.ExpressionNode) : org.w3c.dom.Node;
 	
 	/**
 	* Get the first non-Expression parent of this node.
 	* @return null or first ancestor that is not an Expression.
 	*/
-	@:overload private function getExpressionOwner(ex : com.sun.org.apache.xpath.internal.ExpressionNode) : com.sun.org.apache.xpath.internal.ExpressionNode;
+	@:overload @:protected private function getExpressionOwner(ex : com.sun.org.apache.xpath.internal.ExpressionNode) : com.sun.org.apache.xpath.internal.ExpressionNode;
 	
 	/**
 	* Create an XPathException object that holds
@@ -73,7 +73,7 @@ extern class XPathException extends javax.xml.transform.TransformerException
 	* @param message The error message.
 	* @param styleNode The stylesheet node that the error originated from.
 	*/
-	@:overload public function new(message : String, styleNode : Dynamic) : Void;
+	@:overload @:public public function new(message : String, styleNode : Dynamic) : Void;
 	
 	/**
 	* Create an XPathException object that holds
@@ -84,7 +84,7 @@ extern class XPathException extends javax.xml.transform.TransformerException
 	* @param styleNode The stylesheet node that the error originated from.
 	* @param e The exception that caused this exception.
 	*/
-	@:overload public function new(message : String, styleNode : org.w3c.dom.Node, e : java.lang.Exception) : Void;
+	@:overload @:public public function new(message : String, styleNode : org.w3c.dom.Node, e : java.lang.Exception) : Void;
 	
 	/**
 	* Create an XPathException object that holds
@@ -93,7 +93,7 @@ extern class XPathException extends javax.xml.transform.TransformerException
 	* @param message The error message.
 	* @param e The exception that caused this exception.
 	*/
-	@:overload public function new(message : String, e : java.lang.Exception) : Void;
+	@:overload @:public public function new(message : String, e : java.lang.Exception) : Void;
 	
 	/**
 	* Print the the trace of methods from where the error
@@ -101,14 +101,14 @@ extern class XPathException extends javax.xml.transform.TransformerException
 	* objects, as well as this object.
 	* @param s The stream where the dump will be sent to.
 	*/
-	@:overload public function printStackTrace(s : java.io.PrintStream) : Void;
+	@:overload @:public override public function printStackTrace(s : java.io.PrintStream) : Void;
 	
 	/**
 	* Find the most contained message.
 	*
 	* @return The error message of the originating exception.
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	/**
 	* Print the the trace of methods from where the error
@@ -116,7 +116,7 @@ extern class XPathException extends javax.xml.transform.TransformerException
 	* objects, as well as this object.
 	* @param s The writer where the dump will be sent to.
 	*/
-	@:overload public function printStackTrace(s : java.io.PrintWriter) : Void;
+	@:overload @:public override public function printStackTrace(s : java.io.PrintWriter) : Void;
 	
 	/**
 	*  Return the embedded exception, if any.
@@ -124,7 +124,7 @@ extern class XPathException extends javax.xml.transform.TransformerException
 	*
 	*  @return The embedded exception, or null if there is none.
 	*/
-	@:overload public function getException() : java.lang.Throwable;
+	@:overload @:public override public function getException() : java.lang.Throwable;
 	
 	
 }

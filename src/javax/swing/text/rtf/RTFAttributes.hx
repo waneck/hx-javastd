@@ -30,77 +30,77 @@ package javax.swing.text.rtf;
 /************************************************************************/
 @:native('javax$swing$text$rtf$RTFAttributes$GenericAttribute') @:internal extern class RTFAttributes_GenericAttribute
 {
-	@:overload private function new(d : Int, s : Dynamic, r : String) : Void;
+	@:overload @:protected private function new(d : Int, s : Dynamic, r : String) : Void;
 	
-	@:overload public function domain() : Int;
+	@:overload @:public public function domain() : Int;
 	
-	@:overload public function swingName() : Dynamic;
+	@:overload @:public public function swingName() : Dynamic;
 	
-	@:overload public function rtfName() : String;
+	@:overload @:public public function rtfName() : String;
 	
-	@:overload public function write(source : javax.swing.text.AttributeSet, target : javax.swing.text.rtf.RTFGenerator, force : Bool) : Bool;
+	@:overload @:public public function write(source : javax.swing.text.AttributeSet, target : javax.swing.text.rtf.RTFGenerator, force : Bool) : Bool;
 	
-	@:overload public function writeValue(value : Dynamic, target : javax.swing.text.rtf.RTFGenerator, force : Bool) : Bool;
+	@:overload @:public public function writeValue(value : Dynamic, target : javax.swing.text.rtf.RTFGenerator, force : Bool) : Bool;
 	
 	
 }
 @:native('javax$swing$text$rtf$RTFAttributes$BooleanAttribute') @:internal extern class RTFAttributes_BooleanAttribute extends javax.swing.text.rtf.RTFAttributes.RTFAttributes_GenericAttribute implements javax.swing.text.rtf.RTFAttribute
 {
-	private static var True(default, null) : Null<Bool>;
+	@:protected @:static @:final private static var True(default, null) : Null<Bool>;
 	
-	private static var False(default, null) : Null<Bool>;
+	@:protected @:static @:final private static var False(default, null) : Null<Bool>;
 	
-	@:overload public function new(d : Int, s : Dynamic, r : String, ds : Bool, dr : Bool) : Void;
+	@:overload @:public public function new(d : Int, s : Dynamic, r : String, ds : Bool, dr : Bool) : Void;
 	
-	@:overload public function new(d : Int, s : Dynamic, r : String) : Void;
+	@:overload @:public public function new(d : Int, s : Dynamic, r : String) : Void;
 	
-	@:overload public function set(target : javax.swing.text.MutableAttributeSet) : Bool;
+	@:overload @:public public function set(target : javax.swing.text.MutableAttributeSet) : Bool;
 	
-	@:overload public function set(target : javax.swing.text.MutableAttributeSet, parameter : Int) : Bool;
+	@:overload @:public public function set(target : javax.swing.text.MutableAttributeSet, parameter : Int) : Bool;
 	
-	@:overload public function setDefault(target : javax.swing.text.MutableAttributeSet) : Bool;
+	@:overload @:public public function setDefault(target : javax.swing.text.MutableAttributeSet) : Bool;
 	
-	@:overload override public function writeValue(o_value : Dynamic, target : javax.swing.text.rtf.RTFGenerator, force : Bool) : Bool;
+	@:overload @:public override public function writeValue(o_value : Dynamic, target : javax.swing.text.rtf.RTFGenerator, force : Bool) : Bool;
 	
 	
 }
 @:native('javax$swing$text$rtf$RTFAttributes$AssertiveAttribute') @:internal extern class RTFAttributes_AssertiveAttribute extends javax.swing.text.rtf.RTFAttributes.RTFAttributes_GenericAttribute implements javax.swing.text.rtf.RTFAttribute
 {
-	@:overload public function new(d : Int, s : Dynamic, r : String) : Void;
+	@:overload @:public public function new(d : Int, s : Dynamic, r : String) : Void;
 	
-	@:overload public function new(d : Int, s : Dynamic, r : String, v : Dynamic) : Void;
+	@:overload @:public public function new(d : Int, s : Dynamic, r : String, v : Dynamic) : Void;
 	
-	@:overload public function new(d : Int, s : Dynamic, r : String, v : Int) : Void;
+	@:overload @:public public function new(d : Int, s : Dynamic, r : String, v : Int) : Void;
 	
-	@:overload public function set(target : javax.swing.text.MutableAttributeSet) : Bool;
+	@:overload @:public public function set(target : javax.swing.text.MutableAttributeSet) : Bool;
 	
-	@:overload public function set(target : javax.swing.text.MutableAttributeSet, parameter : Int) : Bool;
+	@:overload @:public public function set(target : javax.swing.text.MutableAttributeSet, parameter : Int) : Bool;
 	
-	@:overload public function setDefault(target : javax.swing.text.MutableAttributeSet) : Bool;
+	@:overload @:public public function setDefault(target : javax.swing.text.MutableAttributeSet) : Bool;
 	
-	@:overload override public function writeValue(value : Dynamic, target : javax.swing.text.rtf.RTFGenerator, force : Bool) : Bool;
+	@:overload @:public override public function writeValue(value : Dynamic, target : javax.swing.text.rtf.RTFGenerator, force : Bool) : Bool;
 	
 	
 }
 @:native('javax$swing$text$rtf$RTFAttributes$NumericAttribute') @:internal extern class RTFAttributes_NumericAttribute extends javax.swing.text.rtf.RTFAttributes.RTFAttributes_GenericAttribute implements javax.swing.text.rtf.RTFAttribute
 {
-	@:overload private function new(d : Int, s : Dynamic, r : String) : Void;
+	@:overload @:protected private function new(d : Int, s : Dynamic, r : String) : Void;
 	
-	@:overload public function new(d : Int, s : Dynamic, r : String, ds : Int, dr : Int) : Void;
+	@:overload @:public public function new(d : Int, s : Dynamic, r : String, ds : Int, dr : Int) : Void;
 	
-	@:overload public function new(d : Int, s : Dynamic, r : String, ds : java.lang.Number, dr : Int, sc : Single) : Void;
+	@:overload @:public public function new(d : Int, s : Dynamic, r : String, ds : java.lang.Number, dr : Int, sc : Single) : Void;
 	
-	@:overload public static function NewTwips(d : Int, s : Dynamic, r : String, ds : Single, dr : Int) : javax.swing.text.rtf.RTFAttributes.RTFAttributes_NumericAttribute;
+	@:overload @:public @:static public static function NewTwips(d : Int, s : Dynamic, r : String, ds : Single, dr : Int) : javax.swing.text.rtf.RTFAttributes.RTFAttributes_NumericAttribute;
 	
-	@:overload public static function NewTwips(d : Int, s : Dynamic, r : String, dr : Int) : javax.swing.text.rtf.RTFAttributes.RTFAttributes_NumericAttribute;
+	@:overload @:public @:static public static function NewTwips(d : Int, s : Dynamic, r : String, dr : Int) : javax.swing.text.rtf.RTFAttributes.RTFAttributes_NumericAttribute;
 	
-	@:overload public function set(target : javax.swing.text.MutableAttributeSet) : Bool;
+	@:overload @:public public function set(target : javax.swing.text.MutableAttributeSet) : Bool;
 	
-	@:overload public function set(target : javax.swing.text.MutableAttributeSet, parameter : Int) : Bool;
+	@:overload @:public public function set(target : javax.swing.text.MutableAttributeSet, parameter : Int) : Bool;
 	
-	@:overload public function setDefault(target : javax.swing.text.MutableAttributeSet) : Bool;
+	@:overload @:public public function setDefault(target : javax.swing.text.MutableAttributeSet) : Bool;
 	
-	@:overload override public function writeValue(o_value : Dynamic, target : javax.swing.text.rtf.RTFGenerator, force : Bool) : Bool;
+	@:overload @:public override public function writeValue(o_value : Dynamic, target : javax.swing.text.rtf.RTFGenerator, force : Bool) : Bool;
 	
 	
 }

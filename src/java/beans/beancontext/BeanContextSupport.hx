@@ -44,7 +44,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @see java.util.Locale#getDefault()
 	* @see java.util.Locale#setDefault(java.util.Locale)
 	*/
-	@:overload public function new(peer : java.beans.beancontext.BeanContext, lcle : java.util.Locale, dTime : Bool, visible : Bool) : Void;
+	@:overload @:public public function new(peer : java.beans.beancontext.BeanContext, lcle : java.util.Locale, dTime : Bool, visible : Bool) : Void;
 	
 	/**
 	* Create an instance using the specified Locale and design mode.
@@ -61,7 +61,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @see java.util.Locale#getDefault()
 	* @see java.util.Locale#setDefault(java.util.Locale)
 	*/
-	@:overload public function new(peer : java.beans.beancontext.BeanContext, lcle : java.util.Locale, dtime : Bool) : Void;
+	@:overload @:public public function new(peer : java.beans.beancontext.BeanContext, lcle : java.util.Locale, dtime : Bool) : Void;
 	
 	/**
 	* Create an instance using the specified locale
@@ -79,7 +79,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @see java.util.Locale#getDefault()
 	* @see java.util.Locale#setDefault(java.util.Locale)
 	*/
-	@:overload public function new(peer : java.beans.beancontext.BeanContext, lcle : java.util.Locale) : Void;
+	@:overload @:public public function new(peer : java.beans.beancontext.BeanContext, lcle : java.util.Locale) : Void;
 	
 	/**
 	* Create an instance using with a default locale
@@ -89,19 +89,19 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	*                  or <tt>null</tt> if this object
 	*                  is its own peer
 	*/
-	@:overload public function new(peer : java.beans.beancontext.BeanContext) : Void;
+	@:overload @:public public function new(peer : java.beans.beancontext.BeanContext) : Void;
 	
 	/**
 	* Create an instance that is not a delegate of another object
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Gets the instance of <tt>BeanContext</tt> that
 	* this object is providing the implementation for.
 	* @return the BeanContext instance
 	*/
-	@:overload public function getBeanContextPeer() : java.beans.beancontext.BeanContext;
+	@:overload @:public public function getBeanContextPeer() : java.beans.beancontext.BeanContext;
 	
 	/**
 	* <p>
@@ -120,7 +120,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* identified by the beanName parameter is not found
 	* @return the new object
 	*/
-	@:overload public function instantiateChild(beanName : String) : Dynamic;
+	@:overload @:public public function instantiateChild(beanName : String) : Dynamic;
 	
 	/**
 	* Gets the number of children currently nested in
@@ -128,7 +128,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	*
 	* @return number of children
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Reports whether or not this
@@ -138,7 +138,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* nested children.
 	* @return if there are not children
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Determines whether or not the specified object
@@ -146,7 +146,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @param o the Object in question
 	* @return if this object is a child
 	*/
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Determines whether or not the specified object
@@ -154,20 +154,20 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @param o the Object in question
 	* @return if this object is a child
 	*/
-	@:overload public function containsKey(o : Dynamic) : Bool;
+	@:overload @:public public function containsKey(o : Dynamic) : Bool;
 	
 	/**
 	* Gets all JavaBean or <tt>BeanContext</tt> instances
 	* currently nested in this <tt>BeanContext</tt>.
 	* @return an <tt>Iterator</tt> of the nested children
 	*/
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function iterator() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Gets all JavaBean or <tt>BeanContext</tt>
 	* instances currently nested in this BeanContext.
 	*/
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Gets an array containing all children of
@@ -177,7 +177,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* types that are of interest.
 	* @return an array of children
 	*/
-	@:overload public function toArray(arry : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray(arry : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
 	
 	/**
 	* <p>
@@ -189,7 +189,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @param targetChild the child to create the Child on behalf of
 	* @param peer        the peer if the tragetChild and the peer are related by an implementation of BeanContextProxy
 	*/
-	@:overload private function createBCSChild(targetChild : Dynamic, peer : Dynamic) : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild;
+	@:overload @:protected private function createBCSChild(targetChild : Dynamic, peer : Dynamic) : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild;
 	
 	/**
 	* Adds/nests a child within this <tt>BeanContext</tt>.
@@ -205,7 +205,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @return true if the child was added successfully.
 	* @see #validatePendingAdd
 	*/
-	@:overload public function add(targetChild : Dynamic) : Bool;
+	@:overload @:public public function add(targetChild : Dynamic) : Bool;
 	
 	/**
 	* Removes a child from this BeanContext.  If the child object is not
@@ -213,7 +213,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @param targetChild The child objects to remove
 	* @see #validatePendingRemove
 	*/
-	@:overload public function remove(targetChild : Dynamic) : Bool;
+	@:overload @:public public function remove(targetChild : Dynamic) : Bool;
 	
 	/**
 	* internal remove used when removal caused by
@@ -224,7 +224,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* the child should be notified that it is no
 	* longer nested in this <tt>BeanContext</tt>.
 	*/
-	@:overload private function remove(targetChild : Dynamic, callChildSetBC : Bool) : Bool;
+	@:overload @:protected private function remove(targetChild : Dynamic, callChildSetBC : Bool) : Bool;
 	
 	/**
 	* Tests to see if all objects in the
@@ -236,35 +236,35 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* in the collection are children of
 	* this <tt>BeanContext</tt>, false if not.
 	*/
-	@:overload public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* add Collection to set of Children (Unsupported)
 	* implementations must synchronized on the hierarchy lock and "children" protected field
 	* @throws UnsupportedOperationException
 	*/
-	@:overload public function addAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function addAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* remove all specified children (Unsupported)
 	* implementations must synchronized on the hierarchy lock and "children" protected field
 	* @throws UnsupportedOperationException
 	*/
-	@:overload public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* retain only specified children (Unsupported)
 	* implementations must synchronized on the hierarchy lock and "children" protected field
 	* @throws UnsupportedOperationException
 	*/
-	@:overload public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* clear the children (Unsupported)
 	* implementations must synchronized on the hierarchy lock and "children" protected field
 	* @throws UnsupportedOperationException
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Adds a BeanContextMembershipListener
@@ -272,7 +272,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @param  bcml the BeanContextMembershipListener to add
 	* @throws NullPointerException
 	*/
-	@:overload public function addBeanContextMembershipListener(bcml : java.beans.beancontext.BeanContextMembershipListener) : Void;
+	@:overload @:public public function addBeanContextMembershipListener(bcml : java.beans.beancontext.BeanContextMembershipListener) : Void;
 	
 	/**
 	* Removes a BeanContextMembershipListener
@@ -280,7 +280,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @param  bcml the BeanContextMembershipListener to remove
 	* @throws NullPointerException
 	*/
-	@:overload public function removeBeanContextMembershipListener(bcml : java.beans.beancontext.BeanContextMembershipListener) : Void;
+	@:overload @:public public function removeBeanContextMembershipListener(bcml : java.beans.beancontext.BeanContextMembershipListener) : Void;
 	
 	/**
 	* @param name the name of the resource requested.
@@ -289,7 +289,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @return  the requested resource as an InputStream
 	* @throws  NullPointerException
 	*/
-	@:overload public function getResourceAsStream(name : String, bcc : java.beans.beancontext.BeanContextChild) : java.io.InputStream;
+	@:overload @:public public function getResourceAsStream(name : String, bcc : java.beans.beancontext.BeanContextChild) : java.io.InputStream;
 	
 	/**
 	* @param name the name of the resource requested.
@@ -297,13 +297,13 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	*
 	* @return the requested resource as an InputStream
 	*/
-	@:overload public function getResource(name : String, bcc : java.beans.beancontext.BeanContextChild) : java.net.URL;
+	@:overload @:public public function getResource(name : String, bcc : java.beans.beancontext.BeanContextChild) : java.net.URL;
 	
 	/**
 	* Sets the new design time value for this <tt>BeanContext</tt>.
 	* @param dTime the new designTime value
 	*/
-	@:overload @:synchronized public function setDesignTime(dTime : Bool) : Void;
+	@:overload @:public @:synchronized public function setDesignTime(dTime : Bool) : Void;
 	
 	/**
 	* Reports whether or not this object is in
@@ -311,7 +311,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @return <tt>true</tt> if in design time mode,
 	* <tt>false</tt> if not
 	*/
-	@:overload @:synchronized public function isDesignTime() : Bool;
+	@:overload @:public @:synchronized public function isDesignTime() : Bool;
 	
 	/**
 	* Sets the locale of this BeanContext.
@@ -319,14 +319,14 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	*        no effect if newLocale is <CODE>null</CODE>.
 	* @throws PropertyVetoException if the new value is rejected
 	*/
-	@:overload @:synchronized public function setLocale(newLocale : java.util.Locale) : Void;
+	@:overload @:public @:synchronized public function setLocale(newLocale : java.util.Locale) : Void;
 	
 	/**
 	* Gets the locale for this <tt>BeanContext</tt>.
 	*
 	* @return the current Locale of the <tt>BeanContext</tt>
 	*/
-	@:overload @:synchronized public function getLocale() : java.util.Locale;
+	@:overload @:public @:synchronized public function getLocale() : java.util.Locale;
 	
 	/**
 	* <p>
@@ -340,17 +340,17 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* </p>
 	* @return <tt>true</tt> if the implementor needs a GUI
 	*/
-	@:overload @:synchronized public function needsGui() : Bool;
+	@:overload @:public @:synchronized public function needsGui() : Bool;
 	
 	/**
 	* notify this instance that it may no longer render a GUI.
 	*/
-	@:overload @:synchronized public function dontUseGui() : Void;
+	@:overload @:public @:synchronized public function dontUseGui() : Void;
 	
 	/**
 	* Notify this instance that it may now render a GUI
 	*/
-	@:overload @:synchronized public function okToUseGui() : Void;
+	@:overload @:public @:synchronized public function okToUseGui() : Void;
 	
 	/**
 	* Used to determine if the <tt>BeanContext</tt>
@@ -358,7 +358,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @return is this instance avoiding using its GUI?
 	* @see Visibility
 	*/
-	@:overload public function avoidingGui() : Bool;
+	@:overload @:public public function avoidingGui() : Bool;
 	
 	/**
 	* Is this <tt>BeanContext</tt> in the
@@ -366,14 +366,14 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @return if this <tt>BeanContext</tt> is
 	* currently being serialized
 	*/
-	@:overload public function isSerializing() : Bool;
+	@:overload @:public public function isSerializing() : Bool;
 	
 	/**
 	* Returns an iterator of all children
 	* of this <tt>BeanContext</tt>.
 	* @return an iterator for all the current BCSChild values
 	*/
-	@:overload private function bcsChildren() : java.util.Iterator<Dynamic>;
+	@:overload @:protected private function bcsChildren() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* called by writeObject after defaultWriteObject() but prior to
@@ -386,7 +386,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* This method should not however be used by subclasses to replace their
 	* own implementation (if any) of writeObject().
 	*/
-	@:overload private function bcsPreSerializationHook(oos : java.io.ObjectOutputStream) : Void;
+	@:overload @:protected private function bcsPreSerializationHook(oos : java.io.ObjectOutputStream) : Void;
 	
 	/**
 	* called by readObject after defaultReadObject() but prior to
@@ -399,14 +399,14 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* This method should not however be used by subclasses to replace their
 	* own implementation (if any) of readObject().
 	*/
-	@:overload private function bcsPreDeserializationHook(ois : java.io.ObjectInputStream) : Void;
+	@:overload @:protected private function bcsPreDeserializationHook(ois : java.io.ObjectInputStream) : Void;
 	
 	/**
 	* Called by readObject with the newly deserialized child and BCSChild.
 	* @param child the newly deserialized child
 	* @param bcsc the newly deserialized BCSChild
 	*/
-	@:overload private function childDeserializedHook(child : Dynamic, bcsc : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild) : Void;
+	@:overload @:protected private function childDeserializedHook(child : Dynamic, bcsc : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild) : Void;
 	
 	/**
 	* Used by writeObject to serialize a Collection.
@@ -415,14 +415,14 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @param coll the <tt>Collection</tt> to serialize
 	* @throws IOException if serialization failed
 	*/
-	@:overload @:final private function serialize(oos : java.io.ObjectOutputStream, coll : java.util.Collection<Dynamic>) : Void;
+	@:overload @:protected @:final private function serialize(oos : java.io.ObjectOutputStream, coll : java.util.Collection<Dynamic>) : Void;
 	
 	/**
 	* used by readObject to deserialize a collection.
 	* @param ois the ObjectInputStream to use
 	* @param coll the Collection
 	*/
-	@:overload @:final private function deserialize(ois : java.io.ObjectInputStream, coll : java.util.Collection<Dynamic>) : Void;
+	@:overload @:protected @:final private function deserialize(ois : java.io.ObjectInputStream, coll : java.util.Collection<Dynamic>) : Void;
 	
 	/**
 	* Used to serialize all children of
@@ -431,24 +431,24 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* to use during serialization
 	* @throws IOException if serialization failed
 	*/
-	@:overload @:final public function writeChildren(oos : java.io.ObjectOutputStream) : Void;
+	@:overload @:public @:final public function writeChildren(oos : java.io.ObjectOutputStream) : Void;
 	
 	/**
 	* When an instance of this class is used as a delegate for the
 	* implementation of the BeanContext protocols (and its subprotocols)
 	* there exists a 'chicken and egg' problem during deserialization
 	*/
-	@:overload @:final public function readChildren(ois : java.io.ObjectInputStream) : Void;
+	@:overload @:public @:final public function readChildren(ois : java.io.ObjectInputStream) : Void;
 	
 	/**
 	* subclasses may envelope to monitor veto child property changes.
 	*/
-	@:overload public function vetoableChange(pce : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function vetoableChange(pce : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* subclasses may envelope to monitor child property changes.
 	*/
-	@:overload public function propertyChange(pce : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(pce : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* <p>
@@ -459,7 +459,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	*
 	* @return true iff the child may be added to this BeanContext, otherwise false.
 	*/
-	@:overload private function validatePendingAdd(targetChild : Dynamic) : Bool;
+	@:overload @:protected private function validatePendingAdd(targetChild : Dynamic) : Bool;
 	
 	/**
 	* <p>
@@ -470,35 +470,35 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	*
 	* @return true iff the child may be removed from this BeanContext, otherwise false.
 	*/
-	@:overload private function validatePendingRemove(targetChild : Dynamic) : Bool;
+	@:overload @:protected private function validatePendingRemove(targetChild : Dynamic) : Bool;
 	
 	/**
 	* subclasses may override this method to simply extend add() semantics
 	* after the child has been added and before the event notification has
 	* occurred. The method is called with the child synchronized.
 	*/
-	@:overload private function childJustAddedHook(child : Dynamic, bcsc : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild) : Void;
+	@:overload @:protected private function childJustAddedHook(child : Dynamic, bcsc : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild) : Void;
 	
 	/**
 	* subclasses may override this method to simply extend remove() semantics
 	* after the child has been removed and before the event notification has
 	* occurred. The method is called with the child synchronized.
 	*/
-	@:overload private function childJustRemovedHook(child : Dynamic, bcsc : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild) : Void;
+	@:overload @:protected private function childJustRemovedHook(child : Dynamic, bcsc : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild) : Void;
 	
 	/**
 	* Gets the Component (if any) associated with the specified child.
 	* @param child the specified child
 	* @return the Component (if any) associated with the specified child.
 	*/
-	@:overload @:final private static function getChildVisibility(child : Dynamic) : java.beans.Visibility;
+	@:overload @:protected @:static @:final private static function getChildVisibility(child : Dynamic) : java.beans.Visibility;
 	
 	/**
 	* Gets the Serializable (if any) associated with the specified Child
 	* @param child the specified child
 	* @return the Serializable (if any) associated with the specified Child
 	*/
-	@:overload @:final private static function getChildSerializable(child : Dynamic) : java.io.Serializable;
+	@:overload @:protected @:static @:final private static function getChildSerializable(child : Dynamic) : java.io.Serializable;
 	
 	/**
 	* Gets the PropertyChangeListener
@@ -506,7 +506,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @param child the specified child
 	* @return the PropertyChangeListener (if any) of the specified child
 	*/
-	@:overload @:final private static function getChildPropertyChangeListener(child : Dynamic) : java.beans.PropertyChangeListener;
+	@:overload @:protected @:static @:final private static function getChildPropertyChangeListener(child : Dynamic) : java.beans.PropertyChangeListener;
 	
 	/**
 	* Gets the VetoableChangeListener
@@ -514,7 +514,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @param child the specified child
 	* @return the VetoableChangeListener (if any) of the specified child
 	*/
-	@:overload @:final private static function getChildVetoableChangeListener(child : Dynamic) : java.beans.VetoableChangeListener;
+	@:overload @:protected @:static @:final private static function getChildVetoableChangeListener(child : Dynamic) : java.beans.VetoableChangeListener;
 	
 	/**
 	* Gets the BeanContextMembershipListener
@@ -522,7 +522,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @param child the specified child
 	* @return the BeanContextMembershipListener (if any) of the specified child
 	*/
-	@:overload @:final private static function getChildBeanContextMembershipListener(child : Dynamic) : java.beans.beancontext.BeanContextMembershipListener;
+	@:overload @:protected @:static @:final private static function getChildBeanContextMembershipListener(child : Dynamic) : java.beans.beancontext.BeanContextMembershipListener;
 	
 	/**
 	* Gets the BeanContextChild (if any) of the specified child
@@ -530,17 +530,17 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @return  the BeanContextChild (if any) of the specified child
 	* @throws  IllegalArgumentException if child implements both BeanContextChild and BeanContextProxy
 	*/
-	@:overload @:final private static function getChildBeanContextChild(child : Dynamic) : java.beans.beancontext.BeanContextChild;
+	@:overload @:protected @:static @:final private static function getChildBeanContextChild(child : Dynamic) : java.beans.beancontext.BeanContextChild;
 	
 	/**
 	* Fire a BeanContextshipEvent on the BeanContextMembershipListener interface
 	*/
-	@:overload @:final private function fireChildrenAdded(bcme : java.beans.beancontext.BeanContextMembershipEvent) : Void;
+	@:overload @:protected @:final private function fireChildrenAdded(bcme : java.beans.beancontext.BeanContextMembershipEvent) : Void;
 	
 	/**
 	* Fire a BeanContextshipEvent on the BeanContextMembershipListener interface
 	*/
-	@:overload @:final private function fireChildrenRemoved(bcme : java.beans.beancontext.BeanContextMembershipEvent) : Void;
+	@:overload @:protected @:final private function fireChildrenRemoved(bcme : java.beans.beancontext.BeanContextMembershipEvent) : Void;
 	
 	/**
 	* protected method called from constructor and readObject to initialize
@@ -552,13 +552,13 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* subclasses may envelope this method to add their own initialization
 	* behavior
 	*/
-	@:overload @:synchronized private function initialize() : Void;
+	@:overload @:protected @:synchronized private function initialize() : Void;
 	
 	/**
 	* Gets a copy of the this BeanContext's children.
 	* @return a copy of the current nested children
 	*/
-	@:overload @:final private function copyChildren() : java.NativeArray<Dynamic>;
+	@:overload @:protected @:final private function copyChildren() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Tests to see if two class objects,
@@ -567,30 +567,30 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @param second the second object
 	* @return true if equal, false if not
 	*/
-	@:overload @:final private static function classEquals(first : Class<Dynamic>, second : Class<Dynamic>) : Bool;
+	@:overload @:protected @:static @:final private static function classEquals(first : Class<Dynamic>, second : Class<Dynamic>) : Bool;
 	
 	/**
 	* all accesses to the <code> protected HashMap children </code> field
 	* shall be synchronized on that object.
 	*/
-	@:transient private var children : java.util.HashMap<Dynamic, Dynamic>;
+	@:protected @:transient private var children : java.util.HashMap<Dynamic, Dynamic>;
 	
 	/**
 	* all accesses to the <code> protected ArrayList bcmListeners </code> field
 	* shall be synchronized on that object.
 	*/
-	@:transient private var bcmListeners : java.util.ArrayList<Dynamic>;
+	@:protected @:transient private var bcmListeners : java.util.ArrayList<Dynamic>;
 	
 	/**
 	* The current locale of this BeanContext.
 	*/
-	private var locale : java.util.Locale;
+	@:protected private var locale : java.util.Locale;
 	
 	/**
 	* A <tt>boolean</tt> indicating whether or not
 	* this object is currently in design time mode.
 	*/
-	private var designTime : Bool;
+	@:protected private var designTime : Bool;
 	
 	
 }
@@ -600,11 +600,11 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 */
 @:native('java$beans$beancontext$BeanContextSupport$BCSIterator') extern class BeanContextSupport_BCSIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

@@ -28,12 +28,12 @@ extern interface ProgressMeteringPolicy
 	/**
 	* Return true if metering should be turned on for a particular network input stream.
 	*/
-	@:overload public function shouldMeterInput(url : java.net.URL, method : String) : Bool;
+	@:overload @:public public function shouldMeterInput(url : java.net.URL, method : String) : Bool;
 	
 	/**
 	* Return update notification threshold.
 	*/
-	@:overload public function getProgressUpdateThreshold() : Int;
+	@:overload @:public public function getProgressUpdateThreshold() : Int;
 	
 	
 }

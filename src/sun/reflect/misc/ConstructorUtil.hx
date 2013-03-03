@@ -25,9 +25,9 @@ package sun.reflect.misc;
 */
 extern class ConstructorUtil
 {
-	@:overload public static function getConstructor(cls : Class<Dynamic>, params : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Constructor<Dynamic>;
+	@:overload @:public @:static public static function getConstructor(cls : Class<Dynamic>, params : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Constructor<Dynamic>;
 	
-	@:overload public static function getConstructors(cls : Class<Dynamic>) : java.NativeArray<java.lang.reflect.Constructor<Dynamic>>;
+	@:overload @:public @:static public static function getConstructors(cls : Class<Dynamic>) : java.NativeArray<java.lang.reflect.Constructor<Dynamic>>;
 	
 	
 }

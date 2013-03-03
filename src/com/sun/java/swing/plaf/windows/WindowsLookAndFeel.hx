@@ -39,17 +39,17 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 {
-	@:overload public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
-	@:overload public function getDescription() : String;
+	@:overload @:public override public function getDescription() : String;
 	
-	@:overload public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
-	@:overload public function isNativeLookAndFeel() : Bool;
+	@:overload @:public override public function isNativeLookAndFeel() : Bool;
 	
-	@:overload public function isSupportedLookAndFeel() : Bool;
+	@:overload @:public override public function isSupportedLookAndFeel() : Bool;
 	
-	@:overload public function initialize() : Void;
+	@:overload @:public override public function initialize() : Void;
 	
 	/**
 	* Initialize the uiClassID to BasicComponentUI mapping.
@@ -60,7 +60,7 @@ extern class WindowsLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see BasicLookAndFeel#getDefaults
 	*/
-	@:overload private function initClassDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload @:protected override private function initClassDefaults(table : javax.swing.UIDefaults) : Void;
 	
 	/**
 	* Load the SystemColors into the defaults table.  The keys
@@ -70,11 +70,11 @@ extern class WindowsLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* values, otherwise we create color objects whose values match
 	* the defaults Windows95 colors.
 	*/
-	@:overload private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload @:protected override private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
 	
-	@:overload private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload @:protected override private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
 	
-	@:overload public function uninitialize() : Void;
+	@:overload @:public override public function uninitialize() : Void;
 	
 	/**
 	* Sets the state of the hide mnemonic flag. This flag is used by the
@@ -85,7 +85,7 @@ extern class WindowsLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* @param hide true if mnemonics should be hidden
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function setMnemonicHidden(hide : Bool) : Void;
+	@:require(java4) @:overload @:public @:static public static function setMnemonicHidden(hide : Bool) : Void;
 	
 	/**
 	* Gets the state of the hide mnemonic flag. This only has meaning
@@ -95,7 +95,7 @@ extern class WindowsLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* @see #setMnemonicHidden
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function isMnemonicHidden() : Bool;
+	@:require(java4) @:overload @:public @:static public static function isMnemonicHidden() : Bool;
 	
 	/**
 	* Gets the state of the flag which indicates if the old Windows
@@ -107,7 +107,7 @@ extern class WindowsLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*         be rendered
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function isClassicWindows() : Bool;
+	@:require(java4) @:overload @:public @:static public static function isClassicWindows() : Bool;
 	
 	/**
 	* <p>
@@ -130,12 +130,12 @@ extern class WindowsLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see javax.swing.LookAndFeel#provideErrorFeedback
 	*/
-	@:overload public function provideErrorFeedback(component : java.awt.Component) : Void;
+	@:overload @:public override public function provideErrorFeedback(component : java.awt.Component) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getLayoutStyle() : javax.swing.LayoutStyle;
+	@:overload @:public override public function getLayoutStyle() : javax.swing.LayoutStyle;
 	
 	/**
 	* Returns an <code>Action</code>.
@@ -156,14 +156,14 @@ extern class WindowsLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* @see #playSound(Action)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function createAudioAction(key : Dynamic) : javax.swing.Action;
+	@:require(java4) @:overload @:protected override private function createAudioAction(key : Dynamic) : javax.swing.Action;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getDisabledIcon(component : javax.swing.JComponent, icon : javax.swing.Icon) : javax.swing.Icon;
+	@:require(java6) @:overload @:public override public function getDisabledIcon(component : javax.swing.JComponent, icon : javax.swing.Icon) : javax.swing.Icon;
 	
 	
 }
@@ -184,9 +184,9 @@ extern class WindowsLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* We use the String as the name of the Action and as a pointer to
 	* the underlying OSes audio resource.
 	*/
-	@:overload public function new(name : String, resource : String) : Void;
+	@:overload @:public public function new(name : String, resource : String) : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -196,7 +196,7 @@ extern class WindowsLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 */
 @:native('com$sun$java$swing$plaf$windows$WindowsLookAndFeel$LazyWindowsIcon') @:internal extern class WindowsLookAndFeel_LazyWindowsIcon implements javax.swing.UIDefaults.UIDefaults_LazyValue
 {
-	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
@@ -206,7 +206,7 @@ extern class WindowsLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 */
 @:native('com$sun$java$swing$plaf$windows$WindowsLookAndFeel$ActiveWindowsIcon') @:internal extern class WindowsLookAndFeel_ActiveWindowsIcon implements javax.swing.UIDefaults.UIDefaults_ActiveValue
 {
-	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
@@ -220,21 +220,21 @@ extern class WindowsLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* may use the Component argument to get properties useful for
 	* painting, e.g. the foreground or background color.
 	*/
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
 	/**
 	* Returns the icon's width.
 	*
 	* @return an int specifying the fixed width of the icon.
 	*/
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
 	/**
 	* Returns the icon's height.
 	*
 	* @return an int specifying the fixed height of the icon.
 	*/
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
@@ -244,9 +244,9 @@ extern class WindowsLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 */
 @:native('com$sun$java$swing$plaf$windows$WindowsLookAndFeel$WindowsFontProperty') @:internal extern class WindowsLookAndFeel_WindowsFontProperty extends com.sun.java.swing.plaf.windows.DesktopProperty
 {
-	@:overload public function invalidate(laf : javax.swing.LookAndFeel) : Void;
+	@:overload @:public override public function invalidate(laf : javax.swing.LookAndFeel) : Void;
 	
-	@:overload private function configureValue(value : Dynamic) : Dynamic;
+	@:overload @:protected override private function configureValue(value : Dynamic) : Dynamic;
 	
 	
 }
@@ -256,7 +256,7 @@ extern class WindowsLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 */
 @:native('com$sun$java$swing$plaf$windows$WindowsLookAndFeel$WindowsFontSizeProperty') @:internal extern class WindowsLookAndFeel_WindowsFontSizeProperty extends com.sun.java.swing.plaf.windows.DesktopProperty
 {
-	@:overload private function configureValue(value : Dynamic) : Dynamic;
+	@:overload @:protected override private function configureValue(value : Dynamic) : Dynamic;
 	
 	
 }
@@ -266,25 +266,27 @@ extern class WindowsLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 */
 @:native('com$sun$java$swing$plaf$windows$WindowsLookAndFeel$XPValue') @:internal extern class WindowsLookAndFeel_XPValue implements javax.swing.UIDefaults.UIDefaults_ActiveValue
 {
-	private var classicValue : Dynamic;
+	@:protected private var classicValue : Dynamic;
 	
-	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:protected private var xpValue : Dynamic;
 	
-	@:overload private function getXPValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
-	@:overload private function getClassicValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:protected private function getXPValue(table : javax.swing.UIDefaults) : Dynamic;
+	
+	@:overload @:protected private function getClassicValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsLookAndFeel$XPBorderValue') @:internal extern class WindowsLookAndFeel_XPBorderValue extends com.sun.java.swing.plaf.windows.WindowsLookAndFeel.WindowsLookAndFeel_XPValue
 {
-	@:overload override public function getXPValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public override public function getXPValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsLookAndFeel$XPColorValue') @:internal extern class WindowsLookAndFeel_XPColorValue extends com.sun.java.swing.plaf.windows.WindowsLookAndFeel.WindowsLookAndFeel_XPValue
 {
-	@:overload override public function getXPValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public override public function getXPValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
@@ -294,37 +296,37 @@ extern class WindowsLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsLookAndFeel$XPDLUValue') @:internal extern class WindowsLookAndFeel_XPDLUValue extends com.sun.java.swing.plaf.windows.WindowsLookAndFeel.WindowsLookAndFeel_XPValue
 {
-	@:overload override public function getXPValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public override public function getXPValue(table : javax.swing.UIDefaults) : Dynamic;
 	
-	@:overload override public function getClassicValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public override public function getClassicValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsLookAndFeel$TriggerDesktopProperty') @:internal extern class WindowsLookAndFeel_TriggerDesktopProperty extends com.sun.java.swing.plaf.windows.DesktopProperty
 {
-	@:overload private function updateUI() : Void;
+	@:overload @:protected override private function updateUI() : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsLookAndFeel$FontDesktopProperty') @:internal extern class WindowsLookAndFeel_FontDesktopProperty extends com.sun.java.swing.plaf.windows.WindowsLookAndFeel.WindowsLookAndFeel_TriggerDesktopProperty
 {
-	@:overload override private function updateUI() : Void;
+	@:overload @:protected override private function updateUI() : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsLookAndFeel$WindowsLayoutStyle') @:internal extern class WindowsLookAndFeel_WindowsLayoutStyle extends sun.swing.DefaultLayoutStyle
 {
-	@:overload public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : javax.swing.LayoutStyle.LayoutStyle_ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
+	@:overload @:public override public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : javax.swing.LayoutStyle.LayoutStyle_ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
 	
-	@:overload public function getContainerGap(component : javax.swing.JComponent, position : Int, parent : java.awt.Container) : Int;
+	@:overload @:public override public function getContainerGap(component : javax.swing.JComponent, position : Int, parent : java.awt.Container) : Int;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsLookAndFeel$RGBGrayFilter') @:internal extern class WindowsLookAndFeel_RGBGrayFilter extends java.awt.image.RGBImageFilter
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function filterRGB(x : Int, y : Int, rgb : Int) : Int;
+	@:overload @:public override public function filterRGB(x : Int, y : Int, rgb : Int) : Int;
 	
 	
 }

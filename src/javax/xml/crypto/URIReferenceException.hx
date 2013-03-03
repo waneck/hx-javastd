@@ -32,7 +32,7 @@ extern class URIReferenceException extends java.lang.Exception
 	* Constructs a new <code>URIReferenceException</code> with
 	* <code>null</code> as its detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>URIReferenceException</code> with the specified
@@ -40,7 +40,7 @@ extern class URIReferenceException extends java.lang.Exception
 	*
 	* @param message the detail message
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructs a new <code>URIReferenceException</code> with the
@@ -53,7 +53,7 @@ extern class URIReferenceException extends java.lang.Exception
 	* @param cause the cause (A <tt>null</tt> value is permitted, and
 	*        indicates that the cause is nonexistent or unknown.)
 	*/
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a new <code>URIReferenceException</code> with the
@@ -70,7 +70,7 @@ extern class URIReferenceException extends java.lang.Exception
 	* @throws NullPointerException if <code>uriReference</code> is
 	*    <code>null</code>
 	*/
-	@:overload public function new(message : String, cause : java.lang.Throwable, uriReference : javax.xml.crypto.URIReference) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable, uriReference : javax.xml.crypto.URIReference) : Void;
 	
 	/**
 	* Constructs a new <code>URIReferenceException</code> with the specified
@@ -81,7 +81,7 @@ extern class URIReferenceException extends java.lang.Exception
 	* @param cause the cause (A <tt>null</tt> value is permitted, and
 	*        indicates that the cause is nonexistent or unknown.)
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Returns the <code>URIReference</code> that was being dereferenced
@@ -90,7 +90,7 @@ extern class URIReferenceException extends java.lang.Exception
 	* @return the <code>URIReference</code> that was being dereferenced
 	* when the exception was thrown, or <code>null</code> if not specified
 	*/
-	@:overload public function getURIReference() : javax.xml.crypto.URIReference;
+	@:overload @:public public function getURIReference() : javax.xml.crypto.URIReference;
 	
 	/**
 	* Returns the cause of this <code>URIReferenceException</code> or
@@ -101,13 +101,13 @@ extern class URIReferenceException extends java.lang.Exception
 	* @return the cause of this <code>URIReferenceException</code> or
 	*    <code>null</code> if the cause is nonexistent or unknown.
 	*/
-	@:overload public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	/**
 	* Prints this <code>URIReferenceException</code>, its backtrace and
 	* the cause's backtrace to the standard error stream.
 	*/
-	@:overload public function printStackTrace() : Void;
+	@:overload @:public override public function printStackTrace() : Void;
 	
 	/**
 	* Prints this <code>URIReferenceException</code>, its backtrace and
@@ -115,7 +115,7 @@ extern class URIReferenceException extends java.lang.Exception
 	*
 	* @param s <code>PrintStream</code> to use for output
 	*/
-	@:overload public function printStackTrace(s : java.io.PrintStream) : Void;
+	@:overload @:public override public function printStackTrace(s : java.io.PrintStream) : Void;
 	
 	/**
 	* Prints this <code>URIReferenceException</code>, its backtrace and
@@ -123,7 +123,7 @@ extern class URIReferenceException extends java.lang.Exception
 	*
 	* @param s <code>PrintWriter</code> to use for output
 	*/
-	@:overload public function printStackTrace(s : java.io.PrintWriter) : Void;
+	@:overload @:public override public function printStackTrace(s : java.io.PrintWriter) : Void;
 	
 	
 }

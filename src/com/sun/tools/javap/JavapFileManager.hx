@@ -25,7 +25,7 @@ package com.sun.tools.javap;
 */
 extern class JavapFileManager extends com.sun.tools.javac.file.JavacFileManager
 {
-	@:overload public static function create(dl : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, log : java.io.PrintWriter) : com.sun.tools.javap.JavapFileManager;
+	@:overload @:public @:static public static function create(dl : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, log : java.io.PrintWriter) : com.sun.tools.javap.JavapFileManager;
 	
 	
 }

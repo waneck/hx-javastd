@@ -31,59 +31,59 @@ extern class SynthTabbedPaneUI extends javax.swing.plaf.basic.BasicTabbedPaneUI 
 	* @param c component to create UI object for
 	* @return the UI object
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installListeners() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallDefaults() : Void;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function createScrollButton(direction : Int) : javax.swing.JButton;
+	@:overload @:protected override private function createScrollButton(direction : Int) : javax.swing.JButton;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* @inheritDoc
 	*
 	* Overridden to keep track of whether the selected tab is also pressed.
 	*/
-	@:overload override private function createMouseListener() : java.awt.event.MouseListener;
+	@:overload @:protected override private function createMouseListener() : java.awt.event.MouseListener;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function getTabLabelShiftX(tabPlacement : Int, tabIndex : Int, isSelected : Bool) : Int;
+	@:overload @:protected override private function getTabLabelShiftX(tabPlacement : Int, tabIndex : Int, isSelected : Bool) : Int;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function getTabLabelShiftY(tabPlacement : Int, tabIndex : Int, isSelected : Bool) : Int;
+	@:overload @:protected override private function getTabLabelShiftY(tabPlacement : Int, tabIndex : Int, isSelected : Bool) : Int;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -97,17 +97,17 @@ extern class SynthTabbedPaneUI extends javax.swing.plaf.basic.BasicTabbedPaneUI 
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function getBaseline(tab : Int) : Int;
+	@:overload @:protected override private function getBaseline(tab : Int) : Int;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -118,7 +118,7 @@ extern class SynthTabbedPaneUI extends javax.swing.plaf.basic.BasicTabbedPaneUI 
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component.
@@ -127,39 +127,39 @@ extern class SynthTabbedPaneUI extends javax.swing.plaf.basic.BasicTabbedPaneUI 
 	* @param g the {@code Graphics} object used for painting
 	* @see #update(Graphics,JComponent)
 	*/
-	@:overload private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
-	@:overload override private function paintTabArea(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int) : Void;
-	
-	/**
-	* @inheritDoc
-	*/
-	@:overload override private function setRolloverTab(index : Int) : Void;
+	@:overload @:protected override private function paintTabArea(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function calculateMaxTabHeight(tabPlacement : Int) : Int;
+	@:overload @:protected override private function setRolloverTab(index : Int) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function calculateTabWidth(tabPlacement : Int, tabIndex : Int, metrics : java.awt.FontMetrics) : Int;
+	@:overload @:protected override private function calculateMaxTabHeight(tabPlacement : Int) : Int;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function calculateMaxTabWidth(tabPlacement : Int) : Int;
+	@:overload @:protected override private function calculateTabWidth(tabPlacement : Int, tabIndex : Int, metrics : java.awt.FontMetrics) : Int;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function getTabInsets(tabPlacement : Int, tabIndex : Int) : java.awt.Insets;
+	@:overload @:protected override private function calculateMaxTabWidth(tabPlacement : Int) : Int;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function getFontMetrics() : java.awt.FontMetrics;
+	@:overload @:protected override private function getTabInsets(tabPlacement : Int, tabIndex : Int) : java.awt.Insets;
+	
+	/**
+	* @inheritDoc
+	*/
+	@:overload @:protected override private function getFontMetrics() : java.awt.FontMetrics;
 	
 	/**
 	* @inheritDoc
@@ -167,13 +167,13 @@ extern class SynthTabbedPaneUI extends javax.swing.plaf.basic.BasicTabbedPaneUI 
 	* Overridden to create a TabbedPaneLayout subclass which takes into
 	* account tabOverlap.
 	*/
-	@:overload override private function createLayoutManager() : java.awt.LayoutManager;
+	@:overload @:protected override private function createLayoutManager() : java.awt.LayoutManager;
 	
 	
 }
 @:native('javax$swing$plaf$synth$SynthTabbedPaneUI$SynthScrollableTabButton') @:internal extern class SynthTabbedPaneUI_SynthScrollableTabButton extends javax.swing.plaf.synth.SynthArrowButton implements javax.swing.plaf.UIResource
 {
-	@:overload public function new(direction : Int) : Void;
+	@:overload @:public public function new(direction : Int) : Void;
 	
 	
 }

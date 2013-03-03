@@ -25,23 +25,23 @@ package com.sun.tools.corba.se.logutil;
 */
 extern class IndentingPrintWriter extends java.io.PrintWriter
 {
-	@:overload public function printMsg(msg : String, data : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function printMsg(msg : String, data : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function new(out : java.io.Writer) : Void;
+	@:overload @:public public function new(out : java.io.Writer) : Void;
 	
-	@:overload public function new(out : java.io.Writer, autoFlush : Bool) : Void;
+	@:overload @:public public function new(out : java.io.Writer, autoFlush : Bool) : Void;
 	
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
-	@:overload public function new(out : java.io.OutputStream, autoFlush : Bool) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, autoFlush : Bool) : Void;
 	
-	@:overload public function setIndentWidth(indentWidth : Int) : Void;
+	@:overload @:public public function setIndentWidth(indentWidth : Int) : Void;
 	
-	@:overload public function indent() : Void;
+	@:overload @:public public function indent() : Void;
 	
-	@:overload public function undent() : Void;
+	@:overload @:public public function undent() : Void;
 	
-	@:overload override public function println() : Void;
+	@:overload @:public override public function println() : Void;
 	
 	
 }

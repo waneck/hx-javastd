@@ -48,7 +48,7 @@ extern class PropertyResourceBundle extends java.util.ResourceBundle
 	* @throws IOException if an I/O error occurs
 	* @throws NullPointerException if <code>stream</code> is null
 	*/
-	@:overload public function new(stream : java.io.InputStream) : Void;
+	@:overload @:public public function new(stream : java.io.InputStream) : Void;
 	
 	/**
 	* Creates a property resource bundle from a {@link java.io.Reader
@@ -62,9 +62,9 @@ extern class PropertyResourceBundle extends java.util.ResourceBundle
 	* @throws NullPointerException if <code>reader</code> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function new(reader : java.io.Reader) : Void;
 	
-	@:overload override public function handleGetObject(key : String) : Dynamic;
+	@:overload @:public override public function handleGetObject(key : String) : Dynamic;
 	
 	/**
 	* Returns an <code>Enumeration</code> of the keys contained in
@@ -74,7 +74,7 @@ extern class PropertyResourceBundle extends java.util.ResourceBundle
 	*         this <code>ResourceBundle</code> and its parent bundles.
 	* @see #keySet()
 	*/
-	@:overload override public function getKeys() : java.util.Enumeration<String>;
+	@:overload @:public override public function getKeys() : java.util.Enumeration<String>;
 	
 	/**
 	* Returns a <code>Set</code> of the keys contained
@@ -85,7 +85,7 @@ extern class PropertyResourceBundle extends java.util.ResourceBundle
 	* @since 1.6
 	* @see #keySet()
 	*/
-	@:require(java6) @:overload override private function handleKeySet() : java.util.Set<String>;
+	@:require(java6) @:overload @:protected override private function handleKeySet() : java.util.Set<String>;
 	
 	
 }

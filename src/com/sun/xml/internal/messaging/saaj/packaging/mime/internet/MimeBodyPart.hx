@@ -33,21 +33,21 @@ extern class MimeBodyPart
 	* @see #getDisposition
 	* @see #setDisposition
 	*/
-	public static var ATTACHMENT(default, null) : String;
+	@:public @:static @:final public static var ATTACHMENT(default, null) : String;
 	
 	/**
 	* This part should be presented inline.
 	* @see #getDisposition
 	* @see #setDisposition
 	*/
-	public static var INLINE(default, null) : String;
+	@:public @:static @:final public static var INLINE(default, null) : String;
 	
 	/**
 	* An empty MimeBodyPart object is created.
 	* This body part maybe filled in by a client constructing a multipart
 	* message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a MimeBodyPart by reading and parsing the data from
@@ -64,7 +64,7 @@ extern class MimeBodyPart
 	*
 	* @param   is      the body part Input Stream
 	*/
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	/**
 	* Constructs a MimeBodyPart using the given header and
@@ -75,17 +75,17 @@ extern class MimeBodyPart
 	* @param   headers The header of this part
 	* @param   content bytes representing the body of this part.
 	*/
-	@:overload public function new(headers : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.InternetHeaders, content : java.NativeArray<java.StdTypes.Int8>, len : Int) : Void;
+	@:overload @:public public function new(headers : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.InternetHeaders, content : java.NativeArray<java.StdTypes.Int8>, len : Int) : Void;
 	
-	@:overload public function new(headers : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.InternetHeaders, content : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : Void;
+	@:overload @:public public function new(headers : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.InternetHeaders, content : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : Void;
 	
-	@:overload public function new(part : com.sun.xml.internal.org.jvnet.mimepull.MIMEPart) : Void;
+	@:overload @:public public function new(part : com.sun.xml.internal.org.jvnet.mimepull.MIMEPart) : Void;
 	
 	/**
 	* Return the containing <code>MimeMultipart</code> object,
 	* or <code>null</code> if not known.
 	*/
-	@:overload public function getParent() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeMultipart;
+	@:overload @:public public function getParent() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeMultipart;
 	
 	/**
 	* Set the parent of this <code>MimeBodyPart</code> to be the specified
@@ -95,7 +95,7 @@ extern class MimeBodyPart
 	* from its containing <code>MimeMultipart</code>.
 	* @since   JavaMail 1.1
 	*/
-	@:require(java1) @:overload public function setParent(parent : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeMultipart) : Void;
+	@:require(java1) @:overload @:public public function setParent(parent : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeMultipart) : Void;
 	
 	/**
 	* Return the size of the content of this body part in bytes.
@@ -113,7 +113,7 @@ extern class MimeBodyPart
 	*
 	* @return size in bytes, or -1 if not known
 	*/
-	@:overload public function getSize() : Int;
+	@:overload @:public public function getSize() : Int;
 	
 	/**
 	* Return the number of lines for the content of this MimeBodyPart.
@@ -127,7 +127,7 @@ extern class MimeBodyPart
 	*
 	* @return number of lines, or -1 if not known
 	*/
-	@:overload public function getLineCount() : Int;
+	@:overload @:public public function getLineCount() : Int;
 	
 	/**
 	* Returns the value of the RFC 822 "Content-Type" header field.
@@ -140,7 +140,7 @@ extern class MimeBodyPart
 	*
 	* @return  Content-Type of this body part
 	*/
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
 	/**
 	* Is this MimeBodyPart of the specified MIME type?  This method
@@ -156,7 +156,7 @@ extern class MimeBodyPart
 	* special character '*', then the subtype is ignored during the
 	* comparison.
 	*/
-	@:overload public function isMimeType(mimeType : String) : Bool;
+	@:overload @:public public function isMimeType(mimeType : String) : Bool;
 	
 	/**
 	* Returns the value of the "Content-Disposition" header field.
@@ -171,7 +171,7 @@ extern class MimeBodyPart
 	*
 	* @see #headers
 	*/
-	@:overload public function getDisposition() : String;
+	@:overload @:public public function getDisposition() : String;
 	
 	/**
 	* Set the "Content-Disposition" header field of this body part.
@@ -181,7 +181,7 @@ extern class MimeBodyPart
 	* @exception       IllegalStateException if this body part is
 	*                  obtained from a READ_ONLY folder.
 	*/
-	@:overload public function setDisposition(disposition : String) : Void;
+	@:overload @:public public function setDisposition(disposition : String) : Void;
 	
 	/**
 	* Returns the content transfer encoding from the
@@ -194,7 +194,7 @@ extern class MimeBodyPart
 	*
 	* @see #headers
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	* Returns the value of the "Content-ID" header field. Returns
@@ -204,7 +204,7 @@ extern class MimeBodyPart
 	* This implementation uses <code>getHeader(name)</code>
 	* to obtain the requisite header field.
 	*/
-	@:overload public function getContentID() : String;
+	@:overload @:public public function getContentID() : String;
 	
 	/**
 	* Set the "Content-ID" header field of this body part.
@@ -215,7 +215,7 @@ extern class MimeBodyPart
 	*                  obtained from a READ_ONLY folder.
 	* @since           JavaMail 1.3
 	*/
-	@:require(java3) @:overload public function setContentID(cid : String) : Void;
+	@:require(java3) @:overload @:public public function setContentID(cid : String) : Void;
 	
 	/**
 	* Return the value of the "Content-MD5" header field. Returns
@@ -225,7 +225,7 @@ extern class MimeBodyPart
 	* This implementation uses <code>getHeader(name)</code>
 	* to obtain the requisite header field.
 	*/
-	@:overload public function getContentMD5() : String;
+	@:overload @:public public function getContentMD5() : String;
 	
 	/**
 	* Set the "Content-MD5" header field of this body part.
@@ -233,7 +233,7 @@ extern class MimeBodyPart
 	* @exception       IllegalStateException if this body part is
 	*                  obtained from a READ_ONLY folder.
 	*/
-	@:overload public function setContentMD5(md5 : String) : Void;
+	@:overload @:public public function setContentMD5(md5 : String) : Void;
 	
 	/**
 	* Get the languages specified in the Content-Language header
@@ -244,7 +244,7 @@ extern class MimeBodyPart
 	* This implementation uses <code>getHeader(name)</code>
 	* to obtain the requisite header field.
 	*/
-	@:overload public function getContentLanguage() : java.NativeArray<String>;
+	@:overload @:public public function getContentLanguage() : java.NativeArray<String>;
 	
 	/**
 	* Set the Content-Language header of this MimeBodyPart. The
@@ -252,7 +252,7 @@ extern class MimeBodyPart
 	*
 	* @param languages         array of language tags
 	*/
-	@:overload public function setContentLanguage(languages : java.NativeArray<String>) : Void;
+	@:overload @:public public function setContentLanguage(languages : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns the "Content-Description" header field of this body part.
@@ -269,7 +269,7 @@ extern class MimeBodyPart
 	*
 	* @return  content description
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	/**
 	* Set the "Content-Description" header field for this body part.
@@ -294,7 +294,7 @@ extern class MimeBodyPart
 	*                  in the exception chain if the charset
 	*                  conversion fails.
 	*/
-	@:overload public function setDescription(description : String) : Void;
+	@:overload @:public public function setDescription(description : String) : Void;
 	
 	/**
 	* Set the "Content-Description" header field for this body part.
@@ -320,7 +320,7 @@ extern class MimeBodyPart
 	*                  in the exception chain if the charset
 	*                  conversion fails.
 	*/
-	@:overload public function setDescription(description : String, charset : String) : Void;
+	@:overload @:public public function setDescription(description : String, charset : String) : Void;
 	
 	/**
 	* Get the filename associated with this body part. <p>
@@ -333,7 +333,7 @@ extern class MimeBodyPart
 	*
 	* @return  filename
 	*/
-	@:overload public function getFileName() : String;
+	@:overload @:public public function getFileName() : String;
 	
 	/**
 	* Set the filename associated with this body part, if possible. <p>
@@ -344,7 +344,7 @@ extern class MimeBodyPart
 	* @exception       IllegalStateException if this body part is
 	*                  obtained from a READ_ONLY folder.
 	*/
-	@:overload public function setFileName(filename : String) : Void;
+	@:overload @:public public function setFileName(filename : String) : Void;
 	
 	/**
 	* Return a decoded input stream for this body part's "content". <p>
@@ -360,7 +360,7 @@ extern class MimeBodyPart
 	* @see     #getContentStream
 	* @see     DataHandler#getInputStream
 	*/
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Return an InputStream to the raw data with any Content-Transfer-Encoding
@@ -377,7 +377,7 @@ extern class MimeBodyPart
 	* @see     #getContentStream
 	* @since   JavaMail 1.2
 	*/
-	@:require(java2) @:overload public function getRawInputStream() : java.io.InputStream;
+	@:require(java2) @:overload @:public public function getRawInputStream() : java.io.InputStream;
 	
 	/**
 	* Return a DataHandler for this body part's content. <p>
@@ -385,7 +385,7 @@ extern class MimeBodyPart
 	* The implementation provided here works just like the
 	* the implementation in MimeMessage.
 	*/
-	@:overload public function getDataHandler() : javax.activation.DataHandler;
+	@:overload @:public public function getDataHandler() : javax.activation.DataHandler;
 	
 	/**
 	* Return the content as a java object. The type of the object
@@ -404,7 +404,7 @@ extern class MimeBodyPart
 	*                  DataHandler. Refer to the documentation for
 	*                  javax.activation.DataHandler for more details.
 	*/
-	@:overload public function getContent() : Dynamic;
+	@:overload @:public public function getContent() : Dynamic;
 	
 	/**
 	* This method provides the mechanism to set this body part's content.
@@ -414,7 +414,7 @@ extern class MimeBodyPart
 	* @exception       IllegalStateException if this body part is
 	*                  obtained from a READ_ONLY folder.
 	*/
-	@:overload public function setDataHandler(dh : javax.activation.DataHandler) : Void;
+	@:overload @:public public function setDataHandler(dh : javax.activation.DataHandler) : Void;
 	
 	/**
 	* A convenience method for setting this body part's content. <p>
@@ -431,7 +431,7 @@ extern class MimeBodyPart
 	* @exception       IllegalStateException if this body part is
 	*                  obtained from a READ_ONLY folder.
 	*/
-	@:overload public function setContent(o : Dynamic, type : String) : Void;
+	@:overload @:public public function setContent(o : Dynamic, type : String) : Void;
 	
 	/**
 	* Convenience method that sets the given String as this
@@ -449,7 +449,7 @@ extern class MimeBodyPart
 	*
 	* @see     #setText(String text, String charset)
 	*/
-	@:overload public function setText(text : String) : Void;
+	@:overload @:public public function setText(text : String) : Void;
 	
 	/**
 	* Convenience method that sets the given String as this part's
@@ -458,7 +458,7 @@ extern class MimeBodyPart
 	* using the specified charset. The charset is also used to set
 	* the "charset" parameter.
 	*/
-	@:overload public function setText(text : String, charset : String) : Void;
+	@:overload @:public public function setText(text : String, charset : String) : Void;
 	
 	/**
 	* This method sets the body part's content to a MimeMultipart object.
@@ -467,7 +467,7 @@ extern class MimeBodyPart
 	* @exception       IllegalStateException if this body part is
 	*                  obtained from a READ_ONLY folder.
 	*/
-	@:overload public function setContent(mp : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeMultipart) : Void;
+	@:overload @:public public function setContent(mp : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeMultipart) : Void;
 	
 	/**
 	* Output the body part as an RFC 822 format stream.
@@ -478,7 +478,7 @@ extern class MimeBodyPart
 	*                          by the javax.activation layer.
 	* @see DataHandler#writeTo
 	*/
-	@:overload public function writeTo(os : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(os : java.io.OutputStream) : Void;
 	
 	/**
 	* Get all the headers for this header_name. Note that certain
@@ -489,7 +489,7 @@ extern class MimeBodyPart
 	* @return  array of headers
 	* @see     MimeUtility
 	*/
-	@:overload public function getHeader(name : String) : java.NativeArray<String>;
+	@:overload @:public public function getHeader(name : String) : java.NativeArray<String>;
 	
 	/**
 	* Get all the headers for this header name, returned as a single
@@ -502,7 +502,7 @@ extern class MimeBodyPart
 	* @return                  the value fields for all headers with
 	*                          this name
 	*/
-	@:overload public function getHeader(name : String, delimiter : String) : String;
+	@:overload @:public public function getHeader(name : String, delimiter : String) : String;
 	
 	/**
 	* Set the value for this header_name. Replaces all existing
@@ -515,7 +515,7 @@ extern class MimeBodyPart
 	* @param   value   header value
 	* @see     MimeUtility
 	*/
-	@:overload public function setHeader(name : String, value : String) : Void;
+	@:overload @:public public function setHeader(name : String, value : String) : Void;
 	
 	/**
 	* Add this value to the existing values for this header_name.
@@ -527,23 +527,23 @@ extern class MimeBodyPart
 	* @param   value   header value
 	* @see     MimeUtility
 	*/
-	@:overload public function addHeader(name : String, value : String) : Void;
+	@:overload @:public public function addHeader(name : String, value : String) : Void;
 	
 	/**
 	* Remove all headers with this name.
 	*/
-	@:overload public function removeHeader(name : String) : Void;
+	@:overload @:public public function removeHeader(name : String) : Void;
 	
 	/**
 	* Return all the headers from this Message as an Enumeration of
 	* Header objects.
 	*/
-	@:overload public function getAllHeaders() : com.sun.xml.internal.messaging.saaj.util.FinalArrayList;
+	@:overload @:public public function getAllHeaders() : com.sun.xml.internal.messaging.saaj.util.FinalArrayList;
 	
 	/**
 	* Add a header line to this body part
 	*/
-	@:overload public function addHeaderLine(line : String) : Void;
+	@:overload @:public public function addHeaderLine(line : String) : Void;
 	
 	/**
 	* Examine the content of this body part and update the appropriate
@@ -567,7 +567,7 @@ extern class MimeBodyPart
 	* In both cases this method is typically called by the
 	* <code>Message.saveChanges</code> method.
 	*/
-	@:overload private function updateHeaders() : Void;
+	@:overload @:protected private function updateHeaders() : Void;
 	
 	
 }

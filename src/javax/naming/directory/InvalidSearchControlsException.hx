@@ -29,7 +29,7 @@ extern class InvalidSearchControlsException extends javax.naming.NamingException
 	* Constructs a new instance of InvalidSearchControlsException.
 	* All fields are set to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new instance of InvalidSearchControlsException
@@ -37,7 +37,7 @@ extern class InvalidSearchControlsException extends javax.naming.NamingException
 	* @param msg Detail about this exception. Can be null.
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

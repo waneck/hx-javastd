@@ -28,18 +28,18 @@ extern class ContextFactory
 	/**
 	* The API will invoke this method via reflection
 	*/
-	@:overload public static function createContext(classes : java.NativeArray<Class<Dynamic>>, properties : java.util.Map<String, Dynamic>) : javax.xml.bind.JAXBContext;
+	@:overload @:public @:static public static function createContext(classes : java.NativeArray<Class<Dynamic>>, properties : java.util.Map<String, Dynamic>) : javax.xml.bind.JAXBContext;
 	
-	@:overload public static function createContext(classes : java.NativeArray<Class<Dynamic>>, typeRefs : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>, subclassReplacements : java.util.Map<Class<Dynamic>, Class<Dynamic>>, defaultNsUri : String, c14nSupport : Bool, ar : com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader, xmlAccessorFactorySupport : Bool, allNillable : Bool, retainPropertyInfo : Bool) : com.sun.xml.internal.bind.api.JAXBRIContext;
+	@:overload @:public @:static public static function createContext(classes : java.NativeArray<Class<Dynamic>>, typeRefs : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>, subclassReplacements : java.util.Map<Class<Dynamic>, Class<Dynamic>>, defaultNsUri : String, c14nSupport : Bool, ar : com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader, xmlAccessorFactorySupport : Bool, allNillable : Bool, retainPropertyInfo : Bool) : com.sun.xml.internal.bind.api.JAXBRIContext;
 	
-	@:overload public static function createContext(classes : java.NativeArray<Class<Dynamic>>, typeRefs : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>, subclassReplacements : java.util.Map<Class<Dynamic>, Class<Dynamic>>, defaultNsUri : String, c14nSupport : Bool, ar : com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader, xmlAccessorFactorySupport : Bool, allNillable : Bool, retainPropertyInfo : Bool, improvedXsiTypeHandling : Bool) : com.sun.xml.internal.bind.api.JAXBRIContext;
+	@:overload @:public @:static public static function createContext(classes : java.NativeArray<Class<Dynamic>>, typeRefs : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>, subclassReplacements : java.util.Map<Class<Dynamic>, Class<Dynamic>>, defaultNsUri : String, c14nSupport : Bool, ar : com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader, xmlAccessorFactorySupport : Bool, allNillable : Bool, retainPropertyInfo : Bool, improvedXsiTypeHandling : Bool) : com.sun.xml.internal.bind.api.JAXBRIContext;
 	
 	/**
 	* The API will invoke this method via reflection.
 	*/
-	@:overload public static function createContext(contextPath : String, classLoader : java.lang.ClassLoader, properties : java.util.Map<String, Dynamic>) : javax.xml.bind.JAXBContext;
+	@:overload @:public @:static public static function createContext(contextPath : String, classLoader : java.lang.ClassLoader, properties : java.util.Map<String, Dynamic>) : javax.xml.bind.JAXBContext;
 	
-	public static var USE_JAXB_PROPERTIES(default, null) : String;
+	@:public @:static @:final public static var USE_JAXB_PROPERTIES(default, null) : String;
 	
 	
 }

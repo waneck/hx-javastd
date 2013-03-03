@@ -28,12 +28,12 @@ extern class WindowsSplitPaneDivider extends javax.swing.plaf.basic.BasicSplitPa
 	/**
 	* Creates a new Windows SplitPaneDivider
 	*/
-	@:overload public function new(ui : javax.swing.plaf.basic.BasicSplitPaneUI) : Void;
+	@:overload @:public public function new(ui : javax.swing.plaf.basic.BasicSplitPaneUI) : Void;
 	
 	/**
 	* Paints the divider.
 	*/
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	
 }

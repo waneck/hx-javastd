@@ -28,26 +28,26 @@ extern interface ComboPopup
 	/**
 	* Shows the popup
 	*/
-	@:overload public function show() : Void;
+	@:overload @:public public function show() : Void;
 	
 	/**
 	* Hides the popup
 	*/
-	@:overload public function hide() : Void;
+	@:overload @:public public function hide() : Void;
 	
 	/**
 	* Returns true if the popup is visible (currently being displayed).
 	*
 	* @return <code>true</code> if the component is visible; <code>false</code> otherwise.
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
 	/**
 	* Returns the list that is being used to draw the items in the combo box.
 	* This method is highly implementation specific and should not be used
 	* for general list manipulation.
 	*/
-	@:overload public function getList() : javax.swing.JList<Dynamic>;
+	@:overload @:public public function getList() : javax.swing.JList<Dynamic>;
 	
 	/**
 	* Returns a mouse listener that will be added to the combo box or null.
@@ -55,7 +55,7 @@ extern interface ComboPopup
 	*
 	* @return a <code>MouseListener</code> or null
 	*/
-	@:overload public function getMouseListener() : java.awt.event.MouseListener;
+	@:overload @:public public function getMouseListener() : java.awt.event.MouseListener;
 	
 	/**
 	* Returns a mouse motion listener that will be added to the combo box or null.
@@ -63,19 +63,19 @@ extern interface ComboPopup
 	*
 	* @return a <code>MouseMotionListener</code> or null
 	*/
-	@:overload public function getMouseMotionListener() : java.awt.event.MouseMotionListener;
+	@:overload @:public public function getMouseMotionListener() : java.awt.event.MouseMotionListener;
 	
 	/**
 	* Returns a key listener that will be added to the combo box or null.
 	* If this method returns null then it will not be added to the combo box.
 	*/
-	@:overload public function getKeyListener() : java.awt.event.KeyListener;
+	@:overload @:public public function getKeyListener() : java.awt.event.KeyListener;
 	
 	/**
 	* Called to inform the ComboPopup that the UI is uninstalling.
 	* If the ComboPopup added any listeners in the component, it should remove them here.
 	*/
-	@:overload public function uninstallingUI() : Void;
+	@:overload @:public public function uninstallingUI() : Void;
 	
 	
 }

@@ -25,7 +25,7 @@ package com.sun.crypto.provider;
 */
 extern class DHKeyPairGenerator extends java.security.KeyPairGeneratorSpi
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Initializes this key pair generator for a certain keysize and source of
@@ -35,7 +35,7 @@ extern class DHKeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	* @param keysize the keysize (size of prime modulus) in bits
 	* @param random the source of randomness
 	*/
-	@:overload override public function initialize(keysize : Int, random : java.security.SecureRandom) : Void;
+	@:overload @:public override public function initialize(keysize : Int, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this key pair generator for the specified parameter
@@ -51,14 +51,14 @@ extern class DHKeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	* @exception InvalidAlgorithmParameterException if the given parameters
 	* are inappropriate for this key pair generator
 	*/
-	@:overload override public function initialize(algParams : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:public override public function initialize(algParams : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Generates a key pair.
 	*
 	* @return the new key pair
 	*/
-	@:overload override public function generateKeyPair() : java.security.KeyPair;
+	@:overload @:public override public function generateKeyPair() : java.security.KeyPair;
 	
 	
 }

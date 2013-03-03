@@ -25,21 +25,21 @@ package com.sun.crypto.provider;
 */
 extern class BlowfishParameters extends java.security.AlgorithmParametersSpi
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload private function engineInit(paramSpec : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineInit(paramSpec : java.security.spec.AlgorithmParameterSpec) : Void;
 	
-	@:overload private function engineInit(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected override private function engineInit(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload private function engineInit(encoded : java.NativeArray<java.StdTypes.Int8>, decodingMethod : String) : Void;
+	@:overload @:protected override private function engineInit(encoded : java.NativeArray<java.StdTypes.Int8>, decodingMethod : String) : Void;
 	
-	@:overload private function engineGetParameterSpec(paramSpec : Class<Dynamic>) : java.security.spec.AlgorithmParameterSpec;
+	@:overload @:protected override private function engineGetParameterSpec(paramSpec : Class<Dynamic>) : java.security.spec.AlgorithmParameterSpec;
 	
-	@:overload private function engineGetEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineGetEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineGetEncoded(encodingMethod : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineGetEncoded(encodingMethod : String) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineToString() : String;
+	@:overload @:protected override private function engineToString() : String;
 	
 	
 }

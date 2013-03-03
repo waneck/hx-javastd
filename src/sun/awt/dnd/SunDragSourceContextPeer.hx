@@ -28,46 +28,46 @@ extern class SunDragSourceContextPeer implements java.awt.dnd.peer.DragSourceCon
 	/*
 	* dispatch constants
 	*/
-	private static var DISPATCH_ENTER(default, null) : Int;
+	@:protected @:final @:static private static var DISPATCH_ENTER(default, null) : Int;
 	
-	private static var DISPATCH_MOTION(default, null) : Int;
+	@:protected @:final @:static private static var DISPATCH_MOTION(default, null) : Int;
 	
-	private static var DISPATCH_CHANGED(default, null) : Int;
+	@:protected @:final @:static private static var DISPATCH_CHANGED(default, null) : Int;
 	
-	private static var DISPATCH_EXIT(default, null) : Int;
+	@:protected @:final @:static private static var DISPATCH_EXIT(default, null) : Int;
 	
-	private static var DISPATCH_FINISH(default, null) : Int;
+	@:protected @:final @:static private static var DISPATCH_FINISH(default, null) : Int;
 	
-	private static var DISPATCH_MOUSE_MOVED(default, null) : Int;
+	@:protected @:final @:static private static var DISPATCH_MOUSE_MOVED(default, null) : Int;
 	
 	/**
 	* construct a new SunDragSourceContextPeer
 	*/
-	@:overload public function new(dge : java.awt.dnd.DragGestureEvent) : Void;
+	@:overload @:public public function new(dge : java.awt.dnd.DragGestureEvent) : Void;
 	
 	/**
 	* Synchro messages in AWT
 	*/
-	@:overload public function startSecondaryEventLoop() : Void;
+	@:overload @:public public function startSecondaryEventLoop() : Void;
 	
-	@:overload public function quitSecondaryEventLoop() : Void;
+	@:overload @:public public function quitSecondaryEventLoop() : Void;
 	
 	/**
 	* initiate a DnD operation ...
 	*/
-	@:overload public function startDrag(dsc : java.awt.dnd.DragSourceContext, c : java.awt.Cursor, di : java.awt.Image, p : java.awt.Point) : Void;
+	@:overload @:public public function startDrag(dsc : java.awt.dnd.DragSourceContext, c : java.awt.Cursor, di : java.awt.Image, p : java.awt.Point) : Void;
 	
-	@:overload @:abstract private function startDrag(trans : java.awt.datatransfer.Transferable, formats : java.NativeArray<haxe.Int64>, formatMap : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:protected @:abstract private function startDrag(trans : java.awt.datatransfer.Transferable, formats : java.NativeArray<haxe.Int64>, formatMap : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* set cursor
 	*/
-	@:overload public function setCursor(c : java.awt.Cursor) : Void;
+	@:overload @:public public function setCursor(c : java.awt.Cursor) : Void;
 	
 	/**
 	* return cursor
 	*/
-	@:overload public function getCursor() : java.awt.Cursor;
+	@:overload @:public public function getCursor() : java.awt.Cursor;
 	
 	/**
 	* Returns the drag image. If there is no image to drag,
@@ -75,7 +75,7 @@ extern class SunDragSourceContextPeer implements java.awt.dnd.peer.DragSourceCon
 	*
 	* @return the reference to the drag image
 	*/
-	@:overload public function getDragImage() : java.awt.Image;
+	@:overload @:public public function getDragImage() : java.awt.Image;
 	
 	/**
 	* Returns an anchor offset for the image to drag.
@@ -85,24 +85,24 @@ extern class SunDragSourceContextPeer implements java.awt.dnd.peer.DragSourceCon
 	* relative to the upper left corner of the image.
 	* The point {@code (0,0)} returns by default.
 	*/
-	@:overload public function getDragImageOffset() : java.awt.Point;
+	@:overload @:public public function getDragImageOffset() : java.awt.Point;
 	
 	/**
 	* downcall into native code
 	*/
-	@:overload @:abstract private function setNativeCursor(nativeCtxt : haxe.Int64, c : java.awt.Cursor, cType : Int) : Void;
+	@:overload @:protected @:abstract private function setNativeCursor(nativeCtxt : haxe.Int64, c : java.awt.Cursor, cType : Int) : Void;
 	
-	@:overload @:synchronized private function setTrigger(dge : java.awt.dnd.DragGestureEvent) : Void;
+	@:overload @:protected @:synchronized private function setTrigger(dge : java.awt.dnd.DragGestureEvent) : Void;
 	
-	@:overload private function getTrigger() : java.awt.dnd.DragGestureEvent;
+	@:overload @:protected private function getTrigger() : java.awt.dnd.DragGestureEvent;
 	
-	@:overload private function getComponent() : java.awt.Component;
+	@:overload @:protected private function getComponent() : java.awt.Component;
 	
-	@:overload @:synchronized private function setNativeContext(ctxt : haxe.Int64) : Void;
+	@:overload @:protected @:synchronized private function setNativeContext(ctxt : haxe.Int64) : Void;
 	
-	@:overload @:synchronized private function getNativeContext() : haxe.Int64;
+	@:overload @:protected @:synchronized private function getNativeContext() : haxe.Int64;
 	
-	@:overload private function getDragSourceContext() : java.awt.dnd.DragSourceContext;
+	@:overload @:protected private function getDragSourceContext() : java.awt.dnd.DragSourceContext;
 	
 	/**
 	* Notify the peer that the transferables' DataFlavors have changed.
@@ -110,37 +110,37 @@ extern class SunDragSourceContextPeer implements java.awt.dnd.peer.DragSourceCon
 	* No longer useful as the transferables are determined at the time
 	* of the drag.
 	*/
-	@:overload public function transferablesFlavorsChanged() : Void;
+	@:overload @:public public function transferablesFlavorsChanged() : Void;
 	
-	@:overload @:final private function postDragSourceDragEvent(targetAction : Int, modifiers : Int, x : Int, y : Int, dispatchType : Int) : Void;
+	@:overload @:protected @:final private function postDragSourceDragEvent(targetAction : Int, modifiers : Int, x : Int, y : Int, dispatchType : Int) : Void;
 	
 	/**
 	* upcall from native code
 	*/
-	@:overload @:final private function dragExit(x : Int, y : Int) : Void;
+	@:overload @:protected @:final private function dragExit(x : Int, y : Int) : Void;
 	
 	/**
 	* upcall from native code via implemented class (do)
 	*/
-	@:overload @:final private function dragDropFinished(success : Bool, operations : Int, x : Int, y : Int) : Void;
+	@:overload @:protected @:final private function dragDropFinished(success : Bool, operations : Int, x : Int, y : Int) : Void;
 	
-	@:overload public static function setDragDropInProgress(b : Bool) : Void;
+	@:overload @:public @:static public static function setDragDropInProgress(b : Bool) : Void;
 	
 	/**
 	* Filters out all mouse events that were on the java event queue when
 	* startDrag was called.
 	*/
-	@:overload public static function checkEvent(event : java.awt.AWTEvent) : Bool;
+	@:overload @:public @:static public static function checkEvent(event : java.awt.AWTEvent) : Bool;
 	
-	@:overload public static function checkDragDropInProgress() : Void;
+	@:overload @:public @:static public static function checkDragDropInProgress() : Void;
 	
-	@:overload public static function convertModifiersToDropAction(modifiers : Int, supportedActions : Int) : Int;
+	@:overload @:public @:static public static function convertModifiersToDropAction(modifiers : Int, supportedActions : Int) : Int;
 	
 	
 }
 @:native('sun$awt$dnd$SunDragSourceContextPeer$EventDispatcher') @:internal extern class SunDragSourceContextPeer_EventDispatcher implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

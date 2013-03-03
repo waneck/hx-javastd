@@ -28,17 +28,17 @@ extern interface CorbaContactInfo extends com.sun.corba.se.pept.transport.Contac
 	/**
 	* @author Harold Carr
 	*/
-	@:overload public function getTargetIOR() : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public public function getTargetIOR() : com.sun.corba.se.spi.ior.IOR;
 	
-	@:overload public function getEffectiveTargetIOR() : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public public function getEffectiveTargetIOR() : com.sun.corba.se.spi.ior.IOR;
 	
-	@:overload public function getEffectiveProfile() : com.sun.corba.se.spi.ior.iiop.IIOPProfile;
+	@:overload @:public public function getEffectiveProfile() : com.sun.corba.se.spi.ior.iiop.IIOPProfile;
 	
-	@:overload public function setAddressingDisposition(addressingDisposition : java.StdTypes.Int16) : Void;
+	@:overload @:public public function setAddressingDisposition(addressingDisposition : java.StdTypes.Int16) : Void;
 	
-	@:overload public function getAddressingDisposition() : java.StdTypes.Int16;
+	@:overload @:public public function getAddressingDisposition() : java.StdTypes.Int16;
 	
-	@:overload public function getMonitoringName() : String;
+	@:overload @:public @:public public function getMonitoringName() : String;
 	
 	
 }

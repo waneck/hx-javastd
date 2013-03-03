@@ -31,13 +31,13 @@ extern interface ScriptEngineFactory
 	* might return <i>Rhino Mozilla Javascript Engine</i>.
 	* @return The name of the engine implementation.
 	*/
-	@:overload public function getEngineName() : String;
+	@:overload @:public public function getEngineName() : String;
 	
 	/**
 	* Returns the version of the <code>ScriptEngine</code>.
 	* @return The <code>ScriptEngine</code> implementation version.
 	*/
-	@:overload public function getEngineVersion() : String;
+	@:overload @:public public function getEngineVersion() : String;
 	
 	/**
 	* Returns an immutable list of filename extensions, which generally identify scripts
@@ -46,7 +46,7 @@ extern interface ScriptEngineFactory
 	* <code>getEngineByExtension</code> method.
 	* @return The list of extensions.
 	*/
-	@:overload public function getExtensions() : java.util.List<String>;
+	@:overload @:public @:public public function getExtensions() : java.util.List<String>;
 	
 	/**
 	* Returns an immutable list of mimetypes, associated with scripts that
@@ -55,7 +55,7 @@ extern interface ScriptEngineFactory
 	* <code>getEngineByMimetype</code> method.
 	* @return The list of mime types.
 	*/
-	@:overload public function getMimeTypes() : java.util.List<String>;
+	@:overload @:public @:public public function getMimeTypes() : java.util.List<String>;
 	
 	/**
 	* Returns an immutable list of  short names for the <code>ScriptEngine</code>, which may be used to
@@ -63,21 +63,21 @@ extern interface ScriptEngineFactory
 	* For instance, an implementation based on the Mozilla Rhino Javascript engine might
 	* return list containing {&quot;javascript&quot;, &quot;rhino&quot;}.
 	*/
-	@:overload public function getNames() : java.util.List<String>;
+	@:overload @:public @:public public function getNames() : java.util.List<String>;
 	
 	/**
 	* Returns the name of the scripting langauge supported by this
 	* <code>ScriptEngine</code>.
 	* @return The name of the supported language.
 	*/
-	@:overload public function getLanguageName() : String;
+	@:overload @:public public function getLanguageName() : String;
 	
 	/**
 	* Returns the version of the scripting language supported by this
 	* <code>ScriptEngine</code>.
 	* @return The version of the supported language.
 	*/
-	@:overload public function getLanguageVersion() : String;
+	@:overload @:public public function getLanguageVersion() : String;
 	
 	/**
 	* Returns the value of an attribute whose meaning may be implementation-specific.
@@ -119,7 +119,7 @@ extern interface ScriptEngineFactory
 	* value is assigned to the key.
 	*
 	*/
-	@:overload public function getParameter(key : String) : Dynamic;
+	@:overload @:public @:public public function getParameter(key : String) : Dynamic;
 	
 	/**
 	* Returns a String which can be used to invoke a method of a  Java object using the syntax
@@ -157,7 +157,7 @@ extern interface ScriptEngineFactory
 	*
 	* @return The String used to invoke the method in the syntax of the scripting language.
 	*/
-	@:overload public function getMethodCallSyntax(obj : String, m : String, args : java.NativeArray<String>) : String;
+	@:overload @:public @:public public function getMethodCallSyntax(obj : String, m : String, args : java.NativeArray<String>) : String;
 	
 	/**
 	* Returns a String that can be used as a statement to display the specified String  using
@@ -175,7 +175,7 @@ extern interface ScriptEngineFactory
 	*
 	*
 	*/
-	@:overload public function getOutputStatement(toDisplay : String) : String;
+	@:overload @:public @:public public function getOutputStatement(toDisplay : String) : String;
 	
 	/**
 	* Returns A valid scripting language executable progam with given statements.
@@ -197,7 +197,7 @@ extern interface ScriptEngineFactory
 	*  calls to the <code>getMethodCallSyntax</code> and <code>getOutputStatement</code> methods.
 	*  @return The Program
 	*/
-	@:overload public function getProgram(statements : java.NativeArray<String>) : String;
+	@:overload @:public @:public public function getProgram(statements : java.NativeArray<String>) : String;
 	
 	/**
 	* Returns an instance of the <code>ScriptEngine</code> associated with this
@@ -206,7 +206,7 @@ extern interface ScriptEngineFactory
 	*
 	* @return A new <code>ScriptEngine</code> instance.
 	*/
-	@:overload public function getScriptEngine() : javax.script.ScriptEngine;
+	@:overload @:public @:public public function getScriptEngine() : javax.script.ScriptEngine;
 	
 	
 }

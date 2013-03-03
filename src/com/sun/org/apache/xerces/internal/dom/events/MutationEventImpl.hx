@@ -20,58 +20,58 @@ package com.sun.org.apache.xerces.internal.dom.events;
 */
 extern class MutationEventImpl extends com.sun.org.apache.xerces.internal.dom.events.EventImpl implements org.w3c.dom.events.MutationEvent
 {
-	public var attrChange : java.StdTypes.Int16;
+	@:public public var attrChange : java.StdTypes.Int16;
 	
-	public static var DOM_SUBTREE_MODIFIED(default, null) : String;
+	@:public @:static @:final public static var DOM_SUBTREE_MODIFIED(default, null) : String;
 	
-	public static var DOM_NODE_INSERTED(default, null) : String;
+	@:public @:static @:final public static var DOM_NODE_INSERTED(default, null) : String;
 	
-	public static var DOM_NODE_REMOVED(default, null) : String;
+	@:public @:static @:final public static var DOM_NODE_REMOVED(default, null) : String;
 	
-	public static var DOM_NODE_REMOVED_FROM_DOCUMENT(default, null) : String;
+	@:public @:static @:final public static var DOM_NODE_REMOVED_FROM_DOCUMENT(default, null) : String;
 	
-	public static var DOM_NODE_INSERTED_INTO_DOCUMENT(default, null) : String;
+	@:public @:static @:final public static var DOM_NODE_INSERTED_INTO_DOCUMENT(default, null) : String;
 	
-	public static var DOM_ATTR_MODIFIED(default, null) : String;
+	@:public @:static @:final public static var DOM_ATTR_MODIFIED(default, null) : String;
 	
-	public static var DOM_CHARACTER_DATA_MODIFIED(default, null) : String;
+	@:public @:static @:final public static var DOM_CHARACTER_DATA_MODIFIED(default, null) : String;
 	
 	/** @return the name of the Attr which
 	changed, for DOMAttrModified events.
 	Undefined for others.
 	*/
-	@:overload public function getAttrName() : String;
+	@:overload @:public public function getAttrName() : String;
 	
 	/**
 	*  <code>attrChange</code> indicates the type of change which triggered
 	* the DOMAttrModified event. The values can be <code>MODIFICATION</code>
 	* , <code>ADDITION</code>, or <code>REMOVAL</code>.
 	*/
-	@:overload public function getAttrChange() : java.StdTypes.Int16;
+	@:overload @:public public function getAttrChange() : java.StdTypes.Int16;
 	
 	/** @return the new string value of the Attr for DOMAttrModified events, or
 	of the CharacterData node for DOMCharDataModifed events.
 	Undefined for others.
 	*/
-	@:overload public function getNewValue() : String;
+	@:overload @:public public function getNewValue() : String;
 	
 	/** @return the previous string value of the Attr for DOMAttrModified events, or
 	of the CharacterData node for DOMCharDataModifed events.
 	Undefined for others.
 	*/
-	@:overload public function getPrevValue() : String;
+	@:overload @:public public function getPrevValue() : String;
 	
 	/** @return a Node related to this event, other than the target that the
 	node was dispatched to. For DOMNodeRemoved, it is the node which
 	was removed.
 	No other uses are currently defined.
 	*/
-	@:overload public function getRelatedNode() : org.w3c.dom.Node;
+	@:overload @:public public function getRelatedNode() : org.w3c.dom.Node;
 	
 	/** Initialize a mutation event, or overwrite the event's current
 	settings with new values of the parameters.
 	*/
-	@:overload public function initMutationEvent(typeArg : String, canBubbleArg : Bool, cancelableArg : Bool, relatedNodeArg : org.w3c.dom.Node, prevValueArg : String, newValueArg : String, attrNameArg : String, attrChangeArg : java.StdTypes.Int16) : Void;
+	@:overload @:public public function initMutationEvent(typeArg : String, canBubbleArg : Bool, cancelableArg : Bool, relatedNodeArg : org.w3c.dom.Node, prevValueArg : String, newValueArg : String, attrNameArg : String, attrChangeArg : java.StdTypes.Int16) : Void;
 	
 	
 }

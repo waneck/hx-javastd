@@ -197,7 +197,7 @@ extern interface ORBSocketFactory
 	* as used by other clients and servers in your distributed system. <p>
 	*
 	*/
-	@:overload public function createServerSocket(type : String, port : Int) : java.net.ServerSocket;
+	@:overload @:public public function createServerSocket(type : String, port : Int) : java.net.ServerSocket;
 	
 	/**
 	* DEPRECATED.  DEPRECATED. DEPRECATED. DEPRECATED. <p>
@@ -246,7 +246,7 @@ extern interface ORBSocketFactory
 	* from <code>GetEndPointInfoAgainException</code> <p>
 	*
 	*/
-	@:overload public function getEndPointInfo(orb : org.omg.CORBA.ORB, ior : com.sun.corba.se.spi.ior.IOR, socketInfo : com.sun.corba.se.spi.transport.SocketInfo) : com.sun.corba.se.spi.transport.SocketInfo;
+	@:overload @:public public function getEndPointInfo(orb : org.omg.CORBA.ORB, ior : com.sun.corba.se.spi.ior.IOR, socketInfo : com.sun.corba.se.spi.transport.SocketInfo) : com.sun.corba.se.spi.transport.SocketInfo;
 	
 	/**
 	* DEPRECATED.  DEPRECATED. DEPRECATED. DEPRECATED. <p
@@ -265,7 +265,7 @@ extern interface ORBSocketFactory
 	* <code>SocketInfo</code> object contained in the exception. <p>
 	*
 	*/
-	@:overload public function createSocket(socketInfo : com.sun.corba.se.spi.transport.SocketInfo) : java.net.Socket;
+	@:overload @:public public function createSocket(socketInfo : com.sun.corba.se.spi.transport.SocketInfo) : java.net.Socket;
 	
 	
 }

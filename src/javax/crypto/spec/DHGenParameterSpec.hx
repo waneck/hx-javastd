@@ -35,21 +35,21 @@ extern class DHGenParameterSpec implements java.security.spec.AlgorithmParameter
 	* @param primeSize the size (in bits) of the prime modulus.
 	* @param exponentSize the size (in bits) of the random exponent.
 	*/
-	@:overload public function new(primeSize : Int, exponentSize : Int) : Void;
+	@:overload @:public public function new(primeSize : Int, exponentSize : Int) : Void;
 	
 	/**
 	* Returns the size in bits of the prime modulus.
 	*
 	* @return the size in bits of the prime modulus
 	*/
-	@:overload public function getPrimeSize() : Int;
+	@:overload @:public public function getPrimeSize() : Int;
 	
 	/**
 	* Returns the size in bits of the random exponent (private value).
 	*
 	* @return the size in bits of the random exponent (private value)
 	*/
-	@:overload public function getExponentSize() : Int;
+	@:overload @:public public function getExponentSize() : Int;
 	
 	
 }

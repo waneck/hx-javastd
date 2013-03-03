@@ -28,42 +28,42 @@ package com.sun.org.glassfish.external.statistics.impl;
 */
 extern class TimeStatisticImpl extends com.sun.org.glassfish.external.statistics.impl.StatisticImpl implements com.sun.org.glassfish.external.statistics.TimeStatistic implements java.lang.reflect.InvocationHandler
 {
-	@:overload @:synchronized @:final override public function toString() : String;
+	@:overload @:public @:synchronized @:final override public function toString() : String;
 	
-	@:overload public function new(counter : haxe.Int64, maximumTime : haxe.Int64, minimumTime : haxe.Int64, totalTime : haxe.Int64, name : String, unit : String, desc : String, startTime : haxe.Int64, sampleTime : haxe.Int64) : Void;
+	@:overload @:public public function new(counter : haxe.Int64, maximumTime : haxe.Int64, minimumTime : haxe.Int64, totalTime : haxe.Int64, name : String, unit : String, desc : String, startTime : haxe.Int64, sampleTime : haxe.Int64) : Void;
 	
-	@:overload @:synchronized public function getStatistic() : com.sun.org.glassfish.external.statistics.TimeStatistic;
+	@:overload @:public @:synchronized public function getStatistic() : com.sun.org.glassfish.external.statistics.TimeStatistic;
 	
-	@:overload @:synchronized override public function getStaticAsMap() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public @:synchronized override public function getStaticAsMap() : java.util.Map<Dynamic, Dynamic>;
 	
-	@:overload @:synchronized public function incrementCount(current : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function incrementCount(current : haxe.Int64) : Void;
 	
 	/**
 	* Returns the number of times an operation was invoked
 	*/
-	@:overload @:synchronized public function getCount() : haxe.Int64;
+	@:overload @:public @:synchronized public function getCount() : haxe.Int64;
 	
 	/**
 	* Returns the maximum amount of time that it took for one invocation of an
 	* operation, since measurement started.
 	*/
-	@:overload @:synchronized public function getMaxTime() : haxe.Int64;
+	@:overload @:public @:synchronized public function getMaxTime() : haxe.Int64;
 	
 	/**
 	* Returns the minimum amount of time that it took for one invocation of an
 	* operation, since measurement started.
 	*/
-	@:overload @:synchronized public function getMinTime() : haxe.Int64;
+	@:overload @:public @:synchronized public function getMinTime() : haxe.Int64;
 	
 	/**
 	* Returns the amount of time that it took for all invocations,
 	* since measurement started.
 	*/
-	@:overload @:synchronized public function getTotalTime() : haxe.Int64;
+	@:overload @:public @:synchronized public function getTotalTime() : haxe.Int64;
 	
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
-	@:overload public function invoke(proxy : Dynamic, m : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, m : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

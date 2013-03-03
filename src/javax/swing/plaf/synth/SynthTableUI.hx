@@ -31,7 +31,7 @@ extern class SynthTableUI extends javax.swing.plaf.basic.BasicTableUI implements
 	* @param c component to create UI object for
 	* @return the UI object
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Initializes JTable properties, such as font, foreground, and background.
@@ -41,27 +41,27 @@ extern class SynthTableUI extends javax.swing.plaf.basic.BasicTableUI implements
 	*
 	* @see #installUI
 	*/
-	@:overload private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
 	/**
 	* Attaches listeners to the JTable.
 	*/
-	@:overload private function installListeners() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -75,12 +75,12 @@ extern class SynthTableUI extends javax.swing.plaf.basic.BasicTableUI implements
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -91,7 +91,7 @@ extern class SynthTableUI extends javax.swing.plaf.basic.BasicTableUI implements
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component.
@@ -100,38 +100,38 @@ extern class SynthTableUI extends javax.swing.plaf.basic.BasicTableUI implements
 	* @param g the {@code Graphics} object used for painting
 	* @see #update(Graphics,JComponent)
 	*/
-	@:overload private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function propertyChange(event : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(event : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$synth$SynthTableUI$SynthBooleanTableCellRenderer') @:internal extern class SynthTableUI_SynthBooleanTableCellRenderer extends javax.swing.JCheckBox implements javax.swing.table.TableCellRenderer
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
+	@:overload @:public public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
 	
-	@:overload public function isOpaque() : Bool;
+	@:overload @:public override public function isOpaque() : Bool;
 	
 	
 }
 @:native('javax$swing$plaf$synth$SynthTableUI$SynthTableCellRenderer') @:internal extern class SynthTableUI_SynthTableCellRenderer extends javax.swing.table.DefaultTableCellRenderer
 {
-	@:overload public function setOpaque(isOpaque : Bool) : Void;
+	@:overload @:public override public function setOpaque(isOpaque : Bool) : Void;
 	
-	@:overload public function isOpaque() : Bool;
+	@:overload @:public override public function isOpaque() : Bool;
 	
-	@:overload public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
-	@:overload public function setBorder(b : javax.swing.border.Border) : Void;
+	@:overload @:public override public function setBorder(b : javax.swing.border.Border) : Void;
 	
-	@:overload public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
+	@:overload @:public override public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
 	
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	
 }

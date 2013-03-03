@@ -39,14 +39,14 @@ package com.sun.tools.doclets.internal.toolkit.util;
 */
 extern class Extern
 {
-	@:overload public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
 	
 	/**
 	* Determine if a doc item is externally documented.
 	*
 	* @param doc A ProgramElementDoc.
 	*/
-	@:overload public function isExternal(doc : com.sun.javadoc.ProgramElementDoc) : Bool;
+	@:overload @:public public function isExternal(doc : com.sun.javadoc.ProgramElementDoc) : Bool;
 	
 	/**
 	* Convert a link to be an external link if appropriate.
@@ -56,7 +56,7 @@ extern class Extern
 	* @param link    The link to convert.
 	* @return if external return converted link else return null
 	*/
-	@:overload public function getExternalLink(pkgName : String, relativepath : String, link : String) : String;
+	@:overload @:public public function getExternalLink(pkgName : String, relativepath : String, link : String) : String;
 	
 	/**
 	* Build the extern package list from given URL or the directory path.
@@ -68,9 +68,9 @@ extern class Extern
 	* @param reporter   The <code>DocErrorReporter</code> used to report errors.
 	* @param linkoffline True if -linkoffline isused and false if -link is used.
 	*/
-	@:overload public function url(url : String, pkglisturl : String, reporter : com.sun.javadoc.DocErrorReporter, linkoffline : Bool) : Bool;
+	@:overload @:public public function url(url : String, pkglisturl : String, reporter : com.sun.javadoc.DocErrorReporter, linkoffline : Bool) : Bool;
 	
-	@:overload public function isUrl(urlCandidate : String) : Bool;
+	@:overload @:public public function isUrl(urlCandidate : String) : Bool;
 	
 	
 }
@@ -82,7 +82,7 @@ extern class Extern
 	/**
 	* String representation of "this" with packagename and the path.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

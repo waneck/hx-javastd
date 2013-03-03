@@ -30,7 +30,7 @@ extern interface FieldRenderer
 	* class, then return {@link FieldOutline} for accessing
 	* the generated field.
 	*/
-	@:overload public function generate(context : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : com.sun.tools.internal.xjc.outline.FieldOutline;
+	@:overload @:public public function generate(context : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : com.sun.tools.internal.xjc.outline.FieldOutline;
 	
 	
 }

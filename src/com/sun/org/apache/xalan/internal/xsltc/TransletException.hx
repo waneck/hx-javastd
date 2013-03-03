@@ -23,11 +23,11 @@ package com.sun.org.apache.xalan.internal.xsltc;
 */
 extern class TransletException extends org.xml.sax.SAXException
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(e : java.lang.Exception) : Void;
+	@:overload @:public public function new(e : java.lang.Exception) : Void;
 	
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

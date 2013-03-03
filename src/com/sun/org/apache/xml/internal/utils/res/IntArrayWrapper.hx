@@ -28,11 +28,11 @@ package com.sun.org.apache.xml.internal.utils.res;
 */
 extern class IntArrayWrapper
 {
-	@:overload public function new(arg : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(arg : java.NativeArray<Int>) : Void;
 	
-	@:overload public function getInt(index : Int) : Int;
+	@:overload @:public public function getInt(index : Int) : Int;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	
 }

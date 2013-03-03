@@ -40,7 +40,7 @@ package com.sun.xml.internal.messaging.saaj.packaging.mime.util;
 */
 extern class LineInputStream extends java.io.FilterInputStream
 {
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Read a line containing only ASCII characters from the input
@@ -53,7 +53,7 @@ extern class LineInputStream extends java.io.FilterInputStream
 	* This class is similar to the deprecated
 	* <code>DataInputStream.readLine()</code>
 	*/
-	@:overload public function readLine() : String;
+	@:overload @:public public function readLine() : String;
 	
 	
 }

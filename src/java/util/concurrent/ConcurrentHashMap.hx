@@ -50,7 +50,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	* negative or the load factor or concurrencyLevel are
 	* nonpositive.
 	*/
-	@:overload public function new(initialCapacity : Int, loadFactor : Single, concurrencyLevel : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single, concurrencyLevel : Int) : Void;
 	
 	/**
 	* Creates a new, empty map with the specified initial capacity
@@ -66,7 +66,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:require(java6) @:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
 	/**
 	* Creates a new, empty map with the specified initial capacity,
@@ -77,13 +77,13 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	* @throws IllegalArgumentException if the initial capacity of
 	* elements is negative.
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Creates a new, empty map with a default initial capacity (16),
 	* load factor (0.75) and concurrencyLevel (16).
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new map with the same mappings as the given map.
@@ -93,14 +93,14 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	*
 	* @param m the map
 	*/
-	@:overload public function new(m : java.util.Map<K, V>) : Void;
+	@:overload @:public public function new(m : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Returns <tt>true</tt> if this map contains no key-value mappings.
 	*
 	* @return <tt>true</tt> if this map contains no key-value mappings
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns the number of key-value mappings in this map.  If the
@@ -109,7 +109,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	*
 	* @return the number of key-value mappings in this map
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns the value to which the specified key is mapped,
@@ -122,7 +122,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	*
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload override public function get(key : Dynamic) : V;
+	@:overload @:public override public function get(key : Dynamic) : V;
 	
 	/**
 	* Tests if the specified object is a key in this table.
@@ -133,7 +133,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	*         <tt>equals</tt> method; <tt>false</tt> otherwise.
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload override public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public override public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this map maps one or more keys to the
@@ -146,7 +146,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	*         specified value
 	* @throws NullPointerException if the specified value is null
 	*/
-	@:overload override public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public override public function containsValue(value : Dynamic) : Bool;
 	
 	/**
 	* Legacy method testing if some key maps into the specified value
@@ -163,7 +163,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	*         <tt>false</tt> otherwise
 	* @throws NullPointerException if the specified value is null
 	*/
-	@:overload public function contains(value : Dynamic) : Bool;
+	@:overload @:public public function contains(value : Dynamic) : Bool;
 	
 	/**
 	* Maps the specified key to the specified value in this table.
@@ -178,7 +178,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	*         <tt>null</tt> if there was no mapping for <tt>key</tt>
 	* @throws NullPointerException if the specified key or value is null
 	*/
-	@:overload override public function put(key : K, value : V) : V;
+	@:overload @:public override public function put(key : K, value : V) : V;
 	
 	/**
 	* {@inheritDoc}
@@ -187,7 +187,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	*         or <tt>null</tt> if there was no mapping for the key
 	* @throws NullPointerException if the specified key or value is null
 	*/
-	@:overload public function putIfAbsent(key : K, value : V) : V;
+	@:overload @:public public function putIfAbsent(key : K, value : V) : V;
 	
 	/**
 	* Copies all of the mappings from the specified map to this one.
@@ -196,7 +196,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	*
 	* @param m mappings to be stored in this map
 	*/
-	@:overload override public function putAll(m : java.util.Map<K, V>) : Void;
+	@:overload @:public override public function putAll(m : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Removes the key (and its corresponding value) from this map.
@@ -207,21 +207,21 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	*         <tt>null</tt> if there was no mapping for <tt>key</tt>
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload override public function remove(key : Dynamic) : V;
+	@:overload @:public override public function remove(key : Dynamic) : V;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload public function remove(key : Dynamic, value : Dynamic) : Bool;
+	@:overload @:public public function remove(key : Dynamic, value : Dynamic) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @throws NullPointerException if any of the arguments are null
 	*/
-	@:overload public function replace(key : K, oldValue : V, newValue : V) : Bool;
+	@:overload @:public public function replace(key : K, oldValue : V, newValue : V) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -230,12 +230,12 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	*         or <tt>null</tt> if there was no mapping for the key
 	* @throws NullPointerException if the specified key or value is null
 	*/
-	@:overload public function replace(key : K, value : V) : V;
+	@:overload @:public public function replace(key : K, value : V) : V;
 	
 	/**
 	* Removes all of the mappings from this map.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns a {@link Set} view of the keys contained in this map.
@@ -253,7 +253,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	* construction of the iterator, and may (but is not guaranteed to)
 	* reflect any modifications subsequent to construction.
 	*/
-	@:overload override public function keySet() : java.util.Set<K>;
+	@:overload @:public override public function keySet() : java.util.Set<K>;
 	
 	/**
 	* Returns a {@link Collection} view of the values contained in this map.
@@ -271,7 +271,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	* construction of the iterator, and may (but is not guaranteed to)
 	* reflect any modifications subsequent to construction.
 	*/
-	@:overload override public function values() : java.util.Collection<V>;
+	@:overload @:public override public function values() : java.util.Collection<V>;
 	
 	/**
 	* Returns a {@link Set} view of the mappings contained in this map.
@@ -289,7 +289,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	* construction of the iterator, and may (but is not guaranteed to)
 	* reflect any modifications subsequent to construction.
 	*/
-	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
 	/**
 	* Returns an enumeration of the keys in this table.
@@ -297,7 +297,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	* @return an enumeration of the keys in this table
 	* @see #keySet()
 	*/
-	@:overload public function keys() : java.util.Enumeration<K>;
+	@:overload @:public public function keys() : java.util.Enumeration<K>;
 	
 	/**
 	* Returns an enumeration of the values in this table.
@@ -305,7 +305,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	* @return an enumeration of the values in this table
 	* @see #values()
 	*/
-	@:overload public function elements() : java.util.Enumeration<V>;
+	@:overload @:public public function elements() : java.util.Enumeration<V>;
 	
 	
 }
@@ -336,27 +336,27 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 /* ---------------- Iterator Support -------------- */
 @:native('java$util$concurrent$ConcurrentHashMap$HashIterator') @:internal extern class ConcurrentHashMap_HashIterator
 {
-	@:overload @:final public function hasNext() : Bool;
+	@:overload @:public @:final public function hasNext() : Bool;
 	
-	@:overload @:final public function hasMoreElements() : Bool;
+	@:overload @:public @:final public function hasMoreElements() : Bool;
 	
-	@:overload @:final public function remove() : Void;
+	@:overload @:public @:final public function remove() : Void;
 	
 	
 }
 @:native('java$util$concurrent$ConcurrentHashMap$KeyIterator') @:internal extern class ConcurrentHashMap_KeyIterator extends java.util.concurrent.ConcurrentHashMap.ConcurrentHashMap_HashIterator implements java.util.Iterator<Dynamic> implements java.util.Enumeration<Dynamic>
 {
-	@:overload @:final public function next() : Dynamic;
+	@:overload @:public @:final public function next() : Dynamic;
 	
-	@:overload @:final public function nextElement() : Dynamic;
+	@:overload @:public @:final public function nextElement() : Dynamic;
 	
 	
 }
 @:native('java$util$concurrent$ConcurrentHashMap$ValueIterator') @:internal extern class ConcurrentHashMap_ValueIterator extends java.util.concurrent.ConcurrentHashMap.ConcurrentHashMap_HashIterator implements java.util.Iterator<Dynamic> implements java.util.Enumeration<Dynamic>
 {
-	@:overload @:final public function next() : Dynamic;
+	@:overload @:public @:final public function next() : Dynamic;
 	
-	@:overload @:final public function nextElement() : Dynamic;
+	@:overload @:public @:final public function nextElement() : Dynamic;
 	
 	
 }
@@ -375,59 +375,59 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	* removed in which case the put will re-establish). We do not
 	* and cannot guarantee more.
 	*/
-	@:overload override public function setValue(value : Dynamic) : Dynamic;
+	@:overload @:public override public function setValue(value : Dynamic) : Dynamic;
 	
 	
 }
 @:native('java$util$concurrent$ConcurrentHashMap$EntryIterator') @:internal extern class ConcurrentHashMap_EntryIterator extends java.util.concurrent.ConcurrentHashMap.ConcurrentHashMap_HashIterator implements java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
+	@:overload @:public public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	
 	
 }
 @:native('java$util$concurrent$ConcurrentHashMap$KeySet') @:internal extern class ConcurrentHashMap_KeySet extends java.util.AbstractSet<Dynamic>
 {
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }
 @:native('java$util$concurrent$ConcurrentHashMap$Values') @:internal extern class ConcurrentHashMap_Values extends java.util.AbstractCollection<Dynamic>
 {
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }
 @:native('java$util$concurrent$ConcurrentHashMap$EntrySet') @:internal extern class ConcurrentHashMap_EntrySet extends java.util.AbstractSet<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
+	@:overload @:public override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }

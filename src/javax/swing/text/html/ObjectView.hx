@@ -66,14 +66,14 @@ extern class ObjectView extends javax.swing.text.ComponentView
 	*
 	* @param elem the element to decorate
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Create the component.  The classid is used
 	* as a specification of the classname, which
 	* we try to load.
 	*/
-	@:overload override private function createComponent() : java.awt.Component;
+	@:overload @:protected override private function createComponent() : java.awt.Component;
 	
 	
 }

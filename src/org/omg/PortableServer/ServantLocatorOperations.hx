@@ -44,7 +44,7 @@ extern interface ServantLocatorOperations extends org.omg.PortableServer.Servant
 		 *            requests to the object denoted in the 
 		 *            forward_reference member of the exception.
 		 */
-	@:overload public function preinvoke(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA, operation : String, the_cookie : org.omg.PortableServer.ServantLocatorPackage.CookieHolder) : org.omg.PortableServer.Servant;
+	@:overload @:public public function preinvoke(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA, operation : String, the_cookie : org.omg.PortableServer.ServantLocatorPackage.CookieHolder) : org.omg.PortableServer.Servant;
 	
 	/**
 		 * This operation is invoked whenener a servant completes
@@ -58,7 +58,7 @@ extern interface ServantLocatorOperations extends org.omg.PortableServer.Servant
 		 * @param the_servant reference to the servant that is
 		 *                    associated with the object.
 		 */
-	@:overload public function postinvoke(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA, operation : String, the_cookie : Dynamic, the_servant : org.omg.PortableServer.Servant) : Void;
+	@:overload @:public public function postinvoke(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA, operation : String, the_cookie : Dynamic, the_servant : org.omg.PortableServer.Servant) : Void;
 	
 	
 }

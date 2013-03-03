@@ -30,76 +30,76 @@ extern class Statement extends sun.tools.tree.Node
 	* supported API.  Code that depends on them does so at its own risk:
 	* they are subject to change or removal without notice.
 	*/
-	public static var DEAD_END(default, null) : sun.tools.tree.Vset;
+	@:public @:static @:final public static var DEAD_END(default, null) : sun.tools.tree.Vset;
 	
 	/**
 	* An empty statement.  Its costInline is infinite.
 	*/
-	public static var empty(default, null) : sun.tools.tree.Statement;
+	@:public @:static @:final public static var empty(default, null) : sun.tools.tree.Statement;
 	
 	/**
 	* The largest possible interesting inline cost value.
 	*/
-	public static var MAXINLINECOST(default, null) : Int;
+	@:public @:static @:final public static var MAXINLINECOST(default, null) : Int;
 	
 	/**
 	* Insert a bit of code at the front of a statement.
 	* Side-effect s2, if it is a CompoundStatement.
 	*/
-	@:overload public static function insertStatement(s1 : sun.tools.tree.Statement, s2 : sun.tools.tree.Statement) : sun.tools.tree.Statement;
+	@:overload @:public @:static public static function insertStatement(s1 : sun.tools.tree.Statement, s2 : sun.tools.tree.Statement) : sun.tools.tree.Statement;
 	
 	/**
 	* Set the label of a statement
 	*/
-	@:overload public function setLabel(env : sun.tools.java.Environment, e : sun.tools.tree.Expression) : Void;
+	@:overload @:public public function setLabel(env : sun.tools.java.Environment, e : sun.tools.tree.Expression) : Void;
 	
 	/**
 	* Check a statement
 	*/
-	@:overload public function checkMethod(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
+	@:overload @:public public function checkMethod(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
 	
 	/**
 	* Make sure the labels on this statement do not duplicate the
 	* labels on any enclosing statement.  Provided as a convenience
 	* for subclasses.
 	*/
-	@:overload private function checkLabel(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Void;
+	@:overload @:protected private function checkLabel(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Void;
 	
 	/**
 	* Inline
 	*/
-	//@:overload public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Statement;
+	//@:overload @:public public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Statement;
 	
 	/**
 	* Eliminate this statement, which is only possible if it has no label.
 	*/
-	@:overload public function eliminate(env : sun.tools.java.Environment, s : sun.tools.tree.Statement) : sun.tools.tree.Statement;
+	@:overload @:public public function eliminate(env : sun.tools.java.Environment, s : sun.tools.tree.Statement) : sun.tools.tree.Statement;
 	
 	/**
 	* Code
 	*/
-	@:overload public function code(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public public function code(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/*
 	* Return true if the statement has the given label
 	*/
-	@:overload public function hasLabel(lbl : sun.tools.java.Identifier) : Bool;
+	@:overload @:public public function hasLabel(lbl : sun.tools.java.Identifier) : Bool;
 	
 	/**
 	* Check if the first thing is a constructor invocation
 	*/
-	@:overload public function firstConstructor() : sun.tools.tree.Expression;
+	@:overload @:public public function firstConstructor() : sun.tools.tree.Expression;
 	
 	/**
 	* Create a copy of the statement for method inlining
 	*/
-	@:overload public function copyInline(ctx : sun.tools.tree.Context, valNeeded : Bool) : sun.tools.tree.Statement;
+	@:overload @:public public function copyInline(ctx : sun.tools.tree.Context, valNeeded : Bool) : sun.tools.tree.Statement;
 	
-	@:overload public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
+	@:overload @:public public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
 	
-	@:overload public function print(out : java.io.PrintStream, indent : Int) : Void;
+	@:overload @:public public function print(out : java.io.PrintStream, indent : Int) : Void;
 	
-	@:overload override public function print(out : java.io.PrintStream) : Void;
+	@:overload @:public override public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

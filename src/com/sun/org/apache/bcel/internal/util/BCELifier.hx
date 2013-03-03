@@ -70,21 +70,21 @@ extern class BCELifier extends com.sun.org.apache.bcel.internal.classfile.EmptyV
 	/** @param clazz Java class to "decompile"
 	* @param out where to output Java program
 	*/
-	@:overload public function new(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass, out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass, out : java.io.OutputStream) : Void;
 	
 	/** Start Java code generation
 	*/
-	@:overload public function start() : Void;
+	@:overload @:public public function start() : Void;
 	
-	@:overload public function visitJavaClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
+	@:overload @:public override public function visitJavaClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
 	
-	@:overload public function visitField(field : com.sun.org.apache.bcel.internal.classfile.Field) : Void;
+	@:overload @:public override public function visitField(field : com.sun.org.apache.bcel.internal.classfile.Field) : Void;
 	
-	@:overload public function visitMethod(method : com.sun.org.apache.bcel.internal.classfile.Method) : Void;
+	@:overload @:public override public function visitMethod(method : com.sun.org.apache.bcel.internal.classfile.Method) : Void;
 	
 	/** Default _main method
 	*/
-	@:overload public static function _main(argv : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function _main(argv : java.NativeArray<String>) : Void;
 	
 	
 }

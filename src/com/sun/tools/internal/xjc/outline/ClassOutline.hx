@@ -31,17 +31,17 @@ extern class ClassOutline
 	/**
 	* A {@link Outline} that encloses all the class outlines.
 	*/
-	@:overload @:abstract public function parent() : com.sun.tools.internal.xjc.outline.Outline;
+	@:overload @:public @:abstract public function parent() : com.sun.tools.internal.xjc.outline.Outline;
 	
 	/**
 	* {@link PackageOutline} that contains this class.
 	*/
-	@:overload public function _package() : com.sun.tools.internal.xjc.outline.PackageOutline;
+	@:overload @:public public function _package() : com.sun.tools.internal.xjc.outline.PackageOutline;
 	
 	/**
 	* This {@link ClassOutline} holds information about this {@link CClassInfo}.
 	*/
-	public var target(default, null) : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:public @:final public var target(default, null) : com.sun.tools.internal.xjc.model.CClassInfo;
 	
 	/**
 	* The exposed aspect of the a bean.
@@ -51,13 +51,13 @@ extern class ClassOutline
 	* Usually this is the public content interface, but
 	* it could be the same as the implClass.
 	*/
-	public var ref(default, null) : com.sun.codemodel.internal.JDefinedClass;
+	@:public @:final public var ref(default, null) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* The implementation aspect of a bean.
 	* The actual place where fields/methods should be generated into.
 	*/
-	public var implClass(default, null) : com.sun.codemodel.internal.JDefinedClass;
+	@:public @:final public var implClass(default, null) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* The implementation class that shall be used for reference.
@@ -68,22 +68,22 @@ extern class ClassOutline
 	* <p>
 	* This is the type that needs to be used for generating fields.
 	*/
-	public var implRef(default, null) : com.sun.codemodel.internal.JClass;
+	@:public @:final public var implRef(default, null) : com.sun.codemodel.internal.JClass;
 	
-	@:overload private function new(_target : com.sun.tools.internal.xjc.model.CClassInfo, exposedClass : com.sun.codemodel.internal.JDefinedClass, implRef : com.sun.codemodel.internal.JClass, _implClass : com.sun.codemodel.internal.JDefinedClass) : Void;
+	@:overload @:protected private function new(_target : com.sun.tools.internal.xjc.model.CClassInfo, exposedClass : com.sun.codemodel.internal.JDefinedClass, implRef : com.sun.codemodel.internal.JClass, _implClass : com.sun.codemodel.internal.JDefinedClass) : Void;
 	
 	/**
 	* Gets all the {@link FieldOutline}s newly declared
 	* in this class.
 	*/
-	@:overload @:final public function getDeclaredFields() : java.NativeArray<com.sun.tools.internal.xjc.outline.FieldOutline>;
+	@:overload @:public @:final public function getDeclaredFields() : java.NativeArray<com.sun.tools.internal.xjc.outline.FieldOutline>;
 	
 	/**
 	* Returns the super class of this class, if it has the
 	* super class and it is also a JAXB-bound class.
 	* Otherwise null.
 	*/
-	@:overload @:final public function getSuperClass() : com.sun.tools.internal.xjc.outline.ClassOutline;
+	@:overload @:public @:final public function getSuperClass() : com.sun.tools.internal.xjc.outline.ClassOutline;
 	
 	
 }

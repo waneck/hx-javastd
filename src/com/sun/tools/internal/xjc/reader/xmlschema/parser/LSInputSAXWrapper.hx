@@ -25,39 +25,39 @@ package com.sun.tools.internal.xjc.reader.xmlschema.parser;
 */
 extern class LSInputSAXWrapper implements org.w3c.dom.ls.LSInput
 {
-	@:overload public function new(inputSource : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function new(inputSource : org.xml.sax.InputSource) : Void;
 	
-	@:overload public function getCharacterStream() : java.io.Reader;
+	@:overload @:public public function getCharacterStream() : java.io.Reader;
 	
-	@:overload public function setCharacterStream(characterStream : java.io.Reader) : Void;
+	@:overload @:public public function setCharacterStream(characterStream : java.io.Reader) : Void;
 	
-	@:overload public function getByteStream() : java.io.InputStream;
+	@:overload @:public public function getByteStream() : java.io.InputStream;
 	
-	@:overload public function setByteStream(byteStream : java.io.InputStream) : Void;
+	@:overload @:public public function setByteStream(byteStream : java.io.InputStream) : Void;
 	
-	@:overload public function getStringData() : String;
+	@:overload @:public public function getStringData() : String;
 	
-	@:overload public function setStringData(stringData : String) : Void;
+	@:overload @:public public function setStringData(stringData : String) : Void;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
-	@:overload public function setPublicId(publicId : String) : Void;
+	@:overload @:public public function setPublicId(publicId : String) : Void;
 	
-	@:overload public function getBaseURI() : String;
+	@:overload @:public public function getBaseURI() : String;
 	
-	@:overload public function setBaseURI(baseURI : String) : Void;
+	@:overload @:public public function setBaseURI(baseURI : String) : Void;
 	
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
-	@:overload public function getCertifiedText() : Bool;
+	@:overload @:public public function getCertifiedText() : Bool;
 	
-	@:overload public function setCertifiedText(certifiedText : Bool) : Void;
+	@:overload @:public public function setCertifiedText(certifiedText : Bool) : Void;
 	
 	
 }

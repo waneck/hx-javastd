@@ -35,9 +35,9 @@ extern class BIConversion extends com.sun.tools.internal.xjc.reader.xmlschema.bi
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload public function new(loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(loc : org.xml.sax.Locator) : Void;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Gets the {@link TypeUse} object that this conversion represents.
@@ -50,12 +50,12 @@ extern class BIConversion extends com.sun.tools.internal.xjc.reader.xmlschema.bi
 	*      when a {@link BIConversion} is built. So we pass this
 	*      as a parameter to this method.
 	*/
-	@:overload @:abstract public function getTypeUse(owner : com.sun.xml.internal.xsom.XSSimpleType) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public @:abstract public function getTypeUse(owner : com.sun.xml.internal.xsom.XSSimpleType) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload override public function getName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getName() : javax.xml.namespace.QName;
 	
 	/** Name of the conversion declaration. */
-	public static var NAME(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var NAME(default, null) : javax.xml.namespace.QName;
 	
 	
 }
@@ -64,9 +64,9 @@ extern class BIConversion extends com.sun.tools.internal.xjc.reader.xmlschema.bi
 */
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BIConversion$Static') extern class BIConversion_Static extends com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion
 {
-	@:overload public function new(loc : org.xml.sax.Locator, transducer : com.sun.tools.internal.xjc.model.TypeUse) : Void;
+	@:overload @:public public function new(loc : org.xml.sax.Locator, transducer : com.sun.tools.internal.xjc.model.TypeUse) : Void;
 	
-	@:overload override public function getTypeUse(owner : com.sun.xml.internal.xsom.XSSimpleType) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public override public function getTypeUse(owner : com.sun.xml.internal.xsom.XSSimpleType) : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	
 }
@@ -79,22 +79,22 @@ extern class BIConversion extends com.sun.tools.internal.xjc.reader.xmlschema.bi
 */
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BIConversion$User') extern class BIConversion_User extends com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion
 {
-	@:overload public function new(loc : org.xml.sax.Locator, parseMethod : String, printMethod : String, inMemoryType : com.sun.codemodel.internal.JType) : Void;
+	@:overload @:public public function new(loc : org.xml.sax.Locator, parseMethod : String, printMethod : String, inMemoryType : com.sun.codemodel.internal.JType) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function getTypeUse(owner : com.sun.xml.internal.xsom.XSSimpleType) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public override public function getTypeUse(owner : com.sun.xml.internal.xsom.XSSimpleType) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload override public function getName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getName() : javax.xml.namespace.QName;
 	
 	/** Name of the conversion declaration. */
-	public static var NAME(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var NAME(default, null) : javax.xml.namespace.QName;
 	
 	
 }
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BIConversion$UserAdapter') extern class BIConversion_UserAdapter extends com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion
 {
-	@:overload override public function getTypeUse(owner : com.sun.xml.internal.xsom.XSSimpleType) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public override public function getTypeUse(owner : com.sun.xml.internal.xsom.XSSimpleType) : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	
 }

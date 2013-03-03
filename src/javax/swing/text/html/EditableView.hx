@@ -32,20 +32,20 @@ package javax.swing.text.html;
 */
 @:internal extern class EditableView extends javax.swing.text.ComponentView
 {
-	@:overload override public function getMinimumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMinimumSpan(axis : Int) : Single;
 	
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
-	@:overload override public function getMaximumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMaximumSpan(axis : Int) : Single;
 	
-	@:overload override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
 	
-	@:overload override public function setParent(parent : javax.swing.text.View) : Void;
+	@:overload @:public override public function setParent(parent : javax.swing.text.View) : Void;
 	
 	/**
 	* @return true if the Component is visible.
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public override public function isVisible() : Bool;
 	
 	
 }

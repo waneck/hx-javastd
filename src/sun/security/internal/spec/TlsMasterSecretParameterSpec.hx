@@ -49,63 +49,63 @@ extern class TlsMasterSecretParameterSpec implements java.security.spec.Algorith
 	* @throws IllegalArgumentException if minorVersion or majorVersion are
 	*   negative or larger than 255
 	*/
-	@:overload public function new(premasterSecret : javax.crypto.SecretKey, majorVersion : Int, minorVersion : Int, clientRandom : java.NativeArray<java.StdTypes.Int8>, serverRandom : java.NativeArray<java.StdTypes.Int8>, prfHashAlg : String, prfHashLength : Int, prfBlockSize : Int) : Void;
+	@:overload @:public public function new(premasterSecret : javax.crypto.SecretKey, majorVersion : Int, minorVersion : Int, clientRandom : java.NativeArray<java.StdTypes.Int8>, serverRandom : java.NativeArray<java.StdTypes.Int8>, prfHashAlg : String, prfHashLength : Int, prfBlockSize : Int) : Void;
 	
 	/**
 	* Returns the premaster secret.
 	*
 	* @return the premaster secret.
 	*/
-	@:overload public function getPremasterSecret() : javax.crypto.SecretKey;
+	@:overload @:public public function getPremasterSecret() : javax.crypto.SecretKey;
 	
 	/**
 	* Returns the major version number.
 	*
 	* @return the major version number.
 	*/
-	@:overload public function getMajorVersion() : Int;
+	@:overload @:public public function getMajorVersion() : Int;
 	
 	/**
 	* Returns the minor version number.
 	*
 	* @return the minor version number.
 	*/
-	@:overload public function getMinorVersion() : Int;
+	@:overload @:public public function getMinorVersion() : Int;
 	
 	/**
 	* Returns a copy of the client's random value.
 	*
 	* @return a copy of the client's random value.
 	*/
-	@:overload public function getClientRandom() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getClientRandom() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a copy of the server's random value.
 	*
 	* @return a copy of the server's random value.
 	*/
-	@:overload public function getServerRandom() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getServerRandom() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Obtains the PRF hash algorithm to use in the PRF calculation.
 	*
 	* @return the hash algorithm.
 	*/
-	@:overload public function getPRFHashAlg() : String;
+	@:overload @:public public function getPRFHashAlg() : String;
 	
 	/**
 	* Obtains the length of the PRF hash algorithm.
 	*
 	* @return the hash algorithm length.
 	*/
-	@:overload public function getPRFHashLength() : Int;
+	@:overload @:public public function getPRFHashLength() : Int;
 	
 	/**
 	* Obtains the block size of the PRF hash algorithm.
 	*
 	* @return the hash algorithm block size.
 	*/
-	@:overload public function getPRFBlockSize() : Int;
+	@:overload @:public public function getPRFBlockSize() : Int;
 	
 	
 }

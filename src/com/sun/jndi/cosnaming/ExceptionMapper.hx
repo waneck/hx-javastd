@@ -29,7 +29,7 @@ package com.sun.jndi.cosnaming;
 */
 extern class ExceptionMapper
 {
-	@:overload @:final public static function mapException(e : java.lang.Exception, ctx : com.sun.jndi.cosnaming.CNCtx, inputName : java.NativeArray<org.omg.CosNaming.NameComponent>) : javax.naming.NamingException;
+	@:overload @:public @:static @:final public static function mapException(e : java.lang.Exception, ctx : com.sun.jndi.cosnaming.CNCtx, inputName : java.NativeArray<org.omg.CosNaming.NameComponent>) : javax.naming.NamingException;
 	
 	
 }

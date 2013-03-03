@@ -8,14 +8,14 @@ package org.omg.IOP;
 extern class TaggedComponent implements org.omg.CORBA.portable.IDLEntity
 {
 	/** The tag, represented as a component id. */
-	public var tag : Int;
+	@:public public var tag : Int;
 	
 	/** The component data associated with the component id. */
-	public var component_data : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var component_data : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_tag : Int, _component_data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(_tag : Int, _component_data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

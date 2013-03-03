@@ -30,7 +30,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* split along the y axis.  For example the two
 	* <code>Component</code>s will be split one on top of the other.
 	*/
-	public static var VERTICAL_SPLIT(default, null) : Int;
+	@:public @:final @:static public static var VERTICAL_SPLIT(default, null) : Int;
 	
 	/**
 	* Horizontal split indicates the <code>Component</code>s are
@@ -38,116 +38,116 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* <code>Component</code>s will be split one to the left of the
 	* other.
 	*/
-	public static var HORIZONTAL_SPLIT(default, null) : Int;
+	@:public @:final @:static public static var HORIZONTAL_SPLIT(default, null) : Int;
 	
 	/**
 	* Used to add a <code>Component</code> to the left of the other
 	* <code>Component</code>.
 	*/
-	public static var LEFT(default, null) : String;
+	@:public @:final @:static public static var LEFT(default, null) : String;
 	
 	/**
 	* Used to add a <code>Component</code> to the right of the other
 	* <code>Component</code>.
 	*/
-	public static var RIGHT(default, null) : String;
+	@:public @:final @:static public static var RIGHT(default, null) : String;
 	
 	/**
 	* Used to add a <code>Component</code> above the other
 	* <code>Component</code>.
 	*/
-	public static var TOP(default, null) : String;
+	@:public @:final @:static public static var TOP(default, null) : String;
 	
 	/**
 	* Used to add a <code>Component</code> below the other
 	* <code>Component</code>.
 	*/
-	public static var BOTTOM(default, null) : String;
+	@:public @:final @:static public static var BOTTOM(default, null) : String;
 	
 	/**
 	* Used to add a <code>Component</code> that will represent the divider.
 	*/
-	public static var DIVIDER(default, null) : String;
+	@:public @:final @:static public static var DIVIDER(default, null) : String;
 	
 	/**
 	* Bound property name for orientation (horizontal or vertical).
 	*/
-	public static var ORIENTATION_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var ORIENTATION_PROPERTY(default, null) : String;
 	
 	/**
 	* Bound property name for continuousLayout.
 	*/
-	public static var CONTINUOUS_LAYOUT_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var CONTINUOUS_LAYOUT_PROPERTY(default, null) : String;
 	
 	/**
 	* Bound property name for border.
 	*/
-	public static var DIVIDER_SIZE_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var DIVIDER_SIZE_PROPERTY(default, null) : String;
 	
 	/**
 	* Bound property for oneTouchExpandable.
 	*/
-	public static var ONE_TOUCH_EXPANDABLE_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var ONE_TOUCH_EXPANDABLE_PROPERTY(default, null) : String;
 	
 	/**
 	* Bound property for lastLocation.
 	*/
-	public static var LAST_DIVIDER_LOCATION_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var LAST_DIVIDER_LOCATION_PROPERTY(default, null) : String;
 	
 	/**
 	* Bound property for the dividerLocation.
 	* @since 1.3
 	*/
-	@:require(java3) public static var DIVIDER_LOCATION_PROPERTY(default, null) : String;
+	@:require(java3) @:public @:final @:static public static var DIVIDER_LOCATION_PROPERTY(default, null) : String;
 	
 	/**
 	* Bound property for weight.
 	* @since 1.3
 	*/
-	@:require(java3) public static var RESIZE_WEIGHT_PROPERTY(default, null) : String;
+	@:require(java3) @:public @:final @:static public static var RESIZE_WEIGHT_PROPERTY(default, null) : String;
 	
 	/**
 	* How the views are split.
 	*/
-	private var orientation : Int;
+	@:protected private var orientation : Int;
 	
 	/**
 	* Whether or not the views are continuously redisplayed while
 	* resizing.
 	*/
-	private var continuousLayout : Bool;
+	@:protected private var continuousLayout : Bool;
 	
 	/**
 	* The left or top component.
 	*/
-	private var leftComponent : java.awt.Component;
+	@:protected private var leftComponent : java.awt.Component;
 	
 	/**
 	* The right or bottom component.
 	*/
-	private var rightComponent : java.awt.Component;
+	@:protected private var rightComponent : java.awt.Component;
 	
 	/**
 	* Size of the divider.
 	*/
-	private var dividerSize : Int;
+	@:protected private var dividerSize : Int;
 	
 	/**
 	* Is a little widget provided to quickly expand/collapse the
 	* split pane?
 	*/
-	private var oneTouchExpandable : Bool;
+	@:protected private var oneTouchExpandable : Bool;
 	
 	/**
 	* Previous location of the split pane.
 	*/
-	private var lastDividerLocation : Int;
+	@:protected private var lastDividerLocation : Int;
 	
 	/**
 	* Creates a new <code>JSplitPane</code> configured to arrange the child
 	* components side-by-side horizontally, using two buttons for the components.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new <code>JSplitPane</code> configured with the
@@ -158,7 +158,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* @exception IllegalArgumentException if <code>orientation</code>
 	*          is not one of HORIZONTAL_SPLIT or VERTICAL_SPLIT.
 	*/
-	@:overload public function new(newOrientation : Int) : Void;
+	@:overload @:public public function new(newOrientation : Int) : Void;
 	
 	/**
 	* Creates a new <code>JSplitPane</code> with the specified
@@ -172,7 +172,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* @exception IllegalArgumentException if <code>orientation</code>
 	*          is not one of HORIZONTAL_SPLIT or VERTICAL_SPLIT
 	*/
-	@:overload public function new(newOrientation : Int, newContinuousLayout : Bool) : Void;
+	@:overload @:public public function new(newOrientation : Int, newContinuousLayout : Bool) : Void;
 	
 	/**
 	* Creates a new <code>JSplitPane</code> with the specified
@@ -191,7 +191,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* @exception IllegalArgumentException if <code>orientation</code>
 	*          is not one of: HORIZONTAL_SPLIT or VERTICAL_SPLIT
 	*/
-	@:overload public function new(newOrientation : Int, newLeftComponent : java.awt.Component, newRightComponent : java.awt.Component) : Void;
+	@:overload @:public public function new(newOrientation : Int, newLeftComponent : java.awt.Component, newRightComponent : java.awt.Component) : Void;
 	
 	/**
 	* Creates a new <code>JSplitPane</code> with the specified
@@ -214,7 +214,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* @exception IllegalArgumentException if <code>orientation</code>
 	*          is not one of HORIZONTAL_SPLIT or VERTICAL_SPLIT
 	*/
-	@:overload public function new(newOrientation : Int, newContinuousLayout : Bool, newLeftComponent : java.awt.Component, newRightComponent : java.awt.Component) : Void;
+	@:overload @:public public function new(newOrientation : Int, newContinuousLayout : Bool, newLeftComponent : java.awt.Component, newRightComponent : java.awt.Component) : Void;
 	
 	/**
 	* Sets the L&F object that renders this component.
@@ -227,7 +227,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.SplitPaneUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.SplitPaneUI) : Void;
 	
 	/**
 	* Returns the <code>SplitPaneUI</code> that is providing the
@@ -238,7 +238,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*       expert: true
 	*  description: The L&F object that renders this component.
 	*/
-	@:overload public function getUI() : javax.swing.plaf.SplitPaneUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.SplitPaneUI;
 	
 	/**
 	* Notification from the <code>UIManager</code> that the L&F has changed.
@@ -247,7 +247,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -259,7 +259,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*       expert: true
 	*  description: A string that specifies the name of the L&F class.
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Sets the size of the divider.
@@ -269,21 +269,21 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*        bound: true
 	*  description: The size of the divider.
 	*/
-	@:overload public function setDividerSize(newSize : Int) : Void;
+	@:overload @:public public function setDividerSize(newSize : Int) : Void;
 	
 	/**
 	* Returns the size of the divider.
 	*
 	* @return an integer giving the size of the divider in pixels
 	*/
-	@:overload public function getDividerSize() : Int;
+	@:overload @:public public function getDividerSize() : Int;
 	
 	/**
 	* Sets the component to the left (or above) the divider.
 	*
 	* @param comp the <code>Component</code> to display in that position
 	*/
-	@:overload public function setLeftComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function setLeftComponent(comp : java.awt.Component) : Void;
 	
 	/**
 	* Returns the component to the left (or above) the divider.
@@ -293,7 +293,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*    preferred: true
 	*  description: The component to the left (or above) the divider.
 	*/
-	@:overload public function getLeftComponent() : java.awt.Component;
+	@:overload @:public public function getLeftComponent() : java.awt.Component;
 	
 	/**
 	* Sets the component above, or to the left of the divider.
@@ -302,14 +302,14 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* @beaninfo
 	*  description: The component above, or to the left of the divider.
 	*/
-	@:overload public function setTopComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function setTopComponent(comp : java.awt.Component) : Void;
 	
 	/**
 	* Returns the component above, or to the left of the divider.
 	*
 	* @return the <code>Component</code> displayed in that position
 	*/
-	@:overload public function getTopComponent() : java.awt.Component;
+	@:overload @:public public function getTopComponent() : java.awt.Component;
 	
 	/**
 	* Sets the component to the right (or below) the divider.
@@ -319,14 +319,14 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*    preferred: true
 	*  description: The component to the right (or below) the divider.
 	*/
-	@:overload public function setRightComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function setRightComponent(comp : java.awt.Component) : Void;
 	
 	/**
 	* Returns the component to the right (or below) the divider.
 	*
 	* @return the <code>Component</code> displayed in that position
 	*/
-	@:overload public function getRightComponent() : java.awt.Component;
+	@:overload @:public public function getRightComponent() : java.awt.Component;
 	
 	/**
 	* Sets the component below, or to the right of the divider.
@@ -335,14 +335,14 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* @beaninfo
 	*  description: The component below, or to the right of the divider.
 	*/
-	@:overload public function setBottomComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function setBottomComponent(comp : java.awt.Component) : Void;
 	
 	/**
 	* Returns the component below, or to the right of the divider.
 	*
 	* @return the <code>Component</code> displayed in that position
 	*/
-	@:overload public function getBottomComponent() : java.awt.Component;
+	@:overload @:public public function getBottomComponent() : java.awt.Component;
 	
 	/**
 	* Sets the value of the <code>oneTouchExpandable</code> property,
@@ -362,7 +362,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*
 	* @see #isOneTouchExpandable
 	*/
-	@:overload public function setOneTouchExpandable(newValue : Bool) : Void;
+	@:overload @:public public function setOneTouchExpandable(newValue : Bool) : Void;
 	
 	/**
 	* Gets the <code>oneTouchExpandable</code> property.
@@ -370,7 +370,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* @return the value of the <code>oneTouchExpandable</code> property
 	* @see #setOneTouchExpandable
 	*/
-	@:overload public function isOneTouchExpandable() : Bool;
+	@:overload @:public public function isOneTouchExpandable() : Bool;
 	
 	/**
 	* Sets the last location the divider was at to
@@ -383,7 +383,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*        bound: true
 	*  description: The last location the divider was at.
 	*/
-	@:overload public function setLastDividerLocation(newLastLocation : Int) : Void;
+	@:overload @:public public function setLastDividerLocation(newLastLocation : Int) : Void;
 	
 	/**
 	* Returns the last location the divider was at.
@@ -392,7 +392,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*       of pixels from the left (or upper) edge of the pane to the
 	*       left (or upper) edge of the divider
 	*/
-	@:overload public function getLastDividerLocation() : Int;
+	@:overload @:public public function getLastDividerLocation() : Int;
 	
 	/**
 	* Sets the orientation, or how the splitter is divided. The options
@@ -410,7 +410,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*         enum: HORIZONTAL_SPLIT JSplitPane.HORIZONTAL_SPLIT
 	*               VERTICAL_SPLIT   JSplitPane.VERTICAL_SPLIT
 	*/
-	@:overload public function setOrientation(orientation : Int) : Void;
+	@:overload @:public public function setOrientation(orientation : Int) : Void;
 	
 	/**
 	* Returns the orientation.
@@ -418,7 +418,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* @return an integer giving the orientation
 	* @see #setOrientation
 	*/
-	@:overload public function getOrientation() : Int;
+	@:overload @:public public function getOrientation() : Int;
 	
 	/**
 	* Sets the value of the <code>continuousLayout</code> property,
@@ -438,7 +438,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*               user intervention.
 	* @see #isContinuousLayout
 	*/
-	@:overload public function setContinuousLayout(newContinuousLayout : Bool) : Void;
+	@:overload @:public public function setContinuousLayout(newContinuousLayout : Bool) : Void;
 	
 	/**
 	* Gets the <code>continuousLayout</code> property.
@@ -446,7 +446,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* @return the value of the <code>continuousLayout</code> property
 	* @see #setContinuousLayout
 	*/
-	@:overload public function isContinuousLayout() : Bool;
+	@:overload @:public public function isContinuousLayout() : Bool;
 	
 	/**
 	* Specifies how to distribute extra space when the size of the split pane
@@ -466,7 +466,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*  description: Specifies how to distribute extra space when the split pane
 	*               resizes.
 	*/
-	@:require(java3) @:overload public function setResizeWeight(value : Float) : Void;
+	@:require(java3) @:overload @:public public function setResizeWeight(value : Float) : Void;
 	
 	/**
 	* Returns the number that determines how extra space is distributed.
@@ -474,14 +474,14 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*         split pane
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getResizeWeight() : Float;
+	@:require(java3) @:overload @:public public function getResizeWeight() : Float;
 	
 	/**
 	* Lays out the <code>JSplitPane</code> layout based on the preferred size
 	* of the children components. This will likely result in changing
 	* the divider location.
 	*/
-	@:overload public function resetToPreferredSizes() : Void;
+	@:overload @:public public function resetToPreferredSizes() : Void;
 	
 	/**
 	* Sets the divider location as a percentage of the
@@ -502,7 +502,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* @beaninfo
 	*  description: The location of the divider.
 	*/
-	@:overload public function setDividerLocation(proportionalLocation : Float) : Void;
+	@:overload @:public public function setDividerLocation(proportionalLocation : Float) : Void;
 	
 	/**
 	* Sets the location of the divider. This is passed off to the
@@ -518,7 +518,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*        bound: true
 	*  description: The location of the divider.
 	*/
-	@:overload public function setDividerLocation(location : Int) : Void;
+	@:overload @:public public function setDividerLocation(location : Int) : Void;
 	
 	/**
 	* Returns the last value passed to <code>setDividerLocation</code>.
@@ -528,7 +528,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*
 	* @return an integer specifying the location of the divider
 	*/
-	@:overload public function getDividerLocation() : Int;
+	@:overload @:public public function getDividerLocation() : Int;
 	
 	/**
 	* Returns the minimum location of the divider from the look and feel
@@ -540,7 +540,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* @beaninfo
 	*  description: The minimum location of the divider from the L&F.
 	*/
-	@:overload public function getMinimumDividerLocation() : Int;
+	@:overload @:public public function getMinimumDividerLocation() : Int;
 	
 	/**
 	* Returns the maximum location of the divider from the look and feel
@@ -550,7 +550,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*          location (typically a pixel count); or -1 if the  UI is
 	*          <code>null</code>
 	*/
-	@:overload public function getMaximumDividerLocation() : Int;
+	@:overload @:public public function getMaximumDividerLocation() : Int;
 	
 	/**
 	* Removes the child component, <code>component</code> from the
@@ -559,7 +559,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*
 	* @param component the <code>Component</code> to remove
 	*/
-	@:overload override public function remove(component : java.awt.Component) : Void;
+	@:overload @:public override public function remove(component : java.awt.Component) : Void;
 	
 	/**
 	* Removes the <code>Component</code> at the specified index.
@@ -570,14 +570,14 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*        1 specifies the left/top component and 2 specifies the
 	*        bottom/right component
 	*/
-	@:overload override public function remove(index : Int) : Void;
+	@:overload @:public override public function remove(index : Int) : Void;
 	
 	/**
 	* Removes all the child components from the split pane. Resets the
 	* <code>leftComonent</code> and <code>rightComponent</code>
 	* instance variables.
 	*/
-	@:overload override public function removeAll() : Void;
+	@:overload @:public override public function removeAll() : Void;
 	
 	/**
 	* Returns true, so that calls to <code>revalidate</code>
@@ -592,7 +592,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* @beaninfo
 	*    hidden: true
 	*/
-	@:overload override public function isValidateRoot() : Bool;
+	@:overload @:public override public function isValidateRoot() : Bool;
 	
 	/**
 	* Adds the specified component to this split pane.
@@ -624,7 +624,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*          object does not match an existing component
 	* @see java.awt.Container#addImpl(Component, Object, int)
 	*/
-	@:overload override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload @:protected override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Subclassed to message the UI with <code>finishedPaintingChildren</code>
@@ -632,7 +632,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*
 	* @param g the <code>Graphics</code> context within which to paint
 	*/
-	@:overload private function paintChildren(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintChildren(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Returns a string representation of this <code>JSplitPane</code>.
@@ -644,7 +644,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*
 	* @return  a string representation of this <code>JSplitPane</code>.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JSplitPane.
@@ -658,7 +658,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*       expert: true
 	*  description: The AccessibleContext associated with this SplitPane.
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -685,7 +685,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the AccessibleValue associated with this object.  In the
@@ -695,35 +695,35 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Gets the accessible value of this object.
 	*
 	* @return a localized String describing the value of this object
 	*/
-	@:overload public function getCurrentAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getCurrentAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Sets the value of this object as a Number.
 	*
 	* @return True if the value was set.
 	*/
-	@:overload public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
+	@:overload @:public public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
 	
 	/**
 	* Gets the minimum accessible value of this object.
 	*
 	* @return The minimum value of this object.
 	*/
-	@:overload public function getMinimumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMinimumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Gets the maximum accessible value of this object.
 	*
 	* @return The maximum value of this object.
 	*/
-	@:overload public function getMaximumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMaximumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Gets the role of this object.
@@ -732,7 +732,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

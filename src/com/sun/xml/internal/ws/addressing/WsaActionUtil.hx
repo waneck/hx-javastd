@@ -28,7 +28,7 @@ extern class WsaActionUtil
 	/**
 	* @author Rama Pulavarthi
 	*/
-	@:overload @:final public static function getDefaultFaultAction(method : com.sun.xml.internal.ws.api.model.JavaMethod, ce : com.sun.xml.internal.ws.api.model.CheckedException) : String;
+	@:overload @:public @:static @:final public static function getDefaultFaultAction(method : com.sun.xml.internal.ws.api.model.JavaMethod, ce : com.sun.xml.internal.ws.api.model.CheckedException) : String;
 	
 	
 }

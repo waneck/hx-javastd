@@ -28,21 +28,21 @@ package com.sun.xml.internal.bind.v2.runtime.reflect.opt;
 */
 extern class Const
 {
-	public static var default_value_byte : java.StdTypes.Int8;
+	@:public @:static public static var default_value_byte : java.StdTypes.Int8;
 	
-	public static var default_value_boolean : Bool;
+	@:public @:static public static var default_value_boolean : Bool;
 	
-	public static var default_value_char : java.StdTypes.Char16;
+	@:public @:static public static var default_value_char : java.StdTypes.Char16;
 	
-	public static var default_value_float : Single;
+	@:public @:static public static var default_value_float : Single;
 	
-	public static var default_value_double : Float;
+	@:public @:static public static var default_value_double : Float;
 	
-	public static var default_value_int : Int;
+	@:public @:static public static var default_value_int : Int;
 	
-	public static var default_value_long : haxe.Int64;
+	@:public @:static public static var default_value_long : haxe.Int64;
 	
-	public static var default_value_short : java.StdTypes.Int16;
+	@:public @:static public static var default_value_short : java.StdTypes.Int16;
 	
 	
 }

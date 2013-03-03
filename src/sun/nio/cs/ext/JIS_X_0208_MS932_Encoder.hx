@@ -25,9 +25,9 @@ package sun.nio.cs.ext;
 */
 @:internal extern class JIS_X_0208_MS932_Encoder
 {
-	private static var index1(default, null) : java.NativeArray<java.StdTypes.Int16>;
+	@:protected @:final @:static private static var index1(default, null) : java.NativeArray<java.StdTypes.Int16>;
 	
-	private static var index2(default, null) : java.NativeArray<String>;
+	@:protected @:final @:static private static var index2(default, null) : java.NativeArray<String>;
 	
 	
 }

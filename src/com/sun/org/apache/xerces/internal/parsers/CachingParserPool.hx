@@ -21,24 +21,24 @@ package com.sun.org.apache.xerces.internal.parsers;
 extern class CachingParserPool
 {
 	/** Default shadow symbol table (false). */
-	public static var DEFAULT_SHADOW_SYMBOL_TABLE(default, null) : Bool;
+	@:public @:static @:final public static var DEFAULT_SHADOW_SYMBOL_TABLE(default, null) : Bool;
 	
 	/** Default shadow grammar pool (false). */
-	public static var DEFAULT_SHADOW_GRAMMAR_POOL(default, null) : Bool;
+	@:public @:static @:final public static var DEFAULT_SHADOW_GRAMMAR_POOL(default, null) : Bool;
 	
 	/**
 	* Symbol table. The symbol table that the caching parser pool is
 	* constructed with is automatically wrapped in a synchronized
 	* version for thread-safety.
 	*/
-	private var fSynchronizedSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSynchronizedSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
 	/**
 	* Grammar pool. The grammar pool that the caching parser pool is
 	* constructed with is automatically wrapped in a synchronized
 	* version for thread-safety.
 	*/
-	private var fSynchronizedGrammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
+	@:protected private var fSynchronizedGrammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
 	
 	/**
 	* Shadow the symbol table for new parser instances. If true,
@@ -47,7 +47,7 @@ extern class CachingParserPool
 	* symbol table. New symbols are added to the shadow symbol
 	* table and are local to the parser instance.
 	*/
-	private var fShadowSymbolTable : Bool;
+	@:protected private var fShadowSymbolTable : Bool;
 	
 	/**
 	* Shadow the grammar pool for new parser instances. If true,
@@ -56,10 +56,10 @@ extern class CachingParserPool
 	* grammar pool. New grammars are added to the shadow grammar
 	* pool and are local to the parser instance.
 	*/
-	private var fShadowGrammarPool : Bool;
+	@:protected private var fShadowGrammarPool : Bool;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a caching parser pool with the specified symbol table
@@ -68,13 +68,13 @@ extern class CachingParserPool
 	* @param symbolTable The symbol table.
 	* @param grammarPool The grammar pool.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
 	
 	/** Returns the symbol table. */
-	@:overload public function getSymbolTable() : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:overload @:public public function getSymbolTable() : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
 	/** Returns the grammar pool. */
-	@:overload public function getXMLGrammarPool() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
+	@:overload @:public public function getXMLGrammarPool() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
 	
 	/**
 	* Sets whether new parser instance receive shadow copies of the
@@ -88,13 +88,13 @@ extern class CachingParserPool
 	*               parser instances are allowed to add new symbols
 	*               to the main symbol table.
 	*/
-	@:overload public function setShadowSymbolTable(shadow : Bool) : Void;
+	@:overload @:public public function setShadowSymbolTable(shadow : Bool) : Void;
 	
 	/** Creates a new DOM parser. */
-	@:overload public function createDOMParser() : com.sun.org.apache.xerces.internal.parsers.DOMParser;
+	@:overload @:public public function createDOMParser() : com.sun.org.apache.xerces.internal.parsers.DOMParser;
 	
 	/** Creates a new SAX parser. */
-	@:overload public function createSAXParser() : com.sun.org.apache.xerces.internal.parsers.SAXParser;
+	@:overload @:public public function createSAXParser() : com.sun.org.apache.xerces.internal.parsers.SAXParser;
 	
 	
 }
@@ -106,22 +106,22 @@ extern class CachingParserPool
 @:native('com$sun$org$apache$xerces$internal$parsers$CachingParserPool$SynchronizedGrammarPool') extern class CachingParserPool_SynchronizedGrammarPool implements com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool
 {
 	/** Constructs a synchronized grammar pool. */
-	@:overload public function new(grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
+	@:overload @:public public function new(grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
 	
-	@:overload public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
+	@:overload @:public public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
 	
-	@:overload public function retrieveGrammar(gDesc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload @:public public function retrieveGrammar(gDesc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
-	@:overload public function cacheGrammars(grammarType : String, grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>) : Void;
+	@:overload @:public public function cacheGrammars(grammarType : String, grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>) : Void;
 	
 	/** lock the grammar pool */
-	@:overload public function lockPool() : Void;
+	@:overload @:public public function lockPool() : Void;
 	
 	/** clear the grammar pool */
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/** unlock the grammar pool */
-	@:overload public function unlockPool() : Void;
+	@:overload @:public public function unlockPool() : Void;
 	
 	
 }
@@ -136,7 +136,7 @@ extern class CachingParserPool
 @:native('com$sun$org$apache$xerces$internal$parsers$CachingParserPool$ShadowedGrammarPool') extern class CachingParserPool_ShadowedGrammarPool extends com.sun.org.apache.xerces.internal.util.XMLGrammarPoolImpl
 {
 	/** Constructs a shadowed grammar pool. */
-	@:overload public function new(grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
+	@:overload @:public public function new(grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
 	
 	/**
 	* Retrieve the initial set of grammars for the validator to work with.
@@ -145,7 +145,7 @@ extern class CachingParserPool
 	* @param grammarType Type of the grammars to be retrieved.
 	* @return            The initial grammar set the validator may place in its "bucket"
 	*/
-	@:overload public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
+	@:overload @:public override public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
 	
 	/**
 	* Retrieve a particular grammar.
@@ -154,7 +154,7 @@ extern class CachingParserPool
 	* @param gDesc Description of the grammar to be retrieved
 	* @return      Grammar corresponding to gDesc, or null if none exists.
 	*/
-	@:overload public function retrieveGrammar(gDesc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload @:public override public function retrieveGrammar(gDesc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
 	/**
 	* Give the grammarPool the option of caching these grammars.
@@ -164,14 +164,14 @@ extern class CachingParserPool
 	* @param grammars    The Grammars that may be cached (unordered, Grammars previously
 	*                    given to the validator may be included).
 	*/
-	@:overload public function cacheGrammars(grammarType : String, grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>) : Void;
+	@:overload @:public override public function cacheGrammars(grammarType : String, grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>) : Void;
 	
 	/**
 	* Returns the grammar associated to the specified description.
 	*
 	* @param desc The description of the grammar.
 	*/
-	@:overload public function getGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload @:public override public function getGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
 	/**
 	* Returns true if the grammar pool contains a grammar associated
@@ -179,7 +179,7 @@ extern class CachingParserPool
 	*
 	* @param desc The description of the grammar.
 	*/
-	@:overload public function containsGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : Bool;
+	@:overload @:public override public function containsGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : Bool;
 	
 	
 }

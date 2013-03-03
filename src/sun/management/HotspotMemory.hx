@@ -32,7 +32,7 @@ package sun.management;
 */
 @:internal extern class HotspotMemory implements sun.management.HotspotMemoryMBean
 {
-	@:overload public function getInternalMemoryCounters() : java.util.List<sun.management.counter.Counter>;
+	@:overload @:public public function getInternalMemoryCounters() : java.util.List<sun.management.counter.Counter>;
 	
 	
 }

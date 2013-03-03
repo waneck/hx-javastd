@@ -48,7 +48,7 @@ package java.awt;
 	* @return   <code>GraphicsDevice</code> corresponding to the pointer
 	* @since    1.5
 	*/
-	@:require(java5) @:overload public function getDevice() : java.awt.GraphicsDevice;
+	@:require(java5) @:overload @:public public function getDevice() : java.awt.GraphicsDevice;
 	
 	/**
 	* Returns the <code>Point</code> that represents the coordinates
@@ -61,7 +61,7 @@ package java.awt;
 	* @return   coordinates of mouse pointer
 	* @since    1.5
 	*/
-	@:require(java5) @:overload public function getLocation() : java.awt.Point;
+	@:require(java5) @:overload @:public public function getLocation() : java.awt.Point;
 	
 	
 }

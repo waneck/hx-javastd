@@ -28,12 +28,12 @@ extern class JAXBContextFactory
 	/**
 	* The JAXB API will invoke this method via reflection
 	*/
-	@:overload public static function createContext(classes : java.NativeArray<Class<Dynamic>>, properties : java.util.Map<Dynamic, Dynamic>) : javax.xml.bind.JAXBContext;
+	@:overload @:public @:static public static function createContext(classes : java.NativeArray<Class<Dynamic>>, properties : java.util.Map<Dynamic, Dynamic>) : javax.xml.bind.JAXBContext;
 	
 	/**
 	* The JAXB API will invoke this method via reflection
 	*/
-	@:overload public static function createContext(contextPath : String, classLoader : java.lang.ClassLoader, properties : java.util.Map<Dynamic, Dynamic>) : javax.xml.bind.JAXBContext;
+	@:overload @:public @:static public static function createContext(contextPath : String, classLoader : java.lang.ClassLoader, properties : java.util.Map<Dynamic, Dynamic>) : javax.xml.bind.JAXBContext;
 	
 	
 }

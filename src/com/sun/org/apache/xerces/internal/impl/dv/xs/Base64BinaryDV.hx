@@ -30,11 +30,11 @@ extern class Base64BinaryDV extends com.sun.org.apache.xerces.internal.impl.dv.x
 	*
 	* @version $Id: Base64BinaryDV.java,v 1.7 2010-11-01 04:39:46 joehw Exp $
 	*/
-	@:overload override public function getAllowedFacets() : java.StdTypes.Int16;
+	@:overload @:public override public function getAllowedFacets() : java.StdTypes.Int16;
 	
-	@:overload override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
+	@:overload @:public override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
 	
-	@:overload override public function getDataLength(value : Dynamic) : Int;
+	@:overload @:public override public function getDataLength(value : Dynamic) : Int;
 	
 	
 }
@@ -43,13 +43,13 @@ extern class Base64BinaryDV extends com.sun.org.apache.xerces.internal.impl.dv.x
 */
 @:native('com$sun$org$apache$xerces$internal$impl$dv$xs$Base64BinaryDV$XBase64') @:internal extern class Base64BinaryDV_XBase64 extends com.sun.org.apache.xerces.internal.impl.dv.util.ByteListImpl
 {
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:synchronized override public function toString() : String;
+	@:overload @:public @:synchronized override public function toString() : String;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

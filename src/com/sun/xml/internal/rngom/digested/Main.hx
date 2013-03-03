@@ -49,7 +49,7 @@ extern class Main
 	/**
 	* @author Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

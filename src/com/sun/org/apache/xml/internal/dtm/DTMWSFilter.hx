@@ -37,7 +37,7 @@ extern interface DTMWSFilter
 	* @param elementHandle int Handle of the element.
 	* @return one of NOTSTRIP, STRIP, or INHERIT.
 	*/
-	@:overload public function getShouldStripSpace(elementHandle : Int, dtm : com.sun.org.apache.xml.internal.dtm.DTM) : java.StdTypes.Int16;
+	@:overload @:public public function getShouldStripSpace(elementHandle : Int, dtm : com.sun.org.apache.xml.internal.dtm.DTM) : java.StdTypes.Int16;
 	
 	
 }

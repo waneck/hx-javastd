@@ -82,7 +82,7 @@ package com.sun.jdi.request;
 	* @return <code>true</code> if enabled;
 	* <code>false</code> otherwise.
 	*/
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
 	/**
 	* Enables or disables this event request. While this event request is
@@ -100,7 +100,7 @@ package com.sun.jdi.request;
 	* <code>val</code> is <code>true</code>, and the
 	* thread named in the request has died.
 	*/
-	@:overload public function setEnabled(val : Bool) : Void;
+	@:overload @:public public function setEnabled(val : Bool) : Void;
 	
 	/**
 	* Same as {@link #setEnabled <CODE>setEnabled(true)</CODE>}.
@@ -109,14 +109,14 @@ package com.sun.jdi.request;
 	* @throws IllegalThreadStateException if this is a StepRequest
 	* and the thread named in the request has died.
 	*/
-	@:overload public function enable() : Void;
+	@:overload @:public public function enable() : Void;
 	
 	/**
 	* Same as {@link #setEnabled <CODE>setEnabled(false)</CODE>}.
 	* @throws InvalidRequestStateException if this request
 	* has been deleted.
 	*/
-	@:overload public function disable() : Void;
+	@:overload @:public public function disable() : Void;
 	
 	/**
 	* Limit the requested event to be reported at most once after a
@@ -137,7 +137,7 @@ package com.sun.jdi.request;
 	* @throws IllegalArgumentException if <CODE>count</CODE>
 	* is less than one.
 	*/
-	@:overload public function addCountFilter(count : Int) : Void;
+	@:overload @:public public function addCountFilter(count : Int) : Void;
 	
 	/** Suspend no threads when the event occurs */
 	public var SUSPEND_NONE : Int;
@@ -167,7 +167,7 @@ package com.sun.jdi.request;
 	* @throws IllegalArgumentException if the policy argument
 	* contains an illegal value.
 	*/
-	@:overload public function setSuspendPolicy(policy : Int) : Void;
+	@:overload @:public public function setSuspendPolicy(policy : Int) : Void;
 	
 	/**
 	* Returns a value which describes the threads to suspend when the
@@ -177,7 +177,7 @@ package com.sun.jdi.request;
 	*
 	* @return the current suspend mode for this request
 	*/
-	@:overload public function suspendPolicy() : Int;
+	@:overload @:public public function suspendPolicy() : Int;
 	
 	/**
 	* Add an arbitrary key/value "property" to this request.
@@ -194,7 +194,7 @@ package com.sun.jdi.request;
 	*
 	* @see #getProperty
 	*/
-	@:overload public function putProperty(key : Dynamic, value : Dynamic) : Void;
+	@:overload @:public public function putProperty(key : Dynamic, value : Dynamic) : Void;
 	
 	/**
 	* Returns the value of the property with the specified key.  Only
@@ -204,7 +204,7 @@ package com.sun.jdi.request;
 	* @return the value of this property or null
 	* @see #putProperty
 	*/
-	@:overload public function getProperty(key : Dynamic) : Dynamic;
+	@:overload @:public public function getProperty(key : Dynamic) : Dynamic;
 	
 	
 }

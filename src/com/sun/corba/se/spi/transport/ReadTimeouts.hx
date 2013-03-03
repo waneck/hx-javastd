@@ -25,13 +25,13 @@ package com.sun.corba.se.spi.transport;
 */
 extern interface ReadTimeouts
 {
-	@:overload public function get_initial_time_to_wait() : Int;
+	@:overload @:public public function get_initial_time_to_wait() : Int;
 	
-	@:overload public function get_max_time_to_wait() : Int;
+	@:overload @:public public function get_max_time_to_wait() : Int;
 	
-	@:overload public function get_backoff_factor() : Float;
+	@:overload @:public public function get_backoff_factor() : Float;
 	
-	@:overload public function get_max_giop_header_time_to_wait() : Int;
+	@:overload @:public public function get_max_giop_header_time_to_wait() : Int;
 	
 	
 }

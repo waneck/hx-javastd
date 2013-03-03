@@ -39,39 +39,39 @@ extern class ClassGenerator extends com.sun.org.apache.bcel.internal.generic.Cla
 	* @author Jacek Ambroziak
 	* @author Santiago Pericas-Geertsen
 	*/
-	private static var TRANSLET_INDEX(default, null) : Int;
+	@:protected @:final @:static private static var TRANSLET_INDEX(default, null) : Int;
 	
-	private static var INVALID_INDEX : Int;
+	@:protected @:static private static var INVALID_INDEX : Int;
 	
-	@:overload public function new(class_name : String, super_class_name : String, file_name : String, access_flags : Int, interfaces : java.NativeArray<String>, stylesheet : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet) : Void;
+	@:overload @:public public function new(class_name : String, super_class_name : String, file_name : String, access_flags : Int, interfaces : java.NativeArray<String>, stylesheet : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet) : Void;
 	
-	@:overload @:final public function getParser() : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser;
+	@:overload @:public @:final public function getParser() : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser;
 	
-	@:overload @:final public function getStylesheet() : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet;
+	@:overload @:public @:final public function getStylesheet() : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet;
 	
 	/**
 	* Pretend this is the stylesheet class. Useful when compiling
 	* references to global variables inside a predicate.
 	*/
-	@:overload @:final override public function getClassName() : String;
+	@:overload @:public @:final override public function getClassName() : String;
 	
-	@:overload public function loadTranslet() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function loadTranslet() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload @:final public function getDOMClass() : String;
+	@:overload @:public @:final public function getDOMClass() : String;
 	
-	@:overload @:final public function getDOMClassSig() : String;
+	@:overload @:public @:final public function getDOMClassSig() : String;
 	
-	@:overload @:final public function getApplyTemplatesSig() : String;
+	@:overload @:public @:final public function getApplyTemplatesSig() : String;
 	
-	@:overload @:final public function getApplyTemplatesSigForImport() : String;
+	@:overload @:public @:final public function getApplyTemplatesSigForImport() : String;
 	
 	/**
 	* Returns <tt>true</tt> or <tt>false</tt> depending on whether
 	* this class inherits from <tt>AbstractTranslet</tt> or not.
 	*/
-	@:overload public function isExternal() : Bool;
+	@:overload @:public public function isExternal() : Bool;
 	
-	@:overload public function addMethod(methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public public function addMethod(methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

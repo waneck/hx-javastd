@@ -30,9 +30,9 @@ package sun.security.krb5.internal;
 */
 extern class KrbApErrException extends sun.security.krb5.KrbException
 {
-	@:overload public function new(i : Int) : Void;
+	@:overload @:public public function new(i : Int) : Void;
 	
-	@:overload public function new(i : Int, s : String) : Void;
+	@:overload @:public public function new(i : Int, s : String) : Void;
 	
 	
 }

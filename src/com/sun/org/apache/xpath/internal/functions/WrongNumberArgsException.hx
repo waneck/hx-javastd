@@ -34,7 +34,7 @@ extern class WrongNumberArgsException extends java.lang.Exception
 	* @param argsExpected Error message that tells the number of arguments that
 	* were expected.
 	*/
-	@:overload public function new(argsExpected : String) : Void;
+	@:overload @:public public function new(argsExpected : String) : Void;
 	
 	
 }

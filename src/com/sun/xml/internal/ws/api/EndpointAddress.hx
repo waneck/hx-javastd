@@ -25,19 +25,19 @@ package com.sun.xml.internal.ws.api;
 */
 extern class EndpointAddress
 {
-	@:overload public function new(uri : java.net.URI) : Void;
+	@:overload @:public public function new(uri : java.net.URI) : Void;
 	
 	/**
 	*
 	* @see #create(String)
 	*/
-	@:overload public function new(url : String) : Void;
+	@:overload @:public public function new(url : String) : Void;
 	
 	/**
 	* Creates a new {@link EndpointAddress} with a reasonably
 	* generic error handling.
 	*/
-	@:overload public static function create(url : String) : com.sun.xml.internal.ws.api.EndpointAddress;
+	@:overload @:public @:static public static function create(url : String) : com.sun.xml.internal.ws.api.EndpointAddress;
 	
 	/**
 	* Returns an URL of this endpoint adress.
@@ -45,7 +45,7 @@ extern class EndpointAddress
 	* @return
 	*      null if this endpoint address doesn't have a registered {@link URLStreamHandler}.
 	*/
-	@:overload public function getURL() : java.net.URL;
+	@:overload @:public public function getURL() : java.net.URL;
 	
 	/**
 	* Returns an URI of the endpoint address.
@@ -53,7 +53,7 @@ extern class EndpointAddress
 	* @return
 	*      always non-null.
 	*/
-	@:overload public function getURI() : java.net.URI;
+	@:overload @:public public function getURI() : java.net.URI;
 	
 	/**
 	* Tries to open {@link URLConnection} for this endpoint.
@@ -68,9 +68,9 @@ extern class EndpointAddress
 	*      if this endpoint doesn't have an associated URL.
 	*      if the code is written correctly this shall never happen.
 	*/
-	@:overload public function openConnection() : java.net.URLConnection;
+	@:overload @:public public function openConnection() : java.net.URLConnection;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -32,7 +32,7 @@ extern class InitialLdapContext extends javax.naming.directory.InitialDirContext
 	*
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an initial context
@@ -61,21 +61,21 @@ extern class InitialLdapContext extends javax.naming.directory.InitialDirContext
 	* @see #reconnect
 	* @see LdapContext#reconnect
 	*/
-	@:overload public function new(environment : java.util.Hashtable<Dynamic, Dynamic>, connCtls : java.NativeArray<javax.naming.ldap.Control>) : Void;
+	@:overload @:public public function new(environment : java.util.Hashtable<Dynamic, Dynamic>, connCtls : java.NativeArray<javax.naming.ldap.Control>) : Void;
 	
-	@:overload public function extendedOperation(request : javax.naming.ldap.ExtendedRequest) : javax.naming.ldap.ExtendedResponse;
+	@:overload @:public public function extendedOperation(request : javax.naming.ldap.ExtendedRequest) : javax.naming.ldap.ExtendedResponse;
 	
-	@:overload public function newInstance(reqCtls : java.NativeArray<javax.naming.ldap.Control>) : javax.naming.ldap.LdapContext;
+	@:overload @:public public function newInstance(reqCtls : java.NativeArray<javax.naming.ldap.Control>) : javax.naming.ldap.LdapContext;
 	
-	@:overload public function reconnect(connCtls : java.NativeArray<javax.naming.ldap.Control>) : Void;
+	@:overload @:public public function reconnect(connCtls : java.NativeArray<javax.naming.ldap.Control>) : Void;
 	
-	@:overload public function getConnectControls() : java.NativeArray<javax.naming.ldap.Control>;
+	@:overload @:public public function getConnectControls() : java.NativeArray<javax.naming.ldap.Control>;
 	
-	@:overload public function setRequestControls(requestControls : java.NativeArray<javax.naming.ldap.Control>) : Void;
+	@:overload @:public public function setRequestControls(requestControls : java.NativeArray<javax.naming.ldap.Control>) : Void;
 	
-	@:overload public function getRequestControls() : java.NativeArray<javax.naming.ldap.Control>;
+	@:overload @:public public function getRequestControls() : java.NativeArray<javax.naming.ldap.Control>;
 	
-	@:overload public function getResponseControls() : java.NativeArray<javax.naming.ldap.Control>;
+	@:overload @:public public function getResponseControls() : java.NativeArray<javax.naming.ldap.Control>;
 	
 	
 }

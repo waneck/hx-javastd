@@ -28,35 +28,35 @@ extern class SmtpClient extends sun.net.TransferProtocolClient
 	/**
 	* issue the QUIT command to the SMTP server and close the connection.
 	*/
-	@:overload public function closeServer() : Void;
+	@:overload @:public override public function closeServer() : Void;
 	
-	@:overload public function to(s : String) : Void;
+	@:overload @:public public function to(s : String) : Void;
 	
-	@:overload public function from(s : String) : Void;
+	@:overload @:public public function from(s : String) : Void;
 	
-	@:overload public function startMessage() : java.io.PrintStream;
+	@:overload @:public public function startMessage() : java.io.PrintStream;
 	
 	/** New SMTP client connected to host <i>host</i>. */
-	@:overload public function new(host : String) : Void;
+	@:overload @:public public function new(host : String) : Void;
 	
 	/** Create an uninitialized SMTP client. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(to : Int) : Void;
+	@:overload @:public public function new(to : Int) : Void;
 	
-	@:overload public function getMailHost() : String;
+	@:overload @:public public function getMailHost() : String;
 	
 	
 }
 @:internal extern class SmtpPrintStream extends java.io.PrintStream
 {
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override public function print(s : String) : Void;
+	@:overload @:public override public function print(s : String) : Void;
 	
 	
 }

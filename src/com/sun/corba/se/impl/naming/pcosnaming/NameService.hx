@@ -31,12 +31,12 @@ extern class NameService
 	* @param logDir a File
 	* @exception java.lang.Exception a Java exception.
 	*/
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, logDir : java.io.File) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, logDir : java.io.File) : Void;
 	
 	/**
 	* This method returns the Root Naming Context
 	*/
-	@:overload public function initialNamingContext() : org.omg.CosNaming.NamingContext;
+	@:overload @:public public function initialNamingContext() : org.omg.CosNaming.NamingContext;
 	
 	/**
 	* This method  creates a NewContext, This will internally invoked from
@@ -44,7 +44,7 @@ extern class NameService
 	* because a Persiten reference has to be created with Persistent NameService
 	* POA.
 	*/
-	@:overload public function NewContext() : org.omg.CosNaming.NamingContext;
+	@:overload @:public public function NewContext() : org.omg.CosNaming.NamingContext;
 	
 	
 }

@@ -37,31 +37,31 @@ package com.sun.jndi.cosnaming;
 	* Returns the next binding in the list.
 	* @exception NamingException any naming exception.
 	*/
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
 	/**
 	* Returns true or false depending on whether there are more bindings.
 	* @return boolean value
 	*/
-	@:overload public function hasMore() : Bool;
+	@:overload @:public public function hasMore() : Bool;
 	
 	/**
 	* Returns true or false depending on whether there are more bindings.
 	* Need to define this to satisfy the Enumeration api requirement.
 	* @return boolean value
 	*/
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
 	/**
 	* Returns the next binding in the list.
 	* @exception NoSuchElementException Thrown when the end of the
 	* list is reached.
 	*/
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

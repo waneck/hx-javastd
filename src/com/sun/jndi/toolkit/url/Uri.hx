@@ -97,42 +97,42 @@ extern class Uri
 	* The <tt>opaque_part</tt> of a non-hierarchical URI is treated as if
 	* if were a <tt>path</tt> without a leading slash.
 	*/
-	private var uri : String;
+	@:protected private var uri : String;
 	
-	private var scheme : String;
+	@:protected private var scheme : String;
 	
-	private var host : String;
+	@:protected private var host : String;
 	
-	private var port : Int;
+	@:protected private var port : Int;
 	
-	private var hasAuthority : Bool;
+	@:protected private var hasAuthority : Bool;
 	
-	private var path : String;
+	@:protected private var path : String;
 	
-	private var query : String;
+	@:protected private var query : String;
 	
 	/**
 	* Creates a Uri object given a URI string.
 	*/
-	@:overload public function new(uri : String) : Void;
+	@:overload @:public public function new(uri : String) : Void;
 	
 	/**
 	* Creates an uninitialized Uri object. The init() method must
 	* be called before any other Uri methods.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Initializes a Uri object given a URI string.
 	* This method must be called exactly once, and before any other Uri
 	* methods.
 	*/
-	@:overload private function init(uri : String) : Void;
+	@:overload @:protected private function init(uri : String) : Void;
 	
 	/**
 	* Returns the URI's scheme.
 	*/
-	@:overload public function getScheme() : String;
+	@:overload @:public public function getScheme() : String;
 	
 	/**
 	* Returns the host from the URI's authority part, or null
@@ -140,13 +140,13 @@ extern class Uri
 	* delimiting brackets are part of the returned value (see
 	* {@link java.net.URI#getHost}).
 	*/
-	@:overload public function getHost() : String;
+	@:overload @:public public function getHost() : String;
 	
 	/**
 	* Returns the port from the URI's authority part, or -1 if
 	* no port is provided.
 	*/
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
 	/**
 	* Returns the URI's path.  The path is never null.  Note that a
@@ -154,18 +154,18 @@ extern class Uri
 	* no authority part) is part of the path.  For example, the path
 	* of "http://host/a/b" is "/a/b".
 	*/
-	@:overload public function getPath() : String;
+	@:overload @:public public function getPath() : String;
 	
 	/**
 	* Returns the URI's query part, or null if no query is provided.
 	* Note that a query always begins with a leading "?".
 	*/
-	@:overload public function getQuery() : String;
+	@:overload @:public public function getQuery() : String;
 	
 	/**
 	* Returns the URI as a string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

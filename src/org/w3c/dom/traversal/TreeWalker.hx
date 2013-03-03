@@ -44,7 +44,7 @@ extern interface TreeWalker
 	* The <code>root</code> node of the <code>TreeWalker</code>, as specified
 	* when it was created.
 	*/
-	@:overload public function getRoot() : org.w3c.dom.Node;
+	@:overload @:public public function getRoot() : org.w3c.dom.Node;
 	
 	/**
 	* This attribute determines which node types are presented via the
@@ -54,12 +54,12 @@ extern interface TreeWalker
 	* be considered. Note that this skip takes precedence over the filter,
 	* if any.
 	*/
-	@:overload public function getWhatToShow() : Int;
+	@:overload @:public public function getWhatToShow() : Int;
 	
 	/**
 	* The filter used to screen nodes.
 	*/
-	@:overload public function getFilter() : org.w3c.dom.traversal.NodeFilter;
+	@:overload @:public public function getFilter() : org.w3c.dom.traversal.NodeFilter;
 	
 	/**
 	* The value of this flag determines whether the children of entity
@@ -76,7 +76,7 @@ extern interface TreeWalker
 	* <code>whatToShow</code> flags to show the entity reference node and
 	* set <code>expandEntityReferences</code> to false.
 	*/
-	@:overload public function getExpandEntityReferences() : Bool;
+	@:overload @:public public function getExpandEntityReferences() : Bool;
 	
 	/**
 	* The node at which the <code>TreeWalker</code> is currently positioned.
@@ -90,7 +90,7 @@ extern interface TreeWalker
 	* by applying the filters in the requested direction; if no traversal
 	* is possible, <code>currentNode</code> is not changed.
 	*/
-	@:overload public function getCurrentNode() : org.w3c.dom.Node;
+	@:overload @:public public function getCurrentNode() : org.w3c.dom.Node;
 	
 	/**
 	* The node at which the <code>TreeWalker</code> is currently positioned.
@@ -107,7 +107,7 @@ extern interface TreeWalker
 	*   NOT_SUPPORTED_ERR: Raised if an attempt is made to set
 	*   <code>currentNode</code> to <code>null</code>.
 	*/
-	@:overload public function setCurrentNode(currentNode : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setCurrentNode(currentNode : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Moves to and returns the closest visible ancestor node of the current
@@ -118,7 +118,7 @@ extern interface TreeWalker
 	* @return The new parent node, or <code>null</code> if the current node
 	*   has no parent  in the <code>TreeWalker</code>'s logical view.
 	*/
-	@:overload public function parentNode() : org.w3c.dom.Node;
+	@:overload @:public public function parentNode() : org.w3c.dom.Node;
 	
 	/**
 	* Moves the <code>TreeWalker</code> to the first visible child of the
@@ -128,7 +128,7 @@ extern interface TreeWalker
 	* @return The new node, or <code>null</code> if the current node has no
 	*   visible children  in the <code>TreeWalker</code>'s logical view.
 	*/
-	@:overload public function firstChild() : org.w3c.dom.Node;
+	@:overload @:public public function firstChild() : org.w3c.dom.Node;
 	
 	/**
 	* Moves the <code>TreeWalker</code> to the last visible child of the
@@ -138,7 +138,7 @@ extern interface TreeWalker
 	* @return The new node, or <code>null</code> if the current node has no
 	*   children  in the <code>TreeWalker</code>'s logical view.
 	*/
-	@:overload public function lastChild() : org.w3c.dom.Node;
+	@:overload @:public public function lastChild() : org.w3c.dom.Node;
 	
 	/**
 	* Moves the <code>TreeWalker</code> to the previous sibling of the
@@ -148,7 +148,7 @@ extern interface TreeWalker
 	* @return The new node, or <code>null</code> if the current node has no
 	*   previous sibling.  in the <code>TreeWalker</code>'s logical view.
 	*/
-	@:overload public function previousSibling() : org.w3c.dom.Node;
+	@:overload @:public public function previousSibling() : org.w3c.dom.Node;
 	
 	/**
 	* Moves the <code>TreeWalker</code> to the next sibling of the current
@@ -157,7 +157,7 @@ extern interface TreeWalker
 	* @return The new node, or <code>null</code> if the current node has no
 	*   next sibling.  in the <code>TreeWalker</code>'s logical view.
 	*/
-	@:overload public function nextSibling() : org.w3c.dom.Node;
+	@:overload @:public public function nextSibling() : org.w3c.dom.Node;
 	
 	/**
 	* Moves the <code>TreeWalker</code> to the previous visible node in
@@ -169,7 +169,7 @@ extern interface TreeWalker
 	* @return The new node, or <code>null</code> if the current node has no
 	*   previous node  in the <code>TreeWalker</code>'s logical view.
 	*/
-	@:overload public function previousNode() : org.w3c.dom.Node;
+	@:overload @:public public function previousNode() : org.w3c.dom.Node;
 	
 	/**
 	* Moves the <code>TreeWalker</code> to the next visible node in document
@@ -180,7 +180,7 @@ extern interface TreeWalker
 	* @return The new node, or <code>null</code> if the current node has no
 	*   next node  in the <code>TreeWalker</code>'s logical view.
 	*/
-	@:overload public function nextNode() : org.w3c.dom.Node;
+	@:overload @:public public function nextNode() : org.w3c.dom.Node;
 	
 	
 }

@@ -30,17 +30,17 @@ extern class WaveFloatFileReader extends javax.sound.sampled.spi.AudioFileReader
 	*
 	* @author Karl Helgason
 	*/
-	@:overload public function getAudioFileFormat(stream : java.io.InputStream) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:public override public function getAudioFileFormat(stream : java.io.InputStream) : javax.sound.sampled.AudioFileFormat;
 	
-	@:overload public function getAudioInputStream(stream : java.io.InputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public override public function getAudioInputStream(stream : java.io.InputStream) : javax.sound.sampled.AudioInputStream;
 	
-	@:overload public function getAudioFileFormat(url : java.net.URL) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:public override public function getAudioFileFormat(url : java.net.URL) : javax.sound.sampled.AudioFileFormat;
 	
-	@:overload public function getAudioFileFormat(file : java.io.File) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:public override public function getAudioFileFormat(file : java.io.File) : javax.sound.sampled.AudioFileFormat;
 	
-	@:overload public function getAudioInputStream(url : java.net.URL) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public override public function getAudioInputStream(url : java.net.URL) : javax.sound.sampled.AudioInputStream;
 	
-	@:overload public function getAudioInputStream(file : java.io.File) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public override public function getAudioInputStream(file : java.io.File) : javax.sound.sampled.AudioInputStream;
 	
 	
 }

@@ -34,7 +34,7 @@ extern class CRC32 implements java.util.zip.Checksum
 	/**
 	* Creates a new CRC32 object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Updates the CRC-32 checksum with the specified byte (the low
@@ -42,29 +42,29 @@ extern class CRC32 implements java.util.zip.Checksum
 	*
 	* @param b the byte to update the checksum with
 	*/
-	@:overload public function update(b : Int) : Void;
+	@:overload @:public public function update(b : Int) : Void;
 	
 	/**
 	* Updates the CRC-32 checksum with the specified array of bytes.
 	*/
-	@:overload public function update(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function update(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Updates the CRC-32 checksum with the specified array of bytes.
 	*
 	* @param b the array of bytes to update the checksum with
 	*/
-	@:overload public function update(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function update(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Resets CRC-32 to initial value.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Returns CRC-32 value.
 	*/
-	@:overload public function getValue() : haxe.Int64;
+	@:overload @:public public function getValue() : haxe.Int64;
 	
 	
 }

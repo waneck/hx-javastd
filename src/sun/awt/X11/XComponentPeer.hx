@@ -25,81 +25,81 @@ package sun.awt.X11;
 */
 extern class XComponentPeer extends sun.awt.X11.XWindow implements java.awt.peer.ComponentPeer implements java.awt.dnd.peer.DropTargetPeer implements sun.java2d.BackBufferCapsProvider
 {
-	private var boundsOperation : Int;
+	@:protected private var boundsOperation : Int;
 	
-	@:overload private function isInitialReshape() : Bool;
+	@:overload @:protected private function isInitialReshape() : Bool;
 	
-	@:overload public function reparent(newNativeParent : java.awt.peer.ContainerPeer) : Void;
+	@:overload @:public public function reparent(newNativeParent : java.awt.peer.ContainerPeer) : Void;
 	
-	@:overload public function isReparentSupported() : Bool;
+	@:overload @:public public function isReparentSupported() : Bool;
 	
-	@:overload public function isObscured() : Bool;
+	@:overload @:public public function isObscured() : Bool;
 	
-	@:overload public function canDetermineObscurity() : Bool;
+	@:overload @:public public function canDetermineObscurity() : Bool;
 	
 	/**
 	* Descendants should use this method to determine whether or not native window
 	* has focus.
 	*/
-	@:overload @:final public function hasFocus() : Bool;
+	@:overload @:final @:public public function hasFocus() : Bool;
 	
 	/**
 	* Called when component receives focus
 	*/
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
 	/**
 	* Called when component loses focus
 	*/
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function isFocusable() : Bool;
+	@:overload @:public public function isFocusable() : Bool;
 	
-	@:overload @:final public function requestFocus(lightweightChild : java.awt.Component, temporary : Bool, focusedWindowChangeAllowed : Bool, time : haxe.Int64, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Bool;
+	@:overload @:final @:public public function requestFocus(lightweightChild : java.awt.Component, temporary : Bool, focusedWindowChangeAllowed : Bool, time : haxe.Int64, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Bool;
 	
 	/*************************************************
 	* END OF FOCUS STUFF
 	*************************************************/
-	@:overload public function setVisible(b : Bool) : Void;
+	@:overload @:public public function setVisible(b : Bool) : Void;
 	
-	@:overload public function hide() : Void;
+	@:overload @:public public function hide() : Void;
 	
 	/**
 	* @see java.awt.peer.ComponentPeer
 	*/
-	@:overload public function setEnabled(value : Bool) : Void;
+	@:overload @:public public function setEnabled(value : Bool) : Void;
 	
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
-	@:overload public function enable() : Void;
+	@:overload @:public public function enable() : Void;
 	
-	@:overload public function disable() : Void;
+	@:overload @:public public function disable() : Void;
 	
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload public function repaint(tm : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function repaint(tm : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload override public function getGraphics() : java.awt.Graphics;
+	@:overload @:public override public function getGraphics() : java.awt.Graphics;
 	
-	@:overload public function print(g : java.awt.Graphics) : Void;
+	@:overload @:public public function print(g : java.awt.Graphics) : Void;
 	
-	@:overload public function setBounds(x : Int, y : Int, width : Int, height : Int, op : Int) : Void;
+	@:overload @:public public function setBounds(x : Int, y : Int, width : Int, height : Int, op : Int) : Void;
 	
-	@:overload override public function reshape(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function reshape(x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function coalescePaintEvent(e : java.awt.event.PaintEvent) : Void;
+	@:overload @:public public function coalescePaintEvent(e : java.awt.event.PaintEvent) : Void;
 	
-	@:overload public function handleEvent(e : java.awt.AWTEvent) : Void;
+	@:overload @:public public function handleEvent(e : java.awt.AWTEvent) : Void;
 	
-	@:overload override public function handleButtonPressRelease(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleButtonPressRelease(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public public function getPreferredSize() : java.awt.Dimension;
 	
-	@:overload override public function layout() : Void;
+	@:overload @:public override public function layout() : Void;
 	
-	@:overload public function getToolkit() : java.awt.Toolkit;
+	@:overload @:public public function getToolkit() : java.awt.Toolkit;
 	
 	/*
 	* Draw a 3D rectangle using the Motif colors.
@@ -107,11 +107,11 @@ extern class XComponentPeer extends sun.awt.X11.XWindow implements java.awt.peer
 	* "Depressed" rectangles (such as pressed buttons) have shadows on the top,
 	* in which case true should be passed for topShadow.
 	*/
-	@:overload public function drawMotif3DRect(g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int, topShadow : Bool) : Void;
+	@:overload @:public public function drawMotif3DRect(g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int, topShadow : Bool) : Void;
 	
-	@:overload override public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setBackground(c : java.awt.Color) : Void;
 	
-	@:overload public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* Gets the font metrics for the specified font.
@@ -124,15 +124,15 @@ extern class XComponentPeer extends sun.awt.X11.XWindow implements java.awt.peer
 	* @see       Toolkit#getFontMetrics(Font)
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload override public function getFontMetrics(font : java.awt.Font) : java.awt.FontMetrics;
+	@:require(java0) @:overload @:public override public function getFontMetrics(font : java.awt.Font) : java.awt.FontMetrics;
 	
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public public function setFont(f : java.awt.Font) : Void;
 	
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public public function getFont() : java.awt.Font;
 	
-	@:overload public function updateCursorImmediately() : Void;
+	@:overload @:public public function updateCursorImmediately() : Void;
 	
-	@:overload @:final public function pSetCursor(cursor : java.awt.Cursor) : Void;
+	@:overload @:public @:final public function pSetCursor(cursor : java.awt.Cursor) : Void;
 	
 	/*
 	* The method changes the cursor.
@@ -143,91 +143,91 @@ extern class XComponentPeer extends sun.awt.X11.XWindow implements java.awt.peer
 	*                              subsequent components will try to handle
 	*                              this request and install their cursor.
 	*/
-	@:overload public function pSetCursor(cursor : java.awt.Cursor, ignoreSubComponents : Bool) : Void;
+	@:overload @:public public function pSetCursor(cursor : java.awt.Cursor, ignoreSubComponents : Bool) : Void;
 	
-	@:overload public function createImage(producer : java.awt.image.ImageProducer) : java.awt.Image;
+	@:overload @:public public function createImage(producer : java.awt.image.ImageProducer) : java.awt.Image;
 	
-	@:overload public function createImage(width : Int, height : Int) : java.awt.Image;
+	@:overload @:public public function createImage(width : Int, height : Int) : java.awt.Image;
 	
-	@:overload public function createVolatileImage(width : Int, height : Int) : java.awt.image.VolatileImage;
+	@:overload @:public public function createVolatileImage(width : Int, height : Int) : java.awt.image.VolatileImage;
 	
-	@:overload public function prepareImage(img : java.awt.Image, w : Int, h : Int, o : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public public function prepareImage(img : java.awt.Image, w : Int, h : Int, o : java.awt.image.ImageObserver) : Bool;
 	
-	@:overload public function checkImage(img : java.awt.Image, w : Int, h : Int, o : java.awt.image.ImageObserver) : Int;
+	@:overload @:public public function checkImage(img : java.awt.Image, w : Int, h : Int, o : java.awt.image.ImageObserver) : Int;
 	
-	@:overload public function preferredSize() : java.awt.Dimension;
+	@:overload @:public public function preferredSize() : java.awt.Dimension;
 	
-	@:overload public function minimumSize() : java.awt.Dimension;
+	@:overload @:public public function minimumSize() : java.awt.Dimension;
 	
-	@:overload public function getInsets() : java.awt.Insets;
+	@:overload @:public public function getInsets() : java.awt.Insets;
 	
-	@:overload public function beginValidate() : Void;
+	@:overload @:public public function beginValidate() : Void;
 	
-	@:overload public function endValidate() : Void;
+	@:overload @:public public function endValidate() : Void;
 	
 	/**
 	* DEPRECATED:  Replaced by getInsets().
 	*/
-	@:overload public function insets() : java.awt.Insets;
+	@:overload @:public public function insets() : java.awt.Insets;
 	
-	@:overload public function isPaintPending() : Bool;
+	@:overload @:public public function isPaintPending() : Bool;
 	
-	@:overload public function handlesWheelScrolling() : Bool;
+	@:overload @:public public function handlesWheelScrolling() : Bool;
 	
-	@:overload public function beginLayout() : Void;
+	@:overload @:public public function beginLayout() : Void;
 	
-	@:overload public function endLayout() : Void;
+	@:overload @:public public function endLayout() : Void;
 	
-	@:overload override public function getWinBackground() : java.awt.Color;
+	@:overload @:public override public function getWinBackground() : java.awt.Color;
 	
-	@:overload public function getGUIcolors() : java.NativeArray<java.awt.Color>;
+	@:overload @:public public function getGUIcolors() : java.NativeArray<java.awt.Color>;
 	
 	/**
 	* Draw a 3D oval.
 	*/
-	@:overload public function draw3DOval(g : java.awt.Graphics, colors : java.NativeArray<java.awt.Color>, x : Int, y : Int, w : Int, h : Int, raised : Bool) : Void;
+	@:overload @:public public function draw3DOval(g : java.awt.Graphics, colors : java.NativeArray<java.awt.Color>, x : Int, y : Int, w : Int, h : Int, raised : Bool) : Void;
 	
-	@:overload public function draw3DRect(g : java.awt.Graphics, colors : java.NativeArray<java.awt.Color>, x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
+	@:overload @:public public function draw3DRect(g : java.awt.Graphics, colors : java.NativeArray<java.awt.Color>, x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
 	
-	@:overload public function createBuffers(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
+	@:overload @:public public function createBuffers(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
 	
-	@:overload public function getBackBufferCaps() : java.awt.BufferCapabilities;
+	@:overload @:public public function getBackBufferCaps() : java.awt.BufferCapabilities;
 	
-	@:overload public function flip(x1 : Int, y1 : Int, x2 : Int, y2 : Int, flipAction : java.awt.BufferCapabilities.BufferCapabilities_FlipContents) : Void;
+	@:overload @:public public function flip(x1 : Int, y1 : Int, x2 : Int, y2 : Int, flipAction : java.awt.BufferCapabilities.BufferCapabilities_FlipContents) : Void;
 	
-	@:overload public function getBackBuffer() : java.awt.Image;
+	@:overload @:public public function getBackBuffer() : java.awt.Image;
 	
-	@:overload public function destroyBuffers() : Void;
+	@:overload @:public public function destroyBuffers() : Void;
 	
-	@:overload public function notifyTextComponentChange(add : Bool) : Void;
+	@:overload @:public public function notifyTextComponentChange(add : Bool) : Void;
 	
 	/**
 	* Returns true if this event is disabled and shouldn't be processed by window
 	* Currently if target component is disabled the following event will be disabled on window:
 	* ButtonPress, ButtonRelease, KeyPress, KeyRelease, EnterNotify, LeaveNotify, MotionNotify
 	*/
-	@:overload override private function isEventDisabled(e : sun.awt.X11.XEvent) : Bool;
+	@:overload @:protected override private function isEventDisabled(e : sun.awt.X11.XEvent) : Bool;
 	
-	@:overload public function setBoundsOperation(operation : Int) : Void;
+	@:overload @:public public function setBoundsOperation(operation : Int) : Void;
 	
 	/**
 	* Lowers this component at the bottom of the above HW peer. If the above parameter
 	* is null then the method places this component at the top of the Z-order.
 	*/
-	@:overload public function setZOrder(above : java.awt.peer.ComponentPeer) : Void;
+	@:overload @:public public function setZOrder(above : java.awt.peer.ComponentPeer) : Void;
 	
 	/****** DropTargetPeer implementation ********************/
-	@:overload public function addDropTarget(dt : java.awt.dnd.DropTarget) : Void;
+	@:overload @:public public function addDropTarget(dt : java.awt.dnd.DropTarget) : Void;
 	
-	@:overload public function removeDropTarget(dt : java.awt.dnd.DropTarget) : Void;
+	@:overload @:public public function removeDropTarget(dt : java.awt.dnd.DropTarget) : Void;
 	
 	/**
 	* Applies the shape to the X-window.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function applyShape(shape : sun.java2d.pipe.Region) : Void;
+	@:require(java7) @:overload @:public public function applyShape(shape : sun.java2d.pipe.Region) : Void;
 	
-	@:overload public function updateGraphicsData(gc : java.awt.GraphicsConfiguration) : Bool;
+	@:overload @:public public function updateGraphicsData(gc : java.awt.GraphicsConfiguration) : Bool;
 	
 	
 }

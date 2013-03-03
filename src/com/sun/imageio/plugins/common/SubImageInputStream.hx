@@ -25,17 +25,17 @@ package com.sun.imageio.plugins.common;
 */
 extern class SubImageInputStream extends javax.imageio.stream.ImageInputStreamImpl
 {
-	@:overload public function new(stream : javax.imageio.stream.ImageInputStream, length : Int) : Void;
+	@:overload @:public public function new(stream : javax.imageio.stream.ImageInputStream, length : Int) : Void;
 	
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload public function length() : haxe.Int64;
+	@:overload @:public override public function length() : haxe.Int64;
 	
-	@:overload public function seek(pos : haxe.Int64) : Void;
+	@:overload @:public override public function seek(pos : haxe.Int64) : Void;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected override private function finalize() : Void;
 	
 	
 }

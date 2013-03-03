@@ -32,21 +32,21 @@ extern class StringToStringTable
 	* Default constructor.  Note that the default
 	* block size is very small, for small lists.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a StringToStringTable, using the given block size.
 	*
 	* @param blocksize Size of blocks to allocate
 	*/
-	@:overload public function new(blocksize : Int) : Void;
+	@:overload @:public public function new(blocksize : Int) : Void;
 	
 	/**
 	* Get the length of the list.
 	*
 	* @return Number of strings in the list
 	*/
-	@:overload @:final public function getLength() : Int;
+	@:overload @:public @:final public function getLength() : Int;
 	
 	/**
 	* Append a string onto the vector.
@@ -56,7 +56,7 @@ extern class StringToStringTable
 	* @param key String to add to the list
 	* @param value Value of the string
 	*/
-	@:overload @:final public function put(key : String, value : String) : Void;
+	@:overload @:public @:final public function put(key : String, value : String) : Void;
 	
 	/**
 	* Tell if the table contains the given string.
@@ -65,14 +65,14 @@ extern class StringToStringTable
 	*
 	* @return return the value of the string or null if not found.
 	*/
-	@:overload @:final public function get(key : String) : String;
+	@:overload @:public @:final public function get(key : String) : String;
 	
 	/**
 	* Remove the given string and its value from this table.
 	*
 	* @param key String to remove from the table
 	*/
-	@:overload @:final public function remove(key : String) : Void;
+	@:overload @:public @:final public function remove(key : String) : Void;
 	
 	/**
 	* Tell if the table contains the given string. Ignore case
@@ -81,7 +81,7 @@ extern class StringToStringTable
 	*
 	* @return The value of the string or null if not found
 	*/
-	@:overload @:final public function getIgnoreCase(key : String) : String;
+	@:overload @:public @:final public function getIgnoreCase(key : String) : String;
 	
 	/**
 	* Tell if the table contains the given string in the value.
@@ -90,7 +90,7 @@ extern class StringToStringTable
 	*
 	* @return the string associated with the given value or null if not found
 	*/
-	@:overload @:final public function getByValue(val : String) : String;
+	@:overload @:public @:final public function getByValue(val : String) : String;
 	
 	/**
 	* Get the nth element.
@@ -99,7 +99,7 @@ extern class StringToStringTable
 	*
 	* @return The string at the given index.
 	*/
-	@:overload @:final public function elementAt(i : Int) : String;
+	@:overload @:public @:final public function elementAt(i : Int) : String;
 	
 	/**
 	* Tell if the table contains the given string.
@@ -108,7 +108,7 @@ extern class StringToStringTable
 	*
 	* @return True if the given string is in this table
 	*/
-	@:overload @:final public function contains(key : String) : Bool;
+	@:overload @:public @:final public function contains(key : String) : Bool;
 	
 	/**
 	* Tell if the table contains the given string.
@@ -117,7 +117,7 @@ extern class StringToStringTable
 	*
 	* @return True if the given value is in the table.
 	*/
-	@:overload @:final public function containsValue(val : String) : Bool;
+	@:overload @:public @:final public function containsValue(val : String) : Bool;
 	
 	
 }

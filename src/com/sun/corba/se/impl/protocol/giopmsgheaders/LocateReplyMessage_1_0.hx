@@ -25,23 +25,23 @@ package com.sun.corba.se.impl.protocol.giopmsgheaders;
 */
 extern class LocateReplyMessage_1_0 extends com.sun.corba.se.impl.protocol.giopmsgheaders.Message_1_0 implements com.sun.corba.se.impl.protocol.giopmsgheaders.LocateReplyMessage
 {
-	@:overload public function getRequestId() : Int;
+	@:overload @:public public function getRequestId() : Int;
 	
-	@:overload public function getReplyStatus() : Int;
+	@:overload @:public public function getReplyStatus() : Int;
 	
-	@:overload public function getAddrDisposition() : java.StdTypes.Int16;
+	@:overload @:public public function getAddrDisposition() : java.StdTypes.Int16;
 	
-	@:overload public function getSystemException(message : String) : org.omg.CORBA.SystemException;
+	@:overload @:public public function getSystemException(message : String) : org.omg.CORBA.SystemException;
 	
-	@:overload public function getIOR() : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public public function getIOR() : com.sun.corba.se.spi.ior.IOR;
 	
-	@:overload override public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public override public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload override public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public override public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload public static function isValidReplyStatus(replyStatus : Int) : Void;
+	@:overload @:public @:static public static function isValidReplyStatus(replyStatus : Int) : Void;
 	
-	//@:overload override public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
+	//@:overload @:public override public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
 	
 	
 }

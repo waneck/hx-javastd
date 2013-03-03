@@ -29,49 +29,49 @@ package java.awt;
 }
 @:native('java$awt$GraphicsCallback$PaintCallback') @:internal extern class GraphicsCallback_PaintCallback extends java.awt.GraphicsCallback
 {
-	@:overload override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
+	@:overload @:public override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('java$awt$GraphicsCallback$PrintCallback') @:internal extern class GraphicsCallback_PrintCallback extends java.awt.GraphicsCallback
 {
-	@:overload override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
+	@:overload @:public override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('java$awt$GraphicsCallback$PaintAllCallback') @:internal extern class GraphicsCallback_PaintAllCallback extends java.awt.GraphicsCallback
 {
-	@:overload override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
+	@:overload @:public override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('java$awt$GraphicsCallback$PrintAllCallback') @:internal extern class GraphicsCallback_PrintAllCallback extends java.awt.GraphicsCallback
 {
-	@:overload override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
+	@:overload @:public override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('java$awt$GraphicsCallback$PeerPaintCallback') @:internal extern class GraphicsCallback_PeerPaintCallback extends java.awt.GraphicsCallback
 {
-	@:overload override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
+	@:overload @:public override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('java$awt$GraphicsCallback$PeerPrintCallback') @:internal extern class GraphicsCallback_PeerPrintCallback extends java.awt.GraphicsCallback
 {
-	@:overload override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
+	@:overload @:public override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('java$awt$GraphicsCallback$PaintHeavyweightComponentsCallback') @:internal extern class GraphicsCallback_PaintHeavyweightComponentsCallback extends java.awt.GraphicsCallback
 {
-	@:overload override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
+	@:overload @:public override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('java$awt$GraphicsCallback$PrintHeavyweightComponentsCallback') @:internal extern class GraphicsCallback_PrintHeavyweightComponentsCallback extends java.awt.GraphicsCallback
 {
-	@:overload override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
+	@:overload @:public override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
 	
 	
 }

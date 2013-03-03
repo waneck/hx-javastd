@@ -57,17 +57,17 @@ package javax.security.auth.x500;
 	/**
 	* RFC 1779 String format of Distinguished Names.
 	*/
-	public static var RFC1779(default, null) : String;
+	@:public @:static @:final public static var RFC1779(default, null) : String;
 	
 	/**
 	* RFC 2253 String format of Distinguished Names.
 	*/
-	public static var RFC2253(default, null) : String;
+	@:public @:static @:final public static var RFC2253(default, null) : String;
 	
 	/**
 	* Canonical String format of Distinguished Names.
 	*/
-	public static var CANONICAL(default, null) : String;
+	@:public @:static @:final public static var CANONICAL(default, null) : String;
 	
 	/**
 	* Creates an <code>X500Principal</code> from a string representation of
@@ -90,7 +90,7 @@ package javax.security.auth.x500;
 	* @exception IllegalArgumentException if the <code>name</code>
 	*                  is improperly specified
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates an <code>X500Principal</code> from a string representation of
@@ -122,7 +122,7 @@ package javax.security.auth.x500;
 	*   OID that is not in the correct form
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(name : String, keywordMap : java.util.Map<String, String>) : Void;
+	@:require(java6) @:overload @:public public function new(name : String, keywordMap : java.util.Map<String, String>) : Void;
 	
 	/**
 	* Creates an <code>X500Principal</code> from a distinguished name in
@@ -158,7 +158,7 @@ package javax.security.auth.x500;
 	* @throws IllegalArgumentException if an encoding error occurs
 	*          (incorrect form for DN)
 	*/
-	@:overload public function new(name : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(name : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Creates an <code>X500Principal</code> from an <code>InputStream</code>
@@ -178,7 +178,7 @@ package javax.security.auth.x500;
 	* @exception IllegalArgumentException if an encoding error occurs
 	*          (incorrect form for DN)
 	*/
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	/**
 	* Returns a string representation of the X.500 distinguished name using
@@ -189,7 +189,7 @@ package javax.security.auth.x500;
 	*
 	* @return the distinguished name of this <code>X500Principal</code>
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns a string representation of the X.500 distinguished name
@@ -253,7 +253,7 @@ package javax.security.auth.x500;
 	* @throws IllegalArgumentException if the specified format is invalid
 	*          or null
 	*/
-	@:overload public function getName(format : String) : String;
+	@:overload @:public public function getName(format : String) : String;
 	
 	/**
 	* Returns a string representation of the X.500 distinguished name
@@ -289,7 +289,7 @@ package javax.security.auth.x500;
 	* @throws NullPointerException if <code>oidMap</code> is <code>null</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getName(format : String, oidMap : java.util.Map<String, String>) : String;
+	@:require(java6) @:overload @:public public function getName(format : String, oidMap : java.util.Map<String, String>) : String;
 	
 	/**
 	* Returns the distinguished name in ASN.1 DER encoded form. The ASN.1
@@ -302,7 +302,7 @@ package javax.security.auth.x500;
 	* @return a byte array containing the distinguished name in ASN.1 DER
 	* encoded form
 	*/
-	@:overload public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Return a user-friendly string representation of this
@@ -310,7 +310,7 @@ package javax.security.auth.x500;
 	*
 	* @return a string representation of this <code>X500Principal</code>
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares the specified <code>Object</code> with this
@@ -330,7 +330,7 @@ package javax.security.auth.x500;
 	* @return <code>true</code> if the specified <code>Object</code> is equal
 	*          to this <code>X500Principal</code>, <code>false</code> otherwise
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Return a hash code for this <code>X500Principal</code>.
@@ -340,7 +340,7 @@ package javax.security.auth.x500;
 	*
 	* @return a hash code for this <code>X500Principal</code>
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

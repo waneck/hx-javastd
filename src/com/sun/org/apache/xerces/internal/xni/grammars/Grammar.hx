@@ -48,7 +48,7 @@ extern interface Grammar
 	* get the <code>XMLGrammarDescription</code> associated with this
 	* object
 	*/
-	@:overload public function getGrammarDescription() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription;
+	@:overload @:public public function getGrammarDescription() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription;
 	
 	
 }

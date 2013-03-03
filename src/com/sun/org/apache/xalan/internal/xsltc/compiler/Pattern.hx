@@ -28,7 +28,7 @@ extern class Pattern extends com.sun.org.apache.xalan.internal.xsltc.compiler.Ex
 	* A <code>NodeType</code> has a number of subtypes defined by
 	* <code>NodeType._type</code> corresponding to each type of node.
 	*/
-	@:overload @:abstract public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public @:abstract override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Translate this node into JVM bytecodes. Patterns are translated as
@@ -42,12 +42,12 @@ extern class Pattern extends com.sun.org.apache.xalan.internal.xsltc.compiler.Ex
 	* then a GOTO must be appended to the instruction list after calling
 	* <code>translate</code>.
 	*/
-	@:overload @:abstract public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public @:abstract override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Returns the priority of this pattern (section 5.5 in the XSLT spec).
 	*/
-	@:overload @:abstract public function getPriority() : Float;
+	@:overload @:public @:abstract public function getPriority() : Float;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class Main implements sun.tools.java.Constants
 	/**
 	* Constructor.
 	*/
-	@:overload public function new(out : java.io.OutputStream, program : String) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, program : String) : Void;
 	
 	/**
 	* Exit status.
@@ -36,51 +36,51 @@ extern class Main implements sun.tools.java.Constants
 	* convention that 'compile' returns a boolean true upon a successful
 	* compilation with no errors.  (JavaTest relies on this.)
 	*/
-	public static var EXIT_OK(default, null) : Int;
+	@:public @:static @:final public static var EXIT_OK(default, null) : Int;
 	
-	public static var EXIT_ERROR(default, null) : Int;
+	@:public @:static @:final public static var EXIT_ERROR(default, null) : Int;
 	
-	public static var EXIT_CMDERR(default, null) : Int;
+	@:public @:static @:final public static var EXIT_CMDERR(default, null) : Int;
 	
-	public static var EXIT_SYSERR(default, null) : Int;
+	@:public @:static @:final public static var EXIT_SYSERR(default, null) : Int;
 	
-	public static var EXIT_ABNORMAL(default, null) : Int;
+	@:public @:static @:final public static var EXIT_ABNORMAL(default, null) : Int;
 	
-	@:overload public function getExitStatus() : Int;
+	@:overload @:public public function getExitStatus() : Int;
 	
-	@:overload public function compilationPerformedSuccessfully() : Bool;
+	@:overload @:public public function compilationPerformedSuccessfully() : Bool;
 	
-	@:overload public function compilationReportedErrors() : Bool;
+	@:overload @:public public function compilationReportedErrors() : Bool;
 	
 	/**
 	* Print usage message and make exit status an error.
 	* Note: 'javac' invoked without any arguments is considered
 	* be an error.
 	*/
-	@:overload public function usage_error() : Void;
+	@:overload @:public public function usage_error() : Void;
 	
 	/**
 	* get and format message string from resource
 	*/
-	@:overload public static function getText(key : String) : String;
+	@:overload @:public @:static public static function getText(key : String) : String;
 	
-	@:overload public static function getText(key : String, num : Int) : String;
+	@:overload @:public @:static public static function getText(key : String, num : Int) : String;
 	
-	@:overload public static function getText(key : String, fixed : String) : String;
+	@:overload @:public @:static public static function getText(key : String, fixed : String) : String;
 	
-	@:overload public static function getText(key : String, fixed1 : String, fixed2 : String) : String;
+	@:overload @:public @:static public static function getText(key : String, fixed1 : String, fixed2 : String) : String;
 	
-	@:overload public static function getText(key : String, fixed1 : String, fixed2 : String, fixed3 : String) : String;
+	@:overload @:public @:static public static function getText(key : String, fixed1 : String, fixed2 : String, fixed3 : String) : String;
 	
 	/**
 	* Run the compiler
 	*/
-	@:overload @:synchronized public function compile(argv : java.NativeArray<String>) : Bool;
+	@:overload @:public @:synchronized public function compile(argv : java.NativeArray<String>) : Bool;
 	
 	/**
 	* Main program
 	*/
-	@:overload public static function main(argv : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(argv : java.NativeArray<String>) : Void;
 	
 	
 }

@@ -25,31 +25,31 @@ package com.sun.jmx.remote.internal;
 */
 extern class ClientNotifForwarder
 {
-	@:overload public function new(env : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(env : java.util.Map<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function new(defaultClassLoader : java.lang.ClassLoader, env : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function new(defaultClassLoader : java.lang.ClassLoader, env : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* Called to to fetch notifications from a server.
 	*/
-	@:overload @:abstract private function fetchNotifs(clientSequenceNumber : haxe.Int64, maxNotifications : Int, timeout : haxe.Int64) : javax.management.remote.NotificationResult;
+	@:overload @:abstract @:protected private function fetchNotifs(clientSequenceNumber : haxe.Int64, maxNotifications : Int, timeout : haxe.Int64) : javax.management.remote.NotificationResult;
 	
-	@:overload @:abstract private function addListenerForMBeanRemovedNotif() : Null<Int>;
+	@:overload @:abstract @:protected private function addListenerForMBeanRemovedNotif() : Null<Int>;
 	
-	@:overload @:abstract private function removeListenerForMBeanRemovedNotif(id : Null<Int>) : Void;
+	@:overload @:abstract @:protected private function removeListenerForMBeanRemovedNotif(id : Null<Int>) : Void;
 	
 	/**
 	* Used to send out a notification about lost notifs
 	*/
-	@:overload @:abstract private function lostNotifs(message : String, number : haxe.Int64) : Void;
+	@:overload @:abstract @:protected private function lostNotifs(message : String, number : haxe.Int64) : Void;
 	
-	@:overload @:synchronized public function addNotificationListener(listenerID : Null<Int>, name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic, delegationSubject : javax.security.auth.Subject) : Void;
+	@:overload @:public @:synchronized public function addNotificationListener(listenerID : Null<Int>, name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic, delegationSubject : javax.security.auth.Subject) : Void;
 	
-	@:overload @:synchronized public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener) : java.NativeArray<Null<Int>>;
+	@:overload @:public @:synchronized public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener) : java.NativeArray<Null<Int>>;
 	
-	@:overload @:synchronized public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Null<Int>;
+	@:overload @:public @:synchronized public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Null<Int>;
 	
-	@:overload @:synchronized public function removeNotificationListener(name : javax.management.ObjectName) : java.NativeArray<Null<Int>>;
+	@:overload @:public @:synchronized public function removeNotificationListener(name : javax.management.ObjectName) : java.NativeArray<Null<Int>>;
 	
 	/*
 	* Called when a connector is doing reconnection. Like <code>postReconnection</code>,
@@ -62,16 +62,16 @@ extern class ClientNotifForwarder
 	* It is caller's responsiblity to not re-call this method before calling
 	* <code>postReconnection</code>.
 	*/
-	@:overload @:synchronized public function preReconnection() : java.NativeArray<com.sun.jmx.remote.internal.ClientListenerInfo>;
+	@:overload @:public @:synchronized public function preReconnection() : java.NativeArray<com.sun.jmx.remote.internal.ClientListenerInfo>;
 	
 	/**
 	* Called after reconnection is finished.
 	* This method is intended to be called only by a client connector:
 	* <code>RMIConnector</code> and <code>ClientIntermediary</code>.
 	*/
-	@:overload @:synchronized public function postReconnection(listenerInfos : java.NativeArray<com.sun.jmx.remote.internal.ClientListenerInfo>) : Void;
+	@:overload @:public @:synchronized public function postReconnection(listenerInfos : java.NativeArray<com.sun.jmx.remote.internal.ClientListenerInfo>) : Void;
 	
-	@:overload @:synchronized public function terminate() : Void;
+	@:overload @:public @:synchronized public function terminate() : Void;
 	
 	
 }
@@ -97,13 +97,13 @@ but there you are.
 */
 @:native('com$sun$jmx$remote$internal$ClientNotifForwarder$LinearExecutor') @:internal extern class ClientNotifForwarder_LinearExecutor implements java.util.concurrent.Executor
 {
-	@:overload @:synchronized public function execute(command : java.lang.Runnable) : Void;
+	@:overload @:public @:synchronized public function execute(command : java.lang.Runnable) : Void;
 	
 	
 }
 @:native('com$sun$jmx$remote$internal$ClientNotifForwarder$NotifFetcher') @:internal extern class ClientNotifForwarder_NotifFetcher implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

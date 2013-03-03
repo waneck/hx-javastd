@@ -25,11 +25,11 @@ package sun.nio.fs;
 */
 @:internal extern class AbstractAclFileAttributeView implements java.nio.file.attribute.AclFileAttributeView implements sun.nio.fs.DynamicFileAttributeView
 {
-	@:overload @:final public function name() : String;
+	@:overload @:public @:final public function name() : String;
 	
-	@:overload @:final public function setAttribute(attribute : String, value : Dynamic) : Void;
+	@:overload @:public @:final public function setAttribute(attribute : String, value : Dynamic) : Void;
 	
-	@:overload @:final public function readAttributes(attributes : java.NativeArray<String>) : java.util.Map<String, Dynamic>;
+	@:overload @:public @:final public function readAttributes(attributes : java.NativeArray<String>) : java.util.Map<String, Dynamic>;
 	
 	/**
 	* Reads the access control list.
@@ -53,7 +53,7 @@ package sun.nio.fs;
 	*          or its {@link SecurityManager#checkRead(String) checkRead} method
 	*          denies read access to the file.
 	*/
-	@:overload public function getAcl() : java.util.List<java.nio.file.attribute.AclEntry>;
+	@:overload @:public public function getAcl() : java.util.List<java.nio.file.attribute.AclEntry>;
 	
 	/**
 	* Read the file owner.
@@ -72,7 +72,7 @@ package sun.nio.fs;
 	*          {@link SecurityManager#checkRead(String) checkRead} method
 	*          denies read access to the file.
 	*/
-	@:overload public function getOwner() : java.nio.file.attribute.UserPrincipal;
+	@:overload @:public public function getOwner() : java.nio.file.attribute.UserPrincipal;
 	
 	/**
 	* Updates the file owner.
@@ -96,7 +96,7 @@ package sun.nio.fs;
 	*          {@link SecurityManager#checkWrite(String) checkWrite} method
 	*          denies write access to the file.
 	*/
-	@:overload public function setOwner(owner : java.nio.file.attribute.UserPrincipal) : Void;
+	@:overload @:public public function setOwner(owner : java.nio.file.attribute.UserPrincipal) : Void;
 	
 	/**
 	* Updates (replace) the access control list.
@@ -132,7 +132,7 @@ package sun.nio.fs;
 	*          or its {@link SecurityManager#checkWrite(String) checkWrite}
 	*          method denies write access to the file.
 	*/
-	@:overload public function setAcl(acl : java.util.List<java.nio.file.attribute.AclEntry>) : Void;
+	@:overload @:public public function setAcl(acl : java.util.List<java.nio.file.attribute.AclEntry>) : Void;
 	
 	
 }

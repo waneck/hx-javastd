@@ -35,7 +35,7 @@ extern class OctetStreamData implements javax.xml.crypto.Data
 	* @throws NullPointerException if <code>octetStream</code> is
 	*    <code>null</code>
 	*/
-	@:overload public function new(octetStream : java.io.InputStream) : Void;
+	@:overload @:public public function new(octetStream : java.io.InputStream) : Void;
 	
 	/**
 	* Creates a new <code>OctetStreamData</code>.
@@ -48,14 +48,14 @@ extern class OctetStreamData implements javax.xml.crypto.Data
 	* @throws NullPointerException if <code>octetStream</code> is
 	*    <code>null</code>
 	*/
-	@:overload public function new(octetStream : java.io.InputStream, uri : String, mimeType : String) : Void;
+	@:overload @:public public function new(octetStream : java.io.InputStream, uri : String, mimeType : String) : Void;
 	
 	/**
 	* Returns the input stream of this <code>OctetStreamData</code>.
 	*
 	* @return the input stream of this <code>OctetStreamData</code>.
 	*/
-	@:overload public function getOctetStream() : java.io.InputStream;
+	@:overload @:public public function getOctetStream() : java.io.InputStream;
 	
 	/**
 	* Returns the URI String identifying the data object represented by this
@@ -63,7 +63,7 @@ extern class OctetStreamData implements javax.xml.crypto.Data
 	*
 	* @return the URI String or <code>null</code> if not applicable
 	*/
-	@:overload public function getURI() : String;
+	@:overload @:public public function getURI() : String;
 	
 	/**
 	* Returns the MIME type associated with the data object represented by this
@@ -71,7 +71,7 @@ extern class OctetStreamData implements javax.xml.crypto.Data
 	*
 	* @return the MIME type or <code>null</code> if not applicable
 	*/
-	@:overload public function getMimeType() : String;
+	@:overload @:public public function getMimeType() : String;
 	
 	
 }

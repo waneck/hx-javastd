@@ -27,37 +27,37 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* List of dependencies with other variables, parameters or
 	* keys defined at the top level.
 	*/
-	private var _dependencies : java.util.Vector<Dynamic>;
+	@:protected private var _dependencies : java.util.Vector<Dynamic>;
 	
 	/**
 	* Type check all the children of this node.
 	*/
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Translate this node into JVM bytecodes.
 	*/
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Translate this node into a fresh instruction list.
 	* The original instruction list is saved and restored.
 	*/
-	@:overload public function compile(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : com.sun.org.apache.bcel.internal.generic.InstructionList;
+	@:overload @:public public function compile(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : com.sun.org.apache.bcel.internal.generic.InstructionList;
 	
-	@:overload public function display(indent : Int) : Void;
+	@:overload @:public override public function display(indent : Int) : Void;
 	
 	/**
 	* Add a dependency with other top-level elements like
 	* variables, parameters or keys.
 	*/
-	@:overload public function addDependency(other : com.sun.org.apache.xalan.internal.xsltc.compiler.TopLevelElement) : Void;
+	@:overload @:public public function addDependency(other : com.sun.org.apache.xalan.internal.xsltc.compiler.TopLevelElement) : Void;
 	
 	/**
 	* Get the list of dependencies with other top-level elements
 	* like variables, parameteres or keys.
 	*/
-	@:overload public function getDependencies() : java.util.Vector<Dynamic>;
+	@:overload @:public public function getDependencies() : java.util.Vector<Dynamic>;
 	
 	
 }

@@ -37,7 +37,7 @@ extern class TimestampedSigner extends com.sun.jarsigner.ContentSigner
 	/**
 	* Instantiates a content signer that supports timestamped signatures.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Generates a PKCS #7 signed data message that includes a signature
@@ -64,7 +64,7 @@ extern class TimestampedSigner extends com.sun.jarsigner.ContentSigner
 	* @throws NullPointerException The exception is thrown if parameters is
 	*         null.
 	*/
-	@:overload override public function generateSignedData(parameters : com.sun.jarsigner.ContentSignerParameters, omitContent : Bool, applyTimestamp : Bool) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function generateSignedData(parameters : com.sun.jarsigner.ContentSignerParameters, omitContent : Bool, applyTimestamp : Bool) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Examine the certificate for a Subject Information Access extension
@@ -76,7 +76,7 @@ extern class TimestampedSigner extends com.sun.jarsigner.ContentSigner
 	* @param tsaCertificate An X.509 certificate for the TSA.
 	* @return An HTTP or HTTPS URL or null if none was found.
 	*/
-	@:overload public static function getTimestampingUrl(tsaCertificate : java.security.cert.X509Certificate) : String;
+	@:overload @:public @:static public static function getTimestampingUrl(tsaCertificate : java.security.cert.X509Certificate) : String;
 	
 	
 }

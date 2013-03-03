@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.schemagen;
 */
 extern class XmlSchemaGenerator<T, C, F, M>
 {
-	@:overload public function new(navigator : com.sun.xml.internal.bind.v2.model.nav.Navigator<T, C, F, M>, types : com.sun.xml.internal.bind.v2.model.core.TypeInfoSet<T, C, F, M>) : Void;
+	@:overload @:public public function new(navigator : com.sun.xml.internal.bind.v2.model.nav.Navigator<T, C, F, M>, types : com.sun.xml.internal.bind.v2.model.core.TypeInfoSet<T, C, F, M>) : Void;
 	
 	/**
 	* Adds a new class to the list of classes to be written.
@@ -35,16 +35,16 @@ extern class XmlSchemaGenerator<T, C, F, M>
 	* and the other for the type name. If they are different, we put the same
 	* {@link ClassInfo} to two {@link Namespace}s.
 	*/
-	@:overload public function add(clazz : com.sun.xml.internal.bind.v2.model.core.ClassInfo<T, C>) : Void;
+	@:overload @:public public function add(clazz : com.sun.xml.internal.bind.v2.model.core.ClassInfo<T, C>) : Void;
 	
 	/**
 	* Adds a new element to the list of elements to be written.
 	*/
-	@:overload public function add(elem : com.sun.xml.internal.bind.v2.model.core.ElementInfo<T, C>) : Void;
+	@:overload @:public public function add(elem : com.sun.xml.internal.bind.v2.model.core.ElementInfo<T, C>) : Void;
 	
-	@:overload public function add(envm : com.sun.xml.internal.bind.v2.model.core.EnumLeafInfo<T, C>) : Void;
+	@:overload @:public public function add(envm : com.sun.xml.internal.bind.v2.model.core.EnumLeafInfo<T, C>) : Void;
 	
-	@:overload public function add(a : com.sun.xml.internal.bind.v2.model.core.ArrayInfo<T, C>) : Void;
+	@:overload @:public public function add(a : com.sun.xml.internal.bind.v2.model.core.ArrayInfo<T, C>) : Void;
 	
 	/**
 	* Adds an additional element declaration.
@@ -55,22 +55,22 @@ extern class XmlSchemaGenerator<T, C, F, M>
 	*      The type this element refers to.
 	*      Can be null, in which case the element refers to an empty anonymous complex type.
 	*/
-	@:overload public function add(tagName : javax.xml.namespace.QName, isNillable : Bool, type : com.sun.xml.internal.bind.v2.model.core.NonElement<T, C>) : Void;
+	@:overload @:public public function add(tagName : javax.xml.namespace.QName, isNillable : Bool, type : com.sun.xml.internal.bind.v2.model.core.NonElement<T, C>) : Void;
 	
 	/**
 	* Writes out the episode file.
 	*/
-	@:overload public function writeEpisodeFile(out : com.sun.xml.internal.txw2.output.XmlSerializer) : Void;
+	@:overload @:public public function writeEpisodeFile(out : com.sun.xml.internal.txw2.output.XmlSerializer) : Void;
 	
 	/**
 	* Write out the schema documents.
 	*/
-	@:overload public function write(resolver : javax.xml.bind.SchemaOutputResolver, errorListener : com.sun.xml.internal.bind.api.ErrorListener) : Void;
+	@:overload @:public public function write(resolver : javax.xml.bind.SchemaOutputResolver, errorListener : com.sun.xml.internal.bind.api.ErrorListener) : Void;
 	
 	/**
 	* Debug information of what's in this {@link XmlSchemaGenerator}.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Relativizes a URI by using another URI (base URI.)
@@ -88,7 +88,7 @@ extern class XmlSchemaGenerator<T, C, F, M>
 	*
 	* @return the relative URI or the original URI if a relative one could not be computed
 	*/
-	@:overload private static function relativize(uri : String, baseUri : String) : String;
+	@:overload @:protected @:static private static function relativize(uri : String, baseUri : String) : String;
 	
 	
 }
@@ -97,13 +97,13 @@ extern class XmlSchemaGenerator<T, C, F, M>
 */
 @:native('com$sun$xml$internal$bind$v2$schemagen$XmlSchemaGenerator$Namespace') @:internal extern class XmlSchemaGenerator_Namespace
 {
-	@:overload public function new(uri : String) : Void;
+	@:overload @:public public function new(uri : String) : Void;
 	
-	@:overload public function addGlobalAttribute(ap : com.sun.xml.internal.bind.v2.model.core.AttributePropertyInfo<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function addGlobalAttribute(ap : com.sun.xml.internal.bind.v2.model.core.AttributePropertyInfo<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function addGlobalElement(tref : com.sun.xml.internal.bind.v2.model.core.TypeRef<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function addGlobalElement(tref : com.sun.xml.internal.bind.v2.model.core.TypeRef<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -127,14 +127,14 @@ extern class XmlSchemaGenerator<T, C, F, M>
 	* Returns true if two {@link ElementDeclaration}s are representing
 	* the same schema fragment.
 	*/
-	@:overload @:abstract public function equals(o : Dynamic) : Bool;
+	@:overload @:public @:abstract public function equals(o : Dynamic) : Bool;
 	
-	@:overload @:abstract public function hashCode() : Int;
+	@:overload @:public @:abstract public function hashCode() : Int;
 	
 	/**
 	* Generates the declaration.
 	*/
-	@:overload @:abstract public function writeTo(localName : String, schema : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema) : Void;
+	@:overload @:public @:abstract public function writeTo(localName : String, schema : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema) : Void;
 	
 	
 }
@@ -143,13 +143,13 @@ extern class XmlSchemaGenerator<T, C, F, M>
 */
 @:native('com$sun$xml$internal$bind$v2$schemagen$XmlSchemaGenerator$Namespace$ElementWithType') @:internal extern class XmlSchemaGenerator_Namespace_ElementWithType extends com.sun.xml.internal.bind.v2.schemagen.XmlSchemaGenerator.XmlSchemaGenerator_Namespace_ElementDeclaration
 {
-	@:overload public function new(nillable : Bool, type : com.sun.xml.internal.bind.v2.model.core.NonElement<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(nillable : Bool, type : com.sun.xml.internal.bind.v2.model.core.NonElement<Dynamic, Dynamic>) : Void;
 	
-	@:overload override public function writeTo(localName : String, schema : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema) : Void;
+	@:overload @:public override public function writeTo(localName : String, schema : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema) : Void;
 	
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

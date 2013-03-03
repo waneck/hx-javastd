@@ -47,7 +47,7 @@ package javax.security.sasl;
 	* Constructs a new instance of <tt>AuthenticationException</tt>.
 	* The root exception and the detailed message are null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new instance of <tt>AuthenticationException</tt>
@@ -57,7 +57,7 @@ package javax.security.sasl;
 	*
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload public function new(detail : String) : Void;
+	@:overload @:public public function new(detail : String) : Void;
 	
 	/**
 	* Constructs a new instance of <tt>AuthenticationException</tt> with a detailed message
@@ -69,7 +69,7 @@ package javax.security.sasl;
 	* @see java.lang.Throwable#getMessage
 	* @see #getCause
 	*/
-	@:overload public function new(detail : String, ex : java.lang.Throwable) : Void;
+	@:overload @:public public function new(detail : String, ex : java.lang.Throwable) : Void;
 	
 	
 }

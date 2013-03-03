@@ -29,12 +29,12 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	* Returns the {@code Class} object representing the class or interface
 	* that declares the field represented by this {@code Field} object.
 	*/
-	@:overload public function getDeclaringClass() : Class<Dynamic>;
+	@:overload @:public public function getDeclaringClass() : Class<Dynamic>;
 	
 	/**
 	* Returns the name of the field represented by this {@code Field} object.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the Java language modifiers for the field represented
@@ -43,7 +43,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*
 	* @see Modifier
 	*/
-	@:overload public function getModifiers() : Int;
+	@:overload @:public public function getModifiers() : Int;
 	
 	/**
 	* Returns {@code true} if this field represents an element of
@@ -53,7 +53,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	* an enumerated type.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isEnumConstant() : Bool;
+	@:require(java5) @:overload @:public public function isEnumConstant() : Bool;
 	
 	/**
 	* Returns {@code true} if this field is a synthetic
@@ -63,7 +63,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	* field as defined by the Java Language Specification.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isSynthetic() : Bool;
+	@:require(java5) @:overload @:public public function isSynthetic() : Bool;
 	
 	/**
 	* Returns a {@code Class} object that identifies the
@@ -73,7 +73,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	* @return a {@code Class} object identifying the declared
 	* type of the field represented by this object
 	*/
-	@:overload public function getType() : Class<Dynamic>;
+	@:overload @:public public function getType() : Class<Dynamic>;
 	
 	/**
 	* Returns a {@code Type} object that represents the declared type for
@@ -99,7 +99,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*     that cannot be instantiated for any reason
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getGenericType() : java.lang.reflect.Type;
+	@:require(java5) @:overload @:public public function getGenericType() : java.lang.reflect.Type;
 	
 	/**
 	* Compares this {@code Field} against the specified object.  Returns
@@ -107,14 +107,14 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	* they were declared by the same class and have the same name
 	* and type.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode for this {@code Field}.  This is computed as the
 	* exclusive-or of the hashcodes for the underlying field's
 	* declaring class name and its name.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string describing this {@code Field}.  The format is
@@ -134,7 +134,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	* modifiers in the following order: {@code static}, {@code final},
 	* {@code transient}, {@code volatile}.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a string describing this {@code Field}, including
@@ -155,7 +155,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function toGenericString() : String;
+	@:require(java5) @:overload @:public public function toGenericString() : String;
 	
 	/**
 	* Returns the value of the field represented by this {@code Field}, on
@@ -204,7 +204,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	* @exception ExceptionInInitializerError if the initialization provoked
 	*              by this method fails.
 	*/
-	@:overload public function get(obj : Dynamic) : Dynamic;
+	@:overload @:public public function get(obj : Dynamic) : Dynamic;
 	
 	/**
 	* Gets the value of a static or instance {@code boolean} field.
@@ -228,7 +228,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*              by this method fails.
 	* @see       Field#get
 	*/
-	@:overload public function getBoolean(obj : Dynamic) : Bool;
+	@:overload @:public public function getBoolean(obj : Dynamic) : Bool;
 	
 	/**
 	* Gets the value of a static or instance {@code byte} field.
@@ -252,7 +252,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*              by this method fails.
 	* @see       Field#get
 	*/
-	@:overload public function getByte(obj : Dynamic) : java.StdTypes.Int8;
+	@:overload @:public public function getByte(obj : Dynamic) : java.StdTypes.Int8;
 	
 	/**
 	* Gets the value of a static or instance field of type
@@ -278,7 +278,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*              by this method fails.
 	* @see Field#get
 	*/
-	@:overload public function getChar(obj : Dynamic) : java.StdTypes.Char16;
+	@:overload @:public public function getChar(obj : Dynamic) : java.StdTypes.Char16;
 	
 	/**
 	* Gets the value of a static or instance field of type
@@ -304,7 +304,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*              by this method fails.
 	* @see       Field#get
 	*/
-	@:overload public function getShort(obj : Dynamic) : java.StdTypes.Int16;
+	@:overload @:public public function getShort(obj : Dynamic) : java.StdTypes.Int16;
 	
 	/**
 	* Gets the value of a static or instance field of type
@@ -330,7 +330,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*              by this method fails.
 	* @see       Field#get
 	*/
-	@:overload public function getInt(obj : Dynamic) : Int;
+	@:overload @:public public function getInt(obj : Dynamic) : Int;
 	
 	/**
 	* Gets the value of a static or instance field of type
@@ -356,7 +356,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*              by this method fails.
 	* @see       Field#get
 	*/
-	@:overload public function getLong(obj : Dynamic) : haxe.Int64;
+	@:overload @:public public function getLong(obj : Dynamic) : haxe.Int64;
 	
 	/**
 	* Gets the value of a static or instance field of type
@@ -382,7 +382,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*              by this method fails.
 	* @see Field#get
 	*/
-	@:overload public function getFloat(obj : Dynamic) : Single;
+	@:overload @:public public function getFloat(obj : Dynamic) : Single;
 	
 	/**
 	* Gets the value of a static or instance field of type
@@ -408,7 +408,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*              by this method fails.
 	* @see       Field#get
 	*/
-	@:overload public function getDouble(obj : Dynamic) : Float;
+	@:overload @:public public function getDouble(obj : Dynamic) : Float;
 	
 	/**
 	* Sets the field represented by this {@code Field} object on the
@@ -476,7 +476,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	* @exception ExceptionInInitializerError if the initialization provoked
 	*              by this method fails.
 	*/
-	@:overload public function set(obj : Dynamic, value : Dynamic) : Void;
+	@:overload @:public public function set(obj : Dynamic, value : Dynamic) : Void;
 	
 	/**
 	* Sets the value of a field as a {@code boolean} on the specified object.
@@ -502,7 +502,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*              by this method fails.
 	* @see       Field#set
 	*/
-	@:overload public function setBoolean(obj : Dynamic, z : Bool) : Void;
+	@:overload @:public public function setBoolean(obj : Dynamic, z : Bool) : Void;
 	
 	/**
 	* Sets the value of a field as a {@code byte} on the specified object.
@@ -528,7 +528,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*              by this method fails.
 	* @see       Field#set
 	*/
-	@:overload public function setByte(obj : Dynamic, b : java.StdTypes.Int8) : Void;
+	@:overload @:public public function setByte(obj : Dynamic, b : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Sets the value of a field as a {@code char} on the specified object.
@@ -554,7 +554,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*              by this method fails.
 	* @see       Field#set
 	*/
-	@:overload public function setChar(obj : Dynamic, c : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setChar(obj : Dynamic, c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Sets the value of a field as a {@code short} on the specified object.
@@ -580,7 +580,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*              by this method fails.
 	* @see       Field#set
 	*/
-	@:overload public function setShort(obj : Dynamic, s : java.StdTypes.Int16) : Void;
+	@:overload @:public public function setShort(obj : Dynamic, s : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Sets the value of a field as an {@code int} on the specified object.
@@ -606,7 +606,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*              by this method fails.
 	* @see       Field#set
 	*/
-	@:overload public function setInt(obj : Dynamic, i : Int) : Void;
+	@:overload @:public public function setInt(obj : Dynamic, i : Int) : Void;
 	
 	/**
 	* Sets the value of a field as a {@code long} on the specified object.
@@ -632,7 +632,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*              by this method fails.
 	* @see       Field#set
 	*/
-	@:overload public function setLong(obj : Dynamic, l : haxe.Int64) : Void;
+	@:overload @:public public function setLong(obj : Dynamic, l : haxe.Int64) : Void;
 	
 	/**
 	* Sets the value of a field as a {@code float} on the specified object.
@@ -658,7 +658,7 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*              by this method fails.
 	* @see       Field#set
 	*/
-	@:overload public function setFloat(obj : Dynamic, f : Single) : Void;
+	@:overload @:public public function setFloat(obj : Dynamic, f : Single) : Void;
 	
 	/**
 	* Sets the value of a field as a {@code double} on the specified object.
@@ -684,18 +684,18 @@ extern class Field extends java.lang.reflect.AccessibleObject implements java.la
 	*              by this method fails.
 	* @see       Field#set
 	*/
-	@:overload public function setDouble(obj : Dynamic, d : Float) : Void;
+	@:overload @:public public function setDouble(obj : Dynamic, d : Float) : Void;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getAnnotation<T : java.lang.annotation.Annotation>(annotationClass : Class<T>) : T;
+	@:require(java5) @:overload @:public override public function getAnnotation<T : java.lang.annotation.Annotation>(annotationClass : Class<T>) : T;
 	
 	/**
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getDeclaredAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
+	@:require(java5) @:overload @:public override public function getDeclaredAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
 	
 	
 }

@@ -32,7 +32,7 @@ extern class SerialJavaObject implements java.io.Serializable implements java.la
 	* @param obj the Java <code>Object</code> to be serialized
 	* @throws SerialException if the object is found not to be serializable
 	*/
-	@:overload public function new(obj : Dynamic) : Void;
+	@:overload @:public public function new(obj : Dynamic) : Void;
 	
 	/**
 	* Returns an <code>Object</code> that is a copy of this <code>SerialJavaObject</code>
@@ -42,7 +42,7 @@ extern class SerialJavaObject implements java.io.Serializable implements java.la
 	*         <code>Object</code> in the Java programming language
 	* @throws SerialException if the instance is corrupt
 	*/
-	@:overload public function getObject() : Dynamic;
+	@:overload @:public public function getObject() : Dynamic;
 	
 	/**
 	* Returns an array of <code>Field</code> objects that contains each
@@ -52,7 +52,7 @@ extern class SerialJavaObject implements java.io.Serializable implements java.la
 	* @throws SerialException if an error is encountered accessing
 	* the serialized object
 	*/
-	@:overload public function getFields() : java.NativeArray<java.lang.reflect.Field>;
+	@:overload @:public public function getFields() : java.NativeArray<java.lang.reflect.Field>;
 	
 	
 }

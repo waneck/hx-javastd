@@ -29,7 +29,7 @@ extern class TypeKindVisitor7<R, P> extends javax.lang.model.util.TypeKindVisito
 	* Constructor for concrete subclasses to call; uses {@code null}
 	* for the default value.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructor for concrete subclasses to call; uses the argument
@@ -37,7 +37,7 @@ extern class TypeKindVisitor7<R, P> extends javax.lang.model.util.TypeKindVisito
 	*
 	* @param defaultValue the value to assign to {@link #DEFAULT_VALUE}
 	*/
-	@:overload private function new(defaultValue : R) : Void;
+	@:overload @:protected private function new(defaultValue : R) : Void;
 	
 	/**
 	* This implementation visits a {@code UnionType} by calling
@@ -47,7 +47,7 @@ extern class TypeKindVisitor7<R, P> extends javax.lang.model.util.TypeKindVisito
 	* @param p  {@inheritDoc}
 	* @return the result of {@code defaultAction}
 	*/
-	@:overload public function visitUnion(t : javax.lang.model.type.UnionType, p : P) : R;
+	@:overload @:public override public function visitUnion(t : javax.lang.model.type.UnionType, p : P) : R;
 	
 	
 }

@@ -45,7 +45,7 @@ extern class Constants
 	* XSLT Recommendation, so what it really signifies is a badly obsolete
 	* stylesheet.</li>
 	* </ul> */
-	public static var S_XMLNAMESPACEURI(default, null) : String;
+	@:public @:static @:final public static var S_XMLNAMESPACEURI(default, null) : String;
 	
 	/** Authorship mnemonics, as Java Strings. Not standardized,
 	* as far as I know.
@@ -56,35 +56,35 @@ extern class Constants
 	* information about this publisher and product.</li>
 	* </ul>
 	*/
-	public static var S_VENDOR(default, null) : String;
+	@:public @:static @:final public static var S_VENDOR(default, null) : String;
 	
 	/** S_BUILTIN_EXTENSIONS_URL is a mnemonic for the XML Namespace
 	*(http://xml.apache.org/xalan) predefined to signify Xalan's
 	* built-in XSLT Extensions. When used in stylesheets, this is often
 	* bound to the "xalan:" prefix.
 	*/
-	public static var S_BUILTIN_EXTENSIONS_URL(default, null) : String;
+	@:public @:static @:final public static var S_BUILTIN_EXTENSIONS_URL(default, null) : String;
 	
 	/**
 	* The old built-in extension url. It is still supported for
 	* backward compatibility.
 	*/
-	public static var S_BUILTIN_OLD_EXTENSIONS_URL(default, null) : String;
+	@:public @:static @:final public static var S_BUILTIN_OLD_EXTENSIONS_URL(default, null) : String;
 	
 	/**
 	* Xalan extension namespaces.
 	*/
-	public static var S_EXTENSIONS_OLD_JAVA_URL(default, null) : String;
+	@:public @:static @:final public static var S_EXTENSIONS_OLD_JAVA_URL(default, null) : String;
 	
 	/**
 	* EXSLT extension namespaces.
 	*/
-	public static var S_EXSLT_COMMON_URL(default, null) : String;
+	@:public @:static @:final public static var S_EXSLT_COMMON_URL(default, null) : String;
 	
 	/**
 	* The minimum version of XSLT supported by this processor.
 	*/
-	public static var XSLTVERSUPPORTED(default, null) : Float;
+	@:public @:static @:final public static var XSLTVERSUPPORTED(default, null) : Float;
 	
 	
 }

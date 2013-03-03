@@ -30,36 +30,36 @@ extern class TypeReference
 	*
 	* Always non-null. Strings are interned.
 	*/
-	public var tagName(default, null) : javax.xml.namespace.QName;
+	@:public @:final public var tagName(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* The Java type that's being referenced.
 	*
 	* Always non-null.
 	*/
-	public var type(default, null) : java.lang.reflect.Type;
+	@:public @:final public var type(default, null) : java.lang.reflect.Type;
 	
 	/**
 	* The annotations associated with the reference of this type.
 	*
 	* Always non-null.
 	*/
-	public var annotations(default, null) : java.NativeArray<java.lang.annotation.Annotation>;
+	@:public @:final public var annotations(default, null) : java.NativeArray<java.lang.annotation.Annotation>;
 	
-	@:overload public function new(tagName : javax.xml.namespace.QName, type : java.lang.reflect.Type, annotations : java.NativeArray<java.lang.annotation.Annotation>) : Void;
+	@:overload @:public public function new(tagName : javax.xml.namespace.QName, type : java.lang.reflect.Type, annotations : java.NativeArray<java.lang.annotation.Annotation>) : Void;
 	
 	/**
 	* Finds the specified annotation from the array and returns it.
 	* Null if not found.
 	*/
-	@:overload public function get<A : java.lang.annotation.Annotation>(annotationType : Class<A>) : A;
+	@:overload @:public public function get<A : java.lang.annotation.Annotation>(annotationType : Class<A>) : A;
 	
 	/**
 	* Creates a {@link TypeReference} for the item type,
 	* if this {@link TypeReference} represents a collection type.
 	* Otherwise returns an identical type.
 	*/
-	@:overload public function toItemType() : com.sun.xml.internal.bind.api.TypeReference;
+	@:overload @:public public function toItemType() : com.sun.xml.internal.bind.api.TypeReference;
 	
 	
 }

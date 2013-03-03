@@ -45,7 +45,7 @@ extern class ColorConvertOp implements java.awt.image.BufferedImageOp implements
 	* @param hints the <code>RenderingHints</code> object used to control
 	*        the color conversion, or <code>null</code>
 	*/
-	@:overload public function new(hints : java.awt.RenderingHints) : Void;
+	@:overload @:public public function new(hints : java.awt.RenderingHints) : Void;
 	
 	/**
 	* Constructs a new ColorConvertOp from a ColorSpace object.
@@ -63,7 +63,7 @@ extern class ColorConvertOp implements java.awt.image.BufferedImageOp implements
 	*        the color conversion, or <code>null</code>
 	* @throws NullPointerException if cspace is null
 	*/
-	@:overload public function new(cspace : java.awt.color.ColorSpace, hints : java.awt.RenderingHints) : Void;
+	@:overload @:public public function new(cspace : java.awt.color.ColorSpace, hints : java.awt.RenderingHints) : Void;
 	
 	/**
 	* Constructs a new ColorConvertOp from two ColorSpace objects.
@@ -82,7 +82,7 @@ extern class ColorConvertOp implements java.awt.image.BufferedImageOp implements
 	*        the color conversion, or <code>null</code>
 	* @throws NullPointerException if either srcCspace or dstCspace is null
 	*/
-	@:overload public function new(srcCspace : java.awt.color.ColorSpace, dstCspace : java.awt.color.ColorSpace, hints : java.awt.RenderingHints) : Void;
+	@:overload @:public public function new(srcCspace : java.awt.color.ColorSpace, dstCspace : java.awt.color.ColorSpace, hints : java.awt.RenderingHints) : Void;
 	
 	/**
 	* Constructs a new ColorConvertOp from an array of ICC_Profiles.
@@ -111,7 +111,7 @@ extern class ColorConvertOp implements java.awt.image.BufferedImageOp implements
 	*             specify a well-defined color conversion
 	* @exception NullPointerException if profiles is null
 	*/
-	@:overload public function new(profiles : java.NativeArray<java.awt.color.ICC_Profile>, hints : java.awt.RenderingHints) : Void;
+	@:overload @:public public function new(profiles : java.NativeArray<java.awt.color.ICC_Profile>, hints : java.awt.RenderingHints) : Void;
 	
 	/**
 	* Returns the array of ICC_Profiles used to construct this ColorConvertOp.
@@ -122,7 +122,7 @@ extern class ColorConvertOp implements java.awt.image.BufferedImageOp implements
 	*         <code>ColorConvertOp</code> was not constructed with an
 	*         array of <code>ICC_Profile</code> objects.
 	*/
-	@:overload @:final public function getICC_Profiles() : java.NativeArray<java.awt.color.ICC_Profile>;
+	@:overload @:public @:final public function getICC_Profiles() : java.NativeArray<java.awt.color.ICC_Profile>;
 	
 	/**
 	* ColorConverts the source BufferedImage.
@@ -138,7 +138,7 @@ extern class ColorConvertOp implements java.awt.image.BufferedImageOp implements
 	*             constructed using the constructor which takes only a
 	*             RenderingHints argument, since the operation is ill defined.
 	*/
-	@:overload @:final public function filter(src : java.awt.image.BufferedImage, dest : java.awt.image.BufferedImage) : java.awt.image.BufferedImage;
+	@:overload @:public @:final public function filter(src : java.awt.image.BufferedImage, dest : java.awt.image.BufferedImage) : java.awt.image.BufferedImage;
 	
 	/**
 	* ColorConverts the image data in the source Raster.
@@ -160,7 +160,7 @@ extern class ColorConvertOp implements java.awt.image.BufferedImageOp implements
 	*             with one of the constructors that applies only to
 	*             operations on BufferedImages.
 	*/
-	@:overload @:final public function filter(src : java.awt.image.Raster, dest : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
+	@:overload @:public @:final public function filter(src : java.awt.image.Raster, dest : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns the bounding box of the destination, given this source.
@@ -170,7 +170,7 @@ extern class ColorConvertOp implements java.awt.image.BufferedImageOp implements
 	* @return a <code>Rectangle2D</code> that is the bounding box
 	*         of the destination, given the specified <code>src</code>
 	*/
-	@:overload @:final public function getBounds2D(src : java.awt.image.BufferedImage) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:final public function getBounds2D(src : java.awt.image.BufferedImage) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns the bounding box of the destination, given this source.
@@ -180,7 +180,7 @@ extern class ColorConvertOp implements java.awt.image.BufferedImageOp implements
 	* @return a <code>Rectangle2D</code> that is the bounding box
 	*         of the destination, given the specified <code>src</code>
 	*/
-	@:overload @:final public function getBounds2D(src : java.awt.image.Raster) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:final public function getBounds2D(src : java.awt.image.Raster) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Creates a zeroed destination image with the correct size and number of
@@ -195,7 +195,7 @@ extern class ColorConvertOp implements java.awt.image.BufferedImageOp implements
 	*         created without any <code>ICC_Profile</code> or
 	*         <code>ColorSpace</code> defined for the destination
 	*/
-	@:overload public function createCompatibleDestImage(src : java.awt.image.BufferedImage, destCM : java.awt.image.ColorModel) : java.awt.image.BufferedImage;
+	@:overload @:public public function createCompatibleDestImage(src : java.awt.image.BufferedImage, destCM : java.awt.image.ColorModel) : java.awt.image.BufferedImage;
 	
 	/**
 	* Creates a zeroed destination Raster with the correct size and number of
@@ -207,7 +207,7 @@ extern class ColorConvertOp implements java.awt.image.BufferedImageOp implements
 	*         was created without sufficient information to define the
 	*         <code>dst</code> and <code>src</code> color spaces
 	*/
-	@:overload public function createCompatibleDestRaster(src : java.awt.image.Raster) : java.awt.image.WritableRaster;
+	@:overload @:public public function createCompatibleDestRaster(src : java.awt.image.Raster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns the location of the destination point given a
@@ -220,14 +220,14 @@ extern class ColorConvertOp implements java.awt.image.BufferedImageOp implements
 	* @return <code>dstPt</code> after setting its location to be
 	*         the same as <code>srcPt</code>
 	*/
-	@:overload @:final public function getPoint2D(srcPt : java.awt.geom.Point2D, dstPt : java.awt.geom.Point2D) : java.awt.geom.Point2D;
+	@:overload @:public @:final public function getPoint2D(srcPt : java.awt.geom.Point2D, dstPt : java.awt.geom.Point2D) : java.awt.geom.Point2D;
 	
 	/**
 	* Returns the rendering hints used by this op.
 	* @return the <code>RenderingHints</code> object of this
 	*         <code>ColorConvertOp</code>
 	*/
-	@:overload @:final public function getRenderingHints() : java.awt.RenderingHints;
+	@:overload @:public @:final public function getRenderingHints() : java.awt.RenderingHints;
 	
 	
 }

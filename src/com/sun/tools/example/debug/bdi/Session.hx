@@ -32,18 +32,18 @@ package com.sun.tools.example.debug.bdi;
 */
 @:internal extern class Session
 {
-	@:overload public function new(vm : com.sun.jdi.VirtualMachine, runtime : com.sun.tools.example.debug.bdi.ExecutionManager, diagnostics : com.sun.tools.example.debug.bdi.OutputListener) : Void;
+	@:overload @:public public function new(vm : com.sun.jdi.VirtualMachine, runtime : com.sun.tools.example.debug.bdi.ExecutionManager, diagnostics : com.sun.tools.example.debug.bdi.OutputListener) : Void;
 	
 	/**
 	* Determine if VM is interrupted, i.e, present and not running.
 	*/
-	@:overload public function isInterrupted() : Bool;
+	@:overload @:public public function isInterrupted() : Bool;
 	
-	@:overload public function setTraceMode(traceFlags : Int) : Void;
+	@:overload @:public public function setTraceMode(traceFlags : Int) : Void;
 	
-	@:overload public function attach() : Bool;
+	@:overload @:public public function attach() : Bool;
 	
-	@:overload public function detach() : Void;
+	@:overload @:public public function detach() : Void;
 	
 	
 }

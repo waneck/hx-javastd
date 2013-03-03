@@ -29,7 +29,7 @@ extern interface WSWebServiceContext extends javax.xml.ws.WebServiceContext
 	* Obtains the request packet that is being processed.
 	* @return Packet for the request
 	*/
-	@:overload public function getRequestPacket() : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public public function getRequestPacket() : com.sun.xml.internal.ws.api.message.Packet;
 	
 	
 }

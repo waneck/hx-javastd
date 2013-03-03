@@ -21,7 +21,7 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class DOMImplementationImpl extends com.sun.org.apache.xerces.internal.dom.CoreDOMImplementationImpl implements org.w3c.dom.DOMImplementation
 {
 	/** NON-DOM: Obtain and return the single shared object */
-	@:overload public static function getDOMImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload @:public @:static public static function getDOMImplementation() : org.w3c.dom.DOMImplementation;
 	
 	/**
 	* Test if the DOM implementation supports a specific "feature" --
@@ -38,7 +38,7 @@ extern class DOMImplementationImpl extends com.sun.org.apache.xerces.internal.do
 	* @return    true iff this implementation is compatable with the
 	* specified feature and version.
 	*/
-	@:overload public function hasFeature(feature : String, version : String) : Bool;
+	@:overload @:public override public function hasFeature(feature : String, version : String) : Bool;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -60,7 +60,7 @@ extern class DOMImplementationImpl extends com.sun.org.apache.xerces.internal.do
 	*                         already been used with a different document.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function createDocument(namespaceURI : String, qualifiedName : String, doctype : org.w3c.dom.DocumentType) : org.w3c.dom.Document;
+	@:overload @:public override public function createDocument(namespaceURI : String, qualifiedName : String, doctype : org.w3c.dom.DocumentType) : org.w3c.dom.Document;
 	
 	
 }

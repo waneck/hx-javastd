@@ -8,14 +8,14 @@ package org.omg.IOP;
 extern class TaggedProfile implements org.omg.CORBA.portable.IDLEntity
 {
 	/** The tag, represented as a profile id. */
-	public var tag : Int;
+	@:public public var tag : Int;
 	
 	/** The associated profile data. */
-	public var profile_data : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var profile_data : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_tag : Int, _profile_data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(_tag : Int, _profile_data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

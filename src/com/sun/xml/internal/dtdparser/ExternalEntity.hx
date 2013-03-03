@@ -25,9 +25,9 @@ package com.sun.xml.internal.dtdparser;
 */
 @:internal extern class ExternalEntity extends com.sun.xml.internal.dtdparser.EntityDecl
 {
-	@:overload public function new(_in : com.sun.xml.internal.dtdparser.InputEntity) : Void;
+	@:overload @:public public function new(_in : com.sun.xml.internal.dtdparser.InputEntity) : Void;
 	
-	@:overload public function getInputSource(r : org.xml.sax.EntityResolver) : org.xml.sax.InputSource;
+	@:overload @:public public function getInputSource(r : org.xml.sax.EntityResolver) : org.xml.sax.InputSource;
 	
 	
 }

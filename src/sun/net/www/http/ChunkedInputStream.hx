@@ -44,7 +44,7 @@ extern class ChunkedInputStream extends java.io.InputStream implements sun.net.w
 	* @param   responses   the MessageHeader that should be populated with optional
 	*                      trailers.
 	*/
-	@:overload public function new(_in : java.io.InputStream, hc : sun.net.www.http.HttpClient, responses : sun.net.www.MessageHeader) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, hc : sun.net.www.http.HttpClient, responses : sun.net.www.MessageHeader) : Void;
 	
 	/**
 	* See
@@ -56,7 +56,7 @@ extern class ChunkedInputStream extends java.io.InputStream implements sun.net.w
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload @:synchronized override public function read() : Int;
+	@:overload @:public @:synchronized override public function read() : Int;
 	
 	/**
 	* Reads bytes from this stream into the specified byte array, starting at
@@ -69,7 +69,7 @@ extern class ChunkedInputStream extends java.io.InputStream implements sun.net.w
 	*             the stream has been reached.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Returns the number of bytes that can be read from this input
@@ -80,7 +80,7 @@ extern class ChunkedInputStream extends java.io.InputStream implements sun.net.w
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload @:synchronized override public function available() : Int;
+	@:overload @:public @:synchronized override public function available() : Int;
 	
 	/**
 	* Close the stream by either returning the connection to the
@@ -93,7 +93,7 @@ extern class ChunkedInputStream extends java.io.InputStream implements sun.net.w
 	*
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:synchronized override public function close() : Void;
+	@:overload @:public @:synchronized override public function close() : Void;
 	
 	/**
 	* Hurry the input stream by reading everything from the underlying
@@ -104,7 +104,7 @@ extern class ChunkedInputStream extends java.io.InputStream implements sun.net.w
 	* without blocking then this stream can't be hurried and should be
 	* closed.
 	*/
-	@:overload @:synchronized public function hurry() : Bool;
+	@:overload @:public @:synchronized public function hurry() : Bool;
 	
 	
 }

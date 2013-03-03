@@ -25,11 +25,11 @@ package javax.swing.plaf.nimbus;
 */
 @:internal extern class InternalFrameTitlePaneCloseButtonPainter extends javax.swing.plaf.nimbus.AbstractRegionPainter
 {
-	@:overload public function new(ctx : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext, state : Int) : Void;
+	@:overload @:public public function new(ctx : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext, state : Int) : Void;
 	
-	@:overload private function doPaint(g : java.awt.Graphics2D, c : javax.swing.JComponent, width : Int, height : Int, extendedCacheKeys : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected override private function doPaint(g : java.awt.Graphics2D, c : javax.swing.JComponent, width : Int, height : Int, extendedCacheKeys : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload @:final private function getPaintContext() : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext;
+	@:overload @:protected @:final override private function getPaintContext() : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext;
 	
 	
 }

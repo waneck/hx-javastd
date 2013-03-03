@@ -62,10 +62,10 @@ package com.sun.org.apache.xerces.internal.impl.dtd.models;
 extern class SimpleContentModel implements com.sun.org.apache.xerces.internal.impl.dtd.models.ContentModelValidator
 {
 	/** CHOICE */
-	public static var CHOICE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var CHOICE(default, null) : java.StdTypes.Int16;
 	
 	/** SEQUENCE */
-	public static var SEQUENCE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var SEQUENCE(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Constructs a simple content model.
@@ -75,7 +75,7 @@ extern class SimpleContentModel implements com.sun.org.apache.xerces.internal.im
 	* @param secondChild qualified name of the second child
 	*
 	*/
-	@:overload public function new(operator : java.StdTypes.Int16, firstChild : com.sun.org.apache.xerces.internal.xni.QName, secondChild : com.sun.org.apache.xerces.internal.xni.QName) : Void;
+	@:overload @:public public function new(operator : java.StdTypes.Int16, firstChild : com.sun.org.apache.xerces.internal.xni.QName, secondChild : com.sun.org.apache.xerces.internal.xni.QName) : Void;
 	
 	/**
 	* Check that the specified content is valid according to this
@@ -100,7 +100,7 @@ extern class SimpleContentModel implements com.sun.org.apache.xerces.internal.im
 	*         content is required to reach a valid ending state.
 	*
 	*/
-	@:overload public function validate(children : java.NativeArray<com.sun.org.apache.xerces.internal.xni.QName>, offset : Int, length : Int) : Int;
+	@:overload @:public public function validate(children : java.NativeArray<com.sun.org.apache.xerces.internal.xni.QName>, offset : Int, length : Int) : Int;
 	
 	
 }

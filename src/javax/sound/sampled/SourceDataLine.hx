@@ -101,7 +101,7 @@ package javax.sound.sampled;
 	* @see Line#isOpen
 	* @see LineEvent
 	*/
-	@:overload public function open(format : javax.sound.sampled.AudioFormat, bufferSize : Int) : Void;
+	@:overload @:public public function open(format : javax.sound.sampled.AudioFormat, bufferSize : Int) : Void;
 	
 	/**
 	* Opens the line with the specified format, causing the line to acquire any
@@ -139,7 +139,7 @@ package javax.sound.sampled;
 	* @see Line#isOpen
 	* @see LineEvent
 	*/
-	@:overload public function open(format : javax.sound.sampled.AudioFormat) : Void;
+	@:overload @:public public function open(format : javax.sound.sampled.AudioFormat) : Void;
 	
 	/**
 	* Writes audio data to the mixer via this source data line.  The requested
@@ -184,7 +184,7 @@ package javax.sound.sampled;
 	* @see TargetDataLine#read
 	* @see DataLine#available
 	*/
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	
 }

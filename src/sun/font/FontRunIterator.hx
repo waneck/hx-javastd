@@ -32,13 +32,13 @@ package sun.font;
 */
 extern class FontRunIterator
 {
-	@:overload public function init(font : sun.font.CompositeFont, text : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : Void;
+	@:overload @:public public function init(font : sun.font.CompositeFont, text : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : Void;
 	
-	@:overload public function getFont() : sun.font.PhysicalFont;
+	@:overload @:public public function getFont() : sun.font.PhysicalFont;
 	
-	@:overload public function getGlyphMask() : Int;
+	@:overload @:public public function getGlyphMask() : Int;
 	
-	@:overload public function getPos() : Int;
+	@:overload @:public public function getPos() : Int;
 	
 	/*
 	* characters that are in the 'common' script become part of the
@@ -80,9 +80,9 @@ extern class FontRunIterator
 	* sequences.  maybe it would be better to feed a single code point into each iterator-- push
 	* the data instead of pull it?
 	*/
-	@:overload public function next(script : Int, lim : Int) : Bool;
+	@:overload @:public public function next(script : Int, lim : Int) : Bool;
 	
-	@:overload public function next() : Bool;
+	@:overload @:public public function next() : Bool;
 	
 	
 }

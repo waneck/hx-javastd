@@ -47,17 +47,17 @@ package sun.net.idn;
 	* @exception IOException throw if data file fails authentication
 	* @draft 2.1
 	*/
-	@:overload public function new(inputStream : java.io.InputStream) : Void;
+	@:overload @:public public function new(inputStream : java.io.InputStream) : Void;
 	
-	@:overload public function read(idnaBytes : java.NativeArray<java.StdTypes.Int8>, mappingTable : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function read(idnaBytes : java.NativeArray<java.StdTypes.Int8>, mappingTable : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
-	@:overload public function getDataFormatVersion() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getDataFormatVersion() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function isDataVersionAcceptable(version : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public public function isDataVersionAcceptable(version : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
-	@:overload public function readIndexes(length : Int) : java.NativeArray<Int>;
+	@:overload @:public public function readIndexes(length : Int) : java.NativeArray<Int>;
 	
-	@:overload public function getUnicodeVersion() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getUnicodeVersion() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

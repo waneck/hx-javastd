@@ -29,7 +29,7 @@ extern class DGCAckHandler
 	* Causes the DGCAckHandler associated with the specified UID to
 	* release its references.
 	**/
-	@:overload public static function received(id : java.rmi.server.UID) : Void;
+	@:overload @:public @:static public static function received(id : java.rmi.server.UID) : Void;
 	
 	
 }

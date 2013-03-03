@@ -43,7 +43,7 @@ extern class DatagramSocket implements java.io.Closeable
 	*
 	* @see SecurityManager#checkListen
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an unbound datagram socket with the specified
@@ -53,7 +53,7 @@ extern class DatagramSocket implements java.io.Closeable
 	*        the subclass wishes to use on the DatagramSocket.
 	* @since   1.4
 	*/
-	@:require(java4) @:overload private function new(impl : java.net.DatagramSocketImpl) : Void;
+	@:require(java4) @:overload @:protected private function new(impl : java.net.DatagramSocketImpl) : Void;
 	
 	/**
 	* Creates a datagram socket, bound to the specified local
@@ -78,7 +78,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @see SecurityManager#checkListen
 	* @since   1.4
 	*/
-	@:require(java4) @:overload public function new(bindaddr : java.net.SocketAddress) : Void;
+	@:require(java4) @:overload @:public public function new(bindaddr : java.net.SocketAddress) : Void;
 	
 	/**
 	* Constructs a datagram socket and binds it to the specified port
@@ -100,7 +100,7 @@ extern class DatagramSocket implements java.io.Closeable
 	*
 	* @see SecurityManager#checkListen
 	*/
-	@:overload public function new(port : Int) : Void;
+	@:overload @:public public function new(port : Int) : Void;
 	
 	/**
 	* Creates a datagram socket, bound to the specified local
@@ -126,7 +126,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @see SecurityManager#checkListen
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function new(port : Int, laddr : java.net.InetAddress) : Void;
+	@:require(java1) @:overload @:public public function new(port : Int, laddr : java.net.InetAddress) : Void;
 	
 	/**
 	* Binds this DatagramSocket to a specific address & port.
@@ -143,7 +143,7 @@ extern class DatagramSocket implements java.io.Closeable
 	*         not supported by this socket.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function bind(addr : java.net.SocketAddress) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function bind(addr : java.net.SocketAddress) : Void;
 	
 	/**
 	* Connects the socket to a remote address for this socket. When a
@@ -192,7 +192,7 @@ extern class DatagramSocket implements java.io.Closeable
 	*
 	* @see #disconnect
 	*/
-	@:overload public function connect(address : java.net.InetAddress, port : Int) : Void;
+	@:overload @:public public function connect(address : java.net.InetAddress, port : Int) : Void;
 	
 	/**
 	* Connects this socket to a remote socket address (IP address + port number).
@@ -216,7 +216,7 @@ extern class DatagramSocket implements java.io.Closeable
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function connect(addr : java.net.SocketAddress) : Void;
+	@:require(java4) @:overload @:public public function connect(addr : java.net.SocketAddress) : Void;
 	
 	/**
 	* Disconnects the socket. If the socket is closed or not connected,
@@ -224,7 +224,7 @@ extern class DatagramSocket implements java.io.Closeable
 	*
 	* @see #connect
 	*/
-	@:overload public function disconnect() : Void;
+	@:overload @:public public function disconnect() : Void;
 	
 	/**
 	* Returns the binding state of the socket.
@@ -236,7 +236,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @return true if the socket successfully bound to an address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isBound() : Bool;
+	@:require(java4) @:overload @:public public function isBound() : Bool;
 	
 	/**
 	* Returns the connection state of the socket.
@@ -248,7 +248,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @return true if the socket successfully connected to a server
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isConnected() : Bool;
+	@:require(java4) @:overload @:public public function isConnected() : Bool;
 	
 	/**
 	* Returns the address to which this socket is connected. Returns
@@ -260,7 +260,7 @@ extern class DatagramSocket implements java.io.Closeable
 	*
 	* @return the address to which this socket is connected.
 	*/
-	@:overload public function getInetAddress() : java.net.InetAddress;
+	@:overload @:public public function getInetAddress() : java.net.InetAddress;
 	
 	/**
 	* Returns the port number to which this socket is connected.
@@ -272,7 +272,7 @@ extern class DatagramSocket implements java.io.Closeable
 	*
 	* @return the port number to which this socket is connected.
 	*/
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
 	/**
 	* Returns the address of the endpoint this socket is connected to, or
@@ -290,7 +290,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @see #connect(SocketAddress)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getRemoteSocketAddress() : java.net.SocketAddress;
+	@:require(java4) @:overload @:public public function getRemoteSocketAddress() : java.net.SocketAddress;
 	
 	/**
 	* Returns the address of the endpoint this socket is bound to.
@@ -302,7 +302,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @see #bind(SocketAddress)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getLocalSocketAddress() : java.net.SocketAddress;
+	@:require(java4) @:overload @:public public function getLocalSocketAddress() : java.net.SocketAddress;
 	
 	/**
 	* Sends a datagram packet from this socket. The
@@ -344,7 +344,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @revised 1.4
 	* @spec JSR-51
 	*/
-	@:overload public function send(p : java.net.DatagramPacket) : Void;
+	@:overload @:public public function send(p : java.net.DatagramPacket) : Void;
 	
 	/**
 	* Receives a datagram packet from this socket. When this method
@@ -377,7 +377,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @revised 1.4
 	* @spec JSR-51
 	*/
-	@:overload @:synchronized public function receive(p : java.net.DatagramPacket) : Void;
+	@:overload @:public @:synchronized public function receive(p : java.net.DatagramPacket) : Void;
 	
 	/**
 	* Gets the local address to which the socket is bound.
@@ -397,7 +397,7 @@ extern class DatagramSocket implements java.io.Closeable
 	*          method does not allow the operation
 	* @since   1.1
 	*/
-	@:require(java1) @:overload public function getLocalAddress() : java.net.InetAddress;
+	@:require(java1) @:overload @:public public function getLocalAddress() : java.net.InetAddress;
 	
 	/**
 	* Returns the port number on the local host to which this socket
@@ -407,7 +407,7 @@ extern class DatagramSocket implements java.io.Closeable
 	<code>-1</code> if the socket is closed, or
 	<code>0</code> if it is not bound yet.
 	*/
-	@:overload public function getLocalPort() : Int;
+	@:overload @:public public function getLocalPort() : Int;
 	
 	/** Enable/disable SO_TIMEOUT with the specified timeout, in
 	*  milliseconds. With this option set to a non-zero timeout,
@@ -424,7 +424,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @since   JDK1.1
 	* @see #getSoTimeout()
 	*/
-	@:require(java1) @:overload @:synchronized public function setSoTimeout(timeout : Int) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function setSoTimeout(timeout : Int) : Void;
 	
 	/**
 	* Retrieve setting for SO_TIMEOUT.  0 returns implies that the
@@ -435,7 +435,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @since   JDK1.1
 	* @see #setSoTimeout(int)
 	*/
-	@:require(java1) @:overload @:synchronized public function getSoTimeout() : Int;
+	@:require(java1) @:overload @:public @:synchronized public function getSoTimeout() : Int;
 	
 	/**
 	* Sets the SO_SNDBUF option to the specified value for this
@@ -466,7 +466,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* negative.
 	* @see #getSendBufferSize()
 	*/
-	@:overload @:synchronized public function setSendBufferSize(size : Int) : Void;
+	@:overload @:public @:synchronized public function setSendBufferSize(size : Int) : Void;
 	
 	/**
 	* Get value of the SO_SNDBUF option for this <tt>DatagramSocket</tt>, that is the
@@ -477,7 +477,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* the underlying protocol, such as an UDP error.
 	* @see #setSendBufferSize
 	*/
-	@:overload @:synchronized public function getSendBufferSize() : Int;
+	@:overload @:public @:synchronized public function getSendBufferSize() : Int;
 	
 	/**
 	* Sets the SO_RCVBUF option to the specified value for this
@@ -507,7 +507,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* negative.
 	* @see #getReceiveBufferSize()
 	*/
-	@:overload @:synchronized public function setReceiveBufferSize(size : Int) : Void;
+	@:overload @:public @:synchronized public function setReceiveBufferSize(size : Int) : Void;
 	
 	/**
 	* Get value of the SO_RCVBUF option for this <tt>DatagramSocket</tt>, that is the
@@ -517,7 +517,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @exception SocketException if there is an error in the underlying protocol, such as an UDP error.
 	* @see #setReceiveBufferSize(int)
 	*/
-	@:overload @:synchronized public function getReceiveBufferSize() : Int;
+	@:overload @:public @:synchronized public function getReceiveBufferSize() : Int;
 	
 	/**
 	* Enable/disable the SO_REUSEADDR socket option.
@@ -553,7 +553,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @see #isBound()
 	* @see #isClosed()
 	*/
-	@:require(java4) @:overload @:synchronized public function setReuseAddress(on : Bool) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function setReuseAddress(on : Bool) : Void;
 	
 	/**
 	* Tests if SO_REUSEADDR is enabled.
@@ -564,7 +564,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @since   1.4
 	* @see #setReuseAddress(boolean)
 	*/
-	@:require(java4) @:overload @:synchronized public function getReuseAddress() : Bool;
+	@:require(java4) @:overload @:public @:synchronized public function getReuseAddress() : Bool;
 	
 	/**
 	* Enable/disable SO_BROADCAST.
@@ -583,7 +583,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @since 1.4
 	* @see #getBroadcast()
 	*/
-	@:require(java4) @:overload @:synchronized public function setBroadcast(on : Bool) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function setBroadcast(on : Bool) : Void;
 	
 	/**
 	* Tests if SO_BROADCAST is enabled.
@@ -593,7 +593,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @since 1.4
 	* @see #setBroadcast(boolean)
 	*/
-	@:require(java4) @:overload @:synchronized public function getBroadcast() : Bool;
+	@:require(java4) @:overload @:public @:synchronized public function getBroadcast() : Bool;
 	
 	/**
 	* Sets traffic class or type-of-service octet in the IP
@@ -632,7 +632,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @since 1.4
 	* @see #getTrafficClass
 	*/
-	@:require(java4) @:overload @:synchronized public function setTrafficClass(tc : Int) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function setTrafficClass(tc : Int) : Void;
 	
 	/**
 	* Gets traffic class or type-of-service in the IP datagram
@@ -650,7 +650,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @since 1.4
 	* @see #setTrafficClass(int)
 	*/
-	@:require(java4) @:overload @:synchronized public function getTrafficClass() : Int;
+	@:require(java4) @:overload @:public @:synchronized public function getTrafficClass() : Int;
 	
 	/**
 	* Closes this datagram socket.
@@ -664,7 +664,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @revised 1.4
 	* @spec JSR-51
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Returns whether the socket is closed or not.
@@ -672,7 +672,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @return true if the socket has been closed
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isClosed() : Bool;
+	@:require(java4) @:overload @:public public function isClosed() : Bool;
 	
 	/**
 	* Returns the unique {@link java.nio.channels.DatagramChannel} object
@@ -688,7 +688,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @since 1.4
 	* @spec JSR-51
 	*/
-	@:require(java4) @:overload public function getChannel() : java.nio.channels.DatagramChannel;
+	@:require(java4) @:overload @:public public function getChannel() : java.nio.channels.DatagramChannel;
 	
 	/**
 	* Sets the datagram socket implementation factory for the
@@ -718,7 +718,7 @@ extern class DatagramSocket implements java.io.Closeable
 	* @see       SecurityManager#checkSetFactory
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:synchronized public static function setDatagramSocketImplFactory(fac : java.net.DatagramSocketImplFactory) : Void;
+	@:require(java3) @:overload @:public @:static @:synchronized public static function setDatagramSocketImplFactory(fac : java.net.DatagramSocketImplFactory) : Void;
 	
 	
 }

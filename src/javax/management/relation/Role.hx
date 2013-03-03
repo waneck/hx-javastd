@@ -36,7 +36,7 @@ extern class Role implements java.io.Serializable
 	*
 	* @exception IllegalArgumentException  if null parameter
 	*/
-	@:overload public function new(roleName : String, roleValue : java.util.List<javax.management.ObjectName>) : Void;
+	@:overload @:public public function new(roleName : String, roleValue : java.util.List<javax.management.ObjectName>) : Void;
 	
 	/**
 	* Retrieves role name.
@@ -45,7 +45,7 @@ extern class Role implements java.io.Serializable
 	*
 	* @see #setRoleName
 	*/
-	@:overload public function getRoleName() : String;
+	@:overload @:public public function getRoleName() : String;
 	
 	/**
 	* Retrieves role value.
@@ -54,7 +54,7 @@ extern class Role implements java.io.Serializable
 	*
 	* @see #setRoleValue
 	*/
-	@:overload public function getRoleValue() : java.util.List<javax.management.ObjectName>;
+	@:overload @:public public function getRoleValue() : java.util.List<javax.management.ObjectName>;
 	
 	/**
 	* Sets role name.
@@ -65,7 +65,7 @@ extern class Role implements java.io.Serializable
 	*
 	* @see #getRoleName
 	*/
-	@:overload public function setRoleName(roleName : String) : Void;
+	@:overload @:public public function setRoleName(roleName : String) : Void;
 	
 	/**
 	* Sets role value.
@@ -77,21 +77,21 @@ extern class Role implements java.io.Serializable
 	*
 	* @see #getRoleValue
 	*/
-	@:overload public function setRoleValue(roleValue : java.util.List<javax.management.ObjectName>) : Void;
+	@:overload @:public public function setRoleValue(roleValue : java.util.List<javax.management.ObjectName>) : Void;
 	
 	/**
 	* Returns a string describing the role.
 	*
 	* @return the description of the role.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Clone the role object.
 	*
 	* @return a Role that is an independent copy of the current Role object.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns a string for the given role value.
@@ -103,7 +103,7 @@ extern class Role implements java.io.Serializable
 	*
 	* @exception IllegalArgumentException  if null parameter
 	*/
-	@:overload public static function roleValueToString(roleValue : java.util.List<javax.management.ObjectName>) : String;
+	@:overload @:public @:static public static function roleValueToString(roleValue : java.util.List<javax.management.ObjectName>) : String;
 	
 	
 }

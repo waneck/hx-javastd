@@ -29,7 +29,7 @@ extern class CertStoreException extends java.security.GeneralSecurityException
 	* Creates a <code>CertStoreException</code> with <code>null</code> as
 	* its detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>CertStoreException</code> with the given detail
@@ -38,7 +38,7 @@ extern class CertStoreException extends java.security.GeneralSecurityException
 	*
 	* @param msg the detail message
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Creates a <code>CertStoreException</code> that wraps the specified
@@ -52,7 +52,7 @@ extern class CertStoreException extends java.security.GeneralSecurityException
 	* {@link #getCause getCause()} method). (A <code>null</code> value is
 	* permitted, and indicates that the cause is nonexistent or unknown.)
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Creates a <code>CertStoreException</code> with the specified detail
@@ -63,7 +63,7 @@ extern class CertStoreException extends java.security.GeneralSecurityException
 	* {@link #getCause getCause()} method). (A <code>null</code> value is
 	* permitted, and indicates that the cause is nonexistent or unknown.)
 	*/
-	@:overload public function new(msg : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(msg : String, cause : java.lang.Throwable) : Void;
 	
 	
 }

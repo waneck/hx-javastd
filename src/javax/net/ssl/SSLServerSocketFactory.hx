@@ -37,7 +37,7 @@ package javax.net.ssl;
 	/**
 	* Constructor is used only by subclasses.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the default SSL server socket factory.
@@ -55,7 +55,7 @@ package javax.net.ssl;
 	* @return the default <code>ServerSocketFactory</code>
 	* @see SSLContext#getDefault
 	*/
-	@:overload @:synchronized public static function getDefault() : javax.net.ServerSocketFactory;
+	@:overload @:public @:static @:synchronized public static function getDefault() : javax.net.ServerSocketFactory;
 	
 	/**
 	* Returns the list of cipher suites which are enabled by default.
@@ -67,7 +67,7 @@ package javax.net.ssl;
 	* @see #getSupportedCipherSuites()
 	* @return array of the cipher suites enabled by default
 	*/
-	@:overload @:abstract public function getDefaultCipherSuites() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getDefaultCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Returns the names of the cipher suites which could be enabled for use
@@ -80,23 +80,23 @@ package javax.net.ssl;
 	* @return an array of cipher suite names
 	* @see #getDefaultCipherSuites()
 	*/
-	@:overload @:abstract public function getSupportedCipherSuites() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getSupportedCipherSuites() : java.NativeArray<String>;
 	
 	
 }
 @:internal extern class DefaultSSLServerSocketFactory extends javax.net.ssl.SSLServerSocketFactory
 {
-	@:overload public function createServerSocket() : java.net.ServerSocket;
+	@:overload @:public override public function createServerSocket() : java.net.ServerSocket;
 	
-	@:overload public function createServerSocket(port : Int) : java.net.ServerSocket;
+	@:overload @:public override public function createServerSocket(port : Int) : java.net.ServerSocket;
 	
-	@:overload public function createServerSocket(port : Int, backlog : Int) : java.net.ServerSocket;
+	@:overload @:public override public function createServerSocket(port : Int, backlog : Int) : java.net.ServerSocket;
 	
-	@:overload public function createServerSocket(port : Int, backlog : Int, ifAddress : java.net.InetAddress) : java.net.ServerSocket;
+	@:overload @:public override public function createServerSocket(port : Int, backlog : Int, ifAddress : java.net.InetAddress) : java.net.ServerSocket;
 	
-	@:overload override public function getDefaultCipherSuites() : java.NativeArray<String>;
+	@:overload @:public override public function getDefaultCipherSuites() : java.NativeArray<String>;
 	
-	@:overload override public function getSupportedCipherSuites() : java.NativeArray<String>;
+	@:overload @:public override public function getSupportedCipherSuites() : java.NativeArray<String>;
 	
 	
 }

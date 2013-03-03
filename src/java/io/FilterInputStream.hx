@@ -45,7 +45,7 @@ package java.io;
 	/**
 	* The input stream to be filtered.
 	*/
-	//@:volatile private var _in : java.io.InputStream;
+	//@:protected @:volatile private var _in : java.io.InputStream;
 	
 	/**
 	* Creates a <code>FilterInputStream</code>
@@ -56,7 +56,7 @@ package java.io;
 	* @param   in   the underlying input stream, or <code>null</code> if
 	*          this instance is to be created without an underlying stream.
 	*/
-	@:overload private function new(_in : java.io.InputStream) : Void;
+	@:overload @:protected private function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Reads the next byte of data from this input stream. The value
@@ -75,7 +75,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads up to <code>byte.length</code> bytes of data from this
@@ -97,7 +97,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterInputStream#read(byte[], int, int)
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Reads up to <code>len</code> bytes of data from this input stream
@@ -121,7 +121,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips over and discards <code>n</code> bytes of data from the
@@ -137,7 +137,7 @@ package java.io;
 	* @exception  IOException  if the stream does not support seek,
 	*                          or if some other I/O error occurs.
 	*/
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns an estimate of the number of bytes that can be read (or
@@ -152,7 +152,7 @@ package java.io;
 	*             over) from this input stream without blocking.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	/**
 	* Closes this input stream and releases any system resources
@@ -163,7 +163,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Marks the current position in this input stream. A subsequent
@@ -181,7 +181,7 @@ package java.io;
 	* @see     java.io.FilterInputStream#in
 	* @see     java.io.FilterInputStream#reset()
 	*/
-	@:overload @:synchronized override public function mark(readlimit : Int) : Void;
+	@:overload @:public @:synchronized override public function mark(readlimit : Int) : Void;
 	
 	/**
 	* Repositions this stream to the position at the time the
@@ -204,7 +204,7 @@ package java.io;
 	* @see        java.io.FilterInputStream#in
 	* @see        java.io.FilterInputStream#mark(int)
 	*/
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
 	/**
 	* Tests if this input stream supports the <code>mark</code>
@@ -219,7 +219,7 @@ package java.io;
 	* @see     java.io.InputStream#mark(int)
 	* @see     java.io.InputStream#reset()
 	*/
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	
 }

@@ -32,7 +32,7 @@ extern class DHParameterSpec implements java.security.spec.AlgorithmParameterSpe
 	* @param p the prime modulus
 	* @param g the base generator
 	*/
-	@:overload public function new(p : java.math.BigInteger, g : java.math.BigInteger) : Void;
+	@:overload @:public public function new(p : java.math.BigInteger, g : java.math.BigInteger) : Void;
 	
 	/**
 	* Constructs a parameter set for Diffie-Hellman, using a prime modulus
@@ -44,21 +44,21 @@ extern class DHParameterSpec implements java.security.spec.AlgorithmParameterSpe
 	* @param g the base generator
 	* @param l the size in bits of the random exponent (private value)
 	*/
-	@:overload public function new(p : java.math.BigInteger, g : java.math.BigInteger, l : Int) : Void;
+	@:overload @:public public function new(p : java.math.BigInteger, g : java.math.BigInteger, l : Int) : Void;
 	
 	/**
 	* Returns the prime modulus <code>p</code>.
 	*
 	* @return the prime modulus <code>p</code>
 	*/
-	@:overload public function getP() : java.math.BigInteger;
+	@:overload @:public public function getP() : java.math.BigInteger;
 	
 	/**
 	* Returns the base generator <code>g</code>.
 	*
 	* @return the base generator <code>g</code>
 	*/
-	@:overload public function getG() : java.math.BigInteger;
+	@:overload @:public public function getG() : java.math.BigInteger;
 	
 	/**
 	* Returns the size in bits, <code>l</code>, of the random exponent
@@ -67,7 +67,7 @@ extern class DHParameterSpec implements java.security.spec.AlgorithmParameterSpe
 	* @return the size in bits, <code>l</code>, of the random exponent
 	* (private value), or 0 if this size has not been set
 	*/
-	@:overload public function getL() : Int;
+	@:overload @:public public function getL() : Int;
 	
 	
 }

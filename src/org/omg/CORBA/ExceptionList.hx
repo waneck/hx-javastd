@@ -57,7 +57,7 @@ package org.omg.CORBA;
 	* @return          the     number of <code>TypeCode</code> objects in this
 	* <code>ExceptionList</code> object
 	*/
-	@:overload @:abstract public function count() : Int;
+	@:overload @:public @:abstract public function count() : Int;
 	
 	/**
 	* Adds a <code>TypeCode</code> object describing an exception
@@ -65,7 +65,7 @@ package org.omg.CORBA;
 	*
 	* @param exc                       the <code>TypeCode</code> object to be added
 	*/
-	@:overload @:abstract public function add(exc : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:public @:abstract public function add(exc : org.omg.CORBA.TypeCode) : Void;
 	
 	/**
 	* Returns the <code>TypeCode</code> object at the given index.  The first
@@ -80,7 +80,7 @@ package org.omg.CORBA;
 	*                          or equal to the number of <code>TypeCode</code> objects
 	*                in this <code>ExceptionList</code> object
 	*/
-	@:overload @:abstract public function item(index : Int) : org.omg.CORBA.TypeCode;
+	@:overload @:public @:abstract public function item(index : Int) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Removes the <code>TypeCode</code> object at the given index.
@@ -97,7 +97,7 @@ package org.omg.CORBA;
 	*                          or equal to the number of <code>TypeCode</code> objects
 	*                in this <code>ExceptionList</code> object
 	*/
-	@:overload @:abstract public function remove(index : Int) : Void;
+	@:overload @:public @:abstract public function remove(index : Int) : Void;
 	
 	
 }

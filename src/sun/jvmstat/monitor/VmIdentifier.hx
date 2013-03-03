@@ -132,7 +132,7 @@ package sun.jvmstat.monitor;
 	* @throws URISyntaxException Thrown when the uriString or its canonical
 	*                            form is poorly formed.
 	*/
-	@:overload public function new(uriString : String) : Void;
+	@:overload @:public public function new(uriString : String) : Void;
 	
 	/**
 	* Create a VmIdentifier instance from a URI object.
@@ -142,7 +142,7 @@ package sun.jvmstat.monitor;
 	* @throws URISyntaxException Thrown if the URI is missing some
 	*                            required component.
 	*/
-	@:overload public function new(uri : java.net.URI) : Void;
+	@:overload @:public public function new(uri : java.net.URI) : Void;
 	
 	/**
 	* Return the corresponding HostIdentifier for this VmIdentifier.
@@ -172,7 +172,7 @@ package sun.jvmstat.monitor;
 	*                            This exception may get encapsulated into
 	*                            a MonitorException in a future version.
 	*/
-	@:overload public function getHostIdentifier() : sun.jvmstat.monitor.HostIdentifier;
+	@:overload @:public public function getHostIdentifier() : sun.jvmstat.monitor.HostIdentifier;
 	
 	/**
 	* Return the Scheme, or protocol, portion of this VmIdentifier.
@@ -180,7 +180,7 @@ package sun.jvmstat.monitor;
 	* @return String - the scheme for this VmIdentifier.
 	* @see URI#getScheme()
 	*/
-	@:overload public function getScheme() : String;
+	@:overload @:public public function getScheme() : String;
 	
 	/**
 	* Return the Scheme Specific Part of this VmIdentifier.
@@ -188,7 +188,7 @@ package sun.jvmstat.monitor;
 	* @return String - the Scheme Specific Part for this VmIdentifier.
 	* @see URI#getSchemeSpecificPart()
 	*/
-	@:overload public function getSchemeSpecificPart() : String;
+	@:overload @:public public function getSchemeSpecificPart() : String;
 	
 	/**
 	* Return the UserInfo part of this VmIdentifier.
@@ -196,7 +196,7 @@ package sun.jvmstat.monitor;
 	* @return String - the UserInfo part for this VmIdentifier.
 	* @see URI#getUserInfo()
 	*/
-	@:overload public function getUserInfo() : String;
+	@:overload @:public public function getUserInfo() : String;
 	
 	/**
 	* Return the Host part of this VmIdentifier.
@@ -204,7 +204,7 @@ package sun.jvmstat.monitor;
 	* @return String - the Host part for this VmIdentifier.
 	* @see URI#getHost()
 	*/
-	@:overload public function getHost() : String;
+	@:overload @:public public function getHost() : String;
 	
 	/**
 	* Return the Port part of this VmIdentifier.
@@ -212,7 +212,7 @@ package sun.jvmstat.monitor;
 	* @return int - the Port part for this VmIdentifier.
 	* @see URI#getPort()
 	*/
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
 	/**
 	* Return the Authority part of this VmIdentifier.
@@ -220,7 +220,7 @@ package sun.jvmstat.monitor;
 	* @return String - the Authority part for this VmIdentifier.
 	* @see URI#getAuthority()
 	*/
-	@:overload public function getAuthority() : String;
+	@:overload @:public public function getAuthority() : String;
 	
 	/**
 	* Return the Path part of this VmIdentifier.
@@ -228,7 +228,7 @@ package sun.jvmstat.monitor;
 	* @return String - the Path part for this VmIdentifier.
 	* @see URI#getPath()
 	*/
-	@:overload public function getPath() : String;
+	@:overload @:public public function getPath() : String;
 	
 	/**
 	* Return the Query part of this VmIdentifier.
@@ -236,7 +236,7 @@ package sun.jvmstat.monitor;
 	* @return String - the Query part for this VmIdentifier.
 	* @see URI#getQuery()
 	*/
-	@:overload public function getQuery() : String;
+	@:overload @:public public function getQuery() : String;
 	
 	/**
 	* Return the Fragment part of this VmIdentifier.
@@ -244,7 +244,7 @@ package sun.jvmstat.monitor;
 	* @return String - the Fragment part for this VmIdentifier.
 	* @see URI#getFragment()
 	*/
-	@:overload public function getFragment() : String;
+	@:overload @:public public function getFragment() : String;
 	
 	/**
 	* Return the Local Virtual Machine Identifier for this VmIdentifier.
@@ -253,7 +253,7 @@ package sun.jvmstat.monitor;
 	*
 	* @return int - the lvmid for this VmIdentifier.
 	*/
-	@:overload public function getLocalVmId() : Int;
+	@:overload @:public public function getLocalVmId() : Int;
 	
 	/**
 	* Return the mode indicated in this VmIdentifier.
@@ -261,7 +261,7 @@ package sun.jvmstat.monitor;
 	* @return String - the mode string. If no mode is specified, then "r"
 	*                  is returned. otherwise, the specified mode is returned.
 	*/
-	@:overload public function getMode() : String;
+	@:overload @:public public function getMode() : String;
 	
 	/**
 	* Return the URI associated with the VmIdentifier.
@@ -269,7 +269,7 @@ package sun.jvmstat.monitor;
 	* @return URI - the URI.
 	* @see URI
 	*/
-	@:overload public function getURI() : java.net.URI;
+	@:overload @:public public function getURI() : java.net.URI;
 	
 	/**
 	* Return the hash code for this VmIdentifier. The hash code is
@@ -278,7 +278,7 @@ package sun.jvmstat.monitor;
 	* @return int - the hashcode.
 	* @see URI#hashCode()
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Test for quality with other objects.
@@ -290,7 +290,7 @@ package sun.jvmstat.monitor;
 	*
 	* @see URI#equals(Object)
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Convert to a string representation. Conversion is identical to
@@ -300,7 +300,7 @@ package sun.jvmstat.monitor;
 	*
 	* @see URI#toString()
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

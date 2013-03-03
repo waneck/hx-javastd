@@ -25,49 +25,49 @@ package com.sun.tools.internal.ws.processor.generator;
 */
 extern class GeneratorBase implements com.sun.tools.internal.ws.processor.generator.GeneratorConstants implements com.sun.tools.internal.ws.processor.model.ModelVisitor
 {
-	private var donotOverride : Bool;
+	@:protected private var donotOverride : Bool;
 	
-	private var cm : com.sun.codemodel.internal.JCodeModel;
+	@:protected private var cm : com.sun.codemodel.internal.JCodeModel;
 	
-	private var model(default, null) : com.sun.tools.internal.ws.processor.model.Model;
+	@:protected @:final private var model(default, null) : com.sun.tools.internal.ws.processor.model.Model;
 	
-	private var wsdlLocation(default, null) : String;
+	@:protected @:final private var wsdlLocation(default, null) : String;
 	
-	private var receiver(default, null) : com.sun.tools.internal.ws.wscompile.ErrorReceiver;
+	@:protected @:final private var receiver(default, null) : com.sun.tools.internal.ws.wscompile.ErrorReceiver;
 	
-	private var options(default, null) : com.sun.tools.internal.ws.wscompile.WsimportOptions;
+	@:protected @:final private var options(default, null) : com.sun.tools.internal.ws.wscompile.WsimportOptions;
 	
-	@:overload private function new(model : com.sun.tools.internal.ws.processor.model.Model, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:protected private function new(model : com.sun.tools.internal.ws.processor.model.Model, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload private function doGeneration() : Void;
+	@:overload @:protected private function doGeneration() : Void;
 	
-	@:overload public function visit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
+	@:overload @:public public function visit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
 	
-	@:overload public function visit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
+	@:overload @:public public function visit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
 	
-	@:overload public function visit(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
+	@:overload @:public public function visit(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
 	
-	@:overload public function visit(operation : com.sun.tools.internal.ws.processor.model.Operation) : Void;
+	@:overload @:public public function visit(operation : com.sun.tools.internal.ws.processor.model.Operation) : Void;
 	
-	@:overload public function visit(param : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
+	@:overload @:public public function visit(param : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
 	
-	@:overload public function visit(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
+	@:overload @:public public function visit(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
-	@:overload public function visit(response : com.sun.tools.internal.ws.processor.model.Response) : Void;
+	@:overload @:public public function visit(response : com.sun.tools.internal.ws.processor.model.Response) : Void;
 	
-	@:overload public function visit(request : com.sun.tools.internal.ws.processor.model.Request) : Void;
+	@:overload @:public public function visit(request : com.sun.tools.internal.ws.processor.model.Request) : Void;
 	
-	@:overload public function visit(fault : com.sun.tools.internal.ws.processor.model.Fault) : Void;
+	@:overload @:public public function visit(fault : com.sun.tools.internal.ws.processor.model.Fault) : Void;
 	
-	@:overload public function getJAXWSClassComment() : java.util.List<String>;
+	@:overload @:public public function getJAXWSClassComment() : java.util.List<String>;
 	
-	@:native('getJAXWSClassComment') @:overload public static function _getJAXWSClassComment(targetVersion : String) : java.util.List<String>;
+	@:native('getJAXWSClassComment') @:overload @:public @:static public static function _getJAXWSClassComment(targetVersion : String) : java.util.List<String>;
 	
-	@:overload private function getClass(className : String, type : com.sun.codemodel.internal.ClassType) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:protected private function getClass(className : String, type : com.sun.codemodel.internal.ClassType) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload private function log(msg : String) : Void;
+	@:overload @:protected private function log(msg : String) : Void;
 	
-	@:overload private function writeHandlerConfig(className : String, cls : com.sun.codemodel.internal.JDefinedClass, options : com.sun.tools.internal.ws.wscompile.WsimportOptions) : Void;
+	@:overload @:protected private function writeHandlerConfig(className : String, cls : com.sun.codemodel.internal.JDefinedClass, options : com.sun.tools.internal.ws.wscompile.WsimportOptions) : Void;
 	
 	
 }

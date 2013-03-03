@@ -29,21 +29,21 @@ extern class ResponseContext extends java.util.AbstractMap<String, Dynamic>
 	* @param packet
 	*      The {@link Packet} to wrap.
 	*/
-	@:overload public function new(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function new(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload override public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public override public function containsKey(key : Dynamic) : Bool;
 	
-	@:overload override public function get(key : Dynamic) : Dynamic;
+	@:overload @:public override public function get(key : Dynamic) : Dynamic;
 	
-	@:overload public function put(key : String, value : Dynamic) : Dynamic;
+	@:overload @:public public function put(key : String, value : Dynamic) : Dynamic;
 	
-	@:overload override public function remove(key : Dynamic) : Dynamic;
+	@:overload @:public override public function remove(key : Dynamic) : Dynamic;
 	
-	@:overload override public function putAll(t : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public override public function putAll(t : java.util.Map<String, Dynamic>) : Void;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, Dynamic>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, Dynamic>>;
 	
 	
 }

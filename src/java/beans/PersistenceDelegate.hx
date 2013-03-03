@@ -106,7 +106,7 @@ package java.beans;
 	*
 	* @throws NullPointerException if {@code out} is {@code null}
 	*/
-	@:overload public function writeObject(oldInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:public public function writeObject(oldInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	/**
 	* Returns true if an <em>equivalent</em> copy of <code>oldInstance</code> may be
@@ -127,7 +127,7 @@ package java.beans;
 	* @return True if an equivalent copy of <code>newInstance</code> may be
 	*         created by applying a series of mutations to <code>oldInstance</code>.
 	*/
-	@:overload private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
+	@:overload @:protected private function mutatesTo(oldInstance : Dynamic, newInstance : Dynamic) : Bool;
 	
 	/**
 	* Returns an expression whose value is <code>oldInstance</code>.
@@ -149,7 +149,7 @@ package java.beans;
 	*
 	* @throws NullPointerException if {@code out} is {@code null}
 	*/
-	@:overload @:abstract private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
+	@:overload @:protected @:abstract private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	/**
 	* Produce a series of statements with side effects on <code>newInstance</code>
@@ -189,7 +189,7 @@ package java.beans;
 	*
 	* @throws NullPointerException if {@code out} is {@code null}
 	*/
-	@:overload private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
+	@:overload @:protected private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
 	
 }

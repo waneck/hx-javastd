@@ -28,12 +28,12 @@ extern class PrinterIsAcceptingJobs extends javax.print.attribute.EnumSyntax imp
 	/**
 	* The printer is currently rejecting any jobs sent to it.
 	*/
-	public static var NOT_ACCEPTING_JOBS(default, null) : javax.print.attribute.standard.PrinterIsAcceptingJobs;
+	@:public @:static @:final public static var NOT_ACCEPTING_JOBS(default, null) : javax.print.attribute.standard.PrinterIsAcceptingJobs;
 	
 	/**
 	* The printer is currently acccepting jobs.
 	*/
-	public static var ACCEPTING_JOBS(default, null) : javax.print.attribute.standard.PrinterIsAcceptingJobs;
+	@:public @:static @:final public static var ACCEPTING_JOBS(default, null) : javax.print.attribute.standard.PrinterIsAcceptingJobs;
 	
 	/**
 	* Construct a new printer is accepting jobs enumeration value with the
@@ -41,17 +41,17 @@ extern class PrinterIsAcceptingJobs extends javax.print.attribute.EnumSyntax imp
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class PrinterIsAcceptingJobs.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class PrinterIsAcceptingJobs.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -63,7 +63,7 @@ extern class PrinterIsAcceptingJobs extends javax.print.attribute.EnumSyntax imp
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -74,7 +74,7 @@ extern class PrinterIsAcceptingJobs extends javax.print.attribute.EnumSyntax imp
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

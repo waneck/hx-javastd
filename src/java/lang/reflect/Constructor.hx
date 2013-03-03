@@ -29,13 +29,13 @@ extern class Constructor<T> extends java.lang.reflect.AccessibleObject implement
 	* Returns the {@code Class} object representing the class that declares
 	* the constructor represented by this {@code Constructor} object.
 	*/
-	@:overload public function getDeclaringClass() : Class<T>;
+	@:overload @:public public function getDeclaringClass() : Class<T>;
 	
 	/**
 	* Returns the name of this constructor, as a string.  This is
 	* the binary name of the constructor's declaring class.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the Java language modifiers for the constructor
@@ -44,7 +44,7 @@ extern class Constructor<T> extends java.lang.reflect.AccessibleObject implement
 	*
 	* @see Modifier
 	*/
-	@:overload public function getModifiers() : Int;
+	@:overload @:public public function getModifiers() : Int;
 	
 	/**
 	* Returns an array of {@code TypeVariable} objects that represent the
@@ -61,7 +61,7 @@ extern class Constructor<T> extends java.lang.reflect.AccessibleObject implement
 	*     <cite>The Java&trade; Virtual Machine Specification</cite>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getTypeParameters() : java.NativeArray<java.lang.reflect.TypeVariable<java.lang.reflect.Constructor<T>>>;
+	@:require(java5) @:overload @:public public function getTypeParameters() : java.NativeArray<java.lang.reflect.TypeVariable<java.lang.reflect.Constructor<T>>>;
 	
 	/**
 	* Returns an array of {@code Class} objects that represent the formal
@@ -72,7 +72,7 @@ extern class Constructor<T> extends java.lang.reflect.AccessibleObject implement
 	* @return the parameter types for the constructor this object
 	* represents
 	*/
-	@:overload public function getParameterTypes() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getParameterTypes() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Returns an array of {@code Type} objects that represent the formal
@@ -101,7 +101,7 @@ extern class Constructor<T> extends java.lang.reflect.AccessibleObject implement
 	*     type that cannot be instantiated for any reason
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getGenericParameterTypes() : java.NativeArray<java.lang.reflect.Type>;
+	@:require(java5) @:overload @:public public function getGenericParameterTypes() : java.NativeArray<java.lang.reflect.Type>;
 	
 	/**
 	* Returns an array of {@code Class} objects that represent the types
@@ -112,7 +112,7 @@ extern class Constructor<T> extends java.lang.reflect.AccessibleObject implement
 	* @return the exception types declared as being thrown by the
 	* constructor this object represents
 	*/
-	@:overload public function getExceptionTypes() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getExceptionTypes() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Returns an array of {@code Type} objects that represent the
@@ -136,7 +136,7 @@ extern class Constructor<T> extends java.lang.reflect.AccessibleObject implement
 	*     parameterized type that cannot be instantiated for any reason
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getGenericExceptionTypes() : java.NativeArray<java.lang.reflect.Type>;
+	@:require(java5) @:overload @:public public function getGenericExceptionTypes() : java.NativeArray<java.lang.reflect.Type>;
 	
 	/**
 	* Compares this {@code Constructor} against the specified object.
@@ -144,14 +144,14 @@ extern class Constructor<T> extends java.lang.reflect.AccessibleObject implement
 	* the same if they were declared by the same class and have the
 	* same formal parameter types.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode for this {@code Constructor}. The hashcode is
 	* the same as the hashcode for the underlying constructor's
 	* declaring class name.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string describing this {@code Constructor}.  The string is
@@ -168,7 +168,7 @@ extern class Constructor<T> extends java.lang.reflect.AccessibleObject implement
 	* {@code private}.  Only one of these may appear, or none if the
 	* constructor has default (package) access.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a string describing this {@code Constructor},
@@ -203,7 +203,7 @@ extern class Constructor<T> extends java.lang.reflect.AccessibleObject implement
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function toGenericString() : String;
+	@:require(java5) @:overload @:public public function toGenericString() : String;
 	
 	/**
 	* Uses the constructor represented by this {@code Constructor} object to
@@ -253,7 +253,7 @@ extern class Constructor<T> extends java.lang.reflect.AccessibleObject implement
 	* @exception ExceptionInInitializerError if the initialization provoked
 	*              by this method fails.
 	*/
-	@:overload public function newInstance(initargs : java.NativeArray<Dynamic>) : T;
+	@:overload @:public public function newInstance(initargs : java.NativeArray<Dynamic>) : T;
 	
 	/**
 	* Returns {@code true} if this constructor was declared to take
@@ -264,7 +264,7 @@ extern class Constructor<T> extends java.lang.reflect.AccessibleObject implement
 	* take a variable number of arguments.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isVarArgs() : Bool;
+	@:require(java5) @:overload @:public public function isVarArgs() : Bool;
 	
 	/**
 	* Returns {@code true} if this constructor is a synthetic
@@ -275,18 +275,18 @@ extern class Constructor<T> extends java.lang.reflect.AccessibleObject implement
 	* <cite>The Java&trade; Language Specification</cite>.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isSynthetic() : Bool;
+	@:require(java5) @:overload @:public public function isSynthetic() : Bool;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getAnnotation<T : java.lang.annotation.Annotation>(annotationClass : Class<T>) : T;
+	@:require(java5) @:overload @:public override public function getAnnotation<T : java.lang.annotation.Annotation>(annotationClass : Class<T>) : T;
 	
 	/**
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getDeclaredAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
+	@:require(java5) @:overload @:public override public function getDeclaredAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
 	
 	/**
 	* Returns an array of arrays that represent the annotations on the formal
@@ -304,7 +304,7 @@ extern class Constructor<T> extends java.lang.reflect.AccessibleObject implement
 	*    Constructor object
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getParameterAnnotations() : java.NativeArray<java.NativeArray<java.lang.annotation.Annotation>>;
+	@:require(java5) @:overload @:public public function getParameterAnnotations() : java.NativeArray<java.NativeArray<java.lang.annotation.Annotation>>;
 	
 	
 }

@@ -24,28 +24,28 @@ package com.sun.org.apache.xpath.internal.objects;
 extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject implements com.sun.org.apache.xml.internal.utils.XMLString
 {
 	/** Empty string XString object */
-	public static var EMPTYSTRING(default, null) : com.sun.org.apache.xpath.internal.objects.XString;
+	@:public @:static @:final public static var EMPTYSTRING(default, null) : com.sun.org.apache.xpath.internal.objects.XString;
 	
 	/**
 	* Construct a XString object.  This constructor exists for derived classes.
 	*
 	* @param val String object this will wrap.
 	*/
-	@:overload private function new(val : Dynamic) : Void;
+	@:overload @:protected private function new(val : Dynamic) : Void;
 	
 	/**
 	* Construct a XNodeSet object.
 	*
 	* @param val String object this will wrap.
 	*/
-	@:overload public function new(val : String) : Void;
+	@:overload @:public public function new(val : String) : Void;
 	
 	/**
 	* Tell that this is a CLASS_STRING.
 	*
 	* @return type CLASS_STRING
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public override public function getType() : Int;
 	
 	/**
 	* Given a request type, return the equivalent string.
@@ -53,14 +53,14 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*
 	* @return type string "#STRING"
 	*/
-	@:overload public function getTypeString() : String;
+	@:overload @:public override public function getTypeString() : String;
 	
 	/**
 	* Tell if this object contains a java String object.
 	*
 	* @return true if this XMLString can return a string without creating one.
 	*/
-	@:overload public function hasString() : Bool;
+	@:overload @:public public function hasString() : Bool;
 	
 	/**
 	* Cast result object to a number.
@@ -68,7 +68,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @return 0.0 if this string is null, numeric value of this string
 	* or NaN
 	*/
-	@:overload public function num() : Float;
+	@:overload @:public override public function num() : Float;
 	
 	/**
 	* Convert a string to a double -- Allowed input is in fixed
@@ -77,7 +77,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @return A double value representation of the string, or return Double.NaN
 	* if the string can not be converted.
 	*/
-	@:overload public function toDouble() : Float;
+	@:overload @:public public function toDouble() : Float;
 	
 	/**
 	* Cast result object to a boolean.
@@ -85,21 +85,21 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @return True if the length of this string object is greater
 	* than 0.
 	*/
-	@:overload public function bool() : Bool;
+	@:overload @:public override public function bool() : Bool;
 	
 	/**
 	* Cast result object to a string.
 	*
 	* @return The string this wraps or the empty string if null
 	*/
-	@:overload public function xstr() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public override public function xstr() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Cast result object to a string.
 	*
 	* @return The string this wraps or the empty string if null
 	*/
-	@:overload public function str() : String;
+	@:overload @:public override public function str() : String;
 	
 	/**
 	* Cast result object to a result tree fragment.
@@ -108,7 +108,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*
 	* @return A document fragment with this string as a child node
 	*/
-	@:overload public function rtf(support : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public override public function rtf(support : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Directly call the
@@ -121,7 +121,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function dispatchCharactersEvents(ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public override public function dispatchCharactersEvents(ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Directly call the
@@ -132,7 +132,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function dispatchAsComment(lh : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public public function dispatchAsComment(lh : org.xml.sax.ext.LexicalHandler) : Void;
 	
 	/**
 	* Returns the length of this string.
@@ -140,7 +140,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @return  the length of the sequence of characters represented by this
 	*          object.
 	*/
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
 	/**
 	* Returns the character at the specified index. An index ranges
@@ -155,7 +155,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*             argument is negative or not less than the length of this
 	*             string.
 	*/
-	@:overload public function charAt(index : Int) : java.StdTypes.Char16;
+	@:overload @:public public function charAt(index : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Copies characters from this string into the destination character
@@ -178,7 +178,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*                <code>dst.length</code></ul>
 	* @exception NullPointerException if <code>dst</code> is <code>null</code>
 	*/
-	@:overload public function getChars(srcBegin : Int, srcEnd : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstBegin : Int) : Void;
+	@:overload @:public public function getChars(srcBegin : Int, srcEnd : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstBegin : Int) : Void;
 	
 	/**
 	* Tell if two objects are functionally equal.
@@ -189,7 +189,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload @:public override public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Compares this string to the specified <code>String</code>.
@@ -203,7 +203,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @see     java.lang.String#compareTo(java.lang.String)
 	* @see     java.lang.String#equalsIgnoreCase(java.lang.String)
 	*/
-	@:overload public function equals(obj2 : String) : Bool;
+	@:overload @:public public function equals(obj2 : String) : Bool;
 	
 	/**
 	* Compares this string to the specified object.
@@ -218,7 +218,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @see     java.lang.String#compareTo(java.lang.String)
 	* @see     java.lang.String#equalsIgnoreCase(java.lang.String)
 	*/
-	@:overload public function equals(obj2 : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
+	@:overload @:public public function equals(obj2 : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
 	
 	/**
 	* Compares this string to the specified object.
@@ -233,7 +233,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @see     java.lang.String#compareTo(java.lang.String)
 	* @see     java.lang.String#equalsIgnoreCase(java.lang.String)
 	*/
-	@:overload public function equals(obj2 : Dynamic) : Bool;
+	@:overload @:public public function equals(obj2 : Dynamic) : Bool;
 	
 	/**
 	* Compares this <code>String</code> to another <code>String</code>,
@@ -250,7 +250,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @see     java.lang.Character#toLowerCase(char)
 	* @see java.lang.Character#toUpperCase(char)
 	*/
-	@:overload public function equalsIgnoreCase(anotherString : String) : Bool;
+	@:overload @:public public function equalsIgnoreCase(anotherString : String) : Bool;
 	
 	/**
 	* Compares two strings lexicographically.
@@ -265,7 +265,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @exception java.lang.NullPointerException if <code>anotherString</code>
 	*          is <code>null</code>.
 	*/
-	@:overload public function compareTo(xstr : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
+	@:overload @:public public function compareTo(xstr : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
 	
 	/**
 	* Compares two strings lexicographically, ignoring case considerations.
@@ -285,7 +285,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @see     java.text.Collator#compare(String, String)
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function compareToIgnoreCase(str : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
+	@:require(java2) @:overload @:public public function compareToIgnoreCase(str : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
 	
 	/**
 	* Tests if this string starts with the specified prefix beginning
@@ -306,7 +306,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @exception java.lang.NullPointerException if <code>prefix</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function startsWith(prefix : String, toffset : Int) : Bool;
+	@:overload @:public public function startsWith(prefix : String, toffset : Int) : Bool;
 	
 	/**
 	* Tests if this string starts with the specified prefix.
@@ -322,7 +322,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @exception java.lang.NullPointerException if <code>prefix</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function startsWith(prefix : String) : Bool;
+	@:overload @:public public function startsWith(prefix : String) : Bool;
 	
 	/**
 	* Tests if this string starts with the specified prefix beginning
@@ -343,7 +343,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @exception java.lang.NullPointerException if <code>prefix</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString, toffset : Int) : Bool;
+	@:overload @:public public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString, toffset : Int) : Bool;
 	
 	/**
 	* Tests if this string starts with the specified prefix.
@@ -359,7 +359,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @exception java.lang.NullPointerException if <code>prefix</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
+	@:overload @:public public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
 	
 	/**
 	* Tests if this string ends with the specified suffix.
@@ -374,7 +374,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @exception java.lang.NullPointerException if <code>suffix</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function endsWith(suffix : String) : Bool;
+	@:overload @:public public function endsWith(suffix : String) : Bool;
 	
 	/**
 	* Returns a hashcode for this string. The hashcode for a
@@ -389,7 +389,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*
 	* @return  a hash code value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -408,7 +408,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*          character sequence represented by this object, or
 	*          <code>-1</code> if the character does not occur.
 	*/
-	@:overload public function indexOf(ch : Int) : Int;
+	@:overload @:public public function indexOf(ch : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -438,7 +438,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*          than or equal to <code>fromIndex</code>, or <code>-1</code>
 	*          if the character does not occur.
 	*/
-	@:overload public function indexOf(ch : Int, fromIndex : Int) : Int;
+	@:overload @:public public function indexOf(ch : Int, fromIndex : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the last occurrence of the
@@ -455,7 +455,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*          character sequence represented by this object, or
 	*          <code>-1</code> if the character does not occur.
 	*/
-	@:overload public function lastIndexOf(ch : Int) : Int;
+	@:overload @:public public function lastIndexOf(ch : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the last occurrence of the
@@ -480,7 +480,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*          than or equal to <code>fromIndex</code>, or <code>-1</code>
 	*          if the character does not occur before that point.
 	*/
-	@:overload public function lastIndexOf(ch : Int, fromIndex : Int) : Int;
+	@:overload @:public public function lastIndexOf(ch : Int, fromIndex : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -499,7 +499,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function indexOf(str : String) : Int;
+	@:overload @:public public function indexOf(str : String) : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -518,7 +518,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function indexOf(str : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
+	@:overload @:public public function indexOf(str : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -546,7 +546,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>
 	*/
-	@:overload public function indexOf(str : String, fromIndex : Int) : Int;
+	@:overload @:public public function indexOf(str : String, fromIndex : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the rightmost occurrence
@@ -566,7 +566,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @exception java.lang.NullPointerException  if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function lastIndexOf(str : String) : Int;
+	@:overload @:public public function lastIndexOf(str : String) : Int;
 	
 	/**
 	* Returns the index within this string of the last occurrence of
@@ -588,7 +588,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function lastIndexOf(str : String, fromIndex : Int) : Int;
+	@:overload @:public public function lastIndexOf(str : String, fromIndex : Int) : Int;
 	
 	/**
 	* Returns a new string that is a substring of this string. The
@@ -607,7 +607,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*             <code>beginIndex</code> is negative or larger than the
 	*             length of this <code>String</code> object.
 	*/
-	@:overload public function substring(beginIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function substring(beginIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Returns a new string that is a substring of this string. The
@@ -625,7 +625,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*             <code>beginIndex</code> is larger than
 	*             <code>endIndex</code>.
 	*/
-	@:overload public function substring(beginIndex : Int, endIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function substring(beginIndex : Int, endIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Concatenates the specified string to the end of this string.
@@ -637,7 +637,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload public function concat(str : String) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function concat(str : String) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Converts all of the characters in this <code>String</code> to lower
@@ -648,7 +648,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @see     java.lang.Character#toLowerCase(char)
 	* @see     java.lang.String#toUpperCase(Locale)
 	*/
-	@:overload public function toLowerCase(locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function toLowerCase(locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Converts all of the characters in this <code>String</code> to lower
@@ -660,7 +660,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @see     java.lang.Character#toLowerCase(char)
 	* @see     java.lang.String#toLowerCase(Locale)
 	*/
-	@:overload public function toLowerCase() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function toLowerCase() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Converts all of the characters in this <code>String</code> to upper
@@ -670,7 +670,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @see     java.lang.Character#toUpperCase(char)
 	* @see     java.lang.String#toLowerCase(Locale)
 	*/
-	@:overload public function toUpperCase(locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function toUpperCase(locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Converts all of the characters in this <code>String</code> to upper
@@ -698,14 +698,14 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @see     java.lang.Character#toUpperCase(char)
 	* @see     java.lang.String#toUpperCase(Locale)
 	*/
-	@:overload public function toUpperCase() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function toUpperCase() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Removes white space from both ends of this string.
 	*
 	* @return  this string, with white space removed from the front and end.
 	*/
-	@:overload public function trim() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function trim() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Conditionally trim all leading and trailing whitespace in the specified String.
@@ -721,12 +721,12 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @param   doublePunctuationSpaces    Use double spaces for punctuation?
 	* @return              The trimmed string.
 	*/
-	@:overload public function fixWhiteSpace(trimHead : Bool, trimTail : Bool, doublePunctuationSpaces : Bool) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function fixWhiteSpace(trimHead : Bool, trimTail : Bool, doublePunctuationSpaces : Bool) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* @see com.sun.org.apache.xpath.internal.XPathVisitable#callVisitors(ExpressionOwner, XPathVisitor)
 	*/
-	@:overload override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	
 }

@@ -27,7 +27,7 @@ extern class XMLCipherInput
 	* @param data The <code>CipherData</code> object to read the bytes from
 	* @throws XMLEncryptionException {@link XMLEncryptionException}
 	*/
-	@:overload public function new(data : com.sun.org.apache.xml.internal.security.encryption.CipherData) : Void;
+	@:overload @:public public function new(data : com.sun.org.apache.xml.internal.security.encryption.CipherData) : Void;
 	
 	/**
 	* Constructor for processing encrypted octets
@@ -36,7 +36,7 @@ extern class XMLCipherInput
 	* the bytes from.
 	* @throws XMLEncryptionException {@link XMLEncryptionException}
 	*/
-	@:overload public function new(input : com.sun.org.apache.xml.internal.security.encryption.EncryptedType) : Void;
+	@:overload @:public public function new(input : com.sun.org.apache.xml.internal.security.encryption.EncryptedType) : Void;
 	
 	/**
 	* Dereferences the input and returns it as a single byte array.
@@ -44,7 +44,7 @@ extern class XMLCipherInput
 	* @throws XMLEncryptionException
 	* @return The decripted bytes.
 	*/
-	@:overload public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -66,7 +66,7 @@ extern class CK_SSL3_MASTER_KEY_DERIVE_PARAMS
 	*   CK_SSL3_RANDOM_DATA RandomInfo;
 	* </PRE>
 	*/
-	public var RandomInfo : sun.security.pkcs11.wrapper.CK_SSL3_RANDOM_DATA;
+	@:public public var RandomInfo : sun.security.pkcs11.wrapper.CK_SSL3_RANDOM_DATA;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -74,16 +74,16 @@ extern class CK_SSL3_MASTER_KEY_DERIVE_PARAMS
 	*   CK_VERSION_PTR pVersion;
 	* </PRE>
 	*/
-	public var pVersion : sun.security.pkcs11.wrapper.CK_VERSION;
+	@:public public var pVersion : sun.security.pkcs11.wrapper.CK_VERSION;
 	
-	@:overload public function new(random : sun.security.pkcs11.wrapper.CK_SSL3_RANDOM_DATA, version : sun.security.pkcs11.wrapper.CK_VERSION) : Void;
+	@:overload @:public public function new(random : sun.security.pkcs11.wrapper.CK_SSL3_RANDOM_DATA, version : sun.security.pkcs11.wrapper.CK_VERSION) : Void;
 	
 	/**
 	* Returns the string representation of CK_SSL3_MASTER_KEY_DERIVE_PARAMS.
 	*
 	* @return the string representation of CK_SSL3_MASTER_KEY_DERIVE_PARAMS
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

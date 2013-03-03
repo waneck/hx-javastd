@@ -7,13 +7,13 @@ package org.omg.PortableServer;
 */
 extern class ForwardRequest extends org.omg.CORBA.UserException
 {
-	public var forward_reference : org.omg.CORBA.Object;
+	@:public public var forward_reference : org.omg.CORBA.Object;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_forward_reference : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function new(_forward_reference : org.omg.CORBA.Object) : Void;
 	
-	@:overload public function new($reason : String, _forward_reference : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function new($reason : String, _forward_reference : org.omg.CORBA.Object) : Void;
 	
 	
 }

@@ -27,11 +27,11 @@ package sun.nio.cs.ext;
 */
 extern class JIS_X_0208_Encoder extends sun.nio.cs.ext.DoubleByteEncoder
 {
-	@:overload public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:public public function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload public function new(cs : java.nio.charset.Charset, avg : Single, max : Single) : Void;
+	@:overload @:public public function new(cs : java.nio.charset.Charset, avg : Single, max : Single) : Void;
 	
-	@:overload override private function encodeSingle(inputChar : java.StdTypes.Char16) : Int;
+	@:overload @:protected override private function encodeSingle(inputChar : java.StdTypes.Char16) : Int;
 	
 	/**
 	* These accessors are temporarily supplied while sun.io
@@ -40,9 +40,9 @@ extern class JIS_X_0208_Encoder extends sun.nio.cs.ext.DoubleByteEncoder
 	* two co-existing implementations. When sun.io converters
 	* are made extinct these will be unncessary and should be removed
 	*/
-	@:overload public static function getIndex1() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public @:static public static function getIndex1() : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public static function getIndex2() : java.NativeArray<String>;
+	@:overload @:public @:static public static function getIndex2() : java.NativeArray<String>;
 	
 	
 }

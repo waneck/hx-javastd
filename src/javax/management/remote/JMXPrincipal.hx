@@ -33,7 +33,7 @@ extern class JMXPrincipal implements java.security.Principal implements java.io.
 	* @exception NullPointerException if the <code>name</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Returns the name of this principal.
@@ -42,7 +42,7 @@ extern class JMXPrincipal implements java.security.Principal implements java.io.
 	*
 	* @return the name of this <code>JMXPrincipal</code>.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns a string representation of this <code>JMXPrincipal</code>.
@@ -51,7 +51,7 @@ extern class JMXPrincipal implements java.security.Principal implements java.io.
 	*
 	* @return a string representation of this <code>JMXPrincipal</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares the specified Object with this <code>JMXPrincipal</code>
@@ -67,7 +67,7 @@ extern class JMXPrincipal implements java.security.Principal implements java.io.
 	* @return true if the specified Object is equal to this
 	* <code>JMXPrincipal</code>.
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code for this <code>JMXPrincipal</code>.
@@ -76,7 +76,7 @@ extern class JMXPrincipal implements java.security.Principal implements java.io.
 	*
 	* @return a hash code for this <code>JMXPrincipal</code>.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

@@ -31,9 +31,9 @@ package com.sun.tools.internal.ws.processor.model.jaxb;
 */
 extern interface JAXBTypeVisitor
 {
-	@:overload public function visit(type : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType) : Void;
+	@:overload @:public public function visit(type : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType) : Void;
 	
-	@:overload public function visit(type : com.sun.tools.internal.ws.processor.model.jaxb.RpcLitStructure) : Void;
+	@:overload @:public public function visit(type : com.sun.tools.internal.ws.processor.model.jaxb.RpcLitStructure) : Void;
 	
 	
 }

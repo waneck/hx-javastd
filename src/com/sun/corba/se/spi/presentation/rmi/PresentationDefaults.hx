@@ -25,11 +25,11 @@ package com.sun.corba.se.spi.presentation.rmi;
 */
 extern class PresentationDefaults
 {
-	@:overload @:synchronized public static function getStaticStubFactoryFactory() : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactoryFactory;
+	@:overload @:public @:synchronized @:static public static function getStaticStubFactoryFactory() : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactoryFactory;
 	
-	@:overload public static function getProxyStubFactoryFactory() : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactoryFactory;
+	@:overload @:public @:static public static function getProxyStubFactoryFactory() : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactoryFactory;
 	
-	@:overload public static function makeStaticStubFactory(stubClass : Class<Dynamic>) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory;
+	@:overload @:public @:static public static function makeStaticStubFactory(stubClass : Class<Dynamic>) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory;
 	
 	
 }

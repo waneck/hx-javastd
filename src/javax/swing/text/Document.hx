@@ -186,7 +186,7 @@ extern interface Document
 	*
 	* @return number of characters >= 0
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Registers the given observer to begin receiving notifications
@@ -195,7 +195,7 @@ extern interface Document
 	* @param listener the observer to register
 	* @see Document#removeDocumentListener
 	*/
-	@:overload public function addDocumentListener(listener : javax.swing.event.DocumentListener) : Void;
+	@:overload @:public public function addDocumentListener(listener : javax.swing.event.DocumentListener) : Void;
 	
 	/**
 	* Unregisters the given observer from the notification list
@@ -204,7 +204,7 @@ extern interface Document
 	* @param listener the observer to register
 	* @see Document#addDocumentListener
 	*/
-	@:overload public function removeDocumentListener(listener : javax.swing.event.DocumentListener) : Void;
+	@:overload @:public public function removeDocumentListener(listener : javax.swing.event.DocumentListener) : Void;
 	
 	/**
 	* Registers the given observer to begin receiving notifications
@@ -213,7 +213,7 @@ extern interface Document
 	* @param listener the observer to register
 	* @see javax.swing.event.UndoableEditEvent
 	*/
-	@:overload public function addUndoableEditListener(listener : javax.swing.event.UndoableEditListener) : Void;
+	@:overload @:public public function addUndoableEditListener(listener : javax.swing.event.UndoableEditListener) : Void;
 	
 	/**
 	* Unregisters the given observer from the notification list
@@ -222,7 +222,7 @@ extern interface Document
 	* @param listener the observer to register
 	* @see javax.swing.event.UndoableEditEvent
 	*/
-	@:overload public function removeUndoableEditListener(listener : javax.swing.event.UndoableEditListener) : Void;
+	@:overload @:public public function removeUndoableEditListener(listener : javax.swing.event.UndoableEditListener) : Void;
 	
 	/**
 	* Gets the properties associated with the document.
@@ -231,7 +231,7 @@ extern interface Document
 	* @return the properties
 	* @see #putProperty(Object, Object)
 	*/
-	@:overload public function getProperty(key : Dynamic) : Dynamic;
+	@:overload @:public public function getProperty(key : Dynamic) : Dynamic;
 	
 	/**
 	* Associates a property with the document.  Two standard
@@ -244,7 +244,7 @@ extern interface Document
 	* @param value the property value
 	* @see #getProperty(Object)
 	*/
-	@:overload public function putProperty(key : Dynamic, value : Dynamic) : Void;
+	@:overload @:public public function putProperty(key : Dynamic, value : Dynamic) : Void;
 	
 	/**
 	* Removes a portion of the content of the document.
@@ -287,7 +287,7 @@ extern interface Document
 	* @see javax.swing.event.UndoableEditEvent
 	* @see javax.swing.event.UndoableEditListener
 	*/
-	@:overload public function remove(offs : Int, len : Int) : Void;
+	@:overload @:public public function remove(offs : Int, len : Int) : Void;
 	
 	/**
 	* Inserts a string of content.  This will cause a DocumentEvent
@@ -323,7 +323,7 @@ extern interface Document
 	* @see javax.swing.event.UndoableEditEvent
 	* @see javax.swing.event.UndoableEditListener
 	*/
-	@:overload public function insertString(offset : Int, str : String, a : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function insertString(offset : Int, str : String, a : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Fetches the text contained within the given portion
@@ -337,7 +337,7 @@ extern interface Document
 	*   was not a valid part of the document.  The location in the exception
 	*   is the first bad position encountered.
 	*/
-	@:overload public function getText(offset : Int, length : Int) : String;
+	@:overload @:public public function getText(offset : Int, length : Int) : String;
 	
 	/**
 	* Fetches the text contained within the given portion
@@ -376,7 +376,7 @@ extern interface Document
 	*   was not a valid part of the document.  The location in the exception
 	*   is the first bad position encountered.
 	*/
-	@:overload public function getText(offset : Int, length : Int, txt : javax.swing.text.Segment) : Void;
+	@:overload @:public public function getText(offset : Int, length : Int, txt : javax.swing.text.Segment) : Void;
 	
 	/**
 	* Returns a position that represents the start of the document.  The
@@ -385,7 +385,7 @@ extern interface Document
 	*
 	* @return the position
 	*/
-	@:overload public function getStartPosition() : javax.swing.text.Position;
+	@:overload @:public public function getStartPosition() : javax.swing.text.Position;
 	
 	/**
 	* Returns a position that represents the end of the document.  The
@@ -394,7 +394,7 @@ extern interface Document
 	*
 	* @return the position
 	*/
-	@:overload public function getEndPosition() : javax.swing.text.Position;
+	@:overload @:public public function getEndPosition() : javax.swing.text.Position;
 	
 	/**
 	* This method allows an application to mark a place in
@@ -411,7 +411,7 @@ extern interface Document
 	* @exception BadLocationException  if the given position does not
 	*   represent a valid location in the associated document
 	*/
-	@:overload public function createPosition(offs : Int) : javax.swing.text.Position;
+	@:overload @:public public function createPosition(offs : Int) : javax.swing.text.Position;
 	
 	/**
 	* Returns all of the root elements that are defined.
@@ -432,7 +432,7 @@ extern interface Document
 	*
 	* @return the root element
 	*/
-	@:overload public function getRootElements() : java.NativeArray<javax.swing.text.Element>;
+	@:overload @:public public function getRootElements() : java.NativeArray<javax.swing.text.Element>;
 	
 	/**
 	* Returns the root element that views should be based upon,
@@ -441,7 +441,7 @@ extern interface Document
 	*
 	* @return the root element
 	*/
-	@:overload public function getDefaultRootElement() : javax.swing.text.Element;
+	@:overload @:public public function getDefaultRootElement() : javax.swing.text.Element;
 	
 	/**
 	* Allows the model to be safely rendered in the presence
@@ -453,7 +453,7 @@ extern interface Document
 	*
 	* @param r a <code>Runnable</code> used to render the model
 	*/
-	@:overload public function render(r : java.lang.Runnable) : Void;
+	@:overload @:public public function render(r : java.lang.Runnable) : Void;
 	
 	
 }

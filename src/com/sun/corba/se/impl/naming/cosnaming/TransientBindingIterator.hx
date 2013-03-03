@@ -35,7 +35,7 @@ extern class TransientBindingIterator extends com.sun.corba.se.impl.naming.cosna
 	* @exception Exception a Java exception thrown of the base class cannot
 	* initialize.
 	*/
-	@:overload public function new(orb : org.omg.CORBA.ORB, aTable : java.util.Hashtable<Dynamic, Dynamic>, thePOA : org.omg.PortableServer.POA) : Void;
+	@:overload @:public public function new(orb : org.omg.CORBA.ORB, aTable : java.util.Hashtable<Dynamic, Dynamic>, thePOA : org.omg.PortableServer.POA) : Void;
 	
 	/**
 	* Returns the next binding in the NamingContext. Uses the enumeration
@@ -44,20 +44,20 @@ extern class TransientBindingIterator extends com.sun.corba.se.impl.naming.cosna
 	* @param b The Binding as an out parameter.
 	* @return true if there were more bindings.
 	*/
-	@:overload @:final override public function NextOne(b : org.omg.CosNaming.BindingHolder) : Bool;
+	@:overload @:final @:public override public function NextOne(b : org.omg.CosNaming.BindingHolder) : Bool;
 	
 	/**
 	* Destroys this BindingIterator by disconnecting from the ORB
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA
 	* system exceptions.
 	*/
-	@:overload @:final override public function Destroy() : Void;
+	@:overload @:final @:public override public function Destroy() : Void;
 	
 	/**
 	* Returns the remaining number of elements in the iterator.
 	* @return the remaining number of elements in the iterator.
 	*/
-	@:overload @:final override public function RemainingElements() : Int;
+	@:overload @:public @:final override public function RemainingElements() : Int;
 	
 	
 }

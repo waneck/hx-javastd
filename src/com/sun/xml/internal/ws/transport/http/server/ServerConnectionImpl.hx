@@ -25,59 +25,59 @@ package com.sun.xml.internal.ws.transport.http.server;
 */
 @:internal extern class ServerConnectionImpl extends com.sun.xml.internal.ws.transport.http.WSHTTPConnection implements com.sun.xml.internal.ws.api.server.WebServiceContextDelegate
 {
-	@:overload public function new(adapter : com.sun.xml.internal.ws.transport.http.HttpAdapter, httpExchange : com.sun.net.httpserver.HttpExchange) : Void;
+	@:overload @:public public function new(adapter : com.sun.xml.internal.ws.transport.http.HttpAdapter, httpExchange : com.sun.net.httpserver.HttpExchange) : Void;
 	
-	@:overload override public function getRequestHeaders() : java.util.Map<String, java.util.List<String>>;
+	@:overload @:public override public function getRequestHeaders() : java.util.Map<String, java.util.List<String>>;
 	
-	@:overload override public function getRequestHeader(headerName : String) : String;
+	@:overload @:public override public function getRequestHeader(headerName : String) : String;
 	
-	@:overload override public function setResponseHeaders(headers : java.util.Map<String, java.util.List<String>>) : Void;
+	@:overload @:public override public function setResponseHeaders(headers : java.util.Map<String, java.util.List<String>>) : Void;
 	
-	@:overload override public function getResponseHeaders() : java.util.Map<String, java.util.List<String>>;
+	@:overload @:public override public function getResponseHeaders() : java.util.Map<String, java.util.List<String>>;
 	
-	@:overload override public function setContentTypeResponseHeader(value : String) : Void;
+	@:overload @:public override public function setContentTypeResponseHeader(value : String) : Void;
 	
-	@:overload override public function setStatus(status : Int) : Void;
+	@:overload @:public override public function setStatus(status : Int) : Void;
 	
-	@:overload override public function getStatus() : Int;
+	@:overload @:public override public function getStatus() : Int;
 	
-	@:overload override public function getInput() : java.io.InputStream;
+	@:overload @:public override public function getInput() : java.io.InputStream;
 	
-	@:overload override public function getOutput() : java.io.OutputStream;
+	@:overload @:public override public function getOutput() : java.io.OutputStream;
 	
-	@:overload override public function getWebServiceContextDelegate() : com.sun.xml.internal.ws.api.server.WebServiceContextDelegate;
+	@:overload @:public override public function getWebServiceContextDelegate() : com.sun.xml.internal.ws.api.server.WebServiceContextDelegate;
 	
-	@:overload public function getUserPrincipal(request : com.sun.xml.internal.ws.api.message.Packet) : java.security.Principal;
+	@:overload @:public public function getUserPrincipal(request : com.sun.xml.internal.ws.api.message.Packet) : java.security.Principal;
 	
-	@:overload public function isUserInRole(request : com.sun.xml.internal.ws.api.message.Packet, role : String) : Bool;
+	@:overload @:public public function isUserInRole(request : com.sun.xml.internal.ws.api.message.Packet, role : String) : Bool;
 	
-	@:overload public function getEPRAddress(request : com.sun.xml.internal.ws.api.message.Packet, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : String;
+	@:overload @:public public function getEPRAddress(request : com.sun.xml.internal.ws.api.message.Packet, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : String;
 	
-	@:overload public function getWSDLAddress(request : com.sun.xml.internal.ws.api.message.Packet, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : String;
+	@:overload @:public public function getWSDLAddress(request : com.sun.xml.internal.ws.api.message.Packet, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : String;
 	
-	@:overload override public function isSecure() : Bool;
+	@:overload @:public override public function isSecure() : Bool;
 	
-	@:overload override public function getRequestMethod() : String;
+	@:overload @:public override public function getRequestMethod() : String;
 	
-	@:overload override public function getQueryString() : String;
+	@:overload @:public override public function getQueryString() : String;
 	
-	@:overload override public function getPathInfo() : String;
+	@:overload @:public override public function getPathInfo() : String;
 	
-	@:overload public function getExchange() : com.sun.net.httpserver.HttpExchange;
+	@:overload @:public public function getExchange() : com.sun.net.httpserver.HttpExchange;
 	
-	@:overload override public function getBaseAddress() : String;
+	@:overload @:public override public function getBaseAddress() : String;
 	
-	@:overload override public function getProtocol() : String;
+	@:overload @:public override public function getProtocol() : String;
 	
-	@:overload override public function setContentLengthResponseHeader(value : Int) : Void;
+	@:overload @:public override public function setContentLengthResponseHeader(value : Int) : Void;
 	
-	@:overload override private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
+	@:overload @:protected override private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$transport$http$server$ServerConnectionImpl$LWHSInputStream') @:internal extern class ServerConnectionImpl_LWHSInputStream extends java.io.FilterInputStream
 {
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

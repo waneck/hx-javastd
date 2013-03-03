@@ -23,7 +23,7 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	/**
 	* <p>Constructs a catalog resolver with a default configuration.</p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* <p>Constructs a catalog resolver with the given
@@ -31,7 +31,7 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @param catalogs an ordered array list of absolute URIs
 	*/
-	@:overload public function new(catalogs : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(catalogs : java.NativeArray<String>) : Void;
 	
 	/**
 	* <p>Constructs a catalog resolver with the given
@@ -41,14 +41,14 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	* @param catalogs an ordered array list of absolute URIs
 	* @param preferPublic the prefer public setting
 	*/
-	@:overload public function new(catalogs : java.NativeArray<String>, preferPublic : Bool) : Void;
+	@:overload @:public public function new(catalogs : java.NativeArray<String>, preferPublic : Bool) : Void;
 	
 	/**
 	* <p>Returns the initial list of catalog entry files.</p>
 	*
 	* @return the initial list of catalog entry files
 	*/
-	@:overload @:final @:synchronized public function getCatalogList() : java.NativeArray<String>;
+	@:overload @:public @:final @:synchronized public function getCatalogList() : java.NativeArray<String>;
 	
 	/**
 	* <p>Sets the initial list of catalog entry files.
@@ -59,12 +59,12 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @param catalogs an ordered array list of absolute URIs
 	*/
-	@:overload @:final @:synchronized public function setCatalogList(catalogs : java.NativeArray<String>) : Void;
+	@:overload @:public @:final @:synchronized public function setCatalogList(catalogs : java.NativeArray<String>) : Void;
 	
 	/**
 	* <p>Forces the cache of catalog mappings to be cleared.</p>
 	*/
-	@:overload @:final @:synchronized public function clear() : Void;
+	@:overload @:public @:final @:synchronized public function clear() : Void;
 	
 	/**
 	* <p>Returns the preference for whether system or public
@@ -76,7 +76,7 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @return the prefer public setting
 	*/
-	@:overload @:final public function getPreferPublic() : Bool;
+	@:overload @:public @:final public function getPreferPublic() : Bool;
 	
 	/**
 	* <p>Sets the preference for whether system or public
@@ -86,7 +86,7 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @param preferPublic the prefer public setting
 	*/
-	@:overload @:final public function setPreferPublic(preferPublic : Bool) : Void;
+	@:overload @:public @:final public function setPreferPublic(preferPublic : Bool) : Void;
 	
 	/**
 	* <p>Returns the preference for whether the literal system
@@ -100,7 +100,7 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @see #setUseLiteralSystemId
 	*/
-	@:overload @:final public function getUseLiteralSystemId() : Bool;
+	@:overload @:public @:final public function getUseLiteralSystemId() : Bool;
 	
 	/**
 	* <p>Sets the preference for whether the literal system
@@ -122,7 +122,7 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	* @param useLiteralSystemId the preference for using
 	* literal system identifers for catalog resolution
 	*/
-	@:overload @:final public function setUseLiteralSystemId(useLiteralSystemId : Bool) : Void;
+	@:overload @:public @:final public function setUseLiteralSystemId(useLiteralSystemId : Bool) : Void;
 	
 	/**
 	* <p>Resolves an external entity. If the entity cannot be
@@ -137,7 +137,7 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	* @throws SAXException any SAX exception, possibly wrapping another exception
 	* @throws IOException thrown if some i/o error occurs
 	*/
-	@:overload public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
 	/**
 	* <p>Resolves an external entity. If the entity cannot be
@@ -154,7 +154,7 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	* @throws SAXException any SAX exception, possibly wrapping another exception
 	* @throws IOException thrown if some i/o error occurs
 	*/
-	@:overload public function resolveEntity(name : String, publicId : String, baseURI : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(name : String, publicId : String, baseURI : String, systemId : String) : org.xml.sax.InputSource;
 	
 	/**
 	* <p>Locates an external subset for documents which do not explicitly
@@ -167,7 +167,7 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	* @throws SAXException any SAX exception, possibly wrapping another exception
 	* @throws IOException thrown if some i/o error occurs
 	*/
-	@:overload public function getExternalSubset(name : String, baseURI : String) : org.xml.sax.InputSource;
+	@:overload @:public public function getExternalSubset(name : String, baseURI : String) : org.xml.sax.InputSource;
 	
 	/**
 	* <p>Resolves a resource using the catalog. This method interprets that
@@ -185,7 +185,7 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	* @param baseURI the absolute base URI of the resource being parsed,
 	* or <code>null</code> if there is no base URI
 	*/
-	@:overload public function resolveResource(type : String, namespaceURI : String, publicId : String, systemId : String, baseURI : String) : org.w3c.dom.ls.LSInput;
+	@:overload @:public public function resolveResource(type : String, namespaceURI : String, publicId : String, systemId : String, baseURI : String) : org.w3c.dom.ls.LSInput;
 	
 	/**
 	* <p>Resolves an external entity. If the entity cannot be
@@ -199,7 +199,7 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	* @throws XNIException thrown on general error
 	* @throws IOException thrown if some i/o error occurs
 	*/
-	@:overload public function resolveEntity(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
+	@:overload @:public public function resolveEntity(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
 	
 	/**
 	* <p>Resolves an identifier using the catalog. This method interprets that
@@ -212,7 +212,7 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	* @throws XNIException thrown on general error
 	* @throws IOException thrown if some i/o error occurs
 	*/
-	@:overload public function resolveIdentifier(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : String;
+	@:overload @:public public function resolveIdentifier(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : String;
 	
 	/**
 	* <p>Returns the URI mapping in the catalog for the given
@@ -230,7 +230,7 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	* @throws IOException if an i/o error occurred while reading
 	* the catalog
 	*/
-	@:overload @:final @:synchronized public function resolveSystem(systemId : String) : String;
+	@:overload @:public @:final @:synchronized public function resolveSystem(systemId : String) : String;
 	
 	/**
 	* <p>Returns the URI mapping in the catalog for the given
@@ -247,7 +247,7 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	* @throws IOException if an i/o error occurred while reading
 	* the catalog
 	*/
-	@:overload @:final @:synchronized public function resolvePublic(publicId : String, systemId : String) : String;
+	@:overload @:public @:final @:synchronized public function resolvePublic(publicId : String, systemId : String) : String;
 	
 	/**
 	* <p>Returns the URI mapping in the catalog for the given URI
@@ -267,7 +267,7 @@ extern class XMLCatalogResolver implements com.sun.org.apache.xerces.internal.xn
 	* @throws IOException if an i/o error occurred while reading
 	* the catalog
 	*/
-	@:overload @:final @:synchronized public function resolveURI(uri : String) : String;
+	@:overload @:public @:final @:synchronized public function resolveURI(uri : String) : String;
 	
 	
 }

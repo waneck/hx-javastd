@@ -29,23 +29,23 @@ package sun.security.krb5.internal.crypto;
 */
 extern class Des
 {
-	@:overload @:final public static function set_parity(key : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static @:final public static function set_parity(key : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:final public static function set_parity(key : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:static @:final public static function set_parity(key : haxe.Int64) : haxe.Int64;
 	
-	@:overload @:final public static function bad_key(key : haxe.Int64) : Bool;
+	@:overload @:public @:static @:final public static function bad_key(key : haxe.Int64) : Bool;
 	
-	@:overload @:final public static function bad_key(key : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public @:static @:final public static function bad_key(key : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
-	@:overload public static function octet2long(input : java.NativeArray<java.StdTypes.Int8>) : haxe.Int64;
+	@:overload @:public @:static public static function octet2long(input : java.NativeArray<java.StdTypes.Int8>) : haxe.Int64;
 	
-	@:overload public static function octet2long(input : java.NativeArray<java.StdTypes.Int8>, offset : Int) : haxe.Int64;
+	@:overload @:public @:static public static function octet2long(input : java.NativeArray<java.StdTypes.Int8>, offset : Int) : haxe.Int64;
 	
-	@:overload public static function long2octet(input : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function long2octet(input : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function long2octet(input : haxe.Int64, output : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:static public static function long2octet(input : haxe.Int64, output : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public static function long2octet(input : haxe.Int64, output : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Void;
+	@:overload @:public @:static public static function long2octet(input : haxe.Int64, output : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Void;
 	
 	/**
 	* Creates a DES cipher in Electronic Codebook mode, with no padding.
@@ -56,7 +56,7 @@ extern class Des
 	*
 	* @created by Yanni Zhang, Dec 6 99.
 	*/
-	@:overload public static function cbc_encrypt(input : java.NativeArray<java.StdTypes.Int8>, output : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, encrypt : Bool) : Void;
+	@:overload @:public @:static public static function cbc_encrypt(input : java.NativeArray<java.StdTypes.Int8>, output : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, encrypt : Bool) : Void;
 	
 	/**
 	* Generates DES key from the password.
@@ -65,7 +65,7 @@ extern class Des
 	*
 	* @modified by Yanni Zhang, Dec 6, 99
 	*/
-	@:overload public static function char_to_key(passwdChars : java.NativeArray<java.StdTypes.Char16>) : haxe.Int64;
+	@:overload @:public @:static public static function char_to_key(passwdChars : java.NativeArray<java.StdTypes.Char16>) : haxe.Int64;
 	
 	/**
 	* Encrypts the message blocks using DES CBC and output the
@@ -77,9 +77,9 @@ extern class Des
 	*
 	* @created by Yanni Zhang, Dec 6, 99.
 	*/
-	@:overload public static function des_cksum(ivec : java.NativeArray<java.StdTypes.Int8>, msg : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function des_cksum(ivec : java.NativeArray<java.StdTypes.Int8>, msg : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function string_to_key_bytes(passwdChars : java.NativeArray<java.StdTypes.Char16>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function string_to_key_bytes(passwdChars : java.NativeArray<java.StdTypes.Char16>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

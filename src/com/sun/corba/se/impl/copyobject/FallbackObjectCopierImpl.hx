@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.copyobject;
 */
 extern class FallbackObjectCopierImpl implements com.sun.corba.se.spi.copyobject.ObjectCopier
 {
-	@:overload public function new(first : com.sun.corba.se.spi.copyobject.ObjectCopier, second : com.sun.corba.se.spi.copyobject.ObjectCopier) : Void;
+	@:overload @:public public function new(first : com.sun.corba.se.spi.copyobject.ObjectCopier, second : com.sun.corba.se.spi.copyobject.ObjectCopier) : Void;
 	
-	@:overload public function copy(src : Dynamic) : Dynamic;
+	@:overload @:public public function copy(src : Dynamic) : Dynamic;
 	
 	
 }

@@ -31,13 +31,13 @@ package sun.security.pkcs11.wrapper;
 */
 @:require(java6) extern class CK_TLS_PRF_PARAMS
 {
-	public var pSeed : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var pSeed : java.NativeArray<java.StdTypes.Int8>;
 	
-	public var pLabel : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var pLabel : java.NativeArray<java.StdTypes.Int8>;
 	
-	public var pOutput : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var pOutput : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function new(pSeed : java.NativeArray<java.StdTypes.Int8>, pLabel : java.NativeArray<java.StdTypes.Int8>, pOutput : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(pSeed : java.NativeArray<java.StdTypes.Int8>, pLabel : java.NativeArray<java.StdTypes.Int8>, pOutput : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

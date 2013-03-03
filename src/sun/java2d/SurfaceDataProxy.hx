@@ -25,13 +25,13 @@ package sun.java2d;
 */
 extern class SurfaceDataProxy implements sun.awt.DisplayChangedListener implements sun.awt.image.SurfaceManager.SurfaceManager_FlushableCacheData
 {
-	@:overload public static function isCachingAllowed() : Bool;
+	@:overload @:public @:static public static function isCachingAllowed() : Bool;
 	
 	/**
 	* Determine if an alternate form for the srcData is needed
 	* and appropriate from the given operational parameters.
 	*/
-	@:overload @:abstract public function isSupportedOperation(srcData : sun.java2d.SurfaceData, txtype : Int, comp : sun.java2d.loops.CompositeType, bgColor : java.awt.Color) : Bool;
+	@:overload @:public @:abstract public function isSupportedOperation(srcData : sun.java2d.SurfaceData, txtype : Int, comp : sun.java2d.loops.CompositeType, bgColor : java.awt.Color) : Bool;
 	
 	/**
 	* Construct an alternate form of the given SurfaceData.
@@ -44,7 +44,7 @@ extern class SurfaceDataProxy implements sun.awt.DisplayChangedListener implemen
 	* method will be called to track when to attempt another
 	* revalidation.
 	*/
-	@:overload @:abstract public function validateSurfaceData(srcData : sun.java2d.SurfaceData, cachedData : sun.java2d.SurfaceData, w : Int, h : Int) : sun.java2d.SurfaceData;
+	@:overload @:public @:abstract public function validateSurfaceData(srcData : sun.java2d.SurfaceData, cachedData : sun.java2d.SurfaceData, w : Int, h : Int) : sun.java2d.SurfaceData;
 	
 	/**
 	* If the subclass is unable to validate or create a cached
@@ -56,7 +56,7 @@ extern class SurfaceDataProxy implements sun.awt.DisplayChangedListener implemen
 	* memory conditions.  The default implementation just waits
 	* another "threshold" number of accesses before trying again.
 	*/
-	@:overload public function getRetryTracker(srcData : sun.java2d.SurfaceData) : sun.java2d.StateTracker;
+	@:overload @:public public function getRetryTracker(srcData : sun.java2d.SurfaceData) : sun.java2d.StateTracker;
 	
 	/**
 	* This instance is for cases where a caching implementation
@@ -68,7 +68,7 @@ extern class SurfaceDataProxy implements sun.awt.DisplayChangedListener implemen
 	* This class optimally implements NOP variants of all necessary
 	* methods to avoid caching with a minimum of fuss.
 	*/
-	public static var UNCACHED : sun.java2d.SurfaceDataProxy;
+	@:public @:static public static var UNCACHED : sun.java2d.SurfaceDataProxy;
 	
 	/**
 	* Create a SurfaceData proxy manager that attempts to create
@@ -76,7 +76,7 @@ extern class SurfaceDataProxy implements sun.awt.DisplayChangedListener implemen
 	* the default threshold number of attempts to copy from the
 	* STABLE source.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a SurfaceData proxy manager that attempts to create
@@ -84,21 +84,21 @@ extern class SurfaceDataProxy implements sun.awt.DisplayChangedListener implemen
 	* the specified threshold number of attempts to copy from
 	* the STABLE source.
 	*/
-	@:overload public function new(threshold : Int) : Void;
+	@:overload @:public public function new(threshold : Int) : Void;
 	
 	/**
 	* Returns true iff this SurfaceData proxy is still the best
 	* way to control caching of the given source on the given
 	* destination.
 	*/
-	@:overload public function isValid() : Bool;
+	@:overload @:public public function isValid() : Bool;
 	
 	/**
 	* Sets the valid state to false so that the next time this
 	* proxy is fetched to generate a replacement SurfaceData,
 	* the code in SurfaceData knows to replace the proxy first.
 	*/
-	@:overload public function invalidate() : Void;
+	@:overload @:public public function invalidate() : Void;
 	
 	/**
 	* Flush all cached resources as per the FlushableCacheData interface.
@@ -109,38 +109,38 @@ extern class SurfaceDataProxy implements sun.awt.DisplayChangedListener implemen
 	* Returns a boolean that indicates if the cached object is
 	* no longer needed and should be removed from the cache.
 	*/
-	@:overload public function flush(deaccelerated : Bool) : Bool;
+	@:overload @:public public function flush(deaccelerated : Bool) : Bool;
 	
 	/**
 	* Actively flushes (drops and invalidates) the cached surface
 	* so that it can be reclaimed quickly.
 	*/
-	@:overload @:synchronized public function flush() : Void;
+	@:overload @:public @:synchronized public function flush() : Void;
 	
 	/**
 	* Returns true iff this SurfaceData proxy is still valid
 	* and if it has a currently cached replacement that is also
 	* valid and current.
 	*/
-	@:overload public function isAccelerated() : Bool;
+	@:overload @:public public function isAccelerated() : Bool;
 	
 	/**
 	* This method should be called from subclasses which create
 	* cached SurfaceData objects that depend on the current
 	* properties of the display.
 	*/
-	@:overload private function activateDisplayListener() : Void;
+	@:overload @:protected private function activateDisplayListener() : Void;
 	
 	/**
 	* Invoked when the display mode has changed.
 	* This method will invalidate and drop the internal cachedSD object.
 	*/
-	@:overload public function displayChanged() : Void;
+	@:overload @:public public function displayChanged() : Void;
 	
 	/**
 	* Invoked when the palette has changed.
 	*/
-	@:overload public function paletteChanged() : Void;
+	@:overload @:public public function paletteChanged() : Void;
 	
 	/**
 	* This method attempts to replace the srcData with a cached version.
@@ -170,7 +170,7 @@ extern class SurfaceDataProxy implements sun.awt.DisplayChangedListener implemen
 	*      the cached copy is stable.
 	* </ol>
 	*/
-	@:overload public function replaceData(srcData : sun.java2d.SurfaceData, txtype : Int, comp : sun.java2d.loops.CompositeType, bgColor : java.awt.Color) : sun.java2d.SurfaceData;
+	@:overload @:public public function replaceData(srcData : sun.java2d.SurfaceData, txtype : Int, comp : sun.java2d.loops.CompositeType, bgColor : java.awt.Color) : sun.java2d.SurfaceData;
 	
 	/**
 	* This is the default implementation for updating the cached
@@ -180,7 +180,7 @@ extern class SurfaceDataProxy implements sun.awt.DisplayChangedListener implemen
 	* A subclass can override this implementation if a more complex
 	* operation is required to update its cached copies.
 	*/
-	@:overload public function updateSurfaceData(srcData : sun.java2d.SurfaceData, dstData : sun.java2d.SurfaceData, w : Int, h : Int) : Void;
+	@:overload @:public public function updateSurfaceData(srcData : sun.java2d.SurfaceData, dstData : sun.java2d.SurfaceData, w : Int, h : Int) : Void;
 	
 	/**
 	* This is an alternate implementation for updating the cached
@@ -192,15 +192,15 @@ extern class SurfaceDataProxy implements sun.awt.DisplayChangedListener implemen
 	* and call this implementation instead if it wants to use color
 	* keying for bitmask images.
 	*/
-	@:overload public function updateSurfaceDataBg(srcData : sun.java2d.SurfaceData, dstData : sun.java2d.SurfaceData, w : Int, h : Int, bgColor : java.awt.Color) : Void;
+	@:overload @:public public function updateSurfaceDataBg(srcData : sun.java2d.SurfaceData, dstData : sun.java2d.SurfaceData, w : Int, h : Int, bgColor : java.awt.Color) : Void;
 	
 	
 }
 @:native('sun$java2d$SurfaceDataProxy$CountdownTracker') extern class SurfaceDataProxy_CountdownTracker implements sun.java2d.StateTracker
 {
-	@:overload public function new(threshold : Int) : Void;
+	@:overload @:public public function new(threshold : Int) : Void;
 	
-	@:overload @:synchronized public function isCurrent() : Bool;
+	@:overload @:public @:synchronized public function isCurrent() : Bool;
 	
 	
 }

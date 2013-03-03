@@ -25,17 +25,17 @@ package com.sun.xml.internal.ws.encoding;
 */
 extern class StreamSOAPCodec implements com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec implements com.sun.xml.internal.ws.encoding.RootOnlyCodec
 {
-	@:overload public function getStaticContentType(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public public function getStaticContentType(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload @:abstract private function getContentType(soapAction : String) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:protected @:abstract private function getContentType(soapAction : String) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload @:abstract private function getExpectedContentTypes() : java.util.List<String>;
+	@:overload @:protected @:abstract private function getExpectedContentTypes() : java.util.List<String>;
 	
-	@:overload public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	/**
 	* Decodes a message from {@link XMLStreamReader} that points to
@@ -44,7 +44,7 @@ extern class StreamSOAPCodec implements com.sun.xml.internal.ws.api.pipe.StreamS
 	* @param reader
 	*      can point to the start document or the start element.
 	*/
-	@:overload @:final public function decode(reader : javax.xml.stream.XMLStreamReader) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:final public function decode(reader : javax.xml.stream.XMLStreamReader) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Decodes a message from {@link XMLStreamReader} that points to
@@ -57,22 +57,22 @@ extern class StreamSOAPCodec implements com.sun.xml.internal.ws.api.pipe.StreamS
 	*      so that this codec can be used as a part of a biggre codec
 	*      (like MIME multipart codec.)
 	*/
-	@:overload @:final public function decode(reader : javax.xml.stream.XMLStreamReader, attachmentSet : com.sun.xml.internal.ws.api.message.AttachmentSet) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:final public function decode(reader : javax.xml.stream.XMLStreamReader, attachmentSet : com.sun.xml.internal.ws.api.message.AttachmentSet) : com.sun.xml.internal.ws.api.message.Message;
 	
-	@:overload public function decode(_in : java.nio.channels.ReadableByteChannel, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function decode(_in : java.nio.channels.ReadableByteChannel, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload @:final public function copy() : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec;
+	@:overload @:public @:final public function copy() : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec;
 	
-	@:overload @:abstract private function createHeader(reader : javax.xml.stream.XMLStreamReader, mark : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.message.stream.StreamHeader;
+	@:overload @:protected @:abstract private function createHeader(reader : javax.xml.stream.XMLStreamReader, mark : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.message.stream.StreamHeader;
 	
-	@:overload public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet, att : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
+	@:overload @:public public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet, att : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
 	
-	@:overload public function decode(_in : java.nio.channels.ReadableByteChannel, contentType : String, response : com.sun.xml.internal.ws.api.message.Packet, att : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
+	@:overload @:public public function decode(_in : java.nio.channels.ReadableByteChannel, contentType : String, response : com.sun.xml.internal.ws.api.message.Packet, att : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
 	
 	/**
 	* Creates a new {@link StreamSOAPCodec} instance.
 	*/
-	@:overload public static function create(version : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec;
+	@:overload @:public @:static public static function create(version : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec;
 	
 	/**
 	* Get the MIME type associated with this Codec.
@@ -87,7 +87,7 @@ extern class StreamSOAPCodec implements com.sun.xml.internal.ws.api.pipe.StreamS
 	*      null if the MIME type can't be determined by the <code>Codec</code>
 	*      implementation. Otherwise the MIME type is returned.
 	*/
-	@:overload public function getMimeType() : String;
+	@:overload @:public @:public public function getMimeType() : String;
 	
 	
 }

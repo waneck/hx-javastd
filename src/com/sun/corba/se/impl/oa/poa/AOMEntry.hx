@@ -25,41 +25,41 @@ package com.sun.corba.se.impl.oa.poa;
 */
 extern class AOMEntry extends com.sun.corba.se.spi.orbutil.fsm.FSMImpl
 {
-	public static var INVALID(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
+	@:public @:static @:final public static var INVALID(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
 	
-	public static var INCARN(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
+	@:public @:static @:final public static var INCARN(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
 	
-	public static var VALID(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
+	@:public @:static @:final public static var VALID(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
 	
-	public static var ETHP(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
+	@:public @:static @:final public static var ETHP(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
 	
-	public static var ETH(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
+	@:public @:static @:final public static var ETH(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
 	
-	public static var DESTROYED(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
+	@:public @:static @:final public static var DESTROYED(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
 	
-	@:overload public function new(poa : com.sun.corba.se.impl.oa.poa.POAImpl) : Void;
+	@:overload @:public public function new(poa : com.sun.corba.se.impl.oa.poa.POAImpl) : Void;
 	
-	@:overload public function startEtherealize(etherealizer : java.lang.Thread) : Void;
+	@:overload @:public public function startEtherealize(etherealizer : java.lang.Thread) : Void;
 	
-	@:overload public function etherealizeComplete() : Void;
+	@:overload @:public public function etherealizeComplete() : Void;
 	
-	@:overload public function incarnateComplete() : Void;
+	@:overload @:public public function incarnateComplete() : Void;
 	
-	@:overload public function incarnateFailure() : Void;
+	@:overload @:public public function incarnateFailure() : Void;
 	
-	@:overload public function activateObject() : Void;
+	@:overload @:public public function activateObject() : Void;
 	
-	@:overload public function enter() : Void;
+	@:overload @:public public function enter() : Void;
 	
-	@:overload public function exit() : Void;
+	@:overload @:public public function exit() : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$oa$poa$AOMEntry$CounterGuard') @:internal extern class AOMEntry_CounterGuard extends com.sun.corba.se.spi.orbutil.fsm.GuardBase
 {
-	@:overload public function new(value : Int) : Void;
+	@:overload @:public public function new(value : Int) : Void;
 	
-	@:overload public function evaluate(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : com.sun.corba.se.spi.orbutil.fsm.Guard.Guard_Result;
+	@:overload @:public override public function evaluate(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : com.sun.corba.se.spi.orbutil.fsm.Guard.Guard_Result;
 	
 	
 }

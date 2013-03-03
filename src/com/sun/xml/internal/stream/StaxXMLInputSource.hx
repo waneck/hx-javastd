@@ -26,20 +26,20 @@ package com.sun.xml.internal.stream;
 extern class StaxXMLInputSource
 {
 	/** Creates a new instance of StaxXMLInputSource */
-	@:overload public function new(streamReader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function new(streamReader : javax.xml.stream.XMLStreamReader) : Void;
 	
 	/** Creates a new instance of StaxXMLInputSource */
-	@:overload public function new(eventReader : javax.xml.stream.XMLEventReader) : Void;
+	@:overload @:public public function new(eventReader : javax.xml.stream.XMLEventReader) : Void;
 	
-	@:overload public function new(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public public function new(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
-	@:overload public function getXMLStreamReader() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public public function getXMLStreamReader() : javax.xml.stream.XMLStreamReader;
 	
-	@:overload public function getXMLEventReader() : javax.xml.stream.XMLEventReader;
+	@:overload @:public public function getXMLEventReader() : javax.xml.stream.XMLEventReader;
 	
-	@:overload public function getXMLInputSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
+	@:overload @:public public function getXMLInputSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
 	
-	@:overload public function hasXMLStreamOrXMLEventReader() : Bool;
+	@:overload @:public public function hasXMLStreamOrXMLEventReader() : Bool;
 	
 	
 }

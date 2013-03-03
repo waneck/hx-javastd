@@ -28,7 +28,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	/**
 	* default constructor for DefaultEditorKit
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Gets the MIME type of the data that this
@@ -37,7 +37,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	*
 	* @return the type
 	*/
-	@:overload override public function getContentType() : String;
+	@:overload @:public override public function getContentType() : String;
 	
 	/**
 	* Fetches a factory that is suitable for producing
@@ -47,7 +47,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	*
 	* @return the view factory
 	*/
-	@:overload override public function getViewFactory() : javax.swing.text.ViewFactory;
+	@:overload @:public override public function getViewFactory() : javax.swing.text.ViewFactory;
 	
 	/**
 	* Fetches the set of commands that can be used
@@ -56,7 +56,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	*
 	* @return the command list
 	*/
-	@:overload override public function getActions() : java.NativeArray<javax.swing.Action>;
+	@:overload @:public override public function getActions() : java.NativeArray<javax.swing.Action>;
 	
 	/**
 	* Fetches a caret that can navigate through views
@@ -64,7 +64,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	*
 	* @return the caret
 	*/
-	@:overload override public function createCaret() : javax.swing.text.Caret;
+	@:overload @:public override public function createCaret() : javax.swing.text.Caret;
 	
 	/**
 	* Creates an uninitialized text storage model (PlainDocument)
@@ -72,7 +72,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	*
 	* @return the model
 	*/
-	@:overload override public function createDefaultDocument() : javax.swing.text.Document;
+	@:overload @:public override public function createDefaultDocument() : javax.swing.text.Document;
 	
 	/**
 	* Inserts content from the given stream which is expected
@@ -87,7 +87,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	* @exception BadLocationException if pos represents an invalid
 	*   location within the document.
 	*/
-	@:overload override public function read(_in : java.io.InputStream, doc : javax.swing.text.Document, pos : Int) : Void;
+	@:overload @:public override public function read(_in : java.io.InputStream, doc : javax.swing.text.Document, pos : Int) : Void;
 	
 	/**
 	* Writes content from a document to the given stream
@@ -102,7 +102,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	* @exception BadLocationException if pos represents an invalid
 	*   location within the document.
 	*/
-	@:overload override public function write(out : java.io.OutputStream, doc : javax.swing.text.Document, pos : Int, len : Int) : Void;
+	@:overload @:public override public function write(out : java.io.OutputStream, doc : javax.swing.text.Document, pos : Int, len : Int) : Void;
 	
 	/**
 	* Inserts content from the given stream, which will be
@@ -116,7 +116,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	* @exception BadLocationException if pos represents an invalid
 	*   location within the document.
 	*/
-	@:overload override public function read(_in : java.io.Reader, doc : javax.swing.text.Document, pos : Int) : Void;
+	@:overload @:public override public function read(_in : java.io.Reader, doc : javax.swing.text.Document, pos : Int) : Void;
 	
 	/**
 	* Writes content from a document to the given stream
@@ -131,13 +131,13 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	* @exception BadLocationException if pos is not within 0 and
 	*   the length of the document.
 	*/
-	@:overload override public function write(out : java.io.Writer, doc : javax.swing.text.Document, pos : Int, len : Int) : Void;
+	@:overload @:public override public function write(out : java.io.Writer, doc : javax.swing.text.Document, pos : Int, len : Int) : Void;
 	
 	/**
 	* When reading a document if a CRLF is encountered a property
 	* with this name is added and the value will be "\r\n".
 	*/
-	public static var EndOfLineStringProperty(default, null) : String;
+	@:public @:static @:final public static var EndOfLineStringProperty(default, null) : String;
 	
 	/**
 	* Name of the action to place content into the associated
@@ -145,7 +145,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	* the new content is added.
 	* @see #getActions
 	*/
-	public static var insertContentAction(default, null) : String;
+	@:public @:static @:final public static var insertContentAction(default, null) : String;
 	
 	/**
 	* Name of the action to place a line/paragraph break into
@@ -153,7 +153,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	* the break is added.
 	* @see #getActions
 	*/
-	public static var insertBreakAction(default, null) : String;
+	@:public @:static @:final public static var insertBreakAction(default, null) : String;
 	
 	/**
 	* Name of the action to place a tab character into
@@ -161,21 +161,21 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	* the tab is added.
 	* @see #getActions
 	*/
-	public static var insertTabAction(default, null) : String;
+	@:public @:static @:final public static var insertTabAction(default, null) : String;
 	
 	/**
 	* Name of the action to delete the character of content that
 	* precedes the current caret position.
 	* @see #getActions
 	*/
-	public static var deletePrevCharAction(default, null) : String;
+	@:public @:static @:final public static var deletePrevCharAction(default, null) : String;
 	
 	/**
 	* Name of the action to delete the character of content that
 	* follows the current caret position.
 	* @see #getActions
 	*/
-	public static var deleteNextCharAction(default, null) : String;
+	@:public @:static @:final public static var deleteNextCharAction(default, null) : String;
 	
 	/**
 	* Name of the action to delete the word that
@@ -184,7 +184,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	* @see JTextComponent#getSelectionStart
 	* @since 1.6
 	*/
-	@:require(java6) public static var deleteNextWordAction(default, null) : String;
+	@:require(java6) @:public @:static @:final public static var deleteNextWordAction(default, null) : String;
 	
 	/**
 	* Name of the action to delete the word that
@@ -193,21 +193,21 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	* @see JTextComponent#getSelectionStart
 	* @since 1.6
 	*/
-	@:require(java6) public static var deletePrevWordAction(default, null) : String;
+	@:require(java6) @:public @:static @:final public static var deletePrevWordAction(default, null) : String;
 	
 	/**
 	* Name of the action to set the editor into read-only
 	* mode.
 	* @see #getActions
 	*/
-	public static var readOnlyAction(default, null) : String;
+	@:public @:static @:final public static var readOnlyAction(default, null) : String;
 	
 	/**
 	* Name of the action to set the editor into writeable
 	* mode.
 	* @see #getActions
 	*/
-	public static var writableAction(default, null) : String;
+	@:public @:static @:final public static var writableAction(default, null) : String;
 	
 	/**
 	* Name of the action to cut the selected region
@@ -215,7 +215,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	* @see JTextComponent#cut
 	* @see #getActions
 	*/
-	public static var cutAction(default, null) : String;
+	@:public @:static @:final public static var cutAction(default, null) : String;
 	
 	/**
 	* Name of the action to copy the selected region
@@ -223,7 +223,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	* @see JTextComponent#copy
 	* @see #getActions
 	*/
-	public static var copyAction(default, null) : String;
+	@:public @:static @:final public static var copyAction(default, null) : String;
 	
 	/**
 	* Name of the action to paste the contents of the
@@ -232,245 +232,245 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	* @see JTextComponent#paste
 	* @see #getActions
 	*/
-	public static var pasteAction(default, null) : String;
+	@:public @:static @:final public static var pasteAction(default, null) : String;
 	
 	/**
 	* Name of the action to create a beep.
 	* @see #getActions
 	*/
-	public static var beepAction(default, null) : String;
+	@:public @:static @:final public static var beepAction(default, null) : String;
 	
 	/**
 	* Name of the action to page up vertically.
 	* @see #getActions
 	*/
-	public static var pageUpAction(default, null) : String;
+	@:public @:static @:final public static var pageUpAction(default, null) : String;
 	
 	/**
 	* Name of the action to page down vertically.
 	* @see #getActions
 	*/
-	public static var pageDownAction(default, null) : String;
+	@:public @:static @:final public static var pageDownAction(default, null) : String;
 	
 	/**
 	* Name of the Action for moving the caret
 	* logically forward one position.
 	* @see #getActions
 	*/
-	public static var forwardAction(default, null) : String;
+	@:public @:static @:final public static var forwardAction(default, null) : String;
 	
 	/**
 	* Name of the Action for moving the caret
 	* logically backward one position.
 	* @see #getActions
 	*/
-	public static var backwardAction(default, null) : String;
+	@:public @:static @:final public static var backwardAction(default, null) : String;
 	
 	/**
 	* Name of the Action for extending the selection
 	* by moving the caret logically forward one position.
 	* @see #getActions
 	*/
-	public static var selectionForwardAction(default, null) : String;
+	@:public @:static @:final public static var selectionForwardAction(default, null) : String;
 	
 	/**
 	* Name of the Action for extending the selection
 	* by moving the caret logically backward one position.
 	* @see #getActions
 	*/
-	public static var selectionBackwardAction(default, null) : String;
+	@:public @:static @:final public static var selectionBackwardAction(default, null) : String;
 	
 	/**
 	* Name of the Action for moving the caret
 	* logically upward one position.
 	* @see #getActions
 	*/
-	public static var upAction(default, null) : String;
+	@:public @:static @:final public static var upAction(default, null) : String;
 	
 	/**
 	* Name of the Action for moving the caret
 	* logically downward one position.
 	* @see #getActions
 	*/
-	public static var downAction(default, null) : String;
+	@:public @:static @:final public static var downAction(default, null) : String;
 	
 	/**
 	* Name of the Action for moving the caret
 	* logically upward one position, extending the selection.
 	* @see #getActions
 	*/
-	public static var selectionUpAction(default, null) : String;
+	@:public @:static @:final public static var selectionUpAction(default, null) : String;
 	
 	/**
 	* Name of the Action for moving the caret
 	* logically downward one position, extending the selection.
 	* @see #getActions
 	*/
-	public static var selectionDownAction(default, null) : String;
+	@:public @:static @:final public static var selectionDownAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the caret
 	* to the beginning of a word.
 	* @see #getActions
 	*/
-	public static var beginWordAction(default, null) : String;
+	@:public @:static @:final public static var beginWordAction(default, null) : String;
 	
 	/**
 	* Name of the Action for moving the caret
 	* to the end of a word.
 	* @see #getActions
 	*/
-	public static var endWordAction(default, null) : String;
+	@:public @:static @:final public static var endWordAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the caret
 	* to the beginning of a word, extending the selection.
 	* @see #getActions
 	*/
-	public static var selectionBeginWordAction(default, null) : String;
+	@:public @:static @:final public static var selectionBeginWordAction(default, null) : String;
 	
 	/**
 	* Name of the Action for moving the caret
 	* to the end of a word, extending the selection.
 	* @see #getActions
 	*/
-	public static var selectionEndWordAction(default, null) : String;
+	@:public @:static @:final public static var selectionEndWordAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the caret to the
 	* beginning of the previous word.
 	* @see #getActions
 	*/
-	public static var previousWordAction(default, null) : String;
+	@:public @:static @:final public static var previousWordAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the caret to the
 	* beginning of the next word.
 	* @see #getActions
 	*/
-	public static var nextWordAction(default, null) : String;
+	@:public @:static @:final public static var nextWordAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the selection to the
 	* beginning of the previous word, extending the selection.
 	* @see #getActions
 	*/
-	public static var selectionPreviousWordAction(default, null) : String;
+	@:public @:static @:final public static var selectionPreviousWordAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the selection to the
 	* beginning of the next word, extending the selection.
 	* @see #getActions
 	*/
-	public static var selectionNextWordAction(default, null) : String;
+	@:public @:static @:final public static var selectionNextWordAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the caret
 	* to the beginning of a line.
 	* @see #getActions
 	*/
-	public static var beginLineAction(default, null) : String;
+	@:public @:static @:final public static var beginLineAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the caret
 	* to the end of a line.
 	* @see #getActions
 	*/
-	public static var endLineAction(default, null) : String;
+	@:public @:static @:final public static var endLineAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the caret
 	* to the beginning of a line, extending the selection.
 	* @see #getActions
 	*/
-	public static var selectionBeginLineAction(default, null) : String;
+	@:public @:static @:final public static var selectionBeginLineAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the caret
 	* to the end of a line, extending the selection.
 	* @see #getActions
 	*/
-	public static var selectionEndLineAction(default, null) : String;
+	@:public @:static @:final public static var selectionEndLineAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the caret
 	* to the beginning of a paragraph.
 	* @see #getActions
 	*/
-	public static var beginParagraphAction(default, null) : String;
+	@:public @:static @:final public static var beginParagraphAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the caret
 	* to the end of a paragraph.
 	* @see #getActions
 	*/
-	public static var endParagraphAction(default, null) : String;
+	@:public @:static @:final public static var endParagraphAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the caret
 	* to the beginning of a paragraph, extending the selection.
 	* @see #getActions
 	*/
-	public static var selectionBeginParagraphAction(default, null) : String;
+	@:public @:static @:final public static var selectionBeginParagraphAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the caret
 	* to the end of a paragraph, extending the selection.
 	* @see #getActions
 	*/
-	public static var selectionEndParagraphAction(default, null) : String;
+	@:public @:static @:final public static var selectionEndParagraphAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the caret
 	* to the beginning of the document.
 	* @see #getActions
 	*/
-	public static var beginAction(default, null) : String;
+	@:public @:static @:final public static var beginAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the caret
 	* to the end of the document.
 	* @see #getActions
 	*/
-	public static var endAction(default, null) : String;
+	@:public @:static @:final public static var endAction(default, null) : String;
 	
 	/**
 	* Name of the <code>Action</code> for moving the caret
 	* to the beginning of the document.
 	* @see #getActions
 	*/
-	public static var selectionBeginAction(default, null) : String;
+	@:public @:static @:final public static var selectionBeginAction(default, null) : String;
 	
 	/**
 	* Name of the Action for moving the caret
 	* to the end of the document.
 	* @see #getActions
 	*/
-	public static var selectionEndAction(default, null) : String;
+	@:public @:static @:final public static var selectionEndAction(default, null) : String;
 	
 	/**
 	* Name of the Action for selecting a word around the caret.
 	* @see #getActions
 	*/
-	public static var selectWordAction(default, null) : String;
+	@:public @:static @:final public static var selectWordAction(default, null) : String;
 	
 	/**
 	* Name of the Action for selecting a line around the caret.
 	* @see #getActions
 	*/
-	public static var selectLineAction(default, null) : String;
+	@:public @:static @:final public static var selectLineAction(default, null) : String;
 	
 	/**
 	* Name of the Action for selecting a paragraph around the caret.
 	* @see #getActions
 	*/
-	public static var selectParagraphAction(default, null) : String;
+	@:public @:static @:final public static var selectParagraphAction(default, null) : String;
 	
 	/**
 	* Name of the Action for selecting the entire document
 	* @see #getActions
 	*/
-	public static var selectAllAction(default, null) : String;
+	@:public @:static @:final public static var selectAllAction(default, null) : String;
 	
 	/**
 	* Name of the action that is executed by default if
@@ -478,7 +478,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	* is no keymap entry.
 	* @see #getActions
 	*/
-	public static var defaultKeyTypedAction(default, null) : String;
+	@:public @:static @:final public static var defaultKeyTypedAction(default, null) : String;
 	
 	
 }
@@ -519,14 +519,14 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	/**
 	* Creates this object with the appropriate identifier.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* The operation to perform when this action is triggered.
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -552,14 +552,14 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	/**
 	* Creates this object with the appropriate identifier.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* The operation to perform when this action is triggered.
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -585,14 +585,14 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	/**
 	* Creates this object with the appropriate identifier.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* The operation to perform when this action is triggered.
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -617,14 +617,14 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	/**
 	* Creates this object with the appropriate identifier.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* The operation to perform when this action is triggered.
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -641,7 +641,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -654,7 +654,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$DeleteNextCharAction') @:internal extern class DefaultEditorKit_DeleteNextCharAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -669,7 +669,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -685,7 +685,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -701,7 +701,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -724,14 +724,14 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$CutAction') extern class DefaultEditorKit_CutAction extends javax.swing.text.TextAction
 {
 	/** Create this object with the appropriate identifier. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* The operation to perform when this action is triggered.
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -754,14 +754,14 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$CopyAction') extern class DefaultEditorKit_CopyAction extends javax.swing.text.TextAction
 {
 	/** Create this object with the appropriate identifier. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* The operation to perform when this action is triggered.
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -785,14 +785,14 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$PasteAction') extern class DefaultEditorKit_PasteAction extends javax.swing.text.TextAction
 {
 	/** Create this object with the appropriate identifier. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* The operation to perform when this action is triggered.
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -814,14 +814,14 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$BeepAction') extern class DefaultEditorKit_BeepAction extends javax.swing.text.TextAction
 {
 	/** Create this object with the appropriate identifier. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* The operation to perform when this action is triggered.
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -836,10 +836,10 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$VerticalPageAction') @:internal extern class DefaultEditorKit_VerticalPageAction extends javax.swing.text.TextAction
 {
 	/** Create this object with the appropriate identifier. */
-	@:overload public function new(nm : String, direction : Int, select : Bool) : Void;
+	@:overload @:public public function new(nm : String, direction : Int, select : Bool) : Void;
 	
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -849,16 +849,16 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$PageAction') @:internal extern class DefaultEditorKit_PageAction extends javax.swing.text.TextAction
 {
 	/** Create this object with the appropriate identifier. */
-	@:overload public function new(nm : String, left : Bool, select : Bool) : Void;
+	@:overload @:public public function new(nm : String, left : Bool, select : Bool) : Void;
 	
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
 @:native('javax$swing$text$DefaultEditorKit$DumpModelAction') @:internal extern class DefaultEditorKit_DumpModelAction extends javax.swing.text.TextAction
 {
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -870,7 +870,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$NextVisualPositionAction') @:internal extern class DefaultEditorKit_NextVisualPositionAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -883,7 +883,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$BeginWordAction') @:internal extern class DefaultEditorKit_BeginWordAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -896,7 +896,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$EndWordAction') @:internal extern class DefaultEditorKit_EndWordAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -909,7 +909,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$PreviousWordAction') @:internal extern class DefaultEditorKit_PreviousWordAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -922,7 +922,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$NextWordAction') @:internal extern class DefaultEditorKit_NextWordAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -935,7 +935,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$BeginLineAction') @:internal extern class DefaultEditorKit_BeginLineAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -948,7 +948,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$EndLineAction') @:internal extern class DefaultEditorKit_EndLineAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -961,7 +961,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$BeginParagraphAction') @:internal extern class DefaultEditorKit_BeginParagraphAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -974,7 +974,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$EndParagraphAction') @:internal extern class DefaultEditorKit_EndParagraphAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -986,7 +986,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$BeginAction') @:internal extern class DefaultEditorKit_BeginAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -998,7 +998,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$EndAction') @:internal extern class DefaultEditorKit_EndAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -1010,7 +1010,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$SelectWordAction') @:internal extern class DefaultEditorKit_SelectWordAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -1022,7 +1022,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$SelectLineAction') @:internal extern class DefaultEditorKit_SelectLineAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -1034,7 +1034,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$SelectParagraphAction') @:internal extern class DefaultEditorKit_SelectParagraphAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -1046,7 +1046,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$SelectAllAction') @:internal extern class DefaultEditorKit_SelectAllAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -1058,7 +1058,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$UnselectAction') @:internal extern class DefaultEditorKit_UnselectAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -1070,7 +1070,7 @@ extern class DefaultEditorKit extends javax.swing.text.EditorKit
 @:native('javax$swing$text$DefaultEditorKit$ToggleComponentOrientationAction') @:internal extern class DefaultEditorKit_ToggleComponentOrientationAction extends javax.swing.text.TextAction
 {
 	/** The operation to perform when this action is triggered. */
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }

@@ -28,128 +28,128 @@ extern class SchemaTreeTraverser implements com.sun.xml.internal.xsom.visitor.XS
 	/**
 	* Simple constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Retrieves the tree model of <code>this</code> traverser.
 	*
 	* @return Tree model of <code>this</code> traverser.
 	*/
-	@:overload public function getModel() : com.sun.xml.internal.xsom.impl.util.SchemaTreeTraverser.SchemaTreeTraverser_SchemaTreeModel;
+	@:overload @:public public function getModel() : com.sun.xml.internal.xsom.impl.util.SchemaTreeTraverser.SchemaTreeTraverser_SchemaTreeModel;
 	
 	/**
 	* Visits the root schema set.
 	*
 	* @param s Root schema set.
 	*/
-	@:overload public function visit(s : com.sun.xml.internal.xsom.XSSchemaSet) : Void;
+	@:overload @:public public function visit(s : com.sun.xml.internal.xsom.XSSchemaSet) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSVisitor#schema(com.sun.xml.internal.xsom.XSSchema)
 	*/
-	@:overload public function schema(s : com.sun.xml.internal.xsom.XSSchema) : Void;
+	@:overload @:public public function schema(s : com.sun.xml.internal.xsom.XSSchema) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSVisitor#attGroupDecl(com.sun.xml.internal.xsom.XSAttGroupDecl)
 	*/
-	@:overload public function attGroupDecl(decl : com.sun.xml.internal.xsom.XSAttGroupDecl) : Void;
+	@:overload @:public public function attGroupDecl(decl : com.sun.xml.internal.xsom.XSAttGroupDecl) : Void;
 	
 	/**
 	* Creates node of attribute group decalration reference.
 	*
 	* @param decl Attribute group decalration reference.
 	*/
-	@:overload public function dumpRef(decl : com.sun.xml.internal.xsom.XSAttGroupDecl) : Void;
+	@:overload @:public public function dumpRef(decl : com.sun.xml.internal.xsom.XSAttGroupDecl) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSVisitor#attributeUse(com.sun.xml.internal.xsom.XSAttributeUse)
 	*/
-	@:overload public function attributeUse(use : com.sun.xml.internal.xsom.XSAttributeUse) : Void;
+	@:overload @:public public function attributeUse(use : com.sun.xml.internal.xsom.XSAttributeUse) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSVisitor#attributeDecl(com.sun.xml.internal.xsom.XSAttributeDecl)
 	*/
-	@:overload public function attributeDecl(decl : com.sun.xml.internal.xsom.XSAttributeDecl) : Void;
+	@:overload @:public public function attributeDecl(decl : com.sun.xml.internal.xsom.XSAttributeDecl) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSContentTypeVisitor#simpleType(com.sun.xml.internal.xsom.XSSimpleType)
 	*/
-	@:overload public function simpleType(type : com.sun.xml.internal.xsom.XSSimpleType) : Void;
+	@:overload @:public public function simpleType(type : com.sun.xml.internal.xsom.XSSimpleType) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSSimpleTypeVisitor#listSimpleType(com.sun.xml.internal.xsom.XSListSimpleType)
 	*/
-	@:overload public function listSimpleType(type : com.sun.xml.internal.xsom.XSListSimpleType) : Void;
+	@:overload @:public public function listSimpleType(type : com.sun.xml.internal.xsom.XSListSimpleType) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSSimpleTypeVisitor#unionSimpleType(com.sun.xml.internal.xsom.XSUnionSimpleType)
 	*/
-	@:overload public function unionSimpleType(type : com.sun.xml.internal.xsom.XSUnionSimpleType) : Void;
+	@:overload @:public public function unionSimpleType(type : com.sun.xml.internal.xsom.XSUnionSimpleType) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSSimpleTypeVisitor#restrictionSimpleType(com.sun.xml.internal.xsom.XSRestrictionSimpleType)
 	*/
-	@:overload public function restrictionSimpleType(type : com.sun.xml.internal.xsom.XSRestrictionSimpleType) : Void;
+	@:overload @:public public function restrictionSimpleType(type : com.sun.xml.internal.xsom.XSRestrictionSimpleType) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSVisitor#facet(com.sun.xml.internal.xsom.XSFacet)
 	*/
-	@:overload public function facet(facet : com.sun.xml.internal.xsom.XSFacet) : Void;
+	@:overload @:public public function facet(facet : com.sun.xml.internal.xsom.XSFacet) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSVisitor#notation(com.sun.xml.internal.xsom.XSNotation)
 	*/
-	@:overload public function notation(notation : com.sun.xml.internal.xsom.XSNotation) : Void;
+	@:overload @:public public function notation(notation : com.sun.xml.internal.xsom.XSNotation) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSVisitor#complexType(com.sun.xml.internal.xsom.XSComplexType)
 	*/
-	@:overload public function complexType(type : com.sun.xml.internal.xsom.XSComplexType) : Void;
+	@:overload @:public public function complexType(type : com.sun.xml.internal.xsom.XSComplexType) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSTermVisitor#elementDecl(com.sun.xml.internal.xsom.XSElementDecl)
 	*/
-	@:overload public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
+	@:overload @:public public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSTermVisitor#modelGroupDecl(com.sun.xml.internal.xsom.XSModelGroupDecl)
 	*/
-	@:overload public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
+	@:overload @:public public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSTermVisitor#modelGroup(com.sun.xml.internal.xsom.XSModelGroup)
 	*/
-	@:overload public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : Void;
+	@:overload @:public public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSContentTypeVisitor#particle(com.sun.xml.internal.xsom.XSParticle)
 	*/
-	@:overload public function particle(part : com.sun.xml.internal.xsom.XSParticle) : Void;
+	@:overload @:public public function particle(part : com.sun.xml.internal.xsom.XSParticle) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSTermVisitor#wildcard(com.sun.xml.internal.xsom.XSWildcard)
 	*/
-	@:overload public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : Void;
+	@:overload @:public public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSVisitor#annotation(com.sun.xml.internal.xsom.XSAnnotation)
 	*/
-	@:overload public function annotation(ann : com.sun.xml.internal.xsom.XSAnnotation) : Void;
+	@:overload @:public public function annotation(ann : com.sun.xml.internal.xsom.XSAnnotation) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSContentTypeVisitor#empty(com.sun.xml.internal.xsom.XSContentType)
 	*/
-	@:overload public function empty(t : com.sun.xml.internal.xsom.XSContentType) : Void;
+	@:overload @:public public function empty(t : com.sun.xml.internal.xsom.XSContentType) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSVisitor#identityConstraint(com.sun.xml.internal.xsom.XSIdentityConstraint)
 	*/
-	@:overload public function identityConstraint(ic : com.sun.xml.internal.xsom.XSIdentityConstraint) : Void;
+	@:overload @:public public function identityConstraint(ic : com.sun.xml.internal.xsom.XSIdentityConstraint) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.visitor.XSVisitor#xpath(com.sun.xml.internal.xsom.XSXPath)
 	*/
-	@:overload public function xpath(xp : com.sun.xml.internal.xsom.XSXPath) : Void;
+	@:overload @:public public function xpath(xp : com.sun.xml.internal.xsom.XSXPath) : Void;
 	
 	
 }
@@ -165,9 +165,9 @@ extern class SchemaTreeTraverser implements com.sun.xml.internal.xsom.visitor.XS
 	*
 	* @return New empty tree model.
 	*/
-	@:overload public static function getInstance() : com.sun.xml.internal.xsom.impl.util.SchemaTreeTraverser.SchemaTreeTraverser_SchemaTreeModel;
+	@:overload @:public @:static public static function getInstance() : com.sun.xml.internal.xsom.impl.util.SchemaTreeTraverser.SchemaTreeTraverser_SchemaTreeModel;
 	
-	@:overload public function addSchemaNode(node : com.sun.xml.internal.xsom.impl.util.SchemaTreeTraverser.SchemaTreeTraverser_SchemaTreeNode) : Void;
+	@:overload @:public public function addSchemaNode(node : com.sun.xml.internal.xsom.impl.util.SchemaTreeTraverser.SchemaTreeTraverser_SchemaTreeNode) : Void;
 	
 	
 }
@@ -184,37 +184,37 @@ extern class SchemaTreeTraverser implements com.sun.xml.internal.xsom.visitor.XS
 	* @param artifactName Artifact name.
 	* @param locator      Artifact locator.
 	*/
-	@:overload public function new(artifactName : String, locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(artifactName : String, locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Returns the caption for <code>this</code> node.
 	*
 	* @return The caption for <code>this</code> node.
 	*/
-	@:overload public function getCaption() : String;
+	@:overload @:public public function getCaption() : String;
 	
 	/**
 	* @return Returns the file name of the corresponding schema artifact.
 	*/
-	@:overload public function getFileName() : String;
+	@:overload @:public public function getFileName() : String;
 	
 	/**
 	* @param fileName The file name of the corresponding schema artifact to
 	*                 set.
 	*/
-	@:overload public function setFileName(fileName : String) : Void;
+	@:overload @:public public function setFileName(fileName : String) : Void;
 	
 	/**
 	* @return Returns the line number of the corresponding schema
 	*         artifact.
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* @param lineNumber The line number of the corresponding schema
 	*                   artifact to set.
 	*/
-	@:overload public function setLineNumber(lineNumber : Int) : Void;
+	@:overload @:public public function setLineNumber(lineNumber : Int) : Void;
 	
 	
 }
@@ -228,7 +228,7 @@ extern class SchemaTreeTraverser implements com.sun.xml.internal.xsom.visitor.XS
 	/**
 	* A simple constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
@@ -242,40 +242,40 @@ extern class SchemaTreeTraverser implements com.sun.xml.internal.xsom.visitor.XS
 	/**
 	* The icon label.
 	*/
-	private var iconLabel(default, null) : javax.swing.JLabel;
+	@:protected @:final private var iconLabel(default, null) : javax.swing.JLabel;
 	
 	/**
 	* The text label
 	*/
-	private var nameLabel(default, null) : javax.swing.JLabel;
+	@:protected @:final private var nameLabel(default, null) : javax.swing.JLabel;
 	
 	/**
 	* Background color for selected cells (light brown).
 	*/
-	public var selectedBackground(default, null) : java.awt.Color;
+	@:public @:final public var selectedBackground(default, null) : java.awt.Color;
 	
 	/**
 	* Foreground color for selected cells, both text and border (dark
 	* brown).
 	*/
-	public var selectedForeground(default, null) : java.awt.Color;
+	@:public @:final public var selectedForeground(default, null) : java.awt.Color;
 	
 	/**
 	* Default font for the text label.
 	*/
-	public var nameFont(default, null) : java.awt.Font;
+	@:public @:final public var nameFont(default, null) : java.awt.Font;
 	
 	/**
 	* Simple constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/*
 	* (non-Javadoc)
 	*
 	* @see javax.swing.JComponent#paintComponent(java.awt.Graphics)
 	*/
-	@:overload @:final public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public @:final override public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Sets values for the icon and text of <code>this</code> renderer.
@@ -286,12 +286,12 @@ extern class SchemaTreeTraverser implements com.sun.xml.internal.xsom.visitor.XS
 	*                 renderer will be shown with different background and
 	*                 border settings.
 	*/
-	@:overload @:final private function setValues(icon : javax.swing.Icon, caption : String, selected : Bool) : Void;
+	@:overload @:protected @:final private function setValues(icon : javax.swing.Icon, caption : String, selected : Bool) : Void;
 	
 	/* (non-Javadoc)
 	* @see javax.swing.tree.TreeCellRenderer#getTreeCellRendererComponent(javax.swing.JTree, java.lang.Object, boolean, boolean, boolean, int, boolean)
 	*/
-	@:overload @:final public function getTreeCellRendererComponent(tree : javax.swing.JTree, value : Dynamic, selected : Bool, expanded : Bool, leaf : Bool, row : Int, hasFocus : Bool) : java.awt.Component;
+	@:overload @:public @:final public function getTreeCellRendererComponent(tree : javax.swing.JTree, value : Dynamic, selected : Bool, expanded : Bool, leaf : Bool, row : Int, hasFocus : Bool) : java.awt.Component;
 	
 	
 }

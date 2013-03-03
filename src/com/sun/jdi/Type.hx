@@ -138,12 +138,12 @@ package com.sun.jdi;
 	* @see <a href="doc-files/signature.html">Type Signatures</a>
 	* @return the string containing the type signature.
 	*/
-	@:overload public function signature() : String;
+	@:overload @:public public function signature() : String;
 	
 	/**
 	* @return a text representation of this type.
 	*/
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	
 }

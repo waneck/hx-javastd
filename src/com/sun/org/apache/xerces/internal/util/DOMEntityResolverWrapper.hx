@@ -21,19 +21,19 @@ package com.sun.org.apache.xerces.internal.util;
 extern class DOMEntityResolverWrapper implements com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver
 {
 	/** The DOM entity resolver. */
-	private var fEntityResolver : org.w3c.dom.ls.LSResourceResolver;
+	@:protected private var fEntityResolver : org.w3c.dom.ls.LSResourceResolver;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Wraps the specified DOM entity resolver. */
-	@:overload public function new(entityResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
+	@:overload @:public public function new(entityResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
 	
 	/** Sets the DOM entity resolver. */
-	@:overload public function setEntityResolver(entityResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
+	@:overload @:public public function setEntityResolver(entityResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
 	
 	/** Returns the DOM entity resolver. */
-	@:overload public function getEntityResolver() : org.w3c.dom.ls.LSResourceResolver;
+	@:overload @:public public function getEntityResolver() : org.w3c.dom.ls.LSResourceResolver;
 	
 	/**
 	* Resolves an external parsed entity. If the entity cannot be
@@ -44,7 +44,7 @@ extern class DOMEntityResolverWrapper implements com.sun.org.apache.xerces.inter
 	* @throws IOException  Thrown if resolved entity stream cannot be
 	*                      opened or some other i/o error occurs.
 	*/
-	@:overload public function resolveEntity(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
+	@:overload @:public public function resolveEntity(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
 	
 	
 }

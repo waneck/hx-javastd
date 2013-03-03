@@ -31,49 +31,49 @@ package com.sun.media.sound;
 */
 extern class ModelSource
 {
-	public static var SOURCE_NONE(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var SOURCE_NONE(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var SOURCE_NOTEON_KEYNUMBER(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var SOURCE_NOTEON_KEYNUMBER(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var SOURCE_NOTEON_VELOCITY(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var SOURCE_NOTEON_VELOCITY(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var SOURCE_EG1(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var SOURCE_EG1(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var SOURCE_EG2(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var SOURCE_EG2(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var SOURCE_LFO1(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var SOURCE_LFO1(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var SOURCE_LFO2(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var SOURCE_LFO2(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var SOURCE_MIDI_PITCH(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var SOURCE_MIDI_PITCH(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var SOURCE_MIDI_CHANNEL_PRESSURE(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var SOURCE_MIDI_CHANNEL_PRESSURE(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var SOURCE_MIDI_POLY_PRESSURE(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var SOURCE_MIDI_POLY_PRESSURE(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var SOURCE_MIDI_CC_0(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var SOURCE_MIDI_CC_0(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var SOURCE_MIDI_RPN_0(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var SOURCE_MIDI_RPN_0(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(id : com.sun.media.sound.ModelIdentifier) : Void;
+	@:overload @:public public function new(id : com.sun.media.sound.ModelIdentifier) : Void;
 	
-	@:overload public function new(id : com.sun.media.sound.ModelIdentifier, direction : Bool) : Void;
+	@:overload @:public public function new(id : com.sun.media.sound.ModelIdentifier, direction : Bool) : Void;
 	
-	@:overload public function new(id : com.sun.media.sound.ModelIdentifier, direction : Bool, polarity : Bool) : Void;
+	@:overload @:public public function new(id : com.sun.media.sound.ModelIdentifier, direction : Bool, polarity : Bool) : Void;
 	
-	@:overload public function new(id : com.sun.media.sound.ModelIdentifier, direction : Bool, polarity : Bool, transform : Int) : Void;
+	@:overload @:public public function new(id : com.sun.media.sound.ModelIdentifier, direction : Bool, polarity : Bool, transform : Int) : Void;
 	
-	@:overload public function new(id : com.sun.media.sound.ModelIdentifier, transform : com.sun.media.sound.ModelTransform) : Void;
+	@:overload @:public public function new(id : com.sun.media.sound.ModelIdentifier, transform : com.sun.media.sound.ModelTransform) : Void;
 	
-	@:overload public function getIdentifier() : com.sun.media.sound.ModelIdentifier;
+	@:overload @:public public function getIdentifier() : com.sun.media.sound.ModelIdentifier;
 	
-	@:overload public function setIdentifier(source : com.sun.media.sound.ModelIdentifier) : Void;
+	@:overload @:public public function setIdentifier(source : com.sun.media.sound.ModelIdentifier) : Void;
 	
-	@:overload public function getTransform() : com.sun.media.sound.ModelTransform;
+	@:overload @:public public function getTransform() : com.sun.media.sound.ModelTransform;
 	
-	@:overload public function setTransform(transform : com.sun.media.sound.ModelTransform) : Void;
+	@:overload @:public public function setTransform(transform : com.sun.media.sound.ModelTransform) : Void;
 	
 	
 }

@@ -76,7 +76,7 @@ extern class SysexMessage extends javax.sound.midi.MidiMessage
 	* Status byte for System Exclusive message (0xF0, or 240).
 	* @see MidiMessage#getStatus
 	*/
-	public static var SYSTEM_EXCLUSIVE(default, null) : Int;
+	@:public @:static @:final public static var SYSTEM_EXCLUSIVE(default, null) : Int;
 	
 	/**
 	* Status byte for Special System Exclusive message (0xF7, or 247), which is used
@@ -84,7 +84,7 @@ extern class SysexMessage extends javax.sound.midi.MidiMessage
 	* is used in the real-time "MIDI wire" protocol.
 	* @see MidiMessage#getStatus
 	*/
-	public static var SPECIAL_SYSTEM_EXCLUSIVE(default, null) : Int;
+	@:public @:static @:final public static var SPECIAL_SYSTEM_EXCLUSIVE(default, null) : Int;
 	
 	/**
 	* Constructs a new <code>SysexMessage</code>. The
@@ -94,7 +94,7 @@ extern class SysexMessage extends javax.sound.midi.MidiMessage
 	* methods.
 	* @see #setMessage
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new {@code SysexMessage} and sets the data for
@@ -114,7 +114,7 @@ extern class SysexMessage extends javax.sound.midi.MidiMessage
 	* @see #getData()
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
+	@:require(java7) @:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
 	
 	/**
 	* Constructs a new {@code SysexMessage} and sets the data for the message.
@@ -134,7 +134,7 @@ extern class SysexMessage extends javax.sound.midi.MidiMessage
 	* @see #getData()
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(status : Int, data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
+	@:require(java7) @:overload @:public public function new(status : Int, data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
 	
 	/**
 	* Constructs a new <code>SysexMessage</code>.
@@ -143,7 +143,7 @@ extern class SysexMessage extends javax.sound.midi.MidiMessage
 	* method.
 	* @see #setMessage
 	*/
-	@:overload private function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected private function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the data for the system exclusive message.   The
@@ -153,7 +153,7 @@ extern class SysexMessage extends javax.sound.midi.MidiMessage
 	* @param length the length of the valid message data in
 	* the array, including the status byte.
 	*/
-	@:overload override public function setMessage(data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
+	@:overload @:public override public function setMessage(data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
 	
 	/**
 	* Sets the data for the system exclusive message.
@@ -162,21 +162,21 @@ extern class SysexMessage extends javax.sound.midi.MidiMessage
 	* @param length the length of the valid message data in
 	* the array
 	*/
-	@:overload public function setMessage(status : Int, data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
+	@:overload @:public public function setMessage(status : Int, data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
 	
 	/**
 	* Obtains a copy of the data for the system exclusive message.
 	* The returned array of bytes does not include the status byte.
 	* @return array containing the system exclusive message data.
 	*/
-	@:overload public function getData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Creates a new object of the same class and with the same contents
 	* as this object.
 	* @return a clone of this instance
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

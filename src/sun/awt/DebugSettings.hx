@@ -25,7 +25,7 @@ package sun.awt;
 */
 @:internal extern class DebugSettings
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Gets named boolean property
@@ -33,7 +33,7 @@ package sun.awt;
 	* @param defval    Default value if property does not exist
 	* @return boolean value of the named property
 	*/
-	@:overload @:synchronized public function getBoolean(key : String, defval : Bool) : Bool;
+	@:overload @:public @:synchronized public function getBoolean(key : String, defval : Bool) : Bool;
 	
 	/**
 	* Gets named integer property
@@ -41,7 +41,7 @@ package sun.awt;
 	* @param defval    Default value if property does not exist
 	* @return integer value of the named property
 	*/
-	@:overload @:synchronized public function getInt(key : String, defval : Int) : Int;
+	@:overload @:public @:synchronized public function getInt(key : String, defval : Int) : Int;
 	
 	/**
 	* Gets named String property
@@ -49,9 +49,9 @@ package sun.awt;
 	* @param defval    Default value if property does not exist
 	* @return string value of the named property
 	*/
-	@:overload @:synchronized public function getString(key : String, defval : String) : String;
+	@:overload @:public @:synchronized public function getString(key : String, defval : String) : String;
 	
-	@:overload @:synchronized public function getPropertyNames() : java.util.Enumeration<Dynamic>;
+	@:overload @:public @:synchronized public function getPropertyNames() : java.util.Enumeration<Dynamic>;
 	
 	
 }

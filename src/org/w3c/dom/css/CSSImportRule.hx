@@ -44,12 +44,12 @@ extern interface CSSImportRule extends org.w3c.dom.css.CSSRule
 	*  The location of the style sheet to be imported. The attribute will not
 	* contain the <code>"url(...)"</code> specifier around the URI.
 	*/
-	@:overload public function getHref() : String;
+	@:overload @:public public function getHref() : String;
 	
 	/**
 	*  A list of media types for which this style sheet may be used.
 	*/
-	@:overload public function getMedia() : org.w3c.dom.stylesheets.MediaList;
+	@:overload @:public public function getMedia() : org.w3c.dom.stylesheets.MediaList;
 	
 	/**
 	* The style sheet referred to by this rule, if it has been loaded. The
@@ -57,7 +57,7 @@ extern interface CSSImportRule extends org.w3c.dom.css.CSSRule
 	* not yet been loaded or if it will not be loaded (e.g. if the style
 	* sheet is for a media type not supported by the user agent).
 	*/
-	@:overload public function getStyleSheet() : org.w3c.dom.css.CSSStyleSheet;
+	@:overload @:public public function getStyleSheet() : org.w3c.dom.css.CSSStyleSheet;
 	
 	
 }

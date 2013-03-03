@@ -25,59 +25,59 @@ package com.sun.tools.jdi;
 */
 extern class ThreadReferenceImpl extends com.sun.tools.jdi.ObjectReferenceImpl implements com.sun.jdi.ThreadReference implements com.sun.tools.jdi.VMListener
 {
-	@:overload override private function newCache() : com.sun.tools.jdi.ObjectReferenceImpl.ObjectReferenceImpl_Cache;
+	@:overload @:protected override private function newCache() : com.sun.tools.jdi.ObjectReferenceImpl.ObjectReferenceImpl_Cache;
 	
-	@:overload override private function description() : String;
+	@:overload @:protected override private function description() : String;
 	
 	/*
 	* VMListener implementation
 	*/
-	@:overload override public function vmNotSuspended(action : com.sun.tools.jdi.VMAction) : Bool;
+	@:overload @:public override public function vmNotSuspended(action : com.sun.tools.jdi.VMAction) : Bool;
 	
 	/**
 	* Note that we only cache the name string while the entire VM is suspended
 	* because the name can change via Thread.setName arbitrarily while this
 	* thread is running.
 	*/
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function suspend() : Void;
+	@:overload @:public public function suspend() : Void;
 	
-	@:overload public function resume() : Void;
+	@:overload @:public public function resume() : Void;
 	
-	@:overload public function suspendCount() : Int;
+	@:overload @:public public function suspendCount() : Int;
 	
-	@:overload public function stop(throwable : com.sun.jdi.ObjectReference) : Void;
+	@:overload @:public public function stop(throwable : com.sun.jdi.ObjectReference) : Void;
 	
-	@:overload public function interrupt() : Void;
+	@:overload @:public public function interrupt() : Void;
 	
-	@:overload public function status() : Int;
+	@:overload @:public public function status() : Int;
 	
-	@:overload public function isSuspended() : Bool;
+	@:overload @:public public function isSuspended() : Bool;
 	
-	@:overload public function isAtBreakpoint() : Bool;
+	@:overload @:public public function isAtBreakpoint() : Bool;
 	
-	@:overload public function threadGroup() : com.sun.jdi.ThreadGroupReference;
+	@:overload @:public public function threadGroup() : com.sun.jdi.ThreadGroupReference;
 	
-	@:overload public function frameCount() : Int;
+	@:overload @:public public function frameCount() : Int;
 	
-	@:overload public function frames() : java.util.List<com.sun.jdi.StackFrame>;
+	@:overload @:public public function frames() : java.util.List<com.sun.jdi.StackFrame>;
 	
-	@:overload public function frame(index : Int) : com.sun.jdi.StackFrame;
+	@:overload @:public public function frame(index : Int) : com.sun.jdi.StackFrame;
 	
-	@:overload public function frames(start : Int, length : Int) : java.util.List<com.sun.jdi.StackFrame>;
+	@:overload @:public public function frames(start : Int, length : Int) : java.util.List<com.sun.jdi.StackFrame>;
 	
-	@:overload public function ownedMonitors() : java.util.List<com.sun.jdi.ObjectReference>;
+	@:overload @:public public function ownedMonitors() : java.util.List<com.sun.jdi.ObjectReference>;
 	
-	@:overload public function currentContendedMonitor() : com.sun.jdi.ObjectReference;
+	@:overload @:public public function currentContendedMonitor() : com.sun.jdi.ObjectReference;
 	
-	@:overload public function ownedMonitorsAndFrames() : java.util.List<com.sun.jdi.MonitorInfo>;
+	@:overload @:public public function ownedMonitorsAndFrames() : java.util.List<com.sun.jdi.MonitorInfo>;
 	
-	@:overload public function popFrames(frame : com.sun.jdi.StackFrame) : Void;
+	@:overload @:public public function popFrames(frame : com.sun.jdi.StackFrame) : Void;
 	
-	@:overload public function forceEarlyReturn(returnValue : com.sun.jdi.Value) : Void;
+	@:overload @:public public function forceEarlyReturn(returnValue : com.sun.jdi.Value) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

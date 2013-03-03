@@ -31,7 +31,7 @@ extern class SurfaceManagerFactory
 	*
 	* @return the surface manager factory
 	*/
-	@:overload @:synchronized public static function getInstance() : sun.java2d.SurfaceManagerFactory;
+	@:overload @:public @:synchronized @:static public static function getInstance() : sun.java2d.SurfaceManagerFactory;
 	
 	/**
 	* Sets the surface manager factory. This may only be called once, and it
@@ -40,7 +40,7 @@ extern class SurfaceManagerFactory
 	*
 	* @param factory the factory to set
 	*/
-	@:overload @:synchronized public static function setInstance(factory : sun.java2d.SurfaceManagerFactory) : Void;
+	@:overload @:public @:synchronized @:static public static function setInstance(factory : sun.java2d.SurfaceManagerFactory) : Void;
 	
 	/**
 	* Creates a new instance of a VolatileSurfaceManager given any
@@ -48,7 +48,7 @@ extern class SurfaceManagerFactory
 	* as a way for the caller to pass pipeline-specific context data to
 	* the VolatileSurfaceManager (such as a backbuffer handle, for example).
 	*/
-	@:overload @:abstract public function createVolatileManager(image : sun.awt.image.SunVolatileImage, context : Dynamic) : sun.awt.image.VolatileSurfaceManager;
+	@:overload @:public @:abstract public function createVolatileManager(image : sun.awt.image.SunVolatileImage, context : Dynamic) : sun.awt.image.VolatileSurfaceManager;
 	
 	
 }

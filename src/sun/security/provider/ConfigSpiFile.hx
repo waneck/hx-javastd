@@ -25,11 +25,11 @@ package sun.security.provider;
 */
 extern class ConfigSpiFile extends javax.security.auth.login.ConfigurationSpi
 {
-	@:overload public function new(params : javax.security.auth.login.Configuration.Configuration_Parameters) : Void;
+	@:overload @:public public function new(params : javax.security.auth.login.Configuration.Configuration_Parameters) : Void;
 	
-	@:overload private function engineGetAppConfigurationEntry(name : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
+	@:overload @:protected override private function engineGetAppConfigurationEntry(name : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
 	
-	@:overload private function engineRefresh() : Void;
+	@:overload @:protected override private function engineRefresh() : Void;
 	
 	
 }

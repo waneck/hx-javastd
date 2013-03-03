@@ -28,21 +28,21 @@ extern class JButton extends javax.swing.AbstractButton implements javax.accessi
 	/**
 	* Creates a button with no set text or icon.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a button with an icon.
 	*
 	* @param icon  the Icon image to display on the button
 	*/
-	@:overload public function new(icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates a button with text.
 	*
 	* @param text  the text of the button
 	*/
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* Creates a button where properties are taken from the
@@ -52,7 +52,7 @@ extern class JButton extends javax.swing.AbstractButton implements javax.accessi
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(a : javax.swing.Action) : Void;
+	@:require(java3) @:overload @:public public function new(a : javax.swing.Action) : Void;
 	
 	/**
 	* Creates a button with initial text and an icon.
@@ -60,7 +60,7 @@ extern class JButton extends javax.swing.AbstractButton implements javax.accessi
 	* @param text  the text of the button
 	* @param icon  the Icon image to display on the button
 	*/
-	@:overload public function new(text : String, icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(text : String, icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Resets the UI property to a value from the current look and
@@ -68,7 +68,7 @@ extern class JButton extends javax.swing.AbstractButton implements javax.accessi
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns a string that specifies the name of the L&F class
@@ -81,7 +81,7 @@ extern class JButton extends javax.swing.AbstractButton implements javax.accessi
 	*        expert: true
 	*   description: A string that specifies the name of the L&F class.
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Gets the value of the <code>defaultButton</code> property,
@@ -97,7 +97,7 @@ extern class JButton extends javax.swing.AbstractButton implements javax.accessi
 	* @beaninfo
 	*  description: Whether or not this button is the default button
 	*/
-	@:overload public function isDefaultButton() : Bool;
+	@:overload @:public public function isDefaultButton() : Bool;
 	
 	/**
 	* Gets the value of the <code>defaultCapable</code> property.
@@ -107,7 +107,7 @@ extern class JButton extends javax.swing.AbstractButton implements javax.accessi
 	* @see #isDefaultButton
 	* @see JRootPane#setDefaultButton
 	*/
-	@:overload public function isDefaultCapable() : Bool;
+	@:overload @:public public function isDefaultCapable() : Bool;
 	
 	/**
 	* Sets the <code>defaultCapable</code> property,
@@ -126,7 +126,7 @@ extern class JButton extends javax.swing.AbstractButton implements javax.accessi
 	*    attribute: visualUpdate true
 	*  description: Whether or not this button can be the default button
 	*/
-	@:overload public function setDefaultCapable(defaultCapable : Bool) : Void;
+	@:overload @:public public function setDefaultCapable(defaultCapable : Bool) : Void;
 	
 	/**
 	* Overrides <code>JComponent.removeNotify</code> to check if
@@ -135,7 +135,7 @@ extern class JButton extends javax.swing.AbstractButton implements javax.accessi
 	* default button to <code>null</code> to ensure the
 	* <code>RootPane</code> doesn't hold onto an invalid button reference.
 	*/
-	@:overload override public function removeNotify() : Void;
+	@:overload @:public override public function removeNotify() : Void;
 	
 	/**
 	* Returns a string representation of this <code>JButton</code>.
@@ -146,7 +146,7 @@ extern class JButton extends javax.swing.AbstractButton implements javax.accessi
 	*
 	* @return  a string representation of this <code>JButton</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with this
@@ -161,7 +161,7 @@ extern class JButton extends javax.swing.AbstractButton implements javax.accessi
 	*       expert: true
 	*  description: The AccessibleContext associated with this Button.
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -189,7 +189,7 @@ extern class JButton extends javax.swing.AbstractButton implements javax.accessi
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

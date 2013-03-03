@@ -46,7 +46,7 @@ extern class SOAPConnectionFactory
 	* @exception UnsupportedOperationException if newInstance is not
 	* supported.
 	*/
-	@:overload public static function newInstance() : javax.xml.soap.SOAPConnectionFactory;
+	@:overload @:public @:static public static function newInstance() : javax.xml.soap.SOAPConnectionFactory;
 	
 	/**
 	* Create a new <code>SOAPConnection</code>.
@@ -56,7 +56,7 @@ extern class SOAPConnectionFactory
 	* @exception SOAPException if there was an exception creating the
 	* <code>SOAPConnection</code> object.
 	*/
-	@:overload @:abstract public function createConnection() : javax.xml.soap.SOAPConnection;
+	@:overload @:public @:abstract public function createConnection() : javax.xml.soap.SOAPConnection;
 	
 	
 }

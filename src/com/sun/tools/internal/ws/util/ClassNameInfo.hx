@@ -28,7 +28,7 @@ package com.sun.tools.internal.ws.util;
 */
 extern class ClassNameInfo
 {
-	@:overload public static function getName(className : String) : String;
+	@:overload @:public @:static public static function getName(className : String) : String;
 	
 	/**
 	*
@@ -36,11 +36,11 @@ extern class ClassNameInfo
 	* @param className Generic class, such as java.util.List<java.lang.String>
 	* @return the generic class, such as java.util.List
 	*/
-	@:overload public static function getGenericClass(className : String) : String;
+	@:overload @:public @:static public static function getGenericClass(className : String) : String;
 	
-	@:overload public static function getQualifier(className : String) : String;
+	@:overload @:public @:static public static function getQualifier(className : String) : String;
 	
-	@:overload public static function replaceInnerClassSym(name : String) : String;
+	@:overload @:public @:static public static function replaceInnerClassSym(name : String) : String;
 	
 	
 }

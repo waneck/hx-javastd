@@ -30,15 +30,15 @@ package com.sun.media.sound;
 */
 extern interface ModelWavetable extends com.sun.media.sound.ModelOscillator
 {
-	@:overload public function openStream() : com.sun.media.sound.AudioFloatInputStream;
+	@:overload @:public public function openStream() : com.sun.media.sound.AudioFloatInputStream;
 	
-	@:overload public function getLoopLength() : Single;
+	@:overload @:public public function getLoopLength() : Single;
 	
-	@:overload public function getLoopStart() : Single;
+	@:overload @:public public function getLoopStart() : Single;
 	
-	@:overload public function getLoopType() : Int;
+	@:overload @:public public function getLoopType() : Int;
 	
-	@:overload public function getPitchcorrection() : Single;
+	@:overload @:public public function getPitchcorrection() : Single;
 	
 	
 }

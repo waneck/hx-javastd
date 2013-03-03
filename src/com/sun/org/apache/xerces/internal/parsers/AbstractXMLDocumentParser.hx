@@ -21,22 +21,22 @@ package com.sun.org.apache.xerces.internal.parsers;
 extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.internal.parsers.XMLParser implements com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler implements com.sun.org.apache.xerces.internal.xni.XMLDTDHandler implements com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler
 {
 	/** True if inside DTD. */
-	private var fInDTD : Bool;
+	@:protected private var fInDTD : Bool;
 	
 	/** Document source*/
-	private var fDocumentSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource;
+	@:protected private var fDocumentSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource;
 	
 	/** DTD source*/
-	private var fDTDSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource;
+	@:protected private var fDTDSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource;
 	
 	/** DTD content model source*/
-	private var fDTDContentModelSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource;
+	@:protected private var fDTDContentModelSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource;
 	
 	/**
 	* Constructs a document parser using the default symbol table
 	* and grammar pool.
 	*/
-	@:overload private function new(config : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration) : Void;
+	@:overload @:protected private function new(config : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration) : Void;
 	
 	/**
 	* The start of the document.
@@ -60,7 +60,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startDocument(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, encoding : String, namespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startDocument(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, encoding : String, namespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Notifies of the presence of an XMLDecl line in the document. If
@@ -75,7 +75,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function xmlDecl(version : String, encoding : String, standalone : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function xmlDecl(version : String, encoding : String, standalone : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Notifies of the presence of the DOCTYPE line in the document.
@@ -89,7 +89,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function doctypeDecl(rootElement : String, publicId : String, systemId : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function doctypeDecl(rootElement : String, publicId : String, systemId : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of an element. If the document specifies the start element
@@ -102,7 +102,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An empty element.
@@ -113,7 +113,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Character content.
@@ -123,7 +123,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Ignorable whitespace. For this method to be called, the document
@@ -138,7 +138,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of an element.
@@ -148,7 +148,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of a CDATA section.
@@ -156,7 +156,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a CDATA section.
@@ -164,7 +164,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of the document.
@@ -172,7 +172,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endDocument(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endDocument(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies the start of an entity.
@@ -191,7 +191,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @exception XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startGeneralEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startGeneralEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Notifies of the presence of a TextDecl line in an entity. If present,
@@ -211,7 +211,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload public function textDecl(version : String, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function textDecl(version : String, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies the end of an entity.
@@ -225,7 +225,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload public function endGeneralEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endGeneralEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A comment.
@@ -236,7 +236,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	* @exception XNIException
 	*                   Thrown by application to signal an error.
 	*/
-	@:overload public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A processing instruction. Processing instructions consist of a
@@ -256,13 +256,13 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/** Sets the document source */
-	@:overload public function setDocumentSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource) : Void;
+	@:overload @:public public function setDocumentSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource) : Void;
 	
 	/** Returns the document source */
-	@:overload public function getDocumentSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource;
+	@:overload @:public public function getDocumentSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource;
 	
 	/**
 	* The start of the DTD.
@@ -278,7 +278,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startDTD(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startDTD(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of the DTD external subset.
@@ -288,7 +288,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startExternalSubset(identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startExternalSubset(identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of the DTD external subset.
@@ -298,7 +298,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endExternalSubset(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endExternalSubset(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies the start of an entity.
@@ -317,7 +317,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @exception XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startParameterEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startParameterEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies the end of an entity.
@@ -331,7 +331,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload public function endParameterEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endParameterEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Characters within an IGNORE conditional section.
@@ -342,7 +342,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function ignoredCharacters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function ignoredCharacters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An element declaration.
@@ -354,7 +354,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function elementDecl(name : String, contentModel : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function elementDecl(name : String, contentModel : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of an attribute list.
@@ -366,7 +366,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startAttlist(elementName : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startAttlist(elementName : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An attribute declaration.
@@ -393,7 +393,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function attributeDecl(elementName : String, attributeName : String, type : String, enumeration : java.NativeArray<String>, defaultType : String, defaultValue : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedDefaultValue : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function attributeDecl(elementName : String, attributeName : String, type : String, enumeration : java.NativeArray<String>, defaultType : String, defaultValue : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedDefaultValue : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of an attribute list.
@@ -403,7 +403,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endAttlist(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endAttlist(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An internal entity declaration.
@@ -421,7 +421,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function internalEntityDecl(name : String, text : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedText : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function internalEntityDecl(name : String, text : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedText : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An external entity declaration.
@@ -436,7 +436,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function externalEntityDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function externalEntityDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An unparsed entity declaration.
@@ -450,7 +450,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function unparsedEntityDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, notation : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function unparsedEntityDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, notation : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A notation declaration
@@ -463,7 +463,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function notationDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function notationDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of a conditional section.
@@ -478,7 +478,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	* @see #CONDITIONAL_INCLUDE
 	* @see #CONDITIONAL_IGNORE
 	*/
-	@:overload public function startConditional(type : java.StdTypes.Int16, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startConditional(type : java.StdTypes.Int16, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a conditional section.
@@ -488,7 +488,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endConditional(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endConditional(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of the DTD.
@@ -498,11 +498,11 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endDTD(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endDTD(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function setDTDSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource) : Void;
+	@:overload @:public public function setDTDSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource) : Void;
 	
-	@:overload public function getDTDSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource;
+	@:overload @:public public function getDTDSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource;
 	
 	/**
 	* The start of a content model. Depending on the type of the content
@@ -515,7 +515,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startContentModel(elementName : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startContentModel(elementName : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A content model of ANY.
@@ -528,7 +528,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	* @see #empty
 	* @see #startGroup
 	*/
-	@:overload public function any(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function any(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A content model of EMPTY.
@@ -541,7 +541,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	* @see #any
 	* @see #startGroup
 	*/
-	@:overload public function empty(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function empty(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A start of either a mixed or children content model. A mixed
@@ -557,7 +557,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	* @see #any
 	* @see #empty
 	*/
-	@:overload public function startGroup(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startGroup(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The appearance of "#PCDATA" within a group signifying a
@@ -571,7 +571,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @see #startGroup
 	*/
-	@:overload public function pcdata(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function pcdata(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A referenced element in a mixed or children content model.
@@ -582,7 +582,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function element(elementName : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function element(elementName : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The separator between choices or sequences of a mixed or children
@@ -597,7 +597,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	* @see #SEPARATOR_CHOICE
 	* @see #SEPARATOR_SEQUENCE
 	*/
-	@:overload public function separator(separator : java.StdTypes.Int16, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function separator(separator : java.StdTypes.Int16, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The occurrence count for a child in a children content model or
@@ -614,7 +614,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	* @see #OCCURS_ZERO_OR_MORE
 	* @see #OCCURS_ONE_OR_MORE
 	*/
-	@:overload public function occurrence(occurrence : java.StdTypes.Int16, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function occurrence(occurrence : java.StdTypes.Int16, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a group for mixed or children content models.
@@ -624,7 +624,7 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endGroup(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endGroup(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a content model.
@@ -634,16 +634,16 @@ extern class AbstractXMLDocumentParser extends com.sun.org.apache.xerces.interna
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endContentModel(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endContentModel(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function setDTDContentModelSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource) : Void;
+	@:overload @:public public function setDTDContentModelSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource) : Void;
 	
-	@:overload public function getDTDContentModelSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource;
+	@:overload @:public public function getDTDContentModelSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource;
 	
 	/**
 	* reset all components before parsing
 	*/
-	@:overload override private function reset() : Void;
+	@:overload @:protected override private function reset() : Void;
 	
 	
 }

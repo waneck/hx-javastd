@@ -25,11 +25,11 @@ package com.sun.tools.internal.xjc;
 */
 @:internal extern class ProgressCodeWriter extends com.sun.codemodel.internal.writer.FilterCodeWriter
 {
-	@:overload public function new(output : com.sun.codemodel.internal.CodeWriter, progress : com.sun.tools.internal.xjc.XJCListener, totalFileCount : Int) : Void;
+	@:overload @:public public function new(output : com.sun.codemodel.internal.CodeWriter, progress : com.sun.tools.internal.xjc.XJCListener, totalFileCount : Int) : Void;
 	
-	@:overload public function openSource(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.Writer;
+	@:overload @:public override public function openSource(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.Writer;
 	
-	@:overload public function openBinary(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.OutputStream;
+	@:overload @:public override public function openBinary(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.OutputStream;
 	
 	
 }

@@ -32,7 +32,7 @@ extern class JMXConnectorServerFactory
 	* MBean-specific class loader.  The value associated with this
 	* attribute is an instance of {@link ClassLoader}.</p>
 	*/
-	public static var DEFAULT_CLASS_LOADER(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_CLASS_LOADER(default, null) : String;
 	
 	/**
 	* <p>Name of the attribute that specifies the default class
@@ -42,7 +42,7 @@ extern class JMXConnectorServerFactory
 	* attribute is an instance of {@link javax.management.ObjectName
 	* ObjectName}.</p>
 	*/
-	public static var DEFAULT_CLASS_LOADER_NAME(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_CLASS_LOADER_NAME(default, null) : String;
 	
 	/**
 	* <p>Name of the attribute that specifies the provider packages
@@ -50,7 +50,7 @@ extern class JMXConnectorServerFactory
 	* The value associated with this attribute is a string with
 	* package names separated by vertical bars (<code>|</code>).</p>
 	*/
-	public static var PROTOCOL_PROVIDER_PACKAGES(default, null) : String;
+	@:public @:static @:final public static var PROTOCOL_PROVIDER_PACKAGES(default, null) : String;
 	
 	/**
 	* <p>Name of the attribute that specifies the class
@@ -58,7 +58,7 @@ extern class JMXConnectorServerFactory
 	* The value associated with this attribute is an instance
 	* of {@link ClassLoader}.</p>
 	*/
-	public static var PROTOCOL_PROVIDER_CLASS_LOADER(default, null) : String;
+	@:public @:static @:final public static var PROTOCOL_PROVIDER_CLASS_LOADER(default, null) : String;
 	
 	/**
 	* <p>Creates a connector server at the given address.  The
@@ -97,7 +97,7 @@ extern class JMXConnectorServerFactory
 	* protocol in <code>serviceURL</code> but it cannot be used for
 	* some reason.
 	*/
-	@:overload public static function newJMXConnectorServer(serviceURL : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>, mbeanServer : javax.management.MBeanServer) : javax.management.remote.JMXConnectorServer;
+	@:overload @:public @:static public static function newJMXConnectorServer(serviceURL : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>, mbeanServer : javax.management.MBeanServer) : javax.management.remote.JMXConnectorServer;
 	
 	
 }

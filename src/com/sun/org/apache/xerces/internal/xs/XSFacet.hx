@@ -28,28 +28,28 @@ extern interface XSFacet extends com.sun.org.apache.xerces.internal.xs.XSObject
 	* The name of the facet, e.g. <code>FACET_LENGTH, FACET_TOTALDIGITS</code>
 	*  (see <code>XSSimpleTypeDefinition</code>).
 	*/
-	@:overload public function getFacetKind() : java.StdTypes.Int16;
+	@:overload @:public public function getFacetKind() : java.StdTypes.Int16;
 	
 	/**
 	* A value of this facet.
 	*/
-	@:overload public function getLexicalFacetValue() : String;
+	@:overload @:public public function getLexicalFacetValue() : String;
 	
 	/**
 	* [Facets]: check whether a facet is fixed.
 	*/
-	@:overload public function getFixed() : Bool;
+	@:overload @:public public function getFixed() : Bool;
 	
 	/**
 	* An annotation if it exists, otherwise <code>null</code>. If not null
 	* then the first [annotation] from the sequence of annotations.
 	*/
-	@:overload public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:overload @:public public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
 	/**
 	* A sequence of [annotations] or an empty <code>XSObjectList</code>.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	
 }

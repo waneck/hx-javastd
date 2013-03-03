@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.message.jaxb;
 */
 extern class JAXBMessage extends com.sun.xml.internal.ws.message.AbstractMessageImpl
 {
-	@:overload public static function create(context : com.sun.xml.internal.bind.api.JAXBRIContext, jaxbObject : Dynamic, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, headers : com.sun.xml.internal.ws.api.message.HeaderList, attachments : com.sun.xml.internal.ws.api.message.AttachmentSet) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function create(context : com.sun.xml.internal.bind.api.JAXBRIContext, jaxbObject : Dynamic, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, headers : com.sun.xml.internal.ws.api.message.HeaderList, attachments : com.sun.xml.internal.ws.api.message.AttachmentSet) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates a {@link Message} backed by a JAXB bean.
@@ -39,7 +39,7 @@ extern class JAXBMessage extends com.sun.xml.internal.ws.message.AbstractMessage
 	* @param soapVersion
 	*      The SOAP version of the message. Must not be null.
 	*/
-	@:overload public static function create(context : com.sun.xml.internal.bind.api.JAXBRIContext, jaxbObject : Dynamic, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function create(context : com.sun.xml.internal.bind.api.JAXBRIContext, jaxbObject : Dynamic, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates a {@link Message} backed by a JAXB bean.
@@ -48,37 +48,37 @@ extern class JAXBMessage extends com.sun.xml.internal.ws.message.AbstractMessage
 	*      Specify the payload tag name and how <tt>jaxbObject</tt> is bound.
 	* @param jaxbObject
 	*/
-	@:overload public static function create(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, jaxbObject : Dynamic, soapVer : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function create(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, jaxbObject : Dynamic, soapVer : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Copy constructor.
 	*/
-	@:overload public function new(that : com.sun.xml.internal.ws.message.jaxb.JAXBMessage) : Void;
+	@:overload @:public public function new(that : com.sun.xml.internal.ws.message.jaxb.JAXBMessage) : Void;
 	
-	@:overload override public function hasHeaders() : Bool;
+	@:overload @:public override public function hasHeaders() : Bool;
 	
-	@:overload override public function getHeaders() : com.sun.xml.internal.ws.api.message.HeaderList;
+	@:overload @:public override public function getHeaders() : com.sun.xml.internal.ws.api.message.HeaderList;
 	
-	@:overload override public function getPayloadLocalPart() : String;
+	@:overload @:public override public function getPayloadLocalPart() : String;
 	
-	@:overload override public function getPayloadNamespaceURI() : String;
+	@:overload @:public override public function getPayloadNamespaceURI() : String;
 	
-	@:overload override public function hasPayload() : Bool;
+	@:overload @:public override public function hasPayload() : Bool;
 	
-	@:overload override public function readPayloadAsSource() : javax.xml.transform.Source;
+	@:overload @:public override public function readPayloadAsSource() : javax.xml.transform.Source;
 	
-	@:overload override public function readPayloadAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
+	@:overload @:public override public function readPayloadAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
 	
-	@:overload override public function readPayload() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function readPayload() : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* Writes the payload as SAX events.
 	*/
-	@:overload override private function writePayloadTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, fragment : Bool) : Void;
+	@:overload @:protected override private function writePayloadTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, fragment : Bool) : Void;
 	
-	@:overload override public function writePayloadTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function writePayloadTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload override public function copy() : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public override public function copy() : com.sun.xml.internal.ws.api.message.Message;
 	
 	
 }

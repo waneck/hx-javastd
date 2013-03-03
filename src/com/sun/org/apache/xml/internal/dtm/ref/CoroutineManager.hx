@@ -45,7 +45,7 @@ extern class CoroutineManager
 	* an error occurred -- the ID requested was already in use, or we
 	* couldn't assign one without going over the "unreasonable value" mark
 	* */
-	@:overload @:synchronized public function co_joinCoroutineSet(coroutineID : Int) : Int;
+	@:overload @:public @:synchronized public function co_joinCoroutineSet(coroutineID : Int) : Int;
 	
 	/** In the standard coroutine architecture, coroutines are
 	* identified by their method names and are launched and run up to
@@ -62,7 +62,7 @@ extern class CoroutineManager
 	* a registered member of this group. %REVIEW% whether this is the
 	* best choice.
 	* */
-	@:overload @:synchronized public function co_entry_pause(thisCoroutine : Int) : Dynamic;
+	@:overload @:public @:synchronized public function co_entry_pause(thisCoroutine : Int) : Dynamic;
 	
 	/** Transfer control to another coroutine which has already been started and
 	* is waiting on this CoroutineManager. We won't return from this call
@@ -78,7 +78,7 @@ extern class CoroutineManager
 	* @exception java.lang.NoSuchMethodException if toCoroutine isn't a
 	* registered member of this group. %REVIEW% whether this is the best choice.
 	* */
-	@:overload @:synchronized public function co_resume(arg_object : Dynamic, thisCoroutine : Int, toCoroutine : Int) : Dynamic;
+	@:overload @:public @:synchronized public function co_resume(arg_object : Dynamic, thisCoroutine : Int, toCoroutine : Int) : Dynamic;
 	
 	/** Terminate this entire set of coroutines. The others will be
 	* deregistered and have exceptions thrown at them. Note that this
@@ -93,7 +93,7 @@ extern class CoroutineManager
 	*
 	* @param thisCoroutine Integer identifier for the coroutine requesting exit.
 	* */
-	@:overload @:synchronized public function co_exit(thisCoroutine : Int) : Void;
+	@:overload @:public @:synchronized public function co_exit(thisCoroutine : Int) : Void;
 	
 	/** Make the ID available for reuse and terminate this coroutine,
 	* transferring control to the specified coroutine. Note that this
@@ -107,7 +107,7 @@ extern class CoroutineManager
 	* @exception java.lang.NoSuchMethodException if toCoroutine isn't a
 	* registered member of this group. %REVIEW% whether this is the best choice.
 	* */
-	@:overload @:synchronized public function co_exit_to(arg_object : Dynamic, thisCoroutine : Int, toCoroutine : Int) : Void;
+	@:overload @:public @:synchronized public function co_exit_to(arg_object : Dynamic, thisCoroutine : Int, toCoroutine : Int) : Void;
 	
 	
 }

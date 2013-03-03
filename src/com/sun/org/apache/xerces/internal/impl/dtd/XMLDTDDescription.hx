@@ -69,31 +69,31 @@ extern class XMLDTDDescription extends com.sun.org.apache.xerces.internal.util.X
 	* @author Neil Graham, IBM
 	* @version $Id: XMLDTDDescription.java,v 1.4 2010/08/11 07:18:38 joehw Exp $
 	*/
-	private var fRootName : String;
+	@:protected private var fRootName : String;
 	
-	private var fPossibleRoots : java.util.ArrayList<Dynamic>;
+	@:protected private var fPossibleRoots : java.util.ArrayList<Dynamic>;
 	
-	@:overload public function new(id : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, rootName : String) : Void;
+	@:overload @:public public function new(id : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, rootName : String) : Void;
 	
-	@:overload public function new(publicId : String, literalId : String, baseId : String, expandedId : String, rootName : String) : Void;
+	@:overload @:public public function new(publicId : String, literalId : String, baseId : String, expandedId : String, rootName : String) : Void;
 	
-	@:overload public function new(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public public function new(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
-	@:overload public function getGrammarType() : String;
+	@:overload @:public public function getGrammarType() : String;
 	
 	/**
 	* @return the root name of this DTD or null if root name is unknown
 	*/
-	@:overload public function getRootName() : String;
+	@:overload @:public public function getRootName() : String;
 	
 	/** Set the root name **/
-	@:overload public function setRootName(rootName : String) : Void;
+	@:overload @:public public function setRootName(rootName : String) : Void;
 	
 	/** Set possible roots **/
-	@:overload public function setPossibleRoots(possibleRoots : java.util.ArrayList<Dynamic>) : Void;
+	@:overload @:public public function setPossibleRoots(possibleRoots : java.util.ArrayList<Dynamic>) : Void;
 	
 	/** Set possible roots **/
-	@:overload public function setPossibleRoots(possibleRoots : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function setPossibleRoots(possibleRoots : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* Compares this grammar with the given grammar. Currently, we compare
@@ -108,7 +108,7 @@ extern class XMLDTDDescription extends com.sun.org.apache.xerces.internal.util.X
 	* @param desc The description of the grammar to be compared with
 	* @return     True if they are equal, else false
 	*/
-	@:overload public function equals(desc : Dynamic) : Bool;
+	@:overload @:public public function equals(desc : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code of this grammar
@@ -116,7 +116,7 @@ extern class XMLDTDDescription extends com.sun.org.apache.xerces.internal.util.X
 	* simple hash that might avoid calls to the equals method a bit...
 	* @return The hash code
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

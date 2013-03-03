@@ -34,7 +34,7 @@ extern class CertPath implements java.io.Serializable
 	* @param type the standard name of the type of
 	* <code>Certificate</code>s in this path
 	*/
-	@:overload private function new(type : String) : Void;
+	@:overload @:protected private function new(type : String) : Void;
 	
 	/**
 	* Returns the type of <code>Certificate</code>s in this certification
@@ -45,7 +45,7 @@ extern class CertPath implements java.io.Serializable
 	* @return the type of <code>Certificate</code>s in this certification
 	* path (never null)
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	* Returns an iteration of the encodings supported by this certification
@@ -56,7 +56,7 @@ extern class CertPath implements java.io.Serializable
 	* @return an <code>Iterator</code> over the names of the supported
 	*         encodings (as Strings)
 	*/
-	@:overload @:abstract public function getEncodings() : java.util.Iterator<String>;
+	@:overload @:public @:abstract public function getEncodings() : java.util.Iterator<String>;
 	
 	/**
 	* Compares this certification path for equality with the specified
@@ -73,7 +73,7 @@ extern class CertPath implements java.io.Serializable
 	* @return true if the specified object is equal to this certification path,
 	* false otherwise
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns the hashcode for this certification path. The hash code of
@@ -90,7 +90,7 @@ extern class CertPath implements java.io.Serializable
 	*
 	* @return the hashcode value for this certification path
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this certification path.
@@ -99,7 +99,7 @@ extern class CertPath implements java.io.Serializable
 	*
 	* @return a string representation of this certification path
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the encoded form of this certification path, using the default
@@ -108,7 +108,7 @@ extern class CertPath implements java.io.Serializable
 	* @return the encoded bytes
 	* @exception CertificateEncodingException if an encoding error occurs
 	*/
-	@:overload @:abstract public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the encoded form of this certification path, using the
@@ -119,7 +119,7 @@ extern class CertPath implements java.io.Serializable
 	* @exception CertificateEncodingException if an encoding error occurs or
 	*   the encoding requested is not supported
 	*/
-	@:overload @:abstract public function getEncoded(encoding : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getEncoded(encoding : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the list of certificates in this certification path.
@@ -128,7 +128,7 @@ extern class CertPath implements java.io.Serializable
 	* @return an immutable <code>List</code> of <code>Certificate</code>s
 	*         (may be empty, but not null)
 	*/
-	@:overload @:abstract public function getCertificates() : java.util.List<java.security.cert.Certificate>;
+	@:overload @:public @:abstract public function getCertificates() : java.util.List<java.security.cert.Certificate>;
 	
 	/**
 	* Replaces the <code>CertPath</code> to be serialized with a
@@ -139,7 +139,7 @@ extern class CertPath implements java.io.Serializable
 	* @throws ObjectStreamException if a <code>CertPathRep</code> object
 	* representing this certification path could not be created
 	*/
-	@:overload private function writeReplace() : Dynamic;
+	@:overload @:protected private function writeReplace() : Dynamic;
 	
 	
 }
@@ -156,7 +156,7 @@ extern class CertPath implements java.io.Serializable
 	* @param type the standard name of a <code>CertPath</code> type
 	* @param data the encoded form of the certification path
 	*/
-	@:overload private function new(type : String, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected private function new(type : String, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns a <code>CertPath</code> constructed from the type and data.
@@ -166,7 +166,7 @@ extern class CertPath implements java.io.Serializable
 	* @throws ObjectStreamException if a <code>CertPath</code> could not
 	* be constructed
 	*/
-	@:overload private function readResolve() : Dynamic;
+	@:overload @:protected private function readResolve() : Dynamic;
 	
 	
 }

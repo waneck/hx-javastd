@@ -28,9 +28,9 @@ package com.sun.security.auth;
 	/**
 	* Creates a PolicyParser object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(expandProp : Bool) : Void;
+	@:overload @:public public function new(expandProp : Bool) : Void;
 	
 	/**
 	* Reads a policy configuration into the Policy object using a
@@ -44,25 +44,25 @@ package com.sun.security.auth;
 	* @exception IOException if an error occurs while reading the policy
 	*          configuration.
 	*/
-	@:overload public function read(policy : java.io.Reader) : Void;
+	@:overload @:public public function read(policy : java.io.Reader) : Void;
 	
-	@:overload public function add(ge : com.sun.security.auth.PolicyParser.PolicyParser_GrantEntry) : Void;
+	@:overload @:public public function add(ge : com.sun.security.auth.PolicyParser.PolicyParser_GrantEntry) : Void;
 	
-	@:overload public function replace(origGe : com.sun.security.auth.PolicyParser.PolicyParser_GrantEntry, newGe : com.sun.security.auth.PolicyParser.PolicyParser_GrantEntry) : Void;
+	@:overload @:public public function replace(origGe : com.sun.security.auth.PolicyParser.PolicyParser_GrantEntry, newGe : com.sun.security.auth.PolicyParser.PolicyParser_GrantEntry) : Void;
 	
-	@:overload public function remove(ge : com.sun.security.auth.PolicyParser.PolicyParser_GrantEntry) : Bool;
+	@:overload @:public public function remove(ge : com.sun.security.auth.PolicyParser.PolicyParser_GrantEntry) : Bool;
 	
 	/**
 	* Returns the (possibly expanded) keystore location, or null if the
 	* expansion fails.
 	*/
-	@:overload public function getKeyStoreUrl() : String;
+	@:overload @:public public function getKeyStoreUrl() : String;
 	
-	@:overload public function setKeyStoreUrl(url : String) : Void;
+	@:overload @:public public function setKeyStoreUrl(url : String) : Void;
 	
-	@:overload public function getKeyStoreType() : String;
+	@:overload @:public public function getKeyStoreType() : String;
 	
-	@:overload public function setKeyStoreType(type : String) : Void;
+	@:overload @:public public function setKeyStoreType(type : String) : Void;
 	
 	/**
 	* Enumerate all the entries in the global policy object.
@@ -70,14 +70,14 @@ package com.sun.security.auth;
 	* should use the Enumeration methods on the returned object
 	* to fetch the elements sequentially.
 	*/
-	@:overload public function grantElements() : java.util.Enumeration<com.sun.security.auth.PolicyParser.PolicyParser_GrantEntry>;
+	@:overload @:public public function grantElements() : java.util.Enumeration<com.sun.security.auth.PolicyParser.PolicyParser_GrantEntry>;
 	
 	/**
 	* write out the policy
 	*/
-	@:overload public function write(policy : java.io.Writer) : Void;
+	@:overload @:public public function write(policy : java.io.Writer) : Void;
 	
-	@:overload public static function main(arg : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(arg : java.NativeArray<String>) : Void;
 	
 	
 }
@@ -112,30 +112,30 @@ package com.sun.security.auth;
 */
 @:native('com$sun$security$auth$PolicyParser$GrantEntry') @:internal extern class PolicyParser_GrantEntry
 {
-	public var signedBy : String;
+	@:public public var signedBy : String;
 	
-	public var codeBase : String;
+	@:public public var codeBase : String;
 	
-	public var principals : java.util.LinkedList<com.sun.security.auth.PolicyParser.PolicyParser_PrincipalEntry>;
+	@:public public var principals : java.util.LinkedList<com.sun.security.auth.PolicyParser.PolicyParser_PrincipalEntry>;
 	
-	public var permissionEntries : java.util.Vector<com.sun.security.auth.PolicyParser.PolicyParser_PermissionEntry>;
+	@:public public var permissionEntries : java.util.Vector<com.sun.security.auth.PolicyParser.PolicyParser_PermissionEntry>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(signedBy : String, codeBase : String) : Void;
+	@:overload @:public public function new(signedBy : String, codeBase : String) : Void;
 	
-	@:overload public function add(pe : com.sun.security.auth.PolicyParser.PolicyParser_PermissionEntry) : Void;
+	@:overload @:public public function add(pe : com.sun.security.auth.PolicyParser.PolicyParser_PermissionEntry) : Void;
 	
-	@:overload public function remove(pe : com.sun.security.auth.PolicyParser.PolicyParser_PermissionEntry) : Bool;
+	@:overload @:public public function remove(pe : com.sun.security.auth.PolicyParser.PolicyParser_PermissionEntry) : Bool;
 	
-	@:overload public function contains(pe : com.sun.security.auth.PolicyParser.PolicyParser_PermissionEntry) : Bool;
+	@:overload @:public public function contains(pe : com.sun.security.auth.PolicyParser.PolicyParser_PermissionEntry) : Bool;
 	
 	/**
 	* Enumerate all the permission entries in this GrantEntry.
 	*/
-	@:overload public function permissionElements() : java.util.Enumeration<com.sun.security.auth.PolicyParser.PolicyParser_PermissionEntry>;
+	@:overload @:public public function permissionElements() : java.util.Enumeration<com.sun.security.auth.PolicyParser.PolicyParser_PermissionEntry>;
 	
-	@:overload public function write(out : java.io.PrintWriter) : Void;
+	@:overload @:public public function write(out : java.io.PrintWriter) : Void;
 	
 	
 }
@@ -154,7 +154,7 @@ package com.sun.security.auth;
 	*
 	* @param principalName the <code>Principal</code> name. <p>
 	*/
-	@:overload public function new(principalClass : String, principalName : String) : Void;
+	@:overload @:public public function new(principalClass : String, principalName : String) : Void;
 	
 	/**
 	* Test for equality between the specified object and this object.
@@ -167,7 +167,7 @@ package com.sun.security.auth;
 	*
 	* @return true if the objects are equal, false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Return a hashcode for this <code>PrincipalEntry</code>.
@@ -176,7 +176,7 @@ package com.sun.security.auth;
 	*
 	* @return a hashcode for this <code>PrincipalEntry</code>.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
@@ -203,27 +203,27 @@ package com.sun.security.auth;
 */
 @:native('com$sun$security$auth$PolicyParser$PermissionEntry') @:internal extern class PolicyParser_PermissionEntry
 {
-	public var permission : String;
+	@:public public var permission : String;
 	
-	public var name : String;
+	@:public public var name : String;
 	
-	public var action : String;
+	@:public public var action : String;
 	
-	public var signedBy : String;
+	@:public public var signedBy : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(permission : String, name : String, action : String) : Void;
+	@:overload @:public public function new(permission : String, name : String, action : String) : Void;
 	
 	/**
 	* Calculates a hash code value for the object.  Objects
 	* which are equal will also have the same hashcode.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function write(out : java.io.PrintWriter) : Void;
+	@:overload @:public public function write(out : java.io.PrintWriter) : Void;
 	
 	
 }
@@ -237,11 +237,11 @@ package com.sun.security.auth;
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
-	@:overload public function new(line : Int, msg : String) : Void;
+	@:overload @:public public function new(line : Int, msg : String) : Void;
 	
-	@:overload public function new(line : Int, expect : String, actual : String) : Void;
+	@:overload @:public public function new(line : Int, expect : String, actual : String) : Void;
 	
 	
 }

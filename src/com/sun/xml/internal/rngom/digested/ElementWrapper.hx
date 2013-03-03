@@ -46,7 +46,7 @@ package com.sun.xml.internal.rngom.digested;
 */
 @:internal extern class ElementWrapper implements com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation
 {
-	@:overload public function new(e : org.w3c.dom.Element) : Void;
+	@:overload @:public public function new(e : org.w3c.dom.Element) : Void;
 	
 	
 }

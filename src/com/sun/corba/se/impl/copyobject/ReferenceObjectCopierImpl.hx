@@ -25,7 +25,7 @@ package com.sun.corba.se.impl.copyobject;
 */
 extern class ReferenceObjectCopierImpl implements com.sun.corba.se.spi.copyobject.ObjectCopier
 {
-	@:overload public function copy(obj : Dynamic) : Dynamic;
+	@:overload @:public public function copy(obj : Dynamic) : Dynamic;
 	
 	
 }

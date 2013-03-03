@@ -28,14 +28,14 @@ extern class JPEGImageReadParam extends javax.imageio.ImageReadParam
 	/**
 	* Constructs a <code>JPEGImageReadParam</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns <code>true</code> if tables are currently set.
 	*
 	* @return <code>true</code> if tables are present.
 	*/
-	@:overload public function areTablesSet() : Bool;
+	@:overload @:public public function areTablesSet() : Bool;
 	
 	/**
 	* Sets the quantization and Huffman tables to use in decoding
@@ -58,7 +58,7 @@ extern class JPEGImageReadParam extends javax.imageio.ImageReadParam
 	*
 	* @see #unsetDecodeTables
 	*/
-	@:overload public function setDecodeTables(qTables : java.NativeArray<javax.imageio.plugins.jpeg.JPEGQTable>, DCHuffmanTables : java.NativeArray<javax.imageio.plugins.jpeg.JPEGHuffmanTable>, ACHuffmanTables : java.NativeArray<javax.imageio.plugins.jpeg.JPEGHuffmanTable>) : Void;
+	@:overload @:public public function setDecodeTables(qTables : java.NativeArray<javax.imageio.plugins.jpeg.JPEGQTable>, DCHuffmanTables : java.NativeArray<javax.imageio.plugins.jpeg.JPEGHuffmanTable>, ACHuffmanTables : java.NativeArray<javax.imageio.plugins.jpeg.JPEGHuffmanTable>) : Void;
 	
 	/**
 	* Removes any quantization and Huffman tables that are currently
@@ -66,7 +66,7 @@ extern class JPEGImageReadParam extends javax.imageio.ImageReadParam
 	*
 	* @see #setDecodeTables
 	*/
-	@:overload public function unsetDecodeTables() : Void;
+	@:overload @:public public function unsetDecodeTables() : Void;
 	
 	/**
 	* Returns a copy of the array of quantization tables set on the
@@ -78,7 +78,7 @@ extern class JPEGImageReadParam extends javax.imageio.ImageReadParam
 	*
 	* @see #setDecodeTables
 	*/
-	@:overload public function getQTables() : java.NativeArray<javax.imageio.plugins.jpeg.JPEGQTable>;
+	@:overload @:public public function getQTables() : java.NativeArray<javax.imageio.plugins.jpeg.JPEGQTable>;
 	
 	/**
 	* Returns a copy of the array of DC Huffman tables set on the
@@ -90,7 +90,7 @@ extern class JPEGImageReadParam extends javax.imageio.ImageReadParam
 	*
 	* @see #setDecodeTables
 	*/
-	@:overload public function getDCHuffmanTables() : java.NativeArray<javax.imageio.plugins.jpeg.JPEGHuffmanTable>;
+	@:overload @:public public function getDCHuffmanTables() : java.NativeArray<javax.imageio.plugins.jpeg.JPEGHuffmanTable>;
 	
 	/**
 	* Returns a copy of the array of AC Huffman tables set on the
@@ -102,7 +102,7 @@ extern class JPEGImageReadParam extends javax.imageio.ImageReadParam
 	*
 	* @see #setDecodeTables
 	*/
-	@:overload public function getACHuffmanTables() : java.NativeArray<javax.imageio.plugins.jpeg.JPEGHuffmanTable>;
+	@:overload @:public public function getACHuffmanTables() : java.NativeArray<javax.imageio.plugins.jpeg.JPEGHuffmanTable>;
 	
 	
 }

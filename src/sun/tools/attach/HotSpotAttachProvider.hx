@@ -25,16 +25,16 @@ package sun.tools.attach;
 */
 extern class HotSpotAttachProvider extends com.sun.tools.attach.spi.AttachProvider
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function checkAttachPermission() : Void;
+	@:overload @:public public function checkAttachPermission() : Void;
 	
 	/*
 	* This listVirtualMachines implementation is based on jvmstat. Can override
 	* this in platform implementations when there is a more efficient mechanism
 	* available.
 	*/
-	@:overload override public function listVirtualMachines() : java.util.List<com.sun.tools.attach.VirtualMachineDescriptor>;
+	@:overload @:public override public function listVirtualMachines() : java.util.List<com.sun.tools.attach.VirtualMachineDescriptor>;
 	
 	
 }
@@ -43,7 +43,7 @@ extern class HotSpotAttachProvider extends com.sun.tools.attach.spi.AttachProvid
 */
 @:native('sun$tools$attach$HotSpotAttachProvider$HotSpotVirtualMachineDescriptor') @:internal extern class HotSpotAttachProvider_HotSpotVirtualMachineDescriptor extends com.sun.tools.attach.VirtualMachineDescriptor
 {
-	@:overload public function isAttachable() : Bool;
+	@:overload @:public public function isAttachable() : Bool;
 	
 	
 }

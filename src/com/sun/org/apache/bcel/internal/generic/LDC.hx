@@ -58,31 +58,31 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class LDC extends com.sun.org.apache.bcel.internal.generic.CPInstruction implements com.sun.org.apache.bcel.internal.generic.PushInstruction implements com.sun.org.apache.bcel.internal.generic.ExceptionThrower implements com.sun.org.apache.bcel.internal.generic.TypedInstruction
 {
-	@:overload public function new(index : Int) : Void;
+	@:overload @:public public function new(index : Int) : Void;
 	
-	@:overload @:final private function setSize() : Void;
+	@:overload @:protected @:final private function setSize() : Void;
 	
 	/**
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload override public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload @:public override public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* Set the index to constant pool and adjust size.
 	*/
-	@:overload @:final override public function setIndex(index : Int) : Void;
+	@:overload @:public @:final override public function setIndex(index : Int) : Void;
 	
 	/**
 	* Read needed data (e.g. index) from file.
 	*/
-	@:overload override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload @:protected override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
-	@:overload public function getValue(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Dynamic;
+	@:overload @:public public function getValue(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Dynamic;
 	
-	@:overload override public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public override public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
-	@:overload public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -92,7 +92,7 @@ extern class LDC extends com.sun.org.apache.bcel.internal.generic.CPInstruction 
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

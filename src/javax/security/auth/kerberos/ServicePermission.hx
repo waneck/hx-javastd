@@ -35,7 +35,7 @@ extern class ServicePermission extends java.security.Permission implements java.
 	* <p>
 	* @param action the action string
 	*/
-	@:overload public function new(servicePrincipal : String, action : String) : Void;
+	@:overload @:public public function new(servicePrincipal : String, action : String) : Void;
 	
 	/**
 	* Checks if this Kerberos service permission object "implies" the
@@ -47,7 +47,7 @@ extern class ServicePermission extends java.security.Permission implements java.
 	* @return true if the specified permission is implied by this object,
 	* false if not.
 	*/
-	@:overload override public function implies(p : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two ServicePermission objects for equality.
@@ -58,21 +58,21 @@ extern class ServicePermission extends java.security.Permission implements java.
 	*  same service principal, and actions as this
 	* ServicePermission object.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Returns the canonical string representation of the actions.
 	* Always returns present actions in the following order:
 	* initiate, accept.
 	*/
-	@:overload override public function getActions() : String;
+	@:overload @:public override public function getActions() : String;
 	
 	/**
 	* Returns a PermissionCollection object for storing
@@ -86,13 +86,13 @@ extern class ServicePermission extends java.security.Permission implements java.
 	* @return a new PermissionCollection object suitable for storing
 	* ServicePermissions.
 	*/
-	@:overload override public function newPermissionCollection() : java.security.PermissionCollection;
+	@:overload @:public override public function newPermissionCollection() : java.security.PermissionCollection;
 	
 	
 }
 @:internal extern class KrbServicePermissionCollection extends java.security.PermissionCollection implements java.io.Serializable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Check and see if this collection of permissions implies the permissions
@@ -103,7 +103,7 @@ extern class ServicePermission extends java.security.Permission implements java.
 	* @return true if "permission" is a proper subset of a permission in
 	* the collection, false if not.
 	*/
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Adds a permission to the ServicePermissions. The key for
@@ -117,7 +117,7 @@ extern class ServicePermission extends java.security.Permission implements java.
 	* @exception SecurityException - if this PermissionCollection object
 	*                                has been marked readonly
 	*/
-	@:overload override public function add(permission : java.security.Permission) : Void;
+	@:overload @:public override public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* Returns an enumeration of all the ServicePermission objects
@@ -125,7 +125,7 @@ extern class ServicePermission extends java.security.Permission implements java.
 	*
 	* @return an enumeration of all the ServicePermission objects.
 	*/
-	@:overload override public function elements() : java.util.Enumeration<java.security.Permission>;
+	@:overload @:public override public function elements() : java.util.Enumeration<java.security.Permission>;
 	
 	
 }

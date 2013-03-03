@@ -51,12 +51,12 @@ package java.rmi.activation;
 	*
 	* @serial
 	*/
-	public var detail : java.lang.Throwable;
+	@:public public var detail : java.lang.Throwable;
 	
 	/**
 	* Constructs an <code>ActivationException</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>ActivationException</code> with the specified
@@ -64,7 +64,7 @@ package java.rmi.activation;
 	*
 	* @param s the detail message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs an <code>ActivationException</code> with the specified
@@ -74,7 +74,7 @@ package java.rmi.activation;
 	* @param s the detail message
 	* @param cause the cause
 	*/
-	@:overload public function new(s : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(s : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Returns the detail message, including the message from the cause, if
@@ -82,7 +82,7 @@ package java.rmi.activation;
 	*
 	* @return  the detail message
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	/**
 	* Returns the cause of this exception.  This method returns the value
@@ -91,7 +91,7 @@ package java.rmi.activation;
 	* @return  the cause, which may be <tt>null</tt>.
 	* @since   1.4
 	*/
-	@:require(java4) @:overload override public function getCause() : java.lang.Throwable;
+	@:require(java4) @:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

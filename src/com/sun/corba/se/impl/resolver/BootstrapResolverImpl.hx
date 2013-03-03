@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.resolver;
 */
 extern class BootstrapResolverImpl implements com.sun.corba.se.spi.resolver.Resolver
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, host : String, port : Int) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, host : String, port : Int) : Void;
 	
-	@:overload public function resolve(identifier : String) : org.omg.CORBA.Object;
+	@:overload @:public public function resolve(identifier : String) : org.omg.CORBA.Object;
 	
-	@:overload public function list() : java.util.Set<Dynamic>;
+	@:overload @:public public function list() : java.util.Set<Dynamic>;
 	
 	
 }

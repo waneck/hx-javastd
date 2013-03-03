@@ -31,7 +31,7 @@ extern class ChangeEvent extends java.util.EventObject
 	* @param source  the Object that is the source of the event
 	*                (typically <code>this</code>)
 	*/
-	@:overload public function new(source : Dynamic) : Void;
+	@:overload @:public public function new(source : Dynamic) : Void;
 	
 	
 }

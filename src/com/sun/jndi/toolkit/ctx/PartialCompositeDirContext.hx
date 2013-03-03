@@ -36,88 +36,88 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	*
 	* @author Rosanna Lee
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/* Equivalent to DirContext methods */
-	@:overload @:abstract private function p_getAttributes(name : javax.naming.Name, attrIds : java.NativeArray<String>, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.directory.Attributes;
+	@:overload @:protected @:abstract private function p_getAttributes(name : javax.naming.Name, attrIds : java.NativeArray<String>, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.directory.Attributes;
 	
-	@:overload @:abstract private function p_modifyAttributes(name : javax.naming.Name, mod_op : Int, attrs : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected @:abstract private function p_modifyAttributes(name : javax.naming.Name, mod_op : Int, attrs : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload @:abstract private function p_modifyAttributes(name : javax.naming.Name, mods : java.NativeArray<javax.naming.directory.ModificationItem>, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected @:abstract private function p_modifyAttributes(name : javax.naming.Name, mods : java.NativeArray<javax.naming.directory.ModificationItem>, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload @:abstract private function p_bind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected @:abstract private function p_bind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload @:abstract private function p_rebind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected @:abstract private function p_rebind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload @:abstract private function p_createSubcontext(name : javax.naming.Name, attrs : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.directory.DirContext;
+	@:overload @:protected @:abstract private function p_createSubcontext(name : javax.naming.Name, attrs : javax.naming.directory.Attributes, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.directory.DirContext;
 	
-	@:overload @:abstract private function p_search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected @:abstract private function p_search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload @:abstract private function p_search(name : javax.naming.Name, filter : String, cons : javax.naming.directory.SearchControls, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected @:abstract private function p_search(name : javax.naming.Name, filter : String, cons : javax.naming.directory.SearchControls, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload @:abstract private function p_search(name : javax.naming.Name, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected @:abstract private function p_search(name : javax.naming.Name, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload @:abstract private function p_getSchema(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.directory.DirContext;
+	@:overload @:protected @:abstract private function p_getSchema(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.directory.DirContext;
 	
-	@:overload @:abstract private function p_getSchemaClassDefinition(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.directory.DirContext;
+	@:overload @:protected @:abstract private function p_getSchemaClassDefinition(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.directory.DirContext;
 	
-	@:overload public function getAttributes(name : String) : javax.naming.directory.Attributes;
+	@:overload @:public public function getAttributes(name : String) : javax.naming.directory.Attributes;
 	
-	@:overload public function getAttributes(name : javax.naming.Name) : javax.naming.directory.Attributes;
+	@:overload @:public public function getAttributes(name : javax.naming.Name) : javax.naming.directory.Attributes;
 	
-	@:overload public function getAttributes(name : String, attrIds : java.NativeArray<String>) : javax.naming.directory.Attributes;
+	@:overload @:public public function getAttributes(name : String, attrIds : java.NativeArray<String>) : javax.naming.directory.Attributes;
 	
-	@:overload public function getAttributes(name : javax.naming.Name, attrIds : java.NativeArray<String>) : javax.naming.directory.Attributes;
+	@:overload @:public public function getAttributes(name : javax.naming.Name, attrIds : java.NativeArray<String>) : javax.naming.directory.Attributes;
 	
-	@:overload public function modifyAttributes(name : String, mod_op : Int, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function modifyAttributes(name : String, mod_op : Int, attrs : javax.naming.directory.Attributes) : Void;
 	
-	@:overload public function modifyAttributes(name : javax.naming.Name, mod_op : Int, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function modifyAttributes(name : javax.naming.Name, mod_op : Int, attrs : javax.naming.directory.Attributes) : Void;
 	
-	@:overload public function modifyAttributes(name : String, mods : java.NativeArray<javax.naming.directory.ModificationItem>) : Void;
+	@:overload @:public public function modifyAttributes(name : String, mods : java.NativeArray<javax.naming.directory.ModificationItem>) : Void;
 	
-	@:overload public function modifyAttributes(name : javax.naming.Name, mods : java.NativeArray<javax.naming.directory.ModificationItem>) : Void;
+	@:overload @:public public function modifyAttributes(name : javax.naming.Name, mods : java.NativeArray<javax.naming.directory.ModificationItem>) : Void;
 	
-	@:overload public function bind(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function bind(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
 	
-	@:overload public function bind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function bind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
 	
-	@:overload public function rebind(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function rebind(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
 	
-	@:overload public function rebind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function rebind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
 	
-	@:overload public function createSubcontext(name : String, attrs : javax.naming.directory.Attributes) : javax.naming.directory.DirContext;
+	@:overload @:public public function createSubcontext(name : String, attrs : javax.naming.directory.Attributes) : javax.naming.directory.DirContext;
 	
-	@:overload public function createSubcontext(name : javax.naming.Name, attrs : javax.naming.directory.Attributes) : javax.naming.directory.DirContext;
+	@:overload @:public public function createSubcontext(name : javax.naming.Name, attrs : javax.naming.directory.Attributes) : javax.naming.directory.DirContext;
 	
-	@:overload public function search(name : String, matchingAttributes : javax.naming.directory.Attributes) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : String, matchingAttributes : javax.naming.directory.Attributes) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
-	@:overload public function search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
-	@:overload public function search(name : String, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : String, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
-	@:overload public function search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
-	@:overload public function search(name : String, filter : String, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : String, filter : String, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
-	@:overload public function search(name : javax.naming.Name, filter : String, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : javax.naming.Name, filter : String, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
-	@:overload public function search(name : String, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : String, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
-	@:overload public function search(name : javax.naming.Name, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : javax.naming.Name, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
-	@:overload public function getSchema(name : String) : javax.naming.directory.DirContext;
+	@:overload @:public public function getSchema(name : String) : javax.naming.directory.DirContext;
 	
-	@:overload public function getSchema(name : javax.naming.Name) : javax.naming.directory.DirContext;
+	@:overload @:public public function getSchema(name : javax.naming.Name) : javax.naming.directory.DirContext;
 	
-	@:overload public function getSchemaClassDefinition(name : String) : javax.naming.directory.DirContext;
+	@:overload @:public public function getSchemaClassDefinition(name : String) : javax.naming.directory.DirContext;
 	
-	@:overload public function getSchemaClassDefinition(name : javax.naming.Name) : javax.naming.directory.DirContext;
+	@:overload @:public public function getSchemaClassDefinition(name : javax.naming.Name) : javax.naming.directory.DirContext;
 	
 	/**
 	* Retrieves a PartialCompositeDirContext for the resolved object in
 	* cont.  Throws CannotProceedException if not successful.
 	*/
-	@:overload private static function getPCDirContext(cont : com.sun.jndi.toolkit.ctx.Continuation) : com.sun.jndi.toolkit.ctx.PartialCompositeDirContext;
+	@:overload @:protected @:static private static function getPCDirContext(cont : com.sun.jndi.toolkit.ctx.Continuation) : com.sun.jndi.toolkit.ctx.PartialCompositeDirContext;
 	
 	/*
 	* Dummy implementations defined here so that direct subclasses
@@ -125,29 +125,29 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* have to provide dummy implementations for these.
 	* Override these for subclasses of AtomicDirContext.
 	*/
-	@:overload override private function c_parseComponent(inputName : String, cont : com.sun.jndi.toolkit.ctx.Continuation) : com.sun.jndi.toolkit.ctx.StringHeadTail;
+	@:overload @:protected override private function c_parseComponent(inputName : String, cont : com.sun.jndi.toolkit.ctx.Continuation) : com.sun.jndi.toolkit.ctx.StringHeadTail;
 	
-	@:overload override private function a_lookup(name : String, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
+	@:overload @:protected override private function a_lookup(name : String, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
 	
-	@:overload override private function a_lookupLink(name : String, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
+	@:overload @:protected override private function a_lookupLink(name : String, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
 	
-	@:overload override private function a_list(cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected override private function a_list(cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload override private function a_listBindings(cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected override private function a_listBindings(cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload override private function a_bind(name : String, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function a_bind(name : String, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload override private function a_rebind(name : String, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function a_rebind(name : String, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload override private function a_unbind(name : String, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function a_unbind(name : String, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload override private function a_destroySubcontext(name : String, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function a_destroySubcontext(name : String, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload override private function a_createSubcontext(name : String, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.Context;
+	@:overload @:protected override private function a_createSubcontext(name : String, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.Context;
 	
-	@:overload override private function a_rename(oldname : String, newname : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function a_rename(oldname : String, newname : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload override private function a_getNameParser(cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NameParser;
+	@:overload @:protected override private function a_getNameParser(cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NameParser;
 	
 	/**
 	* Binds a name to an object.
@@ -162,7 +162,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	*          if object did not supply all mandatory attributes
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload @:public public function bind(name : String, obj : Dynamic) : Void;
+	@:overload @:public @:public override public function bind(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Retrieves the full name of this context within its own namespace.
@@ -183,7 +183,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:public override public function getNameInNamespace() : String;
+	@:require(java3) @:overload @:public @:public @:public override public function getNameInNamespace() : String;
 	
 	/**
 	* Binds a name to an object, overwriting any existing binding.
@@ -209,7 +209,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	*          javax.naming.directory.Attributes)
 	* @see javax.naming.directory.DirContext
 	*/
-	@:overload @:public public function rebind(name : javax.naming.Name, obj : Dynamic) : Void;
+	@:overload @:public @:public override public function rebind(name : javax.naming.Name, obj : Dynamic) : Void;
 	
 	/**
 	* Destroys the named context and removes it from the namespace.
@@ -244,7 +244,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	*
 	* @see #destroySubcontext(String)
 	*/
-	@:overload @:public public function destroySubcontext(name : javax.naming.Name) : Void;
+	@:overload @:public @:public override public function destroySubcontext(name : javax.naming.Name) : Void;
 	
 	/**
 	* Creates and binds a new context.
@@ -260,7 +260,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	*          mandatory attributes
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload @:public public function createSubcontext(name : String) : javax.naming.Context;
+	@:overload @:public @:public override public function createSubcontext(name : String) : javax.naming.Context;
 	
 	/**
 	* Composes the name of this context with a name relative to
@@ -274,7 +274,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* @return  the composition of <code>prefix</code> and <code>name</code>
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload @:public public function composeName(name : String, prefix : String) : String;
+	@:overload @:public @:public override public function composeName(name : String, prefix : String) : String;
 	
 	/**
 	* Retrieves the named object.
@@ -284,7 +284,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* @return  the object bound to <tt>name</tt>
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload @:public public function lookup(name : String) : Dynamic;
+	@:overload @:public @:public override public function lookup(name : String) : Dynamic;
 	
 	/**
 	* Enumerates the names bound in the named context, along with the
@@ -305,7 +305,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* @see #listBindings(Name)
 	* @see NameClassPair
 	*/
-	@:overload @:public public function list(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
+	@:overload @:public @:public override public function list(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
 	
 	/**
 	* Enumerates the names bound in the named context, along with the
@@ -319,7 +319,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	*          enumeration is of type <tt>NameClassPair</tt>.
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload @:public public function list(name : String) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
+	@:overload @:public @:public override public function list(name : String) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
 	
 	/**
 	* Retrieves the environment in effect for this context.
@@ -336,7 +336,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* @see #addToEnvironment(String, Object)
 	* @see #removeFromEnvironment(String)
 	*/
-	@:overload @:public override public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:public @:public @:public override public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* Closes this context.
@@ -349,7 +349,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	*
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload @:public override public function close() : Void;
+	@:overload @:public @:public @:public override public function close() : Void;
 	
 	/**
 	* Binds a name to an object.
@@ -370,7 +370,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* @see javax.naming.directory.DirContext#bind(Name, Object,
 	*          javax.naming.directory.Attributes)
 	*/
-	@:overload @:public public function bind(name : javax.naming.Name, obj : Dynamic) : Void;
+	@:overload @:public @:public override public function bind(name : javax.naming.Name, obj : Dynamic) : Void;
 	
 	/**
 	* Retrieves the named object, following links except
@@ -386,7 +386,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	*
 	* @see #lookupLink(String)
 	*/
-	@:overload @:public public function lookupLink(name : javax.naming.Name) : Dynamic;
+	@:overload @:public @:public override public function lookupLink(name : javax.naming.Name) : Dynamic;
 	
 	/**
 	* Retrieves the parser associated with the named context.
@@ -398,7 +398,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	*          components
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload @:public public function getNameParser(name : String) : javax.naming.NameParser;
+	@:overload @:public @:public override public function getNameParser(name : String) : javax.naming.NameParser;
 	
 	/**
 	* Unbinds the named object.
@@ -421,7 +421,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* @throws  NamingException if a naming exception is encountered
 	* @see #unbind(String)
 	*/
-	@:overload @:public public function unbind(name : javax.naming.Name) : Void;
+	@:overload @:public @:public override public function unbind(name : javax.naming.Name) : Void;
 	
 	/**
 	* Unbinds the named object.
@@ -432,7 +432,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* @throws  NameNotFoundException if an intermediate context does not exist
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload @:public public function unbind(name : String) : Void;
+	@:overload @:public @:public override public function unbind(name : String) : Void;
 	
 	/**
 	* Creates and binds a new context.
@@ -454,7 +454,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* @see #createSubcontext(String)
 	* @see javax.naming.directory.DirContext#createSubcontext
 	*/
-	@:overload @:public public function createSubcontext(name : javax.naming.Name) : javax.naming.Context;
+	@:overload @:public @:public override public function createSubcontext(name : javax.naming.Name) : javax.naming.Context;
 	
 	/**
 	* Retrieves the parser associated with the named context.
@@ -475,7 +475,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* @see #getNameParser(String)
 	* @see CompoundName
 	*/
-	@:overload @:public public function getNameParser(name : javax.naming.Name) : javax.naming.NameParser;
+	@:overload @:public @:public override public function getNameParser(name : javax.naming.Name) : javax.naming.NameParser;
 	
 	/**
 	* Adds a new environment property to the environment of this
@@ -493,7 +493,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* @see #getEnvironment()
 	* @see #removeFromEnvironment(String)
 	*/
-	@:overload @:public override public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
+	@:overload @:public @:public @:public override public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
 	
 	/**
 	* Binds a new name to the object bound to an old name, and unbinds
@@ -513,7 +513,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* @see #bind(Name, Object)
 	* @see #rebind(Name, Object)
 	*/
-	@:overload @:public public function rename(oldName : javax.naming.Name, newName : javax.naming.Name) : Void;
+	@:overload @:public @:public override public function rename(oldName : javax.naming.Name, newName : javax.naming.Name) : Void;
 	
 	/**
 	* Destroys the named context and removes it from the namespace.
@@ -527,7 +527,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* @throws  ContextNotEmptyException if the named context is not empty
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload @:public public function destroySubcontext(name : String) : Void;
+	@:overload @:public @:public override public function destroySubcontext(name : String) : Void;
 	
 	/**
 	* Binds a new name to the object bound to an old name, and unbinds
@@ -541,7 +541,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* @throws  NameAlreadyBoundException if <tt>newName</tt> is already bound
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload @:public public function rename(oldName : String, newName : String) : Void;
+	@:overload @:public @:public override public function rename(oldName : String, newName : String) : Void;
 	
 	/**
 	* Enumerates the names bound in the named context, along with the
@@ -562,7 +562,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* @see #list(Name)
 	* @see Binding
 	*/
-	@:overload @:public public function listBindings(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.Binding>;
+	@:overload @:public @:public override public function listBindings(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.Binding>;
 	
 	/**
 	* Retrieves the named object, following links except
@@ -575,7 +575,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	*          terminal link (if any)
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload @:public public function lookupLink(name : String) : Dynamic;
+	@:overload @:public @:public override public function lookupLink(name : String) : Dynamic;
 	
 	/**
 	* Composes the name of this context with a name relative to
@@ -611,7 +611,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	*
 	* @see #composeName(String, String)
 	*/
-	@:overload @:public public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public @:public override public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
 	
 	/**
 	* Enumerates the names bound in the named context, along with the
@@ -625,7 +625,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	*          <tt>Binding</tt>.
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload @:public public function listBindings(name : String) : javax.naming.NamingEnumeration<javax.naming.Binding>;
+	@:overload @:public @:public override public function listBindings(name : String) : javax.naming.NamingEnumeration<javax.naming.Binding>;
 	
 	/**
 	* Binds a name to an object, overwriting any existing binding.
@@ -639,7 +639,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	*          if object did not supply all mandatory attributes
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload @:public public function rebind(name : String, obj : Dynamic) : Void;
+	@:overload @:public @:public override public function rebind(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Retrieves the named object.
@@ -656,7 +656,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* @see #lookup(String)
 	* @see #lookupLink(Name)
 	*/
-	@:overload @:public public function lookup(name : javax.naming.Name) : Dynamic;
+	@:overload @:public @:public override public function lookup(name : javax.naming.Name) : Dynamic;
 	
 	/**
 	* Removes an environment property from the environment of this
@@ -672,7 +672,7 @@ extern class PartialCompositeDirContext extends com.sun.jndi.toolkit.ctx.AtomicC
 	* @see #getEnvironment()
 	* @see #addToEnvironment(String, Object)
 	*/
-	@:overload @:public override public function removeFromEnvironment(propName : String) : Dynamic;
+	@:overload @:public @:public @:public override public function removeFromEnvironment(propName : String) : Dynamic;
 	
 	
 }

@@ -42,7 +42,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @see org.xml.sax.XMLReader#setProperty
 	* @see #setParent
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct an XML filter with the specified parent.
@@ -50,7 +50,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @see #setParent
 	* @see #getParent
 	*/
-	@:overload public function new(parent : org.xml.sax.XMLReader) : Void;
+	@:overload @:public public function new(parent : org.xml.sax.XMLReader) : Void;
 	
 	/**
 	* Set the parent reader.
@@ -65,7 +65,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @param parent The parent XML reader.
 	* @see #getParent
 	*/
-	@:overload public function setParent(parent : org.xml.sax.XMLReader) : Void;
+	@:overload @:public public function setParent(parent : org.xml.sax.XMLReader) : Void;
 	
 	/**
 	* Get the parent reader.
@@ -73,7 +73,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @return The parent XML reader, or null if none is set.
 	* @see #setParent
 	*/
-	@:overload public function getParent() : org.xml.sax.XMLReader;
+	@:overload @:public public function getParent() : org.xml.sax.XMLReader;
 	
 	/**
 	* Set the value of a feature.
@@ -88,7 +88,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	*            parent recognizes the feature name but
 	*            cannot set the requested value.
 	*/
-	@:overload public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public public function setFeature(name : String, value : Bool) : Void;
 	
 	/**
 	* Look up the value of a feature.
@@ -103,7 +103,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	*            parent recognizes the feature name but
 	*            cannot determine its value at this time.
 	*/
-	@:overload public function getFeature(name : String) : Bool;
+	@:overload @:public public function getFeature(name : String) : Bool;
 	
 	/**
 	* Set the value of a property.
@@ -118,7 +118,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	*            parent recognizes the property name but
 	*            cannot set the requested value.
 	*/
-	@:overload public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Look up the value of a property.
@@ -131,63 +131,63 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	*            parent recognizes the property name but
 	*            cannot determine its value at this time.
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	/**
 	* Set the entity resolver.
 	*
 	* @param resolver The new entity resolver.
 	*/
-	@:overload public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
 	
 	/**
 	* Get the current entity resolver.
 	*
 	* @return The current entity resolver, or null if none was set.
 	*/
-	@:overload public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
 	/**
 	* Set the DTD event handler.
 	*
 	* @param handler the new DTD handler
 	*/
-	@:overload public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
+	@:overload @:public public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
 	
 	/**
 	* Get the current DTD event handler.
 	*
 	* @return The current DTD handler, or null if none was set.
 	*/
-	@:overload public function getDTDHandler() : org.xml.sax.DTDHandler;
+	@:overload @:public public function getDTDHandler() : org.xml.sax.DTDHandler;
 	
 	/**
 	* Set the content event handler.
 	*
 	* @param handler the new content handler
 	*/
-	@:overload public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Get the content event handler.
 	*
 	* @return The current content handler, or null if none was set.
 	*/
-	@:overload public function getContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function getContentHandler() : org.xml.sax.ContentHandler;
 	
 	/**
 	* Set the error event handler.
 	*
 	* @param handler the new error handler
 	*/
-	@:overload public function setErrorHandler(handler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function setErrorHandler(handler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Get the current error event handler.
 	*
 	* @return The current error handler, or null if none was set.
 	*/
-	@:overload public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
 	/**
 	* Parse a document.
@@ -199,7 +199,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	*            possibly from a byte stream or character stream
 	*            supplied by the application.
 	*/
-	@:overload public function parse(input : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function parse(input : org.xml.sax.InputSource) : Void;
 	
 	/**
 	* Parse a document.
@@ -211,7 +211,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	*            possibly from a byte stream or character stream
 	*            supplied by the application.
 	*/
-	@:overload public function parse(systemId : String) : Void;
+	@:overload @:public public function parse(systemId : String) : Void;
 	
 	/**
 	* Filter an external entity resolution.
@@ -225,7 +225,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	*            I/O-related exception while obtaining the
 	*            new InputSource.
 	*/
-	@:overload public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
 	/**
 	* Filter a notation declaration event.
@@ -236,7 +236,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @exception org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload public function notationDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function notationDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Filter an unparsed entity declaration event.
@@ -248,14 +248,14 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @exception org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
+	@:overload @:public public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
 	
 	/**
 	* Filter a new document locator event.
 	*
 	* @param locator The document locator.
 	*/
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Filter a start document event.
@@ -263,7 +263,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @exception org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
 	/**
 	* Filter an end document event.
@@ -271,7 +271,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @exception org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
 	/**
 	* Filter a start Namespace prefix mapping event.
@@ -281,7 +281,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @exception org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	/**
 	* Filter an end Namespace prefix mapping event.
@@ -290,7 +290,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @exception org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
 	/**
 	* Filter a start element event.
@@ -303,7 +303,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @exception org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Filter an end element event.
@@ -315,7 +315,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @exception org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Filter a character data event.
@@ -326,7 +326,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @exception org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Filter an ignorable whitespace event.
@@ -337,7 +337,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @exception org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Filter a processing instruction event.
@@ -347,7 +347,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @exception org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* Filter a skipped entity event.
@@ -356,7 +356,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @exception org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
 	/**
 	* Filter a warning event.
@@ -365,7 +365,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @exception org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload public function warning(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(e : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Filter an error event.
@@ -374,7 +374,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @exception org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(e : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Filter a fatal error event.
@@ -383,7 +383,7 @@ extern class XMLFilterImpl implements org.xml.sax.XMLFilter implements org.xml.s
 	* @exception org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload public function fatalError(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(e : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

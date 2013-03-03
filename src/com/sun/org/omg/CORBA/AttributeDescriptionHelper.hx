@@ -31,19 +31,19 @@ package com.sun.org.omg.CORBA;
 */
 extern class AttributeDescriptionHelper
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function insert(a : org.omg.CORBA.Any, that : com.sun.org.omg.CORBA.AttributeDescription) : Void;
+	@:overload @:public @:static public static function insert(a : org.omg.CORBA.Any, that : com.sun.org.omg.CORBA.AttributeDescription) : Void;
 	
-	@:overload public static function extract(a : org.omg.CORBA.Any) : com.sun.org.omg.CORBA.AttributeDescription;
+	@:overload @:public @:static public static function extract(a : org.omg.CORBA.Any) : com.sun.org.omg.CORBA.AttributeDescription;
 	
-	@:overload @:synchronized public static function type() : org.omg.CORBA.TypeCode;
+	@:overload @:synchronized @:public @:static public static function type() : org.omg.CORBA.TypeCode;
 	
-	@:overload public static function id() : String;
+	@:overload @:public @:static public static function id() : String;
 	
-	@:overload public static function read(istream : org.omg.CORBA.portable.InputStream) : com.sun.org.omg.CORBA.AttributeDescription;
+	@:overload @:public @:static public static function read(istream : org.omg.CORBA.portable.InputStream) : com.sun.org.omg.CORBA.AttributeDescription;
 	
-	@:overload public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : com.sun.org.omg.CORBA.AttributeDescription) : Void;
+	@:overload @:public @:static public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : com.sun.org.omg.CORBA.AttributeDescription) : Void;
 	
 	
 }

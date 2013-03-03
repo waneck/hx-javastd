@@ -29,21 +29,21 @@ extern class SchemaKinds
 	*
 	* @author WS Development Team
 	*/
-	public static var XSD_ATTRIBUTE(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:public @:static @:final public static var XSD_ATTRIBUTE(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	public static var XSD_ATTRIBUTE_GROUP(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:public @:static @:final public static var XSD_ATTRIBUTE_GROUP(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	public static var XSD_CONSTRAINT(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:public @:static @:final public static var XSD_CONSTRAINT(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	public static var XSD_ELEMENT(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:public @:static @:final public static var XSD_ELEMENT(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	public static var XSD_GROUP(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:public @:static @:final public static var XSD_GROUP(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	public static var XSD_IDENTITY_CONSTRAINT(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:public @:static @:final public static var XSD_IDENTITY_CONSTRAINT(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	public static var XSD_NOTATION(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:public @:static @:final public static var XSD_NOTATION(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	public static var XSD_TYPE(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:public @:static @:final public static var XSD_TYPE(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
 	
 }

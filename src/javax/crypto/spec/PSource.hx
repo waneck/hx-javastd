@@ -34,14 +34,14 @@ extern class PSource
 	* @exception NullPointerException if <code>pSrcName</code>
 	* is null.
 	*/
-	@:overload private function new(pSrcName : String) : Void;
+	@:overload @:protected private function new(pSrcName : String) : Void;
 	
 	/**
 	* Returns the PSource algorithm name.
 	*
 	* @return the PSource algorithm name.
 	*/
-	@:overload public function getAlgorithm() : String;
+	@:overload @:public public function getAlgorithm() : String;
 	
 	
 }
@@ -56,7 +56,7 @@ extern class PSource
 	/**
 	* The encoding input P whose value equals byte[0].
 	*/
-	public static var DEFAULT(default, null) : javax.crypto.spec.PSource.PSource_PSpecified;
+	@:public @:static @:final public static var DEFAULT(default, null) : javax.crypto.spec.PSource.PSource_PSpecified;
 	
 	/**
 	* Constructs the source explicitly with the specified
@@ -67,14 +67,14 @@ extern class PSource
 	* modification.
 	* @exception NullPointerException if <code>p</code> is null.
 	*/
-	@:overload public function new(p : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(p : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the value of encoding input P.
 	* @return the value of encoding input P. A new array is
 	* returned each time this method is called.
 	*/
-	@:overload public function getValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

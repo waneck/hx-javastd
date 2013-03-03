@@ -24,21 +24,21 @@ extern class DigesterOutputStream extends java.io.ByteArrayOutputStream
 	/**
 	* @param mda
 	*/
-	@:overload public function new(mda : com.sun.org.apache.xml.internal.security.algorithms.MessageDigestAlgorithm) : Void;
+	@:overload @:public public function new(mda : com.sun.org.apache.xml.internal.security.algorithms.MessageDigestAlgorithm) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function write(arg0 : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(arg0 : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function write(arg0 : Int) : Void;
+	@:overload @:public override public function write(arg0 : Int) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function write(arg0 : java.NativeArray<java.StdTypes.Int8>, arg1 : Int, arg2 : Int) : Void;
+	@:overload @:public override public function write(arg0 : java.NativeArray<java.StdTypes.Int8>, arg1 : Int, arg2 : Int) : Void;
 	
 	/**
 	* @return the digest value
 	*/
-	@:overload public function getDigestValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getDigestValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

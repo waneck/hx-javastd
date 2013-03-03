@@ -28,16 +28,16 @@ package sun.nio.fs;
 */
 @:internal extern class AbstractWatchKey implements java.nio.file.WatchKey
 {
-	@:overload private function new(dir : java.nio.file.Path, watcher : sun.nio.fs.AbstractWatchService) : Void;
+	@:overload @:protected private function new(dir : java.nio.file.Path, watcher : sun.nio.fs.AbstractWatchService) : Void;
 	
 	/**
 	* Return the original watchable (Path)
 	*/
-	@:overload public function watchable() : java.nio.file.Path;
+	@:overload @:public public function watchable() : java.nio.file.Path;
 	
-	@:overload @:final public function pollEvents() : java.util.List<java.nio.file.WatchEvent<Dynamic>>;
+	@:overload @:public @:final public function pollEvents() : java.util.List<java.nio.file.WatchEvent<Dynamic>>;
 	
-	@:overload @:final public function reset() : Bool;
+	@:overload @:public @:final public function reset() : Bool;
 	
 	/**
 	* Tells whether or not this watch key is valid.
@@ -47,7 +47,7 @@ package sun.nio.fs;
 	*
 	* @return  {@code true} if, and only if, this watch key is valid
 	*/
-	@:overload public function isValid() : Bool;
+	@:overload @:public public function isValid() : Bool;
 	
 	/**
 	* Cancels the registration with the watch service. Upon return the watch key
@@ -60,7 +60,7 @@ package sun.nio.fs;
 	* <p> If this watch key has already been cancelled then invoking this
 	* method has no effect.  Once cancelled, a watch key remains forever invalid.
 	*/
-	@:overload public function cancel() : Void;
+	@:overload @:public public function cancel() : Void;
 	
 	
 }
@@ -79,11 +79,11 @@ package sun.nio.fs;
 */
 @:native('sun$nio$fs$AbstractWatchKey$Event') @:internal extern class AbstractWatchKey_Event<T> implements java.nio.file.WatchEvent<T>
 {
-	@:overload public function kind() : java.nio.file.WatchEvent.WatchEvent_Kind<T>;
+	@:overload @:public public function kind() : java.nio.file.WatchEvent.WatchEvent_Kind<T>;
 	
-	@:overload public function context() : T;
+	@:overload @:public public function context() : T;
 	
-	@:overload public function count() : Int;
+	@:overload @:public public function count() : Int;
 	
 	
 }

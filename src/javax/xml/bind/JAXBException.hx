@@ -31,7 +31,7 @@ extern class JAXBException extends java.lang.Exception
 	*
 	* @param message a description of the exception
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Construct a JAXBException with the specified detail message and vendor
@@ -40,7 +40,7 @@ extern class JAXBException extends java.lang.Exception
 	* @param message a description of the exception
 	* @param errorCode a string specifying the vendor specific error code
 	*/
-	@:overload public function new(message : String, errorCode : String) : Void;
+	@:overload @:public public function new(message : String, errorCode : String) : Void;
 	
 	/**
 	* Construct a JAXBException with a linkedException.  The detail message and
@@ -48,7 +48,7 @@ extern class JAXBException extends java.lang.Exception
 	*
 	* @param exception the linked exception
 	*/
-	@:overload public function new(exception : java.lang.Throwable) : Void;
+	@:overload @:public public function new(exception : java.lang.Throwable) : Void;
 	
 	/**
 	* Construct a JAXBException with the specified detail message and
@@ -57,7 +57,7 @@ extern class JAXBException extends java.lang.Exception
 	* @param message a description of the exception
 	* @param exception the linked exception
 	*/
-	@:overload public function new(message : String, exception : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, exception : java.lang.Throwable) : Void;
 	
 	/**
 	* Construct a JAXBException with the specified detail message, vendor
@@ -67,21 +67,21 @@ extern class JAXBException extends java.lang.Exception
 	* @param errorCode a string specifying the vendor specific error code
 	* @param exception the linked exception
 	*/
-	@:overload public function new(message : String, errorCode : String, exception : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, errorCode : String, exception : java.lang.Throwable) : Void;
 	
 	/**
 	* Get the vendor specific error code
 	*
 	* @return a string specifying the vendor specific error code
 	*/
-	@:overload public function getErrorCode() : String;
+	@:overload @:public public function getErrorCode() : String;
 	
 	/**
 	* Get the linked exception
 	*
 	* @return the linked Exception, null if none exists
 	*/
-	@:overload public function getLinkedException() : java.lang.Throwable;
+	@:overload @:public public function getLinkedException() : java.lang.Throwable;
 	
 	/**
 	* Add a linked Exception.
@@ -90,13 +90,13 @@ extern class JAXBException extends java.lang.Exception
 	*                  indicates that the linked exception does not exist or
 	*                  is unknown).
 	*/
-	@:overload @:synchronized public function setLinkedException(exception : java.lang.Throwable) : Void;
+	@:overload @:public @:synchronized public function setLinkedException(exception : java.lang.Throwable) : Void;
 	
 	/**
 	* Returns a short description of this JAXBException.
 	*
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Prints this JAXBException and its stack trace (including the stack trace
@@ -104,14 +104,14 @@ extern class JAXBException extends java.lang.Exception
 	*
 	* @param s PrintStream to use for output
 	*/
-	@:overload override public function printStackTrace(s : java.io.PrintStream) : Void;
+	@:overload @:public override public function printStackTrace(s : java.io.PrintStream) : Void;
 	
 	/**
 	* Prints this JAXBException and its stack trace (including the stack trace
 	* of the linkedException if it is non-null) to <tt>System.err</tt>.
 	*
 	*/
-	@:overload override public function printStackTrace() : Void;
+	@:overload @:public override public function printStackTrace() : Void;
 	
 	/**
 	* Prints this JAXBException and its stack trace (including the stack trace
@@ -119,9 +119,9 @@ extern class JAXBException extends java.lang.Exception
 	*
 	* @param s PrintWriter to use for output
 	*/
-	@:overload override public function printStackTrace(s : java.io.PrintWriter) : Void;
+	@:overload @:public override public function printStackTrace(s : java.io.PrintWriter) : Void;
 	
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

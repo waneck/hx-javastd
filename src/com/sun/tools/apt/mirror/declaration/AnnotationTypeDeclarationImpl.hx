@@ -31,12 +31,12 @@ extern class AnnotationTypeDeclarationImpl extends com.sun.tools.apt.mirror.decl
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getMethods() : java.util.Collection<com.sun.mirror.declaration.AnnotationTypeElementDeclaration>;
+	@:overload @:public override public function getMethods() : java.util.Collection<com.sun.mirror.declaration.AnnotationTypeElementDeclaration>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
 	
 	
 }

@@ -27,15 +27,15 @@ package com.sun.xml.internal.fastinfoset.tools;
 */
 extern class StAX2SAXReader
 {
-	@:overload public function new(reader : javax.xml.stream.XMLStreamReader, handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function new(reader : javax.xml.stream.XMLStreamReader, handler : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload public function new(reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function new(reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload public function setLexicalHandler(lexicalHandler : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public public function setLexicalHandler(lexicalHandler : org.xml.sax.ext.LexicalHandler) : Void;
 	
-	@:overload public function adapt() : Void;
+	@:overload @:public public function adapt() : Void;
 	
 	
 }

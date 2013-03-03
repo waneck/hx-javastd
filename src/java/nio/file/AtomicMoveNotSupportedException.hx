@@ -41,7 +41,7 @@ package java.nio.file;
 	* @param   reason
 	*          a reason message with additional information
 	*/
-	@:overload public function new(source : String, target : String, reason : String) : Void;
+	@:overload @:public public function new(source : String, target : String, reason : String) : Void;
 	
 	
 }

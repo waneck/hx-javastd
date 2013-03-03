@@ -28,12 +28,12 @@ extern class ZoneInfo extends java.util.TimeZone
 	/**
 	* A constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* A Constructor for CustomID.
 	*/
-	@:overload public function new(ID : String, rawOffset : Int) : Void;
+	@:overload @:public public function new(ID : String, rawOffset : Int) : Void;
 	
 	/**
 	* Returns the difference in milliseconds between local time and UTC
@@ -43,13 +43,13 @@ extern class ZoneInfo extends java.util.TimeZone
 	* @param date the milliseconds in UTC
 	* @return the milliseconds to add to UTC to get local wall time
 	*/
-	@:overload override public function getOffset(date : haxe.Int64) : Int;
+	@:overload @:public override public function getOffset(date : haxe.Int64) : Int;
 	
-	@:overload public function getOffsets(utc : haxe.Int64, offsets : java.NativeArray<Int>) : Int;
+	@:overload @:public public function getOffsets(utc : haxe.Int64, offsets : java.NativeArray<Int>) : Int;
 	
-	@:overload public function getOffsetsByStandard(standard : haxe.Int64, offsets : java.NativeArray<Int>) : Int;
+	@:overload @:public public function getOffsetsByStandard(standard : haxe.Int64, offsets : java.NativeArray<Int>) : Int;
 	
-	@:overload public function getOffsetsByWall(wall : haxe.Int64, offsets : java.NativeArray<Int>) : Int;
+	@:overload @:public public function getOffsetsByWall(wall : haxe.Int64, offsets : java.NativeArray<Int>) : Int;
 	
 	/**
 	* Returns the difference in milliseconds between local time and
@@ -73,7 +73,7 @@ extern class ZoneInfo extends java.util.TimeZone
 	* @param millis    The milliseconds in day in <em>standard</em> local time.
 	* @return The milliseconds to add to UTC to get local time.
 	*/
-	@:overload override public function getOffset(era : Int, year : Int, month : Int, day : Int, dayOfWeek : Int, milliseconds : Int) : Int;
+	@:overload @:public override public function getOffset(era : Int, year : Int, month : Int, day : Int, dayOfWeek : Int, milliseconds : Int) : Int;
 	
 	/**
 	* Sets the base time zone offset from GMT. This operation
@@ -83,7 +83,7 @@ extern class ZoneInfo extends java.util.TimeZone
 	* @param offsetMillis the base time zone offset to GMT.
 	* @see getRawOffset
 	*/
-	@:overload @:synchronized override public function setRawOffset(offsetMillis : Int) : Void;
+	@:overload @:public @:synchronized override public function setRawOffset(offsetMillis : Int) : Void;
 	
 	/**
 	* Returns the GMT offset of the current date. This GMT offset
@@ -92,21 +92,21 @@ extern class ZoneInfo extends java.util.TimeZone
 	* @return the GMT offset value in milliseconds to add to UTC time
 	* to get local standard time
 	*/
-	@:overload override public function getRawOffset() : Int;
+	@:overload @:public override public function getRawOffset() : Int;
 	
-	@:overload public function isDirty() : Bool;
+	@:overload @:public public function isDirty() : Bool;
 	
 	/**
 	* Queries if this time zone uses Daylight Saving Time in the last known rule.
 	*/
-	@:overload override public function useDaylightTime() : Bool;
+	@:overload @:public override public function useDaylightTime() : Bool;
 	
-	@:overload override public function observesDaylightTime() : Bool;
+	@:overload @:public override public function observesDaylightTime() : Bool;
 	
 	/**
 	* Queries if the specified date is in Daylight Saving Time.
 	*/
-	@:overload override public function inDaylightTime(date : java.util.Date) : Bool;
+	@:overload @:public override public function inDaylightTime(date : java.util.Date) : Bool;
 	
 	/**
 	* Returns the amount of time in milliseconds that the clock is advanced
@@ -115,20 +115,20 @@ extern class ZoneInfo extends java.util.TimeZone
 	* @return the number of milliseconds the time is advanced with respect to
 	* standard time when daylight saving time is in effect.
 	*/
-	@:overload override public function getDSTSavings() : Int;
+	@:overload @:public override public function getDSTSavings() : Int;
 	
 	/**
 	* Returns a string representation of this time zone.
 	* @return the string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Gets all available IDs supported in the Java run-time.
 	*
 	* @return an array of time zone IDs.
 	*/
-	@:overload public static function getAvailableIDs() : java.NativeArray<String>;
+	@:overload @:public @:static public static function getAvailableIDs() : java.NativeArray<String>;
 	
 	/**
 	* Gets all available IDs that have the same value as the
@@ -139,7 +139,7 @@ extern class ZoneInfo extends java.util.TimeZone
 	*
 	* @return an array of time zone IDs.
 	*/
-	@:overload public static function getAvailableIDs(rawOffset : Int) : java.NativeArray<String>;
+	@:overload @:public @:static public static function getAvailableIDs(rawOffset : Int) : java.NativeArray<String>;
 	
 	/**
 	* Gets the ZoneInfo for the given ID.
@@ -149,7 +149,7 @@ extern class ZoneInfo extends java.util.TimeZone
 	* @return the specified ZoneInfo object, or null if there is no
 	* time zone of the ID.
 	*/
-	@:overload public static function getTimeZone(ID : String) : java.util.TimeZone;
+	@:overload @:public @:static public static function getTimeZone(ID : String) : java.util.TimeZone;
 	
 	/**
 	* Returns a SimpleTimeZone object that represents the last
@@ -158,19 +158,19 @@ extern class ZoneInfo extends java.util.TimeZone
 	* @return a SimpleTimeZone object or null if this time zone
 	* doesn't observe DST.
 	*/
-	@:overload public function getLastRuleInstance() : java.util.SimpleTimeZone;
+	@:overload @:public public function getLastRuleInstance() : java.util.SimpleTimeZone;
 	
 	/**
 	* Returns a copy of this <code>ZoneInfo</code>.
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Returns a hash code value calculated from the GMT offset and
 	* transitions.
 	* @return a hash code of this time zone
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares the equity of two ZoneInfo objects.
@@ -179,7 +179,7 @@ extern class ZoneInfo extends java.util.TimeZone
 	* @return true if given object is same as this ZoneInfo object,
 	* false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns true if this zone has the same raw GMT offset value and
@@ -192,7 +192,7 @@ extern class ZoneInfo extends java.util.TimeZone
 	* @return true if the given <code>TimeZone</code> has the same
 	* GMT offset and transition information; false, otherwise.
 	*/
-	@:overload override public function hasSameRules(other : java.util.TimeZone) : Bool;
+	@:overload @:public override public function hasSameRules(other : java.util.TimeZone) : Bool;
 	
 	/**
 	* Returns a Map from alias time zone IDs to their standard
@@ -202,7 +202,7 @@ extern class ZoneInfo extends java.util.TimeZone
 	*    to their standard time zone IDs, or null if
 	*    <code>ZoneInfoMappings</code> file is not available.
 	*/
-	@:overload @:synchronized public static function getAliasTable() : java.util.Map<String, String>;
+	@:overload @:public @:synchronized @:static public static function getAliasTable() : java.util.Map<String, String>;
 	
 	
 }

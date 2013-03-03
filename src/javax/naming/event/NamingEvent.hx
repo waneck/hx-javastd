@@ -29,13 +29,13 @@ extern class NamingEvent extends java.util.EventObject
 	* Naming event type for indicating that a new object has been added.
 	* The value of this constant is <tt>0</tt>.
 	*/
-	public static var OBJECT_ADDED(default, null) : Int;
+	@:public @:static @:final public static var OBJECT_ADDED(default, null) : Int;
 	
 	/**
 	* Naming event type for indicating that an object has been removed.
 	* The value of this constant is <tt>1</tt>.
 	*/
-	public static var OBJECT_REMOVED(default, null) : Int;
+	@:public @:static @:final public static var OBJECT_REMOVED(default, null) : Int;
 	
 	/**
 	* Naming event type for indicating that an object has been renamed.
@@ -58,7 +58,7 @@ extern class NamingEvent extends java.util.EventObject
 	*<p>
 	* The value of this constant is <tt>2</tt>.
 	*/
-	public static var OBJECT_RENAMED(default, null) : Int;
+	@:public @:static @:final public static var OBJECT_RENAMED(default, null) : Int;
 	
 	/**
 	* Naming event type for indicating that an object has been changed.
@@ -70,13 +70,13 @@ extern class NamingEvent extends java.util.EventObject
 	*<p>
 	* The value of this constant is <tt>3</tt>.
 	*/
-	public static var OBJECT_CHANGED(default, null) : Int;
+	@:public @:static @:final public static var OBJECT_CHANGED(default, null) : Int;
 	
 	/**
 	* Contains information about the change that generated this event.
 	* @serial
 	*/
-	private var changeInfo : Dynamic;
+	@:protected private var changeInfo : Dynamic;
 	
 	/**
 	* Contains the type of this event.
@@ -86,19 +86,19 @@ extern class NamingEvent extends java.util.EventObject
 	* @see #OBJECT_CHANGED
 	* @serial
 	*/
-	private var type : Int;
+	@:protected private var type : Int;
 	
 	/**
 	* Contains information about the object before the change.
 	* @serial
 	*/
-	private var oldBinding : javax.naming.Binding;
+	@:protected private var oldBinding : javax.naming.Binding;
 	
 	/**
 	* Contains information about the object after the change.
 	* @serial
 	*/
-	private var newBinding : javax.naming.Binding;
+	@:protected private var newBinding : javax.naming.Binding;
 	
 	/**
 	* Constructs an instance of <tt>NamingEvent</tt>.
@@ -123,7 +123,7 @@ extern class NamingEvent extends java.util.EventObject
 	* @see #OBJECT_RENAMED
 	* @see #OBJECT_CHANGED
 	*/
-	@:overload public function new(source : javax.naming.event.EventContext, type : Int, newBd : javax.naming.Binding, oldBd : javax.naming.Binding, changeInfo : Dynamic) : Void;
+	@:overload @:public public function new(source : javax.naming.event.EventContext, type : Int, newBd : javax.naming.Binding, oldBd : javax.naming.Binding, changeInfo : Dynamic) : Void;
 	
 	/**
 	* Returns the type of this event.
@@ -133,7 +133,7 @@ extern class NamingEvent extends java.util.EventObject
 	* @see #OBJECT_RENAMED
 	* @see #OBJECT_CHANGED
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Retrieves the event source that fired this event.
@@ -150,7 +150,7 @@ extern class NamingEvent extends java.util.EventObject
 	*
 	* @return The non-null context that fired this event.
 	*/
-	@:overload public function getEventContext() : javax.naming.event.EventContext;
+	@:overload @:public public function getEventContext() : javax.naming.event.EventContext;
 	
 	/**
 	* Retrieves the binding of the object before the change.
@@ -170,7 +170,7 @@ extern class NamingEvent extends java.util.EventObject
 	*
 	* @return The possibly null binding of the object before the change.
 	*/
-	@:overload public function getOldBinding() : javax.naming.Binding;
+	@:overload @:public public function getOldBinding() : javax.naming.Binding;
 	
 	/**
 	* Retrieves the binding of the object after the change.
@@ -190,7 +190,7 @@ extern class NamingEvent extends java.util.EventObject
 	*
 	* @return The possibly null binding of the object after the change.
 	*/
-	@:overload public function getNewBinding() : javax.naming.Binding;
+	@:overload @:public public function getNewBinding() : javax.naming.Binding;
 	
 	/**
 	* Retrieves the change information for this event.
@@ -199,7 +199,7 @@ extern class NamingEvent extends java.util.EventObject
 	*
 	* @return The possibly null change information of this event.
 	*/
-	@:overload public function getChangeInfo() : Dynamic;
+	@:overload @:public public function getChangeInfo() : Dynamic;
 	
 	/**
 	* Invokes the appropriate listener method on this event.
@@ -214,7 +214,7 @@ extern class NamingEvent extends java.util.EventObject
 	* for more information on threading issues.
 	* @param listener The nonnull listener.
 	*/
-	@:overload public function dispatch(listener : javax.naming.event.NamingListener) : Void;
+	@:overload @:public public function dispatch(listener : javax.naming.event.NamingListener) : Void;
 	
 	
 }

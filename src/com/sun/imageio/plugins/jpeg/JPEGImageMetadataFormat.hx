@@ -25,9 +25,9 @@ package com.sun.imageio.plugins.jpeg;
 */
 extern class JPEGImageMetadataFormat extends com.sun.imageio.plugins.jpeg.JPEGMetadataFormat
 {
-	@:overload override public function canNodeAppear(elementName : String, imageType : javax.imageio.ImageTypeSpecifier) : Bool;
+	@:overload @:public override public function canNodeAppear(elementName : String, imageType : javax.imageio.ImageTypeSpecifier) : Bool;
 	
-	@:overload @:synchronized public static function getInstance() : javax.imageio.metadata.IIOMetadataFormat;
+	@:overload @:public @:static @:synchronized public static function getInstance() : javax.imageio.metadata.IIOMetadataFormat;
 	
 	
 }

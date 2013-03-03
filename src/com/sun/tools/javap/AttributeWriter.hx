@@ -33,83 +33,83 @@ package com.sun.tools.javap;
 */
 extern class AttributeWriter extends com.sun.tools.javap.BasicWriter implements com.sun.tools.classfile.Attribute.Attribute_Visitor<java.lang.Void, java.lang.Void>
 {
-	@:overload public static function instance(context : com.sun.tools.javap.Context) : com.sun.tools.javap.AttributeWriter;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javap.Context) : com.sun.tools.javap.AttributeWriter;
 	
-	@:overload private function new(context : com.sun.tools.javap.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javap.Context) : Void;
 	
-	@:overload public function write(owner : Dynamic, attr : com.sun.tools.classfile.Attribute, constant_pool : com.sun.tools.classfile.ConstantPool) : Void;
+	@:overload @:public public function write(owner : Dynamic, attr : com.sun.tools.classfile.Attribute, constant_pool : com.sun.tools.classfile.ConstantPool) : Void;
 	
-	@:overload public function write(owner : Dynamic, attrs : com.sun.tools.classfile.Attributes, constant_pool : com.sun.tools.classfile.ConstantPool) : Void;
+	@:overload @:public public function write(owner : Dynamic, attrs : com.sun.tools.classfile.Attributes, constant_pool : com.sun.tools.classfile.ConstantPool) : Void;
 	
-	@:overload public function visitDefault(attr : com.sun.tools.classfile.DefaultAttribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitDefault(attr : com.sun.tools.classfile.DefaultAttribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitAnnotationDefault(attr : com.sun.tools.classfile.AnnotationDefault_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitAnnotationDefault(attr : com.sun.tools.classfile.AnnotationDefault_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitBootstrapMethods(attr : com.sun.tools.classfile.BootstrapMethods_attribute, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitBootstrapMethods(attr : com.sun.tools.classfile.BootstrapMethods_attribute, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitCharacterRangeTable(attr : com.sun.tools.classfile.CharacterRangeTable_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitCharacterRangeTable(attr : com.sun.tools.classfile.CharacterRangeTable_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitCode(attr : com.sun.tools.classfile.Code_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitCode(attr : com.sun.tools.classfile.Code_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitCompilationID(attr : com.sun.tools.classfile.CompilationID_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitCompilationID(attr : com.sun.tools.classfile.CompilationID_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitConstantValue(attr : com.sun.tools.classfile.ConstantValue_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitConstantValue(attr : com.sun.tools.classfile.ConstantValue_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitDeprecated(attr : com.sun.tools.classfile.Deprecated_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitDeprecated(attr : com.sun.tools.classfile.Deprecated_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitEnclosingMethod(attr : com.sun.tools.classfile.EnclosingMethod_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitEnclosingMethod(attr : com.sun.tools.classfile.EnclosingMethod_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitExceptions(attr : com.sun.tools.classfile.Exceptions_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitExceptions(attr : com.sun.tools.classfile.Exceptions_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitInnerClasses(attr : com.sun.tools.classfile.InnerClasses_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitInnerClasses(attr : com.sun.tools.classfile.InnerClasses_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitLineNumberTable(attr : com.sun.tools.classfile.LineNumberTable_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitLineNumberTable(attr : com.sun.tools.classfile.LineNumberTable_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitLocalVariableTable(attr : com.sun.tools.classfile.LocalVariableTable_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitLocalVariableTable(attr : com.sun.tools.classfile.LocalVariableTable_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitLocalVariableTypeTable(attr : com.sun.tools.classfile.LocalVariableTypeTable_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitLocalVariableTypeTable(attr : com.sun.tools.classfile.LocalVariableTypeTable_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitRuntimeVisibleAnnotations(attr : com.sun.tools.classfile.RuntimeVisibleAnnotations_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitRuntimeVisibleAnnotations(attr : com.sun.tools.classfile.RuntimeVisibleAnnotations_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitRuntimeInvisibleAnnotations(attr : com.sun.tools.classfile.RuntimeInvisibleAnnotations_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitRuntimeInvisibleAnnotations(attr : com.sun.tools.classfile.RuntimeInvisibleAnnotations_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitRuntimeVisibleParameterAnnotations(attr : com.sun.tools.classfile.RuntimeVisibleParameterAnnotations_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitRuntimeVisibleParameterAnnotations(attr : com.sun.tools.classfile.RuntimeVisibleParameterAnnotations_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitRuntimeInvisibleParameterAnnotations(attr : com.sun.tools.classfile.RuntimeInvisibleParameterAnnotations_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitRuntimeInvisibleParameterAnnotations(attr : com.sun.tools.classfile.RuntimeInvisibleParameterAnnotations_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitSignature(attr : com.sun.tools.classfile.Signature_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitSignature(attr : com.sun.tools.classfile.Signature_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitSourceDebugExtension(attr : com.sun.tools.classfile.SourceDebugExtension_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitSourceDebugExtension(attr : com.sun.tools.classfile.SourceDebugExtension_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitSourceFile(attr : com.sun.tools.classfile.SourceFile_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitSourceFile(attr : com.sun.tools.classfile.SourceFile_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitSourceID(attr : com.sun.tools.classfile.SourceID_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitSourceID(attr : com.sun.tools.classfile.SourceID_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitStackMap(attr : com.sun.tools.classfile.StackMap_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitStackMap(attr : com.sun.tools.classfile.StackMap_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitStackMapTable(attr : com.sun.tools.classfile.StackMapTable_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitStackMapTable(attr : com.sun.tools.classfile.StackMapTable_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitSynthetic(attr : com.sun.tools.classfile.Synthetic_attribute, ignore : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitSynthetic(attr : com.sun.tools.classfile.Synthetic_attribute, ignore : java.lang.Void) : java.lang.Void;
 	
 	
 }
 @:native('com$sun$tools$javap$AttributeWriter$StackMapTableWriter') @:internal extern class AttributeWriter_StackMapTableWriter implements com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame_Visitor<java.lang.Void, java.lang.Void>
 {
-	@:overload public function write(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame) : Void;
+	@:overload @:public public function write(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame) : Void;
 	
-	@:overload public function visit_same_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_frame, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visit_same_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_frame, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visit_same_locals_1_stack_item_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_locals_1_stack_item_frame, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visit_same_locals_1_stack_item_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_locals_1_stack_item_frame, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visit_same_locals_1_stack_item_frame_extended(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_locals_1_stack_item_frame_extended, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visit_same_locals_1_stack_item_frame_extended(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_locals_1_stack_item_frame_extended, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visit_chop_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_chop_frame, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visit_chop_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_chop_frame, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visit_same_frame_extended(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_frame_extended, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visit_same_frame_extended(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_frame_extended, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visit_append_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_append_frame, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visit_append_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_append_frame, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visit_full_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_full_frame, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visit_full_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_full_frame, p : java.lang.Void) : java.lang.Void;
 	
 	
 }

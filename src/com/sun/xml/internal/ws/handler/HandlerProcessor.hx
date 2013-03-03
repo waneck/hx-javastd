@@ -34,7 +34,7 @@ package com.sun.xml.internal.ws.handler;
 	* @param chain A list of handler objects, which can
 	*              be protocol or logical handlers.
 	*/
-	@:overload private function new(owner : com.sun.xml.internal.ws.handler.HandlerTube, binding : com.sun.xml.internal.ws.api.WSBinding, chain : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
+	@:overload @:protected private function new(owner : com.sun.xml.internal.ws.handler.HandlerTube, binding : com.sun.xml.internal.ws.api.WSBinding, chain : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
 	
 	/**
 	* TODO: Just putting thoughts,
@@ -58,7 +58,7 @@ package com.sun.xml.internal.ws.handler;
 	* While closing handlers, check getIndex() to get the invoked
 	* handlers.
 	*/
-	@:overload public function callHandlersRequest(direction : com.sun.xml.internal.ws.handler.HandlerProcessor.HandlerProcessor_Direction, context : C, responseExpected : Bool) : Bool;
+	@:overload @:public public function callHandlersRequest(direction : com.sun.xml.internal.ws.handler.HandlerProcessor.HandlerProcessor_Direction, context : C, responseExpected : Bool) : Bool;
 	
 	/**
 	* TODO: Just putting thoughts,
@@ -70,7 +70,7 @@ package com.sun.xml.internal.ws.handler;
 	* during callHandlersRequest().
 	* CurrentPipe should close all the handlers in the chain.     *
 	*/
-	@:overload public function callHandlersResponse(direction : com.sun.xml.internal.ws.handler.HandlerProcessor.HandlerProcessor_Direction, context : C, isFault : Bool) : Void;
+	@:overload @:public public function callHandlersResponse(direction : com.sun.xml.internal.ws.handler.HandlerProcessor.HandlerProcessor_Direction, context : C, isFault : Bool) : Void;
 	
 	
 }

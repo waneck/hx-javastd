@@ -48,7 +48,7 @@ extern interface ViewCSS extends org.w3c.dom.views.AbstractView
 	* @return  The computed style. The <code>CSSStyleDeclaration</code> is
 	*   read-only and contains only absolute values.
 	*/
-	@:overload public function getComputedStyle(elt : org.w3c.dom.Element, pseudoElt : String) : org.w3c.dom.css.CSSStyleDeclaration;
+	@:overload @:public public function getComputedStyle(elt : org.w3c.dom.Element, pseudoElt : String) : org.w3c.dom.css.CSSStyleDeclaration;
 	
 	
 }

@@ -31,33 +31,33 @@ extern class JVar extends com.sun.codemodel.internal.JExpressionImpl implements 
 	* @param init
 	*        JExpression to be used to initialize this field
 	*/
-	@:overload public function init(init : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JVar;
+	@:overload @:public public function init(init : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JVar;
 	
 	/**
 	* Get the name of this variable
 	*
 	* @return Name of the variable
 	*/
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/**
 	* Changes the name of this variable.
 	*/
-	@:overload public function name(name : String) : Void;
+	@:overload @:public public function name(name : String) : Void;
 	
 	/**
 	* Return the type of this variable.
 	* @return
 	*      always non-null.
 	*/
-	@:overload public function type() : com.sun.codemodel.internal.JType;
+	@:overload @:public public function type() : com.sun.codemodel.internal.JType;
 	
 	/**
 	* @return
 	*      the current modifiers of this method.
 	*      Always return non-null valid object.
 	*/
-	@:overload public function mods() : com.sun.codemodel.internal.JMods;
+	@:overload @:public public function mods() : com.sun.codemodel.internal.JMods;
 	
 	/**
 	* Sets the type of this variable.
@@ -68,14 +68,14 @@ extern class JVar extends com.sun.codemodel.internal.JExpressionImpl implements 
 	* @return
 	*      the old type value. always non-null.
 	*/
-	@:overload public function type(newType : com.sun.codemodel.internal.JType) : com.sun.codemodel.internal.JType;
+	@:overload @:public public function type(newType : com.sun.codemodel.internal.JType) : com.sun.codemodel.internal.JType;
 	
 	/**
 	* Adds an annotation to this variable.
 	* @param clazz
 	*          The annotation class to annotate the field with
 	*/
-	@:overload public function annotate(clazz : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function annotate(clazz : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds an annotation to this variable.
@@ -83,23 +83,23 @@ extern class JVar extends com.sun.codemodel.internal.JExpressionImpl implements 
 	* @param clazz
 	*          The annotation class to annotate the field with
 	*/
-	@:overload public function annotate(clazz : Class<java.lang.annotation.Annotation>) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function annotate(clazz : Class<java.lang.annotation.Annotation>) : com.sun.codemodel.internal.JAnnotationUse;
 	
-	@:overload public function annotate2<W : com.sun.codemodel.internal.JAnnotationWriter<Dynamic>>(clazz : Class<W>) : W;
+	@:overload @:public public function annotate2<W : com.sun.codemodel.internal.JAnnotationWriter<Dynamic>>(clazz : Class<W>) : W;
 	
-	@:overload public function annotations() : java.util.Collection<com.sun.codemodel.internal.JAnnotationUse>;
+	@:overload @:public public function annotations() : java.util.Collection<com.sun.codemodel.internal.JAnnotationUse>;
 	
-	@:overload private function isAnnotated() : Bool;
+	@:overload @:protected private function isAnnotated() : Bool;
 	
-	@:overload public function bind(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function bind(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
-	@:overload public function declare(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function declare(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
-	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
-	@:overload public function assign(rhs : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public public function assign(rhs : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public function assignPlus(rhs : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public public function assignPlus(rhs : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	
 }

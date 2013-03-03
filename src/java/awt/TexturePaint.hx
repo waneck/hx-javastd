@@ -32,14 +32,14 @@ extern class TexturePaint implements java.awt.Paint
 	* @param anchor the <code>Rectangle2D</code> in user space used to
 	* anchor and replicate the texture
 	*/
-	@:overload public function new(txtr : java.awt.image.BufferedImage, anchor : java.awt.geom.Rectangle2D) : Void;
+	@:overload @:public public function new(txtr : java.awt.image.BufferedImage, anchor : java.awt.geom.Rectangle2D) : Void;
 	
 	/**
 	* Returns the <code>BufferedImage</code> texture used to
 	* fill the shapes.
 	* @return a <code>BufferedImage</code>.
 	*/
-	@:overload public function getImage() : java.awt.image.BufferedImage;
+	@:overload @:public public function getImage() : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns a copy of the anchor rectangle which positions and
@@ -47,7 +47,7 @@ extern class TexturePaint implements java.awt.Paint
 	* @return the <code>Rectangle2D</code> used to anchor and
 	* size this <code>TexturePaint</code>.
 	*/
-	@:overload public function getAnchorRect() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getAnchorRect() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Creates and returns a {@link PaintContext} used to
@@ -77,7 +77,7 @@ extern class TexturePaint implements java.awt.Paint
 	* @see AffineTransform
 	* @see RenderingHints
 	*/
-	@:overload public function createContext(cm : java.awt.image.ColorModel, deviceBounds : java.awt.Rectangle, userBounds : java.awt.geom.Rectangle2D, xform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : java.awt.PaintContext;
+	@:overload @:public public function createContext(cm : java.awt.image.ColorModel, deviceBounds : java.awt.Rectangle, userBounds : java.awt.geom.Rectangle2D, xform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : java.awt.PaintContext;
 	
 	/**
 	* Returns the transparency mode for this <code>TexturePaint</code>.
@@ -85,7 +85,7 @@ extern class TexturePaint implements java.awt.Paint
 	* as an integer value.
 	* @see Transparency
 	*/
-	@:overload public function getTransparency() : Int;
+	@:overload @:public public function getTransparency() : Int;
 	
 	
 }

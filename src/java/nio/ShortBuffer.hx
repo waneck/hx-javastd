@@ -265,7 +265,7 @@ package java.nio;
 	* @throws  IllegalArgumentException
 	*          If the <tt>capacity</tt> is a negative integer
 	*/
-	@:overload public static function allocate(capacity : Int) : java.nio.ShortBuffer;
+	@:overload @:public @:static public static function allocate(capacity : Int) : java.nio.ShortBuffer;
 	
 	/**
 	* Wraps a short array into a buffer.
@@ -298,7 +298,7 @@ package java.nio;
 	*          If the preconditions on the <tt>offset</tt> and <tt>length</tt>
 	*          parameters do not hold
 	*/
-	@:overload public static function wrap(array : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : java.nio.ShortBuffer;
+	@:overload @:public @:static public static function wrap(array : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : java.nio.ShortBuffer;
 	
 	/**
 	* Wraps a short array into a buffer.
@@ -316,7 +316,7 @@ package java.nio;
 	*
 	* @return  The new short buffer
 	*/
-	@:overload public static function wrap(array : java.NativeArray<java.StdTypes.Int16>) : java.nio.ShortBuffer;
+	@:overload @:public @:static public static function wrap(array : java.NativeArray<java.StdTypes.Int16>) : java.nio.ShortBuffer;
 	
 	/**
 	* Creates a new short buffer whose content is a shared subsequence of
@@ -335,7 +335,7 @@ package java.nio;
 	*
 	* @return  The new short buffer
 	*/
-	@:overload @:abstract public function slice() : java.nio.ShortBuffer;
+	@:overload @:public @:abstract public function slice() : java.nio.ShortBuffer;
 	
 	/**
 	* Creates a new short buffer that shares this buffer's content.
@@ -352,7 +352,7 @@ package java.nio;
 	*
 	* @return  The new short buffer
 	*/
-	@:overload @:abstract public function duplicate() : java.nio.ShortBuffer;
+	@:overload @:public @:abstract public function duplicate() : java.nio.ShortBuffer;
 	
 	/**
 	* Creates a new, read-only short buffer that shares this buffer's
@@ -372,7 +372,7 @@ package java.nio;
 	*
 	* @return  The new, read-only short buffer
 	*/
-	@:overload @:abstract public function asReadOnlyBuffer() : java.nio.ShortBuffer;
+	@:overload @:public @:abstract public function asReadOnlyBuffer() : java.nio.ShortBuffer;
 	
 	/**
 	* Relative <i>get</i> method.  Reads the short at this buffer's
@@ -383,7 +383,7 @@ package java.nio;
 	* @throws  BufferUnderflowException
 	*          If the buffer's current position is not smaller than its limit
 	*/
-	@:overload @:abstract public function get() : java.StdTypes.Int16;
+	@:overload @:public @:abstract public function get() : java.StdTypes.Int16;
 	
 	/**
 	* Relative <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -402,7 +402,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function put(s : java.StdTypes.Int16) : java.nio.ShortBuffer;
+	@:overload @:public @:abstract public function put(s : java.StdTypes.Int16) : java.nio.ShortBuffer;
 	
 	/**
 	* Absolute <i>get</i> method.  Reads the short at the given
@@ -417,7 +417,7 @@ package java.nio;
 	*          If <tt>index</tt> is negative
 	*          or not smaller than the buffer's limit
 	*/
-	@:overload @:abstract public function get(index : Int) : java.StdTypes.Int16;
+	@:overload @:public @:abstract public function get(index : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Absolute <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -440,7 +440,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function put(index : Int, s : java.StdTypes.Int16) : java.nio.ShortBuffer;
+	@:overload @:public @:abstract public function put(index : Int, s : java.StdTypes.Int16) : java.nio.ShortBuffer;
 	
 	/**
 	* Relative bulk <i>get</i> method.
@@ -491,7 +491,7 @@ package java.nio;
 	*          If the preconditions on the <tt>offset</tt> and <tt>length</tt>
 	*          parameters do not hold
 	*/
-	@:overload public function get(dst : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : java.nio.ShortBuffer;
+	@:overload @:public public function get(dst : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : java.nio.ShortBuffer;
 	
 	/**
 	* Relative bulk <i>get</i> method.
@@ -509,7 +509,7 @@ package java.nio;
 	*          If there are fewer than <tt>length</tt> shorts
 	*          remaining in this buffer
 	*/
-	@:overload public function get(dst : java.NativeArray<java.StdTypes.Int16>) : java.nio.ShortBuffer;
+	@:overload @:public public function get(dst : java.NativeArray<java.StdTypes.Int16>) : java.nio.ShortBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -552,7 +552,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload public function put(src : java.nio.ShortBuffer) : java.nio.ShortBuffer;
+	@:overload @:public public function put(src : java.nio.ShortBuffer) : java.nio.ShortBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -604,7 +604,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload public function put(src : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : java.nio.ShortBuffer;
+	@:overload @:public public function put(src : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : java.nio.ShortBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -625,7 +625,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:final public function put(src : java.NativeArray<java.StdTypes.Int16>) : java.nio.ShortBuffer;
+	@:overload @:public @:final public function put(src : java.NativeArray<java.StdTypes.Int16>) : java.nio.ShortBuffer;
 	
 	/**
 	* Tells whether or not this buffer is backed by an accessible short
@@ -638,7 +638,7 @@ package java.nio;
 	* @return  <tt>true</tt> if, and only if, this buffer
 	*          is backed by an array and is not read-only
 	*/
-	@:overload @:final override public function hasArray() : Bool;
+	@:overload @:public @:final override public function hasArray() : Bool;
 	
 	/**
 	* Returns the short array that backs this
@@ -659,7 +659,7 @@ package java.nio;
 	* @throws  UnsupportedOperationException
 	*          If this buffer is not backed by an accessible array
 	*/
-	@:overload @:final override public function array() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public @:final override public function array() : java.NativeArray<java.StdTypes.Int16>;
 	
 	/**
 	* Returns the offset within this buffer's backing array of the first
@@ -681,7 +681,7 @@ package java.nio;
 	* @throws  UnsupportedOperationException
 	*          If this buffer is not backed by an accessible array
 	*/
-	@:overload @:final override public function arrayOffset() : Int;
+	@:overload @:public @:final override public function arrayOffset() : Int;
 	
 	/**
 	* Compacts this buffer&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -722,21 +722,21 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function compact() : java.nio.ShortBuffer;
+	@:overload @:public @:abstract public function compact() : java.nio.ShortBuffer;
 	
 	/**
 	* Tells whether or not this short buffer is direct. </p>
 	*
 	* @return  <tt>true</tt> if, and only if, this buffer is direct
 	*/
-	@:overload @:abstract override public function isDirect() : Bool;
+	@:overload @:public @:abstract override public function isDirect() : Bool;
 	
 	/**
 	* Returns a string summarizing the state of this buffer.  </p>
 	*
 	* @return  A summary string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the current hash code of this buffer.
@@ -751,7 +751,7 @@ package java.nio;
 	*
 	* @return  The current hash code of this buffer
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Tells whether or not this buffer is equal to another object.
@@ -785,7 +785,7 @@ package java.nio;
 	* @return  <tt>true</tt> if, and only if, this buffer is equal to the
 	*           given object
 	*/
-	@:overload public function equals(ob : Dynamic) : Bool;
+	@:overload @:public public function equals(ob : Dynamic) : Bool;
 	
 	/**
 	* Compares this buffer to another.
@@ -810,7 +810,7 @@ package java.nio;
 	* @return  A negative integer, zero, or a positive integer as this buffer
 	*          is less than, equal to, or greater than the given buffer
 	*/
-	@:overload public function compareTo(that : java.nio.ShortBuffer) : Int;
+	@:overload @:public public function compareTo(that : java.nio.ShortBuffer) : Int;
 	
 	/**
 	* Retrieves this buffer's byte order.
@@ -824,7 +824,7 @@ package java.nio;
 	*
 	* @return  This buffer's byte order
 	*/
-	@:overload @:abstract public function order() : java.nio.ByteOrder;
+	@:overload @:public @:abstract public function order() : java.nio.ByteOrder;
 	
 	/**
 	* Compares this object with the specified object for order.  Returns a
@@ -865,7 +865,7 @@ package java.nio;
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
 	
 	
 }

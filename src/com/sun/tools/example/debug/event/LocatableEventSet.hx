@@ -42,7 +42,7 @@ extern class LocatableEventSet extends com.sun.tools.example.debug.event.Abstrac
 	*
 	* @return the {@link Location} of this mirror.
 	*/
-	@:overload public function getLocation() : com.sun.jdi.Location;
+	@:overload @:public public function getLocation() : com.sun.jdi.Location;
 	
 	/**
 	* Returns the thread in which this event has occurred.
@@ -50,7 +50,7 @@ extern class LocatableEventSet extends com.sun.tools.example.debug.event.Abstrac
 	* @return a {@link ThreadReference} which mirrors the event's thread in
 	* the target VM.
 	*/
-	@:overload public function getThread() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function getThread() : com.sun.jdi.ThreadReference;
 	
 	
 }

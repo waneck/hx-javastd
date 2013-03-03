@@ -32,21 +32,21 @@ extern class AWTEventListenerProxy extends java.util.EventListenerProxy<java.awt
 	* @param eventMask  the bitmap of event types to receive
 	* @param listener   the listener object
 	*/
-	@:overload public function new(eventMask : haxe.Int64, listener : java.awt.event.AWTEventListener) : Void;
+	@:overload @:public public function new(eventMask : haxe.Int64, listener : java.awt.event.AWTEventListener) : Void;
 	
 	/**
 	* Forwards the AWT event to the listener delegate.
 	*
 	* @param event  the AWT event
 	*/
-	@:overload public function eventDispatched(event : java.awt.AWTEvent) : Void;
+	@:overload @:public public function eventDispatched(event : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Returns the event mask associated with the listener.
 	*
 	* @return the event mask associated with the listener
 	*/
-	@:overload public function getEventMask() : haxe.Int64;
+	@:overload @:public public function getEventMask() : haxe.Int64;
 	
 	
 }

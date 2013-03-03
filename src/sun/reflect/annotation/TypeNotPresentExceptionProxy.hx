@@ -31,9 +31,9 @@ package sun.reflect.annotation;
 */
 @:require(java5) extern class TypeNotPresentExceptionProxy extends sun.reflect.annotation.ExceptionProxy
 {
-	@:overload public function new(typeName : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(typeName : String, cause : java.lang.Throwable) : Void;
 	
-	@:overload private function generateException() : java.lang.RuntimeException;
+	@:overload @:protected override private function generateException() : java.lang.RuntimeException;
 	
 	
 }

@@ -71,7 +71,7 @@ extern class AttachmentUnmarshaller
 	*
 	* @throws IllegalArgumentException if the attachment for the given cid is not found.
 	*/
-	@:overload @:abstract public function getAttachmentAsDataHandler(cid : String) : javax.activation.DataHandler;
+	@:overload @:public @:abstract public function getAttachmentAsDataHandler(cid : String) : javax.activation.DataHandler;
 	
 	/**
 	* <p>Retrieve the attachment identified by content-id, <code>cid</code>,  as a <tt>byte[]</tt></p>.
@@ -84,7 +84,7 @@ extern class AttachmentUnmarshaller
 	*
 	* @throws IllegalArgumentException if the attachment for the given cid is not found.
 	*/
-	@:overload @:abstract public function getAttachmentAsByteArray(cid : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getAttachmentAsByteArray(cid : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* <p>Read-only property that returns true if JAXB unmarshaller needs to perform XOP processing.</p>
@@ -95,7 +95,7 @@ extern class AttachmentUnmarshaller
 	*
 	* @return true when MIME context is a XOP Document.
 	*/
-	@:overload public function isXOPPackage() : Bool;
+	@:overload @:public public function isXOPPackage() : Bool;
 	
 	
 }

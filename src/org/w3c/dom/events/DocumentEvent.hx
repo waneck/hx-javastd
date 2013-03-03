@@ -66,7 +66,7 @@ extern interface DocumentEvent
 	*   NOT_SUPPORTED_ERR: Raised if the implementation does not support the
 	*   type of <code>Event</code> interface requested
 	*/
-	@:overload public function createEvent(eventType : String) : org.w3c.dom.events.Event;
+	@:overload @:public public function createEvent(eventType : String) : org.w3c.dom.events.Event;
 	
 	
 }

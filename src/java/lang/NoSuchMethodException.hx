@@ -34,14 +34,14 @@ package java.lang;
 	/**
 	* Constructs a <code>NoSuchMethodException</code> without a detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>NoSuchMethodException</code> with a detail message.
 	*
 	* @param      s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

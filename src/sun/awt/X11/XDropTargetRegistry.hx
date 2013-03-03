@@ -25,53 +25,53 @@ package sun.awt.X11;
 */
 @:internal extern class XDropTargetRegistry
 {
-	@:overload public function updateEmbedderDropSite(embedder : haxe.Int64) : Void;
+	@:overload @:public public function updateEmbedderDropSite(embedder : haxe.Int64) : Void;
 	
 	/*
 	* Returns a drop site that is embedded in the specified embedder window and
 	* contains the point with the specified root coordinates.
 	*/
-	@:overload public function getEmbeddedDropSite(embedder : haxe.Int64, x : Int, y : Int) : haxe.Int64;
+	@:overload @:public public function getEmbeddedDropSite(embedder : haxe.Int64, x : Int, y : Int) : haxe.Int64;
 	
 	/*
 	* Note: this method should be called under AWT lock.
 	*/
-	@:overload public function registerDropSite(window : haxe.Int64) : Void;
+	@:overload @:public public function registerDropSite(window : haxe.Int64) : Void;
 	
 	/*
 	* Note: this method should be called under AWT lock.
 	*/
-	@:overload public function unregisterDropSite(window : haxe.Int64) : Void;
+	@:overload @:public public function unregisterDropSite(window : haxe.Int64) : Void;
 	
-	@:overload public function registerXEmbedClient(canvasWindow : haxe.Int64, clientWindow : haxe.Int64) : Void;
+	@:overload @:public public function registerXEmbedClient(canvasWindow : haxe.Int64, clientWindow : haxe.Int64) : Void;
 	
-	@:overload public function unregisterXEmbedClient(canvasWindow : haxe.Int64, clientWindow : haxe.Int64) : Void;
+	@:overload @:public public function unregisterXEmbedClient(canvasWindow : haxe.Int64, clientWindow : haxe.Int64) : Void;
 	
 	
 }
 @:native('sun$awt$X11$XDropTargetRegistry$EmbeddedDropSiteEntry') @:internal extern class XDropTargetRegistry_EmbeddedDropSiteEntry
 {
-	@:overload public function new(root : haxe.Int64, event_mask : haxe.Int64, supportedProtocols : java.util.List<sun.awt.X11.XDropTargetProtocol>) : Void;
+	@:overload @:public public function new(root : haxe.Int64, event_mask : haxe.Int64, supportedProtocols : java.util.List<sun.awt.X11.XDropTargetProtocol>) : Void;
 	
-	@:overload public function getRoot() : haxe.Int64;
+	@:overload @:public public function getRoot() : haxe.Int64;
 	
-	@:overload public function getEventMask() : haxe.Int64;
+	@:overload @:public public function getEventMask() : haxe.Int64;
 	
-	@:overload public function hasNonXEmbedClientSites() : Bool;
+	@:overload @:public public function hasNonXEmbedClientSites() : Bool;
 	
-	@:overload @:synchronized public function addSite(window : haxe.Int64, isXEmbedClient : Bool) : Void;
+	@:overload @:public @:synchronized public function addSite(window : haxe.Int64, isXEmbedClient : Bool) : Void;
 	
-	@:overload @:synchronized public function removeSite(window : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function removeSite(window : haxe.Int64) : Void;
 	
-	@:overload public function setSupportedProtocols(list : java.util.List<sun.awt.X11.XDropTargetProtocol>) : Void;
+	@:overload @:public public function setSupportedProtocols(list : java.util.List<sun.awt.X11.XDropTargetProtocol>) : Void;
 	
-	@:overload public function getSupportedProtocols() : java.util.List<sun.awt.X11.XDropTargetProtocol>;
+	@:overload @:public public function getSupportedProtocols() : java.util.List<sun.awt.X11.XDropTargetProtocol>;
 	
-	@:overload public function hasSites() : Bool;
+	@:overload @:public public function hasSites() : Bool;
 	
-	@:overload public function getSites() : java.NativeArray<haxe.Int64>;
+	@:overload @:public public function getSites() : java.NativeArray<haxe.Int64>;
 	
-	@:overload public function getSite(x : Int, y : Int) : haxe.Int64;
+	@:overload @:public public function getSite(x : Int, y : Int) : haxe.Int64;
 	
 	
 }

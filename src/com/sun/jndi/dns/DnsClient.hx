@@ -31,11 +31,11 @@ extern class DnsClient
 	* "timeout" is the initial timeout interval (in ms) for UDP queries,
 	* and "retries" gives the number of retries per server.
 	*/
-	@:overload public function new(servers : java.NativeArray<String>, timeout : Int, retries : Int) : Void;
+	@:overload @:public public function new(servers : java.NativeArray<String>, timeout : Int, retries : Int) : Void;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

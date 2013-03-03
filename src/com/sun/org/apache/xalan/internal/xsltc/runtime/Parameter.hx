@@ -28,15 +28,15 @@ package com.sun.org.apache.xalan.internal.xsltc.runtime;
 */
 extern class Parameter
 {
-	public var _name : String;
+	@:public public var _name : String;
 	
-	public var _value : Dynamic;
+	@:public public var _value : Dynamic;
 	
-	public var _isDefault : Bool;
+	@:public public var _isDefault : Bool;
 	
-	@:overload public function new(name : String, value : Dynamic) : Void;
+	@:overload @:public public function new(name : String, value : Dynamic) : Void;
 	
-	@:overload public function new(name : String, value : Dynamic, isDefault : Bool) : Void;
+	@:overload @:public public function new(name : String, value : Dynamic, isDefault : Bool) : Void;
 	
 	
 }

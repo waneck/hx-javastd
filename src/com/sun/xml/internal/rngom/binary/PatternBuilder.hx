@@ -46,13 +46,13 @@ package com.sun.xml.internal.rngom.binary;
 */
 extern class PatternBuilder
 {
-	private var notAllowed(default, null) : com.sun.xml.internal.rngom.binary.NotAllowedPattern;
+	@:protected @:final private var notAllowed(default, null) : com.sun.xml.internal.rngom.binary.NotAllowedPattern;
 	
-	private var interner(default, null) : com.sun.xml.internal.rngom.binary.PatternInterner;
+	@:protected @:final private var interner(default, null) : com.sun.xml.internal.rngom.binary.PatternInterner;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(parent : com.sun.xml.internal.rngom.binary.PatternBuilder) : Void;
+	@:overload @:public public function new(parent : com.sun.xml.internal.rngom.binary.PatternBuilder) : Void;
 	
 	
 }

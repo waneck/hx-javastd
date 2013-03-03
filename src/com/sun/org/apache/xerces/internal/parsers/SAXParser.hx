@@ -21,36 +21,36 @@ package com.sun.org.apache.xerces.internal.parsers;
 extern class SAXParser extends com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser
 {
 	/** Feature identifier: notify built-in refereces. */
-	private static var NOTIFY_BUILTIN_REFS(default, null) : String;
+	@:protected @:static @:final private static var NOTIFY_BUILTIN_REFS(default, null) : String;
 	
-	private static var REPORT_WHITESPACE(default, null) : String;
+	@:protected @:static @:final private static var REPORT_WHITESPACE(default, null) : String;
 	
 	/** Property identifier: symbol table. */
-	private static var SYMBOL_TABLE(default, null) : String;
+	@:protected @:static @:final private static var SYMBOL_TABLE(default, null) : String;
 	
 	/** Property identifier: XML grammar pool. */
-	private static var XMLGRAMMAR_POOL(default, null) : String;
+	@:protected @:static @:final private static var XMLGRAMMAR_POOL(default, null) : String;
 	
 	/**
 	* Constructs a SAX parser using the specified parser configuration.
 	*/
-	@:overload public function new(config : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration) : Void;
+	@:overload @:public public function new(config : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration) : Void;
 	
 	/**
 	* Constructs a SAX parser using the dtd/xml schema parser configuration.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a SAX parser using the specified symbol table.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
 	/**
 	* Constructs a SAX parser using the specified symbol table and
 	* grammar pool.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
 	
 	
 }

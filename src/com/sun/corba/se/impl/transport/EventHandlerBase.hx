@@ -25,23 +25,23 @@ package com.sun.corba.se.impl.transport;
 */
 extern class EventHandlerBase implements com.sun.corba.se.pept.transport.EventHandler
 {
-	private var orb : com.sun.corba.se.spi.orb.ORB;
+	@:protected private var orb : com.sun.corba.se.spi.orb.ORB;
 	
-	private var work : com.sun.corba.se.spi.orbutil.threadpool.Work;
+	@:protected private var work : com.sun.corba.se.spi.orbutil.threadpool.Work;
 	
-	private var useWorkerThreadForEvent : Bool;
+	@:protected private var useWorkerThreadForEvent : Bool;
 	
-	private var useSelectThreadToWait : Bool;
+	@:protected private var useSelectThreadToWait : Bool;
 	
-	private var selectionKey : java.nio.channels.SelectionKey;
+	@:protected private var selectionKey : java.nio.channels.SelectionKey;
 	
-	@:overload public function setUseSelectThreadToWait(x : Bool) : Void;
+	@:overload @:public public function setUseSelectThreadToWait(x : Bool) : Void;
 	
-	@:overload public function shouldUseSelectThreadToWait() : Bool;
+	@:overload @:public public function shouldUseSelectThreadToWait() : Bool;
 	
-	@:overload public function setSelectionKey(selectionKey : java.nio.channels.SelectionKey) : Void;
+	@:overload @:public public function setSelectionKey(selectionKey : java.nio.channels.SelectionKey) : Void;
 	
-	@:overload public function getSelectionKey() : java.nio.channels.SelectionKey;
+	@:overload @:public public function getSelectionKey() : java.nio.channels.SelectionKey;
 	
 	/*
 	* NOTE:
@@ -49,23 +49,23 @@ extern class EventHandlerBase implements com.sun.corba.se.pept.transport.EventHa
 	* Only one thread should call it - a reader/listener/select thread.
 	* Not stateless: interest ops, registration.
 	*/
-	@:overload public function handleEvent() : Void;
+	@:overload @:public public function handleEvent() : Void;
 	
-	@:overload public function shouldUseWorkerThreadForEvent() : Bool;
+	@:overload @:public public function shouldUseWorkerThreadForEvent() : Bool;
 	
-	@:overload public function setUseWorkerThreadForEvent(x : Bool) : Void;
+	@:overload @:public public function setUseWorkerThreadForEvent(x : Bool) : Void;
 	
-	@:overload public function setWork(work : com.sun.corba.se.spi.orbutil.threadpool.Work) : Void;
+	@:overload @:public public function setWork(work : com.sun.corba.se.spi.orbutil.threadpool.Work) : Void;
 	
-	@:overload public function getWork() : com.sun.corba.se.spi.orbutil.threadpool.Work;
+	@:overload @:public public function getWork() : com.sun.corba.se.spi.orbutil.threadpool.Work;
 	
-	@:overload public function getChannel() : java.nio.channels.SelectableChannel;
+	@:overload @:public @:public public function getChannel() : java.nio.channels.SelectableChannel;
 	
-	@:overload public function getInterestOps() : Int;
+	@:overload @:public @:public public function getInterestOps() : Int;
 	
-	@:overload public function getAcceptor() : com.sun.corba.se.pept.transport.Acceptor;
+	@:overload @:public @:public public function getAcceptor() : com.sun.corba.se.pept.transport.Acceptor;
 	
-	@:overload public function getConnection() : com.sun.corba.se.pept.transport.Connection;
+	@:overload @:public @:public public function getConnection() : com.sun.corba.se.pept.transport.Connection;
 	
 	
 }

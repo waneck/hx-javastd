@@ -25,9 +25,9 @@ package sun.java2d.pipe;
 */
 extern class Region
 {
-	public static var EMPTY_REGION(default, null) : sun.java2d.pipe.Region;
+	@:public @:static @:final public static var EMPTY_REGION(default, null) : sun.java2d.pipe.Region;
 	
-	public static var WHOLE_REGION(default, null) : sun.java2d.pipe.Region;
+	@:public @:static @:final public static var WHOLE_REGION(default, null) : sun.java2d.pipe.Region;
 	
 	/**
 	* Adds the dimension <code>dim</code> to the coordinate
@@ -36,7 +36,7 @@ extern class Region
 	* the start coordinate.  If the sum overflows an integer
 	* data type then the method returns <code>Integer.MAX_VALUE</code>.
 	*/
-	@:overload public static function dimAdd(start : Int, dim : Int) : Int;
+	@:overload @:public @:static public static function dimAdd(start : Int, dim : Int) : Int;
 	
 	/**
 	* Adds the delta {@code dv} to the value {@code v} with
@@ -47,9 +47,9 @@ extern class Region
 	* then {@code Integer.MIN_VALUE} is returned.
 	* Otherwise the sum is returned.
 	*/
-	@:overload public static function clipAdd(v : Int, dv : Int) : Int;
+	@:overload @:public @:static public static function clipAdd(v : Int, dv : Int) : Int;
 	
-	@:overload private function new(lox : Int, loy : Int, hix : Int, hiy : Int) : Void;
+	@:overload @:protected private function new(lox : Int, loy : Int, hix : Int, hiy : Int) : Void;
 	
 	/**
 	* Returns a Region object covering the pixels which would be
@@ -63,7 +63,7 @@ extern class Region
 	*          coordinates as they are returned in the iteration, or
 	*          <code>null</code> if untransformed coordinates are desired
 	*/
-	@:overload public static function getInstance(s : java.awt.Shape, at : java.awt.geom.AffineTransform) : sun.java2d.pipe.Region;
+	@:overload @:public @:static public static function getInstance(s : java.awt.Shape, at : java.awt.geom.AffineTransform) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object covering the pixels which would be
@@ -87,7 +87,7 @@ extern class Region
 	*          coordinates as they are returned in the iteration, or
 	*          <code>null</code> if untransformed coordinates are desired
 	*/
-	@:overload public static function getInstance(devBounds : sun.java2d.pipe.Region, s : java.awt.Shape, at : java.awt.geom.AffineTransform) : sun.java2d.pipe.Region;
+	@:overload @:public @:static public static function getInstance(devBounds : sun.java2d.pipe.Region, s : java.awt.Shape, at : java.awt.geom.AffineTransform) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object covering the pixels which would be
@@ -116,7 +116,7 @@ extern class Region
 	*          coordinates as they are returned in the iteration, or
 	*          <code>null</code> if untransformed coordinates are desired
 	*/
-	@:overload public static function getInstance(devBounds : sun.java2d.pipe.Region, normalize : Bool, s : java.awt.Shape, at : java.awt.geom.AffineTransform) : sun.java2d.pipe.Region;
+	@:overload @:public @:static public static function getInstance(devBounds : sun.java2d.pipe.Region, normalize : Bool, s : java.awt.Shape, at : java.awt.geom.AffineTransform) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object with a rectangle of interest specified
@@ -125,7 +125,7 @@ extern class Region
 	* This method can also be used to create a simple rectangular
 	* region.
 	*/
-	@:overload public static function getInstance(r : java.awt.Rectangle) : sun.java2d.pipe.Region;
+	@:overload @:public @:static public static function getInstance(r : java.awt.Rectangle) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object with a rectangle of interest specified
@@ -134,7 +134,7 @@ extern class Region
 	* This method can also be used to create a simple rectangular
 	* region.
 	*/
-	@:overload public static function getInstanceXYWH(x : Int, y : Int, w : Int, h : Int) : sun.java2d.pipe.Region;
+	@:overload @:public @:static public static function getInstanceXYWH(x : Int, y : Int, w : Int, h : Int) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object with a rectangle of interest specified
@@ -143,7 +143,7 @@ extern class Region
 	* This method can also be used to create a simple rectangular
 	* region.
 	*/
-	@:overload public static function getInstance(box : java.NativeArray<Int>) : sun.java2d.pipe.Region;
+	@:overload @:public @:static public static function getInstance(box : java.NativeArray<Int>) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object with a rectangle of interest specified
@@ -152,7 +152,7 @@ extern class Region
 	* This method can also be used to create a simple rectangular
 	* region.
 	*/
-	@:overload public static function getInstanceXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : sun.java2d.pipe.Region;
+	@:overload @:public @:static public static function getInstanceXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : sun.java2d.pipe.Region;
 	
 	/**
 	* Sets the rectangle of interest for storing and returning
@@ -161,7 +161,7 @@ extern class Region
 	* This method can also be used to initialize a simple rectangular
 	* region.
 	*/
-	@:overload public function setOutputArea(r : java.awt.Rectangle) : Void;
+	@:overload @:public public function setOutputArea(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Sets the rectangle of interest for storing and returning
@@ -172,7 +172,7 @@ extern class Region
 	* This method can also be used to initialize a simple rectangular
 	* region.
 	*/
-	@:overload public function setOutputAreaXYWH(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function setOutputAreaXYWH(x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Sets the rectangle of interest for storing and returning
@@ -181,7 +181,7 @@ extern class Region
 	* This method can also be used to initialize a simple rectangular
 	* region.
 	*/
-	@:overload public function setOutputArea(box : java.NativeArray<Int>) : Void;
+	@:overload @:public public function setOutputArea(box : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Sets the rectangle of interest for storing and returning
@@ -191,7 +191,7 @@ extern class Region
 	* This method can also be used to initialize a simple rectangular
 	* region.
 	*/
-	@:overload public function setOutputAreaXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : Void;
+	@:overload @:public public function setOutputAreaXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : Void;
 	
 	/**
 	* Appends the list of spans returned from the indicated
@@ -200,35 +200,35 @@ extern class Region
 	* Y range equal to the highest Y band in the region and a
 	* higher X coordinate than any of the spans in that band.
 	*/
-	@:overload public function appendSpans(si : sun.java2d.pipe.SpanIterator) : Void;
+	@:overload @:public public function appendSpans(si : sun.java2d.pipe.SpanIterator) : Void;
 	
 	/**
 	* Returns a Region object that represents the same list of
 	* rectangles as the current Region object, translated by
 	* the specified dx, dy translation factors.
 	*/
-	@:overload public function getTranslatedRegion(dx : Int, dy : Int) : sun.java2d.pipe.Region;
+	@:overload @:public public function getTranslatedRegion(dx : Int, dy : Int) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object that represents the intersection of
 	* this object with the specified Rectangle.  The return value
 	* may be this same object if no clipping occurs.
 	*/
-	@:overload public function getIntersection(r : java.awt.Rectangle) : sun.java2d.pipe.Region;
+	@:overload @:public public function getIntersection(r : java.awt.Rectangle) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object that represents the intersection of
 	* this object with the specified rectangular area.  The return
 	* value may be this same object if no clipping occurs.
 	*/
-	@:overload public function getIntersectionXYWH(x : Int, y : Int, w : Int, h : Int) : sun.java2d.pipe.Region;
+	@:overload @:public public function getIntersectionXYWH(x : Int, y : Int, w : Int, h : Int) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object that represents the intersection of
 	* this object with the specified rectangular area.  The return
 	* value may be this same object if no clipping occurs.
 	*/
-	@:overload public function getIntersectionXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : sun.java2d.pipe.Region;
+	@:overload @:public public function getIntersectionXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object that represents the intersection of this
@@ -242,7 +242,7 @@ extern class Region
 	* The return value may be this same object or the argument
 	* Region object if no clipping occurs.
 	*/
-	@:overload public function getIntersection(r : sun.java2d.pipe.Region) : sun.java2d.pipe.Region;
+	@:overload @:public public function getIntersection(r : sun.java2d.pipe.Region) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object that represents the union of this
@@ -256,7 +256,7 @@ extern class Region
 	* The return value may be this same object or the argument
 	* Region object if no augmentation occurs.
 	*/
-	@:overload public function getUnion(r : sun.java2d.pipe.Region) : sun.java2d.pipe.Region;
+	@:overload @:public public function getUnion(r : sun.java2d.pipe.Region) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object that represents the difference of the
@@ -270,7 +270,7 @@ extern class Region
 	* The return value may be this same object or the argument
 	* Region object if no clipping occurs.
 	*/
-	@:overload public function getDifference(r : sun.java2d.pipe.Region) : sun.java2d.pipe.Region;
+	@:overload @:public public function getDifference(r : sun.java2d.pipe.Region) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object that represents the exclusive or of this
@@ -284,7 +284,7 @@ extern class Region
 	* The return value may be this same object or the argument
 	* Region object if either is empty.
 	*/
-	@:overload public function getExclusiveOr(r : sun.java2d.pipe.Region) : sun.java2d.pipe.Region;
+	@:overload @:public public function getExclusiveOr(r : sun.java2d.pipe.Region) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object that represents the bounds of the
@@ -294,7 +294,7 @@ extern class Region
 	* The return value may be this same object if no clipping occurs
 	* and this Region is rectangular.
 	*/
-	@:overload public function getBoundsIntersection(r : java.awt.Rectangle) : sun.java2d.pipe.Region;
+	@:overload @:public public function getBoundsIntersection(r : java.awt.Rectangle) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object that represents the bounds of the
@@ -304,7 +304,7 @@ extern class Region
 	* The return value may be this same object if no clipping occurs
 	* and this Region is rectangular.
 	*/
-	@:overload public function getBoundsIntersectionXYWH(x : Int, y : Int, w : Int, h : Int) : sun.java2d.pipe.Region;
+	@:overload @:public public function getBoundsIntersectionXYWH(x : Int, y : Int, w : Int, h : Int) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object that represents the bounds of the
@@ -314,7 +314,7 @@ extern class Region
 	* The return value may be this same object if no clipping occurs
 	* and this Region is rectangular.
 	*/
-	@:overload public function getBoundsIntersectionXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : sun.java2d.pipe.Region;
+	@:overload @:public public function getBoundsIntersectionXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns a Region object that represents the intersection of
@@ -324,66 +324,66 @@ extern class Region
 	* Region object if no clipping occurs and the Regions are
 	* rectangular.
 	*/
-	@:overload public function getBoundsIntersection(r : sun.java2d.pipe.Region) : sun.java2d.pipe.Region;
+	@:overload @:public public function getBoundsIntersection(r : sun.java2d.pipe.Region) : sun.java2d.pipe.Region;
 	
 	/**
 	* Returns the lowest X coordinate in the Region.
 	*/
-	@:overload @:final public function getLoX() : Int;
+	@:overload @:public @:final public function getLoX() : Int;
 	
 	/**
 	* Returns the lowest Y coordinate in the Region.
 	*/
-	@:overload @:final public function getLoY() : Int;
+	@:overload @:public @:final public function getLoY() : Int;
 	
 	/**
 	* Returns the highest X coordinate in the Region.
 	*/
-	@:overload @:final public function getHiX() : Int;
+	@:overload @:public @:final public function getHiX() : Int;
 	
 	/**
 	* Returns the highest Y coordinate in the Region.
 	*/
-	@:overload @:final public function getHiY() : Int;
+	@:overload @:public @:final public function getHiY() : Int;
 	
 	/**
 	* Returns the width of this Region clipped to the range (0 - MAX_INT).
 	*/
-	@:overload @:final public function getWidth() : Int;
+	@:overload @:public @:final public function getWidth() : Int;
 	
 	/**
 	* Returns the height of this Region clipped to the range (0 - MAX_INT).
 	*/
-	@:overload @:final public function getHeight() : Int;
+	@:overload @:public @:final public function getHeight() : Int;
 	
 	/**
 	* Returns true iff this Region encloses no area.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Returns true iff this Region represents a single simple
 	* rectangular area.
 	*/
-	@:overload public function isRectangular() : Bool;
+	@:overload @:public public function isRectangular() : Bool;
 	
 	/**
 	* Returns true iff this Region contains the specified coordinate.
 	*/
-	@:overload public function contains(x : Int, y : Int) : Bool;
+	@:overload @:public public function contains(x : Int, y : Int) : Bool;
 	
 	/**
 	* Returns true iff this Region lies inside the indicated
 	* rectangular area specified in x, y, width, height format
 	* with appropriate clipping performed as per the dimAdd method.
 	*/
-	@:overload public function isInsideXYWH(x : Int, y : Int, w : Int, h : Int) : Bool;
+	@:overload @:public public function isInsideXYWH(x : Int, y : Int, w : Int, h : Int) : Bool;
 	
 	/**
 	* Returns true iff this Region lies inside the indicated
 	* rectangular area specified in lox, loy, hix, hiy format.
 	*/
-	@:overload public function isInsideXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : Bool;
+	@:overload @:public public function isInsideXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : Bool;
 	
 	/**
 	* Quickly checks if this Region lies inside the specified
@@ -392,7 +392,7 @@ extern class Region
 	* This method will return false if the specified Region
 	* object is not a simple rectangle.
 	*/
-	@:overload public function isInsideQuickCheck(r : sun.java2d.pipe.Region) : Bool;
+	@:overload @:public public function isInsideQuickCheck(r : sun.java2d.pipe.Region) : Bool;
 	
 	/**
 	* Quickly checks if this Region intersects the specified
@@ -402,7 +402,7 @@ extern class Region
 	* and does not bother to test if the rectangular region
 	* actually intersects any bands.
 	*/
-	@:overload public function intersectsQuickCheckXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : Bool;
+	@:overload @:public public function intersectsQuickCheckXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : Bool;
 	
 	/**
 	* Quickly checks if this Region intersects the specified
@@ -412,7 +412,7 @@ extern class Region
 	* and does not bother to test if the rectangular region
 	* actually intersects any bands.
 	*/
-	@:overload public function intersectsQuickCheck(r : sun.java2d.pipe.Region) : Bool;
+	@:overload @:public public function intersectsQuickCheck(r : sun.java2d.pipe.Region) : Bool;
 	
 	/**
 	* Quickly checks if this Region surrounds the specified
@@ -421,7 +421,7 @@ extern class Region
 	* This method will return false if this Region object is
 	* not a simple rectangle.
 	*/
-	@:overload public function encompasses(r : sun.java2d.pipe.Region) : Bool;
+	@:overload @:public public function encompasses(r : sun.java2d.pipe.Region) : Bool;
 	
 	/**
 	* Quickly checks if this Region surrounds the specified
@@ -430,7 +430,7 @@ extern class Region
 	* This method will return false if this Region object is
 	* not a simple rectangle.
 	*/
-	@:overload public function encompassesXYWH(x : Int, y : Int, w : Int, h : Int) : Bool;
+	@:overload @:public public function encompassesXYWH(x : Int, y : Int, w : Int, h : Int) : Bool;
 	
 	/**
 	* Quickly checks if this Region surrounds the specified
@@ -439,45 +439,45 @@ extern class Region
 	* This method will return false if this Region object is
 	* not a simple rectangle.
 	*/
-	@:overload public function encompassesXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : Bool;
+	@:overload @:public public function encompassesXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : Bool;
 	
 	/**
 	* Gets the bbox of the available spans, clipped to the OutputArea.
 	*/
-	@:overload public function getBounds(pathbox : java.NativeArray<Int>) : Void;
+	@:overload @:public public function getBounds(pathbox : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Clips the indicated bbox array to the bounds of this Region.
 	*/
-	@:overload public function clipBoxToBounds(bbox : java.NativeArray<Int>) : Void;
+	@:overload @:public public function clipBoxToBounds(bbox : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Gets an iterator object to iterate over the spans in this region.
 	*/
-	@:overload public function getIterator() : sun.java2d.pipe.RegionIterator;
+	@:overload @:public public function getIterator() : sun.java2d.pipe.RegionIterator;
 	
 	/**
 	* Gets a span iterator object that iterates over the spans in this region
 	*/
-	@:overload public function getSpanIterator() : sun.java2d.pipe.SpanIterator;
+	@:overload @:public public function getSpanIterator() : sun.java2d.pipe.SpanIterator;
 	
 	/**
 	* Gets a span iterator object that iterates over the spans in this region
 	* but clipped to the bounds given in the argument (xlo, ylo, xhi, yhi).
 	*/
-	@:overload public function getSpanIterator(bbox : java.NativeArray<Int>) : sun.java2d.pipe.SpanIterator;
+	@:overload @:public public function getSpanIterator(bbox : java.NativeArray<Int>) : sun.java2d.pipe.SpanIterator;
 	
 	/**
 	* Returns a SpanIterator that is the argument iterator filtered by
 	* this region.
 	*/
-	@:overload public function filter(si : sun.java2d.pipe.SpanIterator) : sun.java2d.pipe.SpanIterator;
+	@:overload @:public public function filter(si : sun.java2d.pipe.SpanIterator) : sun.java2d.pipe.SpanIterator;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }
@@ -486,17 +486,17 @@ extern class Region
 */
 @:native('sun$java2d$pipe$Region$ImmutableRegion') @:internal extern class Region_ImmutableRegion extends sun.java2d.pipe.Region
 {
-	@:overload private function new(lox : Int, loy : Int, hix : Int, hiy : Int) : Void;
+	@:overload @:protected private function new(lox : Int, loy : Int, hix : Int, hiy : Int) : Void;
 	
-	@:overload override public function appendSpans(si : sun.java2d.pipe.SpanIterator) : Void;
+	@:overload @:public override public function appendSpans(si : sun.java2d.pipe.SpanIterator) : Void;
 	
-	@:overload override public function setOutputArea(r : java.awt.Rectangle) : Void;
+	@:overload @:public override public function setOutputArea(r : java.awt.Rectangle) : Void;
 	
-	@:overload override public function setOutputAreaXYWH(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function setOutputAreaXYWH(x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function setOutputArea(box : java.NativeArray<Int>) : Void;
+	@:overload @:public override public function setOutputArea(box : java.NativeArray<Int>) : Void;
 	
-	@:overload override public function setOutputAreaXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : Void;
+	@:overload @:public override public function setOutputAreaXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : Void;
 	
 	
 }

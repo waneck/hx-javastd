@@ -28,13 +28,13 @@ extern class SocketFactoryAcceptorImpl extends com.sun.corba.se.impl.transport.S
 	/**
 	* @author Harold Carr
 	*/
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, port : Int, name : String, type : String) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, port : Int, name : String, type : String) : Void;
 	
-	@:overload public function initialize() : Bool;
+	@:overload @:public override public function initialize() : Bool;
 	
-	@:overload private function toStringName() : String;
+	@:overload @:protected override private function toStringName() : String;
 	
-	@:overload private function dprint(msg : String) : Void;
+	@:overload @:protected override private function dprint(msg : String) : Void;
 	
 	
 }

@@ -25,35 +25,35 @@ package sun.awt;
 */
 extern class SunGraphicsCallback
 {
-	public static var HEAVYWEIGHTS(default, null) : Int;
+	@:public @:static @:final public static var HEAVYWEIGHTS(default, null) : Int;
 	
-	public static var LIGHTWEIGHTS(default, null) : Int;
+	@:public @:static @:final public static var LIGHTWEIGHTS(default, null) : Int;
 	
-	public static var TWO_PASSES(default, null) : Int;
+	@:public @:static @:final public static var TWO_PASSES(default, null) : Int;
 	
-	@:overload @:abstract public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
+	@:overload @:public @:abstract public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
 	
-	@:overload private function constrainGraphics(g : java.awt.Graphics, bounds : java.awt.Rectangle) : Void;
+	@:overload @:protected private function constrainGraphics(g : java.awt.Graphics, bounds : java.awt.Rectangle) : Void;
 	
-	@:overload @:final public function runOneComponent(comp : java.awt.Component, bounds : java.awt.Rectangle, g : java.awt.Graphics, clip : java.awt.Shape, weightFlags : Int) : Void;
+	@:overload @:public @:final public function runOneComponent(comp : java.awt.Component, bounds : java.awt.Rectangle, g : java.awt.Graphics, clip : java.awt.Shape, weightFlags : Int) : Void;
 	
-	@:overload @:final public function runComponents(comps : java.NativeArray<java.awt.Component>, g : java.awt.Graphics, weightFlags : Int) : Void;
+	@:overload @:public @:final public function runComponents(comps : java.NativeArray<java.awt.Component>, g : java.awt.Graphics, weightFlags : Int) : Void;
 	
 	
 }
 @:native('sun$awt$SunGraphicsCallback$PaintHeavyweightComponentsCallback') extern class SunGraphicsCallback_PaintHeavyweightComponentsCallback extends sun.awt.SunGraphicsCallback
 {
-	@:overload override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
+	@:overload @:public override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
 	
-	@:overload public static function getInstance() : sun.awt.SunGraphicsCallback.SunGraphicsCallback_PaintHeavyweightComponentsCallback;
+	@:overload @:public @:static public static function getInstance() : sun.awt.SunGraphicsCallback.SunGraphicsCallback_PaintHeavyweightComponentsCallback;
 	
 	
 }
 @:native('sun$awt$SunGraphicsCallback$PrintHeavyweightComponentsCallback') extern class SunGraphicsCallback_PrintHeavyweightComponentsCallback extends sun.awt.SunGraphicsCallback
 {
-	@:overload override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
+	@:overload @:public override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
 	
-	@:overload public static function getInstance() : sun.awt.SunGraphicsCallback.SunGraphicsCallback_PrintHeavyweightComponentsCallback;
+	@:overload @:public @:static public static function getInstance() : sun.awt.SunGraphicsCallback.SunGraphicsCallback_PrintHeavyweightComponentsCallback;
 	
 	
 }

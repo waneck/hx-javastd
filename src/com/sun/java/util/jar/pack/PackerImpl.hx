@@ -29,13 +29,13 @@ extern class PackerImpl extends com.sun.java.util.jar.pack.TLGlobals implements 
 	* Constructs a Packer object and sets the initial state of
 	* the packer engines.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Get the set of options for the pack and unpack engines.
 	* @return A sorted association of option key strings to option values.
 	*/
-	@:overload public function properties() : java.util.SortedMap<String, String>;
+	@:overload @:public public function properties() : java.util.SortedMap<String, String>;
 	
 	/**
 	* Takes a JarFile and converts into a pack-stream.
@@ -45,7 +45,7 @@ extern class PackerImpl extends com.sun.java.util.jar.pack.TLGlobals implements 
 	* @param out an OutputStream
 	* @exception IOException if an error is encountered.
 	*/
-	@:overload @:synchronized public function pack(_in : java.util.jar.JarFile, out : java.io.OutputStream) : Void;
+	@:overload @:public @:synchronized public function pack(_in : java.util.jar.JarFile, out : java.io.OutputStream) : Void;
 	
 	/**
 	* Takes a JarInputStream and converts into a pack-stream.
@@ -61,19 +61,19 @@ extern class PackerImpl extends com.sun.java.util.jar.pack.TLGlobals implements 
 	* @param out an OutputStream
 	* @exception IOException if an error is encountered.
 	*/
-	@:overload @:synchronized public function pack(_in : java.util.jar.JarInputStream, out : java.io.OutputStream) : Void;
+	@:overload @:public @:synchronized public function pack(_in : java.util.jar.JarInputStream, out : java.io.OutputStream) : Void;
 	
 	/**
 	* Register a listener for changes to options.
 	* @param listener  An object to be invoked when a property is changed.
 	*/
-	@:overload public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Remove a listener for the PropertyChange event.
 	* @param listener  The PropertyChange listener to be removed.
 	*/
-	@:overload public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	
 }
@@ -83,7 +83,7 @@ extern class PackerImpl extends com.sun.java.util.jar.pack.TLGlobals implements 
 }
 @:native('com$sun$java$util$jar$pack$PackerImpl$DoPack$InFile') @:internal extern class PackerImpl_DoPack_InFile
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -25,7 +25,7 @@ package com.sun.corba.se.spi.orbutil.fsm;
 */
 extern class ActionBase extends com.sun.corba.se.impl.orbutil.fsm.NameBase implements com.sun.corba.se.spi.orbutil.fsm.Action
 {
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/** Called by the state engine to perform an action
 	* before a state transition takes place.  The FSM is
@@ -44,7 +44,7 @@ extern class ActionBase extends com.sun.corba.se.impl.orbutil.fsm.NameBase imple
 	* @param FSM fsm is the state machine causing this action.
 	* @param Input in is the input that caused the transition.
 	*/
-	@:overload @:public public function doIt(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : Void;
+	@:overload @:public @:public public function doIt(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : Void;
 	
 	
 }

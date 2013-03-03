@@ -45,49 +45,49 @@ extern class LocaleData
 	* exists. This bundle family happens to be the one with the broadest
 	* locale coverage in the JRE.
 	*/
-	@:overload public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
+	@:overload @:public @:static public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
 	
 	/**
 	* Gets a calendar data resource bundle, using privileges
 	* to allow accessing a sun.* package.
 	*/
-	@:overload public static function getCalendarData(locale : java.util.Locale) : java.util.ResourceBundle;
+	@:overload @:public @:static public static function getCalendarData(locale : java.util.Locale) : java.util.ResourceBundle;
 	
 	/**
 	* Gets a currency names resource bundle, using privileges
 	* to allow accessing a sun.* package.
 	*/
-	@:overload public static function getCurrencyNames(locale : java.util.Locale) : sun.util.resources.OpenListResourceBundle;
+	@:overload @:public @:static public static function getCurrencyNames(locale : java.util.Locale) : sun.util.resources.OpenListResourceBundle;
 	
 	/**
 	* Gets a locale names resource bundle, using privileges
 	* to allow accessing a sun.* package.
 	*/
-	@:overload public static function getLocaleNames(locale : java.util.Locale) : sun.util.resources.OpenListResourceBundle;
+	@:overload @:public @:static public static function getLocaleNames(locale : java.util.Locale) : sun.util.resources.OpenListResourceBundle;
 	
 	/**
 	* Gets a time zone names resource bundle, using privileges
 	* to allow accessing a sun.* package.
 	*/
-	@:overload public static function getTimeZoneNames(locale : java.util.Locale) : sun.util.resources.OpenListResourceBundle;
+	@:overload @:public @:static public static function getTimeZoneNames(locale : java.util.Locale) : sun.util.resources.OpenListResourceBundle;
 	
 	/**
 	* Gets a collation data resource bundle, using privileges
 	* to allow accessing a sun.* package.
 	*/
-	@:overload public static function getCollationData(locale : java.util.Locale) : java.util.ResourceBundle;
+	@:overload @:public @:static public static function getCollationData(locale : java.util.Locale) : java.util.ResourceBundle;
 	
 	/**
 	* Gets a date format data resource bundle, using privileges
 	* to allow accessing a sun.* package.
 	*/
-	@:overload public static function getDateFormatData(locale : java.util.Locale) : java.util.ResourceBundle;
+	@:overload @:public @:static public static function getDateFormatData(locale : java.util.Locale) : java.util.ResourceBundle;
 	
 	/**
 	* Gets a number format data resource bundle, using privileges
 	* to allow accessing a sun.* package.
 	*/
-	@:overload public static function getNumberFormatData(locale : java.util.Locale) : java.util.ResourceBundle;
+	@:overload @:public @:static public static function getNumberFormatData(locale : java.util.Locale) : java.util.ResourceBundle;
 	
 	
 }
@@ -100,7 +100,7 @@ extern class LocaleData
 }
 @:native('sun$util$resources$LocaleData$LocaleDataResourceBundleControl') @:internal extern class LocaleData_LocaleDataResourceBundleControl extends java.util.ResourceBundle.ResourceBundle_Control
 {
-	@:overload public static function getRBControlInstance() : sun.util.resources.LocaleData.LocaleData_LocaleDataResourceBundleControl;
+	@:overload @:public @:static public static function getRBControlInstance() : sun.util.resources.LocaleData.LocaleData_LocaleDataResourceBundleControl;
 	
 	/*
 	* This method overrides the default implementation to search
@@ -112,7 +112,7 @@ extern class LocaleData
 	* @returns a list of candidate locales to search from.
 	* @exception NullPointerException if baseName or locale is null.
 	*/
-	@:overload public function getCandidateLocales(baseName : String, locale : java.util.Locale) : java.util.List<java.util.Locale>;
+	@:overload @:public override public function getCandidateLocales(baseName : String, locale : java.util.Locale) : java.util.List<java.util.Locale>;
 	
 	/*
 	* Overrides "getFallbackLocale" to return null so
@@ -122,7 +122,7 @@ extern class LocaleData
 	* @return null for the fallback locale.
 	* @exception NullPointerException if baseName or locale is null.
 	*/
-	@:overload public function getFallbackLocale(baseName : String, locale : java.util.Locale) : java.util.Locale;
+	@:overload @:public override public function getFallbackLocale(baseName : String, locale : java.util.Locale) : java.util.Locale;
 	
 	
 }

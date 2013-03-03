@@ -32,14 +32,14 @@ extern class MidiDeviceProvider
 	* @return <code>true</code> if the specified device is supported,
 	* otherwise <code>false</code>
 	*/
-	@:overload public function isDeviceSupported(info : javax.sound.midi.MidiDevice.MidiDevice_Info) : Bool;
+	@:overload @:public public function isDeviceSupported(info : javax.sound.midi.MidiDevice.MidiDevice_Info) : Bool;
 	
 	/**
 	* Obtains the set of info objects representing the device
 	* or devices provided by this <code>MidiDeviceProvider</code>.
 	* @return set of device info objects
 	*/
-	@:overload @:abstract public function getDeviceInfo() : java.NativeArray<javax.sound.midi.MidiDevice.MidiDevice_Info>;
+	@:overload @:public @:abstract public function getDeviceInfo() : java.NativeArray<javax.sound.midi.MidiDevice.MidiDevice_Info>;
 	
 	/**
 	* Obtains an instance of the device represented by the info object.
@@ -48,7 +48,7 @@ extern class MidiDeviceProvider
 	* @throws IllegalArgumentException if the info object specified does not
 	* match the info object for a device supported by this <code>MidiDeviceProvider</code>.
 	*/
-	@:overload @:abstract public function getDevice(info : javax.sound.midi.MidiDevice.MidiDevice_Info) : javax.sound.midi.MidiDevice;
+	@:overload @:public @:abstract public function getDevice(info : javax.sound.midi.MidiDevice.MidiDevice_Info) : javax.sound.midi.MidiDevice;
 	
 	
 }

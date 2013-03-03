@@ -25,27 +25,27 @@ package sun.print;
 */
 @:internal extern class CustomMediaTray extends javax.print.attribute.standard.MediaTray
 {
-	@:overload public function new(name : String, choice : String) : Void;
+	@:overload @:public public function new(name : String, choice : String) : Void;
 	
 	/**
 	* Returns the command string for this media tray.
 	*/
-	@:overload public function getChoiceName() : String;
+	@:overload @:public public function getChoiceName() : String;
 	
 	/**
 	* Returns the string table for super class MediaTray.
 	*/
-	@:overload public function getSuperEnumTable() : java.NativeArray<javax.print.attribute.standard.Media>;
+	@:overload @:public public function getSuperEnumTable() : java.NativeArray<javax.print.attribute.standard.Media>;
 	
 	/**
 	* Returns the string table for class CustomMediaTray.
 	*/
-	@:overload private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class CustomMediaTray.
 	*/
-	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	
 }

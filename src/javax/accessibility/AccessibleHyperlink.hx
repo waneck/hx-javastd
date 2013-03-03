@@ -45,7 +45,7 @@ extern class AccessibleHyperlink implements javax.accessibility.AccessibleAction
 	* @return a flag indicating whether this link is still valid with
 	*         respect to the AccessibleHypertext it belongs to
 	*/
-	@:overload @:abstract public function isValid() : Bool;
+	@:overload @:public @:abstract public function isValid() : Bool;
 	
 	/**
 	* Returns the number of accessible actions available in this Link
@@ -55,7 +55,7 @@ extern class AccessibleHyperlink implements javax.accessibility.AccessibleAction
 	*
 	* @return the zero-based number of Actions in this object
 	*/
-	@:overload @:abstract public function getAccessibleActionCount() : Int;
+	@:overload @:public @:abstract public function getAccessibleActionCount() : Int;
 	
 	/**
 	* Performs the specified Action on the object
@@ -64,7 +64,7 @@ extern class AccessibleHyperlink implements javax.accessibility.AccessibleAction
 	* @return true if the action was performed; otherwise false.
 	* @see #getAccessibleActionCount
 	*/
-	@:overload @:abstract public function doAccessibleAction(i : Int) : Bool;
+	@:overload @:public @:abstract public function doAccessibleAction(i : Int) : Bool;
 	
 	/**
 	* Returns a String description of this particular
@@ -82,7 +82,7 @@ extern class AccessibleHyperlink implements javax.accessibility.AccessibleAction
 	* @return a String description of the action
 	* @see #getAccessibleActionCount
 	*/
-	@:overload @:abstract public function getAccessibleActionDescription(i : Int) : String;
+	@:overload @:public @:abstract public function getAccessibleActionDescription(i : Int) : String;
 	
 	/**
 	* Returns an object that represents the link action,
@@ -95,7 +95,7 @@ extern class AccessibleHyperlink implements javax.accessibility.AccessibleAction
 	* @return an Object representing the hypertext link itself
 	* @see #getAccessibleActionCount
 	*/
-	@:overload @:abstract public function getAccessibleActionObject(i : Int) : Dynamic;
+	@:overload @:public @:abstract public function getAccessibleActionObject(i : Int) : Dynamic;
 	
 	/**
 	* Returns an object that represents the link anchor,
@@ -112,7 +112,7 @@ extern class AccessibleHyperlink implements javax.accessibility.AccessibleAction
 	* @return an Object representing the hypertext anchor
 	* @see #getAccessibleActionCount
 	*/
-	@:overload @:abstract public function getAccessibleActionAnchor(i : Int) : Dynamic;
+	@:overload @:public @:abstract public function getAccessibleActionAnchor(i : Int) : Dynamic;
 	
 	/**
 	* Gets the index with the hypertext document at which this
@@ -120,7 +120,7 @@ extern class AccessibleHyperlink implements javax.accessibility.AccessibleAction
 	*
 	* @return index of start of link
 	*/
-	@:overload @:abstract public function getStartIndex() : Int;
+	@:overload @:public @:abstract public function getStartIndex() : Int;
 	
 	/**
 	* Gets the index with the hypertext document at which this
@@ -128,7 +128,7 @@ extern class AccessibleHyperlink implements javax.accessibility.AccessibleAction
 	*
 	* @return index of end of link
 	*/
-	@:overload @:abstract public function getEndIndex() : Int;
+	@:overload @:public @:abstract public function getEndIndex() : Int;
 	
 	
 }

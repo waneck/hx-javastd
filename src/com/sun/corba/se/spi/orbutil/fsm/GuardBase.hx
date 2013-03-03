@@ -25,7 +25,7 @@ package com.sun.corba.se.spi.orbutil.fsm;
 */
 extern class GuardBase extends com.sun.corba.se.impl.orbutil.fsm.NameBase implements com.sun.corba.se.spi.orbutil.fsm.Guard
 {
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/** Called by the state engine to determine whether a
 	* transition is enabled, defered, or disabled.
@@ -44,7 +44,7 @@ extern class GuardBase extends com.sun.corba.se.impl.orbutil.fsm.NameBase implem
 	* @param FSM fsm is the state machine causing this action.
 	* @param Input in is the input that caused the transition.
 	*/
-	@:overload @:public public function evaluate(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : com.sun.corba.se.spi.orbutil.fsm.Guard.Guard_Result;
+	@:overload @:public @:public public function evaluate(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : com.sun.corba.se.spi.orbutil.fsm.Guard.Guard_Result;
 	
 	
 }

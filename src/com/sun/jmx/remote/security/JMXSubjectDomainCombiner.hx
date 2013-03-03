@@ -35,14 +35,14 @@ extern class JMXSubjectDomainCombiner extends javax.security.auth.SubjectDomainC
 	* is augmented with the permissions granted to the set of principals present
 	* in the supplied {@link Subject}.</p>
 	*/
-	@:overload public function new(s : javax.security.auth.Subject) : Void;
+	@:overload @:public public function new(s : javax.security.auth.Subject) : Void;
 	
-	@:overload public function combine(current : java.NativeArray<java.security.ProtectionDomain>, assigned : java.NativeArray<java.security.ProtectionDomain>) : java.NativeArray<java.security.ProtectionDomain>;
+	@:overload @:public override public function combine(current : java.NativeArray<java.security.ProtectionDomain>, assigned : java.NativeArray<java.security.ProtectionDomain>) : java.NativeArray<java.security.ProtectionDomain>;
 	
 	/**
 	* Get the current AccessControlContext combined with the supplied subject.
 	*/
-	@:overload public static function getContext(subject : javax.security.auth.Subject) : java.security.AccessControlContext;
+	@:overload @:public @:static public static function getContext(subject : javax.security.auth.Subject) : java.security.AccessControlContext;
 	
 	/**
 	* Get the AccessControlContext of the domain combiner created with
@@ -50,7 +50,7 @@ extern class JMXSubjectDomainCombiner extends javax.security.auth.SubjectDomainC
 	* combiner created with the supplied subject and where the caller's
 	* context has been removed.
 	*/
-	@:overload public static function getDomainCombinerContext(subject : javax.security.auth.Subject) : java.security.AccessControlContext;
+	@:overload @:public @:static public static function getDomainCombinerContext(subject : javax.security.auth.Subject) : java.security.AccessControlContext;
 	
 	
 }

@@ -31,12 +31,12 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	*
 	* @return the context
 	*/
-	@:overload @:final public static function getDefaultStyleContext() : javax.swing.text.StyleContext;
+	@:overload @:public @:static @:final public static function getDefaultStyleContext() : javax.swing.text.StyleContext;
 	
 	/**
 	* Creates a new StyleContext object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Adds a new style into the style hierarchy.  Style attributes
@@ -54,14 +54,14 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	*   attributes need not be resolved in some other style.
 	* @return the created style
 	*/
-	@:overload public function addStyle(nm : String, parent : javax.swing.text.Style) : javax.swing.text.Style;
+	@:overload @:public public function addStyle(nm : String, parent : javax.swing.text.Style) : javax.swing.text.Style;
 	
 	/**
 	* Removes a named style previously added to the document.
 	*
 	* @param nm  the name of the style to remove
 	*/
-	@:overload public function removeStyle(nm : String) : Void;
+	@:overload @:public public function removeStyle(nm : String) : Void;
 	
 	/**
 	* Fetches a named style previously added to the document
@@ -69,14 +69,14 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param nm  the name of the style
 	* @return the style
 	*/
-	@:overload public function getStyle(nm : String) : javax.swing.text.Style;
+	@:overload @:public public function getStyle(nm : String) : javax.swing.text.Style;
 	
 	/**
 	* Fetches the names of the styles defined.
 	*
 	* @return the list of names as an enumeration
 	*/
-	@:overload public function getStyleNames() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getStyleNames() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Adds a listener to track when styles are added
@@ -84,7 +84,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	*
 	* @param l the change listener
 	*/
-	@:overload public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Removes a listener that was tracking styles being
@@ -92,7 +92,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	*
 	* @param l the change listener
 	*/
-	@:overload public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ChangeListener</code>s added
@@ -102,7 +102,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
+	@:require(java4) @:overload @:public public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
 	
 	/**
 	* Gets the font from an attribute set.  This is
@@ -114,7 +114,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param attr the attribute set
 	* @return the font
 	*/
-	@:overload public function getFont(attr : javax.swing.text.AttributeSet) : java.awt.Font;
+	@:overload @:public public function getFont(attr : javax.swing.text.AttributeSet) : java.awt.Font;
 	
 	/**
 	* Takes a set of attributes and turn it into a foreground color
@@ -125,7 +125,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param attr the set of attributes
 	* @return the color
 	*/
-	@:overload public function getForeground(attr : javax.swing.text.AttributeSet) : java.awt.Color;
+	@:overload @:public public function getForeground(attr : javax.swing.text.AttributeSet) : java.awt.Color;
 	
 	/**
 	* Takes a set of attributes and turn it into a background color
@@ -136,7 +136,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param attr the set of attributes
 	* @return the color
 	*/
-	@:overload public function getBackground(attr : javax.swing.text.AttributeSet) : java.awt.Color;
+	@:overload @:public public function getBackground(attr : javax.swing.text.AttributeSet) : java.awt.Color;
 	
 	/**
 	* Gets a new font.  This returns a Font from a cache
@@ -149,7 +149,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param size the point size >= 1
 	* @return the new font
 	*/
-	@:overload public function getFont(family : String, style : Int, size : Int) : java.awt.Font;
+	@:overload @:public public function getFont(family : String, style : Int, size : Int) : java.awt.Font;
 	
 	/**
 	* Returns font metrics for a font.
@@ -157,7 +157,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param f the font
 	* @return the metrics
 	*/
-	@:overload public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Adds an attribute to the given set, and returns
@@ -174,7 +174,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return the updated attribute set
 	* @see MutableAttributeSet#addAttribute
 	*/
-	@:overload @:synchronized public function addAttribute(old : javax.swing.text.AttributeSet, name : Dynamic, value : Dynamic) : javax.swing.text.AttributeSet;
+	@:overload @:public @:synchronized public function addAttribute(old : javax.swing.text.AttributeSet, name : Dynamic, value : Dynamic) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Adds a set of attributes to the element.
@@ -189,7 +189,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return the updated attribute set
 	* @see MutableAttributeSet#addAttribute
 	*/
-	@:overload @:synchronized public function addAttributes(old : javax.swing.text.AttributeSet, attr : javax.swing.text.AttributeSet) : javax.swing.text.AttributeSet;
+	@:overload @:public @:synchronized public function addAttributes(old : javax.swing.text.AttributeSet, attr : javax.swing.text.AttributeSet) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Removes an attribute from the set.
@@ -204,7 +204,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return the updated attribute set
 	* @see MutableAttributeSet#removeAttribute
 	*/
-	@:overload @:synchronized public function removeAttribute(old : javax.swing.text.AttributeSet, name : Dynamic) : javax.swing.text.AttributeSet;
+	@:overload @:public @:synchronized public function removeAttribute(old : javax.swing.text.AttributeSet, name : Dynamic) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Removes a set of attributes for the element.
@@ -219,7 +219,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return the updated attribute set
 	* @see MutableAttributeSet#removeAttributes
 	*/
-	@:overload @:synchronized public function removeAttributes(old : javax.swing.text.AttributeSet, names : java.util.Enumeration<Dynamic>) : javax.swing.text.AttributeSet;
+	@:overload @:public @:synchronized public function removeAttributes(old : javax.swing.text.AttributeSet, names : java.util.Enumeration<Dynamic>) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Removes a set of attributes for the element.
@@ -234,14 +234,14 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return the updated attribute set
 	* @see MutableAttributeSet#removeAttributes
 	*/
-	@:overload @:synchronized public function removeAttributes(old : javax.swing.text.AttributeSet, attrs : javax.swing.text.AttributeSet) : javax.swing.text.AttributeSet;
+	@:overload @:public @:synchronized public function removeAttributes(old : javax.swing.text.AttributeSet, attrs : javax.swing.text.AttributeSet) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Fetches an empty AttributeSet.
 	*
 	* @return the set
 	*/
-	@:overload public function getEmptySet() : javax.swing.text.AttributeSet;
+	@:overload @:public public function getEmptySet() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Returns a set no longer needed by the MutableAttributeSet implmentation.
@@ -256,7 +256,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	*
 	* @param a the set to reclaim
 	*/
-	@:overload public function reclaim(a : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function reclaim(a : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Returns the maximum number of key/value pairs to try and
@@ -265,7 +265,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	*
 	* @return the threshold
 	*/
-	@:overload private function getCompressionThreshold() : Int;
+	@:overload @:protected private function getCompressionThreshold() : Int;
 	
 	/**
 	* Create a compact set of attributes that might be shared.
@@ -277,7 +277,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param a The set of attributes to be represented in the
 	*  the compact form.
 	*/
-	@:overload private function createSmallAttributeSet(a : javax.swing.text.AttributeSet) : javax.swing.text.StyleContext.StyleContext_SmallAttributeSet;
+	@:overload @:protected private function createSmallAttributeSet(a : javax.swing.text.AttributeSet) : javax.swing.text.StyleContext.StyleContext_SmallAttributeSet;
 	
 	/**
 	* Create a large set of attributes that should trade off
@@ -291,24 +291,24 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param a The set of attributes to be represented in the
 	*  the larger form.
 	*/
-	@:overload private function createLargeAttributeSet(a : javax.swing.text.AttributeSet) : javax.swing.text.MutableAttributeSet;
+	@:overload @:protected private function createLargeAttributeSet(a : javax.swing.text.AttributeSet) : javax.swing.text.MutableAttributeSet;
 	
 	/**
 	* Converts a StyleContext to a String.
 	*
 	* @return the string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Context-specific handling of writing out attributes
 	*/
-	@:overload public function writeAttributes(out : java.io.ObjectOutputStream, a : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function writeAttributes(out : java.io.ObjectOutputStream, a : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Context-specific handling of reading in attributes
 	*/
-	@:overload public function readAttributes(_in : java.io.ObjectInputStream, a : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public public function readAttributes(_in : java.io.ObjectInputStream, a : javax.swing.text.MutableAttributeSet) : Void;
 	
 	/**
 	* Writes a set of attributes to the given object stream
@@ -324,7 +324,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param a the attribute set
 	* @exception IOException on any I/O error
 	*/
-	@:overload public static function writeAttributeSet(out : java.io.ObjectOutputStream, a : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public @:static public static function writeAttributeSet(out : java.io.ObjectOutputStream, a : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Reads a set of attributes from the given object input
@@ -345,7 +345,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @exception IOException passed upward if encountered when
 	*  reading the object stream.
 	*/
-	@:overload public static function readAttributeSet(_in : java.io.ObjectInputStream, a : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public @:static public static function readAttributeSet(_in : java.io.ObjectInputStream, a : javax.swing.text.MutableAttributeSet) : Void;
 	
 	/**
 	* Registers an object as a static object that is being
@@ -362,26 +362,26 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	*
 	* @param key the non-null object key
 	*/
-	@:overload public static function registerStaticAttributeKey(key : Dynamic) : Void;
+	@:overload @:public @:static public static function registerStaticAttributeKey(key : Dynamic) : Void;
 	
 	/**
 	* Returns the object previously registered with
 	* <code>registerStaticAttributeKey</code>.
 	*/
-	@:overload public static function getStaticAttribute(key : Dynamic) : Dynamic;
+	@:overload @:public @:static public static function getStaticAttribute(key : Dynamic) : Dynamic;
 	
 	/**
 	* Returns the String that <code>key</code> will be registered with
 	* @see #getStaticAttribute
 	* @see #registerStaticAttributeKey
 	*/
-	@:overload public static function getStaticAttributeKey(key : Dynamic) : Dynamic;
+	@:overload @:public @:static public static function getStaticAttributeKey(key : Dynamic) : Dynamic;
 	
 	/**
 	* The name given to the default logical style attached
 	* to paragraphs.
 	*/
-	public static var DEFAULT_STYLE(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_STYLE(default, null) : String;
 	
 	
 }
@@ -394,20 +394,20 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 */
 @:native('javax$swing$text$StyleContext$SmallAttributeSet') extern class StyleContext_SmallAttributeSet implements javax.swing.text.AttributeSet
 {
-	@:overload public function new(attributes : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(attributes : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function new(attrs : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function new(attrs : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Returns a string showing the key/value pairs
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hashcode for this set of attributes.
 	* @return     a hashcode value for this set of attributes.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this object to the specifed object.
@@ -417,7 +417,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return    <code>true</code> if the objects are equal;
 	*            <code>false</code> otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Clones a set of attributes.  Since the set is immutable, a
@@ -425,7 +425,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	*
 	* @return the set of attributes
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Gets the number of attributes that are defined.
@@ -433,7 +433,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return the number of attributes
 	* @see AttributeSet#getAttributeCount
 	*/
-	@:overload public function getAttributeCount() : Int;
+	@:overload @:public public function getAttributeCount() : Int;
 	
 	/**
 	* Checks whether a given attribute is defined.
@@ -442,7 +442,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return true if the attribute is defined
 	* @see AttributeSet#isDefined
 	*/
-	@:overload public function isDefined(key : Dynamic) : Bool;
+	@:overload @:public public function isDefined(key : Dynamic) : Bool;
 	
 	/**
 	* Checks whether two attribute sets are equal.
@@ -451,7 +451,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return true if the same
 	* @see AttributeSet#isEqual
 	*/
-	@:overload public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:public public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
 	
 	/**
 	* Copies a set of attributes.
@@ -459,7 +459,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return the copy
 	* @see AttributeSet#copyAttributes
 	*/
-	@:overload public function copyAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public public function copyAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Gets the value of an attribute.
@@ -468,7 +468,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return the attribute value
 	* @see AttributeSet#getAttribute
 	*/
-	@:overload public function getAttribute(key : Dynamic) : Dynamic;
+	@:overload @:public public function getAttribute(key : Dynamic) : Dynamic;
 	
 	/**
 	* Gets the names of all attributes.
@@ -476,7 +476,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return the attribute names
 	* @see AttributeSet#getAttributeNames
 	*/
-	@:overload public function getAttributeNames() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getAttributeNames() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Checks whether a given attribute name/value is defined.
@@ -486,7 +486,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return true if the name/value is defined
 	* @see AttributeSet#containsAttribute
 	*/
-	@:overload public function containsAttribute(name : Dynamic, value : Dynamic) : Bool;
+	@:overload @:public public function containsAttribute(name : Dynamic, value : Dynamic) : Bool;
 	
 	/**
 	* Checks whether the attribute set contains all of
@@ -496,7 +496,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return true if the element contains all the attributes
 	* @see AttributeSet#containsAttributes
 	*/
-	@:overload public function containsAttributes(attrs : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:public public function containsAttributes(attrs : javax.swing.text.AttributeSet) : Bool;
 	
 	/**
 	* If not overriden, the resolving parent defaults to
@@ -505,7 +505,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return the attributes from the parent
 	* @see AttributeSet#getResolveParent
 	*/
-	@:overload public function getResolveParent() : javax.swing.text.AttributeSet;
+	@:overload @:public public function getResolveParent() : javax.swing.text.AttributeSet;
 	
 	
 }
@@ -521,7 +521,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	*          <code>false</code> otherwise.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function hasMoreElements() : Bool;
+	@:require(java0) @:overload @:public public function hasMoreElements() : Bool;
 	
 	/**
 	* Returns the next element of this enumeration.
@@ -530,7 +530,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @exception  NoSuchElementException  if no more elements exist.
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload public function nextElement() : Dynamic;
+	@:require(java0) @:overload @:public public function nextElement() : Dynamic;
 	
 	
 }
@@ -540,39 +540,39 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 */
 @:native('javax$swing$text$StyleContext$KeyBuilder') @:internal extern class StyleContext_KeyBuilder
 {
-	@:overload public function initialize(a : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function initialize(a : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Creates a table of sorted key/value entries
 	* suitable for creation of an instance of
 	* SmallAttributeSet.
 	*/
-	@:overload public function createTable() : java.NativeArray<Dynamic>;
+	@:overload @:public public function createTable() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Adds a key/value to the set.
 	*/
-	@:overload public function addAttribute(key : Dynamic, value : Dynamic) : Void;
+	@:overload @:public public function addAttribute(key : Dynamic, value : Dynamic) : Void;
 	
 	/**
 	* Adds a set of key/value pairs to the set.
 	*/
-	@:overload public function addAttributes(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function addAttributes(attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Removes the given name from the set.
 	*/
-	@:overload public function removeAttribute(key : Dynamic) : Void;
+	@:overload @:public public function removeAttribute(key : Dynamic) : Void;
 	
 	/**
 	* Removes the set of keys from the set.
 	*/
-	@:overload public function removeAttributes(names : java.util.Enumeration<Dynamic>) : Void;
+	@:overload @:public public function removeAttributes(names : java.util.Enumeration<Dynamic>) : Void;
 	
 	/**
 	* Removes the set of matching attributes from the set.
 	*/
-	@:overload public function removeAttributes(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function removeAttributes(attr : javax.swing.text.AttributeSet) : Void;
 	
 	
 }
@@ -584,15 +584,15 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	/**
 	* Constructs a font key.
 	*/
-	@:overload public function new(family : String, style : Int, size : Int) : Void;
+	@:overload @:public public function new(family : String, style : Int, size : Int) : Void;
 	
-	@:overload public function setValue(family : String, style : Int, size : Int) : Void;
+	@:overload @:public public function setValue(family : String, style : Int, size : Int) : Void;
 	
 	/**
 	* Returns a hashcode for this font.
 	* @return     a hashcode value for this font.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this object to the specifed object.
@@ -603,7 +603,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return    <code>true</code> if the objects are equal;
 	*            <code>false</code> otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }
@@ -633,7 +633,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param parent the parent style, null if none
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(name : String, parent : javax.swing.text.Style) : Void;
+	@:require(java4) @:overload @:public public function new(name : String, parent : javax.swing.text.Style) : Void;
 	
 	/**
 	* Creates a new named style.
@@ -641,19 +641,19 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param parent the parent style, null if none
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(parent : javax.swing.text.Style) : Void;
+	@:require(java4) @:overload @:public public function new(parent : javax.swing.text.Style) : Void;
 	
 	/**
 	* Creates a new named style, with a null name and parent.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Converts the style to a string.
 	*
 	* @return the string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Fetches the name of the style.   A style is not required to be named,
@@ -661,28 +661,28 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	*
 	* @return the name
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Changes the name of the style.  Does nothing with a null name.
 	*
 	* @param name the new name
 	*/
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	/**
 	* Adds a change listener.
 	*
 	* @param l the change listener
 	*/
-	@:overload public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Removes a change listener.
 	*
 	* @param l the change listener
 	*/
-	@:overload public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ChangeListener</code>s added
@@ -692,7 +692,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
+	@:require(java4) @:overload @:public public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -702,7 +702,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	*
 	* @see EventListenerList
 	*/
-	@:overload private function fireStateChanged() : Void;
+	@:overload @:protected private function fireStateChanged() : Void;
 	
 	/**
 	* Return an array of all the listeners of the given type that
@@ -713,7 +713,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Gets the number of attributes that are defined.
@@ -721,7 +721,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return the number of attributes >= 0
 	* @see AttributeSet#getAttributeCount
 	*/
-	@:overload public function getAttributeCount() : Int;
+	@:overload @:public public function getAttributeCount() : Int;
 	
 	/**
 	* Checks whether a given attribute is defined.
@@ -730,7 +730,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return true if the attribute is defined
 	* @see AttributeSet#isDefined
 	*/
-	@:overload public function isDefined(attrName : Dynamic) : Bool;
+	@:overload @:public public function isDefined(attrName : Dynamic) : Bool;
 	
 	/**
 	* Checks whether two attribute sets are equal.
@@ -739,7 +739,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return true if the same
 	* @see AttributeSet#isEqual
 	*/
-	@:overload public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:public public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
 	
 	/**
 	* Copies a set of attributes.
@@ -747,7 +747,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return the copy
 	* @see AttributeSet#copyAttributes
 	*/
-	@:overload public function copyAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public public function copyAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Gets the value of an attribute.
@@ -756,7 +756,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return the attribute value
 	* @see AttributeSet#getAttribute
 	*/
-	@:overload public function getAttribute(attrName : Dynamic) : Dynamic;
+	@:overload @:public public function getAttribute(attrName : Dynamic) : Dynamic;
 	
 	/**
 	* Gets the names of all attributes.
@@ -764,7 +764,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return the attribute names as an enumeration
 	* @see AttributeSet#getAttributeNames
 	*/
-	@:overload public function getAttributeNames() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getAttributeNames() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Checks whether a given attribute name/value is defined.
@@ -774,7 +774,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return true if the name/value is defined
 	* @see AttributeSet#containsAttribute
 	*/
-	@:overload public function containsAttribute(name : Dynamic, value : Dynamic) : Bool;
+	@:overload @:public public function containsAttribute(name : Dynamic, value : Dynamic) : Bool;
 	
 	/**
 	* Checks whether the element contains all the attributes.
@@ -783,7 +783,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return true if the element contains all the attributes
 	* @see AttributeSet#containsAttributes
 	*/
-	@:overload public function containsAttributes(attrs : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:public public function containsAttributes(attrs : javax.swing.text.AttributeSet) : Bool;
 	
 	/**
 	* Gets attributes from the parent.
@@ -793,7 +793,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @return the attributes from the parent
 	* @see AttributeSet#getResolveParent
 	*/
-	@:overload public function getResolveParent() : javax.swing.text.AttributeSet;
+	@:overload @:public public function getResolveParent() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Adds an attribute.
@@ -802,7 +802,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param value the attribute value
 	* @see MutableAttributeSet#addAttribute
 	*/
-	@:overload public function addAttribute(name : Dynamic, value : Dynamic) : Void;
+	@:overload @:public public function addAttribute(name : Dynamic, value : Dynamic) : Void;
 	
 	/**
 	* Adds a set of attributes to the element.
@@ -810,7 +810,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param attr the attributes to add
 	* @see MutableAttributeSet#addAttribute
 	*/
-	@:overload public function addAttributes(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function addAttributes(attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Removes an attribute from the set.
@@ -818,7 +818,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param name the non-null attribute name
 	* @see MutableAttributeSet#removeAttribute
 	*/
-	@:overload public function removeAttribute(name : Dynamic) : Void;
+	@:overload @:public public function removeAttribute(name : Dynamic) : Void;
 	
 	/**
 	* Removes a set of attributes for the element.
@@ -826,7 +826,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param names the attribute names
 	* @see MutableAttributeSet#removeAttributes
 	*/
-	@:overload public function removeAttributes(names : java.util.Enumeration<Dynamic>) : Void;
+	@:overload @:public public function removeAttributes(names : java.util.Enumeration<Dynamic>) : Void;
 	
 	/**
 	* Removes a set of attributes for the element.
@@ -834,7 +834,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param attrs the attributes
 	* @see MutableAttributeSet#removeAttributes
 	*/
-	@:overload public function removeAttributes(attrs : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function removeAttributes(attrs : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Sets the resolving parent.
@@ -842,19 +842,19 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param parent the parent, null if none
 	* @see MutableAttributeSet#setResolveParent
 	*/
-	@:overload public function setResolveParent(parent : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function setResolveParent(parent : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* The change listeners for the model.
 	*/
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
 	/**
 	* Only one ChangeEvent is needed per model instance since the
 	* event's only (read-only) state is the source property.  The source
 	* of events generated here is always "this".
 	*/
-	@:transient private var changeEvent : javax.swing.event.ChangeEvent;
+	@:protected @:transient private var changeEvent : javax.swing.event.ChangeEvent;
 	
 	
 }

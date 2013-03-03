@@ -72,9 +72,9 @@ package com.sun.org.apache.xerces.internal.impl;
 extern class XML11NamespaceBinder extends com.sun.org.apache.xerces.internal.impl.XMLNamespaceBinder
 {
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload private function prefixBoundToNullURI(uri : String, localpart : String) : Bool;
+	@:overload @:protected override private function prefixBoundToNullURI(uri : String, localpart : String) : Bool;
 	
 	
 }

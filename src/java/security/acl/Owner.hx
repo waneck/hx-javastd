@@ -40,7 +40,7 @@ extern interface Owner
 	* @exception NotOwnerException if the caller principal is not an owner
 	* of the ACL.
 	*/
-	@:overload public function addOwner(caller : java.security.Principal, owner : java.security.Principal) : Bool;
+	@:overload @:public public function addOwner(caller : java.security.Principal, owner : java.security.Principal) : Bool;
 	
 	/**
 	* Deletes an owner. If this is the last owner in the ACL, an exception is
@@ -63,7 +63,7 @@ extern interface Owner
 	* @exception LastOwnerException if there is only one owner left, so that
 	* deleteOwner would leave the ACL owner-less.
 	*/
-	@:overload public function deleteOwner(caller : java.security.Principal, owner : java.security.Principal) : Bool;
+	@:overload @:public public function deleteOwner(caller : java.security.Principal, owner : java.security.Principal) : Bool;
 	
 	/**
 	* Returns true if the given principal is an owner of the ACL.
@@ -74,7 +74,7 @@ extern interface Owner
 	* @return true if the passed principal is in the list of owners, false
 	* if not.
 	*/
-	@:overload public function isOwner(owner : java.security.Principal) : Bool;
+	@:overload @:public public function isOwner(owner : java.security.Principal) : Bool;
 	
 	
 }

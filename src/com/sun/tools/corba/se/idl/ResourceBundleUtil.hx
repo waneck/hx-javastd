@@ -47,20 +47,20 @@ extern class ResourceBundleUtil
 	* from the indicated resouce bundle.
 	* @return the version number.
 	**/
-	@:overload public static function getVersion() : String;
+	@:overload @:public @:static public static function getVersion() : String;
 	
-	@:overload public static function getMessage(key : String) : String;
+	@:overload @:public @:static public static function getMessage(key : String) : String;
 	
-	@:overload public static function getMessage(key : String, fill : String) : String;
+	@:overload @:public @:static public static function getMessage(key : String, fill : String) : String;
 	
-	@:overload public static function getMessage(key : String, fill : java.NativeArray<String>) : String;
+	@:overload @:public @:static public static function getMessage(key : String, fill : java.NativeArray<String>) : String;
 	
 	/** Register a ResourceBundle.  This file will be searched for
 	in the CLASSPATH. */
-	@:overload public static function registerResourceBundle(bundle : java.util.ResourceBundle) : Void;
+	@:overload @:public @:static public static function registerResourceBundle(bundle : java.util.ResourceBundle) : Void;
 	
 	/** Gets the current ResourceBundle.  */
-	@:overload public static function getResourceBundle() : java.util.ResourceBundle;
+	@:overload @:public @:static public static function getResourceBundle() : java.util.ResourceBundle;
 	
 	
 }

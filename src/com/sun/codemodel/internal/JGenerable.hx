@@ -29,7 +29,7 @@ package com.sun.codemodel.internal;
 */
 extern interface JGenerable
 {
-	@:overload @:public public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public @:public @:public public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

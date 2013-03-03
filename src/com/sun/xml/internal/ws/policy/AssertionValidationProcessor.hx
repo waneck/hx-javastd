@@ -35,7 +35,7 @@ extern class AssertionValidationProcessor
 	* @throws PolicyException Thrown if the set of given PolicyAssertionValidators
 	*   and dynamically discovered PolicyAssertionValidators is empty.
 	*/
-	@:overload private function new(policyValidators : java.util.Collection<com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator>) : Void;
+	@:overload @:protected private function new(policyValidators : java.util.Collection<com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator>) : Void;
 	
 	/**
 	* Factory method that returns singleton instance of the class.
@@ -46,7 +46,7 @@ extern class AssertionValidationProcessor
 	* @return singleton An instance of the class.
 	* @throws PolicyException If instantiation failed.
 	*/
-	@:overload public static function getInstance() : com.sun.xml.internal.ws.policy.AssertionValidationProcessor;
+	@:overload @:public @:static public static function getInstance() : com.sun.xml.internal.ws.policy.AssertionValidationProcessor;
 	
 	/**
 	* Validates fitness of the {@code assertion} on the client side.
@@ -56,7 +56,7 @@ extern class AssertionValidationProcessor
 	* @return The fitness of the assertion on the client side.
 	* @throws PolicyException If validation failed.
 	*/
-	@:overload public function validateClientSide(assertion : com.sun.xml.internal.ws.policy.PolicyAssertion) : com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator.PolicyAssertionValidator_Fitness;
+	@:overload @:public public function validateClientSide(assertion : com.sun.xml.internal.ws.policy.PolicyAssertion) : com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator.PolicyAssertionValidator_Fitness;
 	
 	/**
 	* Validates fitness of the {@code assertion} on the server side.
@@ -66,7 +66,7 @@ extern class AssertionValidationProcessor
 	* @return The fitness of the assertion on the server side.
 	* @throws PolicyException If validation failed.
 	*/
-	@:overload public function validateServerSide(assertion : com.sun.xml.internal.ws.policy.PolicyAssertion) : com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator.PolicyAssertionValidator_Fitness;
+	@:overload @:public public function validateServerSide(assertion : com.sun.xml.internal.ws.policy.PolicyAssertion) : com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator.PolicyAssertionValidator_Fitness;
 	
 	
 }

@@ -25,16 +25,16 @@ package com.sun.istack.internal.ws;
 */
 extern class AnnotationProcessorFactoryImpl implements com.sun.mirror.apt.AnnotationProcessorFactory
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function supportedOptions() : java.util.Collection<String>;
+	@:overload @:public public function supportedOptions() : java.util.Collection<String>;
 	
-	@:overload public function supportedAnnotationTypes() : java.util.Collection<String>;
+	@:overload @:public public function supportedAnnotationTypes() : java.util.Collection<String>;
 	
 	/*
 	* Return an instance of the {@link com.sun.istack.internal.ws.WSAP WSAP} AnnotationProcesor.
 	*/
-	@:overload public function getProcessorFor(atds : java.util.Set<com.sun.mirror.declaration.AnnotationTypeDeclaration>, apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.apt.AnnotationProcessor;
+	@:overload @:public public function getProcessorFor(atds : java.util.Set<com.sun.mirror.declaration.AnnotationTypeDeclaration>, apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.apt.AnnotationProcessor;
 	
 	
 }

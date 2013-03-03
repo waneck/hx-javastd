@@ -25,9 +25,9 @@ package com.sun.jmx.remote.internal;
 */
 extern interface RMIExporter
 {
-	@:overload public function exportObject(obj : java.rmi.Remote, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : java.rmi.Remote;
+	@:overload @:public public function exportObject(obj : java.rmi.Remote, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : java.rmi.Remote;
 	
-	@:overload public function unexportObject(obj : java.rmi.Remote, force : Bool) : Bool;
+	@:overload @:public public function unexportObject(obj : java.rmi.Remote, force : Bool) : Bool;
 	
 	
 }

@@ -37,27 +37,27 @@ package sun.net.httpserver;
 	* returns the handler for this context
 	* @return the HttpHandler for this context
 	*/
-	@:overload public function getHandler() : com.sun.net.httpserver.HttpHandler;
+	@:overload @:public override public function getHandler() : com.sun.net.httpserver.HttpHandler;
 	
-	@:overload public function setHandler(h : com.sun.net.httpserver.HttpHandler) : Void;
+	@:overload @:public override public function setHandler(h : com.sun.net.httpserver.HttpHandler) : Void;
 	
 	/**
 	* returns the path this context was created with
 	* @return this context's path
 	*/
-	@:overload public function getPath() : String;
+	@:overload @:public override public function getPath() : String;
 	
 	/**
 	* returns the server this context was created with
 	* @return this context's server
 	*/
-	@:overload public function getServer() : com.sun.net.httpserver.HttpServer;
+	@:overload @:public override public function getServer() : com.sun.net.httpserver.HttpServer;
 	
 	/**
 	* returns the protocol this context was created with
 	* @return this context's path
 	*/
-	@:overload public function getProtocol() : String;
+	@:overload @:public public function getProtocol() : String;
 	
 	/**
 	* returns a mutable Map, which can be used to pass
@@ -67,13 +67,13 @@ package sun.net.httpserver;
 	* Every attribute stored in this Map will be visible to
 	* every HttpExchange processed by this context
 	*/
-	@:overload public function getAttributes() : java.util.Map<String, Dynamic>;
+	@:overload @:public override public function getAttributes() : java.util.Map<String, Dynamic>;
 	
-	@:overload public function getFilters() : java.util.List<com.sun.net.httpserver.Filter>;
+	@:overload @:public override public function getFilters() : java.util.List<com.sun.net.httpserver.Filter>;
 	
-	@:overload public function setAuthenticator(auth : com.sun.net.httpserver.Authenticator) : com.sun.net.httpserver.Authenticator;
+	@:overload @:public public function setAuthenticator(auth : com.sun.net.httpserver.Authenticator) : com.sun.net.httpserver.Authenticator;
 	
-	@:overload public function getAuthenticator() : com.sun.net.httpserver.Authenticator;
+	@:overload @:public override public function getAuthenticator() : com.sun.net.httpserver.Authenticator;
 	
 	
 }

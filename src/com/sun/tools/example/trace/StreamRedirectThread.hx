@@ -41,7 +41,7 @@ package com.sun.tools.example.trace;
 	/**
 	* Copy.
 	*/
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

@@ -33,18 +33,18 @@ extern class Continuation extends javax.naming.spi.ResolveResult
 	* correctly with respect to absence or presence of the trailing slash
 	* for resolved name.
 	*/
-	private var starter : javax.naming.Name;
+	@:protected private var starter : javax.naming.Name;
 	
 	/**
 	* Whether links were encountered.
 	*/
-	private var followingLink : Dynamic;
+	@:protected private var followingLink : Dynamic;
 	
 	/**
 	* The environment used by the caller. Initialized by constructor and
 	* used when filling out a CannotProceedException.
 	*/
-	private var environment : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var environment : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* Indicates whether the Continuation instance indicates that the operation
@@ -52,25 +52,25 @@ extern class Continuation extends javax.naming.spi.ResolveResult
 	* Typically, this is only false if an error has been encountered or if
 	* the operation has succeeded.
 	*/
-	private var continuing : Bool;
+	@:protected private var continuing : Bool;
 	
 	/**
 	* The last resolved context. Used to set the "AltNameCtx" in a
 	* CannotProceedException.
 	*/
-	private var resolvedContext : javax.naming.Context;
+	@:protected private var resolvedContext : javax.naming.Context;
 	
 	/**
 	* The resolved name relative to resolvedContext. Used to set the
 	* "AltName" in a CannotProceedException.
 	*/
-	private var relativeResolvedName : javax.naming.Name;
+	@:protected private var relativeResolvedName : javax.naming.Name;
 	
 	/**
 	* Constructs a new instance of Continuation.
 	* Used as dummy for contexts that do not do federation (e.g. for schema ops)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new instance of Continuation.
@@ -80,7 +80,7 @@ extern class Continuation extends javax.naming.spi.ResolveResult
 	* @param environment The environment used by the caller. It is used
 	* when setting the "environment" of a CannotProceedException.
 	*/
-	@:overload public function new(top : javax.naming.Name, environment : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(top : javax.naming.Name, environment : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Determines whether this Continuation contains data that should be
@@ -89,7 +89,7 @@ extern class Continuation extends javax.naming.spi.ResolveResult
 	* @return true if operation should continue; false if operation has
 	* completed (successfully or unsuccessfully).
 	*/
-	@:overload public function isContinue() : Bool;
+	@:overload @:public public function isContinue() : Bool;
 	
 	/**
 	* Sets this Continuation to indicate successful completion.
@@ -103,7 +103,7 @@ extern class Continuation extends javax.naming.spi.ResolveResult
 	* @see setError
 	* @see setErrorNNS
 	*/
-	@:overload public function setSuccess() : Void;
+	@:overload @:public public function setSuccess() : Void;
 	
 	/**
 	* Fills in an exception's fields using data from this Continuation.
@@ -117,7 +117,7 @@ extern class Continuation extends javax.naming.spi.ResolveResult
 	* @return The non-null naming exception with its fields set using
 	* data from this Continuation.
 	*/
-	@:overload public function fillInException(e : javax.naming.NamingException) : javax.naming.NamingException;
+	@:overload @:public public function fillInException(e : javax.naming.NamingException) : javax.naming.NamingException;
 	
 	/**
 	* Sets this Continuation to indicated that an error has occurred,
@@ -135,7 +135,7 @@ extern class Continuation extends javax.naming.spi.ResolveResult
 	* @param resObj The possibly null object that was resolved to.
 	* @param remain The non-null remaining name.
 	*/
-	@:overload public function setErrorNNS(resObj : Dynamic, remain : javax.naming.Name) : Void;
+	@:overload @:public public function setErrorNNS(resObj : Dynamic, remain : javax.naming.Name) : Void;
 	
 	/**
 	* Form that accepts a String name instead of a Name name.
@@ -145,7 +145,7 @@ extern class Continuation extends javax.naming.spi.ResolveResult
 	*
 	* @see #setErrorNNS(java.lang.Object, javax.naming.Name)
 	*/
-	@:overload public function setErrorNNS(resObj : Dynamic, remain : String) : Void;
+	@:overload @:public public function setErrorNNS(resObj : Dynamic, remain : String) : Void;
 	
 	/**
 	* Sets this Continuation to indicated that an error has occurred
@@ -161,7 +161,7 @@ extern class Continuation extends javax.naming.spi.ResolveResult
 	* @param resObj The possibly null object that was resolved to.
 	* @param remain The possibly null remaining name.
 	*/
-	@:overload public function setError(resObj : Dynamic, remain : javax.naming.Name) : Void;
+	@:overload @:public public function setError(resObj : Dynamic, remain : javax.naming.Name) : Void;
 	
 	/**
 	* Form that accepts a String name instead of a Name name.
@@ -171,7 +171,7 @@ extern class Continuation extends javax.naming.spi.ResolveResult
 	*
 	* @see #setError(java.lang.Object, javax.naming.Name)
 	*/
-	@:overload public function setError(resObj : Dynamic, remain : String) : Void;
+	@:overload @:public public function setError(resObj : Dynamic, remain : String) : Void;
 	
 	/**
 	* Sets this Continuation with the supplied data, and set remaining name
@@ -188,7 +188,7 @@ extern class Continuation extends javax.naming.spi.ResolveResult
 	* @param relResName The non-null resolved name relative to currCtx.
 	* @param currCtx The non-null context from which relResName is to be resolved.
 	*/
-	@:overload public function setContinueNNS(resObj : Dynamic, relResName : javax.naming.Name, currCtx : javax.naming.Context) : Void;
+	@:overload @:public public function setContinueNNS(resObj : Dynamic, relResName : javax.naming.Name, currCtx : javax.naming.Context) : Void;
 	
 	/**
 	* Overloaded form that accesses String names.
@@ -198,7 +198,7 @@ extern class Continuation extends javax.naming.spi.ResolveResult
 	* @param currCtx The non-null context from which relResName is to be resolved.
 	* @see #setContinueNNS(java.lang.Object, javax.naming.Name, javax.naming.Context)
 	*/
-	@:overload public function setContinueNNS(resObj : Dynamic, relResName : String, currCtx : javax.naming.Context) : Void;
+	@:overload @:public public function setContinueNNS(resObj : Dynamic, relResName : String, currCtx : javax.naming.Context) : Void;
 	
 	/**
 	* Sets this Continuation with the supplied data, and set remaining name
@@ -216,7 +216,7 @@ extern class Continuation extends javax.naming.spi.ResolveResult
 	* @param relResName The non-null resolved name relative to currCtx.
 	* @param currCtx The non-null context from which relResName is to be resolved.
 	*/
-	@:overload public function setContinue(obj : Dynamic, relResName : javax.naming.Name, currCtx : javax.naming.Context) : Void;
+	@:overload @:public public function setContinue(obj : Dynamic, relResName : javax.naming.Name, currCtx : javax.naming.Context) : Void;
 	
 	/**
 	* Sets this Continuation with the supplied data.
@@ -234,7 +234,7 @@ extern class Continuation extends javax.naming.spi.ResolveResult
 	* @param currCtx The non-null context from which relResName is to be resolved.
 	* @param remain The non-null remaining name.
 	*/
-	@:overload public function setContinue(obj : Dynamic, relResName : javax.naming.Name, currCtx : javax.naming.Context, remain : javax.naming.Name) : Void;
+	@:overload @:public public function setContinue(obj : Dynamic, relResName : javax.naming.Name, currCtx : javax.naming.Context, remain : javax.naming.Name) : Void;
 	
 	/**
 	* String overload.
@@ -245,7 +245,7 @@ extern class Continuation extends javax.naming.spi.ResolveResult
 	* @param remain The non-null remaining name.
 	* @see #setContinue(java.lang.Object, java.lang.String, javax.naming.Context, java.lang.String)
 	*/
-	@:overload public function setContinue(obj : Dynamic, relResName : String, currCtx : javax.naming.Context, remain : String) : Void;
+	@:overload @:public public function setContinue(obj : Dynamic, relResName : String, currCtx : javax.naming.Context, remain : String) : Void;
 	
 	/**
 	* %%% This method is kept only for backward compatibility. Delete when
@@ -255,11 +255,11 @@ extern class Continuation extends javax.naming.spi.ResolveResult
 	*
 	* @deprecated
 	*/
-	@:overload public function setContinue(obj : Dynamic, currCtx : Dynamic) : Void;
+	@:overload @:public public function setContinue(obj : Dynamic, currCtx : Dynamic) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function toString(detail : Bool) : String;
+	@:overload @:public public function toString(detail : Bool) : String;
 	
 	
 }

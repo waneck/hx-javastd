@@ -64,38 +64,38 @@ package javax.swing.plaf.metal;
 */
 extern class MetalTreeUI extends javax.swing.plaf.basic.BasicTreeUI
 {
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function getHorizontalLegBuffer() : Int;
+	@:overload @:protected override private function getHorizontalLegBuffer() : Int;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
 	/** this function converts between the string passed into the client property
 	* and the internal representation (currently and int)
 	*
 	*/
-	@:overload private function decodeLineStyle(lineStyleFlag : Dynamic) : Void;
+	@:overload @:protected private function decodeLineStyle(lineStyleFlag : Dynamic) : Void;
 	
-	@:overload private function isLocationInExpandControl(row : Int, rowLevel : Int, mouseX : Int, mouseY : Int) : Bool;
+	@:overload @:protected private function isLocationInExpandControl(row : Int, rowLevel : Int, mouseX : Int, mouseY : Int) : Bool;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload private function paintHorizontalSeparators(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:protected private function paintHorizontalSeparators(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function paintVerticalPartOfLeg(g : java.awt.Graphics, clipBounds : java.awt.Rectangle, insets : java.awt.Insets, path : javax.swing.tree.TreePath) : Void;
+	@:overload @:protected override private function paintVerticalPartOfLeg(g : java.awt.Graphics, clipBounds : java.awt.Rectangle, insets : java.awt.Insets, path : javax.swing.tree.TreePath) : Void;
 	
-	@:overload override private function paintHorizontalPartOfLeg(g : java.awt.Graphics, clipBounds : java.awt.Rectangle, insets : java.awt.Insets, bounds : java.awt.Rectangle, path : javax.swing.tree.TreePath, row : Int, isExpanded : Bool, hasBeenExpanded : Bool, isLeaf : Bool) : Void;
+	@:overload @:protected override private function paintHorizontalPartOfLeg(g : java.awt.Graphics, clipBounds : java.awt.Rectangle, insets : java.awt.Insets, bounds : java.awt.Rectangle, path : javax.swing.tree.TreePath, row : Int, isExpanded : Bool, hasBeenExpanded : Bool, isLeaf : Bool) : Void;
 	
 	
 }
 /** This class listens for changes in line style */
 @:native('javax$swing$plaf$metal$MetalTreeUI$LineListener') @:internal extern class MetalTreeUI_LineListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

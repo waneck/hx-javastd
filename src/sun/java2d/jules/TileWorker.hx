@@ -25,22 +25,22 @@ package sun.java2d.jules;
 */
 extern class TileWorker implements java.lang.Runnable
 {
-	@:overload public function new(tileGenerator : sun.java2d.jules.JulesAATileGenerator, workerStartIndex : Int, tileCache : sun.java2d.jules.IdleTileCache) : Void;
+	@:overload @:public public function new(tileGenerator : sun.java2d.jules.JulesAATileGenerator, workerStartIndex : Int, tileCache : sun.java2d.jules.IdleTileCache) : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	/**
 	* Returns a rasterized tile for the specified tilePos,
 	* or null if it isn't available.
 	* Allowed caller: MaskBlit/Consumer-Thread
 	*/
-	@:overload public function getPreRasterizedTile(tilePos : Int) : sun.java2d.jules.JulesTile;
+	@:overload @:public public function getPreRasterizedTile(tilePos : Int) : sun.java2d.jules.JulesTile;
 	
 	/**
 	* Releases cached tiles.
 	* Allowed caller: MaskBlit/Consumer-Thread
 	*/
-	@:overload public function disposeConsumerResources() : Void;
+	@:overload @:public public function disposeConsumerResources() : Void;
 	
 	
 }

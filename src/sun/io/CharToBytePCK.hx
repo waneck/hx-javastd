@@ -25,11 +25,11 @@ package sun.io;
 */
 extern class CharToBytePCK extends sun.io.CharToByteSJIS
 {
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
-	@:overload override private function convSingleByte(inputChar : java.StdTypes.Char16, outputByte : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:protected override private function convSingleByte(inputChar : java.StdTypes.Char16, outputByte : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload override private function getNative(ch : java.StdTypes.Char16) : Int;
+	@:overload @:protected override private function getNative(ch : java.StdTypes.Char16) : Int;
 	
 	
 }

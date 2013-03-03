@@ -67,7 +67,7 @@ extern interface DOMErrorHandler
 	*   the processing may continue depending on
 	*   <code>DOMError.severity</code>.
 	*/
-	@:overload public function handleError(error : org.w3c.dom.DOMError) : Bool;
+	@:overload @:public public function handleError(error : org.w3c.dom.DOMError) : Bool;
 	
 	
 }

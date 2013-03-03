@@ -25,36 +25,36 @@ package com.sun.corba.se.impl.dynamicany;
 */
 extern class DynUnionImpl extends com.sun.corba.se.impl.dynamicany.DynAnyConstructedImpl implements org.omg.DynamicAny.DynUnion
 {
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, any : org.omg.CORBA.Any, copyValue : Bool) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, any : org.omg.CORBA.Any, copyValue : Bool) : Void;
 	
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload private function initializeComponentsFromAny() : Bool;
+	@:overload @:protected override private function initializeComponentsFromAny() : Bool;
 	
-	@:overload private function initializeComponentsFromTypeCode() : Bool;
+	@:overload @:protected override private function initializeComponentsFromTypeCode() : Bool;
 	
-	@:overload override private function clearData() : Void;
+	@:overload @:protected override private function clearData() : Void;
 	
 	/**
 	* Returns the current discriminator value.
 	*/
-	@:overload public function get_discriminator() : org.omg.DynamicAny.DynAny;
+	@:overload @:public public function get_discriminator() : org.omg.DynamicAny.DynAny;
 	
-	@:overload public function set_discriminator(newDiscriminator : org.omg.DynamicAny.DynAny) : Void;
+	@:overload @:public public function set_discriminator(newDiscriminator : org.omg.DynamicAny.DynAny) : Void;
 	
-	@:overload public function set_to_default_member() : Void;
+	@:overload @:public public function set_to_default_member() : Void;
 	
-	@:overload public function set_to_no_active_member() : Void;
+	@:overload @:public public function set_to_no_active_member() : Void;
 	
-	@:overload public function has_no_active_member() : Bool;
+	@:overload @:public public function has_no_active_member() : Bool;
 	
-	@:overload public function discriminator_kind() : org.omg.CORBA.TCKind;
+	@:overload @:public public function discriminator_kind() : org.omg.CORBA.TCKind;
 	
-	@:overload public function member() : org.omg.DynamicAny.DynAny;
+	@:overload @:public public function member() : org.omg.DynamicAny.DynAny;
 	
-	@:overload public function member_name() : String;
+	@:overload @:public public function member_name() : String;
 	
-	@:overload public function member_kind() : org.omg.CORBA.TCKind;
+	@:overload @:public public function member_kind() : org.omg.CORBA.TCKind;
 	
 	
 }

@@ -27,27 +27,27 @@ extern class Method
 	/**
 	* The output method for XML documents.
 	*/
-	public static var XML(default, null) : String;
+	@:public @:static @:final public static var XML(default, null) : String;
 	
 	/**
 	* The output method for HTML documents.
 	*/
-	public static var HTML(default, null) : String;
+	@:public @:static @:final public static var HTML(default, null) : String;
 	
 	/**
 	* The output method for HTML documents as XHTML.
 	*/
-	public static var XHTML(default, null) : String;
+	@:public @:static @:final public static var XHTML(default, null) : String;
 	
 	/**
 	* The output method for text documents.
 	*/
-	public static var TEXT(default, null) : String;
+	@:public @:static @:final public static var TEXT(default, null) : String;
 	
 	/**
 	* The output method for FO documents as PDF.
 	*/
-	public static var FOP(default, null) : String;
+	@:public @:static @:final public static var FOP(default, null) : String;
 	
 	
 }

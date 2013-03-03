@@ -29,44 +29,44 @@ extern interface InternalFrameListener extends java.util.EventListener
 	* Invoked when a internal frame has been opened.
 	* @see javax.swing.JInternalFrame#show
 	*/
-	@:overload public function internalFrameOpened(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameOpened(e : javax.swing.event.InternalFrameEvent) : Void;
 	
 	/**
 	* Invoked when an internal frame is in the process of being closed.
 	* The close operation can be overridden at this point.
 	* @see javax.swing.JInternalFrame#setDefaultCloseOperation
 	*/
-	@:overload public function internalFrameClosing(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameClosing(e : javax.swing.event.InternalFrameEvent) : Void;
 	
 	/**
 	* Invoked when an internal frame has been closed.
 	* @see javax.swing.JInternalFrame#setClosed
 	*/
-	@:overload public function internalFrameClosed(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameClosed(e : javax.swing.event.InternalFrameEvent) : Void;
 	
 	/**
 	* Invoked when an internal frame is iconified.
 	* @see javax.swing.JInternalFrame#setIcon
 	*/
-	@:overload public function internalFrameIconified(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameIconified(e : javax.swing.event.InternalFrameEvent) : Void;
 	
 	/**
 	* Invoked when an internal frame is de-iconified.
 	* @see javax.swing.JInternalFrame#setIcon
 	*/
-	@:overload public function internalFrameDeiconified(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameDeiconified(e : javax.swing.event.InternalFrameEvent) : Void;
 	
 	/**
 	* Invoked when an internal frame is activated.
 	* @see javax.swing.JInternalFrame#setSelected
 	*/
-	@:overload public function internalFrameActivated(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameActivated(e : javax.swing.event.InternalFrameEvent) : Void;
 	
 	/**
 	* Invoked when an internal frame is de-activated.
 	* @see javax.swing.JInternalFrame#setSelected
 	*/
-	@:overload public function internalFrameDeactivated(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameDeactivated(e : javax.swing.event.InternalFrameEvent) : Void;
 	
 	
 }

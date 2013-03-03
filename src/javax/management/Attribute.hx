@@ -33,21 +33,21 @@ extern class Attribute implements java.io.Serializable
 	* @param value The Object which is assigned to the attribute. This object must be of the same type as the attribute.
 	*
 	*/
-	@:overload public function new(name : String, value : Dynamic) : Void;
+	@:overload @:public public function new(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Returns a String containing the  name of the attribute.
 	*
 	* @return the name of the attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns an Object that is the value of this attribute.
 	*
 	* @return the value of the attribute.
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	/**
 	* Compares the current Attribute Object with another Attribute Object.
@@ -56,21 +56,21 @@ extern class Attribute implements java.io.Serializable
 	*
 	* @return  True if the two Attribute objects are equal, otherwise false.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for this attribute.
 	*
 	* @return a hash code value for this attribute.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a String object representing this Attribute's value. The format of this
 	* string is not specified, but users can expect that two Attributes return the
 	* same string if and only if they are equal.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

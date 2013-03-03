@@ -28,44 +28,44 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	/**
 	* Public attribute names.
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
-	public static var INFO(default, null) : String;
+	@:public @:static @:final public static var INFO(default, null) : String;
 	
-	public static var ALG_ID(default, null) : String;
+	@:public @:static @:final public static var ALG_ID(default, null) : String;
 	
-	public static var SIGNATURE(default, null) : String;
+	@:public @:static @:final public static var SIGNATURE(default, null) : String;
 	
-	public static var SIGNED_CERT(default, null) : String;
+	@:public @:static @:final public static var SIGNED_CERT(default, null) : String;
 	
 	/**
 	* The following are defined for ease-of-use. These
 	* are the most frequently retrieved attributes.
 	*/
-	public static var SUBJECT_DN(default, null) : String;
+	@:public @:static @:final public static var SUBJECT_DN(default, null) : String;
 	
-	public static var ISSUER_DN(default, null) : String;
+	@:public @:static @:final public static var ISSUER_DN(default, null) : String;
 	
-	public static var SERIAL_ID(default, null) : String;
+	@:public @:static @:final public static var SERIAL_ID(default, null) : String;
 	
-	public static var PUBLIC_KEY(default, null) : String;
+	@:public @:static @:final public static var PUBLIC_KEY(default, null) : String;
 	
-	public static var VERSION(default, null) : String;
+	@:public @:static @:final public static var VERSION(default, null) : String;
 	
-	public static var SIG_ALG(default, null) : String;
+	@:public @:static @:final public static var SIG_ALG(default, null) : String;
 	
-	public static var SIG(default, null) : String;
+	@:public @:static @:final public static var SIG(default, null) : String;
 	
-	private var info : sun.security.x509.X509CertInfo;
+	@:protected private var info : sun.security.x509.X509CertInfo;
 	
-	private var algId : sun.security.x509.AlgorithmId;
+	@:protected private var algId : sun.security.x509.AlgorithmId;
 	
-	private var signature : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var signature : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Unmarshals a certificate from its encoded form, parsing the
@@ -79,7 +79,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @param certData the encoded bytes, with no trailing padding.
 	* @exception CertificateException on parsing and initialization errors.
 	*/
-	@:overload public function new(certData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(certData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* unmarshals an X.509 certificate from an input stream.  If the
@@ -92,7 +92,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	*        DER-encoded certificate.
 	* @exception CertificateException on parsing and initialization errors.
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Construct an initialized X509 Certificate. The certificate is stored
@@ -101,7 +101,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @params info the X509CertificateInfo which the Certificate is to be
 	*              created from.
 	*/
-	@:overload public function new(certInfo : sun.security.x509.X509CertInfo) : Void;
+	@:overload @:public public function new(certInfo : sun.security.x509.X509CertInfo) : Void;
 	
 	/**
 	* Unmarshal a certificate from its encoded form, parsing a DER value.
@@ -111,7 +111,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @param derVal the der value containing the encoded cert.
 	* @exception CertificateException on parsing and initialization errors.
 	*/
-	@:overload public function new(derVal : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(derVal : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Appends the certificate to an output stream.
@@ -119,7 +119,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @param out an input stream to which the certificate is appended.
 	* @exception CertificateEncodingException on encoding errors.
 	*/
-	@:overload public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* DER encode this object onto an output stream.
@@ -129,7 +129,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	*
 	* @exception IOException on encoding error.
 	*/
-	@:overload public function derEncode(out : java.io.OutputStream) : Void;
+	@:overload @:public public function derEncode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Returns the encoded form of this certificate. It is
@@ -139,14 +139,14 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	*
 	* @exception CertificateEncodingException if an encoding error occurs.
 	*/
-	@:overload override public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returned the encoding as an uncloned byte array. Callers must
 	* guarantee that they neither modify it nor expose it to untrusted
 	* code.
 	*/
-	@:overload public function getEncodedInternal() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncodedInternal() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Throws an exception if the certificate was not signed using the
@@ -163,7 +163,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @exception SignatureException on signature errors.
 	* @exception CertificateException on encoding errors.
 	*/
-	@:overload override public function verify(key : java.security.PublicKey) : Void;
+	@:overload @:public override public function verify(key : java.security.PublicKey) : Void;
 	
 	/**
 	* Throws an exception if the certificate was not signed using the
@@ -181,7 +181,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @exception SignatureException on signature errors.
 	* @exception CertificateException on encoding errors.
 	*/
-	@:overload @:synchronized override public function verify(key : java.security.PublicKey, sigProvider : String) : Void;
+	@:overload @:public @:synchronized override public function verify(key : java.security.PublicKey, sigProvider : String) : Void;
 	
 	/**
 	* Creates an X.509 certificate, and signs it using the given key
@@ -199,7 +199,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @exception SignatureException on signature errors.
 	* @exception CertificateException on encoding errors.
 	*/
-	@:overload public function sign(key : java.security.PrivateKey, algorithm : String) : Void;
+	@:overload @:public public function sign(key : java.security.PrivateKey, algorithm : String) : Void;
 	
 	/**
 	* Creates an X.509 certificate, and signs it using the given key
@@ -218,7 +218,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @exception SignatureException on signature errors.
 	* @exception CertificateException on encoding errors.
 	*/
-	@:overload public function sign(key : java.security.PrivateKey, algorithm : String, provider : String) : Void;
+	@:overload @:public public function sign(key : java.security.PrivateKey, algorithm : String, provider : String) : Void;
 	
 	/**
 	* Checks that the certificate is currently valid, i.e. the current
@@ -228,7 +228,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @exception CertificateNotYetValidException if the certificate is not
 	* yet valid.
 	*/
-	@:overload override public function checkValidity() : Void;
+	@:overload @:public override public function checkValidity() : Void;
 	
 	/**
 	* Checks that the specified date is within the certificate's
@@ -243,7 +243,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @exception CertificateNotYetValidException if the certificate is not
 	* yet valid with respect to the <code>date</code> supplied.
 	*/
-	@:overload override public function checkValidity(date : java.util.Date) : Void;
+	@:overload @:public override public function checkValidity(date : java.util.Date) : Void;
 	
 	/**
 	* Return the requested attribute from the certificate.
@@ -255,7 +255,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @param name the name of the attribute.
 	* @exception CertificateParsingException on invalid attribute identifier.
 	*/
-	@:overload public function get(name : String) : Dynamic;
+	@:overload @:public public function get(name : String) : Dynamic;
 	
 	/**
 	* Set the requested attribute in the certificate.
@@ -265,7 +265,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @exception CertificateException on invalid attribute identifier.
 	* @exception IOException on encoding error of attribute.
 	*/
-	@:overload public function set(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function set(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Delete the requested attribute from the certificate.
@@ -274,18 +274,18 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @exception CertificateException on invalid attribute identifier.
 	* @exception IOException on other errors.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this
 	* attribute.
 	*/
-	@:overload public function getElements() : java.util.Enumeration<String>;
+	@:overload @:public public function getElements() : java.util.Enumeration<String>;
 	
 	/**
 	* Return the name of this attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns a printable representation of the certificate.  This does not
@@ -293,28 +293,28 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* other certificate.  The certificate must be fully constructed
 	* before this function may be called.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Gets the publickey from this certificate.
 	*
 	* @return the publickey.
 	*/
-	@:overload override public function getPublicKey() : java.security.PublicKey;
+	@:overload @:public override public function getPublicKey() : java.security.PublicKey;
 	
 	/**
 	* Gets the version number from the certificate.
 	*
 	* @return the version number, i.e. 1, 2 or 3.
 	*/
-	@:overload override public function getVersion() : Int;
+	@:overload @:public override public function getVersion() : Int;
 	
 	/**
 	* Gets the serial number from the certificate.
 	*
 	* @return the serial number.
 	*/
-	@:overload override public function getSerialNumber() : java.math.BigInteger;
+	@:overload @:public override public function getSerialNumber() : java.math.BigInteger;
 	
 	/**
 	* Gets the serial number from the certificate as
@@ -322,49 +322,49 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	*
 	* @return the serial number.
 	*/
-	@:overload public function getSerialNumberObject() : sun.security.x509.SerialNumber;
+	@:overload @:public public function getSerialNumberObject() : sun.security.x509.SerialNumber;
 	
 	/**
 	* Gets the subject distinguished name from the certificate.
 	*
 	* @return the subject name.
 	*/
-	@:overload override public function getSubjectDN() : java.security.Principal;
+	@:overload @:public override public function getSubjectDN() : java.security.Principal;
 	
 	/**
 	* Get subject name as X500Principal. Overrides implementation in
 	* X509Certificate with a slightly more efficient version that is
 	* also aware of X509CertImpl mutability.
 	*/
-	@:overload override public function getSubjectX500Principal() : javax.security.auth.x500.X500Principal;
+	@:overload @:public override public function getSubjectX500Principal() : javax.security.auth.x500.X500Principal;
 	
 	/**
 	* Gets the issuer distinguished name from the certificate.
 	*
 	* @return the issuer name.
 	*/
-	@:overload override public function getIssuerDN() : java.security.Principal;
+	@:overload @:public override public function getIssuerDN() : java.security.Principal;
 	
 	/**
 	* Get issuer name as X500Principal. Overrides implementation in
 	* X509Certificate with a slightly more efficient version that is
 	* also aware of X509CertImpl mutability.
 	*/
-	@:overload override public function getIssuerX500Principal() : javax.security.auth.x500.X500Principal;
+	@:overload @:public override public function getIssuerX500Principal() : javax.security.auth.x500.X500Principal;
 	
 	/**
 	* Gets the notBefore date from the validity period of the certificate.
 	*
 	* @return the start date of the validity period.
 	*/
-	@:overload override public function getNotBefore() : java.util.Date;
+	@:overload @:public override public function getNotBefore() : java.util.Date;
 	
 	/**
 	* Gets the notAfter date from the validity period of the certificate.
 	*
 	* @return the end date of the validity period.
 	*/
-	@:overload override public function getNotAfter() : java.util.Date;
+	@:overload @:public override public function getNotAfter() : java.util.Date;
 	
 	/**
 	* Gets the DER encoded certificate informations, the
@@ -374,14 +374,14 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @return the DER encoded certificate information.
 	* @exception CertificateEncodingException if an encoding error occurs.
 	*/
-	@:overload override public function getTBSCertificate() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getTBSCertificate() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the raw Signature bits from the certificate.
 	*
 	* @return the signature.
 	*/
-	@:overload override public function getSignature() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getSignature() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the signature algorithm name for the certificate
@@ -390,7 +390,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	*
 	* @return the signature algorithm name.
 	*/
-	@:overload override public function getSigAlgName() : String;
+	@:overload @:public override public function getSigAlgName() : String;
 	
 	/**
 	* Gets the signature algorithm OID string from the certificate.
@@ -398,7 +398,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	*
 	* @return the signature algorithm oid string.
 	*/
-	@:overload override public function getSigAlgOID() : String;
+	@:overload @:public override public function getSigAlgOID() : String;
 	
 	/**
 	* Gets the DER encoded signature algorithm parameters from this
@@ -407,119 +407,119 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @return the DER encoded signature algorithm parameters, or
 	*         null if no parameters are present.
 	*/
-	@:overload override public function getSigAlgParams() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getSigAlgParams() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the Issuer Unique Identity from the certificate.
 	*
 	* @return the Issuer Unique Identity.
 	*/
-	@:overload override public function getIssuerUniqueID() : java.NativeArray<Bool>;
+	@:overload @:public override public function getIssuerUniqueID() : java.NativeArray<Bool>;
 	
 	/**
 	* Gets the Subject Unique Identity from the certificate.
 	*
 	* @return the Subject Unique Identity.
 	*/
-	@:overload override public function getSubjectUniqueID() : java.NativeArray<Bool>;
+	@:overload @:public override public function getSubjectUniqueID() : java.NativeArray<Bool>;
 	
 	/**
 	* Get AuthorityKeyIdentifier extension
 	* @return AuthorityKeyIdentifier object or null (if no such object
 	* in certificate)
 	*/
-	@:overload public function getAuthorityKeyIdentifierExtension() : sun.security.x509.AuthorityKeyIdentifierExtension;
+	@:overload @:public public function getAuthorityKeyIdentifierExtension() : sun.security.x509.AuthorityKeyIdentifierExtension;
 	
 	/**
 	* Return the issuing authority's key identifier bytes, or null
 	*/
-	@:overload public function getIssuerKeyIdentifier() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getIssuerKeyIdentifier() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Get BasicConstraints extension
 	* @return BasicConstraints object or null (if no such object in
 	* certificate)
 	*/
-	@:overload public function getBasicConstraintsExtension() : sun.security.x509.BasicConstraintsExtension;
+	@:overload @:public public function getBasicConstraintsExtension() : sun.security.x509.BasicConstraintsExtension;
 	
 	/**
 	* Get CertificatePoliciesExtension
 	* @return CertificatePoliciesExtension or null (if no such object in
 	* certificate)
 	*/
-	@:overload public function getCertificatePoliciesExtension() : sun.security.x509.CertificatePoliciesExtension;
+	@:overload @:public public function getCertificatePoliciesExtension() : sun.security.x509.CertificatePoliciesExtension;
 	
 	/**
 	* Get ExtendedKeyUsage extension
 	* @return ExtendedKeyUsage extension object or null (if no such object
 	* in certificate)
 	*/
-	@:overload public function getExtendedKeyUsageExtension() : sun.security.x509.ExtendedKeyUsageExtension;
+	@:overload @:public public function getExtendedKeyUsageExtension() : sun.security.x509.ExtendedKeyUsageExtension;
 	
 	/**
 	* Get IssuerAlternativeName extension
 	* @return IssuerAlternativeName object or null (if no such object in
 	* certificate)
 	*/
-	@:overload public function getIssuerAlternativeNameExtension() : sun.security.x509.IssuerAlternativeNameExtension;
+	@:overload @:public public function getIssuerAlternativeNameExtension() : sun.security.x509.IssuerAlternativeNameExtension;
 	
 	/**
 	* Get NameConstraints extension
 	* @return NameConstraints object or null (if no such object in certificate)
 	*/
-	@:overload public function getNameConstraintsExtension() : sun.security.x509.NameConstraintsExtension;
+	@:overload @:public public function getNameConstraintsExtension() : sun.security.x509.NameConstraintsExtension;
 	
 	/**
 	* Get PolicyConstraints extension
 	* @return PolicyConstraints object or null (if no such object in
 	* certificate)
 	*/
-	@:overload public function getPolicyConstraintsExtension() : sun.security.x509.PolicyConstraintsExtension;
+	@:overload @:public public function getPolicyConstraintsExtension() : sun.security.x509.PolicyConstraintsExtension;
 	
 	/**
 	* Get PolicyMappingsExtension extension
 	* @return PolicyMappingsExtension object or null (if no such object
 	* in certificate)
 	*/
-	@:overload public function getPolicyMappingsExtension() : sun.security.x509.PolicyMappingsExtension;
+	@:overload @:public public function getPolicyMappingsExtension() : sun.security.x509.PolicyMappingsExtension;
 	
 	/**
 	* Get PrivateKeyUsage extension
 	* @return PrivateKeyUsage object or null (if no such object in certificate)
 	*/
-	@:overload public function getPrivateKeyUsageExtension() : sun.security.x509.PrivateKeyUsageExtension;
+	@:overload @:public public function getPrivateKeyUsageExtension() : sun.security.x509.PrivateKeyUsageExtension;
 	
 	/**
 	* Get SubjectAlternativeName extension
 	* @return SubjectAlternativeName object or null (if no such object in
 	* certificate)
 	*/
-	@:overload public function getSubjectAlternativeNameExtension() : sun.security.x509.SubjectAlternativeNameExtension;
+	@:overload @:public public function getSubjectAlternativeNameExtension() : sun.security.x509.SubjectAlternativeNameExtension;
 	
 	/**
 	* Get SubjectKeyIdentifier extension
 	* @return SubjectKeyIdentifier object or null (if no such object in
 	* certificate)
 	*/
-	@:overload public function getSubjectKeyIdentifierExtension() : sun.security.x509.SubjectKeyIdentifierExtension;
+	@:overload @:public public function getSubjectKeyIdentifierExtension() : sun.security.x509.SubjectKeyIdentifierExtension;
 	
 	/**
 	* Returns the subject's key identifier bytes, or null
 	*/
-	@:overload public function getSubjectKeyIdentifier() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getSubjectKeyIdentifier() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Get CRLDistributionPoints extension
 	* @return CRLDistributionPoints object or null (if no such object in
 	* certificate)
 	*/
-	@:overload public function getCRLDistributionPointsExtension() : sun.security.x509.CRLDistributionPointsExtension;
+	@:overload @:public public function getCRLDistributionPointsExtension() : sun.security.x509.CRLDistributionPointsExtension;
 	
 	/**
 	* Return true if a critical extension is found that is
 	* not supported, otherwise return false.
 	*/
-	@:overload override public function hasUnsupportedCriticalExtension() : Bool;
+	@:overload @:public override public function hasUnsupportedCriticalExtension() : Bool;
 	
 	/**
 	* Gets a Set of the extension(s) marked CRITICAL in the
@@ -529,7 +529,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @return a set of the extension oid strings in the
 	* certificate that are marked critical.
 	*/
-	@:overload override public function getCriticalExtensionOIDs() : java.util.Set<String>;
+	@:overload @:public override public function getCriticalExtensionOIDs() : java.util.Set<String>;
 	
 	/**
 	* Gets a Set of the extension(s) marked NON-CRITICAL in the
@@ -539,7 +539,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @return a set of the extension oid strings in the
 	* certificate that are NOT marked critical.
 	*/
-	@:overload override public function getNonCriticalExtensionOIDs() : java.util.Set<String>;
+	@:overload @:public override public function getNonCriticalExtensionOIDs() : java.util.Set<String>;
 	
 	/**
 	* Gets the extension identified by the given ObjectIdentifier
@@ -548,9 +548,9 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* @return Extension or null if certificate does not contain this
 	*         extension
 	*/
-	@:overload public function getExtension(oid : sun.security.util.ObjectIdentifier) : java.security.cert.Extension;
+	@:overload @:public public function getExtension(oid : sun.security.util.ObjectIdentifier) : java.security.cert.Extension;
 	
-	@:overload public function getUnparseableExtension(oid : sun.security.util.ObjectIdentifier) : java.security.cert.Extension;
+	@:overload @:public public function getUnparseableExtension(oid : sun.security.util.ObjectIdentifier) : java.security.cert.Extension;
 	
 	/**
 	* Gets the DER encoded extension identified by the given
@@ -558,14 +558,14 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	*
 	* @param oid the Object Identifier value for the extension.
 	*/
-	@:overload override public function getExtensionValue(oid : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getExtensionValue(oid : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Get a boolean array representing the bits of the KeyUsage extension,
 	* (oid = 2.5.29.15).
 	* @return the bit values of this extension as an array of booleans.
 	*/
-	@:overload override public function getKeyUsage() : java.NativeArray<Bool>;
+	@:overload @:public override public function getKeyUsage() : java.NativeArray<Bool>;
 	
 	/**
 	* This method are the overridden implementation of
@@ -573,7 +573,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* provider. It is better performance-wise since it returns cached
 	* values.
 	*/
-	@:overload @:synchronized override public function getExtendedKeyUsage() : java.util.List<String>;
+	@:overload @:public @:synchronized override public function getExtendedKeyUsage() : java.util.List<String>;
 	
 	/**
 	* This static method is the default implementation of the
@@ -581,14 +581,14 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* X509Certificate provider generally should overwrite this to
 	* provide among other things caching for better performance.
 	*/
-	@:native('getExtendedKeyUsage') @:overload public static function _getExtendedKeyUsage(cert : java.security.cert.X509Certificate) : java.util.List<String>;
+	@:native('getExtendedKeyUsage') @:overload @:public @:static public static function _getExtendedKeyUsage(cert : java.security.cert.X509Certificate) : java.util.List<String>;
 	
 	/**
 	* Get the certificate constraints path length from the
 	* the critical BasicConstraints extension, (oid = 2.5.29.19).
 	* @return the length of the constraint.
 	*/
-	@:overload override public function getBasicConstraints() : Int;
+	@:overload @:public override public function getBasicConstraints() : Int;
 	
 	/**
 	* This method are the overridden implementation of
@@ -596,7 +596,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* provider. It is better performance-wise since it returns cached
 	* values.
 	*/
-	@:overload @:synchronized override public function getSubjectAlternativeNames() : java.util.Collection<java.util.List<Dynamic>>;
+	@:overload @:public @:synchronized override public function getSubjectAlternativeNames() : java.util.Collection<java.util.List<Dynamic>>;
 	
 	/**
 	* This static method is the default implementation of the
@@ -604,7 +604,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* X509Certificate provider generally should overwrite this to
 	* provide among other things caching for better performance.
 	*/
-	@:native('getSubjectAlternativeNames') @:overload public static function _getSubjectAlternativeNames(cert : java.security.cert.X509Certificate) : java.util.Collection<java.util.List<Dynamic>>;
+	@:native('getSubjectAlternativeNames') @:overload @:public @:static public static function _getSubjectAlternativeNames(cert : java.security.cert.X509Certificate) : java.util.Collection<java.util.List<Dynamic>>;
 	
 	/**
 	* This method are the overridden implementation of
@@ -612,7 +612,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* provider. It is better performance-wise since it returns cached
 	* values.
 	*/
-	@:overload @:synchronized override public function getIssuerAlternativeNames() : java.util.Collection<java.util.List<Dynamic>>;
+	@:overload @:public @:synchronized override public function getIssuerAlternativeNames() : java.util.Collection<java.util.List<Dynamic>>;
 	
 	/**
 	* This static method is the default implementation of the
@@ -620,21 +620,21 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* X509Certificate provider generally should overwrite this to
 	* provide among other things caching for better performance.
 	*/
-	@:native('getIssuerAlternativeNames') @:overload public static function _getIssuerAlternativeNames(cert : java.security.cert.X509Certificate) : java.util.Collection<java.util.List<Dynamic>>;
+	@:native('getIssuerAlternativeNames') @:overload @:public @:static public static function _getIssuerAlternativeNames(cert : java.security.cert.X509Certificate) : java.util.Collection<java.util.List<Dynamic>>;
 	
-	@:overload public function getAuthorityInfoAccessExtension() : sun.security.x509.AuthorityInfoAccessExtension;
+	@:overload @:public public function getAuthorityInfoAccessExtension() : sun.security.x509.AuthorityInfoAccessExtension;
 	
 	/**
 	* Extract the subject X500Principal from an X509Certificate.
 	* Called from java.security.cert.X509Certificate.getSubjectX500Principal().
 	*/
-	@:native('getSubjectX500Principal') @:overload public static function _getSubjectX500Principal(cert : java.security.cert.X509Certificate) : javax.security.auth.x500.X500Principal;
+	@:native('getSubjectX500Principal') @:overload @:public @:static public static function _getSubjectX500Principal(cert : java.security.cert.X509Certificate) : javax.security.auth.x500.X500Principal;
 	
 	/**
 	* Extract the issuer X500Principal from an X509Certificate.
 	* Called from java.security.cert.X509Certificate.getIssuerX500Principal().
 	*/
-	@:native('getIssuerX500Principal') @:overload public static function _getIssuerX500Principal(cert : java.security.cert.X509Certificate) : javax.security.auth.x500.X500Principal;
+	@:native('getIssuerX500Principal') @:overload @:public @:static public static function _getIssuerX500Principal(cert : java.security.cert.X509Certificate) : javax.security.auth.x500.X500Principal;
 	
 	/**
 	* Returned the encoding of the given certificate for internal use.
@@ -642,20 +642,20 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* to untrusted code. Uses getEncodedInternal() if the certificate
 	* is instance of X509CertImpl, getEncoded() otherwise.
 	*/
-	@:native('getEncodedInternal') @:overload public static function _getEncodedInternal(cert : java.security.cert.Certificate) : java.NativeArray<java.StdTypes.Int8>;
+	@:native('getEncodedInternal') @:overload @:public @:static public static function _getEncodedInternal(cert : java.security.cert.Certificate) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Utility method to convert an arbitrary instance of X509Certificate
 	* to a X509CertImpl. Does a cast if possible, otherwise reparses
 	* the encoding.
 	*/
-	@:overload public static function toImpl(cert : java.security.cert.X509Certificate) : sun.security.x509.X509CertImpl;
+	@:overload @:public @:static public static function toImpl(cert : java.security.cert.X509Certificate) : sun.security.x509.X509CertImpl;
 	
 	/**
 	* Utility method to test if a certificate is self-issued. This is
 	* the case iff the subject and issuer X500Principals are equal.
 	*/
-	@:overload public static function isSelfIssued(cert : java.security.cert.X509Certificate) : Bool;
+	@:overload @:public @:static public static function isSelfIssued(cert : java.security.cert.X509Certificate) : Bool;
 	
 	/**
 	* Utility method to test if a certificate is self-signed. This is
@@ -663,7 +663,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* AND the certificate's subject public key can be used to verify
 	* the certificate. In case of exception, returns false.
 	*/
-	@:overload public static function isSelfSigned(cert : java.security.cert.X509Certificate, sigProvider : String) : Bool;
+	@:overload @:public @:static public static function isSelfSigned(cert : java.security.cert.X509Certificate, sigProvider : String) : Bool;
 	
 	
 }

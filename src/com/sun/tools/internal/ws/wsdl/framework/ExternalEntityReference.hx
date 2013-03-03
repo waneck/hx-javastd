@@ -30,15 +30,15 @@ extern class ExternalEntityReference
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(document : com.sun.tools.internal.ws.wsdl.framework.AbstractDocument, kind : com.sun.tools.internal.ws.wsdl.framework.Kind, name : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(document : com.sun.tools.internal.ws.wsdl.framework.AbstractDocument, kind : com.sun.tools.internal.ws.wsdl.framework.Kind, name : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getDocument() : com.sun.tools.internal.ws.wsdl.framework.AbstractDocument;
+	@:overload @:public public function getDocument() : com.sun.tools.internal.ws.wsdl.framework.AbstractDocument;
 	
-	@:overload public function getKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:overload @:public public function getKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function resolve() : com.sun.tools.internal.ws.wsdl.framework.GloballyKnown;
+	@:overload @:public public function resolve() : com.sun.tools.internal.ws.wsdl.framework.GloballyKnown;
 	
 	
 }

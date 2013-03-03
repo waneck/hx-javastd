@@ -28,7 +28,7 @@ package com.sun.xml.internal.messaging.saaj.packaging.mime.internet;
 */
 extern class MimeUtility
 {
-	public static var ALL(default, null) : Int;
+	@:public @:static @:final public static var ALL(default, null) : Int;
 	
 	/**
 	* Get the content-transfer-encoding that should be applied
@@ -53,7 +53,7 @@ extern class MimeUtility
 	* @return          the encoding. This is either "7bit",
 	*                  "quoted-printable" or "base64"
 	*/
-	@:overload public static function getEncoding(ds : javax.activation.DataSource) : String;
+	@:overload @:public @:static public static function getEncoding(ds : javax.activation.DataSource) : String;
 	
 	/**
 	* Same as <code>getEncoding(DataSource)</code> except that instead
@@ -68,7 +68,7 @@ extern class MimeUtility
 	*
 	* @since   JavaMail 1.2
 	*/
-	@:require(java2) @:overload public static function getEncoding(dh : javax.activation.DataHandler) : String;
+	@:require(java2) @:overload @:public @:static public static function getEncoding(dh : javax.activation.DataHandler) : String;
 	
 	/**
 	* Decode the given input stream. The Input stream returned is
@@ -81,7 +81,7 @@ extern class MimeUtility
 	* @param   encoding        the encoding of the stream.
 	* @return                  decoded input stream.
 	*/
-	@:overload public static function decode(is : java.io.InputStream, encoding : String) : java.io.InputStream;
+	@:overload @:public @:static public static function decode(is : java.io.InputStream, encoding : String) : java.io.InputStream;
 	
 	/**
 	* Wrap an encoder around the given output stream.
@@ -94,7 +94,7 @@ extern class MimeUtility
 	* @return                  output stream that applies the
 	*                          specified encoding.
 	*/
-	@:overload public static function encode(os : java.io.OutputStream, encoding : String) : java.io.OutputStream;
+	@:overload @:public @:static public static function encode(os : java.io.OutputStream, encoding : String) : java.io.OutputStream;
 	
 	/**
 	* Wrap an encoder around the given output stream.
@@ -112,7 +112,7 @@ extern class MimeUtility
 	*                          specified encoding.
 	* @since                   JavaMail 1.2
 	*/
-	@:require(java2) @:overload public static function encode(os : java.io.OutputStream, encoding : String, filename : String) : java.io.OutputStream;
+	@:require(java2) @:overload @:public @:static public static function encode(os : java.io.OutputStream, encoding : String, filename : String) : java.io.OutputStream;
 	
 	/**
 	* Encode a RFC 822 "text" token into mail-safe form as per
@@ -150,7 +150,7 @@ extern class MimeUtility
 	* @return  Unicode string containing only US-ASCII characters
 	* @exception UnsupportedEncodingException if the encoding fails
 	*/
-	@:overload public static function encodeText(text : String) : String;
+	@:overload @:public @:static public static function encodeText(text : String) : String;
 	
 	/**
 	* Encode a RFC 822 "text" token into mail-safe form as per
@@ -177,7 +177,7 @@ extern class MimeUtility
 	*          is used.
 	* @return  Unicode string containing only US-ASCII characters
 	*/
-	@:overload public static function encodeText(text : String, charset : String, encoding : String) : String;
+	@:overload @:public @:static public static function encodeText(text : String, charset : String, encoding : String) : String;
 	
 	/**
 	* Decode "unstructured" headers, that is, headers that are defined
@@ -211,7 +211,7 @@ extern class MimeUtility
 	* @exception       UnsupportedEncodingException if the charset
 	*                  conversion failed.
 	*/
-	@:overload public static function decodeText(etext : String) : String;
+	@:overload @:public @:static public static function decodeText(etext : String) : String;
 	
 	/**
 	* Encode a RFC 822 "word" token into mail-safe form as per
@@ -234,7 +234,7 @@ extern class MimeUtility
 	*          characters.
 	* @exception UnsupportedEncodingException if the encoding fails
 	*/
-	@:overload public static function encodeWord(word : String) : String;
+	@:overload @:public @:static public static function encodeWord(word : String) : String;
 	
 	/**
 	* Encode a RFC 822 "word" token into mail-safe form as per
@@ -258,7 +258,7 @@ extern class MimeUtility
 	* @return  Unicode string containing only US-ASCII characters
 	* @exception UnsupportedEncodingException if the encoding fails
 	*/
-	@:overload public static function encodeWord(word : String, charset : String, encoding : String) : String;
+	@:overload @:public @:static public static function encodeWord(word : String, charset : String, encoding : String) : String;
 	
 	/**
 	* The string is parsed using the rules in RFC 2047 for parsing
@@ -273,7 +273,7 @@ extern class MimeUtility
 	* @exception       UnsupportedEncodingException if the charset
 	*                  conversion failed.
 	*/
-	@:overload public static function decodeWord(eword : String) : String;
+	@:overload @:public @:static public static function decodeWord(eword : String) : String;
 	
 	/**
 	* A utility method to quote a word, if the word contains any
@@ -291,7 +291,7 @@ extern class MimeUtility
 	* @see     javax.mail.internet.HeaderTokenizer#MIME
 	* @see     javax.mail.internet.HeaderTokenizer#RFC822
 	*/
-	@:overload public static function quote(word : String, specials : String) : String;
+	@:overload @:public @:static public static function quote(word : String, specials : String) : String;
 	
 	/**
 	* Convert a MIME charset name into a valid Java charset name. <p>
@@ -300,7 +300,7 @@ extern class MimeUtility
 	* @return  the Java charset equivalent. If a suitable mapping is
 	*          not available, the passed in charset is itself returned.
 	*/
-	@:overload public static function javaCharset(charset : String) : String;
+	@:overload @:public @:static public static function javaCharset(charset : String) : String;
 	
 	/**
 	* Convert a java charset into its MIME charset name. <p>
@@ -315,7 +315,7 @@ extern class MimeUtility
 	*                  is returned.
 	* @since           JavaMail 1.1
 	*/
-	@:require(java1) @:overload public static function mimeCharset(charset : String) : String;
+	@:require(java1) @:overload @:public @:static public static function mimeCharset(charset : String) : String;
 	
 	/**
 	* Get the default charset corresponding to the system's current
@@ -327,24 +327,24 @@ extern class MimeUtility
 	*          as a Java charset. (NOT a MIME charset)
 	* @since   JavaMail 1.1
 	*/
-	@:require(java1) @:overload public static function getDefaultJavaCharset() : String;
+	@:require(java1) @:overload @:public @:static public static function getDefaultJavaCharset() : String;
 	
 	
 }
 @:internal extern class AsciiOutputStream extends java.io.OutputStream
 {
-	@:overload public function new(breakOnNonAscii : Bool, encodeEolStrict : Bool) : Void;
+	@:overload @:public public function new(breakOnNonAscii : Bool, encodeEolStrict : Bool) : Void;
 	
-	@:overload public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Return ASCII-ness of data stream.
 	*/
-	@:overload public function getAscii() : Int;
+	@:overload @:public public function getAscii() : Int;
 	
 	
 }

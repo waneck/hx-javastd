@@ -30,15 +30,15 @@ package com.sun.tools.internal.xjc.reader.relaxng;
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	public var defs(default, null) : java.util.Set<com.sun.xml.internal.rngom.digested.DDefine>;
+	@:public @:final public var defs(default, null) : java.util.Set<com.sun.xml.internal.rngom.digested.DDefine>;
 	
-	@:overload override public function onGrammar(p : com.sun.xml.internal.rngom.digested.DGrammarPattern) : java.lang.Void;
+	@:overload @:public override public function onGrammar(p : com.sun.xml.internal.rngom.digested.DGrammarPattern) : java.lang.Void;
 	
 	/**
 	* We visit all {@link DDefine}s from {@link DGrammarPattern},
 	* so no point in resolving refs.
 	*/
-	@:overload override public function onRef(p : com.sun.xml.internal.rngom.digested.DRefPattern) : java.lang.Void;
+	@:overload @:public override public function onRef(p : com.sun.xml.internal.rngom.digested.DRefPattern) : java.lang.Void;
 	
 	
 }

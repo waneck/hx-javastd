@@ -31,9 +31,9 @@ extern class MessageDispatch extends com.sun.xml.internal.ws.client.dispatch.Dis
 	* @author Kohsuke Kawaguchi
 	* @since 2.1.1
 	*/
-	@:require(java1) @:overload public function new(port : javax.xml.namespace.QName, service : com.sun.xml.internal.ws.client.WSServiceDelegate, pipe : com.sun.xml.internal.ws.api.pipe.Tube, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
+	@:require(java1) @:overload @:public public function new(port : javax.xml.namespace.QName, service : com.sun.xml.internal.ws.client.WSServiceDelegate, pipe : com.sun.xml.internal.ws.api.pipe.Tube, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
 	
-	@:overload public function new(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
+	@:overload @:public public function new(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
 	
 	
 }

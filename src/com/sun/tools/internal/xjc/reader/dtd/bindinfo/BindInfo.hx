@@ -26,25 +26,25 @@ package com.sun.tools.internal.xjc.reader.dtd.bindinfo;
 extern class BindInfo
 {
 	/** Controller object that can be used to report errors. */
-	private var errorReceiver(default, null) : com.sun.tools.internal.xjc.ErrorReceiver;
+	@:protected @:final private var errorReceiver(default, null) : com.sun.tools.internal.xjc.ErrorReceiver;
 	
-	@:overload public function new(model : com.sun.tools.internal.xjc.model.Model, source : org.xml.sax.InputSource, _errorReceiver : com.sun.tools.internal.xjc.ErrorReceiver) : Void;
+	@:overload @:public public function new(model : com.sun.tools.internal.xjc.model.Model, source : org.xml.sax.InputSource, _errorReceiver : com.sun.tools.internal.xjc.ErrorReceiver) : Void;
 	
-	@:overload public function new(model : com.sun.tools.internal.xjc.model.Model, _dom : org.w3c.dom.Document, _errorReceiver : com.sun.tools.internal.xjc.ErrorReceiver) : Void;
+	@:overload @:public public function new(model : com.sun.tools.internal.xjc.model.Model, _dom : org.w3c.dom.Document, _errorReceiver : com.sun.tools.internal.xjc.ErrorReceiver) : Void;
 	
 	/** Gets the serialVersionUID if it's turned on. */
-	@:overload public function getSerialVersionUID() : Null<haxe.Int64>;
+	@:overload @:public public function getSerialVersionUID() : Null<haxe.Int64>;
 	
 	/** Gets the xjc:superClass customization if it's turned on. */
-	@:overload public function getSuperClass() : com.sun.codemodel.internal.JClass;
+	@:overload @:public public function getSuperClass() : com.sun.codemodel.internal.JClass;
 	
 	/** Gets the xjc:superInterface customization if it's turned on. */
-	@:overload public function getSuperInterface() : com.sun.codemodel.internal.JClass;
+	@:overload @:public public function getSuperInterface() : com.sun.codemodel.internal.JClass;
 	
 	/**
 	* Gets the specified package name (options/@package).
 	*/
-	@:overload public function getTargetPackage() : com.sun.codemodel.internal.JPackage;
+	@:overload @:public public function getTargetPackage() : com.sun.codemodel.internal.JPackage;
 	
 	/**
 	* Gets the conversion declaration from the binding info.
@@ -52,7 +52,7 @@ extern class BindInfo
 	* @return
 	*        A non-null valid BIConversion object.
 	*/
-	@:overload public function conversion(name : String) : com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIConversion;
+	@:overload @:public public function conversion(name : String) : com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIConversion;
 	
 	/**
 	* Gets the element declaration from the binding info.
@@ -61,13 +61,13 @@ extern class BindInfo
 	*        If there is no declaration with a given name,
 	*        this method returns null.
 	*/
-	@:overload public function element(name : String) : com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIElement;
+	@:overload @:public public function element(name : String) : com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIElement;
 	
 	/** Iterates all {@link BIElement}s in a read-only set. */
-	@:overload public function elements() : java.util.Collection<com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIElement>;
+	@:overload @:public public function elements() : java.util.Collection<com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIElement>;
 	
 	/** Returns all {@link BIInterface}s in a read-only set. */
-	@:overload public function interfaces() : java.util.Collection<com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIInterface>;
+	@:overload @:public public function interfaces() : java.util.Collection<com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIInterface>;
 	
 	
 }

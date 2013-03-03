@@ -29,7 +29,7 @@ package sun.java2d;
 */
 extern interface DisposerRecord
 {
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	
 }

@@ -28,25 +28,25 @@ extern class RelativePath implements java.lang.Comparable<com.sun.tools.javac.fi
 	/**
 	* @param p must use '/' as an internal separator
 	*/
-	@:overload private function new(p : String) : Void;
+	@:overload @:protected private function new(p : String) : Void;
 	
-	@:overload @:abstract public function dirname() : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory;
+	@:overload @:public @:abstract public function dirname() : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory;
 	
-	@:overload @:abstract public function basename() : String;
+	@:overload @:public @:abstract public function basename() : String;
 	
-	@:overload public function getFile(directory : java.io.File) : java.io.File;
+	@:overload @:public public function getFile(directory : java.io.File) : java.io.File;
 	
-	@:overload public function compareTo(other : com.sun.tools.javac.file.RelativePath) : Int;
+	@:overload @:public public function compareTo(other : com.sun.tools.javac.file.RelativePath) : Int;
 	
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getPath() : String;
+	@:overload @:public public function getPath() : String;
 	
-	private var path(default, null) : String;
+	@:protected @:final private var path(default, null) : String;
 	
 	/**
 	* Compares this object with the specified object for order.  Returns a
@@ -87,7 +87,7 @@ extern class RelativePath implements java.lang.Comparable<com.sun.tools.javac.fi
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
 	
 	
 }
@@ -102,18 +102,18 @@ extern class RelativePath implements java.lang.Comparable<com.sun.tools.javac.fi
 	/**
 	* @param p must use '/' as an internal separator
 	*/
-	@:overload public function new(p : String) : Void;
+	@:overload @:public public function new(p : String) : Void;
 	
 	/**
 	* @param p must use '/' as an internal separator
 	*/
-	@:overload public function new(d : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory, p : String) : Void;
+	@:overload @:public public function new(d : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory, p : String) : Void;
 	
-	@:overload override public function dirname() : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory;
+	@:overload @:public override public function dirname() : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory;
 	
-	@:overload override public function basename() : String;
+	@:overload @:public override public function basename() : String;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -124,18 +124,18 @@ extern class RelativePath implements java.lang.Comparable<com.sun.tools.javac.fi
 */
 @:native('com$sun$tools$javac$file$RelativePath$RelativeFile') extern class RelativePath_RelativeFile extends com.sun.tools.javac.file.RelativePath
 {
-	@:overload public function new(p : String) : Void;
+	@:overload @:public public function new(p : String) : Void;
 	
 	/**
 	* @param p must use '/' as an internal separator
 	*/
-	@:overload public function new(d : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory, p : String) : Void;
+	@:overload @:public public function new(d : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory, p : String) : Void;
 	
-	@:overload override public function dirname() : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory;
+	@:overload @:public override public function dirname() : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory;
 	
-	@:overload override public function basename() : String;
+	@:overload @:public override public function basename() : String;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

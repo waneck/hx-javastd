@@ -43,12 +43,12 @@ extern interface FSM
 {
 	/** Get the current state of this FSM.
 	*/
-	@:overload public function getState() : com.sun.corba.se.spi.orbutil.fsm.State;
+	@:overload @:public public function getState() : com.sun.corba.se.spi.orbutil.fsm.State;
 	
 	/** Perform the action and transition to the next state based
 	* on the current state of the FSM and the input.
 	*/
-	@:overload public function doIt(_in : com.sun.corba.se.spi.orbutil.fsm.Input) : Void;
+	@:overload @:public public function doIt(_in : com.sun.corba.se.spi.orbutil.fsm.Input) : Void;
 	
 	
 }

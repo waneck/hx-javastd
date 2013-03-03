@@ -77,7 +77,7 @@ extern class WrappedSAXException extends java.lang.RuntimeException
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	public var exception(default, null) : org.xml.sax.SAXException;
+	@:public @:final public var exception(default, null) : org.xml.sax.SAXException;
 	
 	
 }

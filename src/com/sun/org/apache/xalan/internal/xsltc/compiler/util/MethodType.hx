@@ -23,37 +23,37 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 */
 extern class MethodType extends com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type
 {
-	@:overload public function new(resultType : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
+	@:overload @:public public function new(resultType : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
 	
-	@:overload public function new(resultType : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type, arg1 : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
+	@:overload @:public public function new(resultType : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type, arg1 : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
 	
-	@:overload public function new(resultType : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type, arg1 : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type, arg2 : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
+	@:overload @:public public function new(resultType : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type, arg1 : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type, arg2 : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
 	
-	@:overload public function new(resultType : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type, arg1 : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type, arg2 : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type, arg3 : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
+	@:overload @:public public function new(resultType : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type, arg1 : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type, arg2 : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type, arg3 : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
 	
-	@:overload public function new(resultType : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type, argsType : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function new(resultType : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type, argsType : java.util.Vector<Dynamic>) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload public function toSignature() : String;
+	@:overload @:public override public function toSignature() : String;
 	
 	/**
 	* Returns the signature of this method that results by adding
 	* <code>lastArgSig</code> to the end of the argument list.
 	*/
-	@:overload public function toSignature(lastArgSig : String) : String;
+	@:overload @:public public function toSignature(lastArgSig : String) : String;
 	
-	@:overload public function toJCType() : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public override public function toJCType() : com.sun.org.apache.bcel.internal.generic.Type;
 	
-	@:overload public function identicalTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Bool;
+	@:overload @:public override public function identicalTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Bool;
 	
-	@:overload public function distanceTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Int;
+	@:overload @:public override public function distanceTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Int;
 	
-	@:overload public function resultType() : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public public function resultType() : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload public function argsType() : java.util.Vector<Dynamic>;
+	@:overload @:public public function argsType() : java.util.Vector<Dynamic>;
 	
-	@:overload public function argsCount() : Int;
+	@:overload @:public public function argsCount() : Int;
 	
 	
 }

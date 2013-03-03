@@ -35,37 +35,37 @@ package com.sun.tools.javadoc;
 	/**
 	* Return the generic class or interface that declared this type.
 	*/
-	@:overload override public function asClassDoc() : com.sun.javadoc.ClassDoc;
+	@:overload @:public override public function asClassDoc() : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Return the actual type arguments of this type.
 	*/
-	@:overload public function typeArguments() : java.NativeArray<com.sun.javadoc.Type>;
+	@:overload @:public public function typeArguments() : java.NativeArray<com.sun.javadoc.Type>;
 	
 	/**
 	* Return the class type that is a direct supertype of this one.
 	* Return null if this is an interface type.
 	*/
-	@:overload public function superclassType() : com.sun.javadoc.Type;
+	@:overload @:public public function superclassType() : com.sun.javadoc.Type;
 	
 	/**
 	* Return the interface types directly implemented by or extended by this
 	* parameterized type.
 	* Return an empty array if there are no interfaces.
 	*/
-	@:overload public function interfaceTypes() : java.NativeArray<com.sun.javadoc.Type>;
+	@:overload @:public public function interfaceTypes() : java.NativeArray<com.sun.javadoc.Type>;
 	
 	/**
 	* Return the type that contains this type as a member.
 	* Return null is this is a top-level type.
 	*/
-	@:overload public function containingType() : com.sun.javadoc.Type;
+	@:overload @:public public function containingType() : com.sun.javadoc.Type;
 	
-	@:overload override public function typeName() : String;
+	@:overload @:public override public function typeName() : String;
 	
-	@:overload override public function asParameterizedType() : com.sun.javadoc.ParameterizedType;
+	@:overload @:public override public function asParameterizedType() : com.sun.javadoc.ParameterizedType;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

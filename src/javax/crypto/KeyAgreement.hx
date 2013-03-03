@@ -32,7 +32,7 @@ extern class KeyAgreement
 	* @param provider the provider
 	* @param algorithm the algorithm
 	*/
-	@:overload private function new(keyAgreeSpi : javax.crypto.KeyAgreementSpi, provider : java.security.Provider, algorithm : String) : Void;
+	@:overload @:protected private function new(keyAgreeSpi : javax.crypto.KeyAgreementSpi, provider : java.security.Provider, algorithm : String) : Void;
 	
 	/**
 	* Returns the algorithm name of this <code>KeyAgreement</code> object.
@@ -43,7 +43,7 @@ extern class KeyAgreement
 	*
 	* @return the algorithm name of this <code>KeyAgreement</code> object.
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Returns a <code>KeyAgreement</code> object that implements the
@@ -76,7 +76,7 @@ extern class KeyAgreement
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String) : javax.crypto.KeyAgreement;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String) : javax.crypto.KeyAgreement;
 	
 	/**
 	* Returns a <code>KeyAgreement</code> object that implements the
@@ -116,7 +116,7 @@ extern class KeyAgreement
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : String) : javax.crypto.KeyAgreement;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String, provider : String) : javax.crypto.KeyAgreement;
 	
 	/**
 	* Returns a <code>KeyAgreement</code> object that implements the
@@ -150,14 +150,14 @@ extern class KeyAgreement
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.crypto.KeyAgreement;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.crypto.KeyAgreement;
 	
 	/**
 	* Returns the provider of this <code>KeyAgreement</code> object.
 	*
 	* @return the provider of this <code>KeyAgreement</code> object
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Initializes this key agreement with the given key, which is required to
@@ -179,7 +179,7 @@ extern class KeyAgreement
 	* inappropriate for this key agreement, e.g., is of the wrong type or
 	* has an incompatible algorithm type.
 	*/
-	@:overload @:final public function init(key : java.security.Key) : Void;
+	@:overload @:public @:final public function init(key : java.security.Key) : Void;
 	
 	/**
 	* Initializes this key agreement with the given key and source of
@@ -201,7 +201,7 @@ extern class KeyAgreement
 	* inappropriate for this key agreement, e.g., is of the wrong type or
 	* has an incompatible algorithm type.
 	*/
-	@:overload @:final public function init(key : java.security.Key, random : java.security.SecureRandom) : Void;
+	@:overload @:public @:final public function init(key : java.security.Key, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this key agreement with the given key and set of
@@ -226,7 +226,7 @@ extern class KeyAgreement
 	* @exception InvalidAlgorithmParameterException if the given parameters
 	* are inappropriate for this key agreement.
 	*/
-	@:overload @:final public function init(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:public @:final public function init(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Initializes this key agreement with the given key, set of
@@ -244,7 +244,7 @@ extern class KeyAgreement
 	* @exception InvalidAlgorithmParameterException if the given parameters
 	* are inappropriate for this key agreement.
 	*/
-	@:overload @:final public function init(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:public @:final public function init(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Executes the next phase of this key agreement with the given
@@ -265,7 +265,7 @@ extern class KeyAgreement
 	* @exception IllegalStateException if this key agreement has not been
 	* initialized.
 	*/
-	@:overload @:final public function doPhase(key : java.security.Key, lastPhase : Bool) : java.security.Key;
+	@:overload @:public @:final public function doPhase(key : java.security.Key, lastPhase : Bool) : java.security.Key;
 	
 	/**
 	* Generates the shared secret and returns it in a new buffer.
@@ -281,7 +281,7 @@ extern class KeyAgreement
 	* @exception IllegalStateException if this key agreement has not been
 	* completed yet
 	*/
-	@:overload @:final public function generateSecret() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function generateSecret() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Generates the shared secret, and places it into the buffer
@@ -308,7 +308,7 @@ extern class KeyAgreement
 	* @exception ShortBufferException if the given output buffer is too small
 	* to hold the secret
 	*/
-	@:overload @:final public function generateSecret(sharedSecret : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Int;
+	@:overload @:public @:final public function generateSecret(sharedSecret : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Int;
 	
 	/**
 	* Creates the shared secret and returns it as a <code>SecretKey</code>
@@ -332,7 +332,7 @@ extern class KeyAgreement
 	* be used to generate a secret key of the specified algorithm (e.g.,
 	* the key material is too short)
 	*/
-	@:overload @:final public function generateSecret(algorithm : String) : javax.crypto.SecretKey;
+	@:overload @:public @:final public function generateSecret(algorithm : String) : javax.crypto.SecretKey;
 	
 	
 }

@@ -27,33 +27,33 @@ package com.sun.xml.internal.fastinfoset.algorithm;
 */
 extern class DoubleEncodingAlgorithm extends com.sun.xml.internal.fastinfoset.algorithm.IEEE754FloatingPointEncodingAlgorithm
 {
-	@:overload @:final public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
+	@:overload @:public @:final override public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
 	
-	@:overload public function getOctetLengthFromPrimitiveLength(primitiveLength : Int) : Int;
+	@:overload @:public override public function getOctetLengthFromPrimitiveLength(primitiveLength : Int) : Int;
 	
-	@:overload @:final override public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
+	@:overload @:public @:final override public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
 	
-	@:overload @:final override public function decodeFromInputStream(s : java.io.InputStream) : Dynamic;
+	@:overload @:public @:final override public function decodeFromInputStream(s : java.io.InputStream) : Dynamic;
 	
-	@:overload override public function encodeToOutputStream(data : Dynamic, s : java.io.OutputStream) : Void;
+	@:overload @:public override public function encodeToOutputStream(data : Dynamic, s : java.io.OutputStream) : Void;
 	
-	@:overload @:final override public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
+	@:overload @:public @:final override public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
 	
-	@:overload @:final override public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
+	@:overload @:public @:final override public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
 	
-	@:overload @:final public function decodeFromBytesToDoubleArray(data : java.NativeArray<Float>, fstart : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
+	@:overload @:public @:final public function decodeFromBytesToDoubleArray(data : java.NativeArray<Float>, fstart : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
 	
-	@:overload @:final public function decodeFromInputStreamToDoubleArray(s : java.io.InputStream) : java.NativeArray<Float>;
+	@:overload @:public @:final public function decodeFromInputStreamToDoubleArray(s : java.io.InputStream) : java.NativeArray<Float>;
 	
-	@:overload @:final public function encodeToOutputStreamFromDoubleArray(fdata : java.NativeArray<Float>, s : java.io.OutputStream) : Void;
+	@:overload @:public @:final public function encodeToOutputStreamFromDoubleArray(fdata : java.NativeArray<Float>, s : java.io.OutputStream) : Void;
 	
-	@:overload @:final public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
+	@:overload @:public @:final override public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	
-	@:overload @:final public function encodeToBytesFromDoubleArray(fdata : java.NativeArray<Float>, fstart : Int, flength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
+	@:overload @:public @:final public function encodeToBytesFromDoubleArray(fdata : java.NativeArray<Float>, fstart : Int, flength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	
-	@:overload @:final public function convertToCharactersFromDoubleArray(fdata : java.NativeArray<Float>, s : java.lang.StringBuffer) : Void;
+	@:overload @:public @:final public function convertToCharactersFromDoubleArray(fdata : java.NativeArray<Float>, s : java.lang.StringBuffer) : Void;
 	
-	@:overload @:final public function generateArrayFromList(array : java.util.List<Dynamic>) : java.NativeArray<Float>;
+	@:overload @:public @:final public function generateArrayFromList(array : java.util.List<Dynamic>) : java.NativeArray<Float>;
 	
 	
 }

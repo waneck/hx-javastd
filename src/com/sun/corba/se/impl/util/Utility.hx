@@ -34,15 +34,15 @@ extern class Utility
 	/**
 	*  Handy class full of static functions.
 	*/
-	public static var STUB_PREFIX(default, null) : String;
+	@:public @:static @:final public static var STUB_PREFIX(default, null) : String;
 	
-	public static var RMI_STUB_SUFFIX(default, null) : String;
+	@:public @:static @:final public static var RMI_STUB_SUFFIX(default, null) : String;
 	
-	public static var DYNAMIC_STUB_SUFFIX(default, null) : String;
+	@:public @:static @:final public static var DYNAMIC_STUB_SUFFIX(default, null) : String;
 	
-	public static var IDL_STUB_SUFFIX(default, null) : String;
+	@:public @:static @:final public static var IDL_STUB_SUFFIX(default, null) : String;
 	
-	public static var TIE_SUFIX(default, null) : String;
+	@:public @:static @:final public static var TIE_SUFIX(default, null) : String;
 	
 	/**
 	* Ensure that stubs, ties, and implementation objects
@@ -56,19 +56,19 @@ extern class Utility
 	* @exception NoSuchObjectException if obj is an implementation
 	* which has not been exported.
 	*/
-	@:overload public static function autoConnect(obj : Dynamic, orb : org.omg.CORBA.ORB, convertToStub : Bool) : Dynamic;
+	@:overload @:public @:static public static function autoConnect(obj : Dynamic, orb : org.omg.CORBA.ORB, convertToStub : Bool) : Dynamic;
 	
 	/*
 	* Get a new instance of an RMI-IIOP Tie for the
 	* given server object.
 	*/
-	@:overload public static function loadTie(obj : java.rmi.Remote) : javax.rmi.CORBA.Tie;
+	@:overload @:public @:static public static function loadTie(obj : java.rmi.Remote) : javax.rmi.CORBA.Tie;
 	
 	/*
 	* Clear the stub/tie caches. Intended for use by
 	* test code.
 	*/
-	@:overload public static function clearCaches() : Void;
+	@:overload @:public @:static public static function clearCaches() : Void;
 	
 	/*
 	* Load a class and check that it is compatible with a given type.
@@ -78,21 +78,21 @@ extern class Utility
 	* @param relatedType the related type. May be null.
 	* @return the loaded class.
 	*/
-	@:overload public static function loadClassForClass(className : String, remoteCodebase : String, loader : java.lang.ClassLoader, relatedType : Class<Dynamic>, relatedTypeClassLoader : java.lang.ClassLoader) : Class<Dynamic>;
+	@:overload @:public @:static public static function loadClassForClass(className : String, remoteCodebase : String, loader : java.lang.ClassLoader, relatedType : Class<Dynamic>, relatedTypeClassLoader : java.lang.ClassLoader) : Class<Dynamic>;
 	
 	/**
 	* Get the helper for an IDLValue
 	*
 	* Throws MARSHAL exception if no helper found.
 	*/
-	@:overload public static function getHelper(clazz : Class<Dynamic>, codebase : String, repId : String) : org.omg.CORBA.portable.BoxedValueHelper;
+	@:overload @:public @:static public static function getHelper(clazz : Class<Dynamic>, codebase : String, repId : String) : org.omg.CORBA.portable.BoxedValueHelper;
 	
 	/**
 	* Get the factory for an IDLValue
 	*
 	* Throws MARSHAL exception if no factory found.
 	*/
-	@:overload public static function getFactory(clazz : Class<Dynamic>, codebase : String, orb : org.omg.CORBA.ORB, repId : String) : org.omg.CORBA.portable.ValueFactory;
+	@:overload @:public @:static public static function getFactory(clazz : Class<Dynamic>, codebase : String, orb : org.omg.CORBA.ORB, repId : String) : org.omg.CORBA.portable.ValueFactory;
 	
 	/*
 	* Load an RMI-IIOP Stub given a Tie.
@@ -103,68 +103,68 @@ extern class Utility
 	* first repID in the tie. If false, will walk all repIDs.
 	* @return the stub or null if not found.
 	*/
-	@:overload public static function loadStub(tie : javax.rmi.CORBA.Tie, stubFactory : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory, remoteCodebase : String, onlyMostDerived : Bool) : java.rmi.Remote;
+	@:overload @:public @:static public static function loadStub(tie : javax.rmi.CORBA.Tie, stubFactory : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory, remoteCodebase : String, onlyMostDerived : Bool) : java.rmi.Remote;
 	
 	/*
 	* If we loadStub(Tie,...) stashed away a tie which was
 	* not connected, remove it from the cache and return
 	* it.
 	*/
-	@:overload public static function getAndForgetTie(stub : org.omg.CORBA.Object) : javax.rmi.CORBA.Tie;
+	@:overload @:public @:static public static function getAndForgetTie(stub : org.omg.CORBA.Object) : javax.rmi.CORBA.Tie;
 	
 	/*
 	* Remove any cached Stub for the given tie.
 	*/
-	@:overload public static function purgeStubForTie(tie : javax.rmi.CORBA.Tie) : Void;
+	@:overload @:public @:static public static function purgeStubForTie(tie : javax.rmi.CORBA.Tie) : Void;
 	
 	/*
 	* Remove cached tie/servant pair.
 	*/
-	@:overload public static function purgeTieAndServant(tie : javax.rmi.CORBA.Tie) : Void;
+	@:overload @:public @:static public static function purgeTieAndServant(tie : javax.rmi.CORBA.Tie) : Void;
 	
 	/*
 	* Convert a RepId to a stubName...
 	*/
-	@:overload public static function stubNameFromRepID(repID : String) : String;
+	@:overload @:public @:static public static function stubNameFromRepID(repID : String) : String;
 	
 	/*
 	* Load an RMI-IIOP Stub.  This is used in PortableRemoteObject.narrow.
 	*/
-	@:overload public static function loadStub(narrowFrom : org.omg.CORBA.Object, narrowTo : Class<Dynamic>) : java.rmi.Remote;
+	@:overload @:public @:static public static function loadStub(narrowFrom : org.omg.CORBA.Object, narrowTo : Class<Dynamic>) : java.rmi.Remote;
 	
 	/*
 	* Load an RMI-IIOP Stub class.  This is used in the
 	* StaticStubFactoryFactory code.
 	*/
-	@:overload public static function loadStubClass(repID : String, remoteCodebase : String, expectedType : Class<Dynamic>) : Class<Dynamic>;
+	@:overload @:public @:static public static function loadStubClass(repID : String, remoteCodebase : String, expectedType : Class<Dynamic>) : Class<Dynamic>;
 	
 	/**
 	* Create an RMI stub name.
 	*/
-	@:overload public static function stubName(className : String) : String;
+	@:overload @:public @:static public static function stubName(className : String) : String;
 	
-	@:overload public static function dynamicStubName(className : String) : String;
+	@:overload @:public @:static public static function dynamicStubName(className : String) : String;
 	
-	@:overload public static function stubNameForCompiler(className : String) : String;
+	@:overload @:public @:static public static function stubNameForCompiler(className : String) : String;
 	
 	/**
 	* Create an RMI tie name.
 	*/
-	@:overload public static function tieName(className : String) : String;
+	@:overload @:public @:static public static function tieName(className : String) : String;
 	
-	@:overload public static function tieNameForCompiler(className : String) : String;
+	@:overload @:public @:static public static function tieNameForCompiler(className : String) : String;
 	
 	/**
 	* Throws the CORBA equivalent of a java.io.NotSerializableException
 	*/
-	@:overload public static function throwNotSerializableForCorba(className : String) : Void;
+	@:overload @:public @:static public static function throwNotSerializableForCorba(className : String) : Void;
 	
 	/**
 	* Create an IDL stub name.
 	*/
-	@:overload public static function idlStubName(className : String) : String;
+	@:overload @:public @:static public static function idlStubName(className : String) : String;
 	
-	@:overload public static function printStackTrace() : Void;
+	@:overload @:public @:static public static function printStackTrace() : Void;
 	
 	/**
 	* Read an object reference from the input stream and narrow
@@ -172,7 +172,7 @@ extern class Utility
 	* @param in the stream to read from.
 	* @throws ClassCastException if narrowFrom cannot be cast to narrowTo.
 	*/
-	@:overload public static function readObjectAndNarrow(_in : org.omg.CORBA.portable.InputStream, narrowTo : Class<Dynamic>) : Dynamic;
+	@:overload @:public @:static public static function readObjectAndNarrow(_in : org.omg.CORBA.portable.InputStream, narrowTo : Class<Dynamic>) : Dynamic;
 	
 	/**
 	* Read an abstract interface type from the input stream and narrow
@@ -180,7 +180,7 @@ extern class Utility
 	* @param in the stream to read from.
 	* @throws ClassCastException if narrowFrom cannot be cast to narrowTo.
 	*/
-	@:overload public static function readAbstractAndNarrow(_in : org.omg.CORBA_2_3.portable.InputStream, narrowTo : Class<Dynamic>) : Dynamic;
+	@:overload @:public @:static public static function readAbstractAndNarrow(_in : org.omg.CORBA_2_3.portable.InputStream, narrowTo : Class<Dynamic>) : Dynamic;
 	
 	
 }

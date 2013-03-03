@@ -36,14 +36,14 @@ extern class PropertyVetoException extends java.lang.Exception
 	* @param mess Descriptive message
 	* @param evt A PropertyChangeEvent describing the vetoed change.
 	*/
-	@:overload public function new(mess : String, evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function new(mess : String, evt : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* Gets the vetoed <code>PropertyChangeEvent</code>.
 	*
 	* @return A PropertyChangeEvent describing the vetoed change.
 	*/
-	@:overload public function getPropertyChangeEvent() : java.beans.PropertyChangeEvent;
+	@:overload @:public public function getPropertyChangeEvent() : java.beans.PropertyChangeEvent;
 	
 	
 }

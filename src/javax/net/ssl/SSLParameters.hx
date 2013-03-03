@@ -31,7 +31,7 @@ extern class SSLParameters
 	* The cipherSuites and protocols values are set to <code>null</code>,
 	* wantClientAuth and needClientAuth are set to <code>false</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs SSLParameters from the specified array of ciphersuites.
@@ -42,7 +42,7 @@ extern class SSLParameters
 	*
 	* @param cipherSuites the array of ciphersuites (or null)
 	*/
-	@:overload public function new(cipherSuites : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(cipherSuites : java.NativeArray<String>) : Void;
 	
 	/**
 	* Constructs SSLParameters from the specified array of ciphersuites
@@ -55,7 +55,7 @@ extern class SSLParameters
 	* @param cipherSuites the array of ciphersuites (or null)
 	* @param protocols the array of protocols (or null)
 	*/
-	@:overload public function new(cipherSuites : java.NativeArray<String>, protocols : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(cipherSuites : java.NativeArray<String>, protocols : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns a copy of the array of ciphersuites or null if none
@@ -64,14 +64,14 @@ extern class SSLParameters
 	* @return a copy of the array of ciphersuites or null if none
 	* have been set.
 	*/
-	@:overload public function getCipherSuites() : java.NativeArray<String>;
+	@:overload @:public public function getCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Sets the array of ciphersuites.
 	*
 	* @param cipherSuites the array of ciphersuites (or null)
 	*/
-	@:overload public function setCipherSuites(cipherSuites : java.NativeArray<String>) : Void;
+	@:overload @:public public function setCipherSuites(cipherSuites : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns a copy of the array of protocols or null if none
@@ -80,21 +80,21 @@ extern class SSLParameters
 	* @return a copy of the array of protocols or null if none
 	* have been set.
 	*/
-	@:overload public function getProtocols() : java.NativeArray<String>;
+	@:overload @:public public function getProtocols() : java.NativeArray<String>;
 	
 	/**
 	* Sets the array of protocols.
 	*
 	* @param protocols the array of protocols (or null)
 	*/
-	@:overload public function setProtocols(protocols : java.NativeArray<String>) : Void;
+	@:overload @:public public function setProtocols(protocols : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns whether client authentication should be requested.
 	*
 	* @return whether client authentication should be requested.
 	*/
-	@:overload public function getWantClientAuth() : Bool;
+	@:overload @:public public function getWantClientAuth() : Bool;
 	
 	/**
 	* Sets whether client authentication should be requested. Calling
@@ -102,14 +102,14 @@ extern class SSLParameters
 	*
 	* @param wantClientAuth whether client authentication should be requested
 	*/
-	@:overload public function setWantClientAuth(wantClientAuth : Bool) : Void;
+	@:overload @:public public function setWantClientAuth(wantClientAuth : Bool) : Void;
 	
 	/**
 	* Returns whether client authentication should be required.
 	*
 	* @return whether client authentication should be required.
 	*/
-	@:overload public function getNeedClientAuth() : Bool;
+	@:overload @:public public function getNeedClientAuth() : Bool;
 	
 	/**
 	* Sets whether client authentication should be required. Calling
@@ -117,7 +117,7 @@ extern class SSLParameters
 	*
 	* @param needClientAuth whether client authentication should be required
 	*/
-	@:overload public function setNeedClientAuth(needClientAuth : Bool) : Void;
+	@:overload @:public public function setNeedClientAuth(needClientAuth : Bool) : Void;
 	
 	/**
 	* Returns the cryptographic algorithm constraints.
@@ -129,7 +129,7 @@ extern class SSLParameters
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getAlgorithmConstraints() : java.security.AlgorithmConstraints;
+	@:require(java7) @:overload @:public public function getAlgorithmConstraints() : java.security.AlgorithmConstraints;
 	
 	/**
 	* Sets the cryptographic algorithm constraints, which will be used
@@ -143,7 +143,7 @@ extern class SSLParameters
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function setAlgorithmConstraints(constraints : java.security.AlgorithmConstraints) : Void;
+	@:require(java7) @:overload @:public public function setAlgorithmConstraints(constraints : java.security.AlgorithmConstraints) : Void;
 	
 	/**
 	* Gets the endpoint identification algorithm.
@@ -156,7 +156,7 @@ extern class SSLParameters
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getEndpointIdentificationAlgorithm() : String;
+	@:require(java7) @:overload @:public public function getEndpointIdentificationAlgorithm() : String;
 	
 	/**
 	* Sets the endpoint identification algorithm.
@@ -175,7 +175,7 @@ extern class SSLParameters
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function setEndpointIdentificationAlgorithm(algorithm : String) : Void;
+	@:require(java7) @:overload @:public public function setEndpointIdentificationAlgorithm(algorithm : String) : Void;
 	
 	
 }

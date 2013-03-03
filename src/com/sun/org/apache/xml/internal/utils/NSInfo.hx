@@ -38,7 +38,7 @@ extern class NSInfo
 	* @param hasXMLNSAttrs Flag indicating whether this node
 	* has XMLNS attributes.
 	*/
-	@:overload public function new(hasProcessedNS : Bool, hasXMLNSAttrs : Bool) : Void;
+	@:overload @:public public function new(hasProcessedNS : Bool, hasXMLNSAttrs : Bool) : Void;
 	
 	/**
 	* Constructor NSInfo
@@ -51,7 +51,7 @@ extern class NSInfo
 	* @param ancestorHasXMLNSAttrs Flag indicating whether one of this node's
 	* ancestor has XMLNS attributes.
 	*/
-	@:overload public function new(hasProcessedNS : Bool, hasXMLNSAttrs : Bool, ancestorHasXMLNSAttrs : Int) : Void;
+	@:overload @:public public function new(hasProcessedNS : Bool, hasXMLNSAttrs : Bool, ancestorHasXMLNSAttrs : Int) : Void;
 	
 	/**
 	* Constructor NSInfo
@@ -61,28 +61,28 @@ extern class NSInfo
 	* @param hasXMLNSAttrs Flag indicating whether this node
 	* has XMLNS attributes.
 	*/
-	@:overload public function new(namespace : String, hasXMLNSAttrs : Bool) : Void;
+	@:overload @:public public function new(namespace : String, hasXMLNSAttrs : Bool) : Void;
 	
 	/** The namespace URI          */
-	public var m_namespace : String;
+	@:public public var m_namespace : String;
 	
 	/** Flag indicating whether this node has an XMLNS attribute          */
-	public var m_hasXMLNSAttrs : Bool;
+	@:public public var m_hasXMLNSAttrs : Bool;
 	
 	/** Flag indicating whether namespaces have been processed for this node */
-	public var m_hasProcessedNS : Bool;
+	@:public public var m_hasProcessedNS : Bool;
 	
 	/** Flag indicating whether one of this node's ancestor has an XMLNS attribute          */
-	public var m_ancestorHasXMLNSAttrs : Int;
+	@:public public var m_ancestorHasXMLNSAttrs : Int;
 	
 	/** Constant for ancestors XMLNS atributes not processed          */
-	public static var ANCESTORXMLNSUNPROCESSED(default, null) : Int;
+	@:public @:static @:final public static var ANCESTORXMLNSUNPROCESSED(default, null) : Int;
 	
 	/** Constant indicating an ancestor has an XMLNS attribute           */
-	public static var ANCESTORHASXMLNS(default, null) : Int;
+	@:public @:static @:final public static var ANCESTORHASXMLNS(default, null) : Int;
 	
 	/** Constant indicating ancestors don't have an XMLNS attribute           */
-	public static var ANCESTORNOXMLNS(default, null) : Int;
+	@:public @:static @:final public static var ANCESTORNOXMLNS(default, null) : Int;
 	
 	
 }

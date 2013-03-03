@@ -33,42 +33,42 @@ extern interface Counter extends java.io.Serializable
 	/**
 	* Returns the name of this performance counter
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the Units for this performance counter
 	*/
-	@:overload public function getUnits() : sun.management.counter.Units;
+	@:overload @:public public function getUnits() : sun.management.counter.Units;
 	
 	/**
 	* Returns the Variability for this performance counter
 	*/
-	@:overload public function getVariability() : sun.management.counter.Variability;
+	@:overload @:public public function getVariability() : sun.management.counter.Variability;
 	
 	/**
 	* Returns true if this performance counter is a vector
 	*/
-	@:overload public function isVector() : Bool;
+	@:overload @:public public function isVector() : Bool;
 	
 	/**
 	* Returns the length of the vector
 	*/
-	@:overload public function getVectorLength() : Int;
+	@:overload @:public public function getVectorLength() : Int;
 	
 	/**
 	* Returns an Object that encapsulates the data value of this counter
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	/**
 	* Returns <tt>true</tt> if this counter is an internal counter.
 	*/
-	@:overload public function isInternal() : Bool;
+	@:overload @:public public function isInternal() : Bool;
 	
 	/**
 	* Return the flags associated with the counter.
 	*/
-	@:overload public function getFlags() : Int;
+	@:overload @:public public function getFlags() : Int;
 	
 	
 }

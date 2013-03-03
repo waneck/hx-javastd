@@ -47,7 +47,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see java.lang.SecurityManager#checkTopLevelWindow
 	* @see #isShowing
 	*/
-	@:overload public function new(owner : java.awt.Frame) : Void;
+	@:overload @:public public function new(owner : java.awt.Frame) : Void;
 	
 	/**
 	* Constructs a new, initially invisible window with the specified
@@ -75,7 +75,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	*
 	* @since     1.2
 	*/
-	@:require(java2) @:overload public function new(owner : java.awt.Window) : Void;
+	@:require(java2) @:overload @:public public function new(owner : java.awt.Window) : Void;
 	
 	/**
 	* Constructs a new, initially invisible window with the specified owner
@@ -107,7 +107,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see       #isShowing
 	* @since     1.3
 	*/
-	@:require(java3) @:overload public function new(owner : java.awt.Window, gc : java.awt.GraphicsConfiguration) : Void;
+	@:require(java3) @:overload @:public public function new(owner : java.awt.Window, gc : java.awt.GraphicsConfiguration) : Void;
 	
 	/**
 	* Returns the sequence of images to be displayed as the icon for this window.
@@ -121,7 +121,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see       #setIconImage(Image)
 	* @since     1.6
 	*/
-	@:require(java6) @:overload public function getIconImages() : java.util.List<java.awt.Image>;
+	@:require(java6) @:overload @:public public function getIconImages() : java.util.List<java.awt.Image>;
 	
 	/**
 	* Sets the sequence of images to be displayed as the icon
@@ -151,7 +151,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see       #setIconImage(Image)
 	* @since     1.6
 	*/
-	@:require(java6) @:overload @:synchronized public function setIconImages(icons : java.util.List<java.awt.Image>) : Void;
+	@:require(java6) @:overload @:public @:synchronized public function setIconImages(icons : java.util.List<java.awt.Image>) : Void;
 	
 	/**
 	* Sets the image to be displayed as the icon for this window.
@@ -180,7 +180,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see       #getIconImages()
 	* @since     1.6
 	*/
-	@:require(java6) @:overload public function setIconImage(image : java.awt.Image) : Void;
+	@:require(java6) @:overload @:public public function setIconImage(image : java.awt.Image) : Void;
 	
 	/**
 	* Makes this Window displayable by creating the connection to its
@@ -191,12 +191,12 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see Container#removeNotify
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload override public function addNotify() : Void;
+	@:require(java0) @:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function removeNotify() : Void;
+	@:overload @:public override public function removeNotify() : Void;
 	
 	/**
 	* Causes this Window to be sized to fit the preferred size
@@ -213,7 +213,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see Component#isDisplayable
 	* @see #setMinimumSize
 	*/
-	@:overload public function pack() : Void;
+	@:overload @:public public function pack() : Void;
 	
 	/**
 	* Sets the minimum size of this window to a constant
@@ -244,7 +244,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #pack
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setMinimumSize(minimumSize : java.awt.Dimension) : Void;
+	@:require(java6) @:overload @:public override public function setMinimumSize(minimumSize : java.awt.Dimension) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -264,7 +264,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #setMinimumSize
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setSize(d : java.awt.Dimension) : Void;
+	@:require(java6) @:overload @:public override public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -284,7 +284,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #setMinimumSize
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setSize(width : Int, height : Int) : Void;
+	@:require(java6) @:overload @:public override public function setSize(width : Int, height : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -294,7 +294,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* the requested data, so that the {@code Window} object is placed and sized
 	* in a way that corresponds closely to the desktop settings.
 	*/
-	@:overload override public function setLocation(x : Int, y : Int) : Void;
+	@:overload @:public override public function setLocation(x : Int, y : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -304,13 +304,13 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* the requested data, so that the {@code Window} object is placed and sized
 	* in a way that corresponds closely to the desktop settings.
 	*/
-	@:overload override public function setLocation(p : java.awt.Point) : Void;
+	@:overload @:public override public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setBounds(int, int, int, int)</code>.
 	*/
-	@:overload override public function reshape(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function reshape(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Shows or hides this {@code Window} depending on the value of parameter
@@ -348,7 +348,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see java.awt.Window#setAutoRequestFocus
 	* @see java.awt.Window#isFocusableWindow
 	*/
-	@:overload override public function setVisible(b : Bool) : Void;
+	@:overload @:public override public function setVisible(b : Bool) : Void;
 	
 	/**
 	* Makes the Window visible. If the Window and/or its owner
@@ -361,7 +361,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @deprecated As of JDK version 1.5, replaced by
 	* {@link #setVisible(boolean)}.
 	*/
-	@:overload override public function show() : Void;
+	@:overload @:public override public function show() : Void;
 	
 	/**
 	* Hide this Window, its subcomponents, and all of its owned children.
@@ -373,7 +373,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @deprecated As of JDK version 1.5, replaced by
 	* {@link #setVisible(boolean)}.
 	*/
-	@:overload override public function hide() : Void;
+	@:overload @:public override public function hide() : Void;
 	
 	/**
 	* Releases all of the native screen resources used by this
@@ -398,7 +398,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #pack
 	* @see #show
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* If this Window is visible, brings this Window to the front and may make
@@ -443,7 +443,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see       #setAutoRequestFocus
 	* @see       #isFocusableWindow
 	*/
-	@:overload public function toFront() : Void;
+	@:overload @:public public function toFront() : Void;
 	
 	/**
 	* If this Window is visible, sends this Window to the back and may cause
@@ -470,7 +470,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	*
 	* @see       #toFront
 	*/
-	@:overload public function toBack() : Void;
+	@:overload @:public public function toBack() : Void;
 	
 	/**
 	* Returns the toolkit of this frame.
@@ -479,7 +479,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see       Toolkit#getDefaultToolkit
 	* @see       Component#getToolkit
 	*/
-	@:overload override public function getToolkit() : java.awt.Toolkit;
+	@:overload @:public override public function getToolkit() : java.awt.Toolkit;
 	
 	/**
 	* Gets the warning string that is displayed with this window.
@@ -498,7 +498,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @return    the warning string for this window.
 	* @see       java.lang.SecurityManager#checkTopLevelWindow(java.lang.Object)
 	*/
-	@:overload @:final public function getWarningString() : String;
+	@:overload @:public @:final public function getWarningString() : String;
 	
 	/**
 	* Gets the <code>Locale</code> object that is associated
@@ -509,7 +509,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see       java.util.Locale
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload override public function getLocale() : java.util.Locale;
+	@:require(java1) @:overload @:public override public function getLocale() : java.util.Locale;
 	
 	/**
 	* Gets the input context for this window. A window always has an input context,
@@ -517,7 +517,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see Component#getInputContext
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getInputContext() : java.awt.im.InputContext;
+	@:require(java2) @:overload @:public override public function getInputContext() : java.awt.im.InputContext;
 	
 	/**
 	* Set the cursor image to a specified cursor.
@@ -533,20 +533,20 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see       Cursor
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload override public function setCursor(cursor : java.awt.Cursor) : Void;
+	@:require(java1) @:overload @:public override public function setCursor(cursor : java.awt.Cursor) : Void;
 	
 	/**
 	* Returns the owner of this window.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getOwner() : java.awt.Window;
+	@:require(java2) @:overload @:public public function getOwner() : java.awt.Window;
 	
 	/**
 	* Return an array containing all the windows this
 	* window currently owns.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getOwnedWindows() : java.NativeArray<java.awt.Window>;
+	@:require(java2) @:overload @:public public function getOwnedWindows() : java.NativeArray<java.awt.Window>;
 	
 	/**
 	* Returns an array of all {@code Window}s, both owned and ownerless,
@@ -565,7 +565,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getWindows() : java.NativeArray<java.awt.Window>;
+	@:require(java6) @:overload @:public @:static public static function getWindows() : java.NativeArray<java.awt.Window>;
 	
 	/**
 	* Returns an array of all {@code Window}s created by this application
@@ -585,7 +585,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getOwnerlessWindows() : java.NativeArray<java.awt.Window>;
+	@:require(java6) @:overload @:public @:static public static function getOwnerlessWindows() : java.NativeArray<java.awt.Window>;
 	
 	/**
 	* Specifies the modal exclusion type for this window. If a window is modal
@@ -610,7 +610,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setModalExclusionType(exclusionType : java.awt.Dialog.Dialog_ModalExclusionType) : Void;
+	@:require(java6) @:overload @:public public function setModalExclusionType(exclusionType : java.awt.Dialog.Dialog_ModalExclusionType) : Void;
 	
 	/**
 	* Returns the modal exclusion type of this window.
@@ -622,7 +622,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getModalExclusionType() : java.awt.Dialog.Dialog_ModalExclusionType;
+	@:require(java6) @:overload @:public public function getModalExclusionType() : java.awt.Dialog.Dialog_ModalExclusionType;
 	
 	/**
 	* Adds the specified window listener to receive window events from
@@ -635,7 +635,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #removeWindowListener
 	* @see #getWindowListeners
 	*/
-	@:overload @:synchronized public function addWindowListener(l : java.awt.event.WindowListener) : Void;
+	@:overload @:public @:synchronized public function addWindowListener(l : java.awt.event.WindowListener) : Void;
 	
 	/**
 	* Adds the specified window state listener to receive window
@@ -649,7 +649,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #getWindowStateListeners
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function addWindowStateListener(l : java.awt.event.WindowStateListener) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function addWindowStateListener(l : java.awt.event.WindowStateListener) : Void;
 	
 	/**
 	* Adds the specified window focus listener to receive window events
@@ -663,7 +663,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #getWindowFocusListeners
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function addWindowFocusListener(l : java.awt.event.WindowFocusListener) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function addWindowFocusListener(l : java.awt.event.WindowFocusListener) : Void;
 	
 	/**
 	* Removes the specified window listener so that it no longer
@@ -676,7 +676,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #addWindowListener
 	* @see #getWindowListeners
 	*/
-	@:overload @:synchronized public function removeWindowListener(l : java.awt.event.WindowListener) : Void;
+	@:overload @:public @:synchronized public function removeWindowListener(l : java.awt.event.WindowListener) : Void;
 	
 	/**
 	* Removes the specified window state listener so that it no
@@ -691,7 +691,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #getWindowStateListeners
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function removeWindowStateListener(l : java.awt.event.WindowStateListener) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function removeWindowStateListener(l : java.awt.event.WindowStateListener) : Void;
 	
 	/**
 	* Removes the specified window focus listener so that it no longer
@@ -705,7 +705,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #getWindowFocusListeners
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function removeWindowFocusListener(l : java.awt.event.WindowFocusListener) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function removeWindowFocusListener(l : java.awt.event.WindowFocusListener) : Void;
 	
 	/**
 	* Returns an array of all the window listeners
@@ -719,7 +719,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #removeWindowListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getWindowListeners() : java.NativeArray<java.awt.event.WindowListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getWindowListeners() : java.NativeArray<java.awt.event.WindowListener>;
 	
 	/**
 	* Returns an array of all the window focus listeners
@@ -733,7 +733,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #removeWindowFocusListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getWindowFocusListeners() : java.NativeArray<java.awt.event.WindowFocusListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getWindowFocusListeners() : java.NativeArray<java.awt.event.WindowFocusListener>;
 	
 	/**
 	* Returns an array of all the window state listeners
@@ -747,7 +747,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #removeWindowStateListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getWindowStateListeners() : java.NativeArray<java.awt.event.WindowStateListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getWindowStateListeners() : java.NativeArray<java.awt.event.WindowStateListener>;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -784,7 +784,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #getWindowListeners
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Processes events on this window. If the event is an
@@ -797,7 +797,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	*
 	* @param e the event
 	*/
-	@:overload override private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:overload @:protected override private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes window events occurring on this window by
@@ -817,7 +817,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @param e the window event
 	* @see Component#enableEvents
 	*/
-	@:overload private function processWindowEvent(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:protected private function processWindowEvent(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Processes window focus event occuring on this window by
@@ -838,7 +838,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see Component#enableEvents
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function processWindowFocusEvent(e : java.awt.event.WindowEvent) : Void;
+	@:require(java4) @:overload @:protected private function processWindowFocusEvent(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Processes window state event occuring on this window by
@@ -860,7 +860,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see java.awt.Component#enableEvents
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function processWindowStateEvent(e : java.awt.event.WindowEvent) : Void;
+	@:require(java4) @:overload @:protected private function processWindowStateEvent(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Sets whether this window should always be above other windows.  If
@@ -921,7 +921,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see Toolkit#isAlwaysOnTopSupported
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function setAlwaysOnTop(alwaysOnTop : Bool) : Void;
+	@:require(java5) @:overload @:public @:final public function setAlwaysOnTop(alwaysOnTop : Bool) : Void;
 	
 	/**
 	* Returns whether the always-on-top mode is supported for this
@@ -936,7 +936,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see Toolkit#isAlwaysOnTopSupported
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function isAlwaysOnTopSupported() : Bool;
+	@:require(java6) @:overload @:public public function isAlwaysOnTopSupported() : Bool;
 	
 	/**
 	* Returns whether this window is an always-on-top window.
@@ -945,7 +945,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #setAlwaysOnTop
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function isAlwaysOnTop() : Bool;
+	@:require(java5) @:overload @:public @:final public function isAlwaysOnTop() : Bool;
 	
 	/**
 	* Returns the child Component of this Window that has focus if this Window
@@ -956,7 +956,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #getMostRecentFocusOwner
 	* @see #isFocused
 	*/
-	@:overload public function getFocusOwner() : java.awt.Component;
+	@:overload @:public public function getFocusOwner() : java.awt.Component;
 	
 	/**
 	* Returns the child Component of this Window that will receive the focus
@@ -975,7 +975,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #isFocusableWindow
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getMostRecentFocusOwner() : java.awt.Component;
+	@:require(java4) @:overload @:public public function getMostRecentFocusOwner() : java.awt.Component;
 	
 	/**
 	* Returns whether this Window is active. Only a Frame or a Dialog may be
@@ -988,7 +988,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #isFocused
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isActive() : Bool;
+	@:require(java4) @:overload @:public public function isActive() : Bool;
 	
 	/**
 	* Returns whether this Window is focused. If there exists a focus owner,
@@ -1003,7 +1003,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #isActive
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isFocused() : Bool;
+	@:require(java4) @:overload @:public public function isFocused() : Bool;
 	
 	/**
 	* Gets a focus traversal key for this Window. (See <code>
@@ -1032,7 +1032,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	*         KeyboardFocusManager.DOWN_CYCLE_TRAVERSAL_KEYS
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getFocusTraversalKeys(id : Int) : java.util.Set<java.awt.AWTKeyStroke>;
+	@:require(java4) @:overload @:public override public function getFocusTraversalKeys(id : Int) : java.util.Set<java.awt.AWTKeyStroke>;
 	
 	/**
 	* Does nothing because Windows must always be roots of a focus traversal
@@ -1044,7 +1044,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see Container#getFocusTraversalPolicy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final override public function setFocusCycleRoot(focusCycleRoot : Bool) : Void;
+	@:require(java4) @:overload @:public @:final override public function setFocusCycleRoot(focusCycleRoot : Bool) : Void;
 	
 	/**
 	* Always returns <code>true</code> because all Windows must be roots of a
@@ -1056,7 +1056,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see Container#getFocusTraversalPolicy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final override public function isFocusCycleRoot() : Bool;
+	@:require(java4) @:overload @:public @:final override public function isFocusCycleRoot() : Bool;
 	
 	/**
 	* Always returns <code>null</code> because Windows have no ancestors; they
@@ -1066,7 +1066,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see Container#isFocusCycleRoot()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final override public function getFocusCycleRootAncestor() : java.awt.Container;
+	@:require(java4) @:overload @:public @:final override public function getFocusCycleRootAncestor() : java.awt.Container;
 	
 	/**
 	* Returns whether this Window can become the focused Window, that is,
@@ -1088,7 +1088,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see Component#isFocusable
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final public function isFocusableWindow() : Bool;
+	@:require(java4) @:overload @:public @:final public function isFocusableWindow() : Bool;
 	
 	/**
 	* Returns whether this Window can become the focused Window if it meets
@@ -1110,7 +1110,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see Component#setFocusable
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getFocusableWindowState() : Bool;
+	@:require(java4) @:overload @:public public function getFocusableWindowState() : Bool;
 	
 	/**
 	* Sets whether this Window can become the focused Window if it meets
@@ -1142,7 +1142,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see Component#setFocusable
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setFocusableWindowState(focusableWindowState : Bool) : Void;
+	@:require(java4) @:overload @:public public function setFocusableWindowState(focusableWindowState : Bool) : Void;
 	
 	/**
 	* Sets whether this window should receive focus on
@@ -1165,7 +1165,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #toFront
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function setAutoRequestFocus(autoRequestFocus : Bool) : Void;
+	@:require(java7) @:overload @:public public function setAutoRequestFocus(autoRequestFocus : Bool) : Void;
 	
 	/**
 	* Returns whether this window should receive focus on subsequently being shown
@@ -1178,7 +1178,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #setAutoRequestFocus
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function isAutoRequestFocus() : Bool;
+	@:require(java7) @:overload @:public public function isAutoRequestFocus() : Bool;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list. The listener is
@@ -1215,7 +1215,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see Component#removePropertyChangeListener
 	* @see #addPropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
 	*/
-	@:overload override public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list for a specific
@@ -1253,7 +1253,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #addPropertyChangeListener(java.beans.PropertyChangeListener)
 	* @see Component#removePropertyChangeListener
 	*/
-	@:overload override public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Indicates if this container is a validate root.
@@ -1265,31 +1265,31 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @since 1.7
 	* @see java.awt.Container#isValidateRoot
 	*/
-	@:require(java7) @:overload override public function isValidateRoot() : Bool;
+	@:require(java7) @:overload @:public override public function isValidateRoot() : Bool;
 	
 	/**
 	* @deprecated As of JDK version 1.1
 	* replaced by <code>dispatchEvent(AWTEvent)</code>.
 	*/
-	@:overload override public function postEvent(e : java.awt.Event) : Bool;
+	@:overload @:public override public function postEvent(e : java.awt.Event) : Bool;
 	
 	/**
 	* Checks if this Window is showing on screen.
 	* @see Component#setVisible
 	*/
-	@:overload override public function isShowing() : Bool;
+	@:overload @:public override public function isShowing() : Bool;
 	
 	/**
 	* @deprecated As of J2SE 1.4, replaced by
 	* {@link Component#applyComponentOrientation Component.applyComponentOrientation}.
 	*/
-	@:overload public function applyResourceBundle(rb : java.util.ResourceBundle) : Void;
+	@:overload @:public public function applyResourceBundle(rb : java.util.ResourceBundle) : Void;
 	
 	/**
 	* @deprecated As of J2SE 1.4, replaced by
 	* {@link Component#applyComponentOrientation Component.applyComponentOrientation}.
 	*/
-	@:overload public function applyResourceBundle(rbName : String) : Void;
+	@:overload @:public public function applyResourceBundle(rbName : String) : Void;
 	
 	/**
 	* Sets the type of the window.
@@ -1303,7 +1303,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see    #getType
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function setType(type : java.awt.Window.Window_Type) : Void;
+	@:require(java7) @:overload @:public public function setType(type : java.awt.Window.Window_Type) : Void;
 	
 	/**
 	* Returns the type of the window.
@@ -1311,7 +1311,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see   #setType
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getType() : java.awt.Window.Window_Type;
+	@:require(java7) @:overload @:public public function getType() : java.awt.Window.Window_Type;
 	
 	/**
 	* Gets the AccessibleContext associated with this Window.
@@ -1323,7 +1323,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	*         AccessibleContext of this Window
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Sets the location of the window relative to the specified
@@ -1381,7 +1381,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see java.awt.GraphicsEnvironment#getCenterPoint
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setLocationRelativeTo(c : java.awt.Component) : Void;
+	@:require(java4) @:overload @:public public function setLocationRelativeTo(c : java.awt.Component) : Void;
 	
 	/**
 	* Creates a new strategy for multi-buffering on this component.
@@ -1402,7 +1402,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #getBufferStrategy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function createBufferStrategy(numBuffers : Int) : Void;
+	@:require(java4) @:overload @:public public function createBufferStrategy(numBuffers : Int) : Void;
 	
 	/**
 	* Creates a new strategy for multi-buffering on this component with the
@@ -1424,7 +1424,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #getBufferStrategy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function createBufferStrategy(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
+	@:require(java4) @:overload @:public public function createBufferStrategy(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
 	
 	/**
 	* Returns the <code>BufferStrategy</code> used by this component.  This
@@ -1435,7 +1435,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #createBufferStrategy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getBufferStrategy() : java.awt.image.BufferStrategy;
+	@:require(java4) @:overload @:public public function getBufferStrategy() : java.awt.image.BufferStrategy;
 	
 	/**
 	* Sets whether this Window should appear at the default location for the
@@ -1484,7 +1484,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see java.lang.System#getProperty(String)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setLocationByPlatform(locationByPlatform : Bool) : Void;
+	@:require(java5) @:overload @:public public function setLocationByPlatform(locationByPlatform : Bool) : Void;
 	
 	/**
 	* Returns <code>true</code> if this Window will appear at the default location
@@ -1497,7 +1497,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #isShowing
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isLocationByPlatform() : Bool;
+	@:require(java5) @:overload @:public public function isLocationByPlatform() : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -1522,7 +1522,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #isLocationByPlatform
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setBounds(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java6) @:overload @:public override public function setBounds(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -1547,7 +1547,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #isLocationByPlatform
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setBounds(r : java.awt.Rectangle) : Void;
+	@:require(java6) @:overload @:public override public function setBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Returns the opacity of the window.
@@ -1559,7 +1559,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getOpacity() : Single;
+	@:require(java7) @:overload @:public public function getOpacity() : Single;
 	
 	/**
 	* Sets the opacity of the window.
@@ -1610,7 +1610,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function setOpacity(opacity : Single) : Void;
+	@:require(java7) @:overload @:public public function setOpacity(opacity : Single) : Void;
 	
 	/**
 	* Returns the shape of the window.
@@ -1627,7 +1627,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getShape() : java.awt.Shape;
+	@:require(java7) @:overload @:public public function getShape() : java.awt.Shape;
 	
 	/**
 	* Sets the shape of the window.
@@ -1678,7 +1678,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function setShape(shape : java.awt.Shape) : Void;
+	@:require(java7) @:overload @:public public function setShape(shape : java.awt.Shape) : Void;
 	
 	/**
 	* Gets the background color of this window.
@@ -1692,7 +1692,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see Window#isOpaque
 	* @see GraphicsDevice.WindowTranslucency
 	*/
-	@:overload override public function getBackground() : java.awt.Color;
+	@:overload @:public override public function getBackground() : java.awt.Color;
 	
 	/**
 	* Sets the background color of this window.
@@ -1769,7 +1769,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see GraphicsDevice#isWindowTranslucencySupported(GraphicsDevice.WindowTranslucency)
 	* @see GraphicsConfiguration#isTranslucencyCapable()
 	*/
-	@:overload override public function setBackground(bgColor : java.awt.Color) : Void;
+	@:overload @:public override public function setBackground(bgColor : java.awt.Color) : Void;
 	
 	/**
 	* Indicates if the window is currently opaque.
@@ -1784,14 +1784,14 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see Window#setBackground(Color)
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function isOpaque() : Bool;
+	@:require(java7) @:overload @:public override public function isOpaque() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:require(java7) @:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	
 }
@@ -1842,7 +1842,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 
 @:native('java$awt$Window$WindowDisposerRecord') @:internal extern class Window_WindowDisposerRecord implements sun.java2d.DisposerRecord
 {
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	
 }
@@ -1861,7 +1861,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* object
 	* @see javax.accessibility.AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the state of this object.
@@ -1870,7 +1870,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* state set of the object
 	* @see javax.accessibility.AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

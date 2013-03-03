@@ -81,7 +81,7 @@ extern class NamespacePrefixMapper
 	*
 	* @since JAXB 1.0.1
 	*/
-	@:require(java0) @:overload @:abstract public function getPreferredPrefix(namespaceUri : String, suggestion : String, requirePrefix : Bool) : String;
+	@:require(java0) @:overload @:public @:abstract public function getPreferredPrefix(namespaceUri : String, suggestion : String, requirePrefix : Bool) : String;
 	
 	/**
 	* Returns a list of namespace URIs that should be declared
@@ -141,7 +141,7 @@ extern class NamespacePrefixMapper
 	* @since
 	*      JAXB RI 1.0.2
 	*/
-	@:require(java0) @:overload public function getPreDeclaredNamespaceUris() : java.NativeArray<String>;
+	@:require(java0) @:overload @:public public function getPreDeclaredNamespaceUris() : java.NativeArray<String>;
 	
 	/**
 	* Similar to {@link #getPreDeclaredNamespaceUris()} but allows the
@@ -164,7 +164,7 @@ extern class NamespacePrefixMapper
 	* @since
 	*      JAXB RI 2.0 beta
 	*/
-	@:require(java0) @:overload public function getPreDeclaredNamespaceUris2() : java.NativeArray<String>;
+	@:require(java0) @:overload @:public public function getPreDeclaredNamespaceUris2() : java.NativeArray<String>;
 	
 	/**
 	* Returns a list of (prefix,namespace URI) pairs that represents
@@ -213,7 +213,7 @@ extern class NamespacePrefixMapper
 	*
 	* @since JAXB RI 2.0 beta
 	*/
-	@:require(java0) @:overload public function getContextualNamespaceDecls() : java.NativeArray<String>;
+	@:require(java0) @:overload @:public public function getContextualNamespaceDecls() : java.NativeArray<String>;
 	
 	
 }

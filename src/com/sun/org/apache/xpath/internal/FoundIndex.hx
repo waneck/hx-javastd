@@ -32,7 +32,7 @@ extern class FoundIndex extends java.lang.RuntimeException
 	* Constructor FoundIndex
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

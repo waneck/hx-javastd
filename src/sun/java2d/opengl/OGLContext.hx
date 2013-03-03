@@ -29,17 +29,17 @@ package sun.java2d.opengl;
 */
 extern class OGLContext extends sun.java2d.pipe.BufferedContext
 {
-	@:overload override public function getRenderQueue() : sun.java2d.pipe.RenderQueue;
+	@:overload @:public override public function getRenderQueue() : sun.java2d.pipe.RenderQueue;
 	
-	@:overload override public function saveState() : Void;
+	@:overload @:public override public function saveState() : Void;
 	
-	@:overload override public function restoreState() : Void;
+	@:overload @:public override public function restoreState() : Void;
 	
 	
 }
 @:native('sun$java2d$opengl$OGLContext$OGLContextCaps') @:internal extern class OGLContext_OGLContextCaps extends sun.java2d.pipe.hw.ContextCapabilities
 {
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

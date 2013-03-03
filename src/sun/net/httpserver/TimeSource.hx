@@ -25,7 +25,7 @@ package sun.net.httpserver;
 */
 @:internal extern interface TimeSource
 {
-	@:overload public function getTime() : haxe.Int64;
+	@:overload @:public public function getTime() : haxe.Int64;
 	
 	
 }

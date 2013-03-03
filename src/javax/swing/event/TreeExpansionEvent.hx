@@ -28,7 +28,7 @@ extern class TreeExpansionEvent extends java.util.EventObject
 	/**
 	* Path to the value this event represents.
 	*/
-	private var path : javax.swing.tree.TreePath;
+	@:protected private var path : javax.swing.tree.TreePath;
 	
 	/**
 	* Constructs a TreeExpansionEvent object.
@@ -38,12 +38,12 @@ extern class TreeExpansionEvent extends java.util.EventObject
 	* @param path    a TreePath object identifying the newly expanded
 	*                node
 	*/
-	@:overload public function new(source : Dynamic, path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function new(source : Dynamic, path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Returns the path to the value that has been expanded/collapsed.
 	*/
-	@:overload public function getPath() : javax.swing.tree.TreePath;
+	@:overload @:public public function getPath() : javax.swing.tree.TreePath;
 	
 	
 }

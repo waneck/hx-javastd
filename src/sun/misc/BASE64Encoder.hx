@@ -26,14 +26,14 @@ package sun.misc;
 extern class BASE64Encoder extends sun.misc.CharacterEncoder
 {
 	/** this class encodes three bytes per atom. */
-	@:overload override private function bytesPerAtom() : Int;
+	@:overload @:protected override private function bytesPerAtom() : Int;
 	
 	/**
 	* this class encodes 57 bytes per line. This results in a maximum
 	* of 57/3 * 4 or 76 characters per output line. Not counting the
 	* line termination.
 	*/
-	@:overload override private function bytesPerLine() : Int;
+	@:overload @:protected override private function bytesPerLine() : Int;
 	
 	/**
 	* encodeAtom - Take three bytes of input and encode it as 4
@@ -41,7 +41,7 @@ extern class BASE64Encoder extends sun.misc.CharacterEncoder
 	* than three is encodes either one or two '=' signs to indicate
 	* padding characters.
 	*/
-	@:overload override private function encodeAtom(outStream : java.io.OutputStream, data : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected override private function encodeAtom(outStream : java.io.OutputStream, data : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	
 }

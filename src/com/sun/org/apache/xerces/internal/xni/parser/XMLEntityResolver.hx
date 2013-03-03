@@ -31,7 +31,7 @@ extern interface XMLEntityResolver
 	*                      opened or some other i/o error occurs.
 	* @see com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier
 	*/
-	@:overload public function resolveEntity(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
+	@:overload @:public public function resolveEntity(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
 	
 	
 }

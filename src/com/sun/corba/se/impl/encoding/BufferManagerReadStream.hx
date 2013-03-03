@@ -25,25 +25,25 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class BufferManagerReadStream implements com.sun.corba.se.impl.encoding.BufferManagerRead implements com.sun.corba.se.impl.encoding.MarkAndResetHandler
 {
-	@:overload public function cancelProcessing(requestId : Int) : Void;
+	@:overload @:public public function cancelProcessing(requestId : Int) : Void;
 	
-	@:overload public function processFragment(byteBuffer : java.nio.ByteBuffer, msg : com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage) : Void;
+	@:overload @:public public function processFragment(byteBuffer : java.nio.ByteBuffer, msg : com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage) : Void;
 	
-	@:overload public function underflow(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : com.sun.corba.se.impl.encoding.ByteBufferWithInfo;
+	@:overload @:public public function underflow(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : com.sun.corba.se.impl.encoding.ByteBufferWithInfo;
 	
-	@:overload public function init(msg : com.sun.corba.se.impl.protocol.giopmsgheaders.Message) : Void;
+	@:overload @:public public function init(msg : com.sun.corba.se.impl.protocol.giopmsgheaders.Message) : Void;
 	
-	@:overload public function close(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
+	@:overload @:public public function close(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
 	
-	@:overload private function getByteBufferPool() : com.sun.corba.se.pept.transport.ByteBufferPool;
+	@:overload @:protected private function getByteBufferPool() : com.sun.corba.se.pept.transport.ByteBufferPool;
 	
-	@:overload public function mark(inputStream : com.sun.corba.se.impl.encoding.RestorableInputStream) : Void;
+	@:overload @:public public function mark(inputStream : com.sun.corba.se.impl.encoding.RestorableInputStream) : Void;
 	
-	@:overload public function fragmentationOccured(newFragment : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
+	@:overload @:public public function fragmentationOccured(newFragment : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function getMarkAndResetHandler() : com.sun.corba.se.impl.encoding.MarkAndResetHandler;
+	@:overload @:public public function getMarkAndResetHandler() : com.sun.corba.se.impl.encoding.MarkAndResetHandler;
 	
 	
 }

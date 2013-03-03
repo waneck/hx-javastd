@@ -25,15 +25,15 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 */
 extern class LeafPropertyXsiLoader extends com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader
 {
-	@:overload public function new(defaultLoader : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader, xacc : com.sun.xml.internal.bind.v2.runtime.reflect.TransducedAccessor<Dynamic>, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(defaultLoader : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader, xacc : com.sun.xml.internal.bind.v2.runtime.reflect.TransducedAccessor<Dynamic>, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>) : Void;
 	
-	@:overload override public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:public override public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload private function selectLoader(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
+	@:overload @:protected private function selectLoader(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 	
-	@:overload override public function getExpectedChildElements() : java.util.Collection<javax.xml.namespace.QName>;
+	@:overload @:public override public function getExpectedChildElements() : java.util.Collection<javax.xml.namespace.QName>;
 	
-	@:overload override public function getExpectedAttributes() : java.util.Collection<javax.xml.namespace.QName>;
+	@:overload @:public override public function getExpectedAttributes() : java.util.Collection<javax.xml.namespace.QName>;
 	
 	
 }

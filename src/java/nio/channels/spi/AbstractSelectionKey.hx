@@ -37,9 +37,9 @@ package java.nio.channels.spi;
 	/**
 	* Initializes a new instance of this class.  </p>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload @:final override public function isValid() : Bool;
+	@:overload @:public @:final override public function isValid() : Bool;
 	
 	/**
 	* Cancels this key.
@@ -47,7 +47,7 @@ package java.nio.channels.spi;
 	* <p> If this key has not yet been cancelled then it is added to its
 	* selector's cancelled-key set while synchronized on that set.  </p>
 	*/
-	@:overload @:final override public function cancel() : Void;
+	@:overload @:public @:final override public function cancel() : Void;
 	
 	
 }

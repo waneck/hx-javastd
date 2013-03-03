@@ -26,23 +26,23 @@ package com.sun.org.apache.xerces.internal.impl.xs.opti;
 */
 extern class NodeImpl extends com.sun.org.apache.xerces.internal.impl.xs.opti.DefaultNode
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(prefix : String, localpart : String, rawname : String, uri : String, nodeType : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(prefix : String, localpart : String, rawname : String, uri : String, nodeType : java.StdTypes.Int16) : Void;
 	
-	@:overload override public function getNodeName() : String;
+	@:overload @:public override public function getNodeName() : String;
 	
-	@:overload override public function getNamespaceURI() : String;
+	@:overload @:public override public function getNamespaceURI() : String;
 	
-	@:overload override public function getPrefix() : String;
+	@:overload @:public override public function getPrefix() : String;
 	
-	@:overload override public function getLocalName() : String;
+	@:overload @:public override public function getLocalName() : String;
 	
-	@:overload override public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public override public function getNodeType() : java.StdTypes.Int16;
 	
-	@:overload public function setReadOnly(hide : Bool, deep : Bool) : Void;
+	@:overload @:public public function setReadOnly(hide : Bool, deep : Bool) : Void;
 	
-	@:overload public function getReadOnly() : Bool;
+	@:overload @:public public function getReadOnly() : Bool;
 	
 	
 }

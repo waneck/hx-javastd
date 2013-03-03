@@ -43,11 +43,11 @@ package com.sun.corba.se.spi.monitoring;
 */
 extern class StatisticsAccumulator
 {
-	private var max : Float;
+	@:protected private var max : Float;
 	
-	private var min : Float;
+	@:protected private var min : Float;
 	
-	private var unit : String;
+	@:protected private var unit : String;
 	
 	/**
 	* <p>
@@ -64,24 +64,24 @@ extern class StatisticsAccumulator
 	* @param value a double value to make it more precise
 	* </p>
 	*/
-	@:overload public function sample(value : Float) : Void;
+	@:overload @:public public function sample(value : Float) : Void;
 	
 	/**
 	*  Computes the Standard Statistic Results based on the samples collected
 	*  so far and provides the complete value as a formatted String
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	/**
 	*  Users can extend StatisticsAccumulator to provide the complete
 	*  Stats in the format they prefer, if the default format doesn't suffice.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	*  If users choose to custom format the stats.
 	*/
-	@:overload private function computeAverage() : Float;
+	@:overload @:protected private function computeAverage() : Float;
 	
 	/**
 	* We use a derived Standard Deviation formula to compute SD. This way
@@ -89,7 +89,7 @@ extern class StatisticsAccumulator
 	*
 	* The method is protected to let users extend and format the results.
 	*/
-	@:overload private function computeStandardDeviation() : Float;
+	@:overload @:protected private function computeStandardDeviation() : Float;
 	
 	/**
 	* <p>
@@ -106,12 +106,12 @@ extern class StatisticsAccumulator
 	* @param unit a String representing the units for the samples collected
 	* </p>
 	*/
-	@:overload public function new(unit : String) : Void;
+	@:overload @:public public function new(unit : String) : Void;
 	
 	/**
 	*  This is an internal API to test StatisticsAccumulator...
 	*/
-	@:overload public function unitTestValidate(expectedUnit : String, expectedMin : Float, expectedMax : Float, expectedSampleCount : haxe.Int64, expectedAverage : Float, expectedStandardDeviation : Float) : Void;
+	@:overload @:public public function unitTestValidate(expectedUnit : String, expectedMin : Float, expectedMax : Float, expectedSampleCount : haxe.Int64, expectedAverage : Float, expectedStandardDeviation : Float) : Void;
 	
 	
 }

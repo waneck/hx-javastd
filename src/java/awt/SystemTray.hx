@@ -51,7 +51,7 @@ extern class SystemTray
 	* @see SecurityManager#checkPermission
 	* @see AWTPermission
 	*/
-	@:overload public static function getSystemTray() : java.awt.SystemTray;
+	@:overload @:public @:static public static function getSystemTray() : java.awt.SystemTray;
 	
 	/**
 	* Returns whether the system tray is supported on the current
@@ -78,7 +78,7 @@ extern class SystemTray
 	* supported but does not guarantee that all system tray
 	* functionality is supported for the current platform
 	*/
-	@:overload public static function isSupported() : Bool;
+	@:overload @:public @:static public static function isSupported() : Bool;
 	
 	/**
 	* Adds a <code>TrayIcon</code> to the <code>SystemTray</code>.
@@ -101,7 +101,7 @@ extern class SystemTray
 	* @see TrayIcon
 	* @see java.awt.Image
 	*/
-	@:overload public function add(trayIcon : java.awt.TrayIcon) : Void;
+	@:overload @:public public function add(trayIcon : java.awt.TrayIcon) : Void;
 	
 	/**
 	* Removes the specified <code>TrayIcon</code> from the
@@ -119,7 +119,7 @@ extern class SystemTray
 	* @see #add(TrayIcon)
 	* @see TrayIcon
 	*/
-	@:overload public function remove(trayIcon : java.awt.TrayIcon) : Void;
+	@:overload @:public public function remove(trayIcon : java.awt.TrayIcon) : Void;
 	
 	/**
 	* Returns an array of all icons added to the tray by this
@@ -140,7 +140,7 @@ extern class SystemTray
 	* @see #add(TrayIcon)
 	* @see TrayIcon
 	*/
-	@:overload public function getTrayIcons() : java.NativeArray<java.awt.TrayIcon>;
+	@:overload @:public public function getTrayIcons() : java.NativeArray<java.awt.TrayIcon>;
 	
 	/**
 	* Returns the size, in pixels, of the space that a tray icon will
@@ -154,7 +154,7 @@ extern class SystemTray
 	* @see java.awt.Image
 	* @see TrayIcon#getSize()
 	*/
-	@:overload public function getTrayIconSize() : java.awt.Dimension;
+	@:overload @:public public function getTrayIconSize() : java.awt.Dimension;
 	
 	/**
 	* Adds a {@code PropertyChangeListener} to the list of listeners for the
@@ -194,7 +194,7 @@ extern class SystemTray
 	* @see #removePropertyChangeListener
 	* @see #getPropertyChangeListeners
 	*/
-	@:overload @:synchronized public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a {@code PropertyChangeListener} from the listener list
@@ -211,7 +211,7 @@ extern class SystemTray
 	* @see #addPropertyChangeListener
 	* @see #getPropertyChangeListeners
 	*/
-	@:overload @:synchronized public function removePropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized public function removePropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the listeners that have been associated
@@ -228,7 +228,7 @@ extern class SystemTray
 	* @see #addPropertyChangeListener
 	* @see #removePropertyChangeListener
 	*/
-	@:overload @:synchronized public function getPropertyChangeListeners(propertyName : String) : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:overload @:public @:synchronized public function getPropertyChangeListeners(propertyName : String) : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	
 }

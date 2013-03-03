@@ -76,13 +76,13 @@ package javax.lang.model.util;
 	* defaultAction} returns this value unless the method is
 	* overridden.
 	*/
-	private var DEFAULT_VALUE(default, null) : R;
+	@:protected @:final private var DEFAULT_VALUE(default, null) : R;
 	
 	/**
 	* Constructor for concrete subclasses; uses {@code null} for the
 	* default value.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructor for concrete subclasses; uses the argument for the
@@ -90,14 +90,14 @@ package javax.lang.model.util;
 	*
 	* @param defaultValue the value to assign to {@link #DEFAULT_VALUE}
 	*/
-	@:overload private function new(defaultValue : R) : Void;
+	@:overload @:protected private function new(defaultValue : R) : Void;
 	
 	/**
 	* The default action for visit methods.  The implementation in
 	* this class just returns {@link #DEFAULT_VALUE}; subclasses will
 	* commonly override this method.
 	*/
-	@:overload private function defaultAction(e : javax.lang.model.type.TypeMirror, p : P) : R;
+	@:overload @:protected private function defaultAction(e : javax.lang.model.type.TypeMirror, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -106,7 +106,7 @@ package javax.lang.model.util;
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitPrimitive(t : javax.lang.model.type.PrimitiveType, p : P) : R;
+	@:overload @:public override public function visitPrimitive(t : javax.lang.model.type.PrimitiveType, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -115,7 +115,7 @@ package javax.lang.model.util;
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitNull(t : javax.lang.model.type.NullType, p : P) : R;
+	@:overload @:public override public function visitNull(t : javax.lang.model.type.NullType, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -124,7 +124,7 @@ package javax.lang.model.util;
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitArray(t : javax.lang.model.type.ArrayType, p : P) : R;
+	@:overload @:public override public function visitArray(t : javax.lang.model.type.ArrayType, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -133,7 +133,7 @@ package javax.lang.model.util;
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitDeclared(t : javax.lang.model.type.DeclaredType, p : P) : R;
+	@:overload @:public override public function visitDeclared(t : javax.lang.model.type.DeclaredType, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -142,7 +142,7 @@ package javax.lang.model.util;
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitError(t : javax.lang.model.type.ErrorType, p : P) : R;
+	@:overload @:public override public function visitError(t : javax.lang.model.type.ErrorType, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -151,7 +151,7 @@ package javax.lang.model.util;
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitTypeVariable(t : javax.lang.model.type.TypeVariable, p : P) : R;
+	@:overload @:public override public function visitTypeVariable(t : javax.lang.model.type.TypeVariable, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -160,7 +160,7 @@ package javax.lang.model.util;
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitWildcard(t : javax.lang.model.type.WildcardType, p : P) : R;
+	@:overload @:public override public function visitWildcard(t : javax.lang.model.type.WildcardType, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -169,7 +169,7 @@ package javax.lang.model.util;
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitExecutable(t : javax.lang.model.type.ExecutableType, p : P) : R;
+	@:overload @:public override public function visitExecutable(t : javax.lang.model.type.ExecutableType, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -178,7 +178,7 @@ package javax.lang.model.util;
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitNoType(t : javax.lang.model.type.NoType, p : P) : R;
+	@:overload @:public override public function visitNoType(t : javax.lang.model.type.NoType, p : P) : R;
 	
 	
 }

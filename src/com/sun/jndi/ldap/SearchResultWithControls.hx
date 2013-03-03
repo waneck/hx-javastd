@@ -25,9 +25,9 @@ package com.sun.jndi.ldap;
 */
 @:internal extern class SearchResultWithControls extends javax.naming.directory.SearchResult implements javax.naming.ldap.HasControls
 {
-	@:overload public function new(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes, isRelative : Bool, controls : java.NativeArray<javax.naming.ldap.Control>) : Void;
+	@:overload @:public public function new(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes, isRelative : Bool, controls : java.NativeArray<javax.naming.ldap.Control>) : Void;
 	
-	@:overload public function getControls() : java.NativeArray<javax.naming.ldap.Control>;
+	@:overload @:public public function getControls() : java.NativeArray<javax.naming.ldap.Control>;
 	
 	
 }

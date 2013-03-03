@@ -37,24 +37,24 @@ extern class TODO
 	*
 	* Search the usage of this method.
 	*/
-	@:overload public static function checkSpec() : Void;
+	@:overload @:public @:static public static function checkSpec() : Void;
 	
-	@:overload public static function checkSpec(comment : String) : Void;
+	@:overload @:public @:static public static function checkSpec(comment : String) : Void;
 	
 	/**
 	* When this method iscalled,
 	* that means the current code is a mock up and
 	* it needs to be properly implemented later.
 	*/
-	@:overload public static function prototype() : Void;
+	@:overload @:public @:static public static function prototype() : Void;
 	
-	@:overload public static function prototype(comment : String) : Void;
+	@:overload @:public @:static public static function prototype(comment : String) : Void;
 	
 	/**
 	* When this method is called, it means that there is an
 	* unimplemeted portion of the spec in the schema generator.
 	*/
-	@:overload public static function schemaGenerator(comment : String) : Void;
+	@:overload @:public @:static public static function schemaGenerator(comment : String) : Void;
 	
 	
 }

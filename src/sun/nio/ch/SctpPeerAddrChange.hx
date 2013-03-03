@@ -25,17 +25,17 @@ package sun.nio.ch;
 */
 extern class SctpPeerAddrChange extends com.sun.nio.sctp.PeerAddressChangeNotification implements sun.nio.ch.SctpNotification
 {
-	@:overload public function assocId() : Int;
+	@:overload @:public public function assocId() : Int;
 	
-	@:overload public function setAssociation(association : com.sun.nio.sctp.Association) : Void;
+	@:overload @:public public function setAssociation(association : com.sun.nio.sctp.Association) : Void;
 	
-	@:overload override public function address() : java.net.SocketAddress;
+	@:overload @:public override public function address() : java.net.SocketAddress;
 	
-	@:overload override public function association() : com.sun.nio.sctp.Association;
+	@:overload @:public override public function association() : com.sun.nio.sctp.Association;
 	
-	@:overload override public function event() : com.sun.nio.sctp.PeerAddressChangeNotification.PeerAddressChangeNotification_AddressChangeEvent;
+	@:overload @:public override public function event() : com.sun.nio.sctp.PeerAddressChangeNotification.PeerAddressChangeNotification_AddressChangeEvent;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

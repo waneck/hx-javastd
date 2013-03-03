@@ -28,7 +28,7 @@ extern class SignatureSpi
 	/**
 	* Application-specified source of randomness.
 	*/
-	private var appRandom : java.security.SecureRandom;
+	@:protected private var appRandom : java.security.SecureRandom;
 	
 	/**
 	* Initializes this signature object with the specified
@@ -40,7 +40,7 @@ extern class SignatureSpi
 	* @exception InvalidKeyException if the key is improperly
 	* encoded, parameters are missing, and so on.
 	*/
-	@:overload @:abstract private function engineInitVerify(publicKey : java.security.PublicKey) : Void;
+	@:overload @:protected @:abstract private function engineInitVerify(publicKey : java.security.PublicKey) : Void;
 	
 	/**
 	* Initializes this signature object with the specified
@@ -52,7 +52,7 @@ extern class SignatureSpi
 	* @exception InvalidKeyException if the key is improperly
 	* encoded, parameters are missing, and so on.
 	*/
-	@:overload @:abstract private function engineInitSign(privateKey : java.security.PrivateKey) : Void;
+	@:overload @:protected @:abstract private function engineInitSign(privateKey : java.security.PrivateKey) : Void;
 	
 	/**
 	* Initializes this signature object with the specified
@@ -68,7 +68,7 @@ extern class SignatureSpi
 	* @exception InvalidKeyException if the key is improperly
 	* encoded, parameters are missing, and so on.
 	*/
-	@:overload private function engineInitSign(privateKey : java.security.PrivateKey, random : java.security.SecureRandom) : Void;
+	@:overload @:protected private function engineInitSign(privateKey : java.security.PrivateKey, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Updates the data to be signed or verified
@@ -79,7 +79,7 @@ extern class SignatureSpi
 	* @exception SignatureException if the engine is not initialized
 	* properly.
 	*/
-	@:overload @:abstract private function engineUpdate(b : java.StdTypes.Int8) : Void;
+	@:overload @:protected @:abstract private function engineUpdate(b : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Updates the data to be signed or verified, using the
@@ -92,7 +92,7 @@ extern class SignatureSpi
 	* @exception SignatureException if the engine is not initialized
 	* properly
 	*/
-	@:overload @:abstract private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:protected @:abstract private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Updates the data to be signed or verified using the specified
@@ -104,7 +104,7 @@ extern class SignatureSpi
 	* @param input the ByteBuffer
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function engineUpdate(input : java.nio.ByteBuffer) : Void;
+	@:require(java5) @:overload @:protected private function engineUpdate(input : java.nio.ByteBuffer) : Void;
 	
 	/**
 	* Returns the signature bytes of all the data
@@ -118,7 +118,7 @@ extern class SignatureSpi
 	* initialized properly or if this signature algorithm is unable to
 	* process the input data provided.
 	*/
-	@:overload @:abstract private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:abstract private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Finishes this signature operation and stores the resulting signature
@@ -160,7 +160,7 @@ extern class SignatureSpi
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function engineSign(outbuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
+	@:require(java2) @:overload @:protected private function engineSign(outbuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
 	
 	/**
 	* Verifies the passed-in signature.
@@ -174,7 +174,7 @@ extern class SignatureSpi
 	* encoded or of the wrong type, if this signature algorithm is unable to
 	* process the input data provided, etc.
 	*/
-	@:overload @:abstract private function engineVerify(sigBytes : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:protected @:abstract private function engineVerify(sigBytes : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/**
 	* Verifies the passed-in signature in the specified array
@@ -195,7 +195,7 @@ extern class SignatureSpi
 	* process the input data provided, etc.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function engineVerify(sigBytes : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Bool;
+	@:require(java4) @:overload @:protected private function engineVerify(sigBytes : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Bool;
 	
 	/**
 	* Sets the specified algorithm parameter to the specified
@@ -221,7 +221,7 @@ extern class SignatureSpi
 	* #engineSetParameter(java.security.spec.AlgorithmParameterSpec)
 	* engineSetParameter}.
 	*/
-	@:overload @:abstract private function engineSetParameter(param : String, value : Dynamic) : Void;
+	@:overload @:protected @:abstract private function engineSetParameter(param : String, value : Dynamic) : Void;
 	
 	/**
 	* <p>This method is overridden by providers to initialize
@@ -236,7 +236,7 @@ extern class SignatureSpi
 	* overridden by a provider and the given parameters
 	* are inappropriate for this signature engine
 	*/
-	@:overload private function engineSetParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected private function engineSetParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* <p>This method is overridden by providers to return the
@@ -256,7 +256,7 @@ extern class SignatureSpi
 	* not overridden by a provider
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function engineGetParameters() : java.security.AlgorithmParameters;
+	@:require(java4) @:overload @:protected private function engineGetParameters() : java.security.AlgorithmParameters;
 	
 	/**
 	* Gets the value of the specified algorithm parameter.
@@ -280,7 +280,7 @@ extern class SignatureSpi
 	*
 	* @deprecated
 	*/
-	@:overload @:abstract private function engineGetParameter(param : String) : Dynamic;
+	@:overload @:protected @:abstract private function engineGetParameter(param : String) : Dynamic;
 	
 	/**
 	* Returns a clone if the implementation is cloneable.
@@ -290,7 +290,7 @@ extern class SignatureSpi
 	* @exception CloneNotSupportedException if this is called
 	* on an implementation that does not support <code>Cloneable</code>.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

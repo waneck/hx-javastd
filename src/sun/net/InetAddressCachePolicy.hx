@@ -25,16 +25,16 @@ package sun.net;
 */
 extern class InetAddressCachePolicy
 {
-	public static var FOREVER(default, null) : Int;
+	@:public @:static @:final public static var FOREVER(default, null) : Int;
 	
-	public static var NEVER(default, null) : Int;
+	@:public @:static @:final public static var NEVER(default, null) : Int;
 	
 	/* default value for positive lookups */
-	public static var DEFAULT_POSITIVE(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_POSITIVE(default, null) : Int;
 	
-	@:overload @:synchronized public static function get() : Int;
+	@:overload @:public @:static @:synchronized public static function get() : Int;
 	
-	@:overload @:synchronized public static function getNegative() : Int;
+	@:overload @:public @:static @:synchronized public static function getNegative() : Int;
 	
 	/**
 	* Sets the cache policy for successful lookups if the user has not
@@ -43,7 +43,7 @@ extern class InetAddressCachePolicy
 	* @param newPolicy the value in seconds for how long the lookup
 	* should be cached
 	*/
-	@:overload @:synchronized public static function setIfNotSet(newPolicy : Int) : Void;
+	@:overload @:public @:static @:synchronized public static function setIfNotSet(newPolicy : Int) : Void;
 	
 	/**
 	* Sets the cache policy for negative lookups if the user has not
@@ -52,7 +52,7 @@ extern class InetAddressCachePolicy
 	* @param newPolicy the value in seconds for how long the lookup
 	* should be cached
 	*/
-	@:overload @:synchronized public static function setNegativeIfNotSet(newPolicy : Int) : Void;
+	@:overload @:public @:static @:synchronized public static function setNegativeIfNotSet(newPolicy : Int) : Void;
 	
 	
 }

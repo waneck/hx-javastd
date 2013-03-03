@@ -32,7 +32,7 @@ extern interface MemoryMXBean extends java.lang.management.PlatformManagedObject
 	* @return the approximate number objects for which finalization
 	* is pending.
 	*/
-	@:overload public function getObjectPendingFinalizationCount() : Int;
+	@:overload @:public public function getObjectPendingFinalizationCount() : Int;
 	
 	/**
 	* Returns the current memory usage of the heap that
@@ -58,7 +58,7 @@ extern interface MemoryMXBean extends java.lang.management.PlatformManagedObject
 	* @return a {@link MemoryUsage} object representing
 	* the heap memory usage.
 	*/
-	@:overload public function getHeapMemoryUsage() : java.lang.management.MemoryUsage;
+	@:overload @:public public function getHeapMemoryUsage() : java.lang.management.MemoryUsage;
 	
 	/**
 	* Returns the current memory usage of non-heap memory that
@@ -81,7 +81,7 @@ extern interface MemoryMXBean extends java.lang.management.PlatformManagedObject
 	* @return a {@link MemoryUsage} object representing
 	* the non-heap memory usage.
 	*/
-	@:overload public function getNonHeapMemoryUsage() : java.lang.management.MemoryUsage;
+	@:overload @:public public function getNonHeapMemoryUsage() : java.lang.management.MemoryUsage;
 	
 	/**
 	* Tests if verbose output for the memory system is enabled.
@@ -89,7 +89,7 @@ extern interface MemoryMXBean extends java.lang.management.PlatformManagedObject
 	* @return <tt>true</tt> if verbose output for the memory
 	* system is enabled; <tt>false</tt> otherwise.
 	*/
-	@:overload public function isVerbose() : Bool;
+	@:overload @:public public function isVerbose() : Bool;
 	
 	/**
 	* Enables or disables verbose output for the memory
@@ -109,7 +109,7 @@ extern interface MemoryMXBean extends java.lang.management.PlatformManagedObject
 	*             exists and the caller does not have
 	*             ManagementPermission("control").
 	*/
-	@:overload public function setVerbose(value : Bool) : Void;
+	@:overload @:public public function setVerbose(value : Bool) : Void;
 	
 	/**
 	* Runs the garbage collector.
@@ -121,7 +121,7 @@ extern interface MemoryMXBean extends java.lang.management.PlatformManagedObject
 	*
 	* @see     java.lang.System#gc()
 	*/
-	@:overload public function gc() : Void;
+	@:overload @:public public function gc() : Void;
 	
 	
 }

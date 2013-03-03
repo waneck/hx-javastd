@@ -26,7 +26,7 @@ extern class FuncHereContext extends com.sun.org.apache.xpath.internal.XPathCont
 	*
 	* @param owner
 	*/
-	@:overload public function new(owner : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(owner : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Constructor FuncHereContext
@@ -34,7 +34,7 @@ extern class FuncHereContext extends com.sun.org.apache.xpath.internal.XPathCont
 	* @param owner
 	* @param xpathContext
 	*/
-	@:overload public function new(owner : org.w3c.dom.Node, xpathContext : com.sun.org.apache.xpath.internal.XPathContext) : Void;
+	@:overload @:public public function new(owner : org.w3c.dom.Node, xpathContext : com.sun.org.apache.xpath.internal.XPathContext) : Void;
 	
 	/**
 	* Constructor FuncHereContext
@@ -42,7 +42,7 @@ extern class FuncHereContext extends com.sun.org.apache.xpath.internal.XPathCont
 	* @param owner
 	* @param previouslyUsed
 	*/
-	@:overload public function new(owner : org.w3c.dom.Node, previouslyUsed : com.sun.org.apache.xpath.internal.CachedXPathAPI) : Void;
+	@:overload @:public public function new(owner : org.w3c.dom.Node, previouslyUsed : com.sun.org.apache.xpath.internal.CachedXPathAPI) : Void;
 	
 	/**
 	* Constructor FuncHereContext
@@ -50,7 +50,7 @@ extern class FuncHereContext extends com.sun.org.apache.xpath.internal.XPathCont
 	* @param owner
 	* @param dtmManager
 	*/
-	@:overload public function new(owner : org.w3c.dom.Node, dtmManager : com.sun.org.apache.xml.internal.dtm.DTMManager) : Void;
+	@:overload @:public public function new(owner : org.w3c.dom.Node, dtmManager : com.sun.org.apache.xml.internal.dtm.DTMManager) : Void;
 	
 	
 }

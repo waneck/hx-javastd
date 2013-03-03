@@ -30,23 +30,23 @@ extern interface Closure
 	* Returns true if this closure is compiled in an inner class (i.e.
 	* if this is a real closure).
 	*/
-	@:overload public function inInnerClass() : Bool;
+	@:overload @:public public function inInnerClass() : Bool;
 	
 	/**
 	* Returns a reference to its parent closure or null if outermost.
 	*/
-	@:overload public function getParentClosure() : com.sun.org.apache.xalan.internal.xsltc.compiler.Closure;
+	@:overload @:public public function getParentClosure() : com.sun.org.apache.xalan.internal.xsltc.compiler.Closure;
 	
 	/**
 	* Returns the name of the auxiliary class or null if this predicate
 	* is compiled inside the Translet.
 	*/
-	@:overload public function getInnerClassName() : String;
+	@:overload @:public public function getInnerClassName() : String;
 	
 	/**
 	* Add new variable to the closure.
 	*/
-	@:overload public function addVariable(variableRef : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableRefBase) : Void;
+	@:overload @:public public function addVariable(variableRef : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableRefBase) : Void;
 	
 	
 }

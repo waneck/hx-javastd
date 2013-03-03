@@ -33,35 +33,35 @@ package com.sun.tools.classfile;
 */
 extern class InnerClasses_attribute extends com.sun.tools.classfile.Attribute
 {
-	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, classes : java.NativeArray<com.sun.tools.classfile.InnerClasses_attribute.InnerClasses_attribute_Info>) : Void;
+	@:overload @:public public function new(constant_pool : com.sun.tools.classfile.ConstantPool, classes : java.NativeArray<com.sun.tools.classfile.InnerClasses_attribute.InnerClasses_attribute_Info>) : Void;
 	
-	@:overload public function new(name_index : Int, classes : java.NativeArray<com.sun.tools.classfile.InnerClasses_attribute.InnerClasses_attribute_Info>) : Void;
+	@:overload @:public public function new(name_index : Int, classes : java.NativeArray<com.sun.tools.classfile.InnerClasses_attribute.InnerClasses_attribute_Info>) : Void;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
-	public var number_of_classes(default, null) : Int;
+	@:public @:final public var number_of_classes(default, null) : Int;
 	
-	public var classes(default, null) : java.NativeArray<com.sun.tools.classfile.InnerClasses_attribute.InnerClasses_attribute_Info>;
+	@:public @:final public var classes(default, null) : java.NativeArray<com.sun.tools.classfile.InnerClasses_attribute.InnerClasses_attribute_Info>;
 	
 	
 }
 @:native('com$sun$tools$classfile$InnerClasses_attribute$Info') extern class InnerClasses_attribute_Info
 {
-	@:overload public function getInnerClassInfo(constant_pool : com.sun.tools.classfile.ConstantPool) : CONSTANT_Class_info;
+	@:overload @:public public function getInnerClassInfo(constant_pool : com.sun.tools.classfile.ConstantPool) : CONSTANT_Class_info;
 	
-	@:overload public function getOuterClassInfo(constant_pool : com.sun.tools.classfile.ConstantPool) : CONSTANT_Class_info;
+	@:overload @:public public function getOuterClassInfo(constant_pool : com.sun.tools.classfile.ConstantPool) : CONSTANT_Class_info;
 	
-	@:overload public function getInnerName(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
+	@:overload @:public public function getInnerName(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	@:overload public static function length() : Int;
+	@:overload @:public @:static public static function length() : Int;
 	
-	public var inner_class_info_index(default, null) : Int;
+	@:public @:final public var inner_class_info_index(default, null) : Int;
 	
-	public var outer_class_info_index(default, null) : Int;
+	@:public @:final public var outer_class_info_index(default, null) : Int;
 	
-	public var inner_name_index(default, null) : Int;
+	@:public @:final public var inner_name_index(default, null) : Int;
 	
-	public var inner_class_access_flags(default, null) : com.sun.tools.classfile.AccessFlags;
+	@:public @:final public var inner_class_access_flags(default, null) : com.sun.tools.classfile.AccessFlags;
 	
 	
 }

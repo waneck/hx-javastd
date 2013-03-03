@@ -25,9 +25,9 @@ package com.sun.jmx.remote.util;
 */
 extern class OrderClassLoaders extends java.lang.ClassLoader
 {
-	@:overload public function new(cl1 : java.lang.ClassLoader, cl2 : java.lang.ClassLoader) : Void;
+	@:overload @:public public function new(cl1 : java.lang.ClassLoader, cl2 : java.lang.ClassLoader) : Void;
 	
-	@:overload private function findClass(name : String) : Class<Dynamic>;
+	@:overload @:protected override private function findClass(name : String) : Class<Dynamic>;
 	
 	
 }

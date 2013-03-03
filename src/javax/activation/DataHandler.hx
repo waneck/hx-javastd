@@ -32,7 +32,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	*
 	* @param ds        the DataSource
 	*/
-	@:overload public function new(ds : javax.activation.DataSource) : Void;
+	@:overload @:public public function new(ds : javax.activation.DataSource) : Void;
 	
 	/**
 	* Create a <code>DataHandler</code> instance representing an object
@@ -43,7 +43,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	* @param obj       the Java Object
 	* @param mimeType  the MIME type of the object
 	*/
-	@:overload public function new(obj : Dynamic, mimeType : String) : Void;
+	@:overload @:public public function new(obj : Dynamic, mimeType : String) : Void;
 	
 	/**
 	* Create a <code>DataHandler</code> instance referencing a URL.
@@ -52,7 +52,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	*
 	* @param url       a URL object
 	*/
-	@:overload public function new(url : java.net.URL) : Void;
+	@:overload @:public public function new(url : java.net.URL) : Void;
 	
 	/**
 	* Return the DataSource associated with this instance
@@ -68,7 +68,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	*
 	* @return  a valid DataSource object for this DataHandler
 	*/
-	@:overload public function getDataSource() : javax.activation.DataSource;
+	@:overload @:public public function getDataSource() : javax.activation.DataSource;
 	
 	/**
 	* Return the name of the data object. If this DataHandler
@@ -78,7 +78,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	*
 	* @return  the name of the object
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return the MIME type of this object as retrieved from
@@ -87,7 +87,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	*
 	* @return  the MIME type
 	*/
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
 	/**
 	* Get the InputStream for this object. <p>
@@ -113,7 +113,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	* @see javax.activation.DataContentHandler#writeTo
 	* @see javax.activation.UnsupportedDataTypeException
 	*/
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Write the data to an <code>OutputStream</code>.<p>
@@ -130,7 +130,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	* @param os        the OutputStream to write to
 	* @exception IOException   if an I/O error occurs
 	*/
-	@:overload public function writeTo(os : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(os : java.io.OutputStream) : Void;
 	
 	/**
 	* Get an OutputStream for this DataHandler to allow overwriting
@@ -144,7 +144,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	* @see javax.activation.DataSource#getOutputStream
 	* @see javax.activation.URLDataSource
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Return the DataFlavors in which this data is available. <p>
@@ -170,7 +170,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	* @return  an array of data flavors in which this data can be transferred
 	* @see javax.activation.DataContentHandler#getTransferDataFlavors
 	*/
-	@:overload @:synchronized public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public @:synchronized public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Returns whether the specified data flavor is supported
@@ -184,7 +184,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	* @return          true if the data flavor is supported
 	* @see javax.activation.DataHandler#getTransferDataFlavors
 	*/
-	@:overload public function isDataFlavorSupported(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public public function isDataFlavorSupported(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Returns an object that represents the data to be
@@ -219,7 +219,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	* @exception IOException   if an I/O error occurs
 	* @see javax.activation.ActivationDataFlavor
 	*/
-	@:overload public function getTransferData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
+	@:overload @:public public function getTransferData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
 	
 	/**
 	* Set the CommandMap for use by this DataHandler.
@@ -233,7 +233,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	*
 	* @see javax.activation.CommandMap#setDefaultCommandMap
 	*/
-	@:overload @:synchronized public function setCommandMap(commandMap : javax.activation.CommandMap) : Void;
+	@:overload @:public @:synchronized public function setCommandMap(commandMap : javax.activation.CommandMap) : Void;
 	
 	/**
 	* Return the <i>preferred</i> commands for this type of data.
@@ -248,7 +248,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	*
 	* @see javax.activation.CommandMap#getPreferredCommands
 	*/
-	@:overload public function getPreferredCommands() : java.NativeArray<javax.activation.CommandInfo>;
+	@:overload @:public public function getPreferredCommands() : java.NativeArray<javax.activation.CommandInfo>;
 	
 	/**
 	* Return all the commands for this type of data.
@@ -262,7 +262,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	*
 	* @see javax.activation.CommandMap#getAllCommands
 	*/
-	@:overload public function getAllCommands() : java.NativeArray<javax.activation.CommandInfo>;
+	@:overload @:public public function getAllCommands() : java.NativeArray<javax.activation.CommandInfo>;
 	
 	/**
 	* Get the command <i>cmdName</i>. Use the search semantics as
@@ -276,7 +276,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	*
 	* @see javax.activation.CommandMap#getCommand
 	*/
-	@:overload public function getCommand(cmdName : String) : javax.activation.CommandInfo;
+	@:overload @:public public function getCommand(cmdName : String) : javax.activation.CommandInfo;
 	
 	/**
 	* Return the data in its preferred Object form. <p>
@@ -295,7 +295,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	* @exception IOException if an IOException occurs during
 	*                              this operation.
 	*/
-	@:overload public function getContent() : Dynamic;
+	@:overload @:public public function getContent() : Dynamic;
 	
 	/**
 	* A convenience method that takes a CommandInfo object
@@ -309,7 +309,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	* @param cmdinfo   the CommandInfo corresponding to a command
 	* @return  the instantiated command object
 	*/
-	@:overload public function getBean(cmdinfo : javax.activation.CommandInfo) : Dynamic;
+	@:overload @:public public function getBean(cmdinfo : javax.activation.CommandInfo) : Dynamic;
 	
 	/**
 	* Sets the DataContentHandlerFactory.  The DataContentHandlerFactory
@@ -324,7 +324,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	*
 	* @see javax.activation.DataContentHandlerFactory
 	*/
-	@:overload @:synchronized public static function setDataContentHandlerFactory(newFactory : javax.activation.DataContentHandlerFactory) : Void;
+	@:overload @:public @:static @:synchronized public static function setDataContentHandlerFactory(newFactory : javax.activation.DataContentHandlerFactory) : Void;
 	
 	
 }
@@ -333,31 +333,31 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	/**
 	* The constructor.
 	*/
-	@:overload public function new(dh : javax.activation.DataHandler) : Void;
+	@:overload @:public public function new(dh : javax.activation.DataHandler) : Void;
 	
 	/**
 	* Returns an <code>InputStream</code> representing this object.
 	* @return  the <code>InputStream</code>
 	*/
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Returns the <code>OutputStream</code> for this object.
 	* @return  the <code>OutputStream</code>
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Returns the MIME type of the data represented by this object.
 	* @return  the MIME type
 	*/
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
 	/**
 	* Returns the name of this object.
 	* @return  the name of this object
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }
@@ -366,13 +366,13 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	/**
 	* The constructor.
 	*/
-	@:overload public function new(dch : javax.activation.DataContentHandler, ds : javax.activation.DataSource) : Void;
+	@:overload @:public public function new(dch : javax.activation.DataContentHandler, ds : javax.activation.DataSource) : Void;
 	
 	/**
 	* Return the DataFlavors for this <code>DataContentHandler</code>.
 	* @return  the DataFlavors
 	*/
-	@:overload public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Return the Transfer Data of type DataFlavor from InputStream.
@@ -380,14 +380,14 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	* @param ds        the DataSource
 	* @return          the constructed Object
 	*/
-	@:overload public function getTransferData(df : java.awt.datatransfer.DataFlavor, ds : javax.activation.DataSource) : Dynamic;
+	@:overload @:public public function getTransferData(df : java.awt.datatransfer.DataFlavor, ds : javax.activation.DataSource) : Dynamic;
 	
-	@:overload public function getContent(ds : javax.activation.DataSource) : Dynamic;
+	@:overload @:public public function getContent(ds : javax.activation.DataSource) : Dynamic;
 	
 	/**
 	* Write the object to the output stream.
 	*/
-	@:overload public function writeTo(obj : Dynamic, mimeType : String, os : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(obj : Dynamic, mimeType : String, os : java.io.OutputStream) : Void;
 	
 	
 }
@@ -396,19 +396,19 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	/**
 	* The constructor.
 	*/
-	@:overload public function new(dch : javax.activation.DataContentHandler, obj : Dynamic, mimeType : String) : Void;
+	@:overload @:public public function new(dch : javax.activation.DataContentHandler, obj : Dynamic, mimeType : String) : Void;
 	
 	/**
 	* Return the DataContentHandler for this object.
 	* Used only by the DataHandler class.
 	*/
-	@:overload public function getDCH() : javax.activation.DataContentHandler;
+	@:overload @:public public function getDCH() : javax.activation.DataContentHandler;
 	
 	/**
 	* Return the DataFlavors for this <code>DataContentHandler</code>.
 	* @return  the DataFlavors
 	*/
-	@:overload @:synchronized public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public @:synchronized public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Return the Transfer Data of type DataFlavor from InputStream.
@@ -416,14 +416,14 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	* @param ds        the DataSource
 	* @return          the constructed Object
 	*/
-	@:overload public function getTransferData(df : java.awt.datatransfer.DataFlavor, ds : javax.activation.DataSource) : Dynamic;
+	@:overload @:public public function getTransferData(df : java.awt.datatransfer.DataFlavor, ds : javax.activation.DataSource) : Dynamic;
 	
-	@:overload public function getContent(ds : javax.activation.DataSource) : Dynamic;
+	@:overload @:public public function getContent(ds : javax.activation.DataSource) : Dynamic;
 	
 	/**
 	* Write the object to the output stream.
 	*/
-	@:overload public function writeTo(obj : Dynamic, mimeType : String, os : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(obj : Dynamic, mimeType : String, os : java.io.OutputStream) : Void;
 	
 	
 }

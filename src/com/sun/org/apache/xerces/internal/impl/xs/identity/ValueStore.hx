@@ -28,7 +28,7 @@ extern interface ValueStore
 	*              once within a selection scope.
 	* @param actualValue The value to add.
 	*/
-	@:overload public function addValue(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field, actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList) : Void;
+	@:overload @:public public function addValue(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field, actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList) : Void;
 	
 	/**
 	* Since the valueStore will have access to an error reporter, this
@@ -36,7 +36,7 @@ extern interface ValueStore
 	* @param key  the key of the localized error message
 	* @param args  the list of arguments for substitution.
 	*/
-	@:overload public function reportError(key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function reportError(key : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

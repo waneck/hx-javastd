@@ -32,9 +32,9 @@ extern class DefaultProxySelector extends java.net.ProxySelector
 	* from previous releases (see list above), that list will always
 	* contain 1 single proxy, default being NO_PROXY.
 	*/
-	@:overload override public function select(uri : java.net.URI) : java.util.List<java.net.Proxy>;
+	@:overload @:public override public function select(uri : java.net.URI) : java.util.List<java.net.Proxy>;
 	
-	@:overload override public function connectFailed(uri : java.net.URI, sa : java.net.SocketAddress, ioe : java.io.IOException) : Void;
+	@:overload @:public override public function connectFailed(uri : java.net.URI, sa : java.net.SocketAddress, ioe : java.io.IOException) : Void;
 	
 	
 }

@@ -30,12 +30,12 @@ package javax.swing.text.html;
 	*
 	* @param elem the element to create a view for
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Update any cached values that come from attributes.
 	*/
-	@:overload private function setPropertiesFromAttributes() : Void;
+	@:overload @:protected private function setPropertiesFromAttributes() : Void;
 	
 	/**
 	* Paints the view.
@@ -44,7 +44,7 @@ package javax.swing.text.html;
 	* @param a the allocation region for the view
 	* @see View#paint
 	*/
-	@:overload public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
 	
 	/**
 	* Calculates the desired shape of the rule... this is
@@ -54,7 +54,7 @@ package javax.swing.text.html;
 	* @return the desired span
 	* @see View#getPreferredSpan
 	*/
-	@:overload public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Gets the resize weight for the axis.
@@ -63,7 +63,7 @@ package javax.swing.text.html;
 	* @param axis may be either X_AXIS or Y_AXIS
 	* @return the weight
 	*/
-	@:overload public function getResizeWeight(axis : Int) : Int;
+	@:overload @:public override public function getResizeWeight(axis : Int) : Int;
 	
 	/**
 	* Determines how attractive a break opportunity in
@@ -80,9 +80,9 @@ package javax.swing.text.html;
 	* @return the weight, which should be a value between
 	*   ForcedBreakWeight and BadBreakWeight.
 	*/
-	@:overload public function getBreakWeight(axis : Int, pos : Single, len : Single) : Int;
+	@:overload @:public override public function getBreakWeight(axis : Int, pos : Single, len : Single) : Int;
 	
-	@:overload public function breakView(axis : Int, offset : Int, pos : Single, len : Single) : javax.swing.text.View;
+	@:overload @:public override public function breakView(axis : Int, offset : Int, pos : Single, len : Single) : javax.swing.text.View;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -95,7 +95,7 @@ package javax.swing.text.html;
 	* represent a valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload @:public override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -108,16 +108,16 @@ package javax.swing.text.html;
 	*  given point of view
 	* @see View#viewToModel
 	*/
-	@:overload public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Fetches the attributes to use when rendering.  This is
 	* implemented to multiplex the attributes specified in the
 	* model with a StyleSheet.
 	*/
-	@:overload public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public override public function getAttributes() : javax.swing.text.AttributeSet;
 	
-	@:overload public function changedUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function changedUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	
 }

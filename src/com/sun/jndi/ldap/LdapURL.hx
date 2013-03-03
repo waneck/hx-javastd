@@ -28,47 +28,47 @@ extern class LdapURL extends com.sun.jndi.toolkit.url.Uri
 	/**
 	* Creates an LdapURL object from an LDAP URL string.
 	*/
-	@:overload public function new(url : String) : Void;
+	@:overload @:public public function new(url : String) : Void;
 	
 	/**
 	* Returns true if the URL is an LDAPS URL.
 	*/
-	@:overload public function useSsl() : Bool;
+	@:overload @:public public function useSsl() : Bool;
 	
 	/**
 	* Returns the LDAP URL's distinguished name.
 	*/
-	@:overload public function getDN() : String;
+	@:overload @:public public function getDN() : String;
 	
 	/**
 	* Returns the LDAP URL's attributes.
 	*/
-	@:overload public function getAttributes() : String;
+	@:overload @:public public function getAttributes() : String;
 	
 	/**
 	* Returns the LDAP URL's scope.
 	*/
-	@:overload public function getScope() : String;
+	@:overload @:public public function getScope() : String;
 	
 	/**
 	* Returns the LDAP URL's filter.
 	*/
-	@:overload public function getFilter() : String;
+	@:overload @:public public function getFilter() : String;
 	
 	/**
 	* Returns the LDAP URL's extensions.
 	*/
-	@:overload public function getExtensions() : String;
+	@:overload @:public public function getExtensions() : String;
 	
 	/**
 	* Given a space-separated list of LDAP URLs, returns an array of strings.
 	*/
-	@:overload public static function fromList(urlList : String) : java.NativeArray<String>;
+	@:overload @:public @:static public static function fromList(urlList : String) : java.NativeArray<String>;
 	
 	/**
 	* Derermines whether an LDAP URL has query components.
 	*/
-	@:overload public static function hasQueryComponents(url : String) : Bool;
+	@:overload @:public @:static public static function hasQueryComponents(url : String) : Bool;
 	
 	
 }

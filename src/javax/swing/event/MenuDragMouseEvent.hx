@@ -49,7 +49,7 @@ extern class MenuDragMouseEvent extends java.awt.event.MouseEvent
 	* @param m             a MenuSelectionManager object that handles selections
 	* @see MouseEvent#MouseEvent(java.awt.Component, int, long, int, int, int, int, int, int, boolean, int)
 	*/
-	@:overload public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, x : Int, y : Int, clickCount : Int, popupTrigger : Bool, p : java.NativeArray<javax.swing.MenuElement>, m : javax.swing.MenuSelectionManager) : Void;
+	@:overload @:public public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, x : Int, y : Int, clickCount : Int, popupTrigger : Bool, p : java.NativeArray<javax.swing.MenuElement>, m : javax.swing.MenuSelectionManager) : Void;
 	
 	/**
 	* Constructs a MenuDragMouseEvent object.
@@ -80,21 +80,21 @@ extern class MenuDragMouseEvent extends java.awt.event.MouseEvent
 	* @see MouseEvent#MouseEvent(java.awt.Component, int, long, int, int, int, int, int, int, boolean, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, x : Int, y : Int, xAbs : Int, yAbs : Int, clickCount : Int, popupTrigger : Bool, p : java.NativeArray<javax.swing.MenuElement>, m : javax.swing.MenuSelectionManager) : Void;
+	@:require(java6) @:overload @:public public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, x : Int, y : Int, xAbs : Int, yAbs : Int, clickCount : Int, popupTrigger : Bool, p : java.NativeArray<javax.swing.MenuElement>, m : javax.swing.MenuSelectionManager) : Void;
 	
 	/**
 	* Returns the path to the selected menu item.
 	*
 	* @return an array of MenuElement objects representing the path value
 	*/
-	@:overload public function getPath() : java.NativeArray<javax.swing.MenuElement>;
+	@:overload @:public public function getPath() : java.NativeArray<javax.swing.MenuElement>;
 	
 	/**
 	* Returns the current menu selection manager.
 	*
 	* @return a MenuSelectionManager object
 	*/
-	@:overload public function getMenuSelectionManager() : javax.swing.MenuSelectionManager;
+	@:overload @:public public function getMenuSelectionManager() : javax.swing.MenuSelectionManager;
 	
 	
 }

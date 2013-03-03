@@ -37,7 +37,7 @@ extern class MemoryNotificationInfo
 	* The value of this notification type is
 	* <tt>java.management.memory.threshold.exceeded</tt>.
 	*/
-	public static var MEMORY_THRESHOLD_EXCEEDED(default, null) : String;
+	@:public @:static @:final public static var MEMORY_THRESHOLD_EXCEEDED(default, null) : String;
 	
 	/**
 	* Notification type denoting that
@@ -50,7 +50,7 @@ extern class MemoryNotificationInfo
 	* The value of this notification type is
 	* <tt>java.management.memory.collection.threshold.exceeded</tt>.
 	*/
-	public static var MEMORY_COLLECTION_THRESHOLD_EXCEEDED(default, null) : String;
+	@:public @:static @:final public static var MEMORY_COLLECTION_THRESHOLD_EXCEEDED(default, null) : String;
 	
 	/**
 	* Constructs a <tt>MemoryNotificationInfo</tt> object.
@@ -59,7 +59,7 @@ extern class MemoryNotificationInfo
 	* @param usage Memory usage of the memory pool.
 	* @param count The threshold crossing count.
 	*/
-	@:overload public function new(poolName : String, usage : java.lang.management.MemoryUsage, count : haxe.Int64) : Void;
+	@:overload @:public public function new(poolName : String, usage : java.lang.management.MemoryUsage, count : haxe.Int64) : Void;
 	
 	/**
 	* Returns the name of the memory pool that triggers this notification.
@@ -67,7 +67,7 @@ extern class MemoryNotificationInfo
 	*
 	* @return the name of the memory pool that triggers this notification.
 	*/
-	@:overload public function getPoolName() : String;
+	@:overload @:public public function getPoolName() : String;
 	
 	/**
 	* Returns the memory usage of the memory pool
@@ -76,7 +76,7 @@ extern class MemoryNotificationInfo
 	* @return the memory usage of the memory pool
 	* when this notification was constructed.
 	*/
-	@:overload public function getUsage() : java.lang.management.MemoryUsage;
+	@:overload @:public public function getUsage() : java.lang.management.MemoryUsage;
 	
 	/**
 	* Returns the number of times that the memory usage has crossed
@@ -91,7 +91,7 @@ extern class MemoryNotificationInfo
 	* @return the number of times that the memory usage has crossed
 	* a threshold when the notification was constructed.
 	*/
-	@:overload public function getCount() : haxe.Int64;
+	@:overload @:public public function getCount() : haxe.Int64;
 	
 	/**
 	* Returns a <tt>MemoryNotificationInfo</tt> object represented by the
@@ -129,7 +129,7 @@ extern class MemoryNotificationInfo
 	*         by <tt>cd</tt> if <tt>cd</tt> is not <tt>null</tt>;
 	*         <tt>null</tt> otherwise.
 	*/
-	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : java.lang.management.MemoryNotificationInfo;
+	@:overload @:public @:static public static function from(cd : javax.management.openmbean.CompositeData) : java.lang.management.MemoryNotificationInfo;
 	
 	
 }

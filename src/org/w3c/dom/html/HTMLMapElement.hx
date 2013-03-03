@@ -47,15 +47,15 @@ extern interface HTMLMapElement extends org.w3c.dom.html.HTMLElement
 	/**
 	*  The list of areas defined for the image map.
 	*/
-	@:overload public function getAreas() : org.w3c.dom.html.HTMLCollection;
+	@:overload @:public public function getAreas() : org.w3c.dom.html.HTMLCollection;
 	
 	/**
 	*  Names the map (for use with <code>usemap</code> ). See the  name
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	
 }

@@ -30,59 +30,59 @@ package com.sun.xml.internal.bind.marshaller;
 */
 extern class SAX2DOMEx implements org.xml.sax.ContentHandler
 {
-	private var nodeStack(default, null) : java.util.Stack<org.w3c.dom.Node>;
+	@:protected @:final private var nodeStack(default, null) : java.util.Stack<org.w3c.dom.Node>;
 	
 	/**
 	* Document object that owns the specified node.
 	*/
-	private var document(default, null) : org.w3c.dom.Document;
+	@:protected @:final private var document(default, null) : org.w3c.dom.Document;
 	
 	/**
 	* @param   node
 	*      Nodes will be created and added under this object.
 	*/
-	@:overload public function new(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* @param   node
 	*      Nodes will be created and added under this object.
 	*/
-	@:overload public function new(node : org.w3c.dom.Node, isConsolidate : Bool) : Void;
+	@:overload @:public public function new(node : org.w3c.dom.Node, isConsolidate : Bool) : Void;
 	
 	/**
 	* Creates a fresh empty DOM document and adds nodes under this document.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:final public function getCurrentElement() : org.w3c.dom.Element;
+	@:overload @:public @:final public function getCurrentElement() : org.w3c.dom.Element;
 	
-	@:overload public function getDOM() : org.w3c.dom.Node;
+	@:overload @:public public function getDOM() : org.w3c.dom.Node;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
-	@:overload private function namespace(element : org.w3c.dom.Element, prefix : String, uri : String) : Void;
+	@:overload @:protected private function namespace(element : org.w3c.dom.Element, prefix : String, uri : String) : Void;
 	
-	@:overload public function startElement(namespace : String, localName : String, qName : String, attrs : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(namespace : String, localName : String, qName : String, attrs : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function endElement(namespace : String, localName : String, qName : String) : Void;
+	@:overload @:public public function endElement(namespace : String, localName : String, qName : String) : Void;
 	
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload private function characters(s : String) : org.w3c.dom.Text;
+	@:overload @:protected private function characters(s : String) : org.w3c.dom.Text;
 	
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
 	
 }

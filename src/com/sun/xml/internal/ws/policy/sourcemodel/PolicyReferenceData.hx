@@ -26,20 +26,20 @@ package com.sun.xml.internal.ws.policy.sourcemodel;
 @:internal extern class PolicyReferenceData
 {
 	/** Creates a new instance of PolicyReferenceData */
-	@:overload public function new(referencedModelUri : java.net.URI) : Void;
+	@:overload @:public public function new(referencedModelUri : java.net.URI) : Void;
 	
-	@:overload public function new(referencedModelUri : java.net.URI, expectedDigest : String, usedDigestAlgorithm : java.net.URI) : Void;
+	@:overload @:public public function new(referencedModelUri : java.net.URI, expectedDigest : String, usedDigestAlgorithm : java.net.URI) : Void;
 	
-	@:overload public function getReferencedModelUri() : java.net.URI;
+	@:overload @:public public function getReferencedModelUri() : java.net.URI;
 	
-	@:overload public function getDigest() : String;
+	@:overload @:public public function getDigest() : String;
 	
-	@:overload public function getDigestAlgorithmUri() : java.net.URI;
+	@:overload @:public public function getDigestAlgorithmUri() : java.net.URI;
 	
 	/**
 	* An {@code Object.toString()} method override.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* A helper method that appends indented string representation of this instance to the input string buffer.
@@ -48,7 +48,7 @@ package com.sun.xml.internal.ws.policy.sourcemodel;
 	* @param buffer buffer to be used for appending string representation of this instance
 	* @return modified buffer containing new string representation of the instance
 	*/
-	@:overload public function toString(indentLevel : Int, buffer : java.lang.StringBuffer) : java.lang.StringBuffer;
+	@:overload @:public public function toString(indentLevel : Int, buffer : java.lang.StringBuffer) : java.lang.StringBuffer;
 	
 	
 }

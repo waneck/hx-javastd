@@ -28,14 +28,14 @@ extern class ConfigFile extends javax.security.auth.login.Configuration
 	/**
 	* Create a new <code>Configuration</code> object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a new <code>Configuration</code> object from the specified URI.
 	*
 	* @param uri Create a new Configuration object from this URI.
 	*/
-	@:overload public function new(uri : java.net.URI) : Void;
+	@:overload @:public public function new(uri : java.net.URI) : Void;
 	
 	/**
 	* Retrieve an entry from the Configuration using an application name
@@ -49,7 +49,7 @@ extern class ConfigFile extends javax.security.auth.login.Configuration
 	*          application, or null if this application has no configured
 	*          LoginModules.
 	*/
-	@:overload public function getAppConfigurationEntry(applicationName : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
+	@:overload @:public override public function getAppConfigurationEntry(applicationName : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
 	
 	/**
 	* Refresh and reload the Configuration by re-reading all of the
@@ -60,7 +60,7 @@ extern class ConfigFile extends javax.security.auth.login.Configuration
 	* @exception SecurityException if the caller does not have permission
 	*                          to refresh the Configuration.
 	*/
-	@:overload @:synchronized public function refresh() : Void;
+	@:overload @:public @:synchronized override public function refresh() : Void;
 	
 	
 }

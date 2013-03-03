@@ -25,23 +25,23 @@ package org.omg.PortableServer;
 	 */
 extern class RequestProcessingPolicyValue implements org.omg.CORBA.portable.IDLEntity
 {
-	public static var _USE_ACTIVE_OBJECT_MAP_ONLY(default, null) : Int;
+	@:public @:static @:final public static var _USE_ACTIVE_OBJECT_MAP_ONLY(default, null) : Int;
 	
-	public static var USE_ACTIVE_OBJECT_MAP_ONLY(default, null) : org.omg.PortableServer.RequestProcessingPolicyValue;
+	@:public @:static @:final public static var USE_ACTIVE_OBJECT_MAP_ONLY(default, null) : org.omg.PortableServer.RequestProcessingPolicyValue;
 	
-	public static var _USE_DEFAULT_SERVANT(default, null) : Int;
+	@:public @:static @:final public static var _USE_DEFAULT_SERVANT(default, null) : Int;
 	
-	public static var USE_DEFAULT_SERVANT(default, null) : org.omg.PortableServer.RequestProcessingPolicyValue;
+	@:public @:static @:final public static var USE_DEFAULT_SERVANT(default, null) : org.omg.PortableServer.RequestProcessingPolicyValue;
 	
-	public static var _USE_SERVANT_MANAGER(default, null) : Int;
+	@:public @:static @:final public static var _USE_SERVANT_MANAGER(default, null) : Int;
 	
-	public static var USE_SERVANT_MANAGER(default, null) : org.omg.PortableServer.RequestProcessingPolicyValue;
+	@:public @:static @:final public static var USE_SERVANT_MANAGER(default, null) : org.omg.PortableServer.RequestProcessingPolicyValue;
 	
-	@:overload public function value() : Int;
+	@:overload @:public public function value() : Int;
 	
-	@:overload public static function from_int(value : Int) : org.omg.PortableServer.RequestProcessingPolicyValue;
+	@:overload @:public @:static public static function from_int(value : Int) : org.omg.PortableServer.RequestProcessingPolicyValue;
 	
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	
 }

@@ -29,7 +29,7 @@ package sun.nio.ch;
 */
 @:internal extern interface Groupable
 {
-	@:overload public function group() : sun.nio.ch.AsynchronousChannelGroupImpl;
+	@:overload @:public public function group() : sun.nio.ch.AsynchronousChannelGroupImpl;
 	
 	
 }

@@ -37,7 +37,7 @@ extern class LayeredHighlighter implements javax.swing.text.Highlighter
 	* @param editor JTextComponent
 	* @param view View instance being rendered
 	*/
-	@:overload @:abstract public function paintLayeredHighlights(g : java.awt.Graphics, p0 : Int, p1 : Int, viewBounds : java.awt.Shape, editor : javax.swing.text.JTextComponent, view : javax.swing.text.View) : Void;
+	@:overload @:public @:abstract public function paintLayeredHighlights(g : java.awt.Graphics, p0 : Int, p1 : Int, viewBounds : java.awt.Shape, editor : javax.swing.text.JTextComponent, view : javax.swing.text.View) : Void;
 	
 	/**
 	* Called when the UI is being removed from the
@@ -46,14 +46,14 @@ extern class LayeredHighlighter implements javax.swing.text.Highlighter
 	*
 	* @param c the JTextComponent editor
 	*/
-	@:overload @:public public function deinstall(c : javax.swing.text.JTextComponent) : Void;
+	@:overload @:public @:public public function deinstall(c : javax.swing.text.JTextComponent) : Void;
 	
 	/**
 	* Fetches the current list of highlights.
 	*
 	* @return the highlight list
 	*/
-	@:overload @:public public function getHighlights() : java.NativeArray<javax.swing.text.Highlighter.Highlighter_Highlight>;
+	@:overload @:public @:public public function getHighlights() : java.NativeArray<javax.swing.text.Highlighter.Highlighter_Highlight>;
 	
 	/**
 	* Called when the UI is being installed into the
@@ -63,26 +63,26 @@ extern class LayeredHighlighter implements javax.swing.text.Highlighter
 	*
 	* @param c the JTextComponent editor
 	*/
-	@:overload @:public public function install(c : javax.swing.text.JTextComponent) : Void;
+	@:overload @:public @:public public function install(c : javax.swing.text.JTextComponent) : Void;
 	
 	/**
 	* Removes a highlight from the view.
 	*
 	* @param tag  which highlight to remove
 	*/
-	@:overload @:public public function removeHighlight(tag : Dynamic) : Void;
+	@:overload @:public @:public public function removeHighlight(tag : Dynamic) : Void;
 	
 	/**
 	* Removes all highlights this highlighter is responsible for.
 	*/
-	@:overload @:public public function removeAllHighlights() : Void;
+	@:overload @:public @:public public function removeAllHighlights() : Void;
 	
 	/**
 	* Renders the highlights.
 	*
 	* @param g the graphics context.
 	*/
-	@:overload @:public public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public @:public public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Changes the given highlight to span a different portion of
@@ -95,7 +95,7 @@ extern class LayeredHighlighter implements javax.swing.text.Highlighter
 	* @param p1 the end of the range >= p0
 	* @exception BadLocationException for an invalid range specification
 	*/
-	@:overload @:public public function changeHighlight(tag : Dynamic, p0 : Int, p1 : Int) : Void;
+	@:overload @:public @:public public function changeHighlight(tag : Dynamic, p0 : Int, p1 : Int) : Void;
 	
 	/**
 	* Adds a highlight to the view.  Returns a tag that can be used
@@ -107,7 +107,7 @@ extern class LayeredHighlighter implements javax.swing.text.Highlighter
 	* @return an object that refers to the highlight
 	* @exception BadLocationException for an invalid range specification
 	*/
-	@:overload @:public public function addHighlight(p0 : Int, p1 : Int, p : javax.swing.text.Highlighter.Highlighter_HighlightPainter) : Dynamic;
+	@:overload @:public @:public public function addHighlight(p0 : Int, p1 : Int, p : javax.swing.text.Highlighter.Highlighter_HighlightPainter) : Dynamic;
 	
 	
 }
@@ -116,7 +116,7 @@ extern class LayeredHighlighter implements javax.swing.text.Highlighter
 */
 @:native('javax$swing$text$LayeredHighlighter$LayerPainter') extern class LayeredHighlighter_LayerPainter implements javax.swing.text.Highlighter.Highlighter_HighlightPainter
 {
-	@:overload @:abstract public function paintLayer(g : java.awt.Graphics, p0 : Int, p1 : Int, viewBounds : java.awt.Shape, editor : javax.swing.text.JTextComponent, view : javax.swing.text.View) : java.awt.Shape;
+	@:overload @:public @:abstract public function paintLayer(g : java.awt.Graphics, p0 : Int, p1 : Int, viewBounds : java.awt.Shape, editor : javax.swing.text.JTextComponent, view : javax.swing.text.View) : java.awt.Shape;
 	
 	/**
 	* Renders the highlight.
@@ -127,7 +127,7 @@ extern class LayeredHighlighter implements javax.swing.text.Highlighter
 	* @param bounds the bounding box for the highlight
 	* @param c the editor
 	*/
-	@:overload @:public public function paint(g : java.awt.Graphics, p0 : Int, p1 : Int, bounds : java.awt.Shape, c : javax.swing.text.JTextComponent) : Void;
+	@:overload @:public @:public public function paint(g : java.awt.Graphics, p0 : Int, p1 : Int, bounds : java.awt.Shape, c : javax.swing.text.JTextComponent) : Void;
 	
 	
 }

@@ -30,7 +30,7 @@ extern class CompositeView extends javax.swing.text.View
 	*
 	* @param elem  the element this view is responsible for
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Loads all of the children to initialize the view.
@@ -43,7 +43,7 @@ extern class CompositeView extends javax.swing.text.View
 	* @param f the view factory
 	* @see #setParent
 	*/
-	@:overload private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:protected private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Sets the parent of the view.
@@ -60,7 +60,7 @@ extern class CompositeView extends javax.swing.text.View
 	*
 	* @param parent the parent of the view, <code>null</code> if none
 	*/
-	@:overload override public function setParent(parent : javax.swing.text.View) : Void;
+	@:overload @:public override public function setParent(parent : javax.swing.text.View) : Void;
 	
 	/**
 	* Returns the number of child views of this view.
@@ -68,7 +68,7 @@ extern class CompositeView extends javax.swing.text.View
 	* @return the number of views >= 0
 	* @see #getView
 	*/
-	@:overload override public function getViewCount() : Int;
+	@:overload @:public override public function getViewCount() : Int;
 	
 	/**
 	* Returns the n-th view in this container.
@@ -76,7 +76,7 @@ extern class CompositeView extends javax.swing.text.View
 	* @param n the number of the desired view, >= 0 && < getViewCount()
 	* @return the view at index <code>n</code>
 	*/
-	@:overload override public function getView(n : Int) : javax.swing.text.View;
+	@:overload @:public override public function getView(n : Int) : javax.swing.text.View;
 	
 	/**
 	* Replaces child views.  If there are no views to remove
@@ -94,7 +94,7 @@ extern class CompositeView extends javax.swing.text.View
 	*  <code>null</code>
 	*   to indicate no children are being added (useful to remove)
 	*/
-	@:overload override public function replace(offset : Int, length : Int, views : java.NativeArray<javax.swing.text.View>) : Void;
+	@:overload @:public override public function replace(offset : Int, length : Int, views : java.NativeArray<javax.swing.text.View>) : Void;
 	
 	/**
 	* Fetches the allocation for the given child view to
@@ -105,7 +105,7 @@ extern class CompositeView extends javax.swing.text.View
 	* @param a  the allocation to this view
 	* @return the allocation to the child
 	*/
-	@:overload override public function getChildAllocation(index : Int, a : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public override public function getChildAllocation(index : Int, a : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -120,7 +120,7 @@ extern class CompositeView extends javax.swing.text.View
 	*   not represent a valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload @:public override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -143,7 +143,7 @@ extern class CompositeView extends javax.swing.text.View
 	* @exception IllegalArgumentException for an invalid bias argument
 	* @see View#viewToModel
 	*/
-	@:overload override public function modelToView(p0 : Int, b0 : javax.swing.text.Position.Position_Bias, p1 : Int, b1 : javax.swing.text.Position.Position_Bias, a : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public override public function modelToView(p0 : Int, b0 : javax.swing.text.Position.Position_Bias, p1 : Int, b1 : javax.swing.text.Position.Position_Bias, a : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -158,7 +158,7 @@ extern class CompositeView extends javax.swing.text.View
 	*  given point in the view >= 0
 	* @see View#viewToModel
 	*/
-	@:overload override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Provides a way to determine the next visually represented model
@@ -187,7 +187,7 @@ extern class CompositeView extends javax.swing.text.View
 	* @exception BadLocationException
 	* @exception IllegalArgumentException if <code>direction</code> is invalid
 	*/
-	@:overload override public function getNextVisualPositionFrom(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function getNextVisualPositionFrom(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Returns the child view index representing the given
@@ -200,7 +200,7 @@ extern class CompositeView extends javax.swing.text.View
 	*   -1 if no view represents that position
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getViewIndex(pos : Int, b : javax.swing.text.Position.Position_Bias) : Int;
+	@:require(java3) @:overload @:public override public function getViewIndex(pos : Int, b : javax.swing.text.Position.Position_Bias) : Int;
 	
 	/**
 	* Tests whether a point lies before the rectangle range.
@@ -210,7 +210,7 @@ extern class CompositeView extends javax.swing.text.View
 	* @param alloc the rectangle
 	* @return true if the point is before the specified range
 	*/
-	@:overload @:abstract private function isBefore(x : Int, y : Int, alloc : java.awt.Rectangle) : Bool;
+	@:overload @:protected @:abstract private function isBefore(x : Int, y : Int, alloc : java.awt.Rectangle) : Bool;
 	
 	/**
 	* Tests whether a point lies after the rectangle range.
@@ -220,7 +220,7 @@ extern class CompositeView extends javax.swing.text.View
 	* @param alloc the rectangle
 	* @return true if the point is after the specified range
 	*/
-	@:overload @:abstract private function isAfter(x : Int, y : Int, alloc : java.awt.Rectangle) : Bool;
+	@:overload @:protected @:abstract private function isAfter(x : Int, y : Int, alloc : java.awt.Rectangle) : Bool;
 	
 	/**
 	* Fetches the child view at the given coordinates.
@@ -231,7 +231,7 @@ extern class CompositeView extends javax.swing.text.View
 	*   be changed to the child's allocation on exit
 	* @return the child view
 	*/
-	@:overload @:abstract private function getViewAtPoint(x : Int, y : Int, alloc : java.awt.Rectangle) : javax.swing.text.View;
+	@:overload @:protected @:abstract private function getViewAtPoint(x : Int, y : Int, alloc : java.awt.Rectangle) : javax.swing.text.View;
 	
 	/**
 	* Returns the allocation for a given child.
@@ -240,7 +240,7 @@ extern class CompositeView extends javax.swing.text.View
 	* @param a  the allocation to the interior of the box on entry,
 	*   and the allocation of the child view at the index on exit.
 	*/
-	@:overload @:abstract private function childAllocation(index : Int, a : java.awt.Rectangle) : Void;
+	@:overload @:protected @:abstract private function childAllocation(index : Int, a : java.awt.Rectangle) : Void;
 	
 	/**
 	* Fetches the child view that represents the given position in
@@ -253,7 +253,7 @@ extern class CompositeView extends javax.swing.text.View
 	* @return  the view representing the given position, or
 	*   <code>null</code> if there isn't one
 	*/
-	@:overload private function getViewAtPosition(pos : Int, a : java.awt.Rectangle) : javax.swing.text.View;
+	@:overload @:protected private function getViewAtPosition(pos : Int, a : java.awt.Rectangle) : javax.swing.text.View;
 	
 	/**
 	* Fetches the child view index representing the given position in
@@ -264,7 +264,7 @@ extern class CompositeView extends javax.swing.text.View
 	* @return  index of the view representing the given position, or
 	*   -1 if no view represents that position
 	*/
-	@:overload private function getViewIndexAtPosition(pos : Int) : Int;
+	@:overload @:protected private function getViewIndexAtPosition(pos : Int) : Int;
 	
 	/**
 	* Translates the immutable allocation given to the view
@@ -284,7 +284,7 @@ extern class CompositeView extends javax.swing.text.View
 	*   given allocation was <code>null</code>,
 	*   the return value is <code>null</code>
 	*/
-	@:overload private function getInsideAllocation(a : java.awt.Shape) : java.awt.Rectangle;
+	@:overload @:protected private function getInsideAllocation(a : java.awt.Shape) : java.awt.Rectangle;
 	
 	/**
 	* Sets the insets from the paragraph attributes specified in
@@ -292,7 +292,7 @@ extern class CompositeView extends javax.swing.text.View
 	*
 	* @param attr the attributes
 	*/
-	@:overload private function setParagraphInsets(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:protected private function setParagraphInsets(attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Sets the insets for the view.
@@ -302,35 +302,35 @@ extern class CompositeView extends javax.swing.text.View
 	* @param bottom the bottom inset >= 0
 	* @param right the right inset >= 0
 	*/
-	@:overload private function setInsets(top : java.StdTypes.Int16, left : java.StdTypes.Int16, bottom : java.StdTypes.Int16, right : java.StdTypes.Int16) : Void;
+	@:overload @:protected private function setInsets(top : java.StdTypes.Int16, left : java.StdTypes.Int16, bottom : java.StdTypes.Int16, right : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Gets the left inset.
 	*
 	* @return the inset >= 0
 	*/
-	@:overload private function getLeftInset() : java.StdTypes.Int16;
+	@:overload @:protected private function getLeftInset() : java.StdTypes.Int16;
 	
 	/**
 	* Gets the right inset.
 	*
 	* @return the inset >= 0
 	*/
-	@:overload private function getRightInset() : java.StdTypes.Int16;
+	@:overload @:protected private function getRightInset() : java.StdTypes.Int16;
 	
 	/**
 	* Gets the top inset.
 	*
 	* @return the inset >= 0
 	*/
-	@:overload private function getTopInset() : java.StdTypes.Int16;
+	@:overload @:protected private function getTopInset() : java.StdTypes.Int16;
 	
 	/**
 	* Gets the bottom inset.
 	*
 	* @return the inset >= 0
 	*/
-	@:overload private function getBottomInset() : java.StdTypes.Int16;
+	@:overload @:protected private function getBottomInset() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the next visual position for the cursor, in either the
@@ -356,7 +356,7 @@ extern class CompositeView extends javax.swing.text.View
 	*
 	* @return the next position west of the passed in position
 	*/
-	@:overload private function getNextNorthSouthVisualPositionFrom(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:protected private function getNextNorthSouthVisualPositionFrom(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Returns the next visual position for the cursor, in either the
@@ -380,7 +380,7 @@ extern class CompositeView extends javax.swing.text.View
 	* @exception IllegalArgumentException if <code>direction</code> is invalid
 	* @see #getNextVisualPositionFrom
 	*/
-	@:overload private function getNextEastWestVisualPositionFrom(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:protected private function getNextEastWestVisualPositionFrom(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Determines in which direction the next view lays.
@@ -405,7 +405,7 @@ extern class CompositeView extends javax.swing.text.View
 	*          <code>Position.Bias.Backward</code>
 	* @return false
 	*/
-	@:overload private function flipEastAndWestAtEnds(position : Int, bias : javax.swing.text.Position.Position_Bias) : Bool;
+	@:overload @:protected private function flipEastAndWestAtEnds(position : Int, bias : javax.swing.text.Position.Position_Bias) : Bool;
 	
 	
 }

@@ -46,13 +46,13 @@ package com.sun.xml.internal.rngom.parse.compact;
 */
 extern class CompactParseable implements com.sun.xml.internal.rngom.parse.Parseable
 {
-	@:overload public function new(_in : org.xml.sax.InputSource, eh : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function new(_in : org.xml.sax.InputSource, eh : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload public function parse(sb : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function parse(sb : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function parseInclude(uri : String, sb : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, g : com.sun.xml.internal.rngom.ast.builder.IncludedGrammar<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, inheritedNs : String) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function parseInclude(uri : String, sb : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, g : com.sun.xml.internal.rngom.ast.builder.IncludedGrammar<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, inheritedNs : String) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function parseExternal(uri : String, sb : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, scope : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, inheritedNs : String) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function parseExternal(uri : String, sb : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, scope : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, inheritedNs : String) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
 	
 }

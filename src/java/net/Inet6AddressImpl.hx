@@ -35,17 +35,17 @@ package java.net;
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:native public function getLocalHostName() : String;
+	@:require(java4) @:overload @:public @:native public function getLocalHostName() : String;
 	
-	@:overload @:native public function lookupAllHostAddr(hostname : String) : java.NativeArray<java.net.InetAddress>;
+	@:overload @:public @:native public function lookupAllHostAddr(hostname : String) : java.NativeArray<java.net.InetAddress>;
 	
-	@:overload @:native public function getHostByAddr(addr : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public @:native public function getHostByAddr(addr : java.NativeArray<java.StdTypes.Int8>) : String;
 	
-	@:overload public function isReachable(addr : java.net.InetAddress, timeout : Int, netif : java.net.NetworkInterface, ttl : Int) : Bool;
+	@:overload @:public public function isReachable(addr : java.net.InetAddress, timeout : Int, netif : java.net.NetworkInterface, ttl : Int) : Bool;
 	
-	@:overload @:synchronized public function anyLocalAddress() : java.net.InetAddress;
+	@:overload @:public @:synchronized public function anyLocalAddress() : java.net.InetAddress;
 	
-	@:overload @:synchronized public function loopbackAddress() : java.net.InetAddress;
+	@:overload @:public @:synchronized public function loopbackAddress() : java.net.InetAddress;
 	
 	
 }

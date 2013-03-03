@@ -25,7 +25,7 @@ package com.sun.corba.se.impl.monitoring;
 */
 extern class MonitoredAttributeInfoFactoryImpl implements com.sun.corba.se.spi.monitoring.MonitoredAttributeInfoFactory
 {
-	@:overload public function createMonitoredAttributeInfo(description : String, type : Class<Dynamic>, isWritable : Bool, isStatistic : Bool) : com.sun.corba.se.spi.monitoring.MonitoredAttributeInfo;
+	@:overload @:public public function createMonitoredAttributeInfo(description : String, type : Class<Dynamic>, isWritable : Bool, isStatistic : Bool) : com.sun.corba.se.spi.monitoring.MonitoredAttributeInfo;
 	
 	
 }

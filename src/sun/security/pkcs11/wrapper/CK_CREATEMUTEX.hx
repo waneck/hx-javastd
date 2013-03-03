@@ -60,7 +60,7 @@ extern interface CK_CREATEMUTEX
 	* @return The mutex (lock) object.
 	* @exception PKCS11Exception
 	*/
-	@:overload public function new() : Dynamic;
+	@:overload @:public public function new() : Dynamic;
 	
 	
 }

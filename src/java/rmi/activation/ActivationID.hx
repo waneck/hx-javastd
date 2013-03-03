@@ -36,7 +36,7 @@ extern class ActivationID implements java.io.Serializable
 	* activating the object
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(activator : java.rmi.activation.Activator) : Void;
+	@:require(java2) @:overload @:public public function new(activator : java.rmi.activation.Activator) : Void;
 	
 	/**
 	* Activate the object for this id.
@@ -50,7 +50,7 @@ extern class ActivationID implements java.io.Serializable
 	* @exception RemoteException if remote call fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function activate(force : Bool) : java.rmi.Remote;
+	@:require(java2) @:overload @:public public function activate(force : Bool) : java.rmi.Remote;
 	
 	/**
 	* Returns a hashcode for the activation id.  Two identifiers that
@@ -59,7 +59,7 @@ extern class ActivationID implements java.io.Serializable
 	* @see java.util.Hashtable
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function hashCode() : Int;
+	@:require(java2) @:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares two activation ids for content equality.
@@ -73,7 +73,7 @@ extern class ActivationID implements java.io.Serializable
 	* @see             java.util.Hashtable
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function equals(obj : Dynamic) : Bool;
+	@:require(java2) @:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

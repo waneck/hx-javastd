@@ -32,7 +32,7 @@ extern class HttpRetryException extends java.io.IOException
 	* @param   detail   the detail message.
 	* @param   code   the HTTP response code from server.
 	*/
-	@:overload public function new(detail : String, code : Int) : Void;
+	@:overload @:public public function new(detail : String, code : Int) : Void;
 	
 	/**
 	* Constructs a new <code>HttpRetryException</code> with detail message
@@ -42,14 +42,14 @@ extern class HttpRetryException extends java.io.IOException
 	* @param   code   the HTTP response code from server.
 	* @param   location   the URL to be redirected to
 	*/
-	@:overload public function new(detail : String, code : Int, location : String) : Void;
+	@:overload @:public public function new(detail : String, code : Int, location : String) : Void;
 	
 	/**
 	* Returns the http response code
 	*
 	* @return  The http response code.
 	*/
-	@:overload public function responseCode() : Int;
+	@:overload @:public public function responseCode() : Int;
 	
 	/**
 	* Returns a string explaining why the http request could
@@ -57,7 +57,7 @@ extern class HttpRetryException extends java.io.IOException
 	*
 	* @return  The reason string
 	*/
-	@:overload public function getReason() : String;
+	@:overload @:public public function getReason() : String;
 	
 	/**
 	* Returns the value of the Location header field if the
@@ -65,7 +65,7 @@ extern class HttpRetryException extends java.io.IOException
 	*
 	* @return The location string
 	*/
-	@:overload public function getLocation() : String;
+	@:overload @:public public function getLocation() : String;
 	
 	
 }

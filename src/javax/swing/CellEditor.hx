@@ -59,7 +59,7 @@ extern interface CellEditor
 	* Returns the value contained in the editor.
 	* @return the value contained in the editor
 	*/
-	@:overload public function getCellEditorValue() : Dynamic;
+	@:overload @:public @:public public function getCellEditorValue() : Dynamic;
 	
 	/**
 	* Asks the editor if it can start editing using <code>anEvent</code>.
@@ -75,7 +75,7 @@ extern interface CellEditor
 	* @return  true if editing can be started
 	* @see #shouldSelectCell
 	*/
-	@:overload public function isCellEditable(anEvent : java.util.EventObject) : Bool;
+	@:overload @:public public function isCellEditable(anEvent : java.util.EventObject) : Bool;
 	
 	/**
 	* Returns true if the editing cell should be selected, false otherwise.
@@ -94,7 +94,7 @@ extern interface CellEditor
 	*    otherwise returns false
 	* @see #isCellEditable
 	*/
-	@:overload public function shouldSelectCell(anEvent : java.util.EventObject) : Bool;
+	@:overload @:public public function shouldSelectCell(anEvent : java.util.EventObject) : Bool;
 	
 	/**
 	* Tells the editor to stop editing and accept any partially edited
@@ -104,13 +104,13 @@ extern interface CellEditor
 	*
 	* @return  true if editing was stopped; false otherwise
 	*/
-	@:overload public function stopCellEditing() : Bool;
+	@:overload @:public public function stopCellEditing() : Bool;
 	
 	/**
 	* Tells the editor to cancel editing and not accept any partially
 	* edited value.
 	*/
-	@:overload public function cancelCellEditing() : Void;
+	@:overload @:public public function cancelCellEditing() : Void;
 	
 	/**
 	* Adds a listener to the list that's notified when the editor
@@ -118,14 +118,14 @@ extern interface CellEditor
 	*
 	* @param   l               the CellEditorListener
 	*/
-	@:overload public function addCellEditorListener(l : javax.swing.event.CellEditorListener) : Void;
+	@:overload @:public public function addCellEditorListener(l : javax.swing.event.CellEditorListener) : Void;
 	
 	/**
 	* Removes a listener from the list that's notified
 	*
 	* @param   l               the CellEditorListener
 	*/
-	@:overload public function removeCellEditorListener(l : javax.swing.event.CellEditorListener) : Void;
+	@:overload @:public public function removeCellEditorListener(l : javax.swing.event.CellEditorListener) : Void;
 	
 	
 }

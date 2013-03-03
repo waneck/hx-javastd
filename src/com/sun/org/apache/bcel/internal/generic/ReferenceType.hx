@@ -63,7 +63,7 @@ extern class ReferenceType extends com.sun.org.apache.bcel.internal.generic.Type
 	*
 	* @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
 	*/
-	@:overload private function new(t : java.StdTypes.Int8, s : String) : Void;
+	@:overload @:protected private function new(t : java.StdTypes.Int8, s : String) : Void;
 	
 	/**
 	* Return true iff this type is castable to another type t as defined in
@@ -73,14 +73,14 @@ extern class ReferenceType extends com.sun.org.apache.bcel.internal.generic.Type
 	* ClassCastException when casting a null reference to any Object,
 	* true is returned in this case.
 	*/
-	@:overload public function isCastableTo(t : com.sun.org.apache.bcel.internal.generic.Type) : Bool;
+	@:overload @:public public function isCastableTo(t : com.sun.org.apache.bcel.internal.generic.Type) : Bool;
 	
 	/**
 	* Return true iff this is assignment compatible with another type t
 	* as defined in the JVM specification; see the AASTORE definition
 	* there.
 	*/
-	@:overload public function isAssignmentCompatibleWith(t : com.sun.org.apache.bcel.internal.generic.Type) : Bool;
+	@:overload @:public public function isAssignmentCompatibleWith(t : com.sun.org.apache.bcel.internal.generic.Type) : Bool;
 	
 	/**
 	* This commutative operation returns the first common superclass (narrowest ReferenceType
@@ -97,7 +97,7 @@ extern class ReferenceType extends com.sun.org.apache.bcel.internal.generic.Type
 	* If not all of the two classes' superclasses cannot be found, "null" is returned.
 	* See the JVM specification edition 2, "4.9.2 The Bytecode Verifier".
 	*/
-	@:overload public function getFirstCommonSuperclass(t : com.sun.org.apache.bcel.internal.generic.ReferenceType) : com.sun.org.apache.bcel.internal.generic.ReferenceType;
+	@:overload @:public public function getFirstCommonSuperclass(t : com.sun.org.apache.bcel.internal.generic.ReferenceType) : com.sun.org.apache.bcel.internal.generic.ReferenceType;
 	
 	/**
 	* This commutative operation returns the first common superclass (narrowest ReferenceType
@@ -114,7 +114,7 @@ extern class ReferenceType extends com.sun.org.apache.bcel.internal.generic.Type
 	* @deprecated use getFirstCommonSuperclass(ReferenceType t) which has
 	*             slightly changed semantics.
 	*/
-	@:overload public function firstCommonSuperclass(t : com.sun.org.apache.bcel.internal.generic.ReferenceType) : com.sun.org.apache.bcel.internal.generic.ReferenceType;
+	@:overload @:public public function firstCommonSuperclass(t : com.sun.org.apache.bcel.internal.generic.ReferenceType) : com.sun.org.apache.bcel.internal.generic.ReferenceType;
 	
 	
 }

@@ -70,7 +70,7 @@ extern class CompositeDataSupport implements javax.management.openmbean.Composit
 	* of the elements in <tt>itemValues[]</tt> is not a valid value for the
 	* corresponding item as defined in <tt>compositeType</tt>.
 	*/
-	@:overload public function new(compositeType : javax.management.openmbean.CompositeType, itemNames : java.NativeArray<String>, itemValues : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(compositeType : javax.management.openmbean.CompositeType, itemNames : java.NativeArray<String>, itemValues : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* <p>
@@ -97,12 +97,12 @@ extern class CompositeDataSupport implements javax.management.openmbean.Composit
 	* @throws ArrayStoreException one or more keys in <tt>items</tt> is not of
 	* the class <tt>java.lang.String</tt>.
 	*/
-	@:overload public function new(compositeType : javax.management.openmbean.CompositeType, items : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function new(compositeType : javax.management.openmbean.CompositeType, items : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* Returns the <i>composite type </i> of this <i>composite data</i> instance.
 	*/
-	@:overload public function getCompositeType() : javax.management.openmbean.CompositeType;
+	@:overload @:public public function getCompositeType() : javax.management.openmbean.CompositeType;
 	
 	/**
 	* Returns the value of the item whose name is <tt>key</tt>.
@@ -112,7 +112,7 @@ extern class CompositeDataSupport implements javax.management.openmbean.Composit
 	* @throws InvalidKeyException  if <tt>key</tt> is not an existing item name for
 	* this <tt>CompositeData</tt> instance.
 	*/
-	@:overload public function get(key : String) : Dynamic;
+	@:overload @:public public function get(key : String) : Dynamic;
 	
 	/**
 	* Returns an array of the values of the items whose names are specified by
@@ -124,21 +124,21 @@ extern class CompositeDataSupport implements javax.management.openmbean.Composit
 	* @throws InvalidKeyException  if an element in <tt>keys</tt> is not an existing
 	* item name for this <tt>CompositeData</tt> instance.
 	*/
-	@:overload public function getAll(keys : java.NativeArray<String>) : java.NativeArray<Dynamic>;
+	@:overload @:public public function getAll(keys : java.NativeArray<String>) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns <tt>true</tt> if and only if this <tt>CompositeData</tt> instance contains
 	* an item whose name is <tt>key</tt>.
 	* If <tt>key</tt> is a null or empty String, this method simply returns false.
 	*/
-	@:overload public function containsKey(key : String) : Bool;
+	@:overload @:public public function containsKey(key : String) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if and only if this <tt>CompositeData</tt> instance
 	* contains an item
 	* whose value is <tt>value</tt>.
 	*/
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public public function containsValue(value : Dynamic) : Bool;
 	
 	/**
 	* Returns an unmodifiable Collection view of the item values contained in this
@@ -147,7 +147,7 @@ extern class CompositeDataSupport implements javax.management.openmbean.Composit
 	* lexicographic order of the corresponding
 	* item names.
 	*/
-	@:overload public function values() : java.util.Collection<Dynamic>;
+	@:overload @:public public function values() : java.util.Collection<Dynamic>;
 	
 	/**
 	* Compares the specified <var>obj</var> parameter with this
@@ -176,7 +176,7 @@ extern class CompositeDataSupport implements javax.management.openmbean.Composit
 	* @return  <code>true</code> if the specified object is equal to this
 	* <code>CompositeDataSupport</code> instance.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this <code>CompositeDataSupport</code> instance.
@@ -199,7 +199,7 @@ extern class CompositeDataSupport implements javax.management.openmbean.Composit
 	*
 	* @return the hash code value for this <code>CompositeDataSupport</code> instance
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this <code>CompositeDataSupport</code> instance.
@@ -210,7 +210,7 @@ extern class CompositeDataSupport implements javax.management.openmbean.Composit
 	*
 	* @return  a string representation of this <code>CompositeDataSupport</code> instance
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

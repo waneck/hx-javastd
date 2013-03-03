@@ -26,53 +26,53 @@ extern interface NodeIterator extends java.lang.Cloneable
 	/**
 	* Callers should not call next() after it returns END.
 	*/
-	@:overload public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
 	/**
 	* Resets the iterator to the last start node.
 	*/
-	@:overload public function reset() : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
+	@:overload @:public public function reset() : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
 	
 	/**
 	* Returns the number of elements in this iterator.
 	*/
-	@:overload public function getLast() : Int;
+	@:overload @:public public function getLast() : Int;
 	
 	/**
 	* Returns the position of the current node in the set.
 	*/
-	@:overload public function getPosition() : Int;
+	@:overload @:public public function getPosition() : Int;
 	
 	/**
 	* Remembers the current node for the next call to gotoMark().
 	*/
-	@:overload public function setMark() : Void;
+	@:overload @:public public function setMark() : Void;
 	
 	/**
 	* Restores the current node remembered by setMark().
 	*/
-	@:overload public function gotoMark() : Void;
+	@:overload @:public public function gotoMark() : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
 	* i.e. subsequent call to next() should return END.
 	*/
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
+	@:overload @:public public function setStartNode(node : Int) : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
 	
 	/**
 	* True if this iterator has a reversed axis.
 	*/
-	@:overload public function isReverse() : Bool;
+	@:overload @:public public function isReverse() : Bool;
 	
 	/**
 	* Returns a deep copy of this iterator.
 	*/
-	@:overload public function cloneIterator() : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
+	@:overload @:public public function cloneIterator() : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
 	
 	/**
 	* Prevents or allows iterator restarts.
 	*/
-	@:overload public function setRestartable(isRestartable : Bool) : Void;
+	@:overload @:public public function setRestartable(isRestartable : Bool) : Void;
 	
 	
 }

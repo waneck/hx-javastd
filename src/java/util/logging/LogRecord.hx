@@ -41,21 +41,21 @@ extern class LogRecord implements java.io.Serializable
 	* @param level  a logging level value
 	* @param msg  the raw non-localized logging message (may be null)
 	*/
-	@:overload public function new(level : java.util.logging.Level, msg : String) : Void;
+	@:overload @:public public function new(level : java.util.logging.Level, msg : String) : Void;
 	
 	/**
 	* Get the source Logger's name.
 	*
 	* @return source logger name (may be null)
 	*/
-	@:overload public function getLoggerName() : String;
+	@:overload @:public public function getLoggerName() : String;
 	
 	/**
 	* Set the source Logger's name.
 	*
 	* @param name   the source logger name (may be null)
 	*/
-	@:overload public function setLoggerName(name : String) : Void;
+	@:overload @:public public function setLoggerName(name : String) : Void;
 	
 	/**
 	* Get the localization resource bundle
@@ -65,14 +65,14 @@ extern class LogRecord implements java.io.Serializable
 	* be null if the message is not localizable, or if no suitable
 	* ResourceBundle is available.
 	*/
-	@:overload public function getResourceBundle() : java.util.ResourceBundle;
+	@:overload @:public public function getResourceBundle() : java.util.ResourceBundle;
 	
 	/**
 	* Set the localization resource bundle.
 	*
 	* @param bundle  localization bundle (may be null)
 	*/
-	@:overload public function setResourceBundle(bundle : java.util.ResourceBundle) : Void;
+	@:overload @:public public function setResourceBundle(bundle : java.util.ResourceBundle) : Void;
 	
 	/**
 	* Get the localization resource bundle name
@@ -81,26 +81,26 @@ extern class LogRecord implements java.io.Serializable
 	* used to localize the message string before formatting it.
 	* The result may be null if the message is not localizable.
 	*/
-	@:overload public function getResourceBundleName() : String;
+	@:overload @:public public function getResourceBundleName() : String;
 	
 	/**
 	* Set the localization resource bundle name.
 	*
 	* @param name  localization bundle name (may be null)
 	*/
-	@:overload public function setResourceBundleName(name : String) : Void;
+	@:overload @:public public function setResourceBundleName(name : String) : Void;
 	
 	/**
 	* Get the logging message level, for example Level.SEVERE.
 	* @return the logging message level
 	*/
-	@:overload public function getLevel() : java.util.logging.Level;
+	@:overload @:public public function getLevel() : java.util.logging.Level;
 	
 	/**
 	* Set the logging message level, for example Level.SEVERE.
 	* @param level the logging message level
 	*/
-	@:overload public function setLevel(level : java.util.logging.Level) : Void;
+	@:overload @:public public function setLevel(level : java.util.logging.Level) : Void;
 	
 	/**
 	* Get the sequence number.
@@ -110,7 +110,7 @@ extern class LogRecord implements java.io.Serializable
 	* each new LogRecord in increasing order.
 	* @return the sequence number
 	*/
-	@:overload public function getSequenceNumber() : haxe.Int64;
+	@:overload @:public public function getSequenceNumber() : haxe.Int64;
 	
 	/**
 	* Set the sequence number.
@@ -118,7 +118,7 @@ extern class LogRecord implements java.io.Serializable
 	* Sequence numbers are normally assigned in the LogRecord constructor,
 	* so it should not normally be necessary to use this method.
 	*/
-	@:overload public function setSequenceNumber(seq : haxe.Int64) : Void;
+	@:overload @:public public function setSequenceNumber(seq : haxe.Int64) : Void;
 	
 	/**
 	* Get the  name of the class that (allegedly) issued the logging request.
@@ -134,14 +134,14 @@ extern class LogRecord implements java.io.Serializable
 	*
 	* @return the source class name
 	*/
-	@:overload public function getSourceClassName() : String;
+	@:overload @:public public function getSourceClassName() : String;
 	
 	/**
 	* Set the name of the class that (allegedly) issued the logging request.
 	*
 	* @param sourceClassName the source class name (may be null)
 	*/
-	@:overload public function setSourceClassName(sourceClassName : String) : Void;
+	@:overload @:public public function setSourceClassName(sourceClassName : String) : Void;
 	
 	/**
 	* Get the  name of the method that (allegedly) issued the logging request.
@@ -157,14 +157,14 @@ extern class LogRecord implements java.io.Serializable
 	*
 	* @return the source method name
 	*/
-	@:overload public function getSourceMethodName() : String;
+	@:overload @:public public function getSourceMethodName() : String;
 	
 	/**
 	* Set the name of the method that (allegedly) issued the logging request.
 	*
 	* @param sourceMethodName the source method name (may be null)
 	*/
-	@:overload public function setSourceMethodName(sourceMethodName : String) : Void;
+	@:overload @:public public function setSourceMethodName(sourceMethodName : String) : Void;
 	
 	/**
 	* Get the "raw" log message, before localization or formatting.
@@ -180,14 +180,14 @@ extern class LogRecord implements java.io.Serializable
 	*
 	* @return the raw message string
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public public function getMessage() : String;
 	
 	/**
 	* Set the "raw" log message, before localization or formatting.
 	*
 	* @param message the raw message string (may be null)
 	*/
-	@:overload public function setMessage(message : String) : Void;
+	@:overload @:public public function setMessage(message : String) : Void;
 	
 	/**
 	* Get the parameters to the log message.
@@ -195,14 +195,14 @@ extern class LogRecord implements java.io.Serializable
 	* @return the log message parameters.  May be null if
 	*                  there are no parameters.
 	*/
-	@:overload public function getParameters() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getParameters() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Set the parameters to the log message.
 	*
 	* @param parameters the log message parameters. (may be null)
 	*/
-	@:overload public function setParameters(parameters : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function setParameters(parameters : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Get an identifier for the thread where the message originated.
@@ -212,27 +212,27 @@ extern class LogRecord implements java.io.Serializable
 	*
 	* @return thread ID
 	*/
-	@:overload public function getThreadID() : Int;
+	@:overload @:public public function getThreadID() : Int;
 	
 	/**
 	* Set an identifier for the thread where the message originated.
 	* @param threadID  the thread ID
 	*/
-	@:overload public function setThreadID(threadID : Int) : Void;
+	@:overload @:public public function setThreadID(threadID : Int) : Void;
 	
 	/**
 	* Get event time in milliseconds since 1970.
 	*
 	* @return event time in millis since 1970
 	*/
-	@:overload public function getMillis() : haxe.Int64;
+	@:overload @:public public function getMillis() : haxe.Int64;
 	
 	/**
 	* Set event time.
 	*
 	* @param millis event time in millis since 1970
 	*/
-	@:overload public function setMillis(millis : haxe.Int64) : Void;
+	@:overload @:public public function setMillis(millis : haxe.Int64) : Void;
 	
 	/**
 	* Get any throwable associated with the log record.
@@ -242,14 +242,14 @@ extern class LogRecord implements java.io.Serializable
 	*
 	* @return a throwable
 	*/
-	@:overload public function getThrown() : java.lang.Throwable;
+	@:overload @:public public function getThrown() : java.lang.Throwable;
 	
 	/**
 	* Set a throwable associated with the log event.
 	*
 	* @param thrown  a throwable (may be null)
 	*/
-	@:overload public function setThrown(thrown : java.lang.Throwable) : Void;
+	@:overload @:public public function setThrown(thrown : java.lang.Throwable) : Void;
 	
 	
 }

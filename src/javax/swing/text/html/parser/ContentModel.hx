@@ -38,62 +38,62 @@ extern class ContentModel implements java.io.Serializable
 	/**
 	* Type. Either '*', '?', '+', ',', '|', '&'.
 	*/
-	public var type : Int;
+	@:public public var type : Int;
 	
 	/**
 	* The content. Either an Element or a ContentModel.
 	*/
-	public var content : Dynamic;
+	@:public public var content : Dynamic;
 	
 	/**
 	* The next content model (in a ',', '|' or '&' expression).
 	*/
-	public var next : javax.swing.text.html.parser.ContentModel;
+	@:public public var next : javax.swing.text.html.parser.ContentModel;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a content model for an element.
 	*/
-	@:overload public function new(content : javax.swing.text.html.parser.Element) : Void;
+	@:overload @:public public function new(content : javax.swing.text.html.parser.Element) : Void;
 	
 	/**
 	* Create a content model of a particular type.
 	*/
-	@:overload public function new(type : Int, content : javax.swing.text.html.parser.ContentModel) : Void;
+	@:overload @:public public function new(type : Int, content : javax.swing.text.html.parser.ContentModel) : Void;
 	
 	/**
 	* Create a content model of a particular type.
 	*/
-	@:overload public function new(type : Int, content : Dynamic, next : javax.swing.text.html.parser.ContentModel) : Void;
+	@:overload @:public public function new(type : Int, content : Dynamic, next : javax.swing.text.html.parser.ContentModel) : Void;
 	
 	/**
 	* Return true if the content model could
 	* match an empty input stream.
 	*/
-	@:overload public function empty() : Bool;
+	@:overload @:public public function empty() : Bool;
 	
 	/**
 	* Update elemVec with the list of elements that are
 	* part of the this contentModel.
 	*/
-	@:overload public function getElements(elemVec : java.util.Vector<javax.swing.text.html.parser.Element>) : Void;
+	@:overload @:public public function getElements(elemVec : java.util.Vector<javax.swing.text.html.parser.Element>) : Void;
 	
 	/**
 	* Return true if the token could potentially be the
 	* first token in the input stream.
 	*/
-	@:overload public function first(token : Dynamic) : Bool;
+	@:overload @:public public function first(token : Dynamic) : Bool;
 	
 	/**
 	* Return the element that must be next.
 	*/
-	@:overload public function first() : javax.swing.text.html.parser.Element;
+	@:overload @:public public function first() : javax.swing.text.html.parser.Element;
 	
 	/**
 	* Convert to a string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

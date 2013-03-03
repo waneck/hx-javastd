@@ -28,12 +28,12 @@ package sun.management.counter.perf;
 */
 @:internal extern class LongCounterSnapshot extends sun.management.counter.AbstractCounter implements sun.management.counter.LongCounter
 {
-	@:overload override public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
 	/**
 	* Get the value of this Long performance counter
 	*/
-	@:overload public function longValue() : haxe.Int64;
+	@:overload @:public public function longValue() : haxe.Int64;
 	
 	
 }

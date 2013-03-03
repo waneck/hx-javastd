@@ -28,7 +28,7 @@ extern class ProxyGenerator
 	/**
 	* Generate a proxy class given a name and a list of proxy interfaces.
 	*/
-	@:overload public static function generateProxyClass(name : String, interfaces : java.NativeArray<Class<Dynamic>>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function generateProxyClass(name : String, interfaces : java.NativeArray<Class<Dynamic>>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
@@ -39,15 +39,15 @@ extern class ProxyGenerator
 */
 @:native('sun$misc$ProxyGenerator$FieldInfo') @:internal extern class ProxyGenerator_FieldInfo
 {
-	public var accessFlags : Int;
+	@:public public var accessFlags : Int;
 	
-	public var name : String;
+	@:public public var name : String;
 	
-	public var descriptor : String;
+	@:public public var descriptor : String;
 	
-	@:overload public function new(name : String, descriptor : String, accessFlags : Int) : Void;
+	@:overload @:public public function new(name : String, descriptor : String, accessFlags : Int) : Void;
 	
-	@:overload public function write(out : java.io.DataOutputStream) : Void;
+	@:overload @:public public function write(out : java.io.DataOutputStream) : Void;
 	
 	
 }
@@ -58,15 +58,15 @@ extern class ProxyGenerator
 */
 @:native('sun$misc$ProxyGenerator$ExceptionTableEntry') @:internal extern class ProxyGenerator_ExceptionTableEntry
 {
-	public var startPc : java.StdTypes.Int16;
+	@:public public var startPc : java.StdTypes.Int16;
 	
-	public var endPc : java.StdTypes.Int16;
+	@:public public var endPc : java.StdTypes.Int16;
 	
-	public var handlerPc : java.StdTypes.Int16;
+	@:public public var handlerPc : java.StdTypes.Int16;
 	
-	public var catchType : java.StdTypes.Int16;
+	@:public public var catchType : java.StdTypes.Int16;
 	
-	@:overload public function new(startPc : java.StdTypes.Int16, endPc : java.StdTypes.Int16, handlerPc : java.StdTypes.Int16, catchType : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(startPc : java.StdTypes.Int16, endPc : java.StdTypes.Int16, handlerPc : java.StdTypes.Int16, catchType : java.StdTypes.Int16) : Void;
 	
 	
 }
@@ -77,25 +77,25 @@ extern class ProxyGenerator
 */
 @:native('sun$misc$ProxyGenerator$MethodInfo') @:internal extern class ProxyGenerator_MethodInfo
 {
-	public var accessFlags : Int;
+	@:public public var accessFlags : Int;
 	
-	public var name : String;
+	@:public public var name : String;
 	
-	public var descriptor : String;
+	@:public public var descriptor : String;
 	
-	public var maxStack : java.StdTypes.Int16;
+	@:public public var maxStack : java.StdTypes.Int16;
 	
-	public var maxLocals : java.StdTypes.Int16;
+	@:public public var maxLocals : java.StdTypes.Int16;
 	
-	public var code : java.io.ByteArrayOutputStream;
+	@:public public var code : java.io.ByteArrayOutputStream;
 	
-	public var exceptionTable : java.util.List<sun.misc.ProxyGenerator.ProxyGenerator_ExceptionTableEntry>;
+	@:public public var exceptionTable : java.util.List<sun.misc.ProxyGenerator.ProxyGenerator_ExceptionTableEntry>;
 	
-	public var declaredExceptions : java.NativeArray<java.StdTypes.Int16>;
+	@:public public var declaredExceptions : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public function new(name : String, descriptor : String, accessFlags : Int) : Void;
+	@:overload @:public public function new(name : String, descriptor : String, accessFlags : Int) : Void;
 	
-	@:overload public function write(out : java.io.DataOutputStream) : Void;
+	@:overload @:public public function write(out : java.io.DataOutputStream) : Void;
 	
 	
 }
@@ -106,17 +106,17 @@ extern class ProxyGenerator
 */
 @:native('sun$misc$ProxyGenerator$ProxyMethod') @:internal extern class ProxyGenerator_ProxyMethod
 {
-	public var methodName : String;
+	@:public public var methodName : String;
 	
-	public var parameterTypes : java.NativeArray<Class<Dynamic>>;
+	@:public public var parameterTypes : java.NativeArray<Class<Dynamic>>;
 	
-	public var returnType : Class<Dynamic>;
+	@:public public var returnType : Class<Dynamic>;
 	
-	public var exceptionTypes : java.NativeArray<Class<Dynamic>>;
+	@:public public var exceptionTypes : java.NativeArray<Class<Dynamic>>;
 	
-	public var fromClass : Class<Dynamic>;
+	@:public public var fromClass : Class<Dynamic>;
 	
-	public var methodFieldName : String;
+	@:public public var methodFieldName : String;
 	
 	
 }
@@ -128,21 +128,21 @@ extern class ProxyGenerator
 @:native('sun$misc$ProxyGenerator$PrimitiveTypeInfo') @:internal extern class ProxyGenerator_PrimitiveTypeInfo
 {
 	/** "base type" used in various descriptors (see JVMS section 4.3.2) */
-	public var baseTypeString : String;
+	@:public public var baseTypeString : String;
 	
 	/** name of corresponding wrapper class */
-	public var wrapperClassName : String;
+	@:public public var wrapperClassName : String;
 	
 	/** method descriptor for wrapper class "valueOf" factory method */
-	public var wrapperValueOfDesc : String;
+	@:public public var wrapperValueOfDesc : String;
 	
 	/** name of wrapper class method for retrieving primitive value */
-	public var unwrapMethodName : String;
+	@:public public var unwrapMethodName : String;
 	
 	/** descriptor of same method */
-	public var unwrapMethodDesc : String;
+	@:public public var unwrapMethodDesc : String;
 	
-	@:overload public static function get(cl : Class<Dynamic>) : sun.misc.ProxyGenerator.ProxyGenerator_PrimitiveTypeInfo;
+	@:overload @:public @:static public static function get(cl : Class<Dynamic>) : sun.misc.ProxyGenerator.ProxyGenerator_PrimitiveTypeInfo;
 	
 	
 }
@@ -167,47 +167,47 @@ extern class ProxyGenerator
 	/**
 	* Get or assign the index for a CONSTANT_Utf8 entry.
 	*/
-	@:overload public function getUtf8(s : String) : java.StdTypes.Int16;
+	@:overload @:public public function getUtf8(s : String) : java.StdTypes.Int16;
 	
 	/**
 	* Get or assign the index for a CONSTANT_Integer entry.
 	*/
-	@:overload public function getInteger(i : Int) : java.StdTypes.Int16;
+	@:overload @:public public function getInteger(i : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Get or assign the index for a CONSTANT_Float entry.
 	*/
-	@:overload public function getFloat(f : Single) : java.StdTypes.Int16;
+	@:overload @:public public function getFloat(f : Single) : java.StdTypes.Int16;
 	
 	/**
 	* Get or assign the index for a CONSTANT_Class entry.
 	*/
-	@:overload public function getClass(name : String) : java.StdTypes.Int16;
+	@:overload @:public public function getClass(name : String) : java.StdTypes.Int16;
 	
 	/**
 	* Get or assign the index for a CONSTANT_String entry.
 	*/
-	@:overload public function getString(s : String) : java.StdTypes.Int16;
+	@:overload @:public public function getString(s : String) : java.StdTypes.Int16;
 	
 	/**
 	* Get or assign the index for a CONSTANT_FieldRef entry.
 	*/
-	@:overload public function getFieldRef(className : String, name : String, descriptor : String) : java.StdTypes.Int16;
+	@:overload @:public public function getFieldRef(className : String, name : String, descriptor : String) : java.StdTypes.Int16;
 	
 	/**
 	* Get or assign the index for a CONSTANT_MethodRef entry.
 	*/
-	@:overload public function getMethodRef(className : String, name : String, descriptor : String) : java.StdTypes.Int16;
+	@:overload @:public public function getMethodRef(className : String, name : String, descriptor : String) : java.StdTypes.Int16;
 	
 	/**
 	* Get or assign the index for a CONSTANT_InterfaceMethodRef entry.
 	*/
-	@:overload public function getInterfaceMethodRef(className : String, name : String, descriptor : String) : java.StdTypes.Int16;
+	@:overload @:public public function getInterfaceMethodRef(className : String, name : String, descriptor : String) : java.StdTypes.Int16;
 	
 	/**
 	* Get or assign the index for a CONSTANT_NameAndType entry.
 	*/
-	@:overload public function getNameAndType(name : String, descriptor : String) : java.StdTypes.Int16;
+	@:overload @:public public function getNameAndType(name : String, descriptor : String) : java.StdTypes.Int16;
 	
 	/**
 	* Set this ConstantPool instance to be "read only".
@@ -216,7 +216,7 @@ extern class ProxyGenerator
 	* an index for a non-existent entry will cause an InternalError
 	* to be thrown instead of creating of the entry.
 	*/
-	@:overload public function setReadOnly() : Void;
+	@:overload @:public public function setReadOnly() : Void;
 	
 	/**
 	* Write this constant pool to a stream as part of
@@ -226,7 +226,7 @@ extern class ProxyGenerator
 	* "constant_pool[]" items of the "ClassFile" structure, as
 	* described in JVMS section 4.1.
 	*/
-	@:overload public function write(out : java.io.OutputStream) : Void;
+	@:overload @:public public function write(out : java.io.OutputStream) : Void;
 	
 	
 }
@@ -237,7 +237,7 @@ extern class ProxyGenerator
 */
 @:native('sun$misc$ProxyGenerator$ConstantPool$Entry') @:internal extern class ProxyGenerator_ConstantPool_Entry
 {
-	@:overload @:abstract public function write(out : java.io.DataOutputStream) : Void;
+	@:overload @:public @:abstract public function write(out : java.io.DataOutputStream) : Void;
 	
 	
 }
@@ -251,9 +251,9 @@ extern class ProxyGenerator
 */
 @:native('sun$misc$ProxyGenerator$ConstantPool$ValueEntry') @:internal extern class ProxyGenerator_ConstantPool_ValueEntry extends sun.misc.ProxyGenerator.ProxyGenerator_ConstantPool_Entry
 {
-	@:overload public function new(value : Dynamic) : Void;
+	@:overload @:public public function new(value : Dynamic) : Void;
 	
-	@:overload override public function write(out : java.io.DataOutputStream) : Void;
+	@:overload @:public override public function write(out : java.io.DataOutputStream) : Void;
 	
 	
 }
@@ -278,19 +278,19 @@ extern class ProxyGenerator
 	* Construct an IndirectEntry for a constant pool entry type
 	* that contains one index of another entry.
 	*/
-	@:overload public function new(tag : Int, index : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(tag : Int, index : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Construct an IndirectEntry for a constant pool entry type
 	* that contains two indexes for other entries.
 	*/
-	@:overload public function new(tag : Int, index0 : java.StdTypes.Int16, index1 : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(tag : Int, index0 : java.StdTypes.Int16, index1 : java.StdTypes.Int16) : Void;
 	
-	@:overload override public function write(out : java.io.DataOutputStream) : Void;
+	@:overload @:public override public function write(out : java.io.DataOutputStream) : Void;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

@@ -28,27 +28,27 @@ extern interface ClientInvocationInfo
 	/**
 	* @author Harold Carr
 	*/
-	@:overload public function getContactInfoListIterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getContactInfoListIterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function setContactInfoListIterator(contactInfoListIterator : java.util.Iterator<Dynamic>) : Void;
+	@:overload @:public public function setContactInfoListIterator(contactInfoListIterator : java.util.Iterator<Dynamic>) : Void;
 	
-	@:overload public function isRetryInvocation() : Bool;
+	@:overload @:public public function isRetryInvocation() : Bool;
 	
-	@:overload public function setIsRetryInvocation(isRetryInvocation : Bool) : Void;
+	@:overload @:public public function setIsRetryInvocation(isRetryInvocation : Bool) : Void;
 	
-	@:overload public function getEntryCount() : Int;
+	@:overload @:public public function getEntryCount() : Int;
 	
-	@:overload public function incrementEntryCount() : Void;
+	@:overload @:public public function incrementEntryCount() : Void;
 	
-	@:overload public function decrementEntryCount() : Void;
+	@:overload @:public public function decrementEntryCount() : Void;
 	
-	@:overload public function setClientRequestDispatcher(clientRequestDispatcher : com.sun.corba.se.pept.protocol.ClientRequestDispatcher) : Void;
+	@:overload @:public public function setClientRequestDispatcher(clientRequestDispatcher : com.sun.corba.se.pept.protocol.ClientRequestDispatcher) : Void;
 	
-	@:overload public function getClientRequestDispatcher() : com.sun.corba.se.pept.protocol.ClientRequestDispatcher;
+	@:overload @:public public function getClientRequestDispatcher() : com.sun.corba.se.pept.protocol.ClientRequestDispatcher;
 	
-	@:overload public function setMessageMediator(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
+	@:overload @:public public function setMessageMediator(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
 	
-	@:overload public function getMessageMediator() : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function getMessageMediator() : com.sun.corba.se.pept.protocol.MessageMediator;
 	
 	
 }

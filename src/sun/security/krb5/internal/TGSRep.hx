@@ -29,11 +29,11 @@ package sun.security.krb5.internal;
 */
 extern class TGSRep extends sun.security.krb5.internal.KDCRep
 {
-	@:overload public function new(new_pAData : java.NativeArray<sun.security.krb5.internal.PAData>, new_crealm : sun.security.krb5.Realm, new_cname : sun.security.krb5.PrincipalName, new_ticket : sun.security.krb5.internal.Ticket, new_encPart : sun.security.krb5.EncryptedData) : Void;
+	@:overload @:public public function new(new_pAData : java.NativeArray<sun.security.krb5.internal.PAData>, new_crealm : sun.security.krb5.Realm, new_cname : sun.security.krb5.PrincipalName, new_ticket : sun.security.krb5.internal.Ticket, new_encPart : sun.security.krb5.EncryptedData) : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	
 }

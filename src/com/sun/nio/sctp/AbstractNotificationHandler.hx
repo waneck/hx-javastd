@@ -43,7 +43,7 @@ package com.sun.nio.sctp;
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Invoked when an implementation specific notification is received from the
@@ -58,7 +58,7 @@ package com.sun.nio.sctp;
 	*
 	* @return  The handler result
 	*/
-	@:overload public function handleNotification(notification : com.sun.nio.sctp.Notification, attachment : T) : com.sun.nio.sctp.HandlerResult;
+	@:overload @:public public function handleNotification(notification : com.sun.nio.sctp.Notification, attachment : T) : com.sun.nio.sctp.HandlerResult;
 	
 	/**
 	* Invoked when an {@link AssociationChangeNotification} is received from
@@ -73,7 +73,7 @@ package com.sun.nio.sctp;
 	*
 	* @return  The handler result
 	*/
-	@:overload public function handleNotification(notification : com.sun.nio.sctp.AssociationChangeNotification, attachment : T) : com.sun.nio.sctp.HandlerResult;
+	@:overload @:public public function handleNotification(notification : com.sun.nio.sctp.AssociationChangeNotification, attachment : T) : com.sun.nio.sctp.HandlerResult;
 	
 	/**
 	* Invoked when an {@link PeerAddressChangeNotification} is received from
@@ -88,7 +88,7 @@ package com.sun.nio.sctp;
 	*
 	* @return  The handler result
 	*/
-	@:overload public function handleNotification(notification : com.sun.nio.sctp.PeerAddressChangeNotification, attachment : T) : com.sun.nio.sctp.HandlerResult;
+	@:overload @:public public function handleNotification(notification : com.sun.nio.sctp.PeerAddressChangeNotification, attachment : T) : com.sun.nio.sctp.HandlerResult;
 	
 	/**
 	* Invoked when an {@link SendFailedNotification} is received from
@@ -103,7 +103,7 @@ package com.sun.nio.sctp;
 	*
 	* @return  The handler result
 	*/
-	@:overload public function handleNotification(notification : com.sun.nio.sctp.SendFailedNotification, attachment : T) : com.sun.nio.sctp.HandlerResult;
+	@:overload @:public public function handleNotification(notification : com.sun.nio.sctp.SendFailedNotification, attachment : T) : com.sun.nio.sctp.HandlerResult;
 	
 	/**
 	* Invoked when an {@link ShutdownNotification} is received from
@@ -118,7 +118,7 @@ package com.sun.nio.sctp;
 	*
 	* @return  The handler result
 	*/
-	@:overload public function handleNotification(notification : com.sun.nio.sctp.ShutdownNotification, attachment : T) : com.sun.nio.sctp.HandlerResult;
+	@:overload @:public public function handleNotification(notification : com.sun.nio.sctp.ShutdownNotification, attachment : T) : com.sun.nio.sctp.HandlerResult;
 	
 	
 }

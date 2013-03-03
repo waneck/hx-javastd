@@ -25,32 +25,32 @@ package com.sun.security.sasl.gsskerb;
 */
 @:internal extern class GssKrb5Base extends com.sun.security.sasl.util.AbstractSaslImpl
 {
-	private static var KRB5_OID : org.ietf.jgss.Oid;
+	@:protected @:static private static var KRB5_OID : org.ietf.jgss.Oid;
 	
-	private static var EMPTY(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:protected @:static @:final private static var EMPTY(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
-	private var secCtx : org.ietf.jgss.GSSContext;
+	@:protected private var secCtx : org.ietf.jgss.GSSContext;
 	
-	private var msgProp : org.ietf.jgss.MessageProp;
+	@:protected private var msgProp : org.ietf.jgss.MessageProp;
 	
-	private static var JGSS_QOP(default, null) : Int;
+	@:protected @:static @:final private static var JGSS_QOP(default, null) : Int;
 	
-	@:overload private function new(props : java.util.Map<Dynamic, Dynamic>, className : String) : Void;
+	@:overload @:protected private function new(props : java.util.Map<Dynamic, Dynamic>, className : String) : Void;
 	
 	/**
 	* Retrieves this mechanism's name.
 	*
 	* @return  The string "GSSAPI".
 	*/
-	@:overload public function getMechanismName() : String;
+	@:overload @:public public function getMechanismName() : String;
 	
-	@:overload public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

@@ -130,7 +130,7 @@ package java.util;
 	* @exception  IllegalArgumentException  if the initial capacity is less
 	*             than zero, or if the load factor is nonpositive.
 	*/
-	@:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
 	/**
 	* Constructs a new, empty hashtable with the specified initial capacity
@@ -140,13 +140,13 @@ package java.util;
 	* @exception IllegalArgumentException if the initial capacity is less
 	*              than zero.
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs a new, empty hashtable with a default initial capacity (11)
 	* and load factor (0.75).
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new hashtable with the same mappings as the given
@@ -157,14 +157,14 @@ package java.util;
 	* @throws NullPointerException if the specified map is null.
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function new(t : java.util.Map<K, V>) : Void;
+	@:require(java2) @:overload @:public public function new(t : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Returns the number of keys in this hashtable.
 	*
 	* @return  the number of keys in this hashtable.
 	*/
-	@:overload @:synchronized override public function size() : Int;
+	@:overload @:public @:synchronized override public function size() : Int;
 	
 	/**
 	* Tests if this hashtable maps no keys to values.
@@ -172,7 +172,7 @@ package java.util;
 	* @return  <code>true</code> if this hashtable maps no keys to values;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload @:synchronized override public function isEmpty() : Bool;
+	@:overload @:public @:synchronized override public function isEmpty() : Bool;
 	
 	/**
 	* Returns an enumeration of the keys in this hashtable.
@@ -183,7 +183,7 @@ package java.util;
 	* @see     #keySet()
 	* @see     Map
 	*/
-	@:overload @:synchronized override public function keys() : java.util.Enumeration<K>;
+	@:overload @:public @:synchronized override public function keys() : java.util.Enumeration<K>;
 	
 	/**
 	* Returns an enumeration of the values in this hashtable.
@@ -196,7 +196,7 @@ package java.util;
 	* @see     #values()
 	* @see     Map
 	*/
-	@:overload @:synchronized override public function elements() : java.util.Enumeration<V>;
+	@:overload @:public @:synchronized override public function elements() : java.util.Enumeration<V>;
 	
 	/**
 	* Tests if some key maps into the specified value in this hashtable.
@@ -214,7 +214,7 @@ package java.util;
 	*             <code>false</code> otherwise.
 	* @exception  NullPointerException  if the value is <code>null</code>
 	*/
-	@:overload @:synchronized public function contains(value : Dynamic) : Bool;
+	@:overload @:public @:synchronized public function contains(value : Dynamic) : Bool;
 	
 	/**
 	* Returns true if this hashtable maps one or more keys to this value.
@@ -228,7 +228,7 @@ package java.util;
 	* @throws NullPointerException  if the value is <code>null</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function containsValue(value : Dynamic) : Bool;
+	@:require(java2) @:overload @:public public function containsValue(value : Dynamic) : Bool;
 	
 	/**
 	* Tests if the specified object is a key in this hashtable.
@@ -240,7 +240,7 @@ package java.util;
 	* @throws  NullPointerException  if the key is <code>null</code>
 	* @see     #contains(Object)
 	*/
-	@:overload @:synchronized public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public @:synchronized public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Returns the value to which the specified key is mapped,
@@ -257,7 +257,7 @@ package java.util;
 	* @throws NullPointerException if the specified key is null
 	* @see     #put(Object, Object)
 	*/
-	@:overload @:synchronized override public function get(key : Dynamic) : V;
+	@:overload @:public @:synchronized override public function get(key : Dynamic) : V;
 	
 	/**
 	* Increases the capacity of and internally reorganizes this
@@ -266,7 +266,7 @@ package java.util;
 	* number of keys in the hashtable exceeds this hashtable's capacity
 	* and load factor.
 	*/
-	@:overload private function rehash() : Void;
+	@:overload @:protected private function rehash() : Void;
 	
 	/**
 	* Maps the specified <code>key</code> to the specified
@@ -285,7 +285,7 @@ package java.util;
 	* @see     Object#equals(Object)
 	* @see     #get(Object)
 	*/
-	@:overload @:synchronized override public function put(key : K, value : V) : V;
+	@:overload @:public @:synchronized override public function put(key : K, value : V) : V;
 	
 	/**
 	* Removes the key (and its corresponding value) from this
@@ -296,7 +296,7 @@ package java.util;
 	*          or <code>null</code> if the key did not have a mapping
 	* @throws  NullPointerException  if the key is <code>null</code>
 	*/
-	@:overload @:synchronized override public function remove(key : Dynamic) : V;
+	@:overload @:public @:synchronized override public function remove(key : Dynamic) : V;
 	
 	/**
 	* Copies all of the mappings from the specified map to this hashtable.
@@ -307,12 +307,12 @@ package java.util;
 	* @throws NullPointerException if the specified map is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function putAll(t : java.util.Map<K, V>) : Void;
+	@:require(java2) @:overload @:public @:synchronized public function putAll(t : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Clears this hashtable so that it contains no keys.
 	*/
-	@:overload @:synchronized public function clear() : Void;
+	@:overload @:public @:synchronized public function clear() : Void;
 	
 	/**
 	* Creates a shallow copy of this hashtable. All the structure of the
@@ -321,7 +321,7 @@ package java.util;
 	*
 	* @return  a clone of the hashtable
 	*/
-	@:overload @:synchronized public function clone() : Dynamic;
+	@:overload @:public @:synchronized public function clone() : Dynamic;
 	
 	/**
 	* Returns a string representation of this <tt>Hashtable</tt> object
@@ -333,7 +333,7 @@ package java.util;
 	*
 	* @return  a string representation of this hashtable
 	*/
-	@:overload @:synchronized public function toString() : String;
+	@:overload @:public @:synchronized public function toString() : String;
 	
 	/**
 	* Returns a {@link Set} view of the keys contained in this map.
@@ -350,7 +350,7 @@ package java.util;
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function keySet() : java.util.Set<K>;
+	@:require(java2) @:overload @:public public function keySet() : java.util.Set<K>;
 	
 	/**
 	* Returns a {@link Set} view of the mappings contained in this map.
@@ -368,7 +368,7 @@ package java.util;
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:require(java2) @:overload @:public public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
 	/**
 	* Returns a {@link Collection} view of the values contained in this map.
@@ -385,7 +385,7 @@ package java.util;
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function values() : java.util.Collection<V>;
+	@:require(java2) @:overload @:public public function values() : java.util.Collection<V>;
 	
 	/**
 	* Compares the specified Object with this Map for equality,
@@ -396,7 +396,7 @@ package java.util;
 	* @see Map#equals(Object)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function equals(o : Dynamic) : Bool;
+	@:require(java2) @:overload @:public @:synchronized public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this Map as per the definition in the
@@ -405,7 +405,7 @@ package java.util;
 	* @see Map#hashCode()
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function hashCode() : Int;
+	@:require(java2) @:overload @:public @:synchronized public function hashCode() : Int;
 	
 	
 }
@@ -418,43 +418,43 @@ package java.util;
 }
 @:native('java$util$Hashtable$KeySet') @:internal extern class Hashtable_KeySet extends java.util.AbstractSet<Dynamic>
 {
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }
 @:native('java$util$Hashtable$EntrySet') @:internal extern class Hashtable_EntrySet extends java.util.AbstractSet<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
+	@:overload @:public override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
 	
-	@:overload public function add(o : java.util.Map.Map_Entry<Dynamic, Dynamic>) : Bool;
+	@:overload @:public public function add(o : java.util.Map.Map_Entry<Dynamic, Dynamic>) : Bool;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }
 @:native('java$util$Hashtable$ValueCollection') @:internal extern class Hashtable_ValueCollection extends java.util.AbstractCollection<Dynamic>
 {
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }
@@ -463,21 +463,21 @@ package java.util;
 */
 @:native('java$util$Hashtable$Entry') @:internal extern class Hashtable_Entry<K, V> implements java.util.Map.Map_Entry<K, V>
 {
-	@:overload private function new(hash : Int, key : K, value : V, next : java.util.Map.Map_Entry<K, V>) : Void;
+	@:overload @:protected private function new(hash : Int, key : K, value : V, next : java.util.Map.Map_Entry<K, V>) : Void;
 	
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected private function clone() : Dynamic;
 	
-	@:overload public function getKey() : K;
+	@:overload @:public public function getKey() : K;
 	
-	@:overload public function getValue() : V;
+	@:overload @:public public function getValue() : V;
 	
-	@:overload public function setValue(value : V) : V;
+	@:overload @:public public function setValue(value : V) : V;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -495,17 +495,17 @@ package java.util;
 	* Hashtable should have.  If this expectation is violated, the iterator
 	* has detected concurrent modification.
 	*/
-	private var expectedModCount : Int;
+	@:protected private var expectedModCount : Int;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : T;
+	@:overload @:public public function nextElement() : T;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : T;
+	@:overload @:public public function next() : T;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

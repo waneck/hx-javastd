@@ -29,7 +29,7 @@ package com.sun.codemodel.internal;
 */
 extern interface JStatement
 {
-	@:overload public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

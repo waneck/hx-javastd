@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.policy;
 */
 extern class ComplexAssertion extends com.sun.xml.internal.ws.policy.PolicyAssertion
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(data : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>, nestedAlternative : com.sun.xml.internal.ws.policy.AssertionSet) : Void;
+	@:overload @:protected private function new(data : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>, nestedAlternative : com.sun.xml.internal.ws.policy.AssertionSet) : Void;
 	
-	@:overload @:final public function hasNestedPolicy() : Bool;
+	@:overload @:public @:final override public function hasNestedPolicy() : Bool;
 	
-	@:overload @:final public function getNestedPolicy() : com.sun.xml.internal.ws.policy.NestedPolicy;
+	@:overload @:public @:final override public function getNestedPolicy() : com.sun.xml.internal.ws.policy.NestedPolicy;
 	
 	
 }

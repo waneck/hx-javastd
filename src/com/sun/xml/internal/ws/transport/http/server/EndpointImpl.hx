@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.transport.http.server;
 */
 extern class EndpointImpl extends javax.xml.ws.Endpoint
 {
-	@:overload public function new(bindingId : com.sun.xml.internal.ws.api.BindingID, impl : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : Void;
+	@:overload @:public public function new(bindingId : com.sun.xml.internal.ws.api.BindingID, impl : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : Void;
 	
-	@:overload public function new(bindingId : com.sun.xml.internal.ws.api.BindingID, implClass : Class<Dynamic>, invoker : javax.xml.ws.spi.Invoker, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : Void;
+	@:overload @:public public function new(bindingId : com.sun.xml.internal.ws.api.BindingID, implClass : Class<Dynamic>, invoker : javax.xml.ws.spi.Invoker, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : Void;
 	
 	/**
 	* Wraps an already created {@link WSEndpoint} into an {@link EndpointImpl},
@@ -37,47 +37,47 @@ extern class EndpointImpl extends javax.xml.ws.Endpoint
 	* @param serverContext supported http context
 	* @deprecated This is a backdoor method. Don't use it unless you know what you are doing.
 	*/
-	@:overload public function new(wse : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, serverContext : Dynamic) : Void;
+	@:overload @:public public function new(wse : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, serverContext : Dynamic) : Void;
 	
-	@:overload public function getBinding() : javax.xml.ws.Binding;
+	@:overload @:public override public function getBinding() : javax.xml.ws.Binding;
 	
-	@:overload public function getImplementor() : Dynamic;
+	@:overload @:public override public function getImplementor() : Dynamic;
 	
-	@:overload public function publish(address : String) : Void;
+	@:overload @:public override public function publish(address : String) : Void;
 	
-	@:overload public function publish(serverContext : Dynamic) : Void;
+	@:overload @:public override public function publish(serverContext : Dynamic) : Void;
 	
-	@:overload public function publish(serverContext : javax.xml.ws.spi.http.HttpContext) : Void;
+	@:overload @:public override public function publish(serverContext : javax.xml.ws.spi.http.HttpContext) : Void;
 	
-	@:overload public function stop() : Void;
+	@:overload @:public override public function stop() : Void;
 	
-	@:overload public function isPublished() : Bool;
+	@:overload @:public override public function isPublished() : Bool;
 	
-	@:overload public function getMetadata() : java.util.List<javax.xml.transform.Source>;
+	@:overload @:public override public function getMetadata() : java.util.List<javax.xml.transform.Source>;
 	
-	@:overload public function setMetadata(metadata : java.util.List<javax.xml.transform.Source>) : Void;
+	@:overload @:public override public function setMetadata(metadata : java.util.List<javax.xml.transform.Source>) : Void;
 	
-	@:overload public function getExecutor() : java.util.concurrent.Executor;
+	@:overload @:public override public function getExecutor() : java.util.concurrent.Executor;
 	
-	@:overload public function setExecutor(executor : java.util.concurrent.Executor) : Void;
+	@:overload @:public override public function setExecutor(executor : java.util.concurrent.Executor) : Void;
 	
-	@:overload public function getProperties() : java.util.Map<String, Dynamic>;
+	@:overload @:public override public function getProperties() : java.util.Map<String, Dynamic>;
 	
-	@:overload public function setProperties(map : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public override public function setProperties(map : java.util.Map<String, Dynamic>) : Void;
 	
-	@:overload public function getEndpointReference(referenceParameters : java.NativeArray<org.w3c.dom.Element>) : javax.xml.ws.EndpointReference;
+	@:overload @:public override public function getEndpointReference(referenceParameters : java.NativeArray<org.w3c.dom.Element>) : javax.xml.ws.EndpointReference;
 	
-	@:overload public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>, referenceParameters : java.NativeArray<org.w3c.dom.Element>) : T;
+	@:overload @:public override public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>, referenceParameters : java.NativeArray<org.w3c.dom.Element>) : T;
 	
-	@:overload public function setEndpointContext(ctxt : javax.xml.ws.EndpointContext) : Void;
+	@:overload @:public override public function setEndpointContext(ctxt : javax.xml.ws.EndpointContext) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$transport$http$server$EndpointImpl$InvokerImpl') @:internal extern class EndpointImpl_InvokerImpl extends com.sun.xml.internal.ws.api.server.Invoker
 {
-	@:overload public function start(wsc : com.sun.xml.internal.ws.api.server.WSWebServiceContext, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
+	@:overload @:public override public function start(wsc : com.sun.xml.internal.ws.api.server.WSWebServiceContext, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
 	
-	@:overload public function invoke(p : com.sun.xml.internal.ws.api.message.Packet, m : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public override public function invoke(p : com.sun.xml.internal.ws.api.message.Packet, m : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

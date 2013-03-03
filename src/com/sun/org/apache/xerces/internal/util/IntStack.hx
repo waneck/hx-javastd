@@ -29,25 +29,25 @@ package com.sun.org.apache.xerces.internal.util;
 extern class IntStack
 {
 	/** Returns the size of the stack. */
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/** Pushes a value onto the stack. */
-	@:overload public function push(value : Int) : Void;
+	@:overload @:public public function push(value : Int) : Void;
 	
 	/** Peeks at the top of the stack. */
-	@:overload public function peek() : Int;
+	@:overload @:public public function peek() : Int;
 	
 	/** Returns the element at the specified depth in the stack. */
-	@:overload public function elementAt(depth : Int) : Int;
+	@:overload @:public public function elementAt(depth : Int) : Int;
 	
 	/** Pops a value off of the stack. */
-	@:overload public function pop() : Int;
+	@:overload @:public public function pop() : Int;
 	
 	/** Clears the stack. */
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/** Prints the stack. */
-	@:overload public function print() : Void;
+	@:overload @:public public function print() : Void;
 	
 	
 }

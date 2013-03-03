@@ -25,9 +25,9 @@ package com.sun.tools.jdi;
 */
 extern class TargetVM implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
-	@:overload private function handleVMCommand(p : com.sun.tools.jdi.Packet) : Void;
+	@:overload @:protected private function handleVMCommand(p : com.sun.tools.jdi.Packet) : Void;
 	
 	/* Events should not be constructed on this thread (the thread
 	* which reads all data from the transport). This means that the
@@ -38,13 +38,13 @@ extern class TargetVM implements java.lang.Runnable
 	* Instead the whole packet is passed for lazy eval by a queue
 	* reading thread.
 	*/
-	@:overload private function handleEventCmdSet(p : com.sun.tools.jdi.Packet) : Void;
+	@:overload @:protected private function handleEventCmdSet(p : com.sun.tools.jdi.Packet) : Void;
 	
 	
 }
 @:native('com$sun$tools$jdi$TargetVM$EventController') @:internal extern class TargetVM_EventController extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

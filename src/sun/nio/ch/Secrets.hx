@@ -25,9 +25,9 @@ package sun.nio.ch;
 */
 extern class Secrets
 {
-	@:overload public static function newSocketChannel(fd : java.io.FileDescriptor) : java.nio.channels.SocketChannel;
+	@:overload @:public @:static public static function newSocketChannel(fd : java.io.FileDescriptor) : java.nio.channels.SocketChannel;
 	
-	@:overload public static function newServerSocketChannel(fd : java.io.FileDescriptor) : java.nio.channels.ServerSocketChannel;
+	@:overload @:public @:static public static function newServerSocketChannel(fd : java.io.FileDescriptor) : java.nio.channels.ServerSocketChannel;
 	
 	
 }

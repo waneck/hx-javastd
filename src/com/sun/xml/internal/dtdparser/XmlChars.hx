@@ -50,7 +50,7 @@ extern class XmlChars
 	*
 	* @param ucs4char The 32-bit UCS-4 character being tested.
 	*/
-	@:overload public static function isChar(ucs4char : Int) : Bool;
+	@:overload @:static @:public public static function isChar(ucs4char : Int) : Bool;
 	
 	/**
 	* Returns true if the character is allowed to be a non-initial
@@ -59,7 +59,7 @@ extern class XmlChars
 	* @see #isNCNameChar(char)
 	* @see #isLetter(char)
 	*/
-	@:overload public static function isNameChar(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isNameChar(c : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Returns true if the character is allowed to be a non-initial
@@ -71,13 +71,13 @@ extern class XmlChars
 	* @see #isNameChar(char)
 	* @see #isLetter(char)
 	*/
-	@:overload public static function isNCNameChar(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isNCNameChar(c : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Returns true if the character is allowed where XML supports
 	* whitespace characters, false otherwise.
 	*/
-	@:overload public static function isSpace(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isSpace(c : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Returns true if the character is an XML "letter".  XML Names must
@@ -87,7 +87,7 @@ extern class XmlChars
 	* @see #isNameChar(char)
 	* @see #isNCNameChar(char)
 	*/
-	@:overload public static function isLetter(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isLetter(c : java.StdTypes.Char16) : Bool;
 	
 	
 }

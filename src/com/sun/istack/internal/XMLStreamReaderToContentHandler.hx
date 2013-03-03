@@ -28,7 +28,7 @@ extern class XMLStreamReaderToContentHandler
 	/**
 	* @see #XMLStreamReaderToContentHandler(XMLStreamReader, ContentHandler, boolean, boolean, String[])
 	*/
-	@:overload public function new(staxCore : javax.xml.stream.XMLStreamReader, saxCore : org.xml.sax.ContentHandler, eagerQuit : Bool, fragment : Bool) : Void;
+	@:overload @:public public function new(staxCore : javax.xml.stream.XMLStreamReader, saxCore : org.xml.sax.ContentHandler, eagerQuit : Bool, fragment : Bool) : Void;
 	
 	/**
 	* Construct a new StAX to SAX adapter that will convert a StAX event
@@ -43,12 +43,12 @@ extern class XMLStreamReaderToContentHandler
 	* @param inscopeNamespaces
 	*                array of the even length of the form { prefix0, uri0, prefix1, uri1, ... }
 	*/
-	@:overload public function new(staxCore : javax.xml.stream.XMLStreamReader, saxCore : org.xml.sax.ContentHandler, eagerQuit : Bool, fragment : Bool, inscopeNamespaces : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(staxCore : javax.xml.stream.XMLStreamReader, saxCore : org.xml.sax.ContentHandler, eagerQuit : Bool, fragment : Bool, inscopeNamespaces : java.NativeArray<String>) : Void;
 	
 	/*
 	* @see StAXReaderToContentHandler#bridge()
 	*/
-	@:overload public function bridge() : Void;
+	@:overload @:public public function bridge() : Void;
 	
 	
 }

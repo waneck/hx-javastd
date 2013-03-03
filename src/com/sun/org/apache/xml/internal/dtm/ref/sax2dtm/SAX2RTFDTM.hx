@@ -23,7 +23,7 @@ package com.sun.org.apache.xml.internal.dtm.ref.sax2dtm;
 */
 extern class SAX2RTFDTM extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX2DTM
 {
-	@:overload public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool) : Void;
+	@:overload @:public public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool) : Void;
 	
 	/**
 	* Given a DTM, find the owning document node. In the case of
@@ -38,7 +38,7 @@ extern class SAX2RTFDTM extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.
 	*  @return int Node handle of Document node, or null if this DTM does not
 	*  contain an "active" document.
 	* */
-	@:overload public function getDocument() : Int;
+	@:overload @:public override public function getDocument() : Int;
 	
 	/**
 	* Given a node handle, find the owning document node, using DTM semantics
@@ -51,7 +51,7 @@ extern class SAX2RTFDTM extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.
 	* @param nodeHandle the id of the node.
 	* @return int Node handle of owning document
 	*/
-	@:overload public function getDocumentRoot(nodeHandle : Int) : Int;
+	@:overload @:public override public function getDocumentRoot(nodeHandle : Int) : Int;
 	
 	/**
 	* Given a node identifier, find the owning document node.  Unlike the DOM,
@@ -61,7 +61,7 @@ extern class SAX2RTFDTM extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.
 	* @param nodeIdentifier the id of the starting node.
 	* @return int Node identifier of the root of this DTM tree
 	*/
-	@:overload private function _documentRoot(nodeIdentifier : Int) : Int;
+	@:overload @:protected private function _documentRoot(nodeIdentifier : Int) : Int;
 	
 	/**
 	* Receive notification of the beginning of a new RTF document.
@@ -75,7 +75,7 @@ extern class SAX2RTFDTM extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#startDocument
 	* */
-	@:overload public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
 	/**
 	* Receive notification of the end of the document.
@@ -89,7 +89,7 @@ extern class SAX2RTFDTM extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#endDocument
 	* */
-	@:overload public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
 	/** "Tail-pruning" support for RTFs.
 	*
@@ -101,7 +101,7 @@ extern class SAX2RTFDTM extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.
 	* RTFs will not be indexed, so I can simply panic if that case
 	* arises. Hey, it works...
 	* */
-	@:overload public function pushRewindMark() : Void;
+	@:overload @:public public function pushRewindMark() : Void;
 	
 	/** "Tail-pruning" support for RTFs.
 	*
@@ -128,11 +128,11 @@ extern class SAX2RTFDTM extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.
 	* RTF. That response is used when determining how to unspool
 	* RTF-started-while-RTF-open situations.
 	* */
-	@:overload public function popRewindMark() : Bool;
+	@:overload @:public public function popRewindMark() : Bool;
 	
 	/** @return true if a DTM tree is currently under construction.
 	* */
-	@:overload public function isTreeIncomplete() : Bool;
+	@:overload @:public public function isTreeIncomplete() : Bool;
 	
 	
 }

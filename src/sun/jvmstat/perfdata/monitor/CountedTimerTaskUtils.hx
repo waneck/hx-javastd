@@ -44,7 +44,7 @@ package sun.jvmstat.perfdata.monitor;
 	*                    purposes only.
 	* @param newInterval scheduling interval in milliseconds
 	*/
-	@:overload public static function reschedule(timer : java.util.Timer, oldTask : sun.jvmstat.perfdata.monitor.CountedTimerTask, newTask : sun.jvmstat.perfdata.monitor.CountedTimerTask, oldInterval : Int, newInterval : Int) : Void;
+	@:overload @:public @:static public static function reschedule(timer : java.util.Timer, oldTask : sun.jvmstat.perfdata.monitor.CountedTimerTask, newTask : sun.jvmstat.perfdata.monitor.CountedTimerTask, oldInterval : Int, newInterval : Int) : Void;
 	
 	
 }

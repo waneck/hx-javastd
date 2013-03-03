@@ -54,7 +54,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	/**
 	* Constructs a default <code>LocalObject</code> instance.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* <P>Determines whether the two object references are equivalent,
@@ -73,7 +73,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	*         object references are distinct, not necessarily that
 	*         they reference distinct objects.
 	*/
-	@:overload public function _is_equivalent(that : org.omg.CORBA.Object) : Bool;
+	@:overload @:public public function _is_equivalent(that : org.omg.CORBA.Object) : Bool;
 	
 	/**
 	* Always returns <code>false</code>.
@@ -82,7 +82,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	*
 	* @return <code>false</code>
 	*/
-	@:overload public function _non_existent() : Bool;
+	@:overload @:public public function _non_existent() : Bool;
 	
 	/**
 	* Returns a hash value that is consistent for the
@@ -93,7 +93,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	*                  the hashcode
 	* @return this instance's hashcode
 	*/
-	@:overload public function _hash(maximum : Int) : Int;
+	@:overload @:public public function _hash(maximum : Int) : Int;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -110,7 +110,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _is_a(repository_id : String) : Bool;
+	@:overload @:public public function _is_a(repository_id : String) : Bool;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -122,7 +122,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _duplicate() : org.omg.CORBA.Object;
+	@:overload @:public public function _duplicate() : org.omg.CORBA.Object;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -133,7 +133,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _release() : Void;
+	@:overload @:public public function _release() : Void;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -148,7 +148,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _request(operation : String) : org.omg.CORBA.Request;
+	@:overload @:public public function _request(operation : String) : org.omg.CORBA.Request;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -170,7 +170,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue) : org.omg.CORBA.Request;
+	@:overload @:public public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue) : org.omg.CORBA.Request;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -197,7 +197,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue, exceptions : org.omg.CORBA.ExceptionList, contexts : org.omg.CORBA.ContextList) : org.omg.CORBA.Request;
+	@:overload @:public public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue, exceptions : org.omg.CORBA.ExceptionList, contexts : org.omg.CORBA.ContextList) : org.omg.CORBA.Request;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -212,7 +212,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _get_interface() : org.omg.CORBA.Object;
+	@:overload @:public public function _get_interface() : org.omg.CORBA.Object;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -223,7 +223,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _get_interface_def() : org.omg.CORBA.Object;
+	@:overload @:public public function _get_interface_def() : org.omg.CORBA.Object;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -236,7 +236,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _orb() : org.omg.CORBA.ORB;
+	@:overload @:public public function _orb() : org.omg.CORBA.ORB;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -252,7 +252,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _get_policy(policy_type : Int) : org.omg.CORBA.Policy;
+	@:overload @:public public function _get_policy(policy_type : Int) : org.omg.CORBA.Policy;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -264,7 +264,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _get_domain_managers() : java.NativeArray<org.omg.CORBA.DomainManager>;
+	@:overload @:public public function _get_domain_managers() : java.NativeArray<org.omg.CORBA.DomainManager>;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -282,7 +282,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _set_policy_override(policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : org.omg.CORBA.Object;
+	@:overload @:public public function _set_policy_override(policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : org.omg.CORBA.Object;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -295,7 +295,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _is_local() : Bool;
+	@:overload @:public public function _is_local() : Bool;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -312,7 +312,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _servant_preinvoke(operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
+	@:overload @:public public function _servant_preinvoke(operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -324,7 +324,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _servant_postinvoke(servant : org.omg.CORBA.portable.ServantObject) : Void;
+	@:overload @:public public function _servant_postinvoke(servant : org.omg.CORBA.portable.ServantObject) : Void;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -345,7 +345,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _request(operation : String, responseExpected : Bool) : org.omg.CORBA.portable.OutputStream;
+	@:overload @:public public function _request(operation : String, responseExpected : Bool) : org.omg.CORBA.portable.OutputStream;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -379,7 +379,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _invoke(output : org.omg.CORBA.portable.OutputStream) : org.omg.CORBA.portable.InputStream;
+	@:overload @:public public function _invoke(output : org.omg.CORBA.portable.OutputStream) : org.omg.CORBA.portable.InputStream;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -399,7 +399,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function _releaseReply(input : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function _releaseReply(input : org.omg.CORBA.portable.InputStream) : Void;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception with
@@ -414,7 +414,7 @@ extern class LocalObject implements org.omg.CORBA.Object
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function validate_connection() : Bool;
+	@:overload @:public public function validate_connection() : Bool;
 	
 	
 }

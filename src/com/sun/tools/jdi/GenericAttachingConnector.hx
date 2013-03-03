@@ -34,31 +34,31 @@ extern class GenericAttachingConnector extends com.sun.tools.jdi.ConnectorImpl i
 	* is used when sub-classing - the resulting connector will have
 	* a "timeout" connector argument.
 	*/
-	@:overload private function new(ts : com.sun.jdi.connect.spi.TransportService) : Void;
+	@:overload @:protected private function new(ts : com.sun.jdi.connect.spi.TransportService) : Void;
 	
 	/*
 	* Create an instance of this connector. The resulting AttachingConnector
 	* will have address and timeout connector arguments.
 	*/
-	@:overload public static function create(ts : com.sun.jdi.connect.spi.TransportService) : com.sun.tools.jdi.GenericAttachingConnector;
+	@:overload @:public @:static public static function create(ts : com.sun.jdi.connect.spi.TransportService) : com.sun.tools.jdi.GenericAttachingConnector;
 	
 	/**
 	* Attach to a target VM using the specified address and Connector arguments.
 	*/
-	@:overload public function attach(address : String, args : java.util.Map<Dynamic, Dynamic>) : com.sun.jdi.VirtualMachine;
+	@:overload @:public public function attach(address : String, args : java.util.Map<Dynamic, Dynamic>) : com.sun.jdi.VirtualMachine;
 	
 	/**
 	* Attach to a target VM using the specified arguments - the address
 	* of the target VM is specified by the <code>address</code> connector
 	* argument.
 	*/
-	@:overload public function attach(args : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : com.sun.jdi.VirtualMachine;
+	@:overload @:public public function attach(args : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : com.sun.jdi.VirtualMachine;
 	
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload override public function description() : String;
+	@:overload @:public override public function description() : String;
 	
-	@:overload override public function transport() : com.sun.jdi.connect.Transport;
+	@:overload @:public override public function transport() : com.sun.jdi.connect.Transport;
 	
 	
 }

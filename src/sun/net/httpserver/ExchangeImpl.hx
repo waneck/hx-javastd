@@ -25,55 +25,55 @@ package sun.net.httpserver;
 */
 @:internal extern class ExchangeImpl
 {
-	@:overload public function getRequestHeaders() : com.sun.net.httpserver.Headers;
+	@:overload @:public public function getRequestHeaders() : com.sun.net.httpserver.Headers;
 	
-	@:overload public function getResponseHeaders() : com.sun.net.httpserver.Headers;
+	@:overload @:public public function getResponseHeaders() : com.sun.net.httpserver.Headers;
 	
-	@:overload public function getRequestURI() : java.net.URI;
+	@:overload @:public public function getRequestURI() : java.net.URI;
 	
-	@:overload public function getRequestMethod() : String;
+	@:overload @:public public function getRequestMethod() : String;
 	
-	@:overload public function getHttpContext() : sun.net.httpserver.HttpContextImpl;
+	@:overload @:public public function getHttpContext() : sun.net.httpserver.HttpContextImpl;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function getRequestBody() : java.io.InputStream;
+	@:overload @:public public function getRequestBody() : java.io.InputStream;
 	
-	@:overload public function getResponseCode() : Int;
+	@:overload @:public public function getResponseCode() : Int;
 	
-	@:overload public function getResponseBody() : java.io.OutputStream;
+	@:overload @:public public function getResponseBody() : java.io.OutputStream;
 	
-	@:overload public function sendResponseHeaders(rCode : Int, contentLen : haxe.Int64) : Void;
+	@:overload @:public public function sendResponseHeaders(rCode : Int, contentLen : haxe.Int64) : Void;
 	
-	@:overload public function getRemoteAddress() : java.net.InetSocketAddress;
+	@:overload @:public public function getRemoteAddress() : java.net.InetSocketAddress;
 	
-	@:overload public function getLocalAddress() : java.net.InetSocketAddress;
+	@:overload @:public public function getLocalAddress() : java.net.InetSocketAddress;
 	
-	@:overload public function getProtocol() : String;
+	@:overload @:public public function getProtocol() : String;
 	
-	@:overload public function getSSLSession() : javax.net.ssl.SSLSession;
+	@:overload @:public public function getSSLSession() : javax.net.ssl.SSLSession;
 	
-	@:overload public function getAttribute(name : String) : Dynamic;
+	@:overload @:public public function getAttribute(name : String) : Dynamic;
 	
-	@:overload public function setAttribute(name : String, value : Dynamic) : Void;
+	@:overload @:public public function setAttribute(name : String, value : Dynamic) : Void;
 	
-	@:overload public function setStreams(i : java.io.InputStream, o : java.io.OutputStream) : Void;
+	@:overload @:public public function setStreams(i : java.io.InputStream, o : java.io.OutputStream) : Void;
 	
-	@:overload public function getPrincipal() : com.sun.net.httpserver.HttpPrincipal;
+	@:overload @:public public function getPrincipal() : com.sun.net.httpserver.HttpPrincipal;
 	
 	
 }
 @:internal extern class PlaceholderOutputStream extends java.io.OutputStream
 {
-	@:overload public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

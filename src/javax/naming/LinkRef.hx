@@ -74,13 +74,13 @@ package javax.naming;
 	* Constructs a LinkRef for a name.
 	* @param linkName The non-null name for which to create this link.
 	*/
-	@:overload public function new(linkName : javax.naming.Name) : Void;
+	@:overload @:public public function new(linkName : javax.naming.Name) : Void;
 	
 	/**
 	* Constructs a LinkRef for a string name.
 	* @param linkName The non-null name for which to create this link.
 	*/
-	@:overload public function new(linkName : String) : Void;
+	@:overload @:public public function new(linkName : String) : Void;
 	
 	/**
 	* Retrieves the name of this link.
@@ -89,7 +89,7 @@ package javax.naming;
 	* @exception MalformedLinkException If a link name could not be extracted
 	* @exception NamingException If a naming exception was encountered.
 	*/
-	@:overload public function getLinkName() : String;
+	@:overload @:public public function getLinkName() : String;
 	
 	
 }

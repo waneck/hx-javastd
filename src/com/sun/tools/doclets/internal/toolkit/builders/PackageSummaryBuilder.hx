@@ -28,7 +28,7 @@ extern class PackageSummaryBuilder extends com.sun.tools.doclets.internal.toolki
 	/**
 	* The root element of the package summary XML is {@value}.
 	*/
-	public static var ROOT(default, null) : String;
+	@:public @:static @:final public static var ROOT(default, null) : String;
 	
 	/**
 	* Construct a new PackageSummaryBuilder.
@@ -39,17 +39,17 @@ extern class PackageSummaryBuilder extends com.sun.tools.doclets.internal.toolki
 	*
 	* @return an instance of a PackageSummaryBuilder.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, pkg : com.sun.javadoc.PackageDoc, packageWriter : com.sun.tools.doclets.internal.toolkit.PackageSummaryWriter) : com.sun.tools.doclets.internal.toolkit.builders.PackageSummaryBuilder;
+	@:overload @:public @:static public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, pkg : com.sun.javadoc.PackageDoc, packageWriter : com.sun.tools.doclets.internal.toolkit.PackageSummaryWriter) : com.sun.tools.doclets.internal.toolkit.builders.PackageSummaryBuilder;
 	
 	/**
 	* Build the package summary.
 	*/
-	@:overload override public function build() : Void;
+	@:overload @:public override public function build() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Build the package documentation.
@@ -57,7 +57,7 @@ extern class PackageSummaryBuilder extends com.sun.tools.doclets.internal.toolki
 	* @param node the XML element that specifies which components to document
 	* @param contentTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildPackageDoc(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildPackageDoc(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the content for the package doc.
@@ -66,7 +66,7 @@ extern class PackageSummaryBuilder extends com.sun.tools.doclets.internal.toolki
 	* @param contentTree the content tree to which the package contents
 	*                    will be added
 	*/
-	@:overload public function buildContent(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildContent(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the package summary.
@@ -75,7 +75,7 @@ extern class PackageSummaryBuilder extends com.sun.tools.doclets.internal.toolki
 	* @param packageContentTree the package content tree to which the summaries will
 	*                           be added
 	*/
-	@:overload public function buildSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, packageContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, packageContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summary for the interfaces in this package.
@@ -84,7 +84,7 @@ extern class PackageSummaryBuilder extends com.sun.tools.doclets.internal.toolki
 	* @param summaryContentTree the summary tree to which the interface summary
 	*                           will be added
 	*/
-	@:overload public function buildInterfaceSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, summaryContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildInterfaceSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, summaryContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summary for the classes in this package.
@@ -93,7 +93,7 @@ extern class PackageSummaryBuilder extends com.sun.tools.doclets.internal.toolki
 	* @param summaryContentTree the summary tree to which the class summary will
 	*                           be added
 	*/
-	@:overload public function buildClassSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, summaryContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildClassSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, summaryContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summary for the enums in this package.
@@ -102,7 +102,7 @@ extern class PackageSummaryBuilder extends com.sun.tools.doclets.internal.toolki
 	* @param summaryContentTree the summary tree to which the enum summary will
 	*                           be added
 	*/
-	@:overload public function buildEnumSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, summaryContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildEnumSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, summaryContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summary for the exceptions in this package.
@@ -111,7 +111,7 @@ extern class PackageSummaryBuilder extends com.sun.tools.doclets.internal.toolki
 	* @param summaryContentTree the summary tree to which the exception summary will
 	*                           be added
 	*/
-	@:overload public function buildExceptionSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, summaryContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildExceptionSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, summaryContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summary for the errors in this package.
@@ -120,7 +120,7 @@ extern class PackageSummaryBuilder extends com.sun.tools.doclets.internal.toolki
 	* @param summaryContentTree the summary tree to which the error summary will
 	*                           be added
 	*/
-	@:overload public function buildErrorSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, summaryContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildErrorSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, summaryContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summary for the annotation type in this package.
@@ -129,7 +129,7 @@ extern class PackageSummaryBuilder extends com.sun.tools.doclets.internal.toolki
 	* @param summaryContentTree the summary tree to which the annotation type
 	*                           summary will be added
 	*/
-	@:overload public function buildAnnotationTypeSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, summaryContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildAnnotationTypeSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, summaryContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the description of the summary.
@@ -138,7 +138,7 @@ extern class PackageSummaryBuilder extends com.sun.tools.doclets.internal.toolki
 	* @param packageContentTree the tree to which the package description will
 	*                           be added
 	*/
-	@:overload public function buildPackageDescription(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, packageContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildPackageDescription(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, packageContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the tags of the summary.
@@ -146,9 +146,9 @@ extern class PackageSummaryBuilder extends com.sun.tools.doclets.internal.toolki
 	* @param node the XML element that specifies which components to document
 	* @param packageContentTree the tree to which the package tags will be added
 	*/
-	@:overload public function buildPackageTags(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, packageContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildPackageTags(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, packageContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
-	@:overload public static function filterOutPrivateClasses(classes : java.NativeArray<com.sun.javadoc.ClassDoc>) : java.NativeArray<com.sun.javadoc.ClassDoc>;
+	@:overload @:static @:public public static function filterOutPrivateClasses(classes : java.NativeArray<com.sun.javadoc.ClassDoc>) : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	
 }

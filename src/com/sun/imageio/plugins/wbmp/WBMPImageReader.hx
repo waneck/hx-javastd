@@ -28,37 +28,37 @@ extern class WBMPImageReader extends javax.imageio.ImageReader
 	/** Constructs <code>WBMPImageReader</code> from the provided
 	*  <code>ImageReaderSpi</code>.
 	*/
-	@:overload public function new(originator : javax.imageio.spi.ImageReaderSpi) : Void;
+	@:overload @:public public function new(originator : javax.imageio.spi.ImageReaderSpi) : Void;
 	
 	/** Overrides the method defined in the superclass. */
-	@:overload override public function setInput(input : Dynamic, seekForwardOnly : Bool, ignoreMetadata : Bool) : Void;
+	@:overload @:public override public function setInput(input : Dynamic, seekForwardOnly : Bool, ignoreMetadata : Bool) : Void;
 	
 	/** Overrides the method defined in the superclass. */
-	@:overload override public function getNumImages(allowSearch : Bool) : Int;
+	@:overload @:public override public function getNumImages(allowSearch : Bool) : Int;
 	
-	@:overload override public function getWidth(imageIndex : Int) : Int;
+	@:overload @:public override public function getWidth(imageIndex : Int) : Int;
 	
-	@:overload override public function getHeight(imageIndex : Int) : Int;
+	@:overload @:public override public function getHeight(imageIndex : Int) : Int;
 	
-	@:overload override public function isRandomAccessEasy(imageIndex : Int) : Bool;
+	@:overload @:public override public function isRandomAccessEasy(imageIndex : Int) : Bool;
 	
-	@:overload public function readHeader() : Void;
+	@:overload @:public public function readHeader() : Void;
 	
-	@:overload override public function getImageTypes(imageIndex : Int) : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function getImageTypes(imageIndex : Int) : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function getDefaultReadParam() : javax.imageio.ImageReadParam;
+	@:overload @:public override public function getDefaultReadParam() : javax.imageio.ImageReadParam;
 	
-	@:overload override public function getImageMetadata(imageIndex : Int) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getImageMetadata(imageIndex : Int) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function getStreamMetadata() : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getStreamMetadata() : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function read(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.BufferedImage;
+	@:overload @:public override public function read(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.BufferedImage;
 	
-	@:overload override public function canReadRaster() : Bool;
+	@:overload @:public override public function canReadRaster() : Bool;
 	
-	@:overload override public function readRaster(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.Raster;
+	@:overload @:public override public function readRaster(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.Raster;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }

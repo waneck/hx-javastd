@@ -28,43 +28,43 @@ extern class Instruction implements sun.tools.java.Constants
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, opc : Int, value : Dynamic, flagCondInverted : Bool) : Void;
+	@:overload @:public public function new(where : haxe.Int64, opc : Int, value : Dynamic, flagCondInverted : Bool) : Void;
 	
 	/**
 	* Constructor
 	*/
-	@:overload public function new(flagNoCovered : Bool, where : haxe.Int64, opc : Int, value : Dynamic) : Void;
+	@:overload @:public public function new(flagNoCovered : Bool, where : haxe.Int64, opc : Int, value : Dynamic) : Void;
 	
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, opc : Int, flagNoCovered : Bool) : Void;
+	@:overload @:public public function new(where : haxe.Int64, opc : Int, flagNoCovered : Bool) : Void;
 	
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, opc : Int, value : Dynamic) : Void;
+	@:overload @:public public function new(where : haxe.Int64, opc : Int, value : Dynamic) : Void;
 	
 	/**
 	* When deciding between a lookupswitch and a tableswitch, this
 	* value is used in determining how much size increase is
 	* acceptable.
 	*/
-	public static var SWITCHRATIO(default, null) : Float;
+	@:public @:static @:final public static var SWITCHRATIO(default, null) : Float;
 	
 	/**
 	* Accessor
 	*/
-	@:overload public function getOpcode() : Int;
+	@:overload @:public public function getOpcode() : Int;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public public function setValue(value : Dynamic) : Void;
 	
 	/**
 	* toString
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

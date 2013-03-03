@@ -66,7 +66,7 @@ extern class RMIConnector implements javax.management.remote.JMXConnector implem
 	* @exception IllegalArgumentException if <code>url</code>
 	* is null.
 	*/
-	@:overload public function new(url : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function new(url : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* <p>Constructs an <code>RMIConnector</code> using the given RMI stub.
@@ -79,7 +79,7 @@ extern class RMIConnector implements javax.management.remote.JMXConnector implem
 	* @exception IllegalArgumentException if <code>rmiServer</code>
 	* is null.
 	*/
-	@:overload public function new(rmiServer : javax.management.remote.rmi.RMIServer, environment : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function new(rmiServer : javax.management.remote.rmi.RMIServer, environment : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* <p>Returns a string representation of this object.  In general,
@@ -90,7 +90,7 @@ extern class RMIConnector implements javax.management.remote.JMXConnector implem
 	*
 	* @return a String representation of this object.
 	**/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* <p>The address of this connector.</p>
@@ -100,119 +100,119 @@ extern class RMIConnector implements javax.management.remote.JMXConnector implem
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getAddress() : javax.management.remote.JMXServiceURL;
+	@:require(java6) @:overload @:public public function getAddress() : javax.management.remote.JMXServiceURL;
 	
-	@:overload public function connect() : Void;
+	@:overload @:public public function connect() : Void;
 	
-	@:overload @:synchronized public function connect(environment : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public @:synchronized public function connect(environment : java.util.Map<String, Dynamic>) : Void;
 	
-	@:overload @:synchronized public function getConnectionId() : String;
+	@:overload @:public @:synchronized public function getConnectionId() : String;
 	
-	@:overload @:synchronized public function getMBeanServerConnection() : javax.management.MBeanServerConnection;
+	@:overload @:public @:synchronized public function getMBeanServerConnection() : javax.management.MBeanServerConnection;
 	
-	@:overload @:synchronized public function getMBeanServerConnection(delegationSubject : javax.security.auth.Subject) : javax.management.MBeanServerConnection;
+	@:overload @:public @:synchronized public function getMBeanServerConnection(delegationSubject : javax.security.auth.Subject) : javax.management.MBeanServerConnection;
 	
-	@:overload public function addConnectionNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addConnectionNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload public function removeConnectionNotificationListener(listener : javax.management.NotificationListener) : Void;
+	@:overload @:public public function removeConnectionNotificationListener(listener : javax.management.NotificationListener) : Void;
 	
-	@:overload public function removeConnectionNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeConnectionNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload @:synchronized public function close() : Void;
+	@:overload @:public @:synchronized public function close() : Void;
 	
 	
 }
 @:native('javax$management$remote$rmi$RMIConnector$RemoteMBeanServerConnection') @:internal extern class RMIConnector_RemoteMBeanServerConnection implements javax.management.MBeanServerConnection
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(delegationSubject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function new(delegationSubject : javax.security.auth.Subject) : Void;
 	
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
 	
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
 	
-	@:overload public function unregisterMBean(name : javax.management.ObjectName) : Void;
+	@:overload @:public public function unregisterMBean(name : javax.management.ObjectName) : Void;
 	
-	@:overload public function getObjectInstance(name : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function getObjectInstance(name : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
-	@:overload public function queryMBeans(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectInstance>;
+	@:overload @:public public function queryMBeans(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectInstance>;
 	
-	@:overload public function queryNames(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectName>;
+	@:overload @:public public function queryNames(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectName>;
 	
-	@:overload public function isRegistered(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function isRegistered(name : javax.management.ObjectName) : Bool;
 	
-	@:overload public function getMBeanCount() : Null<Int>;
+	@:overload @:public public function getMBeanCount() : Null<Int>;
 	
-	@:overload public function getAttribute(name : javax.management.ObjectName, attribute : String) : Dynamic;
+	@:overload @:public public function getAttribute(name : javax.management.ObjectName, attribute : String) : Dynamic;
 	
-	@:overload public function getAttributes(name : javax.management.ObjectName, attributes : java.NativeArray<String>) : javax.management.AttributeList;
+	@:overload @:public public function getAttributes(name : javax.management.ObjectName, attributes : java.NativeArray<String>) : javax.management.AttributeList;
 	
-	@:overload public function setAttribute(name : javax.management.ObjectName, attribute : javax.management.Attribute) : Void;
+	@:overload @:public public function setAttribute(name : javax.management.ObjectName, attribute : javax.management.Attribute) : Void;
 	
-	@:overload public function setAttributes(name : javax.management.ObjectName, attributes : javax.management.AttributeList) : javax.management.AttributeList;
+	@:overload @:public public function setAttributes(name : javax.management.ObjectName, attributes : javax.management.AttributeList) : javax.management.AttributeList;
 	
-	@:overload public function invoke(name : javax.management.ObjectName, operationName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function invoke(name : javax.management.ObjectName, operationName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
-	@:overload public function getDefaultDomain() : String;
+	@:overload @:public public function getDefaultDomain() : String;
 	
-	@:overload public function getDomains() : java.NativeArray<String>;
+	@:overload @:public public function getDomains() : java.NativeArray<String>;
 	
-	@:overload public function getMBeanInfo(name : javax.management.ObjectName) : javax.management.MBeanInfo;
+	@:overload @:public public function getMBeanInfo(name : javax.management.ObjectName) : javax.management.MBeanInfo;
 	
-	@:overload public function isInstanceOf(name : javax.management.ObjectName, className : String) : Bool;
+	@:overload @:public public function isInstanceOf(name : javax.management.ObjectName, className : String) : Bool;
 	
-	@:overload public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName) : Void;
 	
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener) : Void;
 	
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	
 }
 @:native('javax$management$remote$rmi$RMIConnector$RMINotifClient') @:internal extern class RMIConnector_RMINotifClient extends com.sun.jmx.remote.internal.ClientNotifForwarder
 {
-	@:overload public function new(cl : java.lang.ClassLoader, env : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function new(cl : java.lang.ClassLoader, env : java.util.Map<String, Dynamic>) : Void;
 	
-	@:overload override private function fetchNotifs(clientSequenceNumber : haxe.Int64, maxNotifications : Int, timeout : haxe.Int64) : javax.management.remote.NotificationResult;
+	@:overload @:protected override private function fetchNotifs(clientSequenceNumber : haxe.Int64, maxNotifications : Int, timeout : haxe.Int64) : javax.management.remote.NotificationResult;
 	
-	@:overload override private function addListenerForMBeanRemovedNotif() : Null<Int>;
+	@:overload @:protected override private function addListenerForMBeanRemovedNotif() : Null<Int>;
 	
-	@:overload override private function removeListenerForMBeanRemovedNotif(id : Null<Int>) : Void;
+	@:overload @:protected override private function removeListenerForMBeanRemovedNotif(id : Null<Int>) : Void;
 	
-	@:overload override private function lostNotifs(message : String, number : haxe.Int64) : Void;
+	@:overload @:protected override private function lostNotifs(message : String, number : haxe.Int64) : Void;
 	
 	
 }
 @:native('javax$management$remote$rmi$RMIConnector$RMIClientCommunicatorAdmin') @:internal extern class RMIConnector_RMIClientCommunicatorAdmin extends com.sun.jmx.remote.internal.ClientCommunicatorAdmin
 {
-	@:overload public function new(period : haxe.Int64) : Void;
+	@:overload @:public public function new(period : haxe.Int64) : Void;
 	
-	@:overload public function gotIOException(ioe : java.io.IOException) : Void;
+	@:overload @:public override public function gotIOException(ioe : java.io.IOException) : Void;
 	
-	@:overload public function reconnectNotificationListeners(old : java.NativeArray<com.sun.jmx.remote.internal.ClientListenerInfo>) : Void;
+	@:overload @:public public function reconnectNotificationListeners(old : java.NativeArray<com.sun.jmx.remote.internal.ClientListenerInfo>) : Void;
 	
-	@:overload private function checkConnection() : Void;
+	@:overload @:protected override private function checkConnection() : Void;
 	
-	@:overload private function doStart() : Void;
+	@:overload @:protected override private function doStart() : Void;
 	
-	@:overload private function doStop() : Void;
+	@:overload @:protected override private function doStop() : Void;
 	
 	
 }
 @:native('javax$management$remote$rmi$RMIConnector$ObjectInputStreamWithLoader') @:internal extern class RMIConnector_ObjectInputStreamWithLoader extends java.io.ObjectInputStream
 {
-	@:overload override private function resolveClass(classDesc : java.io.ObjectStreamClass) : Class<Dynamic>;
+	@:overload @:protected override private function resolveClass(classDesc : java.io.ObjectStreamClass) : Class<Dynamic>;
 	
 	
 }

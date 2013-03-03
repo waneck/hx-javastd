@@ -28,13 +28,13 @@ extern class LDAPCertStoreHelper implements sun.security.provider.certpath.CertS
 	/**
 	* LDAP implementation of CertStoreHelper.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getCertStore(uri : java.net.URI) : java.security.cert.CertStore;
+	@:overload @:public public function getCertStore(uri : java.net.URI) : java.security.cert.CertStore;
 	
-	@:overload public function wrap(selector : java.security.cert.X509CertSelector, certSubject : javax.security.auth.x500.X500Principal, ldapDN : String) : java.security.cert.X509CertSelector;
+	@:overload @:public public function wrap(selector : java.security.cert.X509CertSelector, certSubject : javax.security.auth.x500.X500Principal, ldapDN : String) : java.security.cert.X509CertSelector;
 	
-	@:overload public function wrap(selector : java.security.cert.X509CRLSelector, certIssuers : java.util.Collection<javax.security.auth.x500.X500Principal>, ldapDN : String) : java.security.cert.X509CRLSelector;
+	@:overload @:public public function wrap(selector : java.security.cert.X509CRLSelector, certIssuers : java.util.Collection<javax.security.auth.x500.X500Principal>, ldapDN : String) : java.security.cert.X509CRLSelector;
 	
 	
 }

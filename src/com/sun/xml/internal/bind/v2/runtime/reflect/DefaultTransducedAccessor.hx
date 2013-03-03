@@ -36,11 +36,11 @@ extern class DefaultTransducedAccessor<T> extends com.sun.xml.internal.bind.v2.r
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload @:abstract override public function print(o : T) : String;
+	@:overload @:public @:abstract override public function print(o : T) : String;
 	
-	@:overload override public function writeLeafElement(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, tagName : com.sun.xml.internal.bind.v2.runtime.Name, o : T, fieldName : String) : Void;
+	@:overload @:public override public function writeLeafElement(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, tagName : com.sun.xml.internal.bind.v2.runtime.Name, o : T, fieldName : String) : Void;
 	
-	@:overload override public function writeText(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, o : T, fieldName : String) : Void;
+	@:overload @:public override public function writeText(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, o : T, fieldName : String) : Void;
 	
 	
 }

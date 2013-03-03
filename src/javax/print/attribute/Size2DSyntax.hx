@@ -29,13 +29,13 @@ extern class Size2DSyntax implements java.io.Serializable implements java.lang.C
 	* Value to indicate units of inches (in). It is actually the conversion
 	* factor by which to multiply inches to yield &#181;m (25400).
 	*/
-	public static var INCH(default, null) : Int;
+	@:public @:static @:final public static var INCH(default, null) : Int;
 	
 	/**
 	* Value to indicate units of millimeters (mm). It is actually the
 	* conversion factor by which to multiply mm to yield &#181;m (1000).
 	*/
-	public static var MM(default, null) : Int;
+	@:public @:static @:final public static var MM(default, null) : Int;
 	
 	/**
 	* Construct a new two-dimensional size attribute from the given
@@ -51,7 +51,7 @@ extern class Size2DSyntax implements java.io.Serializable implements java.lang.C
 	*     (Unchecked exception) Thrown if <CODE>x</CODE> < 0 or <CODE>y</CODE>
 	*     < 0 or <CODE>units</CODE> < 1.
 	*/
-	@:overload private function new(x : Single, y : Single, units : Int) : Void;
+	@:overload @:protected private function new(x : Single, y : Single, units : Int) : Void;
 	
 	/**
 	* Construct a new two-dimensional size attribute from the given integer
@@ -67,7 +67,7 @@ extern class Size2DSyntax implements java.io.Serializable implements java.lang.C
 	*   (Unchecked exception) Thrown if <CODE>x</CODE> < 0 or <CODE>y</CODE>
 	*    < 0 or <CODE>units</CODE> < 1.
 	*/
-	@:overload private function new(x : Int, y : Int, units : Int) : Void;
+	@:overload @:protected private function new(x : Int, y : Int, units : Int) : Void;
 	
 	/**
 	* Get this two-dimensional size attribute's dimensions in the given units
@@ -83,7 +83,7 @@ extern class Size2DSyntax implements java.io.Serializable implements java.lang.C
 	* @exception  IllegalArgumentException
 	*     (unchecked exception) Thrown if <CODE>units</CODE> < 1.
 	*/
-	@:overload public function getSize(units : Int) : java.NativeArray<Single>;
+	@:overload @:public public function getSize(units : Int) : java.NativeArray<Single>;
 	
 	/**
 	* Returns this two-dimensional size attribute's X dimension in the given
@@ -98,7 +98,7 @@ extern class Size2DSyntax implements java.io.Serializable implements java.lang.C
 	* @exception  IllegalArgumentException
 	*     (unchecked exception) Thrown if <CODE>units</CODE> < 1.
 	*/
-	@:overload public function getX(units : Int) : Single;
+	@:overload @:public public function getX(units : Int) : Single;
 	
 	/**
 	* Returns this two-dimensional size attribute's Y dimension in the given
@@ -113,7 +113,7 @@ extern class Size2DSyntax implements java.io.Serializable implements java.lang.C
 	* @exception  IllegalArgumentException
 	*     (unchecked exception) Thrown if <CODE>units</CODE> < 1.
 	*/
-	@:overload public function getY(units : Int) : Single;
+	@:overload @:public public function getY(units : Int) : Single;
 	
 	/**
 	* Returns a string version of this two-dimensional size attribute in the
@@ -134,7 +134,7 @@ extern class Size2DSyntax implements java.io.Serializable implements java.lang.C
 	* @exception  IllegalArgumentException
 	*     (unchecked exception) Thrown if <CODE>units</CODE> < 1.
 	*/
-	@:overload public function toString(units : Int, unitsName : String) : String;
+	@:overload @:public public function toString(units : Int, unitsName : String) : String;
 	
 	/**
 	* Returns whether this two-dimensional size attribute is equivalent to the
@@ -158,12 +158,12 @@ extern class Size2DSyntax implements java.io.Serializable implements java.lang.C
 	* @return  True if <CODE>object</CODE> is equivalent to this
 	*          two-dimensional size attribute, false otherwise.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for this two-dimensional size attribute.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string version of this two-dimensional size attribute. The
@@ -171,7 +171,7 @@ extern class Size2DSyntax implements java.io.Serializable implements java.lang.C
 	* <I>X</I> is the X dimension and <I>Y</I> is the Y dimension.
 	* The values are reported in the internal units of micrometers.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns this two-dimensional size attribute's X dimension in units of
@@ -179,7 +179,7 @@ extern class Size2DSyntax implements java.io.Serializable implements java.lang.C
 	*
 	* @return  X dimension (&#181;m).
 	*/
-	@:overload private function getXMicrometers() : Int;
+	@:overload @:protected private function getXMicrometers() : Int;
 	
 	/**
 	* Returns this two-dimensional size attribute's Y dimension in units of
@@ -187,7 +187,7 @@ extern class Size2DSyntax implements java.io.Serializable implements java.lang.C
 	*
 	* @return  Y dimension (&#181;m).
 	*/
-	@:overload private function getYMicrometers() : Int;
+	@:overload @:protected private function getYMicrometers() : Int;
 	
 	
 }

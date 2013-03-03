@@ -28,13 +28,13 @@ package com.sun.corba.se.impl.naming.namingutil;
 */
 extern class NamingConstants
 {
-	public static var IIOP_LENGTH(default, null) : Int;
+	@:public @:static @:final public static var IIOP_LENGTH(default, null) : Int;
 	
-	public static var RIRCOLON_LENGTH(default, null) : Int;
+	@:public @:static @:final public static var RIRCOLON_LENGTH(default, null) : Int;
 	
-	public static var MAJORNUMBER_SUPPORTED(default, null) : Int;
+	@:public @:static @:final public static var MAJORNUMBER_SUPPORTED(default, null) : Int;
 	
-	public static var MINORNUMBERMAX(default, null) : Int;
+	@:public @:static @:final public static var MINORNUMBERMAX(default, null) : Int;
 	
 	
 }

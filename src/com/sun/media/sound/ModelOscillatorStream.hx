@@ -30,15 +30,15 @@ extern interface ModelOscillatorStream
 	*
 	* @author Karl Helgason
 	*/
-	@:overload public function setPitch(pitch : Single) : Void;
+	@:overload @:public public function setPitch(pitch : Single) : Void;
 	
-	@:overload public function noteOn(channel : javax.sound.midi.MidiChannel, voice : javax.sound.midi.VoiceStatus, noteNumber : Int, velocity : Int) : Void;
+	@:overload @:public public function noteOn(channel : javax.sound.midi.MidiChannel, voice : javax.sound.midi.VoiceStatus, noteNumber : Int, velocity : Int) : Void;
 	
-	@:overload public function noteOff(velocity : Int) : Void;
+	@:overload @:public public function noteOff(velocity : Int) : Void;
 	
-	@:overload public function read(buffer : java.NativeArray<java.NativeArray<Single>>, offset : Int, len : Int) : Int;
+	@:overload @:public public function read(buffer : java.NativeArray<java.NativeArray<Single>>, offset : Int, len : Int) : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

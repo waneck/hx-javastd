@@ -32,11 +32,11 @@ package com.sun.tools.example.debug.gui;
 */
 extern class TypeScriptOutputListener implements com.sun.tools.example.debug.bdi.OutputListener
 {
-	@:overload public function new(script : com.sun.tools.example.debug.gui.TypeScript) : Void;
+	@:overload @:public public function new(script : com.sun.tools.example.debug.gui.TypeScript) : Void;
 	
-	@:overload public function new(script : com.sun.tools.example.debug.gui.TypeScript, appendNewline : Bool) : Void;
+	@:overload @:public public function new(script : com.sun.tools.example.debug.gui.TypeScript, appendNewline : Bool) : Void;
 	
-	@:overload public function putString(s : String) : Void;
+	@:overload @:public public function putString(s : String) : Void;
 	
 	
 }

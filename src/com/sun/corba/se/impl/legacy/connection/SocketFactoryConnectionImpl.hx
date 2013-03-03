@@ -28,11 +28,11 @@ extern class SocketFactoryConnectionImpl extends com.sun.corba.se.impl.transport
 	/**
 	* @author Harold Carr
 	*/
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, contactInfo : com.sun.corba.se.spi.transport.CorbaContactInfo, useSelectThreadToWait : Bool, useWorkerThread : Bool) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, contactInfo : com.sun.corba.se.spi.transport.CorbaContactInfo, useSelectThreadToWait : Bool, useWorkerThread : Bool) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload override public function dprint(msg : String) : Void;
+	@:overload @:public override public function dprint(msg : String) : Void;
 	
 	
 }

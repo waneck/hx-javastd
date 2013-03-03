@@ -44,7 +44,7 @@ extern class AudioData
 	/**
 	* Constructor
 	*/
-	@:overload public function new(buffer : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(buffer : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

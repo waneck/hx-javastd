@@ -25,11 +25,11 @@ package com.sun.tools.javac.api;
 */
 extern class JavacTaskImpl extends com.sun.source.util.JavacTask
 {
-	@:overload override public function call() : Null<Bool>;
+	@:overload @:public override public function call() : Null<Bool>;
 	
-	@:overload override public function setProcessors(processors : java.lang.Iterable<javax.annotation.processing.Processor>) : Void;
+	@:overload @:public override public function setProcessors(processors : java.lang.Iterable<javax.annotation.processing.Processor>) : Void;
 	
-	@:overload override public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public override public function setLocale(locale : java.util.Locale) : Void;
 	
 	/**
 	* Construct a JavaFileObject from the given file.
@@ -39,9 +39,9 @@ extern class JavacTaskImpl extends com.sun.source.util.JavacTask
 	* @param file a file
 	* @return a JavaFileObject from the standard file manager.
 	*/
-	@:overload public function asJavaFileObject(file : java.io.File) : javax.tools.JavaFileObject;
+	@:overload @:public public function asJavaFileObject(file : java.io.File) : javax.tools.JavaFileObject;
 	
-	@:overload override public function setTaskListener(taskListener : com.sun.source.util.TaskListener) : Void;
+	@:overload @:public override public function setTaskListener(taskListener : com.sun.source.util.TaskListener) : Void;
 	
 	/**
 	* Parse the specified files returning a list of abstract syntax trees.
@@ -49,7 +49,7 @@ extern class JavacTaskImpl extends com.sun.source.util.JavacTask
 	* @throws java.io.IOException TODO
 	* @return a list of abstract syntax trees
 	*/
-	@:overload override public function parse() : java.lang.Iterable<com.sun.source.tree.CompilationUnitTree>;
+	@:overload @:public override public function parse() : java.lang.Iterable<com.sun.source.tree.CompilationUnitTree>;
 	
 	/**
 	* Translate all the abstract syntax trees to elements.
@@ -58,7 +58,7 @@ extern class JavacTaskImpl extends com.sun.source.util.JavacTask
 	* @return a list of elements corresponding to the top level
 	* classes in the abstract syntax trees
 	*/
-	@:overload public function enter() : java.lang.Iterable<javax.lang.model.element.TypeElement>;
+	@:overload @:public public function enter() : java.lang.Iterable<javax.lang.model.element.TypeElement>;
 	
 	/**
 	* Translate the given abstract syntax trees to elements.
@@ -68,13 +68,13 @@ extern class JavacTaskImpl extends com.sun.source.util.JavacTask
 	* @return a list of elements corresponding to the top level
 	* classes in the abstract syntax trees
 	*/
-	@:overload public function enter(trees : java.lang.Iterable<com.sun.source.tree.CompilationUnitTree>) : java.lang.Iterable<javax.lang.model.element.TypeElement>;
+	@:overload @:public public function enter(trees : java.lang.Iterable<com.sun.source.tree.CompilationUnitTree>) : java.lang.Iterable<javax.lang.model.element.TypeElement>;
 	
 	/**
 	* Complete all analysis.
 	* @throws IOException TODO
 	*/
-	@:overload override public function analyze() : java.lang.Iterable<javax.lang.model.element.Element>;
+	@:overload @:public override public function analyze() : java.lang.Iterable<javax.lang.model.element.Element>;
 	
 	/**
 	* Complete all analysis on the given classes.
@@ -84,13 +84,13 @@ extern class JavacTaskImpl extends com.sun.source.util.JavacTask
 	*
 	* @param classes a list of class elements
 	*/
-	@:overload public function analyze(classes : java.lang.Iterable<javax.lang.model.element.TypeElement>) : java.lang.Iterable<javax.lang.model.element.Element>;
+	@:overload @:public public function analyze(classes : java.lang.Iterable<javax.lang.model.element.TypeElement>) : java.lang.Iterable<javax.lang.model.element.Element>;
 	
 	/**
 	* Generate code.
 	* @throws IOException TODO
 	*/
-	@:overload override public function generate() : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload @:public override public function generate() : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
 	/**
 	* Generate code corresponding to the given classes.
@@ -101,33 +101,33 @@ extern class JavacTaskImpl extends com.sun.source.util.JavacTask
 	*
 	* @param classes a list of class elements
 	*/
-	@:overload public function generate(classes : java.lang.Iterable<javax.lang.model.element.TypeElement>) : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload @:public public function generate(classes : java.lang.Iterable<javax.lang.model.element.TypeElement>) : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
-	@:overload override public function getTypeMirror(path : java.lang.Iterable<com.sun.source.tree.Tree>) : javax.lang.model.type.TypeMirror;
+	@:overload @:public override public function getTypeMirror(path : java.lang.Iterable<com.sun.source.tree.Tree>) : javax.lang.model.type.TypeMirror;
 	
-	@:overload override public function getElements() : com.sun.tools.javac.model.JavacElements;
+	@:overload @:public override public function getElements() : com.sun.tools.javac.model.JavacElements;
 	
-	@:overload override public function getTypes() : com.sun.tools.javac.model.JavacTypes;
+	@:overload @:public override public function getTypes() : com.sun.tools.javac.model.JavacTypes;
 	
-	@:overload public function pathFor(unit : com.sun.source.tree.CompilationUnitTree, node : com.sun.source.tree.Tree) : java.lang.Iterable<com.sun.source.tree.Tree>;
-	
-	/**
-	* For internal use only.  This method will be
-	* removed without warning.
-	*/
-	@:overload public function getContext() : com.sun.tools.javac.util.Context;
+	@:overload @:public public function pathFor(unit : com.sun.source.tree.CompilationUnitTree, node : com.sun.source.tree.Tree) : java.lang.Iterable<com.sun.source.tree.Tree>;
 	
 	/**
 	* For internal use only.  This method will be
 	* removed without warning.
 	*/
-	@:overload public function updateContext(newContext : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:public public function getContext() : com.sun.tools.javac.util.Context;
 	
 	/**
 	* For internal use only.  This method will be
 	* removed without warning.
 	*/
-	@:overload public function parseType(expr : String, scope : javax.lang.model.element.TypeElement) : com.sun.tools.javac.code.Type;
+	@:overload @:public public function updateContext(newContext : com.sun.tools.javac.util.Context) : Void;
+	
+	/**
+	* For internal use only.  This method will be
+	* removed without warning.
+	*/
+	@:overload @:public public function parseType(expr : String, scope : javax.lang.model.element.TypeElement) : com.sun.tools.javac.code.Type;
 	
 	
 }

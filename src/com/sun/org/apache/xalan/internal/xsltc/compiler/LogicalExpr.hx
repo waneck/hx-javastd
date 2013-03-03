@@ -28,9 +28,9 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* @author Santiago Pericas-Geertsen
 	* @author Morten Jorgensen
 	*/
-	public static var OR(default, null) : Int;
+	@:public @:static @:final public static var OR(default, null) : Int;
 	
-	public static var AND(default, null) : Int;
+	@:public @:static @:final public static var AND(default, null) : Int;
 	
 	/**
 	* Creates a new logical expression - either OR or AND. Note that the
@@ -38,57 +38,57 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* thus creating logical trees representing structures such as
 	* (a and (b or c) and d), etc...
 	*/
-	@:overload public function new(op : Int, left : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression, right : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression) : Void;
+	@:overload @:public public function new(op : Int, left : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression, right : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression) : Void;
 	
 	/**
 	* Returns true if this expressions contains a call to position(). This is
 	* needed for context changes in node steps containing multiple predicates.
 	*/
-	@:overload override public function hasPositionCall() : Bool;
+	@:overload @:public override public function hasPositionCall() : Bool;
 	
 	/**
 	* Returns true if this expressions contains a call to last()
 	*/
-	@:overload override public function hasLastCall() : Bool;
+	@:overload @:public override public function hasLastCall() : Bool;
 	
 	/**
 	* Returns an object representing the compile-time evaluation
 	* of an expression. We are only using this for function-available
 	* and element-available at this time.
 	*/
-	@:overload override public function evaluateAtCompileTime() : Dynamic;
+	@:overload @:public override public function evaluateAtCompileTime() : Dynamic;
 	
 	/**
 	* Returns this logical expression's operator - OR or AND represented
 	* by 0 and 1 respectively.
 	*/
-	@:overload public function getOp() : Int;
+	@:overload @:public public function getOp() : Int;
 	
 	/**
 	* Override the SyntaxTreeNode.setParser() method to make sure that the
 	* parser is set for sub-expressions
 	*/
-	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Returns a string describing this expression
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Type-check this expression, and possibly child expressions.
 	*/
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Compile the expression - leave boolean expression on stack
 	*/
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Compile expression and update true/false-lists
 	*/
-	@:overload override public function translateDesynthesized(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translateDesynthesized(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

@@ -25,17 +25,17 @@ package sun.nio.ch;
 */
 extern class SelectorProviderImpl extends java.nio.channels.spi.SelectorProvider
 {
-	@:overload public function openDatagramChannel() : java.nio.channels.DatagramChannel;
+	@:overload @:public override public function openDatagramChannel() : java.nio.channels.DatagramChannel;
 	
-	@:overload public function openDatagramChannel(family : java.net.ProtocolFamily) : java.nio.channels.DatagramChannel;
+	@:overload @:public override public function openDatagramChannel(family : java.net.ProtocolFamily) : java.nio.channels.DatagramChannel;
 	
-	@:overload public function openPipe() : java.nio.channels.Pipe;
+	@:overload @:public override public function openPipe() : java.nio.channels.Pipe;
 	
-	@:overload @:abstract public function openSelector() : java.nio.channels.spi.AbstractSelector;
+	@:overload @:public @:abstract override public function openSelector() : java.nio.channels.spi.AbstractSelector;
 	
-	@:overload public function openServerSocketChannel() : java.nio.channels.ServerSocketChannel;
+	@:overload @:public override public function openServerSocketChannel() : java.nio.channels.ServerSocketChannel;
 	
-	@:overload public function openSocketChannel() : java.nio.channels.SocketChannel;
+	@:overload @:public override public function openSocketChannel() : java.nio.channels.SocketChannel;
 	
 	
 }

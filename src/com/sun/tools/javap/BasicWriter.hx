@@ -34,49 +34,49 @@ extern class BasicWriter
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	@:overload private function new(context : com.sun.tools.javap.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javap.Context) : Void;
 	
-	@:overload private function print(s : String) : Void;
+	@:overload @:protected private function print(s : String) : Void;
 	
-	@:overload private function print(o : Dynamic) : Void;
+	@:overload @:protected private function print(o : Dynamic) : Void;
 	
-	@:overload private function println() : Void;
+	@:overload @:protected private function println() : Void;
 	
-	@:overload private function println(s : String) : Void;
+	@:overload @:protected private function println(s : String) : Void;
 	
-	@:overload private function println(o : Dynamic) : Void;
+	@:overload @:protected private function println(o : Dynamic) : Void;
 	
-	@:overload private function indent(delta : Int) : Void;
+	@:overload @:protected private function indent(delta : Int) : Void;
 	
-	@:overload private function tab() : Void;
+	@:overload @:protected private function tab() : Void;
 	
-	@:overload private function setPendingNewline(b : Bool) : Void;
+	@:overload @:protected private function setPendingNewline(b : Bool) : Void;
 	
-	@:overload private function report(e : com.sun.tools.classfile.AttributeException) : String;
+	@:overload @:protected private function report(e : com.sun.tools.classfile.AttributeException) : String;
 	
-	@:overload private function report(e : com.sun.tools.classfile.ConstantPoolException) : String;
+	@:overload @:protected private function report(e : com.sun.tools.classfile.ConstantPoolException) : String;
 	
-	@:overload private function report(e : com.sun.tools.classfile.DescriptorException) : String;
+	@:overload @:protected private function report(e : com.sun.tools.classfile.DescriptorException) : String;
 	
-	@:overload private function report(msg : String) : String;
+	@:overload @:protected private function report(msg : String) : String;
 	
-	@:overload private function space(w : Int) : String;
+	@:overload @:protected private function space(w : Int) : String;
 	
-	private var messages : com.sun.tools.javap.Messages;
+	@:protected private var messages : com.sun.tools.javap.Messages;
 	
 	
 }
 @:native('com$sun$tools$javap$BasicWriter$LineWriter') @:internal extern class BasicWriter_LineWriter
 {
-	@:overload private function new(context : com.sun.tools.javap.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javap.Context) : Void;
 	
-	@:overload private function print(s : String) : Void;
+	@:overload @:protected private function print(s : String) : Void;
 	
-	@:overload private function println() : Void;
+	@:overload @:protected private function println() : Void;
 	
-	@:overload private function indent(delta : Int) : Void;
+	@:overload @:protected private function indent(delta : Int) : Void;
 	
-	@:overload private function tab() : Void;
+	@:overload @:protected private function tab() : Void;
 	
 	
 }

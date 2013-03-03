@@ -50,92 +50,92 @@ extern interface HTMLAppletElement extends org.w3c.dom.html.HTMLElement
 	* surrounding text. See the  align attribute definition in HTML 4.0.
 	* This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getAlign() : String;
+	@:overload @:public public function getAlign() : String;
 	
-	@:overload public function setAlign(align : String) : Void;
+	@:overload @:public public function setAlign(align : String) : Void;
 	
 	/**
 	*  Alternate text for user agents not rendering the normal content of
 	* this element. See the  alt attribute definition in HTML 4.0. This
 	* attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getAlt() : String;
+	@:overload @:public public function getAlt() : String;
 	
-	@:overload public function setAlt(alt : String) : Void;
+	@:overload @:public public function setAlt(alt : String) : Void;
 	
 	/**
 	*  Comma-separated archive list. See the  archive attribute definition in
 	* HTML 4.0. This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getArchive() : String;
+	@:overload @:public public function getArchive() : String;
 	
-	@:overload public function setArchive(archive : String) : Void;
+	@:overload @:public public function setArchive(archive : String) : Void;
 	
 	/**
 	*  Applet class file.  See the  code attribute definition in HTML 4.0.
 	* This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getCode() : String;
+	@:overload @:public public function getCode() : String;
 	
-	@:overload public function setCode(code : String) : Void;
+	@:overload @:public public function setCode(code : String) : Void;
 	
 	/**
 	*  Optional base URI for applet. See the  codebase attribute definition
 	* in HTML 4.0. This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getCodeBase() : String;
+	@:overload @:public public function getCodeBase() : String;
 	
-	@:overload public function setCodeBase(codeBase : String) : Void;
+	@:overload @:public public function setCodeBase(codeBase : String) : Void;
 	
 	/**
 	*  Override height. See the  height attribute definition in HTML 4.0.
 	* This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getHeight() : String;
+	@:overload @:public public function getHeight() : String;
 	
-	@:overload public function setHeight(height : String) : Void;
+	@:overload @:public public function setHeight(height : String) : Void;
 	
 	/**
 	*  Horizontal space to the left and right of this image, applet, or
 	* object. See the  hspace attribute definition in HTML 4.0. This
 	* attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getHspace() : String;
+	@:overload @:public public function getHspace() : String;
 	
-	@:overload public function setHspace(hspace : String) : Void;
+	@:overload @:public public function setHspace(hspace : String) : Void;
 	
 	/**
 	*  The name of the applet. See the  name attribute definition in HTML
 	* 4.0. This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	/**
 	*  Serialized applet file. See the  object attribute definition in HTML
 	* 4.0. This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getObject() : String;
+	@:overload @:public public function getObject() : String;
 	
-	@:overload public function setObject(object : String) : Void;
+	@:overload @:public public function setObject(object : String) : Void;
 	
 	/**
 	*  Vertical space above and below this image, applet, or object. See the
 	* vspace attribute definition in HTML 4.0. This attribute is deprecated
 	* in HTML 4.0.
 	*/
-	@:overload public function getVspace() : String;
+	@:overload @:public public function getVspace() : String;
 	
-	@:overload public function setVspace(vspace : String) : Void;
+	@:overload @:public public function setVspace(vspace : String) : Void;
 	
 	/**
 	*  Override width. See the  width attribute definition in HTML 4.0. This
 	* attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getWidth() : String;
+	@:overload @:public public function getWidth() : String;
 	
-	@:overload public function setWidth(width : String) : Void;
+	@:overload @:public public function setWidth(width : String) : Void;
 	
 	
 }

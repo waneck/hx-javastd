@@ -32,26 +32,26 @@ package com.sun.tools.example.debug.bdi;
 */
 extern class EventRequestSpec
 {
-	@:overload public function getEventRequest() : com.sun.jdi.request.EventRequest;
+	@:overload @:public public function getEventRequest() : com.sun.jdi.request.EventRequest;
 	
 	/**
 	* @return true if this spec has been resolved.
 	*/
-	@:overload public function isResolved() : Bool;
+	@:overload @:public public function isResolved() : Bool;
 	
 	/**
 	* @return true if this spec has not yet been resolved.
 	*/
-	@:overload public function isUnresolved() : Bool;
+	@:overload @:public public function isUnresolved() : Bool;
 	
 	/**
 	* @return true if this spec is unresolvable due to error.
 	*/
-	@:overload public function isErroneous() : Bool;
+	@:overload @:public public function isErroneous() : Bool;
 	
-	@:overload public function getStatusString() : String;
+	@:overload @:public public function getStatusString() : String;
 	
-	@:overload public function errorMessageFor(e : java.lang.Exception) : String;
+	@:overload @:public public function errorMessageFor(e : java.lang.Exception) : String;
 	
 	
 }

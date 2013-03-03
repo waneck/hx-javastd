@@ -31,7 +31,7 @@ extern class SynthPasswordFieldUI extends javax.swing.plaf.synth.SynthTextFieldU
 	* @param c the JPasswordField
 	* @return the UI
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Fetches the name used as a key to look up properties through the
@@ -40,7 +40,7 @@ extern class SynthPasswordFieldUI extends javax.swing.plaf.synth.SynthTextFieldU
 	*
 	* @return the name ("PasswordField")
 	*/
-	@:overload override private function getPropertyPrefix() : String;
+	@:overload @:protected override private function getPropertyPrefix() : String;
 	
 	/**
 	* Creates a view (PasswordView) for an element.
@@ -48,17 +48,17 @@ extern class SynthPasswordFieldUI extends javax.swing.plaf.synth.SynthTextFieldU
 	* @param elem the element
 	* @return the view
 	*/
-	@:overload override public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
+	@:overload @:public override public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installKeyboardActions() : Void;
+	@:overload @:protected override private function installKeyboardActions() : Void;
 	
 	
 }

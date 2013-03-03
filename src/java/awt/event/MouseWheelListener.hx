@@ -29,7 +29,7 @@ extern interface MouseWheelListener extends java.util.EventListener
 	* Invoked when the mouse wheel is rotated.
 	* @see MouseWheelEvent
 	*/
-	@:overload public function mouseWheelMoved(e : java.awt.event.MouseWheelEvent) : Void;
+	@:overload @:public public function mouseWheelMoved(e : java.awt.event.MouseWheelEvent) : Void;
 	
 	
 }

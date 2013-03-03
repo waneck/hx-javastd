@@ -29,31 +29,31 @@ package sun.security.krb5;
 */
 extern class Checksum
 {
-	public static var CKSUMTYPE_NULL(default, null) : Int;
+	@:public @:static @:final public static var CKSUMTYPE_NULL(default, null) : Int;
 	
-	public static var CKSUMTYPE_CRC32(default, null) : Int;
+	@:public @:static @:final public static var CKSUMTYPE_CRC32(default, null) : Int;
 	
-	public static var CKSUMTYPE_RSA_MD4(default, null) : Int;
+	@:public @:static @:final public static var CKSUMTYPE_RSA_MD4(default, null) : Int;
 	
-	public static var CKSUMTYPE_RSA_MD4_DES(default, null) : Int;
+	@:public @:static @:final public static var CKSUMTYPE_RSA_MD4_DES(default, null) : Int;
 	
-	public static var CKSUMTYPE_DES_MAC(default, null) : Int;
+	@:public @:static @:final public static var CKSUMTYPE_DES_MAC(default, null) : Int;
 	
-	public static var CKSUMTYPE_DES_MAC_K(default, null) : Int;
+	@:public @:static @:final public static var CKSUMTYPE_DES_MAC_K(default, null) : Int;
 	
-	public static var CKSUMTYPE_RSA_MD4_DES_K(default, null) : Int;
+	@:public @:static @:final public static var CKSUMTYPE_RSA_MD4_DES_K(default, null) : Int;
 	
-	public static var CKSUMTYPE_RSA_MD5(default, null) : Int;
+	@:public @:static @:final public static var CKSUMTYPE_RSA_MD5(default, null) : Int;
 	
-	public static var CKSUMTYPE_RSA_MD5_DES(default, null) : Int;
+	@:public @:static @:final public static var CKSUMTYPE_RSA_MD5_DES(default, null) : Int;
 	
-	public static var CKSUMTYPE_HMAC_SHA1_DES3_KD(default, null) : Int;
+	@:public @:static @:final public static var CKSUMTYPE_HMAC_SHA1_DES3_KD(default, null) : Int;
 	
-	public static var CKSUMTYPE_HMAC_SHA1_96_AES128(default, null) : Int;
+	@:public @:static @:final public static var CKSUMTYPE_HMAC_SHA1_96_AES128(default, null) : Int;
 	
-	public static var CKSUMTYPE_HMAC_SHA1_96_AES256(default, null) : Int;
+	@:public @:static @:final public static var CKSUMTYPE_HMAC_SHA1_96_AES256(default, null) : Int;
 	
-	public static var CKSUMTYPE_HMAC_MD5_ARCFOUR(default, null) : Int;
+	@:public @:static @:final public static var CKSUMTYPE_HMAC_MD5_ARCFOUR(default, null) : Int;
 	
 	/**
 	* Constructs a new Checksum using the raw data and type.
@@ -61,7 +61,7 @@ extern class Checksum
 	* @new_cksumType the type of checksum.
 	*
 	*/
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>, new_cksumType : Int) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>, new_cksumType : Int) : Void;
 	
 	/**
 	* Constructs a new Checksum by calculating the checksum over the data
@@ -69,7 +69,7 @@ extern class Checksum
 	* @new_cksumType the type of checksum.
 	* @data the data that needs to be performed a checksum calculation on.
 	*/
-	@:overload public function new(new_cksumType : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(new_cksumType : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs a new Checksum by calculating the keyed checksum
@@ -77,12 +77,12 @@ extern class Checksum
 	* @new_cksumType the type of checksum.
 	* @data the data that needs to be performed a checksum calculation on.
 	*/
-	@:overload public function new(new_cksumType : Int, data : java.NativeArray<java.StdTypes.Int8>, key : sun.security.krb5.EncryptionKey, usage : Int) : Void;
+	@:overload @:public public function new(new_cksumType : Int, data : java.NativeArray<java.StdTypes.Int8>, key : sun.security.krb5.EncryptionKey, usage : Int) : Void;
 	
 	/**
 	* Verifies the keyed checksum over the data passed in.
 	*/
-	@:overload public function verifyKeyedChecksum(data : java.NativeArray<java.StdTypes.Int8>, key : sun.security.krb5.EncryptionKey, usage : Int) : Bool;
+	@:overload @:public public function verifyKeyedChecksum(data : java.NativeArray<java.StdTypes.Int8>, key : sun.security.krb5.EncryptionKey, usage : Int) : Bool;
 	
 	/**
 	* Encodes a Checksum object.
@@ -105,7 +105,7 @@ extern class Checksum
 	* encoded data.
 	*
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Parse (unmarshal) a checksum object from a DER input stream.  This form
@@ -123,18 +123,18 @@ extern class Checksum
 	* @return an instance of Checksum.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.Checksum;
+	@:overload @:public @:static public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.Checksum;
 	
 	/**
 	* Returns the raw bytes of the checksum, not in ASN.1 encoded form.
 	*/
-	@:overload @:final public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:final public function getType() : Int;
+	@:overload @:public @:final public function getType() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

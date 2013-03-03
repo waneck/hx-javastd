@@ -32,41 +32,41 @@ extern class RequestContext extends com.sun.xml.internal.ws.api.PropertySet
 	* @deprecated
 	*      always access {@link #endpointAddress}.
 	*/
-	@:overload public function getEndPointAddressString() : String;
+	@:overload @:public public function getEndPointAddressString() : String;
 	
-	@:overload public function setEndPointAddressString(s : String) : Void;
+	@:overload @:public public function setEndPointAddressString(s : String) : Void;
 	
-	@:overload public function setEndpointAddress(epa : com.sun.xml.internal.ws.api.EndpointAddress) : Void;
+	@:overload @:public public function setEndpointAddress(epa : com.sun.xml.internal.ws.api.EndpointAddress) : Void;
 	
-	@:overload public function getEndpointAddress() : com.sun.xml.internal.ws.api.EndpointAddress;
+	@:overload @:public public function getEndpointAddress() : com.sun.xml.internal.ws.api.EndpointAddress;
 	
 	/**
 	* The value of {@link ContentNegotiation#PROPERTY}
 	* property.
 	*/
-	public var contentNegotiation : com.sun.xml.internal.ws.client.ContentNegotiation;
+	@:public public var contentNegotiation : com.sun.xml.internal.ws.client.ContentNegotiation;
 	
-	@:overload public function getContentNegotiationString() : String;
+	@:overload @:public public function getContentNegotiationString() : String;
 	
-	@:overload public function setContentNegotiationString(s : String) : Void;
+	@:overload @:public public function setContentNegotiationString(s : String) : Void;
 	
-	@:overload public function getSoapAction() : String;
+	@:overload @:public public function getSoapAction() : String;
 	
-	@:overload public function setSoapAction(sAction : String) : Void;
+	@:overload @:public public function setSoapAction(sAction : String) : Void;
 	
-	@:overload public function getSoapActionUse() : Null<Bool>;
+	@:overload @:public public function getSoapActionUse() : Null<Bool>;
 	
-	@:overload public function setSoapActionUse(sActionUse : Null<Bool>) : Void;
+	@:overload @:public public function setSoapActionUse(sActionUse : Null<Bool>) : Void;
 	
 	/**
 	* The efficient get method that reads from {@link RequestContext}.
 	*/
-	@:overload public function get(key : Dynamic) : Dynamic;
+	@:overload @:public override public function get(key : Dynamic) : Dynamic;
 	
 	/**
 	* The efficient put method that updates {@link RequestContext}.
 	*/
-	@:overload public function put(key : String, value : Dynamic) : Dynamic;
+	@:overload @:public override public function put(key : String, value : Dynamic) : Dynamic;
 	
 	/**
 	* Gets the {@link Map} view of this request context.
@@ -74,44 +74,44 @@ extern class RequestContext extends com.sun.xml.internal.ws.api.PropertySet
 	* @return
 	*      Always same object. Returned map is live.
 	*/
-	@:overload public function getMapView() : java.util.Map<String, Dynamic>;
+	@:overload @:public public function getMapView() : java.util.Map<String, Dynamic>;
 	
 	/**
 	* Fill a {@link Packet} with values of this {@link RequestContext}.
 	*/
-	@:overload public function fill(packet : com.sun.xml.internal.ws.api.message.Packet, isAddressingEnabled : Bool) : Void;
+	@:overload @:public public function fill(packet : com.sun.xml.internal.ws.api.message.Packet, isAddressingEnabled : Bool) : Void;
 	
-	@:overload public function copy() : com.sun.xml.internal.ws.client.RequestContext;
+	@:overload @:public public function copy() : com.sun.xml.internal.ws.client.RequestContext;
 	
-	@:overload private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
+	@:overload @:protected override private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$client$RequestContext$MapView') @:internal extern class RequestContext_MapView implements java.util.Map<String, Dynamic>
 {
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public public function containsKey(key : Dynamic) : Bool;
 	
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public public function containsValue(value : Dynamic) : Bool;
 	
-	@:overload public function get(key : Dynamic) : Dynamic;
+	@:overload @:public public function get(key : Dynamic) : Dynamic;
 	
-	@:overload public function put(key : String, value : Dynamic) : Dynamic;
+	@:overload @:public public function put(key : String, value : Dynamic) : Dynamic;
 	
-	@:overload public function remove(key : Dynamic) : Dynamic;
+	@:overload @:public public function remove(key : Dynamic) : Dynamic;
 	
-	@:overload public function putAll(t : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function putAll(t : java.util.Map<String, Dynamic>) : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function keySet() : java.util.Set<String>;
+	@:overload @:public public function keySet() : java.util.Set<String>;
 	
-	@:overload public function values() : java.util.Collection<Dynamic>;
+	@:overload @:public public function values() : java.util.Collection<Dynamic>;
 	
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, Dynamic>>;
+	@:overload @:public public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, Dynamic>>;
 	
 	
 }

@@ -33,7 +33,7 @@ extern interface CipherReference
 	* with the XMLSignature ResourceResolvers
 	* @return
 	*/
-	@:overload public function getURIAsAttr() : org.w3c.dom.Attr;
+	@:overload @:public public function getURIAsAttr() : org.w3c.dom.Attr;
 	
 	/**
 	* Returns the <code>Transforms</code> that specifies how to transform the

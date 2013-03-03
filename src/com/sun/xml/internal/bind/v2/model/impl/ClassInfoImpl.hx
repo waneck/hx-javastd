@@ -31,7 +31,7 @@ extern class ClassInfoImpl<T, C, F, M> extends com.sun.xml.internal.bind.v2.mode
 	*
 	* @author Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	private var clazz(default, null) : C;
+	@:protected @:final private var clazz(default, null) : C;
 	
 	/**
 	* If this class has a declared (not inherited) attribute wildcard,  keep the reference
@@ -40,18 +40,18 @@ extern class ClassInfoImpl<T, C, F, M> extends com.sun.xml.internal.bind.v2.mode
 	* This parameter is initialized at the construction time and never change.
 	*/
 	/*final*/
-	private var attributeWildcard : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>;
+	@:protected private var attributeWildcard : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>;
 	
-	@:overload public function getBaseClass() : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>;
+	@:overload @:public public function getBaseClass() : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* The substitution hierarchy is the same as the inheritance hierarchy.
 	*/
-	@:overload @:final public function getSubstitutionHead() : com.sun.xml.internal.bind.v2.model.core.Element<T, C>;
+	@:overload @:public @:final public function getSubstitutionHead() : com.sun.xml.internal.bind.v2.model.core.Element<T, C>;
 	
-	@:overload @:final public function getClazz() : C;
+	@:overload @:public @:final public function getClazz() : C;
 	
 	/**
 	* When a bean binds to an element, it's always through {@link XmlRootElement},
@@ -60,44 +60,44 @@ extern class ClassInfoImpl<T, C, F, M> extends com.sun.xml.internal.bind.v2.mode
 	* @deprecated
 	*      you shouldn't be invoking this method on {@link ClassInfoImpl}.
 	*/
-	@:overload public function getScope() : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>;
+	@:overload @:public public function getScope() : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>;
 	
-	@:overload @:final override public function getType() : T;
+	@:overload @:public @:final override public function getType() : T;
 	
 	/**
 	* A {@link ClassInfo} can be referenced by {@link XmlIDREF} if
 	* it has an ID property.
 	*/
-	@:overload override public function canBeReferencedByIDREF() : Bool;
+	@:overload @:public override public function canBeReferencedByIDREF() : Bool;
 	
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
-	@:overload public function readAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>) : A;
+	@:overload @:public public function readAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>) : A;
 	
-	@:overload public function asElement() : com.sun.xml.internal.bind.v2.model.core.Element<T, C>;
+	@:overload @:public public function asElement() : com.sun.xml.internal.bind.v2.model.core.Element<T, C>;
 	
-	@:overload public function getProperties() : java.util.List<com.sun.xml.internal.bind.v2.model.core.PropertyInfo<T, C>>;
+	@:overload @:public public function getProperties() : java.util.List<com.sun.xml.internal.bind.v2.model.core.PropertyInfo<T, C>>;
 	
-	@:overload @:final public function hasValueProperty() : Bool;
+	@:overload @:public @:final public function hasValueProperty() : Bool;
 	
-	@:overload public function getProperty(name : String) : com.sun.xml.internal.bind.v2.model.core.PropertyInfo<T, C>;
+	@:overload @:public public function getProperty(name : String) : com.sun.xml.internal.bind.v2.model.core.PropertyInfo<T, C>;
 	
 	/**
 	* This hook is used by {@link RuntimeClassInfoImpl} to look for {@link XmlLocation}.
 	*/
-	@:overload private function checkFieldXmlLocation(f : F) : Void;
+	@:overload @:protected private function checkFieldXmlLocation(f : F) : Void;
 	
-	@:overload public function hasProperties() : Bool;
+	@:overload @:public public function hasProperties() : Bool;
 	
-	@:overload private function createReferenceProperty(seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : com.sun.xml.internal.bind.v2.model.impl.ReferencePropertyInfoImpl<T, C, F, M>;
+	@:overload @:protected private function createReferenceProperty(seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : com.sun.xml.internal.bind.v2.model.impl.ReferencePropertyInfoImpl<T, C, F, M>;
 	
-	@:overload private function createAttributeProperty(seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : com.sun.xml.internal.bind.v2.model.impl.AttributePropertyInfoImpl<T, C, F, M>;
+	@:overload @:protected private function createAttributeProperty(seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : com.sun.xml.internal.bind.v2.model.impl.AttributePropertyInfoImpl<T, C, F, M>;
 	
-	@:overload private function createValueProperty(seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : com.sun.xml.internal.bind.v2.model.impl.ValuePropertyInfoImpl<T, C, F, M>;
+	@:overload @:protected private function createValueProperty(seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : com.sun.xml.internal.bind.v2.model.impl.ValuePropertyInfoImpl<T, C, F, M>;
 	
-	@:overload private function createElementProperty(seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : com.sun.xml.internal.bind.v2.model.impl.ElementPropertyInfoImpl<T, C, F, M>;
+	@:overload @:protected private function createElementProperty(seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : com.sun.xml.internal.bind.v2.model.impl.ElementPropertyInfoImpl<T, C, F, M>;
 	
-	@:overload private function createMapProperty(seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : com.sun.xml.internal.bind.v2.model.impl.MapPropertyInfoImpl<T, C, F, M>;
+	@:overload @:protected private function createMapProperty(seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : com.sun.xml.internal.bind.v2.model.impl.MapPropertyInfoImpl<T, C, F, M>;
 	
 	/**
 	* Creates a new {@link FieldPropertySeed} object.
@@ -105,40 +105,40 @@ extern class ClassInfoImpl<T, C, F, M> extends com.sun.xml.internal.bind.v2.mode
 	* <p>
 	* Derived class can override this method to create a sub-class.
 	*/
-	@:overload private function createFieldSeed(f : F) : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>;
+	@:overload @:protected private function createFieldSeed(f : F) : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>;
 	
 	/**
 	* Creates a new {@link GetterSetterPropertySeed} object.
 	*/
-	@:overload private function createAccessorSeed(getter : M, setter : M) : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>;
+	@:overload @:protected private function createAccessorSeed(getter : M, setter : M) : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>;
 	
-	@:overload @:final public function isElement() : Bool;
+	@:overload @:public @:final public function isElement() : Bool;
 	
-	@:overload public function isAbstract() : Bool;
+	@:overload @:public public function isAbstract() : Bool;
 	
-	@:overload public function isOrdered() : Bool;
+	@:overload @:public public function isOrdered() : Bool;
 	
-	@:overload @:final public function isFinal() : Bool;
+	@:overload @:public @:final public function isFinal() : Bool;
 	
-	@:overload @:final public function hasSubClasses() : Bool;
+	@:overload @:public @:final public function hasSubClasses() : Bool;
 	
-	@:overload @:final public function hasAttributeWildcard() : Bool;
+	@:overload @:public @:final public function hasAttributeWildcard() : Bool;
 	
-	@:overload @:final public function inheritsAttributeWildcard() : Bool;
+	@:overload @:public @:final public function inheritsAttributeWildcard() : Bool;
 	
-	@:overload @:final public function declaresAttributeWildcard() : Bool;
+	@:overload @:public @:final public function declaresAttributeWildcard() : Bool;
 	
-	@:overload @:final public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public @:final public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload @:final public function getTypeName() : javax.xml.namespace.QName;
+	@:overload @:public @:final public function getTypeName() : javax.xml.namespace.QName;
 	
-	@:overload @:final public function isSimpleType() : Bool;
+	@:overload @:public @:final public function isSimpleType() : Bool;
 	
-	@:overload override public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public override public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
-	@:overload public function getFactoryMethod() : java.lang.reflect.Method;
+	@:overload @:public public function getFactoryMethod() : java.lang.reflect.Method;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -150,24 +150,24 @@ extern class ClassInfoImpl<T, C, F, M> extends com.sun.xml.internal.bind.v2.mode
 */
 @:native('com$sun$xml$internal$bind$v2$model$impl$ClassInfoImpl$PropertySorter') @:internal extern class ClassInfoImpl_PropertySorter extends java.util.HashMap<String, Null<Int>> implements java.util.Comparator<com.sun.xml.internal.bind.v2.model.impl.PropertyInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>>
 {
-	@:overload public function compare(o1 : com.sun.xml.internal.bind.v2.model.impl.PropertyInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>, o2 : com.sun.xml.internal.bind.v2.model.impl.PropertyInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>) : Int;
+	@:overload @:public public function compare(o1 : com.sun.xml.internal.bind.v2.model.impl.PropertyInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>, o2 : com.sun.xml.internal.bind.v2.model.impl.PropertyInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>) : Int;
 	
 	/**
 	* Report errors for unused propOrder entries.
 	*/
-	@:overload public function checkUnusedProperties() : Void;
+	@:overload @:public public function checkUnusedProperties() : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$model$impl$ClassInfoImpl$ConflictException') @:internal extern class ClassInfoImpl_ConflictException extends java.lang.Exception
 {
-	@:overload public function new(one : java.util.List<java.lang.annotation.Annotation>) : Void;
+	@:overload @:public public function new(one : java.util.List<java.lang.annotation.Annotation>) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$model$impl$ClassInfoImpl$DuplicateException') @:internal extern class ClassInfoImpl_DuplicateException extends java.lang.Exception
 {
-	@:overload public function new(a1 : java.lang.annotation.Annotation, a2 : java.lang.annotation.Annotation) : Void;
+	@:overload @:public public function new(a1 : java.lang.annotation.Annotation, a2 : java.lang.annotation.Annotation) : Void;
 	
 	
 }

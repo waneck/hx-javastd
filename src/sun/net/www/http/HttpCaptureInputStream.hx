@@ -31,15 +31,15 @@ package sun.net.www.http;
 */
 extern class HttpCaptureInputStream extends java.io.FilterInputStream
 {
-	@:overload public function new(_in : java.io.InputStream, cap : sun.net.www.http.HttpCapture) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, cap : sun.net.www.http.HttpCapture) : Void;
 	
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	
 }

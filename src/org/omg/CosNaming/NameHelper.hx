@@ -10,17 +10,17 @@ package org.omg.CosNaming;
 */
 extern class NameHelper
 {
-	@:overload public static function insert(a : org.omg.CORBA.Any, that : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
+	@:overload @:public @:static public static function insert(a : org.omg.CORBA.Any, that : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
 	
-	@:overload public static function extract(a : org.omg.CORBA.Any) : java.NativeArray<org.omg.CosNaming.NameComponent>;
+	@:overload @:public @:static public static function extract(a : org.omg.CORBA.Any) : java.NativeArray<org.omg.CosNaming.NameComponent>;
 	
-	@:overload @:synchronized public static function type() : org.omg.CORBA.TypeCode;
+	@:overload @:synchronized @:public @:static public static function type() : org.omg.CORBA.TypeCode;
 	
-	@:overload public static function id() : String;
+	@:overload @:public @:static public static function id() : String;
 	
-	@:overload public static function read(istream : org.omg.CORBA.portable.InputStream) : java.NativeArray<org.omg.CosNaming.NameComponent>;
+	@:overload @:public @:static public static function read(istream : org.omg.CORBA.portable.InputStream) : java.NativeArray<org.omg.CosNaming.NameComponent>;
 	
-	@:overload public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
+	@:overload @:public @:static public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
 	
 	
 }

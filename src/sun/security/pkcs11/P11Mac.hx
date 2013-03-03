@@ -39,19 +39,19 @@ package sun.security.pkcs11;
 */
 @:require(java5) @:internal extern class P11Mac extends javax.crypto.MacSpi
 {
-	@:overload override private function engineGetMacLength() : Int;
+	@:overload @:protected override private function engineGetMacLength() : Int;
 	
-	@:overload override private function engineReset() : Void;
+	@:overload @:protected override private function engineReset() : Void;
 	
-	@:overload override private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
-	@:overload override private function engineDoFinal() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineDoFinal() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
-	@:overload override private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : Void;
 	
-	@:overload override private function engineUpdate(byteBuffer : java.nio.ByteBuffer) : Void;
+	@:overload @:protected override private function engineUpdate(byteBuffer : java.nio.ByteBuffer) : Void;
 	
 	
 }

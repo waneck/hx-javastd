@@ -54,17 +54,17 @@ package java.awt.event;
 	* Invoked when a key has been typed.
 	* This event occurs when a key press is followed by a key release.
 	*/
-	@:overload public function keyTyped(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public public function keyTyped(e : java.awt.event.KeyEvent) : Void;
 	
 	/**
 	* Invoked when a key has been pressed.
 	*/
-	@:overload public function keyPressed(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public public function keyPressed(e : java.awt.event.KeyEvent) : Void;
 	
 	/**
 	* Invoked when a key has been released.
 	*/
-	@:overload public function keyReleased(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public public function keyReleased(e : java.awt.event.KeyEvent) : Void;
 	
 	
 }

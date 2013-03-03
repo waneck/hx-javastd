@@ -30,7 +30,7 @@ extern class Main
 	* Note: This method calls System.exit.
 	* @param args command line arguments
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	/**
 	* Entry point that does <i>not</i> call System.exit.
@@ -38,7 +38,7 @@ extern class Main
 	* @param out output stream
 	* @return an exit code. 0 means success, non-zero means an error occurred.
 	*/
-	@:overload public static function run(args : java.NativeArray<String>, out : java.io.PrintWriter) : Int;
+	@:overload @:public @:static public static function run(args : java.NativeArray<String>, out : java.io.PrintWriter) : Int;
 	
 	
 }

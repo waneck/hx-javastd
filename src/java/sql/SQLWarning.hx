@@ -55,7 +55,7 @@ extern class SQLWarning extends java.sql.SQLException
 	* @param SQLState an XOPEN or SQL:2003 code identifying the warning
 	* @param vendorCode a database vendor-specific warning code
 	*/
-	@:overload public function new(reason : String, SQLState : String, vendorCode : Int) : Void;
+	@:overload @:public public function new(reason : String, SQLState : String, vendorCode : Int) : Void;
 	
 	/**
 	* Constructs a <code>SQLWarning</code> object
@@ -69,7 +69,7 @@ extern class SQLWarning extends java.sql.SQLException
 	* @param reason a description of the warning
 	* @param SQLState an XOPEN or SQL:2003 code identifying the warning
 	*/
-	@:overload public function new(reason : String, SQLState : String) : Void;
+	@:overload @:public public function new(reason : String, SQLState : String) : Void;
 	
 	/**
 	* Constructs a <code>SQLWarning</code> object
@@ -83,7 +83,7 @@ extern class SQLWarning extends java.sql.SQLException
 	* <p>
 	* @param reason a description of the warning
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	/**
 	* Constructs a  <code>SQLWarning</code> object.
@@ -95,7 +95,7 @@ extern class SQLWarning extends java.sql.SQLException
 	* {@link Throwable#initCause(java.lang.Throwable)} method.
 	* <p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>SQLWarning</code> object
@@ -109,7 +109,7 @@ extern class SQLWarning extends java.sql.SQLException
 	* @param cause the underlying reason for this <code>SQLWarning</code> (which is saved for later retrieval by the <code>getCause()</code> method); may be null indicating
 	*     the cause is non-existent or unknown.
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a <code>SQLWarning</code> object
@@ -123,7 +123,7 @@ extern class SQLWarning extends java.sql.SQLException
 	* (which is saved for later retrieval by the <code>getCause()</code> method);
 	* may be null indicating the cause is non-existent or unknown.
 	*/
-	@:overload public function new(reason : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(reason : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a <code>SQLWarning</code> object
@@ -136,7 +136,7 @@ extern class SQLWarning extends java.sql.SQLException
 	* @param cause the underlying reason for this <code>SQLWarning</code> (which is saved for later retrieval by the <code>getCause()</code> method); may be null indicating
 	*     the cause is non-existent or unknown.
 	*/
-	@:overload public function new(reason : String, SQLState : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(reason : String, SQLState : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a<code>SQLWarning</code> object
@@ -150,7 +150,7 @@ extern class SQLWarning extends java.sql.SQLException
 	* @param cause the underlying reason for this <code>SQLWarning</code> (which is saved for later retrieval by the <code>getCause()</code> method); may be null indicating
 	*     the cause is non-existent or unknown.
 	*/
-	@:overload public function new(reason : String, SQLState : String, vendorCode : Int, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(reason : String, SQLState : String, vendorCode : Int, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Retrieves the warning chained to this <code>SQLWarning</code> object by
@@ -159,7 +159,7 @@ extern class SQLWarning extends java.sql.SQLException
 	* @return the next <code>SQLException</code> in the chain; <code>null</code> if none
 	* @see #setNextWarning
 	*/
-	@:overload public function getNextWarning() : java.sql.SQLWarning;
+	@:overload @:public public function getNextWarning() : java.sql.SQLWarning;
 	
 	/**
 	* Adds a <code>SQLWarning</code> object to the end of the chain.
@@ -167,7 +167,7 @@ extern class SQLWarning extends java.sql.SQLException
 	* @param w the new end of the <code>SQLException</code> chain
 	* @see #getNextWarning
 	*/
-	@:overload public function setNextWarning(w : java.sql.SQLWarning) : Void;
+	@:overload @:public public function setNextWarning(w : java.sql.SQLWarning) : Void;
 	
 	
 }

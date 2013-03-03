@@ -34,7 +34,7 @@ extern class IndirectionException extends org.omg.CORBA.SystemException
 	/**
 	* Points to the stream's offset.
 	*/
-	public var offset : Int;
+	@:public public var offset : Int;
 	
 	/**
 	* Creates an IndirectionException with the right offset value.
@@ -44,7 +44,7 @@ extern class IndirectionException extends org.omg.CORBA.SystemException
 	*
 	* @param offset the stream offset where recursion is detected.
 	*/
-	@:overload public function new(offset : Int) : Void;
+	@:overload @:public public function new(offset : Int) : Void;
 	
 	
 }

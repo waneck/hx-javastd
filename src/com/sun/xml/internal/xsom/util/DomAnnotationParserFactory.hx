@@ -39,15 +39,15 @@ extern class DomAnnotationParserFactory implements com.sun.xml.internal.xsom.par
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function create() : com.sun.xml.internal.xsom.parser.AnnotationParser;
+	@:overload @:public public function create() : com.sun.xml.internal.xsom.parser.AnnotationParser;
 	
 	
 }
 @:native('com$sun$xml$internal$xsom$util$DomAnnotationParserFactory$AnnotationParserImpl') @:internal extern class DomAnnotationParserFactory_AnnotationParserImpl extends com.sun.xml.internal.xsom.parser.AnnotationParser
 {
-	@:overload override public function getContentHandler(context : com.sun.xml.internal.xsom.parser.AnnotationContext, parentElementName : String, errorHandler : org.xml.sax.ErrorHandler, entityResolver : org.xml.sax.EntityResolver) : org.xml.sax.ContentHandler;
+	@:overload @:public override public function getContentHandler(context : com.sun.xml.internal.xsom.parser.AnnotationContext, parentElementName : String, errorHandler : org.xml.sax.ErrorHandler, entityResolver : org.xml.sax.EntityResolver) : org.xml.sax.ContentHandler;
 	
-	@:overload override public function getResult(existing : Dynamic) : Dynamic;
+	@:overload @:public override public function getResult(existing : Dynamic) : Dynamic;
 	
 	
 }

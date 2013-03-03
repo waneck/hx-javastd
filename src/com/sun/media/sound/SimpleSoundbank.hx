@@ -25,39 +25,39 @@ package com.sun.media.sound;
 */
 extern class SimpleSoundbank implements javax.sound.midi.Soundbank
 {
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
-	@:overload public function getVendor() : String;
+	@:overload @:public public function getVendor() : String;
 	
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
-	@:overload public function setDescription(description : String) : Void;
+	@:overload @:public public function setDescription(description : String) : Void;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
-	@:overload public function setVendor(vendor : String) : Void;
+	@:overload @:public public function setVendor(vendor : String) : Void;
 	
-	@:overload public function setVersion(version : String) : Void;
+	@:overload @:public public function setVersion(version : String) : Void;
 	
-	@:overload public function getResources() : java.NativeArray<javax.sound.midi.SoundbankResource>;
+	@:overload @:public public function getResources() : java.NativeArray<javax.sound.midi.SoundbankResource>;
 	
-	@:overload public function getInstruments() : java.NativeArray<javax.sound.midi.Instrument>;
+	@:overload @:public public function getInstruments() : java.NativeArray<javax.sound.midi.Instrument>;
 	
-	@:overload public function getInstrument(patch : javax.sound.midi.Patch) : javax.sound.midi.Instrument;
+	@:overload @:public public function getInstrument(patch : javax.sound.midi.Patch) : javax.sound.midi.Instrument;
 	
-	@:overload public function addResource(resource : javax.sound.midi.SoundbankResource) : Void;
+	@:overload @:public public function addResource(resource : javax.sound.midi.SoundbankResource) : Void;
 	
-	@:overload public function removeResource(resource : javax.sound.midi.SoundbankResource) : Void;
+	@:overload @:public public function removeResource(resource : javax.sound.midi.SoundbankResource) : Void;
 	
-	@:overload public function addInstrument(resource : javax.sound.midi.Instrument) : Void;
+	@:overload @:public public function addInstrument(resource : javax.sound.midi.Instrument) : Void;
 	
-	@:overload public function removeInstrument(resource : javax.sound.midi.Instrument) : Void;
+	@:overload @:public public function removeInstrument(resource : javax.sound.midi.Instrument) : Void;
 	
-	@:overload public function addAllInstruments(soundbank : javax.sound.midi.Soundbank) : Void;
+	@:overload @:public public function addAllInstruments(soundbank : javax.sound.midi.Soundbank) : Void;
 	
-	@:overload public function removeAllInstruments(soundbank : javax.sound.midi.Soundbank) : Void;
+	@:overload @:public public function removeAllInstruments(soundbank : javax.sound.midi.Soundbank) : Void;
 	
 	
 }

@@ -36,7 +36,7 @@ extern class MBeanServerPermission extends java.security.BasicPermission
 	<code>*</code> or one of the allowed names or a comma-separated
 	list of the allowed names.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/** <p>Create a new MBeanServerPermission with the given name.</p>
 	@param name the name of the granted permission.  It must
@@ -54,9 +54,9 @@ extern class MBeanServerPermission extends java.security.BasicPermission
 	* @throws IllegalArgumentException if <code>name</code> is empty or
 	* if arguments are invalid.
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* <p>Checks if this MBeanServerPermission object "implies" the specified
@@ -77,7 +77,7 @@ extern class MBeanServerPermission extends java.security.BasicPermission
 	* @return true if the specified permission is implied by this object,
 	* false if not.
 	*/
-	@:overload override public function implies(p : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two MBeanServerPermission objects for equality. Checks that
@@ -87,19 +87,19 @@ extern class MBeanServerPermission extends java.security.BasicPermission
 	* @param obj the object we are testing for equality with this object.
 	* @return true if the objects are equal.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function newPermissionCollection() : java.security.PermissionCollection;
+	@:overload @:public override public function newPermissionCollection() : java.security.PermissionCollection;
 	
 	
 }
 @:internal extern class MBeanServerPermissionCollection extends java.security.PermissionCollection
 {
-	@:overload @:synchronized public function add(permission : java.security.Permission) : Void;
+	@:overload @:public @:synchronized override public function add(permission : java.security.Permission) : Void;
 	
-	@:overload @:synchronized public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public @:synchronized override public function implies(permission : java.security.Permission) : Bool;
 	
-	@:overload @:synchronized public function elements() : java.util.Enumeration<java.security.Permission>;
+	@:overload @:public @:synchronized override public function elements() : java.util.Enumeration<java.security.Permission>;
 	
 	
 }

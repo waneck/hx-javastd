@@ -40,7 +40,7 @@ package java.nio.file;
 	*
 	* @see WatchService
 	*/
-	public static var OVERFLOW(default, null) : java.nio.file.WatchEvent.WatchEvent_Kind<Dynamic>;
+	@:public @:static @:final public static var OVERFLOW(default, null) : java.nio.file.WatchEvent.WatchEvent_Kind<Dynamic>;
 	
 	/**
 	* Directory entry created.
@@ -50,7 +50,7 @@ package java.nio.file;
 	* or renamed into the directory. The event {@link WatchEvent#count count}
 	* for this event is always {@code 1}.
 	*/
-	public static var ENTRY_CREATE(default, null) : java.nio.file.WatchEvent.WatchEvent_Kind<java.nio.file.Path>;
+	@:public @:static @:final public static var ENTRY_CREATE(default, null) : java.nio.file.WatchEvent.WatchEvent_Kind<java.nio.file.Path>;
 	
 	/**
 	* Directory entry deleted.
@@ -60,7 +60,7 @@ package java.nio.file;
 	* the directory. The event {@link WatchEvent#count count} for this event
 	* is always {@code 1}.
 	*/
-	public static var ENTRY_DELETE(default, null) : java.nio.file.WatchEvent.WatchEvent_Kind<java.nio.file.Path>;
+	@:public @:static @:final public static var ENTRY_DELETE(default, null) : java.nio.file.WatchEvent.WatchEvent_Kind<java.nio.file.Path>;
 	
 	/**
 	* Directory entry modified.
@@ -70,17 +70,17 @@ package java.nio.file;
 	* modified. The event {@link WatchEvent#count count} for this event is
 	* {@code 1} or greater.
 	*/
-	public static var ENTRY_MODIFY(default, null) : java.nio.file.WatchEvent.WatchEvent_Kind<java.nio.file.Path>;
+	@:public @:static @:final public static var ENTRY_MODIFY(default, null) : java.nio.file.WatchEvent.WatchEvent_Kind<java.nio.file.Path>;
 	
 	
 }
 @:native('java$nio$file$StandardWatchEventKinds$StdWatchEventKind') @:internal extern class StandardWatchEventKinds_StdWatchEventKind<T> implements java.nio.file.WatchEvent.WatchEvent_Kind<T>
 {
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function type() : Class<T>;
+	@:overload @:public public function type() : Class<T>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

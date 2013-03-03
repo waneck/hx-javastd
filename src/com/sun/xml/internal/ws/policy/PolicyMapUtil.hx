@@ -36,7 +36,7 @@ extern class PolicyMapUtil
 	* @throws PolicyException Thrown if the policy map contains at least one policy
 	* with more than one policy alternative
 	*/
-	@:overload public static function rejectAlternatives(map : com.sun.xml.internal.ws.policy.PolicyMap) : Void;
+	@:overload @:public @:static public static function rejectAlternatives(map : com.sun.xml.internal.ws.policy.PolicyMap) : Void;
 	
 	/**
 	* Inserts all PolicySubjects of type WsdlBindingSubject into the given policy map.
@@ -49,7 +49,7 @@ extern class PolicyMapUtil
 	* @throws PolicyException Thrown if the effective policy of a policy subject
 	*   could not be computed
 	*/
-	@:overload public static function insertPolicies(policyMap : com.sun.xml.internal.ws.policy.PolicyMap, policySubjects : java.util.Collection<com.sun.xml.internal.ws.policy.PolicySubject>, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName) : Void;
+	@:overload @:public @:static public static function insertPolicies(policyMap : com.sun.xml.internal.ws.policy.PolicyMap, policySubjects : java.util.Collection<com.sun.xml.internal.ws.policy.PolicySubject>, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName) : Void;
 	
 	
 }

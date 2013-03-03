@@ -29,9 +29,9 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class XPathLexer implements com.sun.java_cup.internal.runtime.Scanner
 {
-	public var YYEOF(default, null) : Int;
+	@:public @:final public var YYEOF(default, null) : Int;
 	
-	@:overload public function next_token() : com.sun.java_cup.internal.runtime.Symbol;
+	@:overload @:public public function next_token() : com.sun.java_cup.internal.runtime.Symbol;
 	
 	
 }

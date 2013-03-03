@@ -25,32 +25,32 @@ package sun.management;
 */
 extern class GcInfoCompositeData extends sun.management.LazyCompositeData
 {
-	@:overload public function new(info : com.sun.management.GcInfo, builder : sun.management.GcInfoBuilder, gcExtItemValues : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(info : com.sun.management.GcInfo, builder : sun.management.GcInfoBuilder, gcExtItemValues : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function getGcInfo() : com.sun.management.GcInfo;
+	@:overload @:public public function getGcInfo() : com.sun.management.GcInfo;
 	
-	@:overload public static function toCompositeData(info : com.sun.management.GcInfo) : javax.management.openmbean.CompositeData;
+	@:overload @:public @:static public static function toCompositeData(info : com.sun.management.GcInfo) : javax.management.openmbean.CompositeData;
 	
-	@:overload private function getCompositeData() : javax.management.openmbean.CompositeData;
+	@:overload @:protected override private function getCompositeData() : javax.management.openmbean.CompositeData;
 	
-	@:overload public static function getId(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
+	@:overload @:public @:static public static function getId(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
 	
-	@:overload public static function getStartTime(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
+	@:overload @:public @:static public static function getStartTime(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
 	
-	@:overload public static function getEndTime(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
+	@:overload @:public @:static public static function getEndTime(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
 	
-	@:overload public static function getMemoryUsageBeforeGc(cd : javax.management.openmbean.CompositeData) : java.util.Map<String, java.lang.management.MemoryUsage>;
+	@:overload @:public @:static public static function getMemoryUsageBeforeGc(cd : javax.management.openmbean.CompositeData) : java.util.Map<String, java.lang.management.MemoryUsage>;
 	
-	@:native('cast') @:overload public static function _cast(x : Dynamic) : java.util.Map<String, java.lang.management.MemoryUsage>;
+	@:native('cast') @:overload @:public @:static public static function _cast(x : Dynamic) : java.util.Map<String, java.lang.management.MemoryUsage>;
 	
-	@:overload public static function getMemoryUsageAfterGc(cd : javax.management.openmbean.CompositeData) : java.util.Map<String, java.lang.management.MemoryUsage>;
+	@:overload @:public @:static public static function getMemoryUsageAfterGc(cd : javax.management.openmbean.CompositeData) : java.util.Map<String, java.lang.management.MemoryUsage>;
 	
 	/**
 	* Returns true if the input CompositeData has the expected
 	* CompositeType (i.e. contain all attributes with expected
 	* names and types).  Otherwise, return false.
 	*/
-	@:overload public static function validateCompositeData(cd : javax.management.openmbean.CompositeData) : Void;
+	@:overload @:public @:static public static function validateCompositeData(cd : javax.management.openmbean.CompositeData) : Void;
 	
 	
 }

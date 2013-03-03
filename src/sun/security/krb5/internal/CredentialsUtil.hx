@@ -46,7 +46,7 @@ m
 rs.
 	* @return a <code>Credentials</code> object.
 	*/
-	@:overload public static function acquireServiceCreds(service : String, ccreds : sun.security.krb5.Credentials) : sun.security.krb5.Credentials;
+	@:overload @:public @:static public static function acquireServiceCreds(service : String, ccreds : sun.security.krb5.Credentials) : sun.security.krb5.Credentials;
 	
 	
 }

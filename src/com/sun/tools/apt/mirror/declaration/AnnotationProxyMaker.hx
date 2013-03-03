@@ -28,23 +28,23 @@ package com.sun.tools.apt.mirror.declaration;
 	/**
 	* Returns a dynamic proxy for an annotation mirror.
 	*/
-	@:native('generateAnnotation') @:overload public static function _generateAnnotation<A : java.lang.annotation.Annotation>(env : com.sun.tools.apt.mirror.AptEnv, attrs : com.sun.tools.javac.code.Attribute.Attribute_Compound, annoType : Class<A>) : A;
+	@:native('generateAnnotation') @:overload @:public @:static public static function _generateAnnotation<A : java.lang.annotation.Annotation>(env : com.sun.tools.apt.mirror.AptEnv, attrs : com.sun.tools.javac.code.Attribute.Attribute_Compound, annoType : Class<A>) : A;
 	
 	
 }
 @:native('com$sun$tools$apt$mirror$declaration$AnnotationProxyMaker$ValueVisitor') @:internal extern class AnnotationProxyMaker_ValueVisitor implements com.sun.tools.javac.code.Attribute.Attribute_Visitor
 {
-	@:overload public function visitConstant(c : com.sun.tools.javac.code.Attribute.Attribute_Constant) : Void;
+	@:overload @:public public function visitConstant(c : com.sun.tools.javac.code.Attribute.Attribute_Constant) : Void;
 	
-	@:overload public function visitClass(c : com.sun.tools.javac.code.Attribute.Attribute_Class) : Void;
+	@:overload @:public public function visitClass(c : com.sun.tools.javac.code.Attribute.Attribute_Class) : Void;
 	
-	@:overload public function visitArray(a : com.sun.tools.javac.code.Attribute.Attribute_Array) : Void;
+	@:overload @:public public function visitArray(a : com.sun.tools.javac.code.Attribute.Attribute_Array) : Void;
 	
-	@:overload public function visitEnum(e : com.sun.tools.javac.code.Attribute.Attribute_Enum) : Void;
+	@:overload @:public public function visitEnum(e : com.sun.tools.javac.code.Attribute.Attribute_Enum) : Void;
 	
-	@:overload public function visitCompound(c : com.sun.tools.javac.code.Attribute.Attribute_Compound) : Void;
+	@:overload @:public public function visitCompound(c : com.sun.tools.javac.code.Attribute.Attribute_Compound) : Void;
 	
-	@:overload public function visitError(e : com.sun.tools.javac.code.Attribute.Attribute_Error) : Void;
+	@:overload @:public public function visitError(e : com.sun.tools.javac.code.Attribute.Attribute_Error) : Void;
 	
 	
 }
@@ -55,13 +55,13 @@ package com.sun.tools.apt.mirror.declaration;
 */
 @:native('com$sun$tools$apt$mirror$declaration$AnnotationProxyMaker$MirroredTypeExceptionProxy') @:internal extern class AnnotationProxyMaker_MirroredTypeExceptionProxy extends sun.reflect.annotation.ExceptionProxy
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload private function generateException() : java.lang.RuntimeException;
+	@:overload @:protected override private function generateException() : java.lang.RuntimeException;
 	
 	
 }
@@ -72,13 +72,13 @@ package com.sun.tools.apt.mirror.declaration;
 */
 @:native('com$sun$tools$apt$mirror$declaration$AnnotationProxyMaker$MirroredTypesExceptionProxy') @:internal extern class AnnotationProxyMaker_MirroredTypesExceptionProxy extends sun.reflect.annotation.ExceptionProxy
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload private function generateException() : java.lang.RuntimeException;
+	@:overload @:protected override private function generateException() : java.lang.RuntimeException;
 	
 	
 }

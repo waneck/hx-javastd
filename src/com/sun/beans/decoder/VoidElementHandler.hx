@@ -60,7 +60,7 @@ package com.sun.beans.decoder;
 	*         as an argument of the element that contained in this one,
 	*         {@code false} otherwise
 	*/
-	@:overload override private function isArgument() : Bool;
+	@:overload @:protected override private function isArgument() : Bool;
 	
 	
 }

@@ -25,79 +25,79 @@ package sun.swing.plaf.synth;
 */
 extern class SynthFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserUI implements javax.swing.plaf.synth.SynthUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function new(b : javax.swing.JFileChooser) : Void;
+	@:overload @:public public function new(b : javax.swing.JFileChooser) : Void;
 	
-	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	
-	@:overload private function getContext(c : javax.swing.JComponent, state : Int) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:protected private function getContext(c : javax.swing.JComponent, state : Int) : javax.swing.plaf.synth.SynthContext;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function installComponents(fc : javax.swing.JFileChooser) : Void;
+	@:overload @:public override public function installComponents(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload override public function uninstallComponents(fc : javax.swing.JFileChooser) : Void;
+	@:overload @:public override public function uninstallComponents(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload override private function installListeners(fc : javax.swing.JFileChooser) : Void;
+	@:overload @:protected override private function installListeners(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload @:abstract private function createActionMap() : javax.swing.ActionMap;
+	@:overload @:protected @:abstract private function createActionMap() : javax.swing.ActionMap;
 	
-	@:overload override private function installDefaults(fc : javax.swing.JFileChooser) : Void;
+	@:overload @:protected override private function installDefaults(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload override private function uninstallDefaults(fc : javax.swing.JFileChooser) : Void;
+	@:overload @:protected override private function uninstallDefaults(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload override private function installIcons(fc : javax.swing.JFileChooser) : Void;
+	@:overload @:protected override private function installIcons(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
-	@:overload @:abstract override public function setFileName(fileName : String) : Void;
+	@:overload @:abstract @:public override public function setFileName(fileName : String) : Void;
 	
-	@:overload @:abstract override public function getFileName() : String;
+	@:overload @:abstract @:public override public function getFileName() : String;
 	
-	@:overload private function doSelectedFileChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function doSelectedFileChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function doSelectedFilesChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function doSelectedFilesChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function doDirectoryChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function doDirectoryChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function doAccessoryChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function doAccessoryChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function doFileSelectionModeChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function doFileSelectionModeChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function doMultiSelectionChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function doMultiSelectionChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function doControlButtonsChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function doControlButtonsChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function doAncestorChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function doAncestorChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload override public function createPropertyChangeListener(fc : javax.swing.JFileChooser) : java.beans.PropertyChangeListener;
+	@:overload @:public override public function createPropertyChangeListener(fc : javax.swing.JFileChooser) : java.beans.PropertyChangeListener;
 	
-	@:overload public function getFileNameCompletionAction() : javax.swing.Action;
+	@:overload @:public public function getFileNameCompletionAction() : javax.swing.Action;
 	
-	@:overload override private function getApproveButton(fc : javax.swing.JFileChooser) : javax.swing.JButton;
+	@:overload @:protected override private function getApproveButton(fc : javax.swing.JFileChooser) : javax.swing.JButton;
 	
-	@:overload private function getCancelButton(fc : javax.swing.JFileChooser) : javax.swing.JButton;
+	@:overload @:protected private function getCancelButton(fc : javax.swing.JFileChooser) : javax.swing.JButton;
 	
-	@:overload override public function clearIconCache() : Void;
+	@:overload @:public override public function clearIconCache() : Void;
 	
 	
 }
 @:native('sun$swing$plaf$synth$SynthFileChooserUI$DelayedSelectionUpdater') @:internal extern class SynthFileChooserUI_DelayedSelectionUpdater implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
 @:native('sun$swing$plaf$synth$SynthFileChooserUI$SynthFCPropertyChangeListener') @:internal extern class SynthFileChooserUI_SynthFCPropertyChangeListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -106,9 +106,9 @@ extern class SynthFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 */
 @:native('sun$swing$plaf$synth$SynthFileChooserUI$FileNameCompletionAction') @:internal extern class SynthFileChooserUI_FileNameCompletionAction extends javax.swing.AbstractAction
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -117,21 +117,21 @@ extern class SynthFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 */
 @:native('sun$swing$plaf$synth$SynthFileChooserUI$GlobFilter') @:internal extern class SynthFileChooserUI_GlobFilter extends javax.swing.filechooser.FileFilter
 {
-	@:overload public function setPattern(globPattern : String) : Void;
+	@:overload @:public public function setPattern(globPattern : String) : Void;
 	
-	@:overload override public function accept(f : java.io.File) : Bool;
+	@:overload @:public override public function accept(f : java.io.File) : Bool;
 	
-	@:overload override public function getDescription() : String;
+	@:overload @:public override public function getDescription() : String;
 	
 	
 }
 @:native('sun$swing$plaf$synth$SynthFileChooserUI$UIBorder') @:internal extern class SynthFileChooserUI_UIBorder extends javax.swing.border.AbstractBorder implements javax.swing.plaf.UIResource
 {
-	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
-	@:overload public function isBorderOpaque() : Bool;
+	@:overload @:public override public function isBorderOpaque() : Bool;
 	
 	
 }

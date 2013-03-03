@@ -36,7 +36,7 @@ extern class ExtensionInstallationException extends java.lang.Exception
 	* Construct a new exception with an exception reason
 	* </p>
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

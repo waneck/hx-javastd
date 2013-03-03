@@ -28,25 +28,25 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class QName
 {
-	@:overload public function new(namespace : String, prefix : String, localname : String) : Void;
+	@:overload @:public public function new(namespace : String, prefix : String, localname : String) : Void;
 	
-	@:overload public function clearNamespace() : Void;
+	@:overload @:public public function clearNamespace() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getStringRep() : String;
+	@:overload @:public public function getStringRep() : String;
 	
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function getLocalPart() : String;
+	@:overload @:public public function getLocalPart() : String;
 	
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function dump() : String;
+	@:overload @:public public function dump() : String;
 	
 	
 }

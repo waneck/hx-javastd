@@ -59,12 +59,12 @@ extern interface Pool<T>
 	* @return
 	*      always non-null.
 	*/
-	@:overload @:final public function take() : T;
+	@:overload @:public @:final public function take() : T;
 	
 	/**
 	* Returns an object back to the pool.
 	*/
-	@:overload @:final public function recycle(t : T) : Void;
+	@:overload @:public @:final public function recycle(t : T) : Void;
 	
 	/**
 	* Creates a new instance of object.
@@ -77,7 +77,7 @@ extern interface Pool<T>
 	* Also note that multiple threads may call this method
 	* concurrently.
 	*/
-	@:overload @:abstract private function create() : T;
+	@:overload @:protected @:abstract private function create() : T;
 	
 	
 }

@@ -42,13 +42,13 @@ extern class Utility
 	* @param len the length to compare.
 	* The start indices and start+len must be valid.
 	*/
-	@:overload @:final public static function arrayRegionMatches(source : java.NativeArray<java.StdTypes.Char16>, sourceStart : Int, target : java.NativeArray<java.StdTypes.Char16>, targetStart : Int, len : Int) : Bool;
+	@:overload @:public @:final @:static public static function arrayRegionMatches(source : java.NativeArray<java.StdTypes.Char16>, sourceStart : Int, target : java.NativeArray<java.StdTypes.Char16>, targetStart : Int, len : Int) : Bool;
 	
 	/**
 	* Convert characters outside the range U+0020 to U+007F to
 	* Unicode escapes, and convert backslash to a double backslash.
 	*/
-	@:overload @:final public static function escape(s : String) : String;
+	@:overload @:public @:static @:final public static function escape(s : String) : String;
 	
 	/**
 	* Convert an escape to a 32-bit code point value.  We attempt
@@ -58,7 +58,7 @@ extern class Utility
 	* be updated to point after the escape sequence.
 	* @return character value from 0 to 10FFFF, or -1 on error.
 	*/
-	@:overload public static function unescapeAt(s : String, offset16 : java.NativeArray<Int>) : Int;
+	@:overload @:public @:static public static function unescapeAt(s : String, offset16 : java.NativeArray<Int>) : Int;
 	
 	/**
 	* Convert a integer to size width hex uppercase digits.
@@ -66,21 +66,21 @@ extern class Utility
 	* Append the output to the given StringBuffer.
 	* If width is too small to fit, nothing will be appended to output.
 	*/
-	@:overload public static function hex(ch : Int, width : Int, output : java.lang.StringBuffer) : java.lang.StringBuffer;
+	@:overload @:public @:static public static function hex(ch : Int, width : Int, output : java.lang.StringBuffer) : java.lang.StringBuffer;
 	
 	/**
 	* Convert a integer to size width (minimum) hex uppercase digits.
 	* E.g., hex('a', 4, str) => "0041".  If the integer requires more
 	* than width digits, more will be used.
 	*/
-	@:overload public static function hex(ch : Int, width : Int) : String;
+	@:overload @:public @:static public static function hex(ch : Int, width : Int) : String;
 	
 	/**
 	* Skip over a sequence of zero or more white space characters
 	* at pos.  Return the index of the first non-white-space character
 	* at or after pos, or str.length(), if there is none.
 	*/
-	@:overload public static function skipWhitespace(str : String, pos : Int) : Int;
+	@:overload @:public @:static public static function skipWhitespace(str : String, pos : Int) : Int;
 	
 	/**
 	* Append a number to the given StringBuffer in the given radix.
@@ -95,13 +95,13 @@ extern class Utility
 	* digit is always emitted regardless of this parameter.
 	* @return a reference to result
 	*/
-	@:overload public static function appendNumber(result : java.lang.StringBuffer, n : Int, radix : Int, minDigits : Int) : java.lang.StringBuffer;
+	@:overload @:public @:static public static function appendNumber(result : java.lang.StringBuffer, n : Int, radix : Int, minDigits : Int) : java.lang.StringBuffer;
 	
 	/**
 	* Return true if the character is NOT printable ASCII.  The tab,
 	* newline and linefeed characters are considered unprintable.
 	*/
-	@:overload public static function isUnprintable(c : Int) : Bool;
+	@:overload @:public @:static public static function isUnprintable(c : Int) : Bool;
 	
 	/**
 	* Escape unprintable characters using <backslash>uxxxx notation
@@ -110,7 +110,7 @@ extern class Utility
 	* and return FALSE.  Otherwise, append the escaped notation and
 	* return TRUE.
 	*/
-	@:overload public static function escapeUnprintable(result : java.lang.StringBuffer, c : Int) : Bool;
+	@:overload @:public @:static public static function escapeUnprintable(result : java.lang.StringBuffer, c : Int) : Bool;
 	
 	/**
 	* Similar to StringBuffer.getChars, version 1.3.
@@ -124,7 +124,7 @@ extern class Utility
 	* @param dstBegin offset to the start of the destination char array to
 	*                 store the retrieved chars
 	*/
-	@:overload public static function getChars(src : java.lang.StringBuffer, srcBegin : Int, srcEnd : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstBegin : Int) : Void;
+	@:overload @:public @:static public static function getChars(src : java.lang.StringBuffer, srcBegin : Int, srcEnd : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstBegin : Int) : Void;
 	
 	
 }

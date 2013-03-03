@@ -69,12 +69,12 @@ extern class ConstantString extends com.sun.org.apache.bcel.internal.classfile.C
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantString) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantString) : Void;
 	
 	/**
 	* @param string_index Index of Constant_Utf8 in constant pool
 	*/
-	@:overload public function new(string_index : Int) : Void;
+	@:overload @:public public function new(string_index : Int) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -83,7 +83,7 @@ extern class ConstantString extends com.sun.org.apache.bcel.internal.classfile.C
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump constant field reference to file stream in binary format.
@@ -91,30 +91,30 @@ extern class ConstantString extends com.sun.org.apache.bcel.internal.classfile.C
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final override public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Index in constant pool of the string (ConstantUtf8).
 	*/
-	@:overload @:final public function getStringIndex() : Int;
+	@:overload @:public @:final public function getStringIndex() : Int;
 	
 	/**
 	* @param string_index.
 	*/
-	@:overload @:final public function setStringIndex(string_index : Int) : Void;
+	@:overload @:public @:final public function setStringIndex(string_index : Int) : Void;
 	
 	/**
 	* @return String representation.
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	/** @return String object
 	*/
-	@:overload public function getConstantValue(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Dynamic;
+	@:overload @:public public function getConstantValue(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Dynamic;
 	
 	/** @return dereferenced string
 	*/
-	@:overload public function getBytes(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
+	@:overload @:public public function getBytes(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
 	
 	
 }

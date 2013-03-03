@@ -31,15 +31,15 @@ package sun.misc;
 */
 extern class DoubleConsts
 {
-	public static var POSITIVE_INFINITY(default, null) : Float;
+	@:public @:static @:final public static var POSITIVE_INFINITY(default, null) : Float;
 	
-	public static var NEGATIVE_INFINITY(default, null) : Float;
+	@:public @:static @:final public static var NEGATIVE_INFINITY(default, null) : Float;
 	
-	public static var NaN(default, null) : Float;
+	@:public @:static @:final public static var NaN(default, null) : Float;
 	
-	public static var MAX_VALUE(default, null) : Float;
+	@:public @:static @:final public static var MAX_VALUE(default, null) : Float;
 	
-	public static var MIN_VALUE(default, null) : Float;
+	@:public @:static @:final public static var MIN_VALUE(default, null) : Float;
 	
 	/**
 	* A constant holding the smallest positive normal value of type
@@ -49,27 +49,27 @@ extern class DoubleConsts
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var MIN_NORMAL(default, null) : Float;
+	@:require(java5) @:public @:static @:final public static var MIN_NORMAL(default, null) : Float;
 	
 	/**
 	* The number of logical bits in the significand of a
 	* <code>double</code> number, including the implicit bit.
 	*/
-	public static var SIGNIFICAND_WIDTH(default, null) : Int;
+	@:public @:static @:final public static var SIGNIFICAND_WIDTH(default, null) : Int;
 	
 	/**
 	* Maximum exponent a finite <code>double</code> number may have.
 	* It is equal to the value returned by
 	* <code>Math.ilogb(Double.MAX_VALUE)</code>.
 	*/
-	public static var MAX_EXPONENT(default, null) : Int;
+	@:public @:static @:final public static var MAX_EXPONENT(default, null) : Int;
 	
 	/**
 	* Minimum exponent a normalized <code>double</code> number may
 	* have.  It is equal to the value returned by
 	* <code>Math.ilogb(Double.MIN_NORMAL)</code>.
 	*/
-	public static var MIN_EXPONENT(default, null) : Int;
+	@:public @:static @:final public static var MIN_EXPONENT(default, null) : Int;
 	
 	/**
 	* The exponent the smallest positive <code>double</code>
@@ -77,29 +77,29 @@ extern class DoubleConsts
 	* equal to the value returned by
 	* <code>FpUtils.ilogb(Double.MIN_VALUE)</code>.
 	*/
-	public static var MIN_SUB_EXPONENT(default, null) : Int;
+	@:public @:static @:final public static var MIN_SUB_EXPONENT(default, null) : Int;
 	
 	/**
 	* Bias used in representing a <code>double</code> exponent.
 	*/
-	public static var EXP_BIAS(default, null) : Int;
+	@:public @:static @:final public static var EXP_BIAS(default, null) : Int;
 	
 	/**
 	* Bit mask to isolate the sign bit of a <code>double</code>.
 	*/
-	public static var SIGN_BIT_MASK(default, null) : haxe.Int64;
+	@:public @:static @:final public static var SIGN_BIT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* Bit mask to isolate the exponent field of a
 	* <code>double</code>.
 	*/
-	public static var EXP_BIT_MASK(default, null) : haxe.Int64;
+	@:public @:static @:final public static var EXP_BIT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* Bit mask to isolate the significand field of a
 	* <code>double</code>.
 	*/
-	public static var SIGNIF_BIT_MASK(default, null) : haxe.Int64;
+	@:public @:static @:final public static var SIGNIF_BIT_MASK(default, null) : haxe.Int64;
 	
 	
 }

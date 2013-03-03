@@ -35,7 +35,7 @@ extern class EndpointFactory
 	* <p>
 	* Nobody else should be calling this method.
 	*/
-	@:overload public static function createEndpoint<T>(implType : Class<T>, processHandlerAnnotation : Bool, invoker : com.sun.xml.internal.ws.api.server.Invoker, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, container : com.sun.xml.internal.ws.api.server.Container, binding : com.sun.xml.internal.ws.api.WSBinding, primaryWsdl : com.sun.xml.internal.ws.api.server.SDDocumentSource, metadata : java.util.Collection<com.sun.xml.internal.ws.api.server.SDDocumentSource>, resolver : org.xml.sax.EntityResolver, isTransportSynchronous : Bool) : com.sun.xml.internal.ws.api.server.WSEndpoint<T>;
+	@:overload @:public @:static public static function createEndpoint<T>(implType : Class<T>, processHandlerAnnotation : Bool, invoker : com.sun.xml.internal.ws.api.server.Invoker, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, container : com.sun.xml.internal.ws.api.server.Container, binding : com.sun.xml.internal.ws.api.WSBinding, primaryWsdl : com.sun.xml.internal.ws.api.server.SDDocumentSource, metadata : java.util.Collection<com.sun.xml.internal.ws.api.server.SDDocumentSource>, resolver : org.xml.sax.EntityResolver, isTransportSynchronous : Bool) : com.sun.xml.internal.ws.api.server.WSEndpoint<T>;
 	
 	/**
 	* Verifies if the endpoint implementor class has @WebService or @WebServiceProvider
@@ -48,7 +48,7 @@ extern class EndpointFactory
 	*      If it doesn't have any one of @WebService or @WebServiceProvider
 	*      If it has both @WebService and @WebServiceProvider annotations
 	*/
-	@:overload public static function verifyImplementorClass(clz : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function verifyImplementorClass(clz : Class<Dynamic>) : Bool;
 	
 	/**
 	* If service name is not already set via DD or programmatically, it uses
@@ -56,7 +56,7 @@ extern class EndpointFactory
 	*
 	* @return non-null service name
 	*/
-	@:overload public static function getDefaultServiceName(implType : Class<Dynamic>) : javax.xml.namespace.QName;
+	@:overload @:public @:static public static function getDefaultServiceName(implType : Class<Dynamic>) : javax.xml.namespace.QName;
 	
 	/**
 	* If portName is not already set via DD or programmatically, it uses
@@ -64,7 +64,7 @@ extern class EndpointFactory
 	*
 	* @return non-null port name
 	*/
-	@:overload public static function getDefaultPortName(serviceName : javax.xml.namespace.QName, implType : Class<Dynamic>) : javax.xml.namespace.QName;
+	@:overload @:public @:static public static function getDefaultPortName(serviceName : javax.xml.namespace.QName, implType : Class<Dynamic>) : javax.xml.namespace.QName;
 	
 	/**
 	* Returns the wsdl from @WebService, or @WebServiceProvider annotation using
@@ -75,7 +75,7 @@ extern class EndpointFactory
 	*      make sure that you called {@link #verifyImplementorClass} on it.
 	* @return wsdl if there is wsdlLocation, else null
 	*/
-	@:overload public static function getWsdlLocation(implType : Class<Dynamic>) : String;
+	@:overload @:public @:static public static function getWsdlLocation(implType : Class<Dynamic>) : String;
 	
 	
 }
@@ -84,9 +84,9 @@ extern class EndpointFactory
 */
 @:native('com$sun$xml$internal$ws$server$EndpointFactory$EntityResolverImpl') @:internal extern class EndpointFactory_EntityResolverImpl implements com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver
 {
-	@:overload public function new(metadata : java.util.List<com.sun.xml.internal.ws.api.server.SDDocumentSource>) : Void;
+	@:overload @:public public function new(metadata : java.util.List<com.sun.xml.internal.ws.api.server.SDDocumentSource>) : Void;
 	
-	@:overload public function resolveEntity(publicId : String, systemId : String) : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser;
+	@:overload @:public public function resolveEntity(publicId : String, systemId : String) : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser;
 	
 	
 }

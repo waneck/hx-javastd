@@ -33,15 +33,15 @@ package com.sun.tools.javac.jvm;
 */
 @:internal extern class UninitializedType extends com.sun.tools.javac.code.Type.Type_DelegatedType
 {
-	public static var UNINITIALIZED_THIS(default, null) : Int;
+	@:public @:static @:final public static var UNINITIALIZED_THIS(default, null) : Int;
 	
-	public static var UNINITIALIZED_OBJECT(default, null) : Int;
+	@:public @:static @:final public static var UNINITIALIZED_OBJECT(default, null) : Int;
 	
-	@:overload public static function uninitializedThis(qtype : com.sun.tools.javac.code.Type) : com.sun.tools.javac.jvm.UninitializedType;
+	@:overload @:public @:static public static function uninitializedThis(qtype : com.sun.tools.javac.code.Type) : com.sun.tools.javac.jvm.UninitializedType;
 	
-	@:overload public static function uninitializedObject(qtype : com.sun.tools.javac.code.Type, offset : Int) : com.sun.tools.javac.jvm.UninitializedType;
+	@:overload @:public @:static public static function uninitializedObject(qtype : com.sun.tools.javac.code.Type, offset : Int) : com.sun.tools.javac.jvm.UninitializedType;
 	
-	public var offset(default, null) : Int;
+	@:public @:final public var offset(default, null) : Int;
 	
 	
 }

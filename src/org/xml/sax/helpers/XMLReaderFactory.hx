@@ -73,7 +73,7 @@ extern class XMLReaderFactory
 	*            can be identified and instantiated.
 	* @see #createXMLReader(java.lang.String)
 	*/
-	@:overload public static function createXMLReader() : org.xml.sax.XMLReader;
+	@:overload @:public @:static public static function createXMLReader() : org.xml.sax.XMLReader;
 	
 	/**
 	* Attempt to create an XML reader from a class name.
@@ -90,7 +90,7 @@ extern class XMLReaderFactory
 	*            loaded, instantiated, and cast to XMLReader.
 	* @see #createXMLReader()
 	*/
-	@:overload public static function createXMLReader(className : String) : org.xml.sax.XMLReader;
+	@:overload @:public @:static public static function createXMLReader(className : String) : org.xml.sax.XMLReader;
 	
 	
 }

@@ -36,7 +36,7 @@ extern interface SyncResolver extends javax.sql.RowSet
 	*         <code>SyncResolver.INSERT_ROW_CONFLICT</code>, or
 	*         <code>SyncResolver.NO_ROW_CONFLICT</code>
 	*/
-	@:overload public function getStatus() : Int;
+	@:overload @:public public function getStatus() : Int;
 	
 	/**
 	* Retrieves the value in the designated column in the current row of this
@@ -50,7 +50,7 @@ extern interface SyncResolver extends javax.sql.RowSet
 	*         <code>SyncResolver</code> object
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function getConflictValue(index : Int) : Dynamic;
+	@:overload @:public public function getConflictValue(index : Int) : Dynamic;
 	
 	/**
 	* Retrieves the value in the designated column in the current row of this
@@ -64,7 +64,7 @@ extern interface SyncResolver extends javax.sql.RowSet
 	*         <code>SyncResolver</code> object
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function getConflictValue(columnName : String) : Dynamic;
+	@:overload @:public public function getConflictValue(columnName : String) : Dynamic;
 	
 	/**
 	* Sets <i>obj</i> as the value in column <i>index</i> in the current row of the
@@ -77,7 +77,7 @@ extern interface SyncResolver extends javax.sql.RowSet
 	*        <code>RowSet</code> object and persisted in the data source
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function setResolvedValue(index : Int, obj : Dynamic) : Void;
+	@:overload @:public public function setResolvedValue(index : Int, obj : Dynamic) : Void;
 	
 	/**
 	* Sets <i>obj</i> as the value in column <i>columnName</i> in the current row of the
@@ -90,7 +90,7 @@ extern interface SyncResolver extends javax.sql.RowSet
 	*        <code>RowSet</code> object and persisted in the data source
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function setResolvedValue(columnName : String, obj : Dynamic) : Void;
+	@:overload @:public public function setResolvedValue(columnName : String, obj : Dynamic) : Void;
 	
 	/**
 	* Moves the cursor down from its current position to the next row that contains
@@ -109,7 +109,7 @@ extern interface SyncResolver extends javax.sql.RowSet
 	*     is <code>TYPE_FORWARD_ONLY</code>
 	*
 	*/
-	@:overload public function nextConflict() : Bool;
+	@:overload @:public public function nextConflict() : Bool;
 	
 	/**
 	* Moves the cursor up from its current position to the previous conflict
@@ -124,7 +124,7 @@ extern interface SyncResolver extends javax.sql.RowSet
 	* @throws SQLException if a database access error occurs or the result set type
 	*     is <code>TYPE_FORWARD_ONLY</code>
 	*/
-	@:overload public function previousConflict() : Bool;
+	@:overload @:public public function previousConflict() : Bool;
 	
 	
 }

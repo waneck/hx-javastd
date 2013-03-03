@@ -28,13 +28,13 @@ extern class SelectOptimalEncodingFeature extends javax.xml.ws.WebServiceFeature
 	/**
 	* Constant value identifying the {@link SelectOptimalEncodingFeature}
 	*/
-	public static var ID(default, null) : String;
+	@:public @:static @:final public static var ID(default, null) : String;
 	
 	/**
 	* Create a {@link SelectOptimalEncodingFeature}.
 	* The instance created will be enabled.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a {@link SelectOptimalEncodingFeature}
@@ -42,12 +42,12 @@ extern class SelectOptimalEncodingFeature extends javax.xml.ws.WebServiceFeature
 	* @param enabled specifies whether this feature should
 	*                be enabled or not.
 	*/
-	@:overload public function new(enabled : Bool) : Void;
+	@:overload @:public public function new(enabled : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
 	
 }

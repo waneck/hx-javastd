@@ -39,7 +39,7 @@ package sun.security.timestamp;
 	*
 	* @param tsa The location of the TSA. It must be an HTTP URL.
 	*/
-	@:overload public function new(tsaUrl : String) : Void;
+	@:overload @:public public function new(tsaUrl : String) : Void;
 	
 	/**
 	* Connects to the TSA and requests a timestamp.
@@ -49,7 +49,7 @@ package sun.security.timestamp;
 	* @throws IOException The exception is thrown if a problem occurs while
 	*         communicating with the TSA.
 	*/
-	@:overload public function generateTimestamp(tsQuery : sun.security.timestamp.TSRequest) : sun.security.timestamp.TSResponse;
+	@:overload @:public public function generateTimestamp(tsQuery : sun.security.timestamp.TSRequest) : sun.security.timestamp.TSResponse;
 	
 	
 }

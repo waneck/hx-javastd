@@ -25,15 +25,15 @@ package com.sun.corba.se.impl.transport;
 */
 extern class ReadTCPTimeoutsImpl implements com.sun.corba.se.spi.transport.ReadTimeouts
 {
-	@:overload public function new(initial_time : Int, max_time : Int, max_giop_header_time : Int, backoff_percent : Int) : Void;
+	@:overload @:public public function new(initial_time : Int, max_time : Int, max_giop_header_time : Int, backoff_percent : Int) : Void;
 	
-	@:overload public function get_initial_time_to_wait() : Int;
+	@:overload @:public public function get_initial_time_to_wait() : Int;
 	
-	@:overload public function get_max_time_to_wait() : Int;
+	@:overload @:public public function get_max_time_to_wait() : Int;
 	
-	@:overload public function get_backoff_factor() : Float;
+	@:overload @:public public function get_backoff_factor() : Float;
 	
-	@:overload public function get_max_giop_header_time_to_wait() : Int;
+	@:overload @:public public function get_max_giop_header_time_to_wait() : Int;
 	
 	
 }

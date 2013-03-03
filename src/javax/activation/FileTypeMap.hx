@@ -28,7 +28,7 @@ extern class FileTypeMap
 	/**
 	* The default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Return the type of the file object. This method should
@@ -37,7 +37,7 @@ extern class FileTypeMap
 	* @param file A file to be typed.
 	* @return The content type.
 	*/
-	@:overload @:abstract public function getContentType(file : java.io.File) : String;
+	@:overload @:abstract @:public public function getContentType(file : java.io.File) : String;
 	
 	/**
 	* Return the type of the file passed in.  This method should
@@ -46,7 +46,7 @@ extern class FileTypeMap
 	* @param filename the pathname of the file.
 	* @return The content type.
 	*/
-	@:overload @:abstract public function getContentType(filename : String) : String;
+	@:overload @:abstract @:public public function getContentType(filename : String) : String;
 	
 	/**
 	* Sets the default FileTypeMap for the system. This instance
@@ -56,7 +56,7 @@ extern class FileTypeMap
 	* @exception SecurityException if the caller doesn't have permission
 	*                                  to change the default
 	*/
-	@:overload public static function setDefaultFileTypeMap(map : javax.activation.FileTypeMap) : Void;
+	@:overload @:public @:static public static function setDefaultFileTypeMap(map : javax.activation.FileTypeMap) : Void;
 	
 	/**
 	* Return the default FileTypeMap for the system.
@@ -67,7 +67,7 @@ extern class FileTypeMap
 	* @return The default FileTypeMap
 	* @see javax.activation.FileTypeMap#setDefaultFileTypeMap
 	*/
-	@:overload public static function getDefaultFileTypeMap() : javax.activation.FileTypeMap;
+	@:overload @:public @:static public static function getDefaultFileTypeMap() : javax.activation.FileTypeMap;
 	
 	
 }

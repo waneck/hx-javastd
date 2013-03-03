@@ -32,35 +32,35 @@ package com.sun.org.apache.xml.internal.resolver.readers;
 */
 extern class SAXParserHandler extends org.xml.sax.helpers.DefaultHandler
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setEntityResolver(er : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(er : org.xml.sax.EntityResolver) : Void;
 	
-	@:overload public function setContentHandler(ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setContentHandler(ch : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public override public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
-	@:overload public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public override public function endPrefixMapping(prefix : String) : Void;
 	
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public override public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public override public function skippedEntity(name : String) : Void;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
-	@:overload public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	
 }

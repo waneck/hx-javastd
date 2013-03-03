@@ -49,7 +49,7 @@ extern class DPattern implements com.sun.xml.internal.rngom.ast.om.ParsedPattern
 	/**
 	* Returns where the pattern is defined in the source code.
 	*/
-	@:overload public function getLocation() : org.xml.sax.Locator;
+	@:overload @:public public function getLocation() : org.xml.sax.Locator;
 	
 	/**
 	* Returns the annotation associated with it.
@@ -57,31 +57,31 @@ extern class DPattern implements com.sun.xml.internal.rngom.ast.om.ParsedPattern
 	* @return
 	*      may be empty, but never be null.
 	*/
-	@:overload public function getAnnotation() : com.sun.xml.internal.rngom.digested.DAnnotation;
+	@:overload @:public public function getAnnotation() : com.sun.xml.internal.rngom.digested.DAnnotation;
 	
 	/**
 	* Returns true if this pattern is nullable.
 	*
 	* A nullable pattern is a pattern that can match the empty sequence.
 	*/
-	@:overload @:abstract public function isNullable() : Bool;
+	@:overload @:public @:abstract public function isNullable() : Bool;
 	
-	@:overload @:abstract public function accept<V>(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<V>) : V;
+	@:overload @:public @:abstract public function accept<V>(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<V>) : V;
 	
 	/**
 	* Creates a {@link Parseable} object that reparses this pattern.
 	*/
-	@:overload public function createParseable() : com.sun.xml.internal.rngom.parse.Parseable;
+	@:overload @:public public function createParseable() : com.sun.xml.internal.rngom.parse.Parseable;
 	
 	/**
 	* Returns true if this is {@link DElementPattern}.
 	*/
-	@:overload @:final public function isElement() : Bool;
+	@:overload @:public @:final public function isElement() : Bool;
 	
 	/**
 	* Returns true if this is {@link DAttributePattern}.
 	*/
-	@:overload @:final public function isAttribute() : Bool;
+	@:overload @:public @:final public function isAttribute() : Bool;
 	
 	
 }

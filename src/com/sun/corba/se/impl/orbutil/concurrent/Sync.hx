@@ -287,7 +287,7 @@ extern interface Sync
 	*  corresponding release should be performed. Conversely,
 	*  a normal return guarantees that the acquire was successful.
 	**/
-	@:overload public function acquire() : Void;
+	@:overload @:public public function acquire() : Void;
 	
 	/**
 	* Wait at most msecs to pass; report whether passed.
@@ -312,7 +312,7 @@ extern interface Sync
 	* delay if there is a lot of contention among threads.
 	* @return true if acquired
 	**/
-	@:overload public function attempt(msecs : haxe.Int64) : Bool;
+	@:overload @:public public function attempt(msecs : haxe.Int64) : Bool;
 	
 	/**
 	* Potentially enable others to pass.
@@ -325,7 +325,7 @@ extern interface Sync
 	* when faced with uncontinuable errors. However, these should normally
 	* only be caught by higher-level error handlers.
 	**/
-	@:overload public function release() : Void;
+	@:overload @:public public function release() : Void;
 	
 	
 }

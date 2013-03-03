@@ -28,24 +28,24 @@ extern class XMenuPeer extends sun.awt.X11.XMenuItemPeer implements java.awt.pee
 	/**
 	* Disposes menu window if needed
 	*/
-	@:overload override public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
 	/**
 	* Resets text metrics for this item, for its menu window
 	* and for all descendant menu windows
 	*/
-	@:overload override public function setFont(font : java.awt.Font) : Void;
+	@:overload @:public override public function setFont(font : java.awt.Font) : Void;
 	
 	/**
 	* addSeparator routines are not used
 	* in peers. Shared code invokes addItem("-")
 	* for adding separators
 	*/
-	@:overload public function addSeparator() : Void;
+	@:overload @:public public function addSeparator() : Void;
 	
-	@:overload public function addItem(item : java.awt.MenuItem) : Void;
+	@:overload @:public public function addItem(item : java.awt.MenuItem) : Void;
 	
-	@:overload public function delItem(index : Int) : Void;
+	@:overload @:public public function delItem(index : Int) : Void;
 	
 	
 }

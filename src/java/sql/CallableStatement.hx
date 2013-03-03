@@ -2371,7 +2371,7 @@ extern interface CallableStatement extends java.sql.PreparedStatement
 	* this method
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getObject<T>(parameterIndex : Int, type : Class<T>) : T;
+	@:require(java7) @:overload @:public public function getObject<T>(parameterIndex : Int, type : Class<T>) : T;
 	
 	/**
 	*<p>Returns an object representing the value of OUT parameter
@@ -2399,7 +2399,7 @@ extern interface CallableStatement extends java.sql.PreparedStatement
 	* this method
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getObject<T>(parameterName : String, type : Class<T>) : T;
+	@:require(java7) @:overload @:public public function getObject<T>(parameterName : String, type : Class<T>) : T;
 	
 	
 }

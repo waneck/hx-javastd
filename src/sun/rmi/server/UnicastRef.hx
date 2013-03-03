@@ -28,24 +28,24 @@ extern class UnicastRef implements java.rmi.server.RemoteRef
 	/**
 	* Client-side transport log.
 	*/
-	public static var clientRefLog(default, null) : sun.rmi.runtime.Log;
+	@:public @:static @:final public static var clientRefLog(default, null) : sun.rmi.runtime.Log;
 	
 	/**
 	* Client-side call log.
 	*/
-	public static var clientCallLog(default, null) : sun.rmi.runtime.Log;
+	@:public @:static @:final public static var clientCallLog(default, null) : sun.rmi.runtime.Log;
 	
-	private var ref : sun.rmi.transport.LiveRef;
+	@:protected private var ref : sun.rmi.transport.LiveRef;
 	
 	/**
 	* Create a new (empty) Unicast remote reference.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a new Unicast RemoteRef.
 	*/
-	@:overload public function new(liveRef : sun.rmi.transport.LiveRef) : Void;
+	@:overload @:public public function new(liveRef : sun.rmi.transport.LiveRef) : Void;
 	
 	/**
 	* Returns the current value of this UnicastRef's underlying
@@ -55,7 +55,7 @@ extern class UnicastRef implements java.rmi.server.RemoteRef
 	* this method (as it is inherited by UnicastRef) in the
 	* implementation of javax.management.remote.rmi.RMIConnector.
 	**/
-	@:overload public function getLiveRef() : sun.rmi.transport.LiveRef;
+	@:overload @:public public function getLiveRef() : sun.rmi.transport.LiveRef;
 	
 	/**
 	* Invoke a method. This form of delegating method invocation
@@ -75,21 +75,21 @@ extern class UnicastRef implements java.rmi.server.RemoteRef
 	* @param opnum  a hash that may be used to represent the method
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function invoke(obj : java.rmi.Remote, method : java.lang.reflect.Method, params : java.NativeArray<Dynamic>, opnum : haxe.Int64) : Dynamic;
+	@:require(java2) @:overload @:public public function invoke(obj : java.rmi.Remote, method : java.lang.reflect.Method, params : java.NativeArray<Dynamic>, opnum : haxe.Int64) : Dynamic;
 	
-	@:overload private function marshalCustomCallData(out : java.io.ObjectOutput) : Void;
+	@:overload @:protected private function marshalCustomCallData(out : java.io.ObjectOutput) : Void;
 	
 	/**
 	* Marshal value to an ObjectOutput sink using RMI's serialization
 	* format for parameters or return values.
 	*/
-	@:overload private static function marshalValue(type : Class<Dynamic>, value : Dynamic, out : java.io.ObjectOutput) : Void;
+	@:overload @:protected @:static private static function marshalValue(type : Class<Dynamic>, value : Dynamic, out : java.io.ObjectOutput) : Void;
 	
 	/**
 	* Unmarshal value from an ObjectInput source using RMI's serialization
 	* format for parameters or return values.
 	*/
-	@:overload private static function unmarshalValue(type : Class<Dynamic>, _in : java.io.ObjectInput) : Dynamic;
+	@:overload @:protected @:static private static function unmarshalValue(type : Class<Dynamic>, _in : java.io.ObjectInput) : Dynamic;
 	
 	/**
 	* Create an appropriate call object for a new call on this object.
@@ -97,7 +97,7 @@ extern class UnicastRef implements java.rmi.server.RemoteRef
 	* assign the operation indexes and interpret them. The RemoteRef
 	* may need the operation to encode in for the call.
 	*/
-	@:overload public function newCall(obj : java.rmi.server.RemoteObject, ops : java.NativeArray<java.rmi.server.Operation>, opnum : Int, hash : haxe.Int64) : java.rmi.server.RemoteCall;
+	@:overload @:public public function newCall(obj : java.rmi.server.RemoteObject, ops : java.NativeArray<java.rmi.server.Operation>, opnum : Int, hash : haxe.Int64) : java.rmi.server.RemoteCall;
 	
 	/**
 	* Invoke makes the remote call present in the RemoteCall object.
@@ -108,45 +108,45 @@ extern class UnicastRef implements java.rmi.server.RemoteRef
 	* take care of cleaning up the connection before raising the
 	* "user" or remote exception.
 	*/
-	@:overload public function invoke(call : java.rmi.server.RemoteCall) : Void;
+	@:overload @:public public function invoke(call : java.rmi.server.RemoteCall) : Void;
 	
 	/**
 	* Done should only be called if the invoke returns successfully
 	* (non-exceptionally) to the stub. It allows the remote reference to
 	* clean up (or reuse) the connection.
 	*/
-	@:overload public function done(call : java.rmi.server.RemoteCall) : Void;
+	@:overload @:public public function done(call : java.rmi.server.RemoteCall) : Void;
 	
 	/**
 	* Returns the class of the ref type to be serialized
 	*/
-	@:overload public function getRefClass(out : java.io.ObjectOutput) : String;
+	@:overload @:public public function getRefClass(out : java.io.ObjectOutput) : String;
 	
 	/**
 	* Write out external representation for remote ref.
 	*/
-	@:overload public function writeExternal(out : java.io.ObjectOutput) : Void;
+	@:overload @:public public function writeExternal(out : java.io.ObjectOutput) : Void;
 	
 	/**
 	* Read in external representation for remote ref.
 	* @exception ClassNotFoundException If the class for an object
 	* being restored cannot be found.
 	*/
-	@:overload public function readExternal(_in : java.io.ObjectInput) : Void;
+	@:overload @:public public function readExternal(_in : java.io.ObjectInput) : Void;
 	
 	/**
 	* Method from object, forward from RemoteObject
 	*/
-	@:overload public function remoteToString() : String;
+	@:overload @:public public function remoteToString() : String;
 	
 	/**
 	* default implementation of hashCode for remote objects
 	*/
-	@:overload public function remoteHashCode() : Int;
+	@:overload @:public public function remoteHashCode() : Int;
 	
 	/** default implementation of equals for remote objects
 	*/
-	@:overload public function remoteEquals(sub : java.rmi.server.RemoteRef) : Bool;
+	@:overload @:public public function remoteEquals(sub : java.rmi.server.RemoteRef) : Bool;
 	
 	
 }

@@ -56,23 +56,23 @@ package sun.security.pkcs11;
 */
 @:require(java5) @:internal extern class P11Signature extends java.security.SignatureSpi
 {
-	@:overload override private function engineInitVerify(publicKey : java.security.PublicKey) : Void;
+	@:overload @:protected override private function engineInitVerify(publicKey : java.security.PublicKey) : Void;
 	
-	@:overload override private function engineInitSign(privateKey : java.security.PrivateKey) : Void;
+	@:overload @:protected override private function engineInitSign(privateKey : java.security.PrivateKey) : Void;
 	
-	@:overload override private function engineUpdate(b : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(b : java.StdTypes.Int8) : Void;
 	
-	@:overload override private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : Void;
 	
-	@:overload override private function engineUpdate(byteBuffer : java.nio.ByteBuffer) : Void;
+	@:overload @:protected override private function engineUpdate(byteBuffer : java.nio.ByteBuffer) : Void;
 	
-	@:overload override private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:protected override private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
-	@:overload override private function engineSetParameter(param : String, value : Dynamic) : Void;
+	@:overload @:protected override private function engineSetParameter(param : String, value : Dynamic) : Void;
 	
-	@:overload override private function engineGetParameter(param : String) : Dynamic;
+	@:overload @:protected override private function engineGetParameter(param : String) : Dynamic;
 	
 	
 }

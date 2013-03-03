@@ -20,13 +20,13 @@ package com.sun.xml.internal.stream.dtd.nonvalidating;
 extern class XMLAttributeDecl
 {
 	/** name */
-	public var name(default, null) : com.sun.org.apache.xerces.internal.xni.QName;
+	@:public @:final public var name(default, null) : com.sun.org.apache.xerces.internal.xni.QName;
 	
 	/** simpleType */
-	public var simpleType(default, null) : com.sun.xml.internal.stream.dtd.nonvalidating.XMLSimpleType;
+	@:public @:final public var simpleType(default, null) : com.sun.xml.internal.stream.dtd.nonvalidating.XMLSimpleType;
 	
 	/** optional */
-	public var optional : Bool;
+	@:public public var optional : Bool;
 	
 	/**
 	* setValues
@@ -35,12 +35,12 @@ extern class XMLAttributeDecl
 	* @param simpleType
 	* @param optional
 	*/
-	@:overload public function setValues(name : com.sun.org.apache.xerces.internal.xni.QName, simpleType : com.sun.xml.internal.stream.dtd.nonvalidating.XMLSimpleType, optional : Bool) : Void;
+	@:overload @:public public function setValues(name : com.sun.org.apache.xerces.internal.xni.QName, simpleType : com.sun.xml.internal.stream.dtd.nonvalidating.XMLSimpleType, optional : Bool) : Void;
 	
 	/**
 	* clear
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

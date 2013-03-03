@@ -25,26 +25,26 @@ package sun.print;
 */
 extern class PathGraphics extends sun.print.ProxyGraphics2D
 {
-	private var printingGlyphVector : Bool;
+	@:protected private var printingGlyphVector : Bool;
 	
-	@:overload private function new(graphics : java.awt.Graphics2D, printerJob : java.awt.print.PrinterJob, painter : java.awt.print.Printable, pageFormat : java.awt.print.PageFormat, pageIndex : Int, canRedraw : Bool) : Void;
+	@:overload @:protected private function new(graphics : java.awt.Graphics2D, printerJob : java.awt.print.PrinterJob, painter : java.awt.print.Printable, pageFormat : java.awt.print.PageFormat, pageIndex : Int, canRedraw : Bool) : Void;
 	
 	/**
 	* Return the Printable instance responsible for drawing
 	* into this Graphics.
 	*/
-	@:overload private function getPrintable() : java.awt.print.Printable;
+	@:overload @:protected private function getPrintable() : java.awt.print.Printable;
 	
 	/**
 	* Return the PageFormat associated with this page of
 	* Graphics.
 	*/
-	@:overload private function getPageFormat() : java.awt.print.PageFormat;
+	@:overload @:protected private function getPageFormat() : java.awt.print.PageFormat;
 	
 	/**
 	* Return the page index associated with this Graphics.
 	*/
-	@:overload private function getPageIndex() : Int;
+	@:overload @:protected private function getPageIndex() : Int;
 	
 	/**
 	* Return true if we are allowed to ask the application
@@ -53,12 +53,12 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* redraw. When PrinterJob is emulating PrintJob then we
 	* can not.
 	*/
-	@:overload public function canDoRedraws() : Bool;
+	@:overload @:public public function canDoRedraws() : Bool;
 	
 	/**
 	* Redraw a rectanglular area using a proxy graphics
 	*/
-	@:overload @:abstract public function redrawRegion(region : java.awt.geom.Rectangle2D, scaleX : Float, scaleY : Float, clip : java.awt.Shape, devTransform : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public @:abstract public function redrawRegion(region : java.awt.geom.Rectangle2D, scaleX : Float, scaleY : Float, clip : java.awt.Shape, devTransform : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Draws a line, using the current color, between the points
@@ -69,7 +69,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @param   x2  the second point's <i>x</i> coordinate.
 	* @param   y2  the second point's <i>y</i> coordinate.
 	*/
-	@:overload override public function drawLine(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public override public function drawLine(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
 	/**
 	* Draws the outline of the specified rectangle.
@@ -87,7 +87,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see          java.awt.Graphics#fillRect
 	* @see          java.awt.Graphics#clearRect
 	*/
-	@:overload public function drawRect(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function drawRect(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Fills the specified rectangle.
@@ -108,7 +108,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see           java.awt.Graphics#clearRect
 	* @see           java.awt.Graphics#drawRect
 	*/
-	@:overload override public function fillRect(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function fillRect(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Clears the specified rectangle by filling it with the background
@@ -129,7 +129,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see         java.awt.Graphics#setPaintMode
 	* @see         java.awt.Graphics#setXORMode(java.awt.Color)
 	*/
-	@:overload override public function clearRect(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function clearRect(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Draws an outlined round-cornered rectangle using this graphics
@@ -147,7 +147,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	*                    at the four corners.
 	* @see        java.awt.Graphics#fillRoundRect
 	*/
-	@:overload override public function drawRoundRect(x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
+	@:overload @:public override public function drawRoundRect(x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
 	
 	/**
 	* Fills the specified rounded corner rectangle with the current color.
@@ -165,7 +165,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	*                     of the arc at the four corners.
 	* @see         java.awt.Graphics#drawRoundRect
 	*/
-	@:overload override public function fillRoundRect(x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
+	@:overload @:public override public function fillRoundRect(x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
 	
 	/**
 	* Draws the outline of an oval.
@@ -185,7 +185,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see         java.awt.Graphics#fillOval
 	* @since       JDK1.0
 	*/
-	@:require(java0) @:overload override public function drawOval(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java0) @:overload @:public override public function drawOval(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Fills an oval bounded by the specified rectangle with the
@@ -198,7 +198,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @param       height the height of the oval to be filled.
 	* @see         java.awt.Graphics#drawOval
 	*/
-	@:overload override public function fillOval(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function fillOval(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Draws the outline of a circular or elliptical arc
@@ -237,7 +237,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	*                    relative to the start angle.
 	* @see         java.awt.Graphics#fillArc
 	*/
-	@:overload override public function drawArc(x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
+	@:overload @:public override public function drawArc(x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
 	
 	/**
 	* Fills a circular or elliptical arc covering the specified rectangle.
@@ -275,7 +275,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	*                    relative to the start angle.
 	* @see         java.awt.Graphics#drawArc
 	*/
-	@:overload override public function fillArc(x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
+	@:overload @:public override public function fillArc(x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
 	
 	/**
 	* Draws a sequence of connected lines defined by
@@ -289,7 +289,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see         java.awt.Graphics#drawPolygon(int[], int[], int)
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload override public function drawPolyline(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:require(java1) @:overload @:public override public function drawPolyline(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
 	/**
 	* Draws a closed polygon defined by
@@ -310,7 +310,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see          java.awt.Graphics#fillPolygon
 	* @see          java.awt.Graphics#drawPolyline
 	*/
-	@:overload override public function drawPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:overload @:public override public function drawPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
 	/**
 	* Draws the outline of a polygon defined by the specified
@@ -319,7 +319,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see          java.awt.Graphics#fillPolygon
 	* @see          java.awt.Graphics#drawPolyline
 	*/
-	@:overload public function drawPolygon(p : java.awt.Polygon) : Void;
+	@:overload @:public override public function drawPolygon(p : java.awt.Polygon) : Void;
 	
 	/**
 	* Fills a closed polygon defined by
@@ -341,7 +341,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @param        nPoints   a the total number of points.
 	* @see          java.awt.Graphics#drawPolygon(int[], int[], int)
 	*/
-	@:overload override public function fillPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:overload @:public override public function fillPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
 	/**
 	* Fills the polygon defined by the specified Polygon object with
@@ -352,7 +352,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @param        p the polygon to fill.
 	* @see          java.awt.Graphics#drawPolygon(int[], int[], int)
 	*/
-	@:overload public function fillPolygon(p : java.awt.Polygon) : Void;
+	@:overload @:public override public function fillPolygon(p : java.awt.Polygon) : Void;
 	
 	/**
 	* Draws the text given by the specified string, using this
@@ -366,11 +366,11 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see         java.awt.Graphics#drawChars
 	* @since       JDK1.0
 	*/
-	@:require(java0) @:overload override public function drawString(str : String, x : Int, y : Int) : Void;
+	@:require(java0) @:overload @:public override public function drawString(str : String, x : Int, y : Int) : Void;
 	
-	@:overload override public function drawString(str : String, x : Single, y : Single) : Void;
+	@:overload @:public override public function drawString(str : String, x : Single, y : Single) : Void;
 	
-	@:overload private function drawString(str : String, x : Single, y : Single, font : java.awt.Font, frc : java.awt.font.FontRenderContext, w : Single) : Void;
+	@:overload @:protected private function drawString(str : String, x : Single, y : Single, font : java.awt.Font, frc : java.awt.font.FontRenderContext, w : Single) : Void;
 	
 	/**
 	* Draws the text given by the specified iterator, using this
@@ -384,9 +384,9 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see         java.awt.Graphics#drawBytes
 	* @see         java.awt.Graphics#drawChars
 	*/
-	@:overload override public function drawString(iterator : java.text.AttributedCharacterIterator, x : Int, y : Int) : Void;
+	@:overload @:public override public function drawString(iterator : java.text.AttributedCharacterIterator, x : Int, y : Int) : Void;
 	
-	@:overload override public function drawString(iterator : java.text.AttributedCharacterIterator, x : Single, y : Single) : Void;
+	@:overload @:public override public function drawString(iterator : java.text.AttributedCharacterIterator, x : Single, y : Single) : Void;
 	
 	/**
 	* Draws a GlyphVector.
@@ -403,20 +403,20 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload override public function drawGlyphVector(g : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
+	@:overload @:public override public function drawGlyphVector(g : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
 	
-	private static var fontMapRef : java.lang.ref.SoftReference<java.util.Hashtable<sun.font.Font2DHandle, Dynamic>>;
+	@:protected @:static private static var fontMapRef : java.lang.ref.SoftReference<java.util.Hashtable<sun.font.Font2DHandle, Dynamic>>;
 	
-	@:overload private function platformFontCount(font : java.awt.Font, str : String) : Int;
+	@:overload @:protected private function platformFontCount(font : java.awt.Font, str : String) : Int;
 	
 	/**
 	* Default implementation returns false.
 	* Callers of this method must always be prepared for this,
 	* and delegate to outlines or some other solution.
 	*/
-	@:overload private function printGlyphVector(gv : java.awt.font.GlyphVector, x : Single, y : Single) : Bool;
+	@:overload @:protected private function printGlyphVector(gv : java.awt.font.GlyphVector, x : Single, y : Single) : Bool;
 	
-	@:overload private function canDrawStringToWidth() : Bool;
+	@:overload @:protected private function canDrawStringToWidth() : Bool;
 	
 	/**
 	* Strokes the outline of a Shape using the settings of the current
@@ -432,7 +432,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see #setClip
 	* @see #setComposite
 	*/
-	@:overload override public function draw(s : java.awt.Shape) : Void;
+	@:overload @:public override public function draw(s : java.awt.Shape) : Void;
 	
 	/**
 	* Fills the interior of a Shape using the settings of the current
@@ -446,42 +446,42 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload override public function fill(s : java.awt.Shape) : Void;
+	@:overload @:public override public function fill(s : java.awt.Shape) : Void;
 	
-	@:overload public function fill(s : java.awt.Shape, color : java.awt.Color) : Void;
+	@:overload @:public public function fill(s : java.awt.Shape, color : java.awt.Color) : Void;
 	
 	/**
 	* Fill the path defined by <code>pathIter</code>
 	* with the specified color.
 	* The path is provided in device coordinates.
 	*/
-	@:overload @:abstract private function deviceFill(pathIter : java.awt.geom.PathIterator, color : java.awt.Color) : Void;
+	@:overload @:protected @:abstract private function deviceFill(pathIter : java.awt.geom.PathIterator, color : java.awt.Color) : Void;
 	
 	/*
 	* Set the clipping path to that defined by
 	* the passed in <code>PathIterator</code>.
 	*/
-	@:overload @:abstract private function deviceClip(pathIter : java.awt.geom.PathIterator) : Void;
+	@:overload @:protected @:abstract private function deviceClip(pathIter : java.awt.geom.PathIterator) : Void;
 	
 	/*
 	* Draw the outline of the rectangle without using path
 	* if supported by platform.
 	*/
-	@:overload @:abstract private function deviceFrameRect(x : Int, y : Int, width : Int, height : Int, color : java.awt.Color) : Void;
+	@:overload @:protected @:abstract private function deviceFrameRect(x : Int, y : Int, width : Int, height : Int, color : java.awt.Color) : Void;
 	
 	/*
 	* Draw a line without using path if supported by platform.
 	*/
-	@:overload @:abstract private function deviceDrawLine(xBegin : Int, yBegin : Int, xEnd : Int, yEnd : Int, color : java.awt.Color) : Void;
+	@:overload @:protected @:abstract private function deviceDrawLine(xBegin : Int, yBegin : Int, xEnd : Int, yEnd : Int, color : java.awt.Color) : Void;
 	
 	/*
 	* Fill a rectangle using specified color.
 	*/
-	@:overload @:abstract private function deviceFillRect(x : Int, y : Int, width : Int, height : Int, color : java.awt.Color) : Void;
+	@:overload @:protected @:abstract private function deviceFillRect(x : Int, y : Int, width : Int, height : Int, color : java.awt.Color) : Void;
 	
 	/* Obtain a BI from known implementations of java.awt.Image
 	*/
-	@:overload private function getBufferedImage(img : java.awt.Image) : java.awt.image.BufferedImage;
+	@:overload @:protected private function getBufferedImage(img : java.awt.Image) : java.awt.image.BufferedImage;
 	
 	/**
 	* Return true if the BufferedImage argument has non-opaque
@@ -490,14 +490,14 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* can not tell for sure whether the image has transparent
 	* pixels then it assumes that it does.
 	*/
-	@:overload private function hasTransparentPixels(bufferedImage : java.awt.image.BufferedImage) : Bool;
+	@:overload @:protected private function hasTransparentPixels(bufferedImage : java.awt.image.BufferedImage) : Bool;
 	
-	@:overload private function isBitmaskTransparency(bufferedImage : java.awt.image.BufferedImage) : Bool;
+	@:overload @:protected private function isBitmaskTransparency(bufferedImage : java.awt.image.BufferedImage) : Bool;
 	
 	/* An optimisation for the special case of ICM images which have
 	* bitmask transparency.
 	*/
-	@:overload private function drawBitmaskImage(bufferedImage : java.awt.image.BufferedImage, xform : java.awt.geom.AffineTransform, bgcolor : java.awt.Color, srcX : Int, srcY : Int, srcWidth : Int, srcHeight : Int) : Bool;
+	@:overload @:protected private function drawBitmaskImage(bufferedImage : java.awt.image.BufferedImage, xform : java.awt.geom.AffineTransform, bgcolor : java.awt.Color, srcX : Int, srcY : Int, srcWidth : Int, srcHeight : Int) : Bool;
 	
 	/**
 	* The various <code>drawImage()</code> methods for
@@ -528,7 +528,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @param   handlingTransparency if being recursively called to
 	*                    print opaque region of transparent image
 	*/
-	@:overload @:abstract private function drawImageToPlatform(img : java.awt.Image, xform : java.awt.geom.AffineTransform, bgcolor : java.awt.Color, srcX : Int, srcY : Int, srcWidth : Int, srcHeight : Int, handlingTransparency : Bool) : Bool;
+	@:overload @:protected @:abstract private function drawImageToPlatform(img : java.awt.Image, xform : java.awt.geom.AffineTransform, bgcolor : java.awt.Color, srcX : Int, srcY : Int, srcWidth : Int, srcHeight : Int, handlingTransparency : Bool) : Bool;
 	
 	/**
 	* Draws as much of the specified image as is currently available.
@@ -555,7 +555,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see      java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload override public function drawImage(img : java.awt.Image, x : Int, y : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:require(java0) @:overload @:public override public function drawImage(img : java.awt.Image, x : Int, y : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws as much of the specified image as has already been scaled
@@ -591,7 +591,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see      java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload override public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:require(java0) @:overload @:public override public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/*
 	* Draws as much of the specified image as is currently available.
@@ -629,7 +629,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see      java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload override public function drawImage(img : java.awt.Image, x : Int, y : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:require(java0) @:overload @:public override public function drawImage(img : java.awt.Image, x : Int, y : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws as much of the specified image as has already been scaled
@@ -671,7 +671,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see      java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload override public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:require(java0) @:overload @:public override public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws as much of the specified area of the specified image as is
@@ -720,7 +720,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see         java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload override public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:require(java1) @:overload @:public override public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws as much of the specified area of the specified image as is
@@ -776,7 +776,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see         java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload override public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:require(java1) @:overload @:public override public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws an image, applying a transform from image space into user space
@@ -799,7 +799,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload override public function drawImage(img : java.awt.Image, xform : java.awt.geom.AffineTransform, obs : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public override public function drawImage(img : java.awt.Image, xform : java.awt.geom.AffineTransform, obs : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws a BufferedImage that is filtered with a BufferedImageOp.
@@ -819,7 +819,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload override public function drawImage(img : java.awt.image.BufferedImage, op : java.awt.image.BufferedImageOp, x : Int, y : Int) : Void;
+	@:overload @:public override public function drawImage(img : java.awt.image.BufferedImage, op : java.awt.image.BufferedImageOp, x : Int, y : Int) : Void;
 	
 	/**
 	* Draws an image, applying a transform from image space into user space
@@ -840,7 +840,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload override public function drawRenderedImage(img : java.awt.image.RenderedImage, xform : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public override public function drawRenderedImage(img : java.awt.image.RenderedImage, xform : java.awt.geom.AffineTransform) : Void;
 	
 	
 }

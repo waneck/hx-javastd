@@ -44,7 +44,7 @@ extern class OIDMap
 	* @param clazz the Class object associated with this attribute
 	* @exception CertificateException on errors.
 	*/
-	@:overload public static function addAttribute(name : String, oid : String, clazz : Class<Dynamic>) : Void;
+	@:overload @:public @:static public static function addAttribute(name : String, oid : String, clazz : Class<Dynamic>) : Void;
 	
 	/**
 	* Return user friendly name associated with the OID.
@@ -53,7 +53,7 @@ extern class OIDMap
 	* @return the user friendly name or null if no name
 	* is registered for this oid.
 	*/
-	@:overload public static function getName(oid : sun.security.util.ObjectIdentifier) : String;
+	@:overload @:public @:static public static function getName(oid : sun.security.util.ObjectIdentifier) : String;
 	
 	/**
 	* Return Object identifier for user friendly name.
@@ -62,7 +62,7 @@ extern class OIDMap
 	* @return the Object Identifier or null if no oid
 	* is registered for this name.
 	*/
-	@:overload public static function getOID(name : String) : sun.security.util.ObjectIdentifier;
+	@:overload @:public @:static public static function getOID(name : String) : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Return the java class object associated with the user friendly name.
@@ -70,7 +70,7 @@ extern class OIDMap
 	* @param name the user friendly name.
 	* @exception CertificateException if class cannot be instantiated.
 	*/
-	@:overload public static function getClass(name : String) : Class<Dynamic>;
+	@:overload @:public @:static public static function getClass(name : String) : Class<Dynamic>;
 	
 	/**
 	* Return the java class object associated with the object identifier.
@@ -78,7 +78,7 @@ extern class OIDMap
 	* @param oid the name of the object identifier to be returned.
 	* @exception CertificateException if class cannot be instatiated.
 	*/
-	@:overload public static function getClass(oid : sun.security.util.ObjectIdentifier) : Class<Dynamic>;
+	@:overload @:public @:static public static function getClass(oid : sun.security.util.ObjectIdentifier) : Class<Dynamic>;
 	
 	
 }

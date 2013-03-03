@@ -32,7 +32,7 @@ package com.sun.tools.example.debug.gui;
 */
 extern class SourcepathChangedEvent extends java.util.EventObject
 {
-	@:overload public function new(source : Dynamic) : Void;
+	@:overload @:public public function new(source : Dynamic) : Void;
 	
 	
 }

@@ -28,14 +28,14 @@ extern class MXBeanMappingFactory
 	/**
 	* <p>Construct an instance of this class.</p>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* <p>Mapping factory that applies the default rules for MXBean
 	* mappings, as described in the <a
 	* href="../MXBean.html#MXBean-spec">MXBean specification</a>.</p>
 	*/
-	public static var DEFAULT(default, null) : com.sun.jmx.mbeanserver.MXBeanMappingFactory;
+	@:public @:static @:final public static var DEFAULT(default, null) : com.sun.jmx.mbeanserver.MXBeanMappingFactory;
 	
 	/**
 	* <p>Return the mapping for the given Java type.  Typically, a
@@ -54,7 +54,7 @@ extern class MXBeanMappingFactory
 	* all types of this sort (for example, all linked lists), but
 	* cannot handle this particular type.
 	*/
-	@:overload @:abstract public function mappingForType(t : java.lang.reflect.Type, f : com.sun.jmx.mbeanserver.MXBeanMappingFactory) : com.sun.jmx.mbeanserver.MXBeanMapping;
+	@:overload @:public @:abstract public function mappingForType(t : java.lang.reflect.Type, f : com.sun.jmx.mbeanserver.MXBeanMappingFactory) : com.sun.jmx.mbeanserver.MXBeanMapping;
 	
 	
 }

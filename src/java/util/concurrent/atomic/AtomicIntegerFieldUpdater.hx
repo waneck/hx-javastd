@@ -65,12 +65,12 @@ package java.util.concurrent.atomic;
 	* @throws RuntimeException with a nested reflection-based
 	* exception if the class does not hold field or is the wrong type
 	*/
-	@:overload public static function newUpdater<U>(tclass : Class<U>, fieldName : String) : java.util.concurrent.atomic.AtomicIntegerFieldUpdater<U>;
+	@:overload @:public @:static public static function newUpdater<U>(tclass : Class<U>, fieldName : String) : java.util.concurrent.atomic.AtomicIntegerFieldUpdater<U>;
 	
 	/**
 	* Protected do-nothing constructor for use by subclasses.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Atomically sets the field of the given object managed by this updater
@@ -86,7 +86,7 @@ package java.util.concurrent.atomic;
 	* @throws ClassCastException if {@code obj} is not an instance
 	* of the class possessing the field established in the constructor
 	*/
-	@:overload @:abstract public function compareAndSet(obj : T, expect : Int, update : Int) : Bool;
+	@:overload @:public @:abstract public function compareAndSet(obj : T, expect : Int, update : Int) : Bool;
 	
 	/**
 	* Atomically sets the field of the given object managed by this updater
@@ -106,7 +106,7 @@ package java.util.concurrent.atomic;
 	* @throws ClassCastException if {@code obj} is not an instance
 	* of the class possessing the field established in the constructor
 	*/
-	@:overload @:abstract public function weakCompareAndSet(obj : T, expect : Int, update : Int) : Bool;
+	@:overload @:public @:abstract public function weakCompareAndSet(obj : T, expect : Int, update : Int) : Bool;
 	
 	/**
 	* Sets the field of the given object managed by this updater to the
@@ -116,7 +116,7 @@ package java.util.concurrent.atomic;
 	* @param obj An object whose field to set
 	* @param newValue the new value
 	*/
-	@:overload @:abstract public function set(obj : T, newValue : Int) : Void;
+	@:overload @:public @:abstract public function set(obj : T, newValue : Int) : Void;
 	
 	/**
 	* Eventually sets the field of the given object managed by this
@@ -126,7 +126,7 @@ package java.util.concurrent.atomic;
 	* @param newValue the new value
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function lazySet(obj : T, newValue : Int) : Void;
+	@:require(java6) @:overload @:public @:abstract public function lazySet(obj : T, newValue : Int) : Void;
 	
 	/**
 	* Gets the current value held in the field of the given object managed
@@ -135,7 +135,7 @@ package java.util.concurrent.atomic;
 	* @param obj An object whose field to get
 	* @return the current value
 	*/
-	@:overload @:abstract public function get(obj : T) : Int;
+	@:overload @:public @:abstract public function get(obj : T) : Int;
 	
 	/**
 	* Atomically sets the field of the given object managed by this updater
@@ -145,7 +145,7 @@ package java.util.concurrent.atomic;
 	* @param newValue the new value
 	* @return the previous value
 	*/
-	@:overload public function getAndSet(obj : T, newValue : Int) : Int;
+	@:overload @:public public function getAndSet(obj : T, newValue : Int) : Int;
 	
 	/**
 	* Atomically increments by one the current value of the field of the
@@ -154,7 +154,7 @@ package java.util.concurrent.atomic;
 	* @param obj An object whose field to get and set
 	* @return the previous value
 	*/
-	@:overload public function getAndIncrement(obj : T) : Int;
+	@:overload @:public public function getAndIncrement(obj : T) : Int;
 	
 	/**
 	* Atomically decrements by one the current value of the field of the
@@ -163,7 +163,7 @@ package java.util.concurrent.atomic;
 	* @param obj An object whose field to get and set
 	* @return the previous value
 	*/
-	@:overload public function getAndDecrement(obj : T) : Int;
+	@:overload @:public public function getAndDecrement(obj : T) : Int;
 	
 	/**
 	* Atomically adds the given value to the current value of the field of
@@ -173,7 +173,7 @@ package java.util.concurrent.atomic;
 	* @param delta the value to add
 	* @return the previous value
 	*/
-	@:overload public function getAndAdd(obj : T, delta : Int) : Int;
+	@:overload @:public public function getAndAdd(obj : T, delta : Int) : Int;
 	
 	/**
 	* Atomically increments by one the current value of the field of the
@@ -182,7 +182,7 @@ package java.util.concurrent.atomic;
 	* @param obj An object whose field to get and set
 	* @return the updated value
 	*/
-	@:overload public function incrementAndGet(obj : T) : Int;
+	@:overload @:public public function incrementAndGet(obj : T) : Int;
 	
 	/**
 	* Atomically decrements by one the current value of the field of the
@@ -191,7 +191,7 @@ package java.util.concurrent.atomic;
 	* @param obj An object whose field to get and set
 	* @return the updated value
 	*/
-	@:overload public function decrementAndGet(obj : T) : Int;
+	@:overload @:public public function decrementAndGet(obj : T) : Int;
 	
 	/**
 	* Atomically adds the given value to the current value of the field of
@@ -201,7 +201,7 @@ package java.util.concurrent.atomic;
 	* @param delta the value to add
 	* @return the updated value
 	*/
-	@:overload public function addAndGet(obj : T, delta : Int) : Int;
+	@:overload @:public public function addAndGet(obj : T, delta : Int) : Int;
 	
 	
 }
@@ -210,15 +210,15 @@ package java.util.concurrent.atomic;
 */
 @:native('java$util$concurrent$atomic$AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl') @:internal extern class AtomicIntegerFieldUpdater_AtomicIntegerFieldUpdaterImpl<T> extends java.util.concurrent.atomic.AtomicIntegerFieldUpdater<T>
 {
-	@:overload override public function compareAndSet(obj : T, expect : Int, update : Int) : Bool;
+	@:overload @:public override public function compareAndSet(obj : T, expect : Int, update : Int) : Bool;
 	
-	@:overload override public function weakCompareAndSet(obj : T, expect : Int, update : Int) : Bool;
+	@:overload @:public override public function weakCompareAndSet(obj : T, expect : Int, update : Int) : Bool;
 	
-	@:overload override public function set(obj : T, newValue : Int) : Void;
+	@:overload @:public override public function set(obj : T, newValue : Int) : Void;
 	
-	@:overload override public function lazySet(obj : T, newValue : Int) : Void;
+	@:overload @:public override public function lazySet(obj : T, newValue : Int) : Void;
 	
-	@:overload @:final override public function get(obj : T) : Int;
+	@:overload @:public @:final override public function get(obj : T) : Int;
 	
 	
 }

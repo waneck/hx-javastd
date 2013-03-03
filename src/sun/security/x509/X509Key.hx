@@ -41,7 +41,7 @@ package sun.security.x509;
 extern class X509Key implements java.security.PublicKey
 {
 	/* The algorithm information (name, parameters, etc). */
-	private var algid : sun.security.x509.AlgorithmId;
+	@:protected private var algid : sun.security.x509.AlgorithmId;
 	
 	/**
 	* The key bytes, without the algorithm information.
@@ -50,28 +50,28 @@ extern class X509Key implements java.security.PublicKey
 	* @see sun.security.x509.X509Key#setKey(BitArray)
 	* @see sun.security.x509.X509Key#getKey()
 	*/
-	private var key : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var key : java.NativeArray<java.StdTypes.Int8>;
 	
 	/* The encoding for the key. */
-	private var encodedKey : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var encodedKey : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Default constructor.  The key constructed must have its key
 	* and algorithm initialized before it may be used, for example
 	* by using <code>decode</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets the key in the BitArray form.
 	*/
-	@:overload private function setKey(key : sun.security.util.BitArray) : Void;
+	@:overload @:protected private function setKey(key : sun.security.util.BitArray) : Void;
 	
 	/**
 	* Gets the key. The key may or may not be byte aligned.
 	* @return a BitArray containing the key.
 	*/
-	@:overload private function getKey() : sun.security.util.BitArray;
+	@:overload @:protected private function getKey() : sun.security.util.BitArray;
 	
 	/**
 	* Construct X.509 subject public key from a DER value.  If
@@ -87,7 +87,7 @@ extern class X509Key implements java.security.PublicKey
 	* @param in the DER-encoded SubjectPublicKeyInfo value
 	* @exception IOException on data format errors
 	*/
-	@:overload public static function parse(_in : sun.security.util.DerValue) : java.security.PublicKey;
+	@:overload @:public @:static public static function parse(_in : sun.security.util.DerValue) : java.security.PublicKey;
 	
 	/**
 	* Parse the key bits.  This may be redefined by subclasses to take
@@ -103,48 +103,48 @@ extern class X509Key implements java.security.PublicKey
 	* @exception IOException on parsing errors.
 	* @exception InvalidKeyException on invalid key encodings.
 	*/
-	@:overload private function parseKeyBits() : Void;
+	@:overload @:protected private function parseKeyBits() : Void;
 	
 	/**
 	* Returns the algorithm to be used with this key.
 	*/
-	@:overload public function getAlgorithm() : String;
+	@:overload @:public public function getAlgorithm() : String;
 	
 	/**
 	* Returns the algorithm ID to be used with this key.
 	*/
-	@:overload public function getAlgorithmId() : sun.security.x509.AlgorithmId;
+	@:overload @:public public function getAlgorithmId() : sun.security.x509.AlgorithmId;
 	
 	/**
 	* Encode SubjectPublicKeyInfo sequence on the DER output stream.
 	*
 	* @exception IOException on encoding errors.
 	*/
-	@:overload @:final public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public @:final public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Returns the DER-encoded form of the key as a byte array.
 	*/
-	@:overload public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getEncodedInternal() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncodedInternal() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the format for this key: "X.509"
 	*/
-	@:overload public function getFormat() : String;
+	@:overload @:public public function getFormat() : String;
 	
 	/**
 	* Returns the DER-encoded form of the key as a byte array.
 	*
 	* @exception InvalidKeyException on encoding errors.
 	*/
-	@:overload public function encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/*
 	* Returns a printable representation of the key
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Initialize an X509Key object from an input stream.  The data on that
@@ -167,17 +167,17 @@ extern class X509Key implements java.security.PublicKey
 	*          SubjectPublicKeyInfo value
 	* @exception InvalidKeyException on parsing errors.
 	*/
-	@:overload public function decode(_in : java.io.InputStream) : Void;
+	@:overload @:public public function decode(_in : java.io.InputStream) : Void;
 	
-	@:overload public function decode(encodedKey : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function decode(encodedKey : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Calculates a hash code value for the object. Objects
 	* which are equal will also have the same hashcode.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

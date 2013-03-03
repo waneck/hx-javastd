@@ -31,17 +31,17 @@ package sun.util.locale;
 */
 extern class ParseStatus
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function isError() : Bool;
+	@:overload @:public public function isError() : Bool;
 	
-	@:overload public function getErrorIndex() : Int;
+	@:overload @:public public function getErrorIndex() : Int;
 	
-	@:overload public function getParseLength() : Int;
+	@:overload @:public public function getParseLength() : Int;
 	
-	@:overload public function getErrorMessage() : String;
+	@:overload @:public public function getErrorMessage() : String;
 	
 	
 }

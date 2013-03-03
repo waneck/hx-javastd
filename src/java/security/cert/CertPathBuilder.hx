@@ -33,7 +33,7 @@ extern class CertPathBuilder
 	* @param provider the provider
 	* @param algorithm the algorithm name
 	*/
-	@:overload private function new(builderSpi : java.security.cert.CertPathBuilderSpi, provider : java.security.Provider, algorithm : String) : Void;
+	@:overload @:protected private function new(builderSpi : java.security.cert.CertPathBuilderSpi, provider : java.security.Provider, algorithm : String) : Void;
 	
 	/**
 	* Returns a <code>CertPathBuilder</code> object that implements the
@@ -63,7 +63,7 @@ extern class CertPathBuilder
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(algorithm : String) : java.security.cert.CertPathBuilder;
+	@:overload @:public @:static public static function getInstance(algorithm : String) : java.security.cert.CertPathBuilder;
 	
 	/**
 	* Returns a <code>CertPathBuilder</code> object that implements the
@@ -100,7 +100,7 @@ extern class CertPathBuilder
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : String) : java.security.cert.CertPathBuilder;
+	@:overload @:public @:static public static function getInstance(algorithm : String, provider : String) : java.security.cert.CertPathBuilder;
 	
 	/**
 	* Returns a <code>CertPathBuilder</code> object that implements the
@@ -131,21 +131,21 @@ extern class CertPathBuilder
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.cert.CertPathBuilder;
+	@:overload @:public @:static public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.cert.CertPathBuilder;
 	
 	/**
 	* Returns the provider of this <code>CertPathBuilder</code>.
 	*
 	* @return the provider of this <code>CertPathBuilder</code>
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Returns the name of the algorithm of this <code>CertPathBuilder</code>.
 	*
 	* @return the name of the algorithm of this <code>CertPathBuilder</code>
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Attempts to build a certification path using the specified algorithm
@@ -158,7 +158,7 @@ extern class CertPathBuilder
 	* @throws InvalidAlgorithmParameterException if the specified parameters
 	* are inappropriate for this <code>CertPathBuilder</code>
 	*/
-	@:overload @:final public function build(params : java.security.cert.CertPathParameters) : java.security.cert.CertPathBuilderResult;
+	@:overload @:public @:final public function build(params : java.security.cert.CertPathParameters) : java.security.cert.CertPathBuilderResult;
 	
 	/**
 	* Returns the default <code>CertPathBuilder</code> type as specified in
@@ -181,7 +181,7 @@ extern class CertPathBuilder
 	* in the Java security properties file, or the string &quot;PKIX&quot;
 	* if no such property exists.
 	*/
-	@:overload @:final public static function getDefaultType() : String;
+	@:overload @:public @:final @:static public static function getDefaultType() : String;
 	
 	
 }

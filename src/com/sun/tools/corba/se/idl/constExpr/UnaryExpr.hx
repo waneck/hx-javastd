@@ -36,15 +36,15 @@ package com.sun.tools.corba.se.idl.constExpr;
 //// NOTES:
 extern class UnaryExpr extends com.sun.tools.corba.se.idl.constExpr.Expression
 {
-	@:overload public function new(operation : String, unaryOperand : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
+	@:overload @:public public function new(operation : String, unaryOperand : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
 	
-	@:overload public function op(op : String) : Void;
+	@:overload @:public public function op(op : String) : Void;
 	
-	@:overload public function op() : String;
+	@:overload @:public public function op() : String;
 	
-	@:overload public function operand(operand : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
+	@:overload @:public public function operand(operand : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
 	
-	@:overload public function operand() : com.sun.tools.corba.se.idl.constExpr.Expression;
+	@:overload @:public public function operand() : com.sun.tools.corba.se.idl.constExpr.Expression;
 	
 	
 }

@@ -30,14 +30,14 @@ extern class PolicyIntersector
 	*
 	* @return policy intersector instance.
 	*/
-	@:overload public static function createStrictPolicyIntersector() : com.sun.xml.internal.ws.policy.PolicyIntersector;
+	@:overload @:public @:static public static function createStrictPolicyIntersector() : com.sun.xml.internal.ws.policy.PolicyIntersector;
 	
 	/**
 	* Returns a strict policy intersector that can be used to intersect group of policies.
 	*
 	* @return policy intersector instance.
 	*/
-	@:overload public static function createLaxPolicyIntersector() : com.sun.xml.internal.ws.policy.PolicyIntersector;
+	@:overload @:public @:static public static function createLaxPolicyIntersector() : com.sun.xml.internal.ws.policy.PolicyIntersector;
 	
 	/**
 	* Performs intersection on the input collection of policies and returns the resulting (intersected) policy. If input policy
@@ -49,7 +49,7 @@ extern class PolicyIntersector
 	*
 	* @throws IllegalArgumentException in case {@code policies} argument is either {@code null} or empty collection.
 	*/
-	@:overload public function intersect(policies : java.NativeArray<com.sun.xml.internal.ws.policy.Policy>) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public public function intersect(policies : java.NativeArray<com.sun.xml.internal.ws.policy.Policy>) : com.sun.xml.internal.ws.policy.Policy;
 	
 	
 }

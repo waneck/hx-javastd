@@ -31,61 +31,61 @@ package sun.nio.ch;
 ////
 extern class DatagramSocketAdaptor extends java.net.DatagramSocket
 {
-	@:overload public static function create(dc : sun.nio.ch.DatagramChannelImpl) : java.net.DatagramSocket;
+	@:overload @:public @:static public static function create(dc : sun.nio.ch.DatagramChannelImpl) : java.net.DatagramSocket;
 	
-	@:overload public function bind(local : java.net.SocketAddress) : Void;
+	@:overload @:public override public function bind(local : java.net.SocketAddress) : Void;
 	
-	@:overload public function connect(address : java.net.InetAddress, port : Int) : Void;
+	@:overload @:public override public function connect(address : java.net.InetAddress, port : Int) : Void;
 	
-	@:overload public function connect(remote : java.net.SocketAddress) : Void;
+	@:overload @:public override public function connect(remote : java.net.SocketAddress) : Void;
 	
-	@:overload public function disconnect() : Void;
+	@:overload @:public override public function disconnect() : Void;
 	
-	@:overload public function isBound() : Bool;
+	@:overload @:public override public function isBound() : Bool;
 	
-	@:overload public function isConnected() : Bool;
+	@:overload @:public override public function isConnected() : Bool;
 	
-	@:overload public function getInetAddress() : java.net.InetAddress;
+	@:overload @:public override public function getInetAddress() : java.net.InetAddress;
 	
-	@:overload public function getPort() : Int;
+	@:overload @:public override public function getPort() : Int;
 	
-	@:overload public function send(p : java.net.DatagramPacket) : Void;
+	@:overload @:public override public function send(p : java.net.DatagramPacket) : Void;
 	
-	@:overload public function receive(p : java.net.DatagramPacket) : Void;
+	@:overload @:public override public function receive(p : java.net.DatagramPacket) : Void;
 	
-	@:overload public function getLocalAddress() : java.net.InetAddress;
+	@:overload @:public override public function getLocalAddress() : java.net.InetAddress;
 	
-	@:overload public function getLocalPort() : Int;
+	@:overload @:public override public function getLocalPort() : Int;
 	
-	@:overload public function setSoTimeout(timeout : Int) : Void;
+	@:overload @:public override public function setSoTimeout(timeout : Int) : Void;
 	
-	@:overload public function getSoTimeout() : Int;
+	@:overload @:public override public function getSoTimeout() : Int;
 	
-	@:overload public function setSendBufferSize(size : Int) : Void;
+	@:overload @:public override public function setSendBufferSize(size : Int) : Void;
 	
-	@:overload public function getSendBufferSize() : Int;
+	@:overload @:public override public function getSendBufferSize() : Int;
 	
-	@:overload public function setReceiveBufferSize(size : Int) : Void;
+	@:overload @:public override public function setReceiveBufferSize(size : Int) : Void;
 	
-	@:overload public function getReceiveBufferSize() : Int;
+	@:overload @:public override public function getReceiveBufferSize() : Int;
 	
-	@:overload public function setReuseAddress(on : Bool) : Void;
+	@:overload @:public override public function setReuseAddress(on : Bool) : Void;
 	
-	@:overload public function getReuseAddress() : Bool;
+	@:overload @:public override public function getReuseAddress() : Bool;
 	
-	@:overload public function setBroadcast(on : Bool) : Void;
+	@:overload @:public override public function setBroadcast(on : Bool) : Void;
 	
-	@:overload public function getBroadcast() : Bool;
+	@:overload @:public override public function getBroadcast() : Bool;
 	
-	@:overload public function setTrafficClass(tc : Int) : Void;
+	@:overload @:public override public function setTrafficClass(tc : Int) : Void;
 	
-	@:overload public function getTrafficClass() : Int;
+	@:overload @:public override public function getTrafficClass() : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload public function isClosed() : Bool;
+	@:overload @:public override public function isClosed() : Bool;
 	
-	@:overload public function getChannel() : java.nio.channels.DatagramChannel;
+	@:overload @:public override public function getChannel() : java.nio.channels.DatagramChannel;
 	
 	
 }

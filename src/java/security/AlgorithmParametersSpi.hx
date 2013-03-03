@@ -35,7 +35,7 @@ extern class AlgorithmParametersSpi
 	* specification is inappropriate for the initialization of this parameter
 	* object.
 	*/
-	@:overload @:abstract private function engineInit(paramSpec : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected @:abstract private function engineInit(paramSpec : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Imports the specified parameters and decodes them
@@ -47,7 +47,7 @@ extern class AlgorithmParametersSpi
 	*
 	* @exception IOException on decoding errors
 	*/
-	@:overload @:abstract private function engineInit(params : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected @:abstract private function engineInit(params : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Imports the parameters from <code>params</code> and
@@ -63,7 +63,7 @@ extern class AlgorithmParametersSpi
 	*
 	* @exception IOException on decoding errors
 	*/
-	@:overload @:abstract private function engineInit(params : java.NativeArray<java.StdTypes.Int8>, format : String) : Void;
+	@:overload @:protected @:abstract private function engineInit(params : java.NativeArray<java.StdTypes.Int8>, format : String) : Void;
 	
 	/**
 	* Returns a (transparent) specification of this parameters
@@ -82,7 +82,7 @@ extern class AlgorithmParametersSpi
 	* @exception InvalidParameterSpecException if the requested parameter
 	* specification is inappropriate for this parameter object.
 	*/
-	@:overload @:abstract private function engineGetParameterSpec<T : java.security.spec.AlgorithmParameterSpec>(paramSpec : Class<T>) : T;
+	@:overload @:protected @:abstract private function engineGetParameterSpec<T : java.security.spec.AlgorithmParameterSpec>(paramSpec : Class<T>) : T;
 	
 	/**
 	* Returns the parameters in their primary encoding format.
@@ -93,7 +93,7 @@ extern class AlgorithmParametersSpi
 	*
 	* @exception IOException on encoding errors.
 	*/
-	@:overload @:abstract private function engineGetEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:abstract private function engineGetEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the parameters encoded in the specified format.
@@ -108,14 +108,14 @@ extern class AlgorithmParametersSpi
 	*
 	* @exception IOException on encoding errors.
 	*/
-	@:overload @:abstract private function engineGetEncoded(format : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:abstract private function engineGetEncoded(format : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a formatted string describing the parameters.
 	*
 	* @return a formatted string describing the parameters.
 	*/
-	@:overload @:abstract private function engineToString() : String;
+	@:overload @:protected @:abstract private function engineToString() : String;
 	
 	
 }

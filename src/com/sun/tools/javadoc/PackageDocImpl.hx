@@ -36,32 +36,32 @@ extern class PackageDocImpl extends com.sun.tools.javadoc.DocImpl implements com
 	* @author Neal Gafter (rewrite)
 	* @author Scott Seligman (package-info.java)
 	*/
-	@:require(java2) private var sym : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol;
+	@:require(java2) @:protected private var sym : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol;
 	
-	public var docPath : javax.tools.FileObject;
-	
-	/**
-	* Constructor
-	*/
-	@:overload public function new(env : com.sun.tools.javadoc.DocEnv, sym : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol) : Void;
+	@:public public var docPath : javax.tools.FileObject;
 	
 	/**
 	* Constructor
 	*/
-	@:overload public function new(env : com.sun.tools.javadoc.DocEnv, sym : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol, documentation : String, tree : com.sun.tools.javac.tree.JCTree) : Void;
+	@:overload @:public public function new(env : com.sun.tools.javadoc.DocEnv, sym : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol) : Void;
 	
-	@:overload public function setRawCommentText(rawDocumentation : String) : Void;
+	/**
+	* Constructor
+	*/
+	@:overload @:public public function new(env : com.sun.tools.javadoc.DocEnv, sym : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol, documentation : String, tree : com.sun.tools.javac.tree.JCTree) : Void;
+	
+	@:overload @:public override public function setRawCommentText(rawDocumentation : String) : Void;
 	
 	/**
 	* Do lazy initialization of "documentation" string.
 	*/
-	@:overload private function documentation() : String;
+	@:overload @:protected override private function documentation() : String;
 	
 	/**
 	* Add all included classes (including Exceptions and Errors)
 	* and interfaces.
 	*/
-	@:overload public function addAllClassesTo(list : com.sun.tools.javac.util.ListBuffer<com.sun.tools.javadoc.ClassDocImpl>) : Void;
+	@:overload @:public public function addAllClassesTo(list : com.sun.tools.javac.util.ListBuffer<com.sun.tools.javadoc.ClassDocImpl>) : Void;
 	
 	/**
 	* Get all classes (including Exceptions and Errors)
@@ -71,7 +71,7 @@ extern class PackageDocImpl extends com.sun.tools.javadoc.DocImpl implements com
 	* @return all classes and interfaces in this package, filtered to include
 	* only the included classes if filter==true.
 	*/
-	@:require(java4) @:overload public function allClasses(filter : Bool) : java.NativeArray<com.sun.javadoc.ClassDoc>;
+	@:require(java4) @:overload @:public public function allClasses(filter : Bool) : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Get all included classes (including Exceptions and Errors)
@@ -79,7 +79,7 @@ extern class PackageDocImpl extends com.sun.tools.javadoc.DocImpl implements com
 	*
 	* @return all included classes and interfaces in this package.
 	*/
-	@:overload public function allClasses() : java.NativeArray<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function allClasses() : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Get ordinary classes (that is, exclude exceptions, errors,
@@ -87,60 +87,60 @@ extern class PackageDocImpl extends com.sun.tools.javadoc.DocImpl implements com
 	*
 	* @return included ordinary classes in this package.
 	*/
-	@:overload public function ordinaryClasses() : java.NativeArray<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function ordinaryClasses() : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Get Exception classes in this package.
 	*
 	* @return included Exceptions in this package.
 	*/
-	@:overload public function exceptions() : java.NativeArray<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function exceptions() : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Get Error classes in this package.
 	*
 	* @return included Errors in this package.
 	*/
-	@:overload public function errors() : java.NativeArray<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function errors() : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Get included enum types in this package.
 	*
 	* @return included enum types in this package.
 	*/
-	@:overload public function enums() : java.NativeArray<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function enums() : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Get included interfaces in this package, omitting annotation types.
 	*
 	* @return included interfaces in this package.
 	*/
-	@:overload public function interfaces() : java.NativeArray<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function interfaces() : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Get included annotation types in this package.
 	*
 	* @return included annotation types in this package.
 	*/
-	@:overload public function annotationTypes() : java.NativeArray<com.sun.javadoc.AnnotationTypeDoc>;
+	@:overload @:public public function annotationTypes() : java.NativeArray<com.sun.javadoc.AnnotationTypeDoc>;
 	
 	/**
 	* Get the annotations of this package.
 	* Return an empty array if there are none.
 	*/
-	@:overload public function annotations() : java.NativeArray<com.sun.javadoc.AnnotationDesc>;
+	@:overload @:public public function annotations() : java.NativeArray<com.sun.javadoc.AnnotationDesc>;
 	
 	/**
 	* Lookup for a class within this package.
 	*
 	* @return ClassDocImpl of found class, or null if not found.
 	*/
-	@:overload public function findClass(className : String) : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function findClass(className : String) : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Return true if this package is included in the active set.
 	*/
-	@:overload public function isIncluded() : Bool;
+	@:overload @:public override public function isIncluded() : Bool;
 	
 	/**
 	* Get package name.
@@ -149,23 +149,23 @@ extern class PackageDocImpl extends com.sun.tools.javadoc.DocImpl implements com
 	* name of a package -- package names are always returned in their
 	* uniquely qualified form.
 	*/
-	@:overload public function name() : String;
+	@:overload @:public override public function name() : String;
 	
 	/**
 	* Get package name.
 	*/
-	@:overload public function qualifiedName() : String;
+	@:overload @:public override public function qualifiedName() : String;
 	
 	/**
 	* set doc path for an unzipped directory
 	*/
-	@:overload public function setDocPath(path : javax.tools.FileObject) : Void;
+	@:overload @:public public function setDocPath(path : javax.tools.FileObject) : Void;
 	
 	/**
 	* Return the source position of the entity, or null if
 	* no position is available.
 	*/
-	@:overload public function position() : com.sun.javadoc.SourcePosition;
+	@:overload @:public override public function position() : com.sun.javadoc.SourcePosition;
 	
 	
 }

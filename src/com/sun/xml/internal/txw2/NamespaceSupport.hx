@@ -37,7 +37,7 @@ package com.sun.xml.internal.txw2;
 	* <p>This is the Namespace URI that is automatically mapped
 	* to the "xml" prefix.</p>
 	*/
-	public static var XMLNS(default, null) : String;
+	@:public @:final @:static public static var XMLNS(default, null) : String;
 	
 	/**
 	* The namespace declaration URI as a constant.
@@ -55,12 +55,12 @@ package com.sun.xml.internal.txw2;
 	* @see #setNamespaceDeclUris
 	* @see #isNamespaceDeclUris
 	*/
-	@:require(java1) public static var NSDECL(default, null) : String;
+	@:require(java1) @:public @:final @:static public static var NSDECL(default, null) : String;
 	
 	/**
 	* Create a new Namespace support object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Reset this Namespace support object for reuse.
@@ -73,7 +73,7 @@ package com.sun.xml.internal.txw2;
 	*
 	* @see #setNamespaceDeclUris
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Start a new Namespace context.
@@ -111,7 +111,7 @@ package com.sun.xml.internal.txw2;
 	* @see org.xml.sax.ContentHandler
 	* @see #popContext
 	*/
-	@:overload public function pushContext() : Void;
+	@:overload @:public public function pushContext() : Void;
 	
 	/**
 	* Revert to the previous Namespace context.
@@ -126,7 +126,7 @@ package com.sun.xml.internal.txw2;
 	*
 	* @see #pushContext
 	*/
-	@:overload public function popContext() : Void;
+	@:overload @:public public function popContext() : Void;
 	
 	/**
 	* Declare a Namespace prefix.  All prefixes must be declared
@@ -161,7 +161,7 @@ package com.sun.xml.internal.txw2;
 	* @see #getURI
 	* @see #getPrefix
 	*/
-	@:overload public function declarePrefix(prefix : String, uri : String) : Bool;
+	@:overload @:public public function declarePrefix(prefix : String, uri : String) : Bool;
 	
 	/**
 	* Process a raw XML qualified name, after all declarations in the
@@ -203,7 +203,7 @@ package com.sun.xml.internal.txw2;
 	*        is an undeclared prefix.
 	* @see #declarePrefix
 	* @see java.lang.String#intern */
-	@:overload public function processName(qName : String, parts : java.NativeArray<String>, isAttribute : Bool) : java.NativeArray<String>;
+	@:overload @:public public function processName(qName : String, parts : java.NativeArray<String>, isAttribute : Bool) : java.NativeArray<String>;
 	
 	/**
 	* Look up a prefix and get the currently-mapped Namespace URI.
@@ -217,7 +217,7 @@ package com.sun.xml.internal.txw2;
 	* @see #getPrefix
 	* @see #getPrefixes
 	*/
-	@:overload public function getURI(prefix : String) : String;
+	@:overload @:public public function getURI(prefix : String) : String;
 	
 	/**
 	* Return an enumeration of all prefixes whose declarations are
@@ -233,7 +233,7 @@ package com.sun.xml.internal.txw2;
 	* @see #getDeclaredPrefixes
 	* @see #getURI
 	*/
-	@:overload public function getPrefixes() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getPrefixes() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Return one of the prefixes mapped to a Namespace URI.
@@ -254,7 +254,7 @@ package com.sun.xml.internal.txw2;
 	* @see #getPrefixes(java.lang.String)
 	* @see #getURI
 	*/
-	@:overload public function getPrefix(uri : String) : String;
+	@:overload @:public public function getPrefix(uri : String) : String;
 	
 	/**
 	* Return an enumeration of all prefixes for a given URI whose
@@ -279,7 +279,7 @@ package com.sun.xml.internal.txw2;
 	* @see #getDeclaredPrefixes
 	* @see #getURI
 	*/
-	@:overload public function getPrefixes(uri : String) : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getPrefixes(uri : String) : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Return an enumeration of all prefixes declared in this context.
@@ -293,7 +293,7 @@ package com.sun.xml.internal.txw2;
 	* @see #getPrefixes
 	* @see #getURI
 	*/
-	@:overload public function getDeclaredPrefixes() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getDeclaredPrefixes() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Controls whether namespace declaration attributes are placed
@@ -306,7 +306,7 @@ package com.sun.xml.internal.txw2;
 	* @exception IllegalStateException when attempting to set this
 	*  after any context has been pushed.
 	*/
-	@:require(java1) @:overload public function setNamespaceDeclUris(value : Bool) : Void;
+	@:require(java1) @:overload @:public public function setNamespaceDeclUris(value : Bool) : Void;
 	
 	/**
 	* Returns true if namespace declaration attributes are placed into
@@ -314,7 +314,7 @@ package com.sun.xml.internal.txw2;
 	*
 	* @since SAX 2.1alpha
 	*/
-	@:require(java1) @:overload public function isNamespaceDeclUris() : Bool;
+	@:require(java1) @:overload @:public public function isNamespaceDeclUris() : Bool;
 	
 	
 }

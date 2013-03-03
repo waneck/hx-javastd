@@ -26,33 +26,33 @@ package sun.tools.jconsole.inspector;
 //// Imports for picking up mouse events from the JTable.
 extern class TableSorter extends javax.swing.table.DefaultTableModel implements java.awt.event.MouseListener
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(columnNames : java.NativeArray<Dynamic>, numRows : Int) : Void;
+	@:overload @:public public function new(columnNames : java.NativeArray<Dynamic>, numRows : Int) : Void;
 	
-	@:overload override public function newDataAvailable(e : javax.swing.event.TableModelEvent) : Void;
+	@:overload @:public override public function newDataAvailable(e : javax.swing.event.TableModelEvent) : Void;
 	
-	@:overload public function addTableModelListener(l : javax.swing.event.TableModelListener) : Void;
+	@:overload @:public override public function addTableModelListener(l : javax.swing.event.TableModelListener) : Void;
 	
-	@:overload public function removeTableModelListener(l : javax.swing.event.TableModelListener) : Void;
+	@:overload @:public override public function removeTableModelListener(l : javax.swing.event.TableModelListener) : Void;
 	
-	@:overload public function sortByColumn(column : Int) : Void;
+	@:overload @:public public function sortByColumn(column : Int) : Void;
 	
-	@:overload public function sortByColumn(column : Int, ascending : Bool) : Void;
+	@:overload @:public public function sortByColumn(column : Int, ascending : Bool) : Void;
 	
-	@:overload public function getIndexOfRow(row : Int) : Int;
+	@:overload @:public public function getIndexOfRow(row : Int) : Int;
 	
-	@:overload public function addMouseListenerToHeaderInTable(table : javax.swing.JTable) : Void;
+	@:overload @:public public function addMouseListenerToHeaderInTable(table : javax.swing.JTable) : Void;
 	
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

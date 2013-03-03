@@ -32,7 +32,7 @@ extern interface SourceLoader
 	* @param xsltc The compiler that resuests the document
 	* @return An InputSource with the loaded document
 	*/
-	@:overload public function loadSource(href : String, context : String, xsltc : com.sun.org.apache.xalan.internal.xsltc.compiler.XSLTC) : org.xml.sax.InputSource;
+	@:overload @:public public function loadSource(href : String, context : String, xsltc : com.sun.org.apache.xalan.internal.xsltc.compiler.XSLTC) : org.xml.sax.InputSource;
 	
 	
 }

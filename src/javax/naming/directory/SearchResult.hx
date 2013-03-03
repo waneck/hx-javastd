@@ -43,7 +43,7 @@ extern class SearchResult extends javax.naming.Binding
 	* @see javax.naming.NameClassPair#setClassName
 	* @see javax.naming.NameClassPair#getClassName
 	*/
-	@:overload public function new(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function new(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
 	
 	/**
 	* Constructs a search result using the result's name, its bound object, and
@@ -64,7 +64,7 @@ extern class SearchResult extends javax.naming.Binding
 	* @see javax.naming.NameClassPair#setClassName
 	* @see javax.naming.NameClassPair#getClassName
 	*/
-	@:overload public function new(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes, isRelative : Bool) : Void;
+	@:overload @:public public function new(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes, isRelative : Bool) : Void;
 	
 	/**
 	* Constructs a search result using the result's name, its class name,
@@ -84,7 +84,7 @@ extern class SearchResult extends javax.naming.Binding
 	* @see javax.naming.NameClassPair#setClassName
 	* @see javax.naming.NameClassPair#getClassName
 	*/
-	@:overload public function new(name : String, className : String, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function new(name : String, className : String, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
 	
 	/**
 	* Constructs a search result using the result's name, its class name,
@@ -105,7 +105,7 @@ extern class SearchResult extends javax.naming.Binding
 	* @see javax.naming.NameClassPair#setClassName
 	* @see javax.naming.NameClassPair#getClassName
 	*/
-	@:overload public function new(name : String, className : String, obj : Dynamic, attrs : javax.naming.directory.Attributes, isRelative : Bool) : Void;
+	@:overload @:public public function new(name : String, className : String, obj : Dynamic, attrs : javax.naming.directory.Attributes, isRelative : Bool) : Void;
 	
 	/**
 	* Retrieves the attributes in this search result.
@@ -113,14 +113,14 @@ extern class SearchResult extends javax.naming.Binding
 	* @return The non-null attributes in this search result. Can be empty.
 	* @see #setAttributes
 	*/
-	@:overload public function getAttributes() : javax.naming.directory.Attributes;
+	@:overload @:public public function getAttributes() : javax.naming.directory.Attributes;
 	
 	/**
 	* Sets the attributes of this search result to <code>attrs</code>.
 	* @param attrs The non-null attributes to use. Can be empty.
 	* @see #getAttributes
 	*/
-	@:overload public function setAttributes(attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function setAttributes(attrs : javax.naming.directory.Attributes) : Void;
 	
 	/**
 	* Generates the string representation of this SearchResult.
@@ -132,7 +132,7 @@ extern class SearchResult extends javax.naming.Binding
 	*
 	* @return The string representation of this SearchResult. Cannot be null.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

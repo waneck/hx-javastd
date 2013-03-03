@@ -33,7 +33,7 @@ extern class ManagedObjectManagerFactory
 	* @return The Method if found.
 	* @throws GmbalException if no such method is found.
 	*/
-	@:overload public static function getMethod(cls : Class<Dynamic>, name : String, types : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Method;
+	@:overload @:public @:static public static function getMethod(cls : Class<Dynamic>, name : String, types : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Method;
 	
 	/** Create a new ManagedObjectManager.  All objectnames created will share
 	* the domain value passed on this call.  This ManagedObjectManager is
@@ -42,7 +42,7 @@ extern class ManagedObjectManagerFactory
 	* MBeans are registered.
 	* @return A new ManagedObjectManager.
 	*/
-	@:overload public static function createStandalone(domain : String) : com.sun.org.glassfish.gmbal.ManagedObjectManager;
+	@:overload @:public @:static public static function createStandalone(domain : String) : com.sun.org.glassfish.gmbal.ManagedObjectManager;
 	
 	/** Alternative form of the create method to be used when the
 	* rootName is not needed explicitly.  If the root name is available
@@ -55,14 +55,14 @@ extern class ManagedObjectManagerFactory
 	* by the rootParentName.
 	* @return The ManagedObjectManager.
 	*/
-	@:overload public static function createFederated(rootParentName : javax.management.ObjectName) : com.sun.org.glassfish.gmbal.ManagedObjectManager;
+	@:overload @:public @:static public static function createFederated(rootParentName : javax.management.ObjectName) : com.sun.org.glassfish.gmbal.ManagedObjectManager;
 	
 	/** Return a ManagedObjectManager that performs no operations.  Useful to
 	* allow the same code to run with or without creating MBeans through
 	* gmbal.
 	* @return ManagedObjectManager that performs no operations.
 	*/
-	@:overload public static function createNOOP() : com.sun.org.glassfish.gmbal.ManagedObjectManager;
+	@:overload @:public @:static public static function createNOOP() : com.sun.org.glassfish.gmbal.ManagedObjectManager;
 	
 	
 }

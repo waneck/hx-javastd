@@ -46,7 +46,7 @@ extern class MBeanServerInvocationHandler implements java.lang.reflect.Invocatio
 	* @param objectName the name of the MBean within the MBean server
 	* to which methods will be forwarded.
 	*/
-	@:overload public function new(connection : javax.management.MBeanServerConnection, objectName : javax.management.ObjectName) : Void;
+	@:overload @:public public function new(connection : javax.management.MBeanServerConnection, objectName : javax.management.ObjectName) : Void;
 	
 	/**
 	* <p>Invocation handler that can forward methods through an MBean
@@ -69,7 +69,7 @@ extern class MBeanServerInvocationHandler implements java.lang.reflect.Invocatio
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(connection : javax.management.MBeanServerConnection, objectName : javax.management.ObjectName, isMXBean : Bool) : Void;
+	@:require(java6) @:overload @:public public function new(connection : javax.management.MBeanServerConnection, objectName : javax.management.ObjectName, isMXBean : Bool) : Void;
 	
 	/**
 	* <p>The MBean server connection through which the methods of
@@ -79,7 +79,7 @@ extern class MBeanServerInvocationHandler implements java.lang.reflect.Invocatio
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getMBeanServerConnection() : javax.management.MBeanServerConnection;
+	@:require(java6) @:overload @:public public function getMBeanServerConnection() : javax.management.MBeanServerConnection;
 	
 	/**
 	* <p>The name of the MBean within the MBean server to which methods
@@ -89,7 +89,7 @@ extern class MBeanServerInvocationHandler implements java.lang.reflect.Invocatio
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getObjectName() : javax.management.ObjectName;
+	@:require(java6) @:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
 	/**
 	* <p>If true, the proxy is for an MXBean, and appropriate mappings
@@ -99,7 +99,7 @@ extern class MBeanServerInvocationHandler implements java.lang.reflect.Invocatio
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function isMXBean() : Bool;
+	@:require(java6) @:overload @:public public function isMXBean() : Bool;
 	
 	/**
 	* <p>Return a proxy that implements the given interface by
@@ -143,9 +143,9 @@ extern class MBeanServerInvocationHandler implements java.lang.reflect.Invocatio
 	*
 	* @see JMX#newMBeanProxy(MBeanServerConnection, ObjectName, Class)
 	*/
-	@:overload public static function newProxyInstance<T>(connection : javax.management.MBeanServerConnection, objectName : javax.management.ObjectName, interfaceClass : Class<T>, notificationBroadcaster : Bool) : T;
+	@:overload @:public @:static public static function newProxyInstance<T>(connection : javax.management.MBeanServerConnection, objectName : javax.management.ObjectName, interfaceClass : Class<T>, notificationBroadcaster : Bool) : T;
 	
-	@:overload public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

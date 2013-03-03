@@ -41,14 +41,14 @@ extern interface StyledDocument extends javax.swing.text.Document
 	*   attributes need not be resolved in some other style.
 	* @return the style
 	*/
-	@:overload public function addStyle(nm : String, parent : javax.swing.text.Style) : javax.swing.text.Style;
+	@:overload @:public public function addStyle(nm : String, parent : javax.swing.text.Style) : javax.swing.text.Style;
 	
 	/**
 	* Removes a named style previously added to the document.
 	*
 	* @param nm  the name of the style to remove
 	*/
-	@:overload public function removeStyle(nm : String) : Void;
+	@:overload @:public public function removeStyle(nm : String) : Void;
 	
 	/**
 	* Fetches a named style previously added.
@@ -56,7 +56,7 @@ extern interface StyledDocument extends javax.swing.text.Document
 	* @param nm  the name of the style
 	* @return the style
 	*/
-	@:overload public function getStyle(nm : String) : javax.swing.text.Style;
+	@:overload @:public public function getStyle(nm : String) : javax.swing.text.Style;
 	
 	/**
 	* Changes the content element attributes used for the given range of
@@ -77,7 +77,7 @@ extern interface StyledDocument extends javax.swing.text.Document
 	*  previous attributes entirely.  If false, the new
 	*  attributes will be merged with the previous attributes.
 	*/
-	@:overload public function setCharacterAttributes(offset : Int, length : Int, s : javax.swing.text.AttributeSet, replace : Bool) : Void;
+	@:overload @:public public function setCharacterAttributes(offset : Int, length : Int, s : javax.swing.text.AttributeSet, replace : Bool) : Void;
 	
 	/**
 	* Sets paragraph attributes.
@@ -92,7 +92,7 @@ extern interface StyledDocument extends javax.swing.text.Document
 	*  previous attributes entirely.  If false, the new
 	*  attributes will be merged with the previous attributes.
 	*/
-	@:overload public function setParagraphAttributes(offset : Int, length : Int, s : javax.swing.text.AttributeSet, replace : Bool) : Void;
+	@:overload @:public public function setParagraphAttributes(offset : Int, length : Int, s : javax.swing.text.AttributeSet, replace : Bool) : Void;
 	
 	/**
 	* Sets the logical style to use for the paragraph at the
@@ -105,7 +105,7 @@ extern interface StyledDocument extends javax.swing.text.Document
 	* @param pos the starting position >= 0
 	* @param s the style to set
 	*/
-	@:overload public function setLogicalStyle(pos : Int, s : javax.swing.text.Style) : Void;
+	@:overload @:public public function setLogicalStyle(pos : Int, s : javax.swing.text.Style) : Void;
 	
 	/**
 	* Gets a logical style for a given position in a paragraph.
@@ -113,7 +113,7 @@ extern interface StyledDocument extends javax.swing.text.Document
 	* @param p the position >= 0
 	* @return the style
 	*/
-	@:overload public function getLogicalStyle(p : Int) : javax.swing.text.Style;
+	@:overload @:public public function getLogicalStyle(p : Int) : javax.swing.text.Style;
 	
 	/**
 	* Gets the element that represents the paragraph that
@@ -122,7 +122,7 @@ extern interface StyledDocument extends javax.swing.text.Document
 	* @param pos the offset >= 0
 	* @return the element
 	*/
-	@:overload public function getParagraphElement(pos : Int) : javax.swing.text.Element;
+	@:overload @:public public function getParagraphElement(pos : Int) : javax.swing.text.Element;
 	
 	/**
 	* Gets the element that represents the character that
@@ -131,7 +131,7 @@ extern interface StyledDocument extends javax.swing.text.Document
 	* @param pos the offset >= 0
 	* @return the element
 	*/
-	@:overload public function getCharacterElement(pos : Int) : javax.swing.text.Element;
+	@:overload @:public public function getCharacterElement(pos : Int) : javax.swing.text.Element;
 	
 	/**
 	* Takes a set of attributes and turn it into a foreground color
@@ -141,7 +141,7 @@ extern interface StyledDocument extends javax.swing.text.Document
 	* @param attr the set of attributes
 	* @return the color
 	*/
-	@:overload public function getForeground(attr : javax.swing.text.AttributeSet) : java.awt.Color;
+	@:overload @:public public function getForeground(attr : javax.swing.text.AttributeSet) : java.awt.Color;
 	
 	/**
 	* Takes a set of attributes and turn it into a background color
@@ -151,7 +151,7 @@ extern interface StyledDocument extends javax.swing.text.Document
 	* @param attr the set of attributes
 	* @return the color
 	*/
-	@:overload public function getBackground(attr : javax.swing.text.AttributeSet) : java.awt.Color;
+	@:overload @:public public function getBackground(attr : javax.swing.text.AttributeSet) : java.awt.Color;
 	
 	/**
 	* Takes a set of attributes and turn it into a font
@@ -162,7 +162,7 @@ extern interface StyledDocument extends javax.swing.text.Document
 	* @param attr the set of attributes
 	* @return the font
 	*/
-	@:overload public function getFont(attr : javax.swing.text.AttributeSet) : java.awt.Font;
+	@:overload @:public public function getFont(attr : javax.swing.text.AttributeSet) : java.awt.Font;
 	
 	
 }

@@ -28,9 +28,9 @@ package com.sun.xml.internal.ws.util.localization;
 */
 extern class LocalizableMessageFactory
 {
-	@:overload public function new(bundlename : String) : Void;
+	@:overload @:public public function new(bundlename : String) : Void;
 	
-	@:overload public function getMessage(key : String, args : java.NativeArray<Dynamic>) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public public function getMessage(key : String, args : java.NativeArray<Dynamic>) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	
 }

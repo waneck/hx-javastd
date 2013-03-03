@@ -27,34 +27,34 @@ extern class DTMAxisIteratorBase implements com.sun.org.apache.xml.internal.dtm.
 	* Note that this is _not_ the node's handle within the DTM. Also, don't
 	* confuse it with the current (most recently returned) position.
 	*/
-	private var _last : Int;
+	@:protected private var _last : Int;
 	
 	/** The position of the current node within the iteration, as defined by XPath.
 	* Note that this is _not_ the node's handle within the DTM!
 	*/
-	private var _position : Int;
+	@:protected private var _position : Int;
 	
 	/** The position of the marked node within the iteration;
 	* a saved itaration state that we may want to come back to.
 	* Note that only one mark is maintained; there is no stack.
 	*/
-	private var _markedNode : Int;
+	@:protected private var _markedNode : Int;
 	
 	/** The handle to the start, or root, of the iteration.
 	* Set this to END to construct an empty iterator.
 	*/
-	private var _startNode : Int;
+	@:protected private var _startNode : Int;
 	
 	/** True if the start node should be considered part of the iteration.
 	* False will cause it to be skipped.
 	*/
-	private var _includeSelf : Bool;
+	@:protected private var _includeSelf : Bool;
 	
 	/** True if this iteration can be restarted. False otherwise (eg, if
 	* we are iterating over a stream that can not be re-scanned, or if
 	* the iterator was produced by cloning another iterator.)
 	*/
-	private var _isRestartable : Bool;
+	@:protected private var _isRestartable : Bool;
 	
 	/**
 	* Get start to END should 'close' the iterator,
@@ -62,13 +62,13 @@ extern class DTMAxisIteratorBase implements com.sun.org.apache.xml.internal.dtm.
 	*
 	* @return The root node of the iteration.
 	*/
-	@:overload public function getStartNode() : Int;
+	@:overload @:public public function getStartNode() : Int;
 	
 	/**
 	* @return A DTMAxisIterator which has been reset to the start node,
 	* which may or may not be the same as this iterator.
 	* */
-	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Set the flag to include the start node in the iteration.
@@ -79,7 +79,7 @@ extern class DTMAxisIteratorBase implements com.sun.org.apache.xml.internal.dtm.
 	* (Returning "this" permits C++-style chaining of
 	* method calls into a single expression.)
 	*/
-	@:overload public function includeSelf() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function includeSelf() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/** Returns the position of the last node within the iteration, as
 	* defined by XPath.  In a forward iterator, I believe this equals the number of nodes which this
@@ -92,18 +92,18 @@ extern class DTMAxisIteratorBase implements com.sun.org.apache.xml.internal.dtm.
 	*
 	* @return The number of nodes in this iterator (forward) or 1 (reverse).
 	*/
-	@:overload public function getLast() : Int;
+	@:overload @:public public function getLast() : Int;
 	
 	/**
 	* @return The position of the current node within the set, as defined by
 	* XPath. Note that this is one-based, not zero-based.
 	*/
-	@:overload public function getPosition() : Int;
+	@:overload @:public public function getPosition() : Int;
 	
 	/**
 	* @return true if this iterator has a reversed axis, else false
 	*/
-	@:overload public function isReverse() : Bool;
+	@:overload @:public public function isReverse() : Bool;
 	
 	/**
 	* Returns a deep copy of this iterator. Cloned iterators may not be
@@ -112,7 +112,7 @@ extern class DTMAxisIteratorBase implements com.sun.org.apache.xml.internal.dtm.
 	*
 	* @return a deep copy of this iterator.
 	*/
-	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Do any final cleanup that is required before returning the node that was
@@ -132,7 +132,7 @@ extern class DTMAxisIteratorBase implements com.sun.org.apache.xml.internal.dtm.
 	* @param node Node handle which iteration is about to yield.
 	*
 	* @return The node handle passed in.  */
-	@:overload @:final private function returnNode(node : Int) : Int;
+	@:overload @:protected @:final private function returnNode(node : Int) : Int;
 	
 	/**
 	* Reset the position to zero. NOTE that this does not change the iteration
@@ -142,7 +142,7 @@ extern class DTMAxisIteratorBase implements com.sun.org.apache.xml.internal.dtm.
 	*
 	* @return This instance.
 	*/
-	@:overload @:final private function resetPosition() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:protected @:final private function resetPosition() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Returns true if all the nodes in the iteration well be returned in document
@@ -150,7 +150,7 @@ extern class DTMAxisIteratorBase implements com.sun.org.apache.xml.internal.dtm.
 	*
 	* @return true as a default.
 	*/
-	@:overload public function isDocOrdered() : Bool;
+	@:overload @:public public function isDocOrdered() : Bool;
 	
 	/**
 	* Returns the axis being iterated, if it is known.
@@ -158,9 +158,9 @@ extern class DTMAxisIteratorBase implements com.sun.org.apache.xml.internal.dtm.
 	* @return Axis.CHILD, etc., or -1 if the axis is not known or is of multiple
 	* types.
 	*/
-	@:overload public function getAxis() : Int;
+	@:overload @:public public function getAxis() : Int;
 	
-	@:overload public function setRestartable(isRestartable : Bool) : Void;
+	@:overload @:public public function setRestartable(isRestartable : Bool) : Void;
 	
 	/**
 	* Return the node at the given position.
@@ -168,24 +168,24 @@ extern class DTMAxisIteratorBase implements com.sun.org.apache.xml.internal.dtm.
 	* @param position The position
 	* @return The node at the given position.
 	*/
-	@:overload public function getNodeByPosition(position : Int) : Int;
+	@:overload @:public public function getNodeByPosition(position : Int) : Int;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload @:public public function next() : Int;
+	@:overload @:public @:public public function next() : Int;
 	
 	/**
 	* Remembers the current node for the next call to gotoMark().
 	*/
-	@:overload @:public public function setMark() : Void;
+	@:overload @:public @:public public function setMark() : Void;
 	
 	/**
 	* Restores the current node remembered by setMark().
 	*/
-	@:overload @:public public function gotoMark() : Void;
+	@:overload @:public @:public public function gotoMark() : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -195,7 +195,7 @@ extern class DTMAxisIteratorBase implements com.sun.org.apache.xml.internal.dtm.
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload @:public public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public @:public public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	
 }

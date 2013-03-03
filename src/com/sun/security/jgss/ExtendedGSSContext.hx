@@ -94,7 +94,7 @@ extern interface ExtendedGSSContext extends org.ietf.jgss.GSSContext
 	*   {@link InquireSecContextPermission} is not granted.
 	* @see InquireSecContextPermission
 	*/
-	@:overload public function inquireSecContext(type : com.sun.security.jgss.InquireType) : Dynamic;
+	@:overload @:public public function inquireSecContext(type : com.sun.security.jgss.InquireType) : Dynamic;
 	
 	/**
 	* Requests that the delegation policy be respected. When a true value is
@@ -140,7 +140,7 @@ extern interface ExtendedGSSContext extends org.ietf.jgss.GSSContext
 	* major error codes:
 	*   {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function requestDelegPolicy(state : Bool) : Void;
+	@:overload @:public public function requestDelegPolicy(state : Bool) : Void;
 	
 	/**
 	* Returns the delegation policy response. Called after a security context
@@ -148,7 +148,7 @@ extern interface ExtendedGSSContext extends org.ietf.jgss.GSSContext
 	* See {@link ExtendedGSSContext#requestDelegPolicy}.
 	* @return the delegation policy response
 	*/
-	@:overload public function getDelegPolicyState() : Bool;
+	@:overload @:public public function getDelegPolicyState() : Bool;
 	
 	
 }

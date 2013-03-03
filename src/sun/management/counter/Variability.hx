@@ -34,36 +34,36 @@ extern class Variability implements java.io.Serializable
 	/**
 	* An invalid Variablity value.
 	*/
-	public static var INVALID(default, null) : sun.management.counter.Variability;
+	@:public @:static @:final public static var INVALID(default, null) : sun.management.counter.Variability;
 	
 	/**
 	* Variability attribute representing Constant counters.
 	*/
-	public static var CONSTANT(default, null) : sun.management.counter.Variability;
+	@:public @:static @:final public static var CONSTANT(default, null) : sun.management.counter.Variability;
 	
 	/**
 	* Variability attribute representing a Monotonically changing counters.
 	*/
-	public static var MONOTONIC(default, null) : sun.management.counter.Variability;
+	@:public @:static @:final public static var MONOTONIC(default, null) : sun.management.counter.Variability;
 	
 	/**
 	* Variability attribute representing Variable counters.
 	*/
-	public static var VARIABLE(default, null) : sun.management.counter.Variability;
+	@:public @:static @:final public static var VARIABLE(default, null) : sun.management.counter.Variability;
 	
 	/**
 	* Returns a string describing this Variability attribute.
 	*
 	* @return String - a descriptive string for this enum.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the integer representation of this Variability attribute.
 	*
 	* @return int - an integer representation of this Variability attribute.
 	*/
-	@:overload public function intValue() : Int;
+	@:overload @:public public function intValue() : Int;
 	
 	/**
 	* Maps an integer value its corresponding Variability attribute.
@@ -75,7 +75,7 @@ extern class Variability implements java.io.Serializable
 	*                       <code>value</code> or {@link Variability#INVALID}
 	*                       if out of range.
 	*/
-	@:overload public static function toVariability(value : Int) : sun.management.counter.Variability;
+	@:overload @:public @:static public static function toVariability(value : Int) : sun.management.counter.Variability;
 	
 	
 }

@@ -114,7 +114,7 @@ package java.util;
 	* {@code put(Object key, Object value)} call will throw a
 	* {@code ClassCastException}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new, empty tree map, ordered according to the given
@@ -130,7 +130,7 @@ package java.util;
 	*        If {@code null}, the {@linkplain Comparable natural
 	*        ordering} of the keys will be used.
 	*/
-	@:overload public function new(comparator : java.util.Comparator<K>) : Void;
+	@:overload @:public public function new(comparator : java.util.Comparator<K>) : Void;
 	
 	/**
 	* Constructs a new tree map containing the same mappings as the given
@@ -146,7 +146,7 @@ package java.util;
 	*         or are not mutually comparable
 	* @throws NullPointerException if the specified map is null
 	*/
-	@:overload public function new(m : java.util.Map<K, V>) : Void;
+	@:overload @:public public function new(m : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Constructs a new tree map containing the same mappings and
@@ -157,14 +157,14 @@ package java.util;
 	*         and whose comparator is to be used to sort this map
 	* @throws NullPointerException if the specified map is null
 	*/
-	@:overload public function new(m : java.util.SortedMap<K, V>) : Void;
+	@:overload @:public public function new(m : java.util.SortedMap<K, V>) : Void;
 	
 	/**
 	* Returns the number of key-value mappings in this map.
 	*
 	* @return the number of key-value mappings in this map
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns {@code true} if this map contains a mapping for the specified
@@ -179,7 +179,7 @@ package java.util;
 	*         and this map uses natural ordering, or its comparator
 	*         does not permit null keys
 	*/
-	@:overload override public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public override public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Returns {@code true} if this map maps one or more keys to the
@@ -194,7 +194,7 @@ package java.util;
 	*         {@code false} otherwise
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function containsValue(value : Dynamic) : Bool;
+	@:require(java2) @:overload @:public override public function containsValue(value : Dynamic) : Bool;
 	
 	/**
 	* Returns the value to which the specified key is mapped,
@@ -218,19 +218,19 @@ package java.util;
 	*         and this map uses natural ordering, or its comparator
 	*         does not permit null keys
 	*/
-	@:overload override public function get(key : Dynamic) : V;
+	@:overload @:public override public function get(key : Dynamic) : V;
 	
-	@:overload public function comparator() : java.util.Comparator<K>;
-	
-	/**
-	* @throws NoSuchElementException {@inheritDoc}
-	*/
-	@:overload public function firstKey() : K;
+	@:overload @:public public function comparator() : java.util.Comparator<K>;
 	
 	/**
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function lastKey() : K;
+	@:overload @:public public function firstKey() : K;
+	
+	/**
+	* @throws NoSuchElementException {@inheritDoc}
+	*/
+	@:overload @:public public function lastKey() : K;
 	
 	/**
 	* Copies all of the mappings from the specified map to this map.
@@ -244,7 +244,7 @@ package java.util;
 	*         the specified map contains a null key and this map does not
 	*         permit null keys
 	*/
-	@:overload override public function putAll(map : java.util.Map<K, V>) : Void;
+	@:overload @:public override public function putAll(map : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Associates the specified value with the specified key in this map.
@@ -264,7 +264,7 @@ package java.util;
 	*         and this map uses natural ordering, or its comparator
 	*         does not permit null keys
 	*/
-	@:overload override public function put(key : K, value : V) : V;
+	@:overload @:public override public function put(key : K, value : V) : V;
 	
 	/**
 	* Removes the mapping for this key from this TreeMap if present.
@@ -280,13 +280,13 @@ package java.util;
 	*         and this map uses natural ordering, or its comparator
 	*         does not permit null keys
 	*/
-	@:overload override public function remove(key : Dynamic) : V;
+	@:overload @:public override public function remove(key : Dynamic) : V;
 	
 	/**
 	* Removes all of the mappings from this map.
 	* The map will be empty after this call returns.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns a shallow copy of this {@code TreeMap} instance. (The keys and
@@ -294,36 +294,27 @@ package java.util;
 	*
 	* @return a shallow copy of this map
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function firstEntry() : java.util.Map.Map_Entry<K, V>;
+	@:require(java6) @:overload @:public public function firstEntry() : java.util.Map.Map_Entry<K, V>;
 	
 	/**
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function lastEntry() : java.util.Map.Map_Entry<K, V>;
+	@:require(java6) @:overload @:public public function lastEntry() : java.util.Map.Map_Entry<K, V>;
 	
 	/**
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function pollFirstEntry() : java.util.Map.Map_Entry<K, V>;
+	@:require(java6) @:overload @:public public function pollFirstEntry() : java.util.Map.Map_Entry<K, V>;
 	
 	/**
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function pollLastEntry() : java.util.Map.Map_Entry<K, V>;
-	
-	/**
-	* @throws ClassCastException {@inheritDoc}
-	* @throws NullPointerException if the specified key is null
-	*         and this map uses natural ordering, or its comparator
-	*         does not permit null keys
-	* @since 1.6
-	*/
-	@:require(java6) @:overload public function lowerEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	@:require(java6) @:overload @:public public function pollLastEntry() : java.util.Map.Map_Entry<K, V>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -332,7 +323,7 @@ package java.util;
 	*         does not permit null keys
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function lowerKey(key : K) : K;
+	@:require(java6) @:overload @:public public function lowerEntry(key : K) : java.util.Map.Map_Entry<K, V>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -341,7 +332,7 @@ package java.util;
 	*         does not permit null keys
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function floorEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	@:require(java6) @:overload @:public public function lowerKey(key : K) : K;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -350,7 +341,7 @@ package java.util;
 	*         does not permit null keys
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function floorKey(key : K) : K;
+	@:require(java6) @:overload @:public public function floorEntry(key : K) : java.util.Map.Map_Entry<K, V>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -359,7 +350,7 @@ package java.util;
 	*         does not permit null keys
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function ceilingEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	@:require(java6) @:overload @:public public function floorKey(key : K) : K;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -368,7 +359,7 @@ package java.util;
 	*         does not permit null keys
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function ceilingKey(key : K) : K;
+	@:require(java6) @:overload @:public public function ceilingEntry(key : K) : java.util.Map.Map_Entry<K, V>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -377,7 +368,7 @@ package java.util;
 	*         does not permit null keys
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function higherEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	@:require(java6) @:overload @:public public function ceilingKey(key : K) : K;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -386,7 +377,16 @@ package java.util;
 	*         does not permit null keys
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function higherKey(key : K) : K;
+	@:require(java6) @:overload @:public public function higherEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	
+	/**
+	* @throws ClassCastException {@inheritDoc}
+	* @throws NullPointerException if the specified key is null
+	*         and this map uses natural ordering, or its comparator
+	*         does not permit null keys
+	* @since 1.6
+	*/
+	@:require(java6) @:overload @:public public function higherKey(key : K) : K;
 	
 	/**
 	* Returns a {@link Set} view of the keys contained in this map.
@@ -402,17 +402,17 @@ package java.util;
 	* operations.  It does not support the {@code add} or {@code addAll}
 	* operations.
 	*/
-	@:overload override public function keySet() : java.util.Set<K>;
+	@:overload @:public override public function keySet() : java.util.Set<K>;
 	
 	/**
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function navigableKeySet() : java.util.NavigableSet<K>;
+	@:require(java6) @:overload @:public public function navigableKeySet() : java.util.NavigableSet<K>;
 	
 	/**
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function descendingKeySet() : java.util.NavigableSet<K>;
+	@:require(java6) @:overload @:public public function descendingKeySet() : java.util.NavigableSet<K>;
 	
 	/**
 	* Returns a {@link Collection} view of the values contained in this map.
@@ -429,7 +429,7 @@ package java.util;
 	* {@code retainAll} and {@code clear} operations.  It does not
 	* support the {@code add} or {@code addAll} operations.
 	*/
-	@:overload override public function values() : java.util.Collection<V>;
+	@:overload @:public override public function values() : java.util.Collection<V>;
 	
 	/**
 	* Returns a {@link Set} view of the mappings contained in this map.
@@ -446,12 +446,12 @@ package java.util;
 	* {@code clear} operations.  It does not support the
 	* {@code add} or {@code addAll} operations.
 	*/
-	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
 	/**
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function descendingMap() : java.util.NavigableMap<K, V>;
+	@:require(java6) @:overload @:public public function descendingMap() : java.util.NavigableMap<K, V>;
 	
 	/**
 	* @throws ClassCastException       {@inheritDoc}
@@ -461,7 +461,7 @@ package java.util;
 	* @throws IllegalArgumentException {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : java.util.NavigableMap<K, V>;
+	@:require(java6) @:overload @:public public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : java.util.NavigableMap<K, V>;
 	
 	/**
 	* @throws ClassCastException       {@inheritDoc}
@@ -471,7 +471,7 @@ package java.util;
 	* @throws IllegalArgumentException {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function headMap(toKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
+	@:require(java6) @:overload @:public public function headMap(toKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
 	
 	/**
 	* @throws ClassCastException       {@inheritDoc}
@@ -481,7 +481,7 @@ package java.util;
 	* @throws IllegalArgumentException {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function tailMap(fromKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
+	@:require(java6) @:overload @:public public function tailMap(fromKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
 	
 	/**
 	* @throws ClassCastException       {@inheritDoc}
@@ -490,7 +490,7 @@ package java.util;
 	*         does not permit null keys
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function subMap(fromKey : K, toKey : K) : java.util.SortedMap<K, V>;
+	@:overload @:public public function subMap(fromKey : K, toKey : K) : java.util.SortedMap<K, V>;
 	
 	/**
 	* @throws ClassCastException       {@inheritDoc}
@@ -499,7 +499,7 @@ package java.util;
 	*         does not permit null keys
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function headMap(toKey : K) : java.util.SortedMap<K, V>;
+	@:overload @:public public function headMap(toKey : K) : java.util.SortedMap<K, V>;
 	
 	/**
 	* @throws ClassCastException       {@inheritDoc}
@@ -508,85 +508,85 @@ package java.util;
 	*         does not permit null keys
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function tailMap(fromKey : K) : java.util.SortedMap<K, V>;
+	@:overload @:public public function tailMap(fromKey : K) : java.util.SortedMap<K, V>;
 	
 	
 }
 @:native('java$util$TreeMap$Values') @:internal extern class TreeMap_Values extends java.util.AbstractCollection<Dynamic>
 {
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }
 @:native('java$util$TreeMap$EntrySet') @:internal extern class TreeMap_EntrySet extends java.util.AbstractSet<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
+	@:overload @:public override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }
 @:native('java$util$TreeMap$KeySet') @:internal extern class TreeMap_KeySet<E> extends java.util.AbstractSet<E> implements java.util.NavigableSet<E>
 {
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
-	@:overload public function descendingIterator() : java.util.Iterator<E>;
+	@:overload @:public public function descendingIterator() : java.util.Iterator<E>;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload public function lower(e : E) : E;
+	@:overload @:public public function lower(e : E) : E;
 	
-	@:overload public function floor(e : E) : E;
+	@:overload @:public public function floor(e : E) : E;
 	
-	@:overload public function ceiling(e : E) : E;
+	@:overload @:public public function ceiling(e : E) : E;
 	
-	@:overload public function higher(e : E) : E;
+	@:overload @:public public function higher(e : E) : E;
 	
-	@:overload public function first() : E;
+	@:overload @:public public function first() : E;
 	
-	@:overload public function last() : E;
+	@:overload @:public public function last() : E;
 	
-	@:overload public function comparator() : java.util.Comparator<E>;
+	@:overload @:public public function comparator() : java.util.Comparator<E>;
 	
-	@:overload public function pollFirst() : E;
+	@:overload @:public public function pollFirst() : E;
 	
-	@:overload public function pollLast() : E;
+	@:overload @:public public function pollLast() : E;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload public function subSet(fromElement : E, fromInclusive : Bool, toElement : E, toInclusive : Bool) : java.util.NavigableSet<E>;
+	@:overload @:public public function subSet(fromElement : E, fromInclusive : Bool, toElement : E, toInclusive : Bool) : java.util.NavigableSet<E>;
 	
-	@:overload public function headSet(toElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
+	@:overload @:public public function headSet(toElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
 	
-	@:overload public function tailSet(fromElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
+	@:overload @:public public function tailSet(fromElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
 	
-	@:overload public function subSet(fromElement : E, toElement : E) : java.util.SortedSet<E>;
+	@:overload @:public public function subSet(fromElement : E, toElement : E) : java.util.SortedSet<E>;
 	
-	@:overload public function headSet(toElement : E) : java.util.SortedSet<E>;
+	@:overload @:public public function headSet(toElement : E) : java.util.SortedSet<E>;
 	
-	@:overload public function tailSet(fromElement : E) : java.util.SortedSet<E>;
+	@:overload @:public public function tailSet(fromElement : E) : java.util.SortedSet<E>;
 	
-	@:overload public function descendingSet() : java.util.NavigableSet<E>;
+	@:overload @:public public function descendingSet() : java.util.NavigableSet<E>;
 	
 	
 }
@@ -595,9 +595,9 @@ package java.util;
 */
 @:native('java$util$TreeMap$PrivateEntryIterator') @:internal extern class TreeMap_PrivateEntryIterator<T> implements java.util.Iterator<T>
 {
-	@:overload @:final public function hasNext() : Bool;
+	@:overload @:public @:final public function hasNext() : Bool;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	/**
 	* Returns the next element in the iteration.
@@ -605,31 +605,31 @@ package java.util;
 	* @return the next element in the iteration
 	* @throws NoSuchElementException if the iteration has no more elements
 	*/
-	@:overload @:public public function next() : Dynamic;
+	@:overload @:public @:public public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$TreeMap$EntryIterator') @:internal extern class TreeMap_EntryIterator extends java.util.TreeMap.TreeMap_PrivateEntryIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
+	@:overload @:public override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	
 	
 }
 @:native('java$util$TreeMap$ValueIterator') @:internal extern class TreeMap_ValueIterator extends java.util.TreeMap.TreeMap_PrivateEntryIterator<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$TreeMap$KeyIterator') @:internal extern class TreeMap_KeyIterator extends java.util.TreeMap.TreeMap_PrivateEntryIterator<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$TreeMap$DescendingKeyIterator') @:internal extern class TreeMap_DescendingKeyIterator extends java.util.TreeMap.TreeMap_PrivateEntryIterator<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
 	
 }
@@ -638,57 +638,57 @@ package java.util;
 */
 @:native('java$util$TreeMap$NavigableSubMap') @:internal extern class TreeMap_NavigableSubMap<K, V> extends java.util.AbstractMap<K, V> implements java.util.NavigableMap<K, V> implements java.io.Serializable
 {
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload @:final override public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public @:final override public function containsKey(key : Dynamic) : Bool;
 	
-	@:overload @:final override public function put(key : K, value : V) : V;
+	@:overload @:public @:final override public function put(key : K, value : V) : V;
 	
-	@:overload @:final override public function get(key : Dynamic) : V;
+	@:overload @:public @:final override public function get(key : Dynamic) : V;
 	
-	@:overload @:final override public function remove(key : Dynamic) : V;
+	@:overload @:public @:final override public function remove(key : Dynamic) : V;
 	
-	@:overload @:final public function ceilingEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public @:final public function ceilingEntry(key : K) : java.util.Map.Map_Entry<K, V>;
 	
-	@:overload @:final public function ceilingKey(key : K) : K;
+	@:overload @:public @:final public function ceilingKey(key : K) : K;
 	
-	@:overload @:final public function higherEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public @:final public function higherEntry(key : K) : java.util.Map.Map_Entry<K, V>;
 	
-	@:overload @:final public function higherKey(key : K) : K;
+	@:overload @:public @:final public function higherKey(key : K) : K;
 	
-	@:overload @:final public function floorEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public @:final public function floorEntry(key : K) : java.util.Map.Map_Entry<K, V>;
 	
-	@:overload @:final public function floorKey(key : K) : K;
+	@:overload @:public @:final public function floorKey(key : K) : K;
 	
-	@:overload @:final public function lowerEntry(key : K) : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public @:final public function lowerEntry(key : K) : java.util.Map.Map_Entry<K, V>;
 	
-	@:overload @:final public function lowerKey(key : K) : K;
+	@:overload @:public @:final public function lowerKey(key : K) : K;
 	
-	@:overload @:final public function firstKey() : K;
+	@:overload @:public @:final public function firstKey() : K;
 	
-	@:overload @:final public function lastKey() : K;
+	@:overload @:public @:final public function lastKey() : K;
 	
-	@:overload @:final public function firstEntry() : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public @:final public function firstEntry() : java.util.Map.Map_Entry<K, V>;
 	
-	@:overload @:final public function lastEntry() : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public @:final public function lastEntry() : java.util.Map.Map_Entry<K, V>;
 	
-	@:overload @:final public function pollFirstEntry() : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public @:final public function pollFirstEntry() : java.util.Map.Map_Entry<K, V>;
 	
-	@:overload @:final public function pollLastEntry() : java.util.Map.Map_Entry<K, V>;
+	@:overload @:public @:final public function pollLastEntry() : java.util.Map.Map_Entry<K, V>;
 	
-	@:overload @:final public function navigableKeySet() : java.util.NavigableSet<K>;
+	@:overload @:public @:final public function navigableKeySet() : java.util.NavigableSet<K>;
 	
-	@:overload @:final override public function keySet() : java.util.Set<K>;
+	@:overload @:public @:final override public function keySet() : java.util.Set<K>;
 	
-	@:overload public function descendingKeySet() : java.util.NavigableSet<K>;
+	@:overload @:public public function descendingKeySet() : java.util.NavigableSet<K>;
 	
-	@:overload @:final public function subMap(fromKey : K, toKey : K) : java.util.SortedMap<K, V>;
+	@:overload @:public @:final public function subMap(fromKey : K, toKey : K) : java.util.SortedMap<K, V>;
 	
-	@:overload @:final public function headMap(toKey : K) : java.util.SortedMap<K, V>;
+	@:overload @:public @:final public function headMap(toKey : K) : java.util.SortedMap<K, V>;
 	
-	@:overload @:final public function tailMap(fromKey : K) : java.util.SortedMap<K, V>;
+	@:overload @:public @:final public function tailMap(fromKey : K) : java.util.SortedMap<K, V>;
 	
 	/**
 	* Returns the comparator used to order the keys in this map, or
@@ -699,7 +699,7 @@ package java.util;
 	*         or {@code null} if this map uses the natural ordering
 	*         of its keys
 	*/
-	@:overload public function comparator() : java.util.Comparator<K>;
+	@:overload @:public public function comparator() : java.util.Comparator<K>;
 	
 	/**
 	* Returns a view of the portion of this map whose keys are less than (or
@@ -728,7 +728,7 @@ package java.util;
 	*         restricted range, and {@code toKey} lies outside the
 	*         bounds of the range
 	*/
-	@:overload public function headMap(toKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
+	@:overload @:public public function headMap(toKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
 	
 	/**
 	* Removes all of the mappings from this map (optional operation).
@@ -737,7 +737,7 @@ package java.util;
 	* @throws UnsupportedOperationException if the <tt>clear</tt> operation
 	*         is not supported by this map
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns a reverse order view of the mappings contained in this map.
@@ -754,7 +754,7 @@ package java.util;
 	*
 	* @return a reverse order view of this map
 	*/
-	@:overload public function descendingMap() : java.util.NavigableMap<K, V>;
+	@:overload @:public public function descendingMap() : java.util.NavigableMap<K, V>;
 	
 	/**
 	* Returns a view of the portion of this map whose keys range from
@@ -790,7 +790,7 @@ package java.util;
 	*         range, and {@code fromKey} or {@code toKey} lies
 	*         outside the bounds of the range
 	*/
-	@:overload public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : java.util.NavigableMap<K, V>;
+	@:overload @:public public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : java.util.NavigableMap<K, V>;
 	
 	/**
 	* Returns a view of the portion of this map whose keys are greater than (or
@@ -819,7 +819,7 @@ package java.util;
 	*         restricted range, and {@code fromKey} lies outside the
 	*         bounds of the range
 	*/
-	@:overload public function tailMap(fromKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
+	@:overload @:public public function tailMap(fromKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
 	
 	/**
 	* Copies all of the mappings from the specified map to this map
@@ -840,7 +840,7 @@ package java.util;
 	* @throws IllegalArgumentException if some property of a key or value in
 	*         the specified map prevents it from being stored in this map
 	*/
-	@:overload override public function putAll(m : java.util.Map<K, V>) : Void;
+	@:overload @:public override public function putAll(m : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Returns a {@link Set} view of the mappings contained in this map.
@@ -860,7 +860,7 @@ package java.util;
 	* @return a set view of the mappings contained in this map,
 	*         sorted in ascending key order
 	*/
-	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
 	/**
 	* Returns a {@link Collection} view of the values contained in this map.
@@ -880,7 +880,7 @@ package java.util;
 	* @return a collection view of the values contained in this map,
 	*         sorted in ascending key order
 	*/
-	@:overload override public function values() : java.util.Collection<V>;
+	@:overload @:public override public function values() : java.util.Collection<V>;
 	
 	/**
 	* Returns <tt>true</tt> if this map maps one or more keys to the
@@ -900,19 +900,19 @@ package java.util;
 	*         map does not permit null values
 	* (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload override public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public override public function containsValue(value : Dynamic) : Bool;
 	
 	
 }
 @:native('java$util$TreeMap$NavigableSubMap$EntrySetView') @:internal extern class TreeMap_NavigableSubMap_EntrySetView extends java.util.AbstractSet<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	
 }
@@ -921,7 +921,7 @@ package java.util;
 */
 @:native('java$util$TreeMap$NavigableSubMap$SubMapIterator') @:internal extern class TreeMap_NavigableSubMap_SubMapIterator<T> implements java.util.Iterator<T>
 {
-	@:overload @:final public function hasNext() : Bool;
+	@:overload @:public @:final public function hasNext() : Bool;
 	
 	/**
 	* Returns the next element in the iteration.
@@ -929,7 +929,7 @@ package java.util;
 	* @return the next element in the iteration
 	* @throws NoSuchElementException if the iteration has no more elements
 	*/
-	@:overload public function next() : Dynamic;
+	@:overload @:public @:public public function next() : Dynamic;
 	
 	/**
 	* Removes from the underlying collection the last element returned
@@ -947,39 +947,39 @@ package java.util;
 	*         been called after the last call to the {@code next}
 	*         method
 	*/
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }
 @:native('java$util$TreeMap$NavigableSubMap$SubMapEntryIterator') @:internal extern class TreeMap_NavigableSubMap_SubMapEntryIterator extends java.util.TreeMap.TreeMap_NavigableSubMap_SubMapIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
+	@:overload @:public override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	
-	@:overload override public function remove() : Void;
+	@:overload @:public override public function remove() : Void;
 	
 	
 }
 @:native('java$util$TreeMap$NavigableSubMap$SubMapKeyIterator') @:internal extern class TreeMap_NavigableSubMap_SubMapKeyIterator extends java.util.TreeMap.TreeMap_NavigableSubMap_SubMapIterator<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
-	@:overload override public function remove() : Void;
+	@:overload @:public override public function remove() : Void;
 	
 	
 }
 @:native('java$util$TreeMap$NavigableSubMap$DescendingSubMapEntryIterator') @:internal extern class TreeMap_NavigableSubMap_DescendingSubMapEntryIterator extends java.util.TreeMap.TreeMap_NavigableSubMap_SubMapIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
+	@:overload @:public override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	
-	@:overload override public function remove() : Void;
+	@:overload @:public override public function remove() : Void;
 	
 	
 }
 @:native('java$util$TreeMap$NavigableSubMap$DescendingSubMapKeyIterator') @:internal extern class TreeMap_NavigableSubMap_DescendingSubMapKeyIterator extends java.util.TreeMap.TreeMap_NavigableSubMap_SubMapIterator<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
-	@:overload override public function remove() : Void;
+	@:overload @:public override public function remove() : Void;
 	
 	
 }
@@ -988,23 +988,23 @@ package java.util;
 */
 @:native('java$util$TreeMap$AscendingSubMap') @:internal extern class TreeMap_AscendingSubMap<K, V> extends java.util.TreeMap.TreeMap_NavigableSubMap<K, V>
 {
-	@:overload override public function comparator() : java.util.Comparator<K>;
+	@:overload @:public override public function comparator() : java.util.Comparator<K>;
 	
-	@:overload override public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : java.util.NavigableMap<K, V>;
+	@:overload @:public override public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : java.util.NavigableMap<K, V>;
 	
-	@:overload override public function headMap(toKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
+	@:overload @:public override public function headMap(toKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
 	
-	@:overload override public function tailMap(fromKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
+	@:overload @:public override public function tailMap(fromKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
 	
-	@:overload override public function descendingMap() : java.util.NavigableMap<K, V>;
+	@:overload @:public override public function descendingMap() : java.util.NavigableMap<K, V>;
 	
-	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
 	
 }
 @:native('java$util$TreeMap$AscendingSubMap$AscendingEntrySetView') @:internal extern class TreeMap_AscendingSubMap_AscendingEntrySetView extends java.util.TreeMap.TreeMap_NavigableSubMap_EntrySetView
 {
-	@:overload override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
+	@:overload @:public override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
 	
 	
 }
@@ -1013,23 +1013,23 @@ package java.util;
 */
 @:native('java$util$TreeMap$DescendingSubMap') @:internal extern class TreeMap_DescendingSubMap<K, V> extends java.util.TreeMap.TreeMap_NavigableSubMap<K, V>
 {
-	@:overload override public function comparator() : java.util.Comparator<K>;
+	@:overload @:public override public function comparator() : java.util.Comparator<K>;
 	
-	@:overload override public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : java.util.NavigableMap<K, V>;
+	@:overload @:public override public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : java.util.NavigableMap<K, V>;
 	
-	@:overload override public function headMap(toKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
+	@:overload @:public override public function headMap(toKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
 	
-	@:overload override public function tailMap(fromKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
+	@:overload @:public override public function tailMap(fromKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
 	
-	@:overload override public function descendingMap() : java.util.NavigableMap<K, V>;
+	@:overload @:public override public function descendingMap() : java.util.NavigableMap<K, V>;
 	
-	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
 	
 }
 @:native('java$util$TreeMap$DescendingSubMap$DescendingEntrySetView') @:internal extern class TreeMap_DescendingSubMap_DescendingEntrySetView extends java.util.TreeMap.TreeMap_NavigableSubMap_EntrySetView
 {
-	@:overload override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
+	@:overload @:public override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
 	
 	
 }
@@ -1044,19 +1044,19 @@ package java.util;
 */
 @:native('java$util$TreeMap$SubMap') @:internal extern class TreeMap_SubMap extends java.util.AbstractMap<Dynamic, Dynamic> implements java.util.SortedMap<Dynamic, Dynamic> implements java.io.Serializable
 {
-	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
 	
-	@:overload public function lastKey() : Dynamic;
+	@:overload @:public public function lastKey() : Dynamic;
 	
-	@:overload public function firstKey() : Dynamic;
+	@:overload @:public public function firstKey() : Dynamic;
 	
-	@:overload public function subMap(fromKey : Dynamic, toKey : Dynamic) : java.util.SortedMap<Dynamic, Dynamic>;
+	@:overload @:public public function subMap(fromKey : Dynamic, toKey : Dynamic) : java.util.SortedMap<Dynamic, Dynamic>;
 	
-	@:overload public function headMap(toKey : Dynamic) : java.util.SortedMap<Dynamic, Dynamic>;
+	@:overload @:public public function headMap(toKey : Dynamic) : java.util.SortedMap<Dynamic, Dynamic>;
 	
-	@:overload public function tailMap(fromKey : Dynamic) : java.util.SortedMap<Dynamic, Dynamic>;
+	@:overload @:public public function tailMap(fromKey : Dynamic) : java.util.SortedMap<Dynamic, Dynamic>;
 	
-	@:overload public function comparator() : java.util.Comparator<Dynamic>;
+	@:overload @:public public function comparator() : java.util.Comparator<Dynamic>;
 	
 	
 }
@@ -1071,14 +1071,14 @@ package java.util;
 	*
 	* @return the key
 	*/
-	@:overload public function getKey() : K;
+	@:overload @:public public function getKey() : K;
 	
 	/**
 	* Returns the value associated with the key.
 	*
 	* @return the value associated with the key
 	*/
-	@:overload public function getValue() : V;
+	@:overload @:public public function getValue() : V;
 	
 	/**
 	* Replaces the value currently associated with the key with the given
@@ -1087,13 +1087,13 @@ package java.util;
 	* @return the value associated with the key before this method was
 	*         called
 	*/
-	@:overload public function setValue(value : V) : V;
+	@:overload @:public public function setValue(value : V) : V;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

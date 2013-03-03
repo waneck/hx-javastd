@@ -33,7 +33,7 @@ extern class FontRenderContext
 	* object.
 	*
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs a <code>FontRenderContext</code> object from an
@@ -55,7 +55,7 @@ extern class FontRenderContext
 	* @param usesFractionalMetrics determines if the newly constructed
 	* object has fractional metrics.
 	*/
-	@:overload public function new(tx : java.awt.geom.AffineTransform, isAntiAliased : Bool, usesFractionalMetrics : Bool) : Void;
+	@:overload @:public public function new(tx : java.awt.geom.AffineTransform, isAntiAliased : Bool, usesFractionalMetrics : Bool) : Void;
 	
 	/**
 	* Constructs a <code>FontRenderContext</code> object from an
@@ -81,7 +81,7 @@ extern class FontRenderContext
 	* legal values.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(tx : java.awt.geom.AffineTransform, aaHint : Dynamic, fmHint : Dynamic) : Void;
+	@:require(java6) @:overload @:public public function new(tx : java.awt.geom.AffineTransform, aaHint : Dynamic, fmHint : Dynamic) : Void;
 	
 	/**
 	* Indicates whether or not this <code>FontRenderContext</code> object
@@ -92,7 +92,7 @@ extern class FontRenderContext
 	* @see     java.awt.font.FontRenderContext#getTransform
 	* @since   1.6
 	*/
-	@:require(java6) @:overload public function isTransformed() : Bool;
+	@:require(java6) @:overload @:public public function isTransformed() : Bool;
 	
 	/**
 	* Returns the integer type of the affine transform for this
@@ -102,7 +102,7 @@ extern class FontRenderContext
 	* @see AffineTransform
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getTransformType() : Int;
+	@:require(java6) @:overload @:public public function getTransformType() : Int;
 	
 	/**
 	*   Gets the transform that is used to scale typographical points
@@ -111,7 +111,7 @@ extern class FontRenderContext
 	*    <code>FontRenderContext</code>.
 	*   @see AffineTransform
 	*/
-	@:overload public function getTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public public function getTransform() : java.awt.geom.AffineTransform;
 	
 	/**
 	* Returns a boolean which indicates whether or not some form of
@@ -124,7 +124,7 @@ extern class FontRenderContext
 	*   @see #FontRenderContext(AffineTransform,boolean,boolean)
 	*   @see #FontRenderContext(AffineTransform,Object,Object)
 	*/
-	@:overload public function isAntiAliased() : Bool;
+	@:overload @:public public function isAntiAliased() : Bool;
 	
 	/**
 	* Returns a boolean which whether text fractional metrics mode
@@ -138,7 +138,7 @@ extern class FontRenderContext
 	*   @see #FontRenderContext(AffineTransform,boolean,boolean)
 	*   @see #FontRenderContext(AffineTransform,Object,Object)
 	*/
-	@:overload public function usesFractionalMetrics() : Bool;
+	@:overload @:public public function usesFractionalMetrics() : Bool;
 	
 	/**
 	* Return the text anti-aliasing rendering mode hint used in this
@@ -149,7 +149,7 @@ extern class FontRenderContext
 	* <code>FontRenderContext</code>.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getAntiAliasingHint() : Dynamic;
+	@:require(java6) @:overload @:public public function getAntiAliasingHint() : Dynamic;
 	
 	/**
 	* Return the text fractional metrics rendering mode hint used in this
@@ -160,7 +160,7 @@ extern class FontRenderContext
 	* <code>FontRenderContext</code>.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getFractionalMetricsHint() : Dynamic;
+	@:require(java6) @:overload @:public public function getFractionalMetricsHint() : Dynamic;
 	
 	/**
 	* Return true if obj is an instance of FontRenderContext and has the same
@@ -170,7 +170,7 @@ extern class FontRenderContext
 	*         this <code>FontRenderContext</code>; <code>false</code>
 	*         otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Return true if rhs has the same transform, antialiasing,
@@ -181,12 +181,12 @@ extern class FontRenderContext
 	*         otherwise.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function equals(rhs : java.awt.font.FontRenderContext) : Bool;
+	@:require(java4) @:overload @:public public function equals(rhs : java.awt.font.FontRenderContext) : Bool;
 	
 	/**
 	* Return a hashcode for this FontRenderContext.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

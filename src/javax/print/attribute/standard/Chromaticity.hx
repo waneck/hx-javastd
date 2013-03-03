@@ -28,12 +28,12 @@ extern class Chromaticity extends javax.print.attribute.EnumSyntax implements ja
 	/**
 	* Monochrome printing.
 	*/
-	public static var MONOCHROME(default, null) : javax.print.attribute.standard.Chromaticity;
+	@:public @:static @:final public static var MONOCHROME(default, null) : javax.print.attribute.standard.Chromaticity;
 	
 	/**
 	* Color printing.
 	*/
-	public static var COLOR(default, null) : javax.print.attribute.standard.Chromaticity;
+	@:public @:static @:final public static var COLOR(default, null) : javax.print.attribute.standard.Chromaticity;
 	
 	/**
 	* Construct a new chromaticity enumeration value with the given integer
@@ -41,17 +41,17 @@ extern class Chromaticity extends javax.print.attribute.EnumSyntax implements ja
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class Chromaticity.
 	*/
-	@:overload private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class Chromaticity.
 	*/
-	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -62,7 +62,7 @@ extern class Chromaticity extends javax.print.attribute.EnumSyntax implements ja
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -72,7 +72,7 @@ extern class Chromaticity extends javax.print.attribute.EnumSyntax implements ja
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

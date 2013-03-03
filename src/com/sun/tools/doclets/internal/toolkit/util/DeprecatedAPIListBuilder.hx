@@ -30,52 +30,52 @@ extern class DeprecatedAPIListBuilder
 	*
 	* @author Atul M Dambalkar
 	*/
-	public static var NUM_TYPES(default, null) : Int;
+	@:public @:static @:final public static var NUM_TYPES(default, null) : Int;
 	
-	public static var PACKAGE(default, null) : Int;
+	@:public @:static @:final public static var PACKAGE(default, null) : Int;
 	
-	public static var INTERFACE(default, null) : Int;
+	@:public @:static @:final public static var INTERFACE(default, null) : Int;
 	
-	public static var CLASS(default, null) : Int;
+	@:public @:static @:final public static var CLASS(default, null) : Int;
 	
-	public static var ENUM(default, null) : Int;
+	@:public @:static @:final public static var ENUM(default, null) : Int;
 	
-	public static var EXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var EXCEPTION(default, null) : Int;
 	
-	public static var ERROR(default, null) : Int;
+	@:public @:static @:final public static var ERROR(default, null) : Int;
 	
-	public static var ANNOTATION_TYPE(default, null) : Int;
+	@:public @:static @:final public static var ANNOTATION_TYPE(default, null) : Int;
 	
-	public static var FIELD(default, null) : Int;
+	@:public @:static @:final public static var FIELD(default, null) : Int;
 	
-	public static var METHOD(default, null) : Int;
+	@:public @:static @:final public static var METHOD(default, null) : Int;
 	
-	public static var CONSTRUCTOR(default, null) : Int;
+	@:public @:static @:final public static var CONSTRUCTOR(default, null) : Int;
 	
-	public static var ENUM_CONSTANT(default, null) : Int;
+	@:public @:static @:final public static var ENUM_CONSTANT(default, null) : Int;
 	
-	public static var ANNOTATION_TYPE_MEMBER(default, null) : Int;
+	@:public @:static @:final public static var ANNOTATION_TYPE_MEMBER(default, null) : Int;
 	
 	/**
 	* Constructor.
 	*
 	* @param configuration the current configuration of the doclet
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
 	
 	/**
 	* Return the list of deprecated Doc objects of a given type.
 	*
 	* @param the constant representing the type of list being returned.
 	*/
-	@:overload public function getList(type : Int) : java.util.List<com.sun.javadoc.Doc>;
+	@:overload @:public public function getList(type : Int) : java.util.List<com.sun.javadoc.Doc>;
 	
 	/**
 	* Return true if the list of a given type has size greater than 0.
 	*
 	* @param type the type of list being checked.
 	*/
-	@:overload public function hasDocumentation(type : Int) : Bool;
+	@:overload @:public public function hasDocumentation(type : Int) : Bool;
 	
 	
 }

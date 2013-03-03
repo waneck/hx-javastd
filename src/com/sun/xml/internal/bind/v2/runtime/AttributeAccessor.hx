@@ -29,7 +29,7 @@ package com.sun.xml.internal.bind.v2.runtime;
 */
 extern interface AttributeAccessor<BeanT>
 {
-	@:overload public function isNilIncluded() : Bool;
+	@:overload @:public public function isNilIncluded() : Bool;
 	
 	
 }

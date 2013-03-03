@@ -77,7 +77,7 @@ extern interface XMLEntityHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies the end of an entity. The DTD has the pseudo-name
@@ -90,7 +90,7 @@ extern interface XMLEntityHandler
 	* @throws IOException This exception might be thrown when there is premature end of entity
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	
 }

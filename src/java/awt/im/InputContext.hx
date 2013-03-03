@@ -31,12 +31,12 @@ extern class InputContext
 	* InputContext directly. Input contexts are obtained by
 	* calling {@link #getInstance}.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns a new InputContext instance.
 	*/
-	@:overload public static function getInstance() : java.awt.im.InputContext;
+	@:overload @:public @:static public static function getInstance() : java.awt.im.InputContext;
 	
 	/**
 	* Attempts to select an input method or keyboard layout that
@@ -89,7 +89,7 @@ extern class InputContext
 	*         this call supports the desired locale.
 	* @exception NullPointerException if <code>locale</code> is null
 	*/
-	@:overload public function selectInputMethod(locale : java.util.Locale) : Bool;
+	@:overload @:public public function selectInputMethod(locale : java.util.Locale) : Bool;
 	
 	/**
 	* Returns the current locale of the current input method or keyboard
@@ -109,7 +109,7 @@ extern class InputContext
 	* @return the current locale of the current input method or keyboard layout
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getLocale() : java.util.Locale;
+	@:require(java3) @:overload @:public public function getLocale() : java.util.Locale;
 	
 	/**
 	* Sets the subsets of the Unicode character set that input methods of this input
@@ -124,7 +124,7 @@ extern class InputContext
 	*
 	* @param subsets The subsets of the Unicode character set from which characters may be input
 	*/
-	@:overload public function setCharacterSubsets(subsets : java.NativeArray<java.lang.Character.Character_Subset>) : Void;
+	@:overload @:public public function setCharacterSubsets(subsets : java.NativeArray<java.lang.Character.Character_Subset>) : Void;
 	
 	/**
 	* Enables or disables the current input method for composition,
@@ -152,7 +152,7 @@ extern class InputContext
 	* @see #isCompositionEnabled
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setCompositionEnabled(enable : Bool) : Void;
+	@:require(java3) @:overload @:public public function setCompositionEnabled(enable : Bool) : Void;
 	
 	/**
 	* Determines whether the current input method is enabled for composition.
@@ -168,7 +168,7 @@ extern class InputContext
 	* @see #setCompositionEnabled
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function isCompositionEnabled() : Bool;
+	@:require(java3) @:overload @:public public function isCompositionEnabled() : Bool;
 	
 	/**
 	* Asks the current input method to reconvert text from the
@@ -189,7 +189,7 @@ extern class InputContext
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function reconvert() : Void;
+	@:require(java3) @:overload @:public public function reconvert() : Void;
 	
 	/**
 	* Dispatches an event to the active input method. Called by AWT.
@@ -198,7 +198,7 @@ extern class InputContext
 	* @param event The event
 	* @exception NullPointerException if <code>event</code> is null
 	*/
-	@:overload public function dispatchEvent(event : java.awt.AWTEvent) : Void;
+	@:overload @:public public function dispatchEvent(event : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Notifies the input context that a client component has been
@@ -213,7 +213,7 @@ extern class InputContext
 	* @param client Client component
 	* @exception NullPointerException if <code>client</code> is null
 	*/
-	@:overload public function removeNotify(client : java.awt.Component) : Void;
+	@:overload @:public public function removeNotify(client : java.awt.Component) : Void;
 	
 	/**
 	* Ends any input composition that may currently be going on in this
@@ -229,7 +229,7 @@ extern class InputContext
 	* saved to a file or copied to the clipboard.
 	*
 	*/
-	@:overload public function endComposition() : Void;
+	@:overload @:public public function endComposition() : Void;
 	
 	/**
 	* Releases the resources used by this input context.
@@ -237,7 +237,7 @@ extern class InputContext
 	* If no input methods are available, then this method
 	* has no effect.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* Returns a control object from the current input method, or null. A
@@ -253,7 +253,7 @@ extern class InputContext
 	*
 	* @return A control object from the current input method, or null.
 	*/
-	@:overload public function getInputMethodControlObject() : Dynamic;
+	@:overload @:public public function getInputMethodControlObject() : Dynamic;
 	
 	
 }

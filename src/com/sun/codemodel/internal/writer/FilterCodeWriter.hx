@@ -30,15 +30,15 @@ extern class FilterCodeWriter extends com.sun.codemodel.internal.CodeWriter
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	private var core : com.sun.codemodel.internal.CodeWriter;
+	@:protected private var core : com.sun.codemodel.internal.CodeWriter;
 	
-	@:overload public function new(core : com.sun.codemodel.internal.CodeWriter) : Void;
+	@:overload @:public public function new(core : com.sun.codemodel.internal.CodeWriter) : Void;
 	
-	@:overload override public function openBinary(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.OutputStream;
+	@:overload @:public override public function openBinary(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.OutputStream;
 	
-	@:overload override public function openSource(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.Writer;
+	@:overload @:public override public function openSource(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.Writer;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

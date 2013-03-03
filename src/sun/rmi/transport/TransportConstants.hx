@@ -26,46 +26,46 @@ package sun.rmi.transport;
 extern class TransportConstants
 {
 	/** Transport magic number: "JRMI"*/
-	public static var Magic(default, null) : Int;
+	@:public @:static @:final public static var Magic(default, null) : Int;
 	
 	/** Transport version number */
-	public static var Version(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var Version(default, null) : java.StdTypes.Int16;
 	
 	/** Connection uses stream protocol */
-	public static var StreamProtocol(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var StreamProtocol(default, null) : java.StdTypes.Int8;
 	
 	/** Protocol for single operation per connection; no ack required */
-	public static var SingleOpProtocol(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var SingleOpProtocol(default, null) : java.StdTypes.Int8;
 	
 	/** Connection uses multiplex protocol */
-	public static var MultiplexProtocol(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var MultiplexProtocol(default, null) : java.StdTypes.Int8;
 	
 	/** Ack for transport protocol */
-	public static var ProtocolAck(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var ProtocolAck(default, null) : java.StdTypes.Int8;
 	
 	/** Negative ack for transport protocol (protocol not supported) */
-	public static var ProtocolNack(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var ProtocolNack(default, null) : java.StdTypes.Int8;
 	
 	/** RMI call */
-	public static var Call(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var Call(default, null) : java.StdTypes.Int8;
 	
 	/** RMI return */
-	public static var Return(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var Return(default, null) : java.StdTypes.Int8;
 	
 	/** Ping operation */
-	public static var Ping(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var Ping(default, null) : java.StdTypes.Int8;
 	
 	/** Acknowledgment for Ping operation */
-	public static var PingAck(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var PingAck(default, null) : java.StdTypes.Int8;
 	
 	/** Acknowledgment for distributed GC */
-	public static var DGCAck(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var DGCAck(default, null) : java.StdTypes.Int8;
 	
 	/** Normal return (with or without return value) */
-	public static var NormalReturn(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var NormalReturn(default, null) : java.StdTypes.Int8;
 	
 	/** Exceptional return */
-	public static var ExceptionalReturn(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var ExceptionalReturn(default, null) : java.StdTypes.Int8;
 	
 	
 }

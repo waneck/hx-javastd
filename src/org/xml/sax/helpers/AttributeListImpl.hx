@@ -39,7 +39,7 @@ extern class AttributeListImpl implements org.xml.sax.AttributeList
 	* @see #addAttribute
 	* @see #clear
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a persistent copy of an existing attribute list.
@@ -51,7 +51,7 @@ extern class AttributeListImpl implements org.xml.sax.AttributeList
 	* @param atts The attribute list to copy
 	* @see org.xml.sax.DocumentHandler#startElement
 	*/
-	@:overload public function new(atts : org.xml.sax.AttributeList) : Void;
+	@:overload @:public public function new(atts : org.xml.sax.AttributeList) : Void;
 	
 	/**
 	* Set the attribute list, discarding previous contents.
@@ -61,7 +61,7 @@ extern class AttributeListImpl implements org.xml.sax.AttributeList
 	*
 	* @param atts The attribute list to copy.
 	*/
-	@:overload public function setAttributeList(atts : org.xml.sax.AttributeList) : Void;
+	@:overload @:public public function setAttributeList(atts : org.xml.sax.AttributeList) : Void;
 	
 	/**
 	* Add an attribute to an attribute list.
@@ -76,7 +76,7 @@ extern class AttributeListImpl implements org.xml.sax.AttributeList
 	* @see #removeAttribute
 	* @see org.xml.sax.DocumentHandler#startElement
 	*/
-	@:overload public function addAttribute(name : String, type : String, value : String) : Void;
+	@:overload @:public public function addAttribute(name : String, type : String, value : String) : Void;
 	
 	/**
 	* Remove an attribute from the list.
@@ -92,7 +92,7 @@ extern class AttributeListImpl implements org.xml.sax.AttributeList
 	* @param name The attribute name.
 	* @see #addAttribute
 	*/
-	@:overload public function removeAttribute(name : String) : Void;
+	@:overload @:public public function removeAttribute(name : String) : Void;
 	
 	/**
 	* Clear the attribute list.
@@ -104,7 +104,7 @@ extern class AttributeListImpl implements org.xml.sax.AttributeList
 	*
 	* @see org.xml.sax.DocumentHandler#startElement
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Return the number of attributes in the list.
@@ -112,7 +112,7 @@ extern class AttributeListImpl implements org.xml.sax.AttributeList
 	* @return The number of attributes in the list.
 	* @see org.xml.sax.AttributeList#getLength
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Get the name of an attribute (by position).
@@ -122,7 +122,7 @@ extern class AttributeListImpl implements org.xml.sax.AttributeList
 	*         is no attribute at that position.
 	* @see org.xml.sax.AttributeList#getName(int)
 	*/
-	@:overload public function getName(i : Int) : String;
+	@:overload @:public public function getName(i : Int) : String;
 	
 	/**
 	* Get the type of an attribute (by position).
@@ -134,7 +134,7 @@ extern class AttributeListImpl implements org.xml.sax.AttributeList
 	*         that position.
 	* @see org.xml.sax.AttributeList#getType(int)
 	*/
-	@:overload public function getType(i : Int) : String;
+	@:overload @:public public function getType(i : Int) : String;
 	
 	/**
 	* Get the value of an attribute (by position).
@@ -144,7 +144,7 @@ extern class AttributeListImpl implements org.xml.sax.AttributeList
 	*         there is no attribute at that position.
 	* @see org.xml.sax.AttributeList#getValue(int)
 	*/
-	@:overload public function getValue(i : Int) : String;
+	@:overload @:public public function getValue(i : Int) : String;
 	
 	/**
 	* Get the type of an attribute (by name).
@@ -155,7 +155,7 @@ extern class AttributeListImpl implements org.xml.sax.AttributeList
 	*         read).
 	* @see org.xml.sax.AttributeList#getType(java.lang.String)
 	*/
-	@:overload public function getType(name : String) : String;
+	@:overload @:public public function getType(name : String) : String;
 	
 	/**
 	* Get the value of an attribute (by name).
@@ -163,7 +163,7 @@ extern class AttributeListImpl implements org.xml.sax.AttributeList
 	* @param name The attribute name.
 	* @see org.xml.sax.AttributeList#getValue(java.lang.String)
 	*/
-	@:overload public function getValue(name : String) : String;
+	@:overload @:public public function getValue(name : String) : String;
 	
 	
 }

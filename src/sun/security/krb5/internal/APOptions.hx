@@ -49,15 +49,15 @@ extern class APOptions extends sun.security.krb5.internal.util.KerberosFlags
 	* <a href="http://www.ietf.org/rfc/rfc4120.txt">
 	* http://www.ietf.org/rfc/rfc4120.txt</a>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(oneBit : Int) : Void;
+	@:overload @:public public function new(oneBit : Int) : Void;
 	
-	@:overload public function new(size : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(size : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(data : java.NativeArray<Bool>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<Bool>) : Void;
 	
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Parse (unmarshal) an APOptions from a DER input stream.  This form
@@ -72,7 +72,7 @@ extern class APOptions extends sun.security.krb5.internal.util.KerberosFlags
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.APOptions;
+	@:overload @:public @:static public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.APOptions;
 	
 	
 }

@@ -28,31 +28,31 @@ extern class AptEnv
 	/**
 	* The environment for a run of apt.
 	*/
-	public var names : com.sun.tools.javac.util.Names;
+	@:public public var names : com.sun.tools.javac.util.Names;
 	
-	public var symtab : com.sun.tools.javac.code.Symtab;
+	@:public public var symtab : com.sun.tools.javac.code.Symtab;
 	
-	public var jctypes : com.sun.tools.javac.code.Types;
+	@:public public var jctypes : com.sun.tools.javac.code.Types;
 	
-	public var enter : com.sun.tools.javac.comp.Enter;
+	@:public public var enter : com.sun.tools.javac.comp.Enter;
 	
-	public var attr : com.sun.tools.javac.comp.Attr;
+	@:public public var attr : com.sun.tools.javac.comp.Attr;
 	
-	public var typeMaker : com.sun.tools.apt.mirror.type.TypeMaker;
+	@:public public var typeMaker : com.sun.tools.apt.mirror.type.TypeMaker;
 	
-	public var declMaker : com.sun.tools.apt.mirror.declaration.DeclarationMaker;
+	@:public public var declMaker : com.sun.tools.apt.mirror.declaration.DeclarationMaker;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.mirror.AptEnv;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.mirror.AptEnv;
 	
 	/**
 	* Does a symbol have a given flag?  Forces symbol completion.
 	*/
-	@:overload public static function hasFlag(sym : com.sun.tools.javac.code.Symbol, flag : haxe.Int64) : Bool;
+	@:overload @:public @:static public static function hasFlag(sym : com.sun.tools.javac.code.Symbol, flag : haxe.Int64) : Bool;
 	
 	/**
 	* Returns a symbol's flags.  Forces completion.
 	*/
-	@:overload public static function getFlags(sym : com.sun.tools.javac.code.Symbol) : haxe.Int64;
+	@:overload @:public @:static public static function getFlags(sym : com.sun.tools.javac.code.Symbol) : haxe.Int64;
 	
 	
 }

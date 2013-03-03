@@ -40,7 +40,7 @@ extern class MetadataUtil
 	* @param onlyTopLevelSchemas if true, the imported schemas from a schema would be ignored
 	* @return all the documents
 	*/
-	@:overload public static function getMetadataClosure(systemId : String, resolver : com.sun.xml.internal.ws.wsdl.SDDocumentResolver, onlyTopLevelSchemas : Bool) : java.util.Map<String, com.sun.xml.internal.ws.api.server.SDDocument>;
+	@:overload @:public @:static public static function getMetadataClosure(systemId : String, resolver : com.sun.xml.internal.ws.wsdl.SDDocumentResolver, onlyTopLevelSchemas : Bool) : java.util.Map<String, com.sun.xml.internal.ws.api.server.SDDocument>;
 	
 	
 }

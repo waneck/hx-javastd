@@ -25,21 +25,21 @@ package com.sun.security.sasl.ntlm;
 */
 @:internal extern class NTLMClient implements javax.security.sasl.SaslClient
 {
-	@:overload public function getMechanismName() : String;
+	@:overload @:public public function getMechanismName() : String;
 	
-	@:overload public function isComplete() : Bool;
+	@:overload @:public public function isComplete() : Bool;
 	
-	@:overload public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getNegotiatedProperty(propName : String) : Dynamic;
+	@:overload @:public public function getNegotiatedProperty(propName : String) : Dynamic;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload public function hasInitialResponse() : Bool;
+	@:overload @:public public function hasInitialResponse() : Bool;
 	
-	@:overload public function evaluateChallenge(challenge : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function evaluateChallenge(challenge : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -40,7 +40,7 @@ extern class Utilities
 	* @param startOffset starting offset of the text in the document >= 0
 	* @return  the X location at the end of the rendered text
 	*/
-	@:overload @:final public static function drawTabbedText(s : javax.swing.text.Segment, x : Int, y : Int, g : java.awt.Graphics, e : javax.swing.text.TabExpander, startOffset : Int) : Int;
+	@:overload @:public @:static @:final public static function drawTabbedText(s : javax.swing.text.Segment, x : Int, y : Int, g : java.awt.Graphics, e : javax.swing.text.TabExpander, startOffset : Int) : Int;
 	
 	/**
 	* Determines the width of the given segment of text taking tabs
@@ -55,7 +55,7 @@ extern class Utilities
 	* @param startOffset starting offset of the text in the document >= 0
 	* @return  the width of the text
 	*/
-	@:overload @:final public static function getTabbedTextWidth(s : javax.swing.text.Segment, metrics : java.awt.FontMetrics, x : Int, e : javax.swing.text.TabExpander, startOffset : Int) : Int;
+	@:overload @:public @:static @:final public static function getTabbedTextWidth(s : javax.swing.text.Segment, metrics : java.awt.FontMetrics, x : Int, e : javax.swing.text.TabExpander, startOffset : Int) : Int;
 	
 	/**
 	* Determines the relative offset into the given text that
@@ -74,9 +74,9 @@ extern class Utilities
 	* @param startOffset starting offset of the text in the document >= 0
 	* @return  the offset into the text >= 0
 	*/
-	@:overload @:final public static function getTabbedTextOffset(s : javax.swing.text.Segment, metrics : java.awt.FontMetrics, x0 : Int, x : Int, e : javax.swing.text.TabExpander, startOffset : Int) : Int;
+	@:overload @:public @:static @:final public static function getTabbedTextOffset(s : javax.swing.text.Segment, metrics : java.awt.FontMetrics, x0 : Int, x : Int, e : javax.swing.text.TabExpander, startOffset : Int) : Int;
 	
-	@:overload @:final public static function getTabbedTextOffset(s : javax.swing.text.Segment, metrics : java.awt.FontMetrics, x0 : Int, x : Int, e : javax.swing.text.TabExpander, startOffset : Int, round : Bool) : Int;
+	@:overload @:public @:static @:final public static function getTabbedTextOffset(s : javax.swing.text.Segment, metrics : java.awt.FontMetrics, x0 : Int, x : Int, e : javax.swing.text.TabExpander, startOffset : Int, round : Bool) : Int;
 	
 	/**
 	* Determine where to break the given text to fit
@@ -92,7 +92,7 @@ extern class Utilities
 	* @param startOffset starting offset in the document of the text
 	* @return  the offset into the given text
 	*/
-	@:overload @:final public static function getBreakLocation(s : javax.swing.text.Segment, metrics : java.awt.FontMetrics, x0 : Int, x : Int, e : javax.swing.text.TabExpander, startOffset : Int) : Int;
+	@:overload @:public @:static @:final public static function getBreakLocation(s : javax.swing.text.Segment, metrics : java.awt.FontMetrics, x0 : Int, x : Int, e : javax.swing.text.TabExpander, startOffset : Int) : Int;
 	
 	/**
 	* Determines the starting row model position of the row that contains
@@ -106,7 +106,7 @@ extern class Utilities
 	*  a value of -1 will be returned.
 	* @exception BadLocationException if the offset is out of range
 	*/
-	@:overload @:final public static function getRowStart(c : javax.swing.text.JTextComponent, offs : Int) : Int;
+	@:overload @:public @:static @:final public static function getRowStart(c : javax.swing.text.JTextComponent, offs : Int) : Int;
 	
 	/**
 	* Determines the ending row model position of the row that contains
@@ -120,7 +120,7 @@ extern class Utilities
 	*  a value of -1 will be returned.
 	* @exception BadLocationException if the offset is out of range
 	*/
-	@:overload @:final public static function getRowEnd(c : javax.swing.text.JTextComponent, offs : Int) : Int;
+	@:overload @:public @:static @:final public static function getRowEnd(c : javax.swing.text.JTextComponent, offs : Int) : Int;
 	
 	/**
 	* Determines the position in the model that is closest to the given
@@ -135,7 +135,7 @@ extern class Utilities
 	*  a value of -1 will be returned.
 	* @exception BadLocationException if the offset is out of range
 	*/
-	@:overload @:final public static function getPositionAbove(c : javax.swing.text.JTextComponent, offs : Int, x : Int) : Int;
+	@:overload @:public @:static @:final public static function getPositionAbove(c : javax.swing.text.JTextComponent, offs : Int, x : Int) : Int;
 	
 	/**
 	* Determines the position in the model that is closest to the given
@@ -150,7 +150,7 @@ extern class Utilities
 	*  a value of -1 will be returned.
 	* @exception BadLocationException if the offset is out of range
 	*/
-	@:overload @:final public static function getPositionBelow(c : javax.swing.text.JTextComponent, offs : Int, x : Int) : Int;
+	@:overload @:public @:static @:final public static function getPositionBelow(c : javax.swing.text.JTextComponent, offs : Int, x : Int) : Int;
 	
 	/**
 	* Determines the start of a word for the given model location.
@@ -161,7 +161,7 @@ extern class Utilities
 	* @return the location in the model of the word start >= 0
 	* @exception BadLocationException if the offset is out of range
 	*/
-	@:overload @:final public static function getWordStart(c : javax.swing.text.JTextComponent, offs : Int) : Int;
+	@:overload @:public @:static @:final public static function getWordStart(c : javax.swing.text.JTextComponent, offs : Int) : Int;
 	
 	/**
 	* Determines the end of a word for the given location.
@@ -172,7 +172,7 @@ extern class Utilities
 	* @return the location in the model of the word end >= 0
 	* @exception BadLocationException if the offset is out of range
 	*/
-	@:overload @:final public static function getWordEnd(c : javax.swing.text.JTextComponent, offs : Int) : Int;
+	@:overload @:public @:static @:final public static function getWordEnd(c : javax.swing.text.JTextComponent, offs : Int) : Int;
 	
 	/**
 	* Determines the start of the next word for the given location.
@@ -183,7 +183,7 @@ extern class Utilities
 	* @return the location in the model of the word start >= 0
 	* @exception BadLocationException if the offset is out of range
 	*/
-	@:overload @:final public static function getNextWord(c : javax.swing.text.JTextComponent, offs : Int) : Int;
+	@:overload @:public @:static @:final public static function getNextWord(c : javax.swing.text.JTextComponent, offs : Int) : Int;
 	
 	/**
 	* Determine the start of the prev word for the given location.
@@ -194,7 +194,7 @@ extern class Utilities
 	* @return the location in the model of the word start >= 0
 	* @exception BadLocationException if the offset is out of range
 	*/
-	@:overload @:final public static function getPreviousWord(c : javax.swing.text.JTextComponent, offs : Int) : Int;
+	@:overload @:public @:static @:final public static function getPreviousWord(c : javax.swing.text.JTextComponent, offs : Int) : Int;
 	
 	/**
 	* Determines the element to use for a paragraph/line.
@@ -203,7 +203,7 @@ extern class Utilities
 	* @param offs the starting offset in the document >= 0
 	* @return the element
 	*/
-	@:overload @:final public static function getParagraphElement(c : javax.swing.text.JTextComponent, offs : Int) : javax.swing.text.Element;
+	@:overload @:public @:static @:final public static function getParagraphElement(c : javax.swing.text.JTextComponent, offs : Int) : javax.swing.text.Element;
 	
 	
 }

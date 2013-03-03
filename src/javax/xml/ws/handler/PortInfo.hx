@@ -31,14 +31,14 @@ extern interface PortInfo
 	*
 	*  @return javax.xml.namespace.QName The qualified name of the WSDL service.
 	**/
-	@:overload public function getServiceName() : javax.xml.namespace.QName;
+	@:overload @:public public function getServiceName() : javax.xml.namespace.QName;
 	
 	/**
 	*  Gets the qualified name of the WSDL port being accessed.
 	*
 	*  @return javax.xml.namespace.QName The qualified name of the WSDL port.
 	**/
-	@:overload public function getPortName() : javax.xml.namespace.QName;
+	@:overload @:public public function getPortName() : javax.xml.namespace.QName;
 	
 	/**
 	*  Gets the URI identifying the binding used by the port being accessed.
@@ -47,7 +47,7 @@ extern interface PortInfo
 	*
 	*  @see javax.xml.ws.Binding
 	**/
-	@:overload public function getBindingID() : String;
+	@:overload @:public public function getBindingID() : String;
 	
 	
 }

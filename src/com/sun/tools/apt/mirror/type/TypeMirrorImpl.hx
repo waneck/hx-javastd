@@ -28,26 +28,33 @@ package com.sun.tools.apt.mirror.type;
 */
 extern class TypeMirrorImpl implements com.sun.mirror.type.TypeMirror
 {
-	private var env(default, null) : com.sun.tools.apt.mirror.AptEnv;
+	@:protected @:final private var env(default, null) : com.sun.tools.apt.mirror.AptEnv;
 	
-	public var type(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var type(default, null) : com.sun.tools.javac.code.Type;
 	
-	@:overload private function new(env : com.sun.tools.apt.mirror.AptEnv, type : com.sun.tools.javac.code.Type) : Void;
-	
-	/**
-	* {@inheritDoc}
-	*/
-	@:overload public function toString() : String;
+	@:overload @:protected private function new(env : com.sun.tools.apt.mirror.AptEnv, type : com.sun.tools.javac.code.Type) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
+	
+	/**
+	* {@inheritDoc}
+	*/
+	@:overload @:public public function hashCode() : Int;
+	
+	/**
+	* Applies a visitor to this type.
+	*
+	* @param v the visitor operating on this type
+	*/
+	@:overload @:public @:public override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
 	
 	
 }

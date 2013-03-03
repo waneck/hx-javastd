@@ -30,13 +30,13 @@ package sun.java2d.xr;
 */
 extern class XRMaskImage
 {
-	@:overload public function new(xrMgr : sun.java2d.xr.XRCompositeManager, parentDrawable : Int) : Void;
+	@:overload @:public public function new(xrMgr : sun.java2d.xr.XRCompositeManager, parentDrawable : Int) : Void;
 	
 	/**
 	* Prepares a mask used by a TransformedBlit, fills mask-contents and applies
 	* transformation.
 	*/
-	@:overload public function prepareBlitMask(dst : sun.java2d.xr.XRSurfaceData, maskTX : java.awt.geom.AffineTransform, width : Int, height : Int) : Int;
+	@:overload @:public public function prepareBlitMask(dst : sun.java2d.xr.XRSurfaceData, maskTX : java.awt.geom.AffineTransform, width : Int, height : Int) : Int;
 	
 	
 }

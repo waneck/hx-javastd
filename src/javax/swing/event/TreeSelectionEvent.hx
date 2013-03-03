@@ -26,16 +26,16 @@ package javax.swing.event;
 extern class TreeSelectionEvent extends java.util.EventObject
 {
 	/** Paths this event represents. */
-	private var paths : java.NativeArray<javax.swing.tree.TreePath>;
+	@:protected private var paths : java.NativeArray<javax.swing.tree.TreePath>;
 	
 	/** For each path identifies if that path is in fact new. */
-	private var areNew : java.NativeArray<Bool>;
+	@:protected private var areNew : java.NativeArray<Bool>;
 	
 	/** leadSelectionPath before the paths changed, may be null. */
-	private var oldLeadSelectionPath : javax.swing.tree.TreePath;
+	@:protected private var oldLeadSelectionPath : javax.swing.tree.TreePath;
 	
 	/** leadSelectionPath after the paths changed, may be null. */
-	private var newLeadSelectionPath : javax.swing.tree.TreePath;
+	@:protected private var newLeadSelectionPath : javax.swing.tree.TreePath;
 	
 	/**
 	* Represents a change in the selection of a TreeSelectionModel.
@@ -45,7 +45,7 @@ extern class TreeSelectionEvent extends java.util.EventObject
 	* @param source source of event
 	* @param paths the paths that have changed in the selection
 	*/
-	@:overload public function new(source : Dynamic, paths : java.NativeArray<javax.swing.tree.TreePath>, areNew : java.NativeArray<Bool>, oldLeadSelectionPath : javax.swing.tree.TreePath, newLeadSelectionPath : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function new(source : Dynamic, paths : java.NativeArray<javax.swing.tree.TreePath>, areNew : java.NativeArray<Bool>, oldLeadSelectionPath : javax.swing.tree.TreePath, newLeadSelectionPath : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Represents a change in the selection of a TreeSelectionModel.
@@ -57,18 +57,18 @@ extern class TreeSelectionEvent extends java.util.EventObject
 	* @param isNew whether or not the path is new to the selection, false
 	* means path was removed from the selection.
 	*/
-	@:overload public function new(source : Dynamic, path : javax.swing.tree.TreePath, isNew : Bool, oldLeadSelectionPath : javax.swing.tree.TreePath, newLeadSelectionPath : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function new(source : Dynamic, path : javax.swing.tree.TreePath, isNew : Bool, oldLeadSelectionPath : javax.swing.tree.TreePath, newLeadSelectionPath : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Returns the paths that have been added or removed from the
 	* selection.
 	*/
-	@:overload public function getPaths() : java.NativeArray<javax.swing.tree.TreePath>;
+	@:overload @:public public function getPaths() : java.NativeArray<javax.swing.tree.TreePath>;
 	
 	/**
 	* Returns the first path element.
 	*/
-	@:overload public function getPath() : javax.swing.tree.TreePath;
+	@:overload @:public public function getPath() : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns whether the path identified by {@code getPath} was
@@ -80,7 +80,7 @@ extern class TreeSelectionEvent extends java.util.EventObject
 	* @return {@code true} if {@code getPath} was added to the selection,
 	*         {@code false} otherwise
 	*/
-	@:overload public function isAddedPath() : Bool;
+	@:overload @:public public function isAddedPath() : Bool;
 	
 	/**
 	* Returns whether the specified path was added to the selection.
@@ -98,7 +98,7 @@ extern class TreeSelectionEvent extends java.util.EventObject
 	*         in {@code getPaths}
 	* @see #getPaths
 	*/
-	@:overload public function isAddedPath(path : javax.swing.tree.TreePath) : Bool;
+	@:overload @:public public function isAddedPath(path : javax.swing.tree.TreePath) : Bool;
 	
 	/**
 	* Returns whether the path at {@code getPaths()[index]} was added
@@ -115,22 +115,22 @@ extern class TreeSelectionEvent extends java.util.EventObject
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function isAddedPath(index : Int) : Bool;
+	@:require(java3) @:overload @:public public function isAddedPath(index : Int) : Bool;
 	
 	/**
 	* Returns the path that was previously the lead path.
 	*/
-	@:overload public function getOldLeadSelectionPath() : javax.swing.tree.TreePath;
+	@:overload @:public public function getOldLeadSelectionPath() : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns the current lead path.
 	*/
-	@:overload public function getNewLeadSelectionPath() : javax.swing.tree.TreePath;
+	@:overload @:public public function getNewLeadSelectionPath() : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns a copy of the receiver, but with the source being newSource.
 	*/
-	@:overload public function cloneWithSource(newSource : Dynamic) : Dynamic;
+	@:overload @:public public function cloneWithSource(newSource : Dynamic) : Dynamic;
 	
 	
 }

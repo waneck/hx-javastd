@@ -25,21 +25,21 @@ package sun.reflect;
 */
 @:internal extern class ByteVectorImpl implements sun.reflect.ByteVector
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(sz : Int) : Void;
+	@:overload @:public public function new(sz : Int) : Void;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
-	@:overload public function get(index : Int) : java.StdTypes.Int8;
+	@:overload @:public public function get(index : Int) : java.StdTypes.Int8;
 	
-	@:overload public function put(index : Int, value : java.StdTypes.Int8) : Void;
+	@:overload @:public public function put(index : Int, value : java.StdTypes.Int8) : Void;
 	
-	@:overload public function add(value : java.StdTypes.Int8) : Void;
+	@:overload @:public public function add(value : java.StdTypes.Int8) : Void;
 	
-	@:overload public function trim() : Void;
+	@:overload @:public public function trim() : Void;
 	
-	@:overload public function getData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

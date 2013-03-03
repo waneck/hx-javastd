@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.runtime;
 */
 extern class ElementBeanInfoImpl extends com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo<javax.xml.bind.JAXBElement<Dynamic>>
 {
-	public var expectedType(default, null) : Class<Dynamic>;
+	@:public @:final public var expectedType(default, null) : Class<Dynamic>;
 	
 	/**
 	* The constructor for the sole instanceof {@link JaxBeanInfo} for
@@ -35,35 +35,35 @@ extern class ElementBeanInfoImpl extends com.sun.xml.internal.bind.v2.runtime.Ja
 	*
 	* This is a hack.
 	*/
-	@:overload private function new(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
+	@:overload @:protected private function new(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
 	
-	@:overload public function getElementNamespaceURI(e : javax.xml.bind.JAXBElement<Dynamic>) : String;
+	@:overload @:public public function getElementNamespaceURI(e : javax.xml.bind.JAXBElement<Dynamic>) : String;
 	
-	@:overload public function getElementLocalName(e : javax.xml.bind.JAXBElement<Dynamic>) : String;
+	@:overload @:public public function getElementLocalName(e : javax.xml.bind.JAXBElement<Dynamic>) : String;
 	
-	@:overload override public function getLoader(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, typeSubstitutionCapable : Bool) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
+	@:overload @:public override public function getLoader(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, typeSubstitutionCapable : Bool) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 	
-	@:overload @:final override public function createInstance(context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : javax.xml.bind.JAXBElement<Dynamic>;
+	@:overload @:public @:final override public function createInstance(context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : javax.xml.bind.JAXBElement<Dynamic>;
 	
-	@:overload @:final public function createInstanceFromValue(o : Dynamic) : javax.xml.bind.JAXBElement<Dynamic>;
+	@:overload @:public @:final public function createInstanceFromValue(o : Dynamic) : javax.xml.bind.JAXBElement<Dynamic>;
 	
-	@:overload public function reset(e : javax.xml.bind.JAXBElement<Dynamic>, context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : Bool;
+	@:overload @:public public function reset(e : javax.xml.bind.JAXBElement<Dynamic>, context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : Bool;
 	
-	@:overload public function getId(e : javax.xml.bind.JAXBElement<Dynamic>, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : String;
+	@:overload @:public public function getId(e : javax.xml.bind.JAXBElement<Dynamic>, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : String;
 	
-	@:overload public function serializeBody(element : javax.xml.bind.JAXBElement<Dynamic>, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public public function serializeBody(element : javax.xml.bind.JAXBElement<Dynamic>, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload public function serializeRoot(e : javax.xml.bind.JAXBElement<Dynamic>, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public public function serializeRoot(e : javax.xml.bind.JAXBElement<Dynamic>, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload public function serializeAttributes(e : javax.xml.bind.JAXBElement<Dynamic>, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public public function serializeAttributes(e : javax.xml.bind.JAXBElement<Dynamic>, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload public function serializeURIs(e : javax.xml.bind.JAXBElement<Dynamic>, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public public function serializeURIs(e : javax.xml.bind.JAXBElement<Dynamic>, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload @:final override public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<javax.xml.bind.JAXBElement<Dynamic>>;
+	@:overload @:public @:final override public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<javax.xml.bind.JAXBElement<Dynamic>>;
 	
-	@:overload override public function wrapUp() : Void;
+	@:overload @:public override public function wrapUp() : Void;
 	
-	@:overload override public function link(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
+	@:overload @:public override public function link(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
 	
 	
 }
@@ -75,11 +75,11 @@ extern class ElementBeanInfoImpl extends com.sun.xml.internal.bind.v2.runtime.Ja
 */
 @:native('com$sun$xml$internal$bind$v2$runtime$ElementBeanInfoImpl$IntercepterLoader') @:internal extern class ElementBeanInfoImpl_IntercepterLoader extends com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader implements com.sun.xml.internal.bind.v2.runtime.unmarshaller.Intercepter
 {
-	@:overload public function new(core : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader) : Void;
+	@:overload @:public public function new(core : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader) : Void;
 	
-	@:overload @:final public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:public @:final override public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload public function intercept(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, o : Dynamic) : Dynamic;
+	@:overload @:public public function intercept(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, o : Dynamic) : Dynamic;
 	
 	
 }

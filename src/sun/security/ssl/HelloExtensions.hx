@@ -29,55 +29,55 @@ package sun.security.ssl;
 }
 @:internal extern class ExtensionType
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:internal extern class HelloExtension
 {
-	@:overload @:abstract public function toString() : String;
+	@:overload @:public @:abstract public function toString() : String;
 	
 	
 }
 @:internal extern class UnknownExtension extends sun.security.ssl.HelloExtensions.HelloExtension
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:internal extern class ServerNameExtension extends sun.security.ssl.HelloExtensions.HelloExtension
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('sun$security$ssl$ServerNameExtension$ServerName') @:internal extern class ServerNameExtension_ServerName
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:internal extern class SupportedEllipticCurvesExtension extends sun.security.ssl.HelloExtensions.HelloExtension
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:internal extern class SupportedEllipticPointFormatsExtension extends sun.security.ssl.HelloExtensions.HelloExtension
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:internal extern class RenegotiationInfoExtension extends sun.security.ssl.HelloExtensions.HelloExtension
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:internal extern class SignatureAlgorithmsExtension extends sun.security.ssl.HelloExtensions.HelloExtension
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

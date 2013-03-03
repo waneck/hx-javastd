@@ -36,7 +36,7 @@ extern interface ContactInfoList
 	* {@link com.sun.corba.se.pept.transport.ContactInfoListIterator
 	* ContactInfoListIterator}.
 	*/
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function iterator() : java.util.Iterator<Dynamic>;
 	
 	
 }

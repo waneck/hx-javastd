@@ -44,7 +44,7 @@ extern class DimensionUIResource extends java.awt.Dimension implements javax.swi
 	* @author Amy Fowler
 	*
 	*/
-	@:overload public function new(width : Int, height : Int) : Void;
+	@:overload @:public public function new(width : Int, height : Int) : Void;
 	
 	
 }

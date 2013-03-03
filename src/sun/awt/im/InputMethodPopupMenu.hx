@@ -25,7 +25,7 @@ package sun.awt.im;
 */
 @:internal extern class InputMethodPopupMenu implements java.awt.event.ActionListener
 {
-	@:overload public function actionPerformed(event : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(event : java.awt.event.ActionEvent) : Void;
 	
 	
 }

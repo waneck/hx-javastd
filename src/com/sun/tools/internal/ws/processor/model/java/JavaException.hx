@@ -29,9 +29,9 @@ package com.sun.tools.internal.ws.processor.model.java;
 */
 extern class JavaException extends com.sun.tools.internal.ws.processor.model.java.JavaStructureType
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : String, present : Bool, owner : Dynamic) : Void;
+	@:overload @:public public function new(name : String, present : Bool, owner : Dynamic) : Void;
 	
 	
 }

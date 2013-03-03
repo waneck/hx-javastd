@@ -39,41 +39,41 @@ package sun.security.pkcs11;
 */
 @:require(java5) @:internal extern class P11Cipher extends javax.crypto.CipherSpi
 {
-	@:overload private function engineSetMode(mode : String) : Void;
+	@:overload @:protected override private function engineSetMode(mode : String) : Void;
 	
-	@:overload private function engineSetPadding(padding : String) : Void;
+	@:overload @:protected override private function engineSetPadding(padding : String) : Void;
 	
-	@:overload private function engineGetBlockSize() : Int;
+	@:overload @:protected override private function engineGetBlockSize() : Int;
 	
-	@:overload private function engineGetOutputSize(inputLen : Int) : Int;
+	@:overload @:protected override private function engineGetOutputSize(inputLen : Int) : Int;
 	
-	@:overload private function engineGetIV() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineGetIV() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineGetParameters() : java.security.AlgorithmParameters;
+	@:overload @:protected override private function engineGetParameters() : java.security.AlgorithmParameters;
 	
-	@:overload private function engineInit(opmode : Int, key : java.security.Key, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(opmode : Int, key : java.security.Key, random : java.security.SecureRandom) : Void;
 	
-	@:overload private function engineInit(opmode : Int, key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(opmode : Int, key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
-	@:overload private function engineInit(opmode : Int, key : java.security.Key, params : java.security.AlgorithmParameters, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(opmode : Int, key : java.security.Key, params : java.security.AlgorithmParameters, random : java.security.SecureRandom) : Void;
 	
-	@:overload private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int) : Int;
+	@:overload @:protected override private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int) : Int;
 	
-	@:overload private function engineUpdate(inBuffer : java.nio.ByteBuffer, outBuffer : java.nio.ByteBuffer) : Int;
+	@:overload @:protected override private function engineUpdate(inBuffer : java.nio.ByteBuffer, outBuffer : java.nio.ByteBuffer) : Int;
 	
-	@:overload private function engineDoFinal(_in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineDoFinal(_in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineDoFinal(_in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int) : Int;
+	@:overload @:protected override private function engineDoFinal(_in : java.NativeArray<java.StdTypes.Int8>, inOfs : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOfs : Int) : Int;
 	
-	@:overload private function engineDoFinal(inBuffer : java.nio.ByteBuffer, outBuffer : java.nio.ByteBuffer) : Int;
+	@:overload @:protected override private function engineDoFinal(inBuffer : java.nio.ByteBuffer, outBuffer : java.nio.ByteBuffer) : Int;
 	
-	@:overload private function engineWrap(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineWrap(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineUnwrap(wrappedKey : java.NativeArray<java.StdTypes.Int8>, wrappedKeyAlgorithm : String, wrappedKeyType : Int) : java.security.Key;
+	@:overload @:protected override private function engineUnwrap(wrappedKey : java.NativeArray<java.StdTypes.Int8>, wrappedKeyAlgorithm : String, wrappedKeyType : Int) : java.security.Key;
 	
-	@:overload private function engineGetKeySize(key : java.security.Key) : Int;
+	@:overload @:protected override private function engineGetKeySize(key : java.security.Key) : Int;
 	
 	
 }
@@ -87,9 +87,9 @@ package sun.security.pkcs11;
 }
 @:native('sun$security$pkcs11$P11Cipher$PKCS5Padding') @:internal extern class P11Cipher_PKCS5Padding implements sun.security.pkcs11.P11Cipher.P11Cipher_Padding
 {
-	@:overload public function setPaddingBytes(paddingBuffer : java.NativeArray<java.StdTypes.Int8>, padLen : Int) : Int;
+	@:overload @:public public function setPaddingBytes(paddingBuffer : java.NativeArray<java.StdTypes.Int8>, padLen : Int) : Int;
 	
-	@:overload public function unpad(paddedData : java.NativeArray<java.StdTypes.Int8>, len : Int) : Int;
+	@:overload @:public public function unpad(paddedData : java.NativeArray<java.StdTypes.Int8>, len : Int) : Int;
 	
 	
 }

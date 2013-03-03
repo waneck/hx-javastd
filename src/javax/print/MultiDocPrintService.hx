@@ -34,7 +34,7 @@ extern interface MultiDocPrintService extends javax.print.PrintService
 	* Create a job which can print a multiDoc.
 	* @return a MultiDocPrintJob
 	*/
-	@:overload public function createMultiDocPrintJob() : javax.print.MultiDocPrintJob;
+	@:overload @:public public function createMultiDocPrintJob() : javax.print.MultiDocPrintJob;
 	
 	
 }

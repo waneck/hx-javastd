@@ -25,19 +25,19 @@ package sun.io;
 */
 extern class ByteToCharDBCS_EBCDIC extends sun.io.ByteToCharConverter
 {
-	@:overload public function new(dec : sun.nio.cs.ext.DoubleByte.DoubleByte_Decoder) : Void;
+	@:overload @:public public function new(dec : sun.nio.cs.ext.DoubleByte.DoubleByte_Decoder) : Void;
 	
-	@:overload override public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public override public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Character conversion
 	*/
-	@:overload override public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
+	@:overload @:public override public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
 	
 	/**
 	*  Resets the converter.
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }

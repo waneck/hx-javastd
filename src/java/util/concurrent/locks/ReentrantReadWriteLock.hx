@@ -215,7 +215,7 @@ package java.util.concurrent.locks;
 	* Creates a new {@code ReentrantReadWriteLock} with
 	* default (nonfair) ordering properties.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new {@code ReentrantReadWriteLock} with
@@ -223,18 +223,18 @@ package java.util.concurrent.locks;
 	*
 	* @param fair {@code true} if this lock should use a fair ordering policy
 	*/
-	@:overload public function new(fair : Bool) : Void;
+	@:overload @:public public function new(fair : Bool) : Void;
 	
-	@:overload public function writeLock() : java.util.concurrent.locks.ReentrantReadWriteLock.ReentrantReadWriteLock_WriteLock;
+	@:overload @:public public function writeLock() : java.util.concurrent.locks.ReentrantReadWriteLock.ReentrantReadWriteLock_WriteLock;
 	
-	@:overload public function readLock() : java.util.concurrent.locks.ReentrantReadWriteLock.ReentrantReadWriteLock_ReadLock;
+	@:overload @:public public function readLock() : java.util.concurrent.locks.ReentrantReadWriteLock.ReentrantReadWriteLock_ReadLock;
 	
 	/**
 	* Returns {@code true} if this lock has fairness set true.
 	*
 	* @return {@code true} if this lock has fairness set true
 	*/
-	@:overload @:final public function isFair() : Bool;
+	@:overload @:public @:final public function isFair() : Bool;
 	
 	/**
 	* Returns the thread that currently owns the write lock, or
@@ -249,7 +249,7 @@ package java.util.concurrent.locks;
 	*
 	* @return the owner, or {@code null} if not owned
 	*/
-	@:overload private function getOwner() : java.lang.Thread;
+	@:overload @:protected private function getOwner() : java.lang.Thread;
 	
 	/**
 	* Queries the number of read locks held for this lock. This
@@ -257,7 +257,7 @@ package java.util.concurrent.locks;
 	* synchronization control.
 	* @return the number of read locks held.
 	*/
-	@:overload public function getReadLockCount() : Int;
+	@:overload @:public public function getReadLockCount() : Int;
 	
 	/**
 	* Queries if the write lock is held by any thread. This method is
@@ -267,7 +267,7 @@ package java.util.concurrent.locks;
 	* @return {@code true} if any thread holds the write lock and
 	*         {@code false} otherwise
 	*/
-	@:overload public function isWriteLocked() : Bool;
+	@:overload @:public public function isWriteLocked() : Bool;
 	
 	/**
 	* Queries if the write lock is held by the current thread.
@@ -275,7 +275,7 @@ package java.util.concurrent.locks;
 	* @return {@code true} if the current thread holds the write lock and
 	*         {@code false} otherwise
 	*/
-	@:overload public function isWriteLockedByCurrentThread() : Bool;
+	@:overload @:public public function isWriteLockedByCurrentThread() : Bool;
 	
 	/**
 	* Queries the number of reentrant write holds on this lock by the
@@ -285,7 +285,7 @@ package java.util.concurrent.locks;
 	* @return the number of holds on the write lock by the current thread,
 	*         or zero if the write lock is not held by the current thread
 	*/
-	@:overload public function getWriteHoldCount() : Int;
+	@:overload @:public public function getWriteHoldCount() : Int;
 	
 	/**
 	* Queries the number of reentrant read holds on this lock by the
@@ -296,7 +296,7 @@ package java.util.concurrent.locks;
 	*         or zero if the read lock is not held by the current thread
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getReadHoldCount() : Int;
+	@:require(java6) @:overload @:public public function getReadHoldCount() : Int;
 	
 	/**
 	* Returns a collection containing threads that may be waiting to
@@ -309,7 +309,7 @@ package java.util.concurrent.locks;
 	*
 	* @return the collection of threads
 	*/
-	@:overload private function getQueuedWriterThreads() : java.util.Collection<java.lang.Thread>;
+	@:overload @:protected private function getQueuedWriterThreads() : java.util.Collection<java.lang.Thread>;
 	
 	/**
 	* Returns a collection containing threads that may be waiting to
@@ -322,7 +322,7 @@ package java.util.concurrent.locks;
 	*
 	* @return the collection of threads
 	*/
-	@:overload private function getQueuedReaderThreads() : java.util.Collection<java.lang.Thread>;
+	@:overload @:protected private function getQueuedReaderThreads() : java.util.Collection<java.lang.Thread>;
 	
 	/**
 	* Queries whether any threads are waiting to acquire the read or
@@ -334,7 +334,7 @@ package java.util.concurrent.locks;
 	* @return {@code true} if there may be other threads waiting to
 	*         acquire the lock
 	*/
-	@:overload @:final public function hasQueuedThreads() : Bool;
+	@:overload @:public @:final public function hasQueuedThreads() : Bool;
 	
 	/**
 	* Queries whether the given thread is waiting to acquire either
@@ -347,7 +347,7 @@ package java.util.concurrent.locks;
 	* @return {@code true} if the given thread is queued waiting for this lock
 	* @throws NullPointerException if the thread is null
 	*/
-	@:overload @:final public function hasQueuedThread(thread : java.lang.Thread) : Bool;
+	@:overload @:public @:final public function hasQueuedThread(thread : java.lang.Thread) : Bool;
 	
 	/**
 	* Returns an estimate of the number of threads waiting to acquire
@@ -359,7 +359,7 @@ package java.util.concurrent.locks;
 	*
 	* @return the estimated number of threads waiting for this lock
 	*/
-	@:overload @:final public function getQueueLength() : Int;
+	@:overload @:public @:final public function getQueueLength() : Int;
 	
 	/**
 	* Returns a collection containing threads that may be waiting to
@@ -372,7 +372,7 @@ package java.util.concurrent.locks;
 	*
 	* @return the collection of threads
 	*/
-	@:overload private function getQueuedThreads() : java.util.Collection<java.lang.Thread>;
+	@:overload @:protected private function getQueuedThreads() : java.util.Collection<java.lang.Thread>;
 	
 	/**
 	* Queries whether any threads are waiting on the given condition
@@ -389,7 +389,7 @@ package java.util.concurrent.locks;
 	*         not associated with this lock
 	* @throws NullPointerException if the condition is null
 	*/
-	@:overload public function hasWaiters(condition : java.util.concurrent.locks.Condition) : Bool;
+	@:overload @:public public function hasWaiters(condition : java.util.concurrent.locks.Condition) : Bool;
 	
 	/**
 	* Returns an estimate of the number of threads waiting on the
@@ -406,7 +406,7 @@ package java.util.concurrent.locks;
 	*         not associated with this lock
 	* @throws NullPointerException if the condition is null
 	*/
-	@:overload public function getWaitQueueLength(condition : java.util.concurrent.locks.Condition) : Int;
+	@:overload @:public public function getWaitQueueLength(condition : java.util.concurrent.locks.Condition) : Int;
 	
 	/**
 	* Returns a collection containing those threads that may be
@@ -425,7 +425,7 @@ package java.util.concurrent.locks;
 	*         not associated with this lock
 	* @throws NullPointerException if the condition is null
 	*/
-	@:overload private function getWaitingThreads(condition : java.util.concurrent.locks.Condition) : java.util.Collection<java.lang.Thread>;
+	@:overload @:protected private function getWaitingThreads(condition : java.util.concurrent.locks.Condition) : java.util.Collection<java.lang.Thread>;
 	
 	/**
 	* Returns a string identifying this lock, as well as its lock state.
@@ -436,7 +436,7 @@ package java.util.concurrent.locks;
 	*
 	* @return a string identifying this lock, as well as its lock state
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -452,15 +452,15 @@ package java.util.concurrent.locks;
 	* both read and write holds that are all released during a
 	* condition wait and re-established in tryAcquire.
 	*/
-	@:overload @:final private function tryRelease(releases : Int) : Bool;
+	@:overload @:protected @:final override private function tryRelease(releases : Int) : Bool;
 	
-	@:overload @:final private function tryAcquire(acquires : Int) : Bool;
+	@:overload @:protected @:final override private function tryAcquire(acquires : Int) : Bool;
 	
-	@:overload @:final private function tryReleaseShared(unused : Int) : Bool;
+	@:overload @:protected @:final override private function tryReleaseShared(unused : Int) : Bool;
 	
-	@:overload @:final private function tryAcquireShared(unused : Int) : Int;
+	@:overload @:protected @:final override private function tryAcquireShared(unused : Int) : Int;
 	
-	@:overload @:final private function isHeldExclusively() : Bool;
+	@:overload @:protected @:final override private function isHeldExclusively() : Bool;
 	
 	
 }
@@ -478,7 +478,7 @@ package java.util.concurrent.locks;
 */
 @:native('java$util$concurrent$locks$ReentrantReadWriteLock$Sync$ThreadLocalHoldCounter') @:internal extern class ReentrantReadWriteLock_Sync_ThreadLocalHoldCounter extends java.lang.ThreadLocal<java.util.concurrent.locks.ReentrantReadWriteLock.ReentrantReadWriteLock_Sync_HoldCounter>
 {
-	@:overload override public function initialValue() : java.util.concurrent.locks.ReentrantReadWriteLock.ReentrantReadWriteLock_Sync_HoldCounter;
+	@:overload @:public override public function initialValue() : java.util.concurrent.locks.ReentrantReadWriteLock.ReentrantReadWriteLock_Sync_HoldCounter;
 	
 	
 }
@@ -507,7 +507,7 @@ package java.util.concurrent.locks;
 	* @param lock the outer lock object
 	* @throws NullPointerException if the lock is null
 	*/
-	@:overload private function new(lock : java.util.concurrent.locks.ReentrantReadWriteLock) : Void;
+	@:overload @:protected private function new(lock : java.util.concurrent.locks.ReentrantReadWriteLock) : Void;
 	
 	/**
 	* Acquires the read lock.
@@ -519,7 +519,7 @@ package java.util.concurrent.locks;
 	* the current thread becomes disabled for thread scheduling
 	* purposes and lies dormant until the read lock has been acquired.
 	*/
-	@:overload public function lock() : Void;
+	@:overload @:public public function lock() : Void;
 	
 	/**
 	* Acquires the read lock unless the current thread is
@@ -562,7 +562,7 @@ package java.util.concurrent.locks;
 	*
 	* @throws InterruptedException if the current thread is interrupted
 	*/
-	@:overload public function lockInterruptibly() : Void;
+	@:overload @:public public function lockInterruptibly() : Void;
 	
 	/**
 	* Acquires the read lock only if the write lock is not held by
@@ -587,7 +587,7 @@ package java.util.concurrent.locks;
 	*
 	* @return {@code true} if the read lock was acquired
 	*/
-	@:overload public function tryLock() : Bool;
+	@:overload @:public public function tryLock() : Bool;
 	
 	/**
 	* Acquires the read lock if the write lock is not held by
@@ -654,7 +654,7 @@ package java.util.concurrent.locks;
 	* @throws NullPointerException if the time unit is null
 	*
 	*/
-	@:overload public function tryLock(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function tryLock(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Attempts to release this lock.
@@ -662,7 +662,7 @@ package java.util.concurrent.locks;
 	* <p> If the number of readers is now zero then the lock
 	* is made available for write lock attempts.
 	*/
-	@:overload public function unlock() : Void;
+	@:overload @:public public function unlock() : Void;
 	
 	/**
 	* Throws {@code UnsupportedOperationException} because
@@ -670,7 +670,7 @@ package java.util.concurrent.locks;
 	*
 	* @throws UnsupportedOperationException always
 	*/
-	@:overload public function newCondition() : java.util.concurrent.locks.Condition;
+	@:overload @:public public function newCondition() : java.util.concurrent.locks.Condition;
 	
 	/**
 	* Returns a string identifying this lock, as well as its lock state.
@@ -679,7 +679,7 @@ package java.util.concurrent.locks;
 	*
 	* @return a string identifying this lock, as well as its lock state
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -694,7 +694,7 @@ package java.util.concurrent.locks;
 	* @param lock the outer lock object
 	* @throws NullPointerException if the lock is null
 	*/
-	@:overload private function new(lock : java.util.concurrent.locks.ReentrantReadWriteLock) : Void;
+	@:overload @:protected private function new(lock : java.util.concurrent.locks.ReentrantReadWriteLock) : Void;
 	
 	/**
 	* Acquires the write lock.
@@ -713,7 +713,7 @@ package java.util.concurrent.locks;
 	* lies dormant until the write lock has been acquired, at which
 	* time the write lock hold count is set to one.
 	*/
-	@:overload public function lock() : Void;
+	@:overload @:public public function lock() : Void;
 	
 	/**
 	* Acquires the write lock unless the current thread is
@@ -766,7 +766,7 @@ package java.util.concurrent.locks;
 	*
 	* @throws InterruptedException if the current thread is interrupted
 	*/
-	@:overload public function lockInterruptibly() : Void;
+	@:overload @:public public function lockInterruptibly() : Void;
 	
 	/**
 	* Acquires the write lock only if it is not held by another thread
@@ -797,7 +797,7 @@ package java.util.concurrent.locks;
 	* by the current thread, or the write lock was already held
 	* by the current thread; and {@code false} otherwise.
 	*/
-	@:overload public function tryLock() : Bool;
+	@:overload @:public public function tryLock() : Bool;
 	
 	/**
 	* Acquires the write lock if it is not held by another thread
@@ -876,7 +876,7 @@ package java.util.concurrent.locks;
 	* @throws NullPointerException if the time unit is null
 	*
 	*/
-	@:overload public function tryLock(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function tryLock(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Attempts to release this lock.
@@ -890,7 +890,7 @@ package java.util.concurrent.locks;
 	* @throws IllegalMonitorStateException if the current thread does not
 	* hold this lock.
 	*/
-	@:overload public function unlock() : Void;
+	@:overload @:public public function unlock() : Void;
 	
 	/**
 	* Returns a {@link Condition} instance for use with this
@@ -935,7 +935,7 @@ package java.util.concurrent.locks;
 	*
 	* @return the Condition object
 	*/
-	@:overload public function newCondition() : java.util.concurrent.locks.Condition;
+	@:overload @:public public function newCondition() : java.util.concurrent.locks.Condition;
 	
 	/**
 	* Returns a string identifying this lock, as well as its lock
@@ -945,7 +945,7 @@ package java.util.concurrent.locks;
 	*
 	* @return a string identifying this lock, as well as its lock state
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Queries if this write lock is held by the current thread.
@@ -956,7 +956,7 @@ package java.util.concurrent.locks;
 	*         {@code false} otherwise
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function isHeldByCurrentThread() : Bool;
+	@:require(java6) @:overload @:public public function isHeldByCurrentThread() : Bool;
 	
 	/**
 	* Queries the number of holds on this write lock by the current
@@ -968,7 +968,7 @@ package java.util.concurrent.locks;
 	*         or zero if this lock is not held by the current thread
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getHoldCount() : Int;
+	@:require(java6) @:overload @:public public function getHoldCount() : Int;
 	
 	
 }

@@ -32,31 +32,31 @@ package sun.java2d.pipe.hw;
 extern class ContextCapabilities
 {
 	/** Indicates that the context has no capabilities. */
-	public static var CAPS_EMPTY(default, null) : Int;
+	@:public @:static @:final public static var CAPS_EMPTY(default, null) : Int;
 	
 	/** Indicates that the context supports RT surfaces with alpha channel. */
-	public static var CAPS_RT_PLAIN_ALPHA(default, null) : Int;
+	@:public @:static @:final public static var CAPS_RT_PLAIN_ALPHA(default, null) : Int;
 	
 	/** Indicates that the context supports RT textures with alpha channel. */
-	public static var CAPS_RT_TEXTURE_ALPHA(default, null) : Int;
+	@:public @:static @:final public static var CAPS_RT_TEXTURE_ALPHA(default, null) : Int;
 	
 	/** Indicates that the context supports opaque RT textures. */
-	public static var CAPS_RT_TEXTURE_OPAQUE(default, null) : Int;
+	@:public @:static @:final public static var CAPS_RT_TEXTURE_OPAQUE(default, null) : Int;
 	
 	/** Indicates that the context supports multitexturing. */
-	public static var CAPS_MULTITEXTURE(default, null) : Int;
+	@:public @:static @:final public static var CAPS_MULTITEXTURE(default, null) : Int;
 	
 	/** Indicates that the context supports non-pow2 texture dimensions. */
-	public static var CAPS_TEXNONPOW2(default, null) : Int;
+	@:public @:static @:final public static var CAPS_TEXNONPOW2(default, null) : Int;
 	
 	/** Indicates that the context supports non-square textures. */
-	public static var CAPS_TEXNONSQUARE(default, null) : Int;
+	@:public @:static @:final public static var CAPS_TEXNONSQUARE(default, null) : Int;
 	
 	/** Indicates that the context supports pixel shader 2.0 or better. */
-	public static var CAPS_PS20(default, null) : Int;
+	@:public @:static @:final public static var CAPS_PS20(default, null) : Int;
 	
 	/** Indicates that the context supports pixel shader 3.0 or better. */
-	public static var CAPS_PS30(default, null) : Int;
+	@:public @:static @:final public static var CAPS_PS30(default, null) : Int;
 	
 	/*
 	*  Pipeline contexts should use this for defining pipeline-specific
@@ -64,11 +64,11 @@ extern class ContextCapabilities
 	*    int CAPS_D3D_1 = (FIRST_PRIVATE_CAP << 0);
 	*    int CAPS_D3D_2 = (FIRST_PRIVATE_CAP << 1);
 	*/
-	private static var FIRST_PRIVATE_CAP(default, null) : Int;
+	@:protected @:static @:final private static var FIRST_PRIVATE_CAP(default, null) : Int;
 	
-	private var caps(default, null) : Int;
+	@:protected @:final private var caps(default, null) : Int;
 	
-	private var adapterId(default, null) : String;
+	@:protected @:final private var adapterId(default, null) : String;
 	
 	/**
 	* Constructs a {@code ContextCapabilities} object.
@@ -76,23 +76,23 @@ extern class ContextCapabilities
 	* @param a {@code String} representing the name of the adapter, or null,
 	* in which case the adapterId will be set to "unknown adapter".
 	*/
-	@:overload private function new(caps : Int, adapterId : String) : Void;
+	@:overload @:protected private function new(caps : Int, adapterId : String) : Void;
 	
 	/**
 	* Returns a string representing the name of the graphics adapter if such
 	* could be determined. It is guaranteed to never return {@code null}.
 	* @return string representing adapter id
 	*/
-	@:overload public function getAdapterId() : String;
+	@:overload @:public public function getAdapterId() : String;
 	
 	/**
 	* Returns an {@code int} with capabilities (OR-ed constants defined in
 	* this class and its pipeline-specific subclasses).
 	* @return capabilities as {@code int}
 	*/
-	@:overload public function getCaps() : Int;
+	@:overload @:public public function getCaps() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

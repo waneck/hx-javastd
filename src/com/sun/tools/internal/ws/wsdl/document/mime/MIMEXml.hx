@@ -30,15 +30,15 @@ extern class MIMEXml extends com.sun.tools.internal.ws.wsdl.framework.ExtensionI
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function getPart() : String;
+	@:overload @:public public function getPart() : String;
 	
-	@:overload public function setPart(s : String) : Void;
+	@:overload @:public public function setPart(s : String) : Void;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload @:public override public function validateThis() : Void;
 	
 	
 }

@@ -31,9 +31,9 @@ package sun.jvmstat.perfdata.monitor;
 */
 @:require(java5) extern class SyntaxException extends java.lang.Exception
 {
-	@:overload public function new(lineno : Int) : Void;
+	@:overload @:public public function new(lineno : Int) : Void;
 	
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

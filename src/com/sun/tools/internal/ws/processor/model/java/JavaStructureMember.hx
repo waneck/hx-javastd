@@ -29,47 +29,47 @@ package com.sun.tools.internal.ws.processor.model.java;
 */
 extern class JavaStructureMember
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : String, type : com.sun.tools.internal.ws.processor.model.java.JavaType, owner : Dynamic) : Void;
+	@:overload @:public public function new(name : String, type : com.sun.tools.internal.ws.processor.model.java.JavaType, owner : Dynamic) : Void;
 	
-	@:overload public function new(name : String, type : com.sun.tools.internal.ws.processor.model.java.JavaType, owner : Dynamic, isPublic : Bool) : Void;
+	@:overload @:public public function new(name : String, type : com.sun.tools.internal.ws.processor.model.java.JavaType, owner : Dynamic, isPublic : Bool) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(s : String) : Void;
+	@:overload @:public public function setName(s : String) : Void;
 	
-	@:overload public function getType() : com.sun.tools.internal.ws.processor.model.java.JavaType;
+	@:overload @:public public function getType() : com.sun.tools.internal.ws.processor.model.java.JavaType;
 	
-	@:overload public function setType(t : com.sun.tools.internal.ws.processor.model.java.JavaType) : Void;
+	@:overload @:public public function setType(t : com.sun.tools.internal.ws.processor.model.java.JavaType) : Void;
 	
-	@:overload public function isPublic() : Bool;
+	@:overload @:public public function isPublic() : Bool;
 	
-	@:overload public function setPublic(b : Bool) : Void;
+	@:overload @:public public function setPublic(b : Bool) : Void;
 	
-	@:overload public function isInherited() : Bool;
+	@:overload @:public public function isInherited() : Bool;
 	
-	@:overload public function setInherited(b : Bool) : Void;
+	@:overload @:public public function setInherited(b : Bool) : Void;
 	
-	@:overload public function getReadMethod() : String;
+	@:overload @:public public function getReadMethod() : String;
 	
-	@:overload public function setReadMethod(readMethod : String) : Void;
+	@:overload @:public public function setReadMethod(readMethod : String) : Void;
 	
-	@:overload public function getWriteMethod() : String;
+	@:overload @:public public function getWriteMethod() : String;
 	
-	@:overload public function setWriteMethod(writeMethod : String) : Void;
+	@:overload @:public public function setWriteMethod(writeMethod : String) : Void;
 	
-	@:overload public function getDeclaringClass() : String;
+	@:overload @:public public function getDeclaringClass() : String;
 	
-	@:overload public function setDeclaringClass(declaringClass : String) : Void;
+	@:overload @:public public function setDeclaringClass(declaringClass : String) : Void;
 	
-	@:overload public function getOwner() : Dynamic;
+	@:overload @:public public function getOwner() : Dynamic;
 	
-	@:overload public function setOwner(owner : Dynamic) : Void;
+	@:overload @:public public function setOwner(owner : Dynamic) : Void;
 	
-	@:overload public function getConstructorPos() : Int;
+	@:overload @:public public function getConstructorPos() : Int;
 	
-	@:overload public function setConstructorPos(idx : Int) : Void;
+	@:overload @:public public function setConstructorPos(idx : Int) : Void;
 	
 	
 }

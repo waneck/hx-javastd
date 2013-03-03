@@ -40,7 +40,7 @@ package com.sun.beans.decoder;
 	* @param name   the attribute name
 	* @param value  the attribute value
 	*/
-	@:overload override public function addAttribute(name : String, value : String) : Void;
+	@:overload @:public override public function addAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Tests whether the value of this element can be used
@@ -50,7 +50,7 @@ package com.sun.beans.decoder;
 	*         as an argument of the element that contained in this one,
 	*         {@code false} otherwise
 	*/
-	@:overload override private function isArgument() : Bool;
+	@:overload @:protected override private function isArgument() : Bool;
 	
 	/**
 	* Returns the context of the field.
@@ -59,7 +59,7 @@ package com.sun.beans.decoder;
 	*
 	* @return the context of the field
 	*/
-	@:overload override private function getContextBean() : Dynamic;
+	@:overload @:protected override private function getContextBean() : Dynamic;
 	
 	/**
 	* Returns the value of the field with specified {@code name}.
@@ -67,7 +67,7 @@ package com.sun.beans.decoder;
 	* @param name  the name of the field
 	* @return the value of the specified field
 	*/
-	@:overload override private function getValue(name : String) : Dynamic;
+	@:overload @:protected override private function getValue(name : String) : Dynamic;
 	
 	/**
 	* Sets the new value for the field with specified {@code name}.
@@ -75,7 +75,7 @@ package com.sun.beans.decoder;
 	* @param name   the name of the field
 	* @param value  the new value for the specified field
 	*/
-	@:overload override private function setValue(name : String, value : Dynamic) : Void;
+	@:overload @:protected override private function setValue(name : String, value : Dynamic) : Void;
 	
 	
 }

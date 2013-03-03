@@ -35,7 +35,7 @@ extern interface LdapContext extends javax.naming.directory.DirContext
 	* @throws NamingException If an error occurred while performing the
 	* extended operation.
 	*/
-	@:overload public function extendedOperation(request : javax.naming.ldap.ExtendedRequest) : javax.naming.ldap.ExtendedResponse;
+	@:overload @:public public function extendedOperation(request : javax.naming.ldap.ExtendedRequest) : javax.naming.ldap.ExtendedResponse;
 	
 	/**
 	* Creates a new instance of this context initialized using request controls.
@@ -63,7 +63,7 @@ extern interface LdapContext extends javax.naming.directory.DirContext
 	* the new instance.
 	* @see InitialLdapContext
 	*/
-	@:overload public function newInstance(requestControls : java.NativeArray<javax.naming.ldap.Control>) : javax.naming.ldap.LdapContext;
+	@:overload @:public public function newInstance(requestControls : java.NativeArray<javax.naming.ldap.Control>) : javax.naming.ldap.LdapContext;
 	
 	/**
 	* Reconnects to the LDAP server using the supplied controls and
@@ -93,7 +93,7 @@ extern interface LdapContext extends javax.naming.directory.DirContext
 	* @see #getConnectControls
 	* @see #newInstance
 	*/
-	@:overload public function reconnect(connCtls : java.NativeArray<javax.naming.ldap.Control>) : Void;
+	@:overload @:public public function reconnect(connCtls : java.NativeArray<javax.naming.ldap.Control>) : Void;
 	
 	/**
 	* Retrieves the connection request controls in effect for this context.
@@ -106,7 +106,7 @@ extern interface LdapContext extends javax.naming.directory.DirContext
 	* @exception NamingException If an error occurred while getting the request
 	* controls.
 	*/
-	@:overload public function getConnectControls() : java.NativeArray<javax.naming.ldap.Control>;
+	@:overload @:public public function getConnectControls() : java.NativeArray<javax.naming.ldap.Control>;
 	
 	/**
 	* Sets the request controls for methods subsequently
@@ -133,7 +133,7 @@ extern interface LdapContext extends javax.naming.directory.DirContext
 	* request controls.
 	* @see #getRequestControls
 	*/
-	@:overload public function setRequestControls(requestControls : java.NativeArray<javax.naming.ldap.Control>) : Void;
+	@:overload @:public public function setRequestControls(requestControls : java.NativeArray<javax.naming.ldap.Control>) : Void;
 	
 	/**
 	* Retrieves the request controls in effect for this context.
@@ -147,7 +147,7 @@ extern interface LdapContext extends javax.naming.directory.DirContext
 	* controls.
 	* @see #setRequestControls
 	*/
-	@:overload public function getRequestControls() : java.NativeArray<javax.naming.ldap.Control>;
+	@:overload @:public public function getRequestControls() : java.NativeArray<javax.naming.ldap.Control>;
 	
 	/**
 	* Retrieves the response controls produced as a result of the last
@@ -174,7 +174,7 @@ extern interface LdapContext extends javax.naming.directory.DirContext
 	* @exception NamingException If an error occurred while getting the response
 	* controls.
 	*/
-	@:overload public function getResponseControls() : java.NativeArray<javax.naming.ldap.Control>;
+	@:overload @:public public function getResponseControls() : java.NativeArray<javax.naming.ldap.Control>;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class SynthStyleFactory
 	/**
 	* Creates a <code>SynthStyleFactory</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the style for the specified Component.
@@ -37,7 +37,7 @@ extern class SynthStyleFactory
 	* @param id Region identifier
 	* @return SynthStyle for region.
 	*/
-	@:overload @:abstract public function getStyle(c : javax.swing.JComponent, id : javax.swing.plaf.synth.Region) : javax.swing.plaf.synth.SynthStyle;
+	@:overload @:public @:abstract public function getStyle(c : javax.swing.JComponent, id : javax.swing.plaf.synth.Region) : javax.swing.plaf.synth.SynthStyle;
 	
 	
 }

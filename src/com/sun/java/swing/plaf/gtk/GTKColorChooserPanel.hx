@@ -34,40 +34,40 @@ package com.sun.java.swing.plaf.gtk;
 	/**
 	* Returns a user presentable description of this GTKColorChooserPane.
 	*/
-	@:overload override public function getDisplayName() : String;
+	@:overload @:public override public function getDisplayName() : String;
 	
 	/**
 	* Returns the mnemonic to use with <code>getDisplayName</code>.
 	*/
-	@:overload override public function getMnemonic() : Int;
+	@:overload @:public override public function getMnemonic() : Int;
 	
 	/**
 	* Character to underline that represents the mnemonic.
 	*/
-	@:overload override public function getDisplayedMnemonicIndex() : Int;
+	@:overload @:public override public function getDisplayedMnemonicIndex() : Int;
 	
-	@:overload override public function getSmallDisplayIcon() : javax.swing.Icon;
+	@:overload @:public override public function getSmallDisplayIcon() : javax.swing.Icon;
 	
-	@:overload override public function getLargeDisplayIcon() : javax.swing.Icon;
+	@:overload @:public override public function getLargeDisplayIcon() : javax.swing.Icon;
 	
-	@:overload override public function uninstallChooserPanel(enclosingChooser : javax.swing.JColorChooser) : Void;
+	@:overload @:public override public function uninstallChooserPanel(enclosingChooser : javax.swing.JColorChooser) : Void;
 	
 	/**
 	* Builds and configures the widgets for the GTKColorChooserPanel.
 	*/
-	@:overload override private function buildChooser() : Void;
+	@:overload @:protected override private function buildChooser() : Void;
 	
 	/**
 	* Refreshes the display from the model.
 	*/
-	@:overload override public function updateChooser() : Void;
+	@:overload @:public override public function updateChooser() : Void;
 	
-	@:overload public function getColor() : java.awt.Color;
+	@:overload @:public public function getColor() : java.awt.Color;
 	
 	/**
 	* ChangeListener method, updates the necessary display widgets.
 	*/
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }
@@ -76,21 +76,21 @@ package com.sun.java.swing.plaf.gtk;
 */
 @:native('com$sun$java$swing$plaf$gtk$GTKColorChooserPanel$ColorTriangle') @:internal extern class GTKColorChooserPanel_ColorTriangle extends javax.swing.JPanel
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Resets the selected color.
 	*/
-	@:overload public function setColor(h : Single, s : Single, b : Single) : Void;
+	@:overload @:public public function setColor(h : Single, s : Single, b : Single) : Void;
 	
 	/**
 	* Returns the selected color.
 	*/
-	@:overload public function getColor() : java.awt.Color;
+	@:overload @:public public function getColor() : java.awt.Color;
 	
-	@:overload override private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:overload @:protected override private function processEvent(e : java.awt.AWTEvent) : Void;
 	
-	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	
 }
@@ -99,13 +99,13 @@ package com.sun.java.swing.plaf.gtk;
 */
 @:native('com$sun$java$swing$plaf$gtk$GTKColorChooserPanel$ColorAction') @:internal extern class GTKColorChooserPanel_ColorAction extends javax.swing.AbstractAction
 {
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$gtk$GTKColorChooserPanel$OpaqueLabel') @:internal extern class GTKColorChooserPanel_OpaqueLabel extends javax.swing.JLabel
 {
-	@:overload public function isOpaque() : Bool;
+	@:overload @:public override public function isOpaque() : Bool;
 	
 	
 }

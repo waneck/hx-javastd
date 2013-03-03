@@ -37,7 +37,7 @@ extern class SQLClientInfoException extends java.sql.SQLException
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new() : Void;
+	@:require(java6) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>SQLClientInfoException</code> object initialized with a
@@ -59,7 +59,7 @@ extern class SQLClientInfoException extends java.sql.SQLException
 	* <p>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(failedProperties : java.util.Map<String, java.sql.ClientInfoStatus>) : Void;
+	@:require(java6) @:overload @:public public function new(failedProperties : java.util.Map<String, java.sql.ClientInfoStatus>) : Void;
 	
 	/**
 	* Constructs a <code>SQLClientInfoException</code> object initialized with
@@ -82,7 +82,7 @@ extern class SQLClientInfoException extends java.sql.SQLException
 	* <p>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(failedProperties : java.util.Map<String, java.sql.ClientInfoStatus>, cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(failedProperties : java.util.Map<String, java.sql.ClientInfoStatus>, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a <code>SQLClientInfoException</code> object initialized with a
@@ -105,7 +105,7 @@ extern class SQLClientInfoException extends java.sql.SQLException
 	* <p>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, failedProperties : java.util.Map<String, java.sql.ClientInfoStatus>) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, failedProperties : java.util.Map<String, java.sql.ClientInfoStatus>) : Void;
 	
 	/**
 	* Constructs a <code>SQLClientInfoException</code> object initialized with a
@@ -127,7 +127,7 @@ extern class SQLClientInfoException extends java.sql.SQLException
 	* <p>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, failedProperties : java.util.Map<String, java.sql.ClientInfoStatus>, cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, failedProperties : java.util.Map<String, java.sql.ClientInfoStatus>, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a <code>SQLClientInfoException</code> object initialized with a
@@ -150,7 +150,7 @@ extern class SQLClientInfoException extends java.sql.SQLException
 	* <p>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, SQLState : String, failedProperties : java.util.Map<String, java.sql.ClientInfoStatus>) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, SQLState : String, failedProperties : java.util.Map<String, java.sql.ClientInfoStatus>) : Void;
 	
 	/**
 	* Constructs a <code>SQLClientInfoException</code> object initialized with a
@@ -171,7 +171,7 @@ extern class SQLClientInfoException extends java.sql.SQLException
 	* <p>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, SQLState : String, failedProperties : java.util.Map<String, java.sql.ClientInfoStatus>, cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, SQLState : String, failedProperties : java.util.Map<String, java.sql.ClientInfoStatus>, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a <code>SQLClientInfoException</code> object initialized with a
@@ -194,7 +194,7 @@ extern class SQLClientInfoException extends java.sql.SQLException
 	* <p>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, SQLState : String, vendorCode : Int, failedProperties : java.util.Map<String, java.sql.ClientInfoStatus>) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, SQLState : String, vendorCode : Int, failedProperties : java.util.Map<String, java.sql.ClientInfoStatus>) : Void;
 	
 	/**
 	* Constructs a <code>SQLClientInfoException</code> object initialized with a
@@ -217,7 +217,7 @@ extern class SQLClientInfoException extends java.sql.SQLException
 	* <p>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, SQLState : String, vendorCode : Int, failedProperties : java.util.Map<String, java.sql.ClientInfoStatus>, cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, SQLState : String, vendorCode : Int, failedProperties : java.util.Map<String, java.sql.ClientInfoStatus>, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Returns the list of client info properties that could not be set.  The
@@ -231,7 +231,7 @@ extern class SQLClientInfoException extends java.sql.SQLException
 	* <p>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getFailedProperties() : java.util.Map<String, java.sql.ClientInfoStatus>;
+	@:require(java6) @:overload @:public public function getFailedProperties() : java.util.Map<String, java.sql.ClientInfoStatus>;
 	
 	
 }

@@ -25,7 +25,7 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsDesktopManager extends javax.swing.DefaultDesktopManager implements java.io.Serializable implements javax.swing.plaf.UIResource
 {
-	@:overload override public function activateFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public override public function activateFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	
 }

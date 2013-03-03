@@ -46,7 +46,7 @@ package javax.accessibility;
 	*
 	* @return the zero-based number of key bindings for this object
 	*/
-	@:overload public function getAccessibleKeyBindingCount() : Int;
+	@:overload @:public public function getAccessibleKeyBindingCount() : Int;
 	
 	/**
 	* Returns a key binding for this object.  The value returned is an
@@ -57,7 +57,7 @@ package javax.accessibility;
 	* @return a javax.lang.Object which specifies the key binding
 	* @see #getAccessibleKeyBindingCount
 	*/
-	@:overload public function getAccessibleKeyBinding(i : Int) : Dynamic;
+	@:overload @:public public function getAccessibleKeyBinding(i : Int) : Dynamic;
 	
 	
 }

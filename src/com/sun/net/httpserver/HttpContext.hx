@@ -37,13 +37,13 @@ package com.sun.net.httpserver;
 */
 @:require(java6) extern class HttpContext
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* returns the handler for this context
 	* @return the HttpHandler for this context
 	*/
-	@:overload @:abstract public function getHandler() : com.sun.net.httpserver.HttpHandler;
+	@:overload @:public @:abstract public function getHandler() : com.sun.net.httpserver.HttpHandler;
 	
 	/**
 	* Sets the handler for this context, if not already set.
@@ -51,19 +51,19 @@ package com.sun.net.httpserver;
 	* @throws IllegalArgumentException if this context's handler is already set.
 	* @throws NullPointerException if handler is <code>null</code>
 	*/
-	@:overload @:abstract public function setHandler(h : com.sun.net.httpserver.HttpHandler) : Void;
+	@:overload @:public @:abstract public function setHandler(h : com.sun.net.httpserver.HttpHandler) : Void;
 	
 	/**
 	* returns the path this context was created with
 	* @return this context's path
 	*/
-	@:overload @:abstract public function getPath() : String;
+	@:overload @:public @:abstract public function getPath() : String;
 	
 	/**
 	* returns the server this context was created with
 	* @return this context's server
 	*/
-	@:overload @:abstract public function getServer() : com.sun.net.httpserver.HttpServer;
+	@:overload @:public @:abstract public function getServer() : com.sun.net.httpserver.HttpServer;
 	
 	/**
 	* returns a mutable Map, which can be used to pass
@@ -73,7 +73,7 @@ package com.sun.net.httpserver;
 	* Every attribute stored in this Map will be visible to
 	* every HttpExchange processed by this context
 	*/
-	@:overload @:abstract public function getAttributes() : java.util.Map<String, Dynamic>;
+	@:overload @:public @:abstract public function getAttributes() : java.util.Map<String, Dynamic>;
 	
 	/**
 	* returns this context's list of Filters. This is the
@@ -81,7 +81,7 @@ package com.sun.net.httpserver;
 	* so modifications to this list immediately affect the
 	* the handling of exchanges.
 	*/
-	@:overload @:abstract public function getFilters() : java.util.List<com.sun.net.httpserver.Filter>;
+	@:overload @:public @:abstract public function getFilters() : java.util.List<com.sun.net.httpserver.Filter>;
 	
 	/**
 	* Sets the Authenticator for this HttpContext. Once an authenticator
@@ -94,7 +94,7 @@ package com.sun.net.httpserver;
 	* @return the previous Authenticator, if any set, or <code>null</code>
 	*         otherwise.
 	*/
-	@:overload @:abstract public function setAuthenticator(auth : java.net.Authenticator) : java.net.Authenticator;
+	@:overload @:public @:abstract public function setAuthenticator(auth : java.net.Authenticator) : java.net.Authenticator;
 	
 	/**
 	* Returns the currently set Authenticator for this context
@@ -102,7 +102,7 @@ package com.sun.net.httpserver;
 	* @return this HttpContext's Authenticator, or <code>null</code>
 	*         if none is set.
 	*/
-	@:overload @:abstract public function getAuthenticator() : java.net.Authenticator;
+	@:overload @:public @:abstract public function getAuthenticator() : java.net.Authenticator;
 	
 	
 }

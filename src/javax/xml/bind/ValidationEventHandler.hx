@@ -88,7 +88,7 @@ package javax.xml.bind;
 	*         <tt>ValidationException</tt>, or <tt>MarshalException</tt>.
 	* @throws IllegalArgumentException if the event object is null.
 	*/
-	@:overload public function handleEvent(event : javax.xml.bind.ValidationEvent) : Bool;
+	@:overload @:public @:public public function handleEvent(event : javax.xml.bind.ValidationEvent) : Bool;
 	
 	
 }

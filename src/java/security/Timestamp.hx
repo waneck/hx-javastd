@@ -32,21 +32,21 @@ extern class Timestamp implements java.io.Serializable
 	* @param signerCertPath is the TSA's certificate path. It must not be null.
 	* @throws NullPointerException if timestamp or signerCertPath is null.
 	*/
-	@:overload public function new(timestamp : java.util.Date, signerCertPath : java.security.cert.CertPath) : Void;
+	@:overload @:public public function new(timestamp : java.util.Date, signerCertPath : java.security.cert.CertPath) : Void;
 	
 	/**
 	* Returns the date and time when the timestamp was generated.
 	*
 	* @return The timestamp's date and time.
 	*/
-	@:overload public function getTimestamp() : java.util.Date;
+	@:overload @:public public function getTimestamp() : java.util.Date;
 	
 	/**
 	* Returns the certificate path for the Timestamping Authority.
 	*
 	* @return The TSA's certificate path.
 	*/
-	@:overload public function getSignerCertPath() : java.security.cert.CertPath;
+	@:overload @:public public function getSignerCertPath() : java.security.cert.CertPath;
 	
 	/**
 	* Returns the hash code value for this timestamp.
@@ -55,7 +55,7 @@ extern class Timestamp implements java.io.Serializable
 	*
 	* @return a hash code value for this timestamp.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Tests for equality between the specified object and this
@@ -66,7 +66,7 @@ extern class Timestamp implements java.io.Serializable
 	*
 	* @return true if the timestamp are considered equal, false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a string describing this timestamp.
@@ -74,7 +74,7 @@ extern class Timestamp implements java.io.Serializable
 	* @return A string comprising the date and time of the timestamp and
 	*         its signer's certificate.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -25,19 +25,19 @@ package com.sun.xml.internal.bind.v2.model.annotation;
 */
 @:internal extern class XmlSchemaTypeQuick extends com.sun.xml.internal.bind.v2.model.annotation.Quick implements javax.xml.bind.annotation.XmlSchemaType
 {
-	@:overload public function new(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : javax.xml.bind.annotation.XmlSchemaType) : Void;
+	@:overload @:public public function new(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : javax.xml.bind.annotation.XmlSchemaType) : Void;
 	
-	@:overload override private function getAnnotation() : java.lang.annotation.Annotation;
+	@:overload @:protected override private function getAnnotation() : java.lang.annotation.Annotation;
 	
-	@:overload override private function newInstance(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : java.lang.annotation.Annotation) : com.sun.xml.internal.bind.v2.model.annotation.Quick;
+	@:overload @:protected override private function newInstance(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : java.lang.annotation.Annotation) : com.sun.xml.internal.bind.v2.model.annotation.Quick;
 	
-	@:overload override public function annotationType() : Class<javax.xml.bind.annotation.XmlSchemaType>;
+	@:overload @:public override public function annotationType() : Class<javax.xml.bind.annotation.XmlSchemaType>;
 	
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function type() : Class<Dynamic>;
+	@:overload @:public public function type() : Class<Dynamic>;
 	
-	@:overload public function namespace() : String;
+	@:overload @:public public function namespace() : String;
 	
 	
 }

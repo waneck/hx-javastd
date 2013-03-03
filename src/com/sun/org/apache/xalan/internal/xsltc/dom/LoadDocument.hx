@@ -30,7 +30,7 @@ extern class LoadDocument
 	* several documents are requested.
 	* 2 arguments arg1 and arg2.  document(Obj, node-set) call
 	*/
-	@:overload public static function documentF(arg1 : Dynamic, arg2 : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, xslURI : String, translet : com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet, dom : com.sun.org.apache.xalan.internal.xsltc.DOM) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public @:static public static function documentF(arg1 : Dynamic, arg2 : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, xslURI : String, translet : com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet, dom : com.sun.org.apache.xalan.internal.xsltc.DOM) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Interprets the arguments passed from the document() function (see
@@ -39,7 +39,7 @@ extern class LoadDocument
 	* several documents are requested.
 	* 1 arguments arg.  document(Obj) call
 	*/
-	@:overload public static function documentF(arg : Dynamic, xslURI : String, translet : com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet, dom : com.sun.org.apache.xalan.internal.xsltc.DOM) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public @:static public static function documentF(arg : Dynamic, xslURI : String, translet : com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet, dom : com.sun.org.apache.xalan.internal.xsltc.DOM) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	
 }

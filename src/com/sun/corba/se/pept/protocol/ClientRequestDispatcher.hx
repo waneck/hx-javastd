@@ -41,7 +41,7 @@ extern interface ClientRequestDispatcher
 	* @return
 	* {@link com.sun.corba.se.pept.encoding.OutputObject OutputObject}
 	*/
-	@:overload public function beginRequest(self : Dynamic, methodName : String, isOneWay : Bool, contactInfo : com.sun.corba.se.pept.transport.ContactInfo) : com.sun.corba.se.pept.encoding.OutputObject;
+	@:overload @:public public function beginRequest(self : Dynamic, methodName : String, isOneWay : Bool, contactInfo : com.sun.corba.se.pept.transport.ContactInfo) : com.sun.corba.se.pept.encoding.OutputObject;
 	
 	/**
 	* After the presentation block has set data on the
@@ -64,7 +64,7 @@ extern interface ClientRequestDispatcher
 	* {@link org.omg.CORBA.portable.RemarshalException RemarshalException}
 	* if the PEPt runtime would like the presentation block to start over.
 	*/
-	@:overload public function marshalingComplete(self : Dynamic, outputObject : com.sun.corba.se.pept.encoding.OutputObject) : com.sun.corba.se.pept.encoding.InputObject;
+	@:overload @:public public function marshalingComplete(self : Dynamic, outputObject : com.sun.corba.se.pept.encoding.OutputObject) : com.sun.corba.se.pept.encoding.InputObject;
 	
 	/**
 	* After the presentation block completes a request it signals
@@ -76,7 +76,7 @@ extern interface ClientRequestDispatcher
 	* @param broker -
 	* @param inputObject -
 	*/
-	@:overload public function endRequest(broker : com.sun.corba.se.pept.broker.Broker, self : Dynamic, inputObject : com.sun.corba.se.pept.encoding.InputObject) : Void;
+	@:overload @:public public function endRequest(broker : com.sun.corba.se.pept.broker.Broker, self : Dynamic, inputObject : com.sun.corba.se.pept.encoding.InputObject) : Void;
 	
 	
 }

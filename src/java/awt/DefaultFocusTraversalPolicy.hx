@@ -43,7 +43,7 @@ extern class DefaultFocusTraversalPolicy extends java.awt.ContainerOrderFocusTra
 	* @return <code>true</code> if aComponent meets the above requirements;
 	*         <code>false</code> otherwise
 	*/
-	@:overload override private function accept(aComponent : java.awt.Component) : Bool;
+	@:overload @:protected override private function accept(aComponent : java.awt.Component) : Bool;
 	
 	
 }

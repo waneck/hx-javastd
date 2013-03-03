@@ -35,27 +35,27 @@ extern class BatchEnvironment extends sun.rmi.rmic.BatchEnvironment implements s
 	* Create a BatchEnvironment for rmic with the given class path,
 	* stream for messages and Main.
 	*/
-	@:overload override public function new(out : java.io.OutputStream, path : sun.tools.java.ClassPath, main : sun.rmi.rmic.Main) : Void;
+	@:overload @:public override public function new(out : java.io.OutputStream, path : sun.tools.java.ClassPath, main : sun.rmi.rmic.Main) : Void;
 	
 	/**
 	* Return whether or not to parse non-conforming types.
 	*/
-	@:overload public function getParseNonConforming() : Bool;
+	@:overload @:public public function getParseNonConforming() : Bool;
 	
 	/**
 	* Set whether or not to parse non-conforming types.
 	*/
-	@:overload public function setParseNonConforming(parseEm : Bool) : Void;
+	@:overload @:public public function setParseNonConforming(parseEm : Bool) : Void;
 	
 	/**
 	* Clear out any data from previous executions.
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* Release resources, if any.
 	*/
-	@:overload override public function shutdown() : Void;
+	@:overload @:public override public function shutdown() : Void;
 	
 	
 }

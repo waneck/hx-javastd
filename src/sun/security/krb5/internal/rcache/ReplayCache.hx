@@ -35,13 +35,13 @@ extern class ReplayCache extends java.util.LinkedList<sun.security.krb5.internal
 	* @param p client principal name.
 	* @param ct CacheTable.
 	*/
-	@:overload public function new(p : String, ct : sun.security.krb5.internal.rcache.CacheTable) : Void;
+	@:overload @:public public function new(p : String, ct : sun.security.krb5.internal.rcache.CacheTable) : Void;
 	
 	/**
 	* Puts the authenticator timestamp into the cache in descending order.
 	* @param t <code>AuthTime</code>
 	*/
-	@:overload @:synchronized public function put(t : sun.security.krb5.internal.rcache.AuthTime, currentTime : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function put(t : sun.security.krb5.internal.rcache.AuthTime, currentTime : haxe.Int64) : Void;
 	
 	
 }

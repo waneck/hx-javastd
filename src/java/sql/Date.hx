@@ -49,7 +49,7 @@ extern class Date extends java.util.Date
 	* @param day 1 to 31
 	* @deprecated instead use the constructor <code>Date(long date)</code>
 	*/
-	@:overload override public function new(year : Int, month : Int, day : Int) : Void;
+	@:overload @:public override public function new(year : Int, month : Int, day : Int) : Void;
 	
 	/**
 	* Constructs a <code>Date</code> object using the given milliseconds
@@ -63,7 +63,7 @@ extern class Date extends java.util.Date
 	*        A negative number indicates the number of milliseconds
 	*        before January 1, 1970, 00:00:00 GMT.
 	*/
-	@:overload override public function new(date : haxe.Int64) : Void;
+	@:overload @:public override public function new(date : haxe.Int64) : Void;
 	
 	/**
 	* Sets an existing <code>Date</code> object
@@ -78,7 +78,7 @@ extern class Date extends java.util.Date
 	*        A negative number indicates the number of milliseconds
 	*        before January 1, 1970, 00:00:00 GMT.
 	*/
-	@:overload override public function setTime(date : haxe.Int64) : Void;
+	@:overload @:public override public function setTime(date : haxe.Int64) : Void;
 	
 	/**
 	* Converts a string in JDBC date escape format to
@@ -92,14 +92,14 @@ extern class Date extends java.util.Date
 	* @throws IllegalArgumentException if the date given is not in the
 	*         JDBC date escape format (yyyy-[m]m-[d]d)
 	*/
-	@:overload public static function valueOf(s : String) : java.util.Date;
+	@:overload @:public @:static public static function valueOf(s : String) : java.util.Date;
 	
 	/**
 	* Formats a date in the date escape format yyyy-mm-dd.
 	* <P>
 	* @return a String in yyyy-mm-dd format
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* This method is deprecated and should not be used because SQL Date
@@ -109,7 +109,7 @@ extern class Date extends java.util.Date
 	* @exception java.lang.IllegalArgumentException if this method is invoked
 	* @see #setHours
 	*/
-	@:overload override public function getHours() : Int;
+	@:overload @:public override public function getHours() : Int;
 	
 	/**
 	* This method is deprecated and should not be used because SQL Date
@@ -119,7 +119,7 @@ extern class Date extends java.util.Date
 	* @exception java.lang.IllegalArgumentException if this method is invoked
 	* @see #setMinutes
 	*/
-	@:overload override public function getMinutes() : Int;
+	@:overload @:public override public function getMinutes() : Int;
 	
 	/**
 	* This method is deprecated and should not be used because SQL Date
@@ -129,7 +129,7 @@ extern class Date extends java.util.Date
 	* @exception java.lang.IllegalArgumentException if this method is invoked
 	* @see #setSeconds
 	*/
-	@:overload override public function getSeconds() : Int;
+	@:overload @:public override public function getSeconds() : Int;
 	
 	/**
 	* This method is deprecated and should not be used because SQL Date
@@ -139,7 +139,7 @@ extern class Date extends java.util.Date
 	* @exception java.lang.IllegalArgumentException if this method is invoked
 	* @see #getHours
 	*/
-	@:overload override public function setHours(i : Int) : Void;
+	@:overload @:public override public function setHours(i : Int) : Void;
 	
 	/**
 	* This method is deprecated and should not be used because SQL Date
@@ -149,7 +149,7 @@ extern class Date extends java.util.Date
 	* @exception java.lang.IllegalArgumentException if this method is invoked
 	* @see #getMinutes
 	*/
-	@:overload override public function setMinutes(i : Int) : Void;
+	@:overload @:public override public function setMinutes(i : Int) : Void;
 	
 	/**
 	* This method is deprecated and should not be used because SQL Date
@@ -159,7 +159,7 @@ extern class Date extends java.util.Date
 	* @exception java.lang.IllegalArgumentException if this method is invoked
 	* @see #getSeconds
 	*/
-	@:overload override public function setSeconds(i : Int) : Void;
+	@:overload @:public override public function setSeconds(i : Int) : Void;
 	
 	
 }

@@ -34,7 +34,7 @@ extern class Pattern implements java.io.Serializable
 	* <p> Unix lines mode can also be enabled via the embedded flag
 	* expression&nbsp;<tt>(?d)</tt>.
 	*/
-	public static var UNIX_LINES(default, null) : Int;
+	@:public @:static @:final public static var UNIX_LINES(default, null) : Int;
 	
 	/**
 	* Enables case-insensitive matching.
@@ -49,7 +49,7 @@ extern class Pattern implements java.io.Serializable
 	*
 	* <p> Specifying this flag may impose a slight performance penalty.  </p>
 	*/
-	public static var CASE_INSENSITIVE(default, null) : Int;
+	@:public @:static @:final public static var CASE_INSENSITIVE(default, null) : Int;
 	
 	/**
 	* Permits whitespace and comments in pattern.
@@ -60,7 +60,7 @@ extern class Pattern implements java.io.Serializable
 	* <p> Comments mode can also be enabled via the embedded flag
 	* expression&nbsp;<tt>(?x)</tt>.
 	*/
-	public static var COMMENTS(default, null) : Int;
+	@:public @:static @:final public static var COMMENTS(default, null) : Int;
 	
 	/**
 	* Enables multiline mode.
@@ -73,7 +73,7 @@ extern class Pattern implements java.io.Serializable
 	* <p> Multiline mode can also be enabled via the embedded flag
 	* expression&nbsp;<tt>(?m)</tt>.  </p>
 	*/
-	public static var MULTILINE(default, null) : Int;
+	@:public @:static @:final public static var MULTILINE(default, null) : Int;
 	
 	/**
 	* Enables literal parsing of the pattern.
@@ -90,7 +90,7 @@ extern class Pattern implements java.io.Serializable
 	* <p> There is no embedded flag character for enabling literal parsing.
 	* @since 1.5
 	*/
-	@:require(java5) public static var LITERAL(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var LITERAL(default, null) : Int;
 	
 	/**
 	* Enables dotall mode.
@@ -103,7 +103,7 @@ extern class Pattern implements java.io.Serializable
 	* expression&nbsp;<tt>(?s)</tt>.  (The <tt>s</tt> is a mnemonic for
 	* "single-line" mode, which is what this is called in Perl.)  </p>
 	*/
-	public static var DOTALL(default, null) : Int;
+	@:public @:static @:final public static var DOTALL(default, null) : Int;
 	
 	/**
 	* Enables Unicode-aware case folding.
@@ -119,7 +119,7 @@ extern class Pattern implements java.io.Serializable
 	*
 	* <p> Specifying this flag may impose a performance penalty.  </p>
 	*/
-	public static var UNICODE_CASE(default, null) : Int;
+	@:public @:static @:final public static var UNICODE_CASE(default, null) : Int;
 	
 	/**
 	* Enables canonical equivalence.
@@ -135,7 +135,7 @@ extern class Pattern implements java.io.Serializable
 	*
 	* <p> Specifying this flag may impose a performance penalty.  </p>
 	*/
-	public static var CANON_EQ(default, null) : Int;
+	@:public @:static @:final public static var CANON_EQ(default, null) : Int;
 	
 	/**
 	* Enables the Unicode version of <i>Predefined character classes</i> and
@@ -157,7 +157,7 @@ extern class Pattern implements java.io.Serializable
 	* Specifying this flag may impose a performance penalty.  </p>
 	* @since 1.7
 	*/
-	@:require(java7) public static var UNICODE_CHARACTER_CLASS(default, null) : Int;
+	@:require(java7) @:public @:static @:final public static var UNICODE_CHARACTER_CLASS(default, null) : Int;
 	
 	/**
 	* Compiles the given regular expression into a pattern.  </p>
@@ -168,7 +168,7 @@ extern class Pattern implements java.io.Serializable
 	* @throws  PatternSyntaxException
 	*          If the expression's syntax is invalid
 	*/
-	@:native('compile') @:overload public static function _compile(regex : String) : java.util.regex.Pattern;
+	@:native('compile') @:overload @:public @:static public static function _compile(regex : String) : java.util.regex.Pattern;
 	
 	/**
 	* Compiles the given regular expression into a pattern with the given
@@ -191,7 +191,7 @@ extern class Pattern implements java.io.Serializable
 	* @throws  PatternSyntaxException
 	*          If the expression's syntax is invalid
 	*/
-	@:native('compile') @:overload public static function _compile(regex : String, flags : Int) : java.util.regex.Pattern;
+	@:native('compile') @:overload @:public @:static public static function _compile(regex : String, flags : Int) : java.util.regex.Pattern;
 	
 	/**
 	* Returns the regular expression from which this pattern was compiled.
@@ -199,7 +199,7 @@ extern class Pattern implements java.io.Serializable
 	*
 	* @return  The source of this pattern
 	*/
-	@:overload public function pattern() : String;
+	@:overload @:public public function pattern() : String;
 	
 	/**
 	* <p>Returns the string representation of this pattern. This
@@ -209,7 +209,7 @@ extern class Pattern implements java.io.Serializable
 	* @return  The string representation of this pattern
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function toString() : String;
+	@:require(java5) @:overload @:public public function toString() : String;
 	
 	/**
 	* Creates a matcher that will match the given input against this pattern.
@@ -220,14 +220,14 @@ extern class Pattern implements java.io.Serializable
 	*
 	* @return  A new matcher for this pattern
 	*/
-	@:overload public function matcher(input : java.lang.CharSequence) : java.util.regex.Matcher;
+	@:overload @:public public function matcher(input : java.lang.CharSequence) : java.util.regex.Matcher;
 	
 	/**
 	* Returns this pattern's match flags.  </p>
 	*
 	* @return  The match flags specified when this pattern was compiled
 	*/
-	@:overload public function flags() : Int;
+	@:overload @:public public function flags() : Int;
 	
 	/**
 	* Compiles the given regular expression and attempts to match the given
@@ -255,7 +255,7 @@ extern class Pattern implements java.io.Serializable
 	* @throws  PatternSyntaxException
 	*          If the expression's syntax is invalid
 	*/
-	@:overload public static function matches(regex : String, input : java.lang.CharSequence) : Bool;
+	@:overload @:public @:static public static function matches(regex : String, input : java.lang.CharSequence) : Bool;
 	
 	/**
 	* Splits the given input sequence around matches of this pattern.
@@ -317,7 +317,7 @@ extern class Pattern implements java.io.Serializable
 	* @return  The array of strings computed by splitting the input
 	*          around matches of this pattern
 	*/
-	@:overload public function split(input : java.lang.CharSequence, limit : Int) : java.NativeArray<String>;
+	@:overload @:public public function split(input : java.lang.CharSequence, limit : Int) : java.NativeArray<String>;
 	
 	/**
 	* Splits the given input sequence around matches of this pattern.
@@ -347,7 +347,7 @@ extern class Pattern implements java.io.Serializable
 	* @return  The array of strings computed by splitting the input
 	*          around matches of this pattern
 	*/
-	@:overload public function split(input : java.lang.CharSequence) : java.NativeArray<String>;
+	@:overload @:public public function split(input : java.lang.CharSequence) : java.NativeArray<String>;
 	
 	/**
 	* Returns a literal pattern <code>String</code> for the specified
@@ -363,7 +363,7 @@ extern class Pattern implements java.io.Serializable
 	* @return  A literal string replacement
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function quote(s : String) : String;
+	@:require(java5) @:overload @:public @:static public static function quote(s : String) : String;
 	
 	
 }
@@ -876,7 +876,7 @@ extern class Pattern implements java.io.Serializable
 }
 @:native('java$util$regex$Pattern$CharPropertyNames$CloneableProperty') @:internal extern class Pattern_CharPropertyNames_CloneableProperty extends java.util.regex.Pattern.Pattern_CharProperty implements java.lang.Cloneable
 {
-	@:overload override public function clone() : java.util.regex.Pattern.Pattern_CharPropertyNames_CloneableProperty;
+	@:overload @:public override public function clone() : java.util.regex.Pattern.Pattern_CharPropertyNames_CloneableProperty;
 	
 	
 }

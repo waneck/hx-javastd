@@ -40,11 +40,11 @@ package com.sun.tools.corba.se.idl;
 extern class InvalidArgument extends java.lang.Exception
 {
 	/** @param arg the invalid argument. */
-	@:overload public function new(arg : String) : Void;
+	@:overload @:public public function new(arg : String) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

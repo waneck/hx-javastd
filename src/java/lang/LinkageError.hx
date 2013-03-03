@@ -37,7 +37,7 @@ package java.lang;
 	/**
 	* Constructs a {@code LinkageError} with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a {@code LinkageError} with the specified detail
@@ -45,7 +45,7 @@ package java.lang;
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs a {@code LinkageError} with the specified detail
@@ -55,7 +55,7 @@ package java.lang;
 	* @param cause the cause, may be {@code null}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(s : String, cause : java.lang.Throwable) : Void;
+	@:require(java7) @:overload @:public public function new(s : String, cause : java.lang.Throwable) : Void;
 	
 	
 }

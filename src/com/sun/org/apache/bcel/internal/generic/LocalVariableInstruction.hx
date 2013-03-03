@@ -63,20 +63,20 @@ extern class LocalVariableInstruction extends com.sun.org.apache.bcel.internal.g
 	*
 	* @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
 	*/
-	private var n : Int;
+	@:protected private var n : Int;
 	
 	/**
 	* @param opcode Instruction opcode
 	* @param c_tag Instruction number for compact version, ALOAD_0, e.g.
 	* @param n local variable index (unsigned short)
 	*/
-	@:overload private function new(opcode : java.StdTypes.Int16, c_tag : java.StdTypes.Int16, n : Int) : Void;
+	@:overload @:protected private function new(opcode : java.StdTypes.Int16, c_tag : java.StdTypes.Int16, n : Int) : Void;
 	
 	/**
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload override public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload @:public override public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* Long output format:
@@ -87,27 +87,27 @@ extern class LocalVariableInstruction extends com.sun.org.apache.bcel.internal.g
 	* @param verbose long/short format switch
 	* @return mnemonic for instruction
 	*/
-	@:overload override public function toString(verbose : Bool) : String;
+	@:overload @:public override public function toString(verbose : Bool) : String;
 	
 	/**
 	* Read needed data (e.g. index) from file.
 	* PRE: (ILOAD <= tag <= ALOAD_3) || (ISTORE <= tag <= ASTORE_3)
 	*/
-	@:overload override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload @:protected override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
 	/**
 	* @return local variable index  referred by this instruction.
 	*/
-	@:overload @:final public function getIndex() : Int;
+	@:overload @:public @:final public function getIndex() : Int;
 	
 	/**
 	* Set the local variable index
 	*/
-	@:overload public function setIndex(n : Int) : Void;
+	@:overload @:public public function setIndex(n : Int) : Void;
 	
 	/** @return canonical tag for instruction, e.g., ALOAD for ALOAD_0
 	*/
-	@:overload public function getCanonicalTag() : java.StdTypes.Int16;
+	@:overload @:public public function getCanonicalTag() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the type associated with the instruction -
@@ -117,7 +117,7 @@ extern class LocalVariableInstruction extends com.sun.org.apache.bcel.internal.g
 	* ASTORE may even work on a ReturnaddressType .
 	* @return type associated with the instruction
 	*/
-	@:overload public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	
 }

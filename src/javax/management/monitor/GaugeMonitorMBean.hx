@@ -33,7 +33,7 @@ extern interface GaugeMonitorMBean extends javax.management.monitor.MonitorMBean
 	* @return The derived gauge.
 	* @deprecated As of JMX 1.2, replaced by {@link #getDerivedGauge(ObjectName)}
 	*/
-	@:overload public function getDerivedGauge() : java.lang.Number;
+	@:overload @:public public function getDerivedGauge() : java.lang.Number;
 	
 	/**
 	* Gets the derived gauge timestamp.
@@ -41,7 +41,7 @@ extern interface GaugeMonitorMBean extends javax.management.monitor.MonitorMBean
 	* @return The derived gauge timestamp.
 	* @deprecated As of JMX 1.2, replaced by {@link #getDerivedGaugeTimeStamp(ObjectName)}
 	*/
-	@:overload public function getDerivedGaugeTimeStamp() : haxe.Int64;
+	@:overload @:public public function getDerivedGaugeTimeStamp() : haxe.Int64;
 	
 	/**
 	* Gets the derived gauge for the specified MBean.
@@ -51,7 +51,7 @@ extern interface GaugeMonitorMBean extends javax.management.monitor.MonitorMBean
 	*         set of observed MBeans, or <code>null</code> otherwise.
 	*
 	*/
-	@:overload public function getDerivedGauge(object : javax.management.ObjectName) : java.lang.Number;
+	@:overload @:public public function getDerivedGauge(object : javax.management.ObjectName) : java.lang.Number;
 	
 	/**
 	* Gets the derived gauge timestamp for the specified MBean.
@@ -61,21 +61,21 @@ extern interface GaugeMonitorMBean extends javax.management.monitor.MonitorMBean
 	*         is in the set of observed MBeans, or <code>null</code> otherwise.
 	*
 	*/
-	@:overload public function getDerivedGaugeTimeStamp(object : javax.management.ObjectName) : haxe.Int64;
+	@:overload @:public public function getDerivedGaugeTimeStamp(object : javax.management.ObjectName) : haxe.Int64;
 	
 	/**
 	* Gets the high threshold value.
 	*
 	* @return The high threshold value.
 	*/
-	@:overload public function getHighThreshold() : java.lang.Number;
+	@:overload @:public public function getHighThreshold() : java.lang.Number;
 	
 	/**
 	* Gets the low threshold value.
 	*
 	* @return The low threshold value.
 	*/
-	@:overload public function getLowThreshold() : java.lang.Number;
+	@:overload @:public public function getLowThreshold() : java.lang.Number;
 	
 	/**
 	* Sets the high and the low threshold values.
@@ -86,7 +86,7 @@ extern interface GaugeMonitorMBean extends javax.management.monitor.MonitorMBean
 	* or the low threshold is greater than the high threshold
 	* or the high threshold and the low threshold are not of the same type.
 	*/
-	@:overload public function setThresholds(highValue : java.lang.Number, lowValue : java.lang.Number) : Void;
+	@:overload @:public public function setThresholds(highValue : java.lang.Number, lowValue : java.lang.Number) : Void;
 	
 	/**
 	* Gets the high notification's on/off switch value.
@@ -96,7 +96,7 @@ extern interface GaugeMonitorMBean extends javax.management.monitor.MonitorMBean
 	*
 	* @see #setNotifyHigh
 	*/
-	@:overload public function getNotifyHigh() : Bool;
+	@:overload @:public public function getNotifyHigh() : Bool;
 	
 	/**
 	* Sets the high notification's on/off switch value.
@@ -105,7 +105,7 @@ extern interface GaugeMonitorMBean extends javax.management.monitor.MonitorMBean
 	*
 	* @see #getNotifyHigh
 	*/
-	@:overload public function setNotifyHigh(value : Bool) : Void;
+	@:overload @:public public function setNotifyHigh(value : Bool) : Void;
 	
 	/**
 	* Gets the low notification's on/off switch value.
@@ -115,7 +115,7 @@ extern interface GaugeMonitorMBean extends javax.management.monitor.MonitorMBean
 	*
 	* @see #setNotifyLow
 	*/
-	@:overload public function getNotifyLow() : Bool;
+	@:overload @:public public function getNotifyLow() : Bool;
 	
 	/**
 	* Sets the low notification's on/off switch value.
@@ -124,7 +124,7 @@ extern interface GaugeMonitorMBean extends javax.management.monitor.MonitorMBean
 	*
 	* @see #getNotifyLow
 	*/
-	@:overload public function setNotifyLow(value : Bool) : Void;
+	@:overload @:public public function setNotifyLow(value : Bool) : Void;
 	
 	/**
 	* Gets the difference mode flag value.
@@ -134,7 +134,7 @@ extern interface GaugeMonitorMBean extends javax.management.monitor.MonitorMBean
 	*
 	* @see #setDifferenceMode
 	*/
-	@:overload public function getDifferenceMode() : Bool;
+	@:overload @:public public function getDifferenceMode() : Bool;
 	
 	/**
 	* Sets the difference mode flag value.
@@ -143,7 +143,7 @@ extern interface GaugeMonitorMBean extends javax.management.monitor.MonitorMBean
 	*
 	* @see #getDifferenceMode
 	*/
-	@:overload public function setDifferenceMode(value : Bool) : Void;
+	@:overload @:public public function setDifferenceMode(value : Bool) : Void;
 	
 	
 }

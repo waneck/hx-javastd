@@ -33,7 +33,7 @@ package com.sun.org.apache.xerces.internal.util;
 	* @param domain The error domain.
 	* @param key The key of the error message.
 	*/
-	@:overload public function new(domain : String, key : String) : Void;
+	@:overload @:public public function new(domain : String, key : String) : Void;
 	
 	/**
 	* <p>Convenience method to set the values of an XMLErrorCode.</p>
@@ -41,21 +41,21 @@ package com.sun.org.apache.xerces.internal.util;
 	* @param domain The error domain.
 	* @param key The key of the error message.
 	*/
-	@:overload public function setValues(domain : String, key : String) : Void;
+	@:overload @:public public function setValues(domain : String, key : String) : Void;
 	
 	/**
 	* <p>Indicates whether some other object is equal to this XMLErrorCode.</p>
 	*
 	* @param obj the object with which to compare.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* <p>Returns a hash code value for this XMLErrorCode.</p>
 	*
 	* @return a hash code value for this XMLErrorCode.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

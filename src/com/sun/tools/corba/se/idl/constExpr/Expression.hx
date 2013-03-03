@@ -39,42 +39,42 @@ extern class Expression
 	/**
 	* Compute the value of this expression.
 	**/
-	@:overload @:abstract public function evaluate() : Dynamic;
+	@:overload @:public @:abstract public function evaluate() : Dynamic;
 	
 	/**
 	* Set the value of this expression.
 	**/
-	@:overload public function value(value : Dynamic) : Void;
+	@:overload @:public public function value(value : Dynamic) : Void;
 	
 	/**
 	* Get the value of this expression.
 	**/
-	@:overload public function value() : Dynamic;
+	@:overload @:public public function value() : Dynamic;
 	
 	/**
 	* Set the representation of this expression.
 	**/
-	@:overload public function rep(rep : String) : Void;
+	@:overload @:public public function rep(rep : String) : Void;
 	
 	/**
 	* Get the representation of this expression.
 	**/
-	@:overload public function rep() : String;
+	@:overload @:public public function rep() : String;
 	
 	/**
 	* Set the target type of this expression.
 	**/
-	@:overload public function type(type : String) : Void;
+	@:overload @:public public function type(type : String) : Void;
 	
 	/**
 	* Get the target type of this expression.
 	**/
-	@:overload public function type() : String;
+	@:overload @:public public function type() : String;
 	
 	/**
 	* Return the default computation type for the given target type.
 	**/
-	@:overload private static function defaultType(targetType : String) : String;
+	@:overload @:protected @:static private static function defaultType(targetType : String) : String;
 	
 	/**
 	* Coerces a number to the target type of this expression.
@@ -82,7 +82,7 @@ extern class Expression
 	* @return  the value of number coerced to the (target) type of
 	*  this expression.
 	**/
-	@:overload public function coerceToTarget(obj : Dynamic) : Dynamic;
+	@:overload @:public public function coerceToTarget(obj : Dynamic) : Dynamic;
 	
 	/**
 	* Coerces an integral value (BigInteger) to its corresponding unsigned
@@ -92,7 +92,7 @@ extern class Expression
 	*  unsigned integral type, if the target type of this expression is
 	*  unsigned.
 	**/
-	@:overload private function toUnsignedTarget(b : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:protected private function toUnsignedTarget(b : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Coerces an integral value (BigInteger) to its corresponding signed
@@ -102,56 +102,56 @@ extern class Expression
 	*  signed integral type, if the target type of this expression is
 	*  signed.
 	**/
-	@:overload private function toSignedTarget(b : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:protected private function toSignedTarget(b : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Return the unsigned value of a BigInteger.
 	**/
-	@:overload private function toUnsigned(b : java.math.BigInteger) : java.math.BigInteger;
+	@:overload @:protected private function toUnsigned(b : java.math.BigInteger) : java.math.BigInteger;
 	
-	public static var negOne(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var negOne(default, null) : java.math.BigInteger;
 	
-	public static var zero(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var zero(default, null) : java.math.BigInteger;
 	
-	public static var one(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var one(default, null) : java.math.BigInteger;
 	
-	public static var two(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var two(default, null) : java.math.BigInteger;
 	
-	public static var twoPow15(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var twoPow15(default, null) : java.math.BigInteger;
 	
-	public static var twoPow16(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var twoPow16(default, null) : java.math.BigInteger;
 	
-	public static var twoPow31(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var twoPow31(default, null) : java.math.BigInteger;
 	
-	public static var twoPow32(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var twoPow32(default, null) : java.math.BigInteger;
 	
-	public static var twoPow63(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var twoPow63(default, null) : java.math.BigInteger;
 	
-	public static var twoPow64(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var twoPow64(default, null) : java.math.BigInteger;
 	
-	public static var sMax(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var sMax(default, null) : java.math.BigInteger;
 	
-	public static var sMin(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var sMin(default, null) : java.math.BigInteger;
 	
-	public static var usMax(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var usMax(default, null) : java.math.BigInteger;
 	
-	public static var usMin(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var usMin(default, null) : java.math.BigInteger;
 	
-	public static var lMax(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var lMax(default, null) : java.math.BigInteger;
 	
-	public static var lMin(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var lMin(default, null) : java.math.BigInteger;
 	
-	public static var ulMax(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var ulMax(default, null) : java.math.BigInteger;
 	
-	public static var ulMin(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var ulMin(default, null) : java.math.BigInteger;
 	
-	public static var llMax(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var llMax(default, null) : java.math.BigInteger;
 	
-	public static var llMin(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var llMin(default, null) : java.math.BigInteger;
 	
-	public static var ullMax(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var ullMax(default, null) : java.math.BigInteger;
 	
-	public static var ullMin(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var ullMin(default, null) : java.math.BigInteger;
 	
 	
 }

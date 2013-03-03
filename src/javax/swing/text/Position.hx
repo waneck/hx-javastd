@@ -52,7 +52,7 @@ extern interface Position
 	*
 	* @return the offset >= 0
 	*/
-	@:overload public function getOffset() : Int;
+	@:overload @:public public function getOffset() : Int;
 	
 	
 }
@@ -70,18 +70,18 @@ extern interface Position
 	* Indicates to bias toward the next character
 	* in the model.
 	*/
-	public static var Forward(default, null) : javax.swing.text.Position.Position_Bias;
+	@:public @:static @:final public static var Forward(default, null) : javax.swing.text.Position.Position_Bias;
 	
 	/**
 	* Indicates a bias toward the previous character
 	* in the model.
 	*/
-	public static var Backward(default, null) : javax.swing.text.Position.Position_Bias;
+	@:public @:static @:final public static var Backward(default, null) : javax.swing.text.Position.Position_Bias;
 	
 	/**
 	* string representation
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

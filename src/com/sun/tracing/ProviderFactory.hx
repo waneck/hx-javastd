@@ -13,7 +13,7 @@ extern class ProviderFactory
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload private function new() : Void;
+	@:require(java7) @:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates an implementation of a Provider interface.
@@ -25,7 +25,7 @@ extern class ProviderFactory
 	* @throws IllegalArgumentException if the class definition contains
 	* non-void methods
 	*/
-	@:overload @:abstract public function createProvider<T : com.sun.tracing.Provider>(cls : Class<T>) : T;
+	@:overload @:public @:abstract public function createProvider<T : com.sun.tracing.Provider>(cls : Class<T>) : T;
 	
 	/**
 	* Returns an implementation of a {@code ProviderFactory} which
@@ -36,7 +36,7 @@ extern class ProviderFactory
 	*
 	* @return a {@code ProviderFactory} that is used to create Providers.
 	*/
-	@:overload public static function getDefaultFactory() : com.sun.tracing.ProviderFactory;
+	@:overload @:public @:static public static function getDefaultFactory() : com.sun.tracing.ProviderFactory;
 	
 	
 }

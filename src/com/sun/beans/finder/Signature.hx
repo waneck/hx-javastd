@@ -41,7 +41,7 @@ package com.sun.beans.finder;
 	*         {@code object} argument, {@code false} otherwise
 	* @see #hashCode()
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for the object.
@@ -53,7 +53,7 @@ package com.sun.beans.finder;
 	* @return a hash code value for this object
 	* @see #equals(Object)
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

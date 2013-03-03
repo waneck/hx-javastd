@@ -31,23 +31,23 @@ package com.sun.corba.se.impl.corba;
 */
 extern class ContextImpl extends org.omg.CORBA.Context
 {
-	@:overload public function new(orb : org.omg.CORBA.ORB) : Void;
+	@:overload @:public public function new(orb : org.omg.CORBA.ORB) : Void;
 	
-	@:overload public function new(parent : org.omg.CORBA.Context) : Void;
+	@:overload @:public public function new(parent : org.omg.CORBA.Context) : Void;
 	
-	@:overload override public function context_name() : String;
+	@:overload @:public override public function context_name() : String;
 	
-	@:overload override public function parent() : org.omg.CORBA.Context;
+	@:overload @:public override public function parent() : org.omg.CORBA.Context;
 	
-	@:overload override public function create_child(name : String) : org.omg.CORBA.Context;
+	@:overload @:public override public function create_child(name : String) : org.omg.CORBA.Context;
 	
-	@:overload override public function set_one_value(propName : String, propValue : org.omg.CORBA.Any) : Void;
+	@:overload @:public override public function set_one_value(propName : String, propValue : org.omg.CORBA.Any) : Void;
 	
-	@:overload override public function set_values(values : org.omg.CORBA.NVList) : Void;
+	@:overload @:public override public function set_values(values : org.omg.CORBA.NVList) : Void;
 	
-	@:overload override public function delete_values(propName : String) : Void;
+	@:overload @:public override public function delete_values(propName : String) : Void;
 	
-	@:overload override public function get_values(startScope : String, opFlags : Int, propName : String) : org.omg.CORBA.NVList;
+	@:overload @:public override public function get_values(startScope : String, opFlags : Int, propName : String) : org.omg.CORBA.NVList;
 	
 	
 }

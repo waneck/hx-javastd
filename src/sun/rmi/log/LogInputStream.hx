@@ -32,7 +32,7 @@ extern class LogInputStream extends java.io.InputStream
 	* @param length the total number of bytes allowed to be read
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload public function new(_in : java.io.InputStream, length : Int) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Reads a byte of data. This method will block if no input is
@@ -41,7 +41,7 @@ extern class LogInputStream extends java.io.InputStream
 	*          stream is reached.
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads data into an array of bytes.
@@ -51,7 +51,7 @@ extern class LogInputStream extends java.io.InputStream
 	*          or end of the stream is reached.
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Reads data into an array of bytes.
@@ -63,7 +63,7 @@ extern class LogInputStream extends java.io.InputStream
 	*          end of the stream is reached.
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips n bytes of input.
@@ -71,25 +71,25 @@ extern class LogInputStream extends java.io.InputStream
 	* @return  the actual number of bytes skipped.
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the number of bytes that can be read without blocking.
 	* @return  the number of available bytes, which is initially
 	*          equal to the file size.
 	*/
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	/**
 	* Closes the input stream.  No further input can be read.
 	* the stream.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Closes the stream when garbage is collected.
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

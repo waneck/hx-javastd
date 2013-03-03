@@ -69,19 +69,19 @@ package com.sun.tools.corba.se.idl;
 	* This is set by this method.
 	* @returns Token The resulting Token corresponding to string.
 	*/
-	@:overload public static function makeKeywordToken(string : String, corbaLevel : Single, escapedOK : Bool, collision : java.NativeArray<Bool>) : com.sun.tools.corba.se.idl.Token;
+	@:overload @:public @:static public static function makeKeywordToken(string : String, corbaLevel : Single, escapedOK : Bool, collision : java.NativeArray<Bool>) : com.sun.tools.corba.se.idl.Token;
 	
 	/**
 	* Get the String representation of this Token.
 	* @return a String containing representation of this Token.
 	**/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Accessor.
 	* @return true iff this token is an escaped identifier.
 	**/
-	@:overload public function isEscaped() : Bool;
+	@:overload @:public public function isEscaped() : Bool;
 	
 	/**
 	* Accessor.
@@ -89,16 +89,16 @@ package com.sun.tools.corba.se.idl;
 	* a keyword in a version of CORBA greater than the specified CORBA level,
 	* or iff it matches a keyword in letter, but note case.
 	**/
-	@:overload public function collidesWithKeyword() : Bool;
+	@:overload @:public public function collidesWithKeyword() : Bool;
 	
 	/**
 	* Accessor.
 	* @return true iff this token is a deprecated lexeme or lexical type with
 	* respect to the specified CORBA level.
 	**/
-	@:overload public function isDeprecated() : Bool;
+	@:overload @:public public function isDeprecated() : Bool;
 	
-	@:overload public function isWide() : Bool;
+	@:overload @:public public function isWide() : Bool;
 	
 	
 }

@@ -29,7 +29,7 @@ extern class JRadioButton extends javax.swing.JToggleButton implements javax.acc
 	* Creates an initially unselected radio button
 	* with no set text.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an initially unselected radio button
@@ -37,7 +37,7 @@ extern class JRadioButton extends javax.swing.JToggleButton implements javax.acc
 	*
 	* @param icon  the image that the button should display
 	*/
-	@:overload public function new(icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates a radiobutton where properties are taken from the
@@ -45,7 +45,7 @@ extern class JRadioButton extends javax.swing.JToggleButton implements javax.acc
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(a : javax.swing.Action) : Void;
+	@:require(java3) @:overload @:public public function new(a : javax.swing.Action) : Void;
 	
 	/**
 	* Creates a radio button with the specified image
@@ -55,14 +55,14 @@ extern class JRadioButton extends javax.swing.JToggleButton implements javax.acc
 	* @param selected  if true, the button is initially selected;
 	*                  otherwise, the button is initially unselected
 	*/
-	@:overload public function new(icon : javax.swing.Icon, selected : Bool) : Void;
+	@:overload @:public public function new(icon : javax.swing.Icon, selected : Bool) : Void;
 	
 	/**
 	* Creates an unselected radio button with the specified text.
 	*
 	* @param text  the string displayed on the radio button
 	*/
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* Creates a radio button with the specified text
@@ -72,7 +72,7 @@ extern class JRadioButton extends javax.swing.JToggleButton implements javax.acc
 	* @param selected  if true, the button is initially selected;
 	*                  otherwise, the button is initially unselected
 	*/
-	@:overload public function new(text : String, selected : Bool) : Void;
+	@:overload @:public public function new(text : String, selected : Bool) : Void;
 	
 	/**
 	* Creates a radio button that has the specified text and image,
@@ -81,7 +81,7 @@ extern class JRadioButton extends javax.swing.JToggleButton implements javax.acc
 	* @param text  the string displayed on the radio button
 	* @param icon  the image that the button should display
 	*/
-	@:overload public function new(text : String, icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(text : String, icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates a radio button that has the specified text, image,
@@ -90,14 +90,14 @@ extern class JRadioButton extends javax.swing.JToggleButton implements javax.acc
 	* @param text  the string displayed on the radio button
 	* @param icon  the image that the button should display
 	*/
-	@:overload public function new(text : String, icon : javax.swing.Icon, selected : Bool) : Void;
+	@:overload @:public public function new(text : String, icon : javax.swing.Icon, selected : Bool) : Void;
 	
 	/**
 	* Resets the UI property to a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class
@@ -110,7 +110,7 @@ extern class JRadioButton extends javax.swing.JToggleButton implements javax.acc
 	*        expert: true
 	*   description: A string that specifies the name of the L&F class.
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Returns a string representation of this JRadioButton. This method
@@ -121,7 +121,7 @@ extern class JRadioButton extends javax.swing.JToggleButton implements javax.acc
 	*
 	* @return  a string representation of this JRadioButton.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JRadioButton.
@@ -135,7 +135,7 @@ extern class JRadioButton extends javax.swing.JToggleButton implements javax.acc
 	*       expert: true
 	*  description: The AccessibleContext associated with this Button
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -162,7 +162,7 @@ extern class JRadioButton extends javax.swing.JToggleButton implements javax.acc
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

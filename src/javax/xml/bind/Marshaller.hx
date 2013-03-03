@@ -52,7 +52,7 @@ extern interface Marshaller
 	* @throws IllegalArgumentException
 	*      If any of the method parameters are null
 	*/
-	@:overload public function marshal(jaxbElement : Dynamic, result : javax.xml.transform.Result) : Void;
+	@:overload @:public public function marshal(jaxbElement : Dynamic, result : javax.xml.transform.Result) : Void;
 	
 	/**
 	* Marshal the content tree rooted at <tt>jaxbElement</tt> into an output stream.
@@ -73,7 +73,7 @@ extern interface Marshaller
 	* @throws IllegalArgumentException
 	*      If any of the method parameters are null
 	*/
-	@:overload public function marshal(jaxbElement : Dynamic, os : java.io.OutputStream) : Void;
+	@:overload @:public public function marshal(jaxbElement : Dynamic, os : java.io.OutputStream) : Void;
 	
 	/**
 	* Marshal the content tree rooted at <tt>jaxbElement</tt> into a file.
@@ -95,7 +95,7 @@ extern interface Marshaller
 	*      If any of the method parameters are null
 	* @since JAXB2.1
 	*/
-	@:require(java1) @:overload public function marshal(jaxbElement : Dynamic, output : java.io.File) : Void;
+	@:require(java1) @:overload @:public public function marshal(jaxbElement : Dynamic, output : java.io.File) : Void;
 	
 	/**
 	* Marshal the content tree rooted at <tt>jaxbElement</tt> into a Writer.
@@ -116,7 +116,7 @@ extern interface Marshaller
 	* @throws IllegalArgumentException
 	*      If any of the method parameters are null
 	*/
-	@:overload public function marshal(jaxbElement : Dynamic, writer : java.io.Writer) : Void;
+	@:overload @:public public function marshal(jaxbElement : Dynamic, writer : java.io.Writer) : Void;
 	
 	/**
 	* Marshal the content tree rooted at <tt>jaxbElement</tt> into SAX2 events.
@@ -137,7 +137,7 @@ extern interface Marshaller
 	* @throws IllegalArgumentException
 	*      If any of the method parameters are null
 	*/
-	@:overload public function marshal(jaxbElement : Dynamic, handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function marshal(jaxbElement : Dynamic, handler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Marshal the content tree rooted at <tt>jaxbElement</tt> into a DOM tree.
@@ -162,7 +162,7 @@ extern interface Marshaller
 	* @throws IllegalArgumentException
 	*      If any of the method parameters are null
 	*/
-	@:overload public function marshal(jaxbElement : Dynamic, node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function marshal(jaxbElement : Dynamic, node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Marshal the content tree rooted at <tt>jaxbElement</tt> into a
@@ -185,7 +185,7 @@ extern interface Marshaller
 	*      If any of the method parameters are null
 	* @since JAXB 2.0
 	*/
-	@:require(java0) @:overload public function marshal(jaxbElement : Dynamic, writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:require(java0) @:overload @:public public function marshal(jaxbElement : Dynamic, writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Marshal the content tree rooted at <tt>jaxbElement</tt> into a
@@ -208,7 +208,7 @@ extern interface Marshaller
 	*      If any of the method parameters are null
 	* @since JAXB 2.0
 	*/
-	@:require(java0) @:overload public function marshal(jaxbElement : Dynamic, writer : javax.xml.stream.XMLEventWriter) : Void;
+	@:require(java0) @:overload @:public public function marshal(jaxbElement : Dynamic, writer : javax.xml.stream.XMLEventWriter) : Void;
 	
 	/**
 	* Get a DOM tree view of the content tree(Optional).
@@ -233,7 +233,7 @@ extern interface Marshaller
 	*      If any unexpected problem occurs
 	*
 	*/
-	@:overload public function getNode(contentTree : Dynamic) : org.w3c.dom.Node;
+	@:overload @:public public function getNode(contentTree : Dynamic) : org.w3c.dom.Node;
 	
 	/**
 	* Set the particular property in the underlying implementation of
@@ -253,7 +253,7 @@ extern interface Marshaller
 	* @throws IllegalArgumentException
 	*      If the name parameter is null
 	*/
-	@:overload public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Get the particular property in the underlying implementation of
@@ -272,7 +272,7 @@ extern interface Marshaller
 	* @throws IllegalArgumentException
 	*      If the name parameter is null
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	/**
 	* Allow an application to register a validation event handler.
@@ -291,7 +291,7 @@ extern interface Marshaller
 	* @throws JAXBException if an error was encountered while setting the
 	*         event handler
 	*/
-	@:overload public function setEventHandler(handler : javax.xml.bind.ValidationEventHandler) : Void;
+	@:overload @:public public function setEventHandler(handler : javax.xml.bind.ValidationEventHandler) : Void;
 	
 	/**
 	* Return the current event handler or the default event handler if one
@@ -302,7 +302,7 @@ extern interface Marshaller
 	* @throws JAXBException if an error was encountered while getting the
 	*         current event handler
 	*/
-	@:overload public function getEventHandler() : javax.xml.bind.ValidationEventHandler;
+	@:overload @:public public function getEventHandler() : javax.xml.bind.ValidationEventHandler;
 	
 	/**
 	* Associates a configured instance of {@link XmlAdapter} with this marshaller.
@@ -317,7 +317,7 @@ extern interface Marshaller
 	*      if invoked agains a JAXB 1.0 implementation.
 	* @since JAXB 2.0
 	*/
-	@:require(java0) @:overload public function setAdapter(adapter : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>) : Void;
+	@:require(java0) @:overload @:public public function setAdapter(adapter : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Associates a configured instance of {@link XmlAdapter} with this marshaller.
@@ -346,7 +346,7 @@ extern interface Marshaller
 	*      if invoked agains a JAXB 1.0 implementation.
 	* @since JAXB 2.0
 	*/
-	@:require(java0) @:overload public function setAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>, adapter : A) : Void;
+	@:require(java0) @:overload @:public public function setAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>, adapter : A) : Void;
 	
 	/**
 	* Gets the adapter associated with the specified type.
@@ -359,7 +359,7 @@ extern interface Marshaller
 	*      if invoked agains a JAXB 1.0 implementation.
 	* @since JAXB 2.0
 	*/
-	@:require(java0) @:overload public function getAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>) : A;
+	@:require(java0) @:overload @:public public function getAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>) : A;
 	
 	/**
 	* <p>Associate a context that enables binary data within an XML document
@@ -391,7 +391,7 @@ extern interface Marshaller
 	*         JAXB 1.0 mapped classes
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function setSchema(schema : javax.xml.validation.Schema) : Void;
+	@:require(java0) @:overload @:public public function setSchema(schema : javax.xml.validation.Schema) : Void;
 	
 	/**
 	* Get the JAXP 1.3 {@link javax.xml.validation.Schema Schema} object
@@ -406,7 +406,7 @@ extern interface Marshaller
 	*         JAXB 1.0 mapped classes
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function getSchema() : javax.xml.validation.Schema;
+	@:require(java0) @:overload @:public public function getSchema() : javax.xml.validation.Schema;
 	
 	/**
 	* <p>
@@ -419,7 +419,7 @@ extern interface Marshaller
 	* @param listener an instance of a class that implements {@link Listener}
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function setListener(listener : javax.xml.bind.Marshaller.Marshaller_Listener) : Void;
+	@:require(java0) @:overload @:public public function setListener(listener : javax.xml.bind.Marshaller.Marshaller_Listener) : Void;
 	
 	/**
 	* <p>Return {@link Listener} registered with this {@link Marshaller}.
@@ -427,7 +427,7 @@ extern interface Marshaller
 	* @return registered {@link Listener} or <code>null</code> if no Listener is registered with this Marshaller.
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function getListener() : javax.xml.bind.Marshaller.Marshaller_Listener;
+	@:require(java0) @:overload @:public public function getListener() : javax.xml.bind.Marshaller.Marshaller_Listener;
 	
 	
 }
@@ -463,7 +463,7 @@ extern interface Marshaller
 	*
 	* @param source instance of JAXB mapped class prior to marshalling from it.
 	*/
-	@:overload public function beforeMarshal(source : Dynamic) : Void;
+	@:overload @:public public function beforeMarshal(source : Dynamic) : Void;
 	
 	/**
 	* <p/>
@@ -476,7 +476,7 @@ extern interface Marshaller
 	*
 	* @param source instance of JAXB mapped class after marshalling it.
 	*/
-	@:overload public function afterMarshal(source : Dynamic) : Void;
+	@:overload @:public public function afterMarshal(source : Dynamic) : Void;
 	
 	
 }

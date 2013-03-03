@@ -59,7 +59,7 @@ extern class SchemaOutputResolver
 	*      If {@code null} is returned, the schema generation for this
 	*      namespace URI will be skipped.
 	*/
-	@:overload @:abstract public function createOutput(namespaceUri : String, suggestedFileName : String) : javax.xml.transform.Result;
+	@:overload @:public @:abstract public function createOutput(namespaceUri : String, suggestedFileName : String) : javax.xml.transform.Result;
 	
 	
 }

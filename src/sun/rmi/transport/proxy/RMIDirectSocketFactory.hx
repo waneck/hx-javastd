@@ -29,9 +29,9 @@ extern class RMIDirectSocketFactory extends java.rmi.server.RMISocketFactory
 	* RMIDirectSocketFactory creates a direct socket connection to the
 	* specified port on the specified host.
 	*/
-	@:overload public function createSocket(host : String, port : Int) : java.net.Socket;
+	@:overload @:public override public function createSocket(host : String, port : Int) : java.net.Socket;
 	
-	@:overload public function createServerSocket(port : Int) : java.net.ServerSocket;
+	@:overload @:public override public function createServerSocket(port : Int) : java.net.ServerSocket;
 	
 	
 }

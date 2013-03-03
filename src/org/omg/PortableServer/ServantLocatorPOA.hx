@@ -25,13 +25,13 @@ package org.omg.PortableServer;
 	 */
 extern class ServantLocatorPOA extends org.omg.PortableServer.Servant implements org.omg.PortableServer.ServantLocatorOperations implements org.omg.CORBA.portable.InvokeHandler
 {
-	@:overload public function _invoke($method : String, _in : org.omg.CORBA.portable.InputStream, $rh : org.omg.CORBA.portable.ResponseHandler) : org.omg.CORBA.portable.OutputStream;
+	@:overload @:public public function _invoke($method : String, _in : org.omg.CORBA.portable.InputStream, $rh : org.omg.CORBA.portable.ResponseHandler) : org.omg.CORBA.portable.OutputStream;
 	
-	@:overload override public function _all_interfaces(poa : org.omg.PortableServer.POA, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
+	@:overload @:public override public function _all_interfaces(poa : org.omg.PortableServer.POA, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
-	@:overload public function _this() : org.omg.PortableServer.ServantLocator;
+	@:overload @:public public function _this() : org.omg.PortableServer.ServantLocator;
 	
-	@:overload public function _this(orb : org.omg.CORBA.ORB) : org.omg.PortableServer.ServantLocator;
+	@:overload @:public public function _this(orb : org.omg.CORBA.ORB) : org.omg.PortableServer.ServantLocator;
 	
 	/**
 		 * This operation is invoked whenener a servant completes
@@ -45,7 +45,7 @@ extern class ServantLocatorPOA extends org.omg.PortableServer.Servant implements
 		 * @param the_servant reference to the servant that is
 		 *                    associated with the object.
 		 */
-	@:overload public function postinvoke(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA, operation : String, the_cookie : Dynamic, the_servant : org.omg.PortableServer.Servant) : Void;
+	@:overload @:public public function postinvoke(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA, operation : String, the_cookie : Dynamic, the_servant : org.omg.PortableServer.Servant) : Void;
 	
 	/**
 		 * This operations is used to get a servant that will be
@@ -66,7 +66,7 @@ extern class ServantLocatorPOA extends org.omg.PortableServer.Servant implements
 		 *            requests to the object denoted in the 
 		 *            forward_reference member of the exception.
 		 */
-	@:overload public function preinvoke(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA, operation : String, the_cookie : org.omg.PortableServer.ServantLocatorPackage.CookieHolder) : org.omg.PortableServer.Servant;
+	@:overload @:public public function preinvoke(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA, operation : String, the_cookie : org.omg.PortableServer.ServantLocatorPackage.CookieHolder) : org.omg.PortableServer.Servant;
 	
 	
 }

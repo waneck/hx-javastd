@@ -25,17 +25,17 @@ package com.sun.corba.se.impl.ior;
 */
 extern class IdentifiableFactoryFinderBase implements com.sun.corba.se.spi.ior.IdentifiableFactoryFinder
 {
-	private var wrapper : com.sun.corba.se.impl.logging.IORSystemException;
+	@:protected private var wrapper : com.sun.corba.se.impl.logging.IORSystemException;
 	
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload private function getFactory(id : Int) : com.sun.corba.se.spi.ior.IdentifiableFactory;
+	@:overload @:protected private function getFactory(id : Int) : com.sun.corba.se.spi.ior.IdentifiableFactory;
 	
-	@:overload @:abstract public function handleMissingFactory(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.Identifiable;
+	@:overload @:public @:abstract public function handleMissingFactory(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.Identifiable;
 	
-	@:overload public function create(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.Identifiable;
+	@:overload @:public public function create(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.Identifiable;
 	
-	@:overload public function registerFactory(factory : com.sun.corba.se.spi.ior.IdentifiableFactory) : Void;
+	@:overload @:public public function registerFactory(factory : com.sun.corba.se.spi.ior.IdentifiableFactory) : Void;
 	
 	
 }

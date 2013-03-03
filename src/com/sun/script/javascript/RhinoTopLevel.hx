@@ -37,7 +37,7 @@ extern class RhinoTopLevel extends ImporterTopLevel
 	*    var b = bindings(page);
 	*    // operate on bindings here.
 	*/
-	@:overload public static function bindings(cx : Context, thisObj : Scriptable, args : java.NativeArray<Dynamic>, funObj : Function) : Dynamic;
+	@:overload @:public @:static public static function bindings(cx : Context, thisObj : Scriptable, args : java.NativeArray<Dynamic>, funObj : Function) : Dynamic;
 	
 	/**
 	* The scope function creates a new JavaScript scope object
@@ -52,7 +52,7 @@ extern class RhinoTopLevel extends ImporterTopLevel
 	*       // code that uses page scope
 	*    }
 	*/
-	@:overload public static function scope(cx : Context, thisObj : Scriptable, args : java.NativeArray<Dynamic>, funObj : Function) : Dynamic;
+	@:overload @:public @:static public static function scope(cx : Context, thisObj : Scriptable, args : java.NativeArray<Dynamic>, funObj : Function) : Dynamic;
 	
 	/**
 	* The sync function creates a synchronized function (in the sense
@@ -72,7 +72,7 @@ extern class RhinoTopLevel extends ImporterTopLevel
 	* entry
 	* exit
 	*/
-	@:overload public static function sync(cx : Context, thisObj : Scriptable, args : java.NativeArray<Dynamic>, funObj : Function) : Dynamic;
+	@:overload @:public @:static public static function sync(cx : Context, thisObj : Scriptable, args : java.NativeArray<Dynamic>, funObj : Function) : Dynamic;
 	
 	
 }

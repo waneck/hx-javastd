@@ -25,23 +25,23 @@ package com.sun.tools.internal.ws.processor.model.jaxb;
 */
 extern class JAXBTypeAndAnnotation
 {
-	@:overload public function new(typeAnn : com.sun.tools.internal.xjc.api.TypeAndAnnotation) : Void;
+	@:overload @:public public function new(typeAnn : com.sun.tools.internal.xjc.api.TypeAndAnnotation) : Void;
 	
-	@:overload public function new(type : com.sun.codemodel.internal.JType) : Void;
+	@:overload @:public public function new(type : com.sun.codemodel.internal.JType) : Void;
 	
-	@:overload public function new(typeAnn : com.sun.tools.internal.xjc.api.TypeAndAnnotation, type : com.sun.codemodel.internal.JType) : Void;
+	@:overload @:public public function new(typeAnn : com.sun.tools.internal.xjc.api.TypeAndAnnotation, type : com.sun.codemodel.internal.JType) : Void;
 	
-	@:overload public function annotate(typeVar : com.sun.codemodel.internal.JAnnotatable) : Void;
+	@:overload @:public public function annotate(typeVar : com.sun.codemodel.internal.JAnnotatable) : Void;
 	
-	@:overload public function getType() : com.sun.codemodel.internal.JType;
+	@:overload @:public public function getType() : com.sun.codemodel.internal.JType;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getTypeAnn() : com.sun.tools.internal.xjc.api.TypeAndAnnotation;
+	@:overload @:public public function getTypeAnn() : com.sun.tools.internal.xjc.api.TypeAndAnnotation;
 	
-	@:overload public function setTypeAnn(typeAnn : com.sun.tools.internal.xjc.api.TypeAndAnnotation) : Void;
+	@:overload @:public public function setTypeAnn(typeAnn : com.sun.tools.internal.xjc.api.TypeAndAnnotation) : Void;
 	
-	@:overload public function setType(type : com.sun.codemodel.internal.JType) : Void;
+	@:overload @:public public function setType(type : com.sun.codemodel.internal.JType) : Void;
 	
 	
 }

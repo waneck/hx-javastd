@@ -29,22 +29,22 @@ extern class NamespaceContexHelper implements com.sun.xml.internal.org.jvnet.sta
 	* Create a new NamespaceContexHelper.
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public public function getNamespaceURI(prefix : String) : String;
 	
-	@:overload public function getPrefix(namespaceURI : String) : String;
+	@:overload @:public public function getPrefix(namespaceURI : String) : String;
 	
-	@:overload public function getPrefixes(namespaceURI : String) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getPrefixes(namespaceURI : String) : java.util.Iterator<Dynamic>;
 	
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx.NamespaceContextEx_Binding>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx.NamespaceContextEx_Binding>;
 	
 	/**
 	* Declare a default namespace.
 	* <p>
 	* @param namespaceURI the namespace URI to declare, may be null.
 	*/
-	@:overload public function declareDefaultNamespace(namespaceURI : String) : Void;
+	@:overload @:public public function declareDefaultNamespace(namespaceURI : String) : Void;
 	
 	/**
 	* Declare a namespace.
@@ -64,12 +64,12 @@ extern class NamespaceContexHelper implements com.sun.xml.internal.org.jvnet.sta
 	* @param namespaceURI the namespace URI to declare, may be null.
 	* @throws IllegalArgumentException, if the prefix is null.
 	*/
-	@:overload public function declareNamespace(prefix : String, namespaceURI : String) : Void;
+	@:overload @:public public function declareNamespace(prefix : String, namespaceURI : String) : Void;
 	
 	/**
 	* Push a namespace context on the stack.
 	*/
-	@:overload public function pushContext() : Void;
+	@:overload @:public public function pushContext() : Void;
 	
 	/**
 	* Pop the namespace context off the stack.
@@ -77,22 +77,22 @@ extern class NamespaceContexHelper implements com.sun.xml.internal.org.jvnet.sta
 	* Namespaces declared within the context (to be popped)
 	* will be removed and no longer be in scope.
 	*/
-	@:overload public function popContext() : Void;
+	@:overload @:public public function popContext() : Void;
 	
 	/**
 	* Reset namespace contexts.
 	* <p>
 	* Pop all namespace contexts and reset the root context.
 	*/
-	@:overload public function resetContexts() : Void;
+	@:overload @:public public function resetContexts() : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$stream$buffer$stax$NamespaceContexHelper$NamespaceBindingImpl') @:internal extern class NamespaceContexHelper_NamespaceBindingImpl implements com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx.NamespaceContextEx_Binding
 {
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
 	
 }

@@ -29,17 +29,17 @@ extern class ByteListImpl extends java.util.AbstractList<Dynamic> implements com
 	*
 	* @version $Id: ByteListImpl.java,v 1.7 2010-11-01 04:39:46 joehw Exp $
 	*/
-	private var data(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:protected @:final private var data(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
-	private var canonical : String;
+	@:protected private var canonical : String;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* The number of <code>byte</code>s in the list. The range of
 	* valid child object indices is 0 to <code>length-1</code> inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Checks if the <code>byte</code> <code>item</code> is a
@@ -49,7 +49,7 @@ extern class ByteListImpl extends java.util.AbstractList<Dynamic> implements com
 	* @return  True if this list contains the <code>byte</code>
 	*   <code>item</code>.
 	*/
-	@:overload public function contains(item : java.StdTypes.Int8) : Bool;
+	@:overload @:public public function contains(item : java.StdTypes.Int8) : Bool;
 	
 	/**
 	* Returns the <code>index</code>th item in the collection. The index
@@ -61,14 +61,14 @@ extern class ByteListImpl extends java.util.AbstractList<Dynamic> implements com
 	*   INDEX_SIZE_ERR: if <code>index</code> is greater than or equal to the
 	*   number of objects in the list.
 	*/
-	@:overload public function item(index : Int) : java.StdTypes.Int8;
+	@:overload @:public public function item(index : Int) : java.StdTypes.Int8;
 	
 	/*
 	* List methods
 	*/
-	@:overload public function get(index : Int) : Dynamic;
+	@:overload @:public override public function get(index : Int) : Dynamic;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	
 }

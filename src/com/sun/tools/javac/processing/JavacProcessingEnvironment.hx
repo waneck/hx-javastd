@@ -25,16 +25,16 @@ package com.sun.tools.javac.processing;
 */
 extern class JavacProcessingEnvironment implements javax.annotation.processing.ProcessingEnvironment implements java.io.Closeable
 {
-	@:overload public function new(context : com.sun.tools.javac.util.Context, processors : java.lang.Iterable<javax.annotation.processing.Processor>) : Void;
+	@:overload @:public public function new(context : com.sun.tools.javac.util.Context, processors : java.lang.Iterable<javax.annotation.processing.Processor>) : Void;
 	
-	@:overload public function atLeastOneProcessor() : Bool;
+	@:overload @:public public function atLeastOneProcessor() : Bool;
 	
-	@:overload public function doProcessing(context : com.sun.tools.javac.util.Context, roots : com.sun.tools.javac.util.List<JCCompilationUnit>, classSymbols : com.sun.tools.javac.util.List<ClassSymbol>, pckSymbols : java.lang.Iterable<PackageSymbol>) : com.sun.tools.javac.main.JavaCompiler;
+	@:overload @:public public function doProcessing(context : com.sun.tools.javac.util.Context, roots : com.sun.tools.javac.util.List<JCCompilationUnit>, classSymbols : com.sun.tools.javac.util.List<ClassSymbol>, pckSymbols : java.lang.Iterable<PackageSymbol>) : com.sun.tools.javac.main.JavaCompiler;
 	
 	/**
 	* Free resources related to annotation processing.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* {@inheritdoc}
@@ -42,41 +42,41 @@ extern class JavacProcessingEnvironment implements javax.annotation.processing.P
 	* Command line options suitable for presenting to annotation
 	* processors.  "-Afoo=bar" should be "-Afoo" => "bar".
 	*/
-	@:overload public function getOptions() : java.util.Map<String, String>;
+	@:overload @:public public function getOptions() : java.util.Map<String, String>;
 	
-	@:overload public function getMessager() : javax.annotation.processing.Messager;
+	@:overload @:public public function getMessager() : javax.annotation.processing.Messager;
 	
-	@:overload public function getFiler() : javax.annotation.processing.Filer;
+	@:overload @:public public function getFiler() : javax.annotation.processing.Filer;
 	
-	@:overload public function getElementUtils() : com.sun.tools.javac.model.JavacElements;
+	@:overload @:public public function getElementUtils() : com.sun.tools.javac.model.JavacElements;
 	
-	@:overload public function getTypeUtils() : com.sun.tools.javac.model.JavacTypes;
+	@:overload @:public public function getTypeUtils() : com.sun.tools.javac.model.JavacTypes;
 	
-	@:overload public function getSourceVersion() : javax.lang.model.SourceVersion;
+	@:overload @:public public function getSourceVersion() : javax.lang.model.SourceVersion;
 	
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
-	@:overload public function getSpecifiedPackages() : java.util.Set<com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol>;
+	@:overload @:public public function getSpecifiedPackages() : java.util.Set<com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol>;
 	
-	public static var noMatches(default, null) : java.util.regex.Pattern;
+	@:public @:static @:final public static var noMatches(default, null) : java.util.regex.Pattern;
 	
 	/**
 	* Return true if the argument string is a valid import-style
 	* string specifying claimed annotations; return false otherwise.
 	*/
-	@:overload public static function isValidImportString(s : String) : Bool;
+	@:overload @:public @:static public static function isValidImportString(s : String) : Bool;
 	
-	@:overload public static function validImportStringToPattern(s : String) : java.util.regex.Pattern;
+	@:overload @:public @:static public static function validImportStringToPattern(s : String) : java.util.regex.Pattern;
 	
 	/**
 	* For internal use only.  This method will be
 	* removed without warning.
 	*/
-	@:overload public function getContext() : com.sun.tools.javac.util.Context;
+	@:overload @:public public function getContext() : com.sun.tools.javac.util.Context;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public static function isValidOptionName(optionName : String) : Bool;
+	@:overload @:public @:static public static function isValidOptionName(optionName : String) : Bool;
 	
 	
 }
@@ -88,23 +88,23 @@ extern class JavacProcessingEnvironment implements javax.annotation.processing.P
 */
 @:native('com$sun$tools$javac$processing$JavacProcessingEnvironment$ServiceIterator') @:internal extern class JavacProcessingEnvironment_ServiceIterator implements java.util.Iterator<javax.annotation.processing.Processor>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : javax.annotation.processing.Processor;
+	@:overload @:public public function next() : javax.annotation.processing.Processor;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }
 @:native('com$sun$tools$javac$processing$JavacProcessingEnvironment$NameProcessIterator') @:internal extern class JavacProcessingEnvironment_NameProcessIterator implements java.util.Iterator<javax.annotation.processing.Processor>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : javax.annotation.processing.Processor;
+	@:overload @:public public function next() : javax.annotation.processing.Processor;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }
@@ -118,16 +118,16 @@ extern class JavacProcessingEnvironment implements javax.annotation.processing.P
 */
 @:native('com$sun$tools$javac$processing$JavacProcessingEnvironment$ProcessorState') @:internal extern class JavacProcessingEnvironment_ProcessorState
 {
-	public var processor : javax.annotation.processing.Processor;
+	@:public public var processor : javax.annotation.processing.Processor;
 	
-	public var contributed : Bool;
+	@:public public var contributed : Bool;
 	
-	@:overload public function annotationSupported(annotationName : String) : Bool;
+	@:overload @:public public function annotationSupported(annotationName : String) : Bool;
 	
 	/**
 	* Remove options that are matched by this processor.
 	*/
-	@:overload public function removeSupportedOptions(unmatchedProcessorOptions : java.util.Set<String>) : Void;
+	@:overload @:public public function removeSupportedOptions(unmatchedProcessorOptions : java.util.Set<String>) : Void;
 	
 	
 }
@@ -141,29 +141,29 @@ extern class JavacProcessingEnvironment implements javax.annotation.processing.P
 */
 @:native('com$sun$tools$javac$processing$JavacProcessingEnvironment$DiscoveredProcessors') @:internal extern class JavacProcessingEnvironment_DiscoveredProcessors implements java.lang.Iterable<com.sun.tools.javac.processing.JavacProcessingEnvironment.JavacProcessingEnvironment_ProcessorState>
 {
-	@:overload public function iterator() : com.sun.tools.javac.processing.JavacProcessingEnvironment.JavacProcessingEnvironment_DiscoveredProcessors_ProcessorStateIterator;
+	@:overload @:public public function iterator() : com.sun.tools.javac.processing.JavacProcessingEnvironment.JavacProcessingEnvironment_DiscoveredProcessors_ProcessorStateIterator;
 	
 	/**
 	* Free jar files, etc. if using a service loader.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }
 @:native('com$sun$tools$javac$processing$JavacProcessingEnvironment$DiscoveredProcessors$ProcessorStateIterator') @:internal extern class JavacProcessingEnvironment_DiscoveredProcessors_ProcessorStateIterator implements java.util.Iterator<com.sun.tools.javac.processing.JavacProcessingEnvironment.JavacProcessingEnvironment_ProcessorState>
 {
-	@:overload public function next() : com.sun.tools.javac.processing.JavacProcessingEnvironment.JavacProcessingEnvironment_ProcessorState;
+	@:overload @:public public function next() : com.sun.tools.javac.processing.JavacProcessingEnvironment.JavacProcessingEnvironment_ProcessorState;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	/**
 	* Run all remaining processors on the procStateList that
 	* have not already run this round with an empty set of
 	* annotations.
 	*/
-	@:overload public function runContributingProcs(re : javax.annotation.processing.RoundEnvironment) : Void;
+	@:overload @:public public function runContributingProcs(re : javax.annotation.processing.RoundEnvironment) : Void;
 	
 	
 }
@@ -173,11 +173,11 @@ extern class JavacProcessingEnvironment implements javax.annotation.processing.P
 */
 @:native('com$sun$tools$javac$processing$JavacProcessingEnvironment$ComputeAnnotationSet') extern class JavacProcessingEnvironment_ComputeAnnotationSet extends javax.lang.model.util.ElementScanner7<java.util.Set<javax.lang.model.element.TypeElement>, java.util.Set<javax.lang.model.element.TypeElement>>
 {
-	@:overload public function new(elements : javax.lang.model.util.Elements) : Void;
+	@:overload @:public public function new(elements : javax.lang.model.util.Elements) : Void;
 	
-	@:overload public function visitPackage(e : javax.lang.model.element.PackageElement, p : java.util.Set<javax.lang.model.element.TypeElement>) : java.util.Set<javax.lang.model.element.TypeElement>;
+	@:overload @:public public function visitPackage(e : javax.lang.model.element.PackageElement, p : java.util.Set<javax.lang.model.element.TypeElement>) : java.util.Set<javax.lang.model.element.TypeElement>;
 	
-	@:overload public function scan(e : javax.lang.model.element.Element, p : java.util.Set<javax.lang.model.element.TypeElement>) : java.util.Set<javax.lang.model.element.TypeElement>;
+	@:overload @:public public function scan(e : javax.lang.model.element.Element, p : java.util.Set<javax.lang.model.element.TypeElement>) : java.util.Set<javax.lang.model.element.TypeElement>;
 	
 	
 }

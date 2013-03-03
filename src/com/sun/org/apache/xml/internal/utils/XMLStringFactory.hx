@@ -34,7 +34,7 @@ extern class XMLStringFactory
 	*
 	* @return An XMLString object that wraps the String reference.
 	*/
-	@:overload @:abstract public function newstr(string : String) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public @:abstract public function newstr(string : String) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Create a XMLString from a FastStringBuffer.
@@ -46,7 +46,7 @@ extern class XMLStringFactory
 	*
 	* @return An XMLString object that wraps the FastStringBuffer reference.
 	*/
-	@:overload @:abstract public function newstr(string : com.sun.org.apache.xml.internal.utils.FastStringBuffer, start : Int, length : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public @:abstract public function newstr(string : com.sun.org.apache.xml.internal.utils.FastStringBuffer, start : Int, length : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Create a XMLString from a FastStringBuffer.
@@ -58,14 +58,14 @@ extern class XMLStringFactory
 	*
 	* @return An XMLString object that wraps the FastStringBuffer reference.
 	*/
-	@:overload @:abstract public function newstr(string : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public @:abstract public function newstr(string : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Get a cheap representation of an empty string.
 	*
 	* @return An non-null reference to an XMLString that represents "".
 	*/
-	@:overload @:abstract public function emptystr() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public @:abstract public function emptystr() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	
 }

@@ -44,7 +44,7 @@ extern interface ClassLoaderRepository
 	* @exception ClassNotFoundException The specified class could not be
 	*            found.
 	*/
-	@:overload public function loadClass(className : String) : Class<Dynamic>;
+	@:overload @:public public function loadClass(className : String) : Class<Dynamic>;
 	
 	/**
 	* <p>Load the given class name through the list of class loaders,
@@ -75,7 +75,7 @@ extern interface ClassLoaderRepository
 	* @exception ClassNotFoundException The specified class could not
 	* be found.
 	*/
-	@:overload public function loadClassWithout(exclude : java.lang.ClassLoader, className : String) : Class<Dynamic>;
+	@:overload @:public public function loadClassWithout(exclude : java.lang.ClassLoader, className : String) : Class<Dynamic>;
 	
 	/**
 	* <p>Load the given class name through the list of class loaders,
@@ -107,7 +107,7 @@ extern interface ClassLoaderRepository
 	* be found.
 	*
 	*/
-	@:overload public function loadClassBefore(stop : java.lang.ClassLoader, className : String) : Class<Dynamic>;
+	@:overload @:public public function loadClassBefore(stop : java.lang.ClassLoader, className : String) : Class<Dynamic>;
 	
 	
 }

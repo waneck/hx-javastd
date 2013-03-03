@@ -82,7 +82,7 @@ package java.util;
 	* Constructs an empty array deque with an initial capacity
 	* sufficient to hold 16 elements.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an empty array deque with an initial capacity
@@ -90,7 +90,7 @@ package java.util;
 	*
 	* @param numElements  lower bound on initial capacity of the deque
 	*/
-	@:overload public function new(numElements : Int) : Void;
+	@:overload @:public public function new(numElements : Int) : Void;
 	
 	/**
 	* Constructs a deque containing the elements of the specified
@@ -102,7 +102,7 @@ package java.util;
 	* @param c the collection whose elements are to be placed into the deque
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload public function new(c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	/**
 	* Inserts the specified element at the front of this deque.
@@ -110,7 +110,7 @@ package java.util;
 	* @param e the element to add
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function addFirst(e : E) : Void;
+	@:overload @:public public function addFirst(e : E) : Void;
 	
 	/**
 	* Inserts the specified element at the end of this deque.
@@ -120,7 +120,7 @@ package java.util;
 	* @param e the element to add
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function addLast(e : E) : Void;
+	@:overload @:public public function addLast(e : E) : Void;
 	
 	/**
 	* Inserts the specified element at the front of this deque.
@@ -129,7 +129,7 @@ package java.util;
 	* @return <tt>true</tt> (as specified by {@link Deque#offerFirst})
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function offerFirst(e : E) : Bool;
+	@:overload @:public public function offerFirst(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element at the end of this deque.
@@ -138,35 +138,35 @@ package java.util;
 	* @return <tt>true</tt> (as specified by {@link Deque#offerLast})
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function offerLast(e : E) : Bool;
+	@:overload @:public public function offerLast(e : E) : Bool;
 	
 	/**
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function removeFirst() : E;
+	@:overload @:public public function removeFirst() : E;
 	
 	/**
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function removeLast() : E;
+	@:overload @:public public function removeLast() : E;
 	
-	@:overload public function pollFirst() : E;
+	@:overload @:public public function pollFirst() : E;
 	
-	@:overload public function pollLast() : E;
-	
-	/**
-	* @throws NoSuchElementException {@inheritDoc}
-	*/
-	@:overload public function getFirst() : E;
+	@:overload @:public public function pollLast() : E;
 	
 	/**
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function getLast() : E;
+	@:overload @:public public function getFirst() : E;
 	
-	@:overload public function peekFirst() : E;
+	/**
+	* @throws NoSuchElementException {@inheritDoc}
+	*/
+	@:overload @:public public function getLast() : E;
 	
-	@:overload public function peekLast() : E;
+	@:overload @:public public function peekFirst() : E;
+	
+	@:overload @:public public function peekLast() : E;
 	
 	/**
 	* Removes the first occurrence of the specified element in this
@@ -180,7 +180,7 @@ package java.util;
 	* @param o element to be removed from this deque, if present
 	* @return <tt>true</tt> if the deque contained the specified element
 	*/
-	@:overload public function removeFirstOccurrence(o : Dynamic) : Bool;
+	@:overload @:public public function removeFirstOccurrence(o : Dynamic) : Bool;
 	
 	/**
 	* Removes the last occurrence of the specified element in this
@@ -194,7 +194,7 @@ package java.util;
 	* @param o element to be removed from this deque, if present
 	* @return <tt>true</tt> if the deque contained the specified element
 	*/
-	@:overload public function removeLastOccurrence(o : Dynamic) : Bool;
+	@:overload @:public public function removeLastOccurrence(o : Dynamic) : Bool;
 	
 	/**
 	* Inserts the specified element at the end of this deque.
@@ -205,7 +205,7 @@ package java.util;
 	* @return <tt>true</tt> (as specified by {@link Collection#add})
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element at the end of this deque.
@@ -216,7 +216,7 @@ package java.util;
 	* @return <tt>true</tt> (as specified by {@link Queue#offer})
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function offer(e : E) : Bool;
+	@:overload @:public public function offer(e : E) : Bool;
 	
 	/**
 	* Retrieves and removes the head of the queue represented by this deque.
@@ -229,7 +229,7 @@ package java.util;
 	* @return the head of the queue represented by this deque
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function remove() : E;
+	@:overload @:public public function remove() : E;
 	
 	/**
 	* Retrieves and removes the head of the queue represented by this deque
@@ -241,7 +241,7 @@ package java.util;
 	* @return the head of the queue represented by this deque, or
 	*         <tt>null</tt> if this deque is empty
 	*/
-	@:overload public function poll() : E;
+	@:overload @:public public function poll() : E;
 	
 	/**
 	* Retrieves, but does not remove, the head of the queue represented by
@@ -253,7 +253,7 @@ package java.util;
 	* @return the head of the queue represented by this deque
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function element() : E;
+	@:overload @:public public function element() : E;
 	
 	/**
 	* Retrieves, but does not remove, the head of the queue represented by
@@ -264,7 +264,7 @@ package java.util;
 	* @return the head of the queue represented by this deque, or
 	*         <tt>null</tt> if this deque is empty
 	*/
-	@:overload public function peek() : E;
+	@:overload @:public public function peek() : E;
 	
 	/**
 	* Pushes an element onto the stack represented by this deque.  In other
@@ -275,7 +275,7 @@ package java.util;
 	* @param e the element to push
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function push(e : E) : Void;
+	@:overload @:public public function push(e : E) : Void;
 	
 	/**
 	* Pops an element from the stack represented by this deque.  In other
@@ -287,21 +287,21 @@ package java.util;
 	*         of the stack represented by this deque)
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function pop() : E;
+	@:overload @:public public function pop() : E;
 	
 	/**
 	* Returns the number of elements in this deque.
 	*
 	* @return the number of elements in this deque
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this deque contains no elements.
 	*
 	* @return <tt>true</tt> if this deque contains no elements
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns an iterator over the elements in this deque.  The elements
@@ -311,9 +311,9 @@ package java.util;
 	*
 	* @return an iterator over the elements in this deque
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
-	@:overload public function descendingIterator() : java.util.Iterator<E>;
+	@:overload @:public public function descendingIterator() : java.util.Iterator<E>;
 	
 	/**
 	* Returns <tt>true</tt> if this deque contains the specified element.
@@ -323,7 +323,7 @@ package java.util;
 	* @param o object to be checked for containment in this deque
 	* @return <tt>true</tt> if this deque contains the specified element
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Removes a single instance of the specified element from this deque.
@@ -338,13 +338,13 @@ package java.util;
 	* @param o element to be removed from this deque, if present
 	* @return <tt>true</tt> if this deque contained the specified element
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Removes all of the elements from this deque.
 	* The deque will be empty after this call returns.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns an array containing all of the elements in this deque
@@ -359,7 +359,7 @@ package java.util;
 	*
 	* @return an array containing all of the elements in this deque
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this deque in
@@ -398,34 +398,34 @@ package java.util;
 	*         this deque
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Returns a copy of this deque.
 	*
 	* @return a copy of this deque
 	*/
-	@:overload public function clone() : java.util.ArrayDeque<E>;
+	@:overload @:public public function clone() : java.util.ArrayDeque<E>;
 	
 	
 }
 @:native('java$util$ArrayDeque$DeqIterator') @:internal extern class ArrayDeque_DeqIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }
 @:native('java$util$ArrayDeque$DescendingIterator') @:internal extern class ArrayDeque_DescendingIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

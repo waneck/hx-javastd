@@ -25,7 +25,7 @@ package sun.tools.native2ascii.resources;
 */
 extern class MsgNative2ascii extends java.util.ListResourceBundle
 {
-	@:overload override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:public override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

@@ -27,25 +27,25 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 	* A constant instance of {@link OutlineableChunkStart}.  As it has no fields,
 	* there should be no need to create an instance of this class.
 	*/
-	public static var OUTLINEABLECHUNKSTART(default, null) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:public @:static @:final public static var OUTLINEABLECHUNKSTART(default, null) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/**
 	* Get the name of this instruction.  Used for debugging.
 	* @return the instruction name
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Get the name of this instruction.  Used for debugging.
 	* @return the instruction name
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Get the name of this instruction.  Used for debugging.
 	* @return the instruction name
 	*/
-	@:overload public function toString(verbose : Bool) : String;
+	@:overload @:public override public function toString(verbose : Bool) : String;
 	
 	
 }

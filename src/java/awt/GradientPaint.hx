@@ -41,7 +41,7 @@ extern class GradientPaint implements java.awt.Paint
 	* <code>Point</code>
 	* @throws NullPointerException if either one of colors is null
 	*/
-	@:overload public function new(x1 : Single, y1 : Single, color1 : java.awt.Color, x2 : Single, y2 : Single, color2 : java.awt.Color) : Void;
+	@:overload @:public public function new(x1 : Single, y1 : Single, color1 : java.awt.Color, x2 : Single, y2 : Single, color2 : java.awt.Color) : Void;
 	
 	/**
 	* Constructs a simple acyclic <code>GradientPaint</code> object.
@@ -54,7 +54,7 @@ extern class GradientPaint implements java.awt.Paint
 	* @throws NullPointerException if either one of colors or points
 	* is null
 	*/
-	@:overload public function new(pt1 : java.awt.geom.Point2D, color1 : java.awt.Color, pt2 : java.awt.geom.Point2D, color2 : java.awt.Color) : Void;
+	@:overload @:public public function new(pt1 : java.awt.geom.Point2D, color1 : java.awt.Color, pt2 : java.awt.geom.Point2D, color2 : java.awt.Color) : Void;
 	
 	/**
 	* Constructs either a cyclic or acyclic <code>GradientPaint</code>
@@ -74,7 +74,7 @@ extern class GradientPaint implements java.awt.Paint
 	* @param cyclic <code>true</code> if the gradient pattern should cycle
 	* repeatedly between the two colors; <code>false</code> otherwise
 	*/
-	@:overload public function new(x1 : Single, y1 : Single, color1 : java.awt.Color, x2 : Single, y2 : Single, color2 : java.awt.Color, cyclic : Bool) : Void;
+	@:overload @:public public function new(x1 : Single, y1 : Single, color1 : java.awt.Color, x2 : Single, y2 : Single, color2 : java.awt.Color, cyclic : Bool) : Void;
 	
 	/**
 	* Constructs either a cyclic or acyclic <code>GradientPaint</code>
@@ -92,7 +92,7 @@ extern class GradientPaint implements java.awt.Paint
 	* @throws NullPointerException if either one of colors or points
 	* is null
 	*/
-	@:overload public function new(pt1 : java.awt.geom.Point2D, color1 : java.awt.Color, pt2 : java.awt.geom.Point2D, color2 : java.awt.Color, cyclic : Bool) : Void;
+	@:overload @:public public function new(pt1 : java.awt.geom.Point2D, color1 : java.awt.Color, pt2 : java.awt.geom.Point2D, color2 : java.awt.Color, cyclic : Bool) : Void;
 	
 	/**
 	* Returns a copy of the point P1 that anchors the first color.
@@ -100,14 +100,14 @@ extern class GradientPaint implements java.awt.Paint
 	* that anchors the first color of this
 	* <code>GradientPaint</code>.
 	*/
-	@:overload public function getPoint1() : java.awt.geom.Point2D;
+	@:overload @:public public function getPoint1() : java.awt.geom.Point2D;
 	
 	/**
 	* Returns the color C1 anchored by the point P1.
 	* @return a <code>Color</code> object that is the color
 	* anchored by P1.
 	*/
-	@:overload public function getColor1() : java.awt.Color;
+	@:overload @:public public function getColor1() : java.awt.Color;
 	
 	/**
 	* Returns a copy of the point P2 which anchors the second color.
@@ -115,14 +115,14 @@ extern class GradientPaint implements java.awt.Paint
 	* that anchors the second color of this
 	* <code>GradientPaint</code>.
 	*/
-	@:overload public function getPoint2() : java.awt.geom.Point2D;
+	@:overload @:public public function getPoint2() : java.awt.geom.Point2D;
 	
 	/**
 	* Returns the color C2 anchored by the point P2.
 	* @return a <code>Color</code> object that is the color
 	* anchored by P2.
 	*/
-	@:overload public function getColor2() : java.awt.Color;
+	@:overload @:public public function getColor2() : java.awt.Color;
 	
 	/**
 	* Returns <code>true</code> if the gradient cycles repeatedly
@@ -130,7 +130,7 @@ extern class GradientPaint implements java.awt.Paint
 	* @return <code>true</code> if the gradient cycles repeatedly
 	* between the two colors; <code>false</code> otherwise.
 	*/
-	@:overload public function isCyclic() : Bool;
+	@:overload @:public public function isCyclic() : Bool;
 	
 	/**
 	* Creates and returns a {@link PaintContext} used to
@@ -160,7 +160,7 @@ extern class GradientPaint implements java.awt.Paint
 	* @see AffineTransform
 	* @see RenderingHints
 	*/
-	@:overload public function createContext(cm : java.awt.image.ColorModel, deviceBounds : java.awt.Rectangle, userBounds : java.awt.geom.Rectangle2D, xform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : java.awt.PaintContext;
+	@:overload @:public public function createContext(cm : java.awt.image.ColorModel, deviceBounds : java.awt.Rectangle, userBounds : java.awt.geom.Rectangle2D, xform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : java.awt.PaintContext;
 	
 	/**
 	* Returns the transparency mode for this <code>GradientPaint</code>.
@@ -168,7 +168,7 @@ extern class GradientPaint implements java.awt.Paint
 	* object's transparency mode.
 	* @see Transparency
 	*/
-	@:overload public function getTransparency() : Int;
+	@:overload @:public public function getTransparency() : Int;
 	
 	
 }

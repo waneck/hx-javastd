@@ -53,7 +53,7 @@ package java.lang;
 	* @return  the numeric value represented by this object after conversion
 	*          to type <code>int</code>.
 	*/
-	@:overload @:abstract public function intValue() : Int;
+	@:overload @:public @:abstract public function intValue() : Int;
 	
 	/**
 	* Returns the value of the specified number as a <code>long</code>.
@@ -62,7 +62,7 @@ package java.lang;
 	* @return  the numeric value represented by this object after conversion
 	*          to type <code>long</code>.
 	*/
-	@:overload @:abstract public function longValue() : haxe.Int64;
+	@:overload @:public @:abstract public function longValue() : haxe.Int64;
 	
 	/**
 	* Returns the value of the specified number as a <code>float</code>.
@@ -71,7 +71,7 @@ package java.lang;
 	* @return  the numeric value represented by this object after conversion
 	*          to type <code>float</code>.
 	*/
-	@:overload @:abstract public function floatValue() : Single;
+	@:overload @:public @:abstract public function floatValue() : Single;
 	
 	/**
 	* Returns the value of the specified number as a <code>double</code>.
@@ -80,7 +80,7 @@ package java.lang;
 	* @return  the numeric value represented by this object after conversion
 	*          to type <code>double</code>.
 	*/
-	@:overload @:abstract public function doubleValue() : Float;
+	@:overload @:public @:abstract public function doubleValue() : Float;
 	
 	/**
 	* Returns the value of the specified number as a <code>byte</code>.
@@ -90,7 +90,7 @@ package java.lang;
 	*          to type <code>byte</code>.
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function byteValue() : java.StdTypes.Int8;
+	@:require(java1) @:overload @:public public function byteValue() : java.StdTypes.Int8;
 	
 	/**
 	* Returns the value of the specified number as a <code>short</code>.
@@ -100,7 +100,7 @@ package java.lang;
 	*          to type <code>short</code>.
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function shortValue() : java.StdTypes.Int16;
+	@:require(java1) @:overload @:public public function shortValue() : java.StdTypes.Int16;
 	
 	
 }

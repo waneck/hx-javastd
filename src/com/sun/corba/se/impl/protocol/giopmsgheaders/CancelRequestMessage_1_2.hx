@@ -25,13 +25,13 @@ package com.sun.corba.se.impl.protocol.giopmsgheaders;
 */
 extern class CancelRequestMessage_1_2 extends com.sun.corba.se.impl.protocol.giopmsgheaders.Message_1_1 implements com.sun.corba.se.impl.protocol.giopmsgheaders.CancelRequestMessage
 {
-	@:overload public function getRequestId() : Int;
+	@:overload @:public public function getRequestId() : Int;
 	
-	@:overload public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public override public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public override public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	//@:overload public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
+	//@:overload @:public override public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
 	
 	
 }

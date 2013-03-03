@@ -32,17 +32,17 @@ extern class AnnotationParserFactoryImpl implements com.sun.xml.internal.xsom.pa
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload public function new(opts : com.sun.tools.internal.xjc.Options) : Void;
+	@:overload @:public public function new(opts : com.sun.tools.internal.xjc.Options) : Void;
 	
-	@:overload public function create() : com.sun.xml.internal.xsom.parser.AnnotationParser;
+	@:overload @:public public function create() : com.sun.xml.internal.xsom.parser.AnnotationParser;
 	
 	
 }
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$AnnotationParserFactoryImpl$ValidatorProtecter') @:internal extern class AnnotationParserFactoryImpl_ValidatorProtecter extends org.xml.sax.helpers.XMLFilterImpl
 {
-	@:overload public function new(h : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function new(h : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	
 }

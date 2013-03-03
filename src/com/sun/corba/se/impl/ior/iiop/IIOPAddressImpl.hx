@@ -25,13 +25,13 @@ package com.sun.corba.se.impl.ior.iiop;
 */
 extern class IIOPAddressImpl extends com.sun.corba.se.impl.ior.iiop.IIOPAddressBase
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, host : String, port : Int) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, host : String, port : Int) : Void;
 	
-	@:overload public function new(is : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	@:overload @:public public function new(is : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
-	@:overload override public function getHost() : String;
+	@:overload @:public override public function getHost() : String;
 	
-	@:overload override public function getPort() : Int;
+	@:overload @:public override public function getPort() : Int;
 	
 	
 }

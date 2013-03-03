@@ -26,43 +26,43 @@ package java.nio;
 //// -- This file was mechanically generated: Do not edit! -- //
 @:internal extern class DirectFloatBufferS extends java.nio.FloatBuffer implements sun.nio.ch.DirectBuffer
 {
-	private static var unsafe(default, null) : sun.misc.Unsafe;
+	@:protected @:static @:final private static var unsafe(default, null) : sun.misc.Unsafe;
 	
-	private static var unaligned(default, null) : Bool;
+	@:protected @:static @:final private static var unaligned(default, null) : Bool;
 	
-	@:overload public function attachment() : Dynamic;
+	@:overload @:public public function attachment() : Dynamic;
 	
-	@:overload public function cleaner() : sun.misc.Cleaner;
+	@:overload @:public public function cleaner() : sun.misc.Cleaner;
 	
-	@:overload public function slice() : java.nio.FloatBuffer;
+	@:overload @:public override public function slice() : java.nio.FloatBuffer;
 	
-	@:overload public function duplicate() : java.nio.FloatBuffer;
+	@:overload @:public override public function duplicate() : java.nio.FloatBuffer;
 	
-	@:overload public function asReadOnlyBuffer() : java.nio.FloatBuffer;
+	@:overload @:public override public function asReadOnlyBuffer() : java.nio.FloatBuffer;
 	
-	@:overload public function address() : haxe.Int64;
+	@:overload @:public public function address() : haxe.Int64;
 	
-	@:overload public function get() : Single;
+	@:overload @:public override public function get() : Single;
 	
-	@:overload public function get(i : Int) : Single;
+	@:overload @:public override public function get(i : Int) : Single;
 	
-	@:overload public function get(dst : java.NativeArray<Single>, offset : Int, length : Int) : java.nio.FloatBuffer;
+	@:overload @:public override public function get(dst : java.NativeArray<Single>, offset : Int, length : Int) : java.nio.FloatBuffer;
 	
-	@:overload public function put(x : Single) : java.nio.FloatBuffer;
+	@:overload @:public override public function put(x : Single) : java.nio.FloatBuffer;
 	
-	@:overload public function put(i : Int, x : Single) : java.nio.FloatBuffer;
+	@:overload @:public override public function put(i : Int, x : Single) : java.nio.FloatBuffer;
 	
-	@:overload public function put(src : java.nio.FloatBuffer) : java.nio.FloatBuffer;
+	@:overload @:public override public function put(src : java.nio.FloatBuffer) : java.nio.FloatBuffer;
 	
-	@:overload public function put(src : java.NativeArray<Single>, offset : Int, length : Int) : java.nio.FloatBuffer;
+	@:overload @:public override public function put(src : java.NativeArray<Single>, offset : Int, length : Int) : java.nio.FloatBuffer;
 	
-	@:overload public function compact() : java.nio.FloatBuffer;
+	@:overload @:public override public function compact() : java.nio.FloatBuffer;
 	
-	@:overload override public function isDirect() : Bool;
+	@:overload @:public override public function isDirect() : Bool;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload public function order() : java.nio.ByteOrder;
+	@:overload @:public override public function order() : java.nio.ByteOrder;
 	
 	
 }

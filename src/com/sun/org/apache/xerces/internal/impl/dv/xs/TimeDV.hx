@@ -26,7 +26,7 @@ extern class TimeDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Abstra
 	* @param  content The lexical representation of time
 	* @return a valid and normalized time object
 	*/
-	@:overload override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
+	@:overload @:public override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
 	
 	/**
 	* Parses, validates and computes normalized version of time object
@@ -37,7 +37,7 @@ extern class TimeDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Abstra
 	* @return normalized time representation
 	* @exception SchemaDateTimeException Invalid lexical representation
 	*/
-	@:overload private function parse(str : String) : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData;
+	@:overload @:protected private function parse(str : String) : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData;
 	
 	/**
 	* Converts time object representation to String
@@ -45,9 +45,9 @@ extern class TimeDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Abstra
 	* @param date   time object
 	* @return lexical representation of time: hh:mm:ss.sss with an optional time zone sign
 	*/
-	@:overload override private function dateToString(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : String;
+	@:overload @:protected override private function dateToString(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : String;
 	
-	@:overload override private function getXMLGregorianCalendar(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload @:protected override private function getXMLGregorianCalendar(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	
 }

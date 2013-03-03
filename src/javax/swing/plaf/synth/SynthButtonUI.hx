@@ -31,37 +31,37 @@ extern class SynthButtonUI extends javax.swing.plaf.basic.BasicButtonUI implemen
 	* @param c component to create UI object for
 	* @return the UI object
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function installDefaults(b : javax.swing.AbstractButton) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installListeners(b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function installListeners(b : javax.swing.AbstractButton) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallListeners(b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function uninstallListeners(b : javax.swing.AbstractButton) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
+	@:overload @:public override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -75,7 +75,7 @@ extern class SynthButtonUI extends javax.swing.plaf.basic.BasicButtonUI implemen
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -86,7 +86,7 @@ extern class SynthButtonUI extends javax.swing.plaf.basic.BasicButtonUI implemen
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component.
@@ -95,12 +95,12 @@ extern class SynthButtonUI extends javax.swing.plaf.basic.BasicButtonUI implemen
 	* @param g the {@code Graphics} object used for painting
 	* @see #update(Graphics,JComponent)
 	*/
-	@:overload private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Returns the default icon. This should not callback
@@ -109,7 +109,7 @@ extern class SynthButtonUI extends javax.swing.plaf.basic.BasicButtonUI implemen
 	* @param b button the icon is associated with
 	* @return default icon
 	*/
-	@:overload private function getDefaultIcon(b : javax.swing.AbstractButton) : javax.swing.Icon;
+	@:overload @:protected private function getDefaultIcon(b : javax.swing.AbstractButton) : javax.swing.Icon;
 	
 	/**
 	* Returns the Icon to use for painting the button. The icon is chosen with
@@ -118,33 +118,33 @@ extern class SynthButtonUI extends javax.swing.plaf.basic.BasicButtonUI implemen
 	* @param b button the icon is associated with
 	* @return an icon
 	*/
-	@:overload private function getIcon(b : javax.swing.AbstractButton) : javax.swing.Icon;
+	@:overload @:protected private function getIcon(b : javax.swing.AbstractButton) : javax.swing.Icon;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Returns the Icon used in calculating the
 	* preferred/minimum/maximum size.
 	*/
-	@:overload private function getSizingIcon(b : javax.swing.AbstractButton) : javax.swing.Icon;
+	@:overload @:protected private function getSizingIcon(b : javax.swing.AbstractButton) : javax.swing.Icon;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

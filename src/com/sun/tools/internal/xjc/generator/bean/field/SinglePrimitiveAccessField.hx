@@ -30,7 +30,7 @@ extern class SinglePrimitiveAccessField extends com.sun.tools.internal.xjc.gener
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload private function new(context : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : Void;
 	
 	
 }

@@ -30,7 +30,7 @@ extern class PaintEventDispatcher
 	*
 	* @param dispatcher PaintEventDispatcher
 	*/
-	@:overload public static function setPaintEventDispatcher(dispatcher : sun.awt.PaintEventDispatcher) : Void;
+	@:overload @:public @:static public static function setPaintEventDispatcher(dispatcher : sun.awt.PaintEventDispatcher) : Void;
 	
 	/**
 	* Returns the currently active <code>PaintEventDispatcher</code>.  This
@@ -38,7 +38,7 @@ extern class PaintEventDispatcher
 	*
 	* @return PaintEventDispatcher
 	*/
-	@:overload public static function getPaintEventDispatcher() : sun.awt.PaintEventDispatcher;
+	@:overload @:public @:static public static function getPaintEventDispatcher() : sun.awt.PaintEventDispatcher;
 	
 	/**
 	* Creates and returns the <code>PaintEvent</code> that should be
@@ -48,13 +48,13 @@ extern class PaintEventDispatcher
 	* <b>WARNING:</b> This is invoked from the native thread, be careful
 	* what methods you end up invoking here.
 	*/
-	@:overload public function createPaintEvent(target : java.awt.Component, x : Int, y : Int, w : Int, h : Int) : java.awt.event.PaintEvent;
+	@:overload @:public public function createPaintEvent(target : java.awt.Component, x : Int, y : Int, w : Int, h : Int) : java.awt.event.PaintEvent;
 	
 	/**
 	* Returns true if a native background erase should be done for
 	* the specified Component.
 	*/
-	@:overload public function shouldDoNativeBackgroundErase(c : java.awt.Component) : Bool;
+	@:overload @:public public function shouldDoNativeBackgroundErase(c : java.awt.Component) : Bool;
 	
 	/**
 	* This method is invoked from the toolkit thread when the surface
@@ -65,7 +65,7 @@ extern class PaintEventDispatcher
 	* on the EDT.
 	* (Fix 6255371.)
 	*/
-	@:overload public function queueSurfaceDataReplacing(c : java.awt.Component, r : java.lang.Runnable) : Bool;
+	@:overload @:public public function queueSurfaceDataReplacing(c : java.awt.Component, r : java.lang.Runnable) : Bool;
 	
 	
 }

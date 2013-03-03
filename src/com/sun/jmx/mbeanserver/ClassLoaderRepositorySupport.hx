@@ -25,21 +25,21 @@ package com.sun.jmx.mbeanserver;
 */
 @:internal extern class ClassLoaderRepositorySupport implements com.sun.jmx.mbeanserver.ModifiableClassLoaderRepository
 {
-	@:overload @:final public function loadClass(className : String) : Class<Dynamic>;
+	@:overload @:public @:final public function loadClass(className : String) : Class<Dynamic>;
 	
-	@:overload @:final public function loadClassWithout(without : java.lang.ClassLoader, className : String) : Class<Dynamic>;
+	@:overload @:public @:final public function loadClassWithout(without : java.lang.ClassLoader, className : String) : Class<Dynamic>;
 	
-	@:overload @:final public function loadClassBefore(stop : java.lang.ClassLoader, className : String) : Class<Dynamic>;
+	@:overload @:public @:final public function loadClassBefore(stop : java.lang.ClassLoader, className : String) : Class<Dynamic>;
 	
-	@:overload @:final public function addClassLoader(loader : java.lang.ClassLoader) : Void;
+	@:overload @:public @:final public function addClassLoader(loader : java.lang.ClassLoader) : Void;
 	
-	@:overload @:final public function removeClassLoader(loader : java.lang.ClassLoader) : Void;
+	@:overload @:public @:final public function removeClassLoader(loader : java.lang.ClassLoader) : Void;
 	
-	@:overload @:final @:synchronized public function addClassLoader(name : javax.management.ObjectName, loader : java.lang.ClassLoader) : Void;
+	@:overload @:public @:final @:synchronized public function addClassLoader(name : javax.management.ObjectName, loader : java.lang.ClassLoader) : Void;
 	
-	@:overload @:final @:synchronized public function removeClassLoader(name : javax.management.ObjectName) : Void;
+	@:overload @:public @:final @:synchronized public function removeClassLoader(name : javax.management.ObjectName) : Void;
 	
-	@:overload @:final public function getClassLoader(name : javax.management.ObjectName) : java.lang.ClassLoader;
+	@:overload @:public @:final public function getClassLoader(name : javax.management.ObjectName) : java.lang.ClassLoader;
 	
 	
 }

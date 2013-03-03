@@ -25,9 +25,9 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 */
 extern class WildcardLoader extends com.sun.xml.internal.bind.v2.runtime.unmarshaller.ProxyLoader
 {
-	@:overload public function new(dom : javax.xml.bind.annotation.DomHandler<Dynamic, Dynamic>, mode : com.sun.xml.internal.bind.v2.model.core.WildcardMode) : Void;
+	@:overload @:public public function new(dom : javax.xml.bind.annotation.DomHandler<Dynamic, Dynamic>, mode : com.sun.xml.internal.bind.v2.model.core.WildcardMode) : Void;
 	
-	@:overload private function selectLoader(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, tag : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
+	@:overload @:protected override private function selectLoader(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, tag : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 	
 	
 }

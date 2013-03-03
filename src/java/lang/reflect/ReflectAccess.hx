@@ -28,33 +28,33 @@ package java.lang.reflect;
 	/** Package-private class implementing the
 	sun.reflect.LangReflectAccess interface, allowing the java.lang
 	package to instantiate objects in this package. */
-	@:overload public function newField(declaringClass : Class<Dynamic>, name : String, type : Class<Dynamic>, modifiers : Int, slot : Int, signature : String, annotations : java.NativeArray<java.StdTypes.Int8>) : java.lang.reflect.Field;
+	@:overload @:public public function newField(declaringClass : Class<Dynamic>, name : String, type : Class<Dynamic>, modifiers : Int, slot : Int, signature : String, annotations : java.NativeArray<java.StdTypes.Int8>) : java.lang.reflect.Field;
 	
-	@:overload public function newMethod(declaringClass : Class<Dynamic>, name : String, parameterTypes : java.NativeArray<Class<Dynamic>>, returnType : Class<Dynamic>, checkedExceptions : java.NativeArray<Class<Dynamic>>, modifiers : Int, slot : Int, signature : String, annotations : java.NativeArray<java.StdTypes.Int8>, parameterAnnotations : java.NativeArray<java.StdTypes.Int8>, annotationDefault : java.NativeArray<java.StdTypes.Int8>) : java.lang.reflect.Method;
+	@:overload @:public public function newMethod(declaringClass : Class<Dynamic>, name : String, parameterTypes : java.NativeArray<Class<Dynamic>>, returnType : Class<Dynamic>, checkedExceptions : java.NativeArray<Class<Dynamic>>, modifiers : Int, slot : Int, signature : String, annotations : java.NativeArray<java.StdTypes.Int8>, parameterAnnotations : java.NativeArray<java.StdTypes.Int8>, annotationDefault : java.NativeArray<java.StdTypes.Int8>) : java.lang.reflect.Method;
 	
-	@:overload public function newConstructor<T>(declaringClass : Class<T>, parameterTypes : java.NativeArray<Class<Dynamic>>, checkedExceptions : java.NativeArray<Class<Dynamic>>, modifiers : Int, slot : Int, signature : String, annotations : java.NativeArray<java.StdTypes.Int8>, parameterAnnotations : java.NativeArray<java.StdTypes.Int8>) : java.lang.reflect.Constructor<T>;
+	@:overload @:public public function newConstructor<T>(declaringClass : Class<T>, parameterTypes : java.NativeArray<Class<Dynamic>>, checkedExceptions : java.NativeArray<Class<Dynamic>>, modifiers : Int, slot : Int, signature : String, annotations : java.NativeArray<java.StdTypes.Int8>, parameterAnnotations : java.NativeArray<java.StdTypes.Int8>) : java.lang.reflect.Constructor<T>;
 	
-	@:overload public function getMethodAccessor(m : java.lang.reflect.Method) : sun.reflect.MethodAccessor;
+	@:overload @:public public function getMethodAccessor(m : java.lang.reflect.Method) : sun.reflect.MethodAccessor;
 	
-	@:overload public function setMethodAccessor(m : java.lang.reflect.Method, accessor : sun.reflect.MethodAccessor) : Void;
+	@:overload @:public public function setMethodAccessor(m : java.lang.reflect.Method, accessor : sun.reflect.MethodAccessor) : Void;
 	
-	@:overload public function getConstructorAccessor(c : java.lang.reflect.Constructor<Dynamic>) : sun.reflect.ConstructorAccessor;
+	@:overload @:public public function getConstructorAccessor(c : java.lang.reflect.Constructor<Dynamic>) : sun.reflect.ConstructorAccessor;
 	
-	@:overload public function setConstructorAccessor(c : java.lang.reflect.Constructor<Dynamic>, accessor : sun.reflect.ConstructorAccessor) : Void;
+	@:overload @:public public function setConstructorAccessor(c : java.lang.reflect.Constructor<Dynamic>, accessor : sun.reflect.ConstructorAccessor) : Void;
 	
-	@:overload public function getConstructorSlot(c : java.lang.reflect.Constructor<Dynamic>) : Int;
+	@:overload @:public public function getConstructorSlot(c : java.lang.reflect.Constructor<Dynamic>) : Int;
 	
-	@:overload public function getConstructorSignature(c : java.lang.reflect.Constructor<Dynamic>) : String;
+	@:overload @:public public function getConstructorSignature(c : java.lang.reflect.Constructor<Dynamic>) : String;
 	
-	@:overload public function getConstructorAnnotations(c : java.lang.reflect.Constructor<Dynamic>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getConstructorAnnotations(c : java.lang.reflect.Constructor<Dynamic>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getConstructorParameterAnnotations(c : java.lang.reflect.Constructor<Dynamic>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getConstructorParameterAnnotations(c : java.lang.reflect.Constructor<Dynamic>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function copyMethod(arg : java.lang.reflect.Method) : java.lang.reflect.Method;
+	@:overload @:public public function copyMethod(arg : java.lang.reflect.Method) : java.lang.reflect.Method;
 	
-	@:overload public function copyField(arg : java.lang.reflect.Field) : java.lang.reflect.Field;
+	@:overload @:public public function copyField(arg : java.lang.reflect.Field) : java.lang.reflect.Field;
 	
-	@:overload public function copyConstructor<T>(arg : java.lang.reflect.Constructor<T>) : java.lang.reflect.Constructor<T>;
+	@:overload @:public public function copyConstructor<T>(arg : java.lang.reflect.Constructor<T>) : java.lang.reflect.Constructor<T>;
 	
 	
 }

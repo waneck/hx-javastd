@@ -29,121 +29,121 @@ extern class DelayedRef implements com.sun.xml.internal.xsom.impl.parser.Patch
 	* Patch implementation. Makes sure that the name resolves
 	* to a schema component.
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
-	private var schema(default, null) : com.sun.xml.internal.xsom.XSSchemaSet;
+	@:protected @:final private var schema(default, null) : com.sun.xml.internal.xsom.XSSchemaSet;
 	
-	@:overload @:abstract private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
+	@:overload @:protected @:abstract private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
 	
-	@:overload @:abstract private function getErrorProperty() : String;
+	@:overload @:protected @:abstract private function getErrorProperty() : String;
 	
-	@:overload @:final private function _get() : Dynamic;
+	@:overload @:protected @:final private function _get() : Dynamic;
 	
 	/**
 	* If this reference refers to the given declaration,
 	* resolve the reference now. This is used to implement redefinition.
 	*/
-	@:overload public function redefine(d : com.sun.xml.internal.xsom.XSDeclaration) : Void;
+	@:overload @:public public function redefine(d : com.sun.xml.internal.xsom.XSDeclaration) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$Type') extern class DelayedRef_Type extends com.sun.xml.internal.xsom.impl.parser.DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_Type
 {
-	@:overload public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
+	@:overload @:public public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
-	@:overload override private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
+	@:overload @:protected override private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
 	
-	@:overload override private function getErrorProperty() : String;
+	@:overload @:protected override private function getErrorProperty() : String;
 	
-	@:overload public function getType() : com.sun.xml.internal.xsom.XSType;
+	@:overload @:public public function getType() : com.sun.xml.internal.xsom.XSType;
 	
 	
 }
 @:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$SimpleType') extern class DelayedRef_SimpleType extends com.sun.xml.internal.xsom.impl.parser.DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_SimpleType
 {
-	@:overload public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
+	@:overload @:public public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
-	@:overload public function getType() : com.sun.xml.internal.xsom.XSSimpleType;
+	@:overload @:public public function getType() : com.sun.xml.internal.xsom.XSSimpleType;
 	
-	@:overload override private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
+	@:overload @:protected override private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
 	
-	@:overload override private function getErrorProperty() : String;
+	@:overload @:protected override private function getErrorProperty() : String;
 	
 	
 }
 @:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$ComplexType') extern class DelayedRef_ComplexType extends com.sun.xml.internal.xsom.impl.parser.DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_ComplexType
 {
-	@:overload public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
+	@:overload @:public public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
-	@:overload override private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
+	@:overload @:protected override private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
 	
-	@:overload override private function getErrorProperty() : String;
+	@:overload @:protected override private function getErrorProperty() : String;
 	
-	@:overload public function getType() : com.sun.xml.internal.xsom.XSComplexType;
+	@:overload @:public public function getType() : com.sun.xml.internal.xsom.XSComplexType;
 	
 	
 }
 @:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$Element') extern class DelayedRef_Element extends com.sun.xml.internal.xsom.impl.parser.DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_Element
 {
-	@:overload public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
+	@:overload @:public public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
-	@:overload override private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
+	@:overload @:protected override private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
 	
-	@:overload override private function getErrorProperty() : String;
+	@:overload @:protected override private function getErrorProperty() : String;
 	
-	@:overload public function get() : com.sun.xml.internal.xsom.XSElementDecl;
+	@:overload @:public public function get() : com.sun.xml.internal.xsom.XSElementDecl;
 	
-	@:overload public function getTerm() : com.sun.xml.internal.xsom.XSTerm;
+	@:overload @:public public function getTerm() : com.sun.xml.internal.xsom.XSTerm;
 	
 	
 }
 @:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$ModelGroup') extern class DelayedRef_ModelGroup extends com.sun.xml.internal.xsom.impl.parser.DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_Term
 {
-	@:overload public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
+	@:overload @:public public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
-	@:overload override private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
+	@:overload @:protected override private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
 	
-	@:overload override private function getErrorProperty() : String;
+	@:overload @:protected override private function getErrorProperty() : String;
 	
-	@:overload public function get() : com.sun.xml.internal.xsom.XSModelGroupDecl;
+	@:overload @:public public function get() : com.sun.xml.internal.xsom.XSModelGroupDecl;
 	
-	@:overload public function getTerm() : com.sun.xml.internal.xsom.XSTerm;
+	@:overload @:public public function getTerm() : com.sun.xml.internal.xsom.XSTerm;
 	
 	
 }
 @:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$AttGroup') extern class DelayedRef_AttGroup extends com.sun.xml.internal.xsom.impl.parser.DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_AttGroup
 {
-	@:overload public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
+	@:overload @:public public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
-	@:overload override private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
+	@:overload @:protected override private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
 	
-	@:overload override private function getErrorProperty() : String;
+	@:overload @:protected override private function getErrorProperty() : String;
 	
-	@:overload public function get() : com.sun.xml.internal.xsom.XSAttGroupDecl;
+	@:overload @:public public function get() : com.sun.xml.internal.xsom.XSAttGroupDecl;
 	
 	
 }
 @:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$Attribute') extern class DelayedRef_Attribute extends com.sun.xml.internal.xsom.impl.parser.DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_Attribute
 {
-	@:overload public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
+	@:overload @:public public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
-	@:overload override private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
+	@:overload @:protected override private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
 	
-	@:overload override private function getErrorProperty() : String;
+	@:overload @:protected override private function getErrorProperty() : String;
 	
-	@:overload public function getAttribute() : com.sun.xml.internal.xsom.XSAttributeDecl;
+	@:overload @:public public function getAttribute() : com.sun.xml.internal.xsom.XSAttributeDecl;
 	
 	
 }
 @:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$IdentityConstraint') extern class DelayedRef_IdentityConstraint extends com.sun.xml.internal.xsom.impl.parser.DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_IdentityConstraint
 {
-	@:overload public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
+	@:overload @:public public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
-	@:overload override private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
+	@:overload @:protected override private function resolveReference(name : com.sun.xml.internal.xsom.impl.UName) : Dynamic;
 	
-	@:overload override private function getErrorProperty() : String;
+	@:overload @:protected override private function getErrorProperty() : String;
 	
-	@:overload public function get() : com.sun.xml.internal.xsom.XSIdentityConstraint;
+	@:overload @:public public function get() : com.sun.xml.internal.xsom.XSIdentityConstraint;
 	
 	
 }

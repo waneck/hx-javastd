@@ -78,25 +78,25 @@ extern interface LSOutput
 	*  An attribute of a language and binding dependent type that represents
 	* a writable stream to which 16-bit units can be output.
 	*/
-	@:overload public function getCharacterStream() : java.io.Writer;
+	@:overload @:public public function getCharacterStream() : java.io.Writer;
 	
 	/**
 	*  An attribute of a language and binding dependent type that represents
 	* a writable stream to which 16-bit units can be output.
 	*/
-	@:overload public function setCharacterStream(characterStream : java.io.Writer) : Void;
+	@:overload @:public public function setCharacterStream(characterStream : java.io.Writer) : Void;
 	
 	/**
 	*  An attribute of a language and binding dependent type that represents
 	* a writable stream of bytes.
 	*/
-	@:overload public function getByteStream() : java.io.OutputStream;
+	@:overload @:public public function getByteStream() : java.io.OutputStream;
 	
 	/**
 	*  An attribute of a language and binding dependent type that represents
 	* a writable stream of bytes.
 	*/
-	@:overload public function setByteStream(byteStream : java.io.OutputStream) : Void;
+	@:overload @:public public function setByteStream(byteStream : java.io.OutputStream) : Void;
 	
 	/**
 	*  The system identifier, a URI reference [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>], for this
@@ -104,7 +104,7 @@ extern interface LSOutput
 	* <br> If the system ID is a relative URI reference (see section 5 in [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]), the
 	* behavior is implementation dependent.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	*  The system identifier, a URI reference [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>], for this
@@ -112,7 +112,7 @@ extern interface LSOutput
 	* <br> If the system ID is a relative URI reference (see section 5 in [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]), the
 	* behavior is implementation dependent.
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	/**
 	*  The character encoding to use for the output. The encoding must be a
@@ -122,7 +122,7 @@ extern interface LSOutput
 	* Assigned Numbers Authority [<a href='ftp://ftp.isi.edu/in-notes/iana/assignments/character-sets'>IANA-CHARSETS</a>]
 	*  should be referred to using their registered names.
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	*  The character encoding to use for the output. The encoding must be a
@@ -132,7 +132,7 @@ extern interface LSOutput
 	* Assigned Numbers Authority [<a href='ftp://ftp.isi.edu/in-notes/iana/assignments/character-sets'>IANA-CHARSETS</a>]
 	*  should be referred to using their registered names.
 	*/
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
 	
 }

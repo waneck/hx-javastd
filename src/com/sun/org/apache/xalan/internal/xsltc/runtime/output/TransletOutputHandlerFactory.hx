@@ -26,51 +26,51 @@ extern class TransletOutputHandlerFactory
 	/**
 	* @author Santiago Pericas-Geertsen
 	*/
-	public static var STREAM(default, null) : Int;
+	@:public @:static @:final public static var STREAM(default, null) : Int;
 	
-	public static var SAX(default, null) : Int;
+	@:public @:static @:final public static var SAX(default, null) : Int;
 	
-	public static var DOM(default, null) : Int;
+	@:public @:static @:final public static var DOM(default, null) : Int;
 	
-	public static var STAX(default, null) : Int;
+	@:public @:static @:final public static var STAX(default, null) : Int;
 	
-	@:overload public static function newInstance() : com.sun.org.apache.xalan.internal.xsltc.runtime.output.TransletOutputHandlerFactory;
+	@:overload @:static @:public public static function newInstance() : com.sun.org.apache.xalan.internal.xsltc.runtime.output.TransletOutputHandlerFactory;
 	
-	@:overload public static function newInstance(useServicesMechanism : Bool) : com.sun.org.apache.xalan.internal.xsltc.runtime.output.TransletOutputHandlerFactory;
+	@:overload @:static @:public public static function newInstance(useServicesMechanism : Bool) : com.sun.org.apache.xalan.internal.xsltc.runtime.output.TransletOutputHandlerFactory;
 	
-	@:overload public function new(useServicesMechanism : Bool) : Void;
+	@:overload @:public public function new(useServicesMechanism : Bool) : Void;
 	
-	@:overload public function setOutputType(outputType : Int) : Void;
+	@:overload @:public public function setOutputType(outputType : Int) : Void;
 	
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
-	@:overload public function setOutputMethod(method : String) : Void;
+	@:overload @:public public function setOutputMethod(method : String) : Void;
 	
-	@:overload public function setOutputStream(ostream : java.io.OutputStream) : Void;
+	@:overload @:public public function setOutputStream(ostream : java.io.OutputStream) : Void;
 	
-	@:overload public function setWriter(writer : java.io.Writer) : Void;
+	@:overload @:public public function setWriter(writer : java.io.Writer) : Void;
 	
-	@:overload public function setHandler(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setHandler(handler : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload public function setLexicalHandler(lex : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public public function setLexicalHandler(lex : org.xml.sax.ext.LexicalHandler) : Void;
 	
-	@:overload public function setNode(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setNode(node : org.w3c.dom.Node) : Void;
 	
-	@:overload public function getNode() : org.w3c.dom.Node;
+	@:overload @:public public function getNode() : org.w3c.dom.Node;
 	
-	@:overload public function setNextSibling(nextSibling : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setNextSibling(nextSibling : org.w3c.dom.Node) : Void;
 	
-	@:overload public function getXMLEventWriter() : javax.xml.stream.XMLEventWriter;
+	@:overload @:public public function getXMLEventWriter() : javax.xml.stream.XMLEventWriter;
 	
-	@:overload public function setXMLEventWriter(eventWriter : javax.xml.stream.XMLEventWriter) : Void;
+	@:overload @:public public function setXMLEventWriter(eventWriter : javax.xml.stream.XMLEventWriter) : Void;
 	
-	@:overload public function getXMLStreamWriter() : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public public function getXMLStreamWriter() : javax.xml.stream.XMLStreamWriter;
 	
-	@:overload public function setXMLStreamWriter(streamWriter : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function setXMLStreamWriter(streamWriter : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload public function setIndentNumber(value : Int) : Void;
+	@:overload @:public public function setIndentNumber(value : Int) : Void;
 	
-	@:overload public function getSerializationHandler() : com.sun.org.apache.xml.internal.serializer.SerializationHandler;
+	@:overload @:public public function getSerializationHandler() : com.sun.org.apache.xml.internal.serializer.SerializationHandler;
 	
 	
 }

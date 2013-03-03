@@ -25,19 +25,19 @@ package com.sun.corba.se.impl.protocol.giopmsgheaders;
 */
 extern class FragmentMessage_1_2 extends com.sun.corba.se.impl.protocol.giopmsgheaders.Message_1_2 implements com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage
 {
-	@:overload public function getRequestId() : Int;
+	@:overload @:public public function getRequestId() : Int;
 	
-	@:overload public function getHeaderLength() : Int;
+	@:overload @:public public function getHeaderLength() : Int;
 	
 	/* This will never be called, since we do not currently read the
 	* request_id from an CDRInputStream. Instead we use the
 	* readGIOP_1_2_requestId to read the requestId from a byte buffer.
 	*/
-	@:overload override public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public override public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload override public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public override public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	//@:overload override public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
+	//@:overload @:public override public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
 	
 	
 }

@@ -28,33 +28,33 @@ extern class AppletClassLoader extends java.net.URLClassLoader
 	/*
 	* Creates a new AppletClassLoader for the specified base URL.
 	*/
-	@:overload private function new(base : java.net.URL) : Void;
+	@:overload @:protected private function new(base : java.net.URL) : Void;
 	
-	@:overload public function disableRecursiveDirectoryRead() : Void;
+	@:overload @:public public function disableRecursiveDirectoryRead() : Void;
 	
 	/*
 	* Returns the URLs used for loading classes and resources.
 	*/
-	@:overload override public function getURLs() : java.NativeArray<java.net.URL>;
+	@:overload @:public override public function getURLs() : java.NativeArray<java.net.URL>;
 	
 	/*
 	* Adds the specified JAR file to the search path of loaded JAR files.
 	* Changed modifier to protected in order to be able to overwrite addJar()
 	* in PluginClassLoader.java
 	*/
-	@:overload private function addJar(name : String) : Void;
+	@:overload @:protected private function addJar(name : String) : Void;
 	
 	/*
 	* Override loadClass so that class loading errors can be caught in
 	* order to print better error messages.
 	*/
-	@:overload @:synchronized public function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
+	@:overload @:public @:synchronized override public function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
 	
 	/*
 	* Finds the applet class with the specified name. First searches
 	* loaded JAR files then the applet code base for the class.
 	*/
-	@:overload override private function findClass(name : String) : Class<Dynamic>;
+	@:overload @:protected override private function findClass(name : String) : Class<Dynamic>;
 	
 	/**
 	* Returns the permissions for the given codesource object.
@@ -74,7 +74,7 @@ extern class AppletClassLoader extends java.net.URLClassLoader
 	* @param codesource the codesource
 	* @return the permissions granted to the codesource
 	*/
-	@:overload override private function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
+	@:overload @:protected override private function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
 	
 	/**
 	* Returns an input stream for reading the specified resource.
@@ -87,7 +87,7 @@ extern class AppletClassLoader extends java.net.URLClassLoader
 	*         if the resource could not be found
 	* @since  JDK1.1
 	*/
-	@:require(java1) @:overload override public function getResourceAsStream(name : String) : java.io.InputStream;
+	@:require(java1) @:overload @:public override public function getResourceAsStream(name : String) : java.io.InputStream;
 	
 	/**
 	* Returns an input stream for reading the specified resource from the
@@ -101,37 +101,37 @@ extern class AppletClassLoader extends java.net.URLClassLoader
 	*         if the resource could not be found
 	* @since  JDK1.1
 	*/
-	@:require(java1) @:overload public function getResourceAsStreamFromJar(name : String) : java.io.InputStream;
+	@:require(java1) @:overload @:public public function getResourceAsStreamFromJar(name : String) : java.io.InputStream;
 	
 	/*
 	* Finds the applet resource with the specified name. First checks
 	* loaded JAR files then the applet code base for the resource.
 	*/
-	@:overload override public function findResource(name : String) : java.net.URL;
+	@:overload @:public override public function findResource(name : String) : java.net.URL;
 	
 	/*
 	* Returns an enumeration of all the applet resources with the specified
 	* name. First checks loaded JAR files then the applet code base for all
 	* available resources.
 	*/
-	@:overload override public function findResources(name : String) : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function findResources(name : String) : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function getThreadGroup() : java.lang.ThreadGroup;
+	@:overload @:public public function getThreadGroup() : java.lang.ThreadGroup;
 	
 	/*
 	* Get the AppContext, if any, corresponding to this AppletClassLoader.
 	*/
-	@:overload public function getAppContext() : sun.awt.AppContext;
+	@:overload @:public public function getAppContext() : sun.awt.AppContext;
 	
 	/**
 	* Grab this AppletClassLoader and its ThreadGroup/AppContext, so they
 	* won't be destroyed.
 	*/
-	@:overload public function grab() : Void;
+	@:overload @:public public function grab() : Void;
 	
-	@:overload private function setExceptionStatus() : Void;
+	@:overload @:protected private function setExceptionStatus() : Void;
 	
-	@:overload public function getExceptionStatus() : Bool;
+	@:overload @:public public function getExceptionStatus() : Bool;
 	
 	/**
 	* Release this AppletClassLoader and its ThreadGroup/AppContext.
@@ -145,7 +145,7 @@ extern class AppletClassLoader extends java.net.URLClassLoader
 	* Changed modifier to protected in order to be able to overwrite this
 	* function in PluginClassLoader.java
 	*/
-	@:overload private function release() : Void;
+	@:overload @:protected private function release() : Void;
 	
 	/*
 	* reset classloader's AppContext and ThreadGroup
@@ -156,13 +156,13 @@ extern class AppletClassLoader extends java.net.URLClassLoader
 	*
 	* @return previous AppContext
 	*/
-	@:overload private function resetAppContext() : sun.awt.AppContext;
+	@:overload @:protected private function resetAppContext() : sun.awt.AppContext;
 	
 	
 }
 @:internal extern class AppContextCreator extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

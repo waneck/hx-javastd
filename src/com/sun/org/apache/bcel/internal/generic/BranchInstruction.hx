@@ -66,34 +66,34 @@ extern class BranchInstruction extends com.sun.org.apache.bcel.internal.generic.
 	* @see InstructionList
 	* @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
 	*/
-	private var index : Int;
+	@:protected private var index : Int;
 	
-	private var target : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:protected private var target : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
-	private var position : Int;
+	@:protected private var position : Int;
 	
 	/** Common super constructor
 	* @param opcodee Instruction opcode
 	* @param target instruction to branch to
 	*/
-	@:overload private function new(opcode : java.StdTypes.Int16, target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:protected private function new(opcode : java.StdTypes.Int16, target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload override public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload @:public override public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @param target branch target
 	* @return the offset to  `target' relative to this instruction
 	*/
-	@:overload private function getTargetOffset(target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Int;
+	@:overload @:protected private function getTargetOffset(target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Int;
 	
 	/**
 	* @return the offset to this instruction's target
 	*/
-	@:overload private function getTargetOffset() : Int;
+	@:overload @:protected private function getTargetOffset() : Int;
 	
 	/**
 	* Called by InstructionList.setPositions when setting the position for every
@@ -105,7 +105,7 @@ extern class BranchInstruction extends com.sun.org.apache.bcel.internal.generic.
 	* @param max_offset the maximum offset that may be caused by these instructions
 	* @return additional offset caused by possible change of this instruction's length
 	*/
-	@:overload private function updatePosition(offset : Int, max_offset : Int) : Int;
+	@:overload @:protected private function updatePosition(offset : Int, max_offset : Int) : Int;
 	
 	/**
 	* Long output format:
@@ -118,7 +118,7 @@ extern class BranchInstruction extends com.sun.org.apache.bcel.internal.generic.
 	* @param verbose long/short format switch
 	* @return mnemonic for instruction
 	*/
-	@:overload override public function toString(verbose : Bool) : String;
+	@:overload @:public override public function toString(verbose : Bool) : String;
 	
 	/**
 	* Read needed data (e.g. index) from file. Conversion to a InstructionHandle
@@ -128,34 +128,34 @@ extern class BranchInstruction extends com.sun.org.apache.bcel.internal.generic.
 	* @param wide wide prefix?
 	* @see InstructionList
 	*/
-	@:overload override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload @:protected override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
 	/**
 	* @return target offset in byte code
 	*/
-	@:overload @:final public function getIndex() : Int;
+	@:overload @:public @:final public function getIndex() : Int;
 	
 	/**
 	* @return target of branch instruction
 	*/
-	@:overload public function getTarget() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function getTarget() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Set branch target
 	* @param target branch target
 	*/
-	@:overload public function setTarget(target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function setTarget(target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* @param old_ih old target
 	* @param new_ih new target
 	*/
-	@:overload public function updateTarget(old_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function updateTarget(old_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* @return true, if ih is target of this instruction
 	*/
-	@:overload public function containsTarget(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Bool;
+	@:overload @:public public function containsTarget(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Bool;
 	
 	
 }

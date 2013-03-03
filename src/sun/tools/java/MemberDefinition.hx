@@ -33,38 +33,38 @@ extern class MemberDefinition implements sun.tools.java.Constants
 	* supported API.  Code that depends on them does so at its own risk:
 	* they are subject to change or removal without notice.
 	*/
-	private var where : haxe.Int64;
+	@:protected private var where : haxe.Int64;
 	
-	private var modifiers : Int;
+	@:protected private var modifiers : Int;
 	
-	private var type : sun.tools.java.Type;
+	@:protected private var type : sun.tools.java.Type;
 	
-	private var documentation : String;
+	@:protected private var documentation : String;
 	
-	private var expIds : java.NativeArray<sun.tools.java.IdentifierToken>;
+	@:protected private var expIds : java.NativeArray<sun.tools.java.IdentifierToken>;
 	
-	private var exp : java.NativeArray<sun.tools.java.ClassDeclaration>;
+	@:protected private var exp : java.NativeArray<sun.tools.java.ClassDeclaration>;
 	
-	private var value : sun.tools.tree.Node;
+	@:protected private var value : sun.tools.tree.Node;
 	
-	private var clazz : sun.tools.java.ClassDefinition;
+	@:protected private var clazz : sun.tools.java.ClassDefinition;
 	
-	private var name : sun.tools.java.Identifier;
+	@:protected private var name : sun.tools.java.Identifier;
 	
-	private var innerClass : sun.tools.java.ClassDefinition;
+	@:protected private var innerClass : sun.tools.java.ClassDefinition;
 	
-	private var nextMember : sun.tools.java.MemberDefinition;
+	@:protected private var nextMember : sun.tools.java.MemberDefinition;
 	
-	private var nextMatch : sun.tools.java.MemberDefinition;
+	@:protected private var nextMatch : sun.tools.java.MemberDefinition;
 	
-	private var accessPeer : sun.tools.java.MemberDefinition;
+	@:protected private var accessPeer : sun.tools.java.MemberDefinition;
 	
-	private var superAccessMethod : Bool;
+	@:protected private var superAccessMethod : Bool;
 	
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, clazz : sun.tools.java.ClassDefinition, modifiers : Int, type : sun.tools.java.Type, name : sun.tools.java.Identifier, expIds : java.NativeArray<sun.tools.java.IdentifierToken>, value : sun.tools.tree.Node) : Void;
+	@:overload @:public public function new(where : haxe.Int64, clazz : sun.tools.java.ClassDefinition, modifiers : Int, type : sun.tools.java.Type, name : sun.tools.java.Identifier, expIds : java.NativeArray<sun.tools.java.IdentifierToken>, value : sun.tools.tree.Node) : Void;
 	
 	/**
 	* Constructor for an inner class.
@@ -75,7 +75,7 @@ extern class MemberDefinition implements sun.tools.java.Constants
 	* This constructor calls the generic constructor for this
 	* class, extracting all necessary values from the innerClass.
 	*/
-	@:overload public function new(innerClass : sun.tools.java.ClassDefinition) : Void;
+	@:overload @:public public function new(innerClass : sun.tools.java.ClassDefinition) : Void;
 	
 	/**
 	* Create a member which is externally the same as `field' but
@@ -93,172 +93,172 @@ extern class MemberDefinition implements sun.tools.java.Constants
 	* unique then we can end up generating duplicate MethodRef
 	* constant pool entries during code generation.
 	*/
-	@:overload public static function makeProxyMember(field : sun.tools.java.MemberDefinition, classDef : sun.tools.java.ClassDefinition, env : sun.tools.java.Environment) : sun.tools.java.MemberDefinition;
+	@:overload @:public @:static public static function makeProxyMember(field : sun.tools.java.MemberDefinition, classDef : sun.tools.java.ClassDefinition, env : sun.tools.java.Environment) : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Get the position in the input
 	*/
-	@:overload @:final public function getWhere() : haxe.Int64;
+	@:overload @:public @:final public function getWhere() : haxe.Int64;
 	
 	/**
 	* Get the class declaration
 	*/
-	@:overload @:final public function getClassDeclaration() : sun.tools.java.ClassDeclaration;
+	@:overload @:public @:final public function getClassDeclaration() : sun.tools.java.ClassDeclaration;
 	
 	/**
 	* A stub.  Subclasses can do more checking.
 	*/
-	@:overload public function resolveTypeStructure(env : sun.tools.java.Environment) : Void;
+	@:overload @:public public function resolveTypeStructure(env : sun.tools.java.Environment) : Void;
 	
 	/**
 	* Get the class declaration in which the field is actually defined
 	*/
-	@:overload public function getDefiningClassDeclaration() : sun.tools.java.ClassDeclaration;
+	@:overload @:public public function getDefiningClassDeclaration() : sun.tools.java.ClassDeclaration;
 	
 	/**
 	* Get the class definition
 	*/
-	@:overload @:final public function getClassDefinition() : sun.tools.java.ClassDefinition;
+	@:overload @:public @:final public function getClassDefinition() : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Get the field's top-level enclosing class
 	*/
-	@:overload @:final public function getTopClass() : sun.tools.java.ClassDefinition;
+	@:overload @:public @:final public function getTopClass() : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Get the field's modifiers
 	*/
-	@:overload @:final public function getModifiers() : Int;
+	@:overload @:public @:final public function getModifiers() : Int;
 	
-	@:overload @:final public function subModifiers(mod : Int) : Void;
+	@:overload @:public @:final public function subModifiers(mod : Int) : Void;
 	
-	@:overload @:final public function addModifiers(mod : Int) : Void;
+	@:overload @:public @:final public function addModifiers(mod : Int) : Void;
 	
 	/**
 	* Get the field's type
 	*/
-	@:overload @:final public function getType() : sun.tools.java.Type;
+	@:overload @:public @:final public function getType() : sun.tools.java.Type;
 	
 	/**
 	* Get the field's name
 	*/
-	@:overload @:final public function getName() : sun.tools.java.Identifier;
+	@:overload @:public @:final public function getName() : sun.tools.java.Identifier;
 	
 	/**
 	* Get arguments (a vector of LocalMember)
 	*/
-	@:overload public function getArguments() : java.util.Vector<Dynamic>;
+	@:overload @:public public function getArguments() : java.util.Vector<Dynamic>;
 	
 	/**
 	* Get the exceptions that are thrown by this method.
 	*/
-	@:overload public function getExceptions(env : sun.tools.java.Environment) : java.NativeArray<sun.tools.java.ClassDeclaration>;
+	@:overload @:public public function getExceptions(env : sun.tools.java.Environment) : java.NativeArray<sun.tools.java.ClassDeclaration>;
 	
-	@:overload @:final public function getExceptionIds() : java.NativeArray<sun.tools.java.IdentifierToken>;
+	@:overload @:public @:final public function getExceptionIds() : java.NativeArray<sun.tools.java.IdentifierToken>;
 	
 	/**
 	* Get an inner class.
 	*/
-	@:overload public function getInnerClass() : sun.tools.java.ClassDefinition;
+	@:overload @:public public function getInnerClass() : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Is this a synthetic field which holds a copy of,
 	* or reference to, a local variable or enclosing instance?
 	*/
-	@:overload public function isUplevelValue() : Bool;
+	@:overload @:public public function isUplevelValue() : Bool;
 	
-	@:overload public function isAccessMethod() : Bool;
+	@:overload @:public public function isAccessMethod() : Bool;
 	
 	/**
 	* Is this a synthetic method which provides access to a
 	* visible private member?
 	*/
-	@:overload public function getAccessMethodTarget() : sun.tools.java.MemberDefinition;
+	@:overload @:public public function getAccessMethodTarget() : sun.tools.java.MemberDefinition;
 	
-	@:overload public function setAccessMethodTarget(target : sun.tools.java.MemberDefinition) : Void;
+	@:overload @:public public function setAccessMethodTarget(target : sun.tools.java.MemberDefinition) : Void;
 	
 	/**
 	* If this method is a getter for a private field, return the setter.
 	*/
-	@:overload public function getAccessUpdateMember() : sun.tools.java.MemberDefinition;
+	@:overload @:public public function getAccessUpdateMember() : sun.tools.java.MemberDefinition;
 	
-	@:overload public function setAccessUpdateMember(updater : sun.tools.java.MemberDefinition) : Void;
+	@:overload @:public public function setAccessUpdateMember(updater : sun.tools.java.MemberDefinition) : Void;
 	
 	/**
 	* Is this an access method for a field selection or method call
 	* of the form '...super.foo' or '...super.foo()'?
 	*/
-	@:overload @:final public function isSuperAccessMethod() : Bool;
+	@:overload @:public @:final public function isSuperAccessMethod() : Bool;
 	
 	/**
 	* Mark this member as an access method for a field selection
 	* or method call via the 'super' keyword.
 	*/
-	@:overload @:final public function setIsSuperAccessMethod(b : Bool) : Void;
+	@:overload @:public @:final public function setIsSuperAccessMethod(b : Bool) : Void;
 	
 	/**
 	* Tell if this is a final variable without an initializer.
 	* Such variables are subject to definite single assignment.
 	*/
-	@:overload @:final public function isBlankFinal() : Bool;
+	@:overload @:public @:final public function isBlankFinal() : Bool;
 	
-	@:overload public function isNeverNull() : Bool;
+	@:overload @:public public function isNeverNull() : Bool;
 	
 	/**
 	* Get the field's final value (may return null)
 	*/
-	@:overload public function getValue(env : sun.tools.java.Environment) : sun.tools.tree.Node;
+	@:overload @:public public function getValue(env : sun.tools.java.Environment) : sun.tools.tree.Node;
 	
-	@:overload @:final public function getValue() : sun.tools.tree.Node;
+	@:overload @:public @:final public function getValue() : sun.tools.tree.Node;
 	
-	@:overload @:final public function setValue(value : sun.tools.tree.Node) : Void;
+	@:overload @:public @:final public function setValue(value : sun.tools.tree.Node) : Void;
 	
-	@:overload public function getInitialValue() : Dynamic;
+	@:overload @:public public function getInitialValue() : Dynamic;
 	
 	/**
 	* Get the next field or the next match
 	*/
-	@:overload @:final public function getNextMember() : sun.tools.java.MemberDefinition;
+	@:overload @:public @:final public function getNextMember() : sun.tools.java.MemberDefinition;
 	
-	@:overload @:final public function getNextMatch() : sun.tools.java.MemberDefinition;
+	@:overload @:public @:final public function getNextMatch() : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Get the field's documentation
 	*/
-	@:overload public function getDocumentation() : String;
+	@:overload @:public public function getDocumentation() : String;
 	
 	/**
 	* Request a check of the field definition.
 	*/
-	@:overload public function check(env : sun.tools.java.Environment) : Void;
+	@:overload @:public public function check(env : sun.tools.java.Environment) : Void;
 	
 	/**
 	* Really check the field definition.
 	*/
-	@:overload public function check(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset) : sun.tools.tree.Vset;
+	@:overload @:public public function check(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset) : sun.tools.tree.Vset;
 	
 	/**
 	* Generate code
 	*/
-	@:overload public function code(env : sun.tools.java.Environment, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public public function code(env : sun.tools.java.Environment, asm : sun.tools.asm.Assembler) : Void;
 	
-	@:overload public function codeInit(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public public function codeInit(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Tells whether to report a deprecation error for this field.
 	*/
-	@:overload public function reportDeprecated(env : sun.tools.java.Environment) : Bool;
+	@:overload @:public public function reportDeprecated(env : sun.tools.java.Environment) : Bool;
 	
 	/**
 	* Check if a field can reach another field (only considers
 	* forward references, not the access modifiers).
 	*/
-	@:overload @:final public function canReach(env : sun.tools.java.Environment, f : sun.tools.java.MemberDefinition) : Bool;
+	@:overload @:public @:final public function canReach(env : sun.tools.java.Environment, f : sun.tools.java.MemberDefinition) : Bool;
 	
 	/**
 	* Convenience method to see if two methods return the same type
 	*/
-	@:overload public function sameReturnType(method : sun.tools.java.MemberDefinition) : Bool;
+	@:overload @:public public function sameReturnType(method : sun.tools.java.MemberDefinition) : Bool;
 	
 	/**
 	* Check to see if `this' can override/hide `method'.  Caller is
@@ -274,7 +274,7 @@ extern class MemberDefinition implements sun.tools.java.Constants
 	*       B - void foo() throws e2
 	* </pre>
 	*/
-	@:overload public function checkOverride(env : sun.tools.java.Environment, method : sun.tools.java.MemberDefinition) : Bool;
+	@:overload @:public public function checkOverride(env : sun.tools.java.Environment, method : sun.tools.java.MemberDefinition) : Bool;
 	
 	/**
 	* Check to see if two method definitions are compatible, that is
@@ -294,7 +294,7 @@ extern class MemberDefinition implements sun.tools.java.Constants
 	*          C
 	* </pre>
 	*/
-	@:overload public function checkMeet(env : sun.tools.java.Environment, method : sun.tools.java.MemberDefinition, clazz : sun.tools.java.ClassDeclaration) : Bool;
+	@:overload @:public public function checkMeet(env : sun.tools.java.Environment, method : sun.tools.java.MemberDefinition, clazz : sun.tools.java.ClassDeclaration) : Bool;
 	
 	/**
 	* This method is meant to be used to determine if one of two inherited
@@ -305,69 +305,69 @@ extern class MemberDefinition implements sun.tools.java.Constants
 	* If you call couldOverride() without doing a checkMeet() first, then
 	* you are on your own.
 	*/
-	@:overload public function couldOverride(env : sun.tools.java.Environment, method : sun.tools.java.MemberDefinition) : Bool;
+	@:overload @:public public function couldOverride(env : sun.tools.java.Environment, method : sun.tools.java.MemberDefinition) : Bool;
 	
 	/**
 	* Checks
 	*/
-	@:overload @:final public function isPublic() : Bool;
+	@:overload @:public @:final public function isPublic() : Bool;
 	
-	@:overload @:final public function isPrivate() : Bool;
+	@:overload @:public @:final public function isPrivate() : Bool;
 	
-	@:overload @:final public function isProtected() : Bool;
+	@:overload @:public @:final public function isProtected() : Bool;
 	
-	@:overload @:final public function isPackagePrivate() : Bool;
+	@:overload @:public @:final public function isPackagePrivate() : Bool;
 	
-	@:overload @:final public function isFinal() : Bool;
+	@:overload @:public @:final public function isFinal() : Bool;
 	
-	@:overload @:final public function isStatic() : Bool;
+	@:overload @:public @:final public function isStatic() : Bool;
 	
-	@:overload @:final public function isSynchronized() : Bool;
+	@:overload @:public @:final public function isSynchronized() : Bool;
 	
-	@:overload @:final public function isAbstract() : Bool;
+	@:overload @:public @:final public function isAbstract() : Bool;
 	
-	@:overload @:final public function isNative() : Bool;
+	@:overload @:public @:final public function isNative() : Bool;
 	
-	@:overload @:final public function isVolatile() : Bool;
+	@:overload @:public @:final public function isVolatile() : Bool;
 	
-	@:overload @:final public function isTransient() : Bool;
+	@:overload @:public @:final public function isTransient() : Bool;
 	
-	@:overload @:final public function isMethod() : Bool;
+	@:overload @:public @:final public function isMethod() : Bool;
 	
-	@:overload @:final public function isVariable() : Bool;
+	@:overload @:public @:final public function isVariable() : Bool;
 	
-	@:overload @:final public function isSynthetic() : Bool;
+	@:overload @:public @:final public function isSynthetic() : Bool;
 	
-	@:overload @:final public function isDeprecated() : Bool;
+	@:overload @:public @:final public function isDeprecated() : Bool;
 	
-	@:overload @:final public function isStrict() : Bool;
+	@:overload @:public @:final public function isStrict() : Bool;
 	
-	@:overload @:final public function isInnerClass() : Bool;
+	@:overload @:public @:final public function isInnerClass() : Bool;
 	
-	@:overload @:final public function isInitializer() : Bool;
+	@:overload @:public @:final public function isInitializer() : Bool;
 	
-	@:overload @:final public function isConstructor() : Bool;
+	@:overload @:public @:final public function isConstructor() : Bool;
 	
-	@:overload public function isLocal() : Bool;
+	@:overload @:public public function isLocal() : Bool;
 	
-	@:overload public function isInlineable(env : sun.tools.java.Environment, fromFinal : Bool) : Bool;
+	@:overload @:public public function isInlineable(env : sun.tools.java.Environment, fromFinal : Bool) : Bool;
 	
 	/**
 	* Check if constant:  Will it inline away to a constant?
 	*/
-	@:overload public function isConstant() : Bool;
+	@:overload @:public public function isConstant() : Bool;
 	
 	/**
 	* toString
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Print for debugging
 	*/
-	@:overload public function print(out : java.io.PrintStream) : Void;
+	@:overload @:public public function print(out : java.io.PrintStream) : Void;
 	
-	@:overload public function cleanup(env : sun.tools.java.Environment) : Void;
+	@:overload @:public public function cleanup(env : sun.tools.java.Environment) : Void;
 	
 	
 }

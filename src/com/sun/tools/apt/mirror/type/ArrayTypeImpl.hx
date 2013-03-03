@@ -28,17 +28,17 @@ extern class ArrayTypeImpl extends com.sun.tools.apt.mirror.type.TypeMirrorImpl 
 	/**
 	* Implementation of ArrayType
 	*/
-	private var type : com.sun.tools.javac.code.Type.Type_ArrayType;
+	@:protected private var type : com.sun.tools.javac.code.Type.Type_ArrayType;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getComponentType() : com.sun.mirror.type.TypeMirror;
+	@:overload @:public public function getComponentType() : com.sun.mirror.type.TypeMirror;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
 	
 	
 }

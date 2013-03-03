@@ -98,7 +98,7 @@ package org.omg.CORBA;
 	* @return                  a <code>String</code> object representing
 	*                    the name of this <code>NamedValue</code> object
 	*/
-	@:overload @:abstract public function name() : String;
+	@:overload @:public @:abstract public function name() : String;
 	
 	/**
 	* Retrieves the value for this <code>NamedValue</code> object.
@@ -106,7 +106,7 @@ package org.omg.CORBA;
 	* @return                  an <code>Any</code> object containing
 	*                    the value of this <code>NamedValue</code> object
 	*/
-	@:overload @:abstract public function value() : org.omg.CORBA.Any;
+	@:overload @:public @:abstract public function value() : org.omg.CORBA.Any;
 	
 	/**
 	* Retrieves the argument mode flag for this <code>NamedValue</code> object.
@@ -114,7 +114,7 @@ package org.omg.CORBA;
 	* @return                  an <code>int</code> representing the argument
 	*                    mode for this <code>NamedValue</code> object
 	*/
-	@:overload @:abstract public function flags() : Int;
+	@:overload @:public @:abstract public function flags() : Int;
 	
 	
 }

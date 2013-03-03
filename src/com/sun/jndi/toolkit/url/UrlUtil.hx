@@ -28,7 +28,7 @@ extern class UrlUtil
 	/**
 	* Decode a URI string (according to RFC 2396).
 	*/
-	@:overload @:final public static function decode(s : String) : String;
+	@:overload @:public @:static @:final public static function decode(s : String) : String;
 	
 	/**
 	* Decode a URI string (according to RFC 2396).
@@ -39,7 +39,7 @@ extern class UrlUtil
 	*
 	* The string is subsequently converted using the specified encoding
 	*/
-	@:overload @:final public static function decode(s : String, enc : String) : String;
+	@:overload @:public @:static @:final public static function decode(s : String, enc : String) : String;
 	
 	/**
 	* Encode a string for inclusion in a URI (according to RFC 2396).
@@ -53,7 +53,7 @@ extern class UrlUtil
 	* The string is first converted to the specified encoding.
 	* For LDAP (2255), the encoding must be UTF-8.
 	*/
-	@:overload @:final public static function encode(s : String, enc : String) : String;
+	@:overload @:public @:static @:final public static function encode(s : String, enc : String) : String;
 	
 	
 }

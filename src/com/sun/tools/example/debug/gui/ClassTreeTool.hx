@@ -32,39 +32,39 @@ package com.sun.tools.example.debug.gui;
 */
 extern class ClassTreeTool extends javax.swing.JPanel
 {
-	@:overload public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
+	@:overload @:public public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$ClassTreeTool$ClassTreeToolListener') @:internal extern class ClassTreeTool_ClassTreeToolListener extends com.sun.tools.example.debug.event.JDIAdapter implements com.sun.tools.example.debug.event.JDIListener implements com.sun.tools.example.debug.bdi.SessionListener
 {
-	@:overload public function sessionStart(e : java.util.EventObject) : Void;
+	@:overload @:public public function sessionStart(e : java.util.EventObject) : Void;
 	
-	@:overload public function sessionInterrupt(e : java.util.EventObject) : Void;
+	@:overload @:public public function sessionInterrupt(e : java.util.EventObject) : Void;
 	
-	@:overload public function sessionContinue(e : java.util.EventObject) : Void;
+	@:overload @:public public function sessionContinue(e : java.util.EventObject) : Void;
 	
-	@:overload public function classPrepare(e : com.sun.tools.example.debug.event.ClassPrepareEventSet) : Void;
+	@:overload @:public override public function classPrepare(e : com.sun.tools.example.debug.event.ClassPrepareEventSet) : Void;
 	
-	@:overload public function classUnload(e : com.sun.tools.example.debug.event.ClassUnloadEventSet) : Void;
+	@:overload @:public override public function classUnload(e : com.sun.tools.example.debug.event.ClassUnloadEventSet) : Void;
 	
-	@:overload public function vmDisconnect(e : com.sun.tools.example.debug.event.VMDisconnectEventSet) : Void;
+	@:overload @:public override public function vmDisconnect(e : com.sun.tools.example.debug.event.VMDisconnectEventSet) : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$ClassTreeTool$ClassTreeNode') @:internal extern class ClassTreeTool_ClassTreeNode extends javax.swing.tree.DefaultMutableTreeNode
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload public function getReferenceType() : com.sun.jdi.ReferenceType;
+	@:overload @:public public function getReferenceType() : com.sun.jdi.ReferenceType;
 	
-	@:overload public function getReferenceTypeName() : String;
+	@:overload @:public public function getReferenceTypeName() : String;
 	
-	@:overload override public function isLeaf() : Bool;
+	@:overload @:public override public function isLeaf() : Bool;
 	
-	@:overload public function addClass(refTy : com.sun.jdi.ReferenceType) : Void;
+	@:overload @:public public function addClass(refTy : com.sun.jdi.ReferenceType) : Void;
 	
-	@:overload public function removeClass(className : String) : Void;
+	@:overload @:public public function removeClass(className : String) : Void;
 	
 	
 }

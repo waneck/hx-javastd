@@ -45,7 +45,7 @@ package sun.nio.ch;
 */
 @:native('sun$nio$ch$KQueuePort$EventHandlerTask') @:internal extern class KQueuePort_EventHandlerTask implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

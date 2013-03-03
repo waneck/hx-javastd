@@ -33,7 +33,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	* @see #installUI
 	* @see #uninstallUI
 	*/
-	private var spinner : javax.swing.JSpinner;
+	@:protected private var spinner : javax.swing.JSpinner;
 	
 	/**
 	* Returns a new instance of BasicSpinnerUI.  SpinnerListUI
@@ -43,7 +43,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	* @see ComponentUI#createUI
 	* @return a new BasicSpinnerUI object
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Calls <code>installDefaults</code>, <code>installListeners</code>,
@@ -57,7 +57,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	* @see #createPreviousButton
 	* @see #createEditor
 	*/
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Calls <code>uninstallDefaults</code>, <code>uninstallListeners</code>,
@@ -65,7 +65,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	*
 	* @param c the JSpinner (not used)
 	*/
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Initializes <code>PropertyChangeListener</code> with
@@ -77,7 +77,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	* @see #replaceEditor
 	* @see #uninstallListeners
 	*/
-	@:overload private function installListeners() : Void;
+	@:overload @:protected private function installListeners() : Void;
 	
 	/**
 	* Removes the <code>PropertyChangeListener</code> added
@@ -87,7 +87,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	*
 	* @see #installListeners
 	*/
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected private function uninstallListeners() : Void;
 	
 	/**
 	* Initialize the <code>JSpinner</code> <code>border</code>,
@@ -102,7 +102,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	* @see LookAndFeel#installBorder
 	* @see LookAndFeel#installColors
 	*/
-	@:overload private function installDefaults() : Void;
+	@:overload @:protected private function installDefaults() : Void;
 	
 	/**
 	* Sets the <code>JSpinner's</code> layout manager to null.  This
@@ -111,7 +111,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	* @see #installDefaults
 	* @see #uninstallUI
 	*/
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected private function uninstallDefaults() : Void;
 	
 	/**
 	* Installs the necessary listeners on the next button, <code>c</code>,
@@ -122,7 +122,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	* @see #createNextButton
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function installNextButtonListeners(c : java.awt.Component) : Void;
+	@:require(java5) @:overload @:protected private function installNextButtonListeners(c : java.awt.Component) : Void;
 	
 	/**
 	* Installs the necessary listeners on the previous button, <code>c</code>,
@@ -133,7 +133,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	* @see #createPreviousButton
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function installPreviousButtonListeners(c : java.awt.Component) : Void;
+	@:require(java5) @:overload @:protected private function installPreviousButtonListeners(c : java.awt.Component) : Void;
 	
 	/**
 	* Creates a <code>LayoutManager</code> that manages the <code>editor</code>,
@@ -148,7 +148,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	* @see #createPreviousButton
 	* @see #createEditor
 	*/
-	@:overload private function createLayout() : java.awt.LayoutManager;
+	@:overload @:protected private function createLayout() : java.awt.LayoutManager;
 	
 	/**
 	* Creates a <code>PropertyChangeListener</code> that can be
@@ -161,7 +161,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	* @return A PropertyChangeListener for the JSpinner itself
 	* @see #installListeners
 	*/
-	@:overload private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	@:overload @:protected private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
 	
 	/**
 	* Creates a decrement button, i.e. component that replaces the spinner
@@ -175,7 +175,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	* @see #createNextButton
 	* @see #installPreviousButtonListeners
 	*/
-	@:overload private function createPreviousButton() : java.awt.Component;
+	@:overload @:protected private function createPreviousButton() : java.awt.Component;
 	
 	/**
 	* Creates an increment button, i.e. component that replaces the spinner
@@ -189,7 +189,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	* @see #createPreviousButton
 	* @see #installNextButtonListeners
 	*/
-	@:overload private function createNextButton() : java.awt.Component;
+	@:overload @:protected private function createNextButton() : java.awt.Component;
 	
 	/**
 	* This method is called by installUI to get the editor component
@@ -214,7 +214,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	* @see #replaceEditor
 	* @see JSpinner#getEditor
 	*/
-	@:overload private function createEditor() : javax.swing.JComponent;
+	@:overload @:protected private function createEditor() : javax.swing.JComponent;
 	
 	/**
 	* Called by the <code>PropertyChangeListener</code> when the
@@ -231,14 +231,14 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	* @see #createEditor
 	* @see #createPropertyChangeListener
 	*/
-	@:overload private function replaceEditor(oldEditor : javax.swing.JComponent, newEditor : javax.swing.JComponent) : Void;
+	@:overload @:protected private function replaceEditor(oldEditor : javax.swing.JComponent, newEditor : javax.swing.JComponent) : Void;
 	
 	/**
 	* Installs the keyboard Actions onto the JSpinner.
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function installKeyboardActions() : Void;
+	@:require(java5) @:overload @:protected private function installKeyboardActions() : Void;
 	
 	/**
 	* Returns the baseline.
@@ -248,7 +248,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
+	@:require(java6) @:overload @:public override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
 	
 	/**
 	* Returns an enum indicating how the baseline of the component
@@ -258,7 +258,7 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
+	@:require(java6) @:overload @:public override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
 	
 	
 }
@@ -280,39 +280,39 @@ extern class BasicSpinnerUI extends javax.swing.plaf.SpinnerUI
 */
 @:native('javax$swing$plaf$basic$BasicSpinnerUI$ArrowButtonHandler') @:internal extern class BasicSpinnerUI_ArrowButtonHandler extends javax.swing.AbstractAction implements java.awt.event.FocusListener implements java.awt.event.MouseListener implements javax.swing.plaf.UIResource
 {
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicSpinnerUI$Handler') @:internal extern class BasicSpinnerUI_Handler implements java.awt.LayoutManager implements java.beans.PropertyChangeListener implements javax.swing.event.ChangeListener
 {
-	@:overload public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
 	
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
-	@:overload public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(parent : java.awt.Container) : Void;
 	
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }

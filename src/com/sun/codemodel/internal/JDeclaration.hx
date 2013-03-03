@@ -29,7 +29,7 @@ package com.sun.codemodel.internal;
 */
 extern interface JDeclaration
 {
-	@:overload public function declare(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function declare(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

@@ -30,7 +30,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* image.  This type is only used as a return value for the getType()
 	* method.
 	*/
-	public static var TYPE_CUSTOM(default, null) : Int;
+	@:public @:static @:final public static var TYPE_CUSTOM(default, null) : Int;
 	
 	/**
 	* Represents an image with 8-bit RGB color components packed into
@@ -43,7 +43,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* as described in the
 	* {@link java.awt.AlphaComposite} documentation.
 	*/
-	public static var TYPE_INT_RGB(default, null) : Int;
+	@:public @:static @:final public static var TYPE_INT_RGB(default, null) : Int;
 	
 	/**
 	* Represents an image with 8-bit RGBA color components packed into
@@ -54,7 +54,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* constructor, the created image is consistent with images
 	* created in the JDK1.1 and earlier releases.
 	*/
-	public static var TYPE_INT_ARGB(default, null) : Int;
+	@:public @:static @:final public static var TYPE_INT_ARGB(default, null) : Int;
 	
 	/**
 	* Represents an image with 8-bit RGBA color components packed into
@@ -62,7 +62,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* with alpha.  The color data in this image is considered to be
 	* premultiplied with alpha.
 	*/
-	public static var TYPE_INT_ARGB_PRE(default, null) : Int;
+	@:public @:static @:final public static var TYPE_INT_ARGB_PRE(default, null) : Int;
 	
 	/**
 	* Represents an image with 8-bit RGB color components, corresponding
@@ -76,7 +76,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* as described in the
 	* {@link java.awt.AlphaComposite} documentation.
 	*/
-	public static var TYPE_INT_BGR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_INT_BGR(default, null) : Int;
 	
 	/**
 	* Represents an image with 8-bit RGB color components, corresponding
@@ -90,7 +90,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* as described in the
 	* {@link java.awt.AlphaComposite} documentation.
 	*/
-	public static var TYPE_3BYTE_BGR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_3BYTE_BGR(default, null) : Int;
 	
 	/**
 	* Represents an image with 8-bit RGBA color components with the colors
@@ -101,7 +101,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* byte array in the order A, B, G, R
 	* from lower to higher byte addresses within each pixel.
 	*/
-	public static var TYPE_4BYTE_ABGR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_4BYTE_ABGR(default, null) : Int;
 	
 	/**
 	* Represents an image with 8-bit RGBA color components with the colors
@@ -111,7 +111,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* The byte data is interleaved in a single byte array in the order
 	* A, B, G, R from lower to higher byte addresses within each pixel.
 	*/
-	public static var TYPE_4BYTE_ABGR_PRE(default, null) : Int;
+	@:public @:static @:final public static var TYPE_4BYTE_ABGR_PRE(default, null) : Int;
 	
 	/**
 	* Represents an image with 5-6-5 RGB color components (5-bits red,
@@ -124,7 +124,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* as described in the
 	* {@link java.awt.AlphaComposite} documentation.
 	*/
-	public static var TYPE_USHORT_565_RGB(default, null) : Int;
+	@:public @:static @:final public static var TYPE_USHORT_565_RGB(default, null) : Int;
 	
 	/**
 	* Represents an image with 5-5-5 RGB color components (5-bits red,
@@ -137,7 +137,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* as described in the
 	* {@link java.awt.AlphaComposite} documentation.
 	*/
-	public static var TYPE_USHORT_555_RGB(default, null) : Int;
+	@:public @:static @:final public static var TYPE_USHORT_555_RGB(default, null) : Int;
 	
 	/**
 	* Represents a unsigned byte grayscale image, non-indexed.  This
@@ -150,7 +150,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* as described in the
 	* {@link java.awt.AlphaComposite} documentation.
 	*/
-	public static var TYPE_BYTE_GRAY(default, null) : Int;
+	@:public @:static @:final public static var TYPE_BYTE_GRAY(default, null) : Int;
 	
 	/**
 	* Represents an unsigned short grayscale image, non-indexed).  This
@@ -163,7 +163,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* as described in the
 	* {@link java.awt.AlphaComposite} documentation.
 	*/
-	public static var TYPE_USHORT_GRAY(default, null) : Int;
+	@:public @:static @:final public static var TYPE_USHORT_GRAY(default, null) : Int;
 	
 	/**
 	* Represents an opaque byte-packed 1, 2, or 4 bit image.  The
@@ -192,7 +192,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* can result, depending on the colors in the
 	* <code>IndexColorModel</code> colormap.
 	*/
-	public static var TYPE_BYTE_BINARY(default, null) : Int;
+	@:public @:static @:final public static var TYPE_BYTE_BINARY(default, null) : Int;
 	
 	/**
 	* Represents an indexed byte image.  When this type is used as the
@@ -211,7 +211,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* can result, depending on the colors in the
 	* <code>IndexColorModel</code> colormap.
 	*/
-	public static var TYPE_BYTE_INDEXED(default, null) : Int;
+	@:public @:static @:final public static var TYPE_BYTE_INDEXED(default, null) : Int;
 	
 	/**
 	* Constructs a <code>BufferedImage</code> of one of the predefined
@@ -235,7 +235,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @see #TYPE_USHORT_565_RGB
 	* @see #TYPE_USHORT_555_RGB
 	*/
-	@:overload public function new(width : Int, height : Int, imageType : Int) : Void;
+	@:overload @:public public function new(width : Int, height : Int, imageType : Int) : Void;
 	
 	/**
 	* Constructs a <code>BufferedImage</code> of one of the predefined
@@ -260,7 +260,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @see #TYPE_BYTE_BINARY
 	* @see #TYPE_BYTE_INDEXED
 	*/
-	@:overload public function new(width : Int, height : Int, imageType : Int, cm : java.awt.image.IndexColorModel) : Void;
+	@:overload @:public public function new(width : Int, height : Int, imageType : Int, cm : java.awt.image.IndexColorModel) : Void;
 	
 	/*
 	*
@@ -268,7 +268,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	*  SEE THE METHOD DEFINERASTERTYPE @ RASTEROUTPUTMANAGER
 	*
 	*/
-	@:overload public function new(cm : java.awt.image.ColorModel, raster : java.awt.image.WritableRaster, isRasterPremultiplied : Bool, properties : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(cm : java.awt.image.ColorModel, raster : java.awt.image.WritableRaster, isRasterPremultiplied : Bool, properties : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Returns the image type.  If it is not one of the known types,
@@ -289,21 +289,21 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @see #TYPE_USHORT_555_RGB
 	* @see #TYPE_CUSTOM
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Returns the <code>ColorModel</code>.
 	* @return the <code>ColorModel</code> of this
 	*  <code>BufferedImage</code>.
 	*/
-	@:overload public function getColorModel() : java.awt.image.ColorModel;
+	@:overload @:public public function getColorModel() : java.awt.image.ColorModel;
 	
 	/**
 	* Returns the {@link WritableRaster}.
 	* @return the <code>WriteableRaster</code> of this
 	*  <code>BufferedImage</code>.
 	*/
-	@:overload public function getRaster() : java.awt.image.WritableRaster;
+	@:overload @:public public function getRaster() : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns a <code>WritableRaster</code> representing the alpha
@@ -326,7 +326,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	*          <code>BufferedImage</code> has no alpha channel associated
 	*          with its <code>ColorModel</code>.
 	*/
-	@:overload public function getAlphaRaster() : java.awt.image.WritableRaster;
+	@:overload @:public public function getAlphaRaster() : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns an integer pixel in the default RGB color model
@@ -353,7 +353,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @see #setRGB(int, int, int)
 	* @see #setRGB(int, int, int, int, int[], int, int)
 	*/
-	@:overload public function getRGB(x : Int, y : Int) : Int;
+	@:overload @:public public function getRGB(x : Int, y : Int) : Int;
 	
 	/**
 	* Returns an array of integer pixels in the default RGB color model
@@ -387,7 +387,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @see #setRGB(int, int, int)
 	* @see #setRGB(int, int, int, int, int[], int, int)
 	*/
-	@:overload public function getRGB(startX : Int, startY : Int, w : Int, h : Int, rgbArray : java.NativeArray<Int>, offset : Int, scansize : Int) : java.NativeArray<Int>;
+	@:overload @:public public function getRGB(startX : Int, startY : Int, w : Int, h : Int, rgbArray : java.NativeArray<Int>, offset : Int, scansize : Int) : java.NativeArray<Int>;
 	
 	/**
 	* Sets a pixel in this <code>BufferedImage</code> to the specified
@@ -408,7 +408,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @see #getRGB(int, int)
 	* @see #getRGB(int, int, int, int, int[], int, int)
 	*/
-	@:overload @:synchronized public function setRGB(x : Int, y : Int, rgb : Int) : Void;
+	@:overload @:public @:synchronized public function setRGB(x : Int, y : Int, rgb : Int) : Void;
 	
 	/**
 	* Sets an array of integer pixels in the default RGB color model
@@ -440,33 +440,33 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @see #getRGB(int, int)
 	* @see #getRGB(int, int, int, int, int[], int, int)
 	*/
-	@:overload public function setRGB(startX : Int, startY : Int, w : Int, h : Int, rgbArray : java.NativeArray<Int>, offset : Int, scansize : Int) : Void;
+	@:overload @:public public function setRGB(startX : Int, startY : Int, w : Int, h : Int, rgbArray : java.NativeArray<Int>, offset : Int, scansize : Int) : Void;
 	
 	/**
 	* Returns the width of the <code>BufferedImage</code>.
 	* @return the width of this <code>BufferedImage</code>
 	*/
-	@:overload public function getWidth() : Int;
+	@:overload @:public public function getWidth() : Int;
 	
 	/**
 	* Returns the height of the <code>BufferedImage</code>.
 	* @return the height of this <code>BufferedImage</code>
 	*/
-	@:overload public function getHeight() : Int;
+	@:overload @:public public function getHeight() : Int;
 	
 	/**
 	* Returns the width of the <code>BufferedImage</code>.
 	* @param observer ignored
 	* @return the width of this <code>BufferedImage</code>
 	*/
-	@:overload public function getWidth(observer : java.awt.image.ImageObserver) : Int;
+	@:overload @:public override public function getWidth(observer : java.awt.image.ImageObserver) : Int;
 	
 	/**
 	* Returns the height of the <code>BufferedImage</code>.
 	* @param observer ignored
 	* @return the height of this <code>BufferedImage</code>
 	*/
-	@:overload public function getHeight(observer : java.awt.image.ImageObserver) : Int;
+	@:overload @:public override public function getHeight(observer : java.awt.image.ImageObserver) : Int;
 	
 	/**
 	* Returns the object that produces the pixels for the image.
@@ -474,7 +474,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* pixels for this image.
 	* @see ImageProducer
 	*/
-	@:overload public function getSource() : java.awt.image.ImageProducer;
+	@:overload @:public override public function getSource() : java.awt.image.ImageProducer;
 	
 	/**
 	* Returns a property of the image by name.  Individual property names
@@ -496,7 +496,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @see ImageObserver
 	* @see java.awt.Image#UndefinedProperty
 	*/
-	@:overload public function getProperty(name : String, observer : java.awt.image.ImageObserver) : Dynamic;
+	@:overload @:public override public function getProperty(name : String, observer : java.awt.image.ImageObserver) : Dynamic;
 	
 	/**
 	* Returns a property of the image by name.
@@ -505,7 +505,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	*          the specified <code>name</code>.
 	* @throws <code>NullPointerException</code> if the property name is null.
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	/**
 	* This method returns a {@link Graphics2D}, but is here
@@ -515,7 +515,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @return a <code>Graphics2D</code>, which can be used to draw into
 	*          this image.
 	*/
-	@:overload public function getGraphics() : java.awt.Graphics;
+	@:overload @:public override public function getGraphics() : java.awt.Graphics;
 	
 	/**
 	* Creates a <code>Graphics2D</code>, which can be used to draw into
@@ -523,7 +523,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @return a <code>Graphics2D</code>, used for drawing into this
 	*          image.
 	*/
-	@:overload public function createGraphics() : java.awt.Graphics2D;
+	@:overload @:public public function createGraphics() : java.awt.Graphics2D;
 	
 	/**
 	* Returns a subimage defined by a specified rectangular region.
@@ -540,7 +540,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @exception <code>RasterFormatException</code> if the specified
 	* area is not contained within this <code>BufferedImage</code>.
 	*/
-	@:overload public function getSubimage(x : Int, y : Int, w : Int, h : Int) : java.awt.image.BufferedImage;
+	@:overload @:public public function getSubimage(x : Int, y : Int, w : Int, h : Int) : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns whether or not the alpha has been premultiplied.  It
@@ -548,7 +548,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @return <code>true</code> if the alpha has been premultiplied;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload public function isAlphaPremultiplied() : Bool;
+	@:overload @:public public function isAlphaPremultiplied() : Bool;
 	
 	/**
 	* Forces the data to match the state specified in the
@@ -558,7 +558,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @param isAlphaPremultiplied <code>true</code> if the alpha has been
 	*          premultiplied; <code>false</code> otherwise.
 	*/
-	@:overload public function coerceData(isAlphaPremultiplied : Bool) : Void;
+	@:overload @:public public function coerceData(isAlphaPremultiplied : Bool) : Void;
 	
 	/**
 	* Returns a <code>String</code> representation of this
@@ -566,7 +566,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @return a <code>String</code> representing this
 	*          <code>BufferedImage</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a {@link Vector} of {@link RenderedImage} objects that are
@@ -583,7 +583,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	*          <code>Vector</code> if this <code>BufferedImage</code>
 	*          has no immediate sources.
 	*/
-	@:overload public function getSources() : java.util.Vector<java.awt.image.RenderedImage>;
+	@:overload @:public public function getSources() : java.util.Vector<java.awt.image.RenderedImage>;
 	
 	/**
 	* Returns an array of names recognized by
@@ -593,7 +593,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	*          names that <code>getProperty(String)</code> recognizes;
 	*          or <code>null</code> if no property names are recognized.
 	*/
-	@:overload public function getPropertyNames() : java.NativeArray<String>;
+	@:overload @:public public function getPropertyNames() : java.NativeArray<String>;
 	
 	/**
 	* Returns the minimum x coordinate of this
@@ -601,7 +601,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @return the minimum x coordinate of this
 	*          <code>BufferedImage</code>.
 	*/
-	@:overload public function getMinX() : Int;
+	@:overload @:public public function getMinX() : Int;
 	
 	/**
 	* Returns the minimum y coordinate of this
@@ -609,7 +609,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @return the minimum y coordinate of this
 	*          <code>BufferedImage</code>.
 	*/
-	@:overload public function getMinY() : Int;
+	@:overload @:public public function getMinY() : Int;
 	
 	/**
 	* Returns the <code>SampleModel</code> associated with this
@@ -617,47 +617,47 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @return the <code>SampleModel</code> of this
 	*          <code>BufferedImage</code>.
 	*/
-	@:overload public function getSampleModel() : java.awt.image.SampleModel;
+	@:overload @:public public function getSampleModel() : java.awt.image.SampleModel;
 	
 	/**
 	* Returns the number of tiles in the x direction.
 	* This is always one.
 	* @return the number of tiles in the x direction.
 	*/
-	@:overload public function getNumXTiles() : Int;
+	@:overload @:public public function getNumXTiles() : Int;
 	
 	/**
 	* Returns the number of tiles in the y direction.
 	* This is always one.
 	* @return the number of tiles in the y direction.
 	*/
-	@:overload public function getNumYTiles() : Int;
+	@:overload @:public public function getNumYTiles() : Int;
 	
 	/**
 	* Returns the minimum tile index in the x direction.
 	* This is always zero.
 	* @return the minimum tile index in the x direction.
 	*/
-	@:overload public function getMinTileX() : Int;
+	@:overload @:public public function getMinTileX() : Int;
 	
 	/**
 	* Returns the minimum tile index in the y direction.
 	* This is always zero.
 	* @return the mininum tile index in the y direction.
 	*/
-	@:overload public function getMinTileY() : Int;
+	@:overload @:public public function getMinTileY() : Int;
 	
 	/**
 	* Returns the tile width in pixels.
 	* @return the tile width in pixels.
 	*/
-	@:overload public function getTileWidth() : Int;
+	@:overload @:public public function getTileWidth() : Int;
 	
 	/**
 	* Returns the tile height in pixels.
 	* @return the tile height in pixels.
 	*/
-	@:overload public function getTileHeight() : Int;
+	@:overload @:public public function getTileHeight() : Int;
 	
 	/**
 	* Returns the x offset of the tile grid relative to the origin,
@@ -665,7 +665,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* (0,&nbsp;0).  This is always zero.
 	* @return the x offset of the tile grid.
 	*/
-	@:overload public function getTileGridXOffset() : Int;
+	@:overload @:public public function getTileGridXOffset() : Int;
 	
 	/**
 	* Returns the y offset of the tile grid relative to the origin,
@@ -673,7 +673,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* (0,&nbsp;0).  This is always zero.
 	* @return the y offset of the tile grid.
 	*/
-	@:overload public function getTileGridYOffset() : Int;
+	@:overload @:public public function getTileGridYOffset() : Int;
 	
 	/**
 	* Returns tile (<code>tileX</code>,&nbsp;<code>tileY</code>).  Note
@@ -689,7 +689,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	*          <code>tileX</code> and <code>tileY</code> are not
 	*          equal to 0
 	*/
-	@:overload public function getTile(tileX : Int, tileY : Int) : java.awt.image.Raster;
+	@:overload @:public public function getTile(tileX : Int, tileY : Int) : java.awt.image.Raster;
 	
 	/**
 	* Returns the image as one large tile.  The <code>Raster</code>
@@ -698,7 +698,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @return a <code>Raster</code> that is a copy of the image data.
 	* @see #setData(Raster)
 	*/
-	@:overload public function getData() : java.awt.image.Raster;
+	@:overload @:public public function getData() : java.awt.image.Raster;
 	
 	/**
 	* Computes and returns an arbitrary region of the
@@ -711,7 +711,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	*          the specified region of the <code>BufferedImage</code>
 	* @see #setData(Raster)
 	*/
-	@:overload public function getData(rect : java.awt.Rectangle) : java.awt.image.Raster;
+	@:overload @:public public function getData(rect : java.awt.Rectangle) : java.awt.image.Raster;
 	
 	/**
 	* Computes an arbitrary rectangular region of the
@@ -728,7 +728,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @return a reference to the supplied or created
 	*          <code>WritableRaster</code>.
 	*/
-	@:overload public function copyData(outRaster : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
+	@:overload @:public public function copyData(outRaster : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Sets a rectangular region of the image to the contents of the
@@ -740,14 +740,14 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @see #getData
 	* @see #getData(Rectangle)
 	*/
-	@:overload public function setData(r : java.awt.image.Raster) : Void;
+	@:overload @:public public function setData(r : java.awt.image.Raster) : Void;
 	
 	/**
 	* Adds a tile observer.  If the observer is already present,
 	* it receives multiple notifications.
 	* @param to the specified {@link TileObserver}
 	*/
-	@:overload public function addTileObserver(to : java.awt.image.TileObserver) : Void;
+	@:overload @:public public function addTileObserver(to : java.awt.image.TileObserver) : Void;
 	
 	/**
 	* Removes a tile observer.  If the observer was not registered,
@@ -755,7 +755,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* notifications, it is now registered for one fewer notification.
 	* @param to the specified <code>TileObserver</code>.
 	*/
-	@:overload public function removeTileObserver(to : java.awt.image.TileObserver) : Void;
+	@:overload @:public public function removeTileObserver(to : java.awt.image.TileObserver) : Void;
 	
 	/**
 	* Returns whether or not a tile is currently checked out for writing.
@@ -768,7 +768,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	*          <code>tileX</code> and <code>tileY</code> are not equal
 	*          to 0
 	*/
-	@:overload public function isTileWritable(tileX : Int, tileY : Int) : Bool;
+	@:overload @:public public function isTileWritable(tileX : Int, tileY : Int) : Bool;
 	
 	/**
 	* Returns an array of {@link Point} objects indicating which tiles
@@ -778,7 +778,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	*          are checked out for writing, or <code>null</code> if no
 	*          tiles are checked out for writing.
 	*/
-	@:overload public function getWritableTileIndices() : java.NativeArray<java.awt.Point>;
+	@:overload @:public public function getWritableTileIndices() : java.NativeArray<java.awt.Point>;
 	
 	/**
 	* Returns whether or not any tile is checked out for writing.
@@ -789,7 +789,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @return <code>true</code> if any tile is checked out for writing;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload public function hasTileWriters() : Bool;
+	@:overload @:public public function hasTileWriters() : Bool;
 	
 	/**
 	* Checks out a tile for writing.  All registered
@@ -800,7 +800,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @return a <code>WritableRaster</code> that is the tile, indicated by
 	*            the specified indices, to be checked out for writing.
 	*/
-	@:overload public function getWritableTile(tileX : Int, tileY : Int) : java.awt.image.WritableRaster;
+	@:overload @:public public function getWritableTile(tileX : Int, tileY : Int) : java.awt.image.WritableRaster;
 	
 	/**
 	* Relinquishes permission to write to a tile.  If the caller
@@ -813,7 +813,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @param tileX the x index of the tile
 	* @param tileY the y index of the tile
 	*/
-	@:overload public function releaseWritableTile(tileX : Int, tileY : Int) : Void;
+	@:overload @:public public function releaseWritableTile(tileX : Int, tileY : Int) : Void;
 	
 	/**
 	* Returns the transparency.  Returns either OPAQUE, BITMASK,
@@ -824,7 +824,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @see Transparency#TRANSLUCENT
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getTransparency() : Int;
+	@:require(java5) @:overload @:public public function getTransparency() : Int;
 	
 	
 }

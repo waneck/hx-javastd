@@ -25,53 +25,53 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 */
 extern class InterningXmlVisitor implements com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor
 {
-	@:overload public function new(next : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor) : Void;
+	@:overload @:public public function new(next : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor) : Void;
 	
-	@:overload public function startDocument(locator : com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx, nsContext : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public public function startDocument(locator : com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx, nsContext : javax.xml.namespace.NamespaceContext) : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
-	@:overload public function startElement(tagName : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:public public function startElement(tagName : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload public function endElement(tagName : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:public public function endElement(tagName : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload public function startPrefixMapping(prefix : String, nsUri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, nsUri : String) : Void;
 	
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
-	@:overload public function text(pcdata : java.lang.CharSequence) : Void;
+	@:overload @:public public function text(pcdata : java.lang.CharSequence) : Void;
 	
-	@:overload public function getContext() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext;
+	@:overload @:public public function getContext() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext;
 	
-	@:overload public function getPredictor() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor.XmlVisitor_TextPredictor;
+	@:overload @:public public function getPredictor() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor.XmlVisitor_TextPredictor;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$runtime$unmarshaller$InterningXmlVisitor$AttributesImpl') @:internal extern class InterningXmlVisitor_AttributesImpl implements org.xml.sax.Attributes
 {
-	@:overload public function getIndex(qName : String) : Int;
+	@:overload @:public public function getIndex(qName : String) : Int;
 	
-	@:overload public function getIndex(uri : String, localName : String) : Int;
+	@:overload @:public public function getIndex(uri : String, localName : String) : Int;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
-	@:overload public function getLocalName(index : Int) : String;
+	@:overload @:public public function getLocalName(index : Int) : String;
 	
-	@:overload public function getQName(index : Int) : String;
+	@:overload @:public public function getQName(index : Int) : String;
 	
-	@:overload public function getType(index : Int) : String;
+	@:overload @:public public function getType(index : Int) : String;
 	
-	@:overload public function getType(qName : String) : String;
+	@:overload @:public public function getType(qName : String) : String;
 	
-	@:overload public function getType(uri : String, localName : String) : String;
+	@:overload @:public public function getType(uri : String, localName : String) : String;
 	
-	@:overload public function getURI(index : Int) : String;
+	@:overload @:public public function getURI(index : Int) : String;
 	
-	@:overload public function getValue(index : Int) : String;
+	@:overload @:public public function getValue(index : Int) : String;
 	
-	@:overload public function getValue(qName : String) : String;
+	@:overload @:public public function getValue(qName : String) : String;
 	
-	@:overload public function getValue(uri : String, localName : String) : String;
+	@:overload @:public public function getValue(uri : String, localName : String) : String;
 	
 	
 }

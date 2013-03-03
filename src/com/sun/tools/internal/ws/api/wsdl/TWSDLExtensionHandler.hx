@@ -30,7 +30,7 @@ extern class TWSDLExtensionHandler
 	* <p/>
 	* For example a soap 1.1 XXExtensionHandler would return <code>""http://schemas.xmlsoap.org/wsdl/soap/"</code>
 	*/
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
 	/**
 	* This interface is called during WSDL parsing on detecting any wsdl extension.
@@ -41,7 +41,7 @@ extern class TWSDLExtensionHandler
 	* @return false if there was some error during the extension handling otherwise returns true. If returned false
 	*         then the WSDL parser can abort if the wsdl extensibility element had <code>required</code> attribute set to true
 	*/
-	@:overload public function doHandleExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload @:public public function doHandleExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	/**
 	* Callback for <code>wsdl:portType</code>
@@ -52,7 +52,7 @@ extern class TWSDLExtensionHandler
 	* @return false if there was some error during the extension handling otherwise returns true. If returned false
 	*         then the WSDL parser can abort if the wsdl extensibility element had <code>required</code> attribute set to true
 	*/
-	@:overload public function handlePortTypeExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload @:public public function handlePortTypeExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	/**
 	* Callback for <code>wsdl:definitions</code>
@@ -63,7 +63,7 @@ extern class TWSDLExtensionHandler
 	* @return false if there was some error during the extension handling otherwise returns true. If returned false
 	*         then the WSDL parser can abort if the wsdl extensibility element had <code>required</code> attribute set to true
 	*/
-	@:overload public function handleDefinitionsExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload @:public public function handleDefinitionsExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	/**
 	* Callback for <code>wsdl:type</code>
@@ -74,7 +74,7 @@ extern class TWSDLExtensionHandler
 	* @return false if there was some error during the extension handling otherwise returns true. If returned false
 	*         then the WSDL parser can abort if the wsdl extensibility element had <code>required</code> attribute set to true
 	*/
-	@:overload public function handleTypesExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload @:public public function handleTypesExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	/**
 	* Callback for <code>wsdl:binding</code>
@@ -85,7 +85,7 @@ extern class TWSDLExtensionHandler
 	* @return false if there was some error during the extension handling otherwise returns true. If returned false
 	*         then the WSDL parser can abort if the wsdl extensibility element had <code>required</code> attribute set to true
 	*/
-	@:overload public function handleBindingExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload @:public public function handleBindingExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	/**
 	* Callback for <code>wsdl:portType/wsdl:operation</code>.
@@ -96,7 +96,7 @@ extern class TWSDLExtensionHandler
 	* @return false if there was some error during the extension handling otherwise returns true. If returned false
 	*         then the WSDL parser can abort if the wsdl extensibility element had <code>required</code> attribute set to true
 	*/
-	@:overload public function handleOperationExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload @:public public function handleOperationExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	/**
 	* Callback for <code>wsdl:input</code>
@@ -107,7 +107,7 @@ extern class TWSDLExtensionHandler
 	* @return false if there was some error during the extension handling otherwise returns true. If returned false
 	*         then the WSDL parser can abort if the wsdl extensibility element had <code>required</code> attribute set to true
 	*/
-	@:overload public function handleInputExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload @:public public function handleInputExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	/**
 	* Callback for <code>wsdl:output</code>
@@ -118,7 +118,7 @@ extern class TWSDLExtensionHandler
 	* @return false if there was some error during the extension handling otherwise returns true. If returned false
 	*         then the WSDL parser can abort if the wsdl extensibility element had <code>required</code> attribute set to true
 	*/
-	@:overload public function handleOutputExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload @:public public function handleOutputExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	/**
 	* Callback for <code>wsdl:fault</code>
@@ -129,7 +129,7 @@ extern class TWSDLExtensionHandler
 	* @return false if there was some error during the extension handling otherwise returns true. If returned false
 	*         then the WSDL parser can abort if the wsdl extensibility element had <code>required</code> attribute set to true
 	*/
-	@:overload public function handleFaultExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload @:public public function handleFaultExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	/**
 	* Callback for <code>wsdl:service</code>
@@ -140,7 +140,7 @@ extern class TWSDLExtensionHandler
 	* @return false if there was some error during the extension handling otherwise returns true. If returned false
 	*         then the WSDL parser can abort if the wsdl extensibility element had <code>required</code> attribute set to true
 	*/
-	@:overload public function handleServiceExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload @:public public function handleServiceExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	/**
 	* Callback for <code>wsdl:port</code>
@@ -151,7 +151,7 @@ extern class TWSDLExtensionHandler
 	* @return false if there was some error during the extension handling otherwise returns true. If returned false
 	*         then the WSDL parser can abort if the wsdl extensibility element had <code>required</code> attribute set to true
 	*/
-	@:overload public function handlePortExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload @:public public function handlePortExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	
 }

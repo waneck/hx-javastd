@@ -31,7 +31,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	* @param elem the element this view is responsible for
 	* @param axis either <code>View.X_AXIS</code> or <code>View.Y_AXIS</code>
 	*/
-	@:overload public function new(elem : javax.swing.text.Element, axis : Int) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element, axis : Int) : Void;
 	
 	/**
 	* Fetches the tile axis property.  This is the axis along which
@@ -42,7 +42,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAxis() : Int;
+	@:require(java3) @:overload @:public public function getAxis() : Int;
 	
 	/**
 	* Sets the tile axis property.  This is the axis along which
@@ -52,7 +52,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setAxis(axis : Int) : Void;
+	@:require(java3) @:overload @:public public function setAxis(axis : Int) : Void;
 	
 	/**
 	* Invalidates the layout along an axis.  This happens
@@ -68,7 +68,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function layoutChanged(axis : Int) : Void;
+	@:require(java3) @:overload @:public public function layoutChanged(axis : Int) : Void;
 	
 	/**
 	* Determines if the layout is valid along the given axis.
@@ -77,7 +77,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function isLayoutValid(axis : Int) : Bool;
+	@:require(java4) @:overload @:protected private function isLayoutValid(axis : Int) : Bool;
 	
 	/**
 	* Paints a child.  By default
@@ -88,7 +88,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	* @param alloc the allocated region to paint into
 	* @param index the child index, >= 0 && < getViewCount()
 	*/
-	@:overload private function paintChild(g : java.awt.Graphics, alloc : java.awt.Rectangle, index : Int) : Void;
+	@:overload @:protected private function paintChild(g : java.awt.Graphics, alloc : java.awt.Rectangle, index : Int) : Void;
 	
 	/**
 	* Invalidates the layout and resizes the cache of
@@ -104,7 +104,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*   <code>null</code>to indicate no children are being added
 	*   (useful to remove)
 	*/
-	@:overload override public function replace(index : Int, length : Int, elems : java.NativeArray<javax.swing.text.View>) : Void;
+	@:overload @:public override public function replace(index : Int, length : Int, elems : java.NativeArray<javax.swing.text.View>) : Void;
 	
 	/**
 	* Forwards the given <code>DocumentEvent</code> to the child views
@@ -124,7 +124,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	* @see #changedUpdate
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override private function forwardUpdate(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:require(java3) @:overload @:protected override private function forwardUpdate(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* This is called by a child to indicate its
@@ -137,7 +137,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	* @param width true if the width preference should change
 	* @param height true if the height preference should change
 	*/
-	@:overload override public function preferenceChanged(child : javax.swing.text.View, width : Bool, height : Bool) : Void;
+	@:overload @:public override public function preferenceChanged(child : javax.swing.text.View, width : Bool, height : Bool) : Void;
 	
 	/**
 	* Gets the resize weight.  A value of 0 or less is not resizable.
@@ -147,7 +147,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	* @return the weight
 	* @exception IllegalArgumentException for an invalid axis
 	*/
-	@:overload override public function getResizeWeight(axis : Int) : Int;
+	@:overload @:public override public function getResizeWeight(axis : Int) : Int;
 	
 	/**
 	* Sets the size of the view.  This should cause
@@ -158,7 +158,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	* @param width the width >= 0
 	* @param height the height >= 0
 	*/
-	@:overload override public function setSize(width : Single, height : Single) : Void;
+	@:overload @:public override public function setSize(width : Single, height : Single) : Void;
 	
 	/**
 	* Renders the <code>BoxView</code> using the given
@@ -171,7 +171,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	* @param allocation the allocated region to render into
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
 	
 	/**
 	* Fetches the allocation for the given child view.
@@ -186,7 +186,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*          if <code>a</code> is <code>null</code>;
 	*          or <code>null</code> if the layout is invalid
 	*/
-	@:overload override public function getChildAllocation(index : Int, a : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public override public function getChildAllocation(index : Int, a : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -200,7 +200,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*  not represent a valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload @:public override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -213,7 +213,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*  given point in the view >= 0
 	* @see View#viewToModel
 	*/
-	@:overload override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Determines the desired alignment for this view along an
@@ -232,7 +232,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*   center of the view
 	* @exception IllegalArgumentException for an invalid axis
 	*/
-	@:overload override public function getAlignment(axis : Int) : Single;
+	@:overload @:public override public function getAlignment(axis : Int) : Single;
 	
 	/**
 	* Determines the preferred span for this view along an
@@ -246,7 +246,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*           the parent may choose to resize or break the view
 	* @exception IllegalArgumentException for an invalid axis type
 	*/
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the minimum span for this view along an
@@ -260,7 +260,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*           the parent may choose to resize or break the view
 	* @exception IllegalArgumentException for an invalid axis type
 	*/
-	@:overload override public function getMinimumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMinimumSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the maximum span for this view along an
@@ -274,7 +274,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*           the parent may choose to resize or break the view
 	* @exception IllegalArgumentException for an invalid axis type
 	*/
-	@:overload override public function getMaximumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMaximumSpan(axis : Int) : Single;
 	
 	/**
 	* Are the allocations for the children still
@@ -282,7 +282,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*
 	* @return true if allocations still valid
 	*/
-	@:overload private function isAllocationValid() : Bool;
+	@:overload @:protected private function isAllocationValid() : Bool;
 	
 	/**
 	* Determines if a point falls before an allocated region.
@@ -293,7 +293,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*   inside of the insets
 	* @return true if the point lies before the region else false
 	*/
-	@:overload override private function isBefore(x : Int, y : Int, innerAlloc : java.awt.Rectangle) : Bool;
+	@:overload @:protected override private function isBefore(x : Int, y : Int, innerAlloc : java.awt.Rectangle) : Bool;
 	
 	/**
 	* Determines if a point falls after an allocated region.
@@ -304,7 +304,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*   inside of the insets
 	* @return true if the point lies after the region else false
 	*/
-	@:overload override private function isAfter(x : Int, y : Int, innerAlloc : java.awt.Rectangle) : Bool;
+	@:overload @:protected override private function isAfter(x : Int, y : Int, innerAlloc : java.awt.Rectangle) : Bool;
 	
 	/**
 	* Fetches the child view at the given coordinates.
@@ -315,7 +315,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*   be changed to the childs allocation on exit
 	* @return the view
 	*/
-	@:overload override private function getViewAtPoint(x : Int, y : Int, alloc : java.awt.Rectangle) : javax.swing.text.View;
+	@:overload @:protected override private function getViewAtPoint(x : Int, y : Int, alloc : java.awt.Rectangle) : javax.swing.text.View;
 	
 	/**
 	* Allocates a region for a child view.
@@ -324,7 +324,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*   allocate, >= 0 && < getViewCount()
 	* @param alloc the allocated region
 	*/
-	@:overload override private function childAllocation(index : Int, alloc : java.awt.Rectangle) : Void;
+	@:overload @:protected override private function childAllocation(index : Int, alloc : java.awt.Rectangle) : Void;
 	
 	/**
 	* Perform layout on the box
@@ -332,21 +332,21 @@ extern class BoxView extends javax.swing.text.CompositeView
 	* @param width the width (inside of the insets) >= 0
 	* @param height the height (inside of the insets) >= 0
 	*/
-	@:overload private function layout(width : Int, height : Int) : Void;
+	@:overload @:protected private function layout(width : Int, height : Int) : Void;
 	
 	/**
 	* Returns the current width of the box.  This is the width that
 	* it was last allocated.
 	* @return the current width of the box
 	*/
-	@:overload public function getWidth() : Int;
+	@:overload @:public public function getWidth() : Int;
 	
 	/**
 	* Returns the current height of the box.  This is the height that
 	* it was last allocated.
 	* @return the current height of the box
 	*/
-	@:overload public function getHeight() : Int;
+	@:overload @:public public function getHeight() : Int;
 	
 	/**
 	* Performs layout for the major axis of the box (i.e. the
@@ -364,7 +364,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	* @param spans the span of each child view; this is a return
 	*  value and is filled in by the implementation of this method
 	*/
-	@:overload private function layoutMajorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:protected private function layoutMajorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Performs layout for the minor axis of the box (i.e. the
@@ -382,7 +382,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	* @param spans the span of each child view; this is a return
 	*  value and is filled in by the implementation of this method
 	*/
-	@:overload private function layoutMinorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:protected private function layoutMinorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Calculates the size requirements for the major axis
@@ -394,7 +394,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	* @return the newly initialized <code>SizeRequirements</code> object
 	* @see javax.swing.SizeRequirements
 	*/
-	@:overload private function calculateMajorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected private function calculateMajorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
 	/**
 	* Calculates the size requirements for the minor axis
@@ -406,7 +406,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	* @return the newly initialized <code>SizeRequirements</code> object
 	* @see javax.swing.SizeRequirements
 	*/
-	@:overload private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
 	/**
 	* Computes the location and extent of each child view
@@ -423,7 +423,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	* @param spans  an empty array filled by this method with
 	*          values specifying the extent of each child view
 	*/
-	@:overload private function baselineLayout(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:protected private function baselineLayout(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Calculates the size requirements for this <code>BoxView</code>
@@ -434,7 +434,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*          if <code>null</code> one will be created
 	* @return the newly initialized <code>SizeRequirements</code> object
 	*/
-	@:overload private function baselineRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected private function baselineRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
 	/**
 	* Fetches the offset of a particular child's current layout.
@@ -442,7 +442,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	* @param childIndex the index of the requested child
 	* @return the offset (location) for the specified child
 	*/
-	@:overload private function getOffset(axis : Int, childIndex : Int) : Int;
+	@:overload @:protected private function getOffset(axis : Int, childIndex : Int) : Int;
 	
 	/**
 	* Fetches the span of a particular childs current layout.
@@ -450,7 +450,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	* @param childIndex the index of the requested child
 	* @return the span (width or height) of the specified child
 	*/
-	@:overload private function getSpan(axis : Int, childIndex : Int) : Int;
+	@:overload @:protected private function getSpan(axis : Int, childIndex : Int) : Int;
 	
 	/**
 	* Determines in which direction the next view lays.
@@ -481,7 +481,7 @@ extern class BoxView extends javax.swing.text.CompositeView
 	*          <code>position</code> and <code>bias</code>
 	*          are layed out in descending order; otherwise false
 	*/
-	@:overload override private function flipEastAndWestAtEnds(position : Int, bias : javax.swing.text.Position.Position_Bias) : Bool;
+	@:overload @:protected override private function flipEastAndWestAtEnds(position : Int, bias : javax.swing.text.Position.Position_Bias) : Bool;
 	
 	
 }

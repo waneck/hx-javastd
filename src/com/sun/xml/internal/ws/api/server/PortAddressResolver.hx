@@ -37,7 +37,7 @@ extern class PortAddressResolver
 	*      attribute. Can be null. If it is null, existing port address
 	*      is written as it is (without any patching).
 	*/
-	@:overload @:abstract public function getAddressFor(serviceName : javax.xml.namespace.QName, portName : String) : String;
+	@:overload @:public @:abstract public function getAddressFor(serviceName : javax.xml.namespace.QName, portName : String) : String;
 	
 	/**
 	* Gets the endpoint address for a WSDL port
@@ -53,7 +53,7 @@ extern class PortAddressResolver
 	*      attribute. Can be null. If it is null, existing port address
 	*      is written as it is (without any patching).
 	*/
-	@:overload public function getAddressFor(serviceName : javax.xml.namespace.QName, portName : String, currentAddress : String) : String;
+	@:overload @:public public function getAddressFor(serviceName : javax.xml.namespace.QName, portName : String, currentAddress : String) : String;
 	
 	
 }

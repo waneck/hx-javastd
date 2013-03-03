@@ -25,39 +25,39 @@ package javax.swing;
 */
 @:internal extern class MultiUIDefaults extends javax.swing.UIDefaults
 {
-	@:overload public function new(defaults : java.NativeArray<javax.swing.UIDefaults>) : Void;
+	@:overload @:public public function new(defaults : java.NativeArray<javax.swing.UIDefaults>) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function get(key : Dynamic) : Dynamic;
+	@:overload @:public override public function get(key : Dynamic) : Dynamic;
 	
-	@:overload public function get(key : Dynamic, l : java.util.Locale) : Dynamic;
+	@:overload @:public override public function get(key : Dynamic, l : java.util.Locale) : Dynamic;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload override public function keys() : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function keys() : java.util.Enumeration<Dynamic>;
 	
-	@:overload override public function elements() : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function elements() : java.util.Enumeration<Dynamic>;
 	
-	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
 	
-	@:overload private function getUIError(msg : String) : Void;
+	@:overload @:protected override private function getUIError(msg : String) : Void;
 	
-	@:overload override public function remove(key : Dynamic) : Dynamic;
+	@:overload @:public override public function remove(key : Dynamic) : Dynamic;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload @:synchronized override public function toString() : String;
+	@:overload @:public @:synchronized override public function toString() : String;
 	
 	
 }
 @:native('javax$swing$MultiUIDefaults$MultiUIDefaultsEnumerator') @:internal extern class MultiUIDefaults_MultiUIDefaultsEnumerator implements java.util.Enumeration<Dynamic>
 {
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
 	
 }

@@ -25,31 +25,31 @@ package com.sun.tools.jdi;
 */
 extern class LocationImpl extends com.sun.tools.jdi.MirrorImpl implements com.sun.jdi.Location
 {
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload public function compareTo(object : com.sun.jdi.Location) : Int;
+	@:overload @:public public function compareTo(object : com.sun.jdi.Location) : Int;
 	
-	@:overload public function declaringType() : com.sun.jdi.ReferenceType;
+	@:overload @:public public function declaringType() : com.sun.jdi.ReferenceType;
 	
-	@:overload public function method() : com.sun.jdi.Method;
+	@:overload @:public public function method() : com.sun.jdi.Method;
 	
-	@:overload public function codeIndex() : haxe.Int64;
+	@:overload @:public public function codeIndex() : haxe.Int64;
 	
-	@:overload public function sourceName() : String;
+	@:overload @:public public function sourceName() : String;
 	
-	@:overload public function sourceName(stratumID : String) : String;
+	@:overload @:public public function sourceName(stratumID : String) : String;
 	
-	@:overload public function sourcePath() : String;
+	@:overload @:public public function sourcePath() : String;
 	
-	@:overload public function sourcePath(stratumID : String) : String;
+	@:overload @:public public function sourcePath(stratumID : String) : String;
 	
-	@:overload public function lineNumber() : Int;
+	@:overload @:public public function lineNumber() : Int;
 	
-	@:overload public function lineNumber(stratumID : String) : Int;
+	@:overload @:public public function lineNumber(stratumID : String) : Int;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

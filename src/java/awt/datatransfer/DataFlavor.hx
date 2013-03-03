@@ -34,7 +34,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* @return the class loaded
 	* @exception ClassNotFoundException if class is not found
 	*/
-	@:overload @:final private static function tryToLoadClass(className : String, fallback : java.lang.ClassLoader) : Class<Dynamic>;
+	@:overload @:protected @:final @:static private static function tryToLoadClass(className : String, fallback : java.lang.ClassLoader) : Class<Dynamic>;
 	
 	/**
 	* The <code>DataFlavor</code> representing a Java Unicode String class,
@@ -44,7 +44,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*     mimeType           = "application/x-java-serialized-object"
 	* </pre>
 	*/
-	public static var stringFlavor(default, null) : java.awt.datatransfer.DataFlavor;
+	@:public @:static @:final public static var stringFlavor(default, null) : java.awt.datatransfer.DataFlavor;
 	
 	/**
 	* The <code>DataFlavor</code> representing a Java Image class,
@@ -54,7 +54,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*     mimeType            = "image/x-java-image"
 	* </pre>
 	*/
-	public static var imageFlavor(default, null) : java.awt.datatransfer.DataFlavor;
+	@:public @:static @:final public static var imageFlavor(default, null) : java.awt.datatransfer.DataFlavor;
 	
 	/**
 	* The <code>DataFlavor</code> representing plain text with Unicode
@@ -72,7 +72,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* @deprecated as of 1.3. Use <code>DataFlavor.getReaderForText(Transferable)</code>
 	*             instead of <code>Transferable.getTransferData(DataFlavor.plainTextFlavor)</code>.
 	*/
-	public static var plainTextFlavor(default, null) : java.awt.datatransfer.DataFlavor;
+	@:public @:static @:final public static var plainTextFlavor(default, null) : java.awt.datatransfer.DataFlavor;
 	
 	/**
 	* A MIME Content-Type of application/x-java-serialized-object represents
@@ -82,7 +82,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* identifies the Java type of an object returned as a reference
 	* from an invocation <code>java.awt.datatransfer.getTransferData</code>.
 	*/
-	public static var javaSerializedObjectMimeType(default, null) : String;
+	@:public @:static @:final public static var javaSerializedObjectMimeType(default, null) : String;
 	
 	/**
 	* To transfer a list of files to/from Java (and the underlying
@@ -91,7 +91,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* Each element of the list is required/guaranteed to be of type
 	* <code>java.io.File</code>.
 	*/
-	public static var javaFileListFlavor(default, null) : java.awt.datatransfer.DataFlavor;
+	@:public @:static @:final public static var javaFileListFlavor(default, null) : java.awt.datatransfer.DataFlavor;
 	
 	/**
 	* To transfer a reference to an arbitrary Java object reference that
@@ -106,7 +106,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* with this MIME Content-Type is required to be
 	* an instance of the representation Class of the <code>DataFlavor</code>.
 	*/
-	public static var javaJVMLocalObjectMimeType(default, null) : String;
+	@:public @:static @:final public static var javaJVMLocalObjectMimeType(default, null) : String;
 	
 	/**
 	* In order to pass a live link to a Remote object via a Drag and Drop
@@ -116,7 +116,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* represents the type of the <code>Remote</code> interface to be
 	* transferred.
 	*/
-	public static var javaRemoteObjectMimeType(default, null) : String;
+	@:public @:static @:final public static var javaRemoteObjectMimeType(default, null) : String;
 	
 	/**
 	* Constructs a new <code>DataFlavor</code>.  This constructor is
@@ -126,7 +126,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>DataFlavor</code> that represents a Java class.
@@ -143,7 +143,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*                 then the value of the the MIME Content Type is used
 	* @exception NullPointerException if <code>representationClass</code> is null
 	*/
-	@:overload public function new(representationClass : Class<Dynamic>, humanPresentableName : String) : Void;
+	@:overload @:public public function new(representationClass : Class<Dynamic>, humanPresentableName : String) : Void;
 	
 	/**
 	* Constructs a <code>DataFlavor</code> that represents a
@@ -174,7 +174,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*                 invalid or if the class is not successfully loaded
 	* @exception NullPointerException if <code>mimeType</code> is null
 	*/
-	@:overload public function new(mimeType : String, humanPresentableName : String) : Void;
+	@:overload @:public public function new(mimeType : String, humanPresentableName : String) : Void;
 	
 	/**
 	* Constructs a <code>DataFlavor</code> that represents a
@@ -202,7 +202,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*                 invalid
 	* @exception NullPointerException if <code>mimeType</code> is null
 	*/
-	@:overload public function new(mimeType : String, humanPresentableName : String, classLoader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function new(mimeType : String, humanPresentableName : String, classLoader : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Constructs a <code>DataFlavor</code> from a <code>mimeType</code> string.
@@ -220,7 +220,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*                 invalid
 	* @exception NullPointerException if <code>mimeType</code> is null
 	*/
-	@:overload public function new(mimeType : String) : Void;
+	@:overload @:public public function new(mimeType : String) : Void;
 	
 	/**
 	* String representation of this <code>DataFlavor</code> and its
@@ -234,7 +234,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* @return  string representation of this <code>DataFlavor</code>
 	* @see #selectBestTextFlavor
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a <code>DataFlavor</code> representing plain text with Unicode
@@ -252,7 +252,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*    with Unicode encoding
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:final public static function getTextPlainUnicodeFlavor() : java.awt.datatransfer.DataFlavor;
+	@:require(java3) @:overload @:public @:static @:final public static function getTextPlainUnicodeFlavor() : java.awt.datatransfer.DataFlavor;
 	
 	/**
 	* Selects the best text <code>DataFlavor</code> from an array of <code>
@@ -370,7 +370,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*         has zero length, or contains no text flavors
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:final public static function selectBestTextFlavor(availableFlavors : java.NativeArray<java.awt.datatransfer.DataFlavor>) : java.awt.datatransfer.DataFlavor;
+	@:require(java3) @:overload @:public @:static @:final public static function selectBestTextFlavor(availableFlavors : java.NativeArray<java.awt.datatransfer.DataFlavor>) : java.awt.datatransfer.DataFlavor;
 	
 	/**
 	* Gets a Reader for a text flavor, decoded, if necessary, for the expected
@@ -412,13 +412,13 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* @see #selectBestTextFlavor
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getReaderForText(transferable : java.awt.datatransfer.Transferable) : java.io.Reader;
+	@:require(java3) @:overload @:public public function getReaderForText(transferable : java.awt.datatransfer.Transferable) : java.io.Reader;
 	
 	/**
 	* Returns the MIME type string for this <code>DataFlavor</code>.
 	* @return the MIME type string for this flavor
 	*/
-	@:overload public function getMimeType() : String;
+	@:overload @:public public function getMimeType() : String;
 	
 	/**
 	* Returns the <code>Class</code> which objects supporting this
@@ -428,7 +428,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* <code>DataFlavor</code> will return when this <code>DataFlavor</code>
 	* is requested
 	*/
-	@:overload public function getRepresentationClass() : Class<Dynamic>;
+	@:overload @:public public function getRepresentationClass() : Class<Dynamic>;
 	
 	/**
 	* Returns the human presentable name for the data format that this
@@ -437,19 +437,19 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* @return the human presentable name for the data format that this
 	*    <code>DataFlavor</code> represents
 	*/
-	@:overload public function getHumanPresentableName() : String;
+	@:overload @:public public function getHumanPresentableName() : String;
 	
 	/**
 	* Returns the primary MIME type for this <code>DataFlavor</code>.
 	* @return the primary MIME type of this <code>DataFlavor</code>
 	*/
-	@:overload public function getPrimaryType() : String;
+	@:overload @:public public function getPrimaryType() : String;
 	
 	/**
 	* Returns the sub MIME type of this <code>DataFlavor</code>.
 	* @return the Sub MIME type of this <code>DataFlavor</code>
 	*/
-	@:overload public function getSubType() : String;
+	@:overload @:public public function getSubType() : String;
 	
 	/**
 	* Returns the human presentable name for this <code>DataFlavor</code>
@@ -460,7 +460,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* @return the value of the name parameter, or <code>null</code>
 	*  if there is no associated value
 	*/
-	@:overload public function getParameter(paramName : String) : String;
+	@:overload @:public public function getParameter(paramName : String) : String;
 	
 	/**
 	* Sets the human presentable name for the data format that this
@@ -468,7 +468,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* for different countries.
 	* @param humanPresentableName the new human presentable name
 	*/
-	@:overload public function setHumanPresentableName(humanPresentableName : String) : Void;
+	@:overload @:public public function setHumanPresentableName(humanPresentableName : String) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -491,7 +491,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*         <code>DataFlavor</code>; <code>false</code> otherwise
 	* @see #selectBestTextFlavor
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* This method has the same behavior as {@link #equals(Object)}.
@@ -504,7 +504,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*         <code>DataFlavor</code>; <code>false</code> otherwise
 	* @see #selectBestTextFlavor
 	*/
-	@:overload public function equals(that : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public public function equals(that : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Compares only the <code>mimeType</code> against the passed in
@@ -519,7 +519,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* @return true if the String (MimeType) is equal; false otherwise or if
 	*         {@code s} is {@code null}
 	*/
-	@:overload public function equals(s : String) : Bool;
+	@:overload @:public public function equals(s : String) : Bool;
 	
 	/**
 	* Returns hash code for this <code>DataFlavor</code>.
@@ -531,7 +531,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*
 	* @return a hash code for this <code>DataFlavor</code>
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Identical to {@link #equals(DataFlavor)}.
@@ -543,7 +543,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* @see #selectBestTextFlavor
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function match(that : java.awt.datatransfer.DataFlavor) : Bool;
+	@:require(java3) @:overload @:public public function match(that : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Returns whether the string representation of the MIME type passed in
@@ -556,7 +556,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*         false otherwise
 	* @throws NullPointerException if mimeType is <code>null</code>
 	*/
-	@:overload public function isMimeTypeEqual(mimeType : String) : Bool;
+	@:overload @:public public function isMimeTypeEqual(mimeType : String) : Bool;
 	
 	/**
 	* Compares the <code>mimeType</code> of two <code>DataFlavor</code>
@@ -566,22 +566,22 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* @return true if the <code>MimeType</code>s are equal,
 	*  otherwise false
 	*/
-	@:overload @:final public function isMimeTypeEqual(dataFlavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public @:final public function isMimeTypeEqual(dataFlavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Does the <code>DataFlavor</code> represent a serialized object?
 	*/
-	@:overload public function isMimeTypeSerializedObject() : Bool;
+	@:overload @:public public function isMimeTypeSerializedObject() : Bool;
 	
-	@:overload @:final public function getDefaultRepresentationClass() : Class<Dynamic>;
+	@:overload @:public @:final public function getDefaultRepresentationClass() : Class<Dynamic>;
 	
-	@:overload @:final public function getDefaultRepresentationClassAsString() : String;
+	@:overload @:public @:final public function getDefaultRepresentationClassAsString() : String;
 	
 	/**
 	* Does the <code>DataFlavor</code> represent a
 	* <code>java.io.InputStream</code>?
 	*/
-	@:overload public function isRepresentationClassInputStream() : Bool;
+	@:overload @:public public function isRepresentationClassInputStream() : Bool;
 	
 	/**
 	* Returns whether the representation class for this
@@ -590,7 +590,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isRepresentationClassReader() : Bool;
+	@:require(java4) @:overload @:public public function isRepresentationClassReader() : Bool;
 	
 	/**
 	* Returns whether the representation class for this
@@ -599,7 +599,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isRepresentationClassCharBuffer() : Bool;
+	@:require(java4) @:overload @:public public function isRepresentationClassCharBuffer() : Bool;
 	
 	/**
 	* Returns whether the representation class for this
@@ -608,19 +608,19 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isRepresentationClassByteBuffer() : Bool;
+	@:require(java4) @:overload @:public public function isRepresentationClassByteBuffer() : Bool;
 	
 	/**
 	* Returns true if the representation class can be serialized.
 	* @return true if the representation class can be serialized
 	*/
-	@:overload public function isRepresentationClassSerializable() : Bool;
+	@:overload @:public public function isRepresentationClassSerializable() : Bool;
 	
 	/**
 	* Returns true if the representation class is <code>Remote</code>.
 	* @return true if the representation class is <code>Remote</code>
 	*/
-	@:overload public function isRepresentationClassRemote() : Bool;
+	@:overload @:public public function isRepresentationClassRemote() : Bool;
 	
 	/**
 	* Returns true if the <code>DataFlavor</code> specified represents
@@ -628,7 +628,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* @return true if the <code>DataFlavor</code> specified represents
 	*   a Serialized Object
 	*/
-	@:overload public function isFlavorSerializedObjectType() : Bool;
+	@:overload @:public public function isFlavorSerializedObjectType() : Bool;
 	
 	/**
 	* Returns true if the <code>DataFlavor</code> specified represents
@@ -636,7 +636,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* @return true if the <code>DataFlavor</code> specified represents
 	*  a Remote Object
 	*/
-	@:overload public function isFlavorRemoteObjectType() : Bool;
+	@:overload @:public public function isFlavorRemoteObjectType() : Bool;
 	
 	/**
 	* Returns true if the <code>DataFlavor</code> specified represents
@@ -644,7 +644,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* @return true if the <code>DataFlavor</code> specified represents
 	*   a List of File objects
 	*/
-	@:overload public function isFlavorJavaFileListType() : Bool;
+	@:overload @:public public function isFlavorJavaFileListType() : Bool;
 	
 	/**
 	* Returns whether this <code>DataFlavor</code> is a valid text flavor for
@@ -676,23 +676,23 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* @see #selectBestTextFlavor
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isFlavorTextType() : Bool;
+	@:require(java4) @:overload @:public public function isFlavorTextType() : Bool;
 	
 	/**
 	* Serializes this <code>DataFlavor</code>.
 	*/
-	@:overload @:synchronized public function writeExternal(os : java.io.ObjectOutput) : Void;
+	@:overload @:public @:synchronized public function writeExternal(os : java.io.ObjectOutput) : Void;
 	
 	/**
 	* Restores this <code>DataFlavor</code> from a Serialized state.
 	*/
-	@:overload @:synchronized public function readExternal(is : java.io.ObjectInput) : Void;
+	@:overload @:public @:synchronized public function readExternal(is : java.io.ObjectInput) : Void;
 	
 	/**
 	* Returns a clone of this <code>DataFlavor</code>.
 	* @return a clone of this <code>DataFlavor</code>
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Called on <code>DataFlavor</code> for every MIME Type parameter
@@ -708,7 +708,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*
 	* @deprecated
 	*/
-	@:overload private function normalizeMimeTypeParameter(parameterName : String, parameterValue : String) : String;
+	@:overload @:protected private function normalizeMimeTypeParameter(parameterName : String, parameterValue : String) : String;
 	
 	/**
 	* Called for each MIME type string to give <code>DataFlavor</code> subtypes
@@ -721,7 +721,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*
 	* @deprecated
 	*/
-	@:overload private function normalizeMimeType(mimeType : String) : String;
+	@:overload @:protected private function normalizeMimeType(mimeType : String) : String;
 	
 	
 }
@@ -747,7 +747,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*
 	* @see #selectBestTextFlavor
 	*/
-	@:overload override public function compare(obj1 : Dynamic, obj2 : Dynamic) : Int;
+	@:overload @:public override public function compare(obj1 : Dynamic, obj2 : Dynamic) : Int;
 	
 	
 }

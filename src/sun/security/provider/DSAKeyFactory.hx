@@ -36,7 +36,7 @@ extern class DSAKeyFactory extends java.security.KeyFactorySpi
 	* @exception InvalidKeySpecException if the given key specification
 	* is inappropriate for this key factory to produce a public key.
 	*/
-	@:overload override private function engineGeneratePublic(keySpec : java.security.spec.KeySpec) : java.security.PublicKey;
+	@:overload @:protected override private function engineGeneratePublic(keySpec : java.security.spec.KeySpec) : java.security.PublicKey;
 	
 	/**
 	* Generates a private key object from the provided key specification
@@ -49,7 +49,7 @@ extern class DSAKeyFactory extends java.security.KeyFactorySpi
 	* @exception InvalidKeySpecException if the given key specification
 	* is inappropriate for this key factory to produce a private key.
 	*/
-	@:overload override private function engineGeneratePrivate(keySpec : java.security.spec.KeySpec) : java.security.PrivateKey;
+	@:overload @:protected override private function engineGeneratePrivate(keySpec : java.security.spec.KeySpec) : java.security.PrivateKey;
 	
 	/**
 	* Returns a specification (key material) of the given key object
@@ -67,7 +67,7 @@ extern class DSAKeyFactory extends java.security.KeyFactorySpi
 	* inappropriate for the given key, or the given key cannot be processed
 	* (e.g., the given key has an unrecognized algorithm or format).
 	*/
-	@:overload override private function engineGetKeySpec<T : java.security.spec.KeySpec>(key : java.security.Key, keySpec : Class<T>) : T;
+	@:overload @:protected override private function engineGetKeySpec<T : java.security.spec.KeySpec>(key : java.security.Key, keySpec : Class<T>) : T;
 	
 	/**
 	* Translates a key object, whose provider may be unknown or potentially
@@ -80,7 +80,7 @@ extern class DSAKeyFactory extends java.security.KeyFactorySpi
 	* @exception InvalidKeyException if the given key cannot be processed by
 	* this key factory.
 	*/
-	@:overload override private function engineTranslateKey(key : java.security.Key) : java.security.Key;
+	@:overload @:protected override private function engineTranslateKey(key : java.security.Key) : java.security.Key;
 	
 	
 }

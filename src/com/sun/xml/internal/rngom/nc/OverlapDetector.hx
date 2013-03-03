@@ -46,19 +46,19 @@ package com.sun.xml.internal.rngom.nc;
 */
 @:internal extern class OverlapDetector implements com.sun.xml.internal.rngom.nc.NameClassVisitor<java.lang.Void>
 {
-	@:overload public function visitChoice(nc1 : com.sun.xml.internal.rngom.nc.NameClass, nc2 : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
+	@:overload @:public public function visitChoice(nc1 : com.sun.xml.internal.rngom.nc.NameClass, nc2 : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
 	
-	@:overload public function visitNsName(ns : String) : java.lang.Void;
+	@:overload @:public public function visitNsName(ns : String) : java.lang.Void;
 	
-	@:overload public function visitNsNameExcept(ns : String, ex : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
+	@:overload @:public public function visitNsNameExcept(ns : String, ex : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
 	
-	@:overload public function visitAnyName() : java.lang.Void;
+	@:overload @:public public function visitAnyName() : java.lang.Void;
 	
-	@:overload public function visitAnyNameExcept(ex : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
+	@:overload @:public public function visitAnyNameExcept(ex : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
 	
-	@:overload public function visitName(name : javax.xml.namespace.QName) : java.lang.Void;
+	@:overload @:public public function visitName(name : javax.xml.namespace.QName) : java.lang.Void;
 	
-	@:overload public function visitNull() : java.lang.Void;
+	@:overload @:public public function visitNull() : java.lang.Void;
 	
 	
 }

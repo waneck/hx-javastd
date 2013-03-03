@@ -25,59 +25,59 @@ package com.sun.media.sound;
 */
 extern class DLSSoundbank implements javax.sound.midi.Soundbank
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(url : java.net.URL) : Void;
+	@:overload @:public public function new(url : java.net.URL) : Void;
 	
-	@:overload public function new(file : java.io.File) : Void;
+	@:overload @:public public function new(file : java.io.File) : Void;
 	
-	@:overload public function new(inputstream : java.io.InputStream) : Void;
+	@:overload @:public public function new(inputstream : java.io.InputStream) : Void;
 	
-	@:overload public function save(name : String) : Void;
+	@:overload @:public public function save(name : String) : Void;
 	
-	@:overload public function save(file : java.io.File) : Void;
+	@:overload @:public public function save(file : java.io.File) : Void;
 	
-	@:overload public function save(out : java.io.OutputStream) : Void;
+	@:overload @:public public function save(out : java.io.OutputStream) : Void;
 	
-	@:overload public function getInfo() : com.sun.media.sound.DLSInfo;
+	@:overload @:public public function getInfo() : com.sun.media.sound.DLSInfo;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
-	@:overload public function getVendor() : String;
+	@:overload @:public public function getVendor() : String;
 	
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
-	@:overload public function setName(s : String) : Void;
+	@:overload @:public public function setName(s : String) : Void;
 	
-	@:overload public function setVendor(s : String) : Void;
+	@:overload @:public public function setVendor(s : String) : Void;
 	
-	@:overload public function setDescription(s : String) : Void;
+	@:overload @:public public function setDescription(s : String) : Void;
 	
-	@:overload public function getResources() : java.NativeArray<javax.sound.midi.SoundbankResource>;
+	@:overload @:public public function getResources() : java.NativeArray<javax.sound.midi.SoundbankResource>;
 	
-	@:overload public function getInstruments() : java.NativeArray<com.sun.media.sound.DLSInstrument>;
+	@:overload @:public public function getInstruments() : java.NativeArray<com.sun.media.sound.DLSInstrument>;
 	
-	@:overload public function getSamples() : java.NativeArray<com.sun.media.sound.DLSSample>;
+	@:overload @:public public function getSamples() : java.NativeArray<com.sun.media.sound.DLSSample>;
 	
-	@:overload public function getInstrument(patch : javax.sound.midi.Patch) : javax.sound.midi.Instrument;
+	@:overload @:public public function getInstrument(patch : javax.sound.midi.Patch) : javax.sound.midi.Instrument;
 	
-	@:overload public function addResource(resource : javax.sound.midi.SoundbankResource) : Void;
+	@:overload @:public public function addResource(resource : javax.sound.midi.SoundbankResource) : Void;
 	
-	@:overload public function removeResource(resource : javax.sound.midi.SoundbankResource) : Void;
+	@:overload @:public public function removeResource(resource : javax.sound.midi.SoundbankResource) : Void;
 	
-	@:overload public function addInstrument(resource : com.sun.media.sound.DLSInstrument) : Void;
+	@:overload @:public public function addInstrument(resource : com.sun.media.sound.DLSInstrument) : Void;
 	
-	@:overload public function removeInstrument(resource : com.sun.media.sound.DLSInstrument) : Void;
+	@:overload @:public public function removeInstrument(resource : com.sun.media.sound.DLSInstrument) : Void;
 	
-	@:overload public function getMajor() : haxe.Int64;
+	@:overload @:public public function getMajor() : haxe.Int64;
 	
-	@:overload public function setMajor(major : haxe.Int64) : Void;
+	@:overload @:public public function setMajor(major : haxe.Int64) : Void;
 	
-	@:overload public function getMinor() : haxe.Int64;
+	@:overload @:public public function getMinor() : haxe.Int64;
 	
-	@:overload public function setMinor(minor : haxe.Int64) : Void;
+	@:overload @:public public function setMinor(minor : haxe.Int64) : Void;
 	
 	
 }
@@ -88,13 +88,13 @@ extern class DLSSoundbank implements javax.sound.midi.Soundbank
 */
 @:native('com$sun$media$sound$DLSSoundbank$DLSID') @:internal extern class DLSSoundbank_DLSID
 {
-	@:overload public function new(i1 : haxe.Int64, s1 : Int, s2 : Int, x1 : Int, x2 : Int, x3 : Int, x4 : Int, x5 : Int, x6 : Int, x7 : Int, x8 : Int) : Void;
+	@:overload @:public public function new(i1 : haxe.Int64, s1 : Int, s2 : Int, x1 : Int, x2 : Int, x3 : Int, x4 : Int, x5 : Int, x6 : Int, x7 : Int, x8 : Int) : Void;
 	
-	@:overload public static function read(riff : com.sun.media.sound.RIFFReader) : com.sun.media.sound.DLSSoundbank.DLSSoundbank_DLSID;
+	@:overload @:public @:static public static function read(riff : com.sun.media.sound.RIFFReader) : com.sun.media.sound.DLSSoundbank.DLSSoundbank_DLSID;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

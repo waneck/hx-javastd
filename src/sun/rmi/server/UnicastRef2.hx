@@ -28,29 +28,29 @@ extern class UnicastRef2 extends sun.rmi.server.UnicastRef
 	/**
 	* Create a new (empty) Unicast remote reference.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a new Unicast RemoteRef.
 	*/
-	@:overload public function new(liveRef : sun.rmi.transport.LiveRef) : Void;
+	@:overload @:public public function new(liveRef : sun.rmi.transport.LiveRef) : Void;
 	
 	/**
 	* Returns the class of the ref type to be serialized
 	*/
-	@:overload override public function getRefClass(out : java.io.ObjectOutput) : String;
+	@:overload @:public override public function getRefClass(out : java.io.ObjectOutput) : String;
 	
 	/**
 	* Write out external representation for remote ref.
 	*/
-	@:overload override public function writeExternal(out : java.io.ObjectOutput) : Void;
+	@:overload @:public override public function writeExternal(out : java.io.ObjectOutput) : Void;
 	
 	/**
 	* Read in external representation for remote ref.
 	* @exception ClassNotFoundException If the class for an object
 	* being restored cannot be found.
 	*/
-	@:overload override public function readExternal(_in : java.io.ObjectInput) : Void;
+	@:overload @:public override public function readExternal(_in : java.io.ObjectInput) : Void;
 	
 	
 }

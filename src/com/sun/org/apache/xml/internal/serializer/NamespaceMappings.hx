@@ -27,7 +27,7 @@ extern class NamespaceMappings
 	* Default constructor
 	* @see java.lang.Object#Object()
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Use a namespace prefix to lookup a namespace URI.
@@ -35,7 +35,7 @@ extern class NamespaceMappings
 	* @param prefix String the prefix of the namespace
 	* @return the URI corresponding to the prefix
 	*/
-	@:overload public function lookupNamespace(prefix : String) : String;
+	@:overload @:public public function lookupNamespace(prefix : String) : String;
 	
 	/**
 	* Given a namespace uri, and the namespaces mappings for the
@@ -45,19 +45,19 @@ extern class NamespaceMappings
 	* @return an existing prefix that maps to the given URI, null if no prefix
 	* maps to the given namespace URI.
 	*/
-	@:overload public function lookupPrefix(uri : String) : String;
+	@:overload @:public public function lookupPrefix(uri : String) : String;
 	
 	/**
 	* Generate a new namespace prefix ( ns0, ns1 ...) not used before
 	* @return String a new namespace prefix ( ns0, ns1, ns2 ...)
 	*/
-	@:overload public function generateNextPrefix() : String;
+	@:overload @:public public function generateNextPrefix() : String;
 	
 	/**
 	* This method makes a clone of this object.
 	*
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

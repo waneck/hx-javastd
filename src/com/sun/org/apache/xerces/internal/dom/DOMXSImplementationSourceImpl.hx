@@ -29,7 +29,7 @@ extern class DOMXSImplementationSourceImpl extends com.sun.org.apache.xerces.int
 	* @return An implementation that has the desired features, or
 	*   <code>null</code> if this source has none.
 	*/
-	@:overload public function getDOMImplementation(features : String) : org.w3c.dom.DOMImplementation;
+	@:overload @:public override public function getDOMImplementation(features : String) : org.w3c.dom.DOMImplementation;
 	
 	/**
 	* A method to request a list of DOM implementations that support the
@@ -42,7 +42,7 @@ extern class DOMXSImplementationSourceImpl extends com.sun.org.apache.xerces.int
 	* @return A list of DOM implementations that support the desired
 	*   features.
 	*/
-	@:overload public function getDOMImplementationList(features : String) : org.w3c.dom.DOMImplementationList;
+	@:overload @:public override public function getDOMImplementationList(features : String) : org.w3c.dom.DOMImplementationList;
 	
 	
 }

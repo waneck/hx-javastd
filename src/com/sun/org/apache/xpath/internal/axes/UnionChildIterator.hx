@@ -26,7 +26,7 @@ extern class UnionChildIterator extends com.sun.org.apache.xpath.internal.axes.C
 	/**
 	* Constructor for UnionChildIterator
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Add a node test to the union list.
@@ -36,7 +36,7 @@ extern class UnionChildIterator extends com.sun.org.apache.xpath.internal.axes.C
 	* not be cloned).  The parent of this test will be set to
 	* this object.
 	*/
-	@:overload public function addNodeTest(test : com.sun.org.apache.xpath.internal.axes.PredicatedNodeTest) : Void;
+	@:overload @:public public function addNodeTest(test : com.sun.org.apache.xpath.internal.axes.PredicatedNodeTest) : Void;
 	
 	/**
 	* This function is used to fixup variables from QNames to stack frame
@@ -48,7 +48,7 @@ extern class UnionChildIterator extends com.sun.org.apache.xpath.internal.axes.C
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Test whether a specified node is visible in the logical view of a
@@ -59,7 +59,7 @@ extern class UnionChildIterator extends com.sun.org.apache.xpath.internal.axes.C
 	* @return  a constant to determine whether the node is accepted,
 	*   rejected, or skipped, as defined  above .
 	*/
-	@:overload public function acceptNode(n : Int) : java.StdTypes.Int16;
+	@:overload @:public override public function acceptNode(n : Int) : java.StdTypes.Int16;
 	
 	
 }

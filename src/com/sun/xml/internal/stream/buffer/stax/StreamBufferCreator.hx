@@ -25,21 +25,21 @@ package com.sun.xml.internal.stream.buffer.stax;
 */
 @:internal extern class StreamBufferCreator extends com.sun.xml.internal.stream.buffer.AbstractCreator
 {
-	private var attributeValuePrefixes : java.util.List<String>;
+	@:protected private var attributeValuePrefixes : java.util.List<String>;
 	
-	@:overload private function storeQualifiedName(item : Int, prefix : String, uri : String, localName : String) : Void;
+	@:overload @:protected private function storeQualifiedName(item : Int, prefix : String, uri : String, localName : String) : Void;
 	
-	@:overload @:final private function storeNamespaceAttribute(prefix : String, uri : String) : Void;
+	@:overload @:protected @:final private function storeNamespaceAttribute(prefix : String, uri : String) : Void;
 	
-	@:overload @:final private function storeAttribute(prefix : String, uri : String, localName : String, type : String, value : String) : Void;
+	@:overload @:protected @:final private function storeAttribute(prefix : String, uri : String, localName : String, type : String, value : String) : Void;
 	
-	@:overload @:final public function getAttributeValuePrefixes() : java.util.List<Dynamic>;
+	@:overload @:public @:final public function getAttributeValuePrefixes() : java.util.List<Dynamic>;
 	
-	@:overload @:final private function storeProcessingInstruction(target : String, data : String) : Void;
+	@:overload @:protected @:final private function storeProcessingInstruction(target : String, data : String) : Void;
 	
-	@:overload @:final public function isCheckAttributeValue() : Bool;
+	@:overload @:public @:final public function isCheckAttributeValue() : Bool;
 	
-	@:overload @:final public function setCheckAttributeValue(value : Bool) : Void;
+	@:overload @:public @:final public function setCheckAttributeValue(value : Bool) : Void;
 	
 	
 }

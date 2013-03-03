@@ -40,7 +40,7 @@ extern interface WebServiceContext
 	* @see javax.xml.ws.handler.MessageContext.Scope
 	* @see java.lang.IllegalStateException
 	**/
-	@:overload public function getMessageContext() : javax.xml.ws.handler.MessageContext;
+	@:overload @:public public function getMessageContext() : javax.xml.ws.handler.MessageContext;
 	
 	/**
 	* Returns the Principal that identifies the sender
@@ -57,7 +57,7 @@ extern interface WebServiceContext
 	* @see java.security.Principal
 	* @see java.lang.IllegalStateException
 	**/
-	@:overload public function getUserPrincipal() : java.security.Principal;
+	@:overload @:public public function getUserPrincipal() : java.security.Principal;
 	
 	/**
 	* Returns a boolean indicating whether the
@@ -74,7 +74,7 @@ extern interface WebServiceContext
 	*         if the method is called while no request is
 	*         being serviced.
 	**/
-	@:overload public function isUserInRole(role : String) : Bool;
+	@:overload @:public public function isUserInRole(role : String) : Bool;
 	
 	/**
 	* Returns the <code>EndpointReference</code> for this
@@ -100,7 +100,7 @@ extern interface WebServiceContext
 	*
 	* @since JAX-WS 2.1
 	*/
-	@:require(java1) @:overload public function getEndpointReference(referenceParameters : java.NativeArray<org.w3c.dom.Element>) : javax.xml.ws.EndpointReference;
+	@:require(java1) @:overload @:public public function getEndpointReference(referenceParameters : java.NativeArray<org.w3c.dom.Element>) : javax.xml.ws.EndpointReference;
 	
 	/**
 	* Returns the <code>EndpointReference</code> associated with
@@ -124,7 +124,7 @@ extern interface WebServiceContext
 	*
 	* @since JAX-WS 2.1
 	**/
-	@:require(java1) @:overload public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>, referenceParameters : java.NativeArray<org.w3c.dom.Element>) : T;
+	@:require(java1) @:overload @:public public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>, referenceParameters : java.NativeArray<org.w3c.dom.Element>) : T;
 	
 	
 }

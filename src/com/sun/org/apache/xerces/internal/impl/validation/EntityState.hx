@@ -35,7 +35,7 @@ extern interface EntityState
 	* @param name
 	* @return true if name is a declared entity
 	*/
-	@:overload public function isEntityDeclared(name : String) : Bool;
+	@:overload @:public public function isEntityDeclared(name : String) : Bool;
 	
 	/**
 	* Query method to check if entity is unparsed.
@@ -43,7 +43,7 @@ extern interface EntityState
 	* @param name
 	* @return true if name is an unparsed entity
 	*/
-	@:overload public function isEntityUnparsed(name : String) : Bool;
+	@:overload @:public public function isEntityUnparsed(name : String) : Bool;
 	
 	
 }

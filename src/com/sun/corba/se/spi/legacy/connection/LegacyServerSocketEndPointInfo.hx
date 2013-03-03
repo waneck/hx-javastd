@@ -31,26 +31,26 @@ extern interface LegacyServerSocketEndPointInfo
 	/**
 	* e.g.: "CLEAR_TEXT", "SSL", ...
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	* Get the host name of this end point. Subcontracts must use this
 	* instead of InetAddress.getHostName() because this would take
 	* into account the value of the ORBServerHost property.
 	*/
-	@:overload public function getHostName() : String;
+	@:overload @:public public function getHostName() : String;
 	
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
 	/**
 	* The ORBD's proxy port of this end point.
 	* Note: Pre-ORT "port-exchange" model.
 	*/
-	@:overload public function getLocatorPort() : Int;
+	@:overload @:public public function getLocatorPort() : Int;
 	
-	@:overload public function setLocatorPort(port : Int) : Void;
+	@:overload @:public public function setLocatorPort(port : Int) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

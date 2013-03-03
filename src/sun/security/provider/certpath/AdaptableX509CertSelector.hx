@@ -33,9 +33,9 @@ package sun.security.provider.certpath;
 	* a subject key identifier extension, the selection criterion
 	* of subjectKeyIdentifier will be disabled.
 	*/
-	@:overload public function match(cert : java.security.cert.Certificate) : Bool;
+	@:overload @:public override public function match(cert : java.security.cert.Certificate) : Bool;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

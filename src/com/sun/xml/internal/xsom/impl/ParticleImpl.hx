@@ -25,44 +25,44 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class ParticleImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl implements com.sun.xml.internal.xsom.XSParticle implements com.sun.xml.internal.xsom.impl.ContentTypeImpl
 {
-	@:overload public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _ann : com.sun.xml.internal.xsom.impl.AnnotationImpl, _term : com.sun.xml.internal.xsom.impl.Ref.Ref_Term, _loc : org.xml.sax.Locator, _maxOccurs : java.math.BigInteger, _minOccurs : java.math.BigInteger) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _ann : com.sun.xml.internal.xsom.impl.AnnotationImpl, _term : com.sun.xml.internal.xsom.impl.Ref.Ref_Term, _loc : org.xml.sax.Locator, _maxOccurs : java.math.BigInteger, _minOccurs : java.math.BigInteger) : Void;
 	
-	@:overload public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _ann : com.sun.xml.internal.xsom.impl.AnnotationImpl, _term : com.sun.xml.internal.xsom.impl.Ref.Ref_Term, _loc : org.xml.sax.Locator, _maxOccurs : Int, _minOccurs : Int) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _ann : com.sun.xml.internal.xsom.impl.AnnotationImpl, _term : com.sun.xml.internal.xsom.impl.Ref.Ref_Term, _loc : org.xml.sax.Locator, _maxOccurs : Int, _minOccurs : Int) : Void;
 	
-	@:overload public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _ann : com.sun.xml.internal.xsom.impl.AnnotationImpl, _term : com.sun.xml.internal.xsom.impl.Ref.Ref_Term, _loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _ann : com.sun.xml.internal.xsom.impl.AnnotationImpl, _term : com.sun.xml.internal.xsom.impl.Ref.Ref_Term, _loc : org.xml.sax.Locator) : Void;
 	
-	@:overload public function getTerm() : com.sun.xml.internal.xsom.XSTerm;
+	@:overload @:public public function getTerm() : com.sun.xml.internal.xsom.XSTerm;
 	
-	@:overload public function getMaxOccurs() : java.math.BigInteger;
+	@:overload @:public public function getMaxOccurs() : java.math.BigInteger;
 	
-	@:overload public function isRepeated() : Bool;
+	@:overload @:public public function isRepeated() : Bool;
 	
-	@:overload public function getMinOccurs() : java.math.BigInteger;
+	@:overload @:public public function getMinOccurs() : java.math.BigInteger;
 	
-	@:overload public function redefine(oldMG : com.sun.xml.internal.xsom.impl.ModelGroupDeclImpl) : Void;
+	@:overload @:public public function redefine(oldMG : com.sun.xml.internal.xsom.impl.ModelGroupDeclImpl) : Void;
 	
-	@:overload public function asSimpleType() : com.sun.xml.internal.xsom.XSSimpleType;
+	@:overload @:public public function asSimpleType() : com.sun.xml.internal.xsom.XSSimpleType;
 	
-	@:overload public function asParticle() : com.sun.xml.internal.xsom.XSParticle;
+	@:overload @:public public function asParticle() : com.sun.xml.internal.xsom.XSParticle;
 	
-	@:overload public function asEmpty() : com.sun.xml.internal.xsom.XSContentType;
+	@:overload @:public public function asEmpty() : com.sun.xml.internal.xsom.XSContentType;
 	
-	@:overload @:final override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
+	@:overload @:public @:final override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
 	
-	@:overload @:final public function apply(_function : com.sun.xml.internal.xsom.visitor.XSContentTypeFunction<Dynamic>) : Dynamic;
+	@:overload @:public @:final public function apply(_function : com.sun.xml.internal.xsom.visitor.XSContentTypeFunction<Dynamic>) : Dynamic;
 	
-	@:overload @:final override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload @:public @:final override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
-	@:overload @:final public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSContentTypeVisitor) : Void;
+	@:overload @:public @:final public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSContentTypeVisitor) : Void;
 	
-	@:overload public function getContentType() : com.sun.xml.internal.xsom.XSContentType;
+	@:overload @:public public function getContentType() : com.sun.xml.internal.xsom.XSContentType;
 	
 	/**
 	* Foreign attribuets are considered to be on terms.
 	*
 	* REVISIT: is this a good design?
 	*/
-	@:overload public function getForeignAttributes() : java.util.List<Dynamic>;
+	@:overload @:public override public function getForeignAttributes() : java.util.List<Dynamic>;
 	
 	
 }

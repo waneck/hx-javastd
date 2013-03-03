@@ -29,7 +29,7 @@ extern class CertPathBuilderException extends java.security.GeneralSecurityExcep
 	* Creates a <code>CertPathBuilderException</code> with <code>null</code>
 	* as its detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>CertPathBuilderException</code> with the given
@@ -38,7 +38,7 @@ extern class CertPathBuilderException extends java.security.GeneralSecurityExcep
 	*
 	* @param msg the detail message
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Creates a <code>CertPathBuilderException</code> that wraps the specified
@@ -53,7 +53,7 @@ extern class CertPathBuilderException extends java.security.GeneralSecurityExcep
 	* {@link #getCause getCause()} method). (A <code>null</code> value is
 	* permitted, and indicates that the cause is nonexistent or unknown.)
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Creates a <code>CertPathBuilderException</code> with the specified
@@ -64,7 +64,7 @@ extern class CertPathBuilderException extends java.security.GeneralSecurityExcep
 	* {@link #getCause getCause()} method). (A <code>null</code> value is
 	* permitted, and indicates that the cause is nonexistent or unknown.)
 	*/
-	@:overload public function new(msg : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(msg : String, cause : java.lang.Throwable) : Void;
 	
 	
 }

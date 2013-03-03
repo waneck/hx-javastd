@@ -28,7 +28,7 @@ package com.sun.crypto.provider;
 	/*
 	* random bytes that are initialized with iv
 	*/
-	private var r : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var r : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -26,7 +26,7 @@ package com.sun.org.apache.xalan.internal.xsltc.cmdline.getopt;
 */
 extern class GetOptsException extends java.lang.Exception
 {
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

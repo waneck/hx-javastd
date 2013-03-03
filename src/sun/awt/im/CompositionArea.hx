@@ -28,19 +28,19 @@ extern class CompositionArea extends javax.swing.JPanel implements java.awt.even
 	/**
 	* @see java.awt.Component#getInputMethodRequests
 	*/
-	@:overload public function getInputMethodRequests() : java.awt.im.InputMethodRequests;
+	@:overload @:public override public function getInputMethodRequests() : java.awt.im.InputMethodRequests;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload public function inputMethodTextChanged(event : java.awt.event.InputMethodEvent) : Void;
+	@:overload @:public public function inputMethodTextChanged(event : java.awt.event.InputMethodEvent) : Void;
 	
-	@:overload public function caretPositionChanged(event : java.awt.event.InputMethodEvent) : Void;
+	@:overload @:public public function caretPositionChanged(event : java.awt.event.InputMethodEvent) : Void;
 	
 	
 }
 @:native('sun$awt$im$CompositionArea$FrameWindowAdapter') @:internal extern class CompositionArea_FrameWindowAdapter extends java.awt.event.WindowAdapter
 {
-	@:overload public function windowActivated(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public override public function windowActivated(e : java.awt.event.WindowEvent) : Void;
 	
 	
 }

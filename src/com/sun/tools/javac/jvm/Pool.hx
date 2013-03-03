@@ -32,52 +32,52 @@ package com.sun.tools.javac.jvm;
 */
 extern class Pool
 {
-	public static var MAX_ENTRIES(default, null) : Int;
+	@:public @:static @:final public static var MAX_ENTRIES(default, null) : Int;
 	
-	public static var MAX_STRING_LENGTH(default, null) : Int;
+	@:public @:static @:final public static var MAX_STRING_LENGTH(default, null) : Int;
 	
 	/** Construct a pool with given number of elements and element array.
 	*/
-	@:overload public function new(pp : Int, pool : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(pp : Int, pool : java.NativeArray<Dynamic>) : Void;
 	
 	/** Construct an empty pool.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Return the number of entries in the constant pool.
 	*/
-	@:overload public function numEntries() : Int;
+	@:overload @:public public function numEntries() : Int;
 	
 	/** Remove everything from this pool.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/** Place an object in the pool, unless it is already there.
 	*  If object is a symbol also enter its owner unless the owner is a
 	*  package.  Return the object's index in the pool.
 	*/
-	@:overload public function put(value : Dynamic) : Int;
+	@:overload @:public public function put(value : Dynamic) : Int;
 	
 	/** Return the given object's index in the pool,
 	*  or -1 if object is not in there.
 	*/
-	@:overload public function get(o : Dynamic) : Int;
+	@:overload @:public public function get(o : Dynamic) : Int;
 	
 	
 }
 @:native('com$sun$tools$javac$jvm$Pool$Method') @:internal extern class Pool_Method extends DelegatedSymbol
 {
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
 @:native('com$sun$tools$javac$jvm$Pool$Variable') @:internal extern class Pool_Variable extends DelegatedSymbol
 {
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

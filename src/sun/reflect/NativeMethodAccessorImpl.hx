@@ -27,7 +27,7 @@ package sun.reflect;
 switches to bytecode-based implementation */
 @:internal extern class NativeMethodAccessorImpl extends sun.reflect.MethodAccessorImpl
 {
-	@:overload override public function invoke(obj : Dynamic, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public override public function invoke(obj : Dynamic, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

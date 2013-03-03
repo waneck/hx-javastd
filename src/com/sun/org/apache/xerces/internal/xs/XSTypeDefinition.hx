@@ -26,13 +26,13 @@ extern interface XSTypeDefinition extends com.sun.org.apache.xerces.internal.xs.
 	/**
 	* Return whether this type definition is a simple type or complex type.
 	*/
-	@:overload public function getTypeCategory() : java.StdTypes.Int16;
+	@:overload @:public public function getTypeCategory() : java.StdTypes.Int16;
 	
 	/**
 	* {base type definition}: either a simple type definition or a complex
 	* type definition.
 	*/
-	@:overload public function getBaseType() : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
+	@:overload @:public public function getBaseType() : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
 	
 	/**
 	* {final}. For a complex type definition it is a subset of {extension,
@@ -43,7 +43,7 @@ extern interface XSTypeDefinition extends com.sun.org.apache.xerces.internal.xs.
 	* @return True if <code>restriction</code> is in the final set,
 	*   otherwise false.
 	*/
-	@:overload public function isFinal(restriction : java.StdTypes.Int16) : Bool;
+	@:overload @:public public function isFinal(restriction : java.StdTypes.Int16) : Bool;
 	
 	/**
 	* For complex types the returned value is a bit combination of the subset
@@ -55,13 +55,13 @@ extern interface XSTypeDefinition extends com.sun.org.apache.xerces.internal.xs.
 	* } corresponding to <code>final</code> set of this type or
 	* <code>DERIVATION_NONE</code>.
 	*/
-	@:overload public function getFinal() : java.StdTypes.Int16;
+	@:overload @:public public function getFinal() : java.StdTypes.Int16;
 	
 	/**
 	*  Convenience attribute. A boolean that specifies if the type definition
 	* is anonymous.
 	*/
-	@:overload public function getAnonymous() : Bool;
+	@:overload @:public public function getAnonymous() : Bool;
 	
 	/**
 	* Convenience method which checks if this type is derived from the given
@@ -74,7 +74,7 @@ extern interface XSTypeDefinition extends com.sun.org.apache.xerces.internal.xs.
 	*   using only derivation methods from the <code>derivationMethod</code>
 	*   .
 	*/
-	@:overload public function derivedFromType(ancestorType : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, derivationMethod : java.StdTypes.Int16) : Bool;
+	@:overload @:public public function derivedFromType(ancestorType : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, derivationMethod : java.StdTypes.Int16) : Bool;
 	
 	/**
 	* Convenience method which checks if this type is derived from the given
@@ -88,7 +88,7 @@ extern interface XSTypeDefinition extends com.sun.org.apache.xerces.internal.xs.
 	*   using only derivation methods from the <code>derivationMethod</code>
 	*   .
 	*/
-	@:overload public function derivedFrom(namespace : String, name : String, derivationMethod : java.StdTypes.Int16) : Bool;
+	@:overload @:public public function derivedFrom(namespace : String, name : String, derivationMethod : java.StdTypes.Int16) : Bool;
 	
 	
 }

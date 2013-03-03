@@ -25,45 +25,45 @@ package sun.java2d.jules;
 */
 extern class TrapezoidList
 {
-	public static var TRAP_START_INDEX(default, null) : Int;
+	@:public @:static @:final public static var TRAP_START_INDEX(default, null) : Int;
 	
-	public static var TRAP_SIZE(default, null) : Int;
+	@:public @:static @:final public static var TRAP_SIZE(default, null) : Int;
 	
-	@:overload public function new(trapArray : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(trapArray : java.NativeArray<Int>) : Void;
 	
-	@:overload @:final public function getTrapArray() : java.NativeArray<Int>;
+	@:overload @:public @:final public function getTrapArray() : java.NativeArray<Int>;
 	
-	@:overload @:final public function getSize() : Int;
+	@:overload @:public @:final public function getSize() : Int;
 	
-	@:overload @:final public function setSize(size : Int) : Void;
+	@:overload @:public @:final public function setSize(size : Int) : Void;
 	
-	@:overload @:final public function getLeft() : Int;
+	@:overload @:public @:final public function getLeft() : Int;
 	
-	@:overload @:final public function getTop() : Int;
+	@:overload @:public @:final public function getTop() : Int;
 	
-	@:overload @:final public function getRight() : Int;
+	@:overload @:public @:final public function getRight() : Int;
 	
-	@:overload @:final public function getBottom() : Int;
+	@:overload @:public @:final public function getBottom() : Int;
 	
-	@:overload @:final public function getTop(pos : Int) : Int;
+	@:overload @:public @:final public function getTop(pos : Int) : Int;
 	
-	@:overload @:final public function getBottom(pos : Int) : Int;
+	@:overload @:public @:final public function getBottom(pos : Int) : Int;
 	
-	@:overload @:final public function getP1XLeft(pos : Int) : Int;
+	@:overload @:public @:final public function getP1XLeft(pos : Int) : Int;
 	
-	@:overload @:final public function getP1YLeft(pos : Int) : Int;
+	@:overload @:public @:final public function getP1YLeft(pos : Int) : Int;
 	
-	@:overload @:final public function getP2XLeft(pos : Int) : Int;
+	@:overload @:public @:final public function getP2XLeft(pos : Int) : Int;
 	
-	@:overload @:final public function getP2YLeft(pos : Int) : Int;
+	@:overload @:public @:final public function getP2YLeft(pos : Int) : Int;
 	
-	@:overload @:final public function getP1XRight(pos : Int) : Int;
+	@:overload @:public @:final public function getP1XRight(pos : Int) : Int;
 	
-	@:overload @:final public function getP1YRight(pos : Int) : Int;
+	@:overload @:public @:final public function getP1YRight(pos : Int) : Int;
 	
-	@:overload @:final public function getP2XRight(pos : Int) : Int;
+	@:overload @:public @:final public function getP2XRight(pos : Int) : Int;
 	
-	@:overload @:final public function getP2YRight(pos : Int) : Int;
+	@:overload @:public @:final public function getP2YRight(pos : Int) : Int;
 	
 	
 }

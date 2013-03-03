@@ -28,7 +28,7 @@ extern class BsdFileSystemProvider extends sun.nio.fs.UnixFileSystemProvider
 	/**
 	* Bsd implementation of FileSystemProvider
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

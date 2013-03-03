@@ -33,21 +33,21 @@ extern class APTTypeVisitor<T, P>
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload @:final public function apply(type : com.sun.mirror.type.TypeMirror, param : P) : T;
+	@:overload @:public @:final public function apply(type : com.sun.mirror.type.TypeMirror, param : P) : T;
 	
-	@:overload @:abstract private function onPrimitiveType(type : com.sun.mirror.type.PrimitiveType, param : P) : T;
+	@:overload @:protected @:abstract private function onPrimitiveType(type : com.sun.mirror.type.PrimitiveType, param : P) : T;
 	
-	@:overload @:abstract private function onArrayType(type : com.sun.mirror.type.ArrayType, param : P) : T;
+	@:overload @:protected @:abstract private function onArrayType(type : com.sun.mirror.type.ArrayType, param : P) : T;
 	
-	@:overload @:abstract private function onClassType(type : com.sun.mirror.type.ClassType, param : P) : T;
+	@:overload @:protected @:abstract private function onClassType(type : com.sun.mirror.type.ClassType, param : P) : T;
 	
-	@:overload @:abstract private function onInterfaceType(type : com.sun.mirror.type.InterfaceType, param : P) : T;
+	@:overload @:protected @:abstract private function onInterfaceType(type : com.sun.mirror.type.InterfaceType, param : P) : T;
 	
-	@:overload @:abstract private function onTypeVariable(type : com.sun.mirror.type.TypeVariable, param : P) : T;
+	@:overload @:protected @:abstract private function onTypeVariable(type : com.sun.mirror.type.TypeVariable, param : P) : T;
 	
-	@:overload @:abstract private function onVoidType(type : com.sun.mirror.type.VoidType, param : P) : T;
+	@:overload @:protected @:abstract private function onVoidType(type : com.sun.mirror.type.VoidType, param : P) : T;
 	
-	@:overload @:abstract private function onWildcard(type : com.sun.mirror.type.WildcardType, param : P) : T;
+	@:overload @:protected @:abstract private function onWildcard(type : com.sun.mirror.type.WildcardType, param : P) : T;
 	
 	
 }

@@ -34,7 +34,7 @@ extern interface BAD_POLICY_TYPE
 	/**
 	* The Error code in PolicyError exception.
 	*/
-	public var value(default, null) : java.StdTypes.Int16;
+	@:final public var value(default, null) : java.StdTypes.Int16;
 	
 	
 }

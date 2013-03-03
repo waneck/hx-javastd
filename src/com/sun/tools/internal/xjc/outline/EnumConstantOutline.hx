@@ -28,17 +28,17 @@ extern class EnumConstantOutline
 	/**
 	* This {@link EnumOutline} holds information about this {@link CEnumLeafInfo}.
 	*/
-	public var target(default, null) : com.sun.tools.internal.xjc.model.CEnumConstant;
+	@:public @:final public var target(default, null) : com.sun.tools.internal.xjc.model.CEnumConstant;
 	
 	/**
 	* The generated enum constant.
 	*/
-	public var constRef(default, null) : com.sun.codemodel.internal.JEnumConstant;
+	@:public @:final public var constRef(default, null) : com.sun.codemodel.internal.JEnumConstant;
 	
 	/**
 	* Reserved for {@link BeanGenerator}.
 	*/
-	@:overload private function new(target : com.sun.tools.internal.xjc.model.CEnumConstant, constRef : com.sun.codemodel.internal.JEnumConstant) : Void;
+	@:overload @:protected private function new(target : com.sun.tools.internal.xjc.model.CEnumConstant, constRef : com.sun.codemodel.internal.JEnumConstant) : Void;
 	
 	
 }

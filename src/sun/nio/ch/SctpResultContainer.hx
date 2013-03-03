@@ -29,7 +29,7 @@ package sun.nio.ch;
 */
 extern class SctpResultContainer
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

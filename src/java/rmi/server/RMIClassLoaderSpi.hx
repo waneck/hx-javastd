@@ -60,7 +60,7 @@ extern class RMIClassLoaderSpi
 	* @throws  ClassNotFoundException if a definition for the class
 	* could not be found at the specified location
 	*/
-	@:overload @:abstract public function loadClass(codebase : String, name : String, defaultLoader : java.lang.ClassLoader) : Class<Dynamic>;
+	@:overload @:public @:abstract public function loadClass(codebase : String, name : String, defaultLoader : java.lang.ClassLoader) : Class<Dynamic>;
 	
 	/**
 	* Provides the implementation for
@@ -96,7 +96,7 @@ extern class RMIClassLoaderSpi
 	* would throw an <code>IllegalArgumentException</code> for the given
 	* interface list)
 	*/
-	@:overload @:abstract public function loadProxyClass(codebase : String, interfaces : java.NativeArray<String>, defaultLoader : java.lang.ClassLoader) : Class<Dynamic>;
+	@:overload @:public @:abstract public function loadProxyClass(codebase : String, interfaces : java.NativeArray<String>, defaultLoader : java.lang.ClassLoader) : Class<Dynamic>;
 	
 	/**
 	* Provides the implementation for
@@ -129,7 +129,7 @@ extern class RMIClassLoaderSpi
 	* if the caller does not have permission to connect to all of the
 	* URLs in the codebase URL path
 	*/
-	@:overload @:abstract public function getClassLoader(codebase : String) : java.lang.ClassLoader;
+	@:overload @:public @:abstract public function getClassLoader(codebase : String) : java.lang.ClassLoader;
 	
 	/**
 	* Provides the implementation for
@@ -146,7 +146,7 @@ extern class RMIClassLoaderSpi
 	*
 	* @throws  NullPointerException if <code>cl</code> is <code>null</code>
 	*/
-	@:overload @:abstract public function getClassAnnotation(cl : Class<Dynamic>) : String;
+	@:overload @:public @:abstract public function getClassAnnotation(cl : Class<Dynamic>) : String;
 	
 	
 }

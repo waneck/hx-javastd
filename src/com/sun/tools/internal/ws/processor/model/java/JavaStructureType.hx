@@ -29,48 +29,48 @@ package com.sun.tools.internal.ws.processor.model.java;
 */
 extern class JavaStructureType extends com.sun.tools.internal.ws.processor.model.java.JavaType
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : String, present : Bool, owner : Dynamic) : Void;
+	@:overload @:public public function new(name : String, present : Bool, owner : Dynamic) : Void;
 	
-	@:overload public function add(m : com.sun.tools.internal.ws.processor.model.java.JavaStructureMember) : Void;
+	@:overload @:public public function add(m : com.sun.tools.internal.ws.processor.model.java.JavaStructureMember) : Void;
 	
-	@:overload public function getMemberByName(name : String) : com.sun.tools.internal.ws.processor.model.java.JavaStructureMember;
+	@:overload @:public public function getMemberByName(name : String) : com.sun.tools.internal.ws.processor.model.java.JavaStructureMember;
 	
-	@:overload public function getMembers() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getMembers() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function getMembersCount() : Int;
-	
-	/* serialization */
-	@:overload public function getMembersList() : java.util.List<com.sun.tools.internal.ws.processor.model.java.JavaStructureMember>;
+	@:overload @:public public function getMembersCount() : Int;
 	
 	/* serialization */
-	@:overload public function setMembersList(l : java.util.List<com.sun.tools.internal.ws.processor.model.java.JavaStructureMember>) : Void;
-	
-	@:overload public function isAbstract() : Bool;
-	
-	@:overload public function setAbstract(isAbstract : Bool) : Void;
-	
-	@:overload public function getSuperclass() : com.sun.tools.internal.ws.processor.model.java.JavaStructureType;
-	
-	@:overload public function setSuperclass(superclassType : com.sun.tools.internal.ws.processor.model.java.JavaStructureType) : Void;
-	
-	@:overload public function addSubclass(subclassType : com.sun.tools.internal.ws.processor.model.java.JavaStructureType) : Void;
-	
-	@:overload public function getSubclasses() : java.util.Iterator<Dynamic>;
-	
-	@:overload public function getSubclassesSet() : java.util.Set<Dynamic>;
+	@:overload @:public public function getMembersList() : java.util.List<com.sun.tools.internal.ws.processor.model.java.JavaStructureMember>;
 	
 	/* serialization */
-	@:overload public function setSubclassesSet(s : java.util.Set<Dynamic>) : Void;
+	@:overload @:public public function setMembersList(l : java.util.List<com.sun.tools.internal.ws.processor.model.java.JavaStructureMember>) : Void;
 	
-	@:overload public function getAllSubclasses() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function isAbstract() : Bool;
 	
-	@:overload public function getAllSubclassesSet() : java.util.Set<Dynamic>;
+	@:overload @:public public function setAbstract(isAbstract : Bool) : Void;
 	
-	@:overload public function getOwner() : Dynamic;
+	@:overload @:public public function getSuperclass() : com.sun.tools.internal.ws.processor.model.java.JavaStructureType;
 	
-	@:overload public function setOwner(owner : Dynamic) : Void;
+	@:overload @:public public function setSuperclass(superclassType : com.sun.tools.internal.ws.processor.model.java.JavaStructureType) : Void;
+	
+	@:overload @:public public function addSubclass(subclassType : com.sun.tools.internal.ws.processor.model.java.JavaStructureType) : Void;
+	
+	@:overload @:public public function getSubclasses() : java.util.Iterator<Dynamic>;
+	
+	@:overload @:public public function getSubclassesSet() : java.util.Set<Dynamic>;
+	
+	/* serialization */
+	@:overload @:public public function setSubclassesSet(s : java.util.Set<Dynamic>) : Void;
+	
+	@:overload @:public public function getAllSubclasses() : java.util.Iterator<Dynamic>;
+	
+	@:overload @:public public function getAllSubclassesSet() : java.util.Set<Dynamic>;
+	
+	@:overload @:public public function getOwner() : Dynamic;
+	
+	@:overload @:public public function setOwner(owner : Dynamic) : Void;
 	
 	
 }

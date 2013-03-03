@@ -36,12 +36,12 @@ package java.io;
 	*
 	* @param classname the detailed message for the exception
 	*/
-	@:overload private function new(classname : String) : Void;
+	@:overload @:protected private function new(classname : String) : Void;
 	
 	/**
 	* Create an ObjectStreamException.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	
 }

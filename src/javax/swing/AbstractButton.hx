@@ -54,108 +54,108 @@ href="http://java.sun.com/docs/books/tutorial/uiswing/components/button.html">Ho
 extern class AbstractButton extends javax.swing.JComponent implements java.awt.ItemSelectable implements javax.swing.SwingConstants
 {
 	/** Identifies a change in the button model. */
-	public static var MODEL_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var MODEL_CHANGED_PROPERTY(default, null) : String;
 	
 	/** Identifies a change in the button's text. */
-	public static var TEXT_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var TEXT_CHANGED_PROPERTY(default, null) : String;
 	
 	/** Identifies a change to the button's mnemonic. */
-	public static var MNEMONIC_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var MNEMONIC_CHANGED_PROPERTY(default, null) : String;
 	
 	/** Identifies a change in the button's margins. */
-	public static var MARGIN_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var MARGIN_CHANGED_PROPERTY(default, null) : String;
 	
 	/** Identifies a change in the button's vertical alignment. */
-	public static var VERTICAL_ALIGNMENT_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var VERTICAL_ALIGNMENT_CHANGED_PROPERTY(default, null) : String;
 	
 	/** Identifies a change in the button's horizontal alignment. */
-	public static var HORIZONTAL_ALIGNMENT_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var HORIZONTAL_ALIGNMENT_CHANGED_PROPERTY(default, null) : String;
 	
 	/** Identifies a change in the button's vertical text position. */
-	public static var VERTICAL_TEXT_POSITION_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var VERTICAL_TEXT_POSITION_CHANGED_PROPERTY(default, null) : String;
 	
 	/** Identifies a change in the button's horizontal text position. */
-	public static var HORIZONTAL_TEXT_POSITION_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var HORIZONTAL_TEXT_POSITION_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies a change to having the border drawn,
 	* or having it not drawn.
 	*/
-	public static var BORDER_PAINTED_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var BORDER_PAINTED_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies a change to having the border highlighted when focused,
 	* or not.
 	*/
-	public static var FOCUS_PAINTED_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var FOCUS_PAINTED_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies a change from rollover enabled to disabled or back
 	* to enabled.
 	*/
-	public static var ROLLOVER_ENABLED_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ROLLOVER_ENABLED_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies a change to having the button paint the content area.
 	*/
-	public static var CONTENT_AREA_FILLED_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var CONTENT_AREA_FILLED_CHANGED_PROPERTY(default, null) : String;
 	
 	/** Identifies a change to the icon that represents the button. */
-	public static var ICON_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ICON_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies a change to the icon used when the button has been
 	* pressed.
 	*/
-	public static var PRESSED_ICON_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var PRESSED_ICON_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies a change to the icon used when the button has
 	* been selected.
 	*/
-	public static var SELECTED_ICON_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var SELECTED_ICON_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies a change to the icon used when the cursor is over
 	* the button.
 	*/
-	public static var ROLLOVER_ICON_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ROLLOVER_ICON_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies a change to the icon used when the cursor is
 	* over the button and it has been selected.
 	*/
-	public static var ROLLOVER_SELECTED_ICON_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ROLLOVER_SELECTED_ICON_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies a change to the icon used when the button has
 	* been disabled.
 	*/
-	public static var DISABLED_ICON_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var DISABLED_ICON_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies a change to the icon used when the button has been
 	* disabled and selected.
 	*/
-	public static var DISABLED_SELECTED_ICON_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var DISABLED_SELECTED_ICON_CHANGED_PROPERTY(default, null) : String;
 	
 	/** The data model that determines the button's state. */
-	private var model : javax.swing.ButtonModel;
+	@:protected private var model : javax.swing.ButtonModel;
 	
 	/**
 	* The button model's <code>changeListener</code>.
 	*/
-	private var changeListener : javax.swing.event.ChangeListener;
+	@:protected private var changeListener : javax.swing.event.ChangeListener;
 	
 	/**
 	* The button model's <code>ActionListener</code>.
 	*/
-	private var actionListener : java.awt.event.ActionListener;
+	@:protected private var actionListener : java.awt.event.ActionListener;
 	
 	/**
 	* The button model's <code>ItemListener</code>.
 	*/
-	private var itemListener : java.awt.event.ItemListener;
+	@:protected private var itemListener : java.awt.event.ItemListener;
 	
 	/**
 	* Only one <code>ChangeEvent</code> is needed per button
@@ -163,7 +163,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* event's only state is the source property.  The source of events
 	* generated is always "this".
 	*/
-	@:transient private var changeEvent : javax.swing.event.ChangeEvent;
+	@:protected @:transient private var changeEvent : javax.swing.event.ChangeEvent;
 	
 	/**
 	* Sets the <code>hideActionText</code> property, which determines
@@ -184,7 +184,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*  description: Whether the text of the button should come from
 	*               the <code>Action</code>.
 	*/
-	@:require(java6) @:overload public function setHideActionText(hideActionText : Bool) : Void;
+	@:require(java6) @:overload @:public public function setHideActionText(hideActionText : Bool) : Void;
 	
 	/**
 	* Returns the value of the <code>hideActionText</code> property, which
@@ -197,14 +197,14 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*         <code>Action</code>; the default is <code>false</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getHideActionText() : Bool;
+	@:require(java6) @:overload @:public public function getHideActionText() : Bool;
 	
 	/**
 	* Returns the button's text.
 	* @return the buttons text
 	* @see #setText
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
 	/**
 	* Sets the button's text.
@@ -216,14 +216,14 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: The button's text.
 	*/
-	@:overload public function setText(text : String) : Void;
+	@:overload @:public public function setText(text : String) : Void;
 	
 	/**
 	* Returns the state of the button. True if the
 	* toggle button is selected, false if it's not.
 	* @return true if the toggle button is selected, otherwise false
 	*/
-	@:overload public function isSelected() : Bool;
+	@:overload @:public public function isSelected() : Bool;
 	
 	/**
 	* Sets the state of the button. Note that this method does not
@@ -232,13 +232,13 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*
 	* @param b  true if the button is selected, otherwise false
 	*/
-	@:overload public function setSelected(b : Bool) : Void;
+	@:overload @:public public function setSelected(b : Bool) : Void;
 	
 	/**
 	* Programmatically perform a "click". This does the same
 	* thing as if the user had pressed and released the button.
 	*/
-	@:overload public function doClick() : Void;
+	@:overload @:public public function doClick() : Void;
 	
 	/**
 	* Programmatically perform a "click". This does the same
@@ -248,7 +248,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*
 	* @param pressTime the time to "hold down" the button, in milliseconds
 	*/
-	@:overload public function doClick(pressTime : Int) : Void;
+	@:overload @:public public function doClick(pressTime : Int) : Void;
 	
 	/**
 	* Sets space for margin between the button's border and
@@ -267,7 +267,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: The space between the button's border and the label.
 	*/
-	@:overload public function setMargin(m : java.awt.Insets) : Void;
+	@:overload @:public public function setMargin(m : java.awt.Insets) : Void;
 	
 	/**
 	* Returns the margin between the button's border and
@@ -277,14 +277,14 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*          between the botton's border and the label
 	* @see #setMargin
 	*/
-	@:overload public function getMargin() : java.awt.Insets;
+	@:overload @:public public function getMargin() : java.awt.Insets;
 	
 	/**
 	* Returns the default icon.
 	* @return the default <code>Icon</code>
 	* @see #setIcon
 	*/
-	@:overload public function getIcon() : javax.swing.Icon;
+	@:overload @:public public function getIcon() : javax.swing.Icon;
 	
 	/**
 	* Sets the button's default icon. This icon is
@@ -299,14 +299,14 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*       attribute: visualUpdate true
 	*     description: The button's default icon
 	*/
-	@:overload public function setIcon(defaultIcon : javax.swing.Icon) : Void;
+	@:overload @:public public function setIcon(defaultIcon : javax.swing.Icon) : Void;
 	
 	/**
 	* Returns the pressed icon for the button.
 	* @return the <code>pressedIcon</code> property
 	* @see #setPressedIcon
 	*/
-	@:overload public function getPressedIcon() : javax.swing.Icon;
+	@:overload @:public public function getPressedIcon() : javax.swing.Icon;
 	
 	/**
 	* Sets the pressed icon for the button.
@@ -317,14 +317,14 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: The pressed icon for the button.
 	*/
-	@:overload public function setPressedIcon(pressedIcon : javax.swing.Icon) : Void;
+	@:overload @:public public function setPressedIcon(pressedIcon : javax.swing.Icon) : Void;
 	
 	/**
 	* Returns the selected icon for the button.
 	* @return the <code>selectedIcon</code> property
 	* @see #setSelectedIcon
 	*/
-	@:overload public function getSelectedIcon() : javax.swing.Icon;
+	@:overload @:public public function getSelectedIcon() : javax.swing.Icon;
 	
 	/**
 	* Sets the selected icon for the button.
@@ -335,14 +335,14 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: The selected icon for the button.
 	*/
-	@:overload public function setSelectedIcon(selectedIcon : javax.swing.Icon) : Void;
+	@:overload @:public public function setSelectedIcon(selectedIcon : javax.swing.Icon) : Void;
 	
 	/**
 	* Returns the rollover icon for the button.
 	* @return the <code>rolloverIcon</code> property
 	* @see #setRolloverIcon
 	*/
-	@:overload public function getRolloverIcon() : javax.swing.Icon;
+	@:overload @:public public function getRolloverIcon() : javax.swing.Icon;
 	
 	/**
 	* Sets the rollover icon for the button.
@@ -353,14 +353,14 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: The rollover icon for the button.
 	*/
-	@:overload public function setRolloverIcon(rolloverIcon : javax.swing.Icon) : Void;
+	@:overload @:public public function setRolloverIcon(rolloverIcon : javax.swing.Icon) : Void;
 	
 	/**
 	* Returns the rollover selection icon for the button.
 	* @return the <code>rolloverSelectedIcon</code> property
 	* @see #setRolloverSelectedIcon
 	*/
-	@:overload public function getRolloverSelectedIcon() : javax.swing.Icon;
+	@:overload @:public public function getRolloverSelectedIcon() : javax.swing.Icon;
 	
 	/**
 	* Sets the rollover selected icon for the button.
@@ -372,7 +372,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: The rollover selected icon for the button.
 	*/
-	@:overload public function setRolloverSelectedIcon(rolloverSelectedIcon : javax.swing.Icon) : Void;
+	@:overload @:public public function setRolloverSelectedIcon(rolloverSelectedIcon : javax.swing.Icon) : Void;
 	
 	/**
 	* Returns the icon used by the button when it's disabled.
@@ -387,7 +387,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see #setDisabledIcon
 	* @see javax.swing.LookAndFeel#getDisabledIcon
 	*/
-	@:overload public function getDisabledIcon() : javax.swing.Icon;
+	@:overload @:public public function getDisabledIcon() : javax.swing.Icon;
 	
 	/**
 	* Sets the disabled icon for the button.
@@ -398,7 +398,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: The disabled icon for the button.
 	*/
-	@:overload public function setDisabledIcon(disabledIcon : javax.swing.Icon) : Void;
+	@:overload @:public public function setDisabledIcon(disabledIcon : javax.swing.Icon) : Void;
 	
 	/**
 	* Returns the icon used by the button when it's disabled and selected.
@@ -415,7 +415,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see #setDisabledSelectedIcon
 	* @see javax.swing.LookAndFeel#getDisabledSelectedIcon
 	*/
-	@:overload public function getDisabledSelectedIcon() : javax.swing.Icon;
+	@:overload @:public public function getDisabledSelectedIcon() : javax.swing.Icon;
 	
 	/**
 	* Sets the disabled selection icon for the button.
@@ -427,7 +427,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: The disabled selection icon for the button.
 	*/
-	@:overload public function setDisabledSelectedIcon(disabledSelectedIcon : javax.swing.Icon) : Void;
+	@:overload @:public public function setDisabledSelectedIcon(disabledSelectedIcon : javax.swing.Icon) : Void;
 	
 	/**
 	* Returns the vertical alignment of the text and icon.
@@ -440,7 +440,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* <li>{@code SwingConstants.BOTTOM}
 	* </ul>
 	*/
-	@:overload public function getVerticalAlignment() : Int;
+	@:overload @:public public function getVerticalAlignment() : Int;
 	
 	/**
 	* Sets the vertical alignment of the icon and text.
@@ -460,7 +460,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: The vertical alignment of the icon and text.
 	*/
-	@:overload public function setVerticalAlignment(alignment : Int) : Void;
+	@:overload @:public public function setVerticalAlignment(alignment : Int) : Void;
 	
 	/**
 	* Returns the horizontal alignment of the icon and text.
@@ -477,7 +477,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*   <li>{@code SwingConstants.TRAILING}
 	* </ul>
 	*/
-	@:overload public function getHorizontalAlignment() : Int;
+	@:overload @:public public function getHorizontalAlignment() : Int;
 	
 	/**
 	* Sets the horizontal alignment of the icon and text.
@@ -504,7 +504,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: The horizontal alignment of the icon and text.
 	*/
-	@:overload public function setHorizontalAlignment(alignment : Int) : Void;
+	@:overload @:public public function setHorizontalAlignment(alignment : Int) : Void;
 	
 	/**
 	* Returns the vertical position of the text relative to the icon.
@@ -516,7 +516,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* <li>{@code SwingConstants.BOTTOM}
 	* </ul>
 	*/
-	@:overload public function getVerticalTextPosition() : Int;
+	@:overload @:public public function getVerticalTextPosition() : Int;
 	
 	/**
 	* Sets the vertical position of the text relative to the icon.
@@ -534,7 +534,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: The vertical position of the text relative to the icon.
 	*/
-	@:overload public function setVerticalTextPosition(textPosition : Int) : Void;
+	@:overload @:public public function setVerticalTextPosition(textPosition : Int) : Void;
 	
 	/**
 	* Returns the horizontal position of the text relative to the icon.
@@ -548,7 +548,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* <li>{@code SwingConstants.TRAILING} (the default)
 	* </ul>
 	*/
-	@:overload public function getHorizontalTextPosition() : Int;
+	@:overload @:public public function getHorizontalTextPosition() : Int;
 	
 	/**
 	* Sets the horizontal position of the text relative to the icon.
@@ -572,7 +572,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: The horizontal position of the text relative to the icon.
 	*/
-	@:overload public function setHorizontalTextPosition(textPosition : Int) : Void;
+	@:overload @:public public function setHorizontalTextPosition(textPosition : Int) : Void;
 	
 	/**
 	* Returns the amount of space between the text and the icon
@@ -583,7 +583,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @since 1.4
 	* @see #setIconTextGap
 	*/
-	@:require(java4) @:overload public function getIconTextGap() : Int;
+	@:require(java4) @:overload @:public public function getIconTextGap() : Int;
 	
 	/**
 	* If both the icon and text properties are set, this property
@@ -601,7 +601,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*  description: If both the icon and text properties are set, this
 	*               property defines the space between them.
 	*/
-	@:require(java4) @:overload public function setIconTextGap(iconTextGap : Int) : Void;
+	@:require(java4) @:overload @:public public function setIconTextGap(iconTextGap : Int) : Void;
 	
 	/**
 	* Verify that the {@code key} argument is a legal value for the
@@ -624,7 +624,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see #setHorizontalTextPosition
 	* @see #setHorizontalAlignment
 	*/
-	@:overload private function checkHorizontalKey(key : Int, exception : String) : Int;
+	@:overload @:protected private function checkHorizontalKey(key : Int, exception : String) : Int;
 	
 	/**
 	* Verify that the {@code key} argument is a legal value for the
@@ -642,26 +642,26 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @exception IllegalArgumentException if key is not one of the legal
 	*            values listed above
 	*/
-	@:overload private function checkVerticalKey(key : Int, exception : String) : Int;
+	@:overload @:protected private function checkVerticalKey(key : Int, exception : String) : Int;
 	
 	/**
 	*{@inheritDoc}
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function removeNotify() : Void;
+	@:require(java6) @:overload @:public override public function removeNotify() : Void;
 	
 	/**
 	* Sets the action command for this button.
 	* @param actionCommand the action command for this button
 	*/
-	@:overload public function setActionCommand(actionCommand : String) : Void;
+	@:overload @:public public function setActionCommand(actionCommand : String) : Void;
 	
 	/**
 	* Returns the action command for this button.
 	* @return the action command for this button
 	*/
-	@:overload public function getActionCommand() : String;
+	@:overload @:public public function getActionCommand() : String;
 	
 	/**
 	* Sets the <code>Action</code>.
@@ -701,7 +701,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: the Action instance connected with this ActionEvent source
 	*/
-	@:require(java3) @:overload public function setAction(a : javax.swing.Action) : Void;
+	@:require(java3) @:overload @:public public function setAction(a : javax.swing.Action) : Void;
 	
 	/**
 	* Returns the currently set <code>Action</code> for this
@@ -714,7 +714,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see Action
 	* @see #setAction
 	*/
-	@:require(java3) @:overload public function getAction() : javax.swing.Action;
+	@:require(java3) @:overload @:public public function getAction() : javax.swing.Action;
 	
 	/**
 	* Sets the properties on this button to match those in the specified
@@ -728,7 +728,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see Action
 	* @see #setAction
 	*/
-	@:require(java3) @:overload private function configurePropertiesFromAction(a : javax.swing.Action) : Void;
+	@:require(java3) @:overload @:protected private function configurePropertiesFromAction(a : javax.swing.Action) : Void;
 	
 	/**
 	* Updates the button's state in response to property changes in the
@@ -749,7 +749,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see Action
 	* @see #configurePropertiesFromAction
 	*/
-	@:require(java6) @:overload private function actionPropertyChanged(action : javax.swing.Action, propertyName : String) : Void;
+	@:require(java6) @:overload @:protected private function actionPropertyChanged(action : javax.swing.Action, propertyName : String) : Void;
 	
 	/**
 	* Creates and returns a <code>PropertyChangeListener</code> that is
@@ -765,7 +765,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see Action
 	* @see #setAction
 	*/
-	@:require(java3) @:overload private function createActionPropertyChangeListener(a : javax.swing.Action) : java.beans.PropertyChangeListener;
+	@:require(java3) @:overload @:protected private function createActionPropertyChangeListener(a : javax.swing.Action) : java.beans.PropertyChangeListener;
 	
 	/**
 	* Gets the <code>borderPainted</code> property.
@@ -773,7 +773,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the value of the <code>borderPainted</code> property
 	* @see #setBorderPainted
 	*/
-	@:overload public function isBorderPainted() : Bool;
+	@:overload @:public public function isBorderPainted() : Bool;
 	
 	/**
 	* Sets the <code>borderPainted</code> property.
@@ -793,7 +793,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: Whether the border should be painted.
 	*/
-	@:overload public function setBorderPainted(b : Bool) : Void;
+	@:overload @:public public function setBorderPainted(b : Bool) : Void;
 	
 	/**
 	* Paint the button's border if <code>BorderPainted</code>
@@ -803,7 +803,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see #paint
 	* @see #setBorder
 	*/
-	@:overload override private function paintBorder(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintBorder(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Gets the <code>paintFocus</code> property.
@@ -811,7 +811,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the <code>paintFocus</code> property
 	* @see #setFocusPainted
 	*/
-	@:overload public function isFocusPainted() : Bool;
+	@:overload @:public public function isFocusPainted() : Bool;
 	
 	/**
 	* Sets the <code>paintFocus</code> property, which must
@@ -828,7 +828,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: Whether focus should be painted
 	*/
-	@:overload public function setFocusPainted(b : Bool) : Void;
+	@:overload @:public public function setFocusPainted(b : Bool) : Void;
 	
 	/**
 	* Gets the <code>contentAreaFilled</code> property.
@@ -836,7 +836,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the <code>contentAreaFilled</code> property
 	* @see #setContentAreaFilled
 	*/
-	@:overload public function isContentAreaFilled() : Bool;
+	@:overload @:public public function isContentAreaFilled() : Bool;
 	
 	/**
 	* Sets the <code>contentAreaFilled</code> property.
@@ -862,7 +862,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*  description: Whether the button should paint the content area
 	*               or leave it transparent.
 	*/
-	@:overload public function setContentAreaFilled(b : Bool) : Void;
+	@:overload @:public public function setContentAreaFilled(b : Bool) : Void;
 	
 	/**
 	* Gets the <code>rolloverEnabled</code> property.
@@ -870,7 +870,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the value of the <code>rolloverEnabled</code> property
 	* @see #setRolloverEnabled
 	*/
-	@:overload public function isRolloverEnabled() : Bool;
+	@:overload @:public public function isRolloverEnabled() : Bool;
 	
 	/**
 	* Sets the <code>rolloverEnabled</code> property, which
@@ -887,13 +887,13 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: Whether rollover effects should be enabled.
 	*/
-	@:overload public function setRolloverEnabled(b : Bool) : Void;
+	@:overload @:public public function setRolloverEnabled(b : Bool) : Void;
 	
 	/**
 	* Returns the keyboard mnemonic from the the current model.
 	* @return the keyboard mnemonic from the model
 	*/
-	@:overload public function getMnemonic() : Int;
+	@:overload @:public public function getMnemonic() : Int;
 	
 	/**
 	* Sets the keyboard mnemonic on the current model.
@@ -925,7 +925,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: the keyboard character mnemonic
 	*/
-	@:overload public function setMnemonic(mnemonic : Int) : Void;
+	@:overload @:public public function setMnemonic(mnemonic : Int) : Void;
 	
 	/**
 	* This method is now obsolete, please use <code>setMnemonic(int)</code>
@@ -940,7 +940,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: the keyboard character mnemonic
 	*/
-	@:overload public function setMnemonic(mnemonic : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setMnemonic(mnemonic : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Provides a hint to the look and feel as to which character in the
@@ -970,7 +970,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*  description: the index into the String to draw the keyboard character
 	*               mnemonic at
 	*/
-	@:require(java4) @:overload public function setDisplayedMnemonicIndex(index : Int) : Void;
+	@:require(java4) @:overload @:public public function setDisplayedMnemonicIndex(index : Int) : Void;
 	
 	/**
 	* Returns the character, as an index, that the look and feel should
@@ -980,7 +980,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return index representing mnemonic character
 	* @see #setDisplayedMnemonicIndex
 	*/
-	@:require(java4) @:overload public function getDisplayedMnemonicIndex() : Int;
+	@:require(java4) @:overload @:public public function getDisplayedMnemonicIndex() : Int;
 	
 	/**
 	* Sets the amount of time (in milliseconds) required between
@@ -1001,7 +1001,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @exception   IllegalArgumentException if threshhold < 0
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setMultiClickThreshhold(threshhold : haxe.Int64) : Void;
+	@:require(java4) @:overload @:public public function setMultiClickThreshhold(threshhold : haxe.Int64) : Void;
 	
 	/**
 	* Gets the amount of time (in milliseconds) required between
@@ -1013,14 +1013,14 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*         to generate corresponding action events
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getMultiClickThreshhold() : haxe.Int64;
+	@:require(java4) @:overload @:public public function getMultiClickThreshhold() : haxe.Int64;
 	
 	/**
 	* Returns the model that this button represents.
 	* @return the <code>model</code> property
 	* @see #setModel
 	*/
-	@:overload public function getModel() : javax.swing.ButtonModel;
+	@:overload @:public public function getModel() : javax.swing.ButtonModel;
 	
 	/**
 	* Sets the model that this button represents.
@@ -1030,14 +1030,14 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*        bound: true
 	*  description: Model that the Button uses.
 	*/
-	@:overload public function setModel(newModel : javax.swing.ButtonModel) : Void;
+	@:overload @:public public function setModel(newModel : javax.swing.ButtonModel) : Void;
 	
 	/**
 	* Returns the L&F object that renders this component.
 	* @return the ButtonUI object
 	* @see #setUI
 	*/
-	@:overload public function getUI() : javax.swing.plaf.ButtonUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.ButtonUI;
 	
 	/**
 	* Sets the L&F object that renders this component.
@@ -1049,7 +1049,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.ButtonUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.ButtonUI) : Void;
 	
 	/**
 	* Resets the UI property to a value from the current look
@@ -1061,7 +1061,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*          "ButtonUI", "javax.swing.plaf.basic.BasicButtonUI", this));
 	* </pre>
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Adds the specified component to this container at the specified
@@ -1081,7 +1081,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @exception IllegalArgumentException if adding a window to a container
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:require(java5) @:overload @:protected override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Sets the layout manager for this container, refer to
@@ -1091,19 +1091,19 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param mgr the specified layout manager
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function setLayout(mgr : java.awt.LayoutManager) : Void;
+	@:require(java5) @:overload @:public override public function setLayout(mgr : java.awt.LayoutManager) : Void;
 	
 	/**
 	* Adds a <code>ChangeListener</code> to the button.
 	* @param l the listener to be added
 	*/
-	@:overload public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Removes a ChangeListener from the button.
 	* @param l the listener to be removed
 	*/
-	@:overload public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ChangeListener</code>s added
@@ -1113,7 +1113,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
+	@:require(java4) @:overload @:public public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -1121,13 +1121,13 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* is lazily created.
 	* @see EventListenerList
 	*/
-	@:overload private function fireStateChanged() : Void;
+	@:overload @:protected private function fireStateChanged() : Void;
 	
 	/**
 	* Adds an <code>ActionListener</code> to the button.
 	* @param l the <code>ActionListener</code> to be added
 	*/
-	@:overload public function addActionListener(l : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function addActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Removes an <code>ActionListener</code> from the button.
@@ -1137,7 +1137,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*
 	* @param l the listener to be removed
 	*/
-	@:overload public function removeActionListener(l : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function removeActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ActionListener</code>s added
@@ -1147,7 +1147,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
+	@:require(java4) @:overload @:public public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
 	
 	/**
 	* Subclasses that want to handle <code>ChangeEvents</code> differently
@@ -1156,7 +1156,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*
 	* @return the new <code>ChangeListener</code>
 	*/
-	@:overload private function createChangeListener() : javax.swing.event.ChangeListener;
+	@:overload @:protected private function createChangeListener() : javax.swing.event.ChangeListener;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -1167,7 +1167,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param event  the <code>ActionEvent</code> object
 	* @see EventListenerList
 	*/
-	@:overload private function fireActionPerformed(event : java.awt.event.ActionEvent) : Void;
+	@:overload @:protected private function fireActionPerformed(event : java.awt.event.ActionEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -1177,17 +1177,17 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param event  the <code>ItemEvent</code> object
 	* @see EventListenerList
 	*/
-	@:overload private function fireItemStateChanged(event : java.awt.event.ItemEvent) : Void;
+	@:overload @:protected private function fireItemStateChanged(event : java.awt.event.ItemEvent) : Void;
 	
-	@:overload private function createActionListener() : java.awt.event.ActionListener;
+	@:overload @:protected private function createActionListener() : java.awt.event.ActionListener;
 	
-	@:overload private function createItemListener() : java.awt.event.ItemListener;
+	@:overload @:protected private function createItemListener() : java.awt.event.ItemListener;
 	
 	/**
 	* Enables (or disables) the button.
 	* @param b  true to enable the button, otherwise false
 	*/
-	@:overload override public function setEnabled(b : Bool) : Void;
+	@:overload @:public override public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Returns the label text.
@@ -1195,7 +1195,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return a <code>String</code> containing the label
 	* @deprecated - Replaced by <code>getText</code>
 	*/
-	@:overload public function getLabel() : String;
+	@:overload @:public public function getLabel() : String;
 	
 	/**
 	* Sets the label text.
@@ -1206,19 +1206,19 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*        bound: true
 	*  description: Replace by setText(text)
 	*/
-	@:overload public function setLabel(label : String) : Void;
+	@:overload @:public public function setLabel(label : String) : Void;
 	
 	/**
 	* Adds an <code>ItemListener</code> to the <code>checkbox</code>.
 	* @param l  the <code>ItemListener</code> to be added
 	*/
-	@:overload public function addItemListener(l : java.awt.event.ItemListener) : Void;
+	@:overload @:public public function addItemListener(l : java.awt.event.ItemListener) : Void;
 	
 	/**
 	* Removes an <code>ItemListener</code> from the button.
 	* @param l the <code>ItemListener</code> to be removed
 	*/
-	@:overload public function removeItemListener(l : java.awt.event.ItemListener) : Void;
+	@:overload @:public public function removeItemListener(l : java.awt.event.ItemListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ItemListener</code>s added
@@ -1228,7 +1228,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getItemListeners() : java.NativeArray<java.awt.event.ItemListener>;
+	@:require(java4) @:overload @:public public function getItemListeners() : java.NativeArray<java.awt.event.ItemListener>;
 	
 	/**
 	* Returns an array (length 1) containing the label or
@@ -1237,9 +1237,9 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return an array containing 1 Object: the text of the button,
 	*         if the item is selected; otherwise <code>null</code>
 	*/
-	@:overload public function getSelectedObjects() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getSelectedObjects() : java.NativeArray<Dynamic>;
 	
-	@:overload private function init(text : String, icon : javax.swing.Icon) : Void;
+	@:overload @:protected private function init(text : String, icon : javax.swing.Icon) : Void;
 	
 	/**
 	* This is overridden to return false if the current <code>Icon</code>'s
@@ -1256,7 +1256,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see     java.awt.image.ImageObserver
 	* @see     java.awt.Component#imageUpdate(java.awt.Image, int, int, int, int, int)
 	*/
-	@:overload override public function imageUpdate(img : java.awt.Image, infoflags : Int, x : Int, y : Int, w : Int, h : Int) : Bool;
+	@:overload @:public override public function imageUpdate(img : java.awt.Image, infoflags : Int, x : Int, y : Int, w : Int, h : Int) : Bool;
 	
 	/**
 	* Returns a string representation of this <code>AbstractButton</code>.
@@ -1271,13 +1271,13 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*
 	* @return  a string representation of this <code>AbstractButton</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	
 }
 @:native('javax$swing$AbstractButton$ButtonActionPropertyChangeListener') @:internal extern class AbstractButton_ButtonActionPropertyChangeListener extends javax.swing.ActionPropertyChangeListener<javax.swing.AbstractButton>
 {
-	@:overload private function actionPropertyChanged(button : javax.swing.AbstractButton, action : javax.swing.Action, e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function actionPropertyChanged(button : javax.swing.AbstractButton, action : javax.swing.Action, e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -1295,17 +1295,17 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 */
 @:native('javax$swing$AbstractButton$ButtonChangeListener') extern class AbstractButton_ButtonChangeListener implements javax.swing.event.ChangeListener implements java.io.Serializable
 {
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$AbstractButton$Handler') @:internal extern class AbstractButton_Handler implements java.awt.event.ActionListener implements javax.swing.event.ChangeListener implements java.awt.event.ItemListener implements java.io.Serializable
 {
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
-	@:overload public function actionPerformed(event : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(event : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function itemStateChanged(event : java.awt.event.ItemEvent) : Void;
+	@:overload @:public public function itemStateChanged(event : java.awt.event.ItemEvent) : Void;
 	
 	
 }
@@ -1334,14 +1334,14 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*              <code>null</code> if this
 	*              object does not have a name
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Get the AccessibleIcons associated with this object if one
 	* or more exist.  Otherwise return null.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
+	@:require(java3) @:overload @:public override public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
 	
 	/**
 	* Get the state set of this object.
@@ -1350,7 +1350,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the AccessibleRelationSet associated with this object if one
@@ -1358,7 +1358,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see AccessibleRelation
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleRelationSet() : javax.accessibility.AccessibleRelationSet;
+	@:require(java3) @:overload @:public override public function getAccessibleRelationSet() : javax.accessibility.AccessibleRelationSet;
 	
 	/**
 	* Get the AccessibleAction associated with this object.  In the
@@ -1368,7 +1368,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload @:public override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Get the AccessibleValue associated with this object.  In the
@@ -1378,7 +1378,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Returns the number of Actions available in this object.  The
@@ -1387,14 +1387,14 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*
 	* @return 1, the number of Actions in this object
 	*/
-	@:overload public function getAccessibleActionCount() : Int;
+	@:overload @:public public function getAccessibleActionCount() : Int;
 	
 	/**
 	* Return a description of the specified action of the object.
 	*
 	* @param i zero-based index of the actions
 	*/
-	@:overload public function getAccessibleActionDescription(i : Int) : String;
+	@:overload @:public public function getAccessibleActionDescription(i : Int) : String;
 	
 	/**
 	* Perform the specified Action on the object
@@ -1402,7 +1402,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param i zero-based index of actions
 	* @return true if the the action was performed; else false.
 	*/
-	@:overload public function doAccessibleAction(i : Int) : Bool;
+	@:overload @:public public function doAccessibleAction(i : Int) : Bool;
 	
 	/**
 	* Get the value of this object as a Number.
@@ -1411,31 +1411,31 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* this is selected.
 	* @see AbstractButton#isSelected
 	*/
-	@:overload public function getCurrentAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getCurrentAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Set the value of this object as a Number.
 	*
 	* @return True if the value was set.
 	*/
-	@:overload public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
+	@:overload @:public public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
 	
 	/**
 	* Get the minimum value of this object as a Number.
 	*
 	* @return an Integer of 0.
 	*/
-	@:overload public function getMinimumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMinimumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Get the maximum value of this object as a Number.
 	*
 	* @return An Integer of 1.
 	*/
-	@:overload public function getMaximumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMaximumAccessibleValue() : java.lang.Number;
 	
 	/* AccessibleText ---------- */
-	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload @:public override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Given a point in local coordinates, return the zero-based index
@@ -1452,7 +1452,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* Point is invalid returns -1.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getIndexAtPoint(p : java.awt.Point) : Int;
+	@:require(java3) @:overload @:public public function getIndexAtPoint(p : java.awt.Point) : Int;
 	
 	/**
 	* Determine the bounding box of the character at the given
@@ -1470,7 +1470,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* if index is invalid returns an empty rectangle.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getCharacterBounds(i : Int) : java.awt.Rectangle;
+	@:require(java3) @:overload @:public public function getCharacterBounds(i : Int) : java.awt.Rectangle;
 	
 	/**
 	* Return the number of characters (valid indicies)
@@ -1478,7 +1478,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the number of characters
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getCharCount() : Int;
+	@:require(java3) @:overload @:public public function getCharCount() : Int;
 	
 	/**
 	* Return the zero-based offset of the caret.
@@ -1488,7 +1488,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the zero-based offset of the caret.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getCaretPosition() : Int;
+	@:require(java3) @:overload @:public public function getCaretPosition() : Int;
 	
 	/**
 	* Returns the String at a given index.
@@ -1500,7 +1500,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*   null for an invalid index or part
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAtIndex(part : Int, index : Int) : String;
+	@:require(java3) @:overload @:public public function getAtIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the String after a given index.
@@ -1512,7 +1512,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*  index or part
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAfterIndex(part : Int, index : Int) : String;
+	@:require(java3) @:overload @:public public function getAfterIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the String before a given index.
@@ -1524,7 +1524,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*  or part
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getBeforeIndex(part : Int, index : Int) : String;
+	@:require(java3) @:overload @:public public function getBeforeIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Return the AttributeSet for a given character at a given index
@@ -1533,7 +1533,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the AttributeSet of the character
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getCharacterAttribute(i : Int) : javax.swing.text.AttributeSet;
+	@:require(java3) @:overload @:public public function getCharacterAttribute(i : Int) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Returns the start offset within the selected text.
@@ -1543,7 +1543,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the index into the text of the start of the selection
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getSelectionStart() : Int;
+	@:require(java3) @:overload @:public public function getSelectionStart() : Int;
 	
 	/**
 	* Returns the end offset within the selected text.
@@ -1553,7 +1553,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the index into teh text of the end of the selection
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getSelectionEnd() : Int;
+	@:require(java3) @:overload @:public public function getSelectionEnd() : Int;
 	
 	/**
 	* Returns the portion of the text that is selected.
@@ -1561,7 +1561,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the String portion of the text that is selected
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getSelectedText() : String;
+	@:require(java3) @:overload @:public public function getSelectedText() : String;
 	
 	/**
 	* Returns the tool tip text
@@ -1570,7 +1570,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* otherwise, null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getToolTipText() : String;
+	@:require(java4) @:overload @:public override public function getToolTipText() : String;
 	
 	/**
 	* Returns the titled border text
@@ -1579,7 +1579,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* otherwise, null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getTitledBorderText() : String;
+	@:require(java4) @:overload @:public override public function getTitledBorderText() : String;
 	
 	/**
 	* Returns key bindings associated with this object
@@ -1589,7 +1589,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see AccessibleKeyBinding
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getAccessibleKeyBinding() : javax.accessibility.AccessibleKeyBinding;
+	@:require(java4) @:overload @:public override public function getAccessibleKeyBinding() : javax.accessibility.AccessibleKeyBinding;
 	
 	/**
 	* Sets the foreground color of this object.
@@ -1597,7 +1597,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param c the new Color for the foreground
 	* @see #getForeground
 	*/
-	@:overload @:public override public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public @:public @:public override public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* Returns the location of the object on the screen.
@@ -1607,7 +1607,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see #getBounds
 	* @see #getLocation
 	*/
-	@:overload @:public override public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public @:public @:public override public function getLocationOnScreen() : java.awt.Point;
 	
 	/**
 	* Sets the background color of this object.
@@ -1615,7 +1615,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param c the new Color for the background
 	* @see #setBackground
 	*/
-	@:overload @:public override public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public @:public @:public override public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Sets the enabled state of the object.
@@ -1623,7 +1623,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param b if true, enables this object; otherwise, disables it
 	* @see #isEnabled
 	*/
-	@:overload @:public override public function setEnabled(b : Bool) : Void;
+	@:overload @:public @:public @:public override public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Gets the background color of this object.
@@ -1632,7 +1632,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* otherwise, null
 	* @see #setBackground
 	*/
-	@:overload @:public override public function getBackground() : java.awt.Color;
+	@:overload @:public @:public @:public override public function getBackground() : java.awt.Color;
 	
 	/**
 	* Gets the bounds of this object in the form of a Rectangle object.
@@ -1643,7 +1643,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* this object is not on the screen.
 	* @see #contains
 	*/
-	@:overload @:public override public function getBounds() : java.awt.Rectangle;
+	@:overload @:public @:public @:public override public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Sets the Cursor of this object.
@@ -1651,7 +1651,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param cursor  the new Cursor for the object
 	* @see #getCursor
 	*/
-	@:overload @:public override public function setCursor(cursor : java.awt.Cursor) : Void;
+	@:overload @:public @:public @:public override public function setCursor(cursor : java.awt.Cursor) : Void;
 	
 	/**
 	* Sets the bounds of this object in the form of a Rectangle object.
@@ -1661,7 +1661,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param r rectangle indicating this component's bounds
 	* @see #getBounds
 	*/
-	@:overload @:public override public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload @:public @:public @:public override public function setBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Removes the specified focus listener so it no longer receives focus
@@ -1670,7 +1670,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param l the focus listener
 	* @see #addFocusListener
 	*/
-	@:overload @:public override public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public @:public @:public override public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Determines if the object is showing.  This is determined by checking
@@ -1681,7 +1681,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*
 	* @return true if object is showing; otherwise, false
 	*/
-	@:overload @:public override public function isShowing() : Bool;
+	@:overload @:public @:public @:public override public function isShowing() : Bool;
 	
 	/**
 	* Gets the foreground color of this object.
@@ -1690,14 +1690,14 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* otherwise, null
 	* @see #setForeground
 	*/
-	@:overload @:public override public function getForeground() : java.awt.Color;
+	@:overload @:public @:public @:public override public function getForeground() : java.awt.Color;
 	
 	/**
 	* Sets the location of the object relative to the parent.
 	* @param p the new position for the top-left corner
 	* @see #getLocation
 	*/
-	@:overload @:public override public function setLocation(p : java.awt.Point) : Void;
+	@:overload @:public @:public @:public override public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* Adds the specified focus listener to receive focus events from this
@@ -1706,7 +1706,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param l the focus listener
 	* @see #removeFocusListener
 	*/
-	@:overload @:public override public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public @:public @:public override public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Requests focus for this object.  If this object cannot accept focus,
@@ -1714,7 +1714,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* focus.
 	* @see #isFocusTraversable
 	*/
-	@:overload @:public override public function requestFocus() : Void;
+	@:overload @:public @:public @:public override public function requestFocus() : Void;
 	
 	/**
 	* Gets the FontMetrics of this object.
@@ -1723,7 +1723,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the FontMetrics, if supported, the object; otherwise, null
 	* @see #getFont
 	*/
-	@:overload @:public override public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public @:public @:public override public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Checks whether the specified point is within this object's bounds,
@@ -1734,7 +1734,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return true if object contains Point; otherwise false
 	* @see #getBounds
 	*/
-	@:overload @:public override public function contains(p : java.awt.Point) : Bool;
+	@:overload @:public @:public @:public override public function contains(p : java.awt.Point) : Bool;
 	
 	/**
 	* Returns whether this object can accept focus or not.   Objects that
@@ -1747,7 +1747,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see AccessibleState#FOCUSED
 	* @see AccessibleStateSet
 	*/
-	@:overload @:public override public function isFocusTraversable() : Bool;
+	@:overload @:public @:public @:public override public function isFocusTraversable() : Bool;
 	
 	/**
 	* Sets the Font of this object.
@@ -1755,7 +1755,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param f the new Font for the object
 	* @see #getFont
 	*/
-	@:overload @:public override public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public @:public @:public override public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Gets the Font of this object.
@@ -1763,7 +1763,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the Font,if supported, for the object; otherwise, null
 	* @see #setFont
 	*/
-	@:overload @:public override public function getFont() : java.awt.Font;
+	@:overload @:public @:public @:public override public function getFont() : java.awt.Font;
 	
 	/**
 	* Determines if the object is enabled.  Objects that are enabled
@@ -1776,7 +1776,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see AccessibleState#ENABLED
 	* @see AccessibleStateSet
 	*/
-	@:overload @:public override public function isEnabled() : Bool;
+	@:overload @:public @:public @:public override public function isEnabled() : Bool;
 	
 	/**
 	* Gets the location of the object relative to the parent in the form
@@ -1789,7 +1789,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see #getBounds
 	* @see #getLocationOnScreen
 	*/
-	@:overload @:public override public function getLocation() : java.awt.Point;
+	@:overload @:public @:public @:public override public function getLocation() : java.awt.Point;
 	
 	/**
 	* Returns the Accessible child, if one exists, contained at the local
@@ -1799,7 +1799,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the Accessible, if it exists, at the specified location;
 	* otherwise null
 	*/
-	@:overload @:public override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public @:public @:public override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the Cursor of this object.
@@ -1807,7 +1807,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the Cursor, if supported, of the object; otherwise, null
 	* @see #setCursor
 	*/
-	@:overload @:public override public function getCursor() : java.awt.Cursor;
+	@:overload @:public @:public @:public override public function getCursor() : java.awt.Cursor;
 	
 	/**
 	* Determines if the object is visible.  Note: this means that the
@@ -1824,7 +1824,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see AccessibleState#VISIBLE
 	* @see AccessibleStateSet
 	*/
-	@:overload @:public override public function isVisible() : Bool;
+	@:overload @:public @:public @:public override public function isVisible() : Bool;
 	
 	/**
 	* Sets the visible state of the object.
@@ -1832,7 +1832,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param b if true, shows this object; otherwise, hides it
 	* @see #isVisible
 	*/
-	@:overload @:public override public function setVisible(b : Bool) : Void;
+	@:overload @:public @:public @:public override public function setVisible(b : Bool) : Void;
 	
 	/**
 	* Resizes this object so that it has width and height.
@@ -1840,7 +1840,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param d The dimension specifying the new size of the object.
 	* @see #getSize
 	*/
-	@:overload @:public override public function setSize(d : java.awt.Dimension) : Void;
+	@:overload @:public @:public @:public override public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the size of this object in the form of a Dimension object.
@@ -1852,7 +1852,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* null if this object is not on the screen
 	* @see #setSize
 	*/
-	@:overload @:public override public function getSize() : java.awt.Dimension;
+	@:overload @:public @:public @:public override public function getSize() : java.awt.Dimension;
 	
 	
 }
@@ -1863,7 +1863,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*
 	* @return the zero-based number of key bindings for this object
 	*/
-	@:overload public function getAccessibleKeyBindingCount() : Int;
+	@:overload @:public public function getAccessibleKeyBindingCount() : Int;
 	
 	/**
 	* Returns a key binding for this object.  The value returned is an
@@ -1890,7 +1890,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* out of bounds
 	* @see #getAccessibleKeyBindingCount
 	*/
-	@:overload public function getAccessibleKeyBinding(i : Int) : Dynamic;
+	@:overload @:public public function getAccessibleKeyBinding(i : Int) : Dynamic;
 	
 	
 }

@@ -26,7 +26,7 @@ extern class EncryptionElementProxy extends com.sun.org.apache.xml.internal.secu
 	*
 	* @param doc
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document) : Void;
 	
 	/**
 	* Constructor EncryptionElementProxy
@@ -35,10 +35,10 @@ extern class EncryptionElementProxy extends com.sun.org.apache.xml.internal.secu
 	* @param BaseURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/** @inheritDoc */
-	@:overload @:final public function getBaseNamespace() : String;
+	@:overload @:public @:final override public function getBaseNamespace() : String;
 	
 	
 }

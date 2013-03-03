@@ -23,9 +23,9 @@ extern class XSObjectListImpl extends java.util.AbstractList<Dynamic> implements
 	/**
 	* An immutable empty list.
 	*/
-	public static var EMPTY_LIST(default, null) : com.sun.org.apache.xerces.internal.impl.xs.util.XSObjectListImpl;
+	@:public @:static @:final public static var EMPTY_LIST(default, null) : com.sun.org.apache.xerces.internal.impl.xs.util.XSObjectListImpl;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct an XSObjectList implementation
@@ -33,13 +33,13 @@ extern class XSObjectListImpl extends java.util.AbstractList<Dynamic> implements
 	* @param array     the data array
 	* @param length    the number of elements
 	*/
-	@:overload public function new(array : java.NativeArray<com.sun.org.apache.xerces.internal.xs.XSObject>, length : Int) : Void;
+	@:overload @:public public function new(array : java.NativeArray<com.sun.org.apache.xerces.internal.xs.XSObject>, length : Int) : Void;
 	
 	/**
 	* The number of <code>XSObjects</code> in the list. The range of valid
 	* child node indices is 0 to <code>length-1</code> inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Returns the <code>index</code>th item in the collection. The index
@@ -50,56 +50,56 @@ extern class XSObjectListImpl extends java.util.AbstractList<Dynamic> implements
 	*   <code>XSObjectList</code>, or <code>null</code> if that is not a
 	*   valid index.
 	*/
-	@:overload public function item(index : Int) : com.sun.org.apache.xerces.internal.xs.XSObject;
+	@:overload @:public public function item(index : Int) : com.sun.org.apache.xerces.internal.xs.XSObject;
 	
-	@:overload public function clearXSObjectList() : Void;
+	@:overload @:public public function clearXSObjectList() : Void;
 	
-	@:overload public function addXSObject(object : com.sun.org.apache.xerces.internal.xs.XSObject) : Void;
+	@:overload @:public public function addXSObject(object : com.sun.org.apache.xerces.internal.xs.XSObject) : Void;
 	
-	@:overload public function addXSObject(index : Int, object : com.sun.org.apache.xerces.internal.xs.XSObject) : Void;
+	@:overload @:public public function addXSObject(index : Int, object : com.sun.org.apache.xerces.internal.xs.XSObject) : Void;
 	
 	/*
 	* List methods
 	*/
-	@:overload override public function contains(value : Dynamic) : Bool;
+	@:overload @:public override public function contains(value : Dynamic) : Bool;
 	
-	@:overload override public function get(index : Int) : Dynamic;
+	@:overload @:public override public function get(index : Int) : Dynamic;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function listIterator() : java.util.ListIterator<Dynamic>;
+	@:overload @:public override public function listIterator() : java.util.ListIterator<Dynamic>;
 	
-	@:overload override public function listIterator(index : Int) : java.util.ListIterator<Dynamic>;
+	@:overload @:public override public function listIterator(index : Int) : java.util.ListIterator<Dynamic>;
 	
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload override public function toArray(a : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray(a : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$impl$xs$util$XSObjectListImpl$XSObjectListIterator') @:internal extern class XSObjectListImpl_XSObjectListIterator implements java.util.ListIterator<Dynamic>
 {
-	@:overload public function new(index : Int) : Void;
+	@:overload @:public public function new(index : Int) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function hasPrevious() : Bool;
+	@:overload @:public public function hasPrevious() : Bool;
 	
-	@:overload public function previous() : Dynamic;
+	@:overload @:public public function previous() : Dynamic;
 	
-	@:overload public function nextIndex() : Int;
+	@:overload @:public public function nextIndex() : Int;
 	
-	@:overload public function previousIndex() : Int;
+	@:overload @:public public function previousIndex() : Int;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
-	@:overload public function set(o : Dynamic) : Void;
+	@:overload @:public public function set(o : Dynamic) : Void;
 	
-	@:overload public function add(o : Dynamic) : Void;
+	@:overload @:public public function add(o : Dynamic) : Void;
 	
 	
 }

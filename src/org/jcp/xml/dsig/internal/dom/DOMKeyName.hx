@@ -33,20 +33,20 @@ extern class DOMKeyName extends org.jcp.xml.dsig.internal.dom.DOMStructure imple
 	* @param name the name of the key identifier
 	* @throws NullPointerException if <code>name</code> is null
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a <code>DOMKeyName</code> from a KeyName element.
 	*
 	* @param knElem a KeyName element
 	*/
-	@:overload public function new(knElem : org.w3c.dom.Element) : Void;
+	@:overload @:public public function new(knElem : org.w3c.dom.Element) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

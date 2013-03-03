@@ -28,16 +28,16 @@ extern class JPropertyFile extends com.sun.codemodel.internal.JResourceFile
 	/**
 	* A property file.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Adds key/value pair into the property file.
 	* If you call this method twice with the same key,
 	* the old one is overriden by the new one.
 	*/
-	@:overload public function add(key : String, value : String) : Void;
+	@:overload @:public public function add(key : String, value : String) : Void;
 	
-	@:overload override public function build(out : java.io.OutputStream) : Void;
+	@:overload @:public override public function build(out : java.io.OutputStream) : Void;
 	
 	
 }

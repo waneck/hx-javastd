@@ -31,7 +31,7 @@ extern class OptimizedTransducedAccessorFactory
 	* @return null
 	*      if for some reason it fails to create an optimized version.
 	*/
-	@:overload @:final public static function get(prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo) : com.sun.xml.internal.bind.v2.runtime.reflect.TransducedAccessor<Dynamic>;
+	@:overload @:public @:static @:final public static function get(prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo) : com.sun.xml.internal.bind.v2.runtime.reflect.TransducedAccessor<Dynamic>;
 	
 	
 }

@@ -30,7 +30,7 @@ extern interface BackgroundLookupListener
 	* retrieved. This call back may be immediate if the list is already
 	* available.
 	*/
-	@:overload public function notifyServices(services : java.NativeArray<javax.print.PrintService>) : Void;
+	@:overload @:public public function notifyServices(services : java.NativeArray<javax.print.PrintService>) : Void;
 	
 	
 }

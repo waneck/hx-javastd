@@ -37,7 +37,7 @@ extern class Toolkit
 	* @see       java.awt.peer.DesktopPeer
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract private function createDesktopPeer(target : java.awt.Desktop) : java.awt.peer.DesktopPeer;
+	@:require(java6) @:overload @:protected @:abstract private function createDesktopPeer(target : java.awt.Desktop) : java.awt.peer.DesktopPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>Button</code> using
@@ -50,7 +50,7 @@ extern class Toolkit
 	* @see       java.awt.Button
 	* @see       java.awt.peer.ButtonPeer
 	*/
-	@:overload @:abstract private function createButton(target : java.awt.Button) : java.awt.peer.ButtonPeer;
+	@:overload @:protected @:abstract private function createButton(target : java.awt.Button) : java.awt.peer.ButtonPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>TextField</code> using
@@ -63,7 +63,7 @@ extern class Toolkit
 	* @see       java.awt.TextField
 	* @see       java.awt.peer.TextFieldPeer
 	*/
-	@:overload @:abstract private function createTextField(target : java.awt.TextField) : java.awt.peer.TextFieldPeer;
+	@:overload @:protected @:abstract private function createTextField(target : java.awt.TextField) : java.awt.peer.TextFieldPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>Label</code> using
@@ -76,7 +76,7 @@ extern class Toolkit
 	* @see       java.awt.Label
 	* @see       java.awt.peer.LabelPeer
 	*/
-	@:overload @:abstract private function createLabel(target : java.awt.Label) : java.awt.peer.LabelPeer;
+	@:overload @:protected @:abstract private function createLabel(target : java.awt.Label) : java.awt.peer.LabelPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>List</code> using
@@ -89,7 +89,7 @@ extern class Toolkit
 	* @see       java.awt.List
 	* @see       java.awt.peer.ListPeer
 	*/
-	@:overload @:abstract private function createList(target : java.awt.List) : java.awt.peer.ListPeer;
+	@:overload @:protected @:abstract private function createList(target : java.awt.List) : java.awt.peer.ListPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>Checkbox</code> using
@@ -102,7 +102,7 @@ extern class Toolkit
 	* @see       java.awt.Checkbox
 	* @see       java.awt.peer.CheckboxPeer
 	*/
-	@:overload @:abstract private function createCheckbox(target : java.awt.Checkbox) : java.awt.peer.CheckboxPeer;
+	@:overload @:protected @:abstract private function createCheckbox(target : java.awt.Checkbox) : java.awt.peer.CheckboxPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>Scrollbar</code> using
@@ -115,7 +115,7 @@ extern class Toolkit
 	* @see       java.awt.Scrollbar
 	* @see       java.awt.peer.ScrollbarPeer
 	*/
-	@:overload @:abstract private function createScrollbar(target : java.awt.Scrollbar) : java.awt.peer.ScrollbarPeer;
+	@:overload @:protected @:abstract private function createScrollbar(target : java.awt.Scrollbar) : java.awt.peer.ScrollbarPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>ScrollPane</code> using
@@ -129,7 +129,7 @@ extern class Toolkit
 	* @see       java.awt.peer.ScrollPanePeer
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload @:abstract private function createScrollPane(target : java.awt.ScrollPane) : java.awt.peer.ScrollPanePeer;
+	@:require(java1) @:overload @:protected @:abstract private function createScrollPane(target : java.awt.ScrollPane) : java.awt.peer.ScrollPanePeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>TextArea</code> using
@@ -142,7 +142,7 @@ extern class Toolkit
 	* @see       java.awt.TextArea
 	* @see       java.awt.peer.TextAreaPeer
 	*/
-	@:overload @:abstract private function createTextArea(target : java.awt.TextArea) : java.awt.peer.TextAreaPeer;
+	@:overload @:protected @:abstract private function createTextArea(target : java.awt.TextArea) : java.awt.peer.TextAreaPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>Choice</code> using
@@ -155,7 +155,7 @@ extern class Toolkit
 	* @see       java.awt.Choice
 	* @see       java.awt.peer.ChoicePeer
 	*/
-	@:overload @:abstract private function createChoice(target : java.awt.Choice) : java.awt.peer.ChoicePeer;
+	@:overload @:protected @:abstract private function createChoice(target : java.awt.Choice) : java.awt.peer.ChoicePeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>Frame</code> using
@@ -168,7 +168,7 @@ extern class Toolkit
 	* @see       java.awt.Frame
 	* @see       java.awt.peer.FramePeer
 	*/
-	@:overload @:abstract private function createFrame(target : java.awt.Frame) : java.awt.peer.FramePeer;
+	@:overload @:protected @:abstract private function createFrame(target : java.awt.Frame) : java.awt.peer.FramePeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>Canvas</code> using
@@ -178,7 +178,7 @@ extern class Toolkit
 	* @see       java.awt.Canvas
 	* @see       java.awt.peer.CanvasPeer
 	*/
-	@:overload @:abstract private function createCanvas(target : java.awt.Canvas) : java.awt.peer.CanvasPeer;
+	@:overload @:protected @:abstract private function createCanvas(target : java.awt.Canvas) : java.awt.peer.CanvasPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>Panel</code> using
@@ -188,7 +188,7 @@ extern class Toolkit
 	* @see       java.awt.Panel
 	* @see       java.awt.peer.PanelPeer
 	*/
-	@:overload @:abstract private function createPanel(target : java.awt.Panel) : java.awt.peer.PanelPeer;
+	@:overload @:protected @:abstract private function createPanel(target : java.awt.Panel) : java.awt.peer.PanelPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>Window</code> using
@@ -201,7 +201,7 @@ extern class Toolkit
 	* @see       java.awt.Window
 	* @see       java.awt.peer.WindowPeer
 	*/
-	@:overload @:abstract private function createWindow(target : java.awt.Window) : java.awt.peer.WindowPeer;
+	@:overload @:protected @:abstract private function createWindow(target : java.awt.Window) : java.awt.peer.WindowPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>Dialog</code> using
@@ -214,7 +214,7 @@ extern class Toolkit
 	* @see       java.awt.Dialog
 	* @see       java.awt.peer.DialogPeer
 	*/
-	@:overload @:abstract private function createDialog(target : java.awt.Dialog) : java.awt.peer.DialogPeer;
+	@:overload @:protected @:abstract private function createDialog(target : java.awt.Dialog) : java.awt.peer.DialogPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>MenuBar</code> using
@@ -227,7 +227,7 @@ extern class Toolkit
 	* @see       java.awt.MenuBar
 	* @see       java.awt.peer.MenuBarPeer
 	*/
-	@:overload @:abstract private function createMenuBar(target : java.awt.MenuBar) : java.awt.peer.MenuBarPeer;
+	@:overload @:protected @:abstract private function createMenuBar(target : java.awt.MenuBar) : java.awt.peer.MenuBarPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>Menu</code> using
@@ -240,7 +240,7 @@ extern class Toolkit
 	* @see       java.awt.Menu
 	* @see       java.awt.peer.MenuPeer
 	*/
-	@:overload @:abstract private function createMenu(target : java.awt.Menu) : java.awt.peer.MenuPeer;
+	@:overload @:protected @:abstract private function createMenu(target : java.awt.Menu) : java.awt.peer.MenuPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>PopupMenu</code> using
@@ -254,7 +254,7 @@ extern class Toolkit
 	* @see       java.awt.peer.PopupMenuPeer
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload @:abstract private function createPopupMenu(target : java.awt.PopupMenu) : java.awt.peer.PopupMenuPeer;
+	@:require(java1) @:overload @:protected @:abstract private function createPopupMenu(target : java.awt.PopupMenu) : java.awt.peer.PopupMenuPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>MenuItem</code> using
@@ -267,7 +267,7 @@ extern class Toolkit
 	* @see       java.awt.MenuItem
 	* @see       java.awt.peer.MenuItemPeer
 	*/
-	@:overload @:abstract private function createMenuItem(target : java.awt.MenuItem) : java.awt.peer.MenuItemPeer;
+	@:overload @:protected @:abstract private function createMenuItem(target : java.awt.MenuItem) : java.awt.peer.MenuItemPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>FileDialog</code> using
@@ -280,7 +280,7 @@ extern class Toolkit
 	* @see       java.awt.FileDialog
 	* @see       java.awt.peer.FileDialogPeer
 	*/
-	@:overload @:abstract private function createFileDialog(target : java.awt.FileDialog) : java.awt.peer.FileDialogPeer;
+	@:overload @:protected @:abstract private function createFileDialog(target : java.awt.FileDialog) : java.awt.peer.FileDialogPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>CheckboxMenuItem</code> using
@@ -293,7 +293,7 @@ extern class Toolkit
 	* @see       java.awt.CheckboxMenuItem
 	* @see       java.awt.peer.CheckboxMenuItemPeer
 	*/
-	@:overload @:abstract private function createCheckboxMenuItem(target : java.awt.CheckboxMenuItem) : java.awt.peer.CheckboxMenuItemPeer;
+	@:overload @:protected @:abstract private function createCheckboxMenuItem(target : java.awt.CheckboxMenuItem) : java.awt.peer.CheckboxMenuItemPeer;
 	
 	/**
 	* Obtains this toolkit's implementation of helper class for
@@ -304,7 +304,7 @@ extern class Toolkit
 	* @see       java.awt.MouseInfo
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function getMouseInfoPeer() : java.awt.peer.MouseInfoPeer;
+	@:require(java5) @:overload @:protected private function getMouseInfoPeer() : java.awt.peer.MouseInfoPeer;
 	
 	/**
 	* Creates a peer for a component or container.  This peer is windowless
@@ -313,7 +313,7 @@ extern class Toolkit
 	*
 	* @param target The Component to be created.
 	*/
-	@:overload private function createComponent(target : java.awt.Component) : java.awt.peer.LightweightPeer;
+	@:overload @:protected private function createComponent(target : java.awt.Component) : java.awt.peer.LightweightPeer;
 	
 	/**
 	* Creates this toolkit's implementation of <code>Font</code> using
@@ -327,7 +327,7 @@ extern class Toolkit
 	* @see       java.awt.GraphicsEnvironment#getAllFonts
 	* @deprecated  see java.awt.GraphicsEnvironment#getAllFonts
 	*/
-	@:overload @:abstract private function getFontPeer(name : String, style : Int) : java.awt.peer.FontPeer;
+	@:overload @:protected @:abstract private function getFontPeer(name : String, style : Int) : java.awt.peer.FontPeer;
 	
 	/**
 	* Fills in the integer array that is supplied as an argument
@@ -339,7 +339,7 @@ extern class Toolkit
 	* @see       java.awt.GraphicsEnvironment#isHeadless
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload private function loadSystemColors(systemColors : java.NativeArray<Int>) : Void;
+	@:require(java1) @:overload @:protected private function loadSystemColors(systemColors : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Controls whether the layout of Containers is validated dynamically
@@ -371,7 +371,7 @@ extern class Toolkit
 	* @see       java.awt.GraphicsEnvironment#isHeadless
 	* @since     1.4
 	*/
-	@:require(java4) @:overload public function setDynamicLayout(_dynamic : Bool) : Void;
+	@:require(java4) @:overload @:public public function setDynamicLayout(_dynamic : Bool) : Void;
 	
 	/**
 	* Returns whether the layout of Containers is validated dynamically
@@ -392,7 +392,7 @@ extern class Toolkit
 	* @see       java.awt.GraphicsEnvironment#isHeadless
 	* @since     1.4
 	*/
-	@:require(java4) @:overload private function isDynamicLayoutSet() : Bool;
+	@:require(java4) @:overload @:protected private function isDynamicLayoutSet() : Bool;
 	
 	/**
 	* Returns whether dynamic layout of Containers on resize is
@@ -420,7 +420,7 @@ extern class Toolkit
 	* @see       java.awt.GraphicsEnvironment#isHeadless
 	* @since     1.4
 	*/
-	@:require(java4) @:overload public function isDynamicLayoutActive() : Bool;
+	@:require(java4) @:overload @:public public function isDynamicLayoutActive() : Bool;
 	
 	/**
 	* Gets the size of the screen.  On systems with multiple displays, the
@@ -434,7 +434,7 @@ extern class Toolkit
 	* @see       java.awt.GraphicsDevice#getDisplayMode
 	* @see       java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload @:abstract public function getScreenSize() : java.awt.Dimension;
+	@:overload @:public @:abstract public function getScreenSize() : java.awt.Dimension;
 	
 	/**
 	* Returns the screen resolution in dots-per-inch.
@@ -443,7 +443,7 @@ extern class Toolkit
 	* returns true
 	* @see       java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload @:abstract public function getScreenResolution() : Int;
+	@:overload @:public @:abstract public function getScreenResolution() : Int;
 	
 	/**
 	* Gets the insets of the screen.
@@ -454,7 +454,7 @@ extern class Toolkit
 	* @see       java.awt.GraphicsEnvironment#isHeadless
 	* @since     1.4
 	*/
-	@:require(java4) @:overload public function getScreenInsets(gc : java.awt.GraphicsConfiguration) : java.awt.Insets;
+	@:require(java4) @:overload @:public public function getScreenInsets(gc : java.awt.GraphicsConfiguration) : java.awt.Insets;
 	
 	/**
 	* Determines the color model of this toolkit's screen.
@@ -474,7 +474,7 @@ extern class Toolkit
 	* @see       java.awt.image.ColorModel
 	* @see       java.awt.Component#getColorModel
 	*/
-	@:overload @:abstract public function getColorModel() : java.awt.image.ColorModel;
+	@:overload @:public @:abstract public function getColorModel() : java.awt.image.ColorModel;
 	
 	/**
 	* Returns the names of the available fonts in this toolkit.<p>
@@ -492,7 +492,7 @@ extern class Toolkit
 	* @deprecated see {@link java.awt.GraphicsEnvironment#getAvailableFontFamilyNames()}
 	* @see java.awt.GraphicsEnvironment#getAvailableFontFamilyNames()
 	*/
-	@:overload @:abstract public function getFontList() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getFontList() : java.NativeArray<String>;
 	
 	/**
 	* Gets the screen device metrics for rendering of the font.
@@ -504,7 +504,7 @@ extern class Toolkit
 	* @see java.awt.Font#getLineMetrics
 	* @see java.awt.GraphicsEnvironment#getScreenDevices
 	*/
-	@:overload @:abstract public function getFontMetrics(font : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public @:abstract public function getFontMetrics(font : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Synchronizes this toolkit's graphics state. Some window systems
@@ -513,7 +513,7 @@ extern class Toolkit
 	* This method ensures that the display is up-to-date. It is useful
 	* for animation.
 	*/
-	@:overload @:abstract public function sync() : Void;
+	@:overload @:public @:abstract public function sync() : Void;
 	
 	/**
 	* Gets the default toolkit.
@@ -544,7 +544,7 @@ extern class Toolkit
 	* @exception  AWTError  if a toolkit could not be found, or
 	*                 if one could not be accessed or instantiated.
 	*/
-	@:overload @:synchronized public static function getDefaultToolkit() : java.awt.Toolkit;
+	@:overload @:public @:static @:synchronized public static function getDefaultToolkit() : java.awt.Toolkit;
 	
 	/**
 	* Returns an image which gets pixel data from the specified file,
@@ -578,7 +578,7 @@ extern class Toolkit
 	*                            checkRead method doesn't allow the operation.
 	* @see #createImage(java.lang.String)
 	*/
-	@:overload @:abstract public function getImage(filename : String) : java.awt.Image;
+	@:overload @:public @:abstract public function getImage(filename : String) : java.awt.Image;
 	
 	/**
 	* Returns an image which gets pixel data from the specified URL.
@@ -619,7 +619,7 @@ extern class Toolkit
 	*                            the operation.
 	* @see #createImage(java.net.URL)
 	*/
-	@:overload @:abstract public function getImage(url : java.net.URL) : java.awt.Image;
+	@:overload @:public @:abstract public function getImage(url : java.net.URL) : java.awt.Image;
 	
 	/**
 	* Returns an image which gets pixel data from the specified file.
@@ -638,7 +638,7 @@ extern class Toolkit
 	*                            checkRead method doesn't allow the operation.
 	* @see #getImage(java.lang.String)
 	*/
-	@:overload @:abstract public function createImage(filename : String) : java.awt.Image;
+	@:overload @:public @:abstract public function createImage(filename : String) : java.awt.Image;
 	
 	/**
 	* Returns an image which gets pixel data from the specified URL.
@@ -663,7 +663,7 @@ extern class Toolkit
 	*                            the operation.
 	* @see #getImage(java.net.URL)
 	*/
-	@:overload @:abstract public function createImage(url : java.net.URL) : java.awt.Image;
+	@:overload @:public @:abstract public function createImage(url : java.net.URL) : java.awt.Image;
 	
 	/**
 	* Prepares an image for rendering.
@@ -700,7 +700,7 @@ extern class Toolkit
 	*                 int, int, java.awt.image.ImageObserver)
 	* @see       java.awt.image.ImageObserver
 	*/
-	@:overload @:abstract public function prepareImage(image : java.awt.Image, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public @:abstract public function prepareImage(image : java.awt.Image, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Indicates the construction status of a specified image that is
@@ -740,7 +740,7 @@ extern class Toolkit
 	*                 int, int, java.awt.image.ImageObserver)
 	* @see       java.awt.image.ImageObserver
 	*/
-	@:overload @:abstract public function checkImage(image : java.awt.Image, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Int;
+	@:overload @:public @:abstract public function checkImage(image : java.awt.Image, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Int;
 	
 	/**
 	* Creates an image with the specified image producer.
@@ -750,7 +750,7 @@ extern class Toolkit
 	* @see       java.awt.image.ImageProducer
 	* @see       java.awt.Component#createImage(java.awt.image.ImageProducer)
 	*/
-	@:overload @:abstract public function createImage(producer : java.awt.image.ImageProducer) : java.awt.Image;
+	@:overload @:public @:abstract public function createImage(producer : java.awt.image.ImageProducer) : java.awt.Image;
 	
 	/**
 	* Creates an image which decodes the image stored in the specified
@@ -763,7 +763,7 @@ extern class Toolkit
 	* @return    an image.
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function createImage(imagedata : java.NativeArray<java.StdTypes.Int8>) : java.awt.Image;
+	@:require(java1) @:overload @:public public function createImage(imagedata : java.NativeArray<java.StdTypes.Int8>) : java.awt.Image;
 	
 	/**
 	* Creates an image which decodes the image stored in the specified
@@ -778,7 +778,7 @@ extern class Toolkit
 	* @return    an image.
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload @:abstract public function createImage(imagedata : java.NativeArray<java.StdTypes.Int8>, imageoffset : Int, imagelength : Int) : java.awt.Image;
+	@:require(java1) @:overload @:public @:abstract public function createImage(imagedata : java.NativeArray<java.StdTypes.Int8>, imageoffset : Int, imagelength : Int) : java.awt.Image;
 	
 	/**
 	* Gets a <code>PrintJob</code> object which is the result of initiating
@@ -813,7 +813,7 @@ extern class Toolkit
 	* @see     java.lang.RuntimePermission
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload @:abstract public function getPrintJob(frame : java.awt.Frame, jobtitle : String, props : java.util.Properties) : java.awt.PrintJob;
+	@:require(java1) @:overload @:public @:abstract public function getPrintJob(frame : java.awt.Frame, jobtitle : String, props : java.util.Properties) : java.awt.PrintJob;
 	
 	/**
 	* Gets a <code>PrintJob</code> object which is the result of initiating
@@ -864,13 +864,13 @@ extern class Toolkit
 	* @see     java.awt.PageAttributes
 	* @since   1.3
 	*/
-	@:require(java3) @:overload public function getPrintJob(frame : java.awt.Frame, jobtitle : String, jobAttributes : java.awt.JobAttributes, pageAttributes : java.awt.PageAttributes) : java.awt.PrintJob;
+	@:require(java3) @:overload @:public public function getPrintJob(frame : java.awt.Frame, jobtitle : String, jobAttributes : java.awt.JobAttributes, pageAttributes : java.awt.PageAttributes) : java.awt.PrintJob;
 	
 	/**
 	* Emits an audio beep.
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload @:abstract public function beep() : Void;
+	@:require(java1) @:overload @:public @:abstract public function beep() : Void;
 	
 	/**
 	* Gets the singleton instance of the system Clipboard which interfaces
@@ -917,7 +917,7 @@ extern class Toolkit
 	* @see       java.awt.AWTPermission
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload @:abstract public function getSystemClipboard() : java.awt.datatransfer.Clipboard;
+	@:require(java1) @:overload @:public @:abstract public function getSystemClipboard() : java.awt.datatransfer.Clipboard;
 	
 	/**
 	* Gets the singleton instance of the system selection as a
@@ -970,7 +970,7 @@ extern class Toolkit
 	* @see GraphicsEnvironment#isHeadless
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getSystemSelection() : java.awt.datatransfer.Clipboard;
+	@:require(java4) @:overload @:public public function getSystemSelection() : java.awt.datatransfer.Clipboard;
 	
 	/**
 	* Determines which modifier key is the appropriate accelerator
@@ -992,7 +992,7 @@ extern class Toolkit
 	* @see       java.awt.MenuShortcut
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function getMenuShortcutKeyMask() : Int;
+	@:require(java1) @:overload @:public public function getMenuShortcutKeyMask() : Int;
 	
 	/**
 	* Returns whether the given locking key on the keyboard is currently in
@@ -1013,7 +1013,7 @@ extern class Toolkit
 	* @see       java.awt.GraphicsEnvironment#isHeadless
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getLockingKeyState(keyCode : Int) : Bool;
+	@:require(java3) @:overload @:public public function getLockingKeyState(keyCode : Int) : Bool;
 	
 	/**
 	* Sets the state of the given locking key on the keyboard.
@@ -1037,13 +1037,13 @@ extern class Toolkit
 	* @see       java.awt.GraphicsEnvironment#isHeadless
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setLockingKeyState(keyCode : Int, on : Bool) : Void;
+	@:require(java3) @:overload @:public public function setLockingKeyState(keyCode : Int, on : Bool) : Void;
 	
 	/**
 	* Give native peers the ability to query the native container
 	* given a native component (eg the direct parent may be lightweight).
 	*/
-	@:overload private static function getNativeContainer(c : java.awt.Component) : java.awt.Container;
+	@:overload @:protected @:static private static function getNativeContainer(c : java.awt.Component) : java.awt.Container;
 	
 	/**
 	* Creates a new custom cursor object.
@@ -1065,7 +1065,7 @@ extern class Toolkit
 	* @see       java.awt.GraphicsEnvironment#isHeadless
 	* @since     1.2
 	*/
-	@:require(java2) @:overload public function createCustomCursor(cursor : java.awt.Image, hotSpot : java.awt.Point, name : String) : java.awt.Cursor;
+	@:require(java2) @:overload @:public public function createCustomCursor(cursor : java.awt.Image, hotSpot : java.awt.Point, name : String) : java.awt.Cursor;
 	
 	/**
 	* Returns the supported cursor dimension which is closest to the desired
@@ -1091,7 +1091,7 @@ extern class Toolkit
 	* @see       java.awt.GraphicsEnvironment#isHeadless
 	* @since     1.2
 	*/
-	@:require(java2) @:overload public function getBestCursorSize(preferredWidth : Int, preferredHeight : Int) : java.awt.Dimension;
+	@:require(java2) @:overload @:public public function getBestCursorSize(preferredWidth : Int, preferredHeight : Int) : java.awt.Dimension;
 	
 	/**
 	* Returns the maximum number of colors the Toolkit supports in a custom cursor
@@ -1110,7 +1110,7 @@ extern class Toolkit
 	* @see       java.awt.GraphicsEnvironment#isHeadless
 	* @since     1.2
 	*/
-	@:require(java2) @:overload public function getMaximumCursorColors() : Int;
+	@:require(java2) @:overload @:public public function getMaximumCursorColors() : Int;
 	
 	/**
 	* Returns whether Toolkit supports this state for
@@ -1150,13 +1150,13 @@ extern class Toolkit
 	* @see java.awt.Window#addWindowStateListener
 	* @since   1.4
 	*/
-	@:require(java4) @:overload public function isFrameStateSupported(state : Int) : Bool;
+	@:require(java4) @:overload @:public public function isFrameStateSupported(state : Int) : Bool;
 	
 	/**
 	* Gets a property with the specified key and default.
 	* This method returns defaultValue if the property is not found.
 	*/
-	@:overload public static function getProperty(key : String, defaultValue : String) : String;
+	@:overload @:public @:static public static function getProperty(key : String, defaultValue : String) : String;
 	
 	/**
 	* Get the application's or applet's EventQueue instance.
@@ -1180,7 +1180,7 @@ extern class Toolkit
 	*          method denies access to the <code>EventQueue</code>
 	* @see     java.awt.AWTPermission
 	*/
-	@:overload @:final public function getSystemEventQueue() : java.awt.EventQueue;
+	@:overload @:public @:final public function getSystemEventQueue() : java.awt.EventQueue;
 	
 	/**
 	* Gets the application's or applet's <code>EventQueue</code>
@@ -1188,7 +1188,7 @@ extern class Toolkit
 	* this can only be called from a <code>Toolkit</code> subclass.
 	* @return the <code>EventQueue</code> object
 	*/
-	@:overload @:abstract private function getSystemEventQueueImpl() : java.awt.EventQueue;
+	@:overload @:protected @:abstract private function getSystemEventQueueImpl() : java.awt.EventQueue;
 	
 	/**
 	* Creates the peer for a DragSourceContext.
@@ -1196,7 +1196,7 @@ extern class Toolkit
 	* GraphicsEnvironment.isHeadless() returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload @:abstract public function createDragSourceContextPeer(dge : java.awt.dnd.DragGestureEvent) : java.awt.dnd.peer.DragSourceContextPeer;
+	@:overload @:public @:abstract public function createDragSourceContextPeer(dge : java.awt.dnd.DragGestureEvent) : java.awt.dnd.peer.DragSourceContextPeer;
 	
 	/**
 	* Creates a concrete, platform dependent, subclass of the abstract
@@ -1215,7 +1215,7 @@ extern class Toolkit
 	* GraphicsEnvironment.isHeadless() returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function createDragGestureRecognizer<T : java.awt.dnd.DragGestureRecognizer>(abstractRecognizerClass : Class<T>, ds : java.awt.dnd.DragSource, c : java.awt.Component, srcActions : Int, dgl : java.awt.dnd.DragGestureListener) : T;
+	@:overload @:public public function createDragGestureRecognizer<T : java.awt.dnd.DragGestureRecognizer>(abstractRecognizerClass : Class<T>, ds : java.awt.dnd.DragSource, c : java.awt.Component, srcActions : Int, dgl : java.awt.dnd.DragGestureListener) : T;
 	
 	/**
 	* Obtains a value for the specified desktop property.
@@ -1226,23 +1226,23 @@ extern class Toolkit
 	* For more information on desktop properties supported by the AWT see
 	* <a href="doc-files/DesktopProperties.html">AWT Desktop Properties</a>.
 	*/
-	@:overload @:final @:synchronized public function getDesktopProperty(propertyName : String) : Dynamic;
+	@:overload @:public @:final @:synchronized public function getDesktopProperty(propertyName : String) : Dynamic;
 	
 	/**
 	* Sets the named desktop property to the specified value and fires a
 	* property change event to notify any listeners that the value has changed.
 	*/
-	@:overload @:final private function setDesktopProperty(name : String, newValue : Dynamic) : Void;
+	@:overload @:protected @:final private function setDesktopProperty(name : String, newValue : Dynamic) : Void;
 	
 	/**
 	* an opportunity to lazily evaluate desktop property values.
 	*/
-	@:overload private function lazilyLoadDesktopProperty(name : String) : Dynamic;
+	@:overload @:protected private function lazilyLoadDesktopProperty(name : String) : Dynamic;
 	
 	/**
 	* initializeDesktopProperties
 	*/
-	@:overload private function initializeDesktopProperties() : Void;
+	@:overload @:protected private function initializeDesktopProperties() : Void;
 	
 	/**
 	* Adds the specified property change listener for the named desktop
@@ -1257,7 +1257,7 @@ extern class Toolkit
 	PropertyChangeListener)
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function addPropertyChangeListener(name : String, pcl : java.beans.PropertyChangeListener) : Void;
+	@:require(java2) @:overload @:public public function addPropertyChangeListener(name : String, pcl : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes the specified property change listener for the named
@@ -1273,7 +1273,7 @@ extern class Toolkit
 	PropertyChangeListener)
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function removePropertyChangeListener(name : String, pcl : java.beans.PropertyChangeListener) : Void;
+	@:require(java2) @:overload @:public public function removePropertyChangeListener(name : String, pcl : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the property change listeners
@@ -1288,7 +1288,7 @@ extern class Toolkit
 	* @see PropertyChangeSupport#getPropertyChangeListeners()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:require(java4) @:overload @:public public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	/**
 	* Returns an array of all property change listeners
@@ -1302,11 +1302,11 @@ extern class Toolkit
 	* @see PropertyChangeSupport#getPropertyChangeListeners(String)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getPropertyChangeListeners(propertyName : String) : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:require(java4) @:overload @:public public function getPropertyChangeListeners(propertyName : String) : java.NativeArray<java.beans.PropertyChangeListener>;
 	
-	private var desktopProperties(default, null) : java.util.Map<String, Dynamic>;
+	@:protected @:final private var desktopProperties(default, null) : java.util.Map<String, Dynamic>;
 	
-	private var desktopPropsSupport(default, null) : java.beans.PropertyChangeSupport;
+	@:protected @:final private var desktopPropsSupport(default, null) : java.beans.PropertyChangeSupport;
 	
 	/**
 	* Returns whether the always-on-top mode is supported by this toolkit.
@@ -1318,7 +1318,7 @@ extern class Toolkit
 	* @see Window#setAlwaysOnTop(boolean)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function isAlwaysOnTopSupported() : Bool;
+	@:require(java6) @:overload @:public public function isAlwaysOnTopSupported() : Bool;
 	
 	/**
 	* Returns whether the given modality type is supported by this toolkit. If
@@ -1336,7 +1336,7 @@ extern class Toolkit
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function isModalityTypeSupported(modalityType : java.awt.Dialog.Dialog_ModalityType) : Bool;
+	@:require(java6) @:overload @:public @:abstract public function isModalityTypeSupported(modalityType : java.awt.Dialog.Dialog_ModalityType) : Bool;
 	
 	/**
 	* Returns whether the given modal exclusion type is supported by this
@@ -1354,7 +1354,7 @@ extern class Toolkit
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function isModalExclusionTypeSupported(modalExclusionType : java.awt.Dialog.Dialog_ModalExclusionType) : Bool;
+	@:require(java6) @:overload @:public @:abstract public function isModalExclusionTypeSupported(modalExclusionType : java.awt.Dialog.Dialog_ModalExclusionType) : Bool;
 	
 	/**
 	* Adds an AWTEventListener to receive all AWTEvents dispatched
@@ -1390,7 +1390,7 @@ extern class Toolkit
 	* @see      java.awt.event.AWTEventListenerProxy
 	* @since    1.2
 	*/
-	@:require(java2) @:overload public function addAWTEventListener(listener : java.awt.event.AWTEventListener, eventMask : haxe.Int64) : Void;
+	@:require(java2) @:overload @:public public function addAWTEventListener(listener : java.awt.event.AWTEventListener, eventMask : haxe.Int64) : Void;
 	
 	/**
 	* Removes an AWTEventListener from receiving dispatched AWTEvents.
@@ -1420,7 +1420,7 @@ extern class Toolkit
 	* @see      java.awt.event.AWTEventListenerProxy
 	* @since    1.2
 	*/
-	@:require(java2) @:overload public function removeAWTEventListener(listener : java.awt.event.AWTEventListener) : Void;
+	@:require(java2) @:overload @:public public function removeAWTEventListener(listener : java.awt.event.AWTEventListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>AWTEventListener</code>s
@@ -1449,7 +1449,7 @@ extern class Toolkit
 	* @see      java.awt.event.AWTEventListenerProxy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAWTEventListeners() : java.NativeArray<java.awt.event.AWTEventListener>;
+	@:require(java4) @:overload @:public public function getAWTEventListeners() : java.NativeArray<java.awt.event.AWTEventListener>;
 	
 	/**
 	* Returns an array of all the <code>AWTEventListener</code>s
@@ -1482,7 +1482,7 @@ extern class Toolkit
 	* @see      java.awt.event.AWTEventListenerProxy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAWTEventListeners(eventMask : haxe.Int64) : java.NativeArray<java.awt.event.AWTEventListener>;
+	@:require(java4) @:overload @:public public function getAWTEventListeners(eventMask : haxe.Int64) : java.NativeArray<java.awt.event.AWTEventListener>;
 	
 	/**
 	* Returns a map of visual attributes for the abstract level description
@@ -1496,7 +1496,7 @@ extern class Toolkit
 	* @see       java.awt.GraphicsEnvironment#isHeadless
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:abstract public function mapInputMethodHighlight(highlight : java.awt.im.InputMethodHighlight) : java.util.Map<java.awt.font.TextAttribute, Dynamic>;
+	@:require(java3) @:overload @:public @:abstract public function mapInputMethodHighlight(highlight : java.awt.im.InputMethodHighlight) : java.util.Map<java.awt.font.TextAttribute, Dynamic>;
 	
 	/**
 	* Reports whether events from extra mouse buttons are allowed to be processed and posted into
@@ -1525,53 +1525,53 @@ extern class Toolkit
 	* @see java.awt.EventQueue
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function areExtraMouseButtonsEnabled() : Bool;
+	@:require(java7) @:overload @:public public function areExtraMouseButtonsEnabled() : Bool;
 	
 	
 }
 @:native('java$awt$Toolkit$ToolkitEventMulticaster') @:internal extern class Toolkit_ToolkitEventMulticaster extends java.awt.AWTEventMulticaster implements java.awt.event.AWTEventListener
 {
-	@:overload override private function remove(oldl : java.util.EventListener) : java.util.EventListener;
+	@:overload @:protected override private function remove(oldl : java.util.EventListener) : java.util.EventListener;
 	
-	@:overload public function eventDispatched(event : java.awt.AWTEvent) : Void;
+	@:overload @:public public function eventDispatched(event : java.awt.AWTEvent) : Void;
 	
 	
 }
 @:native('java$awt$Toolkit$SelectiveAWTEventListener') @:internal extern class Toolkit_SelectiveAWTEventListener implements java.awt.event.AWTEventListener
 {
-	@:overload public function getListener() : java.awt.event.AWTEventListener;
+	@:overload @:public public function getListener() : java.awt.event.AWTEventListener;
 	
-	@:overload public function getEventMask() : haxe.Int64;
+	@:overload @:public public function getEventMask() : haxe.Int64;
 	
-	@:overload public function getCalls() : java.NativeArray<Int>;
+	@:overload @:public public function getCalls() : java.NativeArray<Int>;
 	
-	@:overload public function orEventMasks(mask : haxe.Int64) : Void;
+	@:overload @:public public function orEventMasks(mask : haxe.Int64) : Void;
 	
-	@:overload public function eventDispatched(event : java.awt.AWTEvent) : Void;
+	@:overload @:public public function eventDispatched(event : java.awt.AWTEvent) : Void;
 	
 	
 }
 @:native('java$awt$Toolkit$DesktopPropertyChangeSupport') @:internal extern class Toolkit_DesktopPropertyChangeSupport extends java.beans.PropertyChangeSupport
 {
-	@:overload public function new(sourceBean : Dynamic) : Void;
+	@:overload @:public public function new(sourceBean : Dynamic) : Void;
 	
-	@:overload @:synchronized override public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized override public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload @:synchronized override public function removePropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized override public function removePropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload @:synchronized override public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:overload @:public @:synchronized override public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
 	
-	@:overload @:synchronized override public function getPropertyChangeListeners(propertyName : String) : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:overload @:public @:synchronized override public function getPropertyChangeListeners(propertyName : String) : java.NativeArray<java.beans.PropertyChangeListener>;
 	
-	@:overload @:synchronized override public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized override public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload @:synchronized override public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized override public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/*
 	* we do expect that all other fireXXX() methods of java.beans.PropertyChangeSupport
 	* use this method.  If this will be changed we will need to change this class.
 	*/
-	@:overload override public function firePropertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public override public function firePropertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

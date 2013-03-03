@@ -44,7 +44,7 @@ extern class MethodHandles
 	* This lookup object is a <em>capability</em> which may be delegated to trusted agents.
 	* Do not store it in place where untrusted code can access it.
 	*/
-	@:overload public static function lookup() : java.lang.invoke.MethodHandles.MethodHandles_Lookup;
+	@:overload @:public @:static public static function lookup() : java.lang.invoke.MethodHandles.MethodHandles_Lookup;
 	
 	/**
 	* Returns a {@link Lookup lookup object} which is trusted minimally.
@@ -59,7 +59,7 @@ extern class MethodHandles
 	* Since all classes have equal access to public names,
 	* such a change would confer no new access rights.
 	*/
-	@:overload public static function publicLookup() : java.lang.invoke.MethodHandles.MethodHandles_Lookup;
+	@:overload @:public @:static public static function publicLookup() : java.lang.invoke.MethodHandles.MethodHandles_Lookup;
 	
 	/**
 	* Produces a method handle giving read access to elements of an array.
@@ -71,7 +71,7 @@ extern class MethodHandles
 	* @throws NullPointerException if the argument is null
 	* @throws  IllegalArgumentException if arrayClass is not an array type
 	*/
-	@:overload public static function arrayElementGetter(arrayClass : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function arrayElementGetter(arrayClass : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle giving write access to elements of an array.
@@ -82,7 +82,7 @@ extern class MethodHandles
 	* @throws NullPointerException if the argument is null
 	* @throws IllegalArgumentException if arrayClass is not an array type
 	*/
-	@:overload public static function arrayElementSetter(arrayClass : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function arrayElementSetter(arrayClass : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle which will invoke any method handle of the
@@ -126,7 +126,7 @@ return invoker;
 	* @throws IllegalArgumentException if {@code leadingArgCount} is not in
 	*                  the range from 0 to {@code type.parameterCount()} inclusive
 	*/
-	@:overload public static function spreadInvoker(type : java.lang.invoke.MethodType, leadingArgCount : Int) : java.lang.invoke.MethodHandle;
+	@:overload @:static @:public public static function spreadInvoker(type : java.lang.invoke.MethodType, leadingArgCount : Int) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a special <em>invoker method handle</em> which can be used to
@@ -163,7 +163,7 @@ publicLookup().findVirtual(MethodHandle.class, "invokeExact", type)
 	* @param type the desired target type
 	* @return a method handle suitable for invoking any method handle of the given type
 	*/
-	@:overload public static function exactInvoker(type : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
+	@:overload @:static @:public public static function exactInvoker(type : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a special <em>invoker method handle</em> which can be used to
@@ -193,7 +193,7 @@ publicLookup().findVirtual(MethodHandle.class, "invoke", type)
 	* @param type the desired target type
 	* @return a method handle suitable for invoking any method handle convertible to the given type
 	*/
-	@:overload public static function invoker(type : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
+	@:overload @:static @:public public static function invoker(type : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle which adapts the type of the
@@ -239,7 +239,7 @@ publicLookup().findVirtual(MethodHandle.class, "invoke", type)
 	* @throws WrongMethodTypeException if the conversion cannot be made
 	* @see MethodHandle#asType
 	*/
-	@:overload public static function explicitCastArguments(target : java.lang.invoke.MethodHandle, newType : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function explicitCastArguments(target : java.lang.invoke.MethodHandle, newType : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle which adapts the calling sequence of the
@@ -300,7 +300,7 @@ assert((int)twice.invokeExact(21) == 42);
 	*                  or if two corresponding parameter types in
 	*                  {@code target.type()} and {@code newType} are not identical,
 	*/
-	@:overload public static function permuteArguments(target : java.lang.invoke.MethodHandle, newType : java.lang.invoke.MethodType, reorder : java.NativeArray<Int>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function permuteArguments(target : java.lang.invoke.MethodHandle, newType : java.lang.invoke.MethodType, reorder : java.NativeArray<Int>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle of the requested return type which returns the given
@@ -317,7 +317,7 @@ assert((int)twice.invokeExact(21) == 42);
 	* @throws ClassCastException if the value cannot be converted to the required return type
 	* @throws IllegalArgumentException if the given type is {@code void.class}
 	*/
-	@:overload public static function constant(type : Class<Dynamic>, value : Dynamic) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function constant(type : Class<Dynamic>, value : Dynamic) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle which returns its sole argument when invoked.
@@ -326,7 +326,7 @@ assert((int)twice.invokeExact(21) == 42);
 	* @throws NullPointerException if the argument is null
 	* @throws IllegalArgumentException if the given type is {@code void.class}
 	*/
-	@:overload public static function identity(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function identity(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Provides a target method handle with one or more <em>bound arguments</em>
@@ -358,7 +358,7 @@ assert((int)twice.invokeExact(21) == 42);
 	* @throws NullPointerException if the target or the {@code values} array is null
 	* @see MethodHandle#bindTo
 	*/
-	@:overload public static function insertArguments(target : java.lang.invoke.MethodHandle, pos : Int, values : java.NativeArray<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function insertArguments(target : java.lang.invoke.MethodHandle, pos : Int, values : java.NativeArray<Dynamic>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle which will discard some dummy arguments
@@ -402,7 +402,7 @@ assertEquals("yz", (String) d0.invokeExact(123, "x", "y", "z"));
 	*                  or if {@code pos} is negative or greater than the arity of the target,
 	*                  or if the new method handle's type would have too many parameters
 	*/
-	@:overload public static function dropArguments(target : java.lang.invoke.MethodHandle, pos : Int, valueTypes : java.util.List<Class<Dynamic>>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function dropArguments(target : java.lang.invoke.MethodHandle, pos : Int, valueTypes : java.util.List<Class<Dynamic>>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle which will discard some dummy arguments
@@ -450,7 +450,7 @@ assertEquals("xz", (String) d12.invokeExact("x", 12, true, "z"));
 	*                  or if {@code pos} is negative or greater than the arity of the target,
 	*                  or if the new method handle's type would have too many parameters
 	*/
-	@:overload public static function dropArguments(target : java.lang.invoke.MethodHandle, pos : Int, valueTypes : java.NativeArray<Class<Dynamic>>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function dropArguments(target : java.lang.invoke.MethodHandle, pos : Int, valueTypes : java.NativeArray<Class<Dynamic>>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Adapts a target method handle by pre-processing
@@ -515,7 +515,7 @@ assertEquals("XY", (String) f2.invokeExact("x", "y")); // XY
 	*          does not match a corresponding argument type of target as described above,
 	*          or if the {@code pos+filters.length} is greater than {@code target.type().parameterCount()}
 	*/
-	@:overload public static function filterArguments(target : java.lang.invoke.MethodHandle, pos : Int, filters : java.NativeArray<java.lang.invoke.MethodHandle>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function filterArguments(target : java.lang.invoke.MethodHandle, pos : Int, filters : java.NativeArray<java.lang.invoke.MethodHandle>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Adapts a target method handle by post-processing
@@ -574,7 +574,7 @@ System.out.println((int) f0.invokeExact("x", "y")); // 2
 	* @throws IllegalArgumentException if the argument list of {@code filter}
 	*          does not match the return type of target as described above
 	*/
-	@:overload public static function filterReturnValue(target : java.lang.invoke.MethodHandle, filter : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function filterReturnValue(target : java.lang.invoke.MethodHandle, filter : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Adapts a target method handle by pre-processing
@@ -652,7 +652,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	*          (skipping one matching the {@code combiner}'s return type)
 	*          are not identical with the argument types of {@code combiner}
 	*/
-	@:overload public static function foldArguments(target : java.lang.invoke.MethodHandle, combiner : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function foldArguments(target : java.lang.invoke.MethodHandle, combiner : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Makes a method handle which adapts a target method handle,
@@ -686,7 +686,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	*          or if all three method types do not match (with the return
 	*          type of {@code test} changed to match that of the target).
 	*/
-	@:overload public static function guardWithTest(test : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle, fallback : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function guardWithTest(test : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle, fallback : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Makes a method handle which adapts a target method handle,
@@ -731,7 +731,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	*          not match in their return types and their
 	*          corresponding parameters
 	*/
-	@:overload public static function catchException(target : java.lang.invoke.MethodHandle, exType : Class<java.lang.Throwable>, handler : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function catchException(target : java.lang.invoke.MethodHandle, exType : Class<java.lang.Throwable>, handler : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle which will throw exceptions of the given {@code exType}.
@@ -743,7 +743,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	* @return method handle which can throw the given exceptions
 	* @throws NullPointerException if either argument is null
 	*/
-	@:overload public static function throwException(returnType : Class<Dynamic>, exType : Class<java.lang.Throwable>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function throwException(returnType : Class<Dynamic>, exType : Class<java.lang.Throwable>) : java.lang.invoke.MethodHandle;
 	
 	
 }
@@ -983,28 +983,28 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	*  The value, {@code 0x01}, happens to be the same as the value of the
 	*  {@code public} {@linkplain java.lang.reflect.Modifier#PUBLIC modifier bit}.
 	*/
-	public static var PUBLIC(default, null) : Int;
+	@:public @:static @:final public static var PUBLIC(default, null) : Int;
 	
 	/** A single-bit mask representing {@code private} access,
 	*  which may contribute to the result of {@link #lookupModes lookupModes}.
 	*  The value, {@code 0x02}, happens to be the same as the value of the
 	*  {@code private} {@linkplain java.lang.reflect.Modifier#PRIVATE modifier bit}.
 	*/
-	public static var PRIVATE(default, null) : Int;
+	@:public @:static @:final public static var PRIVATE(default, null) : Int;
 	
 	/** A single-bit mask representing {@code protected} access,
 	*  which may contribute to the result of {@link #lookupModes lookupModes}.
 	*  The value, {@code 0x04}, happens to be the same as the value of the
 	*  {@code protected} {@linkplain java.lang.reflect.Modifier#PROTECTED modifier bit}.
 	*/
-	public static var PROTECTED(default, null) : Int;
+	@:public @:static @:final public static var PROTECTED(default, null) : Int;
 	
 	/** A single-bit mask representing {@code package} access (default access),
 	*  which may contribute to the result of {@link #lookupModes lookupModes}.
 	*  The value is {@code 0x08}, which does not correspond meaningfully to
 	*  any particular {@linkplain java.lang.reflect.Modifier modifier bit}.
 	*/
-	public static var PACKAGE(default, null) : Int;
+	@:public @:static @:final public static var PACKAGE(default, null) : Int;
 	
 	/** Tells which class is performing the lookup.  It is this class against
 	*  which checks are performed for visibility and access permissions.
@@ -1014,7 +1014,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	*  {@link #lookupModes lookupModes}, which controls whether non-public members
 	*  can be accessed.
 	*/
-	@:overload public function lookupClass() : Class<Dynamic>;
+	@:overload @:public public function lookupClass() : Class<Dynamic>;
 	
 	/** Tells which access-protection classes of members this lookup object can produce.
 	*  The result is a bit-mask of the bits
@@ -1033,7 +1033,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	*  so that it can access only names which can be reached by the original
 	*  lookup object, and also by the new lookup class.
 	*/
-	@:overload public function lookupModes() : Int;
+	@:overload @:public public function lookupModes() : Int;
 	
 	/**
 	* Creates a lookup on the specified new lookup class.
@@ -1059,7 +1059,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	* @return a lookup object which reports the desired lookup class
 	* @throws NullPointerException if the argument is null
 	*/
-	//@:overload public function _in(requestedLookupClass : Class<Dynamic>) : java.lang.invoke.MethodHandles.MethodHandles_Lookup;
+	//@:overload @:public public function _in(requestedLookupClass : Class<Dynamic>) : java.lang.invoke.MethodHandles.MethodHandles_Lookup;
 	
 	/**
 	* Displays the name of the class from which lookups are to be made.
@@ -1089,7 +1089,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	* caller and callee.)
 	* @see #in
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Produces a method handle for a static method.
@@ -1117,7 +1117,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	*                              <a href="MethodHandles.Lookup.html#secmgr">refuses access</a>
 	* @throws NullPointerException if any argument is null
 	*/
-	@:overload public function findStatic(refc : Class<Dynamic>, name : String, type : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function findStatic(refc : Class<Dynamic>, name : String, type : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle for a virtual method.
@@ -1157,7 +1157,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	*                              <a href="MethodHandles.Lookup.html#secmgr">refuses access</a>
 	* @throws NullPointerException if any argument is null
 	*/
-	@:overload public function findVirtual(refc : Class<Dynamic>, name : String, type : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function findVirtual(refc : Class<Dynamic>, name : String, type : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle which creates an object and initializes it, using
@@ -1185,7 +1185,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	*                              <a href="MethodHandles.Lookup.html#secmgr">refuses access</a>
 	* @throws NullPointerException if any argument is null
 	*/
-	@:overload public function findConstructor(refc : Class<Dynamic>, type : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function findConstructor(refc : Class<Dynamic>, type : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces an early-bound method handle for a virtual method,
@@ -1221,7 +1221,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	*                              <a href="MethodHandles.Lookup.html#secmgr">refuses access</a>
 	* @throws NullPointerException if any argument is null
 	*/
-	@:overload public function findSpecial(refc : Class<Dynamic>, name : String, type : java.lang.invoke.MethodType, specialCaller : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function findSpecial(refc : Class<Dynamic>, name : String, type : java.lang.invoke.MethodType, specialCaller : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle giving read access to a non-static field.
@@ -1240,7 +1240,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	*                              <a href="MethodHandles.Lookup.html#secmgr">refuses access</a>
 	* @throws NullPointerException if any argument is null
 	*/
-	@:overload public function findGetter(refc : Class<Dynamic>, name : String, type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function findGetter(refc : Class<Dynamic>, name : String, type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle giving write access to a non-static field.
@@ -1259,7 +1259,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	*                              <a href="MethodHandles.Lookup.html#secmgr">refuses access</a>
 	* @throws NullPointerException if any argument is null
 	*/
-	@:overload public function findSetter(refc : Class<Dynamic>, name : String, type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function findSetter(refc : Class<Dynamic>, name : String, type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle giving read access to a static field.
@@ -1277,7 +1277,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	*                              <a href="MethodHandles.Lookup.html#secmgr">refuses access</a>
 	* @throws NullPointerException if any argument is null
 	*/
-	@:overload public function findStaticGetter(refc : Class<Dynamic>, name : String, type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function findStaticGetter(refc : Class<Dynamic>, name : String, type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle giving write access to a static field.
@@ -1295,7 +1295,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	*                              <a href="MethodHandles.Lookup.html#secmgr">refuses access</a>
 	* @throws NullPointerException if any argument is null
 	*/
-	@:overload public function findStaticSetter(refc : Class<Dynamic>, name : String, type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function findStaticSetter(refc : Class<Dynamic>, name : String, type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces an early-bound method handle for a non-static method.
@@ -1343,7 +1343,7 @@ return mh1;
 	*                              <a href="MethodHandles.Lookup.html#secmgr">refuses access</a>
 	* @throws NullPointerException if any argument is null
 	*/
-	@:overload public function bind(receiver : Dynamic, name : String, type : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function bind(receiver : Dynamic, name : String, type : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Makes a direct method handle to <i>m</i>, if the lookup class has permission.
@@ -1366,7 +1366,7 @@ return mh1;
 	*                                is set and {@code asVarargsCollector} fails
 	* @throws NullPointerException if the argument is null
 	*/
-	@:overload public function unreflect(m : java.lang.reflect.Method) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function unreflect(m : java.lang.reflect.Method) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle for a reflected method.
@@ -1389,7 +1389,7 @@ return mh1;
 	*                                is set and {@code asVarargsCollector} fails
 	* @throws NullPointerException if any argument is null
 	*/
-	@:overload public function unreflectSpecial(m : java.lang.reflect.Method, specialCaller : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function unreflectSpecial(m : java.lang.reflect.Method, specialCaller : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle for a reflected constructor.
@@ -1412,7 +1412,7 @@ return mh1;
 	*                                is set and {@code asVarargsCollector} fails
 	* @throws NullPointerException if the argument is null
 	*/
-	@:overload public function unreflectConstructor(c : java.lang.reflect.Constructor<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function unreflectConstructor(c : java.lang.reflect.Constructor<Dynamic>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle giving read access to a reflected field.
@@ -1428,7 +1428,7 @@ return mh1;
 	* @throws IllegalAccessException if access checking fails
 	* @throws NullPointerException if the argument is null
 	*/
-	@:overload public function unreflectGetter(f : java.lang.reflect.Field) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function unreflectGetter(f : java.lang.reflect.Field) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Produces a method handle giving write access to a reflected field.
@@ -1444,7 +1444,7 @@ return mh1;
 	* @throws IllegalAccessException if access checking fails
 	* @throws NullPointerException if the argument is null
 	*/
-	@:overload public function unreflectSetter(f : java.lang.reflect.Field) : java.lang.invoke.MethodHandle;
+	@:overload @:public public function unreflectSetter(f : java.lang.reflect.Field) : java.lang.invoke.MethodHandle;
 	
 	
 }

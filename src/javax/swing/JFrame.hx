@@ -110,7 +110,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* <p>
 	* @since 1.3
 	*/
-	@:require(java3) public static var EXIT_ON_CLOSE(default, null) : Int;
+	@:require(java3) @:public @:static @:final public static var EXIT_ON_CLOSE(default, null) : Int;
 	
 	/**
 	* The <code>JRootPane</code> instance that manages the
@@ -121,7 +121,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see JRootPane
 	* @see RootPaneContainer
 	*/
-	private var rootPane : javax.swing.JRootPane;
+	@:protected private var rootPane : javax.swing.JRootPane;
 	
 	/**
 	* If true then calls to <code>add</code> and <code>setLayout</code>
@@ -132,7 +132,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	private var rootPaneCheckingEnabled : Bool;
+	@:protected private var rootPaneCheckingEnabled : Bool;
 	
 	/**
 	* Constructs a new frame that is initially invisible.
@@ -147,7 +147,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see Component#setVisible
 	* @see JComponent#getDefaultLocale
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>Frame</code> in the specified
@@ -168,7 +168,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see JComponent#getDefaultLocale
 	* @since     1.3
 	*/
-	@:require(java3) @:overload public function new(gc : java.awt.GraphicsConfiguration) : Void;
+	@:require(java3) @:overload @:public public function new(gc : java.awt.GraphicsConfiguration) : Void;
 	
 	/**
 	* Creates a new, initially invisible <code>Frame</code> with the
@@ -185,7 +185,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see Component#setVisible
 	* @see JComponent#getDefaultLocale
 	*/
-	@:overload public function new(title : String) : Void;
+	@:overload @:public public function new(title : String) : Void;
 	
 	/**
 	* Creates a <code>JFrame</code> with the specified title and the
@@ -208,16 +208,16 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see JComponent#getDefaultLocale
 	* @since     1.3
 	*/
-	@:require(java3) @:overload public function new(title : String, gc : java.awt.GraphicsConfiguration) : Void;
+	@:require(java3) @:overload @:public public function new(title : String, gc : java.awt.GraphicsConfiguration) : Void;
 	
 	/** Called by the constructors to init the <code>JFrame</code> properly. */
-	@:overload private function frameInit() : Void;
+	@:overload @:protected private function frameInit() : Void;
 	
 	/**
 	* Called by the constructor methods to create the default
 	* <code>rootPane</code>.
 	*/
-	@:overload private function createRootPane() : javax.swing.JRootPane;
+	@:overload @:protected private function createRootPane() : javax.swing.JRootPane;
 	
 	/**
 	* Processes window events occurring on this component.
@@ -228,7 +228,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see    #setDefaultCloseOperation
 	* @see    java.awt.Window#processWindowEvent
 	*/
-	@:overload override private function processWindowEvent(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:protected override private function processWindowEvent(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Sets the operation that will happen by default when
@@ -291,7 +291,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	*              EXIT_ON_CLOSE       WindowConstants.EXIT_ON_CLOSE
 	* description: The frame's default close operation.
 	*/
-	@:overload public function setDefaultCloseOperation(operation : Int) : Void;
+	@:overload @:public public function setDefaultCloseOperation(operation : Int) : Void;
 	
 	/**
 	* Returns the operation that occurs when the user
@@ -300,7 +300,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @return an integer indicating the window-close operation
 	* @see #setDefaultCloseOperation
 	*/
-	@:overload public function getDefaultCloseOperation() : Int;
+	@:overload @:public public function getDefaultCloseOperation() : Int;
 	
 	/**
 	* Sets the {@code transferHandler} property, which is a mechanism to
@@ -335,7 +335,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	*       hidden: true
 	*  description: Mechanism for transfer of data into the component
 	*/
-	@:require(java6) @:overload public function setTransferHandler(newHandler : javax.swing.TransferHandler) : Void;
+	@:require(java6) @:overload @:public public function setTransferHandler(newHandler : javax.swing.TransferHandler) : Void;
 	
 	/**
 	* Gets the <code>transferHandler</code> property.
@@ -346,7 +346,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see #setTransferHandler
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getTransferHandler() : javax.swing.TransferHandler;
+	@:require(java6) @:overload @:public public function getTransferHandler() : javax.swing.TransferHandler;
 	
 	/**
 	* Just calls <code>paint(g)</code>.  This method was overridden to
@@ -354,7 +354,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	*
 	* @param g the Graphics context in which to paint
 	*/
-	@:overload override public function update(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Sets the menubar for this frame.
@@ -366,7 +366,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	*      hidden: true
 	* description: The menubar for accessing pulldown menus from this frame.
 	*/
-	@:overload public function setJMenuBar(menubar : javax.swing.JMenuBar) : Void;
+	@:overload @:public public function setJMenuBar(menubar : javax.swing.JMenuBar) : Void;
 	
 	/**
 	* Returns the menubar set on this frame.
@@ -374,7 +374,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	*
 	* @see #setJMenuBar
 	*/
-	@:overload public function getJMenuBar() : javax.swing.JMenuBar;
+	@:overload @:public public function getJMenuBar() : javax.swing.JMenuBar;
 	
 	/**
 	* Returns whether calls to <code>add</code> and
@@ -388,7 +388,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload private function isRootPaneCheckingEnabled() : Bool;
+	@:overload @:protected private function isRootPaneCheckingEnabled() : Bool;
 	
 	/**
 	* Sets whether calls to <code>add</code> and
@@ -406,7 +406,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	*      hidden: true
 	* description: Whether the add and setLayout methods are forwarded
 	*/
-	@:overload private function setRootPaneCheckingEnabled(enabled : Bool) : Void;
+	@:overload @:protected private function setRootPaneCheckingEnabled(enabled : Bool) : Void;
 	
 	/**
 	* Adds the specified child <code>Component</code>.
@@ -427,7 +427,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload @:protected override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Removes the specified component from the container. If
@@ -441,7 +441,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see #add
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload override public function remove(comp : java.awt.Component) : Void;
+	@:overload @:public override public function remove(comp : java.awt.Component) : Void;
 	
 	/**
 	* Sets the <code>LayoutManager</code>.
@@ -454,7 +454,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload override public function setLayout(manager : java.awt.LayoutManager) : Void;
+	@:overload @:public override public function setLayout(manager : java.awt.LayoutManager) : Void;
 	
 	/**
 	* Returns the <code>rootPane</code> object for this frame.
@@ -463,7 +463,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see #setRootPane
 	* @see RootPaneContainer#getRootPane
 	*/
-	@:overload public function getRootPane() : javax.swing.JRootPane;
+	@:overload @:public public function getRootPane() : javax.swing.JRootPane;
 	
 	/**
 	* Sets the <code>rootPane</code> property.
@@ -476,12 +476,12 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	*   hidden: true
 	* description: the RootPane object for this frame.
 	*/
-	@:overload private function setRootPane(root : javax.swing.JRootPane) : Void;
+	@:overload @:protected private function setRootPane(root : javax.swing.JRootPane) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function setIconImage(image : java.awt.Image) : Void;
+	@:overload @:public override public function setIconImage(image : java.awt.Image) : Void;
 	
 	/**
 	* Returns the <code>contentPane</code> object for this frame.
@@ -490,7 +490,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see #setContentPane
 	* @see RootPaneContainer#getContentPane
 	*/
-	@:overload public function getContentPane() : java.awt.Container;
+	@:overload @:public public function getContentPane() : java.awt.Container;
 	
 	/**
 	* Sets the <code>contentPane</code> property.
@@ -514,7 +514,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	*     description: The client area of the frame where child
 	*                  components are normally inserted.
 	*/
-	@:overload public function setContentPane(contentPane : java.awt.Container) : Void;
+	@:overload @:public public function setContentPane(contentPane : java.awt.Container) : Void;
 	
 	/**
 	* Returns the <code>layeredPane</code> object for this frame.
@@ -523,7 +523,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see #setLayeredPane
 	* @see RootPaneContainer#getLayeredPane
 	*/
-	@:overload public function getLayeredPane() : javax.swing.JLayeredPane;
+	@:overload @:public public function getLayeredPane() : javax.swing.JLayeredPane;
 	
 	/**
 	* Sets the <code>layeredPane</code> property.
@@ -539,7 +539,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	*     hidden: true
 	*     description: The pane that holds the various frame layers.
 	*/
-	@:overload public function setLayeredPane(layeredPane : javax.swing.JLayeredPane) : Void;
+	@:overload @:public public function setLayeredPane(layeredPane : javax.swing.JLayeredPane) : Void;
 	
 	/**
 	* Returns the <code>glassPane</code> object for this frame.
@@ -548,7 +548,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see #setGlassPane
 	* @see RootPaneContainer#getGlassPane
 	*/
-	@:overload public function getGlassPane() : java.awt.Component;
+	@:overload @:public public function getGlassPane() : java.awt.Component;
 	
 	/**
 	* Sets the <code>glassPane</code> property.
@@ -562,14 +562,14 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	*     hidden: true
 	*     description: A transparent pane used for menu rendering.
 	*/
-	@:overload public function setGlassPane(glassPane : java.awt.Component) : Void;
+	@:overload @:public public function setGlassPane(glassPane : java.awt.Component) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getGraphics() : java.awt.Graphics;
+	@:require(java6) @:overload @:public override public function getGraphics() : java.awt.Graphics;
 	
 	/**
 	* Repaints the specified rectangle of this component within
@@ -584,7 +584,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see       RepaintManager
 	* @since     1.6
 	*/
-	@:require(java6) @:overload public function repaint(time : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java6) @:overload @:public override public function repaint(time : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Provides a hint as to whether or not newly created <code>JFrame</code>s
@@ -610,7 +610,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see javax.swing.LookAndFeel#getSupportsWindowDecorations
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function setDefaultLookAndFeelDecorated(defaultLookAndFeelDecorated : Bool) : Void;
+	@:require(java4) @:overload @:public @:static public static function setDefaultLookAndFeelDecorated(defaultLookAndFeelDecorated : Bool) : Void;
 	
 	/**
 	* Returns true if newly created <code>JFrame</code>s should have their
@@ -620,7 +620,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @return true if look and feel should provide Window decorations.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function isDefaultLookAndFeelDecorated() : Bool;
+	@:require(java4) @:overload @:public @:static public static function isDefaultLookAndFeelDecorated() : Bool;
 	
 	/**
 	* Returns a string representation of this <code>JFrame</code>.
@@ -632,10 +632,10 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	*
 	* @return  a string representation of this <code>JFrame</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/** The accessible context property. */
-	private var accessibleContext : javax.accessibility.AccessibleContext;
+	@:protected private var accessibleContext : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Gets the AccessibleContext associated with this JFrame.
@@ -646,7 +646,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @return an AccessibleJFrame that serves as the
 	*         AccessibleContext of this JFrame
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -664,7 +664,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @return the localized name of the object -- can be null if this
 	* object does not have a name
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Get the state of this object.
@@ -673,7 +673,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* state set of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

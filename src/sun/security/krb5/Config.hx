@@ -38,7 +38,7 @@ extern class Config
 	* instance. Possible causes would be either of java.security.krb5.realm or
 	* java.security.krb5.kdc not specified, error reading configuration file.
 	*/
-	@:overload @:synchronized public static function getInstance() : sun.security.krb5.Config;
+	@:overload @:public @:static @:synchronized public static function getInstance() : sun.security.krb5.Config;
 	
 	/**
 	* Refresh and reload the Configuration. This could involve,
@@ -49,7 +49,7 @@ extern class Config
 	* instance. Possible causes would be either of java.security.krb5.realm or
 	* java.security.krb5.kdc not specified, error reading configuration file.
 	*/
-	@:overload @:synchronized public static function refresh() : Void;
+	@:overload @:public @:static @:synchronized public static function refresh() : Void;
 	
 	/**
 	* Gets the default int value for the specified name.
@@ -58,7 +58,7 @@ extern class Config
 	* value are found in configuration file, or error occurs when parsing
 	* string to integer.
 	*/
-	@:overload public function getDefaultIntValue(name : String) : Int;
+	@:overload @:public public function getDefaultIntValue(name : String) : Int;
 	
 	/**
 	* Gets the default int value for the specified name in the specified
@@ -70,14 +70,14 @@ extern class Config
 	* value are found in configuration file, or error occurs when parsing
 	* string to integer.
 	*/
-	@:overload public function getDefaultIntValue(name : String, section : String) : Int;
+	@:overload @:public public function getDefaultIntValue(name : String, section : String) : Int;
 	
 	/**
 	* Gets the default string value for the specified name.
 	* @param name the name.
 	* @return the default value, null is returned if it cannot be found.
 	*/
-	@:overload public function getDefault(name : String) : String;
+	@:overload @:public public function getDefault(name : String) : String;
 	
 	/**
 	* Gets the default string value for the specified name in the
@@ -87,7 +87,7 @@ extern class Config
 	* @param section the name of the section.
 	* @return the default value, null is returned if it cannot be found.
 	*/
-	@:overload public function getDefault(name : String, section : String) : String;
+	@:overload @:public public function getDefault(name : String, section : String) : String;
 	
 	/**
 	* Gets the default boolean value for the specified name.
@@ -95,7 +95,7 @@ extern class Config
 	* @return the default boolean value, false is returned if it cannot be
 	* found.
 	*/
-	@:overload public function getDefaultBooleanValue(name : String) : Bool;
+	@:overload @:public public function getDefaultBooleanValue(name : String) : Bool;
 	
 	/**
 	* Gets the default boolean value for the specified name in the
@@ -106,26 +106,26 @@ extern class Config
 	* @return the default boolean value, false is returned if it cannot be
 	* found.
 	*/
-	@:overload public function getDefaultBooleanValue(name : String, section : String) : Bool;
+	@:overload @:public public function getDefaultBooleanValue(name : String, section : String) : Bool;
 	
 	/**
 	* For testing purpose. This method lists all information being parsed from
 	* the configuration file to the hashtable.
 	*/
-	@:overload public function listTable() : Void;
+	@:overload @:public public function listTable() : Void;
 	
 	/**
 	* Returns the default encryption types.
 	*
 	*/
-	@:overload public function defaultEtype(enctypes : String) : java.NativeArray<Int>;
+	@:overload @:public public function defaultEtype(enctypes : String) : java.NativeArray<Int>;
 	
 	/*
 	* This method converts the string representation of encryption type and
 	* checksum type to int value that can be later used by EType and
 	* Checksum classes.
 	*/
-	@:overload public function getType(input : String) : Int;
+	@:overload @:public public function getType(input : String) : Int;
 	
 	/**
 	* Resets the default kdc realm.
@@ -133,35 +133,35 @@ extern class Config
 	*
 	* This method was useless. Kept here in case some class still calls it.
 	*/
-	@:overload public function resetDefaultRealm(realm : String) : Void;
+	@:overload @:public public function resetDefaultRealm(realm : String) : Void;
 	
 	/**
 	* Check to use addresses in tickets
 	* use addresses if "no_addresses" or "noaddresses" is set to false
 	*/
-	@:overload public function useAddresses() : Bool;
+	@:overload @:public public function useAddresses() : Bool;
 	
 	/**
 	* Check if need to use DNS to locate Kerberos services
 	*/
-	@:overload public function useDNS(name : String) : Bool;
+	@:overload @:public public function useDNS(name : String) : Bool;
 	
 	/**
 	* Check if need to use DNS to locate the KDC
 	*/
-	@:overload public function useDNS_KDC() : Bool;
+	@:overload @:public public function useDNS_KDC() : Bool;
 	
 	/*
 	* Check if need to use DNS to locate the Realm
 	*/
-	@:overload public function useDNS_Realm() : Bool;
+	@:overload @:public public function useDNS_Realm() : Bool;
 	
 	/**
 	* Gets default realm.
 	* @throws KrbException where no realm can be located
 	* @return the default realm, always non null
 	*/
-	@:overload public function getDefaultRealm() : String;
+	@:overload @:public public function getDefaultRealm() : String;
 	
 	/**
 	* Returns a list of KDC's with each KDC separated by a space
@@ -170,17 +170,17 @@ extern class Config
 	* @throws KrbException if there's no way to find KDC for the realm
 	* @return the list of KDCs separated by a space, always non null
 	*/
-	@:overload public function getKDCList(realm : String) : String;
+	@:overload @:public public function getKDCList(realm : String) : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('sun$security$krb5$Config$FileExistsAction') @:internal extern class Config_FileExistsAction implements java.security.PrivilegedAction<Null<Bool>>
 {
-	@:overload public function new(fileName : String) : Void;
+	@:overload @:public public function new(fileName : String) : Void;
 	
-	@:overload public function run() : Null<Bool>;
+	@:overload @:public public function run() : Null<Bool>;
 	
 	
 }

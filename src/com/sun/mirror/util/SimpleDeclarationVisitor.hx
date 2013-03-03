@@ -45,14 +45,14 @@ package com.sun.mirror.util;
 	/**
 	* Creates a new <tt>SimpleDeclarationVisitor</tt>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Visits a declaration.
 	* The implementation does nothing.
 	* @param d the declaration to visit
 	*/
-	@:overload public function visitDeclaration(d : com.sun.mirror.declaration.Declaration) : Void;
+	@:overload @:public public function visitDeclaration(d : com.sun.mirror.declaration.Declaration) : Void;
 	
 	/**
 	* Visits a package declaration.
@@ -60,7 +60,7 @@ package com.sun.mirror.util;
 	* {@link #visitDeclaration visitDeclaration}.
 	* @param d the declaration to visit
 	*/
-	@:overload public function visitPackageDeclaration(d : com.sun.mirror.declaration.PackageDeclaration) : Void;
+	@:overload @:public public function visitPackageDeclaration(d : com.sun.mirror.declaration.PackageDeclaration) : Void;
 	
 	/**
 	* Visits a member or constructor declaration.
@@ -68,7 +68,7 @@ package com.sun.mirror.util;
 	* {@link #visitDeclaration visitDeclaration}.
 	* @param d the declaration to visit
 	*/
-	@:overload public function visitMemberDeclaration(d : com.sun.mirror.declaration.MemberDeclaration) : Void;
+	@:overload @:public public function visitMemberDeclaration(d : com.sun.mirror.declaration.MemberDeclaration) : Void;
 	
 	/**
 	* Visits a type declaration.
@@ -76,7 +76,7 @@ package com.sun.mirror.util;
 	* {@link #visitMemberDeclaration visitMemberDeclaration}.
 	* @param d the declaration to visit
 	*/
-	@:overload public function visitTypeDeclaration(d : com.sun.mirror.declaration.TypeDeclaration) : Void;
+	@:overload @:public public function visitTypeDeclaration(d : com.sun.mirror.declaration.TypeDeclaration) : Void;
 	
 	/**
 	* Visits a class declaration.
@@ -84,7 +84,7 @@ package com.sun.mirror.util;
 	* {@link #visitTypeDeclaration visitTypeDeclaration}.
 	* @param d the declaration to visit
 	*/
-	@:overload public function visitClassDeclaration(d : com.sun.mirror.declaration.ClassDeclaration) : Void;
+	@:overload @:public public function visitClassDeclaration(d : com.sun.mirror.declaration.ClassDeclaration) : Void;
 	
 	/**
 	* Visits an enum declaration.
@@ -92,7 +92,7 @@ package com.sun.mirror.util;
 	* {@link #visitClassDeclaration visitClassDeclaration}.
 	* @param d the declaration to visit
 	*/
-	@:overload public function visitEnumDeclaration(d : com.sun.mirror.declaration.EnumDeclaration) : Void;
+	@:overload @:public public function visitEnumDeclaration(d : com.sun.mirror.declaration.EnumDeclaration) : Void;
 	
 	/**
 	* Visits an interface declaration.
@@ -100,7 +100,7 @@ package com.sun.mirror.util;
 	* {@link #visitTypeDeclaration visitTypeDeclaration}.
 	* @param d the declaration to visit
 	*/
-	@:overload public function visitInterfaceDeclaration(d : com.sun.mirror.declaration.InterfaceDeclaration) : Void;
+	@:overload @:public public function visitInterfaceDeclaration(d : com.sun.mirror.declaration.InterfaceDeclaration) : Void;
 	
 	/**
 	* Visits an annotation type declaration.
@@ -108,7 +108,7 @@ package com.sun.mirror.util;
 	* {@link #visitInterfaceDeclaration visitInterfaceDeclaration}.
 	* @param d the declaration to visit
 	*/
-	@:overload public function visitAnnotationTypeDeclaration(d : com.sun.mirror.declaration.AnnotationTypeDeclaration) : Void;
+	@:overload @:public public function visitAnnotationTypeDeclaration(d : com.sun.mirror.declaration.AnnotationTypeDeclaration) : Void;
 	
 	/**
 	* Visits a field declaration.
@@ -116,7 +116,7 @@ package com.sun.mirror.util;
 	* {@link #visitMemberDeclaration visitMemberDeclaration}.
 	* @param d the declaration to visit
 	*/
-	@:overload public function visitFieldDeclaration(d : com.sun.mirror.declaration.FieldDeclaration) : Void;
+	@:overload @:public public function visitFieldDeclaration(d : com.sun.mirror.declaration.FieldDeclaration) : Void;
 	
 	/**
 	* Visits an enum constant declaration.
@@ -124,7 +124,7 @@ package com.sun.mirror.util;
 	* {@link #visitFieldDeclaration visitFieldDeclaration}.
 	* @param d the declaration to visit
 	*/
-	@:overload public function visitEnumConstantDeclaration(d : com.sun.mirror.declaration.EnumConstantDeclaration) : Void;
+	@:overload @:public public function visitEnumConstantDeclaration(d : com.sun.mirror.declaration.EnumConstantDeclaration) : Void;
 	
 	/**
 	* Visits a method or constructor declaration.
@@ -132,7 +132,7 @@ package com.sun.mirror.util;
 	* {@link #visitMemberDeclaration visitMemberDeclaration}.
 	* @param d the declaration to visit
 	*/
-	@:overload public function visitExecutableDeclaration(d : com.sun.mirror.declaration.ExecutableDeclaration) : Void;
+	@:overload @:public public function visitExecutableDeclaration(d : com.sun.mirror.declaration.ExecutableDeclaration) : Void;
 	
 	/**
 	* Visits a constructor declaration.
@@ -140,7 +140,7 @@ package com.sun.mirror.util;
 	* {@link #visitExecutableDeclaration visitExecutableDeclaration}.
 	* @param d the declaration to visit
 	*/
-	@:overload public function visitConstructorDeclaration(d : com.sun.mirror.declaration.ConstructorDeclaration) : Void;
+	@:overload @:public public function visitConstructorDeclaration(d : com.sun.mirror.declaration.ConstructorDeclaration) : Void;
 	
 	/**
 	* Visits a method declaration.
@@ -148,7 +148,7 @@ package com.sun.mirror.util;
 	* {@link #visitExecutableDeclaration visitExecutableDeclaration}.
 	* @param d the declaration to visit
 	*/
-	@:overload public function visitMethodDeclaration(d : com.sun.mirror.declaration.MethodDeclaration) : Void;
+	@:overload @:public public function visitMethodDeclaration(d : com.sun.mirror.declaration.MethodDeclaration) : Void;
 	
 	/**
 	* Visits an annotation type element declaration.
@@ -156,7 +156,7 @@ package com.sun.mirror.util;
 	* {@link #visitMethodDeclaration visitMethodDeclaration}.
 	* @param d the declaration to visit
 	*/
-	@:overload public function visitAnnotationTypeElementDeclaration(d : com.sun.mirror.declaration.AnnotationTypeElementDeclaration) : Void;
+	@:overload @:public public function visitAnnotationTypeElementDeclaration(d : com.sun.mirror.declaration.AnnotationTypeElementDeclaration) : Void;
 	
 	/**
 	* Visits a parameter declaration.
@@ -164,7 +164,7 @@ package com.sun.mirror.util;
 	* {@link #visitDeclaration visitDeclaration}.
 	* @param d the declaration to visit
 	*/
-	@:overload public function visitParameterDeclaration(d : com.sun.mirror.declaration.ParameterDeclaration) : Void;
+	@:overload @:public public function visitParameterDeclaration(d : com.sun.mirror.declaration.ParameterDeclaration) : Void;
 	
 	/**
 	* Visits a type parameter declaration.
@@ -172,7 +172,7 @@ package com.sun.mirror.util;
 	* {@link #visitDeclaration visitDeclaration}.
 	* @param d the declaration to visit
 	*/
-	@:overload public function visitTypeParameterDeclaration(d : com.sun.mirror.declaration.TypeParameterDeclaration) : Void;
+	@:overload @:public public function visitTypeParameterDeclaration(d : com.sun.mirror.declaration.TypeParameterDeclaration) : Void;
 	
 	
 }

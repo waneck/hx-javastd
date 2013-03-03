@@ -56,9 +56,9 @@ extern interface HTMLInputElement extends org.w3c.dom.html.HTMLElement
 	* agent, changes. Changing this attribute, however, resets the contents
 	* of the form control. See the  value attribute definition in HTML 4.0.
 	*/
-	@:overload public function getDefaultValue() : String;
+	@:overload @:public public function getDefaultValue() : String;
 	
-	@:overload public function setDefaultValue(defaultValue : String) : Void;
+	@:overload @:public public function setDefaultValue(defaultValue : String) : Void;
 	
 	/**
 	*  When <code>type</code> has the value "Radio" or "Checkbox", this
@@ -68,49 +68,49 @@ extern interface HTMLInputElement extends org.w3c.dom.html.HTMLElement
 	* attribute, however, resets the state of the form control. See the
 	* checked attribute definition in HTML 4.0.
 	*/
-	@:overload public function getDefaultChecked() : Bool;
+	@:overload @:public public function getDefaultChecked() : Bool;
 	
-	@:overload public function setDefaultChecked(defaultChecked : Bool) : Void;
+	@:overload @:public public function setDefaultChecked(defaultChecked : Bool) : Void;
 	
 	/**
 	*  Returns the <code>FORM</code> element containing this control. Returns
 	* <code>null</code> if this control is not within the context of a form.
 	*/
-	@:overload public function getForm() : org.w3c.dom.html.HTMLFormElement;
+	@:overload @:public public function getForm() : org.w3c.dom.html.HTMLFormElement;
 	
 	/**
 	*  A comma-separated list of content types that a server processing this
 	* form will handle correctly. See the  accept attribute definition in
 	* HTML 4.0.
 	*/
-	@:overload public function getAccept() : String;
+	@:overload @:public public function getAccept() : String;
 	
-	@:overload public function setAccept(accept : String) : Void;
+	@:overload @:public public function setAccept(accept : String) : Void;
 	
 	/**
 	*  A single character access key to give access to the form control. See
 	* the  accesskey attribute definition in HTML 4.0.
 	*/
-	@:overload public function getAccessKey() : String;
+	@:overload @:public public function getAccessKey() : String;
 	
-	@:overload public function setAccessKey(accessKey : String) : Void;
+	@:overload @:public public function setAccessKey(accessKey : String) : Void;
 	
 	/**
 	*  Aligns this object (vertically or horizontally)  with respect to its
 	* surrounding text. See the  align attribute definition in HTML 4.0.
 	* This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getAlign() : String;
+	@:overload @:public public function getAlign() : String;
 	
-	@:overload public function setAlign(align : String) : Void;
+	@:overload @:public public function setAlign(align : String) : Void;
 	
 	/**
 	*  Alternate text for user agents not rendering the normal content of
 	* this element. See the  alt attribute definition in HTML 4.0.
 	*/
-	@:overload public function getAlt() : String;
+	@:overload @:public public function getAlt() : String;
 	
-	@:overload public function setAlt(alt : String) : Void;
+	@:overload @:public public function setAlt(alt : String) : Void;
 	
 	/**
 	*  When the <code>type</code> attribute of the element has the value
@@ -119,51 +119,51 @@ extern interface HTMLInputElement extends org.w3c.dom.html.HTMLElement
 	* change the state of the form control, but do not change the value of
 	* the HTML value attribute of the element.
 	*/
-	@:overload public function getChecked() : Bool;
+	@:overload @:public public function getChecked() : Bool;
 	
-	@:overload public function setChecked(checked : Bool) : Void;
+	@:overload @:public public function setChecked(checked : Bool) : Void;
 	
 	/**
 	*  The control is unavailable in this context. See the  disabled
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getDisabled() : Bool;
+	@:overload @:public public function getDisabled() : Bool;
 	
-	@:overload public function setDisabled(disabled : Bool) : Void;
+	@:overload @:public public function setDisabled(disabled : Bool) : Void;
 	
 	/**
 	*  Maximum number of characters for text fields, when <code>type</code>
 	* has the value "Text" or "Password". See the  maxlength attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getMaxLength() : Int;
+	@:overload @:public public function getMaxLength() : Int;
 	
-	@:overload public function setMaxLength(maxLength : Int) : Void;
+	@:overload @:public public function setMaxLength(maxLength : Int) : Void;
 	
 	/**
 	*  Form control or object name when submitted with a form. See the  name
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	/**
 	*  This control is read-only. Relevant only when <code>type</code> has
 	* the value "Text" or "Password". See the  readonly attribute definition
 	* in HTML 4.0.
 	*/
-	@:overload public function getReadOnly() : Bool;
+	@:overload @:public public function getReadOnly() : Bool;
 	
-	@:overload public function setReadOnly(readOnly : Bool) : Void;
+	@:overload @:public public function setReadOnly(readOnly : Bool) : Void;
 	
 	/**
 	*  Size information. The precise meaning is specific to each type of
 	* field.  See the  size attribute definition in HTML 4.0.
 	*/
-	@:overload public function getSize() : String;
+	@:overload @:public public function getSize() : String;
 	
-	@:overload public function setSize(size : String) : Void;
+	@:overload @:public public function setSize(size : String) : Void;
 	
 	/**
 	*  When the <code>type</code> attribute has the value "Image", this
@@ -171,31 +171,31 @@ extern interface HTMLInputElement extends org.w3c.dom.html.HTMLElement
 	* the graphical submit button. See the  src attribute definition in HTML
 	* 4.0.
 	*/
-	@:overload public function getSrc() : String;
+	@:overload @:public public function getSrc() : String;
 	
-	@:overload public function setSrc(src : String) : Void;
+	@:overload @:public public function setSrc(src : String) : Void;
 	
 	/**
 	*  Index that represents the element's position in the tabbing order. See
 	* the  tabindex attribute definition in HTML 4.0.
 	*/
-	@:overload public function getTabIndex() : Int;
+	@:overload @:public public function getTabIndex() : Int;
 	
-	@:overload public function setTabIndex(tabIndex : Int) : Void;
+	@:overload @:public public function setTabIndex(tabIndex : Int) : Void;
 	
 	/**
 	*  The type of control created. See the  type attribute definition in
 	* HTML 4.0.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	*  Use client-side image map. See the  usemap attribute definition in
 	* HTML 4.0.
 	*/
-	@:overload public function getUseMap() : String;
+	@:overload @:public public function getUseMap() : String;
 	
-	@:overload public function setUseMap(useMap : String) : Void;
+	@:overload @:public public function setUseMap(useMap : String) : Void;
 	
 	/**
 	*  When the <code>type</code> attribute of the element has the value
@@ -208,33 +208,33 @@ extern interface HTMLInputElement extends org.w3c.dom.html.HTMLElement
 	* represents the HTML value attribute of the element. See the  value
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload public function setValue(value : String) : Void;
+	@:overload @:public public function setValue(value : String) : Void;
 	
 	/**
 	*  Removes keyboard focus from this element.
 	*/
-	@:overload public function blur() : Void;
+	@:overload @:public public function blur() : Void;
 	
 	/**
 	*  Gives keyboard focus to this element.
 	*/
-	@:overload public function focus() : Void;
+	@:overload @:public public function focus() : Void;
 	
 	/**
 	*  Select the contents of the text area. For <code>INPUT</code> elements
 	* whose <code>type</code> attribute has one of the following values:
 	* "Text", "File", or "Password".
 	*/
-	@:overload public function select() : Void;
+	@:overload @:public public function select() : Void;
 	
 	/**
 	*  Simulate a mouse-click. For <code>INPUT</code> elements whose
 	* <code>type</code> attribute has one of the following values: "Button",
 	* "Checkbox", "Radio", "Reset", or "Submit".
 	*/
-	@:overload public function click() : Void;
+	@:overload @:public public function click() : Void;
 	
 	
 }

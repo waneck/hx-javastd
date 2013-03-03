@@ -25,19 +25,19 @@ package com.sun.codemodel.internal.fmt;
 */
 extern class JStaticFile extends com.sun.codemodel.internal.JResourceFile
 {
-	@:overload public function new(_resourceName : String) : Void;
+	@:overload @:public public function new(_resourceName : String) : Void;
 	
-	@:overload public function new(_resourceName : String, isResource : Bool) : Void;
+	@:overload @:public public function new(_resourceName : String, isResource : Bool) : Void;
 	
 	/**
 	* @param isResource
 	*      false if this is a Java source file. True if this is other resource files.
 	*/
-	@:overload public function new(_classLoader : java.lang.ClassLoader, _resourceName : String, isResource : Bool) : Void;
+	@:overload @:public public function new(_classLoader : java.lang.ClassLoader, _resourceName : String, isResource : Bool) : Void;
 	
-	@:overload override private function isResource() : Bool;
+	@:overload @:protected override private function isResource() : Bool;
 	
-	@:overload override private function build(os : java.io.OutputStream) : Void;
+	@:overload @:protected override private function build(os : java.io.OutputStream) : Void;
 	
 	
 }

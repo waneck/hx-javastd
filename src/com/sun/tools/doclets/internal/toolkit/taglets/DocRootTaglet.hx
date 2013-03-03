@@ -41,7 +41,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	/**
 	* Construct a new DocRootTaglet.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Given a <code>Doc</code> object, check if it holds any tags of
@@ -51,7 +51,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @param writer a {@link TagletWriter} Taglet writer.
 	* @return the string representation of this <code>Tag</code>.
 	*/
-	@:overload public function getTagletOutput(tag : com.sun.javadoc.Tag, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function getTagletOutput(tag : com.sun.javadoc.Tag, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

@@ -28,9 +28,9 @@ extern class Label extends sun.tools.asm.Instruction
 	/**
 	* Constructor
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

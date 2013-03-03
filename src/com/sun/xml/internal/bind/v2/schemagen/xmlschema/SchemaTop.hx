@@ -25,9 +25,9 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface SchemaTop extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.Redefinable extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function attribute() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TopLevelAttribute;
+	@:overload @:public public function attribute() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TopLevelAttribute;
 	
-	@:overload public function element() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TopLevelElement;
+	@:overload @:public public function element() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TopLevelElement;
 	
 	
 }

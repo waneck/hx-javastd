@@ -37,15 +37,15 @@ exception statement from your version.
 */
 @:internal extern class StreamSampleSpecification
 {
-	@:overload public function new(format : org.classpath.icedtea.pulseaudio.Stream.Stream_Format, rate : Int, channels : Int) : Void;
+	@:overload @:public public function new(format : org.classpath.icedtea.pulseaudio.Stream.Stream_Format, rate : Int, channels : Int) : Void;
 	
-	@:overload public function new(format : String, rate : Int, channels : Int) : Void;
+	@:overload @:public public function new(format : String, rate : Int, channels : Int) : Void;
 	
-	@:overload public function getFormat() : org.classpath.icedtea.pulseaudio.Stream.Stream_Format;
+	@:overload @:public public function getFormat() : org.classpath.icedtea.pulseaudio.Stream.Stream_Format;
 	
-	@:overload public function getRate() : Int;
+	@:overload @:public public function getRate() : Int;
 	
-	@:overload public function getChannels() : Int;
+	@:overload @:public public function getChannels() : Int;
 	
 	
 }

@@ -41,7 +41,7 @@ extern class SAAJResult extends javax.xml.transform.dom.DOMResult
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function new() : Void;
+	@:require(java3) @:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>SAAJResult</code> that will present results in the form
@@ -65,7 +65,7 @@ extern class SAAJResult extends javax.xml.transform.dom.DOMResult
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function new(protocol : String) : Void;
+	@:require(java3) @:overload @:public public function new(protocol : String) : Void;
 	
 	/**
 	* Creates a <code>SAAJResult</code> that will write the results into the
@@ -83,7 +83,7 @@ extern class SAAJResult extends javax.xml.transform.dom.DOMResult
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function new(message : javax.xml.soap.SOAPMessage) : Void;
+	@:require(java3) @:overload @:public public function new(message : javax.xml.soap.SOAPMessage) : Void;
 	
 	/**
 	* Creates a <code>SAAJResult</code> that will write the results as a
@@ -98,13 +98,13 @@ extern class SAAJResult extends javax.xml.transform.dom.DOMResult
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function new(rootNode : javax.xml.soap.SOAPElement) : Void;
+	@:require(java3) @:overload @:public public function new(rootNode : javax.xml.soap.SOAPElement) : Void;
 	
 	/**
 	* @return the resulting Tree that was created under the specified root Node.
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function getResult() : javax.xml.soap.Node;
+	@:require(java3) @:overload @:public public function getResult() : javax.xml.soap.Node;
 	
 	
 }

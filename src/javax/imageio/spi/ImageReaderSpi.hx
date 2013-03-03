@@ -32,20 +32,20 @@ extern class ImageReaderSpi extends javax.imageio.spi.ImageReaderWriterSpi
 	* @deprecated Instead of using this field, directly create
 	* the equivalent array <code>{ ImageInputStream.class }<code>.
 	*/
-	public static var STANDARD_INPUT_TYPE(default, null) : java.NativeArray<Class<Dynamic>>;
+	@:public @:static @:final public static var STANDARD_INPUT_TYPE(default, null) : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* An array of <code>Class</code> objects to be returned from
 	* <code>getInputTypes</code>, initially <code>null</code>.
 	*/
-	private var inputTypes : java.NativeArray<Class<Dynamic>>;
+	@:protected private var inputTypes : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* An array of strings to be returned from
 	* <code>getImageWriterSpiNames</code>, initially
 	* <code>null</code>.
 	*/
-	private var writerSpiNames : java.NativeArray<String>;
+	@:protected private var writerSpiNames : java.NativeArray<String>;
 	
 	/**
 	* Constructs a blank <code>ImageReaderSpi</code>.  It is up to
@@ -53,7 +53,7 @@ extern class ImageReaderSpi extends javax.imageio.spi.ImageReaderWriterSpi
 	* method implementations in order to provide working versions of
 	* all methods.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs an <code>ImageReaderSpi</code> with a given
@@ -134,7 +134,7 @@ extern class ImageReaderSpi extends javax.imageio.spi.ImageReaderWriterSpi
 	* @exception IllegalArgumentException if <code>inputTypes</code>
 	* is <code>null</code> or has length 0.
 	*/
-	@:overload public function new(vendorName : String, version : String, names : java.NativeArray<String>, suffixes : java.NativeArray<String>, MIMETypes : java.NativeArray<String>, readerClassName : String, inputTypes : java.NativeArray<Class<Dynamic>>, writerSpiNames : java.NativeArray<String>, supportsStandardStreamMetadataFormat : Bool, nativeStreamMetadataFormatName : String, nativeStreamMetadataFormatClassName : String, extraStreamMetadataFormatNames : java.NativeArray<String>, extraStreamMetadataFormatClassNames : java.NativeArray<String>, supportsStandardImageMetadataFormat : Bool, nativeImageMetadataFormatName : String, nativeImageMetadataFormatClassName : String, extraImageMetadataFormatNames : java.NativeArray<String>, extraImageMetadataFormatClassNames : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(vendorName : String, version : String, names : java.NativeArray<String>, suffixes : java.NativeArray<String>, MIMETypes : java.NativeArray<String>, readerClassName : String, inputTypes : java.NativeArray<Class<Dynamic>>, writerSpiNames : java.NativeArray<String>, supportsStandardStreamMetadataFormat : Bool, nativeStreamMetadataFormatName : String, nativeStreamMetadataFormatClassName : String, extraStreamMetadataFormatNames : java.NativeArray<String>, extraStreamMetadataFormatClassNames : java.NativeArray<String>, supportsStandardImageMetadataFormat : Bool, nativeImageMetadataFormatName : String, nativeImageMetadataFormatClassName : String, extraImageMetadataFormatNames : java.NativeArray<String>, extraImageMetadataFormatClassNames : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns an array of <code>Class</code> objects indicating what
@@ -149,7 +149,7 @@ extern class ImageReaderSpi extends javax.imageio.spi.ImageReaderWriterSpi
 	* @return a non-<code>null</code> array of
 	* <code>Class</code>objects of length at least 1.
 	*/
-	@:overload public function getInputTypes() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getInputTypes() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Returns <code>true</code> if the supplied source object appears
@@ -192,7 +192,7 @@ extern class ImageReaderSpi extends javax.imageio.spi.ImageReaderWriterSpi
 	* @exception IOException if an I/O error occurs while reading the
 	* stream.
 	*/
-	@:overload @:abstract public function canDecodeInput(source : Dynamic) : Bool;
+	@:overload @:public @:abstract public function canDecodeInput(source : Dynamic) : Bool;
 	
 	/**
 	* Returns an instance of the <code>ImageReader</code>
@@ -209,7 +209,7 @@ extern class ImageReaderSpi extends javax.imageio.spi.ImageReaderWriterSpi
 	* or initialization of the reader class, or during instantiation
 	* or initialization of the reader object.
 	*/
-	@:overload public function createReaderInstance() : javax.imageio.ImageReader;
+	@:overload @:public public function createReaderInstance() : javax.imageio.ImageReader;
 	
 	/**
 	* Returns an instance of the <code>ImageReader</code>
@@ -236,7 +236,7 @@ extern class ImageReaderSpi extends javax.imageio.spi.ImageReaderWriterSpi
 	* <code>IllegalArgumentException</code> to indicate that the
 	* extension object is unsuitable.
 	*/
-	@:overload @:abstract public function createReaderInstance(extension : Dynamic) : javax.imageio.ImageReader;
+	@:overload @:public @:abstract public function createReaderInstance(extension : Dynamic) : javax.imageio.ImageReader;
 	
 	/**
 	* Returns <code>true</code> if the <code>ImageReader</code> object
@@ -255,7 +255,7 @@ extern class ImageReaderSpi extends javax.imageio.spi.ImageReaderWriterSpi
 	* @exception IllegalArgumentException if <code>reader</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function isOwnReader(reader : javax.imageio.ImageReader) : Bool;
+	@:overload @:public public function isOwnReader(reader : javax.imageio.ImageReader) : Bool;
 	
 	/**
 	* Returns an array of <code>String</code>s containing the fully
@@ -290,7 +290,7 @@ extern class ImageReaderSpi extends javax.imageio.spi.ImageReaderWriterSpi
 	*
 	* @see javax.imageio.ImageIO#getImageWriter(ImageReader)
 	*/
-	@:overload public function getImageWriterSpiNames() : java.NativeArray<String>;
+	@:overload @:public public function getImageWriterSpiNames() : java.NativeArray<String>;
 	
 	
 }

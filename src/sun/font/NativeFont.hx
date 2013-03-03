@@ -29,21 +29,21 @@ extern class NativeFont extends sun.font.PhysicalFont
 	* Verifies native font is accessible.
 	* @throws FontFormatException - if the font can't be located.
 	*/
-	@:overload public function new(platName : String, bitmapDelegate : Bool) : Void;
+	@:overload @:public public function new(platName : String, bitmapDelegate : Bool) : Void;
 	
-	@:overload public static function fontExists(xlfd : String) : Bool;
+	@:overload @:public @:static public static function fontExists(xlfd : String) : Bool;
 	
-	@:overload public function getMapper() : sun.font.CharToGlyphMapper;
+	@:overload @:public public function getMapper() : sun.font.CharToGlyphMapper;
 	
-	@:overload public function getMaxCharBounds(frc : java.awt.font.FontRenderContext) : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getMaxCharBounds(frc : java.awt.font.FontRenderContext) : java.awt.geom.Rectangle2D;
 	
-	@:overload public function getGlyphOutline(pScalerContext : haxe.Int64, glyphCode : Int, x : Single, y : Single) : java.awt.geom.GeneralPath;
+	@:overload @:public public function getGlyphOutline(pScalerContext : haxe.Int64, glyphCode : Int, x : Single, y : Single) : java.awt.geom.GeneralPath;
 	
-	@:overload public function getGlyphVectorOutline(pScalerContext : haxe.Int64, glyphs : java.NativeArray<Int>, numGlyphs : Int, x : Single, y : Single) : java.awt.geom.GeneralPath;
+	@:overload @:public public function getGlyphVectorOutline(pScalerContext : haxe.Int64, glyphs : java.NativeArray<Int>, numGlyphs : Int, x : Single, y : Single) : java.awt.geom.GeneralPath;
 	
-	@:overload public function getNumGlyphs() : Int;
+	@:overload @:public override public function getNumGlyphs() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

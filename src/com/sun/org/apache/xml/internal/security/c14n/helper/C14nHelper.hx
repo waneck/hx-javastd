@@ -27,7 +27,7 @@ extern class C14nHelper
 	* @param namespace
 	* @return true if the given namespace is relative.
 	*/
-	@:overload public static function namespaceIsRelative(namespace : org.w3c.dom.Attr) : Bool;
+	@:overload @:public @:static public static function namespaceIsRelative(namespace : org.w3c.dom.Attr) : Bool;
 	
 	/**
 	* Method namespaceIsRelative
@@ -35,7 +35,7 @@ extern class C14nHelper
 	* @param namespaceValue
 	* @return true if the given namespace is relative.
 	*/
-	@:overload public static function namespaceIsRelative(namespaceValue : String) : Bool;
+	@:overload @:public @:static public static function namespaceIsRelative(namespaceValue : String) : Bool;
 	
 	/**
 	* Method namespaceIsAbsolute
@@ -43,7 +43,7 @@ extern class C14nHelper
 	* @param namespace
 	* @return true if the given namespace is absolute.
 	*/
-	@:overload public static function namespaceIsAbsolute(namespace : org.w3c.dom.Attr) : Bool;
+	@:overload @:public @:static public static function namespaceIsAbsolute(namespace : org.w3c.dom.Attr) : Bool;
 	
 	/**
 	* Method namespaceIsAbsolute
@@ -51,7 +51,7 @@ extern class C14nHelper
 	* @param namespaceValue
 	* @return true if the given namespace is absolute.
 	*/
-	@:overload public static function namespaceIsAbsolute(namespaceValue : String) : Bool;
+	@:overload @:public @:static public static function namespaceIsAbsolute(namespaceValue : String) : Bool;
 	
 	/**
 	* This method throws an exception if the Attribute value contains
@@ -60,7 +60,7 @@ extern class C14nHelper
 	* @param attr
 	* @throws CanonicalizationException
 	*/
-	@:overload public static function assertNotRelativeNS(attr : org.w3c.dom.Attr) : Void;
+	@:overload @:public @:static public static function assertNotRelativeNS(attr : org.w3c.dom.Attr) : Void;
 	
 	/**
 	* This method throws a CanonicalizationException if the supplied Document
@@ -69,7 +69,7 @@ extern class C14nHelper
 	* @param document
 	* @throws CanonicalizationException
 	*/
-	@:overload public static function checkTraversability(document : org.w3c.dom.Document) : Void;
+	@:overload @:public @:static public static function checkTraversability(document : org.w3c.dom.Document) : Void;
 	
 	/**
 	* This method throws a CanonicalizationException if the supplied Element
@@ -79,7 +79,7 @@ extern class C14nHelper
 	* @throws CanonicalizationException
 	* @see C14nHelper#assertNotRelativeNS(Attr)
 	*/
-	@:overload public static function checkForRelativeNamespace(ctxNode : org.w3c.dom.Element) : Void;
+	@:overload @:public @:static public static function checkForRelativeNamespace(ctxNode : org.w3c.dom.Element) : Void;
 	
 	
 }

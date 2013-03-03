@@ -39,15 +39,15 @@ extern class ConstEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	/**
 	* This is the symbol table entry for constants.
 	**/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.ConstEntry) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.ConstEntry) : Void;
 	
 	/** This is a shallow copy constructor. */
-	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
 	/** This is a shallow copy clone. */
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/** Invoke the constant generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -55,16 +55,16 @@ extern class ConstEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload @:public override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the constant generator.
 	@returns an object which implements the ConstGen interface.
 	@see ConstGen */
-	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload @:public override public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
-	@:overload public function value() : com.sun.tools.corba.se.idl.constExpr.Expression;
+	@:overload @:public public function value() : com.sun.tools.corba.se.idl.constExpr.Expression;
 	
-	@:overload public function value(newValue : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
+	@:overload @:public public function value(newValue : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
 	
 	
 }

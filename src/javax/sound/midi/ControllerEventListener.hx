@@ -40,7 +40,7 @@ extern interface ControllerEventListener extends java.util.EventListener
 	* @see ShortMessage#getData1
 	* @see ShortMessage#getData2
 	*/
-	@:overload public function controlChange(event : javax.sound.midi.ShortMessage) : Void;
+	@:overload @:public public function controlChange(event : javax.sound.midi.ShortMessage) : Void;
 	
 	
 }

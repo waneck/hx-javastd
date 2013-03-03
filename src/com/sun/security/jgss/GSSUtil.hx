@@ -53,7 +53,7 @@ extern class GSSUtil
 	* credential set. Passing in a value of null will imply that the private
 	* credential set should be left empty.
 	*/
-	@:overload public static function createSubject(principals : org.ietf.jgss.GSSName, credentials : org.ietf.jgss.GSSCredential) : javax.security.auth.Subject;
+	@:overload @:public @:static public static function createSubject(principals : org.ietf.jgss.GSSName, credentials : org.ietf.jgss.GSSCredential) : javax.security.auth.Subject;
 	
 	
 }

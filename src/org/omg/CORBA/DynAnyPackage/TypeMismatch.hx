@@ -33,14 +33,14 @@ extern class TypeMismatch extends org.omg.CORBA.UserException
 	/**
 	* Constructs a <code>TypeMismatch</code> object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>TypeMismatch</code> object.
 	* @param reason  a <code>String</code> giving more information
 	* regarding the exception.
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	
 }

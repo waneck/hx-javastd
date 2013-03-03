@@ -37,7 +37,7 @@ extern class AppletThreadGroup extends java.lang.ThreadGroup
 	*
 	* @param   name   the name of the new thread group.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a new thread group for an applet.
@@ -53,7 +53,7 @@ extern class AppletThreadGroup extends java.lang.ThreadGroup
 	* @see     java.lang.SecurityException
 	* @since   JDK1.1.1
 	*/
-	@:require(java1) @:overload public function new(parent : java.lang.ThreadGroup, name : String) : Void;
+	@:require(java1) @:overload @:public public function new(parent : java.lang.ThreadGroup, name : String) : Void;
 	
 	
 }

@@ -27,21 +27,21 @@ package com.sun.xml.internal.fastinfoset.stax;
 */
 extern class EventLocation implements javax.xml.stream.Location
 {
-	@:overload public static function getNilLocation() : javax.xml.stream.Location;
+	@:overload @:public @:static public static function getNilLocation() : javax.xml.stream.Location;
 	
 	/**
 	* Return the line number where the current event ends,
 	* returns -1 if none is available.
 	* @return the current line number
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* Return the column number where the current event ends,
 	* returns -1 if none is available.
 	* @return the current column number
 	*/
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	/**
 	* Return the byte or character offset into the input source this location
@@ -51,31 +51,31 @@ extern class EventLocation implements javax.xml.stream.Location
 	* Returns -1 if there is no offset available.
 	* @return the current offset
 	*/
-	@:overload public function getCharacterOffset() : Int;
+	@:overload @:public public function getCharacterOffset() : Int;
 	
 	/**
 	* Returns the public ID of the XML
 	* @return the public ID, or null if not available
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* Returns the system ID of the XML
 	* @return the system ID, or null if not available
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
-	@:overload public function setLineNumber(line : Int) : Void;
+	@:overload @:public public function setLineNumber(line : Int) : Void;
 	
-	@:overload public function setColumnNumber(col : Int) : Void;
+	@:overload @:public public function setColumnNumber(col : Int) : Void;
 	
-	@:overload public function setCharacterOffset(offset : Int) : Void;
+	@:overload @:public public function setCharacterOffset(offset : Int) : Void;
 	
-	@:overload public function setPublicId(id : String) : Void;
+	@:overload @:public public function setPublicId(id : String) : Void;
 	
-	@:overload public function setSystemId(id : String) : Void;
+	@:overload @:public public function setSystemId(id : String) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

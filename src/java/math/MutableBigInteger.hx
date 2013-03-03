@@ -43,7 +43,7 @@ package java.math;
 	/**
 	* Returns a String representation of this MutableBigInteger in radix 10.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

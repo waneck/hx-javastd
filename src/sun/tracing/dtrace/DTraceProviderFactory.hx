@@ -43,7 +43,7 @@ extern class DTraceProviderFactory extends com.sun.tracing.ProviderFactory
 	* methods that do not return null, or that contain arguments that are
 	* not String or integer types.
 	*/
-	@:overload public function createProvider<T : com.sun.tracing.Provider>(cls : Class<T>) : T;
+	@:overload @:public override public function createProvider<T : com.sun.tracing.Provider>(cls : Class<T>) : T;
 	
 	/**
 	* Creates multiple providers at once.
@@ -77,7 +77,7 @@ extern class DTraceProviderFactory extends com.sun.tracing.ProviderFactory
 	* contains methods that do not return null, or that contain arguments
 	* that are not String or integer types.
 	*/
-	@:overload public function createProviders(providers : java.util.Set<Class<com.sun.tracing.Provider>>, moduleName : String) : java.util.Map<Class<com.sun.tracing.Provider>, com.sun.tracing.Provider>;
+	@:overload @:public public function createProviders(providers : java.util.Set<Class<com.sun.tracing.Provider>>, moduleName : String) : java.util.Map<Class<com.sun.tracing.Provider>, com.sun.tracing.Provider>;
 	
 	/**
 	* Used to check the status of DTrace support in the underlying JVM and
@@ -89,7 +89,7 @@ extern class DTraceProviderFactory extends com.sun.tracing.ProviderFactory
 	*
 	* @return true if DTrace is supported
 	*/
-	@:overload public static function isSupported() : Bool;
+	@:overload @:public @:static public static function isSupported() : Bool;
 	
 	
 }

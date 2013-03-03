@@ -176,7 +176,7 @@ package javax.naming.directory;
 	* @see #getAttributes(String)
 	* @see #getAttributes(Name, String[])
 	*/
-	@:overload public function getAttributes(name : javax.naming.Name) : javax.naming.directory.Attributes;
+	@:overload @:public public function getAttributes(name : javax.naming.Name) : javax.naming.directory.Attributes;
 	
 	/**
 	* Retrieves all of the attributes associated with a named object.
@@ -188,7 +188,7 @@ package javax.naming.directory;
 	*
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function getAttributes(name : String) : javax.naming.directory.Attributes;
+	@:overload @:public public function getAttributes(name : String) : javax.naming.directory.Attributes;
 	
 	/**
 	* Retrieves selected attributes associated with a named object.
@@ -216,7 +216,7 @@ package javax.naming.directory;
 	*
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function getAttributes(name : javax.naming.Name, attrIds : java.NativeArray<String>) : javax.naming.directory.Attributes;
+	@:overload @:public public function getAttributes(name : javax.naming.Name, attrIds : java.NativeArray<String>) : javax.naming.directory.Attributes;
 	
 	/**
 	* Retrieves selected attributes associated with a named object.
@@ -232,7 +232,7 @@ package javax.naming.directory;
 	*
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function getAttributes(name : String, attrIds : java.NativeArray<String>) : javax.naming.directory.Attributes;
+	@:overload @:public public function getAttributes(name : String, attrIds : java.NativeArray<String>) : javax.naming.directory.Attributes;
 	
 	/**
 	* Modifies the attributes associated with a named object.
@@ -255,7 +255,7 @@ package javax.naming.directory;
 	*
 	* @see #modifyAttributes(Name, ModificationItem[])
 	*/
-	@:overload public function modifyAttributes(name : javax.naming.Name, mod_op : Int, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function modifyAttributes(name : javax.naming.Name, mod_op : Int, attrs : javax.naming.directory.Attributes) : Void;
 	
 	/**
 	* Modifies the attributes associated with a named object.
@@ -275,7 +275,7 @@ package javax.naming.directory;
 	*          be completed successfully
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function modifyAttributes(name : String, mod_op : Int, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function modifyAttributes(name : String, mod_op : Int, attrs : javax.naming.directory.Attributes) : Void;
 	
 	/**
 	* Modifies the attributes associated with a named object using
@@ -299,7 +299,7 @@ package javax.naming.directory;
 	* @see #modifyAttributes(Name, int, Attributes)
 	* @see ModificationItem
 	*/
-	@:overload public function modifyAttributes(name : javax.naming.Name, mods : java.NativeArray<javax.naming.directory.ModificationItem>) : Void;
+	@:overload @:public public function modifyAttributes(name : javax.naming.Name, mods : java.NativeArray<javax.naming.directory.ModificationItem>) : Void;
 	
 	/**
 	* Modifies the attributes associated with a named object using
@@ -316,7 +316,7 @@ package javax.naming.directory;
 	*          cannot be completed successfully
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function modifyAttributes(name : String, mods : java.NativeArray<javax.naming.directory.ModificationItem>) : Void;
+	@:overload @:public public function modifyAttributes(name : String, mods : java.NativeArray<javax.naming.directory.ModificationItem>) : Void;
 	
 	/**
 	* Binds a name to an object, along with associated attributes.
@@ -342,7 +342,7 @@ package javax.naming.directory;
 	* @see Context#bind(Name, Object)
 	* @see #rebind(Name, Object, Attributes)
 	*/
-	@:overload public function bind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function bind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
 	
 	/**
 	* Binds a name to an object, along with associated attributes.
@@ -360,7 +360,7 @@ package javax.naming.directory;
 	*          of the binding are not supplied
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function bind(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function bind(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
 	
 	/**
 	* Binds a name to an object, along with associated attributes,
@@ -390,7 +390,7 @@ package javax.naming.directory;
 	* @see Context#bind(Name, Object)
 	* @see #bind(Name, Object, Attributes)
 	*/
-	@:overload public function rebind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function rebind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
 	
 	/**
 	* Binds a name to an object, along with associated attributes,
@@ -408,7 +408,7 @@ package javax.naming.directory;
 	*          of the binding are not supplied
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function rebind(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function rebind(name : String, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
 	
 	/**
 	* Creates and binds a new context, along with associated attributes.
@@ -433,7 +433,7 @@ package javax.naming.directory;
 	*
 	* @see Context#createSubcontext(Name)
 	*/
-	@:overload public function createSubcontext(name : javax.naming.Name, attrs : javax.naming.directory.Attributes) : javax.naming.directory.DirContext;
+	@:overload @:public public function createSubcontext(name : javax.naming.Name, attrs : javax.naming.directory.Attributes) : javax.naming.directory.DirContext;
 	
 	/**
 	* Creates and binds a new context, along with associated attributes.
@@ -450,7 +450,7 @@ package javax.naming.directory;
 	*          contain all the mandatory attributes required for creation
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function createSubcontext(name : String, attrs : javax.naming.directory.Attributes) : javax.naming.directory.DirContext;
+	@:overload @:public public function createSubcontext(name : String, attrs : javax.naming.directory.Attributes) : javax.naming.directory.DirContext;
 	
 	/**
 	* Retrieves the schema associated with the named object.
@@ -475,7 +475,7 @@ package javax.naming.directory;
 	* @throws  OperationNotSupportedException if schema not supported
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function getSchema(name : javax.naming.Name) : javax.naming.directory.DirContext;
+	@:overload @:public public function getSchema(name : javax.naming.Name) : javax.naming.directory.DirContext;
 	
 	/**
 	* Retrieves the schema associated with the named object.
@@ -487,7 +487,7 @@ package javax.naming.directory;
 	* @throws  OperationNotSupportedException if schema not supported
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function getSchema(name : String) : javax.naming.directory.DirContext;
+	@:overload @:public public function getSchema(name : String) : javax.naming.directory.DirContext;
 	
 	/**
 	* Retrieves a context containing the schema objects of the
@@ -522,7 +522,7 @@ package javax.naming.directory;
 	* @throws  OperationNotSupportedException if schema not supported
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function getSchemaClassDefinition(name : javax.naming.Name) : javax.naming.directory.DirContext;
+	@:overload @:public public function getSchemaClassDefinition(name : javax.naming.Name) : javax.naming.directory.DirContext;
 	
 	/**
 	* Retrieves a context containing the schema objects of the
@@ -538,7 +538,7 @@ package javax.naming.directory;
 	* @throws  OperationNotSupportedException if schema not supported
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function getSchemaClassDefinition(name : String) : javax.naming.directory.DirContext;
+	@:overload @:public public function getSchemaClassDefinition(name : String) : javax.naming.directory.DirContext;
 	
 	/**
 	* Searches in a single context for objects that contain a
@@ -609,7 +609,7 @@ package javax.naming.directory;
 	* @see SearchResult
 	* @see #search(Name, String, Object[], SearchControls)
 	*/
-	@:overload public function search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
 	/**
 	* Searches in a single context for objects that contain a
@@ -625,7 +625,7 @@ package javax.naming.directory;
 	* @return  a non-null enumeration of <tt>SearchResult</tt> objects
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function search(name : String, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : String, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
 	/**
 	* Searches in a single context for objects that contain a
@@ -646,7 +646,7 @@ package javax.naming.directory;
 	*
 	* @see #search(Name, Attributes, String[])
 	*/
-	@:overload public function search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : javax.naming.Name, matchingAttributes : javax.naming.directory.Attributes) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
 	/**
 	* Searches in a single context for objects that contain a
@@ -660,7 +660,7 @@ package javax.naming.directory;
 	* @return  an enumeration of <tt>SearchResult</tt> objects
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function search(name : String, matchingAttributes : javax.naming.directory.Attributes) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : String, matchingAttributes : javax.naming.directory.Attributes) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
 	/**
 	* Searches in the named context or object for entries that satisfy the
@@ -758,7 +758,7 @@ package javax.naming.directory;
 	* @see SearchControls
 	* @see SearchResult
 	*/
-	@:overload public function search(name : javax.naming.Name, filter : String, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : javax.naming.Name, filter : String, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
 	/**
 	* Searches in the named context or object for entries that satisfy the
@@ -783,7 +783,7 @@ package javax.naming.directory;
 	*          contain invalid settings
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function search(name : String, filter : String, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : String, filter : String, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
 	/**
 	* Searches in the named context or object for entries that satisfy the
@@ -885,7 +885,7 @@ package javax.naming.directory;
 	* @see #search(Name, Attributes, String[])
 	* @see java.text.MessageFormat
 	*/
-	@:overload public function search(name : javax.naming.Name, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : javax.naming.Name, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
 	/**
 	* Searches in the named context or object for entries that satisfy the
@@ -922,7 +922,7 @@ package javax.naming.directory;
 	*          <tt>filterArgs</tt> represents an invalid search filter
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function search(name : String, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
+	@:overload @:public public function search(name : String, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>;
 	
 	
 }

@@ -25,14 +25,14 @@ package com.sun.xml.internal.ws.server;
 */
 @:internal extern class WSDLGenResolver implements com.sun.xml.internal.ws.wsdl.writer.WSDLResolver
 {
-	@:overload public function new(docs : java.util.List<com.sun.xml.internal.ws.server.SDDocumentImpl>, serviceName : javax.xml.namespace.QName, portTypeName : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(docs : java.util.List<com.sun.xml.internal.ws.server.SDDocumentImpl>, serviceName : javax.xml.namespace.QName, portTypeName : javax.xml.namespace.QName) : Void;
 	
 	/**
 	* Generates the concrete WSDL that contains service element.
 	*
 	* @return Result the generated concrete WSDL
 	*/
-	@:overload public function getWSDL(filename : String) : javax.xml.transform.Result;
+	@:overload @:public public function getWSDL(filename : String) : javax.xml.transform.Result;
 	
 	/**
 	* Updates filename if the suggested filename need to be changed in
@@ -42,7 +42,7 @@ package com.sun.xml.internal.ws.server;
 	* return null if abstract WSDL need not be generated
 	*        Result the abstract WSDL
 	*/
-	@:overload public function getAbstractWSDL(filename : javax.xml.ws.Holder<String>) : javax.xml.transform.Result;
+	@:overload @:public public function getAbstractWSDL(filename : javax.xml.ws.Holder<String>) : javax.xml.transform.Result;
 	
 	/**
 	* Updates filename if the suggested filename need to be changed in
@@ -52,7 +52,7 @@ package com.sun.xml.internal.ws.server;
 	* return null if schema need not be generated
 	*        Result the generated schema document
 	*/
-	@:overload public function getSchemaOutput(namespace : String, filename : javax.xml.ws.Holder<String>) : javax.xml.transform.Result;
+	@:overload @:public public function getSchemaOutput(namespace : String, filename : javax.xml.ws.Holder<String>) : javax.xml.transform.Result;
 	
 	/**
 	* Converts SDDocumentSource to SDDocumentImpl and updates original docs. It
@@ -62,7 +62,7 @@ package com.sun.xml.internal.ws.server;
 	*         null if it is not there in the generated documents
 	*
 	*/
-	@:overload public function updateDocs() : com.sun.xml.internal.ws.server.SDDocumentImpl;
+	@:overload @:public public function updateDocs() : com.sun.xml.internal.ws.server.SDDocumentImpl;
 	
 	
 }

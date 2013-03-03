@@ -28,7 +28,7 @@ extern class SSLSocketFactory extends javax.net.SocketFactory
 	/**
 	* Constructor is used only by subclasses.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the default SSL socket factory.
@@ -46,7 +46,7 @@ extern class SSLSocketFactory extends javax.net.SocketFactory
 	* @return the default <code>SocketFactory</code>
 	* @see SSLContext#getDefault
 	*/
-	@:overload @:synchronized public static function getDefault() : javax.net.SocketFactory;
+	@:overload @:public @:static @:synchronized public static function getDefault() : javax.net.SocketFactory;
 	
 	/**
 	* Returns the list of cipher suites which are enabled by default.
@@ -58,7 +58,7 @@ extern class SSLSocketFactory extends javax.net.SocketFactory
 	* @see #getSupportedCipherSuites()
 	* @return array of the cipher suites enabled by default
 	*/
-	@:overload @:abstract public function getDefaultCipherSuites() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getDefaultCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Returns the names of the cipher suites which could be enabled for use
@@ -70,7 +70,7 @@ extern class SSLSocketFactory extends javax.net.SocketFactory
 	* @see #getDefaultCipherSuites()
 	* @return an array of cipher suite names
 	*/
-	@:overload @:abstract public function getSupportedCipherSuites() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getSupportedCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Returns a socket layered over an existing socket connected to the named
@@ -88,27 +88,27 @@ extern class SSLSocketFactory extends javax.net.SocketFactory
 	* @throws IOException if an I/O error occurs when creating the socket
 	* @throws NullPointerException if the parameter s is null
 	*/
-	@:overload @:abstract public function createSocket(s : java.net.Socket, host : String, port : Int, autoClose : Bool) : java.net.Socket;
+	@:overload @:public @:abstract public function createSocket(s : java.net.Socket, host : String, port : Int, autoClose : Bool) : java.net.Socket;
 	
 	
 }
 @:internal extern class DefaultSSLSocketFactory extends javax.net.ssl.SSLSocketFactory
 {
-	@:overload override public function createSocket() : java.net.Socket;
+	@:overload @:public override public function createSocket() : java.net.Socket;
 	
-	@:overload override public function createSocket(host : String, port : Int) : java.net.Socket;
+	@:overload @:public override public function createSocket(host : String, port : Int) : java.net.Socket;
 	
-	@:overload override public function createSocket(s : java.net.Socket, host : String, port : Int, autoClose : Bool) : java.net.Socket;
+	@:overload @:public override public function createSocket(s : java.net.Socket, host : String, port : Int, autoClose : Bool) : java.net.Socket;
 	
-	@:overload override public function createSocket(address : java.net.InetAddress, port : Int) : java.net.Socket;
+	@:overload @:public override public function createSocket(address : java.net.InetAddress, port : Int) : java.net.Socket;
 	
-	@:overload override public function createSocket(host : String, port : Int, clientAddress : java.net.InetAddress, clientPort : Int) : java.net.Socket;
+	@:overload @:public override public function createSocket(host : String, port : Int, clientAddress : java.net.InetAddress, clientPort : Int) : java.net.Socket;
 	
-	@:overload override public function createSocket(address : java.net.InetAddress, port : Int, clientAddress : java.net.InetAddress, clientPort : Int) : java.net.Socket;
+	@:overload @:public override public function createSocket(address : java.net.InetAddress, port : Int, clientAddress : java.net.InetAddress, clientPort : Int) : java.net.Socket;
 	
-	@:overload override public function getDefaultCipherSuites() : java.NativeArray<String>;
+	@:overload @:public override public function getDefaultCipherSuites() : java.NativeArray<String>;
 	
-	@:overload override public function getSupportedCipherSuites() : java.NativeArray<String>;
+	@:overload @:public override public function getSupportedCipherSuites() : java.NativeArray<String>;
 	
 	
 }

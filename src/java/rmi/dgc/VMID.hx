@@ -41,7 +41,7 @@ extern class VMID implements java.io.Serializable
 	* address can be obtained for this host that is unique and constant
 	* for the lifetime of this object.  <p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Return true if an accurate address can be determined for this
@@ -49,23 +49,23 @@ extern class VMID implements java.io.Serializable
 	* @return true if host address can be determined, false otherwise
 	* @deprecated
 	*/
-	@:overload public static function isUnique() : Bool;
+	@:overload @:public @:static public static function isUnique() : Bool;
 	
 	/**
 	* Compute hash code for this VMID.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compare this VMID to another, and return true if they are the
 	* same identifier.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Return string representation of this VMID.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -41,7 +41,7 @@ extern class ExsltCommon
 	*
 	* @see <a href="http://www.exslt.org/">EXSLT</a>
 	*/
-	@:overload public static function objectType(obj : Dynamic) : String;
+	@:overload @:public @:static public static function objectType(obj : Dynamic) : String;
 	
 	/**
 	* The exsl:node-set function converts a result tree fragment (which is what you get
@@ -63,7 +63,7 @@ extern class ExsltCommon
 	*
 	* @see <a href="http://www.exslt.org/">EXSLT</a>
 	*/
-	@:overload public static function nodeSet(myProcessor : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, rtf : Dynamic) : com.sun.org.apache.xpath.internal.NodeSet;
+	@:overload @:public @:static public static function nodeSet(myProcessor : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, rtf : Dynamic) : com.sun.org.apache.xpath.internal.NodeSet;
 	
 	
 }

@@ -44,7 +44,7 @@ extern class FormatData_be_BY extends java.util.ListResourceBundle
 	/**
 	* Overrides ListResourceBundle
 	*/
-	@:overload @:final override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:protected @:final override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

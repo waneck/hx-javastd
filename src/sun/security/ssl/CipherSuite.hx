@@ -57,12 +57,12 @@ package sun.security.ssl;
 	* Note that for unsupported CipherSuites parsed from a handshake
 	* message we violate the equals() contract.
 	*/
-	@:overload public function compareTo(o : Dynamic) : Int;
+	@:overload @:public public function compareTo(o : Dynamic) : Int;
 	
 	/**
 	* Returns this.name.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -99,7 +99,7 @@ package sun.security.ssl;
 */
 @:native('sun$security$ssl$CipherSuite$BulkCipher') @:internal extern class CipherSuite_BulkCipher
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -111,7 +111,7 @@ package sun.security.ssl;
 */
 @:native('sun$security$ssl$CipherSuite$MacAlg') @:internal extern class CipherSuite_MacAlg
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

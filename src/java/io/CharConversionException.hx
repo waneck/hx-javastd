@@ -34,14 +34,14 @@ package java.io;
 	/**
 	* This provides no detailed message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* This provides a detailed message.
 	*
 	* @param s the detailed message associated with the exception.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

@@ -44,9 +44,9 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 
 	* @see XMLGregorianCalendar#add(Duration)
 	*/
-	@:overload public function new(isPositive : Bool, days : java.math.BigInteger, hours : java.math.BigInteger, minutes : java.math.BigInteger, seconds : java.math.BigDecimal) : Void;
+	@:overload @:public public function new(isPositive : Bool, days : java.math.BigInteger, hours : java.math.BigInteger, minutes : java.math.BigInteger, seconds : java.math.BigDecimal) : Void;
 	
-	@:overload public function new(isPositive : Bool, days : Int, hours : Int, minutes : Int, seconds : Int) : Void;
+	@:overload @:public public function new(isPositive : Bool, days : Int, hours : Int, minutes : Int, seconds : Int) : Void;
 	
 	/**
 	* <p>Construct a <code>Duration</code> of type <code>xdt:dayTimeDuration</code> by parsing its <code>String</code> representation,
@@ -70,7 +70,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @throws UnsupportedOperationException If implementation cannot support requested values.
 	* @throws NullPointerException If <code>lexicalRepresentation</code> is <code>null</code>.
 	*/
-	@:overload private function new(lexicalRepresentation : String) : Void;
+	@:overload @:protected private function new(lexicalRepresentation : String) : Void;
 	
 	/**
 	* <p>Create a <code>Duration</code> of type <code>xdt:dayTimeDuration</code> using the specified milliseconds as defined in
@@ -109,13 +109,13 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @see <a href="http://www.w3.org/TR/xpath-datamodel#dayTimeDuration">
 	*   XQuery 1.0 and XPath 2.0 Data Model, xdt:dayTimeDuration</a>
 	*/
-	@:overload private function new(durationInMilliseconds : haxe.Int64) : Void;
+	@:overload @:protected private function new(durationInMilliseconds : haxe.Int64) : Void;
 	
 	/**
 	* The value space of xs:dayTimeDuration is the set of fractional second values.
 	* @return fractional second values
 	*/
-	@:overload public function getValue() : Single;
+	@:overload @:public public function getValue() : Single;
 	
 	
 }

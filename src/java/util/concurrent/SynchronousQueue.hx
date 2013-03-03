@@ -78,7 +78,7 @@ package java.util.concurrent;
 	/**
 	* Creates a <tt>SynchronousQueue</tt> with nonfair access policy.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <tt>SynchronousQueue</tt> with the specified fairness policy.
@@ -86,7 +86,7 @@ package java.util.concurrent;
 	* @param fair if true, waiting threads contend in FIFO order for
 	*        access; otherwise the order is unspecified.
 	*/
-	@:overload public function new(fair : Bool) : Void;
+	@:overload @:public public function new(fair : Bool) : Void;
 	
 	/**
 	* Adds the specified element to this queue, waiting if necessary for
@@ -95,7 +95,7 @@ package java.util.concurrent;
 	* @throws InterruptedException {@inheritDoc}
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function put(o : E) : Void;
+	@:overload @:public public function put(o : E) : Void;
 	
 	/**
 	* Inserts the specified element into this queue, waiting if necessary
@@ -106,7 +106,7 @@ package java.util.concurrent;
 	* @throws InterruptedException {@inheritDoc}
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function offer(o : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function offer(o : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Inserts the specified element into this queue, if another thread is
@@ -117,7 +117,7 @@ package java.util.concurrent;
 	*         <tt>false</tt>
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function offer(e : E) : Bool;
+	@:overload @:public override public function offer(e : E) : Bool;
 	
 	/**
 	* Retrieves and removes the head of this queue, waiting if necessary
@@ -126,7 +126,7 @@ package java.util.concurrent;
 	* @return the head of this queue
 	* @throws InterruptedException {@inheritDoc}
 	*/
-	@:overload public function take() : E;
+	@:overload @:public public function take() : E;
 	
 	/**
 	* Retrieves and removes the head of this queue, waiting
@@ -137,7 +137,7 @@ package java.util.concurrent;
 	*         specified waiting time elapses before an element is present.
 	* @throws InterruptedException {@inheritDoc}
 	*/
-	@:overload public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
+	@:overload @:public public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
 	
 	/**
 	* Retrieves and removes the head of this queue, if another thread
@@ -146,7 +146,7 @@ package java.util.concurrent;
 	* @return the head of this queue, or <tt>null</tt> if no
 	*         element is available.
 	*/
-	@:overload override public function poll() : E;
+	@:overload @:public override public function poll() : E;
 	
 	/**
 	* Always returns <tt>true</tt>.
@@ -154,7 +154,7 @@ package java.util.concurrent;
 	*
 	* @return <tt>true</tt>
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Always returns zero.
@@ -162,7 +162,7 @@ package java.util.concurrent;
 	*
 	* @return zero.
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Always returns zero.
@@ -170,13 +170,13 @@ package java.util.concurrent;
 	*
 	* @return zero.
 	*/
-	@:overload public function remainingCapacity() : Int;
+	@:overload @:public public function remainingCapacity() : Int;
 	
 	/**
 	* Does nothing.
 	* A <tt>SynchronousQueue</tt> has no internal capacity.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Always returns <tt>false</tt>.
@@ -185,7 +185,7 @@ package java.util.concurrent;
 	* @param o the element
 	* @return <tt>false</tt>
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Always returns <tt>false</tt>.
@@ -194,7 +194,7 @@ package java.util.concurrent;
 	* @param o the element to remove
 	* @return <tt>false</tt>
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Returns <tt>false</tt> unless the given collection is empty.
@@ -203,7 +203,7 @@ package java.util.concurrent;
 	* @param c the collection
 	* @return <tt>false</tt> unless given collection is empty
 	*/
-	@:overload override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Always returns <tt>false</tt>.
@@ -212,7 +212,7 @@ package java.util.concurrent;
 	* @param c the collection
 	* @return <tt>false</tt>
 	*/
-	@:overload override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Always returns <tt>false</tt>.
@@ -221,7 +221,7 @@ package java.util.concurrent;
 	* @param c the collection
 	* @return <tt>false</tt>
 	*/
-	@:overload override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Always returns <tt>null</tt>.
@@ -230,7 +230,7 @@ package java.util.concurrent;
 	*
 	* @return <tt>null</tt>
 	*/
-	@:overload override public function peek() : E;
+	@:overload @:public override public function peek() : E;
 	
 	/**
 	* Returns an empty iterator in which <tt>hasNext</tt> always returns
@@ -238,13 +238,13 @@ package java.util.concurrent;
 	*
 	* @return an empty iterator
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
 	/**
 	* Returns a zero-length array.
 	* @return a zero-length array
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Sets the zeroeth element of the specified array to <tt>null</tt>
@@ -254,7 +254,7 @@ package java.util.concurrent;
 	* @return the specified array
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* @throws UnsupportedOperationException {@inheritDoc}
@@ -262,7 +262,7 @@ package java.util.concurrent;
 	* @throws NullPointerException          {@inheritDoc}
 	* @throws IllegalArgumentException      {@inheritDoc}
 	*/
-	@:overload public function drainTo(c : java.util.Collection<E>) : Int;
+	@:overload @:public public function drainTo(c : java.util.Collection<E>) : Int;
 	
 	/**
 	* @throws UnsupportedOperationException {@inheritDoc}
@@ -270,7 +270,7 @@ package java.util.concurrent;
 	* @throws NullPointerException          {@inheritDoc}
 	* @throws IllegalArgumentException      {@inheritDoc}
 	*/
-	@:overload public function drainTo(c : java.util.Collection<E>, maxElements : Int) : Int;
+	@:overload @:public public function drainTo(c : java.util.Collection<E>, maxElements : Int) : Int;
 	
 	
 }

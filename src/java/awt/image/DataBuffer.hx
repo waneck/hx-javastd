@@ -35,40 +35,40 @@ package java.awt.image;
 extern class DataBuffer
 {
 	/** Tag for unsigned byte data. */
-	public static var TYPE_BYTE(default, null) : Int;
+	@:public @:static @:final public static var TYPE_BYTE(default, null) : Int;
 	
 	/** Tag for unsigned short data. */
-	public static var TYPE_USHORT(default, null) : Int;
+	@:public @:static @:final public static var TYPE_USHORT(default, null) : Int;
 	
 	/** Tag for signed short data.  Placeholder for future use. */
-	public static var TYPE_SHORT(default, null) : Int;
+	@:public @:static @:final public static var TYPE_SHORT(default, null) : Int;
 	
 	/** Tag for int data. */
-	public static var TYPE_INT(default, null) : Int;
+	@:public @:static @:final public static var TYPE_INT(default, null) : Int;
 	
 	/** Tag for float data.  Placeholder for future use. */
-	public static var TYPE_FLOAT(default, null) : Int;
+	@:public @:static @:final public static var TYPE_FLOAT(default, null) : Int;
 	
 	/** Tag for double data.  Placeholder for future use. */
-	public static var TYPE_DOUBLE(default, null) : Int;
+	@:public @:static @:final public static var TYPE_DOUBLE(default, null) : Int;
 	
 	/** Tag for undefined data. */
-	public static var TYPE_UNDEFINED(default, null) : Int;
+	@:public @:static @:final public static var TYPE_UNDEFINED(default, null) : Int;
 	
 	/** The data type of this DataBuffer. */
-	private var dataType : Int;
+	@:protected private var dataType : Int;
 	
 	/** The number of banks in this DataBuffer. */
-	private var banks : Int;
+	@:protected private var banks : Int;
 	
 	/** Offset into default (first) bank from which to get the first element. */
-	private var offset : Int;
+	@:protected private var offset : Int;
 	
 	/** Usable size of all banks. */
-	private var size : Int;
+	@:protected private var size : Int;
 	
 	/** Offsets into all banks. */
-	private var offsets : java.NativeArray<Int>;
+	@:protected private var offsets : java.NativeArray<Int>;
 	
 	/** Returns the size (in bits) of the data type, given a datatype tag.
 	* @param type the value of one of the defined datatype tags
@@ -76,7 +76,7 @@ extern class DataBuffer
 	* @throws IllegalArgumentException if <code>type</code> is less than
 	*         zero or greater than {@link #TYPE_DOUBLE}
 	*/
-	@:overload public static function getDataTypeSize(type : Int) : Int;
+	@:overload @:public @:static public static function getDataTypeSize(type : Int) : Int;
 	
 	/**
 	*  Constructs a DataBuffer containing one bank of the specified
@@ -85,7 +85,7 @@ extern class DataBuffer
 	*  @param dataType the data type of this <code>DataBuffer</code>
 	*  @param size the size of the banks
 	*/
-	@:overload private function new(dataType : Int, size : Int) : Void;
+	@:overload @:protected private function new(dataType : Int, size : Int) : Void;
 	
 	/**
 	*  Constructs a DataBuffer containing the specified number of
@@ -96,7 +96,7 @@ extern class DataBuffer
 	*  @param numBanks the number of banks in this
 	*         <code>DataBuffer</code>
 	*/
-	@:overload private function new(dataType : Int, size : Int, numBanks : Int) : Void;
+	@:overload @:protected private function new(dataType : Int, size : Int, numBanks : Int) : Void;
 	
 	/**
 	*  Constructs a DataBuffer that contains the specified number
@@ -108,7 +108,7 @@ extern class DataBuffer
 	*         <code>DataBuffer</code>
 	*  @param offset the offset for each bank
 	*/
-	@:overload private function new(dataType : Int, size : Int, numBanks : Int, offset : Int) : Void;
+	@:overload @:protected private function new(dataType : Int, size : Int, numBanks : Int, offset : Int) : Void;
 	
 	/**
 	*  Constructs a DataBuffer which contains the specified number
@@ -124,32 +124,32 @@ extern class DataBuffer
 	*  @throws ArrayIndexOutOfBoundsException if <code>numBanks</code>
 	*          does not equal the length of <code>offsets</code>
 	*/
-	@:overload private function new(dataType : Int, size : Int, numBanks : Int, offsets : java.NativeArray<Int>) : Void;
+	@:overload @:protected private function new(dataType : Int, size : Int, numBanks : Int, offsets : java.NativeArray<Int>) : Void;
 	
 	/**  Returns the data type of this DataBuffer.
 	*   @return the data type of this <code>DataBuffer</code>.
 	*/
-	@:overload public function getDataType() : Int;
+	@:overload @:public public function getDataType() : Int;
 	
 	/**  Returns the size (in array elements) of all banks.
 	*   @return the size of all banks.
 	*/
-	@:overload public function getSize() : Int;
+	@:overload @:public public function getSize() : Int;
 	
 	/** Returns the offset of the default bank in array elements.
 	*  @return the offset of the default bank.
 	*/
-	@:overload public function getOffset() : Int;
+	@:overload @:public public function getOffset() : Int;
 	
 	/** Returns the offsets (in array elements) of all the banks.
 	*  @return the offsets of all banks.
 	*/
-	@:overload public function getOffsets() : java.NativeArray<Int>;
+	@:overload @:public public function getOffsets() : java.NativeArray<Int>;
 	
 	/** Returns the number of banks in this DataBuffer.
 	*  @return the number of banks.
 	*/
-	@:overload public function getNumBanks() : Int;
+	@:overload @:public public function getNumBanks() : Int;
 	
 	/**
 	* Returns the requested data array element from the first (default) bank
@@ -159,7 +159,7 @@ extern class DataBuffer
 	* @see #setElem(int, int)
 	* @see #setElem(int, int, int)
 	*/
-	@:overload public function getElem(i : Int) : Int;
+	@:overload @:public public function getElem(i : Int) : Int;
 	
 	/**
 	* Returns the requested data array element from the specified bank
@@ -171,7 +171,7 @@ extern class DataBuffer
 	* @see #setElem(int, int)
 	* @see #setElem(int, int, int)
 	*/
-	@:overload @:abstract public function getElem(bank : Int, i : Int) : Int;
+	@:overload @:public @:abstract public function getElem(bank : Int, i : Int) : Int;
 	
 	/**
 	* Sets the requested data array element in the first (default) bank
@@ -182,7 +182,7 @@ extern class DataBuffer
 	* @see #getElem(int)
 	* @see #getElem(int, int)
 	*/
-	@:overload public function setElem(i : Int, val : Int) : Void;
+	@:overload @:public public function setElem(i : Int, val : Int) : Void;
 	
 	/**
 	* Sets the requested data array element in the specified bank
@@ -194,7 +194,7 @@ extern class DataBuffer
 	* @see #getElem(int)
 	* @see #getElem(int, int)
 	*/
-	@:overload @:abstract public function setElem(bank : Int, i : Int, val : Int) : Void;
+	@:overload @:public @:abstract public function setElem(bank : Int, i : Int, val : Int) : Void;
 	
 	/**
 	* Returns the requested data array element from the first (default) bank
@@ -207,7 +207,7 @@ extern class DataBuffer
 	* @see #setElemFloat(int, float)
 	* @see #setElemFloat(int, int, float)
 	*/
-	@:overload public function getElemFloat(i : Int) : Single;
+	@:overload @:public public function getElemFloat(i : Int) : Single;
 	
 	/**
 	* Returns the requested data array element from the specified bank
@@ -222,7 +222,7 @@ extern class DataBuffer
 	* @see #setElemFloat(int, float)
 	* @see #setElemFloat(int, int, float)
 	*/
-	@:overload public function getElemFloat(bank : Int, i : Int) : Single;
+	@:overload @:public public function getElemFloat(bank : Int, i : Int) : Single;
 	
 	/**
 	* Sets the requested data array element in the first (default) bank
@@ -235,7 +235,7 @@ extern class DataBuffer
 	* @see #getElemFloat(int)
 	* @see #getElemFloat(int, int)
 	*/
-	@:overload public function setElemFloat(i : Int, val : Single) : Void;
+	@:overload @:public public function setElemFloat(i : Int, val : Single) : Void;
 	
 	/**
 	* Sets the requested data array element in the specified bank
@@ -249,7 +249,7 @@ extern class DataBuffer
 	* @see #getElemFloat(int)
 	* @see #getElemFloat(int, int)
 	*/
-	@:overload public function setElemFloat(bank : Int, i : Int, val : Single) : Void;
+	@:overload @:public public function setElemFloat(bank : Int, i : Int, val : Single) : Void;
 	
 	/**
 	* Returns the requested data array element from the first (default) bank
@@ -263,7 +263,7 @@ extern class DataBuffer
 	* @see #setElemDouble(int, double)
 	* @see #setElemDouble(int, int, double)
 	*/
-	@:overload public function getElemDouble(i : Int) : Float;
+	@:overload @:public public function getElemDouble(i : Int) : Float;
 	
 	/**
 	* Returns the requested data array element from the specified bank as
@@ -277,7 +277,7 @@ extern class DataBuffer
 	* @see #setElemDouble(int, double)
 	* @see #setElemDouble(int, int, double)
 	*/
-	@:overload public function getElemDouble(bank : Int, i : Int) : Float;
+	@:overload @:public public function getElemDouble(bank : Int, i : Int) : Float;
 	
 	/**
 	* Sets the requested data array element in the first (default) bank
@@ -290,7 +290,7 @@ extern class DataBuffer
 	* @see #getElemDouble(int)
 	* @see #getElemDouble(int, int)
 	*/
-	@:overload public function setElemDouble(i : Int, val : Float) : Void;
+	@:overload @:public public function setElemDouble(i : Int, val : Float) : Void;
 	
 	/**
 	* Sets the requested data array element in the specified bank
@@ -304,7 +304,7 @@ extern class DataBuffer
 	* @see #getElemDouble(int)
 	* @see #getElemDouble(int, int)
 	*/
-	@:overload public function setElemDouble(bank : Int, i : Int, val : Float) : Void;
+	@:overload @:public public function setElemDouble(bank : Int, i : Int, val : Float) : Void;
 	
 	
 }

@@ -30,7 +30,7 @@ extern interface XMLDTDDescription extends com.sun.org.apache.xerces.internal.xn
 	*
 	* @return  the root name. null if the name is unknown.
 	*/
-	@:overload public function getRootName() : String;
+	@:overload @:public public function getRootName() : String;
 	
 	
 }

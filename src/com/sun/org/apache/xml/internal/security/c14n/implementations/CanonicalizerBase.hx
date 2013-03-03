@@ -21,14 +21,14 @@ package com.sun.org.apache.xml.internal.security.c14n.implementations;
 */
 extern class CanonicalizerBase extends com.sun.org.apache.xml.internal.security.c14n.CanonicalizerSpi
 {
-	private static var nullNode(default, null) : org.w3c.dom.Attr;
+	@:protected @:static @:final private static var nullNode(default, null) : org.w3c.dom.Attr;
 	
 	/**
 	* Constructor CanonicalizerBase
 	*
 	* @param includeComments
 	*/
-	@:overload public function new(includeComments : Bool) : Void;
+	@:overload @:public public function new(includeComments : Bool) : Void;
 	
 	/**
 	* Method engineCanonicalizeSubTree
@@ -36,7 +36,7 @@ extern class CanonicalizerBase extends com.sun.org.apache.xml.internal.security.
 	* @param rootNode
 	* @throws CanonicalizationException
 	*/
-	@:overload override public function engineCanonicalizeSubTree(rootNode : org.w3c.dom.Node) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function engineCanonicalizeSubTree(rootNode : org.w3c.dom.Node) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Method engineCanonicalizeXPathNodeSet
@@ -44,7 +44,7 @@ extern class CanonicalizerBase extends com.sun.org.apache.xml.internal.security.
 	* @param xpathNodeSet
 	* @throws CanonicalizationException
 	*/
-	@:overload override public function engineCanonicalizeXPathNodeSet(xpathNodeSet : java.util.Set<Dynamic>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function engineCanonicalizeXPathNodeSet(xpathNodeSet : java.util.Set<Dynamic>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Canonicalizes a Subtree node.
@@ -52,12 +52,12 @@ extern class CanonicalizerBase extends com.sun.org.apache.xml.internal.security.
 	* @return The canonicalize stream.
 	* @throws CanonicalizationException
 	*/
-	@:overload public function engineCanonicalize(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function engineCanonicalize(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* @param _writer The _writer to set.
 	*/
-	@:overload override public function setWriter(_writer : java.io.OutputStream) : Void;
+	@:overload @:public override public function setWriter(_writer : java.io.OutputStream) : Void;
 	
 	
 }

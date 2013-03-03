@@ -25,25 +25,25 @@ package com.sun.corba.se.impl.dynamicany;
 */
 @:internal extern class DynAnyCollectionImpl extends com.sun.corba.se.impl.dynamicany.DynAnyConstructedImpl
 {
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, any : org.omg.CORBA.Any, copyValue : Bool) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, any : org.omg.CORBA.Any, copyValue : Bool) : Void;
 	
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload private function createDefaultComponentAt(i : Int, contentType : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:protected private function createDefaultComponentAt(i : Int, contentType : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload private function getContentType() : org.omg.CORBA.TypeCode;
+	@:overload @:protected private function getContentType() : org.omg.CORBA.TypeCode;
 	
-	@:overload private function getBound() : Int;
+	@:overload @:protected private function getBound() : Int;
 	
-	@:overload public function get_elements() : java.NativeArray<org.omg.CORBA.Any>;
+	@:overload @:public public function get_elements() : java.NativeArray<org.omg.CORBA.Any>;
 	
-	@:overload @:abstract private function checkValue(value : java.NativeArray<org.omg.CORBA.Object>) : Void;
+	@:overload @:protected @:abstract private function checkValue(value : java.NativeArray<org.omg.CORBA.Object>) : Void;
 	
-	@:overload public function set_elements(value : java.NativeArray<org.omg.CORBA.Any>) : Void;
+	@:overload @:public public function set_elements(value : java.NativeArray<org.omg.CORBA.Any>) : Void;
 	
-	@:overload public function get_elements_as_dyn_any() : java.NativeArray<org.omg.DynamicAny.DynAny>;
+	@:overload @:public public function get_elements_as_dyn_any() : java.NativeArray<org.omg.DynamicAny.DynAny>;
 	
-	@:overload public function set_elements_as_dyn_any(value : java.NativeArray<org.omg.DynamicAny.DynAny>) : Void;
+	@:overload @:public public function set_elements_as_dyn_any(value : java.NativeArray<org.omg.DynamicAny.DynAny>) : Void;
 	
 	
 }

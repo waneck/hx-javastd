@@ -29,74 +29,74 @@ extern class LinkInfo
 	* The ClassDoc we want to link to.  Null if we are not linking
 	* to a ClassDoc.
 	*/
-	public var classDoc : com.sun.javadoc.ClassDoc;
+	@:public public var classDoc : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* The executable member doc we want to link to.  Null if we are not linking
 	* to an executable member.
 	*/
-	public var executableMemberDoc : com.sun.javadoc.ExecutableMemberDoc;
+	@:public public var executableMemberDoc : com.sun.javadoc.ExecutableMemberDoc;
 	
 	/**
 	* The Type we want to link to.  Null if we are not linking to a type.
 	*/
-	public var type : com.sun.javadoc.Type;
+	@:public public var type : com.sun.javadoc.Type;
 	
 	/**
 	* True if this is a link to a VarArg.
 	*/
-	public var isVarArg : Bool;
+	@:public public var isVarArg : Bool;
 	
 	/**
 	* Set this to true to indicate that you are linking to a type parameter.
 	*/
-	public var isTypeBound : Bool;
+	@:public public var isTypeBound : Bool;
 	
 	/**
 	* The label for the link.
 	*/
-	public var label : String;
+	@:public public var label : String;
 	
 	/**
 	* True if the link should be strong.
 	*/
-	public var isStrong : Bool;
+	@:public public var isStrong : Bool;
 	
 	/**
 	* True if we should include the type in the link label.  False otherwise.
 	*/
-	public var includeTypeInClassLinkLabel : Bool;
+	@:public public var includeTypeInClassLinkLabel : Bool;
 	
 	/**
 	* True if we should include the type as seperate link.  False otherwise.
 	*/
-	public var includeTypeAsSepLink : Bool;
+	@:public public var includeTypeAsSepLink : Bool;
 	
 	/**
 	* True if we should exclude the type bounds for the type parameter.
 	*/
-	public var excludeTypeBounds : Bool;
+	@:public public var excludeTypeBounds : Bool;
 	
 	/**
 	* True if we should print the type parameters, but not link them.
 	*/
-	public var excludeTypeParameterLinks : Bool;
+	@:public public var excludeTypeParameterLinks : Bool;
 	
 	/**
 	* True if we should print the type bounds, but not link them.
 	*/
-	public var excludeTypeBoundsLinks : Bool;
+	@:public public var excludeTypeBoundsLinks : Bool;
 	
 	/**
 	* By default, the link can be to the page it's already on.  However,
 	* there are cases where we don't want this (e.g. heading of class page).
 	*/
-	public var linkToSelf : Bool;
+	@:public public var linkToSelf : Bool;
 	
 	/**
 	* The display length for the link.
 	*/
-	public var displayLength : Int;
+	@:public public var displayLength : Int;
 	
 	/**
 	* Return the id indicating where the link appears in the documentation.
@@ -104,14 +104,14 @@ extern class LinkInfo
 	*
 	* @return the id indicating where the link appears in the documentation.
 	*/
-	@:overload @:abstract public function getContext() : Int;
+	@:overload @:public @:abstract public function getContext() : Int;
 	
 	/**
 	* Set the context.
 	*
 	* @param c the context id to set.
 	*/
-	@:overload @:abstract public function setContext(c : Int) : Void;
+	@:overload @:public @:abstract public function setContext(c : Int) : Void;
 	
 	/**
 	* Return true if this link is linkable and false if we can't link to the
@@ -120,7 +120,7 @@ extern class LinkInfo
 	* @return true if this link is linkable and false if we can't link to the
 	* desired place.
 	*/
-	@:overload @:abstract public function isLinkable() : Bool;
+	@:overload @:public @:abstract public function isLinkable() : Bool;
 	
 	/**
 	* Return the label for this class link.
@@ -128,7 +128,7 @@ extern class LinkInfo
 	* @param configuration the current configuration of the doclet.
 	* @return the label for this class link.
 	*/
-	@:overload public function getClassLinkLabel(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : String;
+	@:overload @:public public function getClassLinkLabel(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : String;
 	
 	
 }

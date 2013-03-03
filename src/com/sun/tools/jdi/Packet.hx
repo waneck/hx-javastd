@@ -25,21 +25,21 @@ package com.sun.tools.jdi;
 */
 extern class Packet
 {
-	public static var NoFlags(default, null) : java.StdTypes.Int16;
+	@:public @:final @:static public static var NoFlags(default, null) : java.StdTypes.Int16;
 	
-	public static var Reply(default, null) : java.StdTypes.Int16;
+	@:public @:final @:static public static var Reply(default, null) : java.StdTypes.Int16;
 	
-	public static var ReplyNoError(default, null) : java.StdTypes.Int16;
+	@:public @:final @:static public static var ReplyNoError(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Return byte representation of the packet
 	*/
-	@:overload public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Create a packet from its byte array representation
 	*/
-	@:overload public static function fromByteArray(b : java.NativeArray<java.StdTypes.Int8>) : com.sun.tools.jdi.Packet;
+	@:overload @:public @:static public static function fromByteArray(b : java.NativeArray<java.StdTypes.Int8>) : com.sun.tools.jdi.Packet;
 	
 	
 }

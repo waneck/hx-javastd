@@ -25,18 +25,18 @@ package com.sun.codemodel.internal.fmt;
 */
 extern class JStaticJavaFile extends com.sun.codemodel.internal.JResourceFile
 {
-	@:overload public function new(_pkg : com.sun.codemodel.internal.JPackage, className : String, _resourceName : String) : Void;
+	@:overload @:public public function new(_pkg : com.sun.codemodel.internal.JPackage, className : String, _resourceName : String) : Void;
 	
-	@:overload public function new(_pkg : com.sun.codemodel.internal.JPackage, _className : String, _source : java.net.URL, _filter : com.sun.codemodel.internal.fmt.JStaticJavaFile.JStaticJavaFile_LineFilter) : Void;
+	@:overload @:public public function new(_pkg : com.sun.codemodel.internal.JPackage, _className : String, _source : java.net.URL, _filter : com.sun.codemodel.internal.fmt.JStaticJavaFile.JStaticJavaFile_LineFilter) : Void;
 	
 	/**
 	* Returns a class object that represents a statically generated code.
 	*/
-	@:overload @:final public function getJClass() : com.sun.codemodel.internal.JClass;
+	@:overload @:public @:final public function getJClass() : com.sun.codemodel.internal.JClass;
 	
-	@:overload private function isResource() : Bool;
+	@:overload @:protected override private function isResource() : Bool;
 	
-	@:overload private function build(os : java.io.OutputStream) : Void;
+	@:overload @:protected override private function build(os : java.io.OutputStream) : Void;
 	
 	
 }
@@ -69,31 +69,31 @@ extern class JStaticJavaFile extends com.sun.codemodel.internal.JResourceFile
 */
 @:native('com$sun$codemodel$internal$fmt$JStaticJavaFile$ChainFilter') extern class JStaticJavaFile_ChainFilter implements com.sun.codemodel.internal.fmt.JStaticJavaFile.JStaticJavaFile_LineFilter
 {
-	@:overload public function new(first : com.sun.codemodel.internal.fmt.JStaticJavaFile.JStaticJavaFile_LineFilter, second : com.sun.codemodel.internal.fmt.JStaticJavaFile.JStaticJavaFile_LineFilter) : Void;
+	@:overload @:public public function new(first : com.sun.codemodel.internal.fmt.JStaticJavaFile.JStaticJavaFile_LineFilter, second : com.sun.codemodel.internal.fmt.JStaticJavaFile.JStaticJavaFile_LineFilter) : Void;
 	
-	@:overload public function process(line : String) : String;
+	@:overload @:public public function process(line : String) : String;
 	
 	
 }
 @:native('com$sun$codemodel$internal$fmt$JStaticJavaFile$JStaticClass') @:internal extern class JStaticJavaFile_JStaticClass extends com.sun.codemodel.internal.JClass
 {
-	@:overload public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload public function fullName() : String;
+	@:overload @:public override public function fullName() : String;
 	
-	@:overload public function _package() : com.sun.codemodel.internal.JPackage;
+	@:overload @:public override public function _package() : com.sun.codemodel.internal.JPackage;
 	
-	@:overload public function _extends() : com.sun.codemodel.internal.JClass;
+	@:overload @:public override public function _extends() : com.sun.codemodel.internal.JClass;
 	
-	@:overload public function _implements() : java.util.Iterator<com.sun.codemodel.internal.JClass>;
+	@:overload @:public override public function _implements() : java.util.Iterator<com.sun.codemodel.internal.JClass>;
 	
-	@:overload public function isInterface() : Bool;
+	@:overload @:public override public function isInterface() : Bool;
 	
-	@:overload public function isAbstract() : Bool;
+	@:overload @:public override public function isAbstract() : Bool;
 	
-	@:overload public function typeParams() : java.NativeArray<com.sun.codemodel.internal.JTypeVar>;
+	@:overload @:public override public function typeParams() : java.NativeArray<com.sun.codemodel.internal.JTypeVar>;
 	
-	@:overload private function substituteParams(variables : java.NativeArray<com.sun.codemodel.internal.JTypeVar>, bindings : java.util.List<com.sun.codemodel.internal.JClass>) : com.sun.codemodel.internal.JClass;
+	@:overload @:protected override private function substituteParams(variables : java.NativeArray<com.sun.codemodel.internal.JTypeVar>, bindings : java.util.List<com.sun.codemodel.internal.JClass>) : com.sun.codemodel.internal.JClass;
 	
 	
 }

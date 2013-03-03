@@ -35,7 +35,7 @@ package javax.print.attribute;
 	/**
 	* Constructs an UnsupportedOperationException with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an UnmodifiableSetException with the specified
@@ -43,7 +43,7 @@ package javax.print.attribute;
 	*
 	* @param message the detail message
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

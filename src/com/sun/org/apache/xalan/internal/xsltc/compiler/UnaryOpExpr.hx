@@ -23,26 +23,26 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class UnaryOpExpr extends com.sun.org.apache.xalan.internal.xsltc.compiler.Expression
 {
-	@:overload public function new(left : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression) : Void;
+	@:overload @:public public function new(left : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression) : Void;
 	
 	/**
 	* Returns true if this expressions contains a call to position(). This is
 	* needed for context changes in node steps containing multiple predicates.
 	*/
-	@:overload override public function hasPositionCall() : Bool;
+	@:overload @:public override public function hasPositionCall() : Bool;
 	
 	/**
 	* Returns true if this expressions contains a call to last()
 	*/
-	@:overload override public function hasLastCall() : Bool;
+	@:overload @:public override public function hasLastCall() : Bool;
 	
-	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

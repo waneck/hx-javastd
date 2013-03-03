@@ -35,28 +35,28 @@ package javax.management;
 	/**
 	* Basic Constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new BinaryRelQueryExp with operator op applied on v1 and
 	* v2 values.
 	*/
-	@:overload public function new(op : Int, v1 : javax.management.ValueExp, v2 : javax.management.ValueExp) : Void;
+	@:overload @:public public function new(op : Int, v1 : javax.management.ValueExp, v2 : javax.management.ValueExp) : Void;
 	
 	/**
 	* Returns the operator of the query.
 	*/
-	@:overload public function getOperator() : Int;
+	@:overload @:public public function getOperator() : Int;
 	
 	/**
 	* Returns the left value of the query.
 	*/
-	@:overload public function getLeftValue() : javax.management.ValueExp;
+	@:overload @:public public function getLeftValue() : javax.management.ValueExp;
 	
 	/**
 	* Returns the right value of the query.
 	*/
-	@:overload public function getRightValue() : javax.management.ValueExp;
+	@:overload @:public public function getRightValue() : javax.management.ValueExp;
 	
 	/**
 	* Applies the BinaryRelQueryExp on an MBean.
@@ -70,12 +70,12 @@ package javax.management;
 	* @exception BadAttributeValueExpException
 	* @exception InvalidApplicationException
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function apply(name : javax.management.ObjectName) : Bool;
 	
 	/**
 	* Returns the string representing the object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

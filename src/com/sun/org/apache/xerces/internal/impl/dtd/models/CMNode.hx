@@ -67,35 +67,35 @@ package com.sun.org.apache.xerces.internal.impl.dtd.models;
 */
 extern class CMNode
 {
-	@:overload public function new(type : Int) : Void;
+	@:overload @:public public function new(type : Int) : Void;
 	
-	@:overload @:abstract public function isNullable() : Bool;
+	@:overload @:public @:abstract public function isNullable() : Bool;
 	
-	@:overload @:final public function type() : Int;
+	@:overload @:public @:final public function type() : Int;
 	
-	@:overload @:final public function firstPos() : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet;
+	@:overload @:public @:final public function firstPos() : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet;
 	
-	@:overload @:final public function lastPos() : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet;
+	@:overload @:public @:final public function lastPos() : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet;
 	
-	@:overload @:final public function setMaxStates(maxStates : Int) : Void;
+	@:overload @:public @:final public function setMaxStates(maxStates : Int) : Void;
 	
 	/**
 	* Allows the user to set arbitrary data on this content model
 	* node. This is used by the a{n,m} optimization that runs
 	* in constant space.
 	*/
-	@:overload public function setUserData(userData : Dynamic) : Void;
+	@:overload @:public public function setUserData(userData : Dynamic) : Void;
 	
 	/**
 	* Allows the user to get arbitrary data set on this content
 	* model node. This is used by the a{n,m} optimization that runs
 	* in constant space.
 	*/
-	@:overload public function getUserData() : Dynamic;
+	@:overload @:public public function getUserData() : Dynamic;
 	
-	@:overload @:abstract private function calcFirstPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
+	@:overload @:protected @:abstract private function calcFirstPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
-	@:overload @:abstract private function calcLastPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
+	@:overload @:protected @:abstract private function calcLastPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
 	
 }

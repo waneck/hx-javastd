@@ -25,15 +25,15 @@ package com.sun.corba.se.impl.ior;
 */
 extern class ObjectIdImpl implements com.sun.corba.se.spi.ior.ObjectId
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function new(id : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(id : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function getId() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getId() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	
 }

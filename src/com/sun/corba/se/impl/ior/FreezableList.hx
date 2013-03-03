@@ -25,31 +25,31 @@ package com.sun.corba.se.impl.ior;
 */
 extern class FreezableList extends java.util.AbstractList<Dynamic>
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload public function new(delegate : java.util.List<Dynamic>, immutable : Bool) : Void;
+	@:overload @:public public function new(delegate : java.util.List<Dynamic>, immutable : Bool) : Void;
 	
-	@:overload public function new(delegate : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function new(delegate : java.util.List<Dynamic>) : Void;
 	
-	@:overload public function makeImmutable() : Void;
+	@:overload @:public public function makeImmutable() : Void;
 	
-	@:overload public function isImmutable() : Bool;
+	@:overload @:public public function isImmutable() : Bool;
 	
-	@:overload public function makeElementsImmutable() : Void;
+	@:overload @:public public function makeElementsImmutable() : Void;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function get(index : Int) : Dynamic;
+	@:overload @:public override public function get(index : Int) : Dynamic;
 	
-	@:overload public function set(index : Int, element : Dynamic) : Dynamic;
+	@:overload @:public override public function set(index : Int, element : Dynamic) : Dynamic;
 	
-	@:overload public function add(index : Int, element : Dynamic) : Void;
+	@:overload @:public override public function add(index : Int, element : Dynamic) : Void;
 	
-	@:overload public function remove(index : Int) : Dynamic;
+	@:overload @:public override public function remove(index : Int) : Dynamic;
 	
-	@:overload public function subList(fromIndex : Int, toIndex : Int) : java.util.List<Dynamic>;
+	@:overload @:public override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<Dynamic>;
 	
 	
 }

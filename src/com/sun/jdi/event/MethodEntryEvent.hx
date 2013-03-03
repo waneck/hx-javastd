@@ -46,7 +46,7 @@ package com.sun.jdi.event;
 	*
 	* @return a {@link Method} which mirrors the method that was entered.
 	*/
-	@:overload public function method() : com.sun.jdi.Method;
+	@:overload @:public public function method() : com.sun.jdi.Method;
 	
 	
 }

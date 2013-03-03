@@ -32,13 +32,13 @@ package sun.nio.fs;
 }
 @:native('sun$nio$fs$UnixUserPrincipals$User') @:internal extern class UnixUserPrincipals_User implements java.nio.file.attribute.UserPrincipal
 {
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

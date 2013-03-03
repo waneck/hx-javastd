@@ -32,7 +32,7 @@ extern class StAXResult extends javax.xml.transform.sax.SAXResult
 	* @param writer the XMLStreamWriter
 	* @throws IllegalArgumentException iff the writer is null
 	*/
-	@:overload public function new(writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function new(writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	
 }

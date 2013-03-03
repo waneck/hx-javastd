@@ -28,51 +28,51 @@ package com.sun.org.apache.xerces.internal.impl;
 */
 extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.XMLLocator
 {
-	private var fCurrentEntity : com.sun.xml.internal.stream.Entity.Entity_ScannedEntity;
+	@:protected private var fCurrentEntity : com.sun.xml.internal.stream.Entity.Entity_ScannedEntity;
 	
-	private var fBufferSize : Int;
+	@:protected private var fBufferSize : Int;
 	
-	private var fEntityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager;
+	@:protected private var fEntityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager;
 	
-	public static var VALID_NAMES(default, null) : java.NativeArray<Bool>;
+	@:public @:static @:final public static var VALID_NAMES(default, null) : java.NativeArray<Bool>;
 	
-	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
-	private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
+	@:protected private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
 	
 	/**
 	* Allow Java encoding names. This feature identifier is:
 	* http://apache.org/xml/features/allow-java-encodings
 	*/
-	private var fAllowJavaEncodings : Bool;
+	@:protected private var fAllowJavaEncodings : Bool;
 	
 	/** Property identifier: symbol table. */
-	private static var SYMBOL_TABLE(default, null) : String;
+	@:protected @:static @:final private static var SYMBOL_TABLE(default, null) : String;
 	
 	/** Property identifier: error reporter. */
-	private static var ERROR_REPORTER(default, null) : String;
+	@:protected @:static @:final private static var ERROR_REPORTER(default, null) : String;
 	
 	/** Feature identifier: allow Java encodings. */
-	private static var ALLOW_JAVA_ENCODINGS(default, null) : String;
+	@:protected @:static @:final private static var ALLOW_JAVA_ENCODINGS(default, null) : String;
 	
-	private var fPropertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager;
+	@:protected private var fPropertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**  private constructor, this class can only be instantiated within this class. Instance of this class should
 	*    be obtained using getEntityScanner() or getEntityScanner(ScannedEntity scannedEntity)
 	*    @see getEntityScanner()
 	*    @see getEntityScanner(ScannedEntity)
 	*/
-	@:overload public function new(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager, entityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager) : Void;
+	@:overload @:public public function new(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager, entityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager) : Void;
 	
-	@:overload @:final public function setBufferSize(size : Int) : Void;
+	@:overload @:public @:final public function setBufferSize(size : Int) : Void;
 	
 	/**
 	* Resets the components.
 	*/
-	@:overload public function reset(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function reset(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* Resets the component. The component can query the component manager
@@ -88,9 +88,9 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	*                      SAXNotRecognizedException or a
 	*                      SAXNotSupportedException.
 	*/
-	@:overload public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
-	@:overload @:final public function reset(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, entityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager, reporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter) : Void;
+	@:overload @:public @:final public function reset(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, entityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager, reporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter) : Void;
 	
 	/**
 	* Returns the XML version of the current entity. This will normally be the
@@ -102,7 +102,7 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	* final once the XML or text declaration has been read or once it has been
 	* determined that there is no such declaration.
 	*/
-	@:overload @:final public function getXMLVersion() : String;
+	@:overload @:public @:final public function getXMLVersion() : String;
 	
 	/**
 	* Sets the XML version. This method is used by the
@@ -111,70 +111,70 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @param xmlVersion the XML version of the current entity
 	*/
-	@:overload @:final public function setXMLVersion(xmlVersion : String) : Void;
+	@:overload @:public @:final public function setXMLVersion(xmlVersion : String) : Void;
 	
 	/** set the instance of current scanned entity.
 	*   @param ScannedEntity
 	*/
-	@:overload @:final public function setCurrentEntity(scannedEntity : com.sun.xml.internal.stream.Entity.Entity_ScannedEntity) : Void;
+	@:overload @:public @:final public function setCurrentEntity(scannedEntity : com.sun.xml.internal.stream.Entity.Entity_ScannedEntity) : Void;
 	
-	@:overload public function getCurrentEntity() : com.sun.xml.internal.stream.Entity.Entity_ScannedEntity;
+	@:overload @:public public function getCurrentEntity() : com.sun.xml.internal.stream.Entity.Entity_ScannedEntity;
 	
 	/**
 	* Returns the base system identifier of the currently scanned
 	* entity, or null if none is available.
 	*/
-	@:overload @:final public function getBaseSystemId() : String;
+	@:overload @:public @:final public function getBaseSystemId() : String;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier#setBaseSystemId(String)
 	*/
-	@:overload public function setBaseSystemId(systemId : String) : Void;
+	@:overload @:public public function setBaseSystemId(systemId : String) : Void;
 	
-	@:overload @:final public function getLineNumber() : Int;
+	@:overload @:public @:final public function getLineNumber() : Int;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.XMLLocator#setLineNumber(int)
 	*/
-	@:overload public function setLineNumber(line : Int) : Void;
+	@:overload @:public public function setLineNumber(line : Int) : Void;
 	
-	@:overload @:final public function getColumnNumber() : Int;
+	@:overload @:public @:final public function getColumnNumber() : Int;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.XMLLocator#setColumnNumber(int)
 	*/
-	@:overload public function setColumnNumber(col : Int) : Void;
+	@:overload @:public public function setColumnNumber(col : Int) : Void;
 	
-	@:overload @:final public function getCharacterOffset() : Int;
+	@:overload @:public @:final public function getCharacterOffset() : Int;
 	
 	/** Returns the expanded system identifier.  */
-	@:overload @:final public function getExpandedSystemId() : String;
+	@:overload @:public @:final public function getExpandedSystemId() : String;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier#setExpandedSystemId(String)
 	*/
-	@:overload public function setExpandedSystemId(systemId : String) : Void;
+	@:overload @:public public function setExpandedSystemId(systemId : String) : Void;
 	
 	/** Returns the literal system identifier.  */
-	@:overload @:final public function getLiteralSystemId() : String;
+	@:overload @:public @:final public function getLiteralSystemId() : String;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier#setLiteralSystemId(String)
 	*/
-	@:overload public function setLiteralSystemId(systemId : String) : Void;
+	@:overload @:public public function setLiteralSystemId(systemId : String) : Void;
 	
 	/** Returns the public identifier.  */
-	@:overload @:final public function getPublicId() : String;
+	@:overload @:public @:final public function getPublicId() : String;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier#setPublicId(String)
 	*/
-	@:overload public function setPublicId(publicId : String) : Void;
+	@:overload @:public public function setPublicId(publicId : String) : Void;
 	
 	/** the version of the current entity being scanned */
-	@:overload public function setVersion(version : String) : Void;
+	@:overload @:public public function setVersion(version : String) : Void;
 	
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
 	/**
 	* Returns the encoding of the current entity.
@@ -184,7 +184,7 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	* having been specified on the XMLInputSource, the parser
 	* will make an initial "guess" which could be in error.
 	*/
-	@:overload @:final public function getEncoding() : String;
+	@:overload @:public @:final public function getEncoding() : String;
 	
 	/**
 	* Sets the encoding of the scanner. This method is used by the
@@ -204,12 +204,12 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @see com.sun.org.apache.xerces.internal.util.EncodingMap
 	*/
-	@:overload @:final public function setEncoding(encoding : String) : Void;
+	@:overload @:public @:final public function setEncoding(encoding : String) : Void;
 	
 	/** Returns true if the current entity being scanned is external. */
-	@:overload @:final public function isExternal() : Bool;
+	@:overload @:public @:final public function isExternal() : Bool;
 	
-	@:overload public function getChar(relative : Int) : Int;
+	@:overload @:public public function getChar(relative : Int) : Int;
 	
 	/**
 	* Returns the next character on the input.
@@ -219,7 +219,7 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload public function peekChar() : Int;
+	@:overload @:public public function peekChar() : Int;
 	
 	/**
 	* Returns the next character on the input.
@@ -229,7 +229,7 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload public function scanChar() : Int;
+	@:overload @:public public function scanChar() : Int;
 	
 	/**
 	* Returns a string matching the NMTOKEN production appearing immediately
@@ -246,7 +246,7 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	* @see com.sun.org.apache.xerces.internal.util.SymbolTable
 	* @see com.sun.org.apache.xerces.internal.util.XMLChar#isName
 	*/
-	@:overload public function scanNmtoken() : String;
+	@:overload @:public public function scanNmtoken() : String;
 	
 	/**
 	* Returns a string matching the Name production appearing immediately
@@ -264,7 +264,7 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	* @see com.sun.org.apache.xerces.internal.util.XMLChar#isName
 	* @see com.sun.org.apache.xerces.internal.util.XMLChar#isNameStart
 	*/
-	@:overload public function scanName() : String;
+	@:overload @:public public function scanName() : String;
 	
 	/**
 	* Scans a qualified name from the input, setting the fields of the
@@ -288,7 +288,7 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	* @see com.sun.org.apache.xerces.internal.util.XMLChar#isName
 	* @see com.sun.org.apache.xerces.internal.util.XMLChar#isNameStart
 	*/
-	@:overload public function scanQName(qname : com.sun.org.apache.xerces.internal.xni.QName) : Bool;
+	@:overload @:public public function scanQName(qname : com.sun.org.apache.xerces.internal.xni.QName) : Bool;
 	
 	/**
 	* CHANGED:
@@ -312,7 +312,7 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload public function scanContent(content : com.sun.org.apache.xerces.internal.xni.XMLString) : Int;
+	@:overload @:public public function scanContent(content : com.sun.org.apache.xerces.internal.xni.XMLString) : Int;
 	
 	/**
 	* Scans a range of attribute value data, setting the fields of the
@@ -342,7 +342,7 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload public function scanLiteral(quote : Int, content : com.sun.org.apache.xerces.internal.xni.XMLString) : Int;
+	@:overload @:public public function scanLiteral(quote : Int, content : com.sun.org.apache.xerces.internal.xni.XMLString) : Int;
 	
 	/**
 	* Scans a range of character data up to the specified delimiter,
@@ -367,7 +367,7 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload public function scanData(delimiter : String, buffer : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Bool;
+	@:overload @:public public function scanData(delimiter : String, buffer : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Bool;
 	
 	/**
 	* Skips a character appearing immediately on the input.
@@ -382,9 +382,9 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload public function skipChar(c : Int) : Bool;
+	@:overload @:public public function skipChar(c : Int) : Bool;
 	
-	@:overload public function isSpace(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function isSpace(ch : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Skips space characters appearing immediately on the input.
@@ -399,14 +399,14 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @see com.sun.org.apache.xerces.internal.util.XMLChar#isSpace
 	*/
-	@:overload public function skipSpaces() : Bool;
+	@:overload @:public public function skipSpaces() : Bool;
 	
 	/**
 	* @param legnth This function checks that following number of characters are available.
 	* to the underlying buffer.
 	* @return This function returns true if capacity asked is available.
 	*/
-	@:overload public function arrangeCapacity(length : Int) : Bool;
+	@:overload @:public public function arrangeCapacity(length : Int) : Bool;
 	
 	/**
 	* @param legnth This function checks that following number of characters are available.
@@ -415,7 +415,7 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	* @return This function returns true if capacity asked is available.
 	*
 	*/
-	@:overload public function arrangeCapacity(length : Int, changeEntity : Bool) : Bool;
+	@:overload @:public public function arrangeCapacity(length : Int, changeEntity : Bool) : Bool;
 	
 	/**
 	* Skips the specified string appearing immediately on the input.
@@ -430,9 +430,9 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload public function skipString(s : String) : Bool;
+	@:overload @:public public function skipString(s : String) : Bool;
 	
-	@:overload public function skipString(s : java.NativeArray<java.StdTypes.Char16>) : Bool;
+	@:overload @:public public function skipString(s : java.NativeArray<java.StdTypes.Char16>) : Bool;
 	
 	/**
 	* Creates a reader capable of reading the given input stream in
@@ -450,7 +450,7 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @return Returns a reader.
 	*/
-	@:overload private function createReader(inputStream : java.io.InputStream, encoding : String, isBigEndian : Null<Bool>) : java.io.Reader;
+	@:overload @:protected private function createReader(inputStream : java.io.InputStream, encoding : String, isBigEndian : Null<Bool>) : java.io.Reader;
 	
 	/**
 	* Returns the IANA encoding name that is auto-detected from
@@ -462,14 +462,14 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	*  the second element a Boolean which is true iff the document is big endian, false
 	*  if it's little-endian, and null if the distinction isn't relevant.
 	*/
-	@:overload private function getEncodingName(b4 : java.NativeArray<java.StdTypes.Int8>, count : Int) : java.NativeArray<Dynamic>;
+	@:overload @:protected private function getEncodingName(b4 : java.NativeArray<java.StdTypes.Int8>, count : Int) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Registers the listener object and provides callback.
 	* @param listener listener to which call back should be provided when scanner buffer
 	* is being changed.
 	*/
-	@:overload public function registerListener(listener : com.sun.xml.internal.stream.XMLBufferListener) : Void;
+	@:overload @:public public function registerListener(listener : com.sun.xml.internal.stream.XMLBufferListener) : Void;
 	
 	/**
 	* Skips space characters appearing immediately on the input that would
@@ -488,7 +488,7 @@ extern class XMLEntityScanner implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @see com.sun.org.apache.xerces.internal.util.XMLChar#isSpace
 	*/
-	@:overload @:final public function skipDeclSpaces() : Bool;
+	@:overload @:public @:final public function skipDeclSpaces() : Bool;
 	
 	
 }

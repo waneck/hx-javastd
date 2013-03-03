@@ -25,39 +25,39 @@ package sun.awt.X11;
 */
 extern class XDataTransferer extends sun.awt.datatransfer.DataTransferer
 {
-	@:overload override public function getDefaultUnicodeEncoding() : String;
+	@:overload @:public override public function getDefaultUnicodeEncoding() : String;
 	
-	@:overload override public function isLocaleDependentTextFormat(format : haxe.Int64) : Bool;
+	@:overload @:public override public function isLocaleDependentTextFormat(format : haxe.Int64) : Bool;
 	
-	@:overload override public function isTextFormat(format : haxe.Int64) : Bool;
+	@:overload @:public override public function isTextFormat(format : haxe.Int64) : Bool;
 	
-	@:overload override private function getCharsetForTextFormat(lFormat : Null<haxe.Int64>) : String;
+	@:overload @:protected override private function getCharsetForTextFormat(lFormat : Null<haxe.Int64>) : String;
 	
-	@:overload override private function isURIListFormat(format : haxe.Int64) : Bool;
+	@:overload @:protected override private function isURIListFormat(format : haxe.Int64) : Bool;
 	
-	@:overload override public function isFileFormat(format : haxe.Int64) : Bool;
+	@:overload @:public override public function isFileFormat(format : haxe.Int64) : Bool;
 	
-	@:overload override public function isImageFormat(format : haxe.Int64) : Bool;
+	@:overload @:public override public function isImageFormat(format : haxe.Int64) : Bool;
 	
-	@:overload override private function getFormatForNativeAsLong(str : String) : Null<haxe.Int64>;
+	@:overload @:protected override private function getFormatForNativeAsLong(str : String) : Null<haxe.Int64>;
 	
-	@:overload override private function getNativeForFormat(format : haxe.Int64) : String;
+	@:overload @:protected override private function getNativeForFormat(format : haxe.Int64) : String;
 	
-	@:overload override public function getToolkitThreadBlockedHandler() : sun.awt.datatransfer.ToolkitThreadBlockedHandler;
+	@:overload @:public override public function getToolkitThreadBlockedHandler() : sun.awt.datatransfer.ToolkitThreadBlockedHandler;
 	
-	@:overload override private function imageToPlatformBytes(image : java.awt.Image, format : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function imageToPlatformBytes(image : java.awt.Image, format : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function convertFileListToBytes(fileList : java.util.ArrayList<String>) : java.io.ByteArrayOutputStream;
+	@:overload @:protected override private function convertFileListToBytes(fileList : java.util.ArrayList<String>) : java.io.ByteArrayOutputStream;
 	
 	/**
 	* Translates either a byte array or an input stream which contain
 	* platform-specific image data in the given format into an Image.
 	*/
-	@:overload override private function platformImageBytesOrStreamToImage(inputStream : java.io.InputStream, bytes : java.NativeArray<java.StdTypes.Int8>, format : haxe.Int64) : java.awt.Image;
+	@:overload @:protected override private function platformImageBytesOrStreamToImage(inputStream : java.io.InputStream, bytes : java.NativeArray<java.StdTypes.Int8>, format : haxe.Int64) : java.awt.Image;
 	
-	@:overload override private function dragQueryFile(bytes : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
+	@:overload @:protected override private function dragQueryFile(bytes : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
-	@:overload override private function dragQueryURIs(stream : java.io.InputStream, bytes : java.NativeArray<java.StdTypes.Int8>, format : haxe.Int64, localeTransferable : java.awt.datatransfer.Transferable) : java.NativeArray<java.net.URI>;
+	@:overload @:protected override private function dragQueryURIs(stream : java.io.InputStream, bytes : java.NativeArray<java.StdTypes.Int8>, format : haxe.Int64, localeTransferable : java.awt.datatransfer.Transferable) : java.NativeArray<java.net.URI>;
 	
 	/*
 	* The XDnD protocol prescribes that the Atoms used as targets for data
@@ -67,7 +67,7 @@ extern class XDataTransferer extends sun.awt.datatransfer.DataTransferer
 	* a valid MIME and return a list of flavors to which the data in this MIME
 	* type can be translated by the Data Transfer subsystem.
 	*/
-	@:overload override public function getPlatformMappingsForNative(nat : String) : java.util.List<Dynamic>;
+	@:overload @:public override public function getPlatformMappingsForNative(nat : String) : java.util.List<Dynamic>;
 	
 	/*
 	* The XDnD protocol prescribes that the Atoms used as targets for data
@@ -77,7 +77,7 @@ extern class XDataTransferer extends sun.awt.datatransfer.DataTransferer
 	* MIME types to which the data in this flavor can be translated by the Data
 	* Transfer subsystem.
 	*/
-	@:overload override public function getPlatformMappingsForFlavor(df : java.awt.datatransfer.DataFlavor) : java.util.List<Dynamic>;
+	@:overload @:public override public function getPlatformMappingsForFlavor(df : java.awt.datatransfer.DataFlavor) : java.util.List<Dynamic>;
 	
 	
 }

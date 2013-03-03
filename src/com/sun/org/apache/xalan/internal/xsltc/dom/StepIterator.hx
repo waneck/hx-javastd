@@ -26,28 +26,28 @@ extern class StepIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMAxi
 	/**
 	* A reference to the "outer" iterator.
 	*/
-	private var _source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:protected private var _source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* A reference to the "inner" iterator.
 	*/
-	private var _iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:protected private var _iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator) : Void;
+	@:overload @:public public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator) : Void;
 	
-	@:overload override public function setRestartable(isRestartable : Bool) : Void;
+	@:overload @:public override public function setRestartable(isRestartable : Bool) : Void;
 	
-	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
-	@:overload override public function setMark() : Void;
+	@:overload @:public override public function setMark() : Void;
 	
-	@:overload override public function gotoMark() : Void;
+	@:overload @:public override public function gotoMark() : Void;
 	
 	
 }

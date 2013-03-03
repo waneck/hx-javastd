@@ -37,57 +37,57 @@ package javax.swing.text.rtf;
 @:internal extern class RTFParser extends javax.swing.text.rtf.AbstractFilter
 {
 	/** The current RTF group nesting level. */
-	public var level : Int;
+	@:public public var level : Int;
 	
 	/** A stream to which to write warnings and debugging information
 	*  while parsing. This is set to <code>System.out</code> to log
 	*  any anomalous information to stdout. */
-	private var warnings : java.io.PrintStream;
+	@:protected private var warnings : java.io.PrintStream;
 	
 	/** Implemented by subclasses to interpret a parameter-less RTF keyword.
 	*  The keyword is passed without the leading '/' or any delimiting
 	*  whitespace. */
-	@:overload @:abstract public function handleKeyword(keyword : String) : Bool;
+	@:overload @:public @:abstract public function handleKeyword(keyword : String) : Bool;
 	
 	/** Implemented by subclasses to interpret a keyword with a parameter.
 	*  @param keyword   The keyword, as with <code>handleKeyword(String)</code>.
 	*  @param parameter The parameter following the keyword. */
-	@:overload @:abstract public function handleKeyword(keyword : String, parameter : Int) : Bool;
+	@:overload @:public @:abstract public function handleKeyword(keyword : String, parameter : Int) : Bool;
 	
 	/** Implemented by subclasses to interpret text from the RTF stream. */
-	@:overload @:abstract public function handleText(text : String) : Void;
+	@:overload @:public @:abstract public function handleText(text : String) : Void;
 	
-	@:overload public function handleText(ch : java.StdTypes.Char16) : Void;
+	@:overload @:public public function handleText(ch : java.StdTypes.Char16) : Void;
 	
 	/** Implemented by subclasses to handle the contents of the \bin keyword. */
-	@:overload @:abstract public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:abstract public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/** Implemented by subclasses to react to an increase
 	*  in the nesting level. */
-	@:overload @:abstract public function begingroup() : Void;
+	@:overload @:public @:abstract public function begingroup() : Void;
 	
 	/** Implemented by subclasses to react to the end of a group. */
-	@:overload @:abstract public function endgroup() : Void;
+	@:overload @:public @:abstract public function endgroup() : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function writeSpecial(b : Int) : Void;
+	@:overload @:public override public function writeSpecial(b : Int) : Void;
 	
-	@:overload private function warning(s : String) : Void;
+	@:overload @:protected private function warning(s : String) : Void;
 	
-	@:overload override public function write(s : String) : Void;
+	@:overload @:public override public function write(s : String) : Void;
 	
-	@:overload override public function write(ch : java.StdTypes.Char16) : Void;
+	@:overload @:public override public function write(ch : java.StdTypes.Char16) : Void;
 	
 	/** Flushes any buffered but not yet written characters.
 	*  Subclasses which override this method should call this
 	*  method <em>before</em> flushing
 	*  any of their own buffers. */
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/** Closes the parser. Currently, this simply does a <code>flush()</code>,
 	*  followed by some minimal consistency checks. */
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

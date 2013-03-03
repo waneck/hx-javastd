@@ -42,34 +42,34 @@ extern class BreakIterator implements java.lang.Cloneable
 	/**
 	* Constructor. BreakIterator is stateless and has no default behavior.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Create a copy of this iterator
 	* @return A copy of this
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* DONE is returned by previous(), next(), next(int), preceding(int)
 	* and following(int) when either the first or last text boundary has been
 	* reached.
 	*/
-	public static var DONE(default, null) : Int;
+	@:public @:static @:final public static var DONE(default, null) : Int;
 	
 	/**
 	* Returns the first boundary. The iterator's current position is set
 	* to the first text boundary.
 	* @return The character index of the first text boundary.
 	*/
-	@:overload @:abstract public function first() : Int;
+	@:overload @:public @:abstract public function first() : Int;
 	
 	/**
 	* Returns the last boundary. The iterator's current position is set
 	* to the last text boundary.
 	* @return The character index of the last text boundary.
 	*/
-	@:overload @:abstract public function last() : Int;
+	@:overload @:public @:abstract public function last() : Int;
 	
 	/**
 	* Returns the nth boundary from the current boundary. If either
@@ -90,7 +90,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* or <code>BreakIterator.DONE</code> if either first or last text boundary
 	* has been reached.
 	*/
-	@:overload @:abstract public function next(n : Int) : Int;
+	@:overload @:public @:abstract public function next(n : Int) : Int;
 	
 	/**
 	* Returns the boundary following the current boundary. If the current boundary
@@ -103,7 +103,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* Equivalent to next(1).
 	* @see #next(int)
 	*/
-	@:overload @:abstract public function next() : Int;
+	@:overload @:public @:abstract public function next() : Int;
 	
 	/**
 	* Returns the boundary preceding the current boundary. If the current boundary
@@ -114,7 +114,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* <code>BreakIterator.DONE</code> if the current boundary is the first text
 	* boundary.
 	*/
-	@:overload @:abstract public function previous() : Int;
+	@:overload @:public @:abstract public function previous() : Int;
 	
 	/**
 	* Returns the first boundary following the specified character offset. If the
@@ -130,7 +130,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* @exception  IllegalArgumentException if the specified offset is less than
 	* the first text boundary or greater than the last text boundary.
 	*/
-	@:overload @:abstract public function following(offset : Int) : Int;
+	@:overload @:public @:abstract public function following(offset : Int) : Int;
 	
 	/**
 	* Returns the last boundary preceding the specified character offset. If the
@@ -147,7 +147,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* the first text boundary or greater than the last text boundary.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function preceding(offset : Int) : Int;
+	@:require(java2) @:overload @:public public function preceding(offset : Int) : Int;
 	
 	/**
 	* Returns true if the specified character offset is a text boundary.
@@ -158,7 +158,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* the first text boundary or greater than the last text boundary.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function isBoundary(offset : Int) : Bool;
+	@:require(java2) @:overload @:public public function isBoundary(offset : Int) : Bool;
 	
 	/**
 	* Returns character index of the text boundary that was most
@@ -177,27 +177,27 @@ extern class BreakIterator implements java.lang.Cloneable
 	* @see #following(int)
 	* @see #preceding(int)
 	*/
-	@:overload @:abstract public function current() : Int;
+	@:overload @:public @:abstract public function current() : Int;
 	
 	/**
 	* Get the text being scanned
 	* @return the text being scanned
 	*/
-	@:overload @:abstract public function getText() : java.text.CharacterIterator;
+	@:overload @:public @:abstract public function getText() : java.text.CharacterIterator;
 	
 	/**
 	* Set a new text string to be scanned.  The current scan
 	* position is reset to first().
 	* @param newText new text to scan.
 	*/
-	@:overload public function setText(newText : String) : Void;
+	@:overload @:public public function setText(newText : String) : Void;
 	
 	/**
 	* Set a new text for scanning.  The current scan
 	* position is reset to first().
 	* @param newText new text to scan.
 	*/
-	@:overload @:abstract public function setText(newText : java.text.CharacterIterator) : Void;
+	@:overload @:public @:abstract public function setText(newText : java.text.CharacterIterator) : Void;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -205,7 +205,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* for the {@linkplain Locale#getDefault() default locale}.
 	* @return A break iterator for word breaks
 	*/
-	@:overload public static function getWordInstance() : java.text.BreakIterator;
+	@:overload @:public @:static public static function getWordInstance() : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -215,7 +215,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* @return A break iterator for word breaks
 	* @exception NullPointerException if <code>locale</code> is null
 	*/
-	@:overload public static function getWordInstance(locale : java.util.Locale) : java.text.BreakIterator;
+	@:overload @:public @:static public static function getWordInstance(locale : java.util.Locale) : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -223,7 +223,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* for the {@linkplain Locale#getDefault() default locale}.
 	* @return A break iterator for line breaks
 	*/
-	@:overload public static function getLineInstance() : java.text.BreakIterator;
+	@:overload @:public @:static public static function getLineInstance() : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -233,7 +233,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* @return A break iterator for line breaks
 	* @exception NullPointerException if <code>locale</code> is null
 	*/
-	@:overload public static function getLineInstance(locale : java.util.Locale) : java.text.BreakIterator;
+	@:overload @:public @:static public static function getLineInstance(locale : java.util.Locale) : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -241,7 +241,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* for the {@linkplain Locale#getDefault() default locale}.
 	* @return A break iterator for character breaks
 	*/
-	@:overload public static function getCharacterInstance() : java.text.BreakIterator;
+	@:overload @:public @:static public static function getCharacterInstance() : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -251,7 +251,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* @return A break iterator for character breaks
 	* @exception NullPointerException if <code>locale</code> is null
 	*/
-	@:overload public static function getCharacterInstance(locale : java.util.Locale) : java.text.BreakIterator;
+	@:overload @:public @:static public static function getCharacterInstance(locale : java.util.Locale) : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -259,7 +259,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* for the {@linkplain Locale#getDefault() default locale}.
 	* @return A break iterator for sentence breaks
 	*/
-	@:overload public static function getSentenceInstance() : java.text.BreakIterator;
+	@:overload @:public @:static public static function getSentenceInstance() : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -269,7 +269,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* @return A break iterator for sentence breaks
 	* @exception NullPointerException if <code>locale</code> is null
 	*/
-	@:overload public static function getSentenceInstance(locale : java.util.Locale) : java.text.BreakIterator;
+	@:overload @:public @:static public static function getSentenceInstance(locale : java.util.Locale) : java.text.BreakIterator;
 	
 	/**
 	* Returns an array of all locales for which the
@@ -284,7 +284,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* @return An array of locales for which localized
 	*         <code>BreakIterator</code> instances are available.
 	*/
-	@:overload @:synchronized public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
+	@:overload @:public @:static @:synchronized public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
 	
 	
 }
@@ -298,7 +298,7 @@ extern class BreakIterator implements java.lang.Cloneable
 */
 @:native('java$text$BreakIterator$BreakIteratorGetter') @:internal extern class BreakIterator_BreakIteratorGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.BreakIteratorProvider, java.text.BreakIterator>
 {
-	@:overload public function getObject(breakIteratorProvider : java.text.spi.BreakIteratorProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.BreakIterator;
+	@:overload @:public public function getObject(breakIteratorProvider : java.text.spi.BreakIteratorProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.BreakIterator;
 	
 	
 }

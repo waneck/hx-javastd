@@ -28,19 +28,19 @@ extern class PerfDataFile
 	/**
 	* The name of the of the system dependent temporary directory
 	*/
-	public static var tmpDirName(default, null) : String;
+	@:public @:static @:final public static var tmpDirName(default, null) : String;
 	
 	/**
 	* The file name prefix for PerfData shared memory files.
 	* <p>
 	* This prefix must be kept in sync with the prefix used by the JVM.
 	*/
-	public static var dirNamePrefix(default, null) : String;
+	@:public @:static @:final public static var dirNamePrefix(default, null) : String;
 	
 	/**
 	* The directory name pattern for the user directories.
 	*/
-	public static var userDirNamePattern(default, null) : String;
+	@:public @:static @:final public static var userDirNamePattern(default, null) : String;
 	
 	/**
 	* The file name pattern for PerfData shared memory files.
@@ -48,7 +48,7 @@ extern class PerfDataFile
 	* This pattern must be kept in synch with the file name pattern
 	* used by the 1.4.2 and later HotSpot JVM.
 	*/
-	public static var fileNamePattern(default, null) : String;
+	@:public @:static @:final public static var fileNamePattern(default, null) : String;
 	
 	/**
 	* The file name pattern for 1.4.1 PerfData shared memory files.
@@ -56,7 +56,7 @@ extern class PerfDataFile
 	* This pattern must be kept in synch with the file name pattern
 	* used by the 1.4.1 HotSpot JVM.
 	*/
-	public static var tmpFileNamePattern(default, null) : String;
+	@:public @:static @:final public static var tmpFileNamePattern(default, null) : String;
 	
 	/**
 	* Get a File object for the instrumentation backing store file
@@ -74,7 +74,7 @@ extern class PerfDataFile
 	* @see java.io.File
 	* @see #getTempDirectory()
 	*/
-	@:overload public static function getFile(lvmid : Int) : java.io.File;
+	@:overload @:public @:static public static function getFile(lvmid : Int) : java.io.File;
 	
 	/**
 	* Return the File object for the backing store file for the specified Java
@@ -92,7 +92,7 @@ extern class PerfDataFile
 	* @see java.io.File
 	* @see #getTempDirectory()
 	*/
-	@:overload public static function getFile(user : String, lvmid : Int) : java.io.File;
+	@:overload @:public @:static public static function getFile(user : String, lvmid : Int) : java.io.File;
 	
 	/**
 	* Method to extract a local Java Virtual Machine Identifier from the
@@ -105,7 +105,7 @@ extern class PerfDataFile
 	* @throws java.lang.IllegalArgumentException Thrown if the file name
 	*               does not conform to the expected pattern
 	*/
-	@:overload public static function getLocalVmId(file : java.io.File) : Int;
+	@:overload @:public @:static public static function getLocalVmId(file : java.io.File) : Int;
 	
 	/**
 	* Return the name of the temporary directory being searched for
@@ -118,7 +118,7 @@ extern class PerfDataFile
 	*
 	* @return String - the name of the temporary directory.
 	*/
-	@:overload public static function getTempDirectory() : String;
+	@:overload @:public @:static public static function getTempDirectory() : String;
 	
 	/**
 	* Return the name of the temporary directory to be searched
@@ -132,7 +132,7 @@ extern class PerfDataFile
 	*
 	* @return String - the name of the temporary directory.
 	*/
-	@:overload public static function getTempDirectory(user : String) : String;
+	@:overload @:public @:static public static function getTempDirectory(user : String) : String;
 	
 	
 }

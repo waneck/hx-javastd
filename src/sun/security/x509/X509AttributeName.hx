@@ -37,17 +37,17 @@ extern class X509AttributeName
 	*
 	* @param name the attribute name.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Return the prefix of the name.
 	*/
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
 	/**
 	* Return the suffix of the name.
 	*/
-	@:overload public function getSuffix() : String;
+	@:overload @:public public function getSuffix() : String;
 	
 	
 }

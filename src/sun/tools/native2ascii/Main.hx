@@ -66,14 +66,14 @@ extern class Main
 	/**
 	* Run the converter
 	*/
-	@:overload @:synchronized public function convert(argv : java.NativeArray<String>) : Bool;
+	@:overload @:public @:synchronized public function convert(argv : java.NativeArray<String>) : Bool;
 	
-	@:overload public static function canConvert(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function canConvert(ch : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Main program
 	*/
-	@:overload public static function main(argv : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(argv : java.NativeArray<String>) : Void;
 	
 	
 }

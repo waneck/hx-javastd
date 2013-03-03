@@ -31,7 +31,7 @@ package com.sun.corba.se.impl.corba;
 */
 extern class AsynchInvoke implements java.lang.Runnable
 {
-	@:overload public function new(o : com.sun.corba.se.spi.orb.ORB, reqToInvokeOn : com.sun.corba.se.impl.corba.RequestImpl, n : Bool) : Void;
+	@:overload @:public public function new(o : com.sun.corba.se.spi.orb.ORB, reqToInvokeOn : com.sun.corba.se.impl.corba.RequestImpl, n : Bool) : Void;
 	
 	/*
 	* The run operation calls the invocation on the request object,
@@ -40,7 +40,7 @@ extern class AsynchInvoke implements java.lang.Runnable
 	* waiting on a 'get_response' call.
 	*
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

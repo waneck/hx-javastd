@@ -25,27 +25,27 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 */
 @:internal extern class FastInfosetConnector extends com.sun.xml.internal.bind.v2.runtime.unmarshaller.StAXConnector
 {
-	@:overload public function new(fastInfosetStreamReader : com.sun.xml.internal.fastinfoset.stax.StAXDocumentParser, visitor : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor) : Void;
+	@:overload @:public public function new(fastInfosetStreamReader : com.sun.xml.internal.fastinfoset.stax.StAXDocumentParser, visitor : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor) : Void;
 	
-	@:overload public function bridge() : Void;
+	@:overload @:public override public function bridge() : Void;
 	
-	@:overload private function getCurrentLocation() : javax.xml.stream.Location;
+	@:overload @:protected override private function getCurrentLocation() : javax.xml.stream.Location;
 	
-	@:overload private function getCurrentQName() : String;
+	@:overload @:protected override private function getCurrentQName() : String;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$runtime$unmarshaller$FastInfosetConnector$CharSequenceImpl') @:internal extern class FastInfosetConnector_CharSequenceImpl implements java.lang.CharSequence
 {
-	@:overload public function set() : Void;
+	@:overload @:public public function set() : Void;
 	
-	@:overload @:final public function length() : Int;
+	@:overload @:public @:final public function length() : Int;
 	
-	@:overload @:final public function charAt(index : Int) : java.StdTypes.Char16;
+	@:overload @:public @:final public function charAt(index : Int) : java.StdTypes.Char16;
 	
-	@:overload @:final public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
+	@:overload @:public @:final public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

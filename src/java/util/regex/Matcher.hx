@@ -104,7 +104,7 @@ package java.util.regex;
 	*
 	* @return  The pattern for which this matcher was created
 	*/
-	@:overload public function pattern() : java.util.regex.Pattern;
+	@:overload @:public public function pattern() : java.util.regex.Pattern;
 	
 	/**
 	* Returns the match state of this matcher as a {@link MatchResult}.
@@ -114,7 +114,7 @@ package java.util.regex;
 	* @return  a <code>MatchResult</code> with the state of this matcher
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function toMatchResult() : java.util.regex.MatchResult;
+	@:require(java5) @:overload @:public public function toMatchResult() : java.util.regex.MatchResult;
 	
 	/**
 	* Changes the <tt>Pattern</tt> that this <tt>Matcher</tt> uses to
@@ -132,7 +132,7 @@ package java.util.regex;
 	*          If newPattern is <tt>null</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function usePattern(newPattern : java.util.regex.Pattern) : java.util.regex.Matcher;
+	@:require(java5) @:overload @:public public function usePattern(newPattern : java.util.regex.Pattern) : java.util.regex.Matcher;
 	
 	/**
 	* Resets this matcher.
@@ -144,7 +144,7 @@ package java.util.regex;
 	*
 	* @return  This matcher
 	*/
-	@:overload public function reset() : java.util.regex.Matcher;
+	@:overload @:public public function reset() : java.util.regex.Matcher;
 	
 	/**
 	* Resets this matcher with a new input sequence.
@@ -160,7 +160,7 @@ package java.util.regex;
 	*
 	* @return  This matcher
 	*/
-	@:overload public function reset(input : java.lang.CharSequence) : java.util.regex.Matcher;
+	@:overload @:public public function reset(input : java.lang.CharSequence) : java.util.regex.Matcher;
 	
 	/**
 	* Returns the start index of the previous match.  </p>
@@ -171,7 +171,7 @@ package java.util.regex;
 	*          If no match has yet been attempted,
 	*          or if the previous match operation failed
 	*/
-	@:overload public function start() : Int;
+	@:overload @:public public function start() : Int;
 	
 	/**
 	* Returns the start index of the subsequence captured by the given group
@@ -197,7 +197,7 @@ package java.util.regex;
 	*          If there is no capturing group in the pattern
 	*          with the given index
 	*/
-	@:overload public function start(group : Int) : Int;
+	@:overload @:public public function start(group : Int) : Int;
 	
 	/**
 	* Returns the offset after the last character matched.  </p>
@@ -208,7 +208,7 @@ package java.util.regex;
 	*          If no match has yet been attempted,
 	*          or if the previous match operation failed
 	*/
-	@:overload public function end() : Int;
+	@:overload @:public public function end() : Int;
 	
 	/**
 	* Returns the offset after the last character of the subsequence
@@ -234,7 +234,7 @@ package java.util.regex;
 	*          If there is no capturing group in the pattern
 	*          with the given index
 	*/
-	@:overload public function end(group : Int) : Int;
+	@:overload @:public public function end(group : Int) : Int;
 	
 	/**
 	* Returns the input subsequence matched by the previous match.
@@ -255,7 +255,7 @@ package java.util.regex;
 	*          If no match has yet been attempted,
 	*          or if the previous match operation failed
 	*/
-	@:overload public function group() : String;
+	@:overload @:public public function group() : String;
 	
 	/**
 	* Returns the input subsequence captured by the given group during the
@@ -292,7 +292,7 @@ package java.util.regex;
 	*          If there is no capturing group in the pattern
 	*          with the given index
 	*/
-	@:overload public function group(group : Int) : String;
+	@:overload @:public public function group(group : Int) : String;
 	
 	/**
 	* Returns the input subsequence captured by the given
@@ -321,7 +321,7 @@ package java.util.regex;
 	*          with the given name
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function group(name : String) : String;
+	@:require(java7) @:overload @:public public function group(name : String) : String;
 	
 	/**
 	* Returns the number of capturing groups in this matcher's pattern.
@@ -335,7 +335,7 @@ package java.util.regex;
 	*
 	* @return The number of capturing groups in this matcher's pattern
 	*/
-	@:overload public function groupCount() : Int;
+	@:overload @:public public function groupCount() : Int;
 	
 	/**
 	* Attempts to match the entire region against the pattern.
@@ -346,7 +346,7 @@ package java.util.regex;
 	* @return  <tt>true</tt> if, and only if, the entire region sequence
 	*          matches this matcher's pattern
 	*/
-	@:overload public function matches() : Bool;
+	@:overload @:public public function matches() : Bool;
 	
 	/**
 	* Attempts to find the next subsequence of the input sequence that matches
@@ -363,7 +363,7 @@ package java.util.regex;
 	* @return  <tt>true</tt> if, and only if, a subsequence of the input
 	*          sequence matches this matcher's pattern
 	*/
-	@:overload public function find() : Bool;
+	@:overload @:public public function find() : Bool;
 	
 	/**
 	* Resets this matcher and then attempts to find the next subsequence of
@@ -383,7 +383,7 @@ package java.util.regex;
 	*          sequence starting at the given index matches this matcher's
 	*          pattern
 	*/
-	@:overload public function find(start : Int) : Bool;
+	@:overload @:public public function find(start : Int) : Bool;
 	
 	/**
 	* Attempts to match the input sequence, starting at the beginning of the
@@ -399,7 +399,7 @@ package java.util.regex;
 	* @return  <tt>true</tt> if, and only if, a prefix of the input
 	*          sequence matches this matcher's pattern
 	*/
-	@:overload public function lookingAt() : Bool;
+	@:overload @:public public function lookingAt() : Bool;
 	
 	/**
 	* Returns a literal replacement <code>String</code> for the specified
@@ -416,7 +416,7 @@ package java.util.regex;
 	* @return  A literal string replacement
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function quoteReplacement(s : String) : String;
+	@:require(java5) @:overload @:public @:static public static function quoteReplacement(s : String) : String;
 	
 	/**
 	* Implements a non-terminal append-and-replace step.
@@ -498,7 +498,7 @@ package java.util.regex;
 	*          If the replacement string refers to a capturing group
 	*          that does not exist in the pattern
 	*/
-	@:overload public function appendReplacement(sb : java.lang.StringBuffer, replacement : String) : java.util.regex.Matcher;
+	@:overload @:public public function appendReplacement(sb : java.lang.StringBuffer, replacement : String) : java.util.regex.Matcher;
 	
 	/**
 	* Implements a terminal append-and-replace step.
@@ -514,7 +514,7 @@ package java.util.regex;
 	*
 	* @return  The target string buffer
 	*/
-	@:overload public function appendTail(sb : java.lang.StringBuffer) : java.lang.StringBuffer;
+	@:overload @:public public function appendTail(sb : java.lang.StringBuffer) : java.lang.StringBuffer;
 	
 	/**
 	* Replaces every subsequence of the input sequence that matches the
@@ -550,7 +550,7 @@ package java.util.regex;
 	*          by the replacement string, substituting captured subsequences
 	*          as needed
 	*/
-	@:overload public function replaceAll(replacement : String) : String;
+	@:overload @:public public function replaceAll(replacement : String) : String;
 	
 	/**
 	* Replaces the first subsequence of the input sequence that matches the
@@ -585,7 +585,7 @@ package java.util.regex;
 	*          subsequence by the replacement string, substituting captured
 	*          subsequences as needed
 	*/
-	@:overload public function replaceFirst(replacement : String) : String;
+	@:overload @:public public function replaceFirst(replacement : String) : String;
 	
 	/**
 	* Sets the limits of this matcher's region. The region is the part of the
@@ -612,7 +612,7 @@ package java.util.regex;
 	* @return  this matcher
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function region(start : Int, end : Int) : java.util.regex.Matcher;
+	@:require(java5) @:overload @:public public function region(start : Int, end : Int) : java.util.regex.Matcher;
 	
 	/**
 	* Reports the start index of this matcher's region. The
@@ -623,7 +623,7 @@ package java.util.regex;
 	* @return  The starting point of this matcher's region
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function regionStart() : Int;
+	@:require(java5) @:overload @:public public function regionStart() : Int;
 	
 	/**
 	* Reports the end index (exclusive) of this matcher's region.
@@ -634,7 +634,7 @@ package java.util.regex;
 	* @return  the ending point of this matcher's region
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function regionEnd() : Int;
+	@:require(java5) @:overload @:public public function regionEnd() : Int;
 	
 	/**
 	* Queries the transparency of region bounds for this matcher.
@@ -653,7 +653,7 @@ package java.util.regex;
 	* @see java.util.regex.Matcher#useTransparentBounds(boolean)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function hasTransparentBounds() : Bool;
+	@:require(java5) @:overload @:public public function hasTransparentBounds() : Bool;
 	
 	/**
 	* Sets the transparency of region bounds for this matcher.
@@ -681,7 +681,7 @@ package java.util.regex;
 	* @see java.util.regex.Matcher#hasTransparentBounds
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function useTransparentBounds(b : Bool) : java.util.regex.Matcher;
+	@:require(java5) @:overload @:public public function useTransparentBounds(b : Bool) : java.util.regex.Matcher;
 	
 	/**
 	* Queries the anchoring of region bounds for this matcher.
@@ -699,7 +699,7 @@ package java.util.regex;
 	* @see java.util.regex.Matcher#useAnchoringBounds(boolean)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function hasAnchoringBounds() : Bool;
+	@:require(java5) @:overload @:public public function hasAnchoringBounds() : Bool;
 	
 	/**
 	* Sets the anchoring of region bounds for this matcher.
@@ -722,7 +722,7 @@ package java.util.regex;
 	* @see java.util.regex.Matcher#hasAnchoringBounds
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function useAnchoringBounds(b : Bool) : java.util.regex.Matcher;
+	@:require(java5) @:overload @:public public function useAnchoringBounds(b : Bool) : java.util.regex.Matcher;
 	
 	/**
 	* <p>Returns the string representation of this matcher. The
@@ -732,7 +732,7 @@ package java.util.regex;
 	* @return  The string representation of this matcher
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function toString() : String;
+	@:require(java5) @:overload @:public public function toString() : String;
 	
 	/**
 	* <p>Returns true if the end of input was hit by the search engine in
@@ -745,7 +745,7 @@ package java.util.regex;
 	*          otherwise
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function hitEnd() : Bool;
+	@:require(java5) @:overload @:public public function hitEnd() : Bool;
 	
 	/**
 	* <p>Returns true if more input could change a positive match into a
@@ -761,7 +761,7 @@ package java.util.regex;
 	*          negative one.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function requireEnd() : Bool;
+	@:require(java5) @:overload @:public public function requireEnd() : Bool;
 	
 	
 }

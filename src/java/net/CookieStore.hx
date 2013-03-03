@@ -48,7 +48,7 @@ extern interface CookieStore
 	* @see #get
 	*
 	*/
-	@:overload public function add(uri : java.net.URI, cookie : java.net.HttpCookie) : Void;
+	@:overload @:public public function add(uri : java.net.URI, cookie : java.net.HttpCookie) : Void;
 	
 	/**
 	* Retrieve cookies associated with given URI, or whose domain matches the
@@ -63,7 +63,7 @@ extern interface CookieStore
 	* @see #add
 	*
 	*/
-	@:overload public function get(uri : java.net.URI) : java.util.List<java.net.HttpCookie>;
+	@:overload @:public public function get(uri : java.net.URI) : java.util.List<java.net.HttpCookie>;
 	
 	/**
 	* Get all not-expired cookies in cookie store.
@@ -71,7 +71,7 @@ extern interface CookieStore
 	* @return          an immutable list of http cookies;
 	*                  return empty list if there's no http cookie in store
 	*/
-	@:overload public function getCookies() : java.util.List<java.net.HttpCookie>;
+	@:overload @:public public function getCookies() : java.util.List<java.net.HttpCookie>;
 	
 	/**
 	* Get all URIs which identify the cookies in this cookie store.
@@ -80,7 +80,7 @@ extern interface CookieStore
 	*                  return empty list if no cookie in this cookie store
 	*                  is associated with an URI
 	*/
-	@:overload public function getURIs() : java.util.List<java.net.URI>;
+	@:overload @:public public function getURIs() : java.util.List<java.net.URI>;
 	
 	/**
 	* Remove a cookie from store.
@@ -95,14 +95,14 @@ extern interface CookieStore
 	*
 	* @throws NullPointerException if <tt>cookie</tt> is <tt>null</tt>
 	*/
-	@:overload public function remove(uri : java.net.URI, cookie : java.net.HttpCookie) : Bool;
+	@:overload @:public public function remove(uri : java.net.URI, cookie : java.net.HttpCookie) : Bool;
 	
 	/**
 	* Remove all cookies in this cookie store.
 	*
 	* @return          <tt>true</tt> if this store changed as a result of the call
 	*/
-	@:overload public function removeAll() : Bool;
+	@:overload @:public public function removeAll() : Bool;
 	
 	
 }

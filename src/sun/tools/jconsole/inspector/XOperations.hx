@@ -25,21 +25,21 @@ package sun.tools.jconsole.inspector;
 */
 extern class XOperations extends javax.swing.JPanel implements java.awt.event.ActionListener
 {
-	public static var OPERATION_INVOCATION_EVENT(default, null) : String;
+	@:public @:final @:static public static var OPERATION_INVOCATION_EVENT(default, null) : String;
 	
-	@:overload public function new(mbeansTab : sun.tools.jconsole.MBeansTab) : Void;
+	@:overload @:public public function new(mbeansTab : sun.tools.jconsole.MBeansTab) : Void;
 	
-	@:overload public function removeOperations() : Void;
+	@:overload @:public public function removeOperations() : Void;
 	
-	@:overload public function loadOperations(mbean : sun.tools.jconsole.inspector.XMBean, mbeanInfo : javax.management.MBeanInfo) : Void;
+	@:overload @:public public function loadOperations(mbean : sun.tools.jconsole.inspector.XMBean, mbeanInfo : javax.management.MBeanInfo) : Void;
 	
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function addOperationsListener(nl : javax.management.NotificationListener) : Void;
+	@:overload @:public public function addOperationsListener(nl : javax.management.NotificationListener) : Void;
 	
-	@:overload public function removeOperationsListener(nl : javax.management.NotificationListener) : Void;
+	@:overload @:public public function removeOperationsListener(nl : javax.management.NotificationListener) : Void;
 	
-	@:overload @:abstract private function updateOperations(operations : java.NativeArray<javax.management.MBeanOperationInfo>) : java.NativeArray<javax.management.MBeanOperationInfo>;
+	@:overload @:protected @:abstract private function updateOperations(operations : java.NativeArray<javax.management.MBeanOperationInfo>) : java.NativeArray<javax.management.MBeanOperationInfo>;
 	
 	
 }

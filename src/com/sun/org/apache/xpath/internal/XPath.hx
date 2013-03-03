@@ -29,7 +29,7 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	*
 	* @return the raw Expression object, which should not normally be null.
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* This function is used to fixup variables from QNames to stack frame
@@ -41,7 +41,7 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Set the raw expression object for this object.
@@ -49,7 +49,7 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	*
 	* @param exp the raw Expression object, which should not normally be null.
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	/**
 	* Get the SourceLocator on the expression object.
@@ -57,7 +57,7 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	*
 	* @return the SourceLocator on the expression object, which may be null.
 	*/
-	@:overload public function getLocator() : javax.xml.transform.SourceLocator;
+	@:overload @:public public function getLocator() : javax.xml.transform.SourceLocator;
 	
 	/**
 	* Return the XPath string associated with this object.
@@ -65,13 +65,13 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	*
 	* @return the XPath string associated with this object.
 	*/
-	@:overload public function getPatternString() : String;
+	@:overload @:public public function getPatternString() : String;
 	
 	/** Represents a select type expression. */
-	public static var SELECT(default, null) : Int;
+	@:public @:static @:final public static var SELECT(default, null) : Int;
 	
 	/** Represents a match type expression.  */
-	public static var MATCH(default, null) : Int;
+	@:public @:static @:final public static var MATCH(default, null) : Int;
 	
 	/**
 	* Construct an XPath object.
@@ -87,7 +87,7 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	*
 	* @throws javax.xml.transform.TransformerException if syntax or other error.
 	*/
-	@:overload public function new(exprString : String, locator : javax.xml.transform.SourceLocator, prefixResolver : com.sun.org.apache.xml.internal.utils.PrefixResolver, type : Int, errorListener : javax.xml.transform.ErrorListener) : Void;
+	@:overload @:public public function new(exprString : String, locator : javax.xml.transform.SourceLocator, prefixResolver : com.sun.org.apache.xml.internal.utils.PrefixResolver, type : Int, errorListener : javax.xml.transform.ErrorListener) : Void;
 	
 	/**
 	* Construct an XPath object.
@@ -103,7 +103,7 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	*
 	* @throws javax.xml.transform.TransformerException if syntax or other error.
 	*/
-	@:overload public function new(exprString : String, locator : javax.xml.transform.SourceLocator, prefixResolver : com.sun.org.apache.xml.internal.utils.PrefixResolver, type : Int, errorListener : javax.xml.transform.ErrorListener, aTable : com.sun.org.apache.xpath.internal.compiler.FunctionTable) : Void;
+	@:overload @:public public function new(exprString : String, locator : javax.xml.transform.SourceLocator, prefixResolver : com.sun.org.apache.xml.internal.utils.PrefixResolver, type : Int, errorListener : javax.xml.transform.ErrorListener, aTable : com.sun.org.apache.xpath.internal.compiler.FunctionTable) : Void;
 	
 	/**
 	* Construct an XPath object.
@@ -118,7 +118,7 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	*
 	* @throws javax.xml.transform.TransformerException if syntax or other error.
 	*/
-	@:overload public function new(exprString : String, locator : javax.xml.transform.SourceLocator, prefixResolver : com.sun.org.apache.xml.internal.utils.PrefixResolver, type : Int) : Void;
+	@:overload @:public public function new(exprString : String, locator : javax.xml.transform.SourceLocator, prefixResolver : com.sun.org.apache.xml.internal.utils.PrefixResolver, type : Int) : Void;
 	
 	/**
 	* Construct an XPath object.
@@ -127,7 +127,7 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	*
 	* @throws javax.xml.transform.TransformerException if syntax or other error.
 	*/
-	@:overload public function new(expr : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function new(expr : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	/**
 	* Given an expression and a context, evaluate the XPath
@@ -145,7 +145,7 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	* @throws javax.xml.transform.TransformerException
 	* @xsl.usage experimental
 	*/
-	@:overload public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, contextNode : org.w3c.dom.Node, namespaceContext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, contextNode : org.w3c.dom.Node, namespaceContext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Given an expression and a context, evaluate the XPath
@@ -162,7 +162,7 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	* @throws javax.xml.transform.TransformerException
 	* @xsl.usage experimental
 	*/
-	@:overload public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, contextNode : Int, namespaceContext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, contextNode : Int, namespaceContext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Given an expression and a context, evaluate the XPath
@@ -179,7 +179,7 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	* @throws javax.xml.transform.TransformerException
 	* @xsl.usage experimental
 	*/
-	@:overload public function bool(xctxt : com.sun.org.apache.xpath.internal.XPathContext, contextNode : Int, namespaceContext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Bool;
+	@:overload @:public public function bool(xctxt : com.sun.org.apache.xpath.internal.XPathContext, contextNode : Int, namespaceContext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Bool;
 	
 	/**
 	* Get the match score of the given node.
@@ -193,7 +193,7 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function getMatchScore(xctxt : com.sun.org.apache.xpath.internal.XPathContext, context : Int) : Float;
+	@:overload @:public public function getMatchScore(xctxt : com.sun.org.apache.xpath.internal.XPathContext, context : Int) : Float;
 	
 	/**
 	* Warn the user of an problem.
@@ -209,7 +209,7 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	* @throws TransformerException if the current ErrorListoner determines to
 	*                              throw an exception.
 	*/
-	@:overload public function warn(xctxt : com.sun.org.apache.xpath.internal.XPathContext, sourceNode : Int, msg : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function warn(xctxt : com.sun.org.apache.xpath.internal.XPathContext, sourceNode : Int, msg : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Tell the user of an assertion error, and probably throw an
@@ -220,7 +220,7 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	*
 	* @throws RuntimeException if the b argument is false.
 	*/
-	@:overload public function assertion(b : Bool, msg : String) : Void;
+	@:overload @:public public function assertion(b : Bool, msg : String) : Void;
 	
 	/**
 	* Tell the user of an error, and probably throw an
@@ -237,7 +237,7 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	* @throws TransformerException if the current ErrorListoner determines to
 	*                              throw an exception.
 	*/
-	@:overload public function error(xctxt : com.sun.org.apache.xpath.internal.XPathContext, sourceNode : Int, msg : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function error(xctxt : com.sun.org.apache.xpath.internal.XPathContext, sourceNode : Int, msg : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* This will traverse the heararchy, calling the visitor for
@@ -248,39 +248,39 @@ extern class XPath implements java.io.Serializable implements com.sun.org.apache
 	*              rewritten if needed.
 	* @param visitor The visitor whose appropriate method will be called.
 	*/
-	@:overload public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* The match score if no match is made.
 	* @xsl.usage advanced
 	*/
-	public static var MATCH_SCORE_NONE(default, null) : Float;
+	@:public @:static @:final public static var MATCH_SCORE_NONE(default, null) : Float;
 	
 	/**
 	* The match score if the pattern has the form
 	* of a QName optionally preceded by an @ character.
 	* @xsl.usage advanced
 	*/
-	public static var MATCH_SCORE_QNAME(default, null) : Float;
+	@:public @:static @:final public static var MATCH_SCORE_QNAME(default, null) : Float;
 	
 	/**
 	* The match score if the pattern pattern has the form NCName:*.
 	* @xsl.usage advanced
 	*/
-	public static var MATCH_SCORE_NSWILD(default, null) : Float;
+	@:public @:static @:final public static var MATCH_SCORE_NSWILD(default, null) : Float;
 	
 	/**
 	* The match score if the pattern consists of just a NodeTest.
 	* @xsl.usage advanced
 	*/
-	public static var MATCH_SCORE_NODETEST(default, null) : Float;
+	@:public @:static @:final public static var MATCH_SCORE_NODETEST(default, null) : Float;
 	
 	/**
 	* The match score if the pattern consists of something
 	* other than just a NodeTest or just a qname.
 	* @xsl.usage advanced
 	*/
-	public static var MATCH_SCORE_OTHER(default, null) : Float;
+	@:public @:static @:final public static var MATCH_SCORE_OTHER(default, null) : Float;
 	
 	
 }

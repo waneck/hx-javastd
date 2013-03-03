@@ -31,7 +31,7 @@ extern class UserPrincipalNotFoundException extends java.io.IOException
 	* @param   name
 	*          the principal name; may be {@code null}
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Returns the user principal name if this exception was created with the
@@ -39,7 +39,7 @@ extern class UserPrincipalNotFoundException extends java.io.IOException
 	*
 	* @return  the user principal name or {@code null}
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

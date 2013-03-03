@@ -28,29 +28,29 @@ package sun.awt.X11;
 	/**
 	* @param x,y,w,h coordinates of the untrusted window
 	*/
-	@:overload public function reposition(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function reposition(x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload private function getWMName() : String;
+	@:overload @:protected override private function getWMName() : String;
 	
-	@:overload public function getGraphics() : java.awt.Graphics;
+	@:overload @:public override public function getGraphics() : java.awt.Graphics;
 	
-	@:overload public function repaint() : Void;
+	@:overload @:public override public function repaint() : Void;
 	
-	@:overload public function handleExposeEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleExposeEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload private function isEventDisabled(e : sun.awt.X11.XEvent) : Bool;
+	@:overload @:protected override private function isEventDisabled(e : sun.awt.X11.XEvent) : Bool;
 	
-	@:overload private function stateChanged(time : haxe.Int64, oldState : Int, newState : Int) : Void;
+	@:overload @:protected override private function stateChanged(time : haxe.Int64, oldState : Int, newState : Int) : Void;
 	
-	@:overload private function setMouseAbove(above : Bool) : Void;
+	@:overload @:protected override private function setMouseAbove(above : Bool) : Void;
 	
-	@:overload private function enterNotify(window : haxe.Int64) : Void;
+	@:overload @:protected override private function enterNotify(window : haxe.Int64) : Void;
 	
-	@:overload private function leaveNotify(window : haxe.Int64) : Void;
+	@:overload @:protected override private function leaveNotify(window : haxe.Int64) : Void;
 	
-	@:overload public function xSetVisible(visible : Bool) : Void;
+	@:overload @:public override public function xSetVisible(visible : Bool) : Void;
 	
-	@:overload public function setSecurityWarningVisible(visible : Bool, doSchedule : Bool) : Void;
+	@:overload @:public public function setSecurityWarningVisible(visible : Bool, doSchedule : Bool) : Void;
 	
 	
 }

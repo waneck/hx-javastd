@@ -27,9 +27,9 @@ package sun.security.util;
 */
 extern class ResourcesMgr
 {
-	@:overload public static function getString(s : String) : String;
+	@:overload @:public @:static public static function getString(s : String) : String;
 	
-	@:overload public static function getString(s : String, altBundleName : String) : String;
+	@:overload @:public @:static public static function getString(s : String, altBundleName : String) : String;
 	
 	
 }

@@ -46,21 +46,21 @@ package com.sun.xml.internal.rngom.digested;
 */
 extern class DValuePattern extends com.sun.xml.internal.rngom.digested.DPattern
 {
-	@:overload public function new(datatypeLibrary : String, type : String, value : String, context : com.sun.xml.internal.rngom.parse.Context, ns : String) : Void;
+	@:overload @:public public function new(datatypeLibrary : String, type : String, value : String, context : com.sun.xml.internal.rngom.parse.Context, ns : String) : Void;
 	
-	@:overload public function getDatatypeLibrary() : String;
+	@:overload @:public public function getDatatypeLibrary() : String;
 	
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload public function getContext() : com.sun.xml.internal.rngom.parse.Context;
+	@:overload @:public public function getContext() : com.sun.xml.internal.rngom.parse.Context;
 	
-	@:overload public function getNs() : String;
+	@:overload @:public public function getNs() : String;
 	
-	@:overload public function isNullable() : Bool;
+	@:overload @:public override public function isNullable() : Bool;
 	
-	@:overload public function accept(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<Dynamic>) : Dynamic;
+	@:overload @:public override public function accept(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<Dynamic>) : Dynamic;
 	
 	
 }

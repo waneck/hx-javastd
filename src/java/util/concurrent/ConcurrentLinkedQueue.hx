@@ -37,7 +37,7 @@ extern class ConcurrentLinkedQueue<E> extends java.util.AbstractQueue<E> impleme
 	/**
 	* Creates a {@code ConcurrentLinkedQueue} that is initially empty.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a {@code ConcurrentLinkedQueue}
@@ -48,7 +48,7 @@ extern class ConcurrentLinkedQueue<E> extends java.util.AbstractQueue<E> impleme
 	* @throws NullPointerException if the specified collection or any
 	*         of its elements are null
 	*/
-	@:overload public function new(c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	/**
 	* Inserts the specified element at the tail of this queue.
@@ -58,7 +58,7 @@ extern class ConcurrentLinkedQueue<E> extends java.util.AbstractQueue<E> impleme
 	* @return {@code true} (as specified by {@link Collection#add})
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element at the tail of this queue.
@@ -67,18 +67,18 @@ extern class ConcurrentLinkedQueue<E> extends java.util.AbstractQueue<E> impleme
 	* @return {@code true} (as specified by {@link Queue#offer})
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function offer(e : E) : Bool;
+	@:overload @:public override public function offer(e : E) : Bool;
 	
-	@:overload override public function poll() : E;
+	@:overload @:public override public function poll() : E;
 	
-	@:overload override public function peek() : E;
+	@:overload @:public override public function peek() : E;
 	
 	/**
 	* Returns {@code true} if this queue contains no elements.
 	*
 	* @return {@code true} if this queue contains no elements
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns the number of elements in this queue.  If this queue
@@ -96,7 +96,7 @@ extern class ConcurrentLinkedQueue<E> extends java.util.AbstractQueue<E> impleme
 	*
 	* @return the number of elements in this queue
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns {@code true} if this queue contains the specified element.
@@ -106,7 +106,7 @@ extern class ConcurrentLinkedQueue<E> extends java.util.AbstractQueue<E> impleme
 	* @param o object to be checked for containment in this queue
 	* @return {@code true} if this queue contains the specified element
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Removes a single instance of the specified element from this queue,
@@ -119,7 +119,7 @@ extern class ConcurrentLinkedQueue<E> extends java.util.AbstractQueue<E> impleme
 	* @param o element to be removed from this queue, if present
 	* @return {@code true} if this queue changed as a result of the call
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Appends all of the elements in the specified collection to the end of
@@ -133,7 +133,7 @@ extern class ConcurrentLinkedQueue<E> extends java.util.AbstractQueue<E> impleme
 	*         of its elements are null
 	* @throws IllegalArgumentException if the collection is this queue
 	*/
-	@:overload override public function addAll(c : java.util.Collection<E>) : Bool;
+	@:overload @:public override public function addAll(c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Returns an array containing all of the elements in this queue, in
@@ -148,7 +148,7 @@ extern class ConcurrentLinkedQueue<E> extends java.util.AbstractQueue<E> impleme
 	*
 	* @return an array containing all of the elements in this queue
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this queue, in
@@ -186,7 +186,7 @@ extern class ConcurrentLinkedQueue<E> extends java.util.AbstractQueue<E> impleme
 	*         this queue
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Returns an iterator over the elements in this queue in proper sequence.
@@ -201,7 +201,7 @@ extern class ConcurrentLinkedQueue<E> extends java.util.AbstractQueue<E> impleme
 	*
 	* @return an iterator over the elements in this queue in proper sequence
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
 	
 }
@@ -281,11 +281,11 @@ extern class ConcurrentLinkedQueue<E> extends java.util.AbstractQueue<E> impleme
 }
 @:native('java$util$concurrent$ConcurrentLinkedQueue$Itr') @:internal extern class ConcurrentLinkedQueue_Itr implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

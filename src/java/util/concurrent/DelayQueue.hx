@@ -63,7 +63,7 @@ package java.util.concurrent;
 	/**
 	* Creates a new <tt>DelayQueue</tt> that is initially empty.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <tt>DelayQueue</tt> initially containing the elements of the
@@ -73,7 +73,7 @@ package java.util.concurrent;
 	* @throws NullPointerException if the specified collection or any
 	*         of its elements are null
 	*/
-	@:overload public function new(c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	/**
 	* Inserts the specified element into this delay queue.
@@ -82,7 +82,7 @@ package java.util.concurrent;
 	* @return <tt>true</tt> (as specified by {@link Collection#add})
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element into this delay queue.
@@ -91,7 +91,7 @@ package java.util.concurrent;
 	* @return <tt>true</tt>
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function offer(e : E) : Bool;
+	@:overload @:public override public function offer(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element into this delay queue. As the queue is
@@ -100,7 +100,7 @@ package java.util.concurrent;
 	* @param e the element to add
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function put(e : E) : Void;
+	@:overload @:public public function put(e : E) : Void;
 	
 	/**
 	* Inserts the specified element into this delay queue. As the queue is
@@ -112,7 +112,7 @@ package java.util.concurrent;
 	* @return <tt>true</tt>
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function offer(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function offer(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Retrieves and removes the head of this queue, or returns <tt>null</tt>
@@ -121,7 +121,7 @@ package java.util.concurrent;
 	* @return the head of this queue, or <tt>null</tt> if this
 	*         queue has no elements with an expired delay
 	*/
-	@:overload public function poll() : E;
+	@:overload @:public override public function poll() : E;
 	
 	/**
 	* Retrieves and removes the head of this queue, waiting if necessary
@@ -130,7 +130,7 @@ package java.util.concurrent;
 	* @return the head of this queue
 	* @throws InterruptedException {@inheritDoc}
 	*/
-	@:overload public function take() : E;
+	@:overload @:public public function take() : E;
 	
 	/**
 	* Retrieves and removes the head of this queue, waiting if necessary
@@ -142,7 +142,7 @@ package java.util.concurrent;
 	*         an expired delay becomes available
 	* @throws InterruptedException {@inheritDoc}
 	*/
-	@:overload public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
+	@:overload @:public public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
 	
 	/**
 	* Retrieves, but does not remove, the head of this queue, or
@@ -154,17 +154,9 @@ package java.util.concurrent;
 	* @return the head of this queue, or <tt>null</tt> if this
 	*         queue is empty.
 	*/
-	@:overload public function peek() : E;
+	@:overload @:public override public function peek() : E;
 	
-	@:overload public function size() : Int;
-	
-	/**
-	* @throws UnsupportedOperationException {@inheritDoc}
-	* @throws ClassCastException            {@inheritDoc}
-	* @throws NullPointerException          {@inheritDoc}
-	* @throws IllegalArgumentException      {@inheritDoc}
-	*/
-	@:overload public function drainTo(c : java.util.Collection<E>) : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* @throws UnsupportedOperationException {@inheritDoc}
@@ -172,7 +164,15 @@ package java.util.concurrent;
 	* @throws NullPointerException          {@inheritDoc}
 	* @throws IllegalArgumentException      {@inheritDoc}
 	*/
-	@:overload public function drainTo(c : java.util.Collection<E>, maxElements : Int) : Int;
+	@:overload @:public public function drainTo(c : java.util.Collection<E>) : Int;
+	
+	/**
+	* @throws UnsupportedOperationException {@inheritDoc}
+	* @throws ClassCastException            {@inheritDoc}
+	* @throws NullPointerException          {@inheritDoc}
+	* @throws IllegalArgumentException      {@inheritDoc}
+	*/
+	@:overload @:public public function drainTo(c : java.util.Collection<E>, maxElements : Int) : Int;
 	
 	/**
 	* Atomically removes all of the elements from this delay queue.
@@ -180,7 +180,7 @@ package java.util.concurrent;
 	* Elements with an unexpired delay are not waited for; they are
 	* simply discarded from the queue.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Always returns <tt>Integer.MAX_VALUE</tt> because
@@ -188,7 +188,7 @@ package java.util.concurrent;
 	*
 	* @return <tt>Integer.MAX_VALUE</tt>
 	*/
-	@:overload public function remainingCapacity() : Int;
+	@:overload @:public public function remainingCapacity() : Int;
 	
 	/**
 	* Returns an array containing all of the elements in this queue.
@@ -203,7 +203,7 @@ package java.util.concurrent;
 	*
 	* @return an array containing all of the elements in this queue
 	*/
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this queue; the
@@ -241,13 +241,13 @@ package java.util.concurrent;
 	*         this queue
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Removes a single instance of the specified element from this
 	* queue, if it is present, whether or not it has expired.
 	*/
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Returns an iterator over all the elements (both expired and
@@ -263,7 +263,7 @@ package java.util.concurrent;
 	*
 	* @return an iterator over the elements in this queue
 	*/
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
 	
 }
@@ -272,11 +272,11 @@ package java.util.concurrent;
 */
 @:native('java$util$concurrent$DelayQueue$Itr') @:internal extern class DelayQueue_Itr implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

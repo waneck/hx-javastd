@@ -23,18 +23,18 @@ package com.sun.org.apache.xml.internal.resolver;
 extern class CatalogEntry
 {
 	/** The nextEntry is the ordinal number of the next entry type. */
-	private static var nextEntry : Int;
+	@:protected @:static private static var nextEntry : Int;
 	
 	/**
 	* The entryTypes vector maps catalog entry names
 	* (e.g., 'BASE' or 'SYSTEM') to their type (1, 2, etc.).
 	* Names are case sensitive.
 	*/
-	private static var entryTypes : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected @:static private static var entryTypes : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/** The entryTypes vector maps catalog entry types to the
 	number of arguments they're required to have. */
-	private static var entryArgs : java.util.Vector<Dynamic>;
+	@:protected @:static private static var entryArgs : java.util.Vector<Dynamic>;
 	
 	/**
 	* Adds a new catalog entry type.
@@ -47,7 +47,7 @@ extern class CatalogEntry
 	* of arguments.
 	* @return The type for the new entry.
 	*/
-	@:overload public static function addEntryType(name : String, numArgs : Int) : Int;
+	@:overload @:public @:static public static function addEntryType(name : String, numArgs : Int) : Int;
 	
 	/**
 	* Lookup an entry type
@@ -57,7 +57,7 @@ extern class CatalogEntry
 	* @throws InvalidCatalogEntryTypeException if no entry has the
 	* specified name.
 	*/
-	@:native('getEntryType') @:overload public static function _getEntryType(name : String) : Int;
+	@:native('getEntryType') @:overload @:public @:static public static function _getEntryType(name : String) : Int;
 	
 	/**
 	* Find out how many arguments an entry is required to have.
@@ -67,7 +67,7 @@ extern class CatalogEntry
 	* @throws InvalidCatalogEntryTypeException if no entry has the
 	* specified name.
 	*/
-	@:overload public static function getEntryArgCount(name : String) : Int;
+	@:overload @:public @:static public static function getEntryArgCount(name : String) : Int;
 	
 	/**
 	* Find out how many arguments an entry is required to have.
@@ -76,18 +76,18 @@ extern class CatalogEntry
 	* @return The number of arguments that entry type is required to have.
 	* @throws InvalidCatalogEntryTypeException if the type is invalid.
 	*/
-	@:overload public static function getEntryArgCount(type : Int) : Int;
+	@:overload @:public @:static public static function getEntryArgCount(type : Int) : Int;
 	
 	/** The entry type of this entry */
-	private var entryType : Int;
+	@:protected private var entryType : Int;
 	
 	/** The arguments associated with this entry */
-	private var args : java.util.Vector<Dynamic>;
+	@:protected private var args : java.util.Vector<Dynamic>;
 	
 	/**
 	* Null constructor; something for subclasses to call.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a catalog entry of the specified type.
@@ -99,7 +99,7 @@ extern class CatalogEntry
 	* @throws InvalidCatalogEntryException if the wrong number of arguments
 	* is passed.
 	*/
-	@:overload public function new(name : String, args : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function new(name : String, args : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* Construct a catalog entry of the specified type.
@@ -111,14 +111,14 @@ extern class CatalogEntry
 	* @throws InvalidCatalogEntryException if the wrong number of arguments
 	* is passed.
 	*/
-	@:overload public function new(type : Int, args : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function new(type : Int, args : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* Get the entry type.
 	*
 	* @return The entry type of the CatalogEntry
 	*/
-	@:overload public function getEntryType() : Int;
+	@:overload @:public public function getEntryType() : Int;
 	
 	/**
 	* Get an entry argument.
@@ -127,7 +127,7 @@ extern class CatalogEntry
 	* @return The specified argument or null if an invalid argNum is
 	* provided.
 	*/
-	@:overload public function getEntryArg(argNum : Int) : String;
+	@:overload @:public public function getEntryArg(argNum : Int) : String;
 	
 	/**
 	* Set an entry argument.
@@ -142,7 +142,7 @@ extern class CatalogEntry
 	* @throws ArrayIndexOutOfBoundsException if an invalid argument
 	* number is provided.
 	*/
-	@:overload public function setEntryArg(argNum : Int, newspec : String) : Void;
+	@:overload @:public public function setEntryArg(argNum : Int, newspec : String) : Void;
 	
 	
 }

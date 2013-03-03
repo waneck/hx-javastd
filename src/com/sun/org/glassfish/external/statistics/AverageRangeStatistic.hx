@@ -35,7 +35,7 @@ package com.sun.org.glassfish.external.statistics;
 */
 extern interface AverageRangeStatistic extends com.sun.org.glassfish.external.statistics.RangeStatistic
 {
-	@:overload public function getAverage() : haxe.Int64;
+	@:overload @:public public function getAverage() : haxe.Int64;
 	
 	
 }

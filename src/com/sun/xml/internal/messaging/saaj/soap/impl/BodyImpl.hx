@@ -25,59 +25,59 @@ package com.sun.xml.internal.messaging.saaj.soap.impl;
 */
 extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl implements javax.xml.soap.SOAPBody
 {
-	@:overload private function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, bodyName : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl) : Void;
+	@:overload @:protected private function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, bodyName : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl) : Void;
 	
-	@:overload @:abstract private function getFaultName(name : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected @:abstract private function getFaultName(name : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload @:abstract private function isFault(child : javax.xml.soap.SOAPElement) : Bool;
+	@:overload @:protected @:abstract private function isFault(child : javax.xml.soap.SOAPElement) : Bool;
 	
-	@:overload @:abstract private function createBodyElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPBodyElement;
+	@:overload @:protected @:abstract private function createBodyElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPBodyElement;
 	
-	@:overload @:abstract private function createBodyElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPBodyElement;
+	@:overload @:protected @:abstract private function createBodyElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPBodyElement;
 	
-	@:overload @:abstract private function createFaultElement() : javax.xml.soap.SOAPFault;
+	@:overload @:protected @:abstract private function createFaultElement() : javax.xml.soap.SOAPFault;
 	
-	@:overload @:abstract private function getDefaultFaultCode() : javax.xml.namespace.QName;
+	@:overload @:protected @:abstract private function getDefaultFaultCode() : javax.xml.namespace.QName;
 	
-	@:overload public function addFault() : javax.xml.soap.SOAPFault;
+	@:overload @:public public function addFault() : javax.xml.soap.SOAPFault;
 	
-	@:overload public function addFault(faultCode : javax.xml.soap.Name, faultString : String, locale : java.util.Locale) : javax.xml.soap.SOAPFault;
+	@:overload @:public public function addFault(faultCode : javax.xml.soap.Name, faultString : String, locale : java.util.Locale) : javax.xml.soap.SOAPFault;
 	
-	@:overload public function addFault(faultCode : javax.xml.namespace.QName, faultString : String, locale : java.util.Locale) : javax.xml.soap.SOAPFault;
+	@:overload @:public public function addFault(faultCode : javax.xml.namespace.QName, faultString : String, locale : java.util.Locale) : javax.xml.soap.SOAPFault;
 	
-	@:overload public function addFault(faultCode : javax.xml.soap.Name, faultString : String) : javax.xml.soap.SOAPFault;
+	@:overload @:public public function addFault(faultCode : javax.xml.soap.Name, faultString : String) : javax.xml.soap.SOAPFault;
 	
-	@:overload public function addFault(faultCode : javax.xml.namespace.QName, faultString : String) : javax.xml.soap.SOAPFault;
+	@:overload @:public public function addFault(faultCode : javax.xml.namespace.QName, faultString : String) : javax.xml.soap.SOAPFault;
 	
-	@:overload private function findFault() : javax.xml.soap.SOAPElement;
+	@:overload @:protected private function findFault() : javax.xml.soap.SOAPElement;
 	
-	@:overload public function hasFault() : Bool;
+	@:overload @:public public function hasFault() : Bool;
 	
-	@:overload public function getFault() : javax.xml.soap.SOAPFault;
+	@:overload @:public public function getFault() : javax.xml.soap.SOAPFault;
 	
-	@:overload public function addBodyElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPBodyElement;
+	@:overload @:public public function addBodyElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPBodyElement;
 	
-	@:overload public function addBodyElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPBodyElement;
+	@:overload @:public public function addBodyElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPBodyElement;
 	
-	@:overload public function setParentElement(element : javax.xml.soap.SOAPElement) : Void;
+	@:overload @:public public function setParentElement(element : javax.xml.soap.SOAPElement) : Void;
 	
-	@:overload private function addElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
+	@:overload @:protected private function addElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
 	
-	@:overload private function addElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:overload @:protected private function addElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
-	@:overload public function addDocument(document : org.w3c.dom.Document) : javax.xml.soap.SOAPBodyElement;
+	@:overload @:public public function addDocument(document : org.w3c.dom.Document) : javax.xml.soap.SOAPBodyElement;
 	
-	@:overload private function convertToSoapElement(element : org.w3c.dom.Element) : javax.xml.soap.SOAPElement;
+	@:overload @:protected private function convertToSoapElement(element : org.w3c.dom.Element) : javax.xml.soap.SOAPElement;
 	
-	@:overload public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:overload @:public public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
-	@:overload public function extractContentAsDocument() : org.w3c.dom.Document;
+	@:overload @:public public function extractContentAsDocument() : org.w3c.dom.Document;
 	
 	/**
 	* The first child of this node. If there is no such node, this returns
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public @:public override public function getFirstChild() : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getFirstChild() : org.w3c.dom.Node;
 	
 	/**
 	* Creates a <code>QName</code> whose namespace URI is the one associated
@@ -103,14 +103,14 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function createQName(localName : String, prefix : String) : javax.xml.namespace.QName;
+	@:require(java3) @:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function createQName(localName : String, prefix : String) : javax.xml.namespace.QName;
 	
 	/**
 	* Returns whether this node has any children.
 	* @return Returns <code>true</code> if this node has any children,
 	*   <code>false</code> otherwise.
 	*/
-	@:overload @:public @:public @:public override public function hasChildNodes() : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function hasChildNodes() : Bool;
 	
 	/**
 	* Returns the qname of this <code>SOAPElement</code> object.
@@ -120,7 +120,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @see SOAPElement#getElementName()
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function getElementQName() : javax.xml.namespace.QName;
+	@:require(java3) @:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getElementQName() : javax.xml.namespace.QName;
 	
 	/**
 	* Retrieves an attribute value by name.
@@ -128,7 +128,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @return The <code>Attr</code> value as a string, or the empty string
 	*   if that attribute does not have a specified or default value.
 	*/
-	@:overload @:public @:public override public function getAttribute(name : String) : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getAttribute(name : String) : String;
 	
 	/**
 	* Returns <code>true</code> when an attribute with a given local name and
@@ -149,7 +149,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
 	
 	/**
 	* Removes the attribute with the specified name.
@@ -160,7 +160,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*         removed successfully; <code>false</code> if it was not
 	* @see SOAPElement#removeAttribute(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public public function removeAttribute(name : javax.xml.soap.Name) : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function removeAttribute(name : javax.xml.soap.Name) : Bool;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the immediate child
@@ -182,7 +182,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @return an iterator with the content of this <code>SOAPElement</code>
 	*         object
 	*/
-	@:overload @:public @:public public function getChildElements() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getChildElements() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Associate an object to a key on this node. The object can later be
@@ -198,7 +198,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
 	
 	/**
 	* The parent of this node. All nodes, except <code>Attr</code>,
@@ -208,7 +208,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* tree, or if it has been removed from the tree, this is
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public @:public override public function getParentNode() : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getParentNode() : org.w3c.dom.Node;
 	
 	/**
 	* Returns whether this node (if it is an element) has any attributes.
@@ -217,7 +217,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public override public function hasAttributes() : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function hasAttributes() : Bool;
 	
 	/**
 	* Adds an attribute with the specified name and value to this
@@ -234,7 +234,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	<code>name</code> on this SOAPElement.
 	* @see SOAPElement#addAttribute(javax.xml.namespace.QName, String)
 	*/
-	@:overload @:public @:public public function addAttribute(name : javax.xml.soap.Name, value : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function addAttribute(name : javax.xml.soap.Name, value : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Look up the namespace URI associated to the given prefix, starting from
@@ -248,7 +248,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function lookupNamespaceURI(prefix : String) : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function lookupNamespaceURI(prefix : String) : String;
 	
 	/**
 	* Add a <code>SOAPElement</code> as a child of this
@@ -281,7 +281,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @return an instance representing the new SOAP element that was
 	*         actually added to the tree.
 	*/
-	@:overload @:public @:public public function addChildElement(element : javax.xml.soap.SOAPElement) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function addChildElement(element : javax.xml.soap.SOAPElement) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Removes the attribute with the specified qname.
@@ -293,7 +293,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @see SOAPElement#removeAttribute(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function removeAttribute(qname : javax.xml.namespace.QName) : Bool;
+	@:require(java3) @:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function removeAttribute(qname : javax.xml.namespace.QName) : Bool;
 	
 	/**
 	* Removes an attribute by local name and namespace URI. If a default
@@ -319,7 +319,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function removeAttributeNS(namespaceURI : String, localName : String) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function removeAttributeNS(namespaceURI : String, localName : String) : Void;
 	
 	/**
 	*  If the parameter <code>isId</code> is <code>true</code>, this method
@@ -339,7 +339,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   of this element.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function setIdAttributeNode(idAttr : org.w3c.dom.Attr, isId : Bool) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function setIdAttributeNode(idAttr : org.w3c.dom.Attr, isId : Bool) : Void;
 	
 	/**
 	* Returns a <code>NodeList</code> of all the descendant
@@ -357,7 +357,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* Adds a namespace declaration with the specified prefix and URI to this
@@ -371,7 +371,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @exception SOAPException if there is an error in creating the
 	*                          namespace
 	*/
-	@:overload @:public @:public public function addNamespaceDeclaration(prefix : String, uri : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function addNamespaceDeclaration(prefix : String, uri : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -421,7 +421,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function getTextContent() : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getTextContent() : String;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the
@@ -435,14 +435,14 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @exception SOAPException if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public public function addChildElement(localName : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function addChildElement(localName : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* A <code>NodeList</code> that contains all children of this node. If
 	* there are no children, this is a <code>NodeList</code> containing no
 	* nodes.
 	*/
-	@:overload @:public @:public @:public override public function getChildNodes() : org.w3c.dom.NodeList;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getChildNodes() : org.w3c.dom.NodeList;
 	
 	/**
 	* The value of this node, depending on its type; see the table above.
@@ -452,12 +452,12 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   NO_MODIFICATION_ALLOWED_ERR: Raised when the node is readonly and if
 	*   it is not defined to be <code>null</code>.
 	*/
-	@:overload @:public @:public @:public override public function setNodeValue(nodeValue : String) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function setNodeValue(nodeValue : String) : Void;
 	
 	/**
 	* A code representing the type of the underlying object, as defined above.
 	*/
-	@:overload @:public @:public @:public override public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
 	* Compares the reference node, i.e. the node on which this method is
@@ -474,7 +474,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
 	
 	/**
 	* Adds an attribute with the specified name and value to this
@@ -492,7 +492,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @see SOAPElement#addAttribute(Name, String)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function addAttribute(qname : javax.xml.namespace.QName, value : String) : javax.xml.soap.SOAPElement;
+	@:require(java3) @:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function addAttribute(qname : javax.xml.namespace.QName, value : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	*  Puts all <code>Text</code> nodes in the full depth of the sub-tree
@@ -517,7 +517,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function normalize() : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function normalize() : Void;
 	
 	/**
 	* Retrieves an attribute value by local name and namespace URI.
@@ -535,7 +535,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function getAttributeNS(namespaceURI : String, localName : String) : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getAttributeNS(namespaceURI : String, localName : String) : String;
 	
 	/**
 	* Returns an <code>Iterator</code> over the namespace prefix
@@ -546,7 +546,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @return an iterator over the namespace prefixes in this
 	*         <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public public function getNamespacePrefixes() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getNamespacePrefixes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	*  If the parameter <code>isId</code> is <code>true</code>, this method
@@ -567,7 +567,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   of this element.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function setIdAttributeNS(namespaceURI : String, localName : String, isId : Bool) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function setIdAttributeNS(namespaceURI : String, localName : String, isId : Bool) : Void;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the
@@ -585,7 +585,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @exception SOAPException if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public public function addChildElement(localName : String, prefix : String, uri : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function addChildElement(localName : String, prefix : String, uri : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Returns the value of the attribute with the specified name.
@@ -595,7 +595,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*         attribute, Null if there is no such attribute
 	* @see SOAPElement#getAttributeValue(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public public function getAttributeValue(name : javax.xml.soap.Name) : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getAttributeValue(name : javax.xml.soap.Name) : String;
 	
 	/**
 	* Retrieves an <code>Attr</code> node by local name and namespace URI.
@@ -614,7 +614,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Retrieves the object associated to a key on a this node. The object
@@ -626,7 +626,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function getUserData(key : String) : Dynamic;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getUserData(key : String) : Dynamic;
 	
 	/**
 	* Returns the encoding style for this <code>SOAPElement</code> object.
@@ -635,13 +635,13 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @see #setEncodingStyle
 	*/
-	@:overload @:public @:public public function getEncodingStyle() : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getEncodingStyle() : String;
 	
 	/**
 	* A <code>NamedNodeMap</code> containing the attributes of this node (if
 	* it is an <code>Element</code>) or <code>null</code> otherwise.
 	*/
-	@:overload @:public @:public @:public override public function getAttributes() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
 	/**
 	* Tests whether two nodes are equal.
@@ -707,7 +707,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Detaches all children of this <code>SOAPElement</code>.
@@ -720,7 +720,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload @:abstract @:public @:public public function removeContents() : Void;
+	@:require(java2) @:overload @:public @:abstract @:public @:public @:public @:public @:public @:public @:public @:public public function removeContents() : Void;
 	
 	/**
 	* Returns whether this node is the same node as the given one.
@@ -737,7 +737,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function isSameNode(other : org.w3c.dom.Node) : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function isSameNode(other : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Adds a new attribute. If an attribute with that local name and that
@@ -765,7 +765,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function setAttributeNodeNS(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function setAttributeNodeNS(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	* Returns an <code>Iterator</code> over all of the attributes
@@ -778,7 +778,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @see SOAPElement#getAllAttributes()
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function getAllAttributesAsQNames() : java.util.Iterator<Dynamic>;
+	@:require(java3) @:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getAllAttributesAsQNames() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* The <code>Document</code> object associated with this node. This is
@@ -789,7 +789,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public override public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getOwnerDocument() : org.w3c.dom.Document;
 	
 	/**
 	*  This method checks if the specified <code>namespaceURI</code> is the
@@ -801,7 +801,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function isDefaultNamespace(namespaceURI : String) : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function isDefaultNamespace(namespaceURI : String) : Bool;
 	
 	/**
 	* Adds a new attribute. If an attribute with that name is already present
@@ -825,7 +825,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   <code>Document.xmlVersion</code> attribute.
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
 	*/
-	@:overload @:public @:public override public function setAttribute(name : String, value : String) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function setAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the
@@ -843,13 +843,13 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*                          <code>SOAPElement</code> object
 	* @see SOAPElement#addChildElement(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public public function addChildElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function addChildElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* The node immediately following this node. If there is no such node,
 	* this returns <code>null</code>.
 	*/
-	@:overload @:public @:public @:public override public function getNextSibling() : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getNextSibling() : org.w3c.dom.Node;
 	
 	/**
 	* Returns a duplicate of this node, i.e., serves as a generic copy
@@ -885,7 +885,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   itself (and its attributes, if it is an <code>Element</code>).
 	* @return The duplicate node.
 	*/
-	@:overload @:public @:public @:public override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the immediate child
@@ -913,7 +913,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @see SOAPElement#getChildElements(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function getChildElements(qname : javax.xml.namespace.QName) : java.util.Iterator<Dynamic>;
+	@:require(java3) @:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getChildElements(qname : javax.xml.namespace.QName) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Replaces the child node <code>oldChild</code> with <code>newChild</code>
@@ -949,7 +949,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Removes the specified attribute node. If a default value for the
@@ -968,7 +968,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   <br>NOT_FOUND_ERR: Raised if <code>oldAttr</code> is not an attribute
 	*   of the element.
 	*/
-	@:overload @:public @:public override public function removeAttributeNode(oldAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function removeAttributeNode(oldAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	*  If the parameter <code>isId</code> is <code>true</code>, this method
@@ -990,7 +990,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   of this element.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function setIdAttribute(name : String, isId : Bool) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function setIdAttribute(name : String, isId : Bool) : Void;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the immediate child
@@ -1017,7 +1017,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*         specified name
 	* @see SOAPElement#getChildElements(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public public function getChildElements(name : javax.xml.soap.Name) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getChildElements(name : javax.xml.soap.Name) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Look up the prefix associated to the given namespace URI, starting from
@@ -1032,7 +1032,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function lookupPrefix(namespaceURI : String) : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function lookupPrefix(namespaceURI : String) : String;
 	
 	/**
 	* Removes the child node indicated by <code>oldChild</code> from the list
@@ -1050,7 +1050,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* The absolute base URI of this node or <code>null</code> if the
@@ -1064,7 +1064,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function getBaseURI() : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getBaseURI() : String;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -1112,7 +1112,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function setTextContent(textContent : String) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function setTextContent(textContent : String) : Void;
 	
 	/**
 	* Returns an <code>Iterator</code> over all of the attribute
@@ -1125,7 +1125,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @see SOAPElement#getAllAttributesAsQNames()
 	* @return an iterator over the names of the attributes
 	*/
-	@:overload @:public @:public public function getAllAttributes() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getAllAttributes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* The namespace prefix of this node, or <code>null</code> if it is
@@ -1163,7 +1163,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public override public function setPrefix(prefix : String) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function setPrefix(prefix : String) : Void;
 	
 	/**
 	* The name of the element. If <code>Node.localName</code> is different
@@ -1177,7 +1177,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* the <code>tagName</code> of an HTML element in the canonical
 	* uppercase form, regardless of the case in the source HTML document.
 	*/
-	@:overload @:public @:public override public function getTagName() : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getTagName() : String;
 	
 	/**
 	* The value of this node, depending on its type; see the table above.
@@ -1188,13 +1188,13 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   fit in a <code>DOMString</code> variable on the implementation
 	*   platform.
 	*/
-	@:overload @:public @:public @:public override public function getNodeValue() : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getNodeValue() : String;
 	
 	/**
 	* The node immediately preceding this node. If there is no such node,
 	* this returns <code>null</code>.
 	*/
-	@:overload @:public @:public @:public override public function getPreviousSibling() : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getPreviousSibling() : org.w3c.dom.Node;
 	
 	/**
 	* Returns the name of this <code>SOAPElement</code> object.
@@ -1202,7 +1202,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @return a <code>Name</code> object with the name of this
 	*         <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public public function getElementName() : javax.xml.soap.Name;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getElementName() : javax.xml.soap.Name;
 	
 	/**
 	*  This method returns a specialized object which implements the
@@ -1227,7 +1227,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function getFeature(feature : String, version : String) : Dynamic;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getFeature(feature : String, version : String) : Dynamic;
 	
 	/**
 	* Adds a new attribute node. If an attribute with that name (
@@ -1249,7 +1249,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   explicitly clone <code>Attr</code> nodes to re-use them in other
 	*   elements.
 	*/
-	@:overload @:public @:public override public function setAttributeNode(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function setAttributeNode(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	* Removes an attribute by name. If a default value for the removed
@@ -1266,7 +1266,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @exception DOMException
 	*   NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
 	*/
-	@:overload @:public @:public override public function removeAttribute(name : String) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function removeAttribute(name : String) : Void;
 	
 	/**
 	* Retrieves an attribute node by name.
@@ -1278,7 +1278,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   <code>nodeName</code>) or <code>null</code> if there is no such
 	*   attribute.
 	*/
-	@:overload @:public @:public override public function getAttributeNode(name : String) : org.w3c.dom.Attr;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getAttributeNode(name : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the
@@ -1295,7 +1295,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*         context of this <code>SOAPElement</code> or  if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public public function addChildElement(localName : String, prefix : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function addChildElement(localName : String, prefix : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Returns the value of the attribute with the specified qname.
@@ -1306,7 +1306,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @see SOAPElement#getAttributeValue(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function getAttributeValue(qname : javax.xml.namespace.QName) : String;
+	@:require(java3) @:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getAttributeValue(qname : javax.xml.namespace.QName) : String;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the given
@@ -1323,7 +1323,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @see SOAPElement#addChildElement(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function addChildElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:require(java3) @:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function addChildElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* The namespace prefix of this node, or <code>null</code> if it is
@@ -1347,12 +1347,12 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public override public function getPrefix() : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getPrefix() : String;
 	
 	/**
 	* The name of this node, depending on its type; see the table above.
 	*/
-	@:overload @:public @:public @:public override public function getNodeName() : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getNodeName() : String;
 	
 	/**
 	* The namespace URI of this node, or <code>null</code> if it is
@@ -1371,7 +1371,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public override public function getNamespaceURI() : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getNamespaceURI() : String;
 	
 	/**
 	* Creates a new <code>Text</code> object initialized with the given
@@ -1386,7 +1386,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*                      attach it as a child to this
 	*                      <code>SOAPElement</code>
 	*/
-	@:overload @:public @:public public function addTextNode(text : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function addTextNode(text : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Inserts the node <code>newChild</code> before the existing child node
@@ -1422,7 +1422,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Adds a new attribute. If an attribute with the same local name and
@@ -1466,7 +1466,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function setAttributeNS(namespaceURI : String, qualifiedName : String, value : String) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function setAttributeNS(namespaceURI : String, qualifiedName : String, value : String) : Void;
 	
 	/**
 	* Returns a <code>NodeList</code> of all descendant <code>Elements</code>
@@ -1475,7 +1475,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*   matches all tags.
 	* @return A list of matching <code>Element</code> nodes.
 	*/
-	@:overload @:public @:public override public function getElementsByTagName(name : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getElementsByTagName(name : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* Returns the URI of the namespace that has the given prefix.
@@ -1485,7 +1485,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @return a <code>String</code> with the uri of the namespace that has
 	*        the given prefix
 	*/
-	@:overload @:public @:public public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getNamespaceURI(prefix : String) : String;
 	
 	/**
 	* Returns <code>true</code> when an attribute with a given name is
@@ -1497,7 +1497,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*    otherwise.
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function hasAttribute(name : String) : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function hasAttribute(name : String) : Bool;
 	
 	/**
 	* Returns an <code>Iterator</code> over the namespace prefix
@@ -1510,13 +1510,13 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload @:public @:public public function getVisibleNamespacePrefixes() : java.util.Iterator<Dynamic>;
+	@:require(java2) @:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getVisibleNamespacePrefixes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* The last child of this node. If there is no such node, this returns
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public @:public override public function getLastChild() : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getLastChild() : org.w3c.dom.Node;
 	
 	/**
 	*  Tests whether the DOM implementation implements a specific feature and
@@ -1528,7 +1528,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public override public function isSupported(feature : String, version : String) : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function isSupported(feature : String, version : String) : Bool;
 	
 	/**
 	* Returns the local part of the qualified name of this node.
@@ -1539,7 +1539,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public override public function getLocalName() : String;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getLocalName() : String;
 	
 	/**
 	* Removes the namespace declaration corresponding to the given prefix.
@@ -1549,7 +1549,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @return <code>true</code> if the namespace declaration was
 	*         removed successfully; <code>false</code> if it was not
 	*/
-	@:overload @:public @:public public function removeNamespaceDeclaration(prefix : String) : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function removeNamespaceDeclaration(prefix : String) : Bool;
 	
 	/**
 	* Adds the node <code>newChild</code> to the end of the list of children
@@ -1577,13 +1577,13 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public override public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	*  The type information associated with this element.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
 	
 	/**
 	* Sets the encoding style for this <code>SOAPElement</code> object
@@ -1596,7 +1596,7 @@ extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl
 	* @exception SOAPException if setting the encodingStyle is invalid for this SOAPElement.
 	* @see #getEncodingStyle
 	*/
-	@:overload @:public @:public public function setEncodingStyle(encodingStyle : String) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function setEncodingStyle(encodingStyle : String) : Void;
 	
 	
 }

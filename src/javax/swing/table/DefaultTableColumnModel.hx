@@ -26,30 +26,30 @@ package javax.swing.table;
 extern class DefaultTableColumnModel implements javax.swing.table.TableColumnModel implements java.beans.PropertyChangeListener implements javax.swing.event.ListSelectionListener implements java.io.Serializable
 {
 	/** Array of TableColumn objects in this model */
-	private var tableColumns : java.util.Vector<javax.swing.table.TableColumn>;
+	@:protected private var tableColumns : java.util.Vector<javax.swing.table.TableColumn>;
 	
 	/** Model for keeping track of column selections */
-	private var selectionModel : javax.swing.ListSelectionModel;
+	@:protected private var selectionModel : javax.swing.ListSelectionModel;
 	
 	/** Width margin between each column */
-	private var columnMargin : Int;
+	@:protected private var columnMargin : Int;
 	
 	/** List of TableColumnModelListener */
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
 	/** Change event (only one needed) */
-	@:transient private var changeEvent : javax.swing.event.ChangeEvent;
+	@:transient @:protected private var changeEvent : javax.swing.event.ChangeEvent;
 	
 	/** Column selection allowed in this column model */
-	private var columnSelectionAllowed : Bool;
+	@:protected private var columnSelectionAllowed : Bool;
 	
 	/** A local cache of the combined width of all columns */
-	private var totalColumnWidth : Int;
+	@:protected private var totalColumnWidth : Int;
 	
 	/**
 	* Creates a default table column model.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*  Appends <code>aColumn</code> to the end of the
@@ -62,7 +62,7 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	*                          <code>null</code>
 	* @see     #removeColumn
 	*/
-	@:overload public function addColumn(aColumn : javax.swing.table.TableColumn) : Void;
+	@:overload @:public public function addColumn(aColumn : javax.swing.table.TableColumn) : Void;
 	
 	/**
 	*  Deletes the <code>column</code> from the
@@ -76,7 +76,7 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	* @param   column          the <code>TableColumn</code> to be removed
 	* @see     #addColumn
 	*/
-	@:overload public function removeColumn(column : javax.swing.table.TableColumn) : Void;
+	@:overload @:public public function removeColumn(column : javax.swing.table.TableColumn) : Void;
 	
 	/**
 	* Moves the column and heading at <code>columnIndex</code> to
@@ -93,7 +93,7 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	*                                          <code>newIndex</code>
 	*                                          are not in the valid range
 	*/
-	@:overload public function moveColumn(columnIndex : Int, newIndex : Int) : Void;
+	@:overload @:public public function moveColumn(columnIndex : Int, newIndex : Int) : Void;
 	
 	/**
 	* Sets the column margin to <code>newMargin</code>.  This method
@@ -104,7 +104,7 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	* @see     #getColumnMargin
 	* @see     #getTotalColumnWidth
 	*/
-	@:overload public function setColumnMargin(newMargin : Int) : Void;
+	@:overload @:public public function setColumnMargin(newMargin : Int) : Void;
 	
 	/**
 	* Returns the number of columns in the <code>tableColumns</code> array.
@@ -112,13 +112,13 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	* @return  the number of columns in the <code>tableColumns</code> array
 	* @see     #getColumns
 	*/
-	@:overload public function getColumnCount() : Int;
+	@:overload @:public public function getColumnCount() : Int;
 	
 	/**
 	* Returns an <code>Enumeration</code> of all the columns in the model.
 	* @return an <code>Enumeration</code> of the columns in the model
 	*/
-	@:overload public function getColumns() : java.util.Enumeration<javax.swing.table.TableColumn>;
+	@:overload @:public public function getColumns() : java.util.Enumeration<javax.swing.table.TableColumn>;
 	
 	/**
 	* Returns the index of the first column in the <code>tableColumns</code>
@@ -135,7 +135,7 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	*                          <code>identifier</code>
 	* @see             #getColumn
 	*/
-	@:overload public function getColumnIndex(identifier : Dynamic) : Int;
+	@:overload @:public public function getColumnIndex(identifier : Dynamic) : Int;
 	
 	/**
 	* Returns the <code>TableColumn</code> object for the column
@@ -145,7 +145,7 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	* @return  the <code>TableColumn</code> object for the column
 	*                          at <code>columnIndex</code>
 	*/
-	@:overload public function getColumn(columnIndex : Int) : javax.swing.table.TableColumn;
+	@:overload @:public public function getColumn(columnIndex : Int) : javax.swing.table.TableColumn;
 	
 	/**
 	* Returns the width margin for <code>TableColumn</code>.
@@ -154,7 +154,7 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	* @return  the maximum width for the <code>TableColumn</code>
 	* @see     #setColumnMargin
 	*/
-	@:overload public function getColumnMargin() : Int;
+	@:overload @:public public function getColumnMargin() : Int;
 	
 	/**
 	* Returns the index of the column that lies at position <code>x</code>,
@@ -178,13 +178,13 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	* @return  the index of the column or -1 if no column is found
 	* @see javax.swing.JTable#columnAtPoint
 	*/
-	@:overload public function getColumnIndexAtX(x : Int) : Int;
+	@:overload @:public public function getColumnIndexAtX(x : Int) : Int;
 	
 	/**
 	* Returns the total combined width of all columns.
 	* @return the <code>totalColumnWidth</code> property
 	*/
-	@:overload public function getTotalColumnWidth() : Int;
+	@:overload @:public public function getTotalColumnWidth() : Int;
 	
 	/**
 	*  Sets the selection model for this <code>TableColumnModel</code>
@@ -198,7 +198,7 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	*                                          is <code>null</code>
 	* @see     #getSelectionModel
 	*/
-	@:overload public function setSelectionModel(newModel : javax.swing.ListSelectionModel) : Void;
+	@:overload @:public public function setSelectionModel(newModel : javax.swing.ListSelectionModel) : Void;
 	
 	/**
 	* Returns the <code>ListSelectionModel</code> that is used to
@@ -208,20 +208,20 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	*          <code>null</code> if row selection is not allowed.
 	* @see     #setSelectionModel
 	*/
-	@:overload public function getSelectionModel() : javax.swing.ListSelectionModel;
+	@:overload @:public public function getSelectionModel() : javax.swing.ListSelectionModel;
 	
 	/**
 	* Sets whether column selection is allowed.  The default is false.
 	* @param  flag true if column selection will be allowed, false otherwise
 	*/
-	@:overload public function setColumnSelectionAllowed(flag : Bool) : Void;
+	@:overload @:public public function setColumnSelectionAllowed(flag : Bool) : Void;
 	
 	/**
 	* Returns true if column selection is allowed, otherwise false.
 	* The default is false.
 	* @return the <code>columnSelectionAllowed</code> property
 	*/
-	@:overload public function getColumnSelectionAllowed() : Bool;
+	@:overload @:public public function getColumnSelectionAllowed() : Bool;
 	
 	/**
 	* Returns an array of selected columns.  If <code>selectionModel</code>
@@ -230,25 +230,25 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	*                  is selected or the <code>selectionModel</code> is
 	*                  <code>null</code>
 	*/
-	@:overload public function getSelectedColumns() : java.NativeArray<Int>;
+	@:overload @:public public function getSelectedColumns() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the number of columns selected.
 	* @return the number of columns selected
 	*/
-	@:overload public function getSelectedColumnCount() : Int;
+	@:overload @:public public function getSelectedColumnCount() : Int;
 	
 	/**
 	* Adds a listener for table column model events.
 	* @param x  a <code>TableColumnModelListener</code> object
 	*/
-	@:overload public function addColumnModelListener(x : javax.swing.event.TableColumnModelListener) : Void;
+	@:overload @:public public function addColumnModelListener(x : javax.swing.event.TableColumnModelListener) : Void;
 	
 	/**
 	* Removes a listener for table column model events.
 	* @param x  a <code>TableColumnModelListener</code> object
 	*/
-	@:overload public function removeColumnModelListener(x : javax.swing.event.TableColumnModelListener) : Void;
+	@:overload @:public public function removeColumnModelListener(x : javax.swing.event.TableColumnModelListener) : Void;
 	
 	/**
 	* Returns an array of all the column model listeners
@@ -263,7 +263,7 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getColumnModelListeners() : java.NativeArray<javax.swing.event.TableColumnModelListener>;
+	@:require(java4) @:overload @:public public function getColumnModelListeners() : java.NativeArray<javax.swing.event.TableColumnModelListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -273,7 +273,7 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	* @param e  the event received
 	* @see EventListenerList
 	*/
-	@:overload private function fireColumnAdded(e : javax.swing.event.TableColumnModelEvent) : Void;
+	@:overload @:protected private function fireColumnAdded(e : javax.swing.event.TableColumnModelEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -283,7 +283,7 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	* @param  e  the event received
 	* @see EventListenerList
 	*/
-	@:overload private function fireColumnRemoved(e : javax.swing.event.TableColumnModelEvent) : Void;
+	@:overload @:protected private function fireColumnRemoved(e : javax.swing.event.TableColumnModelEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -293,7 +293,7 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	* @param  e the event received
 	* @see EventListenerList
 	*/
-	@:overload private function fireColumnMoved(e : javax.swing.event.TableColumnModelEvent) : Void;
+	@:overload @:protected private function fireColumnMoved(e : javax.swing.event.TableColumnModelEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -303,7 +303,7 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	* @param e the event received
 	* @see EventListenerList
 	*/
-	@:overload private function fireColumnSelectionChanged(e : javax.swing.event.ListSelectionEvent) : Void;
+	@:overload @:protected private function fireColumnSelectionChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -312,7 +312,7 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	* the fire method.
 	* @see EventListenerList
 	*/
-	@:overload private function fireColumnMarginChanged() : Void;
+	@:overload @:protected private function fireColumnMarginChanged() : Void;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -349,7 +349,7 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	* @see #getColumnModelListeners
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Property Change Listener change method.  Used to track changes
@@ -357,7 +357,7 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	*
 	* @param  evt  <code>PropertyChangeEvent</code>
 	*/
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* A <code>ListSelectionListener</code> that forwards
@@ -366,18 +366,18 @@ extern class DefaultTableColumnModel implements javax.swing.table.TableColumnMod
 	*
 	* @param e  the change event
 	*/
-	@:overload public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
+	@:overload @:public public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	
 	/**
 	* Creates a new default list selection model.
 	*/
-	@:overload private function createSelectionModel() : javax.swing.ListSelectionModel;
+	@:overload @:protected private function createSelectionModel() : javax.swing.ListSelectionModel;
 	
 	/**
 	* Recalculates the total combined width of all columns.  Updates the
 	* <code>totalColumnWidth</code> property.
 	*/
-	@:overload private function recalcWidthCache() : Void;
+	@:overload @:protected private function recalcWidthCache() : Void;
 	
 	
 }

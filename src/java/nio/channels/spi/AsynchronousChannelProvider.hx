@@ -32,7 +32,7 @@ extern class AsynchronousChannelProvider
 	*          If a security manager has been installed and it denies
 	*          {@link RuntimePermission}<tt>("asynchronousChannelProvider")</tt>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the system-wide default asynchronous channel provider for this
@@ -69,7 +69,7 @@ extern class AsynchronousChannelProvider
 	*
 	* @return  The system-wide default AsynchronousChannel provider
 	*/
-	@:overload public static function provider() : java.nio.channels.spi.AsynchronousChannelProvider;
+	@:overload @:public @:static public static function provider() : java.nio.channels.spi.AsynchronousChannelProvider;
 	
 	/**
 	* Constructs a new asynchronous channel group with a fixed thread pool.
@@ -86,7 +86,7 @@ extern class AsynchronousChannelProvider
 	*
 	* @see AsynchronousChannelGroup#withFixedThreadPool
 	*/
-	@:overload @:abstract public function openAsynchronousChannelGroup(nThreads : Int, threadFactory : java.util.concurrent.ThreadFactory) : java.nio.channels.AsynchronousChannelGroup;
+	@:overload @:public @:abstract public function openAsynchronousChannelGroup(nThreads : Int, threadFactory : java.util.concurrent.ThreadFactory) : java.nio.channels.AsynchronousChannelGroup;
 	
 	/**
 	* Constructs a new asynchronous channel group with the given thread pool.
@@ -102,7 +102,7 @@ extern class AsynchronousChannelProvider
 	*
 	* @see AsynchronousChannelGroup#withCachedThreadPool
 	*/
-	@:overload @:abstract public function openAsynchronousChannelGroup(executor : java.util.concurrent.ExecutorService, initialSize : Int) : java.nio.channels.AsynchronousChannelGroup;
+	@:overload @:public @:abstract public function openAsynchronousChannelGroup(executor : java.util.concurrent.ExecutorService, initialSize : Int) : java.nio.channels.AsynchronousChannelGroup;
 	
 	/**
 	* Opens an asynchronous server-socket channel.
@@ -120,7 +120,7 @@ extern class AsynchronousChannelProvider
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:abstract public function openAsynchronousServerSocketChannel(group : java.nio.channels.AsynchronousChannelGroup) : java.nio.channels.AsynchronousServerSocketChannel;
+	@:overload @:public @:abstract public function openAsynchronousServerSocketChannel(group : java.nio.channels.AsynchronousChannelGroup) : java.nio.channels.AsynchronousServerSocketChannel;
 	
 	/**
 	* Opens an asynchronous socket channel.
@@ -138,7 +138,7 @@ extern class AsynchronousChannelProvider
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:abstract public function openAsynchronousSocketChannel(group : java.nio.channels.AsynchronousChannelGroup) : java.nio.channels.AsynchronousSocketChannel;
+	@:overload @:public @:abstract public function openAsynchronousSocketChannel(group : java.nio.channels.AsynchronousChannelGroup) : java.nio.channels.AsynchronousSocketChannel;
 	
 	
 }

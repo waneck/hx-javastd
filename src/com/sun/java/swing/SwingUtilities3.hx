@@ -28,7 +28,7 @@ extern class SwingUtilities3
 	/**
 	* Registers delegate RepaintManager for {@code JComponent}.
 	*/
-	@:overload public static function setDelegateRepaintManager(component : javax.swing.JComponent, repaintManager : javax.swing.RepaintManager) : Void;
+	@:overload @:public @:static public static function setDelegateRepaintManager(component : javax.swing.JComponent, repaintManager : javax.swing.RepaintManager) : Void;
 	
 	/**
 	* Sets vsyncRequested state for the {@code rootContainer}.  If
@@ -43,7 +43,7 @@ extern class SwingUtilities3
 	*  or {@code Applet}
 	* @param isRequested the value to set vsyncRequested state to
 	*/
-	@:overload public static function setVsyncRequested(rootContainer : java.awt.Container, isRequested : Bool) : Void;
+	@:overload @:public @:static public static function setVsyncRequested(rootContainer : java.awt.Container, isRequested : Bool) : Void;
 	
 	/**
 	* Checks if vsync painting is requested for {@code rootContainer}
@@ -51,30 +51,30 @@ extern class SwingUtilities3
 	* @param rootContainer topmost container. Should be either Window or Applet
 	* @return {@code true} if vsync painting is requested for {@code rootContainer}
 	*/
-	@:overload public static function isVsyncRequested(rootContainer : java.awt.Container) : Bool;
+	@:overload @:public @:static public static function isVsyncRequested(rootContainer : java.awt.Container) : Bool;
 	
 	/**
 	* Returns delegate {@code RepaintManager} for {@code component} hierarchy.
 	*/
-	@:overload public static function getDelegateRepaintManager(component : java.awt.Component) : javax.swing.RepaintManager;
+	@:overload @:public @:static public static function getDelegateRepaintManager(component : java.awt.Component) : javax.swing.RepaintManager;
 	
 	/*
 	* We use maps to avoid reflection. Hopefully it should perform better
 	* this way.
 	*/
-	@:overload public static function setEventQueueDelegate(map : java.util.Map<String, java.util.Map<String, Dynamic>>) : Void;
+	@:overload @:public @:static public static function setEventQueueDelegate(map : java.util.Map<String, java.util.Map<String, Dynamic>>) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$SwingUtilities3$EventQueueDelegateFromMap') @:internal extern class SwingUtilities3_EventQueueDelegateFromMap implements sun.awt.EventQueueDelegate.EventQueueDelegate_Delegate
 {
-	@:overload public function new(objectMap : java.util.Map<String, java.util.Map<String, Dynamic>>) : Void;
+	@:overload @:public public function new(objectMap : java.util.Map<String, java.util.Map<String, Dynamic>>) : Void;
 	
-	@:overload public function afterDispatch(event : java.awt.AWTEvent, handle : Dynamic) : Void;
+	@:overload @:public public function afterDispatch(event : java.awt.AWTEvent, handle : Dynamic) : Void;
 	
-	@:overload public function beforeDispatch(event : java.awt.AWTEvent) : Dynamic;
+	@:overload @:public public function beforeDispatch(event : java.awt.AWTEvent) : Dynamic;
 	
-	@:overload public function getNextEvent(eventQueue : java.awt.EventQueue) : java.awt.AWTEvent;
+	@:overload @:public public function getNextEvent(eventQueue : java.awt.EventQueue) : java.awt.AWTEvent;
 	
 	
 }

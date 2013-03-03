@@ -42,82 +42,82 @@ extern class ValueGen24 extends com.sun.tools.corba.se.idl.ValueGen
 	/**
 	* Public zero-argument constructor.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* <d62023> - delete constructor; helper is abstract
 	**/
-	@:overload private function writeConstructor() : Void;
+	@:overload @:protected private function writeConstructor() : Void;
 	
 	/**
 	* <d62023> - delete write_value from non-boxed helpers
 	*          - delete _write from non-boxed helpers
 	**/
-	@:overload public function helperWrite(entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
+	@:overload @:public public function helperWrite(entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	* <d62023>
 	**/
-	@:overload public function helperRead(entryName : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
+	@:overload @:public public function helperRead(entryName : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	* <d62023> - suppress initializers from mapped value; now generated in
 	*    the Helper class and Factory class
 	**/
-	@:overload private function writeInitializers() : Void;
+	@:overload @:protected private function writeInitializers() : Void;
 	
 	/**
 	* <d62023> - Goes in mapped class, not Helper
 	**/
-	@:overload private function writeTruncatable() : Void;
+	@:overload @:protected private function writeTruncatable() : Void;
 	
 	/**
 	* <d62023> CustomMarshal -> CustomValue for custom valuetypes
 	*          mapped class is abstract
 	**/
-	@:overload private function writeHeading() : Void;
+	@:overload @:protected private function writeHeading() : Void;
 	
 	/**
 	* <d62023> - private state maps to protected, not default
 	**/
-	@:overload private function writeMembers() : Void;
+	@:overload @:protected private function writeMembers() : Void;
 	
 	/**
 	* <d62023> Methods need to be abstract
 	*          writeStreamable
 	**/
-	@:overload private function writeMethods() : Void;
+	@:overload @:protected private function writeMethods() : Void;
 	
 	/**
 	* <d62023> Call super._read()
 	**/
-	@:overload public function read(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
+	@:overload @:public public function read(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
 	
 	/**
 	* <d62023> Call super._write()
 	**/
-	@:overload public function write(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
+	@:overload @:public public function write(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
 	
 	/**
 	* <62023> - generate factory interface and default factory
 	**/
-	@:overload override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, v : com.sun.tools.corba.se.idl.ValueEntry, str : java.io.PrintWriter) : Void;
+	@:overload @:public override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, v : com.sun.tools.corba.se.idl.ValueEntry, str : java.io.PrintWriter) : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function generateValueFactory() : Void;
+	@:overload @:protected private function generateValueFactory() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function generateDefaultFactory() : Void;
+	@:overload @:protected private function generateDefaultFactory() : Void;
 	
 	
 }
 @:native('com$sun$tools$corba$se$idl$toJavaPortable$ValueGen24$ImplStreamWriter') @:internal extern class ValueGen24_ImplStreamWriter
 {
-	@:overload public function writeClassName(name : String) : Void;
+	@:overload @:public public function writeClassName(name : String) : Void;
 	
 	
 }

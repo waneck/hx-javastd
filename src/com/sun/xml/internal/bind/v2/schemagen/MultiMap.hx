@@ -25,11 +25,11 @@ package com.sun.xml.internal.bind.v2.schemagen;
 */
 @:internal extern class MultiMap<K, V> extends java.util.TreeMap<K, V>
 {
-	@:overload public function new(many : V) : Void;
+	@:overload @:public public function new(many : V) : Void;
 	
-	@:overload public function put(key : K, value : V) : V;
+	@:overload @:public override public function put(key : K, value : V) : V;
 	
-	@:overload public function putAll(map : java.util.Map<K, V>) : Void;
+	@:overload @:public override public function putAll(map : java.util.Map<K, V>) : Void;
 	
 	
 }

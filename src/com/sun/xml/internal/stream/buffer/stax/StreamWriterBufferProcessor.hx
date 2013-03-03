@@ -32,37 +32,37 @@ extern class StreamWriterBufferProcessor extends com.sun.xml.internal.stream.buf
 	* @author Paul.Sandoz@Sun.Com
 	* @author K.Venugopal@sun.com
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* @deprecated
 	*      Use {@link #StreamWriterBufferProcessor(XMLStreamBuffer, boolean)}
 	*/
-	@:overload public function new(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : Void;
+	@:overload @:public public function new(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : Void;
 	
 	/**
 	* @param produceFragmentEvent
 	*      True to generate fragment SAX events without start/endDocument.
 	*      False to generate a full document SAX events.
 	*/
-	@:overload public function new(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer, produceFragmentEvent : Bool) : Void;
+	@:overload @:public public function new(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer, produceFragmentEvent : Bool) : Void;
 	
-	@:overload @:final public function process(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer, writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public @:final public function process(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer, writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload public function process(writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function process(writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* @deprecated
 	*      Use {@link #setXMLStreamBuffer(XMLStreamBuffer, boolean)}
 	*/
-	@:overload public function setXMLStreamBuffer(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : Void;
+	@:overload @:public public function setXMLStreamBuffer(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : Void;
 	
 	/**
 	* @param produceFragmentEvent
 	*      True to generate fragment SAX events without start/endDocument.
 	*      False to generate a full document SAX events.
 	*/
-	@:overload public function setXMLStreamBuffer(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer, produceFragmentEvent : Bool) : Void;
+	@:overload @:public public function setXMLStreamBuffer(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer, produceFragmentEvent : Bool) : Void;
 	
 	/**
 	* Writes a full XML infoset event to the given writer,
@@ -70,7 +70,7 @@ extern class StreamWriterBufferProcessor extends com.sun.xml.internal.stream.buf
 	* Any inscope namespaces present will be written as namespace
 	* delcarations on each top-level element.
 	*/
-	@:overload public function write(writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function write(writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Writes the buffer as a fragment, meaning
@@ -80,11 +80,11 @@ extern class StreamWriterBufferProcessor extends com.sun.xml.internal.stream.buf
 	* <p>
 	* If {@link XMLStreamBuffer} has a forest, this method will write all the forests.
 	*/
-	@:overload public function writeFragment(writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function writeFragment(writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload public function writeFragmentEx(writer : com.sun.xml.internal.org.jvnet.staxex.XMLStreamWriterEx) : Void;
+	@:overload @:public public function writeFragmentEx(writer : com.sun.xml.internal.org.jvnet.staxex.XMLStreamWriterEx) : Void;
 	
-	@:overload public function writeFragmentNoEx(writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function writeFragmentNoEx(writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	
 }

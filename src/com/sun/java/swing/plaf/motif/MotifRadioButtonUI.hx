@@ -37,17 +37,17 @@ package com.sun.java.swing.plaf.motif;
 */
 extern class MotifRadioButtonUI extends javax.swing.plaf.basic.BasicRadioButtonUI
 {
-	private var focusColor : java.awt.Color;
+	@:protected private var focusColor : java.awt.Color;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:public override public function installDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload override private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload private function getFocusColor() : java.awt.Color;
+	@:overload @:protected private function getFocusColor() : java.awt.Color;
 	
-	@:overload override private function paintFocus(g : java.awt.Graphics, t : java.awt.Rectangle, d : java.awt.Dimension) : Void;
+	@:overload @:protected override private function paintFocus(g : java.awt.Graphics, t : java.awt.Rectangle, d : java.awt.Dimension) : Void;
 	
 	
 }

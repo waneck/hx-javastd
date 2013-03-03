@@ -26,56 +26,56 @@ package javax.swing.tree;
 extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements java.io.Serializable implements javax.swing.tree.TreeSelectionModel
 {
 	/** Property name for selectionMode. */
-	public static var SELECTION_MODE_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var SELECTION_MODE_PROPERTY(default, null) : String;
 	
 	/** Used to messaged registered listeners. */
-	private var changeSupport : javax.swing.event.SwingPropertyChangeSupport;
+	@:protected private var changeSupport : javax.swing.event.SwingPropertyChangeSupport;
 	
 	/** Paths that are currently selected.  Will be null if nothing is
 	* currently selected. */
-	private var selection : java.NativeArray<javax.swing.tree.TreePath>;
+	@:protected private var selection : java.NativeArray<javax.swing.tree.TreePath>;
 	
 	/** Event listener list. */
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
 	/** Provides a row for a given path. */
-	@:transient private var rowMapper : javax.swing.tree.RowMapper;
+	@:transient @:protected private var rowMapper : javax.swing.tree.RowMapper;
 	
 	/** Handles maintaining the list selection model. The RowMapper is used
 	* to map from a TreePath to a row, and the value is then placed here. */
-	private var listSelectionModel : javax.swing.DefaultListSelectionModel;
+	@:protected private var listSelectionModel : javax.swing.DefaultListSelectionModel;
 	
 	/** Mode for the selection, will be either SINGLE_TREE_SELECTION,
 	* CONTIGUOUS_TREE_SELECTION or DISCONTIGUOUS_TREE_SELECTION.
 	*/
-	private var selectionMode : Int;
+	@:protected private var selectionMode : Int;
 	
 	/** Last path that was added. */
-	private var leadPath : javax.swing.tree.TreePath;
+	@:protected private var leadPath : javax.swing.tree.TreePath;
 	
 	/** Index of the lead path in selection. */
-	private var leadIndex : Int;
+	@:protected private var leadIndex : Int;
 	
 	/** Lead row. */
-	private var leadRow : Int;
+	@:protected private var leadRow : Int;
 	
 	/**
 	* Creates a new instance of DefaultTreeSelectionModel that is
 	* empty, with a selection mode of DISCONTIGUOUS_TREE_SELECTION.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets the RowMapper instance. This instance is used to determine
 	* the row for a particular TreePath.
 	*/
-	@:overload public function setRowMapper(newMapper : javax.swing.tree.RowMapper) : Void;
+	@:overload @:public public function setRowMapper(newMapper : javax.swing.tree.RowMapper) : Void;
 	
 	/**
 	* Returns the RowMapper instance that is able to map a TreePath to a
 	* row.
 	*/
-	@:overload public function getRowMapper() : javax.swing.tree.RowMapper;
+	@:overload @:public public function getRowMapper() : javax.swing.tree.RowMapper;
 	
 	/**
 	* Sets the selection model, which must be one of SINGLE_TREE_SELECTION,
@@ -91,14 +91,14 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	* Setting the mode to something other than the defined types will
 	* result in the mode becoming <code>DISCONTIGUOUS_TREE_SELECTION</code>.
 	*/
-	@:overload public function setSelectionMode(mode : Int) : Void;
+	@:overload @:public public function setSelectionMode(mode : Int) : Void;
 	
 	/**
 	* Returns the selection mode, one of <code>SINGLE_TREE_SELECTION</code>,
 	* <code>DISCONTIGUOUS_TREE_SELECTION</code> or
 	* <code>CONTIGUOUS_TREE_SELECTION</code>.
 	*/
-	@:overload public function getSelectionMode() : Int;
+	@:overload @:public public function getSelectionMode() : Int;
 	
 	/**
 	* Sets the selection to path. If this represents a change, then
@@ -107,7 +107,7 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	*
 	* @param path new path to select
 	*/
-	@:overload public function setSelectionPath(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function setSelectionPath(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Sets the selection. Whether the supplied paths are taken as the
@@ -132,7 +132,7 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	*
 	* @param pPaths the new selection
 	*/
-	@:overload public function setSelectionPaths(pPaths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
+	@:overload @:public public function setSelectionPaths(pPaths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
 	
 	/**
 	* Adds path to the current selection. If path is not currently
@@ -141,7 +141,7 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	*
 	* @param path the new path to add to the current selection
 	*/
-	@:overload public function addSelectionPath(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function addSelectionPath(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Adds paths to the current selection. If any of the paths in
@@ -158,7 +158,7 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	*
 	* @param paths the new path to add to the current selection
 	*/
-	@:overload public function addSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
+	@:overload @:public public function addSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
 	
 	/**
 	* Removes path from the selection. If path is in the selection
@@ -167,7 +167,7 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	*
 	* @param path the path to remove from the selection
 	*/
-	@:overload public function removeSelectionPath(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function removeSelectionPath(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Removes paths from the selection.  If any of the paths in paths
@@ -176,42 +176,42 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	*
 	* @param paths the paths to remove from the selection
 	*/
-	@:overload public function removeSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
+	@:overload @:public public function removeSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
 	
 	/**
 	* Returns the first path in the selection. This is useful if there
 	* if only one item currently selected.
 	*/
-	@:overload public function getSelectionPath() : javax.swing.tree.TreePath;
+	@:overload @:public public function getSelectionPath() : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns the selection.
 	*
 	* @return the selection
 	*/
-	@:overload public function getSelectionPaths() : java.NativeArray<javax.swing.tree.TreePath>;
+	@:overload @:public public function getSelectionPaths() : java.NativeArray<javax.swing.tree.TreePath>;
 	
 	/**
 	* Returns the number of paths that are selected.
 	*/
-	@:overload public function getSelectionCount() : Int;
+	@:overload @:public public function getSelectionCount() : Int;
 	
 	/**
 	* Returns true if the path, <code>path</code>,
 	* is in the current selection.
 	*/
-	@:overload public function isPathSelected(path : javax.swing.tree.TreePath) : Bool;
+	@:overload @:public public function isPathSelected(path : javax.swing.tree.TreePath) : Bool;
 	
 	/**
 	* Returns true if the selection is currently empty.
 	*/
-	@:overload public function isSelectionEmpty() : Bool;
+	@:overload @:public public function isSelectionEmpty() : Bool;
 	
 	/**
 	* Empties the current selection.  If this represents a change in the
 	* current selection, the selection listeners are notified.
 	*/
-	@:overload public function clearSelection() : Void;
+	@:overload @:public public function clearSelection() : Void;
 	
 	/**
 	* Adds x to the list of listeners that are notified each time the
@@ -219,7 +219,7 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	*
 	* @param x the new listener to be added
 	*/
-	@:overload public function addTreeSelectionListener(x : javax.swing.event.TreeSelectionListener) : Void;
+	@:overload @:public public function addTreeSelectionListener(x : javax.swing.event.TreeSelectionListener) : Void;
 	
 	/**
 	* Removes x from the list of listeners that are notified each time
@@ -227,7 +227,7 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	*
 	* @param x the listener to remove
 	*/
-	@:overload public function removeTreeSelectionListener(x : javax.swing.event.TreeSelectionListener) : Void;
+	@:overload @:public public function removeTreeSelectionListener(x : javax.swing.event.TreeSelectionListener) : Void;
 	
 	/**
 	* Returns an array of all the tree selection listeners
@@ -242,7 +242,7 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getTreeSelectionListeners() : java.NativeArray<javax.swing.event.TreeSelectionListener>;
+	@:require(java4) @:overload @:public public function getTreeSelectionListeners() : java.NativeArray<javax.swing.event.TreeSelectionListener>;
 	
 	/**
 	* Notifies all listeners that are registered for
@@ -250,7 +250,7 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	* @see #addTreeSelectionListener
 	* @see EventListenerList
 	*/
-	@:overload private function fireValueChanged(e : javax.swing.event.TreeSelectionEvent) : Void;
+	@:overload @:protected private function fireValueChanged(e : javax.swing.event.TreeSelectionEvent) : Void;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -289,7 +289,7 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Returns the selection in terms of rows. There is not
@@ -305,26 +305,26 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	*
 	* @return the selection in terms of rows
 	*/
-	@:overload public function getSelectionRows() : java.NativeArray<Int>;
+	@:overload @:public public function getSelectionRows() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the smallest value obtained from the RowMapper for the
 	* current set of selected TreePaths. If nothing is selected,
 	* or there is no RowMapper, this will return -1.
 	*/
-	@:overload public function getMinSelectionRow() : Int;
+	@:overload @:public public function getMinSelectionRow() : Int;
 	
 	/**
 	* Returns the largest value obtained from the RowMapper for the
 	* current set of selected TreePaths. If nothing is selected,
 	* or there is no RowMapper, this will return -1.
 	*/
-	@:overload public function getMaxSelectionRow() : Int;
+	@:overload @:public public function getMaxSelectionRow() : Int;
 	
 	/**
 	* Returns true if the row identified by <code>row</code> is selected.
 	*/
-	@:overload public function isRowSelected(row : Int) : Bool;
+	@:overload @:public public function isRowSelected(row : Int) : Bool;
 	
 	/**
 	* Updates this object's mapping from TreePath to rows. This should
@@ -337,19 +337,19 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	* the currently selected TreePaths are still valid based on the
 	* selection mode.
 	*/
-	@:overload public function resetRowSelection() : Void;
+	@:overload @:public public function resetRowSelection() : Void;
 	
 	/**
 	* Returns the lead selection index. That is the last index that was
 	* added.
 	*/
-	@:overload public function getLeadSelectionRow() : Int;
+	@:overload @:public public function getLeadSelectionRow() : Int;
 	
 	/**
 	* Returns the last path that was added. This may differ from the
 	* leadSelectionPath property maintained by the JTree.
 	*/
-	@:overload public function getLeadSelectionPath() : javax.swing.tree.TreePath;
+	@:overload @:public public function getLeadSelectionPath() : javax.swing.tree.TreePath;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list.
@@ -360,7 +360,7 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	*
 	* @param listener  the PropertyChangeListener to be added
 	*/
-	@:overload @:synchronized public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a PropertyChangeListener from the listener list.
@@ -369,7 +369,7 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	*
 	* @param listener  the PropertyChangeListener to be removed
 	*/
-	@:overload @:synchronized public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the property change listeners
@@ -384,7 +384,7 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:require(java4) @:overload @:public public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	/**
 	* Makes sure the currently selected <code>TreePath</code>s are valid
@@ -400,13 +400,13 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	* more than one TreePath is selected, the selection is reset to
 	* contain the first path currently selected.
 	*/
-	@:overload private function insureRowContinuity() : Void;
+	@:overload @:protected private function insureRowContinuity() : Void;
 	
 	/**
 	* Returns true if the paths are contiguous,
 	* or this object has no RowMapper.
 	*/
-	@:overload private function arePathsContiguous(paths : java.NativeArray<javax.swing.tree.TreePath>) : Bool;
+	@:overload @:protected private function arePathsContiguous(paths : java.NativeArray<javax.swing.tree.TreePath>) : Bool;
 	
 	/**
 	* Used to test if a particular set of <code>TreePath</code>s can
@@ -416,14 +416,14 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	* adding the paths to the current selection still results in a
 	* contiguous set of <code>TreePath</code>s.
 	*/
-	@:overload private function canPathsBeAdded(paths : java.NativeArray<javax.swing.tree.TreePath>) : Bool;
+	@:overload @:protected private function canPathsBeAdded(paths : java.NativeArray<javax.swing.tree.TreePath>) : Bool;
 	
 	/**
 	* Returns true if the paths can be removed without breaking the
 	* continuity of the model.
 	* This is rather expensive.
 	*/
-	@:overload private function canPathsBeRemoved(paths : java.NativeArray<javax.swing.tree.TreePath>) : Bool;
+	@:overload @:protected private function canPathsBeRemoved(paths : java.NativeArray<javax.swing.tree.TreePath>) : Bool;
 	
 	/**
 	* Notifies listeners of a change in path. changePaths should contain
@@ -431,19 +431,19 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	*
 	* @deprecated As of JDK version 1.7
 	*/
-	@:overload private function notifyPathChange(changedPaths : java.util.Vector<Dynamic>, oldLeadSelection : javax.swing.tree.TreePath) : Void;
+	@:overload @:protected private function notifyPathChange(changedPaths : java.util.Vector<Dynamic>, oldLeadSelection : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Updates the leadIndex instance variable.
 	*/
-	@:overload private function updateLeadIndex() : Void;
+	@:overload @:protected private function updateLeadIndex() : Void;
 	
 	/**
 	* This method is obsolete and its implementation is now a noop.  It's
 	* still called by setSelectionPaths and addSelectionPaths, but only
 	* for backwards compatability.
 	*/
-	@:overload private function insureUniqueness() : Void;
+	@:overload @:protected private function insureUniqueness() : Void;
 	
 	/**
 	* Returns a string that displays and identifies this
@@ -451,7 +451,7 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	*
 	* @return a String representation of this object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a clone of this object with the same selection.
@@ -461,7 +461,7 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	* @exception CloneNotSupportedException never thrown by instances of
 	*                                       this class
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }
@@ -470,9 +470,9 @@ extern class DefaultTreeSelectionModel implements java.lang.Cloneable implements
 	/**
 	* Holds a path and whether or not it is new.
 	*/
-	private var isNew : Bool;
+	@:protected private var isNew : Bool;
 	
-	private var path : javax.swing.tree.TreePath;
+	@:protected private var path : javax.swing.tree.TreePath;
 	
 	
 }

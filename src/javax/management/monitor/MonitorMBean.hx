@@ -30,12 +30,12 @@ extern interface MonitorMBean
 	/**
 	* Starts the monitor.
 	*/
-	@:overload public function start() : Void;
+	@:overload @:public public function start() : Void;
 	
 	/**
 	* Stops the monitor.
 	*/
-	@:overload public function stop() : Void;
+	@:overload @:public public function stop() : Void;
 	
 	/**
 	* Adds the specified object in the set of observed MBeans.
@@ -44,7 +44,7 @@ extern interface MonitorMBean
 	* @exception java.lang.IllegalArgumentException the specified object is null.
 	*
 	*/
-	@:overload public function addObservedObject(object : javax.management.ObjectName) : Void;
+	@:overload @:public public function addObservedObject(object : javax.management.ObjectName) : Void;
 	
 	/**
 	* Removes the specified object from the set of observed MBeans.
@@ -52,7 +52,7 @@ extern interface MonitorMBean
 	* @param object The object to remove.
 	*
 	*/
-	@:overload public function removeObservedObject(object : javax.management.ObjectName) : Void;
+	@:overload @:public public function removeObservedObject(object : javax.management.ObjectName) : Void;
 	
 	/**
 	* Tests whether the specified object is in the set of observed MBeans.
@@ -61,7 +61,7 @@ extern interface MonitorMBean
 	* @return <CODE>true</CODE> if the specified object is in the set, <CODE>false</CODE> otherwise.
 	*
 	*/
-	@:overload public function containsObservedObject(object : javax.management.ObjectName) : Bool;
+	@:overload @:public public function containsObservedObject(object : javax.management.ObjectName) : Bool;
 	
 	/**
 	* Returns an array containing the objects being observed.
@@ -69,7 +69,7 @@ extern interface MonitorMBean
 	* @return The objects being observed.
 	*
 	*/
-	@:overload public function getObservedObjects() : java.NativeArray<javax.management.ObjectName>;
+	@:overload @:public public function getObservedObjects() : java.NativeArray<javax.management.ObjectName>;
 	
 	/**
 	* Gets the object name of the object being observed.
@@ -80,7 +80,7 @@ extern interface MonitorMBean
 	*
 	* @deprecated As of JMX 1.2, replaced by {@link #getObservedObjects}
 	*/
-	@:overload public function getObservedObject() : javax.management.ObjectName;
+	@:overload @:public public function getObservedObject() : javax.management.ObjectName;
 	
 	/**
 	* Sets the object to observe identified by its object name.
@@ -91,7 +91,7 @@ extern interface MonitorMBean
 	*
 	* @deprecated As of JMX 1.2, replaced by {@link #addObservedObject}
 	*/
-	@:overload public function setObservedObject(object : javax.management.ObjectName) : Void;
+	@:overload @:public public function setObservedObject(object : javax.management.ObjectName) : Void;
 	
 	/**
 	* Gets the attribute being observed.
@@ -100,7 +100,7 @@ extern interface MonitorMBean
 	*
 	* @see #setObservedAttribute
 	*/
-	@:overload public function getObservedAttribute() : String;
+	@:overload @:public public function getObservedAttribute() : String;
 	
 	/**
 	* Sets the attribute to observe.
@@ -109,7 +109,7 @@ extern interface MonitorMBean
 	*
 	* @see #getObservedAttribute
 	*/
-	@:overload public function setObservedAttribute(attribute : String) : Void;
+	@:overload @:public public function setObservedAttribute(attribute : String) : Void;
 	
 	/**
 	* Gets the granularity period (in milliseconds).
@@ -118,7 +118,7 @@ extern interface MonitorMBean
 	*
 	* @see #setGranularityPeriod
 	*/
-	@:overload public function getGranularityPeriod() : haxe.Int64;
+	@:overload @:public public function getGranularityPeriod() : haxe.Int64;
 	
 	/**
 	* Sets the granularity period (in milliseconds).
@@ -129,7 +129,7 @@ extern interface MonitorMBean
 	*
 	* @see #getGranularityPeriod
 	*/
-	@:overload public function setGranularityPeriod(period : haxe.Int64) : Void;
+	@:overload @:public public function setGranularityPeriod(period : haxe.Int64) : Void;
 	
 	/**
 	* Tests if the monitor MBean is active.
@@ -138,7 +138,7 @@ extern interface MonitorMBean
 	*
 	* @return <CODE>true</CODE> if the monitor MBean is active, <CODE>false</CODE> otherwise.
 	*/
-	@:overload public function isActive() : Bool;
+	@:overload @:public public function isActive() : Bool;
 	
 	
 }

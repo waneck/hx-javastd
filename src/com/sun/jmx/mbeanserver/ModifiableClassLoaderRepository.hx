@@ -29,28 +29,28 @@ extern interface ModifiableClassLoaderRepository extends javax.management.loadin
 	/**
 	* Add an anonymous ClassLoader to the repository.
 	**/
-	@:overload public function addClassLoader(loader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function addClassLoader(loader : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Remove the specified ClassLoader to the repository.
 	* The class loader may or may not be anonymous.
 	**/
-	@:overload public function removeClassLoader(loader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function removeClassLoader(loader : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Add a named ClassLoader to the repository.
 	**/
-	@:overload public function addClassLoader(name : javax.management.ObjectName, loader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function addClassLoader(name : javax.management.ObjectName, loader : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Remove a named ClassLoader from the repository.
 	**/
-	@:overload public function removeClassLoader(name : javax.management.ObjectName) : Void;
+	@:overload @:public public function removeClassLoader(name : javax.management.ObjectName) : Void;
 	
 	/**
 	* Get a named ClassLoader from the repository.
 	**/
-	@:overload public function getClassLoader(name : javax.management.ObjectName) : java.lang.ClassLoader;
+	@:overload @:public public function getClassLoader(name : javax.management.ObjectName) : java.lang.ClassLoader;
 	
 	
 }

@@ -30,25 +30,25 @@ extern class Import extends com.sun.tools.internal.ws.wsdl.framework.Entity
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
-	@:overload public function setNamespace(s : String) : Void;
+	@:overload @:public public function setNamespace(s : String) : Void;
 	
-	@:overload public function getLocation() : String;
+	@:overload @:public public function getLocation() : String;
 	
-	@:overload public function setLocation(s : String) : Void;
+	@:overload @:public public function setLocation(s : String) : Void;
 	
-	@:overload public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function getDocumentation() : com.sun.tools.internal.ws.wsdl.document.Documentation;
+	@:overload @:public public function getDocumentation() : com.sun.tools.internal.ws.wsdl.document.Documentation;
 	
-	@:overload public function setDocumentation(d : com.sun.tools.internal.ws.wsdl.document.Documentation) : Void;
+	@:overload @:public public function setDocumentation(d : com.sun.tools.internal.ws.wsdl.document.Documentation) : Void;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
+	@:overload @:public public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
 	
-	@:overload public function validateThis() : Void;
+	@:overload @:public override public function validateThis() : Void;
 	
 	
 }

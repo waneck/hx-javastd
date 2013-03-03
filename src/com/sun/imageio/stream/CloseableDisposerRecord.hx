@@ -25,9 +25,9 @@ package com.sun.imageio.stream;
 */
 extern class CloseableDisposerRecord implements sun.java2d.DisposerRecord
 {
-	@:overload public function new(closeable : java.io.Closeable) : Void;
+	@:overload @:public public function new(closeable : java.io.Closeable) : Void;
 	
-	@:overload @:synchronized public function dispose() : Void;
+	@:overload @:public @:synchronized public function dispose() : Void;
 	
 	
 }

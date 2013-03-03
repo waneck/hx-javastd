@@ -27,7 +27,7 @@ extern interface KeyValueContent
 	* @return the public key
 	* @throws XMLSecurityException
 	*/
-	@:overload public function getPublicKey() : java.security.PublicKey;
+	@:overload @:public public function getPublicKey() : java.security.PublicKey;
 	
 	
 }

@@ -25,31 +25,31 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class CDRInputStream_1_1 extends com.sun.corba.se.impl.encoding.CDRInputStream_1_0
 {
-	private var fragmentOffset : Int;
+	@:protected private var fragmentOffset : Int;
 	
-	@:overload override public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:overload @:public override public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	@:overload override public function dup() : com.sun.corba.se.impl.encoding.CDRInputStreamBase;
+	@:overload @:public override public function dup() : com.sun.corba.se.impl.encoding.CDRInputStreamBase;
 	
-	@:overload override private function get_offset() : Int;
+	@:overload @:protected override private function get_offset() : Int;
 	
-	@:overload override private function alignAndCheck(align : Int, n : Int) : Void;
+	@:overload @:protected override private function alignAndCheck(align : Int, n : Int) : Void;
 	
-	@:overload override private function grow(align : Int, n : Int) : Void;
+	@:overload @:protected override private function grow(align : Int, n : Int) : Void;
 	
-	@:overload override public function createStreamMemento() : Dynamic;
+	@:overload @:public override public function createStreamMemento() : Dynamic;
 	
-	@:overload override public function restoreInternalState(streamMemento : Dynamic) : Void;
+	@:overload @:public override public function restoreInternalState(streamMemento : Dynamic) : Void;
 	
-	@:overload override public function read_wchar() : java.StdTypes.Char16;
+	@:overload @:public override public function read_wchar() : java.StdTypes.Char16;
 	
-	@:overload override public function read_wstring() : String;
+	@:overload @:public override public function read_wstring() : String;
 	
 	
 }
 @:native('com$sun$corba$se$impl$encoding$CDRInputStream_1_1$FragmentableStreamMemento') @:internal extern class CDRInputStream_1_1_FragmentableStreamMemento extends com.sun.corba.se.impl.encoding.CDRInputStream_1_0.CDRInputStream_1_0_StreamMemento
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

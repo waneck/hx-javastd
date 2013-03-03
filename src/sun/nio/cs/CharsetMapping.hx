@@ -25,37 +25,37 @@ package sun.nio.cs;
 */
 extern class CharsetMapping
 {
-	public static var UNMAPPABLE_DECODING(default, null) : java.StdTypes.Char16;
+	@:public @:final @:static public static var UNMAPPABLE_DECODING(default, null) : java.StdTypes.Char16;
 	
-	public static var UNMAPPABLE_ENCODING(default, null) : Int;
+	@:public @:final @:static public static var UNMAPPABLE_ENCODING(default, null) : Int;
 	
-	@:overload public function decodeSingle(b : Int) : java.StdTypes.Char16;
+	@:overload @:public public function decodeSingle(b : Int) : java.StdTypes.Char16;
 	
-	@:overload public function decodeDouble(b1 : Int, b2 : Int) : java.StdTypes.Char16;
+	@:overload @:public public function decodeDouble(b1 : Int, b2 : Int) : java.StdTypes.Char16;
 	
-	@:overload public function decodeSurrogate(db : Int, cc : java.NativeArray<java.StdTypes.Char16>) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function decodeSurrogate(db : Int, cc : java.NativeArray<java.StdTypes.Char16>) : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload public function decodeComposite(comp : sun.nio.cs.CharsetMapping.CharsetMapping_Entry, cc : java.NativeArray<java.StdTypes.Char16>) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function decodeComposite(comp : sun.nio.cs.CharsetMapping.CharsetMapping_Entry, cc : java.NativeArray<java.StdTypes.Char16>) : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload public function encodeChar(ch : java.StdTypes.Char16) : Int;
+	@:overload @:public public function encodeChar(ch : java.StdTypes.Char16) : Int;
 	
-	@:overload public function encodeSurrogate(hi : java.StdTypes.Char16, lo : java.StdTypes.Char16) : Int;
+	@:overload @:public public function encodeSurrogate(hi : java.StdTypes.Char16, lo : java.StdTypes.Char16) : Int;
 	
-	@:overload public function isCompositeBase(comp : sun.nio.cs.CharsetMapping.CharsetMapping_Entry) : Bool;
+	@:overload @:public public function isCompositeBase(comp : sun.nio.cs.CharsetMapping.CharsetMapping_Entry) : Bool;
 	
-	@:overload public function encodeComposite(comp : sun.nio.cs.CharsetMapping.CharsetMapping_Entry) : Int;
+	@:overload @:public public function encodeComposite(comp : sun.nio.cs.CharsetMapping.CharsetMapping_Entry) : Int;
 	
-	@:overload public static function get(is : java.io.InputStream) : sun.nio.cs.CharsetMapping;
+	@:overload @:public @:static public static function get(is : java.io.InputStream) : sun.nio.cs.CharsetMapping;
 	
 	
 }
 @:native('sun$nio$cs$CharsetMapping$Entry') extern class CharsetMapping_Entry
 {
-	public var bs : Int;
+	@:public public var bs : Int;
 	
-	public var cp : Int;
+	@:public public var cp : Int;
 	
-	public var cp2 : Int;
+	@:public public var cp2 : Int;
 	
 	
 }

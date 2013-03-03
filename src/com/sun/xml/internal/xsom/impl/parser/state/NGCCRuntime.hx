@@ -43,7 +43,7 @@ extern class NGCCRuntime implements org.xml.sax.ContentHandler implements com.su
 	* @version $Id: NGCCRuntime.java,v 1.15 2002/09/29 02:55:48 okajima Exp $
 	* @author Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets the root handler, which will be used to parse the
@@ -61,7 +61,7 @@ extern class NGCCRuntime implements org.xml.sax.ContentHandler implements com.su
 	*      If this method is called but it doesn't satisfy the
 	*      pre-condition stated above.
 	*/
-	@:overload public function setRootHandler(rootHandler : com.sun.xml.internal.xsom.impl.parser.state.NGCCHandler) : Void;
+	@:overload @:public public function setRootHandler(rootHandler : com.sun.xml.internal.xsom.impl.parser.state.NGCCHandler) : Void;
 	
 	/**
 	* Cleans up all the data structure so that the object can be reused later.
@@ -69,9 +69,9 @@ extern class NGCCRuntime implements org.xml.sax.ContentHandler implements com.su
 	*
 	* as the runtime resets itself after the endDocument method.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function setDocumentLocator(_loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(_loc : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Gets the source location of the current event.
@@ -80,7 +80,7 @@ extern class NGCCRuntime implements org.xml.sax.ContentHandler implements com.su
 	* One can call this method from RelaxNGCC handlers to access
 	* the line number information. Note that to
 	*/
-	@:overload public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public public function getLocator() : org.xml.sax.Locator;
 	
 	/**
 	* Attributes that belong to the current element.
@@ -90,13 +90,13 @@ extern class NGCCRuntime implements org.xml.sax.ContentHandler implements com.su
 	* so this doesn't correctly reflect all the attributes an element
 	* carries.
 	*/
-	@:overload public function getCurrentAttributes() : org.xml.sax.Attributes;
+	@:overload @:public public function getCurrentAttributes() : org.xml.sax.Attributes;
 	
-	@:overload public function replace(o : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, n : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver) : Int;
+	@:overload @:public public function replace(o : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, n : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver) : Int;
 	
-	@:overload public function processList(str : String) : Void;
+	@:overload @:public public function processList(str : String) : Void;
 	
-	@:overload public function startElement(uri : String, localname : String, qname : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(uri : String, localname : String, qname : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Called by the generated handler code when an enter element
@@ -113,41 +113,41 @@ extern class NGCCRuntime implements org.xml.sax.ContentHandler implements com.su
 	* This method will be called from one of handlers when it truely
 	* consumes the enterElement event.
 	*/
-	@:overload public function onEnterElementConsumed(uri : String, localName : String, qname : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function onEnterElementConsumed(uri : String, localName : String, qname : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function onLeaveElementConsumed(uri : String, localName : String, qname : String) : Void;
+	@:overload @:public public function onLeaveElementConsumed(uri : String, localName : String, qname : String) : Void;
 	
-	@:overload public function endElement(uri : String, localname : String, qname : String) : Void;
+	@:overload @:public public function endElement(uri : String, localname : String, qname : String) : Void;
 	
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function getAttributeIndex(uri : String, localname : String) : Int;
+	@:overload @:public public function getAttributeIndex(uri : String, localname : String) : Int;
 	
-	@:overload public function consumeAttribute(index : Int) : Void;
+	@:overload @:public public function consumeAttribute(index : Int) : Void;
 	
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
-	@:overload public function sendEnterAttribute(threadId : Int, uri : String, local : String, qname : String) : Void;
+	@:overload @:public public function sendEnterAttribute(threadId : Int, uri : String, local : String, qname : String) : Void;
 	
-	@:overload public function sendEnterElement(threadId : Int, uri : String, local : String, qname : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function sendEnterElement(threadId : Int, uri : String, local : String, qname : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function sendLeaveAttribute(threadId : Int, uri : String, local : String, qname : String) : Void;
+	@:overload @:public public function sendLeaveAttribute(threadId : Int, uri : String, local : String, qname : String) : Void;
 	
-	@:overload public function sendLeaveElement(threadId : Int, uri : String, local : String, qname : String) : Void;
+	@:overload @:public public function sendLeaveElement(threadId : Int, uri : String, local : String, qname : String) : Void;
 	
-	@:overload public function sendText(threadId : Int, value : String) : Void;
+	@:overload @:public public function sendText(threadId : Int, value : String) : Void;
 	
 	/**
 	* This method can be called only from the enterElement handler.
@@ -162,15 +162,15 @@ extern class NGCCRuntime implements org.xml.sax.ContentHandler implements com.su
 	*      Parameters passed to the enter element event. Used to
 	*      simulate the startElement event for the new ContentHandler.
 	*/
-	@:overload public function redirectSubtree(child : org.xml.sax.ContentHandler, uri : String, local : String, qname : String) : Void;
+	@:overload @:public public function redirectSubtree(child : org.xml.sax.ContentHandler, uri : String, local : String, qname : String) : Void;
 	
-	@:overload public function resolveNamespacePrefix(prefix : String) : String;
+	@:overload @:public public function resolveNamespacePrefix(prefix : String) : String;
 	
-	@:overload private function unexpectedX(token : String) : Void;
+	@:overload @:protected private function unexpectedX(token : String) : Void;
 	
-	//@:overload public function _trace(s : String) : Void;
+	//@:overload @:public public function _trace(s : String) : Void;
 	
-	@:overload public function traceln(s : String) : Void;
+	@:overload @:public public function traceln(s : String) : Void;
 	
 	
 }

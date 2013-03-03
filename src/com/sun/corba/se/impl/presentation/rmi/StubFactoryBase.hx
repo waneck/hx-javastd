@@ -25,16 +25,16 @@ package com.sun.corba.se.impl.presentation.rmi;
 */
 extern class StubFactoryBase implements com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory
 {
-	private var classData(default, null) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData;
+	@:protected @:final private var classData(default, null) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData;
 	
-	@:overload private function new(classData : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData) : Void;
+	@:overload @:protected private function new(classData : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData) : Void;
 	
-	@:overload @:synchronized public function getTypeIds() : java.NativeArray<String>;
+	@:overload @:public @:synchronized public function getTypeIds() : java.NativeArray<String>;
 	
 	/** Create a new dynamic stub.  It has the type that was
 	* used to create this factory.
 	*/
-	@:overload public function makeStub() : org.omg.CORBA.Object;
+	@:overload @:public public function makeStub() : org.omg.CORBA.Object;
 	
 	
 }

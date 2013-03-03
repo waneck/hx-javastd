@@ -44,7 +44,7 @@ extern interface MediaList
 	*  The parsable textual representation of the media list. This is a
 	* comma-separated list of media.
 	*/
-	@:overload public function getMediaText() : String;
+	@:overload @:public public function getMediaText() : String;
 	
 	/**
 	*  The parsable textual representation of the media list. This is a
@@ -55,13 +55,13 @@ extern interface MediaList
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this media list is
 	*   readonly.
 	*/
-	@:overload public function setMediaText(mediaText : String) : Void;
+	@:overload @:public public function setMediaText(mediaText : String) : Void;
 	
 	/**
 	*  The number of media in the list. The range of valid media is
 	* <code>0</code> to <code>length-1</code> inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	*  Returns the <code>index</code>th in the list. If <code>index</code> is
@@ -72,7 +72,7 @@ extern interface MediaList
 	*   <code>MediaList</code>, or <code>null</code> if that is not a valid
 	*   index.
 	*/
-	@:overload public function item(index : Int) : String;
+	@:overload @:public public function item(index : Int) : String;
 	
 	/**
 	*  Deletes the medium indicated by <code>oldMedium</code> from the list.
@@ -82,7 +82,7 @@ extern interface MediaList
 	*   <br> NOT_FOUND_ERR: Raised if <code>oldMedium</code> is not in the
 	*   list.
 	*/
-	@:overload public function deleteMedium(oldMedium : String) : Void;
+	@:overload @:public public function deleteMedium(oldMedium : String) : Void;
 	
 	/**
 	*  Adds the medium <code>newMedium</code> to the end of the list. If the
@@ -93,7 +93,7 @@ extern interface MediaList
 	*   invalid in the underlying style language.
 	*   <br> NO_MODIFICATION_ALLOWED_ERR: Raised if this list is readonly.
 	*/
-	@:overload public function appendMedium(newMedium : String) : Void;
+	@:overload @:public public function appendMedium(newMedium : String) : Void;
 	
 	
 }

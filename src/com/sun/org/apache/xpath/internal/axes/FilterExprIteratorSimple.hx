@@ -27,13 +27,13 @@ extern class FilterExprIteratorSimple extends com.sun.org.apache.xpath.internal.
 	* Create a FilterExprIteratorSimple object.
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a FilterExprIteratorSimple object.
 	*
 	*/
-	@:overload public function new(expr : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function new(expr : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	/**
 	* Initialize the context values for this expression
@@ -42,13 +42,13 @@ extern class FilterExprIteratorSimple extends com.sun.org.apache.xpath.internal.
 	* @param context The XPath runtime context for this
 	* transformation.
 	*/
-	@:overload override public function setRoot(context : Int, environment : Dynamic) : Void;
+	@:overload @:public override public function setRoot(context : Int, environment : Dynamic) : Void;
 	
 	/**
 	* Execute the expression.  Meant for reuse by other FilterExpr iterators
 	* that are not derived from this object.
 	*/
-	@:overload public static function executeFilterExpr(context : Int, xctxt : com.sun.org.apache.xpath.internal.XPathContext, prefixResolver : com.sun.org.apache.xml.internal.utils.PrefixResolver, isTopLevel : Bool, stackFrame : Int, expr : com.sun.org.apache.xpath.internal.Expression) : com.sun.org.apache.xpath.internal.objects.XNodeSet;
+	@:overload @:public @:static public static function executeFilterExpr(context : Int, xctxt : com.sun.org.apache.xpath.internal.XPathContext, prefixResolver : com.sun.org.apache.xml.internal.utils.PrefixResolver, isTopLevel : Bool, stackFrame : Int, expr : com.sun.org.apache.xpath.internal.Expression) : com.sun.org.apache.xpath.internal.objects.XNodeSet;
 	
 	/**
 	*  Returns the next node in the set and advances the position of the
@@ -58,14 +58,14 @@ extern class FilterExprIteratorSimple extends com.sun.org.apache.xpath.internal.
 	* @return  The next <code>Node</code> in the set being iterated over, or
 	*   <code>null</code> if there are no more members in that set.
 	*/
-	@:overload override public function nextNode() : Int;
+	@:overload @:public override public function nextNode() : Int;
 	
 	/**
 	* Detaches the walker from the set which it iterated over, releasing
 	* any computational resources and placing the iterator in the INVALID
 	* state.
 	*/
-	@:overload override public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	/**
 	* This function is used to fixup variables from QNames to stack frame
@@ -77,23 +77,23 @@ extern class FilterExprIteratorSimple extends com.sun.org.apache.xpath.internal.
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Get the inner contained expression of this filter.
 	*/
-	@:overload public function getInnerExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getInnerExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Set the inner contained expression of this filter.
 	*/
-	@:overload public function setInnerExpression(expr : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setInnerExpression(expr : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	/**
 	* Get the analysis bits for this walker, as defined in the WalkerFactory.
 	* @return One of WalkerFactory#BIT_DESCENDANT, etc.
 	*/
-	@:overload override public function getAnalysisBits() : Int;
+	@:overload @:public override public function getAnalysisBits() : Int;
 	
 	/**
 	* Returns true if all the nodes in the iteration well be returned in document
@@ -102,7 +102,7 @@ extern class FilterExprIteratorSimple extends com.sun.org.apache.xpath.internal.
 	*
 	* @return true as a default.
 	*/
-	@:overload override public function isDocOrdered() : Bool;
+	@:overload @:public override public function isDocOrdered() : Bool;
 	
 	/**
 	* This will traverse the heararchy, calling the visitor for
@@ -111,12 +111,12 @@ extern class FilterExprIteratorSimple extends com.sun.org.apache.xpath.internal.
 	*
 	* @param visitor The visitor whose appropriate method will be called.
 	*/
-	@:overload public function callPredicateVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callPredicateVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	/**
 	* Returns the axis being iterated, if it is known.
@@ -124,7 +124,7 @@ extern class FilterExprIteratorSimple extends com.sun.org.apache.xpath.internal.
 	* @return Axis.CHILD, etc., or -1 if the axis is not known or is of multiple
 	* types.
 	*/
-	@:overload override public function getAxis() : Int;
+	@:overload @:public override public function getAxis() : Int;
 	
 	
 }
@@ -133,12 +133,12 @@ extern class FilterExprIteratorSimple extends com.sun.org.apache.xpath.internal.
 	/**
 	* @see ExpressionOwner#getExpression()
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see ExpressionOwner#setExpression(Expression)
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	
 }

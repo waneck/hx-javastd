@@ -10,16 +10,16 @@ extern class NameValuePair implements org.omg.CORBA.portable.IDLEntity
 	/**
 	* The name associated with the Any.
 	*/
-	public var id : String;
+	@:public public var id : String;
 	
 	/**
 	* The Any value associated with the name.
 	*/
-	public var value : org.omg.CORBA.Any;
+	@:public public var value : org.omg.CORBA.Any;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_id : String, _value : org.omg.CORBA.Any) : Void;
+	@:overload @:public public function new(_id : String, _value : org.omg.CORBA.Any) : Void;
 	
 	
 }

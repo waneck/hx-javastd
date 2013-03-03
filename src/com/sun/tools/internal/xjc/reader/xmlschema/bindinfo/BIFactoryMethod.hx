@@ -30,18 +30,18 @@ extern class BIFactoryMethod extends com.sun.tools.internal.xjc.reader.xmlschema
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	public var name : String;
+	@:public public var name : String;
 	
 	/**
 	* If the given component has {@link BIInlineBinaryData} customization,
 	* reflect that to the specified property.
 	*/
-	@:overload public static function handle(source : com.sun.xml.internal.xsom.XSComponent, prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : Void;
+	@:overload @:public @:static public static function handle(source : com.sun.xml.internal.xsom.XSComponent, prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : Void;
 	
-	@:overload @:final override public function getName() : javax.xml.namespace.QName;
+	@:overload @:public @:final override public function getName() : javax.xml.namespace.QName;
 	
 	/** Name of the declaration. */
-	public static var NAME(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var NAME(default, null) : javax.xml.namespace.QName;
 	
 	
 }

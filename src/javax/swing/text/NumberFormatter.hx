@@ -91,14 +91,14 @@ package javax.swing.text;
 	* <code>NumberFormat</code> instance obtained from
 	* <code>NumberFormat.getNumberInstance()</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a NumberFormatter with the specified Format instance.
 	*
 	* @param format Format used to dictate legal values
 	*/
-	@:overload public function new(format : java.text.NumberFormat) : Void;
+	@:overload @:public public function new(format : java.text.NumberFormat) : Void;
 	
 	/**
 	* Sets the format that dictates the legal values that can be edited
@@ -110,7 +110,7 @@ package javax.swing.text;
 	*
 	* @param format NumberFormat instance used to dictate legal values
 	*/
-	@:overload public function setFormat(format : java.text.Format) : Void;
+	@:overload @:public override public function setFormat(format : java.text.Format) : Void;
 	
 	
 }

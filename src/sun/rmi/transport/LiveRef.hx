@@ -31,41 +31,41 @@ extern class LiveRef implements java.lang.Cloneable
 	* server in this address space; if false, the ref is for a remote
 	* object (hence a surrogate or proxy) in another address space.
 	*/
-	@:overload public function new(objID : java.rmi.server.ObjID, endpoint : sun.rmi.transport.Endpoint, isLocal : Bool) : Void;
+	@:overload @:public public function new(objID : java.rmi.server.ObjID, endpoint : sun.rmi.transport.Endpoint, isLocal : Bool) : Void;
 	
 	/**
 	* Construct a new live reference for a server object in the local
 	* address space.
 	*/
-	@:overload public function new(port : Int) : Void;
+	@:overload @:public public function new(port : Int) : Void;
 	
 	/**
 	* Construct a new live reference for a server object in the local
 	* address space, to use sockets of the specified type.
 	*/
-	@:overload public function new(port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : Void;
+	@:overload @:public public function new(port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : Void;
 	
 	/**
 	* Construct a new live reference for a "well-known" server object
 	* in the local address space.
 	*/
-	@:overload public function new(objID : java.rmi.server.ObjID, port : Int) : Void;
+	@:overload @:public public function new(objID : java.rmi.server.ObjID, port : Int) : Void;
 	
 	/**
 	* Construct a new live reference for a "well-known" server object
 	* in the local address space, to use sockets of the specified type.
 	*/
-	@:overload public function new(objID : java.rmi.server.ObjID, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : Void;
+	@:overload @:public public function new(objID : java.rmi.server.ObjID, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : Void;
 	
 	/**
 	* Return a shallow copy of this ref.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Return the port number associated with this ref.
 	*/
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
 	/**
 	* Return the client socket factory associated with this ref.
@@ -74,33 +74,33 @@ extern class LiveRef implements java.lang.Cloneable
 	* this method in the implementation of
 	* javax.management.remote.rmi.RMIConnector.
 	**/
-	@:overload public function getClientSocketFactory() : java.rmi.server.RMIClientSocketFactory;
+	@:overload @:public public function getClientSocketFactory() : java.rmi.server.RMIClientSocketFactory;
 	
 	/**
 	* Return the server socket factory associated with this ref.
 	*/
-	@:overload public function getServerSocketFactory() : java.rmi.server.RMIServerSocketFactory;
+	@:overload @:public public function getServerSocketFactory() : java.rmi.server.RMIServerSocketFactory;
 	
 	/**
 	* Export the object to accept incoming calls.
 	*/
-	@:overload public function exportObject(target : sun.rmi.transport.Target) : Void;
+	@:overload @:public public function exportObject(target : sun.rmi.transport.Target) : Void;
 	
-	@:overload public function getChannel() : sun.rmi.transport.Channel;
+	@:overload @:public public function getChannel() : sun.rmi.transport.Channel;
 	
-	@:overload public function getObjID() : java.rmi.server.ObjID;
+	@:overload @:public public function getObjID() : java.rmi.server.ObjID;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function remoteEquals(obj : Dynamic) : Bool;
+	@:overload @:public public function remoteEquals(obj : Dynamic) : Bool;
 	
-	@:overload public function write(out : java.io.ObjectOutput, useNewFormat : Bool) : Void;
+	@:overload @:public public function write(out : java.io.ObjectOutput, useNewFormat : Bool) : Void;
 	
-	@:overload public static function read(_in : java.io.ObjectInput, useNewFormat : Bool) : sun.rmi.transport.LiveRef;
+	@:overload @:public @:static public static function read(_in : java.io.ObjectInput, useNewFormat : Bool) : sun.rmi.transport.LiveRef;
 	
 	
 }

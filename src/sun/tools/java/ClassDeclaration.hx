@@ -55,40 +55,40 @@ extern class ClassDeclaration implements sun.tools.java.Constants
 	/**
 	* Constructor
 	*/
-	@:overload public function new(name : sun.tools.java.Identifier) : Void;
+	@:overload @:public public function new(name : sun.tools.java.Identifier) : Void;
 	
 	/**
 	* Get the status of the class
 	*/
-	@:overload public function getStatus() : Int;
+	@:overload @:public public function getStatus() : Int;
 	
 	/**
 	* Get the name of the class
 	*/
-	@:overload public function getName() : sun.tools.java.Identifier;
+	@:overload @:public public function getName() : sun.tools.java.Identifier;
 	
 	/**
 	* Get the type of the class
 	*/
-	@:overload public function getType() : sun.tools.java.Type;
+	@:overload @:public public function getType() : sun.tools.java.Type;
 	
 	/**
 	* Check if the class is defined
 	*/
-	@:overload public function isDefined() : Bool;
+	@:overload @:public public function isDefined() : Bool;
 	
 	/**
 	* Get the definition of this class. Returns null if
 	* the class is not yet defined.
 	*/
-	@:overload public function getClassDefinition() : sun.tools.java.ClassDefinition;
+	@:overload @:public public function getClassDefinition() : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Get the definition of this class, if the class is not
 	* yet defined, load the definition. Loading a class may
 	* throw various exceptions.
 	*/
-	@:overload public function getClassDefinition(env : sun.tools.java.Environment) : sun.tools.java.ClassDefinition;
+	@:overload @:public public function getClassDefinition(env : sun.tools.java.Environment) : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Get the definition of this class, if the class is not
@@ -96,22 +96,22 @@ extern class ClassDeclaration implements sun.tools.java.Constants
 	* throw various exceptions.  Perform no basicCheck() on this
 	* class.
 	*/
-	@:overload public function getClassDefinitionNoCheck(env : sun.tools.java.Environment) : sun.tools.java.ClassDefinition;
+	@:overload @:public public function getClassDefinitionNoCheck(env : sun.tools.java.Environment) : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Set the class definition
 	*/
-	@:overload public function setDefinition(definition : sun.tools.java.ClassDefinition, status : Int) : Void;
+	@:overload @:public public function setDefinition(definition : sun.tools.java.ClassDefinition, status : Int) : Void;
 	
 	/**
 	* Equality
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* toString
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

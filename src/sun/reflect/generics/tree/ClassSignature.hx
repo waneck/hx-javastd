@@ -25,15 +25,15 @@ package sun.reflect.generics.tree;
 */
 extern class ClassSignature implements sun.reflect.generics.tree.Signature
 {
-	@:overload public static function make(ftps : java.NativeArray<sun.reflect.generics.tree.FormalTypeParameter>, sc : sun.reflect.generics.tree.ClassTypeSignature, sis : java.NativeArray<sun.reflect.generics.tree.ClassTypeSignature>) : sun.reflect.generics.tree.ClassSignature;
+	@:overload @:public @:static public static function make(ftps : java.NativeArray<sun.reflect.generics.tree.FormalTypeParameter>, sc : sun.reflect.generics.tree.ClassTypeSignature, sis : java.NativeArray<sun.reflect.generics.tree.ClassTypeSignature>) : sun.reflect.generics.tree.ClassSignature;
 	
-	@:overload public function getFormalTypeParameters() : java.NativeArray<sun.reflect.generics.tree.FormalTypeParameter>;
+	@:overload @:public public function getFormalTypeParameters() : java.NativeArray<sun.reflect.generics.tree.FormalTypeParameter>;
 	
-	@:overload public function getSuperclass() : sun.reflect.generics.tree.ClassTypeSignature;
+	@:overload @:public public function getSuperclass() : sun.reflect.generics.tree.ClassTypeSignature;
 	
-	@:overload public function getSuperInterfaces() : java.NativeArray<sun.reflect.generics.tree.ClassTypeSignature>;
+	@:overload @:public public function getSuperInterfaces() : java.NativeArray<sun.reflect.generics.tree.ClassTypeSignature>;
 	
-	@:overload public function accept(v : sun.reflect.generics.visitor.Visitor<Dynamic>) : Void;
+	@:overload @:public public function accept(v : sun.reflect.generics.visitor.Visitor<Dynamic>) : Void;
 	
 	
 }

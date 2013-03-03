@@ -25,27 +25,27 @@ package com.sun.tools.jdi;
 */
 extern class ArrayReferenceImpl extends com.sun.tools.jdi.ObjectReferenceImpl implements com.sun.jdi.ArrayReference
 {
-	@:overload override private function invokableReferenceType(method : com.sun.jdi.Method) : com.sun.tools.jdi.ClassTypeImpl;
+	@:overload @:protected override private function invokableReferenceType(method : com.sun.jdi.Method) : com.sun.tools.jdi.ClassTypeImpl;
 	
 	/**
 	* Return array length.
 	* Need not be synchronized since it cannot be provably stale.
 	*/
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
-	@:overload public function getValue(index : Int) : com.sun.jdi.Value;
+	@:overload @:public public function getValue(index : Int) : com.sun.jdi.Value;
 	
-	@:overload public function getValues() : java.util.List<com.sun.jdi.Value>;
+	@:overload @:public public function getValues() : java.util.List<com.sun.jdi.Value>;
 	
-	@:overload public function getValues(index : Int, length : Int) : java.util.List<com.sun.jdi.Value>;
+	@:overload @:public public function getValues(index : Int, length : Int) : java.util.List<com.sun.jdi.Value>;
 	
-	@:overload public function setValue(index : Int, value : com.sun.jdi.Value) : Void;
+	@:overload @:public public function setValue(index : Int, value : com.sun.jdi.Value) : Void;
 	
-	@:overload public function setValues(values : java.util.List<com.sun.jdi.Value>) : Void;
+	@:overload @:public public function setValues(values : java.util.List<com.sun.jdi.Value>) : Void;
 	
-	@:overload public function setValues(index : Int, values : java.util.List<com.sun.jdi.Value>, srcIndex : Int, length : Int) : Void;
+	@:overload @:public public function setValues(index : Int, values : java.util.List<com.sun.jdi.Value>, srcIndex : Int, length : Int) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -58,13 +58,13 @@ extern class ArrayReferenceImpl extends com.sun.tools.jdi.ObjectReferenceImpl im
 */
 @:native('com$sun$tools$jdi$ArrayReferenceImpl$Component') @:internal extern class ArrayReferenceImpl_Component implements com.sun.tools.jdi.ValueContainer
 {
-	@:overload public function type() : com.sun.jdi.Type;
+	@:overload @:public public function type() : com.sun.jdi.Type;
 	
-	@:overload public function typeName() : String;
+	@:overload @:public public function typeName() : String;
 	
-	@:overload public function signature() : String;
+	@:overload @:public public function signature() : String;
 	
-	@:overload public function findType(signature : String) : com.sun.jdi.Type;
+	@:overload @:public public function findType(signature : String) : com.sun.jdi.Type;
 	
 	
 }

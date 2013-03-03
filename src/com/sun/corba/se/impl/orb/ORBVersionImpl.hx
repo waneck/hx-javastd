@@ -25,33 +25,33 @@ package com.sun.corba.se.impl.orb;
 */
 extern class ORBVersionImpl implements com.sun.corba.se.spi.orb.ORBVersion
 {
-	@:overload public function new(orbType : java.StdTypes.Int8) : Void;
+	@:overload @:public public function new(orbType : java.StdTypes.Int8) : Void;
 	
-	public static var FOREIGN(default, null) : com.sun.corba.se.spi.orb.ORBVersion;
+	@:public @:static @:final public static var FOREIGN(default, null) : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	public static var OLD(default, null) : com.sun.corba.se.spi.orb.ORBVersion;
+	@:public @:static @:final public static var OLD(default, null) : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	public static var NEW(default, null) : com.sun.corba.se.spi.orb.ORBVersion;
+	@:public @:static @:final public static var NEW(default, null) : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	public static var JDK1_3_1_01(default, null) : com.sun.corba.se.spi.orb.ORBVersion;
+	@:public @:static @:final public static var JDK1_3_1_01(default, null) : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	public static var NEWER(default, null) : com.sun.corba.se.spi.orb.ORBVersion;
+	@:public @:static @:final public static var NEWER(default, null) : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	public static var PEORB(default, null) : com.sun.corba.se.spi.orb.ORBVersion;
+	@:public @:static @:final public static var PEORB(default, null) : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	@:overload public function getORBType() : java.StdTypes.Int8;
+	@:overload @:public public function getORBType() : java.StdTypes.Int8;
 	
-	@:overload public function write(os : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function write(os : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function lessThan(version : com.sun.corba.se.spi.orb.ORBVersion) : Bool;
+	@:overload @:public public function lessThan(version : com.sun.corba.se.spi.orb.ORBVersion) : Bool;
 	
-	@:overload public function compareTo(obj : Dynamic) : Int;
+	@:overload @:public public function compareTo(obj : Dynamic) : Int;
 	
 	
 }

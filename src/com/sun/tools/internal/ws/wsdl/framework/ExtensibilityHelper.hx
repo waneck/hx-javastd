@@ -30,15 +30,15 @@ extern class ExtensibilityHelper
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function addExtension(e : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
+	@:overload @:public public function addExtension(e : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
 	
-	@:overload public function extensions() : java.lang.Iterable<com.sun.tools.internal.ws.api.wsdl.TWSDLExtension>;
+	@:overload @:public public function extensions() : java.lang.Iterable<com.sun.tools.internal.ws.api.wsdl.TWSDLExtension>;
 	
-	@:overload public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
+	@:overload @:public public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.wsdl.framework.ExtensionVisitor) : Void;
+	@:overload @:public public function accept(visitor : com.sun.tools.internal.ws.wsdl.framework.ExtensionVisitor) : Void;
 	
 	
 }

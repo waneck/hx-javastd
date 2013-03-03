@@ -26,15 +26,15 @@ extern class CollatorFactoryBase implements com.sun.org.apache.xalan.internal.xs
 	/**
 	* @author W. Eliot Kimber (eliot@isogen.com)
 	*/
-	public static var DEFAULT_LOCALE(default, null) : java.util.Locale;
+	@:public @:static @:final public static var DEFAULT_LOCALE(default, null) : java.util.Locale;
 	
-	public static var DEFAULT_COLLATOR(default, null) : java.text.Collator;
+	@:public @:static @:final public static var DEFAULT_COLLATOR(default, null) : java.text.Collator;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getCollator(lang : String, country : String) : java.text.Collator;
+	@:overload @:public public function getCollator(lang : String, country : String) : java.text.Collator;
 	
-	@:overload public function getCollator(locale : java.util.Locale) : java.text.Collator;
+	@:overload @:public public function getCollator(locale : java.util.Locale) : java.text.Collator;
 	
 	
 }

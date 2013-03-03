@@ -33,7 +33,7 @@ extern class FilteredImageSource implements java.awt.image.ImageProducer
 	* @see ImageFilter
 	* @see java.awt.Component#createImage
 	*/
-	@:overload public function new(orig : java.awt.image.ImageProducer, imgf : java.awt.image.ImageFilter) : Void;
+	@:overload @:public public function new(orig : java.awt.image.ImageProducer, imgf : java.awt.image.ImageFilter) : Void;
 	
 	/**
 	* Adds the specified <code>ImageConsumer</code>
@@ -57,7 +57,7 @@ extern class FilteredImageSource implements java.awt.image.ImageProducer
 	* @param ic  the consumer for the filtered image
 	* @see ImageConsumer
 	*/
-	@:overload @:synchronized public function addConsumer(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public @:synchronized public function addConsumer(ic : java.awt.image.ImageConsumer) : Void;
 	
 	/**
 	* Determines whether an ImageConsumer is on the list of consumers
@@ -74,7 +74,7 @@ extern class FilteredImageSource implements java.awt.image.ImageProducer
 	* @return true if the ImageConsumer is on the list; false otherwise
 	* @see ImageConsumer
 	*/
-	@:overload @:synchronized public function isConsumer(ic : java.awt.image.ImageConsumer) : Bool;
+	@:overload @:public @:synchronized public function isConsumer(ic : java.awt.image.ImageConsumer) : Bool;
 	
 	/**
 	* Removes an ImageConsumer from the list of consumers interested in
@@ -89,7 +89,7 @@ extern class FilteredImageSource implements java.awt.image.ImageProducer
 	*
 	* @see ImageConsumer
 	*/
-	@:overload @:synchronized public function removeConsumer(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public @:synchronized public function removeConsumer(ic : java.awt.image.ImageConsumer) : Void;
 	
 	/**
 	* Starts production of the filtered image.
@@ -114,7 +114,7 @@ extern class FilteredImageSource implements java.awt.image.ImageProducer
 	* @param ic  the consumer for the filtered image
 	* @see ImageConsumer
 	*/
-	@:overload public function startProduction(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public public function startProduction(ic : java.awt.image.ImageConsumer) : Void;
 	
 	/**
 	* Requests that a given ImageConsumer have the image data delivered
@@ -131,7 +131,7 @@ extern class FilteredImageSource implements java.awt.image.ImageProducer
 	*
 	* @see ImageConsumer
 	*/
-	@:overload public function requestTopDownLeftRightResend(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public public function requestTopDownLeftRightResend(ic : java.awt.image.ImageConsumer) : Void;
 	
 	
 }

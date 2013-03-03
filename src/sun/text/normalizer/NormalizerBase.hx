@@ -42,63 +42,63 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* At most one Unicode version can be selected at a time.
 	* @stable ICU 2.6
 	*/
-	public static var UNICODE_3_2(default, null) : Int;
+	@:public @:static @:final public static var UNICODE_3_2(default, null) : Int;
 	
 	/**
 	* Constant indicating that the end of the iteration has been reached.
 	* This is guaranteed to have the same value as {@link UCharacterIterator#DONE}.
 	* @stable ICU 2.8
 	*/
-	public static var DONE(default, null) : Int;
+	@:public @:static @:final public static var DONE(default, null) : Int;
 	
 	/**
 	* No decomposition/composition.
 	* @stable ICU 2.8
 	*/
-	public static var NONE(default, null) : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode;
+	@:public @:static @:final public static var NONE(default, null) : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode;
 	
 	/**
 	* Canonical decomposition.
 	* @stable ICU 2.8
 	*/
-	public static var NFD(default, null) : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode;
+	@:public @:static @:final public static var NFD(default, null) : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode;
 	
 	/**
 	* Compatibility decomposition.
 	* @stable ICU 2.8
 	*/
-	public static var NFKD(default, null) : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode;
+	@:public @:static @:final public static var NFKD(default, null) : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode;
 	
 	/**
 	* Canonical decomposition followed by canonical composition.
 	* @stable ICU 2.8
 	*/
-	public static var NFC(default, null) : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode;
+	@:public @:static @:final public static var NFC(default, null) : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode;
 	
 	/**
 	* Compatibility decomposition followed by canonical composition.
 	* @stable ICU 2.8
 	*/
-	public static var NFKC(default, null) : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode;
+	@:public @:static @:final public static var NFKC(default, null) : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode;
 	
 	/**
 	* Indicates that string is not in the normalized format
 	* @stable ICU 2.8
 	*/
-	public static var NO(default, null) : sun.text.normalizer.NormalizerBase.NormalizerBase_QuickCheckResult;
+	@:public @:static @:final public static var NO(default, null) : sun.text.normalizer.NormalizerBase.NormalizerBase_QuickCheckResult;
 	
 	/**
 	* Indicates that string is in the normalized format
 	* @stable ICU 2.8
 	*/
-	public static var YES(default, null) : sun.text.normalizer.NormalizerBase.NormalizerBase_QuickCheckResult;
+	@:public @:static @:final public static var YES(default, null) : sun.text.normalizer.NormalizerBase.NormalizerBase_QuickCheckResult;
 	
 	/**
 	* Indicates it cannot be determined if string is in the normalized
 	* format without further thorough checks.
 	* @stable ICU 2.8
 	*/
-	public static var MAYBE(default, null) : sun.text.normalizer.NormalizerBase.NormalizerBase_QuickCheckResult;
+	@:public @:static @:final public static var MAYBE(default, null) : sun.text.normalizer.NormalizerBase.NormalizerBase_QuickCheckResult;
 	
 	/**
 	* Creates a new <tt>Normalizer</tt> object for iterating over the
@@ -118,7 +118,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	*            standard Unicode Normalization Forms, use 0 for this argument.
 	* @stable ICU 2.6
 	*/
-	@:overload public function new(str : String, mode : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode, opt : Int) : Void;
+	@:overload @:public public function new(str : String, mode : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode, opt : Int) : Void;
 	
 	/**
 	* Creates a new <tt>Normalizer</tt> object for iterating over the
@@ -129,7 +129,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	*
 	* @param mode  The normalization mode.
 	*/
-	@:overload public function new(iter : java.text.CharacterIterator, mode : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode) : Void;
+	@:overload @:public public function new(iter : java.text.CharacterIterator, mode : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode) : Void;
 	
 	/**
 	* Creates a new <tt>Normalizer</tt> object for iterating over the
@@ -146,7 +146,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	*            standard Unicode Normalization Forms, use 0 for this argument.
 	* @stable ICU 2.6
 	*/
-	@:overload public function new(iter : java.text.CharacterIterator, mode : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode, opt : Int) : Void;
+	@:overload @:public public function new(iter : java.text.CharacterIterator, mode : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode, opt : Int) : Void;
 	
 	/**
 	* Clones this <tt>Normalizer</tt> object.  All properties of this
@@ -158,7 +158,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* iterator's <tt>clone</tt> method does so.
 	* @stable ICU 2.8
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Compose a string.
@@ -171,7 +171,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @return String    The composed string
 	* @stable ICU 2.6
 	*/
-	@:overload public static function compose(str : String, compat : Bool, options : Int) : String;
+	@:overload @:public @:static public static function compose(str : String, compat : Bool, options : Int) : String;
 	
 	/**
 	* Decompose a string.
@@ -183,7 +183,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @return String   The decomposed string
 	* @stable ICU 2.8
 	*/
-	@:overload public static function decompose(str : String, compat : Bool) : String;
+	@:overload @:public @:static public static function decompose(str : String, compat : Bool) : String;
 	
 	/**
 	* Decompose a string.
@@ -196,7 +196,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @return String The decomposed string
 	* @stable ICU 2.6
 	*/
-	@:overload public static function decompose(str : String, compat : Bool, options : Int) : String;
+	@:overload @:public @:static public static function decompose(str : String, compat : Bool, options : Int) : String;
 	
 	/**
 	* Normalize a string.
@@ -218,14 +218,14 @@ extern class NormalizerBase implements java.lang.Cloneable
 	*                   less than the required length
 	* @stable ICU 2.6
 	*/
-	@:overload public static function normalize(src : java.NativeArray<java.StdTypes.Char16>, srcStart : Int, srcLimit : Int, dest : java.NativeArray<java.StdTypes.Char16>, destStart : Int, destLimit : Int, mode : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode, options : Int) : Int;
+	@:overload @:public @:static public static function normalize(src : java.NativeArray<java.StdTypes.Char16>, srcStart : Int, srcLimit : Int, dest : java.NativeArray<java.StdTypes.Char16>, destStart : Int, destLimit : Int, mode : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode, options : Int) : Int;
 	
 	/**
 	* Return the current character in the normalized text->
 	* @return The codepoint as an int
 	* @stable ICU 2.8
 	*/
-	@:overload public function current() : Int;
+	@:overload @:public public function current() : Int;
 	
 	/**
 	* Return the next character in the normalized text and advance
@@ -234,7 +234,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @return The codepoint as an int
 	* @stable ICU 2.8
 	*/
-	@:overload public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
 	/**
 	* Return the previous character in the normalized text and decrement
@@ -243,14 +243,14 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @return The codepoint as an int
 	* @stable ICU 2.8
 	*/
-	@:overload public function previous() : Int;
+	@:overload @:public public function previous() : Int;
 	
 	/**
 	* Reset the index to the beginning of the text.
 	* This is equivalent to setIndexOnly(startIndex)).
 	* @stable ICU 2.8
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Set the iteration position in the input text that is being normalized,
@@ -261,7 +261,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @param index the desired index in the input text.
 	* @stable ICU 2.8
 	*/
-	@:overload public function setIndexOnly(index : Int) : Void;
+	@:overload @:public public function setIndexOnly(index : Int) : Void;
 	
 	/**
 	* Set the iteration position in the input text that is being normalized
@@ -285,7 +285,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @deprecated ICU 3.2
 	* @obsolete ICU 3.2
 	*/
-	@:overload public function setIndex(index : Int) : Int;
+	@:overload @:public public function setIndex(index : Int) : Int;
 	
 	/**
 	* Retrieve the index of the start of the input text. This is the begin
@@ -295,7 +295,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @return The codepoint as an int
 	* @see #startIndex
 	*/
-	@:overload public function getBeginIndex() : Int;
+	@:overload @:public public function getBeginIndex() : Int;
 	
 	/**
 	* Retrieve the index of the end of the input text.  This is the end index
@@ -305,7 +305,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @return The codepoint as an int
 	* @see #endIndex
 	*/
-	@:overload public function getEndIndex() : Int;
+	@:overload @:public public function getEndIndex() : Int;
 	
 	/**
 	* Retrieve the current iteration position in the input text that is
@@ -322,7 +322,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @return The current iteration position
 	* @stable ICU 2.8
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* Retrieve the index of the end of the input text->  This is the end index
@@ -331,7 +331,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @return The current iteration position
 	* @stable ICU 2.8
 	*/
-	@:overload public function endIndex() : Int;
+	@:overload @:public public function endIndex() : Int;
 	
 	/**
 	* Set the normalization mode for this object.
@@ -359,7 +359,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @see #getMode
 	* @stable ICU 2.8
 	*/
-	@:overload public function setMode(newMode : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode) : Void;
+	@:overload @:public public function setMode(newMode : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode) : Void;
 	
 	/**
 	* Return the basic operation performed by this <tt>Normalizer</tt>
@@ -367,7 +367,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @see #setMode
 	* @stable ICU 2.8
 	*/
-	@:overload public function getMode() : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode;
+	@:overload @:public public function getMode() : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode;
 	
 	/**
 	* Set the input text over which this <tt>Normalizer</tt> will iterate.
@@ -375,7 +375,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @param newText   The new string to be normalized.
 	* @stable ICU 2.8
 	*/
-	@:overload public function setText(newText : String) : Void;
+	@:overload @:public public function setText(newText : String) : Void;
 	
 	/**
 	* Set the input text over which this <tt>Normalizer</tt> will iterate.
@@ -383,13 +383,13 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @param newText   The new string to be normalized.
 	* @stable ICU 2.8
 	*/
-	@:overload public function setText(newText : java.text.CharacterIterator) : Void;
+	@:overload @:public public function setText(newText : java.text.CharacterIterator) : Void;
 	
 	/**
 	* Internal API
 	* @internal
 	*/
-	@:overload public static function isNFSkippable(c : Int, mode : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode) : Bool;
+	@:overload @:public @:static public static function isNFSkippable(c : Int, mode : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode) : Bool;
 	
 	/*
 	* Default option for Unicode 3.2.0 normalization.
@@ -399,7 +399,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* allowed Unicode 3.2 to 4.0.1 to apply the fix for PRI #29, but it isn't
 	* supported by IDNA/StringPrep as well as Corrigendum 4.
 	*/
-	public static var UNICODE_3_2_0_ORIGINAL(default, null) : Int;
+	@:public @:static @:final public static var UNICODE_3_2_0_ORIGINAL(default, null) : Int;
 	
 	/*
 	* Default option for the latest Unicode normalization. This option is
@@ -408,7 +408,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	*   - Corrigendum 4 (Five CJK Canonical Mapping Errors)
 	*   - Corrigendum 5 (Normalization Idempotency)
 	*/
-	public static var UNICODE_LATEST(default, null) : Int;
+	@:public @:static @:final public static var UNICODE_LATEST(default, null) : Int;
 	
 	/**
 	* Creates a new <tt>Normalizer</tt> object for iterating over the
@@ -419,7 +419,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	*
 	* @param mode The normalization mode.
 	*/
-	@:overload public function new(str : String, mode : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode) : Void;
+	@:overload @:public public function new(str : String, mode : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode) : Void;
 	
 	/**
 	* Normalizes a <code>String</code> using the given normalization form.
@@ -427,7 +427,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @param str      the input string to be normalized.
 	* @param form     the normalization form
 	*/
-	@:overload public static function normalize(str : String, form : java.text.Normalizer.Normalizer_Form) : String;
+	@:overload @:public @:static public static function normalize(str : String, form : java.text.Normalizer.Normalizer_Form) : String;
 	
 	/**
 	* Normalizes a <code>String</code> using the given normalization form.
@@ -436,7 +436,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @param form     the normalization form
 	* @param options   the optional features to be enabled.
 	*/
-	@:overload public static function normalize(str : String, form : java.text.Normalizer.Normalizer_Form, options : Int) : String;
+	@:overload @:public @:static public static function normalize(str : String, form : java.text.Normalizer.Normalizer_Form, options : Int) : String;
 	
 	/**
 	* Test if a string is in a given normalization form.
@@ -451,7 +451,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @param form      the normalization form
 	* @param options   the optional features to be enabled.
 	*/
-	@:overload public static function isNormalized(str : String, form : java.text.Normalizer.Normalizer_Form) : Bool;
+	@:overload @:public @:static public static function isNormalized(str : String, form : java.text.Normalizer.Normalizer_Form) : Bool;
 	
 	/**
 	* Test if a string is in a given normalization form.
@@ -466,7 +466,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* @param form      the normalization form
 	* @param options   the optional features to be enabled.
 	*/
-	@:overload public static function isNormalized(str : String, form : java.text.Normalizer.Normalizer_Form, options : Int) : Bool;
+	@:overload @:public @:static public static function isNormalized(str : String, form : java.text.Normalizer.Normalizer_Form, options : Int) : Bool;
 	
 	
 }
@@ -480,135 +480,135 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* This method is used for method dispatch
 	* @stable ICU 2.6
 	*/
-	@:overload private function normalize(src : java.NativeArray<java.StdTypes.Char16>, srcStart : Int, srcLimit : Int, dest : java.NativeArray<java.StdTypes.Char16>, destStart : Int, destLimit : Int, nx : sun.text.normalizer.UnicodeSet) : Int;
+	@:overload @:protected private function normalize(src : java.NativeArray<java.StdTypes.Char16>, srcStart : Int, srcLimit : Int, dest : java.NativeArray<java.StdTypes.Char16>, destStart : Int, destLimit : Int, nx : sun.text.normalizer.UnicodeSet) : Int;
 	
 	/**
 	* This method is used for method dispatch
 	* @stable ICU 2.6
 	*/
-	@:overload private function normalize(src : java.NativeArray<java.StdTypes.Char16>, srcStart : Int, srcLimit : Int, dest : java.NativeArray<java.StdTypes.Char16>, destStart : Int, destLimit : Int, options : Int) : Int;
+	@:overload @:protected private function normalize(src : java.NativeArray<java.StdTypes.Char16>, srcStart : Int, srcLimit : Int, dest : java.NativeArray<java.StdTypes.Char16>, destStart : Int, destLimit : Int, options : Int) : Int;
 	
 	/**
 	* This method is used for method dispatch
 	* @stable ICU 2.6
 	*/
-	@:overload private function normalize(src : String, options : Int) : String;
+	@:overload @:protected private function normalize(src : String, options : Int) : String;
 	
 	/**
 	* This method is used for method dispatch
 	* @stable ICU 2.8
 	*/
-	@:overload private function getMinC() : Int;
+	@:overload @:protected private function getMinC() : Int;
 	
 	/**
 	* This method is used for method dispatch
 	* @stable ICU 2.8
 	*/
-	@:overload private function getMask() : Int;
+	@:overload @:protected private function getMask() : Int;
 	
 	/**
 	* This method is used for method dispatch
 	* @stable ICU 2.8
 	*/
-	@:overload private function getPrevBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsPrevBoundary;
+	@:overload @:protected private function getPrevBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsPrevBoundary;
 	
 	/**
 	* This method is used for method dispatch
 	* @stable ICU 2.8
 	*/
-	@:overload private function getNextBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsNextBoundary;
+	@:overload @:protected private function getNextBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsNextBoundary;
 	
 	/**
 	* This method is used for method dispatch
 	* @stable ICU 2.6
 	*/
-	@:overload private function quickCheck(src : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int, allowMaybe : Bool, nx : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.NormalizerBase.NormalizerBase_QuickCheckResult;
+	@:overload @:protected private function quickCheck(src : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int, allowMaybe : Bool, nx : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.NormalizerBase.NormalizerBase_QuickCheckResult;
 	
 	/**
 	* This method is used for method dispatch
 	* @stable ICU 2.8
 	*/
-	@:overload private function isNFSkippable(c : Int) : Bool;
+	@:overload @:protected private function isNFSkippable(c : Int) : Bool;
 	
 	
 }
 @:native('sun$text$normalizer$NormalizerBase$NFDMode') @:internal extern class NormalizerBase_NFDMode extends sun.text.normalizer.NormalizerBase.NormalizerBase_Mode
 {
-	@:overload override private function normalize(src : java.NativeArray<java.StdTypes.Char16>, srcStart : Int, srcLimit : Int, dest : java.NativeArray<java.StdTypes.Char16>, destStart : Int, destLimit : Int, nx : sun.text.normalizer.UnicodeSet) : Int;
+	@:overload @:protected override private function normalize(src : java.NativeArray<java.StdTypes.Char16>, srcStart : Int, srcLimit : Int, dest : java.NativeArray<java.StdTypes.Char16>, destStart : Int, destLimit : Int, nx : sun.text.normalizer.UnicodeSet) : Int;
 	
-	@:overload override private function normalize(src : String, options : Int) : String;
+	@:overload @:protected override private function normalize(src : String, options : Int) : String;
 	
-	@:overload override private function getMinC() : Int;
+	@:overload @:protected override private function getMinC() : Int;
 	
-	@:overload override private function getPrevBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsPrevBoundary;
+	@:overload @:protected override private function getPrevBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsPrevBoundary;
 	
-	@:overload override private function getNextBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsNextBoundary;
+	@:overload @:protected override private function getNextBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsNextBoundary;
 	
-	@:overload override private function getMask() : Int;
+	@:overload @:protected override private function getMask() : Int;
 	
-	@:overload override private function quickCheck(src : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int, allowMaybe : Bool, nx : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.NormalizerBase.NormalizerBase_QuickCheckResult;
+	@:overload @:protected override private function quickCheck(src : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int, allowMaybe : Bool, nx : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.NormalizerBase.NormalizerBase_QuickCheckResult;
 	
-	@:overload override private function isNFSkippable(c : Int) : Bool;
+	@:overload @:protected override private function isNFSkippable(c : Int) : Bool;
 	
 	
 }
 @:native('sun$text$normalizer$NormalizerBase$NFKDMode') @:internal extern class NormalizerBase_NFKDMode extends sun.text.normalizer.NormalizerBase.NormalizerBase_Mode
 {
-	@:overload override private function normalize(src : java.NativeArray<java.StdTypes.Char16>, srcStart : Int, srcLimit : Int, dest : java.NativeArray<java.StdTypes.Char16>, destStart : Int, destLimit : Int, nx : sun.text.normalizer.UnicodeSet) : Int;
+	@:overload @:protected override private function normalize(src : java.NativeArray<java.StdTypes.Char16>, srcStart : Int, srcLimit : Int, dest : java.NativeArray<java.StdTypes.Char16>, destStart : Int, destLimit : Int, nx : sun.text.normalizer.UnicodeSet) : Int;
 	
-	@:overload override private function normalize(src : String, options : Int) : String;
+	@:overload @:protected override private function normalize(src : String, options : Int) : String;
 	
-	@:overload override private function getMinC() : Int;
+	@:overload @:protected override private function getMinC() : Int;
 	
-	@:overload override private function getPrevBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsPrevBoundary;
+	@:overload @:protected override private function getPrevBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsPrevBoundary;
 	
-	@:overload override private function getNextBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsNextBoundary;
+	@:overload @:protected override private function getNextBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsNextBoundary;
 	
-	@:overload override private function getMask() : Int;
+	@:overload @:protected override private function getMask() : Int;
 	
-	@:overload override private function quickCheck(src : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int, allowMaybe : Bool, nx : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.NormalizerBase.NormalizerBase_QuickCheckResult;
+	@:overload @:protected override private function quickCheck(src : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int, allowMaybe : Bool, nx : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.NormalizerBase.NormalizerBase_QuickCheckResult;
 	
-	@:overload override private function isNFSkippable(c : Int) : Bool;
+	@:overload @:protected override private function isNFSkippable(c : Int) : Bool;
 	
 	
 }
 @:native('sun$text$normalizer$NormalizerBase$NFCMode') @:internal extern class NormalizerBase_NFCMode extends sun.text.normalizer.NormalizerBase.NormalizerBase_Mode
 {
-	@:overload override private function normalize(src : java.NativeArray<java.StdTypes.Char16>, srcStart : Int, srcLimit : Int, dest : java.NativeArray<java.StdTypes.Char16>, destStart : Int, destLimit : Int, nx : sun.text.normalizer.UnicodeSet) : Int;
+	@:overload @:protected override private function normalize(src : java.NativeArray<java.StdTypes.Char16>, srcStart : Int, srcLimit : Int, dest : java.NativeArray<java.StdTypes.Char16>, destStart : Int, destLimit : Int, nx : sun.text.normalizer.UnicodeSet) : Int;
 	
-	@:overload override private function normalize(src : String, options : Int) : String;
+	@:overload @:protected override private function normalize(src : String, options : Int) : String;
 	
-	@:overload override private function getMinC() : Int;
+	@:overload @:protected override private function getMinC() : Int;
 	
-	@:overload override private function getPrevBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsPrevBoundary;
+	@:overload @:protected override private function getPrevBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsPrevBoundary;
 	
-	@:overload override private function getNextBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsNextBoundary;
+	@:overload @:protected override private function getNextBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsNextBoundary;
 	
-	@:overload override private function getMask() : Int;
+	@:overload @:protected override private function getMask() : Int;
 	
-	@:overload override private function quickCheck(src : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int, allowMaybe : Bool, nx : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.NormalizerBase.NormalizerBase_QuickCheckResult;
+	@:overload @:protected override private function quickCheck(src : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int, allowMaybe : Bool, nx : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.NormalizerBase.NormalizerBase_QuickCheckResult;
 	
-	@:overload override private function isNFSkippable(c : Int) : Bool;
+	@:overload @:protected override private function isNFSkippable(c : Int) : Bool;
 	
 	
 }
 @:native('sun$text$normalizer$NormalizerBase$NFKCMode') @:internal extern class NormalizerBase_NFKCMode extends sun.text.normalizer.NormalizerBase.NormalizerBase_Mode
 {
-	@:overload override private function normalize(src : java.NativeArray<java.StdTypes.Char16>, srcStart : Int, srcLimit : Int, dest : java.NativeArray<java.StdTypes.Char16>, destStart : Int, destLimit : Int, nx : sun.text.normalizer.UnicodeSet) : Int;
+	@:overload @:protected override private function normalize(src : java.NativeArray<java.StdTypes.Char16>, srcStart : Int, srcLimit : Int, dest : java.NativeArray<java.StdTypes.Char16>, destStart : Int, destLimit : Int, nx : sun.text.normalizer.UnicodeSet) : Int;
 	
-	@:overload override private function normalize(src : String, options : Int) : String;
+	@:overload @:protected override private function normalize(src : String, options : Int) : String;
 	
-	@:overload override private function getMinC() : Int;
+	@:overload @:protected override private function getMinC() : Int;
 	
-	@:overload override private function getPrevBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsPrevBoundary;
+	@:overload @:protected override private function getPrevBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsPrevBoundary;
 	
-	@:overload override private function getNextBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsNextBoundary;
+	@:overload @:protected override private function getNextBoundary() : sun.text.normalizer.NormalizerBase.NormalizerBase_IsNextBoundary;
 	
-	@:overload override private function getMask() : Int;
+	@:overload @:protected override private function getMask() : Int;
 	
-	@:overload override private function quickCheck(src : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int, allowMaybe : Bool, nx : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.NormalizerBase.NormalizerBase_QuickCheckResult;
+	@:overload @:protected override private function quickCheck(src : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int, allowMaybe : Bool, nx : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.NormalizerBase.NormalizerBase_QuickCheckResult;
 	
-	@:overload override private function isNFSkippable(c : Int) : Bool;
+	@:overload @:protected override private function isNFSkippable(c : Int) : Bool;
 	
 	
 }
@@ -623,7 +623,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 }
 @:native('sun$text$normalizer$NormalizerBase$IsPrevBoundary') @:internal extern interface NormalizerBase_IsPrevBoundary
 {
-	@:overload public function isPrevBoundary(src : sun.text.normalizer.UCharacterIterator, minC : Int, mask : Int, chars : java.NativeArray<java.StdTypes.Char16>) : Bool;
+	@:overload @:public public function isPrevBoundary(src : sun.text.normalizer.UCharacterIterator, minC : Int, mask : Int, chars : java.NativeArray<java.StdTypes.Char16>) : Bool;
 	
 	
 }
@@ -635,7 +635,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* if c2!=0 then (c2, c) is a surrogate pair (reversed - c2 is first
 	* surrogate but read second!)
 	*/
-	@:overload public function isPrevBoundary(src : sun.text.normalizer.UCharacterIterator, minC : Int, ccOrQCMask : Int, chars : java.NativeArray<java.StdTypes.Char16>) : Bool;
+	@:overload @:public public function isPrevBoundary(src : sun.text.normalizer.UCharacterIterator, minC : Int, ccOrQCMask : Int, chars : java.NativeArray<java.StdTypes.Char16>) : Bool;
 	
 	
 }
@@ -647,7 +647,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 	* if c2!=0 then (c2, c) is a surrogate pair (reversed - c2 is first
 	* surrogate but read second!)
 	*/
-	@:overload public function isPrevBoundary(src : sun.text.normalizer.UCharacterIterator, minC : Int, ccOrQCMask : Int, chars : java.NativeArray<java.StdTypes.Char16>) : Bool;
+	@:overload @:public public function isPrevBoundary(src : sun.text.normalizer.UCharacterIterator, minC : Int, ccOrQCMask : Int, chars : java.NativeArray<java.StdTypes.Char16>) : Bool;
 	
 	
 }
@@ -668,7 +668,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 */
 @:native('sun$text$normalizer$NormalizerBase$IsNextNFDSafe') @:internal extern class NormalizerBase_IsNextNFDSafe implements sun.text.normalizer.NormalizerBase.NormalizerBase_IsNextBoundary
 {
-	@:overload public function isNextBoundary(src : sun.text.normalizer.UCharacterIterator, minC : Int, ccOrQCMask : Int, chars : java.NativeArray<Int>) : Bool;
+	@:overload @:public public function isNextBoundary(src : sun.text.normalizer.UCharacterIterator, minC : Int, ccOrQCMask : Int, chars : java.NativeArray<Int>) : Bool;
 	
 	
 }
@@ -680,7 +680,7 @@ extern class NormalizerBase implements java.lang.Cloneable
 */
 @:native('sun$text$normalizer$NormalizerBase$IsNextTrueStarter') @:internal extern class NormalizerBase_IsNextTrueStarter implements sun.text.normalizer.NormalizerBase.NormalizerBase_IsNextBoundary
 {
-	@:overload public function isNextBoundary(src : sun.text.normalizer.UCharacterIterator, minC : Int, ccOrQCMask : Int, chars : java.NativeArray<Int>) : Bool;
+	@:overload @:public public function isNextBoundary(src : sun.text.normalizer.UCharacterIterator, minC : Int, ccOrQCMask : Int, chars : java.NativeArray<Int>) : Bool;
 	
 	
 }

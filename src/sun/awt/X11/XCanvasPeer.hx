@@ -28,15 +28,15 @@ package sun.awt.X11;
 	/* Get a GraphicsConfig with the same visual on the new
 	* screen, which should be easy in Xinerama mode.
 	*/
-	@:overload public function getAppropriateGraphicsConfiguration(gc : java.awt.GraphicsConfiguration) : java.awt.GraphicsConfiguration;
+	@:overload @:public public function getAppropriateGraphicsConfiguration(gc : java.awt.GraphicsConfiguration) : java.awt.GraphicsConfiguration;
 	
-	@:overload private function shouldFocusOnClick() : Bool;
+	@:overload @:protected private function shouldFocusOnClick() : Bool;
 	
-	@:overload public function disableBackgroundErase() : Void;
+	@:overload @:public public function disableBackgroundErase() : Void;
 	
-	@:overload override private function doEraseBackground() : Bool;
+	@:overload @:protected override private function doEraseBackground() : Bool;
 	
-	@:overload override public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setBackground(c : java.awt.Color) : Void;
 	
 	
 }

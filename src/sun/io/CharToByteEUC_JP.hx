@@ -28,11 +28,11 @@ package sun.io;
 */
 extern class CharToByteEUC_JP extends sun.io.CharToByteJIS0208
 {
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
-	@:overload override private function convSingleByte(inputChar : java.StdTypes.Char16, outputByte : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:protected override private function convSingleByte(inputChar : java.StdTypes.Char16, outputByte : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload override private function getNative(ch : java.StdTypes.Char16) : Int;
+	@:overload @:protected override private function getNative(ch : java.StdTypes.Char16) : Int;
 	
 	/**
 	* Converts characters to sequences of bytes.
@@ -48,13 +48,13 @@ extern class CharToByteEUC_JP extends sun.io.CharToByteJIS0208
 	* @throw UnsupportedCharacterException for any character
 	* that cannot be converted to the external character set.
 	*/
-	@:overload override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outOff : Int, outEnd : Int) : Int;
+	@:overload @:public override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outOff : Int, outEnd : Int) : Int;
 	
 	/**
 	* the maximum number of bytes needed to hold a converted char
 	* @returns the maximum number of bytes needed for a converted char
 	*/
-	@:overload override public function getMaxBytesPerChar() : Int;
+	@:overload @:public override public function getMaxBytesPerChar() : Int;
 	
 	
 }

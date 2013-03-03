@@ -25,15 +25,15 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 */
 extern class DomLoader<ResultT> extends com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader
 {
-	@:overload public function new(dom : javax.xml.bind.annotation.DomHandler<Dynamic, ResultT>) : Void;
+	@:overload @:public public function new(dom : javax.xml.bind.annotation.DomHandler<Dynamic, ResultT>) : Void;
 	
-	@:overload public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:public override public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload public function childElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:public override public function childElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload public function text(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, text : java.lang.CharSequence) : Void;
+	@:overload @:public override public function text(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, text : java.lang.CharSequence) : Void;
 	
-	@:overload public function leaveElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:public override public function leaveElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
 	
 }
@@ -44,9 +44,9 @@ extern class DomLoader<ResultT> extends com.sun.xml.internal.bind.v2.runtime.unm
 */
 @:native('com$sun$xml$internal$bind$v2$runtime$unmarshaller$DomLoader$State') @:internal extern class DomLoader_State
 {
-	@:overload public function new(context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : Void;
+	@:overload @:public public function new(context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : Void;
 	
-	@:overload public function getElement() : Dynamic;
+	@:overload @:public public function getElement() : Dynamic;
 	
 	
 }

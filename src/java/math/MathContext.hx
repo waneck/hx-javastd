@@ -58,7 +58,7 @@ package java.math;
 	*  precision=0 roundingMode=HALF_UP
 	*  </code>
 	*/
-	public static var UNLIMITED(default, null) : java.math.MathContext;
+	@:public @:static @:final public static var UNLIMITED(default, null) : java.math.MathContext;
 	
 	/**
 	*  A {@code MathContext} object with a precision setting
@@ -66,7 +66,7 @@ package java.math;
 	*  rounding mode of {@link RoundingMode#HALF_EVEN HALF_EVEN}, the
 	*  IEEE 754R default.
 	*/
-	public static var DECIMAL32(default, null) : java.math.MathContext;
+	@:public @:static @:final public static var DECIMAL32(default, null) : java.math.MathContext;
 	
 	/**
 	*  A {@code MathContext} object with a precision setting
@@ -74,7 +74,7 @@ package java.math;
 	*  rounding mode of {@link RoundingMode#HALF_EVEN HALF_EVEN}, the
 	*  IEEE 754R default.
 	*/
-	public static var DECIMAL64(default, null) : java.math.MathContext;
+	@:public @:static @:final public static var DECIMAL64(default, null) : java.math.MathContext;
 	
 	/**
 	*  A {@code MathContext} object with a precision setting
@@ -82,7 +82,7 @@ package java.math;
 	*  rounding mode of {@link RoundingMode#HALF_EVEN HALF_EVEN}, the
 	*  IEEE 754R default.
 	*/
-	public static var DECIMAL128(default, null) : java.math.MathContext;
+	@:public @:static @:final public static var DECIMAL128(default, null) : java.math.MathContext;
 	
 	/**
 	* Constructs a new {@code MathContext} with the specified
@@ -93,7 +93,7 @@ package java.math;
 	* @throws IllegalArgumentException if the {@code setPrecision} parameter is less
 	*         than zero.
 	*/
-	@:overload public function new(setPrecision : Int) : Void;
+	@:overload @:public public function new(setPrecision : Int) : Void;
 	
 	/**
 	* Constructs a new {@code MathContext} with a specified
@@ -105,7 +105,7 @@ package java.math;
 	*         than zero.
 	* @throws NullPointerException if the rounding mode argument is {@code null}
 	*/
-	@:overload public function new(setPrecision : Int, setRoundingMode : java.math.RoundingMode) : Void;
+	@:overload @:public public function new(setPrecision : Int, setRoundingMode : java.math.RoundingMode) : Void;
 	
 	/**
 	* Constructs a new {@code MathContext} from a string.
@@ -122,7 +122,7 @@ package java.math;
 	* or of incorrect format
 	* @throws NullPointerException if the argument is {@code null}
 	*/
-	@:overload public function new(val : String) : Void;
+	@:overload @:public public function new(val : String) : Void;
 	
 	/**
 	* Returns the {@code precision} setting.
@@ -131,7 +131,7 @@ package java.math;
 	* @return an {@code int} which is the value of the {@code precision}
 	*         setting
 	*/
-	@:overload public function getPrecision() : Int;
+	@:overload @:public public function getPrecision() : Int;
 	
 	/**
 	* Returns the roundingMode setting.
@@ -148,7 +148,7 @@ package java.math;
 	* @return a {@code RoundingMode} object which is the value of the
 	*         {@code roundingMode} setting
 	*/
-	@:overload public function getRoundingMode() : java.math.RoundingMode;
+	@:overload @:public public function getRoundingMode() : java.math.RoundingMode;
 	
 	/**
 	* Compares this {@code MathContext} with the specified
@@ -160,14 +160,14 @@ package java.math;
 	*         a {@code MathContext} object which has exactly the same
 	*         settings as this object
 	*/
-	@:overload public function equals(x : Dynamic) : Bool;
+	@:overload @:public public function equals(x : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code for this {@code MathContext}.
 	*
 	* @return hash code for this {@code MathContext}
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the string representation of this {@code MathContext}.
@@ -201,7 +201,7 @@ package java.math;
 	*
 	* @return a {@code String} representing the context settings
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

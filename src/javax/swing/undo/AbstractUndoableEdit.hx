@@ -33,7 +33,7 @@ extern class AbstractUndoableEdit implements javax.swing.undo.UndoableEdit imple
 	*
 	* @see javax.swing.UIDefaults
 	*/
-	private static var UndoName(default, null) : String;
+	@:protected @:static @:final private static var UndoName(default, null) : String;
 	
 	/**
 	* String returned by <code>getRedoPresentationName</code>;
@@ -43,13 +43,13 @@ extern class AbstractUndoableEdit implements javax.swing.undo.UndoableEdit imple
 	*
 	* @see javax.swing.UIDefaults
 	*/
-	private static var RedoName(default, null) : String;
+	@:protected @:static @:final private static var RedoName(default, null) : String;
 	
 	/**
 	* Creates an <code>AbstractUndoableEdit</code> which defaults
 	* <code>hasBeenDone</code> and <code>alive</code> to <code>true</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets <code>alive</code> to false. Note that this
@@ -61,7 +61,7 @@ extern class AbstractUndoableEdit implements javax.swing.undo.UndoableEdit imple
 	* another edit's <code>addEdit</code> or <code>replaceEdit</code>
 	* method, or when it is dequeued from an <code>UndoManager</code>.
 	*/
-	@:overload public function die() : Void;
+	@:overload @:public public function die() : Void;
 	
 	/**
 	* Throws <code>CannotUndoException</code> if <code>canUndo</code>
@@ -74,7 +74,7 @@ extern class AbstractUndoableEdit implements javax.swing.undo.UndoableEdit imple
 	*    returns <code>false</code>
 	* @see     #canUndo
 	*/
-	@:overload public function undo() : Void;
+	@:overload @:public public function undo() : Void;
 	
 	/**
 	* Returns true if this edit is <code>alive</code>
@@ -87,7 +87,7 @@ extern class AbstractUndoableEdit implements javax.swing.undo.UndoableEdit imple
 	* @see     #undo
 	* @see     #redo
 	*/
-	@:overload public function canUndo() : Bool;
+	@:overload @:public public function canUndo() : Bool;
 	
 	/**
 	* Throws <code>CannotRedoException</code> if <code>canRedo</code>
@@ -99,7 +99,7 @@ extern class AbstractUndoableEdit implements javax.swing.undo.UndoableEdit imple
 	*     returns <code>false</code>
 	* @see     #canRedo
 	*/
-	@:overload public function redo() : Void;
+	@:overload @:public public function redo() : Void;
 	
 	/**
 	* Returns <code>true</code> if this edit is <code>alive</code>
@@ -111,7 +111,7 @@ extern class AbstractUndoableEdit implements javax.swing.undo.UndoableEdit imple
 	* @see     #undo
 	* @see     #redo
 	*/
-	@:overload public function canRedo() : Bool;
+	@:overload @:public public function canRedo() : Bool;
 	
 	/**
 	* This default implementation returns false.
@@ -121,7 +121,7 @@ extern class AbstractUndoableEdit implements javax.swing.undo.UndoableEdit imple
 	*
 	* @see UndoableEdit#addEdit
 	*/
-	@:overload public function addEdit(anEdit : javax.swing.undo.UndoableEdit) : Bool;
+	@:overload @:public public function addEdit(anEdit : javax.swing.undo.UndoableEdit) : Bool;
 	
 	/**
 	* This default implementation returns false.
@@ -131,7 +131,7 @@ extern class AbstractUndoableEdit implements javax.swing.undo.UndoableEdit imple
 	*
 	* @see UndoableEdit#replaceEdit
 	*/
-	@:overload public function replaceEdit(anEdit : javax.swing.undo.UndoableEdit) : Bool;
+	@:overload @:public public function replaceEdit(anEdit : javax.swing.undo.UndoableEdit) : Bool;
 	
 	/**
 	* This default implementation returns true.
@@ -139,7 +139,7 @@ extern class AbstractUndoableEdit implements javax.swing.undo.UndoableEdit imple
 	* @return true
 	* @see UndoableEdit#isSignificant
 	*/
-	@:overload public function isSignificant() : Bool;
+	@:overload @:public public function isSignificant() : Bool;
 	
 	/**
 	* This default implementation returns "". Used by
@@ -154,7 +154,7 @@ extern class AbstractUndoableEdit implements javax.swing.undo.UndoableEdit imple
 	* @see     #getUndoPresentationName
 	* @see     #getRedoPresentationName
 	*/
-	@:overload public function getPresentationName() : String;
+	@:overload @:public public function getPresentationName() : String;
 	
 	/**
 	* Retreives the value from the defaults table with key
@@ -171,7 +171,7 @@ extern class AbstractUndoableEdit implements javax.swing.undo.UndoableEdit imple
 	*    case, the defaults value is returned alone.
 	* @see #getPresentationName
 	*/
-	@:overload public function getUndoPresentationName() : String;
+	@:overload @:public public function getUndoPresentationName() : String;
 	
 	/**
 	* Retreives the value from the defaults table with key
@@ -188,7 +188,7 @@ extern class AbstractUndoableEdit implements javax.swing.undo.UndoableEdit imple
 	*    case, the defaults value is returned alone.
 	* @see #getPresentationName
 	*/
-	@:overload public function getRedoPresentationName() : String;
+	@:overload @:public public function getRedoPresentationName() : String;
 	
 	/**
 	* Returns a string that displays and identifies this
@@ -196,7 +196,7 @@ extern class AbstractUndoableEdit implements javax.swing.undo.UndoableEdit imple
 	*
 	* @return a String representation of this object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

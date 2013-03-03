@@ -60,7 +60,7 @@ extern class Patch
 	* @param bank the bank index (in the range from 0 to 16383)
 	* @param program the program index (in the range from 0 to 127)
 	*/
-	@:overload public function new(bank : Int, program : Int) : Void;
+	@:overload @:public public function new(bank : Int, program : Int) : Void;
 	
 	/**
 	* Returns the number of the bank that contains the instrument
@@ -68,7 +68,7 @@ extern class Patch
 	* @return the bank number, whose range is from 0 to 16383
 	* @see MidiChannel#programChange(int, int)
 	*/
-	@:overload public function getBank() : Int;
+	@:overload @:public public function getBank() : Int;
 	
 	/**
 	* Returns the index, within
@@ -79,7 +79,7 @@ extern class Patch
 	* @see MidiChannel#programChange(int)
 	* @see MidiChannel#programChange(int, int)
 	*/
-	@:overload public function getProgram() : Int;
+	@:overload @:public public function getProgram() : Int;
 	
 	
 }

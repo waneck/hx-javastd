@@ -30,9 +30,9 @@ extern interface ShapeDrawPipe
 	* can use to pass on responsibility for drawing generic Shape
 	* objects.
 	*/
-	@:overload public function draw(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
+	@:overload @:public public function draw(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
 	
-	@:overload public function fill(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
+	@:overload @:public public function fill(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
 	
 	
 }

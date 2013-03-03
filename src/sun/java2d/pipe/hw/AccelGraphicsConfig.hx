@@ -49,7 +49,7 @@ extern interface AccelGraphicsConfig extends sun.java2d.pipe.hw.BufferedContextP
 	* @see AccelSurface#RT_PLAIN
 	* @see AccelSurface#RT_TEXTURE
 	*/
-	@:overload public function createCompatibleVolatileImage(width : Int, height : Int, transparency : Int, type : Int) : java.awt.image.VolatileImage;
+	@:overload @:public public function createCompatibleVolatileImage(width : Int, height : Int, transparency : Int, type : Int) : java.awt.image.VolatileImage;
 	
 	/**
 	* Returns object representing capabilities of the context associated
@@ -58,7 +58,7 @@ extern interface AccelGraphicsConfig extends sun.java2d.pipe.hw.BufferedContextP
 	* @return ContextCapabilities object representing caps
 	* @see ContextCapabilities
 	*/
-	@:overload public function getContextCapabilities() : sun.java2d.pipe.hw.ContextCapabilities;
+	@:overload @:public public function getContextCapabilities() : sun.java2d.pipe.hw.ContextCapabilities;
 	
 	/**
 	* Adds an {@code AccelDeviceEventListener} to listen to accelerated
@@ -71,7 +71,7 @@ extern interface AccelGraphicsConfig extends sun.java2d.pipe.hw.BufferedContextP
 	* @param l the listener
 	* @see AccelDeviceEventListener
 	*/
-	@:overload public function addDeviceEventListener(l : sun.java2d.pipe.hw.AccelDeviceEventListener) : Void;
+	@:overload @:public public function addDeviceEventListener(l : sun.java2d.pipe.hw.AccelDeviceEventListener) : Void;
 	
 	/**
 	* Removes an {@code AccelDeviceEventListener} from the list of listeners
@@ -80,7 +80,7 @@ extern interface AccelGraphicsConfig extends sun.java2d.pipe.hw.BufferedContextP
 	* @param l the listener
 	* @see AccelDeviceEventListener
 	*/
-	@:overload public function removeDeviceEventListener(l : sun.java2d.pipe.hw.AccelDeviceEventListener) : Void;
+	@:overload @:public public function removeDeviceEventListener(l : sun.java2d.pipe.hw.AccelDeviceEventListener) : Void;
 	
 	
 }

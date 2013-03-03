@@ -25,14 +25,14 @@ package sun.awt.image;
 */
 extern class BufferedImageGraphicsConfig extends java.awt.GraphicsConfiguration
 {
-	@:overload public static function getConfig(bImg : java.awt.image.BufferedImage) : sun.awt.image.BufferedImageGraphicsConfig;
+	@:overload @:public @:static public static function getConfig(bImg : java.awt.image.BufferedImage) : sun.awt.image.BufferedImageGraphicsConfig;
 	
-	@:overload public function new(bufImg : java.awt.image.BufferedImage, comp : java.awt.Component) : Void;
+	@:overload @:public public function new(bufImg : java.awt.image.BufferedImage, comp : java.awt.Component) : Void;
 	
 	/**
 	* Return the graphics device associated with this configuration.
 	*/
-	@:overload public function getDevice() : java.awt.GraphicsDevice;
+	@:overload @:public override public function getDevice() : java.awt.GraphicsDevice;
 	
 	/**
 	* Returns a BufferedImage with channel layout and color model
@@ -43,18 +43,18 @@ extern class BufferedImageGraphicsConfig extends java.awt.GraphicsConfiguration
 	* that is closest to this native device configuration and thus
 	* can be optimally blitted to this device.
 	*/
-	@:overload public function createCompatibleImage(width : Int, height : Int) : java.awt.image.BufferedImage;
+	@:overload @:public override public function createCompatibleImage(width : Int, height : Int) : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns the color model associated with this configuration.
 	*/
-	@:overload public function getColorModel() : java.awt.image.ColorModel;
+	@:overload @:public override public function getColorModel() : java.awt.image.ColorModel;
 	
 	/**
 	* Returns the color model associated with this configuration that
 	* supports the specified transparency.
 	*/
-	@:overload public function getColorModel(transparency : Int) : java.awt.image.ColorModel;
+	@:overload @:public override public function getColorModel(transparency : Int) : java.awt.image.ColorModel;
 	
 	/**
 	* Returns the default Transform for this configuration.  This
@@ -65,7 +65,7 @@ extern class BufferedImageGraphicsConfig extends java.awt.GraphicsConfiguration
 	* increasing to the right and Y coordinates increasing downwards.
 	* For image buffers, this Transform will be the Identity transform.
 	*/
-	@:overload public function getDefaultTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public override public function getDefaultTransform() : java.awt.geom.AffineTransform;
 	
 	/**
 	*
@@ -86,9 +86,9 @@ extern class BufferedImageGraphicsConfig extends java.awt.GraphicsConfiguration
 	* For image buffers, this Transform will be the Identity transform,
 	* since there is no valid distance measurement.
 	*/
-	@:overload public function getNormalizingTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public override public function getNormalizingTransform() : java.awt.geom.AffineTransform;
 	
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public override public function getBounds() : java.awt.Rectangle;
 	
 	
 }

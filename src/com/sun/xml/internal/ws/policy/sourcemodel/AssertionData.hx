@@ -35,7 +35,7 @@ extern class AssertionData implements java.lang.Cloneable implements java.io.Ser
 	* {@link ModelNode.Type#ASSERTION ASSERTION} or
 	* {@link ModelNode.Type#ASSERTION_PARAMETER_NODE ASSERTION_PARAMETER_NODE}
 	*/
-	@:overload public static function createAssertionData(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
+	@:overload @:public @:static public static function createAssertionData(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
 	
 	/**
 	* Constructs assertion data wrapper instance for an assertion parameter that
@@ -47,7 +47,7 @@ extern class AssertionData implements java.lang.Cloneable implements java.io.Ser
 	* {@link ModelNode.Type#ASSERTION ASSERTION} or
 	* {@link ModelNode.Type#ASSERTION_PARAMETER_NODE ASSERTION_PARAMETER_NODE}
 	*/
-	@:overload public static function createAssertionParameterData(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
+	@:overload @:public @:static public static function createAssertionParameterData(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
 	
 	/**
 	* Constructs assertion data wrapper instance for an assertion that does
@@ -63,7 +63,7 @@ extern class AssertionData implements java.lang.Cloneable implements java.io.Ser
 	* {@link ModelNode.Type#ASSERTION ASSERTION} or
 	* {@link ModelNode.Type#ASSERTION_PARAMETER_NODE ASSERTION_PARAMETER_NODE}
 	*/
-	@:overload public static function createAssertionData(name : javax.xml.namespace.QName, value : String, attributes : java.util.Map<javax.xml.namespace.QName, String>, optional : Bool, ignorable : Bool) : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
+	@:overload @:public @:static public static function createAssertionData(name : javax.xml.namespace.QName, value : String, attributes : java.util.Map<javax.xml.namespace.QName, String>, optional : Bool, ignorable : Bool) : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
 	
 	/**
 	* Constructs assertion data wrapper instance for an assertion parameter that
@@ -77,9 +77,9 @@ extern class AssertionData implements java.lang.Cloneable implements java.io.Ser
 	* {@link ModelNode.Type#ASSERTION ASSERTION} or
 	* {@link ModelNode.Type#ASSERTION_PARAMETER_NODE ASSERTION_PARAMETER_NODE}
 	*/
-	@:overload public static function createAssertionParameterData(name : javax.xml.namespace.QName, value : String, attributes : java.util.Map<javax.xml.namespace.QName, String>) : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
+	@:overload @:public @:static public static function createAssertionParameterData(name : javax.xml.namespace.QName, value : String, attributes : java.util.Map<javax.xml.namespace.QName, String>) : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
 	
-	@:overload private function clone() : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
+	@:overload @:protected private function clone() : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
 	
 	/**
 	* Returns true if the given attribute exists, false otherwise.
@@ -87,9 +87,9 @@ extern class AssertionData implements java.lang.Cloneable implements java.io.Ser
 	* @param name The name of the attribute. Must not be null.
 	* @return True if the given attribute exists, false otherwise.
 	*/
-	@:overload public function containsAttribute(name : javax.xml.namespace.QName) : Bool;
+	@:overload @:public public function containsAttribute(name : javax.xml.namespace.QName) : Bool;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the value of the given attribute. Returns null if the attribute
@@ -99,7 +99,7 @@ extern class AssertionData implements java.lang.Cloneable implements java.io.Ser
 	* @return The value of the given attribute. Returns null if the attribute
 	*   does not exist.
 	*/
-	@:overload public function getAttributeValue(name : javax.xml.namespace.QName) : String;
+	@:overload @:public public function getAttributeValue(name : javax.xml.namespace.QName) : String;
 	
 	/**
 	* Returns the disconnected map of attributes attached to the assertion.
@@ -110,7 +110,7 @@ extern class AssertionData implements java.lang.Cloneable implements java.io.Ser
 	*
 	* @return disconnected map of attributes attached to the assertion.
 	*/
-	@:overload public function getAttributes() : java.util.Map<javax.xml.namespace.QName, String>;
+	@:overload @:public public function getAttributes() : java.util.Map<javax.xml.namespace.QName, String>;
 	
 	/**
 	* Returns the disconnected set of attributes attached to the assertion. Each attribute is represented as a single
@@ -122,26 +122,26 @@ extern class AssertionData implements java.lang.Cloneable implements java.io.Ser
 	*
 	* @return disconnected set of attributes attached to the assertion.
 	*/
-	@:overload public function getAttributesSet() : java.util.Set<java.util.Map.Map_Entry<javax.xml.namespace.QName, String>>;
+	@:overload @:public public function getAttributesSet() : java.util.Set<java.util.Map.Map_Entry<javax.xml.namespace.QName, String>>;
 	
 	/**
 	* Returns the name of the assertion.
 	*
 	* @return assertion's name
 	*/
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
 	/**
 	* Returns the value of the assertion.
 	*
 	* @return assertion's value
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	/**
 	* An {@code Object.hashCode()} method override.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Method specifies whether the assertion data contain proprietary visibility element set to "private" value.
@@ -149,7 +149,7 @@ extern class AssertionData implements java.lang.Cloneable implements java.io.Ser
 	* @return {@code 'true'} if the attribute is present and set properly (i.e. the node containing this assertion data instance should
 	* not be marshaled into generated WSDL documents). Returns {@code false} otherwise.
 	*/
-	@:overload public function isPrivateAttributeSet() : Bool;
+	@:overload @:public public function isPrivateAttributeSet() : Bool;
 	
 	/**
 	* Removes the given attribute from the assertion data.
@@ -157,7 +157,7 @@ extern class AssertionData implements java.lang.Cloneable implements java.io.Ser
 	* @param name The name of the attribute. Must not be null
 	* @return The value of the removed attribute.
 	*/
-	@:overload public function removeAttribute(name : javax.xml.namespace.QName) : String;
+	@:overload @:public public function removeAttribute(name : javax.xml.namespace.QName) : String;
 	
 	/**
 	* Adds or overwrites an attribute.
@@ -165,37 +165,37 @@ extern class AssertionData implements java.lang.Cloneable implements java.io.Ser
 	* @param name The name of the attribute.
 	* @param value The value of the attribute.
 	*/
-	@:overload public function setAttribute(name : javax.xml.namespace.QName, value : String) : Void;
+	@:overload @:public public function setAttribute(name : javax.xml.namespace.QName, value : String) : Void;
 	
 	/**
 	* Sets the optional attribute.
 	*
 	* @param value The value of the optional attribute.
 	*/
-	@:overload public function setOptionalAttribute(value : Bool) : Void;
+	@:overload @:public public function setOptionalAttribute(value : Bool) : Void;
 	
 	/**
 	* Tests if the optional attribute is set.
 	*
 	* @return True if optional is set and is true. False otherwise.
 	*/
-	@:overload public function isOptionalAttributeSet() : Bool;
+	@:overload @:public public function isOptionalAttributeSet() : Bool;
 	
 	/**
 	* Sets the ignorable attribute.
 	*
 	* @param value The value of the ignorable attribute.
 	*/
-	@:overload public function setIgnorableAttribute(value : Bool) : Void;
+	@:overload @:public public function setIgnorableAttribute(value : Bool) : Void;
 	
 	/**
 	* Tests if the ignorable attribute is set.
 	*
 	* @return True if ignorable is set and is true. False otherwise.
 	*/
-	@:overload public function isIgnorableAttributeSet() : Bool;
+	@:overload @:public public function isIgnorableAttributeSet() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* A helper method that appends indented string representation of this instance to the input string buffer.
@@ -204,9 +204,9 @@ extern class AssertionData implements java.lang.Cloneable implements java.io.Ser
 	* @param buffer buffer to be used for appending string representation of this instance
 	* @return modified buffer containing new string representation of the instance
 	*/
-	@:overload public function toString(indentLevel : Int, buffer : java.lang.StringBuffer) : java.lang.StringBuffer;
+	@:overload @:public public function toString(indentLevel : Int, buffer : java.lang.StringBuffer) : java.lang.StringBuffer;
 	
-	@:overload public function getNodeType() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode.ModelNode_Type;
+	@:overload @:public public function getNodeType() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode.ModelNode_Type;
 	
 	
 }

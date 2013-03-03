@@ -80,7 +80,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	* @see #createHorizontalBox
 	* @see #createVerticalBox
 	*/
-	@:overload public function new(axis : Int) : Void;
+	@:overload @:public public function new(axis : Int) : Void;
 	
 	/**
 	* Creates a <code>Box</code> that displays its components
@@ -94,7 +94,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	*
 	* @return the box
 	*/
-	@:overload public static function createHorizontalBox() : javax.swing.Box;
+	@:overload @:public @:static public static function createHorizontalBox() : javax.swing.Box;
 	
 	/**
 	* Creates a <code>Box</code> that displays its components
@@ -108,7 +108,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	*
 	* @return the box
 	*/
-	@:overload public static function createVerticalBox() : javax.swing.Box;
+	@:overload @:public @:static public static function createVerticalBox() : javax.swing.Box;
 	
 	/**
 	* Creates an invisible component that's always the specified size.
@@ -120,7 +120,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	* @see #createHorizontalStrut
 	* @see #createVerticalStrut
 	*/
-	@:overload public static function createRigidArea(d : java.awt.Dimension) : java.awt.Component;
+	@:overload @:public @:static public static function createRigidArea(d : java.awt.Dimension) : java.awt.Component;
 	
 	/**
 	* Creates an invisible, fixed-width component.
@@ -141,7 +141,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	* @see #createGlue
 	* @see #createRigidArea
 	*/
-	@:overload public static function createHorizontalStrut(width : Int) : java.awt.Component;
+	@:overload @:public @:static public static function createHorizontalStrut(width : Int) : java.awt.Component;
 	
 	/**
 	* Creates an invisible, fixed-height component.
@@ -162,7 +162,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	* @see #createGlue
 	* @see #createRigidArea
 	*/
-	@:overload public static function createVerticalStrut(height : Int) : java.awt.Component;
+	@:overload @:public @:static public static function createVerticalStrut(height : Int) : java.awt.Component;
 	
 	/**
 	* Creates an invisible "glue" component
@@ -208,28 +208,28 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	*
 	* @return the component
 	*/
-	@:overload public static function createGlue() : java.awt.Component;
+	@:overload @:public @:static public static function createGlue() : java.awt.Component;
 	
 	/**
 	* Creates a horizontal glue component.
 	*
 	* @return the component
 	*/
-	@:overload public static function createHorizontalGlue() : java.awt.Component;
+	@:overload @:public @:static public static function createHorizontalGlue() : java.awt.Component;
 	
 	/**
 	* Creates a vertical glue component.
 	*
 	* @return the component
 	*/
-	@:overload public static function createVerticalGlue() : java.awt.Component;
+	@:overload @:public @:static public static function createVerticalGlue() : java.awt.Component;
 	
 	/**
 	* Throws an AWTError, since a Box can use only a BoxLayout.
 	*
 	* @param l the layout manager to use
 	*/
-	@:overload override public function setLayout(l : java.awt.LayoutManager) : Void;
+	@:overload @:public override public function setLayout(l : java.awt.LayoutManager) : Void;
 	
 	/**
 	* Paints this <code>Box</code>.  If this <code>Box</code> has a UI this
@@ -241,7 +241,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	* @throws NullPointerException if <code>g</code> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function paintComponent(g : java.awt.Graphics) : Void;
+	@:require(java6) @:overload @:protected override private function paintComponent(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Gets the AccessibleContext associated with this Box.
@@ -252,7 +252,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	* @return an AccessibleBox that serves as the
 	*         AccessibleContext of this Box
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -278,7 +278,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	* @param pref  Preferred size
 	* @param max   Maximum size
 	*/
-	@:overload public function new(min : java.awt.Dimension, pref : java.awt.Dimension, max : java.awt.Dimension) : Void;
+	@:overload @:public public function new(min : java.awt.Dimension, pref : java.awt.Dimension, max : java.awt.Dimension) : Void;
 	
 	/**
 	* Change the size requests for this shape.  An invalidate() is
@@ -289,7 +289,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	* @param pref  Value to return for getPreferredSize
 	* @param max   Value to return for getMaximumSize
 	*/
-	@:overload public function changeShape(min : java.awt.Dimension, pref : java.awt.Dimension, max : java.awt.Dimension) : Void;
+	@:overload @:public public function changeShape(min : java.awt.Dimension, pref : java.awt.Dimension, max : java.awt.Dimension) : Void;
 	
 	/**
 	* Paints this <code>Filler</code>.  If this
@@ -302,7 +302,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	* @throws NullPointerException if <code>g</code> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function paintComponent(g : java.awt.Graphics) : Void;
+	@:require(java6) @:overload @:protected override private function paintComponent(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Gets the AccessibleContext associated with this Box.Filler.
@@ -313,7 +313,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	* @return an AccessibleBoxFiller that serves as the
 	*         AccessibleContext of this Box.Filler.
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -330,7 +330,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	*   the object (AccessibleRole.FILLER)
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }
@@ -347,7 +347,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	*   object (AccessibleRole.FILLER)
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

@@ -31,7 +31,7 @@ package com.sun.org.apache.xerces.internal.impl.xs.identity;
 extern class UniqueOrKey extends com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint
 {
 	/** Constructs a unique or a key identity constraint. */
-	@:overload public function new(namespace : String, identityConstraintName : String, elemName : String, type : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(namespace : String, identityConstraintName : String, elemName : String, type : java.StdTypes.Int16) : Void;
 	
 	
 }

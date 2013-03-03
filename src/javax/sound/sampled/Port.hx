@@ -59,32 +59,32 @@ package javax.sound.sampled;
 	/**
 	* A type of port that gets audio from a built-in microphone or a microphone jack.
 	*/
-	public static var MICROPHONE(default, null) : javax.sound.sampled.Line.Line_Info;
+	@:public @:static @:final public static var MICROPHONE(default, null) : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* A type of port that gets audio from a line-level audio input jack.
 	*/
-	public static var LINE_IN(default, null) : javax.sound.sampled.Line.Line_Info;
+	@:public @:static @:final public static var LINE_IN(default, null) : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* A type of port that gets audio from a CD-ROM drive.
 	*/
-	public static var COMPACT_DISC(default, null) : javax.sound.sampled.Line.Line_Info;
+	@:public @:static @:final public static var COMPACT_DISC(default, null) : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* A type of port that sends audio to a built-in speaker or a speaker jack.
 	*/
-	public static var SPEAKER(default, null) : javax.sound.sampled.Line.Line_Info;
+	@:public @:static @:final public static var SPEAKER(default, null) : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* A type of port that sends audio to a headphone jack.
 	*/
-	public static var HEADPHONE(default, null) : javax.sound.sampled.Line.Line_Info;
+	@:public @:static @:final public static var HEADPHONE(default, null) : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* A type of port that sends audio to a line-level audio output jack.
 	*/
-	public static var LINE_OUT(default, null) : javax.sound.sampled.Line.Line_Info;
+	@:public @:static @:final public static var LINE_OUT(default, null) : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* Constructs a port's info object from the information given.
@@ -97,13 +97,13 @@ package javax.sound.sampled;
 	* as a microphone), <code>false</code> if the port is a target port
 	* (such as a speaker).
 	*/
-	@:overload public function new(lineClass : Class<Dynamic>, name : String, isSource : Bool) : Void;
+	@:overload @:public public function new(lineClass : Class<Dynamic>, name : String, isSource : Bool) : Void;
 	
 	/**
 	* Obtains the name of the port.
 	* @return the string that names the port
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Indicates whether the port is a source or a target for its mixer.
@@ -111,7 +111,7 @@ package javax.sound.sampled;
 	* as a microphone), <code>false</code> if the port is a target port
 	* (such as a speaker).
 	*/
-	@:overload public function isSource() : Bool;
+	@:overload @:public public function isSource() : Bool;
 	
 	/**
 	* Indicates whether this info object specified matches this one.
@@ -119,24 +119,24 @@ package javax.sound.sampled;
 	* met and the types must be equal.
 	* @param info the info object for which the match is queried
 	*/
-	@:overload public function matches(info : javax.sound.sampled.Line.Line_Info) : Bool;
+	@:overload @:public override public function matches(info : javax.sound.sampled.Line.Line_Info) : Bool;
 	
 	/**
 	* Finalizes the equals method
 	*/
-	@:overload @:final public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Finalizes the hashCode method
 	*/
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
 	/**
 	* Provides a <code>String</code> representation
 	* of the port.
 	* @return  a string that describes the port
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	
 }

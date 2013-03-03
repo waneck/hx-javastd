@@ -41,7 +41,7 @@ extern class JmxMBeanServerBuilder extends javax.management.MBeanServerBuilder
 	*
 	* @return A new {@link javax.management.MBeanServerDelegate}.
 	**/
-	@:overload public function newMBeanServerDelegate() : javax.management.MBeanServerDelegate;
+	@:overload @:public override public function newMBeanServerDelegate() : javax.management.MBeanServerDelegate;
 	
 	/**
 	* This method creates a new MBeanServer implementation object.
@@ -81,7 +81,7 @@ extern class JmxMBeanServerBuilder extends javax.management.MBeanServerBuilder
 	*
 	* @return A new private implementation of an MBeanServer.
 	**/
-	@:overload public function newMBeanServer(defaultDomain : String, outer : javax.management.MBeanServer, delegate : javax.management.MBeanServerDelegate) : javax.management.MBeanServer;
+	@:overload @:public override public function newMBeanServer(defaultDomain : String, outer : javax.management.MBeanServer, delegate : javax.management.MBeanServerDelegate) : javax.management.MBeanServer;
 	
 	
 }

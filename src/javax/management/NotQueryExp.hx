@@ -35,17 +35,17 @@ package javax.management;
 	/**
 	* Basic Constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new NotQueryExp for negating the specified QueryExp.
 	*/
-	@:overload public function new(q : javax.management.QueryExp) : Void;
+	@:overload @:public public function new(q : javax.management.QueryExp) : Void;
 	
 	/**
 	* Returns the negated query expression of the query.
 	*/
-	@:overload public function getNegatedExp() : javax.management.QueryExp;
+	@:overload @:public public function getNegatedExp() : javax.management.QueryExp;
 	
 	/**
 	* Applies the NotQueryExp on a MBean.
@@ -59,12 +59,12 @@ package javax.management;
 	* @exception BadAttributeValueExpException
 	* @exception InvalidApplicationException
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function apply(name : javax.management.ObjectName) : Bool;
 	
 	/**
 	* Returns the string representing the object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

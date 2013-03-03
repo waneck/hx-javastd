@@ -34,23 +34,23 @@ extern class BootstrapMethods_attribute extends com.sun.tools.classfile.Attribut
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	public var bootstrap_method_specifiers(default, null) : java.NativeArray<com.sun.tools.classfile.BootstrapMethods_attribute.BootstrapMethods_attribute_BootstrapMethodSpecifier>;
+	@:public @:final public var bootstrap_method_specifiers(default, null) : java.NativeArray<com.sun.tools.classfile.BootstrapMethods_attribute.BootstrapMethods_attribute_BootstrapMethodSpecifier>;
 	
-	@:overload public function new(name_index : Int, bootstrap_method_specifiers : java.NativeArray<com.sun.tools.classfile.BootstrapMethods_attribute.BootstrapMethods_attribute_BootstrapMethodSpecifier>) : Void;
+	@:overload @:public public function new(name_index : Int, bootstrap_method_specifiers : java.NativeArray<com.sun.tools.classfile.BootstrapMethods_attribute.BootstrapMethods_attribute_BootstrapMethodSpecifier>) : Void;
 	
-	@:overload public static function length(bootstrap_method_specifiers : java.NativeArray<com.sun.tools.classfile.BootstrapMethods_attribute.BootstrapMethods_attribute_BootstrapMethodSpecifier>) : Int;
+	@:overload @:public @:static public static function length(bootstrap_method_specifiers : java.NativeArray<com.sun.tools.classfile.BootstrapMethods_attribute.BootstrapMethods_attribute_BootstrapMethodSpecifier>) : Int;
 	
-	@:overload public function accept<R, P>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, P>, p : P) : R;
+	@:overload @:public override public function accept<R, P>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, P>, p : P) : R;
 	
 	
 }
 @:native('com$sun$tools$classfile$BootstrapMethods_attribute$BootstrapMethodSpecifier') extern class BootstrapMethods_attribute_BootstrapMethodSpecifier
 {
-	public var bootstrap_method_ref : Int;
+	@:public public var bootstrap_method_ref : Int;
 	
-	public var bootstrap_arguments : java.NativeArray<Int>;
+	@:public public var bootstrap_arguments : java.NativeArray<Int>;
 	
-	@:overload public function new(bootstrap_method_ref : Int, bootstrap_arguments : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(bootstrap_method_ref : Int, bootstrap_arguments : java.NativeArray<Int>) : Void;
 	
 	
 }

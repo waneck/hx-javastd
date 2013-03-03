@@ -32,12 +32,12 @@ extern interface LongArrayCounter extends sun.management.counter.Counter
 	/**
 	* Get a copy of the elements of the LongArrayCounter.
 	*/
-	@:overload public function longArrayValue() : java.NativeArray<haxe.Int64>;
+	@:overload @:public public function longArrayValue() : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* Get the value of an element of the LongArrayCounter object.
 	*/
-	@:overload public function longAt(index : Int) : haxe.Int64;
+	@:overload @:public public function longAt(index : Int) : haxe.Int64;
 	
 	
 }

@@ -25,101 +25,101 @@ package javax.swing.plaf.basic;
 */
 extern class BasicIconFactory implements java.io.Serializable
 {
-	@:overload public static function getMenuItemCheckIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function getMenuItemCheckIcon() : javax.swing.Icon;
 	
-	@:overload public static function getMenuItemArrowIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function getMenuItemArrowIcon() : javax.swing.Icon;
 	
-	@:overload public static function getMenuArrowIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function getMenuArrowIcon() : javax.swing.Icon;
 	
-	@:overload public static function getCheckBoxIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function getCheckBoxIcon() : javax.swing.Icon;
 	
-	@:overload public static function getRadioButtonIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function getRadioButtonIcon() : javax.swing.Icon;
 	
-	@:overload public static function getCheckBoxMenuItemIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function getCheckBoxMenuItemIcon() : javax.swing.Icon;
 	
-	@:overload public static function getRadioButtonMenuItemIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function getRadioButtonMenuItemIcon() : javax.swing.Icon;
 	
-	@:overload public static function createEmptyFrameIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function createEmptyFrameIcon() : javax.swing.Icon;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicIconFactory$EmptyFrameIcon') @:internal extern class BasicIconFactory_EmptyFrameIcon implements javax.swing.Icon implements java.io.Serializable
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicIconFactory$CheckBoxIcon') @:internal extern class BasicIconFactory_CheckBoxIcon implements javax.swing.Icon implements java.io.Serializable
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicIconFactory$RadioButtonIcon') @:internal extern class BasicIconFactory_RadioButtonIcon implements javax.swing.Icon implements javax.swing.plaf.UIResource implements java.io.Serializable
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicIconFactory$CheckBoxMenuItemIcon') @:internal extern class BasicIconFactory_CheckBoxMenuItemIcon implements javax.swing.Icon implements javax.swing.plaf.UIResource implements java.io.Serializable
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicIconFactory$RadioButtonMenuItemIcon') @:internal extern class BasicIconFactory_RadioButtonMenuItemIcon implements javax.swing.Icon implements javax.swing.plaf.UIResource implements java.io.Serializable
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicIconFactory$MenuItemCheckIcon') @:internal extern class BasicIconFactory_MenuItemCheckIcon implements javax.swing.Icon implements javax.swing.plaf.UIResource implements java.io.Serializable
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicIconFactory$MenuItemArrowIcon') @:internal extern class BasicIconFactory_MenuItemArrowIcon implements javax.swing.Icon implements javax.swing.plaf.UIResource implements java.io.Serializable
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicIconFactory$MenuArrowIcon') @:internal extern class BasicIconFactory_MenuArrowIcon implements javax.swing.Icon implements javax.swing.plaf.UIResource implements java.io.Serializable
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }

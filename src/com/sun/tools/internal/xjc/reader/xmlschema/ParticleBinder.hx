@@ -31,22 +31,22 @@ extern class ParticleBinder
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	private var builder(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder;
+	@:protected @:final private var builder(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Builds the {@link CPropertyInfo}s from the given particle
 	* (and its descendants), and set them to the class returned by
 	* {@link ClassSelector#getCurrentBean()}.
 	*/
-	@:overload @:final public function build(p : com.sun.xml.internal.xsom.XSParticle) : Void;
+	@:overload @:public @:final public function build(p : com.sun.xml.internal.xsom.XSParticle) : Void;
 	
 	/**
 	* The version of the build method that forces a specified set of particles
 	* to become a property.
 	*/
-	@:overload @:abstract public function build(p : com.sun.xml.internal.xsom.XSParticle, forcedProps : java.util.Collection<com.sun.xml.internal.xsom.XSParticle>) : Void;
+	@:overload @:public @:abstract public function build(p : com.sun.xml.internal.xsom.XSParticle, forcedProps : java.util.Collection<com.sun.xml.internal.xsom.XSParticle>) : Void;
 	
 	/**
 	* Similar to the build method but this method only checks if
@@ -56,27 +56,27 @@ extern class ParticleBinder
 	* @return
 	*      false if the fallback will not happen.
 	*/
-	@:overload @:abstract public function checkFallback(p : com.sun.xml.internal.xsom.XSParticle) : Bool;
+	@:overload @:public @:abstract public function checkFallback(p : com.sun.xml.internal.xsom.XSParticle) : Bool;
 	
-	@:overload @:final private function getCurrentBean() : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload @:protected @:final private function getCurrentBean() : com.sun.tools.internal.xjc.model.CClassInfo;
 	
 	/**
 	* Gets the BIProperty object that applies to the given particle.
 	*/
-	@:overload @:final private function getLocalPropCustomization(p : com.sun.xml.internal.xsom.XSParticle) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIProperty;
+	@:overload @:protected @:final private function getLocalPropCustomization(p : com.sun.xml.internal.xsom.XSParticle) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIProperty;
 	
-	@:overload @:final private function getLocalCustomization<T : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration>(p : com.sun.xml.internal.xsom.XSParticle, type : Class<T>) : T;
+	@:overload @:protected @:final private function getLocalCustomization<T : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration>(p : com.sun.xml.internal.xsom.XSParticle, type : Class<T>) : T;
 	
 	/**
 	* Computes the label of a given particle.
 	* Usually, the getLabel method should be used instead.
 	*/
-	@:overload @:final private function computeLabel(p : com.sun.xml.internal.xsom.XSParticle) : String;
+	@:overload @:protected @:final private function computeLabel(p : com.sun.xml.internal.xsom.XSParticle) : String;
 	
 	/** Converts an XML name to the corresponding Java name. */
-	@:overload @:final private function makeJavaName(isRepeated : Bool, xmlName : String) : String;
+	@:overload @:protected @:final private function makeJavaName(isRepeated : Bool, xmlName : String) : String;
 	
-	@:overload @:final private function makeJavaName(p : com.sun.xml.internal.xsom.XSParticle, xmlName : String) : String;
+	@:overload @:protected @:final private function makeJavaName(p : com.sun.xml.internal.xsom.XSParticle, xmlName : String) : String;
 	
 	/**
 	* Computes a name from unnamed model group by following the spec.
@@ -91,11 +91,11 @@ extern class ParticleBinder
 	*      a model group doesn't contain any element reference/declaration
 	*      at all.
 	*/
-	@:overload @:final private function getSpecDefaultName(mg : com.sun.xml.internal.xsom.XSModelGroup, repeated : Bool) : String;
+	@:overload @:protected @:final private function getSpecDefaultName(mg : com.sun.xml.internal.xsom.XSModelGroup, repeated : Bool) : String;
 	
-	@:overload @:final private function getErrorReporter() : com.sun.tools.internal.xjc.reader.xmlschema.ErrorReporter;
+	@:overload @:protected @:final private function getErrorReporter() : com.sun.tools.internal.xjc.reader.xmlschema.ErrorReporter;
 	
-	@:overload @:final private function getClassSelector() : com.sun.tools.internal.xjc.reader.xmlschema.ClassSelector;
+	@:overload @:protected @:final private function getClassSelector() : com.sun.tools.internal.xjc.reader.xmlschema.ClassSelector;
 	
 	
 }

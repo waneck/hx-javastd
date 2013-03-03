@@ -25,9 +25,9 @@ package sun.tools.jar;
 */
 extern class JarException extends java.io.IOException
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

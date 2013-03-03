@@ -28,93 +28,93 @@ package com.sun.codemodel.internal;
 */
 extern class JOp
 {
-	@:overload public static function minus(e : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function minus(e : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Logical not <tt>'!x'</tt>.
 	*/
-	@:overload public static function not(e : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function not(e : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function complement(e : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function complement(e : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function incr(e : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function incr(e : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function decr(e : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function decr(e : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function plus(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function plus(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function minus(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function minus(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function mul(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function mul(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function div(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function div(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function mod(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function mod(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function shl(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function shl(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function shr(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function shr(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function shrz(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function shrz(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function band(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function band(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function bor(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function bor(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function cand(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function cand(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function cor(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function cor(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function xor(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function xor(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function lt(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function lt(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function lte(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function lte(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function gt(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function gt(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function gte(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function gte(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function eq(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function eq(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function ne(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function ne(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function _instanceof(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JType) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function _instanceof(left : com.sun.codemodel.internal.JExpression, right : com.sun.codemodel.internal.JType) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function cond(cond : com.sun.codemodel.internal.JExpression, ifTrue : com.sun.codemodel.internal.JExpression, ifFalse : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function cond(cond : com.sun.codemodel.internal.JExpression, ifTrue : com.sun.codemodel.internal.JExpression, ifFalse : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	
 }
 /* -- Unary operators -- */
 @:native('com$sun$codemodel$internal$JOp$UnaryOp') @:internal extern class JOp_UnaryOp extends com.sun.codemodel.internal.JExpressionImpl
 {
-	private var op : String;
+	@:protected private var op : String;
 	
-	private var e : com.sun.codemodel.internal.JExpression;
+	@:protected private var e : com.sun.codemodel.internal.JExpression;
 	
-	private var opFirst : Bool;
+	@:protected private var opFirst : Bool;
 	
-	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }
 @:native('com$sun$codemodel$internal$JOp$TightUnaryOp') @:internal extern class JOp_TightUnaryOp extends com.sun.codemodel.internal.JOp.JOp_UnaryOp
 {
-	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }
 /* -- Binary operators -- */
 @:native('com$sun$codemodel$internal$JOp$BinaryOp') @:internal extern class JOp_BinaryOp extends com.sun.codemodel.internal.JExpressionImpl
 {
-	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }
 /* -- Ternary operators -- */
 @:native('com$sun$codemodel$internal$JOp$TernaryOp') @:internal extern class JOp_TernaryOp extends com.sun.codemodel.internal.JExpressionImpl
 {
-	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

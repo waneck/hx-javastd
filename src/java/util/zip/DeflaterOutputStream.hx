@@ -28,12 +28,12 @@ extern class DeflaterOutputStream extends java.io.FilterOutputStream
 	/**
 	* Compressor for this stream.
 	*/
-	private var def : java.util.zip.Deflater;
+	@:protected private var def : java.util.zip.Deflater;
 	
 	/**
 	* Output buffer for writing compressed data.
 	*/
-	private var buf : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var buf : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Creates a new output stream with the specified compressor,
@@ -52,7 +52,7 @@ extern class DeflaterOutputStream extends java.io.FilterOutputStream
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(out : java.io.OutputStream, def : java.util.zip.Deflater, size : Int, syncFlush : Bool) : Void;
+	@:require(java7) @:overload @:public public function new(out : java.io.OutputStream, def : java.util.zip.Deflater, size : Int, syncFlush : Bool) : Void;
 	
 	/**
 	* Creates a new output stream with the specified compressor and
@@ -66,7 +66,7 @@ extern class DeflaterOutputStream extends java.io.FilterOutputStream
 	* @param size the output buffer size
 	* @exception IllegalArgumentException if size is <= 0
 	*/
-	@:overload public function new(out : java.io.OutputStream, def : java.util.zip.Deflater, size : Int) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, def : java.util.zip.Deflater, size : Int) : Void;
 	
 	/**
 	* Creates a new output stream with the specified compressor, flush
@@ -82,7 +82,7 @@ extern class DeflaterOutputStream extends java.io.FilterOutputStream
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(out : java.io.OutputStream, def : java.util.zip.Deflater, syncFlush : Bool) : Void;
+	@:require(java7) @:overload @:public public function new(out : java.io.OutputStream, def : java.util.zip.Deflater, syncFlush : Bool) : Void;
 	
 	/**
 	* Creates a new output stream with the specified compressor and
@@ -94,7 +94,7 @@ extern class DeflaterOutputStream extends java.io.FilterOutputStream
 	* @param out the output stream
 	* @param def the compressor ("deflater")
 	*/
-	@:overload public function new(out : java.io.OutputStream, def : java.util.zip.Deflater) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, def : java.util.zip.Deflater) : Void;
 	
 	/**
 	* Creates a new output stream with a default compressor, a default
@@ -109,7 +109,7 @@ extern class DeflaterOutputStream extends java.io.FilterOutputStream
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(out : java.io.OutputStream, syncFlush : Bool) : Void;
+	@:require(java7) @:overload @:public public function new(out : java.io.OutputStream, syncFlush : Bool) : Void;
 	
 	/**
 	* Creates a new output stream with a default compressor and buffer size.
@@ -119,7 +119,7 @@ extern class DeflaterOutputStream extends java.io.FilterOutputStream
 	*
 	* @param out the output stream
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Writes a byte to the compressed output stream. This method will
@@ -127,7 +127,7 @@ extern class DeflaterOutputStream extends java.io.FilterOutputStream
 	* @param b the byte to be written
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
 	/**
 	* Writes an array of bytes to the compressed output stream. This
@@ -137,7 +137,7 @@ extern class DeflaterOutputStream extends java.io.FilterOutputStream
 	* @param len the length of the data
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Finishes writing compressed data to the output stream without closing
@@ -145,20 +145,20 @@ extern class DeflaterOutputStream extends java.io.FilterOutputStream
 	* in succession to the same output stream.
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function finish() : Void;
+	@:overload @:public public function finish() : Void;
 	
 	/**
 	* Writes remaining compressed data to the output stream and closes the
 	* underlying stream.
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Writes next block of compressed data to the output stream.
 	* @throws IOException if an I/O error has occurred
 	*/
-	@:overload private function deflate() : Void;
+	@:overload @:protected private function deflate() : Void;
 	
 	/**
 	* Flushes the compressed output stream.
@@ -175,7 +175,7 @@ extern class DeflaterOutputStream extends java.io.FilterOutputStream
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function flush() : Void;
+	@:require(java7) @:overload @:public override public function flush() : Void;
 	
 	
 }

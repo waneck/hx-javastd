@@ -56,7 +56,7 @@ extern class AWTSecurityManager extends java.lang.SecurityManager
 	* @see     java.lang.SecurityManager
 	* @since   JDK1.2.1
 	*/
-	@:require(java2) @:overload public function getAppContext() : sun.awt.AppContext;
+	@:require(java2) @:overload @:public public function getAppContext() : sun.awt.AppContext;
 	
 	
 }

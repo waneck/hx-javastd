@@ -28,9 +28,9 @@ extern class AuthCacheValue implements java.io.Serializable
 	/**
 	* Caches authentication info entered by user.  See cacheKey()
 	*/
-	private static var cache : sun.net.www.protocol.http.AuthCache;
+	@:static @:protected private static var cache : sun.net.www.protocol.http.AuthCache;
 	
-	@:overload public static function setAuthCache(map : sun.net.www.protocol.http.AuthCache) : Void;
+	@:overload @:public @:static public static function setAuthCache(map : sun.net.www.protocol.http.AuthCache) : Void;
 	
 	
 }

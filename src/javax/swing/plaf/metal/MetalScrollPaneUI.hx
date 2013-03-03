@@ -39,25 +39,25 @@ package javax.swing.plaf.metal;
 */
 extern class MetalScrollPaneUI extends javax.swing.plaf.basic.BasicScrollPaneUI
 {
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function installListeners(scrollPane : javax.swing.JScrollPane) : Void;
+	@:overload @:public override public function installListeners(scrollPane : javax.swing.JScrollPane) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function uninstallListeners(c : javax.swing.JComponent) : Void;
+	@:overload @:protected override private function uninstallListeners(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* @deprecated - Replaced by {@link #uninstallListeners(JComponent)}
 	*/
-	@:overload public function uninstallListeners(scrollPane : javax.swing.JScrollPane) : Void;
+	@:overload @:public public function uninstallListeners(scrollPane : javax.swing.JScrollPane) : Void;
 	
-	@:overload private function createScrollBarSwapListener() : java.beans.PropertyChangeListener;
+	@:overload @:protected private function createScrollBarSwapListener() : java.beans.PropertyChangeListener;
 	
 	
 }

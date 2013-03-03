@@ -34,7 +34,7 @@ extern class GraphicsConfiguration
 	* @see GraphicsDevice#getBestConfiguration
 	* @see Graphics2D#getDeviceConfiguration
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the {@link GraphicsDevice} associated with this
@@ -42,7 +42,7 @@ extern class GraphicsConfiguration
 	* @return a <code>GraphicsDevice</code> object that is
 	* associated with this <code>GraphicsConfiguration</code>.
 	*/
-	@:overload @:abstract public function getDevice() : java.awt.GraphicsDevice;
+	@:overload @:public @:abstract public function getDevice() : java.awt.GraphicsDevice;
 	
 	/**
 	* Returns a {@link BufferedImage} with a data layout and color model
@@ -57,7 +57,7 @@ extern class GraphicsConfiguration
 	* @return a <code>BufferedImage</code> whose data layout and color
 	* model is compatible with this <code>GraphicsConfiguration</code>.
 	*/
-	@:overload public function createCompatibleImage(width : Int, height : Int) : java.awt.image.BufferedImage;
+	@:overload @:public public function createCompatibleImage(width : Int, height : Int) : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns a <code>BufferedImage</code> that supports the specified
@@ -78,7 +78,7 @@ extern class GraphicsConfiguration
 	* @see Transparency#BITMASK
 	* @see Transparency#TRANSLUCENT
 	*/
-	@:overload public function createCompatibleImage(width : Int, height : Int, transparency : Int) : java.awt.image.BufferedImage;
+	@:overload @:public public function createCompatibleImage(width : Int, height : Int, transparency : Int) : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns a {@link VolatileImage} with a data layout and color model
@@ -94,7 +94,7 @@ extern class GraphicsConfiguration
 	* @see Component#createVolatileImage(int, int)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function createCompatibleVolatileImage(width : Int, height : Int) : java.awt.image.VolatileImage;
+	@:require(java4) @:overload @:public public function createCompatibleVolatileImage(width : Int, height : Int) : java.awt.image.VolatileImage;
 	
 	/**
 	* Returns a {@link VolatileImage} with a data layout and color model
@@ -115,7 +115,7 @@ extern class GraphicsConfiguration
 	* @see Component#createVolatileImage(int, int)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function createCompatibleVolatileImage(width : Int, height : Int, transparency : Int) : java.awt.image.VolatileImage;
+	@:require(java5) @:overload @:public public function createCompatibleVolatileImage(width : Int, height : Int, transparency : Int) : java.awt.image.VolatileImage;
 	
 	/**
 	* Returns a {@link VolatileImage} with a data layout and color model
@@ -138,7 +138,7 @@ extern class GraphicsConfiguration
 	* be met by this graphics configuration
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function createCompatibleVolatileImage(width : Int, height : Int, caps : java.awt.ImageCapabilities) : java.awt.image.VolatileImage;
+	@:require(java4) @:overload @:public public function createCompatibleVolatileImage(width : Int, height : Int, caps : java.awt.ImageCapabilities) : java.awt.image.VolatileImage;
 	
 	/**
 	* Returns a {@link VolatileImage} with a data layout and color model
@@ -167,7 +167,7 @@ extern class GraphicsConfiguration
 	* @see Component#createVolatileImage(int, int)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function createCompatibleVolatileImage(width : Int, height : Int, caps : java.awt.ImageCapabilities, transparency : Int) : java.awt.image.VolatileImage;
+	@:require(java5) @:overload @:public public function createCompatibleVolatileImage(width : Int, height : Int, caps : java.awt.ImageCapabilities, transparency : Int) : java.awt.image.VolatileImage;
 	
 	/**
 	* Returns the {@link ColorModel} associated with this
@@ -175,7 +175,7 @@ extern class GraphicsConfiguration
 	* @return a <code>ColorModel</code> object that is associated with
 	* this <code>GraphicsConfiguration</code>.
 	*/
-	@:overload @:abstract public function getColorModel() : java.awt.image.ColorModel;
+	@:overload @:public @:abstract public function getColorModel() : java.awt.image.ColorModel;
 	
 	/**
 	* Returns the <code>ColorModel</code> associated with this
@@ -190,7 +190,7 @@ extern class GraphicsConfiguration
 	* @see Transparency#BITMASK
 	* @see Transparency#TRANSLUCENT
 	*/
-	@:overload @:abstract public function getColorModel(transparency : Int) : java.awt.image.ColorModel;
+	@:overload @:public @:abstract public function getColorModel(transparency : Int) : java.awt.image.ColorModel;
 	
 	/**
 	* Returns the default {@link AffineTransform} for this
@@ -211,7 +211,7 @@ extern class GraphicsConfiguration
 	* @return the default <code>AffineTransform</code> for this
 	* <code>GraphicsConfiguration</code>.
 	*/
-	@:overload @:abstract public function getDefaultTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public @:abstract public function getDefaultTransform() : java.awt.geom.AffineTransform;
 	
 	/**
 	*
@@ -241,7 +241,7 @@ extern class GraphicsConfiguration
 	* default <code>AffineTransform</code> so that 72 units in user
 	* space is mapped to 1 inch in device space.
 	*/
-	@:overload @:abstract public function getNormalizingTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public @:abstract public function getNormalizingTransform() : java.awt.geom.AffineTransform;
 	
 	/**
 	* Returns the bounds of the <code>GraphicsConfiguration</code>
@@ -252,7 +252,7 @@ extern class GraphicsConfiguration
 	* <code>GraphicsConfiguration</code>.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:abstract public function getBounds() : java.awt.Rectangle;
+	@:require(java3) @:overload @:public @:abstract public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Returns the buffering capabilities of this
@@ -261,7 +261,7 @@ extern class GraphicsConfiguration
 	* configuration object
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getBufferCapabilities() : java.awt.BufferCapabilities;
+	@:require(java4) @:overload @:public public function getBufferCapabilities() : java.awt.BufferCapabilities;
 	
 	/**
 	* Returns the image capabilities of this
@@ -270,7 +270,7 @@ extern class GraphicsConfiguration
 	* configuration object
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getImageCapabilities() : java.awt.ImageCapabilities;
+	@:require(java4) @:overload @:public public function getImageCapabilities() : java.awt.ImageCapabilities;
 	
 	/**
 	* Returns whether this {@code GraphicsConfiguration} supports
@@ -284,13 +284,13 @@ extern class GraphicsConfiguration
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function isTranslucencyCapable() : Bool;
+	@:require(java7) @:overload @:public public function isTranslucencyCapable() : Bool;
 	
 	
 }
 @:native('java$awt$GraphicsConfiguration$DefaultBufferCapabilities') @:internal extern class GraphicsConfiguration_DefaultBufferCapabilities extends java.awt.BufferCapabilities
 {
-	@:overload public function new(imageCaps : java.awt.ImageCapabilities) : Void;
+	@:overload @:public public function new(imageCaps : java.awt.ImageCapabilities) : Void;
 	
 	
 }

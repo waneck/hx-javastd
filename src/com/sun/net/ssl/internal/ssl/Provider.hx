@@ -25,18 +25,18 @@ package com.sun.net.ssl.internal.ssl;
 */
 extern class Provider extends sun.security.ssl.SunJSSE
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(cryptoProvider : java.security.Provider) : Void;
+	@:overload @:public public function new(cryptoProvider : java.security.Provider) : Void;
 	
-	@:overload public function new(cryptoProvider : String) : Void;
+	@:overload @:public public function new(cryptoProvider : String) : Void;
 	
-	@:overload @:synchronized public static function isFIPS() : Bool;
+	@:overload @:public @:static @:synchronized public static function isFIPS() : Bool;
 	
 	/**
 	* Installs the JSSE provider.
 	*/
-	@:overload @:synchronized public static function install() : Void;
+	@:overload @:public @:static @:synchronized public static function install() : Void;
 	
 	
 }

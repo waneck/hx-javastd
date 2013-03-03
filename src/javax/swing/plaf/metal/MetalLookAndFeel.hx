@@ -31,7 +31,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @return the name of this look and feel
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Returns an identifier for this look and feel. This returns
@@ -39,7 +39,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @return the identifier of this look and feel
 	*/
-	@:overload public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
 	/**
 	* Returns a short description of this look and feel. This returns
@@ -47,7 +47,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 
 	* @return a short description for the look and feel
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public override public function getDescription() : String;
 	
 	/**
 	* Returns {@code false}; {@code MetalLookAndFeel} is not a native
@@ -55,7 +55,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @return {@code false}
 	*/
-	@:overload public function isNativeLookAndFeel() : Bool;
+	@:overload @:public override public function isNativeLookAndFeel() : Bool;
 	
 	/**
 	* Returns {@code true}; {@code MetalLookAndFeel} can be run on
@@ -63,7 +63,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @return {@code true}
 	*/
-	@:overload public function isSupportedLookAndFeel() : Bool;
+	@:overload @:public override public function isSupportedLookAndFeel() : Bool;
 	
 	/**
 	* Returns {@code true}; metal can provide {@code Window}
@@ -76,7 +76,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* @see JRootPane#setWindowDecorationStyle
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getSupportsWindowDecorations() : Bool;
+	@:require(java4) @:overload @:public override public function getSupportsWindowDecorations() : Bool;
 	
 	/**
 	* Populates {@code table} with mappings from {@code uiClassID} to
@@ -96,7 +96,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see javax.swing.plaf.basic.BasicLookAndFeel#initClassDefaults
 	*/
-	@:overload private function initClassDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload @:protected override private function initClassDefaults(table : javax.swing.UIDefaults) : Void;
 	
 	/**
 	* Populates {@code table} with system colors. The following values are
@@ -191,7 +191,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* @param table the {@code UIDefaults} object the values are added to
 	* @throws NullPointerException if {@code table} is {@code null}
 	*/
-	@:overload private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload @:protected override private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
 	
 	/**
 	* Populates {@code table} with the defaults for metal.
@@ -199,7 +199,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* @param table the {@code UIDefaults} to add the values to
 	* @throws NullPointerException if {@code table} is {@code null}
 	*/
-	@:overload private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload @:protected override private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
 	
 	/**
 	* Ensures the current {@code MetalTheme} is {@code non-null}. This is
@@ -207,7 +207,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see #getCurrentTheme
 	*/
-	@:overload private function createDefaultTheme() : Void;
+	@:overload @:protected private function createDefaultTheme() : Void;
 	
 	/**
 	* Returns the look and feel defaults. This invokes, in order,
@@ -224,14 +224,14 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* @see javax.swing.plaf.basic.BasicLookAndFeel#getDefaults()
 	* @see MetalTheme#addCustomEntriesToTable(UIDefaults)
 	*/
-	@:overload public function getDefaults() : javax.swing.UIDefaults;
+	@:overload @:public override public function getDefaults() : javax.swing.UIDefaults;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function provideErrorFeedback(component : java.awt.Component) : Void;
+	@:require(java4) @:overload @:public override public function provideErrorFeedback(component : java.awt.Component) : Void;
 	
 	/**
 	* Set the theme used by <code>MetalLookAndFeel</code>.
@@ -255,7 +255,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* @throws NullPointerException if {@code theme} is {@code null}
 	* @see #getCurrentTheme
 	*/
-	@:overload public static function setCurrentTheme(theme : javax.swing.plaf.metal.MetalTheme) : Void;
+	@:overload @:public @:static public static function setCurrentTheme(theme : javax.swing.plaf.metal.MetalTheme) : Void;
 	
 	/**
 	* Return the theme currently being used by <code>MetalLookAndFeel</code>.
@@ -265,7 +265,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* @see #setCurrentTheme
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getCurrentTheme() : javax.swing.plaf.metal.MetalTheme;
+	@:require(java5) @:overload @:public @:static public static function getCurrentTheme() : javax.swing.plaf.metal.MetalTheme;
 	
 	/**
 	* Returns an <code>Icon</code> with a disabled appearance.
@@ -285,7 +285,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*         generated.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getDisabledIcon(component : javax.swing.JComponent, icon : javax.swing.Icon) : javax.swing.Icon;
+	@:require(java5) @:overload @:public override public function getDisabledIcon(component : javax.swing.JComponent, icon : javax.swing.Icon) : javax.swing.Icon;
 	
 	/**
 	* Returns an <code>Icon</code> for use by disabled
@@ -307,7 +307,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*         be generated.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getDisabledSelectedIcon(component : javax.swing.JComponent, icon : javax.swing.Icon) : javax.swing.Icon;
+	@:require(java5) @:overload @:public override public function getDisabledSelectedIcon(component : javax.swing.JComponent, icon : javax.swing.Icon) : javax.swing.Icon;
 	
 	/**
 	* Returns the control text font of the current theme. This is a
@@ -317,7 +317,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getControlTextFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public @:static public static function getControlTextFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the sytem text font of the current theme. This is a
@@ -327,7 +327,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getSystemTextFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public @:static public static function getSystemTextFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the user text font of the current theme. This is a
@@ -337,7 +337,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getUserTextFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public @:static public static function getUserTextFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the menu text font of the current theme. This is a
@@ -347,7 +347,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getMenuTextFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public @:static public static function getMenuTextFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the window title font of the current theme. This is a
@@ -357,7 +357,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getWindowTitleFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public @:static public static function getWindowTitleFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the sub-text font of the current theme. This is a
@@ -367,7 +367,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getSubTextFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public @:static public static function getSubTextFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the desktop color of the current theme. This is a
@@ -377,7 +377,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getDesktopColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getDesktopColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the focus color of the current theme. This is a
@@ -387,7 +387,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getFocusColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getFocusColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the white color of the current theme. This is a
@@ -397,7 +397,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getWhite() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getWhite() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the black color of the current theme. This is a
@@ -407,7 +407,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getBlack() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getBlack() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control color of the current theme. This is a
@@ -417,7 +417,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getControl() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getControl() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control shadow color of the current theme. This is a
@@ -427,7 +427,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getControlShadow() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getControlShadow() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control dark shadow color of the current theme. This is a
@@ -437,7 +437,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getControlDarkShadow() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getControlDarkShadow() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control info color of the current theme. This is a
@@ -447,7 +447,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getControlInfo() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getControlInfo() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control highlight color of the current theme. This is a
@@ -457,7 +457,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getControlHighlight() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getControlHighlight() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control disabled color of the current theme. This is a
@@ -467,7 +467,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getControlDisabled() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getControlDisabled() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the primary control color of the current theme. This is a
@@ -477,7 +477,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getPrimaryControl() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getPrimaryControl() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the primary control shadow color of the current theme. This is a
@@ -487,7 +487,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getPrimaryControlShadow() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getPrimaryControlShadow() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the primary control dark shadow color of the current
@@ -498,7 +498,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getPrimaryControlDarkShadow() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getPrimaryControlDarkShadow() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the primary control info color of the current theme. This is a
@@ -508,7 +508,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getPrimaryControlInfo() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getPrimaryControlInfo() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the primary control highlight color of the current
@@ -519,7 +519,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getPrimaryControlHighlight() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getPrimaryControlHighlight() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the system text color of the current theme. This is a
@@ -529,7 +529,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getSystemTextColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getSystemTextColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control text color of the current theme. This is a
@@ -539,7 +539,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getControlTextColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getControlTextColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the inactive control text color of the current theme. This is a
@@ -550,7 +550,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getInactiveControlTextColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getInactiveControlTextColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the inactive system text color of the current theme. This is a
@@ -561,7 +561,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getInactiveSystemTextColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getInactiveSystemTextColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the user text color of the current theme. This is a
@@ -571,7 +571,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getUserTextColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getUserTextColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the text highlight color of the current theme. This is a
@@ -581,7 +581,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getTextHighlightColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getTextHighlightColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the highlighted text color of the current theme. This is a
@@ -591,7 +591,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getHighlightedTextColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getHighlightedTextColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the window background color of the current theme. This is a
@@ -601,7 +601,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getWindowBackground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getWindowBackground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the window title background color of the current
@@ -612,7 +612,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getWindowTitleBackground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getWindowTitleBackground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the window title foreground color of the current
@@ -623,7 +623,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getWindowTitleForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getWindowTitleForeground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the window title inactive background color of the current
@@ -634,7 +634,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getWindowTitleInactiveBackground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getWindowTitleInactiveBackground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the window title inactive foreground color of the current
@@ -645,7 +645,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getWindowTitleInactiveForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getWindowTitleInactiveForeground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the menu background color of the current theme. This is
@@ -655,7 +655,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getMenuBackground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getMenuBackground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the menu foreground color of the current theme. This is
@@ -665,7 +665,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getMenuForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getMenuForeground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the menu selected background color of the current theme. This is
@@ -676,7 +676,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getMenuSelectedBackground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getMenuSelectedBackground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the menu selected foreground color of the current theme. This is
@@ -687,7 +687,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getMenuSelectedForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getMenuSelectedForeground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the menu disabled foreground color of the current theme. This is
@@ -698,7 +698,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getMenuDisabledForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getMenuDisabledForeground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the separator background color of the current theme. This is
@@ -708,7 +708,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getSeparatorBackground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getSeparatorBackground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the separator foreground color of the current theme. This is
@@ -718,7 +718,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getSeparatorForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getSeparatorForeground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the accelerator foreground color of the current theme. This is
@@ -728,7 +728,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getAcceleratorForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getAcceleratorForeground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the accelerator selected foreground color of the
@@ -739,7 +739,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see MetalTheme
 	*/
-	@:overload public static function getAcceleratorSelectedForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public @:static public static function getAcceleratorSelectedForeground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns a {@code LayoutStyle} implementing the Java look and feel
@@ -750,7 +750,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*         guidelines
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getLayoutStyle() : javax.swing.LayoutStyle;
+	@:require(java6) @:overload @:public override public function getLayoutStyle() : javax.swing.LayoutStyle;
 	
 	
 }
@@ -761,7 +761,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 */
 @:native('javax$swing$plaf$metal$MetalLookAndFeel$MetalLazyValue') @:internal extern class MetalLookAndFeel_MetalLazyValue implements javax.swing.UIDefaults.UIDefaults_LazyValue
 {
-	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
@@ -770,25 +770,25 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 */
 @:native('javax$swing$plaf$metal$MetalLookAndFeel$FontActiveValue') @:internal extern class MetalLookAndFeel_FontActiveValue implements javax.swing.UIDefaults.UIDefaults_ActiveValue
 {
-	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
 @:native('javax$swing$plaf$metal$MetalLookAndFeel$AATextListener') @:internal extern class MetalLookAndFeel_AATextListener extends java.lang.ref.WeakReference<javax.swing.LookAndFeel> implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(pce : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(pce : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function updateUI() : Void;
+	@:overload @:protected private function updateUI() : Void;
 	
 	
 }
 @:native('javax$swing$plaf$metal$MetalLookAndFeel$MetalLayoutStyle') @:internal extern class MetalLookAndFeel_MetalLayoutStyle extends sun.swing.DefaultLayoutStyle
 {
-	@:overload public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : javax.swing.LayoutStyle.LayoutStyle_ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
+	@:overload @:public override public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : javax.swing.LayoutStyle.LayoutStyle_ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
 	
-	@:overload public function getContainerGap(component : javax.swing.JComponent, position : Int, parent : java.awt.Container) : Int;
+	@:overload @:public override public function getContainerGap(component : javax.swing.JComponent, position : Int, parent : java.awt.Container) : Int;
 	
-	@:overload private function getButtonGap(source : javax.swing.JComponent, target : javax.swing.JComponent, position : Int, offset : Int) : Int;
+	@:overload @:protected override private function getButtonGap(source : javax.swing.JComponent, target : javax.swing.JComponent, position : Int, offset : Int) : Int;
 	
 	
 }

@@ -41,7 +41,7 @@ extern class SequenceInputStream extends java.io.InputStream
 	* @param   e   an enumeration of input streams.
 	* @see     java.util.Enumeration
 	*/
-	@:overload public function new(e : java.util.Enumeration<java.io.InputStream>) : Void;
+	@:overload @:public public function new(e : java.util.Enumeration<java.io.InputStream>) : Void;
 	
 	/**
 	* Initializes a newly
@@ -54,7 +54,7 @@ extern class SequenceInputStream extends java.io.InputStream
 	* @param   s1   the first input stream to read.
 	* @param   s2   the second input stream to read.
 	*/
-	@:overload public function new(s1 : java.io.InputStream, s2 : java.io.InputStream) : Void;
+	@:overload @:public public function new(s1 : java.io.InputStream, s2 : java.io.InputStream) : Void;
 	
 	/**
 	* Returns an estimate of the number of bytes that can be read (or
@@ -75,7 +75,7 @@ extern class SequenceInputStream extends java.io.InputStream
 	*
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload override public function available() : Int;
+	@:require(java1) @:overload @:public override public function available() : Int;
 	
 	/**
 	* Reads the next byte of data from this input stream. The byte is
@@ -95,7 +95,7 @@ extern class SequenceInputStream extends java.io.InputStream
 	*             stream is reached.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads up to <code>len</code> bytes of data from this input stream
@@ -120,7 +120,7 @@ extern class SequenceInputStream extends java.io.InputStream
 	* <code>b.length - off</code>
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Closes this input stream and releases any system resources
@@ -136,7 +136,7 @@ extern class SequenceInputStream extends java.io.InputStream
 	*
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

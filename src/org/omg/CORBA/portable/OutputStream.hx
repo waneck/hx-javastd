@@ -29,91 +29,91 @@ extern class OutputStream extends java.io.OutputStream
 	* Returns an input stream with the same buffer.
 	*@return an input stream with the same buffer.
 	*/
-	@:overload @:abstract public function create_input_stream() : org.omg.CORBA.portable.InputStream;
+	@:overload @:public @:abstract public function create_input_stream() : org.omg.CORBA.portable.InputStream;
 	
 	/**
 	* Writes a boolean value to this stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_boolean(value : Bool) : Void;
+	@:overload @:public @:abstract public function write_boolean(value : Bool) : Void;
 	
 	/**
 	* Writes a char value to this stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_char(value : java.StdTypes.Char16) : Void;
+	@:overload @:public @:abstract public function write_char(value : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Writes a wide char value to this stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_wchar(value : java.StdTypes.Char16) : Void;
+	@:overload @:public @:abstract public function write_wchar(value : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Writes a CORBA octet (i.e. byte) value to this stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_octet(value : java.StdTypes.Int8) : Void;
+	@:overload @:public @:abstract public function write_octet(value : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Writes a short value to this stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_short(value : java.StdTypes.Int16) : Void;
+	@:overload @:public @:abstract public function write_short(value : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Writes an unsigned short value to this stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_ushort(value : java.StdTypes.Int16) : Void;
+	@:overload @:public @:abstract public function write_ushort(value : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Writes a CORBA long (i.e. Java int) value to this stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_long(value : Int) : Void;
+	@:overload @:public @:abstract public function write_long(value : Int) : Void;
 	
 	/**
 	* Writes an unsigned CORBA long (i.e. Java int) value to this stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_ulong(value : Int) : Void;
+	@:overload @:public @:abstract public function write_ulong(value : Int) : Void;
 	
 	/**
 	* Writes a CORBA longlong (i.e. Java long) value to this stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_longlong(value : haxe.Int64) : Void;
+	@:overload @:public @:abstract public function write_longlong(value : haxe.Int64) : Void;
 	
 	/**
 	* Writes an unsigned CORBA longlong (i.e. Java long) value to this stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_ulonglong(value : haxe.Int64) : Void;
+	@:overload @:public @:abstract public function write_ulonglong(value : haxe.Int64) : Void;
 	
 	/**
 	* Writes a float value to this stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_float(value : Single) : Void;
+	@:overload @:public @:abstract public function write_float(value : Single) : Void;
 	
 	/**
 	* Writes a double value to this stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_double(value : Float) : Void;
+	@:overload @:public @:abstract public function write_double(value : Float) : Void;
 	
 	/**
 	* Writes a string value to this stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_string(value : String) : Void;
+	@:overload @:public @:abstract public function write_string(value : String) : Void;
 	
 	/**
 	* Writes a wide string value to this stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_wstring(value : String) : Void;
+	@:overload @:public @:abstract public function write_wstring(value : String) : Void;
 	
 	/**
 	* Writes an array of booleans on this output stream.
@@ -121,7 +121,7 @@ extern class OutputStream extends java.io.OutputStream
 	* @param offset offset on the stream.
 	* @param length length of buffer to write.
 	*/
-	@:overload @:abstract public function write_boolean_array(value : java.NativeArray<Bool>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function write_boolean_array(value : java.NativeArray<Bool>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Writes an array of chars on this output stream.
@@ -129,7 +129,7 @@ extern class OutputStream extends java.io.OutputStream
 	* @param offset offset on the stream.
 	* @param length length of buffer to write.
 	*/
-	@:overload @:abstract public function write_char_array(value : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function write_char_array(value : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Writes an array of wide chars on this output stream.
@@ -137,7 +137,7 @@ extern class OutputStream extends java.io.OutputStream
 	* @param offset offset on the stream.
 	* @param length length of buffer to write.
 	*/
-	@:overload @:abstract public function write_wchar_array(value : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function write_wchar_array(value : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Writes an array of CORBA octets (bytes) on this output stream.
@@ -145,7 +145,7 @@ extern class OutputStream extends java.io.OutputStream
 	* @param offset offset on the stream.
 	* @param length length of buffer to write.
 	*/
-	@:overload @:abstract public function write_octet_array(value : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function write_octet_array(value : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Writes an array of shorts on this output stream.
@@ -153,7 +153,7 @@ extern class OutputStream extends java.io.OutputStream
 	* @param offset offset on the stream.
 	* @param length length of buffer to write.
 	*/
-	@:overload @:abstract public function write_short_array(value : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function write_short_array(value : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Writes an array of unsigned shorts on this output stream.
@@ -161,7 +161,7 @@ extern class OutputStream extends java.io.OutputStream
 	* @param offset offset on the stream.
 	* @param length length of buffer to write.
 	*/
-	@:overload @:abstract public function write_ushort_array(value : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function write_ushort_array(value : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Writes an array of CORBA longs (i.e. Java ints) on this output stream.
@@ -169,7 +169,7 @@ extern class OutputStream extends java.io.OutputStream
 	* @param offset offset on the stream.
 	* @param length length of buffer to write.
 	*/
-	@:overload @:abstract public function write_long_array(value : java.NativeArray<Int>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function write_long_array(value : java.NativeArray<Int>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Writes an array of unsigned CORBA longs (i.e. Java ints) on this output stream.
@@ -177,7 +177,7 @@ extern class OutputStream extends java.io.OutputStream
 	* @param offset offset on the stream.
 	* @param length length of buffer to write.
 	*/
-	@:overload @:abstract public function write_ulong_array(value : java.NativeArray<Int>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function write_ulong_array(value : java.NativeArray<Int>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Writes an array of CORBA longlongs (i.e. Java longs) on this output stream.
@@ -185,7 +185,7 @@ extern class OutputStream extends java.io.OutputStream
 	* @param offset offset on the stream.
 	* @param length length of buffer to write.
 	*/
-	@:overload @:abstract public function write_longlong_array(value : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function write_longlong_array(value : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Writes an array of unsigned CORBA longlongs (i.e. Java ints) on this output stream.
@@ -193,7 +193,7 @@ extern class OutputStream extends java.io.OutputStream
 	* @param offset offset on the stream.
 	* @param length length of buffer to write.
 	*/
-	@:overload @:abstract public function write_ulonglong_array(value : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function write_ulonglong_array(value : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Writes an array of floats on this output stream.
@@ -201,7 +201,7 @@ extern class OutputStream extends java.io.OutputStream
 	* @param offset offset on the stream.
 	* @param length length of buffer to write.
 	*/
-	@:overload @:abstract public function write_float_array(value : java.NativeArray<Single>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function write_float_array(value : java.NativeArray<Single>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Writes an array of doubles on this output stream.
@@ -209,32 +209,32 @@ extern class OutputStream extends java.io.OutputStream
 	* @param offset offset on the stream.
 	* @param length length of buffer to write.
 	*/
-	@:overload @:abstract public function write_double_array(value : java.NativeArray<Float>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function write_double_array(value : java.NativeArray<Float>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Writes a CORBA Object on this output stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_Object(value : org.omg.CORBA.Object) : Void;
+	@:overload @:public @:abstract public function write_Object(value : org.omg.CORBA.Object) : Void;
 	
 	/**
 	* Writes a TypeCode on this output stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_TypeCode(value : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:public @:abstract public function write_TypeCode(value : org.omg.CORBA.TypeCode) : Void;
 	
 	/**
 	* Writes an Any on this output stream.
 	* @param value the value to be written.
 	*/
-	@:overload @:abstract public function write_any(value : org.omg.CORBA.Any) : Void;
+	@:overload @:public @:abstract public function write_any(value : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* Writes a Principle on this output stream.
 	* @param value the value to be written.
 	* @deprecated Deprecated by CORBA 2.2.
 	*/
-	@:overload public function write_Principal(value : org.omg.CORBA.Principal) : Void;
+	@:overload @:public public function write_Principal(value : org.omg.CORBA.Principal) : Void;
 	
 	/**
 	* Writes an integer (length of arrays) onto this stream.
@@ -243,13 +243,13 @@ extern class OutputStream extends java.io.OutputStream
 	* @see <a href="package-summary.html#unimpl"><code>portable</code>
 	* package comments for unimplemented features</a>
 	*/
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
 	/**
 	* Writes a BigDecimal number.
 	* @param value a BidDecimal--value to be written.
 	*/
-	@:overload public function write_fixed(value : java.math.BigDecimal) : Void;
+	@:overload @:public public function write_fixed(value : java.math.BigDecimal) : Void;
 	
 	/**
 	* Writes a CORBA context on this stream. The
@@ -262,7 +262,7 @@ extern class OutputStream extends java.io.OutputStream
 	* @see <a href="package-summary.html#unimpl"><code>portable</code>
 	* package comments for unimplemented features</a>
 	*/
-	@:overload public function write_Context(ctx : org.omg.CORBA.Context, contexts : org.omg.CORBA.ContextList) : Void;
+	@:overload @:public public function write_Context(ctx : org.omg.CORBA.Context, contexts : org.omg.CORBA.ContextList) : Void;
 	
 	/**
 	* Returns the ORB that created this OutputStream.
@@ -270,7 +270,7 @@ extern class OutputStream extends java.io.OutputStream
 	* @see <a href="package-summary.html#unimpl"><code>portable</code>
 	* package comments for unimplemented features</a>
 	*/
-	@:overload public function orb() : org.omg.CORBA.ORB;
+	@:overload @:public public function orb() : org.omg.CORBA.ORB;
 	
 	
 }

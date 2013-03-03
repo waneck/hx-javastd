@@ -38,7 +38,7 @@ extern interface Compilable
 	* @throws NullPointerException if the argument is null.
 	*
 	*/
-	@:overload public function compile(script : String) : javax.script.CompiledScript;
+	@:overload @:public public function compile(script : String) : javax.script.CompiledScript;
 	
 	/**
 	* Compiles the script (source read from <code>Reader</code>) for
@@ -54,7 +54,7 @@ extern interface Compilable
 	* @throws ScriptException if compilation fails.
 	* @throws NullPointerException if argument is null.
 	*/
-	@:overload public function compile(script : java.io.Reader) : javax.script.CompiledScript;
+	@:overload @:public public function compile(script : java.io.Reader) : javax.script.CompiledScript;
 	
 	
 }

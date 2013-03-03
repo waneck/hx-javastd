@@ -37,7 +37,7 @@ package sun.security.provider.certpath;
 */
 @:native('sun$security$provider$certpath$ReverseBuilder$PKIXCertComparator') @:internal extern class ReverseBuilder_PKIXCertComparator implements java.util.Comparator<java.security.cert.X509Certificate>
 {
-	@:overload public function compare(cert1 : java.security.cert.X509Certificate, cert2 : java.security.cert.X509Certificate) : Int;
+	@:overload @:public public function compare(cert1 : java.security.cert.X509Certificate, cert2 : java.security.cert.X509Certificate) : Int;
 	
 	
 }

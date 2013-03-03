@@ -25,14 +25,14 @@ package sun.awt.image;
 */
 extern class SurfaceManager
 {
-	@:overload public static function setImageAccessor(ia : sun.awt.image.SurfaceManager.SurfaceManager_ImageAccessor) : Void;
+	@:overload @:public @:static public static function setImageAccessor(ia : sun.awt.image.SurfaceManager.SurfaceManager_ImageAccessor) : Void;
 	
 	/**
 	* Returns the SurfaceManager object contained within the given Image.
 	*/
-	@:overload public static function getManager(img : java.awt.Image) : sun.awt.image.SurfaceManager;
+	@:overload @:public @:static public static function getManager(img : java.awt.Image) : sun.awt.image.SurfaceManager;
 	
-	@:overload public static function setManager(img : java.awt.Image, mgr : sun.awt.image.SurfaceManager) : Void;
+	@:overload @:public @:static public static function setManager(img : java.awt.Image, mgr : sun.awt.image.SurfaceManager) : Void;
 	
 	/**
 	* Return an arbitrary cached object for an arbitrary cache key.
@@ -54,14 +54,14 @@ extern class SurfaceManager
 	* below so that it may be notified immediately if the flush()
 	* method is ever called.
 	*/
-	@:overload public function getCacheData(key : Dynamic) : Dynamic;
+	@:overload @:public public function getCacheData(key : Dynamic) : Dynamic;
 	
 	/**
 	* Store an arbitrary cached object for an arbitrary cache key.
 	* See the getCacheData() method for notes on tracking the
 	* validity of data stored using this mechanism.
 	*/
-	@:overload public function setCacheData(key : Dynamic, value : Dynamic) : Void;
+	@:overload @:public public function setCacheData(key : Dynamic, value : Dynamic) : Void;
 	
 	/**
 	* Returns the main SurfaceData object that "owns" the pixels for
@@ -70,14 +70,14 @@ extern class SurfaceManager
 	* storage for the current state of the pixels, though other
 	* versions might be cached in other locations for efficiency.
 	*/
-	@:overload @:abstract public function getPrimarySurfaceData() : sun.java2d.SurfaceData;
+	@:overload @:public @:abstract public function getPrimarySurfaceData() : sun.java2d.SurfaceData;
 	
 	/**
 	* Restores the primary surface being managed, and then returns the
 	* replacement surface.  This is called when an accelerated surface has
 	* been "lost", in an attempt to auto-restore its contents.
 	*/
-	@:overload @:abstract public function restoreContents() : sun.java2d.SurfaceData;
+	@:overload @:public @:abstract public function restoreContents() : sun.java2d.SurfaceData;
 	
 	/**
 	* Notification that any accelerated surfaces associated with this manager
@@ -88,7 +88,7 @@ extern class SurfaceManager
 	* variants which have accelerated surfaces should perform any necessary
 	* actions.
 	*/
-	@:overload public function acceleratedSurfaceLost() : Void;
+	@:overload @:public public function acceleratedSurfaceLost() : Void;
 	
 	/**
 	* Returns an ImageCapabilities object which can be
@@ -113,7 +113,7 @@ extern class SurfaceManager
 	* @see java.awt.Image#getCapabilities
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getCapabilities(gc : java.awt.GraphicsConfiguration) : java.awt.ImageCapabilities;
+	@:require(java5) @:overload @:public public function getCapabilities(gc : java.awt.GraphicsConfiguration) : java.awt.ImageCapabilities;
 	
 	/**
 	* Releases system resources in use by ancillary SurfaceData objects,
@@ -124,7 +124,7 @@ extern class SurfaceManager
 	* in the cacheMap and flush them if they implement the
 	* FlushableCacheData interface.
 	*/
-	@:overload @:synchronized public function flush() : Void;
+	@:overload @:public @:synchronized public function flush() : Void;
 	
 	/**
 	* Called when image's acceleration priority is changed.
@@ -133,7 +133,7 @@ extern class SurfaceManager
 	* in the cacheMap when the priority gets set to 0.0 and flush them
 	* if they implement the FlushableCacheData interface.
 	*/
-	@:overload public function setAccelerationPriority(priority : Single) : Void;
+	@:overload @:public public function setAccelerationPriority(priority : Single) : Void;
 	
 	
 }
@@ -150,17 +150,17 @@ extern class SurfaceManager
 */
 @:native('sun$awt$image$SurfaceManager$ImageAccessor') extern class SurfaceManager_ImageAccessor
 {
-	@:overload @:abstract public function getSurfaceManager(img : java.awt.Image) : sun.awt.image.SurfaceManager;
+	@:overload @:public @:abstract public function getSurfaceManager(img : java.awt.Image) : sun.awt.image.SurfaceManager;
 	
-	@:overload @:abstract public function setSurfaceManager(img : java.awt.Image, mgr : sun.awt.image.SurfaceManager) : Void;
+	@:overload @:public @:abstract public function setSurfaceManager(img : java.awt.Image, mgr : sun.awt.image.SurfaceManager) : Void;
 	
 	
 }
 @:native('sun$awt$image$SurfaceManager$ImageCapabilitiesGc') @:internal extern class SurfaceManager_ImageCapabilitiesGc extends java.awt.ImageCapabilities
 {
-	@:overload public function new(gc : java.awt.GraphicsConfiguration) : Void;
+	@:overload @:public public function new(gc : java.awt.GraphicsConfiguration) : Void;
 	
-	@:overload public function isAccelerated() : Bool;
+	@:overload @:public override public function isAccelerated() : Bool;
 	
 	
 }
@@ -178,7 +178,7 @@ extern class SurfaceManager
 	* given GraphicsConfiguration use to store SurfaceDataProxy
 	* objects for their cached copies.
 	*/
-	@:overload public function getProxyKey() : Dynamic;
+	@:overload @:public public function getProxyKey() : Dynamic;
 	
 	
 }
@@ -198,7 +198,7 @@ extern class SurfaceManager
 	* Returns a boolean that indicates if the cached object is
 	* no longer needed and should be removed from the cache.
 	*/
-	@:overload public function flush(deaccelerated : Bool) : Bool;
+	@:overload @:public public function flush(deaccelerated : Bool) : Bool;
 	
 	
 }

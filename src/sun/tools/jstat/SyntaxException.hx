@@ -25,17 +25,17 @@ package sun.tools.jstat;
 */
 extern class SyntaxException extends sun.tools.jstat.ParserException
 {
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
-	@:overload public function new(lineno : Int, expected : String, found : String) : Void;
+	@:overload @:public public function new(lineno : Int, expected : String, found : String) : Void;
 	
-	@:overload public function new(lineno : Int, expected : String, found : sun.tools.jstat.Token) : Void;
+	@:overload @:public public function new(lineno : Int, expected : String, found : sun.tools.jstat.Token) : Void;
 	
-	@:overload public function new(lineno : Int, expected : sun.tools.jstat.Token, found : sun.tools.jstat.Token) : Void;
+	@:overload @:public public function new(lineno : Int, expected : sun.tools.jstat.Token, found : sun.tools.jstat.Token) : Void;
 	
-	@:overload public function new(lineno : Int, expected : java.util.Set<Dynamic>, found : sun.tools.jstat.Token) : Void;
+	@:overload @:public public function new(lineno : Int, expected : java.util.Set<Dynamic>, found : sun.tools.jstat.Token) : Void;
 	
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

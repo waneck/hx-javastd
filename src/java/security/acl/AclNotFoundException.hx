@@ -34,7 +34,7 @@ extern class AclNotFoundException extends java.lang.Exception
 	/**
 	* Constructs an AclNotFoundException.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

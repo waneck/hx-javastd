@@ -31,7 +31,7 @@ extern class SizeRequirements implements java.io.Serializable
 	* <code>comp.getMinimumSize().width</code> or
 	* <code>comp.getMinimumSize().height</code>.
 	*/
-	public var minimum : Int;
+	@:public public var minimum : Int;
 	
 	/**
 	* The preferred (natural) size.
@@ -39,7 +39,7 @@ extern class SizeRequirements implements java.io.Serializable
 	* <code>comp.getPreferredSize().width</code> or
 	* <code>comp.getPreferredSize().height</code>.
 	*/
-	public var preferred : Int;
+	@:public public var preferred : Int;
 	
 	/**
 	* The maximum size allowed.
@@ -47,21 +47,21 @@ extern class SizeRequirements implements java.io.Serializable
 	* <code>comp.getMaximumSize().width</code> or
 	* <code>comp.getMaximumSize().height</code>.
 	*/
-	public var maximum : Int;
+	@:public public var maximum : Int;
 	
 	/**
 	* The alignment, specified as a value between 0.0 and 1.0,
 	* inclusive.
 	* To specify centering, the alignment should be 0.5.
 	*/
-	public var alignment : Single;
+	@:public public var alignment : Single;
 	
 	/**
 	* Creates a SizeRequirements object with the minimum, preferred,
 	* and maximum sizes set to zero and an alignment value of 0.5
 	* (centered).
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a SizeRequirements object with the specified minimum, preferred,
@@ -72,7 +72,7 @@ extern class SizeRequirements implements java.io.Serializable
 	* @param max the maximum size >= 0
 	* @param a the alignment >= 0.0f && <= 1.0f
 	*/
-	@:overload public function new(min : Int, pref : Int, max : Int, a : Single) : Void;
+	@:overload @:public public function new(min : Int, pref : Int, max : Int, a : Single) : Void;
 	
 	/**
 	* Returns a string describing the minimum, preferred, and maximum
@@ -80,7 +80,7 @@ extern class SizeRequirements implements java.io.Serializable
 	*
 	* @return the string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Determines the total space necessary to
@@ -96,7 +96,7 @@ extern class SizeRequirements implements java.io.Serializable
 	*   default SizeRequirements object instance being passed back.
 	* @return  the total space requirements.
 	*/
-	@:overload public static function getTiledSizeRequirements(children : java.NativeArray<javax.swing.SizeRequirements>) : javax.swing.SizeRequirements;
+	@:overload @:public @:static public static function getTiledSizeRequirements(children : java.NativeArray<javax.swing.SizeRequirements>) : javax.swing.SizeRequirements;
 	
 	/**
 	* Determines the total space necessary to
@@ -109,7 +109,7 @@ extern class SizeRequirements implements java.io.Serializable
 	*  the returns result will be a default instance of SizeRequirements.
 	* @return  the total space requirements.
 	*/
-	@:overload public static function getAlignedSizeRequirements(children : java.NativeArray<javax.swing.SizeRequirements>) : javax.swing.SizeRequirements;
+	@:overload @:public @:static public static function getAlignedSizeRequirements(children : java.NativeArray<javax.swing.SizeRequirements>) : javax.swing.SizeRequirements;
 	
 	/**
 	* Creates a set of offset/span pairs representing how to
@@ -132,7 +132,7 @@ extern class SizeRequirements implements java.io.Serializable
 	* @param spans     the span allocated for each child to make the
 	*   total target span.
 	*/
-	@:overload public static function calculateTiledPositions(allocated : Int, total : javax.swing.SizeRequirements, children : java.NativeArray<javax.swing.SizeRequirements>, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:public @:static public static function calculateTiledPositions(allocated : Int, total : javax.swing.SizeRequirements, children : java.NativeArray<javax.swing.SizeRequirements>, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Creates a set of offset/span pairs representing how to
@@ -166,7 +166,7 @@ extern class SizeRequirements implements java.io.Serializable
 	*   if false.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function calculateTiledPositions(allocated : Int, total : javax.swing.SizeRequirements, children : java.NativeArray<javax.swing.SizeRequirements>, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>, forward : Bool) : Void;
+	@:require(java4) @:overload @:public @:static public static function calculateTiledPositions(allocated : Int, total : javax.swing.SizeRequirements, children : java.NativeArray<javax.swing.SizeRequirements>, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>, forward : Bool) : Void;
 	
 	/**
 	* Creates a bunch of offset/span pairs specifying how to
@@ -193,7 +193,7 @@ extern class SizeRequirements implements java.io.Serializable
 	* @param spans     the span allocated for each child to make the
 	*   total target span.
 	*/
-	@:overload public static function calculateAlignedPositions(allocated : Int, total : javax.swing.SizeRequirements, children : java.NativeArray<javax.swing.SizeRequirements>, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:public @:static public static function calculateAlignedPositions(allocated : Int, total : javax.swing.SizeRequirements, children : java.NativeArray<javax.swing.SizeRequirements>, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Creates a set of offset/span pairs specifying how to
@@ -226,7 +226,7 @@ extern class SizeRequirements implements java.io.Serializable
 	*   left/top; when false, it means right/bottom.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function calculateAlignedPositions(allocated : Int, total : javax.swing.SizeRequirements, children : java.NativeArray<javax.swing.SizeRequirements>, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>, normal : Bool) : Void;
+	@:require(java4) @:overload @:public @:static public static function calculateAlignedPositions(allocated : Int, total : javax.swing.SizeRequirements, children : java.NativeArray<javax.swing.SizeRequirements>, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>, normal : Bool) : Void;
 	
 	/**
 	* Adjust a specified array of sizes by a given amount.
@@ -235,7 +235,7 @@ extern class SizeRequirements implements java.io.Serializable
 	* @param children  an array of SizeRequirements objects
 	* @return an array of ints containing the final size for each item
 	*/
-	@:overload public static function adjustSizes(delta : Int, children : java.NativeArray<javax.swing.SizeRequirements>) : java.NativeArray<Int>;
+	@:overload @:public @:static public static function adjustSizes(delta : Int, children : java.NativeArray<javax.swing.SizeRequirements>) : java.NativeArray<Int>;
 	
 	
 }

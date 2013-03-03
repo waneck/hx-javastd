@@ -48,43 +48,43 @@ package com.sun.xml.internal.rngom.parse.compact;
 extern class CompactSyntaxTokenManager implements com.sun.xml.internal.rngom.parse.compact.CompactSyntaxConstants
 {
 	/** Debug output. */
-	public var debugStream : java.io.PrintStream;
+	@:public public var debugStream : java.io.PrintStream;
 	
 	/** Set debug output. */
-	@:overload public function setDebugStream(ds : java.io.PrintStream) : Void;
+	@:overload @:public public function setDebugStream(ds : java.io.PrintStream) : Void;
 	
 	/** Token literal values. */
-	public static var jjstrLiteralImages(default, null) : java.NativeArray<String>;
+	@:public @:static @:final public static var jjstrLiteralImages(default, null) : java.NativeArray<String>;
 	
 	/** Lexer state names. */
-	public static var lexStateNames(default, null) : java.NativeArray<String>;
+	@:public @:static @:final public static var lexStateNames(default, null) : java.NativeArray<String>;
 	
 	/** Lex State array. */
-	public static var jjnewLexState(default, null) : java.NativeArray<Int>;
+	@:public @:static @:final public static var jjnewLexState(default, null) : java.NativeArray<Int>;
 	
-	private var input_stream : com.sun.xml.internal.rngom.parse.compact.JavaCharStream;
+	@:protected private var input_stream : com.sun.xml.internal.rngom.parse.compact.JavaCharStream;
 	
-	private var curChar : java.StdTypes.Char16;
-	
-	/** Constructor. */
-	@:overload public function new(stream : com.sun.xml.internal.rngom.parse.compact.JavaCharStream) : Void;
+	@:protected private var curChar : java.StdTypes.Char16;
 	
 	/** Constructor. */
-	@:overload public function new(stream : com.sun.xml.internal.rngom.parse.compact.JavaCharStream, lexState : Int) : Void;
+	@:overload @:public public function new(stream : com.sun.xml.internal.rngom.parse.compact.JavaCharStream) : Void;
+	
+	/** Constructor. */
+	@:overload @:public public function new(stream : com.sun.xml.internal.rngom.parse.compact.JavaCharStream, lexState : Int) : Void;
 	
 	/** Reinitialise parser. */
-	@:overload public function ReInit(stream : com.sun.xml.internal.rngom.parse.compact.JavaCharStream) : Void;
+	@:overload @:public public function ReInit(stream : com.sun.xml.internal.rngom.parse.compact.JavaCharStream) : Void;
 	
 	/** Reinitialise parser. */
-	@:overload public function ReInit(stream : com.sun.xml.internal.rngom.parse.compact.JavaCharStream, lexState : Int) : Void;
+	@:overload @:public public function ReInit(stream : com.sun.xml.internal.rngom.parse.compact.JavaCharStream, lexState : Int) : Void;
 	
 	/** Switch to specified lex state. */
-	@:overload public function SwitchTo(lexState : Int) : Void;
+	@:overload @:public public function SwitchTo(lexState : Int) : Void;
 	
-	@:overload private function jjFillToken() : com.sun.xml.internal.rngom.parse.compact.Token;
+	@:overload @:protected private function jjFillToken() : com.sun.xml.internal.rngom.parse.compact.Token;
 	
 	/** Get the next Token. */
-	@:overload public function getNextToken() : com.sun.xml.internal.rngom.parse.compact.Token;
+	@:overload @:public public function getNextToken() : com.sun.xml.internal.rngom.parse.compact.Token;
 	
 	
 }

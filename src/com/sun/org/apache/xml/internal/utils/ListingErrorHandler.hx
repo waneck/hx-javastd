@@ -33,17 +33,17 @@ extern class ListingErrorHandler implements org.xml.sax.ErrorHandler implements 
 	* @author shane_curcuru@us.ibm.com
 	* @xsl.usage general
 	*/
-	private var m_pw : java.io.PrintWriter;
+	@:protected private var m_pw : java.io.PrintWriter;
 	
 	/**
 	* Constructor ListingErrorHandler; user-supplied PrintWriter.
 	*/
-	@:overload public function new(pw : java.io.PrintWriter) : Void;
+	@:overload @:public public function new(pw : java.io.PrintWriter) : Void;
 	
 	/**
 	* Constructor ListingErrorHandler; uses System.err.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Receive notification of a warning.
@@ -65,7 +65,7 @@ extern class ListingErrorHandler implements org.xml.sax.ErrorHandler implements 
 	* wrapping another exception; only if setThrowOnWarning is true.
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Receive notification of a recoverable error.
@@ -92,7 +92,7 @@ extern class ListingErrorHandler implements org.xml.sax.ErrorHandler implements 
 	* wrapping another exception; only if setThrowOnErroris true.
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Receive notification of a non-recoverable error.
@@ -114,7 +114,7 @@ extern class ListingErrorHandler implements org.xml.sax.ErrorHandler implements 
 	* wrapping another exception; only if setThrowOnFatalError is true.
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Receive notification of a warning.
@@ -135,7 +135,7 @@ extern class ListingErrorHandler implements org.xml.sax.ErrorHandler implements 
 	*
 	* @see javax.xml.transform.TransformerException
 	*/
-	@:overload public function warning(exception : javax.xml.transform.TransformerException) : Void;
+	@:overload @:public public function warning(exception : javax.xml.transform.TransformerException) : Void;
 	
 	/**
 	* Receive notification of a recoverable error.
@@ -153,7 +153,7 @@ extern class ListingErrorHandler implements org.xml.sax.ErrorHandler implements 
 	*
 	* @see javax.xml.transform.TransformerException
 	*/
-	@:overload public function error(exception : javax.xml.transform.TransformerException) : Void;
+	@:overload @:public public function error(exception : javax.xml.transform.TransformerException) : Void;
 	
 	/**
 	* Receive notification of a non-recoverable error.
@@ -172,7 +172,7 @@ extern class ListingErrorHandler implements org.xml.sax.ErrorHandler implements 
 	*
 	* @see javax.xml.transform.TransformerException
 	*/
-	@:overload public function fatalError(exception : javax.xml.transform.TransformerException) : Void;
+	@:overload @:public public function fatalError(exception : javax.xml.transform.TransformerException) : Void;
 	
 	/**
 	* Print out location information about the exception.
@@ -182,7 +182,7 @@ extern class ListingErrorHandler implements org.xml.sax.ErrorHandler implements 
 	* @param exception TransformerException or SAXParseException
 	* to log information about
 	*/
-	@:overload public static function logExceptionLocation(pw : java.io.PrintWriter, exception : java.lang.Throwable) : Void;
+	@:overload @:public @:static public static function logExceptionLocation(pw : java.io.PrintWriter, exception : java.lang.Throwable) : Void;
 	
 	/**
 	* Print out the specific source line that caused the exception,
@@ -192,7 +192,7 @@ extern class ListingErrorHandler implements org.xml.sax.ErrorHandler implements 
 	* @param locator Xalan wrapper for either a JAXP or a SAX
 	* source location object
 	*/
-	@:overload public static function logSourceLine(pw : java.io.PrintWriter, locator : javax.xml.transform.SourceLocator) : Void;
+	@:overload @:public @:static public static function logSourceLine(pw : java.io.PrintWriter, locator : javax.xml.transform.SourceLocator) : Void;
 	
 	/**
 	* Return the specific source line that caused the exception,
@@ -200,7 +200,7 @@ extern class ListingErrorHandler implements org.xml.sax.ErrorHandler implements 
 	*
 	* @author shane_curcuru@us.ibm.com
 	*/
-	@:overload private static function getSourceLine(sourceUrl : String, lineNum : Int) : String;
+	@:overload @:protected @:static private static function getSourceLine(sourceUrl : String, lineNum : Int) : String;
 	
 	/**
 	* User-settable behavior: when to re-throw exceptions.
@@ -212,17 +212,17 @@ extern class ListingErrorHandler implements org.xml.sax.ErrorHandler implements 
 	*
 	* @param b if we should throw an exception on warnings
 	*/
-	@:overload public function setThrowOnWarning(b : Bool) : Void;
+	@:overload @:public public function setThrowOnWarning(b : Bool) : Void;
 	
 	/**
 	* User-settable behavior: when to re-throw exceptions.
 	*
 	* @return if we throw an exception on warnings
 	*/
-	@:overload public function getThrowOnWarning() : Bool;
+	@:overload @:public public function getThrowOnWarning() : Bool;
 	
 	/** If we should throw exception on warnings; default:false.  */
-	private var throwOnWarning : Bool;
+	@:protected private var throwOnWarning : Bool;
 	
 	/**
 	* User-settable behavior: when to re-throw exceptions.
@@ -237,17 +237,17 @@ extern class ListingErrorHandler implements org.xml.sax.ErrorHandler implements 
 	*
 	* @param b if we should throw an exception on errors
 	*/
-	@:overload public function setThrowOnError(b : Bool) : Void;
+	@:overload @:public public function setThrowOnError(b : Bool) : Void;
 	
 	/**
 	* User-settable behavior: when to re-throw exceptions.
 	*
 	* @return if we throw an exception on errors
 	*/
-	@:overload public function getThrowOnError() : Bool;
+	@:overload @:public public function getThrowOnError() : Bool;
 	
 	/** If we should throw exception on errors; default:true.  */
-	private var throwOnError : Bool;
+	@:protected private var throwOnError : Bool;
 	
 	/**
 	* User-settable behavior: when to re-throw exceptions.
@@ -263,17 +263,17 @@ extern class ListingErrorHandler implements org.xml.sax.ErrorHandler implements 
 	*
 	* @param b if we should throw an exception on fatalErrors
 	*/
-	@:overload public function setThrowOnFatalError(b : Bool) : Void;
+	@:overload @:public public function setThrowOnFatalError(b : Bool) : Void;
 	
 	/**
 	* User-settable behavior: when to re-throw exceptions.
 	*
 	* @return if we throw an exception on fatalErrors
 	*/
-	@:overload public function getThrowOnFatalError() : Bool;
+	@:overload @:public public function getThrowOnFatalError() : Bool;
 	
 	/** If we should throw exception on fatalErrors; default:true.  */
-	private var throwOnFatalError : Bool;
+	@:protected private var throwOnFatalError : Bool;
 	
 	
 }

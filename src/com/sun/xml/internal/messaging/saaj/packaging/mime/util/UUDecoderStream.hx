@@ -41,7 +41,7 @@ extern class UUDecoderStream extends java.io.FilterInputStream
 	* Create a UUdecoder that decodes the specified input stream
 	* @param in        the input stream
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Read the next decoded byte from this input stream. The byte
@@ -56,13 +56,13 @@ extern class UUDecoderStream extends java.io.FilterInputStream
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function read(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	/**
 	* Get the "name" field from the prefix. This is meant to
@@ -71,7 +71,7 @@ extern class UUDecoderStream extends java.io.FilterInputStream
 	* @return     name of decoded file
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Get the "mode" field from the prefix. This is the permission
@@ -80,7 +80,7 @@ extern class UUDecoderStream extends java.io.FilterInputStream
 	* @return     permission mode of source file
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function getMode() : Int;
+	@:overload @:public public function getMode() : Int;
 	
 	
 }

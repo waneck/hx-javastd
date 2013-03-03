@@ -83,7 +83,7 @@ package java.awt;
 	*         root of aComponent or a focus traversal policy provider, or if
 	*         either aContainer or aComponent is null
 	*/
-	@:overload @:abstract public function getComponentAfter(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
+	@:overload @:public @:abstract public function getComponentAfter(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* Returns the Component that should receive the focus before aComponent.
@@ -100,7 +100,7 @@ package java.awt;
 	*         root of aComponent or a focus traversal policy provider, or if
 	*         either aContainer or aComponent is null
 	*/
-	@:overload @:abstract public function getComponentBefore(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
+	@:overload @:public @:abstract public function getComponentBefore(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* Returns the first Component in the traversal cycle. This method is used
@@ -113,7 +113,7 @@ package java.awt;
 	*         or null if no suitable Component can be found
 	* @throws IllegalArgumentException if aContainer is null
 	*/
-	@:overload @:abstract public function getFirstComponent(aContainer : java.awt.Container) : java.awt.Component;
+	@:overload @:public @:abstract public function getFirstComponent(aContainer : java.awt.Container) : java.awt.Component;
 	
 	/**
 	* Returns the last Component in the traversal cycle. This method is used
@@ -126,7 +126,7 @@ package java.awt;
 	*         or null if no suitable Component can be found
 	* @throws IllegalArgumentException if aContainer is null
 	*/
-	@:overload @:abstract public function getLastComponent(aContainer : java.awt.Container) : java.awt.Component;
+	@:overload @:public @:abstract public function getLastComponent(aContainer : java.awt.Container) : java.awt.Component;
 	
 	/**
 	* Returns the default Component to focus. This Component will be the first
@@ -139,7 +139,7 @@ package java.awt;
 	*         or null if no suitable Component can be found
 	* @throws IllegalArgumentException if aContainer is null
 	*/
-	@:overload @:abstract public function getDefaultComponent(aContainer : java.awt.Container) : java.awt.Component;
+	@:overload @:public @:abstract public function getDefaultComponent(aContainer : java.awt.Container) : java.awt.Component;
 	
 	/**
 	* Returns the Component that should receive the focus when a Window is
@@ -159,7 +159,7 @@ package java.awt;
 	* @see Window#getMostRecentFocusOwner
 	* @throws IllegalArgumentException if window is null
 	*/
-	@:overload public function getInitialComponent(window : java.awt.Window) : java.awt.Component;
+	@:overload @:public public function getInitialComponent(window : java.awt.Window) : java.awt.Component;
 	
 	
 }

@@ -55,7 +55,7 @@ extern class Registry
 	* @throws UnsupportedOperationException if the {@code Registry} class is
 	* not supported.
 	*/
-	@:overload public static function getSystemRegistry() : com.sun.servicetag.Registry;
+	@:overload @:public @:static public static function getSystemRegistry() : com.sun.servicetag.Registry;
 	
 	/**
 	* Returns {@code true} if the {@code Registry} class is supported on this system.
@@ -63,7 +63,7 @@ extern class Registry
 	* @return {@code true} if the {@code Registry} class is supported;
 	* otherwise, return {@code false}.
 	*/
-	@:overload @:synchronized public static function isSupported() : Bool;
+	@:overload @:public @:static @:synchronized public static function isSupported() : Bool;
 	
 	/**
 	* Adds a service tag to this registry.
@@ -82,7 +82,7 @@ extern class Registry
 	*
 	* @throws java.io.IOException if an I/O error occurs in this operation.
 	*/
-	@:overload public function addServiceTag(st : com.sun.servicetag.ServiceTag) : com.sun.servicetag.ServiceTag;
+	@:overload @:public public function addServiceTag(st : com.sun.servicetag.ServiceTag) : com.sun.servicetag.ServiceTag;
 	
 	/**
 	* Removes a service tag of the given <tt>instance_urn</tt> from this
@@ -100,7 +100,7 @@ extern class Registry
 	*
 	* @throws java.io.IOException if an I/O error occurs in this operation.
 	*/
-	@:overload public function removeServiceTag(instanceURN : String) : com.sun.servicetag.ServiceTag;
+	@:overload @:public public function removeServiceTag(instanceURN : String) : com.sun.servicetag.ServiceTag;
 	
 	/**
 	* Updates the <tt>product_defined_instance_id</tt> in the service tag
@@ -119,7 +119,7 @@ extern class Registry
 	*
 	* @throws IOException if an I/O error occurs in this operation.
 	*/
-	@:overload public function updateServiceTag(instanceURN : String, productDefinedInstanceID : String) : com.sun.servicetag.ServiceTag;
+	@:overload @:public public function updateServiceTag(instanceURN : String, productDefinedInstanceID : String) : com.sun.servicetag.ServiceTag;
 	
 	/**
 	* Returns a {@code ServiceTag} object of the given  <tt>instance_urn</tt>
@@ -131,7 +131,7 @@ extern class Registry
 	*
 	* @throws java.io.IOException if an I/O error occurs in this operation.
 	*/
-	@:overload public function getServiceTag(instanceURN : String) : com.sun.servicetag.ServiceTag;
+	@:overload @:public public function getServiceTag(instanceURN : String) : com.sun.servicetag.ServiceTag;
 	
 	/**
 	* Returns the service tags of the specified
@@ -143,7 +143,7 @@ extern class Registry
 	*
 	* @throws java.io.IOException if an I/O error occurs in this operation.
 	*/
-	@:overload public function findServiceTags(productURN : String) : java.util.Set<com.sun.servicetag.ServiceTag>;
+	@:overload @:public public function findServiceTags(productURN : String) : java.util.Set<com.sun.servicetag.ServiceTag>;
 	
 	
 }

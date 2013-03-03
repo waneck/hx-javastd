@@ -58,7 +58,7 @@ package com.sun.jdi.event;
 	* @return a {@link ThreadReference} which mirrors the event's thread in
 	* the target VM, or null in the rare cases described above.
 	*/
-	@:overload public function thread() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function thread() : com.sun.jdi.ThreadReference;
 	
 	/**
 	* Returns the reference type for which this event was generated.
@@ -66,7 +66,7 @@ package com.sun.jdi.event;
 	* @return a {@link ReferenceType} which mirrors the class, interface, or
 	* array which has been linked.
 	*/
-	@:overload public function referenceType() : com.sun.jdi.ReferenceType;
+	@:overload @:public public function referenceType() : com.sun.jdi.ReferenceType;
 	
 	
 }

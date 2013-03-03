@@ -31,9 +31,9 @@ package com.sun.script.javascript;
 */
 @:require(java6) @:internal extern class RhinoCompiledScript extends javax.script.CompiledScript
 {
-	@:overload public function eval(context : javax.script.ScriptContext) : Dynamic;
+	@:overload @:public override public function eval(context : javax.script.ScriptContext) : Dynamic;
 	
-	@:overload public function getEngine() : javax.script.ScriptEngine;
+	@:overload @:public override public function getEngine() : javax.script.ScriptEngine;
 	
 	
 }

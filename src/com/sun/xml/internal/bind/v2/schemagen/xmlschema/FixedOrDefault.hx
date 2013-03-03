@@ -25,9 +25,9 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface FixedOrDefault extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function _default(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.FixedOrDefault;
+	@:overload @:public public function _default(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.FixedOrDefault;
 	
-	@:overload public function fixed(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.FixedOrDefault;
+	@:overload @:public public function fixed(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.FixedOrDefault;
 	
 	
 }

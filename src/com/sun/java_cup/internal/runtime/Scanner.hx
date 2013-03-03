@@ -39,7 +39,7 @@ called by lr_parser.scan().
 ***************************************************/
 extern interface Scanner
 {
-	@:overload public function next_token() : com.sun.java_cup.internal.runtime.Symbol;
+	@:overload @:public public function next_token() : com.sun.java_cup.internal.runtime.Symbol;
 	
 	
 }

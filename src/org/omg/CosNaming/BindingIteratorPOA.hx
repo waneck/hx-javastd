@@ -15,18 +15,18 @@ package org.omg.CosNaming;
 */
 extern class BindingIteratorPOA extends org.omg.PortableServer.Servant implements org.omg.CosNaming.BindingIteratorOperations implements org.omg.CORBA.portable.InvokeHandler
 {
-	@:overload public function _invoke($method : String, _in : org.omg.CORBA.portable.InputStream, $rh : org.omg.CORBA.portable.ResponseHandler) : org.omg.CORBA.portable.OutputStream;
+	@:overload @:public public function _invoke($method : String, _in : org.omg.CORBA.portable.InputStream, $rh : org.omg.CORBA.portable.ResponseHandler) : org.omg.CORBA.portable.OutputStream;
 	
-	@:overload override public function _all_interfaces(poa : org.omg.PortableServer.POA, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
+	@:overload @:public override public function _all_interfaces(poa : org.omg.PortableServer.POA, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
-	@:overload public function _this() : org.omg.CosNaming.BindingIterator;
+	@:overload @:public public function _this() : org.omg.CosNaming.BindingIterator;
 	
-	@:overload public function _this(orb : org.omg.CORBA.ORB) : org.omg.CosNaming.BindingIterator;
+	@:overload @:public public function _this(orb : org.omg.CORBA.ORB) : org.omg.CosNaming.BindingIterator;
 	
 	/**
 	* This operation destroys the iterator.
 	*/
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	/**
 	* This operation returns at most the requested number of bindings.
@@ -35,7 +35,7 @@ extern class BindingIteratorPOA extends org.omg.PortableServer.Servant implement
 	* 
 	* @param bl the returned bindings
 	*/
-	@:overload public function next_n(how_many : Int, bl : org.omg.CosNaming.BindingListHolder) : Bool;
+	@:overload @:public public function next_n(how_many : Int, bl : org.omg.CosNaming.BindingListHolder) : Bool;
 	
 	/**
 	* This operation returns the next binding. If there are no more
@@ -43,7 +43,7 @@ extern class BindingIteratorPOA extends org.omg.PortableServer.Servant implement
 	* 
 	* @param b the returned binding
 	*/
-	@:overload public function next_one(b : org.omg.CosNaming.BindingHolder) : Bool;
+	@:overload @:public public function next_one(b : org.omg.CosNaming.BindingHolder) : Bool;
 	
 	
 }

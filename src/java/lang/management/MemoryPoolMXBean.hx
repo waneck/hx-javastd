@@ -366,7 +366,7 @@ package java.lang.management;
 	*
 	* @return the name of this memory pool.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the type of this memory pool.
@@ -378,7 +378,7 @@ package java.lang.management;
 	*
 	* @return the type of this memory pool.
 	*/
-	@:overload public function getType() : java.lang.management.MemoryType;
+	@:overload @:public public function getType() : java.lang.management.MemoryType;
 	
 	/**
 	* Returns an estimate of the memory usage of this memory pool.
@@ -405,7 +405,7 @@ package java.lang.management;
 	* @return a {@link MemoryUsage} object; or <tt>null</tt> if
 	* this pool not valid.
 	*/
-	@:overload public function getUsage() : java.lang.management.MemoryUsage;
+	@:overload @:public public function getUsage() : java.lang.management.MemoryUsage;
 	
 	/**
 	* Returns the peak memory usage of this memory pool since the
@@ -423,7 +423,7 @@ package java.lang.management;
 	* memory usage; or <tt>null</tt> if this pool is not valid.
 	*
 	*/
-	@:overload public function getPeakUsage() : java.lang.management.MemoryUsage;
+	@:overload @:public public function getPeakUsage() : java.lang.management.MemoryUsage;
 	
 	/**
 	* Resets the peak memory usage statistic of this memory pool
@@ -433,7 +433,7 @@ package java.lang.management;
 	*         exists and the caller does not have
 	*         ManagementPermission("control").
 	*/
-	@:overload public function resetPeakUsage() : Void;
+	@:overload @:public public function resetPeakUsage() : Void;
 	
 	/**
 	* Tests if this memory pool is valid in the Java virtual
@@ -444,7 +444,7 @@ package java.lang.management;
 	*              Java virtual machine;
 	*         <tt>false</tt> otherwise.
 	*/
-	@:overload public function isValid() : Bool;
+	@:overload @:public public function isValid() : Bool;
 	
 	/**
 	* Returns the name of memory managers that manages this memory pool.
@@ -453,7 +453,7 @@ package java.lang.management;
 	* @return an array of <tt>String</tt> objects, each is the name of
 	* a memory manager managing this memory pool.
 	*/
-	@:overload public function getMemoryManagerNames() : java.NativeArray<String>;
+	@:overload @:public public function getMemoryManagerNames() : java.NativeArray<String>;
 	
 	/**
 	* Returns the usage threshold value of this memory pool in bytes.
@@ -468,7 +468,7 @@ package java.lang.management;
 	*
 	* @see #isUsageThresholdSupported
 	*/
-	@:overload public function getUsageThreshold() : haxe.Int64;
+	@:overload @:public public function getUsageThreshold() : haxe.Int64;
 	
 	/**
 	* Sets the threshold of this memory pool to the given <tt>threshold</tt>
@@ -494,7 +494,7 @@ package java.lang.management;
 	* @see #isUsageThresholdSupported
 	* @see <a href="#UsageThreshold">Usage threshold</a>
 	*/
-	@:overload public function setUsageThreshold(threshold : haxe.Int64) : Void;
+	@:overload @:public public function setUsageThreshold(threshold : haxe.Int64) : Void;
 	
 	/**
 	* Tests if the memory usage of this memory pool
@@ -507,7 +507,7 @@ package java.lang.management;
 	* @throws UnsupportedOperationException if this memory pool
 	*         does not support a usage threshold.
 	*/
-	@:overload public function isUsageThresholdExceeded() : Bool;
+	@:overload @:public public function isUsageThresholdExceeded() : Bool;
 	
 	/**
 	* Returns the number of times that the memory usage has crossed
@@ -519,7 +519,7 @@ package java.lang.management;
 	* @throws UnsupportedOperationException if this memory pool
 	* does not support a usage threshold.
 	*/
-	@:overload public function getUsageThresholdCount() : haxe.Int64;
+	@:overload @:public public function getUsageThresholdCount() : haxe.Int64;
 	
 	/**
 	* Tests if this memory pool supports usage threshold.
@@ -527,7 +527,7 @@ package java.lang.management;
 	* @return <tt>true</tt> if this memory pool supports usage threshold;
 	* <tt>false</tt> otherwise.
 	*/
-	@:overload public function isUsageThresholdSupported() : Bool;
+	@:overload @:public public function isUsageThresholdSupported() : Bool;
 	
 	/**
 	* Returns the collection usage threshold value of this memory pool
@@ -542,7 +542,7 @@ package java.lang.management;
 	*
 	* @see #isCollectionUsageThresholdSupported
 	*/
-	@:overload public function getCollectionUsageThreshold() : haxe.Int64;
+	@:overload @:public public function getCollectionUsageThreshold() : haxe.Int64;
 	
 	/**
 	* Sets the collection usage threshold of this memory pool to
@@ -573,7 +573,7 @@ package java.lang.management;
 	* @see #isCollectionUsageThresholdSupported
 	* @see <a href="#CollectionThreshold">Collection usage threshold</a>
 	*/
-	@:overload public function setCollectionUsageThreshold(threshold : haxe.Int64) : Void;
+	@:overload @:public public function setCollectionUsageThreshold(threshold : haxe.Int64) : Void;
 	
 	/**
 	* Tests if the memory usage of this memory pool after
@@ -592,7 +592,7 @@ package java.lang.management;
 	* @throws UnsupportedOperationException if this memory pool
 	*         does not support a usage threshold.
 	*/
-	@:overload public function isCollectionUsageThresholdExceeded() : Bool;
+	@:overload @:public public function isCollectionUsageThresholdExceeded() : Bool;
 	
 	/**
 	* Returns the number of times that the Java virtual machine
@@ -607,7 +607,7 @@ package java.lang.management;
 	*
 	* @see #isCollectionUsageThresholdSupported
 	*/
-	@:overload public function getCollectionUsageThresholdCount() : haxe.Int64;
+	@:overload @:public public function getCollectionUsageThresholdCount() : haxe.Int64;
 	
 	/**
 	* Returns the memory usage after the Java virtual machine
@@ -630,7 +630,7 @@ package java.lang.management;
 	* expended effort in recycling unused objects;
 	* <tt>null</tt> if this method is not supported.
 	*/
-	@:overload public function getCollectionUsage() : java.lang.management.MemoryUsage;
+	@:overload @:public public function getCollectionUsage() : java.lang.management.MemoryUsage;
 	
 	/**
 	* Tests if this memory pool supports a collection usage threshold.
@@ -638,7 +638,7 @@ package java.lang.management;
 	* @return <tt>true</tt> if this memory pool supports the
 	* collection usage threshold; <tt>false</tt> otherwise.
 	*/
-	@:overload public function isCollectionUsageThresholdSupported() : Bool;
+	@:overload @:public public function isCollectionUsageThresholdSupported() : Bool;
 	
 	
 }

@@ -31,31 +31,31 @@ package com.sun.media.sound;
 */
 extern class ModelIdentifier
 {
-	@:overload public function new(object : String) : Void;
+	@:overload @:public public function new(object : String) : Void;
 	
-	@:overload public function new(object : String, instance : Int) : Void;
+	@:overload @:public public function new(object : String, instance : Int) : Void;
 	
-	@:overload public function new(object : String, variable : String) : Void;
+	@:overload @:public public function new(object : String, variable : String) : Void;
 	
-	@:overload public function new(object : String, variable : String, instance : Int) : Void;
+	@:overload @:public public function new(object : String, variable : String, instance : Int) : Void;
 	
-	@:overload public function getInstance() : Int;
+	@:overload @:public public function getInstance() : Int;
 	
-	@:overload public function setInstance(instance : Int) : Void;
+	@:overload @:public public function setInstance(instance : Int) : Void;
 	
-	@:overload public function getObject() : String;
+	@:overload @:public public function getObject() : String;
 	
-	@:overload public function setObject(object : String) : Void;
+	@:overload @:public public function setObject(object : String) : Void;
 	
-	@:overload public function getVariable() : String;
+	@:overload @:public public function getVariable() : String;
 	
-	@:overload public function setVariable(variable : String) : Void;
+	@:overload @:public public function setVariable(variable : String) : Void;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

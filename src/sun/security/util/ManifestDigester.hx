@@ -28,13 +28,13 @@ extern class ManifestDigester
 	/**
 	* This class is used to compute digests on sections of the Manifest.
 	*/
-	public static var MF_MAIN_ATTRS(default, null) : String;
+	@:public @:static @:final public static var MF_MAIN_ATTRS(default, null) : String;
 	
-	@:overload public function new(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function get(name : String, oldStyle : Bool) : sun.security.util.ManifestDigester.ManifestDigester_Entry;
+	@:overload @:public public function get(name : String, oldStyle : Bool) : sun.security.util.ManifestDigester.ManifestDigester_Entry;
 	
-	@:overload public function manifestDigest(md : java.security.MessageDigest) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function manifestDigest(md : java.security.MessageDigest) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
@@ -45,12 +45,12 @@ extern class ManifestDigester
 }
 @:native('sun$security$util$ManifestDigester$Entry') extern class ManifestDigester_Entry
 {
-	@:overload public function new(offset : Int, length : Int, lengthWithBlankLine : Int, rawBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(offset : Int, length : Int, lengthWithBlankLine : Int, rawBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function digest(md : java.security.MessageDigest) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function digest(md : java.security.MessageDigest) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** Netscape doesn't include the new line. Intel and JavaSoft do */
-	@:overload public function digestWorkaround(md : java.security.MessageDigest) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function digestWorkaround(md : java.security.MessageDigest) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -26,9 +26,9 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 extern class StAXValidatorHelper implements com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorHelper
 {
 	/** Creates a new instance of StaxValidatorHelper */
-	@:overload public function new(componentManager : com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaValidatorComponentManager) : Void;
+	@:overload @:public public function new(componentManager : com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaValidatorComponentManager) : Void;
 	
-	@:overload public function validate(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
+	@:overload @:public public function validate(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
 	
 	
 }

@@ -60,7 +60,7 @@ extern interface XmlReader extends javax.sql.RowSetReader
 	*            this <code>XmlReader</code> object is not the reader
 	*            for the given rowset
 	*/
-	@:overload public function readXML(caller : javax.sql.rowset.WebRowSet, reader : java.io.Reader) : Void;
+	@:overload @:public public function readXML(caller : javax.sql.rowset.WebRowSet, reader : java.io.Reader) : Void;
 	
 	
 }

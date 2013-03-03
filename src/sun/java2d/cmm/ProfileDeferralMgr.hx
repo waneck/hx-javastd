@@ -33,27 +33,27 @@ extern class ProfileDeferralMgr
 	* graphics, but which may not be needed if the program does not need
 	* high quality color conversion.
 	*/
-	public static var deferring : Bool;
+	@:public @:static public static var deferring : Bool;
 	
 	/**
 	* Records a ProfileActivator object whose activate method will
 	* be called if the CMM needs to be activated.
 	*/
-	@:overload public static function registerDeferral(pa : sun.java2d.cmm.ProfileActivator) : Void;
+	@:overload @:public @:static public static function registerDeferral(pa : sun.java2d.cmm.ProfileActivator) : Void;
 	
 	/**
 	* Removes a ProfileActivator object from the vector of ProfileActivator
 	* objects whose activate method will be called if the CMM needs to be
 	* activated.
 	*/
-	@:overload public static function unregisterDeferral(pa : sun.java2d.cmm.ProfileActivator) : Void;
+	@:overload @:public @:static public static function unregisterDeferral(pa : sun.java2d.cmm.ProfileActivator) : Void;
 	
 	/**
 	* Removes a ProfileActivator object from the vector of ProfileActivator
 	* objects whose activate method will be called if the CMM needs to be
 	* activated.
 	*/
-	@:overload public static function activateProfiles() : Void;
+	@:overload @:public @:static public static function activateProfiles() : Void;
 	
 	
 }

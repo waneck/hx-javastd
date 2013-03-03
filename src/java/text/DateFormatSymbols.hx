@@ -51,7 +51,7 @@ extern class DateFormatSymbols implements java.io.Serializable implements java.l
 	*             if the resources for the default locale cannot be
 	*             found or cannot be loaded.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a DateFormatSymbols object by loading format data from
@@ -67,7 +67,7 @@ extern class DateFormatSymbols implements java.io.Serializable implements java.l
 	*             if the resources for the specified locale cannot be
 	*             found or cannot be loaded.
 	*/
-	@:overload public function new(locale : java.util.Locale) : Void;
+	@:overload @:public public function new(locale : java.util.Locale) : Void;
 	
 	/**
 	* Returns an array of all locales for which the
@@ -83,7 +83,7 @@ extern class DateFormatSymbols implements java.io.Serializable implements java.l
 	*         <code>DateFormatSymbols</code> instances are available.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
+	@:require(java6) @:overload @:public @:static public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
 	
 	/**
 	* Gets the <code>DateFormatSymbols</code> instance for the default
@@ -95,7 +95,7 @@ extern class DateFormatSymbols implements java.io.Serializable implements java.l
 	* @return a <code>DateFormatSymbols</code> instance.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public static function getInstance() : java.text.DateFormatSymbols;
+	@:require(java6) @:overload @:public @:static @:final public static function getInstance() : java.text.DateFormatSymbols;
 	
 	/**
 	* Gets the <code>DateFormatSymbols</code> instance for the specified
@@ -109,50 +109,50 @@ extern class DateFormatSymbols implements java.io.Serializable implements java.l
 	* @exception NullPointerException if <code>locale</code> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public static function getInstance(locale : java.util.Locale) : java.text.DateFormatSymbols;
+	@:require(java6) @:overload @:public @:static @:final public static function getInstance(locale : java.util.Locale) : java.text.DateFormatSymbols;
 	
 	/**
 	* Gets era strings. For example: "AD" and "BC".
 	* @return the era strings.
 	*/
-	@:overload public function getEras() : java.NativeArray<String>;
+	@:overload @:public public function getEras() : java.NativeArray<String>;
 	
 	/**
 	* Sets era strings. For example: "AD" and "BC".
 	* @param newEras the new era strings.
 	*/
-	@:overload public function setEras(newEras : java.NativeArray<String>) : Void;
+	@:overload @:public public function setEras(newEras : java.NativeArray<String>) : Void;
 	
 	/**
 	* Gets month strings. For example: "January", "February", etc.
 	* @return the month strings.
 	*/
-	@:overload public function getMonths() : java.NativeArray<String>;
+	@:overload @:public public function getMonths() : java.NativeArray<String>;
 	
 	/**
 	* Sets month strings. For example: "January", "February", etc.
 	* @param newMonths the new month strings.
 	*/
-	@:overload public function setMonths(newMonths : java.NativeArray<String>) : Void;
+	@:overload @:public public function setMonths(newMonths : java.NativeArray<String>) : Void;
 	
 	/**
 	* Gets short month strings. For example: "Jan", "Feb", etc.
 	* @return the short month strings.
 	*/
-	@:overload public function getShortMonths() : java.NativeArray<String>;
+	@:overload @:public public function getShortMonths() : java.NativeArray<String>;
 	
 	/**
 	* Sets short month strings. For example: "Jan", "Feb", etc.
 	* @param newShortMonths the new short month strings.
 	*/
-	@:overload public function setShortMonths(newShortMonths : java.NativeArray<String>) : Void;
+	@:overload @:public public function setShortMonths(newShortMonths : java.NativeArray<String>) : Void;
 	
 	/**
 	* Gets weekday strings. For example: "Sunday", "Monday", etc.
 	* @return the weekday strings. Use <code>Calendar.SUNDAY</code>,
 	* <code>Calendar.MONDAY</code>, etc. to index the result array.
 	*/
-	@:overload public function getWeekdays() : java.NativeArray<String>;
+	@:overload @:public public function getWeekdays() : java.NativeArray<String>;
 	
 	/**
 	* Sets weekday strings. For example: "Sunday", "Monday", etc.
@@ -160,14 +160,14 @@ extern class DateFormatSymbols implements java.io.Serializable implements java.l
 	* be indexed by <code>Calendar.SUNDAY</code>,
 	* <code>Calendar.MONDAY</code>, etc.
 	*/
-	@:overload public function setWeekdays(newWeekdays : java.NativeArray<String>) : Void;
+	@:overload @:public public function setWeekdays(newWeekdays : java.NativeArray<String>) : Void;
 	
 	/**
 	* Gets short weekday strings. For example: "Sun", "Mon", etc.
 	* @return the short weekday strings. Use <code>Calendar.SUNDAY</code>,
 	* <code>Calendar.MONDAY</code>, etc. to index the result array.
 	*/
-	@:overload public function getShortWeekdays() : java.NativeArray<String>;
+	@:overload @:public public function getShortWeekdays() : java.NativeArray<String>;
 	
 	/**
 	* Sets short weekday strings. For example: "Sun", "Mon", etc.
@@ -175,19 +175,19 @@ extern class DateFormatSymbols implements java.io.Serializable implements java.l
 	* be indexed by <code>Calendar.SUNDAY</code>,
 	* <code>Calendar.MONDAY</code>, etc.
 	*/
-	@:overload public function setShortWeekdays(newShortWeekdays : java.NativeArray<String>) : Void;
+	@:overload @:public public function setShortWeekdays(newShortWeekdays : java.NativeArray<String>) : Void;
 	
 	/**
 	* Gets ampm strings. For example: "AM" and "PM".
 	* @return the ampm strings.
 	*/
-	@:overload public function getAmPmStrings() : java.NativeArray<String>;
+	@:overload @:public public function getAmPmStrings() : java.NativeArray<String>;
 	
 	/**
 	* Sets ampm strings. For example: "AM" and "PM".
 	* @param newAmpms the new ampm strings.
 	*/
-	@:overload public function setAmPmStrings(newAmpms : java.NativeArray<String>) : Void;
+	@:overload @:public public function setAmPmStrings(newAmpms : java.NativeArray<String>) : Void;
 	
 	/**
 	* Gets time zone strings.  Use of this method is discouraged; use
@@ -227,7 +227,7 @@ extern class DateFormatSymbols implements java.io.Serializable implements java.l
 	* @return the time zone strings.
 	* @see #setZoneStrings(String[][])
 	*/
-	@:overload public function getZoneStrings() : java.NativeArray<java.NativeArray<String>>;
+	@:overload @:public public function getZoneStrings() : java.NativeArray<java.NativeArray<String>>;
 	
 	/**
 	* Sets time zone strings.  The argument must be a
@@ -258,36 +258,36 @@ extern class DateFormatSymbols implements java.io.Serializable implements java.l
 	* @exception NullPointerException if <code>newZoneStrings</code> is null
 	* @see #getZoneStrings()
 	*/
-	@:overload public function setZoneStrings(newZoneStrings : java.NativeArray<java.NativeArray<String>>) : Void;
+	@:overload @:public public function setZoneStrings(newZoneStrings : java.NativeArray<java.NativeArray<String>>) : Void;
 	
 	/**
 	* Gets localized date-time pattern characters. For example: 'u', 't', etc.
 	* @return the localized date-time pattern characters.
 	*/
-	@:overload public function getLocalPatternChars() : String;
+	@:overload @:public public function getLocalPatternChars() : String;
 	
 	/**
 	* Sets localized date-time pattern characters. For example: 'u', 't', etc.
 	* @param newLocalPatternChars the new localized date-time
 	* pattern characters.
 	*/
-	@:overload public function setLocalPatternChars(newLocalPatternChars : String) : Void;
+	@:overload @:public public function setLocalPatternChars(newLocalPatternChars : String) : Void;
 	
 	/**
 	* Overrides Cloneable
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Override hashCode.
 	* Generates a hash code for the DateFormatSymbols object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Override equals
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }
@@ -297,7 +297,7 @@ extern class DateFormatSymbols implements java.io.Serializable implements java.l
 */
 @:native('java$text$DateFormatSymbols$DateFormatSymbolsGetter') @:internal extern class DateFormatSymbols_DateFormatSymbolsGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.DateFormatSymbolsProvider, java.text.DateFormatSymbols>
 {
-	@:overload public function getObject(dateFormatSymbolsProvider : java.text.spi.DateFormatSymbolsProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.DateFormatSymbols;
+	@:overload @:public public function getObject(dateFormatSymbolsProvider : java.text.spi.DateFormatSymbolsProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.DateFormatSymbols;
 	
 	
 }

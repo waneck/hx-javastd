@@ -70,14 +70,14 @@ extern class Request
 	*                    object implementation for the method
 	*                    to be invoked
 	*/
-	@:overload @:abstract public function target() : org.omg.CORBA.Object;
+	@:overload @:public @:abstract public function target() : org.omg.CORBA.Object;
 	
 	/**
 	* Retrieves the name of the method to be invoked.
 	*
 	* @return                  the name of the method to be invoked
 	*/
-	@:overload @:abstract public function operation() : String;
+	@:overload @:public @:abstract public function operation() : String;
 	
 	/**
 	* Retrieves the <code>NVList</code> object containing the arguments
@@ -89,7 +89,7 @@ extern class Request
 	*                  for the method
 	*
 	*/
-	@:overload @:abstract public function arguments() : org.omg.CORBA.NVList;
+	@:overload @:public @:abstract public function arguments() : org.omg.CORBA.NVList;
 	
 	/**
 	* Retrieves the <code>NamedValue</code> object containing the return
@@ -98,7 +98,7 @@ extern class Request
 	* @return          the <code>NamedValue</code> object containing the result
 	*                          of the method
 	*/
-	@:overload @:abstract public function result() : org.omg.CORBA.NamedValue;
+	@:overload @:public @:abstract public function result() : org.omg.CORBA.NamedValue;
 	
 	/**
 	* Retrieves the <code>Environment</code> object for this request.
@@ -108,7 +108,7 @@ extern class Request
 	*
 	* @return  the <code>Environment</code> object for this request
 	*/
-	@:overload @:abstract public function env() : org.omg.CORBA.Environment;
+	@:overload @:public @:abstract public function env() : org.omg.CORBA.Environment;
 	
 	/**
 	* Retrieves the <code>ExceptionList</code> object for this request.
@@ -118,7 +118,7 @@ extern class Request
 	* @return  the <code>ExceptionList</code> object describing the exceptions
 	*            that may be thrown by the method being invoked
 	*/
-	@:overload @:abstract public function exceptions() : org.omg.CORBA.ExceptionList;
+	@:overload @:public @:abstract public function exceptions() : org.omg.CORBA.ExceptionList;
 	
 	/**
 	* Retrieves the <code>ContextList</code> object for this request.
@@ -130,7 +130,7 @@ extern class Request
 	*                          need to be resolved and sent with the
 	*                          invocation.
 	*/
-	@:overload @:abstract public function contexts() : org.omg.CORBA.ContextList;
+	@:overload @:public @:abstract public function contexts() : org.omg.CORBA.ContextList;
 	
 	/**
 	* Retrieves the <code>Context</code> object for this request.
@@ -141,7 +141,7 @@ extern class Request
 	*                          to resolve any context strings whose
 	*                          values need to be sent with the invocation
 	*/
-	@:overload @:abstract public function ctx() : org.omg.CORBA.Context;
+	@:overload @:public @:abstract public function ctx() : org.omg.CORBA.Context;
 	
 	/**
 	* Sets this request's <code>Context</code> object to the one given.
@@ -149,7 +149,7 @@ extern class Request
 	* @param c         the new <code>Context</code> object to be used for
 	*                          resolving context strings
 	*/
-	@:overload @:abstract public function ctx(c : org.omg.CORBA.Context) : Void;
+	@:overload @:public @:abstract public function ctx(c : org.omg.CORBA.Context) : Void;
 	
 	/**
 	* Creates an input argument and adds it to this <code>Request</code>
@@ -158,7 +158,7 @@ extern class Request
 	* @return          an <code>Any</code> object that contains the
 	*                value and typecode for the input argument added
 	*/
-	@:overload @:abstract public function add_in_arg() : org.omg.CORBA.Any;
+	@:overload @:public @:abstract public function add_in_arg() : org.omg.CORBA.Any;
 	
 	/**
 	* Creates an input argument with the given name and adds it to
@@ -168,7 +168,7 @@ extern class Request
 	* @return          an <code>Any</code> object that contains the
 	*                value and typecode for the input argument added
 	*/
-	@:overload @:abstract public function add_named_in_arg(name : String) : org.omg.CORBA.Any;
+	@:overload @:public @:abstract public function add_named_in_arg(name : String) : org.omg.CORBA.Any;
 	
 	/**
 	* Adds an input/output argument to this <code>Request</code> object.
@@ -176,7 +176,7 @@ extern class Request
 	* @return          an <code>Any</code> object that contains the
 	*                value and typecode for the input/output argument added
 	*/
-	@:overload @:abstract public function add_inout_arg() : org.omg.CORBA.Any;
+	@:overload @:public @:abstract public function add_inout_arg() : org.omg.CORBA.Any;
 	
 	/**
 	* Adds an input/output argument with the given name to this
@@ -186,7 +186,7 @@ extern class Request
 	* @return          an <code>Any</code> object that contains the
 	*                value and typecode for the input/output argument added
 	*/
-	@:overload @:abstract public function add_named_inout_arg(name : String) : org.omg.CORBA.Any;
+	@:overload @:public @:abstract public function add_named_inout_arg(name : String) : org.omg.CORBA.Any;
 	
 	/**
 	* Adds an output argument to this <code>Request</code> object.
@@ -194,7 +194,7 @@ extern class Request
 	* @return          an <code>Any</code> object that contains the
 	*                value and typecode for the output argument added
 	*/
-	@:overload @:abstract public function add_out_arg() : org.omg.CORBA.Any;
+	@:overload @:public @:abstract public function add_out_arg() : org.omg.CORBA.Any;
 	
 	/**
 	* Adds an output argument with the given name to this
@@ -204,7 +204,7 @@ extern class Request
 	* @return          an <code>Any</code> object that contains the
 	*                value and typecode for the output argument added
 	*/
-	@:overload @:abstract public function add_named_out_arg(name : String) : org.omg.CORBA.Any;
+	@:overload @:public @:abstract public function add_named_out_arg(name : String) : org.omg.CORBA.Any;
 	
 	/**
 	* Sets the typecode for the return
@@ -213,7 +213,7 @@ extern class Request
 	* @param tc                        the <code>TypeCode</code> object containing type information
 	*                   for the return value
 	*/
-	@:overload @:abstract public function set_return_type(tc : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:public @:abstract public function set_return_type(tc : org.omg.CORBA.TypeCode) : Void;
 	
 	/**
 	* Returns the <code>Any</code> object that contains the value for the
@@ -222,14 +222,14 @@ extern class Request
 	* @return                  an <code>Any</code> object containing the value and
 	*                   typecode for the return value
 	*/
-	@:overload @:abstract public function return_value() : org.omg.CORBA.Any;
+	@:overload @:public @:abstract public function return_value() : org.omg.CORBA.Any;
 	
 	/**
 	* Makes a synchronous invocation using the
 	* information in the <code>Request</code> object. Exception information is
 	* placed into the <code>Request</code> object's environment object.
 	*/
-	@:overload @:abstract public function invoke() : Void;
+	@:overload @:public @:abstract public function invoke() : Void;
 	
 	/**
 	* Makes a oneway invocation on the
@@ -238,7 +238,7 @@ extern class Request
 	* not declared as oneway in the IDL declaration. No response or
 	* exception information is returned.
 	*/
-	@:overload @:abstract public function send_oneway() : Void;
+	@:overload @:public @:abstract public function send_oneway() : Void;
 	
 	/**
 	* Makes an asynchronous invocation on
@@ -247,7 +247,7 @@ extern class Request
 	* <code>poll_response</code> and <code>get_response</code> to get
 	* the result or exception information for the invocation.
 	*/
-	@:overload @:abstract public function send_deferred() : Void;
+	@:overload @:public @:abstract public function send_deferred() : Void;
 	
 	/**
 	* Allows the user to determine
@@ -257,7 +257,7 @@ extern class Request
 	* @return          <code>true</code> if the method response has
 	*                          been received; <code>false</code> otherwise
 	*/
-	@:overload @:abstract public function poll_response() : Bool;
+	@:overload @:public @:abstract public function poll_response() : Bool;
 	
 	/**
 	* Allows the user to access the
@@ -269,7 +269,7 @@ extern class Request
 	* request was originally sent. See the OMG Transaction Service specification
 	* for details.
 	*/
-	@:overload @:abstract public function get_response() : Void;
+	@:overload @:public @:abstract public function get_response() : Void;
 	
 	
 }

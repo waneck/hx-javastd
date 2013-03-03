@@ -25,11 +25,11 @@ package sun.awt;
 */
 extern class TimedWindowEvent extends java.awt.event.WindowEvent
 {
-	@:overload public function getWhen() : haxe.Int64;
+	@:overload @:public public function getWhen() : haxe.Int64;
 	
-	@:overload public function new(source : java.awt.Window, id : Int, opposite : java.awt.Window, time : haxe.Int64) : Void;
+	@:overload @:public public function new(source : java.awt.Window, id : Int, opposite : java.awt.Window, time : haxe.Int64) : Void;
 	
-	@:overload public function new(source : java.awt.Window, id : Int, opposite : java.awt.Window, oldState : Int, newState : Int, time : haxe.Int64) : Void;
+	@:overload @:public public function new(source : java.awt.Window, id : Int, opposite : java.awt.Window, oldState : Int, newState : Int, time : haxe.Int64) : Void;
 	
 	
 }

@@ -31,24 +31,24 @@ extern class NGCCInterleaveFilter implements com.sun.xml.internal.xsom.impl.pars
 	*
 	* @author Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	@:overload private function new(parent : com.sun.xml.internal.xsom.impl.parser.state.NGCCHandler, cookie : Int) : Void;
+	@:overload @:protected private function new(parent : com.sun.xml.internal.xsom.impl.parser.state.NGCCHandler, cookie : Int) : Void;
 	
-	@:overload private function setHandlers(receivers : java.NativeArray<com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver>) : Void;
+	@:overload @:protected private function setHandlers(receivers : java.NativeArray<com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver>) : Void;
 	
 	/** event receiverse. */
-	private var _receivers : java.NativeArray<com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver>;
+	@:protected private var _receivers : java.NativeArray<com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver>;
 	
-	@:overload public function replace(oldHandler : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, newHandler : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver) : Int;
+	@:overload @:public public function replace(oldHandler : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, newHandler : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver) : Int;
 	
-	@:overload public function enterElement(uri : String, localName : String, qname : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function enterElement(uri : String, localName : String, qname : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function leaveElement(uri : String, localName : String, qname : String) : Void;
+	@:overload @:public public function leaveElement(uri : String, localName : String, qname : String) : Void;
 	
-	@:overload public function enterAttribute(uri : String, localName : String, qname : String) : Void;
+	@:overload @:public public function enterAttribute(uri : String, localName : String, qname : String) : Void;
 	
-	@:overload public function leaveAttribute(uri : String, localName : String, qname : String) : Void;
+	@:overload @:public public function leaveAttribute(uri : String, localName : String, qname : String) : Void;
 	
-	@:overload public function text(value : String) : Void;
+	@:overload @:public public function text(value : String) : Void;
 	
 	/**
 	* Implemented by the generated code to determine the handler
@@ -58,17 +58,17 @@ extern class NGCCInterleaveFilter implements com.sun.xml.internal.xsom.impl.pars
 	*      Thread ID of the receiver that can handle this event,
 	*      or -1 if none.
 	*/
-	@:overload @:abstract private function findReceiverOfElement(uri : String, local : String) : Int;
+	@:overload @:protected @:abstract private function findReceiverOfElement(uri : String, local : String) : Int;
 	
 	/**
 	* Returns the handler that can receive the given attribute, or null.
 	*/
-	@:overload @:abstract private function findReceiverOfAttribute(uri : String, local : String) : Int;
+	@:overload @:protected @:abstract private function findReceiverOfAttribute(uri : String, local : String) : Int;
 	
 	/**
 	* Returns the handler that can receive text events, or null.
 	*/
-	@:overload @:abstract private function findReceiverOfText() : Int;
+	@:overload @:protected @:abstract private function findReceiverOfText() : Int;
 	
 	/**
 	* Joins all the child receivers.
@@ -87,25 +87,25 @@ extern class NGCCInterleaveFilter implements com.sun.xml.internal.xsom.impl.pars
 	*      the receiver object. If this method is called by itself,
 	*      null.
 	*/
-	@:overload public function joinByEnterElement(source : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, uri : String, local : String, qname : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function joinByEnterElement(source : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, uri : String, local : String, qname : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function joinByLeaveElement(source : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, uri : String, local : String, qname : String) : Void;
+	@:overload @:public public function joinByLeaveElement(source : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, uri : String, local : String, qname : String) : Void;
 	
-	@:overload public function joinByEnterAttribute(source : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, uri : String, local : String, qname : String) : Void;
+	@:overload @:public public function joinByEnterAttribute(source : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, uri : String, local : String, qname : String) : Void;
 	
-	@:overload public function joinByLeaveAttribute(source : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, uri : String, local : String, qname : String) : Void;
+	@:overload @:public public function joinByLeaveAttribute(source : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, uri : String, local : String, qname : String) : Void;
 	
-	@:overload public function joinByText(source : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, value : String) : Void;
+	@:overload @:public public function joinByText(source : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventReceiver, value : String) : Void;
 	
-	@:overload public function sendEnterAttribute(threadId : Int, uri : String, local : String, qname : String) : Void;
+	@:overload @:public public function sendEnterAttribute(threadId : Int, uri : String, local : String, qname : String) : Void;
 	
-	@:overload public function sendEnterElement(threadId : Int, uri : String, local : String, qname : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function sendEnterElement(threadId : Int, uri : String, local : String, qname : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function sendLeaveAttribute(threadId : Int, uri : String, local : String, qname : String) : Void;
+	@:overload @:public public function sendLeaveAttribute(threadId : Int, uri : String, local : String, qname : String) : Void;
 	
-	@:overload public function sendLeaveElement(threadId : Int, uri : String, local : String, qname : String) : Void;
+	@:overload @:public public function sendLeaveElement(threadId : Int, uri : String, local : String, qname : String) : Void;
 	
-	@:overload public function sendText(threadId : Int, value : String) : Void;
+	@:overload @:public public function sendText(threadId : Int, value : String) : Void;
 	
 	
 }

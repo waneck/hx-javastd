@@ -38,7 +38,7 @@ package javax.xml.stream.events;
 	* Return the string data of the comment, returns empty string if it
 	* does not exist
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
 	
 }

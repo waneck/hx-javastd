@@ -25,13 +25,13 @@ package com.sun.corba.se.impl.monitoring;
 */
 extern class MonitoredAttributeInfoImpl implements com.sun.corba.se.spi.monitoring.MonitoredAttributeInfo
 {
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
-	@:overload public function type() : Class<Dynamic>;
+	@:overload @:public public function type() : Class<Dynamic>;
 	
-	@:overload public function isWritable() : Bool;
+	@:overload @:public public function isWritable() : Bool;
 	
-	@:overload public function isStatistic() : Bool;
+	@:overload @:public public function isStatistic() : Bool;
 	
 	
 }

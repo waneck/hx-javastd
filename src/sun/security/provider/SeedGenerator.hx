@@ -65,7 +65,7 @@ package sun.security.provider;
 	/**
 	* Fill result with bytes from the queue. Wait for it if it isn't ready.
 	*/
-	@:overload public static function generateSeed(result : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:static @:public public static function generateSeed(result : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }
@@ -81,7 +81,7 @@ return myself.getByte();
 	* This method does the actual work. It collects random bytes and
 	* pushes them into the queue.
 	*/
-	@:overload @:final public function run() : Void;
+	@:overload @:final @:public public function run() : Void;
 	
 	
 }
@@ -92,7 +92,7 @@ return myself.getByte();
 */
 @:native('sun$security$provider$SeedGenerator$ThreadedSeedGenerator$BogusThread') @:internal extern class SeedGenerator_ThreadedSeedGenerator_BogusThread implements java.lang.Runnable
 {
-	@:overload @:final public function run() : Void;
+	@:overload @:final @:public public function run() : Void;
 	
 	
 }

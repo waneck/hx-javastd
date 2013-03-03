@@ -47,7 +47,7 @@ package java.util.concurrent.atomic;
 	*
 	* @param length the length of the array
 	*/
-	@:overload public function new(length : Int) : Void;
+	@:overload @:public public function new(length : Int) : Void;
 	
 	/**
 	* Creates a new AtomicLongArray with the same length as, and
@@ -56,14 +56,14 @@ package java.util.concurrent.atomic;
 	* @param array the array to copy elements from
 	* @throws NullPointerException if array is null
 	*/
-	@:overload public function new(array : java.NativeArray<haxe.Int64>) : Void;
+	@:overload @:public public function new(array : java.NativeArray<haxe.Int64>) : Void;
 	
 	/**
 	* Returns the length of the array.
 	*
 	* @return the length of the array
 	*/
-	@:overload @:final public function length() : Int;
+	@:overload @:public @:final public function length() : Int;
 	
 	/**
 	* Gets the current value at position {@code i}.
@@ -71,7 +71,7 @@ package java.util.concurrent.atomic;
 	* @param i the index
 	* @return the current value
 	*/
-	@:overload @:final public function get(i : Int) : haxe.Int64;
+	@:overload @:public @:final public function get(i : Int) : haxe.Int64;
 	
 	/**
 	* Sets the element at position {@code i} to the given value.
@@ -79,7 +79,7 @@ package java.util.concurrent.atomic;
 	* @param i the index
 	* @param newValue the new value
 	*/
-	@:overload @:final public function set(i : Int, newValue : haxe.Int64) : Void;
+	@:overload @:public @:final public function set(i : Int, newValue : haxe.Int64) : Void;
 	
 	/**
 	* Eventually sets the element at position {@code i} to the given value.
@@ -88,7 +88,7 @@ package java.util.concurrent.atomic;
 	* @param newValue the new value
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function lazySet(i : Int, newValue : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public @:final public function lazySet(i : Int, newValue : haxe.Int64) : Void;
 	
 	/**
 	* Atomically sets the element at position {@code i} to the given value
@@ -98,7 +98,7 @@ package java.util.concurrent.atomic;
 	* @param newValue the new value
 	* @return the previous value
 	*/
-	@:overload @:final public function getAndSet(i : Int, newValue : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:final public function getAndSet(i : Int, newValue : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Atomically sets the element at position {@code i} to the given
@@ -110,7 +110,7 @@ package java.util.concurrent.atomic;
 	* @return true if successful. False return indicates that
 	* the actual value was not equal to the expected value.
 	*/
-	@:overload @:final public function compareAndSet(i : Int, expect : haxe.Int64, update : haxe.Int64) : Bool;
+	@:overload @:public @:final public function compareAndSet(i : Int, expect : haxe.Int64, update : haxe.Int64) : Bool;
 	
 	/**
 	* Atomically sets the element at position {@code i} to the given
@@ -125,7 +125,7 @@ package java.util.concurrent.atomic;
 	* @param update the new value
 	* @return true if successful.
 	*/
-	@:overload @:final public function weakCompareAndSet(i : Int, expect : haxe.Int64, update : haxe.Int64) : Bool;
+	@:overload @:public @:final public function weakCompareAndSet(i : Int, expect : haxe.Int64, update : haxe.Int64) : Bool;
 	
 	/**
 	* Atomically increments by one the element at index {@code i}.
@@ -133,7 +133,7 @@ package java.util.concurrent.atomic;
 	* @param i the index
 	* @return the previous value
 	*/
-	@:overload @:final public function getAndIncrement(i : Int) : haxe.Int64;
+	@:overload @:public @:final public function getAndIncrement(i : Int) : haxe.Int64;
 	
 	/**
 	* Atomically decrements by one the element at index {@code i}.
@@ -141,7 +141,7 @@ package java.util.concurrent.atomic;
 	* @param i the index
 	* @return the previous value
 	*/
-	@:overload @:final public function getAndDecrement(i : Int) : haxe.Int64;
+	@:overload @:public @:final public function getAndDecrement(i : Int) : haxe.Int64;
 	
 	/**
 	* Atomically adds the given value to the element at index {@code i}.
@@ -150,7 +150,7 @@ package java.util.concurrent.atomic;
 	* @param delta the value to add
 	* @return the previous value
 	*/
-	@:overload @:final public function getAndAdd(i : Int, delta : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:final public function getAndAdd(i : Int, delta : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Atomically increments by one the element at index {@code i}.
@@ -158,7 +158,7 @@ package java.util.concurrent.atomic;
 	* @param i the index
 	* @return the updated value
 	*/
-	@:overload @:final public function incrementAndGet(i : Int) : haxe.Int64;
+	@:overload @:public @:final public function incrementAndGet(i : Int) : haxe.Int64;
 	
 	/**
 	* Atomically decrements by one the element at index {@code i}.
@@ -166,7 +166,7 @@ package java.util.concurrent.atomic;
 	* @param i the index
 	* @return the updated value
 	*/
-	@:overload @:final public function decrementAndGet(i : Int) : haxe.Int64;
+	@:overload @:public @:final public function decrementAndGet(i : Int) : haxe.Int64;
 	
 	/**
 	* Atomically adds the given value to the element at index {@code i}.
@@ -175,13 +175,13 @@ package java.util.concurrent.atomic;
 	* @param delta the value to add
 	* @return the updated value
 	*/
-	@:overload public function addAndGet(i : Int, delta : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function addAndGet(i : Int, delta : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the String representation of the current values of array.
 	* @return the String representation of the current values of array
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

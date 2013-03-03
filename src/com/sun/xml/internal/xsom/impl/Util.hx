@@ -25,9 +25,9 @@ package com.sun.xml.internal.xsom.impl;
 */
 @:internal extern class Util
 {
-	@:overload public static function listSubstitutables(_this : com.sun.xml.internal.xsom.XSType) : java.NativeArray<com.sun.xml.internal.xsom.XSType>;
+	@:overload @:public @:static public static function listSubstitutables(_this : com.sun.xml.internal.xsom.XSType) : java.NativeArray<com.sun.xml.internal.xsom.XSType>;
 	
-	@:overload public static function buildSubstitutables(_this : com.sun.xml.internal.xsom.XSType, substitutables : java.util.Set<Dynamic>) : Void;
+	@:overload @:public @:static public static function buildSubstitutables(_this : com.sun.xml.internal.xsom.XSType, substitutables : java.util.Set<Dynamic>) : Void;
 	
 	
 }

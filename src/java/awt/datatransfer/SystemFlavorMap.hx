@@ -28,7 +28,7 @@ extern class SystemFlavorMap implements java.awt.datatransfer.FlavorMap implemen
 	/**
 	* Returns the default FlavorMap for this thread's ClassLoader.
 	*/
-	@:overload public static function getDefaultFlavorMap() : java.awt.datatransfer.FlavorMap;
+	@:overload @:public @:static public static function getDefaultFlavorMap() : java.awt.datatransfer.FlavorMap;
 	
 	/**
 	* Returns a <code>List</code> of <code>String</code> natives to which the
@@ -55,7 +55,7 @@ extern class SystemFlavorMap implements java.awt.datatransfer.FlavorMap implemen
 	* @see #encodeDataFlavor
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getNativesForFlavor(flav : java.awt.datatransfer.DataFlavor) : java.util.List<String>;
+	@:require(java4) @:overload @:public @:synchronized public function getNativesForFlavor(flav : java.awt.datatransfer.DataFlavor) : java.util.List<String>;
 	
 	/**
 	* Returns a <code>List</code> of <code>DataFlavor</code>s to which the
@@ -88,7 +88,7 @@ extern class SystemFlavorMap implements java.awt.datatransfer.FlavorMap implemen
 	* @see #encodeJavaMIMEType
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getFlavorsForNative(nat : String) : java.util.List<java.awt.datatransfer.DataFlavor>;
+	@:require(java4) @:overload @:public @:synchronized public function getFlavorsForNative(nat : String) : java.util.List<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Returns a <code>Map</code> of the specified <code>DataFlavor</code>s to
@@ -112,7 +112,7 @@ extern class SystemFlavorMap implements java.awt.datatransfer.FlavorMap implemen
 	* @see #getNativesForFlavor
 	* @see #encodeDataFlavor
 	*/
-	@:overload @:synchronized public function getNativesForFlavors(flavors : java.NativeArray<java.awt.datatransfer.DataFlavor>) : java.util.Map<java.awt.datatransfer.DataFlavor, String>;
+	@:overload @:public @:synchronized public function getNativesForFlavors(flavors : java.NativeArray<java.awt.datatransfer.DataFlavor>) : java.util.Map<java.awt.datatransfer.DataFlavor, String>;
 	
 	/**
 	* Returns a <code>Map</code> of the specified <code>String</code> natives
@@ -138,7 +138,7 @@ extern class SystemFlavorMap implements java.awt.datatransfer.FlavorMap implemen
 	* @see #getFlavorsForNative
 	* @see #encodeJavaMIMEType
 	*/
-	@:overload @:synchronized public function getFlavorsForNatives(natives : java.NativeArray<String>) : java.util.Map<String, java.awt.datatransfer.DataFlavor>;
+	@:overload @:public @:synchronized public function getFlavorsForNatives(natives : java.NativeArray<String>) : java.util.Map<String, java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Adds a mapping from the specified <code>DataFlavor</code> (and all
@@ -160,7 +160,7 @@ extern class SystemFlavorMap implements java.awt.datatransfer.FlavorMap implemen
 	* @see #addFlavorForUnencodedNative
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function addUnencodedNativeForFlavor(flav : java.awt.datatransfer.DataFlavor, nat : String) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function addUnencodedNativeForFlavor(flav : java.awt.datatransfer.DataFlavor, nat : String) : Void;
 	
 	/**
 	* Discards the current mappings for the specified <code>DataFlavor</code>
@@ -190,7 +190,7 @@ extern class SystemFlavorMap implements java.awt.datatransfer.FlavorMap implemen
 	* @see #setFlavorsForNative
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function setNativesForFlavor(flav : java.awt.datatransfer.DataFlavor, natives : java.NativeArray<String>) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function setNativesForFlavor(flav : java.awt.datatransfer.DataFlavor, natives : java.NativeArray<String>) : Void;
 	
 	/**
 	* Adds a mapping from a single <code>String</code> native to a single
@@ -210,7 +210,7 @@ extern class SystemFlavorMap implements java.awt.datatransfer.FlavorMap implemen
 	* @see #addUnencodedNativeForFlavor
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function addFlavorForUnencodedNative(nat : String, flav : java.awt.datatransfer.DataFlavor) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function addFlavorForUnencodedNative(nat : String, flav : java.awt.datatransfer.DataFlavor) : Void;
 	
 	/**
 	* Discards the current mappings for the specified <code>String</code>
@@ -239,7 +239,7 @@ extern class SystemFlavorMap implements java.awt.datatransfer.FlavorMap implemen
 	* @see #setNativesForFlavor
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function setFlavorsForNative(nat : String, flavors : java.NativeArray<java.awt.datatransfer.DataFlavor>) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function setFlavorsForNative(nat : String, flavors : java.NativeArray<java.awt.datatransfer.DataFlavor>) : Void;
 	
 	/**
 	* Encodes a MIME type for use as a <code>String</code> native. The format
@@ -260,7 +260,7 @@ extern class SystemFlavorMap implements java.awt.datatransfer.FlavorMap implemen
 	* @return the encoded <code>String</code>, or <code>null</code> if
 	*         mimeType is <code>null</code>
 	*/
-	@:overload public static function encodeJavaMIMEType(mimeType : String) : String;
+	@:overload @:public @:static public static function encodeJavaMIMEType(mimeType : String) : String;
 	
 	/**
 	* Encodes a <code>DataFlavor</code> for use as a <code>String</code>
@@ -285,7 +285,7 @@ extern class SystemFlavorMap implements java.awt.datatransfer.FlavorMap implemen
 	* @return the encoded <code>String</code>, or <code>null</code> if
 	*         flav is <code>null</code> or has a <code>null</code> MIME type
 	*/
-	@:overload public static function encodeDataFlavor(flav : java.awt.datatransfer.DataFlavor) : String;
+	@:overload @:public @:static public static function encodeDataFlavor(flav : java.awt.datatransfer.DataFlavor) : String;
 	
 	/**
 	* Returns whether the specified <code>String</code> is an encoded Java
@@ -295,7 +295,7 @@ extern class SystemFlavorMap implements java.awt.datatransfer.FlavorMap implemen
 	* @return <code>true</code> if the <code>String</code> is encoded;
 	*         <code>false</code> otherwise
 	*/
-	@:overload public static function isJavaMIMEType(str : String) : Bool;
+	@:overload @:public @:static public static function isJavaMIMEType(str : String) : Bool;
 	
 	/**
 	* Decodes a <code>String</code> native for use as a Java MIME type.
@@ -304,7 +304,7 @@ extern class SystemFlavorMap implements java.awt.datatransfer.FlavorMap implemen
 	* @return the decoded Java MIME type, or <code>null</code> if nat is not
 	*         an encoded <code>String</code> native
 	*/
-	@:overload public static function decodeJavaMIMEType(nat : String) : String;
+	@:overload @:public @:static public static function decodeJavaMIMEType(nat : String) : String;
 	
 	/**
 	* Decodes a <code>String</code> native for use as a
@@ -314,7 +314,7 @@ extern class SystemFlavorMap implements java.awt.datatransfer.FlavorMap implemen
 	* @return the decoded <code>DataFlavor</code>, or <code>null</code> if
 	*         nat is not an encoded <code>String</code> native
 	*/
-	@:overload public static function decodeDataFlavor(nat : String) : java.awt.datatransfer.DataFlavor;
+	@:overload @:public @:static public static function decodeDataFlavor(nat : String) : java.awt.datatransfer.DataFlavor;
 	
 	
 }

@@ -35,45 +35,45 @@ package sun.jvmstat.perfdata.monitor.v1_0;
 */
 @:require(java5) extern class BasicType
 {
-	public static var BOOLEAN(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
+	@:public @:static @:final public static var BOOLEAN(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
 	
-	public static var CHAR(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
+	@:public @:static @:final public static var CHAR(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
 	
-	public static var FLOAT(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
+	@:public @:static @:final public static var FLOAT(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
 	
-	public static var DOUBLE(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
+	@:public @:static @:final public static var DOUBLE(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
 	
-	public static var BYTE(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
+	@:public @:static @:final public static var BYTE(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
 	
-	public static var SHORT(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
+	@:public @:static @:final public static var SHORT(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
 	
-	public static var INT(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
+	@:public @:static @:final public static var INT(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
 	
-	public static var LONG(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
+	@:public @:static @:final public static var LONG(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
 	
-	public static var OBJECT(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
+	@:public @:static @:final public static var OBJECT(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
 	
-	public static var ARRAY(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
+	@:public @:static @:final public static var ARRAY(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
 	
-	public static var VOID(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
+	@:public @:static @:final public static var VOID(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
 	
-	public static var ADDRESS(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
+	@:public @:static @:final public static var ADDRESS(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
 	
-	public static var ILLEGAL(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
+	@:public @:static @:final public static var ILLEGAL(default, null) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
 	
 	/**
 	* Convert enumeration value to a String.
 	*
 	* @return String - the string representation for the enumeration.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Convert enumeration to an integer value.
 	*
 	* @return int - the integer representation for the enumeration.
 	*/
-	@:overload public function intValue() : Int;
+	@:overload @:public public function intValue() : Int;
 	
 	/**
 	* Map an integer value to its corresponding BasicType object.
@@ -82,7 +82,7 @@ package sun.jvmstat.perfdata.monitor.v1_0;
 	* @return BasicType - The BasicType enumeration object matching
 	*                     the value of <code>i</code>
 	*/
-	@:overload public static function toBasicType(i : Int) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
+	@:overload @:public @:static public static function toBasicType(i : Int) : sun.jvmstat.perfdata.monitor.v1_0.BasicType;
 	
 	
 }

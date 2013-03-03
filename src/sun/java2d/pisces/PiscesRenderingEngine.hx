@@ -42,7 +42,7 @@ extern class PiscesRenderingEngine extends sun.java2d.pipe.RenderingEngine
 	* @return the widened path stored in a new {@code Shape} object
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function createStrokedShape(src : java.awt.Shape, width : Single, caps : Int, join : Int, miterlimit : Single, dashes : java.NativeArray<Single>, dashphase : Single) : java.awt.Shape;
+	@:require(java7) @:overload @:public override public function createStrokedShape(src : java.awt.Shape, width : Single, caps : Int, join : Int, miterlimit : Single, dashes : java.NativeArray<Single>, dashphase : Single) : java.awt.Shape;
 	
 	/**
 	* Sends the geometry for a widened path as specified by the parameters
@@ -71,7 +71,7 @@ extern class PiscesRenderingEngine extends sun.java2d.pipe.RenderingEngine
 	*                 the widened geometry to
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function strokeTo(src : java.awt.Shape, at : java.awt.geom.AffineTransform, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, antialias : Bool, consumer : sun.awt.geom.PathConsumer2D) : Void;
+	@:require(java7) @:overload @:public override public function strokeTo(src : java.awt.Shape, at : java.awt.geom.AffineTransform, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, antialias : Bool, consumer : sun.awt.geom.PathConsumer2D) : Void;
 	
 	/**
 	* Construct an antialiased tile generator for the given shape with
@@ -120,16 +120,16 @@ extern class PiscesRenderingEngine extends sun.java2d.pipe.RenderingEngine
 	*         for tile coverages, or null if there is no output to render
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function getAATileGenerator(s : java.awt.Shape, at : java.awt.geom.AffineTransform, clip : sun.java2d.pipe.Region, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
+	@:require(java7) @:overload @:public override public function getAATileGenerator(s : java.awt.Shape, at : java.awt.geom.AffineTransform, clip : sun.java2d.pipe.Region, bs : java.awt.BasicStroke, thin : Bool, normalize : Bool, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
 	
-	@:overload override public function getAATileGenerator(x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float, clip : sun.java2d.pipe.Region, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
+	@:overload @:public override public function getAATileGenerator(x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float, clip : sun.java2d.pipe.Region, bbox : java.NativeArray<Int>) : sun.java2d.pipe.AATileGenerator;
 	
 	/**
 	* Returns the minimum pen width that the antialiasing rasterizer
 	* can represent without dropouts occuring.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function getMinimumAAPenSize() : Single;
+	@:require(java7) @:overload @:public override public function getMinimumAAPenSize() : Single;
 	
 	
 }
@@ -143,15 +143,15 @@ extern class PiscesRenderingEngine extends sun.java2d.pipe.RenderingEngine
 
 @:native('sun$java2d$pisces$PiscesRenderingEngine$NormalizingPathIterator') @:internal extern class PiscesRenderingEngine_NormalizingPathIterator implements java.awt.geom.PathIterator
 {
-	@:overload public function currentSegment(coords : java.NativeArray<Single>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Single>) : Int;
 	
-	@:overload public function currentSegment(coords : java.NativeArray<Float>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Float>) : Int;
 	
-	@:overload public function getWindingRule() : Int;
+	@:overload @:public public function getWindingRule() : Int;
 	
-	@:overload public function isDone() : Bool;
+	@:overload @:public public function isDone() : Bool;
 	
-	@:overload public function next() : Void;
+	@:overload @:public public function next() : Void;
 	
 	
 }

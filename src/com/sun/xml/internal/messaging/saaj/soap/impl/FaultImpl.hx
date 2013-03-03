@@ -26,93 +26,93 @@ package com.sun.xml.internal.messaging.saaj.soap.impl;
 extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl implements javax.xml.soap.SOAPFault
 {
 	/* This can also represent a fault reason element */
-	private var faultStringElement : javax.xml.soap.SOAPFaultElement;
+	@:protected private var faultStringElement : javax.xml.soap.SOAPFaultElement;
 	
 	/* This can also represent a fault role element */
-	private var faultActorElement : javax.xml.soap.SOAPFaultElement;
+	@:protected private var faultActorElement : javax.xml.soap.SOAPFaultElement;
 	
-	private var faultCodeElement : javax.xml.soap.SOAPFaultElement;
+	@:protected private var faultCodeElement : javax.xml.soap.SOAPFaultElement;
 	
-	private var detail : javax.xml.soap.Detail;
+	@:protected private var detail : javax.xml.soap.Detail;
 	
-	@:overload private function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, name : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl) : Void;
+	@:overload @:protected private function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, name : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl) : Void;
 	
-	@:overload @:abstract private function getDetailName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected @:abstract private function getDetailName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload @:abstract private function getFaultCodeName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected @:abstract private function getFaultCodeName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload @:abstract private function getFaultStringName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected @:abstract private function getFaultStringName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload @:abstract private function getFaultActorName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected @:abstract private function getFaultActorName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload @:abstract private function createDetail() : com.sun.xml.internal.messaging.saaj.soap.impl.DetailImpl;
+	@:overload @:protected @:abstract private function createDetail() : com.sun.xml.internal.messaging.saaj.soap.impl.DetailImpl;
 	
-	@:overload @:abstract private function createSOAPFaultElement(localName : String) : com.sun.xml.internal.messaging.saaj.soap.impl.FaultElementImpl;
+	@:overload @:protected @:abstract private function createSOAPFaultElement(localName : String) : com.sun.xml.internal.messaging.saaj.soap.impl.FaultElementImpl;
 	
-	@:overload @:abstract private function createSOAPFaultElement(qname : javax.xml.namespace.QName) : com.sun.xml.internal.messaging.saaj.soap.impl.FaultElementImpl;
+	@:overload @:protected @:abstract private function createSOAPFaultElement(qname : javax.xml.namespace.QName) : com.sun.xml.internal.messaging.saaj.soap.impl.FaultElementImpl;
 	
-	@:overload @:abstract private function createSOAPFaultElement(qname : javax.xml.soap.Name) : com.sun.xml.internal.messaging.saaj.soap.impl.FaultElementImpl;
+	@:overload @:protected @:abstract private function createSOAPFaultElement(qname : javax.xml.soap.Name) : com.sun.xml.internal.messaging.saaj.soap.impl.FaultElementImpl;
 	
-	@:overload @:abstract private function checkIfStandardFaultCode(faultCode : String, uri : String) : Void;
+	@:overload @:protected @:abstract private function checkIfStandardFaultCode(faultCode : String, uri : String) : Void;
 	
-	@:overload @:abstract private function finallySetFaultCode(faultcode : String) : Void;
+	@:overload @:protected @:abstract private function finallySetFaultCode(faultcode : String) : Void;
 	
-	@:overload @:abstract private function isStandardFaultElement(localName : String) : Bool;
+	@:overload @:protected @:abstract private function isStandardFaultElement(localName : String) : Bool;
 	
-	@:overload @:abstract private function getDefaultFaultCode() : javax.xml.namespace.QName;
+	@:overload @:protected @:abstract private function getDefaultFaultCode() : javax.xml.namespace.QName;
 	
-	@:overload private function findFaultCodeElement() : Void;
+	@:overload @:protected private function findFaultCodeElement() : Void;
 	
-	@:overload private function findFaultActorElement() : Void;
+	@:overload @:protected private function findFaultActorElement() : Void;
 	
-	@:overload private function findFaultStringElement() : Void;
+	@:overload @:protected private function findFaultStringElement() : Void;
 	
-	@:overload public function setFaultCode(faultCode : String) : Void;
+	@:overload @:public public function setFaultCode(faultCode : String) : Void;
 	
-	@:overload public function setFaultCode(faultCode : String, prefix : String, uri : String) : Void;
+	@:overload @:public public function setFaultCode(faultCode : String, prefix : String, uri : String) : Void;
 	
-	@:overload public function setFaultCode(faultCodeQName : javax.xml.soap.Name) : Void;
+	@:overload @:public public function setFaultCode(faultCodeQName : javax.xml.soap.Name) : Void;
 	
-	@:overload public function setFaultCode(faultCodeQName : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setFaultCode(faultCodeQName : javax.xml.namespace.QName) : Void;
 	
-	@:overload private static function convertCodeToQName(code : String, codeContainingElement : javax.xml.soap.SOAPElement) : javax.xml.namespace.QName;
+	@:overload @:protected @:static private static function convertCodeToQName(code : String, codeContainingElement : javax.xml.soap.SOAPElement) : javax.xml.namespace.QName;
 	
-	@:overload private function initializeDetail() : Void;
+	@:overload @:protected private function initializeDetail() : Void;
 	
-	@:overload public function getDetail() : javax.xml.soap.Detail;
+	@:overload @:public public function getDetail() : javax.xml.soap.Detail;
 	
-	@:overload public function addDetail() : javax.xml.soap.Detail;
+	@:overload @:public public function addDetail() : javax.xml.soap.Detail;
 	
-	@:overload public function hasDetail() : Bool;
+	@:overload @:public public function hasDetail() : Bool;
 	
-	@:overload @:abstract public function setFaultActor(faultActor : String) : Void;
+	@:overload @:public @:abstract public function setFaultActor(faultActor : String) : Void;
 	
-	@:overload public function getFaultActor() : String;
+	@:overload @:public public function getFaultActor() : String;
 	
-	@:overload public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:overload @:public public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
-	@:overload private function convertToSoapElement(element : org.w3c.dom.Element) : javax.xml.soap.SOAPElement;
+	@:overload @:protected private function convertToSoapElement(element : org.w3c.dom.Element) : javax.xml.soap.SOAPElement;
 	
-	@:overload private function addFaultCodeElement() : javax.xml.soap.SOAPFaultElement;
+	@:overload @:protected private function addFaultCodeElement() : javax.xml.soap.SOAPFaultElement;
 	
-	@:overload private function addElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
+	@:overload @:protected private function addElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
 	
-	@:overload private function addElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:overload @:protected private function addElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
-	@:overload private function addSOAPFaultElement(localName : String) : com.sun.xml.internal.messaging.saaj.soap.impl.FaultElementImpl;
+	@:overload @:protected private function addSOAPFaultElement(localName : String) : com.sun.xml.internal.messaging.saaj.soap.impl.FaultElementImpl;
 	
 	/**
 	* Convert an xml:lang attribute value into a Locale object
 	*/
-	@:overload private static function xmlLangToLocale(xmlLang : String) : java.util.Locale;
+	@:overload @:protected @:static private static function xmlLangToLocale(xmlLang : String) : java.util.Locale;
 	
-	@:overload private static function localeToXmlLang(locale : java.util.Locale) : String;
+	@:overload @:protected @:static private static function localeToXmlLang(locale : java.util.Locale) : String;
 	
 	/**
 	* The first child of this node. If there is no such node, this returns
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public override public function getFirstChild() : org.w3c.dom.Node;
+	@:overload @:public @:public @:public override public function getFirstChild() : org.w3c.dom.Node;
 	
 	/**
 	* Removes any Subcodes that may be contained by this
@@ -125,7 +125,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public public function removeAllFaultSubcodes() : Void;
+	@:require(java3) @:overload @:public @:public public function removeAllFaultSubcodes() : Void;
 	
 	/**
 	* Returns the qname of this <code>SOAPElement</code> object.
@@ -135,7 +135,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @see SOAPElement#getElementName()
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function getElementQName() : javax.xml.namespace.QName;
+	@:require(java3) @:overload @:public @:public @:public public function getElementQName() : javax.xml.namespace.QName;
 	
 	/**
 	* Removes the attribute with the specified name.
@@ -146,7 +146,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*         removed successfully; <code>false</code> if it was not
 	* @see SOAPElement#removeAttribute(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public public function removeAttribute(name : javax.xml.soap.Name) : Bool;
+	@:overload @:public @:public @:public public function removeAttribute(name : javax.xml.soap.Name) : Bool;
 	
 	/**
 	* Associate an object to a key on this node. The object can later be
@@ -162,7 +162,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
+	@:overload @:public @:public @:public override public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
 	
 	/**
 	* The parent of this node. All nodes, except <code>Attr</code>,
@@ -172,7 +172,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* tree, or if it has been removed from the tree, this is
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public override public function getParentNode() : org.w3c.dom.Node;
+	@:overload @:public @:public @:public override public function getParentNode() : org.w3c.dom.Node;
 	
 	/**
 	* Adds an attribute with the specified name and value to this
@@ -189,7 +189,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	<code>name</code> on this SOAPElement.
 	* @see SOAPElement#addAttribute(javax.xml.namespace.QName, String)
 	*/
-	@:overload @:public @:public public function addAttribute(name : javax.xml.soap.Name, value : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public public function addAttribute(name : javax.xml.soap.Name, value : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Look up the namespace URI associated to the given prefix, starting from
@@ -203,7 +203,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function lookupNamespaceURI(prefix : String) : String;
+	@:overload @:public @:public @:public override public function lookupNamespaceURI(prefix : String) : String;
 	
 	/**
 	* Add a <code>SOAPElement</code> as a child of this
@@ -236,7 +236,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @return an instance representing the new SOAP element that was
 	*         actually added to the tree.
 	*/
-	@:overload @:public @:public public function addChildElement(element : javax.xml.soap.SOAPElement) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public public function addChildElement(element : javax.xml.soap.SOAPElement) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Removes an attribute by local name and namespace URI. If a default
@@ -262,7 +262,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function removeAttributeNS(namespaceURI : String, localName : String) : Void;
+	@:overload @:public @:public @:public override public function removeAttributeNS(namespaceURI : String, localName : String) : Void;
 	
 	/**
 	* Adds a namespace declaration with the specified prefix and URI to this
@@ -276,7 +276,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @exception SOAPException if there is an error in creating the
 	*                          namespace
 	*/
-	@:overload @:public @:public public function addNamespaceDeclaration(prefix : String, uri : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public public function addNamespaceDeclaration(prefix : String, uri : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Returns an <code>Iterator</code> over a sequence of
@@ -292,7 +292,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public public function getFaultReasonTexts() : java.util.Iterator<Dynamic>;
+	@:require(java3) @:overload @:public @:public public function getFaultReasonTexts() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Adds a Subcode to the end of the sequence of Subcodes contained by this
@@ -308,7 +308,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public public function appendFaultSubcode(subcode : javax.xml.namespace.QName) : Void;
+	@:require(java3) @:overload @:public @:public public function appendFaultSubcode(subcode : javax.xml.namespace.QName) : Void;
 	
 	/**
 	* Creates or replaces any existing Node element value for
@@ -323,7 +323,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public public function setFaultNode(uri : String) : Void;
+	@:require(java3) @:overload @:public @:public public function setFaultNode(uri : String) : Void;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -373,7 +373,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function getTextContent() : String;
+	@:overload @:public @:public @:public override public function getTextContent() : String;
 	
 	/**
 	* The value of this node, depending on its type; see the table above.
@@ -383,12 +383,12 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   NO_MODIFICATION_ALLOWED_ERR: Raised when the node is readonly and if
 	*   it is not defined to be <code>null</code>.
 	*/
-	@:overload @:public @:public override public function setNodeValue(nodeValue : String) : Void;
+	@:overload @:public @:public @:public override public function setNodeValue(nodeValue : String) : Void;
 	
 	/**
 	* A code representing the type of the underlying object, as defined above.
 	*/
-	@:overload @:public @:public override public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public @:public @:public override public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
 	* Compares the reference node, i.e. the node on which this method is
@@ -405,7 +405,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
+	@:overload @:public @:public @:public override public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
 	
 	/**
 	*  Puts all <code>Text</code> nodes in the full depth of the sub-tree
@@ -430,7 +430,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function normalize() : Void;
+	@:overload @:public @:public @:public override public function normalize() : Void;
 	
 	/**
 	* Returns the value of the attribute with the specified name.
@@ -440,7 +440,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*         attribute, Null if there is no such attribute
 	* @see SOAPElement#getAttributeValue(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public public function getAttributeValue(name : javax.xml.soap.Name) : String;
+	@:overload @:public @:public @:public public function getAttributeValue(name : javax.xml.soap.Name) : String;
 	
 	/**
 	* Retrieves an <code>Attr</code> node by local name and namespace URI.
@@ -459,7 +459,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
+	@:overload @:public @:public @:public override public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Retrieves the object associated to a key on a this node. The object
@@ -471,7 +471,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function getUserData(key : String) : Dynamic;
+	@:overload @:public @:public @:public override public function getUserData(key : String) : Dynamic;
 	
 	/**
 	* Tests whether two nodes are equal.
@@ -537,7 +537,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
+	@:overload @:public @:public @:public override public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Detaches all children of this <code>SOAPElement</code>.
@@ -550,7 +550,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload @:abstract @:public @:public public function removeContents() : Void;
+	@:require(java2) @:overload @:public @:abstract @:public @:public public function removeContents() : Void;
 	
 	/**
 	* Returns whether this node is the same node as the given one.
@@ -567,7 +567,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function isSameNode(other : org.w3c.dom.Node) : Bool;
+	@:overload @:public @:public @:public override public function isSameNode(other : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Adds a new attribute. If an attribute with that local name and that
@@ -595,7 +595,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function setAttributeNodeNS(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public @:public @:public override public function setAttributeNodeNS(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	* Returns the Reason Text associated with the given <code>Locale</code>.
@@ -616,7 +616,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public public function getFaultReasonText(locale : java.util.Locale) : String;
+	@:require(java3) @:overload @:public @:public public function getFaultReasonText(locale : java.util.Locale) : String;
 	
 	/**
 	* Gets the fault string for this <code>SOAPFault</code> object.
@@ -637,7 +637,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @see #setFaultString(String)
 	* @see #setFaultString(String, Locale)
 	*/
-	@:overload @:public public function getFaultString() : String;
+	@:overload @:public @:public public function getFaultString() : String;
 	
 	/**
 	*  This method checks if the specified <code>namespaceURI</code> is the
@@ -649,7 +649,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function isDefaultNamespace(namespaceURI : String) : Bool;
+	@:overload @:public @:public @:public override public function isDefaultNamespace(namespaceURI : String) : Bool;
 	
 	/**
 	* Adds a new attribute. If an attribute with that name is already present
@@ -673,13 +673,13 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   <code>Document.xmlVersion</code> attribute.
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
 	*/
-	@:overload @:public @:public override public function setAttribute(name : String, value : String) : Void;
+	@:overload @:public @:public @:public override public function setAttribute(name : String, value : String) : Void;
 	
 	/**
 	* The node immediately following this node. If there is no such node,
 	* this returns <code>null</code>.
 	*/
-	@:overload @:public @:public override public function getNextSibling() : org.w3c.dom.Node;
+	@:overload @:public @:public @:public override public function getNextSibling() : org.w3c.dom.Node;
 	
 	/**
 	* Returns a duplicate of this node, i.e., serves as a generic copy
@@ -715,7 +715,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   itself (and its attributes, if it is an <code>Element</code>).
 	* @return The duplicate node.
 	*/
-	@:overload @:public @:public override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public @:public @:public override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Replaces the child node <code>oldChild</code> with <code>newChild</code>
@@ -751,7 +751,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:public @:public override public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Removes the specified attribute node. If a default value for the
@@ -770,7 +770,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   <br>NOT_FOUND_ERR: Raised if <code>oldAttr</code> is not an attribute
 	*   of the element.
 	*/
-	@:overload @:public @:public override public function removeAttributeNode(oldAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public @:public @:public override public function removeAttributeNode(oldAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the immediate child
@@ -797,7 +797,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*         specified name
 	* @see SOAPElement#getChildElements(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public public function getChildElements(name : javax.xml.soap.Name) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public @:public public function getChildElements(name : javax.xml.soap.Name) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Look up the prefix associated to the given namespace URI, starting from
@@ -812,7 +812,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function lookupPrefix(namespaceURI : String) : String;
+	@:overload @:public @:public @:public override public function lookupPrefix(namespaceURI : String) : String;
 	
 	/**
 	* Sets the fault string for this <code>SOAPFault</code> object
@@ -836,7 +836,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload @:public public function setFaultString(faultString : String, locale : java.util.Locale) : Void;
+	@:require(java2) @:overload @:public @:public public function setFaultString(faultString : String, locale : java.util.Locale) : Void;
 	
 	/**
 	* Removes the child node indicated by <code>oldChild</code> from the list
@@ -854,7 +854,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:public @:public override public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -902,7 +902,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function setTextContent(textContent : String) : Void;
+	@:overload @:public @:public @:public override public function setTextContent(textContent : String) : Void;
 	
 	/**
 	* Returns an <code>Iterator</code> over a distinct sequence of
@@ -921,7 +921,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public public function getFaultReasonLocales() : java.util.Iterator<Dynamic>;
+	@:require(java3) @:overload @:public @:public public function getFaultReasonLocales() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns an <code>Iterator</code> over all of the attribute
@@ -934,7 +934,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @see SOAPElement#getAllAttributesAsQNames()
 	* @return an iterator over the names of the attributes
 	*/
-	@:overload @:public @:public public function getAllAttributes() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public @:public public function getAllAttributes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns the optional Node element value for this
@@ -949,7 +949,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public public function getFaultNode() : String;
+	@:require(java3) @:overload @:public @:public public function getFaultNode() : String;
 	
 	/**
 	* The namespace prefix of this node, or <code>null</code> if it is
@@ -987,7 +987,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function setPrefix(prefix : String) : Void;
+	@:overload @:public @:public @:public override public function setPrefix(prefix : String) : Void;
 	
 	/**
 	* The name of the element. If <code>Node.localName</code> is different
@@ -1001,7 +1001,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* the <code>tagName</code> of an HTML element in the canonical
 	* uppercase form, regardless of the case in the source HTML document.
 	*/
-	@:overload @:public @:public override public function getTagName() : String;
+	@:overload @:public @:public @:public override public function getTagName() : String;
 	
 	/**
 	* The value of this node, depending on its type; see the table above.
@@ -1012,13 +1012,13 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   fit in a <code>DOMString</code> variable on the implementation
 	*   platform.
 	*/
-	@:overload @:public @:public override public function getNodeValue() : String;
+	@:overload @:public @:public @:public override public function getNodeValue() : String;
 	
 	/**
 	* The node immediately preceding this node. If there is no such node,
 	* this returns <code>null</code>.
 	*/
-	@:overload @:public @:public override public function getPreviousSibling() : org.w3c.dom.Node;
+	@:overload @:public @:public @:public override public function getPreviousSibling() : org.w3c.dom.Node;
 	
 	/**
 	*  This method returns a specialized object which implements the
@@ -1043,7 +1043,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function getFeature(feature : String, version : String) : Dynamic;
+	@:overload @:public @:public @:public override public function getFeature(feature : String, version : String) : Dynamic;
 	
 	/**
 	* Adds a new attribute node. If an attribute with that name (
@@ -1065,7 +1065,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   explicitly clone <code>Attr</code> nodes to re-use them in other
 	*   elements.
 	*/
-	@:overload @:public @:public override public function setAttributeNode(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public @:public @:public override public function setAttributeNode(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	* Removes an attribute by name. If a default value for the removed
@@ -1082,7 +1082,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @exception DOMException
 	*   NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
 	*/
-	@:overload @:public @:public override public function removeAttribute(name : String) : Void;
+	@:overload @:public @:public @:public override public function removeAttribute(name : String) : Void;
 	
 	/**
 	* Retrieves an attribute node by name.
@@ -1094,7 +1094,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   <code>nodeName</code>) or <code>null</code> if there is no such
 	*   attribute.
 	*/
-	@:overload @:public @:public override public function getAttributeNode(name : String) : org.w3c.dom.Attr;
+	@:overload @:public @:public @:public override public function getAttributeNode(name : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Returns the value of the attribute with the specified qname.
@@ -1105,7 +1105,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @see SOAPElement#getAttributeValue(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function getAttributeValue(qname : javax.xml.namespace.QName) : String;
+	@:require(java3) @:overload @:public @:public @:public public function getAttributeValue(qname : javax.xml.namespace.QName) : String;
 	
 	/**
 	* Gets the locale of the fault string for this <code>SOAPFault</code>
@@ -1128,7 +1128,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload @:public public function getFaultStringLocale() : java.util.Locale;
+	@:require(java2) @:overload @:public @:public public function getFaultStringLocale() : java.util.Locale;
 	
 	/**
 	* The namespace prefix of this node, or <code>null</code> if it is
@@ -1152,7 +1152,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function getPrefix() : String;
+	@:overload @:public @:public @:public override public function getPrefix() : String;
 	
 	/**
 	* Creates a new <code>Text</code> object initialized with the given
@@ -1167,7 +1167,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*                      attach it as a child to this
 	*                      <code>SOAPElement</code>
 	*/
-	@:overload @:public @:public public function addTextNode(text : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public public function addTextNode(text : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Sets the fault string for this <code>SOAPFault</code> object
@@ -1187,7 +1187,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @exception SOAPException if there was an error in adding the
 	*            <code>faultString</code> to the underlying XML tree.
 	*/
-	@:overload @:public public function setFaultString(faultString : String) : Void;
+	@:overload @:public @:public public function setFaultString(faultString : String) : Void;
 	
 	/**
 	* Inserts the node <code>newChild</code> before the existing child node
@@ -1223,7 +1223,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:public @:public override public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Returns the URI of the namespace that has the given prefix.
@@ -1233,7 +1233,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @return a <code>String</code> with the uri of the namespace that has
 	*        the given prefix
 	*/
-	@:overload @:public @:public public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public @:public @:public public function getNamespaceURI(prefix : String) : String;
 	
 	/**
 	* Returns <code>true</code> when an attribute with a given name is
@@ -1245,7 +1245,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*    otherwise.
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function hasAttribute(name : String) : Bool;
+	@:overload @:public @:public @:public override public function hasAttribute(name : String) : Bool;
 	
 	/**
 	* Creates or replaces any existing Role element value for
@@ -1262,13 +1262,13 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public public function setFaultRole(uri : String) : Void;
+	@:require(java3) @:overload @:public @:public public function setFaultRole(uri : String) : Void;
 	
 	/**
 	* The last child of this node. If there is no such node, this returns
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public override public function getLastChild() : org.w3c.dom.Node;
+	@:overload @:public @:public @:public override public function getLastChild() : org.w3c.dom.Node;
 	
 	/**
 	* Removes the namespace declaration corresponding to the given prefix.
@@ -1278,13 +1278,13 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @return <code>true</code> if the namespace declaration was
 	*         removed successfully; <code>false</code> if it was not
 	*/
-	@:overload @:public @:public public function removeNamespaceDeclaration(prefix : String) : Bool;
+	@:overload @:public @:public @:public public function removeNamespaceDeclaration(prefix : String) : Bool;
 	
 	/**
 	*  The type information associated with this element.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
+	@:overload @:public @:public @:public override public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
 	
 	/**
 	* Sets the encoding style for this <code>SOAPElement</code> object
@@ -1297,7 +1297,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @exception SOAPException if setting the encodingStyle is invalid for this SOAPElement.
 	* @see #getEncodingStyle
 	*/
-	@:overload @:public @:public public function setEncodingStyle(encodingStyle : String) : Void;
+	@:overload @:public @:public @:public public function setEncodingStyle(encodingStyle : String) : Void;
 	
 	/**
 	* Creates a <code>QName</code> whose namespace URI is the one associated
@@ -1323,14 +1323,14 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function createQName(localName : String, prefix : String) : javax.xml.namespace.QName;
+	@:require(java3) @:overload @:public @:public @:public public function createQName(localName : String, prefix : String) : javax.xml.namespace.QName;
 	
 	/**
 	* Returns whether this node has any children.
 	* @return Returns <code>true</code> if this node has any children,
 	*   <code>false</code> otherwise.
 	*/
-	@:overload @:public @:public override public function hasChildNodes() : Bool;
+	@:overload @:public @:public @:public override public function hasChildNodes() : Bool;
 	
 	/**
 	* Retrieves an attribute value by name.
@@ -1338,7 +1338,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @return The <code>Attr</code> value as a string, or the empty string
 	*   if that attribute does not have a specified or default value.
 	*/
-	@:overload @:public @:public override public function getAttribute(name : String) : String;
+	@:overload @:public @:public @:public override public function getAttribute(name : String) : String;
 	
 	/**
 	* Returns <code>true</code> when an attribute with a given local name and
@@ -1359,7 +1359,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
+	@:overload @:public @:public @:public override public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the immediate child
@@ -1381,7 +1381,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @return an iterator with the content of this <code>SOAPElement</code>
 	*         object
 	*/
-	@:overload @:public @:public public function getChildElements() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public @:public public function getChildElements() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns whether this node (if it is an element) has any attributes.
@@ -1390,7 +1390,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function hasAttributes() : Bool;
+	@:overload @:public @:public @:public override public function hasAttributes() : Bool;
 	
 	/**
 	* Removes the attribute with the specified qname.
@@ -1402,7 +1402,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @see SOAPElement#removeAttribute(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function removeAttribute(qname : javax.xml.namespace.QName) : Bool;
+	@:require(java3) @:overload @:public @:public @:public public function removeAttribute(qname : javax.xml.namespace.QName) : Bool;
 	
 	/**
 	*  If the parameter <code>isId</code> is <code>true</code>, this method
@@ -1422,7 +1422,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   of this element.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function setIdAttributeNode(idAttr : org.w3c.dom.Attr, isId : Bool) : Void;
+	@:overload @:public @:public @:public override public function setIdAttributeNode(idAttr : org.w3c.dom.Attr, isId : Bool) : Void;
 	
 	/**
 	* Returns a <code>NodeList</code> of all the descendant
@@ -1440,7 +1440,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:public @:public override public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the
@@ -1454,7 +1454,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @exception SOAPException if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public public function addChildElement(localName : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public public function addChildElement(localName : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Returns the optional Role element value for this
@@ -1469,14 +1469,14 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public public function getFaultRole() : String;
+	@:require(java3) @:overload @:public @:public public function getFaultRole() : String;
 	
 	/**
 	* A <code>NodeList</code> that contains all children of this node. If
 	* there are no children, this is a <code>NodeList</code> containing no
 	* nodes.
 	*/
-	@:overload @:public @:public override public function getChildNodes() : org.w3c.dom.NodeList;
+	@:overload @:public @:public @:public override public function getChildNodes() : org.w3c.dom.NodeList;
 	
 	/**
 	* Adds an attribute with the specified name and value to this
@@ -1494,7 +1494,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @see SOAPElement#addAttribute(Name, String)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function addAttribute(qname : javax.xml.namespace.QName, value : String) : javax.xml.soap.SOAPElement;
+	@:require(java3) @:overload @:public @:public @:public public function addAttribute(qname : javax.xml.namespace.QName, value : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Retrieves an attribute value by local name and namespace URI.
@@ -1512,7 +1512,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function getAttributeNS(namespaceURI : String, localName : String) : String;
+	@:overload @:public @:public @:public override public function getAttributeNS(namespaceURI : String, localName : String) : String;
 	
 	/**
 	* Returns an <code>Iterator</code> over the namespace prefix
@@ -1523,7 +1523,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @return an iterator over the namespace prefixes in this
 	*         <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public public function getNamespacePrefixes() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public @:public public function getNamespacePrefixes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Appends or replaces a Reason Text item containing the specified
@@ -1550,7 +1550,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public public function addFaultReasonText(text : String, locale : java.util.Locale) : Void;
+	@:require(java3) @:overload @:public @:public public function addFaultReasonText(text : String, locale : java.util.Locale) : Void;
 	
 	/**
 	*  If the parameter <code>isId</code> is <code>true</code>, this method
@@ -1571,7 +1571,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   of this element.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function setIdAttributeNS(namespaceURI : String, localName : String, isId : Bool) : Void;
+	@:overload @:public @:public @:public override public function setIdAttributeNS(namespaceURI : String, localName : String, isId : Bool) : Void;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the
@@ -1589,7 +1589,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @exception SOAPException if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public public function addChildElement(localName : String, prefix : String, uri : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public public function addChildElement(localName : String, prefix : String, uri : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Gets the Subcodes for this <code>SOAPFault</code> as an iterator over
@@ -1606,7 +1606,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public public function getFaultSubcodes() : java.util.Iterator<Dynamic>;
+	@:require(java3) @:overload @:public @:public public function getFaultSubcodes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns the encoding style for this <code>SOAPElement</code> object.
@@ -1615,13 +1615,13 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @see #setEncodingStyle
 	*/
-	@:overload @:public @:public public function getEncodingStyle() : String;
+	@:overload @:public @:public @:public public function getEncodingStyle() : String;
 	
 	/**
 	* A <code>NamedNodeMap</code> containing the attributes of this node (if
 	* it is an <code>Element</code>) or <code>null</code> otherwise.
 	*/
-	@:overload @:public @:public override public function getAttributes() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public @:public @:public override public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
 	/**
 	* Returns an <code>Iterator</code> over all of the attributes
@@ -1634,7 +1634,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @see SOAPElement#getAllAttributes()
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function getAllAttributesAsQNames() : java.util.Iterator<Dynamic>;
+	@:require(java3) @:overload @:public @:public @:public public function getAllAttributesAsQNames() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* The <code>Document</code> object associated with this node. This is
@@ -1645,7 +1645,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload @:public @:public @:public override public function getOwnerDocument() : org.w3c.dom.Document;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the
@@ -1663,7 +1663,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*                          <code>SOAPElement</code> object
 	* @see SOAPElement#addChildElement(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public public function addChildElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public public function addChildElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the immediate child
@@ -1691,7 +1691,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @see SOAPElement#getChildElements(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function getChildElements(qname : javax.xml.namespace.QName) : java.util.Iterator<Dynamic>;
+	@:require(java3) @:overload @:public @:public @:public public function getChildElements(qname : javax.xml.namespace.QName) : java.util.Iterator<Dynamic>;
 	
 	/**
 	*  If the parameter <code>isId</code> is <code>true</code>, this method
@@ -1713,7 +1713,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   of this element.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function setIdAttribute(name : String, isId : Bool) : Void;
+	@:overload @:public @:public @:public override public function setIdAttribute(name : String, isId : Bool) : Void;
 	
 	/**
 	* Gets the mandatory SOAP 1.1 fault code for this
@@ -1730,7 +1730,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload @:public public function getFaultCodeAsName() : javax.xml.soap.Name;
+	@:require(java2) @:overload @:public @:public public function getFaultCodeAsName() : javax.xml.soap.Name;
 	
 	/**
 	* The absolute base URI of this node or <code>null</code> if the
@@ -1744,7 +1744,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function getBaseURI() : String;
+	@:overload @:public @:public @:public override public function getBaseURI() : String;
 	
 	/**
 	* Returns the name of this <code>SOAPElement</code> object.
@@ -1752,7 +1752,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @return a <code>Name</code> object with the name of this
 	*         <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public public function getElementName() : javax.xml.soap.Name;
+	@:overload @:public @:public @:public public function getElementName() : javax.xml.soap.Name;
 	
 	/**
 	* Gets the fault code for this
@@ -1764,7 +1764,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public public function getFaultCodeAsQName() : javax.xml.namespace.QName;
+	@:require(java3) @:overload @:public @:public public function getFaultCodeAsQName() : javax.xml.namespace.QName;
 	
 	/**
 	* Gets the fault code for this <code>SOAPFault</code> object.
@@ -1773,7 +1773,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @see #getFaultCodeAsName
 	* @see #setFaultCode
 	*/
-	@:overload @:public public function getFaultCode() : String;
+	@:overload @:public @:public public function getFaultCode() : String;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the
@@ -1790,7 +1790,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*         context of this <code>SOAPElement</code> or  if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public public function addChildElement(localName : String, prefix : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public public function addChildElement(localName : String, prefix : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the given
@@ -1807,12 +1807,12 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	* @see SOAPElement#addChildElement(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function addChildElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:require(java3) @:overload @:public @:public @:public public function addChildElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* The name of this node, depending on its type; see the table above.
 	*/
-	@:overload @:public @:public override public function getNodeName() : String;
+	@:overload @:public @:public @:public override public function getNodeName() : String;
 	
 	/**
 	* The namespace URI of this node, or <code>null</code> if it is
@@ -1831,7 +1831,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function getNamespaceURI() : String;
+	@:overload @:public @:public @:public override public function getNamespaceURI() : String;
 	
 	/**
 	* Adds a new attribute. If an attribute with the same local name and
@@ -1875,7 +1875,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   through the Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function setAttributeNS(namespaceURI : String, qualifiedName : String, value : String) : Void;
+	@:overload @:public @:public @:public override public function setAttributeNS(namespaceURI : String, qualifiedName : String, value : String) : Void;
 	
 	/**
 	* Returns a <code>NodeList</code> of all descendant <code>Elements</code>
@@ -1884,7 +1884,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*   matches all tags.
 	* @return A list of matching <code>Element</code> nodes.
 	*/
-	@:overload @:public @:public override public function getElementsByTagName(name : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:public @:public override public function getElementsByTagName(name : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* Returns an <code>Iterator</code> over the namespace prefix
@@ -1897,7 +1897,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload @:public @:public public function getVisibleNamespacePrefixes() : java.util.Iterator<Dynamic>;
+	@:require(java2) @:overload @:public @:public @:public public function getVisibleNamespacePrefixes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	*  Tests whether the DOM implementation implements a specific feature and
@@ -1909,7 +1909,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function isSupported(feature : String, version : String) : Bool;
+	@:overload @:public @:public @:public override public function isSupported(feature : String, version : String) : Bool;
 	
 	/**
 	* Returns the local part of the qualified name of this node.
@@ -1920,7 +1920,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public override public function getLocalName() : String;
+	@:overload @:public @:public @:public override public function getLocalName() : String;
 	
 	/**
 	* Adds the node <code>newChild</code> to the end of the list of children
@@ -1948,7 +1948,7 @@ extern class FaultImpl extends com.sun.org.apache.xerces.internal.dom.ElementImp
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public override public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:public @:public override public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	
 }

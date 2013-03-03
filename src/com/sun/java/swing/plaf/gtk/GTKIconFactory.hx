@@ -25,69 +25,69 @@ package com.sun.java.swing.plaf.gtk;
 */
 @:internal extern class GTKIconFactory
 {
-	@:overload public static function getAscendingSortIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function getAscendingSortIcon() : javax.swing.Icon;
 	
-	@:overload public static function getDescendingSortIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function getDescendingSortIcon() : javax.swing.Icon;
 	
-	@:overload public static function getTreeExpandedIcon() : sun.swing.plaf.synth.SynthIcon;
+	@:overload @:public @:static public static function getTreeExpandedIcon() : sun.swing.plaf.synth.SynthIcon;
 	
-	@:overload public static function getTreeCollapsedIcon() : sun.swing.plaf.synth.SynthIcon;
+	@:overload @:public @:static public static function getTreeCollapsedIcon() : sun.swing.plaf.synth.SynthIcon;
 	
-	@:overload public static function getRadioButtonIcon() : sun.swing.plaf.synth.SynthIcon;
+	@:overload @:public @:static public static function getRadioButtonIcon() : sun.swing.plaf.synth.SynthIcon;
 	
-	@:overload public static function getCheckBoxIcon() : sun.swing.plaf.synth.SynthIcon;
+	@:overload @:public @:static public static function getCheckBoxIcon() : sun.swing.plaf.synth.SynthIcon;
 	
-	@:overload public static function getMenuArrowIcon() : sun.swing.plaf.synth.SynthIcon;
+	@:overload @:public @:static public static function getMenuArrowIcon() : sun.swing.plaf.synth.SynthIcon;
 	
-	@:overload public static function getCheckBoxMenuItemCheckIcon() : sun.swing.plaf.synth.SynthIcon;
+	@:overload @:public @:static public static function getCheckBoxMenuItemCheckIcon() : sun.swing.plaf.synth.SynthIcon;
 	
-	@:overload public static function getRadioButtonMenuItemCheckIcon() : sun.swing.plaf.synth.SynthIcon;
+	@:overload @:public @:static public static function getRadioButtonMenuItemCheckIcon() : sun.swing.plaf.synth.SynthIcon;
 	
-	@:overload public static function getToolBarHandleIcon() : sun.swing.plaf.synth.SynthIcon;
+	@:overload @:public @:static public static function getToolBarHandleIcon() : sun.swing.plaf.synth.SynthIcon;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$gtk$GTKIconFactory$DelegatingIcon') @:internal extern class GTKIconFactory_DelegatingIcon extends sun.swing.plaf.synth.SynthIcon implements javax.swing.plaf.UIResource
 {
-	@:overload override public function paintIcon(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function paintIcon(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getIconWidth(context : javax.swing.plaf.synth.SynthContext) : Int;
+	@:overload @:public override public function getIconWidth(context : javax.swing.plaf.synth.SynthContext) : Int;
 	
-	@:overload override public function getIconHeight(context : javax.swing.plaf.synth.SynthContext) : Int;
+	@:overload @:public override public function getIconHeight(context : javax.swing.plaf.synth.SynthContext) : Int;
 	
-	@:overload private function getMethod() : java.lang.reflect.Method;
+	@:overload @:protected private function getMethod() : java.lang.reflect.Method;
 	
-	@:overload private function getMethodParamTypes() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:protected private function getMethodParamTypes() : java.NativeArray<Class<Dynamic>>;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$gtk$GTKIconFactory$SynthExpanderIcon') @:internal extern class GTKIconFactory_SynthExpanderIcon extends com.sun.java.swing.plaf.gtk.GTKIconFactory.GTKIconFactory_DelegatingIcon
 {
-	@:overload override public function paintIcon(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function paintIcon(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$gtk$GTKIconFactory$ToolBarHandleIcon') @:internal extern class GTKIconFactory_ToolBarHandleIcon extends com.sun.java.swing.plaf.gtk.GTKIconFactory.GTKIconFactory_DelegatingIcon
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function getMethodParamTypes() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:protected override private function getMethodParamTypes() : java.NativeArray<Class<Dynamic>>;
 	
-	@:overload override public function paintIcon(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function paintIcon(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getIconWidth(context : javax.swing.plaf.synth.SynthContext) : Int;
+	@:overload @:public override public function getIconWidth(context : javax.swing.plaf.synth.SynthContext) : Int;
 	
-	@:overload override public function getIconHeight(context : javax.swing.plaf.synth.SynthContext) : Int;
+	@:overload @:public override public function getIconHeight(context : javax.swing.plaf.synth.SynthContext) : Int;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$gtk$GTKIconFactory$MenuArrowIcon') @:internal extern class GTKIconFactory_MenuArrowIcon extends com.sun.java.swing.plaf.gtk.GTKIconFactory.GTKIconFactory_DelegatingIcon
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function getMethodParamTypes() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:protected override private function getMethodParamTypes() : java.NativeArray<Class<Dynamic>>;
 	
-	@:overload override public function paintIcon(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function paintIcon(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	
 }

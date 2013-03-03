@@ -25,7 +25,7 @@ package javax.swing.plaf.synth;
 */
 @:internal extern class SynthBorder extends javax.swing.border.AbstractBorder implements javax.swing.plaf.UIResource
 {
-	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Reinitializes the insets parameter with this Border's current Insets.
@@ -33,13 +33,13 @@ package javax.swing.plaf.synth;
 	* @param insets the object to be reinitialized
 	* @return the <code>insets</code> object
 	*/
-	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* This default implementation returns false.
 	* @return false
 	*/
-	@:overload public function isBorderOpaque() : Bool;
+	@:overload @:public override public function isBorderOpaque() : Bool;
 	
 	
 }

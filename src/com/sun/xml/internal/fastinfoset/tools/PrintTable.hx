@@ -28,24 +28,24 @@ package com.sun.xml.internal.fastinfoset.tools;
 extern class PrintTable
 {
 	/** Creates a new instance of PrintTable */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function printVocabulary(vocabulary : com.sun.xml.internal.fastinfoset.vocab.ParserVocabulary) : Void;
+	@:overload @:public @:static public static function printVocabulary(vocabulary : com.sun.xml.internal.fastinfoset.vocab.ParserVocabulary) : Void;
 	
-	@:overload public static function printArray(title : String, a : com.sun.xml.internal.fastinfoset.util.StringArray) : Void;
+	@:overload @:public @:static public static function printArray(title : String, a : com.sun.xml.internal.fastinfoset.util.StringArray) : Void;
 	
-	@:overload public static function printArray(title : String, a : com.sun.xml.internal.fastinfoset.util.PrefixArray) : Void;
+	@:overload @:public @:static public static function printArray(title : String, a : com.sun.xml.internal.fastinfoset.util.PrefixArray) : Void;
 	
-	@:overload public static function printArray(title : String, a : com.sun.xml.internal.fastinfoset.util.CharArrayArray) : Void;
+	@:overload @:public @:static public static function printArray(title : String, a : com.sun.xml.internal.fastinfoset.util.CharArrayArray) : Void;
 	
-	@:overload public static function printArray(title : String, a : com.sun.xml.internal.fastinfoset.util.ContiguousCharArrayArray) : Void;
+	@:overload @:public @:static public static function printArray(title : String, a : com.sun.xml.internal.fastinfoset.util.ContiguousCharArrayArray) : Void;
 	
-	@:overload public static function printArray(title : String, a : com.sun.xml.internal.fastinfoset.util.QualifiedNameArray) : Void;
+	@:overload @:public @:static public static function printArray(title : String, a : com.sun.xml.internal.fastinfoset.util.QualifiedNameArray) : Void;
 	
 	/**
 	* @param args the command line arguments
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

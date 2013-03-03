@@ -40,7 +40,7 @@ extern class LookAndFeel
 	* @throws NullPointerException as described in
 	*         <a href="#exceptions">exceptions</a>
 	*/
-	@:overload public static function installColors(c : javax.swing.JComponent, defaultBgName : String, defaultFgName : String) : Void;
+	@:overload @:public @:static public static function installColors(c : javax.swing.JComponent, defaultBgName : String, defaultFgName : String) : Void;
 	
 	/**
 	* Convenience method for setting a component's foreground,
@@ -59,7 +59,7 @@ extern class LookAndFeel
 	* @see UIManager#getColor
 	* @see UIManager#getFont
 	*/
-	@:overload public static function installColorsAndFont(c : javax.swing.JComponent, defaultBgName : String, defaultFgName : String, defaultFontName : String) : Void;
+	@:overload @:public @:static public static function installColorsAndFont(c : javax.swing.JComponent, defaultBgName : String, defaultFgName : String, defaultFontName : String) : Void;
 	
 	/**
 	* Convenience method for setting a component's border property with
@@ -71,7 +71,7 @@ extern class LookAndFeel
 	* @throws NullPointerException as described in
 	*         <a href="#exceptions">exceptions</a>
 	*/
-	@:overload public static function installBorder(c : javax.swing.JComponent, defaultBorderName : String) : Void;
+	@:overload @:public @:static public static function installBorder(c : javax.swing.JComponent, defaultBorderName : String) : Void;
 	
 	/**
 	* Convenience method for uninstalling a border. If the border of
@@ -81,7 +81,7 @@ extern class LookAndFeel
 	* @param c component to uninstall the border on
 	* @throws NullPointerException if {@code c} is {@code null}
 	*/
-	@:overload public static function uninstallBorder(c : javax.swing.JComponent) : Void;
+	@:overload @:public @:static public static function uninstallBorder(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Convenience method for installing a property with the specified name
@@ -106,7 +106,7 @@ extern class LookAndFeel
 	* @param propertyValue value of the property
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function installProperty(c : javax.swing.JComponent, propertyName : String, propertyValue : Dynamic) : Void;
+	@:require(java5) @:overload @:public @:static public static function installProperty(c : javax.swing.JComponent, propertyName : String, propertyValue : Dynamic) : Void;
 	
 	/**
 	* Convenience method for building an array of {@code
@@ -155,7 +155,7 @@ extern class LookAndFeel
 	* @see InputMap
 	* @see KeyStroke#getKeyStroke
 	*/
-	@:overload public static function makeKeyBindings(keyBindingList : java.NativeArray<Dynamic>) : java.NativeArray<javax.swing.text.JTextComponent.JTextComponent_KeyBinding>;
+	@:overload @:public @:static public static function makeKeyBindings(keyBindingList : java.NativeArray<Dynamic>) : java.NativeArray<javax.swing.text.JTextComponent.JTextComponent_KeyBinding>;
 	
 	/**
 	* Creates a {@code InputMapUIResource} from <code>keys</code>. This is
@@ -170,7 +170,7 @@ extern class LookAndFeel
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function makeInputMap(keys : java.NativeArray<Dynamic>) : javax.swing.InputMap;
+	@:require(java3) @:overload @:public @:static public static function makeInputMap(keys : java.NativeArray<Dynamic>) : javax.swing.InputMap;
 	
 	/**
 	* Creates a {@code ComponentInputMapUIResource} from
@@ -191,7 +191,7 @@ extern class LookAndFeel
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function makeComponentInputMap(c : javax.swing.JComponent, keys : java.NativeArray<Dynamic>) : javax.swing.ComponentInputMap;
+	@:require(java3) @:overload @:public @:static public static function makeComponentInputMap(c : javax.swing.JComponent, keys : java.NativeArray<Dynamic>) : javax.swing.ComponentInputMap;
 	
 	/**
 	* Populates an {@code InputMap} with the specified bindings.
@@ -231,7 +231,7 @@ extern class LookAndFeel
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function loadKeyBindings(retMap : javax.swing.InputMap, keys : java.NativeArray<Dynamic>) : Void;
+	@:require(java3) @:overload @:public @:static public static function loadKeyBindings(retMap : javax.swing.InputMap, keys : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Creates and returns a {@code UIDefault.LazyValue} that loads an
@@ -255,7 +255,7 @@ extern class LookAndFeel
 	* @see Icon
 	* @see Class#getResourceAsStream(String)
 	*/
-	@:overload public static function makeIcon(baseClass : Class<Dynamic>, gifFile : String) : Dynamic;
+	@:overload @:public @:static public static function makeIcon(baseClass : Class<Dynamic>, gifFile : String) : Dynamic;
 	
 	/**
 	* Returns the <code>LayoutStyle</code> for this look
@@ -269,7 +269,7 @@ extern class LookAndFeel
 	* @return the <code>LayoutStyle</code> for this look and feel
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getLayoutStyle() : javax.swing.LayoutStyle;
+	@:require(java6) @:overload @:public public function getLayoutStyle() : javax.swing.LayoutStyle;
 	
 	/**
 	* Invoked when the user attempts an invalid operation,
@@ -284,7 +284,7 @@ extern class LookAndFeel
 	*                  associated with a <code>Component</code>
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function provideErrorFeedback(component : java.awt.Component) : Void;
+	@:require(java4) @:overload @:public public function provideErrorFeedback(component : java.awt.Component) : Void;
 	
 	/**
 	* Returns the value of the specified system desktop property by
@@ -300,7 +300,7 @@ extern class LookAndFeel
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getDesktopPropertyValue(systemPropertyName : String, fallbackValue : Dynamic) : Dynamic;
+	@:require(java4) @:overload @:public @:static public static function getDesktopPropertyValue(systemPropertyName : String, fallbackValue : Dynamic) : Dynamic;
 	
 	/**
 	* Returns an <code>Icon</code> with a disabled appearance.
@@ -321,7 +321,7 @@ extern class LookAndFeel
 	*         {@code Icon} can not be generated
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getDisabledIcon(component : javax.swing.JComponent, icon : javax.swing.Icon) : javax.swing.Icon;
+	@:require(java5) @:overload @:public public function getDisabledIcon(component : javax.swing.JComponent, icon : javax.swing.Icon) : javax.swing.Icon;
 	
 	/**
 	* Returns an <code>Icon</code> for use by disabled
@@ -344,7 +344,7 @@ extern class LookAndFeel
 	*         {@code Icon} can not be generated.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getDisabledSelectedIcon(component : javax.swing.JComponent, icon : javax.swing.Icon) : javax.swing.Icon;
+	@:require(java5) @:overload @:public public function getDisabledSelectedIcon(component : javax.swing.JComponent, icon : javax.swing.Icon) : javax.swing.Icon;
 	
 	/**
 	* Return a short string that identifies this look and feel, e.g.
@@ -357,7 +357,7 @@ extern class LookAndFeel
 	*
 	* @return short identifier for the look and feel
 	*/
-	@:overload @:abstract public function getName() : String;
+	@:overload @:public @:abstract public function getName() : String;
 	
 	/**
 	* Return a string that identifies this look and feel.  This string
@@ -370,7 +370,7 @@ extern class LookAndFeel
 	*
 	* @return identifier for the look and feel
 	*/
-	@:overload @:abstract public function getID() : String;
+	@:overload @:public @:abstract public function getID() : String;
 	
 	/**
 	* Return a one line description of this look and feel implementation,
@@ -379,7 +379,7 @@ extern class LookAndFeel
 	*
 	* @return short description for the look and feel
 	*/
-	@:overload @:abstract public function getDescription() : String;
+	@:overload @:public @:abstract public function getDescription() : String;
 	
 	/**
 	* Returns {@code true} if the <code>LookAndFeel</code> returned
@@ -397,7 +397,7 @@ extern class LookAndFeel
 	* @see JRootPane#setWindowDecorationStyle
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getSupportsWindowDecorations() : Bool;
+	@:require(java4) @:overload @:public public function getSupportsWindowDecorations() : Bool;
 	
 	/**
 	* If the underlying platform has a "native" look and feel, and
@@ -409,7 +409,7 @@ extern class LookAndFeel
 	* @return {@code true} if this look and feel represents the underlying
 	*         platform look and feel
 	*/
-	@:overload @:abstract public function isNativeLookAndFeel() : Bool;
+	@:overload @:public @:abstract public function isNativeLookAndFeel() : Bool;
 	
 	/**
 	* Return {@code true} if the underlying platform supports and or permits
@@ -421,7 +421,7 @@ extern class LookAndFeel
 	* @return {@code true} if this is a supported look and feel
 	* @see UIManager#setLookAndFeel
 	*/
-	@:overload @:abstract public function isSupportedLookAndFeel() : Bool;
+	@:overload @:public @:abstract public function isSupportedLookAndFeel() : Bool;
 	
 	/**
 	* Initializes the look and feel. While this method is public,
@@ -438,7 +438,7 @@ extern class LookAndFeel
 	* @see #uninitialize
 	* @see UIManager#setLookAndFeel
 	*/
-	@:overload public function initialize() : Void;
+	@:overload @:public public function initialize() : Void;
 	
 	/**
 	* Uninitializes the look and feel. While this method is public,
@@ -452,7 +452,7 @@ extern class LookAndFeel
 	* @see #initialize
 	* @see UIManager#setLookAndFeel
 	*/
-	@:overload public function uninitialize() : Void;
+	@:overload @:public public function uninitialize() : Void;
 	
 	/**
 	* Returns the look and feel defaults. While this method is public,
@@ -465,7 +465,7 @@ extern class LookAndFeel
 	* @see #uninitialize
 	* @see UIManager#setLookAndFeel
 	*/
-	@:overload public function getDefaults() : javax.swing.UIDefaults;
+	@:overload @:public public function getDefaults() : javax.swing.UIDefaults;
 	
 	/**
 	* Returns a string that displays and identifies this
@@ -473,7 +473,7 @@ extern class LookAndFeel
 	*
 	* @return a String representation of this object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

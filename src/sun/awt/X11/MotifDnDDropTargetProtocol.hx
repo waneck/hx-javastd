@@ -25,56 +25,56 @@ package sun.awt.X11;
 */
 @:internal extern class MotifDnDDropTargetProtocol extends sun.awt.X11.XDropTargetProtocol
 {
-	@:overload private function new(listener : sun.awt.X11.XDropTargetProtocolListener) : Void;
+	@:overload @:protected private function new(listener : sun.awt.X11.XDropTargetProtocolListener) : Void;
 	
-	@:overload override public function getProtocolName() : String;
+	@:overload @:public override public function getProtocolName() : String;
 	
-	@:overload override public function registerDropTarget(window : haxe.Int64) : Void;
+	@:overload @:public override public function registerDropTarget(window : haxe.Int64) : Void;
 	
-	@:overload override public function unregisterDropTarget(window : haxe.Int64) : Void;
+	@:overload @:public override public function unregisterDropTarget(window : haxe.Int64) : Void;
 	
-	@:overload override public function registerEmbedderDropSite(embedder : haxe.Int64) : Void;
+	@:overload @:public override public function registerEmbedderDropSite(embedder : haxe.Int64) : Void;
 	
-	@:overload override public function unregisterEmbedderDropSite(embedder : haxe.Int64) : Void;
+	@:overload @:public override public function unregisterEmbedderDropSite(embedder : haxe.Int64) : Void;
 	
 	/*
 	* Gets and stores in the registry the embedder's Motif DnD drop site info
 	* from the embedded.
 	*/
-	@:overload override public function registerEmbeddedDropSite(embedded : haxe.Int64) : Void;
+	@:overload @:public override public function registerEmbeddedDropSite(embedded : haxe.Int64) : Void;
 	
-	@:overload override public function isProtocolSupported(window : haxe.Int64) : Bool;
+	@:overload @:public override public function isProtocolSupported(window : haxe.Int64) : Bool;
 	
-	@:overload override public function getMessageType(xclient : sun.awt.X11.XClientMessageEvent) : Int;
+	@:overload @:public override public function getMessageType(xclient : sun.awt.X11.XClientMessageEvent) : Int;
 	
-	@:overload override private function processClientMessageImpl(xclient : sun.awt.X11.XClientMessageEvent) : Bool;
+	@:overload @:protected override private function processClientMessageImpl(xclient : sun.awt.X11.XClientMessageEvent) : Bool;
 	
 	/*
 	* Currently we don't synthesize enter/leave messages for Motif DnD
 	* protocol. See comments in XDropTargetProtocol.postProcessClientMessage.
 	*/
-	@:overload override private function sendEnterMessageToToplevel(win : haxe.Int64, xclient : sun.awt.X11.XClientMessageEvent) : Void;
+	@:overload @:protected override private function sendEnterMessageToToplevel(win : haxe.Int64, xclient : sun.awt.X11.XClientMessageEvent) : Void;
 	
-	@:overload override private function sendLeaveMessageToToplevel(win : haxe.Int64, xclient : sun.awt.X11.XClientMessageEvent) : Void;
+	@:overload @:protected override private function sendLeaveMessageToToplevel(win : haxe.Int64, xclient : sun.awt.X11.XClientMessageEvent) : Void;
 	
-	@:overload override public function forwardEventToEmbedded(embedded : haxe.Int64, ctxt : haxe.Int64, eventID : Int) : Bool;
+	@:overload @:public override public function forwardEventToEmbedded(embedded : haxe.Int64, ctxt : haxe.Int64, eventID : Int) : Bool;
 	
-	@:overload override public function isXEmbedSupported() : Bool;
+	@:overload @:public override public function isXEmbedSupported() : Bool;
 	
-	@:overload override public function sendResponse(ctxt : haxe.Int64, eventID : Int, action : Int) : Bool;
+	@:overload @:public override public function sendResponse(ctxt : haxe.Int64, eventID : Int, action : Int) : Bool;
 	
-	@:overload override public function getData(ctxt : haxe.Int64, format : haxe.Int64) : Dynamic;
+	@:overload @:public override public function getData(ctxt : haxe.Int64, format : haxe.Int64) : Dynamic;
 	
-	@:overload override public function sendDropDone(ctxt : haxe.Int64, success : Bool, dropAction : Int) : Bool;
+	@:overload @:public override public function sendDropDone(ctxt : haxe.Int64, success : Bool, dropAction : Int) : Bool;
 	
-	@:overload @:final override public function getSourceWindow() : haxe.Int64;
+	@:overload @:public @:final override public function getSourceWindow() : haxe.Int64;
 	
 	/**
 	* Reset the state of the object.
 	*/
-	@:overload override public function cleanup() : Void;
+	@:overload @:public override public function cleanup() : Void;
 	
-	@:overload override public function isDragOverComponent() : Bool;
+	@:overload @:public override public function isDragOverComponent() : Bool;
 	
 	
 }

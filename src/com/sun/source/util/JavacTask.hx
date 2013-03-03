@@ -31,7 +31,7 @@ extern class JavacTask implements javax.tools.JavaCompiler.JavaCompiler_Compilat
 	* @return a list of abstract syntax trees
 	* @throws IOException if an unhandled I/O error occurred in the compiler.
 	*/
-	@:overload @:abstract public function parse() : java.lang.Iterable<com.sun.source.tree.CompilationUnitTree>;
+	@:overload @:public @:abstract public function parse() : java.lang.Iterable<com.sun.source.tree.CompilationUnitTree>;
 	
 	/**
 	* Complete all analysis.
@@ -39,7 +39,7 @@ extern class JavacTask implements javax.tools.JavaCompiler.JavaCompiler_Compilat
 	* @return a list of elements that were analyzed
 	* @throws IOException if an unhandled I/O error occurred in the compiler.
 	*/
-	@:overload @:abstract public function analyze() : java.lang.Iterable<javax.lang.model.element.Element>;
+	@:overload @:public @:abstract public function analyze() : java.lang.Iterable<javax.lang.model.element.Element>;
 	
 	/**
 	* Generate code.
@@ -47,28 +47,28 @@ extern class JavacTask implements javax.tools.JavaCompiler.JavaCompiler_Compilat
 	* @return a list of files that were generated
 	* @throws IOException if an unhandled I/O error occurred in the compiler.
 	*/
-	@:overload @:abstract public function generate() : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload @:public @:abstract public function generate() : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
 	/**
 	* The specified listener will receive events describing the progress of
 	* this compilation task.
 	*/
-	@:overload @:abstract public function setTaskListener(taskListener : com.sun.source.util.TaskListener) : Void;
+	@:overload @:public @:abstract public function setTaskListener(taskListener : com.sun.source.util.TaskListener) : Void;
 	
 	/**
 	* Get a type mirror of the tree node determined by the specified path.
 	*/
-	@:overload @:abstract public function getTypeMirror(path : java.lang.Iterable<com.sun.source.tree.Tree>) : javax.lang.model.type.TypeMirror;
+	@:overload @:public @:abstract public function getTypeMirror(path : java.lang.Iterable<com.sun.source.tree.Tree>) : javax.lang.model.type.TypeMirror;
 	
 	/**
 	* Get a utility object for dealing with program elements.
 	*/
-	@:overload @:abstract public function getElements() : javax.lang.model.util.Elements;
+	@:overload @:public @:abstract public function getElements() : javax.lang.model.util.Elements;
 	
 	/**
 	* Get a utility object for dealing with type mirrors.
 	*/
-	@:overload @:abstract public function getTypes() : javax.lang.model.util.Types;
+	@:overload @:public @:abstract public function getTypes() : javax.lang.model.util.Types;
 	
 	/**
 	* Performs this compilation task.  The compilation may only
@@ -84,7 +84,7 @@ extern class JavacTask implements javax.tools.JavaCompiler.JavaCompiler_Compilat
 	* in user code.
 	* @throws IllegalStateException if called more than once
 	*/
-	@:overload public function call() : Null<Bool>;
+	@:overload @:public public function call() : Null<Bool>;
 	
 	/**
 	* Sets processors (for annotation processing).  This will
@@ -93,7 +93,7 @@ extern class JavacTask implements javax.tools.JavaCompiler.JavaCompiler_Compilat
 	* @param processors processors (for annotation processing)
 	* @throws IllegalStateException if the task has started
 	*/
-	@:overload public function setProcessors(processors : java.lang.Iterable<javax.annotation.processing.Processor>) : Void;
+	@:overload @:public public function setProcessors(processors : java.lang.Iterable<javax.annotation.processing.Processor>) : Void;
 	
 	/**
 	* Set the locale to be applied when formatting diagnostics and
@@ -103,7 +103,7 @@ extern class JavacTask implements javax.tools.JavaCompiler.JavaCompiler_Compilat
 	* locale
 	* @throws IllegalStateException if the task has started
 	*/
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
 	
 }

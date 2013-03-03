@@ -66,7 +66,7 @@ extern class QName implements java.io.Serializable
 	* prefix) QName(String namespaceURI, String localPart, String
 	* prefix)
 	*/
-	@:overload public function new(namespaceURI : String, localPart : String) : Void;
+	@:overload @:public public function new(namespaceURI : String, localPart : String) : Void;
 	
 	/**
 	* <p><code>QName</code> constructor specifying the Namespace URI,
@@ -108,7 +108,7 @@ extern class QName implements java.io.Serializable
 	* @throws IllegalArgumentException When <code>localPart</code>
 	*   or <code>prefix</code> is <code>null</code>
 	*/
-	@:overload public function new(namespaceURI : String, localPart : String, prefix : String) : Void;
+	@:overload @:public public function new(namespaceURI : String, localPart : String, prefix : String) : Void;
 	
 	/**
 	* <p><code>QName</code> constructor specifying the local part.</p>
@@ -149,21 +149,21 @@ extern class QName implements java.io.Serializable
 	* prefix) QName(String namespaceURI, String localPart, String
 	* prefix)
 	*/
-	@:overload public function new(localPart : String) : Void;
+	@:overload @:public public function new(localPart : String) : Void;
 	
 	/**
 	* <p>Get the Namespace URI of this <code>QName</code>.</p>
 	*
 	* @return Namespace URI of this <code>QName</code>
 	*/
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
 	/**
 	* <p>Get the local part of this <code>QName</code>.</p>
 	*
 	*  @return local part of this <code>QName</code>
 	*/
-	@:overload public function getLocalPart() : String;
+	@:overload @:public public function getLocalPart() : String;
 	
 	/**
 	* <p>Get the prefix of this <code>QName</code>.</p>
@@ -176,7 +176,7 @@ extern class QName implements java.io.Serializable
 	*
 	*  @return prefix of this <code>QName</code>
 	*/
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
 	/**
 	* <p>Test this <code>QName</code> for equality with another
@@ -200,7 +200,7 @@ extern class QName implements java.io.Serializable
 	* @return <code>true</code> if the given <code>Object</code> is
 	* equal to this <code>QName</code> else <code>false</code>
 	*/
-	@:overload @:final public function equals(objectToTest : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(objectToTest : Dynamic) : Bool;
 	
 	/**
 	* <p>Generate the hash code for this <code>QName</code>.</p>
@@ -215,7 +215,7 @@ extern class QName implements java.io.Serializable
 	*
 	* @return hash code for this <code>QName</code> <code>Object</code>
 	*/
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
 	/**
 	* <p><code>String</code> representation of this
@@ -241,7 +241,7 @@ extern class QName implements java.io.Serializable
 	*
 	*  @return <code>String</code> representation of this <code>QName</code>
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* <p><code>QName</code> derived from parsing the formatted
@@ -288,7 +288,7 @@ extern class QName implements java.io.Serializable
 	* @return <code>QName</code> corresponding to the given <code>String</code>
 	* @see #toString() QName.toString()
 	*/
-	@:overload public static function valueOf(qNameAsString : String) : javax.xml.namespace.QName;
+	@:overload @:public @:static public static function valueOf(qNameAsString : String) : javax.xml.namespace.QName;
 	
 	
 }

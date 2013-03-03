@@ -25,20 +25,20 @@ package com.sun.xml.internal.stream.events;
 */
 extern class CharacterEvent extends com.sun.xml.internal.stream.events.DummyEvent implements javax.xml.stream.events.Characters
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*
 	* @param data Character Data.
 	*/
-	@:overload public function new(data : String) : Void;
+	@:overload @:public public function new(data : String) : Void;
 	
 	/**
 	*
 	* @param data Character Data.
 	* @param flag true if CData
 	*/
-	@:overload public function new(data : String, flag : Bool) : Void;
+	@:overload @:public public function new(data : String, flag : Bool) : Void;
 	
 	/**
 	*
@@ -46,33 +46,33 @@ extern class CharacterEvent extends com.sun.xml.internal.stream.events.DummyEven
 	* @param flag true if CData
 	* @param isIgnorableWhiteSpace true if data is ignorable whitespace.
 	*/
-	@:overload public function new(data : String, flag : Bool, isIgnorableWhiteSpace : Bool) : Void;
+	@:overload @:public public function new(data : String, flag : Bool, isIgnorableWhiteSpace : Bool) : Void;
 	
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
 	/**
 	*
 	* @return return data.
 	*/
-	@:overload public function getData() : String;
+	@:overload @:public public function getData() : String;
 	
 	/**
 	*
 	* @param String data
 	*/
-	@:overload public function setData(data : String) : Void;
+	@:overload @:public public function setData(data : String) : Void;
 	
 	/**
 	*
 	* @return boolean returns true if the data is CData
 	*/
-	@:overload public function isCData() : Bool;
+	@:overload @:public public function isCData() : Bool;
 	
 	/**
 	*
 	* @return String return the String representation of this event.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/** This method will write the XMLEvent as per the XML 1.0 specification as Unicode characters.
 	* No indentation or whitespace should be outputted.
@@ -89,7 +89,7 @@ extern class CharacterEvent extends com.sun.xml.internal.stream.events.DummyEven
 	* @param writer The writer that will output the data
 	* @throws XMLStreamException if there is a fatal error writing the event
 	*/
-	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload @:protected override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	/**
 	* Return true if this is ignorableWhiteSpace.  If
@@ -97,7 +97,7 @@ extern class CharacterEvent extends com.sun.xml.internal.stream.events.DummyEven
 	* be SPACE.
 	* @return
 	*/
-	@:overload public function isIgnorableWhiteSpace() : Bool;
+	@:overload @:public public function isIgnorableWhiteSpace() : Bool;
 	
 	/**
 	* Returns true if this set of Characters
@@ -107,7 +107,7 @@ extern class CharacterEvent extends com.sun.xml.internal.stream.events.DummyEven
 	* are composed of only whitespace characters
 	* @return
 	*/
-	@:overload public function isWhiteSpace() : Bool;
+	@:overload @:public public function isWhiteSpace() : Bool;
 	
 	
 }

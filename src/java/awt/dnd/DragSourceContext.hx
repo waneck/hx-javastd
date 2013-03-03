@@ -30,27 +30,27 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	* indicating that the <code>Cursor</code> should change
 	* to the default (no drop) <code>Cursor</code>.
 	*/
-	private static var DEFAULT(default, null) : Int;
+	@:protected @:static @:final private static var DEFAULT(default, null) : Int;
 	
 	/**
 	* An <code>int</code> used by updateCurrentCursor()
 	* indicating that the <code>Cursor</code>
 	* has entered a <code>DropTarget</code>.
 	*/
-	private static var ENTER(default, null) : Int;
+	@:protected @:static @:final private static var ENTER(default, null) : Int;
 	
 	/**
 	* An <code>int</code> used by updateCurrentCursor()
 	* indicating that the <code>Cursor</code> is
 	* over a <code>DropTarget</code>.
 	*/
-	private static var OVER(default, null) : Int;
+	@:protected @:static @:final private static var OVER(default, null) : Int;
 	
 	/**
 	* An <code>int</code> used by updateCurrentCursor()
 	* indicating that the user operation has changed.
 	*/
-	private static var CHANGED(default, null) : Int;
+	@:protected @:static @:final private static var CHANGED(default, null) : Int;
 	
 	/**
 	* Called from <code>DragSource</code>, this constructor creates a new
@@ -108,7 +108,7 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	* @throws NullPointerException if dscp, trigger, or t are null, or
 	*         if dragImage is non-null and offset is null
 	*/
-	@:overload public function new(dscp : java.awt.dnd.peer.DragSourceContextPeer, trigger : java.awt.dnd.DragGestureEvent, dragCursor : java.awt.Cursor, dragImage : java.awt.Image, offset : java.awt.Point, t : java.awt.datatransfer.Transferable, dsl : java.awt.dnd.DragSourceListener) : Void;
+	@:overload @:public public function new(dscp : java.awt.dnd.peer.DragSourceContextPeer, trigger : java.awt.dnd.DragGestureEvent, dragCursor : java.awt.Cursor, dragImage : java.awt.Image, offset : java.awt.Point, t : java.awt.datatransfer.Transferable, dsl : java.awt.dnd.DragSourceListener) : Void;
 	
 	/**
 	* Returns the <code>DragSource</code>
@@ -117,7 +117,7 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	* @return the <code>DragSource</code> that
 	*   instantiated this <code>DragSourceContext</code>
 	*/
-	@:overload public function getDragSource() : java.awt.dnd.DragSource;
+	@:overload @:public public function getDragSource() : java.awt.dnd.DragSource;
 	
 	/**
 	* Returns the <code>Component</code> associated with this
@@ -125,7 +125,7 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	*
 	* @return the <code>Component</code> that started the drag
 	*/
-	@:overload public function getComponent() : java.awt.Component;
+	@:overload @:public public function getComponent() : java.awt.Component;
 	
 	/**
 	* Returns the <code>DragGestureEvent</code>
@@ -133,7 +133,7 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	*
 	* @return the Event that triggered the drag
 	*/
-	@:overload public function getTrigger() : java.awt.dnd.DragGestureEvent;
+	@:overload @:public public function getTrigger() : java.awt.dnd.DragGestureEvent;
 	
 	/**
 	* Returns a bitwise mask of <code>DnDConstants</code> that
@@ -142,7 +142,7 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	*
 	* @return the drop actions supported by the drag source
 	*/
-	@:overload public function getSourceActions() : Int;
+	@:overload @:public public function getSourceActions() : Int;
 	
 	/**
 	* Sets the cursor for this drag operation to the specified
@@ -157,14 +157,14 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	*                       on the cursor handling during drag and drop
 	*
 	*/
-	@:overload @:synchronized public function setCursor(c : java.awt.Cursor) : Void;
+	@:overload @:public @:synchronized public function setCursor(c : java.awt.Cursor) : Void;
 	
 	/**
 	* Returns the current drag <code>Cursor</code>.
 	* <P>
 	* @return the current drag <code>Cursor</code>
 	*/
-	@:overload public function getCursor() : java.awt.Cursor;
+	@:overload @:public public function getCursor() : java.awt.Cursor;
 	
 	/**
 	* Add a <code>DragSourceListener</code> to this
@@ -179,7 +179,7 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	* @throws TooManyListenersException if
 	* a <code>DragSourceListener</code> has already been added
 	*/
-	@:overload @:synchronized public function addDragSourceListener(dsl : java.awt.dnd.DragSourceListener) : Void;
+	@:overload @:public @:synchronized public function addDragSourceListener(dsl : java.awt.dnd.DragSourceListener) : Void;
 	
 	/**
 	* Removes the specified <code>DragSourceListener</code>
@@ -189,13 +189,13 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	*     note that while <code>null</code> is not prohibited,
 	*     it is not acceptable as a parameter
 	*/
-	@:overload @:synchronized public function removeDragSourceListener(dsl : java.awt.dnd.DragSourceListener) : Void;
+	@:overload @:public @:synchronized public function removeDragSourceListener(dsl : java.awt.dnd.DragSourceListener) : Void;
 	
 	/**
 	* Notifies the peer that the <code>Transferable</code>'s
 	* <code>DataFlavor</code>s have changed.
 	*/
-	@:overload public function transferablesFlavorsChanged() : Void;
+	@:overload @:public public function transferablesFlavorsChanged() : Void;
 	
 	/**
 	* Calls <code>dragEnter</code> on the
@@ -206,7 +206,7 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	*
 	* @param dsde the <code>DragSourceDragEvent</code>
 	*/
-	@:overload public function dragEnter(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
+	@:overload @:public public function dragEnter(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
 	
 	/**
 	* Calls <code>dragOver</code> on the
@@ -217,7 +217,7 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	*
 	* @param dsde the <code>DragSourceDragEvent</code>
 	*/
-	@:overload public function dragOver(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
+	@:overload @:public public function dragOver(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
 	
 	/**
 	* Calls <code>dragExit</code> on the
@@ -228,7 +228,7 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	*
 	* @param dse the <code>DragSourceEvent</code>
 	*/
-	@:overload public function dragExit(dse : java.awt.dnd.DragSourceEvent) : Void;
+	@:overload @:public public function dragExit(dse : java.awt.dnd.DragSourceEvent) : Void;
 	
 	/**
 	* Calls <code>dropActionChanged</code> on the
@@ -239,7 +239,7 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	*
 	* @param dsde the <code>DragSourceDragEvent</code>
 	*/
-	@:overload public function dropActionChanged(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
+	@:overload @:public public function dropActionChanged(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
 	
 	/**
 	* Calls <code>dragDropEnd</code> on the
@@ -250,7 +250,7 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	*
 	* @param dsde the <code>DragSourceDropEvent</code>
 	*/
-	@:overload public function dragDropEnd(dsde : java.awt.dnd.DragSourceDropEvent) : Void;
+	@:overload @:public public function dragDropEnd(dsde : java.awt.dnd.DragSourceDropEvent) : Void;
 	
 	/**
 	* Calls <code>dragMouseMoved</code> on the
@@ -262,7 +262,7 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	* @param dsde the <code>DragSourceDragEvent</code>
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function dragMouseMoved(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
+	@:require(java4) @:overload @:public public function dragMouseMoved(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
 	
 	/**
 	* Returns the <code>Transferable</code> associated with
@@ -270,7 +270,7 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	*
 	* @return the <code>Transferable</code>
 	*/
-	@:overload public function getTransferable() : java.awt.datatransfer.Transferable;
+	@:overload @:public public function getTransferable() : java.awt.datatransfer.Transferable;
 	
 	/**
 	* If the default drag cursor behavior is active, this method
@@ -284,7 +284,7 @@ extern class DragSourceContext implements java.awt.dnd.DragSourceListener implem
 	*               <code>ENTER</code>, <code>OVER</code>,
 	*               <code>CHANGED</code>
 	*/
-	@:overload @:synchronized private function updateCurrentCursor(sourceAct : Int, targetAct : Int, status : Int) : Void;
+	@:overload @:protected @:synchronized private function updateCurrentCursor(sourceAct : Int, targetAct : Int, status : Int) : Void;
 	
 	
 }

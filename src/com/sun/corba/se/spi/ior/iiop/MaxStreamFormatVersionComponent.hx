@@ -25,7 +25,7 @@ package com.sun.corba.se.spi.ior.iiop;
 */
 extern interface MaxStreamFormatVersionComponent extends com.sun.corba.se.spi.ior.TaggedComponent
 {
-	@:overload public function getMaxStreamFormatVersion() : java.StdTypes.Int8;
+	@:overload @:public public function getMaxStreamFormatVersion() : java.StdTypes.Int8;
 	
 	
 }

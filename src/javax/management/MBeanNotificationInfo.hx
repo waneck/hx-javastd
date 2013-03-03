@@ -35,7 +35,7 @@ extern class MBeanNotificationInfo extends javax.management.MBeanFeatureInfo imp
 	* described notifications.
 	* @param description A human readable description of the data.
 	*/
-	@:overload public function new(notifTypes : java.NativeArray<String>, name : String, description : String) : Void;
+	@:overload @:public public function new(notifTypes : java.NativeArray<String>, name : String, description : String) : Void;
 	
 	/**
 	* Constructs an <CODE>MBeanNotificationInfo</CODE> object.
@@ -51,7 +51,7 @@ extern class MBeanNotificationInfo extends javax.management.MBeanFeatureInfo imp
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(notifTypes : java.NativeArray<String>, name : String, description : String, descriptor : javax.management.Descriptor) : Void;
+	@:require(java6) @:overload @:public public function new(notifTypes : java.NativeArray<String>, name : String, description : String, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Returns a shallow clone of this instance.
@@ -60,7 +60,7 @@ extern class MBeanNotificationInfo extends javax.management.MBeanFeatureInfo imp
 	* implemented by <tt>Object.clone()</tt>.
 	* No deeper cloning of any internal field is made.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns the array of strings (in dot notation) containing the
@@ -69,9 +69,9 @@ extern class MBeanNotificationInfo extends javax.management.MBeanFeatureInfo imp
 	* @return the array of strings.  Changing the returned array has no
 	* effect on this MBeanNotificationInfo.
 	*/
-	@:overload public function getNotifTypes() : java.NativeArray<String>;
+	@:overload @:public public function getNotifTypes() : java.NativeArray<String>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compare this MBeanNotificationInfo to another.
@@ -87,9 +87,9 @@ extern class MBeanNotificationInfo extends javax.management.MBeanFeatureInfo imp
 	* elements are equal.  They are not equal if they have the same
 	* elements but in a different order.
 	*/
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

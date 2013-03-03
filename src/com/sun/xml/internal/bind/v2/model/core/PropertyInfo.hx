@@ -69,7 +69,7 @@ extern interface PropertyInfo<T, C> extends com.sun.xml.internal.bind.v2.model.a
 	* @return
 	*      non-null read-only collection.
 	*/
-	@:overload public function ref() : java.util.Collection<com.sun.xml.internal.bind.v2.model.core.TypeInfo<T, C>>;
+	@:overload @:public public function ref() : java.util.Collection<com.sun.xml.internal.bind.v2.model.core.TypeInfo<T, C>>;
 	
 	/**
 	* Gets the kind of this proeprty.
@@ -77,7 +77,7 @@ extern interface PropertyInfo<T, C> extends com.sun.xml.internal.bind.v2.model.a
 	* @return
 	*      always non-null.
 	*/
-	@:overload public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:public @:public public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
 	/**
 	* @return
@@ -94,12 +94,12 @@ extern interface PropertyInfo<T, C> extends com.sun.xml.internal.bind.v2.model.a
 	* @return
 	*      always non-null
 	*/
-	@:overload public function id() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload @:public public function id() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
 	/**
 	* Expected MIME type, if any.
 	*/
-	@:overload public function getExpectedMimeType() : javax.activation.MimeType;
+	@:overload @:public public function getExpectedMimeType() : javax.activation.MimeType;
 	
 	/**
 	* If this is true and this property indeed represents a binary data,
@@ -122,7 +122,7 @@ extern interface PropertyInfo<T, C> extends com.sun.xml.internal.bind.v2.model.a
 	* when this returns non-null, it overrides the type names of all types
 	* that are in this property.)
 	*/
-	@:overload public function getSchemaType() : javax.xml.namespace.QName;
+	@:overload @:public public function getSchemaType() : javax.xml.namespace.QName;
 	
 	
 }

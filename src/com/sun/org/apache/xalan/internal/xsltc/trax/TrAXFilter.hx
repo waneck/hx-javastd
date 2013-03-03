@@ -23,17 +23,17 @@ package com.sun.org.apache.xalan.internal.xsltc.trax;
 */
 extern class TrAXFilter extends org.xml.sax.helpers.XMLFilterImpl
 {
-	@:overload public function new(templates : javax.xml.transform.Templates) : Void;
+	@:overload @:public public function new(templates : javax.xml.transform.Templates) : Void;
 	
-	@:overload public function getTransformer() : javax.xml.transform.Transformer;
+	@:overload @:public public function getTransformer() : javax.xml.transform.Transformer;
 	
-	@:overload override public function parse(input : org.xml.sax.InputSource) : Void;
+	@:overload @:public override public function parse(input : org.xml.sax.InputSource) : Void;
 	
-	@:overload override public function parse(systemId : String) : Void;
+	@:overload @:public override public function parse(systemId : String) : Void;
 	
-	@:overload override public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public override public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload public function setErrorListener(handler : javax.xml.transform.ErrorListener) : Void;
+	@:overload @:public public function setErrorListener(handler : javax.xml.transform.ErrorListener) : Void;
 	
 	
 }

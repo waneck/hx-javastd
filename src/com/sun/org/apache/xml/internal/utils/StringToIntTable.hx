@@ -28,27 +28,27 @@ package com.sun.org.apache.xml.internal.utils;
 */
 extern class StringToIntTable
 {
-	public static var INVALID_KEY(default, null) : Int;
+	@:public @:static @:final public static var INVALID_KEY(default, null) : Int;
 	
 	/**
 	* Default constructor.  Note that the default
 	* block size is very small, for small lists.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a StringToIntTable, using the given block size.
 	*
 	* @param blocksize Size of block to allocate
 	*/
-	@:overload public function new(blocksize : Int) : Void;
+	@:overload @:public public function new(blocksize : Int) : Void;
 	
 	/**
 	* Get the length of the list.
 	*
 	* @return the length of the list
 	*/
-	@:overload @:final public function getLength() : Int;
+	@:overload @:public @:final public function getLength() : Int;
 	
 	/**
 	* Append a string onto the vector.
@@ -56,7 +56,7 @@ extern class StringToIntTable
 	* @param key String to append
 	* @param value The int value of the string
 	*/
-	@:overload @:final public function put(key : String, value : Int) : Void;
+	@:overload @:public @:final public function put(key : String, value : Int) : Void;
 	
 	/**
 	* Tell if the table contains the given string.
@@ -66,7 +66,7 @@ extern class StringToIntTable
 	* @return The String's int value
 	*
 	*/
-	@:overload @:final public function get(key : String) : Int;
+	@:overload @:public @:final public function get(key : String) : Int;
 	
 	/**
 	* Tell if the table contains the given string. Ignore case.
@@ -75,7 +75,7 @@ extern class StringToIntTable
 	*
 	* @return The string's int value
 	*/
-	@:overload @:final public function getIgnoreCase(key : String) : Int;
+	@:overload @:public @:final public function getIgnoreCase(key : String) : Int;
 	
 	/**
 	* Tell if the table contains the given string.
@@ -84,14 +84,14 @@ extern class StringToIntTable
 	*
 	* @return True if the string is in the table
 	*/
-	@:overload @:final public function contains(key : String) : Bool;
+	@:overload @:public @:final public function contains(key : String) : Bool;
 	
 	/**
 	* Return array of keys in the table.
 	*
 	* @return Array of strings
 	*/
-	@:overload @:final public function keys() : java.NativeArray<String>;
+	@:overload @:public @:final public function keys() : java.NativeArray<String>;
 	
 	
 }

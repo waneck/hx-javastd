@@ -37,7 +37,7 @@ package com.sun.servicetag;
 	*
 	* @throws IOException if I/O error occurs in this operation
 	*/
-	@:overload public static function register(regData : com.sun.servicetag.RegistrationData, locale : java.util.Locale, version : String) : Void;
+	@:overload @:public @:static public static function register(regData : com.sun.servicetag.RegistrationData, locale : java.util.Locale, version : String) : Void;
 	
 	
 }

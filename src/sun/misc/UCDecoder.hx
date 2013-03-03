@@ -26,21 +26,21 @@ package sun.misc;
 extern class UCDecoder extends sun.misc.CharacterDecoder
 {
 	/** This class encodes two bytes per atom. */
-	@:overload override private function bytesPerAtom() : Int;
+	@:overload @:protected override private function bytesPerAtom() : Int;
 	
 	/** this class encodes 48 bytes per line */
-	@:overload override private function bytesPerLine() : Int;
+	@:overload @:protected override private function bytesPerLine() : Int;
 	
 	/**
 	* Decode one atom - reads the characters from the input stream, decodes
 	* them, and checks for valid parity.
 	*/
-	@:overload override private function decodeAtom(inStream : java.io.PushbackInputStream, outStream : java.io.OutputStream, l : Int) : Void;
+	@:overload @:protected override private function decodeAtom(inStream : java.io.PushbackInputStream, outStream : java.io.OutputStream, l : Int) : Void;
 	
 	/**
 	* decodeBufferPrefix initializes the sequence number to zero.
 	*/
-	@:overload override private function decodeBufferPrefix(inStream : java.io.PushbackInputStream, outStream : java.io.OutputStream) : Void;
+	@:overload @:protected override private function decodeBufferPrefix(inStream : java.io.PushbackInputStream, outStream : java.io.OutputStream) : Void;
 	
 	/**
 	* decodeLinePrefix reads the sequence number and the number of
@@ -52,7 +52,7 @@ extern class UCDecoder extends sun.misc.CharacterDecoder
 	*
 	* @exception CEFormatException out of sequence lines detected.
 	*/
-	@:overload override private function decodeLinePrefix(inStream : java.io.PushbackInputStream, outStream : java.io.OutputStream) : Int;
+	@:overload @:protected override private function decodeLinePrefix(inStream : java.io.PushbackInputStream, outStream : java.io.OutputStream) : Int;
 	
 	/**
 	* this method reads the CRC that is at the end of every line and
@@ -60,7 +60,7 @@ extern class UCDecoder extends sun.misc.CharacterDecoder
 	*
 	* @exception CEFormatException if CRC check fails.
 	*/
-	@:overload override private function decodeLineSuffix(inStream : java.io.PushbackInputStream, outStream : java.io.OutputStream) : Void;
+	@:overload @:protected override private function decodeLineSuffix(inStream : java.io.PushbackInputStream, outStream : java.io.OutputStream) : Void;
 	
 	
 }

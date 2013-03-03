@@ -28,27 +28,27 @@ extern class Scanner implements sun.tools.java.Constants
 	/**
 	* The increment for each character.
 	*/
-	public static var OFFSETINC(default, null) : haxe.Int64;
+	@:public @:static @:final public static var OFFSETINC(default, null) : haxe.Int64;
 	
 	/**
 	* The increment for each line.
 	*/
-	public static var LINEINC(default, null) : haxe.Int64;
+	@:public @:static @:final public static var LINEINC(default, null) : haxe.Int64;
 	
 	/**
 	* End of input
 	*/
-	public static var EOF(default, null) : Int;
+	@:public @:static @:final public static var EOF(default, null) : Int;
 	
 	/**
 	* Where errors are reported
 	*/
-	public var env : sun.tools.java.Environment;
+	@:public public var env : sun.tools.java.Environment;
 	
 	/**
 	* Input reader
 	*/
-	//private var _in : sun.tools.java.ScannerInputReader;
+	//@:protected private var _in : sun.tools.java.ScannerInputReader;
 	
 	/**
 	* If true, present all comments as tokens.
@@ -58,92 +58,92 @@ extern class Scanner implements sun.tools.java.Constants
 	* and may be distinguished by their start and end positions,
 	* which are equal (meaning, these tokens contain no chars).
 	*/
-	public var scanComments : Bool;
+	@:public public var scanComments : Bool;
 	
 	/**
 	* Current token
 	*/
-	public var token : Int;
+	@:public public var token : Int;
 	
 	/**
 	* The position of the current token
 	*/
-	public var pos : haxe.Int64;
+	@:public public var pos : haxe.Int64;
 	
 	/**
 	* The position of the previous token
 	*/
-	public var prevPos : haxe.Int64;
+	@:public public var prevPos : haxe.Int64;
 	
 	/**
 	* The current character
 	*/
-	private var ch : Int;
+	@:protected private var ch : Int;
 	
 	/*
 	* Token values.
 	*/
-	public var charValue : java.StdTypes.Char16;
+	@:public public var charValue : java.StdTypes.Char16;
 	
-	public var intValue : Int;
+	@:public public var intValue : Int;
 	
-	public var longValue : haxe.Int64;
+	@:public public var longValue : haxe.Int64;
 	
-	public var floatValue : Single;
+	@:public public var floatValue : Single;
 	
-	public var doubleValue : Float;
+	@:public public var doubleValue : Float;
 	
-	public var stringValue : String;
+	@:public public var stringValue : String;
 	
-	public var idValue : sun.tools.java.Identifier;
+	@:public public var idValue : sun.tools.java.Identifier;
 	
-	public var radix : Int;
+	@:public public var radix : Int;
 	
 	/*
 	* A doc comment preceding the most recent token
 	*/
-	public var docComment : String;
+	@:public public var docComment : String;
 	
 	/**
 	* Create a scanner to scan an input stream.
 	*/
-	@:overload public function new(env : sun.tools.java.Environment, _in : java.io.InputStream) : Void;
+	@:overload @:public public function new(env : sun.tools.java.Environment, _in : java.io.InputStream) : Void;
 	
 	/**
 	* Setup input from the given input stream,
 	* and scan the first token from it.
 	*/
-	@:overload private function useInputStream(_in : java.io.InputStream) : Void;
+	@:overload @:protected private function useInputStream(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Create a scanner to scan an input stream.
 	*/
-	@:overload private function new(env : sun.tools.java.Environment) : Void;
+	@:overload @:protected private function new(env : sun.tools.java.Environment) : Void;
 	
 	/**
 	* The ending position of the current token
 	*/
-	@:overload public function getEndPos() : haxe.Int64;
+	@:overload @:public public function getEndPos() : haxe.Int64;
 	
 	/**
 	* If the current token is IDENT, return the identifier occurrence.
 	* It will be freshly allocated.
 	*/
-	@:overload public function getIdToken() : sun.tools.java.IdentifierToken;
+	@:overload @:public public function getIdToken() : sun.tools.java.IdentifierToken;
 	
 	/**
 	* Scan the next token.
 	* @return the position of the previous token.
 	*/
-	@:overload public function scan() : haxe.Int64;
+	@:overload @:public public function scan() : haxe.Int64;
 	
-	@:overload private function xscan() : haxe.Int64;
+	@:overload @:protected private function xscan() : haxe.Int64;
 	
 	/**
 	* Scan to a matching '}', ']' or ')'. The current token must be
 	* a '{', '[' or '(';
 	*/
-	@:overload public function match(open : Int, close : Int) : Void;
+	@:overload @:public public function match(open : Int, close : Int) : Void;
 	
 	
 }

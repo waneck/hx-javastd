@@ -54,71 +54,71 @@ extern class MethodGen implements com.sun.tools.corba.se.idl.MethodGen
 	/**
 	* Public zero-argument constructor.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Method generate() is not used in MethodGen.  They are replaced by the
 	* more granular interfaceMethod, stub, skeleton, dispatchSkeleton.
 	**/
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
+	@:overload @:public public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function interfaceMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
+	@:overload @:protected private function interfaceMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function stub(className : String, isAbstract : Bool, symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
+	@:overload @:protected private function stub(className : String, isAbstract : Bool, symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function localstub(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int, i : com.sun.tools.corba.se.idl.InterfaceEntry) : Void;
+	@:overload @:protected private function localstub(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int, i : com.sun.tools.corba.se.idl.InterfaceEntry) : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function skeleton(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
+	@:overload @:protected private function skeleton(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function dispatchSkeleton(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
+	@:overload @:protected private function dispatchSkeleton(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
 	
 	/**
 	* Determine whether method entry m is a valuetype initializer.
 	* @return true if is m is valuetype initializer, false otherwise.
 	**/
-	@:overload private function isValueInitializer() : Bool;
+	@:overload @:protected private function isValueInitializer() : Bool;
 	
 	/**
 	*
 	**/
-	@:overload private function writeMethodSignature() : Void;
+	@:overload @:protected private function writeMethodSignature() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeParmType(parm : com.sun.tools.corba.se.idl.SymtabEntry, passType : Int) : Void;
+	@:overload @:protected private function writeParmType(parm : com.sun.tools.corba.se.idl.SymtabEntry, passType : Int) : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeDispatchCall() : Void;
+	@:overload @:protected private function writeDispatchCall() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeStubBody(className : String) : Void;
+	@:overload @:protected private function writeStubBody(className : String) : Void;
 	
-	@:overload private function writeLocalStubBody(i : com.sun.tools.corba.se.idl.InterfaceEntry) : Void;
+	@:overload @:protected private function writeLocalStubBody(i : com.sun.tools.corba.se.idl.InterfaceEntry) : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function passType(passType : Int) : String;
+	@:overload @:protected private function passType(passType : Int) : String;
 	
 	/**
 	* This is only used by AttributeGen.  The java mapping says
@@ -126,31 +126,31 @@ extern class MethodGen implements com.sun.tools.corba.se.idl.MethodGen
 	* should be _get_XXX and _set_XXX.  this.name () will be
 	* getXXX.  realName is set by AttributeGen to _get_XXX.
 	**/
-	@:overload private function serverMethodName(name : String) : Void;
+	@:overload @:protected private function serverMethodName(name : String) : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeMethodCall(indent : String) : Void;
+	@:overload @:protected private function writeMethodCall(indent : String) : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeCreateReply(indent : String) : Void;
+	@:overload @:protected private function writeCreateReply(indent : String) : Void;
 	
-	private var methodIndex : Int;
+	@:protected private var methodIndex : Int;
 	
-	private var realName : String;
+	@:protected private var realName : String;
 	
-	private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	private var m : com.sun.tools.corba.se.idl.MethodEntry;
+	@:protected private var m : com.sun.tools.corba.se.idl.MethodEntry;
 	
-	private var stream : java.io.PrintWriter;
+	@:protected private var stream : java.io.PrintWriter;
 	
-	private var localOptimization : Bool;
+	@:protected private var localOptimization : Bool;
 	
-	private var isAbstract : Bool;
+	@:protected private var isAbstract : Bool;
 	
 	
 }

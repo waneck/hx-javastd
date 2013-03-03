@@ -28,7 +28,7 @@ package sun.net.www.protocol.http;
 	/* Transparent authentication should only be tried with a trusted
 	* site ( when running in a secure environment ).
 	*/
-	@:overload public static function isTrustedSite(url : java.net.URL) : Bool;
+	@:overload @:public @:static public static function isTrustedSite(url : java.net.URL) : Bool;
 	
 	
 }

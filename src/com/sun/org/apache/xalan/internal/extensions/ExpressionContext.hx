@@ -27,34 +27,34 @@ extern interface ExpressionContext
 	* Get the current context node.
 	* @return The current context node.
 	*/
-	@:overload public function getContextNode() : org.w3c.dom.Node;
+	@:overload @:public public function getContextNode() : org.w3c.dom.Node;
 	
 	/**
 	* Get the current context node list.
 	* @return An iterator for the current context list, as
 	* defined in XSLT.
 	*/
-	@:overload public function getContextNodes() : org.w3c.dom.traversal.NodeIterator;
+	@:overload @:public public function getContextNodes() : org.w3c.dom.traversal.NodeIterator;
 	
 	/**
 	* Get the error listener.
 	* @return The registered error listener.
 	*/
-	@:overload public function getErrorListener() : javax.xml.transform.ErrorListener;
+	@:overload @:public public function getErrorListener() : javax.xml.transform.ErrorListener;
 	
 	/**
 	* Get the value of a node as a number.
 	* @param n Node to be converted to a number.  May be null.
 	* @return value of n as a number.
 	*/
-	@:overload public function toNumber(n : org.w3c.dom.Node) : Float;
+	@:overload @:public public function toNumber(n : org.w3c.dom.Node) : Float;
 	
 	/**
 	* Get the value of a node as a string.
 	* @param n Node to be converted to a string.  May be null.
 	* @return value of n as a string, or an empty string if n is null.
 	*/
-	@:overload public function toString(n : org.w3c.dom.Node) : String;
+	@:overload @:public public function toString(n : org.w3c.dom.Node) : String;
 	
 	/**
 	* Get a variable based on it's qualified name.
@@ -65,7 +65,7 @@ extern interface ExpressionContext
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function getVariableOrParam(qname : com.sun.org.apache.xml.internal.utils.QName) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function getVariableOrParam(qname : com.sun.org.apache.xml.internal.utils.QName) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Get the XPathContext that owns this ExpressionContext.
@@ -76,7 +76,7 @@ extern interface ExpressionContext
 	* @return The current XPathContext.
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function getXPathContext() : com.sun.org.apache.xpath.internal.XPathContext;
+	@:overload @:public public function getXPathContext() : com.sun.org.apache.xpath.internal.XPathContext;
 	
 	
 }

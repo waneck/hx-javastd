@@ -34,12 +34,12 @@ extern class AccessibleStateSet
 	* @see #toArray
 	* @see #clear
 	*/
-	private var states : java.util.Vector<javax.accessibility.AccessibleState>;
+	@:protected private var states : java.util.Vector<javax.accessibility.AccessibleState>;
 	
 	/**
 	* Creates a new empty state set.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new state with the initial set of states contained in
@@ -47,7 +47,7 @@ extern class AccessibleStateSet
 	*
 	* @param states an array of AccessibleState describing the state set.
 	*/
-	@:overload public function new(states : java.NativeArray<javax.accessibility.AccessibleState>) : Void;
+	@:overload @:public public function new(states : java.NativeArray<javax.accessibility.AccessibleState>) : Void;
 	
 	/**
 	* Adds a new state to the current state set if it is not already
@@ -59,14 +59,14 @@ extern class AccessibleStateSet
 	* @return true if state is added to the state set; false if the state set
 	* is unchanged
 	*/
-	@:overload public function add(state : javax.accessibility.AccessibleState) : Bool;
+	@:overload @:public public function add(state : javax.accessibility.AccessibleState) : Bool;
 	
 	/**
 	* Adds all of the states to the existing state set.  Duplicate entries
 	* are ignored.
 	* @param states  AccessibleState array describing the state set.
 	*/
-	@:overload public function addAll(states : java.NativeArray<javax.accessibility.AccessibleState>) : Void;
+	@:overload @:public public function addAll(states : java.NativeArray<javax.accessibility.AccessibleState>) : Void;
 	
 	/**
 	* Removes a state from the current state set.  If the state is not
@@ -78,25 +78,25 @@ extern class AccessibleStateSet
 	* @return true if the state is in the state set; false if the state set
 	* will be unchanged
 	*/
-	@:overload public function remove(state : javax.accessibility.AccessibleState) : Bool;
+	@:overload @:public public function remove(state : javax.accessibility.AccessibleState) : Bool;
 	
 	/**
 	* Removes all the states from the current state set.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Checks if the current state is in the state set.
 	* @param state the state
 	* @return true if the state is in the state set; otherwise false
 	*/
-	@:overload public function contains(state : javax.accessibility.AccessibleState) : Bool;
+	@:overload @:public public function contains(state : javax.accessibility.AccessibleState) : Bool;
 	
 	/**
 	* Returns the current state set as an array of AccessibleState
 	* @return AccessibleState array containing the current state.
 	*/
-	@:overload public function toArray() : java.NativeArray<javax.accessibility.AccessibleState>;
+	@:overload @:public public function toArray() : java.NativeArray<javax.accessibility.AccessibleState>;
 	
 	/**
 	* Creates a localized String representing all the states in the set
@@ -105,7 +105,7 @@ extern class AccessibleStateSet
 	* @return comma separated localized String
 	* @see AccessibleBundle#toDisplayString
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

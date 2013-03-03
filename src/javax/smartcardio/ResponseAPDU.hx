@@ -37,7 +37,7 @@ extern class ResponseAPDU implements java.io.Serializable
 	* @throws NullPointerException if apdu is null
 	* @throws IllegalArgumentException if apdu.length is less than 2
 	*/
-	@:overload public function new(apdu : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(apdu : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the number of data bytes in the response body (Nr) or 0 if this
@@ -47,7 +47,7 @@ extern class ResponseAPDU implements java.io.Serializable
 	* @return the number of data bytes in the response body or 0 if this APDU
 	* has no body.
 	*/
-	@:overload public function getNr() : Int;
+	@:overload @:public public function getNr() : Int;
 	
 	/**
 	* Returns a copy of the data bytes in the response body. If this APDU as
@@ -56,21 +56,21 @@ extern class ResponseAPDU implements java.io.Serializable
 	* @return a copy of the data bytes in the response body or the empty
 	*    byte array if this APDU has no body.
 	*/
-	@:overload public function getData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the value of the status byte SW1 as a value between 0 and 255.
 	*
 	* @return the value of the status byte SW1 as a value between 0 and 255.
 	*/
-	@:overload public function getSW1() : Int;
+	@:overload @:public public function getSW1() : Int;
 	
 	/**
 	* Returns the value of the status byte SW2 as a value between 0 and 255.
 	*
 	* @return the value of the status byte SW2 as a value between 0 and 255.
 	*/
-	@:overload public function getSW2() : Int;
+	@:overload @:public public function getSW2() : Int;
 	
 	/**
 	* Returns the value of the status bytes SW1 and SW2 as a single
@@ -80,21 +80,21 @@ extern class ResponseAPDU implements java.io.Serializable
 	*
 	* @return the value of the status word SW.
 	*/
-	@:overload public function getSW() : Int;
+	@:overload @:public public function getSW() : Int;
 	
 	/**
 	* Returns a copy of the bytes in this APDU.
 	*
 	* @return a copy of the bytes in this APDU.
 	*/
-	@:overload public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a string representation of this response APDU.
 	*
 	* @return a String representation of this response APDU.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares the specified object with this response APDU for equality.
@@ -104,14 +104,14 @@ extern class ResponseAPDU implements java.io.Serializable
 	* @param obj the object to be compared for equality with this response APDU
 	* @return true if the specified object is equal to this response APDU
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this response APDU.
 	*
 	* @return the hash code value for this response APDU.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

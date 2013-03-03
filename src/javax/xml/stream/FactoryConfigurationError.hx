@@ -37,14 +37,14 @@ package javax.xml.stream;
 	/**
 	* Default constructor
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct an exception with a nested inner exception
 	*
 	* @param e the exception to nest
 	*/
-	@:overload public function new(e : java.lang.Exception) : Void;
+	@:overload @:public public function new(e : java.lang.Exception) : Void;
 	
 	/**
 	* Construct an exception with a nested inner exception
@@ -53,7 +53,7 @@ package javax.xml.stream;
 	* @param e the exception to nest
 	* @param msg the message to report
 	*/
-	@:overload public function new(e : java.lang.Exception, msg : String) : Void;
+	@:overload @:public public function new(e : java.lang.Exception, msg : String) : Void;
 	
 	/**
 	* Construct an exception with a nested inner exception
@@ -62,33 +62,33 @@ package javax.xml.stream;
 	* @param msg the message to report
 	* @param e the exception to nest
 	*/
-	@:overload public function new(msg : String, e : java.lang.Exception) : Void;
+	@:overload @:public public function new(msg : String, e : java.lang.Exception) : Void;
 	
 	/**
 	* Construct an exception with associated message
 	*
 	* @param msg the message to report
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Return the nested exception (if any)
 	*
 	* @return the nested exception or null
 	*/
-	@:overload public function getException() : java.lang.Exception;
+	@:overload @:public public function getException() : java.lang.Exception;
 	
 	/**
 	* use the exception chaining mechanism of JDK1.4
 	*/
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	/**
 	* Report the message associated with this error
 	*
 	* @return the string value of the message
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

@@ -95,7 +95,7 @@ package java.awt;
 	* in a single row.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function new() : Void;
+	@:require(java1) @:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a grid layout with the specified number of rows and
@@ -109,7 +109,7 @@ package java.awt;
 	* @param     cols   the columns, with the value zero meaning
 	*                   any number of columns.
 	*/
-	@:overload public function new(rows : Int, cols : Int) : Void;
+	@:overload @:public public function new(rows : Int, cols : Int) : Void;
 	
 	/**
 	* Creates a grid layout with the specified number of rows and
@@ -135,14 +135,14 @@ package java.awt;
 	*                  <code>rows</code> and <code>cols</code> is
 	*                  set to zero
 	*/
-	@:overload public function new(rows : Int, cols : Int, hgap : Int, vgap : Int) : Void;
+	@:overload @:public public function new(rows : Int, cols : Int, hgap : Int, vgap : Int) : Void;
 	
 	/**
 	* Gets the number of rows in this layout.
 	* @return    the number of rows in this layout
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function getRows() : Int;
+	@:require(java1) @:overload @:public public function getRows() : Int;
 	
 	/**
 	* Sets the number of rows in this layout to the specified value.
@@ -151,14 +151,14 @@ package java.awt;
 	*               <code>rows</code> and <code>cols</code> is set to zero
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload public function setRows(rows : Int) : Void;
+	@:require(java1) @:overload @:public public function setRows(rows : Int) : Void;
 	
 	/**
 	* Gets the number of columns in this layout.
 	* @return     the number of columns in this layout
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getColumns() : Int;
+	@:require(java1) @:overload @:public public function getColumns() : Int;
 	
 	/**
 	* Sets the number of columns in this layout to the specified value.
@@ -172,48 +172,48 @@ package java.awt;
 	*               <code>rows</code> and <code>cols</code> is set to zero
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload public function setColumns(cols : Int) : Void;
+	@:require(java1) @:overload @:public public function setColumns(cols : Int) : Void;
 	
 	/**
 	* Gets the horizontal gap between components.
 	* @return       the horizontal gap between components
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload public function getHgap() : Int;
+	@:require(java1) @:overload @:public public function getHgap() : Int;
 	
 	/**
 	* Sets the horizontal gap between components to the specified value.
 	* @param        hgap   the horizontal gap between components
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload public function setHgap(hgap : Int) : Void;
+	@:require(java1) @:overload @:public public function setHgap(hgap : Int) : Void;
 	
 	/**
 	* Gets the vertical gap between components.
 	* @return       the vertical gap between components
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload public function getVgap() : Int;
+	@:require(java1) @:overload @:public public function getVgap() : Int;
 	
 	/**
 	* Sets the vertical gap between components to the specified value.
 	* @param         vgap  the vertical gap between components
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload public function setVgap(vgap : Int) : Void;
+	@:require(java1) @:overload @:public public function setVgap(vgap : Int) : Void;
 	
 	/**
 	* Adds the specified component with the specified name to the layout.
 	* @param name the name of the component
 	* @param comp the component to be added
 	*/
-	@:overload public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
 	
 	/**
 	* Removes the specified component from the layout.
 	* @param comp the component to be removed
 	*/
-	@:overload public function removeLayoutComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(comp : java.awt.Component) : Void;
 	
 	/**
 	* Determines the preferred size of the container argument using
@@ -235,7 +235,7 @@ package java.awt;
 	* @see       java.awt.GridLayout#minimumLayoutSize
 	* @see       java.awt.Container#getPreferredSize()
 	*/
-	@:overload public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Determines the minimum size of the container argument using this
@@ -257,7 +257,7 @@ package java.awt;
 	* @see         java.awt.GridLayout#preferredLayoutSize
 	* @see         java.awt.Container#doLayout
 	*/
-	@:overload public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Lays out the specified container using this layout.
@@ -277,13 +277,13 @@ package java.awt;
 	* @see        java.awt.Container
 	* @see        java.awt.Container#doLayout
 	*/
-	@:overload public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(parent : java.awt.Container) : Void;
 	
 	/**
 	* Returns the string representation of this grid layout's values.
 	* @return     a string representation of this grid layout
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

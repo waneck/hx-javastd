@@ -37,7 +37,7 @@ extern class BIClass extends com.sun.tools.internal.xjc.reader.xmlschema.bindinf
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Gets the specified class name, or null if not specified.
@@ -48,14 +48,14 @@ extern class BIClass extends com.sun.tools.internal.xjc.reader.xmlschema.bindinf
 	*      apply XML-to-Java name conversion to the name
 	*      returned from this method.
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Gets the fully qualified name of the
 	* user-specified implementation class, if any.
 	* Or null.
 	*/
-	@:overload public function getUserSpecifiedImplClass() : String;
+	@:overload @:public public function getUserSpecifiedImplClass() : String;
 	
 	/**
 	* Reference to the existing class, or null.
@@ -64,22 +64,22 @@ extern class BIClass extends com.sun.tools.internal.xjc.reader.xmlschema.bindinf
 	* <p>
 	* Caller needs to perform error check on this.
 	*/
-	@:overload public function getExistingClassRef() : String;
+	@:overload @:public public function getExistingClassRef() : String;
 	
-	@:overload public function getRecursive() : String;
+	@:overload @:public public function getRecursive() : String;
 	
 	/**
 	* Gets the javadoc comment specified in the customization.
 	* Can be null if none is specified.
 	*/
-	@:overload public function getJavadoc() : String;
+	@:overload @:public public function getJavadoc() : String;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getName() : javax.xml.namespace.QName;
 	
-	@:overload override public function setParent(p : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
+	@:overload @:public override public function setParent(p : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
 	
 	/** Name of this declaration. */
-	public static var NAME(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var NAME(default, null) : javax.xml.namespace.QName;
 	
 	
 }

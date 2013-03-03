@@ -48,7 +48,7 @@ package javax.net.ssl;
 	* @throws UnrecoverableKeyException if the key cannot be recovered
 	* @see KeyManagerFactory#init(KeyStore, char[])
 	*/
-	@:overload @:abstract private function engineInit(ks : java.security.KeyStore, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:protected @:abstract private function engineInit(ks : java.security.KeyStore, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Initializes this factory with a source of key material.
@@ -67,7 +67,7 @@ package javax.net.ssl;
 	*          with the parameters
 	* @see KeyManagerFactory#init(ManagerFactoryParameters spec)
 	*/
-	@:overload @:abstract private function engineInit(spec : javax.net.ssl.ManagerFactoryParameters) : Void;
+	@:overload @:protected @:abstract private function engineInit(spec : javax.net.ssl.ManagerFactoryParameters) : Void;
 	
 	/**
 	* Returns one key manager for each type of key material.
@@ -76,7 +76,7 @@ package javax.net.ssl;
 	* @throws IllegalStateException
 	*         if the KeyManagerFactorySpi is not initialized
 	*/
-	@:overload @:abstract private function engineGetKeyManagers() : java.NativeArray<javax.net.ssl.KeyManager>;
+	@:overload @:protected @:abstract private function engineGetKeyManagers() : java.NativeArray<javax.net.ssl.KeyManager>;
 	
 	
 }

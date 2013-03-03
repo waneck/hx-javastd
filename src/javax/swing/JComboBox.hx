@@ -69,7 +69,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see #getModel
 	* @see #setModel
 	*/
-	private var dataModel : javax.swing.ComboBoxModel<E>;
+	@:protected private var dataModel : javax.swing.ComboBoxModel<E>;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -78,7 +78,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see #getRenderer
 	* @see #setRenderer
 	*/
-	private var renderer : javax.swing.ListCellRenderer<E>;
+	@:protected private var renderer : javax.swing.ListCellRenderer<E>;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -87,7 +87,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see #getEditor
 	* @see #setEditor
 	*/
-	private var editor : javax.swing.ComboBoxEditor;
+	@:protected private var editor : javax.swing.ComboBoxEditor;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -96,7 +96,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see #getMaximumRowCount
 	* @see #setMaximumRowCount
 	*/
-	private var maximumRowCount : Int;
+	@:protected private var maximumRowCount : Int;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -105,7 +105,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see #setKeySelectionManager
 	* @see #getKeySelectionManager
 	*/
-	private var keySelectionManager : javax.swing.JComboBox.JComboBox_KeySelectionManager;
+	@:protected private var keySelectionManager : javax.swing.JComboBox.JComboBox_KeySelectionManager;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -114,7 +114,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see #setActionCommand
 	* @see #getActionCommand
 	*/
-	private var actionCommand : String;
+	@:protected private var actionCommand : String;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
@@ -123,13 +123,13 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see #setLightWeightPopupEnabled
 	* @see #isLightWeightPopupEnabled
 	*/
-	private var lightWeightPopupEnabled : Bool;
+	@:protected private var lightWeightPopupEnabled : Bool;
 	
 	/**
 	* This protected field is implementation specific. Do not access directly
 	* or override.
 	*/
-	private var selectedItemReminder : Dynamic;
+	@:protected private var selectedItemReminder : Dynamic;
 	
 	/**
 	* Creates a <code>JComboBox</code> that takes its items from an
@@ -142,7 +142,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*          displayed list of items
 	* @see DefaultComboBoxModel
 	*/
-	@:overload public function new(aModel : javax.swing.ComboBoxModel<E>) : Void;
+	@:overload @:public public function new(aModel : javax.swing.ComboBoxModel<E>) : Void;
 	
 	/**
 	* Creates a <code>JComboBox</code> that contains the elements
@@ -152,7 +152,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @param items  an array of objects to insert into the combo box
 	* @see DefaultComboBoxModel
 	*/
-	@:overload public function new(items : java.NativeArray<E>) : Void;
+	@:overload @:public public function new(items : java.NativeArray<E>) : Void;
 	
 	/**
 	* Creates a <code>JComboBox</code> that contains the elements
@@ -162,7 +162,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @param items  an array of vectors to insert into the combo box
 	* @see DefaultComboBoxModel
 	*/
-	@:overload public function new(items : java.util.Vector<E>) : Void;
+	@:overload @:public public function new(items : java.util.Vector<E>) : Void;
 	
 	/**
 	* Creates a <code>JComboBox</code> with a default data model.
@@ -172,9 +172,9 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*
 	* @see DefaultComboBoxModel
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload private function installAncestorListener() : Void;
+	@:overload @:protected private function installAncestorListener() : Void;
 	
 	/**
 	* Sets the L&F object that renders this component.
@@ -188,14 +188,14 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.ComboBoxUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.ComboBoxUI) : Void;
 	
 	/**
 	* Resets the UI property to a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -204,14 +204,14 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Returns the L&F object that renders this component.
 	*
 	* @return the ComboBoxUI object that renders this component
 	*/
-	@:overload public function getUI() : javax.swing.plaf.ComboBoxUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.ComboBoxUI;
 	
 	/**
 	* Sets the data model that the <code>JComboBox</code> uses to obtain
@@ -224,7 +224,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*        bound: true
 	*  description: Model that the combo box uses to get data to display.
 	*/
-	@:overload public function setModel(aModel : javax.swing.ComboBoxModel<E>) : Void;
+	@:overload @:public public function setModel(aModel : javax.swing.ComboBoxModel<E>) : Void;
 	
 	/**
 	* Returns the data model currently used by the <code>JComboBox</code>.
@@ -232,7 +232,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return the <code>ComboBoxModel</code> that provides the displayed
 	*                  list of items
 	*/
-	@:overload public function getModel() : javax.swing.ComboBoxModel<E>;
+	@:overload @:public public function getModel() : javax.swing.ComboBoxModel<E>;
 	
 	/**
 	* Sets the <code>lightWeightPopupEnabled</code> property, which
@@ -264,7 +264,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*       expert: true
 	*  description: Set to <code>false</code> to require heavyweight popups.
 	*/
-	@:overload public function setLightWeightPopupEnabled(aFlag : Bool) : Void;
+	@:overload @:public public function setLightWeightPopupEnabled(aFlag : Bool) : Void;
 	
 	/**
 	* Gets the value of the <code>lightWeightPopupEnabled</code>
@@ -274,7 +274,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*    property
 	* @see #setLightWeightPopupEnabled
 	*/
-	@:overload public function isLightWeightPopupEnabled() : Bool;
+	@:overload @:public public function isLightWeightPopupEnabled() : Bool;
 	
 	/**
 	* Determines whether the <code>JComboBox</code> field is editable.
@@ -293,7 +293,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*    preferred: true
 	*  description: If true, the user can type a new value in the combo box.
 	*/
-	@:overload public function setEditable(aFlag : Bool) : Void;
+	@:overload @:public public function setEditable(aFlag : Bool) : Void;
 	
 	/**
 	* Returns true if the <code>JComboBox</code> is editable.
@@ -301,7 +301,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*
 	* @return true if the <code>JComboBox</code> is editable, else false
 	*/
-	@:overload public function isEditable() : Bool;
+	@:overload @:public public function isEditable() : Bool;
 	
 	/**
 	* Sets the maximum number of rows the <code>JComboBox</code> displays.
@@ -315,7 +315,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*    preferred: true
 	*  description: The maximum number of rows the popup should have
 	*/
-	@:overload public function setMaximumRowCount(count : Int) : Void;
+	@:overload @:public public function setMaximumRowCount(count : Int) : Void;
 	
 	/**
 	* Returns the maximum number of items the combo box can display
@@ -324,7 +324,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return an integer specifying the maximum number of items that are
 	*         displayed in the list before using a scrollbar
 	*/
-	@:overload public function getMaximumRowCount() : Int;
+	@:overload @:public public function getMaximumRowCount() : Int;
 	
 	/**
 	* Sets the renderer that paints the list items and the item selected from the list in
@@ -347,7 +347,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*     expert: true
 	*  description: The renderer that paints the item selected in the list.
 	*/
-	@:overload public function setRenderer(aRenderer : javax.swing.ListCellRenderer<E>) : Void;
+	@:overload @:public public function setRenderer(aRenderer : javax.swing.ListCellRenderer<E>) : Void;
 	
 	/**
 	* Returns the renderer used to display the selected item in the
@@ -356,7 +356,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return  the <code>ListCellRenderer</code> that displays
 	*                  the selected item.
 	*/
-	@:overload public function getRenderer() : javax.swing.ListCellRenderer<E>;
+	@:overload @:public public function getRenderer() : javax.swing.ListCellRenderer<E>;
 	
 	/**
 	* Sets the editor used to paint and edit the selected item in the
@@ -372,7 +372,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*    expert: true
 	*  description: The editor that combo box uses to edit the current value
 	*/
-	@:overload public function setEditor(anEditor : javax.swing.ComboBoxEditor) : Void;
+	@:overload @:public public function setEditor(anEditor : javax.swing.ComboBoxEditor) : Void;
 	
 	/**
 	* Returns the editor used to paint and edit the selected item in the
@@ -380,7 +380,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*
 	* @return the <code>ComboBoxEditor</code> that displays the selected item
 	*/
-	@:overload public function getEditor() : javax.swing.ComboBoxEditor;
+	@:overload @:public public function getEditor() : javax.swing.ComboBoxEditor;
 	
 	/**
 	* Sets the selected item in the combo box display area to the object in
@@ -410,7 +410,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*    preferred:   true
 	*    description: Sets the selected item in the JComboBox.
 	*/
-	@:overload public function setSelectedItem(anObject : Dynamic) : Void;
+	@:overload @:public public function setSelectedItem(anObject : Dynamic) : Void;
 	
 	/**
 	* Returns the current selected item.
@@ -422,7 +422,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return the current selected Object
 	* @see #setSelectedItem
 	*/
-	@:overload public function getSelectedItem() : Dynamic;
+	@:overload @:public public function getSelectedItem() : Dynamic;
 	
 	/**
 	* Selects the item at index <code>anIndex</code>.
@@ -435,7 +435,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*   preferred: true
 	*  description: The item at index is selected.
 	*/
-	@:overload public function setSelectedIndex(anIndex : Int) : Void;
+	@:overload @:public public function setSelectedIndex(anIndex : Int) : Void;
 	
 	/**
 	* Returns the first item in the list that matches the given item.
@@ -450,7 +450,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*                  or -1 if no item is selected or if
 	*                  the currently selected item is not in the list
 	*/
-	@:overload public function getSelectedIndex() : Int;
+	@:overload @:public public function getSelectedIndex() : Int;
 	
 	/**
 	* Returns the "prototypical display" value - an Object used
@@ -460,7 +460,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see #setPrototypeDisplayValue
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getPrototypeDisplayValue() : E;
+	@:require(java4) @:overload @:public public function getPrototypeDisplayValue() : E;
 	
 	/**
 	* Sets the prototype display value used to calculate the size of the display
@@ -483,7 +483,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*   attribute: visualUpdate true
 	* description: The display prototype value, used to compute display width and height.
 	*/
-	@:require(java4) @:overload public function setPrototypeDisplayValue(prototypeDisplayValue : E) : Void;
+	@:require(java4) @:overload @:public public function setPrototypeDisplayValue(prototypeDisplayValue : E) : Void;
 	
 	/**
 	* Adds an item to the item list.
@@ -507,7 +507,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @param item the item to add to the list
 	* @see MutableComboBoxModel
 	*/
-	@:overload public function addItem(item : E) : Void;
+	@:overload @:public public function addItem(item : E) : Void;
 	
 	/**
 	* Inserts an item into the item list at a given index.
@@ -519,7 +519,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*                  to add the item
 	* @see MutableComboBoxModel
 	*/
-	@:overload public function insertItemAt(item : E, index : Int) : Void;
+	@:overload @:public public function insertItemAt(item : E, index : Int) : Void;
 	
 	/**
 	* Removes an item from the item list.
@@ -529,7 +529,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @param anObject  the object to remove from the item list
 	* @see MutableComboBoxModel
 	*/
-	@:overload public function removeItem(anObject : Dynamic) : Void;
+	@:overload @:public public function removeItem(anObject : Dynamic) : Void;
 	
 	/**
 	* Removes the item at <code>anIndex</code>
@@ -541,36 +541,36 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*                  indicates the first item in the list
 	* @see MutableComboBoxModel
 	*/
-	@:overload public function removeItemAt(anIndex : Int) : Void;
+	@:overload @:public public function removeItemAt(anIndex : Int) : Void;
 	
 	/**
 	* Removes all items from the item list.
 	*/
-	@:overload public function removeAllItems() : Void;
+	@:overload @:public public function removeAllItems() : Void;
 	
 	/**
 	* Causes the combo box to display its popup window.
 	* @see #setPopupVisible
 	*/
-	@:overload public function showPopup() : Void;
+	@:overload @:public public function showPopup() : Void;
 	
 	/**
 	* Causes the combo box to close its popup window.
 	* @see #setPopupVisible
 	*/
-	@:overload public function hidePopup() : Void;
+	@:overload @:public public function hidePopup() : Void;
 	
 	/**
 	* Sets the visibility of the popup.
 	*/
-	@:overload public function setPopupVisible(v : Bool) : Void;
+	@:overload @:public public function setPopupVisible(v : Bool) : Void;
 	
 	/**
 	* Determines the visibility of the popup.
 	*
 	* @return true if the popup is visible, otherwise returns false
 	*/
-	@:overload public function isPopupVisible() : Bool;
+	@:overload @:public public function isPopupVisible() : Bool;
 	
 	/**
 	* Adds an <code>ItemListener</code>.
@@ -581,13 +581,13 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @param aListener the <code>ItemListener</code> that is to be notified
 	* @see #setSelectedItem
 	*/
-	@:overload public function addItemListener(aListener : java.awt.event.ItemListener) : Void;
+	@:overload @:public public function addItemListener(aListener : java.awt.event.ItemListener) : Void;
 	
 	/** Removes an <code>ItemListener</code>.
 	*
 	* @param aListener  the <code>ItemListener</code> to remove
 	*/
-	@:overload public function removeItemListener(aListener : java.awt.event.ItemListener) : Void;
+	@:overload @:public public function removeItemListener(aListener : java.awt.event.ItemListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ItemListener</code>s added
@@ -597,7 +597,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getItemListeners() : java.NativeArray<java.awt.event.ItemListener>;
+	@:require(java4) @:overload @:public public function getItemListeners() : java.NativeArray<java.awt.event.ItemListener>;
 	
 	/**
 	* Adds an <code>ActionListener</code>.
@@ -609,13 +609,13 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @param l  the <code>ActionListener</code> that is to be notified
 	* @see #setSelectedItem
 	*/
-	@:overload public function addActionListener(l : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function addActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/** Removes an <code>ActionListener</code>.
 	*
 	* @param l  the <code>ActionListener</code> to remove
 	*/
-	@:overload public function removeActionListener(l : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function removeActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ActionListener</code>s added
@@ -625,7 +625,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
+	@:require(java4) @:overload @:public public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
 	
 	/**
 	* Adds a <code>PopupMenu</code> listener which will listen to notification
@@ -639,7 +639,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @param l  the <code>PopupMenuListener</code> to add
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function addPopupMenuListener(l : javax.swing.event.PopupMenuListener) : Void;
+	@:require(java4) @:overload @:public public function addPopupMenuListener(l : javax.swing.event.PopupMenuListener) : Void;
 	
 	/**
 	* Removes a <code>PopupMenuListener</code>.
@@ -648,7 +648,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see #addPopupMenuListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function removePopupMenuListener(l : javax.swing.event.PopupMenuListener) : Void;
+	@:require(java4) @:overload @:public public function removePopupMenuListener(l : javax.swing.event.PopupMenuListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>PopupMenuListener</code>s added
@@ -658,7 +658,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getPopupMenuListeners() : java.NativeArray<javax.swing.event.PopupMenuListener>;
+	@:require(java4) @:overload @:public public function getPopupMenuListeners() : java.NativeArray<javax.swing.event.PopupMenuListener>;
 	
 	/**
 	* Notifies <code>PopupMenuListener</code>s that the popup portion of the
@@ -669,7 +669,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see #addPopupMenuListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function firePopupMenuWillBecomeVisible() : Void;
+	@:require(java4) @:overload @:public public function firePopupMenuWillBecomeVisible() : Void;
 	
 	/**
 	* Notifies <code>PopupMenuListener</code>s that the popup portion of the
@@ -680,7 +680,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see #addPopupMenuListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function firePopupMenuWillBecomeInvisible() : Void;
+	@:require(java4) @:overload @:public public function firePopupMenuWillBecomeInvisible() : Void;
 	
 	/**
 	* Notifies <code>PopupMenuListener</code>s that the popup portion of the
@@ -691,7 +691,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see #addPopupMenuListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function firePopupMenuCanceled() : Void;
+	@:require(java4) @:overload @:public public function firePopupMenuCanceled() : Void;
 	
 	/**
 	* Sets the action command that should be included in the event
@@ -702,7 +702,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*                  do different things depending on the command it
 	*                  receives
 	*/
-	@:overload public function setActionCommand(aCommand : String) : Void;
+	@:overload @:public public function setActionCommand(aCommand : String) : Void;
 	
 	/**
 	* Returns the action command that is included in the event sent to
@@ -711,7 +711,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return  the string containing the "command" that is sent
 	*          to action listeners.
 	*/
-	@:overload public function getActionCommand() : String;
+	@:overload @:public public function getActionCommand() : String;
 	
 	/**
 	* Sets the <code>Action</code> for the <code>ActionEvent</code> source.
@@ -752,7 +752,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*    attribute: visualUpdate true
 	*  description: the Action instance connected with this ActionEvent source
 	*/
-	@:require(java3) @:overload public function setAction(a : javax.swing.Action) : Void;
+	@:require(java3) @:overload @:public public function setAction(a : javax.swing.Action) : Void;
 	
 	/**
 	* Returns the currently set <code>Action</code> for this
@@ -765,7 +765,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see Action
 	* @see #setAction
 	*/
-	@:require(java3) @:overload public function getAction() : javax.swing.Action;
+	@:require(java3) @:overload @:public public function getAction() : javax.swing.Action;
 	
 	/**
 	* Sets the properties on this combobox to match those in the specified
@@ -779,7 +779,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see Action
 	* @see #setAction
 	*/
-	@:require(java3) @:overload private function configurePropertiesFromAction(a : javax.swing.Action) : Void;
+	@:require(java3) @:overload @:protected private function configurePropertiesFromAction(a : javax.swing.Action) : Void;
 	
 	/**
 	* Creates and returns a <code>PropertyChangeListener</code> that is
@@ -795,7 +795,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see Action
 	* @see #setAction
 	*/
-	@:require(java3) @:overload private function createActionPropertyChangeListener(a : javax.swing.Action) : java.beans.PropertyChangeListener;
+	@:require(java3) @:overload @:protected private function createActionPropertyChangeListener(a : javax.swing.Action) : java.beans.PropertyChangeListener;
 	
 	/**
 	* Updates the combobox's state in response to property changes in
@@ -816,7 +816,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see Action
 	* @see #configurePropertiesFromAction
 	*/
-	@:require(java6) @:overload private function actionPropertyChanged(action : javax.swing.Action, propertyName : String) : Void;
+	@:require(java6) @:overload @:protected private function actionPropertyChanged(action : javax.swing.Action, propertyName : String) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -825,7 +825,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*
 	* @see EventListenerList
 	*/
-	@:overload private function fireItemStateChanged(e : java.awt.event.ItemEvent) : Void;
+	@:overload @:protected private function fireItemStateChanged(e : java.awt.event.ItemEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -833,13 +833,13 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*
 	* @see EventListenerList
 	*/
-	@:overload private function fireActionEvent() : Void;
+	@:overload @:protected private function fireActionEvent() : Void;
 	
 	/**
 	* This protected method is implementation specific. Do not access directly
 	* or override.
 	*/
-	@:overload private function selectedItemChanged() : Void;
+	@:overload @:protected private function selectedItemChanged() : Void;
 	
 	/**
 	* Returns an array containing the selected item.
@@ -849,31 +849,31 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return an array of <code>Objects</code> containing one
 	*          element -- the selected item
 	*/
-	@:overload public function getSelectedObjects() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getSelectedObjects() : java.NativeArray<Dynamic>;
 	
 	/**
 	* This method is public as an implementation side effect.
 	* do not call or override.
 	*/
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	/**
 	* This method is public as an implementation side effect.
 	* do not call or override.
 	*/
-	@:overload public function contentsChanged(e : javax.swing.event.ListDataEvent) : Void;
+	@:overload @:public public function contentsChanged(e : javax.swing.event.ListDataEvent) : Void;
 	
 	/**
 	* This method is public as an implementation side effect.
 	* do not call or override.
 	*/
-	@:overload public function intervalAdded(e : javax.swing.event.ListDataEvent) : Void;
+	@:overload @:public public function intervalAdded(e : javax.swing.event.ListDataEvent) : Void;
 	
 	/**
 	* This method is public as an implementation side effect.
 	* do not call or override.
 	*/
-	@:overload public function intervalRemoved(e : javax.swing.event.ListDataEvent) : Void;
+	@:overload @:public public function intervalRemoved(e : javax.swing.event.ListDataEvent) : Void;
 	
 	/**
 	* Selects the list item that corresponds to the specified keyboard
@@ -883,7 +883,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @param keyChar a char, typically this is a keyboard key
 	*                  typed by the user
 	*/
-	@:overload public function selectWithKeyChar(keyChar : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function selectWithKeyChar(keyChar : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Enables the combo box so that items can be selected. When the
@@ -897,7 +897,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*    preferred: true
 	*  description: Whether the combo box is enabled.
 	*/
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public override public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Initializes the editor with the specified item.
@@ -907,7 +907,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*                  combo box field and allows it to be edited
 	* @param anItem   the object to display and edit in the field
 	*/
-	@:overload public function configureEditor(anEditor : javax.swing.ComboBoxEditor, anItem : Dynamic) : Void;
+	@:overload @:public public function configureEditor(anEditor : javax.swing.ComboBoxEditor, anItem : Dynamic) : Void;
 	
 	/**
 	* Handles <code>KeyEvent</code>s, looking for the Tab key.
@@ -916,7 +916,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @param e  the <code>KeyEvent</code> containing the keyboard
 	*          key that was pressed
 	*/
-	@:overload public function processKeyEvent(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public override public function processKeyEvent(e : java.awt.event.KeyEvent) : Void;
 	
 	/**
 	* Sets the object that translates a keyboard character into a list
@@ -927,21 +927,21 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*       expert: true
 	*  description: The objects that changes the selection when a key is pressed.
 	*/
-	@:overload public function setKeySelectionManager(aManager : javax.swing.JComboBox.JComboBox_KeySelectionManager) : Void;
+	@:overload @:public public function setKeySelectionManager(aManager : javax.swing.JComboBox.JComboBox_KeySelectionManager) : Void;
 	
 	/**
 	* Returns the list's key-selection manager.
 	*
 	* @return the <code>KeySelectionManager</code> currently in use
 	*/
-	@:overload public function getKeySelectionManager() : javax.swing.JComboBox.JComboBox_KeySelectionManager;
+	@:overload @:public public function getKeySelectionManager() : javax.swing.JComboBox.JComboBox_KeySelectionManager;
 	
 	/**
 	* Returns the number of items in the list.
 	*
 	* @return an integer equal to the number of items in the list
 	*/
-	@:overload public function getItemCount() : Int;
+	@:overload @:public public function getItemCount() : Int;
 	
 	/**
 	* Returns the list item at the specified index.  If <code>index</code>
@@ -953,7 +953,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return the item at that list position; or
 	*                  <code>null</code> if out of range
 	*/
-	@:overload public function getItemAt(index : Int) : E;
+	@:overload @:public public function getItemAt(index : Int) : E;
 	
 	/**
 	* Returns an instance of the default key-selection manager.
@@ -961,7 +961,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return the <code>KeySelectionManager</code> currently used by the list
 	* @see #setKeySelectionManager
 	*/
-	@:overload private function createDefaultKeySelectionManager() : javax.swing.JComboBox.JComboBox_KeySelectionManager;
+	@:overload @:protected private function createDefaultKeySelectionManager() : javax.swing.JComboBox.JComboBox_KeySelectionManager;
 	
 	/**
 	* Returns a string representation of this <code>JComboBox</code>.
@@ -972,7 +972,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*
 	* @return  a string representation of this <code>JComboBox</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JComboBox.
@@ -983,13 +983,13 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return an AccessibleJComboBox that serves as the
 	*         AccessibleContext of this JComboBox
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
 @:native('javax$swing$JComboBox$ComboBoxActionPropertyChangeListener') @:internal extern class JComboBox_ComboBoxActionPropertyChangeListener extends javax.swing.ActionPropertyChangeListener<javax.swing.JComboBox<Dynamic>>
 {
-	@:overload private function actionPropertyChanged(cb : javax.swing.JComboBox<Dynamic>, action : javax.swing.Action, e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function actionPropertyChanged(cb : javax.swing.JComboBox<Dynamic>, action : javax.swing.Action, e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -1019,7 +1019,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 }
 @:native('javax$swing$JComboBox$DefaultKeySelectionManager') @:internal extern class JComboBox_DefaultKeySelectionManager implements javax.swing.JComboBox.JComboBox_KeySelectionManager implements java.io.Serializable
 {
-	@:overload public function selectionForKey(aKey : java.StdTypes.Char16, aModel : javax.swing.ComboBoxModel<Dynamic>) : Int;
+	@:overload @:public public function selectionForKey(aKey : java.StdTypes.Char16, aModel : javax.swing.ComboBoxModel<Dynamic>) : Int;
 	
 	
 }
@@ -1043,7 +1043,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* Returns an AccessibleJComboBox instance
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new() : Void;
+	@:require(java4) @:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -1052,7 +1052,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*
 	* @return the number of accessible children in the object.
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the nth Accessible child of the object.
@@ -1063,7 +1063,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @param i zero-based index of child
 	* @return the nth Accessible child of the object
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Get the role of this object.
@@ -1072,7 +1072,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the state set of this object.  The AccessibleStateSet of
@@ -1088,7 +1088,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see #addPropertyChangeListener
 	*
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the AccessibleAction associated with this object.  In the
@@ -1098,14 +1098,14 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload @:public override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Return a description of the specified action of the object.
 	*
 	* @param i zero-based index of the actions
 	*/
-	@:overload public function getAccessibleActionDescription(i : Int) : String;
+	@:overload @:public public function getAccessibleActionDescription(i : Int) : String;
 	
 	/**
 	* Returns the number of Actions available in this object.  The
@@ -1113,7 +1113,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*
 	* @return 1, the number of Actions in this object
 	*/
-	@:overload public function getAccessibleActionCount() : Int;
+	@:overload @:public public function getAccessibleActionCount() : Int;
 	
 	/**
 	* Perform the specified Action on the object
@@ -1121,7 +1121,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @param i zero-based index of actions
 	* @return true if the the action was performed; else false.
 	*/
-	@:overload public function doAccessibleAction(i : Int) : Bool;
+	@:overload @:public public function doAccessibleAction(i : Int) : Bool;
 	
 	/**
 	* Get the AccessibleSelection associated with this object.  In the
@@ -1131,7 +1131,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload @:public override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Returns the number of Accessible children currently selected.
@@ -1140,7 +1140,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return the number of items currently selected.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleSelectionCount() : Int;
+	@:require(java3) @:overload @:public public function getAccessibleSelectionCount() : Int;
 	
 	/**
 	* Returns an Accessible representing the specified selected child
@@ -1155,7 +1155,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see #getAccessibleSelectionCount
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
+	@:require(java3) @:overload @:public public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Determines if the current child of this object is selected.
@@ -1167,7 +1167,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see AccessibleContext#getAccessibleChild
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function isAccessibleChildSelected(i : Int) : Bool;
+	@:require(java3) @:overload @:public public function isAccessibleChildSelected(i : Int) : Bool;
 	
 	/**
 	* Adds the specified Accessible child of the object to the object's
@@ -1180,7 +1180,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see AccessibleContext#getAccessibleChild
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function addAccessibleSelection(i : Int) : Void;
+	@:require(java3) @:overload @:public public function addAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Removes the specified child of the object from the object's
@@ -1191,21 +1191,21 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see AccessibleContext#getAccessibleChild
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function removeAccessibleSelection(i : Int) : Void;
+	@:require(java3) @:overload @:public public function removeAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Clears the selection in the object, so that no children in the
 	* object are selected.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function clearAccessibleSelection() : Void;
+	@:require(java3) @:overload @:public public function clearAccessibleSelection() : Void;
 	
 	/**
 	* Causes every child of the object to be selected
 	* if the object supports multiple selections.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function selectAllAccessibleSelection() : Void;
+	@:require(java3) @:overload @:public public function selectAllAccessibleSelection() : Void;
 	
 	
 }
@@ -1214,7 +1214,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 */
 @:native('javax$swing$JComboBox$AccessibleJComboBox$AccessibleJComboBoxPropertyChangeListener') @:internal extern class JComboBox_AccessibleJComboBox_AccessibleJComboBoxPropertyChangeListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -1227,18 +1227,18 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	/**
 	*  This method is called before the popup menu becomes visible
 	*/
-	@:overload public function popupMenuWillBecomeVisible(e : javax.swing.event.PopupMenuEvent) : Void;
+	@:overload @:public public function popupMenuWillBecomeVisible(e : javax.swing.event.PopupMenuEvent) : Void;
 	
 	/**
 	* This method is called before the popup menu becomes invisible
 	* Note that a JPopupMenu can become invisible any time
 	*/
-	@:overload public function popupMenuWillBecomeInvisible(e : javax.swing.event.PopupMenuEvent) : Void;
+	@:overload @:public public function popupMenuWillBecomeInvisible(e : javax.swing.event.PopupMenuEvent) : Void;
 	
 	/**
 	* This method is called when the popup menu is canceled
 	*/
-	@:overload public function popupMenuCanceled(e : javax.swing.event.PopupMenuEvent) : Void;
+	@:overload @:public public function popupMenuCanceled(e : javax.swing.event.PopupMenuEvent) : Void;
 	
 	
 }
@@ -1248,13 +1248,13 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 */
 @:native('javax$swing$JComboBox$AccessibleJComboBox$AccessibleJComboBoxListSelectionListener') @:internal extern class JComboBox_AccessibleJComboBox_AccessibleJComboBoxListSelectionListener implements javax.swing.event.ListSelectionListener
 {
-	@:overload public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
+	@:overload @:public public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	
 	
 }
 @:native('javax$swing$JComboBox$AccessibleJComboBox$AccessibleEditor') @:internal extern class JComboBox_AccessibleJComboBox_AccessibleEditor implements javax.accessibility.Accessible
 {
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -1282,7 +1282,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Sets the localized accessible name of this object.  Changing the
@@ -1298,7 +1298,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*    preferred:   true
 	*    description: Sets the accessible name for the component.
 	*/
-	@:overload public function setAccessibleName(s : String) : Void;
+	@:overload @:public override public function setAccessibleName(s : String) : Void;
 	
 	/**
 	* Gets the accessibleDescription property of this object.  The
@@ -1312,7 +1312,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*
 	* @see #setAccessibleDescription
 	*/
-	@:overload public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
 	/**
 	* Sets the accessible description of this object.  Changing the
@@ -1328,7 +1328,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*    preferred:   true
 	*    description: Sets the accessible description for the component.
 	*/
-	@:overload public function setAccessibleDescription(s : String) : Void;
+	@:overload @:public override public function setAccessibleDescription(s : String) : Void;
 	
 	/**
 	* Gets the role of this object.  The role of the object is the generic
@@ -1348,7 +1348,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the state set of this object.  The AccessibleStateSet of an object
@@ -1362,7 +1362,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see AccessibleState
 	* @see #addPropertyChangeListener
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the Accessible parent of this object.
@@ -1370,7 +1370,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return the Accessible parent of this object; null if this
 	* object does not have an Accessible parent
 	*/
-	@:overload public function getAccessibleParent() : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleParent() : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the Accessible parent of this object.  This is meant to be used
@@ -1380,7 +1380,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*
 	* @param a - Accessible to be set as the parent
 	*/
-	@:overload public function setAccessibleParent(a : javax.accessibility.Accessible) : Void;
+	@:overload @:public override public function setAccessibleParent(a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Gets the 0-based index of this object in its accessible parent.
@@ -1392,14 +1392,14 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see #getAccessibleChildrenCount
 	* @see #getAccessibleChild
 	*/
-	@:overload public function getAccessibleIndexInParent() : Int;
+	@:overload @:public override public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Returns the number of accessible children of the object.
 	*
 	* @return the number of accessible children of the object.
 	*/
-	@:overload public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the specified Accessible child of the object.  The Accessible
@@ -1411,7 +1411,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return the Accessible child of the object
 	* @see #getAccessibleChildrenCount
 	*/
-	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the locale of the component. If the component does not have a
@@ -1425,7 +1425,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* added to a containment hierarchy such that the locale can be
 	* determined from the containing parent.
 	*/
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public override public function getLocale() : java.util.Locale;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list.
@@ -1442,7 +1442,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*
 	* @param listener  The PropertyChangeListener to be added
 	*/
-	@:overload public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a PropertyChangeListener from the listener list.
@@ -1451,7 +1451,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	*
 	* @param listener  The PropertyChangeListener to be removed
 	*/
-	@:overload public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Gets the AccessibleAction associated with this object that supports
@@ -1460,7 +1460,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return AccessibleAction if supported by object; else return null
 	* @see AccessibleAction
 	*/
-	@:overload public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload @:public override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Gets the AccessibleComponent associated with this object that has a
@@ -1469,7 +1469,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return AccessibleComponent if supported by object; else return null
 	* @see AccessibleComponent
 	*/
-	@:overload public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
+	@:overload @:public override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
 	
 	/**
 	* Gets the AccessibleSelection associated with this object which allows its
@@ -1478,7 +1478,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return AccessibleSelection if supported by object; else return null
 	* @see AccessibleSelection
 	*/
-	@:overload public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload @:public override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Gets the AccessibleText associated with this object presenting
@@ -1487,7 +1487,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return AccessibleText if supported by object; else return null
 	* @see AccessibleText
 	*/
-	@:overload public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload @:public override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Gets the AccessibleEditableText associated with this object
@@ -1496,7 +1496,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return AccessibleEditableText if supported by object; else return null
 	* @see AccessibleEditableText
 	*/
-	@:overload public function getAccessibleEditableText() : javax.accessibility.AccessibleEditableText;
+	@:overload @:public override public function getAccessibleEditableText() : javax.accessibility.AccessibleEditableText;
 	
 	/**
 	* Gets the AccessibleValue associated with this object that supports a
@@ -1505,7 +1505,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @return AccessibleValue if supported by object; else return null
 	* @see AccessibleValue
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Gets the AccessibleIcons associated with an object that has
@@ -1515,7 +1515,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* otherwise return null
 	* @see AccessibleIcon
 	*/
-	@:overload public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
+	@:overload @:public override public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
 	
 	/**
 	* Gets the AccessibleRelationSet associated with an object
@@ -1524,7 +1524,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* otherwise return null
 	* @see AccessibleRelationSet
 	*/
-	@:overload public function getAccessibleRelationSet() : javax.accessibility.AccessibleRelationSet;
+	@:overload @:public override public function getAccessibleRelationSet() : javax.accessibility.AccessibleRelationSet;
 	
 	/**
 	* Gets the AccessibleTable associated with an object
@@ -1533,7 +1533,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* otherwise return null
 	* @see AccessibleTable
 	*/
-	@:overload public function getAccessibleTable() : javax.accessibility.AccessibleTable;
+	@:overload @:public override public function getAccessibleTable() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Support for reporting bound property changes.  If oldValue and
@@ -1556,7 +1556,7 @@ extern class JComboBox<E> extends javax.swing.JComponent implements java.awt.Ite
 	* @see #ACCESSIBLE_TEXT_PROPERTY
 	* @see #ACCESSIBLE_VISIBLE_DATA_PROPERTY
 	*/
-	@:overload public function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:public override public function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	
 }

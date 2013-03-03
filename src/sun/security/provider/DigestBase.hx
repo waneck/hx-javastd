@@ -25,24 +25,24 @@ package sun.security.provider;
 */
 @:internal extern class DigestBase extends java.security.MessageDigestSpi implements java.lang.Cloneable
 {
-	@:overload @:final override private function engineGetDigestLength() : Int;
+	@:overload @:protected @:final override private function engineGetDigestLength() : Int;
 	
-	@:overload @:final override private function engineUpdate(b : java.StdTypes.Int8) : Void;
+	@:overload @:protected @:final override private function engineUpdate(b : java.StdTypes.Int8) : Void;
 	
-	@:overload @:final override private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : Void;
+	@:overload @:protected @:final override private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : Void;
 	
-	@:overload @:final override private function engineReset() : Void;
+	@:overload @:protected @:final override private function engineReset() : Void;
 	
-	@:overload @:final override private function engineDigest() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:final override private function engineDigest() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:final override private function engineDigest(out : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : Int;
+	@:overload @:protected @:final override private function engineDigest(out : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : Int;
 	
 	/**
 	* Clone this digest. Should be implemented as "return new MyDigest(this)".
 	* That constructor should first call "super(baseDigest)" and then copy
 	* subclass specific data.
 	*/
-	@:overload @:abstract override public function clone() : Dynamic;
+	@:overload @:public @:abstract override public function clone() : Dynamic;
 	
 	
 }

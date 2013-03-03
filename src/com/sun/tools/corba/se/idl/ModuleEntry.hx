@@ -39,13 +39,13 @@ extern class ModuleEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	/**
 	* This is the symbol table entry for modules.
 	**/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.ModuleEntry) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.ModuleEntry) : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/** Invoke the module generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -53,22 +53,22 @@ extern class ModuleEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload @:public override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the module generator.
 	@returns an object which implements the ModuleGen interface.
 	@see ModuleGen */
-	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload @:public override public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	/** alid entries in this vector are:  TypedefEntry, ExceptionEntry,
 	StructEntry, UnionEntry, EnumEntry, ConstEntry, InterfaceEntry,
 	ModuleEntry. */
-	@:overload public function addContained(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:public public function addContained(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/** This is a vector of SymtabEntry's.  Valid entries in this vector are:
 	TypedefEntry, ExceptionEntry, StructEntry, UnionEntry, EnumEntry,
 	ConstEntry, InterfaceEntry, ModuleEntry. */
-	@:overload public function contained() : java.util.Vector<Dynamic>;
+	@:overload @:public public function contained() : java.util.Vector<Dynamic>;
 	
 	
 }

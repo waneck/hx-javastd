@@ -32,21 +32,21 @@ extern class PropertyChangeListenerProxy extends java.util.EventListenerProxy<ja
 	* @param propertyName  the name of the property to listen on
 	* @param listener      the listener object
 	*/
-	@:overload public function new(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function new(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Forwards the property change event to the listener delegate.
 	*
 	* @param event  the property change event
 	*/
-	@:overload public function propertyChange(event : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(event : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* Returns the name of the named property associated with the listener.
 	*
 	* @return the name of the named property associated with the listener
 	*/
-	@:overload public function getPropertyName() : String;
+	@:overload @:public public function getPropertyName() : String;
 	
 	
 }

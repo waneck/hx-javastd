@@ -38,7 +38,7 @@ extern class Exchanger<V>
 	/**
 	* Creates a new Exchanger.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Waits for another thread to arrive at this exchange point (unless
@@ -73,7 +73,7 @@ extern class Exchanger<V>
 	* @throws InterruptedException if the current thread was
 	*         interrupted while waiting
 	*/
-	@:overload public function exchange(x : V) : V;
+	@:overload @:public public function exchange(x : V) : V;
 	
 	/**
 	* Waits for another thread to arrive at this exchange point (unless
@@ -117,7 +117,7 @@ extern class Exchanger<V>
 	* @throws TimeoutException if the specified waiting time elapses
 	*         before another thread enters the exchange
 	*/
-	@:overload public function exchange(x : V, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : V;
+	@:overload @:public public function exchange(x : V, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : V;
 	
 	
 }
@@ -131,16 +131,16 @@ extern class Exchanger<V>
 @:native('java$util$concurrent$Exchanger$Node') @:internal extern class Exchanger_Node extends java.util.concurrent.atomic.AtomicReference<Dynamic>
 {
 	/** The element offered by the Thread creating this node. */
-	public var item(default, null) : Dynamic;
+	@:public @:final public var item(default, null) : Dynamic;
 	
 	/** The Thread waiting to be signalled; null until waiting. */
-	@:volatile public var waiter : java.lang.Thread;
+	@:public @:volatile public var waiter : java.lang.Thread;
 	
 	/**
 	* Creates node with given item and empty hole.
 	* @param item the item
 	*/
-	@:overload public function new(item : Dynamic) : Void;
+	@:overload @:public public function new(item : Dynamic) : Void;
 	
 	
 }

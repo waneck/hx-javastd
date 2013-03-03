@@ -25,7 +25,7 @@ package java.lang.invoke;
 */
 @:internal extern class Invokers
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

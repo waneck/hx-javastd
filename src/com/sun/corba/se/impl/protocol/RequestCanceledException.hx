@@ -28,9 +28,9 @@ package com.sun.corba.se.impl.protocol;
 */
 extern class RequestCanceledException extends java.lang.RuntimeException
 {
-	@:overload public function new(requestId : Int) : Void;
+	@:overload @:public public function new(requestId : Int) : Void;
 	
-	@:overload public function getRequestId() : Int;
+	@:overload @:public public function getRequestId() : Int;
 	
 	
 }

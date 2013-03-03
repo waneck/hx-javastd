@@ -47,15 +47,15 @@ package sun.java2d.pipe;
 */
 extern class BufferedMaskBlit extends sun.java2d.loops.MaskBlit
 {
-	@:overload private function new(rq : sun.java2d.pipe.RenderQueue, srcType : sun.java2d.loops.SurfaceType, compType : sun.java2d.loops.CompositeType, dstType : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:protected private function new(rq : sun.java2d.pipe.RenderQueue, srcType : sun.java2d.loops.SurfaceType, compType : sun.java2d.loops.CompositeType, dstType : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload override public function MaskBlit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, srcx : Int, srcy : Int, dstx : Int, dsty : Int, width : Int, height : Int, mask : java.NativeArray<java.StdTypes.Int8>, maskoff : Int, maskscan : Int) : Void;
+	@:overload @:public override public function MaskBlit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, srcx : Int, srcy : Int, dstx : Int, dsty : Int, width : Int, height : Int, mask : java.NativeArray<java.StdTypes.Int8>, maskoff : Int, maskscan : Int) : Void;
 	
 	/**
 	* Validates the context state using the given destination surface
 	* and composite/clip values.
 	*/
-	@:overload @:abstract private function validateContext(dstData : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region) : Void;
+	@:overload @:protected @:abstract private function validateContext(dstData : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region) : Void;
 	
 	
 }

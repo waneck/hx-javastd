@@ -41,7 +41,7 @@ extern class Channels
 	*
 	* @return  A new input stream
 	*/
-	@:overload public static function newInputStream(ch : java.nio.channels.ReadableByteChannel) : java.io.InputStream;
+	@:overload @:public @:static public static function newInputStream(ch : java.nio.channels.ReadableByteChannel) : java.io.InputStream;
 	
 	/**
 	* Constructs a stream that writes bytes to the given channel.
@@ -57,7 +57,7 @@ extern class Channels
 	*
 	* @return  A new output stream
 	*/
-	@:overload public static function newOutputStream(ch : java.nio.channels.WritableByteChannel) : java.io.OutputStream;
+	@:overload @:public @:static public static function newOutputStream(ch : java.nio.channels.WritableByteChannel) : java.io.OutputStream;
 	
 	/**
 	* Constructs a stream that reads bytes from the given channel.
@@ -74,7 +74,7 @@ extern class Channels
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function newInputStream(ch : java.nio.channels.AsynchronousByteChannel) : java.io.InputStream;
+	@:require(java7) @:overload @:public @:static public static function newInputStream(ch : java.nio.channels.AsynchronousByteChannel) : java.io.InputStream;
 	
 	/**
 	* Constructs a stream that writes bytes to the given channel.
@@ -90,7 +90,7 @@ extern class Channels
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function newOutputStream(ch : java.nio.channels.AsynchronousByteChannel) : java.io.OutputStream;
+	@:require(java7) @:overload @:public @:static public static function newOutputStream(ch : java.nio.channels.AsynchronousByteChannel) : java.io.OutputStream;
 	
 	/**
 	* Constructs a channel that reads bytes from the given stream.
@@ -104,7 +104,7 @@ extern class Channels
 	*
 	* @return  A new readable byte channel
 	*/
-	@:overload public static function newChannel(_in : java.io.InputStream) : java.nio.channels.ReadableByteChannel;
+	@:overload @:public @:static public static function newChannel(_in : java.io.InputStream) : java.nio.channels.ReadableByteChannel;
 	
 	/**
 	* Constructs a channel that writes bytes to the given stream.
@@ -118,7 +118,7 @@ extern class Channels
 	*
 	* @return  A new writable byte channel
 	*/
-	@:overload public static function newChannel(out : java.io.OutputStream) : java.nio.channels.WritableByteChannel;
+	@:overload @:public @:static public static function newChannel(out : java.io.OutputStream) : java.nio.channels.WritableByteChannel;
 	
 	/**
 	* Constructs a reader that decodes bytes from the given channel using the
@@ -146,7 +146,7 @@ extern class Channels
 	*
 	* @return  A new reader
 	*/
-	@:overload public static function newReader(ch : java.nio.channels.ReadableByteChannel, dec : java.nio.charset.CharsetDecoder, minBufferCap : Int) : java.io.Reader;
+	@:overload @:public @:static public static function newReader(ch : java.nio.channels.ReadableByteChannel, dec : java.nio.charset.CharsetDecoder, minBufferCap : Int) : java.io.Reader;
 	
 	/**
 	* Constructs a reader that decodes bytes from the given channel according
@@ -177,7 +177,7 @@ extern class Channels
 	*          If no support for the named charset is available
 	*          in this instance of the Java virtual machine
 	*/
-	@:overload public static function newReader(ch : java.nio.channels.ReadableByteChannel, csName : String) : java.io.Reader;
+	@:overload @:public @:static public static function newReader(ch : java.nio.channels.ReadableByteChannel, csName : String) : java.io.Reader;
 	
 	/**
 	* Constructs a writer that encodes characters using the given encoder and
@@ -204,7 +204,7 @@ extern class Channels
 	*
 	* @return  A new writer
 	*/
-	@:overload public static function newWriter(ch : java.nio.channels.WritableByteChannel, enc : java.nio.charset.CharsetEncoder, minBufferCap : Int) : java.io.Writer;
+	@:overload @:public @:static public static function newWriter(ch : java.nio.channels.WritableByteChannel, enc : java.nio.charset.CharsetEncoder, minBufferCap : Int) : java.io.Writer;
 	
 	/**
 	* Constructs a writer that encodes characters according to the named
@@ -235,23 +235,23 @@ extern class Channels
 	*          If no support for the named charset is available
 	*          in this instance of the Java virtual machine
 	*/
-	@:overload public static function newWriter(ch : java.nio.channels.WritableByteChannel, csName : String) : java.io.Writer;
+	@:overload @:public @:static public static function newWriter(ch : java.nio.channels.WritableByteChannel, csName : String) : java.io.Writer;
 	
 	
 }
 @:native('java$nio$channels$Channels$ReadableByteChannelImpl') @:internal extern class Channels_ReadableByteChannelImpl extends java.nio.channels.spi.AbstractInterruptibleChannel implements java.nio.channels.ReadableByteChannel
 {
-	@:overload public function read(dst : java.nio.ByteBuffer) : Int;
+	@:overload @:public public function read(dst : java.nio.ByteBuffer) : Int;
 	
-	@:overload override private function implCloseChannel() : Void;
+	@:overload @:protected override private function implCloseChannel() : Void;
 	
 	
 }
 @:native('java$nio$channels$Channels$WritableByteChannelImpl') @:internal extern class Channels_WritableByteChannelImpl extends java.nio.channels.spi.AbstractInterruptibleChannel implements java.nio.channels.WritableByteChannel
 {
-	@:overload public function write(src : java.nio.ByteBuffer) : Int;
+	@:overload @:public public function write(src : java.nio.ByteBuffer) : Int;
 	
-	@:overload override private function implCloseChannel() : Void;
+	@:overload @:protected override private function implCloseChannel() : Void;
 	
 	
 }

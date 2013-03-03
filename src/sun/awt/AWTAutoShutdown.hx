@@ -28,7 +28,7 @@ extern class AWTAutoShutdown implements java.lang.Runnable
 	/**
 	* Returns reference to a single AWTAutoShutdown instance.
 	*/
-	@:overload public static function getInstance() : sun.awt.AWTAutoShutdown;
+	@:overload @:public @:static public static function getInstance() : sun.awt.AWTAutoShutdown;
 	
 	/**
 	* Notify that the toolkit thread is not waiting for a native event
@@ -38,7 +38,7 @@ extern class AWTAutoShutdown implements java.lang.Runnable
 	* @see     AWTAutoShutdown#setToolkitBusy
 	* @see     AWTAutoShutdown#isReadyToShutdown
 	*/
-	@:overload public static function notifyToolkitThreadBusy() : Void;
+	@:overload @:public @:static public static function notifyToolkitThreadBusy() : Void;
 	
 	/**
 	* Notify that the toolkit thread is waiting for a native event
@@ -48,7 +48,7 @@ extern class AWTAutoShutdown implements java.lang.Runnable
 	* @see     AWTAutoShutdown#setToolkitBusy
 	* @see     AWTAutoShutdown#isReadyToShutdown
 	*/
-	@:overload public static function notifyToolkitThreadFree() : Void;
+	@:overload @:public @:static public static function notifyToolkitThreadFree() : Void;
 	
 	/**
 	* Add a specified thread to the set of busy event dispatch threads.
@@ -59,7 +59,7 @@ extern class AWTAutoShutdown implements java.lang.Runnable
 	* @see     AWTAutoShutdown#notifyThreadFree
 	* @see     AWTAutoShutdown#isReadyToShutdown
 	*/
-	@:overload public function notifyThreadBusy(thread : java.lang.Thread) : Void;
+	@:overload @:public public function notifyThreadBusy(thread : java.lang.Thread) : Void;
 	
 	/**
 	* Remove a specified thread from the set of busy event dispatch threads.
@@ -70,7 +70,7 @@ extern class AWTAutoShutdown implements java.lang.Runnable
 	* @see     AWTAutoShutdown#notifyThreadBusy
 	* @see     AWTAutoShutdown#isReadyToShutdown
 	*/
-	@:overload public function notifyThreadFree(thread : java.lang.Thread) : Void;
+	@:overload @:public public function notifyThreadFree(thread : java.lang.Thread) : Void;
 	
 	/**
 	* Implementation of the Runnable interface.
@@ -78,7 +78,7 @@ extern class AWTAutoShutdown implements java.lang.Runnable
 	*
 	* @see     AWTAutoShutdown#isReadyToShutdown
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

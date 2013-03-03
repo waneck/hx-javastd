@@ -25,29 +25,31 @@ package com.sun.jndi.cosnaming;
 */
 extern class IiopUrl
 {
-	@:overload public function getAddresses() : java.util.Vector<Dynamic>;
+	@:overload @:public public function getAddresses() : java.util.Vector<Dynamic>;
 	
 	/**
 	* Returns a possibly empty but non-null string that is the "string_name"
 	* portion of the URL.
 	*/
-	@:overload public function getStringName() : String;
+	@:overload @:public public function getStringName() : String;
 	
-	@:overload public function getCosName() : javax.naming.Name;
+	@:overload @:public public function getCosName() : javax.naming.Name;
 	
-	@:overload public function new(url : String) : Void;
+	@:overload @:public public function new(url : String) : Void;
 	
 	
 }
 @:native('com$sun$jndi$cosnaming$IiopUrl$Address') extern class IiopUrl_Address
 {
-	public var port : Int;
+	@:public public var port : Int;
 	
-	public var major : Int;
+	@:public public var major : Int;
 	
-	public var host : String;
+	@:public public var minor : Int;
 	
-	@:overload public function new(hostPortVers : String, oldFormat : Bool) : Void;
+	@:public public var host : String;
+	
+	@:overload @:public public function new(hostPortVers : String, oldFormat : Bool) : Void;
 	
 	
 }

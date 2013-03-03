@@ -55,7 +55,7 @@ ate and Certificate Revocation List (CRL) Profile</a>.
 	/**
 	* Attribute name.
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
 	/**
 	* Creates a delta CRL indicator extension with the integer value .
@@ -63,7 +63,7 @@ ate and Certificate Revocation List (CRL) Profile</a>.
 	*
 	* @param crlNum the value to be set for the extension.
 	*/
-	@:overload public function new(crlNum : Int) : Void;
+	@:overload @:public public function new(crlNum : Int) : Void;
 	
 	/**
 	* Creates a delta CRL indictor extension with the BigInteger value .
@@ -71,7 +71,7 @@ ate and Certificate Revocation List (CRL) Profile</a>.
 	*
 	* @param crlNum the value to be set for the extension.
 	*/
-	@:overload public function new(crlNum : java.math.BigInteger) : Void;
+	@:overload @:public public function new(crlNum : java.math.BigInteger) : Void;
 	
 	/**
 	* Creates the extension from the passed DER encoded value of the same.
@@ -81,7 +81,7 @@ ate and Certificate Revocation List (CRL) Profile</a>.
 	* @exception ClassCastException if value is not an array of bytes
 	* @exception IOException on decoding error.
 	*/
-	@:overload public function new(critical : Null<Bool>, value : Dynamic) : Void;
+	@:overload @:public public function new(critical : Null<Bool>, value : Dynamic) : Void;
 	
 	/**
 	* Writes the extension to the DerOutputStream.
@@ -89,7 +89,7 @@ ate and Certificate Revocation List (CRL) Profile</a>.
 	* @param out the DerOutputStream to write the extension to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public override public function encode(out : java.io.OutputStream) : Void;
 	
 	
 }

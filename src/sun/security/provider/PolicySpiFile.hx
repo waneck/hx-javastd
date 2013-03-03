@@ -25,15 +25,15 @@ package sun.security.provider;
 */
 extern class PolicySpiFile extends java.security.PolicySpi
 {
-	@:overload public function new(params : java.security.Policy.Policy_Parameters) : Void;
+	@:overload @:public public function new(params : java.security.Policy.Policy_Parameters) : Void;
 	
-	@:overload private function engineGetPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
+	@:overload @:protected override private function engineGetPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
 	
-	@:overload private function engineGetPermissions(d : java.security.ProtectionDomain) : java.security.PermissionCollection;
+	@:overload @:protected override private function engineGetPermissions(d : java.security.ProtectionDomain) : java.security.PermissionCollection;
 	
-	@:overload private function engineImplies(d : java.security.ProtectionDomain, p : java.security.Permission) : Bool;
+	@:overload @:protected override private function engineImplies(d : java.security.ProtectionDomain, p : java.security.Permission) : Bool;
 	
-	@:overload private function engineRefresh() : Void;
+	@:overload @:protected override private function engineRefresh() : Void;
 	
 	
 }

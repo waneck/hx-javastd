@@ -40,14 +40,14 @@ extern class ForkJoinWorkerThread extends java.lang.Thread
 	* @param pool the pool this thread works in
 	* @throws NullPointerException if pool is null
 	*/
-	@:overload private function new(pool : java.util.concurrent.ForkJoinPool) : Void;
+	@:overload @:protected private function new(pool : java.util.concurrent.ForkJoinPool) : Void;
 	
 	/**
 	* Returns the pool hosting this thread.
 	*
 	* @return the pool
 	*/
-	@:overload public function getPool() : java.util.concurrent.ForkJoinPool;
+	@:overload @:public public function getPool() : java.util.concurrent.ForkJoinPool;
 	
 	/**
 	* Returns the index number of this thread in its pool.  The
@@ -58,7 +58,7 @@ extern class ForkJoinWorkerThread extends java.lang.Thread
 	*
 	* @return the index number
 	*/
-	@:overload public function getPoolIndex() : Int;
+	@:overload @:public public function getPoolIndex() : Int;
 	
 	/**
 	* Initializes internal state after construction but before
@@ -69,7 +69,7 @@ extern class ForkJoinWorkerThread extends java.lang.Thread
 	* threads work correctly even before this thread starts
 	* processing tasks.
 	*/
-	@:overload private function onStart() : Void;
+	@:overload @:protected private function onStart() : Void;
 	
 	/**
 	* Performs cleanup associated with termination of this worker
@@ -79,14 +79,14 @@ extern class ForkJoinWorkerThread extends java.lang.Thread
 	* @param exception the exception causing this thread to abort due
 	* to an unrecoverable error, or {@code null} if completed normally
 	*/
-	@:overload private function onTermination(exception : java.lang.Throwable) : Void;
+	@:overload @:protected private function onTermination(exception : java.lang.Throwable) : Void;
 	
 	/**
 	* This method is required to be public, but should never be
 	* called explicitly. It performs the main run loop to execute
 	* {@link ForkJoinTask}s.
 	*/
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

@@ -35,28 +35,28 @@ package javax.management;
 	/**
 	* Basic Constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new BinaryOpValueExp using operator o applied on v1 and
 	* v2 values.
 	*/
-	@:overload public function new(o : Int, v1 : javax.management.ValueExp, v2 : javax.management.ValueExp) : Void;
+	@:overload @:public public function new(o : Int, v1 : javax.management.ValueExp, v2 : javax.management.ValueExp) : Void;
 	
 	/**
 	* Returns the operator of the value expression.
 	*/
-	@:overload public function getOperator() : Int;
+	@:overload @:public public function getOperator() : Int;
 	
 	/**
 	* Returns the left value of the value expression.
 	*/
-	@:overload public function getLeftValue() : javax.management.ValueExp;
+	@:overload @:public public function getLeftValue() : javax.management.ValueExp;
 	
 	/**
 	* Returns the right value of the value expression.
 	*/
-	@:overload public function getRightValue() : javax.management.ValueExp;
+	@:overload @:public public function getRightValue() : javax.management.ValueExp;
 	
 	/**
 	* Applies the BinaryOpValueExp on a MBean.
@@ -70,14 +70,14 @@ package javax.management;
 	* @exception BadAttributeValueExpException
 	* @exception InvalidApplicationException
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
+	@:overload @:public public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
 	
 	/**
 	* Returns the string representing the object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function setMBeanServer(s : javax.management.MBeanServer) : Void;
+	@:overload @:public override public function setMBeanServer(s : javax.management.MBeanServer) : Void;
 	
 	
 }

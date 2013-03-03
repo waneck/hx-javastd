@@ -23,22 +23,22 @@ package com.sun.org.apache.xml.internal.resolver.tools;
 extern class CatalogResolver implements org.xml.sax.EntityResolver implements javax.xml.transform.URIResolver
 {
 	/** Make the parser Namespace aware? */
-	public var namespaceAware : Bool;
+	@:public public var namespaceAware : Bool;
 	
 	/** Make the parser validating? */
-	public var validating : Bool;
+	@:public public var validating : Bool;
 	
 	/** Constructor */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Constructor */
-	@:overload public function new(privateCatalog : Bool) : Void;
+	@:overload @:public public function new(privateCatalog : Bool) : Void;
 	
 	/** Constructor */
-	@:overload public function new(manager : com.sun.org.apache.xml.internal.resolver.CatalogManager) : Void;
+	@:overload @:public public function new(manager : com.sun.org.apache.xml.internal.resolver.CatalogManager) : Void;
 	
 	/** Return the underlying catalog */
-	@:overload public function getCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
+	@:overload @:public public function getCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
 	
 	/**
 	* Implements the guts of the <code>resolveEntity</code> method
@@ -60,7 +60,7 @@ extern class CatalogResolver implements org.xml.sax.EntityResolver implements ja
 	*
 	* @return The resolved identifier (a URI reference).
 	*/
-	@:overload public function getResolvedEntity(publicId : String, systemId : String) : String;
+	@:overload @:public public function getResolvedEntity(publicId : String, systemId : String) : String;
 	
 	/**
 	* Implements the <code>resolveEntity</code> method
@@ -89,10 +89,10 @@ extern class CatalogResolver implements org.xml.sax.EntityResolver implements ja
 	*
 	* @return An InputSource for the mapped identifier, or null.
 	*/
-	@:overload public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
 	/** JAXP URIResolver API */
-	@:overload public function resolve(href : String, base : String) : javax.xml.transform.Source;
+	@:overload @:public public function resolve(href : String, base : String) : javax.xml.transform.Source;
 	
 	
 }

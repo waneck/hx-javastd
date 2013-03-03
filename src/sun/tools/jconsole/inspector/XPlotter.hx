@@ -25,9 +25,9 @@ package sun.tools.jconsole.inspector;
 */
 extern class XPlotter extends sun.tools.jconsole.Plotter
 {
-	@:overload public function new(table : javax.swing.JTable, unit : sun.tools.jconsole.Plotter.Plotter_Unit) : Void;
+	@:overload @:public public function new(table : javax.swing.JTable, unit : sun.tools.jconsole.Plotter.Plotter_Unit) : Void;
 	
-	@:overload public function addValues(time : haxe.Int64, values : java.NativeArray<haxe.Int64>) : Void;
+	@:overload @:public override public function addValues(time : haxe.Int64, values : java.NativeArray<haxe.Int64>) : Void;
 	
 	
 }

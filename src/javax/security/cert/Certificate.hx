@@ -36,7 +36,7 @@ extern class Certificate
 	* @return true if the encoded forms of the two certificates
 	*         match, false otherwise.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode value for this certificate from its
@@ -44,7 +44,7 @@ extern class Certificate
 	*
 	* @return the hashcode value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the encoded form of this certificate. It is
@@ -56,7 +56,7 @@ extern class Certificate
 	* @exception CertificateEncodingException on internal certificate
 	*            encoding failure
 	*/
-	@:overload @:abstract public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Verifies that this certificate was signed using the
@@ -71,7 +71,7 @@ extern class Certificate
 	* @exception SignatureException on signature errors.
 	* @exception CertificateException on encoding errors.
 	*/
-	@:overload @:abstract public function verify(key : java.security.PublicKey) : Void;
+	@:overload @:public @:abstract public function verify(key : java.security.PublicKey) : Void;
 	
 	/**
 	* Verifies that this certificate was signed using the
@@ -87,21 +87,21 @@ extern class Certificate
 	* @exception SignatureException on signature errors.
 	* @exception CertificateException on encoding errors.
 	*/
-	@:overload @:abstract public function verify(key : java.security.PublicKey, sigProvider : String) : Void;
+	@:overload @:public @:abstract public function verify(key : java.security.PublicKey, sigProvider : String) : Void;
 	
 	/**
 	* Returns a string representation of this certificate.
 	*
 	* @return a string representation of this certificate.
 	*/
-	@:overload @:abstract public function toString() : String;
+	@:overload @:public @:abstract public function toString() : String;
 	
 	/**
 	* Gets the public key from this certificate.
 	*
 	* @return the public key.
 	*/
-	@:overload @:abstract public function getPublicKey() : java.security.PublicKey;
+	@:overload @:public @:abstract public function getPublicKey() : java.security.PublicKey;
 	
 	
 }

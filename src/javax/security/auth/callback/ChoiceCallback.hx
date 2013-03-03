@@ -63,7 +63,7 @@ extern class ChoiceCallback implements javax.security.auth.callback.Callback imp
 	*                  does not fall within the array boundaries of
 	*                  <code>choices</code>.
 	*/
-	@:overload public function new(prompt : String, choices : java.NativeArray<String>, defaultChoice : Int, multipleSelectionsAllowed : Bool) : Void;
+	@:overload @:public public function new(prompt : String, choices : java.NativeArray<String>, defaultChoice : Int, multipleSelectionsAllowed : Bool) : Void;
 	
 	/**
 	* Get the prompt.
@@ -72,7 +72,7 @@ extern class ChoiceCallback implements javax.security.auth.callback.Callback imp
 	*
 	* @return the prompt.
 	*/
-	@:overload public function getPrompt() : String;
+	@:overload @:public public function getPrompt() : String;
 	
 	/**
 	* Get the list of choices.
@@ -81,7 +81,7 @@ extern class ChoiceCallback implements javax.security.auth.callback.Callback imp
 	*
 	* @return the list of choices.
 	*/
-	@:overload public function getChoices() : java.NativeArray<String>;
+	@:overload @:public public function getChoices() : java.NativeArray<String>;
 	
 	/**
 	* Get the defaultChoice.
@@ -91,7 +91,7 @@ extern class ChoiceCallback implements javax.security.auth.callback.Callback imp
 	* @return the defaultChoice, represented as an index into
 	*          the <code>choices</code> list.
 	*/
-	@:overload public function getDefaultChoice() : Int;
+	@:overload @:public public function getDefaultChoice() : Int;
 	
 	/**
 	* Get the boolean determining whether multiple selections from
@@ -101,7 +101,7 @@ extern class ChoiceCallback implements javax.security.auth.callback.Callback imp
 	*
 	* @return whether multiple selections are allowed.
 	*/
-	@:overload public function allowMultipleSelections() : Bool;
+	@:overload @:public public function allowMultipleSelections() : Bool;
 	
 	/**
 	* Set the selected choice.
@@ -113,7 +113,7 @@ extern class ChoiceCallback implements javax.security.auth.callback.Callback imp
 	*
 	* @see #getSelectedIndexes
 	*/
-	@:overload public function setSelectedIndex(selection : Int) : Void;
+	@:overload @:public public function setSelectedIndex(selection : Int) : Void;
 	
 	/**
 	* Set the selected choices.
@@ -129,7 +129,7 @@ extern class ChoiceCallback implements javax.security.auth.callback.Callback imp
 	*
 	* @see #getSelectedIndexes
 	*/
-	@:overload public function setSelectedIndexes(selections : java.NativeArray<Int>) : Void;
+	@:overload @:public public function setSelectedIndexes(selections : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Get the selected choices.
@@ -141,7 +141,7 @@ extern class ChoiceCallback implements javax.security.auth.callback.Callback imp
 	*
 	* @see #setSelectedIndexes
 	*/
-	@:overload public function getSelectedIndexes() : java.NativeArray<Int>;
+	@:overload @:public public function getSelectedIndexes() : java.NativeArray<Int>;
 	
 	
 }

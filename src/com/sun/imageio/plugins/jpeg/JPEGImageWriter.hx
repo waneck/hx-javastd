@@ -25,79 +25,79 @@ package com.sun.imageio.plugins.jpeg;
 */
 extern class JPEGImageWriter extends javax.imageio.ImageWriter
 {
-	private static var WARNING_DEST_IGNORED(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_DEST_IGNORED(default, null) : Int;
 	
-	private static var WARNING_STREAM_METADATA_IGNORED(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_STREAM_METADATA_IGNORED(default, null) : Int;
 	
-	private static var WARNING_DEST_METADATA_COMP_MISMATCH(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_DEST_METADATA_COMP_MISMATCH(default, null) : Int;
 	
-	private static var WARNING_DEST_METADATA_JFIF_MISMATCH(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_DEST_METADATA_JFIF_MISMATCH(default, null) : Int;
 	
-	private static var WARNING_DEST_METADATA_ADOBE_MISMATCH(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_DEST_METADATA_ADOBE_MISMATCH(default, null) : Int;
 	
-	private static var WARNING_IMAGE_METADATA_JFIF_MISMATCH(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_IMAGE_METADATA_JFIF_MISMATCH(default, null) : Int;
 	
-	private static var WARNING_IMAGE_METADATA_ADOBE_MISMATCH(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_IMAGE_METADATA_ADOBE_MISMATCH(default, null) : Int;
 	
-	private static var WARNING_METADATA_NOT_JPEG_FOR_RASTER(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_METADATA_NOT_JPEG_FOR_RASTER(default, null) : Int;
 	
-	private static var WARNING_NO_BANDS_ON_INDEXED(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_NO_BANDS_ON_INDEXED(default, null) : Int;
 	
-	private static var WARNING_ILLEGAL_THUMBNAIL(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_ILLEGAL_THUMBNAIL(default, null) : Int;
 	
-	private static var WARNING_IGNORING_THUMBS(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_IGNORING_THUMBS(default, null) : Int;
 	
-	private static var WARNING_FORCING_JFIF(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_FORCING_JFIF(default, null) : Int;
 	
-	private static var WARNING_THUMB_CLIPPED(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_THUMB_CLIPPED(default, null) : Int;
 	
-	private static var WARNING_METADATA_ADJUSTED_FOR_THUMB(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_METADATA_ADJUSTED_FOR_THUMB(default, null) : Int;
 	
-	private static var WARNING_NO_RGB_THUMB_AS_INDEXED(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_NO_RGB_THUMB_AS_INDEXED(default, null) : Int;
 	
-	private static var WARNING_NO_GRAY_THUMB_AS_INDEXED(default, null) : Int;
+	@:protected @:static @:final private static var WARNING_NO_GRAY_THUMB_AS_INDEXED(default, null) : Int;
 	
-	@:overload public function new(originator : javax.imageio.spi.ImageWriterSpi) : Void;
+	@:overload @:public public function new(originator : javax.imageio.spi.ImageWriterSpi) : Void;
 	
-	@:overload override public function setOutput(output : Dynamic) : Void;
+	@:overload @:public override public function setOutput(output : Dynamic) : Void;
 	
-	@:overload override public function getDefaultWriteParam() : javax.imageio.ImageWriteParam;
+	@:overload @:public override public function getDefaultWriteParam() : javax.imageio.ImageWriteParam;
 	
-	@:overload override public function getDefaultStreamMetadata(param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getDefaultStreamMetadata(param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function getDefaultImageMetadata(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getDefaultImageMetadata(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function convertStreamMetadata(inData : javax.imageio.metadata.IIOMetadata, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function convertStreamMetadata(inData : javax.imageio.metadata.IIOMetadata, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function convertImageMetadata(inData : javax.imageio.metadata.IIOMetadata, imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function convertImageMetadata(inData : javax.imageio.metadata.IIOMetadata, imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function getNumThumbnailsSupported(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam, streamMetadata : javax.imageio.metadata.IIOMetadata, imageMetadata : javax.imageio.metadata.IIOMetadata) : Int;
+	@:overload @:public override public function getNumThumbnailsSupported(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam, streamMetadata : javax.imageio.metadata.IIOMetadata, imageMetadata : javax.imageio.metadata.IIOMetadata) : Int;
 	
-	@:overload override public function getPreferredThumbnailSizes(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam, streamMetadata : javax.imageio.metadata.IIOMetadata, imageMetadata : javax.imageio.metadata.IIOMetadata) : java.NativeArray<java.awt.Dimension>;
+	@:overload @:public override public function getPreferredThumbnailSizes(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam, streamMetadata : javax.imageio.metadata.IIOMetadata, imageMetadata : javax.imageio.metadata.IIOMetadata) : java.NativeArray<java.awt.Dimension>;
 	
-	@:overload override public function canWriteRasters() : Bool;
+	@:overload @:public override public function canWriteRasters() : Bool;
 	
-	@:overload override public function write(streamMetadata : javax.imageio.metadata.IIOMetadata, image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
+	@:overload @:public override public function write(streamMetadata : javax.imageio.metadata.IIOMetadata, image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
 	
-	@:overload override public function prepareWriteSequence(streamMetadata : javax.imageio.metadata.IIOMetadata) : Void;
+	@:overload @:public override public function prepareWriteSequence(streamMetadata : javax.imageio.metadata.IIOMetadata) : Void;
 	
-	@:overload override public function writeToSequence(image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
+	@:overload @:public override public function writeToSequence(image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
 	
-	@:overload override public function endWriteSequence() : Void;
+	@:overload @:public override public function endWriteSequence() : Void;
 	
-	@:overload @:synchronized override public function abort() : Void;
+	@:overload @:public @:synchronized override public function abort() : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload override public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
 	
 }
 @:native('com$sun$imageio$plugins$jpeg$JPEGImageWriter$JPEGWriterDisposerRecord') @:internal extern class JPEGImageWriter_JPEGWriterDisposerRecord implements sun.java2d.DisposerRecord
 {
-	@:overload public function new(pData : haxe.Int64) : Void;
+	@:overload @:public public function new(pData : haxe.Int64) : Void;
 	
-	@:overload @:synchronized public function dispose() : Void;
+	@:overload @:public @:synchronized public function dispose() : Void;
 	
 	
 }

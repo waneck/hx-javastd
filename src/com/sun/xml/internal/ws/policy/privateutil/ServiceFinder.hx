@@ -41,7 +41,7 @@ package com.sun.xml.internal.ws.policy.privateutil;
 	*                                   or names a provider class that cannot be found and instantiated
 	* @see #find(Class, ClassLoader)
 	*/
-	@:overload public static function find<T>(service : Class<T>) : com.sun.xml.internal.ws.policy.privateutil.ServiceFinder<T>;
+	@:overload @:public @:static public static function find<T>(service : Class<T>) : com.sun.xml.internal.ws.policy.privateutil.ServiceFinder<T>;
 	
 	/**
 	* Returns discovered objects incrementally.
@@ -52,7 +52,7 @@ package com.sun.xml.internal.ws.policy.privateutil;
 	*         file violates the specified format or if a provider class cannot
 	*         be found and instantiated.
 	*/
-	@:overload public function iterator() : java.util.Iterator<T>;
+	@:overload @:public public function iterator() : java.util.Iterator<T>;
 	
 	/**
 	* Returns discovered objects all at once.
@@ -62,7 +62,7 @@ package com.sun.xml.internal.ws.policy.privateutil;
 	*
 	* @throws ServiceConfigurationError
 	*/
-	@:overload public function toArray() : java.NativeArray<T>;
+	@:overload @:public public function toArray() : java.NativeArray<T>;
 	
 	
 }
@@ -71,11 +71,11 @@ package com.sun.xml.internal.ws.policy.privateutil;
 */
 @:native('com$sun$xml$internal$ws$policy$privateutil$ServiceFinder$LazyIterator') @:internal extern class ServiceFinder_LazyIterator<T> implements java.util.Iterator<T>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : T;
+	@:overload @:public public function next() : T;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

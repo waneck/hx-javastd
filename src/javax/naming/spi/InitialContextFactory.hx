@@ -62,7 +62,7 @@ package javax.naming.spi;
 	*             interface.
 	* @exception NamingException If cannot create an initial context.
 	*/
-	@:overload public function getInitialContext(environment : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
+	@:overload @:public public function getInitialContext(environment : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
 	
 	
 }

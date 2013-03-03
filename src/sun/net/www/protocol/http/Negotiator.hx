@@ -25,9 +25,9 @@ package sun.net.www.protocol.http;
 */
 extern class Negotiator
 {
-	@:overload @:abstract public function firstToken() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function firstToken() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:abstract public function nextToken(_in : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function nextToken(_in : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

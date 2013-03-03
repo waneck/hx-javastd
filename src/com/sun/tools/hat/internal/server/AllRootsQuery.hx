@@ -34,9 +34,9 @@ package com.sun.tools.hat.internal.server;
 	*
 	* @author      Bill Foote
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

@@ -25,22 +25,22 @@ package sun.security.provider;
 */
 extern class DSAKeyPairGenerator extends java.security.KeyPairGenerator implements java.security.interfaces.DSAKeyPairGenerator
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function initialize(modlen : Int, random : java.security.SecureRandom) : Void;
+	@:overload @:public override public function initialize(modlen : Int, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes the DSA key pair generator. If <code>genParams</code>
 	* is false, a set of pre-computed parameters is used.
 	*/
-	@:overload public function initialize(modlen : Int, genParams : Bool, random : java.security.SecureRandom) : Void;
+	@:overload @:public public function initialize(modlen : Int, genParams : Bool, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes the DSA object using a DSA parameter object.
 	*
 	* @param params a fully initialized DSA parameter object.
 	*/
-	@:overload public function initialize(params : java.security.interfaces.DSAParams, random : java.security.SecureRandom) : Void;
+	@:overload @:public public function initialize(params : java.security.interfaces.DSAParams, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes the DSA object using a parameter object.
@@ -52,15 +52,15 @@ extern class DSAKeyPairGenerator extends java.security.KeyPairGenerator implemen
 	* @exception InvalidAlgorithmParameterException if the given parameters
 	* are inappropriate for this key pair generator
 	*/
-	@:overload override public function initialize(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:public override public function initialize(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Generates a pair of keys usable by any JavaSecurity compliant
 	* DSA implementation.
 	*/
-	@:overload override public function generateKeyPair() : java.security.KeyPair;
+	@:overload @:public override public function generateKeyPair() : java.security.KeyPair;
 	
-	@:overload public function generateKeyPair(p : java.math.BigInteger, q : java.math.BigInteger, g : java.math.BigInteger, random : java.security.SecureRandom) : java.security.KeyPair;
+	@:overload @:public public function generateKeyPair(p : java.math.BigInteger, q : java.math.BigInteger, g : java.math.BigInteger, random : java.security.SecureRandom) : java.security.KeyPair;
 	
 	
 }

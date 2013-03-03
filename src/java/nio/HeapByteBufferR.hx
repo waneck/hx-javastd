@@ -36,61 +36,61 @@ package java.nio;
 */
 @:internal extern class HeapByteBufferR extends java.nio.HeapByteBuffer
 {
-	@:overload private function new(buf : java.NativeArray<java.StdTypes.Int8>, mark : Int, pos : Int, lim : Int, cap : Int, off : Int) : Void;
+	@:overload @:protected private function new(buf : java.NativeArray<java.StdTypes.Int8>, mark : Int, pos : Int, lim : Int, cap : Int, off : Int) : Void;
 	
-	@:overload override public function slice() : java.nio.ByteBuffer;
+	@:overload @:public override public function slice() : java.nio.ByteBuffer;
 	
-	@:overload override public function duplicate() : java.nio.ByteBuffer;
+	@:overload @:public override public function duplicate() : java.nio.ByteBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.ByteBuffer;
+	@:overload @:public override public function asReadOnlyBuffer() : java.nio.ByteBuffer;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload override public function put(x : java.StdTypes.Int8) : java.nio.ByteBuffer;
+	@:overload @:public override public function put(x : java.StdTypes.Int8) : java.nio.ByteBuffer;
 	
-	@:overload override public function put(i : Int, x : java.StdTypes.Int8) : java.nio.ByteBuffer;
+	@:overload @:public override public function put(i : Int, x : java.StdTypes.Int8) : java.nio.ByteBuffer;
 	
-	@:overload override public function put(src : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : java.nio.ByteBuffer;
+	@:overload @:public override public function put(src : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : java.nio.ByteBuffer;
 	
-	@:overload override public function put(src : java.nio.ByteBuffer) : java.nio.ByteBuffer;
+	@:overload @:public override public function put(src : java.nio.ByteBuffer) : java.nio.ByteBuffer;
 	
-	@:overload override public function compact() : java.nio.ByteBuffer;
+	@:overload @:public override public function compact() : java.nio.ByteBuffer;
 	
-	@:overload override public function putChar(x : java.StdTypes.Char16) : java.nio.ByteBuffer;
+	@:overload @:public override public function putChar(x : java.StdTypes.Char16) : java.nio.ByteBuffer;
 	
-	@:overload override public function putChar(i : Int, x : java.StdTypes.Char16) : java.nio.ByteBuffer;
+	@:overload @:public override public function putChar(i : Int, x : java.StdTypes.Char16) : java.nio.ByteBuffer;
 	
-	@:overload override public function asCharBuffer() : java.nio.CharBuffer;
+	@:overload @:public override public function asCharBuffer() : java.nio.CharBuffer;
 	
-	@:overload override public function putShort(x : java.StdTypes.Int16) : java.nio.ByteBuffer;
+	@:overload @:public override public function putShort(x : java.StdTypes.Int16) : java.nio.ByteBuffer;
 	
-	@:overload override public function putShort(i : Int, x : java.StdTypes.Int16) : java.nio.ByteBuffer;
+	@:overload @:public override public function putShort(i : Int, x : java.StdTypes.Int16) : java.nio.ByteBuffer;
 	
-	@:overload override public function asShortBuffer() : java.nio.ShortBuffer;
+	@:overload @:public override public function asShortBuffer() : java.nio.ShortBuffer;
 	
-	@:overload override public function putInt(x : Int) : java.nio.ByteBuffer;
+	@:overload @:public override public function putInt(x : Int) : java.nio.ByteBuffer;
 	
-	@:overload override public function putInt(i : Int, x : Int) : java.nio.ByteBuffer;
+	@:overload @:public override public function putInt(i : Int, x : Int) : java.nio.ByteBuffer;
 	
-	@:overload override public function asIntBuffer() : java.nio.IntBuffer;
+	@:overload @:public override public function asIntBuffer() : java.nio.IntBuffer;
 	
-	@:overload override public function putLong(x : haxe.Int64) : java.nio.ByteBuffer;
+	@:overload @:public override public function putLong(x : haxe.Int64) : java.nio.ByteBuffer;
 	
-	@:overload override public function putLong(i : Int, x : haxe.Int64) : java.nio.ByteBuffer;
+	@:overload @:public override public function putLong(i : Int, x : haxe.Int64) : java.nio.ByteBuffer;
 	
-	@:overload override public function asLongBuffer() : java.nio.LongBuffer;
+	@:overload @:public override public function asLongBuffer() : java.nio.LongBuffer;
 	
-	@:overload override public function putFloat(x : Single) : java.nio.ByteBuffer;
+	@:overload @:public override public function putFloat(x : Single) : java.nio.ByteBuffer;
 	
-	@:overload override public function putFloat(i : Int, x : Single) : java.nio.ByteBuffer;
+	@:overload @:public override public function putFloat(i : Int, x : Single) : java.nio.ByteBuffer;
 	
-	@:overload override public function asFloatBuffer() : java.nio.FloatBuffer;
+	@:overload @:public override public function asFloatBuffer() : java.nio.FloatBuffer;
 	
-	@:overload override public function putDouble(x : Float) : java.nio.ByteBuffer;
+	@:overload @:public override public function putDouble(x : Float) : java.nio.ByteBuffer;
 	
-	@:overload override public function putDouble(i : Int, x : Float) : java.nio.ByteBuffer;
+	@:overload @:public override public function putDouble(i : Int, x : Float) : java.nio.ByteBuffer;
 	
-	@:overload override public function asDoubleBuffer() : java.nio.DoubleBuffer;
+	@:overload @:public override public function asDoubleBuffer() : java.nio.DoubleBuffer;
 	
 	
 }

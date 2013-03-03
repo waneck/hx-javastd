@@ -32,7 +32,7 @@ extern class ConnectorAddressLink
 	*
 	* @param address The connector address.
 	*/
-	@:overload public static function export(address : String) : Void;
+	@:overload @:public @:static public static function export(address : String) : Void;
 	
 	/**
 	* Imports the connector address from the instrument buffer
@@ -47,7 +47,7 @@ extern class ConnectorAddressLink
 	* @throws IOException An I/O error occurred while trying to acquire the
 	* instrumentation buffer.
 	*/
-	@:overload public static function importFrom(vmid : Int) : String;
+	@:overload @:public @:static public static function importFrom(vmid : Int) : String;
 	
 	/**
 	* Exports the specified remote connector address and associated
@@ -57,7 +57,7 @@ extern class ConnectorAddressLink
 	*
 	* @param properties The remote connector address properties.
 	*/
-	@:overload public static function exportRemote(properties : java.util.Map<String, String>) : Void;
+	@:overload @:public @:static public static function exportRemote(properties : java.util.Map<String, String>) : Void;
 	
 	/**
 	* Imports the remote connector address and associated
@@ -73,7 +73,7 @@ extern class ConnectorAddressLink
 	* @throws IOException An I/O error occurred while trying to acquire the
 	* instrumentation buffer.
 	*/
-	@:overload public static function importRemoteFrom(vmid : Int) : java.util.Map<String, String>;
+	@:overload @:public @:static public static function importRemoteFrom(vmid : Int) : java.util.Map<String, String>;
 	
 	
 }

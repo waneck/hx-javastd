@@ -31,23 +31,23 @@ extern class CAttributePropertyInfo extends com.sun.tools.internal.xjc.model.CSi
 	* @param typeName
 	*      XML Schema type name of this attribute. Optional for other schema languages.
 	*/
-	@:overload public function new(name : String, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations, locator : org.xml.sax.Locator, attName : javax.xml.namespace.QName, type : com.sun.tools.internal.xjc.model.TypeUse, typeName : javax.xml.namespace.QName, required : Bool) : Void;
+	@:overload @:public public function new(name : String, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations, locator : org.xml.sax.Locator, attName : javax.xml.namespace.QName, type : com.sun.tools.internal.xjc.model.TypeUse, typeName : javax.xml.namespace.QName, required : Bool) : Void;
 	
-	@:overload public function isRequired() : Bool;
+	@:overload @:public public function isRequired() : Bool;
 	
-	@:overload public function getXmlName() : javax.xml.namespace.QName;
+	@:overload @:public public function getXmlName() : javax.xml.namespace.QName;
 	
 	/**
 	* An optional attribute can never be unboxable,
 	* for we need null to represent the absence.
 	*/
-	@:overload override public function isUnboxable() : Bool;
+	@:overload @:public override public function isUnboxable() : Bool;
 	
-	@:overload override public function isOptionalPrimitive() : Bool;
+	@:overload @:public override public function isOptionalPrimitive() : Bool;
 	
-	@:overload override public function accept<V>(visitor : com.sun.tools.internal.xjc.model.CPropertyVisitor<V>) : V;
+	@:overload @:public override public function accept<V>(visitor : com.sun.tools.internal.xjc.model.CPropertyVisitor<V>) : V;
 	
-	@:overload @:final override public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:public @:final override public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
 	
 }

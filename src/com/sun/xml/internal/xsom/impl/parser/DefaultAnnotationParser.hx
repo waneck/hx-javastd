@@ -25,11 +25,11 @@ package com.sun.xml.internal.xsom.impl.parser;
 */
 @:internal extern class DefaultAnnotationParser extends com.sun.xml.internal.xsom.parser.AnnotationParser
 {
-	public static var theInstance(default, null) : com.sun.xml.internal.xsom.parser.AnnotationParser;
+	@:public @:static @:final public static var theInstance(default, null) : com.sun.xml.internal.xsom.parser.AnnotationParser;
 	
-	@:overload public function getContentHandler(contest : com.sun.xml.internal.xsom.parser.AnnotationContext, elementName : String, errorHandler : org.xml.sax.ErrorHandler, entityResolver : org.xml.sax.EntityResolver) : org.xml.sax.ContentHandler;
+	@:overload @:public override public function getContentHandler(contest : com.sun.xml.internal.xsom.parser.AnnotationContext, elementName : String, errorHandler : org.xml.sax.ErrorHandler, entityResolver : org.xml.sax.EntityResolver) : org.xml.sax.ContentHandler;
 	
-	@:overload public function getResult(existing : Dynamic) : Dynamic;
+	@:overload @:public override public function getResult(existing : Dynamic) : Dynamic;
 	
 	
 }

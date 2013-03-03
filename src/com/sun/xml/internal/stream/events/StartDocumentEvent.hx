@@ -31,51 +31,51 @@ extern class StartDocumentEvent extends com.sun.xml.internal.stream.events.Dummy
 	* @author K.Venugopal Sun Microsystems,Inc.
 	*
 	*/
-	private var fSystemId : String;
+	@:protected private var fSystemId : String;
 	
-	private var fEncodingScheam : String;
+	@:protected private var fEncodingScheam : String;
 	
-	private var fStandalone : Bool;
+	@:protected private var fStandalone : Bool;
 	
-	private var fVersion : String;
+	@:protected private var fVersion : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(encoding : String) : Void;
+	@:overload @:public public function new(encoding : String) : Void;
 	
-	@:overload public function new(encoding : String, version : String) : Void;
+	@:overload @:public public function new(encoding : String, version : String) : Void;
 	
-	@:overload public function new(encoding : String, version : String, standalone : Bool) : Void;
+	@:overload @:public public function new(encoding : String, version : String, standalone : Bool) : Void;
 	
-	@:overload public function new(encoding : String, version : String, standalone : Bool, loc : javax.xml.stream.Location) : Void;
+	@:overload @:public public function new(encoding : String, version : String, standalone : Bool, loc : javax.xml.stream.Location) : Void;
 	
-	@:overload private function init(encoding : String, version : String, standalone : Bool, loc : javax.xml.stream.Location) : Void;
+	@:overload @:protected private function init(encoding : String, version : String, standalone : Bool, loc : javax.xml.stream.Location) : Void;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
-	@:overload public function getCharacterEncodingScheme() : String;
+	@:overload @:public public function getCharacterEncodingScheme() : String;
 	
-	@:overload public function isStandalone() : Bool;
+	@:overload @:public public function isStandalone() : Bool;
 	
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
-	@:overload public function setStandalone(flag : Bool) : Void;
+	@:overload @:public public function setStandalone(flag : Bool) : Void;
 	
-	@:overload public function setStandalone(s : String) : Void;
+	@:overload @:public public function setStandalone(s : String) : Void;
 	
-	@:overload public function encodingSet() : Bool;
+	@:overload @:public public function encodingSet() : Bool;
 	
-	@:overload public function standaloneSet() : Bool;
+	@:overload @:public public function standaloneSet() : Bool;
 	
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
-	@:overload public function setVersion(s : String) : Void;
+	@:overload @:public public function setVersion(s : String) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function isStartDocument() : Bool;
+	@:overload @:public override public function isStartDocument() : Bool;
 	
-	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload @:protected override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	
 }

@@ -43,19 +43,19 @@ package javax.naming.ldap;
 	* The ManageReferral control's assigned object identifier
 	* is 2.16.840.1.113730.3.4.2.
 	*/
-	public static var OID(default, null) : String;
+	@:public @:static @:final public static var OID(default, null) : String;
 	
 	/**
 	* Constructs a critical ManageReferral control.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a ManageReferral control.
 	*
 	* @param   criticality The control's criticality setting.
 	*/
-	@:overload public function new(criticality : Bool) : Void;
+	@:overload @:public public function new(criticality : Bool) : Void;
 	
 	
 }

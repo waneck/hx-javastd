@@ -20,36 +20,36 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 */
 @:internal extern class ValidatorImpl extends javax.xml.validation.Validator implements com.sun.org.apache.xerces.internal.xs.PSVIProvider
 {
-	@:overload public function new(grammarContainer : com.sun.org.apache.xerces.internal.jaxp.validation.XSGrammarPoolContainer) : Void;
+	@:overload @:public public function new(grammarContainer : com.sun.org.apache.xerces.internal.jaxp.validation.XSGrammarPoolContainer) : Void;
 	
-	@:overload public function validate(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
+	@:overload @:public override public function validate(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
 	
-	@:overload public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public override public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public override public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
-	@:overload public function setResourceResolver(resourceResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
+	@:overload @:public override public function setResourceResolver(resourceResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
 	
-	@:overload public function getResourceResolver() : org.w3c.dom.ls.LSResourceResolver;
+	@:overload @:public override public function getResourceResolver() : org.w3c.dom.ls.LSResourceResolver;
 	
-	@:overload public function getFeature(name : String) : Bool;
+	@:overload @:public override public function getFeature(name : String) : Bool;
 	
-	@:overload public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public override public function setFeature(name : String, value : Bool) : Void;
 	
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public override public function getProperty(name : String) : Dynamic;
 	
-	@:overload public function setProperty(name : String, object : Dynamic) : Void;
+	@:overload @:public override public function setProperty(name : String, object : Dynamic) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/*
 	* PSVIProvider methods
 	*/
-	@:overload public function getElementPSVI() : com.sun.org.apache.xerces.internal.xs.ElementPSVI;
+	@:overload @:public public function getElementPSVI() : com.sun.org.apache.xerces.internal.xs.ElementPSVI;
 	
-	@:overload public function getAttributePSVI(index : Int) : com.sun.org.apache.xerces.internal.xs.AttributePSVI;
+	@:overload @:public public function getAttributePSVI(index : Int) : com.sun.org.apache.xerces.internal.xs.AttributePSVI;
 	
-	@:overload public function getAttributePSVIByName(uri : String, localname : String) : com.sun.org.apache.xerces.internal.xs.AttributePSVI;
+	@:overload @:public public function getAttributePSVIByName(uri : String, localname : String) : com.sun.org.apache.xerces.internal.xs.AttributePSVI;
 	
 	
 }

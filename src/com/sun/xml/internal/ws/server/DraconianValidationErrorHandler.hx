@@ -31,11 +31,11 @@ extern class DraconianValidationErrorHandler extends com.sun.xml.internal.ws.dev
 	*
 	* @author Jitendra Kotamraju
 	*/
-	@:overload override public function warning(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function warning(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function error(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function fatalError(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function fatalError(e : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

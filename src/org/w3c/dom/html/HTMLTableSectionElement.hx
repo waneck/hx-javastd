@@ -44,38 +44,38 @@ extern interface HTMLTableSectionElement extends org.w3c.dom.html.HTMLElement
 	*  Horizontal alignment of data in cells. See the <code>align</code>
 	* attribute for HTMLTheadElement for details.
 	*/
-	@:overload public function getAlign() : String;
+	@:overload @:public public function getAlign() : String;
 	
-	@:overload public function setAlign(align : String) : Void;
+	@:overload @:public public function setAlign(align : String) : Void;
 	
 	/**
 	*  Alignment character for cells in a column. See the  char attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getCh() : String;
+	@:overload @:public public function getCh() : String;
 	
-	@:overload public function setCh(ch : String) : Void;
+	@:overload @:public public function setCh(ch : String) : Void;
 	
 	/**
 	*  Offset of alignment character. See the  charoff attribute definition
 	* in HTML 4.0.
 	*/
-	@:overload public function getChOff() : String;
+	@:overload @:public public function getChOff() : String;
 	
-	@:overload public function setChOff(chOff : String) : Void;
+	@:overload @:public public function setChOff(chOff : String) : Void;
 	
 	/**
 	*  Vertical alignment of data in cells. See the <code>valign</code>
 	* attribute for HTMLTheadElement for details.
 	*/
-	@:overload public function getVAlign() : String;
+	@:overload @:public public function getVAlign() : String;
 	
-	@:overload public function setVAlign(vAlign : String) : Void;
+	@:overload @:public public function setVAlign(vAlign : String) : Void;
 	
 	/**
 	*  The collection of rows in this table section.
 	*/
-	@:overload public function getRows() : org.w3c.dom.html.HTMLCollection;
+	@:overload @:public public function getRows() : org.w3c.dom.html.HTMLCollection;
 	
 	/**
 	*  Insert a row into this section. The new row is inserted immediately
@@ -90,7 +90,7 @@ extern interface HTMLTableSectionElement extends org.w3c.dom.html.HTMLElement
 	*    INDEX_SIZE_ERR: Raised if the specified index is greater than the
 	*   number of rows of if the index is neagative.
 	*/
-	@:overload public function insertRow(index : Int) : org.w3c.dom.html.HTMLElement;
+	@:overload @:public public function insertRow(index : Int) : org.w3c.dom.html.HTMLElement;
 	
 	/**
 	*  Delete a row from this section.
@@ -101,7 +101,7 @@ extern interface HTMLTableSectionElement extends org.w3c.dom.html.HTMLElement
 	*    INDEX_SIZE_ERR: Raised if the specified index is greater than or
 	*   equal to the number of rows or if the index is negative.
 	*/
-	@:overload public function deleteRow(index : Int) : Void;
+	@:overload @:public public function deleteRow(index : Int) : Void;
 	
 	
 }

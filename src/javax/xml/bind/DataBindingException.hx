@@ -36,9 +36,9 @@ package javax.xml.bind;
 */
 @:require(java1) extern class DataBindingException extends java.lang.RuntimeException
 {
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

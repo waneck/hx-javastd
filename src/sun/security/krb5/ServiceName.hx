@@ -29,13 +29,13 @@ package sun.security.krb5;
 */
 extern class ServiceName extends sun.security.krb5.PrincipalName
 {
-	@:overload public function new(name : String, type : Int) : Void;
+	@:overload @:public public function new(name : String, type : Int) : Void;
 	
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload public function new(name : String, realm : String) : Void;
+	@:overload @:public public function new(name : String, realm : String) : Void;
 	
-	@:overload public function new(service : String, instance : String, realm : String) : Void;
+	@:overload @:public public function new(service : String, instance : String, realm : String) : Void;
 	
 	
 }

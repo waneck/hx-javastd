@@ -28,12 +28,12 @@ extern class Endpoint
 	/** Standard property: name of WSDL service.
 	*  <p>Type: javax.xml.namespace.QName
 	**/
-	public static var WSDL_SERVICE(default, null) : String;
+	@:public @:static @:final public static var WSDL_SERVICE(default, null) : String;
 	
 	/** Standard property: name of WSDL port.
 	*  <p>Type: javax.xml.namespace.QName
 	**/
-	public static var WSDL_PORT(default, null) : String;
+	@:public @:static @:final public static var WSDL_PORT(default, null) : String;
 	
 	/**
 	* Creates an endpoint with the specified implementor object. If there is
@@ -50,7 +50,7 @@ extern class Endpoint
 	* @return The newly created endpoint.
 	*
 	**/
-	@:overload public static function create(implementor : Dynamic) : javax.xml.ws.Endpoint;
+	@:overload @:public @:static public static function create(implementor : Dynamic) : javax.xml.ws.Endpoint;
 	
 	/**
 	* Creates an endpoint with the specified implementor object and web
@@ -73,7 +73,7 @@ extern class Endpoint
 	* @since JAX-WS 2.2
 	*
 	*/
-	@:require(java2) @:overload public static function create(implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
+	@:require(java2) @:overload @:public @:static public static function create(implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
 	
 	/**
 	* Creates an endpoint with the specified binding type and
@@ -92,7 +92,7 @@ extern class Endpoint
 	* @return The newly created endpoint.
 	*
 	**/
-	@:overload public static function create(bindingId : String, implementor : Dynamic) : javax.xml.ws.Endpoint;
+	@:overload @:public @:static public static function create(bindingId : String, implementor : Dynamic) : javax.xml.ws.Endpoint;
 	
 	/**
 	* Creates an endpoint with the specified binding type,
@@ -115,21 +115,21 @@ extern class Endpoint
 	* @return The newly created endpoint.
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:overload public static function create(bindingId : String, implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
+	@:require(java2) @:overload @:public @:static public static function create(bindingId : String, implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
 	
 	/**
 	* Returns the binding for this endpoint.
 	*
 	* @return The binding for this endpoint
 	**/
-	@:overload @:abstract public function getBinding() : javax.xml.ws.Binding;
+	@:overload @:public @:abstract public function getBinding() : javax.xml.ws.Binding;
 	
 	/**
 	* Returns the implementation object for this endpoint.
 	*
 	* @return The implementor for this endpoint
 	**/
-	@:overload @:abstract public function getImplementor() : Dynamic;
+	@:overload @:public @:abstract public function getImplementor() : Dynamic;
 	
 	/**
 	* Publishes this endpoint at the given address.
@@ -154,7 +154,7 @@ extern class Endpoint
 	*          is being used and the application doesn't have the
 	*          <code>WebServicePermission("publishEndpoint")</code> permission.
 	**/
-	@:overload @:abstract public function publish(address : String) : Void;
+	@:overload @:public @:abstract public function publish(address : String) : Void;
 	
 	/**
 	* Creates and publishes an endpoint for the specified implementor
@@ -181,7 +181,7 @@ extern class Endpoint
 	*          <code>WebServicePermission("publishEndpoint")</code> permission.
 	*
 	**/
-	@:native('publish') @:overload public static function _publish(address : String, implementor : Dynamic) : javax.xml.ws.Endpoint;
+	@:native('publish') @:overload @:public @:static public static function _publish(address : String, implementor : Dynamic) : javax.xml.ws.Endpoint;
 	
 	/**
 	* Creates and publishes an endpoint for the specified implementor
@@ -211,7 +211,7 @@ extern class Endpoint
 	*          <code>WebServicePermission("publishEndpoint")</code> permission.
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:native('publish') @:overload public static function _publish(address : String, implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
+	@:require(java2) @:native('publish') @:overload @:public @:static public static function _publish(address : String, implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
 	
 	/**
 	* Publishes this endpoint at the provided server context.
@@ -238,7 +238,7 @@ extern class Endpoint
 	*          is being used and the application doesn't have the
 	*          <code>WebServicePermission("publishEndpoint")</code> permission.
 	**/
-	@:overload @:abstract public function publish(serverContext : Dynamic) : Void;
+	@:overload @:public @:abstract public function publish(serverContext : Dynamic) : Void;
 	
 	/**
 	* Publishes this endpoint at the provided server context.
@@ -272,7 +272,7 @@ extern class Endpoint
 	*          <code>WebServicePermission("publishEndpoint")</code> permission.
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:overload public function publish(serverContext : javax.xml.ws.spi.http.HttpContext) : Void;
+	@:require(java2) @:overload @:public public function publish(serverContext : javax.xml.ws.spi.http.HttpContext) : Void;
 	
 	/**
 	* Stops publishing this endpoint.
@@ -281,21 +281,21 @@ extern class Endpoint
 	* has no effect.
 	*
 	**/
-	@:overload @:abstract public function stop() : Void;
+	@:overload @:public @:abstract public function stop() : Void;
 	
 	/**
 	* Returns true if the endpoint is in the published state.
 	*
 	* @return <code>true</code> if the endpoint is in the published state.
 	**/
-	@:overload @:abstract public function isPublished() : Bool;
+	@:overload @:public @:abstract public function isPublished() : Bool;
 	
 	/**
 	* Returns a list of metadata documents for the service.
 	*
 	* @return <code>List&lt;javax.xml.transform.Source&gt;</code> A list of metadata documents for the service
 	**/
-	@:overload @:abstract public function getMetadata() : java.util.List<javax.xml.transform.Source>;
+	@:overload @:public @:abstract public function getMetadata() : java.util.List<javax.xml.transform.Source>;
 	
 	/**
 	* Sets the metadata for this endpoint.
@@ -307,7 +307,7 @@ extern class Endpoint
 	* @throws java.lang.IllegalStateException  If the endpoint
 	*         has already been published.
 	**/
-	@:overload @:abstract public function setMetadata(metadata : java.util.List<javax.xml.transform.Source>) : Void;
+	@:overload @:public @:abstract public function setMetadata(metadata : java.util.List<javax.xml.transform.Source>) : Void;
 	
 	/**
 	* Returns the executor for this <code>Endpoint</code>instance.
@@ -320,7 +320,7 @@ extern class Endpoint
 	*
 	* @see java.util.concurrent.Executor
 	**/
-	@:overload @:abstract public function getExecutor() : java.util.concurrent.Executor;
+	@:overload @:public @:abstract public function getExecutor() : java.util.concurrent.Executor;
 	
 	/**
 	* Sets the executor for this <code>Endpoint</code> instance.
@@ -342,7 +342,7 @@ extern class Endpoint
 	*
 	* @see java.util.concurrent.Executor
 	**/
-	@:overload @:abstract public function setExecutor(executor : java.util.concurrent.Executor) : Void;
+	@:overload @:public @:abstract public function setExecutor(executor : java.util.concurrent.Executor) : Void;
 	
 	/**
 	* Returns the property bag for this <code>Endpoint</code> instance.
@@ -350,7 +350,7 @@ extern class Endpoint
 	* @return Map&lt;String,Object&gt; The property bag
 	*         associated with this instance.
 	**/
-	@:overload @:abstract public function getProperties() : java.util.Map<String, Dynamic>;
+	@:overload @:public @:abstract public function getProperties() : java.util.Map<String, Dynamic>;
 	
 	/**
 	* Sets the property bag for this <code>Endpoint</code> instance.
@@ -358,7 +358,7 @@ extern class Endpoint
 	* @param properties The property bag associated with
 	*        this instance.
 	**/
-	@:overload @:abstract public function setProperties(properties : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public @:abstract public function setProperties(properties : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* Returns the <code>EndpointReference</code> associated with
@@ -385,7 +385,7 @@ extern class Endpoint
 	*
 	* @since JAX-WS 2.1
 	**/
-	@:require(java1) @:overload @:abstract public function getEndpointReference(referenceParameters : java.NativeArray<org.w3c.dom.Element>) : javax.xml.ws.EndpointReference;
+	@:require(java1) @:overload @:public @:abstract public function getEndpointReference(referenceParameters : java.NativeArray<org.w3c.dom.Element>) : javax.xml.ws.EndpointReference;
 	
 	/**
 	* Returns the <code>EndpointReference</code> associated with
@@ -410,7 +410,7 @@ extern class Endpoint
 	*
 	* @since JAX-WS 2.1
 	**/
-	@:require(java1) @:overload @:abstract public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>, referenceParameters : java.NativeArray<org.w3c.dom.Element>) : T;
+	@:require(java1) @:overload @:public @:abstract public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>, referenceParameters : java.NativeArray<org.w3c.dom.Element>) : T;
 	
 	/**
 	* By settng a <code>EndpointContext</code>, JAX-WS runtime knows about
@@ -427,7 +427,7 @@ extern class Endpoint
 	*
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:overload public function setEndpointContext(ctxt : javax.xml.ws.EndpointContext) : Void;
+	@:require(java2) @:overload @:public public function setEndpointContext(ctxt : javax.xml.ws.EndpointContext) : Void;
 	
 	
 }

@@ -25,9 +25,9 @@ package com.sun.jmx.remote.internal;
 */
 extern class ArrayNotificationBuffer implements com.sun.jmx.remote.internal.NotificationBuffer
 {
-	@:overload public static function getNotificationBuffer(mbs : javax.management.MBeanServer, env : java.util.Map<String, Dynamic>) : com.sun.jmx.remote.internal.NotificationBuffer;
+	@:overload @:public @:static public static function getNotificationBuffer(mbs : javax.management.MBeanServer, env : java.util.Map<String, Dynamic>) : com.sun.jmx.remote.internal.NotificationBuffer;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* <p>Fetch notifications that match the given listeners.</p>
@@ -56,33 +56,33 @@ extern class ArrayNotificationBuffer implements com.sun.jmx.remote.internal.Noti
 	* elements but will not contain more than this number of
 	* different notifications.
 	*/
-	@:overload public function fetchNotifications(filter : com.sun.jmx.remote.internal.NotificationBufferFilter, startSequenceNumber : haxe.Int64, timeout : haxe.Int64, maxNotifications : Int) : javax.management.remote.NotificationResult;
+	@:overload @:public public function fetchNotifications(filter : com.sun.jmx.remote.internal.NotificationBufferFilter, startSequenceNumber : haxe.Int64, timeout : haxe.Int64, maxNotifications : Int) : javax.management.remote.NotificationResult;
 	
 	
 }
 @:native('com$sun$jmx$remote$internal$ArrayNotificationBuffer$ShareBuffer') @:internal extern class ArrayNotificationBuffer_ShareBuffer implements com.sun.jmx.remote.internal.NotificationBuffer
 {
-	@:overload public function fetchNotifications(filter : com.sun.jmx.remote.internal.NotificationBufferFilter, startSequenceNumber : haxe.Int64, timeout : haxe.Int64, maxNotifications : Int) : javax.management.remote.NotificationResult;
+	@:overload @:public public function fetchNotifications(filter : com.sun.jmx.remote.internal.NotificationBufferFilter, startSequenceNumber : haxe.Int64, timeout : haxe.Int64, maxNotifications : Int) : javax.management.remote.NotificationResult;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	
 }
 @:native('com$sun$jmx$remote$internal$ArrayNotificationBuffer$NamedNotification') @:internal extern class ArrayNotificationBuffer_NamedNotification
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('com$sun$jmx$remote$internal$ArrayNotificationBuffer$BufferListener') @:internal extern class ArrayNotificationBuffer_BufferListener implements javax.management.NotificationListener
 {
-	@:overload public function handleNotification(notif : javax.management.Notification, handback : Dynamic) : Void;
+	@:overload @:public public function handleNotification(notif : javax.management.Notification, handback : Dynamic) : Void;
 	
 	
 }
 @:native('com$sun$jmx$remote$internal$ArrayNotificationBuffer$BroadcasterQuery') @:internal extern class ArrayNotificationBuffer_BroadcasterQuery extends javax.management.QueryEval implements javax.management.QueryExp
 {
-	@:overload public function apply(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function apply(name : javax.management.ObjectName) : Bool;
 	
 	
 }

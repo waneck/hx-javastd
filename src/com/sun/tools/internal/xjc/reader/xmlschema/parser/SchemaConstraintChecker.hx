@@ -30,9 +30,9 @@ extern class SchemaConstraintChecker
 	* @param errorHandler detected errors will be reported to this handler.
 	* @return true if there was no error, false if there were errors.
 	*/
-	@:overload public static function check(schemas : java.NativeArray<org.xml.sax.InputSource>, errorHandler : com.sun.tools.internal.xjc.ErrorReceiver, entityResolver : org.xml.sax.EntityResolver) : Bool;
+	@:overload @:public @:static public static function check(schemas : java.NativeArray<org.xml.sax.InputSource>, errorHandler : com.sun.tools.internal.xjc.ErrorReceiver, entityResolver : org.xml.sax.EntityResolver) : Bool;
 	
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

@@ -38,7 +38,7 @@ extern interface Readable
 	* @throws NullPointerException if cb is null
 	* @throws java.nio.ReadOnlyBufferException if cb is a read only buffer
 	*/
-	@:overload public function read(cb : java.nio.CharBuffer) : Int;
+	@:overload @:public public function read(cb : java.nio.CharBuffer) : Int;
 	
 	
 }

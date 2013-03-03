@@ -28,17 +28,17 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	/**
 	* The selection model property name.
 	*/
-	public static var SELECTION_MODEL_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var SELECTION_MODEL_PROPERTY(default, null) : String;
 	
 	/**
 	* The preview panel property name.
 	*/
-	public static var PREVIEW_PANEL_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var PREVIEW_PANEL_PROPERTY(default, null) : String;
 	
 	/**
 	* The chooserPanel array property name.
 	*/
-	public static var CHOOSER_PANELS_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var CHOOSER_PANELS_PROPERTY(default, null) : String;
 	
 	/**
 	* Shows a modal color-chooser dialog and blocks until the
@@ -56,7 +56,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function showDialog(component : java.awt.Component, title : String, initialColor : java.awt.Color) : java.awt.Color;
+	@:overload @:public @:static public static function showDialog(component : java.awt.Component, title : String, initialColor : java.awt.Color) : java.awt.Color;
 	
 	/**
 	* Creates and returns a new dialog containing the specified
@@ -79,19 +79,19 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function createDialog(c : java.awt.Component, title : String, modal : Bool, chooserPane : javax.swing.JColorChooser, okListener : java.awt.event.ActionListener, cancelListener : java.awt.event.ActionListener) : javax.swing.JDialog;
+	@:overload @:public @:static public static function createDialog(c : java.awt.Component, title : String, modal : Bool, chooserPane : javax.swing.JColorChooser, okListener : java.awt.event.ActionListener, cancelListener : java.awt.event.ActionListener) : javax.swing.JDialog;
 	
 	/**
 	* Creates a color chooser pane with an initial color of white.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a color chooser pane with the specified initial color.
 	*
 	* @param initialColor the initial color set in the chooser
 	*/
-	@:overload public function new(initialColor : java.awt.Color) : Void;
+	@:overload @:public public function new(initialColor : java.awt.Color) : Void;
 	
 	/**
 	* Creates a color chooser pane with the specified
@@ -99,7 +99,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	*
 	* @param model the <code>ColorSelectionModel</code> to be used
 	*/
-	@:overload public function new(model : javax.swing.colorchooser.ColorSelectionModel) : Void;
+	@:overload @:public public function new(model : javax.swing.colorchooser.ColorSelectionModel) : Void;
 	
 	/**
 	* Returns the L&F object that renders this component.
@@ -107,7 +107,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	* @return the <code>ColorChooserUI</code> object that renders
 	*          this component
 	*/
-	@:overload public function getUI() : javax.swing.plaf.ColorChooserUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.ColorChooserUI;
 	
 	/**
 	* Sets the L&F object that renders this component.
@@ -120,7 +120,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	*      hidden: true
 	* description: The UI object that implements the color chooser's LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.ColorChooserUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.ColorChooserUI) : Void;
 	
 	/**
 	* Notification from the <code>UIManager</code> that the L&F has changed.
@@ -129,7 +129,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -138,7 +138,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Gets the current color value from the color chooser.
@@ -146,7 +146,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	*
 	* @return the current color value of the color chooser
 	*/
-	@:overload public function getColor() : java.awt.Color;
+	@:overload @:public public function getColor() : java.awt.Color;
 	
 	/**
 	* Sets the current color of the color chooser to the specified color.
@@ -159,7 +159,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	*      hidden: false
 	* description: The current color the chooser is to display.
 	*/
-	@:overload public function setColor(color : java.awt.Color) : Void;
+	@:overload @:public public function setColor(color : java.awt.Color) : Void;
 	
 	/**
 	* Sets the current color of the color chooser to the
@@ -172,7 +172,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	* @exception IllegalArgumentException if r,g,b values are out of range
 	* @see java.awt.Color
 	*/
-	@:overload public function setColor(r : Int, g : Int, b : Int) : Void;
+	@:overload @:public public function setColor(r : Int, g : Int, b : Int) : Void;
 	
 	/**
 	* Sets the current color of the color chooser to the
@@ -183,7 +183,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	*          the next 8 bits specify the Green value, and the 8 bits
 	*          above that specify the Red value.
 	*/
-	@:overload public function setColor(c : Int) : Void;
+	@:overload @:public public function setColor(c : Int) : Void;
 	
 	/**
 	* Sets the <code>dragEnabled</code> property,
@@ -224,7 +224,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	*  description: Determines whether automatic drag handling is enabled.
 	*        bound: false
 	*/
-	@:require(java4) @:overload public function setDragEnabled(b : Bool) : Void;
+	@:require(java4) @:overload @:public public function setDragEnabled(b : Bool) : Void;
 	
 	/**
 	* Gets the value of the <code>dragEnabled</code> property.
@@ -233,7 +233,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	* @see #setDragEnabled
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getDragEnabled() : Bool;
+	@:require(java4) @:overload @:public public function getDragEnabled() : Bool;
 	
 	/**
 	* Sets the current preview panel.
@@ -248,21 +248,21 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	*      hidden: true
 	* description: The UI component which displays the current color.
 	*/
-	@:overload public function setPreviewPanel(preview : javax.swing.JComponent) : Void;
+	@:overload @:public public function setPreviewPanel(preview : javax.swing.JComponent) : Void;
 	
 	/**
 	* Returns the preview panel that shows a chosen color.
 	*
 	* @return a <code>JComponent</code> object -- the preview panel
 	*/
-	@:overload public function getPreviewPanel() : javax.swing.JComponent;
+	@:overload @:public public function getPreviewPanel() : javax.swing.JComponent;
 	
 	/**
 	* Adds a color chooser panel to the color chooser.
 	*
 	* @param panel the <code>AbstractColorChooserPanel</code> to be added
 	*/
-	@:overload public function addChooserPanel(panel : javax.swing.colorchooser.AbstractColorChooserPanel) : Void;
+	@:overload @:public public function addChooserPanel(panel : javax.swing.colorchooser.AbstractColorChooserPanel) : Void;
 	
 	/**
 	* Removes the Color Panel specified.
@@ -272,7 +272,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	* @exception IllegalArgumentException if panel is not in list of
 	*                  known chooser panels
 	*/
-	@:overload public function removeChooserPanel(panel : javax.swing.colorchooser.AbstractColorChooserPanel) : javax.swing.colorchooser.AbstractColorChooserPanel;
+	@:overload @:public public function removeChooserPanel(panel : javax.swing.colorchooser.AbstractColorChooserPanel) : javax.swing.colorchooser.AbstractColorChooserPanel;
 	
 	/**
 	* Specifies the Color Panels used to choose a color value.
@@ -285,21 +285,21 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	*      hidden: true
 	* description: An array of different chooser types.
 	*/
-	@:overload public function setChooserPanels(panels : java.NativeArray<javax.swing.colorchooser.AbstractColorChooserPanel>) : Void;
+	@:overload @:public public function setChooserPanels(panels : java.NativeArray<javax.swing.colorchooser.AbstractColorChooserPanel>) : Void;
 	
 	/**
 	* Returns the specified color panels.
 	*
 	* @return an array of <code>AbstractColorChooserPanel</code> objects
 	*/
-	@:overload public function getChooserPanels() : java.NativeArray<javax.swing.colorchooser.AbstractColorChooserPanel>;
+	@:overload @:public public function getChooserPanels() : java.NativeArray<javax.swing.colorchooser.AbstractColorChooserPanel>;
 	
 	/**
 	* Returns the data model that handles color selections.
 	*
 	* @return a <code>ColorSelectionModel</code> object
 	*/
-	@:overload public function getSelectionModel() : javax.swing.colorchooser.ColorSelectionModel;
+	@:overload @:public public function getSelectionModel() : javax.swing.colorchooser.ColorSelectionModel;
 	
 	/**
 	* Sets the model containing the selected color.
@@ -311,7 +311,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	*      hidden: true
 	* description: The model which contains the currently selected color.
 	*/
-	@:overload public function setSelectionModel(newModel : javax.swing.colorchooser.ColorSelectionModel) : Void;
+	@:overload @:public public function setSelectionModel(newModel : javax.swing.colorchooser.ColorSelectionModel) : Void;
 	
 	/**
 	* Returns a string representation of this <code>JColorChooser</code>.
@@ -323,9 +323,9 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	*
 	* @return  a string representation of this <code>JColorChooser</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
-	private var accessibleContext : javax.accessibility.AccessibleContext;
+	@:protected private var accessibleContext : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Gets the AccessibleContext associated with this JColorChooser.
@@ -336,7 +336,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	* @return an AccessibleJColorChooser that serves as the
 	*         AccessibleContext of this JColorChooser
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -355,43 +355,43 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }
 @:internal extern class ColorChooserDialog extends javax.swing.JDialog
 {
-	@:overload public function new(owner : java.awt.Dialog, title : String, modal : Bool, c : java.awt.Component, chooserPane : javax.swing.JColorChooser, okListener : java.awt.event.ActionListener, cancelListener : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function new(owner : java.awt.Dialog, title : String, modal : Bool, c : java.awt.Component, chooserPane : javax.swing.JColorChooser, okListener : java.awt.event.ActionListener, cancelListener : java.awt.event.ActionListener) : Void;
 	
-	@:overload public function new(owner : java.awt.Frame, title : String, modal : Bool, c : java.awt.Component, chooserPane : javax.swing.JColorChooser, okListener : java.awt.event.ActionListener, cancelListener : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function new(owner : java.awt.Frame, title : String, modal : Bool, c : java.awt.Component, chooserPane : javax.swing.JColorChooser, okListener : java.awt.event.ActionListener, cancelListener : java.awt.event.ActionListener) : Void;
 	
-	@:overload private function initColorChooserDialog(c : java.awt.Component, chooserPane : javax.swing.JColorChooser, okListener : java.awt.event.ActionListener, cancelListener : java.awt.event.ActionListener) : Void;
+	@:overload @:protected private function initColorChooserDialog(c : java.awt.Component, chooserPane : javax.swing.JColorChooser, okListener : java.awt.event.ActionListener, cancelListener : java.awt.event.ActionListener) : Void;
 	
-	@:overload override public function show() : Void;
+	@:overload @:public override public function show() : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }
 @:native('javax$swing$ColorChooserDialog$Closer') @:internal extern class ColorChooserDialog_Closer extends java.awt.event.WindowAdapter implements java.io.Serializable
 {
-	@:overload public function windowClosing(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public override public function windowClosing(e : java.awt.event.WindowEvent) : Void;
 	
 	
 }
 @:native('javax$swing$ColorChooserDialog$DisposeOnClose') @:internal extern class ColorChooserDialog_DisposeOnClose extends java.awt.event.ComponentAdapter implements java.io.Serializable
 {
-	@:overload override public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public override public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
 	
 	
 }
 @:internal extern class ColorTracker implements java.awt.event.ActionListener implements java.io.Serializable
 {
-	@:overload public function new(c : javax.swing.JColorChooser) : Void;
+	@:overload @:public public function new(c : javax.swing.JColorChooser) : Void;
 	
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function getColor() : java.awt.Color;
+	@:overload @:public public function getColor() : java.awt.Color;
 	
 	
 }

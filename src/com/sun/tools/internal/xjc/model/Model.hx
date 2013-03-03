@@ -32,7 +32,7 @@ extern class Model implements com.sun.xml.internal.bind.v2.model.core.TypeInfoSe
 	*
 	* @sine 2.1.1
 	*/
-	public var schemaComponent(default, null) : com.sun.xml.internal.xsom.XSSchemaSet;
+	@:public @:final public var schemaComponent(default, null) : com.sun.xml.internal.xsom.XSSchemaSet;
 	
 	/**
 	* @param nc
@@ -41,65 +41,65 @@ extern class Model implements com.sun.xml.internal.bind.v2.model.core.TypeInfoSe
 	* @param schemaComponent
 	*      The source schema model, if this is built from XSD.
 	*/
-	@:overload public function new(opts : com.sun.tools.internal.xjc.Options, cm : com.sun.codemodel.internal.JCodeModel, nc : com.sun.xml.internal.bind.api.impl.NameConverter, allocator : com.sun.tools.internal.xjc.api.ClassNameAllocator, schemaComponent : com.sun.xml.internal.xsom.XSSchemaSet) : Void;
+	@:overload @:public public function new(opts : com.sun.tools.internal.xjc.Options, cm : com.sun.codemodel.internal.JCodeModel, nc : com.sun.xml.internal.bind.api.impl.NameConverter, allocator : com.sun.tools.internal.xjc.api.ClassNameAllocator, schemaComponent : com.sun.xml.internal.xsom.XSSchemaSet) : Void;
 	
-	@:overload public function setNameConverter(nameConverter : com.sun.xml.internal.bind.api.impl.NameConverter) : Void;
+	@:overload @:public public function setNameConverter(nameConverter : com.sun.xml.internal.bind.api.impl.NameConverter) : Void;
 	
 	/**
 	* Gets the name converter that shall be used to parse XML names into Java names.
 	*/
-	@:overload @:final public function getNameConverter() : com.sun.xml.internal.bind.api.impl.NameConverter;
+	@:overload @:public @:final public function getNameConverter() : com.sun.xml.internal.bind.api.impl.NameConverter;
 	
-	@:overload public function isPackageLevelAnnotations() : Bool;
+	@:overload @:public public function isPackageLevelAnnotations() : Bool;
 	
-	@:overload public function setPackageLevelAnnotations(packageLevelAnnotations : Bool) : Void;
+	@:overload @:public public function setPackageLevelAnnotations(packageLevelAnnotations : Bool) : Void;
 	
 	/**
 	* This model uses this code model exclusively.
 	*/
-	public var codeModel(default, null) : com.sun.codemodel.internal.JCodeModel;
+	@:public @:final public var codeModel(default, null) : com.sun.codemodel.internal.JCodeModel;
 	
 	/**
 	* Command-line options used for building this model.
 	*/
-	public var options(default, null) : com.sun.tools.internal.xjc.Options;
+	@:public @:final public var options(default, null) : com.sun.tools.internal.xjc.Options;
 	
 	/**
 	* True to generate serializable classes.
 	*/
-	public var serializable : Bool;
+	@:public public var serializable : Bool;
 	
 	/**
 	* serial version UID to be generated.
 	*
 	* null if not to generate serialVersionUID field.
 	*/
-	public var serialVersionUID : Null<haxe.Int64>;
+	@:public public var serialVersionUID : Null<haxe.Int64>;
 	
 	/**
 	* If non-null, all the generated classes should eventually derive from this class.
 	*/
-	public var rootClass : com.sun.codemodel.internal.JClass;
+	@:public public var rootClass : com.sun.codemodel.internal.JClass;
 	
 	/**
 	* If non-null, all the generated interfaces should eventually derive from this interface.
 	*/
-	public var rootInterface : com.sun.codemodel.internal.JClass;
+	@:public public var rootInterface : com.sun.codemodel.internal.JClass;
 	
 	/**
 	* Specifies the code generation strategy.
 	* Must not be null.
 	*/
-	public var strategy : com.sun.tools.internal.xjc.generator.bean.ImplStructureStrategy;
+	@:public public var strategy : com.sun.tools.internal.xjc.generator.bean.ImplStructureStrategy;
 	
 	/**
 	* Default ID/IDREF symbol space. Any ID/IDREF without explicit
 	* reference to a symbol space is assumed to use this default
 	* symbol space.
 	*/
-	public var defaultSymbolSpace(default, null) : com.sun.tools.internal.xjc.model.SymbolSpace;
+	@:public @:final public var defaultSymbolSpace(default, null) : com.sun.tools.internal.xjc.model.SymbolSpace;
 	
-	@:overload public function getSymbolSpace(name : String) : com.sun.tools.internal.xjc.model.SymbolSpace;
+	@:overload @:public public function getSymbolSpace(name : String) : com.sun.tools.internal.xjc.model.SymbolSpace;
 	
 	/**
 	* Fully-generate the source code into the given model.
@@ -112,7 +112,7 @@ extern class Model implements com.sun.xml.internal.bind.v2.model.core.TypeInfoSe
 	*      Add-ons can use those information to further augment the generated
 	*      source code.
 	*/
-	@:overload public function generateCode(opt : com.sun.tools.internal.xjc.Options, receiver : com.sun.tools.internal.xjc.ErrorReceiver) : com.sun.tools.internal.xjc.outline.Outline;
+	@:overload @:public public function generateCode(opt : com.sun.tools.internal.xjc.Options, receiver : com.sun.tools.internal.xjc.ErrorReceiver) : com.sun.tools.internal.xjc.outline.Outline;
 	
 	/**
 	* Represents the "top-level binding".
@@ -130,68 +130,68 @@ extern class Model implements com.sun.xml.internal.bind.v2.model.core.TypeInfoSe
 	* <p>
 	* This needs to be filled by the front-end.
 	*/
-	@:overload @:final public function createTopLevelBindings() : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.model.CClassInfo>;
+	@:overload @:public @:final public function createTopLevelBindings() : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.model.CClassInfo>;
 	
-	@:overload public function getNavigator() : com.sun.xml.internal.bind.v2.model.nav.Navigator<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.nav.NClass, java.lang.Void, java.lang.Void>;
+	@:overload @:public public function getNavigator() : com.sun.xml.internal.bind.v2.model.nav.Navigator<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.nav.NClass, java.lang.Void, java.lang.Void>;
 	
-	@:overload public function getTypeInfo(type : com.sun.tools.internal.xjc.model.nav.NType) : com.sun.tools.internal.xjc.model.CNonElement;
+	@:overload @:public public function getTypeInfo(type : com.sun.tools.internal.xjc.model.nav.NType) : com.sun.tools.internal.xjc.model.CNonElement;
 	
-	@:overload public function getAnyTypeInfo() : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
+	@:overload @:public public function getAnyTypeInfo() : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	@:overload public function getTypeInfo(ref : com.sun.xml.internal.bind.v2.model.core.Ref<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.nav.NClass>) : com.sun.tools.internal.xjc.model.CNonElement;
+	@:overload @:public public function getTypeInfo(ref : com.sun.xml.internal.bind.v2.model.core.Ref<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.nav.NClass>) : com.sun.tools.internal.xjc.model.CNonElement;
 	
-	@:overload public function beans() : java.util.Map<com.sun.tools.internal.xjc.model.nav.NClass, com.sun.tools.internal.xjc.model.CClassInfo>;
+	@:overload @:public public function beans() : java.util.Map<com.sun.tools.internal.xjc.model.nav.NClass, com.sun.tools.internal.xjc.model.CClassInfo>;
 	
-	@:overload public function enums() : java.util.Map<com.sun.tools.internal.xjc.model.nav.NClass, com.sun.tools.internal.xjc.model.CEnumLeafInfo>;
+	@:overload @:public public function enums() : java.util.Map<com.sun.tools.internal.xjc.model.nav.NClass, com.sun.tools.internal.xjc.model.CEnumLeafInfo>;
 	
-	@:overload public function typeUses() : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.model.TypeUse>;
+	@:overload @:public public function typeUses() : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.model.TypeUse>;
 	
 	/**
 	* No array mapping generation for XJC.
 	*/
-	@:overload public function arrays() : java.util.Map<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.CArrayInfo>;
+	@:overload @:public public function arrays() : java.util.Map<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.CArrayInfo>;
 	
-	@:overload public function builtins() : java.util.Map<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.CBuiltinLeafInfo>;
+	@:overload @:public public function builtins() : java.util.Map<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.CBuiltinLeafInfo>;
 	
-	@:overload public function getClassInfo(t : com.sun.tools.internal.xjc.model.nav.NClass) : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload @:public public function getClassInfo(t : com.sun.tools.internal.xjc.model.nav.NClass) : com.sun.tools.internal.xjc.model.CClassInfo;
 	
-	@:overload public function getElementInfo(scope : com.sun.tools.internal.xjc.model.nav.NClass, name : javax.xml.namespace.QName) : com.sun.tools.internal.xjc.model.CElementInfo;
+	@:overload @:public public function getElementInfo(scope : com.sun.tools.internal.xjc.model.nav.NClass, name : javax.xml.namespace.QName) : com.sun.tools.internal.xjc.model.CElementInfo;
 	
-	@:overload public function getElementMappings(scope : com.sun.tools.internal.xjc.model.nav.NClass) : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.model.CElementInfo>;
+	@:overload @:public public function getElementMappings(scope : com.sun.tools.internal.xjc.model.nav.NClass) : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.model.CElementInfo>;
 	
-	@:overload public function getAllElements() : java.lang.Iterable<com.sun.tools.internal.xjc.model.CElementInfo>;
+	@:overload @:public public function getAllElements() : java.lang.Iterable<com.sun.tools.internal.xjc.model.CElementInfo>;
 	
 	/**
 	* @deprecated
 	*      Always return null. Perhaps you are interested in {@link #schemaComponent}?
 	*/
-	@:overload public function getSchemaComponent() : com.sun.xml.internal.xsom.XSComponent;
+	@:overload @:public public function getSchemaComponent() : com.sun.xml.internal.xsom.XSComponent;
 	
 	/**
 	* @deprecated
 	*      No line number available for the "root" component.
 	*/
-	@:overload public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public public function getLocator() : org.xml.sax.Locator;
 	
 	/**
 	* Gets the global customizations.
 	*/
-	@:overload public function getCustomizations() : com.sun.tools.internal.xjc.model.CCustomizations;
+	@:overload @:public public function getCustomizations() : com.sun.tools.internal.xjc.model.CCustomizations;
 	
 	/**
 	* Not implemented in the compile-time model.
 	*/
-	@:overload public function getXmlNs(namespaceUri : String) : java.util.Map<String, String>;
+	@:overload @:public public function getXmlNs(namespaceUri : String) : java.util.Map<String, String>;
 	
-	@:overload public function getSchemaLocations() : java.util.Map<String, String>;
+	@:overload @:public public function getSchemaLocations() : java.util.Map<String, String>;
 	
-	@:overload public function getElementFormDefault(nsUri : String) : javax.xml.bind.annotation.XmlNsForm;
+	@:overload @:public public function getElementFormDefault(nsUri : String) : javax.xml.bind.annotation.XmlNsForm;
 	
-	@:overload public function getAttributeFormDefault(nsUri : String) : javax.xml.bind.annotation.XmlNsForm;
+	@:overload @:public public function getAttributeFormDefault(nsUri : String) : javax.xml.bind.annotation.XmlNsForm;
 	
-	@:overload public function dump(out : javax.xml.transform.Result) : Void;
+	@:overload @:public public function dump(out : javax.xml.transform.Result) : Void;
 	
-	@:overload public function getPackage(pkg : com.sun.codemodel.internal.JPackage) : com.sun.tools.internal.xjc.model.CClassInfoParent.CClassInfoParent_Package;
+	@:overload @:public public function getPackage(pkg : com.sun.codemodel.internal.JPackage) : com.sun.tools.internal.xjc.model.CClassInfoParent.CClassInfoParent_Package;
 	
 	
 }

@@ -25,41 +25,41 @@ package sun.security.util;
 */
 extern class Debug
 {
-	@:overload public static function Help() : Void;
+	@:overload @:public @:static public static function Help() : Void;
 	
 	/**
 	* Get a Debug object corresponding to whether or not the given
 	* option is set. Set the prefix to be the same as option.
 	*/
-	@:overload public static function getInstance(option : String) : sun.security.util.Debug;
+	@:overload @:public @:static public static function getInstance(option : String) : sun.security.util.Debug;
 	
 	/**
 	* Get a Debug object corresponding to whether or not the given
 	* option is set. Set the prefix to be prefix.
 	*/
-	@:overload public static function getInstance(option : String, prefix : String) : sun.security.util.Debug;
+	@:overload @:public @:static public static function getInstance(option : String, prefix : String) : sun.security.util.Debug;
 	
 	/**
 	* True if the system property "security.debug" contains the
 	* string "option".
 	*/
-	@:overload public static function isOn(option : String) : Bool;
+	@:overload @:public @:static public static function isOn(option : String) : Bool;
 	
 	/**
 	* print a message to stderr that is prefixed with the prefix
 	* created from the call to getInstance.
 	*/
-	@:overload public function println(message : String) : Void;
+	@:overload @:public public function println(message : String) : Void;
 	
 	/**
 	* print a blank line to stderr that is prefixed with the prefix.
 	*/
-	@:overload public function println() : Void;
+	@:overload @:public public function println() : Void;
 	
 	/**
 	* print a message to stderr that is prefixed with the prefix.
 	*/
-	@:native('println') @:overload public static function _println(prefix : String, message : String) : Void;
+	@:native('println') @:overload @:public @:static public static function _println(prefix : String, message : String) : Void;
 	
 	/**
 	* return a hexadecimal printed representation of the specified
@@ -67,9 +67,9 @@ extern class Debug
 	* at least 75 characters, with embedded newlines. Words are
 	* separated for readability, with eight words (32 bytes) per line.
 	*/
-	@:overload public static function toHexString(b : java.math.BigInteger) : String;
+	@:overload @:public @:static public static function toHexString(b : java.math.BigInteger) : String;
 	
-	@:overload public static function toString(b : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public @:static public static function toString(b : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	
 }

@@ -40,7 +40,7 @@ extern class MonitoredAttributeBase implements com.sun.corba.se.spi.monitoring.M
 	/**
 	* Constructor.
 	*/
-	@:overload public function new(name : String, info : com.sun.corba.se.spi.monitoring.MonitoredAttributeInfo) : Void;
+	@:overload @:public public function new(name : String, info : com.sun.corba.se.spi.monitoring.MonitoredAttributeInfo) : Void;
 	
 	/**
 	*  If the concrete class decides not to provide the implementation of this
@@ -51,29 +51,29 @@ extern class MonitoredAttributeBase implements com.sun.corba.se.spi.monitoring.M
 	*  NOTE: This method is only used to clear the Monitored Attribute state,
 	*  not the real state of the system itself.
 	*/
-	@:overload public function clearState() : Void;
+	@:overload @:public public function clearState() : Void;
 	
 	/**
 	*  This method should be implemented by the concrete class.
 	*/
-	@:overload @:abstract public function getValue() : Dynamic;
+	@:overload @:public @:abstract public function getValue() : Dynamic;
 	
 	/**
 	*  This method should be implemented by the concrete class only if the
 	*  attribute is writable. If the attribute is not writable and if this
 	*  method called, it will result in an IllegalStateException.
 	*/
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public public function setValue(value : Dynamic) : Void;
 	
 	/**
 	*  Gets the MonitoredAttributeInfo for the attribute.
 	*/
-	@:overload public function getAttributeInfo() : com.sun.corba.se.spi.monitoring.MonitoredAttributeInfo;
+	@:overload @:public public function getAttributeInfo() : com.sun.corba.se.spi.monitoring.MonitoredAttributeInfo;
 	
 	/**
 	* Gets the name of the attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

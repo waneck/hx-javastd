@@ -42,16 +42,16 @@ extern class Bridge<T>
 	* @since JAXB 2.0 EA1
 	* @author Kohsuke Kawaguchi
 	*/
-	@:require(java0) @:overload private function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
+	@:require(java0) @:overload @:protected private function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
 	
-	private var context(default, null) : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl;
+	@:protected @:final private var context(default, null) : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl;
 	
 	/**
 	* Gets the {@link JAXBRIContext} to which this object belongs.
 	*
 	* @since 2.1
 	*/
-	@:require(java1) @:overload public function getContext() : com.sun.xml.internal.bind.api.JAXBRIContext;
+	@:require(java1) @:overload @:public public function getContext() : com.sun.xml.internal.bind.api.JAXBRIContext;
 	
 	/**
 	*
@@ -60,13 +60,13 @@ extern class Bridge<T>
 	*
 	* @since 2.0 EA1
 	*/
-	@:require(java0) @:overload @:final public function marshal(object : T, output : javax.xml.stream.XMLStreamWriter) : Void;
+	@:require(java0) @:overload @:public @:final public function marshal(object : T, output : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload @:final public function marshal(object : T, output : javax.xml.stream.XMLStreamWriter, am : javax.xml.bind.attachment.AttachmentMarshaller) : Void;
+	@:overload @:public @:final public function marshal(object : T, output : javax.xml.stream.XMLStreamWriter, am : javax.xml.bind.attachment.AttachmentMarshaller) : Void;
 	
-	@:overload @:final public function marshal(context : com.sun.xml.internal.bind.api.BridgeContext, object : T, output : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public @:final public function marshal(context : com.sun.xml.internal.bind.api.BridgeContext, object : T, output : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload @:abstract public function marshal(m : javax.xml.bind.Marshaller, object : T, output : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public @:abstract public function marshal(m : javax.xml.bind.Marshaller, object : T, output : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Marshals the specified type object with the implicit element name
@@ -81,45 +81,45 @@ extern class Bridge<T>
 	*
 	* @since 2.0 EA1
 	*/
-	@:require(java0) @:overload public function marshal(object : T, output : java.io.OutputStream, nsContext : javax.xml.namespace.NamespaceContext) : Void;
+	@:require(java0) @:overload @:public public function marshal(object : T, output : java.io.OutputStream, nsContext : javax.xml.namespace.NamespaceContext) : Void;
 	
 	/**
 	* @since 2.0.2
 	*/
-	@:require(java0) @:overload public function marshal(object : T, output : java.io.OutputStream, nsContext : javax.xml.namespace.NamespaceContext, am : javax.xml.bind.attachment.AttachmentMarshaller) : Void;
+	@:require(java0) @:overload @:public public function marshal(object : T, output : java.io.OutputStream, nsContext : javax.xml.namespace.NamespaceContext, am : javax.xml.bind.attachment.AttachmentMarshaller) : Void;
 	
-	@:overload @:final public function marshal(context : com.sun.xml.internal.bind.api.BridgeContext, object : T, output : java.io.OutputStream, nsContext : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public @:final public function marshal(context : com.sun.xml.internal.bind.api.BridgeContext, object : T, output : java.io.OutputStream, nsContext : javax.xml.namespace.NamespaceContext) : Void;
 	
-	@:overload @:abstract public function marshal(m : javax.xml.bind.Marshaller, object : T, output : java.io.OutputStream, nsContext : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public @:abstract public function marshal(m : javax.xml.bind.Marshaller, object : T, output : java.io.OutputStream, nsContext : javax.xml.namespace.NamespaceContext) : Void;
 	
-	@:overload @:final public function marshal(object : T, output : org.w3c.dom.Node) : Void;
+	@:overload @:public @:final public function marshal(object : T, output : org.w3c.dom.Node) : Void;
 	
-	@:overload @:final public function marshal(context : com.sun.xml.internal.bind.api.BridgeContext, object : T, output : org.w3c.dom.Node) : Void;
+	@:overload @:public @:final public function marshal(context : com.sun.xml.internal.bind.api.BridgeContext, object : T, output : org.w3c.dom.Node) : Void;
 	
-	@:overload @:abstract public function marshal(m : javax.xml.bind.Marshaller, object : T, output : org.w3c.dom.Node) : Void;
+	@:overload @:public @:abstract public function marshal(m : javax.xml.bind.Marshaller, object : T, output : org.w3c.dom.Node) : Void;
 	
 	/**
 	* @since 2.0 EA4
 	*/
-	@:require(java0) @:overload @:final public function marshal(object : T, contentHandler : org.xml.sax.ContentHandler) : Void;
+	@:require(java0) @:overload @:public @:final public function marshal(object : T, contentHandler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* @since 2.0.2
 	*/
-	@:require(java0) @:overload @:final public function marshal(object : T, contentHandler : org.xml.sax.ContentHandler, am : javax.xml.bind.attachment.AttachmentMarshaller) : Void;
+	@:require(java0) @:overload @:public @:final public function marshal(object : T, contentHandler : org.xml.sax.ContentHandler, am : javax.xml.bind.attachment.AttachmentMarshaller) : Void;
 	
-	@:overload @:final public function marshal(context : com.sun.xml.internal.bind.api.BridgeContext, object : T, contentHandler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public @:final public function marshal(context : com.sun.xml.internal.bind.api.BridgeContext, object : T, contentHandler : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload @:abstract public function marshal(m : javax.xml.bind.Marshaller, object : T, contentHandler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public @:abstract public function marshal(m : javax.xml.bind.Marshaller, object : T, contentHandler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* @since 2.0 EA4
 	*/
-	@:require(java0) @:overload @:final public function marshal(object : T, result : javax.xml.transform.Result) : Void;
+	@:require(java0) @:overload @:public @:final public function marshal(object : T, result : javax.xml.transform.Result) : Void;
 	
-	@:overload @:final public function marshal(context : com.sun.xml.internal.bind.api.BridgeContext, object : T, result : javax.xml.transform.Result) : Void;
+	@:overload @:public @:final public function marshal(context : com.sun.xml.internal.bind.api.BridgeContext, object : T, result : javax.xml.transform.Result) : Void;
 	
-	@:overload @:abstract public function marshal(m : javax.xml.bind.Marshaller, object : T, result : javax.xml.transform.Result) : Void;
+	@:overload @:public @:abstract public function marshal(m : javax.xml.bind.Marshaller, object : T, result : javax.xml.transform.Result) : Void;
 	
 	/**
 	* Unmarshals the specified type object.
@@ -137,16 +137,16 @@ extern class Bridge<T>
 	*
 	* @since 2.0 EA1
 	*/
-	@:require(java0) @:overload @:final public function unmarshal(_in : javax.xml.stream.XMLStreamReader) : T;
+	@:require(java0) @:overload @:public @:final public function unmarshal(_in : javax.xml.stream.XMLStreamReader) : T;
 	
 	/**
 	* @since 2.0.3
 	*/
-	@:require(java0) @:overload @:final public function unmarshal(_in : javax.xml.stream.XMLStreamReader, au : javax.xml.bind.attachment.AttachmentUnmarshaller) : T;
+	@:require(java0) @:overload @:public @:final public function unmarshal(_in : javax.xml.stream.XMLStreamReader, au : javax.xml.bind.attachment.AttachmentUnmarshaller) : T;
 	
-	@:overload @:final public function unmarshal(context : com.sun.xml.internal.bind.api.BridgeContext, _in : javax.xml.stream.XMLStreamReader) : T;
+	@:overload @:public @:final public function unmarshal(context : com.sun.xml.internal.bind.api.BridgeContext, _in : javax.xml.stream.XMLStreamReader) : T;
 	
-	@:overload @:abstract public function unmarshal(u : javax.xml.bind.Unmarshaller, _in : javax.xml.stream.XMLStreamReader) : T;
+	@:overload @:public @:abstract public function unmarshal(u : javax.xml.bind.Unmarshaller, _in : javax.xml.stream.XMLStreamReader) : T;
 	
 	/**
 	* Unmarshals the specified type object.
@@ -164,16 +164,16 @@ extern class Bridge<T>
 	*
 	* @since 2.0 EA1
 	*/
-	@:require(java0) @:overload @:final public function unmarshal(_in : javax.xml.transform.Source) : T;
+	@:require(java0) @:overload @:public @:final public function unmarshal(_in : javax.xml.transform.Source) : T;
 	
 	/**
 	* @since 2.0.3
 	*/
-	@:require(java0) @:overload @:final public function unmarshal(_in : javax.xml.transform.Source, au : javax.xml.bind.attachment.AttachmentUnmarshaller) : T;
+	@:require(java0) @:overload @:public @:final public function unmarshal(_in : javax.xml.transform.Source, au : javax.xml.bind.attachment.AttachmentUnmarshaller) : T;
 	
-	@:overload @:final public function unmarshal(context : com.sun.xml.internal.bind.api.BridgeContext, _in : javax.xml.transform.Source) : T;
+	@:overload @:public @:final public function unmarshal(context : com.sun.xml.internal.bind.api.BridgeContext, _in : javax.xml.transform.Source) : T;
 	
-	@:overload @:abstract public function unmarshal(u : javax.xml.bind.Unmarshaller, _in : javax.xml.transform.Source) : T;
+	@:overload @:public @:abstract public function unmarshal(u : javax.xml.bind.Unmarshaller, _in : javax.xml.transform.Source) : T;
 	
 	/**
 	* Unmarshals the specified type object.
@@ -191,11 +191,11 @@ extern class Bridge<T>
 	*
 	* @since 2.0 EA1
 	*/
-	@:require(java0) @:overload @:final public function unmarshal(_in : java.io.InputStream) : T;
+	@:require(java0) @:overload @:public @:final public function unmarshal(_in : java.io.InputStream) : T;
 	
-	@:overload @:final public function unmarshal(context : com.sun.xml.internal.bind.api.BridgeContext, _in : java.io.InputStream) : T;
+	@:overload @:public @:final public function unmarshal(context : com.sun.xml.internal.bind.api.BridgeContext, _in : java.io.InputStream) : T;
 	
-	@:overload @:abstract public function unmarshal(u : javax.xml.bind.Unmarshaller, _in : java.io.InputStream) : T;
+	@:overload @:public @:abstract public function unmarshal(u : javax.xml.bind.Unmarshaller, _in : java.io.InputStream) : T;
 	
 	/**
 	* Unmarshals the specified type object.
@@ -211,21 +211,21 @@ extern class Bridge<T>
 	*
 	* @since 2.0 FCS
 	*/
-	@:require(java0) @:overload @:final public function unmarshal(n : org.w3c.dom.Node) : T;
+	@:require(java0) @:overload @:public @:final public function unmarshal(n : org.w3c.dom.Node) : T;
 	
 	/**
 	* @since 2.0.3
 	*/
-	@:require(java0) @:overload @:final public function unmarshal(n : org.w3c.dom.Node, au : javax.xml.bind.attachment.AttachmentUnmarshaller) : T;
+	@:require(java0) @:overload @:public @:final public function unmarshal(n : org.w3c.dom.Node, au : javax.xml.bind.attachment.AttachmentUnmarshaller) : T;
 	
-	@:overload @:final public function unmarshal(context : com.sun.xml.internal.bind.api.BridgeContext, n : org.w3c.dom.Node) : T;
+	@:overload @:public @:final public function unmarshal(context : com.sun.xml.internal.bind.api.BridgeContext, n : org.w3c.dom.Node) : T;
 	
-	@:overload @:abstract public function unmarshal(context : javax.xml.bind.Unmarshaller, n : org.w3c.dom.Node) : T;
+	@:overload @:public @:abstract public function unmarshal(context : javax.xml.bind.Unmarshaller, n : org.w3c.dom.Node) : T;
 	
 	/**
 	* Gets the {@link TypeReference} from which this bridge was created.
 	*/
-	@:overload @:abstract public function getTypeReference() : com.sun.xml.internal.bind.api.TypeReference;
+	@:overload @:public @:abstract public function getTypeReference() : com.sun.xml.internal.bind.api.TypeReference;
 	
 	
 }

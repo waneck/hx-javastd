@@ -28,13 +28,13 @@ package com.sun.codemodel.internal.util;
 */
 @:internal extern class SingleByteEncoder extends java.nio.charset.CharsetEncoder
 {
-	@:overload private function new(cs : java.nio.charset.Charset, index1 : java.NativeArray<java.StdTypes.Int16>, index2 : String, mask1 : Int, mask2 : Int, shift : Int) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, index1 : java.NativeArray<java.StdTypes.Int16>, index2 : String, mask1 : Int, mask2 : Int, shift : Int) : Void;
 	
-	@:overload override public function canEncode(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canEncode(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload public function encode(inputChar : java.StdTypes.Char16) : java.StdTypes.Int8;
+	@:overload @:public public function encode(inputChar : java.StdTypes.Char16) : java.StdTypes.Int8;
 	
 	
 }

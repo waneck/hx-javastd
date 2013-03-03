@@ -36,17 +36,17 @@ extern class CertificateExtensions implements sun.security.x509.CertAttrSet<sun.
 	* Identifier for this attribute, to be used with the
 	* get, set, delete methods of Certificate, x509 type.
 	*/
-	public static var IDENT(default, null) : String;
+	@:public @:static @:final public static var IDENT(default, null) : String;
 	
 	/**
 	* name
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
 	/**
 	* Default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create the object, decoding the values from the passed DER stream.
@@ -54,7 +54,7 @@ extern class CertificateExtensions implements sun.security.x509.CertAttrSet<sun.
 	* @param in the DerInputStream to read the Extension from.
 	* @exception IOException on decoding errors.
 	*/
-	@:overload public function new(_in : sun.security.util.DerInputStream) : Void;
+	@:overload @:public public function new(_in : sun.security.util.DerInputStream) : Void;
 	
 	/**
 	* Encode the extensions in DER form to the stream, setting
@@ -64,7 +64,7 @@ extern class CertificateExtensions implements sun.security.x509.CertAttrSet<sun.
 	* @exception CertificateException on encoding errors.
 	* @exception IOException on errors.
 	*/
-	@:overload public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Encode the extensions in DER form to the stream.
@@ -74,7 +74,7 @@ extern class CertificateExtensions implements sun.security.x509.CertAttrSet<sun.
 	* @exception CertificateException on encoding errors.
 	* @exception IOException on errors.
 	*/
-	@:overload public function encode(out : java.io.OutputStream, isCertReq : Bool) : Void;
+	@:overload @:public public function encode(out : java.io.OutputStream, isCertReq : Bool) : Void;
 	
 	/**
 	* Set the attribute value.
@@ -82,48 +82,48 @@ extern class CertificateExtensions implements sun.security.x509.CertAttrSet<sun.
 	* @param obj the object to set.
 	* @exception IOException if the object could not be cached.
 	*/
-	@:overload public function set(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function set(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Get the attribute value.
 	* @param name the extension name used in the lookup.
 	* @exception IOException if named extension is not found.
 	*/
-	@:overload public function get(name : String) : Dynamic;
+	@:overload @:public public function get(name : String) : Dynamic;
 	
 	/**
 	* Delete the attribute value.
 	* @param name the extension name used in the lookup.
 	* @exception IOException if named extension is not found.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
-	@:overload public function getNameByOid(oid : sun.security.util.ObjectIdentifier) : String;
+	@:overload @:public public function getNameByOid(oid : sun.security.util.ObjectIdentifier) : String;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this
 	* attribute.
 	*/
-	@:overload public function getElements() : java.util.Enumeration<sun.security.x509.Extension>;
+	@:overload @:public public function getElements() : java.util.Enumeration<sun.security.x509.Extension>;
 	
 	/**
 	* Return a collection view of the extensions.
 	* @return a collection view of the extensions in this Certificate.
 	*/
-	@:overload public function getAllExtensions() : java.util.Collection<sun.security.x509.Extension>;
+	@:overload @:public public function getAllExtensions() : java.util.Collection<sun.security.x509.Extension>;
 	
-	@:overload public function getUnparseableExtensions() : java.util.Map<String, sun.security.x509.Extension>;
+	@:overload @:public public function getUnparseableExtensions() : java.util.Map<String, sun.security.x509.Extension>;
 	
 	/**
 	* Return the name of this attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return true if a critical extension is found that is
 	* not supported, otherwise return false.
 	*/
-	@:overload public function hasUnsupportedCriticalExtension() : Bool;
+	@:overload @:public public function hasUnsupportedCriticalExtension() : Bool;
 	
 	/**
 	* Compares this CertificateExtensions for equality with the specified
@@ -136,14 +136,14 @@ extern class CertificateExtensions implements sun.security.x509.CertAttrSet<sun.
 	* @return true iff all the entries match that of the Other,
 	* false otherwise.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode value for this CertificateExtensions.
 	*
 	* @return the hashcode value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this <tt>CertificateExtensions</tt>
@@ -153,15 +153,15 @@ extern class CertificateExtensions implements sun.security.x509.CertAttrSet<sun.
 	*
 	* @return  a string representation of this CertificateExtensions.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:internal extern class UnparseableExtension extends java.security.cert.Extension
 {
-	@:overload public function new(ext : java.security.cert.Extension, why : java.lang.Throwable) : Void;
+	@:overload @:public public function new(ext : java.security.cert.Extension, why : java.lang.Throwable) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

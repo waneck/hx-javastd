@@ -41,7 +41,7 @@ extern class AccelTypedVolatileImage extends sun.awt.image.SunVolatileImage
 	*        AccelSurface interface
 	* @see sun.java2d.pipe.hw.AccelSurface
 	*/
-	@:overload public function new(graphicsConfig : java.awt.GraphicsConfiguration, width : Int, height : Int, transparency : Int, accType : Int) : Void;
+	@:overload @:public public function new(graphicsConfig : java.awt.GraphicsConfiguration, width : Int, height : Int, transparency : Int, accType : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -49,7 +49,7 @@ extern class AccelTypedVolatileImage extends sun.awt.image.SunVolatileImage
 	* This method will throw {@code UnsupportedOperationException} if it this
 	* image's destination surface can not be rendered to.
 	*/
-	@:overload override public function createGraphics() : java.awt.Graphics2D;
+	@:overload @:public override public function createGraphics() : java.awt.Graphics2D;
 	
 	
 }

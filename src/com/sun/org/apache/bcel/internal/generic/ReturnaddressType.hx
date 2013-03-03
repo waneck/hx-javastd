@@ -64,22 +64,22 @@ extern class ReturnaddressType extends com.sun.org.apache.bcel.internal.generic.
 	* see vmspec2 3.3.3
 	* @author  <A HREF="http://www.inf.fu-berlin.de/~ehaase">Enver Haase</A>
 	*/
-	public static var NO_TARGET(default, null) : com.sun.org.apache.bcel.internal.generic.ReturnaddressType;
+	@:public @:static @:final public static var NO_TARGET(default, null) : com.sun.org.apache.bcel.internal.generic.ReturnaddressType;
 	
 	/**
 	* Creates a ReturnaddressType object with a target.
 	*/
-	@:overload public function new(returnTarget : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function new(returnTarget : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* Returns if the two Returnaddresses refer to the same target.
 	*/
-	@:overload public function equals(rat : Dynamic) : Bool;
+	@:overload @:public public function equals(rat : Dynamic) : Bool;
 	
 	/**
 	* @return the target of this ReturnaddressType
 	*/
-	@:overload public function getTarget() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function getTarget() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	
 }

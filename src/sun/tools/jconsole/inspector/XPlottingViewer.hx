@@ -25,18 +25,18 @@ package sun.tools.jconsole.inspector;
 */
 extern class XPlottingViewer extends sun.tools.jconsole.PlotterPanel implements java.awt.event.ActionListener
 {
-	@:overload public static function isViewableValue(value : Dynamic) : Bool;
+	@:overload @:public @:static public static function isViewableValue(value : Dynamic) : Bool;
 	
-	@:overload public static function loadPlotting(mbean : sun.tools.jconsole.inspector.XMBean, attributeName : String, value : Dynamic, table : javax.swing.JTable, tab : sun.tools.jconsole.MBeansTab) : java.awt.Component;
+	@:overload @:public @:static public static function loadPlotting(mbean : sun.tools.jconsole.inspector.XMBean, attributeName : String, value : Dynamic, table : javax.swing.JTable, tab : sun.tools.jconsole.MBeansTab) : java.awt.Component;
 	
 	/*public void paintComponent(Graphics g) {
 	super.paintComponent(g);
 	setBackground(g.getColor());
 	plotter.paintComponent(g);
 	}*/
-	@:overload public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function createPlotter(xmbean : sun.tools.jconsole.inspector.XMBean, attributeName : String, key : String, table : javax.swing.JTable) : sun.tools.jconsole.Plotter;
+	@:overload @:public public function createPlotter(xmbean : sun.tools.jconsole.inspector.XMBean, attributeName : String, key : String, table : javax.swing.JTable) : sun.tools.jconsole.Plotter;
 	
 	
 }

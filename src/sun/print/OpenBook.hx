@@ -28,7 +28,7 @@ package sun.print;
 	/**
 	* This object does not know the number of pages.
 	*/
-	@:overload public function getNumberOfPages() : Int;
+	@:overload @:public public function getNumberOfPages() : Int;
 	
 	/**
 	* Return the PageFormat of the page specified by 'pageIndex'.
@@ -36,7 +36,7 @@ package sun.print;
 	*            PageFormat is being requested.
 	* @return The PageFormat describing the size and orientation
 	*/
-	@:overload public function getPageFormat(pageIndex : Int) : java.awt.print.PageFormat;
+	@:overload @:public public function getPageFormat(pageIndex : Int) : java.awt.print.PageFormat;
 	
 	/**
 	* Return the Printable instance responsible for rendering
@@ -45,7 +45,7 @@ package sun.print;
 	*            Printable is being requested.
 	* @return The Printable that will draw the page.
 	*/
-	@:overload public function getPrintable(pageIndex : Int) : java.awt.print.Printable;
+	@:overload @:public public function getPrintable(pageIndex : Int) : java.awt.print.Printable;
 	
 	
 }

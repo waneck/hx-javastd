@@ -28,94 +28,94 @@ extern class ZoneInfoFile
 	/**
 	* The magic number for the ZoneInfo data file format.
 	*/
-	public static var JAVAZI_LABEL(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:public @:static @:final public static var JAVAZI_LABEL(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* The ZoneInfo data file format version number. Must increase
 	* one when any incompatible change has been made.
 	*/
-	public static var JAVAZI_VERSION(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var JAVAZI_VERSION(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Raw offset data item tag.
 	*/
-	public static var TAG_RawOffset(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var TAG_RawOffset(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Known last Daylight Saving Time save value data item tag.
 	*/
-	public static var TAG_LastDSTSaving(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var TAG_LastDSTSaving(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Checksum data item tag.
 	*/
-	public static var TAG_CRC32(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var TAG_CRC32(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Transition data item tag.
 	*/
-	public static var TAG_Transition(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var TAG_Transition(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Offset table data item tag.
 	*/
-	public static var TAG_Offset(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var TAG_Offset(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* SimpleTimeZone parameters data item tag.
 	*/
-	public static var TAG_SimpleTimeZone(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var TAG_SimpleTimeZone(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Raw GMT offset will change in the future.
 	*/
-	public static var TAG_GMTOffsetWillChange(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var TAG_GMTOffsetWillChange(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* The ZoneInfoMappings file name.
 	*/
-	public static var JAVAZM_FILE_NAME(default, null) : String;
+	@:public @:static @:final public static var JAVAZM_FILE_NAME(default, null) : String;
 	
 	/**
 	* The magic number for the ZoneInfoMappings file format.
 	*/
-	public static var JAVAZM_LABEL(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:public @:static @:final public static var JAVAZM_LABEL(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* The ZoneInfoMappings file format version number. Must increase
 	* one when any incompatible change has been made.
 	*/
-	public static var JAVAZM_VERSION(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var JAVAZM_VERSION(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Time zone IDs data item tag.
 	*/
-	public static var TAG_ZoneIDs(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var TAG_ZoneIDs(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Raw GMT offsets table data item tag.
 	*/
-	public static var TAG_RawOffsets(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var TAG_RawOffsets(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Indices to the raw GMT offset table data item tag.
 	*/
-	public static var TAG_RawOffsetIndices(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var TAG_RawOffsetIndices(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Time zone aliases table data item tag.
 	*/
-	public static var TAG_ZoneAliases(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var TAG_ZoneAliases(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Olson's public zone information version tag.
 	*/
-	public static var TAG_TZDataVersion(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var TAG_TZDataVersion(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Excluded zones item tag. (Added in Mustang)
 	*/
-	public static var TAG_ExcludedZones(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var TAG_ExcludedZones(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Converts the given time zone ID to a platform dependent path
@@ -124,7 +124,7 @@ extern class ZoneInfoFile
 	* @return a modified ID replacing '/' with {@link
 	* java.io.File#separatorChar File.separatorChar} if needed.
 	*/
-	@:overload public static function getFileName(ID : String) : String;
+	@:overload @:public @:static public static function getFileName(ID : String) : String;
 	
 	/**
 	* Gets a ZoneInfo with the given GMT offset. The object
@@ -134,16 +134,16 @@ extern class ZoneInfoFile
 	* @param gmtOffset GMT offset <em>in milliseconds</em>
 	* @return a ZoneInfo constructed with the given GMT offset
 	*/
-	@:overload public static function getCustomTimeZone(originalId : String, gmtOffset : Int) : sun.util.calendar.ZoneInfo;
+	@:overload @:public @:static public static function getCustomTimeZone(originalId : String, gmtOffset : Int) : sun.util.calendar.ZoneInfo;
 	
-	@:overload public static function toCustomID(gmtOffset : Int) : String;
+	@:overload @:public @:static public static function toCustomID(gmtOffset : Int) : String;
 	
 	/**
 	* @return a ZoneInfo instance created for the specified id, or
 	* null if there is no time zone data file found for the specified
 	* id.
 	*/
-	@:overload public static function getZoneInfo(id : String) : sun.util.calendar.ZoneInfo;
+	@:overload @:public @:static public static function getZoneInfo(id : String) : sun.util.calendar.ZoneInfo;
 	
 	
 }

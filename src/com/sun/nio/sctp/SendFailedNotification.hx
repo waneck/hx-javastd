@@ -28,7 +28,7 @@ extern class SendFailedNotification implements com.sun.nio.sctp.Notification
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the association that this notification is applicable to.
@@ -38,7 +38,7 @@ extern class SendFailedNotification implements com.sun.nio.sctp.Notification
 	*          {@linkplain
 	*          com.sun.nio.sctp.AssociationChangeNotification.AssocChangeEvent#CANT_START}
 	*/
-	@:overload @:abstract public function association() : com.sun.nio.sctp.Association;
+	@:overload @:public @:abstract public function association() : com.sun.nio.sctp.Association;
 	
 	/**
 	* Returns the address.
@@ -46,7 +46,7 @@ extern class SendFailedNotification implements com.sun.nio.sctp.Notification
 	* @return  The peer primary address of the association or the address that
 	*          the message was sent to
 	*/
-	@:overload @:abstract public function address() : java.net.SocketAddress;
+	@:overload @:public @:abstract public function address() : java.net.SocketAddress;
 	
 	/**
 	* Returns the data that was to be sent.
@@ -54,7 +54,7 @@ extern class SendFailedNotification implements com.sun.nio.sctp.Notification
 	* @return  The user data. The buffers position will be {@code 0} and its
 	*          limit will be set to the end of the data.
 	*/
-	@:overload @:abstract public function buffer() : java.nio.ByteBuffer;
+	@:overload @:public @:abstract public function buffer() : java.nio.ByteBuffer;
 	
 	/**
 	* Returns the error code.
@@ -64,14 +64,14 @@ extern class SendFailedNotification implements com.sun.nio.sctp.Notification
 	*
 	* @return  The error code
 	*/
-	@:overload @:abstract public function errorCode() : Int;
+	@:overload @:public @:abstract public function errorCode() : Int;
 	
 	/**
 	* Returns the stream number that the messge was to be sent on.
 	*
 	* @return  The stream number
 	*/
-	@:overload @:abstract public function streamNumber() : Int;
+	@:overload @:public @:abstract public function streamNumber() : Int;
 	
 	
 }

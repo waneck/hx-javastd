@@ -28,24 +28,24 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 	/**
 	* Set by the constructor and reset in the {@link #wrapUp()} method.
 	*/
-	private var prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimeElementPropertyInfo;
+	@:protected private var prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimeElementPropertyInfo;
 	
-	@:overload private function new(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimeElementPropertyInfo) : Void;
+	@:overload @:protected private function new(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimeElementPropertyInfo) : Void;
 	
-	@:overload public function wrapUp() : Void;
+	@:overload @:public override public function wrapUp() : Void;
 	
-	@:overload override private function serializeListBody(beanT : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, list : ListT) : Void;
+	@:overload @:protected override private function serializeListBody(beanT : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, list : ListT) : Void;
 	
 	/**
 	* Serializes one item of the property.
 	*/
-	@:overload @:abstract private function serializeItem(expected : com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo<Dynamic>, item : ItemT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:protected @:abstract private function serializeItem(expected : com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo<Dynamic>, item : ItemT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload override public function createBodyUnmarshaller(chain : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, loaders : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
+	@:overload @:public override public function createBodyUnmarshaller(chain : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, loaders : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
 	
-	@:overload @:final public function getKind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:public @:final override public function getKind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
-	@:overload public function getElementPropertyAccessor(nsUri : String, localName : String) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
+	@:overload @:public override public function getElementPropertyAccessor(nsUri : String, localName : String) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
 	
 	
 }

@@ -28,18 +28,18 @@ extern class VMSupport
 	/**
 	* Returns the agent properties.
 	*/
-	@:overload @:synchronized public static function getAgentProperties() : java.util.Properties;
+	@:overload @:public @:static @:synchronized public static function getAgentProperties() : java.util.Properties;
 	
-	@:overload public static function serializePropertiesToByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function serializePropertiesToByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function serializeAgentPropertiesToByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function serializeAgentPropertiesToByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/*
 	* Returns true if the given JAR file has the Class-Path attribute in the
 	* main section of the JAR manifest. Throws RuntimeException if the given
 	* path is not a JAR file or some other error occurs.
 	*/
-	@:overload public static function isClassPathAttributePresent(path : String) : Bool;
+	@:overload @:public @:static public static function isClassPathAttributePresent(path : String) : Bool;
 	
 	
 }

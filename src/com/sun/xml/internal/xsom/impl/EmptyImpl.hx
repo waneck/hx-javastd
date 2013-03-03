@@ -30,23 +30,23 @@ extern class EmptyImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl impl
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function asSimpleType() : com.sun.xml.internal.xsom.XSSimpleType;
+	@:overload @:public public function asSimpleType() : com.sun.xml.internal.xsom.XSSimpleType;
 	
-	@:overload public function asParticle() : com.sun.xml.internal.xsom.XSParticle;
+	@:overload @:public public function asParticle() : com.sun.xml.internal.xsom.XSParticle;
 	
-	@:overload public function asEmpty() : com.sun.xml.internal.xsom.XSContentType;
+	@:overload @:public public function asEmpty() : com.sun.xml.internal.xsom.XSContentType;
 	
-	@:overload public function apply(_function : com.sun.xml.internal.xsom.visitor.XSContentTypeFunction<Dynamic>) : Dynamic;
+	@:overload @:public public function apply(_function : com.sun.xml.internal.xsom.visitor.XSContentTypeFunction<Dynamic>) : Dynamic;
 	
-	@:overload override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
+	@:overload @:public override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
 	
-	@:overload override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
-	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSContentTypeVisitor) : Void;
+	@:overload @:public public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSContentTypeVisitor) : Void;
 	
-	@:overload public function getContentType() : com.sun.xml.internal.xsom.XSContentType;
+	@:overload @:public public function getContentType() : com.sun.xml.internal.xsom.XSContentType;
 	
 	
 }

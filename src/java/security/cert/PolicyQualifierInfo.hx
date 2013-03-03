@@ -33,7 +33,7 @@ extern class PolicyQualifierInfo
 	* @exception IOException thrown if the byte array does not represent a
 	* valid and parsable policy qualifier
 	*/
-	@:overload public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the <code>policyQualifierId</code> field of this
@@ -43,7 +43,7 @@ extern class PolicyQualifierInfo
 	*
 	* @return the OID (never <code>null</code>)
 	*/
-	@:overload @:final public function getPolicyQualifierId() : String;
+	@:overload @:public @:final public function getPolicyQualifierId() : String;
 	
 	/**
 	* Returns the ASN.1 DER encoded form of this
@@ -53,7 +53,7 @@ extern class PolicyQualifierInfo
 	* Note that a copy is returned, so the data is cloned each time
 	* this method is called.
 	*/
-	@:overload @:final public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the ASN.1 DER encoded form of the <code>qualifier</code>
@@ -63,7 +63,7 @@ extern class PolicyQualifierInfo
 	* field. Note that a copy is returned, so the data is cloned each
 	* time this method is called.
 	*/
-	@:overload @:final public function getPolicyQualifier() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getPolicyQualifier() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Return a printable representation of this
@@ -72,7 +72,7 @@ extern class PolicyQualifierInfo
 	* @return a <code>String</code> describing the contents of this
 	*         <code>PolicyQualifierInfo</code>
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

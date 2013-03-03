@@ -60,18 +60,20 @@ extern class ConstantCP extends com.sun.org.apache.bcel.internal.classfile.Const
 {
 	/** References to the constants containing the class and the field signature
 	*/
-	private var class_index : Int;
+	@:protected private var class_index : Int;
+	
+	@:protected private var name_and_type_index : Int;
 	
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantCP) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantCP) : Void;
 	
 	/**
 	* @param class_index Reference to the class containing the field
 	* @param name_and_type_index and the field signature
 	*/
-	@:overload private function new(tag : java.StdTypes.Int8, class_index : Int, name_and_type_index : Int) : Void;
+	@:overload @:protected private function new(tag : java.StdTypes.Int8, class_index : Int, name_and_type_index : Int) : Void;
 	
 	/**
 	* Dump constant field reference to file stream in binary format.
@@ -79,37 +81,37 @@ extern class ConstantCP extends com.sun.org.apache.bcel.internal.classfile.Const
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final override public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Reference (index) to class this field or method belongs to.
 	*/
-	@:overload @:final public function getClassIndex() : Int;
+	@:overload @:public @:final public function getClassIndex() : Int;
 	
 	/**
 	* @return Reference (index) to signature of the field.
 	*/
-	@:overload @:final public function getNameAndTypeIndex() : Int;
+	@:overload @:public @:final public function getNameAndTypeIndex() : Int;
 	
 	/**
 	* @param class_index points to Constant_class
 	*/
-	@:overload @:final public function setClassIndex(class_index : Int) : Void;
+	@:overload @:public @:final public function setClassIndex(class_index : Int) : Void;
 	
 	/**
 	* @return Class this field belongs to.
 	*/
-	@:overload public function getClass(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
+	@:overload @:public public function getClass(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
 	
 	/**
 	* @param name_and_type_index points to Constant_NameAndType
 	*/
-	@:overload @:final public function setNameAndTypeIndex(name_and_type_index : Int) : Void;
+	@:overload @:public @:final public function setNameAndTypeIndex(name_and_type_index : Int) : Void;
 	
 	/**
 	* @return String representation.
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	
 }

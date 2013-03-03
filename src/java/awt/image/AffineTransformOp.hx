@@ -28,17 +28,17 @@ extern class AffineTransformOp implements java.awt.image.BufferedImageOp impleme
 	/**
 	* Nearest-neighbor interpolation type.
 	*/
-	public static var TYPE_NEAREST_NEIGHBOR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_NEAREST_NEIGHBOR(default, null) : Int;
 	
 	/**
 	* Bilinear interpolation type.
 	*/
-	public static var TYPE_BILINEAR(default, null) : Int;
+	@:public @:static @:final public static var TYPE_BILINEAR(default, null) : Int;
 	
 	/**
 	* Bicubic interpolation type.
 	*/
-	public static var TYPE_BICUBIC(default, null) : Int;
+	@:public @:static @:final public static var TYPE_BICUBIC(default, null) : Int;
 	
 	/**
 	* Constructs an <CODE>AffineTransformOp</CODE> given an affine transform.
@@ -60,7 +60,7 @@ extern class AffineTransformOp implements java.awt.image.BufferedImageOp impleme
 	* @see java.awt.RenderingHints#KEY_INTERPOLATION
 	* @see java.awt.RenderingHints#KEY_RENDERING
 	*/
-	@:overload public function new(xform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : Void;
+	@:overload @:public public function new(xform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : Void;
 	
 	/**
 	* Constructs an <CODE>AffineTransformOp</CODE> given an affine transform
@@ -74,7 +74,7 @@ extern class AffineTransformOp implements java.awt.image.BufferedImageOp impleme
 	* {@link #TYPE_BICUBIC TYPE_BICUBIC}.
 	* @throws ImagingOpException if the transform is non-invertible.
 	*/
-	@:overload public function new(xform : java.awt.geom.AffineTransform, interpolationType : Int) : Void;
+	@:overload @:public public function new(xform : java.awt.geom.AffineTransform, interpolationType : Int) : Void;
 	
 	/**
 	* Returns the interpolation type used by this op.
@@ -83,7 +83,7 @@ extern class AffineTransformOp implements java.awt.image.BufferedImageOp impleme
 	* @see #TYPE_BILINEAR
 	* @see #TYPE_BICUBIC
 	*/
-	@:overload @:final public function getInterpolationType() : Int;
+	@:overload @:public @:final public function getInterpolationType() : Int;
 	
 	/**
 	* Transforms the source <CODE>BufferedImage</CODE> and stores the results
@@ -120,7 +120,7 @@ extern class AffineTransformOp implements java.awt.image.BufferedImageOp impleme
 	*         image-processing operation, or any other unsupported
 	*         operation.
 	*/
-	@:overload @:final public function filter(src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage) : java.awt.image.BufferedImage;
+	@:overload @:public @:final public function filter(src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage) : java.awt.image.BufferedImage;
 	
 	/**
 	* Transforms the source <CODE>Raster</CODE> and stores the results in
@@ -155,7 +155,7 @@ extern class AffineTransformOp implements java.awt.image.BufferedImageOp impleme
 	*         image-processing operation, or any other unsupported
 	*         operation.
 	*/
-	@:overload @:final public function filter(src : java.awt.image.Raster, dst : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
+	@:overload @:public @:final public function filter(src : java.awt.image.Raster, dst : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns the bounding box of the transformed destination.  The
@@ -168,7 +168,7 @@ extern class AffineTransformOp implements java.awt.image.BufferedImageOp impleme
 	* @return The <CODE>Rectangle2D</CODE> representing the destination's
 	* bounding box.
 	*/
-	@:overload @:final public function getBounds2D(src : java.awt.image.BufferedImage) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:final public function getBounds2D(src : java.awt.image.BufferedImage) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns the bounding box of the transformed destination.  The
@@ -181,7 +181,7 @@ extern class AffineTransformOp implements java.awt.image.BufferedImageOp impleme
 	* @return The <CODE>Rectangle2D</CODE> representing the destination's
 	* bounding box.
 	*/
-	@:overload @:final public function getBounds2D(src : java.awt.image.Raster) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:final public function getBounds2D(src : java.awt.image.Raster) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Creates a zeroed destination image with the correct size and number of
@@ -199,7 +199,7 @@ extern class AffineTransformOp implements java.awt.image.BufferedImageOp impleme
 	*
 	* @return The zeroed destination image.
 	*/
-	@:overload public function createCompatibleDestImage(src : java.awt.image.BufferedImage, destCM : java.awt.image.ColorModel) : java.awt.image.BufferedImage;
+	@:overload @:public public function createCompatibleDestImage(src : java.awt.image.BufferedImage, destCM : java.awt.image.ColorModel) : java.awt.image.BufferedImage;
 	
 	/**
 	* Creates a zeroed destination <CODE>Raster</CODE> with the correct size
@@ -210,7 +210,7 @@ extern class AffineTransformOp implements java.awt.image.BufferedImageOp impleme
 	*
 	* @return The zeroed destination <CODE>Raster</CODE>.
 	*/
-	@:overload public function createCompatibleDestRaster(src : java.awt.image.Raster) : java.awt.image.WritableRaster;
+	@:overload @:public public function createCompatibleDestRaster(src : java.awt.image.Raster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns the location of the corresponding destination point given a
@@ -224,21 +224,21 @@ extern class AffineTransformOp implements java.awt.image.BufferedImageOp impleme
 	* @return The <CODE>Point2D</CODE> in the destination that corresponds to
 	* the specified point in the source.
 	*/
-	@:overload @:final public function getPoint2D(srcPt : java.awt.geom.Point2D, dstPt : java.awt.geom.Point2D) : java.awt.geom.Point2D;
+	@:overload @:public @:final public function getPoint2D(srcPt : java.awt.geom.Point2D, dstPt : java.awt.geom.Point2D) : java.awt.geom.Point2D;
 	
 	/**
 	* Returns the affine transform used by this transform operation.
 	*
 	* @return The <CODE>AffineTransform</CODE> associated with this op.
 	*/
-	@:overload @:final public function getTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public @:final public function getTransform() : java.awt.geom.AffineTransform;
 	
 	/**
 	* Returns the rendering hints used by this transform operation.
 	*
 	* @return The <CODE>RenderingHints</CODE> object associated with this op.
 	*/
-	@:overload @:final public function getRenderingHints() : java.awt.RenderingHints;
+	@:overload @:public @:final public function getRenderingHints() : java.awt.RenderingHints;
 	
 	
 }

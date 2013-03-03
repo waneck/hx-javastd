@@ -31,12 +31,12 @@ extern class DialogOwner implements javax.print.attribute.PrintRequestAttribute
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload public function new(frame : java.awt.Frame) : Void;
+	@:overload @:public public function new(frame : java.awt.Frame) : Void;
 	
 	/**
 	* Returns the string table for class DialogOwner.
 	*/
-	@:overload public function getOwner() : java.awt.Frame;
+	@:overload @:public public function getOwner() : java.awt.Frame;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -48,7 +48,7 @@ extern class DialogOwner implements javax.print.attribute.PrintRequestAttribute
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<Dynamic>;
+	@:overload @:public @:final public function getCategory() : Class<Dynamic>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -59,7 +59,7 @@ extern class DialogOwner implements javax.print.attribute.PrintRequestAttribute
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

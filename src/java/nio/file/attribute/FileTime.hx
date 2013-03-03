@@ -37,7 +37,7 @@ extern class FileTime implements java.lang.Comparable<java.nio.file.attribute.Fi
 	*
 	* @return  a {@code FileTime} representing the given value
 	*/
-	@:overload public static function from(value : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.nio.file.attribute.FileTime;
+	@:overload @:public @:static public static function from(value : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.nio.file.attribute.FileTime;
 	
 	/**
 	* Returns a {@code FileTime} representing the given value in milliseconds.
@@ -48,7 +48,7 @@ extern class FileTime implements java.lang.Comparable<java.nio.file.attribute.Fi
 	*
 	* @return  a {@code FileTime} representing the given value
 	*/
-	@:overload public static function fromMillis(value : haxe.Int64) : java.nio.file.attribute.FileTime;
+	@:overload @:public @:static public static function fromMillis(value : haxe.Int64) : java.nio.file.attribute.FileTime;
 	
 	/**
 	* Returns the value at the given unit of granularity.
@@ -63,7 +63,7 @@ extern class FileTime implements java.lang.Comparable<java.nio.file.attribute.Fi
 	* @return  value in the given unit of granularity, since the epoch
 	*          since the epoch (1970-01-01T00:00:00Z); can be negative
 	*/
-	@:overload public function to(unit : java.util.concurrent.TimeUnit) : haxe.Int64;
+	@:overload @:public public function to(unit : java.util.concurrent.TimeUnit) : haxe.Int64;
 	
 	/**
 	* Returns the value in milliseconds.
@@ -74,7 +74,7 @@ extern class FileTime implements java.lang.Comparable<java.nio.file.attribute.Fi
 	*
 	* @return  the value in milliseconds, since the epoch (1970-01-01T00:00:00Z)
 	*/
-	@:overload public function toMillis() : haxe.Int64;
+	@:overload @:public public function toMillis() : haxe.Int64;
 	
 	/**
 	* Tests this {@code FileTime} for equality with the given object.
@@ -89,7 +89,7 @@ extern class FileTime implements java.lang.Comparable<java.nio.file.attribute.Fi
 	* @return  {@code true} if, and only if, the given object is a {@code
 	*          FileTime} that represents the same time
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Computes a hash code for this file time.
@@ -99,7 +99,7 @@ extern class FileTime implements java.lang.Comparable<java.nio.file.attribute.Fi
 	*
 	* @return  the hash-code value
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares the value of two {@code FileTime} objects for order.
@@ -112,7 +112,7 @@ extern class FileTime implements java.lang.Comparable<java.nio.file.attribute.Fi
 	*          that is before {@code other}, and a value greater than 0 if this
 	*          {@code FileTime} represents a time that is after {@code other}
 	*/
-	@:overload public function compareTo(other : java.nio.file.attribute.FileTime) : Int;
+	@:overload @:public public function compareTo(other : java.nio.file.attribute.FileTime) : Int;
 	
 	/**
 	* Returns the string representation of this {@code FileTime}. The string
@@ -139,7 +139,7 @@ extern class FileTime implements java.lang.Comparable<java.nio.file.attribute.Fi
 	*
 	* @return  the string representation of this file time
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -150,11 +150,11 @@ extern class FileTime implements java.lang.Comparable<java.nio.file.attribute.Fi
 */
 @:native('java$nio$file$attribute$FileTime$DaysAndNanos') @:internal extern class FileTime_DaysAndNanos implements java.lang.Comparable<java.nio.file.attribute.FileTime.FileTime_DaysAndNanos>
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function compareTo(other : java.nio.file.attribute.FileTime.FileTime_DaysAndNanos) : Int;
+	@:overload @:public public function compareTo(other : java.nio.file.attribute.FileTime.FileTime_DaysAndNanos) : Int;
 	
 	
 }

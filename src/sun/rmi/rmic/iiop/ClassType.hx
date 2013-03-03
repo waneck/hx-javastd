@@ -35,7 +35,7 @@ extern class ClassType extends sun.rmi.rmic.iiop.CompoundType
 	* Return the parent class of this type. Returns null if this
 	* type is an interface or if there is no parent.
 	*/
-	@:overload override public function getSuperclass() : sun.rmi.rmic.iiop.ClassType;
+	@:overload @:public override public function getSuperclass() : sun.rmi.rmic.iiop.ClassType;
 	
 	/**
 	* Print this type.
@@ -44,40 +44,40 @@ extern class ClassType extends sun.rmi.rmic.iiop.CompoundType
 	* @param useIDLNames If true, print IDL names; otherwise, print java names.
 	* @param globalIDLNames If true and useIDLNames true, prepends "::".
 	*/
-	@:overload public function print(writer : sun.rmi.rmic.IndentingWriter, useQualifiedNames : Bool, useIDLNames : Bool, globalIDLNames : Bool) : Void;
+	@:overload @:public override public function print(writer : sun.rmi.rmic.IndentingWriter, useQualifiedNames : Bool, useIDLNames : Bool, globalIDLNames : Bool) : Void;
 	
-	@:overload override private function destroy() : Void;
+	@:overload @:protected override private function destroy() : Void;
 	
 	/**
 	* Create a ClassType instance for the given class. NOTE: This constructor
 	* is ONLY for SpecialClassType.
 	*/
-	@:overload private function new(stack : sun.rmi.rmic.iiop.ContextStack, typeCode : Int, classDef : sun.tools.java.ClassDefinition) : Void;
+	@:overload @:protected private function new(stack : sun.rmi.rmic.iiop.ContextStack, typeCode : Int, classDef : sun.tools.java.ClassDefinition) : Void;
 	
 	/**
 	* Create a ClassType instance for the given class. NOTE: This constructor
 	* is ONLY for ImplementationType. It does not walk the parent chain.
 	*/
-	@:overload private function new(typeCode : Int, classDef : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack) : Void;
+	@:overload @:protected private function new(typeCode : Int, classDef : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack) : Void;
 	
 	/**
 	* Create an ClassType instance for the given class.  The resulting
 	* object is not yet completely initialized. Subclasses must call
 	* initialize(directInterfaces,directInterfaces,directConstants);
 	*/
-	@:overload private function new(stack : sun.rmi.rmic.iiop.ContextStack, classDef : sun.tools.java.ClassDefinition, typeCode : Int) : Void;
+	@:overload @:protected private function new(stack : sun.rmi.rmic.iiop.ContextStack, classDef : sun.tools.java.ClassDefinition, typeCode : Int) : Void;
 	
 	/**
 	* Convert all invalid types to valid ones.
 	*/
-	@:overload override private function swapInvalidTypes() : Void;
+	@:overload @:protected override private function swapInvalidTypes() : Void;
 	
 	/**
 	* Modify the type description with exception info.
 	*/
-	@:overload public function addExceptionDescription(typeDesc : String) : String;
+	@:overload @:public public function addExceptionDescription(typeDesc : String) : String;
 	
-	@:overload private function initParents(stack : sun.rmi.rmic.iiop.ContextStack) : Bool;
+	@:overload @:protected private function initParents(stack : sun.rmi.rmic.iiop.ContextStack) : Bool;
 	
 	
 }

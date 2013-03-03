@@ -33,7 +33,7 @@ extern class XMLDecoder implements java.lang.AutoCloseable
 	*
 	* @see XMLEncoder#XMLEncoder(java.io.OutputStream)
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Creates a new input stream for reading archives
@@ -43,7 +43,7 @@ extern class XMLDecoder implements java.lang.AutoCloseable
 	* @param owner The owner of this stream.
 	*
 	*/
-	@:overload public function new(_in : java.io.InputStream, owner : Dynamic) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, owner : Dynamic) : Void;
 	
 	/**
 	* Creates a new input stream for reading archives
@@ -54,7 +54,7 @@ extern class XMLDecoder implements java.lang.AutoCloseable
 	* @param exceptionListener the exception handler for the stream;
 	*        if <code>null</code> the default exception listener will be used.
 	*/
-	@:overload public function new(_in : java.io.InputStream, owner : Dynamic, exceptionListener : java.beans.ExceptionListener) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, owner : Dynamic, exceptionListener : java.beans.ExceptionListener) : Void;
 	
 	/**
 	* Creates a new input stream for reading archives
@@ -71,7 +71,7 @@ extern class XMLDecoder implements java.lang.AutoCloseable
 	*        be used
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(_in : java.io.InputStream, owner : Dynamic, exceptionListener : java.beans.ExceptionListener, cl : java.lang.ClassLoader) : Void;
+	@:require(java5) @:overload @:public public function new(_in : java.io.InputStream, owner : Dynamic, exceptionListener : java.beans.ExceptionListener, cl : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Creates a new decoder to parse XML archives
@@ -85,13 +85,13 @@ extern class XMLDecoder implements java.lang.AutoCloseable
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(is : org.xml.sax.InputSource) : Void;
+	@:require(java7) @:overload @:public public function new(is : org.xml.sax.InputSource) : Void;
 	
 	/**
 	* This method closes the input stream associated
 	* with this stream.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Sets the exception handler for this stream to <code>exceptionListener</code>.
@@ -103,7 +103,7 @@ extern class XMLDecoder implements java.lang.AutoCloseable
 	*
 	* @see #getExceptionListener
 	*/
-	@:overload public function setExceptionListener(exceptionListener : java.beans.ExceptionListener) : Void;
+	@:overload @:public public function setExceptionListener(exceptionListener : java.beans.ExceptionListener) : Void;
 	
 	/**
 	* Gets the exception handler for this stream.
@@ -113,7 +113,7 @@ extern class XMLDecoder implements java.lang.AutoCloseable
 	*
 	* @see #setExceptionListener
 	*/
-	@:overload public function getExceptionListener() : java.beans.ExceptionListener;
+	@:overload @:public public function getExceptionListener() : java.beans.ExceptionListener;
 	
 	/**
 	* Reads the next object from the underlying input stream.
@@ -125,7 +125,7 @@ extern class XMLDecoder implements java.lang.AutoCloseable
 	*
 	* @see XMLEncoder#writeObject
 	*/
-	@:overload public function readObject() : Dynamic;
+	@:overload @:public public function readObject() : Dynamic;
 	
 	/**
 	* Sets the owner of this decoder to <code>owner</code>.
@@ -134,7 +134,7 @@ extern class XMLDecoder implements java.lang.AutoCloseable
 	*
 	* @see #getOwner
 	*/
-	@:overload public function setOwner(owner : Dynamic) : Void;
+	@:overload @:public public function setOwner(owner : Dynamic) : Void;
 	
 	/**
 	* Gets the owner of this decoder.
@@ -143,7 +143,7 @@ extern class XMLDecoder implements java.lang.AutoCloseable
 	*
 	* @see #setOwner
 	*/
-	@:overload public function getOwner() : Dynamic;
+	@:overload @:public public function getOwner() : Dynamic;
 	
 	/**
 	* Creates a new handler for SAX parser
@@ -167,7 +167,7 @@ extern class XMLDecoder implements java.lang.AutoCloseable
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function createHandler(owner : Dynamic, el : java.beans.ExceptionListener, cl : java.lang.ClassLoader) : org.xml.sax.helpers.DefaultHandler;
+	@:require(java7) @:overload @:public @:static public static function createHandler(owner : Dynamic, el : java.beans.ExceptionListener, cl : java.lang.ClassLoader) : org.xml.sax.helpers.DefaultHandler;
 	
 	
 }

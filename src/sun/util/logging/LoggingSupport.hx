@@ -28,35 +28,35 @@ extern class LoggingSupport
 	/**
 	* Returns true if java.util.logging support is available.
 	*/
-	@:overload public static function isAvailable() : Bool;
+	@:overload @:public @:static public static function isAvailable() : Bool;
 	
-	@:overload public static function getLoggerNames() : java.util.List<String>;
+	@:overload @:public @:static public static function getLoggerNames() : java.util.List<String>;
 	
-	@:overload public static function getLoggerLevel(loggerName : String) : String;
+	@:overload @:public @:static public static function getLoggerLevel(loggerName : String) : String;
 	
-	@:overload public static function setLoggerLevel(loggerName : String, levelName : String) : Void;
+	@:overload @:public @:static public static function setLoggerLevel(loggerName : String, levelName : String) : Void;
 	
-	@:overload public static function getParentLoggerName(loggerName : String) : String;
+	@:overload @:public @:static public static function getParentLoggerName(loggerName : String) : String;
 	
-	@:overload public static function getLogger(name : String) : Dynamic;
+	@:overload @:public @:static public static function getLogger(name : String) : Dynamic;
 	
-	@:overload public static function getLevel(logger : Dynamic) : Dynamic;
+	@:overload @:public @:static public static function getLevel(logger : Dynamic) : Dynamic;
 	
-	@:overload public static function setLevel(logger : Dynamic, newLevel : Dynamic) : Void;
+	@:overload @:public @:static public static function setLevel(logger : Dynamic, newLevel : Dynamic) : Void;
 	
-	@:overload public static function isLoggable(logger : Dynamic, level : Dynamic) : Bool;
+	@:overload @:public @:static public static function isLoggable(logger : Dynamic, level : Dynamic) : Bool;
 	
-	@:overload public static function log(logger : Dynamic, level : Dynamic, msg : String) : Void;
+	@:overload @:public @:static public static function log(logger : Dynamic, level : Dynamic, msg : String) : Void;
 	
-	@:overload public static function log(logger : Dynamic, level : Dynamic, msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:static public static function log(logger : Dynamic, level : Dynamic, msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload public static function log(logger : Dynamic, level : Dynamic, msg : String, params : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public @:static public static function log(logger : Dynamic, level : Dynamic, msg : String, params : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public static function parseLevel(levelName : String) : Dynamic;
+	@:overload @:public @:static public static function parseLevel(levelName : String) : Dynamic;
 	
-	@:overload public static function getLevelName(level : Dynamic) : String;
+	@:overload @:public @:static public static function getLevelName(level : Dynamic) : String;
 	
-	@:overload public static function getSimpleFormat() : String;
+	@:overload @:public @:static public static function getSimpleFormat() : String;
 	
 	
 }

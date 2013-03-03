@@ -54,7 +54,7 @@ extern class TypeResolver
 	* @see #getActualType(Class)
 	* @see #resolve(Type,Type)
 	*/
-	@:overload public static function resolveInClass(inClass : Class<Dynamic>, type : java.lang.reflect.Type) : java.lang.reflect.Type;
+	@:overload @:public @:static public static function resolveInClass(inClass : Class<Dynamic>, type : java.lang.reflect.Type) : java.lang.reflect.Type;
 	
 	/**
 	* Replaces all {@code types} in the given array
@@ -67,7 +67,7 @@ extern class TypeResolver
 	* @see #getActualType(Class)
 	* @see #resolve(Type,Type[])
 	*/
-	@:overload public static function resolveInClass(inClass : Class<Dynamic>, types : java.NativeArray<java.lang.reflect.Type>) : java.NativeArray<java.lang.reflect.Type>;
+	@:overload @:public @:static public static function resolveInClass(inClass : Class<Dynamic>, types : java.NativeArray<java.lang.reflect.Type>) : java.NativeArray<java.lang.reflect.Type>;
 	
 	/**
 	* Replaces type variables of the given {@code formal} type
@@ -129,7 +129,7 @@ extern class TypeResolver
 	* @see #TypeResolver(Type)
 	* @see #resolve(Type)
 	*/
-	@:native('resolve') @:overload public static function _resolve(actual : java.lang.reflect.Type, formal : java.lang.reflect.Type) : java.lang.reflect.Type;
+	@:native('resolve') @:overload @:public @:static public static function _resolve(actual : java.lang.reflect.Type, formal : java.lang.reflect.Type) : java.lang.reflect.Type;
 	
 	/**
 	* Replaces type variables of all formal types in the given array
@@ -142,7 +142,7 @@ extern class TypeResolver
 	* @see #TypeResolver(Type)
 	* @see #resolve(Type[])
 	*/
-	@:native('resolve') @:overload public static function _resolve(actual : java.lang.reflect.Type, formals : java.NativeArray<java.lang.reflect.Type>) : java.NativeArray<java.lang.reflect.Type>;
+	@:native('resolve') @:overload @:public @:static public static function _resolve(actual : java.lang.reflect.Type, formals : java.NativeArray<java.lang.reflect.Type>) : java.NativeArray<java.lang.reflect.Type>;
 	
 	/**
 	* Converts the given {@code type} to the corresponding class.
@@ -153,7 +153,7 @@ extern class TypeResolver
 	* @param type  the array of types to convert
 	* @return a corresponding class
 	*/
-	@:overload public static function erase(type : java.lang.reflect.Type) : Class<Dynamic>;
+	@:overload @:public @:static public static function erase(type : java.lang.reflect.Type) : Class<Dynamic>;
 	
 	/**
 	* Converts all {@code types} in the given array
@@ -164,9 +164,9 @@ extern class TypeResolver
 	*
 	* @see #erase(Type)
 	*/
-	@:overload public static function erase(types : java.NativeArray<java.lang.reflect.Type>) : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public @:static public static function erase(types : java.NativeArray<java.lang.reflect.Type>) : java.NativeArray<Class<Dynamic>>;
 	
-	@:overload public static function getTypeResolver(type : java.lang.reflect.Type) : com.sun.beans.TypeResolver;
+	@:overload @:public @:static public static function getTypeResolver(type : java.lang.reflect.Type) : com.sun.beans.TypeResolver;
 	
 	
 }

@@ -28,56 +28,56 @@ extern class ForwardingFileObject<F> implements javax.tools.FileObject
 	/**
 	* The file object which all methods are delegated to.
 	*/
-	private var fileObject(default, null) : F;
+	@:protected @:final private var fileObject(default, null) : F;
 	
 	/**
 	* Creates a new instance of ForwardingFileObject.
 	* @param fileObject delegate to this file object
 	*/
-	@:overload private function new(fileObject : F) : Void;
+	@:overload @:protected private function new(fileObject : F) : Void;
 	
-	@:overload public function toUri() : java.net.URI;
+	@:overload @:public public function toUri() : java.net.URI;
 	
-	@:overload public function getName() : String;
-	
-	/**
-	* @throws IllegalStateException {@inheritDoc}
-	* @throws UnsupportedOperationException {@inheritDoc}
-	* @throws IOException {@inheritDoc}
-	*/
-	@:overload public function openInputStream() : java.io.InputStream;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* @throws IllegalStateException {@inheritDoc}
 	* @throws UnsupportedOperationException {@inheritDoc}
 	* @throws IOException {@inheritDoc}
 	*/
-	@:overload public function openOutputStream() : java.io.OutputStream;
+	@:overload @:public public function openInputStream() : java.io.InputStream;
 	
 	/**
 	* @throws IllegalStateException {@inheritDoc}
 	* @throws UnsupportedOperationException {@inheritDoc}
 	* @throws IOException {@inheritDoc}
 	*/
-	@:overload public function openReader(ignoreEncodingErrors : Bool) : java.io.Reader;
+	@:overload @:public public function openOutputStream() : java.io.OutputStream;
 	
 	/**
 	* @throws IllegalStateException {@inheritDoc}
 	* @throws UnsupportedOperationException {@inheritDoc}
 	* @throws IOException {@inheritDoc}
 	*/
-	@:overload public function getCharContent(ignoreEncodingErrors : Bool) : java.lang.CharSequence;
+	@:overload @:public public function openReader(ignoreEncodingErrors : Bool) : java.io.Reader;
 	
 	/**
 	* @throws IllegalStateException {@inheritDoc}
 	* @throws UnsupportedOperationException {@inheritDoc}
 	* @throws IOException {@inheritDoc}
 	*/
-	@:overload public function openWriter() : java.io.Writer;
+	@:overload @:public public function getCharContent(ignoreEncodingErrors : Bool) : java.lang.CharSequence;
 	
-	@:overload public function getLastModified() : haxe.Int64;
+	/**
+	* @throws IllegalStateException {@inheritDoc}
+	* @throws UnsupportedOperationException {@inheritDoc}
+	* @throws IOException {@inheritDoc}
+	*/
+	@:overload @:public public function openWriter() : java.io.Writer;
 	
-	@:overload public function delete() : Bool;
+	@:overload @:public public function getLastModified() : haxe.Int64;
+	
+	@:overload @:public public function delete() : Bool;
 	
 	
 }

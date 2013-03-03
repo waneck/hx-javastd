@@ -34,7 +34,7 @@ extern class PBEKeySpec implements java.security.spec.KeySpec
 	*
 	* @param password the password.
 	*/
-	@:overload public function new(password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Constructor that takes a password, salt, iteration count, and
@@ -55,7 +55,7 @@ extern class PBEKeySpec implements java.security.spec.KeySpec
 	* i.e. 0-length, <code>iterationCount</code> or
 	* <code>keyLength</code> is not positive.
 	*/
-	@:overload public function new(password : java.NativeArray<java.StdTypes.Char16>, salt : java.NativeArray<java.StdTypes.Int8>, iterationCount : Int, keyLength : Int) : Void;
+	@:overload @:public public function new(password : java.NativeArray<java.StdTypes.Char16>, salt : java.NativeArray<java.StdTypes.Int8>, iterationCount : Int, keyLength : Int) : Void;
 	
 	/**
 	* Constructor that takes a password, salt, iteration count for
@@ -73,13 +73,13 @@ extern class PBEKeySpec implements java.security.spec.KeySpec
 	* @exception IllegalArgumentException if <code>salt</code> is empty,
 	* i.e. 0-length, or <code>iterationCount</code> is not positive.
 	*/
-	@:overload public function new(password : java.NativeArray<java.StdTypes.Char16>, salt : java.NativeArray<java.StdTypes.Int8>, iterationCount : Int) : Void;
+	@:overload @:public public function new(password : java.NativeArray<java.StdTypes.Char16>, salt : java.NativeArray<java.StdTypes.Int8>, iterationCount : Int) : Void;
 	
 	/**
 	* Clears the internal copy of the password.
 	*
 	*/
-	@:overload @:final public function clearPassword() : Void;
+	@:overload @:public @:final public function clearPassword() : Void;
 	
 	/**
 	* Returns a copy of the password.
@@ -92,7 +92,7 @@ extern class PBEKeySpec implements java.security.spec.KeySpec
 	* calling <code>clearPassword</code> method.
 	* @return the password.
 	*/
-	@:overload @:final public function getPassword() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public @:final public function getPassword() : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Returns a copy of the salt or null if not specified.
@@ -103,14 +103,14 @@ extern class PBEKeySpec implements java.security.spec.KeySpec
 	*
 	* @return the salt.
 	*/
-	@:overload @:final public function getSalt() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getSalt() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the iteration count or 0 if not specified.
 	*
 	* @return the iteration count.
 	*/
-	@:overload @:final public function getIterationCount() : Int;
+	@:overload @:public @:final public function getIterationCount() : Int;
 	
 	/**
 	* Returns the to-be-derived key length or 0 if not specified.
@@ -121,7 +121,7 @@ extern class PBEKeySpec implements java.security.spec.KeySpec
 	*
 	* @return the to-be-derived key length.
 	*/
-	@:overload @:final public function getKeyLength() : Int;
+	@:overload @:public @:final public function getKeyLength() : Int;
 	
 	
 }

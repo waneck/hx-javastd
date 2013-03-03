@@ -32,10 +32,10 @@ extern class BIConstructor
 	*      ClassItem object that corresponds to the
 	*      element declaration that contains this declaration.
 	*/
-	@:overload public function createDeclaration(cls : com.sun.tools.internal.xjc.model.CClassInfo) : Void;
+	@:overload @:public public function createDeclaration(cls : com.sun.tools.internal.xjc.model.CClassInfo) : Void;
 	
 	/** Gets the location where this declaration is declared. */
-	@:overload public function getSourceLocation() : org.xml.sax.Locator;
+	@:overload @:public public function getSourceLocation() : org.xml.sax.Locator;
 	
 	
 }

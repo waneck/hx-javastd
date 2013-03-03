@@ -58,7 +58,7 @@ package java.util;
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Compares the specified object with this set for equality.  Returns
@@ -77,7 +77,7 @@ package java.util;
 	* @param o object to be compared for equality with this set
 	* @return <tt>true</tt> if the specified object is equal to this set
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this set.  The hash code of a set is
@@ -96,7 +96,7 @@ package java.util;
 	* @see Object#equals(Object)
 	* @see Set#equals(Object)
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Removes from this set all of its elements that are contained in the
@@ -135,14 +135,14 @@ package java.util;
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this set contains no elements.
 	*
 	* @return <tt>true</tt> if this set contains no elements
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns an array containing all of the elements in this set; the
@@ -186,7 +186,7 @@ package java.util;
 	*         set
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Adds the specified element to this set if it is not already present
@@ -218,7 +218,7 @@ package java.util;
 	* @throws IllegalArgumentException if some property of the specified element
 	*         prevents it from being added to this set
 	*/
-	@:overload @:public public function add(e : E) : Bool;
+	@:overload @:public @:public public function add(e : E) : Bool;
 	
 	/**
 	* Returns the number of elements in this set (its cardinality).  If this
@@ -227,7 +227,7 @@ package java.util;
 	*
 	* @return the number of elements in this set (its cardinality)
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Removes the specified element from this set if it is present
@@ -250,7 +250,7 @@ package java.util;
 	* @throws UnsupportedOperationException if the <tt>remove</tt> operation
 	*         is not supported by this set
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this set contains all of the elements of the
@@ -271,7 +271,7 @@ package java.util;
 	*         or if the specified collection is null
 	* @see    #contains(Object)
 	*/
-	@:overload override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Retains only the elements in this set that are contained in the
@@ -294,7 +294,7 @@ package java.util;
 	*         or if the specified collection is null
 	* @see #remove(Object)
 	*/
-	@:overload override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Removes all of the elements from this set (optional operation).
@@ -303,7 +303,7 @@ package java.util;
 	* @throws UnsupportedOperationException if the <tt>clear</tt> method
 	*         is not supported by this set
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Adds all of the elements in the specified collection to this set if
@@ -327,7 +327,7 @@ package java.util;
 	*         specified collection prevents it from being added to this set
 	* @see #add(Object)
 	*/
-	@:overload override public function addAll(c : java.util.Collection<E>) : Bool;
+	@:overload @:public override public function addAll(c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Returns an iterator over the elements in this set.  The elements are
@@ -336,7 +336,7 @@ package java.util;
 	*
 	* @return an iterator over the elements in this set
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
 	/**
 	* Returns <tt>true</tt> if this set contains the specified element.
@@ -353,7 +353,7 @@ package java.util;
 	*         set does not permit null elements
 	* (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns an array containing all of the elements in this set.
@@ -371,7 +371,7 @@ package java.util;
 	*
 	* @return an array containing all the elements in this set
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	
 }

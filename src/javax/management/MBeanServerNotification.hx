@@ -98,13 +98,13 @@ package javax.management;
 	* Notification type denoting that an MBean has been registered.
 	* Value is "JMX.mbean.registered".
 	*/
-	public static var REGISTRATION_NOTIFICATION(default, null) : String;
+	@:public @:static @:final public static var REGISTRATION_NOTIFICATION(default, null) : String;
 	
 	/**
 	* Notification type denoting that an MBean has been unregistered.
 	* Value is "JMX.mbean.unregistered".
 	*/
-	public static var UNREGISTRATION_NOTIFICATION(default, null) : String;
+	@:public @:static @:final public static var UNREGISTRATION_NOTIFICATION(default, null) : String;
 	
 	/**
 	* Creates an MBeanServerNotification object specifying object names of
@@ -123,16 +123,16 @@ package javax.management;
 	* notification.
 	*
 	*/
-	@:overload public function new(type : String, source : Dynamic, sequenceNumber : haxe.Int64, objectName : javax.management.ObjectName) : Void;
+	@:overload @:public public function new(type : String, source : Dynamic, sequenceNumber : haxe.Int64, objectName : javax.management.ObjectName) : Void;
 	
 	/**
 	* Returns the  object name of the MBean that caused the notification.
 	*
 	* @return the object name of the MBean that caused the notification.
 	*/
-	@:overload public function getMBeanName() : javax.management.ObjectName;
+	@:overload @:public public function getMBeanName() : javax.management.ObjectName;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

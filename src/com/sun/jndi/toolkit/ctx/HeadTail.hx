@@ -25,17 +25,17 @@ package com.sun.jndi.toolkit.ctx;
 */
 extern class HeadTail
 {
-	@:overload public function new(head : javax.naming.Name, tail : javax.naming.Name) : Void;
+	@:overload @:public public function new(head : javax.naming.Name, tail : javax.naming.Name) : Void;
 	
-	@:overload public function new(head : javax.naming.Name, tail : javax.naming.Name, status : Int) : Void;
+	@:overload @:public public function new(head : javax.naming.Name, tail : javax.naming.Name, status : Int) : Void;
 	
-	@:overload public function setStatus(status : Int) : Void;
+	@:overload @:public public function setStatus(status : Int) : Void;
 	
-	@:overload public function getHead() : javax.naming.Name;
+	@:overload @:public public function getHead() : javax.naming.Name;
 	
-	@:overload public function getTail() : javax.naming.Name;
+	@:overload @:public public function getTail() : javax.naming.Name;
 	
-	@:overload public function getStatus() : Int;
+	@:overload @:public public function getStatus() : Int;
 	
 	
 }

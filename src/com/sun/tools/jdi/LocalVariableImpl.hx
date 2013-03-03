@@ -25,33 +25,33 @@ package com.sun.tools.jdi;
 */
 extern class LocalVariableImpl extends com.sun.tools.jdi.MirrorImpl implements com.sun.jdi.LocalVariable implements com.sun.tools.jdi.ValueContainer
 {
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload public function compareTo(object : com.sun.jdi.LocalVariable) : Int;
+	@:overload @:public public function compareTo(object : com.sun.jdi.LocalVariable) : Int;
 	
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/**
 	* @return a text representation of the declared type
 	* of this variable.
 	*/
-	@:overload public function typeName() : String;
+	@:overload @:public public function typeName() : String;
 	
-	@:overload public function type() : com.sun.jdi.Type;
+	@:overload @:public public function type() : com.sun.jdi.Type;
 	
-	@:overload public function findType(signature : String) : com.sun.jdi.Type;
+	@:overload @:public public function findType(signature : String) : com.sun.jdi.Type;
 	
-	@:overload public function signature() : String;
+	@:overload @:public public function signature() : String;
 	
-	@:overload public function genericSignature() : String;
+	@:overload @:public public function genericSignature() : String;
 	
-	@:overload public function isVisible(frame : com.sun.jdi.StackFrame) : Bool;
+	@:overload @:public public function isVisible(frame : com.sun.jdi.StackFrame) : Bool;
 	
-	@:overload public function isArgument() : Bool;
+	@:overload @:public public function isArgument() : Bool;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

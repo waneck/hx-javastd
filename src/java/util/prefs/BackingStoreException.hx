@@ -30,14 +30,14 @@ extern class BackingStoreException extends java.lang.Exception
 	*
 	* @param s the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs a BackingStoreException with the specified cause.
 	*
 	* @param cause the cause
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

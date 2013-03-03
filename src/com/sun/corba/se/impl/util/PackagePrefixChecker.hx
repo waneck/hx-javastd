@@ -25,17 +25,17 @@ package com.sun.corba.se.impl.util;
 */
 extern class PackagePrefixChecker
 {
-	@:overload public static function packagePrefix() : String;
+	@:overload @:public @:static public static function packagePrefix() : String;
 	
-	@:overload public static function correctPackageName(p : String) : String;
+	@:overload @:public @:static public static function correctPackageName(p : String) : String;
 	
-	@:overload public static function isOffendingPackage(p : String) : Bool;
+	@:overload @:public @:static public static function isOffendingPackage(p : String) : Bool;
 	
-	@:overload public static function hasOffendingPrefix(p : String) : Bool;
+	@:overload @:public @:static public static function hasOffendingPrefix(p : String) : Bool;
 	
-	@:overload public static function hasBeenPrefixed(p : String) : Bool;
+	@:overload @:public @:static public static function hasBeenPrefixed(p : String) : Bool;
 	
-	@:overload public static function withoutPackagePrefix(p : String) : String;
+	@:overload @:public @:static public static function withoutPackagePrefix(p : String) : String;
 	
 	
 }

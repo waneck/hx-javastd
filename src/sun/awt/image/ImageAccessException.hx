@@ -25,7 +25,7 @@ package sun.awt.image;
 */
 extern class ImageAccessException extends java.lang.Exception
 {
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

@@ -28,12 +28,12 @@ extern class Names
 	/**
 	* Return stub class name for impl class name.
 	*/
-	@:overload @:final public static function stubFor(name : sun.tools.java.Identifier) : sun.tools.java.Identifier;
+	@:overload @:static @:final @:public public static function stubFor(name : sun.tools.java.Identifier) : sun.tools.java.Identifier;
 	
 	/**
 	* Return skeleton class name for impl class name.
 	*/
-	@:overload @:final public static function skeletonFor(name : sun.tools.java.Identifier) : sun.tools.java.Identifier;
+	@:overload @:static @:final @:public public static function skeletonFor(name : sun.tools.java.Identifier) : sun.tools.java.Identifier;
 	
 	/**
 	* If necessary, convert a class name to its mangled form, i.e. the
@@ -51,7 +51,7 @@ extern class Names
 	* the "sun.tools.java.Type" class; this method cannot be accessed
 	* itself because it is package protected.
 	*/
-	@:overload @:final public static function mangleClass(className : sun.tools.java.Identifier) : sun.tools.java.Identifier;
+	@:overload @:static @:final @:public public static function mangleClass(className : sun.tools.java.Identifier) : sun.tools.java.Identifier;
 	
 	
 }

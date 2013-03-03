@@ -30,7 +30,7 @@ extern interface NamingContextExtOperations extends org.omg.CosNaming.NamingCont
 	* Indicates the name does not identify a binding.<p>
 	* 
 	*/
-	@:overload public function to_string(n : java.NativeArray<org.omg.CosNaming.NameComponent>) : String;
+	@:overload @:public public function to_string(n : java.NativeArray<org.omg.CosNaming.NameComponent>) : String;
 	
 	/**
 	* This operation  converts a Stringified Name into an  equivalent array
@@ -42,7 +42,7 @@ extern interface NamingContextExtOperations extends org.omg.CosNaming.NamingCont
 	* Indicates the name does not identify a binding.<p>
 	* 
 	*/
-	@:overload public function to_name(sn : String) : java.NativeArray<org.omg.CosNaming.NameComponent>;
+	@:overload @:public public function to_name(sn : String) : java.NativeArray<org.omg.CosNaming.NameComponent>;
 	
 	/**
 	* This operation creates a URL based "iiopname://" format name
@@ -58,7 +58,7 @@ extern interface NamingContextExtOperations extends org.omg.CosNaming.NamingCont
 	* incorrect <p>
 	* 
 	*/
-	@:overload public function to_url(addr : String, sn : String) : String;
+	@:overload @:public public function to_url(addr : String, sn : String) : String;
 	
 	/**
 	* This operation resolves the Stringified name into the object
@@ -74,7 +74,7 @@ extern interface NamingContextExtOperations extends org.omg.CosNaming.NamingCont
 	* Indicates the name does not identify a binding.<p>
 	* 
 	*/
-	@:overload public function resolve_str(sn : String) : org.omg.CORBA.Object;
+	@:overload @:public public function resolve_str(sn : String) : org.omg.CORBA.Object;
 	
 	
 }

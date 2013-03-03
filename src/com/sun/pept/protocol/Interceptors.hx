@@ -48,7 +48,7 @@ extern interface Interceptors
 	* @param messageInfo ...
 	* </p>
 	*/
-	@:overload public function interceptMessage(messageInfo : com.sun.pept.ept.MessageInfo) : Void;
+	@:overload @:public public function interceptMessage(messageInfo : com.sun.pept.ept.MessageInfo) : Void;
 	
 	
 }

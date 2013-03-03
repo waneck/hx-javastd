@@ -28,22 +28,22 @@ extern class TypeVariableImpl extends com.sun.tools.javadoc.AbstractTypeImpl imp
 	/**
 	* Return the bounds of this type variable.
 	*/
-	@:overload public function bounds() : java.NativeArray<com.sun.javadoc.Type>;
+	@:overload @:public public function bounds() : java.NativeArray<com.sun.javadoc.Type>;
 	
 	/**
 	* Return the class, interface, method, or constructor within
 	* which this type variable is declared.
 	*/
-	@:overload public function owner() : com.sun.javadoc.ProgramElementDoc;
+	@:overload @:public public function owner() : com.sun.javadoc.ProgramElementDoc;
 	
 	/**
 	* Return the ClassDoc of the erasure of this type variable.
 	*/
-	@:overload override public function asClassDoc() : com.sun.javadoc.ClassDoc;
+	@:overload @:public override public function asClassDoc() : com.sun.javadoc.ClassDoc;
 	
-	@:overload override public function asTypeVariable() : com.sun.javadoc.TypeVariable;
+	@:overload @:public override public function asTypeVariable() : com.sun.javadoc.TypeVariable;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

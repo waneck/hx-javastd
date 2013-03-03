@@ -31,29 +31,29 @@ extern class SEIStub extends com.sun.xml.internal.ws.client.Stub implements java
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new(owner : com.sun.xml.internal.ws.client.WSServiceDelegate, binding : com.sun.xml.internal.ws.binding.BindingImpl, seiModel : com.sun.xml.internal.ws.model.SOAPSEIModel, master : com.sun.xml.internal.ws.api.pipe.Tube, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.ws.client.WSServiceDelegate, binding : com.sun.xml.internal.ws.binding.BindingImpl, seiModel : com.sun.xml.internal.ws.model.SOAPSEIModel, master : com.sun.xml.internal.ws.api.pipe.Tube, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
 	
-	@:overload public function new(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, binding : com.sun.xml.internal.ws.binding.BindingImpl, seiModel : com.sun.xml.internal.ws.model.SOAPSEIModel, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
+	@:overload @:public public function new(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, binding : com.sun.xml.internal.ws.binding.BindingImpl, seiModel : com.sun.xml.internal.ws.model.SOAPSEIModel, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
 	
-	public var seiModel(default, null) : com.sun.xml.internal.ws.model.SOAPSEIModel;
+	@:public @:final public var seiModel(default, null) : com.sun.xml.internal.ws.model.SOAPSEIModel;
 	
-	public var soapVersion(default, null) : com.sun.xml.internal.ws.api.SOAPVersion;
+	@:public @:final public var soapVersion(default, null) : com.sun.xml.internal.ws.api.SOAPVersion;
 	
 	/**
 	* Nullable when there is no associated WSDL Model
 	* @return
 	*/
-	@:overload public function getOperationDispatcher() : com.sun.xml.internal.ws.wsdl.OperationDispatcher;
+	@:overload @:public override public function getOperationDispatcher() : com.sun.xml.internal.ws.wsdl.OperationDispatcher;
 	
-	@:overload public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
-	@:overload @:final public function doProcess(request : com.sun.xml.internal.ws.api.message.Packet, rc : com.sun.xml.internal.ws.client.RequestContext, receiver : com.sun.xml.internal.ws.client.ResponseContextReceiver) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public @:final public function doProcess(request : com.sun.xml.internal.ws.api.message.Packet, rc : com.sun.xml.internal.ws.client.RequestContext, receiver : com.sun.xml.internal.ws.client.ResponseContextReceiver) : com.sun.xml.internal.ws.api.message.Packet;
 	
-	@:overload @:final public function doProcessAsync(request : com.sun.xml.internal.ws.api.message.Packet, rc : com.sun.xml.internal.ws.client.RequestContext, _callback : com.sun.xml.internal.ws.api.pipe.Fiber.Fiber_CompletionCallback) : Void;
+	@:overload @:public @:final public function doProcessAsync(request : com.sun.xml.internal.ws.api.message.Packet, rc : com.sun.xml.internal.ws.client.RequestContext, _callback : com.sun.xml.internal.ws.api.pipe.Fiber.Fiber_CompletionCallback) : Void;
 	
-	@:overload @:final private function getPortName() : javax.xml.namespace.QName;
+	@:overload @:protected @:final override private function getPortName() : javax.xml.namespace.QName;
 	
-	@:overload public function setOutboundHeaders(headers : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public override public function setOutboundHeaders(headers : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

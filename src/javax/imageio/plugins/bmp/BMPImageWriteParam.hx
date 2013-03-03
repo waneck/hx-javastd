@@ -33,13 +33,13 @@ extern class BMPImageWriteParam extends javax.imageio.ImageWriteParam
 	* compression type names and quality descriptions, or
 	* <code>null</code>.
 	*/
-	@:overload public function new(locale : java.util.Locale) : Void;
+	@:overload @:public public function new(locale : java.util.Locale) : Void;
 	
 	/**
 	* Constructs an <code>BMPImageWriteParam</code> object with default
 	* values for all parameters and a <code>null</code> <code>Locale</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* If set, the data will be written out in a top-down manner, the first
@@ -47,7 +47,7 @@ extern class BMPImageWriteParam extends javax.imageio.ImageWriteParam
 	*
 	* @param topDown whether the data are written in top-down order.
 	*/
-	@:overload public function setTopDown(topDown : Bool) : Void;
+	@:overload @:public public function setTopDown(topDown : Bool) : Void;
 	
 	/**
 	* Returns the value of the <code>topDown</code> parameter.
@@ -55,7 +55,7 @@ extern class BMPImageWriteParam extends javax.imageio.ImageWriteParam
 	*
 	* @return whether the data are written in top-down order.
 	*/
-	@:overload public function isTopDown() : Bool;
+	@:overload @:public public function isTopDown() : Bool;
 	
 	
 }

@@ -41,11 +41,11 @@ extern class Accessor<BeanT, ValueT> implements com.sun.xml.internal.bind.v2.run
 	* @see Accessor.FieldReflection
 	* @see TransducedAccessor
 	*/
-	public var valueType(default, null) : Class<ValueT>;
+	@:public @:final public var valueType(default, null) : Class<ValueT>;
 	
-	@:overload public function getValueType() : Class<ValueT>;
+	@:overload @:public public function getValueType() : Class<ValueT>;
 	
-	@:overload private function new(valueType : Class<ValueT>) : Void;
+	@:overload @:protected private function new(valueType : Class<ValueT>) : Void;
 	
 	/**
 	* Returns the optimized version of the same accessor.
@@ -54,7 +54,7 @@ extern class Accessor<BeanT, ValueT> implements com.sun.xml.internal.bind.v2.run
 	*                (See {@link RuntimeModelBuilder#context}.)
 	* @return At least the implementation can return <tt>this</tt>.
 	*/
-	@:overload public function optimize(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>;
+	@:overload @:public public function optimize(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>;
 	
 	/**
 	* Gets the value of the property of the given bean object.
@@ -64,7 +64,7 @@ extern class Accessor<BeanT, ValueT> implements com.sun.xml.internal.bind.v2.run
 	*                           may throw an exception.
 	* @since 2.0 EA1
 	*/
-	@:require(java0) @:overload @:abstract public function get(bean : BeanT) : ValueT;
+	@:require(java0) @:overload @:public @:abstract public function get(bean : BeanT) : ValueT;
 	
 	/**
 	* Sets the value of the property of the given bean object.
@@ -76,7 +76,7 @@ extern class Accessor<BeanT, ValueT> implements com.sun.xml.internal.bind.v2.run
 	*                           may throw an exception.
 	* @since 2.0 EA1
 	*/
-	@:require(java0) @:overload @:abstract public function set(bean : BeanT, value : ValueT) : Void;
+	@:require(java0) @:overload @:public @:abstract public function set(bean : BeanT, value : ValueT) : Void;
 	
 	/**
 	* Sets the value without adapting the value.
@@ -84,14 +84,14 @@ extern class Accessor<BeanT, ValueT> implements com.sun.xml.internal.bind.v2.run
 	* This ugly entry point is only used by JAX-WS.
 	* See {@link JAXBRIContext#getElementPropertyAccessor}
 	*/
-	@:overload public function getUnadapted(bean : BeanT) : Dynamic;
+	@:overload @:public public function getUnadapted(bean : BeanT) : Dynamic;
 	
 	/**
 	* Returns true if this accessor wraps an adapter.
 	* <p/>
 	* This method needs to be used with care, but it helps some optimization.
 	*/
-	@:overload public function isAdapted() : Bool;
+	@:overload @:public public function isAdapted() : Bool;
 	
 	/**
 	* Sets the value without adapting the value.
@@ -99,29 +99,29 @@ extern class Accessor<BeanT, ValueT> implements com.sun.xml.internal.bind.v2.run
 	* This ugly entry point is only used by JAX-WS.
 	* See {@link JAXBRIContext#getElementPropertyAccessor}
 	*/
-	@:overload public function setUnadapted(bean : BeanT, value : Dynamic) : Void;
+	@:overload @:public public function setUnadapted(bean : BeanT, value : Dynamic) : Void;
 	
-	@:overload public function receive(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, o : Dynamic) : Void;
+	@:overload @:public public function receive(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, o : Dynamic) : Void;
 	
-	@:overload public function isValueTypeAbstractable() : Bool;
+	@:overload @:public public function isValueTypeAbstractable() : Bool;
 	
 	/**
 	* Wraps this  {@link Accessor} into another {@link Accessor}
 	* and performs the type adaption as necessary.
 	*/
-	@:overload @:final public function adapt<T>(targetType : Class<T>, adapter : Class<javax.xml.bind.annotation.adapters.XmlAdapter<T, ValueT>>) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, T>;
+	@:overload @:public @:final public function adapt<T>(targetType : Class<T>, adapter : Class<javax.xml.bind.annotation.adapters.XmlAdapter<T, ValueT>>) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, T>;
 	
-	@:overload @:final public function adapt<T>(adapter : com.sun.xml.internal.bind.v2.model.core.Adapter<java.lang.reflect.Type, Class<Dynamic>>) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, T>;
+	@:overload @:public @:final public function adapt<T>(adapter : com.sun.xml.internal.bind.v2.model.core.Adapter<java.lang.reflect.Type, Class<Dynamic>>) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, T>;
 	
 	/**
 	* Gets the special {@link Accessor} used to recover from errors.
 	*/
-	@:overload public static function getErrorInstance<A, B>() : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<A, B>;
+	@:overload @:public @:static public static function getErrorInstance<A, B>() : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<A, B>;
 	
 	/**
 	* {@link Accessor} for {@link JAXBElement#getValue()}.
 	*/
-	public static var JAXB_ELEMENT_VALUE(default, null) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<javax.xml.bind.JAXBElement<Dynamic>, Dynamic>;
+	@:public @:static @:final public static var JAXB_ELEMENT_VALUE(default, null) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<javax.xml.bind.JAXBElement<Dynamic>, Dynamic>;
 	
 	
 }
@@ -130,17 +130,17 @@ extern class Accessor<BeanT, ValueT> implements com.sun.xml.internal.bind.v2.run
 */
 @:native('com$sun$xml$internal$bind$v2$runtime$reflect$Accessor$FieldReflection') extern class Accessor_FieldReflection<BeanT, ValueT> extends com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>
 {
-	public var f(default, null) : java.lang.reflect.Field;
+	@:public @:final public var f(default, null) : java.lang.reflect.Field;
 	
-	@:overload public function new(f : java.lang.reflect.Field) : Void;
+	@:overload @:public public function new(f : java.lang.reflect.Field) : Void;
 	
-	@:overload public function new(f : java.lang.reflect.Field, supressAccessorWarnings : Bool) : Void;
+	@:overload @:public public function new(f : java.lang.reflect.Field, supressAccessorWarnings : Bool) : Void;
 	
-	@:overload override public function get(bean : BeanT) : ValueT;
+	@:overload @:public override public function get(bean : BeanT) : ValueT;
 	
-	@:overload override public function set(bean : BeanT, value : ValueT) : Void;
+	@:overload @:public override public function set(bean : BeanT, value : ValueT) : Void;
 	
-	@:overload override public function optimize(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>;
+	@:overload @:public override public function optimize(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>;
 	
 	
 }
@@ -149,13 +149,13 @@ extern class Accessor<BeanT, ValueT> implements com.sun.xml.internal.bind.v2.run
 */
 @:native('com$sun$xml$internal$bind$v2$runtime$reflect$Accessor$ReadOnlyFieldReflection') extern class Accessor_ReadOnlyFieldReflection<BeanT, ValueT> extends com.sun.xml.internal.bind.v2.runtime.reflect.Accessor.Accessor_FieldReflection<BeanT, ValueT>
 {
-	@:overload public function new(f : java.lang.reflect.Field, supressAccessorWarnings : Bool) : Void;
+	@:overload @:public public function new(f : java.lang.reflect.Field, supressAccessorWarnings : Bool) : Void;
 	
-	@:overload public function new(f : java.lang.reflect.Field) : Void;
+	@:overload @:public public function new(f : java.lang.reflect.Field) : Void;
 	
-	@:overload override public function set(bean : BeanT, value : ValueT) : Void;
+	@:overload @:public override public function set(bean : BeanT, value : ValueT) : Void;
 	
-	@:overload override public function optimize(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>;
+	@:overload @:public override public function optimize(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>;
 	
 	
 }
@@ -164,17 +164,17 @@ extern class Accessor<BeanT, ValueT> implements com.sun.xml.internal.bind.v2.run
 */
 @:native('com$sun$xml$internal$bind$v2$runtime$reflect$Accessor$GetterSetterReflection') extern class Accessor_GetterSetterReflection<BeanT, ValueT> extends com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>
 {
-	public var getter(default, null) : java.lang.reflect.Method;
+	@:public @:final public var getter(default, null) : java.lang.reflect.Method;
 	
-	public var setter(default, null) : java.lang.reflect.Method;
+	@:public @:final public var setter(default, null) : java.lang.reflect.Method;
 	
-	@:overload public function new(getter : java.lang.reflect.Method, setter : java.lang.reflect.Method) : Void;
+	@:overload @:public public function new(getter : java.lang.reflect.Method, setter : java.lang.reflect.Method) : Void;
 	
-	@:overload override public function get(bean : BeanT) : ValueT;
+	@:overload @:public override public function get(bean : BeanT) : ValueT;
 	
-	@:overload override public function set(bean : BeanT, value : ValueT) : Void;
+	@:overload @:public override public function set(bean : BeanT, value : ValueT) : Void;
 	
-	@:overload override public function optimize(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>;
+	@:overload @:public override public function optimize(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>;
 	
 	
 }
@@ -186,9 +186,9 @@ extern class Accessor<BeanT, ValueT> implements com.sun.xml.internal.bind.v2.run
 */
 @:native('com$sun$xml$internal$bind$v2$runtime$reflect$Accessor$GetterOnlyReflection') extern class Accessor_GetterOnlyReflection<BeanT, ValueT> extends com.sun.xml.internal.bind.v2.runtime.reflect.Accessor.Accessor_GetterSetterReflection<BeanT, ValueT>
 {
-	@:overload public function new(getter : java.lang.reflect.Method) : Void;
+	@:overload @:public public function new(getter : java.lang.reflect.Method) : Void;
 	
-	@:overload override public function set(bean : BeanT, value : ValueT) : Void;
+	@:overload @:public override public function set(bean : BeanT, value : ValueT) : Void;
 	
 	
 }
@@ -200,9 +200,9 @@ extern class Accessor<BeanT, ValueT> implements com.sun.xml.internal.bind.v2.run
 */
 @:native('com$sun$xml$internal$bind$v2$runtime$reflect$Accessor$SetterOnlyReflection') extern class Accessor_SetterOnlyReflection<BeanT, ValueT> extends com.sun.xml.internal.bind.v2.runtime.reflect.Accessor.Accessor_GetterSetterReflection<BeanT, ValueT>
 {
-	@:overload public function new(setter : java.lang.reflect.Method) : Void;
+	@:overload @:public public function new(setter : java.lang.reflect.Method) : Void;
 	
-	@:overload override public function get(bean : BeanT) : ValueT;
+	@:overload @:public override public function get(bean : BeanT) : ValueT;
 	
 	
 }

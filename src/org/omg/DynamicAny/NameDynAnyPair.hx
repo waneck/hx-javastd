@@ -10,16 +10,16 @@ extern class NameDynAnyPair implements org.omg.CORBA.portable.IDLEntity
 	/**
 	* The name associated with the DynAny.
 	*/
-	public var id : String;
+	@:public public var id : String;
 	
 	/**
 	* The DynAny value associated with the name.
 	*/
-	public var value : org.omg.DynamicAny.DynAny;
+	@:public public var value : org.omg.DynamicAny.DynAny;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_id : String, _value : org.omg.DynamicAny.DynAny) : Void;
+	@:overload @:public public function new(_id : String, _value : org.omg.DynamicAny.DynAny) : Void;
 	
 	
 }

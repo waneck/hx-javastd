@@ -50,7 +50,7 @@ extern class ResourceLoader
 	* @return the actual location, if found, or null if not found.
 	* @throws MalformedURLException if there is an error in creating URL
 	*/
-	@:overload @:abstract public function getResource(resource : String) : java.net.URL;
+	@:overload @:public @:abstract public function getResource(resource : String) : java.net.URL;
 	
 	
 }

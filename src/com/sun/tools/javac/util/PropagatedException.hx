@@ -35,9 +35,9 @@ package com.sun.tools.javac.util;
 */
 extern class PropagatedException extends java.lang.RuntimeException
 {
-	@:overload public function new(cause : java.lang.RuntimeException) : Void;
+	@:overload @:public public function new(cause : java.lang.RuntimeException) : Void;
 	
-	@:overload override public function getCause() : java.lang.RuntimeException;
+	@:overload @:public override public function getCause() : java.lang.RuntimeException;
 	
 	
 }

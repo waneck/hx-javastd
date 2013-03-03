@@ -26,27 +26,27 @@ package java.nio;
 //// -- This file was mechanically generated: Do not edit! -- //
 @:internal extern class DirectLongBufferRS extends java.nio.DirectLongBufferS implements sun.nio.ch.DirectBuffer
 {
-	@:overload override public function slice() : java.nio.LongBuffer;
+	@:overload @:public override public function slice() : java.nio.LongBuffer;
 	
-	@:overload override public function duplicate() : java.nio.LongBuffer;
+	@:overload @:public override public function duplicate() : java.nio.LongBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.LongBuffer;
+	@:overload @:public override public function asReadOnlyBuffer() : java.nio.LongBuffer;
 	
-	@:overload override public function put(x : haxe.Int64) : java.nio.LongBuffer;
+	@:overload @:public override public function put(x : haxe.Int64) : java.nio.LongBuffer;
 	
-	@:overload override public function put(i : Int, x : haxe.Int64) : java.nio.LongBuffer;
+	@:overload @:public override public function put(i : Int, x : haxe.Int64) : java.nio.LongBuffer;
 	
-	@:overload override public function put(src : java.nio.LongBuffer) : java.nio.LongBuffer;
+	@:overload @:public override public function put(src : java.nio.LongBuffer) : java.nio.LongBuffer;
 	
-	@:overload override public function put(src : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : java.nio.LongBuffer;
+	@:overload @:public override public function put(src : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : java.nio.LongBuffer;
 	
-	@:overload override public function compact() : java.nio.LongBuffer;
+	@:overload @:public override public function compact() : java.nio.LongBuffer;
 	
-	@:overload override public function isDirect() : Bool;
+	@:overload @:public override public function isDirect() : Bool;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload override public function order() : java.nio.ByteOrder;
+	@:overload @:public override public function order() : java.nio.ByteOrder;
 	
 	
 }

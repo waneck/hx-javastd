@@ -50,14 +50,14 @@ package java.util;
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the number of entries (distinct keys) in this dictionary.
 	*
 	* @return  the number of keys in this dictionary.
 	*/
-	@:overload @:abstract public function size() : Int;
+	@:overload @:abstract @:public public function size() : Int;
 	
 	/**
 	* Tests if this dictionary maps no keys to value. The general contract
@@ -67,7 +67,7 @@ package java.util;
 	* @return  <code>true</code> if this dictionary maps no keys to values;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload @:abstract public function isEmpty() : Bool;
+	@:overload @:abstract @:public public function isEmpty() : Bool;
 	
 	/**
 	* Returns an enumeration of the keys in this dictionary. The general
@@ -79,7 +79,7 @@ package java.util;
 	* @see     java.util.Dictionary#elements()
 	* @see     java.util.Enumeration
 	*/
-	@:overload @:abstract public function keys() : java.util.Enumeration<K>;
+	@:overload @:abstract @:public public function keys() : java.util.Enumeration<K>;
 	
 	/**
 	* Returns an enumeration of the values in this dictionary. The general
@@ -91,7 +91,7 @@ package java.util;
 	* @see     java.util.Dictionary#keys()
 	* @see     java.util.Enumeration
 	*/
-	@:overload @:abstract public function elements() : java.util.Enumeration<V>;
+	@:overload @:abstract @:public public function elements() : java.util.Enumeration<V>;
 	
 	/**
 	* Returns the value to which the key is mapped in this dictionary.
@@ -106,7 +106,7 @@ package java.util;
 	* @exception NullPointerException if the <tt>key</tt> is <tt>null</tt>.
 	* @see     java.util.Dictionary#put(java.lang.Object, java.lang.Object)
 	*/
-	@:overload @:abstract public function get(key : Dynamic) : V;
+	@:overload @:abstract @:public public function get(key : Dynamic) : V;
 	
 	/**
 	* Maps the specified <code>key</code> to the specified
@@ -135,7 +135,7 @@ package java.util;
 	* @see        java.lang.Object#equals(java.lang.Object)
 	* @see        java.util.Dictionary#get(java.lang.Object)
 	*/
-	@:overload @:abstract public function put(key : K, value : V) : V;
+	@:overload @:abstract @:public public function put(key : K, value : V) : V;
 	
 	/**
 	* Removes the <code>key</code> (and its corresponding
@@ -148,7 +148,7 @@ package java.util;
 	*          mapping.
 	* @exception NullPointerException if <tt>key</tt> is <tt>null</tt>.
 	*/
-	@:overload @:abstract public function remove(key : Dynamic) : V;
+	@:overload @:abstract @:public public function remove(key : Dynamic) : V;
 	
 	
 }

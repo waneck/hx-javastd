@@ -25,11 +25,11 @@ package com.sun.tools.javah;
 */
 extern class JNI extends com.sun.tools.javah.Gen
 {
-	@:overload public function getIncludes() : String;
+	@:overload @:public override public function getIncludes() : String;
 	
-	@:overload public function write(o : java.io.OutputStream, clazz : javax.lang.model.element.TypeElement) : Void;
+	@:overload @:public override public function write(o : java.io.OutputStream, clazz : javax.lang.model.element.TypeElement) : Void;
 	
-	@:overload @:final private function jniType(t : javax.lang.model.type.TypeMirror) : String;
+	@:overload @:protected @:final private function jniType(t : javax.lang.model.type.TypeMirror) : String;
 	
 	
 }

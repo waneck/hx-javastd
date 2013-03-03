@@ -39,7 +39,7 @@ extern class UnixSurfaceManagerFactory extends sun.java2d.SurfaceManagerFactory
 	* specific VolatileSurfaceManager based on the GraphicsConfiguration
 	* under which the SunVolatileImage was created.
 	*/
-	@:overload override public function createVolatileManager(vImg : sun.awt.image.SunVolatileImage, context : Dynamic) : sun.awt.image.VolatileSurfaceManager;
+	@:overload @:public override public function createVolatileManager(vImg : sun.awt.image.SunVolatileImage, context : Dynamic) : sun.awt.image.VolatileSurfaceManager;
 	
 	
 }

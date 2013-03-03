@@ -30,7 +30,7 @@ extern class X509SKIResolver extends com.sun.org.apache.xml.internal.security.ke
 	* @return null if no {@link PublicKey} could be obtained
 	* @throws KeyResolverException
 	*/
-	@:overload public function engineLookupAndResolvePublicKey(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : java.security.PublicKey;
+	@:overload @:public override public function engineLookupAndResolvePublicKey(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : java.security.PublicKey;
 	
 	/**
 	* Method engineResolveX509Certificate
@@ -41,7 +41,7 @@ extern class X509SKIResolver extends com.sun.org.apache.xml.internal.security.ke
 	*
 	* @throws KeyResolverException
 	*/
-	@:overload public function engineLookupResolveX509Certificate(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : java.security.cert.X509Certificate;
+	@:overload @:public override public function engineLookupResolveX509Certificate(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : java.security.cert.X509Certificate;
 	
 	/**
 	* Method engineResolveSecretKey
@@ -51,7 +51,7 @@ extern class X509SKIResolver extends com.sun.org.apache.xml.internal.security.ke
 	* @param storage
 	*
 	*/
-	@:overload public function engineLookupAndResolveSecretKey(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : javax.crypto.SecretKey;
+	@:overload @:public override public function engineLookupAndResolveSecretKey(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : javax.crypto.SecretKey;
 	
 	
 }

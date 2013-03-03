@@ -53,21 +53,21 @@ package java.util.concurrent.atomic;
 	* @param initialRef the initial reference
 	* @param initialStamp the initial stamp
 	*/
-	@:overload public function new(initialRef : V, initialStamp : Int) : Void;
+	@:overload @:public public function new(initialRef : V, initialStamp : Int) : Void;
 	
 	/**
 	* Returns the current value of the reference.
 	*
 	* @return the current value of the reference
 	*/
-	@:overload public function getReference() : V;
+	@:overload @:public public function getReference() : V;
 	
 	/**
 	* Returns the current value of the stamp.
 	*
 	* @return the current value of the stamp
 	*/
-	@:overload public function getStamp() : Int;
+	@:overload @:public public function getStamp() : Int;
 	
 	/**
 	* Returns the current values of both the reference and the stamp.
@@ -77,7 +77,7 @@ package java.util.concurrent.atomic;
 	* {@code stampholder[0]} will hold the value of the stamp.
 	* @return the current value of the reference
 	*/
-	@:overload public function get(stampHolder : java.NativeArray<Int>) : V;
+	@:overload @:public public function get(stampHolder : java.NativeArray<Int>) : V;
 	
 	/**
 	* Atomically sets the value of both the reference and stamp
@@ -95,7 +95,7 @@ package java.util.concurrent.atomic;
 	* @param newStamp the new value for the stamp
 	* @return true if successful
 	*/
-	@:overload public function weakCompareAndSet(expectedReference : V, newReference : V, expectedStamp : Int, newStamp : Int) : Bool;
+	@:overload @:public public function weakCompareAndSet(expectedReference : V, newReference : V, expectedStamp : Int, newStamp : Int) : Bool;
 	
 	/**
 	* Atomically sets the value of both the reference and stamp
@@ -109,7 +109,7 @@ package java.util.concurrent.atomic;
 	* @param newStamp the new value for the stamp
 	* @return true if successful
 	*/
-	@:overload public function compareAndSet(expectedReference : V, newReference : V, expectedStamp : Int, newStamp : Int) : Bool;
+	@:overload @:public public function compareAndSet(expectedReference : V, newReference : V, expectedStamp : Int, newStamp : Int) : Bool;
 	
 	/**
 	* Unconditionally sets the value of both the reference and stamp.
@@ -117,7 +117,7 @@ package java.util.concurrent.atomic;
 	* @param newReference the new value for the reference
 	* @param newStamp the new value for the stamp
 	*/
-	@:overload public function set(newReference : V, newStamp : Int) : Void;
+	@:overload @:public public function set(newReference : V, newStamp : Int) : Void;
 	
 	/**
 	* Atomically sets the value of the stamp to the given update value
@@ -132,7 +132,7 @@ package java.util.concurrent.atomic;
 	* @param newStamp the new value for the stamp
 	* @return true if successful
 	*/
-	@:overload public function attemptStamp(expectedReference : V, newStamp : Int) : Bool;
+	@:overload @:public public function attemptStamp(expectedReference : V, newStamp : Int) : Bool;
 	
 	
 }

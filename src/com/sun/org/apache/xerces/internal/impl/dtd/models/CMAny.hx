@@ -68,15 +68,15 @@ package com.sun.org.apache.xerces.internal.impl.dtd.models;
 extern class CMAny extends com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode
 {
 	/** Constructs a content model any. */
-	@:overload public function new(type : Int, uri : String, position : Int) : Void;
+	@:overload @:public public function new(type : Int, uri : String, position : Int) : Void;
 	
-	@:overload override public function isNullable() : Bool;
+	@:overload @:public override public function isNullable() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override private function calcFirstPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
+	@:overload @:protected override private function calcFirstPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
-	@:overload override private function calcLastPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
+	@:overload @:protected override private function calcLastPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
 	
 }

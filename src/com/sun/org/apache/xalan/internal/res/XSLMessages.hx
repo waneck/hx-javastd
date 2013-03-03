@@ -33,7 +33,7 @@ extern class XSLMessages extends com.sun.org.apache.xpath.internal.res.XPATHMess
 	*
 	* @return The formatted message string.
 	*/
-	@:overload @:final public static function createMessage(msgKey : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static @:final public static function createMessage(msgKey : String, args : java.NativeArray<Dynamic>) : String;
 	
 	/**
 	* Creates a message from the specified key and replacement
@@ -45,7 +45,7 @@ extern class XSLMessages extends com.sun.org.apache.xpath.internal.res.XPATHMess
 	*
 	* @return The formatted warning string.
 	*/
-	@:overload @:final public static function createWarning(msgKey : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static @:final public static function createWarning(msgKey : String, args : java.NativeArray<Dynamic>) : String;
 	
 	
 }

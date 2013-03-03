@@ -38,14 +38,14 @@ extern class ConversionBufferFullException extends java.io.CharConversionExcepti
 	* Constructs a BufferFullException with no detail message.
 	* A detail message is a String that describes this particular exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a BufferFullException with the specified detail message.
 	* A detail message is a String that describes this particular exception.
 	* @param s the String containing a detail message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

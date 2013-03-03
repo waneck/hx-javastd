@@ -128,7 +128,7 @@ package java.util;
 	* @throws IllegalArgumentException if the initial capacity is negative
 	*         or the load factor is nonpositive
 	*/
-	@:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
 	/**
 	* Constructs an empty <tt>HashMap</tt> with the specified initial
@@ -137,13 +137,13 @@ package java.util;
 	* @param  initialCapacity the initial capacity.
 	* @throws IllegalArgumentException if the initial capacity is negative.
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs an empty <tt>HashMap</tt> with the default initial capacity
 	* (16) and the default load factor (0.75).
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <tt>HashMap</tt> with the same mappings as the
@@ -154,21 +154,21 @@ package java.util;
 	* @param   m the map whose mappings are to be placed in this map
 	* @throws  NullPointerException if the specified map is null
 	*/
-	@:overload public function new(m : java.util.Map<K, V>) : Void;
+	@:overload @:public public function new(m : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Returns the number of key-value mappings in this map.
 	*
 	* @return the number of key-value mappings in this map
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this map contains no key-value mappings.
 	*
 	* @return <tt>true</tt> if this map contains no key-value mappings
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns the value to which the specified key is mapped,
@@ -187,7 +187,7 @@ package java.util;
 	*
 	* @see #put(Object, Object)
 	*/
-	@:overload override public function get(key : Dynamic) : V;
+	@:overload @:public override public function get(key : Dynamic) : V;
 	
 	/**
 	* Returns <tt>true</tt> if this map contains a mapping for the
@@ -197,7 +197,7 @@ package java.util;
 	* @return <tt>true</tt> if this map contains a mapping for the specified
 	* key.
 	*/
-	@:overload override public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public override public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Associates the specified value with the specified key in this map.
@@ -211,7 +211,7 @@ package java.util;
 	*         (A <tt>null</tt> return can also indicate that the map
 	*         previously associated <tt>null</tt> with <tt>key</tt>.)
 	*/
-	@:overload override public function put(key : K, value : V) : V;
+	@:overload @:public override public function put(key : K, value : V) : V;
 	
 	/**
 	* Copies all of the mappings from the specified map to this map.
@@ -221,7 +221,7 @@ package java.util;
 	* @param m mappings to be stored in this map
 	* @throws NullPointerException if the specified map is null
 	*/
-	@:overload override public function putAll(m : java.util.Map<K, V>) : Void;
+	@:overload @:public override public function putAll(m : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Removes the mapping for the specified key from this map if present.
@@ -232,13 +232,13 @@ package java.util;
 	*         (A <tt>null</tt> return can also indicate that the map
 	*         previously associated <tt>null</tt> with <tt>key</tt>.)
 	*/
-	@:overload override public function remove(key : Dynamic) : V;
+	@:overload @:public override public function remove(key : Dynamic) : V;
 	
 	/**
 	* Removes all of the mappings from this map.
 	* The map will be empty after this call returns.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns <tt>true</tt> if this map maps one or more keys to the
@@ -248,7 +248,7 @@ package java.util;
 	* @return <tt>true</tt> if this map maps one or more keys to the
 	*         specified value
 	*/
-	@:overload override public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public override public function containsValue(value : Dynamic) : Bool;
 	
 	/**
 	* Returns a shallow copy of this <tt>HashMap</tt> instance: the keys and
@@ -256,7 +256,7 @@ package java.util;
 	*
 	* @return a shallow copy of this map
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Returns a {@link Set} view of the keys contained in this map.
@@ -271,7 +271,7 @@ package java.util;
 	* operations.  It does not support the <tt>add</tt> or <tt>addAll</tt>
 	* operations.
 	*/
-	@:overload override public function keySet() : java.util.Set<K>;
+	@:overload @:public override public function keySet() : java.util.Set<K>;
 	
 	/**
 	* Returns a {@link Collection} view of the values contained in this map.
@@ -286,7 +286,7 @@ package java.util;
 	* <tt>retainAll</tt> and <tt>clear</tt> operations.  It does not
 	* support the <tt>add</tt> or <tt>addAll</tt> operations.
 	*/
-	@:overload override public function values() : java.util.Collection<V>;
+	@:overload @:public override public function values() : java.util.Collection<V>;
 	
 	/**
 	* Returns a {@link Set} view of the mappings contained in this map.
@@ -304,7 +304,7 @@ package java.util;
 	*
 	* @return a set view of the mappings contained in this map
 	*/
-	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
 	
 }
@@ -317,25 +317,25 @@ package java.util;
 }
 @:native('java$util$HashMap$Entry') @:internal extern class HashMap_Entry<K, V> implements java.util.Map.Map_Entry<K, V>
 {
-	@:overload @:final public function getKey() : K;
+	@:overload @:public @:final public function getKey() : K;
 	
-	@:overload @:final public function getValue() : V;
+	@:overload @:public @:final public function getValue() : V;
 	
-	@:overload @:final public function setValue(newValue : V) : V;
+	@:overload @:public @:final public function setValue(newValue : V) : V;
 	
-	@:overload @:final public function equals(o : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(o : Dynamic) : Bool;
 	
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	
 }
 @:native('java$util$HashMap$HashIterator') @:internal extern class HashMap_HashIterator<E> implements java.util.Iterator<E>
 {
-	@:overload @:final public function hasNext() : Bool;
+	@:overload @:public @:final public function hasNext() : Bool;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	/**
 	* Returns the next element in the iteration.
@@ -343,65 +343,65 @@ package java.util;
 	* @return the next element in the iteration
 	* @throws NoSuchElementException if the iteration has no more elements
 	*/
-	@:overload public function next() : E;
+	@:overload @:public @:public @:public @:public public function next() : E;
 	
 	
 }
 @:native('java$util$HashMap$ValueIterator') @:internal extern class HashMap_ValueIterator extends java.util.HashMap.HashMap_HashIterator<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$HashMap$KeyIterator') @:internal extern class HashMap_KeyIterator extends java.util.HashMap.HashMap_HashIterator<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$HashMap$EntryIterator') @:internal extern class HashMap_EntryIterator extends java.util.HashMap.HashMap_HashIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
+	@:overload @:public override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	
 	
 }
 @:native('java$util$HashMap$KeySet') @:internal extern class HashMap_KeySet extends java.util.AbstractSet<Dynamic>
 {
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }
 @:native('java$util$HashMap$Values') @:internal extern class HashMap_Values extends java.util.AbstractCollection<Dynamic>
 {
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }
 @:native('java$util$HashMap$EntrySet') @:internal extern class HashMap_EntrySet extends java.util.AbstractSet<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
+	@:overload @:public override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }

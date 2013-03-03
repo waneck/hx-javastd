@@ -38,7 +38,7 @@ extern class MixerProvider
 	*     otherwise {@code false}
 	* @see #getMixerInfo()
 	*/
-	@:overload public function isMixerSupported(info : javax.sound.sampled.Mixer.Mixer_Info) : Bool;
+	@:overload @:public public function isMixerSupported(info : javax.sound.sampled.Mixer.Mixer_Info) : Bool;
 	
 	/**
 	* Obtains the set of info objects representing the mixer
@@ -53,7 +53,7 @@ extern class MixerProvider
 	* @see #getMixer(javax.sound.sampled.Mixer.Info) getMixer(Mixer.Info)
 	* @see #isMixerSupported(javax.sound.sampled.Mixer.Info) isMixerSupported(Mixer.Info)
 	*/
-	@:overload @:abstract public function getMixerInfo() : java.NativeArray<javax.sound.sampled.Mixer.Mixer_Info>;
+	@:overload @:public @:abstract public function getMixerInfo() : java.NativeArray<javax.sound.sampled.Mixer.Mixer_Info>;
 	
 	/**
 	* Obtains an instance of the mixer represented by the info object.
@@ -71,7 +71,7 @@ extern class MixerProvider
 	* @see #getMixerInfo()
 	* @see #isMixerSupported(javax.sound.sampled.Mixer.Info) isMixerSupported(Mixer.Info)
 	*/
-	@:overload @:abstract public function getMixer(info : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.Mixer;
+	@:overload @:public @:abstract public function getMixer(info : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.Mixer;
 	
 	
 }

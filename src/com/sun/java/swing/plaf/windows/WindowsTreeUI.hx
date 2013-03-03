@@ -37,23 +37,23 @@ extern class WindowsTreeUI extends javax.swing.plaf.basic.BasicTreeUI
 	*
 	* @author Scott Violet
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Ensures that the rows identified by beginRow through endRow are
 	* visible.
 	*/
-	@:overload override private function ensureRowsAreVisible(beginRow : Int, endRow : Int) : Void;
+	@:overload @:protected override private function ensureRowsAreVisible(beginRow : Int, endRow : Int) : Void;
 	
-	private static var HALF_SIZE(default, null) : Int;
+	@:static @:protected @:final private static var HALF_SIZE(default, null) : Int;
 	
-	private static var SIZE(default, null) : Int;
+	@:static @:protected @:final private static var SIZE(default, null) : Int;
 	
 	/**
 	* Returns the default cell renderer that is used to do the
 	* stamping of each node.
 	*/
-	@:overload override private function createDefaultCellRenderer() : javax.swing.tree.TreeCellRenderer;
+	@:overload @:protected override private function createDefaultCellRenderer() : javax.swing.tree.TreeCellRenderer;
 	
 	
 }
@@ -69,13 +69,13 @@ extern class WindowsTreeUI extends javax.swing.plaf.basic.BasicTreeUI
 */
 @:native('com$sun$java$swing$plaf$windows$WindowsTreeUI$ExpandedIcon') extern class WindowsTreeUI_ExpandedIcon implements javax.swing.Icon implements java.io.Serializable
 {
-	@:overload public static function createExpandedIcon() : javax.swing.Icon;
+	@:overload @:static @:public public static function createExpandedIcon() : javax.swing.Icon;
 	
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
@@ -91,9 +91,9 @@ extern class WindowsTreeUI extends javax.swing.plaf.basic.BasicTreeUI
 */
 @:native('com$sun$java$swing$plaf$windows$WindowsTreeUI$CollapsedIcon') extern class WindowsTreeUI_CollapsedIcon extends com.sun.java.swing.plaf.windows.WindowsTreeUI.WindowsTreeUI_ExpandedIcon
 {
-	@:overload public static function createCollapsedIcon() : javax.swing.Icon;
+	@:overload @:static @:public public static function createCollapsedIcon() : javax.swing.Icon;
 	
-	@:overload override public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public override public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
 	
 }
@@ -107,7 +107,7 @@ extern class WindowsTreeUI extends javax.swing.plaf.basic.BasicTreeUI
 	* The foreground color is set based on the selection and the icon
 	* is set based on on leaf and expanded.
 	*/
-	@:overload override public function getTreeCellRendererComponent(tree : javax.swing.JTree, value : Dynamic, sel : Bool, expanded : Bool, leaf : Bool, row : Int, hasFocus : Bool) : java.awt.Component;
+	@:overload @:public override public function getTreeCellRendererComponent(tree : javax.swing.JTree, value : Dynamic, sel : Bool, expanded : Bool, leaf : Bool, row : Int, hasFocus : Bool) : java.awt.Component;
 	
 	
 }

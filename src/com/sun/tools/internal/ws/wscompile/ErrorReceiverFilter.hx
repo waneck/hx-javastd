@@ -33,29 +33,29 @@ extern class ErrorReceiverFilter extends com.sun.tools.internal.ws.wscompile.Err
 	* @author Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	* @author Vivek Pandey
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(h : com.sun.xml.internal.bind.api.ErrorListener) : Void;
+	@:overload @:public public function new(h : com.sun.xml.internal.bind.api.ErrorListener) : Void;
 	
-	@:overload public function setErrorReceiver(handler : com.sun.xml.internal.bind.api.ErrorListener) : Void;
+	@:overload @:public public function setErrorReceiver(handler : com.sun.xml.internal.bind.api.ErrorListener) : Void;
 	
-	@:overload @:final public function hadError() : Bool;
+	@:overload @:public @:final public function hadError() : Bool;
 	
 	/**
 	* Resets the error state its currently in. It allows to ignore the error reported by
 	* any sub-system.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload override public function info(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function info(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function debug(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function debug(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

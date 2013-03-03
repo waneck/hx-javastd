@@ -25,17 +25,17 @@ package com.sun.tools.jdi;
 */
 extern class ObsoleteMethodImpl extends com.sun.tools.jdi.NonConcreteMethodImpl
 {
-	@:overload override public function isObsolete() : Bool;
+	@:overload @:public override public function isObsolete() : Bool;
 	
-	@:overload override public function returnTypeName() : String;
+	@:overload @:public override public function returnTypeName() : String;
 	
-	@:overload override public function returnType() : com.sun.jdi.Type;
+	@:overload @:public override public function returnType() : com.sun.jdi.Type;
 	
-	@:overload override public function argumentTypeNames() : java.util.List<String>;
+	@:overload @:public override public function argumentTypeNames() : java.util.List<String>;
 	
-	@:overload override public function argumentSignatures() : java.util.List<String>;
+	@:overload @:public override public function argumentSignatures() : java.util.List<String>;
 	
-	@:overload override public function argumentTypes() : java.util.List<com.sun.jdi.Type>;
+	@:overload @:public override public function argumentTypes() : java.util.List<com.sun.jdi.Type>;
 	
 	
 }

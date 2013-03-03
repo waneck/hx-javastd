@@ -32,14 +32,14 @@ extern class LockInfo
 	* @param identityHashCode the {@link System#identityHashCode
 	*                         identity hash code} of the lock object.
 	*/
-	@:overload public function new(className : String, identityHashCode : Int) : Void;
+	@:overload @:public public function new(className : String, identityHashCode : Int) : Void;
 	
 	/**
 	* Returns the fully qualified name of the class of the lock object.
 	*
 	* @return the fully qualified name of the class of the lock object.
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Returns the identity hash code of the lock object
@@ -47,7 +47,7 @@ extern class LockInfo
 	*
 	* @return the identity hash code of the lock object.
 	*/
-	@:overload public function getIdentityHashCode() : Int;
+	@:overload @:public public function getIdentityHashCode() : Int;
 	
 	/**
 	* Returns a string representation of a lock.  The returned
@@ -63,7 +63,7 @@ extern class LockInfo
 	*
 	* @return the string representation of a lock.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -25,23 +25,23 @@ package sun.misc;
 */
 extern class Hashing
 {
-	@:overload public static function murmur3_32(data : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public @:static public static function murmur3_32(data : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload public static function murmur3_32(seed : Int, data : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public @:static public static function murmur3_32(seed : Int, data : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload public static function murmur3_32(seed : Int, data : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
+	@:overload @:public @:static public static function murmur3_32(seed : Int, data : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
 	
-	@:overload public static function murmur3_32(data : java.NativeArray<java.StdTypes.Char16>) : Int;
+	@:overload @:public @:static public static function murmur3_32(data : java.NativeArray<java.StdTypes.Char16>) : Int;
 	
-	@:overload public static function murmur3_32(seed : Int, data : java.NativeArray<java.StdTypes.Char16>) : Int;
+	@:overload @:public @:static public static function murmur3_32(seed : Int, data : java.NativeArray<java.StdTypes.Char16>) : Int;
 	
-	@:overload public static function murmur3_32(seed : Int, data : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : Int;
+	@:overload @:public @:static public static function murmur3_32(seed : Int, data : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : Int;
 	
-	@:overload public static function murmur3_32(data : java.NativeArray<Int>) : Int;
+	@:overload @:public @:static public static function murmur3_32(data : java.NativeArray<Int>) : Int;
 	
-	@:overload public static function murmur3_32(seed : Int, data : java.NativeArray<Int>) : Int;
+	@:overload @:public @:static public static function murmur3_32(seed : Int, data : java.NativeArray<Int>) : Int;
 	
-	@:overload public static function murmur3_32(seed : Int, data : java.NativeArray<Int>, offset : Int, len : Int) : Int;
+	@:overload @:public @:static public static function murmur3_32(seed : Int, data : java.NativeArray<Int>, offset : Int, len : Int) : Int;
 	
 	/**
 	* Return a 32 bit hash value for the specified string. The algorithm is
@@ -50,9 +50,9 @@ extern class Hashing
 	* @param string String to be hashed.
 	* @return hash value of the string.
 	*/
-	@:overload public static function stringHash32(string : String) : Int;
+	@:overload @:public @:static public static function stringHash32(string : String) : Int;
 	
-	@:overload public static function randomHashSeed(instance : Dynamic) : Int;
+	@:overload @:public @:static public static function randomHashSeed(instance : Dynamic) : Int;
 	
 	
 }

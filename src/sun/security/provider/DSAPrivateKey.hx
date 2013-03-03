@@ -28,34 +28,34 @@ extern class DSAPrivateKey extends sun.security.pkcs.PKCS8Key implements java.se
 	/*
 	* Keep this constructor for backwards compatibility with JDK1.1.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Make a DSA private key out of a private key and three parameters.
 	*/
-	@:overload public function new(x : java.math.BigInteger, p : java.math.BigInteger, q : java.math.BigInteger, g : java.math.BigInteger) : Void;
+	@:overload @:public public function new(x : java.math.BigInteger, p : java.math.BigInteger, q : java.math.BigInteger, g : java.math.BigInteger) : Void;
 	
 	/**
 	* Make a DSA private key from its DER encoding (PKCS #8).
 	*/
-	@:overload public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the DSA parameters associated with this key, or null if the
 	* parameters could not be parsed.
 	*/
-	@:overload public function getParams() : java.security.interfaces.DSAParams;
+	@:overload @:public public function getParams() : java.security.interfaces.DSAParams;
 	
 	/**
 	* Get the raw private key, x, without the parameters.
 	*
 	* @see getParameters
 	*/
-	@:overload public function getX() : java.math.BigInteger;
+	@:overload @:public public function getX() : java.math.BigInteger;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload private function parseKeyBits() : Void;
+	@:overload @:protected override private function parseKeyBits() : Void;
 	
 	
 }

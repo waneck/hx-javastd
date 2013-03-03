@@ -38,7 +38,7 @@ extern class URLConnection
 	* @see     java.net.URLConnection#getURL()
 	* @see     java.net.URLConnection#url
 	*/
-	private var url : java.net.URL;
+	@:protected private var url : java.net.URL;
 	
 	/**
 	* This variable is set by the <code>setDoInput</code> method. Its
@@ -53,7 +53,7 @@ extern class URLConnection
 	* @see     java.net.URLConnection#getDoInput()
 	* @see     java.net.URLConnection#setDoInput(boolean)
 	*/
-	private var doInput : Bool;
+	@:protected private var doInput : Bool;
 	
 	/**
 	* This variable is set by the <code>setDoOutput</code> method. Its
@@ -68,7 +68,7 @@ extern class URLConnection
 	* @see     java.net.URLConnection#getDoOutput()
 	* @see     java.net.URLConnection#setDoOutput(boolean)
 	*/
-	private var doOutput : Bool;
+	@:protected private var doOutput : Bool;
 	
 	/**
 	* If <code>true</code>, this <code>URL</code> is being examined in
@@ -87,7 +87,7 @@ extern class URLConnection
 	* @see     java.net.URLConnection#setAllowUserInteraction(boolean)
 	* @see     java.net.URLConnection#setDefaultAllowUserInteraction(boolean)
 	*/
-	private var allowUserInteraction : Bool;
+	@:protected private var allowUserInteraction : Bool;
 	
 	/**
 	* If <code>true</code>, the protocol is allowed to use caching
@@ -104,7 +104,7 @@ extern class URLConnection
 	* @see     java.net.URLConnection#getUseCaches()
 	* @see     java.net.URLConnection#setDefaultUseCaches(boolean)
 	*/
-	private var useCaches : Bool;
+	@:protected private var useCaches : Bool;
 	
 	/**
 	* Some protocols support skipping the fetching of the object unless
@@ -124,14 +124,14 @@ extern class URLConnection
 	* @see     java.net.URLConnection#getIfModifiedSince()
 	* @see     java.net.URLConnection#setIfModifiedSince(long)
 	*/
-	private var ifModifiedSince : haxe.Int64;
+	@:protected private var ifModifiedSince : haxe.Int64;
 	
 	/**
 	* If <code>false</code>, this connection object has not created a
 	* communications link to the specified URL. If <code>true</code>,
 	* the communications link has been established.
 	*/
-	private var connected : Bool;
+	@:protected private var connected : Bool;
 	
 	/**
 	* Loads filename map (a mimetable) from a data file. It will
@@ -144,7 +144,7 @@ extern class URLConnection
 	* @since 1.2
 	* @see #setFileNameMap(java.net.FileNameMap)
 	*/
-	@:require(java2) @:overload @:synchronized public static function getFileNameMap() : java.net.FileNameMap;
+	@:require(java2) @:overload @:public @:static @:synchronized public static function getFileNameMap() : java.net.FileNameMap;
 	
 	/**
 	* Sets the FileNameMap.
@@ -161,7 +161,7 @@ extern class URLConnection
 	* @see #getFileNameMap()
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function setFileNameMap(map : java.net.FileNameMap) : Void;
+	@:require(java2) @:overload @:public @:static public static function setFileNameMap(map : java.net.FileNameMap) : Void;
 	
 	/**
 	* Opens a communications link to the resource referenced by this
@@ -187,7 +187,7 @@ extern class URLConnection
 	* @see #getConnectTimeout()
 	* @see #setConnectTimeout(int)
 	*/
-	@:overload @:abstract public function connect() : Void;
+	@:overload @:abstract @:public public function connect() : Void;
 	
 	/**
 	* Sets a specified timeout value, in milliseconds, to be used
@@ -209,7 +209,7 @@ extern class URLConnection
 	* @see #connect()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setConnectTimeout(timeout : Int) : Void;
+	@:require(java5) @:overload @:public public function setConnectTimeout(timeout : Int) : Void;
 	
 	/**
 	* Returns setting for connect timeout.
@@ -223,7 +223,7 @@ extern class URLConnection
 	* @see #connect()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getConnectTimeout() : Int;
+	@:require(java5) @:overload @:public public function getConnectTimeout() : Int;
 	
 	/**
 	* Sets the read timeout to a specified timeout, in
@@ -245,7 +245,7 @@ extern class URLConnection
 	* @see InputStream#read()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setReadTimeout(timeout : Int) : Void;
+	@:require(java5) @:overload @:public public function setReadTimeout(timeout : Int) : Void;
 	
 	/**
 	* Returns setting for read timeout. 0 return implies that the
@@ -258,7 +258,7 @@ extern class URLConnection
 	* @see InputStream#read()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getReadTimeout() : Int;
+	@:require(java5) @:overload @:public public function getReadTimeout() : Int;
 	
 	/**
 	* Constructs a URL connection to the specified URL. A connection to
@@ -266,7 +266,7 @@ extern class URLConnection
 	*
 	* @param   url   the specified URL.
 	*/
-	@:overload private function new(url : java.net.URL) : Void;
+	@:overload @:protected private function new(url : java.net.URL) : Void;
 	
 	/**
 	* Returns the value of this <code>URLConnection</code>'s <code>URL</code>
@@ -276,7 +276,7 @@ extern class URLConnection
 	*          field.
 	* @see     java.net.URLConnection#url
 	*/
-	@:overload public function getURL() : java.net.URL;
+	@:overload @:public public function getURL() : java.net.URL;
 	
 	/**
 	* Returns the value of the <code>content-length</code> header field.
@@ -289,7 +289,7 @@ extern class URLConnection
 	*          references, {@code -1} if the content length is not known,
 	*          or if the content length is greater than Integer.MAX_VALUE.
 	*/
-	@:overload public function getContentLength() : Int;
+	@:overload @:public public function getContentLength() : Int;
 	
 	/**
 	* Returns the value of the <code>content-length</code> header field as a
@@ -300,7 +300,7 @@ extern class URLConnection
 	*          not known.
 	* @since 7.0
 	*/
-	@:require(java0) @:overload public function getContentLengthLong() : haxe.Int64;
+	@:require(java0) @:overload @:public public function getContentLengthLong() : haxe.Int64;
 	
 	/**
 	* Returns the value of the <code>content-type</code> header field.
@@ -309,7 +309,7 @@ extern class URLConnection
 	*          or <code>null</code> if not known.
 	* @see     java.net.URLConnection#getHeaderField(java.lang.String)
 	*/
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
 	/**
 	* Returns the value of the <code>content-encoding</code> header field.
@@ -318,7 +318,7 @@ extern class URLConnection
 	*          or <code>null</code> if not known.
 	* @see     java.net.URLConnection#getHeaderField(java.lang.String)
 	*/
-	@:overload public function getContentEncoding() : String;
+	@:overload @:public public function getContentEncoding() : String;
 	
 	/**
 	* Returns the value of the <code>expires</code> header field.
@@ -328,7 +328,7 @@ extern class URLConnection
 	*          January 1, 1970 GMT.
 	* @see     java.net.URLConnection#getHeaderField(java.lang.String)
 	*/
-	@:overload public function getExpiration() : haxe.Int64;
+	@:overload @:public public function getExpiration() : haxe.Int64;
 	
 	/**
 	* Returns the value of the <code>date</code> header field.
@@ -338,7 +338,7 @@ extern class URLConnection
 	*          number of milliseconds since January 1, 1970 GMT.
 	* @see     java.net.URLConnection#getHeaderField(java.lang.String)
 	*/
-	@:overload public function getDate() : haxe.Int64;
+	@:overload @:public public function getDate() : haxe.Int64;
 	
 	/**
 	* Returns the value of the <code>last-modified</code> header field.
@@ -348,7 +348,7 @@ extern class URLConnection
 	*          <code>URLConnection</code> was last modified, or 0 if not known.
 	* @see     java.net.URLConnection#getHeaderField(java.lang.String)
 	*/
-	@:overload public function getLastModified() : haxe.Int64;
+	@:overload @:public public function getLastModified() : haxe.Int64;
 	
 	/**
 	* Returns the value of the named header field.
@@ -361,7 +361,7 @@ extern class URLConnection
 	* @return  the value of the named header field, or <code>null</code>
 	*          if there is no such field in the header.
 	*/
-	@:overload public function getHeaderField(name : String) : String;
+	@:overload @:public public function getHeaderField(name : String) : String;
 	
 	/**
 	* Returns an unmodifiable Map of the header fields.
@@ -373,7 +373,7 @@ extern class URLConnection
 	* @return a Map of header fields
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getHeaderFields() : java.util.Map<String, java.util.List<String>>;
+	@:require(java4) @:overload @:public public function getHeaderFields() : java.util.Map<String, java.util.List<String>>;
 	
 	/**
 	* Returns the value of the named field parsed as a number.
@@ -389,7 +389,7 @@ extern class URLConnection
 	*          <code>Default</code> value is returned if the field is
 	*          missing or malformed.
 	*/
-	@:overload public function getHeaderFieldInt(name : String, Default : Int) : Int;
+	@:overload @:public public function getHeaderFieldInt(name : String, Default : Int) : Int;
 	
 	/**
 	* Returns the value of the named field parsed as a number.
@@ -406,7 +406,7 @@ extern class URLConnection
 	*          missing or malformed.
 	* @since 7.0
 	*/
-	@:require(java0) @:overload public function getHeaderFieldLong(name : String, Default : haxe.Int64) : haxe.Int64;
+	@:require(java0) @:overload @:public public function getHeaderFieldLong(name : String, Default : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the value of the named field parsed as date.
@@ -424,7 +424,7 @@ extern class URLConnection
 	*          <code>Default</code> argument is returned if the field is
 	*          missing or malformed.
 	*/
-	@:overload public function getHeaderFieldDate(name : String, Default : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function getHeaderFieldDate(name : String, Default : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the key for the <code>n</code><sup>th</sup> header field.
@@ -435,7 +435,7 @@ extern class URLConnection
 	*          or <code>null</code> if there are fewer than <code>n+1</code>
 	*          fields.
 	*/
-	@:overload public function getHeaderFieldKey(n : Int) : String;
+	@:overload @:public public function getHeaderFieldKey(n : Int) : String;
 	
 	/**
 	* Returns the value for the <code>n</code><sup>th</sup> header field.
@@ -451,7 +451,7 @@ extern class URLConnection
 	*          or <code>null</code> if there are fewer than <code>n+1</code> fields
 	* @see     java.net.URLConnection#getHeaderFieldKey(int)
 	*/
-	@:overload public function getHeaderField(n : Int) : String;
+	@:overload @:public public function getHeaderField(n : Int) : String;
 	
 	/**
 	* Retrieves the contents of this URL connection.
@@ -496,7 +496,7 @@ extern class URLConnection
 	* @see        java.net.URLConnection#getContentType()
 	* @see        java.net.URLConnection#setContentHandlerFactory(java.net.ContentHandlerFactory)
 	*/
-	@:overload public function getContent() : Dynamic;
+	@:overload @:public public function getContent() : Dynamic;
 	
 	/**
 	* Retrieves the contents of this URL connection.
@@ -518,7 +518,7 @@ extern class URLConnection
 	* @see        java.net.URLConnection#setContentHandlerFactory(java.net.ContentHandlerFactory)
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getContent(classes : java.NativeArray<Class<Dynamic>>) : Dynamic;
+	@:require(java3) @:overload @:public public function getContent(classes : java.NativeArray<Class<Dynamic>>) : Dynamic;
 	
 	/**
 	* Returns a permission object representing the permission
@@ -559,7 +559,7 @@ extern class URLConnection
 	* requires network or file I/O and an exception occurs while
 	* computing it.
 	*/
-	@:overload public function getPermission() : java.security.Permission;
+	@:overload @:public public function getPermission() : java.security.Permission;
 	
 	/**
 	* Returns an input stream that reads from this open connection.
@@ -576,7 +576,7 @@ extern class URLConnection
 	* @see #setReadTimeout(int)
 	* @see #getReadTimeout()
 	*/
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Returns an output stream that writes to this connection.
@@ -587,14 +587,14 @@ extern class URLConnection
 	* @exception  UnknownServiceException  if the protocol does not support
 	*               output.
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Returns a <code>String</code> representation of this URL connection.
 	*
 	* @return  a string representation of this <code>URLConnection</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Sets the value of the <code>doInput</code> field for this
@@ -609,7 +609,7 @@ extern class URLConnection
 	* @see     java.net.URLConnection#doInput
 	* @see #getDoInput()
 	*/
-	@:overload public function setDoInput(doinput : Bool) : Void;
+	@:overload @:public public function setDoInput(doinput : Bool) : Void;
 	
 	/**
 	* Returns the value of this <code>URLConnection</code>'s
@@ -619,7 +619,7 @@ extern class URLConnection
 	*          <code>doInput</code> flag.
 	* @see     #setDoInput(boolean)
 	*/
-	@:overload public function getDoInput() : Bool;
+	@:overload @:public public function getDoInput() : Bool;
 	
 	/**
 	* Sets the value of the <code>doOutput</code> field for this
@@ -633,7 +633,7 @@ extern class URLConnection
 	* @throws IllegalStateException if already connected
 	* @see #getDoOutput()
 	*/
-	@:overload public function setDoOutput(dooutput : Bool) : Void;
+	@:overload @:public public function setDoOutput(dooutput : Bool) : Void;
 	
 	/**
 	* Returns the value of this <code>URLConnection</code>'s
@@ -643,7 +643,7 @@ extern class URLConnection
 	*          <code>doOutput</code> flag.
 	* @see     #setDoOutput(boolean)
 	*/
-	@:overload public function getDoOutput() : Bool;
+	@:overload @:public public function getDoOutput() : Bool;
 	
 	/**
 	* Set the value of the <code>allowUserInteraction</code> field of
@@ -653,7 +653,7 @@ extern class URLConnection
 	* @throws IllegalStateException if already connected
 	* @see     #getAllowUserInteraction()
 	*/
-	@:overload public function setAllowUserInteraction(allowuserinteraction : Bool) : Void;
+	@:overload @:public public function setAllowUserInteraction(allowuserinteraction : Bool) : Void;
 	
 	/**
 	* Returns the value of the <code>allowUserInteraction</code> field for
@@ -663,7 +663,7 @@ extern class URLConnection
 	*          this object.
 	* @see     #setAllowUserInteraction(boolean)
 	*/
-	@:overload public function getAllowUserInteraction() : Bool;
+	@:overload @:public public function getAllowUserInteraction() : Bool;
 	
 	/**
 	* Sets the default value of the
@@ -673,7 +673,7 @@ extern class URLConnection
 	* @param   defaultallowuserinteraction   the new value.
 	* @see     #getDefaultAllowUserInteraction()
 	*/
-	@:overload public static function setDefaultAllowUserInteraction(defaultallowuserinteraction : Bool) : Void;
+	@:overload @:public @:static public static function setDefaultAllowUserInteraction(defaultallowuserinteraction : Bool) : Void;
 	
 	/**
 	* Returns the default value of the <code>allowUserInteraction</code>
@@ -687,7 +687,7 @@ extern class URLConnection
 	*          field.
 	* @see     #setDefaultAllowUserInteraction(boolean)
 	*/
-	@:overload public static function getDefaultAllowUserInteraction() : Bool;
+	@:overload @:public @:static public static function getDefaultAllowUserInteraction() : Bool;
 	
 	/**
 	* Sets the value of the <code>useCaches</code> field of this
@@ -706,7 +706,7 @@ extern class URLConnection
 	* @throws IllegalStateException if already connected
 	* @see #getUseCaches()
 	*/
-	@:overload public function setUseCaches(usecaches : Bool) : Void;
+	@:overload @:public public function setUseCaches(usecaches : Bool) : Void;
 	
 	/**
 	* Returns the value of this <code>URLConnection</code>'s
@@ -716,7 +716,7 @@ extern class URLConnection
 	*          <code>useCaches</code> field.
 	* @see #setUseCaches(boolean)
 	*/
-	@:overload public function getUseCaches() : Bool;
+	@:overload @:public public function getUseCaches() : Bool;
 	
 	/**
 	* Sets the value of the <code>ifModifiedSince</code> field of
@@ -726,7 +726,7 @@ extern class URLConnection
 	* @throws IllegalStateException if already connected
 	* @see     #getIfModifiedSince()
 	*/
-	@:overload public function setIfModifiedSince(ifmodifiedsince : haxe.Int64) : Void;
+	@:overload @:public public function setIfModifiedSince(ifmodifiedsince : haxe.Int64) : Void;
 	
 	/**
 	* Returns the value of this object's <code>ifModifiedSince</code> field.
@@ -734,7 +734,7 @@ extern class URLConnection
 	* @return  the value of this object's <code>ifModifiedSince</code> field.
 	* @see #setIfModifiedSince(long)
 	*/
-	@:overload public function getIfModifiedSince() : haxe.Int64;
+	@:overload @:public public function getIfModifiedSince() : haxe.Int64;
 	
 	/**
 	* Returns the default value of a <code>URLConnection</code>'s
@@ -748,7 +748,7 @@ extern class URLConnection
 	*          <code>useCaches</code> flag.
 	* @see     #setDefaultUseCaches(boolean)
 	*/
-	@:overload public function getDefaultUseCaches() : Bool;
+	@:overload @:public public function getDefaultUseCaches() : Bool;
 	
 	/**
 	* Sets the default value of the <code>useCaches</code> field to the
@@ -757,7 +757,7 @@ extern class URLConnection
 	* @param   defaultusecaches   the new value.
 	* @see     #getDefaultUseCaches()
 	*/
-	@:overload public function setDefaultUseCaches(defaultusecaches : Bool) : Void;
+	@:overload @:public public function setDefaultUseCaches(defaultusecaches : Bool) : Void;
 	
 	/**
 	* Sets the general request property. If a property with the key already
@@ -775,7 +775,7 @@ extern class URLConnection
 	* @throws NullPointerException if key is <CODE>null</CODE>
 	* @see #getRequestProperty(java.lang.String)
 	*/
-	@:overload public function setRequestProperty(key : String, value : String) : Void;
+	@:overload @:public public function setRequestProperty(key : String, value : String) : Void;
 	
 	/**
 	* Adds a general request property specified by a
@@ -790,7 +790,7 @@ extern class URLConnection
 	* @see #getRequestProperties()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function addRequestProperty(key : String, value : String) : Void;
+	@:require(java4) @:overload @:public public function addRequestProperty(key : String, value : String) : Void;
 	
 	/**
 	* Returns the value of the named general request property for this
@@ -802,7 +802,7 @@ extern class URLConnection
 	* @throws IllegalStateException if already connected
 	* @see #setRequestProperty(java.lang.String, java.lang.String)
 	*/
-	@:overload public function getRequestProperty(key : String) : String;
+	@:overload @:public public function getRequestProperty(key : String) : String;
 	
 	/**
 	* Returns an unmodifiable Map of general request
@@ -816,7 +816,7 @@ extern class URLConnection
 	* @throws IllegalStateException if already connected
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getRequestProperties() : java.util.Map<String, java.util.List<String>>;
+	@:require(java4) @:overload @:public public function getRequestProperties() : java.util.Map<String, java.util.List<String>>;
 	
 	/**
 	* Sets the default value of a general request property. When a
@@ -835,7 +835,7 @@ extern class URLConnection
 	*
 	* @see #getDefaultRequestProperty(java.lang.String)
 	*/
-	@:overload public static function setDefaultRequestProperty(key : String, value : String) : Void;
+	@:overload @:public @:static public static function setDefaultRequestProperty(key : String, value : String) : Void;
 	
 	/**
 	* Returns the value of the default request property. Default request
@@ -853,7 +853,7 @@ extern class URLConnection
 	*
 	* @see #setDefaultRequestProperty(java.lang.String, java.lang.String)
 	*/
-	@:overload public static function getDefaultRequestProperty(key : String) : String;
+	@:overload @:public @:static public static function getDefaultRequestProperty(key : String) : String;
 	
 	/**
 	* Sets the <code>ContentHandlerFactory</code> of an
@@ -875,7 +875,7 @@ extern class URLConnection
 	* @see        java.net.URLConnection#getContent()
 	* @see        SecurityManager#checkSetFactory
 	*/
-	@:overload @:synchronized public static function setContentHandlerFactory(fac : java.net.ContentHandlerFactory) : Void;
+	@:overload @:public @:static @:synchronized public static function setContentHandlerFactory(fac : java.net.ContentHandlerFactory) : Void;
 	
 	/**
 	* Tries to determine the content type of an object, based
@@ -888,7 +888,7 @@ extern class URLConnection
 	*          based upon its file name.
 	* @see     java.net.URLConnection#getContentType()
 	*/
-	@:overload public static function guessContentTypeFromName(fname : String) : String;
+	@:overload @:public @:static public static function guessContentTypeFromName(fname : String) : String;
 	
 	/**
 	* Tries to determine the type of an input stream based on the
@@ -911,13 +911,13 @@ extern class URLConnection
 	* @see        java.io.InputStream#markSupported()
 	* @see        java.net.URLConnection#getContentType()
 	*/
-	@:overload public static function guessContentTypeFromStream(is : java.io.InputStream) : String;
+	@:overload @:static @:public public static function guessContentTypeFromStream(is : java.io.InputStream) : String;
 	
 	
 }
 @:internal extern class UnknownContentHandler extends java.net.ContentHandler
 {
-	@:overload override public function getContent(uc : java.net.URLConnection) : Dynamic;
+	@:overload @:public override public function getContent(uc : java.net.URLConnection) : Dynamic;
 	
 	
 }

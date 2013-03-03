@@ -26,10 +26,10 @@ package java.util.zip;
 extern class InflaterOutputStream extends java.io.FilterOutputStream
 {
 	/** Decompressor for this stream. */
-	private var inf(default, null) : java.util.zip.Inflater;
+	@:protected @:final private var inf(default, null) : java.util.zip.Inflater;
 	
 	/** Output buffer for writing uncompressed data. */
-	private var buf(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:protected @:final private var buf(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Creates a new output stream with a default decompressor and buffer
@@ -38,7 +38,7 @@ extern class InflaterOutputStream extends java.io.FilterOutputStream
 	* @param out output stream to write the uncompressed data to
 	* @throws NullPointerException if {@code out} is null
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Creates a new output stream with the specified decompressor and a
@@ -48,7 +48,7 @@ extern class InflaterOutputStream extends java.io.FilterOutputStream
 	* @param infl decompressor ("inflater") for this stream
 	* @throws NullPointerException if {@code out} or {@code infl} is null
 	*/
-	@:overload public function new(out : java.io.OutputStream, infl : java.util.zip.Inflater) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, infl : java.util.zip.Inflater) : Void;
 	
 	/**
 	* Creates a new output stream with the specified decompressor and
@@ -60,7 +60,7 @@ extern class InflaterOutputStream extends java.io.FilterOutputStream
 	* @throws IllegalArgumentException if {@code bufLen} is <= 0
 	* @throws NullPointerException if {@code out} or {@code infl} is null
 	*/
-	@:overload public function new(out : java.io.OutputStream, infl : java.util.zip.Inflater, bufLen : Int) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, infl : java.util.zip.Inflater, bufLen : Int) : Void;
 	
 	/**
 	* Writes any remaining uncompressed data to the output stream and closes
@@ -68,7 +68,7 @@ extern class InflaterOutputStream extends java.io.FilterOutputStream
 	*
 	* @throws IOException if an I/O error occurs
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Flushes this output stream, forcing any pending buffered output bytes to be
@@ -77,7 +77,7 @@ extern class InflaterOutputStream extends java.io.FilterOutputStream
 	* @throws IOException if an I/O error occurs or this stream is already
 	* closed
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* Finishes writing uncompressed data to the output stream without closing
@@ -87,7 +87,7 @@ extern class InflaterOutputStream extends java.io.FilterOutputStream
 	* @throws IOException if an I/O error occurs or this stream is already
 	* closed
 	*/
-	@:overload public function finish() : Void;
+	@:overload @:public public function finish() : Void;
 	
 	/**
 	* Writes a byte to the uncompressed output stream.
@@ -98,7 +98,7 @@ extern class InflaterOutputStream extends java.io.FilterOutputStream
 	* closed
 	* @throws ZipException if a compression (ZIP) format error occurs
 	*/
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
 	/**
 	* Writes an array of bytes to the uncompressed output stream.
@@ -114,7 +114,7 @@ extern class InflaterOutputStream extends java.io.FilterOutputStream
 	* @throws NullPointerException if {@code b} is null
 	* @throws ZipException if a compression (ZIP) format error occurs
 	*/
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	
 }

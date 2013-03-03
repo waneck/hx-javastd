@@ -37,39 +37,39 @@ exception statement from your version.
 */
 extern class PulseAudioSourceDataLine extends org.classpath.icedtea.pulseaudio.PulseAudioDataLine implements javax.sound.sampled.SourceDataLine implements org.classpath.icedtea.pulseaudio.PulseAudioPlaybackLine
 {
-	public static var DEFAULT_SOURCEDATALINE_NAME(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_SOURCEDATALINE_NAME(default, null) : String;
 	
-	@:overload @:synchronized public function open(format : javax.sound.sampled.AudioFormat, bufferSize : Int) : Void;
+	@:overload @:synchronized @:public override public function open(format : javax.sound.sampled.AudioFormat, bufferSize : Int) : Void;
 	
-	@:overload public function open(format : javax.sound.sampled.AudioFormat) : Void;
+	@:overload @:public override public function open(format : javax.sound.sampled.AudioFormat) : Void;
 	
-	@:overload public function native_set_volume(value : Single) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function native_set_volume(value : Single) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function native_update_volume() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function native_update_volume() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getCachedVolume() : Single;
+	@:overload @:public public function getCachedVolume() : Single;
 	
-	@:overload @:synchronized public function setCachedVolume(value : Single) : Void;
+	@:overload @:synchronized @:public public function setCachedVolume(value : Single) : Void;
 	
-	@:overload private function connectLine(bufferSize : Int, masterStream : org.classpath.icedtea.pulseaudio.Stream) : Void;
+	@:overload @:protected override private function connectLine(bufferSize : Int, masterStream : org.classpath.icedtea.pulseaudio.Stream) : Void;
 	
-	@:overload public function write(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Int;
+	@:overload @:public public function write(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Int;
 	
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload override public function getFramePosition() : Int;
+	@:overload @:public override public function getFramePosition() : Int;
 	
-	@:overload override public function getLongFramePosition() : haxe.Int64;
+	@:overload @:public override public function getLongFramePosition() : haxe.Int64;
 	
-	@:overload override public function getMicrosecondPosition() : haxe.Int64;
+	@:overload @:public override public function getMicrosecondPosition() : haxe.Int64;
 	
-	@:overload override public function drain() : Void;
+	@:overload @:public override public function drain() : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload @:synchronized public function close() : Void;
+	@:overload @:synchronized @:public override public function close() : Void;
 	
-	@:overload public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload @:public override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	
 }

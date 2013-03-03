@@ -30,19 +30,19 @@ extern class MIMEMultipartRelated extends com.sun.tools.internal.ws.wsdl.framewo
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function add(part : com.sun.tools.internal.ws.wsdl.document.mime.MIMEPart) : Void;
+	@:overload @:public public function add(part : com.sun.tools.internal.ws.wsdl.document.mime.MIMEPart) : Void;
 	
-	@:overload public function getParts() : java.lang.Iterable<com.sun.tools.internal.ws.wsdl.document.mime.MIMEPart>;
+	@:overload @:public public function getParts() : java.lang.Iterable<com.sun.tools.internal.ws.wsdl.document.mime.MIMEPart>;
 	
-	@:overload override public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
+	@:overload @:public override public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
 	
-	@:overload override public function accept(visitor : com.sun.tools.internal.ws.wsdl.framework.ExtensionVisitor) : Void;
+	@:overload @:public override public function accept(visitor : com.sun.tools.internal.ws.wsdl.framework.ExtensionVisitor) : Void;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload @:public override public function validateThis() : Void;
 	
 	
 }

@@ -36,19 +36,19 @@ extern class ContentType
 	* @param   s       the Content-Type string.
 	* @exception WebServiceException if the parse fails.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Return the primary type.
 	* @return the primary type
 	*/
-	@:overload public function getPrimaryType() : String;
+	@:overload @:public public function getPrimaryType() : String;
 	
 	/**
 	* Return the subType.
 	* @return the subType
 	*/
-	@:overload public function getSubType() : String;
+	@:overload @:public public function getSubType() : String;
 	
 	/**
 	* Return the MIME type string, without the parameters.
@@ -57,7 +57,7 @@ extern class ContentType
 	*
 	* @return the type
 	*/
-	@:overload public function getBaseType() : String;
+	@:overload @:public public function getBaseType() : String;
 	
 	/**
 	* Return the specified parameter value. Returns <code>null</code>
@@ -66,7 +66,7 @@ extern class ContentType
 	* @param name parameter name
 	* @return  parameter value
 	*/
-	@:overload public function getParameter(name : String) : String;
+	@:overload @:public public function getParameter(name : String) : String;
 	
 	/**
 	* Return a ParameterList object that holds all the available
@@ -74,7 +74,7 @@ extern class ContentType
 	*
 	* @return  ParameterList
 	*/
-	@:overload public function getParameterList() : com.sun.xml.internal.ws.encoding.ParameterList;
+	@:overload @:public public function getParameterList() : com.sun.xml.internal.ws.encoding.ParameterList;
 	
 	
 }

@@ -40,7 +40,7 @@ extern class ExceptionEventSet extends com.sun.tools.example.debug.event.Locatab
 	* @return an {@link ObjectReference} which mirrors the thrown object in
 	* the target VM.
 	*/
-	@:overload public function getException() : com.sun.jdi.ObjectReference;
+	@:overload @:public public function getException() : com.sun.jdi.ObjectReference;
 	
 	/**
 	* Gets the location where the exception will be caught. An exception
@@ -67,9 +67,9 @@ extern class ExceptionEventSet extends com.sun.tools.example.debug.event.Locatab
 	* @return the {@link Location} where the exception will be caught or null if
 	* the exception is uncaught.
 	*/
-	@:overload public function getCatchLocation() : com.sun.jdi.Location;
+	@:overload @:public public function getCatchLocation() : com.sun.jdi.Location;
 	
-	@:overload override public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
+	@:overload @:public override public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
 	
 	
 }

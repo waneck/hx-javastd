@@ -28,17 +28,17 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 	/**
 	* Wrapper tag name if any, or null.
 	*/
-	private var wrapperTagName(default, null) : com.sun.xml.internal.bind.v2.runtime.Name;
+	@:protected @:final private var wrapperTagName(default, null) : com.sun.xml.internal.bind.v2.runtime.Name;
 	
 	/**
 	* True if the wrapper tag name is nillable.
 	* Always false if {@link #wrapperTagName}==null.
 	*/
-	private var isWrapperNillable(default, null) : Bool;
+	@:protected @:final private var isWrapperNillable(default, null) : Bool;
 	
-	@:overload private function new(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo, tagName : javax.xml.namespace.QName, isWrapperNillable : Bool) : Void;
+	@:overload @:protected private function new(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo, tagName : javax.xml.namespace.QName, isWrapperNillable : Bool) : Void;
 	
-	@:overload @:final public function serializeBody(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, outerPeer : Dynamic) : Void;
+	@:overload @:public @:final override public function serializeBody(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, outerPeer : Dynamic) : Void;
 	
 	/**
 	* Serializes the items of the list.
@@ -47,14 +47,14 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 	* @param list
 	*      always non-null.
 	*/
-	@:overload @:abstract private function serializeListBody(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, list : ListT) : Void;
+	@:overload @:protected @:abstract private function serializeListBody(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, list : ListT) : Void;
 	
 	/**
 	* Creates the unmarshaler to unmarshal the body.
 	*/
-	@:overload @:abstract private function createBodyUnmarshaller(chain : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, loaders : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
+	@:overload @:protected @:abstract private function createBodyUnmarshaller(chain : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, loaders : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
 	
-	@:overload @:final public function buildChildElementUnmarshallers(chain : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, loaders : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
+	@:overload @:public @:final override public function buildChildElementUnmarshallers(chain : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, loaders : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
 	
 	
 }
@@ -63,15 +63,15 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 */
 @:native('com$sun$xml$internal$bind$v2$runtime$property$ArrayERProperty$ItemsLoader') @:internal extern class ArrayERProperty_ItemsLoader extends com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader
 {
-	@:overload public function new(acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>, lister : com.sun.xml.internal.bind.v2.runtime.reflect.Lister<Dynamic, Dynamic, Dynamic, Dynamic>, children : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
+	@:overload @:public public function new(acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>, lister : com.sun.xml.internal.bind.v2.runtime.reflect.Lister<Dynamic, Dynamic, Dynamic, Dynamic>, children : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
 	
-	@:overload override public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:public override public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload override public function childElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:public override public function childElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload override public function leaveElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:public override public function leaveElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload override public function getExpectedChildElements() : java.util.Collection<javax.xml.namespace.QName>;
+	@:overload @:public override public function getExpectedChildElements() : java.util.Collection<javax.xml.namespace.QName>;
 	
 	
 }
@@ -80,9 +80,9 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 */
 @:native('com$sun$xml$internal$bind$v2$runtime$property$ArrayERProperty$ReceiverImpl') extern class ArrayERProperty_ReceiverImpl implements com.sun.xml.internal.bind.v2.runtime.unmarshaller.Receiver
 {
-	@:overload private function new(offset : Int) : Void;
+	@:overload @:protected private function new(offset : Int) : Void;
 	
-	@:overload public function receive(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, o : Dynamic) : Void;
+	@:overload @:public public function receive(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, o : Dynamic) : Void;
 	
 	
 }

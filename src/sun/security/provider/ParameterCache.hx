@@ -29,25 +29,25 @@ extern class ParameterCache
 	* Return cached DSA parameters for the given keylength, or null if none
 	* are available in the cache.
 	*/
-	@:overload public static function getCachedDSAParameterSpec(keyLength : Int) : java.security.spec.DSAParameterSpec;
+	@:overload @:public @:static public static function getCachedDSAParameterSpec(keyLength : Int) : java.security.spec.DSAParameterSpec;
 	
 	/**
 	* Return cached DH parameters for the given keylength, or null if none
 	* are available in the cache.
 	*/
-	@:overload public static function getCachedDHParameterSpec(keyLength : Int) : javax.crypto.spec.DHParameterSpec;
+	@:overload @:public @:static public static function getCachedDHParameterSpec(keyLength : Int) : javax.crypto.spec.DHParameterSpec;
 	
 	/**
 	* Return DSA parameters for the given keylength. Uses cache if possible,
 	* generates new parameters and adds them to the cache otherwise.
 	*/
-	@:overload public static function getDSAParameterSpec(keyLength : Int, random : java.security.SecureRandom) : java.security.spec.DSAParameterSpec;
+	@:overload @:public @:static public static function getDSAParameterSpec(keyLength : Int, random : java.security.SecureRandom) : java.security.spec.DSAParameterSpec;
 	
 	/**
 	* Return DH parameters for the given keylength. Uses cache if possible,
 	* generates new parameters and adds them to the cache otherwise.
 	*/
-	@:overload public static function getDHParameterSpec(keyLength : Int, random : java.security.SecureRandom) : javax.crypto.spec.DHParameterSpec;
+	@:overload @:public @:static public static function getDHParameterSpec(keyLength : Int, random : java.security.SecureRandom) : javax.crypto.spec.DHParameterSpec;
 	
 	/**
 	* Return new DSA parameters for the given keylength. Do not lookup in
@@ -55,7 +55,7 @@ extern class ParameterCache
 	* really only exists for the legacy method
 	* DSAKeyPairGenerator.initialize(int, boolean, SecureRandom).
 	*/
-	@:overload public static function getNewDSAParameterSpec(keyLength : Int, random : java.security.SecureRandom) : java.security.spec.DSAParameterSpec;
+	@:overload @:public @:static public static function getNewDSAParameterSpec(keyLength : Int, random : java.security.SecureRandom) : java.security.spec.DSAParameterSpec;
 	
 	
 }

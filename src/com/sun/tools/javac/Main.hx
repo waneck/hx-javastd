@@ -40,7 +40,7 @@ extern class Main
 	/** Unsupported command line interface.
 	* @param args   The command line parameters.
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	/** Programmatic interface to the Java Programming Language
 	* compiler, javac.
@@ -50,7 +50,7 @@ extern class Main
 	* @return an integer equivalent to the exit value from invoking
 	* javac, see the man page for details.
 	*/
-	@:overload public static function compile(args : java.NativeArray<String>) : Int;
+	@:overload @:public @:static public static function compile(args : java.NativeArray<String>) : Int;
 	
 	/** Programmatic interface to the Java Programming Language
 	* compiler, javac.
@@ -62,7 +62,7 @@ extern class Main
 	* @return an integer equivalent to the exit value from invoking
 	* javac, see the man page for details.
 	*/
-	@:overload public static function compile(args : java.NativeArray<String>, out : java.io.PrintWriter) : Int;
+	@:overload @:public @:static public static function compile(args : java.NativeArray<String>, out : java.io.PrintWriter) : Int;
 	
 	
 }

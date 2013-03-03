@@ -58,99 +58,99 @@ package org.w3c.dom;
 */
 extern class DOMException extends java.lang.RuntimeException
 {
-	@:overload public function new(code : java.StdTypes.Int16, message : String) : Void;
+	@:overload @:public public function new(code : java.StdTypes.Int16, message : String) : Void;
 	
-	public var code : java.StdTypes.Int16;
+	@:public public var code : java.StdTypes.Int16;
 	
 	/**
 	* If index or size is negative, or greater than the allowed value.
 	*/
-	public static var INDEX_SIZE_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var INDEX_SIZE_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If the specified range of text does not fit into a
 	* <code>DOMString</code>.
 	*/
-	public static var DOMSTRING_SIZE_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var DOMSTRING_SIZE_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If any <code>Node</code> is inserted somewhere it doesn't belong.
 	*/
-	public static var HIERARCHY_REQUEST_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var HIERARCHY_REQUEST_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If a <code>Node</code> is used in a different document than the one
 	* that created it (that doesn't support it).
 	*/
-	public static var WRONG_DOCUMENT_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var WRONG_DOCUMENT_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If an invalid or illegal character is specified, such as in an XML name.
 	*/
-	public static var INVALID_CHARACTER_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var INVALID_CHARACTER_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If data is specified for a <code>Node</code> which does not support
 	* data.
 	*/
-	public static var NO_DATA_ALLOWED_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var NO_DATA_ALLOWED_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If an attempt is made to modify an object where modifications are not
 	* allowed.
 	*/
-	public static var NO_MODIFICATION_ALLOWED_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var NO_MODIFICATION_ALLOWED_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If an attempt is made to reference a <code>Node</code> in a context
 	* where it does not exist.
 	*/
-	public static var NOT_FOUND_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var NOT_FOUND_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If the implementation does not support the requested type of object or
 	* operation.
 	*/
-	public static var NOT_SUPPORTED_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var NOT_SUPPORTED_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If an attempt is made to add an attribute that is already in use
 	* elsewhere.
 	*/
-	public static var INUSE_ATTRIBUTE_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var INUSE_ATTRIBUTE_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If an attempt is made to use an object that is not, or is no longer,
 	* usable.
 	* @since DOM Level 2
 	*/
-	public static var INVALID_STATE_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var INVALID_STATE_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If an invalid or illegal string is specified.
 	* @since DOM Level 2
 	*/
-	public static var SYNTAX_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var SYNTAX_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If an attempt is made to modify the type of the underlying object.
 	* @since DOM Level 2
 	*/
-	public static var INVALID_MODIFICATION_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var INVALID_MODIFICATION_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If an attempt is made to create or change an object in a way which is
 	* incorrect with regard to namespaces.
 	* @since DOM Level 2
 	*/
-	public static var NAMESPACE_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var NAMESPACE_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If a parameter or an operation is not supported by the underlying
 	* object.
 	* @since DOM Level 2
 	*/
-	public static var INVALID_ACCESS_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var INVALID_ACCESS_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If a call to a method such as <code>insertBefore</code> or
@@ -160,14 +160,14 @@ extern class DOMException extends java.lang.RuntimeException
 	* . Refer to this specification for further information.
 	* @since DOM Level 3
 	*/
-	public static var VALIDATION_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var VALIDATION_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	*  If the type of an object is incompatible with the expected type of the
 	* parameter associated to the object.
 	* @since DOM Level 3
 	*/
-	public static var TYPE_MISMATCH_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TYPE_MISMATCH_ERR(default, null) : java.StdTypes.Int16;
 	
 	
 }

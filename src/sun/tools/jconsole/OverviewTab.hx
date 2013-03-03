@@ -25,21 +25,21 @@ package sun.tools.jconsole;
 */
 @:internal extern class OverviewTab extends sun.tools.jconsole.Tab
 {
-	@:overload public static function getTabName() : String;
+	@:overload @:public @:static public static function getTabName() : String;
 	
-	@:overload public function new(vmPanel : sun.tools.jconsole.VMPanel) : Void;
+	@:overload @:public public function new(vmPanel : sun.tools.jconsole.VMPanel) : Void;
 	
-	@:overload public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
+	@:overload @:public override public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
 	
 	
 }
 @:native('sun$tools$jconsole$OverviewTab$AutoGridLayout') @:internal extern class OverviewTab_AutoGridLayout extends java.awt.GridLayout
 {
-	@:overload public function new(hGap : Int, vGap : Int) : Void;
+	@:overload @:public public function new(hGap : Int, vGap : Int) : Void;
 	
-	@:overload public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public override public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public override public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	
 }

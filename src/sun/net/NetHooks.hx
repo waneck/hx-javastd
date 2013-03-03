@@ -28,12 +28,12 @@ extern class NetHooks
 	/**
 	* Invoke prior to binding a TCP socket.
 	*/
-	@:overload public static function beforeTcpBind(fdObj : java.io.FileDescriptor, address : java.net.InetAddress, port : Int) : Void;
+	@:overload @:public @:static public static function beforeTcpBind(fdObj : java.io.FileDescriptor, address : java.net.InetAddress, port : Int) : Void;
 	
 	/**
 	* Invoke prior to connecting an unbound TCP socket.
 	*/
-	@:overload public static function beforeTcpConnect(fdObj : java.io.FileDescriptor, address : java.net.InetAddress, port : Int) : Void;
+	@:overload @:public @:static public static function beforeTcpConnect(fdObj : java.io.FileDescriptor, address : java.net.InetAddress, port : Int) : Void;
 	
 	
 }
@@ -49,17 +49,17 @@ extern class NetHooks
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Invoked prior to binding a TCP socket.
 	*/
-	@:overload @:abstract public function implBeforeTcpBind(fdObj : java.io.FileDescriptor, address : java.net.InetAddress, port : Int) : Void;
+	@:overload @:public @:abstract public function implBeforeTcpBind(fdObj : java.io.FileDescriptor, address : java.net.InetAddress, port : Int) : Void;
 	
 	/**
 	* Invoked prior to connecting an unbound TCP socket.
 	*/
-	@:overload @:abstract public function implBeforeTcpConnect(fdObj : java.io.FileDescriptor, address : java.net.InetAddress, port : Int) : Void;
+	@:overload @:public @:abstract public function implBeforeTcpConnect(fdObj : java.io.FileDescriptor, address : java.net.InetAddress, port : Int) : Void;
 	
 	
 }

@@ -38,24 +38,24 @@ extern class RemoteType extends sun.rmi.rmic.iiop.InterfaceType
 	* return value will be null, and errors will have been reported to the
 	* supplied BatchEnvironment.
 	*/
-	@:overload public static function forRemote(classDef : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack, quiet : Bool) : sun.rmi.rmic.iiop.RemoteType;
+	@:overload @:public @:static public static function forRemote(classDef : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack, quiet : Bool) : sun.rmi.rmic.iiop.RemoteType;
 	
 	/**
 	* Return a string describing this type.
 	*/
-	@:overload public function getTypeDescription() : String;
+	@:overload @:public override public function getTypeDescription() : String;
 	
 	/**
 	* Create a RemoteType instance for the given class.  The resulting
 	* object is not yet completely initialized.
 	*/
-	@:overload private function new(stack : sun.rmi.rmic.iiop.ContextStack, classDef : sun.tools.java.ClassDefinition) : Void;
+	@:overload @:protected private function new(stack : sun.rmi.rmic.iiop.ContextStack, classDef : sun.tools.java.ClassDefinition) : Void;
 	
 	/**
 	* Create a RemoteType instance for the given class.  The resulting
 	* object is not yet completely initialized.
 	*/
-	@:overload private function new(stack : sun.rmi.rmic.iiop.ContextStack, classDef : sun.tools.java.ClassDefinition, typeCode : Int) : Void;
+	@:overload @:protected private function new(stack : sun.rmi.rmic.iiop.ContextStack, classDef : sun.tools.java.ClassDefinition, typeCode : Int) : Void;
 	
 	
 }

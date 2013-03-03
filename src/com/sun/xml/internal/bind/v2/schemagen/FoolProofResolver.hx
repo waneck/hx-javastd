@@ -25,9 +25,9 @@ package com.sun.xml.internal.bind.v2.schemagen;
 */
 @:internal extern class FoolProofResolver extends javax.xml.bind.SchemaOutputResolver
 {
-	@:overload public function new(resolver : javax.xml.bind.SchemaOutputResolver) : Void;
+	@:overload @:public public function new(resolver : javax.xml.bind.SchemaOutputResolver) : Void;
 	
-	@:overload override public function createOutput(namespaceUri : String, suggestedFileName : String) : javax.xml.transform.Result;
+	@:overload @:public override public function createOutput(namespaceUri : String, suggestedFileName : String) : javax.xml.transform.Result;
 	
 	
 }

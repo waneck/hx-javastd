@@ -38,7 +38,7 @@ extern interface Compare
 	* @param  obj2 second object to compare.
 	* @return -1 if obj1 < obj2, 0 if obj1 == obj2, 1 if obj1 > obj2.
 	*/
-	@:overload public function doCompare(obj1 : Dynamic, obj2 : Dynamic) : Int;
+	@:overload @:public public function doCompare(obj1 : Dynamic, obj2 : Dynamic) : Int;
 	
 	
 }

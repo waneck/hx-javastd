@@ -45,26 +45,26 @@ package javax.swing.text.rtf;
 	*
 	* @param destination The TextAcceptor which is to receive the text.
 	*/
-	@:overload public function new(destination : javax.swing.text.StyledDocument) : Void;
+	@:overload @:public public function new(destination : javax.swing.text.StyledDocument) : Void;
 	
 	/** Called when the RTFParser encounters a bin keyword in the
 	*  RTF stream.
 	*
 	*  @see RTFParser
 	*/
-	@:overload override public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Handles any pure text (containing no control characters) in the input
 	* stream. Called by the superclass. */
-	@:overload override public function handleText(text : String) : Void;
+	@:overload @:public override public function handleText(text : String) : Void;
 	
 	/** Called by the superclass when a new RTF group is begun.
 	*  This implementation saves the current <code>parserState</code>, and gives
 	*  the current destination a chance to save its own state.
 	* @see RTFParser#begingroup
 	*/
-	@:overload override public function begingroup() : Void;
+	@:overload @:public override public function begingroup() : Void;
 	
 	/** Called by the superclass when the current RTF group is closed.
 	*  This restores the parserState saved by <code>begingroup()</code>
@@ -72,16 +72,16 @@ package javax.swing.text.rtf;
 	*  destination.
 	* @see RTFParser#endgroup
 	*/
-	@:overload override public function endgroup() : Void;
+	@:overload @:public override public function endgroup() : Void;
 	
-	@:overload private function setRTFDestination(newDestination : javax.swing.text.rtf.RTFReader.RTFReader_Destination) : Void;
+	@:overload @:protected private function setRTFDestination(newDestination : javax.swing.text.rtf.RTFReader.RTFReader_Destination) : Void;
 	
 	/** Called by the user when there is no more input (<i>i.e.</i>,
 	* at the end of the RTF file.)
 	*
 	* @see OutputStream#close
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Handles a parameterless RTF keyword. This is called by the superclass
@@ -91,7 +91,7 @@ package javax.swing.text.rtf;
 	*          <code>false</code> otherwise
 	* @see RTFParser#handleKeyword
 	*/
-	@:overload override public function handleKeyword(keyword : String) : Bool;
+	@:overload @:public override public function handleKeyword(keyword : String) : Bool;
 	
 	/**
 	* Handles an RTF keyword and its integer parameter.
@@ -102,7 +102,7 @@ package javax.swing.text.rtf;
 	*          <code>false</code> otherwise
 	* @see RTFParser#handleKeyword
 	*/
-	@:overload override public function handleKeyword(keyword : String, parameter : Int) : Bool;
+	@:overload @:public override public function handleKeyword(keyword : String, parameter : Int) : Bool;
 	
 	/**
 	* setCharacterSet sets the current translation table to correspond with
@@ -110,11 +110,11 @@ package javax.swing.text.rtf;
 	*
 	* @see AbstractFilter
 	*/
-	@:overload public function setCharacterSet(name : String) : Void;
+	@:overload @:public public function setCharacterSet(name : String) : Void;
 	
 	/** Adds a character set to the RTFReader's list
 	*  of known character sets */
-	@:overload public static function defineCharacterSet(name : String, table : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public @:static public static function defineCharacterSet(name : String, table : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/** Looks up a named character set. A character set is a 256-entry
 	*  array of characters, mapping unsigned byte values to their Unicode
@@ -122,7 +122,7 @@ package javax.swing.text.rtf;
 	*
 	*  @returns the character set
 	*/
-	@:overload public static function getCharacterSet(name : String) : Dynamic;
+	@:overload @:public @:static public static function getCharacterSet(name : String) : Dynamic;
 	
 	
 }
@@ -134,17 +134,17 @@ package javax.swing.text.rtf;
 */
 @:native('javax$swing$text$rtf$RTFReader$Destination') @:internal extern interface RTFReader_Destination
 {
-	@:overload public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	@:overload public function handleText(text : String) : Void;
 	
 	@:overload public function handleKeyword(keyword : String) : Bool;
 	
-	@:overload public function handleKeyword(keyword : String, parameter : Int) : Bool;
+	@:overload @:public public function handleKeyword(keyword : String, parameter : Int) : Bool;
 	
-	@:overload public function begingroup() : Void;
+	@:overload @:public public function begingroup() : Void;
 	
-	@:overload public function endgroup(oldState : java.util.Dictionary<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function endgroup(oldState : java.util.Dictionary<Dynamic, Dynamic>) : Void;
 	
 	@:overload public function close() : Void;
 	
@@ -155,19 +155,19 @@ package javax.swing.text.rtf;
 *  It accepts all keywords and text but does nothing with them. */
 @:native('javax$swing$text$rtf$RTFReader$DiscardingDestination') @:internal extern class RTFReader_DiscardingDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
-	@:overload public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function handleText(text : String) : Void;
+	@:overload @:public public function handleText(text : String) : Void;
 	
-	@:overload public function handleKeyword(text : String) : Bool;
+	@:overload @:public public function handleKeyword(text : String) : Bool;
 	
-	@:overload public function handleKeyword(text : String, parameter : Int) : Bool;
+	@:overload @:public public function handleKeyword(text : String, parameter : Int) : Bool;
 	
-	@:overload public function begingroup() : Void;
+	@:overload @:public public function begingroup() : Void;
 	
-	@:overload public function endgroup(oldState : java.util.Dictionary<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function endgroup(oldState : java.util.Dictionary<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }
@@ -175,22 +175,22 @@ package javax.swing.text.rtf;
 *  fontTable dictionary. */
 @:native('javax$swing$text$rtf$RTFReader$FonttblDestination') @:internal extern class RTFReader_FonttblDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
-	@:overload public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function handleText(text : String) : Void;
+	@:overload @:public public function handleText(text : String) : Void;
 	
-	@:overload public function handleKeyword(keyword : String) : Bool;
+	@:overload @:public public function handleKeyword(keyword : String) : Bool;
 	
-	@:overload public function handleKeyword(keyword : String, parameter : Int) : Bool;
+	@:overload @:public public function handleKeyword(keyword : String, parameter : Int) : Bool;
 	
 	/* Groups are irrelevant. */
-	@:overload public function begingroup() : Void;
+	@:overload @:public public function begingroup() : Void;
 	
-	@:overload public function endgroup(oldState : java.util.Dictionary<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function endgroup(oldState : java.util.Dictionary<Dynamic, Dynamic>) : Void;
 	
 	/* currently, the only thing we do when the font table ends is
 	dump its contents to the debugging log. */
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }
@@ -198,24 +198,24 @@ package javax.swing.text.rtf;
 *  color table is set to an array containing the read colors. */
 @:native('javax$swing$text$rtf$RTFReader$ColortblDestination') @:internal extern class RTFReader_ColortblDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function handleText(text : String) : Void;
+	@:overload @:public public function handleText(text : String) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function handleKeyword(keyword : String, parameter : Int) : Bool;
+	@:overload @:public public function handleKeyword(keyword : String, parameter : Int) : Bool;
 	
 	/* Colortbls don't understand any parameterless keywords */
-	@:overload public function handleKeyword(keyword : String) : Bool;
+	@:overload @:public public function handleKeyword(keyword : String) : Bool;
 	
 	/* Groups are irrelevant. */
-	@:overload public function begingroup() : Void;
+	@:overload @:public public function begingroup() : Void;
 	
-	@:overload public function endgroup(oldState : java.util.Dictionary<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function endgroup(oldState : java.util.Dictionary<Dynamic, Dynamic>) : Void;
 	
 	/* Shouldn't see any binary blobs ... */
-	@:overload public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }
@@ -223,32 +223,32 @@ package javax.swing.text.rtf;
 *  into the three style arrays in the RTFReader. */
 @:native('javax$swing$text$rtf$RTFReader$StylesheetDestination') @:internal extern class RTFReader_StylesheetDestination extends javax.swing.text.rtf.RTFReader.RTFReader_DiscardingDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function begingroup() : Void;
+	@:overload @:public override public function begingroup() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
 /** This subclass handles an individual style */
 @:native('javax$swing$text$rtf$RTFReader$StylesheetDestination$StyleDefiningDestination') @:internal extern class RTFReader_StylesheetDestination_StyleDefiningDestination extends javax.swing.text.rtf.RTFReader.RTFReader_AttributeTrackingDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
-	public var styleName : String;
+	@:public public var styleName : String;
 	
-	public var number : Int;
+	@:public public var number : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function handleText(text : String) : Void;
+	@:overload @:public public function handleText(text : String) : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload public function handleKeyword(keyword : String) : Bool;
+	@:overload @:public public function handleKeyword(keyword : String) : Bool;
 	
-	@:overload public function handleKeyword(keyword : String, parameter : Int) : Bool;
+	@:overload @:public public function handleKeyword(keyword : String, parameter : Int) : Bool;
 	
-	@:overload public function realize() : javax.swing.text.Style;
+	@:overload @:public public function realize() : javax.swing.text.Style;
 	
 	
 }
@@ -265,33 +265,33 @@ package javax.swing.text.rtf;
 *  to the subclasses to determine what is done with the actual text. */
 @:native('javax$swing$text$rtf$RTFReader$AttributeTrackingDestination') @:internal extern class RTFReader_AttributeTrackingDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:abstract public function handleText(text : String) : Void;
+	@:overload @:abstract @:public public function handleText(text : String) : Void;
 	
-	@:overload public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function begingroup() : Void;
+	@:overload @:public public function begingroup() : Void;
 	
-	@:overload public function endgroup(oldState : java.util.Dictionary<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function endgroup(oldState : java.util.Dictionary<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function handleKeyword(keyword : String) : Bool;
+	@:overload @:public public function handleKeyword(keyword : String) : Bool;
 	
-	@:overload public function handleKeyword(keyword : String, parameter : Int) : Bool;
+	@:overload @:public public function handleKeyword(keyword : String, parameter : Int) : Bool;
 	
 	/** Returns a new MutableAttributeSet containing the
 	*  default character attributes */
-	@:overload private function rootCharacterAttributes() : javax.swing.text.MutableAttributeSet;
+	@:overload @:protected private function rootCharacterAttributes() : javax.swing.text.MutableAttributeSet;
 	
 	/** Returns a new MutableAttributeSet containing the
 	*  default paragraph attributes */
-	@:overload private function rootParagraphAttributes() : javax.swing.text.MutableAttributeSet;
+	@:overload @:protected private function rootParagraphAttributes() : javax.swing.text.MutableAttributeSet;
 	
 	/** Returns a new MutableAttributeSet containing the
 	*  default section attributes */
-	@:overload private function rootSectionAttributes() : javax.swing.text.MutableAttributeSet;
+	@:overload @:protected private function rootSectionAttributes() : javax.swing.text.MutableAttributeSet;
 	
 	/**
 	* Calculates the current section attributes
@@ -299,22 +299,22 @@ package javax.swing.text.rtf;
 	*
 	* @returns a newly created MutableAttributeSet.
 	*/
-	@:overload public function currentSectionAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public public function currentSectionAttributes() : javax.swing.text.AttributeSet;
 	
 	/** Resets the filter's internal notion of the current character
 	*  attributes to their default values. Invoked to handle the
 	*  \plain keyword. */
-	@:overload private function resetCharacterAttributes() : Void;
+	@:overload @:protected private function resetCharacterAttributes() : Void;
 	
 	/** Resets the filter's internal notion of the current paragraph's
 	*  attributes to their default values. Invoked to handle the
 	*  \pard keyword. */
-	@:overload private function resetParagraphAttributes() : Void;
+	@:overload @:protected private function resetParagraphAttributes() : Void;
 	
 	/** Resets the filter's internal notion of the current section's
 	*  attributes to their default values. Invoked to handle the
 	*  \sectd keyword. */
-	@:overload private function resetSectionAttributes() : Void;
+	@:overload @:protected private function resetSectionAttributes() : Void;
 	
 	
 }
@@ -329,17 +329,25 @@ package javax.swing.text.rtf;
 */
 @:native('javax$swing$text$rtf$RTFReader$TextHandlingDestination') @:internal extern class RTFReader_TextHandlingDestination extends javax.swing.text.rtf.RTFReader.RTFReader_AttributeTrackingDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function handleText(text : String) : Void;
+	@:overload @:public override public function handleText(text : String) : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload override public function handleKeyword(keyword : String) : Bool;
+	@:overload @:public override public function handleKeyword(keyword : String) : Bool;
 	
-	@:overload private function beginParagraph() : Void;
+	@:overload @:protected private function beginParagraph() : Void;
 	
-	@:overload private function endParagraph() : Void;
+	@:overload @:protected private function endParagraph() : Void;
+	
+	@:overload @:public override public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	
+	@:overload @:public override public function endgroup(oldState : java.util.Dictionary<Dynamic, Dynamic>) : Void;
+	
+	@:overload @:public override public function begingroup() : Void;
+	
+	@:overload @:public override public function handleKeyword(keyword : String, parameter : Int) : Bool;
 	
 	
 }
@@ -350,11 +358,11 @@ package javax.swing.text.rtf;
 */
 @:native('javax$swing$text$rtf$RTFReader$DocumentDestination') @:internal extern class RTFReader_DocumentDestination extends javax.swing.text.rtf.RTFReader.RTFReader_TextHandlingDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
-	@:overload public function deliverText(text : String, characterAttributes : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function deliverText(text : String, characterAttributes : javax.swing.text.AttributeSet) : Void;
 	
-	@:overload public function finishParagraph(pgfAttributes : javax.swing.text.AttributeSet, chrAttributes : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function finishParagraph(pgfAttributes : javax.swing.text.AttributeSet, chrAttributes : javax.swing.text.AttributeSet) : Void;
 	
-	@:overload public function endSection() : Void;
+	@:overload @:public public function endSection() : Void;
 	
 	
 }

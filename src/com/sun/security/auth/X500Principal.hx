@@ -40,7 +40,7 @@ extern class X500Principal implements java.security.Principal implements java.io
 	* @exception IllegalArgumentException if the <code>name</code>
 	*                  is improperly specified.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Return the Unix username for this <code>X500Principal</code>.
@@ -49,7 +49,7 @@ extern class X500Principal implements java.security.Principal implements java.io
 	*
 	* @return the Unix username for this <code>X500Principal</code>
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return a string representation of this <code>X500Principal</code>.
@@ -58,7 +58,7 @@ extern class X500Principal implements java.security.Principal implements java.io
 	*
 	* @return a string representation of this <code>X500Principal</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares the specified Object with this <code>X500Principal</code>
@@ -72,7 +72,7 @@ extern class X500Principal implements java.security.Principal implements java.io
 	* @return true if the specified Object is equal equal to this
 	*          <code>X500Principal</code>.
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Return a hash code for this <code>X500Principal</code>.
@@ -81,7 +81,7 @@ extern class X500Principal implements java.security.Principal implements java.io
 	*
 	* @return a hash code for this <code>X500Principal</code>.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

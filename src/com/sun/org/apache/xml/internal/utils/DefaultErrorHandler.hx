@@ -26,22 +26,22 @@ extern class DefaultErrorHandler implements org.xml.sax.ErrorHandler implements 
 	/**
 	* Constructor DefaultErrorHandler
 	*/
-	@:overload public function new(pw : java.io.PrintWriter) : Void;
+	@:overload @:public public function new(pw : java.io.PrintWriter) : Void;
 	
 	/**
 	* Constructor DefaultErrorHandler
 	*/
-	@:overload public function new(pw : java.io.PrintStream) : Void;
+	@:overload @:public public function new(pw : java.io.PrintStream) : Void;
 	
 	/**
 	* Constructor DefaultErrorHandler
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor DefaultErrorHandler
 	*/
-	@:overload public function new(throwExceptionOnError : Bool) : Void;
+	@:overload @:public public function new(throwExceptionOnError : Bool) : Void;
 	
 	/**
 	* Receive notification of a warning.
@@ -59,7 +59,7 @@ extern class DefaultErrorHandler implements org.xml.sax.ErrorHandler implements 
 	* @throws SAXException Any SAX exception, possibly
 	*            wrapping another exception.
 	*/
-	@:overload public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Receive notification of a recoverable error.
@@ -82,7 +82,7 @@ extern class DefaultErrorHandler implements org.xml.sax.ErrorHandler implements 
 	* @throws SAXException Any SAX exception, possibly
 	*            wrapping another exception.
 	*/
-	@:overload public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Receive notification of a non-recoverable error.
@@ -103,7 +103,7 @@ extern class DefaultErrorHandler implements org.xml.sax.ErrorHandler implements 
 	* @throws SAXException Any SAX exception, possibly
 	*            wrapping another exception.
 	*/
-	@:overload public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Receive notification of a warning.
@@ -122,7 +122,7 @@ extern class DefaultErrorHandler implements org.xml.sax.ErrorHandler implements 
 	*            wrapping another exception.
 	* @see javax.xml.transform.TransformerException
 	*/
-	@:overload public function warning(exception : javax.xml.transform.TransformerException) : Void;
+	@:overload @:public public function warning(exception : javax.xml.transform.TransformerException) : Void;
 	
 	/**
 	* Receive notification of a recoverable error.
@@ -146,7 +146,7 @@ extern class DefaultErrorHandler implements org.xml.sax.ErrorHandler implements 
 	*            wrapping another exception.
 	* @see javax.xml.transform.TransformerException
 	*/
-	@:overload public function error(exception : javax.xml.transform.TransformerException) : Void;
+	@:overload @:public public function error(exception : javax.xml.transform.TransformerException) : Void;
 	
 	/**
 	* Receive notification of a non-recoverable error.
@@ -168,15 +168,15 @@ extern class DefaultErrorHandler implements org.xml.sax.ErrorHandler implements 
 	*            wrapping another exception.
 	* @see javax.xml.transform.TransformerException
 	*/
-	@:overload public function fatalError(exception : javax.xml.transform.TransformerException) : Void;
+	@:overload @:public public function fatalError(exception : javax.xml.transform.TransformerException) : Void;
 	
-	@:overload public static function ensureLocationSet(exception : javax.xml.transform.TransformerException) : Void;
+	@:overload @:public @:static public static function ensureLocationSet(exception : javax.xml.transform.TransformerException) : Void;
 	
-	@:overload public static function printLocation(pw : java.io.PrintStream, exception : javax.xml.transform.TransformerException) : Void;
+	@:overload @:public @:static public static function printLocation(pw : java.io.PrintStream, exception : javax.xml.transform.TransformerException) : Void;
 	
-	@:overload public static function printLocation(pw : java.io.PrintStream, exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public @:static public static function printLocation(pw : java.io.PrintStream, exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public static function printLocation(pw : java.io.PrintWriter, exception : java.lang.Throwable) : Void;
+	@:overload @:public @:static public static function printLocation(pw : java.io.PrintWriter, exception : java.lang.Throwable) : Void;
 	
 	
 }

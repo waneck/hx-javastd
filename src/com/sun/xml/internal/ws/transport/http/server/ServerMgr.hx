@@ -29,13 +29,13 @@ package com.sun.xml.internal.ws.transport.http.server;
 }
 @:native('com$sun$xml$internal$ws$transport$http$server$ServerMgr$ServerState') @:internal extern class ServerMgr_ServerState
 {
-	@:overload public function getServer() : com.sun.net.httpserver.HttpServer;
+	@:overload @:public public function getServer() : com.sun.net.httpserver.HttpServer;
 	
-	@:overload public function oneMoreContext() : Void;
+	@:overload @:public public function oneMoreContext() : Void;
 	
-	@:overload public function oneLessContext() : Void;
+	@:overload @:public public function oneLessContext() : Void;
 	
-	@:overload public function noOfContexts() : Int;
+	@:overload @:public public function noOfContexts() : Int;
 	
 	
 }

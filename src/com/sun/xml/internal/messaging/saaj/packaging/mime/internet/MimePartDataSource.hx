@@ -31,7 +31,7 @@ extern class MimePartDataSource implements javax.activation.DataSource
 	/**
 	* Constructor, that constructs a DataSource from a MimeBodyPart.
 	*/
-	@:overload public function new(part : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart) : Void;
+	@:overload @:public public function new(part : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart) : Void;
 	
 	/**
 	* Returns an input stream from this  MimeBodyPart. <p>
@@ -46,14 +46,14 @@ extern class MimePartDataSource implements javax.activation.DataSource
 	*
 	* @return  decoded input stream
 	*/
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* DataSource method to return an output stream. <p>
 	*
 	* This implementation throws the UnknownServiceException.
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Returns the content-type of this DataSource. <p>
@@ -61,14 +61,14 @@ extern class MimePartDataSource implements javax.activation.DataSource
 	* This implementation just invokes the <code>getContentType</code>
 	* method on the MimeBodyPart.
 	*/
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
 	/**
 	* DataSource method to return a name.  <p>
 	*
 	* This implementation just returns an empty string.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

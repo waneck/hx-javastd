@@ -36,13 +36,13 @@ package com.sun.tools.corba.se.idl;
 //// NOTES:
 extern class StringEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.StringEntry) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.StringEntry) : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/** Invoke the string type generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -50,20 +50,20 @@ extern class StringEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload @:public override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the primitive type generator.
 	@returns an object which implements the PrimitiveGen interface.
 	@see PrimitiveGen */
-	@:overload override public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload @:public override public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	/** The constant expression defining the maximum size of the string.
 	If it is null, then the string is unbounded. */
-	@:overload public function maxSize(expr : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
+	@:overload @:public public function maxSize(expr : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
 	
 	/** The constant expression defining the maximum size of the string.
 	If it is null, then the string is unbounded. */
-	@:overload public function maxSize() : com.sun.tools.corba.se.idl.constExpr.Expression;
+	@:overload @:public public function maxSize() : com.sun.tools.corba.se.idl.constExpr.Expression;
 	
 	
 }

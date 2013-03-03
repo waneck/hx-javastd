@@ -32,7 +32,7 @@ extern interface DocPrintJob
 	* @return  <code>PrintService</code> object.
 	*
 	*/
-	@:overload public function getPrintService() : javax.print.PrintService;
+	@:overload @:public public function getPrintService() : javax.print.PrintService;
 	
 	/**
 	* Obtains this Print Job's set of printing attributes.
@@ -48,7 +48,7 @@ extern interface DocPrintJob
 	* The returned value may be an empty set but should not be null.
 	* @return the print job attributes
 	*/
-	@:overload public function getAttributes() : javax.print.attribute.PrintJobAttributeSet;
+	@:overload @:public public function getAttributes() : javax.print.attribute.PrintJobAttributeSet;
 	
 	/**
 	* Registers a listener for event occurring during this print job.
@@ -60,7 +60,7 @@ extern interface DocPrintJob
 	* @param listener  The object implementing the listener interface
 	*
 	*/
-	@:overload public function addPrintJobListener(listener : javax.print.event.PrintJobListener) : Void;
+	@:overload @:public public function addPrintJobListener(listener : javax.print.event.PrintJobListener) : Void;
 	
 	/**
 	* Removes a listener from this print job.
@@ -73,7 +73,7 @@ extern interface DocPrintJob
 	*
 	* @param listener  The object implementing the listener interface
 	*/
-	@:overload public function removePrintJobListener(listener : javax.print.event.PrintJobListener) : Void;
+	@:overload @:public public function removePrintJobListener(listener : javax.print.event.PrintJobListener) : Void;
 	
 	/**
 	* Registers a listener for changes in the specified attributes.
@@ -102,7 +102,7 @@ extern interface DocPrintJob
 	* @param attributes The attributes to listen on, or null to mean
 	* all attributes that can change, as determined by the job.
 	*/
-	@:overload public function addPrintJobAttributeListener(listener : javax.print.event.PrintJobAttributeListener, attributes : javax.print.attribute.PrintJobAttributeSet) : Void;
+	@:overload @:public public function addPrintJobAttributeListener(listener : javax.print.event.PrintJobAttributeListener, attributes : javax.print.attribute.PrintJobAttributeSet) : Void;
 	
 	/**
 	* Removes an attribute listener from this print job.
@@ -117,7 +117,7 @@ extern interface DocPrintJob
 	* @param listener  The object implementing the listener interface
 	*
 	*/
-	@:overload public function removePrintJobAttributeListener(listener : javax.print.event.PrintJobAttributeListener) : Void;
+	@:overload @:public public function removePrintJobAttributeListener(listener : javax.print.event.PrintJobAttributeListener) : Void;
 	
 	/**
 	* Prints a document with the specified job attributes.
@@ -151,7 +151,7 @@ extern interface DocPrintJob
 	*  If one or more of the attributes are not valid for this print job.
 	* </ul>
 	*/
-	@:overload public function print(doc : javax.print.Doc, attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
+	@:overload @:public public function print(doc : javax.print.Doc, attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
 	
 	
 }

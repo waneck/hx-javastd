@@ -34,43 +34,43 @@ package com.sun.tools.javac.file;
 */
 extern class JavacFileManager extends com.sun.tools.javac.util.BaseFileManager implements javax.tools.StandardJavaFileManager
 {
-	@:overload public static function toArray(buffer : java.nio.CharBuffer) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public @:static public static function toArray(buffer : java.nio.CharBuffer) : java.NativeArray<java.StdTypes.Char16>;
 	
-	private var mmappedIO : Bool;
+	@:protected private var mmappedIO : Bool;
 	
-	private var ignoreSymbolFile : Bool;
+	@:protected private var ignoreSymbolFile : Bool;
 	
-	private var sortFiles : com.sun.tools.javac.file.JavacFileManager.JavacFileManager_SortFiles;
+	@:protected private var sortFiles : com.sun.tools.javac.file.JavacFileManager.JavacFileManager_SortFiles;
 	
 	/**
 	* Register a Context.Factory to create a JavacFileManager.
 	*/
-	@:overload public static function preRegister(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:public @:static public static function preRegister(context : com.sun.tools.javac.util.Context) : Void;
 	
 	/**
 	* Create a JavacFileManager using a given context, optionally registering
 	* it as the JavaFileManager for that context.
 	*/
-	@:overload public function new(context : com.sun.tools.javac.util.Context, register : Bool, charset : java.nio.charset.Charset) : Void;
+	@:overload @:public public function new(context : com.sun.tools.javac.util.Context, register : Bool, charset : java.nio.charset.Charset) : Void;
 	
 	/**
 	* Set the context for JavacFileManager.
 	*/
-	@:overload override public function setContext(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:public override public function setContext(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload override public function isDefaultBootClassPath() : Bool;
+	@:overload @:public override public function isDefaultBootClassPath() : Bool;
 	
-	@:overload public function getFileForInput(name : String) : javax.tools.JavaFileObject;
+	@:overload @:public public function getFileForInput(name : String) : javax.tools.JavaFileObject;
 	
-	@:overload public function getRegularFile(file : java.io.File) : javax.tools.JavaFileObject;
+	@:overload @:public public function getRegularFile(file : java.io.File) : javax.tools.JavaFileObject;
 	
-	@:overload public function getFileForOutput(classname : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind, sibling : javax.tools.JavaFileObject) : javax.tools.JavaFileObject;
+	@:overload @:public public function getFileForOutput(classname : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind, sibling : javax.tools.JavaFileObject) : javax.tools.JavaFileObject;
 	
-	@:overload public function getJavaFileObjectsFromStrings(names : java.lang.Iterable<String>) : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload @:public public function getJavaFileObjectsFromStrings(names : java.lang.Iterable<String>) : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
-	@:overload public function getJavaFileObjects(names : java.NativeArray<String>) : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload @:public public function getJavaFileObjects(names : java.NativeArray<String>) : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
-	@:overload public static function testName(name : String, isValidPackageName : Bool, isValidClassName : Bool) : Void;
+	@:overload @:public @:static public static function testName(name : String, isValidPackageName : Bool, isValidClassName : Bool) : Void;
 	
 	/*
 	* This method looks for a ZipFormatException and takes appropriate
@@ -78,42 +78,42 @@ extern class JavacFileManager extends com.sun.tools.javac.util.BaseFileManager i
 	* fail over to the platform zip, and allow it to deal with a potentially
 	* non compliant zip file.
 	*/
-	@:overload private function openArchive(zipFilename : java.io.File) : com.sun.tools.javac.file.JavacFileManager.JavacFileManager_Archive;
+	@:overload @:protected private function openArchive(zipFilename : java.io.File) : com.sun.tools.javac.file.JavacFileManager.JavacFileManager_Archive;
 	
 	/** Flush any output resources.
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* Close the JavaFileManager, releasing resources.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function getClassLoader(location : javax.tools.JavaFileManager.JavaFileManager_Location) : java.lang.ClassLoader;
+	@:overload @:public public function getClassLoader(location : javax.tools.JavaFileManager.JavaFileManager_Location) : java.lang.ClassLoader;
 	
-	@:overload public function list(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, kinds : java.util.Set<javax.tools.JavaFileObject.JavaFileObject_Kind>, recurse : Bool) : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload @:public public function list(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, kinds : java.util.Set<javax.tools.JavaFileObject.JavaFileObject_Kind>, recurse : Bool) : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
-	@:overload public function inferBinaryName(location : javax.tools.JavaFileManager.JavaFileManager_Location, file : javax.tools.JavaFileObject) : String;
+	@:overload @:public public function inferBinaryName(location : javax.tools.JavaFileManager.JavaFileManager_Location, file : javax.tools.JavaFileObject) : String;
 	
-	@:overload public function isSameFile(a : javax.tools.FileObject, b : javax.tools.FileObject) : Bool;
+	@:overload @:public public function isSameFile(a : javax.tools.FileObject, b : javax.tools.FileObject) : Bool;
 	
-	@:overload public function hasLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location) : Bool;
+	@:overload @:public public function hasLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location) : Bool;
 	
-	@:overload public function getJavaFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : javax.tools.JavaFileObject;
+	@:overload @:public public function getJavaFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : javax.tools.JavaFileObject;
 	
-	@:overload public function getFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String) : javax.tools.FileObject;
+	@:overload @:public public function getFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String) : javax.tools.FileObject;
 	
-	@:overload public function getJavaFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind, sibling : javax.tools.FileObject) : javax.tools.JavaFileObject;
+	@:overload @:public public function getJavaFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind, sibling : javax.tools.FileObject) : javax.tools.JavaFileObject;
 	
-	@:overload public function getFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String, sibling : javax.tools.FileObject) : javax.tools.FileObject;
+	@:overload @:public public function getFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String, sibling : javax.tools.FileObject) : javax.tools.FileObject;
 	
-	@:overload public function getJavaFileObjectsFromFiles(files : java.lang.Iterable<java.io.File>) : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload @:public public function getJavaFileObjectsFromFiles(files : java.lang.Iterable<java.io.File>) : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
-	@:overload public function getJavaFileObjects(files : java.NativeArray<java.io.File>) : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload @:public public function getJavaFileObjects(files : java.NativeArray<java.io.File>) : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
-	@:overload public function setLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location, path : java.lang.Iterable<java.io.File>) : Void;
+	@:overload @:public public function setLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location, path : java.lang.Iterable<java.io.File>) : Void;
 	
-	@:overload public function getLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location) : java.lang.Iterable<java.io.File>;
+	@:overload @:public public function getLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location) : java.lang.Iterable<java.io.File>;
 	
 	/**
 	* Enforces the specification of a "relative" URI as used in
@@ -122,9 +122,9 @@ extern class JavacFileManager extends com.sun.tools.javac.util.BaseFileManager i
 	* that method, do not make any changes without consulting the
 	* specification.
 	*/
-	@:overload private static function isRelativeUri(uri : java.net.URI) : Bool;
+	@:overload @:protected @:static private static function isRelativeUri(uri : java.net.URI) : Bool;
 	
-	@:overload private static function isRelativeUri(u : String) : Bool;
+	@:overload @:protected @:static private static function isRelativeUri(u : String) : Bool;
 	
 	/**
 	* Converts a relative file name to a relative URI.  This is
@@ -137,7 +137,7 @@ extern class JavacFileManager extends com.sun.tools.javac.util.BaseFileManager i
 	* relative according to the definition given in {@link
 	* javax.tools.JavaFileManager#getFileForInput}
 	*/
-	@:overload public static function getRelativeName(file : java.io.File) : String;
+	@:overload @:public @:static public static function getRelativeName(file : java.io.File) : String;
 	
 	/**
 	* Get a detail message from an IOException.
@@ -148,7 +148,7 @@ extern class JavacFileManager extends com.sun.tools.javac.util.BaseFileManager i
 	* @param e an IOException
 	* @return a string to include in a compiler diagnostic
 	*/
-	@:overload public static function getMessage(e : java.io.IOException) : String;
+	@:overload @:public @:static public static function getMessage(e : java.io.IOException) : String;
 	
 	
 }
@@ -179,19 +179,19 @@ extern class JavacFileManager extends com.sun.tools.javac.util.BaseFileManager i
 }
 @:native('com$sun$tools$javac$file$JavacFileManager$MissingArchive') extern class JavacFileManager_MissingArchive implements com.sun.tools.javac.file.JavacFileManager.JavacFileManager_Archive
 {
-	@:overload public function new(name : java.io.File) : Void;
+	@:overload @:public public function new(name : java.io.File) : Void;
 	
-	@:overload public function contains(name : com.sun.tools.javac.file.RelativePath) : Bool;
+	@:overload @:public public function contains(name : com.sun.tools.javac.file.RelativePath) : Bool;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function getFileObject(subdirectory : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory, file : String) : javax.tools.JavaFileObject;
+	@:overload @:public public function getFileObject(subdirectory : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory, file : String) : javax.tools.JavaFileObject;
 	
-	@:overload public function getFiles(subdirectory : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory) : com.sun.tools.javac.util.List<String>;
+	@:overload @:public public function getFiles(subdirectory : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory) : com.sun.tools.javac.util.List<String>;
 	
-	@:overload public function getSubdirectories() : java.util.Set<com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory>;
+	@:overload @:public public function getSubdirectories() : java.util.Set<com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

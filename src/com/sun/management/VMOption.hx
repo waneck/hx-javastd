@@ -36,14 +36,14 @@ extern class VMOption
 	*
 	* @throws NullPointerException if the name or value is <tt>null</tt>
 	*/
-	@:overload public function new(name : String, value : String, writeable : Bool, origin : com.sun.management.VMOption.VMOption_Origin) : Void;
+	@:overload @:public public function new(name : String, value : String, writeable : Bool, origin : com.sun.management.VMOption.VMOption_Origin) : Void;
 	
 	/**
 	* Returns the name of this VM option.
 	*
 	* @return the name of this VM option.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the value of this VM option at the time when
@@ -52,7 +52,7 @@ extern class VMOption
 	* @return the value of the VM option at the time when
 	*         this <tt>VMOption</tt> was created.
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	/**
 	* Returns the origin of the value of this VM option. That is,
@@ -60,7 +60,7 @@ extern class VMOption
 	*
 	* @return where the value of this VM option came from.
 	*/
-	@:overload public function getOrigin() : com.sun.management.VMOption.VMOption_Origin;
+	@:overload @:public public function getOrigin() : com.sun.management.VMOption.VMOption_Origin;
 	
 	/**
 	* Tests if this VM option is writeable.  If this VM option is writeable,
@@ -70,9 +70,9 @@ extern class VMOption
 	* @return <tt>true</tt> if this VM option is writeable; <tt>false</tt>
 	* otherwise.
 	*/
-	@:overload public function isWriteable() : Bool;
+	@:overload @:public public function isWriteable() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a <tt>VMOption</tt> object represented by the
@@ -114,7 +114,7 @@ extern class VMOption
 	*         if <tt>cd</tt> is not <tt>null</tt>;
 	*         <tt>null</tt> otherwise.
 	*/
-	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : com.sun.management.VMOption;
+	@:overload @:public @:static public static function from(cd : javax.management.openmbean.CompositeData) : com.sun.management.VMOption;
 	
 	
 }

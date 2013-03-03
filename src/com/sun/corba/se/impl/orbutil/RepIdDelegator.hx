@@ -31,57 +31,57 @@ extern class RepIdDelegator implements com.sun.corba.se.impl.orbutil.RepositoryI
 	* overcome the fact that many of RepositoryId's methods
 	* are static.
 	*/
-	@:overload public function createForAnyType(type : Class<Dynamic>) : String;
+	@:overload @:public public function createForAnyType(type : Class<Dynamic>) : String;
 	
-	@:overload public function createForJavaType(ser : java.io.Serializable) : String;
+	@:overload @:public public function createForJavaType(ser : java.io.Serializable) : String;
 	
-	@:overload public function createForJavaType(clz : Class<Dynamic>) : String;
+	@:overload @:public public function createForJavaType(clz : Class<Dynamic>) : String;
 	
-	@:overload public function createSequenceRepID(ser : Dynamic) : String;
+	@:overload @:public public function createSequenceRepID(ser : Dynamic) : String;
 	
-	@:overload public function createSequenceRepID(clazz : Class<Dynamic>) : String;
+	@:overload @:public public function createSequenceRepID(clazz : Class<Dynamic>) : String;
 	
-	@:overload public function getFromString(repIdString : String) : com.sun.corba.se.impl.orbutil.RepositoryIdInterface;
+	@:overload @:public public function getFromString(repIdString : String) : com.sun.corba.se.impl.orbutil.RepositoryIdInterface;
 	
-	@:overload public function isChunkedEncoding(valueTag : Int) : Bool;
+	@:overload @:public public function isChunkedEncoding(valueTag : Int) : Bool;
 	
-	@:overload public function isCodeBasePresent(valueTag : Int) : Bool;
+	@:overload @:public public function isCodeBasePresent(valueTag : Int) : Bool;
 	
-	@:overload public function getClassDescValueRepId() : String;
+	@:overload @:public public function getClassDescValueRepId() : String;
 	
-	@:overload public function getWStringValueRepId() : String;
+	@:overload @:public public function getWStringValueRepId() : String;
 	
-	@:overload public function getTypeInfo(valueTag : Int) : Int;
+	@:overload @:public public function getTypeInfo(valueTag : Int) : Int;
 	
-	@:overload public function getStandardRMIChunkedNoRepStrId() : Int;
+	@:overload @:public public function getStandardRMIChunkedNoRepStrId() : Int;
 	
-	@:overload public function getCodeBaseRMIChunkedNoRepStrId() : Int;
+	@:overload @:public public function getCodeBaseRMIChunkedNoRepStrId() : Int;
 	
-	@:overload public function getStandardRMIChunkedId() : Int;
+	@:overload @:public public function getStandardRMIChunkedId() : Int;
 	
-	@:overload public function getCodeBaseRMIChunkedId() : Int;
+	@:overload @:public public function getCodeBaseRMIChunkedId() : Int;
 	
-	@:overload public function getStandardRMIUnchunkedId() : Int;
+	@:overload @:public public function getStandardRMIUnchunkedId() : Int;
 	
-	@:overload public function getCodeBaseRMIUnchunkedId() : Int;
+	@:overload @:public public function getCodeBaseRMIUnchunkedId() : Int;
 	
-	@:overload public function getStandardRMIUnchunkedNoRepStrId() : Int;
+	@:overload @:public public function getStandardRMIUnchunkedNoRepStrId() : Int;
 	
-	@:overload public function getCodeBaseRMIUnchunkedNoRepStrId() : Int;
+	@:overload @:public public function getCodeBaseRMIUnchunkedNoRepStrId() : Int;
 	
-	@:overload public function getClassFromType() : Class<Dynamic>;
+	@:overload @:public public function getClassFromType() : Class<Dynamic>;
 	
-	@:overload public function getClassFromType(codebaseURL : String) : Class<Dynamic>;
+	@:overload @:public public function getClassFromType(codebaseURL : String) : Class<Dynamic>;
 	
-	@:overload public function getClassFromType(expectedType : Class<Dynamic>, codebaseURL : String) : Class<Dynamic>;
+	@:overload @:public public function getClassFromType(expectedType : Class<Dynamic>, codebaseURL : String) : Class<Dynamic>;
 	
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

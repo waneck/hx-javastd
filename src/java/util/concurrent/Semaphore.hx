@@ -161,7 +161,7 @@ package java.util.concurrent;
 	*        This value may be negative, in which case releases
 	*        must occur before any acquires will be granted.
 	*/
-	@:overload public function new(permits : Int) : Void;
+	@:overload @:public public function new(permits : Int) : Void;
 	
 	/**
 	* Creates a {@code Semaphore} with the given number of
@@ -174,7 +174,7 @@ package java.util.concurrent;
 	*        first-in first-out granting of permits under contention,
 	*        else {@code false}
 	*/
-	@:overload public function new(permits : Int, fair : Bool) : Void;
+	@:overload @:public public function new(permits : Int, fair : Bool) : Void;
 	
 	/**
 	* Acquires a permit from this semaphore, blocking until one is
@@ -204,7 +204,7 @@ package java.util.concurrent;
 	*
 	* @throws InterruptedException if the current thread is interrupted
 	*/
-	@:overload public function acquire() : Void;
+	@:overload @:public public function acquire() : Void;
 	
 	/**
 	* Acquires a permit from this semaphore, blocking until one is
@@ -225,7 +225,7 @@ package java.util.concurrent;
 	* occurred.  When the thread does return from this method its interrupt
 	* status will be set.
 	*/
-	@:overload public function acquireUninterruptibly() : Void;
+	@:overload @:public public function acquireUninterruptibly() : Void;
 	
 	/**
 	* Acquires a permit from this semaphore, only if one is available at the
@@ -251,7 +251,7 @@ package java.util.concurrent;
 	* @return {@code true} if a permit was acquired and {@code false}
 	*         otherwise
 	*/
-	@:overload public function tryAcquire() : Bool;
+	@:overload @:public public function tryAcquire() : Bool;
 	
 	/**
 	* Acquires a permit from this semaphore, if one becomes available
@@ -294,7 +294,7 @@ package java.util.concurrent;
 	*         if the waiting time elapsed before a permit was acquired
 	* @throws InterruptedException if the current thread is interrupted
 	*/
-	@:overload public function tryAcquire(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function tryAcquire(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Releases a permit, returning it to the semaphore.
@@ -309,7 +309,7 @@ package java.util.concurrent;
 	* Correct usage of a semaphore is established by programming convention
 	* in the application.
 	*/
-	@:overload public function release() : Void;
+	@:overload @:public public function release() : Void;
 	
 	/**
 	* Acquires the given number of permits from this semaphore,
@@ -347,7 +347,7 @@ package java.util.concurrent;
 	* @throws InterruptedException if the current thread is interrupted
 	* @throws IllegalArgumentException if {@code permits} is negative
 	*/
-	@:overload public function acquire(permits : Int) : Void;
+	@:overload @:public public function acquire(permits : Int) : Void;
 	
 	/**
 	* Acquires the given number of permits from this semaphore,
@@ -372,7 +372,7 @@ package java.util.concurrent;
 	* @throws IllegalArgumentException if {@code permits} is negative
 	*
 	*/
-	@:overload public function acquireUninterruptibly(permits : Int) : Void;
+	@:overload @:public public function acquireUninterruptibly(permits : Int) : Void;
 	
 	/**
 	* Acquires the given number of permits from this semaphore, only
@@ -401,7 +401,7 @@ package java.util.concurrent;
 	*         {@code false} otherwise
 	* @throws IllegalArgumentException if {@code permits} is negative
 	*/
-	@:overload public function tryAcquire(permits : Int) : Bool;
+	@:overload @:public public function tryAcquire(permits : Int) : Bool;
 	
 	/**
 	* Acquires the given number of permits from this semaphore, if all
@@ -453,7 +453,7 @@ package java.util.concurrent;
 	* @throws InterruptedException if the current thread is interrupted
 	* @throws IllegalArgumentException if {@code permits} is negative
 	*/
-	@:overload public function tryAcquire(permits : Int, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function tryAcquire(permits : Int, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Releases the given number of permits, returning them to the semaphore.
@@ -477,7 +477,7 @@ package java.util.concurrent;
 	* @param permits the number of permits to release
 	* @throws IllegalArgumentException if {@code permits} is negative
 	*/
-	@:overload public function release(permits : Int) : Void;
+	@:overload @:public public function release(permits : Int) : Void;
 	
 	/**
 	* Returns the current number of permits available in this semaphore.
@@ -486,14 +486,14 @@ package java.util.concurrent;
 	*
 	* @return the number of permits available in this semaphore
 	*/
-	@:overload public function availablePermits() : Int;
+	@:overload @:public public function availablePermits() : Int;
 	
 	/**
 	* Acquires and returns all permits that are immediately available.
 	*
 	* @return the number of permits acquired
 	*/
-	@:overload public function drainPermits() : Int;
+	@:overload @:public public function drainPermits() : Int;
 	
 	/**
 	* Shrinks the number of available permits by the indicated
@@ -505,14 +505,14 @@ package java.util.concurrent;
 	* @param reduction the number of permits to remove
 	* @throws IllegalArgumentException if {@code reduction} is negative
 	*/
-	@:overload private function reducePermits(reduction : Int) : Void;
+	@:overload @:protected private function reducePermits(reduction : Int) : Void;
 	
 	/**
 	* Returns {@code true} if this semaphore has fairness set true.
 	*
 	* @return {@code true} if this semaphore has fairness set true
 	*/
-	@:overload public function isFair() : Bool;
+	@:overload @:public public function isFair() : Bool;
 	
 	/**
 	* Queries whether any threads are waiting to acquire. Note that
@@ -524,7 +524,7 @@ package java.util.concurrent;
 	* @return {@code true} if there may be other threads waiting to
 	*         acquire the lock
 	*/
-	@:overload @:final public function hasQueuedThreads() : Bool;
+	@:overload @:public @:final public function hasQueuedThreads() : Bool;
 	
 	/**
 	* Returns an estimate of the number of threads waiting to acquire.
@@ -535,7 +535,7 @@ package java.util.concurrent;
 	*
 	* @return the estimated number of threads waiting for this lock
 	*/
-	@:overload @:final public function getQueueLength() : Int;
+	@:overload @:public @:final public function getQueueLength() : Int;
 	
 	/**
 	* Returns a collection containing threads that may be waiting to acquire.
@@ -547,7 +547,7 @@ package java.util.concurrent;
 	*
 	* @return the collection of threads
 	*/
-	@:overload private function getQueuedThreads() : java.util.Collection<java.lang.Thread>;
+	@:overload @:protected private function getQueuedThreads() : java.util.Collection<java.lang.Thread>;
 	
 	/**
 	* Returns a string identifying this semaphore, as well as its state.
@@ -556,7 +556,7 @@ package java.util.concurrent;
 	*
 	* @return a string identifying this semaphore, as well as its state
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -567,7 +567,7 @@ package java.util.concurrent;
 */
 @:native('java$util$concurrent$Semaphore$Sync') @:internal extern class Semaphore_Sync extends java.util.concurrent.locks.AbstractQueuedSynchronizer
 {
-	@:overload @:final override private function tryReleaseShared(releases : Int) : Bool;
+	@:overload @:protected @:final override private function tryReleaseShared(releases : Int) : Bool;
 	
 	
 }
@@ -576,7 +576,7 @@ package java.util.concurrent;
 */
 @:native('java$util$concurrent$Semaphore$NonfairSync') @:internal extern class Semaphore_NonfairSync extends java.util.concurrent.Semaphore.Semaphore_Sync
 {
-	@:overload override private function tryAcquireShared(acquires : Int) : Int;
+	@:overload @:protected override private function tryAcquireShared(acquires : Int) : Int;
 	
 	
 }
@@ -585,7 +585,7 @@ package java.util.concurrent;
 */
 @:native('java$util$concurrent$Semaphore$FairSync') @:internal extern class Semaphore_FairSync extends java.util.concurrent.Semaphore.Semaphore_Sync
 {
-	@:overload override private function tryAcquireShared(acquires : Int) : Int;
+	@:overload @:protected override private function tryAcquireShared(acquires : Int) : Int;
 	
 	
 }

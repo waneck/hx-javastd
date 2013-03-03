@@ -38,29 +38,29 @@ extern class ORB extends org.omg.CORBA.ORB
 	/**
 	*
 	*/
-	@:overload public function register_value_factory(id : String, factory : org.omg.CORBA.portable.ValueFactory) : org.omg.CORBA.portable.ValueFactory;
+	@:overload @:public public function register_value_factory(id : String, factory : org.omg.CORBA.portable.ValueFactory) : org.omg.CORBA.portable.ValueFactory;
 	
 	/**
 	*
 	*/
-	@:overload public function unregister_value_factory(id : String) : Void;
+	@:overload @:public public function unregister_value_factory(id : String) : Void;
 	
 	/**
 	*
 	*/
-	@:overload public function lookup_value_factory(id : String) : org.omg.CORBA.portable.ValueFactory;
+	@:overload @:public public function lookup_value_factory(id : String) : org.omg.CORBA.portable.ValueFactory;
 	
 	/**
 	* @see <a href="package-summary.html#unimpl"><code>CORBA_2_3</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function get_value_def(repid : String) : org.omg.CORBA.Object;
+	@:overload @:public public function get_value_def(repid : String) : org.omg.CORBA.Object;
 	
 	/**
 	* @see <a href="package-summary.html#unimpl"><code>CORBA_2_3</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload public function set_delegate(wrapper : Dynamic) : Void;
+	@:overload @:public public function set_delegate(wrapper : Dynamic) : Void;
 	
 	
 }

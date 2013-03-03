@@ -44,59 +44,59 @@ extern class SJIS_0213 extends java.nio.charset.Charset
 	*  (5)"Windows-only" special mapping entries
 	*     are handled by MS932_0213.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	
 }
 @:native('sun$nio$cs$ext$SJIS_0213$Decoder') extern class SJIS_0213_Decoder extends java.nio.charset.CharsetDecoder
 {
-	private static var UNMAPPABLE(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var UNMAPPABLE(default, null) : java.StdTypes.Char16;
 	
-	@:overload private function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload private function decodeSingle(b : Int) : java.StdTypes.Char16;
+	@:overload @:protected private function decodeSingle(b : Int) : java.StdTypes.Char16;
 	
-	@:overload private function decodeDouble(b1 : Int, b2 : Int) : java.StdTypes.Char16;
+	@:overload @:protected private function decodeDouble(b1 : Int, b2 : Int) : java.StdTypes.Char16;
 	
-	@:overload private function decodeDoubleEx(b1 : Int, b2 : Int) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:protected private function decodeDoubleEx(b1 : Int, b2 : Int) : java.NativeArray<java.StdTypes.Char16>;
 	
 	
 }
 @:native('sun$nio$cs$ext$SJIS_0213$Encoder') extern class SJIS_0213_Encoder extends java.nio.charset.CharsetEncoder
 {
-	private static var UNMAPPABLE(default, null) : Int;
+	@:protected @:static @:final private static var UNMAPPABLE(default, null) : Int;
 	
-	private static var MAX_SINGLEBYTE(default, null) : Int;
+	@:protected @:static @:final private static var MAX_SINGLEBYTE(default, null) : Int;
 	
-	@:overload private function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override public function canEncode(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canEncode(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload private function encodeChar(ch : java.StdTypes.Char16) : Int;
+	@:overload @:protected private function encodeChar(ch : java.StdTypes.Char16) : Int;
 	
-	@:overload private function encodeSurrogate(hi : java.StdTypes.Char16, lo : java.StdTypes.Char16) : Int;
+	@:overload @:protected private function encodeSurrogate(hi : java.StdTypes.Char16, lo : java.StdTypes.Char16) : Int;
 	
-	@:overload private function encodeComposite(base : java.StdTypes.Char16, cc : java.StdTypes.Char16) : Int;
+	@:overload @:protected private function encodeComposite(base : java.StdTypes.Char16, cc : java.StdTypes.Char16) : Int;
 	
-	@:overload private function isCompositeBase(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:protected private function isCompositeBase(ch : java.StdTypes.Char16) : Bool;
 	
-	@:overload private function encodeArrayLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected private function encodeArrayLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload private function encodeBufferLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected private function encodeBufferLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function implFlush(dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function implFlush(dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function implReset() : Void;
+	@:overload @:protected override private function implReset() : Void;
 	
 	
 }

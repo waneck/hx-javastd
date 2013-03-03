@@ -25,28 +25,28 @@ package sun.awt;
 */
 extern class FontDescriptor implements java.lang.Cloneable
 {
-	public var encoder : java.nio.charset.CharsetEncoder;
+	@:public public var encoder : java.nio.charset.CharsetEncoder;
 	
-	@:overload public function new(nativeName : String, encoder : java.nio.charset.CharsetEncoder, exclusionRanges : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(nativeName : String, encoder : java.nio.charset.CharsetEncoder, exclusionRanges : java.NativeArray<Int>) : Void;
 	
-	@:overload public function getNativeName() : String;
+	@:overload @:public public function getNativeName() : String;
 	
-	@:overload public function getFontCharsetEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public public function getFontCharsetEncoder() : java.nio.charset.CharsetEncoder;
 	
-	@:overload public function getFontCharsetName() : String;
+	@:overload @:public public function getFontCharsetName() : String;
 	
-	@:overload public function getExclusionRanges() : java.NativeArray<Int>;
+	@:overload @:public public function getExclusionRanges() : java.NativeArray<Int>;
 	
 	/**
 	* Return true if the character is exclusion character.
 	*/
-	@:overload public function isExcluded(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function isExcluded(ch : java.StdTypes.Char16) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	public var unicodeEncoder : java.nio.charset.CharsetEncoder;
+	@:public public var unicodeEncoder : java.nio.charset.CharsetEncoder;
 	
-	@:overload public function useUnicode() : Bool;
+	@:overload @:public public function useUnicode() : Bool;
 	
 	
 }

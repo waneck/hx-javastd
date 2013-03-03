@@ -66,7 +66,7 @@ package javax.naming;
 	* @param src      The non-null contents of the address as a byte array.
 	*                 The contents of src is copied into the new BinaryRefAddr.
 	*/
-	@:overload public function new(addrType : String, src : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(addrType : String, src : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs a new instance of BinaryRefAddr using its address type and
@@ -80,7 +80,7 @@ package javax.naming;
 	* @param count    The number of bytes to extract from src.
 	*                 0 <= count <= src.length-offset.
 	*/
-	@:overload public function new(addrType : String, src : java.NativeArray<java.StdTypes.Int8>, offset : Int, count : Int) : Void;
+	@:overload @:public public function new(addrType : String, src : java.NativeArray<java.StdTypes.Int8>, offset : Int, count : Int) : Void;
 	
 	/**
 	* Retrieves the contents of this address as an Object.
@@ -91,7 +91,7 @@ package javax.naming;
 	*
 	* @return The non-null buffer containing this address's contents.
 	*/
-	@:overload override public function getContent() : Dynamic;
+	@:overload @:public override public function getContent() : Dynamic;
 	
 	/**
 	* Determines whether obj is equal to this address.  It is equal if
@@ -100,7 +100,7 @@ package javax.naming;
 	* @param obj      The possibly null object to check.
 	* @return true if the object is equal; false otherwise.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Computes the hash code of this address using its address type and contents.
@@ -111,7 +111,7 @@ package javax.naming;
 	*
 	* @return The hash code of this address as an int.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Generates the string representation of this address.
@@ -122,7 +122,7 @@ package javax.naming;
 	* meant to be interpreted programmatically.
 	* @return The non-null string representation of this address.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

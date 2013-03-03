@@ -30,33 +30,33 @@ extern class SAXResult implements javax.xml.transform.Result
 	* returns true when passed this value as an argument,
 	* the Transformer supports Result output of this type.
 	*/
-	public static var FEATURE(default, null) : String;
+	@:public @:static @:final public static var FEATURE(default, null) : String;
 	
 	/**
 	* Zero-argument default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a SAXResult that targets a SAX2 {@link org.xml.sax.ContentHandler}.
 	*
 	* @param handler Must be a non-null ContentHandler reference.
 	*/
-	@:overload public function new(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function new(handler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Set the target to be a SAX2 {@link org.xml.sax.ContentHandler}.
 	*
 	* @param handler Must be a non-null ContentHandler reference.
 	*/
-	@:overload public function setHandler(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setHandler(handler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Get the {@link org.xml.sax.ContentHandler} that is the Result.
 	*
 	* @return The ContentHandler that is to be transformation output.
 	*/
-	@:overload public function getHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function getHandler() : org.xml.sax.ContentHandler;
 	
 	/**
 	* Set the SAX2 {@link org.xml.sax.ext.LexicalHandler} for the output.
@@ -69,14 +69,14 @@ extern class SAXResult implements javax.xml.transform.Result
 	* @param handler A non-null <code>LexicalHandler</code> for
 	* handling lexical parse events.
 	*/
-	@:overload public function setLexicalHandler(handler : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public public function setLexicalHandler(handler : org.xml.sax.ext.LexicalHandler) : Void;
 	
 	/**
 	* Get a SAX2 {@link org.xml.sax.ext.LexicalHandler} for the output.
 	*
 	* @return A <code>LexicalHandler</code>, or null.
 	*/
-	@:overload public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
+	@:overload @:public public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
 	
 	/**
 	* Method setSystemId Set the systemID that may be used in association
@@ -84,7 +84,7 @@ extern class SAXResult implements javax.xml.transform.Result
 	*
 	* @param systemId The system identifier as a URI string.
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	/**
 	* Get the system identifier that was set with setSystemId.
@@ -92,7 +92,7 @@ extern class SAXResult implements javax.xml.transform.Result
 	* @return The system identifier that was set with setSystemId, or null
 	* if setSystemId was not called.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	
 }

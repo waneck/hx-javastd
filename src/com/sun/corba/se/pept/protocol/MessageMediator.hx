@@ -31,7 +31,7 @@ extern interface MessageMediator
 	*
 	* @return {@link com.sun.corba.se.pept.broker.Broker Broker}
 	*/
-	@:overload public function getBroker() : com.sun.corba.se.pept.broker.Broker;
+	@:overload @:public public function getBroker() : com.sun.corba.se.pept.broker.Broker;
 	
 	/**
 	* Get the
@@ -41,35 +41,35 @@ extern interface MessageMediator
 	* @return
 	* {@link com.sun.corba.se.pept.transport.ContactInfo ContactInfo}
 	*/
-	@:overload public function getContactInfo() : com.sun.corba.se.pept.transport.ContactInfo;
+	@:overload @:public public function getContactInfo() : com.sun.corba.se.pept.transport.ContactInfo;
 	
 	/**
 	* Get the
 	* {@link com.sun.corba.se.pept.transport.Connection Connection}
 	* on which this message is sent or received.
 	*/
-	@:overload public function getConnection() : com.sun.corba.se.pept.transport.Connection;
+	@:overload @:public public function getConnection() : com.sun.corba.se.pept.transport.Connection;
 	
 	/**
 	* Used to initialize message headers.
 	*
 	* Note: this should be moved to a <code>RequestDispatcher</code>.
 	*/
-	@:overload public function initializeMessage() : Void;
+	@:overload @:public public function initializeMessage() : Void;
 	
 	/**
 	* Used to send the message (or its last fragment).
 	*
 	* Note: this should be moved to a <code>RequestDispatcher</code>.
 	*/
-	@:overload public function finishSendingRequest() : Void;
+	@:overload @:public public function finishSendingRequest() : Void;
 	
 	/**
 	* Used to wait for a response for synchronous messages.
 	*
 	* @deprecated
 	*/
-	@:overload public function waitForResponse() : com.sun.corba.se.pept.encoding.InputObject;
+	@:overload @:public public function waitForResponse() : com.sun.corba.se.pept.encoding.InputObject;
 	
 	/**
 	* Used to set the
@@ -78,7 +78,7 @@ extern interface MessageMediator
 	*
 	* @param outputObject
 	*/
-	@:overload public function setOutputObject(outputObject : com.sun.corba.se.pept.encoding.OutputObject) : Void;
+	@:overload @:public public function setOutputObject(outputObject : com.sun.corba.se.pept.encoding.OutputObject) : Void;
 	
 	/**
 	* Used to get the
@@ -88,7 +88,7 @@ extern interface MessageMediator
 	* @return
 	* {@link com.sun.corba.se.pept.encoding.OutputObject OutputObject}
 	*/
-	@:overload public function getOutputObject() : com.sun.corba.se.pept.encoding.OutputObject;
+	@:overload @:public public function getOutputObject() : com.sun.corba.se.pept.encoding.OutputObject;
 	
 	/**
 	* Used to set the
@@ -97,7 +97,7 @@ extern interface MessageMediator
 	*
 	* @param inputObject
 	*/
-	@:overload public function setInputObject(inputObject : com.sun.corba.se.pept.encoding.InputObject) : Void;
+	@:overload @:public public function setInputObject(inputObject : com.sun.corba.se.pept.encoding.InputObject) : Void;
 	
 	/**
 	* Used to get the
@@ -107,7 +107,7 @@ extern interface MessageMediator
 	* @return
 	* {@link com.sun.corba.se.pept.encoding.InputObject InputObject}
 	*/
-	@:overload public function getInputObject() : com.sun.corba.se.pept.encoding.InputObject;
+	@:overload @:public public function getInputObject() : com.sun.corba.se.pept.encoding.InputObject;
 	
 	
 }

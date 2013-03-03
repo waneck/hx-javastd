@@ -29,41 +29,41 @@ extern class DefaultDesktopManager implements javax.swing.DesktopManager impleme
 	* try to determine the appropriate parent from the desktopIcon of the frame.
 	* Will remove the desktopIcon from its parent if it successfully adds the frame.
 	*/
-	@:overload public function openFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function openFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/**
 	* Removes the frame, and, if necessary, the
 	* <code>desktopIcon</code>, from its parent.
 	* @param f the <code>JInternalFrame</code> to be removed
 	*/
-	@:overload public function closeFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function closeFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/**
 	* Resizes the frame to fill its parents bounds.
 	* @param f the frame to be resized
 	*/
-	@:overload public function maximizeFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function maximizeFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/**
 	* Restores the frame back to its size and position prior
 	* to a <code>maximizeFrame</code> call.
 	* @param f the <code>JInternalFrame</code> to be restored
 	*/
-	@:overload public function minimizeFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function minimizeFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/**
 	* Removes the frame from its parent and adds its
 	* <code>desktopIcon</code> to the parent.
 	* @param f the <code>JInternalFrame</code> to be iconified
 	*/
-	@:overload public function iconifyFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function iconifyFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/**
 	* Removes the desktopIcon from its parent and adds its frame
 	* to the parent.
 	* @param f the <code>JInternalFrame</code> to be de-iconified
 	*/
-	@:overload public function deiconifyFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function deiconifyFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/** This will activate <b>f</b> moving it to the front. It will
 	* set the current active frame's (if any)
@@ -71,11 +71,11 @@ extern class DefaultDesktopManager implements javax.swing.DesktopManager impleme
 	* There can be only one active frame across all Layers.
 	* @param f the <code>JInternalFrame</code> to be activated
 	*/
-	@:overload public function activateFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function activateFrame(f : javax.swing.JInternalFrame) : Void;
 	
-	@:overload public function deactivateFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function deactivateFrame(f : javax.swing.JInternalFrame) : Void;
 	
-	@:overload public function beginDraggingFrame(f : javax.swing.JComponent) : Void;
+	@:overload @:public public function beginDraggingFrame(f : javax.swing.JComponent) : Void;
 	
 	/**
 	* Moves the visible location of the frame being dragged
@@ -83,11 +83,11 @@ extern class DefaultDesktopManager implements javax.swing.DesktopManager impleme
 	* on the dragging algorithm being used.  The actual logical location of the frame
 	* might not change until <code>endDraggingFrame</code> is called.
 	*/
-	@:overload public function dragFrame(f : javax.swing.JComponent, newX : Int, newY : Int) : Void;
+	@:overload @:public public function dragFrame(f : javax.swing.JComponent, newX : Int, newY : Int) : Void;
 	
-	@:overload public function endDraggingFrame(f : javax.swing.JComponent) : Void;
+	@:overload @:public public function endDraggingFrame(f : javax.swing.JComponent) : Void;
 	
-	@:overload public function beginResizingFrame(f : javax.swing.JComponent, direction : Int) : Void;
+	@:overload @:public public function beginResizingFrame(f : javax.swing.JComponent, direction : Int) : Void;
 	
 	/**
 	* Calls <code>setBoundsForFrame</code> with the new values.
@@ -97,27 +97,27 @@ extern class DefaultDesktopManager implements javax.swing.DesktopManager impleme
 	* @param newWidth the new width
 	* @param newHeight the new height
 	*/
-	@:overload public function resizeFrame(f : javax.swing.JComponent, newX : Int, newY : Int, newWidth : Int, newHeight : Int) : Void;
+	@:overload @:public public function resizeFrame(f : javax.swing.JComponent, newX : Int, newY : Int, newWidth : Int, newHeight : Int) : Void;
 	
-	@:overload public function endResizingFrame(f : javax.swing.JComponent) : Void;
+	@:overload @:public public function endResizingFrame(f : javax.swing.JComponent) : Void;
 	
 	/** This moves the <code>JComponent</code> and repaints the damaged areas. */
-	@:overload public function setBoundsForFrame(f : javax.swing.JComponent, newX : Int, newY : Int, newWidth : Int, newHeight : Int) : Void;
+	@:overload @:public public function setBoundsForFrame(f : javax.swing.JComponent, newX : Int, newY : Int, newWidth : Int, newHeight : Int) : Void;
 	
 	/** Convenience method to remove the desktopIcon of <b>f</b> is necessary. */
-	@:overload private function removeIconFor(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected private function removeIconFor(f : javax.swing.JInternalFrame) : Void;
 	
 	/** The iconifyFrame() code calls this to determine the proper bounds
 	* for the desktopIcon.
 	*/
-	@:overload private function getBoundsForIconOf(f : javax.swing.JInternalFrame) : java.awt.Rectangle;
+	@:overload @:protected private function getBoundsForIconOf(f : javax.swing.JInternalFrame) : java.awt.Rectangle;
 	
 	/**
 	* Stores the bounds of the component just before a maximize call.
 	* @param f the component about to be resized
 	* @param r the normal bounds to be saved away
 	*/
-	@:overload private function setPreviousBounds(f : javax.swing.JInternalFrame, r : java.awt.Rectangle) : Void;
+	@:overload @:protected private function setPreviousBounds(f : javax.swing.JInternalFrame, r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Gets the normal bounds of the component prior to the component
@@ -125,13 +125,13 @@ extern class DefaultDesktopManager implements javax.swing.DesktopManager impleme
 	* @param f the <code>JInternalFrame</code> of interest
 	* @return the normal bounds of the component
 	*/
-	@:overload private function getPreviousBounds(f : javax.swing.JInternalFrame) : java.awt.Rectangle;
+	@:overload @:protected private function getPreviousBounds(f : javax.swing.JInternalFrame) : java.awt.Rectangle;
 	
 	/**
 	* Sets that the component has been iconized and the bounds of the
 	* <code>desktopIcon</code> are valid.
 	*/
-	@:overload private function setWasIcon(f : javax.swing.JInternalFrame, value : Null<Bool>) : Void;
+	@:overload @:protected private function setWasIcon(f : javax.swing.JInternalFrame, value : Null<Bool>) : Void;
 	
 	/**
 	* Returns <code>true</code> if the component has been iconized
@@ -142,7 +142,7 @@ extern class DefaultDesktopManager implements javax.swing.DesktopManager impleme
 	* @return <code>true</code> if the component has been iconized;
 	*    otherwise returns <code>false</code>
 	*/
-	@:overload private function wasIcon(f : javax.swing.JInternalFrame) : Bool;
+	@:overload @:protected private function wasIcon(f : javax.swing.JInternalFrame) : Bool;
 	
 	
 }

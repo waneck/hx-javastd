@@ -25,19 +25,19 @@ package com.sun.codemodel.internal.writer;
 */
 extern class FileCodeWriter extends com.sun.codemodel.internal.CodeWriter
 {
-	@:overload public function new(target : java.io.File) : Void;
+	@:overload @:public public function new(target : java.io.File) : Void;
 	
-	@:overload public function new(target : java.io.File, encoding : String) : Void;
+	@:overload @:public public function new(target : java.io.File, encoding : String) : Void;
 	
-	@:overload public function new(target : java.io.File, readOnly : Bool) : Void;
+	@:overload @:public public function new(target : java.io.File, readOnly : Bool) : Void;
 	
-	@:overload public function new(target : java.io.File, readOnly : Bool, encoding : String) : Void;
+	@:overload @:public public function new(target : java.io.File, readOnly : Bool, encoding : String) : Void;
 	
-	@:overload public function openBinary(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.OutputStream;
+	@:overload @:public override public function openBinary(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.OutputStream;
 	
-	@:overload private function getFile(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.File;
+	@:overload @:protected private function getFile(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.File;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

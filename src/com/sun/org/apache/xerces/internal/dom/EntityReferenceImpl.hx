@@ -21,27 +21,27 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class EntityReferenceImpl extends com.sun.org.apache.xerces.internal.dom.ParentNode implements org.w3c.dom.EntityReference
 {
 	/** Name of Entity referenced */
-	private var name : String;
+	@:protected private var name : String;
 	
 	/** Base URI*/
-	private var baseURI : String;
+	@:protected private var baseURI : String;
 	
 	/** Factory constructor. */
-	@:overload public function new(ownerDoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, name : String) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, name : String) : Void;
 	
 	/**
 	* A short integer indicating what type of node this is. The named
 	* constants for this value are defined in the org.w3c.dom.Node interface.
 	*/
-	@:overload override public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public override public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the name of the entity referenced
 	*/
-	@:overload override public function getNodeName() : String;
+	@:overload @:public override public function getNodeName() : String;
 	
 	/** Clone node. */
-	@:overload override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Returns the absolute base URI of this node or null if the implementation
@@ -51,10 +51,10 @@ extern class EntityReferenceImpl extends com.sun.org.apache.xerces.internal.dom.
 	* @return The absolute base URI of this node or null.
 	* @since DOM Level 3
 	*/
-	@:overload override public function getBaseURI() : String;
+	@:overload @:public override public function getBaseURI() : String;
 	
 	/** NON-DOM: set base uri*/
-	@:overload public function setBaseURI(uri : String) : Void;
+	@:overload @:public public function setBaseURI(uri : String) : Void;
 	
 	/**
 	* NON-DOM: compute string representation of the entity reference.
@@ -63,7 +63,7 @@ extern class EntityReferenceImpl extends com.sun.org.apache.xerces.internal.dom.
 	*          null if any node other than EntityReference, Text is encountered
 	*          during computation
 	*/
-	@:overload private function getEntityRefValue() : String;
+	@:overload @:protected private function getEntityRefValue() : String;
 	
 	/**
 	* EntityReference's children are a reflection of those defined in the
@@ -71,14 +71,14 @@ extern class EntityReferenceImpl extends com.sun.org.apache.xerces.internal.dom.
 	* This doesn't support editing the Entity though, since this only called
 	* once for all.
 	*/
-	@:overload private function synchronizeChildren() : Void;
+	@:overload @:protected override private function synchronizeChildren() : Void;
 	
 	/**
 	* NON-DOM: sets the node and its children value.
 	* <P>
 	* Note: make sure that entity reference and its kids could be set readonly.
 	*/
-	@:overload override public function setReadOnly(readOnly : Bool, deep : Bool) : Void;
+	@:overload @:public override public function setReadOnly(readOnly : Bool, deep : Bool) : Void;
 	
 	
 }

@@ -28,62 +28,62 @@ package java.awt.datatransfer;
 	/**
 	* Default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(rawdata : String) : Void;
+	@:overload @:public public function new(rawdata : String) : Void;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Two parameter lists are considered equal if they have exactly
 	* the same set of parameter names and associated values. The
 	* order of the parameters is not considered.
 	*/
-	@:overload public function equals(thatObject : Dynamic) : Bool;
+	@:overload @:public public function equals(thatObject : Dynamic) : Bool;
 	
 	/**
 	* A routine for parsing the parameter list out of a String.
 	*/
-	@:overload private function parse(rawdata : String) : Void;
+	@:overload @:protected private function parse(rawdata : String) : Void;
 	
 	/**
 	* return the number of name-value pairs in this list.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Determine whether or not this list is empty.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Retrieve the value associated with the given name, or null if there
 	* is no current association.
 	*/
-	@:overload public function get(name : String) : String;
+	@:overload @:public public function get(name : String) : String;
 	
 	/**
 	* Set the value to be associated with the given name, replacing
 	* any previous association.
 	*/
-	@:overload public function set(name : String, value : String) : Void;
+	@:overload @:public public function set(name : String, value : String) : Void;
 	
 	/**
 	* Remove any value associated with the given name.
 	*/
-	@:overload public function remove(name : String) : Void;
+	@:overload @:public public function remove(name : String) : Void;
 	
 	/**
 	* Retrieve an enumeration of all the names in this list.
 	*/
-	@:overload public function getNames() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getNames() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* @return a clone of this object
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

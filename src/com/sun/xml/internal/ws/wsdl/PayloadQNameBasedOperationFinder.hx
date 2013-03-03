@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.wsdl;
 */
 @:internal extern class PayloadQNameBasedOperationFinder extends com.sun.xml.internal.ws.wsdl.WSDLOperationFinder
 {
-	public static var EMPTY_PAYLOAD_LOCAL(default, null) : String;
+	@:public @:static @:final public static var EMPTY_PAYLOAD_LOCAL(default, null) : String;
 	
-	public static var EMPTY_PAYLOAD_NSURI(default, null) : String;
+	@:public @:static @:final public static var EMPTY_PAYLOAD_NSURI(default, null) : String;
 	
-	public static var EMPTY_PAYLOAD(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var EMPTY_PAYLOAD(default, null) : javax.xml.namespace.QName;
 	
-	@:overload public function new(wsdlModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, seiModel : com.sun.xml.internal.ws.api.model.SEIModel) : Void;
+	@:overload @:public public function new(wsdlModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, seiModel : com.sun.xml.internal.ws.api.model.SEIModel) : Void;
 	
 	/**
 	*
@@ -41,7 +41,7 @@ package com.sun.xml.internal.ws.wsdl;
 	* @throws DispatchException if the payload itself is incorrect, this happens when the payload is not accepted by
 	*          any operation in the port.
 	*/
-	@:overload override public function getWSDLOperationQName(request : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.namespace.QName;
+	@:overload @:public override public function getWSDLOperationQName(request : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.namespace.QName;
 	
 	
 }

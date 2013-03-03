@@ -27,13 +27,13 @@ package com.sun.xml.internal.fastinfoset.algorithm;
 */
 extern class IEEE754FloatingPointEncodingAlgorithm extends com.sun.xml.internal.fastinfoset.algorithm.BuiltInEncodingAlgorithm
 {
-	public static var FLOAT_SIZE(default, null) : Int;
+	@:public @:final @:static public static var FLOAT_SIZE(default, null) : Int;
 	
-	public static var DOUBLE_SIZE(default, null) : Int;
+	@:public @:final @:static public static var DOUBLE_SIZE(default, null) : Int;
 	
-	public static var FLOAT_MAX_CHARACTER_SIZE(default, null) : Int;
+	@:public @:final @:static public static var FLOAT_MAX_CHARACTER_SIZE(default, null) : Int;
 	
-	public static var DOUBLE_MAX_CHARACTER_SIZE(default, null) : Int;
+	@:public @:final @:static public static var DOUBLE_MAX_CHARACTER_SIZE(default, null) : Int;
 	
 	
 }

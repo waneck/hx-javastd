@@ -35,7 +35,7 @@ extern class WildcardTypeImpl extends sun.reflect.generics.reflectiveObjects.Laz
 	* objects that represent the bounds of this wildcard type
 	* @return a wild card type with the requested bounds and factory
 	*/
-	@:overload public static function make(ubs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, lbs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, f : sun.reflect.generics.factory.GenericsFactory) : sun.reflect.generics.reflectiveObjects.WildcardTypeImpl;
+	@:overload @:public @:static public static function make(ubs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, lbs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, f : sun.reflect.generics.factory.GenericsFactory) : sun.reflect.generics.reflectiveObjects.WildcardTypeImpl;
 	
 	/**
 	* Returns an array of <tt>Type</tt> objects representing the  upper
@@ -58,7 +58,7 @@ extern class WildcardTypeImpl extends sun.reflect.generics.reflectiveObjects.Laz
 	*     bounds refer to a parameterized type that cannot be instantiated
 	*     for any reason
 	*/
-	@:overload public function getUpperBounds() : java.NativeArray<java.lang.reflect.Type>;
+	@:overload @:public public function getUpperBounds() : java.NativeArray<java.lang.reflect.Type>;
 	
 	/**
 	* Returns an array of <tt>Type</tt> objects representing the
@@ -82,13 +82,13 @@ extern class WildcardTypeImpl extends sun.reflect.generics.reflectiveObjects.Laz
 	*     bounds refer to a parameterized type that cannot be instantiated
 	*     for any reason
 	*/
-	@:overload public function getLowerBounds() : java.NativeArray<java.lang.reflect.Type>;
+	@:overload @:public public function getLowerBounds() : java.NativeArray<java.lang.reflect.Type>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

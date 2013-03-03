@@ -25,13 +25,13 @@ package com.sun.corba.se.spi.transport;
 */
 extern class TransportDefault
 {
-	@:overload public static function makeCorbaContactInfoListFactory(broker : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.transport.CorbaContactInfoListFactory;
+	@:overload @:public @:static public static function makeCorbaContactInfoListFactory(broker : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.transport.CorbaContactInfoListFactory;
 	
-	@:overload public static function makeClientDelegateFactory(broker : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.ClientDelegateFactory;
+	@:overload @:public @:static public static function makeClientDelegateFactory(broker : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.ClientDelegateFactory;
 	
-	@:overload public static function makeIORTransformer(broker : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.transport.IORTransformer;
+	@:overload @:public @:static public static function makeIORTransformer(broker : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.transport.IORTransformer;
 	
-	@:overload public static function makeReadTimeoutsFactory() : com.sun.corba.se.spi.transport.ReadTimeoutsFactory;
+	@:overload @:public @:static public static function makeReadTimeoutsFactory() : com.sun.corba.se.spi.transport.ReadTimeoutsFactory;
 	
 	
 }

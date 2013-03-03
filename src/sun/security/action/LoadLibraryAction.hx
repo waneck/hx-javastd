@@ -52,12 +52,12 @@ package sun.security.action;
 	*
 	* @param theLib the name of the library.
 	*/
-	@:overload public function new(theLib : String) : Void;
+	@:overload @:public public function new(theLib : String) : Void;
 	
 	/**
 	* Loads the system library whose name was specified in the constructor.
 	*/
-	@:overload public function run() : java.lang.Void;
+	@:overload @:public public function run() : java.lang.Void;
 	
 	
 }

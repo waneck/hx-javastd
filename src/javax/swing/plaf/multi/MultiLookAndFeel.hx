@@ -58,7 +58,7 @@ extern class MultiLookAndFeel extends javax.swing.LookAndFeel
 	*
 	* @return a string such as "Multiplexing Look and Feel"
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Returns a string, suitable for use by applications/services,
@@ -66,14 +66,14 @@ extern class MultiLookAndFeel extends javax.swing.LookAndFeel
 	*
 	* @return "Multiplex"
 	*/
-	@:overload public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
 	/**
 	* Returns a one-line description of this look and feel.
 	*
 	* @return a descriptive string such as "Allows multiple UI instances per component instance"
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public override public function getDescription() : String;
 	
 	/**
 	* Returns <code>false</code>;
@@ -81,7 +81,7 @@ extern class MultiLookAndFeel extends javax.swing.LookAndFeel
 	*
 	* @return <code>false</code>
 	*/
-	@:overload public function isNativeLookAndFeel() : Bool;
+	@:overload @:public override public function isNativeLookAndFeel() : Bool;
 	
 	/**
 	* Returns <code>true</code>;
@@ -89,7 +89,7 @@ extern class MultiLookAndFeel extends javax.swing.LookAndFeel
 	*
 	* @return <code>true</code>
 	*/
-	@:overload public function isSupportedLookAndFeel() : Bool;
+	@:overload @:public override public function isSupportedLookAndFeel() : Bool;
 	
 	/**
 	* Creates, initializes, and returns
@@ -104,7 +104,7 @@ extern class MultiLookAndFeel extends javax.swing.LookAndFeel
 	* @return an initialized <code>UIDefaults</code> object
 	* @see javax.swing.JComponent#getUIClassID
 	*/
-	@:overload public function getDefaults() : javax.swing.UIDefaults;
+	@:overload @:public override public function getDefaults() : javax.swing.UIDefaults;
 	
 	/**
 	* Creates the <code>ComponentUI</code> objects
@@ -144,7 +144,7 @@ extern class MultiLookAndFeel extends javax.swing.LookAndFeel
 	* @see MultiButtonUI#uis
 	* @see MultiButtonUI#createUI
 	*/
-	@:overload public static function createUIs(mui : javax.swing.plaf.ComponentUI, uis : java.util.Vector<Dynamic>, target : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUIs(mui : javax.swing.plaf.ComponentUI, uis : java.util.Vector<Dynamic>, target : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Creates an array,
@@ -161,13 +161,13 @@ extern class MultiLookAndFeel extends javax.swing.LookAndFeel
 	* @return an array equivalent to the passed-in vector
 	*
 	*/
-	@:overload private static function uisToArray(uis : java.util.Vector<Dynamic>) : java.NativeArray<javax.swing.plaf.ComponentUI>;
+	@:overload @:protected @:static private static function uisToArray(uis : java.util.Vector<Dynamic>) : java.NativeArray<javax.swing.plaf.ComponentUI>;
 	
 	
 }
 @:internal extern class MultiUIDefaults extends javax.swing.UIDefaults
 {
-	@:overload private function getUIError(msg : String) : Void;
+	@:overload @:protected override private function getUIError(msg : String) : Void;
 	
 	
 }

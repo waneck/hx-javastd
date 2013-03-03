@@ -28,7 +28,7 @@ extern class RFC2253Parser
 	* @return normalized string
 	*
 	*/
-	@:overload public static function rfc2253toXMLdsig(dn : String) : String;
+	@:overload @:public @:static public static function rfc2253toXMLdsig(dn : String) : String;
 	
 	/**
 	* Method xmldsigtoRFC2253
@@ -36,7 +36,7 @@ extern class RFC2253Parser
 	* @param dn
 	* @return normalized string
 	*/
-	@:overload public static function xmldsigtoRFC2253(dn : String) : String;
+	@:overload @:public @:static public static function xmldsigtoRFC2253(dn : String) : String;
 	
 	/**
 	* Method normalize
@@ -44,7 +44,7 @@ extern class RFC2253Parser
 	* @param dn
 	* @return normalized string
 	*/
-	@:overload public static function normalize(dn : String) : String;
+	@:overload @:public @:static public static function normalize(dn : String) : String;
 	
 	/**
 	* Method main
@@ -52,7 +52,7 @@ extern class RFC2253Parser
 	* @param args
 	* @throws Exception
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

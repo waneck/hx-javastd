@@ -25,13 +25,13 @@ package com.sun.corba.se.spi.ior;
 */
 extern class EncapsulationFactoryBase implements com.sun.corba.se.spi.ior.IdentifiableFactory
 {
-	@:overload public function getId() : Int;
+	@:overload @:public public function getId() : Int;
 	
-	@:overload public function new(id : Int) : Void;
+	@:overload @:public public function new(id : Int) : Void;
 	
-	@:overload @:final public function create(_in : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.Identifiable;
+	@:overload @:public @:final public function create(_in : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.Identifiable;
 	
-	@:overload @:abstract private function readContents(is : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.Identifiable;
+	@:overload @:protected @:abstract private function readContents(is : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.Identifiable;
 	
 	
 }

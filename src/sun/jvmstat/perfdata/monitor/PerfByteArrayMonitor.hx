@@ -36,7 +36,7 @@ extern class PerfByteArrayMonitor extends sun.jvmstat.monitor.AbstractMonitor im
 	* @param bb the buffer containing the byte array instrument data
 	* @param vectorLength the length of the vector.
 	*/
-	@:overload public function new(name : String, u : sun.jvmstat.monitor.Units, v : sun.jvmstat.monitor.Variability, supported : Bool, bb : java.nio.ByteBuffer, vectorLength : Int) : Void;
+	@:overload @:public public function new(name : String, u : sun.jvmstat.monitor.Units, v : sun.jvmstat.monitor.Variability, supported : Bool, bb : java.nio.ByteBuffer, vectorLength : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -47,7 +47,7 @@ extern class PerfByteArrayMonitor extends sun.jvmstat.monitor.AbstractMonitor im
 	*                  byte array instrument. The return type is guaranteed
 	*                  to be of type byte[].
 	*/
-	@:overload override public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
 	/**
 	* Get a copy of the elements of the byte array instrument.
@@ -55,7 +55,7 @@ extern class PerfByteArrayMonitor extends sun.jvmstat.monitor.AbstractMonitor im
 	* @return byte[] - a copy of the current value of the elements of the
 	*                  byte array instrument.
 	*/
-	@:overload public function byteArrayValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function byteArrayValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Get the current value of an element of the byte array instrument.
@@ -63,14 +63,14 @@ extern class PerfByteArrayMonitor extends sun.jvmstat.monitor.AbstractMonitor im
 	* @return byte - a copy of the current value of the element at index
 	*                <tt>index</tt> of the byte array instrument.
 	*/
-	@:overload public function byteAt(index : Int) : java.StdTypes.Int8;
+	@:overload @:public public function byteAt(index : Int) : java.StdTypes.Int8;
 	
 	/**
 	* Get the maximum length of the byte array for this byte array instrument.
 	*
 	* @return int - the maximum length of the byte array.
 	*/
-	@:overload public function getMaximumLength() : Int;
+	@:overload @:public public function getMaximumLength() : Int;
 	
 	
 }

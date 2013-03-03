@@ -29,15 +29,15 @@ extern class JarImageSource extends sun.awt.image.URLImageSource
 	* Create an image source from a Jar entry URL with the specified
 	* mime type.
 	*/
-	@:overload public function new(u : java.net.URL, type : String) : Void;
+	@:overload @:public public function new(u : java.net.URL, type : String) : Void;
 	
 	/**
 	* Create an image source from a Jar file/entry URL
 	* with the specified entry name and mime type.
 	*/
-	@:overload public function new(u : java.net.URL, name : String, type : String) : Void;
+	@:overload @:public public function new(u : java.net.URL, name : String, type : String) : Void;
 	
-	@:overload override private function getDecoder() : sun.awt.image.ImageDecoder;
+	@:overload @:protected override private function getDecoder() : sun.awt.image.ImageDecoder;
 	
 	
 }

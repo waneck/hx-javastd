@@ -28,7 +28,7 @@ extern class Selector implements java.io.Closeable
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Opens a selector.
@@ -43,21 +43,21 @@ extern class Selector implements java.io.Closeable
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function open() : java.nio.channels.Selector;
+	@:overload @:public @:static public static function open() : java.nio.channels.Selector;
 	
 	/**
 	* Tells whether or not this selector is open.  </p>
 	*
 	* @return <tt>true</tt> if, and only if, this selector is open
 	*/
-	@:overload @:abstract public function isOpen() : Bool;
+	@:overload @:public @:abstract public function isOpen() : Bool;
 	
 	/**
 	* Returns the provider that created this channel.  </p>
 	*
 	* @return  The provider that created this channel
 	*/
-	@:overload @:abstract public function provider() : java.nio.channels.spi.SelectorProvider;
+	@:overload @:public @:abstract public function provider() : java.nio.channels.spi.SelectorProvider;
 	
 	/**
 	* Returns this selector's key set.
@@ -74,7 +74,7 @@ extern class Selector implements java.io.Closeable
 	* @throws  ClosedSelectorException
 	*          If this selector is closed
 	*/
-	@:overload @:abstract public function keys() : java.util.Set<java.nio.channels.SelectionKey>;
+	@:overload @:public @:abstract public function keys() : java.util.Set<java.nio.channels.SelectionKey>;
 	
 	/**
 	* Returns this selector's selected-key set.
@@ -90,7 +90,7 @@ extern class Selector implements java.io.Closeable
 	* @throws  ClosedSelectorException
 	*          If this selector is closed
 	*/
-	@:overload @:abstract public function selectedKeys() : java.util.Set<java.nio.channels.SelectionKey>;
+	@:overload @:public @:abstract public function selectedKeys() : java.util.Set<java.nio.channels.SelectionKey>;
 	
 	/**
 	* Selects a set of keys whose corresponding channels are ready for I/O
@@ -112,7 +112,7 @@ extern class Selector implements java.io.Closeable
 	* @throws  ClosedSelectorException
 	*          If this selector is closed
 	*/
-	@:overload @:abstract public function selectNow() : Int;
+	@:overload @:public @:abstract public function selectNow() : Int;
 	
 	/**
 	* Selects a set of keys whose corresponding channels are ready for I/O
@@ -144,7 +144,7 @@ extern class Selector implements java.io.Closeable
 	* @throws  IllegalArgumentException
 	*          If the value of the timeout argument is negative
 	*/
-	@:overload @:abstract public function select(timeout : haxe.Int64) : Int;
+	@:overload @:public @:abstract public function select(timeout : haxe.Int64) : Int;
 	
 	/**
 	* Selects a set of keys whose corresponding channels are ready for I/O
@@ -164,7 +164,7 @@ extern class Selector implements java.io.Closeable
 	* @throws  ClosedSelectorException
 	*          If this selector is closed
 	*/
-	@:overload @:abstract public function select() : Int;
+	@:overload @:public @:abstract public function select() : Int;
 	
 	/**
 	* Causes the first selection operation that has not yet returned to return
@@ -185,7 +185,7 @@ extern class Selector implements java.io.Closeable
 	*
 	* @return  This selector
 	*/
-	@:overload @:abstract public function wakeup() : java.nio.channels.Selector;
+	@:overload @:public @:abstract public function wakeup() : java.nio.channels.Selector;
 	
 	/**
 	* Closes this selector.
@@ -208,7 +208,7 @@ extern class Selector implements java.io.Closeable
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
 	
 }

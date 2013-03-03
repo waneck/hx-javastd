@@ -30,25 +30,25 @@ package javax.swing.plaf.synth;
 	*
 	* @author Scott Violet
 	*/
-	@:overload public function new(ui : javax.swing.plaf.basic.BasicSplitPaneUI) : Void;
+	@:overload @:public public function new(ui : javax.swing.plaf.basic.BasicSplitPaneUI) : Void;
 	
-	@:overload override private function setMouseOver(mouseOver : Bool) : Void;
+	@:overload @:protected override private function setMouseOver(mouseOver : Bool) : Void;
 	
-	@:overload override public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public override public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Creates and return an instance of JButton that can be used to
 	* collapse the left component in the split pane.
 	*/
-	@:overload override private function createLeftOneTouchButton() : javax.swing.JButton;
+	@:overload @:protected override private function createLeftOneTouchButton() : javax.swing.JButton;
 	
 	/**
 	* Creates and return an instance of JButton that can be used to
 	* collapse the right component in the split pane.
 	*/
-	@:overload override private function createRightOneTouchButton() : javax.swing.JButton;
+	@:overload @:protected override private function createRightOneTouchButton() : javax.swing.JButton;
 	
 	
 }

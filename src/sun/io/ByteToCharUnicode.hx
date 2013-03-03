@@ -50,21 +50,21 @@ extern class ByteToCharUnicode extends sun.io.ByteToCharConverter
 	* discarded.  If the first pair of bytes is not such a mark then a
 	* <tt>MalformedInputException</tt> will be thrown by the convert method.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a Unicode byte-to-char converter that uses the given byte order
 	* and may or may not insist upon an initial byte-order mark.
 	*/
-	@:overload private function new(bo : Int, m : Bool) : Void;
+	@:overload @:protected private function new(bo : Int, m : Bool) : Void;
 	
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
-	@:overload override public function convert(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, out : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
+	@:overload @:public override public function convert(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, out : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload override public function flush(buf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
+	@:overload @:public override public function flush(buf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
 	
 	
 }

@@ -28,61 +28,61 @@ extern class NumericShaper implements java.io.Serializable
 	/** Identifies the Latin-1 (European) and extended range, and
 	*  Latin-1 (European) decimal base.
 	*/
-	public static var EUROPEAN(default, null) : Int;
+	@:public @:static @:final public static var EUROPEAN(default, null) : Int;
 	
 	/** Identifies the ARABIC range and decimal base. */
-	public static var ARABIC(default, null) : Int;
+	@:public @:static @:final public static var ARABIC(default, null) : Int;
 	
 	/** Identifies the ARABIC range and ARABIC_EXTENDED decimal base. */
-	public static var EASTERN_ARABIC(default, null) : Int;
+	@:public @:static @:final public static var EASTERN_ARABIC(default, null) : Int;
 	
 	/** Identifies the DEVANAGARI range and decimal base. */
-	public static var DEVANAGARI(default, null) : Int;
+	@:public @:static @:final public static var DEVANAGARI(default, null) : Int;
 	
 	/** Identifies the BENGALI range and decimal base. */
-	public static var BENGALI(default, null) : Int;
+	@:public @:static @:final public static var BENGALI(default, null) : Int;
 	
 	/** Identifies the GURMUKHI range and decimal base. */
-	public static var GURMUKHI(default, null) : Int;
+	@:public @:static @:final public static var GURMUKHI(default, null) : Int;
 	
 	/** Identifies the GUJARATI range and decimal base. */
-	public static var GUJARATI(default, null) : Int;
+	@:public @:static @:final public static var GUJARATI(default, null) : Int;
 	
 	/** Identifies the ORIYA range and decimal base. */
-	public static var ORIYA(default, null) : Int;
+	@:public @:static @:final public static var ORIYA(default, null) : Int;
 	
 	/** Identifies the TAMIL range and decimal base. */
-	public static var TAMIL(default, null) : Int;
+	@:public @:static @:final public static var TAMIL(default, null) : Int;
 	
 	/** Identifies the TELUGU range and decimal base. */
-	public static var TELUGU(default, null) : Int;
+	@:public @:static @:final public static var TELUGU(default, null) : Int;
 	
 	/** Identifies the KANNADA range and decimal base. */
-	public static var KANNADA(default, null) : Int;
+	@:public @:static @:final public static var KANNADA(default, null) : Int;
 	
 	/** Identifies the MALAYALAM range and decimal base. */
-	public static var MALAYALAM(default, null) : Int;
+	@:public @:static @:final public static var MALAYALAM(default, null) : Int;
 	
 	/** Identifies the THAI range and decimal base. */
-	public static var THAI(default, null) : Int;
+	@:public @:static @:final public static var THAI(default, null) : Int;
 	
 	/** Identifies the LAO range and decimal base. */
-	public static var LAO(default, null) : Int;
+	@:public @:static @:final public static var LAO(default, null) : Int;
 	
 	/** Identifies the TIBETAN range and decimal base. */
-	public static var TIBETAN(default, null) : Int;
+	@:public @:static @:final public static var TIBETAN(default, null) : Int;
 	
 	/** Identifies the MYANMAR range and decimal base. */
-	public static var MYANMAR(default, null) : Int;
+	@:public @:static @:final public static var MYANMAR(default, null) : Int;
 	
 	/** Identifies the ETHIOPIC range and decimal base. */
-	public static var ETHIOPIC(default, null) : Int;
+	@:public @:static @:final public static var ETHIOPIC(default, null) : Int;
 	
 	/** Identifies the KHMER range and decimal base. */
-	public static var KHMER(default, null) : Int;
+	@:public @:static @:final public static var KHMER(default, null) : Int;
 	
 	/** Identifies the MONGOLIAN range and decimal base. */
-	public static var MONGOLIAN(default, null) : Int;
+	@:public @:static @:final public static var MONGOLIAN(default, null) : Int;
 	
 	/** Identifies all ranges, for full contextual shaping.
 	*
@@ -90,7 +90,7 @@ extern class NumericShaper implements java.io.Serializable
 	* ranges. Use {@code EmunSet.allOf(NumericShaper.Range.class)} to
 	* specify all of the enum-based ranges.
 	*/
-	public static var ALL_RANGES(default, null) : Int;
+	@:public @:static @:final public static var ALL_RANGES(default, null) : Int;
 	
 	/**
 	* Returns a shaper for the provided unicode range.  All
@@ -100,7 +100,7 @@ extern class NumericShaper implements java.io.Serializable
 	* @return a non-contextual numeric shaper
 	* @throws IllegalArgumentException if the range is not a single range
 	*/
-	@:overload public static function getShaper(singleRange : Int) : java.awt.font.NumericShaper;
+	@:overload @:public @:static public static function getShaper(singleRange : Int) : java.awt.font.NumericShaper;
 	
 	/**
 	* Returns a shaper for the provided Unicode
@@ -113,7 +113,7 @@ extern class NumericShaper implements java.io.Serializable
 	* @throws NullPointerException if {@code singleRange} is {@code null}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getShaper(singleRange : java.awt.font.NumericShaper.NumericShaper_Range) : java.awt.font.NumericShaper;
+	@:require(java7) @:overload @:public @:static public static function getShaper(singleRange : java.awt.font.NumericShaper.NumericShaper_Range) : java.awt.font.NumericShaper;
 	
 	/**
 	* Returns a contextual shaper for the provided unicode range(s).
@@ -129,7 +129,7 @@ extern class NumericShaper implements java.io.Serializable
 	* @param ranges the specified Unicode ranges
 	* @return a shaper for the specified ranges
 	*/
-	@:overload public static function getContextualShaper(ranges : Int) : java.awt.font.NumericShaper;
+	@:overload @:public @:static public static function getContextualShaper(ranges : Int) : java.awt.font.NumericShaper;
 	
 	/**
 	* Returns a contextual shaper for the provided Unicode
@@ -147,7 +147,7 @@ extern class NumericShaper implements java.io.Serializable
 	* @throws NullPointerException if {@code ranges} is {@code null}.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getContextualShaper(ranges : java.util.Set<java.awt.font.NumericShaper.NumericShaper_Range>) : java.awt.font.NumericShaper;
+	@:require(java7) @:overload @:public @:static public static function getContextualShaper(ranges : java.util.Set<java.awt.font.NumericShaper.NumericShaper_Range>) : java.awt.font.NumericShaper;
 	
 	/**
 	* Returns a contextual shaper for the provided unicode range(s).
@@ -164,7 +164,7 @@ extern class NumericShaper implements java.io.Serializable
 	* @throws IllegalArgumentException if the specified
 	* <code>defaultContext</code> is not a single valid range.
 	*/
-	@:overload public static function getContextualShaper(ranges : Int, defaultContext : Int) : java.awt.font.NumericShaper;
+	@:overload @:public @:static public static function getContextualShaper(ranges : Int, defaultContext : Int) : java.awt.font.NumericShaper;
 	
 	/**
 	* Returns a contextual shaper for the provided Unicode range(s).
@@ -181,7 +181,7 @@ extern class NumericShaper implements java.io.Serializable
 	*         if {@code ranges} or {@code defaultContext} is {@code null}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getContextualShaper(ranges : java.util.Set<java.awt.font.NumericShaper.NumericShaper_Range>, defaultContext : java.awt.font.NumericShaper.NumericShaper_Range) : java.awt.font.NumericShaper;
+	@:require(java7) @:overload @:public @:static public static function getContextualShaper(ranges : java.util.Set<java.awt.font.NumericShaper.NumericShaper_Range>, defaultContext : java.awt.font.NumericShaper.NumericShaper_Range) : java.awt.font.NumericShaper;
 	
 	/**
 	* Converts the digits in the text that occur between start and
@@ -195,7 +195,7 @@ extern class NumericShaper implements java.io.Serializable
 	*        out of bounds
 	* @throws NullPointerException if text is null
 	*/
-	@:overload public function shape(text : java.NativeArray<java.StdTypes.Char16>, start : Int, count : Int) : Void;
+	@:overload @:public public function shape(text : java.NativeArray<java.StdTypes.Char16>, start : Int, count : Int) : Void;
 	
 	/**
 	* Converts the digits in the text that occur between start and
@@ -215,7 +215,7 @@ extern class NumericShaper implements java.io.Serializable
 	* and the specified <code>context</code> is not a single valid
 	* range.
 	*/
-	@:overload public function shape(text : java.NativeArray<java.StdTypes.Char16>, start : Int, count : Int, context : Int) : Void;
+	@:overload @:public public function shape(text : java.NativeArray<java.StdTypes.Char16>, start : Int, count : Int, context : Int) : Void;
 	
 	/**
 	* Converts the digits in the text that occur between {@code
@@ -235,7 +235,7 @@ extern class NumericShaper implements java.io.Serializable
 	*         if {@code text} or {@code context} is null
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function shape(text : java.NativeArray<java.StdTypes.Char16>, start : Int, count : Int, context : java.awt.font.NumericShaper.NumericShaper_Range) : Void;
+	@:require(java7) @:overload @:public public function shape(text : java.NativeArray<java.StdTypes.Char16>, start : Int, count : Int, context : java.awt.font.NumericShaper.NumericShaper_Range) : Void;
 	
 	/**
 	* Returns a <code>boolean</code> indicating whether or not
@@ -243,7 +243,7 @@ extern class NumericShaper implements java.io.Serializable
 	* @return <code>true</code> if this shaper is contextual;
 	*         <code>false</code> otherwise.
 	*/
-	@:overload public function isContextual() : Bool;
+	@:overload @:public public function isContextual() : Bool;
 	
 	/**
 	* Returns an <code>int</code> that ORs together the values for
@@ -260,7 +260,7 @@ extern class NumericShaper implements java.io.Serializable
 	*
 	* @return the values for all the ranges to be shaped.
 	*/
-	@:overload public function getRanges() : Int;
+	@:overload @:public public function getRanges() : Int;
 	
 	/**
 	* Returns a {@code Set} representing all the Unicode ranges in
@@ -269,14 +269,14 @@ extern class NumericShaper implements java.io.Serializable
 	* @return all the Unicode ranges to be shaped.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getRangeSet() : java.util.Set<java.awt.font.NumericShaper.NumericShaper_Range>;
+	@:require(java7) @:overload @:public public function getRangeSet() : java.util.Set<java.awt.font.NumericShaper.NumericShaper_Range>;
 	
 	/**
 	* Returns a hash code for this shaper.
 	* @return this shaper's hash code.
 	* @see java.lang.Object#hashCode
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns {@code true} if the specified object is an instance of
@@ -296,14 +296,14 @@ extern class NumericShaper implements java.io.Serializable
 	*         <code>false</code> otherwise.
 	* @see java.lang.Object#equals(java.lang.Object)
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns a <code>String</code> that describes this shaper. This method
 	* is used for debugging purposes only.
 	* @return a <code>String</code> describing this shaper.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

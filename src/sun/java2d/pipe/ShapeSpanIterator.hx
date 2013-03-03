@@ -25,80 +25,80 @@ package sun.java2d.pipe;
 */
 extern class ShapeSpanIterator implements sun.java2d.pipe.SpanIterator implements sun.awt.geom.PathConsumer2D
 {
-	@:overload @:native public static function initIDs() : Void;
+	@:overload @:public @:static @:native public static function initIDs() : Void;
 	
-	@:overload public function new(adjust : Bool) : Void;
+	@:overload @:public public function new(adjust : Bool) : Void;
 	
 	/*
 	* Appends the geometry and winding rule from the indicated
 	* path iterator.
 	*/
-	@:overload public function appendPath(pi : java.awt.geom.PathIterator) : Void;
+	@:overload @:public public function appendPath(pi : java.awt.geom.PathIterator) : Void;
 	
 	/*
 	* Appends the geometry from the indicated set of polygon points.
 	*/
-	@:overload @:native public function appendPoly(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int, xoff : Int, yoff : Int) : Void;
+	@:overload @:public @:native public function appendPoly(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int, xoff : Int, yoff : Int) : Void;
 	
 	/*
 	* Sets the rectangle of interest for storing and returning
 	* span segments.
 	*/
-	@:overload public function setOutputAreaXYWH(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function setOutputAreaXYWH(x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/*
 	* Sets the rectangle of interest for storing and returning
 	* span segments.
 	*/
-	@:overload @:native public function setOutputAreaXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : Void;
+	@:overload @:public @:native public function setOutputAreaXYXY(lox : Int, loy : Int, hix : Int, hiy : Int) : Void;
 	
 	/*
 	* Sets the rectangle of interest for storing and returning
 	* span segments to the specified Rectangle.
 	*/
-	@:overload public function setOutputArea(r : java.awt.Rectangle) : Void;
+	@:overload @:public public function setOutputArea(r : java.awt.Rectangle) : Void;
 	
 	/*
 	* Sets the rectangle of interest for storing and returning
 	* span segments to the bounds of the specified Region.
 	*/
-	@:overload public function setOutputArea(r : sun.java2d.pipe.Region) : Void;
+	@:overload @:public public function setOutputArea(r : sun.java2d.pipe.Region) : Void;
 	
 	/*
 	* Sets the winding rule in the native data structures.
 	*/
-	@:overload @:native public function setRule(rule : Int) : Void;
+	@:overload @:public @:native public function setRule(rule : Int) : Void;
 	
 	/*
 	* Adds a single PathIterator segment to the internal list of
 	* path element structures.
 	*/
-	@:overload @:native public function addSegment(type : Int, coords : java.NativeArray<Single>) : Void;
+	@:overload @:public @:native public function addSegment(type : Int, coords : java.NativeArray<Single>) : Void;
 	
 	/*
 	* Gets the bbox of the available path segments, clipped to the
 	* OutputArea.
 	*/
-	@:overload @:native public function getPathBox(pathbox : java.NativeArray<Int>) : Void;
+	@:overload @:public @:native public function getPathBox(pathbox : java.NativeArray<Int>) : Void;
 	
 	/*
 	* Intersects the path box with the given bbox.
 	* Returned spans are clipped to this region, or discarded
 	* altogether if they lie outside it.
 	*/
-	@:overload @:native public function intersectClipBox(lox : Int, loy : Int, hix : Int, hiy : Int) : Void;
+	@:overload @:public @:native public function intersectClipBox(lox : Int, loy : Int, hix : Int, hiy : Int) : Void;
 	
 	/*
 	* Fetches the next span that needs to be operated on.
 	* If the return value is false then there are no more spans.
 	*/
-	@:overload @:native public function nextSpan(spanbox : java.NativeArray<Int>) : Bool;
+	@:overload @:public @:native public function nextSpan(spanbox : java.NativeArray<Int>) : Bool;
 	
 	/**
 	* This method tells the iterator that it may skip all spans
 	* whose Y range is completely above the indicated Y coordinate.
 	*/
-	@:overload @:native public function skipDownTo(y : Int) : Void;
+	@:overload @:public @:native public function skipDownTo(y : Int) : Void;
 	
 	/**
 	* This method returns a native pointer to a function block that
@@ -111,26 +111,26 @@ extern class ShapeSpanIterator implements sun.java2d.pipe.SpanIterator implement
 	*     src/share/native/sun/java2d/pipe/SpanIterator.h
 	* </pre>
 	*/
-	@:overload @:native public function getNativeIterator() : haxe.Int64;
+	@:overload @:public @:native public function getNativeIterator() : haxe.Int64;
 	
 	/*
 	* Cleans out all internal data structures.
 	*/
-	@:overload @:native public function dispose() : Void;
+	@:overload @:public @:native public function dispose() : Void;
 	
-	@:overload @:native public function moveTo(x : Single, y : Single) : Void;
+	@:overload @:public @:native public function moveTo(x : Single, y : Single) : Void;
 	
-	@:overload @:native public function lineTo(x : Single, y : Single) : Void;
+	@:overload @:public @:native public function lineTo(x : Single, y : Single) : Void;
 	
-	@:overload @:native public function quadTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
+	@:overload @:public @:native public function quadTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
 	
-	@:overload @:native public function curveTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single, x3 : Single, y3 : Single) : Void;
+	@:overload @:public @:native public function curveTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single, x3 : Single, y3 : Single) : Void;
 	
-	@:overload @:native public function closePath() : Void;
+	@:overload @:public @:native public function closePath() : Void;
 	
-	@:overload @:native public function pathDone() : Void;
+	@:overload @:public @:native public function pathDone() : Void;
 	
-	@:overload @:native public function getNativeConsumer() : haxe.Int64;
+	@:overload @:public @:native public function getNativeConsumer() : haxe.Int64;
 	
 	
 }

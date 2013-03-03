@@ -32,34 +32,34 @@ extern class DOMDocumentSerializer extends com.sun.xml.internal.fastinfoset.Enco
 	*
 	* @param n the node to serialize.
 	*/
-	@:overload @:final public function serialize(n : org.w3c.dom.Node) : Void;
+	@:overload @:public @:final public function serialize(n : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Serialize a {@link Document}.
 	*
 	* @param d the document to serialize.
 	*/
-	@:overload @:final public function serialize(d : org.w3c.dom.Document) : Void;
+	@:overload @:public @:final public function serialize(d : org.w3c.dom.Document) : Void;
 	
-	@:overload @:final private function serializeElementAsDocument(e : org.w3c.dom.Node) : Void;
+	@:overload @:protected @:final private function serializeElementAsDocument(e : org.w3c.dom.Node) : Void;
 	
-	private var _namespaceScopeContext : com.sun.xml.internal.fastinfoset.util.NamespaceContextImplementation;
+	@:protected private var _namespaceScopeContext : com.sun.xml.internal.fastinfoset.util.NamespaceContextImplementation;
 	
-	private var _attributes : java.NativeArray<org.w3c.dom.Node>;
+	@:protected private var _attributes : java.NativeArray<org.w3c.dom.Node>;
 	
-	@:overload @:final private function serializeElement(e : org.w3c.dom.Node) : Void;
+	@:overload @:protected @:final private function serializeElement(e : org.w3c.dom.Node) : Void;
 	
-	@:overload @:final private function serializeText(t : org.w3c.dom.Node) : Void;
+	@:overload @:protected @:final private function serializeText(t : org.w3c.dom.Node) : Void;
 	
-	@:overload @:final private function serializeCDATA(t : org.w3c.dom.Node) : Void;
+	@:overload @:protected @:final private function serializeCDATA(t : org.w3c.dom.Node) : Void;
 	
-	@:overload @:final private function serializeComment(c : org.w3c.dom.Node) : Void;
+	@:overload @:protected @:final private function serializeComment(c : org.w3c.dom.Node) : Void;
 	
-	@:overload @:final private function serializeProcessingInstruction(pi : org.w3c.dom.Node) : Void;
+	@:overload @:protected @:final private function serializeProcessingInstruction(pi : org.w3c.dom.Node) : Void;
 	
-	@:overload @:final private function encodeElement(namespaceURI : String, qName : String, localName : String) : Void;
+	@:overload @:protected @:final private function encodeElement(namespaceURI : String, qName : String, localName : String) : Void;
 	
-	@:overload @:final private function encodeAttribute(namespaceURI : String, qName : String, localName : String) : Void;
+	@:overload @:protected @:final private function encodeAttribute(namespaceURI : String, qName : String, localName : String) : Void;
 	
 	
 }

@@ -31,23 +31,23 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class CodeSetComponentInfo
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(charData : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetComponent, wcharData : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetComponent) : Void;
+	@:overload @:public public function new(charData : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetComponent, wcharData : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetComponent) : Void;
 	
-	@:overload public function read(_in : com.sun.corba.se.impl.encoding.MarshalInputStream) : Void;
+	@:overload @:public public function read(_in : com.sun.corba.se.impl.encoding.MarshalInputStream) : Void;
 	
-	@:overload public function write(out : com.sun.corba.se.impl.encoding.MarshalOutputStream) : Void;
+	@:overload @:public public function write(out : com.sun.corba.se.impl.encoding.MarshalOutputStream) : Void;
 	
-	@:overload public function getCharComponent() : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetComponent;
+	@:overload @:public public function getCharComponent() : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetComponent;
 	
-	@:overload public function getWCharComponent() : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetComponent;
+	@:overload @:public public function getWCharComponent() : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetComponent;
 	
 	/**
 	* Our default code set scheme is as follows:
@@ -75,7 +75,7 @@ extern class CodeSetComponentInfo
 	* for wchar data.
 	*
 	*/
-	public static var JAVASOFT_DEFAULT_CODESETS(default, null) : com.sun.corba.se.impl.encoding.CodeSetComponentInfo;
+	@:public @:static @:final public static var JAVASOFT_DEFAULT_CODESETS(default, null) : com.sun.corba.se.impl.encoding.CodeSetComponentInfo;
 	
 	/**
 	* Creates a CodeSetComponent from a String which contains a comma
@@ -88,12 +88,12 @@ extern class CodeSetComponentInfo
 	*
 	* The numbers can either be decimal or hex.
 	*/
-	@:overload public static function createFromString(str : String) : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetComponent;
+	@:overload @:public @:static public static function createFromString(str : String) : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetComponent;
 	
 	/**
 	* Code sets for local cases without a connection.
 	*/
-	public static var LOCAL_CODE_SETS(default, null) : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetContext;
+	@:public @:static @:final public static var LOCAL_CODE_SETS(default, null) : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetContext;
 	
 	
 }
@@ -104,19 +104,19 @@ extern class CodeSetComponentInfo
 */
 @:native('com$sun$corba$se$impl$encoding$CodeSetComponentInfo$CodeSetComponent') extern class CodeSetComponentInfo_CodeSetComponent
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(nativeCodeSet : Int, conversionCodeSets : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(nativeCodeSet : Int, conversionCodeSets : java.NativeArray<Int>) : Void;
 	
-	@:overload public function read(_in : com.sun.corba.se.impl.encoding.MarshalInputStream) : Void;
+	@:overload @:public public function read(_in : com.sun.corba.se.impl.encoding.MarshalInputStream) : Void;
 	
-	@:overload public function write(out : com.sun.corba.se.impl.encoding.MarshalOutputStream) : Void;
+	@:overload @:public public function write(out : com.sun.corba.se.impl.encoding.MarshalOutputStream) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -125,19 +125,19 @@ extern class CodeSetComponentInfo
 */
 @:native('com$sun$corba$se$impl$encoding$CodeSetComponentInfo$CodeSetContext') extern class CodeSetComponentInfo_CodeSetContext
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(charEncoding : Int, wcharEncoding : Int) : Void;
+	@:overload @:public public function new(charEncoding : Int, wcharEncoding : Int) : Void;
 	
-	@:overload public function read(_in : com.sun.corba.se.impl.encoding.MarshalInputStream) : Void;
+	@:overload @:public public function read(_in : com.sun.corba.se.impl.encoding.MarshalInputStream) : Void;
 	
-	@:overload public function write(out : com.sun.corba.se.impl.encoding.MarshalOutputStream) : Void;
+	@:overload @:public public function write(out : com.sun.corba.se.impl.encoding.MarshalOutputStream) : Void;
 	
-	@:overload public function getCharCodeSet() : Int;
+	@:overload @:public public function getCharCodeSet() : Int;
 	
-	@:overload public function getWCharCodeSet() : Int;
+	@:overload @:public public function getWCharCodeSet() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

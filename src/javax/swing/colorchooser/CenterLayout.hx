@@ -30,15 +30,15 @@ package javax.swing.colorchooser;
 */
 @:internal extern class CenterLayout implements java.awt.LayoutManager implements java.io.Serializable
 {
-	@:overload public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
 	
-	@:overload public function removeLayoutComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(comp : java.awt.Component) : Void;
 	
-	@:overload public function preferredLayoutSize(container : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(container : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function minimumLayoutSize(cont : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(cont : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function layoutContainer(container : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(container : java.awt.Container) : Void;
 	
 	
 }

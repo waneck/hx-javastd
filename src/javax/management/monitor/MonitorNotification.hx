@@ -32,98 +32,98 @@ extern class MonitorNotification extends javax.management.Notification
 	* This notification is fired by all kinds of monitors.
 	* <BR>The value of this notification type is <CODE>jmx.monitor.error.mbean</CODE>.
 	*/
-	public static var OBSERVED_OBJECT_ERROR(default, null) : String;
+	@:public @:static @:final public static var OBSERVED_OBJECT_ERROR(default, null) : String;
 	
 	/**
 	* Notification type denoting that the observed attribute is not contained in the observed object.
 	* This notification is fired by all kinds of monitors.
 	* <BR>The value of this notification type is <CODE>jmx.monitor.error.attribute</CODE>.
 	*/
-	public static var OBSERVED_ATTRIBUTE_ERROR(default, null) : String;
+	@:public @:static @:final public static var OBSERVED_ATTRIBUTE_ERROR(default, null) : String;
 	
 	/**
 	* Notification type denoting that the type of the observed attribute is not correct.
 	* This notification is fired by all kinds of monitors.
 	* <BR>The value of this notification type is <CODE>jmx.monitor.error.type</CODE>.
 	*/
-	public static var OBSERVED_ATTRIBUTE_TYPE_ERROR(default, null) : String;
+	@:public @:static @:final public static var OBSERVED_ATTRIBUTE_TYPE_ERROR(default, null) : String;
 	
 	/**
 	* Notification type denoting that the type of the thresholds, offset or modulus is not correct.
 	* This notification is fired by counter and gauge monitors.
 	* <BR>The value of this notification type is <CODE>jmx.monitor.error.threshold</CODE>.
 	*/
-	public static var THRESHOLD_ERROR(default, null) : String;
+	@:public @:static @:final public static var THRESHOLD_ERROR(default, null) : String;
 	
 	/**
 	* Notification type denoting that a non-predefined error type has occurred when trying to get the value of the observed attribute.
 	* This notification is fired by all kinds of monitors.
 	* <BR>The value of this notification type is <CODE>jmx.monitor.error.runtime</CODE>.
 	*/
-	public static var RUNTIME_ERROR(default, null) : String;
+	@:public @:static @:final public static var RUNTIME_ERROR(default, null) : String;
 	
 	/**
 	* Notification type denoting that the observed attribute has reached the threshold value.
 	* This notification is only fired by counter monitors.
 	* <BR>The value of this notification type is <CODE>jmx.monitor.counter.threshold</CODE>.
 	*/
-	public static var THRESHOLD_VALUE_EXCEEDED(default, null) : String;
+	@:public @:static @:final public static var THRESHOLD_VALUE_EXCEEDED(default, null) : String;
 	
 	/**
 	* Notification type denoting that the observed attribute has exceeded the threshold high value.
 	* This notification is only fired by gauge monitors.
 	* <BR>The value of this notification type is <CODE>jmx.monitor.gauge.high</CODE>.
 	*/
-	public static var THRESHOLD_HIGH_VALUE_EXCEEDED(default, null) : String;
+	@:public @:static @:final public static var THRESHOLD_HIGH_VALUE_EXCEEDED(default, null) : String;
 	
 	/**
 	* Notification type denoting that the observed attribute has exceeded the threshold low value.
 	* This notification is only fired by gauge monitors.
 	* <BR>The value of this notification type is <CODE>jmx.monitor.gauge.low</CODE>.
 	*/
-	public static var THRESHOLD_LOW_VALUE_EXCEEDED(default, null) : String;
+	@:public @:static @:final public static var THRESHOLD_LOW_VALUE_EXCEEDED(default, null) : String;
 	
 	/**
 	* Notification type denoting that the observed attribute has matched the "string to compare" value.
 	* This notification is only fired by string monitors.
 	* <BR>The value of this notification type is <CODE>jmx.monitor.string.matches</CODE>.
 	*/
-	public static var STRING_TO_COMPARE_VALUE_MATCHED(default, null) : String;
+	@:public @:static @:final public static var STRING_TO_COMPARE_VALUE_MATCHED(default, null) : String;
 	
 	/**
 	* Notification type denoting that the observed attribute has differed from the "string to compare" value.
 	* This notification is only fired by string monitors.
 	* <BR>The value of this notification type is <CODE>jmx.monitor.string.differs</CODE>.
 	*/
-	public static var STRING_TO_COMPARE_VALUE_DIFFERED(default, null) : String;
+	@:public @:static @:final public static var STRING_TO_COMPARE_VALUE_DIFFERED(default, null) : String;
 	
 	/**
 	* Gets the observed object of this monitor notification.
 	*
 	* @return The observed object.
 	*/
-	@:overload public function getObservedObject() : javax.management.ObjectName;
+	@:overload @:public public function getObservedObject() : javax.management.ObjectName;
 	
 	/**
 	* Gets the observed attribute of this monitor notification.
 	*
 	* @return The observed attribute.
 	*/
-	@:overload public function getObservedAttribute() : String;
+	@:overload @:public public function getObservedAttribute() : String;
 	
 	/**
 	* Gets the derived gauge of this monitor notification.
 	*
 	* @return The derived gauge.
 	*/
-	@:overload public function getDerivedGauge() : Dynamic;
+	@:overload @:public public function getDerivedGauge() : Dynamic;
 	
 	/**
 	* Gets the threshold/string (depending on the monitor type) that triggered off this monitor notification.
 	*
 	* @return The trigger.
 	*/
-	@:overload public function getTrigger() : Dynamic;
+	@:overload @:public public function getTrigger() : Dynamic;
 	
 	
 }

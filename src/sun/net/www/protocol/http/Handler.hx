@@ -29,19 +29,19 @@ package sun.net.www.protocol.http;
 extern class Handler extends java.net.URLStreamHandler
 {
 	/** open an http input stream given a URL */
-	private var proxy : String;
+	@:protected private var proxy : String;
 	
-	private var proxyPort : Int;
+	@:protected private var proxyPort : Int;
 	
-	@:overload override private function getDefaultPort() : Int;
+	@:overload @:protected override private function getDefaultPort() : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(proxy : String, port : Int) : Void;
+	@:overload @:public public function new(proxy : String, port : Int) : Void;
 	
-	@:overload override private function openConnection(u : java.net.URL) : java.net.URLConnection;
+	@:overload @:protected override private function openConnection(u : java.net.URL) : java.net.URLConnection;
 	
-	@:overload override private function openConnection(u : java.net.URL, p : java.net.Proxy) : java.net.URLConnection;
+	@:overload @:protected override private function openConnection(u : java.net.URL, p : java.net.Proxy) : java.net.URLConnection;
 	
 	
 }

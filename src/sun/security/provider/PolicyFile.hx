@@ -29,18 +29,18 @@ extern class PolicyFile extends java.security.Policy
 	* Initializes the Policy object and reads the default policy
 	* configuration file(s) into the Policy object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Initializes the Policy object and reads the default policy
 	* from the specified URL only.
 	*/
-	@:overload public function new(url : java.net.URL) : Void;
+	@:overload @:public public function new(url : java.net.URL) : Void;
 	
 	/**
 	* Refreshes the policy object by re-reading all the policy files.
 	*/
-	@:overload override public function refresh() : Void;
+	@:overload @:public override public function refresh() : Void;
 	
 	/**
 	* Evaluates the the global policy for the permissions granted to
@@ -55,7 +55,7 @@ extern class PolicyFile extends java.security.Policy
 	*
 	* @see java.security.ProtectionDomain
 	*/
-	@:overload override public function implies(pd : java.security.ProtectionDomain, p : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(pd : java.security.ProtectionDomain, p : java.security.Permission) : Bool;
 	
 	/**
 	* Examines this <code>Policy</code> and returns the permissions granted
@@ -85,7 +85,7 @@ extern class PolicyFile extends java.security.Policy
 	* @return the Permissions granted to the provided
 	*          <code>ProtectionDomain</code>.
 	*/
-	@:overload override public function getPermissions(domain : java.security.ProtectionDomain) : java.security.PermissionCollection;
+	@:overload @:public override public function getPermissions(domain : java.security.ProtectionDomain) : java.security.PermissionCollection;
 	
 	/**
 	* Examines this Policy and creates a PermissionCollection object with
@@ -97,7 +97,7 @@ extern class PolicyFile extends java.security.Policy
 	*
 	* @return the set of permissions according to the policy.
 	*/
-	@:overload override public function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
+	@:overload @:public override public function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
 	
 	/*
 	* Returns the signer certificates from the list of certificates
@@ -113,7 +113,7 @@ extern class PolicyFile extends java.security.Policy
 	* (i.e., with the signer certificate first and the (root) certificate
 	* authority last).
 	*/
-	@:overload private function getSignerCertificates(cs : java.security.CodeSource) : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:protected private function getSignerCertificates(cs : java.security.CodeSource) : java.NativeArray<java.security.cert.Certificate>;
 	
 	
 }
@@ -163,7 +163,7 @@ extern class PolicyFile extends java.security.Policy
 */
 @:native('sun$security$provider$PolicyFile$PolicyEntry') @:internal extern class PolicyFile_PolicyEntry
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -182,7 +182,7 @@ extern class PolicyFile extends java.security.Policy
 	* Each chain is ordered bottom-to-top (i.e., with the signer
 	* certificate first and the (root) certificate authority last).
 	*/
-	@:overload public function new(type : String, name : String, actions : String, certs : java.NativeArray<java.security.cert.Certificate>) : Void;
+	@:overload @:public public function new(type : String, name : String, actions : String, certs : java.NativeArray<java.security.cert.Certificate>) : Void;
 	
 	/**
 	* This method always returns false for SelfPermission permissions.
@@ -193,7 +193,7 @@ extern class PolicyFile extends java.security.Policy
 	*
 	* @return false.
 	*/
-	@:overload override public function implies(p : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two SelfPermission objects for equality.
@@ -208,14 +208,14 @@ extern class PolicyFile extends java.security.Policy
 	* type (class) name, permission name, actions, and
 	* certificates as this object.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Returns the canonical string representation of the actions,
@@ -227,15 +227,15 @@ extern class PolicyFile extends java.security.Policy
 	*
 	* @return the empty string "".
 	*/
-	@:overload override public function getActions() : String;
+	@:overload @:public override public function getActions() : String;
 	
-	@:overload public function getSelfType() : String;
+	@:overload @:public public function getSelfType() : String;
 	
-	@:overload public function getSelfName() : String;
+	@:overload @:public public function getSelfName() : String;
 	
-	@:overload public function getSelfActions() : String;
+	@:overload @:public public function getSelfActions() : String;
 	
-	@:overload public function getCerts() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public public function getCerts() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns a string describing this SelfPermission.  The convention
@@ -244,7 +244,7 @@ extern class PolicyFile extends java.security.Policy
 	*
 	* @return information about this SelfPermission.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

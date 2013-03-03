@@ -28,57 +28,57 @@ extern class PolicyConstants
 	/**
 	* Sun proprietary policy namespace URI
 	*/
-	public static var SUN_POLICY_NAMESPACE_URI(default, null) : String;
+	@:public @:static @:final public static var SUN_POLICY_NAMESPACE_URI(default, null) : String;
 	
 	/**
 	* Sun proprietary policy namespace prefix
 	*/
-	public static var SUN_POLICY_NAMESPACE_PREFIX(default, null) : String;
+	@:public @:static @:final public static var SUN_POLICY_NAMESPACE_PREFIX(default, null) : String;
 	
 	/**
 	* Fully qualified name of the SUN's proprietary policy assertion visibility attribute
 	*/
-	public static var VISIBILITY_ATTRIBUTE(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var VISIBILITY_ATTRIBUTE(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* Recognized value of the SUN's proprietary policy assertion visibility attribute
 	*/
-	public static var VISIBILITY_VALUE_PRIVATE(default, null) : String;
+	@:public @:static @:final public static var VISIBILITY_VALUE_PRIVATE(default, null) : String;
 	
 	/**
 	* Standard WS-Security Utility namespace URI, used in Policy Id
 	*/
-	public static var WSU_NAMESPACE_URI(default, null) : String;
+	@:public @:static @:final public static var WSU_NAMESPACE_URI(default, null) : String;
 	
 	/**
 	* Standard WS-Security Utility namespace prefix, used in Policy Id
 	*/
-	public static var WSU_NAMESPACE_PREFIX(default, null) : String;
+	@:public @:static @:final public static var WSU_NAMESPACE_PREFIX(default, null) : String;
 	
 	/**
 	* Fully qualified name of the Policy wsu:Id XML attribute
 	*/
-	public static var WSU_ID(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var WSU_ID(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* Standard XML namespace URI
 	*/
-	public static var XML_NAMESPACE_URI(default, null) : String;
+	@:public @:static @:final public static var XML_NAMESPACE_URI(default, null) : String;
 	
 	/**
 	* Fully qualified name of the xml:id policy attribute
 	*/
-	public static var XML_ID(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var XML_ID(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* Identifier of the client-side configuration file
 	*/
-	public static var CLIENT_CONFIGURATION_IDENTIFIER(default, null) : String;
+	@:public @:static @:final public static var CLIENT_CONFIGURATION_IDENTIFIER(default, null) : String;
 	
 	/**
 	* XML namespace for management policy assertions
 	*/
-	public static var SUN_MANAGEMENT_NAMESPACE(default, null) : String;
+	@:public @:static @:final public static var SUN_MANAGEMENT_NAMESPACE(default, null) : String;
 	
 	
 }

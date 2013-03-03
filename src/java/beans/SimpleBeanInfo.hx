@@ -39,50 +39,50 @@ extern class SimpleBeanInfo implements java.beans.BeanInfo
 	* Deny knowledge about the class and customizer of the bean.
 	* You can override this if you wish to provide explicit info.
 	*/
-	@:overload public function getBeanDescriptor() : java.beans.BeanDescriptor;
+	@:overload @:public public function getBeanDescriptor() : java.beans.BeanDescriptor;
 	
 	/**
 	* Deny knowledge of properties. You can override this
 	* if you wish to provide explicit property info.
 	*/
-	@:overload public function getPropertyDescriptors() : java.NativeArray<java.beans.PropertyDescriptor>;
+	@:overload @:public public function getPropertyDescriptors() : java.NativeArray<java.beans.PropertyDescriptor>;
 	
 	/**
 	* Deny knowledge of a default property. You can override this
 	* if you wish to define a default property for the bean.
 	*/
-	@:overload public function getDefaultPropertyIndex() : Int;
+	@:overload @:public public function getDefaultPropertyIndex() : Int;
 	
 	/**
 	* Deny knowledge of event sets. You can override this
 	* if you wish to provide explicit event set info.
 	*/
-	@:overload public function getEventSetDescriptors() : java.NativeArray<java.beans.EventSetDescriptor>;
+	@:overload @:public public function getEventSetDescriptors() : java.NativeArray<java.beans.EventSetDescriptor>;
 	
 	/**
 	* Deny knowledge of a default event. You can override this
 	* if you wish to define a default event for the bean.
 	*/
-	@:overload public function getDefaultEventIndex() : Int;
+	@:overload @:public public function getDefaultEventIndex() : Int;
 	
 	/**
 	* Deny knowledge of methods. You can override this
 	* if you wish to provide explicit method info.
 	*/
-	@:overload public function getMethodDescriptors() : java.NativeArray<java.beans.MethodDescriptor>;
+	@:overload @:public public function getMethodDescriptors() : java.NativeArray<java.beans.MethodDescriptor>;
 	
 	/**
 	* Claim there are no other relevant BeanInfo objects.  You
 	* may override this if you want to (for example) return a
 	* BeanInfo for a base class.
 	*/
-	@:overload public function getAdditionalBeanInfo() : java.NativeArray<java.beans.BeanInfo>;
+	@:overload @:public public function getAdditionalBeanInfo() : java.NativeArray<java.beans.BeanInfo>;
 	
 	/**
 	* Claim there are no icons available.  You can override
 	* this if you want to provide icons for your bean.
 	*/
-	@:overload public function getIcon(iconKind : Int) : java.awt.Image;
+	@:overload @:public public function getIcon(iconKind : Int) : java.awt.Image;
 	
 	/**
 	* This is a utility method to help in loading icon images.
@@ -95,7 +95,7 @@ extern class SimpleBeanInfo implements java.beans.BeanInfo
 	*          "wombat.gif".
 	* @return  an image object.  May be null if the load failed.
 	*/
-	@:overload public function loadImage(resourceName : String) : java.awt.Image;
+	@:overload @:public public function loadImage(resourceName : String) : java.awt.Image;
 	
 	
 }

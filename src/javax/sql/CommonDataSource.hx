@@ -111,7 +111,7 @@ extern interface CommonDataSource
 	* @throws SQLFeatureNotSupportedException if the data source does not use <code>java.util.logging<code>.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getParentLogger() : java.util.logging.Logger;
+	@:require(java7) @:overload @:public public function getParentLogger() : java.util.logging.Logger;
 	
 	
 }

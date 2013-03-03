@@ -42,7 +42,7 @@ package java.util;
 	* <p> This flag corresponds to <tt>'-'</tt> (<tt>'&#92;u002d'</tt>) in
 	* the format specifier.
 	*/
-	public static var LEFT_JUSTIFY(default, null) : Int;
+	@:public @:static @:final public static var LEFT_JUSTIFY(default, null) : Int;
 	
 	/**
 	* Converts the output to upper case according to the rules of the
@@ -57,7 +57,7 @@ package java.util;
 	* <p> This flag corresponds to <tt>'S'</tt> (<tt>'&#92;u0053'</tt>) in
 	* the format specifier.
 	*/
-	public static var UPPERCASE(default, null) : Int;
+	@:public @:static @:final public static var UPPERCASE(default, null) : Int;
 	
 	/**
 	* Requires the output to use an alternate form.  The definition of the
@@ -66,7 +66,7 @@ package java.util;
 	* <p> This flag corresponds to <tt>'#'</tt> (<tt>'&#92;u0023'</tt>) in
 	* the format specifier.
 	*/
-	public static var ALTERNATE(default, null) : Int;
+	@:public @:static @:final public static var ALTERNATE(default, null) : Int;
 	
 	
 }

@@ -29,11 +29,11 @@ extern class FinalArrayList extends java.util.ArrayList<Dynamic>
 	* {@link ArrayList} with a final marker to help JIT.
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(collection : java.util.Collection<Dynamic>) : Void;
+	@:overload @:public public function new(collection : java.util.Collection<Dynamic>) : Void;
 	
 	
 }

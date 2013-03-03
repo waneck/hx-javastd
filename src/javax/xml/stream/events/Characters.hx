@@ -42,7 +42,7 @@ package javax.xml.stream.events;
 	/**
 	* Get the character data of this event
 	*/
-	@:overload public function getData() : String;
+	@:overload @:public public function getData() : String;
 	
 	/**
 	* Returns true if this set of Characters
@@ -51,7 +51,7 @@ package javax.xml.stream.events;
 	* checking of CHARACTERS events to see if they
 	* are composed of only whitespace characters
 	*/
-	@:overload public function isWhiteSpace() : Bool;
+	@:overload @:public public function isWhiteSpace() : Bool;
 	
 	/**
 	* Returns true if this is a CData section.  If this
@@ -62,14 +62,14 @@ package javax.xml.stream.events;
 	* as a single Characters event. This method will return false
 	* in this case.
 	*/
-	@:overload public function isCData() : Bool;
+	@:overload @:public public function isCData() : Bool;
 	
 	/**
 	* Return true if this is ignorableWhiteSpace.  If
 	* this event is ignorableWhiteSpace its event type will
 	* be SPACE.
 	*/
-	@:overload public function isIgnorableWhiteSpace() : Bool;
+	@:overload @:public public function isIgnorableWhiteSpace() : Bool;
 	
 	
 }

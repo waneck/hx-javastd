@@ -27,7 +27,7 @@ extern class ContextMatchStepPattern extends com.sun.org.apache.xpath.internal.p
 	* Construct a ContextMatchStepPattern.
 	*
 	*/
-	@:overload public function new(axis : Int, paxis : Int) : Void;
+	@:overload @:public public function new(axis : Int, paxis : Int) : Void;
 	
 	/**
 	* Execute this pattern step, including predicates.
@@ -43,7 +43,7 @@ extern class ContextMatchStepPattern extends com.sun.org.apache.xpath.internal.p
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Execute the match pattern step relative to another step.
@@ -60,7 +60,7 @@ extern class ContextMatchStepPattern extends com.sun.org.apache.xpath.internal.p
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function executeRelativePathPattern(xctxt : com.sun.org.apache.xpath.internal.XPathContext, prevStep : com.sun.org.apache.xpath.internal.patterns.StepPattern) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function executeRelativePathPattern(xctxt : com.sun.org.apache.xpath.internal.XPathContext, prevStep : com.sun.org.apache.xpath.internal.patterns.StepPattern) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	
 }

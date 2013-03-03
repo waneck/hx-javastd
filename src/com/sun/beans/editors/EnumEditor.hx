@@ -25,31 +25,31 @@ package com.sun.beans.editors;
 */
 extern class EnumEditor implements java.beans.PropertyEditor
 {
-	@:overload public function new(type : Class<Dynamic>) : Void;
+	@:overload @:public public function new(type : Class<Dynamic>) : Void;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public public function setValue(value : Dynamic) : Void;
 	
-	@:overload public function getAsText() : String;
+	@:overload @:public public function getAsText() : String;
 	
-	@:overload public function setAsText(text : String) : Void;
+	@:overload @:public public function setAsText(text : String) : Void;
 	
-	@:overload public function getTags() : java.NativeArray<String>;
+	@:overload @:public public function getTags() : java.NativeArray<String>;
 	
-	@:overload public function getJavaInitializationString() : String;
+	@:overload @:public public function getJavaInitializationString() : String;
 	
-	@:overload public function isPaintable() : Bool;
+	@:overload @:public public function isPaintable() : Bool;
 	
-	@:overload public function paintValue(gfx : java.awt.Graphics, box : java.awt.Rectangle) : Void;
+	@:overload @:public public function paintValue(gfx : java.awt.Graphics, box : java.awt.Rectangle) : Void;
 	
-	@:overload public function supportsCustomEditor() : Bool;
+	@:overload @:public public function supportsCustomEditor() : Bool;
 	
-	@:overload public function getCustomEditor() : java.awt.Component;
+	@:overload @:public public function getCustomEditor() : java.awt.Component;
 	
-	@:overload public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	
 }

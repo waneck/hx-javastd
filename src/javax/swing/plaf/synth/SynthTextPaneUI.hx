@@ -47,7 +47,7 @@ package javax.swing.plaf.synth;
 	* @param c the JTextPane object
 	* @return the UI object
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Fetches the name used as a key to lookup properties through the
@@ -56,7 +56,7 @@ package javax.swing.plaf.synth;
 	*
 	* @return the name ("TextPane")
 	*/
-	@:overload override private function getPropertyPrefix() : String;
+	@:overload @:protected override private function getPropertyPrefix() : String;
 	
 	/**
 	* Installs the UI for a component.  This does the following
@@ -82,7 +82,7 @@ package javax.swing.plaf.synth;
 	* @see javax.swing.plaf.basic.BasicTextUI#installUI
 	* @see ComponentUI#installUI
 	*/
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* This method gets called when a bound property is changed
@@ -95,12 +95,12 @@ package javax.swing.plaf.synth;
 	*
 	* @param evt the property change event
 	*/
-	@:overload override private function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected override private function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	
 }

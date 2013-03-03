@@ -28,26 +28,26 @@ extern class ScrollPaneWheelScroller
 	/*
 	* Called from ScrollPane.processMouseWheelEvent()
 	*/
-	@:overload public static function handleWheelScrolling(sp : java.awt.ScrollPane, e : java.awt.event.MouseWheelEvent) : Void;
+	@:overload @:public @:static public static function handleWheelScrolling(sp : java.awt.ScrollPane, e : java.awt.event.MouseWheelEvent) : Void;
 	
 	/*
 	* Given a ScrollPane, determine which Scrollbar should be scrolled by the
 	* mouse wheel, if any.
 	*/
-	@:overload public static function getAdjustableToScroll(sp : java.awt.ScrollPane) : java.awt.Adjustable;
+	@:overload @:public @:static public static function getAdjustableToScroll(sp : java.awt.ScrollPane) : java.awt.Adjustable;
 	
 	/*
 	* Given the info in a MouseWheelEvent and an Adjustable to scroll, return
 	* the amount by which the Adjustable should be adjusted.  This value may
 	* be positive or negative.
 	*/
-	@:overload public static function getIncrementFromAdjustable(adj : java.awt.Adjustable, e : java.awt.event.MouseWheelEvent) : Int;
+	@:overload @:public @:static public static function getIncrementFromAdjustable(adj : java.awt.Adjustable, e : java.awt.event.MouseWheelEvent) : Int;
 	
 	/*
 	* Scroll the given Adjustable by the given amount.  Checks the Adjustable's
 	* bounds and sets the new value to the Adjustable.
 	*/
-	@:overload public static function scrollAdjustable(adj : java.awt.Adjustable, amount : Int) : Void;
+	@:overload @:public @:static public static function scrollAdjustable(adj : java.awt.Adjustable, amount : Int) : Void;
 	
 	
 }

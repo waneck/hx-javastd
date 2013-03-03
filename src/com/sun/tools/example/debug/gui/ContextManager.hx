@@ -32,76 +32,76 @@ package com.sun.tools.example.debug.gui;
 */
 extern class ContextManager
 {
-	@:overload public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
+	@:overload @:public public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
 	
-	@:overload public function getMainClassName() : String;
+	@:overload @:public public function getMainClassName() : String;
 	
-	@:overload public function setMainClassName(mainClassName : String) : Void;
+	@:overload @:public public function setMainClassName(mainClassName : String) : Void;
 	
-	@:overload public function getVmArguments() : String;
+	@:overload @:public public function getVmArguments() : String;
 	
-	@:overload public function setVmArguments(vmArguments : String) : Void;
+	@:overload @:public public function setVmArguments(vmArguments : String) : Void;
 	
-	@:overload public function getProgramArguments() : String;
+	@:overload @:public public function getProgramArguments() : String;
 	
-	@:overload public function setProgramArguments(commandArguments : String) : Void;
+	@:overload @:public public function setProgramArguments(commandArguments : String) : Void;
 	
-	@:overload public function getRemotePort() : String;
+	@:overload @:public public function getRemotePort() : String;
 	
-	@:overload public function setRemotePort(remotePort : String) : Void;
+	@:overload @:public public function setRemotePort(remotePort : String) : Void;
 	
-	@:overload public function getVerboseFlag() : Bool;
+	@:overload @:public public function getVerboseFlag() : Bool;
 	
-	@:overload public function setVerboseFlag(verbose : Bool) : Void;
+	@:overload @:public public function setVerboseFlag(verbose : Bool) : Void;
 	
-	@:overload public function getCurrentThread() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function getCurrentThread() : com.sun.jdi.ThreadReference;
 	
-	@:overload public function setCurrentThread(t : com.sun.jdi.ThreadReference) : Void;
+	@:overload @:public public function setCurrentThread(t : com.sun.jdi.ThreadReference) : Void;
 	
-	@:overload public function setCurrentThreadInvalidate(t : com.sun.jdi.ThreadReference) : Void;
+	@:overload @:public public function setCurrentThreadInvalidate(t : com.sun.jdi.ThreadReference) : Void;
 	
-	@:overload public function invalidateCurrentThread() : Void;
+	@:overload @:public public function invalidateCurrentThread() : Void;
 	
 	/******
 	public int getCurrentFrameIndex() {
 	return getCurrentFrameIndex(currentThreadInfo);
 	}
 	******/
-	@:overload public function getCurrentFrameIndex(t : com.sun.jdi.ThreadReference) : Int;
+	@:overload @:public public function getCurrentFrameIndex(t : com.sun.jdi.ThreadReference) : Int;
 	
-	@:overload public function getCurrentFrameIndex(tinfo : com.sun.tools.example.debug.bdi.ThreadInfo) : Int;
+	@:overload @:public public function getCurrentFrameIndex(tinfo : com.sun.tools.example.debug.bdi.ThreadInfo) : Int;
 	
-	@:overload public function moveCurrentFrameIndex(t : com.sun.jdi.ThreadReference, count : Int) : Int;
+	@:overload @:public public function moveCurrentFrameIndex(t : com.sun.jdi.ThreadReference, count : Int) : Int;
 	
-	@:overload public function setCurrentFrameIndex(t : com.sun.jdi.ThreadReference, newIndex : Int) : Int;
+	@:overload @:public public function setCurrentFrameIndex(t : com.sun.jdi.ThreadReference, newIndex : Int) : Int;
 	
-	@:overload public function setCurrentFrameIndex(newIndex : Int) : Int;
+	@:overload @:public public function setCurrentFrameIndex(newIndex : Int) : Int;
 	
-	@:overload public function getCurrentFrame() : com.sun.jdi.StackFrame;
+	@:overload @:public public function getCurrentFrame() : com.sun.jdi.StackFrame;
 	
-	@:overload public function getCurrentFrame(t : com.sun.jdi.ThreadReference) : com.sun.jdi.StackFrame;
+	@:overload @:public public function getCurrentFrame(t : com.sun.jdi.ThreadReference) : com.sun.jdi.StackFrame;
 	
-	@:overload public function getCurrentFrame(tinfo : com.sun.tools.example.debug.bdi.ThreadInfo) : com.sun.jdi.StackFrame;
+	@:overload @:public public function getCurrentFrame(tinfo : com.sun.tools.example.debug.bdi.ThreadInfo) : com.sun.jdi.StackFrame;
 	
-	@:overload public function addContextListener(cl : com.sun.tools.example.debug.gui.ContextListener) : Void;
+	@:overload @:public public function addContextListener(cl : com.sun.tools.example.debug.gui.ContextListener) : Void;
 	
-	@:overload public function removeContextListener(cl : com.sun.tools.example.debug.gui.ContextListener) : Void;
+	@:overload @:public public function removeContextListener(cl : com.sun.tools.example.debug.gui.ContextListener) : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$ContextManager$ContextManagerListener') @:internal extern class ContextManager_ContextManagerListener extends com.sun.tools.example.debug.event.JDIAdapter implements com.sun.tools.example.debug.bdi.SessionListener implements com.sun.tools.example.debug.event.JDIListener
 {
-	@:overload public function sessionStart(e : java.util.EventObject) : Void;
+	@:overload @:public public function sessionStart(e : java.util.EventObject) : Void;
 	
-	@:overload public function sessionInterrupt(e : java.util.EventObject) : Void;
+	@:overload @:public public function sessionInterrupt(e : java.util.EventObject) : Void;
 	
-	@:overload public function sessionContinue(e : java.util.EventObject) : Void;
+	@:overload @:public public function sessionContinue(e : java.util.EventObject) : Void;
 	
-	@:overload override public function locationTrigger(e : com.sun.tools.example.debug.event.LocationTriggerEventSet) : Void;
+	@:overload @:public override public function locationTrigger(e : com.sun.tools.example.debug.event.LocationTriggerEventSet) : Void;
 	
-	@:overload override public function exception(e : com.sun.tools.example.debug.event.ExceptionEventSet) : Void;
+	@:overload @:public override public function exception(e : com.sun.tools.example.debug.event.ExceptionEventSet) : Void;
 	
-	@:overload override public function vmDisconnect(e : com.sun.tools.example.debug.event.VMDisconnectEventSet) : Void;
+	@:overload @:public override public function vmDisconnect(e : com.sun.tools.example.debug.event.VMDisconnectEventSet) : Void;
 	
 	
 }

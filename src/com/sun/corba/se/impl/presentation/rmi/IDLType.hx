@@ -28,28 +28,28 @@ package com.sun.corba.se.impl.presentation.rmi;
 */
 extern class IDLType
 {
-	@:overload public function new(cl : Class<Dynamic>, modules : java.NativeArray<String>, memberName : String) : Void;
+	@:overload @:public public function new(cl : Class<Dynamic>, modules : java.NativeArray<String>, memberName : String) : Void;
 	
-	@:overload public function new(cl : Class<Dynamic>, memberName : String) : Void;
+	@:overload @:public public function new(cl : Class<Dynamic>, memberName : String) : Void;
 	
-	@:overload public function getJavaClass() : Class<Dynamic>;
+	@:overload @:public public function getJavaClass() : Class<Dynamic>;
 	
-	@:overload public function getModules() : java.NativeArray<String>;
+	@:overload @:public public function getModules() : java.NativeArray<String>;
 	
-	@:overload public function makeConcatenatedName(separator : java.StdTypes.Char16, fixIDLKeywords : Bool) : String;
+	@:overload @:public public function makeConcatenatedName(separator : java.StdTypes.Char16, fixIDLKeywords : Bool) : String;
 	
-	@:overload public function getModuleName() : String;
+	@:overload @:public public function getModuleName() : String;
 	
-	@:overload public function getExceptionName() : String;
+	@:overload @:public public function getExceptionName() : String;
 	
-	@:overload public function getMemberName() : String;
+	@:overload @:public public function getMemberName() : String;
 	
 	/**
 	* True if this type doesn't have a containing module.  This
 	* would be true of a java type defined in the default package
 	* or a primitive.
 	*/
-	@:overload public function hasModule() : Bool;
+	@:overload @:public public function hasModule() : Bool;
 	
 	
 }

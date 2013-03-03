@@ -57,7 +57,7 @@ extern class ListSelectionEvent extends java.util.EventObject
 	* @param isAdjusting whether or not this is one in a series of
 	*        multiple events, where changes are still being made
 	*/
-	@:overload public function new(source : Dynamic, firstIndex : Int, lastIndex : Int, isAdjusting : Bool) : Void;
+	@:overload @:public public function new(source : Dynamic, firstIndex : Int, lastIndex : Int, isAdjusting : Bool) : Void;
 	
 	/**
 	* Returns the index of the first row whose selection may have changed.
@@ -66,7 +66,7 @@ extern class ListSelectionEvent extends java.util.EventObject
 	* @return the first row whose selection value may have changed,
 	*         where zero is the first row
 	*/
-	@:overload public function getFirstIndex() : Int;
+	@:overload @:public public function getFirstIndex() : Int;
 	
 	/**
 	* Returns the index of the last row whose selection may have changed.
@@ -75,7 +75,7 @@ extern class ListSelectionEvent extends java.util.EventObject
 	* @return the last row whose selection value may have changed,
 	*         where zero is the first row
 	*/
-	@:overload public function getLastIndex() : Int;
+	@:overload @:public public function getLastIndex() : Int;
 	
 	/**
 	* Returns whether or not this is one in a series of multiple events,
@@ -86,7 +86,7 @@ extern class ListSelectionEvent extends java.util.EventObject
 	* @return {@code true} if this is one in a series of multiple events,
 	*         where changes are still being made
 	*/
-	@:overload public function getValueIsAdjusting() : Bool;
+	@:overload @:public public function getValueIsAdjusting() : Bool;
 	
 	/**
 	* Returns a {@code String} that displays and identifies this
@@ -94,7 +94,7 @@ extern class ListSelectionEvent extends java.util.EventObject
 	*
 	* @return a String representation of this object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

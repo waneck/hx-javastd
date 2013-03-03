@@ -55,102 +55,102 @@ extern class ShortMessage extends javax.sound.midi.MidiMessage
 	* Status byte for MIDI Time Code Quarter Frame message (0xF1, or 241).
 	* @see MidiMessage#getStatus
 	*/
-	public static var MIDI_TIME_CODE(default, null) : Int;
+	@:public @:static @:final public static var MIDI_TIME_CODE(default, null) : Int;
 	
 	/**
 	* Status byte for Song Position Pointer message (0xF2, or 242).
 	* @see MidiMessage#getStatus
 	*/
-	public static var SONG_POSITION_POINTER(default, null) : Int;
+	@:public @:static @:final public static var SONG_POSITION_POINTER(default, null) : Int;
 	
 	/**
 	* Status byte for MIDI Song Select message (0xF3, or 243).
 	* @see MidiMessage#getStatus
 	*/
-	public static var SONG_SELECT(default, null) : Int;
+	@:public @:static @:final public static var SONG_SELECT(default, null) : Int;
 	
 	/**
 	* Status byte for Tune Request message (0xF6, or 246).
 	* @see MidiMessage#getStatus
 	*/
-	public static var TUNE_REQUEST(default, null) : Int;
+	@:public @:static @:final public static var TUNE_REQUEST(default, null) : Int;
 	
 	/**
 	* Status byte for End of System Exclusive message (0xF7, or 247).
 	* @see MidiMessage#getStatus
 	*/
-	public static var END_OF_EXCLUSIVE(default, null) : Int;
+	@:public @:static @:final public static var END_OF_EXCLUSIVE(default, null) : Int;
 	
 	/**
 	* Status byte for Timing Clock messagem (0xF8, or 248).
 	* @see MidiMessage#getStatus
 	*/
-	public static var TIMING_CLOCK(default, null) : Int;
+	@:public @:static @:final public static var TIMING_CLOCK(default, null) : Int;
 	
 	/**
 	* Status byte for Start message (0xFA, or 250).
 	* @see MidiMessage#getStatus
 	*/
-	public static var START(default, null) : Int;
+	@:public @:static @:final public static var START(default, null) : Int;
 	
 	/**
 	* Status byte for Continue message (0xFB, or 251).
 	* @see MidiMessage#getStatus
 	*/
-	public static var CONTINUE(default, null) : Int;
+	@:public @:static @:final public static var CONTINUE(default, null) : Int;
 	
 	/**
 	* Status byte for Stop message (0xFC, or 252).
 	* @see MidiMessage#getStatus
 	*/
-	public static var STOP(default, null) : Int;
+	@:public @:static @:final public static var STOP(default, null) : Int;
 	
 	/**
 	* Status byte for Active Sensing message (0xFE, or 254).
 	* @see MidiMessage#getStatus
 	*/
-	public static var ACTIVE_SENSING(default, null) : Int;
+	@:public @:static @:final public static var ACTIVE_SENSING(default, null) : Int;
 	
 	/**
 	* Status byte for System Reset message (0xFF, or 255).
 	* @see MidiMessage#getStatus
 	*/
-	public static var SYSTEM_RESET(default, null) : Int;
+	@:public @:static @:final public static var SYSTEM_RESET(default, null) : Int;
 	
 	/**
 	* Command value for Note Off message (0x80, or 128)
 	*/
-	public static var NOTE_OFF(default, null) : Int;
+	@:public @:static @:final public static var NOTE_OFF(default, null) : Int;
 	
 	/**
 	* Command value for Note On message (0x90, or 144)
 	*/
-	public static var NOTE_ON(default, null) : Int;
+	@:public @:static @:final public static var NOTE_ON(default, null) : Int;
 	
 	/**
 	* Command value for Polyphonic Key Pressure (Aftertouch) message (0xA0, or 160)
 	*/
-	public static var POLY_PRESSURE(default, null) : Int;
+	@:public @:static @:final public static var POLY_PRESSURE(default, null) : Int;
 	
 	/**
 	* Command value for Control Change message (0xB0, or 176)
 	*/
-	public static var CONTROL_CHANGE(default, null) : Int;
+	@:public @:static @:final public static var CONTROL_CHANGE(default, null) : Int;
 	
 	/**
 	* Command value for Program Change message (0xC0, or 192)
 	*/
-	public static var PROGRAM_CHANGE(default, null) : Int;
+	@:public @:static @:final public static var PROGRAM_CHANGE(default, null) : Int;
 	
 	/**
 	* Command value for Channel Pressure (Aftertouch) message (0xD0, or 208)
 	*/
-	public static var CHANNEL_PRESSURE(default, null) : Int;
+	@:public @:static @:final public static var CHANNEL_PRESSURE(default, null) : Int;
 	
 	/**
 	* Command value for Pitch Bend message (0xE0, or 224)
 	*/
-	public static var PITCH_BEND(default, null) : Int;
+	@:public @:static @:final public static var PITCH_BEND(default, null) : Int;
 	
 	/**
 	* Constructs a new <code>ShortMessage</code>.  The
@@ -160,7 +160,7 @@ extern class ShortMessage extends javax.sound.midi.MidiMessage
 	* methods.
 	* @see #setMessage
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new {@code ShortMessage} which represents a MIDI
@@ -177,7 +177,7 @@ extern class ShortMessage extends javax.sound.midi.MidiMessage
 	* @see #getStatus()
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(status : Int) : Void;
+	@:require(java7) @:overload @:public public function new(status : Int) : Void;
 	
 	/**
 	* Constructs a new {@code ShortMessage} which represents a MIDI message
@@ -200,7 +200,7 @@ extern class ShortMessage extends javax.sound.midi.MidiMessage
 	* @see #getData2()
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(status : Int, data1 : Int, data2 : Int) : Void;
+	@:require(java7) @:overload @:public public function new(status : Int, data1 : Int, data2 : Int) : Void;
 	
 	/**
 	* Constructs a new {@code ShortMessage} which represents a channel
@@ -226,7 +226,7 @@ extern class ShortMessage extends javax.sound.midi.MidiMessage
 	* @see #getData2()
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(command : Int, channel : Int, data1 : Int, data2 : Int) : Void;
+	@:require(java7) @:overload @:public public function new(command : Int, channel : Int, data1 : Int, data2 : Int) : Void;
 	
 	/**
 	* Constructs a new <code>ShortMessage</code>.
@@ -235,7 +235,7 @@ extern class ShortMessage extends javax.sound.midi.MidiMessage
 	* method.
 	* @see #setMessage
 	*/
-	@:overload private function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected private function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the parameters for a MIDI message that takes no data bytes.
@@ -245,7 +245,7 @@ extern class ShortMessage extends javax.sound.midi.MidiMessage
 	* @see #setMessage(int, int, int)
 	* @see #setMessage(int, int, int, int)
 	*/
-	@:overload public function setMessage(status : Int) : Void;
+	@:overload @:public public function setMessage(status : Int) : Void;
 	
 	/**
 	* Sets the  parameters for a MIDI message that takes one or two data
@@ -262,7 +262,7 @@ extern class ShortMessage extends javax.sound.midi.MidiMessage
 	* @see #setMessage(int, int, int, int)
 	* @see #setMessage(int)
 	*/
-	@:overload public function setMessage(status : Int, data1 : Int, data2 : Int) : Void;
+	@:overload @:public public function setMessage(status : Int, data1 : Int, data2 : Int) : Void;
 	
 	/**
 	* Sets the short message parameters for a  channel message
@@ -286,7 +286,7 @@ extern class ShortMessage extends javax.sound.midi.MidiMessage
 	* @see #getData1
 	* @see #getData2
 	*/
-	@:overload public function setMessage(command : Int, channel : Int, data1 : Int, data2 : Int) : Void;
+	@:overload @:public public function setMessage(command : Int, channel : Int, data1 : Int, data2 : Int) : Void;
 	
 	/**
 	* Obtains the MIDI channel associated with this event.  This method
@@ -295,7 +295,7 @@ extern class ShortMessage extends javax.sound.midi.MidiMessage
 	* @return MIDI channel associated with the message.
 	* @see #setMessage(int, int, int, int)
 	*/
-	@:overload public function getChannel() : Int;
+	@:overload @:public public function getChannel() : Int;
 	
 	/**
 	* Obtains the MIDI command associated with this event.  This method
@@ -303,28 +303,28 @@ extern class ShortMessage extends javax.sound.midi.MidiMessage
 	* value will not be meaningful.
 	* @see #setMessage(int, int, int, int)
 	*/
-	@:overload public function getCommand() : Int;
+	@:overload @:public public function getCommand() : Int;
 	
 	/**
 	* Obtains the first data byte in the message.
 	* @return the value of the <code>data1</code> field
 	* @see #setMessage(int, int, int)
 	*/
-	@:overload public function getData1() : Int;
+	@:overload @:public public function getData1() : Int;
 	
 	/**
 	* Obtains the second data byte in the message.
 	* @return the value of the <code>data2</code> field
 	* @see #setMessage(int, int, int)
 	*/
-	@:overload public function getData2() : Int;
+	@:overload @:public public function getData2() : Int;
 	
 	/**
 	* Creates a new object of the same class and with the same contents
 	* as this object.
 	* @return a clone of this instance.
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Retrieves the number of data bytes associated with a particular
@@ -335,7 +335,7 @@ extern class ShortMessage extends javax.sound.midi.MidiMessage
 	* <code>status</code> argument does not represent the status byte for any
 	* short message
 	*/
-	@:overload @:final private function getDataLength(status : Int) : Int;
+	@:overload @:protected @:final private function getDataLength(status : Int) : Int;
 	
 	
 }

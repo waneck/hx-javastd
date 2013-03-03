@@ -38,7 +38,7 @@ package javax.crypto;
 	* A detail message is a String that describes this particular
 	* exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an IllegalBlockSizeException with the specified
@@ -46,7 +46,7 @@ package javax.crypto;
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

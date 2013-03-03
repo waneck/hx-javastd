@@ -84,22 +84,22 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* An enumeration that is always empty. This is used when an enumeration
 	* of a leaf node's children is requested.
 	*/
-	public static var EMPTY_ENUMERATION(default, null) : java.util.Enumeration<javax.swing.tree.TreeNode>;
+	@:static @:public @:final public static var EMPTY_ENUMERATION(default, null) : java.util.Enumeration<javax.swing.tree.TreeNode>;
 	
 	/** this node's parent, or null if this node has no parent */
-	private var parent : javax.swing.tree.MutableTreeNode;
+	@:protected private var parent : javax.swing.tree.MutableTreeNode;
 	
 	/** optional user object */
-	@:transient private var userObject : Dynamic;
+	@:transient @:protected private var userObject : Dynamic;
 	
 	/** true if the node is able to have children */
-	private var allowsChildren : Bool;
+	@:protected private var allowsChildren : Bool;
 	
 	/**
 	* Creates a tree node that has no parent and no children, but which
 	* allows children.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a tree node with no parent, no children, but which allows
@@ -108,7 +108,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @param userObject an Object provided by the user that constitutes
 	*                   the node's data
 	*/
-	@:overload public function new(userObject : Dynamic) : Void;
+	@:overload @:public public function new(userObject : Dynamic) : Void;
 	
 	/**
 	* Creates a tree node with no parent, no children, initialized with
@@ -120,7 +120,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @param allowsChildren if true, the node is allowed to have child
 	*        nodes -- otherwise, it is always a leaf node
 	*/
-	@:overload public function new(userObject : Dynamic, allowsChildren : Bool) : Void;
+	@:overload @:public public function new(userObject : Dynamic, allowsChildren : Bool) : Void;
 	
 	/**
 	* Removes <code>newChild</code> from its present parent (if it has a
@@ -141,7 +141,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	*                                          children
 	* @see     #isNodeDescendant
 	*/
-	@:overload public function insert(newChild : javax.swing.tree.MutableTreeNode, childIndex : Int) : Void;
+	@:overload @:public public function insert(newChild : javax.swing.tree.MutableTreeNode, childIndex : Int) : Void;
 	
 	/**
 	* Removes the child at the specified index from this node's children
@@ -153,7 +153,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @exception       ArrayIndexOutOfBoundsException  if
 	*                          <code>childIndex</code> is out of bounds
 	*/
-	@:overload public function remove(childIndex : Int) : Void;
+	@:overload @:public public function remove(childIndex : Int) : Void;
 	
 	/**
 	* Sets this node's parent to <code>newParent</code> but does not
@@ -164,14 +164,14 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	*
 	* @param   newParent       this node's new parent
 	*/
-	@:overload public function setParent(newParent : javax.swing.tree.MutableTreeNode) : Void;
+	@:overload @:public public function setParent(newParent : javax.swing.tree.MutableTreeNode) : Void;
 	
 	/**
 	* Returns this node's parent or null if this node has no parent.
 	*
 	* @return  this node's parent TreeNode, or null if this node has no parent
 	*/
-	@:overload public function getParent() : javax.swing.tree.TreeNode;
+	@:overload @:public public function getParent() : javax.swing.tree.TreeNode;
 	
 	/**
 	* Returns the child at the specified index in this node's child array.
@@ -181,14 +181,14 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	*                                          is out of bounds
 	* @return  the TreeNode in this node's child array at  the specified index
 	*/
-	@:overload public function getChildAt(index : Int) : javax.swing.tree.TreeNode;
+	@:overload @:public public function getChildAt(index : Int) : javax.swing.tree.TreeNode;
 	
 	/**
 	* Returns the number of children of this node.
 	*
 	* @return  an int giving the number of children of this node
 	*/
-	@:overload public function getChildCount() : Int;
+	@:overload @:public public function getChildCount() : Int;
 	
 	/**
 	* Returns the index of the specified child in this node's child array.
@@ -203,7 +203,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	*          array, or <code>-1</code> if the specified node is a not
 	*          a child of this node
 	*/
-	@:overload public function getIndex(aChild : javax.swing.tree.TreeNode) : Int;
+	@:overload @:public public function getIndex(aChild : javax.swing.tree.TreeNode) : Int;
 	
 	/**
 	* Creates and returns a forward-order enumeration of this node's
@@ -212,7 +212,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	*
 	* @return  an Enumeration of this node's children
 	*/
-	@:overload public function children() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function children() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Determines whether or not this node is allowed to have children.
@@ -223,14 +223,14 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	*
 	* @param   allows  true if this node is allowed to have children
 	*/
-	@:overload public function setAllowsChildren(allows : Bool) : Void;
+	@:overload @:public public function setAllowsChildren(allows : Bool) : Void;
 	
 	/**
 	* Returns true if this node is allowed to have children.
 	*
 	* @return  true if this node allows children, else false
 	*/
-	@:overload public function getAllowsChildren() : Bool;
+	@:overload @:public public function getAllowsChildren() : Bool;
 	
 	/**
 	* Sets the user object for this node to <code>userObject</code>.
@@ -240,7 +240,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #getUserObject
 	* @see     #toString
 	*/
-	@:overload public function setUserObject(userObject : Dynamic) : Void;
+	@:overload @:public public function setUserObject(userObject : Dynamic) : Void;
 	
 	/**
 	* Returns this node's user object.
@@ -249,14 +249,14 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #setUserObject
 	* @see     #toString
 	*/
-	@:overload public function getUserObject() : Dynamic;
+	@:overload @:public public function getUserObject() : Dynamic;
 	
 	/**
 	* Removes the subtree rooted at this node from the tree, giving this
 	* node a null parent.  Does nothing if this node is the root of its
 	* tree.
 	*/
-	@:overload public function removeFromParent() : Void;
+	@:overload @:public public function removeFromParent() : Void;
 	
 	/**
 	* Removes <code>aChild</code> from this node's child array, giving it a
@@ -266,13 +266,13 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @exception       IllegalArgumentException        if <code>aChild</code>
 	*                                  is null or is not a child of this node
 	*/
-	@:overload public function remove(aChild : javax.swing.tree.MutableTreeNode) : Void;
+	@:overload @:public public function remove(aChild : javax.swing.tree.MutableTreeNode) : Void;
 	
 	/**
 	* Removes all of this node's children, setting their parents to null.
 	* If this node has no children, this method does nothing.
 	*/
-	@:overload public function removeAllChildren() : Void;
+	@:overload @:public public function removeAllChildren() : Void;
 	
 	/**
 	* Removes <code>newChild</code> from its parent and makes it a child of
@@ -285,7 +285,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @exception       IllegalStateException   if this node does not allow
 	*                                          children
 	*/
-	@:overload public function add(newChild : javax.swing.tree.MutableTreeNode) : Void;
+	@:overload @:public public function add(newChild : javax.swing.tree.MutableTreeNode) : Void;
 	
 	/**
 	* Returns true if <code>anotherNode</code> is an ancestor of this node
@@ -300,7 +300,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @param   anotherNode     node to test as an ancestor of this node
 	* @return  true if this node is a descendant of <code>anotherNode</code>
 	*/
-	@:overload public function isNodeAncestor(anotherNode : javax.swing.tree.TreeNode) : Bool;
+	@:overload @:public public function isNodeAncestor(anotherNode : javax.swing.tree.TreeNode) : Bool;
 	
 	/**
 	* Returns true if <code>anotherNode</code> is a descendant of this node
@@ -315,7 +315,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @param   anotherNode     node to test as descendant of this node
 	* @return  true if this node is an ancestor of <code>anotherNode</code>
 	*/
-	@:overload public function isNodeDescendant(anotherNode : javax.swing.tree.DefaultMutableTreeNode) : Bool;
+	@:overload @:public public function isNodeDescendant(anotherNode : javax.swing.tree.DefaultMutableTreeNode) : Bool;
 	
 	/**
 	* Returns the nearest common ancestor to this node and <code>aNode</code>.
@@ -329,7 +329,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @return  nearest ancestor common to this node and <code>aNode</code>,
 	*          or null if none
 	*/
-	@:overload public function getSharedAncestor(aNode : javax.swing.tree.DefaultMutableTreeNode) : javax.swing.tree.TreeNode;
+	@:overload @:public public function getSharedAncestor(aNode : javax.swing.tree.DefaultMutableTreeNode) : javax.swing.tree.TreeNode;
 	
 	/**
 	* Returns true if and only if <code>aNode</code> is in the same tree
@@ -340,7 +340,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @return  true if <code>aNode</code> is in the same tree as this node;
 	*          false if <code>aNode</code> is null
 	*/
-	@:overload public function isNodeRelated(aNode : javax.swing.tree.DefaultMutableTreeNode) : Bool;
+	@:overload @:public public function isNodeRelated(aNode : javax.swing.tree.DefaultMutableTreeNode) : Bool;
 	
 	/**
 	* Returns the depth of the tree rooted at this node -- the longest
@@ -352,7 +352,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #getLevel
 	* @return  the depth of the tree whose root is this node
 	*/
-	@:overload public function getDepth() : Int;
+	@:overload @:public public function getDepth() : Int;
 	
 	/**
 	* Returns the number of levels above this node -- the distance from
@@ -361,7 +361,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #getDepth
 	* @return  the number of levels above this node
 	*/
-	@:overload public function getLevel() : Int;
+	@:overload @:public public function getLevel() : Int;
 	
 	/**
 	* Returns the path from the root, to get to this node.  The last
@@ -371,7 +371,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	*         first element in the path is the root and the last
 	*         element is this node.
 	*/
-	@:overload public function getPath() : java.NativeArray<javax.swing.tree.TreeNode>;
+	@:overload @:public public function getPath() : java.NativeArray<javax.swing.tree.TreeNode>;
 	
 	/**
 	* Builds the parents of node up to and including the root node,
@@ -385,14 +385,14 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @return an array of TreeNodes giving the path from the root to the
 	*         specified node
 	*/
-	@:overload private function getPathToRoot(aNode : javax.swing.tree.TreeNode, depth : Int) : java.NativeArray<javax.swing.tree.TreeNode>;
+	@:overload @:protected private function getPathToRoot(aNode : javax.swing.tree.TreeNode, depth : Int) : java.NativeArray<javax.swing.tree.TreeNode>;
 	
 	/**
 	* Returns the user object path, from the root, to get to this node.
 	* If some of the TreeNodes in the path have null user objects, the
 	* returned path will contain nulls.
 	*/
-	@:overload public function getUserObjectPath() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getUserObjectPath() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns the root of the tree that contains this node.  The root is
@@ -401,7 +401,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #isNodeAncestor
 	* @return  the root of the tree that contains this node
 	*/
-	@:overload public function getRoot() : javax.swing.tree.TreeNode;
+	@:overload @:public public function getRoot() : javax.swing.tree.TreeNode;
 	
 	/**
 	* Returns true if this node is the root of the tree.  The root is
@@ -410,7 +410,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	*
 	* @return  true if this node is the root of its tree
 	*/
-	@:overload public function isRoot() : Bool;
+	@:overload @:public public function isRoot() : Bool;
 	
 	/**
 	* Returns the node that follows this node in a preorder traversal of this
@@ -422,7 +422,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @return  the node that follows this node in a preorder traversal, or
 	*          null if this node is last
 	*/
-	@:overload public function getNextNode() : javax.swing.tree.DefaultMutableTreeNode;
+	@:overload @:public public function getNextNode() : javax.swing.tree.DefaultMutableTreeNode;
 	
 	/**
 	* Returns the node that precedes this node in a preorder traversal of
@@ -435,7 +435,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @return  the node that precedes this node in a preorder traversal, or
 	*          null if this node is the first
 	*/
-	@:overload public function getPreviousNode() : javax.swing.tree.DefaultMutableTreeNode;
+	@:overload @:public public function getPreviousNode() : javax.swing.tree.DefaultMutableTreeNode;
 	
 	/**
 	* Creates and returns an enumeration that traverses the subtree rooted at
@@ -448,7 +448,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #postorderEnumeration
 	* @return  an enumeration for traversing the tree in preorder
 	*/
-	@:overload public function preorderEnumeration() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function preorderEnumeration() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Creates and returns an enumeration that traverses the subtree rooted at
@@ -463,7 +463,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #preorderEnumeration
 	* @return  an enumeration for traversing the tree in postorder
 	*/
-	@:overload public function postorderEnumeration() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function postorderEnumeration() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Creates and returns an enumeration that traverses the subtree rooted at
@@ -476,7 +476,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #depthFirstEnumeration
 	* @return  an enumeration for traversing the tree in breadth-first order
 	*/
-	@:overload public function breadthFirstEnumeration() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function breadthFirstEnumeration() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Creates and returns an enumeration that traverses the subtree rooted at
@@ -491,7 +491,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #postorderEnumeration
 	* @return  an enumeration for traversing the tree in depth-first order
 	*/
-	@:overload public function depthFirstEnumeration() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function depthFirstEnumeration() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Creates and returns an enumeration that follows the path from
@@ -513,7 +513,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @return  an enumeration for following the path from an ancestor of
 	*          this node to this one
 	*/
-	@:overload public function pathFromAncestorEnumeration(ancestor : javax.swing.tree.TreeNode) : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function pathFromAncestorEnumeration(ancestor : javax.swing.tree.TreeNode) : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Returns true if <code>aNode</code> is a child of this node.  If
@@ -522,7 +522,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @return  true if <code>aNode</code> is a child of this node; false if
 	*                  <code>aNode</code> is null
 	*/
-	@:overload public function isNodeChild(aNode : javax.swing.tree.TreeNode) : Bool;
+	@:overload @:public public function isNodeChild(aNode : javax.swing.tree.TreeNode) : Bool;
 	
 	/**
 	* Returns this node's first child.  If this node has no children,
@@ -531,7 +531,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @return  the first child of this node
 	* @exception       NoSuchElementException  if this node has no children
 	*/
-	@:overload public function getFirstChild() : javax.swing.tree.TreeNode;
+	@:overload @:public public function getFirstChild() : javax.swing.tree.TreeNode;
 	
 	/**
 	* Returns this node's last child.  If this node has no children,
@@ -540,7 +540,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @return  the last child of this node
 	* @exception       NoSuchElementException  if this node has no children
 	*/
-	@:overload public function getLastChild() : javax.swing.tree.TreeNode;
+	@:overload @:public public function getLastChild() : javax.swing.tree.TreeNode;
 	
 	/**
 	* Returns the child in this node's child array that immediately
@@ -556,7 +556,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @return  the child of this node that immediately follows
 	*          <code>aChild</code>
 	*/
-	@:overload public function getChildAfter(aChild : javax.swing.tree.TreeNode) : javax.swing.tree.TreeNode;
+	@:overload @:public public function getChildAfter(aChild : javax.swing.tree.TreeNode) : javax.swing.tree.TreeNode;
 	
 	/**
 	* Returns the child in this node's child array that immediately
@@ -570,7 +570,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @return  the child of this node that immediately precedes
 	*          <code>aChild</code>
 	*/
-	@:overload public function getChildBefore(aChild : javax.swing.tree.TreeNode) : javax.swing.tree.TreeNode;
+	@:overload @:public public function getChildBefore(aChild : javax.swing.tree.TreeNode) : javax.swing.tree.TreeNode;
 	
 	/**
 	* Returns true if <code>anotherNode</code> is a sibling of (has the
@@ -580,7 +580,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @param   anotherNode     node to test as sibling of this node
 	* @return  true if <code>anotherNode</code> is a sibling of this node
 	*/
-	@:overload public function isNodeSibling(anotherNode : javax.swing.tree.TreeNode) : Bool;
+	@:overload @:public public function isNodeSibling(anotherNode : javax.swing.tree.TreeNode) : Bool;
 	
 	/**
 	* Returns the number of siblings of this node.  A node is its own sibling
@@ -589,7 +589,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	*
 	* @return  the number of siblings of this node
 	*/
-	@:overload public function getSiblingCount() : Int;
+	@:overload @:public public function getSiblingCount() : Int;
 	
 	/**
 	* Returns the next sibling of this node in the parent's children array.
@@ -601,7 +601,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #children
 	* @return  the sibling of this node that immediately follows this node
 	*/
-	@:overload public function getNextSibling() : javax.swing.tree.DefaultMutableTreeNode;
+	@:overload @:public public function getNextSibling() : javax.swing.tree.DefaultMutableTreeNode;
 	
 	/**
 	* Returns the previous sibling of this node in the parent's children
@@ -611,7 +611,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	*
 	* @return  the sibling of this node that immediately precedes this node
 	*/
-	@:overload public function getPreviousSibling() : javax.swing.tree.DefaultMutableTreeNode;
+	@:overload @:public public function getPreviousSibling() : javax.swing.tree.DefaultMutableTreeNode;
 	
 	/**
 	* Returns true if this node has no children.  To distinguish between
@@ -622,7 +622,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #getAllowsChildren
 	* @return  true if this node has no children
 	*/
-	@:overload public function isLeaf() : Bool;
+	@:overload @:public public function isLeaf() : Bool;
 	
 	/**
 	* Finds and returns the first leaf that is a descendant of this node --
@@ -633,7 +633,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #isNodeDescendant
 	* @return  the first leaf in the subtree rooted at this node
 	*/
-	@:overload public function getFirstLeaf() : javax.swing.tree.DefaultMutableTreeNode;
+	@:overload @:public public function getFirstLeaf() : javax.swing.tree.DefaultMutableTreeNode;
 	
 	/**
 	* Finds and returns the last leaf that is a descendant of this node --
@@ -644,7 +644,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #isNodeDescendant
 	* @return  the last leaf in the subtree rooted at this node
 	*/
-	@:overload public function getLastLeaf() : javax.swing.tree.DefaultMutableTreeNode;
+	@:overload @:public public function getLastLeaf() : javax.swing.tree.DefaultMutableTreeNode;
 	
 	/**
 	* Returns the leaf after this node or null if this node is the
@@ -665,7 +665,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #isLeaf
 	* @return  returns the next leaf past this node
 	*/
-	@:overload public function getNextLeaf() : javax.swing.tree.DefaultMutableTreeNode;
+	@:overload @:public public function getNextLeaf() : javax.swing.tree.DefaultMutableTreeNode;
 	
 	/**
 	* Returns the leaf before this node or null if this node is the
@@ -686,7 +686,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see             #isLeaf
 	* @return  returns the leaf before this node
 	*/
-	@:overload public function getPreviousLeaf() : javax.swing.tree.DefaultMutableTreeNode;
+	@:overload @:public public function getPreviousLeaf() : javax.swing.tree.DefaultMutableTreeNode;
 	
 	/**
 	* Returns the total number of leaves that are descendants of this node.
@@ -696,7 +696,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #isNodeAncestor
 	* @return  the number of leaves beneath this node
 	*/
-	@:overload public function getLeafCount() : Int;
+	@:overload @:public public function getLeafCount() : Int;
 	
 	/**
 	* Returns the result of sending <code>toString()</code> to this node's
@@ -704,7 +704,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	*
 	* @see     #getUserObject
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Overridden to make clone public.  Returns a shallow copy of this node;
@@ -713,79 +713,79 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	*
 	* @return  a copy of this node
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }
 @:native('javax$swing$tree$DefaultMutableTreeNode$PreorderEnumeration') @:internal extern class DefaultMutableTreeNode_PreorderEnumeration implements java.util.Enumeration<javax.swing.tree.TreeNode>
 {
-	@:overload public function new(rootNode : javax.swing.tree.TreeNode) : Void;
+	@:overload @:public public function new(rootNode : javax.swing.tree.TreeNode) : Void;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : javax.swing.tree.TreeNode;
+	@:overload @:public public function nextElement() : javax.swing.tree.TreeNode;
 	
 	
 }
 @:native('javax$swing$tree$DefaultMutableTreeNode$PostorderEnumeration') @:internal extern class DefaultMutableTreeNode_PostorderEnumeration implements java.util.Enumeration<javax.swing.tree.TreeNode>
 {
-	private var root : javax.swing.tree.TreeNode;
+	@:protected private var root : javax.swing.tree.TreeNode;
 	
-	private var children : java.util.Enumeration<javax.swing.tree.TreeNode>;
+	@:protected private var children : java.util.Enumeration<javax.swing.tree.TreeNode>;
 	
-	private var subtree : java.util.Enumeration<javax.swing.tree.TreeNode>;
+	@:protected private var subtree : java.util.Enumeration<javax.swing.tree.TreeNode>;
 	
-	@:overload public function new(rootNode : javax.swing.tree.TreeNode) : Void;
+	@:overload @:public public function new(rootNode : javax.swing.tree.TreeNode) : Void;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : javax.swing.tree.TreeNode;
+	@:overload @:public public function nextElement() : javax.swing.tree.TreeNode;
 	
 	
 }
 @:native('javax$swing$tree$DefaultMutableTreeNode$BreadthFirstEnumeration') @:internal extern class DefaultMutableTreeNode_BreadthFirstEnumeration implements java.util.Enumeration<javax.swing.tree.TreeNode>
 {
-	private var queue : javax.swing.tree.DefaultMutableTreeNode.DefaultMutableTreeNode_BreadthFirstEnumeration_Queue;
+	@:protected private var queue : javax.swing.tree.DefaultMutableTreeNode.DefaultMutableTreeNode_BreadthFirstEnumeration_Queue;
 	
-	@:overload public function new(rootNode : javax.swing.tree.TreeNode) : Void;
+	@:overload @:public public function new(rootNode : javax.swing.tree.TreeNode) : Void;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : javax.swing.tree.TreeNode;
+	@:overload @:public public function nextElement() : javax.swing.tree.TreeNode;
 	
 	
 }
 @:native('javax$swing$tree$DefaultMutableTreeNode$BreadthFirstEnumeration$Queue') @:internal extern class DefaultMutableTreeNode_BreadthFirstEnumeration_Queue
 {
-	@:overload public function enqueue(anObject : Dynamic) : Void;
+	@:overload @:public public function enqueue(anObject : Dynamic) : Void;
 	
-	@:overload public function dequeue() : Dynamic;
+	@:overload @:public public function dequeue() : Dynamic;
 	
-	@:overload public function firstObject() : Dynamic;
+	@:overload @:public public function firstObject() : Dynamic;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	
 }
 @:native('javax$swing$tree$DefaultMutableTreeNode$BreadthFirstEnumeration$Queue$QNode') @:internal extern class DefaultMutableTreeNode_BreadthFirstEnumeration_Queue_QNode
 {
-	public var object : Dynamic;
+	@:public public var object : Dynamic;
 	
-	public var next : javax.swing.tree.DefaultMutableTreeNode.DefaultMutableTreeNode_BreadthFirstEnumeration_Queue_QNode;
+	@:public public var next : javax.swing.tree.DefaultMutableTreeNode.DefaultMutableTreeNode_BreadthFirstEnumeration_Queue_QNode;
 	
-	@:overload public function new(object : Dynamic, next : javax.swing.tree.DefaultMutableTreeNode.DefaultMutableTreeNode_BreadthFirstEnumeration_Queue_QNode) : Void;
+	@:overload @:public public function new(object : Dynamic, next : javax.swing.tree.DefaultMutableTreeNode.DefaultMutableTreeNode_BreadthFirstEnumeration_Queue_QNode) : Void;
 	
 	
 }
 @:native('javax$swing$tree$DefaultMutableTreeNode$PathBetweenNodesEnumeration') @:internal extern class DefaultMutableTreeNode_PathBetweenNodesEnumeration implements java.util.Enumeration<javax.swing.tree.TreeNode>
 {
-	private var stack : java.util.Stack<javax.swing.tree.TreeNode>;
+	@:protected private var stack : java.util.Stack<javax.swing.tree.TreeNode>;
 	
-	@:overload public function new(ancestor : javax.swing.tree.TreeNode, descendant : javax.swing.tree.TreeNode) : Void;
+	@:overload @:public public function new(ancestor : javax.swing.tree.TreeNode, descendant : javax.swing.tree.TreeNode) : Void;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : javax.swing.tree.TreeNode;
+	@:overload @:public public function nextElement() : javax.swing.tree.TreeNode;
 	
 	
 }

@@ -37,59 +37,59 @@ exception statement from your version.
 */
 extern class PulseAudioMixer implements javax.sound.sampled.Mixer
 {
-	@:overload @:synchronized public static function getInstance() : org.classpath.icedtea.pulseaudio.PulseAudioMixer;
+	@:overload @:synchronized @:public @:static public static function getInstance() : org.classpath.icedtea.pulseaudio.PulseAudioMixer;
 	
-	@:overload public function getLine(info : javax.sound.sampled.Line.Line_Info) : javax.sound.sampled.Line;
+	@:overload @:public public function getLine(info : javax.sound.sampled.Line.Line_Info) : javax.sound.sampled.Line;
 	
-	@:overload public function getMaxLines(info : javax.sound.sampled.Line.Line_Info) : Int;
+	@:overload @:public public function getMaxLines(info : javax.sound.sampled.Line.Line_Info) : Int;
 	
-	@:overload public function getMixerInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload @:public public function getMixerInfo() : javax.sound.sampled.Line.Line_Info;
 	
-	@:overload public function getSourceLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public public function getSourceLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
-	@:overload public function getSourceLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public public function getSourceLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
-	@:overload public function getSourceLines() : java.NativeArray<javax.sound.sampled.Line>;
+	@:overload @:public public function getSourceLines() : java.NativeArray<javax.sound.sampled.Line>;
 	
-	@:overload public function getTargetLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public public function getTargetLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
-	@:overload public function getTargetLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public public function getTargetLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
-	@:overload public function getTargetLines() : java.NativeArray<javax.sound.sampled.Line>;
+	@:overload @:public public function getTargetLines() : java.NativeArray<javax.sound.sampled.Line>;
 	
-	@:overload public function isLineSupported(info : javax.sound.sampled.Line.Line_Info) : Bool;
+	@:overload @:public public function isLineSupported(info : javax.sound.sampled.Line.Line_Info) : Bool;
 	
-	@:overload public function isSynchronizationSupported(lines : java.NativeArray<javax.sound.sampled.Line>, maintainSync : Bool) : Bool;
+	@:overload @:public public function isSynchronizationSupported(lines : java.NativeArray<javax.sound.sampled.Line>, maintainSync : Bool) : Bool;
 	
-	@:overload public function synchronize(lines : java.NativeArray<javax.sound.sampled.Line>, maintainSync : Bool) : Void;
+	@:overload @:public public function synchronize(lines : java.NativeArray<javax.sound.sampled.Line>, maintainSync : Bool) : Void;
 	
-	@:overload public function unsynchronize(lines : java.NativeArray<javax.sound.sampled.Line>) : Void;
+	@:overload @:public public function unsynchronize(lines : java.NativeArray<javax.sound.sampled.Line>) : Void;
 	
-	@:overload public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
-	@:overload @:synchronized public function close() : Void;
+	@:overload @:synchronized @:public public function close() : Void;
 	
-	@:overload public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
+	@:overload @:public public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
 	
-	@:overload public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
+	@:overload @:public public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
 	
-	@:overload public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload @:public public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
-	@:overload public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
+	@:overload @:public public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
 	
-	@:overload public function isOpen() : Bool;
+	@:overload @:public public function isOpen() : Bool;
 	
-	@:overload public function open() : Void;
+	@:overload @:public public function open() : Void;
 	
-	@:overload public function openLocal() : Void;
+	@:overload @:public public function openLocal() : Void;
 	
-	@:overload public function openLocal(appName : String) : Void;
+	@:overload @:public public function openLocal(appName : String) : Void;
 	
-	@:overload public function openRemote(appName : String, host : String) : Void;
+	@:overload @:public public function openRemote(appName : String, host : String) : Void;
 	
-	@:overload public function openRemote(appName : String, host : String, port : Int) : Void;
+	@:overload @:public public function openRemote(appName : String, host : String, port : Int) : Void;
 	
-	@:overload public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	
 }

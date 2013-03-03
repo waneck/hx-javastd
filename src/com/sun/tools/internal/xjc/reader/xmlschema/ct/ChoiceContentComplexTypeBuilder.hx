@@ -31,9 +31,9 @@ package com.sun.tools.internal.xjc.reader.xmlschema.ct;
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function isApplicable(ct : com.sun.xml.internal.xsom.XSComplexType) : Bool;
+	@:overload @:public public function isApplicable(ct : com.sun.xml.internal.xsom.XSComplexType) : Bool;
 	
-	@:overload public function build(ct : com.sun.xml.internal.xsom.XSComplexType) : Void;
+	@:overload @:public public function build(ct : com.sun.xml.internal.xsom.XSComplexType) : Void;
 	
 	
 }

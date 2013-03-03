@@ -46,17 +46,17 @@ package com.sun.xml.internal.rngom.util;
 */
 extern class Utf16
 {
-	@:overload public static function isSurrogate(c : java.StdTypes.Char16) : Bool;
+	@:overload @:static @:public public static function isSurrogate(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload public static function isSurrogate1(c : java.StdTypes.Char16) : Bool;
+	@:overload @:static @:public public static function isSurrogate1(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload public static function isSurrogate2(c : java.StdTypes.Char16) : Bool;
+	@:overload @:static @:public public static function isSurrogate2(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload public static function scalarValue(c1 : java.StdTypes.Char16, c2 : java.StdTypes.Char16) : Int;
+	@:overload @:static @:public public static function scalarValue(c1 : java.StdTypes.Char16, c2 : java.StdTypes.Char16) : Int;
 	
-	@:overload public static function surrogate1(c : Int) : java.StdTypes.Char16;
+	@:overload @:static @:public public static function surrogate1(c : Int) : java.StdTypes.Char16;
 	
-	@:overload public static function surrogate2(c : Int) : java.StdTypes.Char16;
+	@:overload @:static @:public public static function surrogate2(c : Int) : java.StdTypes.Char16;
 	
 	
 }

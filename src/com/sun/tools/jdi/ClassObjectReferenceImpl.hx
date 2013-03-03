@@ -25,9 +25,9 @@ package com.sun.tools.jdi;
 */
 extern class ClassObjectReferenceImpl extends com.sun.tools.jdi.ObjectReferenceImpl implements com.sun.jdi.ClassObjectReference
 {
-	@:overload public function reflectedType() : com.sun.jdi.ReferenceType;
+	@:overload @:public public function reflectedType() : com.sun.jdi.ReferenceType;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

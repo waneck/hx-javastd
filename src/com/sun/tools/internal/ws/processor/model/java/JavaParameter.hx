@@ -29,31 +29,31 @@ extern class JavaParameter
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : String, type : com.sun.tools.internal.ws.processor.model.java.JavaType, parameter : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
+	@:overload @:public public function new(name : String, type : com.sun.tools.internal.ws.processor.model.java.JavaType, parameter : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
 	
-	@:overload public function new(name : String, type : com.sun.tools.internal.ws.processor.model.java.JavaType, parameter : com.sun.tools.internal.ws.processor.model.Parameter, holder : Bool) : Void;
+	@:overload @:public public function new(name : String, type : com.sun.tools.internal.ws.processor.model.java.JavaType, parameter : com.sun.tools.internal.ws.processor.model.Parameter, holder : Bool) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(s : String) : Void;
+	@:overload @:public public function setName(s : String) : Void;
 	
-	@:overload public function getType() : com.sun.tools.internal.ws.processor.model.java.JavaType;
+	@:overload @:public public function getType() : com.sun.tools.internal.ws.processor.model.java.JavaType;
 	
-	@:overload public function setType(t : com.sun.tools.internal.ws.processor.model.java.JavaType) : Void;
+	@:overload @:public public function setType(t : com.sun.tools.internal.ws.processor.model.java.JavaType) : Void;
 	
-	@:overload public function getParameter() : com.sun.tools.internal.ws.processor.model.Parameter;
+	@:overload @:public public function getParameter() : com.sun.tools.internal.ws.processor.model.Parameter;
 	
-	@:overload public function setParameter(p : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
+	@:overload @:public public function setParameter(p : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
 	
-	@:overload public function isHolder() : Bool;
+	@:overload @:public public function isHolder() : Bool;
 	
-	@:overload public function setHolder(b : Bool) : Void;
+	@:overload @:public public function setHolder(b : Bool) : Void;
 	
-	@:overload public function getHolderName() : String;
+	@:overload @:public public function getHolderName() : String;
 	
-	@:overload public function setHolderName(holderName : String) : Void;
+	@:overload @:public public function setHolderName(holderName : String) : Void;
 	
 	
 }

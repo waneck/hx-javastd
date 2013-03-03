@@ -30,31 +30,31 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 	*
 	* This method checks if the parser is FI parser and acts accordingly.
 	*/
-	@:overload public static function create(reader : javax.xml.stream.XMLStreamReader, visitor : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.StAXConnector;
+	@:overload @:public @:static public static function create(reader : javax.xml.stream.XMLStreamReader, visitor : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.StAXConnector;
 	
 	/**
 	* SAX may fire consecutive characters event, but we don't allow it.
 	* so use this buffer to perform buffering.
 	*/
-	private var buffer(default, null) : java.lang.StringBuilder;
+	@:protected @:final private var buffer(default, null) : java.lang.StringBuilder;
 	
 	/**
 	* Set to true if the text() event is reported, and therefore
 	* the following text() event should be suppressed.
 	*/
-	private var textReported : Bool;
+	@:protected private var textReported : Bool;
 	
-	@:overload private function new(staxStreamReader : javax.xml.stream.XMLStreamReader, visitor : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor) : Void;
+	@:overload @:protected private function new(staxStreamReader : javax.xml.stream.XMLStreamReader, visitor : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor) : Void;
 	
-	@:overload public function bridge() : Void;
+	@:overload @:public override public function bridge() : Void;
 	
-	@:overload private function getCurrentLocation() : javax.xml.stream.Location;
+	@:overload @:protected override private function getCurrentLocation() : javax.xml.stream.Location;
 	
-	@:overload private function getCurrentQName() : String;
+	@:overload @:protected override private function getCurrentQName() : String;
 	
-	@:overload private function handleCharacters() : Void;
+	@:overload @:protected private function handleCharacters() : Void;
 	
-	@:overload public static function getClassLoader() : java.lang.ClassLoader;
+	@:overload @:public @:static public static function getClassLoader() : java.lang.ClassLoader;
 	
 	
 }

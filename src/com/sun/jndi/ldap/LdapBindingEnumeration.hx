@@ -25,9 +25,9 @@ package com.sun.jndi.ldap;
 */
 @:internal extern class LdapBindingEnumeration extends com.sun.jndi.ldap.LdapNamingEnumeration
 {
-	@:overload override private function createItem(dn : String, attrs : javax.naming.directory.Attributes, respCtls : java.util.Vector<Dynamic>) : javax.naming.NameClassPair;
+	@:overload @:protected override private function createItem(dn : String, attrs : javax.naming.directory.Attributes, respCtls : java.util.Vector<Dynamic>) : javax.naming.NameClassPair;
 	
-	@:overload override private function getReferredResults(refCtx : com.sun.jndi.ldap.LdapReferralContext) : com.sun.jndi.ldap.LdapNamingEnumeration;
+	@:overload @:protected override private function getReferredResults(refCtx : com.sun.jndi.ldap.LdapReferralContext) : com.sun.jndi.ldap.LdapNamingEnumeration;
 	
 	
 }

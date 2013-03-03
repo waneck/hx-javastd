@@ -28,27 +28,27 @@ extern class TransferHandler implements java.io.Serializable
 	/**
 	* An <code>int</code> representing no transfer action.
 	*/
-	public static var NONE(default, null) : Int;
+	@:public @:static @:final public static var NONE(default, null) : Int;
 	
 	/**
 	* An <code>int</code> representing a &quot;copy&quot; transfer action.
 	* This value is used when data is copied to a clipboard
 	* or copied elsewhere in a drag and drop operation.
 	*/
-	public static var COPY(default, null) : Int;
+	@:public @:static @:final public static var COPY(default, null) : Int;
 	
 	/**
 	* An <code>int</code> representing a &quot;move&quot; transfer action.
 	* This value is used when data is moved to a clipboard (i.e. a cut)
 	* or moved elsewhere in a drag and drop operation.
 	*/
-	public static var MOVE(default, null) : Int;
+	@:public @:static @:final public static var MOVE(default, null) : Int;
 	
 	/**
 	* An <code>int</code> representing a source action capability of either
 	* &quot;copy&quot; or &quot;move&quot;.
 	*/
-	public static var COPY_OR_MOVE(default, null) : Int;
+	@:public @:static @:final public static var COPY_OR_MOVE(default, null) : Int;
 	
 	/**
 	* An <code>int</code> representing a &quot;link&quot; transfer action.
@@ -58,7 +58,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @see java.awt.dnd.DnDConstants#ACTION_LINK
 	* @since 1.6
 	*/
-	@:require(java6) public static var LINK(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var LINK(default, null) : Int;
 	
 	/**
 	* Returns an {@code Action} that performs cut operations to the
@@ -68,7 +68,7 @@ extern class TransferHandler implements java.io.Serializable
 	*
 	* @return an {@code Action} for performing cuts to the clipboard
 	*/
-	@:overload public static function getCutAction() : javax.swing.Action;
+	@:overload @:public @:static public static function getCutAction() : javax.swing.Action;
 	
 	/**
 	* Returns an {@code Action} that performs copy operations to the
@@ -78,7 +78,7 @@ extern class TransferHandler implements java.io.Serializable
 	*
 	* @return an {@code Action} for performing copies to the clipboard
 	*/
-	@:overload public static function getCopyAction() : javax.swing.Action;
+	@:overload @:public @:static public static function getCopyAction() : javax.swing.Action;
 	
 	/**
 	* Returns an {@code Action} that performs paste operations from the
@@ -88,7 +88,7 @@ extern class TransferHandler implements java.io.Serializable
 	*
 	* @return an {@code Action} for performing pastes from the clipboard
 	*/
-	@:overload public static function getPasteAction() : javax.swing.Action;
+	@:overload @:public @:static public static function getPasteAction() : javax.swing.Action;
 	
 	/**
 	* Constructs a transfer handler that can transfer a Java Bean property
@@ -99,12 +99,12 @@ extern class TransferHandler implements java.io.Serializable
 	*  be <code>null</code> if there is no property associated with the transfer
 	*  handler (a subclass that performs some other kind of transfer, for example)
 	*/
-	@:overload public function new(property : String) : Void;
+	@:overload @:public public function new(property : String) : Void;
 	
 	/**
 	* Convenience constructor for subclasses.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Sets the drag image parameter. The image has to be prepared
@@ -113,7 +113,7 @@ extern class TransferHandler implements java.io.Serializable
 	*
 	* @param img an image to drag
 	*/
-	@:overload public function setDragImage(img : java.awt.Image) : Void;
+	@:overload @:public public function setDragImage(img : java.awt.Image) : Void;
 	
 	/**
 	* Returns the drag image. If there is no image to drag,
@@ -121,7 +121,7 @@ extern class TransferHandler implements java.io.Serializable
 	*
 	* @return the reference to the drag image
 	*/
-	@:overload public function getDragImage() : java.awt.Image;
+	@:overload @:public public function getDragImage() : java.awt.Image;
 	
 	/**
 	* Sets an anchor offset for the image to drag.
@@ -131,7 +131,7 @@ extern class TransferHandler implements java.io.Serializable
 	* to coordinates of an anchor offset of the image
 	* relative to the upper left corner of the image
 	*/
-	@:overload public function setDragImageOffset(p : java.awt.Point) : Void;
+	@:overload @:public public function setDragImageOffset(p : java.awt.Point) : Void;
 	
 	/**
 	* Returns an anchor offset for the image to drag.
@@ -141,7 +141,7 @@ extern class TransferHandler implements java.io.Serializable
 	* relative to the upper left corner of the image.
 	* The point {@code (0,0)} returns by default.
 	*/
-	@:overload public function getDragImageOffset() : java.awt.Point;
+	@:overload @:public public function getDragImageOffset() : java.awt.Point;
 	
 	/**
 	* Causes the Swing drag support to be initiated.  This is called by
@@ -167,7 +167,7 @@ extern class TransferHandler implements java.io.Serializable
 	*               the DnD system may change the action used during the
 	*               course of the drag operation
 	*/
-	@:overload public function exportAsDrag(comp : javax.swing.JComponent, e : java.awt.event.InputEvent, action : Int) : Void;
+	@:overload @:public public function exportAsDrag(comp : javax.swing.JComponent, e : java.awt.event.InputEvent, action : Int) : Void;
 	
 	/**
 	* Causes a transfer from the given component to the
@@ -197,7 +197,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @throws IllegalStateException if the clipboard is currently unavailable
 	* @see Clipboard#setContents(Transferable, ClipboardOwner)
 	*/
-	@:overload public function exportToClipboard(comp : javax.swing.JComponent, clip : java.awt.datatransfer.Clipboard, action : Int) : Void;
+	@:overload @:public public function exportToClipboard(comp : javax.swing.JComponent, clip : java.awt.datatransfer.Clipboard, action : Int) : Void;
 	
 	/**
 	* Causes a transfer to occur from a clipboard or a drag and
@@ -224,7 +224,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @see #canImport(TransferHandler.TransferSupport)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function importData(support : javax.swing.TransferHandler.TransferHandler_TransferSupport) : Bool;
+	@:require(java6) @:overload @:public public function importData(support : javax.swing.TransferHandler.TransferHandler_TransferSupport) : Bool;
 	
 	/**
 	* Causes a transfer to a component from a clipboard or a
@@ -245,7 +245,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @return  true if the data was inserted into the component, false otherwise
 	* @see #importData(TransferHandler.TransferSupport)
 	*/
-	@:overload public function importData(comp : javax.swing.JComponent, t : java.awt.datatransfer.Transferable) : Bool;
+	@:overload @:public public function importData(comp : javax.swing.JComponent, t : java.awt.datatransfer.Transferable) : Bool;
 	
 	/**
 	* This method is called repeatedly during a drag and drop operation
@@ -292,7 +292,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @see javax.swing.TransferHandler.TransferSupport#setDropAction
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function canImport(support : javax.swing.TransferHandler.TransferHandler_TransferSupport) : Bool;
+	@:require(java6) @:overload @:public public function canImport(support : javax.swing.TransferHandler.TransferHandler_TransferSupport) : Bool;
 	
 	/**
 	* Indicates whether a component will accept an import of the given
@@ -312,7 +312,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @return  true if the data can be inserted into the component, false otherwise
 	* @see #canImport(TransferHandler.TransferSupport)
 	*/
-	@:overload public function canImport(comp : javax.swing.JComponent, transferFlavors : java.NativeArray<java.awt.datatransfer.DataFlavor>) : Bool;
+	@:overload @:public public function canImport(comp : javax.swing.JComponent, transferFlavors : java.NativeArray<java.awt.datatransfer.DataFlavor>) : Bool;
 	
 	/**
 	* Returns the type of transfer actions supported by the source;
@@ -328,7 +328,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @return {@code COPY} if the transfer property can be found,
 	*          otherwise returns <code>NONE</code>
 	*/
-	@:overload public function getSourceActions(c : javax.swing.JComponent) : Int;
+	@:overload @:public public function getSourceActions(c : javax.swing.JComponent) : Int;
 	
 	/**
 	* Returns an object that establishes the look of a transfer.  This is
@@ -351,7 +351,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @return  <code>null</code>, indicating
 	*    there is no default visual representation
 	*/
-	@:overload public function getVisualRepresentation(t : java.awt.datatransfer.Transferable) : javax.swing.Icon;
+	@:overload @:public public function getVisualRepresentation(t : java.awt.datatransfer.Transferable) : javax.swing.Icon;
 	
 	/**
 	* Creates a <code>Transferable</code> to use as the source for
@@ -366,7 +366,7 @@ extern class TransferHandler implements java.io.Serializable
 	*  is <code>null</code>
 	*
 	*/
-	@:overload private function createTransferable(c : javax.swing.JComponent) : java.awt.datatransfer.Transferable;
+	@:overload @:protected private function createTransferable(c : javax.swing.JComponent) : java.awt.datatransfer.Transferable;
 	
 	/**
 	* Invoked after data has been exported.  This method should remove
@@ -381,7 +381,7 @@ extern class TransferHandler implements java.io.Serializable
 	*               if the action is <code>NONE</code>.
 	* @param action the actual action that was performed
 	*/
-	@:overload private function exportDone(source : javax.swing.JComponent, data : java.awt.datatransfer.Transferable, action : Int) : Void;
+	@:overload @:protected private function exportDone(source : javax.swing.JComponent, data : java.awt.datatransfer.Transferable, action : Int) : Void;
 	
 	
 }
@@ -394,7 +394,7 @@ extern class TransferHandler implements java.io.Serializable
 	*
 	* @return The {@code TransferHandler} or {@code null}
 	*/
-	@:overload public function getTransferHandler() : javax.swing.TransferHandler;
+	@:overload @:public public function getTransferHandler() : javax.swing.TransferHandler;
 	
 	
 }
@@ -422,7 +422,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @throws IllegalArgumentException if the point
 	*         is <code>null</code>
 	*/
-	@:overload private function new(dropPoint : java.awt.Point) : Void;
+	@:overload @:protected private function new(dropPoint : java.awt.Point) : Void;
 	
 	/**
 	* Returns the drop point, representing the mouse's
@@ -430,7 +430,7 @@ extern class TransferHandler implements java.io.Serializable
 	*
 	* @return the drop point.
 	*/
-	@:overload @:final public function getDropPoint() : java.awt.Point;
+	@:overload @:public @:final public function getDropPoint() : java.awt.Point;
 	
 	/**
 	* Returns a string representation of this drop location.
@@ -440,7 +440,7 @@ extern class TransferHandler implements java.io.Serializable
 	*
 	* @return a string representation of this drop location
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -476,7 +476,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @throws NullPointerException if either parameter
 	*         is <code>null</code>
 	*/
-	@:overload public function new(component : java.awt.Component, transferable : java.awt.datatransfer.Transferable) : Void;
+	@:overload @:public public function new(component : java.awt.Component, transferable : java.awt.datatransfer.Transferable) : Void;
 	
 	/**
 	* Returns whether or not this <code>TransferSupport</code>
@@ -485,14 +485,14 @@ extern class TransferHandler implements java.io.Serializable
 	* @return <code>true</code> if this is a drop operation,
 	*         <code>false</code> otherwise.
 	*/
-	@:overload public function isDrop() : Bool;
+	@:overload @:public public function isDrop() : Bool;
 	
 	/**
 	* Returns the target component of this transfer.
 	*
 	* @return the target component
 	*/
-	@:overload public function getComponent() : java.awt.Component;
+	@:overload @:public public function getComponent() : java.awt.Component;
 	
 	/**
 	* Returns the current (non-{@code null}) drop location for the component,
@@ -510,7 +510,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @throws IllegalStateException if this is not a drop
 	* @see #isDrop()
 	*/
-	@:overload public function getDropLocation() : javax.swing.TransferHandler.TransferHandler_DropLocation;
+	@:overload @:public public function getDropLocation() : javax.swing.TransferHandler.TransferHandler_DropLocation;
 	
 	/**
 	* Sets whether or not the drop location should be visually indicated
@@ -530,7 +530,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @throws IllegalStateException if this is not a drop
 	* @see #isDrop()
 	*/
-	@:overload public function setShowDropLocation(showDropLocation : Bool) : Void;
+	@:overload @:public public function setShowDropLocation(showDropLocation : Bool) : Void;
 	
 	/**
 	* Sets the drop action for the transfer - which must represent a drop
@@ -551,7 +551,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @see #getSourceDropActions
 	* @see #isDrop()
 	*/
-	@:overload public function setDropAction(dropAction : Int) : Void;
+	@:overload @:public public function setDropAction(dropAction : Int) : Void;
 	
 	/**
 	* Returns the action chosen for the drop, when this
@@ -575,7 +575,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @see #getUserDropAction
 	* @see #isDrop()
 	*/
-	@:overload public function getDropAction() : Int;
+	@:overload @:public public function getDropAction() : Int;
 	
 	/**
 	* Returns the user drop action for the drop, when this
@@ -601,7 +601,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @see #getDropAction
 	* @see #isDrop()
 	*/
-	@:overload public function getUserDropAction() : Int;
+	@:overload @:public public function getUserDropAction() : Int;
 	
 	/**
 	* Returns the drag source's supported drop actions, when this
@@ -628,14 +628,14 @@ extern class TransferHandler implements java.io.Serializable
 	* @throws IllegalStateException if this is not a drop
 	* @see #isDrop()
 	*/
-	@:overload public function getSourceDropActions() : Int;
+	@:overload @:public public function getSourceDropActions() : Int;
 	
 	/**
 	* Returns the data flavors for this transfer.
 	*
 	* @return the data flavors for this transfer
 	*/
-	@:overload public function getDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Returns whether or not the given data flavor is supported.
@@ -643,7 +643,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @param df the <code>DataFlavor</code> to test
 	* @return whether or not the given flavor is supported.
 	*/
-	@:overload public function isDataFlavorSupported(df : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public public function isDataFlavorSupported(df : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Returns the <code>Transferable</code> associated with this transfer.
@@ -655,7 +655,7 @@ extern class TransferHandler implements java.io.Serializable
 	*
 	* @return the <code>Transferable</code> associated with this transfer
 	*/
-	@:overload public function getTransferable() : java.awt.datatransfer.Transferable;
+	@:overload @:public public function getTransferable() : java.awt.datatransfer.Transferable;
 	
 	
 }
@@ -667,7 +667,7 @@ extern class TransferHandler implements java.io.Serializable
 	* for providing the data (from most richly descriptive to least descriptive).
 	* @return an array of data flavors in which this data can be transferred
 	*/
-	@:overload public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Returns whether the specified data flavor is supported for
@@ -676,7 +676,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @return true if this <code>DataFlavor</code> is supported,
 	*   otherwise false
 	*/
-	@:overload public function isDataFlavorSupported(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public public function isDataFlavorSupported(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Returns an object which represents the data to be transferred.  The class
@@ -689,7 +689,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @exception UnsupportedFlavorException if the requested data flavor is
 	*              not supported.
 	*/
-	@:overload public function getTransferData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
+	@:overload @:public public function getTransferData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
 	
 	
 }
@@ -705,19 +705,19 @@ extern class TransferHandler implements java.io.Serializable
 */
 @:native('javax$swing$TransferHandler$SwingDropTarget') @:internal extern class TransferHandler_SwingDropTarget extends java.awt.dnd.DropTarget implements javax.swing.plaf.UIResource
 {
-	@:overload override public function addDropTargetListener(dtl : java.awt.dnd.DropTargetListener) : Void;
+	@:overload @:public override public function addDropTargetListener(dtl : java.awt.dnd.DropTargetListener) : Void;
 	
-	@:overload override public function removeDropTargetListener(dtl : java.awt.dnd.DropTargetListener) : Void;
+	@:overload @:public override public function removeDropTargetListener(dtl : java.awt.dnd.DropTargetListener) : Void;
 	
-	@:overload override public function dragEnter(e : java.awt.dnd.DropTargetDragEvent) : Void;
+	@:overload @:public override public function dragEnter(e : java.awt.dnd.DropTargetDragEvent) : Void;
 	
-	@:overload override public function dragOver(e : java.awt.dnd.DropTargetDragEvent) : Void;
+	@:overload @:public override public function dragOver(e : java.awt.dnd.DropTargetDragEvent) : Void;
 	
-	@:overload override public function dragExit(e : java.awt.dnd.DropTargetEvent) : Void;
+	@:overload @:public override public function dragExit(e : java.awt.dnd.DropTargetEvent) : Void;
 	
-	@:overload override public function drop(e : java.awt.dnd.DropTargetDropEvent) : Void;
+	@:overload @:public override public function drop(e : java.awt.dnd.DropTargetDropEvent) : Void;
 	
-	@:overload override public function dropActionChanged(e : java.awt.dnd.DropTargetDragEvent) : Void;
+	@:overload @:public override public function dropActionChanged(e : java.awt.dnd.DropTargetDragEvent) : Void;
 	
 	
 }
@@ -729,17 +729,17 @@ extern class TransferHandler implements java.io.Serializable
 	* <P>
 	* @param e the <code>ActionEvent</code>
 	*/
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function dragEnter(e : java.awt.dnd.DropTargetDragEvent) : Void;
+	@:overload @:public public function dragEnter(e : java.awt.dnd.DropTargetDragEvent) : Void;
 	
-	@:overload public function dragOver(e : java.awt.dnd.DropTargetDragEvent) : Void;
+	@:overload @:public public function dragOver(e : java.awt.dnd.DropTargetDragEvent) : Void;
 	
-	@:overload public function dragExit(e : java.awt.dnd.DropTargetEvent) : Void;
+	@:overload @:public public function dragExit(e : java.awt.dnd.DropTargetEvent) : Void;
 	
-	@:overload public function drop(e : java.awt.dnd.DropTargetDropEvent) : Void;
+	@:overload @:public public function drop(e : java.awt.dnd.DropTargetDropEvent) : Void;
 	
-	@:overload public function dropActionChanged(e : java.awt.dnd.DropTargetDragEvent) : Void;
+	@:overload @:public public function dropActionChanged(e : java.awt.dnd.DropTargetDragEvent) : Void;
 	
 	
 }
@@ -752,29 +752,29 @@ extern class TransferHandler implements java.io.Serializable
 	/**
 	* a Drag gesture has been recognized
 	*/
-	@:overload public function dragGestureRecognized(dge : java.awt.dnd.DragGestureEvent) : Void;
+	@:overload @:public public function dragGestureRecognized(dge : java.awt.dnd.DragGestureEvent) : Void;
 	
 	/**
 	* as the hotspot enters a platform dependent drop site
 	*/
-	@:overload public function dragEnter(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
+	@:overload @:public public function dragEnter(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
 	
 	/**
 	* as the hotspot moves over a platform dependent drop site
 	*/
-	@:overload public function dragOver(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
+	@:overload @:public public function dragOver(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
 	
 	/**
 	* as the hotspot exits a platform dependent drop site
 	*/
-	@:overload public function dragExit(dsde : java.awt.dnd.DragSourceEvent) : Void;
+	@:overload @:public public function dragExit(dsde : java.awt.dnd.DragSourceEvent) : Void;
 	
 	/**
 	* as the operation completes
 	*/
-	@:overload public function dragDropEnd(dsde : java.awt.dnd.DragSourceDropEvent) : Void;
+	@:overload @:public public function dragDropEnd(dsde : java.awt.dnd.DragSourceDropEvent) : Void;
 	
-	@:overload public function dropActionChanged(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
+	@:overload @:public public function dropActionChanged(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
 	
 	
 }
@@ -783,22 +783,22 @@ extern class TransferHandler implements java.io.Serializable
 	/**
 	* register this DragGestureRecognizer's Listeners with the Component
 	*/
-	@:overload override private function registerListeners() : Void;
+	@:overload @:protected override private function registerListeners() : Void;
 	
 	/**
 	* unregister this DragGestureRecognizer's Listeners with the Component
 	*
 	* subclasses must override this method
 	*/
-	@:overload override private function unregisterListeners() : Void;
+	@:overload @:protected override private function unregisterListeners() : Void;
 	
 	
 }
 @:native('javax$swing$TransferHandler$TransferAction') @:internal extern class TransferHandler_TransferAction extends sun.swing.UIAction implements javax.swing.plaf.UIResource
 {
-	@:overload override public function isEnabled(sender : Dynamic) : Bool;
+	@:overload @:public override public function isEnabled(sender : Dynamic) : Bool;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }

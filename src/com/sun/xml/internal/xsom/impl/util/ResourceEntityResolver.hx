@@ -25,9 +25,9 @@ package com.sun.xml.internal.xsom.impl.util;
 */
 extern class ResourceEntityResolver implements org.xml.sax.EntityResolver
 {
-	@:overload public function new(_base : Class<Dynamic>) : Void;
+	@:overload @:public public function new(_base : Class<Dynamic>) : Void;
 	
-	@:overload public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
 	
 }

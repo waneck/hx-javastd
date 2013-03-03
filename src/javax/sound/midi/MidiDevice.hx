@@ -31,7 +31,7 @@ extern interface MidiDevice extends java.lang.AutoCloseable
 	*
 	* @return device info
 	*/
-	@:overload public function getDeviceInfo() : javax.sound.midi.MidiDevice.MidiDevice_Info;
+	@:overload @:public public function getDeviceInfo() : javax.sound.midi.MidiDevice.MidiDevice_Info;
 	
 	/**
 	* Opens the device, indicating that it should now acquire any
@@ -54,7 +54,7 @@ extern interface MidiDevice extends java.lang.AutoCloseable
 	* @see #close
 	* @see #isOpen
 	*/
-	@:overload public function open() : Void;
+	@:overload @:public public function open() : Void;
 	
 	/**
 	* Closes the device, indicating that the device should now release
@@ -67,7 +67,7 @@ extern interface MidiDevice extends java.lang.AutoCloseable
 	* @see #open
 	* @see #isOpen
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Reports whether the device is open.
@@ -77,7 +77,7 @@ extern interface MidiDevice extends java.lang.AutoCloseable
 	* @see #open
 	* @see #close
 	*/
-	@:overload public function isOpen() : Bool;
+	@:overload @:public public function isOpen() : Bool;
 	
 	/**
 	* Obtains the current time-stamp of the device, in microseconds.
@@ -89,7 +89,7 @@ extern interface MidiDevice extends java.lang.AutoCloseable
 	* @return the current time-stamp of the device in microseconds,
 	* or -1 if time-stamping is not supported by the device.
 	*/
-	@:overload public function getMicrosecondPosition() : haxe.Int64;
+	@:overload @:public public function getMicrosecondPosition() : haxe.Int64;
 	
 	/**
 	* Obtains the maximum number of MIDI IN connections available on this
@@ -97,7 +97,7 @@ extern interface MidiDevice extends java.lang.AutoCloseable
 	* @return maximum number of MIDI IN connections,
 	* or -1 if an unlimited number of connections is available.
 	*/
-	@:overload public function getMaxReceivers() : Int;
+	@:overload @:public public function getMaxReceivers() : Int;
 	
 	/**
 	* Obtains the maximum number of MIDI OUT connections available on this
@@ -105,7 +105,7 @@ extern interface MidiDevice extends java.lang.AutoCloseable
 	* @return maximum number of MIDI OUT connections,
 	* or -1 if an unlimited number of connections is available.
 	*/
-	@:overload public function getMaxTransmitters() : Int;
+	@:overload @:public public function getMaxTransmitters() : Int;
 	
 	/**
 	* Obtains a MIDI IN receiver through which the MIDI device may receive
@@ -126,7 +126,7 @@ extern interface MidiDevice extends java.lang.AutoCloseable
 	* due to resource restrictions
 	* @see Receiver#close()
 	*/
-	@:overload public function getReceiver() : javax.sound.midi.Receiver;
+	@:overload @:public public function getReceiver() : javax.sound.midi.Receiver;
 	
 	/**
 	* Returns all currently active, non-closed receivers
@@ -161,7 +161,7 @@ extern interface MidiDevice extends java.lang.AutoCloseable
 	* due to resource restrictions
 	* @see Transmitter#close()
 	*/
-	@:overload public function getTransmitter() : javax.sound.midi.Transmitter;
+	@:overload @:public public function getTransmitter() : javax.sound.midi.Transmitter;
 	
 	/**
 	* Returns all currently active, non-closed transmitters
@@ -196,7 +196,7 @@ extern interface MidiDevice extends java.lang.AutoCloseable
 	* @param description a description of the device
 	* @param version version information for the device
 	*/
-	@:overload private function new(name : String, vendor : String, description : String, version : String) : Void;
+	@:overload @:protected private function new(name : String, vendor : String, description : String, version : String) : Void;
 	
 	/**
 	* Reports whether two objects are equal.
@@ -206,44 +206,44 @@ extern interface MidiDevice extends java.lang.AutoCloseable
 	* @return <code>true</code> if this object is the same as the
 	* <code>obj</code> argument; <code>false</code> otherwise
 	*/
-	@:overload @:final public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Finalizes the hashcode method.
 	*/
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
 	/**
 	* Obtains the name of the device.
 	*
 	* @return a string containing the device's name
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	/**
 	* Obtains the name of the company who supplies the device.
 	* @return device the vendor's name
 	*/
-	@:overload @:final public function getVendor() : String;
+	@:overload @:public @:final public function getVendor() : String;
 	
 	/**
 	* Obtains the description of the device.
 	* @return a description of the device
 	*/
-	@:overload @:final public function getDescription() : String;
+	@:overload @:public @:final public function getDescription() : String;
 	
 	/**
 	* Obtains the version of the device.
 	* @return textual version information for the device.
 	*/
-	@:overload @:final public function getVersion() : String;
+	@:overload @:public @:final public function getVersion() : String;
 	
 	/**
 	* Provides a string representation of the device information.
 
 	* @return a description of the info object
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	
 }

@@ -43,7 +43,7 @@ package java.sql;
 	* <p>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new() : Void;
+	@:require(java6) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>SQLTimeoutException</code> object
@@ -58,7 +58,7 @@ package java.sql;
 	* @param reason a description of the exception
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String) : Void;
 	
 	/**
 	* Constructs a <code>SQLTimeoutException</code> object
@@ -73,7 +73,7 @@ package java.sql;
 	* @param SQLState an XOPEN or SQL:2003 code identifying the exception
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, SQLState : String) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, SQLState : String) : Void;
 	
 	/**
 	* Constructs a <code>SQLTimeoutException</code> object
@@ -89,7 +89,7 @@ package java.sql;
 	* @param vendorCode a database vendor specific exception code
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, SQLState : String, vendorCode : Int) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, SQLState : String, vendorCode : Int) : Void;
 	
 	/**
 	* Constructs a <code>SQLTimeoutException</code> object
@@ -104,7 +104,7 @@ package java.sql;
 	*     the cause is non-existent or unknown.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a <code>SQLTimeoutException</code> object
@@ -118,7 +118,7 @@ package java.sql;
 	*     the cause is non-existent or unknown.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a <code>SQLTimeoutException</code> object
@@ -132,7 +132,7 @@ package java.sql;
 	*     the cause is non-existent or unknown.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, SQLState : String, cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, SQLState : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	*  Constructs a <code>SQLTimeoutException</code> object
@@ -147,7 +147,7 @@ package java.sql;
 	*     the cause is non-existent or unknown.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, SQLState : String, vendorCode : Int, cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, SQLState : String, vendorCode : Int, cause : java.lang.Throwable) : Void;
 	
 	
 }

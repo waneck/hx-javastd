@@ -25,23 +25,23 @@ package javax.swing.plaf.metal;
 */
 extern class MetalToolTipUI extends javax.swing.plaf.basic.BasicToolTipUI
 {
-	public static var padSpaceBetweenStrings(default, null) : Int;
+	@:public @:static @:final public static var padSpaceBetweenStrings(default, null) : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload private function isAcceleratorHidden() : Bool;
+	@:overload @:protected private function isAcceleratorHidden() : Bool;
 	
-	@:overload public function getAcceleratorString() : String;
+	@:overload @:public public function getAcceleratorString() : String;
 	
 	
 }

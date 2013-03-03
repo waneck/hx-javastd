@@ -29,11 +29,11 @@ package sun.security.krb5.internal.ccache;
 */
 extern class Tag
 {
-	@:overload public function new(len : Int, new_tag : Int, new_time : Null<Int>, new_usec : Null<Int>) : Void;
+	@:overload @:public public function new(len : Int, new_tag : Int, new_time : Null<Int>, new_usec : Null<Int>) : Void;
 	
-	@:overload public function new(new_tag : Int) : Void;
+	@:overload @:public public function new(new_tag : Int) : Void;
 	
-	@:overload public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

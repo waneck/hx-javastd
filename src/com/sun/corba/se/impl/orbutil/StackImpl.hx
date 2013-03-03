@@ -25,13 +25,13 @@ package com.sun.corba.se.impl.orbutil;
 */
 extern class StackImpl
 {
-	@:overload @:final public function empty() : Bool;
+	@:overload @:public @:final public function empty() : Bool;
 	
-	@:overload @:final public function peek() : Dynamic;
+	@:overload @:public @:final public function peek() : Dynamic;
 	
-	@:overload @:final public function pop() : Dynamic;
+	@:overload @:public @:final public function pop() : Dynamic;
 	
-	@:overload @:final public function push(item : Dynamic) : Dynamic;
+	@:overload @:public @:final public function push(item : Dynamic) : Dynamic;
 	
 	
 }

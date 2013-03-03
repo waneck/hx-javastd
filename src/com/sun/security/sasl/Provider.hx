@@ -25,7 +25,7 @@ package com.sun.security.sasl;
 */
 extern class Provider extends java.security.Provider
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

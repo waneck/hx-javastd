@@ -27,39 +27,39 @@ extern class AMXClient implements com.sun.org.glassfish.gmbal.AMXMBeanInterface
 {
 	/** Special object name used to represent a NULL objectName result.
 	*/
-	public static var NULL_OBJECTNAME(default, null) : javax.management.ObjectName;
+	@:public @:static @:final public static var NULL_OBJECTNAME(default, null) : javax.management.ObjectName;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function new(server : javax.management.MBeanServerConnection, oname : javax.management.ObjectName) : Void;
+	@:overload @:public public function new(server : javax.management.MBeanServerConnection, oname : javax.management.ObjectName) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getMeta() : java.util.Map<String, Dynamic>;
+	@:overload @:public public function getMeta() : java.util.Map<String, Dynamic>;
 	
-	@:overload public function getParent() : com.sun.org.glassfish.gmbal.AMXClient;
+	@:overload @:public public function getParent() : com.sun.org.glassfish.gmbal.AMXClient;
 	
-	@:overload public function getChildren() : java.NativeArray<com.sun.org.glassfish.gmbal.AMXClient>;
+	@:overload @:public public function getChildren() : java.NativeArray<com.sun.org.glassfish.gmbal.AMXClient>;
 	
-	@:overload public function getAttribute(attribute : String) : Dynamic;
+	@:overload @:public public function getAttribute(attribute : String) : Dynamic;
 	
-	@:overload public function setAttribute(name : String, value : Dynamic) : Void;
+	@:overload @:public public function setAttribute(name : String, value : Dynamic) : Void;
 	
-	@:overload public function setAttribute(attribute : javax.management.Attribute) : Void;
+	@:overload @:public public function setAttribute(attribute : javax.management.Attribute) : Void;
 	
-	@:overload public function getAttributes(attributes : java.NativeArray<String>) : javax.management.AttributeList;
+	@:overload @:public public function getAttributes(attributes : java.NativeArray<String>) : javax.management.AttributeList;
 	
-	@:overload public function setAttributes(attributes : javax.management.AttributeList) : javax.management.AttributeList;
+	@:overload @:public public function setAttributes(attributes : javax.management.AttributeList) : javax.management.AttributeList;
 	
-	@:overload public function invoke(actionName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function invoke(actionName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
-	@:overload public function getMBeanInfo() : javax.management.MBeanInfo;
+	@:overload @:public public function getMBeanInfo() : javax.management.MBeanInfo;
 	
-	@:overload public function objectName() : javax.management.ObjectName;
+	@:overload @:public public function objectName() : javax.management.ObjectName;
 	
 	
 }

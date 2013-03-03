@@ -48,27 +48,27 @@ package com.sun.java.swing.plaf.windows;
 }
 @:native('com$sun$java$swing$plaf$windows$XPStyle$XPFillBorder') @:internal extern class XPStyle_XPFillBorder extends javax.swing.border.LineBorder implements javax.swing.plaf.UIResource
 {
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$XPStyle$XPStatefulFillBorder') @:internal extern class XPStyle_XPStatefulFillBorder extends com.sun.java.swing.plaf.windows.XPStyle.XPStyle_XPFillBorder
 {
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$XPStyle$XPImageBorder') @:internal extern class XPStyle_XPImageBorder extends javax.swing.border.AbstractBorder implements javax.swing.plaf.UIResource
 {
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$XPStyle$XPEmptyBorder') @:internal extern class XPStyle_XPEmptyBorder extends javax.swing.border.EmptyBorder implements javax.swing.plaf.UIResource
 {
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
@@ -78,37 +78,37 @@ package com.sun.java.swing.plaf.windows;
 */
 @:native('com$sun$java$swing$plaf$windows$XPStyle$Skin') @:internal extern class XPStyle_Skin
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$XPStyle$SkinPainter') @:internal extern class XPStyle_SkinPainter extends sun.swing.CachedPainter
 {
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload override private function paintToImage(c : java.awt.Component, image : java.awt.Image, g : java.awt.Graphics, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected override private function paintToImage(c : java.awt.Component, image : java.awt.Image, g : java.awt.Graphics, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload override private function createImage(c : java.awt.Component, w : Int, h : Int, config : java.awt.GraphicsConfiguration, args : java.NativeArray<Dynamic>) : java.awt.Image;
+	@:overload @:protected override private function createImage(c : java.awt.Component, w : Int, h : Int, config : java.awt.GraphicsConfiguration, args : java.NativeArray<Dynamic>) : java.awt.Image;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$XPStyle$GlyphButton') @:internal extern class XPStyle_GlyphButton extends javax.swing.JButton
 {
-	@:overload public function new(parent : java.awt.Component, part : Part) : Void;
+	@:overload @:public public function new(parent : java.awt.Component, part : Part) : Void;
 	
-	@:overload override public function isFocusTraversable() : Bool;
+	@:overload @:public override public function isFocusTraversable() : Bool;
 	
-	@:overload private function getState() : State;
+	@:overload @:protected private function getState() : State;
 	
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
-	@:overload public function setPart(parent : java.awt.Component, part : Part) : Void;
+	@:overload @:public public function setPart(parent : java.awt.Component, part : Part) : Void;
 	
-	@:overload override private function paintBorder(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintBorder(g : java.awt.Graphics) : Void;
 	
 	
 }

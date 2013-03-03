@@ -30,7 +30,7 @@ package com.sun.security.sasl.digest;
 	*
 	* @return false
 	*/
-	@:overload public function hasInitialResponse() : Bool;
+	@:overload @:public public function hasInitialResponse() : Bool;
 	
 	/**
 	* Process the challenge data.
@@ -47,7 +47,7 @@ package com.sun.security.sasl.digest;
 	* @throws SaslException If the platform does not have MD5 digest support
 	* or if the server sends an invalid challenge.
 	*/
-	@:overload public function evaluateChallenge(challengeData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function evaluateChallenge(challengeData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -25,9 +25,9 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsRadioButtonMenuItemUI extends javax.swing.plaf.basic.BasicRadioButtonMenuItemUI
 {
-	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function paintBackground(g : java.awt.Graphics, menuItem : javax.swing.JMenuItem, bgColor : java.awt.Color) : Void;
+	@:overload @:protected override private function paintBackground(g : java.awt.Graphics, menuItem : javax.swing.JMenuItem, bgColor : java.awt.Color) : Void;
 	
 	/**
 	* Method which renders the text of the current menu item.
@@ -38,7 +38,7 @@ extern class WindowsRadioButtonMenuItemUI extends javax.swing.plaf.basic.BasicRa
 	* @param text String to render
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override private function paintText(g : java.awt.Graphics, menuItem : javax.swing.JMenuItem, textRect : java.awt.Rectangle, text : String) : Void;
+	@:require(java4) @:overload @:protected override private function paintText(g : java.awt.Graphics, menuItem : javax.swing.JMenuItem, textRect : java.awt.Rectangle, text : String) : Void;
 	
 	
 }

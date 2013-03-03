@@ -25,17 +25,17 @@ package javax.swing.colorchooser;
 */
 @:internal extern class ValueFormatter extends javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter implements java.awt.event.FocusListener implements java.lang.Runnable
 {
-	@:overload override public function stringToValue(text : String) : Dynamic;
+	@:overload @:public override public function stringToValue(text : String) : Dynamic;
 	
-	@:overload override public function valueToString(object : Dynamic) : String;
+	@:overload @:public override public function valueToString(object : Dynamic) : String;
 	
-	@:overload override private function getDocumentFilter() : javax.swing.text.DocumentFilter;
+	@:overload @:protected override private function getDocumentFilter() : javax.swing.text.DocumentFilter;
 	
-	@:overload public function focusGained(event : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(event : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusLost(event : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(event : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

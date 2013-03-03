@@ -25,11 +25,11 @@ package com.sun.jndi.ldap;
 */
 extern class LdapPoolManager
 {
-	public static var debug(default, null) : Bool;
+	@:public @:static @:final public static var debug(default, null) : Bool;
 	
-	@:native('trace') public static var _trace(default, null) : Bool;
+	@:native('trace') @:public @:static @:final public static var _trace(default, null) : Bool;
 	
-	@:overload public static function showStats(out : java.io.PrintStream) : Void;
+	@:overload @:public @:static public static function showStats(out : java.io.PrintStream) : Void;
 	
 	/**
 	* Closes idle connections idle since specified time.
@@ -38,7 +38,7 @@ extern class LdapPoolManager
 	* specified in milliseconds since "the epoch".
 	* @see java.util.Date
 	*/
-	@:overload public static function expire(threshold : haxe.Int64) : Void;
+	@:overload @:public @:static public static function expire(threshold : haxe.Int64) : Void;
 	
 	
 }

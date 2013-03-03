@@ -27,24 +27,24 @@ extern interface XSNotationDeclaration extends com.sun.org.apache.xerces.interna
 	*  The URI reference representing the system identifier for the notation
 	* declaration, if present, <code>null</code> otherwise.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	*  The string representing the public identifier for this notation
 	* declaration, if present; <code>null</code> otherwise.
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* An annotation if it exists, otherwise <code>null</code>. If not null
 	* then the first [annotation] from the sequence of annotations.
 	*/
-	@:overload public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:overload @:public public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
 	/**
 	* A sequence of [annotations] or an empty <code>XSObjectList</code>.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	
 }

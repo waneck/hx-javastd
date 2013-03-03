@@ -39,21 +39,21 @@ package com.sun.jndi.toolkit.dir;
 */
 extern class LazySearchEnumerationImpl implements javax.naming.NamingEnumeration<Dynamic>
 {
-	@:overload public function new(candidates : javax.naming.NamingEnumeration<Dynamic>, filter : com.sun.jndi.toolkit.dir.AttrFilter, cons : javax.naming.directory.SearchControls) : Void;
+	@:overload @:public public function new(candidates : javax.naming.NamingEnumeration<Dynamic>, filter : com.sun.jndi.toolkit.dir.AttrFilter, cons : javax.naming.directory.SearchControls) : Void;
 	
-	@:overload public function new(candidates : javax.naming.NamingEnumeration<Dynamic>, filter : com.sun.jndi.toolkit.dir.AttrFilter, cons : javax.naming.directory.SearchControls, ctx : javax.naming.Context, env : java.util.Hashtable<Dynamic, Dynamic>, useFactory : Bool) : Void;
+	@:overload @:public public function new(candidates : javax.naming.NamingEnumeration<Dynamic>, filter : com.sun.jndi.toolkit.dir.AttrFilter, cons : javax.naming.directory.SearchControls, ctx : javax.naming.Context, env : java.util.Hashtable<Dynamic, Dynamic>, useFactory : Bool) : Void;
 	
-	@:overload public function new(candidates : javax.naming.NamingEnumeration<Dynamic>, filter : com.sun.jndi.toolkit.dir.AttrFilter, cons : javax.naming.directory.SearchControls, ctx : javax.naming.Context, env : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(candidates : javax.naming.NamingEnumeration<Dynamic>, filter : com.sun.jndi.toolkit.dir.AttrFilter, cons : javax.naming.directory.SearchControls, ctx : javax.naming.Context, env : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function hasMore() : Bool;
+	@:overload @:public public function hasMore() : Bool;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

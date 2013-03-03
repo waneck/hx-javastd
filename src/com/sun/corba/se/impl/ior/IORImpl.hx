@@ -25,43 +25,43 @@ package com.sun.corba.se.impl.ior;
 */
 extern class IORImpl extends com.sun.corba.se.spi.ior.IdentifiableContainerBase implements com.sun.corba.se.spi.ior.IOR
 {
-	@:overload public function getORB() : com.sun.corba.se.spi.orb.ORB;
+	@:overload @:public public function getORB() : com.sun.corba.se.spi.orb.ORB;
 	
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload @:synchronized override public function hashCode() : Int;
+	@:overload @:public @:synchronized override public function hashCode() : Int;
 	
 	/** Construct an empty IOR.  This is needed for null object references.
 	*/
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, typeid : String) : Void;
-	
-	/** Construct an IOR from an IORTemplate by applying the same
-	* object id to each TaggedProfileTemplate in the IORTemplate.
-	*/
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, typeId : String, iortemp : com.sun.corba.se.spi.ior.IORTemplate, id : com.sun.corba.se.spi.ior.ObjectId) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, typeid : String) : Void;
 	
 	/** Construct an IOR from an IORTemplate by applying the same
 	* object id to each TaggedProfileTemplate in the IORTemplate.
 	*/
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, typeId : String, iortemps : com.sun.corba.se.spi.ior.IORTemplateList, id : com.sun.corba.se.spi.ior.ObjectId) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, typeId : String, iortemp : com.sun.corba.se.spi.ior.IORTemplate, id : com.sun.corba.se.spi.ior.ObjectId) : Void;
 	
-	@:overload public function new(is : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	/** Construct an IOR from an IORTemplate by applying the same
+	* object id to each TaggedProfileTemplate in the IORTemplate.
+	*/
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, typeId : String, iortemps : com.sun.corba.se.spi.ior.IORTemplateList, id : com.sun.corba.se.spi.ior.ObjectId) : Void;
 	
-	@:overload public function getTypeId() : String;
+	@:overload @:public public function new(is : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
-	@:overload public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function getTypeId() : String;
 	
-	@:overload public function stringify() : String;
+	@:overload @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload @:synchronized override public function makeImmutable() : Void;
+	@:overload @:public public function stringify() : String;
 	
-	@:overload public function getIOPIOR() : org.omg.IOP.IOR;
+	@:overload @:public @:synchronized override public function makeImmutable() : Void;
 	
-	@:overload public function isNil() : Bool;
+	@:overload @:public public function getIOPIOR() : org.omg.IOP.IOR;
 	
-	@:overload public function isEquivalent(ior : com.sun.corba.se.spi.ior.IOR) : Bool;
+	@:overload @:public public function isNil() : Bool;
+	
+	@:overload @:public public function isEquivalent(ior : com.sun.corba.se.spi.ior.IOR) : Bool;
 	
 	/** Return the IORTemplateList for this IOR.  Will throw
 	* exception if it is not possible to generate an IOR
@@ -69,13 +69,13 @@ extern class IORImpl extends com.sun.corba.se.spi.ior.IdentifiableContainerBase 
 	* which can only happen if not every TaggedProfile in the
 	* IOR has the same ObjectId.
 	*/
-	@:overload @:synchronized public function getIORTemplates() : com.sun.corba.se.spi.ior.IORTemplateList;
+	@:overload @:public @:synchronized public function getIORTemplates() : com.sun.corba.se.spi.ior.IORTemplateList;
 	
 	/** Return the first IIOPProfile in this IOR.
 	* XXX THIS IS TEMPORARY FOR BACKWARDS COMPATIBILITY AND WILL BE REMOVED
 	* SOON!
 	*/
-	@:overload public function getProfile() : com.sun.corba.se.spi.ior.iiop.IIOPProfile;
+	@:overload @:public public function getProfile() : com.sun.corba.se.spi.ior.iiop.IIOPProfile;
 	
 	
 }

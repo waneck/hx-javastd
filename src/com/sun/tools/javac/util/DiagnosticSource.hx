@@ -35,64 +35,64 @@ package com.sun.tools.javac.util;
 extern class DiagnosticSource
 {
 	/* constant DiagnosticSource to be used when sourcefile is missing */
-	public static var NO_SOURCE(default, null) : com.sun.tools.javac.util.DiagnosticSource;
+	@:public @:static @:final public static var NO_SOURCE(default, null) : com.sun.tools.javac.util.DiagnosticSource;
 	
-	@:overload public function new(fo : javax.tools.JavaFileObject, log : com.sun.tools.javac.util.AbstractLog) : Void;
+	@:overload @:public public function new(fo : javax.tools.JavaFileObject, log : com.sun.tools.javac.util.AbstractLog) : Void;
 	
 	/** Return the underlying file object handled by this
 	*  DiagnosticSource object.
 	*/
-	@:overload public function getFile() : javax.tools.JavaFileObject;
+	@:overload @:public public function getFile() : javax.tools.JavaFileObject;
 	
 	/** Return the one-based line number associated with a given pos
 	* for the current source file.  Zero is returned if no line exists
 	* for the given position.
 	*/
-	@:overload public function getLineNumber(pos : Int) : Int;
+	@:overload @:public public function getLineNumber(pos : Int) : Int;
 	
 	/** Return the one-based column number associated with a given pos
 	* for the current source file.  Zero is returned if no column exists
 	* for the given position.
 	*/
-	@:overload public function getColumnNumber(pos : Int, expandTabs : Bool) : Int;
+	@:overload @:public public function getColumnNumber(pos : Int, expandTabs : Bool) : Int;
 	
 	/** Return the content of the line containing a given pos.
 	*/
-	@:overload public function getLine(pos : Int) : String;
+	@:overload @:public public function getLine(pos : Int) : String;
 	
-	@:overload public function getEndPosTable() : java.util.Map<com.sun.tools.javac.tree.JCTree, Null<Int>>;
+	@:overload @:public public function getEndPosTable() : java.util.Map<com.sun.tools.javac.tree.JCTree, Null<Int>>;
 	
-	@:overload public function setEndPosTable(t : java.util.Map<com.sun.tools.javac.tree.JCTree, Null<Int>>) : Void;
+	@:overload @:public public function setEndPosTable(t : java.util.Map<com.sun.tools.javac.tree.JCTree, Null<Int>>) : Void;
 	
 	/** Find the line in the buffer that contains the current position
 	* @param pos      Character offset into the buffer
 	*/
-	@:overload private function findLine(pos : Int) : Bool;
+	@:overload @:protected private function findLine(pos : Int) : Bool;
 	
-	@:overload private function initBuf(fileObject : javax.tools.JavaFileObject) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:protected private function initBuf(fileObject : javax.tools.JavaFileObject) : java.NativeArray<java.StdTypes.Char16>;
 	
 	/** The underlying file object. */
-	private var fileObject : javax.tools.JavaFileObject;
+	@:protected private var fileObject : javax.tools.JavaFileObject;
 	
-	private var endPosTable : java.util.Map<com.sun.tools.javac.tree.JCTree, Null<Int>>;
+	@:protected private var endPosTable : java.util.Map<com.sun.tools.javac.tree.JCTree, Null<Int>>;
 	
 	/** A soft reference to the content of the file object. */
-	private var refBuf : java.lang.ref.SoftReference<java.NativeArray<java.StdTypes.Char16>>;
+	@:protected private var refBuf : java.lang.ref.SoftReference<java.NativeArray<java.StdTypes.Char16>>;
 	
 	/** A temporary hard reference to the content of the file object. */
-	private var buf : java.NativeArray<java.StdTypes.Char16>;
+	@:protected private var buf : java.NativeArray<java.StdTypes.Char16>;
 	
 	/** The length of the content. */
-	private var bufLen : Int;
+	@:protected private var bufLen : Int;
 	
 	/** The start of a line found by findLine. */
-	private var lineStart : Int;
+	@:protected private var lineStart : Int;
 	
 	/** The line number of a line found by findLine. */
-	private var line : Int;
+	@:protected private var line : Int;
 	
 	/** A log for reporting errors, such as errors accessing the content. */
-	private var log : com.sun.tools.javac.util.AbstractLog;
+	@:protected private var log : com.sun.tools.javac.util.AbstractLog;
 	
 	
 }

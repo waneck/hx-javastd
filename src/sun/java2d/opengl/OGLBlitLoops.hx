@@ -29,91 +29,91 @@ package sun.java2d.opengl;
 }
 @:internal extern class OGLSurfaceToSurfaceBlit extends sun.java2d.loops.Blit
 {
-	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class OGLSurfaceToSurfaceScale extends sun.java2d.loops.ScaledBlit
 {
-	@:overload override public function Scale(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
+	@:overload @:public override public function Scale(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
 	
 	
 }
 @:internal extern class OGLSurfaceToSurfaceTransform extends sun.java2d.loops.TransformBlit
 {
-	@:overload override public function Transform(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, at : java.awt.geom.AffineTransform, hint : Int, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function Transform(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, at : java.awt.geom.AffineTransform, hint : Int, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class OGLRTTSurfaceToSurfaceBlit extends sun.java2d.loops.Blit
 {
-	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class OGLRTTSurfaceToSurfaceScale extends sun.java2d.loops.ScaledBlit
 {
-	@:overload override public function Scale(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
+	@:overload @:public override public function Scale(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
 	
 	
 }
 @:internal extern class OGLRTTSurfaceToSurfaceTransform extends sun.java2d.loops.TransformBlit
 {
-	@:overload override public function Transform(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, at : java.awt.geom.AffineTransform, hint : Int, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function Transform(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, at : java.awt.geom.AffineTransform, hint : Int, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class OGLSurfaceToSwBlit extends sun.java2d.loops.Blit
 {
-	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class OGLSwToSurfaceBlit extends sun.java2d.loops.Blit
 {
-	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class OGLSwToSurfaceScale extends sun.java2d.loops.ScaledBlit
 {
-	@:overload override public function Scale(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
+	@:overload @:public override public function Scale(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
 	
 	
 }
 @:internal extern class OGLSwToSurfaceTransform extends sun.java2d.loops.TransformBlit
 {
-	@:overload override public function Transform(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, at : java.awt.geom.AffineTransform, hint : Int, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function Transform(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, at : java.awt.geom.AffineTransform, hint : Int, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class OGLSwToTextureBlit extends sun.java2d.loops.Blit
 {
-	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class OGLTextureToSurfaceBlit extends sun.java2d.loops.Blit
 {
-	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class OGLTextureToSurfaceScale extends sun.java2d.loops.ScaledBlit
 {
-	@:overload override public function Scale(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
+	@:overload @:public override public function Scale(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
 	
 	
 }
 @:internal extern class OGLTextureToSurfaceTransform extends sun.java2d.loops.TransformBlit
 {
-	@:overload override public function Transform(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, at : java.awt.geom.AffineTransform, hint : Int, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function Transform(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, at : java.awt.geom.AffineTransform, hint : Int, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class OGLGeneralBlit extends sun.java2d.loops.Blit
 {
-	@:overload @:synchronized public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload @:public @:synchronized override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }

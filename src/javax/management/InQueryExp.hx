@@ -35,23 +35,23 @@ package javax.management;
 	/**
 	* Basic Constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new InQueryExp with the specified ValueExp to be found in
 	* a specified array of ValueExp.
 	*/
-	@:overload public function new(v1 : javax.management.ValueExp, items : java.NativeArray<javax.management.ValueExp>) : Void;
+	@:overload @:public public function new(v1 : javax.management.ValueExp, items : java.NativeArray<javax.management.ValueExp>) : Void;
 	
 	/**
 	* Returns the checked value of the query.
 	*/
-	@:overload public function getCheckedValue() : javax.management.ValueExp;
+	@:overload @:public public function getCheckedValue() : javax.management.ValueExp;
 	
 	/**
 	* Returns the array of values of the query.
 	*/
-	@:overload public function getExplicitValues() : java.NativeArray<javax.management.ValueExp>;
+	@:overload @:public public function getExplicitValues() : java.NativeArray<javax.management.ValueExp>;
 	
 	/**
 	* Applies the InQueryExp on a MBean.
@@ -65,12 +65,12 @@ package javax.management;
 	* @exception BadAttributeValueExpException
 	* @exception InvalidApplicationException
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function apply(name : javax.management.ObjectName) : Bool;
 	
 	/**
 	* Returns the string representing the object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -30,7 +30,7 @@ extern interface WSDLResolver
 	*
 	* @return Result for the concrete WSDL
 	*/
-	@:overload public function getWSDL(suggestedFilename : String) : javax.xml.transform.Result;
+	@:overload @:public public function getWSDL(suggestedFilename : String) : javax.xml.transform.Result;
 	
 	/**
 	* Create a Result object into which abstract WSDL is to be generated. If the the
@@ -42,7 +42,7 @@ extern interface WSDLResolver
 	*
 	* @return null if abstract WSDL need not be generated
 	*/
-	@:overload public function getAbstractWSDL(filename : javax.xml.ws.Holder<String>) : javax.xml.transform.Result;
+	@:overload @:public public function getAbstractWSDL(filename : javax.xml.ws.Holder<String>) : javax.xml.transform.Result;
 	
 	/**
 	* Create a Result object into which schema doc is to be generated. Typically if
@@ -54,7 +54,7 @@ extern interface WSDLResolver
 	*
 	* @return null if schema need not be generated
 	*/
-	@:overload public function getSchemaOutput(namespace : String, filename : javax.xml.ws.Holder<String>) : javax.xml.transform.Result;
+	@:overload @:public public function getSchemaOutput(namespace : String, filename : javax.xml.ws.Holder<String>) : javax.xml.transform.Result;
 	
 	
 }

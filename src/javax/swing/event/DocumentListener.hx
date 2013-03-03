@@ -31,7 +31,7 @@ extern interface DocumentListener extends java.util.EventListener
 	*
 	* @param e the document event
 	*/
-	@:overload public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	/**
 	* Gives notification that a portion of the document has been
@@ -40,14 +40,14 @@ extern interface DocumentListener extends java.util.EventListener
 	*
 	* @param e the document event
 	*/
-	@:overload public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	/**
 	* Gives notification that an attribute or set of attributes changed.
 	*
 	* @param e the document event
 	*/
-	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	
 }

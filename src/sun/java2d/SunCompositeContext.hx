@@ -25,14 +25,14 @@ package sun.java2d;
 */
 extern class SunCompositeContext implements java.awt.CompositeContext
 {
-	@:overload public function new(ac : java.awt.AlphaComposite, s : java.awt.image.ColorModel, d : java.awt.image.ColorModel) : Void;
+	@:overload @:public public function new(ac : java.awt.AlphaComposite, s : java.awt.image.ColorModel, d : java.awt.image.ColorModel) : Void;
 	
-	@:overload public function new(xc : sun.java2d.loops.XORComposite, s : java.awt.image.ColorModel, d : java.awt.image.ColorModel) : Void;
+	@:overload @:public public function new(xc : sun.java2d.loops.XORComposite, s : java.awt.image.ColorModel, d : java.awt.image.ColorModel) : Void;
 	
 	/**
 	* Release resources allocated for context.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* This method composes the two source tiles
@@ -43,7 +43,7 @@ extern class SunCompositeContext implements java.awt.CompositeContext
 	* @param src2 The second source tile for the compositing operation.
 	* @param dst The tile where the result of the operation is stored.
 	*/
-	@:overload public function compose(srcArg : java.awt.image.Raster, dstIn : java.awt.image.Raster, dstOut : java.awt.image.WritableRaster) : Void;
+	@:overload @:public public function compose(srcArg : java.awt.image.Raster, dstIn : java.awt.image.Raster, dstOut : java.awt.image.WritableRaster) : Void;
 	
 	
 }

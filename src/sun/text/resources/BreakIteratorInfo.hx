@@ -40,7 +40,7 @@ package sun.text.resources;
 */
 extern class BreakIteratorInfo extends java.util.ListResourceBundle
 {
-	@:overload @:final private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:protected @:final override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

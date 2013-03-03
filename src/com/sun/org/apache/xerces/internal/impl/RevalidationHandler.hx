@@ -68,7 +68,7 @@ extern interface RevalidationHandler extends com.sun.org.apache.xerces.internal.
 	* @param augs   Augmentations
 	* @return True if data is whitespace only
 	*/
-	@:overload public function characterData(data : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Bool;
+	@:overload @:public public function characterData(data : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Bool;
 	
 	
 }

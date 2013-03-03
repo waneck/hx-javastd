@@ -81,7 +81,7 @@ extern class CodeExceptionGen implements com.sun.org.apache.bcel.internal.generi
 	* @param handler_pc Where handling is done
 	* @param catch_type which exception is handled, null for ANY
 	*/
-	@:overload public function new(start_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle, end_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle, handler_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle, catch_type : com.sun.org.apache.bcel.internal.generic.ObjectType) : Void;
+	@:overload @:public public function new(start_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle, end_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle, handler_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle, catch_type : com.sun.org.apache.bcel.internal.generic.ObjectType) : Void;
 	
 	/**
 	* Get CodeException object.<BR>
@@ -92,55 +92,55 @@ extern class CodeExceptionGen implements com.sun.org.apache.bcel.internal.generi
 	*
 	* @param cp constant pool
 	*/
-	@:overload public function getCodeException(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.classfile.CodeException;
+	@:overload @:public public function getCodeException(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.classfile.CodeException;
 	
 	/* Set start of handler
 	* @param start_pc Start of handled region (inclusive)
 	*/
-	@:overload public function setStartPC(start_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function setStartPC(start_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/* Set end of handler
 	* @param end_pc End of handled region (inclusive)
 	*/
-	@:overload public function setEndPC(end_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function setEndPC(end_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/* Set handler code
 	* @param handler_pc Start of handler
 	*/
-	@:overload public function setHandlerPC(handler_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function setHandlerPC(handler_pc : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* @param old_ih old target, either start or end
 	* @param new_ih new target
 	*/
-	@:overload public function updateTarget(old_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function updateTarget(old_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* @return true, if ih is target of this handler
 	*/
-	@:overload public function containsTarget(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Bool;
+	@:overload @:public public function containsTarget(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Bool;
 	
 	/** Sets the type of the Exception to catch. Set 'null' for ANY. */
-	@:overload public function setCatchType(catch_type : com.sun.org.apache.bcel.internal.generic.ObjectType) : Void;
+	@:overload @:public public function setCatchType(catch_type : com.sun.org.apache.bcel.internal.generic.ObjectType) : Void;
 	
 	/** Gets the type of the Exception to catch, 'null' for ANY. */
-	@:overload public function getCatchType() : com.sun.org.apache.bcel.internal.generic.ObjectType;
+	@:overload @:public public function getCatchType() : com.sun.org.apache.bcel.internal.generic.ObjectType;
 	
 	/** @return start of handled region (inclusive)
 	*/
-	@:overload public function getStartPC() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function getStartPC() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/** @return end of handled region (inclusive)
 	*/
-	@:overload public function getEndPC() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function getEndPC() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/** @return start of handler
 	*/
-	@:overload public function getHandlerPC() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function getHandlerPC() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

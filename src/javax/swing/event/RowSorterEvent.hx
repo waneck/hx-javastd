@@ -33,7 +33,7 @@ extern class RowSorterEvent extends java.util.EventObject
 	* @throws IllegalArgumentException if <code>source</code> is
 	*         <code>null</code>
 	*/
-	@:overload public function new(source : javax.swing.RowSorter<Dynamic>) : Void;
+	@:overload @:public public function new(source : javax.swing.RowSorter<Dynamic>) : Void;
 	
 	/**
 	* Creates a <code>RowSorterEvent</code>.
@@ -45,21 +45,21 @@ extern class RowSorterEvent extends java.util.EventObject
 	* @throws IllegalArgumentException if source or <code>type</code> is
 	*         <code>null</code>
 	*/
-	@:overload public function new(source : javax.swing.RowSorter<Dynamic>, type : javax.swing.event.RowSorterEvent.RowSorterEvent_Type, previousRowIndexToModel : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(source : javax.swing.RowSorter<Dynamic>, type : javax.swing.event.RowSorterEvent.RowSorterEvent_Type, previousRowIndexToModel : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Returns the source of the event as a <code>RowSorter</code>.
 	*
 	* @return the source of the event as a <code>RowSorter</code>
 	*/
-	@:overload override public function getSource() : javax.swing.RowSorter<Dynamic>;
+	@:overload @:public override public function getSource() : javax.swing.RowSorter<Dynamic>;
 	
 	/**
 	* Returns the type of event.
 	*
 	* @return the type of event
 	*/
-	@:overload public function getType() : javax.swing.event.RowSorterEvent.RowSorterEvent_Type;
+	@:overload @:public public function getType() : javax.swing.event.RowSorterEvent.RowSorterEvent_Type;
 	
 	/**
 	* Returns the location of <code>index</code> in terms of the
@@ -72,7 +72,7 @@ extern class RowSorterEvent extends java.util.EventObject
 	* @return the index in terms of the model prior to the sort, or -1 if
 	*         the location is not valid or the mapping was not provided.
 	*/
-	@:overload public function convertPreviousRowIndexToModel(index : Int) : Int;
+	@:overload @:public public function convertPreviousRowIndexToModel(index : Int) : Int;
 	
 	/**
 	* Returns the number of rows before the sort.  This method is only
@@ -81,7 +81,7 @@ extern class RowSorterEvent extends java.util.EventObject
 	*
 	* @return the number of rows in terms of the view prior to the sort
 	*/
-	@:overload public function getPreviousRowCount() : Int;
+	@:overload @:public public function getPreviousRowCount() : Int;
 	
 	
 }

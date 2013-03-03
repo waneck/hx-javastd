@@ -32,7 +32,7 @@ extern class ExemptionMechanism
 	* @param provider the provider
 	* @param mechanism the exemption mechanism
 	*/
-	@:overload private function new(exmechSpi : javax.crypto.ExemptionMechanismSpi, provider : java.security.Provider, mechanism : String) : Void;
+	@:overload @:protected private function new(exmechSpi : javax.crypto.ExemptionMechanismSpi, provider : java.security.Provider, mechanism : String) : Void;
 	
 	/**
 	* Returns the exemption mechanism name of this
@@ -45,7 +45,7 @@ extern class ExemptionMechanism
 	* @return the exemption mechanism name of this
 	* <code>ExemptionMechanism</code> object.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	/**
 	* Returns an <code>ExemptionMechanism</code> object that implements the
@@ -79,7 +79,7 @@ extern class ExemptionMechanism
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String) : javax.crypto.ExemptionMechanism;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String) : javax.crypto.ExemptionMechanism;
 	
 	/**
 	* Returns an <code>ExemptionMechanism</code> object that implements the
@@ -119,7 +119,7 @@ extern class ExemptionMechanism
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : String) : javax.crypto.ExemptionMechanism;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String, provider : String) : javax.crypto.ExemptionMechanism;
 	
 	/**
 	* Returns an <code>ExemptionMechanism</code> object that implements the
@@ -153,14 +153,14 @@ extern class ExemptionMechanism
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.crypto.ExemptionMechanism;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.crypto.ExemptionMechanism;
 	
 	/**
 	* Returns the provider of this <code>ExemptionMechanism</code> object.
 	*
 	* @return the provider of this <code>ExemptionMechanism</code> object.
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Returns whether the result blob has been generated successfully by this
@@ -180,7 +180,7 @@ extern class ExemptionMechanism
 	* while determining whether the result blob has been generated successfully
 	* by this exemption mechanism object.
 	*/
-	@:overload @:final public function isCryptoAllowed(key : java.security.Key) : Bool;
+	@:overload @:public @:final public function isCryptoAllowed(key : java.security.Key) : Bool;
 	
 	/**
 	* Returns the length in bytes that an output buffer would need to be in
@@ -199,7 +199,7 @@ extern class ExemptionMechanism
 	* @exception IllegalStateException if this exemption mechanism is in a
 	* wrong state (e.g., has not yet been initialized)
 	*/
-	@:overload @:final public function getOutputSize(inputLen : Int) : Int;
+	@:overload @:public @:final public function getOutputSize(inputLen : Int) : Int;
 	
 	/**
 	* Initializes this exemption mechanism with a key.
@@ -218,7 +218,7 @@ extern class ExemptionMechanism
 	* @exception ExemptionMechanismException if problem(s) encountered in the
 	* process of initializing.
 	*/
-	@:overload @:final public function init(key : java.security.Key) : Void;
+	@:overload @:public @:final public function init(key : java.security.Key) : Void;
 	
 	/**
 	* Initializes this exemption mechanism with a key and a set of algorithm
@@ -241,7 +241,7 @@ extern class ExemptionMechanism
 	* @exception ExemptionMechanismException if problem(s) encountered in the
 	* process of initializing.
 	*/
-	@:overload @:final public function init(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:public @:final public function init(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Initializes this exemption mechanism with a key and a set of algorithm
@@ -264,7 +264,7 @@ extern class ExemptionMechanism
 	* @exception ExemptionMechanismException if problem(s) encountered in the
 	* process of initializing.
 	*/
-	@:overload @:final public function init(key : java.security.Key, params : java.security.AlgorithmParameters) : Void;
+	@:overload @:public @:final public function init(key : java.security.Key, params : java.security.AlgorithmParameters) : Void;
 	
 	/**
 	* Generates the exemption mechanism key blob.
@@ -276,7 +276,7 @@ extern class ExemptionMechanism
 	* @exception ExemptionMechanismException if problem(s) encountered in the
 	* process of generating.
 	*/
-	@:overload @:final public function genExemptionBlob() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function genExemptionBlob() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Generates the exemption mechanism key blob, and stores the result in
@@ -299,7 +299,7 @@ extern class ExemptionMechanism
 	* @exception ExemptionMechanismException if problem(s) encountered in the
 	* process of generating.
 	*/
-	@:overload @:final public function genExemptionBlob(output : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public @:final public function genExemptionBlob(output : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Generates the exemption mechanism key blob, and stores the result in
@@ -325,13 +325,13 @@ extern class ExemptionMechanism
 	* @exception ExemptionMechanismException if problem(s) encountered in the
 	* process of generating.
 	*/
-	@:overload @:final public function genExemptionBlob(output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
+	@:overload @:public @:final public function genExemptionBlob(output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
 	
 	/**
 	* Ensures that the key stored away by this ExemptionMechanism
 	* object will be wiped out when there are no more references to it.
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

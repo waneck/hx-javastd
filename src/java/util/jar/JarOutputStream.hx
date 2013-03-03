@@ -47,14 +47,14 @@ package java.util.jar;
 	* @param man the optional <code>Manifest</code>
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function new(out : java.io.OutputStream, man : java.util.jar.Manifest) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, man : java.util.jar.Manifest) : Void;
 	
 	/**
 	* Creates a new <code>JarOutputStream</code> with no manifest.
 	* @param out the actual output stream
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Begins writing a new JAR file entry and positions the stream
@@ -68,7 +68,7 @@ package java.util.jar;
 	* @exception ZipException if a ZIP error has occurred
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload override public function putNextEntry(ze : java.util.zip.ZipEntry) : Void;
+	@:overload @:public override public function putNextEntry(ze : java.util.zip.ZipEntry) : Void;
 	
 	
 }

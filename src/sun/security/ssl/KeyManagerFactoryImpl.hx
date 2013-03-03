@@ -28,23 +28,23 @@ package sun.security.ssl;
 	/**
 	* Returns one key manager for each type of key material.
 	*/
-	@:overload override private function engineGetKeyManagers() : java.NativeArray<javax.net.ssl.KeyManager>;
+	@:overload @:protected override private function engineGetKeyManagers() : java.NativeArray<javax.net.ssl.KeyManager>;
 	
 	
 }
 @:native('sun$security$ssl$KeyManagerFactoryImpl$SunX509') extern class KeyManagerFactoryImpl_SunX509 extends sun.security.ssl.KeyManagerFactoryImpl
 {
-	@:overload override private function engineInit(ks : java.security.KeyStore, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:protected override private function engineInit(ks : java.security.KeyStore, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
-	@:overload override private function engineInit(spec : javax.net.ssl.ManagerFactoryParameters) : Void;
+	@:overload @:protected override private function engineInit(spec : javax.net.ssl.ManagerFactoryParameters) : Void;
 	
 	
 }
 @:native('sun$security$ssl$KeyManagerFactoryImpl$X509') extern class KeyManagerFactoryImpl_X509 extends sun.security.ssl.KeyManagerFactoryImpl
 {
-	@:overload override private function engineInit(ks : java.security.KeyStore, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:protected override private function engineInit(ks : java.security.KeyStore, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
-	@:overload override private function engineInit(params : javax.net.ssl.ManagerFactoryParameters) : Void;
+	@:overload @:protected override private function engineInit(params : javax.net.ssl.ManagerFactoryParameters) : Void;
 	
 	
 }

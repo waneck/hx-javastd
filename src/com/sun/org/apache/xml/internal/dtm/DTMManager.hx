@@ -27,12 +27,12 @@ extern class DTMManager
 	* Factory for creating XMLString objects.
 	*  %TBD% Make this set by the caller.
 	*/
-	private var m_xsf : com.sun.org.apache.xml.internal.utils.XMLStringFactory;
+	@:protected private var m_xsf : com.sun.org.apache.xml.internal.utils.XMLStringFactory;
 	
 	/**
 	* Default constructor is protected on purpose.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Get the XMLStringFactory used for the DTMs.
@@ -40,7 +40,7 @@ extern class DTMManager
 	*
 	* @return a valid XMLStringFactory object, or null if it hasn't been set yet.
 	*/
-	@:overload public function getXMLStringFactory() : com.sun.org.apache.xml.internal.utils.XMLStringFactory;
+	@:overload @:public public function getXMLStringFactory() : com.sun.org.apache.xml.internal.utils.XMLStringFactory;
 	
 	/**
 	* Set the XMLStringFactory used for the DTMs.
@@ -48,7 +48,7 @@ extern class DTMManager
 	*
 	* @param xsf a valid XMLStringFactory object, should not be null.
 	*/
-	@:overload public function setXMLStringFactory(xsf : com.sun.org.apache.xml.internal.utils.XMLStringFactory) : Void;
+	@:overload @:public public function setXMLStringFactory(xsf : com.sun.org.apache.xml.internal.utils.XMLStringFactory) : Void;
 	
 	/**
 	* Obtain a new instance of a <code>DTMManager</code>.
@@ -89,9 +89,9 @@ extern class DTMManager
 	* @throws DTMConfigurationException
 	* if the implementation is not available or cannot be instantiated.
 	*/
-	@:overload public static function newInstance(xsf : com.sun.org.apache.xml.internal.utils.XMLStringFactory) : com.sun.org.apache.xml.internal.dtm.DTMManager;
+	@:overload @:public @:static public static function newInstance(xsf : com.sun.org.apache.xml.internal.utils.XMLStringFactory) : com.sun.org.apache.xml.internal.dtm.DTMManager;
 	
-	@:overload public static function newInstance(xsf : com.sun.org.apache.xml.internal.utils.XMLStringFactory, useServicesMechanism : Bool) : com.sun.org.apache.xml.internal.dtm.DTMManager;
+	@:overload @:public @:static public static function newInstance(xsf : com.sun.org.apache.xml.internal.utils.XMLStringFactory, useServicesMechanism : Bool) : com.sun.org.apache.xml.internal.dtm.DTMManager;
 	
 	/**
 	* Get an instance of a DTM, loaded with the content from the
@@ -117,7 +117,7 @@ extern class DTMManager
 	*
 	* @return a non-null DTM reference.
 	*/
-	@:overload @:abstract public function getDTM(source : javax.xml.transform.Source, unique : Bool, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, incremental : Bool, doIndexing : Bool) : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public @:abstract public function getDTM(source : javax.xml.transform.Source, unique : Bool, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, incremental : Bool, doIndexing : Bool) : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Get the instance of DTM that "owns" a node handle.
@@ -126,7 +126,7 @@ extern class DTMManager
 	*
 	* @return a non-null DTM reference.
 	*/
-	@:overload @:abstract public function getDTM(nodeHandle : Int) : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public @:abstract public function getDTM(nodeHandle : Int) : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Given a W3C DOM node, try and return a DTM handle.
@@ -136,13 +136,13 @@ extern class DTMManager
 	*
 	* @return a valid DTM handle.
 	*/
-	@:overload @:abstract public function getDTMHandleFromNode(node : org.w3c.dom.Node) : Int;
+	@:overload @:public @:abstract public function getDTMHandleFromNode(node : org.w3c.dom.Node) : Int;
 	
 	/**
 	* Creates a DTM representing an empty <code>DocumentFragment</code> object.
 	* @return a non-null DTM reference.
 	*/
-	@:overload @:abstract public function createDocumentFragment() : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public @:abstract public function createDocumentFragment() : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Release a DTM either to a lru pool, or completely remove reference.
@@ -153,7 +153,7 @@ extern class DTMManager
 	* @param shouldHardDelete True if the DTM should be removed no matter what.
 	* @return true if the DTM was removed, false if it was put back in a lru pool.
 	*/
-	@:overload @:abstract public function release(dtm : com.sun.org.apache.xml.internal.dtm.DTM, shouldHardDelete : Bool) : Bool;
+	@:overload @:public @:abstract public function release(dtm : com.sun.org.apache.xml.internal.dtm.DTM, shouldHardDelete : Bool) : Bool;
 	
 	/**
 	* Create a new <code>DTMIterator</code> based on an XPath
@@ -167,7 +167,7 @@ extern class DTMManager
 	* @param pos The position in the expression.
 	* @return The newly created <code>DTMIterator</code>.
 	*/
-	@:overload @:abstract public function createDTMIterator(xpathCompiler : Dynamic, pos : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public @:abstract public function createDTMIterator(xpathCompiler : Dynamic, pos : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Create a new <code>DTMIterator</code> based on an XPath
@@ -182,7 +182,7 @@ extern class DTMManager
 	*
 	* @return The newly created <code>DTMIterator</code>.
 	*/
-	@:overload @:abstract public function createDTMIterator(xpathString : String, presolver : com.sun.org.apache.xml.internal.utils.PrefixResolver) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public @:abstract public function createDTMIterator(xpathString : String, presolver : com.sun.org.apache.xml.internal.utils.PrefixResolver) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Create a new <code>DTMIterator</code> based only on a whatToShow
@@ -206,7 +206,7 @@ extern class DTMManager
 	*
 	* @return The newly created <code>DTMIterator</code>.
 	*/
-	@:overload @:abstract public function createDTMIterator(whatToShow : Int, filter : com.sun.org.apache.xml.internal.dtm.DTMFilter, entityReferenceExpansion : Bool) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public @:abstract public function createDTMIterator(whatToShow : Int, filter : com.sun.org.apache.xml.internal.dtm.DTMFilter, entityReferenceExpansion : Bool) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Create a new <code>DTMIterator</code> that holds exactly one node.
@@ -215,10 +215,10 @@ extern class DTMManager
 	*
 	* @return The newly created <code>DTMIterator</code>.
 	*/
-	@:overload @:abstract public function createDTMIterator(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public @:abstract public function createDTMIterator(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/* Flag indicating whether an incremental transform is desired */
-	public var m_incremental : Bool;
+	@:public public var m_incremental : Bool;
 	
 	/*
 	* Flag set by FEATURE_SOURCE_LOCATION.
@@ -226,14 +226,14 @@ extern class DTMManager
 	* keep track of line and column numbers for the input source
 	* document.
 	*/
-	public var m_source_location : Bool;
+	@:public public var m_source_location : Bool;
 	
 	/**
 	* Get a flag indicating whether an incremental transform is desired
 	* @return incremental boolean.
 	*
 	*/
-	@:overload public function getIncremental() : Bool;
+	@:overload @:public public function getIncremental() : Bool;
 	
 	/**
 	* Set a flag indicating whether an incremental transform is desired
@@ -243,7 +243,7 @@ extern class DTMManager
 	* @param incremental boolean to use to set m_incremental.
 	*
 	*/
-	@:overload public function setIncremental(incremental : Bool) : Void;
+	@:overload @:public public function setIncremental(incremental : Bool) : Void;
 	
 	/**
 	* Get a flag indicating whether the transformation phase should
@@ -252,7 +252,7 @@ extern class DTMManager
 	* @return source location boolean
 	*
 	*/
-	@:overload public function getSource_location() : Bool;
+	@:overload @:public public function getSource_location() : Bool;
 	
 	/**
 	* Set a flag indicating whether the transformation phase should
@@ -263,17 +263,17 @@ extern class DTMManager
 	* DTMManager is created
 	* @param sourceLocation boolean to use to set m_source_location
 	*/
-	@:overload public function setSource_location(sourceLocation : Bool) : Void;
+	@:overload @:public public function setSource_location(sourceLocation : Bool) : Void;
 	
 	/**
 	* Return the state of the services mechanism feature.
 	*/
-	@:overload public function useServicesMechnism() : Bool;
+	@:overload @:public public function useServicesMechnism() : Bool;
 	
 	/**
 	* Set the state of the services mechanism feature.
 	*/
-	@:overload public function setServicesMechnism(flag : Bool) : Void;
+	@:overload @:public public function setServicesMechnism(flag : Bool) : Void;
 	
 	/** This value, set at compile time, controls how many bits of the
 	* DTM node identifier numbers are used to identify a node within a
@@ -290,24 +290,24 @@ extern class DTMManager
 	* comparison against the previous "golden" files will probably
 	* complain.)
 	* */
-	public static var IDENT_DTM_NODE_BITS(default, null) : Int;
+	@:public @:static @:final public static var IDENT_DTM_NODE_BITS(default, null) : Int;
 	
 	/** When this bitmask is ANDed with a DTM node handle number, the result
 	* is the low bits of the node's index number within that DTM. To obtain
 	* the high bits, add the DTM ID portion's offset as assigned in the DTM
 	* Manager.
 	*/
-	public static var IDENT_NODE_DEFAULT(default, null) : Int;
+	@:public @:static @:final public static var IDENT_NODE_DEFAULT(default, null) : Int;
 	
 	/** When this bitmask is ANDed with a DTM node handle number, the result
 	* is the DTM's document identity number.
 	*/
-	public static var IDENT_DTM_DEFAULT(default, null) : Int;
+	@:public @:static @:final public static var IDENT_DTM_DEFAULT(default, null) : Int;
 	
 	/** This is the maximum number of DTMs available.  The highest DTM is
 	* one less than this.
 	*/
-	public static var IDENT_MAX_DTMS(default, null) : Int;
+	@:public @:static @:final public static var IDENT_MAX_DTMS(default, null) : Int;
 	
 	/**
 	* %TBD% Doc
@@ -316,21 +316,21 @@ extern class DTMManager
 	*
 	* NEEDSDOC ($objectName$) @return
 	*/
-	@:overload @:abstract public function getDTMIdentity(dtm : com.sun.org.apache.xml.internal.dtm.DTM) : Int;
+	@:overload @:public @:abstract public function getDTMIdentity(dtm : com.sun.org.apache.xml.internal.dtm.DTM) : Int;
 	
 	/**
 	* %TBD% Doc
 	*
 	* NEEDSDOC ($objectName$) @return
 	*/
-	@:overload public function getDTMIdentityMask() : Int;
+	@:overload @:public public function getDTMIdentityMask() : Int;
 	
 	/**
 	* %TBD% Doc
 	*
 	* NEEDSDOC ($objectName$) @return
 	*/
-	@:overload public function getNodeIdentityMask() : Int;
+	@:overload @:public public function getNodeIdentityMask() : Int;
 	
 	
 }

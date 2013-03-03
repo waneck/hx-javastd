@@ -31,29 +31,29 @@ package sun.tools.jconsole;
 */
 extern class MaximizableInternalFrame extends javax.swing.JInternalFrame
 {
-	@:overload public function new(title : String, resizable : Bool, closable : Bool, maximizable : Bool, iconifiable : Bool) : Void;
+	@:overload @:public public function new(title : String, resizable : Bool, closable : Bool, maximizable : Bool, iconifiable : Bool) : Void;
 	
-	@:overload override public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
-	@:overload override public function setTitle(title : String) : Void;
+	@:overload @:public override public function setTitle(title : String) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$MaximizableInternalFrame$FixedMenuBarLayout') @:internal extern class MaximizableInternalFrame_FixedMenuBarLayout extends javax.swing.BoxLayout
 {
-	@:overload public function new(target : java.awt.Container, axis : Int) : Void;
+	@:overload @:public public function new(target : java.awt.Container, axis : Int) : Void;
 	
-	@:overload override public function layoutContainer(target : java.awt.Container) : Void;
+	@:overload @:public override public function layoutContainer(target : java.awt.Container) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$MaximizableInternalFrame$MDIButtonIcon') @:internal extern class MaximizableInternalFrame_MDIButtonIcon implements javax.swing.Icon
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }

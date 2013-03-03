@@ -37,7 +37,7 @@ extern interface Detail extends javax.xml.soap.SOAPFaultElement
 	*
 	* @see Detail#addDetailEntry(QName qname)
 	*/
-	@:overload public function addDetailEntry(name : javax.xml.soap.Name) : javax.xml.soap.DetailEntry;
+	@:overload @:public public function addDetailEntry(name : javax.xml.soap.Name) : javax.xml.soap.DetailEntry;
 	
 	/**
 	* Creates a new <code>DetailEntry</code> object with the given
@@ -53,7 +53,7 @@ extern interface Detail extends javax.xml.soap.SOAPFaultElement
 	* @see Detail#addDetailEntry(Name name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function addDetailEntry(qname : javax.xml.namespace.QName) : javax.xml.soap.DetailEntry;
+	@:require(java3) @:overload @:public public function addDetailEntry(qname : javax.xml.namespace.QName) : javax.xml.soap.DetailEntry;
 	
 	/**
 	* Gets an Iterator over all of the <code>DetailEntry</code>s in this <code>Detail</code> object.
@@ -61,7 +61,7 @@ extern interface Detail extends javax.xml.soap.SOAPFaultElement
 	* @return an <code>Iterator</code> object over the <code>DetailEntry</code>
 	*             objects in this <code>Detail</code> object
 	*/
-	@:overload public function getDetailEntries() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getDetailEntries() : java.util.Iterator<Dynamic>;
 	
 	
 }

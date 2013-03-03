@@ -36,7 +36,7 @@ extern class CompositeName implements javax.naming.Name
 	*               The enumeration will be consumed to extract its
 	*               elements.
 	*/
-	@:overload private function new(comps : java.util.Enumeration<String>) : Void;
+	@:overload @:protected private function new(comps : java.util.Enumeration<String>) : Void;
 	
 	/**
 	* Constructs a new composite name instance by parsing the string n
@@ -47,13 +47,13 @@ extern class CompositeName implements javax.naming.Name
 	* @param  n       The non-null string to parse.
 	* @exception InvalidNameException If n has invalid composite name syntax.
 	*/
-	@:overload public function new(n : String) : Void;
+	@:overload @:public public function new(n : String) : Void;
 	
 	/**
 	* Constructs a new empty composite name. Such a name returns true
 	* when <code>isEmpty()</code> is invoked on it.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Generates the string representation of this composite name.
@@ -70,7 +70,7 @@ extern class CompositeName implements javax.naming.Name
 	*
 	* @return A non-null string representation of this composite name.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Determines whether two composite names are equal.
@@ -85,7 +85,7 @@ extern class CompositeName implements javax.naming.Name
 	* @return true if obj is equal to this composite name, false otherwise.
 	* @see #hashCode
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Computes the hash code of this composite name.
@@ -95,7 +95,7 @@ extern class CompositeName implements javax.naming.Name
 	* @return An int representing the hash code of this name.
 	* @see #equals
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this CompositeName with the specified Object for order.
@@ -124,7 +124,7 @@ extern class CompositeName implements javax.naming.Name
 	*          is less than, equal to, or greater than the given Object.
 	* @exception ClassCastException if obj is not a CompositeName.
 	*/
-	@:overload public function compareTo(obj : Dynamic) : Int;
+	@:overload @:public public function compareTo(obj : Dynamic) : Int;
 	
 	/**
 	* Generates a copy of this composite name.
@@ -133,14 +133,14 @@ extern class CompositeName implements javax.naming.Name
 	*
 	* @return A non-null copy of this composite name.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Retrieves the number of components in this composite name.
 	*
 	* @return The nonnegative number of components in this composite name.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Determines whether this composite name is empty. A composite name
@@ -148,7 +148,7 @@ extern class CompositeName implements javax.naming.Name
 	*
 	* @return true if this composite name is empty, false otherwise.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Retrieves the components of this composite name as an enumeration
@@ -160,7 +160,7 @@ extern class CompositeName implements javax.naming.Name
 	*         this composite name. Each element of the enumeration is of
 	*         class String.
 	*/
-	@:overload public function getAll() : java.util.Enumeration<String>;
+	@:overload @:public public function getAll() : java.util.Enumeration<String>;
 	
 	/**
 	* Retrieves a component of this composite name.
@@ -171,7 +171,7 @@ extern class CompositeName implements javax.naming.Name
 	* @exception ArrayIndexOutOfBoundsException if posn is outside the
 	*         specified range.
 	*/
-	@:overload public function get(posn : Int) : String;
+	@:overload @:public public function get(posn : Int) : String;
 	
 	/**
 	* Creates a composite name whose components consist of a prefix of the
@@ -185,7 +185,7 @@ extern class CompositeName implements javax.naming.Name
 	* @exception ArrayIndexOutOfBoundsException
 	*         If posn is outside the specified range.
 	*/
-	@:overload public function getPrefix(posn : Int) : javax.naming.Name;
+	@:overload @:public public function getPrefix(posn : Int) : javax.naming.Name;
 	
 	/**
 	* Creates a composite name whose components consist of a suffix of the
@@ -200,7 +200,7 @@ extern class CompositeName implements javax.naming.Name
 	* @exception ArrayIndexOutOfBoundsException
 	*         If posn is outside the specified range.
 	*/
-	@:overload public function getSuffix(posn : Int) : javax.naming.Name;
+	@:overload @:public public function getSuffix(posn : Int) : javax.naming.Name;
 	
 	/**
 	* Determines whether a composite name is a prefix of this composite name.
@@ -212,7 +212,7 @@ extern class CompositeName implements javax.naming.Name
 	* @return true if n is a CompositeName and
 	*         is a prefix of this composite name, false otherwise.
 	*/
-	@:overload public function startsWith(n : javax.naming.Name) : Bool;
+	@:overload @:public public function startsWith(n : javax.naming.Name) : Bool;
 	
 	/**
 	* Determines whether a composite name is a suffix of this composite name.
@@ -225,7 +225,7 @@ extern class CompositeName implements javax.naming.Name
 	* @return true if n is a CompositeName and
 	*         is a suffix of this composite name, false otherwise.
 	*/
-	@:overload public function endsWith(n : javax.naming.Name) : Bool;
+	@:overload @:public public function endsWith(n : javax.naming.Name) : Bool;
 	
 	/**
 	* Adds the components of a composite name -- in order -- to the end of
@@ -235,7 +235,7 @@ extern class CompositeName implements javax.naming.Name
 	* @return The updated CompositeName, not a new one. Cannot be null.
 	* @exception InvalidNameException If suffix is not a composite name.
 	*/
-	@:overload public function addAll(suffix : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function addAll(suffix : javax.naming.Name) : javax.naming.Name;
 	
 	/**
 	* Adds the components of a composite name -- in order -- at a specified
@@ -252,7 +252,7 @@ extern class CompositeName implements javax.naming.Name
 	* @exception ArrayIndexOutOfBoundsException
 	*         If posn is outside the specified range.
 	*/
-	@:overload public function addAll(posn : Int, n : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function addAll(posn : Int, n : javax.naming.Name) : javax.naming.Name;
 	
 	/**
 	* Adds a single component to the end of this composite name.
@@ -262,7 +262,7 @@ extern class CompositeName implements javax.naming.Name
 	* @exception InvalidNameException If adding comp at end of the name
 	*                         would violate the name's syntax.
 	*/
-	@:overload public function add(comp : String) : javax.naming.Name;
+	@:overload @:public public function add(comp : String) : javax.naming.Name;
 	
 	/**
 	* Adds a single component at a specified position within this
@@ -280,7 +280,7 @@ extern class CompositeName implements javax.naming.Name
 	* @exception InvalidNameException If adding comp at the specified position
 	*                         would violate the name's syntax.
 	*/
-	@:overload public function add(posn : Int, comp : String) : javax.naming.Name;
+	@:overload @:public public function add(posn : Int, comp : String) : javax.naming.Name;
 	
 	/**
 	* Deletes a component from this composite name.
@@ -297,7 +297,7 @@ extern class CompositeName implements javax.naming.Name
 	* @exception InvalidNameException If deleting the component
 	*                         would violate the name's syntax.
 	*/
-	@:overload public function remove(posn : Int) : Dynamic;
+	@:overload @:public public function remove(posn : Int) : Dynamic;
 	
 	
 }

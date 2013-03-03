@@ -25,9 +25,9 @@ package com.sun.tools.internal.xjc.generator.util;
 */
 extern class ExistingBlockReference implements com.sun.tools.internal.xjc.generator.util.BlockReference
 {
-	@:overload public function new(_block : com.sun.codemodel.internal.JBlock) : Void;
+	@:overload @:public public function new(_block : com.sun.codemodel.internal.JBlock) : Void;
 	
-	@:overload public function get(create : Bool) : com.sun.codemodel.internal.JBlock;
+	@:overload @:public public function get(create : Bool) : com.sun.codemodel.internal.JBlock;
 	
 	
 }

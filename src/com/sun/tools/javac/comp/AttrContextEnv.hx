@@ -28,7 +28,7 @@ extern class AttrContextEnv extends com.sun.tools.javac.comp.Env<com.sun.tools.j
 	/** Create an outermost environment for a given (toplevel)tree,
 	*  with a given info field.
 	*/
-	@:overload public function new(tree : com.sun.tools.javac.tree.JCTree, info : com.sun.tools.javac.comp.AttrContext) : Void;
+	@:overload @:public public function new(tree : com.sun.tools.javac.tree.JCTree, info : com.sun.tools.javac.comp.AttrContext) : Void;
 	
 	
 }

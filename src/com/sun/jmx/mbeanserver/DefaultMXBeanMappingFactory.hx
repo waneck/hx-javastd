@@ -26,7 +26,7 @@ package com.sun.jmx.mbeanserver;
 extern class DefaultMXBeanMappingFactory extends com.sun.jmx.mbeanserver.MXBeanMappingFactory
 {
 	/** Get the converter for the given Java type, creating it if necessary. */
-	@:overload @:synchronized public function mappingForType(objType : java.lang.reflect.Type, factory : com.sun.jmx.mbeanserver.MXBeanMappingFactory) : com.sun.jmx.mbeanserver.MXBeanMapping;
+	@:overload @:public @:synchronized override public function mappingForType(objType : java.lang.reflect.Type, factory : com.sun.jmx.mbeanserver.MXBeanMappingFactory) : com.sun.jmx.mbeanserver.MXBeanMapping;
 	
 	/**
 	* Utility method to take a string and convert it to normal Java variable
@@ -41,9 +41,9 @@ extern class DefaultMXBeanMappingFactory extends com.sun.jmx.mbeanserver.MXBeanM
 	* @param  name The string to be decapitalized.
 	* @return  The decapitalized version of the string.
 	*/
-	@:overload public static function decapitalize(name : String) : String;
+	@:overload @:public @:static public static function decapitalize(name : String) : String;
 	
-	@:overload public static function propertyName(m : java.lang.reflect.Method) : String;
+	@:overload @:public @:static public static function propertyName(m : java.lang.reflect.Method) : String;
 	
 	
 }
@@ -90,9 +90,9 @@ extern class DefaultMXBeanMappingFactory extends com.sun.jmx.mbeanserver.MXBeanM
 */
 @:require(java6) @:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$NonNullMXBeanMapping') @:internal extern class DefaultMXBeanMappingFactory_NonNullMXBeanMapping extends com.sun.jmx.mbeanserver.MXBeanMapping
 {
-	@:overload @:final public function fromOpenValue(openValue : Dynamic) : Dynamic;
+	@:overload @:public @:final override public function fromOpenValue(openValue : Dynamic) : Dynamic;
 	
-	@:overload @:final public function toOpenValue(javaValue : Dynamic) : Dynamic;
+	@:overload @:public @:final override public function toOpenValue(javaValue : Dynamic) : Dynamic;
 	
 	
 }
@@ -116,13 +116,13 @@ because reflection takes care of it.  */
 }
 @:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$ArrayMapping') @:internal extern class DefaultMXBeanMappingFactory_ArrayMapping extends com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory.DefaultMXBeanMappingFactory_NonNullMXBeanMapping
 {
-	@:overload public function checkReconstructible() : Void;
+	@:overload @:public override public function checkReconstructible() : Void;
 	
 	
 }
 @:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$CollectionMapping') @:internal extern class DefaultMXBeanMappingFactory_CollectionMapping extends com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory.DefaultMXBeanMappingFactory_NonNullMXBeanMapping
 {
-	@:overload public function checkReconstructible() : Void;
+	@:overload @:public override public function checkReconstructible() : Void;
 	
 	
 }
@@ -132,13 +132,13 @@ because reflection takes care of it.  */
 }
 @:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$TabularMapping') @:internal extern class DefaultMXBeanMappingFactory_TabularMapping extends com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory.DefaultMXBeanMappingFactory_NonNullMXBeanMapping
 {
-	@:overload public function checkReconstructible() : Void;
+	@:overload @:public override public function checkReconstructible() : Void;
 	
 	
 }
 @:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$CompositeMapping') @:internal extern class DefaultMXBeanMappingFactory_CompositeMapping extends com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory.DefaultMXBeanMappingFactory_NonNullMXBeanMapping
 {
-	@:overload public function checkReconstructible() : Void;
+	@:overload @:public override public function checkReconstructible() : Void;
 	
 	
 }

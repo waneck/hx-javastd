@@ -25,15 +25,15 @@ package com.sun.xml.internal.bind.v2.runtime;
 */
 extern class MarshallerImpl extends javax.xml.bind.helpers.AbstractMarshallerImpl implements javax.xml.bind.ValidationEventHandler
 {
-	private var serializer(default, null) : com.sun.xml.internal.bind.v2.runtime.XMLSerializer;
+	@:protected @:final private var serializer(default, null) : com.sun.xml.internal.bind.v2.runtime.XMLSerializer;
 	
 	/**
 	* @param assoc
 	*      non-null if the marshaller is working inside {@link BinderImpl}.
 	*/
-	@:overload public function new(c : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, assoc : com.sun.xml.internal.bind.v2.runtime.AssociationMap<Dynamic>) : Void;
+	@:overload @:public public function new(c : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, assoc : com.sun.xml.internal.bind.v2.runtime.AssociationMap<Dynamic>) : Void;
 	
-	@:overload public function getContext() : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl;
+	@:overload @:public public function getContext() : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl;
 	
 	/**
 	* Marshals to {@link OutputStream} with the given in-scope namespaces
@@ -41,71 +41,71 @@ extern class MarshallerImpl extends javax.xml.bind.helpers.AbstractMarshallerImp
 	*
 	* @since 2.1.5
 	*/
-	@:require(java1) @:overload public function marshal(obj : Dynamic, out : java.io.OutputStream, inscopeNamespace : javax.xml.namespace.NamespaceContext) : Void;
+	@:require(java1) @:overload @:public public function marshal(obj : Dynamic, out : java.io.OutputStream, inscopeNamespace : javax.xml.namespace.NamespaceContext) : Void;
 	
-	@:overload public function marshal(obj : Dynamic, writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function marshal(obj : Dynamic, writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload public function marshal(obj : Dynamic, writer : javax.xml.stream.XMLEventWriter) : Void;
+	@:overload @:public override public function marshal(obj : Dynamic, writer : javax.xml.stream.XMLEventWriter) : Void;
 	
-	@:overload public function marshal(obj : Dynamic, output : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput) : Void;
+	@:overload @:public public function marshal(obj : Dynamic, output : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput) : Void;
 	
-	@:overload public function marshal(target : Dynamic, result : javax.xml.transform.Result) : Void;
+	@:overload @:public override public function marshal(target : Dynamic, result : javax.xml.transform.Result) : Void;
 	
 	/**
 	* Used by {@link BridgeImpl} to write an arbitrary object as a fragment.
 	*/
-	@:overload @:final private function write<T>(rootTagName : com.sun.xml.internal.bind.v2.runtime.Name, bi : com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo<T>, obj : T, out : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput, postInitAction : java.lang.Runnable) : Void;
+	@:overload @:protected @:final private function write<T>(rootTagName : com.sun.xml.internal.bind.v2.runtime.Name, bi : com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo<T>, obj : T, out : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput, postInitAction : java.lang.Runnable) : Void;
 	
-	@:overload private function createEscapeHandler(encoding : String) : com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler;
+	@:overload @:protected private function createEscapeHandler(encoding : String) : com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler;
 	
-	@:overload public function createWriter(w : java.io.Writer, encoding : String) : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput;
+	@:overload @:public public function createWriter(w : java.io.Writer, encoding : String) : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput;
 	
-	@:overload public function createWriter(w : java.io.Writer) : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput;
+	@:overload @:public public function createWriter(w : java.io.Writer) : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput;
 	
-	@:overload public function createWriter(os : java.io.OutputStream) : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput;
+	@:overload @:public public function createWriter(os : java.io.OutputStream) : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput;
 	
-	@:overload public function createWriter(os : java.io.OutputStream, encoding : String) : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput;
+	@:overload @:public public function createWriter(os : java.io.OutputStream, encoding : String) : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput;
 	
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public override public function getProperty(name : String) : Dynamic;
 	
-	@:overload public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public override public function setProperty(name : String, value : Dynamic) : Void;
 	
-	@:overload public function setAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>, adapter : A) : Void;
+	@:overload @:public override public function setAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>, adapter : A) : Void;
 	
-	@:overload public function getAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>) : A;
+	@:overload @:public override public function getAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>) : A;
 	
-	@:overload public function setAttachmentMarshaller(am : javax.xml.bind.attachment.AttachmentMarshaller) : Void;
+	@:overload @:public override public function setAttachmentMarshaller(am : javax.xml.bind.attachment.AttachmentMarshaller) : Void;
 	
-	@:overload public function getAttachmentMarshaller() : javax.xml.bind.attachment.AttachmentMarshaller;
+	@:overload @:public override public function getAttachmentMarshaller() : javax.xml.bind.attachment.AttachmentMarshaller;
 	
-	@:overload public function getSchema() : javax.xml.validation.Schema;
+	@:overload @:public override public function getSchema() : javax.xml.validation.Schema;
 	
-	@:overload public function setSchema(s : javax.xml.validation.Schema) : Void;
+	@:overload @:public override public function setSchema(s : javax.xml.validation.Schema) : Void;
 	
 	/**
 	* Default error handling behavior fot {@link Marshaller}.
 	*/
-	@:overload public function handleEvent(event : javax.xml.bind.ValidationEvent) : Bool;
+	@:overload @:public public function handleEvent(event : javax.xml.bind.ValidationEvent) : Bool;
 	
-	@:overload public function getListener() : javax.xml.bind.Marshaller.Marshaller_Listener;
+	@:overload @:public override public function getListener() : javax.xml.bind.Marshaller.Marshaller_Listener;
 	
-	@:overload public function setListener(listener : javax.xml.bind.Marshaller.Marshaller_Listener) : Void;
+	@:overload @:public override public function setListener(listener : javax.xml.bind.Marshaller.Marshaller_Listener) : Void;
 	
-	private static var INDENT_STRING(default, null) : String;
+	@:protected @:static @:final private static var INDENT_STRING(default, null) : String;
 	
-	private static var PREFIX_MAPPER(default, null) : String;
+	@:protected @:static @:final private static var PREFIX_MAPPER(default, null) : String;
 	
-	private static var ENCODING_HANDLER(default, null) : String;
+	@:protected @:static @:final private static var ENCODING_HANDLER(default, null) : String;
 	
-	private static var ENCODING_HANDLER2(default, null) : String;
+	@:protected @:static @:final private static var ENCODING_HANDLER2(default, null) : String;
 	
-	private static var XMLDECLARATION(default, null) : String;
+	@:protected @:static @:final private static var XMLDECLARATION(default, null) : String;
 	
-	private static var XML_HEADERS(default, null) : String;
+	@:protected @:static @:final private static var XML_HEADERS(default, null) : String;
 	
-	private static var C14N(default, null) : String;
+	@:protected @:static @:final private static var C14N(default, null) : String;
 	
-	private static var OBJECT_IDENTITY_CYCLE_DETECTION(default, null) : String;
+	@:protected @:static @:final private static var OBJECT_IDENTITY_CYCLE_DETECTION(default, null) : String;
 	
 	
 }

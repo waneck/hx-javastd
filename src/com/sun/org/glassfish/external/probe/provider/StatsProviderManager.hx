@@ -25,19 +25,19 @@ package com.sun.org.glassfish.external.probe.provider;
 */
 extern class StatsProviderManager
 {
-	@:overload public static function register(configElement : String, pp : com.sun.org.glassfish.external.probe.provider.PluginPoint, subTreeRoot : String, statsProvider : Dynamic) : Bool;
+	@:overload @:public @:static public static function register(configElement : String, pp : com.sun.org.glassfish.external.probe.provider.PluginPoint, subTreeRoot : String, statsProvider : Dynamic) : Bool;
 	
-	@:overload public static function register(pp : com.sun.org.glassfish.external.probe.provider.PluginPoint, configElement : String, subTreeRoot : String, statsProvider : Dynamic, invokerId : String) : Bool;
+	@:overload @:public @:static public static function register(pp : com.sun.org.glassfish.external.probe.provider.PluginPoint, configElement : String, subTreeRoot : String, statsProvider : Dynamic, invokerId : String) : Bool;
 	
-	@:overload public static function register(configElement : String, pp : com.sun.org.glassfish.external.probe.provider.PluginPoint, subTreeRoot : String, statsProvider : Dynamic, configLevelStr : String) : Bool;
+	@:overload @:public @:static public static function register(configElement : String, pp : com.sun.org.glassfish.external.probe.provider.PluginPoint, subTreeRoot : String, statsProvider : Dynamic, configLevelStr : String) : Bool;
 	
-	@:overload public static function register(configElement : String, pp : com.sun.org.glassfish.external.probe.provider.PluginPoint, subTreeRoot : String, statsProvider : Dynamic, configLevelStr : String, invokerId : String) : Bool;
+	@:overload @:public @:static public static function register(configElement : String, pp : com.sun.org.glassfish.external.probe.provider.PluginPoint, subTreeRoot : String, statsProvider : Dynamic, configLevelStr : String, invokerId : String) : Bool;
 	
-	@:overload public static function unregister(statsProvider : Dynamic) : Bool;
+	@:overload @:public @:static public static function unregister(statsProvider : Dynamic) : Bool;
 	
-	@:overload public static function hasListeners(probeStr : String) : Bool;
+	@:overload @:public @:static public static function hasListeners(probeStr : String) : Bool;
 	
-	@:overload public static function setStatsProviderManagerDelegate(lspmd : com.sun.org.glassfish.external.probe.provider.StatsProviderManagerDelegate) : Void;
+	@:overload @:public @:static public static function setStatsProviderManagerDelegate(lspmd : com.sun.org.glassfish.external.probe.provider.StatsProviderManagerDelegate) : Void;
 	
 	
 }

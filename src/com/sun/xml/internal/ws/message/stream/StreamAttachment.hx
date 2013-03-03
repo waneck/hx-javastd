@@ -25,25 +25,25 @@ package com.sun.xml.internal.ws.message.stream;
 */
 extern class StreamAttachment implements com.sun.xml.internal.ws.api.message.Attachment
 {
-	@:overload public function new(buffer : com.sun.xml.internal.ws.util.ByteArrayBuffer, contentId : String, contentType : String) : Void;
+	@:overload @:public public function new(buffer : com.sun.xml.internal.ws.util.ByteArrayBuffer, contentId : String, contentType : String) : Void;
 	
-	@:overload public function getContentId() : String;
+	@:overload @:public public function getContentId() : String;
 	
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
-	@:overload public function asByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function asDataHandler() : javax.activation.DataHandler;
+	@:overload @:public public function asDataHandler() : javax.activation.DataHandler;
 	
-	@:overload public function asSource() : javax.xml.transform.Source;
+	@:overload @:public public function asSource() : javax.xml.transform.Source;
 	
-	@:overload public function asInputStream() : java.io.InputStream;
+	@:overload @:public public function asInputStream() : java.io.InputStream;
 	
-	@:overload public function asBase64Data() : com.sun.xml.internal.org.jvnet.staxex.Base64Data;
+	@:overload @:public public function asBase64Data() : com.sun.xml.internal.org.jvnet.staxex.Base64Data;
 	
-	@:overload public function writeTo(os : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(os : java.io.OutputStream) : Void;
 	
-	@:overload public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class SwingWorker<T, V> implements java.util.concurrent.RunnableFuture<T>
 	/**
 	* Constructs this {@code SwingWorker}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Computes a result, or throws an exception if unable to do so.
@@ -44,13 +44,13 @@ extern class SwingWorker<T, V> implements java.util.concurrent.RunnableFuture<T>
 	* @throws Exception if unable to compute a result
 	*
 	*/
-	@:overload @:abstract private function doInBackground() : T;
+	@:overload @:protected @:abstract private function doInBackground() : T;
 	
 	/**
 	* Sets this {@code Future} to the result of computation unless
 	* it has been cancelled.
 	*/
-	@:overload @:final public function run() : Void;
+	@:overload @:public @:final public function run() : Void;
 	
 	/**
 	* Sends data chunks to the {@link #process} method. This method is to be
@@ -121,7 +121,7 @@ extern class SwingWorker<T, V> implements java.util.concurrent.RunnableFuture<T>
 	* @see #process
 	*
 	*/
-	@:overload @:final private function publish(chunks : java.NativeArray<V>) : Void;
+	@:overload @:protected @:final private function publish(chunks : java.NativeArray<V>) : Void;
 	
 	/**
 	* Receives data chunks from the {@code publish} method asynchronously on the
@@ -135,7 +135,7 @@ extern class SwingWorker<T, V> implements java.util.concurrent.RunnableFuture<T>
 	* @see #publish
 	*
 	*/
-	@:overload private function process(chunks : java.util.List<V>) : Void;
+	@:overload @:protected private function process(chunks : java.util.List<V>) : Void;
 	
 	/**
 	* Executed on the <i>Event Dispatch Thread</i> after the {@code doInBackground}
@@ -149,7 +149,7 @@ extern class SwingWorker<T, V> implements java.util.concurrent.RunnableFuture<T>
 	* @see #isCancelled()
 	* @see #get
 	*/
-	@:overload private function done() : Void;
+	@:overload @:protected private function done() : Void;
 	
 	/**
 	* Sets the {@code progress} bound property.
@@ -178,14 +178,14 @@ extern class SwingWorker<T, V> implements java.util.concurrent.RunnableFuture<T>
 	* @param progress the progress value to set
 	* @throws IllegalArgumentException is value not from 0 to 100
 	*/
-	@:overload @:final private function setProgress(progress : Int) : Void;
+	@:overload @:protected @:final private function setProgress(progress : Int) : Void;
 	
 	/**
 	* Returns the {@code progress} bound property.
 	*
 	* @return the progress bound property.
 	*/
-	@:overload @:final public function getProgress() : Int;
+	@:overload @:public @:final public function getProgress() : Int;
 	
 	/**
 	* Schedules this {@code SwingWorker} for execution on a <i>worker</i>
@@ -200,22 +200,22 @@ extern class SwingWorker<T, V> implements java.util.concurrent.RunnableFuture<T>
 	* {@code SwingWorker} more than once will not result in invoking the
 	* {@code doInBackground} method twice.
 	*/
-	@:overload @:final public function execute() : Void;
+	@:overload @:public @:final public function execute() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:final public function cancel(mayInterruptIfRunning : Bool) : Bool;
+	@:overload @:public @:final public function cancel(mayInterruptIfRunning : Bool) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:final public function isCancelled() : Bool;
+	@:overload @:public @:final public function isCancelled() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:final public function isDone() : Bool;
+	@:overload @:public @:final public function isDone() : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -255,14 +255,14 @@ extern class SwingWorker<T, V> implements java.util.concurrent.RunnableFuture<T>
 	* dialog.setVisible(true);
 	* </pre>
 	*/
-	@:overload @:final public function get() : T;
+	@:overload @:public @:final public function get() : T;
 	
 	/**
 	* {@inheritDoc}
 	* <p>
 	* Please refer to {@link #get} for more details.
 	*/
-	@:overload @:final public function get(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : T;
+	@:overload @:public @:final public function get(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : T;
 	
 	/**
 	* Adds a {@code PropertyChangeListener} to the listener list. The listener
@@ -276,7 +276,7 @@ extern class SwingWorker<T, V> implements java.util.concurrent.RunnableFuture<T>
 	*
 	* @param listener the {@code PropertyChangeListener} to be added
 	*/
-	@:overload @:final public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:final public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a {@code PropertyChangeListener} from the listener list. This
@@ -292,7 +292,7 @@ extern class SwingWorker<T, V> implements java.util.concurrent.RunnableFuture<T>
 	*
 	* @param listener the {@code PropertyChangeListener} to be removed
 	*/
-	@:overload @:final public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:final public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Reports a bound property update to any registered listeners. No event is
@@ -316,7 +316,7 @@ extern class SwingWorker<T, V> implements java.util.concurrent.RunnableFuture<T>
 	* @param oldValue the old value of the property
 	* @param newValue the new value of the property
 	*/
-	@:overload @:final public function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:public @:final public function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Returns the {@code PropertyChangeSupport} for this {@code SwingWorker}.
@@ -335,14 +335,14 @@ extern class SwingWorker<T, V> implements java.util.concurrent.RunnableFuture<T>
 	*
 	* @return {@code PropertyChangeSupport} for this {@code SwingWorker}
 	*/
-	@:overload @:final public function getPropertyChangeSupport() : java.beans.PropertyChangeSupport;
+	@:overload @:public @:final public function getPropertyChangeSupport() : java.beans.PropertyChangeSupport;
 	
 	/**
 	* Returns the {@code SwingWorker} state bound property.
 	*
 	* @return the current state
 	*/
-	@:overload @:final public function getState() : javax.swing.SwingWorker.SwingWorker_StateValue;
+	@:overload @:public @:final public function getState() : javax.swing.SwingWorker.SwingWorker_StateValue;
 	
 	
 }
@@ -372,17 +372,17 @@ extern class SwingWorker<T, V> implements java.util.concurrent.RunnableFuture<T>
 
 @:native('javax$swing$SwingWorker$DoSubmitAccumulativeRunnable') @:internal extern class SwingWorker_DoSubmitAccumulativeRunnable extends sun.swing.AccumulativeRunnable<java.lang.Runnable> implements java.awt.event.ActionListener
 {
-	@:overload override private function run(args : java.util.List<java.lang.Runnable>) : Void;
+	@:overload @:protected override private function run(args : java.util.List<java.lang.Runnable>) : Void;
 	
-	@:overload override private function submit() : Void;
+	@:overload @:protected override private function submit() : Void;
 	
-	@:overload public function actionPerformed(event : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(event : java.awt.event.ActionEvent) : Void;
 	
 	
 }
 @:native('javax$swing$SwingWorker$SwingWorkerPropertyChangeSupport') @:internal extern class SwingWorker_SwingWorkerPropertyChangeSupport extends java.beans.PropertyChangeSupport
 {
-	@:overload override public function firePropertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public override public function firePropertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

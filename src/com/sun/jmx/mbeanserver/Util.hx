@@ -25,7 +25,7 @@ package com.sun.jmx.mbeanserver;
 */
 extern class Util
 {
-	@:overload public static function newObjectName(string : String) : javax.management.ObjectName;
+	@:overload @:public @:static public static function newObjectName(string : String) : javax.management.ObjectName;
 	
 	/* This method can be used by code that is deliberately violating the
 	* allowed checked casts.  Rather than marking the whole method containing
@@ -36,7 +36,7 @@ extern class Util
 	* or, if that doesn't work (e.g. X is a type variable)
 	*    Util.<X>cast(y);
 	*/
-	@:native('cast') @:overload public static function _cast<T>(x : Dynamic) : T;
+	@:native('cast') @:overload @:public @:static public static function _cast<T>(x : Dynamic) : T;
 	
 	/**
 	* Computes a descriptor hashcode from its names and values.
@@ -44,7 +44,7 @@ extern class Util
 	* @param values the array of descriptor values.
 	* @return a hash code value, as described in {@link #hashCode(Descriptor)}
 	*/
-	@:overload public static function hashCode(names : java.NativeArray<String>, values : java.NativeArray<Dynamic>) : Int;
+	@:overload @:public @:static public static function hashCode(names : java.NativeArray<String>, values : java.NativeArray<Dynamic>) : Int;
 	
 	/** Match a string against a shell-style pattern.  The only pattern
 	characters recognized are <code>?</code>, standing for any one
@@ -56,7 +56,7 @@ extern class Util
 
 	@return true if and only if the string matches the pattern.
 	*/
-	@:overload public static function wildmatch(str : String, pat : String) : Bool;
+	@:overload @:public @:static public static function wildmatch(str : String, pat : String) : Bool;
 	
 	
 }

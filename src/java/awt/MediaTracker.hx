@@ -30,7 +30,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @param     comp the component on which the images
 	*                     will eventually be drawn
 	*/
-	@:overload public function new(comp : java.awt.Component) : Void;
+	@:overload @:public public function new(comp : java.awt.Component) : Void;
 	
 	/**
 	* Adds an image to the list of images being tracked by this media
@@ -39,7 +39,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @param     image   the image to be tracked
 	* @param     id      an identifier used to track this image
 	*/
-	@:overload public function addImage(image : java.awt.Image, id : Int) : Void;
+	@:overload @:public public function addImage(image : java.awt.Image, id : Int) : Void;
 	
 	/**
 	* Adds a scaled image to the list of images being tracked
@@ -51,21 +51,21 @@ extern class MediaTracker implements java.io.Serializable
 	* @param     w    the width at which the image is rendered
 	* @param     h    the height at which the image is rendered
 	*/
-	@:overload @:synchronized public function addImage(image : java.awt.Image, id : Int, w : Int, h : Int) : Void;
+	@:overload @:public @:synchronized public function addImage(image : java.awt.Image, id : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Flag indicating that media is currently being loaded.
 	* @see         java.awt.MediaTracker#statusAll
 	* @see         java.awt.MediaTracker#statusID
 	*/
-	public static var LOADING(default, null) : Int;
+	@:public @:static @:final public static var LOADING(default, null) : Int;
 	
 	/**
 	* Flag indicating that the downloading of media was aborted.
 	* @see         java.awt.MediaTracker#statusAll
 	* @see         java.awt.MediaTracker#statusID
 	*/
-	public static var ABORTED(default, null) : Int;
+	@:public @:static @:final public static var ABORTED(default, null) : Int;
 	
 	/**
 	* Flag indicating that the downloading of media encountered
@@ -73,7 +73,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @see         java.awt.MediaTracker#statusAll
 	* @see         java.awt.MediaTracker#statusID
 	*/
-	public static var ERRORED(default, null) : Int;
+	@:public @:static @:final public static var ERRORED(default, null) : Int;
 	
 	/**
 	* Flag indicating that the downloading of media was completed
@@ -81,7 +81,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @see         java.awt.MediaTracker#statusAll
 	* @see         java.awt.MediaTracker#statusID
 	*/
-	public static var COMPLETE(default, null) : Int;
+	@:public @:static @:final public static var COMPLETE(default, null) : Int;
 	
 	/**
 	* Checks to see if all images being tracked by this media tracker
@@ -102,7 +102,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @see         java.awt.MediaTracker#isErrorAny
 	* @see         java.awt.MediaTracker#isErrorID
 	*/
-	@:overload public function checkAll() : Bool;
+	@:overload @:public public function checkAll() : Bool;
 	
 	/**
 	* Checks to see if all images being tracked by this media tracker
@@ -126,7 +126,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @see         java.awt.MediaTracker#isErrorAny()
 	* @see         java.awt.MediaTracker#isErrorID(int)
 	*/
-	@:overload public function checkAll(load : Bool) : Bool;
+	@:overload @:public public function checkAll(load : Bool) : Bool;
 	
 	/**
 	* Checks the error status of all of the images.
@@ -136,7 +136,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @see      java.awt.MediaTracker#isErrorID
 	* @see      java.awt.MediaTracker#getErrorsAny
 	*/
-	@:overload @:synchronized public function isErrorAny() : Bool;
+	@:overload @:public @:synchronized public function isErrorAny() : Bool;
 	
 	/**
 	* Returns a list of all media that have encountered an error.
@@ -147,7 +147,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @see          java.awt.MediaTracker#isErrorAny
 	* @see          java.awt.MediaTracker#getErrorsID
 	*/
-	@:overload @:synchronized public function getErrorsAny() : java.NativeArray<Dynamic>;
+	@:overload @:public @:synchronized public function getErrorsAny() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Starts loading all images tracked by this media tracker. This
@@ -165,7 +165,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @exception   InterruptedException  if any thread has
 	*                                     interrupted this thread
 	*/
-	@:overload public function waitForAll() : Void;
+	@:overload @:public public function waitForAll() : Void;
 	
 	/**
 	* Starts loading all images tracked by this media tracker. This
@@ -188,7 +188,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @exception   InterruptedException  if any thread has
 	*                                     interrupted this thread.
 	*/
-	@:overload @:synchronized public function waitForAll(ms : haxe.Int64) : Bool;
+	@:overload @:public @:synchronized public function waitForAll(ms : haxe.Int64) : Bool;
 	
 	/**
 	* Calculates and returns the bitwise inclusive <b>OR</b> of the
@@ -213,7 +213,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @see          java.awt.MediaTracker#ERRORED
 	* @see          java.awt.MediaTracker#COMPLETE
 	*/
-	@:overload public function statusAll(load : Bool) : Int;
+	@:overload @:public public function statusAll(load : Bool) : Int;
 	
 	/**
 	* Checks to see if all images tracked by this media tracker that
@@ -235,7 +235,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @see         java.awt.MediaTracker#isErrorAny()
 	* @see         java.awt.MediaTracker#isErrorID(int)
 	*/
-	@:overload public function checkID(id : Int) : Bool;
+	@:overload @:public public function checkID(id : Int) : Bool;
 	
 	/**
 	* Checks to see if all images tracked by this media tracker that
@@ -260,7 +260,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @see         java.awt.MediaTracker#isErrorAny()
 	* @see         java.awt.MediaTracker#isErrorID(int)
 	*/
-	@:overload public function checkID(id : Int, load : Bool) : Bool;
+	@:overload @:public public function checkID(id : Int, load : Bool) : Bool;
 	
 	/**
 	* Checks the error status of all of the images tracked by this
@@ -272,7 +272,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @see          java.awt.MediaTracker#isErrorAny
 	* @see          java.awt.MediaTracker#getErrorsID
 	*/
-	@:overload @:synchronized public function isErrorID(id : Int) : Bool;
+	@:overload @:public @:synchronized public function isErrorID(id : Int) : Bool;
 	
 	/**
 	* Returns a list of media with the specified ID that
@@ -286,7 +286,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @see         java.awt.MediaTracker#isErrorAny
 	* @see         java.awt.MediaTracker#getErrorsAny
 	*/
-	@:overload @:synchronized public function getErrorsID(id : Int) : java.NativeArray<Dynamic>;
+	@:overload @:public @:synchronized public function getErrorsID(id : Int) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Starts loading all images tracked by this media tracker with the
@@ -304,7 +304,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @exception     InterruptedException  if any thread has
 	*                          interrupted this thread.
 	*/
-	@:overload public function waitForID(id : Int) : Void;
+	@:overload @:public public function waitForID(id : Int) : Void;
 	
 	/**
 	* Starts loading all images tracked by this media tracker with the
@@ -328,7 +328,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @exception     InterruptedException  if any thread has
 	*                          interrupted this thread.
 	*/
-	@:overload @:synchronized public function waitForID(id : Int, ms : haxe.Int64) : Bool;
+	@:overload @:public @:synchronized public function waitForID(id : Int, ms : haxe.Int64) : Bool;
 	
 	/**
 	* Calculates and returns the bitwise inclusive <b>OR</b> of the
@@ -355,7 +355,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @see          java.awt.MediaTracker#ERRORED
 	* @see          java.awt.MediaTracker#COMPLETE
 	*/
-	@:overload public function statusID(id : Int, load : Bool) : Int;
+	@:overload @:public public function statusID(id : Int, load : Bool) : Int;
 	
 	/**
 	* Removes the specified image from this media tracker.
@@ -366,7 +366,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @see     java.awt.MediaTracker#removeImage(java.awt.Image, int, int, int)
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeImage(image : java.awt.Image) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeImage(image : java.awt.Image) : Void;
 	
 	/**
 	* Removes the specified image from the specified tracking
@@ -379,7 +379,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @see        java.awt.MediaTracker#removeImage(java.awt.Image, int, int, int)
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeImage(image : java.awt.Image, id : Int) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeImage(image : java.awt.Image, id : Int) : Void;
 	
 	/**
 	* Removes the specified image with the specified
@@ -393,7 +393,7 @@ extern class MediaTracker implements java.io.Serializable
 	* @see     java.awt.MediaTracker#removeImage(java.awt.Image, int)
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeImage(image : java.awt.Image, id : Int, width : Int, height : Int) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeImage(image : java.awt.Image, id : Int, width : Int, height : Int) : Void;
 	
 	
 }
@@ -403,7 +403,7 @@ extern class MediaTracker implements java.io.Serializable
 }
 @:internal extern class ImageMediaEntry extends java.awt.MediaTracker.MediaEntry implements java.awt.image.ImageObserver implements java.io.Serializable
 {
-	@:overload public function imageUpdate(img : java.awt.Image, infoflags : Int, x : Int, y : Int, w : Int, h : Int) : Bool;
+	@:overload @:public public function imageUpdate(img : java.awt.Image, infoflags : Int, x : Int, y : Int, w : Int, h : Int) : Bool;
 	
 	
 }

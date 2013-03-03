@@ -25,35 +25,35 @@ package sun.net.www.protocol.http;
 */
 extern class AuthenticationHeader
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* parse a set of authentication headers and choose the preferred scheme
 	* that we support for a given host
 	*/
-	@:overload public function new(hdrname : String, response : sun.net.www.MessageHeader, hci : sun.net.www.protocol.http.HttpCallerInfo, dontUseNegotiate : Bool) : Void;
+	@:overload @:public public function new(hdrname : String, response : sun.net.www.MessageHeader, hci : sun.net.www.protocol.http.HttpCallerInfo, dontUseNegotiate : Bool) : Void;
 	
-	@:overload public function getHttpCallerInfo() : sun.net.www.protocol.http.HttpCallerInfo;
+	@:overload @:public public function getHttpCallerInfo() : sun.net.www.protocol.http.HttpCallerInfo;
 	
 	/**
 	* return a header parser containing the preferred authentication scheme (only).
 	* The preferred scheme is the strongest of the schemes proposed by the server.
 	* The returned HeaderParser will contain the relevant parameters for that scheme
 	*/
-	@:overload public function headerParser() : sun.net.www.HeaderParser;
+	@:overload @:public public function headerParser() : sun.net.www.HeaderParser;
 	
 	/**
 	* return the name of the preferred scheme
 	*/
-	@:overload public function scheme() : String;
+	@:overload @:public public function scheme() : String;
 	
 	/* return the raw header field for the preferred/chosen scheme */
-	@:overload public function raw() : String;
+	@:overload @:public public function raw() : String;
 	
 	/**
 	* returns true is the header exists and contains a recognised scheme
 	*/
-	@:overload public function isPresent() : Bool;
+	@:overload @:public public function isPresent() : Bool;
 	
 	
 }

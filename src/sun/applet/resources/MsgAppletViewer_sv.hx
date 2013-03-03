@@ -25,7 +25,7 @@ package sun.applet.resources;
 */
 extern class MsgAppletViewer_sv extends java.util.ListResourceBundle
 {
-	@:overload public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:public override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

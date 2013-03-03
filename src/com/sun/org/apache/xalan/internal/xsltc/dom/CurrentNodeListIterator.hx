@@ -23,29 +23,29 @@ package com.sun.org.apache.xalan.internal.xsltc.dom;
 */
 extern class CurrentNodeListIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMAxisIteratorBase
 {
-	@:overload public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, filter : com.sun.org.apache.xalan.internal.xsltc.dom.CurrentNodeListFilter, currentNode : Int, translet : com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet) : Void;
+	@:overload @:public public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, filter : com.sun.org.apache.xalan.internal.xsltc.dom.CurrentNodeListFilter, currentNode : Int, translet : com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet) : Void;
 	
-	@:overload public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, docOrder : Bool, filter : com.sun.org.apache.xalan.internal.xsltc.dom.CurrentNodeListFilter, currentNode : Int, translet : com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet) : Void;
+	@:overload @:public public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, docOrder : Bool, filter : com.sun.org.apache.xalan.internal.xsltc.dom.CurrentNodeListFilter, currentNode : Int, translet : com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet) : Void;
 	
-	@:overload public function forceNaturalOrder() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function forceNaturalOrder() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload public function setRestartable(isRestartable : Bool) : Void;
+	@:overload @:public override public function setRestartable(isRestartable : Bool) : Void;
 	
-	@:overload public function isReverse() : Bool;
+	@:overload @:public override public function isReverse() : Bool;
 	
-	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload public function getLast() : Int;
+	@:overload @:public override public function getLast() : Int;
 	
-	@:overload override public function setMark() : Void;
+	@:overload @:public override public function setMark() : Void;
 	
-	@:overload override public function gotoMark() : Void;
+	@:overload @:public override public function gotoMark() : Void;
 	
 	
 }

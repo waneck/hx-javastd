@@ -30,7 +30,7 @@ extern class BasicArrowButton extends javax.swing.JButton implements javax.swing
 	* {@code SwingConstants.NORTH}, {@code SwingConstants.SOUTH},
 	* {@code SwingConstants.EAST} or {@code SwingConstants.WEST}.
 	*/
-	private var direction : Int;
+	@:protected private var direction : Int;
 	
 	/**
 	* Creates a {@code BasicArrowButton} whose arrow
@@ -46,7 +46,7 @@ extern class BasicArrowButton extends javax.swing.JButton implements javax.swing
 	* @param highlight the color of the highlight
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(direction : Int, background : java.awt.Color, shadow : java.awt.Color, darkShadow : java.awt.Color, highlight : java.awt.Color) : Void;
+	@:require(java4) @:overload @:public public function new(direction : Int, background : java.awt.Color, shadow : java.awt.Color, darkShadow : java.awt.Color, highlight : java.awt.Color) : Void;
 	
 	/**
 	* Creates a {@code BasicArrowButton} whose arrow
@@ -56,12 +56,12 @@ extern class BasicArrowButton extends javax.swing.JButton implements javax.swing
 	*        {@code SwingConstants.NORTH}, {@code SwingConstants.SOUTH},
 	*        {@code SwingConstants.EAST} or {@code SwingConstants.WEST}
 	*/
-	@:overload public function new(direction : Int) : Void;
+	@:overload @:public public function new(direction : Int) : Void;
 	
 	/**
 	* Returns the direction of the arrow.
 	*/
-	@:overload public function getDirection() : Int;
+	@:overload @:public public function getDirection() : Int;
 	
 	/**
 	* Sets the direction of the arrow.
@@ -71,30 +71,30 @@ extern class BasicArrowButton extends javax.swing.JButton implements javax.swing
 	*        {@code SwingConstants.SOUTH},
 	*        {@code SwingConstants.EAST} or {@code SwingConstants.WEST}
 	*/
-	@:overload public function setDirection(direction : Int) : Void;
+	@:overload @:public public function setDirection(direction : Int) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Returns the preferred size of the {@code BasicArrowButton}.
 	*
 	* @return the preferred size
 	*/
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	/**
 	* Returns the minimum size of the {@code BasicArrowButton}.
 	*
 	* @return the minimum size
 	*/
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
 	/**
 	* Returns the maximum size of the {@code BasicArrowButton}.
 	*
 	* @return the maximum size
 	*/
-	@:overload override public function getMaximumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize() : java.awt.Dimension;
 	
 	/**
 	* Returns whether the arrow button should get the focus.
@@ -105,7 +105,7 @@ extern class BasicArrowButton extends javax.swing.JButton implements javax.swing
 	*
 	* @return {@code false}
 	*/
-	@:overload override public function isFocusTraversable() : Bool;
+	@:overload @:public override public function isFocusTraversable() : Bool;
 	
 	/**
 	* Paints a triangle.
@@ -120,7 +120,7 @@ extern class BasicArrowButton extends javax.swing.JButton implements javax.swing
 	*        {@code SwingConstants.WEST}
 	* @param isEnabled whether or not the arrow is drawn enabled
 	*/
-	@:overload public function paintTriangle(g : java.awt.Graphics, x : Int, y : Int, size : Int, direction : Int, isEnabled : Bool) : Void;
+	@:overload @:public public function paintTriangle(g : java.awt.Graphics, x : Int, y : Int, size : Int, direction : Int, isEnabled : Bool) : Void;
 	
 	
 }

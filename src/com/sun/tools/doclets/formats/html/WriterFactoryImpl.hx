@@ -31,77 +31,77 @@ package com.sun.tools.doclets.formats.html;
 */
 @:require(java5) extern class WriterFactoryImpl implements com.sun.tools.doclets.internal.toolkit.WriterFactory
 {
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getConstantsSummaryWriter() : com.sun.tools.doclets.internal.toolkit.ConstantsSummaryWriter;
+	@:overload @:public public function getConstantsSummaryWriter() : com.sun.tools.doclets.internal.toolkit.ConstantsSummaryWriter;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getPackageSummaryWriter(packageDoc : com.sun.javadoc.PackageDoc, prevPkg : com.sun.javadoc.PackageDoc, nextPkg : com.sun.javadoc.PackageDoc) : com.sun.tools.doclets.internal.toolkit.PackageSummaryWriter;
+	@:overload @:public public function getPackageSummaryWriter(packageDoc : com.sun.javadoc.PackageDoc, prevPkg : com.sun.javadoc.PackageDoc, nextPkg : com.sun.javadoc.PackageDoc) : com.sun.tools.doclets.internal.toolkit.PackageSummaryWriter;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getClassWriter(classDoc : com.sun.javadoc.ClassDoc, prevClass : com.sun.javadoc.ClassDoc, nextClass : com.sun.javadoc.ClassDoc, classTree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : com.sun.tools.doclets.internal.toolkit.ClassWriter;
+	@:overload @:public public function getClassWriter(classDoc : com.sun.javadoc.ClassDoc, prevClass : com.sun.javadoc.ClassDoc, nextClass : com.sun.javadoc.ClassDoc, classTree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : com.sun.tools.doclets.internal.toolkit.ClassWriter;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getAnnotationTypeWriter(annotationType : com.sun.javadoc.AnnotationTypeDoc, prevType : com.sun.javadoc.Type, nextType : com.sun.javadoc.Type) : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter;
+	@:overload @:public public function getAnnotationTypeWriter(annotationType : com.sun.javadoc.AnnotationTypeDoc, prevType : com.sun.javadoc.Type, nextType : com.sun.javadoc.Type) : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getAnnotationTypeOptionalMemberWriter(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.AnnotationTypeOptionalMemberWriter;
+	@:overload @:public public function getAnnotationTypeOptionalMemberWriter(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.AnnotationTypeOptionalMemberWriter;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getAnnotationTypeRequiredMemberWriter(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.AnnotationTypeRequiredMemberWriter;
+	@:overload @:public public function getAnnotationTypeRequiredMemberWriter(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.AnnotationTypeRequiredMemberWriter;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getEnumConstantWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.EnumConstantWriter;
+	@:overload @:public public function getEnumConstantWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.EnumConstantWriter;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getFieldWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.FieldWriter;
+	@:overload @:public public function getFieldWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.FieldWriter;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getPropertyWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.PropertyWriter;
+	@:overload @:public public function getPropertyWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.PropertyWriter;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getMethodWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.MethodWriter;
+	@:overload @:public public function getMethodWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.MethodWriter;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getConstructorWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.ConstructorWriter;
+	@:overload @:public public function getConstructorWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.ConstructorWriter;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getMemberSummaryWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter, memberType : Int) : com.sun.tools.doclets.internal.toolkit.MemberSummaryWriter;
+	@:overload @:public public function getMemberSummaryWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter, memberType : Int) : com.sun.tools.doclets.internal.toolkit.MemberSummaryWriter;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getMemberSummaryWriter(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter, memberType : Int) : com.sun.tools.doclets.internal.toolkit.MemberSummaryWriter;
+	@:overload @:public public function getMemberSummaryWriter(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter, memberType : Int) : com.sun.tools.doclets.internal.toolkit.MemberSummaryWriter;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getSerializedFormWriter() : com.sun.tools.doclets.internal.toolkit.SerializedFormWriter;
+	@:overload @:public public function getSerializedFormWriter() : com.sun.tools.doclets.internal.toolkit.SerializedFormWriter;
 	
 	
 }

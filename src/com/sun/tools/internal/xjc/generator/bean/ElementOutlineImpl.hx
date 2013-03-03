@@ -25,7 +25,7 @@ package com.sun.tools.internal.xjc.generator.bean;
 */
 @:internal extern class ElementOutlineImpl extends com.sun.tools.internal.xjc.outline.ElementOutline
 {
-	@:overload public function parent() : com.sun.tools.internal.xjc.generator.bean.BeanGenerator;
+	@:overload @:public override public function parent() : com.sun.tools.internal.xjc.generator.bean.BeanGenerator;
 	
 	
 }

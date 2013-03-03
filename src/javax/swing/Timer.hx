@@ -28,7 +28,7 @@ extern class Timer implements java.io.Serializable
 	/*
 	* NOTE: all fields need to be handled in readResolve
 	*/
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
 	/**
 	* Creates a {@code Timer} and initializes both the initial delay and
@@ -44,7 +44,7 @@ extern class Timer implements java.io.Serializable
 	* @see #setInitialDelay
 	* @see #setRepeats
 	*/
-	@:overload public function new(delay : Int, listener : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function new(delay : Int, listener : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Adds an action listener to the <code>Timer</code>.
@@ -53,14 +53,14 @@ extern class Timer implements java.io.Serializable
 	*
 	* @see #Timer
 	*/
-	@:overload public function addActionListener(listener : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function addActionListener(listener : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Removes the specified action listener from the <code>Timer</code>.
 	*
 	* @param listener the listener to remove
 	*/
-	@:overload public function removeActionListener(listener : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function removeActionListener(listener : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Returns an array of all the action listeners registered
@@ -74,7 +74,7 @@ extern class Timer implements java.io.Serializable
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
+	@:require(java4) @:overload @:public public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -83,7 +83,7 @@ extern class Timer implements java.io.Serializable
 	* @param e the action event to fire
 	* @see EventListenerList
 	*/
-	@:overload private function fireActionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:protected private function fireActionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	/**
 	* Returns an array of all the objects currently registered as
@@ -122,7 +122,7 @@ extern class Timer implements java.io.Serializable
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Enables or disables the timer log. When enabled, a message
@@ -131,7 +131,7 @@ extern class Timer implements java.io.Serializable
 	* @param flag  <code>true</code> to enable logging
 	* @see #getLogTimers
 	*/
-	@:overload public static function setLogTimers(flag : Bool) : Void;
+	@:overload @:public @:static public static function setLogTimers(flag : Bool) : Void;
 	
 	/**
 	* Returns <code>true</code> if logging is enabled.
@@ -139,7 +139,7 @@ extern class Timer implements java.io.Serializable
 	* @return <code>true</code> if logging is enabled; otherwise, false
 	* @see #setLogTimers
 	*/
-	@:overload public static function getLogTimers() : Bool;
+	@:overload @:public @:static public static function getLogTimers() : Bool;
 	
 	/**
 	* Sets the <code>Timer</code>'s between-event delay, the number of milliseconds
@@ -149,7 +149,7 @@ extern class Timer implements java.io.Serializable
 	* @param delay the delay in milliseconds
 	* @see #setInitialDelay
 	*/
-	@:overload public function setDelay(delay : Int) : Void;
+	@:overload @:public public function setDelay(delay : Int) : Void;
 	
 	/**
 	* Returns the delay, in milliseconds,
@@ -158,7 +158,7 @@ extern class Timer implements java.io.Serializable
 	* @see #setDelay
 	* @see #getInitialDelay
 	*/
-	@:overload public function getDelay() : Int;
+	@:overload @:public public function getDelay() : Int;
 	
 	/**
 	* Sets the <code>Timer</code>'s initial delay, the time
@@ -171,7 +171,7 @@ extern class Timer implements java.io.Serializable
 	* @param initialDelay the initial delay, in milliseconds
 	* @see #setDelay
 	*/
-	@:overload public function setInitialDelay(initialDelay : Int) : Void;
+	@:overload @:public public function setInitialDelay(initialDelay : Int) : Void;
 	
 	/**
 	* Returns the <code>Timer</code>'s initial delay.
@@ -179,7 +179,7 @@ extern class Timer implements java.io.Serializable
 	* @see #setInitialDelay
 	* @see #setDelay
 	*/
-	@:overload public function getInitialDelay() : Int;
+	@:overload @:public public function getInitialDelay() : Int;
 	
 	/**
 	* If <code>flag</code> is <code>false</code>,
@@ -189,7 +189,7 @@ extern class Timer implements java.io.Serializable
 	* @param flag specify <code>false</code> to make the timer
 	*             stop after sending its first action event
 	*/
-	@:overload public function setRepeats(flag : Bool) : Void;
+	@:overload @:public public function setRepeats(flag : Bool) : Void;
 	
 	/**
 	* Returns <code>true</code> (the default)
@@ -199,7 +199,7 @@ extern class Timer implements java.io.Serializable
 	*
 	* @see #setRepeats
 	*/
-	@:overload public function isRepeats() : Bool;
+	@:overload @:public public function isRepeats() : Bool;
 	
 	/**
 	* Sets whether the <code>Timer</code> coalesces multiple pending
@@ -217,7 +217,7 @@ extern class Timer implements java.io.Serializable
 	*
 	* @param flag specify <code>false</code> to turn off coalescing
 	*/
-	@:overload public function setCoalesce(flag : Bool) : Void;
+	@:overload @:public public function setCoalesce(flag : Bool) : Void;
 	
 	/**
 	* Returns <code>true</code> if the <code>Timer</code> coalesces
@@ -225,7 +225,7 @@ extern class Timer implements java.io.Serializable
 	*
 	* @see #setCoalesce
 	*/
-	@:overload public function isCoalesce() : Bool;
+	@:overload @:public public function isCoalesce() : Bool;
 	
 	/**
 	* Sets the string that will be delivered as the action command
@@ -235,7 +235,7 @@ extern class Timer implements java.io.Serializable
 	* @param command the action command
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setActionCommand(command : String) : Void;
+	@:require(java6) @:overload @:public public function setActionCommand(command : String) : Void;
 	
 	/**
 	* Returns the string that will be delivered as the action command
@@ -245,7 +245,7 @@ extern class Timer implements java.io.Serializable
 	* @return the action command used in firing events
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getActionCommand() : String;
+	@:require(java6) @:overload @:public public function getActionCommand() : String;
 	
 	/**
 	* Starts the <code>Timer</code>,
@@ -254,14 +254,14 @@ extern class Timer implements java.io.Serializable
 	*
 	* @see #stop
 	*/
-	@:overload public function start() : Void;
+	@:overload @:public public function start() : Void;
 	
 	/**
 	* Returns <code>true</code> if the <code>Timer</code> is running.
 	*
 	* @see #start
 	*/
-	@:overload public function isRunning() : Bool;
+	@:overload @:public public function isRunning() : Bool;
 	
 	/**
 	* Stops the <code>Timer</code>,
@@ -270,14 +270,14 @@ extern class Timer implements java.io.Serializable
 	*
 	* @see #start
 	*/
-	@:overload public function stop() : Void;
+	@:overload @:public public function stop() : Void;
 	
 	/**
 	* Restarts the <code>Timer</code>,
 	* canceling any pending firings and causing
 	* it to fire with its initial delay.
 	*/
-	@:overload public function restart() : Void;
+	@:overload @:public public function restart() : Void;
 	
 	
 }
@@ -288,7 +288,7 @@ extern class Timer implements java.io.Serializable
 */
 @:native('javax$swing$Timer$DoPostEvent') @:internal extern class Timer_DoPostEvent implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

@@ -35,21 +35,21 @@ extern class Provider extends java.util.Properties
 	*
 	* @param info a description of the provider and its services.
 	*/
-	@:overload private function new(name : String, version : Float, info : String) : Void;
+	@:overload @:protected private function new(name : String, version : Float, info : String) : Void;
 	
 	/**
 	* Returns the name of this provider.
 	*
 	* @return the name of this provider.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the version number for this provider.
 	*
 	* @return the version number for this provider.
 	*/
-	@:overload public function getVersion() : Float;
+	@:overload @:public public function getVersion() : Float;
 	
 	/**
 	* Returns a human-readable description of the provider and its
@@ -57,7 +57,7 @@ extern class Provider extends java.util.Properties
 	*
 	* @return a description of the provider and its services.
 	*/
-	@:overload public function getInfo() : String;
+	@:overload @:public public function getInfo() : String;
 	
 	/**
 	* Returns a string with the name and the version number
@@ -66,7 +66,7 @@ extern class Provider extends java.util.Properties
 	* @return the string with the name and the version number
 	* for this provider.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Clears this provider so that it no longer contains the properties
@@ -89,7 +89,7 @@ extern class Provider extends java.util.Properties
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function clear() : Void;
+	@:require(java2) @:overload @:public @:synchronized override public function clear() : Void;
 	
 	/**
 	* Reads a property list (key and element pairs) from the input stream.
@@ -99,7 +99,7 @@ extern class Provider extends java.util.Properties
 	*               input stream.
 	* @see java.util.Properties#load
 	*/
-	@:overload @:synchronized override public function load(inStream : java.io.InputStream) : Void;
+	@:overload @:public @:synchronized override public function load(inStream : java.io.InputStream) : Void;
 	
 	/**
 	* Copies all of the mappings from the specified Map to this provider.
@@ -108,7 +108,7 @@ extern class Provider extends java.util.Properties
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function putAll(t : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:require(java2) @:overload @:public @:synchronized override public function putAll(t : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Returns an unmodifiable Set view of the property entries contained
@@ -117,7 +117,7 @@ extern class Provider extends java.util.Properties
 	* @see   java.util.Map.Entry
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
+	@:require(java2) @:overload @:public @:synchronized override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
 	
 	/**
 	* Returns an unmodifiable Set view of the property keys contained in
@@ -125,7 +125,7 @@ extern class Provider extends java.util.Properties
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function keySet() : java.util.Set<Dynamic>;
+	@:require(java2) @:overload @:public override public function keySet() : java.util.Set<Dynamic>;
 	
 	/**
 	* Returns an unmodifiable Collection view of the property values
@@ -133,7 +133,7 @@ extern class Provider extends java.util.Properties
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function values() : java.util.Collection<Dynamic>;
+	@:require(java2) @:overload @:public override public function values() : java.util.Collection<Dynamic>;
 	
 	/**
 	* Sets the <code>key</code> property to have the specified
@@ -163,7 +163,7 @@ extern class Provider extends java.util.Properties
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:require(java2) @:overload @:public @:synchronized override public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
 	/**
 	* Removes the <code>key</code> property (and its corresponding
@@ -192,15 +192,15 @@ extern class Provider extends java.util.Properties
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function remove(key : Dynamic) : Dynamic;
+	@:require(java2) @:overload @:public @:synchronized override public function remove(key : Dynamic) : Dynamic;
 	
-	@:overload override public function get(key : Dynamic) : Dynamic;
+	@:overload @:public override public function get(key : Dynamic) : Dynamic;
 	
-	@:overload override public function keys() : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function keys() : java.util.Enumeration<Dynamic>;
 	
-	@:overload override public function elements() : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function elements() : java.util.Enumeration<Dynamic>;
 	
-	@:overload override public function getProperty(key : String) : String;
+	@:overload @:public override public function getProperty(key : String) : String;
 	
 	/**
 	* Get the service describing this Provider's implementation of the
@@ -222,7 +222,7 @@ extern class Provider extends java.util.Properties
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized public function getService(type : String, algorithm : String) : java.security.Provider.Provider_Service;
+	@:require(java5) @:overload @:public @:synchronized public function getService(type : String, algorithm : String) : java.security.Provider.Provider_Service;
 	
 	/**
 	* Get an unmodifiable Set of all services supported by
@@ -233,7 +233,7 @@ extern class Provider extends java.util.Properties
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized public function getServices() : java.util.Set<java.security.Provider.Provider_Service>;
+	@:require(java5) @:overload @:public @:synchronized public function getServices() : java.util.Set<java.security.Provider.Provider_Service>;
 	
 	/**
 	* Add a service. If a service of the same type with the same algorithm
@@ -264,7 +264,7 @@ extern class Provider extends java.util.Properties
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized private function putService(s : java.security.Provider.Provider_Service) : Void;
+	@:require(java5) @:overload @:protected @:synchronized private function putService(s : java.security.Provider.Provider_Service) : Void;
 	
 	/**
 	* Remove a service previously added using
@@ -294,25 +294,25 @@ extern class Provider extends java.util.Properties
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized private function removeService(s : java.security.Provider.Provider_Service) : Void;
+	@:require(java5) @:overload @:protected @:synchronized private function removeService(s : java.security.Provider.Provider_Service) : Void;
 	
 	
 }
 @:native('java$security$Provider$ServiceKey') @:internal extern class Provider_ServiceKey
 {
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }
 @:native('java$security$Provider$UString') @:internal extern class Provider_UString
 {
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -363,14 +363,14 @@ extern class Provider extends java.util.Properties
 	* @throws NullPointerException if provider, type, algorithm, or
 	* className is null
 	*/
-	@:overload public function new(provider : java.security.Provider, type : String, algorithm : String, className : String, aliases : java.util.List<String>, attributes : java.util.Map<String, String>) : Void;
+	@:overload @:public public function new(provider : java.security.Provider, type : String, algorithm : String, className : String, aliases : java.util.List<String>, attributes : java.util.Map<String, String>) : Void;
 	
 	/**
 	* Get the type of this service. For example, <code>MessageDigest</code>.
 	*
 	* @return the type of this service
 	*/
-	@:overload @:final public function getType() : String;
+	@:overload @:public @:final public function getType() : String;
 	
 	/**
 	* Return the name of the algorithm of this service. For example,
@@ -378,21 +378,21 @@ extern class Provider extends java.util.Properties
 	*
 	* @return the algorithm of this service
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Return the Provider of this service.
 	*
 	* @return the Provider of this service
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Return the name of the class implementing this service.
 	*
 	* @return the name of the class implementing this service
 	*/
-	@:overload @:final public function getClassName() : String;
+	@:overload @:public @:final public function getClassName() : String;
 	
 	/**
 	* Return the value of the specified attribute or null if this
@@ -405,7 +405,7 @@ extern class Provider extends java.util.Properties
 	*
 	* @throws NullPointerException if name is null
 	*/
-	@:overload @:final public function getAttribute(name : String) : String;
+	@:overload @:public @:final public function getAttribute(name : String) : String;
 	
 	/**
 	* Return a new instance of the implementation described by this
@@ -433,7 +433,7 @@ extern class Provider extends java.util.Properties
 	* @throws NoSuchAlgorithmException if instantation failed for
 	* any other reason.
 	*/
-	@:overload public function newInstance(constructorParameter : Dynamic) : Dynamic;
+	@:overload @:public public function newInstance(constructorParameter : Dynamic) : Dynamic;
 	
 	/**
 	* Test whether this Service can use the specified parameter.
@@ -462,14 +462,14 @@ extern class Provider extends java.util.Properties
 	* invalid for this type of service or if this method cannot be
 	* used with this type of service
 	*/
-	@:overload public function supportsParameter(parameter : Dynamic) : Bool;
+	@:overload @:public public function supportsParameter(parameter : Dynamic) : Bool;
 	
 	/**
 	* Return a String representation of this service.
 	*
 	* @return a String representation of this service.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

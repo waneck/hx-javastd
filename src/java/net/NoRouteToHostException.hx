@@ -40,12 +40,12 @@ package java.net;
 	* description of this error.
 	* @param msg the detail message
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Construct a new NoRouteToHostException with no detailed message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

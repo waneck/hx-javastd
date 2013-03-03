@@ -30,11 +30,11 @@ package com.sun.jndi.toolkit.dir;
 */
 extern class DirSearch
 {
-	@:overload public static function search(ctx : javax.naming.directory.DirContext, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:public @:static public static function search(ctx : javax.naming.directory.DirContext, matchingAttributes : javax.naming.directory.Attributes, attributesToReturn : java.NativeArray<String>) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload public static function search(ctx : javax.naming.directory.DirContext, filter : String, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:public @:static public static function search(ctx : javax.naming.directory.DirContext, filter : String, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload public static function search(ctx : javax.naming.directory.DirContext, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:public @:static public static function search(ctx : javax.naming.directory.DirContext, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<Dynamic>;
 	
 	
 }

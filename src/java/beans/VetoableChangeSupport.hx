@@ -30,7 +30,7 @@ extern class VetoableChangeSupport implements java.io.Serializable
 	*
 	* @param sourceBean  The bean to be given as the source for any events.
 	*/
-	@:overload public function new(sourceBean : Dynamic) : Void;
+	@:overload @:public public function new(sourceBean : Dynamic) : Void;
 	
 	/**
 	* Add a VetoableChangeListener to the listener list.
@@ -42,7 +42,7 @@ extern class VetoableChangeSupport implements java.io.Serializable
 	*
 	* @param listener  The VetoableChangeListener to be added
 	*/
-	@:overload public function addVetoableChangeListener(listener : java.beans.VetoableChangeListener) : Void;
+	@:overload @:public public function addVetoableChangeListener(listener : java.beans.VetoableChangeListener) : Void;
 	
 	/**
 	* Remove a VetoableChangeListener from the listener list.
@@ -55,7 +55,7 @@ extern class VetoableChangeSupport implements java.io.Serializable
 	*
 	* @param listener  The VetoableChangeListener to be removed
 	*/
-	@:overload public function removeVetoableChangeListener(listener : java.beans.VetoableChangeListener) : Void;
+	@:overload @:public public function removeVetoableChangeListener(listener : java.beans.VetoableChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the listeners that were added to the
@@ -88,7 +88,7 @@ extern class VetoableChangeSupport implements java.io.Serializable
 	*         empty array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getVetoableChangeListeners() : java.NativeArray<java.beans.VetoableChangeListener>;
+	@:require(java4) @:overload @:public public function getVetoableChangeListeners() : java.NativeArray<java.beans.VetoableChangeListener>;
 	
 	/**
 	* Add a VetoableChangeListener for a specific property.  The listener
@@ -103,7 +103,7 @@ extern class VetoableChangeSupport implements java.io.Serializable
 	* @param propertyName  The name of the property to listen on.
 	* @param listener  The VetoableChangeListener to be added
 	*/
-	@:overload public function addVetoableChangeListener(propertyName : String, listener : java.beans.VetoableChangeListener) : Void;
+	@:overload @:public public function addVetoableChangeListener(propertyName : String, listener : java.beans.VetoableChangeListener) : Void;
 	
 	/**
 	* Remove a VetoableChangeListener for a specific property.
@@ -118,7 +118,7 @@ extern class VetoableChangeSupport implements java.io.Serializable
 	* @param propertyName  The name of the property that was listened on.
 	* @param listener  The VetoableChangeListener to be removed
 	*/
-	@:overload public function removeVetoableChangeListener(propertyName : String, listener : java.beans.VetoableChangeListener) : Void;
+	@:overload @:public public function removeVetoableChangeListener(propertyName : String, listener : java.beans.VetoableChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the listeners which have been associated
@@ -131,7 +131,7 @@ extern class VetoableChangeSupport implements java.io.Serializable
 	*         returned.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getVetoableChangeListeners(propertyName : String) : java.NativeArray<java.beans.VetoableChangeListener>;
+	@:require(java4) @:overload @:public public function getVetoableChangeListeners(propertyName : String) : java.NativeArray<java.beans.VetoableChangeListener>;
 	
 	/**
 	* Reports a constrained property update to listeners
@@ -154,7 +154,7 @@ extern class VetoableChangeSupport implements java.io.Serializable
 	* @param newValue      the new value of the property
 	* @throws PropertyVetoException if one of listeners vetoes the property update
 	*/
-	@:overload public function fireVetoableChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:public public function fireVetoableChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Reports an integer constrained property update to listeners
@@ -177,7 +177,7 @@ extern class VetoableChangeSupport implements java.io.Serializable
 	* @param newValue      the new value of the property
 	* @throws PropertyVetoException if one of listeners vetoes the property update
 	*/
-	@:overload public function fireVetoableChange(propertyName : String, oldValue : Int, newValue : Int) : Void;
+	@:overload @:public public function fireVetoableChange(propertyName : String, oldValue : Int, newValue : Int) : Void;
 	
 	/**
 	* Reports a boolean constrained property update to listeners
@@ -200,7 +200,7 @@ extern class VetoableChangeSupport implements java.io.Serializable
 	* @param newValue      the new value of the property
 	* @throws PropertyVetoException if one of listeners vetoes the property update
 	*/
-	@:overload public function fireVetoableChange(propertyName : String, oldValue : Bool, newValue : Bool) : Void;
+	@:overload @:public public function fireVetoableChange(propertyName : String, oldValue : Bool, newValue : Bool) : Void;
 	
 	/**
 	* Fires a property change event to listeners
@@ -218,7 +218,7 @@ extern class VetoableChangeSupport implements java.io.Serializable
 	* @param event  the {@code PropertyChangeEvent} to be fired
 	* @throws PropertyVetoException if one of listeners vetoes the property update
 	*/
-	@:overload public function fireVetoableChange(event : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function fireVetoableChange(event : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* Check if there are any listeners for a specific property, including
@@ -228,7 +228,7 @@ extern class VetoableChangeSupport implements java.io.Serializable
 	* @param propertyName  the property name.
 	* @return true if there are one or more listeners for the given property
 	*/
-	@:overload public function hasListeners(propertyName : String) : Bool;
+	@:overload @:public public function hasListeners(propertyName : String) : Bool;
 	
 	
 }
@@ -246,7 +246,7 @@ extern class VetoableChangeSupport implements java.io.Serializable
 	* @param length  the array length
 	* @return        an array with specified length
 	*/
-	@:overload private function newArray(length : Int) : java.NativeArray<java.beans.VetoableChangeListener>;
+	@:overload @:protected override private function newArray(length : Int) : java.NativeArray<java.beans.VetoableChangeListener>;
 	
 	/**
 	* Creates a {@link VetoableChangeListenerProxy VetoableChangeListenerProxy}
@@ -256,12 +256,12 @@ extern class VetoableChangeSupport implements java.io.Serializable
 	* @param listener  the listener to process events
 	* @return          a {@code VetoableChangeListenerProxy} object
 	*/
-	@:overload private function newProxy(name : String, listener : java.beans.VetoableChangeListener) : java.beans.VetoableChangeListener;
+	@:overload @:protected private function newProxy(name : String, listener : java.beans.VetoableChangeListener) : java.beans.VetoableChangeListener;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:final public function extract(listener : java.beans.VetoableChangeListener) : java.beans.VetoableChangeListener;
+	@:overload @:public @:final public function extract(listener : java.beans.VetoableChangeListener) : java.beans.VetoableChangeListener;
 	
 	
 }

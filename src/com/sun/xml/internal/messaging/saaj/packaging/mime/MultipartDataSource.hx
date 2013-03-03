@@ -33,7 +33,7 @@ extern interface MultipartDataSource extends javax.activation.DataSource
 	*
 	* @return          number of parts
 	*/
-	@:overload public function getCount() : Int;
+	@:overload @:public public function getCount() : Int;
 	
 	/**
 	* Get the specified MimeBodyPart.  Parts are numbered starting at 0.
@@ -44,7 +44,7 @@ extern interface MultipartDataSource extends javax.activation.DataSource
 	*                  is out of range.
 	* @exception       MessagingException
 	*/
-	@:overload public function getBodyPart(index : Int) : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
+	@:overload @:public public function getBodyPart(index : Int) : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
 	
 	
 }

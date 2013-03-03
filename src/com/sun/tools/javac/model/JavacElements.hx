@@ -25,60 +25,60 @@ package com.sun.tools.javac.model;
 */
 extern class JavacElements implements javax.lang.model.util.Elements
 {
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.model.JavacElements;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.model.JavacElements;
 	
 	/**
 	* Public for use only by JavacProcessingEnvironment
 	*/
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
 	/**
 	* Use a new context.  May be called from outside to update
 	* internal state for a new annotation-processing round.
 	*/
-	@:overload public function setContext(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:public public function setContext(context : com.sun.tools.javac.util.Context) : Void;
 	
 	/**
 	* An internal-use utility that creates a reified annotation.
 	*/
-	@:overload public static function getAnnotation<A : java.lang.annotation.Annotation>(annotated : com.sun.tools.javac.code.Symbol, annoType : Class<A>) : A;
+	@:overload @:public @:static public static function getAnnotation<A : java.lang.annotation.Annotation>(annotated : com.sun.tools.javac.code.Symbol, annoType : Class<A>) : A;
 	
 	/**
 	* An internal-use utility that creates a reified annotation.
 	* This overloaded version take annotation inheritance into account.
 	*/
-	@:overload public static function getAnnotation<A : java.lang.annotation.Annotation>(annotated : ClassSymbol, annoType : Class<A>) : A;
+	@:overload @:public @:static public static function getAnnotation<A : java.lang.annotation.Annotation>(annotated : ClassSymbol, annoType : Class<A>) : A;
 	
-	@:overload public function getPackageElement(name : java.lang.CharSequence) : PackageSymbol;
+	@:overload @:public public function getPackageElement(name : java.lang.CharSequence) : PackageSymbol;
 	
-	@:overload public function getTypeElement(name : java.lang.CharSequence) : ClassSymbol;
+	@:overload @:public public function getTypeElement(name : java.lang.CharSequence) : ClassSymbol;
 	
-	@:overload public function getSourcePosition(e : javax.lang.model.element.Element) : com.sun.tools.javac.model.JavacSourcePosition;
+	@:overload @:public public function getSourcePosition(e : javax.lang.model.element.Element) : com.sun.tools.javac.model.JavacSourcePosition;
 	
-	@:overload public function getSourcePosition(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror) : com.sun.tools.javac.model.JavacSourcePosition;
+	@:overload @:public public function getSourcePosition(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror) : com.sun.tools.javac.model.JavacSourcePosition;
 	
-	@:overload public function getSourcePosition(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror, v : javax.lang.model.element.AnnotationValue) : com.sun.tools.javac.model.JavacSourcePosition;
+	@:overload @:public public function getSourcePosition(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror, v : javax.lang.model.element.AnnotationValue) : com.sun.tools.javac.model.JavacSourcePosition;
 	
 	/**
 	* Returns the tree node corresponding to this element, or null
 	* if none can be found.
 	*/
-	@:overload public function getTree(e : javax.lang.model.element.Element) : com.sun.tools.javac.tree.JCTree;
+	@:overload @:public public function getTree(e : javax.lang.model.element.Element) : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload public function getDocComment(e : javax.lang.model.element.Element) : String;
+	@:overload @:public public function getDocComment(e : javax.lang.model.element.Element) : String;
 	
-	@:overload public function getPackageOf(e : javax.lang.model.element.Element) : javax.lang.model.element.PackageElement;
+	@:overload @:public public function getPackageOf(e : javax.lang.model.element.Element) : javax.lang.model.element.PackageElement;
 	
-	@:overload public function isDeprecated(e : javax.lang.model.element.Element) : Bool;
+	@:overload @:public public function isDeprecated(e : javax.lang.model.element.Element) : Bool;
 	
-	@:overload public function getBinaryName(type : javax.lang.model.element.TypeElement) : com.sun.tools.javac.util.Name;
+	@:overload @:public public function getBinaryName(type : javax.lang.model.element.TypeElement) : com.sun.tools.javac.util.Name;
 	
-	@:overload public function getElementValuesWithDefaults(a : javax.lang.model.element.AnnotationMirror) : java.util.Map<MethodSymbol, com.sun.tools.javac.code.Attribute>;
+	@:overload @:public public function getElementValuesWithDefaults(a : javax.lang.model.element.AnnotationMirror) : java.util.Map<MethodSymbol, com.sun.tools.javac.code.Attribute>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getAllMembers(element : javax.lang.model.element.TypeElement) : com.sun.tools.javac.model.FilteredMemberList;
+	@:overload @:public public function getAllMembers(element : javax.lang.model.element.TypeElement) : com.sun.tools.javac.model.FilteredMemberList;
 	
 	/**
 	* Returns all annotations of an element, whether
@@ -87,13 +87,13 @@ extern class JavacElements implements javax.lang.model.util.Elements
 	* @param e  the element being examined
 	* @return all annotations of the element
 	*/
-	@:overload public function getAllAnnotationMirrors(e : javax.lang.model.element.Element) : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Attribute.Attribute_Compound>;
+	@:overload @:public public function getAllAnnotationMirrors(e : javax.lang.model.element.Element) : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Attribute.Attribute_Compound>;
 	
-	@:overload public function hides(hiderEl : javax.lang.model.element.Element, hideeEl : javax.lang.model.element.Element) : Bool;
+	@:overload @:public public function hides(hiderEl : javax.lang.model.element.Element, hideeEl : javax.lang.model.element.Element) : Bool;
 	
-	@:overload public function overrides(riderEl : javax.lang.model.element.ExecutableElement, rideeEl : javax.lang.model.element.ExecutableElement, typeEl : javax.lang.model.element.TypeElement) : Bool;
+	@:overload @:public public function overrides(riderEl : javax.lang.model.element.ExecutableElement, rideeEl : javax.lang.model.element.ExecutableElement, typeEl : javax.lang.model.element.TypeElement) : Bool;
 	
-	@:overload public function getConstantExpression(value : Dynamic) : String;
+	@:overload @:public public function getConstantExpression(value : Dynamic) : String;
 	
 	/**
 	* Print a representation of the elements to the given writer in
@@ -104,9 +104,9 @@ extern class JavacElements implements javax.lang.model.util.Elements
 	* @param w the writer to print the output to
 	* @param elements the elements to print
 	*/
-	@:overload public function printElements(w : java.io.Writer, elements : java.NativeArray<javax.lang.model.element.Element>) : Void;
+	@:overload @:public public function printElements(w : java.io.Writer, elements : java.NativeArray<javax.lang.model.element.Element>) : Void;
 	
-	@:overload public function getName(cs : java.lang.CharSequence) : com.sun.tools.javac.util.Name;
+	@:overload @:public public function getName(cs : java.lang.CharSequence) : com.sun.tools.javac.util.Name;
 	
 	/**
 	* Returns the best approximation for the tree node and compilation unit
@@ -117,7 +117,7 @@ extern class JavacElements implements javax.lang.model.util.Elements
 	* If the annotation value is null or cannot be found, the tree node and
 	* compilation unit for the annotation is returned.
 	*/
-	@:overload public function getTreeAndTopLevel(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror, v : javax.lang.model.element.AnnotationValue) : com.sun.tools.javac.util.Pair<com.sun.tools.javac.tree.JCTree, JCCompilationUnit>;
+	@:overload @:public public function getTreeAndTopLevel(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror, v : javax.lang.model.element.AnnotationValue) : com.sun.tools.javac.util.Pair<com.sun.tools.javac.tree.JCTree, JCCompilationUnit>;
 	
 	
 }

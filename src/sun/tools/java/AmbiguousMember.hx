@@ -28,14 +28,14 @@ extern class AmbiguousMember extends java.lang.Exception
 	/**
 	* The field that was not found
 	*/
-	public var field1 : sun.tools.java.MemberDefinition;
+	@:public public var field1 : sun.tools.java.MemberDefinition;
 	
-	public var field2 : sun.tools.java.MemberDefinition;
+	@:public public var field2 : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Constructor
 	*/
-	@:overload public function new(field1 : sun.tools.java.MemberDefinition, field2 : sun.tools.java.MemberDefinition) : Void;
+	@:overload @:public public function new(field1 : sun.tools.java.MemberDefinition, field2 : sun.tools.java.MemberDefinition) : Void;
 	
 	
 }

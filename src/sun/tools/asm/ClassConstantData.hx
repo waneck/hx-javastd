@@ -25,7 +25,7 @@ package sun.tools.asm;
 */
 @:internal extern class ClassConstantData extends sun.tools.asm.ConstantPoolData
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

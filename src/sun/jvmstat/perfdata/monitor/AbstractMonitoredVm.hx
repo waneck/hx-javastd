@@ -28,18 +28,18 @@ extern class AbstractMonitoredVm implements sun.jvmstat.monitor.remote.BufferedM
 	/**
 	* The VmIdentifier for the target.
 	*/
-	private var vmid : sun.jvmstat.monitor.VmIdentifier;
+	@:protected private var vmid : sun.jvmstat.monitor.VmIdentifier;
 	
 	/**
 	* The shared memory instrumentation buffer for the target.
 	*/
-	private var pdb : sun.jvmstat.perfdata.monitor.AbstractPerfDataBuffer;
+	@:protected private var pdb : sun.jvmstat.perfdata.monitor.AbstractPerfDataBuffer;
 	
 	/**
 	* The sampling interval, if the instrumentation buffer is acquired
 	* by sampling instead of shared memory mechanisms.
 	*/
-	private var interval : Int;
+	@:protected private var interval : Int;
 	
 	/**
 	* Create an AbstractMonitoredVm instance.
@@ -47,57 +47,57 @@ extern class AbstractMonitoredVm implements sun.jvmstat.monitor.remote.BufferedM
 	* @param vmid the VmIdentifier for the target
 	* @param interval the initial sampling interval
 	*/
-	@:overload public function new(vmid : sun.jvmstat.monitor.VmIdentifier, interval : Int) : Void;
+	@:overload @:public public function new(vmid : sun.jvmstat.monitor.VmIdentifier, interval : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getVmIdentifier() : sun.jvmstat.monitor.VmIdentifier;
+	@:overload @:public public function getVmIdentifier() : sun.jvmstat.monitor.VmIdentifier;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function findByName(name : String) : sun.jvmstat.monitor.Monitor;
+	@:overload @:public public function findByName(name : String) : sun.jvmstat.monitor.Monitor;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function findByPattern(patternString : String) : java.util.List<sun.jvmstat.monitor.Monitor>;
+	@:overload @:public public function findByPattern(patternString : String) : java.util.List<sun.jvmstat.monitor.Monitor>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function detach() : Void;
+	@:overload @:public public function detach() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setInterval(interval : Int) : Void;
+	@:overload @:public public function setInterval(interval : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getInterval() : Int;
+	@:overload @:public public function getInterval() : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setLastException(e : java.lang.Exception) : Void;
+	@:overload @:public public function setLastException(e : java.lang.Exception) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getLastException() : java.lang.Exception;
+	@:overload @:public public function getLastException() : java.lang.Exception;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function clearLastException() : Void;
+	@:overload @:public public function clearLastException() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function isErrored() : Bool;
+	@:overload @:public public function isErrored() : Bool;
 	
 	/**
 	* Get a list of the inserted and removed monitors since last called.
@@ -107,27 +107,27 @@ extern class AbstractMonitoredVm implements sun.jvmstat.monitor.remote.BufferedM
 	* @throws MonitorException Thrown if communications errors occur
 	*                          while communicating with the target.
 	*/
-	@:overload public function getMonitorStatus() : sun.jvmstat.perfdata.monitor.MonitorStatus;
+	@:overload @:public public function getMonitorStatus() : sun.jvmstat.perfdata.monitor.MonitorStatus;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:abstract public function addVmListener(l : sun.jvmstat.monitor.event.VmListener) : Void;
+	@:overload @:public @:abstract public function addVmListener(l : sun.jvmstat.monitor.event.VmListener) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:abstract public function removeVmListener(l : sun.jvmstat.monitor.event.VmListener) : Void;
+	@:overload @:public @:abstract public function removeVmListener(l : sun.jvmstat.monitor.event.VmListener) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getCapacity() : Int;
+	@:overload @:public public function getCapacity() : Int;
 	
 	
 }

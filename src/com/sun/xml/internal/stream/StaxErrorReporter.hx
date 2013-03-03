@@ -29,20 +29,20 @@ extern class StaxErrorReporter extends com.sun.org.apache.xerces.internal.impl.X
 	*
 	* @author  neeraj
 	*/
-	private var fXMLReporter : javax.xml.stream.XMLReporter;
+	@:protected private var fXMLReporter : javax.xml.stream.XMLReporter;
 	
 	/** Creates a new instance of StaxErrorReporter */
-	@:overload public function new(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function new(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/** Creates a new instance of StaxErrorReporter
 	* If this constructor is used to create the object, one must invoke reset() on this object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*One must call reset before using any of the function.
 	*/
-	@:overload public function reset(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function reset(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* Reports an error at a specific location.
@@ -58,7 +58,7 @@ extern class StaxErrorReporter extends com.sun.org.apache.xerces.internal.impl.X
 	* @see #SEVERITY_ERROR
 	* @see #SEVERITY_FATAL_ERROR
 	*/
-	@:overload override public function reportError(location : com.sun.org.apache.xerces.internal.xni.XMLLocator, domain : String, key : String, arguments : java.NativeArray<Dynamic>, severity : java.StdTypes.Int16) : String;
+	@:overload @:public override public function reportError(location : com.sun.org.apache.xerces.internal.xni.XMLLocator, domain : String, key : String, arguments : java.NativeArray<Dynamic>, severity : java.StdTypes.Int16) : String;
 	
 	
 }

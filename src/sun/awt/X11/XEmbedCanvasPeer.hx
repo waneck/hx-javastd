@@ -25,63 +25,63 @@ package sun.awt.X11;
 */
 extern class XEmbedCanvasPeer extends sun.awt.X11.XCanvasPeer implements java.awt.event.WindowFocusListener implements java.awt.KeyEventPostProcessor implements sun.awt.ModalityListener implements sun.awt.WindowIDProvider
 {
-	@:overload private function postInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload @:protected private function postInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
-	@:overload private function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload @:protected private function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
-	@:overload override public function handleEvent(e : java.awt.AWTEvent) : Void;
+	@:overload @:public override public function handleEvent(e : java.awt.AWTEvent) : Void;
 	
-	@:overload override public function dispatchEvent(ev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function dispatchEvent(ev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
-	@:overload override public function isFocusable() : Bool;
+	@:overload @:public override public function isFocusable() : Bool;
 	
-	@:overload public function windowGainedFocus(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowGainedFocus(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowLostFocus(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowLostFocus(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function postProcessKeyEvent(e : java.awt.event.KeyEvent) : Bool;
+	@:overload @:public public function postProcessKeyEvent(e : java.awt.event.KeyEvent) : Bool;
 	
-	@:overload public function modalityPushed(ev : sun.awt.ModalityEvent) : Void;
+	@:overload @:public public function modalityPushed(ev : sun.awt.ModalityEvent) : Void;
 	
-	@:overload public function modalityPopped(ev : sun.awt.ModalityEvent) : Void;
+	@:overload @:public public function modalityPopped(ev : sun.awt.ModalityEvent) : Void;
 	
-	@:overload override public function handleClientMessage(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleClientMessage(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function setXEmbedDropTarget() : Void;
+	@:overload @:public public function setXEmbedDropTarget() : Void;
 	
-	@:overload public function removeXEmbedDropTarget() : Void;
+	@:overload @:public public function removeXEmbedDropTarget() : Void;
 	
-	@:overload public function processXEmbedDnDEvent(ctxt : haxe.Int64, eventID : Int) : Bool;
+	@:overload @:public public function processXEmbedDnDEvent(ctxt : haxe.Int64, eventID : Int) : Bool;
 	
 	
 }
 @:native('sun$awt$X11$XEmbedCanvasPeer$XEmbedDropTarget') @:internal extern class XEmbedCanvasPeer_XEmbedDropTarget extends java.awt.dnd.DropTarget
 {
-	@:overload public function addDropTargetListener(dtl : java.awt.dnd.DropTargetListener) : Void;
+	@:overload @:public override public function addDropTargetListener(dtl : java.awt.dnd.DropTargetListener) : Void;
 	
 	
 }
 @:native('sun$awt$X11$XEmbedCanvasPeer$XEmbedServer') @:internal extern class XEmbedCanvasPeer_XEmbedServer extends sun.awt.X11.XEmbedHelper implements sun.awt.X11.XEventDispatcher
 {
-	@:overload public function handlePropertyNotify(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handlePropertyNotify(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function dispatchEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function dispatchEvent(xev : sun.awt.X11.XEvent) : Void;
 	
 	
 }
 @:native('sun$awt$X11$XEmbedCanvasPeer$GrabbedKey') @:internal extern class XEmbedCanvasPeer_GrabbedKey
 {
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

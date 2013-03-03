@@ -28,12 +28,12 @@ extern class ManagementAssertion extends com.sun.xml.internal.ws.policy.SimpleAs
 	/**
 	* The name of the management attribute.
 	*/
-	private static var MANAGEMENT_ATTRIBUTE_QNAME(default, null) : javax.xml.namespace.QName;
+	@:protected @:static @:final private static var MANAGEMENT_ATTRIBUTE_QNAME(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* The name of the monitoring attribute.
 	*/
-	private static var MONITORING_ATTRIBUTE_QNAME(default, null) : javax.xml.namespace.QName;
+	@:protected @:static @:final private static var MONITORING_ATTRIBUTE_QNAME(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* Return ManagementAssertion if one can be found in the policy map under
@@ -48,7 +48,7 @@ extern class ManagementAssertion extends com.sun.xml.internal.ws.policy.SimpleAs
 	* @return An instance of ManagementAssertion or null.
 	* @throws WebServiceException If computing the effective policy of the endpoint scope failed.
 	*/
-	@:overload private static function getAssertion<T : com.sun.xml.internal.ws.api.config.management.policy.ManagementAssertion>(name : javax.xml.namespace.QName, policyMap : com.sun.xml.internal.ws.policy.PolicyMap, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, type : Class<T>) : T;
+	@:overload @:protected @:static private static function getAssertion<T : com.sun.xml.internal.ws.api.config.management.policy.ManagementAssertion>(name : javax.xml.namespace.QName, policyMap : com.sun.xml.internal.ws.policy.PolicyMap, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, type : Class<T>) : T;
 	
 	/**
 	* Create a new ManagementAssertion instance.
@@ -59,21 +59,21 @@ extern class ManagementAssertion extends com.sun.xml.internal.ws.policy.SimpleAs
 	* @param assertionParameters Parameters of the assertion. May be null.
 	* @throws AssertionCreationException Thrown if the creation of the assertion failed.
 	*/
-	@:overload private function new(name : javax.xml.namespace.QName, data : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>) : Void;
+	@:overload @:protected private function new(name : javax.xml.namespace.QName, data : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>) : Void;
 	
 	/**
 	* Returns the value of the id attribute. May not be null.
 	*
 	* @return The value of the id attribute.
 	*/
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
 	/**
 	* Returns the value of the start attribute. May be null.
 	*
 	* @return The value of the start attribute.
 	*/
-	@:overload public function getStart() : String;
+	@:overload @:public public function getStart() : String;
 	
 	/**
 	* Returns the value of the managment attribute depending on whether this is
@@ -81,14 +81,14 @@ extern class ManagementAssertion extends com.sun.xml.internal.ws.policy.SimpleAs
 	*
 	* @return The value of the managment attribute.
 	*/
-	@:overload @:abstract public function isManagementEnabled() : Bool;
+	@:overload @:public @:abstract public function isManagementEnabled() : Bool;
 	
 	/**
 	* Returns the value of the monitoring attribute.
 	*
 	* @return The value of the monitoring attribute.
 	*/
-	@:overload public function monitoringAttribute() : com.sun.xml.internal.ws.api.config.management.policy.ManagementAssertion.ManagementAssertion_Setting;
+	@:overload @:public public function monitoringAttribute() : com.sun.xml.internal.ws.api.config.management.policy.ManagementAssertion.ManagementAssertion_Setting;
 	
 	
 }

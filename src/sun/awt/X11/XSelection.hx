@@ -26,13 +26,13 @@ package sun.awt.X11;
 extern class XSelection
 {
 	/* The maximal length of the property data. */
-	public static var MAX_LENGTH(default, null) : haxe.Int64;
+	@:public @:static @:final public static var MAX_LENGTH(default, null) : haxe.Int64;
 	
 	/*
 	* The maximum data size for ChangeProperty request.
 	* 100 is for the structure prepended to the request.
 	*/
-	public static var MAX_PROPERTY_SIZE(default, null) : Int;
+	@:public @:static @:final public static var MAX_PROPERTY_SIZE(default, null) : Int;
 	
 	/**
 	* Creates a selection object.
@@ -41,45 +41,45 @@ extern class XSelection
 	* @param clpbrd the corresponding clipoboard
 	* @exception NullPointerException if atom is <code>null</code>.
 	*/
-	@:overload public function new(atom : sun.awt.X11.XAtom) : Void;
+	@:overload @:public public function new(atom : sun.awt.X11.XAtom) : Void;
 	
-	@:overload public function getSelectionAtom() : sun.awt.X11.XAtom;
+	@:overload @:public public function getSelectionAtom() : sun.awt.X11.XAtom;
 	
-	@:overload @:synchronized public function setOwner(contents : java.awt.datatransfer.Transferable, formatMap : java.util.Map<Dynamic, Dynamic>, formats : java.NativeArray<haxe.Int64>, time : haxe.Int64) : Bool;
+	@:overload @:public @:synchronized public function setOwner(contents : java.awt.datatransfer.Transferable, formatMap : java.util.Map<Dynamic, Dynamic>, formats : java.NativeArray<haxe.Int64>, time : haxe.Int64) : Bool;
 	
 	/*
 	* Returns the list of atoms that represent the targets for which an attempt
 	* to convert the current selection will succeed.
 	*/
-	@:overload public function getTargets(time : haxe.Int64) : java.NativeArray<haxe.Int64>;
+	@:overload @:public public function getTargets(time : haxe.Int64) : java.NativeArray<haxe.Int64>;
 	
 	/*
 	* Requests the selection data in the specified format and returns
 	* the data provided by the owner.
 	*/
-	@:overload public function getData(format : haxe.Int64, time : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData(format : haxe.Int64, time : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:synchronized public function reset() : Void;
+	@:overload @:public @:synchronized public function reset() : Void;
 	
 	
 }
 @:native('sun$awt$X11$XSelection$SelectionEventHandler') @:internal extern class XSelection_SelectionEventHandler implements sun.awt.X11.XEventDispatcher
 {
-	@:overload public function dispatchEvent(ev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function dispatchEvent(ev : sun.awt.X11.XEvent) : Void;
 	
 	
 }
 @:native('sun$awt$X11$XSelection$IncrementalDataProvider') @:internal extern class XSelection_IncrementalDataProvider implements sun.awt.X11.XEventDispatcher
 {
-	@:overload public function new(requestor : haxe.Int64, property : haxe.Int64, target : haxe.Int64, format : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(requestor : haxe.Int64, property : haxe.Int64, target : haxe.Int64, format : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function dispatchEvent(ev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function dispatchEvent(ev : sun.awt.X11.XEvent) : Void;
 	
 	
 }
 @:native('sun$awt$X11$XSelection$IncrementalTransferHandler') @:internal extern class XSelection_IncrementalTransferHandler implements sun.awt.X11.XEventDispatcher
 {
-	@:overload public function dispatchEvent(ev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function dispatchEvent(ev : sun.awt.X11.XEvent) : Void;
 	
 	
 }

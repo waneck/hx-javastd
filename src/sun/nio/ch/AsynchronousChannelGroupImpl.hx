@@ -25,22 +25,22 @@ package sun.nio.ch;
 */
 @:internal extern class AsynchronousChannelGroupImpl extends java.nio.channels.AsynchronousChannelGroup implements java.util.concurrent.Executor
 {
-	@:overload @:final private function startThreads(task : java.lang.Runnable) : Void;
+	@:overload @:protected @:final private function startThreads(task : java.lang.Runnable) : Void;
 	
-	@:overload @:final override public function isShutdown() : Bool;
+	@:overload @:public @:final override public function isShutdown() : Bool;
 	
-	@:overload @:final override public function isTerminated() : Bool;
+	@:overload @:public @:final override public function isTerminated() : Bool;
 	
-	@:overload @:final override public function shutdown() : Void;
+	@:overload @:public @:final override public function shutdown() : Void;
 	
-	@:overload @:final override public function shutdownNow() : Void;
+	@:overload @:public @:final override public function shutdownNow() : Void;
 	
-	@:overload @:final override public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public @:final override public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Executes the given command on one of the channel group's pooled threads.
 	*/
-	@:overload @:final public function execute(task : java.lang.Runnable) : Void;
+	@:overload @:public @:final public function execute(task : java.lang.Runnable) : Void;
 	
 	
 }

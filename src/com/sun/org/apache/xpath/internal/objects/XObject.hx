@@ -27,12 +27,12 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	* The java object which this object wraps.
 	*  @serial
 	*/
-	private var m_obj : Dynamic;
+	@:protected private var m_obj : Dynamic;
 	
 	/**
 	* Create an XObject.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create an XObject.
@@ -40,9 +40,9 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	* @param obj Can be any object, should be a specific type
 	* for derived classes, or null.
 	*/
-	@:overload public function new(obj : Dynamic) : Void;
+	@:overload @:public public function new(obj : Dynamic) : Void;
 	
-	@:overload private function setObject(obj : Dynamic) : Void;
+	@:overload @:protected private function setObject(obj : Dynamic) : Void;
 	
 	/**
 	* For support of literal objects in xpaths.
@@ -53,7 +53,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Specify if it's OK for detach to release the iterator for reuse.
@@ -65,7 +65,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	* @param allowRelease true if it is OK for detach to release this iterator
 	* for pooling.
 	*/
-	@:overload public function allowDetachToRelease(allowRelease : Bool) : Void;
+	@:overload @:public public function allowDetachToRelease(allowRelease : Bool) : Void;
 	
 	/**
 	* Detaches the <code>DTMIterator</code> from the set which it iterated
@@ -74,18 +74,18 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	* calls to <code>nextNode</code> or <code>previousNode</code> will
 	* raise a runtime exception.
 	*/
-	@:overload public function detach() : Void;
+	@:overload @:public public function detach() : Void;
 	
 	/**
 	* Forces the object to release it's resources.  This is more harsh than
 	* detach().
 	*/
-	@:overload public function destruct() : Void;
+	@:overload @:public public function destruct() : Void;
 	
 	/**
 	* Reset for fresh reuse.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Directly call the
@@ -98,7 +98,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function dispatchCharactersEvents(ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function dispatchCharactersEvents(ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Create the right XObject based on the type of the object passed.  This
@@ -109,7 +109,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @return the right XObject based on the type of the object passed.
 	*/
-	@:overload public static function create(val : Dynamic) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:static @:public public static function create(val : Dynamic) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Create the right XObject based on the type of the object passed.
@@ -121,38 +121,38 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @return the right XObject based on the type of the object passed.
 	*/
-	@:overload public static function create(val : Dynamic, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:static @:public public static function create(val : Dynamic, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/** Constant for NULL object type */
-	public static var CLASS_NULL(default, null) : Int;
+	@:public @:static @:final public static var CLASS_NULL(default, null) : Int;
 	
 	/** Constant for UNKNOWN object type */
-	public static var CLASS_UNKNOWN(default, null) : Int;
+	@:public @:static @:final public static var CLASS_UNKNOWN(default, null) : Int;
 	
 	/** Constant for BOOLEAN  object type */
-	public static var CLASS_BOOLEAN(default, null) : Int;
+	@:public @:static @:final public static var CLASS_BOOLEAN(default, null) : Int;
 	
 	/** Constant for NUMBER object type */
-	public static var CLASS_NUMBER(default, null) : Int;
+	@:public @:static @:final public static var CLASS_NUMBER(default, null) : Int;
 	
 	/** Constant for STRING object type */
-	public static var CLASS_STRING(default, null) : Int;
+	@:public @:static @:final public static var CLASS_STRING(default, null) : Int;
 	
 	/** Constant for NODESET object type */
-	public static var CLASS_NODESET(default, null) : Int;
+	@:public @:static @:final public static var CLASS_NODESET(default, null) : Int;
 	
 	/** Constant for RESULT TREE FRAGMENT object type */
-	public static var CLASS_RTREEFRAG(default, null) : Int;
+	@:public @:static @:final public static var CLASS_RTREEFRAG(default, null) : Int;
 	
 	/** Represents an unresolved variable type as an integer. */
-	public static var CLASS_UNRESOLVEDVARIABLE(default, null) : Int;
+	@:public @:static @:final public static var CLASS_UNRESOLVEDVARIABLE(default, null) : Int;
 	
 	/**
 	* Tell what kind of class this is.
 	*
 	* @return CLASS_UNKNOWN
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Given a request type, return the equivalent string.
@@ -160,7 +160,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @return type string "#UNKNOWN" + object class name
 	*/
-	@:overload public function getTypeString() : String;
+	@:overload @:public public function getTypeString() : String;
 	
 	/**
 	* Cast result object to a number. Always issues an error.
@@ -169,7 +169,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function num() : Float;
+	@:overload @:public public function num() : Float;
 	
 	/**
 	* Cast result object to a number, but allow side effects, such as the
@@ -178,7 +178,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	* @return numeric value of the string conversion from the
 	* next node in the NodeSetDTM, or NAN if no node was found
 	*/
-	@:overload public function numWithSideEffects() : Float;
+	@:overload @:public public function numWithSideEffects() : Float;
 	
 	/**
 	* Cast result object to a boolean. Always issues an error.
@@ -187,7 +187,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function bool() : Bool;
+	@:overload @:public public function bool() : Bool;
 	
 	/**
 	* Cast result object to a boolean, but allow side effects, such as the
@@ -195,21 +195,21 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @return True if there is a next node in the nodeset
 	*/
-	@:overload public function boolWithSideEffects() : Bool;
+	@:overload @:public public function boolWithSideEffects() : Bool;
 	
 	/**
 	* Cast result object to a string.
 	*
 	* @return The string this wraps or the empty string if null
 	*/
-	@:overload public function xstr() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function xstr() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Cast result object to a string.
 	*
 	* @return The object as a string
 	*/
-	@:overload public function str() : String;
+	@:overload @:public public function str() : String;
 	
 	/**
 	* Return the string representation of the object
@@ -217,7 +217,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @return the string representation of the object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Cast result object to a result tree fragment.
@@ -226,7 +226,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @return the objec as a result tree fragment.
 	*/
-	@:overload public function rtf(support : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public public function rtf(support : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Cast result object to a result tree fragment.
@@ -235,21 +235,21 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @return the objec as a result tree fragment.
 	*/
-	@:overload public function rtree(support : com.sun.org.apache.xpath.internal.XPathContext) : org.w3c.dom.DocumentFragment;
+	@:overload @:public public function rtree(support : com.sun.org.apache.xpath.internal.XPathContext) : org.w3c.dom.DocumentFragment;
 	
 	/**
 	* For functions to override.
 	*
 	* @return null
 	*/
-	@:overload public function rtree() : org.w3c.dom.DocumentFragment;
+	@:overload @:public public function rtree() : org.w3c.dom.DocumentFragment;
 	
 	/**
 	* For functions to override.
 	*
 	* @return null
 	*/
-	@:overload public function rtf() : Int;
+	@:overload @:public public function rtf() : Int;
 	
 	/**
 	* Return a java object that's closest to the representation
@@ -257,7 +257,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @return The object that this class wraps
 	*/
-	@:overload public function object() : Dynamic;
+	@:overload @:public public function object() : Dynamic;
 	
 	/**
 	* Cast result object to a nodelist. Always issues an error.
@@ -266,14 +266,14 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function iter() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public public function iter() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Get a fresh copy of the object.  For use with variables.
 	*
 	* @return This object, unless overridden by subclass.
 	*/
-	@:overload public function getFresh() : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function getFresh() : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Cast result object to a nodelist. Always issues an error.
@@ -282,7 +282,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function nodeset() : org.w3c.dom.traversal.NodeIterator;
+	@:overload @:public public function nodeset() : org.w3c.dom.traversal.NodeIterator;
 	
 	/**
 	* Cast result object to a nodelist. Always issues an error.
@@ -291,7 +291,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function nodelist() : org.w3c.dom.NodeList;
+	@:overload @:public public function nodelist() : org.w3c.dom.NodeList;
 	
 	/**
 	* Cast result object to a nodelist. Always issues an error.
@@ -300,7 +300,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function mutableNodeset() : com.sun.org.apache.xpath.internal.NodeSetDTM;
+	@:overload @:public public function mutableNodeset() : com.sun.org.apache.xpath.internal.NodeSetDTM;
 	
 	/**
 	* Cast object to type t.
@@ -312,7 +312,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function castToType(t : Int, support : com.sun.org.apache.xpath.internal.XPathContext) : Dynamic;
+	@:overload @:public public function castToType(t : Int, support : com.sun.org.apache.xpath.internal.XPathContext) : Dynamic;
 	
 	/**
 	* Tell if one object is less than the other.
@@ -323,7 +323,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function lessThan(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload @:public public function lessThan(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if one object is less than or equal to the other.
@@ -334,7 +334,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function lessThanOrEqual(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload @:public public function lessThanOrEqual(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if one object is greater than the other.
@@ -345,7 +345,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function greaterThan(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload @:public public function greaterThan(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if one object is greater than or equal to the other.
@@ -356,7 +356,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function greaterThanOrEqual(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload @:public public function greaterThanOrEqual(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if two objects are functionally equal.
@@ -367,7 +367,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload @:public public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if two objects are functionally not equal.
@@ -378,7 +378,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function notEquals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload @:public public function notEquals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell the user of an error, and probably throw an
@@ -388,7 +388,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function error(msg : String) : Void;
+	@:overload @:protected private function error(msg : String) : Void;
 	
 	/**
 	* Tell the user of an error, and probably throw an
@@ -399,12 +399,12 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function error(msg : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected private function error(msg : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* XObjects should not normally need to fix up variables.
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Cast result object to a string.
@@ -413,17 +413,17 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	* NEEDSDOC @param fsb
 	* @return The string this wraps or the empty string if null
 	*/
-	@:overload public function appendToFsb(fsb : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
+	@:overload @:public public function appendToFsb(fsb : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
 	
 	/**
 	* @see com.sun.org.apache.xpath.internal.XPathVisitable#callVisitors(ExpressionOwner, XPathVisitor)
 	*/
-	@:overload override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }

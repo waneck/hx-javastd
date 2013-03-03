@@ -33,20 +33,20 @@ extern class URISyntax implements java.io.Serializable implements java.lang.Clon
 	* @exception  NullPointerException
 	*     (unchecked exception) Thrown if <CODE>uri</CODE> is null.
 	*/
-	@:overload private function new(uri : java.net.URI) : Void;
+	@:overload @:protected private function new(uri : java.net.URI) : Void;
 	
 	/**
 	* Returns this URI attribute's URI value.
 	* @return the URI.
 	*/
-	@:overload public function getURI() : java.net.URI;
+	@:overload @:public public function getURI() : java.net.URI;
 	
 	/**
 	* Returns a hashcode for this URI attribute.
 	*
 	* @return  A hashcode value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns whether this URI attribute is equivalent to the passed in
@@ -67,7 +67,7 @@ extern class URISyntax implements java.io.Serializable implements java.lang.Clon
 	* @return  True if <CODE>object</CODE> is equivalent to this URI
 	*          attribute, false otherwise.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Returns a String identifying this URI attribute. The String is the
@@ -75,7 +75,7 @@ extern class URISyntax implements java.io.Serializable implements java.lang.Clon
 	*
 	* @return  A String identifying this object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

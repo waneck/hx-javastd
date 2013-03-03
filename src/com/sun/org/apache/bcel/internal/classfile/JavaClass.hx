@@ -58,11 +58,11 @@ package com.sun.org.apache.bcel.internal.classfile;
 */
 extern class JavaClass extends com.sun.org.apache.bcel.internal.classfile.AccessFlags implements java.lang.Cloneable implements com.sun.org.apache.bcel.internal.classfile.Node
 {
-	public static var HEAP(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var HEAP(default, null) : java.StdTypes.Int8;
 	
-	public static var FILE(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var FILE(default, null) : java.StdTypes.Int8;
 	
-	public static var ZIP(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var ZIP(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Constructor gets all contents as arguments.
@@ -82,7 +82,7 @@ extern class JavaClass extends com.sun.org.apache.bcel.internal.classfile.Access
 	* @param attributes Class attributes
 	* @param source Read from file or generated in memory?
 	*/
-	@:overload public function new(class_name_index : Int, superclass_name_index : Int, file_name : String, major : Int, minor : Int, access_flags : Int, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool, interfaces : java.NativeArray<Int>, fields : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Field>, methods : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Method>, attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>, source : java.StdTypes.Int8) : Void;
+	@:overload @:public public function new(class_name_index : Int, superclass_name_index : Int, file_name : String, major : Int, minor : Int, access_flags : Int, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool, interfaces : java.NativeArray<Int>, fields : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Field>, methods : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Method>, attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>, source : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Constructor gets all contents as arguments.
@@ -99,7 +99,7 @@ extern class JavaClass extends com.sun.org.apache.bcel.internal.classfile.Access
 	* @param methods Class methods
 	* @param attributes Class attributes
 	*/
-	@:overload public function new(class_name_index : Int, superclass_name_index : Int, file_name : String, major : Int, minor : Int, access_flags : Int, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool, interfaces : java.NativeArray<Int>, fields : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Field>, methods : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Method>, attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>) : Void;
+	@:overload @:public public function new(class_name_index : Int, superclass_name_index : Int, file_name : String, major : Int, minor : Int, access_flags : Int, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool, interfaces : java.NativeArray<Int>, fields : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Field>, methods : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Method>, attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -108,7 +108,7 @@ extern class JavaClass extends com.sun.org.apache.bcel.internal.classfile.Access
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump class to a file.
@@ -116,7 +116,7 @@ extern class JavaClass extends com.sun.org.apache.bcel.internal.classfile.Access
 	* @param file Output file
 	* @throws IOException
 	*/
-	@:overload public function dump(file : java.io.File) : Void;
+	@:overload @:public public function dump(file : java.io.File) : Void;
 	
 	/**
 	* Dump class to a file named file_name.
@@ -124,12 +124,12 @@ extern class JavaClass extends com.sun.org.apache.bcel.internal.classfile.Access
 	* @param file_name Output file name
 	* @exception IOException
 	*/
-	@:overload public function dump(file_name : String) : Void;
+	@:overload @:public public function dump(file_name : String) : Void;
 	
 	/**
 	* @return class in binary format
 	*/
-	@:overload public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Dump Java class to output stream in binary format.
@@ -137,7 +137,7 @@ extern class JavaClass extends com.sun.org.apache.bcel.internal.classfile.Access
 	* @param file Output stream
 	* @exception IOException
 	*/
-	@:overload public function dump(file : java.io.OutputStream) : Void;
+	@:overload @:public public function dump(file : java.io.OutputStream) : Void;
 	
 	/**
 	* Dump Java class to output stream in binary format.
@@ -145,223 +145,223 @@ extern class JavaClass extends com.sun.org.apache.bcel.internal.classfile.Access
 	* @param file Output stream
 	* @exception IOException
 	*/
-	@:overload public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Attributes of the class.
 	*/
-	@:overload public function getAttributes() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>;
+	@:overload @:public public function getAttributes() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>;
 	
 	/**
 	* @return Class name.
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* @return Package name.
 	*/
-	@:overload public function getPackageName() : String;
+	@:overload @:public public function getPackageName() : String;
 	
 	/**
 	* @return Class name index.
 	*/
-	@:overload public function getClassNameIndex() : Int;
+	@:overload @:public public function getClassNameIndex() : Int;
 	
 	/**
 	* @return Constant pool.
 	*/
-	@:overload public function getConstantPool() : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
+	@:overload @:public public function getConstantPool() : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
 	
 	/**
 	* @return Fields, i.e., variables of the class. Like the JVM spec
 	* mandates for the classfile format, these fields are those specific to
 	* this class, and not those of the superclass or superinterfaces.
 	*/
-	@:overload public function getFields() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Field>;
+	@:overload @:public public function getFields() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Field>;
 	
 	/**
 	* @return File name of class, aka SourceFile attribute value
 	*/
-	@:overload public function getFileName() : String;
+	@:overload @:public public function getFileName() : String;
 	
 	/**
 	* @return Names of implemented interfaces.
 	*/
-	@:overload public function getInterfaceNames() : java.NativeArray<String>;
+	@:overload @:public public function getInterfaceNames() : java.NativeArray<String>;
 	
 	/**
 	* @return Indices in constant pool of implemented interfaces.
 	*/
-	@:overload public function getInterfaceIndices() : java.NativeArray<Int>;
+	@:overload @:public public function getInterfaceIndices() : java.NativeArray<Int>;
 	
 	/**
 	* @return Major number of class file version.
 	*/
-	@:overload public function getMajor() : Int;
+	@:overload @:public public function getMajor() : Int;
 	
 	/**
 	* @return Methods of the class.
 	*/
-	@:overload public function getMethods() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Method>;
+	@:overload @:public public function getMethods() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Method>;
 	
 	/**
 	* @return A com.sun.org.apache.bcel.internal.classfile.Method corresponding to
 	* java.lang.reflect.Method if any
 	*/
-	@:overload public function getMethod(m : java.lang.reflect.Method) : com.sun.org.apache.bcel.internal.classfile.Method;
+	@:overload @:public public function getMethod(m : java.lang.reflect.Method) : com.sun.org.apache.bcel.internal.classfile.Method;
 	
 	/**
 	* @return Minor number of class file version.
 	*/
-	@:overload public function getMinor() : Int;
+	@:overload @:public public function getMinor() : Int;
 	
 	/**
 	* @return sbsolute path to file where this class was read from
 	*/
-	@:overload public function getSourceFileName() : String;
+	@:overload @:public public function getSourceFileName() : String;
 	
 	/**
 	* @return Superclass name.
 	*/
-	@:overload public function getSuperclassName() : String;
+	@:overload @:public public function getSuperclassName() : String;
 	
 	/**
 	* @return Class name index.
 	*/
-	@:overload public function getSuperclassNameIndex() : Int;
+	@:overload @:public public function getSuperclassNameIndex() : Int;
 	
 	/**
 	* @param attributes .
 	*/
-	@:overload public function setAttributes(attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>) : Void;
+	@:overload @:public public function setAttributes(attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>) : Void;
 	
 	/**
 	* @param class_name .
 	*/
-	@:overload public function setClassName(class_name : String) : Void;
+	@:overload @:public public function setClassName(class_name : String) : Void;
 	
 	/**
 	* @param class_name_index .
 	*/
-	@:overload public function setClassNameIndex(class_name_index : Int) : Void;
+	@:overload @:public public function setClassNameIndex(class_name_index : Int) : Void;
 	
 	/**
 	* @param constant_pool .
 	*/
-	@:overload public function setConstantPool(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function setConstantPool(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* @param fields .
 	*/
-	@:overload public function setFields(fields : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Field>) : Void;
+	@:overload @:public public function setFields(fields : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Field>) : Void;
 	
 	/**
 	* Set File name of class, aka SourceFile attribute value
 	*/
-	@:overload public function setFileName(file_name : String) : Void;
+	@:overload @:public public function setFileName(file_name : String) : Void;
 	
 	/**
 	* @param interface_names .
 	*/
-	@:overload public function setInterfaceNames(interface_names : java.NativeArray<String>) : Void;
+	@:overload @:public public function setInterfaceNames(interface_names : java.NativeArray<String>) : Void;
 	
 	/**
 	* @param interfaces .
 	*/
-	@:overload public function setInterfaces(interfaces : java.NativeArray<Int>) : Void;
+	@:overload @:public public function setInterfaces(interfaces : java.NativeArray<Int>) : Void;
 	
 	/**
 	* @param major .
 	*/
-	@:overload public function setMajor(major : Int) : Void;
+	@:overload @:public public function setMajor(major : Int) : Void;
 	
 	/**
 	* @param methods .
 	*/
-	@:overload public function setMethods(methods : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Method>) : Void;
+	@:overload @:public public function setMethods(methods : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Method>) : Void;
 	
 	/**
 	* @param minor .
 	*/
-	@:overload public function setMinor(minor : Int) : Void;
+	@:overload @:public public function setMinor(minor : Int) : Void;
 	
 	/**
 	* Set absolute path to file this class was read from.
 	*/
-	@:overload public function setSourceFileName(source_file_name : String) : Void;
+	@:overload @:public public function setSourceFileName(source_file_name : String) : Void;
 	
 	/**
 	* @param superclass_name .
 	*/
-	@:overload public function setSuperclassName(superclass_name : String) : Void;
+	@:overload @:public public function setSuperclassName(superclass_name : String) : Void;
 	
 	/**
 	* @param superclass_name_index .
 	*/
-	@:overload public function setSuperclassNameIndex(superclass_name_index : Int) : Void;
+	@:overload @:public public function setSuperclassNameIndex(superclass_name_index : Int) : Void;
 	
 	/**
 	* @return String representing class contents.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* @return deep copy of this class
 	*/
-	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function copy() : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
-	@:overload @:final public function isSuper() : Bool;
+	@:overload @:public @:final public function isSuper() : Bool;
 	
-	@:overload @:final public function isClass() : Bool;
+	@:overload @:public @:final public function isClass() : Bool;
 	
 	/** @return returns either HEAP (generated), FILE, or ZIP
 	*/
-	@:overload @:final public function getSource() : java.StdTypes.Int8;
+	@:overload @:public @:final public function getSource() : java.StdTypes.Int8;
 	
 	/**
 	* Gets the ClassRepository which holds its definition. By default
 	* this is the same as SyntheticRepository.getInstance();
 	*/
-	@:overload public function getRepository() : com.sun.org.apache.bcel.internal.util.Repository;
+	@:overload @:public public function getRepository() : com.sun.org.apache.bcel.internal.util.Repository;
 	
 	/**
 	* Sets the ClassRepository which loaded the JavaClass.
 	* Should be called immediately after parsing is done.
 	*/
-	@:overload public function setRepository(repository : com.sun.org.apache.bcel.internal.util.Repository) : Void;
+	@:overload @:public public function setRepository(repository : com.sun.org.apache.bcel.internal.util.Repository) : Void;
 	
 	/** Equivalent to runtime "instanceof" operator.
 	*
 	* @return true if this JavaClass is derived from teh super class
 	*/
-	@:overload @:final public function instanceOf(super_class : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Bool;
+	@:overload @:public @:final public function instanceOf(super_class : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Bool;
 	
 	/**
 	* @return true, if clazz is an implementation of interface inter
 	*/
-	@:overload public function implementationOf(inter : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Bool;
+	@:overload @:public public function implementationOf(inter : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Bool;
 	
 	/**
 	* @return the superclass for this JavaClass object, or null if this
 	* is java.lang.Object
 	*/
-	@:overload public function getSuperClass() : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function getSuperClass() : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
 	/**
 	* @return list of super classes of this class in ascending order, i.e.,
 	* java.lang.Object is always the last element
 	*/
-	@:overload public function getSuperClasses() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.JavaClass>;
+	@:overload @:public public function getSuperClasses() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.JavaClass>;
 	
 	/**
 	* Get interfaces directly implemented by this JavaClass.
 	*/
-	@:overload public function getInterfaces() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.JavaClass>;
+	@:overload @:public public function getInterfaces() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.JavaClass>;
 	
 	/**
 	* Get all interfaces implemented by this JavaClass (transitively).
 	*/
-	@:overload public function getAllInterfaces() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.JavaClass>;
+	@:overload @:public public function getAllInterfaces() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.JavaClass>;
 	
 	
 }

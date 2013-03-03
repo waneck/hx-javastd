@@ -25,11 +25,11 @@ package com.sun.tools.internal.ws.processor.generator;
 */
 extern class CustomExceptionGenerator extends com.sun.tools.internal.ws.processor.generator.GeneratorBase
 {
-	@:overload public static function generate(model : com.sun.tools.internal.ws.processor.model.Model, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public @:static public static function generate(model : com.sun.tools.internal.ws.processor.model.Model, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function getGenerator(model : com.sun.tools.internal.ws.processor.model.Model, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : com.sun.tools.internal.ws.processor.generator.GeneratorBase;
+	@:overload @:public public function getGenerator(model : com.sun.tools.internal.ws.processor.model.Model, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : com.sun.tools.internal.ws.processor.generator.GeneratorBase;
 	
-	@:overload public function visit(fault : com.sun.tools.internal.ws.processor.model.Fault) : Void;
+	@:overload @:public override public function visit(fault : com.sun.tools.internal.ws.processor.model.Fault) : Void;
 	
 	
 }

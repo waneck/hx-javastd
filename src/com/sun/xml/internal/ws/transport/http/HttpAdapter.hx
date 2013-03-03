@@ -25,14 +25,14 @@ package com.sun.xml.internal.ws.transport.http;
 */
 extern class HttpAdapter extends com.sun.xml.internal.ws.api.server.Adapter<com.sun.xml.internal.ws.transport.http.HttpAdapter.HttpAdapter_HttpToolkit>
 {
-	public var owner(default, null) : com.sun.xml.internal.ws.transport.http.HttpAdapterList<com.sun.xml.internal.ws.transport.http.HttpAdapter>;
+	@:public @:final public var owner(default, null) : com.sun.xml.internal.ws.transport.http.HttpAdapterList<com.sun.xml.internal.ws.transport.http.HttpAdapter>;
 	
 	/**
 	* Servlet URL pattern with which this {@link HttpAdapter} is associated.
 	*/
-	public var urlPattern(default, null) : String;
+	@:public @:final public var urlPattern(default, null) : String;
 	
-	private var stickyCookie : Bool;
+	@:protected private var stickyCookie : Bool;
 	
 	/**
 	* Creates a lone {@link HttpAdapter} that does not know of any other
@@ -44,7 +44,7 @@ extern class HttpAdapter extends com.sun.xml.internal.ws.api.server.Adapter<com.
 	* @param endpoint web service endpoint
 	* @return singe adapter to process HTTP messages
 	*/
-	@:overload public static function createAlone(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : com.sun.xml.internal.ws.transport.http.HttpAdapter;
+	@:overload @:public @:static public static function createAlone(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : com.sun.xml.internal.ws.transport.http.HttpAdapter;
 	
 	/**
 	* @deprecated
@@ -52,31 +52,31 @@ extern class HttpAdapter extends com.sun.xml.internal.ws.api.server.Adapter<com.
 	* @param endpoint web service endpoint
 	* @param owner list of related adapters
 	*/
-	@:overload private function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, owner : com.sun.xml.internal.ws.transport.http.HttpAdapterList<com.sun.xml.internal.ws.transport.http.HttpAdapter>) : Void;
+	@:overload @:protected private function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, owner : com.sun.xml.internal.ws.transport.http.HttpAdapterList<com.sun.xml.internal.ws.transport.http.HttpAdapter>) : Void;
 	
-	@:overload private function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, owner : com.sun.xml.internal.ws.transport.http.HttpAdapterList<com.sun.xml.internal.ws.transport.http.HttpAdapter>, urlPattern : String) : Void;
+	@:overload @:protected private function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, owner : com.sun.xml.internal.ws.transport.http.HttpAdapterList<com.sun.xml.internal.ws.transport.http.HttpAdapter>, urlPattern : String) : Void;
 	
 	/**
 	* Return the last known service definition of the endpoint.
 	*
 	* @return The service definition of the endpoint
 	*/
-	@:overload public function getServiceDefinition() : com.sun.xml.internal.ws.api.server.ServiceDefinition;
+	@:overload @:public public function getServiceDefinition() : com.sun.xml.internal.ws.api.server.ServiceDefinition;
 	
 	/**
 	* Fill in WSDL map.
 	*
 	* @param sdef service definition
 	*/
-	@:overload public function initWSDLMap(sdef : com.sun.xml.internal.ws.api.server.ServiceDefinition) : Void;
+	@:overload @:public public function initWSDLMap(sdef : com.sun.xml.internal.ws.api.server.ServiceDefinition) : Void;
 	
 	/**
 	* Returns the "/abc/def/ghi" portion if
 	* the URL pattern is "/abc/def/ghi/*".
 	*/
-	@:overload public function getValidPath() : String;
+	@:overload @:public public function getValidPath() : String;
 	
-	@:overload override private function createToolkit() : com.sun.xml.internal.ws.transport.http.HttpAdapter.HttpAdapter_HttpToolkit;
+	@:overload @:protected override private function createToolkit() : com.sun.xml.internal.ws.transport.http.HttpAdapter.HttpAdapter_HttpToolkit;
 	
 	/**
 	* Receives the incoming HTTP connection and dispatches
@@ -96,15 +96,15 @@ extern class HttpAdapter extends com.sun.xml.internal.ws.api.server.Adapter<com.
 	* @param connection to receive/send HTTP messages for web service endpoints
 	* @throws IOException when I/O errors happen
 	*/
-	@:overload public function handle(connection : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : Void;
+	@:overload @:public public function handle(connection : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : Void;
 	
-	@:overload public function handleGet(connection : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : Bool;
+	@:overload @:public public function handleGet(connection : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : Bool;
 	
-	@:overload public function invokeAsync(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : Void;
+	@:overload @:public public function invokeAsync(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : Void;
 	
-	@:overload public function invokeAsync(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection, _callback : com.sun.xml.internal.ws.transport.http.HttpAdapter.HttpAdapter_CompletionCallback) : Void;
+	@:overload @:public public function invokeAsync(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection, _callback : com.sun.xml.internal.ws.transport.http.HttpAdapter.HttpAdapter_CompletionCallback) : Void;
 	
-	public static var NO_OP_COMPLETION_CALLBACK(default, null) : com.sun.xml.internal.ws.transport.http.HttpAdapter.HttpAdapter_CompletionCallback;
+	@:public @:static @:final public static var NO_OP_COMPLETION_CALLBACK(default, null) : com.sun.xml.internal.ws.transport.http.HttpAdapter.HttpAdapter_CompletionCallback;
 	
 	/**
 	* Sends out the WSDL (and other referenced documents)
@@ -115,14 +115,14 @@ extern class HttpAdapter extends com.sun.xml.internal.ws.api.server.Adapter<com.
 	*
 	* @throws IOException when I/O errors happen
 	*/
-	@:overload public function publishWSDL(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : Void;
+	@:overload @:public public function publishWSDL(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : Void;
 	
 	/**
 	* Dumps what goes across HTTP transport.
 	*/
-	@:native('dump') public static var _dump : Bool;
+	@:native('dump') @:public @:static public static var _dump : Bool;
 	
-	public static var publishStatusPage : Bool;
+	@:public @:static public static var publishStatusPage : Bool;
 	
 	
 }
@@ -134,31 +134,31 @@ extern class HttpAdapter extends com.sun.xml.internal.ws.api.server.Adapter<com.
 }
 @:native('com$sun$xml$internal$ws$transport$http$HttpAdapter$AsyncTransport') @:internal extern class HttpAdapter_AsyncTransport extends com.sun.xml.internal.ws.api.server.AbstractServerAsyncTransport<com.sun.xml.internal.ws.transport.http.WSHTTPConnection>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function handleAsync(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : Void;
+	@:overload @:public public function handleAsync(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : Void;
 	
-	@:overload private function encodePacket(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection, packet : com.sun.xml.internal.ws.api.message.Packet, codec : com.sun.xml.internal.ws.api.pipe.Codec) : Void;
+	@:overload @:protected private function encodePacket(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection, packet : com.sun.xml.internal.ws.api.message.Packet, codec : com.sun.xml.internal.ws.api.pipe.Codec) : Void;
 	
-	@:overload private function getAcceptableMimeTypes(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : String;
+	@:overload @:protected private function getAcceptableMimeTypes(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : String;
 	
-	@:overload private function getTransportBackChannel(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : com.sun.xml.internal.ws.api.server.TransportBackChannel;
+	@:overload @:protected private function getTransportBackChannel(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : com.sun.xml.internal.ws.api.server.TransportBackChannel;
 	
-	@:overload private function getPropertySet(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : com.sun.xml.internal.ws.api.PropertySet;
+	@:overload @:protected private function getPropertySet(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : com.sun.xml.internal.ws.api.PropertySet;
 	
-	@:overload private function getWebServiceContextDelegate(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : com.sun.xml.internal.ws.api.server.WebServiceContextDelegate;
+	@:overload @:protected private function getWebServiceContextDelegate(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : com.sun.xml.internal.ws.api.server.WebServiceContextDelegate;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$transport$http$HttpAdapter$Oneway') @:internal extern class HttpAdapter_Oneway implements com.sun.xml.internal.ws.api.server.TransportBackChannel
 {
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$transport$http$HttpAdapter$HttpToolkit') @:internal extern class HttpAdapter_HttpToolkit extends com.sun.xml.internal.ws.api.server.Adapter.Adapter_Toolkit
 {
-	@:overload public function handle(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : Void;
+	@:overload @:public public function handle(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : Void;
 	
 	
 }
@@ -168,13 +168,13 @@ extern class HttpAdapter extends com.sun.xml.internal.ws.api.server.Adapter<com.
 */
 @:native('com$sun$xml$internal$ws$transport$http$HttpAdapter$Http10OutputStream') @:internal extern class HttpAdapter_Http10OutputStream extends com.sun.xml.internal.ws.util.ByteArrayBuffer
 {
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$transport$http$HttpAdapter$DummyList') @:internal extern class HttpAdapter_DummyList extends com.sun.xml.internal.ws.transport.http.HttpAdapterList<com.sun.xml.internal.ws.transport.http.HttpAdapter>
 {
-	@:overload override private function createHttpAdapter(name : String, urlPattern : String, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : com.sun.xml.internal.ws.transport.http.HttpAdapter;
+	@:overload @:protected override private function createHttpAdapter(name : String, urlPattern : String, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : com.sun.xml.internal.ws.transport.http.HttpAdapter;
 	
 	
 }

@@ -34,13 +34,13 @@ package java.io;
 	/**
 	* Constructs an UnsupportedEncodingException without a detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an UnsupportedEncodingException with a detail message.
 	* @param s Describes the reason for the exception.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

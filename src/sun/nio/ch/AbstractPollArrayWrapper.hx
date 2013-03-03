@@ -31,11 +31,11 @@ package sun.nio.ch;
 */
 @:require(java4) @:internal extern class AbstractPollArrayWrapper
 {
-	private var pollArray : sun.nio.ch.AllocatedNativeObject;
+	@:protected private var pollArray : sun.nio.ch.AllocatedNativeObject;
 	
-	private var totalChannels : Int;
+	@:protected private var totalChannels : Int;
 	
-	private var pollArrayAddress : haxe.Int64;
+	@:protected private var pollArrayAddress : haxe.Int64;
 	
 	
 }

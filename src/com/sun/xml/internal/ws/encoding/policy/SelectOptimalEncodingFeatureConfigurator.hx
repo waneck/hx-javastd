@@ -31,7 +31,7 @@ extern class SelectOptimalEncodingFeatureConfigurator implements com.sun.xml.int
 	* @author Paul.Sandoz@Sun.Com
 	* @author Fabian Ritzmann
 	*/
-	public static var enabled(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var enabled(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* Process SelectOptimalEncoding policy assertions.
@@ -40,7 +40,7 @@ extern class SelectOptimalEncodingFeatureConfigurator implements com.sun.xml.int
 	* @param policyMap The policy map.
 	* @throws PolicyException If retrieving the policy triggered an exception.
 	*/
-	@:overload public function getFeatures(key : com.sun.xml.internal.ws.policy.PolicyMapKey, policyMap : com.sun.xml.internal.ws.policy.PolicyMap) : java.util.Collection<javax.xml.ws.WebServiceFeature>;
+	@:overload @:public public function getFeatures(key : com.sun.xml.internal.ws.policy.PolicyMapKey, policyMap : com.sun.xml.internal.ws.policy.PolicyMap) : java.util.Collection<javax.xml.ws.WebServiceFeature>;
 	
 	
 }

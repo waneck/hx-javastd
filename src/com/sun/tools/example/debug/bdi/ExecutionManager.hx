@@ -32,70 +32,70 @@ package com.sun.tools.example.debug.bdi;
 */
 extern class ExecutionManager
 {
-	@:overload public function addSessionListener(listener : com.sun.tools.example.debug.bdi.SessionListener) : Void;
+	@:overload @:public public function addSessionListener(listener : com.sun.tools.example.debug.bdi.SessionListener) : Void;
 	
-	@:overload public function removeSessionListener(listener : com.sun.tools.example.debug.bdi.SessionListener) : Void;
+	@:overload @:public public function removeSessionListener(listener : com.sun.tools.example.debug.bdi.SessionListener) : Void;
 	
-	@:overload public function addSpecListener(cl : com.sun.tools.example.debug.bdi.SpecListener) : Void;
+	@:overload @:public public function addSpecListener(cl : com.sun.tools.example.debug.bdi.SpecListener) : Void;
 	
-	@:overload public function removeSpecListener(cl : com.sun.tools.example.debug.bdi.SpecListener) : Void;
+	@:overload @:public public function removeSpecListener(cl : com.sun.tools.example.debug.bdi.SpecListener) : Void;
 	
 	/**
 	* Adds a JDIListener
 	*/
-	@:overload public function addJDIListener(jl : com.sun.tools.example.debug.event.JDIListener) : Void;
+	@:overload @:public public function addJDIListener(jl : com.sun.tools.example.debug.event.JDIListener) : Void;
 	
 	/**
 	* Adds a JDIListener - at the specified position
 	*/
-	@:overload public function addJDIListener(index : Int, jl : com.sun.tools.example.debug.event.JDIListener) : Void;
+	@:overload @:public public function addJDIListener(index : Int, jl : com.sun.tools.example.debug.event.JDIListener) : Void;
 	
 	/**
 	* Removes a JDIListener
 	*/
-	@:overload public function removeJDIListener(jl : com.sun.tools.example.debug.event.JDIListener) : Void;
+	@:overload @:public public function removeJDIListener(jl : com.sun.tools.example.debug.event.JDIListener) : Void;
 	
-	@:overload public function addApplicationEchoListener(l : com.sun.tools.example.debug.bdi.OutputListener) : Void;
+	@:overload @:public public function addApplicationEchoListener(l : com.sun.tools.example.debug.bdi.OutputListener) : Void;
 	
-	@:overload public function removeApplicationEchoListener(l : com.sun.tools.example.debug.bdi.OutputListener) : Void;
+	@:overload @:public public function removeApplicationEchoListener(l : com.sun.tools.example.debug.bdi.OutputListener) : Void;
 	
-	@:overload public function addApplicationOutputListener(l : com.sun.tools.example.debug.bdi.OutputListener) : Void;
+	@:overload @:public public function addApplicationOutputListener(l : com.sun.tools.example.debug.bdi.OutputListener) : Void;
 	
-	@:overload public function removeApplicationOutputListener(l : com.sun.tools.example.debug.bdi.OutputListener) : Void;
+	@:overload @:public public function removeApplicationOutputListener(l : com.sun.tools.example.debug.bdi.OutputListener) : Void;
 	
-	@:overload public function addApplicationErrorListener(l : com.sun.tools.example.debug.bdi.OutputListener) : Void;
+	@:overload @:public public function addApplicationErrorListener(l : com.sun.tools.example.debug.bdi.OutputListener) : Void;
 	
-	@:overload public function removeApplicationErrorListener(l : com.sun.tools.example.debug.bdi.OutputListener) : Void;
+	@:overload @:public public function removeApplicationErrorListener(l : com.sun.tools.example.debug.bdi.OutputListener) : Void;
 	
-	@:overload public function addDiagnosticsListener(l : com.sun.tools.example.debug.bdi.OutputListener) : Void;
+	@:overload @:public public function addDiagnosticsListener(l : com.sun.tools.example.debug.bdi.OutputListener) : Void;
 	
-	@:overload public function removeDiagnosticsListener(l : com.sun.tools.example.debug.bdi.OutputListener) : Void;
+	@:overload @:public public function removeDiagnosticsListener(l : com.sun.tools.example.debug.bdi.OutputListener) : Void;
 	
-	@:overload public function vm() : com.sun.jdi.VirtualMachine;
+	@:overload @:public public function vm() : com.sun.jdi.VirtualMachine;
 	
-	@:overload public function eventRequestManager() : com.sun.jdi.request.EventRequestManager;
+	@:overload @:public public function eventRequestManager() : com.sun.jdi.request.EventRequestManager;
 	
 	/**
 	* Get JDI trace mode.
 	*/
-	@:overload public function getTraceMode(mode : Int) : Int;
+	@:overload @:public public function getTraceMode(mode : Int) : Int;
 	
 	/**
 	* Set JDI trace mode.
 	*/
-	@:overload public function setTraceMode(mode : Int) : Void;
+	@:overload @:public public function setTraceMode(mode : Int) : Void;
 	
 	/**
 	* Determine if VM is interrupted, i.e, present and not running.
 	*/
-	@:overload public function isInterrupted() : Bool;
+	@:overload @:public public function isInterrupted() : Bool;
 	
 	/**
 	* Return a list of ReferenceType objects for all
 	* currently loaded classes and interfaces.
 	* Array types are not returned.
 	*/
-	@:overload public function allClasses() : java.util.List<com.sun.jdi.ReferenceType>;
+	@:overload @:public public function allClasses() : java.util.List<com.sun.jdi.ReferenceType>;
 	
 	/**
 	* Return a ReferenceType object for the currently
@@ -107,7 +107,7 @@ extern class ExecutionManager
 	* multiple class loaders could have loaded a class
 	* with the same fully-qualified name.
 	*/
-	@:overload public function findClassesByName(name : String) : java.util.List<com.sun.jdi.ReferenceType>;
+	@:overload @:public public function findClassesByName(name : String) : java.util.List<com.sun.jdi.ReferenceType>;
 	
 	/**
 	* Return a list of ReferenceType objects for all
@@ -118,7 +118,7 @@ extern class ExecutionManager
 	* component may optionally be a "*" character, designating
 	* an arbitrary prefix.
 	*/
-	@:overload public function findClassesMatchingPattern(pattern : String) : java.util.List<com.sun.jdi.ReferenceType>;
+	@:overload @:public public function findClassesMatchingPattern(pattern : String) : java.util.List<com.sun.jdi.ReferenceType>;
 	
 	/*
 	* Return a list of ThreadReference objects corresponding
@@ -126,7 +126,7 @@ extern class ExecutionManager
 	* A thread is removed from the list just before the
 	* thread terminates.
 	*/
-	@:overload public function allThreads() : java.util.List<com.sun.jdi.ThreadReference>;
+	@:overload @:public public function allThreads() : java.util.List<com.sun.jdi.ThreadReference>;
 	
 	/*
 	* Return a list of ThreadGroupReference objects corresponding
@@ -134,89 +134,89 @@ extern class ExecutionManager
 	* Note that a thread group may be empty, or contain no threads as
 	* descendents.
 	*/
-	@:overload public function topLevelThreadGroups() : java.util.List<com.sun.jdi.ThreadGroupReference>;
+	@:overload @:public public function topLevelThreadGroups() : java.util.List<com.sun.jdi.ThreadGroupReference>;
 	
 	/*
 	* Return the system threadgroup.
 	*/
-	@:overload public function systemThreadGroup() : com.sun.jdi.ThreadGroupReference;
+	@:overload @:public public function systemThreadGroup() : com.sun.jdi.ThreadGroupReference;
 	
 	/*
 	* Evaluate an expression.
 	*/
-	@:overload public function evaluate(f : com.sun.jdi.StackFrame, expr : String) : com.sun.jdi.Value;
+	@:overload @:public public function evaluate(f : com.sun.jdi.StackFrame, expr : String) : com.sun.jdi.Value;
 	
 	/*
 	* Start a new VM.
 	*/
-	@:overload public function run(suspended : Bool, vmArgs : String, className : String, args : String) : Void;
+	@:overload @:public public function run(suspended : Bool, vmArgs : String, className : String, args : String) : Void;
 	
 	/*
 	* Attach to an existing VM.
 	*/
-	@:overload public function attach(portName : String) : Void;
+	@:overload @:public public function attach(portName : String) : Void;
 	
 	/*
 	* Connect via user specified arguments
 	* @return true on success
 	*/
-	@:overload public function explictStart(connector : com.sun.jdi.connect.Connector, arguments : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : Bool;
+	@:overload @:public public function explictStart(connector : com.sun.jdi.connect.Connector, arguments : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : Bool;
 	
 	/*
 	* Detach from VM.  If VM was started by debugger, terminate it.
 	*/
-	@:overload public function detach() : Void;
+	@:overload @:public public function detach() : Void;
 	
 	/*
 	* Suspend all VM activity.
 	*/
-	@:overload public function interrupt() : Void;
+	@:overload @:public public function interrupt() : Void;
 	
 	/*
 	* Resume interrupted VM.
 	*/
-	@:overload public function go() : Void;
+	@:overload @:public public function go() : Void;
 	
-	@:overload public function stepIntoInstruction(thread : com.sun.jdi.ThreadReference) : Void;
+	@:overload @:public public function stepIntoInstruction(thread : com.sun.jdi.ThreadReference) : Void;
 	
-	@:overload public function stepOverInstruction(thread : com.sun.jdi.ThreadReference) : Void;
+	@:overload @:public public function stepOverInstruction(thread : com.sun.jdi.ThreadReference) : Void;
 	
-	@:overload public function stepIntoLine(thread : com.sun.jdi.ThreadReference) : Void;
+	@:overload @:public public function stepIntoLine(thread : com.sun.jdi.ThreadReference) : Void;
 	
-	@:overload public function stepOverLine(thread : com.sun.jdi.ThreadReference) : Void;
+	@:overload @:public public function stepOverLine(thread : com.sun.jdi.ThreadReference) : Void;
 	
-	@:overload public function stepOut(thread : com.sun.jdi.ThreadReference) : Void;
+	@:overload @:public public function stepOut(thread : com.sun.jdi.ThreadReference) : Void;
 	
 	/*
 	* Thread control.
 	*/
-	@:overload public function suspendThread(thread : com.sun.jdi.ThreadReference) : Void;
+	@:overload @:public public function suspendThread(thread : com.sun.jdi.ThreadReference) : Void;
 	
-	@:overload public function resumeThread(thread : com.sun.jdi.ThreadReference) : Void;
+	@:overload @:public public function resumeThread(thread : com.sun.jdi.ThreadReference) : Void;
 	
-	@:overload public function stopThread(thread : com.sun.jdi.ThreadReference) : Void;
+	@:overload @:public public function stopThread(thread : com.sun.jdi.ThreadReference) : Void;
 	
-	@:overload public function threadInfo(thread : com.sun.jdi.ThreadReference) : com.sun.tools.example.debug.bdi.ThreadInfo;
+	@:overload @:public public function threadInfo(thread : com.sun.jdi.ThreadReference) : com.sun.tools.example.debug.bdi.ThreadInfo;
 	
-	@:overload public function sendLineToApplication(line : String) : Void;
+	@:overload @:public public function sendLineToApplication(line : String) : Void;
 	
-	@:overload public function createSourceLineBreakpoint(sourceName : String, line : Int) : com.sun.tools.example.debug.bdi.BreakpointSpec;
+	@:overload @:public public function createSourceLineBreakpoint(sourceName : String, line : Int) : com.sun.tools.example.debug.bdi.BreakpointSpec;
 	
-	@:overload public function createClassLineBreakpoint(classPattern : String, line : Int) : com.sun.tools.example.debug.bdi.BreakpointSpec;
+	@:overload @:public public function createClassLineBreakpoint(classPattern : String, line : Int) : com.sun.tools.example.debug.bdi.BreakpointSpec;
 	
-	@:overload public function createMethodBreakpoint(classPattern : String, methodId : String, methodArgs : java.util.List<String>) : com.sun.tools.example.debug.bdi.BreakpointSpec;
+	@:overload @:public public function createMethodBreakpoint(classPattern : String, methodId : String, methodArgs : java.util.List<String>) : com.sun.tools.example.debug.bdi.BreakpointSpec;
 	
-	@:overload public function createExceptionIntercept(classPattern : String, notifyCaught : Bool, notifyUncaught : Bool) : com.sun.tools.example.debug.bdi.ExceptionSpec;
+	@:overload @:public public function createExceptionIntercept(classPattern : String, notifyCaught : Bool, notifyUncaught : Bool) : com.sun.tools.example.debug.bdi.ExceptionSpec;
 	
-	@:overload public function createAccessWatchpoint(classPattern : String, fieldId : String) : com.sun.tools.example.debug.bdi.AccessWatchpointSpec;
+	@:overload @:public public function createAccessWatchpoint(classPattern : String, fieldId : String) : com.sun.tools.example.debug.bdi.AccessWatchpointSpec;
 	
-	@:overload public function createModificationWatchpoint(classPattern : String, fieldId : String) : com.sun.tools.example.debug.bdi.ModificationWatchpointSpec;
+	@:overload @:public public function createModificationWatchpoint(classPattern : String, fieldId : String) : com.sun.tools.example.debug.bdi.ModificationWatchpointSpec;
 	
-	@:overload public function delete(spec : com.sun.tools.example.debug.bdi.EventRequestSpec) : Void;
+	@:overload @:public public function delete(spec : com.sun.tools.example.debug.bdi.EventRequestSpec) : Void;
 	
-	@:overload public function install(spec : com.sun.tools.example.debug.bdi.EventRequestSpec) : Void;
+	@:overload @:public public function install(spec : com.sun.tools.example.debug.bdi.EventRequestSpec) : Void;
 	
-	@:overload public function eventRequestSpecs() : java.util.List<com.sun.tools.example.debug.bdi.EventRequestSpec>;
+	@:overload @:public public function eventRequestSpecs() : java.util.List<com.sun.tools.example.debug.bdi.EventRequestSpec>;
 	
 	
 }

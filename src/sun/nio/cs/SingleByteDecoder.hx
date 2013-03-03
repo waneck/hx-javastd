@@ -27,11 +27,11 @@ package sun.nio.cs;
 */
 extern class SingleByteDecoder extends java.nio.charset.CharsetDecoder
 {
-	@:overload private function new(cs : java.nio.charset.Charset, byteToCharTable : String) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, byteToCharTable : String) : Void;
 	
-	@:overload override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload public function decode(byteIndex : Int) : java.StdTypes.Char16;
+	@:overload @:public public function decode(byteIndex : Int) : java.StdTypes.Char16;
 	
 	
 }

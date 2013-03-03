@@ -31,12 +31,12 @@ extern class SortingFocusTraversalPolicy extends javax.swing.InternalFrameFocusT
 	* before installing this FocusTraversalPolicy on a focus cycle root or
 	* KeyboardFocusManager.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs a SortingFocusTraversalPolicy with the specified Comparator.
 	*/
-	@:overload public function new(comparator : java.util.Comparator<java.awt.Component>) : Void;
+	@:overload @:public public function new(comparator : java.util.Comparator<java.awt.Component>) : Void;
 	
 	/**
 	* Returns the Component that should receive the focus after aComponent.
@@ -60,7 +60,7 @@ extern class SortingFocusTraversalPolicy extends javax.swing.InternalFrameFocusT
 	*         root of aComponent or a focus traversal policy provider, or if either aContainer or
 	*         aComponent is null
 	*/
-	@:overload override public function getComponentAfter(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
+	@:overload @:public override public function getComponentAfter(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* Returns the Component that should receive the focus before aComponent.
@@ -84,7 +84,7 @@ extern class SortingFocusTraversalPolicy extends javax.swing.InternalFrameFocusT
 	*         root of aComponent or a focus traversal policy provider, or if either aContainer or
 	*         aComponent is null
 	*/
-	@:overload override public function getComponentBefore(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
+	@:overload @:public override public function getComponentBefore(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* Returns the first Component in the traversal cycle. This method is used
@@ -97,7 +97,7 @@ extern class SortingFocusTraversalPolicy extends javax.swing.InternalFrameFocusT
 	*         or null if no suitable Component can be found
 	* @throws IllegalArgumentException if aContainer is null
 	*/
-	@:overload override public function getFirstComponent(aContainer : java.awt.Container) : java.awt.Component;
+	@:overload @:public override public function getFirstComponent(aContainer : java.awt.Container) : java.awt.Component;
 	
 	/**
 	* Returns the last Component in the traversal cycle. This method is used
@@ -110,7 +110,7 @@ extern class SortingFocusTraversalPolicy extends javax.swing.InternalFrameFocusT
 	*         or null if no suitable Component can be found
 	* @throws IllegalArgumentException if aContainer is null
 	*/
-	@:overload override public function getLastComponent(aContainer : java.awt.Container) : java.awt.Component;
+	@:overload @:public override public function getLastComponent(aContainer : java.awt.Container) : java.awt.Component;
 	
 	/**
 	* Returns the default Component to focus. This Component will be the first
@@ -125,7 +125,7 @@ extern class SortingFocusTraversalPolicy extends javax.swing.InternalFrameFocusT
 	* @see #getFirstComponent
 	* @throws IllegalArgumentException if aContainer is null
 	*/
-	@:overload override public function getDefaultComponent(aContainer : java.awt.Container) : java.awt.Component;
+	@:overload @:public override public function getDefaultComponent(aContainer : java.awt.Container) : java.awt.Component;
 	
 	/**
 	* Sets whether this SortingFocusTraversalPolicy transfers focus down-cycle
@@ -141,7 +141,7 @@ extern class SortingFocusTraversalPolicy extends javax.swing.InternalFrameFocusT
 	* @see #getImplicitDownCycleTraversal
 	* @see #getFirstComponent
 	*/
-	@:overload public function setImplicitDownCycleTraversal(implicitDownCycleTraversal : Bool) : Void;
+	@:overload @:public public function setImplicitDownCycleTraversal(implicitDownCycleTraversal : Bool) : Void;
 	
 	/**
 	* Returns whether this SortingFocusTraversalPolicy transfers focus down-
@@ -156,7 +156,7 @@ extern class SortingFocusTraversalPolicy extends javax.swing.InternalFrameFocusT
 	* @see #setImplicitDownCycleTraversal
 	* @see #getFirstComponent
 	*/
-	@:overload public function getImplicitDownCycleTraversal() : Bool;
+	@:overload @:public public function getImplicitDownCycleTraversal() : Bool;
 	
 	/**
 	* Sets the Comparator which will be used to sort the Components in a
@@ -164,7 +164,7 @@ extern class SortingFocusTraversalPolicy extends javax.swing.InternalFrameFocusT
 	*
 	* @param comparator the Comparator which will be used for sorting
 	*/
-	@:overload private function setComparator(comparator : java.util.Comparator<java.awt.Component>) : Void;
+	@:overload @:protected private function setComparator(comparator : java.util.Comparator<java.awt.Component>) : Void;
 	
 	/**
 	* Returns the Comparator which will be used to sort the Components in a
@@ -172,7 +172,7 @@ extern class SortingFocusTraversalPolicy extends javax.swing.InternalFrameFocusT
 	*
 	* @return the Comparator which will be used for sorting
 	*/
-	@:overload private function getComparator() : java.util.Comparator<java.awt.Component>;
+	@:overload @:protected private function getComparator() : java.util.Comparator<java.awt.Component>;
 	
 	/**
 	* Determines whether a Component is an acceptable choice as the new
@@ -184,13 +184,13 @@ extern class SortingFocusTraversalPolicy extends javax.swing.InternalFrameFocusT
 	* @return <code>true</code> if aComponent is visible, displayable,
 	*         enabled, and focusable; <code>false</code> otherwise
 	*/
-	@:overload private function accept(aComponent : java.awt.Component) : Bool;
+	@:overload @:protected private function accept(aComponent : java.awt.Component) : Bool;
 	
 	
 }
 @:internal extern class SwingContainerOrderFocusTraversalPolicy extends java.awt.ContainerOrderFocusTraversalPolicy
 {
-	@:overload override public function accept(aComponent : java.awt.Component) : Bool;
+	@:overload @:public override public function accept(aComponent : java.awt.Component) : Bool;
 	
 	
 }

@@ -32,34 +32,34 @@ package com.sun.corba.se.impl.activation;
 */
 @:require(java2) extern class ServerManagerImpl extends _ServerManagerImplBase implements com.sun.corba.se.impl.oa.poa.BadServerIdHandler
 {
-	@:overload public function activate(serverId : Int) : Void;
+	@:overload @:public public function activate(serverId : Int) : Void;
 	
-	@:overload public function active(serverId : Int, server : com.sun.corba.se.spi.activation.Server) : Void;
+	@:overload @:public public function active(serverId : Int, server : com.sun.corba.se.spi.activation.Server) : Void;
 	
-	@:overload public function registerEndpoints(serverId : Int, orbId : String, endpointList : java.NativeArray<com.sun.corba.se.spi.activation.EndPointInfo>) : Void;
+	@:overload @:public public function registerEndpoints(serverId : Int, orbId : String, endpointList : java.NativeArray<com.sun.corba.se.spi.activation.EndPointInfo>) : Void;
 	
-	@:overload public function getActiveServers() : java.NativeArray<Int>;
+	@:overload @:public public function getActiveServers() : java.NativeArray<Int>;
 	
-	@:overload public function shutdown(serverId : Int) : Void;
+	@:overload @:public public function shutdown(serverId : Int) : Void;
 	
-	@:overload public function getORBNames(serverId : Int) : java.NativeArray<String>;
+	@:overload @:public public function getORBNames(serverId : Int) : java.NativeArray<String>;
 	
-	@:overload public function install(serverId : Int) : Void;
+	@:overload @:public public function install(serverId : Int) : Void;
 	
-	@:overload public function uninstall(serverId : Int) : Void;
+	@:overload @:public public function uninstall(serverId : Int) : Void;
 	
-	@:overload public function locateServer(serverId : Int, endpointType : String) : com.sun.corba.se.spi.activation.LocatorPackage.ServerLocation;
+	@:overload @:public public function locateServer(serverId : Int, endpointType : String) : com.sun.corba.se.spi.activation.LocatorPackage.ServerLocation;
 	
 	/** This method is used to obtain the registered ports for an ORB.
 	* This is useful for custom Bad server ID handlers in ORBD.
 	*/
-	@:overload public function locateServerForORB(serverId : Int, orbId : String) : com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB;
+	@:overload @:public public function locateServerForORB(serverId : Int, orbId : String) : com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB;
 	
-	@:overload public function handle(okey : com.sun.corba.se.spi.ior.ObjectKey) : Void;
+	@:overload @:public public function handle(okey : com.sun.corba.se.spi.ior.ObjectKey) : Void;
 	
-	@:overload public function getEndpoint(endpointType : String) : Int;
+	@:overload @:public public function getEndpoint(endpointType : String) : Int;
 	
-	@:overload public function getServerPortForType(location : com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB, endPointType : String) : Int;
+	@:overload @:public public function getServerPortForType(location : com.sun.corba.se.spi.activation.LocatorPackage.ServerLocationPerORB, endPointType : String) : Int;
 	
 	
 }

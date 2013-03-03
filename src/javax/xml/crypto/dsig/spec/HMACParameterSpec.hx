@@ -34,14 +34,14 @@ extern class HMACParameterSpec implements javax.xml.crypto.dsig.spec.SignatureMe
 	*
 	* @param outputLength the truncation length in number of bits
 	*/
-	@:overload public function new(outputLength : Int) : Void;
+	@:overload @:public public function new(outputLength : Int) : Void;
 	
 	/**
 	* Returns the truncation length.
 	*
 	* @return the truncation length in number of bits
 	*/
-	@:overload public function getOutputLength() : Int;
+	@:overload @:public public function getOutputLength() : Int;
 	
 	
 }

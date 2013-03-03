@@ -25,25 +25,25 @@ package com.sun.corba.se.impl.transport;
 */
 extern class CorbaResponseWaitingRoomImpl implements com.sun.corba.se.spi.transport.CorbaResponseWaitingRoom
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, connection : com.sun.corba.se.spi.transport.CorbaConnection) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, connection : com.sun.corba.se.spi.transport.CorbaConnection) : Void;
 	
-	@:overload public function registerWaiter(mediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
+	@:overload @:public public function registerWaiter(mediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
 	
-	@:overload public function unregisterWaiter(mediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
+	@:overload @:public public function unregisterWaiter(mediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
 	
-	@:overload public function waitForResponse(mediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.InputObject;
+	@:overload @:public public function waitForResponse(mediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.InputObject;
 	
-	@:overload public function responseReceived(is : com.sun.corba.se.pept.encoding.InputObject) : Void;
+	@:overload @:public public function responseReceived(is : com.sun.corba.se.pept.encoding.InputObject) : Void;
 	
-	@:overload public function numberRegistered() : Int;
+	@:overload @:public public function numberRegistered() : Int;
 	
-	@:overload public function signalExceptionToAllWaiters(systemException : org.omg.CORBA.SystemException) : Void;
+	@:overload @:public public function signalExceptionToAllWaiters(systemException : org.omg.CORBA.SystemException) : Void;
 	
-	@:overload public function getMessageMediator(requestId : Int) : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function getMessageMediator(requestId : Int) : com.sun.corba.se.pept.protocol.MessageMediator;
 	
-	@:overload private function dprint(msg : String) : Void;
+	@:overload @:protected private function dprint(msg : String) : Void;
 	
-	@:overload private function opAndId(mediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : String;
+	@:overload @:protected private function opAndId(mediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : String;
 	
 	
 }

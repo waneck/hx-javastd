@@ -41,7 +41,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* @throws ClassCastException if any of the elements in the <code>Set</code>
 	* are not of type <code>java.security.cert.TrustAnchor</code>
 	*/
-	@:overload public function new(trustAnchors : java.util.Set<java.security.cert.TrustAnchor>) : Void;
+	@:overload @:public public function new(trustAnchors : java.util.Set<java.security.cert.TrustAnchor>) : Void;
 	
 	/**
 	* Creates an instance of <code>PKIXParameters</code> that
@@ -57,7 +57,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* not contain at least one trusted certificate entry
 	* @throws NullPointerException if the keystore is <code>null</code>
 	*/
-	@:overload public function new(keystore : java.security.KeyStore) : Void;
+	@:overload @:public public function new(keystore : java.security.KeyStore) : Void;
 	
 	/**
 	* Returns an immutable <code>Set</code> of the most-trusted
@@ -68,7 +68,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	*
 	* @see #setTrustAnchors
 	*/
-	@:overload public function getTrustAnchors() : java.util.Set<java.security.cert.TrustAnchor>;
+	@:overload @:public public function getTrustAnchors() : java.util.Set<java.security.cert.TrustAnchor>;
 	
 	/**
 	* Sets the <code>Set</code> of most-trusted CAs.
@@ -86,7 +86,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	*
 	* @see #getTrustAnchors
 	*/
-	@:overload public function setTrustAnchors(trustAnchors : java.util.Set<java.security.cert.TrustAnchor>) : Void;
+	@:overload @:public public function setTrustAnchors(trustAnchors : java.util.Set<java.security.cert.TrustAnchor>) : Void;
 	
 	/**
 	* Returns an immutable <code>Set</code> of initial
@@ -102,7 +102,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	*
 	* @see #setInitialPolicies
 	*/
-	@:overload public function getInitialPolicies() : java.util.Set<String>;
+	@:overload @:public public function getInitialPolicies() : java.util.Set<String>;
 	
 	/**
 	* Sets the <code>Set</code> of initial policy identifiers
@@ -123,7 +123,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	*
 	* @see #getInitialPolicies
 	*/
-	@:overload public function setInitialPolicies(initialPolicies : java.util.Set<String>) : Void;
+	@:overload @:public public function setInitialPolicies(initialPolicies : java.util.Set<String>) : Void;
 	
 	/**
 	* Sets the list of <code>CertStore</code>s to be used in finding
@@ -142,7 +142,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	*
 	* @see #getCertStores
 	*/
-	@:overload public function setCertStores(stores : java.util.List<java.security.cert.CertStore>) : Void;
+	@:overload @:public public function setCertStores(stores : java.util.List<java.security.cert.CertStore>) : Void;
 	
 	/**
 	* Adds a <code>CertStore</code> to the end of the list of
@@ -151,7 +151,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* @param store the <code>CertStore</code> to add. If <code>null</code>,
 	* the store is ignored (not added to list).
 	*/
-	@:overload public function addCertStore(store : java.security.cert.CertStore) : Void;
+	@:overload @:public public function addCertStore(store : java.security.cert.CertStore) : Void;
 	
 	/**
 	* Returns an immutable <code>List</code> of <code>CertStore</code>s that
@@ -162,7 +162,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	*
 	* @see #setCertStores
 	*/
-	@:overload public function getCertStores() : java.util.List<java.security.cert.CertStore>;
+	@:overload @:public public function getCertStores() : java.util.List<java.security.cert.CertStore>;
 	
 	/**
 	* Sets the RevocationEnabled flag. If this flag is true, the default
@@ -182,7 +182,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	*
 	* @param val the new value of the RevocationEnabled flag
 	*/
-	@:overload public function setRevocationEnabled(val : Bool) : Void;
+	@:overload @:public public function setRevocationEnabled(val : Bool) : Void;
 	
 	/**
 	* Checks the RevocationEnabled flag. If this flag is true, the default
@@ -194,7 +194,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	*
 	* @return the current value of the RevocationEnabled flag
 	*/
-	@:overload public function isRevocationEnabled() : Bool;
+	@:overload @:public public function isRevocationEnabled() : Bool;
 	
 	/**
 	* Sets the ExplicitPolicyRequired flag. If this flag is true, an
@@ -204,7 +204,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* @param val <code>true</code> if explicit policy is to be required,
 	* <code>false</code> otherwise
 	*/
-	@:overload public function setExplicitPolicyRequired(val : Bool) : Void;
+	@:overload @:public public function setExplicitPolicyRequired(val : Bool) : Void;
 	
 	/**
 	* Checks if explicit policy is required. If this flag is true, an
@@ -214,7 +214,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* @return <code>true</code> if explicit policy is required,
 	* <code>false</code> otherwise
 	*/
-	@:overload public function isExplicitPolicyRequired() : Bool;
+	@:overload @:public public function isExplicitPolicyRequired() : Bool;
 	
 	/**
 	* Sets the PolicyMappingInhibited flag. If this flag is true, policy
@@ -224,7 +224,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* @param val <code>true</code> if policy mapping is to be inhibited,
 	* <code>false</code> otherwise
 	*/
-	@:overload public function setPolicyMappingInhibited(val : Bool) : Void;
+	@:overload @:public public function setPolicyMappingInhibited(val : Bool) : Void;
 	
 	/**
 	* Checks if policy mapping is inhibited. If this flag is true, policy
@@ -233,7 +233,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	*
 	* @return true if policy mapping is inhibited, false otherwise
 	*/
-	@:overload public function isPolicyMappingInhibited() : Bool;
+	@:overload @:public public function isPolicyMappingInhibited() : Bool;
 	
 	/**
 	* Sets state to determine if the any policy OID should be processed
@@ -244,7 +244,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* @param val <code>true</code> if the any policy OID is to be
 	* inhibited, <code>false</code> otherwise
 	*/
-	@:overload public function setAnyPolicyInhibited(val : Bool) : Void;
+	@:overload @:public public function setAnyPolicyInhibited(val : Bool) : Void;
 	
 	/**
 	* Checks whether the any policy OID should be processed if it
@@ -253,7 +253,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* @return <code>true</code> if the any policy OID is inhibited,
 	* <code>false</code> otherwise
 	*/
-	@:overload public function isAnyPolicyInhibited() : Bool;
+	@:overload @:public public function isAnyPolicyInhibited() : Bool;
 	
 	/**
 	* Sets the PolicyQualifiersRejected flag. If this flag is true,
@@ -278,7 +278,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* @see #getPolicyQualifiersRejected
 	* @see PolicyQualifierInfo
 	*/
-	@:overload public function setPolicyQualifiersRejected(qualifiersRejected : Bool) : Void;
+	@:overload @:public public function setPolicyQualifiersRejected(qualifiersRejected : Bool) : Void;
 	
 	/**
 	* Gets the PolicyQualifiersRejected flag. If this flag is true,
@@ -294,7 +294,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* @return the current value of the PolicyQualifiersRejected flag
 	* @see #setPolicyQualifiersRejected
 	*/
-	@:overload public function getPolicyQualifiersRejected() : Bool;
+	@:overload @:public public function getPolicyQualifiersRejected() : Bool;
 	
 	/**
 	* Returns the time for which the validity of the certification path
@@ -306,7 +306,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* @return the <code>Date</code>, or <code>null</code> if not set
 	* @see #setDate
 	*/
-	@:overload public function getDate() : java.util.Date;
+	@:overload @:public public function getDate() : java.util.Date;
 	
 	/**
 	* Sets the time for which the validity of the certification path
@@ -319,7 +319,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* current time
 	* @see #getDate
 	*/
-	@:overload public function setDate(date : java.util.Date) : Void;
+	@:overload @:public public function setDate(date : java.util.Date) : Void;
 	
 	/**
 	* Sets a <code>List</code> of additional certification path checkers. If
@@ -357,7 +357,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* are not of type <code>java.security.cert.PKIXCertPathChecker</code>
 	* @see #getCertPathCheckers
 	*/
-	@:overload public function setCertPathCheckers(checkers : java.util.List<java.security.cert.PKIXCertPathChecker>) : Void;
+	@:overload @:public public function setCertPathCheckers(checkers : java.util.List<java.security.cert.PKIXCertPathChecker>) : Void;
 	
 	/**
 	* Returns the <code>List</code> of certification path checkers.
@@ -370,7 +370,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* <code>null</code>)
 	* @see #setCertPathCheckers
 	*/
-	@:overload public function getCertPathCheckers() : java.util.List<java.security.cert.PKIXCertPathChecker>;
+	@:overload @:public public function getCertPathCheckers() : java.util.List<java.security.cert.PKIXCertPathChecker>;
 	
 	/**
 	* Adds a <code>PKIXCertPathChecker</code> to the list of certification
@@ -383,7 +383,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* @param checker a <code>PKIXCertPathChecker</code> to add to the list of
 	* checks. If <code>null</code>, the checker is ignored (not added to list).
 	*/
-	@:overload public function addCertPathChecker(checker : java.security.cert.PKIXCertPathChecker) : Void;
+	@:overload @:public public function addCertPathChecker(checker : java.security.cert.PKIXCertPathChecker) : Void;
 	
 	/**
 	* Returns the signature provider's name, or <code>null</code>
@@ -392,7 +392,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* @return the signature provider's name (or <code>null</code>)
 	* @see #setSigProvider
 	*/
-	@:overload public function getSigProvider() : String;
+	@:overload @:public public function getSigProvider() : String;
 	
 	/**
 	* Sets the signature provider's name. The specified provider will be
@@ -403,7 +403,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* @param sigProvider the signature provider's name (or <code>null</code>)
 	* @see #getSigProvider
 	*/
-	@:overload public function setSigProvider(sigProvider : String) : Void;
+	@:overload @:public public function setSigProvider(sigProvider : String) : Void;
 	
 	/**
 	* Returns the required constraints on the target certificate.
@@ -417,7 +417,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* on the target certificate (or <code>null</code>)
 	* @see #setTargetCertConstraints
 	*/
-	@:overload public function getTargetCertConstraints() : java.security.cert.CertSelector;
+	@:overload @:public public function getTargetCertConstraints() : java.security.cert.CertSelector;
 	
 	/**
 	* Sets the required constraints on the target certificate.
@@ -432,7 +432,7 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	* on the target certificate (or <code>null</code>)
 	* @see #getTargetCertConstraints
 	*/
-	@:overload public function setTargetCertConstraints(selector : java.security.cert.CertSelector) : Void;
+	@:overload @:public public function setTargetCertConstraints(selector : java.security.cert.CertSelector) : Void;
 	
 	/**
 	* Makes a copy of this <code>PKIXParameters</code> object. Changes
@@ -440,14 +440,14 @@ extern class PKIXParameters implements java.security.cert.CertPathParameters
 	*
 	* @return a copy of this <code>PKIXParameters</code> object
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns a formatted string describing the parameters.
 	*
 	* @return a formatted string describing the parameters.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

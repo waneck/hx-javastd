@@ -25,26 +25,26 @@ package com.sun.corba.se.impl.ior;
 */
 @:internal extern class ObjectAdapterIdBase implements com.sun.corba.se.spi.ior.ObjectAdapterId
 {
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	/** Get the adapter name simply as an array of strings.
 	*/
-	@:overload public function getAdapterName() : java.NativeArray<String>;
+	@:overload @:public public function getAdapterName() : java.NativeArray<String>;
 	
 	/** Return the number of elements in the adapter ID.
 	*/
-	@:overload public function getNumLevels() : Int;
+	@:overload @:public public function getNumLevels() : Int;
 	
 	/** Return an iterator that iterates over the components
 	* of this adapter ID.  Each element is returned as a String.
 	*/
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function iterator() : java.util.Iterator<Dynamic>;
 	
 	
 }

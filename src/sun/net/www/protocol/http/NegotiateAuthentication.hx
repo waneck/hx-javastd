@@ -29,12 +29,12 @@ package sun.net.www.protocol.http;
 	* Constructor used for both WWW and proxy entries.
 	* @param hci a schemed object.
 	*/
-	@:overload public function new(hci : sun.net.www.protocol.http.HttpCallerInfo) : Void;
+	@:overload @:public public function new(hci : sun.net.www.protocol.http.HttpCallerInfo) : Void;
 	
 	/**
 	* @return true if this authentication supports preemptive authorization
 	*/
-	@:overload override public function supportsPreemptiveAuthorization() : Bool;
+	@:overload @:public override public function supportsPreemptiveAuthorization() : Bool;
 	
 	/**
 	* Find out if the HttpCallerInfo supports Negotiate protocol. In order to
@@ -47,12 +47,12 @@ package sun.net.www.protocol.http;
 	*
 	* @return true if supported
 	*/
-	@:overload @:synchronized public static function isSupported(hci : sun.net.www.protocol.http.HttpCallerInfo) : Bool;
+	@:overload @:synchronized @:public @:static public static function isSupported(hci : sun.net.www.protocol.http.HttpCallerInfo) : Bool;
 	
 	/**
 	* Not supported. Must use the setHeaders() method
 	*/
-	@:overload override public function getHeaderValue(url : java.net.URL, method : String) : String;
+	@:overload @:public override public function getHeaderValue(url : java.net.URL, method : String) : String;
 	
 	/**
 	* Check if the header indicates that the current auth. parameters are stale.
@@ -62,7 +62,7 @@ package sun.net.www.protocol.http;
 	* returning false means we have to go back to the user to ask for a new
 	* username password.
 	*/
-	@:overload override public function isAuthorizationStale(header : String) : Bool;
+	@:overload @:public override public function isAuthorizationStale(header : String) : Bool;
 	
 	/**
 	* Set header(s) on the given connection.
@@ -72,13 +72,13 @@ package sun.net.www.protocol.http;
 	* @param raw The raw header field.
 	* @return true if all goes well, false if no headers were set.
 	*/
-	@:overload @:synchronized override public function setHeaders(conn : sun.net.www.protocol.http.HttpURLConnection, p : sun.net.www.HeaderParser, raw : String) : Bool;
+	@:overload @:public @:synchronized override public function setHeaders(conn : sun.net.www.protocol.http.HttpURLConnection, p : sun.net.www.HeaderParser, raw : String) : Bool;
 	
 	
 }
 @:native('sun$net$www$protocol$http$NegotiateAuthentication$B64Encoder') @:internal extern class NegotiateAuthentication_B64Encoder extends sun.misc.BASE64Encoder
 {
-	@:overload override private function bytesPerLine() : Int;
+	@:overload @:protected override private function bytesPerLine() : Int;
 	
 	
 }

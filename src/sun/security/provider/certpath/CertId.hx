@@ -45,45 +45,45 @@ extern class CertId
 	/**
 	* Creates a CertId. The hash algorithm used is SHA-1.
 	*/
-	@:overload public function new(issuerCert : java.security.cert.X509Certificate, serialNumber : sun.security.x509.SerialNumber) : Void;
+	@:overload @:public public function new(issuerCert : java.security.cert.X509Certificate, serialNumber : sun.security.x509.SerialNumber) : Void;
 	
 	/**
 	* Creates a CertId from its ASN.1 DER encoding.
 	*/
-	@:overload public function new(derIn : sun.security.util.DerInputStream) : Void;
+	@:overload @:public public function new(derIn : sun.security.util.DerInputStream) : Void;
 	
 	/**
 	* Return the hash algorithm identifier.
 	*/
-	@:overload public function getHashAlgorithm() : sun.security.x509.AlgorithmId;
+	@:overload @:public public function getHashAlgorithm() : sun.security.x509.AlgorithmId;
 	
 	/**
 	* Return the hash value for the issuer name.
 	*/
-	@:overload public function getIssuerNameHash() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getIssuerNameHash() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Return the hash value for the issuer key.
 	*/
-	@:overload public function getIssuerKeyHash() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getIssuerKeyHash() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Return the serial number.
 	*/
-	@:overload public function getSerialNumber() : java.math.BigInteger;
+	@:overload @:public public function getSerialNumber() : java.math.BigInteger;
 	
 	/**
 	* Encode the CertId using ASN.1 DER.
 	* The hash algorithm used is SHA-1.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Returns a hashcode value for this CertId.
 	*
 	* @return the hashcode value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this CertId for equality with the specified
@@ -94,12 +94,12 @@ extern class CertId
 	* @param other the object to test for equality with this object.
 	* @return true if the objects are considered equal, false otherwise.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Create a string representation of the CertId.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -40,91 +40,91 @@ extern class BasicInternalFrameTitlePane extends javax.swing.JComponent
 	* @author David Kloba
 	* @author Steve Wilson
 	*/
-	private var menuBar : javax.swing.JMenuBar;
+	@:protected private var menuBar : javax.swing.JMenuBar;
 	
-	private var iconButton : javax.swing.JButton;
+	@:protected private var iconButton : javax.swing.JButton;
 	
-	private var maxButton : javax.swing.JButton;
+	@:protected private var maxButton : javax.swing.JButton;
 	
-	private var closeButton : javax.swing.JButton;
+	@:protected private var closeButton : javax.swing.JButton;
 	
-	private var windowMenu : javax.swing.JMenu;
+	@:protected private var windowMenu : javax.swing.JMenu;
 	
-	private var frame : javax.swing.JInternalFrame;
+	@:protected private var frame : javax.swing.JInternalFrame;
 	
-	private var selectedTitleColor : java.awt.Color;
+	@:protected private var selectedTitleColor : java.awt.Color;
 	
-	private var selectedTextColor : java.awt.Color;
+	@:protected private var selectedTextColor : java.awt.Color;
 	
-	private var notSelectedTitleColor : java.awt.Color;
+	@:protected private var notSelectedTitleColor : java.awt.Color;
 	
-	private var notSelectedTextColor : java.awt.Color;
+	@:protected private var notSelectedTextColor : java.awt.Color;
 	
-	private var maxIcon : javax.swing.Icon;
+	@:protected private var maxIcon : javax.swing.Icon;
 	
-	private var minIcon : javax.swing.Icon;
+	@:protected private var minIcon : javax.swing.Icon;
 	
-	private var iconIcon : javax.swing.Icon;
+	@:protected private var iconIcon : javax.swing.Icon;
 	
-	private var closeIcon : javax.swing.Icon;
+	@:protected private var closeIcon : javax.swing.Icon;
 	
-	private var propertyChangeListener : java.beans.PropertyChangeListener;
+	@:protected private var propertyChangeListener : java.beans.PropertyChangeListener;
 	
-	private var closeAction : javax.swing.Action;
+	@:protected private var closeAction : javax.swing.Action;
 	
-	private var maximizeAction : javax.swing.Action;
+	@:protected private var maximizeAction : javax.swing.Action;
 	
-	private var iconifyAction : javax.swing.Action;
+	@:protected private var iconifyAction : javax.swing.Action;
 	
-	private var restoreAction : javax.swing.Action;
+	@:protected private var restoreAction : javax.swing.Action;
 	
-	private var moveAction : javax.swing.Action;
+	@:protected private var moveAction : javax.swing.Action;
 	
-	private var sizeAction : javax.swing.Action;
+	@:protected private var sizeAction : javax.swing.Action;
 	
-	private static var CLOSE_CMD(default, null) : String;
+	@:protected @:static @:final private static var CLOSE_CMD(default, null) : String;
 	
-	private static var ICONIFY_CMD(default, null) : String;
+	@:protected @:static @:final private static var ICONIFY_CMD(default, null) : String;
 	
-	private static var RESTORE_CMD(default, null) : String;
+	@:protected @:static @:final private static var RESTORE_CMD(default, null) : String;
 	
-	private static var MAXIMIZE_CMD(default, null) : String;
+	@:protected @:static @:final private static var MAXIMIZE_CMD(default, null) : String;
 	
-	private static var MOVE_CMD(default, null) : String;
+	@:protected @:static @:final private static var MOVE_CMD(default, null) : String;
 	
-	private static var SIZE_CMD(default, null) : String;
+	@:protected @:static @:final private static var SIZE_CMD(default, null) : String;
 	
-	@:overload public function new(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function new(f : javax.swing.JInternalFrame) : Void;
 	
-	@:overload private function installTitlePane() : Void;
+	@:overload @:protected private function installTitlePane() : Void;
 	
-	@:overload private function addSubComponents() : Void;
+	@:overload @:protected private function addSubComponents() : Void;
 	
-	@:overload private function createActions() : Void;
+	@:overload @:protected private function createActions() : Void;
 	
-	@:overload private function installListeners() : Void;
+	@:overload @:protected private function installListeners() : Void;
 	
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected private function uninstallListeners() : Void;
 	
-	@:overload private function installDefaults() : Void;
+	@:overload @:protected private function installDefaults() : Void;
 	
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected private function uninstallDefaults() : Void;
 	
-	@:overload private function createButtons() : Void;
+	@:overload @:protected private function createButtons() : Void;
 	
-	@:overload private function setButtonIcons() : Void;
+	@:overload @:protected private function setButtonIcons() : Void;
 	
-	@:overload private function assembleSystemMenu() : Void;
+	@:overload @:protected private function assembleSystemMenu() : Void;
 	
-	@:overload private function addSystemMenuItems(systemMenu : javax.swing.JMenu) : Void;
+	@:overload @:protected private function addSystemMenuItems(systemMenu : javax.swing.JMenu) : Void;
 	
-	@:overload private function createSystemMenu() : javax.swing.JMenu;
+	@:overload @:protected private function createSystemMenu() : javax.swing.JMenu;
 	
-	@:overload private function createSystemMenuBar() : javax.swing.JMenuBar;
+	@:overload @:protected private function createSystemMenuBar() : javax.swing.JMenuBar;
 	
-	@:overload private function showSystemMenu() : Void;
+	@:overload @:protected private function showSystemMenu() : Void;
 	
-	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Invoked from paintComponent.
@@ -133,37 +133,37 @@ extern class BasicInternalFrameTitlePane extends javax.swing.JComponent
 	* @param g the graphics to use to render the background
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function paintTitleBackground(g : java.awt.Graphics) : Void;
+	@:require(java4) @:overload @:protected private function paintTitleBackground(g : java.awt.Graphics) : Void;
 	
-	@:overload private function getTitle(text : String, fm : java.awt.FontMetrics, availTextWidth : Int) : String;
+	@:overload @:protected private function getTitle(text : String, fm : java.awt.FontMetrics, availTextWidth : Int) : String;
 	
 	/**
 	* Post a WINDOW_CLOSING-like event to the frame, so that it can
 	* be treated like a regular Frame.
 	*/
-	@:overload private function postClosingEvent(frame : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected private function postClosingEvent(frame : javax.swing.JInternalFrame) : Void;
 	
-	@:overload private function enableActions() : Void;
+	@:overload @:protected private function enableActions() : Void;
 	
-	@:overload private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	@:overload @:protected private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
 	
-	@:overload private function createLayout() : java.awt.LayoutManager;
+	@:overload @:protected private function createLayout() : java.awt.LayoutManager;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicInternalFrameTitlePane$Handler') @:internal extern class BasicInternalFrameTitlePane_Handler implements java.awt.LayoutManager implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
 	
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
-	@:overload public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function layoutContainer(c : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(c : java.awt.Container) : Void;
 	
 	
 }
@@ -173,7 +173,7 @@ extern class BasicInternalFrameTitlePane extends javax.swing.JComponent
 */
 @:native('javax$swing$plaf$basic$BasicInternalFrameTitlePane$PropertyChangeHandler') extern class BasicInternalFrameTitlePane_PropertyChangeHandler implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -183,15 +183,15 @@ extern class BasicInternalFrameTitlePane extends javax.swing.JComponent
 */
 @:native('javax$swing$plaf$basic$BasicInternalFrameTitlePane$TitlePaneLayout') extern class BasicInternalFrameTitlePane_TitlePaneLayout implements java.awt.LayoutManager
 {
-	@:overload public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
 	
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
-	@:overload public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function layoutContainer(c : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(c : java.awt.Container) : Void;
 	
 	
 }
@@ -201,9 +201,9 @@ extern class BasicInternalFrameTitlePane extends javax.swing.JComponent
 */
 @:native('javax$swing$plaf$basic$BasicInternalFrameTitlePane$CloseAction') extern class BasicInternalFrameTitlePane_CloseAction extends javax.swing.AbstractAction
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -213,9 +213,9 @@ extern class BasicInternalFrameTitlePane extends javax.swing.JComponent
 */
 @:native('javax$swing$plaf$basic$BasicInternalFrameTitlePane$MaximizeAction') extern class BasicInternalFrameTitlePane_MaximizeAction extends javax.swing.AbstractAction
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -225,9 +225,9 @@ extern class BasicInternalFrameTitlePane extends javax.swing.JComponent
 */
 @:native('javax$swing$plaf$basic$BasicInternalFrameTitlePane$IconifyAction') extern class BasicInternalFrameTitlePane_IconifyAction extends javax.swing.AbstractAction
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -237,9 +237,9 @@ extern class BasicInternalFrameTitlePane extends javax.swing.JComponent
 */
 @:native('javax$swing$plaf$basic$BasicInternalFrameTitlePane$RestoreAction') extern class BasicInternalFrameTitlePane_RestoreAction extends javax.swing.AbstractAction
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -249,9 +249,9 @@ extern class BasicInternalFrameTitlePane extends javax.swing.JComponent
 */
 @:native('javax$swing$plaf$basic$BasicInternalFrameTitlePane$MoveAction') extern class BasicInternalFrameTitlePane_MoveAction extends javax.swing.AbstractAction
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -260,9 +260,9 @@ extern class BasicInternalFrameTitlePane extends javax.swing.JComponent
 */
 @:native('javax$swing$plaf$basic$BasicInternalFrameTitlePane$ShowSystemMenuAction') @:internal extern class BasicInternalFrameTitlePane_ShowSystemMenuAction extends javax.swing.AbstractAction
 {
-	@:overload public function new(show : Bool) : Void;
+	@:overload @:public public function new(show : Bool) : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -272,9 +272,9 @@ extern class BasicInternalFrameTitlePane extends javax.swing.JComponent
 */
 @:native('javax$swing$plaf$basic$BasicInternalFrameTitlePane$SizeAction') extern class BasicInternalFrameTitlePane_SizeAction extends javax.swing.AbstractAction
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -284,25 +284,25 @@ extern class BasicInternalFrameTitlePane extends javax.swing.JComponent
 */
 @:native('javax$swing$plaf$basic$BasicInternalFrameTitlePane$SystemMenuBar') extern class BasicInternalFrameTitlePane_SystemMenuBar extends javax.swing.JMenuBar
 {
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public override public function isFocusTraversable() : Bool;
 	
-	@:overload public function requestFocus() : Void;
+	@:overload @:public override public function requestFocus() : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload public function isOpaque() : Bool;
+	@:overload @:public override public function isOpaque() : Bool;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicInternalFrameTitlePane$NoFocusButton') @:internal extern class BasicInternalFrameTitlePane_NoFocusButton extends javax.swing.JButton
 {
-	@:overload public function new(uiKey : String, opacityKey : String) : Void;
+	@:overload @:public public function new(uiKey : String, opacityKey : String) : Void;
 	
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public override public function isFocusTraversable() : Bool;
 	
-	@:overload public function requestFocus() : Void;
+	@:overload @:public override public function requestFocus() : Void;
 	
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }

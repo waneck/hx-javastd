@@ -30,7 +30,7 @@ package javax.swing.plaf.synth;
 */
 @:internal extern class SynthComboPopup extends javax.swing.plaf.basic.BasicComboPopup
 {
-	@:overload public function new(combo : javax.swing.JComboBox<Dynamic>) : Void;
+	@:overload @:public public function new(combo : javax.swing.JComboBox<Dynamic>) : Void;
 	
 	/**
 	* Configures the list which is used to hold the combo box items in the
@@ -39,7 +39,7 @@ package javax.swing.plaf.synth;
 	*
 	* @see #createList
 	*/
-	@:overload override private function configureList() : Void;
+	@:overload @:protected override private function configureList() : Void;
 	
 	/**
 	* @inheritDoc
@@ -47,7 +47,7 @@ package javax.swing.plaf.synth;
 	* Overridden to take into account any popup insets specified in
 	* SynthComboBoxUI
 	*/
-	@:overload override private function computePopupBounds(px : Int, py : Int, pw : Int, ph : Int) : java.awt.Rectangle;
+	@:overload @:protected override private function computePopupBounds(px : Int, py : Int, pw : Int, ph : Int) : java.awt.Rectangle;
 	
 	
 }

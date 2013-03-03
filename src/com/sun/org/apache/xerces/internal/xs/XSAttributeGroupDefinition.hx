@@ -27,23 +27,23 @@ extern interface XSAttributeGroupDefinition extends com.sun.org.apache.xerces.in
 	* A set of [attribute uses] if it exists, otherwise an empty
 	* <code>XSObjectList</code>.
 	*/
-	@:overload public function getAttributeUses() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAttributeUses() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* A [wildcard] if it exists, otherwise <code>null</code>.
 	*/
-	@:overload public function getAttributeWildcard() : com.sun.org.apache.xerces.internal.xs.XSWildcard;
+	@:overload @:public public function getAttributeWildcard() : com.sun.org.apache.xerces.internal.xs.XSWildcard;
 	
 	/**
 	* An annotation if it exists, otherwise <code>null</code>. If not null
 	* then the first [annotation] from the sequence of annotations.
 	*/
-	@:overload public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:overload @:public public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
 	/**
 	* A sequence of [annotations] or an empty <code>XSObjectList</code>.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	
 }

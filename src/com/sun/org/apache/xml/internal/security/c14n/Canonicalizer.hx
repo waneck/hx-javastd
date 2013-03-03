@@ -22,51 +22,51 @@ package com.sun.org.apache.xml.internal.security.c14n;
 extern class Canonicalizer
 {
 	/** The output encoding of canonicalized data */
-	public static var ENCODING(default, null) : String;
+	@:public @:static @:final public static var ENCODING(default, null) : String;
 	
 	/**
 	* XPath Expresion for selecting every node and continuous comments joined
 	* in only one node
 	*/
-	public static var XPATH_C14N_WITH_COMMENTS_SINGLE_NODE(default, null) : String;
+	@:public @:static @:final public static var XPATH_C14N_WITH_COMMENTS_SINGLE_NODE(default, null) : String;
 	
 	/**
 	* The URL defined in XML-SEC Rec for inclusive c14n <b>without</b> comments.
 	*/
-	public static var ALGO_ID_C14N_OMIT_COMMENTS(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_C14N_OMIT_COMMENTS(default, null) : String;
 	
 	/**
 	* The URL defined in XML-SEC Rec for inclusive c14n <b>with</b> comments.
 	*/
-	public static var ALGO_ID_C14N_WITH_COMMENTS(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_C14N_WITH_COMMENTS(default, null) : String;
 	
 	/**
 	* The URL defined in XML-SEC Rec for exclusive c14n <b>without</b> comments.
 	*/
-	public static var ALGO_ID_C14N_EXCL_OMIT_COMMENTS(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_C14N_EXCL_OMIT_COMMENTS(default, null) : String;
 	
 	/**
 	* The URL defined in XML-SEC Rec for exclusive c14n <b>with</b> comments.
 	*/
-	public static var ALGO_ID_C14N_EXCL_WITH_COMMENTS(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_C14N_EXCL_WITH_COMMENTS(default, null) : String;
 	
 	/**
 	* The URI for inclusive c14n 1.1 <b>without</b> comments.
 	*/
-	public static var ALGO_ID_C14N11_OMIT_COMMENTS(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_C14N11_OMIT_COMMENTS(default, null) : String;
 	
 	/**
 	* The URI for inclusive c14n 1.1 <b>with</b> comments.
 	*/
-	public static var ALGO_ID_C14N11_WITH_COMMENTS(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_C14N11_WITH_COMMENTS(default, null) : String;
 	
-	private var canonicalizerSpi : com.sun.org.apache.xml.internal.security.c14n.CanonicalizerSpi;
+	@:protected private var canonicalizerSpi : com.sun.org.apache.xml.internal.security.c14n.CanonicalizerSpi;
 	
 	/**
 	* Method init
 	*
 	*/
-	@:overload public static function init() : Void;
+	@:overload @:public @:static public static function init() : Void;
 	
 	/**
 	* Method getInstance
@@ -75,7 +75,7 @@ extern class Canonicalizer
 	* @return a Conicicalizer instance ready for the job
 	* @throws InvalidCanonicalizerException
 	*/
-	@:overload @:final public static function getInstance(algorithmURI : String) : com.sun.org.apache.xml.internal.security.c14n.Canonicalizer;
+	@:overload @:public @:static @:final public static function getInstance(algorithmURI : String) : com.sun.org.apache.xml.internal.security.c14n.Canonicalizer;
 	
 	/**
 	* Method register
@@ -84,21 +84,21 @@ extern class Canonicalizer
 	* @param implementingClass
 	* @throws AlgorithmAlreadyRegisteredException
 	*/
-	@:overload public static function register(algorithmURI : String, implementingClass : String) : Void;
+	@:overload @:public @:static public static function register(algorithmURI : String, implementingClass : String) : Void;
 	
 	/**
 	* Method getURI
 	*
 	* @return the URI defined for this c14n instance.
 	*/
-	@:overload @:final public function getURI() : String;
+	@:overload @:public @:final public function getURI() : String;
 	
 	/**
 	* Method getIncludeComments
 	*
 	* @return true if the c14n respect the comments.
 	*/
-	@:overload public function getIncludeComments() : Bool;
+	@:overload @:public public function getIncludeComments() : Bool;
 	
 	/**
 	* This method tries to canonicalize the given bytes. It's possible to even
@@ -112,7 +112,7 @@ extern class Canonicalizer
 	* @throws javax.xml.parsers.ParserConfigurationException
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function canonicalize(inputBytes : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function canonicalize(inputBytes : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Canonicalizes the subtree rooted by <CODE>node</CODE>.
@@ -122,7 +122,7 @@ extern class Canonicalizer
 	*
 	* @throws CanonicalizationException
 	*/
-	@:overload public function canonicalizeSubtree(node : org.w3c.dom.Node) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function canonicalizeSubtree(node : org.w3c.dom.Node) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Canonicalizes the subtree rooted by <CODE>node</CODE>.
@@ -132,7 +132,7 @@ extern class Canonicalizer
 	* @return the result of the c14n.
 	* @throws CanonicalizationException
 	*/
-	@:overload public function canonicalizeSubtree(node : org.w3c.dom.Node, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function canonicalizeSubtree(node : org.w3c.dom.Node, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Canonicalizes an XPath node set. The <CODE>xpathNodeSet</CODE> is treated
@@ -142,7 +142,7 @@ extern class Canonicalizer
 	* @return the result of the c14n.
 	* @throws CanonicalizationException
 	*/
-	@:overload public function canonicalizeXPathNodeSet(xpathNodeSet : org.w3c.dom.NodeList) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function canonicalizeXPathNodeSet(xpathNodeSet : org.w3c.dom.NodeList) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Canonicalizes an XPath node set. The <CODE>xpathNodeSet</CODE> is treated
@@ -153,7 +153,7 @@ extern class Canonicalizer
 	* @return the result of the c14n.
 	* @throws CanonicalizationException
 	*/
-	@:overload public function canonicalizeXPathNodeSet(xpathNodeSet : org.w3c.dom.NodeList, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function canonicalizeXPathNodeSet(xpathNodeSet : org.w3c.dom.NodeList, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Canonicalizes an XPath node set.
@@ -162,7 +162,7 @@ extern class Canonicalizer
 	* @return the result of the c14n.
 	* @throws CanonicalizationException
 	*/
-	@:overload public function canonicalizeXPathNodeSet(xpathNodeSet : java.util.Set<Dynamic>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function canonicalizeXPathNodeSet(xpathNodeSet : java.util.Set<Dynamic>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Canonicalizes an XPath node set.
@@ -172,26 +172,26 @@ extern class Canonicalizer
 	* @return the result of the c14n.
 	* @throws CanonicalizationException
 	*/
-	@:overload public function canonicalizeXPathNodeSet(xpathNodeSet : java.util.Set<Dynamic>, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function canonicalizeXPathNodeSet(xpathNodeSet : java.util.Set<Dynamic>, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Sets the writer where the canonicalization ends.  ByteArrayOutputStream
 	* if none is set.
 	* @param os
 	*/
-	@:overload public function setWriter(os : java.io.OutputStream) : Void;
+	@:overload @:public public function setWriter(os : java.io.OutputStream) : Void;
 	
 	/**
 	* Returns the name of the implementing {@link CanonicalizerSpi} class
 	*
 	* @return the name of the implementing {@link CanonicalizerSpi} class
 	*/
-	@:overload public function getImplementingCanonicalizerClass() : String;
+	@:overload @:public public function getImplementingCanonicalizerClass() : String;
 	
 	/**
 	* Set the canonicalizer behaviour to not reset.
 	*/
-	@:overload public function notReset() : Void;
+	@:overload @:public public function notReset() : Void;
 	
 	
 }

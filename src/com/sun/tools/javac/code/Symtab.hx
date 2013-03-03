@@ -37,202 +37,202 @@ package com.sun.tools.javac.code;
 extern class Symtab
 {
 	/** The context key for the symbol table. */
-	private static var symtabKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.code.Symtab>;
+	@:protected @:static @:final private static var symtabKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.code.Symtab>;
 	
 	/** Get the symbol table instance. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.code.Symtab;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.code.Symtab;
 	
 	/** Builtin types.
 	*/
-	public var byteType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var byteType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var charType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var charType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var shortType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var shortType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var intType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var intType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var longType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var longType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var floatType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var floatType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var doubleType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var doubleType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var booleanType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var booleanType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var botType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var botType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var voidType(default, null) : JCNoType;
+	@:public @:final public var voidType(default, null) : JCNoType;
 	
 	/** A symbol for the root package.
 	*/
-	public var rootPackage(default, null) : PackageSymbol;
+	@:public @:final public var rootPackage(default, null) : PackageSymbol;
 	
 	/** A symbol for the unnamed package.
 	*/
-	public var unnamedPackage(default, null) : PackageSymbol;
+	@:public @:final public var unnamedPackage(default, null) : PackageSymbol;
 	
 	/** A symbol that stands for a missing symbol.
 	*/
-	public var noSymbol(default, null) : TypeSymbol;
+	@:public @:final public var noSymbol(default, null) : TypeSymbol;
 	
 	/** The error symbol.
 	*/
-	public var errSymbol(default, null) : ClassSymbol;
+	@:public @:final public var errSymbol(default, null) : ClassSymbol;
 	
 	/** The unknown symbol.
 	*/
-	public var unknownSymbol(default, null) : ClassSymbol;
+	@:public @:final public var unknownSymbol(default, null) : ClassSymbol;
 	
 	/** A value for the errType, with a originalType of noType */
-	public var errType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var errType(default, null) : com.sun.tools.javac.code.Type;
 	
 	/** A value for the unknown type. */
-	public var unknownType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var unknownType(default, null) : com.sun.tools.javac.code.Type;
 	
 	/** The builtin type of all arrays. */
-	public var arrayClass(default, null) : ClassSymbol;
+	@:public @:final public var arrayClass(default, null) : ClassSymbol;
 	
-	public var arrayCloneMethod(default, null) : MethodSymbol;
+	@:public @:final public var arrayCloneMethod(default, null) : MethodSymbol;
 	
 	/** VGJ: The (singleton) type of all bound types. */
-	public var boundClass(default, null) : ClassSymbol;
+	@:public @:final public var boundClass(default, null) : ClassSymbol;
 	
 	/** The builtin type of all methods. */
-	public var methodClass(default, null) : ClassSymbol;
+	@:public @:final public var methodClass(default, null) : ClassSymbol;
 	
 	/** Predefined types.
 	*/
-	public var objectType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var objectType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var classType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var classType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var classLoaderType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var classLoaderType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var stringType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var stringType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var stringBufferType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var stringBufferType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var stringBuilderType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var stringBuilderType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var cloneableType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var cloneableType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var serializableType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var serializableType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var methodHandleType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var methodHandleType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var polymorphicSignatureType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var polymorphicSignatureType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var throwableType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var throwableType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var errorType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var errorType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var interruptedExceptionType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var interruptedExceptionType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var illegalArgumentExceptionType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var illegalArgumentExceptionType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var exceptionType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var exceptionType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var runtimeExceptionType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var runtimeExceptionType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var classNotFoundExceptionType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var classNotFoundExceptionType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var noClassDefFoundErrorType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var noClassDefFoundErrorType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var noSuchFieldErrorType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var noSuchFieldErrorType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var assertionErrorType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var assertionErrorType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var cloneNotSupportedExceptionType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var cloneNotSupportedExceptionType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var annotationType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var annotationType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var enumSym(default, null) : TypeSymbol;
+	@:public @:final public var enumSym(default, null) : TypeSymbol;
 	
-	public var listType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var listType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var collectionsType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var collectionsType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var comparableType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var comparableType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var arraysType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var arraysType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var iterableType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var iterableType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var iteratorType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var iteratorType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var annotationTargetType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var annotationTargetType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var overrideType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var overrideType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var retentionType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var retentionType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var deprecatedType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var deprecatedType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var suppressWarningsType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var suppressWarningsType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var inheritedType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var inheritedType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var proprietaryType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var proprietaryType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var systemType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var systemType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var autoCloseableType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var autoCloseableType(default, null) : com.sun.tools.javac.code.Type;
 	
-	public var trustMeType(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var trustMeType(default, null) : com.sun.tools.javac.code.Type;
 	
 	/** The symbol representing the length field of an array.
 	*/
-	public var lengthVar(default, null) : VarSymbol;
+	@:public @:final public var lengthVar(default, null) : VarSymbol;
 	
 	/** The null check operator. */
-	public var nullcheck(default, null) : OperatorSymbol;
+	@:public @:final public var nullcheck(default, null) : OperatorSymbol;
 	
 	/** The symbol representing the final finalize method on enums */
-	public var enumFinalFinalize(default, null) : MethodSymbol;
+	@:public @:final public var enumFinalFinalize(default, null) : MethodSymbol;
 	
 	/** The symbol representing the close method on TWR AutoCloseable type */
-	public var autoCloseableClose(default, null) : MethodSymbol;
+	@:public @:final public var autoCloseableClose(default, null) : MethodSymbol;
 	
 	/** The predefined type that belongs to a tag.
 	*/
-	public var typeOfTag(default, null) : java.NativeArray<com.sun.tools.javac.code.Type>;
+	@:public @:final public var typeOfTag(default, null) : java.NativeArray<com.sun.tools.javac.code.Type>;
 	
 	/** The name of the class that belongs to a basix type tag.
 	*/
-	public var boxedName(default, null) : java.NativeArray<com.sun.tools.javac.util.Name>;
+	@:public @:final public var boxedName(default, null) : java.NativeArray<com.sun.tools.javac.util.Name>;
 	
 	/** A hashtable containing the encountered top-level and member classes,
 	*  indexed by flat names. The table does not contain local classes.
 	*  It should be updated from the outside to reflect classes defined
 	*  by compiled source files.
 	*/
-	public var classes(default, null) : java.util.Map<com.sun.tools.javac.util.Name, ClassSymbol>;
+	@:public @:final public var classes(default, null) : java.util.Map<com.sun.tools.javac.util.Name, ClassSymbol>;
 	
 	/** A hashtable containing the encountered packages.
 	*  the table should be updated from outside to reflect packages defined
 	*  by compiled source files.
 	*/
-	public var packages(default, null) : java.util.Map<com.sun.tools.javac.util.Name, PackageSymbol>;
+	@:public @:final public var packages(default, null) : java.util.Map<com.sun.tools.javac.util.Name, PackageSymbol>;
 	
-	@:overload public function initType(type : com.sun.tools.javac.code.Type, c : ClassSymbol) : Void;
+	@:overload @:public public function initType(type : com.sun.tools.javac.code.Type, c : ClassSymbol) : Void;
 	
-	@:overload public function initType(type : com.sun.tools.javac.code.Type, name : String) : Void;
+	@:overload @:public public function initType(type : com.sun.tools.javac.code.Type, name : String) : Void;
 	
-	@:overload public function initType(type : com.sun.tools.javac.code.Type, name : String, bname : String) : Void;
+	@:overload @:public public function initType(type : com.sun.tools.javac.code.Type, name : String, bname : String) : Void;
 	
 	/** The class symbol that owns all predefined symbols.
 	*/
-	public var predefClass(default, null) : ClassSymbol;
+	@:public @:final public var predefClass(default, null) : ClassSymbol;
 	
-	@:overload public function synthesizeEmptyInterfaceIfMissing(type : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function synthesizeEmptyInterfaceIfMissing(type : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload public function synthesizeBoxTypeIfMissing(type : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function synthesizeBoxTypeIfMissing(type : com.sun.tools.javac.code.Type) : Void;
 	
 	/** Constructor; enters all predefined identifiers and operators
 	*  into symbol table.
 	*/
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
 	
 }

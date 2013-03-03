@@ -53,21 +53,21 @@ package sun.security.x509;
 */
 extern class Extension implements java.security.cert.Extension
 {
-	private var extensionId : sun.security.util.ObjectIdentifier;
+	@:protected private var extensionId : sun.security.util.ObjectIdentifier;
 	
-	private var critical : Bool;
+	@:protected private var critical : Bool;
 	
-	private var extensionValue : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var extensionValue : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Default constructor.  Used only by sub-classes.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an extension from a DER encoded array of bytes.
 	*/
-	@:overload public function new(derVal : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(derVal : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Constructs an Extension from individual components of ObjectIdentifier,
@@ -77,7 +77,7 @@ extern class Extension implements java.security.cert.Extension
 	* @param critical the boolean indicating if the extension is critical
 	* @param extensionValue the DER encoded octet string of the value.
 	*/
-	@:overload public function new(extensionId : sun.security.util.ObjectIdentifier, critical : Bool, extensionValue : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(extensionId : sun.security.util.ObjectIdentifier, critical : Bool, extensionValue : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs an Extension from another extension. To be used for
@@ -85,7 +85,7 @@ extern class Extension implements java.security.cert.Extension
 	*
 	* @param ext the extension to create from.
 	*/
-	@:overload public function new(ext : java.security.cert.Extension) : Void;
+	@:overload @:public public function new(ext : java.security.cert.Extension) : Void;
 	
 	/**
 	* Constructs an Extension from individual components of ObjectIdentifier,
@@ -96,9 +96,9 @@ extern class Extension implements java.security.cert.Extension
 	* @param rawExtensionValue the raw DER-encoded extension value (this
 	* is not the encoded OctetString).
 	*/
-	@:overload public static function newExtension(extensionId : sun.security.util.ObjectIdentifier, critical : Bool, rawExtensionValue : java.NativeArray<java.StdTypes.Int8>) : java.security.cert.Extension;
+	@:overload @:public @:static public static function newExtension(extensionId : sun.security.util.ObjectIdentifier, critical : Bool, rawExtensionValue : java.NativeArray<java.StdTypes.Int8>) : java.security.cert.Extension;
 	
-	@:overload public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Write the extension to the DerOutputStream.
@@ -106,19 +106,19 @@ extern class Extension implements java.security.cert.Extension
 	* @param out the DerOutputStream to write the extension to.
 	* @exception IOException on encoding errors
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Returns true if extension is critical.
 	*/
-	@:overload public function isCritical() : Bool;
+	@:overload @:public public function isCritical() : Bool;
 	
 	/**
 	* Returns the ObjectIdentifier of the extension.
 	*/
-	@:overload public function getExtensionId() : sun.security.util.ObjectIdentifier;
+	@:overload @:public public function getExtensionId() : sun.security.util.ObjectIdentifier;
 	
-	@:overload public function getValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the extension value as an byte array for further processing.
@@ -127,21 +127,21 @@ extern class Extension implements java.security.cert.Extension
 	* This method does not return a clone; it is the responsibility of the
 	* caller to clone the array if necessary.
 	*/
-	@:overload public function getExtensionValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getExtensionValue() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
 	/**
 	* Returns the Extension in user readable form.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hashcode value for this Extension.
 	*
 	* @return the hashcode value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this Extension for equality with the specified
@@ -155,7 +155,7 @@ extern class Extension implements java.security.cert.Extension
 	* criticality flag, object identifier and encoded extension value of
 	* the two Extensions match, false otherwise.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	
 }

@@ -25,11 +25,11 @@ package sun.java2d.xr;
 */
 extern class XRMaskFill extends sun.java2d.loops.MaskFill
 {
-	@:overload private function new(srcType : sun.java2d.loops.SurfaceType, compType : sun.java2d.loops.CompositeType, surfaceType : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:protected private function new(srcType : sun.java2d.loops.SurfaceType, compType : sun.java2d.loops.CompositeType, surfaceType : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload @:native private function maskFill(xsdo : haxe.Int64, x : Int, y : Int, w : Int, h : Int, maskoff : Int, maskscan : Int, masklen : Int, mask : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected @:native private function maskFill(xsdo : haxe.Int64, x : Int, y : Int, w : Int, h : Int, maskoff : Int, maskscan : Int, masklen : Int, mask : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override public function MaskFill(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Int, y : Int, w : Int, h : Int, mask : java.NativeArray<java.StdTypes.Int8>, maskoff : Int, maskscan : Int) : Void;
+	@:overload @:public override public function MaskFill(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Int, y : Int, w : Int, h : Int, mask : java.NativeArray<java.StdTypes.Int8>, maskoff : Int, maskscan : Int) : Void;
 	
 	
 }

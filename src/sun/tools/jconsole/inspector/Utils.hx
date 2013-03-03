@@ -29,18 +29,18 @@ extern class Utils
 	* This method returns the class matching the name className.
 	* It's used to cater for the primitive types.
 	*/
-	@:overload public static function getClass(className : String) : Class<Dynamic>;
+	@:overload @:public @:static public static function getClass(className : String) : Class<Dynamic>;
 	
 	/**
 	* Check if the given collection is a uniform collection of the given type.
 	*/
-	@:overload public static function isUniformCollection(c : java.util.Collection<Dynamic>, e : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function isUniformCollection(c : java.util.Collection<Dynamic>, e : Class<Dynamic>) : Bool;
 	
 	/**
 	* Check if the given element denotes a supported array-friendly data
 	* structure, i.e. a data structure jconsole can render as an array.
 	*/
-	@:overload public static function canBeRenderedAsArray(elem : Dynamic) : Bool;
+	@:overload @:public @:static public static function canBeRenderedAsArray(elem : Dynamic) : Bool;
 	
 	/**
 	* Check if the given element is an array.
@@ -51,7 +51,7 @@ extern class Utils
 	* and TabularData are not handled as arrays but as
 	* tabular data.
 	*/
-	@:overload public static function isSupportedArray(elem : Dynamic) : Bool;
+	@:overload @:public @:static public static function isSupportedArray(elem : Dynamic) : Bool;
 	
 	/**
 	* This method provides a readable classname if it's an array,
@@ -59,7 +59,7 @@ extern class Utils
 	* of java reference types or the name of the primitive type
 	* for arrays of java primitive types. Otherwise, it returns null.
 	*/
-	@:overload public static function getArrayClassName(name : String) : String;
+	@:overload @:public @:static public static function getArrayClassName(name : String) : String;
 	
 	/**
 	* This methods provides a readable classname. If the supplied name
@@ -69,25 +69,25 @@ extern class Utils
 	* n-times "[]" where 'n' denotes the arity of the array. Otherwise, if
 	* the supplied name doesn't denote an array it returns the same classname.
 	*/
-	@:overload public static function getReadableClassName(name : String) : String;
+	@:overload @:public @:static public static function getReadableClassName(name : String) : String;
 	
 	/**
 	* This method tells whether the type is editable
 	* (means can be created with a String or not)
 	*/
-	@:overload public static function isEditableType(type : String) : Bool;
+	@:overload @:public @:static public static function isEditableType(type : String) : Bool;
 	
 	/**
 	* This method inserts a default value for the standard java types,
 	* else it inserts the text name of the expected class type.
 	* It acts to give a clue as to the input type.
 	*/
-	@:overload public static function getDefaultValue(type : String) : String;
+	@:overload @:public @:static public static function getDefaultValue(type : String) : String;
 	
 	/**
 	* Try to create a Java object using a one-string-param constructor.
 	*/
-	@:overload public static function newStringConstructor(type : String, param : String) : Dynamic;
+	@:overload @:public @:static public static function newStringConstructor(type : String, param : String) : Dynamic;
 	
 	/**
 	* This method attempts to create an object of the given "type"
@@ -95,40 +95,40 @@ extern class Utils
 	* e.g. calling createObjectFromString("java.lang.Integer", "10")
 	* will return an Integer object initialized to 10.
 	*/
-	@:overload public static function createObjectFromString(type : String, value : String) : Dynamic;
+	@:overload @:public @:static public static function createObjectFromString(type : String, value : String) : Dynamic;
 	
 	/**
 	* This method is responsible for converting the inputs given by the user
 	* into a useful object array for passing into a parameter array.
 	*/
-	@:overload public static function getParameters(inputs : java.NativeArray<sun.tools.jconsole.inspector.XTextField>, params : java.NativeArray<String>) : java.NativeArray<Dynamic>;
+	@:overload @:public @:static public static function getParameters(inputs : java.NativeArray<sun.tools.jconsole.inspector.XTextField>, params : java.NativeArray<String>) : java.NativeArray<Dynamic>;
 	
 	/**
 	* If the exception is wrapped, unwrap it.
 	*/
-	@:overload public static function getActualException(e : java.lang.Throwable) : java.lang.Throwable;
+	@:overload @:public @:static public static function getActualException(e : java.lang.Throwable) : java.lang.Throwable;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$Utils$ReadOnlyTableCellEditor') extern class Utils_ReadOnlyTableCellEditor extends javax.swing.DefaultCellEditor
 {
-	@:overload public function new(tf : javax.swing.JTextField) : Void;
+	@:overload @:public public function new(tf : javax.swing.JTextField) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$Utils$EditFocusAdapter') extern class Utils_EditFocusAdapter extends java.awt.event.FocusAdapter
 {
-	@:overload public function new(editor : javax.swing.CellEditor) : Void;
+	@:overload @:public public function new(editor : javax.swing.CellEditor) : Void;
 	
-	@:overload override public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public override public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$Utils$CopyKeyAdapter') extern class Utils_CopyKeyAdapter extends java.awt.event.KeyAdapter
 {
-	@:overload override public function keyPressed(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public override public function keyPressed(e : java.awt.event.KeyEvent) : Void;
 	
-	@:overload override public function keyTyped(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public override public function keyTyped(e : java.awt.event.KeyEvent) : Void;
 	
 	
 }

@@ -50,7 +50,7 @@ extern class LongMonitoredAttributeBase extends com.sun.corba.se.spi.monitoring.
 	* description, so that the admin can make sense of the attribute supplied.
 	* </p>
 	*/
-	@:overload public function new(name : String, description : String) : Void;
+	@:overload @:public public function new(name : String, description : String) : Void;
 	
 	
 }

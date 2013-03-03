@@ -32,9 +32,9 @@ package com.sun.tools.example.debug.tty;
 */
 extern class VMNotConnectedException extends java.lang.RuntimeException
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

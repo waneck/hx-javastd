@@ -70,7 +70,7 @@ extern class ConstantValue extends com.sun.org.apache.bcel.internal.classfile.At
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantValue) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantValue) : Void;
 	
 	/**
 	* @param name_index Name index in constant pool
@@ -78,7 +78,7 @@ extern class ConstantValue extends com.sun.org.apache.bcel.internal.classfile.At
 	* @param constantvalue_index Index in constant pool
 	* @param constant_pool Array of constants
 	*/
-	@:overload public function new(name_index : Int, length : Int, constantvalue_index : Int, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function new(name_index : Int, length : Int, constantvalue_index : Int, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -87,7 +87,7 @@ extern class ConstantValue extends com.sun.org.apache.bcel.internal.classfile.At
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump constant value attribute to file stream on binary format.
@@ -95,27 +95,27 @@ extern class ConstantValue extends com.sun.org.apache.bcel.internal.classfile.At
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final override public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Index in constant pool of constant value.
 	*/
-	@:overload @:final public function getConstantValueIndex() : Int;
+	@:overload @:public @:final public function getConstantValueIndex() : Int;
 	
 	/**
 	* @param constantvalue_index.
 	*/
-	@:overload @:final public function setConstantValueIndex(constantvalue_index : Int) : Void;
+	@:overload @:public @:final public function setConstantValueIndex(constantvalue_index : Int) : Void;
 	
 	/**
 	* @return String representation of constant value.
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	/**
 	* @return deep copy of this attribute
 	*/
-	@:overload override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
+	@:overload @:public override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
 	
 }

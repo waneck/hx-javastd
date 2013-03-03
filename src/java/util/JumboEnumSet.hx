@@ -42,21 +42,21 @@ package java.util;
 	*
 	* @return an iterator over the elements contained in this set
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
 	/**
 	* Returns the number of elements in this set.
 	*
 	* @return the number of elements in this set
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this set contains no elements.
 	*
 	* @return <tt>true</tt> if this set contains no elements
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this set contains the specified element.
@@ -64,7 +64,7 @@ package java.util;
 	* @param e element to be checked for containment in this collection
 	* @return <tt>true</tt> if this set contains the specified element
 	*/
-	@:overload override public function contains(e : Dynamic) : Bool;
+	@:overload @:public override public function contains(e : Dynamic) : Bool;
 	
 	/**
 	* Adds the specified element to this set if it is not already present.
@@ -74,7 +74,7 @@ package java.util;
 	*
 	* @throws NullPointerException if <tt>e</tt> is null
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* Removes the specified element from this set if it is present.
@@ -82,7 +82,7 @@ package java.util;
 	* @param e element to be removed from this set, if present
 	* @return <tt>true</tt> if the set contained the specified element
 	*/
-	@:overload override public function remove(e : Dynamic) : Bool;
+	@:overload @:public override public function remove(e : Dynamic) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this set contains all of the elements
@@ -93,7 +93,7 @@ package java.util;
 	*        in the specified collection
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Adds all of the elements in the specified collection to this set.
@@ -103,7 +103,7 @@ package java.util;
 	* @throws NullPointerException if the specified collection or any of
 	*     its elements are null
 	*/
-	@:overload override public function addAll(c : java.util.Collection<E>) : Bool;
+	@:overload @:public override public function addAll(c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Removes from this set all of its elements that are contained in
@@ -113,7 +113,7 @@ package java.util;
 	* @return <tt>true</tt> if this set changed as a result of the call
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Retains only the elements in this set that are contained in the
@@ -123,12 +123,12 @@ package java.util;
 	* @return <tt>true</tt> if this set changed as a result of the call
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Removes all of the elements from this set.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Compares the specified object with this set for equality.  Returns
@@ -139,19 +139,19 @@ package java.util;
 	* @param e object to be compared for equality with this set
 	* @return <tt>true</tt> if the specified object is equal to this set
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
-	@:overload override public function clone() : java.util.EnumSet<E>;
+	@:overload @:public override public function clone() : java.util.EnumSet<E>;
 	
 	
 }
 @:native('java$util$JumboEnumSet$EnumSetIterator') @:internal extern class JumboEnumSet_EnumSetIterator<E> implements java.util.Iterator<E>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : E;
+	@:overload @:public public function next() : E;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

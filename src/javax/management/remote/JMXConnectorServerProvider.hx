@@ -60,7 +60,7 @@ extern interface JMXConnectorServerProvider
 	* for some reason or any other {@code IOException} if the
 	* connector server cannot be created.
 	*/
-	@:overload public function newJMXConnectorServer(serviceURL : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>, mbeanServer : javax.management.MBeanServer) : javax.management.remote.JMXConnectorServer;
+	@:overload @:public public function newJMXConnectorServer(serviceURL : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>, mbeanServer : javax.management.MBeanServer) : javax.management.remote.JMXConnectorServer;
 	
 	
 }

@@ -34,35 +34,35 @@ extern class ClassTranslator implements com.sun.tools.classfile.ConstantPool.Con
 	* @param translations the set of translations to be applied
 	* @return a copy of {@code} with the values in {@code translations} substituted
 	*/
-	@:overload public function translate(cf : com.sun.tools.classfile.ClassFile, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ClassFile;
+	@:overload @:public public function translate(cf : com.sun.tools.classfile.ClassFile, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ClassFile;
 	
-	@:overload public function visitClass(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Class_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
+	@:overload @:public public function visitClass(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Class_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
 	
-	@:overload public function visitDouble(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Double_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
+	@:overload @:public public function visitDouble(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Double_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
 	
-	@:overload public function visitFieldref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Fieldref_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
+	@:overload @:public public function visitFieldref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Fieldref_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
 	
-	@:overload public function visitFloat(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Float_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
+	@:overload @:public public function visitFloat(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Float_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
 	
-	@:overload public function visitInteger(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Integer_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
+	@:overload @:public public function visitInteger(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Integer_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
 	
-	@:overload public function visitInterfaceMethodref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_InterfaceMethodref_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
+	@:overload @:public public function visitInterfaceMethodref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_InterfaceMethodref_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
 	
-	@:overload public function visitInvokeDynamic(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_InvokeDynamic_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
+	@:overload @:public public function visitInvokeDynamic(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_InvokeDynamic_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
 	
-	@:overload public function visitLong(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Long_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
+	@:overload @:public public function visitLong(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Long_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
 	
-	@:overload public function visitNameAndType(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_NameAndType_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
+	@:overload @:public public function visitNameAndType(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_NameAndType_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
 	
-	@:overload public function visitMethodref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Methodref_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
+	@:overload @:public public function visitMethodref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Methodref_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
 	
-	@:overload public function visitMethodHandle(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_MethodHandle_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
+	@:overload @:public public function visitMethodHandle(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_MethodHandle_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
 	
-	@:overload public function visitMethodType(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_MethodType_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
+	@:overload @:public public function visitMethodType(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_MethodType_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
 	
-	@:overload public function visitString(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_String_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
+	@:overload @:public public function visitString(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_String_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
 	
-	@:overload public function visitUtf8(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Utf8_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
+	@:overload @:public public function visitUtf8(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Utf8_info, translations : java.util.Map<Dynamic, Dynamic>) : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo;
 	
 	
 }

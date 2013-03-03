@@ -25,17 +25,17 @@ package javax.swing.colorchooser;
 */
 @:internal extern class SmartGridLayout implements java.awt.LayoutManager implements java.io.Serializable
 {
-	@:overload public function new(numColumns : Int, numRows : Int) : Void;
+	@:overload @:public public function new(numColumns : Int, numRows : Int) : Void;
 	
-	@:overload public function layoutContainer(c : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(c : java.awt.Container) : Void;
 	
-	@:overload public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function addLayoutComponent(s : String, c : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(s : String, c : java.awt.Component) : Void;
 	
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
 	
 }

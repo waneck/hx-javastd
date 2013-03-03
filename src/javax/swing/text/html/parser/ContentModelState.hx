@@ -45,33 +45,33 @@ package javax.swing.text.html.parser;
 	/**
 	* Create a content model state for a content model.
 	*/
-	@:overload public function new(model : javax.swing.text.html.parser.ContentModel) : Void;
+	@:overload @:public public function new(model : javax.swing.text.html.parser.ContentModel) : Void;
 	
 	/**
 	* Return the content model that is relevant to the current state.
 	*/
-	@:overload public function getModel() : javax.swing.text.html.parser.ContentModel;
+	@:overload @:public public function getModel() : javax.swing.text.html.parser.ContentModel;
 	
 	/**
 	* Check if the state can be terminated. That is there are no more
 	* tokens required in the input stream.
 	* @return true if the model can terminate without further input
 	*/
-	@:overload public function terminate() : Bool;
+	@:overload @:public public function terminate() : Bool;
 	
 	/**
 	* Check if the state can be terminated. That is there are no more
 	* tokens required in the input stream.
 	* @return the only possible element that can occur next
 	*/
-	@:overload public function first() : javax.swing.text.html.parser.Element;
+	@:overload @:public public function first() : javax.swing.text.html.parser.Element;
 	
 	/**
 	* Advance this state to a new state. An exception is thrown if the
 	* token is illegal at this point in the content model.
 	* @return next state after reducing a token
 	*/
-	@:overload public function advance(token : Dynamic) : javax.swing.text.html.parser.ContentModelState;
+	@:overload @:public public function advance(token : Dynamic) : javax.swing.text.html.parser.ContentModelState;
 	
 	
 }

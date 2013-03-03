@@ -40,86 +40,86 @@ extern class EnumGen implements com.sun.tools.corba.se.idl.EnumGen implements co
 	/**
 	* Public zero-argument constructor.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Generate the Java code for an IDL enumeration.
 	**/
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, e : com.sun.tools.corba.se.idl.EnumEntry, s : java.io.PrintWriter) : Void;
+	@:overload @:public public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, e : com.sun.tools.corba.se.idl.EnumEntry, s : java.io.PrintWriter) : Void;
 	
 	/**
 	* Initialize members unique to this generator.
 	**/
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
 	/**
 	* Open the print stream to which to write the enumeration class.
 	**/
-	@:overload private function openStream() : Void;
+	@:overload @:protected private function openStream() : Void;
 	
 	/**
 	* Generate the holder class for this enumeration.
 	**/
-	@:overload private function generateHolder() : Void;
+	@:overload @:protected private function generateHolder() : Void;
 	
 	/**
 	* Generate the helper class for this enumeration.
 	**/
-	@:overload private function generateHelper() : Void;
+	@:overload @:protected private function generateHelper() : Void;
 	
 	/**
 	* Write the heading of the enumeration class, including the package,
 	* imports, class statement, and open curly.
 	**/
-	@:overload private function writeHeading() : Void;
+	@:overload @:protected private function writeHeading() : Void;
 	
 	/**
 	* Write the members of enumeration class.
 	**/
-	@:overload private function writeBody() : Void;
+	@:overload @:protected private function writeBody() : Void;
 	
 	/**
 	* Write the value method for the enumeration class.
 	**/
-	@:overload private function writeValue() : Void;
+	@:overload @:protected private function writeValue() : Void;
 	
 	/**
 	* Write the from_int method for the enumeration class.
 	**/
-	@:overload private function writeFromInt() : Void;
+	@:overload @:protected private function writeFromInt() : Void;
 	
 	/**
 	* Write the protected constructor for the enumeration class.
 	**/
-	@:overload private function writeCtors() : Void;
+	@:overload @:protected private function writeCtors() : Void;
 	
 	/**
 	* Close the enumeration class.
 	**/
-	@:overload private function writeClosing() : Void;
+	@:overload @:protected private function writeClosing() : Void;
 	
 	/**
 	* Close the print stream, which writes the stream to file.
 	**/
-	@:overload private function closeStream() : Void;
+	@:overload @:protected private function closeStream() : Void;
 	
-	@:overload public function helperType(index : Int, indent : String, tcoffsets : com.sun.tools.corba.se.idl.toJavaPortable.TCOffsets, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
+	@:overload @:public public function helperType(index : Int, indent : String, tcoffsets : com.sun.tools.corba.se.idl.toJavaPortable.TCOffsets, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
 	
-	@:overload public function type(index : Int, indent : String, tcoffsets : com.sun.tools.corba.se.idl.toJavaPortable.TCOffsets, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
+	@:overload @:public public function type(index : Int, indent : String, tcoffsets : com.sun.tools.corba.se.idl.toJavaPortable.TCOffsets, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
 	
-	@:overload public function helperRead(entryName : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
+	@:overload @:public public function helperRead(entryName : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
 	
-	@:overload public function helperWrite(entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
+	@:overload @:public public function helperWrite(entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
 	
-	@:overload public function read(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
+	@:overload @:public public function read(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
 	
-	@:overload public function write(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
+	@:overload @:public public function write(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
 	
-	private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	private var e : com.sun.tools.corba.se.idl.EnumEntry;
+	@:protected private var e : com.sun.tools.corba.se.idl.EnumEntry;
 	
-	private var stream : java.io.PrintWriter;
+	@:protected private var stream : java.io.PrintWriter;
 	
 	
 }

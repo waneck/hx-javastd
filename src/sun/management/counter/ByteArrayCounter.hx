@@ -33,12 +33,12 @@ extern interface ByteArrayCounter extends sun.management.counter.Counter
 	/**
 	* Get a copy of the elements of the ByteArrayCounter.
 	*/
-	@:overload public function byteArrayValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function byteArrayValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Get the value of an element of the ByteArrayCounter object.
 	*/
-	@:overload public function byteAt(index : Int) : java.StdTypes.Int8;
+	@:overload @:public public function byteAt(index : Int) : java.StdTypes.Int8;
 	
 	
 }

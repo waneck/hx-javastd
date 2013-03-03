@@ -28,49 +28,49 @@ package com.sun.xml.internal.ws.encoding.soap.streaming;
 */
 extern class SOAP12NamespaceConstants
 {
-	public static var XML_NS(default, null) : String;
+	@:public @:static @:final public static var XML_NS(default, null) : String;
 	
-	public static var ENVELOPE(default, null) : String;
+	@:public @:static @:final public static var ENVELOPE(default, null) : String;
 	
-	public static var ENCODING(default, null) : String;
+	@:public @:static @:final public static var ENCODING(default, null) : String;
 	
-	public static var SOAP_RPC(default, null) : String;
+	@:public @:static @:final public static var SOAP_RPC(default, null) : String;
 	
-	public static var XSD(default, null) : String;
+	@:public @:static @:final public static var XSD(default, null) : String;
 	
-	public static var XSI(default, null) : String;
+	@:public @:static @:final public static var XSI(default, null) : String;
 	
-	public static var TRANSPORT_HTTP(default, null) : String;
+	@:public @:static @:final public static var TRANSPORT_HTTP(default, null) : String;
 	
-	public static var ACTOR_NEXT(default, null) : String;
+	@:public @:static @:final public static var ACTOR_NEXT(default, null) : String;
 	
-	public static var ROLE_NEXT(default, null) : String;
+	@:public @:static @:final public static var ROLE_NEXT(default, null) : String;
 	
-	public static var ROLE_NONE(default, null) : String;
+	@:public @:static @:final public static var ROLE_NONE(default, null) : String;
 	
-	public static var ROLE_ULTIMATE_RECEIVER(default, null) : String;
+	@:public @:static @:final public static var ROLE_ULTIMATE_RECEIVER(default, null) : String;
 	
-	public static var SOAP_UPGRADE(default, null) : String;
+	@:public @:static @:final public static var SOAP_UPGRADE(default, null) : String;
 	
-	public static var TAG_ENVELOPE(default, null) : String;
+	@:public @:static @:final public static var TAG_ENVELOPE(default, null) : String;
 	
-	public static var TAG_HEADER(default, null) : String;
+	@:public @:static @:final public static var TAG_HEADER(default, null) : String;
 	
-	public static var TAG_BODY(default, null) : String;
+	@:public @:static @:final public static var TAG_BODY(default, null) : String;
 	
-	public static var TAG_RESULT(default, null) : String;
+	@:public @:static @:final public static var TAG_RESULT(default, null) : String;
 	
-	public static var TAG_NOT_UNDERSTOOD(default, null) : String;
+	@:public @:static @:final public static var TAG_NOT_UNDERSTOOD(default, null) : String;
 	
-	public static var ATTR_ACTOR(default, null) : String;
+	@:public @:static @:final public static var ATTR_ACTOR(default, null) : String;
 	
-	public static var ATTR_MUST_UNDERSTAND(default, null) : String;
+	@:public @:static @:final public static var ATTR_MUST_UNDERSTAND(default, null) : String;
 	
-	public static var ATTR_MISUNDERSTOOD(default, null) : String;
+	@:public @:static @:final public static var ATTR_MISUNDERSTOOD(default, null) : String;
 	
-	public static var ATTR_ENCODING_STYLE(default, null) : String;
+	@:public @:static @:final public static var ATTR_ENCODING_STYLE(default, null) : String;
 	
-	public static var ATTR_NOT_UNDERSTOOD_QNAME(default, null) : String;
+	@:public @:static @:final public static var ATTR_NOT_UNDERSTOOD_QNAME(default, null) : String;
 	
 	
 }

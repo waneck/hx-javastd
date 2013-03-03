@@ -35,7 +35,7 @@ extern class CanonicalizerSpi
 	* @throws org.xml.sax.SAXException
 	*
 	*/
-	@:overload public function engineCanonicalize(inputBytes : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function engineCanonicalize(inputBytes : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Method engineCanonicalizeXPathNodeSet
@@ -44,7 +44,7 @@ extern class CanonicalizerSpi
 	* @return the c14n bytes
 	* @throws CanonicalizationException
 	*/
-	@:overload public function engineCanonicalizeXPathNodeSet(xpathNodeSet : org.w3c.dom.NodeList) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function engineCanonicalizeXPathNodeSet(xpathNodeSet : org.w3c.dom.NodeList) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Method engineCanonicalizeXPathNodeSet
@@ -54,17 +54,17 @@ extern class CanonicalizerSpi
 	* @return the c14n bytes
 	* @throws CanonicalizationException
 	*/
-	@:overload public function engineCanonicalizeXPathNodeSet(xpathNodeSet : org.w3c.dom.NodeList, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function engineCanonicalizeXPathNodeSet(xpathNodeSet : org.w3c.dom.NodeList, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** Returns the URI of this engine.
 	* @return the URI
 	*/
-	@:overload @:abstract public function engineGetURI() : String;
+	@:overload @:public @:abstract public function engineGetURI() : String;
 	
 	/** Returns the URI if include comments
 	* @return true if include.
 	*/
-	@:overload @:abstract public function engineGetIncludeComments() : Bool;
+	@:overload @:public @:abstract public function engineGetIncludeComments() : Bool;
 	
 	/**
 	* C14n a nodeset
@@ -73,7 +73,7 @@ extern class CanonicalizerSpi
 	* @return the c14n bytes
 	* @throws CanonicalizationException
 	*/
-	@:overload @:abstract public function engineCanonicalizeXPathNodeSet(xpathNodeSet : java.util.Set<Dynamic>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function engineCanonicalizeXPathNodeSet(xpathNodeSet : java.util.Set<Dynamic>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* C14n a nodeset
@@ -83,7 +83,7 @@ extern class CanonicalizerSpi
 	* @return the c14n bytes
 	* @throws CanonicalizationException
 	*/
-	@:overload @:abstract public function engineCanonicalizeXPathNodeSet(xpathNodeSet : java.util.Set<Dynamic>, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function engineCanonicalizeXPathNodeSet(xpathNodeSet : java.util.Set<Dynamic>, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* C14n a node tree.
@@ -92,7 +92,7 @@ extern class CanonicalizerSpi
 	* @return the c14n bytes
 	* @throws CanonicalizationException
 	*/
-	@:overload @:abstract public function engineCanonicalizeSubTree(rootNode : org.w3c.dom.Node) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function engineCanonicalizeSubTree(rootNode : org.w3c.dom.Node) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* C14n a node tree.
@@ -102,17 +102,17 @@ extern class CanonicalizerSpi
 	* @return the c14n bytes
 	* @throws CanonicalizationException
 	*/
-	@:overload @:abstract public function engineCanonicalizeSubTree(rootNode : org.w3c.dom.Node, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function engineCanonicalizeSubTree(rootNode : org.w3c.dom.Node, inclusiveNamespaces : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Sets the writter where the cannocalization ends. ByteArrayOutputStream if
 	* none is setted.
 	* @param os
 	*/
-	@:overload @:abstract public function setWriter(os : java.io.OutputStream) : Void;
+	@:overload @:public @:abstract public function setWriter(os : java.io.OutputStream) : Void;
 	
 	/** Reset the writter after a c14n */
-	private var reset : Bool;
+	@:protected private var reset : Bool;
 	
 	
 }

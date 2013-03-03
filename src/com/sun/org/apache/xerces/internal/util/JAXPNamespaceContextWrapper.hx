@@ -21,40 +21,40 @@ package com.sun.org.apache.xerces.internal.util;
 */
 extern class JAXPNamespaceContextWrapper implements com.sun.org.apache.xerces.internal.xni.NamespaceContext
 {
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
-	@:overload public function setNamespaceContext(context : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public public function setNamespaceContext(context : javax.xml.namespace.NamespaceContext) : Void;
 	
-	@:overload public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
 	
-	@:overload public function setSymbolTable(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function setSymbolTable(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
-	@:overload public function getSymbolTable() : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:overload @:public public function getSymbolTable() : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
-	@:overload public function setDeclaredPrefixes(prefixes : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function setDeclaredPrefixes(prefixes : java.util.List<Dynamic>) : Void;
 	
-	@:overload public function getDeclaredPrefixes() : java.util.List<Dynamic>;
+	@:overload @:public public function getDeclaredPrefixes() : java.util.List<Dynamic>;
 	
 	/*
 	* NamespaceContext methods
 	*/
-	@:overload public function getURI(prefix : String) : String;
+	@:overload @:public public function getURI(prefix : String) : String;
 	
-	@:overload public function getPrefix(uri : String) : String;
+	@:overload @:public public function getPrefix(uri : String) : String;
 	
-	@:overload public function getAllPrefixes() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getAllPrefixes() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function pushContext() : Void;
+	@:overload @:public public function pushContext() : Void;
 	
-	@:overload public function popContext() : Void;
+	@:overload @:public public function popContext() : Void;
 	
-	@:overload public function declarePrefix(prefix : String, uri : String) : Bool;
+	@:overload @:public public function declarePrefix(prefix : String, uri : String) : Bool;
 	
-	@:overload public function getDeclaredPrefixCount() : Int;
+	@:overload @:public public function getDeclaredPrefixCount() : Int;
 	
-	@:overload public function getDeclaredPrefixAt(index : Int) : String;
+	@:overload @:public public function getDeclaredPrefixAt(index : Int) : String;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

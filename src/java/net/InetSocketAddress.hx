@@ -37,7 +37,7 @@ extern class InetSocketAddress extends java.net.SocketAddress
 	* @throws IllegalArgumentException if the port parameter is outside the specified
 	* range of valid port values.
 	*/
-	@:overload public function new(port : Int) : Void;
+	@:overload @:public public function new(port : Int) : Void;
 	
 	/**
 	*
@@ -54,7 +54,7 @@ extern class InetSocketAddress extends java.net.SocketAddress
 	* @throws IllegalArgumentException if the port parameter is outside the specified
 	* range of valid port values.
 	*/
-	@:overload public function new(addr : java.net.InetAddress, port : Int) : Void;
+	@:overload @:public public function new(addr : java.net.InetAddress, port : Int) : Void;
 	
 	/**
 	*
@@ -80,7 +80,7 @@ extern class InetSocketAddress extends java.net.SocketAddress
 	*                           denied.
 	* @see     #isUnresolved()
 	*/
-	@:overload public function new(hostname : String, port : Int) : Void;
+	@:overload @:public public function new(hostname : String, port : Int) : Void;
 	
 	/**
 	*
@@ -103,14 +103,14 @@ extern class InetSocketAddress extends java.net.SocketAddress
 	*          socket address
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function createUnresolved(host : String, port : Int) : java.net.InetSocketAddress;
+	@:require(java5) @:overload @:public @:static public static function createUnresolved(host : String, port : Int) : java.net.InetSocketAddress;
 	
 	/**
 	* Gets the port number.
 	*
 	* @return the port number.
 	*/
-	@:overload @:final public function getPort() : Int;
+	@:overload @:public @:final public function getPort() : Int;
 	
 	/**
 	*
@@ -118,7 +118,7 @@ extern class InetSocketAddress extends java.net.SocketAddress
 	*
 	* @return the InetAdress or <code>null</code> if it is unresolved.
 	*/
-	@:overload @:final public function getAddress() : java.net.InetAddress;
+	@:overload @:public @:final public function getAddress() : java.net.InetAddress;
 	
 	/**
 	* Gets the <code>hostname</code>.
@@ -127,7 +127,7 @@ extern class InetSocketAddress extends java.net.SocketAddress
 	*
 	* @return  the hostname part of the address.
 	*/
-	@:overload @:final public function getHostName() : String;
+	@:overload @:public @:final public function getHostName() : String;
 	
 	/**
 	* Returns the hostname, or the String form of the address if it
@@ -137,7 +137,7 @@ extern class InetSocketAddress extends java.net.SocketAddress
 	* @return the hostname, or String representation of the address.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:final public function getHostString() : String;
+	@:require(java7) @:overload @:public @:final public function getHostString() : String;
 	
 	/**
 	* Checks whether the address has been resolved or not.
@@ -145,7 +145,7 @@ extern class InetSocketAddress extends java.net.SocketAddress
 	* @return <code>true</code> if the hostname couldn't be resolved into
 	*          an <code>InetAddress</code>.
 	*/
-	@:overload @:final public function isUnresolved() : Bool;
+	@:overload @:public @:final public function isUnresolved() : Bool;
 	
 	/**
 	* Constructs a string representation of this InetSocketAddress.
@@ -155,7 +155,7 @@ extern class InetSocketAddress extends java.net.SocketAddress
 	*
 	* @return  a string representation of this object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares this object against the specified object.
@@ -177,14 +177,14 @@ extern class InetSocketAddress extends java.net.SocketAddress
 	*          <code>false</code> otherwise.
 	* @see java.net.InetAddress#equals(java.lang.Object)
 	*/
-	@:overload @:final public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode for this socket address.
 	*
 	* @return  a hash code value for this socket address.
 	*/
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
 	
 }
@@ -208,11 +208,11 @@ extern class InetSocketAddress extends java.net.SocketAddress
 */
 @:require(java4) @:native('java$net$InetSocketAddress$InetSocketAddressHolder') @:internal extern class InetSocketAddress_InetSocketAddressHolder
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload @:final public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(obj : Dynamic) : Bool;
 	
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
 	
 }

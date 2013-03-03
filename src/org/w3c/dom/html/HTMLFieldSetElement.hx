@@ -49,7 +49,7 @@ extern interface HTMLFieldSetElement extends org.w3c.dom.html.HTMLElement
 	*  Returns the <code>FORM</code> element containing this control. Returns
 	* <code>null</code> if this control is not within the context of a form.
 	*/
-	@:overload public function getForm() : org.w3c.dom.html.HTMLFormElement;
+	@:overload @:public public function getForm() : org.w3c.dom.html.HTMLFormElement;
 	
 	
 }

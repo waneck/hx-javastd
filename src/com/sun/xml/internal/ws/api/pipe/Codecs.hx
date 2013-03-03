@@ -41,7 +41,7 @@ extern class Codecs
 	* @param xmlEnvelopeCodec SOAP envelope codec
 	* @return non null codec to parse entire SOAP message(including MIME parts)
 	*/
-	@:overload public static function createSOAPBindingCodec(binding : com.sun.xml.internal.ws.api.WSBinding, xmlEnvelopeCodec : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec) : com.sun.xml.internal.ws.api.pipe.SOAPBindingCodec;
+	@:overload @:public @:static public static function createSOAPBindingCodec(binding : com.sun.xml.internal.ws.api.WSBinding, xmlEnvelopeCodec : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec) : com.sun.xml.internal.ws.api.pipe.SOAPBindingCodec;
 	
 	/**
 	* Creates a default {@link Codec} that can be used to used to
@@ -51,7 +51,7 @@ extern class Codecs
 	* @param version SOAP version of the binding
 	* @return non null default xml codec
 	*/
-	@:overload public static function createSOAPEnvelopeXmlCodec(version : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec;
+	@:overload @:public @:static public static function createSOAPEnvelopeXmlCodec(version : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec;
 	
 	
 }

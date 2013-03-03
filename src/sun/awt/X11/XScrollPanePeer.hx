@@ -25,46 +25,46 @@ package sun.awt.X11;
 */
 @:internal extern class XScrollPanePeer extends sun.awt.X11.XComponentPeer implements java.awt.peer.ScrollPanePeer implements sun.awt.X11.XScrollbarClient
 {
-	public static var MARGIN(default, null) : Int;
+	@:public @:final @:static public static var MARGIN(default, null) : Int;
 	
-	public static var SCROLLBAR(default, null) : Int;
+	@:public @:final @:static public static var SCROLLBAR(default, null) : Int;
 	
-	public static var SPACE(default, null) : Int;
+	@:public @:final @:static public static var SPACE(default, null) : Int;
 	
-	public static var SCROLLBAR_INSET(default, null) : Int;
+	@:public @:final @:static public static var SCROLLBAR_INSET(default, null) : Int;
 	
-	public static var VERTICAL(default, null) : Int;
+	@:public @:final @:static public static var VERTICAL(default, null) : Int;
 	
-	public static var HORIZONTAL(default, null) : Int;
+	@:public @:final @:static public static var HORIZONTAL(default, null) : Int;
 	
-	@:overload override public function getContentWindow() : haxe.Int64;
+	@:overload @:public override public function getContentWindow() : haxe.Int64;
 	
-	@:overload public function setBounds(x : Int, y : Int, w : Int, h : Int, op : Int) : Void;
+	@:overload @:public override public function setBounds(x : Int, y : Int, w : Int, h : Int, op : Int) : Void;
 	
-	@:overload public function getInsets() : java.awt.Insets;
+	@:overload @:public override public function getInsets() : java.awt.Insets;
 	
-	@:overload public function getHScrollbarHeight() : Int;
+	@:overload @:public public function getHScrollbarHeight() : Int;
 	
-	@:overload public function getVScrollbarWidth() : Int;
+	@:overload @:public public function getVScrollbarWidth() : Int;
 	
-	@:overload public function childResized(w : Int, h : Int) : Void;
+	@:overload @:public public function childResized(w : Int, h : Int) : Void;
 	
-	@:overload public function setUnitIncrement(adj : java.awt.Adjustable, u : Int) : Void;
+	@:overload @:public public function setUnitIncrement(adj : java.awt.Adjustable, u : Int) : Void;
 	
-	@:overload public function setValue(adj : java.awt.Adjustable, v : Int) : Void;
+	@:overload @:public public function setValue(adj : java.awt.Adjustable, v : Int) : Void;
 	
-	@:overload public function setScrollPosition(x : Int, y : Int) : Void;
+	@:overload @:public public function setScrollPosition(x : Int, y : Int) : Void;
 	
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload public function repaintScrollbarRequest(sb : sun.awt.X11.XScrollbar) : Void;
+	@:overload @:public public function repaintScrollbarRequest(sb : sun.awt.X11.XScrollbar) : Void;
 	
 	/**
 	* Paint the scrollpane.
 	*/
-	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public public function paintComponent(g : java.awt.Graphics) : Void;
 	
-	@:overload public function handleEvent(e : java.awt.AWTEvent) : Void;
+	@:overload @:public override public function handleEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	*
@@ -77,25 +77,25 @@ package sun.awt.X11;
 	* MouseEvent.MOUSE_EXITED
 	* MouseEvent.MOUSE_DRAGGED
 	*/
-	@:overload public function handleJavaMouseEvent(mouseEvent : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function handleJavaMouseEvent(mouseEvent : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* return value from the scrollbar
 	*/
-	@:overload public function notifyValue(obj : sun.awt.X11.XScrollbar, type : Int, v : Int, isAdjusting : Bool) : Void;
+	@:overload @:public public function notifyValue(obj : sun.awt.X11.XScrollbar, type : Int, v : Int, isAdjusting : Bool) : Void;
 	
 	/*
 	* Print the native component by rendering the Motif look ourselves.
 	* ToDo(aim): needs to query native motif for more accurate size and
 	* color information.
 	*/
-	@:overload public function print(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function print(g : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('sun$awt$X11$XScrollPanePeer$XScrollPaneContentWindow') @:internal extern class XScrollPanePeer_XScrollPaneContentWindow extends sun.awt.X11.XWindow
 {
-	@:overload override public function getWMName() : String;
+	@:overload @:public override public function getWMName() : String;
 	
 	
 }

@@ -38,7 +38,7 @@ extern class SerializerFactory
 	* implement ContentHandler.
 	* @throws WrappedRuntimeException if an exception is thrown while trying to find serializer
 	*/
-	@:overload public static function getSerializer(format : java.util.Properties) : com.sun.org.apache.xml.internal.serializer.Serializer;
+	@:overload @:public @:static public static function getSerializer(format : java.util.Properties) : com.sun.org.apache.xml.internal.serializer.Serializer;
 	
 	
 }

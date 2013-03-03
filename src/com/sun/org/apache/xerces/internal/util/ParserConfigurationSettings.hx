@@ -35,31 +35,31 @@ extern class ParserConfigurationSettings implements com.sun.org.apache.xerces.in
 	*
 	* @version $Id: ParserConfigurationSettings.java,v 1.6 2010-11-01 04:40:14 joehw Exp $
 	*/
-	private static var PARSER_SETTINGS(default, null) : String;
+	@:protected @:static @:final private static var PARSER_SETTINGS(default, null) : String;
 	
 	/** Recognized properties. */
-	private var fRecognizedProperties : java.util.Set<String>;
+	@:protected private var fRecognizedProperties : java.util.Set<String>;
 	
 	/** Properties. */
-	private var fProperties : java.util.Map<String, Dynamic>;
+	@:protected private var fProperties : java.util.Map<String, Dynamic>;
 	
 	/** Recognized features. */
-	private var fRecognizedFeatures : java.util.Set<String>;
+	@:protected private var fRecognizedFeatures : java.util.Set<String>;
 	
 	/** Features. */
-	private var fFeatures : java.util.Map<String, Null<Bool>>;
+	@:protected private var fFeatures : java.util.Map<String, Null<Bool>>;
 	
 	/** Parent parser configuration settings. */
-	private var fParentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager;
+	@:protected private var fParentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager;
 	
 	/** Default Constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a parser configuration settings object with a
 	* parent settings object.
 	*/
-	@:overload public function new(parent : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function new(parent : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/**
 	* Allows a parser to add parser specific features to be recognized
@@ -68,7 +68,7 @@ extern class ParserConfigurationSettings implements com.sun.org.apache.xerces.in
 	* @param featureIds An array of the additional feature identifiers
 	*                   to be recognized.
 	*/
-	@:overload public function addRecognizedFeatures(featureIds : java.NativeArray<String>) : Void;
+	@:overload @:public public function addRecognizedFeatures(featureIds : java.NativeArray<String>) : Void;
 	
 	/**
 	* Set the state of a feature.
@@ -83,7 +83,7 @@ extern class ParserConfigurationSettings implements com.sun.org.apache.xerces.in
 	* @exception com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException If the
 	*            requested feature is not known.
 	*/
-	@:overload public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload @:public public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* Allows a parser to add parser specific properties to be recognized
@@ -92,7 +92,7 @@ extern class ParserConfigurationSettings implements com.sun.org.apache.xerces.in
 	* @param propertyIds An array of the additional property identifiers
 	*                    to be recognized.
 	*/
-	@:overload public function addRecognizedProperties(propertyIds : java.NativeArray<String>) : Void;
+	@:overload @:public public function addRecognizedProperties(propertyIds : java.NativeArray<String>) : Void;
 	
 	/**
 	* setProperty
@@ -102,7 +102,7 @@ extern class ParserConfigurationSettings implements com.sun.org.apache.xerces.in
 	* @exception com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException If the
 	*            requested feature is not known.
 	*/
-	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/**
 	* Returns the state of a feature.
@@ -116,11 +116,11 @@ extern class ParserConfigurationSettings implements com.sun.org.apache.xerces.in
 	*                                   it is <strong>really</strong>
 	*                                   a critical error.
 	*/
-	@:overload @:final public function getFeature(featureId : String) : Bool;
+	@:overload @:public @:final public function getFeature(featureId : String) : Bool;
 	
-	@:overload @:final public function getFeature(featureId : String, defaultValue : Bool) : Bool;
+	@:overload @:public @:final public function getFeature(featureId : String, defaultValue : Bool) : Bool;
 	
-	@:overload public function getFeatureState(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:overload @:public public function getFeatureState(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
 	/**
 	* Returns the value of a property.
@@ -134,11 +134,11 @@ extern class ParserConfigurationSettings implements com.sun.org.apache.xerces.in
 	*                                   it is <strong>really</strong>
 	*                                   a critical error.
 	*/
-	@:overload @:final public function getProperty(propertyId : String) : Dynamic;
+	@:overload @:public @:final public function getProperty(propertyId : String) : Dynamic;
 	
-	@:overload @:final public function getProperty(propertyId : String, defaultValue : Dynamic) : Dynamic;
+	@:overload @:public @:final public function getProperty(propertyId : String, defaultValue : Dynamic) : Dynamic;
 	
-	@:overload public function getPropertyState(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:overload @:public public function getPropertyState(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
 	/**
 	* Check a feature. If feature is known and supported, this method simply
@@ -149,7 +149,7 @@ extern class ParserConfigurationSettings implements com.sun.org.apache.xerces.in
 	* @exception com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException If the
 	*            requested feature is not known.
 	*/
-	@:overload private function checkFeature(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:overload @:protected private function checkFeature(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
 	/**
 	* Check a property. If the property is known and supported, this method
@@ -160,7 +160,7 @@ extern class ParserConfigurationSettings implements com.sun.org.apache.xerces.in
 	* @exception com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException If the
 	*            requested feature is not known.
 	*/
-	@:overload private function checkProperty(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:overload @:protected private function checkProperty(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
 	
 }

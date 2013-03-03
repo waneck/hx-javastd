@@ -34,7 +34,7 @@ package sun.tools.jstat;
 */
 @:require(java5) extern class Jstat
 {
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

@@ -41,7 +41,7 @@ package java.lang;
 	/**
 	* Constructs a <code>NoClassDefFoundError</code> with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>NoClassDefFoundError</code> with the specified
@@ -49,7 +49,7 @@ package java.lang;
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

@@ -51,14 +51,14 @@ package java.lang;
 	* @param cause the exception that was thrown when the system attempted to
 	*    load the named type, or <tt>null</tt> if unavailable or inapplicable
 	*/
-	@:overload public function new(typeName : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(typeName : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Returns the fully qualified name of the unavailable type.
 	*
 	* @return the fully qualified name of the unavailable type
 	*/
-	@:overload public function typeName() : String;
+	@:overload @:public public function typeName() : String;
 	
 	
 }

@@ -53,25 +53,25 @@ extern class KDCRep
 	* <a href="http://www.ietf.org/rfc/rfc4120.txt">
 	* http://www.ietf.org/rfc/rfc4120.txt</a>.
 	*/
-	public var crealm : sun.security.krb5.Realm;
+	@:public public var crealm : sun.security.krb5.Realm;
 	
-	public var cname : sun.security.krb5.PrincipalName;
+	@:public public var cname : sun.security.krb5.PrincipalName;
 	
-	public var ticket : sun.security.krb5.internal.Ticket;
+	@:public public var ticket : sun.security.krb5.internal.Ticket;
 	
-	public var encPart : sun.security.krb5.EncryptedData;
+	@:public public var encPart : sun.security.krb5.EncryptedData;
 	
-	public var encKDCRepPart : sun.security.krb5.internal.EncKDCRepPart;
+	@:public public var encKDCRepPart : sun.security.krb5.internal.EncKDCRepPart;
 	
-	public var pAData : java.NativeArray<sun.security.krb5.internal.PAData>;
+	@:public public var pAData : java.NativeArray<sun.security.krb5.internal.PAData>;
 	
-	@:overload public function new(new_pAData : java.NativeArray<sun.security.krb5.internal.PAData>, new_crealm : sun.security.krb5.Realm, new_cname : sun.security.krb5.PrincipalName, new_ticket : sun.security.krb5.internal.Ticket, new_encPart : sun.security.krb5.EncryptedData, req_type : Int) : Void;
+	@:overload @:public public function new(new_pAData : java.NativeArray<sun.security.krb5.internal.PAData>, new_crealm : sun.security.krb5.Realm, new_cname : sun.security.krb5.PrincipalName, new_ticket : sun.security.krb5.internal.Ticket, new_encPart : sun.security.krb5.EncryptedData, req_type : Int) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>, req_type : Int) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>, req_type : Int) : Void;
 	
-	@:overload public function new(encoding : sun.security.util.DerValue, req_type : Int) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue, req_type : Int) : Void;
 	
 	/**
 	* Initializes an KDCRep object.
@@ -86,7 +86,7 @@ extern class KDCRep
 	* data stream does not match the pre-defined value.
 	*
 	*/
-	@:overload private function init(encoding : sun.security.util.DerValue, req_type : Int) : Void;
+	@:overload @:protected private function init(encoding : sun.security.util.DerValue, req_type : Int) : Void;
 	
 	/**
 	* Encodes this object to a byte array.
@@ -95,7 +95,7 @@ extern class KDCRep
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

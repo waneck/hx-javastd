@@ -39,26 +39,26 @@ extern class AtomicLong extends java.lang.Number implements java.io.Serializable
 	*
 	* @param initialValue the initial value
 	*/
-	@:overload public function new(initialValue : haxe.Int64) : Void;
+	@:overload @:public public function new(initialValue : haxe.Int64) : Void;
 	
 	/**
 	* Creates a new AtomicLong with initial value {@code 0}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Gets the current value.
 	*
 	* @return the current value
 	*/
-	@:overload @:final public function get() : haxe.Int64;
+	@:overload @:public @:final public function get() : haxe.Int64;
 	
 	/**
 	* Sets to the given value.
 	*
 	* @param newValue the new value
 	*/
-	@:overload @:final public function set(newValue : haxe.Int64) : Void;
+	@:overload @:public @:final public function set(newValue : haxe.Int64) : Void;
 	
 	/**
 	* Eventually sets to the given value.
@@ -66,7 +66,7 @@ extern class AtomicLong extends java.lang.Number implements java.io.Serializable
 	* @param newValue the new value
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function lazySet(newValue : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public @:final public function lazySet(newValue : haxe.Int64) : Void;
 	
 	/**
 	* Atomically sets to the given value and returns the old value.
@@ -74,7 +74,7 @@ extern class AtomicLong extends java.lang.Number implements java.io.Serializable
 	* @param newValue the new value
 	* @return the previous value
 	*/
-	@:overload @:final public function getAndSet(newValue : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:final public function getAndSet(newValue : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Atomically sets the value to the given updated value
@@ -85,7 +85,7 @@ extern class AtomicLong extends java.lang.Number implements java.io.Serializable
 	* @return true if successful. False return indicates that
 	* the actual value was not equal to the expected value.
 	*/
-	@:overload @:final public function compareAndSet(expect : haxe.Int64, update : haxe.Int64) : Bool;
+	@:overload @:public @:final public function compareAndSet(expect : haxe.Int64, update : haxe.Int64) : Bool;
 	
 	/**
 	* Atomically sets the value to the given updated value
@@ -99,21 +99,21 @@ extern class AtomicLong extends java.lang.Number implements java.io.Serializable
 	* @param update the new value
 	* @return true if successful.
 	*/
-	@:overload @:final public function weakCompareAndSet(expect : haxe.Int64, update : haxe.Int64) : Bool;
+	@:overload @:public @:final public function weakCompareAndSet(expect : haxe.Int64, update : haxe.Int64) : Bool;
 	
 	/**
 	* Atomically increments by one the current value.
 	*
 	* @return the previous value
 	*/
-	@:overload @:final public function getAndIncrement() : haxe.Int64;
+	@:overload @:public @:final public function getAndIncrement() : haxe.Int64;
 	
 	/**
 	* Atomically decrements by one the current value.
 	*
 	* @return the previous value
 	*/
-	@:overload @:final public function getAndDecrement() : haxe.Int64;
+	@:overload @:public @:final public function getAndDecrement() : haxe.Int64;
 	
 	/**
 	* Atomically adds the given value to the current value.
@@ -121,21 +121,21 @@ extern class AtomicLong extends java.lang.Number implements java.io.Serializable
 	* @param delta the value to add
 	* @return the previous value
 	*/
-	@:overload @:final public function getAndAdd(delta : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:final public function getAndAdd(delta : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Atomically increments by one the current value.
 	*
 	* @return the updated value
 	*/
-	@:overload @:final public function incrementAndGet() : haxe.Int64;
+	@:overload @:public @:final public function incrementAndGet() : haxe.Int64;
 	
 	/**
 	* Atomically decrements by one the current value.
 	*
 	* @return the updated value
 	*/
-	@:overload @:final public function decrementAndGet() : haxe.Int64;
+	@:overload @:public @:final public function decrementAndGet() : haxe.Int64;
 	
 	/**
 	* Atomically adds the given value to the current value.
@@ -143,21 +143,21 @@ extern class AtomicLong extends java.lang.Number implements java.io.Serializable
 	* @param delta the value to add
 	* @return the updated value
 	*/
-	@:overload @:final public function addAndGet(delta : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:final public function addAndGet(delta : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the String representation of the current value.
 	* @return the String representation of the current value.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function intValue() : Int;
+	@:overload @:public override public function intValue() : Int;
 	
-	@:overload public function longValue() : haxe.Int64;
+	@:overload @:public override public function longValue() : haxe.Int64;
 	
-	@:overload public function floatValue() : Single;
+	@:overload @:public override public function floatValue() : Single;
 	
-	@:overload public function doubleValue() : Float;
+	@:overload @:public override public function doubleValue() : Float;
 	
 	
 }

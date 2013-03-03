@@ -20,9 +20,9 @@ package com.sun.org.apache.xerces.internal.impl.dv;
 */
 extern class DatatypeException extends java.lang.Exception
 {
-	private var key : String;
+	@:protected private var key : String;
 	
-	private var args : java.NativeArray<Dynamic>;
+	@:protected private var args : java.NativeArray<Dynamic>;
 	
 	/**
 	* Create a new datatype exception by providing an error code and a list
@@ -31,21 +31,21 @@ extern class DatatypeException extends java.lang.Exception
 	* @param key  error code
 	* @param args error arguments
 	*/
-	@:overload public function new(key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(key : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Return the error code
 	*
 	* @return  error code
 	*/
-	@:overload public function getKey() : String;
+	@:overload @:public public function getKey() : String;
 	
 	/**
 	* Return the list of error arguments
 	*
 	* @return  error arguments
 	*/
-	@:overload public function getArgs() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getArgs() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Overrides this method to get the formatted&localized error message.
@@ -54,7 +54,7 @@ extern class DatatypeException extends java.lang.Exception
 	*          do we want to allow the appilcation to specify a
 	*          different locale?
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

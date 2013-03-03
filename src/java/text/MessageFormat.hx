@@ -48,7 +48,7 @@ extern class MessageFormat extends java.text.Format
 	* @param pattern the pattern for this message format
 	* @exception IllegalArgumentException if the pattern is invalid
 	*/
-	@:overload public function new(pattern : String) : Void;
+	@:overload @:public public function new(pattern : String) : Void;
 	
 	/**
 	* Constructs a MessageFormat for the specified locale and
@@ -63,7 +63,7 @@ extern class MessageFormat extends java.text.Format
 	* @exception IllegalArgumentException if the pattern is invalid
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(pattern : String, locale : java.util.Locale) : Void;
+	@:require(java4) @:overload @:public public function new(pattern : String, locale : java.util.Locale) : Void;
 	
 	/**
 	* Sets the locale to be used when creating or comparing subformats.
@@ -82,14 +82,14 @@ extern class MessageFormat extends java.text.Format
 	*
 	* @param locale the locale to be used when creating or comparing subformats
 	*/
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
 	/**
 	* Gets the locale that's used when creating or comparing subformats.
 	*
 	* @return the locale used when creating or comparing subformats
 	*/
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	/**
 	* Sets the pattern used by this message format.
@@ -101,7 +101,7 @@ extern class MessageFormat extends java.text.Format
 	* @param pattern the pattern for this message format
 	* @exception IllegalArgumentException if the pattern is invalid
 	*/
-	@:overload public function applyPattern(pattern : String) : Void;
+	@:overload @:public public function applyPattern(pattern : String) : Void;
 	
 	/**
 	* Returns a pattern representing the current state of the message format.
@@ -110,7 +110,7 @@ extern class MessageFormat extends java.text.Format
 	*
 	* @return a pattern representing the current state of the message format
 	*/
-	@:overload public function toPattern() : String;
+	@:overload @:public public function toPattern() : String;
 	
 	/**
 	* Sets the formats to use for the values passed into
@@ -135,7 +135,7 @@ extern class MessageFormat extends java.text.Format
 	* @exception NullPointerException if <code>newFormats</code> is null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setFormatsByArgumentIndex(newFormats : java.NativeArray<java.text.Format>) : Void;
+	@:require(java4) @:overload @:public public function setFormatsByArgumentIndex(newFormats : java.NativeArray<java.text.Format>) : Void;
 	
 	/**
 	* Sets the formats to use for the format elements in the
@@ -159,7 +159,7 @@ extern class MessageFormat extends java.text.Format
 	* @param newFormats the new formats to use
 	* @exception NullPointerException if <code>newFormats</code> is null
 	*/
-	@:overload public function setFormats(newFormats : java.NativeArray<java.text.Format>) : Void;
+	@:overload @:public public function setFormats(newFormats : java.NativeArray<java.text.Format>) : Void;
 	
 	/**
 	* Sets the format to use for the format elements within the
@@ -179,7 +179,7 @@ extern class MessageFormat extends java.text.Format
 	* @param newFormat the new format to use
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setFormatByArgumentIndex(argumentIndex : Int, newFormat : java.text.Format) : Void;
+	@:require(java4) @:overload @:public public function setFormatByArgumentIndex(argumentIndex : Int, newFormat : java.text.Format) : Void;
 	
 	/**
 	* Sets the format to use for the format element with the given
@@ -198,7 +198,7 @@ extern class MessageFormat extends java.text.Format
 	* @exception ArrayIndexOutOfBoundsException if {@code formatElementIndex} is equal to or
 	*            larger than the number of format elements in the pattern string
 	*/
-	@:overload public function setFormat(formatElementIndex : Int, newFormat : java.text.Format) : Void;
+	@:overload @:public public function setFormat(formatElementIndex : Int, newFormat : java.text.Format) : Void;
 	
 	/**
 	* Gets the formats used for the values passed into
@@ -220,7 +220,7 @@ extern class MessageFormat extends java.text.Format
 	* @return the formats used for the arguments within the pattern
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getFormatsByArgumentIndex() : java.NativeArray<java.text.Format>;
+	@:require(java4) @:overload @:public public function getFormatsByArgumentIndex() : java.NativeArray<java.text.Format>;
 	
 	/**
 	* Gets the formats used for the format elements in the
@@ -238,7 +238,7 @@ extern class MessageFormat extends java.text.Format
 	*
 	* @return the formats used for the format elements in the pattern
 	*/
-	@:overload public function getFormats() : java.NativeArray<java.text.Format>;
+	@:overload @:public public function getFormats() : java.NativeArray<java.text.Format>;
 	
 	/**
 	* Formats an array of objects and appends the <code>MessageFormat</code>'s
@@ -305,7 +305,7 @@ extern class MessageFormat extends java.text.Format
 	*            <code>arguments</code> array is not of the type
 	*            expected by the format element(s) that use it.
 	*/
-	@:overload @:final public function format(arguments : java.NativeArray<Dynamic>, result : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload @:public @:final public function format(arguments : java.NativeArray<Dynamic>, result : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Creates a MessageFormat with the given pattern and uses it
@@ -319,7 +319,7 @@ extern class MessageFormat extends java.text.Format
 	*            is not of the type expected by the format element(s)
 	*            that use it.
 	*/
-	@:native('format') @:overload public static function _format(pattern : String, arguments : java.NativeArray<Dynamic>) : String;
+	@:native('format') @:overload @:public @:static public static function _format(pattern : String, arguments : java.NativeArray<Dynamic>) : String;
 	
 	/**
 	* Formats an array of objects and appends the <code>MessageFormat</code>'s
@@ -338,7 +338,7 @@ extern class MessageFormat extends java.text.Format
 	*            <code>arguments</code> array is not of the type
 	*            expected by the format element(s) that use it.
 	*/
-	@:overload @:final public function format(arguments : Dynamic, result : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload @:public @:final override public function format(arguments : Dynamic, result : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Formats an array of objects and inserts them into the
@@ -375,7 +375,7 @@ extern class MessageFormat extends java.text.Format
 	*            expected by the format element(s) that use it.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function formatToCharacterIterator(arguments : Dynamic) : java.text.AttributedCharacterIterator;
+	@:require(java4) @:overload @:public override public function formatToCharacterIterator(arguments : Dynamic) : java.text.AttributedCharacterIterator;
 	
 	/**
 	* Parses the string.
@@ -404,7 +404,7 @@ extern class MessageFormat extends java.text.Format
 	* 0. When an error occurs, the call to this method will return null.
 	* If the source is null, return an empty array.
 	*/
-	@:overload public function parse(source : String, pos : java.text.ParsePosition) : java.NativeArray<Dynamic>;
+	@:overload @:public public function parse(source : String, pos : java.text.ParsePosition) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Parses text from the beginning of the given string to produce an object
@@ -419,7 +419,7 @@ extern class MessageFormat extends java.text.Format
 	* @exception ParseException if the beginning of the specified string
 	*            cannot be parsed.
 	*/
-	@:overload public function parse(source : String) : java.NativeArray<Dynamic>;
+	@:overload @:public public function parse(source : String) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Parses text from a string to produce an object array.
@@ -445,24 +445,24 @@ extern class MessageFormat extends java.text.Format
 	*         error, returns null.
 	* @exception NullPointerException if <code>pos</code> is null.
 	*/
-	@:overload public function parseObject(source : String, pos : java.text.ParsePosition) : Dynamic;
+	@:overload @:public override public function parseObject(source : String, pos : java.text.ParsePosition) : Dynamic;
 	
 	/**
 	* Creates and returns a copy of this object.
 	*
 	* @return a clone of this instance.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Equality comparison between two message format objects
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Generates a hash code for the message format object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
@@ -480,7 +480,7 @@ extern class MessageFormat extends java.text.Format
 	*
 	* @param name Name of the attribute
 	*/
-	@:overload private function new(name : String) : Void;
+	@:overload @:protected override private function new(name : String) : Void;
 	
 	/**
 	* Resolves instances being deserialized to the predefined constants.
@@ -489,7 +489,7 @@ extern class MessageFormat extends java.text.Format
 	*         resolved.
 	* @return resolved MessageFormat.Field constant
 	*/
-	@:overload override private function readResolve() : Dynamic;
+	@:overload @:protected override private function readResolve() : Dynamic;
 	
 	/**
 	* Constant identifying a portion of a message that was generated
@@ -498,7 +498,7 @@ extern class MessageFormat extends java.text.Format
 	* indicating the index in the <code>arguments</code> array of the
 	* argument from which the text was generated.
 	*/
-	public static var ARGUMENT(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var ARGUMENT(default, null) : java.text.Format.Format_Field;
 	
 	
 }

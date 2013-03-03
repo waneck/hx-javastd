@@ -28,7 +28,7 @@ extern class Transformer
 	/**
 	* Default constructor is protected on purpose.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* <p>Reset this <code>Transformer</code> to its original configuration.</p>
@@ -50,7 +50,7 @@ extern class Transformer
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function reset() : Void;
+	@:require(java5) @:overload @:public public function reset() : Void;
 	
 	/**
 	* <p>Transform the XML <code>Source</code> to a <code>Result</code>.
@@ -72,7 +72,7 @@ extern class Transformer
 	* @throws TransformerException If an unrecoverable error occurs
 	*   during the course of the transformation.
 	*/
-	@:overload @:abstract public function transform(xmlSource : javax.xml.transform.Source, outputTarget : javax.xml.transform.Result) : Void;
+	@:overload @:public @:abstract public function transform(xmlSource : javax.xml.transform.Source, outputTarget : javax.xml.transform.Result) : Void;
 	
 	/**
 	* Add a parameter for the transformation.
@@ -96,7 +96,7 @@ extern class Transformer
 	*
 	* @throws NullPointerException If value is null.
 	*/
-	@:overload @:abstract public function setParameter(name : String, value : Dynamic) : Void;
+	@:overload @:public @:abstract public function setParameter(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Get a parameter that was explicitly set with setParameter.
@@ -109,12 +109,12 @@ extern class Transformer
 	*
 	* @return A parameter that has been set with setParameter.
 	*/
-	@:overload @:abstract public function getParameter(name : String) : Dynamic;
+	@:overload @:public @:abstract public function getParameter(name : String) : Dynamic;
 	
 	/**
 	* Clear all parameters set with setParameter.
 	*/
-	@:overload @:abstract public function clearParameters() : Void;
+	@:overload @:public @:abstract public function clearParameters() : Void;
 	
 	/**
 	* Set an object that will be used to resolve URIs used in
@@ -126,7 +126,7 @@ extern class Transformer
 	* @param resolver An object that implements the URIResolver interface,
 	* or null.
 	*/
-	@:overload @:abstract public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
+	@:overload @:public @:abstract public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
 	
 	/**
 	* Get an object that will be used to resolve URIs used in
@@ -135,7 +135,7 @@ extern class Transformer
 	* @return An object that implements the URIResolver interface,
 	* or null.
 	*/
-	@:overload @:abstract public function getURIResolver() : javax.xml.transform.URIResolver;
+	@:overload @:public @:abstract public function getURIResolver() : javax.xml.transform.URIResolver;
 	
 	/**
 	* Set the output properties for the transformation.  These
@@ -170,7 +170,7 @@ extern class Transformer
 	* @see java.util.Properties
 	*
 	*/
-	@:overload @:abstract public function setOutputProperties(oformat : java.util.Properties) : Void;
+	@:overload @:public @:abstract public function setOutputProperties(oformat : java.util.Properties) : Void;
 	
 	/**
 	* <p>Get a copy of the output properties for the transformation.</p>
@@ -207,7 +207,7 @@ extern class Transformer
 	* @see <a href="http://www.w3.org/TR/xslt#output">
 	*   XSL Transformations (XSLT) Version 1.0</a>
 	*/
-	@:overload @:abstract public function getOutputProperties() : java.util.Properties;
+	@:overload @:public @:abstract public function getOutputProperties() : java.util.Properties;
 	
 	/**
 	* Set an output property that will be in effect for the
@@ -236,7 +236,7 @@ extern class Transformer
 	*
 	* @see javax.xml.transform.OutputKeys
 	*/
-	@:overload @:abstract public function setOutputProperty(name : String, value : String) : Void;
+	@:overload @:public @:abstract public function setOutputProperty(name : String, value : String) : Void;
 	
 	/**
 	* <p>Get an output property that is in effect for the transformer.</p>
@@ -259,7 +259,7 @@ extern class Transformer
 	*
 	* @see javax.xml.transform.OutputKeys
 	*/
-	@:overload @:abstract public function getOutputProperty(name : String) : String;
+	@:overload @:public @:abstract public function getOutputProperty(name : String) : String;
 	
 	/**
 	* Set the error event listener in effect for the transformation.
@@ -268,7 +268,7 @@ extern class Transformer
 	*
 	* @throws IllegalArgumentException if listener is null.
 	*/
-	@:overload @:abstract public function setErrorListener(listener : javax.xml.transform.ErrorListener) : Void;
+	@:overload @:public @:abstract public function setErrorListener(listener : javax.xml.transform.ErrorListener) : Void;
 	
 	/**
 	* Get the error event handler in effect for the transformation.
@@ -276,7 +276,7 @@ extern class Transformer
 	*
 	* @return The current error handler, which should never be null.
 	*/
-	@:overload @:abstract public function getErrorListener() : javax.xml.transform.ErrorListener;
+	@:overload @:public @:abstract public function getErrorListener() : javax.xml.transform.ErrorListener;
 	
 	
 }

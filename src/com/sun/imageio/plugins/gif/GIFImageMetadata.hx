@@ -25,85 +25,85 @@ package com.sun.imageio.plugins.gif;
 */
 extern class GIFImageMetadata extends com.sun.imageio.plugins.gif.GIFMetadata
 {
-	public var imageLeftPosition : Int;
+	@:public public var imageLeftPosition : Int;
 	
-	public var imageTopPosition : Int;
+	@:public public var imageTopPosition : Int;
 	
-	public var imageWidth : Int;
+	@:public public var imageWidth : Int;
 	
-	public var imageHeight : Int;
+	@:public public var imageHeight : Int;
 	
-	public var interlaceFlag : Bool;
+	@:public public var interlaceFlag : Bool;
 	
-	public var sortFlag : Bool;
+	@:public public var sortFlag : Bool;
 	
-	public var localColorTable : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var localColorTable : java.NativeArray<java.StdTypes.Int8>;
 	
-	public var disposalMethod : Int;
+	@:public public var disposalMethod : Int;
 	
-	public var userInputFlag : Bool;
+	@:public public var userInputFlag : Bool;
 	
-	public var transparentColorFlag : Bool;
+	@:public public var transparentColorFlag : Bool;
 	
-	public var delayTime : Int;
+	@:public public var delayTime : Int;
 	
-	public var transparentColorIndex : Int;
+	@:public public var transparentColorIndex : Int;
 	
-	public var hasPlainTextExtension : Bool;
+	@:public public var hasPlainTextExtension : Bool;
 	
-	public var textGridLeft : Int;
+	@:public public var textGridLeft : Int;
 	
-	public var textGridTop : Int;
+	@:public public var textGridTop : Int;
 	
-	public var textGridWidth : Int;
+	@:public public var textGridWidth : Int;
 	
-	public var textGridHeight : Int;
+	@:public public var textGridHeight : Int;
 	
-	public var characterCellWidth : Int;
+	@:public public var characterCellWidth : Int;
 	
-	public var characterCellHeight : Int;
+	@:public public var characterCellHeight : Int;
 	
-	public var textForegroundColor : Int;
+	@:public public var textForegroundColor : Int;
 	
-	public var textBackgroundColor : Int;
+	@:public public var textBackgroundColor : Int;
 	
-	public var text : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var text : java.NativeArray<java.StdTypes.Int8>;
 	
-	public var applicationIDs : java.util.List<Dynamic>;
+	@:public public var applicationIDs : java.util.List<Dynamic>;
 	
-	public var authenticationCodes : java.util.List<Dynamic>;
+	@:public public var authenticationCodes : java.util.List<Dynamic>;
 	
-	public var applicationData : java.util.List<Dynamic>;
+	@:public public var applicationData : java.util.List<Dynamic>;
 	
-	public var comments : java.util.List<Dynamic>;
+	@:public public var comments : java.util.List<Dynamic>;
 	
-	@:overload private function new(standardMetadataFormatSupported : Bool, nativeMetadataFormatName : String, nativeMetadataFormatClassName : String, extraMetadataFormatNames : java.NativeArray<String>, extraMetadataFormatClassNames : java.NativeArray<String>) : Void;
+	@:overload @:protected private function new(standardMetadataFormatSupported : Bool, nativeMetadataFormatName : String, nativeMetadataFormatClassName : String, extraMetadataFormatNames : java.NativeArray<String>, extraMetadataFormatClassNames : java.NativeArray<String>) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload public function getAsTree(formatName : String) : org.w3c.dom.Node;
+	@:overload @:public override public function getAsTree(formatName : String) : org.w3c.dom.Node;
 	
-	@:overload public function getStandardChromaNode() : IIOMetadataNode;
+	@:overload @:public override public function getStandardChromaNode() : IIOMetadataNode;
 	
-	@:overload public function getStandardCompressionNode() : IIOMetadataNode;
+	@:overload @:public override public function getStandardCompressionNode() : IIOMetadataNode;
 	
-	@:overload public function getStandardDataNode() : IIOMetadataNode;
+	@:overload @:public override public function getStandardDataNode() : IIOMetadataNode;
 	
-	@:overload public function getStandardDimensionNode() : IIOMetadataNode;
+	@:overload @:public override public function getStandardDimensionNode() : IIOMetadataNode;
 	
-	@:overload public function getStandardTextNode() : IIOMetadataNode;
+	@:overload @:public override public function getStandardTextNode() : IIOMetadataNode;
 	
-	@:overload public function getStandardTransparencyNode() : IIOMetadataNode;
+	@:overload @:public override public function getStandardTransparencyNode() : IIOMetadataNode;
 	
-	@:overload public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
+	@:overload @:public override public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
 	
-	@:overload private function mergeNativeTree(root : org.w3c.dom.Node) : Void;
+	@:overload @:protected override private function mergeNativeTree(root : org.w3c.dom.Node) : Void;
 	
-	@:overload private function mergeStandardTree(root : org.w3c.dom.Node) : Void;
+	@:overload @:protected override private function mergeStandardTree(root : org.w3c.dom.Node) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }

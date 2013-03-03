@@ -35,7 +35,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @param crlData the encoded bytes, with no trailing padding.
 	* @exception CRLException on parsing errors.
 	*/
-	@:overload public function new(crlData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(crlData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Unmarshals an X.509 CRL from an DER value.
@@ -43,7 +43,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @param val a DER value holding at least one CRL
 	* @exception CRLException on parsing errors.
 	*/
-	@:overload public function new(val : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(val : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Unmarshals an X.509 CRL from an input stream. Only one CRL
@@ -52,7 +52,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @param inStrm an input stream holding at least one CRL
 	* @exception CRLException on parsing errors.
 	*/
-	@:overload public function new(inStrm : java.io.InputStream) : Void;
+	@:overload @:public public function new(inStrm : java.io.InputStream) : Void;
 	
 	/**
 	* Initial CRL constructor, no revoked certs, and no extensions.
@@ -61,7 +61,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @param thisUpdate the Date of this issue.
 	* @param nextUpdate the Date of the next CRL.
 	*/
-	@:overload public function new(issuer : sun.security.x509.X500Name, thisDate : java.util.Date, nextDate : java.util.Date) : Void;
+	@:overload @:public public function new(issuer : sun.security.x509.X500Name, thisDate : java.util.Date, nextDate : java.util.Date) : Void;
 	
 	/**
 	* CRL constructor, revoked certs, no extensions.
@@ -73,7 +73,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	*
 	* @exception CRLException on parsing/construction errors.
 	*/
-	@:overload public function new(issuer : sun.security.x509.X500Name, thisDate : java.util.Date, nextDate : java.util.Date, badCerts : java.NativeArray<java.security.cert.X509CRLEntry>) : Void;
+	@:overload @:public public function new(issuer : sun.security.x509.X500Name, thisDate : java.util.Date, nextDate : java.util.Date, badCerts : java.NativeArray<java.security.cert.X509CRLEntry>) : Void;
 	
 	/**
 	* CRL constructor, revoked certs and extensions.
@@ -86,21 +86,21 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	*
 	* @exception CRLException on parsing/construction errors.
 	*/
-	@:overload public function new(issuer : sun.security.x509.X500Name, thisDate : java.util.Date, nextDate : java.util.Date, badCerts : java.NativeArray<java.security.cert.X509CRLEntry>, crlExts : sun.security.x509.CRLExtensions) : Void;
+	@:overload @:public public function new(issuer : sun.security.x509.X500Name, thisDate : java.util.Date, nextDate : java.util.Date, badCerts : java.NativeArray<java.security.cert.X509CRLEntry>, crlExts : sun.security.x509.CRLExtensions) : Void;
 	
 	/**
 	* Returned the encoding as an uncloned byte array. Callers must
 	* guarantee that they neither modify it nor expose it to untrusted
 	* code.
 	*/
-	@:overload public function getEncodedInternal() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncodedInternal() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the ASN.1 DER encoded form of this CRL.
 	*
 	* @exception CRLException if an encoding error occurs.
 	*/
-	@:overload override public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Encodes the "to-be-signed" CRL to the OutputStream.
@@ -108,7 +108,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @param out the OutputStream to write to.
 	* @exception CRLException on encoding errors.
 	*/
-	@:overload public function encodeInfo(out : java.io.OutputStream) : Void;
+	@:overload @:public public function encodeInfo(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Verifies that this CRL was signed using the
@@ -123,7 +123,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @exception SignatureException on signature errors.
 	* @exception CRLException on encoding errors.
 	*/
-	@:overload override public function verify(key : java.security.PublicKey) : Void;
+	@:overload @:public override public function verify(key : java.security.PublicKey) : Void;
 	
 	/**
 	* Verifies that this CRL was signed using the
@@ -141,7 +141,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @exception SignatureException on signature errors.
 	* @exception CRLException on encoding errors.
 	*/
-	@:overload @:synchronized override public function verify(key : java.security.PublicKey, sigProvider : String) : Void;
+	@:overload @:public @:synchronized override public function verify(key : java.security.PublicKey, sigProvider : String) : Void;
 	
 	/**
 	* Encodes an X.509 CRL, and signs it using the given key.
@@ -156,7 +156,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @exception SignatureException on signature errors.
 	* @exception CRLException if any mandatory data was omitted.
 	*/
-	@:overload public function sign(key : java.security.PrivateKey, algorithm : String) : Void;
+	@:overload @:public public function sign(key : java.security.PrivateKey, algorithm : String) : Void;
 	
 	/**
 	* Encodes an X.509 CRL, and signs it using the given key.
@@ -172,14 +172,14 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @exception SignatureException on signature errors.
 	* @exception CRLException if any mandatory data was omitted.
 	*/
-	@:overload public function sign(key : java.security.PrivateKey, algorithm : String, provider : String) : Void;
+	@:overload @:public public function sign(key : java.security.PrivateKey, algorithm : String, provider : String) : Void;
 	
 	/**
 	* Returns a printable string of this CRL.
 	*
 	* @return value of this CRL in a printable form.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Checks whether the given certificate is on this CRL.
@@ -188,7 +188,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @return true if the given certificate is on this CRL,
 	* false otherwise.
 	*/
-	@:overload override public function isRevoked(cert : java.security.cert.Certificate) : Bool;
+	@:overload @:public override public function isRevoked(cert : java.security.cert.Certificate) : Bool;
 	
 	/**
 	* Gets the version number from this CRL.
@@ -200,7 +200,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* </pre>
 	* @return the version number, i.e. 1 or 2.
 	*/
-	@:overload override public function getVersion() : Int;
+	@:overload @:public override public function getVersion() : Int;
 	
 	/**
 	* Gets the issuer distinguished name from this CRL.
@@ -230,13 +230,13 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* TeletexString or UniversalString.
 	* @return the issuer name.
 	*/
-	@:overload override public function getIssuerDN() : java.security.Principal;
+	@:overload @:public override public function getIssuerDN() : java.security.Principal;
 	
 	/**
 	* Return the issuer as X500Principal. Overrides method in X509CRL
 	* to provide a slightly more efficient version.
 	*/
-	@:overload override public function getIssuerX500Principal() : javax.security.auth.x500.X500Principal;
+	@:overload @:public override public function getIssuerX500Principal() : javax.security.auth.x500.X500Principal;
 	
 	/**
 	* Gets the thisUpdate date from the CRL.
@@ -244,7 +244,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	*
 	* @return the thisUpdate date from the CRL.
 	*/
-	@:overload override public function getThisUpdate() : java.util.Date;
+	@:overload @:public override public function getThisUpdate() : java.util.Date;
 	
 	/**
 	* Gets the nextUpdate date from the CRL.
@@ -252,7 +252,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @return the nextUpdate date from the CRL, or null if
 	* not present.
 	*/
-	@:overload override public function getNextUpdate() : java.util.Date;
+	@:overload @:public override public function getNextUpdate() : java.util.Date;
 	
 	/**
 	* Gets the CRL entry with the given serial number from this CRL.
@@ -261,12 +261,12 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* no such entry exists in the CRL.
 	* @see X509CRLEntry
 	*/
-	@:overload override public function getRevokedCertificate(serialNumber : java.math.BigInteger) : java.security.cert.X509CRLEntry;
+	@:overload @:public override public function getRevokedCertificate(serialNumber : java.math.BigInteger) : java.security.cert.X509CRLEntry;
 	
 	/**
 	* Gets the CRL entry for the given certificate.
 	*/
-	@:overload override public function getRevokedCertificate(cert : java.security.cert.X509Certificate) : java.security.cert.X509CRLEntry;
+	@:overload @:public override public function getRevokedCertificate(cert : java.security.cert.X509Certificate) : java.security.cert.X509CRLEntry;
 	
 	/**
 	* Gets all the revoked certificates from the CRL.
@@ -276,7 +276,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* none.
 	* @see X509CRLEntry
 	*/
-	@:overload override public function getRevokedCertificates() : java.util.Set<java.security.cert.X509CRLEntry>;
+	@:overload @:public override public function getRevokedCertificates() : java.util.Set<java.security.cert.X509CRLEntry>;
 	
 	/**
 	* Gets the DER encoded CRL information, the
@@ -286,14 +286,14 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @return the DER encoded CRL information.
 	* @exception CRLException on encoding errors.
 	*/
-	@:overload override public function getTBSCertList() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getTBSCertList() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the raw Signature bits from the CRL.
 	*
 	* @return the signature.
 	*/
-	@:overload override public function getSignature() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getSignature() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the signature algorithm name for the CRL
@@ -310,7 +310,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	*
 	* @return the signature algorithm name.
 	*/
-	@:overload override public function getSigAlgName() : String;
+	@:overload @:public override public function getSigAlgName() : String;
 	
 	/**
 	* Gets the signature algorithm OID string from the CRL.
@@ -325,7 +325,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	*
 	* @return the signature algorithm oid string.
 	*/
-	@:overload override public function getSigAlgOID() : String;
+	@:overload @:public override public function getSigAlgOID() : String;
 	
 	/**
 	* Gets the DER encoded signature algorithm parameters from this
@@ -336,14 +336,14 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @return the DER encoded signature algorithm parameters, or
 	*         null if no parameters are present.
 	*/
-	@:overload override public function getSigAlgParams() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getSigAlgParams() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the signature AlgorithmId from the CRL.
 	*
 	* @return the signature AlgorithmId
 	*/
-	@:overload public function getSigAlgId() : sun.security.x509.AlgorithmId;
+	@:overload @:public public function getSigAlgId() : sun.security.x509.AlgorithmId;
 	
 	/**
 	* return the AuthorityKeyIdentifier, if any.
@@ -352,7 +352,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	*          (if no AuthorityKeyIdentifierExtension)
 	* @throws IOException on error
 	*/
-	@:overload public function getAuthKeyId() : sun.security.x509.KeyIdentifier;
+	@:overload @:public public function getAuthKeyId() : sun.security.x509.KeyIdentifier;
 	
 	/**
 	* return the AuthorityKeyIdentifierExtension, if any.
@@ -360,7 +360,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @returns AuthorityKeyIdentifierExtension or null (if no such extension)
 	* @throws IOException on error
 	*/
-	@:overload public function getAuthKeyIdExtension() : sun.security.x509.AuthorityKeyIdentifierExtension;
+	@:overload @:public public function getAuthKeyIdExtension() : sun.security.x509.AuthorityKeyIdentifierExtension;
 	
 	/**
 	* return the CRLNumberExtension, if any.
@@ -368,7 +368,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @returns CRLNumberExtension or null (if no such extension)
 	* @throws IOException on error
 	*/
-	@:overload public function getCRLNumberExtension() : sun.security.x509.CRLNumberExtension;
+	@:overload @:public public function getCRLNumberExtension() : sun.security.x509.CRLNumberExtension;
 	
 	/**
 	* return the CRL number from the CRLNumberExtension, if any.
@@ -376,7 +376,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @returns number or null (if no such extension)
 	* @throws IOException on error
 	*/
-	@:overload public function getCRLNumber() : java.math.BigInteger;
+	@:overload @:public public function getCRLNumber() : java.math.BigInteger;
 	
 	/**
 	* return the DeltaCRLIndicatorExtension, if any.
@@ -384,7 +384,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @returns DeltaCRLIndicatorExtension or null (if no such extension)
 	* @throws IOException on error
 	*/
-	@:overload public function getDeltaCRLIndicatorExtension() : sun.security.x509.DeltaCRLIndicatorExtension;
+	@:overload @:public public function getDeltaCRLIndicatorExtension() : sun.security.x509.DeltaCRLIndicatorExtension;
 	
 	/**
 	* return the base CRL number from the DeltaCRLIndicatorExtension, if any.
@@ -392,7 +392,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @returns number or null (if no such extension)
 	* @throws IOException on error
 	*/
-	@:overload public function getBaseCRLNumber() : java.math.BigInteger;
+	@:overload @:public public function getBaseCRLNumber() : java.math.BigInteger;
 	
 	/**
 	* return the IssuerAlternativeNameExtension, if any.
@@ -400,7 +400,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @returns IssuerAlternativeNameExtension or null (if no such extension)
 	* @throws IOException on error
 	*/
-	@:overload public function getIssuerAltNameExtension() : sun.security.x509.IssuerAlternativeNameExtension;
+	@:overload @:public public function getIssuerAltNameExtension() : sun.security.x509.IssuerAlternativeNameExtension;
 	
 	/**
 	* return the IssuingDistributionPointExtension, if any.
@@ -409,13 +409,13 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	*          (if no such extension)
 	* @throws IOException on error
 	*/
-	@:overload public function getIssuingDistributionPointExtension() : sun.security.x509.IssuingDistributionPointExtension;
+	@:overload @:public public function getIssuingDistributionPointExtension() : sun.security.x509.IssuingDistributionPointExtension;
 	
 	/**
 	* Return true if a critical extension is found that is
 	* not supported, otherwise return false.
 	*/
-	@:overload override public function hasUnsupportedCriticalExtension() : Bool;
+	@:overload @:public override public function hasUnsupportedCriticalExtension() : Bool;
 	
 	/**
 	* Gets a Set of the extension(s) marked CRITICAL in the
@@ -425,7 +425,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @return a set of the extension oid strings in the
 	* CRL that are marked critical.
 	*/
-	@:overload override public function getCriticalExtensionOIDs() : java.util.Set<String>;
+	@:overload @:public override public function getCriticalExtensionOIDs() : java.util.Set<String>;
 	
 	/**
 	* Gets a Set of the extension(s) marked NON-CRITICAL in the
@@ -435,7 +435,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @return a set of the extension oid strings in the
 	* CRL that are NOT marked critical.
 	*/
-	@:overload override public function getNonCriticalExtensionOIDs() : java.util.Set<String>;
+	@:overload @:public override public function getNonCriticalExtensionOIDs() : java.util.Set<String>;
 	
 	/**
 	* Gets the DER encoded OCTET string for the extension value
@@ -448,7 +448,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @param oid the Object Identifier value for the extension.
 	* @return the der encoded octet string of the extension value.
 	*/
-	@:overload override public function getExtensionValue(oid : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getExtensionValue(oid : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* get an extension
@@ -457,7 +457,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @returns Object of type <extension> or null, if not found
 	* @throws IOException on error
 	*/
-	@:overload public function getExtension(oid : sun.security.util.ObjectIdentifier) : Dynamic;
+	@:overload @:public public function getExtension(oid : sun.security.util.ObjectIdentifier) : Dynamic;
 	
 	/**
 	* Extract the issuer X500Principal from an X509CRL. Parses the encoded
@@ -465,7 +465,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	*
 	* Called by java.security.cert.X509CRL.getIssuerX500Principal().
 	*/
-	@:native('getIssuerX500Principal') @:overload public static function _getIssuerX500Principal(crl : java.security.cert.X509CRL) : javax.security.auth.x500.X500Principal;
+	@:native('getIssuerX500Principal') @:overload @:public @:static public static function _getIssuerX500Principal(crl : java.security.cert.X509CRL) : javax.security.auth.x500.X500Principal;
 	
 	/**
 	* Returned the encoding of the given certificate for internal use.
@@ -473,16 +473,16 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* to untrusted code. Uses getEncodedInternal() if the certificate
 	* is instance of X509CertImpl, getEncoded() otherwise.
 	*/
-	@:native('getEncodedInternal') @:overload public static function _getEncodedInternal(crl : java.security.cert.X509CRL) : java.NativeArray<java.StdTypes.Int8>;
+	@:native('getEncodedInternal') @:overload @:public @:static public static function _getEncodedInternal(crl : java.security.cert.X509CRL) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Utility method to convert an arbitrary instance of X509CRL
 	* to a X509CRLImpl. Does a cast if possible, otherwise reparses
 	* the encoding.
 	*/
-	@:overload public static function toImpl(crl : java.security.cert.X509CRL) : sun.security.x509.X509CRLImpl;
+	@:overload @:public @:static public static function toImpl(crl : java.security.cert.X509CRL) : sun.security.x509.X509CRLImpl;
 	
-	@:overload public function derEncode(out : java.io.OutputStream) : Void;
+	@:overload @:public public function derEncode(out : java.io.OutputStream) : Void;
 	
 	
 }
@@ -498,16 +498,16 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* @param o the other object to compare with
 	* @return true if equal, false otherwise
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for this X509IssuerSerial.
 	*
 	* @return the hash code value
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function compareTo(another : sun.security.x509.X509CRLImpl.X509CRLImpl_X509IssuerSerial) : Int;
+	@:overload @:public public function compareTo(another : sun.security.x509.X509CRLImpl.X509CRLImpl_X509IssuerSerial) : Int;
 	
 	
 }

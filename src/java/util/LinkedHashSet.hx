@@ -123,7 +123,7 @@ package java.util;
 	* @throws     IllegalArgumentException  if the initial capacity is less
 	*               than zero, or if the load factor is nonpositive
 	*/
-	@:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
 	/**
 	* Constructs a new, empty linked hash set with the specified initial
@@ -133,13 +133,13 @@ package java.util;
 	* @throws  IllegalArgumentException if the initial capacity is less
 	*              than zero
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs a new, empty linked hash set with the default initial
 	* capacity (16) and load factor (0.75).
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new linked hash set with the same elements as the
@@ -151,7 +151,7 @@ package java.util;
 	*           this set
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload public function new(c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	
 }

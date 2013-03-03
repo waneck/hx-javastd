@@ -25,27 +25,27 @@ package com.sun.imageio.plugins.wbmp;
 */
 extern class WBMPMetadata extends javax.imageio.metadata.IIOMetadata
 {
-	public var wbmpType : Int;
+	@:public public var wbmpType : Int;
 	
-	public var width : Int;
+	@:public public var width : Int;
 	
-	public var height : Int;
+	@:public public var height : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload public function getAsTree(formatName : String) : org.w3c.dom.Node;
+	@:overload @:public override public function getAsTree(formatName : String) : org.w3c.dom.Node;
 	
-	@:overload public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
+	@:overload @:public override public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
 	
-	@:overload public function mergeTree(formatName : String, root : org.w3c.dom.Node) : Void;
+	@:overload @:public override public function mergeTree(formatName : String, root : org.w3c.dom.Node) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload private function getStandardChromaNode() : IIOMetadataNode;
+	@:overload @:protected override private function getStandardChromaNode() : IIOMetadataNode;
 	
-	@:overload private function getStandardDimensionNode() : IIOMetadataNode;
+	@:overload @:protected override private function getStandardDimensionNode() : IIOMetadataNode;
 	
 	
 }

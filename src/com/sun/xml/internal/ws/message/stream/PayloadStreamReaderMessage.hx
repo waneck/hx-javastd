@@ -25,35 +25,35 @@ package com.sun.xml.internal.ws.message.stream;
 */
 extern class PayloadStreamReaderMessage extends com.sun.xml.internal.ws.message.AbstractMessageImpl
 {
-	@:overload public function new(reader : javax.xml.stream.XMLStreamReader, soapVer : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
+	@:overload @:public public function new(reader : javax.xml.stream.XMLStreamReader, soapVer : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
-	@:overload public function new(headers : com.sun.xml.internal.ws.api.message.HeaderList, reader : javax.xml.stream.XMLStreamReader, attSet : com.sun.xml.internal.ws.api.message.AttachmentSet, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
+	@:overload @:public public function new(headers : com.sun.xml.internal.ws.api.message.HeaderList, reader : javax.xml.stream.XMLStreamReader, attSet : com.sun.xml.internal.ws.api.message.AttachmentSet, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
-	@:overload public function hasHeaders() : Bool;
+	@:overload @:public override public function hasHeaders() : Bool;
 	
-	@:overload public function getHeaders() : com.sun.xml.internal.ws.api.message.HeaderList;
+	@:overload @:public override public function getHeaders() : com.sun.xml.internal.ws.api.message.HeaderList;
 	
-	@:overload public function getAttachments() : com.sun.xml.internal.ws.api.message.AttachmentSet;
+	@:overload @:public override public function getAttachments() : com.sun.xml.internal.ws.api.message.AttachmentSet;
 	
-	@:overload public function getPayloadLocalPart() : String;
+	@:overload @:public override public function getPayloadLocalPart() : String;
 	
-	@:overload public function getPayloadNamespaceURI() : String;
+	@:overload @:public override public function getPayloadNamespaceURI() : String;
 	
-	@:overload public function hasPayload() : Bool;
+	@:overload @:public override public function hasPayload() : Bool;
 	
-	@:overload public function readPayloadAsSource() : javax.xml.transform.Source;
+	@:overload @:public override public function readPayloadAsSource() : javax.xml.transform.Source;
 	
-	@:overload public function readPayload() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function readPayload() : javax.xml.stream.XMLStreamReader;
 	
-	@:overload public function writePayloadTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function writePayloadTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload public function readPayloadAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
+	@:overload @:public override public function readPayloadAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
 	
-	@:overload public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public override public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload private function writePayloadTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, fragment : Bool) : Void;
+	@:overload @:protected override private function writePayloadTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, fragment : Bool) : Void;
 	
-	@:overload public function copy() : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public override public function copy() : com.sun.xml.internal.ws.api.message.Message;
 	
 	
 }

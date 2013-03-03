@@ -30,75 +30,75 @@ extern class ModelAbstractOscillator implements com.sun.media.sound.ModelOscilla
 	*
 	* @author Karl Helgason
 	*/
-	private var pitch : Single;
+	@:protected private var pitch : Single;
 	
-	private var samplerate : Single;
+	@:protected private var samplerate : Single;
 	
-	private var channel : javax.sound.midi.MidiChannel;
+	@:protected private var channel : javax.sound.midi.MidiChannel;
 	
-	private var voice : javax.sound.midi.VoiceStatus;
+	@:protected private var voice : javax.sound.midi.VoiceStatus;
 	
-	private var noteNumber : Int;
+	@:protected private var noteNumber : Int;
 	
-	private var velocity : Int;
+	@:protected private var velocity : Int;
 	
-	private var on : Bool;
+	@:protected private var on : Bool;
 	
-	@:overload public function init() : Void;
+	@:overload @:public public function init() : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function noteOff(velocity : Int) : Void;
+	@:overload @:public public function noteOff(velocity : Int) : Void;
 	
-	@:overload public function noteOn(channel : javax.sound.midi.MidiChannel, voice : javax.sound.midi.VoiceStatus, noteNumber : Int, velocity : Int) : Void;
+	@:overload @:public public function noteOn(channel : javax.sound.midi.MidiChannel, voice : javax.sound.midi.VoiceStatus, noteNumber : Int, velocity : Int) : Void;
 	
-	@:overload public function read(buffer : java.NativeArray<java.NativeArray<Single>>, offset : Int, len : Int) : Int;
+	@:overload @:public public function read(buffer : java.NativeArray<java.NativeArray<Single>>, offset : Int, len : Int) : Int;
 	
-	@:overload public function getChannel() : javax.sound.midi.MidiChannel;
+	@:overload @:public public function getChannel() : javax.sound.midi.MidiChannel;
 	
-	@:overload public function getVoice() : javax.sound.midi.VoiceStatus;
+	@:overload @:public public function getVoice() : javax.sound.midi.VoiceStatus;
 	
-	@:overload public function getNoteNumber() : Int;
+	@:overload @:public public function getNoteNumber() : Int;
 	
-	@:overload public function getVelocity() : Int;
+	@:overload @:public public function getVelocity() : Int;
 	
-	@:overload public function isOn() : Bool;
+	@:overload @:public public function isOn() : Bool;
 	
-	@:overload public function setPitch(pitch : Single) : Void;
+	@:overload @:public public function setPitch(pitch : Single) : Void;
 	
-	@:overload public function getPitch() : Single;
+	@:overload @:public public function getPitch() : Single;
 	
-	@:overload public function setSampleRate(samplerate : Single) : Void;
+	@:overload @:public public function setSampleRate(samplerate : Single) : Void;
 	
-	@:overload public function getSampleRate() : Single;
+	@:overload @:public public function getSampleRate() : Single;
 	
-	@:overload public function getAttenuation() : Single;
+	@:overload @:public public function getAttenuation() : Single;
 	
-	@:overload public function getChannels() : Int;
+	@:overload @:public public function getChannels() : Int;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getPatch() : javax.sound.midi.Patch;
+	@:overload @:public public function getPatch() : javax.sound.midi.Patch;
 	
-	@:overload public function open(samplerate : Single) : com.sun.media.sound.ModelOscillatorStream;
+	@:overload @:public public function open(samplerate : Single) : com.sun.media.sound.ModelOscillatorStream;
 	
-	@:overload public function getPerformer() : com.sun.media.sound.ModelPerformer;
+	@:overload @:public public function getPerformer() : com.sun.media.sound.ModelPerformer;
 	
-	@:overload public function getInstrument() : com.sun.media.sound.ModelInstrument;
+	@:overload @:public public function getInstrument() : com.sun.media.sound.ModelInstrument;
 	
-	@:overload public function getSoundBank() : javax.sound.midi.Soundbank;
+	@:overload @:public public function getSoundBank() : javax.sound.midi.Soundbank;
 	
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
-	@:overload public function getInstrument(patch : javax.sound.midi.Patch) : javax.sound.midi.Instrument;
+	@:overload @:public public function getInstrument(patch : javax.sound.midi.Patch) : javax.sound.midi.Instrument;
 	
-	@:overload public function getInstruments() : java.NativeArray<javax.sound.midi.Instrument>;
+	@:overload @:public public function getInstruments() : java.NativeArray<javax.sound.midi.Instrument>;
 	
-	@:overload public function getResources() : java.NativeArray<javax.sound.midi.SoundbankResource>;
+	@:overload @:public public function getResources() : java.NativeArray<javax.sound.midi.SoundbankResource>;
 	
-	@:overload public function getVendor() : String;
+	@:overload @:public public function getVendor() : String;
 	
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
 	
 }

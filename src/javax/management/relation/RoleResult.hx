@@ -32,7 +32,7 @@ extern class RoleResult implements java.io.Serializable
 	* @param unresolvedList  list of roles not accessed (with problem
 	* descriptions).
 	*/
-	@:overload public function new(list : javax.management.relation.RoleList, unresolvedList : javax.management.relation.RoleUnresolvedList) : Void;
+	@:overload @:public public function new(list : javax.management.relation.RoleList, unresolvedList : javax.management.relation.RoleUnresolvedList) : Void;
 	
 	/**
 	* Retrieves list of roles successfully accessed.
@@ -41,7 +41,7 @@ extern class RoleResult implements java.io.Serializable
 	*
 	* @see #setRoles
 	*/
-	@:overload public function getRoles() : javax.management.relation.RoleList;
+	@:overload @:public public function getRoles() : javax.management.relation.RoleList;
 	
 	/**
 	* Retrieves list of roles unsuccessfully accessed.
@@ -50,7 +50,7 @@ extern class RoleResult implements java.io.Serializable
 	*
 	* @see #setRolesUnresolved
 	*/
-	@:overload public function getRolesUnresolved() : javax.management.relation.RoleUnresolvedList;
+	@:overload @:public public function getRolesUnresolved() : javax.management.relation.RoleUnresolvedList;
 	
 	/**
 	* Sets list of roles successfully accessed.
@@ -59,7 +59,7 @@ extern class RoleResult implements java.io.Serializable
 	*
 	* @see #getRoles
 	*/
-	@:overload public function setRoles(list : javax.management.relation.RoleList) : Void;
+	@:overload @:public public function setRoles(list : javax.management.relation.RoleList) : Void;
 	
 	/**
 	* Sets list of roles unsuccessfully accessed.
@@ -68,7 +68,7 @@ extern class RoleResult implements java.io.Serializable
 	*
 	* @see #getRolesUnresolved
 	*/
-	@:overload public function setRolesUnresolved(unresolvedList : javax.management.relation.RoleUnresolvedList) : Void;
+	@:overload @:public public function setRolesUnresolved(unresolvedList : javax.management.relation.RoleUnresolvedList) : Void;
 	
 	
 }

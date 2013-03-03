@@ -25,21 +25,21 @@ package com.sun.media.sound;
 */
 extern class SoftAudioBuffer
 {
-	@:overload public function new(size : Int, format : javax.sound.sampled.AudioFormat) : Void;
+	@:overload @:public public function new(size : Int, format : javax.sound.sampled.AudioFormat) : Void;
 	
-	@:overload public function swap(swap : com.sun.media.sound.SoftAudioBuffer) : Void;
+	@:overload @:public public function swap(swap : com.sun.media.sound.SoftAudioBuffer) : Void;
 	
-	@:overload public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public public function getFormat() : javax.sound.sampled.AudioFormat;
 	
-	@:overload public function getSize() : Int;
+	@:overload @:public public function getSize() : Int;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function isSilent() : Bool;
+	@:overload @:public public function isSilent() : Bool;
 	
-	@:overload public function array() : java.NativeArray<Single>;
+	@:overload @:public public function array() : java.NativeArray<Single>;
 	
-	@:overload public function get(buffer : java.NativeArray<java.StdTypes.Int8>, channel : Int) : Void;
+	@:overload @:public public function get(buffer : java.NativeArray<java.StdTypes.Int8>, channel : Int) : Void;
 	
 	
 }

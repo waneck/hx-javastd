@@ -45,7 +45,7 @@ extern class CMMException extends java.lang.RuntimeException
 	*  Constructs a CMMException with the specified detail message.
 	*  @param s the specified detail message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

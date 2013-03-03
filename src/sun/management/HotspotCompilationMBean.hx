@@ -30,7 +30,7 @@ extern interface HotspotCompilationMBean
 	*
 	* @return the number of compiler threads.
 	*/
-	@:overload public function getCompilerThreadCount() : Int;
+	@:overload @:public public function getCompilerThreadCount() : Int;
 	
 	/**
 	* Returns the statistic of all compiler threads.
@@ -39,49 +39,49 @@ extern interface HotspotCompilationMBean
 	* the statistic of a compiler thread.
 	*
 	*/
-	@:overload public function getCompilerThreadStats() : java.util.List<sun.management.CompilerThreadStat>;
+	@:overload @:public public function getCompilerThreadStats() : java.util.List<sun.management.CompilerThreadStat>;
 	
 	/**
 	* Returns the total number of compiles.
 	*
 	* @return the total number of compiles.
 	*/
-	@:overload public function getTotalCompileCount() : haxe.Int64;
+	@:overload @:public public function getTotalCompileCount() : haxe.Int64;
 	
 	/**
 	* Returns the number of bailout compiles.
 	*
 	* @return the number of bailout compiles.
 	*/
-	@:overload public function getBailoutCompileCount() : haxe.Int64;
+	@:overload @:public public function getBailoutCompileCount() : haxe.Int64;
 	
 	/**
 	* Returns the number of invalidated compiles.
 	*
 	* @return the number of invalidated compiles.
 	*/
-	@:overload public function getInvalidatedCompileCount() : haxe.Int64;
+	@:overload @:public public function getInvalidatedCompileCount() : haxe.Int64;
 	
 	/**
 	* Returns the method information of the last compiled method.
 	*
 	* @return a {@link MethodInfo} of the last compiled method.
 	*/
-	@:overload public function getLastCompile() : sun.management.MethodInfo;
+	@:overload @:public public function getLastCompile() : sun.management.MethodInfo;
 	
 	/**
 	* Returns the method information of the last failed compile.
 	*
 	* @return a {@link MethodInfo} of the last failed compile.
 	*/
-	@:overload public function getFailedCompile() : sun.management.MethodInfo;
+	@:overload @:public public function getFailedCompile() : sun.management.MethodInfo;
 	
 	/**
 	* Returns the method information of the last invalidated compile.
 	*
 	* @return a {@link MethodInfo} of the last invalidated compile.
 	*/
-	@:overload public function getInvalidatedCompile() : sun.management.MethodInfo;
+	@:overload @:public public function getInvalidatedCompile() : sun.management.MethodInfo;
 	
 	/**
 	* Returns the number of bytes for the code of the
@@ -89,14 +89,14 @@ extern interface HotspotCompilationMBean
 	*
 	* @return the number of bytes for the code of the compiled methods.
 	*/
-	@:overload public function getCompiledMethodCodeSize() : haxe.Int64;
+	@:overload @:public public function getCompiledMethodCodeSize() : haxe.Int64;
 	
 	/**
 	* Returns the number of bytes occupied by the compiled methods.
 	*
 	* @return the number of bytes occupied by the compiled methods.
 	*/
-	@:overload public function getCompiledMethodSize() : haxe.Int64;
+	@:overload @:public public function getCompiledMethodSize() : haxe.Int64;
 	
 	/**
 	* Returns a list of internal counters maintained in the Java
@@ -105,7 +105,7 @@ extern interface HotspotCompilationMBean
 	* @return a list of internal counters maintained in the VM
 	* for the compilation system.
 	*/
-	@:overload public function getInternalCompilerCounters() : java.util.List<sun.management.counter.Counter>;
+	@:overload @:public public function getInternalCompilerCounters() : java.util.List<sun.management.counter.Counter>;
 	
 	
 }

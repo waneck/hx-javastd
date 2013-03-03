@@ -28,17 +28,17 @@ extern class HotSpotDiagnostic implements com.sun.management.HotSpotDiagnosticMX
 	/**
 	* Implementation of the diagnostic MBean for Hotspot VM.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:native public function dumpHeap(outputFile : String, live : Bool) : Void;
+	@:overload @:public @:native public function dumpHeap(outputFile : String, live : Bool) : Void;
 	
-	@:overload public function getDiagnosticOptions() : java.util.List<com.sun.management.VMOption>;
+	@:overload @:public public function getDiagnosticOptions() : java.util.List<com.sun.management.VMOption>;
 	
-	@:overload public function getVMOption(name : String) : com.sun.management.VMOption;
+	@:overload @:public public function getVMOption(name : String) : com.sun.management.VMOption;
 	
-	@:overload public function setVMOption(name : String, value : String) : Void;
+	@:overload @:public public function setVMOption(name : String, value : String) : Void;
 	
-	@:overload public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
 	
 }

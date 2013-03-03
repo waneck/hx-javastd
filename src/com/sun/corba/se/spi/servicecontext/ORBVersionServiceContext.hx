@@ -25,21 +25,21 @@ package com.sun.corba.se.spi.servicecontext;
 */
 extern class ORBVersionServiceContext extends com.sun.corba.se.spi.servicecontext.ServiceContext
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(ver : com.sun.corba.se.spi.orb.ORBVersion) : Void;
+	@:overload @:public public function new(ver : com.sun.corba.se.spi.orb.ORBVersion) : Void;
 	
-	@:overload public function new(is : org.omg.CORBA_2_3.portable.InputStream, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
+	@:overload @:public public function new(is : org.omg.CORBA_2_3.portable.InputStream, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
 	
-	public static var SERVICE_CONTEXT_ID(default, null) : Int;
+	@:public @:static @:final public static var SERVICE_CONTEXT_ID(default, null) : Int;
 	
-	@:overload public function getId() : Int;
+	@:overload @:public override public function getId() : Int;
 	
-	@:overload public function writeData(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public override public function writeData(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload public function getVersion() : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload @:public public function getVersion() : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

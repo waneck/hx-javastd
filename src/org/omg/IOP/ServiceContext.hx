@@ -8,14 +8,14 @@ package org.omg.IOP;
 extern class ServiceContext implements org.omg.CORBA.portable.IDLEntity
 {
 	/** The service context id */
-	public var context_id : Int;
+	@:public public var context_id : Int;
 	
 	/** The data associated with this service context */
-	public var context_data : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var context_data : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_context_id : Int, _context_data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(_context_id : Int, _context_data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

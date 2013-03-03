@@ -38,19 +38,19 @@ package javax.management;
 	*
 	* @param exp the expression whose value was inappropriate.
 	*/
-	@:overload public function new(exp : javax.management.ValueExp) : Void;
+	@:overload @:public public function new(exp : javax.management.ValueExp) : Void;
 	
 	/**
 	* Returns the <CODE>ValueExp</CODE> that originated the exception.
 	*
 	* @return the problematic {@link ValueExp}.
 	*/
-	@:overload public function getExp() : javax.management.ValueExp;
+	@:overload @:public public function getExp() : javax.management.ValueExp;
 	
 	/**
 	* Returns the string representing the object.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

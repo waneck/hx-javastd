@@ -29,37 +29,37 @@ extern class EncryptedPrivateKeyInfo
 	* Constructs (i.e., parses) an <code>EncryptedPrivateKeyInfo</code> from
 	* its encoding.
 	*/
-	@:overload public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs an <code>EncryptedPrivateKeyInfo</code> from the
 	* encryption algorithm and the encrypted data.
 	*/
-	@:overload public function new(algid : sun.security.x509.AlgorithmId, encryptedData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(algid : sun.security.x509.AlgorithmId, encryptedData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the encryption algorithm.
 	*/
-	@:overload public function getAlgorithm() : sun.security.x509.AlgorithmId;
+	@:overload @:public public function getAlgorithm() : sun.security.x509.AlgorithmId;
 	
 	/**
 	* Returns the encrypted data.
 	*/
-	@:overload public function getEncryptedData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncryptedData() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the ASN.1 encoding of this class.
 	*/
-	@:overload public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode for this EncryptedPrivateKeyInfo.
 	*
 	* @return a hashcode for this EncryptedPrivateKeyInfo.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

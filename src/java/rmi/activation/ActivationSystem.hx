@@ -48,7 +48,7 @@ extern interface ActivationSystem extends java.rmi.Remote
 	* @exception RemoteException if remote call fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function registerObject(desc : java.rmi.activation.ActivationDesc) : java.rmi.activation.ActivationID;
+	@:require(java2) @:overload @:public public function registerObject(desc : java.rmi.activation.ActivationDesc) : java.rmi.activation.ActivationID;
 	
 	/**
 	* Remove the activation id and associated descriptor previously
@@ -62,7 +62,7 @@ extern interface ActivationSystem extends java.rmi.Remote
 	* @exception RemoteException if remote call fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function unregisterObject(id : java.rmi.activation.ActivationID) : Void;
+	@:require(java2) @:overload @:public public function unregisterObject(id : java.rmi.activation.ActivationID) : Void;
 	
 	/**
 	* Register the activation group. An activation group must be
@@ -75,7 +75,7 @@ extern interface ActivationSystem extends java.rmi.Remote
 	* @exception RemoteException if remote call fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function registerGroup(desc : java.rmi.activation.ActivationGroupDesc) : java.rmi.activation.ActivationGroupID;
+	@:require(java2) @:overload @:public public function registerGroup(desc : java.rmi.activation.ActivationGroupDesc) : java.rmi.activation.ActivationGroupID;
 	
 	/**
 	* Callback to inform activation system that group is now
@@ -96,7 +96,7 @@ extern interface ActivationSystem extends java.rmi.Remote
 	* @exception RemoteException if remote call fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function activeGroup(id : java.rmi.activation.ActivationGroupID, group : java.rmi.activation.ActivationInstantiator, incarnation : haxe.Int64) : java.rmi.activation.ActivationMonitor;
+	@:require(java2) @:overload @:public public function activeGroup(id : java.rmi.activation.ActivationGroupID, group : java.rmi.activation.ActivationInstantiator, incarnation : haxe.Int64) : java.rmi.activation.ActivationMonitor;
 	
 	/**
 	* Remove the activation group. An activation group makes this call back
@@ -112,7 +112,7 @@ extern interface ActivationSystem extends java.rmi.Remote
 	* @exception RemoteException if remote call fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function unregisterGroup(id : java.rmi.activation.ActivationGroupID) : Void;
+	@:require(java2) @:overload @:public public function unregisterGroup(id : java.rmi.activation.ActivationGroupID) : Void;
 	
 	/**
 	* Shutdown the activation system. Destroys all groups spawned by
@@ -121,7 +121,7 @@ extern interface ActivationSystem extends java.rmi.Remote
 	* daemon
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function shutdown() : Void;
+	@:require(java2) @:overload @:public public function shutdown() : Void;
 	
 	/**
 	* Set the activation descriptor, <code>desc</code> for the object with
@@ -141,7 +141,7 @@ extern interface ActivationSystem extends java.rmi.Remote
 	* @see #getActivationDesc
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setActivationDesc(id : java.rmi.activation.ActivationID, desc : java.rmi.activation.ActivationDesc) : java.rmi.activation.ActivationDesc;
+	@:require(java2) @:overload @:public public function setActivationDesc(id : java.rmi.activation.ActivationID, desc : java.rmi.activation.ActivationDesc) : java.rmi.activation.ActivationDesc;
 	
 	/**
 	* Set the activation group descriptor, <code>desc</code> for the object
@@ -159,7 +159,7 @@ extern interface ActivationSystem extends java.rmi.Remote
 	* @see #getActivationGroupDesc
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setActivationGroupDesc(id : java.rmi.activation.ActivationGroupID, desc : java.rmi.activation.ActivationGroupDesc) : java.rmi.activation.ActivationGroupDesc;
+	@:require(java2) @:overload @:public public function setActivationGroupDesc(id : java.rmi.activation.ActivationGroupID, desc : java.rmi.activation.ActivationGroupDesc) : java.rmi.activation.ActivationGroupDesc;
 	
 	/**
 	* Returns the activation descriptor, for the object with the activation
@@ -173,7 +173,7 @@ extern interface ActivationSystem extends java.rmi.Remote
 	* @see #setActivationDesc
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getActivationDesc(id : java.rmi.activation.ActivationID) : java.rmi.activation.ActivationDesc;
+	@:require(java2) @:overload @:public public function getActivationDesc(id : java.rmi.activation.ActivationID) : java.rmi.activation.ActivationDesc;
 	
 	/**
 	* Returns the activation group descriptor, for the group
@@ -187,7 +187,7 @@ extern interface ActivationSystem extends java.rmi.Remote
 	* @see #setActivationGroupDesc
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getActivationGroupDesc(id : java.rmi.activation.ActivationGroupID) : java.rmi.activation.ActivationGroupDesc;
+	@:require(java2) @:overload @:public public function getActivationGroupDesc(id : java.rmi.activation.ActivationGroupID) : java.rmi.activation.ActivationGroupDesc;
 	
 	
 }

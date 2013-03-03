@@ -58,7 +58,7 @@ extern enum LauncherHelper
 /* duplicate of the native StdArg struct */
 @:native('sun$launcher$LauncherHelper$StdArg') @:internal extern class LauncherHelper_StdArg
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -78,5 +78,7 @@ extern enum LauncherHelper
 /* duplicate of the native StdArg struct */
 @:native('sun$launcher$LauncherHelper$StdArg') @:internal extern class LauncherHelper_StdArg
 {
+	@:overload @:public public function toString() : String;
+	
 	
 }

@@ -31,22 +31,22 @@ package com.sun.net.httpserver;
 */
 extern class BasicAuthenticator extends com.sun.net.httpserver.Authenticator
 {
-	private var realm : String;
+	@:protected private var realm : String;
 	
 	/**
 	* Creates a BasicAuthenticator for the given HTTP realm
 	* @param realm The HTTP Basic authentication realm
 	* @throws NullPointerException if the realm is an empty string
 	*/
-	@:overload public function new(realm : String) : Void;
+	@:overload @:public public function new(realm : String) : Void;
 	
 	/**
 	* returns the realm this BasicAuthenticator was created with
 	* @return the authenticator's realm string.
 	*/
-	@:overload public function getRealm() : String;
+	@:overload @:public public function getRealm() : String;
 	
-	@:overload public function authenticate(t : com.sun.net.httpserver.HttpExchange) : com.sun.net.httpserver.Authenticator.Authenticator_Result;
+	@:overload @:public override public function authenticate(t : com.sun.net.httpserver.HttpExchange) : com.sun.net.httpserver.Authenticator.Authenticator_Result;
 	
 	/**
 	* called for each incoming request to verify the
@@ -58,7 +58,7 @@ extern class BasicAuthenticator extends com.sun.net.httpserver.Authenticator
 	* @return <code>true</code> if the credentials are valid,
 	*    <code>false</code> otherwise.
 	*/
-	@:overload @:abstract public function checkCredentials(username : String, password : String) : Bool;
+	@:overload @:public @:abstract public function checkCredentials(username : String, password : String) : Bool;
 	
 	
 }

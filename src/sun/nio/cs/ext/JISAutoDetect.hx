@@ -25,49 +25,49 @@ package sun.nio.cs.ext;
 */
 extern class JISAutoDetect extends java.nio.charset.Charset implements sun.nio.cs.HistoricallyNamedCharset
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override public function canEncode() : Bool;
+	@:overload @:public override public function canEncode() : Bool;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload public function historicalName() : String;
+	@:overload @:public public function historicalName() : String;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	/**
 	* accessor methods used to share byte masking tables
 	* with the sun.io JISAutoDetect implementation
 	*/
-	@:overload public static function getByteMask1() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function getByteMask1() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function getByteMask2() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function getByteMask2() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:final public static function canBeSJIS1B(mask : Int) : Bool;
+	@:overload @:public @:final @:static public static function canBeSJIS1B(mask : Int) : Bool;
 	
-	@:overload @:final public static function canBeEUCJP(mask : Int) : Bool;
+	@:overload @:public @:final @:static public static function canBeEUCJP(mask : Int) : Bool;
 	
-	@:overload @:final public static function canBeEUCKana(mask1 : Int, mask2 : Int) : Bool;
+	@:overload @:public @:final @:static public static function canBeEUCKana(mask1 : Int, mask2 : Int) : Bool;
 	
 	
 }
 @:native('sun$nio$cs$ext$JISAutoDetect$Decoder') @:internal extern class JISAutoDetect_Decoder extends java.nio.charset.CharsetDecoder
 {
-	@:overload public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:public public function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function implReset() : Void;
+	@:overload @:protected override private function implReset() : Void;
 	
-	@:overload override private function implFlush(out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function implFlush(out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override public function isAutoDetecting() : Bool;
+	@:overload @:public override public function isAutoDetecting() : Bool;
 	
-	@:overload override public function isCharsetDetected() : Bool;
+	@:overload @:public override public function isCharsetDetected() : Bool;
 	
-	@:overload override public function detectedCharset() : java.nio.charset.Charset;
+	@:overload @:public override public function detectedCharset() : java.nio.charset.Charset;
 	
 	
 }

@@ -28,9 +28,9 @@ extern class ModelLoader
 	/**
 	* A convenience method to load schemas into a {@link Model}.
 	*/
-	@:native('load') @:overload public static function _load(opt : com.sun.tools.internal.xjc.Options, codeModel : com.sun.codemodel.internal.JCodeModel, er : com.sun.tools.internal.xjc.ErrorReceiver) : com.sun.tools.internal.xjc.model.Model;
+	@:native('load') @:overload @:public @:static public static function _load(opt : com.sun.tools.internal.xjc.Options, codeModel : com.sun.codemodel.internal.JCodeModel, er : com.sun.tools.internal.xjc.ErrorReceiver) : com.sun.tools.internal.xjc.model.Model;
 	
-	@:overload public function new(_opt : com.sun.tools.internal.xjc.Options, _codeModel : com.sun.codemodel.internal.JCodeModel, er : com.sun.tools.internal.xjc.ErrorReceiver) : Void;
+	@:overload @:public public function new(_opt : com.sun.tools.internal.xjc.Options, _codeModel : com.sun.codemodel.internal.JCodeModel, er : com.sun.tools.internal.xjc.ErrorReceiver) : Void;
 	
 	/**
 	* Builds DOMForest and performs the internalization.
@@ -38,12 +38,12 @@ extern class ModelLoader
 	* @throws SAXException
 	*      when a fatal error happens
 	*/
-	@:overload public function buildDOMForest(logic : com.sun.tools.internal.xjc.reader.internalizer.InternalizationLogic) : com.sun.tools.internal.xjc.reader.internalizer.DOMForest;
+	@:overload @:public public function buildDOMForest(logic : com.sun.tools.internal.xjc.reader.internalizer.InternalizationLogic) : com.sun.tools.internal.xjc.reader.internalizer.DOMForest;
 	
 	/**
 	* Parses a set of XML Schema files into an annotated grammar.
 	*/
-	@:overload public function loadXMLSchema() : com.sun.xml.internal.xsom.XSSchemaSet;
+	@:overload @:public public function loadXMLSchema() : com.sun.xml.internal.xsom.XSSchemaSet;
 	
 	/**
 	* Annotates the obtained schema set.
@@ -52,11 +52,11 @@ extern class ModelLoader
 	*      null if an error happens. In that case, the error messages
 	*      will be properly reported to the controller by this method.
 	*/
-	@:overload public function annotateXMLSchema(xs : com.sun.xml.internal.xsom.XSSchemaSet) : com.sun.tools.internal.xjc.model.Model;
+	@:overload @:public public function annotateXMLSchema(xs : com.sun.xml.internal.xsom.XSSchemaSet) : com.sun.tools.internal.xjc.model.Model;
 	
-	@:overload public function createXSOMParser(parser : com.sun.xml.internal.xsom.parser.XMLParser) : com.sun.xml.internal.xsom.parser.XSOMParser;
+	@:overload @:public public function createXSOMParser(parser : com.sun.xml.internal.xsom.parser.XMLParser) : com.sun.xml.internal.xsom.parser.XSOMParser;
 	
-	@:overload public function createXSOMParser(forest : com.sun.tools.internal.xjc.reader.internalizer.DOMForest) : com.sun.xml.internal.xsom.parser.XSOMParser;
+	@:overload @:public public function createXSOMParser(forest : com.sun.tools.internal.xjc.reader.internalizer.DOMForest) : com.sun.xml.internal.xsom.parser.XSOMParser;
 	
 	/**
 	* Parses a {@link DOMForest} into a {@link XSSchemaSet}.
@@ -64,7 +64,7 @@ extern class ModelLoader
 	* @return
 	*      null if the parsing failed.
 	*/
-	@:overload public function createXSOM(forest : com.sun.tools.internal.xjc.reader.internalizer.DOMForest, scdBasedBindingSet : com.sun.tools.internal.xjc.reader.internalizer.SCDBasedBindingSet) : com.sun.xml.internal.xsom.XSSchemaSet;
+	@:overload @:public public function createXSOM(forest : com.sun.tools.internal.xjc.reader.internalizer.DOMForest, scdBasedBindingSet : com.sun.tools.internal.xjc.reader.internalizer.SCDBasedBindingSet) : com.sun.xml.internal.xsom.XSSchemaSet;
 	
 	
 }
@@ -80,7 +80,7 @@ extern class ModelLoader
 */
 @:native('com$sun$tools$internal$xjc$ModelLoader$XMLSchemaParser') @:internal extern class ModelLoader_XMLSchemaParser implements com.sun.xml.internal.xsom.parser.XMLParser
 {
-	@:overload public function parse(source : org.xml.sax.InputSource, handler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, entityResolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function parse(source : org.xml.sax.InputSource, handler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, entityResolver : org.xml.sax.EntityResolver) : Void;
 	
 	
 }
@@ -90,7 +90,7 @@ extern class ModelLoader
 }
 @:native('com$sun$tools$internal$xjc$ModelLoader$SpeculationChecker') @:internal extern class ModelLoader_SpeculationChecker extends org.xml.sax.helpers.XMLFilterImpl
 {
-	@:overload override public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
 	
 	
 }

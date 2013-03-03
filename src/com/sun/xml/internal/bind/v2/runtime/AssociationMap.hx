@@ -26,20 +26,20 @@ package com.sun.xml.internal.bind.v2.runtime;
 extern class AssociationMap<XmlNode>
 {
 	/** Records the new element&lt;->inner peer association. */
-	@:overload public function addInner(element : XmlNode, inner : Dynamic) : Void;
+	@:overload @:public public function addInner(element : XmlNode, inner : Dynamic) : Void;
 	
 	/** Records the new element&lt;->outer peer association. */
-	@:overload public function addOuter(element : XmlNode, outer : Dynamic) : Void;
+	@:overload @:public public function addOuter(element : XmlNode, outer : Dynamic) : Void;
 	
-	@:overload public function addUsed(n : XmlNode) : Void;
+	@:overload @:public public function addUsed(n : XmlNode) : Void;
 	
-	@:overload public function byElement(e : Dynamic) : com.sun.xml.internal.bind.v2.runtime.AssociationMap.AssociationMap_Entry<XmlNode>;
+	@:overload @:public public function byElement(e : Dynamic) : com.sun.xml.internal.bind.v2.runtime.AssociationMap.AssociationMap_Entry<XmlNode>;
 	
-	@:overload public function byPeer(o : Dynamic) : com.sun.xml.internal.bind.v2.runtime.AssociationMap.AssociationMap_Entry<XmlNode>;
+	@:overload @:public public function byPeer(o : Dynamic) : com.sun.xml.internal.bind.v2.runtime.AssociationMap.AssociationMap_Entry<XmlNode>;
 	
-	@:overload public function getInnerPeer(element : XmlNode) : Dynamic;
+	@:overload @:public public function getInnerPeer(element : XmlNode) : Dynamic;
 	
-	@:overload public function getOuterPeer(element : XmlNode) : Dynamic;
+	@:overload @:public public function getOuterPeer(element : XmlNode) : Dynamic;
 	
 	
 }
@@ -57,11 +57,11 @@ extern class AssociationMap<XmlNode>
 */
 @:require(java0) @:native('com$sun$xml$internal$bind$v2$runtime$AssociationMap$Entry') @:internal extern class AssociationMap_Entry<XmlNode>
 {
-	@:overload public function element() : XmlNode;
+	@:overload @:public public function element() : XmlNode;
 	
-	@:overload public function inner() : Dynamic;
+	@:overload @:public public function inner() : Dynamic;
 	
-	@:overload public function outer() : Dynamic;
+	@:overload @:public public function outer() : Dynamic;
 	
 	
 }

@@ -27,57 +27,57 @@ package com.sun.xml.internal.fastinfoset.util;
 */
 extern class PrefixArray extends com.sun.xml.internal.fastinfoset.util.ValueArray
 {
-	public static var PREFIX_MAP_SIZE(default, null) : Int;
+	@:public @:static @:final public static var PREFIX_MAP_SIZE(default, null) : Int;
 	
-	public var _array : java.NativeArray<String>;
+	@:public public var _array : java.NativeArray<String>;
 	
-	public var _currentInScope : java.NativeArray<Int>;
+	@:public public var _currentInScope : java.NativeArray<Int>;
 	
-	public var _declarationId : Int;
+	@:public public var _declarationId : Int;
 	
-	@:overload public function new(initialCapacity : Int, maximumCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int, maximumCapacity : Int) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function countNamespacePool() : Int;
+	@:overload @:public public function countNamespacePool() : Int;
 	
-	@:overload public function countPrefixPool() : Int;
+	@:overload @:public public function countPrefixPool() : Int;
 	
-	@:overload @:final override public function clear() : Void;
+	@:overload @:public @:final override public function clear() : Void;
 	
-	@:overload @:final public function clearCompletely() : Void;
+	@:overload @:public @:final public function clearCompletely() : Void;
 	
-	@:overload @:final public function getArray() : java.NativeArray<String>;
+	@:overload @:public @:final public function getArray() : java.NativeArray<String>;
 	
-	@:overload @:final override public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.ValueArray, clear : Bool) : Void;
+	@:overload @:public @:final override public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.ValueArray, clear : Bool) : Void;
 	
-	@:overload @:final public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.PrefixArray, clear : Bool) : Void;
+	@:overload @:public @:final public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.PrefixArray, clear : Bool) : Void;
 	
-	@:overload @:final public function getCompleteArray() : java.NativeArray<String>;
+	@:overload @:public @:final public function getCompleteArray() : java.NativeArray<String>;
 	
-	@:overload @:final public function get(i : Int) : String;
+	@:overload @:public @:final public function get(i : Int) : String;
 	
-	@:overload @:final public function add(s : String) : Int;
+	@:overload @:public @:final public function add(s : String) : Int;
 	
-	@:overload @:final private function resize() : Void;
+	@:overload @:protected @:final private function resize() : Void;
 	
-	@:overload @:final public function clearDeclarationIds() : Void;
+	@:overload @:public @:final public function clearDeclarationIds() : Void;
 	
-	@:overload @:final public function pushScope(prefixIndex : Int, namespaceIndex : Int) : Void;
+	@:overload @:public @:final public function pushScope(prefixIndex : Int, namespaceIndex : Int) : Void;
 	
-	@:overload @:final public function pushScopeWithPrefixEntry(prefix : String, namespaceName : String, prefixIndex : Int, namespaceIndex : Int) : Void;
+	@:overload @:public @:final public function pushScopeWithPrefixEntry(prefix : String, namespaceName : String, prefixIndex : Int, namespaceIndex : Int) : Void;
 	
-	@:overload @:final public function popScope(prefixIndex : Int) : Void;
+	@:overload @:public @:final public function popScope(prefixIndex : Int) : Void;
 	
-	@:overload @:final public function popScopeWithPrefixEntry(prefixIndex : Int) : Void;
+	@:overload @:public @:final public function popScopeWithPrefixEntry(prefixIndex : Int) : Void;
 	
-	@:overload @:final public function getNamespaceFromPrefix(prefix : String) : String;
+	@:overload @:public @:final public function getNamespaceFromPrefix(prefix : String) : String;
 	
-	@:overload @:final public function getPrefixFromNamespace(namespaceName : String) : String;
+	@:overload @:public @:final public function getPrefixFromNamespace(namespaceName : String) : String;
 	
-	@:overload @:final public function getPrefixes() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:final public function getPrefixes() : java.util.Iterator<Dynamic>;
 	
-	@:overload @:final public function getPrefixesFromNamespace(namespaceName : String) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:final public function getPrefixesFromNamespace(namespaceName : String) : java.util.Iterator<Dynamic>;
 	
 	
 }

@@ -71,7 +71,7 @@ extern class LineNumberTable extends com.sun.org.apache.bcel.internal.classfile.
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use copy() for a physical copy.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.LineNumberTable) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.LineNumberTable) : Void;
 	
 	/*
 	* @param name_index Index of name
@@ -79,7 +79,7 @@ extern class LineNumberTable extends com.sun.org.apache.bcel.internal.classfile.
 	* @param line_number_table Table of line/numbers pairs
 	* @param constant_pool Array of constants
 	*/
-	@:overload public function new(name_index : Int, length : Int, line_number_table : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.LineNumber>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function new(name_index : Int, length : Int, line_number_table : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.LineNumber>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -88,7 +88,7 @@ extern class LineNumberTable extends com.sun.org.apache.bcel.internal.classfile.
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump line number table attribute to file stream in binary format.
@@ -96,22 +96,22 @@ extern class LineNumberTable extends com.sun.org.apache.bcel.internal.classfile.
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final override public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Array of (pc offset, line number) pairs.
 	*/
-	@:overload @:final public function getLineNumberTable() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.LineNumber>;
+	@:overload @:public @:final public function getLineNumberTable() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.LineNumber>;
 	
 	/**
 	* @param line_number_table.
 	*/
-	@:overload @:final public function setLineNumberTable(line_number_table : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.LineNumber>) : Void;
+	@:overload @:public @:final public function setLineNumberTable(line_number_table : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.LineNumber>) : Void;
 	
 	/**
 	* @return String representation.
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	/**
 	* Map byte code positions to source code lines.
@@ -119,14 +119,14 @@ extern class LineNumberTable extends com.sun.org.apache.bcel.internal.classfile.
 	* @param pos byte code offset
 	* @return corresponding line in source code
 	*/
-	@:overload public function getSourceLine(pos : Int) : Int;
+	@:overload @:public public function getSourceLine(pos : Int) : Int;
 	
 	/**
 	* @return deep copy of this attribute
 	*/
-	@:overload override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
+	@:overload @:public override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
-	@:overload @:final public function getTableLength() : Int;
+	@:overload @:public @:final public function getTableLength() : Int;
 	
 	
 }

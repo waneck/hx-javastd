@@ -46,13 +46,13 @@ package com.sun.xml.internal.rngom.parse.host;
 */
 @:internal extern class DataPatternBuilderHost extends com.sun.xml.internal.rngom.parse.host.Base implements com.sun.xml.internal.rngom.ast.builder.DataPatternBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>
 {
-	@:overload public function addParam(name : String, value : String, context : com.sun.xml.internal.rngom.parse.Context, ns : String, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload @:public public function addParam(name : String, value : String, context : com.sun.xml.internal.rngom.parse.Context, ns : String, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function annotation(_ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
+	@:overload @:public public function annotation(_ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
 	
-	@:overload public function makePattern(_loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makePattern(_loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makePattern(_except : com.sun.xml.internal.rngom.ast.om.ParsedPattern, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makePattern(_except : com.sun.xml.internal.rngom.ast.om.ParsedPattern, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
 	
 }

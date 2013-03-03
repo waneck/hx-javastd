@@ -26,17 +26,17 @@ package com.sun.xml.internal.stream;
 extern class EventFilterSupport extends javax.xml.stream.util.EventReaderDelegate
 {
 	/** Creates a new instance of EventFilterSupport */
-	@:overload public function new(eventReader : javax.xml.stream.XMLEventReader, eventFilter : javax.xml.stream.EventFilter) : Void;
+	@:overload @:public public function new(eventReader : javax.xml.stream.XMLEventReader, eventFilter : javax.xml.stream.EventFilter) : Void;
 	
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
-	@:overload override public function hasNext() : Bool;
+	@:overload @:public override public function hasNext() : Bool;
 	
-	@:overload override public function nextEvent() : javax.xml.stream.events.XMLEvent;
+	@:overload @:public override public function nextEvent() : javax.xml.stream.events.XMLEvent;
 	
-	@:overload override public function nextTag() : javax.xml.stream.events.XMLEvent;
+	@:overload @:public override public function nextTag() : javax.xml.stream.events.XMLEvent;
 	
-	@:overload override public function peek() : javax.xml.stream.events.XMLEvent;
+	@:overload @:public override public function peek() : javax.xml.stream.events.XMLEvent;
 	
 	
 }

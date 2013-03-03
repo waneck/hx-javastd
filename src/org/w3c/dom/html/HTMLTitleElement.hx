@@ -47,9 +47,9 @@ extern interface HTMLTitleElement extends org.w3c.dom.html.HTMLElement
 	/**
 	*  The specified title as a string.
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
-	@:overload public function setText(text : String) : Void;
+	@:overload @:public public function setText(text : String) : Void;
 	
 	
 }

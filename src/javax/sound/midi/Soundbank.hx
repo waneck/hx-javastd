@@ -29,33 +29,33 @@ extern interface Soundbank
 	* Obtains the name of the sound bank.
 	* @return a <code>String</code> naming the sound bank
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Obtains the version string for the sound bank.
 	* @return a <code>String</code> that indicates the sound bank's version
 	*/
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
 	/**
 	* Obtains a <code>string</code> naming the company that provides the
 	* sound bank
 	* @return the vendor string
 	*/
-	@:overload public function getVendor() : String;
+	@:overload @:public public function getVendor() : String;
 	
 	/**
 	* Obtains a textual description of the sound bank, suitable for display.
 	* @return a <code>String</code> that describes the sound bank
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	/**
 	* Extracts a list of non-Instrument resources contained in the sound bank.
 	* @return an array of resources, exclusing instruments.  If the sound bank contains
 	* no resources (other than instruments), returns an array of length 0.
 	*/
-	@:overload public function getResources() : java.NativeArray<javax.sound.midi.SoundbankResource>;
+	@:overload @:public public function getResources() : java.NativeArray<javax.sound.midi.SoundbankResource>;
 	
 	/**
 	* Obtains a list of instruments contained in this sound bank.
@@ -66,7 +66,7 @@ extern interface Soundbank
 	* @see Synthesizer#getLoadedInstruments
 	* @see #getInstrument(Patch)
 	*/
-	@:overload public function getInstruments() : java.NativeArray<javax.sound.midi.Instrument>;
+	@:overload @:public public function getInstruments() : java.NativeArray<javax.sound.midi.Instrument>;
 	
 	/**
 	* Obtains an <code>Instrument</code> from the given <code>Patch</code>.
@@ -78,7 +78,7 @@ extern interface Soundbank
 	* @see #getInstruments
 	* @see Synthesizer#loadInstruments(Soundbank, Patch[])
 	*/
-	@:overload public function getInstrument(patch : javax.sound.midi.Patch) : javax.sound.midi.Instrument;
+	@:overload @:public public function getInstrument(patch : javax.sound.midi.Patch) : javax.sound.midi.Instrument;
 	
 	
 }

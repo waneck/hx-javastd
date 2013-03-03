@@ -28,7 +28,7 @@ extern class DigestInputStream extends java.io.FilterInputStream
 	/**
 	* The message digest associated with this stream.
 	*/
-	private var digest : java.security.MessageDigest;
+	@:protected private var digest : java.security.MessageDigest;
 	
 	/**
 	* Creates a digest input stream, using the specified input stream
@@ -38,7 +38,7 @@ extern class DigestInputStream extends java.io.FilterInputStream
 	*
 	* @param digest the message digest to associate with this stream.
 	*/
-	@:overload public function new(stream : java.io.InputStream, digest : java.security.MessageDigest) : Void;
+	@:overload @:public public function new(stream : java.io.InputStream, digest : java.security.MessageDigest) : Void;
 	
 	/**
 	* Returns the message digest associated with this stream.
@@ -46,7 +46,7 @@ extern class DigestInputStream extends java.io.FilterInputStream
 	* @return the message digest associated with this stream.
 	* @see #setMessageDigest(java.security.MessageDigest)
 	*/
-	@:overload public function getMessageDigest() : java.security.MessageDigest;
+	@:overload @:public public function getMessageDigest() : java.security.MessageDigest;
 	
 	/**
 	* Associates the specified message digest with this stream.
@@ -54,7 +54,7 @@ extern class DigestInputStream extends java.io.FilterInputStream
 	* @param digest the message digest to be associated with this stream.
 	* @see #getMessageDigest()
 	*/
-	@:overload public function setMessageDigest(digest : java.security.MessageDigest) : Void;
+	@:overload @:public public function setMessageDigest(digest : java.security.MessageDigest) : Void;
 	
 	/**
 	* Reads a byte, and updates the message digest (if the digest
@@ -70,7 +70,7 @@ extern class DigestInputStream extends java.io.FilterInputStream
 	*
 	* @see MessageDigest#update(byte)
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads into a byte array, and updates the message digest (if the
@@ -101,7 +101,7 @@ extern class DigestInputStream extends java.io.FilterInputStream
 	*
 	* @see MessageDigest#update(byte[], int, int)
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Turns the digest function on or off. The default is on.  When
@@ -112,13 +112,13 @@ extern class DigestInputStream extends java.io.FilterInputStream
 	* @param on true to turn the digest function on, false to turn
 	* it off.
 	*/
-	@:overload public function on(on : Bool) : Void;
+	@:overload @:public public function on(on : Bool) : Void;
 	
 	/**
 	* Prints a string representation of this digest input stream and
 	* its associated message digest object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

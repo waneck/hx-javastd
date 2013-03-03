@@ -34,21 +34,21 @@ extern class AuthorizationDataEntry
 	* @param data the ad-data, a copy of the data will be saved
 	* inside the object.
 	*/
-	@:overload public function new(type : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(type : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Get the ad-type field.
 	* @return ad-type
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Get a copy of the ad-data field.
 	* @return ad-data
 	*/
-	@:overload public function getData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

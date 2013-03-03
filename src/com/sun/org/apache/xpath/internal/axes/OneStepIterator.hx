@@ -24,10 +24,10 @@ package com.sun.org.apache.xpath.internal.axes;
 extern class OneStepIterator extends com.sun.org.apache.xpath.internal.axes.ChildTestIterator
 {
 	/** The traversal axis from where the nodes will be filtered. */
-	private var m_axis : Int;
+	@:protected private var m_axis : Int;
 	
 	/** The DTM inner traversal class, that corresponds to the super axis. */
-	private var m_iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:protected private var m_iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Create a OneStepIterator object.
@@ -37,7 +37,7 @@ extern class OneStepIterator extends com.sun.org.apache.xpath.internal.axes.Chil
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function new(iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, axis : Int) : Void;
+	@:overload @:public public function new(iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, axis : Int) : Void;
 	
 	/**
 	* Initialize the context values for this expression
@@ -46,7 +46,7 @@ extern class OneStepIterator extends com.sun.org.apache.xpath.internal.axes.Chil
 	* @param context The XPath runtime context for this
 	* transformation.
 	*/
-	@:overload override public function setRoot(context : Int, environment : Dynamic) : Void;
+	@:overload @:public override public function setRoot(context : Int, environment : Dynamic) : Void;
 	
 	/**
 	*  Detaches the iterator from the set which it iterated over, releasing
@@ -55,12 +55,12 @@ extern class OneStepIterator extends com.sun.org.apache.xpath.internal.axes.Chil
 	* <code>nextNode</code> or<code>previousNode</code> will raise the
 	* exception INVALID_STATE_ERR.
 	*/
-	@:overload override public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	/**
 	* Get the next node via getFirstAttribute && getNextAttribute.
 	*/
-	@:overload override private function getNextNode() : Int;
+	@:overload @:protected override private function getNextNode() : Int;
 	
 	/**
 	* Get a cloned iterator.
@@ -69,7 +69,7 @@ extern class OneStepIterator extends com.sun.org.apache.xpath.internal.axes.Chil
 	*
 	* @throws CloneNotSupportedException
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	*  Get a cloned Iterator that is reset to the beginning
@@ -79,14 +79,14 @@ extern class OneStepIterator extends com.sun.org.apache.xpath.internal.axes.Chil
 	*
 	*  @throws CloneNotSupportedException
 	*/
-	@:overload override public function cloneWithReset() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public override public function cloneWithReset() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Tells if this is a reverse axes.  Overrides AxesWalker#isReverseAxes.
 	*
 	* @return true for this class.
 	*/
-	@:overload override public function isReverseAxes() : Bool;
+	@:overload @:public override public function isReverseAxes() : Bool;
 	
 	/**
 	* Get the current sub-context position.  In order to do the
@@ -99,7 +99,7 @@ extern class OneStepIterator extends com.sun.org.apache.xpath.internal.axes.Chil
 	*
 	* @return The pridicate index, or -1.
 	*/
-	@:overload override private function getProximityPosition(predicateIndex : Int) : Int;
+	@:overload @:protected override private function getProximityPosition(predicateIndex : Int) : Int;
 	
 	/**
 	*  The number of nodes in the list. The range of valid child node indices
@@ -107,19 +107,19 @@ extern class OneStepIterator extends com.sun.org.apache.xpath.internal.axes.Chil
 	*
 	* @return The number of nodes in the list, always greater or equal to zero.
 	*/
-	@:overload override public function getLength() : Int;
+	@:overload @:public override public function getLength() : Int;
 	
 	/**
 	* Count backwards one proximity position.
 	*
 	* @param i The predicate index.
 	*/
-	@:overload override private function countProximityPosition(i : Int) : Void;
+	@:overload @:protected override private function countProximityPosition(i : Int) : Void;
 	
 	/**
 	* Reset the iterator.
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* Returns the axis being iterated, if it is known.
@@ -127,12 +127,12 @@ extern class OneStepIterator extends com.sun.org.apache.xpath.internal.axes.Chil
 	* @return Axis.CHILD, etc., or -1 if the axis is not known or is of multiple
 	* types.
 	*/
-	@:overload override public function getAxis() : Int;
+	@:overload @:public override public function getAxis() : Int;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }

@@ -33,12 +33,12 @@ extern interface TextureSizeConstraining
 	/**
 	* Returns the maximum width of any texture image.
 	*/
-	@:overload public function getMaxTextureWidth() : Int;
+	@:overload @:public public function getMaxTextureWidth() : Int;
 	
 	/**
 	* Returns the maximum height of any texture image.
 	*/
-	@:overload public function getMaxTextureHeight() : Int;
+	@:overload @:public public function getMaxTextureHeight() : Int;
 	
 	
 }

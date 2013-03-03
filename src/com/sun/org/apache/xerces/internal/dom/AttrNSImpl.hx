@@ -21,24 +21,24 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class AttrNSImpl extends com.sun.org.apache.xerces.internal.dom.AttrImpl
 {
 	/** DOM2: Namespace URI. */
-	private var namespaceURI : String;
+	@:protected private var namespaceURI : String;
 	
 	/** DOM2: localName. */
-	private var localName : String;
+	@:protected private var localName : String;
 	
 	/*
 	* Default constructor
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* DOM2: Constructor for Namespace implementation.
 	*/
-	@:overload private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, namespaceURI : String, qualifiedName : String) : Void;
+	@:overload @:protected private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, namespaceURI : String, qualifiedName : String) : Void;
 	
-	@:overload public function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, namespaceURI : String, qualifiedName : String, localName : String) : Void;
+	@:overload @:public public function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, namespaceURI : String, qualifiedName : String, localName : String) : Void;
 	
-	@:overload private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, value : String) : Void;
+	@:overload @:protected private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, value : String) : Void;
 	
 	/**
 	* NON-DOM: resets this node and sets specified values for the node
@@ -48,7 +48,7 @@ extern class AttrNSImpl extends com.sun.org.apache.xerces.internal.dom.AttrImpl
 	* @param qualifiedName
 	* @param localName
 	*/
-	@:overload public function setValues(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, namespaceURI : String, qualifiedName : String, localName : String) : Void;
+	@:overload @:public public function setValues(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, namespaceURI : String, qualifiedName : String, localName : String) : Void;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -63,7 +63,7 @@ extern class AttrNSImpl extends com.sun.org.apache.xerces.internal.dom.AttrImpl
 	* from the Document interface, this is null.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public override public function getNamespaceURI() : String;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -75,7 +75,7 @@ extern class AttrNSImpl extends com.sun.org.apache.xerces.internal.dom.AttrImpl
 	*
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function getPrefix() : String;
+	@:overload @:public override public function getPrefix() : String;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -92,7 +92,7 @@ extern class AttrNSImpl extends com.sun.org.apache.xerces.internal.dom.AttrImpl
 	* @exception DOMException
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function setPrefix(prefix : String) : Void;
+	@:overload @:public override public function setPrefix(prefix : String) : Void;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -100,12 +100,12 @@ extern class AttrNSImpl extends com.sun.org.apache.xerces.internal.dom.AttrImpl
 	* Returns the local part of the qualified name of this node.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function getLocalName() : String;
+	@:overload @:public override public function getLocalName() : String;
 	
 	/**
 	* @see org.w3c.dom.TypeInfo#getTypeName()
 	*/
-	@:overload public function getTypeName() : String;
+	@:overload @:public override public function getTypeName() : String;
 	
 	/**
 	* Introduced in DOM Level 3. <p>
@@ -122,12 +122,12 @@ extern class AttrNSImpl extends com.sun.org.apache.xerces.internal.dom.AttrImpl
 	* @return boolean True if the type is derived by restriciton for the
 	*         reference type
 	*/
-	@:overload public function isDerivedFrom(typeNamespaceArg : String, typeNameArg : String, derivationMethod : Int) : Bool;
+	@:overload @:public override public function isDerivedFrom(typeNamespaceArg : String, typeNameArg : String, derivationMethod : Int) : Bool;
 	
 	/**
 	* @see org.w3c.dom.TypeInfo#getTypeNamespace()
 	*/
-	@:overload public function getTypeNamespace() : String;
+	@:overload @:public override public function getTypeNamespace() : String;
 	
 	
 }

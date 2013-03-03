@@ -29,47 +29,47 @@ extern class AbstractType
 	*
 	* @author WS Development Team
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(name : javax.xml.namespace.QName) : Void;
+	@:overload @:protected private function new(name : javax.xml.namespace.QName) : Void;
 	
-	@:overload private function new(name : javax.xml.namespace.QName, version : String) : Void;
+	@:overload @:protected private function new(name : javax.xml.namespace.QName, version : String) : Void;
 	
-	@:overload private function new(name : javax.xml.namespace.QName, javaType : com.sun.tools.internal.ws.processor.model.java.JavaType) : Void;
+	@:overload @:protected private function new(name : javax.xml.namespace.QName, javaType : com.sun.tools.internal.ws.processor.model.java.JavaType) : Void;
 	
-	@:overload private function new(name : javax.xml.namespace.QName, javaType : com.sun.tools.internal.ws.processor.model.java.JavaType, version : String) : Void;
+	@:overload @:protected private function new(name : javax.xml.namespace.QName, javaType : com.sun.tools.internal.ws.processor.model.java.JavaType, version : String) : Void;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function setName(name : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setName(name : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getJavaType() : com.sun.tools.internal.ws.processor.model.java.JavaType;
+	@:overload @:public public function getJavaType() : com.sun.tools.internal.ws.processor.model.java.JavaType;
 	
-	@:overload public function setJavaType(javaType : com.sun.tools.internal.ws.processor.model.java.JavaType) : Void;
+	@:overload @:public public function setJavaType(javaType : com.sun.tools.internal.ws.processor.model.java.JavaType) : Void;
 	
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
-	@:overload public function setVersion(version : String) : Void;
+	@:overload @:public public function setVersion(version : String) : Void;
 	
-	@:overload public function isNillable() : Bool;
+	@:overload @:public public function isNillable() : Bool;
 	
-	@:overload public function isSOAPType() : Bool;
+	@:overload @:public public function isSOAPType() : Bool;
 	
-	@:overload public function isLiteralType() : Bool;
+	@:overload @:public public function isLiteralType() : Bool;
 	
-	@:overload public function getProperty(key : String) : Dynamic;
+	@:overload @:public public function getProperty(key : String) : Dynamic;
 	
-	@:overload public function setProperty(key : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(key : String, value : Dynamic) : Void;
 	
-	@:overload public function removeProperty(key : String) : Void;
+	@:overload @:public public function removeProperty(key : String) : Void;
 	
-	@:overload public function getProperties() : java.util.Iterator<Dynamic>;
-	
-	/* serialization */
-	@:overload public function getPropertiesMap() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function getProperties() : java.util.Iterator<Dynamic>;
 	
 	/* serialization */
-	@:overload public function setPropertiesMap(m : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function getPropertiesMap() : java.util.Map<Dynamic, Dynamic>;
+	
+	/* serialization */
+	@:overload @:public public function setPropertiesMap(m : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	
 }

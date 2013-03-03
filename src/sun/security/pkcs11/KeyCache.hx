@@ -29,9 +29,9 @@ package sun.security.pkcs11;
 }
 @:native('sun$security$pkcs11$KeyCache$IdentityWrapper') @:internal extern class KeyCache_IdentityWrapper
 {
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

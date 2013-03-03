@@ -25,9 +25,9 @@ package com.sun.jndi.ldap.sasl;
 */
 @:internal extern class DefaultCallbackHandler implements javax.security.auth.callback.CallbackHandler
 {
-	@:overload public function handle(callbacks : java.NativeArray<javax.security.auth.callback.Callback>) : Void;
+	@:overload @:public public function handle(callbacks : java.NativeArray<javax.security.auth.callback.Callback>) : Void;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

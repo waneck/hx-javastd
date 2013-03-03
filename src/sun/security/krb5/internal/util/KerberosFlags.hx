@@ -29,19 +29,19 @@ package sun.security.krb5.internal.util;
 */
 extern class KerberosFlags
 {
-	private static var BITS_PER_UNIT(default, null) : Int;
+	@:protected @:static @:final private static var BITS_PER_UNIT(default, null) : Int;
 	
-	@:overload public function new(length : Int) : Void;
+	@:overload @:public public function new(length : Int) : Void;
 	
-	@:overload public function new(length : Int, a : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(length : Int, a : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(bools : java.NativeArray<Bool>) : Void;
+	@:overload @:public public function new(bools : java.NativeArray<Bool>) : Void;
 	
-	@:overload public function set(index : Int, value : Bool) : Void;
+	@:overload @:public public function set(index : Int, value : Bool) : Void;
 	
-	@:overload public function get(index : Int) : Bool;
+	@:overload @:public public function get(index : Int) : Bool;
 	
-	@:overload public function toBooleanArray() : java.NativeArray<Bool>;
+	@:overload @:public public function toBooleanArray() : java.NativeArray<Bool>;
 	
 	/**
 	* Writes the encoded data.
@@ -49,9 +49,9 @@ extern class KerberosFlags
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	* @return an byte array of encoded KDCOptions.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

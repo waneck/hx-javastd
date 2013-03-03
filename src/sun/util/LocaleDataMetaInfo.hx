@@ -38,7 +38,7 @@ package sun.util;
 	* @param resourceName the resource name
 	* @return the supported locale string for the passed in resource.
 	*/
-	@:overload public static function getSupportedLocaleString(resourceName : String) : String;
+	@:overload @:public @:static public static function getSupportedLocaleString(resourceName : String) : String;
 	
 	
 }

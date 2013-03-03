@@ -39,19 +39,19 @@ package javax.sound.sampled;
 	* @param type the type of control represented this compound control object
 	* @param memberControls the set of member controls
 	*/
-	@:overload private function new(type : javax.sound.sampled.Control.Control_Type, memberControls : java.NativeArray<javax.sound.sampled.Control>) : Void;
+	@:overload @:protected private function new(type : javax.sound.sampled.Control.Control_Type, memberControls : java.NativeArray<javax.sound.sampled.Control>) : Void;
 	
 	/**
 	* Returns the set of member controls that comprise the compound control.
 	* @return the set of member controls.
 	*/
-	@:overload public function getMemberControls() : java.NativeArray<javax.sound.sampled.Control>;
+	@:overload @:public public function getMemberControls() : java.NativeArray<javax.sound.sampled.Control>;
 	
 	/**
 	* Provides a string representation of the control
 	* @return a string description
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -69,7 +69,7 @@ package javax.sound.sampled;
 	* Constructs a new compound control type.
 	* @param name  the name of the new compound control type
 	*/
-	@:overload private function new(name : String) : Void;
+	@:overload @:protected override private function new(name : String) : Void;
 	
 	
 }

@@ -25,11 +25,11 @@ package javax.swing;
 */
 @:internal extern class SwingPaintEventDispatcher extends sun.awt.PaintEventDispatcher
 {
-	@:overload public function createPaintEvent(component : java.awt.Component, x : Int, y : Int, w : Int, h : Int) : java.awt.event.PaintEvent;
+	@:overload @:public override public function createPaintEvent(component : java.awt.Component, x : Int, y : Int, w : Int, h : Int) : java.awt.event.PaintEvent;
 	
-	@:overload public function shouldDoNativeBackgroundErase(c : java.awt.Component) : Bool;
+	@:overload @:public override public function shouldDoNativeBackgroundErase(c : java.awt.Component) : Bool;
 	
-	@:overload public function queueSurfaceDataReplacing(c : java.awt.Component, r : java.lang.Runnable) : Bool;
+	@:overload @:public override public function queueSurfaceDataReplacing(c : java.awt.Component, r : java.lang.Runnable) : Bool;
 	
 	
 }

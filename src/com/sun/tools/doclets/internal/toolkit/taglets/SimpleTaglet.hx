@@ -37,58 +37,58 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	/**
 	* The marker in the location string for excluded tags.
 	*/
-	public static var EXCLUDED(default, null) : String;
+	@:public @:static @:final public static var EXCLUDED(default, null) : String;
 	
 	/**
 	* The marker in the location string for packages.
 	*/
-	public static var PACKAGE(default, null) : String;
+	@:public @:static @:final public static var PACKAGE(default, null) : String;
 	
 	/**
 	* The marker in the location string for types.
 	*/
-	public static var TYPE(default, null) : String;
+	@:public @:static @:final public static var TYPE(default, null) : String;
 	
 	/**
 	* The marker in the location string for constructors.
 	*/
-	public static var CONSTRUCTOR(default, null) : String;
+	@:public @:static @:final public static var CONSTRUCTOR(default, null) : String;
 	
 	/**
 	* The marker in the location string for fields.
 	*/
-	public static var FIELD(default, null) : String;
+	@:public @:static @:final public static var FIELD(default, null) : String;
 	
 	/**
 	* The marker in the location string for methods.
 	*/
-	public static var METHOD(default, null) : String;
+	@:public @:static @:final public static var METHOD(default, null) : String;
 	
 	/**
 	* The marker in the location string for overview.
 	*/
-	public static var OVERVIEW(default, null) : String;
+	@:public @:static @:final public static var OVERVIEW(default, null) : String;
 	
 	/**
 	* Use in location string when the tag is to
 	* appear in all locations.
 	*/
-	public static var ALL(default, null) : String;
+	@:public @:static @:final public static var ALL(default, null) : String;
 	
 	/**
 	* The name of this tag.
 	*/
-	private var tagName : String;
+	@:protected private var tagName : String;
 	
 	/**
 	* The header to output.
 	*/
-	private var header : String;
+	@:protected private var header : String;
 	
 	/**
 	* The possible locations that this tag can appear in.
 	*/
-	private var locations : String;
+	@:protected private var locations : String;
 	
 	/**
 	* Construct a <code>SimpleTaglet</code>.
@@ -99,12 +99,12 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	* for package, 't' for type, 'm' for method, 'c' for constructor
 	* and 'f' for field.
 	*/
-	@:overload public function new(tagName : String, header : String, locations : String) : Void;
+	@:overload @:public public function new(tagName : String, header : String, locations : String) : Void;
 	
 	/**
 	* Return the name of this <code>Taglet</code>.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Return true if this <code>SimpleTaglet</code>
@@ -113,7 +113,7 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	* is used in constructor documentation and false
 	* otherwise.
 	*/
-	@:overload public function inConstructor() : Bool;
+	@:overload @:public override public function inConstructor() : Bool;
 	
 	/**
 	* Return true if this <code>SimpleTaglet</code>
@@ -122,7 +122,7 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	* is used in field documentation and false
 	* otherwise.
 	*/
-	@:overload public function inField() : Bool;
+	@:overload @:public override public function inField() : Bool;
 	
 	/**
 	* Return true if this <code>SimpleTaglet</code>
@@ -131,7 +131,7 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	* is used in method documentation and false
 	* otherwise.
 	*/
-	@:overload public function inMethod() : Bool;
+	@:overload @:public override public function inMethod() : Bool;
 	
 	/**
 	* Return true if this <code>SimpleTaglet</code>
@@ -140,7 +140,7 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	* is used in overview documentation and false
 	* otherwise.
 	*/
-	@:overload public function inOverview() : Bool;
+	@:overload @:public override public function inOverview() : Bool;
 	
 	/**
 	* Return true if this <code>SimpleTaglet</code>
@@ -149,7 +149,7 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	* is used in package documentation and false
 	* otherwise.
 	*/
-	@:overload public function inPackage() : Bool;
+	@:overload @:public override public function inPackage() : Bool;
 	
 	/**
 	* Return true if this <code>SimpleTaglet</code>
@@ -158,7 +158,7 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	* is used in type documentation and false
 	* otherwise.
 	*/
-	@:overload public function inType() : Bool;
+	@:overload @:public override public function inType() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -166,17 +166,17 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	* @return true if this <code>Taglet</code>
 	* is an inline tag and false otherwise.
 	*/
-	@:overload public function isInlineTag() : Bool;
+	@:overload @:public override public function isInlineTag() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getTagletOutput(tag : com.sun.javadoc.Tag, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function getTagletOutput(tag : com.sun.javadoc.Tag, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

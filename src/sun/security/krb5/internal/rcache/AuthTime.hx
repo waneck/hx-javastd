@@ -34,21 +34,21 @@ extern class AuthTime
 	* @param time time from the <code>Authenticator</code>.
 	* @param cusec microsecond field from the <code>Authenticator</code>.
 	*/
-	@:overload public function new(time : haxe.Int64, c : Int) : Void;
+	@:overload @:public public function new(time : haxe.Int64, c : Int) : Void;
 	
 	/**
 	* Compares if an object equals to an <code>AuthTime</code> object.
 	* @param o an object.
 	* @return true if two objects are equivalent, otherwise, return false.
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code for this <code>AuthTime</code> object.
 	*
 	* @return  a <code>hash code</code> value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

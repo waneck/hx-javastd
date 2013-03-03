@@ -34,13 +34,13 @@ extern class ReachableExcludesImpl implements com.sun.tools.hat.internal.model.R
 	* Create a new ReachableExcludesImpl over the given file.  The file will be
 	* re-read whenever the timestamp changes.
 	*/
-	@:overload public function new(excludesFile : java.io.File) : Void;
+	@:overload @:public public function new(excludesFile : java.io.File) : Void;
 	
 	/**
 	* @return true iff the given field is on the histlist of excluded
 	*          fields.
 	*/
-	@:overload public function isExcluded(fieldName : String) : Bool;
+	@:overload @:public public function isExcluded(fieldName : String) : Bool;
 	
 	
 }

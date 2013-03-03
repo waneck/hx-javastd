@@ -35,86 +35,86 @@ package javax.swing.text.html.parser;
 */
 extern class Element implements javax.swing.text.html.parser.DTDConstants implements java.io.Serializable
 {
-	public var index : Int;
+	@:public public var index : Int;
 	
-	public var name : String;
+	@:public public var name : String;
 	
-	public var oStart : Bool;
+	@:public public var oStart : Bool;
 	
-	public var oEnd : Bool;
+	@:public public var oEnd : Bool;
 	
-	public var inclusions : java.util.BitSet;
+	@:public public var inclusions : java.util.BitSet;
 	
-	public var exclusions : java.util.BitSet;
+	@:public public var exclusions : java.util.BitSet;
 	
-	public var type : Int;
+	@:public public var type : Int;
 	
-	public var content : javax.swing.text.html.parser.ContentModel;
+	@:public public var content : javax.swing.text.html.parser.ContentModel;
 	
-	public var atts : javax.swing.text.html.parser.AttributeList;
+	@:public public var atts : javax.swing.text.html.parser.AttributeList;
 	
 	/**
 	* A field to store user data. Mostly used to store
 	* style sheets.
 	*/
-	public var data : Dynamic;
+	@:public public var data : Dynamic;
 	
 	/**
 	* Get the name of the element.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return true if the start tag can be omitted.
 	*/
-	@:overload public function omitStart() : Bool;
+	@:overload @:public public function omitStart() : Bool;
 	
 	/**
 	* Return true if the end tag can be omitted.
 	*/
-	@:overload public function omitEnd() : Bool;
+	@:overload @:public public function omitEnd() : Bool;
 	
 	/**
 	* Get type.
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Get content model
 	*/
-	@:overload public function getContent() : javax.swing.text.html.parser.ContentModel;
+	@:overload @:public public function getContent() : javax.swing.text.html.parser.ContentModel;
 	
 	/**
 	* Get the attributes.
 	*/
-	@:overload public function getAttributes() : javax.swing.text.html.parser.AttributeList;
+	@:overload @:public public function getAttributes() : javax.swing.text.html.parser.AttributeList;
 	
 	/**
 	* Get index.
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* Check if empty
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Convert to a string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Get an attribute by name.
 	*/
-	@:overload public function getAttribute(name : String) : javax.swing.text.html.parser.AttributeList;
+	@:overload @:public public function getAttribute(name : String) : javax.swing.text.html.parser.AttributeList;
 	
 	/**
 	* Get an attribute by value.
 	*/
-	@:overload public function getAttributeByValue(name : String) : javax.swing.text.html.parser.AttributeList;
+	@:overload @:public public function getAttributeByValue(name : String) : javax.swing.text.html.parser.AttributeList;
 	
-	@:overload public static function name2type(nm : String) : Int;
+	@:overload @:public @:static public static function name2type(nm : String) : Int;
 	
 	
 }

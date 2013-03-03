@@ -25,33 +25,33 @@ package sun.awt.motif;
 */
 extern class X11CNS11643 extends java.nio.charset.Charset
 {
-	@:overload public function new(plane : Int, name : String) : Void;
+	@:overload @:public public function new(plane : Int, name : String) : Void;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	
 }
 @:native('sun$awt$motif$X11CNS11643$Encoder') @:internal extern class X11CNS11643_Encoder extends sun.nio.cs.ext.EUC_TW.EUC_TW_Encoder
 {
-	@:overload public function new(cs : java.nio.charset.Charset, plane : Int) : Void;
+	@:overload @:public public function new(cs : java.nio.charset.Charset, plane : Int) : Void;
 	
-	@:overload override public function canEncode(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canEncode(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload override public function isLegalReplacement(repl : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public override public function isLegalReplacement(repl : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
-	@:overload override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
 	
 }
 @:native('sun$awt$motif$X11CNS11643$Decoder') @:internal extern class X11CNS11643_Decoder extends sun.nio.cs.ext.EUC_TW.EUC_TW_Decoder
 {
-	@:overload private function new(cs : java.nio.charset.Charset, plane : Int) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, plane : Int) : Void;
 	
-	@:overload override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
 	
 }

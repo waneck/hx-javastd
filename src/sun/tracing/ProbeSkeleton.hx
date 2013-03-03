@@ -30,11 +30,11 @@ extern class ProbeSkeleton implements com.sun.tracing.Probe
 	*
 	* @since 1.7
 	*/
-	@:require(java7) private var parameters : java.NativeArray<Class<Dynamic>>;
+	@:require(java7) @:protected private var parameters : java.NativeArray<Class<Dynamic>>;
 	
-	@:overload private function new(parameters : java.NativeArray<Class<Dynamic>>) : Void;
+	@:overload @:protected private function new(parameters : java.NativeArray<Class<Dynamic>>) : Void;
 	
-	@:overload @:abstract public function isEnabled() : Bool;
+	@:overload @:public @:abstract public function isEnabled() : Bool;
 	
 	/**
 	* Triggers the probe with verified arguments.
@@ -43,12 +43,12 @@ extern class ProbeSkeleton implements com.sun.tracing.Probe
 	* arity and types of the arguments match what the probe was
 	* declared with.
 	*/
-	@:overload @:abstract public function uncheckedTrigger(args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public @:abstract public function uncheckedTrigger(args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Performs a type-check of the parameters before triggering the probe.
 	*/
-	@:overload public function trigger(args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function trigger(args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

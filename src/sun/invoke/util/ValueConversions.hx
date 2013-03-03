@@ -25,25 +25,25 @@ package sun.invoke.util;
 */
 extern class ValueConversions
 {
-	@:overload public static function unboxCast(type : sun.invoke.util.Wrapper) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function unboxCast(type : sun.invoke.util.Wrapper) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function unboxRaw(type : sun.invoke.util.Wrapper) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function unboxRaw(type : sun.invoke.util.Wrapper) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function unbox(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function unbox(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function unboxCast(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function unboxCast(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function unboxRaw(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function unboxRaw(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function primitiveConversion(wrap : sun.invoke.util.Wrapper, x : Dynamic, _cast : Bool) : java.lang.Number;
+	@:overload @:public @:static public static function primitiveConversion(wrap : sun.invoke.util.Wrapper, x : Dynamic, _cast : Bool) : java.lang.Number;
 	
-	@:overload public static function box(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function box(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function boxRaw(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function boxRaw(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function box(type : sun.invoke.util.Wrapper) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function box(type : sun.invoke.util.Wrapper) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function boxRaw(type : sun.invoke.util.Wrapper) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function boxRaw(type : sun.invoke.util.Wrapper) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Because we normalize primitive types to reduce the number of signatures,
@@ -54,48 +54,48 @@ extern class ValueConversions
 	* is called a "rebox".  It takes an Integer or Long and produces some
 	* other boxed value, typed (inexactly) as an Object
 	*/
-	@:overload public static function rebox(wrap : sun.invoke.util.Wrapper) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function rebox(wrap : sun.invoke.util.Wrapper) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function rebox(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function rebox(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function zeroConstantFunction(wrap : sun.invoke.util.Wrapper) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function zeroConstantFunction(wrap : sun.invoke.util.Wrapper) : java.lang.invoke.MethodHandle;
 	
 	/** Return a method that casts its sole argument (an Object) to the given type
 	*  and returns it as the given type (if exact is true), or as plain Object (if erase is true).
 	*/
-	@:native('cast') @:overload public static function _cast(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:native('cast') @:overload @:public @:static public static function _cast(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function identity() : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function identity() : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function identity(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function identity(type : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function identity(wrap : sun.invoke.util.Wrapper) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function identity(wrap : sun.invoke.util.Wrapper) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function convertFromFloat(fixType : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function convertFromFloat(fixType : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function convertFromDouble(fixType : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function convertFromDouble(fixType : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function convertToFloat(fixType : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function convertToFloat(fixType : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function convertToDouble(fixType : Class<Dynamic>) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function convertToDouble(fixType : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
-	@:overload public static function convertArrayElements(arrayType : Class<Dynamic>, array : Dynamic) : Dynamic;
+	@:overload @:public @:static public static function convertArrayElements(arrayType : Class<Dynamic>, array : Dynamic) : Dynamic;
 	
 	/** Return a method handle that takes the indicated number of Object
 	*  arguments and returns an Object array of them, as if for varargs.
 	*/
-	@:overload public static function varargsArray(nargs : Int) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function varargsArray(nargs : Int) : java.lang.invoke.MethodHandle;
 	
 	/** Return a method handle that takes the indicated number of
 	*  typed arguments and returns an array of them.
 	*  The type argument is the array type.
 	*/
-	@:overload public static function varargsArray(arrayType : Class<Dynamic>, nargs : Int) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function varargsArray(arrayType : Class<Dynamic>, nargs : Int) : java.lang.invoke.MethodHandle;
 	
 	/** Return a method handle that takes the indicated number of Object
 	*  arguments and returns a List.
 	*/
-	@:overload public static function varargsList(nargs : Int) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function varargsList(nargs : Int) : java.lang.invoke.MethodHandle;
 	
 	
 }

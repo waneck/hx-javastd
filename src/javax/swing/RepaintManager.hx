@@ -33,7 +33,7 @@ extern class RepaintManager
 	*          depending on the Component
 	* @return the RepaintManager object
 	*/
-	@:overload public static function currentManager(c : java.awt.Component) : javax.swing.RepaintManager;
+	@:overload @:public @:static public static function currentManager(c : java.awt.Component) : javax.swing.RepaintManager;
 	
 	/**
 	* Return the RepaintManager for the calling thread given a JComponent.
@@ -45,7 +45,7 @@ extern class RepaintManager
 	* @param c a JComponent -- unused
 	* @return the RepaintManager object
 	*/
-	@:overload public static function currentManager(c : javax.swing.JComponent) : javax.swing.RepaintManager;
+	@:overload @:public @:static public static function currentManager(c : javax.swing.JComponent) : javax.swing.RepaintManager;
 	
 	/**
 	* Set the RepaintManager that should be used for the calling
@@ -53,14 +53,14 @@ extern class RepaintManager
 	* for the calling thread's thread group.
 	* @param aRepaintManager  the RepaintManager object to use
 	*/
-	@:overload public static function setCurrentManager(aRepaintManager : javax.swing.RepaintManager) : Void;
+	@:overload @:public @:static public static function setCurrentManager(aRepaintManager : javax.swing.RepaintManager) : Void;
 	
 	/**
 	* Create a new RepaintManager instance. You rarely call this constructor.
 	* directly. To get the default RepaintManager, use
 	* RepaintManager.currentManager(JComponent) (normally "this").
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Mark the component as in need of layout and queue a runnable
@@ -70,14 +70,14 @@ extern class RepaintManager
 	* @see JComponent#isValidateRoot
 	* @see #removeInvalidComponent
 	*/
-	@:overload @:synchronized public function addInvalidComponent(invalidComponent : javax.swing.JComponent) : Void;
+	@:overload @:public @:synchronized public function addInvalidComponent(invalidComponent : javax.swing.JComponent) : Void;
 	
 	/**
 	* Remove a component from the list of invalid components.
 	*
 	* @see #addInvalidComponent
 	*/
-	@:overload @:synchronized public function removeInvalidComponent(component : javax.swing.JComponent) : Void;
+	@:overload @:public @:synchronized public function removeInvalidComponent(component : javax.swing.JComponent) : Void;
 	
 	/**
 	* Add a component in the list of components that should be refreshed.
@@ -91,7 +91,7 @@ extern class RepaintManager
 	* @param h Height of the region to repaint
 	* @see JComponent#repaint
 	*/
-	@:overload public function addDirtyRegion(c : javax.swing.JComponent, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function addDirtyRegion(c : javax.swing.JComponent, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Adds <code>window</code> to the list of <code>Component</code>s that
@@ -107,7 +107,7 @@ extern class RepaintManager
 	* @see JDialog#repaint
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function addDirtyRegion(window : java.awt.Window, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:require(java6) @:overload @:public public function addDirtyRegion(window : java.awt.Window, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Adds <code>applet</code> to the list of <code>Component</code>s that
@@ -121,25 +121,25 @@ extern class RepaintManager
 	* @see JApplet#repaint
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function addDirtyRegion(applet : java.applet.Applet, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:require(java6) @:overload @:public public function addDirtyRegion(applet : java.applet.Applet, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/** Return the current dirty region for a component.
 	*  Return an empty rectangle if the component is not
 	*  dirty.
 	*/
-	@:overload public function getDirtyRegion(aComponent : javax.swing.JComponent) : java.awt.Rectangle;
+	@:overload @:public public function getDirtyRegion(aComponent : javax.swing.JComponent) : java.awt.Rectangle;
 	
 	/**
 	* Mark a component completely dirty. <b>aComponent</b> will be
 	* completely painted during the next paintDirtyRegions() call.
 	*/
-	@:overload public function markCompletelyDirty(aComponent : javax.swing.JComponent) : Void;
+	@:overload @:public public function markCompletelyDirty(aComponent : javax.swing.JComponent) : Void;
 	
 	/**
 	* Mark a component completely clean. <b>aComponent</b> will not
 	* get painted during the next paintDirtyRegions() call.
 	*/
-	@:overload public function markCompletelyClean(aComponent : javax.swing.JComponent) : Void;
+	@:overload @:public public function markCompletelyClean(aComponent : javax.swing.JComponent) : Void;
 	
 	/**
 	* Convenience method that returns true if <b>aComponent</b> will be completely
@@ -147,20 +147,20 @@ extern class RepaintManager
 	* expensive for your component, use this method and avoid computing dirty region
 	* if it return true.
 	*/
-	@:overload public function isCompletelyDirty(aComponent : javax.swing.JComponent) : Bool;
+	@:overload @:public public function isCompletelyDirty(aComponent : javax.swing.JComponent) : Bool;
 	
 	/**
 	* Validate all of the components that have been marked invalid.
 	* @see #addInvalidComponent
 	*/
-	@:overload public function validateInvalidComponents() : Void;
+	@:overload @:public public function validateInvalidComponents() : Void;
 	
 	/**
 	* Paint all of the components that have been marked dirty.
 	*
 	* @see #addDirtyRegion
 	*/
-	@:overload public function paintDirtyRegions() : Void;
+	@:overload @:public public function paintDirtyRegions() : Void;
 	
 	/**
 	* Returns a string that displays and identifies this
@@ -168,7 +168,7 @@ extern class RepaintManager
 	*
 	* @return a String representation of this object
 	*/
-	@:overload @:synchronized public function toString() : String;
+	@:overload @:public @:synchronized public function toString() : String;
 	
 	/**
 	* Return the offscreen buffer that should be used as a double buffer with
@@ -178,7 +178,7 @@ extern class RepaintManager
 	* This happens when the maximum double buffer size as been set for the receiving
 	* repaint manager.
 	*/
-	@:overload public function getOffscreenBuffer(c : java.awt.Component, proposedWidth : Int, proposedHeight : Int) : java.awt.Image;
+	@:overload @:public public function getOffscreenBuffer(c : java.awt.Component, proposedWidth : Int, proposedHeight : Int) : java.awt.Image;
 	
 	/**
 	* Return a volatile offscreen buffer that should be used as a
@@ -192,17 +192,17 @@ extern class RepaintManager
 	* @see java.awt.image.VolatileImage
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getVolatileOffscreenBuffer(c : java.awt.Component, proposedWidth : Int, proposedHeight : Int) : java.awt.Image;
+	@:require(java4) @:overload @:public public function getVolatileOffscreenBuffer(c : java.awt.Component, proposedWidth : Int, proposedHeight : Int) : java.awt.Image;
 	
 	/** Set the maximum double buffer size. **/
-	@:overload public function setDoubleBufferMaximumSize(d : java.awt.Dimension) : Void;
+	@:overload @:public public function setDoubleBufferMaximumSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the maximum double buffer size.
 	*
 	* @return a Dimension object representing the maximum size
 	*/
-	@:overload public function getDoubleBufferMaximumSize() : java.awt.Dimension;
+	@:overload @:public public function getDoubleBufferMaximumSize() : java.awt.Dimension;
 	
 	/**
 	* Enables or disables double buffering in this RepaintManager.
@@ -213,7 +213,7 @@ extern class RepaintManager
 	* @param aFlag  true to activate double buffering
 	* @see #isDoubleBufferingEnabled
 	*/
-	@:overload public function setDoubleBufferingEnabled(aFlag : Bool) : Void;
+	@:overload @:public public function setDoubleBufferingEnabled(aFlag : Bool) : Void;
 	
 	/**
 	* Returns true if this RepaintManager is double buffered.
@@ -226,7 +226,7 @@ extern class RepaintManager
 	*
 	* @return true if this object is double buffered
 	*/
-	@:overload public function isDoubleBufferingEnabled() : Bool;
+	@:overload @:public public function isDoubleBufferingEnabled() : Bool;
 	
 	
 }
@@ -240,7 +240,7 @@ extern class RepaintManager
 	/**
 	* RepaintManager the PaintManager has been installed on.
 	*/
-	private var repaintManager : javax.swing.RepaintManager;
+	@:protected private var repaintManager : javax.swing.RepaintManager;
 	
 	/**
 	* Paints a region of a component
@@ -254,40 +254,40 @@ extern class RepaintManager
 	* @param h Height
 	* @return true if painting was successful.
 	*/
-	@:overload public function paint(paintingComponent : javax.swing.JComponent, bufferComponent : javax.swing.JComponent, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Bool;
+	@:overload @:public public function paint(paintingComponent : javax.swing.JComponent, bufferComponent : javax.swing.JComponent, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Bool;
 	
 	/**
 	* Does a copy area on the specified region.
 	*/
-	@:overload public function copyArea(c : javax.swing.JComponent, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, deltaX : Int, deltaY : Int, clip : Bool) : Void;
+	@:overload @:public public function copyArea(c : javax.swing.JComponent, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, deltaX : Int, deltaY : Int, clip : Bool) : Void;
 	
 	/**
 	* Invoked prior to any calls to paint or copyArea.
 	*/
-	@:overload public function beginPaint() : Void;
+	@:overload @:public public function beginPaint() : Void;
 	
 	/**
 	* Invoked to indicate painting has been completed.
 	*/
-	@:overload public function endPaint() : Void;
+	@:overload @:public public function endPaint() : Void;
 	
 	/**
 	* Shows a region of a previously rendered component.  This
 	* will return true if successful, false otherwise.  The default
 	* implementation returns false.
 	*/
-	@:overload public function show(c : java.awt.Container, x : Int, y : Int, w : Int, h : Int) : Bool;
+	@:overload @:public public function show(c : java.awt.Container, x : Int, y : Int, w : Int, h : Int) : Bool;
 	
 	/**
 	* Invoked when the doubleBuffered or useTrueDoubleBuffering
 	* properties of a JRootPane change.  This may come in on any thread.
 	*/
-	@:overload public function doubleBufferingChanged(rootPane : javax.swing.JRootPane) : Void;
+	@:overload @:public public function doubleBufferingChanged(rootPane : javax.swing.JRootPane) : Void;
 	
 	/**
 	* Paints a portion of a component to an offscreen buffer.
 	*/
-	@:overload private function paintDoubleBuffered(c : javax.swing.JComponent, image : java.awt.Image, g : java.awt.Graphics, clipX : Int, clipY : Int, clipW : Int, clipH : Int) : Void;
+	@:overload @:protected private function paintDoubleBuffered(c : javax.swing.JComponent, image : java.awt.Image, g : java.awt.Graphics, clipX : Int, clipY : Int, clipW : Int, clipH : Int) : Void;
 	
 	/**
 	* Schedules a repaint for the specified component.  This differs
@@ -295,29 +295,29 @@ extern class RepaintManager
 	* currently processing paint requests it'll process this request
 	* with the current set of requests.
 	*/
-	@:overload private function repaintRoot(root : javax.swing.JComponent) : Void;
+	@:overload @:protected private function repaintRoot(root : javax.swing.JComponent) : Void;
 	
 	/**
 	* Returns true if the component being painted is the root component
 	* that was previously passed to <code>repaintRoot</code>.
 	*/
-	@:overload private function isRepaintingRoot() : Bool;
+	@:overload @:protected private function isRepaintingRoot() : Bool;
 	
 	/**
 	* Cleans up any state.  After invoked the PaintManager will no
 	* longer be used anymore.
 	*/
-	@:overload private function dispose() : Void;
+	@:overload @:protected private function dispose() : Void;
 	
 	
 }
 @:native('javax$swing$RepaintManager$DoubleBufferInfo') @:internal extern class RepaintManager_DoubleBufferInfo
 {
-	public var image : java.awt.Image;
+	@:public public var image : java.awt.Image;
 	
-	public var size : java.awt.Dimension;
+	@:public public var size : java.awt.Dimension;
 	
-	public var needsReset : Bool;
+	@:public public var needsReset : Bool;
 	
 	
 }
@@ -329,15 +329,15 @@ extern class RepaintManager
 */
 @:native('javax$swing$RepaintManager$DisplayChangedHandler') @:internal extern class RepaintManager_DisplayChangedHandler implements sun.awt.DisplayChangedListener
 {
-	@:overload public function displayChanged() : Void;
+	@:overload @:public public function displayChanged() : Void;
 	
-	@:overload public function paletteChanged() : Void;
+	@:overload @:public public function paletteChanged() : Void;
 	
 	
 }
 @:native('javax$swing$RepaintManager$DisplayChangedRunnable') @:internal extern class RepaintManager_DisplayChangedRunnable implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
@@ -350,9 +350,9 @@ extern class RepaintManager
 	* Marks this processing runnable as pending. If this was not
 	* already marked as pending, true is returned.
 	*/
-	@:overload @:synchronized public function markPending() : Bool;
+	@:overload @:public @:synchronized public function markPending() : Bool;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

@@ -25,13 +25,13 @@ package com.sun.tools.jdi;
 */
 extern class ClassLoaderReferenceImpl extends com.sun.tools.jdi.ObjectReferenceImpl implements com.sun.jdi.ClassLoaderReference implements com.sun.tools.jdi.VMListener
 {
-	@:overload override private function newCache() : com.sun.tools.jdi.ObjectReferenceImpl.ObjectReferenceImpl_Cache;
+	@:overload @:protected override private function newCache() : com.sun.tools.jdi.ObjectReferenceImpl.ObjectReferenceImpl_Cache;
 	
-	@:overload override private function description() : String;
+	@:overload @:protected override private function description() : String;
 	
-	@:overload public function definedClasses() : java.util.List<com.sun.jdi.ReferenceType>;
+	@:overload @:public public function definedClasses() : java.util.List<com.sun.jdi.ReferenceType>;
 	
-	@:overload public function visibleClasses() : java.util.List<com.sun.jdi.ReferenceType>;
+	@:overload @:public public function visibleClasses() : java.util.List<com.sun.jdi.ReferenceType>;
 	
 	
 }

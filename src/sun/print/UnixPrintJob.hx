@@ -25,37 +25,37 @@ package sun.print;
 */
 extern class UnixPrintJob implements javax.print.CancelablePrintJob
 {
-	@:overload public function getPrintService() : javax.print.PrintService;
+	@:overload @:public public function getPrintService() : javax.print.PrintService;
 	
-	@:overload public function getAttributes() : javax.print.attribute.PrintJobAttributeSet;
+	@:overload @:public public function getAttributes() : javax.print.attribute.PrintJobAttributeSet;
 	
-	@:overload public function addPrintJobListener(listener : javax.print.event.PrintJobListener) : Void;
+	@:overload @:public public function addPrintJobListener(listener : javax.print.event.PrintJobListener) : Void;
 	
-	@:overload public function removePrintJobListener(listener : javax.print.event.PrintJobListener) : Void;
+	@:overload @:public public function removePrintJobListener(listener : javax.print.event.PrintJobListener) : Void;
 	
-	@:overload public function addPrintJobAttributeListener(listener : javax.print.event.PrintJobAttributeListener, attributes : javax.print.attribute.PrintJobAttributeSet) : Void;
+	@:overload @:public public function addPrintJobAttributeListener(listener : javax.print.event.PrintJobAttributeListener, attributes : javax.print.attribute.PrintJobAttributeSet) : Void;
 	
-	@:overload public function removePrintJobAttributeListener(listener : javax.print.event.PrintJobAttributeListener) : Void;
+	@:overload @:public public function removePrintJobAttributeListener(listener : javax.print.event.PrintJobAttributeListener) : Void;
 	
-	@:overload public function print(doc : javax.print.Doc, attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
+	@:overload @:public public function print(doc : javax.print.Doc, attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
 	
-	@:overload public function printableJob(printable : java.awt.print.Printable) : Void;
+	@:overload @:public public function printableJob(printable : java.awt.print.Printable) : Void;
 	
-	@:overload public function pageableJob(pageable : java.awt.print.Pageable) : Void;
+	@:overload @:public public function pageableJob(pageable : java.awt.print.Pageable) : Void;
 	
-	@:overload public function cancel() : Void;
+	@:overload @:public public function cancel() : Void;
 	
 	
 }
 @:native('sun$print$UnixPrintJob$PrinterOpener') @:internal extern class UnixPrintJob_PrinterOpener implements java.security.PrivilegedAction<Dynamic>
 {
-	@:overload public function run() : Dynamic;
+	@:overload @:public public function run() : Dynamic;
 	
 	
 }
 @:native('sun$print$UnixPrintJob$PrinterSpooler') @:internal extern class UnixPrintJob_PrinterSpooler implements java.security.PrivilegedAction<Dynamic>
 {
-	@:overload public function run() : Dynamic;
+	@:overload @:public public function run() : Dynamic;
 	
 	
 }

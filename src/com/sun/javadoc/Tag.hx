@@ -127,7 +127,7 @@ extern interface Tag
 	* Return the source position of this tag.
 	* @return the source position of this tag.
 	*/
-	@:overload public function position() : com.sun.javadoc.SourcePosition;
+	@:overload @:public public function position() : com.sun.javadoc.SourcePosition;
 	
 	
 }

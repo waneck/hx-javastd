@@ -25,14 +25,14 @@ package sun.net.dns;
 */
 extern class ResolverConfiguration
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Opens the resolver configuration.
 	*
 	* @return the resolver configuration
 	*/
-	@:overload public static function open() : sun.net.dns.ResolverConfiguration;
+	@:overload @:public @:static public static function open() : sun.net.dns.ResolverConfiguration;
 	
 	/**
 	* Returns a list corresponding to the domain search path. The
@@ -42,7 +42,7 @@ extern class ResolverConfiguration
 	*
 	* @return list of domain names
 	*/
-	@:overload @:abstract public function searchlist() : java.util.List<String>;
+	@:overload @:public @:abstract public function searchlist() : java.util.List<String>;
 	
 	/**
 	* Returns a list of name servers used for host name lookup.
@@ -52,14 +52,14 @@ extern class ResolverConfiguration
 	*
 	* @return list of the name servers
 	*/
-	@:overload @:abstract public function nameservers() : java.util.List<String>;
+	@:overload @:public @:abstract public function nameservers() : java.util.List<String>;
 	
 	/**
 	* Returns the {@link #Options} for the resolver.
 	*
 	* @return options for the resolver
 	*/
-	@:overload @:abstract public function options() : sun.net.dns.ResolverConfiguration.ResolverConfiguration_Options;
+	@:overload @:public @:abstract public function options() : sun.net.dns.ResolverConfiguration.ResolverConfiguration_Options;
 	
 	
 }
@@ -76,7 +76,7 @@ extern class ResolverConfiguration
 	*
 	* @return the resolver attempts value or -1 is unknown
 	*/
-	@:overload public function attempts() : Int;
+	@:overload @:public public function attempts() : Int;
 	
 	/**
 	* Returns the basic retransmit timeout, in milliseconds,
@@ -89,7 +89,7 @@ extern class ResolverConfiguration
 	* @return the basic retransmit timeout value or -1
 	*         if unknown
 	*/
-	@:overload public function retrans() : Int;
+	@:overload @:public public function retrans() : Int;
 	
 	
 }

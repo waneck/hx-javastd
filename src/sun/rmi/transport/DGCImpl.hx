@@ -38,7 +38,7 @@ package sun.rmi.transport;
 	* objects in this VM that the client holds are considered
 	* "unreferenced".
 	*/
-	@:overload public function dirty(ids : java.NativeArray<java.rmi.server.ObjID>, sequenceNum : haxe.Int64, lease : java.rmi.dgc.Lease) : java.rmi.dgc.Lease;
+	@:overload @:public public function dirty(ids : java.NativeArray<java.rmi.server.ObjID>, sequenceNum : haxe.Int64, lease : java.rmi.dgc.Lease) : java.rmi.dgc.Lease;
 	
 	/**
 	* The clean call removes the VMID from the set of clients
@@ -48,7 +48,7 @@ package sun.rmi.transport;
 	* failed "dirty" call, thus the sequence number for the VMID needs
 	* to be remembered until the client goes away.
 	*/
-	@:overload public function clean(ids : java.NativeArray<java.rmi.server.ObjID>, sequenceNum : haxe.Int64, vmid : java.rmi.dgc.VMID, strong : Bool) : Void;
+	@:overload @:public public function clean(ids : java.NativeArray<java.rmi.server.ObjID>, sequenceNum : haxe.Int64, vmid : java.rmi.dgc.VMID, strong : Bool) : Void;
 	
 	
 }

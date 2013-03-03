@@ -46,13 +46,13 @@ package com.sun.xml.internal.rngom.parse.host;
 */
 @:internal extern class AnnotationsHost extends com.sun.xml.internal.rngom.parse.host.Base implements com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>
 {
-	@:overload public function addAttribute(ns : String, localName : String, prefix : String, value : String, _loc : com.sun.xml.internal.rngom.ast.om.Location) : Void;
+	@:overload @:public public function addAttribute(ns : String, localName : String, prefix : String, value : String, _loc : com.sun.xml.internal.rngom.ast.om.Location) : Void;
 	
-	@:overload public function addComment(_comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
+	@:overload @:public public function addComment(_comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
 	
-	@:overload public function addElement(_ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
+	@:overload @:public public function addElement(_ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
 	
-	@:overload public function addLeadingComment(_comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
+	@:overload @:public public function addLeadingComment(_comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
 	
 	
 }

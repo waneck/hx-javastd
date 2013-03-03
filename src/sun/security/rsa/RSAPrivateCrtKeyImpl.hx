@@ -29,32 +29,32 @@ extern class RSAPrivateCrtKeyImpl extends sun.security.pkcs.PKCS8Key implements 
 	* Generate a new key from its encoding. Returns a CRT key if possible
 	* and a non-CRT key otherwise. Used by RSAKeyFactory.
 	*/
-	@:overload public static function newKey(encoded : java.NativeArray<java.StdTypes.Int8>) : java.security.interfaces.RSAPrivateKey;
+	@:overload @:public @:static public static function newKey(encoded : java.NativeArray<java.StdTypes.Int8>) : java.security.interfaces.RSAPrivateKey;
 	
-	@:overload public function getAlgorithm() : String;
+	@:overload @:public override public function getAlgorithm() : String;
 	
-	@:overload public function getModulus() : java.math.BigInteger;
+	@:overload @:public public function getModulus() : java.math.BigInteger;
 	
-	@:overload public function getPublicExponent() : java.math.BigInteger;
+	@:overload @:public public function getPublicExponent() : java.math.BigInteger;
 	
-	@:overload public function getPrivateExponent() : java.math.BigInteger;
+	@:overload @:public public function getPrivateExponent() : java.math.BigInteger;
 	
-	@:overload public function getPrimeP() : java.math.BigInteger;
+	@:overload @:public public function getPrimeP() : java.math.BigInteger;
 	
-	@:overload public function getPrimeQ() : java.math.BigInteger;
+	@:overload @:public public function getPrimeQ() : java.math.BigInteger;
 	
-	@:overload public function getPrimeExponentP() : java.math.BigInteger;
+	@:overload @:public public function getPrimeExponentP() : java.math.BigInteger;
 	
-	@:overload public function getPrimeExponentQ() : java.math.BigInteger;
+	@:overload @:public public function getPrimeExponentQ() : java.math.BigInteger;
 	
-	@:overload public function getCrtCoefficient() : java.math.BigInteger;
+	@:overload @:public public function getCrtCoefficient() : java.math.BigInteger;
 	
 	/**
 	* Parse the key. Called by PKCS8Key.
 	*/
-	@:overload private function parseKeyBits() : Void;
+	@:overload @:protected override private function parseKeyBits() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

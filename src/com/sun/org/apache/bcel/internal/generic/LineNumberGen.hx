@@ -71,18 +71,18 @@ extern class LineNumberGen implements com.sun.org.apache.bcel.internal.generic.I
 	*
 	* @param ih instruction handle to reference
 	*/
-	@:overload public function new(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, src_line : Int) : Void;
+	@:overload @:public public function new(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, src_line : Int) : Void;
 	
 	/**
 	* @return true, if ih is target of this line number
 	*/
-	@:overload public function containsTarget(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Bool;
+	@:overload @:public public function containsTarget(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Bool;
 	
 	/**
 	* @param old_ih old target
 	* @param new_ih new target
 	*/
-	@:overload public function updateTarget(old_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function updateTarget(old_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* Get LineNumber attribute .
@@ -90,17 +90,17 @@ extern class LineNumberGen implements com.sun.org.apache.bcel.internal.generic.I
 	* This relies on that the instruction list has already been dumped to byte code or
 	* or that the `setPositions' methods has been called for the instruction list.
 	*/
-	@:overload public function getLineNumber() : com.sun.org.apache.bcel.internal.classfile.LineNumber;
+	@:overload @:public public function getLineNumber() : com.sun.org.apache.bcel.internal.classfile.LineNumber;
 	
-	@:overload public function setInstruction(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function setInstruction(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function getInstruction() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function getInstruction() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
-	@:overload public function setSourceLine(src_line : Int) : Void;
+	@:overload @:public public function setSourceLine(src_line : Int) : Void;
 	
-	@:overload public function getSourceLine() : Int;
+	@:overload @:public public function getSourceLine() : Int;
 	
 	
 }

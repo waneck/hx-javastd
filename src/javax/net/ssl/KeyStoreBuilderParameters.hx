@@ -42,7 +42,7 @@ package javax.net.ssl;
 	* @param builder the Builder object
 	* @exception NullPointerException if builder is null
 	*/
-	@:overload public function new(builder : Builder) : Void;
+	@:overload @:public public function new(builder : Builder) : Void;
 	
 	/**
 	* Construct new KeyStoreBuilderParameters from a List
@@ -53,7 +53,7 @@ package javax.net.ssl;
 	* @exception NullPointerException if parameters is null
 	* @exception IllegalArgumentException if parameters is an empty list
 	*/
-	@:overload public function new(parameters : java.util.List<Builder>) : Void;
+	@:overload @:public public function new(parameters : java.util.List<Builder>) : Void;
 	
 	/**
 	* Return the unmodifiable List of the
@@ -64,7 +64,7 @@ package javax.net.ssl;
 	* {@linkplain java.security.KeyStore.Builder}s
 	* encapsulated by this object.
 	*/
-	@:overload public function getParameters() : java.util.List<Builder>;
+	@:overload @:public public function getParameters() : java.util.List<Builder>;
 	
 	
 }

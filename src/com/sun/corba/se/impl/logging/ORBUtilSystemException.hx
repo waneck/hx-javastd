@@ -5,3151 +5,3151 @@ package com.sun.corba.se.impl.logging;
 //// Generated from input file ../../../../src/share/classes/com/sun/corba/se/spi/logging/data/ORBUtil.mc on Thu Feb 21 09:14:11 UTC 2013
 extern class ORBUtilSystemException extends com.sun.corba.se.spi.logging.LogWrapperBase
 {
-	@:overload public function new(logger : java.util.logging.Logger) : Void;
+	@:overload @:public public function new(logger : java.util.logging.Logger) : Void;
 	
-	@:overload public static function get(orb : com.sun.corba.se.spi.orb.ORB, logDomain : String) : com.sun.corba.se.impl.logging.ORBUtilSystemException;
+	@:overload @:public @:static public static function get(orb : com.sun.corba.se.spi.orb.ORB, logDomain : String) : com.sun.corba.se.impl.logging.ORBUtilSystemException;
 	
-	@:overload public static function get(logDomain : String) : com.sun.corba.se.impl.logging.ORBUtilSystemException;
+	@:overload @:public @:static public static function get(logDomain : String) : com.sun.corba.se.impl.logging.ORBUtilSystemException;
 	
-	public static var ADAPTER_ID_NOT_AVAILABLE(default, null) : Int;
+	@:public @:static @:final public static var ADAPTER_ID_NOT_AVAILABLE(default, null) : Int;
 	
-	@:overload public function adapterIdNotAvailable(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function adapterIdNotAvailable(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function adapterIdNotAvailable(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function adapterIdNotAvailable(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function adapterIdNotAvailable(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function adapterIdNotAvailable(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function adapterIdNotAvailable() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function adapterIdNotAvailable() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var SERVER_ID_NOT_AVAILABLE(default, null) : Int;
+	@:public @:static @:final public static var SERVER_ID_NOT_AVAILABLE(default, null) : Int;
 	
-	@:overload public function serverIdNotAvailable(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function serverIdNotAvailable(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function serverIdNotAvailable(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function serverIdNotAvailable(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function serverIdNotAvailable(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function serverIdNotAvailable(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function serverIdNotAvailable() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function serverIdNotAvailable() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var ORB_ID_NOT_AVAILABLE(default, null) : Int;
+	@:public @:static @:final public static var ORB_ID_NOT_AVAILABLE(default, null) : Int;
 	
-	@:overload public function orbIdNotAvailable(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function orbIdNotAvailable(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function orbIdNotAvailable(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function orbIdNotAvailable(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function orbIdNotAvailable(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function orbIdNotAvailable(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function orbIdNotAvailable() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function orbIdNotAvailable() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var OBJECT_ADAPTER_ID_NOT_AVAILABLE(default, null) : Int;
+	@:public @:static @:final public static var OBJECT_ADAPTER_ID_NOT_AVAILABLE(default, null) : Int;
 	
-	@:overload public function objectAdapterIdNotAvailable(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function objectAdapterIdNotAvailable(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function objectAdapterIdNotAvailable(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function objectAdapterIdNotAvailable(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function objectAdapterIdNotAvailable(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function objectAdapterIdNotAvailable(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function objectAdapterIdNotAvailable() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function objectAdapterIdNotAvailable() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var CONNECTING_SERVANT(default, null) : Int;
+	@:public @:static @:final public static var CONNECTING_SERVANT(default, null) : Int;
 	
-	@:overload public function connectingServant(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function connectingServant(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function connectingServant(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function connectingServant(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function connectingServant(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function connectingServant(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function connectingServant() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function connectingServant() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var EXTRACT_WRONG_TYPE(default, null) : Int;
+	@:public @:static @:final public static var EXTRACT_WRONG_TYPE(default, null) : Int;
 	
-	@:overload public function extractWrongType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractWrongType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function extractWrongType(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractWrongType(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function extractWrongType(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractWrongType(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function extractWrongType(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractWrongType(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var EXTRACT_WRONG_TYPE_LIST(default, null) : Int;
+	@:public @:static @:final public static var EXTRACT_WRONG_TYPE_LIST(default, null) : Int;
 	
-	@:overload public function extractWrongTypeList(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractWrongTypeList(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function extractWrongTypeList(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractWrongTypeList(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function extractWrongTypeList(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractWrongTypeList(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function extractWrongTypeList(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractWrongTypeList(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var BAD_STRING_BOUNDS(default, null) : Int;
+	@:public @:static @:final public static var BAD_STRING_BOUNDS(default, null) : Int;
 	
-	@:overload public function badStringBounds(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function badStringBounds(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function badStringBounds(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function badStringBounds(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function badStringBounds(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function badStringBounds(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function badStringBounds(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function badStringBounds(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var INSERT_OBJECT_INCOMPATIBLE(default, null) : Int;
+	@:public @:static @:final public static var INSERT_OBJECT_INCOMPATIBLE(default, null) : Int;
 	
-	@:overload public function insertObjectIncompatible(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function insertObjectIncompatible(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function insertObjectIncompatible(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function insertObjectIncompatible(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function insertObjectIncompatible(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function insertObjectIncompatible(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function insertObjectIncompatible() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function insertObjectIncompatible() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var INSERT_OBJECT_FAILED(default, null) : Int;
+	@:public @:static @:final public static var INSERT_OBJECT_FAILED(default, null) : Int;
 	
-	@:overload public function insertObjectFailed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function insertObjectFailed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function insertObjectFailed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function insertObjectFailed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function insertObjectFailed(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function insertObjectFailed(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function insertObjectFailed() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function insertObjectFailed() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var EXTRACT_OBJECT_INCOMPATIBLE(default, null) : Int;
+	@:public @:static @:final public static var EXTRACT_OBJECT_INCOMPATIBLE(default, null) : Int;
 	
-	@:overload public function extractObjectIncompatible(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractObjectIncompatible(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function extractObjectIncompatible(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractObjectIncompatible(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function extractObjectIncompatible(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractObjectIncompatible(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function extractObjectIncompatible() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractObjectIncompatible() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var FIXED_NOT_MATCH(default, null) : Int;
+	@:public @:static @:final public static var FIXED_NOT_MATCH(default, null) : Int;
 	
-	@:overload public function fixedNotMatch(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function fixedNotMatch(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function fixedNotMatch(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function fixedNotMatch(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function fixedNotMatch(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function fixedNotMatch(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function fixedNotMatch() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function fixedNotMatch() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var FIXED_BAD_TYPECODE(default, null) : Int;
+	@:public @:static @:final public static var FIXED_BAD_TYPECODE(default, null) : Int;
 	
-	@:overload public function fixedBadTypecode(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function fixedBadTypecode(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function fixedBadTypecode(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function fixedBadTypecode(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function fixedBadTypecode(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function fixedBadTypecode(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function fixedBadTypecode() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function fixedBadTypecode() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var SET_EXCEPTION_CALLED_NULL_ARGS(default, null) : Int;
+	@:public @:static @:final public static var SET_EXCEPTION_CALLED_NULL_ARGS(default, null) : Int;
 	
-	@:overload public function setExceptionCalledNullArgs(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function setExceptionCalledNullArgs(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function setExceptionCalledNullArgs(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function setExceptionCalledNullArgs(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function setExceptionCalledNullArgs(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function setExceptionCalledNullArgs(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function setExceptionCalledNullArgs() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function setExceptionCalledNullArgs() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var SET_EXCEPTION_CALLED_BAD_TYPE(default, null) : Int;
+	@:public @:static @:final public static var SET_EXCEPTION_CALLED_BAD_TYPE(default, null) : Int;
 	
-	@:overload public function setExceptionCalledBadType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function setExceptionCalledBadType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function setExceptionCalledBadType(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function setExceptionCalledBadType(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function setExceptionCalledBadType(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function setExceptionCalledBadType(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function setExceptionCalledBadType() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function setExceptionCalledBadType() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var CONTEXT_CALLED_OUT_OF_ORDER(default, null) : Int;
+	@:public @:static @:final public static var CONTEXT_CALLED_OUT_OF_ORDER(default, null) : Int;
 	
-	@:overload public function contextCalledOutOfOrder(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function contextCalledOutOfOrder(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function contextCalledOutOfOrder(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function contextCalledOutOfOrder(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function contextCalledOutOfOrder(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function contextCalledOutOfOrder(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function contextCalledOutOfOrder() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function contextCalledOutOfOrder() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var BAD_ORB_CONFIGURATOR(default, null) : Int;
+	@:public @:static @:final public static var BAD_ORB_CONFIGURATOR(default, null) : Int;
 	
-	@:overload public function badOrbConfigurator(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function badOrbConfigurator(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function badOrbConfigurator(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function badOrbConfigurator(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function badOrbConfigurator(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function badOrbConfigurator(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function badOrbConfigurator(arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function badOrbConfigurator(arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var ORB_CONFIGURATOR_ERROR(default, null) : Int;
+	@:public @:static @:final public static var ORB_CONFIGURATOR_ERROR(default, null) : Int;
 	
-	@:overload public function orbConfiguratorError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function orbConfiguratorError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function orbConfiguratorError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function orbConfiguratorError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function orbConfiguratorError(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function orbConfiguratorError(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function orbConfiguratorError() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function orbConfiguratorError() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var ORB_DESTROYED(default, null) : Int;
+	@:public @:static @:final public static var ORB_DESTROYED(default, null) : Int;
 	
-	@:overload public function orbDestroyed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function orbDestroyed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function orbDestroyed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function orbDestroyed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function orbDestroyed(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function orbDestroyed(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function orbDestroyed() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function orbDestroyed() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var NEGATIVE_BOUNDS(default, null) : Int;
+	@:public @:static @:final public static var NEGATIVE_BOUNDS(default, null) : Int;
 	
-	@:overload public function negativeBounds(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function negativeBounds(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function negativeBounds(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function negativeBounds(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function negativeBounds(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function negativeBounds(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function negativeBounds() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function negativeBounds() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var EXTRACT_NOT_INITIALIZED(default, null) : Int;
+	@:public @:static @:final public static var EXTRACT_NOT_INITIALIZED(default, null) : Int;
 	
-	@:overload public function extractNotInitialized(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractNotInitialized(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function extractNotInitialized(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractNotInitialized(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function extractNotInitialized(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractNotInitialized(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function extractNotInitialized() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractNotInitialized() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var EXTRACT_OBJECT_FAILED(default, null) : Int;
+	@:public @:static @:final public static var EXTRACT_OBJECT_FAILED(default, null) : Int;
 	
-	@:overload public function extractObjectFailed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractObjectFailed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function extractObjectFailed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractObjectFailed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function extractObjectFailed(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractObjectFailed(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function extractObjectFailed() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function extractObjectFailed() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var METHOD_NOT_FOUND_IN_TIE(default, null) : Int;
+	@:public @:static @:final public static var METHOD_NOT_FOUND_IN_TIE(default, null) : Int;
 	
-	@:overload public function methodNotFoundInTie(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function methodNotFoundInTie(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function methodNotFoundInTie(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function methodNotFoundInTie(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function methodNotFoundInTie(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function methodNotFoundInTie(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function methodNotFoundInTie(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function methodNotFoundInTie(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var CLASS_NOT_FOUND1(default, null) : Int;
+	@:public @:static @:final public static var CLASS_NOT_FOUND1(default, null) : Int;
 	
-	@:overload public function classNotFound1(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function classNotFound1(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function classNotFound1(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function classNotFound1(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function classNotFound1(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function classNotFound1(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function classNotFound1(arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function classNotFound1(arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var CLASS_NOT_FOUND2(default, null) : Int;
+	@:public @:static @:final public static var CLASS_NOT_FOUND2(default, null) : Int;
 	
-	@:overload public function classNotFound2(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function classNotFound2(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function classNotFound2(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function classNotFound2(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function classNotFound2(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function classNotFound2(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function classNotFound2(arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function classNotFound2(arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var CLASS_NOT_FOUND3(default, null) : Int;
+	@:public @:static @:final public static var CLASS_NOT_FOUND3(default, null) : Int;
 	
-	@:overload public function classNotFound3(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function classNotFound3(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function classNotFound3(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function classNotFound3(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function classNotFound3(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function classNotFound3(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function classNotFound3(arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function classNotFound3(arg0 : Dynamic) : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var GET_DELEGATE_SERVANT_NOT_ACTIVE(default, null) : Int;
+	@:public @:static @:final public static var GET_DELEGATE_SERVANT_NOT_ACTIVE(default, null) : Int;
 	
-	@:overload public function getDelegateServantNotActive(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getDelegateServantNotActive(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function getDelegateServantNotActive(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getDelegateServantNotActive(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function getDelegateServantNotActive(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getDelegateServantNotActive(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function getDelegateServantNotActive() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getDelegateServantNotActive() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var GET_DELEGATE_WRONG_POLICY(default, null) : Int;
+	@:public @:static @:final public static var GET_DELEGATE_WRONG_POLICY(default, null) : Int;
 	
-	@:overload public function getDelegateWrongPolicy(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getDelegateWrongPolicy(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function getDelegateWrongPolicy(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getDelegateWrongPolicy(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function getDelegateWrongPolicy(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getDelegateWrongPolicy(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function getDelegateWrongPolicy() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getDelegateWrongPolicy() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var SET_DELEGATE_REQUIRES_STUB(default, null) : Int;
+	@:public @:static @:final public static var SET_DELEGATE_REQUIRES_STUB(default, null) : Int;
 	
-	@:overload public function setDelegateRequiresStub(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function setDelegateRequiresStub(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function setDelegateRequiresStub(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function setDelegateRequiresStub(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function setDelegateRequiresStub(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function setDelegateRequiresStub(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function setDelegateRequiresStub() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function setDelegateRequiresStub() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var GET_DELEGATE_REQUIRES_STUB(default, null) : Int;
+	@:public @:static @:final public static var GET_DELEGATE_REQUIRES_STUB(default, null) : Int;
 	
-	@:overload public function getDelegateRequiresStub(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getDelegateRequiresStub(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function getDelegateRequiresStub(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getDelegateRequiresStub(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function getDelegateRequiresStub(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getDelegateRequiresStub(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function getDelegateRequiresStub() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getDelegateRequiresStub() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var GET_TYPE_IDS_REQUIRES_STUB(default, null) : Int;
+	@:public @:static @:final public static var GET_TYPE_IDS_REQUIRES_STUB(default, null) : Int;
 	
-	@:overload public function getTypeIdsRequiresStub(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getTypeIdsRequiresStub(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function getTypeIdsRequiresStub(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getTypeIdsRequiresStub(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function getTypeIdsRequiresStub(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getTypeIdsRequiresStub(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function getTypeIdsRequiresStub() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getTypeIdsRequiresStub() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var GET_ORB_REQUIRES_STUB(default, null) : Int;
+	@:public @:static @:final public static var GET_ORB_REQUIRES_STUB(default, null) : Int;
 	
-	@:overload public function getOrbRequiresStub(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getOrbRequiresStub(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function getOrbRequiresStub(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getOrbRequiresStub(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function getOrbRequiresStub(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getOrbRequiresStub(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function getOrbRequiresStub() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function getOrbRequiresStub() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var CONNECT_REQUIRES_STUB(default, null) : Int;
+	@:public @:static @:final public static var CONNECT_REQUIRES_STUB(default, null) : Int;
 	
-	@:overload public function connectRequiresStub(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function connectRequiresStub(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function connectRequiresStub(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function connectRequiresStub(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function connectRequiresStub(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function connectRequiresStub(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function connectRequiresStub() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function connectRequiresStub() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var IS_LOCAL_REQUIRES_STUB(default, null) : Int;
+	@:public @:static @:final public static var IS_LOCAL_REQUIRES_STUB(default, null) : Int;
 	
-	@:overload public function isLocalRequiresStub(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function isLocalRequiresStub(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function isLocalRequiresStub(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function isLocalRequiresStub(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function isLocalRequiresStub(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function isLocalRequiresStub(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function isLocalRequiresStub() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function isLocalRequiresStub() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var REQUEST_REQUIRES_STUB(default, null) : Int;
+	@:public @:static @:final public static var REQUEST_REQUIRES_STUB(default, null) : Int;
 	
-	@:overload public function requestRequiresStub(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function requestRequiresStub(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function requestRequiresStub(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function requestRequiresStub(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function requestRequiresStub(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function requestRequiresStub(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function requestRequiresStub() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function requestRequiresStub() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var BAD_ACTIVATE_TIE_CALL(default, null) : Int;
+	@:public @:static @:final public static var BAD_ACTIVATE_TIE_CALL(default, null) : Int;
 	
-	@:overload public function badActivateTieCall(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function badActivateTieCall(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function badActivateTieCall(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function badActivateTieCall(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function badActivateTieCall(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function badActivateTieCall(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function badActivateTieCall() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function badActivateTieCall() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var IO_EXCEPTION_ON_CLOSE(default, null) : Int;
+	@:public @:static @:final public static var IO_EXCEPTION_ON_CLOSE(default, null) : Int;
 	
-	@:overload public function ioExceptionOnClose(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function ioExceptionOnClose(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function ioExceptionOnClose(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function ioExceptionOnClose(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function ioExceptionOnClose(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function ioExceptionOnClose(t : java.lang.Throwable) : org.omg.CORBA.BAD_OPERATION;
 	
-	@:overload public function ioExceptionOnClose() : org.omg.CORBA.BAD_OPERATION;
+	@:overload @:public public function ioExceptionOnClose() : org.omg.CORBA.BAD_OPERATION;
 	
-	public static var NULL_PARAM(default, null) : Int;
+	@:public @:static @:final public static var NULL_PARAM(default, null) : Int;
 	
-	@:overload public function nullParam(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function nullParam(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function nullParam(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function nullParam(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function nullParam(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function nullParam(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function nullParam() : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function nullParam() : org.omg.CORBA.BAD_PARAM;
 	
-	public static var UNABLE_FIND_VALUE_FACTORY(default, null) : Int;
+	@:public @:static @:final public static var UNABLE_FIND_VALUE_FACTORY(default, null) : Int;
 	
-	@:overload public function unableFindValueFactory(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function unableFindValueFactory(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function unableFindValueFactory(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function unableFindValueFactory(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function unableFindValueFactory(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function unableFindValueFactory(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function unableFindValueFactory() : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function unableFindValueFactory() : org.omg.CORBA.BAD_PARAM;
 	
-	public static var ABSTRACT_FROM_NON_ABSTRACT(default, null) : Int;
+	@:public @:static @:final public static var ABSTRACT_FROM_NON_ABSTRACT(default, null) : Int;
 	
-	@:overload public function abstractFromNonAbstract(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function abstractFromNonAbstract(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function abstractFromNonAbstract(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function abstractFromNonAbstract(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function abstractFromNonAbstract(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function abstractFromNonAbstract(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function abstractFromNonAbstract() : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function abstractFromNonAbstract() : org.omg.CORBA.BAD_PARAM;
 	
-	public static var INVALID_TAGGED_PROFILE(default, null) : Int;
+	@:public @:static @:final public static var INVALID_TAGGED_PROFILE(default, null) : Int;
 	
-	@:overload public function invalidTaggedProfile(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidTaggedProfile(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function invalidTaggedProfile(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidTaggedProfile(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function invalidTaggedProfile(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidTaggedProfile(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function invalidTaggedProfile() : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidTaggedProfile() : org.omg.CORBA.BAD_PARAM;
 	
-	public static var OBJREF_FROM_FOREIGN_ORB(default, null) : Int;
+	@:public @:static @:final public static var OBJREF_FROM_FOREIGN_ORB(default, null) : Int;
 	
-	@:overload public function objrefFromForeignOrb(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function objrefFromForeignOrb(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function objrefFromForeignOrb(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function objrefFromForeignOrb(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function objrefFromForeignOrb(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function objrefFromForeignOrb(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function objrefFromForeignOrb() : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function objrefFromForeignOrb() : org.omg.CORBA.BAD_PARAM;
 	
-	public static var LOCAL_OBJECT_NOT_ALLOWED(default, null) : Int;
+	@:public @:static @:final public static var LOCAL_OBJECT_NOT_ALLOWED(default, null) : Int;
 	
-	@:overload public function localObjectNotAllowed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function localObjectNotAllowed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function localObjectNotAllowed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function localObjectNotAllowed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function localObjectNotAllowed(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function localObjectNotAllowed(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function localObjectNotAllowed() : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function localObjectNotAllowed() : org.omg.CORBA.BAD_PARAM;
 	
-	public static var NULL_OBJECT_REFERENCE(default, null) : Int;
+	@:public @:static @:final public static var NULL_OBJECT_REFERENCE(default, null) : Int;
 	
-	@:overload public function nullObjectReference(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function nullObjectReference(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function nullObjectReference(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function nullObjectReference(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function nullObjectReference(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function nullObjectReference(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function nullObjectReference() : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function nullObjectReference() : org.omg.CORBA.BAD_PARAM;
 	
-	public static var COULD_NOT_LOAD_CLASS(default, null) : Int;
+	@:public @:static @:final public static var COULD_NOT_LOAD_CLASS(default, null) : Int;
 	
-	@:overload public function couldNotLoadClass(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function couldNotLoadClass(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function couldNotLoadClass(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function couldNotLoadClass(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function couldNotLoadClass(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function couldNotLoadClass(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function couldNotLoadClass(arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function couldNotLoadClass(arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	public static var BAD_URL(default, null) : Int;
+	@:public @:static @:final public static var BAD_URL(default, null) : Int;
 	
-	@:overload public function badUrl(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function badUrl(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function badUrl(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function badUrl(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function badUrl(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function badUrl(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function badUrl(arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function badUrl(arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	public static var FIELD_NOT_FOUND(default, null) : Int;
+	@:public @:static @:final public static var FIELD_NOT_FOUND(default, null) : Int;
 	
-	@:overload public function fieldNotFound(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function fieldNotFound(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function fieldNotFound(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function fieldNotFound(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function fieldNotFound(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function fieldNotFound(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function fieldNotFound(arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function fieldNotFound(arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	public static var ERROR_SETTING_FIELD(default, null) : Int;
+	@:public @:static @:final public static var ERROR_SETTING_FIELD(default, null) : Int;
 	
-	@:overload public function errorSettingField(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function errorSettingField(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function errorSettingField(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function errorSettingField(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function errorSettingField(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function errorSettingField(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function errorSettingField(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function errorSettingField(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	public static var BOUNDS_ERROR_IN_DII_REQUEST(default, null) : Int;
+	@:public @:static @:final public static var BOUNDS_ERROR_IN_DII_REQUEST(default, null) : Int;
 	
-	@:overload public function boundsErrorInDiiRequest(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function boundsErrorInDiiRequest(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function boundsErrorInDiiRequest(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function boundsErrorInDiiRequest(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function boundsErrorInDiiRequest(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function boundsErrorInDiiRequest(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function boundsErrorInDiiRequest() : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function boundsErrorInDiiRequest() : org.omg.CORBA.BAD_PARAM;
 	
-	public static var PERSISTENT_SERVER_INIT_ERROR(default, null) : Int;
+	@:public @:static @:final public static var PERSISTENT_SERVER_INIT_ERROR(default, null) : Int;
 	
-	@:overload public function persistentServerInitError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function persistentServerInitError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function persistentServerInitError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function persistentServerInitError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function persistentServerInitError(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function persistentServerInitError(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function persistentServerInitError() : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function persistentServerInitError() : org.omg.CORBA.BAD_PARAM;
 	
-	public static var COULD_NOT_CREATE_ARRAY(default, null) : Int;
+	@:public @:static @:final public static var COULD_NOT_CREATE_ARRAY(default, null) : Int;
 	
-	@:overload public function couldNotCreateArray(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function couldNotCreateArray(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function couldNotCreateArray(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function couldNotCreateArray(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function couldNotCreateArray(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function couldNotCreateArray(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function couldNotCreateArray(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function couldNotCreateArray(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	public static var COULD_NOT_SET_ARRAY(default, null) : Int;
+	@:public @:static @:final public static var COULD_NOT_SET_ARRAY(default, null) : Int;
 	
-	@:overload public function couldNotSetArray(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic, arg4 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function couldNotSetArray(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic, arg4 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function couldNotSetArray(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic, arg4 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function couldNotSetArray(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic, arg4 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function couldNotSetArray(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic, arg4 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function couldNotSetArray(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic, arg4 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function couldNotSetArray(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic, arg4 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function couldNotSetArray(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic, arg4 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	public static var ILLEGAL_BOOTSTRAP_OPERATION(default, null) : Int;
+	@:public @:static @:final public static var ILLEGAL_BOOTSTRAP_OPERATION(default, null) : Int;
 	
-	@:overload public function illegalBootstrapOperation(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function illegalBootstrapOperation(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function illegalBootstrapOperation(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function illegalBootstrapOperation(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function illegalBootstrapOperation(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function illegalBootstrapOperation(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function illegalBootstrapOperation(arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function illegalBootstrapOperation(arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	public static var BOOTSTRAP_RUNTIME_EXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var BOOTSTRAP_RUNTIME_EXCEPTION(default, null) : Int;
 	
-	@:overload public function bootstrapRuntimeException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function bootstrapRuntimeException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function bootstrapRuntimeException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function bootstrapRuntimeException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function bootstrapRuntimeException(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function bootstrapRuntimeException(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function bootstrapRuntimeException() : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function bootstrapRuntimeException() : org.omg.CORBA.BAD_PARAM;
 	
-	public static var BOOTSTRAP_EXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var BOOTSTRAP_EXCEPTION(default, null) : Int;
 	
-	@:overload public function bootstrapException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function bootstrapException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function bootstrapException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function bootstrapException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function bootstrapException(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function bootstrapException(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function bootstrapException() : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function bootstrapException() : org.omg.CORBA.BAD_PARAM;
 	
-	public static var STRING_EXPECTED(default, null) : Int;
+	@:public @:static @:final public static var STRING_EXPECTED(default, null) : Int;
 	
-	@:overload public function stringExpected(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function stringExpected(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function stringExpected(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function stringExpected(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function stringExpected(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function stringExpected(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function stringExpected() : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function stringExpected() : org.omg.CORBA.BAD_PARAM;
 	
-	public static var INVALID_TYPECODE_KIND(default, null) : Int;
+	@:public @:static @:final public static var INVALID_TYPECODE_KIND(default, null) : Int;
 	
-	@:overload public function invalidTypecodeKind(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidTypecodeKind(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function invalidTypecodeKind(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidTypecodeKind(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function invalidTypecodeKind(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidTypecodeKind(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function invalidTypecodeKind(arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidTypecodeKind(arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	public static var SOCKET_FACTORY_AND_CONTACT_INFO_LIST_AT_SAME_TIME(default, null) : Int;
+	@:public @:static @:final public static var SOCKET_FACTORY_AND_CONTACT_INFO_LIST_AT_SAME_TIME(default, null) : Int;
 	
-	@:overload public function socketFactoryAndContactInfoListAtSameTime(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function socketFactoryAndContactInfoListAtSameTime(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function socketFactoryAndContactInfoListAtSameTime(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function socketFactoryAndContactInfoListAtSameTime(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function socketFactoryAndContactInfoListAtSameTime(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function socketFactoryAndContactInfoListAtSameTime(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function socketFactoryAndContactInfoListAtSameTime() : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function socketFactoryAndContactInfoListAtSameTime() : org.omg.CORBA.BAD_PARAM;
 	
-	public static var ACCEPTORS_AND_LEGACY_SOCKET_FACTORY_AT_SAME_TIME(default, null) : Int;
+	@:public @:static @:final public static var ACCEPTORS_AND_LEGACY_SOCKET_FACTORY_AT_SAME_TIME(default, null) : Int;
 	
-	@:overload public function acceptorsAndLegacySocketFactoryAtSameTime(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function acceptorsAndLegacySocketFactoryAtSameTime(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function acceptorsAndLegacySocketFactoryAtSameTime(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function acceptorsAndLegacySocketFactoryAtSameTime(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function acceptorsAndLegacySocketFactoryAtSameTime(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function acceptorsAndLegacySocketFactoryAtSameTime(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function acceptorsAndLegacySocketFactoryAtSameTime() : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function acceptorsAndLegacySocketFactoryAtSameTime() : org.omg.CORBA.BAD_PARAM;
 	
-	public static var BAD_ORB_FOR_SERVANT(default, null) : Int;
+	@:public @:static @:final public static var BAD_ORB_FOR_SERVANT(default, null) : Int;
 	
-	@:overload public function badOrbForServant(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function badOrbForServant(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function badOrbForServant(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function badOrbForServant(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function badOrbForServant(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function badOrbForServant(t : java.lang.Throwable) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function badOrbForServant() : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function badOrbForServant() : org.omg.CORBA.BAD_PARAM;
 	
-	public static var INVALID_REQUEST_PARTITIONING_POLICY_VALUE(default, null) : Int;
+	@:public @:static @:final public static var INVALID_REQUEST_PARTITIONING_POLICY_VALUE(default, null) : Int;
 	
-	@:overload public function invalidRequestPartitioningPolicyValue(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidRequestPartitioningPolicyValue(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function invalidRequestPartitioningPolicyValue(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidRequestPartitioningPolicyValue(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function invalidRequestPartitioningPolicyValue(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidRequestPartitioningPolicyValue(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function invalidRequestPartitioningPolicyValue(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidRequestPartitioningPolicyValue(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	public static var INVALID_REQUEST_PARTITIONING_COMPONENT_VALUE(default, null) : Int;
+	@:public @:static @:final public static var INVALID_REQUEST_PARTITIONING_COMPONENT_VALUE(default, null) : Int;
 	
-	@:overload public function invalidRequestPartitioningComponentValue(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidRequestPartitioningComponentValue(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function invalidRequestPartitioningComponentValue(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidRequestPartitioningComponentValue(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function invalidRequestPartitioningComponentValue(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidRequestPartitioningComponentValue(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function invalidRequestPartitioningComponentValue(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidRequestPartitioningComponentValue(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	public static var INVALID_REQUEST_PARTITIONING_ID(default, null) : Int;
+	@:public @:static @:final public static var INVALID_REQUEST_PARTITIONING_ID(default, null) : Int;
 	
-	@:overload public function invalidRequestPartitioningId(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidRequestPartitioningId(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function invalidRequestPartitioningId(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidRequestPartitioningId(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function invalidRequestPartitioningId(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidRequestPartitioningId(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function invalidRequestPartitioningId(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function invalidRequestPartitioningId(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	public static var ERROR_IN_SETTING_DYNAMIC_STUB_FACTORY_FACTORY(default, null) : Int;
+	@:public @:static @:final public static var ERROR_IN_SETTING_DYNAMIC_STUB_FACTORY_FACTORY(default, null) : Int;
 	
-	@:overload public function errorInSettingDynamicStubFactoryFactory(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function errorInSettingDynamicStubFactoryFactory(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function errorInSettingDynamicStubFactoryFactory(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function errorInSettingDynamicStubFactoryFactory(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function errorInSettingDynamicStubFactoryFactory(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function errorInSettingDynamicStubFactoryFactory(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	@:overload public function errorInSettingDynamicStubFactoryFactory(arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
+	@:overload @:public public function errorInSettingDynamicStubFactoryFactory(arg0 : Dynamic) : org.omg.CORBA.BAD_PARAM;
 	
-	public static var DSIMETHOD_NOTCALLED(default, null) : Int;
+	@:public @:static @:final public static var DSIMETHOD_NOTCALLED(default, null) : Int;
 	
-	@:overload public function dsimethodNotcalled(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function dsimethodNotcalled(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function dsimethodNotcalled(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function dsimethodNotcalled(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function dsimethodNotcalled(t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function dsimethodNotcalled(t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function dsimethodNotcalled() : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function dsimethodNotcalled() : org.omg.CORBA.BAD_INV_ORDER;
 	
-	public static var ARGUMENTS_CALLED_MULTIPLE(default, null) : Int;
+	@:public @:static @:final public static var ARGUMENTS_CALLED_MULTIPLE(default, null) : Int;
 	
-	@:overload public function argumentsCalledMultiple(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function argumentsCalledMultiple(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function argumentsCalledMultiple(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function argumentsCalledMultiple(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function argumentsCalledMultiple(t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function argumentsCalledMultiple(t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function argumentsCalledMultiple() : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function argumentsCalledMultiple() : org.omg.CORBA.BAD_INV_ORDER;
 	
-	public static var ARGUMENTS_CALLED_AFTER_EXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var ARGUMENTS_CALLED_AFTER_EXCEPTION(default, null) : Int;
 	
-	@:overload public function argumentsCalledAfterException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function argumentsCalledAfterException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function argumentsCalledAfterException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function argumentsCalledAfterException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function argumentsCalledAfterException(t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function argumentsCalledAfterException(t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function argumentsCalledAfterException() : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function argumentsCalledAfterException() : org.omg.CORBA.BAD_INV_ORDER;
 	
-	public static var ARGUMENTS_CALLED_NULL_ARGS(default, null) : Int;
+	@:public @:static @:final public static var ARGUMENTS_CALLED_NULL_ARGS(default, null) : Int;
 	
-	@:overload public function argumentsCalledNullArgs(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function argumentsCalledNullArgs(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function argumentsCalledNullArgs(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function argumentsCalledNullArgs(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function argumentsCalledNullArgs(t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function argumentsCalledNullArgs(t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function argumentsCalledNullArgs() : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function argumentsCalledNullArgs() : org.omg.CORBA.BAD_INV_ORDER;
 	
-	public static var ARGUMENTS_NOT_CALLED(default, null) : Int;
+	@:public @:static @:final public static var ARGUMENTS_NOT_CALLED(default, null) : Int;
 	
-	@:overload public function argumentsNotCalled(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function argumentsNotCalled(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function argumentsNotCalled(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function argumentsNotCalled(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function argumentsNotCalled(t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function argumentsNotCalled(t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function argumentsNotCalled() : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function argumentsNotCalled() : org.omg.CORBA.BAD_INV_ORDER;
 	
-	public static var SET_RESULT_CALLED_MULTIPLE(default, null) : Int;
+	@:public @:static @:final public static var SET_RESULT_CALLED_MULTIPLE(default, null) : Int;
 	
-	@:overload public function setResultCalledMultiple(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function setResultCalledMultiple(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function setResultCalledMultiple(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function setResultCalledMultiple(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function setResultCalledMultiple(t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function setResultCalledMultiple(t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function setResultCalledMultiple() : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function setResultCalledMultiple() : org.omg.CORBA.BAD_INV_ORDER;
 	
-	public static var SET_RESULT_AFTER_EXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var SET_RESULT_AFTER_EXCEPTION(default, null) : Int;
 	
-	@:overload public function setResultAfterException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function setResultAfterException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function setResultAfterException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function setResultAfterException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function setResultAfterException(t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function setResultAfterException(t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function setResultAfterException() : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function setResultAfterException() : org.omg.CORBA.BAD_INV_ORDER;
 	
-	public static var SET_RESULT_CALLED_NULL_ARGS(default, null) : Int;
+	@:public @:static @:final public static var SET_RESULT_CALLED_NULL_ARGS(default, null) : Int;
 	
-	@:overload public function setResultCalledNullArgs(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function setResultCalledNullArgs(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function setResultCalledNullArgs(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function setResultCalledNullArgs(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function setResultCalledNullArgs(t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function setResultCalledNullArgs(t : java.lang.Throwable) : org.omg.CORBA.BAD_INV_ORDER;
 	
-	@:overload public function setResultCalledNullArgs() : org.omg.CORBA.BAD_INV_ORDER;
+	@:overload @:public public function setResultCalledNullArgs() : org.omg.CORBA.BAD_INV_ORDER;
 	
-	public static var BAD_REMOTE_TYPECODE(default, null) : Int;
+	@:public @:static @:final public static var BAD_REMOTE_TYPECODE(default, null) : Int;
 	
-	@:overload public function badRemoteTypecode(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_TYPECODE;
+	@:overload @:public public function badRemoteTypecode(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_TYPECODE;
 	
-	@:overload public function badRemoteTypecode(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_TYPECODE;
+	@:overload @:public public function badRemoteTypecode(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_TYPECODE;
 	
-	@:overload public function badRemoteTypecode(t : java.lang.Throwable) : org.omg.CORBA.BAD_TYPECODE;
+	@:overload @:public public function badRemoteTypecode(t : java.lang.Throwable) : org.omg.CORBA.BAD_TYPECODE;
 	
-	@:overload public function badRemoteTypecode() : org.omg.CORBA.BAD_TYPECODE;
+	@:overload @:public public function badRemoteTypecode() : org.omg.CORBA.BAD_TYPECODE;
 	
-	public static var UNRESOLVED_RECURSIVE_TYPECODE(default, null) : Int;
+	@:public @:static @:final public static var UNRESOLVED_RECURSIVE_TYPECODE(default, null) : Int;
 	
-	@:overload public function unresolvedRecursiveTypecode(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_TYPECODE;
+	@:overload @:public public function unresolvedRecursiveTypecode(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.BAD_TYPECODE;
 	
-	@:overload public function unresolvedRecursiveTypecode(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_TYPECODE;
+	@:overload @:public public function unresolvedRecursiveTypecode(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.BAD_TYPECODE;
 	
-	@:overload public function unresolvedRecursiveTypecode(t : java.lang.Throwable) : org.omg.CORBA.BAD_TYPECODE;
+	@:overload @:public public function unresolvedRecursiveTypecode(t : java.lang.Throwable) : org.omg.CORBA.BAD_TYPECODE;
 	
-	@:overload public function unresolvedRecursiveTypecode() : org.omg.CORBA.BAD_TYPECODE;
+	@:overload @:public public function unresolvedRecursiveTypecode() : org.omg.CORBA.BAD_TYPECODE;
 	
-	public static var CONNECT_FAILURE(default, null) : Int;
+	@:public @:static @:final public static var CONNECT_FAILURE(default, null) : Int;
 	
-	@:overload public function connectFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function connectFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function connectFailure(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function connectFailure(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function connectFailure(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function connectFailure(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function connectFailure(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function connectFailure(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var CONNECTION_CLOSE_REBIND(default, null) : Int;
+	@:public @:static @:final public static var CONNECTION_CLOSE_REBIND(default, null) : Int;
 	
-	@:overload public function connectionCloseRebind(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function connectionCloseRebind(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function connectionCloseRebind(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function connectionCloseRebind(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function connectionCloseRebind(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function connectionCloseRebind(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function connectionCloseRebind() : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function connectionCloseRebind() : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var WRITE_ERROR_SEND(default, null) : Int;
+	@:public @:static @:final public static var WRITE_ERROR_SEND(default, null) : Int;
 	
-	@:overload public function writeErrorSend(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function writeErrorSend(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function writeErrorSend(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function writeErrorSend(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function writeErrorSend(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function writeErrorSend(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function writeErrorSend() : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function writeErrorSend() : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var GET_PROPERTIES_ERROR(default, null) : Int;
+	@:public @:static @:final public static var GET_PROPERTIES_ERROR(default, null) : Int;
 	
-	@:overload public function getPropertiesError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function getPropertiesError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function getPropertiesError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function getPropertiesError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function getPropertiesError(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function getPropertiesError(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function getPropertiesError() : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function getPropertiesError() : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var BOOTSTRAP_SERVER_NOT_AVAIL(default, null) : Int;
+	@:public @:static @:final public static var BOOTSTRAP_SERVER_NOT_AVAIL(default, null) : Int;
 	
-	@:overload public function bootstrapServerNotAvail(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function bootstrapServerNotAvail(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function bootstrapServerNotAvail(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function bootstrapServerNotAvail(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function bootstrapServerNotAvail(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function bootstrapServerNotAvail(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function bootstrapServerNotAvail() : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function bootstrapServerNotAvail() : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var INVOKE_ERROR(default, null) : Int;
+	@:public @:static @:final public static var INVOKE_ERROR(default, null) : Int;
 	
-	@:overload public function invokeError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function invokeError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function invokeError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function invokeError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function invokeError(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function invokeError(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function invokeError() : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function invokeError() : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var DEFAULT_CREATE_SERVER_SOCKET_GIVEN_NON_IIOP_CLEAR_TEXT(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_CREATE_SERVER_SOCKET_GIVEN_NON_IIOP_CLEAR_TEXT(default, null) : Int;
 	
-	@:overload public function defaultCreateServerSocketGivenNonIiopClearText(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function defaultCreateServerSocketGivenNonIiopClearText(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function defaultCreateServerSocketGivenNonIiopClearText(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function defaultCreateServerSocketGivenNonIiopClearText(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function defaultCreateServerSocketGivenNonIiopClearText(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function defaultCreateServerSocketGivenNonIiopClearText(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function defaultCreateServerSocketGivenNonIiopClearText(arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function defaultCreateServerSocketGivenNonIiopClearText(arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var CONNECTION_ABORT(default, null) : Int;
+	@:public @:static @:final public static var CONNECTION_ABORT(default, null) : Int;
 	
-	@:overload public function connectionAbort(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function connectionAbort(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function connectionAbort(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function connectionAbort(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function connectionAbort(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function connectionAbort(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function connectionAbort() : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function connectionAbort() : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var CONNECTION_REBIND(default, null) : Int;
+	@:public @:static @:final public static var CONNECTION_REBIND(default, null) : Int;
 	
-	@:overload public function connectionRebind(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function connectionRebind(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function connectionRebind(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function connectionRebind(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function connectionRebind(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function connectionRebind(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function connectionRebind() : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function connectionRebind() : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var RECV_MSG_ERROR(default, null) : Int;
+	@:public @:static @:final public static var RECV_MSG_ERROR(default, null) : Int;
 	
-	@:overload public function recvMsgError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function recvMsgError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function recvMsgError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function recvMsgError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function recvMsgError(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function recvMsgError(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function recvMsgError() : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function recvMsgError() : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var IOEXCEPTION_WHEN_READING_CONNECTION(default, null) : Int;
+	@:public @:static @:final public static var IOEXCEPTION_WHEN_READING_CONNECTION(default, null) : Int;
 	
-	@:overload public function ioexceptionWhenReadingConnection(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function ioexceptionWhenReadingConnection(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function ioexceptionWhenReadingConnection(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function ioexceptionWhenReadingConnection(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function ioexceptionWhenReadingConnection(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function ioexceptionWhenReadingConnection(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function ioexceptionWhenReadingConnection() : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function ioexceptionWhenReadingConnection() : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var SELECTION_KEY_INVALID(default, null) : Int;
+	@:public @:static @:final public static var SELECTION_KEY_INVALID(default, null) : Int;
 	
-	@:overload public function selectionKeyInvalid(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function selectionKeyInvalid(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function selectionKeyInvalid(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function selectionKeyInvalid(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function selectionKeyInvalid(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function selectionKeyInvalid(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function selectionKeyInvalid(arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function selectionKeyInvalid(arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var EXCEPTION_IN_ACCEPT(default, null) : Int;
+	@:public @:static @:final public static var EXCEPTION_IN_ACCEPT(default, null) : Int;
 	
-	@:overload public function exceptionInAccept(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function exceptionInAccept(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function exceptionInAccept(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function exceptionInAccept(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function exceptionInAccept(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function exceptionInAccept(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function exceptionInAccept(arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function exceptionInAccept(arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var SECURITY_EXCEPTION_IN_ACCEPT(default, null) : Int;
+	@:public @:static @:final public static var SECURITY_EXCEPTION_IN_ACCEPT(default, null) : Int;
 	
-	@:overload public function securityExceptionInAccept(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function securityExceptionInAccept(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function securityExceptionInAccept(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function securityExceptionInAccept(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function securityExceptionInAccept(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function securityExceptionInAccept(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function securityExceptionInAccept(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function securityExceptionInAccept(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var TRANSPORT_READ_TIMEOUT_EXCEEDED(default, null) : Int;
+	@:public @:static @:final public static var TRANSPORT_READ_TIMEOUT_EXCEEDED(default, null) : Int;
 	
-	@:overload public function transportReadTimeoutExceeded(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function transportReadTimeoutExceeded(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function transportReadTimeoutExceeded(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function transportReadTimeoutExceeded(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function transportReadTimeoutExceeded(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function transportReadTimeoutExceeded(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function transportReadTimeoutExceeded(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function transportReadTimeoutExceeded(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var CREATE_LISTENER_FAILED(default, null) : Int;
+	@:public @:static @:final public static var CREATE_LISTENER_FAILED(default, null) : Int;
 	
-	@:overload public function createListenerFailed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function createListenerFailed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function createListenerFailed(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function createListenerFailed(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function createListenerFailed(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function createListenerFailed(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function createListenerFailed(arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function createListenerFailed(arg0 : Dynamic) : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var BUFFER_READ_MANAGER_TIMEOUT(default, null) : Int;
+	@:public @:static @:final public static var BUFFER_READ_MANAGER_TIMEOUT(default, null) : Int;
 	
-	@:overload public function bufferReadManagerTimeout(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function bufferReadManagerTimeout(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function bufferReadManagerTimeout(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function bufferReadManagerTimeout(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function bufferReadManagerTimeout(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function bufferReadManagerTimeout(t : java.lang.Throwable) : org.omg.CORBA.COMM_FAILURE;
 	
-	@:overload public function bufferReadManagerTimeout() : org.omg.CORBA.COMM_FAILURE;
+	@:overload @:public public function bufferReadManagerTimeout() : org.omg.CORBA.COMM_FAILURE;
 	
-	public static var BAD_STRINGIFIED_IOR_LEN(default, null) : Int;
+	@:public @:static @:final public static var BAD_STRINGIFIED_IOR_LEN(default, null) : Int;
 	
-	@:overload public function badStringifiedIorLen(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badStringifiedIorLen(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badStringifiedIorLen(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badStringifiedIorLen(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badStringifiedIorLen(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badStringifiedIorLen(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badStringifiedIorLen() : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badStringifiedIorLen() : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var BAD_STRINGIFIED_IOR(default, null) : Int;
+	@:public @:static @:final public static var BAD_STRINGIFIED_IOR(default, null) : Int;
 	
-	@:overload public function badStringifiedIor(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badStringifiedIor(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badStringifiedIor(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badStringifiedIor(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badStringifiedIor(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badStringifiedIor(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badStringifiedIor() : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badStringifiedIor() : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var BAD_MODIFIER(default, null) : Int;
+	@:public @:static @:final public static var BAD_MODIFIER(default, null) : Int;
 	
-	@:overload public function badModifier(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badModifier(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badModifier(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badModifier(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badModifier(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badModifier(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badModifier() : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badModifier() : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var CODESET_INCOMPATIBLE(default, null) : Int;
+	@:public @:static @:final public static var CODESET_INCOMPATIBLE(default, null) : Int;
 	
-	@:overload public function codesetIncompatible(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function codesetIncompatible(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function codesetIncompatible(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function codesetIncompatible(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function codesetIncompatible(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function codesetIncompatible(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function codesetIncompatible() : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function codesetIncompatible() : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var BAD_HEX_DIGIT(default, null) : Int;
+	@:public @:static @:final public static var BAD_HEX_DIGIT(default, null) : Int;
 	
-	@:overload public function badHexDigit(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badHexDigit(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badHexDigit(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badHexDigit(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badHexDigit(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badHexDigit(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badHexDigit() : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badHexDigit() : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var BAD_UNICODE_PAIR(default, null) : Int;
+	@:public @:static @:final public static var BAD_UNICODE_PAIR(default, null) : Int;
 	
-	@:overload public function badUnicodePair(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badUnicodePair(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badUnicodePair(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badUnicodePair(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badUnicodePair(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badUnicodePair(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badUnicodePair() : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badUnicodePair() : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var BTC_RESULT_MORE_THAN_ONE_CHAR(default, null) : Int;
+	@:public @:static @:final public static var BTC_RESULT_MORE_THAN_ONE_CHAR(default, null) : Int;
 	
-	@:overload public function btcResultMoreThanOneChar(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function btcResultMoreThanOneChar(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function btcResultMoreThanOneChar(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function btcResultMoreThanOneChar(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function btcResultMoreThanOneChar(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function btcResultMoreThanOneChar(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function btcResultMoreThanOneChar() : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function btcResultMoreThanOneChar() : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var BAD_CODESETS_FROM_CLIENT(default, null) : Int;
+	@:public @:static @:final public static var BAD_CODESETS_FROM_CLIENT(default, null) : Int;
 	
-	@:overload public function badCodesetsFromClient(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badCodesetsFromClient(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badCodesetsFromClient(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badCodesetsFromClient(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badCodesetsFromClient(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badCodesetsFromClient(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badCodesetsFromClient() : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badCodesetsFromClient() : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var INVALID_SINGLE_CHAR_CTB(default, null) : Int;
+	@:public @:static @:final public static var INVALID_SINGLE_CHAR_CTB(default, null) : Int;
 	
-	@:overload public function invalidSingleCharCtb(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function invalidSingleCharCtb(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function invalidSingleCharCtb(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function invalidSingleCharCtb(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function invalidSingleCharCtb(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function invalidSingleCharCtb(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function invalidSingleCharCtb() : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function invalidSingleCharCtb() : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var BAD_GIOP_1_1_CTB(default, null) : Int;
+	@:public @:static @:final public static var BAD_GIOP_1_1_CTB(default, null) : Int;
 	
-	@:overload public function badGiop11Ctb(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badGiop11Ctb(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badGiop11Ctb(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badGiop11Ctb(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badGiop11Ctb(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badGiop11Ctb(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badGiop11Ctb() : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badGiop11Ctb() : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var BAD_SEQUENCE_BOUNDS(default, null) : Int;
+	@:public @:static @:final public static var BAD_SEQUENCE_BOUNDS(default, null) : Int;
 	
-	@:overload public function badSequenceBounds(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badSequenceBounds(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badSequenceBounds(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badSequenceBounds(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badSequenceBounds(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badSequenceBounds(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badSequenceBounds(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badSequenceBounds(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var ILLEGAL_SOCKET_FACTORY_TYPE(default, null) : Int;
+	@:public @:static @:final public static var ILLEGAL_SOCKET_FACTORY_TYPE(default, null) : Int;
 	
-	@:overload public function illegalSocketFactoryType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function illegalSocketFactoryType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function illegalSocketFactoryType(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function illegalSocketFactoryType(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function illegalSocketFactoryType(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function illegalSocketFactoryType(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function illegalSocketFactoryType(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function illegalSocketFactoryType(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var BAD_CUSTOM_SOCKET_FACTORY(default, null) : Int;
+	@:public @:static @:final public static var BAD_CUSTOM_SOCKET_FACTORY(default, null) : Int;
 	
-	@:overload public function badCustomSocketFactory(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badCustomSocketFactory(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badCustomSocketFactory(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badCustomSocketFactory(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badCustomSocketFactory(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badCustomSocketFactory(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badCustomSocketFactory(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badCustomSocketFactory(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var FRAGMENT_SIZE_MINIMUM(default, null) : Int;
+	@:public @:static @:final public static var FRAGMENT_SIZE_MINIMUM(default, null) : Int;
 	
-	@:overload public function fragmentSizeMinimum(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function fragmentSizeMinimum(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function fragmentSizeMinimum(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function fragmentSizeMinimum(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function fragmentSizeMinimum(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function fragmentSizeMinimum(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function fragmentSizeMinimum(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function fragmentSizeMinimum(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var FRAGMENT_SIZE_DIV(default, null) : Int;
+	@:public @:static @:final public static var FRAGMENT_SIZE_DIV(default, null) : Int;
 	
-	@:overload public function fragmentSizeDiv(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function fragmentSizeDiv(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function fragmentSizeDiv(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function fragmentSizeDiv(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function fragmentSizeDiv(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function fragmentSizeDiv(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function fragmentSizeDiv(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function fragmentSizeDiv(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var ORB_INITIALIZER_FAILURE(default, null) : Int;
+	@:public @:static @:final public static var ORB_INITIALIZER_FAILURE(default, null) : Int;
 	
-	@:overload public function orbInitializerFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function orbInitializerFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function orbInitializerFailure(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function orbInitializerFailure(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function orbInitializerFailure(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function orbInitializerFailure(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function orbInitializerFailure(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function orbInitializerFailure(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var ORB_INITIALIZER_TYPE(default, null) : Int;
+	@:public @:static @:final public static var ORB_INITIALIZER_TYPE(default, null) : Int;
 	
-	@:overload public function orbInitializerType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function orbInitializerType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function orbInitializerType(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function orbInitializerType(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function orbInitializerType(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function orbInitializerType(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function orbInitializerType(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function orbInitializerType(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var ORB_INITIALREFERENCE_SYNTAX(default, null) : Int;
+	@:public @:static @:final public static var ORB_INITIALREFERENCE_SYNTAX(default, null) : Int;
 	
-	@:overload public function orbInitialreferenceSyntax(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function orbInitialreferenceSyntax(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function orbInitialreferenceSyntax(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function orbInitialreferenceSyntax(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function orbInitialreferenceSyntax(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function orbInitialreferenceSyntax(t : java.lang.Throwable) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function orbInitialreferenceSyntax() : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function orbInitialreferenceSyntax() : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var ACCEPTOR_INSTANTIATION_FAILURE(default, null) : Int;
+	@:public @:static @:final public static var ACCEPTOR_INSTANTIATION_FAILURE(default, null) : Int;
 	
-	@:overload public function acceptorInstantiationFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function acceptorInstantiationFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function acceptorInstantiationFailure(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function acceptorInstantiationFailure(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function acceptorInstantiationFailure(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function acceptorInstantiationFailure(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function acceptorInstantiationFailure(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function acceptorInstantiationFailure(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var ACCEPTOR_INSTANTIATION_TYPE_FAILURE(default, null) : Int;
+	@:public @:static @:final public static var ACCEPTOR_INSTANTIATION_TYPE_FAILURE(default, null) : Int;
 	
-	@:overload public function acceptorInstantiationTypeFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function acceptorInstantiationTypeFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function acceptorInstantiationTypeFailure(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function acceptorInstantiationTypeFailure(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function acceptorInstantiationTypeFailure(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function acceptorInstantiationTypeFailure(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function acceptorInstantiationTypeFailure(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function acceptorInstantiationTypeFailure(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var ILLEGAL_CONTACT_INFO_LIST_FACTORY_TYPE(default, null) : Int;
+	@:public @:static @:final public static var ILLEGAL_CONTACT_INFO_LIST_FACTORY_TYPE(default, null) : Int;
 	
-	@:overload public function illegalContactInfoListFactoryType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function illegalContactInfoListFactoryType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function illegalContactInfoListFactoryType(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function illegalContactInfoListFactoryType(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function illegalContactInfoListFactoryType(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function illegalContactInfoListFactoryType(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function illegalContactInfoListFactoryType(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function illegalContactInfoListFactoryType(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var BAD_CONTACT_INFO_LIST_FACTORY(default, null) : Int;
+	@:public @:static @:final public static var BAD_CONTACT_INFO_LIST_FACTORY(default, null) : Int;
 	
-	@:overload public function badContactInfoListFactory(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badContactInfoListFactory(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badContactInfoListFactory(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badContactInfoListFactory(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badContactInfoListFactory(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badContactInfoListFactory(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badContactInfoListFactory(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badContactInfoListFactory(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var ILLEGAL_IOR_TO_SOCKET_INFO_TYPE(default, null) : Int;
+	@:public @:static @:final public static var ILLEGAL_IOR_TO_SOCKET_INFO_TYPE(default, null) : Int;
 	
-	@:overload public function illegalIorToSocketInfoType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function illegalIorToSocketInfoType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function illegalIorToSocketInfoType(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function illegalIorToSocketInfoType(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function illegalIorToSocketInfoType(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function illegalIorToSocketInfoType(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function illegalIorToSocketInfoType(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function illegalIorToSocketInfoType(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var BAD_CUSTOM_IOR_TO_SOCKET_INFO(default, null) : Int;
+	@:public @:static @:final public static var BAD_CUSTOM_IOR_TO_SOCKET_INFO(default, null) : Int;
 	
-	@:overload public function badCustomIorToSocketInfo(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badCustomIorToSocketInfo(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badCustomIorToSocketInfo(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badCustomIorToSocketInfo(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badCustomIorToSocketInfo(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badCustomIorToSocketInfo(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badCustomIorToSocketInfo(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badCustomIorToSocketInfo(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var ILLEGAL_IIOP_PRIMARY_TO_CONTACT_INFO_TYPE(default, null) : Int;
+	@:public @:static @:final public static var ILLEGAL_IIOP_PRIMARY_TO_CONTACT_INFO_TYPE(default, null) : Int;
 	
-	@:overload public function illegalIiopPrimaryToContactInfoType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function illegalIiopPrimaryToContactInfoType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function illegalIiopPrimaryToContactInfoType(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function illegalIiopPrimaryToContactInfoType(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function illegalIiopPrimaryToContactInfoType(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function illegalIiopPrimaryToContactInfoType(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function illegalIiopPrimaryToContactInfoType(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function illegalIiopPrimaryToContactInfoType(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var BAD_CUSTOM_IIOP_PRIMARY_TO_CONTACT_INFO(default, null) : Int;
+	@:public @:static @:final public static var BAD_CUSTOM_IIOP_PRIMARY_TO_CONTACT_INFO(default, null) : Int;
 	
-	@:overload public function badCustomIiopPrimaryToContactInfo(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badCustomIiopPrimaryToContactInfo(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badCustomIiopPrimaryToContactInfo(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badCustomIiopPrimaryToContactInfo(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badCustomIiopPrimaryToContactInfo(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badCustomIiopPrimaryToContactInfo(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	@:overload public function badCustomIiopPrimaryToContactInfo(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
+	@:overload @:public public function badCustomIiopPrimaryToContactInfo(arg0 : Dynamic) : org.omg.CORBA.DATA_CONVERSION;
 	
-	public static var BAD_CORBALOC_STRING(default, null) : Int;
+	@:public @:static @:final public static var BAD_CORBALOC_STRING(default, null) : Int;
 	
-	@:overload public function badCorbalocString(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INV_OBJREF;
+	@:overload @:public public function badCorbalocString(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INV_OBJREF;
 	
-	@:overload public function badCorbalocString(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INV_OBJREF;
+	@:overload @:public public function badCorbalocString(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INV_OBJREF;
 	
-	@:overload public function badCorbalocString(t : java.lang.Throwable) : org.omg.CORBA.INV_OBJREF;
+	@:overload @:public public function badCorbalocString(t : java.lang.Throwable) : org.omg.CORBA.INV_OBJREF;
 	
-	@:overload public function badCorbalocString() : org.omg.CORBA.INV_OBJREF;
+	@:overload @:public public function badCorbalocString() : org.omg.CORBA.INV_OBJREF;
 	
-	public static var NO_PROFILE_PRESENT(default, null) : Int;
+	@:public @:static @:final public static var NO_PROFILE_PRESENT(default, null) : Int;
 	
-	@:overload public function noProfilePresent(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INV_OBJREF;
+	@:overload @:public public function noProfilePresent(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INV_OBJREF;
 	
-	@:overload public function noProfilePresent(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INV_OBJREF;
+	@:overload @:public public function noProfilePresent(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INV_OBJREF;
 	
-	@:overload public function noProfilePresent(t : java.lang.Throwable) : org.omg.CORBA.INV_OBJREF;
+	@:overload @:public public function noProfilePresent(t : java.lang.Throwable) : org.omg.CORBA.INV_OBJREF;
 	
-	@:overload public function noProfilePresent() : org.omg.CORBA.INV_OBJREF;
+	@:overload @:public public function noProfilePresent() : org.omg.CORBA.INV_OBJREF;
 	
-	public static var CANNOT_CREATE_ORBID_DB(default, null) : Int;
+	@:public @:static @:final public static var CANNOT_CREATE_ORBID_DB(default, null) : Int;
 	
-	@:overload public function cannotCreateOrbidDb(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function cannotCreateOrbidDb(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function cannotCreateOrbidDb(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function cannotCreateOrbidDb(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function cannotCreateOrbidDb(t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function cannotCreateOrbidDb(t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function cannotCreateOrbidDb() : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function cannotCreateOrbidDb() : org.omg.CORBA.INITIALIZE;
 	
-	public static var CANNOT_READ_ORBID_DB(default, null) : Int;
+	@:public @:static @:final public static var CANNOT_READ_ORBID_DB(default, null) : Int;
 	
-	@:overload public function cannotReadOrbidDb(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function cannotReadOrbidDb(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function cannotReadOrbidDb(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function cannotReadOrbidDb(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function cannotReadOrbidDb(t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function cannotReadOrbidDb(t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function cannotReadOrbidDb() : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function cannotReadOrbidDb() : org.omg.CORBA.INITIALIZE;
 	
-	public static var CANNOT_WRITE_ORBID_DB(default, null) : Int;
+	@:public @:static @:final public static var CANNOT_WRITE_ORBID_DB(default, null) : Int;
 	
-	@:overload public function cannotWriteOrbidDb(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function cannotWriteOrbidDb(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function cannotWriteOrbidDb(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function cannotWriteOrbidDb(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function cannotWriteOrbidDb(t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function cannotWriteOrbidDb(t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function cannotWriteOrbidDb() : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function cannotWriteOrbidDb() : org.omg.CORBA.INITIALIZE;
 	
-	public static var GET_SERVER_PORT_CALLED_BEFORE_ENDPOINTS_INITIALIZED(default, null) : Int;
+	@:public @:static @:final public static var GET_SERVER_PORT_CALLED_BEFORE_ENDPOINTS_INITIALIZED(default, null) : Int;
 	
-	@:overload public function getServerPortCalledBeforeEndpointsInitialized(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function getServerPortCalledBeforeEndpointsInitialized(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function getServerPortCalledBeforeEndpointsInitialized(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function getServerPortCalledBeforeEndpointsInitialized(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function getServerPortCalledBeforeEndpointsInitialized(t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function getServerPortCalledBeforeEndpointsInitialized(t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function getServerPortCalledBeforeEndpointsInitialized() : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function getServerPortCalledBeforeEndpointsInitialized() : org.omg.CORBA.INITIALIZE;
 	
-	public static var PERSISTENT_SERVERPORT_NOT_SET(default, null) : Int;
+	@:public @:static @:final public static var PERSISTENT_SERVERPORT_NOT_SET(default, null) : Int;
 	
-	@:overload public function persistentServerportNotSet(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function persistentServerportNotSet(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function persistentServerportNotSet(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function persistentServerportNotSet(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function persistentServerportNotSet(t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function persistentServerportNotSet(t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function persistentServerportNotSet() : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function persistentServerportNotSet() : org.omg.CORBA.INITIALIZE;
 	
-	public static var PERSISTENT_SERVERID_NOT_SET(default, null) : Int;
+	@:public @:static @:final public static var PERSISTENT_SERVERID_NOT_SET(default, null) : Int;
 	
-	@:overload public function persistentServeridNotSet(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function persistentServeridNotSet(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function persistentServeridNotSet(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function persistentServeridNotSet(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function persistentServeridNotSet(t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function persistentServeridNotSet(t : java.lang.Throwable) : org.omg.CORBA.INITIALIZE;
 	
-	@:overload public function persistentServeridNotSet() : org.omg.CORBA.INITIALIZE;
+	@:overload @:public public function persistentServeridNotSet() : org.omg.CORBA.INITIALIZE;
 	
-	public static var NON_EXISTENT_ORBID(default, null) : Int;
+	@:public @:static @:final public static var NON_EXISTENT_ORBID(default, null) : Int;
 	
-	@:overload public function nonExistentOrbid(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function nonExistentOrbid(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function nonExistentOrbid(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function nonExistentOrbid(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function nonExistentOrbid(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function nonExistentOrbid(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function nonExistentOrbid() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function nonExistentOrbid() : org.omg.CORBA.INTERNAL;
 	
-	public static var NO_SERVER_SUBCONTRACT(default, null) : Int;
+	@:public @:static @:final public static var NO_SERVER_SUBCONTRACT(default, null) : Int;
 	
-	@:overload public function noServerSubcontract(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noServerSubcontract(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function noServerSubcontract(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noServerSubcontract(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function noServerSubcontract(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noServerSubcontract(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function noServerSubcontract() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noServerSubcontract() : org.omg.CORBA.INTERNAL;
 	
-	public static var SERVER_SC_TEMP_SIZE(default, null) : Int;
+	@:public @:static @:final public static var SERVER_SC_TEMP_SIZE(default, null) : Int;
 	
-	@:overload public function serverScTempSize(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function serverScTempSize(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function serverScTempSize(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function serverScTempSize(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function serverScTempSize(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function serverScTempSize(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function serverScTempSize() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function serverScTempSize() : org.omg.CORBA.INTERNAL;
 	
-	public static var NO_CLIENT_SC_CLASS(default, null) : Int;
+	@:public @:static @:final public static var NO_CLIENT_SC_CLASS(default, null) : Int;
 	
-	@:overload public function noClientScClass(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noClientScClass(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function noClientScClass(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noClientScClass(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function noClientScClass(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noClientScClass(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function noClientScClass() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noClientScClass() : org.omg.CORBA.INTERNAL;
 	
-	public static var SERVER_SC_NO_IIOP_PROFILE(default, null) : Int;
+	@:public @:static @:final public static var SERVER_SC_NO_IIOP_PROFILE(default, null) : Int;
 	
-	@:overload public function serverScNoIiopProfile(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function serverScNoIiopProfile(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function serverScNoIiopProfile(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function serverScNoIiopProfile(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function serverScNoIiopProfile(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function serverScNoIiopProfile(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function serverScNoIiopProfile() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function serverScNoIiopProfile() : org.omg.CORBA.INTERNAL;
 	
-	public static var GET_SYSTEM_EX_RETURNED_NULL(default, null) : Int;
+	@:public @:static @:final public static var GET_SYSTEM_EX_RETURNED_NULL(default, null) : Int;
 	
-	@:overload public function getSystemExReturnedNull(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function getSystemExReturnedNull(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function getSystemExReturnedNull(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function getSystemExReturnedNull(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function getSystemExReturnedNull(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function getSystemExReturnedNull(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function getSystemExReturnedNull() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function getSystemExReturnedNull() : org.omg.CORBA.INTERNAL;
 	
-	public static var PEEKSTRING_FAILED(default, null) : Int;
+	@:public @:static @:final public static var PEEKSTRING_FAILED(default, null) : Int;
 	
-	@:overload public function peekstringFailed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function peekstringFailed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function peekstringFailed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function peekstringFailed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function peekstringFailed(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function peekstringFailed(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function peekstringFailed() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function peekstringFailed() : org.omg.CORBA.INTERNAL;
 	
-	public static var GET_LOCAL_HOST_FAILED(default, null) : Int;
+	@:public @:static @:final public static var GET_LOCAL_HOST_FAILED(default, null) : Int;
 	
-	@:overload public function getLocalHostFailed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function getLocalHostFailed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function getLocalHostFailed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function getLocalHostFailed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function getLocalHostFailed(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function getLocalHostFailed(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function getLocalHostFailed() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function getLocalHostFailed() : org.omg.CORBA.INTERNAL;
 	
-	public static var BAD_LOCATE_REQUEST_STATUS(default, null) : Int;
+	@:public @:static @:final public static var BAD_LOCATE_REQUEST_STATUS(default, null) : Int;
 	
-	@:overload public function badLocateRequestStatus(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badLocateRequestStatus(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badLocateRequestStatus(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badLocateRequestStatus(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badLocateRequestStatus(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badLocateRequestStatus(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badLocateRequestStatus() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badLocateRequestStatus() : org.omg.CORBA.INTERNAL;
 	
-	public static var STRINGIFY_WRITE_ERROR(default, null) : Int;
+	@:public @:static @:final public static var STRINGIFY_WRITE_ERROR(default, null) : Int;
 	
-	@:overload public function stringifyWriteError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function stringifyWriteError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function stringifyWriteError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function stringifyWriteError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function stringifyWriteError(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function stringifyWriteError(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function stringifyWriteError() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function stringifyWriteError() : org.omg.CORBA.INTERNAL;
 	
-	public static var BAD_GIOP_REQUEST_TYPE(default, null) : Int;
+	@:public @:static @:final public static var BAD_GIOP_REQUEST_TYPE(default, null) : Int;
 	
-	@:overload public function badGiopRequestType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badGiopRequestType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badGiopRequestType(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badGiopRequestType(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badGiopRequestType(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badGiopRequestType(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badGiopRequestType() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badGiopRequestType() : org.omg.CORBA.INTERNAL;
 	
-	public static var ERROR_UNMARSHALING_USEREXC(default, null) : Int;
+	@:public @:static @:final public static var ERROR_UNMARSHALING_USEREXC(default, null) : Int;
 	
-	@:overload public function errorUnmarshalingUserexc(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function errorUnmarshalingUserexc(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function errorUnmarshalingUserexc(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function errorUnmarshalingUserexc(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function errorUnmarshalingUserexc(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function errorUnmarshalingUserexc(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function errorUnmarshalingUserexc() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function errorUnmarshalingUserexc() : org.omg.CORBA.INTERNAL;
 	
-	public static var RequestDispatcherRegistry_ERROR(default, null) : Int;
+	@:public @:static @:final public static var RequestDispatcherRegistry_ERROR(default, null) : Int;
 	
-	@:overload public function requestdispatcherregistryError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function requestdispatcherregistryError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function requestdispatcherregistryError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function requestdispatcherregistryError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function requestdispatcherregistryError(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function requestdispatcherregistryError(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function requestdispatcherregistryError() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function requestdispatcherregistryError() : org.omg.CORBA.INTERNAL;
 	
-	public static var LOCATIONFORWARD_ERROR(default, null) : Int;
+	@:public @:static @:final public static var LOCATIONFORWARD_ERROR(default, null) : Int;
 	
-	@:overload public function locationforwardError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function locationforwardError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function locationforwardError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function locationforwardError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function locationforwardError(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function locationforwardError(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function locationforwardError() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function locationforwardError() : org.omg.CORBA.INTERNAL;
 	
-	public static var WRONG_CLIENTSC(default, null) : Int;
+	@:public @:static @:final public static var WRONG_CLIENTSC(default, null) : Int;
 	
-	@:overload public function wrongClientsc(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function wrongClientsc(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function wrongClientsc(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function wrongClientsc(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function wrongClientsc(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function wrongClientsc(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function wrongClientsc() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function wrongClientsc() : org.omg.CORBA.INTERNAL;
 	
-	public static var BAD_SERVANT_READ_OBJECT(default, null) : Int;
+	@:public @:static @:final public static var BAD_SERVANT_READ_OBJECT(default, null) : Int;
 	
-	@:overload public function badServantReadObject(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badServantReadObject(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badServantReadObject(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badServantReadObject(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badServantReadObject(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badServantReadObject(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badServantReadObject() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badServantReadObject() : org.omg.CORBA.INTERNAL;
 	
-	public static var MULT_IIOP_PROF_NOT_SUPPORTED(default, null) : Int;
+	@:public @:static @:final public static var MULT_IIOP_PROF_NOT_SUPPORTED(default, null) : Int;
 	
-	@:overload public function multIiopProfNotSupported(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function multIiopProfNotSupported(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function multIiopProfNotSupported(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function multIiopProfNotSupported(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function multIiopProfNotSupported(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function multIiopProfNotSupported(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function multIiopProfNotSupported() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function multIiopProfNotSupported() : org.omg.CORBA.INTERNAL;
 	
-	public static var GIOP_MAGIC_ERROR(default, null) : Int;
+	@:public @:static @:final public static var GIOP_MAGIC_ERROR(default, null) : Int;
 	
-	@:overload public function giopMagicError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function giopMagicError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function giopMagicError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function giopMagicError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function giopMagicError(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function giopMagicError(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function giopMagicError() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function giopMagicError() : org.omg.CORBA.INTERNAL;
 	
-	public static var GIOP_VERSION_ERROR(default, null) : Int;
+	@:public @:static @:final public static var GIOP_VERSION_ERROR(default, null) : Int;
 	
-	@:overload public function giopVersionError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function giopVersionError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function giopVersionError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function giopVersionError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function giopVersionError(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function giopVersionError(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function giopVersionError() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function giopVersionError() : org.omg.CORBA.INTERNAL;
 	
-	public static var ILLEGAL_REPLY_STATUS(default, null) : Int;
+	@:public @:static @:final public static var ILLEGAL_REPLY_STATUS(default, null) : Int;
 	
-	@:overload public function illegalReplyStatus(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function illegalReplyStatus(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function illegalReplyStatus(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function illegalReplyStatus(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function illegalReplyStatus(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function illegalReplyStatus(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function illegalReplyStatus() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function illegalReplyStatus() : org.omg.CORBA.INTERNAL;
 	
-	public static var ILLEGAL_GIOP_MSG_TYPE(default, null) : Int;
+	@:public @:static @:final public static var ILLEGAL_GIOP_MSG_TYPE(default, null) : Int;
 	
-	@:overload public function illegalGiopMsgType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function illegalGiopMsgType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function illegalGiopMsgType(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function illegalGiopMsgType(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function illegalGiopMsgType(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function illegalGiopMsgType(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function illegalGiopMsgType() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function illegalGiopMsgType() : org.omg.CORBA.INTERNAL;
 	
-	public static var FRAGMENTATION_DISALLOWED(default, null) : Int;
+	@:public @:static @:final public static var FRAGMENTATION_DISALLOWED(default, null) : Int;
 	
-	@:overload public function fragmentationDisallowed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function fragmentationDisallowed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function fragmentationDisallowed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function fragmentationDisallowed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function fragmentationDisallowed(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function fragmentationDisallowed(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function fragmentationDisallowed() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function fragmentationDisallowed() : org.omg.CORBA.INTERNAL;
 	
-	public static var BAD_REPLYSTATUS(default, null) : Int;
+	@:public @:static @:final public static var BAD_REPLYSTATUS(default, null) : Int;
 	
-	@:overload public function badReplystatus(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badReplystatus(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badReplystatus(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badReplystatus(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badReplystatus(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badReplystatus(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badReplystatus() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badReplystatus() : org.omg.CORBA.INTERNAL;
 	
-	public static var CTB_CONVERTER_FAILURE(default, null) : Int;
+	@:public @:static @:final public static var CTB_CONVERTER_FAILURE(default, null) : Int;
 	
-	@:overload public function ctbConverterFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function ctbConverterFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function ctbConverterFailure(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function ctbConverterFailure(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function ctbConverterFailure(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function ctbConverterFailure(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function ctbConverterFailure() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function ctbConverterFailure() : org.omg.CORBA.INTERNAL;
 	
-	public static var BTC_CONVERTER_FAILURE(default, null) : Int;
+	@:public @:static @:final public static var BTC_CONVERTER_FAILURE(default, null) : Int;
 	
-	@:overload public function btcConverterFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function btcConverterFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function btcConverterFailure(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function btcConverterFailure(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function btcConverterFailure(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function btcConverterFailure(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function btcConverterFailure() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function btcConverterFailure() : org.omg.CORBA.INTERNAL;
 	
-	public static var WCHAR_ARRAY_UNSUPPORTED_ENCODING(default, null) : Int;
+	@:public @:static @:final public static var WCHAR_ARRAY_UNSUPPORTED_ENCODING(default, null) : Int;
 	
-	@:overload public function wcharArrayUnsupportedEncoding(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function wcharArrayUnsupportedEncoding(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function wcharArrayUnsupportedEncoding(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function wcharArrayUnsupportedEncoding(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function wcharArrayUnsupportedEncoding(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function wcharArrayUnsupportedEncoding(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function wcharArrayUnsupportedEncoding() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function wcharArrayUnsupportedEncoding() : org.omg.CORBA.INTERNAL;
 	
-	public static var ILLEGAL_TARGET_ADDRESS_DISPOSITION(default, null) : Int;
+	@:public @:static @:final public static var ILLEGAL_TARGET_ADDRESS_DISPOSITION(default, null) : Int;
 	
-	@:overload public function illegalTargetAddressDisposition(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function illegalTargetAddressDisposition(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function illegalTargetAddressDisposition(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function illegalTargetAddressDisposition(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function illegalTargetAddressDisposition(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function illegalTargetAddressDisposition(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function illegalTargetAddressDisposition() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function illegalTargetAddressDisposition() : org.omg.CORBA.INTERNAL;
 	
-	public static var NULL_REPLY_IN_GET_ADDR_DISPOSITION(default, null) : Int;
+	@:public @:static @:final public static var NULL_REPLY_IN_GET_ADDR_DISPOSITION(default, null) : Int;
 	
-	@:overload public function nullReplyInGetAddrDisposition(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function nullReplyInGetAddrDisposition(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function nullReplyInGetAddrDisposition(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function nullReplyInGetAddrDisposition(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function nullReplyInGetAddrDisposition(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function nullReplyInGetAddrDisposition(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function nullReplyInGetAddrDisposition() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function nullReplyInGetAddrDisposition() : org.omg.CORBA.INTERNAL;
 	
-	public static var ORB_TARGET_ADDR_PREFERENCE_IN_EXTRACT_OBJECTKEY_INVALID(default, null) : Int;
+	@:public @:static @:final public static var ORB_TARGET_ADDR_PREFERENCE_IN_EXTRACT_OBJECTKEY_INVALID(default, null) : Int;
 	
-	@:overload public function orbTargetAddrPreferenceInExtractObjectkeyInvalid(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function orbTargetAddrPreferenceInExtractObjectkeyInvalid(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function orbTargetAddrPreferenceInExtractObjectkeyInvalid(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function orbTargetAddrPreferenceInExtractObjectkeyInvalid(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function orbTargetAddrPreferenceInExtractObjectkeyInvalid(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function orbTargetAddrPreferenceInExtractObjectkeyInvalid(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function orbTargetAddrPreferenceInExtractObjectkeyInvalid() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function orbTargetAddrPreferenceInExtractObjectkeyInvalid() : org.omg.CORBA.INTERNAL;
 	
-	public static var INVALID_ISSTREAMED_TCKIND(default, null) : Int;
+	@:public @:static @:final public static var INVALID_ISSTREAMED_TCKIND(default, null) : Int;
 	
-	@:overload public function invalidIsstreamedTckind(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidIsstreamedTckind(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidIsstreamedTckind(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidIsstreamedTckind(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidIsstreamedTckind(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidIsstreamedTckind(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidIsstreamedTckind(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidIsstreamedTckind(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var INVALID_JDK1_3_1_PATCH_LEVEL(default, null) : Int;
+	@:public @:static @:final public static var INVALID_JDK1_3_1_PATCH_LEVEL(default, null) : Int;
 	
-	@:overload public function invalidJdk131PatchLevel(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidJdk131PatchLevel(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidJdk131PatchLevel(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidJdk131PatchLevel(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidJdk131PatchLevel(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidJdk131PatchLevel(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidJdk131PatchLevel() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidJdk131PatchLevel() : org.omg.CORBA.INTERNAL;
 	
-	public static var SVCCTX_UNMARSHAL_ERROR(default, null) : Int;
+	@:public @:static @:final public static var SVCCTX_UNMARSHAL_ERROR(default, null) : Int;
 	
-	@:overload public function svcctxUnmarshalError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function svcctxUnmarshalError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function svcctxUnmarshalError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function svcctxUnmarshalError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function svcctxUnmarshalError(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function svcctxUnmarshalError(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function svcctxUnmarshalError() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function svcctxUnmarshalError() : org.omg.CORBA.INTERNAL;
 	
-	public static var NULL_IOR(default, null) : Int;
+	@:public @:static @:final public static var NULL_IOR(default, null) : Int;
 	
-	@:overload public function nullIor(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function nullIor(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function nullIor(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function nullIor(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function nullIor(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function nullIor(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function nullIor() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function nullIor() : org.omg.CORBA.INTERNAL;
 	
-	public static var UNSUPPORTED_GIOP_VERSION(default, null) : Int;
+	@:public @:static @:final public static var UNSUPPORTED_GIOP_VERSION(default, null) : Int;
 	
-	@:overload public function unsupportedGiopVersion(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unsupportedGiopVersion(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unsupportedGiopVersion(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unsupportedGiopVersion(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unsupportedGiopVersion(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unsupportedGiopVersion(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unsupportedGiopVersion(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unsupportedGiopVersion(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var APPLICATION_EXCEPTION_IN_SPECIAL_METHOD(default, null) : Int;
+	@:public @:static @:final public static var APPLICATION_EXCEPTION_IN_SPECIAL_METHOD(default, null) : Int;
 	
-	@:overload public function applicationExceptionInSpecialMethod(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function applicationExceptionInSpecialMethod(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function applicationExceptionInSpecialMethod(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function applicationExceptionInSpecialMethod(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function applicationExceptionInSpecialMethod(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function applicationExceptionInSpecialMethod(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function applicationExceptionInSpecialMethod() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function applicationExceptionInSpecialMethod() : org.omg.CORBA.INTERNAL;
 	
-	public static var STATEMENT_NOT_REACHABLE1(default, null) : Int;
+	@:public @:static @:final public static var STATEMENT_NOT_REACHABLE1(default, null) : Int;
 	
-	@:overload public function statementNotReachable1(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable1(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable1(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable1(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable1(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable1(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable1() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable1() : org.omg.CORBA.INTERNAL;
 	
-	public static var STATEMENT_NOT_REACHABLE2(default, null) : Int;
+	@:public @:static @:final public static var STATEMENT_NOT_REACHABLE2(default, null) : Int;
 	
-	@:overload public function statementNotReachable2(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable2(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable2(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable2(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable2(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable2(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable2() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable2() : org.omg.CORBA.INTERNAL;
 	
-	public static var STATEMENT_NOT_REACHABLE3(default, null) : Int;
+	@:public @:static @:final public static var STATEMENT_NOT_REACHABLE3(default, null) : Int;
 	
-	@:overload public function statementNotReachable3(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable3(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable3(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable3(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable3(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable3(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable3() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable3() : org.omg.CORBA.INTERNAL;
 	
-	public static var STATEMENT_NOT_REACHABLE4(default, null) : Int;
+	@:public @:static @:final public static var STATEMENT_NOT_REACHABLE4(default, null) : Int;
 	
-	@:overload public function statementNotReachable4(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable4(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable4(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable4(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable4(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable4(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable4() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable4() : org.omg.CORBA.INTERNAL;
 	
-	public static var STATEMENT_NOT_REACHABLE5(default, null) : Int;
+	@:public @:static @:final public static var STATEMENT_NOT_REACHABLE5(default, null) : Int;
 	
-	@:overload public function statementNotReachable5(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable5(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable5(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable5(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable5(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable5(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable5() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable5() : org.omg.CORBA.INTERNAL;
 	
-	public static var STATEMENT_NOT_REACHABLE6(default, null) : Int;
+	@:public @:static @:final public static var STATEMENT_NOT_REACHABLE6(default, null) : Int;
 	
-	@:overload public function statementNotReachable6(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable6(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable6(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable6(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable6(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable6(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function statementNotReachable6() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function statementNotReachable6() : org.omg.CORBA.INTERNAL;
 	
-	public static var UNEXPECTED_DII_EXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var UNEXPECTED_DII_EXCEPTION(default, null) : Int;
 	
-	@:overload public function unexpectedDiiException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unexpectedDiiException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unexpectedDiiException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unexpectedDiiException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unexpectedDiiException(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unexpectedDiiException(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unexpectedDiiException() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unexpectedDiiException() : org.omg.CORBA.INTERNAL;
 	
-	public static var METHOD_SHOULD_NOT_BE_CALLED(default, null) : Int;
+	@:public @:static @:final public static var METHOD_SHOULD_NOT_BE_CALLED(default, null) : Int;
 	
-	@:overload public function methodShouldNotBeCalled(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function methodShouldNotBeCalled(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function methodShouldNotBeCalled(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function methodShouldNotBeCalled(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function methodShouldNotBeCalled(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function methodShouldNotBeCalled(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function methodShouldNotBeCalled() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function methodShouldNotBeCalled() : org.omg.CORBA.INTERNAL;
 	
-	public static var CANCEL_NOT_SUPPORTED(default, null) : Int;
+	@:public @:static @:final public static var CANCEL_NOT_SUPPORTED(default, null) : Int;
 	
-	@:overload public function cancelNotSupported(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function cancelNotSupported(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function cancelNotSupported(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function cancelNotSupported(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function cancelNotSupported(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function cancelNotSupported(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function cancelNotSupported() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function cancelNotSupported() : org.omg.CORBA.INTERNAL;
 	
-	public static var EMPTY_STACK_RUN_SERVANT_POST_INVOKE(default, null) : Int;
+	@:public @:static @:final public static var EMPTY_STACK_RUN_SERVANT_POST_INVOKE(default, null) : Int;
 	
-	@:overload public function emptyStackRunServantPostInvoke(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function emptyStackRunServantPostInvoke(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function emptyStackRunServantPostInvoke(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function emptyStackRunServantPostInvoke(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function emptyStackRunServantPostInvoke(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function emptyStackRunServantPostInvoke(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function emptyStackRunServantPostInvoke() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function emptyStackRunServantPostInvoke() : org.omg.CORBA.INTERNAL;
 	
-	public static var PROBLEM_WITH_EXCEPTION_TYPECODE(default, null) : Int;
+	@:public @:static @:final public static var PROBLEM_WITH_EXCEPTION_TYPECODE(default, null) : Int;
 	
-	@:overload public function problemWithExceptionTypecode(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function problemWithExceptionTypecode(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function problemWithExceptionTypecode(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function problemWithExceptionTypecode(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function problemWithExceptionTypecode(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function problemWithExceptionTypecode(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function problemWithExceptionTypecode() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function problemWithExceptionTypecode() : org.omg.CORBA.INTERNAL;
 	
-	public static var ILLEGAL_SUBCONTRACT_ID(default, null) : Int;
+	@:public @:static @:final public static var ILLEGAL_SUBCONTRACT_ID(default, null) : Int;
 	
-	@:overload public function illegalSubcontractId(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function illegalSubcontractId(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function illegalSubcontractId(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function illegalSubcontractId(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function illegalSubcontractId(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function illegalSubcontractId(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function illegalSubcontractId(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function illegalSubcontractId(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var BAD_SYSTEM_EXCEPTION_IN_LOCATE_REPLY(default, null) : Int;
+	@:public @:static @:final public static var BAD_SYSTEM_EXCEPTION_IN_LOCATE_REPLY(default, null) : Int;
 	
-	@:overload public function badSystemExceptionInLocateReply(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badSystemExceptionInLocateReply(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badSystemExceptionInLocateReply(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badSystemExceptionInLocateReply(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badSystemExceptionInLocateReply(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badSystemExceptionInLocateReply(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badSystemExceptionInLocateReply() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badSystemExceptionInLocateReply() : org.omg.CORBA.INTERNAL;
 	
-	public static var BAD_SYSTEM_EXCEPTION_IN_REPLY(default, null) : Int;
+	@:public @:static @:final public static var BAD_SYSTEM_EXCEPTION_IN_REPLY(default, null) : Int;
 	
-	@:overload public function badSystemExceptionInReply(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badSystemExceptionInReply(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badSystemExceptionInReply(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badSystemExceptionInReply(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badSystemExceptionInReply(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badSystemExceptionInReply(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badSystemExceptionInReply() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badSystemExceptionInReply() : org.omg.CORBA.INTERNAL;
 	
-	public static var BAD_COMPLETION_STATUS_IN_LOCATE_REPLY(default, null) : Int;
+	@:public @:static @:final public static var BAD_COMPLETION_STATUS_IN_LOCATE_REPLY(default, null) : Int;
 	
-	@:overload public function badCompletionStatusInLocateReply(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badCompletionStatusInLocateReply(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badCompletionStatusInLocateReply(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badCompletionStatusInLocateReply(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badCompletionStatusInLocateReply(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badCompletionStatusInLocateReply(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badCompletionStatusInLocateReply(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badCompletionStatusInLocateReply(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var BAD_COMPLETION_STATUS_IN_REPLY(default, null) : Int;
+	@:public @:static @:final public static var BAD_COMPLETION_STATUS_IN_REPLY(default, null) : Int;
 	
-	@:overload public function badCompletionStatusInReply(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badCompletionStatusInReply(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badCompletionStatusInReply(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badCompletionStatusInReply(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badCompletionStatusInReply(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badCompletionStatusInReply(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badCompletionStatusInReply(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badCompletionStatusInReply(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var BADKIND_CANNOT_OCCUR(default, null) : Int;
+	@:public @:static @:final public static var BADKIND_CANNOT_OCCUR(default, null) : Int;
 	
-	@:overload public function badkindCannotOccur(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badkindCannotOccur(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badkindCannotOccur(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badkindCannotOccur(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badkindCannotOccur(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badkindCannotOccur(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badkindCannotOccur() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badkindCannotOccur() : org.omg.CORBA.INTERNAL;
 	
-	public static var ERROR_RESOLVING_ALIAS(default, null) : Int;
+	@:public @:static @:final public static var ERROR_RESOLVING_ALIAS(default, null) : Int;
 	
-	@:overload public function errorResolvingAlias(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function errorResolvingAlias(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function errorResolvingAlias(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function errorResolvingAlias(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function errorResolvingAlias(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function errorResolvingAlias(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function errorResolvingAlias() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function errorResolvingAlias() : org.omg.CORBA.INTERNAL;
 	
-	public static var TK_LONG_DOUBLE_NOT_SUPPORTED(default, null) : Int;
+	@:public @:static @:final public static var TK_LONG_DOUBLE_NOT_SUPPORTED(default, null) : Int;
 	
-	@:overload public function tkLongDoubleNotSupported(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function tkLongDoubleNotSupported(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function tkLongDoubleNotSupported(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function tkLongDoubleNotSupported(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function tkLongDoubleNotSupported(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function tkLongDoubleNotSupported(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function tkLongDoubleNotSupported() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function tkLongDoubleNotSupported() : org.omg.CORBA.INTERNAL;
 	
-	public static var TYPECODE_NOT_SUPPORTED(default, null) : Int;
+	@:public @:static @:final public static var TYPECODE_NOT_SUPPORTED(default, null) : Int;
 	
-	@:overload public function typecodeNotSupported(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function typecodeNotSupported(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function typecodeNotSupported(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function typecodeNotSupported(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function typecodeNotSupported(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function typecodeNotSupported(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function typecodeNotSupported() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function typecodeNotSupported() : org.omg.CORBA.INTERNAL;
 	
-	public static var BOUNDS_CANNOT_OCCUR(default, null) : Int;
+	@:public @:static @:final public static var BOUNDS_CANNOT_OCCUR(default, null) : Int;
 	
-	@:overload public function boundsCannotOccur(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function boundsCannotOccur(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function boundsCannotOccur(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function boundsCannotOccur(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function boundsCannotOccur(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function boundsCannotOccur(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function boundsCannotOccur() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function boundsCannotOccur() : org.omg.CORBA.INTERNAL;
 	
-	public static var NUM_INVOCATIONS_ALREADY_ZERO(default, null) : Int;
+	@:public @:static @:final public static var NUM_INVOCATIONS_ALREADY_ZERO(default, null) : Int;
 	
-	@:overload public function numInvocationsAlreadyZero(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function numInvocationsAlreadyZero(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function numInvocationsAlreadyZero(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function numInvocationsAlreadyZero(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function numInvocationsAlreadyZero(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function numInvocationsAlreadyZero(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function numInvocationsAlreadyZero() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function numInvocationsAlreadyZero() : org.omg.CORBA.INTERNAL;
 	
-	public static var ERROR_INIT_BADSERVERIDHANDLER(default, null) : Int;
+	@:public @:static @:final public static var ERROR_INIT_BADSERVERIDHANDLER(default, null) : Int;
 	
-	@:overload public function errorInitBadserveridhandler(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function errorInitBadserveridhandler(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function errorInitBadserveridhandler(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function errorInitBadserveridhandler(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function errorInitBadserveridhandler(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function errorInitBadserveridhandler(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function errorInitBadserveridhandler() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function errorInitBadserveridhandler() : org.omg.CORBA.INTERNAL;
 	
-	public static var NO_TOA(default, null) : Int;
+	@:public @:static @:final public static var NO_TOA(default, null) : Int;
 	
-	@:overload public function noToa(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noToa(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function noToa(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noToa(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function noToa(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noToa(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function noToa() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noToa() : org.omg.CORBA.INTERNAL;
 	
-	public static var NO_POA(default, null) : Int;
+	@:public @:static @:final public static var NO_POA(default, null) : Int;
 	
-	@:overload public function noPoa(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noPoa(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function noPoa(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noPoa(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function noPoa(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noPoa(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function noPoa() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noPoa() : org.omg.CORBA.INTERNAL;
 	
-	public static var INVOCATION_INFO_STACK_EMPTY(default, null) : Int;
+	@:public @:static @:final public static var INVOCATION_INFO_STACK_EMPTY(default, null) : Int;
 	
-	@:overload public function invocationInfoStackEmpty(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invocationInfoStackEmpty(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invocationInfoStackEmpty(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invocationInfoStackEmpty(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invocationInfoStackEmpty(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invocationInfoStackEmpty(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invocationInfoStackEmpty() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invocationInfoStackEmpty() : org.omg.CORBA.INTERNAL;
 	
-	public static var BAD_CODE_SET_STRING(default, null) : Int;
+	@:public @:static @:final public static var BAD_CODE_SET_STRING(default, null) : Int;
 	
-	@:overload public function badCodeSetString(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badCodeSetString(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badCodeSetString(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badCodeSetString(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badCodeSetString(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badCodeSetString(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badCodeSetString() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badCodeSetString() : org.omg.CORBA.INTERNAL;
 	
-	public static var UNKNOWN_NATIVE_CODESET(default, null) : Int;
+	@:public @:static @:final public static var UNKNOWN_NATIVE_CODESET(default, null) : Int;
 	
-	@:overload public function unknownNativeCodeset(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unknownNativeCodeset(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unknownNativeCodeset(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unknownNativeCodeset(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unknownNativeCodeset(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unknownNativeCodeset(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unknownNativeCodeset(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unknownNativeCodeset(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var UNKNOWN_CONVERSION_CODE_SET(default, null) : Int;
+	@:public @:static @:final public static var UNKNOWN_CONVERSION_CODE_SET(default, null) : Int;
 	
-	@:overload public function unknownConversionCodeSet(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unknownConversionCodeSet(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unknownConversionCodeSet(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unknownConversionCodeSet(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unknownConversionCodeSet(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unknownConversionCodeSet(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unknownConversionCodeSet(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unknownConversionCodeSet(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var INVALID_CODE_SET_NUMBER(default, null) : Int;
+	@:public @:static @:final public static var INVALID_CODE_SET_NUMBER(default, null) : Int;
 	
-	@:overload public function invalidCodeSetNumber(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidCodeSetNumber(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidCodeSetNumber(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidCodeSetNumber(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidCodeSetNumber(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidCodeSetNumber(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidCodeSetNumber() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidCodeSetNumber() : org.omg.CORBA.INTERNAL;
 	
-	public static var INVALID_CODE_SET_STRING(default, null) : Int;
+	@:public @:static @:final public static var INVALID_CODE_SET_STRING(default, null) : Int;
 	
-	@:overload public function invalidCodeSetString(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidCodeSetString(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidCodeSetString(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidCodeSetString(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidCodeSetString(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidCodeSetString(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidCodeSetString(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidCodeSetString(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var INVALID_CTB_CONVERTER_NAME(default, null) : Int;
+	@:public @:static @:final public static var INVALID_CTB_CONVERTER_NAME(default, null) : Int;
 	
-	@:overload public function invalidCtbConverterName(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidCtbConverterName(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidCtbConverterName(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidCtbConverterName(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidCtbConverterName(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidCtbConverterName(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidCtbConverterName(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidCtbConverterName(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var INVALID_BTC_CONVERTER_NAME(default, null) : Int;
+	@:public @:static @:final public static var INVALID_BTC_CONVERTER_NAME(default, null) : Int;
 	
-	@:overload public function invalidBtcConverterName(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidBtcConverterName(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidBtcConverterName(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidBtcConverterName(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidBtcConverterName(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidBtcConverterName(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidBtcConverterName(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidBtcConverterName(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var COULD_NOT_DUPLICATE_CDR_INPUT_STREAM(default, null) : Int;
+	@:public @:static @:final public static var COULD_NOT_DUPLICATE_CDR_INPUT_STREAM(default, null) : Int;
 	
-	@:overload public function couldNotDuplicateCdrInputStream(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function couldNotDuplicateCdrInputStream(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function couldNotDuplicateCdrInputStream(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function couldNotDuplicateCdrInputStream(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function couldNotDuplicateCdrInputStream(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function couldNotDuplicateCdrInputStream(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function couldNotDuplicateCdrInputStream() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function couldNotDuplicateCdrInputStream() : org.omg.CORBA.INTERNAL;
 	
-	public static var BOOTSTRAP_APPLICATION_EXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var BOOTSTRAP_APPLICATION_EXCEPTION(default, null) : Int;
 	
-	@:overload public function bootstrapApplicationException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function bootstrapApplicationException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function bootstrapApplicationException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function bootstrapApplicationException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function bootstrapApplicationException(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function bootstrapApplicationException(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function bootstrapApplicationException() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function bootstrapApplicationException() : org.omg.CORBA.INTERNAL;
 	
-	public static var DUPLICATE_INDIRECTION_OFFSET(default, null) : Int;
+	@:public @:static @:final public static var DUPLICATE_INDIRECTION_OFFSET(default, null) : Int;
 	
-	@:overload public function duplicateIndirectionOffset(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function duplicateIndirectionOffset(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function duplicateIndirectionOffset(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function duplicateIndirectionOffset(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function duplicateIndirectionOffset(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function duplicateIndirectionOffset(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function duplicateIndirectionOffset() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function duplicateIndirectionOffset() : org.omg.CORBA.INTERNAL;
 	
-	public static var BAD_MESSAGE_TYPE_FOR_CANCEL(default, null) : Int;
+	@:public @:static @:final public static var BAD_MESSAGE_TYPE_FOR_CANCEL(default, null) : Int;
 	
-	@:overload public function badMessageTypeForCancel(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badMessageTypeForCancel(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badMessageTypeForCancel(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badMessageTypeForCancel(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badMessageTypeForCancel(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badMessageTypeForCancel(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badMessageTypeForCancel() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badMessageTypeForCancel() : org.omg.CORBA.INTERNAL;
 	
-	public static var DUPLICATE_EXCEPTION_DETAIL_MESSAGE(default, null) : Int;
+	@:public @:static @:final public static var DUPLICATE_EXCEPTION_DETAIL_MESSAGE(default, null) : Int;
 	
-	@:overload public function duplicateExceptionDetailMessage(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function duplicateExceptionDetailMessage(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function duplicateExceptionDetailMessage(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function duplicateExceptionDetailMessage(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function duplicateExceptionDetailMessage(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function duplicateExceptionDetailMessage(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function duplicateExceptionDetailMessage() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function duplicateExceptionDetailMessage() : org.omg.CORBA.INTERNAL;
 	
-	public static var BAD_EXCEPTION_DETAIL_MESSAGE_SERVICE_CONTEXT_TYPE(default, null) : Int;
+	@:public @:static @:final public static var BAD_EXCEPTION_DETAIL_MESSAGE_SERVICE_CONTEXT_TYPE(default, null) : Int;
 	
-	@:overload public function badExceptionDetailMessageServiceContextType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badExceptionDetailMessageServiceContextType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badExceptionDetailMessageServiceContextType(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badExceptionDetailMessageServiceContextType(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badExceptionDetailMessageServiceContextType(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badExceptionDetailMessageServiceContextType(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badExceptionDetailMessageServiceContextType() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badExceptionDetailMessageServiceContextType() : org.omg.CORBA.INTERNAL;
 	
-	public static var UNEXPECTED_DIRECT_BYTE_BUFFER_WITH_NON_CHANNEL_SOCKET(default, null) : Int;
+	@:public @:static @:final public static var UNEXPECTED_DIRECT_BYTE_BUFFER_WITH_NON_CHANNEL_SOCKET(default, null) : Int;
 	
-	@:overload public function unexpectedDirectByteBufferWithNonChannelSocket(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unexpectedDirectByteBufferWithNonChannelSocket(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unexpectedDirectByteBufferWithNonChannelSocket(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unexpectedDirectByteBufferWithNonChannelSocket(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unexpectedDirectByteBufferWithNonChannelSocket(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unexpectedDirectByteBufferWithNonChannelSocket(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unexpectedDirectByteBufferWithNonChannelSocket() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unexpectedDirectByteBufferWithNonChannelSocket() : org.omg.CORBA.INTERNAL;
 	
-	public static var UNEXPECTED_NON_DIRECT_BYTE_BUFFER_WITH_CHANNEL_SOCKET(default, null) : Int;
+	@:public @:static @:final public static var UNEXPECTED_NON_DIRECT_BYTE_BUFFER_WITH_CHANNEL_SOCKET(default, null) : Int;
 	
-	@:overload public function unexpectedNonDirectByteBufferWithChannelSocket(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unexpectedNonDirectByteBufferWithChannelSocket(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unexpectedNonDirectByteBufferWithChannelSocket(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unexpectedNonDirectByteBufferWithChannelSocket(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unexpectedNonDirectByteBufferWithChannelSocket(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unexpectedNonDirectByteBufferWithChannelSocket(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unexpectedNonDirectByteBufferWithChannelSocket() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unexpectedNonDirectByteBufferWithChannelSocket() : org.omg.CORBA.INTERNAL;
 	
-	public static var INVALID_CONTACT_INFO_LIST_ITERATOR_FAILURE_EXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var INVALID_CONTACT_INFO_LIST_ITERATOR_FAILURE_EXCEPTION(default, null) : Int;
 	
-	@:overload public function invalidContactInfoListIteratorFailureException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidContactInfoListIteratorFailureException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidContactInfoListIteratorFailureException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidContactInfoListIteratorFailureException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidContactInfoListIteratorFailureException(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidContactInfoListIteratorFailureException(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidContactInfoListIteratorFailureException() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidContactInfoListIteratorFailureException() : org.omg.CORBA.INTERNAL;
 	
-	public static var REMARSHAL_WITH_NOWHERE_TO_GO(default, null) : Int;
+	@:public @:static @:final public static var REMARSHAL_WITH_NOWHERE_TO_GO(default, null) : Int;
 	
-	@:overload public function remarshalWithNowhereToGo(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function remarshalWithNowhereToGo(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function remarshalWithNowhereToGo(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function remarshalWithNowhereToGo(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function remarshalWithNowhereToGo(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function remarshalWithNowhereToGo(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function remarshalWithNowhereToGo() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function remarshalWithNowhereToGo() : org.omg.CORBA.INTERNAL;
 	
-	public static var EXCEPTION_WHEN_SENDING_CLOSE_CONNECTION(default, null) : Int;
+	@:public @:static @:final public static var EXCEPTION_WHEN_SENDING_CLOSE_CONNECTION(default, null) : Int;
 	
-	@:overload public function exceptionWhenSendingCloseConnection(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function exceptionWhenSendingCloseConnection(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function exceptionWhenSendingCloseConnection(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function exceptionWhenSendingCloseConnection(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function exceptionWhenSendingCloseConnection(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function exceptionWhenSendingCloseConnection(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function exceptionWhenSendingCloseConnection() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function exceptionWhenSendingCloseConnection() : org.omg.CORBA.INTERNAL;
 	
-	public static var INVOCATION_ERROR_IN_REFLECTIVE_TIE(default, null) : Int;
+	@:public @:static @:final public static var INVOCATION_ERROR_IN_REFLECTIVE_TIE(default, null) : Int;
 	
-	@:overload public function invocationErrorInReflectiveTie(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invocationErrorInReflectiveTie(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invocationErrorInReflectiveTie(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invocationErrorInReflectiveTie(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invocationErrorInReflectiveTie(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invocationErrorInReflectiveTie(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invocationErrorInReflectiveTie(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invocationErrorInReflectiveTie(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var BAD_HELPER_WRITE_METHOD(default, null) : Int;
+	@:public @:static @:final public static var BAD_HELPER_WRITE_METHOD(default, null) : Int;
 	
-	@:overload public function badHelperWriteMethod(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badHelperWriteMethod(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badHelperWriteMethod(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badHelperWriteMethod(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badHelperWriteMethod(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badHelperWriteMethod(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badHelperWriteMethod(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badHelperWriteMethod(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var BAD_HELPER_READ_METHOD(default, null) : Int;
+	@:public @:static @:final public static var BAD_HELPER_READ_METHOD(default, null) : Int;
 	
-	@:overload public function badHelperReadMethod(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badHelperReadMethod(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badHelperReadMethod(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badHelperReadMethod(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badHelperReadMethod(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badHelperReadMethod(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badHelperReadMethod(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badHelperReadMethod(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var BAD_HELPER_ID_METHOD(default, null) : Int;
+	@:public @:static @:final public static var BAD_HELPER_ID_METHOD(default, null) : Int;
 	
-	@:overload public function badHelperIdMethod(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badHelperIdMethod(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badHelperIdMethod(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badHelperIdMethod(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badHelperIdMethod(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badHelperIdMethod(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function badHelperIdMethod(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function badHelperIdMethod(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var WRITE_UNDECLARED_EXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var WRITE_UNDECLARED_EXCEPTION(default, null) : Int;
 	
-	@:overload public function writeUndeclaredException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function writeUndeclaredException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function writeUndeclaredException(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function writeUndeclaredException(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function writeUndeclaredException(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function writeUndeclaredException(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function writeUndeclaredException(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function writeUndeclaredException(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var READ_UNDECLARED_EXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var READ_UNDECLARED_EXCEPTION(default, null) : Int;
 	
-	@:overload public function readUndeclaredException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function readUndeclaredException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function readUndeclaredException(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function readUndeclaredException(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function readUndeclaredException(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function readUndeclaredException(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function readUndeclaredException(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function readUndeclaredException(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var UNABLE_TO_SET_SOCKET_FACTORY_ORB(default, null) : Int;
+	@:public @:static @:final public static var UNABLE_TO_SET_SOCKET_FACTORY_ORB(default, null) : Int;
 	
-	@:overload public function unableToSetSocketFactoryOrb(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unableToSetSocketFactoryOrb(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unableToSetSocketFactoryOrb(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unableToSetSocketFactoryOrb(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unableToSetSocketFactoryOrb(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unableToSetSocketFactoryOrb(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unableToSetSocketFactoryOrb() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unableToSetSocketFactoryOrb() : org.omg.CORBA.INTERNAL;
 	
-	public static var UNEXPECTED_EXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var UNEXPECTED_EXCEPTION(default, null) : Int;
 	
-	@:overload public function unexpectedException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unexpectedException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unexpectedException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unexpectedException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unexpectedException(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unexpectedException(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function unexpectedException() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function unexpectedException() : org.omg.CORBA.INTERNAL;
 	
-	public static var NO_INVOCATION_HANDLER(default, null) : Int;
+	@:public @:static @:final public static var NO_INVOCATION_HANDLER(default, null) : Int;
 	
-	@:overload public function noInvocationHandler(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noInvocationHandler(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function noInvocationHandler(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noInvocationHandler(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function noInvocationHandler(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noInvocationHandler(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function noInvocationHandler(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function noInvocationHandler(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var INVALID_BUFF_MGR_STRATEGY(default, null) : Int;
+	@:public @:static @:final public static var INVALID_BUFF_MGR_STRATEGY(default, null) : Int;
 	
-	@:overload public function invalidBuffMgrStrategy(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidBuffMgrStrategy(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidBuffMgrStrategy(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidBuffMgrStrategy(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidBuffMgrStrategy(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidBuffMgrStrategy(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function invalidBuffMgrStrategy(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function invalidBuffMgrStrategy(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var JAVA_STREAM_INIT_FAILED(default, null) : Int;
+	@:public @:static @:final public static var JAVA_STREAM_INIT_FAILED(default, null) : Int;
 	
-	@:overload public function javaStreamInitFailed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function javaStreamInitFailed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function javaStreamInitFailed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function javaStreamInitFailed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function javaStreamInitFailed(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function javaStreamInitFailed(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function javaStreamInitFailed() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function javaStreamInitFailed() : org.omg.CORBA.INTERNAL;
 	
-	public static var DUPLICATE_ORB_VERSION_SERVICE_CONTEXT(default, null) : Int;
+	@:public @:static @:final public static var DUPLICATE_ORB_VERSION_SERVICE_CONTEXT(default, null) : Int;
 	
-	@:overload public function duplicateOrbVersionServiceContext(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function duplicateOrbVersionServiceContext(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function duplicateOrbVersionServiceContext(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function duplicateOrbVersionServiceContext(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function duplicateOrbVersionServiceContext(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function duplicateOrbVersionServiceContext(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function duplicateOrbVersionServiceContext() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function duplicateOrbVersionServiceContext() : org.omg.CORBA.INTERNAL;
 	
-	public static var DUPLICATE_SENDING_CONTEXT_SERVICE_CONTEXT(default, null) : Int;
+	@:public @:static @:final public static var DUPLICATE_SENDING_CONTEXT_SERVICE_CONTEXT(default, null) : Int;
 	
-	@:overload public function duplicateSendingContextServiceContext(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function duplicateSendingContextServiceContext(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function duplicateSendingContextServiceContext(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function duplicateSendingContextServiceContext(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function duplicateSendingContextServiceContext(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function duplicateSendingContextServiceContext(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function duplicateSendingContextServiceContext() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function duplicateSendingContextServiceContext() : org.omg.CORBA.INTERNAL;
 	
-	public static var WORK_QUEUE_THREAD_INTERRUPTED(default, null) : Int;
+	@:public @:static @:final public static var WORK_QUEUE_THREAD_INTERRUPTED(default, null) : Int;
 	
-	@:overload public function workQueueThreadInterrupted(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workQueueThreadInterrupted(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workQueueThreadInterrupted(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workQueueThreadInterrupted(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workQueueThreadInterrupted(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workQueueThreadInterrupted(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workQueueThreadInterrupted(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workQueueThreadInterrupted(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var WORKER_THREAD_CREATED(default, null) : Int;
+	@:public @:static @:final public static var WORKER_THREAD_CREATED(default, null) : Int;
 	
-	@:overload public function workerThreadCreated(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadCreated(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadCreated(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadCreated(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadCreated(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadCreated(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadCreated(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadCreated(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var WORKER_THREAD_THROWABLE_FROM_REQUEST_WORK(default, null) : Int;
+	@:public @:static @:final public static var WORKER_THREAD_THROWABLE_FROM_REQUEST_WORK(default, null) : Int;
 	
-	@:overload public function workerThreadThrowableFromRequestWork(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadThrowableFromRequestWork(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadThrowableFromRequestWork(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadThrowableFromRequestWork(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadThrowableFromRequestWork(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadThrowableFromRequestWork(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadThrowableFromRequestWork(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadThrowableFromRequestWork(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var WORKER_THREAD_NOT_NEEDED(default, null) : Int;
+	@:public @:static @:final public static var WORKER_THREAD_NOT_NEEDED(default, null) : Int;
 	
-	@:overload public function workerThreadNotNeeded(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadNotNeeded(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadNotNeeded(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadNotNeeded(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadNotNeeded(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadNotNeeded(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadNotNeeded(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadNotNeeded(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var WORKER_THREAD_DO_WORK_THROWABLE(default, null) : Int;
+	@:public @:static @:final public static var WORKER_THREAD_DO_WORK_THROWABLE(default, null) : Int;
 	
-	@:overload public function workerThreadDoWorkThrowable(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadDoWorkThrowable(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadDoWorkThrowable(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadDoWorkThrowable(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadDoWorkThrowable(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadDoWorkThrowable(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadDoWorkThrowable(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadDoWorkThrowable(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var WORKER_THREAD_CAUGHT_UNEXPECTED_THROWABLE(default, null) : Int;
+	@:public @:static @:final public static var WORKER_THREAD_CAUGHT_UNEXPECTED_THROWABLE(default, null) : Int;
 	
-	@:overload public function workerThreadCaughtUnexpectedThrowable(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadCaughtUnexpectedThrowable(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadCaughtUnexpectedThrowable(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadCaughtUnexpectedThrowable(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadCaughtUnexpectedThrowable(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadCaughtUnexpectedThrowable(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadCaughtUnexpectedThrowable(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadCaughtUnexpectedThrowable(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var WORKER_THREAD_CREATION_FAILURE(default, null) : Int;
+	@:public @:static @:final public static var WORKER_THREAD_CREATION_FAILURE(default, null) : Int;
 	
-	@:overload public function workerThreadCreationFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadCreationFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadCreationFailure(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadCreationFailure(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadCreationFailure(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadCreationFailure(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadCreationFailure(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadCreationFailure(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var WORKER_THREAD_SET_NAME_FAILURE(default, null) : Int;
+	@:public @:static @:final public static var WORKER_THREAD_SET_NAME_FAILURE(default, null) : Int;
 	
-	@:overload public function workerThreadSetNameFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadSetNameFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadSetNameFailure(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadSetNameFailure(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadSetNameFailure(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadSetNameFailure(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workerThreadSetNameFailure(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workerThreadSetNameFailure(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var WORK_QUEUE_REQUEST_WORK_NO_WORK_FOUND(default, null) : Int;
+	@:public @:static @:final public static var WORK_QUEUE_REQUEST_WORK_NO_WORK_FOUND(default, null) : Int;
 	
-	@:overload public function workQueueRequestWorkNoWorkFound(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workQueueRequestWorkNoWorkFound(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workQueueRequestWorkNoWorkFound(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workQueueRequestWorkNoWorkFound(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workQueueRequestWorkNoWorkFound(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workQueueRequestWorkNoWorkFound(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function workQueueRequestWorkNoWorkFound(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function workQueueRequestWorkNoWorkFound(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var THREAD_POOL_CLOSE_ERROR(default, null) : Int;
+	@:public @:static @:final public static var THREAD_POOL_CLOSE_ERROR(default, null) : Int;
 	
-	@:overload public function threadPoolCloseError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadPoolCloseError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function threadPoolCloseError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadPoolCloseError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function threadPoolCloseError(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadPoolCloseError(t : java.lang.Throwable) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function threadPoolCloseError() : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadPoolCloseError() : org.omg.CORBA.INTERNAL;
 	
-	public static var THREAD_GROUP_IS_DESTROYED(default, null) : Int;
+	@:public @:static @:final public static var THREAD_GROUP_IS_DESTROYED(default, null) : Int;
 	
-	@:overload public function threadGroupIsDestroyed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadGroupIsDestroyed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function threadGroupIsDestroyed(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadGroupIsDestroyed(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function threadGroupIsDestroyed(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadGroupIsDestroyed(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function threadGroupIsDestroyed(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadGroupIsDestroyed(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var THREAD_GROUP_HAS_ACTIVE_THREADS_IN_CLOSE(default, null) : Int;
+	@:public @:static @:final public static var THREAD_GROUP_HAS_ACTIVE_THREADS_IN_CLOSE(default, null) : Int;
 	
-	@:overload public function threadGroupHasActiveThreadsInClose(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadGroupHasActiveThreadsInClose(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function threadGroupHasActiveThreadsInClose(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadGroupHasActiveThreadsInClose(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function threadGroupHasActiveThreadsInClose(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadGroupHasActiveThreadsInClose(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function threadGroupHasActiveThreadsInClose(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadGroupHasActiveThreadsInClose(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var THREAD_GROUP_HAS_SUB_GROUPS_IN_CLOSE(default, null) : Int;
+	@:public @:static @:final public static var THREAD_GROUP_HAS_SUB_GROUPS_IN_CLOSE(default, null) : Int;
 	
-	@:overload public function threadGroupHasSubGroupsInClose(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadGroupHasSubGroupsInClose(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function threadGroupHasSubGroupsInClose(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadGroupHasSubGroupsInClose(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function threadGroupHasSubGroupsInClose(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadGroupHasSubGroupsInClose(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function threadGroupHasSubGroupsInClose(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadGroupHasSubGroupsInClose(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var THREAD_GROUP_DESTROY_FAILED(default, null) : Int;
+	@:public @:static @:final public static var THREAD_GROUP_DESTROY_FAILED(default, null) : Int;
 	
-	@:overload public function threadGroupDestroyFailed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadGroupDestroyFailed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function threadGroupDestroyFailed(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadGroupDestroyFailed(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function threadGroupDestroyFailed(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadGroupDestroyFailed(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function threadGroupDestroyFailed(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function threadGroupDestroyFailed(arg0 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var INTERRUPTED_JOIN_CALL_WHILE_CLOSING_THREAD_POOL(default, null) : Int;
+	@:public @:static @:final public static var INTERRUPTED_JOIN_CALL_WHILE_CLOSING_THREAD_POOL(default, null) : Int;
 	
-	@:overload public function interruptedJoinCallWhileClosingThreadPool(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function interruptedJoinCallWhileClosingThreadPool(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function interruptedJoinCallWhileClosingThreadPool(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function interruptedJoinCallWhileClosingThreadPool(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function interruptedJoinCallWhileClosingThreadPool(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function interruptedJoinCallWhileClosingThreadPool(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	@:overload public function interruptedJoinCallWhileClosingThreadPool(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
+	@:overload @:public public function interruptedJoinCallWhileClosingThreadPool(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.INTERNAL;
 	
-	public static var CHUNK_OVERFLOW(default, null) : Int;
+	@:public @:static @:final public static var CHUNK_OVERFLOW(default, null) : Int;
 	
-	@:overload public function chunkOverflow(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function chunkOverflow(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function chunkOverflow(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function chunkOverflow(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function chunkOverflow(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function chunkOverflow(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function chunkOverflow() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function chunkOverflow() : org.omg.CORBA.MARSHAL;
 	
-	public static var UNEXPECTED_EOF(default, null) : Int;
+	@:public @:static @:final public static var UNEXPECTED_EOF(default, null) : Int;
 	
-	@:overload public function unexpectedEof(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unexpectedEof(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unexpectedEof(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unexpectedEof(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unexpectedEof(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unexpectedEof(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unexpectedEof() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unexpectedEof() : org.omg.CORBA.MARSHAL;
 	
-	public static var READ_OBJECT_EXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var READ_OBJECT_EXCEPTION(default, null) : Int;
 	
-	@:overload public function readObjectException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function readObjectException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function readObjectException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function readObjectException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function readObjectException(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function readObjectException(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function readObjectException() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function readObjectException() : org.omg.CORBA.MARSHAL;
 	
-	public static var CHARACTER_OUTOFRANGE(default, null) : Int;
+	@:public @:static @:final public static var CHARACTER_OUTOFRANGE(default, null) : Int;
 	
-	@:overload public function characterOutofrange(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function characterOutofrange(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function characterOutofrange(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function characterOutofrange(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function characterOutofrange(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function characterOutofrange(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function characterOutofrange() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function characterOutofrange() : org.omg.CORBA.MARSHAL;
 	
-	public static var DSI_RESULT_EXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var DSI_RESULT_EXCEPTION(default, null) : Int;
 	
-	@:overload public function dsiResultException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function dsiResultException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function dsiResultException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function dsiResultException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function dsiResultException(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function dsiResultException(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function dsiResultException() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function dsiResultException() : org.omg.CORBA.MARSHAL;
 	
-	public static var IIOPINPUTSTREAM_GROW(default, null) : Int;
+	@:public @:static @:final public static var IIOPINPUTSTREAM_GROW(default, null) : Int;
 	
-	@:overload public function iiopinputstreamGrow(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function iiopinputstreamGrow(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function iiopinputstreamGrow(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function iiopinputstreamGrow(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function iiopinputstreamGrow(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function iiopinputstreamGrow(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function iiopinputstreamGrow() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function iiopinputstreamGrow() : org.omg.CORBA.MARSHAL;
 	
-	public static var END_OF_STREAM(default, null) : Int;
+	@:public @:static @:final public static var END_OF_STREAM(default, null) : Int;
 	
-	@:overload public function endOfStream(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function endOfStream(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function endOfStream(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function endOfStream(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function endOfStream(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function endOfStream(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function endOfStream() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function endOfStream() : org.omg.CORBA.MARSHAL;
 	
-	public static var INVALID_OBJECT_KEY(default, null) : Int;
+	@:public @:static @:final public static var INVALID_OBJECT_KEY(default, null) : Int;
 	
-	@:overload public function invalidObjectKey(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidObjectKey(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function invalidObjectKey(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidObjectKey(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function invalidObjectKey(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidObjectKey(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function invalidObjectKey() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidObjectKey() : org.omg.CORBA.MARSHAL;
 	
-	public static var MALFORMED_URL(default, null) : Int;
+	@:public @:static @:final public static var MALFORMED_URL(default, null) : Int;
 	
-	@:overload public function malformedUrl(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function malformedUrl(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function malformedUrl(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function malformedUrl(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function malformedUrl(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function malformedUrl(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function malformedUrl(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function malformedUrl(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var VALUEHANDLER_READ_ERROR(default, null) : Int;
+	@:public @:static @:final public static var VALUEHANDLER_READ_ERROR(default, null) : Int;
 	
-	@:overload public function valuehandlerReadError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function valuehandlerReadError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function valuehandlerReadError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function valuehandlerReadError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function valuehandlerReadError(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function valuehandlerReadError(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function valuehandlerReadError() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function valuehandlerReadError() : org.omg.CORBA.MARSHAL;
 	
-	public static var VALUEHANDLER_READ_EXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var VALUEHANDLER_READ_EXCEPTION(default, null) : Int;
 	
-	@:overload public function valuehandlerReadException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function valuehandlerReadException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function valuehandlerReadException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function valuehandlerReadException(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function valuehandlerReadException(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function valuehandlerReadException(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function valuehandlerReadException() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function valuehandlerReadException() : org.omg.CORBA.MARSHAL;
 	
-	public static var BAD_KIND(default, null) : Int;
+	@:public @:static @:final public static var BAD_KIND(default, null) : Int;
 	
-	@:overload public function badKind(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badKind(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badKind(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badKind(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badKind(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badKind(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badKind() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badKind() : org.omg.CORBA.MARSHAL;
 	
-	public static var CNFE_READ_CLASS(default, null) : Int;
+	@:public @:static @:final public static var CNFE_READ_CLASS(default, null) : Int;
 	
-	@:overload public function cnfeReadClass(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function cnfeReadClass(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function cnfeReadClass(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function cnfeReadClass(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function cnfeReadClass(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function cnfeReadClass(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function cnfeReadClass(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function cnfeReadClass(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var BAD_REP_ID_INDIRECTION(default, null) : Int;
+	@:public @:static @:final public static var BAD_REP_ID_INDIRECTION(default, null) : Int;
 	
-	@:overload public function badRepIdIndirection(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badRepIdIndirection(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badRepIdIndirection(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badRepIdIndirection(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badRepIdIndirection(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badRepIdIndirection(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badRepIdIndirection(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badRepIdIndirection(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var BAD_CODEBASE_INDIRECTION(default, null) : Int;
+	@:public @:static @:final public static var BAD_CODEBASE_INDIRECTION(default, null) : Int;
 	
-	@:overload public function badCodebaseIndirection(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badCodebaseIndirection(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badCodebaseIndirection(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badCodebaseIndirection(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badCodebaseIndirection(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badCodebaseIndirection(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badCodebaseIndirection(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badCodebaseIndirection(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var UNKNOWN_CODESET(default, null) : Int;
+	@:public @:static @:final public static var UNKNOWN_CODESET(default, null) : Int;
 	
-	@:overload public function unknownCodeset(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unknownCodeset(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unknownCodeset(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unknownCodeset(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unknownCodeset(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unknownCodeset(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unknownCodeset(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unknownCodeset(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var WCHAR_DATA_IN_GIOP_1_0(default, null) : Int;
+	@:public @:static @:final public static var WCHAR_DATA_IN_GIOP_1_0(default, null) : Int;
 	
-	@:overload public function wcharDataInGiop10(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function wcharDataInGiop10(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function wcharDataInGiop10(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function wcharDataInGiop10(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function wcharDataInGiop10(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function wcharDataInGiop10(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function wcharDataInGiop10() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function wcharDataInGiop10() : org.omg.CORBA.MARSHAL;
 	
-	public static var NEGATIVE_STRING_LENGTH(default, null) : Int;
+	@:public @:static @:final public static var NEGATIVE_STRING_LENGTH(default, null) : Int;
 	
-	@:overload public function negativeStringLength(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function negativeStringLength(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function negativeStringLength(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function negativeStringLength(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function negativeStringLength(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function negativeStringLength(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function negativeStringLength(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function negativeStringLength(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var EXPECTED_TYPE_NULL_AND_NO_REP_ID(default, null) : Int;
+	@:public @:static @:final public static var EXPECTED_TYPE_NULL_AND_NO_REP_ID(default, null) : Int;
 	
-	@:overload public function expectedTypeNullAndNoRepId(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function expectedTypeNullAndNoRepId(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function expectedTypeNullAndNoRepId(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function expectedTypeNullAndNoRepId(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function expectedTypeNullAndNoRepId(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function expectedTypeNullAndNoRepId(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function expectedTypeNullAndNoRepId() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function expectedTypeNullAndNoRepId() : org.omg.CORBA.MARSHAL;
 	
-	public static var READ_VALUE_AND_NO_REP_ID(default, null) : Int;
+	@:public @:static @:final public static var READ_VALUE_AND_NO_REP_ID(default, null) : Int;
 	
-	@:overload public function readValueAndNoRepId(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function readValueAndNoRepId(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function readValueAndNoRepId(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function readValueAndNoRepId(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function readValueAndNoRepId(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function readValueAndNoRepId(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function readValueAndNoRepId() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function readValueAndNoRepId() : org.omg.CORBA.MARSHAL;
 	
-	public static var UNEXPECTED_ENCLOSING_VALUETYPE(default, null) : Int;
+	@:public @:static @:final public static var UNEXPECTED_ENCLOSING_VALUETYPE(default, null) : Int;
 	
-	@:overload public function unexpectedEnclosingValuetype(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unexpectedEnclosingValuetype(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unexpectedEnclosingValuetype(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unexpectedEnclosingValuetype(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unexpectedEnclosingValuetype(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unexpectedEnclosingValuetype(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unexpectedEnclosingValuetype(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unexpectedEnclosingValuetype(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var POSITIVE_END_TAG(default, null) : Int;
+	@:public @:static @:final public static var POSITIVE_END_TAG(default, null) : Int;
 	
-	@:overload public function positiveEndTag(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function positiveEndTag(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function positiveEndTag(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function positiveEndTag(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function positiveEndTag(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function positiveEndTag(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function positiveEndTag(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function positiveEndTag(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var NULL_OUT_CALL(default, null) : Int;
+	@:public @:static @:final public static var NULL_OUT_CALL(default, null) : Int;
 	
-	@:overload public function nullOutCall(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function nullOutCall(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function nullOutCall(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function nullOutCall(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function nullOutCall(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function nullOutCall(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function nullOutCall() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function nullOutCall() : org.omg.CORBA.MARSHAL;
 	
-	public static var WRITE_LOCAL_OBJECT(default, null) : Int;
+	@:public @:static @:final public static var WRITE_LOCAL_OBJECT(default, null) : Int;
 	
-	@:overload public function writeLocalObject(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function writeLocalObject(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function writeLocalObject(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function writeLocalObject(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function writeLocalObject(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function writeLocalObject(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function writeLocalObject() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function writeLocalObject() : org.omg.CORBA.MARSHAL;
 	
-	public static var BAD_INSERTOBJ_PARAM(default, null) : Int;
+	@:public @:static @:final public static var BAD_INSERTOBJ_PARAM(default, null) : Int;
 	
-	@:overload public function badInsertobjParam(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badInsertobjParam(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badInsertobjParam(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badInsertobjParam(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badInsertobjParam(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badInsertobjParam(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badInsertobjParam(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badInsertobjParam(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var CUSTOM_WRAPPER_WITH_CODEBASE(default, null) : Int;
+	@:public @:static @:final public static var CUSTOM_WRAPPER_WITH_CODEBASE(default, null) : Int;
 	
-	@:overload public function customWrapperWithCodebase(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function customWrapperWithCodebase(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function customWrapperWithCodebase(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function customWrapperWithCodebase(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function customWrapperWithCodebase(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function customWrapperWithCodebase(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function customWrapperWithCodebase() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function customWrapperWithCodebase() : org.omg.CORBA.MARSHAL;
 	
-	public static var CUSTOM_WRAPPER_INDIRECTION(default, null) : Int;
+	@:public @:static @:final public static var CUSTOM_WRAPPER_INDIRECTION(default, null) : Int;
 	
-	@:overload public function customWrapperIndirection(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function customWrapperIndirection(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function customWrapperIndirection(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function customWrapperIndirection(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function customWrapperIndirection(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function customWrapperIndirection(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function customWrapperIndirection() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function customWrapperIndirection() : org.omg.CORBA.MARSHAL;
 	
-	public static var CUSTOM_WRAPPER_NOT_SINGLE_REPID(default, null) : Int;
+	@:public @:static @:final public static var CUSTOM_WRAPPER_NOT_SINGLE_REPID(default, null) : Int;
 	
-	@:overload public function customWrapperNotSingleRepid(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function customWrapperNotSingleRepid(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function customWrapperNotSingleRepid(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function customWrapperNotSingleRepid(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function customWrapperNotSingleRepid(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function customWrapperNotSingleRepid(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function customWrapperNotSingleRepid() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function customWrapperNotSingleRepid() : org.omg.CORBA.MARSHAL;
 	
-	public static var BAD_VALUE_TAG(default, null) : Int;
+	@:public @:static @:final public static var BAD_VALUE_TAG(default, null) : Int;
 	
-	@:overload public function badValueTag(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badValueTag(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badValueTag(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badValueTag(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badValueTag(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badValueTag(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badValueTag(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badValueTag(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var BAD_TYPECODE_FOR_CUSTOM_VALUE(default, null) : Int;
+	@:public @:static @:final public static var BAD_TYPECODE_FOR_CUSTOM_VALUE(default, null) : Int;
 	
-	@:overload public function badTypecodeForCustomValue(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badTypecodeForCustomValue(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badTypecodeForCustomValue(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badTypecodeForCustomValue(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badTypecodeForCustomValue(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badTypecodeForCustomValue(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badTypecodeForCustomValue() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badTypecodeForCustomValue() : org.omg.CORBA.MARSHAL;
 	
-	public static var ERROR_INVOKING_HELPER_WRITE(default, null) : Int;
+	@:public @:static @:final public static var ERROR_INVOKING_HELPER_WRITE(default, null) : Int;
 	
-	@:overload public function errorInvokingHelperWrite(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function errorInvokingHelperWrite(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function errorInvokingHelperWrite(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function errorInvokingHelperWrite(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function errorInvokingHelperWrite(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function errorInvokingHelperWrite(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function errorInvokingHelperWrite() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function errorInvokingHelperWrite() : org.omg.CORBA.MARSHAL;
 	
-	public static var BAD_DIGIT_IN_FIXED(default, null) : Int;
+	@:public @:static @:final public static var BAD_DIGIT_IN_FIXED(default, null) : Int;
 	
-	@:overload public function badDigitInFixed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badDigitInFixed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badDigitInFixed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badDigitInFixed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badDigitInFixed(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badDigitInFixed(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badDigitInFixed() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badDigitInFixed() : org.omg.CORBA.MARSHAL;
 	
-	public static var REF_TYPE_INDIR_TYPE(default, null) : Int;
+	@:public @:static @:final public static var REF_TYPE_INDIR_TYPE(default, null) : Int;
 	
-	@:overload public function refTypeIndirType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function refTypeIndirType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function refTypeIndirType(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function refTypeIndirType(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function refTypeIndirType(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function refTypeIndirType(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function refTypeIndirType() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function refTypeIndirType() : org.omg.CORBA.MARSHAL;
 	
-	public static var BAD_RESERVED_LENGTH(default, null) : Int;
+	@:public @:static @:final public static var BAD_RESERVED_LENGTH(default, null) : Int;
 	
-	@:overload public function badReservedLength(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badReservedLength(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badReservedLength(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badReservedLength(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badReservedLength(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badReservedLength(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badReservedLength() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badReservedLength() : org.omg.CORBA.MARSHAL;
 	
-	public static var NULL_NOT_ALLOWED(default, null) : Int;
+	@:public @:static @:final public static var NULL_NOT_ALLOWED(default, null) : Int;
 	
-	@:overload public function nullNotAllowed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function nullNotAllowed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function nullNotAllowed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function nullNotAllowed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function nullNotAllowed(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function nullNotAllowed(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function nullNotAllowed() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function nullNotAllowed() : org.omg.CORBA.MARSHAL;
 	
-	public static var UNION_DISCRIMINATOR_ERROR(default, null) : Int;
+	@:public @:static @:final public static var UNION_DISCRIMINATOR_ERROR(default, null) : Int;
 	
-	@:overload public function unionDiscriminatorError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unionDiscriminatorError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unionDiscriminatorError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unionDiscriminatorError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unionDiscriminatorError(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unionDiscriminatorError(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unionDiscriminatorError() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unionDiscriminatorError() : org.omg.CORBA.MARSHAL;
 	
-	public static var CANNOT_MARSHAL_NATIVE(default, null) : Int;
+	@:public @:static @:final public static var CANNOT_MARSHAL_NATIVE(default, null) : Int;
 	
-	@:overload public function cannotMarshalNative(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function cannotMarshalNative(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function cannotMarshalNative(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function cannotMarshalNative(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function cannotMarshalNative(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function cannotMarshalNative(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function cannotMarshalNative() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function cannotMarshalNative() : org.omg.CORBA.MARSHAL;
 	
-	public static var CANNOT_MARSHAL_BAD_TCKIND(default, null) : Int;
+	@:public @:static @:final public static var CANNOT_MARSHAL_BAD_TCKIND(default, null) : Int;
 	
-	@:overload public function cannotMarshalBadTckind(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function cannotMarshalBadTckind(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function cannotMarshalBadTckind(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function cannotMarshalBadTckind(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function cannotMarshalBadTckind(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function cannotMarshalBadTckind(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function cannotMarshalBadTckind() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function cannotMarshalBadTckind() : org.omg.CORBA.MARSHAL;
 	
-	public static var INVALID_INDIRECTION(default, null) : Int;
+	@:public @:static @:final public static var INVALID_INDIRECTION(default, null) : Int;
 	
-	@:overload public function invalidIndirection(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidIndirection(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function invalidIndirection(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidIndirection(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function invalidIndirection(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidIndirection(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function invalidIndirection(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidIndirection(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var INDIRECTION_NOT_FOUND(default, null) : Int;
+	@:public @:static @:final public static var INDIRECTION_NOT_FOUND(default, null) : Int;
 	
-	@:overload public function indirectionNotFound(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function indirectionNotFound(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function indirectionNotFound(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function indirectionNotFound(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function indirectionNotFound(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function indirectionNotFound(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function indirectionNotFound(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function indirectionNotFound(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var RECURSIVE_TYPECODE_ERROR(default, null) : Int;
+	@:public @:static @:final public static var RECURSIVE_TYPECODE_ERROR(default, null) : Int;
 	
-	@:overload public function recursiveTypecodeError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function recursiveTypecodeError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function recursiveTypecodeError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function recursiveTypecodeError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function recursiveTypecodeError(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function recursiveTypecodeError(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function recursiveTypecodeError() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function recursiveTypecodeError() : org.omg.CORBA.MARSHAL;
 	
-	public static var INVALID_SIMPLE_TYPECODE(default, null) : Int;
+	@:public @:static @:final public static var INVALID_SIMPLE_TYPECODE(default, null) : Int;
 	
-	@:overload public function invalidSimpleTypecode(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidSimpleTypecode(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function invalidSimpleTypecode(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidSimpleTypecode(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function invalidSimpleTypecode(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidSimpleTypecode(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function invalidSimpleTypecode() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidSimpleTypecode() : org.omg.CORBA.MARSHAL;
 	
-	public static var INVALID_COMPLEX_TYPECODE(default, null) : Int;
+	@:public @:static @:final public static var INVALID_COMPLEX_TYPECODE(default, null) : Int;
 	
-	@:overload public function invalidComplexTypecode(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidComplexTypecode(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function invalidComplexTypecode(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidComplexTypecode(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function invalidComplexTypecode(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidComplexTypecode(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function invalidComplexTypecode() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidComplexTypecode() : org.omg.CORBA.MARSHAL;
 	
-	public static var INVALID_TYPECODE_KIND_MARSHAL(default, null) : Int;
+	@:public @:static @:final public static var INVALID_TYPECODE_KIND_MARSHAL(default, null) : Int;
 	
-	@:overload public function invalidTypecodeKindMarshal(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidTypecodeKindMarshal(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function invalidTypecodeKindMarshal(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidTypecodeKindMarshal(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function invalidTypecodeKindMarshal(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidTypecodeKindMarshal(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function invalidTypecodeKindMarshal() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function invalidTypecodeKindMarshal() : org.omg.CORBA.MARSHAL;
 	
-	public static var UNEXPECTED_UNION_DEFAULT(default, null) : Int;
+	@:public @:static @:final public static var UNEXPECTED_UNION_DEFAULT(default, null) : Int;
 	
-	@:overload public function unexpectedUnionDefault(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unexpectedUnionDefault(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unexpectedUnionDefault(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unexpectedUnionDefault(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unexpectedUnionDefault(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unexpectedUnionDefault(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unexpectedUnionDefault() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unexpectedUnionDefault() : org.omg.CORBA.MARSHAL;
 	
-	public static var ILLEGAL_UNION_DISCRIMINATOR_TYPE(default, null) : Int;
+	@:public @:static @:final public static var ILLEGAL_UNION_DISCRIMINATOR_TYPE(default, null) : Int;
 	
-	@:overload public function illegalUnionDiscriminatorType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function illegalUnionDiscriminatorType(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function illegalUnionDiscriminatorType(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function illegalUnionDiscriminatorType(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function illegalUnionDiscriminatorType(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function illegalUnionDiscriminatorType(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function illegalUnionDiscriminatorType() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function illegalUnionDiscriminatorType() : org.omg.CORBA.MARSHAL;
 	
-	public static var COULD_NOT_SKIP_BYTES(default, null) : Int;
+	@:public @:static @:final public static var COULD_NOT_SKIP_BYTES(default, null) : Int;
 	
-	@:overload public function couldNotSkipBytes(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function couldNotSkipBytes(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function couldNotSkipBytes(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function couldNotSkipBytes(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function couldNotSkipBytes(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function couldNotSkipBytes(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function couldNotSkipBytes(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function couldNotSkipBytes(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var BAD_CHUNK_LENGTH(default, null) : Int;
+	@:public @:static @:final public static var BAD_CHUNK_LENGTH(default, null) : Int;
 	
-	@:overload public function badChunkLength(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badChunkLength(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badChunkLength(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badChunkLength(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badChunkLength(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badChunkLength(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badChunkLength(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badChunkLength(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var UNABLE_TO_LOCATE_REP_ID_ARRAY(default, null) : Int;
+	@:public @:static @:final public static var UNABLE_TO_LOCATE_REP_ID_ARRAY(default, null) : Int;
 	
-	@:overload public function unableToLocateRepIdArray(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unableToLocateRepIdArray(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unableToLocateRepIdArray(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unableToLocateRepIdArray(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unableToLocateRepIdArray(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unableToLocateRepIdArray(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function unableToLocateRepIdArray(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function unableToLocateRepIdArray(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var BAD_FIXED(default, null) : Int;
+	@:public @:static @:final public static var BAD_FIXED(default, null) : Int;
 	
-	@:overload public function badFixed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badFixed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badFixed(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badFixed(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badFixed(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badFixed(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badFixed(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badFixed(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var READ_OBJECT_LOAD_CLASS_FAILURE(default, null) : Int;
+	@:public @:static @:final public static var READ_OBJECT_LOAD_CLASS_FAILURE(default, null) : Int;
 	
-	@:overload public function readObjectLoadClassFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function readObjectLoadClassFailure(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function readObjectLoadClassFailure(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function readObjectLoadClassFailure(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function readObjectLoadClassFailure(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function readObjectLoadClassFailure(t : java.lang.Throwable, arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function readObjectLoadClassFailure(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function readObjectLoadClassFailure(arg0 : Dynamic, arg1 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var COULD_NOT_INSTANTIATE_HELPER(default, null) : Int;
+	@:public @:static @:final public static var COULD_NOT_INSTANTIATE_HELPER(default, null) : Int;
 	
-	@:overload public function couldNotInstantiateHelper(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function couldNotInstantiateHelper(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function couldNotInstantiateHelper(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function couldNotInstantiateHelper(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function couldNotInstantiateHelper(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function couldNotInstantiateHelper(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function couldNotInstantiateHelper(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function couldNotInstantiateHelper(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var BAD_TOA_OAID(default, null) : Int;
+	@:public @:static @:final public static var BAD_TOA_OAID(default, null) : Int;
 	
-	@:overload public function badToaOaid(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badToaOaid(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badToaOaid(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badToaOaid(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badToaOaid(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badToaOaid(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badToaOaid() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badToaOaid() : org.omg.CORBA.MARSHAL;
 	
-	public static var COULD_NOT_INVOKE_HELPER_READ_METHOD(default, null) : Int;
+	@:public @:static @:final public static var COULD_NOT_INVOKE_HELPER_READ_METHOD(default, null) : Int;
 	
-	@:overload public function couldNotInvokeHelperReadMethod(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function couldNotInvokeHelperReadMethod(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function couldNotInvokeHelperReadMethod(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function couldNotInvokeHelperReadMethod(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function couldNotInvokeHelperReadMethod(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function couldNotInvokeHelperReadMethod(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function couldNotInvokeHelperReadMethod(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function couldNotInvokeHelperReadMethod(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var COULD_NOT_FIND_CLASS(default, null) : Int;
+	@:public @:static @:final public static var COULD_NOT_FIND_CLASS(default, null) : Int;
 	
-	@:overload public function couldNotFindClass(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function couldNotFindClass(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function couldNotFindClass(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function couldNotFindClass(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function couldNotFindClass(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function couldNotFindClass(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function couldNotFindClass() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function couldNotFindClass() : org.omg.CORBA.MARSHAL;
 	
-	public static var BAD_ARGUMENTS_NVLIST(default, null) : Int;
+	@:public @:static @:final public static var BAD_ARGUMENTS_NVLIST(default, null) : Int;
 	
-	@:overload public function badArgumentsNvlist(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badArgumentsNvlist(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badArgumentsNvlist(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badArgumentsNvlist(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badArgumentsNvlist(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badArgumentsNvlist(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function badArgumentsNvlist() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function badArgumentsNvlist() : org.omg.CORBA.MARSHAL;
 	
-	public static var STUB_CREATE_ERROR(default, null) : Int;
+	@:public @:static @:final public static var STUB_CREATE_ERROR(default, null) : Int;
 	
-	@:overload public function stubCreateError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function stubCreateError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function stubCreateError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function stubCreateError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function stubCreateError(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function stubCreateError(t : java.lang.Throwable) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function stubCreateError() : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function stubCreateError() : org.omg.CORBA.MARSHAL;
 	
-	public static var JAVA_SERIALIZATION_EXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var JAVA_SERIALIZATION_EXCEPTION(default, null) : Int;
 	
-	@:overload public function javaSerializationException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function javaSerializationException(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function javaSerializationException(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function javaSerializationException(cs : org.omg.CORBA.CompletionStatus, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function javaSerializationException(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function javaSerializationException(t : java.lang.Throwable, arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	@:overload public function javaSerializationException(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
+	@:overload @:public public function javaSerializationException(arg0 : Dynamic) : org.omg.CORBA.MARSHAL;
 	
-	public static var GENERIC_NO_IMPL(default, null) : Int;
+	@:public @:static @:final public static var GENERIC_NO_IMPL(default, null) : Int;
 	
-	@:overload public function genericNoImpl(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function genericNoImpl(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
 	
-	@:overload public function genericNoImpl(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function genericNoImpl(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.NO_IMPLEMENT;
 	
-	@:overload public function genericNoImpl(t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function genericNoImpl(t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
 	
-	@:overload public function genericNoImpl() : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function genericNoImpl() : org.omg.CORBA.NO_IMPLEMENT;
 	
-	public static var CONTEXT_NOT_IMPLEMENTED(default, null) : Int;
+	@:public @:static @:final public static var CONTEXT_NOT_IMPLEMENTED(default, null) : Int;
 	
-	@:overload public function contextNotImplemented(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function contextNotImplemented(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
 	
-	@:overload public function contextNotImplemented(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function contextNotImplemented(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.NO_IMPLEMENT;
 	
-	@:overload public function contextNotImplemented(t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function contextNotImplemented(t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
 	
-	@:overload public function contextNotImplemented() : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function contextNotImplemented() : org.omg.CORBA.NO_IMPLEMENT;
 	
-	public static var GETINTERFACE_NOT_IMPLEMENTED(default, null) : Int;
+	@:public @:static @:final public static var GETINTERFACE_NOT_IMPLEMENTED(default, null) : Int;
 	
-	@:overload public function getinterfaceNotImplemented(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function getinterfaceNotImplemented(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
 	
-	@:overload public function getinterfaceNotImplemented(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function getinterfaceNotImplemented(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.NO_IMPLEMENT;
 	
-	@:overload public function getinterfaceNotImplemented(t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function getinterfaceNotImplemented(t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
 	
-	@:overload public function getinterfaceNotImplemented() : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function getinterfaceNotImplemented() : org.omg.CORBA.NO_IMPLEMENT;
 	
-	public static var SEND_DEFERRED_NOTIMPLEMENTED(default, null) : Int;
+	@:public @:static @:final public static var SEND_DEFERRED_NOTIMPLEMENTED(default, null) : Int;
 	
-	@:overload public function sendDeferredNotimplemented(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function sendDeferredNotimplemented(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
 	
-	@:overload public function sendDeferredNotimplemented(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function sendDeferredNotimplemented(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.NO_IMPLEMENT;
 	
-	@:overload public function sendDeferredNotimplemented(t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function sendDeferredNotimplemented(t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
 	
-	@:overload public function sendDeferredNotimplemented() : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function sendDeferredNotimplemented() : org.omg.CORBA.NO_IMPLEMENT;
 	
-	public static var LONG_DOUBLE_NOT_IMPLEMENTED(default, null) : Int;
+	@:public @:static @:final public static var LONG_DOUBLE_NOT_IMPLEMENTED(default, null) : Int;
 	
-	@:overload public function longDoubleNotImplemented(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function longDoubleNotImplemented(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
 	
-	@:overload public function longDoubleNotImplemented(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function longDoubleNotImplemented(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.NO_IMPLEMENT;
 	
-	@:overload public function longDoubleNotImplemented(t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function longDoubleNotImplemented(t : java.lang.Throwable) : org.omg.CORBA.NO_IMPLEMENT;
 	
-	@:overload public function longDoubleNotImplemented() : org.omg.CORBA.NO_IMPLEMENT;
+	@:overload @:public public function longDoubleNotImplemented() : org.omg.CORBA.NO_IMPLEMENT;
 	
-	public static var NO_SERVER_SC_IN_DISPATCH(default, null) : Int;
+	@:public @:static @:final public static var NO_SERVER_SC_IN_DISPATCH(default, null) : Int;
 	
-	@:overload public function noServerScInDispatch(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJ_ADAPTER;
+	@:overload @:public public function noServerScInDispatch(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJ_ADAPTER;
 	
-	@:overload public function noServerScInDispatch(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJ_ADAPTER;
+	@:overload @:public public function noServerScInDispatch(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJ_ADAPTER;
 	
-	@:overload public function noServerScInDispatch(t : java.lang.Throwable) : org.omg.CORBA.OBJ_ADAPTER;
+	@:overload @:public public function noServerScInDispatch(t : java.lang.Throwable) : org.omg.CORBA.OBJ_ADAPTER;
 	
-	@:overload public function noServerScInDispatch() : org.omg.CORBA.OBJ_ADAPTER;
+	@:overload @:public public function noServerScInDispatch() : org.omg.CORBA.OBJ_ADAPTER;
 	
-	public static var ORB_CONNECT_ERROR(default, null) : Int;
+	@:public @:static @:final public static var ORB_CONNECT_ERROR(default, null) : Int;
 	
-	@:overload public function orbConnectError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJ_ADAPTER;
+	@:overload @:public public function orbConnectError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJ_ADAPTER;
 	
-	@:overload public function orbConnectError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJ_ADAPTER;
+	@:overload @:public public function orbConnectError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJ_ADAPTER;
 	
-	@:overload public function orbConnectError(t : java.lang.Throwable) : org.omg.CORBA.OBJ_ADAPTER;
+	@:overload @:public public function orbConnectError(t : java.lang.Throwable) : org.omg.CORBA.OBJ_ADAPTER;
 	
-	@:overload public function orbConnectError() : org.omg.CORBA.OBJ_ADAPTER;
+	@:overload @:public public function orbConnectError() : org.omg.CORBA.OBJ_ADAPTER;
 	
-	public static var ADAPTER_INACTIVE_IN_ACTIVATION(default, null) : Int;
+	@:public @:static @:final public static var ADAPTER_INACTIVE_IN_ACTIVATION(default, null) : Int;
 	
-	@:overload public function adapterInactiveInActivation(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJ_ADAPTER;
+	@:overload @:public public function adapterInactiveInActivation(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJ_ADAPTER;
 	
-	@:overload public function adapterInactiveInActivation(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJ_ADAPTER;
+	@:overload @:public public function adapterInactiveInActivation(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJ_ADAPTER;
 	
-	@:overload public function adapterInactiveInActivation(t : java.lang.Throwable) : org.omg.CORBA.OBJ_ADAPTER;
+	@:overload @:public public function adapterInactiveInActivation(t : java.lang.Throwable) : org.omg.CORBA.OBJ_ADAPTER;
 	
-	@:overload public function adapterInactiveInActivation() : org.omg.CORBA.OBJ_ADAPTER;
+	@:overload @:public public function adapterInactiveInActivation() : org.omg.CORBA.OBJ_ADAPTER;
 	
-	public static var LOCATE_UNKNOWN_OBJECT(default, null) : Int;
+	@:public @:static @:final public static var LOCATE_UNKNOWN_OBJECT(default, null) : Int;
 	
-	@:overload public function locateUnknownObject(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function locateUnknownObject(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function locateUnknownObject(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function locateUnknownObject(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function locateUnknownObject(t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function locateUnknownObject(t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function locateUnknownObject() : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function locateUnknownObject() : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	public static var BAD_SERVER_ID(default, null) : Int;
+	@:public @:static @:final public static var BAD_SERVER_ID(default, null) : Int;
 	
-	@:overload public function badServerId(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function badServerId(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function badServerId(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function badServerId(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function badServerId(t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function badServerId(t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function badServerId() : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function badServerId() : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	public static var BAD_SKELETON(default, null) : Int;
+	@:public @:static @:final public static var BAD_SKELETON(default, null) : Int;
 	
-	@:overload public function badSkeleton(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function badSkeleton(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function badSkeleton(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function badSkeleton(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function badSkeleton(t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function badSkeleton(t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function badSkeleton() : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function badSkeleton() : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	public static var SERVANT_NOT_FOUND(default, null) : Int;
+	@:public @:static @:final public static var SERVANT_NOT_FOUND(default, null) : Int;
 	
-	@:overload public function servantNotFound(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function servantNotFound(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function servantNotFound(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function servantNotFound(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function servantNotFound(t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function servantNotFound(t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function servantNotFound() : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function servantNotFound() : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	public static var NO_OBJECT_ADAPTER_FACTORY(default, null) : Int;
+	@:public @:static @:final public static var NO_OBJECT_ADAPTER_FACTORY(default, null) : Int;
 	
-	@:overload public function noObjectAdapterFactory(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function noObjectAdapterFactory(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function noObjectAdapterFactory(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function noObjectAdapterFactory(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function noObjectAdapterFactory(t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function noObjectAdapterFactory(t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function noObjectAdapterFactory() : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function noObjectAdapterFactory() : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	public static var BAD_ADAPTER_ID(default, null) : Int;
+	@:public @:static @:final public static var BAD_ADAPTER_ID(default, null) : Int;
 	
-	@:overload public function badAdapterId(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function badAdapterId(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function badAdapterId(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function badAdapterId(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function badAdapterId(t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function badAdapterId(t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function badAdapterId() : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function badAdapterId() : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	public static var DYN_ANY_DESTROYED(default, null) : Int;
+	@:public @:static @:final public static var DYN_ANY_DESTROYED(default, null) : Int;
 	
-	@:overload public function dynAnyDestroyed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function dynAnyDestroyed(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function dynAnyDestroyed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function dynAnyDestroyed(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function dynAnyDestroyed(t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function dynAnyDestroyed(t : java.lang.Throwable) : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	@:overload public function dynAnyDestroyed() : org.omg.CORBA.OBJECT_NOT_EXIST;
+	@:overload @:public public function dynAnyDestroyed() : org.omg.CORBA.OBJECT_NOT_EXIST;
 	
-	public static var REQUEST_CANCELED(default, null) : Int;
+	@:public @:static @:final public static var REQUEST_CANCELED(default, null) : Int;
 	
-	@:overload public function requestCanceled(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.TRANSIENT;
+	@:overload @:public public function requestCanceled(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.TRANSIENT;
 	
-	@:overload public function requestCanceled(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.TRANSIENT;
+	@:overload @:public public function requestCanceled(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.TRANSIENT;
 	
-	@:overload public function requestCanceled(t : java.lang.Throwable) : org.omg.CORBA.TRANSIENT;
+	@:overload @:public public function requestCanceled(t : java.lang.Throwable) : org.omg.CORBA.TRANSIENT;
 	
-	@:overload public function requestCanceled() : org.omg.CORBA.TRANSIENT;
+	@:overload @:public public function requestCanceled() : org.omg.CORBA.TRANSIENT;
 	
-	public static var UNKNOWN_CORBA_EXC(default, null) : Int;
+	@:public @:static @:final public static var UNKNOWN_CORBA_EXC(default, null) : Int;
 	
-	@:overload public function unknownCorbaExc(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownCorbaExc(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function unknownCorbaExc(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownCorbaExc(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function unknownCorbaExc(t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownCorbaExc(t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function unknownCorbaExc() : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownCorbaExc() : org.omg.CORBA.UNKNOWN;
 	
-	public static var RUNTIMEEXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var RUNTIMEEXCEPTION(default, null) : Int;
 	
-	@:overload public function runtimeexception(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function runtimeexception(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function runtimeexception(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function runtimeexception(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function runtimeexception(t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function runtimeexception(t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function runtimeexception() : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function runtimeexception() : org.omg.CORBA.UNKNOWN;
 	
-	public static var UNKNOWN_SERVER_ERROR(default, null) : Int;
+	@:public @:static @:final public static var UNKNOWN_SERVER_ERROR(default, null) : Int;
 	
-	@:overload public function unknownServerError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownServerError(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function unknownServerError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownServerError(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function unknownServerError(t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownServerError(t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function unknownServerError() : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownServerError() : org.omg.CORBA.UNKNOWN;
 	
-	public static var UNKNOWN_DSI_SYSEX(default, null) : Int;
+	@:public @:static @:final public static var UNKNOWN_DSI_SYSEX(default, null) : Int;
 	
-	@:overload public function unknownDsiSysex(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownDsiSysex(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function unknownDsiSysex(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownDsiSysex(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function unknownDsiSysex(t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownDsiSysex(t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function unknownDsiSysex() : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownDsiSysex() : org.omg.CORBA.UNKNOWN;
 	
-	public static var UNKNOWN_SYSEX(default, null) : Int;
+	@:public @:static @:final public static var UNKNOWN_SYSEX(default, null) : Int;
 	
-	@:overload public function unknownSysex(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownSysex(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function unknownSysex(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownSysex(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function unknownSysex(t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownSysex(t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function unknownSysex() : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownSysex() : org.omg.CORBA.UNKNOWN;
 	
-	public static var WRONG_INTERFACE_DEF(default, null) : Int;
+	@:public @:static @:final public static var WRONG_INTERFACE_DEF(default, null) : Int;
 	
-	@:overload public function wrongInterfaceDef(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function wrongInterfaceDef(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function wrongInterfaceDef(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function wrongInterfaceDef(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function wrongInterfaceDef(t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function wrongInterfaceDef(t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function wrongInterfaceDef() : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function wrongInterfaceDef() : org.omg.CORBA.UNKNOWN;
 	
-	public static var NO_INTERFACE_DEF_STUB(default, null) : Int;
+	@:public @:static @:final public static var NO_INTERFACE_DEF_STUB(default, null) : Int;
 	
-	@:overload public function noInterfaceDefStub(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function noInterfaceDefStub(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function noInterfaceDefStub(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function noInterfaceDefStub(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function noInterfaceDefStub(t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function noInterfaceDefStub(t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function noInterfaceDefStub() : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function noInterfaceDefStub() : org.omg.CORBA.UNKNOWN;
 	
-	public static var UNKNOWN_EXCEPTION_IN_DISPATCH(default, null) : Int;
+	@:public @:static @:final public static var UNKNOWN_EXCEPTION_IN_DISPATCH(default, null) : Int;
 	
-	@:overload public function unknownExceptionInDispatch(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownExceptionInDispatch(cs : org.omg.CORBA.CompletionStatus, t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function unknownExceptionInDispatch(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownExceptionInDispatch(cs : org.omg.CORBA.CompletionStatus) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function unknownExceptionInDispatch(t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownExceptionInDispatch(t : java.lang.Throwable) : org.omg.CORBA.UNKNOWN;
 	
-	@:overload public function unknownExceptionInDispatch() : org.omg.CORBA.UNKNOWN;
+	@:overload @:public public function unknownExceptionInDispatch() : org.omg.CORBA.UNKNOWN;
 	
 	
 }

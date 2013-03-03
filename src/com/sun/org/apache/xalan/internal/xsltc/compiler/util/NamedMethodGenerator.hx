@@ -29,15 +29,15 @@ extern class NamedMethodGenerator extends com.sun.org.apache.xalan.internal.xslt
 	* @author Jacek Ambroziak
 	* @author Santiago Pericas-Geertsen
 	*/
-	private static var CURRENT_INDEX(default, null) : Int;
+	@:protected @:static @:final private static var CURRENT_INDEX(default, null) : Int;
 	
-	@:overload public function new(access_flags : Int, return_type : com.sun.org.apache.bcel.internal.generic.Type, arg_types : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>, arg_names : java.NativeArray<String>, method_name : String, class_name : String, il : com.sun.org.apache.bcel.internal.generic.InstructionList, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
+	@:overload @:public public function new(access_flags : Int, return_type : com.sun.org.apache.bcel.internal.generic.Type, arg_types : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>, arg_names : java.NativeArray<String>, method_name : String, class_name : String, il : com.sun.org.apache.bcel.internal.generic.InstructionList, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
 	
-	@:overload override public function getLocalIndex(name : String) : Int;
+	@:overload @:public override public function getLocalIndex(name : String) : Int;
 	
-	@:overload public function loadParameter(index : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function loadParameter(index : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload public function storeParameter(index : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function storeParameter(index : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	
 }

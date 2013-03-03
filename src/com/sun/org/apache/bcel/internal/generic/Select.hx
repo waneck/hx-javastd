@@ -66,17 +66,17 @@ extern class Select extends com.sun.org.apache.bcel.internal.generic.BranchInstr
 	* @see TABLESWITCH
 	* @see InstructionList
 	*/
-	private var match : java.NativeArray<Int>;
+	@:protected private var match : java.NativeArray<Int>;
 	
-	private var indices : java.NativeArray<Int>;
+	@:protected private var indices : java.NativeArray<Int>;
 	
-	private var targets : java.NativeArray<com.sun.org.apache.bcel.internal.generic.InstructionHandle>;
+	@:protected private var targets : java.NativeArray<com.sun.org.apache.bcel.internal.generic.InstructionHandle>;
 	
-	private var fixed_length : Int;
+	@:protected private var fixed_length : Int;
 	
-	private var match_length : Int;
+	@:protected private var match_length : Int;
 	
-	private var padding : Int;
+	@:protected private var padding : Int;
 	
 	/**
 	* Since this is a variable length instruction, it may shift the following
@@ -91,58 +91,58 @@ extern class Select extends com.sun.org.apache.bcel.internal.generic.BranchInstr
 	* @param max_offset the maximum offset that may be caused by these instructions
 	* @return additional offset caused by possible change of this instruction's length
 	*/
-	@:overload private function updatePosition(offset : Int, max_offset : Int) : Int;
+	@:overload @:protected override private function updatePosition(offset : Int, max_offset : Int) : Int;
 	
 	/**
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload @:public override public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* Read needed data (e.g. index) from file.
 	*/
-	@:overload private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload @:protected override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
 	/**
 	* @return mnemonic for instruction
 	*/
-	@:overload public function toString(verbose : Bool) : String;
+	@:overload @:public override public function toString(verbose : Bool) : String;
 	
 	/**
 	* Set branch target for `i'th case
 	*/
-	@:overload public function setTarget(i : Int, target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function setTarget(i : Int, target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* @param old_ih old target
 	* @param new_ih new target
 	*/
-	@:overload public function updateTarget(old_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public override public function updateTarget(old_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* @return true, if ih is target of this instruction
 	*/
-	@:overload public function containsTarget(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Bool;
+	@:overload @:public override public function containsTarget(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Bool;
 	
 	/**
 	* @return array of match indices
 	*/
-	@:overload public function getMatchs() : java.NativeArray<Int>;
+	@:overload @:public public function getMatchs() : java.NativeArray<Int>;
 	
 	/**
 	* @return array of match target offsets
 	*/
-	@:overload public function getIndices() : java.NativeArray<Int>;
+	@:overload @:public public function getIndices() : java.NativeArray<Int>;
 	
 	/**
 	* @return array of match targets
 	*/
-	@:overload public function getTargets() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.InstructionHandle>;
+	@:overload @:public public function getTargets() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.InstructionHandle>;
 	
 	/** @return how many words are produced on stack
 	*/
-	@:overload @:public @:public @:public public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public override public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	
 }

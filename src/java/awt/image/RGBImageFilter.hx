@@ -30,14 +30,14 @@ extern class RGBImageFilter extends java.awt.image.ImageFilter
 	* <code>newmodel</code> when the user calls
 	* {@link #substituteColorModel(ColorModel, ColorModel) substituteColorModel}.
 	*/
-	private var origmodel : java.awt.image.ColorModel;
+	@:protected private var origmodel : java.awt.image.ColorModel;
 	
 	/**
 	* The <code>ColorModel</code> with which to
 	* replace <code>origmodel</code> when the user calls
 	* <code>substituteColorModel</code>.
 	*/
-	private var newmodel : java.awt.image.ColorModel;
+	@:protected private var newmodel : java.awt.image.ColorModel;
 	
 	/**
 	* This boolean indicates whether or not it is acceptable to apply
@@ -50,7 +50,7 @@ extern class RGBImageFilter extends java.awt.image.ImageFilter
 	* @see #filterRGB
 	* @see IndexColorModel
 	*/
-	private var canFilterIndexColorModel : Bool;
+	@:protected private var canFilterIndexColorModel : Bool;
 	
 	/**
 	* If the ColorModel is an IndexColorModel and the subclass has
@@ -70,7 +70,7 @@ extern class RGBImageFilter extends java.awt.image.ImageFilter
 	* @see ImageConsumer
 	* @see ColorModel#getRGBdefault
 	*/
-	@:overload override public function setColorModel(model : java.awt.image.ColorModel) : Void;
+	@:overload @:public override public function setColorModel(model : java.awt.image.ColorModel) : Void;
 	
 	/**
 	* Registers two ColorModel objects for substitution.  If the oldcm
@@ -80,7 +80,7 @@ extern class RGBImageFilter extends java.awt.image.ImageFilter
 	* @param oldcm the ColorModel object to be replaced on the fly
 	* @param newcm the ColorModel object to replace oldcm on the fly
 	*/
-	@:overload public function substituteColorModel(oldcm : java.awt.image.ColorModel, newcm : java.awt.image.ColorModel) : Void;
+	@:overload @:public public function substituteColorModel(oldcm : java.awt.image.ColorModel, newcm : java.awt.image.ColorModel) : Void;
 	
 	/**
 	* Filters an IndexColorModel object by running each entry in its
@@ -92,7 +92,7 @@ extern class RGBImageFilter extends java.awt.image.ImageFilter
 	* @exception NullPointerException if <code>icm</code> is null
 	* @return a new IndexColorModel representing the filtered colors
 	*/
-	@:overload public function filterIndexColorModel(icm : java.awt.image.IndexColorModel) : java.awt.image.IndexColorModel;
+	@:overload @:public public function filterIndexColorModel(icm : java.awt.image.IndexColorModel) : java.awt.image.IndexColorModel;
 	
 	/**
 	* Filters a buffer of pixels in the default RGB ColorModel by passing
@@ -110,7 +110,7 @@ extern class RGBImageFilter extends java.awt.image.ImageFilter
 	* @see ColorModel#getRGBdefault
 	* @see #filterRGB
 	*/
-	@:overload public function filterRGBPixels(x : Int, y : Int, w : Int, h : Int, pixels : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
+	@:overload @:public public function filterRGBPixels(x : Int, y : Int, w : Int, h : Int, pixels : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
 	
 	/**
 	* If the ColorModel object is the same one that has already
@@ -128,7 +128,7 @@ extern class RGBImageFilter extends java.awt.image.ImageFilter
 	* @see ColorModel#getRGBdefault
 	* @see #filterRGBPixels
 	*/
-	@:overload override public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Void;
+	@:overload @:public override public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Void;
 	
 	/**
 	* If the ColorModel object is the same one that has already
@@ -148,7 +148,7 @@ extern class RGBImageFilter extends java.awt.image.ImageFilter
 	* @see ColorModel#getRGBdefault
 	* @see #filterRGBPixels
 	*/
-	@:overload override public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
+	@:overload @:public override public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
 	
 	/**
 	* Subclasses must specify a method to convert a single input pixel
@@ -161,7 +161,7 @@ extern class RGBImageFilter extends java.awt.image.ImageFilter
 	* @see ColorModel#getRGBdefault
 	* @see #filterRGBPixels
 	*/
-	@:overload @:abstract public function filterRGB(x : Int, y : Int, rgb : Int) : Int;
+	@:overload @:public @:abstract public function filterRGB(x : Int, y : Int, rgb : Int) : Int;
 	
 	
 }

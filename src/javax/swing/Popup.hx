@@ -44,18 +44,18 @@ extern class Popup
 	* @param y        Initial y screen coordinate
 	* @exception IllegalArgumentException if contents is null
 	*/
-	@:overload private function new(owner : java.awt.Component, contents : java.awt.Component, x : Int, y : Int) : Void;
+	@:overload @:protected private function new(owner : java.awt.Component, contents : java.awt.Component, x : Int, y : Int) : Void;
 	
 	/**
 	* Creates a <code>Popup</code>. This is provided for subclasses.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Makes the <code>Popup</code> visible. If the <code>Popup</code> is
 	* currently visible, this has no effect.
 	*/
-	@:overload public function show() : Void;
+	@:overload @:public public function show() : Void;
 	
 	/**
 	* Hides and disposes of the <code>Popup</code>. Once a <code>Popup</code>
@@ -65,7 +65,7 @@ extern class Popup
 	* on a <code>disposed</code> <code>Popup</code>, indeterminate
 	* behavior will result.
 	*/
-	@:overload public function hide() : Void;
+	@:overload @:public public function hide() : Void;
 	
 	
 }
@@ -74,9 +74,9 @@ extern class Popup
 */
 @:native('javax$swing$Popup$HeavyWeightWindow') @:internal extern class Popup_HeavyWeightWindow extends javax.swing.JWindow implements sun.awt.ModalExclude
 {
-	@:overload override public function update(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function show() : Void;
+	@:overload @:public override public function show() : Void;
 	
 	
 }

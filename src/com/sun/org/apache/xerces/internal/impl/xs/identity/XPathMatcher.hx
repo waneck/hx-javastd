@@ -21,36 +21,36 @@ package com.sun.org.apache.xerces.internal.impl.xs.identity;
 extern class XPathMatcher
 {
 	/** Compile to true to debug everything. */
-	private static var DEBUG_ALL(default, null) : Bool;
+	@:protected @:static @:final private static var DEBUG_ALL(default, null) : Bool;
 	
 	/** Compile to true to debug method callbacks. */
-	private static var DEBUG_METHODS(default, null) : Bool;
+	@:protected @:static @:final private static var DEBUG_METHODS(default, null) : Bool;
 	
 	/** Compile to true to debug important method callbacks. */
-	private static var DEBUG_METHODS2(default, null) : Bool;
+	@:protected @:static @:final private static var DEBUG_METHODS2(default, null) : Bool;
 	
 	/** Compile to true to debug the <em>really</em> important methods. */
-	private static var DEBUG_METHODS3(default, null) : Bool;
+	@:protected @:static @:final private static var DEBUG_METHODS3(default, null) : Bool;
 	
 	/** Compile to true to debug match. */
-	private static var DEBUG_MATCH(default, null) : Bool;
+	@:protected @:static @:final private static var DEBUG_MATCH(default, null) : Bool;
 	
 	/** Compile to true to debug step index stack. */
-	private static var DEBUG_STACK(default, null) : Bool;
+	@:protected @:static @:final private static var DEBUG_STACK(default, null) : Bool;
 	
 	/** Don't touch this value unless you add more debug constants. */
-	private static var DEBUG_ANY(default, null) : Bool;
+	@:protected @:static @:final private static var DEBUG_ANY(default, null) : Bool;
 	
-	private static var MATCHED(default, null) : Int;
+	@:protected @:static @:final private static var MATCHED(default, null) : Int;
 	
-	private static var MATCHED_ATTRIBUTE(default, null) : Int;
+	@:protected @:static @:final private static var MATCHED_ATTRIBUTE(default, null) : Int;
 	
-	private static var MATCHED_DESCENDANT(default, null) : Int;
+	@:protected @:static @:final private static var MATCHED_DESCENDANT(default, null) : Int;
 	
-	private static var MATCHED_DESCENDANT_PREVIOUS(default, null) : Int;
+	@:protected @:static @:final private static var MATCHED_DESCENDANT_PREVIOUS(default, null) : Int;
 	
 	/** The matching string. */
-	private var fMatchedString : Dynamic;
+	@:protected private var fMatchedString : Dynamic;
 	
 	/**
 	* Constructs an XPath matcher that implements a document fragment
@@ -58,27 +58,27 @@ extern class XPathMatcher
 	*
 	* @param xpath   The xpath.
 	*/
-	@:overload public function new(xpath : com.sun.org.apache.xerces.internal.impl.xpath.XPath) : Void;
+	@:overload @:public public function new(xpath : com.sun.org.apache.xerces.internal.impl.xpath.XPath) : Void;
 	
 	/**
 	* Returns value of first member of fMatched that
 	* is nonzero.
 	*/
-	@:overload public function isMatched() : Bool;
+	@:overload @:public public function isMatched() : Bool;
 	
-	@:overload private function handleContent(type : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, nillable : Bool, value : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList) : Void;
+	@:overload @:protected private function handleContent(type : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, nillable : Bool, value : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList) : Void;
 	
 	/**
 	* This method is called when the XPath handler matches the
 	* XPath expression. Subclasses can override this method to
 	* provide default handling upon a match.
 	*/
-	@:overload private function matched(actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList, isNil : Bool) : Void;
+	@:overload @:protected private function matched(actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList, isNil : Bool) : Void;
 	
 	/**
 	* The start of the document fragment.
 	*/
-	@:overload public function startDocumentFragment() : Void;
+	@:overload @:public public function startDocumentFragment() : Void;
 	
 	/**
 	* The start of an element. If the document specifies the start element
@@ -90,7 +90,7 @@ extern class XPathMatcher
 	*
 	* @throws SAXException Thrown by handler to signal an error.
 	*/
-	@:overload public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Void;
+	@:overload @:public public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Void;
 	
 	/**
 	* @param element
@@ -106,10 +106,10 @@ extern class XPathMatcher
 	* @param value - actual value
 	*        the typed value of the content of this element.
 	*/
-	@:overload public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, type : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, nillable : Bool, value : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList) : Void;
+	@:overload @:public public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, type : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, nillable : Bool, value : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList) : Void;
 	
 	/** Returns a string representation of this object. */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

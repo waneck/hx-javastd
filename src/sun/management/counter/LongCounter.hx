@@ -34,7 +34,7 @@ extern interface LongCounter extends sun.management.counter.Counter
 	/**
 	* Get the value of this Long performance counter
 	*/
-	@:overload public function longValue() : haxe.Int64;
+	@:overload @:public public function longValue() : haxe.Int64;
 	
 	
 }

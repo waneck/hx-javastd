@@ -25,29 +25,29 @@ package com.sun.tools.jdi;
 */
 extern class FieldImpl extends com.sun.tools.jdi.TypeComponentImpl implements com.sun.jdi.Field implements com.sun.tools.jdi.ValueContainer
 {
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload public function compareTo(field : com.sun.jdi.Field) : Int;
+	@:overload @:public public function compareTo(field : com.sun.jdi.Field) : Int;
 	
-	@:overload public function type() : com.sun.jdi.Type;
+	@:overload @:public public function type() : com.sun.jdi.Type;
 	
-	@:overload public function findType(signature : String) : com.sun.jdi.Type;
+	@:overload @:public public function findType(signature : String) : com.sun.jdi.Type;
 	
 	/**
 	* @return a text representation of the declared type
 	* of this field.
 	*/
-	@:overload public function typeName() : String;
+	@:overload @:public public function typeName() : String;
 	
-	@:overload public function isTransient() : Bool;
+	@:overload @:public public function isTransient() : Bool;
 	
-	@:overload public function isVolatile() : Bool;
+	@:overload @:public public function isVolatile() : Bool;
 	
-	@:overload public function isEnumConstant() : Bool;
+	@:overload @:public public function isEnumConstant() : Bool;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

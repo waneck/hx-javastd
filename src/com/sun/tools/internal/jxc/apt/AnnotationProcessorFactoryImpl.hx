@@ -31,11 +31,11 @@ extern class AnnotationProcessorFactoryImpl implements com.sun.mirror.apt.Annota
 	* <p>
 	* This is the entry point for the APT driver.
 	*/
-	@:overload public function supportedOptions() : java.util.Collection<String>;
+	@:overload @:public public function supportedOptions() : java.util.Collection<String>;
 	
-	@:overload public function supportedAnnotationTypes() : java.util.Collection<String>;
+	@:overload @:public public function supportedAnnotationTypes() : java.util.Collection<String>;
 	
-	@:overload public function getProcessorFor(atds : java.util.Set<com.sun.mirror.declaration.AnnotationTypeDeclaration>, env : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.apt.AnnotationProcessor;
+	@:overload @:public public function getProcessorFor(atds : java.util.Set<com.sun.mirror.declaration.AnnotationTypeDeclaration>, env : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.apt.AnnotationProcessor;
 	
 	
 }

@@ -68,7 +68,7 @@ extern class Field extends com.sun.org.apache.bcel.internal.classfile.FieldOrMet
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.Field) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.Field) : Void;
 	
 	/**
 	* @param access_flags Access rights of field
@@ -77,7 +77,7 @@ extern class Field extends com.sun.org.apache.bcel.internal.classfile.FieldOrMet
 	* @param attributes Collection of attributes
 	* @param constant_pool Array of constants
 	*/
-	@:overload public function new(access_flags : Int, name_index : Int, signature_index : Int, attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function new(access_flags : Int, name_index : Int, signature_index : Int, attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -86,12 +86,12 @@ extern class Field extends com.sun.org.apache.bcel.internal.classfile.FieldOrMet
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* @return constant value associated with this field (may be null)
 	*/
-	@:overload @:final public function getConstantValue() : com.sun.org.apache.bcel.internal.classfile.ConstantValue;
+	@:overload @:public @:final public function getConstantValue() : com.sun.org.apache.bcel.internal.classfile.ConstantValue;
 	
 	/**
 	* Return string representation close to declaration format,
@@ -99,17 +99,17 @@ extern class Field extends com.sun.org.apache.bcel.internal.classfile.FieldOrMet
 	*
 	* @return String representation of field, including the signature.
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/**
 	* @return deep copy of this field
 	*/
-	@:overload @:final public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Field;
+	@:overload @:public @:final public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Field;
 	
 	/**
 	* @return type of field
 	*/
-	@:overload public function getType() : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType() : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	
 }

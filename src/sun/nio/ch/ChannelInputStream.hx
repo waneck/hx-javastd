@@ -33,21 +33,21 @@ package sun.nio.ch;
 */
 @:require(java4) extern class ChannelInputStream extends java.io.InputStream
 {
-	@:native('read') @:overload public static function _read(ch : java.nio.channels.ReadableByteChannel, bb : java.nio.ByteBuffer, block : Bool) : Int;
+	@:native('read') @:overload @:public @:static public static function _read(ch : java.nio.channels.ReadableByteChannel, bb : java.nio.ByteBuffer, block : Bool) : Int;
 	
-	private var ch(default, null) : java.nio.channels.ReadableByteChannel;
+	@:protected @:final private var ch(default, null) : java.nio.channels.ReadableByteChannel;
 	
-	@:overload public function new(ch : java.nio.channels.ReadableByteChannel) : Void;
+	@:overload @:public public function new(ch : java.nio.channels.ReadableByteChannel) : Void;
 	
-	@:overload @:synchronized public function read() : Int;
+	@:overload @:public @:synchronized override public function read() : Int;
 	
-	@:overload @:synchronized public function read(bs : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public @:synchronized override public function read(bs : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload private function read(bb : java.nio.ByteBuffer) : Int;
+	@:overload @:protected private function read(bb : java.nio.ByteBuffer) : Int;
 	
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

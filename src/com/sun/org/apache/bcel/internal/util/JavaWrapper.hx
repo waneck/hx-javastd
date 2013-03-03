@@ -73,21 +73,21 @@ package com.sun.org.apache.bcel.internal.util;
 */
 extern class JavaWrapper
 {
-	@:overload public function new(loader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function new(loader : java.lang.ClassLoader) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Runs the _main method of the given class with the arguments passed in argv
 	*
 	* @param class_name the fully qualified class name
 	* @param argv the arguments just as you would pass them directly
 	*/
-	@:overload public function runMain(class_name : String, argv : java.NativeArray<String>) : Void;
+	@:overload @:public public function runMain(class_name : String, argv : java.NativeArray<String>) : Void;
 	
 	/** Default _main method used as wrapper, expects the fully qualified class name
 	* of the real class as the first argument.
 	*/
-	@:overload public static function _main(argv : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function _main(argv : java.NativeArray<String>) : Void;
 	
 	
 }

@@ -38,7 +38,7 @@ extern class LabelView extends javax.swing.text.GlyphView implements javax.swing
 	*
 	* @param elem the element
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Sets whether or not the view is underlined.
@@ -50,7 +50,7 @@ extern class LabelView extends javax.swing.text.GlyphView implements javax.swing
 	*          false
 	* @see #isUnderline
 	*/
-	@:overload private function setUnderline(u : Bool) : Void;
+	@:overload @:protected private function setUnderline(u : Bool) : Void;
 	
 	/**
 	* Sets whether or not the view has a strike/line
@@ -63,7 +63,7 @@ extern class LabelView extends javax.swing.text.GlyphView implements javax.swing
 	*          through it, otherwise false
 	* @see #isStrikeThrough
 	*/
-	@:overload private function setStrikeThrough(s : Bool) : Void;
+	@:overload @:protected private function setStrikeThrough(s : Bool) : Void;
 	
 	/**
 	* Sets whether or not the view represents a
@@ -76,7 +76,7 @@ extern class LabelView extends javax.swing.text.GlyphView implements javax.swing
 	*          superscript, otherwise false
 	* @see #isSuperscript
 	*/
-	@:overload private function setSuperscript(s : Bool) : Void;
+	@:overload @:protected private function setSuperscript(s : Bool) : Void;
 	
 	/**
 	* Sets whether or not the view represents a
@@ -89,7 +89,7 @@ extern class LabelView extends javax.swing.text.GlyphView implements javax.swing
 	*          subscript, otherwise false
 	* @see #isSubscript
 	*/
-	@:overload private function setSubscript(s : Bool) : Void;
+	@:overload @:protected private function setSubscript(s : Bool) : Void;
 	
 	/**
 	* Sets the background color for the view. This method is typically
@@ -103,19 +103,19 @@ extern class LabelView extends javax.swing.text.GlyphView implements javax.swing
 	* @see #setPropertiesFromAttributes
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function setBackground(bg : java.awt.Color) : Void;
+	@:require(java5) @:overload @:protected private function setBackground(bg : java.awt.Color) : Void;
 	
 	/**
 	* Sets the cached properties from the attributes.
 	*/
-	@:overload private function setPropertiesFromAttributes() : Void;
+	@:overload @:protected private function setPropertiesFromAttributes() : Void;
 	
 	/**
 	* Fetches the <code>FontMetrics</code> used for this view.
 	* @deprecated FontMetrics are not used for glyph rendering
 	*  when running in the JDK.
 	*/
-	@:overload private function getFontMetrics() : java.awt.FontMetrics;
+	@:overload @:protected private function getFontMetrics() : java.awt.FontMetrics;
 	
 	/**
 	* Fetches the background color to use to render the glyphs.
@@ -125,7 +125,7 @@ extern class LabelView extends javax.swing.text.GlyphView implements javax.swing
 	* @return the cached background color
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getBackground() : java.awt.Color;
+	@:require(java3) @:overload @:public override public function getBackground() : java.awt.Color;
 	
 	/**
 	* Fetches the foreground color to use to render the glyphs.
@@ -135,7 +135,7 @@ extern class LabelView extends javax.swing.text.GlyphView implements javax.swing
 	* @return the cached foreground color
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getForeground() : java.awt.Color;
+	@:require(java3) @:overload @:public override public function getForeground() : java.awt.Color;
 	
 	/**
 	* Fetches the font that the glyphs should be based upon.
@@ -143,7 +143,7 @@ extern class LabelView extends javax.swing.text.GlyphView implements javax.swing
 	*
 	* @return the cached font
 	*/
-	@:overload override public function getFont() : java.awt.Font;
+	@:overload @:public override public function getFont() : java.awt.Font;
 	
 	/**
 	* Determines if the glyphs should be underlined.  If true,
@@ -160,7 +160,7 @@ extern class LabelView extends javax.swing.text.GlyphView implements javax.swing
 	*     <code>underline</code> property
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function isUnderline() : Bool;
+	@:require(java3) @:overload @:public override public function isUnderline() : Bool;
 	
 	/**
 	* Determines if the glyphs should have a strikethrough
@@ -178,7 +178,7 @@ extern class LabelView extends javax.swing.text.GlyphView implements javax.swing
 	*     <code>strikeThrough</code> property
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function isStrikeThrough() : Bool;
+	@:require(java3) @:overload @:public override public function isStrikeThrough() : Bool;
 	
 	/**
 	* Determines if the glyphs should be rendered as superscript.
@@ -194,7 +194,7 @@ extern class LabelView extends javax.swing.text.GlyphView implements javax.swing
 	*     <code>subscript</code> property
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function isSubscript() : Bool;
+	@:require(java3) @:overload @:public override public function isSubscript() : Bool;
 	
 	/**
 	* Determines if the glyphs should be rendered as subscript.
@@ -209,7 +209,7 @@ extern class LabelView extends javax.swing.text.GlyphView implements javax.swing
 	*     <code>superscript</code> property
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function isSuperscript() : Bool;
+	@:require(java3) @:overload @:public override public function isSuperscript() : Bool;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -220,7 +220,7 @@ extern class LabelView extends javax.swing.text.GlyphView implements javax.swing
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#changedUpdate
 	*/
-	@:overload override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	
 }

@@ -28,55 +28,55 @@ extern class ThreadPoolImpl implements com.sun.corba.se.spi.orbutil.threadpool.T
 	/**
 	* This constructor is used to create an unbounded threadpool
 	*/
-	@:overload public function new(tg : java.lang.ThreadGroup, threadpoolName : String) : Void;
+	@:overload @:public public function new(tg : java.lang.ThreadGroup, threadpoolName : String) : Void;
 	
 	/**
 	* This constructor is used to create an unbounded threadpool
 	* in the ThreadGroup of the current thread
 	*/
-	@:overload public function new(threadpoolName : String) : Void;
+	@:overload @:public public function new(threadpoolName : String) : Void;
 	
 	/**
 	* This constructor is used to create bounded threadpool
 	*/
-	@:overload public function new(minSize : Int, maxSize : Int, timeout : haxe.Int64, threadpoolName : String) : Void;
+	@:overload @:public public function new(minSize : Int, maxSize : Int, timeout : haxe.Int64, threadpoolName : String) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function getAnyWorkQueue() : com.sun.corba.se.spi.orbutil.threadpool.WorkQueue;
+	@:overload @:public public function getAnyWorkQueue() : com.sun.corba.se.spi.orbutil.threadpool.WorkQueue;
 	
-	@:overload public function getWorkQueue(queueId : Int) : com.sun.corba.se.spi.orbutil.threadpool.WorkQueue;
+	@:overload @:public public function getWorkQueue(queueId : Int) : com.sun.corba.se.spi.orbutil.threadpool.WorkQueue;
 	
-	@:overload public function minimumNumberOfThreads() : Int;
+	@:overload @:public public function minimumNumberOfThreads() : Int;
 	
-	@:overload public function maximumNumberOfThreads() : Int;
+	@:overload @:public public function maximumNumberOfThreads() : Int;
 	
-	@:overload public function idleTimeoutForThreads() : haxe.Int64;
+	@:overload @:public public function idleTimeoutForThreads() : haxe.Int64;
 	
-	@:overload public function currentNumberOfThreads() : Int;
+	@:overload @:public public function currentNumberOfThreads() : Int;
 	
-	@:overload public function numberOfAvailableThreads() : Int;
+	@:overload @:public public function numberOfAvailableThreads() : Int;
 	
-	@:overload public function numberOfBusyThreads() : Int;
+	@:overload @:public public function numberOfBusyThreads() : Int;
 	
-	@:overload public function averageWorkCompletionTime() : haxe.Int64;
+	@:overload @:public public function averageWorkCompletionTime() : haxe.Int64;
 	
-	@:overload public function currentProcessedCount() : haxe.Int64;
+	@:overload @:public public function currentProcessedCount() : haxe.Int64;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* This method will return the number of WorkQueues serviced by the threadpool.
 	*/
-	@:overload public function numberOfWorkQueues() : Int;
+	@:overload @:public public function numberOfWorkQueues() : Int;
 	
 	
 }
 @:native('com$sun$corba$se$impl$orbutil$threadpool$ThreadPoolImpl$WorkerThread') @:internal extern class ThreadPoolImpl_WorkerThread extends java.lang.Thread implements java.io.Closeable
 {
-	@:overload @:synchronized public function close() : Void;
+	@:overload @:public @:synchronized public function close() : Void;
 	
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

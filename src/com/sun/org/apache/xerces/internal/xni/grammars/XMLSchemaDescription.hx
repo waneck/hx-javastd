@@ -26,7 +26,7 @@ extern interface XMLSchemaDescription extends com.sun.org.apache.xerces.internal
 	*
 	* @return  the value indicating the context
 	*/
-	@:overload public function getContextType() : java.StdTypes.Int16;
+	@:overload @:public public function getContextType() : java.StdTypes.Int16;
 	
 	/**
 	* If the context is "include" or "redefine", then return the target
@@ -35,7 +35,7 @@ extern interface XMLSchemaDescription extends com.sun.org.apache.xerces.internal
 	*
 	* @return  the expected/enclosing target namespace
 	*/
-	@:overload public function getTargetNamespace() : String;
+	@:overload @:public public function getTargetNamespace() : String;
 	
 	/**
 	* For import and references from the instance document, it's possible to
@@ -45,7 +45,7 @@ extern interface XMLSchemaDescription extends com.sun.org.apache.xerces.internal
 	* @return  an array of all location hints associated to the expected
 	*          target namespace
 	*/
-	@:overload public function getLocationHints() : java.NativeArray<String>;
+	@:overload @:public public function getLocationHints() : java.NativeArray<String>;
 	
 	/**
 	* If a call is triggered by an element/attribute/xsi:type in the instance,
@@ -54,7 +54,7 @@ extern interface XMLSchemaDescription extends com.sun.org.apache.xerces.internal
 	*
 	* @return  the name of the triggering component
 	*/
-	@:overload public function getTriggeringComponent() : com.sun.org.apache.xerces.internal.xni.QName;
+	@:overload @:public public function getTriggeringComponent() : com.sun.org.apache.xerces.internal.xni.QName;
 	
 	/**
 	* If a call is triggered by an attribute or xsi:type, then this method
@@ -62,7 +62,7 @@ extern interface XMLSchemaDescription extends com.sun.org.apache.xerces.internal
 	*
 	* @return  the name of the enclosing element
 	*/
-	@:overload public function getEnclosingElementName() : com.sun.org.apache.xerces.internal.xni.QName;
+	@:overload @:public public function getEnclosingElementName() : com.sun.org.apache.xerces.internal.xni.QName;
 	
 	/**
 	* If a call is triggered by an element/attribute/xsi:type in the instance,
@@ -70,7 +70,7 @@ extern interface XMLSchemaDescription extends com.sun.org.apache.xerces.internal
 	*
 	* @return  all attributes of the tiggering/enclosing element
 	*/
-	@:overload public function getAttributes() : com.sun.org.apache.xerces.internal.xni.XMLAttributes;
+	@:overload @:public public function getAttributes() : com.sun.org.apache.xerces.internal.xni.XMLAttributes;
 	
 	
 }

@@ -28,12 +28,12 @@ extern class FastInfosetFeature extends javax.xml.ws.WebServiceFeature
 	/**
 	* Constant value identifying the {@link FastInfosetFeature}
 	*/
-	public static var ID(default, null) : String;
+	@:public @:static @:final public static var ID(default, null) : String;
 	
 	/**
 	* Create a {@link FastInfosetFeature}. The instance created will be enabled.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a {@link FastInfosetFeature}
@@ -41,12 +41,12 @@ extern class FastInfosetFeature extends javax.xml.ws.WebServiceFeature
 	* @param enabled specifies whether this feature should
 	*                be enabled or not.
 	*/
-	@:overload public function new(enabled : Bool) : Void;
+	@:overload @:public public function new(enabled : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
 	
 }

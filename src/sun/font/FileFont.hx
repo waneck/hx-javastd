@@ -25,7 +25,7 @@ package sun.font;
 */
 extern class FileFont extends sun.font.PhysicalFont
 {
-	private var useJavaRasterizer : Bool;
+	@:protected private var useJavaRasterizer : Bool;
 	
 	/* I/O and file operations are always synchronized on the font
 	* object. Two threads can be accessing the font and retrieving
@@ -37,9 +37,9 @@ extern class FileFont extends sun.font.PhysicalFont
 	* ensures that any in progress operation will complete before some
 	* other thread closes the descriptor in order to allocate another one.
 	*/
-	private var fileSize : Int;
+	@:protected private var fileSize : Int;
 	
-	private var scaler : sun.font.FontScaler;
+	@:protected private var scaler : sun.font.FontScaler;
 	
 	/* The following variables are used, (and in the case of the arrays,
 	* only initialised) for select fonts where a native scaler may be
@@ -52,36 +52,36 @@ extern class FileFont extends sun.font.PhysicalFont
 	* the native path, since fonts have contiguous zero-based glyph indexes,
 	* and these obviously do all exist in the font.
 	*/
-	private var checkedNatives : Bool;
+	@:protected private var checkedNatives : Bool;
 	
-	private var useNatives : Bool;
+	@:protected private var useNatives : Bool;
 	
-	private var nativeFonts : java.NativeArray<sun.font.NativeFont>;
+	@:protected private var nativeFonts : java.NativeArray<sun.font.NativeFont>;
 	
-	private var glyphToCharMap : java.NativeArray<java.StdTypes.Char16>;
+	@:protected private var glyphToCharMap : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload private function checkUseNatives() : Bool;
+	@:overload @:protected private function checkUseNatives() : Bool;
 	
 	/* This method needs to be accessible to FontManager if there is
 	* file pool management. It may be a no-op.
 	*/
-	@:overload @:abstract private function close() : Void;
+	@:overload @:protected @:abstract private function close() : Void;
 	
-	@:overload override public function canDoStyle(style : Int) : Bool;
+	@:overload @:public override public function canDoStyle(style : Int) : Bool;
 	
 	/* T1 & TT implementation differ so this method is abstract.
 	NB: null should not be returned here! */
-	@:overload @:abstract private function getScaler() : sun.font.FontScaler;
+	@:overload @:protected @:abstract private function getScaler() : sun.font.FontScaler;
 	
-	@:overload override private function getUnitsPerEm() : haxe.Int64;
+	@:overload @:protected override private function getUnitsPerEm() : haxe.Int64;
 	
-	@:overload private function getPublicFileName() : String;
+	@:overload @:protected private function getPublicFileName() : String;
 	
 	
 }
 @:native('sun$font$FileFont$CreatedFontFileDisposerRecord') @:internal extern class FileFont_CreatedFontFileDisposerRecord implements sun.java2d.DisposerRecord
 {
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	
 }

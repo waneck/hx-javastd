@@ -31,25 +31,25 @@ extern class ClientListenerInfo
 	* ObjectName of the originator and an optional
 	* NotificationFilter.</p>
 	*/
-	@:overload public function new(listenerID : Null<Int>, name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic, delegationSubject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function new(listenerID : Null<Int>, name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic, delegationSubject : javax.security.auth.Subject) : Void;
 	
-	@:overload public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
-	@:overload public function getListenerID() : Null<Int>;
+	@:overload @:public public function getListenerID() : Null<Int>;
 	
-	@:overload public function getNotificationFilter() : javax.management.NotificationFilter;
+	@:overload @:public public function getNotificationFilter() : javax.management.NotificationFilter;
 	
-	@:overload public function getListener() : javax.management.NotificationListener;
+	@:overload @:public public function getListener() : javax.management.NotificationListener;
 	
-	@:overload public function getHandback() : Dynamic;
+	@:overload @:public public function getHandback() : Dynamic;
 	
-	@:overload public function getDelegationSubject() : javax.security.auth.Subject;
+	@:overload @:public public function getDelegationSubject() : javax.security.auth.Subject;
 	
-	@:overload public function sameAs(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function sameAs(name : javax.management.ObjectName) : Bool;
 	
-	@:overload public function sameAs(name : javax.management.ObjectName, listener : javax.management.NotificationListener) : Bool;
+	@:overload @:public public function sameAs(name : javax.management.ObjectName, listener : javax.management.NotificationListener) : Bool;
 	
-	@:overload public function sameAs(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Bool;
+	@:overload @:public public function sameAs(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Bool;
 	
 	
 }

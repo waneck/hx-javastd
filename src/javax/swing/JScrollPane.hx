@@ -31,7 +31,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* <code>ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED</code>.
 	* @see #setVerticalScrollBarPolicy
 	*/
-	private var verticalScrollBarPolicy : Int;
+	@:protected private var verticalScrollBarPolicy : Int;
 	
 	/**
 	* The display policy for the horizontal scrollbar.
@@ -39,68 +39,68 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* <code>ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED</code>.
 	* @see #setHorizontalScrollBarPolicy
 	*/
-	private var horizontalScrollBarPolicy : Int;
+	@:protected private var horizontalScrollBarPolicy : Int;
 	
 	/**
 	* The scrollpane's viewport child.  Default is an empty
 	* <code>JViewport</code>.
 	* @see #setViewport
 	*/
-	private var viewport : javax.swing.JViewport;
+	@:protected private var viewport : javax.swing.JViewport;
 	
 	/**
 	* The scrollpane's vertical scrollbar child.
 	* Default is a <code>JScrollBar</code>.
 	* @see #setVerticalScrollBar
 	*/
-	private var verticalScrollBar : javax.swing.JScrollBar;
+	@:protected private var verticalScrollBar : javax.swing.JScrollBar;
 	
 	/**
 	* The scrollpane's horizontal scrollbar child.
 	* Default is a <code>JScrollBar</code>.
 	* @see #setHorizontalScrollBar
 	*/
-	private var horizontalScrollBar : javax.swing.JScrollBar;
+	@:protected private var horizontalScrollBar : javax.swing.JScrollBar;
 	
 	/**
 	* The row header child.  Default is <code>null</code>.
 	* @see #setRowHeader
 	*/
-	private var rowHeader : javax.swing.JViewport;
+	@:protected private var rowHeader : javax.swing.JViewport;
 	
 	/**
 	* The column header child.  Default is <code>null</code>.
 	* @see #setColumnHeader
 	*/
-	private var columnHeader : javax.swing.JViewport;
+	@:protected private var columnHeader : javax.swing.JViewport;
 	
 	/**
 	* The component to display in the lower left corner.
 	* Default is <code>null</code>.
 	* @see #setCorner
 	*/
-	private var lowerLeft : java.awt.Component;
+	@:protected private var lowerLeft : java.awt.Component;
 	
 	/**
 	* The component to display in the lower right corner.
 	* Default is <code>null</code>.
 	* @see #setCorner
 	*/
-	private var lowerRight : java.awt.Component;
+	@:protected private var lowerRight : java.awt.Component;
 	
 	/**
 	* The component to display in the upper left corner.
 	* Default is <code>null</code>.
 	* @see #setCorner
 	*/
-	private var upperLeft : java.awt.Component;
+	@:protected private var upperLeft : java.awt.Component;
 	
 	/**
 	* The component to display in the upper right corner.
 	* Default is <code>null</code>.
 	* @see #setCorner
 	*/
-	private var upperRight : java.awt.Component;
+	@:protected private var upperRight : java.awt.Component;
 	
 	/**
 	* Creates a <code>JScrollPane</code> that displays the view
@@ -122,7 +122,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @param hsbPolicy an integer that specifies the horizontal
 	*          scrollbar policy
 	*/
-	@:overload public function new(view : java.awt.Component, vsbPolicy : Int, hsbPolicy : Int) : Void;
+	@:overload @:public public function new(view : java.awt.Component, vsbPolicy : Int, hsbPolicy : Int) : Void;
 	
 	/**
 	* Creates a <code>JScrollPane</code> that displays the
@@ -133,7 +133,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @see #setViewportView
 	* @param view the component to display in the scrollpane's viewport
 	*/
-	@:overload public function new(view : java.awt.Component) : Void;
+	@:overload @:public public function new(view : java.awt.Component) : Void;
 	
 	/**
 	* Creates an empty (no viewport view) <code>JScrollPane</code>
@@ -149,13 +149,13 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @param hsbPolicy an integer that specifies the horizontal
 	*          scrollbar policy
 	*/
-	@:overload public function new(vsbPolicy : Int, hsbPolicy : Int) : Void;
+	@:overload @:public public function new(vsbPolicy : Int, hsbPolicy : Int) : Void;
 	
 	/**
 	* Creates an empty (no viewport view) <code>JScrollPane</code>
 	* where both horizontal and vertical scrollbars appear when needed.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the look and feel (L&F) object that renders this component.
@@ -169,7 +169,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel.
 	*/
-	@:overload public function getUI() : javax.swing.plaf.ScrollPaneUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.ScrollPaneUI;
 	
 	/**
 	* Sets the <code>ScrollPaneUI</code> object that provides the
@@ -178,7 +178,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @param ui the <code>ScrollPaneUI</code> L&F object
 	* @see #getUI
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.ScrollPaneUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.ScrollPaneUI) : Void;
 	
 	/**
 	* Replaces the current <code>ScrollPaneUI</code> object with a version
@@ -188,7 +188,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @see JComponent#updateUI
 	* @see UIManager#getUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the suffix used to construct the name of the L&F class used to
@@ -201,7 +201,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @beaninfo
 	*    hidden: true
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Sets the layout manager for this <code>JScrollPane</code>.
@@ -221,7 +221,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @beaninfo
 	*    hidden: true
 	*/
-	@:overload override public function setLayout(layout : java.awt.LayoutManager) : Void;
+	@:overload @:public override public function setLayout(layout : java.awt.LayoutManager) : Void;
 	
 	/**
 	* Overridden to return true so that any calls to <code>revalidate</code>
@@ -238,14 +238,14 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @beaninfo
 	*    hidden: true
 	*/
-	@:overload override public function isValidateRoot() : Bool;
+	@:overload @:public override public function isValidateRoot() : Bool;
 	
 	/**
 	* Returns the vertical scroll bar policy value.
 	* @return the <code>verticalScrollBarPolicy</code> property
 	* @see #setVerticalScrollBarPolicy
 	*/
-	@:overload public function getVerticalScrollBarPolicy() : Int;
+	@:overload @:public public function getVerticalScrollBarPolicy() : Int;
 	
 	/**
 	* Determines when the vertical scrollbar appears in the scrollpane.
@@ -269,14 +269,14 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*              VERTICAL_SCROLLBAR_NEVER ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER
 	*              VERTICAL_SCROLLBAR_ALWAYS ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS
 	*/
-	@:overload public function setVerticalScrollBarPolicy(policy : Int) : Void;
+	@:overload @:public public function setVerticalScrollBarPolicy(policy : Int) : Void;
 	
 	/**
 	* Returns the horizontal scroll bar policy value.
 	* @return the <code>horizontalScrollBarPolicy</code> property
 	* @see #setHorizontalScrollBarPolicy
 	*/
-	@:overload public function getHorizontalScrollBarPolicy() : Int;
+	@:overload @:public public function getHorizontalScrollBarPolicy() : Int;
 	
 	/**
 	* Determines when the horizontal scrollbar appears in the scrollpane.
@@ -299,7 +299,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*              HORIZONTAL_SCROLLBAR_NEVER ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER
 	*              HORIZONTAL_SCROLLBAR_ALWAYS ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS
 	*/
-	@:overload public function setHorizontalScrollBarPolicy(policy : Int) : Void;
+	@:overload @:public public function setHorizontalScrollBarPolicy(policy : Int) : Void;
 	
 	/**
 	* Returns the <code>Border</code> object that surrounds the viewport.
@@ -307,7 +307,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @return the <code>viewportBorder</code> property
 	* @see #setViewportBorder
 	*/
-	@:overload public function getViewportBorder() : javax.swing.border.Border;
+	@:overload @:public public function getViewportBorder() : javax.swing.border.Border;
 	
 	/**
 	* Adds a border around the viewport.  Note that the border isn't
@@ -328,14 +328,14 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*       bound: true
 	* description: The border around the viewport.
 	*/
-	@:overload public function setViewportBorder(viewportBorder : javax.swing.border.Border) : Void;
+	@:overload @:public public function setViewportBorder(viewportBorder : javax.swing.border.Border) : Void;
 	
 	/**
 	* Returns the bounds of the viewport's border.
 	*
 	* @return a <code>Rectangle</code> object specifying the viewport border
 	*/
-	@:overload public function getViewportBorderBounds() : java.awt.Rectangle;
+	@:overload @:public public function getViewportBorderBounds() : java.awt.Rectangle;
 	
 	/**
 	* Returns a <code>JScrollPane.ScrollBar</code> by default.
@@ -347,7 +347,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @return a <code>JScrollBar</code> with a horizontal orientation
 	* @see JScrollBar
 	*/
-	@:overload public function createHorizontalScrollBar() : javax.swing.JScrollBar;
+	@:overload @:public public function createHorizontalScrollBar() : javax.swing.JScrollBar;
 	
 	/**
 	* Returns the horizontal scroll bar that controls the viewport's
@@ -356,7 +356,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @return the <code>horizontalScrollBar</code> property
 	* @see #setHorizontalScrollBar
 	*/
-	@:overload public function getHorizontalScrollBar() : javax.swing.JScrollBar;
+	@:overload @:public public function getHorizontalScrollBar() : javax.swing.JScrollBar;
 	
 	/**
 	* Adds the scrollbar that controls the viewport's horizontal view
@@ -373,7 +373,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*         bound: true
 	*   description: The horizontal scrollbar.
 	*/
-	@:overload public function setHorizontalScrollBar(horizontalScrollBar : javax.swing.JScrollBar) : Void;
+	@:overload @:public public function setHorizontalScrollBar(horizontalScrollBar : javax.swing.JScrollBar) : Void;
 	
 	/**
 	* Returns a <code>JScrollPane.ScrollBar</code> by default.  Subclasses
@@ -385,7 +385,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @return a <code>JScrollBar</code> with a vertical orientation
 	* @see JScrollBar
 	*/
-	@:overload public function createVerticalScrollBar() : javax.swing.JScrollBar;
+	@:overload @:public public function createVerticalScrollBar() : javax.swing.JScrollBar;
 	
 	/**
 	* Returns the vertical scroll bar that controls the viewports
@@ -394,7 +394,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @return the <code>verticalScrollBar</code> property
 	* @see #setVerticalScrollBar
 	*/
-	@:overload public function getVerticalScrollBar() : javax.swing.JScrollBar;
+	@:overload @:public public function getVerticalScrollBar() : javax.swing.JScrollBar;
 	
 	/**
 	* Adds the scrollbar that controls the viewports vertical view position
@@ -411,7 +411,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*         bound: true
 	*   description: The vertical scrollbar.
 	*/
-	@:overload public function setVerticalScrollBar(verticalScrollBar : javax.swing.JScrollBar) : Void;
+	@:overload @:public public function setVerticalScrollBar(verticalScrollBar : javax.swing.JScrollBar) : Void;
 	
 	/**
 	* Returns a new <code>JViewport</code> by default.
@@ -423,7 +423,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*
 	* @return a new <code>JViewport</code>
 	*/
-	@:overload private function createViewport() : javax.swing.JViewport;
+	@:overload @:protected private function createViewport() : javax.swing.JViewport;
 	
 	/**
 	* Returns the current <code>JViewport</code>.
@@ -431,7 +431,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @see #setViewport
 	* @return the <code>viewport</code> property
 	*/
-	@:overload public function getViewport() : javax.swing.JViewport;
+	@:overload @:public public function getViewport() : javax.swing.JViewport;
 	
 	/**
 	* Removes the old viewport (if there is one); forces the
@@ -458,7 +458,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*  description: The viewport child for this scrollpane
 	*
 	*/
-	@:overload public function setViewport(viewport : javax.swing.JViewport) : Void;
+	@:overload @:public public function setViewport(viewport : javax.swing.JViewport) : Void;
 	
 	/**
 	* Creates a viewport if necessary and then sets its view.  Applications
@@ -476,14 +476,14 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @see #setViewport
 	* @see JViewport#setView
 	*/
-	@:overload public function setViewportView(view : java.awt.Component) : Void;
+	@:overload @:public public function setViewportView(view : java.awt.Component) : Void;
 	
 	/**
 	* Returns the row header.
 	* @return the <code>rowHeader</code> property
 	* @see #setRowHeader
 	*/
-	@:overload public function getRowHeader() : javax.swing.JViewport;
+	@:overload @:public public function getRowHeader() : javax.swing.JViewport;
 	
 	/**
 	* Removes the old rowHeader, if it exists; if the new rowHeader
@@ -506,7 +506,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*       expert: true
 	*  description: The row header child for this scrollpane
 	*/
-	@:overload public function setRowHeader(rowHeader : javax.swing.JViewport) : Void;
+	@:overload @:public public function setRowHeader(rowHeader : javax.swing.JViewport) : Void;
 	
 	/**
 	* Creates a row-header viewport if necessary, sets
@@ -522,14 +522,14 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @see JViewport#setView
 	* @param view the component to display as the row header
 	*/
-	@:overload public function setRowHeaderView(view : java.awt.Component) : Void;
+	@:overload @:public public function setRowHeaderView(view : java.awt.Component) : Void;
 	
 	/**
 	* Returns the column header.
 	* @return the <code>columnHeader</code> property
 	* @see #setColumnHeader
 	*/
-	@:overload public function getColumnHeader() : javax.swing.JViewport;
+	@:overload @:public public function getColumnHeader() : javax.swing.JViewport;
 	
 	/**
 	* Removes the old columnHeader, if it exists; if the new columnHeader
@@ -548,7 +548,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*  description: The column header child for this scrollpane
 	*    attribute: visualUpdate true
 	*/
-	@:overload public function setColumnHeader(columnHeader : javax.swing.JViewport) : Void;
+	@:overload @:public public function setColumnHeader(columnHeader : javax.swing.JViewport) : Void;
 	
 	/**
 	* Creates a column-header viewport if necessary, sets
@@ -565,7 +565,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*
 	* @param view the component to display as the column header
 	*/
-	@:overload public function setColumnHeaderView(view : java.awt.Component) : Void;
+	@:overload @:public public function setColumnHeaderView(view : java.awt.Component) : Void;
 	
 	/**
 	* Returns the component at the specified corner. The
@@ -587,7 +587,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*         if the key is invalid
 	* @see #setCorner
 	*/
-	@:overload public function getCorner(key : String) : java.awt.Component;
+	@:overload @:public public function getCorner(key : String) : java.awt.Component;
 	
 	/**
 	* Adds a child that will appear in one of the scroll panes
@@ -621,7 +621,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* </ul>
 	* @exception IllegalArgumentException if corner key is invalid
 	*/
-	@:overload public function setCorner(key : String, corner : java.awt.Component) : Void;
+	@:overload @:public public function setCorner(key : String, corner : java.awt.Component) : Void;
 	
 	/**
 	* Sets the orientation for the vertical and horizontal
@@ -636,7 +636,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* </ul>
 	* @see java.awt.ComponentOrientation
 	*/
-	@:overload override public function setComponentOrientation(co : java.awt.ComponentOrientation) : Void;
+	@:overload @:public override public function setComponentOrientation(co : java.awt.ComponentOrientation) : Void;
 	
 	/**
 	* Indicates whether or not scrolling will take place in response to the
@@ -648,7 +648,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*       bound: true
 	* description: Flag for enabling/disabling mouse wheel scrolling
 	*/
-	@:require(java4) @:overload public function isWheelScrollingEnabled() : Bool;
+	@:require(java4) @:overload @:public public function isWheelScrollingEnabled() : Bool;
 	
 	/**
 	* Enables/disables scrolling in response to movement of the mouse wheel.
@@ -665,7 +665,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*       bound: true
 	* description: Flag for enabling/disabling mouse wheel scrolling
 	*/
-	@:require(java4) @:overload public function setWheelScrollingEnabled(handleWheel : Bool) : Void;
+	@:require(java4) @:overload @:public public function setWheelScrollingEnabled(handleWheel : Bool) : Void;
 	
 	/**
 	* Returns a string representation of this <code>JScrollPane</code>.
@@ -677,7 +677,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*
 	* @return  a string representation of this <code>JScrollPane</code>.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JScrollPane.
@@ -688,7 +688,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @return an AccessibleJScrollPane that serves as the
 	*         AccessibleContext of this JScrollPane
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -728,7 +728,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*      orientation values shown above
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(orientation : Int) : Void;
+	@:require(java4) @:overload @:public public function new(orientation : Int) : Void;
 	
 	/**
 	* Messages super to set the value, and resets the
@@ -736,7 +736,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*
 	* @param unitIncrement the new unit increment value, in pixels
 	*/
-	@:overload override public function setUnitIncrement(unitIncrement : Int) : Void;
+	@:overload @:public override public function setUnitIncrement(unitIncrement : Int) : Void;
 	
 	/**
 	* Computes the unit increment for scrolling if the viewport's
@@ -748,7 +748,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @return an integer, in pixels, containing the unit increment
 	* @see Scrollable#getScrollableUnitIncrement
 	*/
-	@:overload override public function getUnitIncrement(direction : Int) : Int;
+	@:overload @:public override public function getUnitIncrement(direction : Int) : Int;
 	
 	/**
 	* Messages super to set the value, and resets the
@@ -756,7 +756,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*
 	* @param blockIncrement the new block increment value, in pixels
 	*/
-	@:overload override public function setBlockIncrement(blockIncrement : Int) : Void;
+	@:overload @:public override public function setBlockIncrement(blockIncrement : Int) : Void;
 	
 	/**
 	* Computes the block increment for scrolling if the viewport's
@@ -770,7 +770,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @return an integer, in pixels, containing the block increment
 	* @see Scrollable#getScrollableBlockIncrement
 	*/
-	@:overload override public function getBlockIncrement(direction : Int) : Int;
+	@:overload @:public override public function getBlockIncrement(direction : Int) : Int;
 	
 	
 }
@@ -791,17 +791,17 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 */
 @:native('javax$swing$JScrollPane$AccessibleJScrollPane') extern class JScrollPane_AccessibleJScrollPane extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.swing.event.ChangeListener implements java.beans.PropertyChangeListener
 {
-	private var viewPort : javax.swing.JViewport;
+	@:protected private var viewPort : javax.swing.JViewport;
 	
 	/*
 	* Resets the viewport ChangeListener and PropertyChangeListener
 	*/
-	@:overload public function resetViewPort() : Void;
+	@:overload @:public public function resetViewPort() : Void;
 	
 	/**
 	* AccessibleJScrollPane constructor
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Get the role of this object.
@@ -810,7 +810,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Invoked when the target of the listener has changed its state.
@@ -819,7 +819,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	*
 	* @throws NullPointerException if the parameter is null.
 	*/
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	/**
 	* This method gets called when a bound property is changed.
@@ -829,7 +829,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @throws NullPointerException if the parameter is null.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:require(java5) @:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

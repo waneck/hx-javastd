@@ -25,9 +25,9 @@ package sun.security.tools;
 */
 extern class JarSigner
 {
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
-	@:overload public function run(args : java.NativeArray<String>) : Void;
+	@:overload @:public public function run(args : java.NativeArray<String>) : Void;
 	
 	
 }
@@ -36,13 +36,13 @@ extern class JarSigner
 	/**
 	* Encode the suffix that ends every output line.
 	*/
-	@:overload override private function encodeLineSuffix(aStream : java.io.OutputStream) : Void;
+	@:overload @:protected override private function encodeLineSuffix(aStream : java.io.OutputStream) : Void;
 	
 	
 }
 @:internal extern class SignatureFile
 {
-	@:overload public function new(digests : java.NativeArray<java.security.MessageDigest>, mf : java.util.jar.Manifest, md : sun.security.util.ManifestDigester, baseName : String, signManifest : Bool) : Void;
+	@:overload @:public public function new(digests : java.NativeArray<java.security.MessageDigest>, mf : java.util.jar.Manifest, md : sun.security.util.ManifestDigester, baseName : String, signManifest : Bool) : Void;
 	
 	/**
 	* Writes the SignatureFile to the specified OutputStream.
@@ -50,17 +50,17 @@ extern class JarSigner
 	* @param out the output stream
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function write(out : java.io.OutputStream) : Void;
+	@:overload @:public public function write(out : java.io.OutputStream) : Void;
 	
 	/**
 	* get .SF file name
 	*/
-	@:overload public function getMetaName() : String;
+	@:overload @:public public function getMetaName() : String;
 	
 	/**
 	* get base file name
 	*/
-	@:overload public function getBaseName() : String;
+	@:overload @:public public function getBaseName() : String;
 	
 	/*
 	* Generate a signed data block.
@@ -77,7 +77,7 @@ extern class JarSigner
 	* @param args The command-line arguments to jarsigner.
 	* @param zipFile The original source Zip file.
 	*/
-	@:overload public function generateBlock(privateKey : java.security.PrivateKey, sigalg : String, certChain : java.NativeArray<java.security.cert.X509Certificate>, externalSF : Bool, tsaUrl : String, tsaCert : java.security.cert.X509Certificate, signingMechanism : com.sun.jarsigner.ContentSigner, args : java.NativeArray<String>, zipFile : java.util.zip.ZipFile) : sun.security.tools.JarSigner.SignatureFile_Block;
+	@:overload @:public public function generateBlock(privateKey : java.security.PrivateKey, sigalg : String, certChain : java.NativeArray<java.security.cert.X509Certificate>, externalSF : Bool, tsaUrl : String, tsaCert : java.security.cert.X509Certificate, signingMechanism : com.sun.jarsigner.ContentSigner, args : java.NativeArray<String>, zipFile : java.util.zip.ZipFile) : sun.security.tools.JarSigner.SignatureFile_Block;
 	
 	
 }
@@ -86,7 +86,7 @@ extern class JarSigner
 	/*
 	* get block file name.
 	*/
-	@:overload public function getMetaName() : String;
+	@:overload @:public public function getMetaName() : String;
 	
 	/**
 	* Writes the block file to the specified OutputStream.
@@ -94,7 +94,7 @@ extern class JarSigner
 	* @param out the output stream
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function write(out : java.io.OutputStream) : Void;
+	@:overload @:public public function write(out : java.io.OutputStream) : Void;
 	
 	
 }
@@ -105,56 +105,56 @@ extern class JarSigner
 	*
 	* @return The command-line arguments. May be null.
 	*/
-	@:overload public function getCommandLine() : java.NativeArray<String>;
+	@:overload @:public public function getCommandLine() : java.NativeArray<String>;
 	
 	/**
 	* Retrieves the identifier for a Timestamping Authority (TSA).
 	*
 	* @return The TSA identifier. May be null.
 	*/
-	@:overload public function getTimestampingAuthority() : java.net.URI;
+	@:overload @:public public function getTimestampingAuthority() : java.net.URI;
 	
 	/**
 	* Retrieves the certificate for a Timestamping Authority (TSA).
 	*
 	* @return The TSA certificate. May be null.
 	*/
-	@:overload public function getTimestampingAuthorityCertificate() : java.security.cert.X509Certificate;
+	@:overload @:public public function getTimestampingAuthorityCertificate() : java.security.cert.X509Certificate;
 	
 	/**
 	* Retrieves the signature.
 	*
 	* @return The non-null signature bytes.
 	*/
-	@:overload public function getSignature() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getSignature() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the name of the signature algorithm.
 	*
 	* @return The non-null string name of the signature algorithm.
 	*/
-	@:overload public function getSignatureAlgorithm() : String;
+	@:overload @:public public function getSignatureAlgorithm() : String;
 	
 	/**
 	* Retrieves the signer's X.509 certificate chain.
 	*
 	* @return The non-null array of X.509 public-key certificates.
 	*/
-	@:overload public function getSignerCertificateChain() : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public public function getSignerCertificateChain() : java.NativeArray<java.security.cert.X509Certificate>;
 	
 	/**
 	* Retrieves the content that was signed.
 	*
 	* @return The content bytes. May be null.
 	*/
-	@:overload public function getContent() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getContent() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the original source ZIP file before it was signed.
 	*
 	* @return The original ZIP file. May be null.
 	*/
-	@:overload public function getSource() : java.util.zip.ZipFile;
+	@:overload @:public public function getSource() : java.util.zip.ZipFile;
 	
 	
 }

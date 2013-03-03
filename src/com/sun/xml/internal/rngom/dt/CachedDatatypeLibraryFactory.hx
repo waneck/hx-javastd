@@ -46,9 +46,9 @@ package com.sun.xml.internal.rngom.dt;
 */
 extern class CachedDatatypeLibraryFactory implements org.relaxng.datatype.DatatypeLibraryFactory
 {
-	@:overload public function new(core : org.relaxng.datatype.DatatypeLibraryFactory) : Void;
+	@:overload @:public public function new(core : org.relaxng.datatype.DatatypeLibraryFactory) : Void;
 	
-	@:overload public function createDatatypeLibrary(namespaceURI : String) : org.relaxng.datatype.DatatypeLibrary;
+	@:overload @:public public function createDatatypeLibrary(namespaceURI : String) : org.relaxng.datatype.DatatypeLibrary;
 	
 	
 }

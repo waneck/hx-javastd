@@ -43,7 +43,7 @@ extern class KeyStoreLoginModule implements javax.security.auth.spi.LoginModule
 	*                  <code>Configuration</code> for this particular
 	*                  <code>LoginModule</code>.
 	*/
-	@:overload public function initialize(subject : javax.security.auth.Subject, callbackHandler : javax.security.auth.callback.CallbackHandler, sharedState : java.util.Map<String, Dynamic>, options : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function initialize(subject : javax.security.auth.Subject, callbackHandler : javax.security.auth.callback.CallbackHandler, sharedState : java.util.Map<String, Dynamic>, options : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* Authenticate the user.
@@ -58,7 +58,7 @@ extern class KeyStoreLoginModule implements javax.security.auth.spi.LoginModule
 	* @return true in all cases (this <code>LoginModule</code>
 	*          should not be ignored).
 	*/
-	@:overload public function login() : Bool;
+	@:overload @:public public function login() : Bool;
 	
 	/**
 	* Abstract method to commit the authentication process (phase 2).
@@ -88,7 +88,7 @@ extern class KeyStoreLoginModule implements javax.security.auth.spi.LoginModule
 	* @return true if this LoginModule's own login and commit
 	*          attempts succeeded, or false otherwise.
 	*/
-	@:overload public function commit() : Bool;
+	@:overload @:public public function commit() : Bool;
 	
 	/**
 	* <p> This method is called if the LoginContext's
@@ -112,7 +112,7 @@ extern class KeyStoreLoginModule implements javax.security.auth.spi.LoginModule
 	* @return false if this LoginModule's own login and/or commit attempts
 	*          failed, and true otherwise.
 	*/
-	@:overload public function abort() : Bool;
+	@:overload @:public public function abort() : Bool;
 	
 	/**
 	* Logout a user.
@@ -131,7 +131,7 @@ extern class KeyStoreLoginModule implements javax.security.auth.spi.LoginModule
 	* @return true in all cases since this <code>LoginModule</code>
 	*          should not be ignored.
 	*/
-	@:overload public function logout() : Bool;
+	@:overload @:public public function logout() : Bool;
 	
 	
 }

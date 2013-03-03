@@ -25,32 +25,32 @@ package sun.awt.X11;
 */
 @:internal extern class XDnDDragSourceProtocol extends sun.awt.X11.XDragSourceProtocol
 {
-	@:overload private function new(listener : sun.awt.X11.XDragSourceProtocolListener) : Void;
+	@:overload @:protected private function new(listener : sun.awt.X11.XDragSourceProtocolListener) : Void;
 	
-	@:overload public function getProtocolName() : String;
+	@:overload @:public override public function getProtocolName() : String;
 	
 	/**
 	* Performs protocol-specific drag initialization.
 	*
 	* @returns true if the initialized successfully.
 	*/
-	@:overload private function initializeDragImpl(actions : Int, contents : java.awt.datatransfer.Transferable, formatMap : java.util.Map<Dynamic, Dynamic>, formats : java.NativeArray<haxe.Int64>) : Void;
+	@:overload @:protected override private function initializeDragImpl(actions : Int, contents : java.awt.datatransfer.Transferable, formatMap : java.util.Map<Dynamic, Dynamic>, formats : java.NativeArray<haxe.Int64>) : Void;
 	
-	@:overload public function processClientMessage(xclient : sun.awt.X11.XClientMessageEvent) : Bool;
+	@:overload @:public override public function processClientMessage(xclient : sun.awt.X11.XClientMessageEvent) : Bool;
 	
-	@:overload public function getTargetWindowInfo(window : haxe.Int64) : sun.awt.X11.XDragSourceProtocol.XDragSourceProtocol_TargetWindowInfo;
+	@:overload @:public override public function getTargetWindowInfo(window : haxe.Int64) : sun.awt.X11.XDragSourceProtocol.XDragSourceProtocol_TargetWindowInfo;
 	
-	@:overload public function sendEnterMessage(formats : java.NativeArray<haxe.Int64>, sourceAction : Int, sourceActions : Int, time : haxe.Int64) : Void;
+	@:overload @:public override public function sendEnterMessage(formats : java.NativeArray<haxe.Int64>, sourceAction : Int, sourceActions : Int, time : haxe.Int64) : Void;
 	
-	@:overload public function sendMoveMessage(xRoot : Int, yRoot : Int, sourceAction : Int, sourceActions : Int, time : haxe.Int64) : Void;
+	@:overload @:public override public function sendMoveMessage(xRoot : Int, yRoot : Int, sourceAction : Int, sourceActions : Int, time : haxe.Int64) : Void;
 	
-	@:overload public function sendLeaveMessage(time : haxe.Int64) : Void;
+	@:overload @:public override public function sendLeaveMessage(time : haxe.Int64) : Void;
 	
-	@:overload public function sendDropMessage(xRoot : Int, yRoot : Int, sourceAction : Int, sourceActions : Int, time : haxe.Int64) : Void;
+	@:overload @:public override public function sendDropMessage(xRoot : Int, yRoot : Int, sourceAction : Int, sourceActions : Int, time : haxe.Int64) : Void;
 	
-	@:overload public function processProxyModeEvent(xclient : sun.awt.X11.XClientMessageEvent, sourceWindow : haxe.Int64) : Bool;
+	@:overload @:public override public function processProxyModeEvent(xclient : sun.awt.X11.XClientMessageEvent, sourceWindow : haxe.Int64) : Bool;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

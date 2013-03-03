@@ -20,9 +20,9 @@ package com.sun.org.apache.xerces.internal.impl.xs.models;
 */
 extern class CMBuilder
 {
-	@:overload public function new(nodeFactory : com.sun.org.apache.xerces.internal.impl.xs.models.CMNodeFactory) : Void;
+	@:overload @:public public function new(nodeFactory : com.sun.org.apache.xerces.internal.impl.xs.models.CMNodeFactory) : Void;
 	
-	@:overload public function setDeclPool(declPool : com.sun.org.apache.xerces.internal.impl.xs.XSDeclarationPool) : Void;
+	@:overload @:public public function setDeclPool(declPool : com.sun.org.apache.xerces.internal.impl.xs.XSDeclarationPool) : Void;
 	
 	/**
 	* Get content model for the a given type
@@ -30,7 +30,7 @@ extern class CMBuilder
 	* @param typeDecl  get content model for which complex type
 	* @return          a content model validator
 	*/
-	@:overload public function getContentModel(typeDecl : com.sun.org.apache.xerces.internal.impl.xs.XSComplexTypeDecl) : com.sun.org.apache.xerces.internal.impl.xs.models.XSCMValidator;
+	@:overload @:public public function getContentModel(typeDecl : com.sun.org.apache.xerces.internal.impl.xs.XSComplexTypeDecl) : com.sun.org.apache.xerces.internal.impl.xs.models.XSCMValidator;
 	
 	
 }

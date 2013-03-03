@@ -32,13 +32,13 @@ extern class ReferralException extends javax.naming.NamingException
 	* @param   explanation     Additional detail about this exception. Can be null.
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload private function new(explanation : String) : Void;
+	@:overload @:protected private function new(explanation : String) : Void;
 	
 	/**
 	* Constructs a new instance of ReferralException.
 	* All fields are set to null.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Retrieves information (such as URLs) related to this referral.
@@ -49,7 +49,7 @@ extern class ReferralException extends javax.naming.NamingException
 	*
 	* @return Non-null referral information related to this referral.
 	*/
-	@:overload @:abstract public function getReferralInfo() : Dynamic;
+	@:overload @:public @:abstract public function getReferralInfo() : Dynamic;
 	
 	/**
 	* Retrieves the context at which to continue the method.
@@ -69,7 +69,7 @@ extern class ReferralException extends javax.naming.NamingException
 	* Call either <tt>retryReferral()</tt> or <tt>skipReferral()</tt>
 	* to continue processing referrals.
 	*/
-	@:overload @:abstract public function getReferralContext() : javax.naming.Context;
+	@:overload @:public @:abstract public function getReferralContext() : javax.naming.Context;
 	
 	/**
 	* Retrieves the context at which to continue the method using
@@ -98,7 +98,7 @@ extern class ReferralException extends javax.naming.NamingException
 	* Call either <tt>retryReferral()</tt> or <tt>skipReferral()</tt>
 	* to continue processing referrals.
 	*/
-	@:overload @:abstract public function getReferralContext(env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
+	@:overload @:public @:abstract public function getReferralContext(env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
 	
 	/**
 	* Discards the referral about to be processed.
@@ -119,7 +119,7 @@ extern class ReferralException extends javax.naming.NamingException
 	*
 	* @return true If more referral processing is pending; false otherwise.
 	*/
-	@:overload @:abstract public function skipReferral() : Bool;
+	@:overload @:public @:abstract public function skipReferral() : Bool;
 	
 	/**
 	* Retries the referral currently being processed.
@@ -145,7 +145,7 @@ extern class ReferralException extends javax.naming.NamingException
 	* </pre></blockquote>
 	*
 	*/
-	@:overload @:abstract public function retryReferral() : Void;
+	@:overload @:public @:abstract public function retryReferral() : Void;
 	
 	
 }

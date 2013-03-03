@@ -46,15 +46,15 @@ package sun.font;
 */
 @:internal extern class NativeStrikeDisposer extends sun.font.FontStrikeDisposer
 {
-	@:overload public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc, pContext : haxe.Int64, images : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc, pContext : haxe.Int64, images : java.NativeArray<Int>) : Void;
 	
-	@:overload public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc, pContext : haxe.Int64, images : java.NativeArray<haxe.Int64>) : Void;
+	@:overload @:public public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc, pContext : haxe.Int64, images : java.NativeArray<haxe.Int64>) : Void;
 	
-	@:overload public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc, pContext : haxe.Int64) : Void;
+	@:overload @:public public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc, pContext : haxe.Int64) : Void;
 	
-	@:overload public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc) : Void;
+	@:overload @:public public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc) : Void;
 	
-	@:overload @:synchronized public function dispose() : Void;
+	@:overload @:public @:synchronized override public function dispose() : Void;
 	
 	
 }

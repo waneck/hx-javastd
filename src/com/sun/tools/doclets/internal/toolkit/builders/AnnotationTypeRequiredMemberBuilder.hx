@@ -39,23 +39,23 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	/**
 	* The annotation type whose members are being documented.
 	*/
-	private var classDoc : com.sun.javadoc.ClassDoc;
+	@:protected private var classDoc : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* The visible members for the given class.
 	*/
-	private var visibleMemberMap : com.sun.tools.doclets.internal.toolkit.util.VisibleMemberMap;
+	@:protected private var visibleMemberMap : com.sun.tools.doclets.internal.toolkit.util.VisibleMemberMap;
 	
 	/**
 	* The writer to output the member documentation.
 	*/
-	private var writer : com.sun.tools.doclets.internal.toolkit.AnnotationTypeRequiredMemberWriter;
+	@:protected private var writer : com.sun.tools.doclets.internal.toolkit.AnnotationTypeRequiredMemberWriter;
 	
 	/**
 	* The index of the current member that is being documented at this point
 	* in time.
 	*/
-	private var currentMemberIndex : Int;
+	@:protected private var currentMemberIndex : Int;
 	
 	/**
 	* Construct a new AnnotationTypeRequiredMemberBuilder.
@@ -63,7 +63,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param configuration the current configuration of the
 	*                      doclet.
 	*/
-	@:overload private function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
+	@:overload @:protected private function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
 	
 	/**
 	* Construct a new AnnotationTypeMemberBuilder.
@@ -72,12 +72,12 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param classDoc the class whoses members are being documented.
 	* @param writer the doclet specific writer.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc, writer : com.sun.tools.doclets.internal.toolkit.AnnotationTypeRequiredMemberWriter) : com.sun.tools.doclets.internal.toolkit.builders.AnnotationTypeRequiredMemberBuilder;
+	@:overload @:public @:static public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc, writer : com.sun.tools.doclets.internal.toolkit.AnnotationTypeRequiredMemberWriter) : com.sun.tools.doclets.internal.toolkit.builders.AnnotationTypeRequiredMemberBuilder;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Returns a list of members that will be documented for the given class.
@@ -87,19 +87,19 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param classDoc the {@link ClassDoc} we want to check.
 	* @return a list of members that will be documented.
 	*/
-	@:overload public function members(classDoc : com.sun.javadoc.ClassDoc) : java.util.List<com.sun.javadoc.ProgramElementDoc>;
+	@:overload @:public public function members(classDoc : com.sun.javadoc.ClassDoc) : java.util.List<com.sun.javadoc.ProgramElementDoc>;
 	
 	/**
 	* Returns the visible member map for the members of this class.
 	*
 	* @return the visible member map for the members of this class.
 	*/
-	@:overload public function getVisibleMemberMap() : com.sun.tools.doclets.internal.toolkit.util.VisibleMemberMap;
+	@:overload @:public public function getVisibleMemberMap() : com.sun.tools.doclets.internal.toolkit.util.VisibleMemberMap;
 	
 	/**
 	* summaryOrder.size()
 	*/
-	@:overload override public function hasMembersToDocument() : Bool;
+	@:overload @:public override public function hasMembersToDocument() : Bool;
 	
 	/**
 	* Build the annotation type required member documentation.
@@ -107,7 +107,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param memberDetailsTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildAnnotationTypeRequiredMember(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildAnnotationTypeRequiredMember(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the member documentation.
@@ -115,7 +115,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param memberDetailsTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildAnnotationTypeMember(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildAnnotationTypeMember(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the signature.
@@ -123,7 +123,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param annotationDocTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildSignature(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildSignature(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the deprecation information.
@@ -131,7 +131,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param annotationDocTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildDeprecationInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildDeprecationInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the comments for the member.  Do nothing if
@@ -140,7 +140,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param annotationDocTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildMemberComments(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildMemberComments(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the tag information.
@@ -148,7 +148,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param annotationDocTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildTagInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildTagInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Return the annotation type required member writer for this builder.
@@ -156,7 +156,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @return the annotation type required member constant writer for this
 	* builder.
 	*/
-	@:overload public function getWriter() : com.sun.tools.doclets.internal.toolkit.AnnotationTypeRequiredMemberWriter;
+	@:overload @:public public function getWriter() : com.sun.tools.doclets.internal.toolkit.AnnotationTypeRequiredMemberWriter;
 	
 	
 }

@@ -25,9 +25,9 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface Documentation extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function source(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Documentation;
+	@:overload @:public public function source(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Documentation;
 	
-	@:overload public function lang(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Documentation;
+	@:overload @:public public function lang(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Documentation;
 	
 	
 }

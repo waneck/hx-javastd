@@ -30,29 +30,29 @@ extern class WellKnownNamespace
 	* @return
 	* @throws CloneNotSupportedException
 	*/
-	public static var XML_SCHEMA(default, null) : String;
+	@:public @:static @:final public static var XML_SCHEMA(default, null) : String;
 	
 	/**
 	* @deprecated Use javax.xml.XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI instead
 	* @return
 	* @throws CloneNotSupportedException
 	*/
-	public static var XML_SCHEMA_INSTANCE(default, null) : String;
+	@:public @:static @:final public static var XML_SCHEMA_INSTANCE(default, null) : String;
 	
 	/**
 	* @deprecated Use javax.xml.XMLConstants.XML_NS_URI instead;
 	* @return
 	* @throws CloneNotSupportedException
 	*/
-	public static var XML_NAMESPACE_URI(default, null) : String;
+	@:public @:static @:final public static var XML_NAMESPACE_URI(default, null) : String;
 	
-	public static var XOP(default, null) : String;
+	@:public @:static @:final public static var XOP(default, null) : String;
 	
-	public static var SWA_URI(default, null) : String;
+	@:public @:static @:final public static var SWA_URI(default, null) : String;
 	
-	public static var XML_MIME_URI(default, null) : String;
+	@:public @:static @:final public static var XML_MIME_URI(default, null) : String;
 	
-	public static var JAXB(default, null) : String;
+	@:public @:static @:final public static var JAXB(default, null) : String;
 	
 	
 }

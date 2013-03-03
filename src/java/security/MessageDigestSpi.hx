@@ -40,14 +40,14 @@ extern class MessageDigestSpi
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function engineGetDigestLength() : Int;
+	@:require(java2) @:overload @:protected private function engineGetDigestLength() : Int;
 	
 	/**
 	* Updates the digest using the specified byte.
 	*
 	* @param input the byte to use for the update.
 	*/
-	@:overload @:abstract private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload @:protected @:abstract private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Updates the digest using the specified array of bytes,
@@ -60,7 +60,7 @@ extern class MessageDigestSpi
 	* @param len the number of bytes to use, starting at
 	* <code>offset</code>.
 	*/
-	@:overload @:abstract private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected @:abstract private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* Update the digest using the specified ByteBuffer. The digest is
@@ -72,7 +72,7 @@ extern class MessageDigestSpi
 	* @param input the ByteBuffer
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function engineUpdate(input : java.nio.ByteBuffer) : Void;
+	@:require(java5) @:overload @:protected private function engineUpdate(input : java.nio.ByteBuffer) : Void;
 	
 	/**
 	* Completes the hash computation by performing final
@@ -84,7 +84,7 @@ extern class MessageDigestSpi
 	*
 	* @return the array of bytes for the resulting hash value.
 	*/
-	@:overload @:abstract private function engineDigest() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:abstract private function engineDigest() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Completes the hash computation by performing final
@@ -116,12 +116,12 @@ extern class MessageDigestSpi
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function engineDigest(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
+	@:require(java2) @:overload @:protected private function engineDigest(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
 	
 	/**
 	* Resets the digest for further use.
 	*/
-	@:overload @:abstract private function engineReset() : Void;
+	@:overload @:protected @:abstract private function engineReset() : Void;
 	
 	/**
 	* Returns a clone if the implementation is cloneable.
@@ -131,7 +131,7 @@ extern class MessageDigestSpi
 	* @exception CloneNotSupportedException if this is called on an
 	* implementation that does not support <code>Cloneable</code>.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

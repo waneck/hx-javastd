@@ -28,7 +28,7 @@ extern class LocaleServiceProviderPool
 	/**
 	* A factory method that returns a singleton instance
 	*/
-	@:overload public static function getPool(providerClass : Class<java.util.spi.LocaleServiceProvider>) : sun.util.LocaleServiceProviderPool;
+	@:overload @:public @:static public static function getPool(providerClass : Class<java.util.spi.LocaleServiceProvider>) : sun.util.LocaleServiceProviderPool;
 	
 	/**
 	* Returns an array of available locales for all the provider classes.
@@ -37,7 +37,7 @@ extern class LocaleServiceProviderPool
 	*
 	* @return an array of the available locales for all provider classes
 	*/
-	@:overload public static function getAllAvailableLocales() : java.NativeArray<java.util.Locale>;
+	@:overload @:public @:static public static function getAllAvailableLocales() : java.NativeArray<java.util.Locale>;
 	
 	/**
 	* Returns an array of available locales.  This array is a
@@ -46,7 +46,7 @@ extern class LocaleServiceProviderPool
 	*
 	* @return an array of the available locales
 	*/
-	@:overload @:synchronized public function getAvailableLocales() : java.NativeArray<java.util.Locale>;
+	@:overload @:public @:synchronized public function getAvailableLocales() : java.NativeArray<java.util.Locale>;
 	
 	/**
 	* Returns whether any provider for this locale sensitive
@@ -54,7 +54,7 @@ extern class LocaleServiceProviderPool
 	*
 	* @return true if any provider is available
 	*/
-	@:overload public function hasProviders() : Bool;
+	@:overload @:public public function hasProviders() : Bool;
 	
 	/**
 	* Returns the provider's localized object for the specified
@@ -66,7 +66,7 @@ extern class LocaleServiceProviderPool
 	* @param params provider specific parameters
 	* @return provider's instance, or null.
 	*/
-	@:overload public function getLocalizedObject<P, S>(getter : sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<P, S>, locale : java.util.Locale, params : java.NativeArray<Dynamic>) : S;
+	@:overload @:public public function getLocalizedObject<P, S>(getter : sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<P, S>, locale : java.util.Locale, params : java.NativeArray<Dynamic>) : S;
 	
 	/**
 	* Returns the provider's localized name for the specified
@@ -81,7 +81,7 @@ extern class LocaleServiceProviderPool
 	* @param params provider specific parameters
 	* @return provider's instance, or null.
 	*/
-	@:overload public function getLocalizedObject<P, S>(getter : sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<P, S>, locale : java.util.Locale, bundle : sun.util.resources.OpenListResourceBundle, key : String, params : java.NativeArray<Dynamic>) : S;
+	@:overload @:public public function getLocalizedObject<P, S>(getter : sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<P, S>, locale : java.util.Locale, bundle : sun.util.resources.OpenListResourceBundle, key : String, params : java.NativeArray<Dynamic>) : S;
 	
 	/**
 	* Returns the provider's localized name for the specified
@@ -98,7 +98,7 @@ extern class LocaleServiceProviderPool
 	* @param params provider specific parameters
 	* @return provider's instance, or null.
 	*/
-	@:overload public function getLocalizedObject<P, S>(getter : sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<P, S>, locale : java.util.Locale, bundleKey : String, bundle : sun.util.resources.OpenListResourceBundle, key : String, params : java.NativeArray<Dynamic>) : S;
+	@:overload @:public public function getLocalizedObject<P, S>(getter : sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<P, S>, locale : java.util.Locale, bundleKey : String, bundle : sun.util.resources.OpenListResourceBundle, key : String, params : java.NativeArray<Dynamic>) : S;
 	
 	
 }
@@ -120,7 +120,7 @@ extern class LocaleServiceProviderPool
 */
 @:native('sun$util$LocaleServiceProviderPool$NullProvider') @:internal extern class LocaleServiceProviderPool_NullProvider extends java.util.spi.LocaleServiceProvider
 {
-	@:overload public function getAvailableLocales() : java.NativeArray<java.util.Locale>;
+	@:overload @:public override public function getAvailableLocales() : java.NativeArray<java.util.Locale>;
 	
 	
 }
@@ -140,7 +140,7 @@ extern class LocaleServiceProviderPool
 	* @param params provider specific params
 	* @return localized object from the provider
 	*/
-	@:overload public function getObject(lsp : P, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : S;
+	@:overload @:public public function getObject(lsp : P, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : S;
 	
 	
 }

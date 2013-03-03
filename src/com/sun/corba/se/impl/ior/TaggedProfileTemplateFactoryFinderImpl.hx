@@ -28,9 +28,9 @@ extern class TaggedProfileTemplateFactoryFinderImpl extends com.sun.corba.se.imp
 	/**
 	* @author
 	*/
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function handleMissingFactory(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.Identifiable;
+	@:overload @:public override public function handleMissingFactory(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.Identifiable;
 	
 	
 }

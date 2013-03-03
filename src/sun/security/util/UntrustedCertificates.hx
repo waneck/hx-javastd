@@ -31,7 +31,7 @@ extern class UntrustedCertificates
 	* @param cert the certificate to check
 	* @return true if the certificate is untrusted.
 	*/
-	@:overload public static function isUntrusted(cert : java.security.cert.X509Certificate) : Bool;
+	@:overload @:public @:static public static function isUntrusted(cert : java.security.cert.X509Certificate) : Bool;
 	
 	
 }

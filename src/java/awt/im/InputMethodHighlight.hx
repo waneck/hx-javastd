@@ -28,32 +28,32 @@ extern class InputMethodHighlight
 	/**
 	* Constant for the raw text state.
 	*/
-	public static var RAW_TEXT(default, null) : Int;
+	@:public @:final @:static public static var RAW_TEXT(default, null) : Int;
 	
 	/**
 	* Constant for the converted text state.
 	*/
-	public static var CONVERTED_TEXT(default, null) : Int;
+	@:public @:final @:static public static var CONVERTED_TEXT(default, null) : Int;
 	
 	/**
 	* Constant for the default highlight for unselected raw text.
 	*/
-	public static var UNSELECTED_RAW_TEXT_HIGHLIGHT(default, null) : java.awt.im.InputMethodHighlight;
+	@:public @:final @:static public static var UNSELECTED_RAW_TEXT_HIGHLIGHT(default, null) : java.awt.im.InputMethodHighlight;
 	
 	/**
 	* Constant for the default highlight for selected raw text.
 	*/
-	public static var SELECTED_RAW_TEXT_HIGHLIGHT(default, null) : java.awt.im.InputMethodHighlight;
+	@:public @:final @:static public static var SELECTED_RAW_TEXT_HIGHLIGHT(default, null) : java.awt.im.InputMethodHighlight;
 	
 	/**
 	* Constant for the default highlight for unselected converted text.
 	*/
-	public static var UNSELECTED_CONVERTED_TEXT_HIGHLIGHT(default, null) : java.awt.im.InputMethodHighlight;
+	@:public @:final @:static public static var UNSELECTED_CONVERTED_TEXT_HIGHLIGHT(default, null) : java.awt.im.InputMethodHighlight;
 	
 	/**
 	* Constant for the default highlight for selected converted text.
 	*/
-	public static var SELECTED_CONVERTED_TEXT_HIGHLIGHT(default, null) : java.awt.im.InputMethodHighlight;
+	@:public @:final @:static public static var SELECTED_CONVERTED_TEXT_HIGHLIGHT(default, null) : java.awt.im.InputMethodHighlight;
 	
 	/**
 	* Constructs an input method highlight record.
@@ -64,7 +64,7 @@ extern class InputMethodHighlight
 	* @see InputMethodHighlight#CONVERTED_TEXT
 	* @exception IllegalArgumentException if a state other than RAW_TEXT or CONVERTED_TEXT is given
 	*/
-	@:overload public function new(selected : Bool, state : Int) : Void;
+	@:overload @:public public function new(selected : Bool, state : Int) : Void;
 	
 	/**
 	* Constructs an input method highlight record.
@@ -76,7 +76,7 @@ extern class InputMethodHighlight
 	* @see InputMethodHighlight#CONVERTED_TEXT
 	* @exception IllegalArgumentException if a state other than RAW_TEXT or CONVERTED_TEXT is given
 	*/
-	@:overload public function new(selected : Bool, state : Int, variation : Int) : Void;
+	@:overload @:public public function new(selected : Bool, state : Int, variation : Int) : Void;
 	
 	/**
 	* Constructs an input method highlight record.
@@ -90,12 +90,12 @@ extern class InputMethodHighlight
 	* @exception IllegalArgumentException if a state other than RAW_TEXT or CONVERTED_TEXT is given
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(selected : Bool, state : Int, variation : Int, style : java.util.Map<java.awt.font.TextAttribute, Dynamic>) : Void;
+	@:require(java3) @:overload @:public public function new(selected : Bool, state : Int, variation : Int, style : java.util.Map<java.awt.font.TextAttribute, Dynamic>) : Void;
 	
 	/**
 	* Returns whether the text range is selected.
 	*/
-	@:overload public function isSelected() : Bool;
+	@:overload @:public public function isSelected() : Bool;
 	
 	/**
 	* Returns the conversion state of the text range.
@@ -103,18 +103,18 @@ extern class InputMethodHighlight
 	* @see InputMethodHighlight#RAW_TEXT
 	* @see InputMethodHighlight#CONVERTED_TEXT
 	*/
-	@:overload public function getState() : Int;
+	@:overload @:public public function getState() : Int;
 	
 	/**
 	* Returns the variation of the text range.
 	*/
-	@:overload public function getVariation() : Int;
+	@:overload @:public public function getVariation() : Int;
 	
 	/**
 	* Returns the rendering style attributes for the text range, or null.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getStyle() : java.util.Map<java.awt.font.TextAttribute, Dynamic>;
+	@:require(java3) @:overload @:public public function getStyle() : java.util.Map<java.awt.font.TextAttribute, Dynamic>;
 	
 	
 }

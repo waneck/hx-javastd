@@ -25,61 +25,61 @@ package sun.security.pkcs;
 */
 extern class PKCS9Attribute implements sun.security.util.DerEncoder
 {
-	public static var EMAIL_ADDRESS_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var EMAIL_ADDRESS_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var UNSTRUCTURED_NAME_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var UNSTRUCTURED_NAME_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var CONTENT_TYPE_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var CONTENT_TYPE_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var MESSAGE_DIGEST_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var MESSAGE_DIGEST_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var SIGNING_TIME_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var SIGNING_TIME_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var COUNTERSIGNATURE_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var COUNTERSIGNATURE_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var CHALLENGE_PASSWORD_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var CHALLENGE_PASSWORD_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var UNSTRUCTURED_ADDRESS_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var UNSTRUCTURED_ADDRESS_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var EXTENDED_CERTIFICATE_ATTRIBUTES_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var EXTENDED_CERTIFICATE_ATTRIBUTES_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var ISSUER_SERIALNUMBER_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var ISSUER_SERIALNUMBER_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var EXTENSION_REQUEST_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var EXTENSION_REQUEST_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var SMIME_CAPABILITY_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var SMIME_CAPABILITY_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var SIGNING_CERTIFICATE_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var SIGNING_CERTIFICATE_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var SIGNATURE_TIMESTAMP_TOKEN_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var SIGNATURE_TIMESTAMP_TOKEN_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var EMAIL_ADDRESS_STR(default, null) : String;
+	@:public @:static @:final public static var EMAIL_ADDRESS_STR(default, null) : String;
 	
-	public static var UNSTRUCTURED_NAME_STR(default, null) : String;
+	@:public @:static @:final public static var UNSTRUCTURED_NAME_STR(default, null) : String;
 	
-	public static var CONTENT_TYPE_STR(default, null) : String;
+	@:public @:static @:final public static var CONTENT_TYPE_STR(default, null) : String;
 	
-	public static var MESSAGE_DIGEST_STR(default, null) : String;
+	@:public @:static @:final public static var MESSAGE_DIGEST_STR(default, null) : String;
 	
-	public static var SIGNING_TIME_STR(default, null) : String;
+	@:public @:static @:final public static var SIGNING_TIME_STR(default, null) : String;
 	
-	public static var COUNTERSIGNATURE_STR(default, null) : String;
+	@:public @:static @:final public static var COUNTERSIGNATURE_STR(default, null) : String;
 	
-	public static var CHALLENGE_PASSWORD_STR(default, null) : String;
+	@:public @:static @:final public static var CHALLENGE_PASSWORD_STR(default, null) : String;
 	
-	public static var UNSTRUCTURED_ADDRESS_STR(default, null) : String;
+	@:public @:static @:final public static var UNSTRUCTURED_ADDRESS_STR(default, null) : String;
 	
-	public static var EXTENDED_CERTIFICATE_ATTRIBUTES_STR(default, null) : String;
+	@:public @:static @:final public static var EXTENDED_CERTIFICATE_ATTRIBUTES_STR(default, null) : String;
 	
-	public static var ISSUER_SERIALNUMBER_STR(default, null) : String;
+	@:public @:static @:final public static var ISSUER_SERIALNUMBER_STR(default, null) : String;
 	
-	public static var EXTENSION_REQUEST_STR(default, null) : String;
+	@:public @:static @:final public static var EXTENSION_REQUEST_STR(default, null) : String;
 	
-	public static var SMIME_CAPABILITY_STR(default, null) : String;
+	@:public @:static @:final public static var SMIME_CAPABILITY_STR(default, null) : String;
 	
-	public static var SIGNING_CERTIFICATE_STR(default, null) : String;
+	@:public @:static @:final public static var SIGNING_CERTIFICATE_STR(default, null) : String;
 	
-	public static var SIGNATURE_TIMESTAMP_TOKEN_STR(default, null) : String;
+	@:public @:static @:final public static var SIGNATURE_TIMESTAMP_TOKEN_STR(default, null) : String;
 	
 	/**
 	* Construct an attribute object from the attribute's OID and
@@ -93,7 +93,7 @@ extern class PKCS9Attribute implements sun.security.util.DerEncoder
 	* must have for a given attribute.
 	*
 	*/
-	@:overload public function new(oid : sun.security.util.ObjectIdentifier, value : Dynamic) : Void;
+	@:overload @:public public function new(oid : sun.security.util.ObjectIdentifier, value : Dynamic) : Void;
 	
 	/**
 	* Construct an attribute object from the attribute's name and
@@ -111,7 +111,7 @@ extern class PKCS9Attribute implements sun.security.util.DerEncoder
 	* if the <code>name</code> is not recognized of the
 	* <code>value</code> has the wrong type.
 	*/
-	@:overload public function new(name : String, value : Dynamic) : Void;
+	@:overload @:public public function new(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Construct a PKCS9Attribute from its encoding on an input
@@ -120,7 +120,7 @@ extern class PKCS9Attribute implements sun.security.util.DerEncoder
 	* @param val the DerValue representing the DER encoding of the attribute.
 	* @exception IOException on parsing error.
 	*/
-	@:overload public function new(derVal : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(derVal : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Write the DER encoding of this attribute to an output stream.
@@ -130,7 +130,7 @@ extern class PKCS9Attribute implements sun.security.util.DerEncoder
 	* <code>PrintableString</code>s, without checking whether they
 	* should be encoded as <code>T61String</code>s.
 	*/
-	@:overload public function derEncode(out : java.io.OutputStream) : Void;
+	@:overload @:public public function derEncode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Get the value of this attribute.  If the attribute is
@@ -142,39 +142,39 @@ extern class PKCS9Attribute implements sun.security.util.DerEncoder
 	* <a href=#classTable>table</a> gives the class of the value returned,
 	* depending on the type of this attribute.
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	/**
 	* Show whether this attribute is single-valued.
 	*/
-	@:overload public function isSingleValued() : Bool;
+	@:overload @:public public function isSingleValued() : Bool;
 	
 	/**
 	*  Return the OID of this attribute.
 	*/
-	@:overload public function getOID() : sun.security.util.ObjectIdentifier;
+	@:overload @:public public function getOID() : sun.security.util.ObjectIdentifier;
 	
 	/**
 	*  Return the name of this attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return the OID for a given attribute name or null if we don't recognize
 	* the name.
 	*/
-	@:native('getOID') @:overload public static function _getOID(name : String) : sun.security.util.ObjectIdentifier;
+	@:native('getOID') @:overload @:public @:static public static function _getOID(name : String) : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Return the attribute name for a given OID or null if we don't recognize
 	* the oid.
 	*/
-	@:native('getName') @:overload public static function _getName(oid : sun.security.util.ObjectIdentifier) : String;
+	@:native('getName') @:overload @:public @:static public static function _getName(oid : sun.security.util.ObjectIdentifier) : String;
 	
 	/**
 	* Returns a string representation of this attribute.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

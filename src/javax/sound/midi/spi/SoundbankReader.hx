@@ -33,7 +33,7 @@ extern class SoundbankReader
 	* valid MIDI soundbank data recognized by this soundbank reader
 	* @throws IOException if an I/O error occurs
 	*/
-	@:overload @:abstract public function getSoundbank(url : java.net.URL) : javax.sound.midi.Soundbank;
+	@:overload @:public @:abstract public function getSoundbank(url : java.net.URL) : javax.sound.midi.Soundbank;
 	
 	/**
 	* Obtains a soundbank object from the <code>InputStream</code> provided.
@@ -43,7 +43,7 @@ extern class SoundbankReader
 	* valid MIDI soundbank data recognized by this soundbank reader
 	* @throws IOException if an I/O error occurs
 	*/
-	@:overload @:abstract public function getSoundbank(stream : java.io.InputStream) : javax.sound.midi.Soundbank;
+	@:overload @:public @:abstract public function getSoundbank(stream : java.io.InputStream) : javax.sound.midi.Soundbank;
 	
 	/**
 	* Obtains a soundbank object from the <code>File</code> provided.
@@ -53,7 +53,7 @@ extern class SoundbankReader
 	* valid MIDI soundbank data recognized by this soundbank reader
 	* @throws IOException if an I/O error occurs
 	*/
-	@:overload @:abstract public function getSoundbank(file : java.io.File) : javax.sound.midi.Soundbank;
+	@:overload @:public @:abstract public function getSoundbank(file : java.io.File) : javax.sound.midi.Soundbank;
 	
 	
 }

@@ -54,7 +54,7 @@ package sun.security.provider.certpath;
 	* @throws ClassCastException if any of the elements in the <code>Set</code>
 	* are not of type <code>java.security.cert.TrustAnchor</code>
 	*/
-	@:overload public function new(trustAnchors : java.util.Set<java.security.cert.TrustAnchor>, targetConstraints : java.security.cert.CertSelector) : Void;
+	@:overload @:public public function new(trustAnchors : java.util.Set<java.security.cert.TrustAnchor>, targetConstraints : java.security.cert.CertSelector) : Void;
 	
 	/**
 	* Creates an instance of <code>SunCertPathBuilderParameters</code> that
@@ -70,14 +70,14 @@ package sun.security.provider.certpath;
 	* not contain at least one trusted certificate entry
 	* @throws NullPointerException if the keystore is <code>null</code>
 	*/
-	@:overload public function new(keystore : java.security.KeyStore, targetConstraints : java.security.cert.CertSelector) : Void;
+	@:overload @:public public function new(keystore : java.security.KeyStore, targetConstraints : java.security.cert.CertSelector) : Void;
 	
 	/**
 	* Returns the value of the buildForward flag.
 	*
 	* @return the value of the buildForward flag
 	*/
-	@:overload public function getBuildForward() : Bool;
+	@:overload @:public public function getBuildForward() : Bool;
 	
 	/**
 	* Sets the value of the buildForward flag. If true, paths
@@ -87,14 +87,14 @@ package sun.security.provider.certpath;
 	*
 	* @param buildForward the value of the buildForward flag
 	*/
-	@:overload public function setBuildForward(buildForward : Bool) : Void;
+	@:overload @:public public function setBuildForward(buildForward : Bool) : Void;
 	
 	/**
 	* Returns a formatted string describing the parameters.
 	*
 	* @return a formatted string describing the parameters.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

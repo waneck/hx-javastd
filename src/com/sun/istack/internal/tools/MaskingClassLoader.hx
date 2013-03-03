@@ -25,15 +25,15 @@ package com.sun.istack.internal.tools;
 */
 extern class MaskingClassLoader extends java.lang.ClassLoader
 {
-	@:overload public function new(masks : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(masks : java.NativeArray<String>) : Void;
 	
-	@:overload public function new(masks : java.util.Collection<String>) : Void;
+	@:overload @:public public function new(masks : java.util.Collection<String>) : Void;
 	
-	@:overload public function new(parent : java.lang.ClassLoader, masks : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(parent : java.lang.ClassLoader, masks : java.NativeArray<String>) : Void;
 	
-	@:overload public function new(parent : java.lang.ClassLoader, masks : java.util.Collection<String>) : Void;
+	@:overload @:public public function new(parent : java.lang.ClassLoader, masks : java.util.Collection<String>) : Void;
 	
-	@:overload @:synchronized private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
+	@:overload @:protected @:synchronized override private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
 	
 	
 }

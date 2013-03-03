@@ -36,19 +36,19 @@ extern class DeploymentDescriptorParser<A>
 	* @param adapterFactory
 	*      Creates {@link HttpAdapter} (or its derived class.)
 	*/
-	@:overload public function new(cl : java.lang.ClassLoader, loader : com.sun.xml.internal.ws.transport.http.ResourceLoader, container : com.sun.xml.internal.ws.api.server.Container, adapterFactory : com.sun.xml.internal.ws.transport.http.DeploymentDescriptorParser.DeploymentDescriptorParser_AdapterFactory<A>) : Void;
+	@:overload @:public public function new(cl : java.lang.ClassLoader, loader : com.sun.xml.internal.ws.transport.http.ResourceLoader, container : com.sun.xml.internal.ws.api.server.Container, adapterFactory : com.sun.xml.internal.ws.transport.http.DeploymentDescriptorParser.DeploymentDescriptorParser_AdapterFactory<A>) : Void;
 	
 	/**
 	* Parses the {@code sun-jaxws.xml} file and configures
 	* a set of {@link HttpAdapter}s.
 	*/
-	@:overload public function parse(systemId : String, is : java.io.InputStream) : java.util.List<A>;
+	@:overload @:public public function parse(systemId : String, is : java.io.InputStream) : java.util.List<A>;
 	
 	/**
 	* Parses the {@code sun-jaxws.xml} file and configures
 	* a set of {@link HttpAdapter}s.
 	*/
-	@:overload public function parse(f : java.io.File) : java.util.List<A>;
+	@:overload @:public public function parse(f : java.io.File) : java.util.List<A>;
 	
 	/**
 	* JSR-109 defines short-form tokens for standard binding Ids. These are
@@ -60,17 +60,17 @@ extern class DeploymentDescriptorParser<A>
 	*
 	* @return returns corresponding API's binding ID or the same lexical
 	*/
-	@:overload public static function getBindingIdForToken(lexical : String) : String;
+	@:overload @:public @:static public static function getBindingIdForToken(lexical : String) : String;
 	
-	@:overload private function getAttribute(attrs : com.sun.xml.internal.ws.streaming.Attributes, name : String) : String;
+	@:overload @:protected private function getAttribute(attrs : com.sun.xml.internal.ws.streaming.Attributes, name : String) : String;
 	
-	@:overload private function getQNameAttribute(attrs : com.sun.xml.internal.ws.streaming.Attributes, name : String) : javax.xml.namespace.QName;
+	@:overload @:protected private function getQNameAttribute(attrs : com.sun.xml.internal.ws.streaming.Attributes, name : String) : javax.xml.namespace.QName;
 	
-	@:overload private function getNonEmptyAttribute(reader : javax.xml.stream.XMLStreamReader, attrs : com.sun.xml.internal.ws.streaming.Attributes, name : String) : String;
+	@:overload @:protected private function getNonEmptyAttribute(reader : javax.xml.stream.XMLStreamReader, attrs : com.sun.xml.internal.ws.streaming.Attributes, name : String) : String;
 	
-	@:overload private function getMandatoryAttribute(reader : javax.xml.stream.XMLStreamReader, attrs : com.sun.xml.internal.ws.streaming.Attributes, name : String) : String;
+	@:overload @:protected private function getMandatoryAttribute(reader : javax.xml.stream.XMLStreamReader, attrs : com.sun.xml.internal.ws.streaming.Attributes, name : String) : String;
 	
-	@:overload private function getMandatoryNonEmptyAttribute(reader : javax.xml.stream.XMLStreamReader, attributes : com.sun.xml.internal.ws.streaming.Attributes, name : String) : String;
+	@:overload @:protected private function getMandatoryNonEmptyAttribute(reader : javax.xml.stream.XMLStreamReader, attributes : com.sun.xml.internal.ws.streaming.Attributes, name : String) : String;
 	
 	/**
 	* Parses the handler and role information and sets it
@@ -78,49 +78,49 @@ extern class DeploymentDescriptorParser<A>
 	* @return true if <handler-chains> element present in DD
 	*         false otherwise.
 	*/
-	@:overload private function setHandlersAndRoles(binding : com.sun.xml.internal.ws.api.WSBinding, reader : javax.xml.stream.XMLStreamReader, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName) : Bool;
+	@:overload @:protected private function setHandlersAndRoles(binding : com.sun.xml.internal.ws.api.WSBinding, reader : javax.xml.stream.XMLStreamReader, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName) : Bool;
 	
-	@:overload private static function ensureNoContent(reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:protected @:static private static function ensureNoContent(reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload private static function fail(key : String, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:protected @:static private static function fail(key : String, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload private static function failWithFullName(key : String, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:protected @:static private static function failWithFullName(key : String, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload private static function failWithLocalName(key : String, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:protected @:static private static function failWithLocalName(key : String, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload private static function failWithLocalName(key : String, reader : javax.xml.stream.XMLStreamReader, arg : String) : Void;
+	@:overload @:protected @:static private static function failWithLocalName(key : String, reader : javax.xml.stream.XMLStreamReader, arg : String) : Void;
 	
-	@:overload private function loadClass(name : String) : Class<Dynamic>;
+	@:overload @:protected private function loadClass(name : String) : Class<Dynamic>;
 	
-	public static var NS_RUNTIME(default, null) : String;
+	@:public @:static @:final public static var NS_RUNTIME(default, null) : String;
 	
-	public static var JAXWS_WSDL_DD_DIR(default, null) : String;
+	@:public @:static @:final public static var JAXWS_WSDL_DD_DIR(default, null) : String;
 	
-	public static var QNAME_ENDPOINTS(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var QNAME_ENDPOINTS(default, null) : javax.xml.namespace.QName;
 	
-	public static var QNAME_ENDPOINT(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var QNAME_ENDPOINT(default, null) : javax.xml.namespace.QName;
 	
-	public static var ATTR_VERSION(default, null) : String;
+	@:public @:static @:final public static var ATTR_VERSION(default, null) : String;
 	
-	public static var ATTR_NAME(default, null) : String;
+	@:public @:static @:final public static var ATTR_NAME(default, null) : String;
 	
-	public static var ATTR_IMPLEMENTATION(default, null) : String;
+	@:public @:static @:final public static var ATTR_IMPLEMENTATION(default, null) : String;
 	
-	public static var ATTR_WSDL(default, null) : String;
+	@:public @:static @:final public static var ATTR_WSDL(default, null) : String;
 	
-	public static var ATTR_SERVICE(default, null) : String;
+	@:public @:static @:final public static var ATTR_SERVICE(default, null) : String;
 	
-	public static var ATTR_PORT(default, null) : String;
+	@:public @:static @:final public static var ATTR_PORT(default, null) : String;
 	
-	public static var ATTR_URL_PATTERN(default, null) : String;
+	@:public @:static @:final public static var ATTR_URL_PATTERN(default, null) : String;
 	
-	public static var ATTR_ENABLE_MTOM(default, null) : String;
+	@:public @:static @:final public static var ATTR_ENABLE_MTOM(default, null) : String;
 	
-	public static var ATTR_MTOM_THRESHOLD_VALUE(default, null) : String;
+	@:public @:static @:final public static var ATTR_MTOM_THRESHOLD_VALUE(default, null) : String;
 	
-	public static var ATTR_BINDING(default, null) : String;
+	@:public @:static @:final public static var ATTR_BINDING(default, null) : String;
 	
-	public static var ATTRVALUE_VERSION_1_0(default, null) : String;
+	@:public @:static @:final public static var ATTRVALUE_VERSION_1_0(default, null) : String;
 	
 	
 }

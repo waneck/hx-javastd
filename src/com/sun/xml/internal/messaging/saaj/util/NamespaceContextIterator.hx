@@ -29,23 +29,23 @@ package com.sun.xml.internal.messaging.saaj.util;
 */
 extern class NamespaceContextIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function new(context : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(context : org.w3c.dom.Node) : Void;
 	
-	@:overload public function new(context : org.w3c.dom.Node, traverseStack : Bool) : Void;
+	@:overload @:public public function new(context : org.w3c.dom.Node, traverseStack : Bool) : Void;
 	
-	@:overload private function findContextAttributes() : Void;
+	@:overload @:protected private function findContextAttributes() : Void;
 	
-	@:overload private function findNext() : Void;
+	@:overload @:protected private function findNext() : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function nextNamespaceAttr() : org.w3c.dom.Attr;
+	@:overload @:public public function nextNamespaceAttr() : org.w3c.dom.Attr;
 	
-	@:overload private function getNext() : org.w3c.dom.Attr;
+	@:overload @:protected private function getNext() : org.w3c.dom.Attr;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

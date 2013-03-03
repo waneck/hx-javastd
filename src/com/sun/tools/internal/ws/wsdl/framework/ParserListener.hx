@@ -30,9 +30,9 @@ extern interface ParserListener
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function ignoringExtension(entity : com.sun.tools.internal.ws.wsdl.framework.Entity, name : javax.xml.namespace.QName, parent : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function ignoringExtension(entity : com.sun.tools.internal.ws.wsdl.framework.Entity, name : javax.xml.namespace.QName, parent : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function doneParsingEntity(element : javax.xml.namespace.QName, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function doneParsingEntity(element : javax.xml.namespace.QName, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
 	
 }

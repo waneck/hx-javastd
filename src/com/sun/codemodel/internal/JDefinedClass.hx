@@ -28,12 +28,12 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	/**
 	* Client-app spcific metadata associated with this user-created class.
 	*/
-	public var metadata : Dynamic;
+	@:public public var metadata : Dynamic;
 	
 	/**
 	* Returns true if this is an anonymous class.
 	*/
-	@:overload @:final public function isAnonymous() : Bool;
+	@:overload @:public @:final public function isAnonymous() : Bool;
 	
 	/**
 	* This class extends the specifed class.
@@ -43,14 +43,14 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*
 	* @return This class
 	*/
-	@:overload public function _extends(superClass : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _extends(superClass : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function _extends(superClass : Class<Dynamic>) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _extends(superClass : Class<Dynamic>) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Returns the class extended by this class.
 	*/
-	@:overload override public function _extends() : com.sun.codemodel.internal.JClass;
+	@:overload @:public override public function _extends() : com.sun.codemodel.internal.JClass;
 	
 	/**
 	* This class implements the specifed interface.
@@ -60,15 +60,15 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*
 	* @return This class
 	*/
-	@:overload public function _implements(iface : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _implements(iface : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function _implements(iface : Class<Dynamic>) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _implements(iface : Class<Dynamic>) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Returns an iterator that walks the nested classes defined in this
 	* class.
 	*/
-	@:overload override public function _implements() : java.util.Iterator<com.sun.codemodel.internal.JClass>;
+	@:overload @:public override public function _implements() : java.util.Iterator<com.sun.codemodel.internal.JClass>;
 	
 	/**
 	* JClass name accessor.
@@ -79,7 +79,7 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*
 	* @return Name of this class
 	*/
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
 	/**
 	* If the named enum already exists, the reference to it is returned.
@@ -91,18 +91,18 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	* @return
 	*      The generated type-safe enum constant.
 	*/
-	@:overload public function enumConstant(name : String) : com.sun.codemodel.internal.JEnumConstant;
+	@:overload @:public public function enumConstant(name : String) : com.sun.codemodel.internal.JEnumConstant;
 	
 	/**
 	* Gets the fully qualified name of this class.
 	*/
-	@:overload override public function fullName() : String;
+	@:overload @:public override public function fullName() : String;
 	
-	@:overload override public function binaryName() : String;
+	@:overload @:public override public function binaryName() : String;
 	
-	@:overload override public function isInterface() : Bool;
+	@:overload @:public override public function isInterface() : Bool;
 	
-	@:overload override public function isAbstract() : Bool;
+	@:overload @:public override public function isAbstract() : Bool;
 	
 	/**
 	* Adds a field to the list of field members of this JDefinedClass.
@@ -118,9 +118,9 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*
 	* @return Newly generated field
 	*/
-	@:overload public function field(mods : Int, type : com.sun.codemodel.internal.JType, name : String) : com.sun.codemodel.internal.JFieldVar;
+	@:overload @:public public function field(mods : Int, type : com.sun.codemodel.internal.JType, name : String) : com.sun.codemodel.internal.JFieldVar;
 	
-	@:overload public function field(mods : Int, type : Class<Dynamic>, name : String) : com.sun.codemodel.internal.JFieldVar;
+	@:overload @:public public function field(mods : Int, type : Class<Dynamic>, name : String) : com.sun.codemodel.internal.JFieldVar;
 	
 	/**
 	* Adds a field to the list of field members of this JDefinedClass.
@@ -136,13 +136,13 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*
 	* @return Newly generated field
 	*/
-	@:overload public function field(mods : Int, type : com.sun.codemodel.internal.JType, name : String, init : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JFieldVar;
+	@:overload @:public public function field(mods : Int, type : com.sun.codemodel.internal.JType, name : String, init : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JFieldVar;
 	
 	/**  This method indicates if the interface
 	*   is an annotationTypeDeclaration
 	*
 	*/
-	@:overload public function isAnnotationTypeDeclaration() : Bool;
+	@:overload @:public public function isAnnotationTypeDeclaration() : Bool;
 	
 	/**
 	* Add an annotationType Declaration to this package
@@ -154,7 +154,7 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*      When the specified class/interface was already created.
 
 	*/
-	@:overload public function _annotationTypeDeclaration(name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _annotationTypeDeclaration(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Add a public enum to this package
@@ -166,7 +166,7 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*      When the specified class/interface was already created.
 
 	*/
-	@:overload public function _enum(name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _enum(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Add a public enum to this package
@@ -180,11 +180,11 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*      When the specified class/interface was already created.
 
 	*/
-	@:overload public function _enum(mods : Int, name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _enum(mods : Int, name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function getClassType() : com.sun.codemodel.internal.ClassType;
+	@:overload @:public public function getClassType() : com.sun.codemodel.internal.ClassType;
 	
-	@:overload public function field(mods : Int, type : Class<Dynamic>, name : String, init : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JFieldVar;
+	@:overload @:public public function field(mods : Int, type : Class<Dynamic>, name : String, init : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JFieldVar;
 	
 	/**
 	* Returns all the fields declred in this class.
@@ -192,7 +192,7 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*
 	* @return always non-null.
 	*/
-	@:overload public function fields() : java.util.Map<String, com.sun.codemodel.internal.JFieldVar>;
+	@:overload @:public public function fields() : java.util.Map<String, com.sun.codemodel.internal.JFieldVar>;
 	
 	/**
 	* Removes a {@link JFieldVar} from this class.
@@ -200,7 +200,7 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	* @throws IllegalArgumentException
 	*      if the given field is not a field on this class.
 	*/
-	@:overload public function removeField(field : com.sun.codemodel.internal.JFieldVar) : Void;
+	@:overload @:public public function removeField(field : com.sun.codemodel.internal.JFieldVar) : Void;
 	
 	/**
 	* Creates, if necessary, and returns the static initializer
@@ -208,7 +208,7 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*
 	* @return JBlock containing initialization statements for this class
 	*/
-	@:overload public function init() : com.sun.codemodel.internal.JBlock;
+	@:overload @:public public function init() : com.sun.codemodel.internal.JBlock;
 	
 	/**
 	* Adds a constructor to this class.
@@ -216,12 +216,12 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	* @param mods
 	*        Modifiers for this constructor
 	*/
-	@:overload public function constructor(mods : Int) : com.sun.codemodel.internal.JMethod;
+	@:overload @:public public function constructor(mods : Int) : com.sun.codemodel.internal.JMethod;
 	
 	/**
 	* Returns an iterator that walks the constructors defined in this class.
 	*/
-	@:overload public function constructors() : java.util.Iterator<com.sun.codemodel.internal.JMethod>;
+	@:overload @:public public function constructors() : java.util.Iterator<com.sun.codemodel.internal.JMethod>;
 	
 	/**
 	* Looks for a method that has the specified method signature
@@ -230,7 +230,7 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	* @return
 	*      null if not found.
 	*/
-	@:overload public function getConstructor(argTypes : java.NativeArray<com.sun.codemodel.internal.JType>) : com.sun.codemodel.internal.JMethod;
+	@:overload @:public public function getConstructor(argTypes : java.NativeArray<com.sun.codemodel.internal.JType>) : com.sun.codemodel.internal.JMethod;
 	
 	/**
 	* Add a method to the list of method members of this JDefinedClass instance.
@@ -246,14 +246,14 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*
 	* @return Newly generated JMethod
 	*/
-	@:overload public function method(mods : Int, type : com.sun.codemodel.internal.JType, name : String) : com.sun.codemodel.internal.JMethod;
+	@:overload @:public public function method(mods : Int, type : com.sun.codemodel.internal.JType, name : String) : com.sun.codemodel.internal.JMethod;
 	
-	@:overload public function method(mods : Int, type : Class<Dynamic>, name : String) : com.sun.codemodel.internal.JMethod;
+	@:overload @:public public function method(mods : Int, type : Class<Dynamic>, name : String) : com.sun.codemodel.internal.JMethod;
 	
 	/**
 	* Returns the set of methods defined in this class.
 	*/
-	@:overload public function methods() : java.util.Collection<com.sun.codemodel.internal.JMethod>;
+	@:overload @:public public function methods() : java.util.Collection<com.sun.codemodel.internal.JMethod>;
 	
 	/**
 	* Looks for a method that has the specified method signature
@@ -262,13 +262,13 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	* @return
 	*      null if not found.
 	*/
-	@:overload public function getMethod(name : String, argTypes : java.NativeArray<com.sun.codemodel.internal.JType>) : com.sun.codemodel.internal.JMethod;
+	@:overload @:public public function getMethod(name : String, argTypes : java.NativeArray<com.sun.codemodel.internal.JType>) : com.sun.codemodel.internal.JMethod;
 	
-	@:overload public function isClass() : Bool;
+	@:overload @:public public function isClass() : Bool;
 	
-	@:overload public function isPackage() : Bool;
+	@:overload @:public public function isPackage() : Bool;
 	
-	@:overload public function getPackage() : com.sun.codemodel.internal.JPackage;
+	@:overload @:public public function getPackage() : com.sun.codemodel.internal.JPackage;
 	
 	/**
 	* Add a new nested class to this class.
@@ -281,21 +281,21 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*
 	* @return Newly generated class
 	*/
-	@:overload public function _class(mods : Int, name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _class(mods : Int, name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @deprecated
 	*/
-	@:overload public function _class(mods : Int, name : String, isInterface : Bool) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _class(mods : Int, name : String, isInterface : Bool) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function _class(mods : Int, name : String, classTypeVal : com.sun.codemodel.internal.ClassType) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _class(mods : Int, name : String, classTypeVal : com.sun.codemodel.internal.ClassType) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Add a new public nested class to this class.
 	*/
-	@:overload public function _class(name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _class(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Add an interface to this package.
@@ -308,12 +308,12 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*
 	* @return Newly generated interface
 	*/
-	@:overload public function _interface(mods : Int, name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _interface(mods : Int, name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Adds a public interface to this package.
 	*/
-	@:overload public function _interface(name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _interface(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Creates, if necessary, and returns the class javadoc for this
@@ -321,7 +321,7 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*
 	* @return JDocComment containing javadocs for this class
 	*/
-	@:overload public function javadoc() : com.sun.codemodel.internal.JDocComment;
+	@:overload @:public public function javadoc() : com.sun.codemodel.internal.JDocComment;
 	
 	/**
 	* Mark this file as hidden, so that this file won't be
@@ -331,29 +331,29 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	* This feature could be used to generate code that refers
 	* to class X, without actually generating X.java.
 	*/
-	@:overload public function hide() : Void;
+	@:overload @:public public function hide() : Void;
 	
-	@:overload public function isHidden() : Bool;
+	@:overload @:public public function isHidden() : Bool;
 	
 	/**
 	* Returns an iterator that walks the nested classes defined in this
 	* class.
 	*/
-	@:overload @:final public function classes() : java.util.Iterator<com.sun.codemodel.internal.JDefinedClass>;
+	@:overload @:public @:final public function classes() : java.util.Iterator<com.sun.codemodel.internal.JDefinedClass>;
 	
 	/**
 	* Returns all the nested classes defined in this class.
 	*/
-	@:overload @:final public function listClasses() : java.NativeArray<com.sun.codemodel.internal.JClass>;
+	@:overload @:public @:final public function listClasses() : java.NativeArray<com.sun.codemodel.internal.JClass>;
 	
-	@:overload override public function outer() : com.sun.codemodel.internal.JClass;
+	@:overload @:public override public function outer() : com.sun.codemodel.internal.JClass;
 	
-	@:overload public function declare(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function declare(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	/**
 	* prints the body of a class.
 	*/
-	@:overload private function declareBody(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:protected private function declareBody(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	/**
 	* Places the given string directly inside the generated class.
@@ -362,47 +362,47 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	* generated by CodeModel.
 	* This method should be used only as the last resort.
 	*/
-	@:overload public function direct(string : String) : Void;
+	@:overload @:public public function direct(string : String) : Void;
 	
-	@:overload @:final override public function _package() : com.sun.codemodel.internal.JPackage;
+	@:overload @:public @:final override public function _package() : com.sun.codemodel.internal.JPackage;
 	
-	@:overload @:final public function parentContainer() : com.sun.codemodel.internal.JClassContainer;
+	@:overload @:public @:final public function parentContainer() : com.sun.codemodel.internal.JClassContainer;
 	
-	@:overload public function generify(name : String) : com.sun.codemodel.internal.JTypeVar;
+	@:overload @:public public function generify(name : String) : com.sun.codemodel.internal.JTypeVar;
 	
-	@:overload public function generify(name : String, bound : Class<Dynamic>) : com.sun.codemodel.internal.JTypeVar;
+	@:overload @:public public function generify(name : String, bound : Class<Dynamic>) : com.sun.codemodel.internal.JTypeVar;
 	
-	@:overload public function generify(name : String, bound : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JTypeVar;
+	@:overload @:public public function generify(name : String, bound : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JTypeVar;
 	
-	@:overload override public function typeParams() : java.NativeArray<com.sun.codemodel.internal.JTypeVar>;
+	@:overload @:public override public function typeParams() : java.NativeArray<com.sun.codemodel.internal.JTypeVar>;
 	
-	@:overload override private function substituteParams(variables : java.NativeArray<com.sun.codemodel.internal.JTypeVar>, bindings : java.util.List<com.sun.codemodel.internal.JClass>) : com.sun.codemodel.internal.JClass;
-	
-	/** Adding ability to annotate a class
-	* @param clazz
-	*          The annotation class to annotate the class with
-	*/
-	@:overload public function annotate(clazz : Class<java.lang.annotation.Annotation>) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:protected override private function substituteParams(variables : java.NativeArray<com.sun.codemodel.internal.JTypeVar>, bindings : java.util.List<com.sun.codemodel.internal.JClass>) : com.sun.codemodel.internal.JClass;
 	
 	/** Adding ability to annotate a class
 	* @param clazz
 	*          The annotation class to annotate the class with
 	*/
-	@:overload public function annotate(clazz : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function annotate(clazz : Class<java.lang.annotation.Annotation>) : com.sun.codemodel.internal.JAnnotationUse;
 	
-	@:overload public function annotate2<W : com.sun.codemodel.internal.JAnnotationWriter<Dynamic>>(clazz : Class<W>) : W;
+	/** Adding ability to annotate a class
+	* @param clazz
+	*          The annotation class to annotate the class with
+	*/
+	@:overload @:public public function annotate(clazz : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JAnnotationUse;
+	
+	@:overload @:public public function annotate2<W : com.sun.codemodel.internal.JAnnotationWriter<Dynamic>>(clazz : Class<W>) : W;
 	
 	/**
 	* {@link JAnnotatable#annotations()}
 	*/
-	@:overload public function annotations() : java.util.Collection<com.sun.codemodel.internal.JAnnotationUse>;
+	@:overload @:public public function annotations() : java.util.Collection<com.sun.codemodel.internal.JAnnotationUse>;
 	
 	/**
 	* @return
 	*      the current modifiers of this class.
 	*      Always return non-null valid object.
 	*/
-	@:overload public function mods() : com.sun.codemodel.internal.JMods;
+	@:overload @:public public function mods() : com.sun.codemodel.internal.JMods;
 	
 	
 }

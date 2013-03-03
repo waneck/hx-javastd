@@ -53,7 +53,7 @@ extern interface AccessibleValue
 	* @return value of the object
 	* @see #setCurrentAccessibleValue
 	*/
-	@:overload public function getCurrentAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getCurrentAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Set the value of this object as a Number.
@@ -61,7 +61,7 @@ extern interface AccessibleValue
 	* @return True if the value was set; else False
 	* @see #getCurrentAccessibleValue
 	*/
-	@:overload public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
+	@:overload @:public public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
 	
 	/**
 	* Get the minimum value of this object as a Number.
@@ -70,7 +70,7 @@ extern interface AccessibleValue
 	* have a minimum value
 	* @see #getMaximumAccessibleValue
 	*/
-	@:overload public function getMinimumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMinimumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Get the maximum value of this object as a Number.
@@ -79,7 +79,7 @@ extern interface AccessibleValue
 	* have a maximum value
 	* @see #getMinimumAccessibleValue
 	*/
-	@:overload public function getMaximumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMaximumAccessibleValue() : java.lang.Number;
 	
 	
 }

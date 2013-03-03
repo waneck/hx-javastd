@@ -25,13 +25,13 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class TypeCodeOutputStream extends com.sun.corba.se.impl.encoding.EncapsOutputStream
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, littleEndian : Bool) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, littleEndian : Bool) : Void;
 	
-	@:overload override public function create_input_stream() : org.omg.CORBA.portable.InputStream;
+	@:overload @:public override public function create_input_stream() : org.omg.CORBA.portable.InputStream;
 	
-	@:overload public function setEnclosingOutputStream(enclosure : java.io.OutputStream) : Void;
+	@:overload @:public public function setEnclosingOutputStream(enclosure : java.io.OutputStream) : Void;
 	
 	/*
 	public boolean isEncapsulatedIn(TypeCodeOutputStream outerEnclosure) {
@@ -45,34 +45,34 @@ extern class TypeCodeOutputStream extends com.sun.corba.se.impl.encoding.EncapsO
 	return (enclosure == outerEnclosure);
 	}
 	*/
-	@:overload public function getTopLevelStream() : com.sun.corba.se.impl.encoding.TypeCodeOutputStream;
+	@:overload @:public public function getTopLevelStream() : com.sun.corba.se.impl.encoding.TypeCodeOutputStream;
 	
-	@:overload public function getTopLevelPosition() : Int;
+	@:overload @:public public function getTopLevelPosition() : Int;
 	
-	@:overload public function addIDAtPosition(id : String, position : Int) : Void;
+	@:overload @:public public function addIDAtPosition(id : String, position : Int) : Void;
 	
-	@:overload public function getPositionForID(id : String) : Int;
+	@:overload @:public public function getPositionForID(id : String) : Int;
 	
-	@:overload public function writeRawBuffer(s : org.omg.CORBA.portable.OutputStream, firstLong : Int) : Void;
+	@:overload @:public public function writeRawBuffer(s : org.omg.CORBA.portable.OutputStream, firstLong : Int) : Void;
 	
-	@:overload public function createEncapsulation(_orb : org.omg.CORBA.ORB) : com.sun.corba.se.impl.encoding.TypeCodeOutputStream;
+	@:overload @:public public function createEncapsulation(_orb : org.omg.CORBA.ORB) : com.sun.corba.se.impl.encoding.TypeCodeOutputStream;
 	
-	@:overload private function makeEncapsulation() : Void;
+	@:overload @:protected private function makeEncapsulation() : Void;
 	
-	@:overload public static function wrapOutputStream(os : java.io.OutputStream) : com.sun.corba.se.impl.encoding.TypeCodeOutputStream;
+	@:overload @:public @:static public static function wrapOutputStream(os : java.io.OutputStream) : com.sun.corba.se.impl.encoding.TypeCodeOutputStream;
 	
-	@:overload public function getPosition() : Int;
+	@:overload @:public public function getPosition() : Int;
 	
-	@:overload public function getRealIndex(index : Int) : Int;
+	@:overload @:public override public function getRealIndex(index : Int) : Int;
 	
 	/*
 	protected void printBuffer() {
 	super.printBuffer();
 	}
 */
-	@:overload public function getTypeCodeBuffer() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getTypeCodeBuffer() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function printTypeMap() : Void;
+	@:overload @:public public function printTypeMap() : Void;
 	
 	
 }

@@ -36,17 +36,17 @@ package sun.tools.jstatd;
 */
 @:require(java5) extern class RemoteHostImpl implements sun.jvmstat.monitor.remote.RemoteHost implements sun.jvmstat.monitor.event.HostListener
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function attachVm(lvmid : Int, mode : String) : sun.jvmstat.monitor.remote.RemoteVm;
+	@:overload @:public public function attachVm(lvmid : Int, mode : String) : sun.jvmstat.monitor.remote.RemoteVm;
 	
-	@:overload public function detachVm(rvm : sun.jvmstat.monitor.remote.RemoteVm) : Void;
+	@:overload @:public public function detachVm(rvm : sun.jvmstat.monitor.remote.RemoteVm) : Void;
 	
-	@:overload public function activeVms() : java.NativeArray<Int>;
+	@:overload @:public public function activeVms() : java.NativeArray<Int>;
 	
-	@:overload public function vmStatusChanged(ev : sun.jvmstat.monitor.event.VmStatusChangeEvent) : Void;
+	@:overload @:public public function vmStatusChanged(ev : sun.jvmstat.monitor.event.VmStatusChangeEvent) : Void;
 	
-	@:overload public function disconnected(ev : sun.jvmstat.monitor.event.HostEvent) : Void;
+	@:overload @:public public function disconnected(ev : sun.jvmstat.monitor.event.HostEvent) : Void;
 	
 	
 }

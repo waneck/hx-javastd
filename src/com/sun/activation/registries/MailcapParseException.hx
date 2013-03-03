@@ -28,9 +28,9 @@ package com.sun.activation.registries;
 */
 extern class MailcapParseException extends java.lang.Exception
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(inInfo : String) : Void;
+	@:overload @:public public function new(inInfo : String) : Void;
 	
 	
 }

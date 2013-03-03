@@ -44,7 +44,7 @@ extern class KrbApReq
 	* @throws IOException for any IO related errors
 	*          (e.g. socket operations)
 	*/
-	@:overload public function new(tgsCred : sun.security.krb5.Credentials, mutualRequired : Bool, useSubKey : Bool, useSeqNumber : Bool, cksum : sun.security.krb5.Checksum) : Void;
+	@:overload @:public public function new(tgsCred : sun.security.krb5.Credentials, mutualRequired : Bool, useSubKey : Bool, useSeqNumber : Bool, cksum : sun.security.krb5.Checksum) : Void;
 	
 	/**
 	* Contructs a AP-REQ message from the bytes received from the
@@ -56,13 +56,13 @@ extern class KrbApReq
 	* @throws IOException for any IO related errors
 	*          (e.g. socket operations)
 	*/
-	@:overload public function new(message : java.NativeArray<java.StdTypes.Int8>, keys : java.NativeArray<sun.security.krb5.EncryptionKey>, initiator : java.net.InetAddress) : Void;
+	@:overload @:public public function new(message : java.NativeArray<java.StdTypes.Int8>, keys : java.NativeArray<sun.security.krb5.EncryptionKey>, initiator : java.net.InetAddress) : Void;
 	
 	/**
 	* Returns the credentials that are contained in the ticket that
 	* is part of this this AP-REP.
 	*/
-	@:overload public function getCreds() : sun.security.krb5.Credentials;
+	@:overload @:public public function getCreds() : sun.security.krb5.Credentials;
 	
 	/**
 	* Returns true if mutual authentication is required and hence an
@@ -70,38 +70,38 @@ extern class KrbApReq
 	* @throws KrbException
 	* @throws IOException
 	*/
-	@:overload public function getMutualAuthRequired() : Bool;
+	@:overload @:public public function getMutualAuthRequired() : Bool;
 	
 	/**
 	* Returns the optional subkey stored in the Authenticator for
 	* this message. Returns null if none is stored.
 	*/
-	@:overload public function getSubKey() : sun.security.krb5.EncryptionKey;
+	@:overload @:public public function getSubKey() : sun.security.krb5.EncryptionKey;
 	
 	/**
 	* Returns the optional sequence number stored in the
 	* Authenticator for this message. Returns null if none is
 	* stored.
 	*/
-	@:overload public function getSeqNumber() : Null<Int>;
+	@:overload @:public public function getSeqNumber() : Null<Int>;
 	
 	/**
 	* Returns the optional Checksum stored in the
 	* Authenticator for this message. Returns null if none is
 	* stored.
 	*/
-	@:overload public function getChecksum() : sun.security.krb5.Checksum;
+	@:overload @:public public function getChecksum() : sun.security.krb5.Checksum;
 	
 	/**
 	* Returns the ASN.1 encoding that should be sent to the peer.
 	*/
-	@:overload public function getMessage() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getMessage() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the principal name of the client that generated this
 	* message.
 	*/
-	@:overload public function getClient() : sun.security.krb5.PrincipalName;
+	@:overload @:public public function getClient() : sun.security.krb5.PrincipalName;
 	
 	
 }

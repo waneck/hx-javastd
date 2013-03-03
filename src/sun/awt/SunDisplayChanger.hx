@@ -25,30 +25,30 @@ package sun.awt;
 */
 extern class SunDisplayChanger
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/*
 	* Add a DisplayChangeListener to this SunDisplayChanger so that it is
 	* notified when the display is changed.
 	*/
-	@:overload public function add(theListener : sun.awt.DisplayChangedListener) : Void;
+	@:overload @:public public function add(theListener : sun.awt.DisplayChangedListener) : Void;
 	
 	/*
 	* Remove the given DisplayChangeListener from this SunDisplayChanger.
 	*/
-	@:overload public function remove(theListener : sun.awt.DisplayChangedListener) : Void;
+	@:overload @:public public function remove(theListener : sun.awt.DisplayChangedListener) : Void;
 	
 	/*
 	* Notify our list of DisplayChangedListeners that a display change has
 	* taken place by calling their displayChanged() methods.
 	*/
-	@:overload public function notifyListeners() : Void;
+	@:overload @:public public function notifyListeners() : Void;
 	
 	/*
 	* Notify our list of DisplayChangedListeners that a palette change has
 	* taken place by calling their paletteChanged() methods.
 	*/
-	@:overload public function notifyPaletteChanged() : Void;
+	@:overload @:public public function notifyPaletteChanged() : Void;
 	
 	
 }

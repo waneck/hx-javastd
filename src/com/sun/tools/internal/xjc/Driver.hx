@@ -28,7 +28,7 @@ extern class Driver
 	/**
 	* Command Line Interface of XJC.
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	/**
 	* Performs schema compilation and prints the status/error into the
@@ -58,7 +58,7 @@ extern class Driver
 	*      All non-zero values indicate an error. The error message
 	*      will be sent to the specified PrintStream.
 	*/
-	@:overload public static function run(args : java.NativeArray<String>, status : java.io.PrintStream, out : java.io.PrintStream) : Int;
+	@:overload @:public @:static public static function run(args : java.NativeArray<String>, status : java.io.PrintStream, out : java.io.PrintStream) : Int;
 	
 	/**
 	* Performs schema compilation and prints the status/error into the
@@ -80,9 +80,9 @@ extern class Driver
 	*      All non-zero values indicate an error. The error message
 	*      will be sent to the specified PrintStream.
 	*/
-	@:overload public static function run(args : java.NativeArray<String>, listener : com.sun.tools.internal.xjc.XJCListener) : Int;
+	@:overload @:public @:static public static function run(args : java.NativeArray<String>, listener : com.sun.tools.internal.xjc.XJCListener) : Int;
 	
-	@:overload public static function getBuildID() : String;
+	@:overload @:public @:static public static function getBuildID() : String;
 	
 	/**
 	* Prints the usage screen and exits the process.
@@ -91,7 +91,7 @@ extern class Driver
 	*      If the parsing of options have started, set a partly populated
 	*      {@link Options} object.
 	*/
-	@:overload public static function usage(opts : com.sun.tools.internal.xjc.Options, privateUsage : Bool) : Void;
+	@:overload @:public @:static public static function usage(opts : com.sun.tools.internal.xjc.Options, privateUsage : Bool) : Void;
 	
 	
 }
@@ -119,13 +119,13 @@ extern class Driver
 @:native('com$sun$tools$internal$xjc$Driver$OptionsEx') @:internal extern class Driver_OptionsEx extends com.sun.tools.internal.xjc.Options
 {
 	/** Operation mode. */
-	private var mode : com.sun.tools.internal.xjc.Driver.Driver_Mode;
+	@:protected private var mode : com.sun.tools.internal.xjc.Driver.Driver_Mode;
 	
 	/** A switch that determines the behavior in the BGM mode. */
-	public var noNS : Bool;
+	@:public public var noNS : Bool;
 	
 	/** Parse XJC-specific options. */
-	@:overload override public function parseArgument(args : java.NativeArray<String>, i : Int) : Int;
+	@:overload @:public override public function parseArgument(args : java.NativeArray<String>, i : Int) : Int;
 	
 	
 }

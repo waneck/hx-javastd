@@ -25,19 +25,19 @@ package com.sun.tools.internal.xjc.util;
 */
 extern class CodeModelClassFactory
 {
-	@:overload public function new(_errorReceiver : com.sun.tools.internal.xjc.ErrorReceiver) : Void;
+	@:overload @:public public function new(_errorReceiver : com.sun.tools.internal.xjc.ErrorReceiver) : Void;
 	
-	@:overload public function createClass(parent : com.sun.codemodel.internal.JClassContainer, name : String, source : org.xml.sax.Locator) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function createClass(parent : com.sun.codemodel.internal.JClassContainer, name : String, source : org.xml.sax.Locator) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function createClass(parent : com.sun.codemodel.internal.JClassContainer, mod : Int, name : String, source : org.xml.sax.Locator) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function createClass(parent : com.sun.codemodel.internal.JClassContainer, mod : Int, name : String, source : org.xml.sax.Locator) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function createInterface(parent : com.sun.codemodel.internal.JClassContainer, name : String, source : org.xml.sax.Locator) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function createInterface(parent : com.sun.codemodel.internal.JClassContainer, name : String, source : org.xml.sax.Locator) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function createInterface(parent : com.sun.codemodel.internal.JClassContainer, mod : Int, name : String, source : org.xml.sax.Locator) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function createInterface(parent : com.sun.codemodel.internal.JClassContainer, mod : Int, name : String, source : org.xml.sax.Locator) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function createClass(parent : com.sun.codemodel.internal.JClassContainer, name : String, source : org.xml.sax.Locator, kind : com.sun.codemodel.internal.ClassType) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function createClass(parent : com.sun.codemodel.internal.JClassContainer, name : String, source : org.xml.sax.Locator, kind : com.sun.codemodel.internal.ClassType) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function createClass(parent : com.sun.codemodel.internal.JClassContainer, mod : Int, name : String, source : org.xml.sax.Locator, kind : com.sun.codemodel.internal.ClassType) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function createClass(parent : com.sun.codemodel.internal.JClassContainer, mod : Int, name : String, source : org.xml.sax.Locator, kind : com.sun.codemodel.internal.ClassType) : com.sun.codemodel.internal.JDefinedClass;
 	
 	
 }

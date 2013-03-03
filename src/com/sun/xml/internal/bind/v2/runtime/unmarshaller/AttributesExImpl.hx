@@ -32,9 +32,9 @@ extern class AttributesExImpl extends com.sun.xml.internal.bind.util.AttributesI
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function getData(idx : Int) : java.lang.CharSequence;
+	@:overload @:public public function getData(idx : Int) : java.lang.CharSequence;
 	
-	@:overload public function getData(nsUri : String, localName : String) : java.lang.CharSequence;
+	@:overload @:public public function getData(nsUri : String, localName : String) : java.lang.CharSequence;
 	
 	
 }

@@ -36,26 +36,26 @@ extern class TextSyntax implements java.io.Serializable implements java.lang.Clo
 	* @exception  NullPointerException
 	*     (unchecked exception) Thrown if <CODE>value</CODE> is null.
 	*/
-	@:overload private function new(value : String, locale : java.util.Locale) : Void;
+	@:overload @:protected private function new(value : String, locale : java.util.Locale) : Void;
 	
 	/**
 	* Returns this text attribute's text string.
 	* @return the text string.
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	/**
 	* Returns this text attribute's text string's natural language (locale).
 	* @return the locale
 	*/
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	/**
 	* Returns a hashcode for this text attribute.
 	*
 	* @return  A hashcode value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns whether this text attribute is equivalent to the passed in
@@ -78,7 +78,7 @@ extern class TextSyntax implements java.io.Serializable implements java.lang.Clo
 	* @return  True if <CODE>object</CODE> is equivalent to this text
 	*          attribute, false otherwise.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Returns a String identifying this text attribute. The String is
@@ -86,7 +86,7 @@ extern class TextSyntax implements java.io.Serializable implements java.lang.Clo
 	*
 	* @return  A String identifying this object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

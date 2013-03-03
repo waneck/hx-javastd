@@ -28,12 +28,12 @@ extern interface TreeWillExpandListener extends java.util.EventListener
 	/**
 	* Invoked whenever a node in the tree is about to be expanded.
 	*/
-	@:overload public function treeWillExpand(event : javax.swing.event.TreeExpansionEvent) : Void;
+	@:overload @:public public function treeWillExpand(event : javax.swing.event.TreeExpansionEvent) : Void;
 	
 	/**
 	* Invoked whenever a node in the tree is about to be collapsed.
 	*/
-	@:overload public function treeWillCollapse(event : javax.swing.event.TreeExpansionEvent) : Void;
+	@:overload @:public public function treeWillCollapse(event : javax.swing.event.TreeExpansionEvent) : Void;
 	
 	
 }

@@ -36,13 +36,13 @@ package sun.tools.jstatd;
 */
 @:require(java5) extern class RemoteVmImpl implements sun.jvmstat.monitor.remote.RemoteVm
 {
-	@:overload public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getCapacity() : Int;
+	@:overload @:public public function getCapacity() : Int;
 	
-	@:overload public function detach() : Void;
+	@:overload @:public public function detach() : Void;
 	
-	@:overload public function getLocalVmId() : Int;
+	@:overload @:public public function getLocalVmId() : Int;
 	
 	
 }

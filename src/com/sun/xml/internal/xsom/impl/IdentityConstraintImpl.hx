@@ -25,29 +25,29 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class IdentityConstraintImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl implements com.sun.xml.internal.xsom.XSIdentityConstraint implements com.sun.xml.internal.xsom.impl.Ref.Ref_IdentityConstraint
 {
-	@:overload public function new(_owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, category : java.StdTypes.Int16, name : String, selector : com.sun.xml.internal.xsom.impl.XPathImpl, fields : java.util.List<com.sun.xml.internal.xsom.impl.XPathImpl>, refer : com.sun.xml.internal.xsom.impl.Ref.Ref_IdentityConstraint) : Void;
+	@:overload @:public public function new(_owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, category : java.StdTypes.Int16, name : String, selector : com.sun.xml.internal.xsom.impl.XPathImpl, fields : java.util.List<com.sun.xml.internal.xsom.impl.XPathImpl>, refer : com.sun.xml.internal.xsom.impl.Ref.Ref_IdentityConstraint) : Void;
 	
-	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
-	@:overload public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSFunction<T>) : T;
+	@:overload @:public override public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSFunction<T>) : T;
 	
-	@:overload public function setParent(parent : com.sun.xml.internal.xsom.impl.ElementDecl) : Void;
+	@:overload @:public public function setParent(parent : com.sun.xml.internal.xsom.impl.ElementDecl) : Void;
 	
-	@:overload public function getParent() : com.sun.xml.internal.xsom.XSElementDecl;
+	@:overload @:public public function getParent() : com.sun.xml.internal.xsom.XSElementDecl;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getTargetNamespace() : String;
+	@:overload @:public public function getTargetNamespace() : String;
 	
-	@:overload public function getCategory() : java.StdTypes.Int16;
+	@:overload @:public public function getCategory() : java.StdTypes.Int16;
 	
-	@:overload public function getSelector() : com.sun.xml.internal.xsom.XSXPath;
+	@:overload @:public public function getSelector() : com.sun.xml.internal.xsom.XSXPath;
 	
-	@:overload public function getFields() : java.util.List<com.sun.xml.internal.xsom.XSXPath>;
+	@:overload @:public public function getFields() : java.util.List<com.sun.xml.internal.xsom.XSXPath>;
 	
-	@:overload public function getReferencedKey() : com.sun.xml.internal.xsom.XSIdentityConstraint;
+	@:overload @:public public function getReferencedKey() : com.sun.xml.internal.xsom.XSIdentityConstraint;
 	
-	@:overload public function get() : com.sun.xml.internal.xsom.XSIdentityConstraint;
+	@:overload @:public public function get() : com.sun.xml.internal.xsom.XSIdentityConstraint;
 	
 	
 }

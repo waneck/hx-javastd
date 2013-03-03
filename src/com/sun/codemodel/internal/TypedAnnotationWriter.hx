@@ -25,13 +25,13 @@ package com.sun.codemodel.internal;
 */
 @:internal extern class TypedAnnotationWriter<A, W> implements java.lang.reflect.InvocationHandler implements com.sun.codemodel.internal.JAnnotationWriter<A>
 {
-	@:overload public function new(annotation : Class<A>, writer : Class<W>, use : com.sun.codemodel.internal.JAnnotationUse) : Void;
+	@:overload @:public public function new(annotation : Class<A>, writer : Class<W>, use : com.sun.codemodel.internal.JAnnotationUse) : Void;
 	
-	@:overload public function getAnnotationUse() : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function getAnnotationUse() : com.sun.codemodel.internal.JAnnotationUse;
 	
-	@:overload public function getAnnotationType() : Class<A>;
+	@:overload @:public public function getAnnotationType() : Class<A>;
 	
-	@:overload public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

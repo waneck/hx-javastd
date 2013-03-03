@@ -35,7 +35,7 @@ extern class RescaleOp implements java.awt.image.BufferedImageOp implements java
 	* @param hints the specified <code>RenderingHints</code>, or
 	*        <code>null</code>
 	*/
-	@:overload public function new(scaleFactors : java.NativeArray<Single>, offsets : java.NativeArray<Single>, hints : java.awt.RenderingHints) : Void;
+	@:overload @:public public function new(scaleFactors : java.NativeArray<Single>, offsets : java.NativeArray<Single>, hints : java.awt.RenderingHints) : Void;
 	
 	/**
 	* Constructs a new RescaleOp with the desired scale factor
@@ -48,7 +48,7 @@ extern class RescaleOp implements java.awt.image.BufferedImageOp implements java
 	* @param hints the specified <code>RenderingHints</code>, or
 	*        <code>null</code>
 	*/
-	@:overload public function new(scaleFactor : Single, offset : Single, hints : java.awt.RenderingHints) : Void;
+	@:overload @:public public function new(scaleFactor : Single, offset : Single, hints : java.awt.RenderingHints) : Void;
 	
 	/**
 	* Returns the scale factors in the given array. The array is also
@@ -58,7 +58,7 @@ extern class RescaleOp implements java.awt.image.BufferedImageOp implements java
 	*        this <code>RescaleOp</code>
 	* @return the scale factors of this <code>RescaleOp</code>.
 	*/
-	@:overload @:final public function getScaleFactors(scaleFactors : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:final @:public public function getScaleFactors(scaleFactors : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Returns the offsets in the given array. The array is also returned
@@ -68,7 +68,7 @@ extern class RescaleOp implements java.awt.image.BufferedImageOp implements java
 	*        this <code>RescaleOp</code>
 	* @return the offsets of this <code>RescaleOp</code>.
 	*/
-	@:overload @:final public function getOffsets(offsets : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:final @:public public function getOffsets(offsets : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Returns the number of scaling factors and offsets used in this
@@ -76,7 +76,7 @@ extern class RescaleOp implements java.awt.image.BufferedImageOp implements java
 	* @return the number of scaling factors and offsets of this
 	*         <code>RescaleOp</code>.
 	*/
-	@:overload @:final public function getNumFactors() : Int;
+	@:overload @:final @:public public function getNumFactors() : Int;
 	
 	/**
 	* Rescales the source BufferedImage.
@@ -98,7 +98,7 @@ extern class RescaleOp implements java.awt.image.BufferedImageOp implements java
 	*         <code>RescaleOp</code> do not meet the requirements
 	*         stated in the class comments.
 	*/
-	@:overload @:final public function filter(src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage) : java.awt.image.BufferedImage;
+	@:overload @:public @:final public function filter(src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage) : java.awt.image.BufferedImage;
 	
 	/**
 	* Rescales the pixel data in the source Raster.
@@ -118,14 +118,14 @@ extern class RescaleOp implements java.awt.image.BufferedImageOp implements java
 	*         <code>RescaleOp</code> do not meet the requirements
 	*         stated in the class comments.
 	*/
-	@:overload @:final public function filter(src : java.awt.image.Raster, dst : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
+	@:overload @:public @:final public function filter(src : java.awt.image.Raster, dst : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns the bounding box of the rescaled destination image.  Since
 	* this is not a geometric operation, the bounding box does not
 	* change.
 	*/
-	@:overload @:final public function getBounds2D(src : java.awt.image.BufferedImage) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:final public function getBounds2D(src : java.awt.image.BufferedImage) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns the bounding box of the rescaled destination Raster.  Since
@@ -134,7 +134,7 @@ extern class RescaleOp implements java.awt.image.BufferedImageOp implements java
 	* @param src the rescaled destination <code>Raster</code>
 	* @return the bounds of the specified <code>Raster</code>.
 	*/
-	@:overload @:final public function getBounds2D(src : java.awt.image.Raster) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:final public function getBounds2D(src : java.awt.image.Raster) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Creates a zeroed destination image with the correct size and number of
@@ -144,7 +144,7 @@ extern class RescaleOp implements java.awt.image.BufferedImageOp implements java
 	*                  ColorModel of the source will be used.
 	* @return the zeroed-destination image.
 	*/
-	@:overload public function createCompatibleDestImage(src : java.awt.image.BufferedImage, destCM : java.awt.image.ColorModel) : java.awt.image.BufferedImage;
+	@:overload @:public public function createCompatibleDestImage(src : java.awt.image.BufferedImage, destCM : java.awt.image.ColorModel) : java.awt.image.BufferedImage;
 	
 	/**
 	* Creates a zeroed-destination <code>Raster</code> with the correct
@@ -152,7 +152,7 @@ extern class RescaleOp implements java.awt.image.BufferedImageOp implements java
 	* @param src       the source <code>Raster</code>
 	* @return the zeroed-destination <code>Raster</code>.
 	*/
-	@:overload public function createCompatibleDestRaster(src : java.awt.image.Raster) : java.awt.image.WritableRaster;
+	@:overload @:public public function createCompatibleDestRaster(src : java.awt.image.Raster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns the location of the destination point given a
@@ -163,13 +163,13 @@ extern class RescaleOp implements java.awt.image.BufferedImageOp implements java
 	* @param dstPt the destination point or <code>null</code>
 	* @return the location of the destination point.
 	*/
-	@:overload @:final public function getPoint2D(srcPt : java.awt.geom.Point2D, dstPt : java.awt.geom.Point2D) : java.awt.geom.Point2D;
+	@:overload @:public @:final public function getPoint2D(srcPt : java.awt.geom.Point2D, dstPt : java.awt.geom.Point2D) : java.awt.geom.Point2D;
 	
 	/**
 	* Returns the rendering hints for this op.
 	* @return the rendering hints of this <code>RescaleOp</code>.
 	*/
-	@:overload @:final public function getRenderingHints() : java.awt.RenderingHints;
+	@:overload @:public @:final public function getRenderingHints() : java.awt.RenderingHints;
 	
 	
 }

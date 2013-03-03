@@ -51,30 +51,30 @@ extern class DOMRetrievalMethod extends org.jcp.xml.dsig.internal.dom.DOMStructu
 	* @throws ClassCastException if <code>transforms</code> contains any
 	*    entries that are not of type {@link Transform}
 	*/
-	@:overload public function new(uri : String, type : String, transforms : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function new(uri : String, type : String, transforms : java.util.List<Dynamic>) : Void;
 	
 	/**
 	* Creates a <code>DOMRetrievalMethod</code> from an element.
 	*
 	* @param rmElem a RetrievalMethod element
 	*/
-	@:overload public function new(rmElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
+	@:overload @:public public function new(rmElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
 	
-	@:overload public function getURI() : String;
+	@:overload @:public public function getURI() : String;
 	
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function getTransforms() : java.util.List<Dynamic>;
+	@:overload @:public public function getTransforms() : java.util.List<Dynamic>;
 	
-	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
-	@:overload public function getHere() : org.w3c.dom.Node;
+	@:overload @:public public function getHere() : org.w3c.dom.Node;
 	
-	@:overload public function dereference(context : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
+	@:overload @:public public function dereference(context : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
 	
-	@:overload public function dereferenceAsXMLStructure(context : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.XMLStructure;
+	@:overload @:public public function dereferenceAsXMLStructure(context : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.XMLStructure;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

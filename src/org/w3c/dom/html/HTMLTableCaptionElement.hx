@@ -48,9 +48,9 @@ extern interface HTMLTableCaptionElement extends org.w3c.dom.html.HTMLElement
 	*  Caption alignment with respect to the table. See the  align attribute
 	* definition in HTML 4.0. This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getAlign() : String;
+	@:overload @:public public function getAlign() : String;
 	
-	@:overload public function setAlign(align : String) : Void;
+	@:overload @:public public function setAlign(align : String) : Void;
 	
 	
 }

@@ -43,7 +43,7 @@ extern class WindowsTextUI extends javax.swing.plaf.basic.BasicTextUI
 	*
 	* @return the caret object
 	*/
-	@:overload private function createCaret() : javax.swing.text.Caret;
+	@:overload @:protected override private function createCaret() : javax.swing.text.Caret;
 	
 	
 }
@@ -55,7 +55,7 @@ extern class WindowsTextUI extends javax.swing.plaf.basic.BasicTextUI
 	*
 	* @return the painter
 	*/
-	@:overload private function getSelectionPainter() : javax.swing.text.Highlighter.Highlighter_HighlightPainter;
+	@:overload @:protected override private function getSelectionPainter() : javax.swing.text.Highlighter.Highlighter_HighlightPainter;
 	
 	
 }
@@ -71,7 +71,7 @@ extern class WindowsTextUI extends javax.swing.plaf.basic.BasicTextUI
 	* @param bounds the bounding box for the highlight
 	* @param c the editor
 	*/
-	@:overload public function paint(g : java.awt.Graphics, offs0 : Int, offs1 : Int, bounds : java.awt.Shape, c : javax.swing.text.JTextComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, offs0 : Int, offs1 : Int, bounds : java.awt.Shape, c : javax.swing.text.JTextComponent) : Void;
 	
 	/**
 	* Paints a portion of a highlight.
@@ -85,7 +85,7 @@ extern class WindowsTextUI extends javax.swing.plaf.basic.BasicTextUI
 	* @param view View painting for
 	* @return region drawing occured in
 	*/
-	@:overload public function paintLayer(g : java.awt.Graphics, offs0 : Int, offs1 : Int, bounds : java.awt.Shape, c : javax.swing.text.JTextComponent, view : javax.swing.text.View) : java.awt.Shape;
+	@:overload @:public override public function paintLayer(g : java.awt.Graphics, offs0 : Int, offs1 : Int, bounds : java.awt.Shape, c : javax.swing.text.JTextComponent, view : javax.swing.text.View) : java.awt.Shape;
 	
 	
 }

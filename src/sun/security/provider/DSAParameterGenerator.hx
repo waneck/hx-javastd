@@ -25,7 +25,7 @@ package sun.security.provider;
 */
 extern class DSAParameterGenerator extends java.security.AlgorithmParameterGeneratorSpi
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Initializes this parameter generator for a certain strength
@@ -34,7 +34,7 @@ extern class DSAParameterGenerator extends java.security.AlgorithmParameterGener
 	* @param strength the strength (size of prime) in bits
 	* @param random the source of randomness
 	*/
-	@:overload override private function engineInit(strength : Int, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(strength : Int, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this parameter generator with a set of
@@ -46,14 +46,14 @@ extern class DSAParameterGenerator extends java.security.AlgorithmParameterGener
 	* @exception InvalidAlgorithmParameterException if the given parameter
 	* generation values are inappropriate for this parameter generator
 	*/
-	@:overload override private function engineInit(genParamSpec : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(genParamSpec : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Generates the parameters.
 	*
 	* @return the new AlgorithmParameters object
 	*/
-	@:overload override private function engineGenerateParameters() : java.security.AlgorithmParameters;
+	@:overload @:protected override private function engineGenerateParameters() : java.security.AlgorithmParameters;
 	
 	
 }

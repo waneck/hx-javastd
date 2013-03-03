@@ -43,7 +43,7 @@ package java.security;
 	*
 	* @param seed the seed.
 	*/
-	@:overload @:abstract private function engineSetSeed(seed : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected @:abstract private function engineSetSeed(seed : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Generates a user-specified number of random bytes.
@@ -55,7 +55,7 @@ package java.security;
 	*
 	* @param bytes the array to be filled in with random bytes.
 	*/
-	@:overload @:abstract private function engineNextBytes(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected @:abstract private function engineNextBytes(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the given number of seed bytes.  This call may be used to
@@ -65,7 +65,7 @@ package java.security;
 	*
 	* @return the seed bytes.
 	*/
-	@:overload @:abstract private function engineGenerateSeed(numBytes : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:abstract private function engineGenerateSeed(numBytes : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

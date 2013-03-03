@@ -59,17 +59,17 @@ extern interface RGBColor
 	/**
 	*  This attribute is used for the red value of the RGB color.
 	*/
-	@:overload public function getRed() : org.w3c.dom.css.CSSPrimitiveValue;
+	@:overload @:public public function getRed() : org.w3c.dom.css.CSSPrimitiveValue;
 	
 	/**
 	*  This attribute is used for the green value of the RGB color.
 	*/
-	@:overload public function getGreen() : org.w3c.dom.css.CSSPrimitiveValue;
+	@:overload @:public public function getGreen() : org.w3c.dom.css.CSSPrimitiveValue;
 	
 	/**
 	*  This attribute is used for the blue value of the RGB color.
 	*/
-	@:overload public function getBlue() : org.w3c.dom.css.CSSPrimitiveValue;
+	@:overload @:public public function getBlue() : org.w3c.dom.css.CSSPrimitiveValue;
 	
 	
 }

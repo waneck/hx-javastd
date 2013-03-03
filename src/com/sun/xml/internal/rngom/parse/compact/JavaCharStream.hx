@@ -53,151 +53,151 @@ package com.sun.xml.internal.rngom.parse.compact;
 extern class JavaCharStream
 {
 	/** Whether parser is static. */
-	public static var staticFlag(default, null) : Bool;
+	@:public @:static @:final public static var staticFlag(default, null) : Bool;
 	
 	/** Position in buffer. */
-	public var bufpos : Int;
+	@:public public var bufpos : Int;
 	
-	private var bufline : java.NativeArray<Int>;
+	@:protected private var bufline : java.NativeArray<Int>;
 	
-	private var bufcolumn : java.NativeArray<Int>;
+	@:protected private var bufcolumn : java.NativeArray<Int>;
 	
-	private var column : Int;
+	@:protected private var column : Int;
 	
-	private var line : Int;
+	@:protected private var line : Int;
 	
-	private var prevCharIsCR : Bool;
+	@:protected private var prevCharIsCR : Bool;
 	
-	private var prevCharIsLF : Bool;
+	@:protected private var prevCharIsLF : Bool;
 	
-	private var inputStream : java.io.Reader;
+	@:protected private var inputStream : java.io.Reader;
 	
-	private var nextCharBuf : java.NativeArray<java.StdTypes.Char16>;
+	@:protected private var nextCharBuf : java.NativeArray<java.StdTypes.Char16>;
 	
-	private var buffer : java.NativeArray<java.StdTypes.Char16>;
+	@:protected private var buffer : java.NativeArray<java.StdTypes.Char16>;
 	
-	private var maxNextCharInd : Int;
+	@:protected private var maxNextCharInd : Int;
 	
-	private var nextCharInd : Int;
+	@:protected private var nextCharInd : Int;
 	
-	private var inBuf : Int;
+	@:protected private var inBuf : Int;
 	
-	private var tabSize : Int;
+	@:protected private var tabSize : Int;
 	
-	@:overload private function setTabSize(i : Int) : Void;
+	@:overload @:protected private function setTabSize(i : Int) : Void;
 	
-	@:overload private function getTabSize(i : Int) : Int;
+	@:overload @:protected private function getTabSize(i : Int) : Int;
 	
-	@:overload private function ExpandBuff(wrapAround : Bool) : Void;
+	@:overload @:protected private function ExpandBuff(wrapAround : Bool) : Void;
 	
-	@:overload private function FillBuff() : Void;
+	@:overload @:protected private function FillBuff() : Void;
 	
-	@:overload private function ReadByte() : java.StdTypes.Char16;
+	@:overload @:protected private function ReadByte() : java.StdTypes.Char16;
 	
 	/** @return starting character for token. */
-	@:overload public function BeginToken() : java.StdTypes.Char16;
+	@:overload @:public public function BeginToken() : java.StdTypes.Char16;
 	
-	@:overload private function AdjustBuffSize() : Void;
+	@:overload @:protected private function AdjustBuffSize() : Void;
 	
-	@:overload private function UpdateLineColumn(c : java.StdTypes.Char16) : Void;
+	@:overload @:protected private function UpdateLineColumn(c : java.StdTypes.Char16) : Void;
 	
 	/** Read a character. */
-	@:overload public function readChar() : java.StdTypes.Char16;
+	@:overload @:public public function readChar() : java.StdTypes.Char16;
 	
 	/**
 	* @deprecated
 	* @see #getEndColumn
 	*/
-	@:overload public function getColumn() : Int;
+	@:overload @:public public function getColumn() : Int;
 	
 	/**
 	* @deprecated
 	* @see #getEndLine
 	*/
-	@:overload public function getLine() : Int;
+	@:overload @:public public function getLine() : Int;
 	
 	/** Get end column. */
-	@:overload public function getEndColumn() : Int;
+	@:overload @:public public function getEndColumn() : Int;
 	
 	/** Get end line. */
-	@:overload public function getEndLine() : Int;
+	@:overload @:public public function getEndLine() : Int;
 	
 	/** @return column of token start */
-	@:overload public function getBeginColumn() : Int;
+	@:overload @:public public function getBeginColumn() : Int;
 	
 	/** @return line number of token start */
-	@:overload public function getBeginLine() : Int;
+	@:overload @:public public function getBeginLine() : Int;
 	
 	/** Retreat. */
-	@:overload public function backup(amount : Int) : Void;
+	@:overload @:public public function backup(amount : Int) : Void;
 	
 	/** Constructor. */
-	@:overload public function new(dstream : java.io.Reader, startline : Int, startcolumn : Int, buffersize : Int) : Void;
+	@:overload @:public public function new(dstream : java.io.Reader, startline : Int, startcolumn : Int, buffersize : Int) : Void;
 	
 	/** Constructor. */
-	@:overload public function new(dstream : java.io.Reader, startline : Int, startcolumn : Int) : Void;
+	@:overload @:public public function new(dstream : java.io.Reader, startline : Int, startcolumn : Int) : Void;
 	
 	/** Constructor. */
-	@:overload public function new(dstream : java.io.Reader) : Void;
+	@:overload @:public public function new(dstream : java.io.Reader) : Void;
 	
 	/** Reinitialise. */
-	@:overload public function ReInit(dstream : java.io.Reader, startline : Int, startcolumn : Int, buffersize : Int) : Void;
+	@:overload @:public public function ReInit(dstream : java.io.Reader, startline : Int, startcolumn : Int, buffersize : Int) : Void;
 	
 	/** Reinitialise. */
-	@:overload public function ReInit(dstream : java.io.Reader, startline : Int, startcolumn : Int) : Void;
+	@:overload @:public public function ReInit(dstream : java.io.Reader, startline : Int, startcolumn : Int) : Void;
 	
 	/** Reinitialise. */
-	@:overload public function ReInit(dstream : java.io.Reader) : Void;
+	@:overload @:public public function ReInit(dstream : java.io.Reader) : Void;
 	
 	/** Constructor. */
-	@:overload public function new(dstream : java.io.InputStream, encoding : String, startline : Int, startcolumn : Int, buffersize : Int) : Void;
+	@:overload @:public public function new(dstream : java.io.InputStream, encoding : String, startline : Int, startcolumn : Int, buffersize : Int) : Void;
 	
 	/** Constructor. */
-	@:overload public function new(dstream : java.io.InputStream, startline : Int, startcolumn : Int, buffersize : Int) : Void;
+	@:overload @:public public function new(dstream : java.io.InputStream, startline : Int, startcolumn : Int, buffersize : Int) : Void;
 	
 	/** Constructor. */
-	@:overload public function new(dstream : java.io.InputStream, encoding : String, startline : Int, startcolumn : Int) : Void;
+	@:overload @:public public function new(dstream : java.io.InputStream, encoding : String, startline : Int, startcolumn : Int) : Void;
 	
 	/** Constructor. */
-	@:overload public function new(dstream : java.io.InputStream, startline : Int, startcolumn : Int) : Void;
+	@:overload @:public public function new(dstream : java.io.InputStream, startline : Int, startcolumn : Int) : Void;
 	
 	/** Constructor. */
-	@:overload public function new(dstream : java.io.InputStream, encoding : String) : Void;
+	@:overload @:public public function new(dstream : java.io.InputStream, encoding : String) : Void;
 	
 	/** Constructor. */
-	@:overload public function new(dstream : java.io.InputStream) : Void;
+	@:overload @:public public function new(dstream : java.io.InputStream) : Void;
 	
 	/** Reinitialise. */
-	@:overload public function ReInit(dstream : java.io.InputStream, encoding : String, startline : Int, startcolumn : Int, buffersize : Int) : Void;
+	@:overload @:public public function ReInit(dstream : java.io.InputStream, encoding : String, startline : Int, startcolumn : Int, buffersize : Int) : Void;
 	
 	/** Reinitialise. */
-	@:overload public function ReInit(dstream : java.io.InputStream, startline : Int, startcolumn : Int, buffersize : Int) : Void;
+	@:overload @:public public function ReInit(dstream : java.io.InputStream, startline : Int, startcolumn : Int, buffersize : Int) : Void;
 	
 	/** Reinitialise. */
-	@:overload public function ReInit(dstream : java.io.InputStream, encoding : String, startline : Int, startcolumn : Int) : Void;
+	@:overload @:public public function ReInit(dstream : java.io.InputStream, encoding : String, startline : Int, startcolumn : Int) : Void;
 	
 	/** Reinitialise. */
-	@:overload public function ReInit(dstream : java.io.InputStream, startline : Int, startcolumn : Int) : Void;
+	@:overload @:public public function ReInit(dstream : java.io.InputStream, startline : Int, startcolumn : Int) : Void;
 	
 	/** Reinitialise. */
-	@:overload public function ReInit(dstream : java.io.InputStream, encoding : String) : Void;
+	@:overload @:public public function ReInit(dstream : java.io.InputStream, encoding : String) : Void;
 	
 	/** Reinitialise. */
-	@:overload public function ReInit(dstream : java.io.InputStream) : Void;
+	@:overload @:public public function ReInit(dstream : java.io.InputStream) : Void;
 	
 	/** @return token image as String */
-	@:overload public function GetImage() : String;
+	@:overload @:public public function GetImage() : String;
 	
 	/** @return suffix */
-	@:overload public function GetSuffix(len : Int) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function GetSuffix(len : Int) : java.NativeArray<java.StdTypes.Char16>;
 	
 	/** Set buffers back to null when finished. */
-	@:overload public function Done() : Void;
+	@:overload @:public public function Done() : Void;
 	
 	/**
 	* Method to adjust line and column numbers for the start of a token.
 	*/
-	@:overload public function adjustBeginLineColumn(newLine : Int, newCol : Int) : Void;
+	@:overload @:public public function adjustBeginLineColumn(newLine : Int, newCol : Int) : Void;
 	
 	
 }

@@ -34,9 +34,9 @@ extern class HexBinaryAdapter extends javax.xml.bind.annotation.adapters.XmlAdap
 	* @author Kohsuke Kawaguchi
 	* @since JAXB 2.0
 	*/
-	@:require(java0) @:overload public function unmarshal(s : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:require(java0) @:overload @:public public function unmarshal(s : String) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function marshal(bytes : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public public function marshal(bytes : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	
 }

@@ -28,13 +28,13 @@ extern class ParseException extends java.lang.RuntimeException
 	/**
 	*
 	*/
-	@:overload public function new(mes : String, location : Int) : Void;
+	@:overload @:public public function new(mes : String, location : Int) : Void;
 	
 	/**
 	*
 	* @return -1 if location information is not available.
 	*/
-	@:overload public function getLocation() : Int;
+	@:overload @:public public function getLocation() : Int;
 	
 	
 }

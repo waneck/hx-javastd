@@ -37,7 +37,7 @@ extern class JobMessageFromOperator extends javax.print.attribute.TextSyntax imp
 	* @exception  NullPointerException
 	*     (unchecked exception) Thrown if <CODE>message</CODE> is null.
 	*/
-	@:overload public function new(message : String, locale : java.util.Locale) : Void;
+	@:overload @:public public function new(message : String, locale : java.util.Locale) : Void;
 	
 	/**
 	* Returns whether this job message from operator attribute is equivalent to
@@ -61,7 +61,7 @@ extern class JobMessageFromOperator extends javax.print.attribute.TextSyntax imp
 	* @return  True if <CODE>object</CODE> is equivalent to this job
 	*          message from operator attribute, false otherwise.
 	*/
-	@:overload override public function equals(object : Dynamic) : Bool;
+	@:overload @:public override public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -73,7 +73,7 @@ extern class JobMessageFromOperator extends javax.print.attribute.TextSyntax imp
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -84,7 +84,7 @@ extern class JobMessageFromOperator extends javax.print.attribute.TextSyntax imp
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

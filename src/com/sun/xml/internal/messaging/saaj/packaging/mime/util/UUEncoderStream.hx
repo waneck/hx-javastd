@@ -36,22 +36,22 @@ package com.sun.xml.internal.messaging.saaj.packaging.mime.util;
 */
 extern class UUEncoderStream extends java.io.FilterOutputStream
 {
-	private var name : String;
+	@:protected private var name : String;
 	
-	private var mode : Int;
+	@:protected private var mode : Int;
 	
 	/**
 	* Create a UUencoder that encodes the specified input stream
 	* @param out        the output stream
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Create a UUencoder that encodes the specified input stream
 	* @param out        the output stream
 	* @param name       Specifies a name for the encoded buffer
 	*/
-	@:overload public function new(out : java.io.OutputStream, name : String) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, name : String) : Void;
 	
 	/**
 	* Create a UUencoder that encodes the specified input stream
@@ -59,24 +59,24 @@ extern class UUEncoderStream extends java.io.FilterOutputStream
 	* @param name       Specifies a name for the encoded buffer
 	* @param mode       Specifies permission mode for the encoded buffer
 	*/
-	@:overload public function new(out : java.io.OutputStream, name : String, mode : Int) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, name : String, mode : Int) : Void;
 	
 	/**
 	* Set up the buffer name and permission mode.
 	* This method has any effect only if it is invoked before
 	* you start writing into the output stream
 	*/
-	@:overload public function setNameMode(name : String, mode : Int) : Void;
+	@:overload @:public public function setNameMode(name : String, mode : Int) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override public function write(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override public function write(c : Int) : Void;
+	@:overload @:public override public function write(c : Int) : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

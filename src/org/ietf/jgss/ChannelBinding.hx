@@ -40,7 +40,7 @@ extern class ChannelBinding
 	* channel bindings. <code>null</code> value can be supplied to
 	* indicate that the application does not want to set this value.
 	*/
-	@:overload public function new(initAddr : java.net.InetAddress, acceptAddr : java.net.InetAddress, appData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(initAddr : java.net.InetAddress, acceptAddr : java.net.InetAddress, appData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Creates a ChannelBinding object without any addressing information.
@@ -48,7 +48,7 @@ extern class ChannelBinding
 	* @param appData application supplied data to be used as part of the
 	* channel bindings.
 	*/
-	@:overload public function new(appData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(appData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Get the initiator's address for this channel binding.
@@ -56,7 +56,7 @@ extern class ChannelBinding
 	* @return the initiator's address. <code>null</code> is returned if
 	* the address has not been set.
 	*/
-	@:overload public function getInitiatorAddress() : java.net.InetAddress;
+	@:overload @:public public function getInitiatorAddress() : java.net.InetAddress;
 	
 	/**
 	* Get the acceptor's address for this channel binding.
@@ -64,7 +64,7 @@ extern class ChannelBinding
 	* @return the acceptor's address. null is returned if the address has
 	* not been set.
 	*/
-	@:overload public function getAcceptorAddress() : java.net.InetAddress;
+	@:overload @:public public function getAcceptorAddress() : java.net.InetAddress;
 	
 	/**
 	* Get the application specified data for this channel binding.
@@ -73,7 +73,7 @@ extern class ChannelBinding
 	* ChannelBinding. <code>null</code> is returned if no application data
 	* has been specified for the channel binding.
 	*/
-	@:overload public function getApplicationData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getApplicationData() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Compares two instances of ChannelBinding.
@@ -83,14 +83,14 @@ extern class ChannelBinding
 	* the same values for the initiator and acceptor addresses and the
 	* application data.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode value for this ChannelBinding object.
 	*
 	* @return a hashCode value
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

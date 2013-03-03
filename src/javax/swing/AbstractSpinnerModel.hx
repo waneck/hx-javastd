@@ -29,7 +29,7 @@ extern class AbstractSpinnerModel implements javax.swing.SpinnerModel implements
 	* The list of ChangeListeners for this model.  Subclasses may
 	* store their own listeners here.
 	*/
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
 	/**
 	* Adds a ChangeListener to the model's listener list.  The
@@ -39,7 +39,7 @@ extern class AbstractSpinnerModel implements javax.swing.SpinnerModel implements
 	* @see #removeChangeListener
 	* @see SpinnerModel#addChangeListener
 	*/
-	@:overload public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Removes a ChangeListener from the model's listener list.
@@ -48,7 +48,7 @@ extern class AbstractSpinnerModel implements javax.swing.SpinnerModel implements
 	* @see #addChangeListener
 	* @see SpinnerModel#removeChangeListener
 	*/
-	@:overload public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ChangeListener</code>s added
@@ -58,7 +58,7 @@ extern class AbstractSpinnerModel implements javax.swing.SpinnerModel implements
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
+	@:require(java4) @:overload @:public public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
 	
 	/**
 	* Run each ChangeListeners stateChanged() method.
@@ -66,7 +66,7 @@ extern class AbstractSpinnerModel implements javax.swing.SpinnerModel implements
 	* @see #setValue
 	* @see EventListenerList
 	*/
-	@:overload private function fireStateChanged() : Void;
+	@:overload @:protected private function fireStateChanged() : Void;
 	
 	/**
 	* Return an array of all the listeners of the given type that
@@ -80,7 +80,7 @@ extern class AbstractSpinnerModel implements javax.swing.SpinnerModel implements
 	* @return all of the objects receiving <em>listenerType</em> notifications
 	*         from this model
 	*/
-	@:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Changes current value of the model, typically this value is displayed
@@ -95,7 +95,7 @@ extern class AbstractSpinnerModel implements javax.swing.SpinnerModel implements
 	* @throws IllegalArgumentException if <code>value</code> isn't allowed
 	* @see #getValue
 	*/
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public public function setValue(value : Dynamic) : Void;
 	
 	/**
 	* The <i>current element</i> of the sequence.  This element is usually
@@ -104,7 +104,7 @@ extern class AbstractSpinnerModel implements javax.swing.SpinnerModel implements
 	* @return the current spinner value.
 	* @see #setValue
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	/**
 	* Return the object in the sequence that comes after the object returned
@@ -115,7 +115,7 @@ extern class AbstractSpinnerModel implements javax.swing.SpinnerModel implements
 	* @see #getValue
 	* @see #getPreviousValue
 	*/
-	@:overload public function getNextValue() : Dynamic;
+	@:overload @:public public function getNextValue() : Dynamic;
 	
 	/**
 	* Return the object in the sequence that comes before the object returned
@@ -126,7 +126,7 @@ extern class AbstractSpinnerModel implements javax.swing.SpinnerModel implements
 	* @see #getValue
 	* @see #getNextValue
 	*/
-	@:overload public function getPreviousValue() : Dynamic;
+	@:overload @:public public function getPreviousValue() : Dynamic;
 	
 	
 }

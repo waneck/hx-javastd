@@ -51,7 +51,7 @@ package java.rmi;
 	* @param s the detail message
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function new(s : String) : Void;
+	@:require(java1) @:overload @:public public function new(s : String) : Void;
 	
 	
 }

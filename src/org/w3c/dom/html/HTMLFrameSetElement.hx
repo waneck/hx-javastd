@@ -48,17 +48,17 @@ extern interface HTMLFrameSetElement extends org.w3c.dom.html.HTMLElement
 	*  The number of columns of frames in the frameset. See the  cols
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getCols() : String;
+	@:overload @:public public function getCols() : String;
 	
-	@:overload public function setCols(cols : String) : Void;
+	@:overload @:public public function setCols(cols : String) : Void;
 	
 	/**
 	*  The number of rows of frames in the frameset. See the  rows attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getRows() : String;
+	@:overload @:public public function getRows() : String;
 	
-	@:overload public function setRows(rows : String) : Void;
+	@:overload @:public public function setRows(rows : String) : Void;
 	
 	
 }

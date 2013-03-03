@@ -38,14 +38,14 @@ package org.omg.CORBA.TypeCodePackage;
 	/**
 	* Constructs a <code>BadKind</code> exception with no reason message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>BadKind</code> exception with the specified
 	* reason message.
 	* @param reason the String containing a reason message
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	
 }

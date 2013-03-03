@@ -26,7 +26,7 @@ extern class DOM2Helper extends com.sun.org.apache.xml.internal.utils.DOMHelper
 	/**
 	* Construct an instance.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Check node to see if it was created by a DOM implementation
@@ -41,7 +41,7 @@ extern class DOM2Helper extends com.sun.org.apache.xml.internal.utils.DOMHelper
 	* the node is compatable.
 	* @xsl.usage internal
 	*/
-	@:overload public function checkNode(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function checkNode(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Returns true if the DOM implementation handled by this helper
@@ -49,7 +49,7 @@ extern class DOM2Helper extends com.sun.org.apache.xml.internal.utils.DOMHelper
 	*
 	* @return true (since Xerces does).
 	*/
-	@:overload public function supportsSAX() : Bool;
+	@:overload @:public public function supportsSAX() : Bool;
 	
 	/**
 	* Specify which document this helper is currently operating on.
@@ -57,7 +57,7 @@ extern class DOM2Helper extends com.sun.org.apache.xml.internal.utils.DOMHelper
 	* @param doc The DOM Document node for this document.
 	* @see #getDocument
 	*/
-	@:overload public function setDocument(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public public function setDocument(doc : org.w3c.dom.Document) : Void;
 	
 	/**
 	* Query which document this helper is currently operating on.
@@ -65,7 +65,7 @@ extern class DOM2Helper extends com.sun.org.apache.xml.internal.utils.DOMHelper
 	* @return The DOM Document node for this document.
 	* @see #setDocument
 	*/
-	@:overload public function getDocument() : org.w3c.dom.Document;
+	@:overload @:public public function getDocument() : org.w3c.dom.Document;
 	
 	/**
 	* Parse an XML document.
@@ -89,7 +89,7 @@ extern class DOM2Helper extends com.sun.org.apache.xml.internal.utils.DOMHelper
 	* @throws TransformerException if any checked exception is thrown.
 	* @xsl.usage internal
 	*/
-	@:overload public function parse(source : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function parse(source : org.xml.sax.InputSource) : Void;
 	
 	/**
 	* Given an XML ID, return the element. This requires assistance from the
@@ -106,7 +106,7 @@ extern class DOM2Helper extends com.sun.org.apache.xml.internal.utils.DOMHelper
 	* such an element or if the DOM can't answer the question for other
 	* reasons.
 	*/
-	@:overload override public function getElementByID(id : String, doc : org.w3c.dom.Document) : org.w3c.dom.Element;
+	@:overload @:public override public function getElementByID(id : String, doc : org.w3c.dom.Document) : org.w3c.dom.Element;
 	
 	/**
 	* Figure out whether node2 should be considered as being later
@@ -126,7 +126,7 @@ extern class DOM2Helper extends com.sun.org.apache.xml.internal.utils.DOMHelper
 	* You can think of this as
 	* <code>(node1.documentOrderPosition &lt;= node2.documentOrderPosition)</code>.
 	*/
-	@:overload public static function isNodeAfter(node1 : org.w3c.dom.Node, node2 : org.w3c.dom.Node) : Bool;
+	@:overload @:public @:static public static function isNodeAfter(node1 : org.w3c.dom.Node, node2 : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Get the XPath-model parent of a node.  This version takes advantage
@@ -140,7 +140,7 @@ extern class DOM2Helper extends com.sun.org.apache.xml.internal.utils.DOMHelper
 	* ownerElement if the input node is an Attr, or null if the node is
 	* a Document, a DocumentFragment, or an orphan.
 	*/
-	@:overload public static function getParentOfNode(node : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:static public static function getParentOfNode(node : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Returns the local name of the given node, as defined by the
@@ -153,7 +153,7 @@ extern class DOM2Helper extends com.sun.org.apache.xml.internal.utils.DOMHelper
 	* @return String containing the local name, or null if the node
 	* was not assigned a Namespace.
 	*/
-	@:overload override public function getLocalNameOfNode(n : org.w3c.dom.Node) : String;
+	@:overload @:public override public function getLocalNameOfNode(n : org.w3c.dom.Node) : String;
 	
 	/**
 	* Returns the Namespace Name (Namespace URI) for the given node.
@@ -170,7 +170,7 @@ extern class DOM2Helper extends com.sun.org.apache.xml.internal.utils.DOMHelper
 	* @return String containing the Namespace URI bound to this DOM node
 	* at the time the Node was created.
 	*/
-	@:overload override public function getNamespaceOfNode(n : org.w3c.dom.Node) : String;
+	@:overload @:public override public function getNamespaceOfNode(n : org.w3c.dom.Node) : String;
 	
 	
 }

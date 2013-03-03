@@ -37,22 +37,22 @@ package java.awt.geom;
 	* @see #WIND_EVEN_ODD
 	* @see #WIND_NON_ZERO
 	*/
-	@:overload public function getWindingRule() : Int;
+	@:overload @:public public function getWindingRule() : Int;
 	
 	/**
 	* Tests if there are more points to read.
 	* @return true if there are more points to read
 	*/
-	@:overload public function isDone() : Bool;
+	@:overload @:public public function isDone() : Bool;
 	
 	/**
 	* Moves the iterator to the next segment of the path forwards
 	* along the primary direction of traversal as long as there are
 	* more points in that direction.
 	*/
-	@:overload public function next() : Void;
+	@:overload @:public public function next() : Void;
 	
-	public static var CtrlVal(default, null) : Float;
+	@:public @:static @:final public static var CtrlVal(default, null) : Float;
 	
 	/**
 	* Returns the coordinates and type of the current path segment in
@@ -72,7 +72,7 @@ package java.awt.geom;
 	* @see #SEG_CUBICTO
 	* @see #SEG_CLOSE
 	*/
-	@:overload public function currentSegment(coords : java.NativeArray<Single>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Single>) : Int;
 	
 	/**
 	* Returns the coordinates and type of the current path segment in
@@ -92,7 +92,7 @@ package java.awt.geom;
 	* @see #SEG_CUBICTO
 	* @see #SEG_CLOSE
 	*/
-	@:overload public function currentSegment(coords : java.NativeArray<Float>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Float>) : Int;
 	
 	
 }

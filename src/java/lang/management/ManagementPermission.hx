@@ -89,7 +89,7 @@ at the permission allows, and associated risks">
 	* @throws NullPointerException if <code>name</code> is <code>null</code>.
 	* @throws IllegalArgumentException if <code>name</code> is empty or invalid.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Constructs a new ManagementPermission object.
@@ -101,7 +101,7 @@ at the permission allows, and associated risks">
 	* @throws IllegalArgumentException if <code>name</code> is empty or
 	* if arguments are invalid.
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	
 }

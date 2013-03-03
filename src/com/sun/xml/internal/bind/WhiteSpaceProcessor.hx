@@ -30,41 +30,41 @@ package com.sun.xml.internal.bind;
 */
 @:require(java0) extern class WhiteSpaceProcessor
 {
-	@:overload public static function replace(text : String) : String;
+	@:overload @:public @:static public static function replace(text : String) : String;
 	
 	/**
 	* @since 2.0
 	*/
-	@:require(java0) @:overload public static function replace(text : java.lang.CharSequence) : java.lang.CharSequence;
+	@:require(java0) @:overload @:public @:static public static function replace(text : java.lang.CharSequence) : java.lang.CharSequence;
 	
 	/**
 	* Equivalent of {@link String#trim()}.
 	* @since 2.0
 	*/
-	@:require(java0) @:overload public static function trim(text : java.lang.CharSequence) : java.lang.CharSequence;
+	@:require(java0) @:overload @:public @:static public static function trim(text : java.lang.CharSequence) : java.lang.CharSequence;
 	
-	@:overload public static function collapse(text : String) : String;
+	@:overload @:public @:static public static function collapse(text : String) : String;
 	
 	/**
 	* This is usually the biggest processing bottleneck.
 	*
 	* @since 2.0
 	*/
-	@:require(java0) @:overload public static function collapse(text : java.lang.CharSequence) : java.lang.CharSequence;
+	@:require(java0) @:overload @:public @:static public static function collapse(text : java.lang.CharSequence) : java.lang.CharSequence;
 	
 	/**
 	* Returns true if the specified string is all whitespace.
 	*/
-	@:overload @:final public static function isWhiteSpace(s : java.lang.CharSequence) : Bool;
+	@:overload @:public @:static @:final public static function isWhiteSpace(s : java.lang.CharSequence) : Bool;
 	
 	/** returns true if the specified char is a white space character. */
-	@:overload @:final public static function isWhiteSpace(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static @:final public static function isWhiteSpace(ch : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Returns true if the specified char is a white space character
 	* but not 0x20.
 	*/
-	@:overload @:final private static function isWhiteSpaceExceptSpace(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:protected @:static @:final private static function isWhiteSpaceExceptSpace(ch : java.StdTypes.Char16) : Bool;
 	
 	
 }

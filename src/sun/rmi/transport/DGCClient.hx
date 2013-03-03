@@ -39,7 +39,7 @@ package sun.rmi.transport;
 	* Look up the EndpointEntry for the given Endpoint.  An entry is
 	* created if one does not already exist.
 	*/
-	@:overload public static function lookup(ep : sun.rmi.transport.Endpoint) : sun.rmi.transport.DGCClient.DGCClient_EndpointEntry;
+	@:overload @:public @:static public static function lookup(ep : sun.rmi.transport.Endpoint) : sun.rmi.transport.DGCClient.DGCClient_EndpointEntry;
 	
 	/**
 	* Register the LiveRef instances in the supplied list to participate
@@ -52,7 +52,7 @@ package sun.rmi.transport;
 	*
 	* This method must NOT be called while synchronized on this entry.
 	*/
-	@:overload public function registerRefs(refs : java.util.List<Dynamic>) : Bool;
+	@:overload @:public public function registerRefs(refs : java.util.List<Dynamic>) : Bool;
 	
 	
 }
@@ -62,7 +62,7 @@ package sun.rmi.transport;
 */
 @:native('sun$rmi$transport$DGCClient$EndpointEntry$RenewCleanThread') @:internal extern class DGCClient_EndpointEntry_RenewCleanThread implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
@@ -83,13 +83,13 @@ package sun.rmi.transport;
 */
 @:native('sun$rmi$transport$DGCClient$EndpointEntry$RefEntry') @:internal extern class DGCClient_EndpointEntry_RefEntry
 {
-	@:overload public function new(ref : sun.rmi.transport.LiveRef) : Void;
+	@:overload @:public public function new(ref : sun.rmi.transport.LiveRef) : Void;
 	
 	/**
 	* Return the LiveRef value for this entry (not a registered
 	* instance).
 	*/
-	@:overload public function getRef() : sun.rmi.transport.LiveRef;
+	@:overload @:public public function getRef() : sun.rmi.transport.LiveRef;
 	
 	/**
 	* Add a LiveRef to the set of registered instances for this entry.
@@ -97,7 +97,7 @@ package sun.rmi.transport;
 	* This method must ONLY be invoked while synchronized on this
 	* RefEntry's EndpointEntry.
 	*/
-	@:overload public function addInstanceToRefSet(ref : sun.rmi.transport.LiveRef) : Void;
+	@:overload @:public public function addInstanceToRefSet(ref : sun.rmi.transport.LiveRef) : Void;
 	
 	/**
 	* Remove a PhantomLiveRef from the set of registered instances.
@@ -105,7 +105,7 @@ package sun.rmi.transport;
 	* This method must ONLY be invoked while synchronized on this
 	* RefEntry's EndpointEntry.
 	*/
-	@:overload public function removeInstanceFromRefSet(phantom : sun.rmi.transport.DGCClient.DGCClient_EndpointEntry_RefEntry_PhantomLiveRef) : Void;
+	@:overload @:public public function removeInstanceFromRefSet(phantom : sun.rmi.transport.DGCClient.DGCClient_EndpointEntry_RefEntry_PhantomLiveRef) : Void;
 	
 	/**
 	* Return true if there are no registered LiveRef instances for
@@ -114,7 +114,7 @@ package sun.rmi.transport;
 	* This method must ONLY be invoked while synchronized on this
 	* RefEntry's EndpointEntry.
 	*/
-	@:overload public function isRefSetEmpty() : Bool;
+	@:overload @:public public function isRefSetEmpty() : Bool;
 	
 	/**
 	* Record that a dirty call that explicitly contained this
@@ -123,7 +123,7 @@ package sun.rmi.transport;
 	* This method must ONLY be invoked while synchronized on this
 	* RefEntry's EndpointEntry.
 	*/
-	@:overload public function markDirtyFailed() : Void;
+	@:overload @:public public function markDirtyFailed() : Void;
 	
 	/**
 	* Return true if a dirty call that explicitly contained this
@@ -133,7 +133,7 @@ package sun.rmi.transport;
 	* This method must ONLY be invoked while synchronized on this
 	* RefEntry's EndpointEntry.
 	*/
-	@:overload public function hasDirtyFailed() : Bool;
+	@:overload @:public public function hasDirtyFailed() : Bool;
 	
 	
 }
@@ -144,9 +144,9 @@ package sun.rmi.transport;
 */
 @:native('sun$rmi$transport$DGCClient$EndpointEntry$RefEntry$PhantomLiveRef') @:internal extern class DGCClient_EndpointEntry_RefEntry_PhantomLiveRef extends java.lang.ref.PhantomReference<Dynamic>
 {
-	@:overload public function new(ref : sun.rmi.transport.LiveRef) : Void;
+	@:overload @:public public function new(ref : sun.rmi.transport.LiveRef) : Void;
 	
-	@:overload public function getRefEntry() : sun.rmi.transport.DGCClient.DGCClient_EndpointEntry_RefEntry;
+	@:overload @:public public function getRefEntry() : sun.rmi.transport.DGCClient.DGCClient_EndpointEntry_RefEntry;
 	
 	
 }

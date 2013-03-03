@@ -32,13 +32,13 @@ package sun.tools.jstat;
 */
 @:require(java5) extern class Literal extends sun.tools.jstat.Expression
 {
-	@:overload public function new(value : Dynamic) : Void;
+	@:overload @:public public function new(value : Dynamic) : Void;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public public function setValue(value : Dynamic) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

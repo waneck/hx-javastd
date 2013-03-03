@@ -20,9 +20,9 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 */
 @:internal extern class StreamValidatorHelper implements com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorHelper
 {
-	@:overload public function new(componentManager : com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaValidatorComponentManager) : Void;
+	@:overload @:public public function new(componentManager : com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaValidatorComponentManager) : Void;
 	
-	@:overload public function validate(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
+	@:overload @:public public function validate(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
 	
 	
 }

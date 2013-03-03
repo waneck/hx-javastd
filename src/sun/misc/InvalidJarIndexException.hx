@@ -29,7 +29,7 @@ extern class InvalidJarIndexException extends java.lang.RuntimeException
 	* Constructs an <code>InvalidJarIndexException</code> with no
 	* detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>InvalidJarIndexException</code> with the
@@ -37,7 +37,7 @@ extern class InvalidJarIndexException extends java.lang.RuntimeException
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

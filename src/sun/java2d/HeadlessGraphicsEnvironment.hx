@@ -25,26 +25,26 @@ package sun.java2d;
 */
 extern class HeadlessGraphicsEnvironment extends java.awt.GraphicsEnvironment
 {
-	@:overload public function new(ge : java.awt.GraphicsEnvironment) : Void;
+	@:overload @:public public function new(ge : java.awt.GraphicsEnvironment) : Void;
 	
-	@:overload public function getScreenDevices() : java.NativeArray<java.awt.GraphicsDevice>;
+	@:overload @:public override public function getScreenDevices() : java.NativeArray<java.awt.GraphicsDevice>;
 	
-	@:overload public function getDefaultScreenDevice() : java.awt.GraphicsDevice;
+	@:overload @:public override public function getDefaultScreenDevice() : java.awt.GraphicsDevice;
 	
-	@:overload public function getCenterPoint() : java.awt.Point;
+	@:overload @:public override public function getCenterPoint() : java.awt.Point;
 	
-	@:overload public function getMaximumWindowBounds() : java.awt.Rectangle;
+	@:overload @:public override public function getMaximumWindowBounds() : java.awt.Rectangle;
 	
-	@:overload public function createGraphics(img : java.awt.image.BufferedImage) : java.awt.Graphics2D;
+	@:overload @:public override public function createGraphics(img : java.awt.image.BufferedImage) : java.awt.Graphics2D;
 	
-	@:overload public function getAllFonts() : java.NativeArray<java.awt.Font>;
+	@:overload @:public override public function getAllFonts() : java.NativeArray<java.awt.Font>;
 	
-	@:overload public function getAvailableFontFamilyNames() : java.NativeArray<String>;
+	@:overload @:public override public function getAvailableFontFamilyNames() : java.NativeArray<String>;
 	
-	@:overload public function getAvailableFontFamilyNames(l : java.util.Locale) : java.NativeArray<String>;
+	@:overload @:public override public function getAvailableFontFamilyNames(l : java.util.Locale) : java.NativeArray<String>;
 	
 	/* Used by FontManager : internal API */
-	@:overload public function getSunGraphicsEnvironment() : java.awt.GraphicsEnvironment;
+	@:overload @:public public function getSunGraphicsEnvironment() : java.awt.GraphicsEnvironment;
 	
 	
 }

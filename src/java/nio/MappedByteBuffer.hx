@@ -43,7 +43,7 @@ extern class MappedByteBuffer extends java.nio.ByteBuffer
 	* @return  <tt>true</tt> if it is likely that this buffer's content
 	*          is resident in physical memory
 	*/
-	@:overload @:final public function isLoaded() : Bool;
+	@:overload @:public @:final public function isLoaded() : Bool;
 	
 	/**
 	* Loads this buffer's content into physical memory.
@@ -55,7 +55,7 @@ extern class MappedByteBuffer extends java.nio.ByteBuffer
 	*
 	* @return  This buffer
 	*/
-	@:overload @:final public function load() : java.nio.MappedByteBuffer;
+	@:overload @:public @:final public function load() : java.nio.MappedByteBuffer;
 	
 	/**
 	* Forces any changes made to this buffer's content to be written to the
@@ -75,7 +75,7 @@ extern class MappedByteBuffer extends java.nio.ByteBuffer
 	*
 	* @return  This buffer
 	*/
-	@:overload @:final public function force() : java.nio.MappedByteBuffer;
+	@:overload @:public @:final public function force() : java.nio.MappedByteBuffer;
 	
 	
 }

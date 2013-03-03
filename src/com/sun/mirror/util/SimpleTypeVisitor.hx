@@ -45,14 +45,14 @@ package com.sun.mirror.util;
 	/**
 	* Creates a new <tt>SimpleTypeVisitor</tt>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Visits a type mirror.
 	* The implementation does nothing.
 	* @param t the type to visit
 	*/
-	@:overload public function visitTypeMirror(t : com.sun.mirror.type.TypeMirror) : Void;
+	@:overload @:public public function visitTypeMirror(t : com.sun.mirror.type.TypeMirror) : Void;
 	
 	/**
 	* Visits a primitive type.
@@ -60,7 +60,7 @@ package com.sun.mirror.util;
 	* {@link #visitTypeMirror visitTypeMirror}.
 	* @param t the type to visit
 	*/
-	@:overload public function visitPrimitiveType(t : com.sun.mirror.type.PrimitiveType) : Void;
+	@:overload @:public public function visitPrimitiveType(t : com.sun.mirror.type.PrimitiveType) : Void;
 	
 	/**
 	* Visits a void type.
@@ -68,7 +68,7 @@ package com.sun.mirror.util;
 	* {@link #visitTypeMirror visitTypeMirror}.
 	* @param t the type to visit
 	*/
-	@:overload public function visitVoidType(t : com.sun.mirror.type.VoidType) : Void;
+	@:overload @:public public function visitVoidType(t : com.sun.mirror.type.VoidType) : Void;
 	
 	/**
 	* Visits a reference type.
@@ -76,7 +76,7 @@ package com.sun.mirror.util;
 	* {@link #visitTypeMirror visitTypeMirror}.
 	* @param t the type to visit
 	*/
-	@:overload public function visitReferenceType(t : com.sun.mirror.type.ReferenceType) : Void;
+	@:overload @:public public function visitReferenceType(t : com.sun.mirror.type.ReferenceType) : Void;
 	
 	/**
 	* Visits a declared type.
@@ -84,7 +84,7 @@ package com.sun.mirror.util;
 	* {@link #visitReferenceType visitReferenceType}.
 	* @param t the type to visit
 	*/
-	@:overload public function visitDeclaredType(t : com.sun.mirror.type.DeclaredType) : Void;
+	@:overload @:public public function visitDeclaredType(t : com.sun.mirror.type.DeclaredType) : Void;
 	
 	/**
 	* Visits a class type.
@@ -92,7 +92,7 @@ package com.sun.mirror.util;
 	* {@link #visitDeclaredType visitDeclaredType}.
 	* @param t the type to visit
 	*/
-	@:overload public function visitClassType(t : com.sun.mirror.type.ClassType) : Void;
+	@:overload @:public public function visitClassType(t : com.sun.mirror.type.ClassType) : Void;
 	
 	/**
 	* Visits an enum type.
@@ -100,7 +100,7 @@ package com.sun.mirror.util;
 	* {@link #visitClassType visitClassType}.
 	* @param t the type to visit
 	*/
-	@:overload public function visitEnumType(t : com.sun.mirror.type.EnumType) : Void;
+	@:overload @:public public function visitEnumType(t : com.sun.mirror.type.EnumType) : Void;
 	
 	/**
 	* Visits an interface type.
@@ -108,7 +108,7 @@ package com.sun.mirror.util;
 	* {@link #visitDeclaredType visitDeclaredType}.
 	* @param t the type to visit
 	*/
-	@:overload public function visitInterfaceType(t : com.sun.mirror.type.InterfaceType) : Void;
+	@:overload @:public public function visitInterfaceType(t : com.sun.mirror.type.InterfaceType) : Void;
 	
 	/**
 	* Visits an annotation type.
@@ -116,7 +116,7 @@ package com.sun.mirror.util;
 	* {@link #visitInterfaceType visitInterfaceType}.
 	* @param t the type to visit
 	*/
-	@:overload public function visitAnnotationType(t : com.sun.mirror.type.AnnotationType) : Void;
+	@:overload @:public public function visitAnnotationType(t : com.sun.mirror.type.AnnotationType) : Void;
 	
 	/**
 	* Visits an array type.
@@ -124,7 +124,7 @@ package com.sun.mirror.util;
 	* {@link #visitReferenceType visitReferenceType}.
 	* @param t the type to visit
 	*/
-	@:overload public function visitArrayType(t : com.sun.mirror.type.ArrayType) : Void;
+	@:overload @:public public function visitArrayType(t : com.sun.mirror.type.ArrayType) : Void;
 	
 	/**
 	* Visits a type variable.
@@ -132,7 +132,7 @@ package com.sun.mirror.util;
 	* {@link #visitReferenceType visitReferenceType}.
 	* @param t the type to visit
 	*/
-	@:overload public function visitTypeVariable(t : com.sun.mirror.type.TypeVariable) : Void;
+	@:overload @:public public function visitTypeVariable(t : com.sun.mirror.type.TypeVariable) : Void;
 	
 	/**
 	* Visits a wildcard.
@@ -140,7 +140,7 @@ package com.sun.mirror.util;
 	* {@link #visitTypeMirror visitTypeMirror}.
 	* @param t the type to visit
 	*/
-	@:overload public function visitWildcardType(t : com.sun.mirror.type.WildcardType) : Void;
+	@:overload @:public public function visitWildcardType(t : com.sun.mirror.type.WildcardType) : Void;
 	
 	
 }

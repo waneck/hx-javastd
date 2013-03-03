@@ -25,7 +25,7 @@ package com.sun.imageio.plugins.jpeg;
 */
 extern class JPEGStreamMetadataFormat extends com.sun.imageio.plugins.jpeg.JPEGMetadataFormat
 {
-	@:overload @:synchronized public static function getInstance() : javax.imageio.metadata.IIOMetadataFormat;
+	@:overload @:public @:static @:synchronized public static function getInstance() : javax.imageio.metadata.IIOMetadataFormat;
 	
 	
 }

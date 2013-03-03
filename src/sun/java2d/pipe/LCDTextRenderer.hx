@@ -29,7 +29,7 @@ package sun.java2d.pipe;
 */
 extern class LCDTextRenderer extends sun.java2d.pipe.GlyphListLoopPipe
 {
-	@:overload override private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList) : Void;
+	@:overload @:protected override private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList) : Void;
 	
 	
 }

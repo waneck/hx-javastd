@@ -28,15 +28,15 @@ extern interface LegacyServerSocketManager
 	/**
 	* @author Harold Carr
 	*/
-	@:overload public function legacyGetTransientServerPort(type : String) : Int;
+	@:overload @:public public function legacyGetTransientServerPort(type : String) : Int;
 	
-	@:overload public function legacyGetPersistentServerPort(socketType : String) : Int;
+	@:overload @:public public function legacyGetPersistentServerPort(socketType : String) : Int;
 	
-	@:overload public function legacyGetTransientOrPersistentServerPort(socketType : String) : Int;
+	@:overload @:public public function legacyGetTransientOrPersistentServerPort(socketType : String) : Int;
 	
-	@:overload public function legacyGetEndpoint(name : String) : com.sun.corba.se.spi.legacy.connection.LegacyServerSocketEndPointInfo;
+	@:overload @:public public function legacyGetEndpoint(name : String) : com.sun.corba.se.spi.legacy.connection.LegacyServerSocketEndPointInfo;
 	
-	@:overload public function legacyIsLocalServerPort(port : Int) : Bool;
+	@:overload @:public public function legacyIsLocalServerPort(port : Int) : Bool;
 	
 	
 }

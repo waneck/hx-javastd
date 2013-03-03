@@ -25,11 +25,11 @@ package com.sun.xml.internal.bind.v2.model.impl;
 */
 @:internal extern class AttributePropertyInfoImpl<TypeT, ClassDeclT, FieldT, MethodT> extends com.sun.xml.internal.bind.v2.model.impl.SingleTypePropertyInfoImpl<TypeT, ClassDeclT, FieldT, MethodT> implements com.sun.xml.internal.bind.v2.model.core.AttributePropertyInfo<TypeT, ClassDeclT>
 {
-	@:overload public function isRequired() : Bool;
+	@:overload @:public public function isRequired() : Bool;
 	
-	@:overload @:final public function getXmlName() : javax.xml.namespace.QName;
+	@:overload @:public @:final public function getXmlName() : javax.xml.namespace.QName;
 	
-	@:overload @:final override public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:public @:final override public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
 	
 }

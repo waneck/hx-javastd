@@ -25,9 +25,9 @@ package sun.java2d.opengl;
 */
 extern class OGLDrawImage extends sun.java2d.pipe.DrawImage
 {
-	@:overload override private function renderImageXform(sg : sun.java2d.SunGraphics2D, img : java.awt.Image, tx : java.awt.geom.AffineTransform, interpType : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bgColor : java.awt.Color) : Void;
+	@:overload @:protected override private function renderImageXform(sg : sun.java2d.SunGraphics2D, img : java.awt.Image, tx : java.awt.geom.AffineTransform, interpType : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bgColor : java.awt.Color) : Void;
 	
-	@:overload override public function transformImage(sg : sun.java2d.SunGraphics2D, img : java.awt.image.BufferedImage, op : java.awt.image.BufferedImageOp, x : Int, y : Int) : Void;
+	@:overload @:public override public function transformImage(sg : sun.java2d.SunGraphics2D, img : java.awt.image.BufferedImage, op : java.awt.image.BufferedImageOp, x : Int, y : Int) : Void;
 	
 	
 }

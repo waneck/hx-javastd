@@ -29,7 +29,7 @@ extern class XMLStringFactoryImpl extends com.sun.org.apache.xml.internal.utils.
 	*
 	* @return A never-null static reference to a String factory.
 	*/
-	@:overload public static function getFactory() : com.sun.org.apache.xml.internal.utils.XMLStringFactory;
+	@:overload @:public @:static public static function getFactory() : com.sun.org.apache.xml.internal.utils.XMLStringFactory;
 	
 	/**
 	* Create a new XMLString from a Java string.
@@ -39,7 +39,7 @@ extern class XMLStringFactoryImpl extends com.sun.org.apache.xml.internal.utils.
 	*
 	* @return An XMLString object that wraps the String reference.
 	*/
-	@:overload public function newstr(string : String) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public override public function newstr(string : String) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Create a XMLString from a FastStringBuffer.
@@ -51,7 +51,7 @@ extern class XMLStringFactoryImpl extends com.sun.org.apache.xml.internal.utils.
 	*
 	* @return An XMLString object that wraps the FastStringBuffer reference.
 	*/
-	@:overload public function newstr(fsb : com.sun.org.apache.xml.internal.utils.FastStringBuffer, start : Int, length : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public override public function newstr(fsb : com.sun.org.apache.xml.internal.utils.FastStringBuffer, start : Int, length : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Create a XMLString from a FastStringBuffer.
@@ -63,14 +63,14 @@ extern class XMLStringFactoryImpl extends com.sun.org.apache.xml.internal.utils.
 	*
 	* @return An XMLString object that wraps the FastStringBuffer reference.
 	*/
-	@:overload public function newstr(string : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public override public function newstr(string : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Get a cheap representation of an empty string.
 	*
 	* @return An non-null reference to an XMLString that represents "".
 	*/
-	@:overload public function emptystr() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public override public function emptystr() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	
 }

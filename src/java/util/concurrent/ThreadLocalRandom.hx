@@ -39,7 +39,7 @@ extern class ThreadLocalRandom extends java.util.Random
 	*
 	* @return the current thread's {@code ThreadLocalRandom}
 	*/
-	@:overload public static function current() : java.util.concurrent.ThreadLocalRandom;
+	@:overload @:public @:static public static function current() : java.util.concurrent.ThreadLocalRandom;
 	
 	/**
 	* Throws {@code UnsupportedOperationException}.  Setting seeds in
@@ -47,9 +47,9 @@ extern class ThreadLocalRandom extends java.util.Random
 	*
 	* @throws UnsupportedOperationException always
 	*/
-	@:overload public function setSeed(seed : haxe.Int64) : Void;
+	@:overload @:public override public function setSeed(seed : haxe.Int64) : Void;
 	
-	@:overload private function next(bits : Int) : Int;
+	@:overload @:protected override private function next(bits : Int) : Int;
 	
 	/**
 	* Returns a pseudorandom, uniformly distributed value between the
@@ -61,7 +61,7 @@ extern class ThreadLocalRandom extends java.util.Random
 	* to bound
 	* @return the next value
 	*/
-	@:overload public function nextInt(least : Int, bound : Int) : Int;
+	@:overload @:public public function nextInt(least : Int, bound : Int) : Int;
 	
 	/**
 	* Returns a pseudorandom, uniformly distributed value
@@ -72,7 +72,7 @@ extern class ThreadLocalRandom extends java.util.Random
 	* @return the next value
 	* @throws IllegalArgumentException if n is not positive
 	*/
-	@:overload public function nextLong(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function nextLong(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns a pseudorandom, uniformly distributed value between the
@@ -84,7 +84,7 @@ extern class ThreadLocalRandom extends java.util.Random
 	* @throws IllegalArgumentException if least greater than or equal
 	* to bound
 	*/
-	@:overload public function nextLong(least : haxe.Int64, bound : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function nextLong(least : haxe.Int64, bound : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns a pseudorandom, uniformly distributed {@code double} value
@@ -95,7 +95,7 @@ extern class ThreadLocalRandom extends java.util.Random
 	* @return the next value
 	* @throws IllegalArgumentException if n is not positive
 	*/
-	@:overload public function nextDouble(n : Float) : Float;
+	@:overload @:public public function nextDouble(n : Float) : Float;
 	
 	/**
 	* Returns a pseudorandom, uniformly distributed value between the
@@ -107,7 +107,7 @@ extern class ThreadLocalRandom extends java.util.Random
 	* @throws IllegalArgumentException if least greater than or equal
 	* to bound
 	*/
-	@:overload public function nextDouble(least : Float, bound : Float) : Float;
+	@:overload @:public public function nextDouble(least : Float, bound : Float) : Float;
 	
 	
 }

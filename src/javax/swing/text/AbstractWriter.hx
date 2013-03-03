@@ -29,7 +29,7 @@ extern class AbstractWriter
 	* How the text packages models newlines.
 	* @see #getLineSeparator
 	*/
-	private static var NEWLINE(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var NEWLINE(default, null) : java.StdTypes.Char16;
 	
 	/**
 	* Creates a new AbstractWriter.
@@ -39,7 +39,7 @@ extern class AbstractWriter
 	* @param w a Writer.
 	* @param doc a Document
 	*/
-	@:overload private function new(w : java.io.Writer, doc : javax.swing.text.Document) : Void;
+	@:overload @:protected private function new(w : java.io.Writer, doc : javax.swing.text.Document) : Void;
 	
 	/**
 	* Creates a new AbstractWriter.
@@ -52,7 +52,7 @@ extern class AbstractWriter
 	*   content.
 	* @param len The amount to write out.
 	*/
-	@:overload private function new(w : java.io.Writer, doc : javax.swing.text.Document, pos : Int, len : Int) : Void;
+	@:overload @:protected private function new(w : java.io.Writer, doc : javax.swing.text.Document, pos : Int, len : Int) : Void;
 	
 	/**
 	* Creates a new AbstractWriter.
@@ -62,7 +62,7 @@ extern class AbstractWriter
 	* @param w a Writer
 	* @param root an Element
 	*/
-	@:overload private function new(w : java.io.Writer, root : javax.swing.text.Element) : Void;
+	@:overload @:protected private function new(w : java.io.Writer, root : javax.swing.text.Element) : Void;
 	
 	/**
 	* Creates a new AbstractWriter.
@@ -75,42 +75,42 @@ extern class AbstractWriter
 	*   content.
 	* @param len The amount to write out.
 	*/
-	@:overload private function new(w : java.io.Writer, root : javax.swing.text.Element, pos : Int, len : Int) : Void;
+	@:overload @:protected private function new(w : java.io.Writer, root : javax.swing.text.Element, pos : Int, len : Int) : Void;
 	
 	/**
 	* Returns the first offset to be output.
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getStartOffset() : Int;
+	@:require(java3) @:overload @:public public function getStartOffset() : Int;
 	
 	/**
 	* Returns the last offset to be output.
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getEndOffset() : Int;
+	@:require(java3) @:overload @:public public function getEndOffset() : Int;
 	
 	/**
 	* Fetches the ElementIterator.
 	*
 	* @return the ElementIterator.
 	*/
-	@:overload private function getElementIterator() : javax.swing.text.ElementIterator;
+	@:overload @:protected private function getElementIterator() : javax.swing.text.ElementIterator;
 	
 	/**
 	* Returns the Writer that is used to output the content.
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function getWriter() : java.io.Writer;
+	@:require(java3) @:overload @:protected private function getWriter() : java.io.Writer;
 	
 	/**
 	* Fetches the document.
 	*
 	* @return the Document.
 	*/
-	@:overload private function getDocument() : javax.swing.text.Document;
+	@:overload @:protected private function getDocument() : javax.swing.text.Document;
 	
 	/**
 	* This method determines whether the current element
@@ -123,7 +123,7 @@ extern class AbstractWriter
 	* @return boolean that indicates whether the element
 	*         is in the range.
 	*/
-	@:overload private function inRange(next : javax.swing.text.Element) : Bool;
+	@:overload @:protected private function inRange(next : javax.swing.text.Element) : Bool;
 	
 	/**
 	* This abstract method needs to be implemented
@@ -131,7 +131,7 @@ extern class AbstractWriter
 	* iterate over the elements and use the write()
 	* methods to generate output in the desired format.
 	*/
-	@:overload @:abstract private function write() : Void;
+	@:overload @:abstract @:protected private function write() : Void;
 	
 	/**
 	* Returns the text associated with the element.
@@ -144,7 +144,7 @@ extern class AbstractWriter
 	*            location within the document
 	* @return    the text as a <code>String</code>
 	*/
-	@:overload private function getText(elem : javax.swing.text.Element) : String;
+	@:overload @:protected private function getText(elem : javax.swing.text.Element) : String;
 	
 	/**
 	* Writes out text.  If a range is specified when the constructor
@@ -156,7 +156,7 @@ extern class AbstractWriter
 	* @exception BadLocationException if pos represents an invalid
 	*            location within the document.
 	*/
-	@:overload private function text(elem : javax.swing.text.Element) : Void;
+	@:overload @:protected private function text(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Enables subclasses to set the number of characters they
@@ -164,28 +164,28 @@ extern class AbstractWriter
 	*
 	* @param l the maximum line length.
 	*/
-	@:overload private function setLineLength(l : Int) : Void;
+	@:overload @:protected private function setLineLength(l : Int) : Void;
 	
 	/**
 	* Returns the maximum line length.
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function getLineLength() : Int;
+	@:require(java3) @:overload @:protected private function getLineLength() : Int;
 	
 	/**
 	* Sets the current line length.
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function setCurrentLineLength(length : Int) : Void;
+	@:require(java3) @:overload @:protected private function setCurrentLineLength(length : Int) : Void;
 	
 	/**
 	* Returns the current line length.
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function getCurrentLineLength() : Int;
+	@:require(java3) @:overload @:protected private function getCurrentLineLength() : Int;
 	
 	/**
 	* Returns true if the current line should be considered empty. This
@@ -194,7 +194,7 @@ extern class AbstractWriter
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function isLineEmpty() : Bool;
+	@:require(java3) @:overload @:protected private function isLineEmpty() : Bool;
 	
 	/**
 	* Sets whether or not lines can be wrapped. This can be toggled
@@ -203,7 +203,7 @@ extern class AbstractWriter
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function setCanWrapLines(newValue : Bool) : Void;
+	@:require(java3) @:overload @:protected private function setCanWrapLines(newValue : Bool) : Void;
 	
 	/**
 	* Returns whether or not the lines can be wrapped. If this is false
@@ -211,7 +211,7 @@ extern class AbstractWriter
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function getCanWrapLines() : Bool;
+	@:require(java3) @:overload @:protected private function getCanWrapLines() : Bool;
 	
 	/**
 	* Enables subclasses to specify how many spaces an indent
@@ -220,14 +220,14 @@ extern class AbstractWriter
 	*
 	* @param space an int representing the space to indent mapping.
 	*/
-	@:overload private function setIndentSpace(space : Int) : Void;
+	@:overload @:protected private function setIndentSpace(space : Int) : Void;
 	
 	/**
 	* Returns the amount of space to indent.
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function getIndentSpace() : Int;
+	@:require(java3) @:overload @:protected private function getIndentSpace() : Int;
 	
 	/**
 	* Sets the String used to reprsent newlines. This is initialized
@@ -236,26 +236,26 @@ extern class AbstractWriter
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setLineSeparator(value : String) : Void;
+	@:require(java3) @:overload @:public public function setLineSeparator(value : String) : Void;
 	
 	/**
 	* Returns the string used to represent newlines.
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getLineSeparator() : String;
+	@:require(java3) @:overload @:public public function getLineSeparator() : String;
 	
 	/**
 	* Increments the indent level. If indenting would cause
 	* <code>getIndentSpace()</code> *<code>getIndentLevel()</code> to be >
 	* than <code>getLineLength()</code> this will not cause an indent.
 	*/
-	@:overload private function incrIndent() : Void;
+	@:overload @:protected private function incrIndent() : Void;
 	
 	/**
 	* Decrements the indent level.
 	*/
-	@:overload private function decrIndent() : Void;
+	@:overload @:protected private function decrIndent() : Void;
 	
 	/**
 	* Returns the current indentation level. That is, the number of times
@@ -264,7 +264,7 @@ extern class AbstractWriter
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function getIndentLevel() : Int;
+	@:require(java3) @:overload @:protected private function getIndentLevel() : Int;
 	
 	/**
 	* Does indentation. The number of spaces written
@@ -274,7 +274,7 @@ extern class AbstractWriter
 	*
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function indent() : Void;
+	@:overload @:protected private function indent() : Void;
 	
 	/**
 	* Writes out a character. This is implemented to invoke
@@ -283,7 +283,7 @@ extern class AbstractWriter
 	* @param     ch a char.
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function write(ch : java.StdTypes.Char16) : Void;
+	@:overload @:protected private function write(ch : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Writes out a string. This is implemented to invoke the
@@ -292,7 +292,7 @@ extern class AbstractWriter
 	* @param     content a String.
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function write(content : String) : Void;
+	@:overload @:protected private function write(content : String) : Void;
 	
 	/**
 	* Writes the line separator. This invokes <code>output</code> directly
@@ -300,7 +300,7 @@ extern class AbstractWriter
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function writeLineSeparator() : Void;
+	@:require(java3) @:overload @:protected private function writeLineSeparator() : Void;
 	
 	/**
 	* All write methods call into this one. If <code>getCanWrapLines()</code>
@@ -315,7 +315,7 @@ extern class AbstractWriter
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function write(chars : java.NativeArray<java.StdTypes.Char16>, startIndex : Int, length : Int) : Void;
+	@:require(java3) @:overload @:protected private function write(chars : java.NativeArray<java.StdTypes.Char16>, startIndex : Int, length : Int) : Void;
 	
 	/**
 	* Writes out the set of attributes as " <name>=<value>"
@@ -324,7 +324,7 @@ extern class AbstractWriter
 	* @param     attr an AttributeSet.
 	* @exception IOException on any I/O error
 	*/
-	@:overload private function writeAttributes(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:protected private function writeAttributes(attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* The last stop in writing out content. All the write methods eventually
@@ -339,7 +339,7 @@ extern class AbstractWriter
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function output(content : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:require(java3) @:overload @:protected private function output(content : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	
 }

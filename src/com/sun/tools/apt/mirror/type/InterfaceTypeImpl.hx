@@ -28,12 +28,12 @@ extern class InterfaceTypeImpl extends com.sun.tools.apt.mirror.type.DeclaredTyp
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getDeclaration() : com.sun.mirror.declaration.InterfaceDeclaration;
+	@:overload @:public override public function getDeclaration() : com.sun.mirror.declaration.InterfaceDeclaration;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
 	
 	
 }

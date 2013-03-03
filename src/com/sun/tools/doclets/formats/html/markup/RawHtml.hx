@@ -30,14 +30,14 @@ package com.sun.tools.doclets.formats.html.markup;
 */
 extern class RawHtml extends com.sun.tools.doclets.internal.toolkit.Content
 {
-	public static var nbsp(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:public @:static @:final public static var nbsp(default, null) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Constructor to construct a RawHtml object.
 	*
 	* @param rawHtml raw HTML text to be added
 	*/
-	@:overload public function new(rawHtml : String) : Void;
+	@:overload @:public public function new(rawHtml : String) : Void;
 	
 	/**
 	* This method is not supported by the class.
@@ -47,7 +47,7 @@ extern class RawHtml extends com.sun.tools.doclets.internal.toolkit.Content
 	*                              DocletAbortException because it
 	*                              is not supported.
 	*/
-	@:overload override public function addContent(content : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public override public function addContent(content : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* This method is not supported by the class.
@@ -57,17 +57,17 @@ extern class RawHtml extends com.sun.tools.doclets.internal.toolkit.Content
 	*                              DocletAbortException because it
 	*                              is not supported.
 	*/
-	@:overload override public function addContent(stringContent : String) : Void;
+	@:overload @:public override public function addContent(stringContent : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function write(contentBuilder : java.lang.StringBuilder) : Void;
+	@:overload @:public override public function write(contentBuilder : java.lang.StringBuilder) : Void;
 	
 	
 }

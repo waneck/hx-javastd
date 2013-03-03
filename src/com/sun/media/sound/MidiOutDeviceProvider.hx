@@ -28,7 +28,7 @@ extern class MidiOutDeviceProvider extends com.sun.media.sound.AbstractMidiDevic
 	/**
 	* Required public no-arg constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

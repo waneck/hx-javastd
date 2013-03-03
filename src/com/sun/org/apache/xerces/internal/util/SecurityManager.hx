@@ -65,7 +65,7 @@ extern class SecurityManager
 	* Default constructor.  Establishes default values
 	* for known security vulnerabilities.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* <p>Sets the number of entity expansions that the
@@ -74,7 +74,7 @@ extern class SecurityManager
 	* @param limit the number of entity expansions
 	* permitted in a document
 	*/
-	@:overload public function setEntityExpansionLimit(limit : Int) : Void;
+	@:overload @:public public function setEntityExpansionLimit(limit : Int) : Void;
 	
 	/**
 	* <p>Returns the number of entity expansions
@@ -83,7 +83,7 @@ extern class SecurityManager
 	* @return the number of entity expansions
 	* permitted in a document
 	*/
-	@:overload public function getEntityExpansionLimit() : Int;
+	@:overload @:public public function getEntityExpansionLimit() : Int;
 	
 	/**
 	* <p>Sets the limit of the number of content model nodes
@@ -94,7 +94,7 @@ extern class SecurityManager
 	* @param limit the maximum value for maxOccurs other
 	* than "unbounded"
 	*/
-	@:overload public function setMaxOccurNodeLimit(limit : Int) : Void;
+	@:overload @:public public function setMaxOccurNodeLimit(limit : Int) : Void;
 	
 	/**
 	* <p>Returns the limit of the number of content model nodes
@@ -105,11 +105,11 @@ extern class SecurityManager
 	* @return the maximum value for maxOccurs other
 	* than "unbounded"
 	*/
-	@:overload public function getMaxOccurNodeLimit() : Int;
+	@:overload @:public public function getMaxOccurNodeLimit() : Int;
 	
-	@:overload public function getElementAttrLimit() : Int;
+	@:overload @:public public function getElementAttrLimit() : Int;
 	
-	@:overload public function setElementAttrLimit(limit : Int) : Void;
+	@:overload @:public public function setElementAttrLimit(limit : Int) : Void;
 	
 	
 }

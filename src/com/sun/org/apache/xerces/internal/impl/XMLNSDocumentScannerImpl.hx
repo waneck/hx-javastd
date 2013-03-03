@@ -23,26 +23,26 @@ extern class XMLNSDocumentScannerImpl extends com.sun.org.apache.xerces.internal
 	* If is true, the dtd validator is no longer in the pipeline
 	* and the scanner should bind namespaces
 	*/
-	private var fBindNamespaces : Bool;
+	@:protected private var fBindNamespaces : Bool;
 	
 	/** If validating parser, make sure we report an error in the
 	*   scanner if DTD grammar is missing.*/
-	private var fPerformValidation : Bool;
+	@:protected private var fPerformValidation : Bool;
 	
 	/** Default value of this feature is false, when in Stax mode this should be true */
-	private var fNotAddNSDeclAsAttribute : Bool;
+	@:protected private var fNotAddNSDeclAsAttribute : Bool;
 	
 	/** Resets the fields of this scanner.
 	*/
-	@:overload public function reset(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public override public function reset(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
-	@:overload public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public override public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/** return the next state on the input
 	*
 	* @return int
 	*/
-	@:overload public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	/**
 	* The scanner is responsible for removing DTD validator
@@ -53,7 +53,7 @@ extern class XMLNSDocumentScannerImpl extends com.sun.org.apache.xerces.internal
 	*                 The DTDValidator
 	* @param next     The documentHandler after the DTDValidator
 	*/
-	@:overload public function setDTDValidator(dtd : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidatorFilter) : Void;
+	@:overload @:public public function setDTDValidator(dtd : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidatorFilter) : Void;
 	
 	/**
 	* Scans a start element. This method will handle the binding of
@@ -76,7 +76,7 @@ extern class XMLNSDocumentScannerImpl extends com.sun.org.apache.xerces.internal
 	* @return True if element is empty. (i.e. It matches
 	*          production [44].
 	*/
-	@:overload private function scanStartElement() : Bool;
+	@:overload @:protected override private function scanStartElement() : Bool;
 	
 	/**
 	* Scans an attribute.
@@ -95,10 +95,10 @@ extern class XMLNSDocumentScannerImpl extends com.sun.org.apache.xerces.internal
 	*
 	* @param attributes The attributes list for the scanned attribute.
 	*/
-	@:overload private function scanAttribute(attributes : com.sun.org.apache.xerces.internal.util.XMLAttributesImpl) : Void;
+	@:overload @:protected private function scanAttribute(attributes : com.sun.org.apache.xerces.internal.util.XMLAttributesImpl) : Void;
 	
 	/** Creates a content driver. */
-	@:overload private function createContentDriver() : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
+	@:overload @:protected override private function createContentDriver() : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	
 }
@@ -120,7 +120,7 @@ extern class XMLNSDocumentScannerImpl extends com.sun.org.apache.xerces.internal
 	*          driver. A return value of false indicates that
 	*          the content driver should continue as normal.
 	*/
-	@:overload private function scanRootElementHook() : Bool;
+	@:overload @:protected override private function scanRootElementHook() : Bool;
 	
 	
 }

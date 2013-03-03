@@ -62,13 +62,13 @@ package com.sun.net.httpserver;
 	* @param context the SSLContext to use for this configurator
 	* @throws NullPointerException if no SSLContext supplied
 	*/
-	@:overload public function new(context : javax.net.ssl.SSLContext) : Void;
+	@:overload @:public public function new(context : javax.net.ssl.SSLContext) : Void;
 	
 	/**
 	* Returns the SSLContext for this HttpsConfigurator.
 	* @return the SSLContext
 	*/
-	@:overload public function getSSLContext() : javax.net.ssl.SSLContext;
+	@:overload @:public public function getSSLContext() : javax.net.ssl.SSLContext;
 	
 	/**
 	* Called by the HttpsServer to configure the parameters
@@ -87,7 +87,7 @@ package com.sun.net.httpserver;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function configure(params : com.sun.net.httpserver.HttpsParameters) : Void;
+	@:require(java6) @:overload @:public public function configure(params : com.sun.net.httpserver.HttpsParameters) : Void;
 	
 	
 }

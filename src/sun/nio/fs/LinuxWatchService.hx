@@ -40,9 +40,9 @@ package sun.nio.fs;
 */
 @:native('sun$nio$fs$LinuxWatchService$LinuxWatchKey') @:internal extern class LinuxWatchService_LinuxWatchKey extends sun.nio.fs.AbstractWatchKey
 {
-	@:overload public function isValid() : Bool;
+	@:overload @:public override public function isValid() : Bool;
 	
-	@:overload public function cancel() : Void;
+	@:overload @:public override public function cancel() : Void;
 	
 	
 }
@@ -54,7 +54,7 @@ package sun.nio.fs;
 	/**
 	* Poller main loop
 	*/
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

@@ -35,9 +35,9 @@ package javax.rmi.CORBA;
 */
 @:internal extern class GetORBPropertiesFileAction implements java.security.PrivilegedAction<Dynamic>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function run() : Dynamic;
+	@:overload @:public public function run() : Dynamic;
 	
 	
 }

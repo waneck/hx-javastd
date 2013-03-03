@@ -25,11 +25,11 @@ package sun.tools.jconsole;
 */
 @:internal extern class SummaryTab extends sun.tools.jconsole.Tab
 {
-	@:overload public static function getTabName() : String;
+	@:overload @:public @:static public static function getTabName() : String;
 	
-	@:overload public function new(vmPanel : sun.tools.jconsole.VMPanel) : Void;
+	@:overload @:public public function new(vmPanel : sun.tools.jconsole.VMPanel) : Void;
 	
-	@:overload override public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
+	@:overload @:public override public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
 	
 	
 }
@@ -39,7 +39,7 @@ package sun.tools.jconsole;
 }
 @:native('sun$tools$jconsole$SummaryTab$CPUOverviewPanel') @:internal extern class SummaryTab_CPUOverviewPanel extends sun.tools.jconsole.OverviewPanel
 {
-	@:overload public function updateCPUInfo(result : sun.tools.jconsole.SummaryTab.SummaryTab_Result) : Void;
+	@:overload @:public public function updateCPUInfo(result : sun.tools.jconsole.SummaryTab.SummaryTab_Result) : Void;
 	
 	
 }

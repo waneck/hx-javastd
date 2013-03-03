@@ -37,7 +37,7 @@ extern class BMMimeMultipart extends com.sun.xml.internal.messaging.saaj.packagi
 	*
 	* MimeBodyParts may be added later.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a MimeMultipart object of the given subtype.
@@ -47,7 +47,7 @@ extern class BMMimeMultipart extends com.sun.xml.internal.messaging.saaj.packagi
 	*
 	* MimeBodyParts may be added later.
 	*/
-	@:overload public function new(subtype : String) : Void;
+	@:overload @:public public function new(subtype : String) : Void;
 	
 	/**
 	* Constructs a MimeMultipart object and its bodyparts from the
@@ -67,9 +67,9 @@ extern class BMMimeMultipart extends com.sun.xml.internal.messaging.saaj.packagi
 	*
 	* @param   ds      DataSource, can be a MultipartDataSource
 	*/
-	@:overload public function new(ds : javax.activation.DataSource, ct : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType) : Void;
+	@:overload @:public public function new(ds : javax.activation.DataSource, ct : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType) : Void;
 	
-	@:overload public function initStream() : java.io.InputStream;
+	@:overload @:public public function initStream() : java.io.InputStream;
 	
 	/**
 	* Parse the InputStream from our DataSource, constructing the
@@ -80,33 +80,33 @@ extern class BMMimeMultipart extends com.sun.xml.internal.messaging.saaj.packagi
 	*
 	* @since   JavaMail 1.2
 	*/
-	@:require(java2) @:overload override private function parse() : Void;
+	@:require(java2) @:overload @:protected override private function parse() : Void;
 	
-	@:overload public function lastBodyPartFound() : Bool;
+	@:overload @:public public function lastBodyPartFound() : Bool;
 	
-	@:overload public function getNextPart(stream : java.io.InputStream, pattern : java.NativeArray<java.StdTypes.Int8>, sin : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.SharedInputStream) : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
+	@:overload @:public public function getNextPart(stream : java.io.InputStream, pattern : java.NativeArray<java.StdTypes.Int8>, sin : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.SharedInputStream) : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
 	
-	@:overload public function parse(stream : java.io.InputStream, pattern : java.NativeArray<java.StdTypes.Int8>, sin : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.SharedInputStream) : Bool;
+	@:overload @:public public function parse(stream : java.io.InputStream, pattern : java.NativeArray<java.StdTypes.Int8>, sin : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.SharedInputStream) : Bool;
 	
-	@:overload public function readNext(is : java.io.InputStream, buff : java.NativeArray<java.StdTypes.Int8>, patternLength : Int, eof : java.util.BitSet, posVector : java.NativeArray<haxe.Int64>, sin : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.SharedInputStream) : Int;
+	@:overload @:public public function readNext(is : java.io.InputStream, buff : java.NativeArray<java.StdTypes.Int8>, patternLength : Int, eof : java.util.BitSet, posVector : java.NativeArray<haxe.Int64>, sin : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.SharedInputStream) : Int;
 	
-	@:overload public function find(is : java.io.InputStream, pattern : java.NativeArray<java.StdTypes.Int8>, sin : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.SharedInputStream) : Bool;
+	@:overload @:public public function find(is : java.io.InputStream, pattern : java.NativeArray<java.StdTypes.Int8>, sin : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.SharedInputStream) : Bool;
 	
-	@:overload public function find(is : java.io.InputStream, pattern : java.NativeArray<java.StdTypes.Int8>, posVector : java.NativeArray<haxe.Int64>, out : com.sun.xml.internal.messaging.saaj.util.ByteOutputStream, sin : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.SharedInputStream) : Bool;
+	@:overload @:public public function find(is : java.io.InputStream, pattern : java.NativeArray<java.StdTypes.Int8>, posVector : java.NativeArray<haxe.Int64>, out : com.sun.xml.internal.messaging.saaj.util.ByteOutputStream, sin : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.SharedInputStream) : Bool;
 	
-	@:overload override public function writeTo(os : java.io.OutputStream) : Void;
+	@:overload @:public override public function writeTo(os : java.io.OutputStream) : Void;
 	
-	@:overload public function setInputStream(is : java.io.InputStream) : Void;
+	@:overload @:public public function setInputStream(is : java.io.InputStream) : Void;
 	
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
-	@:overload public function setBoundary(bnd : String) : Void;
+	@:overload @:public public function setBoundary(bnd : String) : Void;
 	
-	@:overload public function getBoundary() : String;
+	@:overload @:public public function getBoundary() : String;
 	
-	@:overload public function isEndOfStream() : Bool;
+	@:overload @:public public function isEndOfStream() : Bool;
 	
-	@:overload public function setLazyAttachments(flag : Bool) : Void;
+	@:overload @:public public function setLazyAttachments(flag : Bool) : Void;
 	
 	
 }

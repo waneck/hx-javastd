@@ -25,17 +25,17 @@ package com.sun.tools.jdi;
 */
 extern class SocketAttachingConnector extends com.sun.tools.jdi.GenericAttachingConnector
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/*
 	* Create an "address" from the hostname and port connector
 	* arguments and attach to the target VM.
 	*/
-	@:overload override public function attach(arguments : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : com.sun.jdi.VirtualMachine;
+	@:overload @:public override public function attach(arguments : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : com.sun.jdi.VirtualMachine;
 	
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload override public function description() : String;
+	@:overload @:public override public function description() : String;
 	
 	
 }

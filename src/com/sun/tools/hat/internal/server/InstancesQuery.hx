@@ -30,11 +30,11 @@ package com.sun.tools.hat.internal.server;
 */
 @:internal extern class InstancesQuery extends com.sun.tools.hat.internal.server.QueryHandler
 {
-	@:overload public function new(includeSubclasses : Bool) : Void;
+	@:overload @:public public function new(includeSubclasses : Bool) : Void;
 	
-	@:overload public function new(includeSubclasses : Bool, newObjects : Bool) : Void;
+	@:overload @:public public function new(includeSubclasses : Bool, newObjects : Bool) : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

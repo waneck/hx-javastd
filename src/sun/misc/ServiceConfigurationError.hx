@@ -42,12 +42,12 @@ package sun.misc;
 	/**
 	* Constructs a new instance with the specified detail string.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Constructs a new instance that wraps the specified throwable.
 	*/
-	@:overload public function new(x : java.lang.Throwable) : Void;
+	@:overload @:public public function new(x : java.lang.Throwable) : Void;
 	
 	
 }

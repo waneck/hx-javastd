@@ -83,12 +83,12 @@ package java.util.concurrent.atomic;
 	* @throws RuntimeException with a nested reflection-based
 	* exception if the class does not hold field or is the wrong type.
 	*/
-	@:overload public static function newUpdater<U, W>(tclass : Class<U>, vclass : Class<W>, fieldName : String) : java.util.concurrent.atomic.AtomicReferenceFieldUpdater<U, W>;
+	@:overload @:public @:static public static function newUpdater<U, W>(tclass : Class<U>, vclass : Class<W>, fieldName : String) : java.util.concurrent.atomic.AtomicReferenceFieldUpdater<U, W>;
 	
 	/**
 	* Protected do-nothing constructor for use by subclasses.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Atomically sets the field of the given object managed by this updater
@@ -102,7 +102,7 @@ package java.util.concurrent.atomic;
 	* @param update the new value
 	* @return true if successful.
 	*/
-	@:overload @:abstract public function compareAndSet(obj : T, expect : V, update : V) : Bool;
+	@:overload @:public @:abstract public function compareAndSet(obj : T, expect : V, update : V) : Bool;
 	
 	/**
 	* Atomically sets the field of the given object managed by this updater
@@ -120,7 +120,7 @@ package java.util.concurrent.atomic;
 	* @param update the new value
 	* @return true if successful.
 	*/
-	@:overload @:abstract public function weakCompareAndSet(obj : T, expect : V, update : V) : Bool;
+	@:overload @:public @:abstract public function weakCompareAndSet(obj : T, expect : V, update : V) : Bool;
 	
 	/**
 	* Sets the field of the given object managed by this updater to the
@@ -130,7 +130,7 @@ package java.util.concurrent.atomic;
 	* @param obj An object whose field to set
 	* @param newValue the new value
 	*/
-	@:overload @:abstract public function set(obj : T, newValue : V) : Void;
+	@:overload @:public @:abstract public function set(obj : T, newValue : V) : Void;
 	
 	/**
 	* Eventually sets the field of the given object managed by this
@@ -140,7 +140,7 @@ package java.util.concurrent.atomic;
 	* @param newValue the new value
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function lazySet(obj : T, newValue : V) : Void;
+	@:require(java6) @:overload @:public @:abstract public function lazySet(obj : T, newValue : V) : Void;
 	
 	/**
 	* Gets the current value held in the field of the given object managed
@@ -149,7 +149,7 @@ package java.util.concurrent.atomic;
 	* @param obj An object whose field to get
 	* @return the current value
 	*/
-	@:overload @:abstract public function get(obj : T) : V;
+	@:overload @:public @:abstract public function get(obj : T) : V;
 	
 	/**
 	* Atomically sets the field of the given object managed by this updater
@@ -159,21 +159,21 @@ package java.util.concurrent.atomic;
 	* @param newValue the new value
 	* @return the previous value
 	*/
-	@:overload public function getAndSet(obj : T, newValue : V) : V;
+	@:overload @:public public function getAndSet(obj : T, newValue : V) : V;
 	
 	
 }
 @:native('java$util$concurrent$atomic$AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl') @:internal extern class AtomicReferenceFieldUpdater_AtomicReferenceFieldUpdaterImpl<T, V> extends java.util.concurrent.atomic.AtomicReferenceFieldUpdater<T, V>
 {
-	@:overload override public function compareAndSet(obj : T, expect : V, update : V) : Bool;
+	@:overload @:public override public function compareAndSet(obj : T, expect : V, update : V) : Bool;
 	
-	@:overload override public function weakCompareAndSet(obj : T, expect : V, update : V) : Bool;
+	@:overload @:public override public function weakCompareAndSet(obj : T, expect : V, update : V) : Bool;
 	
-	@:overload override public function set(obj : T, newValue : V) : Void;
+	@:overload @:public override public function set(obj : T, newValue : V) : Void;
 	
-	@:overload override public function lazySet(obj : T, newValue : V) : Void;
+	@:overload @:public override public function lazySet(obj : T, newValue : V) : Void;
 	
-	@:overload override public function get(obj : T) : V;
+	@:overload @:public override public function get(obj : T) : V;
 	
 	
 }

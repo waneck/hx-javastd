@@ -35,7 +35,7 @@ package java.lang;
 	/**
 	* Constructs a {@code ClassCircularityError} with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a {@code ClassCircularityError} with the specified detail
@@ -44,7 +44,7 @@ package java.lang;
 	* @param  s
 	*         The detail message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

@@ -27,25 +27,25 @@ package com.sun.xml.internal.fastinfoset.util;
 */
 extern class ValueArray
 {
-	public static var DEFAULT_CAPACITY(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_CAPACITY(default, null) : Int;
 	
-	public static var MAXIMUM_CAPACITY(default, null) : Int;
+	@:public @:static @:final public static var MAXIMUM_CAPACITY(default, null) : Int;
 	
-	private var _size : Int;
+	@:protected private var _size : Int;
 	
-	private var _readOnlyArraySize : Int;
+	@:protected private var _readOnlyArraySize : Int;
 	
-	private var _maximumCapacity : Int;
+	@:protected private var _maximumCapacity : Int;
 	
-	@:overload public function getSize() : Int;
+	@:overload @:public public function getSize() : Int;
 	
-	@:overload public function getMaximumCapacity() : Int;
+	@:overload @:public public function getMaximumCapacity() : Int;
 	
-	@:overload public function setMaximumCapacity(maximumCapacity : Int) : Void;
+	@:overload @:public public function setMaximumCapacity(maximumCapacity : Int) : Void;
 	
-	@:overload @:abstract public function setReadOnlyArray(array : com.sun.xml.internal.fastinfoset.util.ValueArray, clear : Bool) : Void;
+	@:overload @:public @:abstract public function setReadOnlyArray(array : com.sun.xml.internal.fastinfoset.util.ValueArray, clear : Bool) : Void;
 	
-	@:overload @:abstract public function clear() : Void;
+	@:overload @:public @:abstract public function clear() : Void;
 	
 	
 }

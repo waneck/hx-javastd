@@ -36,14 +36,14 @@ package java.lang;
 	/**
 	* Constructs an <code>VerifyError</code> with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>VerifyError</code> with the specified detail message.
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

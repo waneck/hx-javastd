@@ -27,201 +27,201 @@ package com.sun.java.swing.plaf.gtk;
 */
 @:internal extern class Metacity implements javax.swing.plaf.synth.SynthConstants
 {
-	@:overload private function new(themeName : String) : Void;
+	@:overload @:protected private function new(themeName : String) : Void;
 	
-	@:overload public static function getTitlePaneLayout() : java.awt.LayoutManager;
+	@:overload @:public @:static public static function getTitlePaneLayout() : java.awt.LayoutManager;
 	
-	@:overload private function drawButton(frame_style : org.w3c.dom.Node, _function : String, state : String, g : java.awt.Graphics, w : Int, h : Int, jif : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected private function drawButton(frame_style : org.w3c.dom.Node, _function : String, state : String, g : java.awt.Graphics, w : Int, h : Int, jif : javax.swing.JInternalFrame) : Void;
 	
-	@:overload private function tileImage(g : java.awt.Graphics, image : java.awt.Image, x0 : Int, y0 : Int, w : Int, h : Int, alphas : java.NativeArray<Single>) : Void;
+	@:overload @:protected private function tileImage(g : java.awt.Graphics, image : java.awt.Image, x0 : Int, y0 : Int, w : Int, h : Int, alphas : java.NativeArray<Single>) : Void;
 	
-	@:overload private function getImage(key : String, c : java.awt.Color) : java.awt.Image;
+	@:overload @:protected private function getImage(key : String, c : java.awt.Color) : java.awt.Image;
 	
-	@:overload private function getImage(key : String) : java.awt.Image;
+	@:overload @:protected private function getImage(key : String) : java.awt.Image;
 	
-	@:overload private static function findChild(parent : javax.swing.JComponent, name : String) : javax.swing.JComponent;
+	@:overload @:protected @:static private static function findChild(parent : javax.swing.JComponent, name : String) : javax.swing.JComponent;
 	
-	@:overload private function getFrameGeometry() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:protected private function getFrameGeometry() : java.util.Map<Dynamic, Dynamic>;
 	
-	@:overload private function setFrameGeometry(titlePane : javax.swing.JComponent, gm : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:protected private function setFrameGeometry(titlePane : javax.swing.JComponent, gm : java.util.Map<Dynamic, Dynamic>) : Void;
 	
-	@:overload private function getInt(key : String) : Int;
+	@:overload @:protected private function getInt(key : String) : Int;
 	
-	@:overload private function getBoolean(key : String, fallback : Bool) : Bool;
+	@:overload @:protected private function getBoolean(key : String, fallback : Bool) : Bool;
 	
-	@:overload private function drawArc(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function drawArc(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
 	
-	@:overload private function drawLine(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function drawLine(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
 	
-	@:overload private function drawRectangle(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function drawRectangle(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
 	
-	@:overload private function drawTile(node : org.w3c.dom.Node, g : java.awt.Graphics, jif : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected private function drawTile(node : org.w3c.dom.Node, g : java.awt.Graphics, jif : javax.swing.JInternalFrame) : Void;
 	
-	@:overload private function drawTint(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function drawTint(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
 	
-	@:overload private function drawTitle(node : org.w3c.dom.Node, g : java.awt.Graphics, jif : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected private function drawTitle(node : org.w3c.dom.Node, g : java.awt.Graphics, jif : javax.swing.JInternalFrame) : Void;
 	
-	@:overload private function calculateButtonSize(titlePane : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:protected private function calculateButtonSize(titlePane : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload private function calculateTitleArea(jif : javax.swing.JInternalFrame) : java.awt.Rectangle;
+	@:overload @:protected private function calculateTitleArea(jif : javax.swing.JInternalFrame) : java.awt.Rectangle;
 	
-	@:overload private function calculateTitleTextWidth(g : java.awt.Graphics, jif : javax.swing.JInternalFrame) : Int;
+	@:overload @:protected private function calculateTitleTextWidth(g : java.awt.Graphics, jif : javax.swing.JInternalFrame) : Int;
 	
-	@:overload private function setClip(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function setClip(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
 	
-	@:overload private function drawGTKArrow(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function drawGTKArrow(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
 	
-	@:overload private function drawGTKBox(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function drawGTKBox(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
 	
-	@:overload private function drawGTKVLine(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function drawGTKVLine(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
 	
-	@:overload private function drawGradient(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function drawGradient(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
 	
-	@:overload private function drawImage(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function drawImage(node : org.w3c.dom.Node, g : java.awt.Graphics) : Void;
 	
-	@:overload private function drawIcon(node : org.w3c.dom.Node, g : java.awt.Graphics, jif : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected private function drawIcon(node : org.w3c.dom.Node, g : java.awt.Graphics, jif : javax.swing.JInternalFrame) : Void;
 	
-	@:overload private function drawInclude(node : org.w3c.dom.Node, g : java.awt.Graphics, jif : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected private function drawInclude(node : org.w3c.dom.Node, g : java.awt.Graphics, jif : javax.swing.JInternalFrame) : Void;
 	
-	@:overload private function draw(draw_ops : org.w3c.dom.Node, g : java.awt.Graphics, jif : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected private function draw(draw_ops : org.w3c.dom.Node, g : java.awt.Graphics, jif : javax.swing.JInternalFrame) : Void;
 	
-	@:overload private function drawPiece(frame_style : org.w3c.dom.Node, g : java.awt.Graphics, position : String, x : Int, y : Int, width : Int, height : Int, jif : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected private function drawPiece(frame_style : org.w3c.dom.Node, g : java.awt.Graphics, position : String, x : Int, y : Int, width : Int, height : Int, jif : javax.swing.JInternalFrame) : Void;
 	
-	@:overload private static function logError(themeName : String, ex : java.lang.Exception) : Void;
+	@:overload @:protected @:static private static function logError(themeName : String, ex : java.lang.Exception) : Void;
 	
-	@:overload private static function logError(themeName : String, msg : String) : Void;
+	@:overload @:protected @:static private static function logError(themeName : String, msg : String) : Void;
 	
-	@:overload private static function getXMLDoc(xmlFile : java.net.URL) : org.w3c.dom.Document;
+	@:overload @:protected @:static private static function getXMLDoc(xmlFile : java.net.URL) : org.w3c.dom.Document;
 	
-	@:overload private function getNodesByName(parent : org.w3c.dom.Node, name : String) : java.NativeArray<org.w3c.dom.Node>;
+	@:overload @:protected private function getNodesByName(parent : org.w3c.dom.Node, name : String) : java.NativeArray<org.w3c.dom.Node>;
 	
-	@:overload private function getNode(tagName : String, attrs : java.NativeArray<String>) : org.w3c.dom.Node;
+	@:overload @:protected private function getNode(tagName : String, attrs : java.NativeArray<String>) : org.w3c.dom.Node;
 	
-	@:overload private function getNode(parent : org.w3c.dom.Node, name : String, attrs : java.NativeArray<String>) : org.w3c.dom.Node;
+	@:overload @:protected private function getNode(parent : org.w3c.dom.Node, name : String, attrs : java.NativeArray<String>) : org.w3c.dom.Node;
 	
-	@:overload private function getNode(nodes : org.w3c.dom.NodeList, name : String, attrs : java.NativeArray<String>) : org.w3c.dom.Node;
+	@:overload @:protected private function getNode(nodes : org.w3c.dom.NodeList, name : String, attrs : java.NativeArray<String>) : org.w3c.dom.Node;
 	
-	@:overload private function getStringAttr(node : org.w3c.dom.Node, name : String) : String;
+	@:overload @:protected private function getStringAttr(node : org.w3c.dom.Node, name : String) : String;
 	
-	@:overload private function getStringAttr(attrs : org.w3c.dom.NamedNodeMap, name : String) : String;
+	@:overload @:protected private function getStringAttr(attrs : org.w3c.dom.NamedNodeMap, name : String) : String;
 	
-	@:overload private function getBooleanAttr(node : org.w3c.dom.Node, name : String, fallback : Bool) : Bool;
+	@:overload @:protected private function getBooleanAttr(node : org.w3c.dom.Node, name : String, fallback : Bool) : Bool;
 	
-	@:overload private function getIntAttr(node : org.w3c.dom.Node, name : String, fallback : Int) : Int;
+	@:overload @:protected private function getIntAttr(node : org.w3c.dom.Node, name : String, fallback : Int) : Int;
 	
-	@:overload private function getFloatAttr(node : org.w3c.dom.Node, name : String, fallback : Single) : Single;
+	@:overload @:protected private function getFloatAttr(node : org.w3c.dom.Node, name : String, fallback : Single) : Single;
 	
-	@:overload private function parseColor(str : String) : java.awt.Color;
+	@:overload @:protected private function parseColor(str : String) : java.awt.Color;
 	
-	@:overload private function parseColor2(str : String) : java.awt.Color;
+	@:overload @:protected private function parseColor2(str : String) : java.awt.Color;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$gtk$Metacity$Privileged') @:internal extern class Metacity_Privileged implements java.security.PrivilegedAction<Dynamic>
 {
-	@:overload public function doPrivileged(type : Int, arg : Dynamic) : Dynamic;
+	@:overload @:public public function doPrivileged(type : Int, arg : Dynamic) : Dynamic;
 	
-	@:overload public function run() : Dynamic;
+	@:overload @:public public function run() : Dynamic;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$gtk$Metacity$ColorizeImageFilter') @:internal extern class Metacity_ColorizeImageFilter extends java.awt.image.RGBImageFilter
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setColor(color : java.awt.Color) : Void;
+	@:overload @:public public function setColor(color : java.awt.Color) : Void;
 	
-	@:overload public function colorize(fromImage : java.awt.Image, c : java.awt.Color) : java.awt.Image;
+	@:overload @:public public function colorize(fromImage : java.awt.Image, c : java.awt.Color) : java.awt.Image;
 	
-	@:overload override public function filterRGB(x : Int, y : Int, rgb : Int) : Int;
+	@:overload @:public override public function filterRGB(x : Int, y : Int, rgb : Int) : Int;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$gtk$Metacity$TitlePaneLayout') extern class Metacity_TitlePaneLayout implements java.awt.LayoutManager
 {
-	@:overload public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
 	
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
-	@:overload public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function layoutContainer(c : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(c : java.awt.Container) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$gtk$Metacity$ArithmeticExpressionEvaluator') @:internal extern class Metacity_ArithmeticExpressionEvaluator
 {
-	@:overload public function expression() : Single;
+	@:overload @:public public function expression() : Single;
 	
-	@:overload public function getTermValue() : Single;
+	@:overload @:public public function getTermValue() : Single;
 	
-	@:overload public function getFactorValue() : Single;
+	@:overload @:public public function getFactorValue() : Single;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$gtk$Metacity$PeekableStringTokenizer') @:internal extern class Metacity_PeekableStringTokenizer extends java.util.StringTokenizer
 {
-	@:overload public function new(str : String, delim : String, returnDelims : Bool) : Void;
+	@:overload @:public public function new(str : String, delim : String, returnDelims : Bool) : Void;
 	
-	@:overload public function peek() : String;
+	@:overload @:public public function peek() : String;
 	
-	@:overload override public function hasMoreTokens() : Bool;
+	@:overload @:public override public function hasMoreTokens() : Bool;
 	
-	@:overload override public function nextToken() : String;
+	@:overload @:public override public function nextToken() : String;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$gtk$Metacity$RoundRectClipShape') @:internal extern class Metacity_RoundRectClipShape extends java.awt.geom.RectangularShape
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(x : Int, y : Int, w : Int, h : Int, arcw : Int, arch : Int, corners : Int) : Void;
+	@:overload @:public public function new(x : Int, y : Int, w : Int, h : Int, arcw : Int, arch : Int, corners : Int) : Void;
 	
-	@:overload public function setRoundedRect(x : Int, y : Int, w : Int, h : Int, arcw : Int, arch : Int, corners : Int) : Void;
+	@:overload @:public public function setRoundedRect(x : Int, y : Int, w : Int, h : Int, arcw : Int, arch : Int, corners : Int) : Void;
 	
-	@:overload override public function getX() : Float;
+	@:overload @:public override public function getX() : Float;
 	
-	@:overload override public function getY() : Float;
+	@:overload @:public override public function getY() : Float;
 	
-	@:overload override public function getWidth() : Float;
+	@:overload @:public override public function getWidth() : Float;
 	
-	@:overload override public function getHeight() : Float;
+	@:overload @:public override public function getHeight() : Float;
 	
-	@:overload public function getArcWidth() : Float;
+	@:overload @:public public function getArcWidth() : Float;
 	
-	@:overload public function getArcHeight() : Float;
+	@:overload @:public public function getArcHeight() : Float;
 	
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload override public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:overload @:public override public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
-	@:overload public function getCornerFlags() : Int;
+	@:overload @:public public function getCornerFlags() : Int;
 	
-	@:overload override public function setFrame(x : Float, y : Float, w : Float, h : Float) : Void;
+	@:overload @:public override public function setFrame(x : Float, y : Float, w : Float, h : Float) : Void;
 	
-	@:overload override public function contains(x : Float, y : Float) : Bool;
+	@:overload @:public override public function contains(x : Float, y : Float) : Bool;
 	
-	@:overload override public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:overload @:public override public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
-	@:overload override public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:overload @:public override public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
-	@:overload override public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
+	@:overload @:public override public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$gtk$Metacity$RoundRectClipShape$RoundishRectIterator') @:internal extern class Metacity_RoundRectClipShape_RoundishRectIterator implements java.awt.geom.PathIterator
 {
-	@:overload public function getWindingRule() : Int;
+	@:overload @:public public function getWindingRule() : Int;
 	
-	@:overload public function isDone() : Bool;
+	@:overload @:public public function isDone() : Bool;
 	
-	@:overload public function next() : Void;
+	@:overload @:public public function next() : Void;
 	
-	@:overload public function currentSegment(coords : java.NativeArray<Single>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Single>) : Int;
 	
-	@:overload public function currentSegment(coords : java.NativeArray<Float>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Float>) : Int;
 	
 	
 }

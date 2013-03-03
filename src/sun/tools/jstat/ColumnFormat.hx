@@ -31,44 +31,44 @@ package sun.tools.jstat;
 */
 @:require(java5) extern class ColumnFormat extends sun.tools.jstat.OptionFormat
 {
-	@:overload public function new(number : Int) : Void;
+	@:overload @:public public function new(number : Int) : Void;
 	
 	/*
 	* method to apply various validation rules to the ColumnFormat object.
 	*/
-	@:overload public function validate() : Void;
+	@:overload @:public public function validate() : Void;
 	
-	@:overload public function setWidth(width : Int) : Void;
+	@:overload @:public public function setWidth(width : Int) : Void;
 	
-	@:overload public function setAlignment(align : sun.tools.jstat.Alignment) : Void;
+	@:overload @:public public function setAlignment(align : sun.tools.jstat.Alignment) : Void;
 	
-	@:overload public function setScale(scale : sun.tools.jstat.Scale) : Void;
+	@:overload @:public public function setScale(scale : sun.tools.jstat.Scale) : Void;
 	
-	@:overload public function setFormat(format : String) : Void;
+	@:overload @:public public function setFormat(format : String) : Void;
 	
-	@:overload public function setHeader(header : String) : Void;
+	@:overload @:public public function setHeader(header : String) : Void;
 	
-	@:overload public function getHeader() : String;
+	@:overload @:public public function getHeader() : String;
 	
-	@:overload public function getFormat() : String;
+	@:overload @:public public function getFormat() : String;
 	
-	@:overload public function getWidth() : Int;
+	@:overload @:public public function getWidth() : Int;
 	
-	@:overload public function getAlignment() : sun.tools.jstat.Alignment;
+	@:overload @:public public function getAlignment() : sun.tools.jstat.Alignment;
 	
-	@:overload public function getScale() : sun.tools.jstat.Scale;
+	@:overload @:public public function getScale() : sun.tools.jstat.Scale;
 	
-	@:overload public function getExpression() : sun.tools.jstat.Expression;
+	@:overload @:public public function getExpression() : sun.tools.jstat.Expression;
 	
-	@:overload public function setExpression(e : sun.tools.jstat.Expression) : Void;
+	@:overload @:public public function setExpression(e : sun.tools.jstat.Expression) : Void;
 	
-	@:overload public function setPreviousValue(o : Dynamic) : Void;
+	@:overload @:public public function setPreviousValue(o : Dynamic) : Void;
 	
-	@:overload public function getPreviousValue() : Dynamic;
+	@:overload @:public public function getPreviousValue() : Dynamic;
 	
-	@:overload public function printFormat(indentLevel : Int) : Void;
+	@:overload @:public override public function printFormat(indentLevel : Int) : Void;
 	
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	
 }

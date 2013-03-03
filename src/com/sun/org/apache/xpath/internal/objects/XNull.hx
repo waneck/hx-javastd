@@ -26,14 +26,14 @@ extern class XNull extends com.sun.org.apache.xpath.internal.objects.XNodeSet
 	/**
 	* Create an XObject.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Tell what kind of class this is.
 	*
 	* @return type CLASS_NULL
 	*/
-	@:overload override public function getType() : Int;
+	@:overload @:public override public function getType() : Int;
 	
 	/**
 	* Given a request type, return the equivalent string.
@@ -41,28 +41,28 @@ extern class XNull extends com.sun.org.apache.xpath.internal.objects.XNodeSet
 	*
 	* @return type string "#CLASS_NULL"
 	*/
-	@:overload override public function getTypeString() : String;
+	@:overload @:public override public function getTypeString() : String;
 	
 	/**
 	* Cast result object to a number.
 	*
 	* @return 0.0
 	*/
-	@:overload override public function num() : Float;
+	@:overload @:public override public function num() : Float;
 	
 	/**
 	* Cast result object to a boolean.
 	*
 	* @return false
 	*/
-	@:overload override public function bool() : Bool;
+	@:overload @:public override public function bool() : Bool;
 	
 	/**
 	* Cast result object to a string.
 	*
 	* @return empty string ""
 	*/
-	@:overload override public function str() : String;
+	@:overload @:public override public function str() : String;
 	
 	/**
 	* Cast result object to a result tree fragment.
@@ -71,7 +71,7 @@ extern class XNull extends com.sun.org.apache.xpath.internal.objects.XNodeSet
 	*
 	* @return The object as a result tree fragment.
 	*/
-	@:overload public function rtf(support : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public override public function rtf(support : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Tell if two objects are functionally equal.
@@ -80,7 +80,7 @@ extern class XNull extends com.sun.org.apache.xpath.internal.objects.XNodeSet
 	*
 	* @return True if the given object is of type CLASS_NULL
 	*/
-	@:overload override public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload @:public override public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	
 }

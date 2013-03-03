@@ -25,18 +25,18 @@ package com.sun.tools.internal.xjc.model;
 */
 extern class TypeUseFactory
 {
-	@:overload public static function makeID(t : com.sun.tools.internal.xjc.model.TypeUse, id : com.sun.xml.internal.bind.v2.model.core.ID) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public @:static public static function makeID(t : com.sun.tools.internal.xjc.model.TypeUse, id : com.sun.xml.internal.bind.v2.model.core.ID) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public static function makeMimeTyped(t : com.sun.tools.internal.xjc.model.TypeUse, mt : javax.activation.MimeType) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public @:static public static function makeMimeTyped(t : com.sun.tools.internal.xjc.model.TypeUse, mt : javax.activation.MimeType) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public static function makeCollection(t : com.sun.tools.internal.xjc.model.TypeUse) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public @:static public static function makeCollection(t : com.sun.tools.internal.xjc.model.TypeUse) : com.sun.tools.internal.xjc.model.TypeUse;
 	
-	@:overload public static function adapt(t : com.sun.tools.internal.xjc.model.TypeUse, adapter : com.sun.tools.internal.xjc.model.CAdapter) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public @:static public static function adapt(t : com.sun.tools.internal.xjc.model.TypeUse, adapter : com.sun.tools.internal.xjc.model.CAdapter) : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	/**
 	* Creates a new adapter {@link TypeUse} by using the existing {@link Adapter} class.
 	*/
-	@:overload public static function adapt(t : com.sun.tools.internal.xjc.model.TypeUse, adapter : Class<javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>, copy : Bool) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public @:static public static function adapt(t : com.sun.tools.internal.xjc.model.TypeUse, adapter : Class<javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>, copy : Bool) : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	
 }

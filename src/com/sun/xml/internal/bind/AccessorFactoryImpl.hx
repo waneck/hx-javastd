@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind;
 */
 extern class AccessorFactoryImpl implements com.sun.xml.internal.bind.InternalAccessorFactory
 {
-	@:overload public static function getInstance() : com.sun.xml.internal.bind.AccessorFactoryImpl;
+	@:overload @:public @:static public static function getInstance() : com.sun.xml.internal.bind.AccessorFactoryImpl;
 	
 	/**
 	* Access a field of the class.
@@ -37,7 +37,7 @@ extern class AccessorFactoryImpl implements com.sun.xml.internal.bind.InternalAc
 	*
 	* @throws JAXBException reports failures of the method.
 	*/
-	@:overload public function createFieldAccessor(bean : Class<Dynamic>, field : java.lang.reflect.Field, readOnly : Bool) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
+	@:overload @:public public function createFieldAccessor(bean : Class<Dynamic>, field : java.lang.reflect.Field, readOnly : Bool) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
 	
 	/**
 	* Access a field of the class.
@@ -50,7 +50,7 @@ extern class AccessorFactoryImpl implements com.sun.xml.internal.bind.InternalAc
 	*
 	* @throws JAXBException reports failures of the method.
 	*/
-	@:overload public function createFieldAccessor(bean : Class<Dynamic>, field : java.lang.reflect.Field, readOnly : Bool, supressWarning : Bool) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
+	@:overload @:public public function createFieldAccessor(bean : Class<Dynamic>, field : java.lang.reflect.Field, readOnly : Bool, supressWarning : Bool) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
 	
 	/**
 	* Access a property of the class.
@@ -62,7 +62,7 @@ extern class AccessorFactoryImpl implements com.sun.xml.internal.bind.InternalAc
 	*
 	* @throws JAXBException reports failures of the method.
 	*/
-	@:overload public function createPropertyAccessor(bean : Class<Dynamic>, getter : java.lang.reflect.Method, setter : java.lang.reflect.Method) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
+	@:overload @:public public function createPropertyAccessor(bean : Class<Dynamic>, getter : java.lang.reflect.Method, setter : java.lang.reflect.Method) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
 	
 	
 }

@@ -31,9 +31,9 @@ package com.sun.corba.se.impl.orbutil;
 */
 extern class ORBClassLoader
 {
-	@:overload public static function loadClass(className : String) : Class<Dynamic>;
+	@:overload @:public @:static public static function loadClass(className : String) : Class<Dynamic>;
 	
-	@:overload public static function getClassLoader() : java.lang.ClassLoader;
+	@:overload @:public @:static public static function getClassLoader() : java.lang.ClassLoader;
 	
 	
 }

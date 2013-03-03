@@ -28,15 +28,15 @@ package com.sun.xml.internal.fastinfoset.tools;
 extern class TransformInputOutput
 {
 	/** Creates a new instance of TransformInputOutput */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function parse(args : java.NativeArray<String>) : Void;
+	@:overload @:public public function parse(args : java.NativeArray<String>) : Void;
 	
-	@:overload @:abstract public function parse(_in : java.io.InputStream, out : java.io.OutputStream) : Void;
+	@:overload @:abstract @:public public function parse(_in : java.io.InputStream, out : java.io.OutputStream) : Void;
 	
-	@:overload public function parse(_in : java.io.InputStream, out : java.io.OutputStream, workingDirectory : String) : Void;
+	@:overload @:public public function parse(_in : java.io.InputStream, out : java.io.OutputStream, workingDirectory : String) : Void;
 	
-	@:overload private static function createRelativePathResolver(workingDirectory : String) : org.xml.sax.EntityResolver;
+	@:overload @:protected @:static private static function createRelativePathResolver(workingDirectory : String) : org.xml.sax.EntityResolver;
 	
 	
 }

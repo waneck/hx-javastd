@@ -75,7 +75,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @throws IllegalArgumentException if <code>dataType</code> is not
 	*         one of the supported data types
 	*/
-	@:overload public function new(dataType : Int, w : Int, h : Int, numBands : Int) : Void;
+	@:overload @:public public function new(dataType : Int, w : Int, h : Int, numBands : Int) : Void;
 	
 	/**
 	* Constructs a BandedSampleModel with the specified parameters.
@@ -93,7 +93,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @throws IllegalArgumentException if <code>dataType</code> is not
 	*         one of the supported data types
 	*/
-	@:overload public function new(dataType : Int, w : Int, h : Int, scanlineStride : Int, bankIndices : java.NativeArray<Int>, bandOffsets : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(dataType : Int, w : Int, h : Int, scanlineStride : Int, bankIndices : java.NativeArray<Int>, bandOffsets : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Creates a new BandedSampleModel with the specified
@@ -113,7 +113,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @throws IllegalArgumentException if <code>dataType</code> is not
 	*         one of the supported data types
 	*/
-	@:overload override public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
+	@:overload @:public override public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
 	
 	/**
 	* Creates a new BandedSampleModel with a subset of the bands of this
@@ -127,7 +127,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @throws IllegalArgumentException if <code>dataType</code> is not
 	*         one of the supported data types
 	*/
-	@:overload override public function createSubsetSampleModel(bands : java.NativeArray<Int>) : java.awt.image.SampleModel;
+	@:overload @:public override public function createSubsetSampleModel(bands : java.NativeArray<Int>) : java.awt.image.SampleModel;
 	
 	/**
 	* Creates a DataBuffer that corresponds to this BandedSampleModel,
@@ -136,7 +136,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @throws IllegalArgumentException if <code>dataType</code> is not
 	*         one of the supported types.
 	*/
-	@:overload override public function createDataBuffer() : java.awt.image.DataBuffer;
+	@:overload @:public override public function createDataBuffer() : java.awt.image.DataBuffer;
 	
 	/**
 	* Returns data for a single pixel in a primitive array of type
@@ -177,7 +177,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @return the data for the specified pixel.
 	* @see #setDataElements(int, int, Object, DataBuffer)
 	*/
-	@:overload override public function getDataElements(x : Int, y : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Dynamic;
+	@:overload @:public override public function getDataElements(x : Int, y : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Dynamic;
 	
 	/**
 	* Returns all samples for the specified pixel in an int array.
@@ -190,7 +190,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @return the samples for the specified pixel.
 	* @see #setPixel(int, int, int[], DataBuffer)
 	*/
-	@:overload override public function getPixel(x : Int, y : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
+	@:overload @:public override public function getPixel(x : Int, y : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
 	
 	/**
 	* Returns all samples for the specified rectangle of pixels in
@@ -206,7 +206,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @return the samples for the pixels within the specified region.
 	* @see #setPixels(int, int, int, int, int[], DataBuffer)
 	*/
-	@:overload override public function getPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
+	@:overload @:public override public function getPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
 	
 	/**
 	* Returns as int the sample in a specified band for the pixel
@@ -220,7 +220,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @return the sample in the specified band for the specified pixel.
 	* @see #setSample(int, int, int, int, DataBuffer)
 	*/
-	@:overload override public function getSample(x : Int, y : Int, b : Int, data : java.awt.image.DataBuffer) : Int;
+	@:overload @:public override public function getSample(x : Int, y : Int, b : Int, data : java.awt.image.DataBuffer) : Int;
 	
 	/**
 	* Returns the sample in a specified band
@@ -234,7 +234,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @return a float value that represents the sample in the specified
 	* band for the specified pixel.
 	*/
-	@:overload override public function getSampleFloat(x : Int, y : Int, b : Int, data : java.awt.image.DataBuffer) : Single;
+	@:overload @:public override public function getSampleFloat(x : Int, y : Int, b : Int, data : java.awt.image.DataBuffer) : Single;
 	
 	/**
 	* Returns the sample in a specified band
@@ -248,7 +248,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @return a double value that represents the sample in the specified
 	* band for the specified pixel.
 	*/
-	@:overload override public function getSampleDouble(x : Int, y : Int, b : Int, data : java.awt.image.DataBuffer) : Float;
+	@:overload @:public override public function getSampleDouble(x : Int, y : Int, b : Int, data : java.awt.image.DataBuffer) : Float;
 	
 	/**
 	* Returns the samples in a specified band for the specified rectangle
@@ -266,7 +266,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* the specified region.
 	* @see #setSamples(int, int, int, int, int, int[], DataBuffer)
 	*/
-	@:overload override public function getSamples(x : Int, y : Int, w : Int, h : Int, b : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
+	@:overload @:public override public function getSamples(x : Int, y : Int, w : Int, h : Int, b : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
 	
 	/**
 	* Sets the data for a single pixel in the specified DataBuffer from a
@@ -303,7 +303,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @param data      The DataBuffer containing the image data
 	* @see #getDataElements(int, int, Object, DataBuffer)
 	*/
-	@:overload override public function setDataElements(x : Int, y : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public override public function setDataElements(x : Int, y : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets a pixel in the DataBuffer using an int array of samples for input.
@@ -315,7 +315,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @param data      The DataBuffer containing the image data
 	* @see #getPixel(int, int, int[], DataBuffer)
 	*/
-	@:overload override public function setPixel(x : Int, y : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public override public function setPixel(x : Int, y : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets all samples for a rectangle of pixels from an int array containing
@@ -330,7 +330,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @param data      The DataBuffer containing the image data
 	* @see #getPixels(int, int, int, int, int[], DataBuffer)
 	*/
-	@:overload override public function setPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public override public function setPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets a sample in the specified band for the pixel located at (x,y)
@@ -344,7 +344,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @param data      The DataBuffer containing the image data
 	* @see #getSample(int, int, int, DataBuffer)
 	*/
-	@:overload override public function setSample(x : Int, y : Int, b : Int, s : Int, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public override public function setSample(x : Int, y : Int, b : Int, s : Int, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets a sample in the specified band for the pixel located at (x,y)
@@ -358,7 +358,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @param data      The DataBuffer containing the image data
 	* @see #getSample(int, int, int, DataBuffer)
 	*/
-	@:overload override public function setSample(x : Int, y : Int, b : Int, s : Single, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public override public function setSample(x : Int, y : Int, b : Int, s : Single, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets a sample in the specified band for the pixel located at (x,y)
@@ -372,7 +372,7 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @param data      The DataBuffer containing the image data
 	* @see #getSample(int, int, int, DataBuffer)
 	*/
-	@:overload override public function setSample(x : Int, y : Int, b : Int, s : Float, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public override public function setSample(x : Int, y : Int, b : Int, s : Float, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets the samples in the specified band for the specified rectangle
@@ -388,9 +388,9 @@ extern class BandedSampleModel extends java.awt.image.ComponentSampleModel
 	* @param data      The DataBuffer containing the image data
 	* @see #getSamples(int, int, int, int, int, int[], DataBuffer)
 	*/
-	@:overload override public function setSamples(x : Int, y : Int, w : Int, h : Int, b : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public override public function setSamples(x : Int, y : Int, w : Int, h : Int, b : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

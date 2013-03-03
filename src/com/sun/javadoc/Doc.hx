@@ -29,7 +29,7 @@ extern interface Doc extends java.lang.Comparable<Dynamic>
 	* Return the text of the comment for this doc item.
 	* Tags have been removed.
 	*/
-	@:overload public function commentText() : String;
+	@:overload @:public @:public @:public public function commentText() : String;
 	
 	/**
 	* Return all tags in this Doc item.
@@ -37,7 +37,7 @@ extern interface Doc extends java.lang.Comparable<Dynamic>
 	* @return an array of {@link Tag} objects containing all tags on
 	*         this Doc item.
 	*/
-	@:overload public function tags() : java.NativeArray<com.sun.javadoc.Tag>;
+	@:overload @:public @:public @:public public function tags() : java.NativeArray<com.sun.javadoc.Tag>;
 	
 	/**
 	* Return tags of the specified {@linkplain Tag#kind() kind} in
@@ -50,14 +50,14 @@ extern interface Doc extends java.lang.Comparable<Dynamic>
 	* @return an array of Tag containing all tags whose 'kind()'
 	* matches 'tagname'.
 	*/
-	@:overload public function tags(tagname : String) : java.NativeArray<com.sun.javadoc.Tag>;
+	@:overload @:public @:public @:public public function tags(tagname : String) : java.NativeArray<com.sun.javadoc.Tag>;
 	
 	/**
 	* Return the see also tags in this Doc item.
 	*
 	* @return an array of SeeTag containing all @see tags.
 	*/
-	@:overload public function seeTags() : java.NativeArray<com.sun.javadoc.SeeTag>;
+	@:overload @:public @:public @:public public function seeTags() : java.NativeArray<com.sun.javadoc.SeeTag>;
 	
 	/**
 	* Return comment as an array of tags. Includes inline tags
@@ -70,7 +70,7 @@ extern interface Doc extends java.lang.Comparable<Dynamic>
 	*
 	* @return an array of {@link Tag}s representing the comment
 	*/
-	@:overload public function inlineTags() : java.NativeArray<com.sun.javadoc.Tag>;
+	@:overload @:public @:public @:public public function inlineTags() : java.NativeArray<com.sun.javadoc.Tag>;
 	
 	/**
 	* Return the first sentence of the comment as an array of tags.
@@ -98,28 +98,28 @@ extern interface Doc extends java.lang.Comparable<Dynamic>
 	* @return an array of {@link Tag}s representing the
 	* first sentence of the comment
 	*/
-	@:overload public function firstSentenceTags() : java.NativeArray<com.sun.javadoc.Tag>;
+	@:overload @:public @:public @:public public function firstSentenceTags() : java.NativeArray<com.sun.javadoc.Tag>;
 	
 	/**
 	* Return the full unprocessed text of the comment.  Tags
 	* are included as text.  Used mainly for store and retrieve
 	* operations like internalization.
 	*/
-	@:overload public function getRawCommentText() : String;
+	@:overload @:public @:public @:public public function getRawCommentText() : String;
 	
 	/**
 	* Set the full unprocessed text of the comment.  Tags
 	* are included as text.  Used mainly for store and retrieve
 	* operations like internalization.
 	*/
-	@:overload public function setRawCommentText(rawDocumentation : String) : Void;
+	@:overload @:public @:public @:public public function setRawCommentText(rawDocumentation : String) : Void;
 	
 	/**
 	* Returns the non-qualified name of this Doc item.
 	*
 	* @return  the name
 	*/
-	@:overload public function name() : String;
+	@:overload @:public @:public @:public public function name() : String;
 	
 	/**
 	* Compares this doc object with the specified object for order.  Returns a
@@ -134,14 +134,14 @@ extern interface Doc extends java.lang.Comparable<Dynamic>
 	* @exception ClassCastException the specified Object's type prevents it
 	*        from being compared to this Object.
 	*/
-	@:overload public function compareTo(obj : Dynamic) : Int;
+	@:overload @:public @:public @:public public function compareTo(obj : Dynamic) : Int;
 	
 	/**
 	* Is this Doc item a field (but not an enum constant)?
 	*
 	* @return true if it represents a field
 	*/
-	@:overload public function isField() : Bool;
+	@:overload @:public @:public @:public public function isField() : Bool;
 	
 	/**
 	* Is this Doc item an enum constant?
@@ -149,14 +149,14 @@ extern interface Doc extends java.lang.Comparable<Dynamic>
 	* @return true if it represents an enum constant
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isEnumConstant() : Bool;
+	@:require(java5) @:overload @:public @:public @:public public function isEnumConstant() : Bool;
 	
 	/**
 	* Is this Doc item a constructor?
 	*
 	* @return true if it represents a constructor
 	*/
-	@:overload public function isConstructor() : Bool;
+	@:overload @:public @:public @:public public function isConstructor() : Bool;
 	
 	/**
 	* Is this Doc item a method (but not a constructor or annotation
@@ -164,7 +164,7 @@ extern interface Doc extends java.lang.Comparable<Dynamic>
 	*
 	* @return true if it represents a method
 	*/
-	@:overload public function isMethod() : Bool;
+	@:overload @:public @:public @:public public function isMethod() : Bool;
 	
 	/**
 	* Is this Doc item an annotation type element?
@@ -172,28 +172,28 @@ extern interface Doc extends java.lang.Comparable<Dynamic>
 	* @return true if it represents an annotation type element
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isAnnotationTypeElement() : Bool;
+	@:require(java5) @:overload @:public @:public @:public public function isAnnotationTypeElement() : Bool;
 	
 	/**
 	* Is this Doc item an interface (but not an annotation type)?
 	*
 	* @return true if it represents an interface
 	*/
-	@:overload public function isInterface() : Bool;
+	@:overload @:public @:public @:public public function isInterface() : Bool;
 	
 	/**
 	* Is this Doc item an exception class?
 	*
 	* @return true if it represents an exception
 	*/
-	@:overload public function isException() : Bool;
+	@:overload @:public @:public @:public public function isException() : Bool;
 	
 	/**
 	* Is this Doc item an error class?
 	*
 	* @return true if it represents a error
 	*/
-	@:overload public function isError() : Bool;
+	@:overload @:public @:public @:public public function isError() : Bool;
 	
 	/**
 	* Is this Doc item an enum type?
@@ -201,7 +201,7 @@ extern interface Doc extends java.lang.Comparable<Dynamic>
 	* @return true if it represents an enum type
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isEnum() : Bool;
+	@:require(java5) @:overload @:public @:public @:public public function isEnum() : Bool;
 	
 	/**
 	* Is this Doc item an annotation type?
@@ -209,7 +209,7 @@ extern interface Doc extends java.lang.Comparable<Dynamic>
 	* @return true if it represents an annotation type
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isAnnotationType() : Bool;
+	@:require(java5) @:overload @:public @:public @:public public function isAnnotationType() : Bool;
 	
 	/**
 	* Is this Doc item an
@@ -219,7 +219,7 @@ extern interface Doc extends java.lang.Comparable<Dynamic>
 	*
 	* @return true if it represents an ordinary class
 	*/
-	@:overload public function isOrdinaryClass() : Bool;
+	@:overload @:public @:public @:public public function isOrdinaryClass() : Bool;
 	
 	/**
 	* Is this Doc item a
@@ -229,14 +229,14 @@ extern interface Doc extends java.lang.Comparable<Dynamic>
 	*
 	* @return true if it represents a class
 	*/
-	@:overload public function isClass() : Bool;
+	@:overload @:public @:public @:public public function isClass() : Bool;
 	
 	/**
 	* Return true if this Doc item is
 	* <a href="{@docRoot}/com/sun/javadoc/package-summary.html#included">included</a>
 	* in the result set.
 	*/
-	@:overload public function isIncluded() : Bool;
+	@:overload @:public @:public public function isIncluded() : Bool;
 	
 	/**
 	* Return the source position of the first line of the
@@ -246,7 +246,7 @@ extern interface Doc extends java.lang.Comparable<Dynamic>
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function position() : com.sun.javadoc.SourcePosition;
+	@:require(java4) @:overload @:public @:public public function position() : com.sun.javadoc.SourcePosition;
 	
 	
 }

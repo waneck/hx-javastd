@@ -25,7 +25,7 @@ package com.sun.tools.internal.ws.wsdl.document.soap;
 */
 extern interface SOAPConstants
 {
-	public var URI_SOAP_TRANSPORT_HTTP(default, null) : String;
+	@:public @:final public var URI_SOAP_TRANSPORT_HTTP(default, null) : String;
 	
 	
 }

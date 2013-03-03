@@ -28,15 +28,15 @@ extern interface ResponseWaitingRoom
 	/**
 	* @author Harold Carr
 	*/
-	@:overload public function registerWaiter(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
+	@:overload @:public public function registerWaiter(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
 	
-	@:overload public function waitForResponse(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.InputObject;
+	@:overload @:public public function waitForResponse(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.InputObject;
 	
-	@:overload public function responseReceived(inputObject : com.sun.corba.se.pept.encoding.InputObject) : Void;
+	@:overload @:public public function responseReceived(inputObject : com.sun.corba.se.pept.encoding.InputObject) : Void;
 	
-	@:overload public function unregisterWaiter(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
+	@:overload @:public public function unregisterWaiter(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
 	
-	@:overload public function numberRegistered() : Int;
+	@:overload @:public public function numberRegistered() : Int;
 	
 	
 }

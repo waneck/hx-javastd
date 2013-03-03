@@ -33,7 +33,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see Component#setFocusTraversalKeys
 	* @see Component#getFocusTraversalKeys
 	*/
-	public static var FORWARD_TRAVERSAL_KEYS(default, null) : Int;
+	@:public @:static @:final public static var FORWARD_TRAVERSAL_KEYS(default, null) : Int;
 	
 	/**
 	* The identifier for the Backward focus traversal keys.
@@ -43,7 +43,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see Component#setFocusTraversalKeys
 	* @see Component#getFocusTraversalKeys
 	*/
-	public static var BACKWARD_TRAVERSAL_KEYS(default, null) : Int;
+	@:public @:static @:final public static var BACKWARD_TRAVERSAL_KEYS(default, null) : Int;
 	
 	/**
 	* The identifier for the Up Cycle focus traversal keys.
@@ -53,7 +53,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see Component#setFocusTraversalKeys
 	* @see Component#getFocusTraversalKeys
 	*/
-	public static var UP_CYCLE_TRAVERSAL_KEYS(default, null) : Int;
+	@:public @:static @:final public static var UP_CYCLE_TRAVERSAL_KEYS(default, null) : Int;
 	
 	/**
 	* The identifier for the Down Cycle focus traversal keys.
@@ -63,7 +63,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see Component#setFocusTraversalKeys
 	* @see Component#getFocusTraversalKeys
 	*/
-	public static var DOWN_CYCLE_TRAVERSAL_KEYS(default, null) : Int;
+	@:public @:static @:final public static var DOWN_CYCLE_TRAVERSAL_KEYS(default, null) : Int;
 	
 	/**
 	* Returns the current KeyboardFocusManager instance for the calling
@@ -72,7 +72,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @return this thread's context's KeyboardFocusManager
 	* @see #setCurrentKeyboardFocusManager
 	*/
-	@:overload public static function getCurrentKeyboardFocusManager() : java.awt.KeyboardFocusManager;
+	@:overload @:public @:static public static function getCurrentKeyboardFocusManager() : java.awt.KeyboardFocusManager;
 	
 	/**
 	* Sets the current KeyboardFocusManager instance for the calling thread's
@@ -91,12 +91,12 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @throws SecurityException if the calling thread does not have permission
 	*         to replace the current KeyboardFocusManager
 	*/
-	@:overload public static function setCurrentKeyboardFocusManager(newManager : java.awt.KeyboardFocusManager) : Void;
+	@:overload @:public @:static public static function setCurrentKeyboardFocusManager(newManager : java.awt.KeyboardFocusManager) : Void;
 	
 	/**
 	* Initializes a KeyboardFocusManager.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the focus owner, if the focus owner is in the same context as
@@ -112,7 +112,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #getGlobalFocusOwner
 	* @see #setGlobalFocusOwner
 	*/
-	@:overload public function getFocusOwner() : java.awt.Component;
+	@:overload @:public public function getFocusOwner() : java.awt.Component;
 	
 	/**
 	* Returns the focus owner, even if the calling thread is in a different
@@ -133,7 +133,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @throws SecurityException if this KeyboardFocusManager is not the
 	*         current KeyboardFocusManager for the calling thread's context
 	*/
-	@:overload private function getGlobalFocusOwner() : java.awt.Component;
+	@:overload @:protected private function getGlobalFocusOwner() : java.awt.Component;
 	
 	/**
 	* Sets the focus owner. The operation will be cancelled if the Component
@@ -159,7 +159,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @beaninfo
 	*       bound: true
 	*/
-	@:overload private function setGlobalFocusOwner(focusOwner : java.awt.Component) : Void;
+	@:overload @:protected private function setGlobalFocusOwner(focusOwner : java.awt.Component) : Void;
 	
 	/**
 	* Clears the global focus owner at both the Java and native levels. If
@@ -173,7 +173,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see Component#requestFocus()
 	* @see java.awt.event.FocusEvent#FOCUS_LOST
 	*/
-	@:overload public function clearGlobalFocusOwner() : Void;
+	@:overload @:public public function clearGlobalFocusOwner() : Void;
 	
 	/**
 	* Returns the permanent focus owner, if the permanent focus owner is in
@@ -189,7 +189,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #getGlobalPermanentFocusOwner
 	* @see #setGlobalPermanentFocusOwner
 	*/
-	@:overload public function getPermanentFocusOwner() : java.awt.Component;
+	@:overload @:public public function getPermanentFocusOwner() : java.awt.Component;
 	
 	/**
 	* Returns the permanent focus owner, even if the calling thread is in a
@@ -210,7 +210,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @throws SecurityException if this KeyboardFocusManager is not the
 	*         current KeyboardFocusManager for the calling thread's context
 	*/
-	@:overload private function getGlobalPermanentFocusOwner() : java.awt.Component;
+	@:overload @:protected private function getGlobalPermanentFocusOwner() : java.awt.Component;
 	
 	/**
 	* Sets the permanent focus owner. The operation will be cancelled if the
@@ -237,7 +237,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @beaninfo
 	*       bound: true
 	*/
-	@:overload private function setGlobalPermanentFocusOwner(permanentFocusOwner : java.awt.Component) : Void;
+	@:overload @:protected private function setGlobalPermanentFocusOwner(permanentFocusOwner : java.awt.Component) : Void;
 	
 	/**
 	* Returns the focused Window, if the focused Window is in the same context
@@ -249,7 +249,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #getGlobalFocusedWindow
 	* @see #setGlobalFocusedWindow
 	*/
-	@:overload public function getFocusedWindow() : java.awt.Window;
+	@:overload @:public public function getFocusedWindow() : java.awt.Window;
 	
 	/**
 	* Returns the focused Window, even if the calling thread is in a different
@@ -266,7 +266,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @throws SecurityException if this KeyboardFocusManager is not the
 	*         current KeyboardFocusManager for the calling thread's context
 	*/
-	@:overload private function getGlobalFocusedWindow() : java.awt.Window;
+	@:overload @:protected private function getGlobalFocusedWindow() : java.awt.Window;
 	
 	/**
 	* Sets the focused Window. The focused Window is the Window that is or
@@ -289,7 +289,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @beaninfo
 	*       bound: true
 	*/
-	@:overload private function setGlobalFocusedWindow(focusedWindow : java.awt.Window) : Void;
+	@:overload @:protected private function setGlobalFocusedWindow(focusedWindow : java.awt.Window) : Void;
 	
 	/**
 	* Returns the active Window, if the active Window is in the same context
@@ -304,7 +304,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #getGlobalActiveWindow
 	* @see #setGlobalActiveWindow
 	*/
-	@:overload public function getActiveWindow() : java.awt.Window;
+	@:overload @:public public function getActiveWindow() : java.awt.Window;
 	
 	/**
 	* Returns the active Window, even if the calling thread is in a different
@@ -324,7 +324,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @throws SecurityException if this KeyboardFocusManager is not the
 	*         current KeyboardFocusManager for the calling thread's context
 	*/
-	@:overload private function getGlobalActiveWindow() : java.awt.Window;
+	@:overload @:protected private function getGlobalActiveWindow() : java.awt.Window;
 	
 	/**
 	* Sets the active Window. Only a Frame or a Dialog can be the active
@@ -348,7 +348,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @beaninfo
 	*       bound: true
 	*/
-	@:overload private function setGlobalActiveWindow(activeWindow : java.awt.Window) : Void;
+	@:overload @:protected private function setGlobalActiveWindow(activeWindow : java.awt.Window) : Void;
 	
 	/**
 	* Returns the default FocusTraversalPolicy. Top-level components
@@ -360,7 +360,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see Container#setFocusTraversalPolicy
 	* @see Container#getFocusTraversalPolicy
 	*/
-	@:overload @:synchronized public function getDefaultFocusTraversalPolicy() : java.awt.FocusTraversalPolicy;
+	@:overload @:public @:synchronized public function getDefaultFocusTraversalPolicy() : java.awt.FocusTraversalPolicy;
 	
 	/**
 	* Sets the default FocusTraversalPolicy. Top-level components
@@ -378,7 +378,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @beaninfo
 	*       bound: true
 	*/
-	@:overload public function setDefaultFocusTraversalPolicy(defaultPolicy : java.awt.FocusTraversalPolicy) : Void;
+	@:overload @:public public function setDefaultFocusTraversalPolicy(defaultPolicy : java.awt.FocusTraversalPolicy) : Void;
 	
 	/**
 	* Sets the default focus traversal keys for a given traversal operation.
@@ -467,7 +467,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @beaninfo
 	*       bound: true
 	*/
-	@:overload public function setDefaultFocusTraversalKeys(id : Int, keystrokes : java.util.Set<java.awt.AWTKeyStroke>) : Void;
+	@:overload @:public public function setDefaultFocusTraversalKeys(id : Int, keystrokes : java.util.Set<java.awt.AWTKeyStroke>) : Void;
 	
 	/**
 	* Returns a Set of default focus traversal keys for a given traversal
@@ -495,7 +495,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	*         KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS, or
 	*         KeyboardFocusManager.DOWN_CYCLE_TRAVERSAL_KEYS
 	*/
-	@:overload public function getDefaultFocusTraversalKeys(id : Int) : java.util.Set<java.awt.AWTKeyStroke>;
+	@:overload @:public public function getDefaultFocusTraversalKeys(id : Int) : java.util.Set<java.awt.AWTKeyStroke>;
 	
 	/**
 	* Returns the current focus cycle root, if the current focus cycle root is
@@ -513,7 +513,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #getGlobalCurrentFocusCycleRoot
 	* @see #setGlobalCurrentFocusCycleRoot
 	*/
-	@:overload public function getCurrentFocusCycleRoot() : java.awt.Container;
+	@:overload @:public public function getCurrentFocusCycleRoot() : java.awt.Container;
 	
 	/**
 	* Returns the current focus cycle root, even if the calling thread is in a
@@ -534,7 +534,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @throws SecurityException if this KeyboardFocusManager is not the
 	*         current KeyboardFocusManager for the calling thread's context
 	*/
-	@:overload private function getGlobalCurrentFocusCycleRoot() : java.awt.Container;
+	@:overload @:protected private function getGlobalCurrentFocusCycleRoot() : java.awt.Container;
 	
 	/**
 	* Sets the current focus cycle root. If the focus owner is itself a focus
@@ -552,7 +552,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @beaninfo
 	*       bound: true
 	*/
-	@:overload public function setGlobalCurrentFocusCycleRoot(newFocusCycleRoot : java.awt.Container) : Void;
+	@:overload @:public public function setGlobalCurrentFocusCycleRoot(newFocusCycleRoot : java.awt.Container) : Void;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list. The listener is
@@ -585,7 +585,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #getPropertyChangeListeners
 	* @see #addPropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
 	*/
-	@:overload public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a PropertyChangeListener from the listener list. This method
@@ -599,7 +599,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #getPropertyChangeListeners
 	* @see #removePropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
 	*/
-	@:overload public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the property change listeners
@@ -615,7 +615,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #getPropertyChangeListeners(java.lang.String)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list for a specific
@@ -649,7 +649,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #removePropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
 	* @see #getPropertyChangeListeners(java.lang.String)
 	*/
-	@:overload public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a PropertyChangeListener from the listener list for a specific
@@ -664,7 +664,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #getPropertyChangeListeners(java.lang.String)
 	* @see #removePropertyChangeListener(java.beans.PropertyChangeListener)
 	*/
-	@:overload public function removePropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>PropertyChangeListener</code>s
@@ -678,7 +678,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #removePropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getPropertyChangeListeners(propertyName : String) : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getPropertyChangeListeners(propertyName : String) : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	/**
 	* Fires a PropertyChangeEvent in response to a change in a bound property.
@@ -689,7 +689,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @param oldValue the property's previous value
 	* @param newValue the property's new value
 	*/
-	@:overload private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:protected private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Adds a VetoableChangeListener to the listener list. The listener is
@@ -708,7 +708,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #getVetoableChangeListeners
 	* @see #addVetoableChangeListener(java.lang.String,java.beans.VetoableChangeListener)
 	*/
-	@:overload public function addVetoableChangeListener(listener : java.beans.VetoableChangeListener) : Void;
+	@:overload @:public public function addVetoableChangeListener(listener : java.beans.VetoableChangeListener) : Void;
 	
 	/**
 	* Removes a VetoableChangeListener from the listener list. This method
@@ -722,7 +722,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #getVetoableChangeListeners
 	* @see #removeVetoableChangeListener(java.lang.String,java.beans.VetoableChangeListener)
 	*/
-	@:overload public function removeVetoableChangeListener(listener : java.beans.VetoableChangeListener) : Void;
+	@:overload @:public public function removeVetoableChangeListener(listener : java.beans.VetoableChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the vetoable change listeners
@@ -738,7 +738,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #getVetoableChangeListeners(java.lang.String)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getVetoableChangeListeners() : java.NativeArray<java.beans.VetoableChangeListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getVetoableChangeListeners() : java.NativeArray<java.beans.VetoableChangeListener>;
 	
 	/**
 	* Adds a VetoableChangeListener to the listener list for a specific
@@ -758,7 +758,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #removeVetoableChangeListener
 	* @see #getVetoableChangeListeners
 	*/
-	@:overload public function addVetoableChangeListener(propertyName : String, listener : java.beans.VetoableChangeListener) : Void;
+	@:overload @:public public function addVetoableChangeListener(propertyName : String, listener : java.beans.VetoableChangeListener) : Void;
 	
 	/**
 	* Removes a VetoableChangeListener from the listener list for a specific
@@ -773,7 +773,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #getVetoableChangeListeners
 	* @see #removeVetoableChangeListener(java.beans.VetoableChangeListener)
 	*/
-	@:overload public function removeVetoableChangeListener(propertyName : String, listener : java.beans.VetoableChangeListener) : Void;
+	@:overload @:public public function removeVetoableChangeListener(propertyName : String, listener : java.beans.VetoableChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>VetoableChangeListener</code>s
@@ -788,7 +788,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #getVetoableChangeListeners
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getVetoableChangeListeners(propertyName : String) : java.NativeArray<java.beans.VetoableChangeListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getVetoableChangeListeners(propertyName : String) : java.NativeArray<java.beans.VetoableChangeListener>;
 	
 	/**
 	* Fires a PropertyChangeEvent in response to a change in a vetoable
@@ -806,7 +806,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	*         <code>VetoableChangeListener</code> threw
 	*         <code>PropertyVetoException</code>
 	*/
-	@:overload private function fireVetoableChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:protected private function fireVetoableChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Adds a KeyEventDispatcher to this KeyboardFocusManager's dispatcher
@@ -830,7 +830,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @param dispatcher the KeyEventDispatcher to add to the dispatcher chain
 	* @see #removeKeyEventDispatcher
 	*/
-	@:overload public function addKeyEventDispatcher(dispatcher : java.awt.KeyEventDispatcher) : Void;
+	@:overload @:public public function addKeyEventDispatcher(dispatcher : java.awt.KeyEventDispatcher) : Void;
 	
 	/**
 	* Removes a KeyEventDispatcher which was previously added to this
@@ -852,7 +852,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	*        chain
 	* @see #addKeyEventDispatcher
 	*/
-	@:overload public function removeKeyEventDispatcher(dispatcher : java.awt.KeyEventDispatcher) : Void;
+	@:overload @:public public function removeKeyEventDispatcher(dispatcher : java.awt.KeyEventDispatcher) : Void;
 	
 	/**
 	* Returns this KeyboardFocusManager's KeyEventDispatcher chain as a List.
@@ -867,7 +867,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #addKeyEventDispatcher
 	* @see #removeKeyEventDispatcher
 	*/
-	@:overload @:synchronized private function getKeyEventDispatchers() : java.util.List<java.awt.KeyEventDispatcher>;
+	@:overload @:protected @:synchronized private function getKeyEventDispatchers() : java.util.List<java.awt.KeyEventDispatcher>;
 	
 	/**
 	* Adds a KeyEventPostProcessor to this KeyboardFocusManager's post-
@@ -895,7 +895,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	*        chain
 	* @see #removeKeyEventPostProcessor
 	*/
-	@:overload public function addKeyEventPostProcessor(processor : java.awt.KeyEventPostProcessor) : Void;
+	@:overload @:public public function addKeyEventPostProcessor(processor : java.awt.KeyEventPostProcessor) : Void;
 	
 	/**
 	* Removes a previously added KeyEventPostProcessor from this
@@ -918,7 +918,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	*        processor chain
 	* @see #addKeyEventPostProcessor
 	*/
-	@:overload public function removeKeyEventPostProcessor(processor : java.awt.KeyEventPostProcessor) : Void;
+	@:overload @:public public function removeKeyEventPostProcessor(processor : java.awt.KeyEventPostProcessor) : Void;
 	
 	/**
 	* Returns this KeyboardFocusManager's KeyEventPostProcessor chain as a
@@ -933,7 +933,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #addKeyEventPostProcessor
 	* @see #removeKeyEventPostProcessor
 	*/
-	@:overload private function getKeyEventPostProcessors() : java.util.List<java.awt.KeyEventPostProcessor>;
+	@:overload @:protected private function getKeyEventPostProcessors() : java.util.List<java.awt.KeyEventPostProcessor>;
 	
 	/**
 	* This method is called by the AWT event dispatcher requesting that the
@@ -954,7 +954,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #redispatchEvent
 	* @see #dispatchKeyEvent
 	*/
-	@:overload @:abstract public function dispatchEvent(e : java.awt.AWTEvent) : Bool;
+	@:overload @:public @:abstract public function dispatchEvent(e : java.awt.AWTEvent) : Bool;
 	
 	/**
 	* Redispatches an AWTEvent in such a way that the AWT event dispatcher
@@ -972,7 +972,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #dispatchEvent
 	* @see KeyEventDispatcher
 	*/
-	@:overload @:final public function redispatchEvent(target : java.awt.Component, e : java.awt.AWTEvent) : Void;
+	@:overload @:public @:final public function redispatchEvent(target : java.awt.Component, e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Typically this method will be called by <code>dispatchEvent</code> if no
@@ -989,7 +989,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	*         <code>false</code> otherwise
 	* @see #dispatchEvent
 	*/
-	@:overload @:abstract public function dispatchKeyEvent(e : java.awt.event.KeyEvent) : Bool;
+	@:overload @:public @:abstract public function dispatchKeyEvent(e : java.awt.event.KeyEvent) : Bool;
 	
 	/**
 	* This method will be called by <code>dispatchKeyEvent</code>.
@@ -1003,7 +1003,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #dispatchKeyEvent
 	* @see MenuShortcut
 	*/
-	@:overload @:abstract public function postProcessKeyEvent(e : java.awt.event.KeyEvent) : Bool;
+	@:overload @:public @:abstract public function postProcessKeyEvent(e : java.awt.event.KeyEvent) : Bool;
 	
 	/**
 	* This method initiates a focus traversal operation if and only if the
@@ -1018,7 +1018,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	*        traversal key for the Component
 	* @param e the event that may represent a focus traversal key
 	*/
-	@:overload @:abstract public function processKeyEvent(focusedComponent : java.awt.Component, e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public @:abstract public function processKeyEvent(focusedComponent : java.awt.Component, e : java.awt.event.KeyEvent) : Void;
 	
 	/**
 	* Called by the AWT to notify the KeyboardFocusManager that it should
@@ -1040,7 +1040,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #dequeueKeyEvents
 	* @see #discardKeyEvents
 	*/
-	@:overload @:abstract private function enqueueKeyEvents(after : haxe.Int64, untilFocused : java.awt.Component) : Void;
+	@:overload @:protected @:abstract private function enqueueKeyEvents(after : haxe.Int64, untilFocused : java.awt.Component) : Void;
 	
 	/**
 	* Called by the AWT to notify the KeyboardFocusManager that it should
@@ -1058,7 +1058,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #enqueueKeyEvents
 	* @see #discardKeyEvents
 	*/
-	@:overload @:abstract private function dequeueKeyEvents(after : haxe.Int64, untilFocused : java.awt.Component) : Void;
+	@:overload @:protected @:abstract private function dequeueKeyEvents(after : haxe.Int64, untilFocused : java.awt.Component) : Void;
 	
 	/**
 	* Called by the AWT to notify the KeyboardFocusManager that it should
@@ -1071,7 +1071,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @see #enqueueKeyEvents
 	* @see #dequeueKeyEvents
 	*/
-	@:overload @:abstract private function discardKeyEvents(comp : java.awt.Component) : Void;
+	@:overload @:protected @:abstract private function discardKeyEvents(comp : java.awt.Component) : Void;
 	
 	/**
 	* Focuses the Component after aComponent, typically based on a
@@ -1081,7 +1081,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	*        traversal operation
 	* @see FocusTraversalPolicy
 	*/
-	@:overload @:abstract public function focusNextComponent(aComponent : java.awt.Component) : Void;
+	@:overload @:public @:abstract public function focusNextComponent(aComponent : java.awt.Component) : Void;
 	
 	/**
 	* Focuses the Component before aComponent, typically based on a
@@ -1091,7 +1091,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	*        traversal operation
 	* @see FocusTraversalPolicy
 	*/
-	@:overload @:abstract public function focusPreviousComponent(aComponent : java.awt.Component) : Void;
+	@:overload @:public @:abstract public function focusPreviousComponent(aComponent : java.awt.Component) : Void;
 	
 	/**
 	* Moves the focus up one focus traversal cycle. Typically, the focus owner
@@ -1104,7 +1104,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @param aComponent the Component that is the basis for the focus
 	*        traversal operation
 	*/
-	@:overload @:abstract public function upFocusCycle(aComponent : java.awt.Component) : Void;
+	@:overload @:public @:abstract public function upFocusCycle(aComponent : java.awt.Component) : Void;
 	
 	/**
 	* Moves the focus down one focus traversal cycle. Typically, if
@@ -1116,17 +1116,17 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @param aContainer the Container that is the basis for the focus
 	*        traversal operation
 	*/
-	@:overload @:abstract public function downFocusCycle(aContainer : java.awt.Container) : Void;
+	@:overload @:public @:abstract public function downFocusCycle(aContainer : java.awt.Container) : Void;
 	
 	/**
 	* Focuses the Component after the current focus owner.
 	*/
-	@:overload @:final public function focusNextComponent() : Void;
+	@:overload @:public @:final public function focusNextComponent() : Void;
 	
 	/**
 	* Focuses the Component before the current focus owner.
 	*/
-	@:overload @:final public function focusPreviousComponent() : Void;
+	@:overload @:public @:final public function focusPreviousComponent() : Void;
 	
 	/**
 	* Moves the focus up one focus traversal cycle from the current focus
@@ -1137,7 +1137,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* set to the focus cycle root's default Component to focus, and the
 	* current focus cycle root is unchanged.
 	*/
-	@:overload @:final public function upFocusCycle() : Void;
+	@:overload @:public @:final public function upFocusCycle() : Void;
 	
 	/**
 	* Moves the focus down one focus traversal cycle from the current focus
@@ -1148,19 +1148,19 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* Container that is a focus cycle root, then no focus traversal operation
 	* occurs.
 	*/
-	@:overload @:final public function downFocusCycle() : Void;
+	@:overload @:public @:final public function downFocusCycle() : Void;
 	
 	
 }
 @:native('java$awt$KeyboardFocusManager$LightweightFocusRequest') @:internal extern class KeyboardFocusManager_LightweightFocusRequest
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('java$awt$KeyboardFocusManager$HeavyweightFocusRequest') @:internal extern class KeyboardFocusManager_HeavyweightFocusRequest
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

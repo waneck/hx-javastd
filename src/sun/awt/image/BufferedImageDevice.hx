@@ -25,7 +25,7 @@ package sun.awt.image;
 */
 extern class BufferedImageDevice extends java.awt.GraphicsDevice
 {
-	@:overload public function new(gc : sun.awt.image.BufferedImageGraphicsConfig) : Void;
+	@:overload @:public public function new(gc : sun.awt.image.BufferedImageGraphicsConfig) : Void;
 	
 	/**
 	* Returns the type of this <code>GraphicsDevice</code>.
@@ -35,7 +35,7 @@ extern class BufferedImageDevice extends java.awt.GraphicsDevice
 	* @see #TYPE_PRINTER
 	* @see #TYPE_IMAGE_BUFFER
 	*/
-	@:overload override public function getType() : Int;
+	@:overload @:public override public function getType() : Int;
 	
 	/**
 	* Returns the identification string associated with this
@@ -43,7 +43,7 @@ extern class BufferedImageDevice extends java.awt.GraphicsDevice
 	* @return a <code>String</code> that is the identification
 	* of this <code>GraphicsDevice</code>.
 	*/
-	@:overload override public function getIDstring() : String;
+	@:overload @:public override public function getIDstring() : String;
 	
 	/**
 	* Returns all of the <code>GraphicsConfiguration</code>
@@ -52,7 +52,7 @@ extern class BufferedImageDevice extends java.awt.GraphicsDevice
 	* objects that are associated with this
 	* <code>GraphicsDevice</code>.
 	*/
-	@:overload override public function getConfigurations() : java.NativeArray<java.awt.GraphicsConfiguration>;
+	@:overload @:public override public function getConfigurations() : java.NativeArray<java.awt.GraphicsConfiguration>;
 	
 	/**
 	* Returns the default <code>GraphicsConfiguration</code>
@@ -60,7 +60,7 @@ extern class BufferedImageDevice extends java.awt.GraphicsDevice
 	* @return the default <code>GraphicsConfiguration</code>
 	* of this <code>GraphicsDevice</code>.
 	*/
-	@:overload override public function getDefaultConfiguration() : java.awt.GraphicsConfiguration;
+	@:overload @:public override public function getDefaultConfiguration() : java.awt.GraphicsConfiguration;
 	
 	
 }

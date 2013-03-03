@@ -72,17 +72,17 @@ package javax.management.monitor;
 	/**
 	* Default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Starts the counter monitor.
 	*/
-	@:overload @:synchronized public function start() : Void;
+	@:overload @:public @:synchronized override public function start() : Void;
 	
 	/**
 	* Stops the counter monitor.
 	*/
-	@:overload @:synchronized public function stop() : Void;
+	@:overload @:public @:synchronized override public function stop() : Void;
 	
 	/**
 	* Gets the derived gauge of the specified object, if this object is
@@ -94,7 +94,7 @@ package javax.management.monitor;
 	* @return The derived gauge of the specified object.
 	*
 	*/
-	@:overload @:synchronized public function getDerivedGauge(object : javax.management.ObjectName) : java.lang.Number;
+	@:overload @:public @:synchronized public function getDerivedGauge(object : javax.management.ObjectName) : java.lang.Number;
 	
 	/**
 	* Gets the derived gauge timestamp of the specified object, if
@@ -107,7 +107,7 @@ package javax.management.monitor;
 	* @return The derived gauge timestamp of the specified object.
 	*
 	*/
-	@:overload @:synchronized public function getDerivedGaugeTimeStamp(object : javax.management.ObjectName) : haxe.Int64;
+	@:overload @:public @:synchronized public function getDerivedGaugeTimeStamp(object : javax.management.ObjectName) : haxe.Int64;
 	
 	/**
 	* Gets the current threshold value of the specified object, if
@@ -120,7 +120,7 @@ package javax.management.monitor;
 	* @return The threshold value of the specified object.
 	*
 	*/
-	@:overload @:synchronized public function getThreshold(object : javax.management.ObjectName) : java.lang.Number;
+	@:overload @:public @:synchronized public function getThreshold(object : javax.management.ObjectName) : java.lang.Number;
 	
 	/**
 	* Gets the initial threshold value common to all observed objects.
@@ -130,7 +130,7 @@ package javax.management.monitor;
 	* @see #setInitThreshold
 	*
 	*/
-	@:overload @:synchronized public function getInitThreshold() : java.lang.Number;
+	@:overload @:public @:synchronized public function getInitThreshold() : java.lang.Number;
 	
 	/**
 	* Sets the initial threshold value common to all observed objects.
@@ -146,7 +146,7 @@ package javax.management.monitor;
 	* @see #getInitThreshold
 	*
 	*/
-	@:overload @:synchronized public function setInitThreshold(value : java.lang.Number) : Void;
+	@:overload @:public @:synchronized public function setInitThreshold(value : java.lang.Number) : Void;
 	
 	/**
 	* Returns the derived gauge of the first object in the set of
@@ -157,7 +157,7 @@ package javax.management.monitor;
 	* @deprecated As of JMX 1.2, replaced by
 	* {@link #getDerivedGauge(ObjectName)}
 	*/
-	@:overload @:synchronized public function getDerivedGauge() : java.lang.Number;
+	@:overload @:public @:synchronized public function getDerivedGauge() : java.lang.Number;
 	
 	/**
 	* Gets the derived gauge timestamp of the first object in the set
@@ -168,7 +168,7 @@ package javax.management.monitor;
 	* @deprecated As of JMX 1.2, replaced by
 	* {@link #getDerivedGaugeTimeStamp(ObjectName)}
 	*/
-	@:overload @:synchronized public function getDerivedGaugeTimeStamp() : haxe.Int64;
+	@:overload @:public @:synchronized public function getDerivedGaugeTimeStamp() : haxe.Int64;
 	
 	/**
 	* Gets the threshold value of the first object in the set of
@@ -180,7 +180,7 @@ package javax.management.monitor;
 	*
 	* @deprecated As of JMX 1.2, replaced by {@link #getThreshold(ObjectName)}
 	*/
-	@:overload @:synchronized public function getThreshold() : java.lang.Number;
+	@:overload @:public @:synchronized public function getThreshold() : java.lang.Number;
 	
 	/**
 	* Sets the initial threshold value.
@@ -194,7 +194,7 @@ package javax.management.monitor;
 	*
 	* @deprecated As of JMX 1.2, replaced by {@link #setInitThreshold}
 	*/
-	@:overload @:synchronized public function setThreshold(value : java.lang.Number) : Void;
+	@:overload @:public @:synchronized public function setThreshold(value : java.lang.Number) : Void;
 	
 	/**
 	* Gets the offset value common to all observed MBeans.
@@ -203,7 +203,7 @@ package javax.management.monitor;
 	*
 	* @see #setOffset
 	*/
-	@:overload @:synchronized public function getOffset() : java.lang.Number;
+	@:overload @:public @:synchronized public function getOffset() : java.lang.Number;
 	
 	/**
 	* Sets the offset value common to all observed MBeans.
@@ -215,7 +215,7 @@ package javax.management.monitor;
 	*
 	* @see #getOffset
 	*/
-	@:overload @:synchronized public function setOffset(value : java.lang.Number) : Void;
+	@:overload @:public @:synchronized public function setOffset(value : java.lang.Number) : Void;
 	
 	/**
 	* Gets the modulus value common to all observed MBeans.
@@ -224,7 +224,7 @@ package javax.management.monitor;
 	*
 	* @return The modulus value.
 	*/
-	@:overload @:synchronized public function getModulus() : java.lang.Number;
+	@:overload @:public @:synchronized public function getModulus() : java.lang.Number;
 	
 	/**
 	* Sets the modulus value common to all observed MBeans.
@@ -236,7 +236,7 @@ package javax.management.monitor;
 	*
 	* @see #getModulus
 	*/
-	@:overload @:synchronized public function setModulus(value : java.lang.Number) : Void;
+	@:overload @:public @:synchronized public function setModulus(value : java.lang.Number) : Void;
 	
 	/**
 	* Gets the notification's on/off switch value common to all
@@ -247,7 +247,7 @@ package javax.management.monitor;
 	*
 	* @see #setNotify
 	*/
-	@:overload @:synchronized public function getNotify() : Bool;
+	@:overload @:public @:synchronized public function getNotify() : Bool;
 	
 	/**
 	* Sets the notification's on/off switch value common to all
@@ -257,7 +257,7 @@ package javax.management.monitor;
 	*
 	* @see #getNotify
 	*/
-	@:overload @:synchronized public function setNotify(value : Bool) : Void;
+	@:overload @:public @:synchronized public function setNotify(value : Bool) : Void;
 	
 	/**
 	* Gets the difference mode flag value common to all observed MBeans.
@@ -267,7 +267,7 @@ package javax.management.monitor;
 	*
 	* @see #setDifferenceMode
 	*/
-	@:overload @:synchronized public function getDifferenceMode() : Bool;
+	@:overload @:public @:synchronized public function getDifferenceMode() : Bool;
 	
 	/**
 	* Sets the difference mode flag value common to all observed MBeans.
@@ -276,14 +276,14 @@ package javax.management.monitor;
 	*
 	* @see #getDifferenceMode
 	*/
-	@:overload @:synchronized public function setDifferenceMode(value : Bool) : Void;
+	@:overload @:public @:synchronized public function setDifferenceMode(value : Bool) : Void;
 	
 	/**
 	* Returns a <CODE>NotificationInfo</CODE> object containing the
 	* name of the Java class of the notification and the notification
 	* types sent by the counter monitor.
 	*/
-	@:overload override public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload @:public override public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
 	
 }
@@ -294,35 +294,35 @@ package javax.management.monitor;
 */
 @:native('javax$management$monitor$CounterMonitor$CounterMonitorObservedObject') @:internal extern class CounterMonitor_CounterMonitorObservedObject extends javax.management.monitor.Monitor.Monitor_ObservedObject
 {
-	@:overload public function new(observedObject : javax.management.ObjectName) : Void;
+	@:overload @:public public function new(observedObject : javax.management.ObjectName) : Void;
 	
-	@:overload @:final @:synchronized public function getThreshold() : java.lang.Number;
+	@:overload @:public @:final @:synchronized public function getThreshold() : java.lang.Number;
 	
-	@:overload @:final @:synchronized public function setThreshold(threshold : java.lang.Number) : Void;
+	@:overload @:public @:final @:synchronized public function setThreshold(threshold : java.lang.Number) : Void;
 	
-	@:overload @:final @:synchronized public function getPreviousScanCounter() : java.lang.Number;
+	@:overload @:public @:final @:synchronized public function getPreviousScanCounter() : java.lang.Number;
 	
-	@:overload @:final @:synchronized public function setPreviousScanCounter(previousScanCounter : java.lang.Number) : Void;
+	@:overload @:public @:final @:synchronized public function setPreviousScanCounter(previousScanCounter : java.lang.Number) : Void;
 	
-	@:overload @:final @:synchronized public function getModulusExceeded() : Bool;
+	@:overload @:public @:final @:synchronized public function getModulusExceeded() : Bool;
 	
-	@:overload @:final @:synchronized public function setModulusExceeded(modulusExceeded : Bool) : Void;
+	@:overload @:public @:final @:synchronized public function setModulusExceeded(modulusExceeded : Bool) : Void;
 	
-	@:overload @:final @:synchronized public function getDerivedGaugeExceeded() : java.lang.Number;
+	@:overload @:public @:final @:synchronized public function getDerivedGaugeExceeded() : java.lang.Number;
 	
-	@:overload @:final @:synchronized public function setDerivedGaugeExceeded(derivedGaugeExceeded : java.lang.Number) : Void;
+	@:overload @:public @:final @:synchronized public function setDerivedGaugeExceeded(derivedGaugeExceeded : java.lang.Number) : Void;
 	
-	@:overload @:final @:synchronized public function getDerivedGaugeValid() : Bool;
+	@:overload @:public @:final @:synchronized public function getDerivedGaugeValid() : Bool;
 	
-	@:overload @:final @:synchronized public function setDerivedGaugeValid(derivedGaugeValid : Bool) : Void;
+	@:overload @:public @:final @:synchronized public function setDerivedGaugeValid(derivedGaugeValid : Bool) : Void;
 	
-	@:overload @:final @:synchronized public function getEventAlreadyNotified() : Bool;
+	@:overload @:public @:final @:synchronized public function getEventAlreadyNotified() : Bool;
 	
-	@:overload @:final @:synchronized public function setEventAlreadyNotified(eventAlreadyNotified : Bool) : Void;
+	@:overload @:public @:final @:synchronized public function setEventAlreadyNotified(eventAlreadyNotified : Bool) : Void;
 	
-	@:overload @:final @:synchronized public function getType() : javax.management.monitor.Monitor.Monitor_NumericalType;
+	@:overload @:public @:final @:synchronized public function getType() : javax.management.monitor.Monitor.Monitor_NumericalType;
 	
-	@:overload @:final @:synchronized public function setType(type : javax.management.monitor.Monitor.Monitor_NumericalType) : Void;
+	@:overload @:public @:final @:synchronized public function setType(type : javax.management.monitor.Monitor.Monitor_NumericalType) : Void;
 	
 	
 }

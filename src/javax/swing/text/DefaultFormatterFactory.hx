@@ -25,7 +25,7 @@ package javax.swing.text;
 */
 extern class DefaultFormatterFactory extends javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatterFactory implements java.io.Serializable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>DefaultFormatterFactory</code> with the specified
@@ -36,7 +36,7 @@ extern class DefaultFormatterFactory extends javax.swing.JFormattedTextField.JFo
 	*                      JFormattedTextField.AbstractFormatter can not be
 	*                      found.
 	*/
-	@:overload public function new(defaultFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
+	@:overload @:public public function new(defaultFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
 	
 	/**
 	* Creates a <code>DefaultFormatterFactory</code> with the specified
@@ -49,7 +49,7 @@ extern class DefaultFormatterFactory extends javax.swing.JFormattedTextField.JFo
 	* @param displayFormat JFormattedTextField.AbstractFormatter to be used
 	*                      when the JFormattedTextField does not have focus.
 	*/
-	@:overload public function new(defaultFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter, displayFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
+	@:overload @:public public function new(defaultFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter, displayFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
 	
 	/**
 	* Creates a DefaultFormatterFactory with the specified
@@ -64,7 +64,7 @@ extern class DefaultFormatterFactory extends javax.swing.JFormattedTextField.JFo
 	* @param editFormat    JFormattedTextField.AbstractFormatter to be used
 	*                      when the JFormattedTextField has focus.
 	*/
-	@:overload public function new(defaultFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter, displayFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter, editFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
+	@:overload @:public public function new(defaultFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter, displayFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter, editFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
 	
 	/**
 	* Creates a DefaultFormatterFactory with the specified
@@ -81,7 +81,7 @@ extern class DefaultFormatterFactory extends javax.swing.JFormattedTextField.JFo
 	* @param nullFormat    JFormattedTextField.AbstractFormatter to be used
 	*                      when the JFormattedTextField has a null value.
 	*/
-	@:overload public function new(defaultFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter, displayFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter, editFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter, nullFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
+	@:overload @:public public function new(defaultFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter, displayFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter, editFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter, nullFormat : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
 	
 	/**
 	* Sets the <code>JFormattedTextField.AbstractFormatter</code> to use as
@@ -92,7 +92,7 @@ extern class DefaultFormatterFactory extends javax.swing.JFormattedTextField.JFo
 	* @param atf JFormattedTextField.AbstractFormatter used if a more
 	*            specific is not specified
 	*/
-	@:overload public function setDefaultFormatter(atf : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
+	@:overload @:public public function setDefaultFormatter(atf : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
 	
 	/**
 	* Returns the <code>JFormattedTextField.AbstractFormatter</code> to use
@@ -103,7 +103,7 @@ extern class DefaultFormatterFactory extends javax.swing.JFormattedTextField.JFo
 	* @return JFormattedTextField.AbstractFormatter used if a more specific
 	*         one is not specified.
 	*/
-	@:overload public function getDefaultFormatter() : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter;
+	@:overload @:public public function getDefaultFormatter() : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter;
 	
 	/**
 	* Sets the <code>JFormattedTextField.AbstractFormatter</code> to use if
@@ -114,7 +114,7 @@ extern class DefaultFormatterFactory extends javax.swing.JFormattedTextField.JFo
 	* @param atf JFormattedTextField.AbstractFormatter to use when the
 	*            JFormattedTextField does not have focus
 	*/
-	@:overload public function setDisplayFormatter(atf : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
+	@:overload @:public public function setDisplayFormatter(atf : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
 	
 	/**
 	* Returns the <code>JFormattedTextField.AbstractFormatter</code> to use
@@ -125,7 +125,7 @@ extern class DefaultFormatterFactory extends javax.swing.JFormattedTextField.JFo
 	* @return JFormattedTextField.AbstractFormatter to use when the
 	*         JFormattedTextField does not have focus
 	*/
-	@:overload public function getDisplayFormatter() : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter;
+	@:overload @:public public function getDisplayFormatter() : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter;
 	
 	/**
 	* Sets the <code>JFormattedTextField.AbstractFormatter</code> to use if
@@ -136,7 +136,7 @@ extern class DefaultFormatterFactory extends javax.swing.JFormattedTextField.JFo
 	* @param atf JFormattedTextField.AbstractFormatter to use when the
 	*            component has focus
 	*/
-	@:overload public function setEditFormatter(atf : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
+	@:overload @:public public function setEditFormatter(atf : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
 	
 	/**
 	* Returns the <code>JFormattedTextField.AbstractFormatter</code> to use
@@ -147,7 +147,7 @@ extern class DefaultFormatterFactory extends javax.swing.JFormattedTextField.JFo
 	* @return JFormattedTextField.AbstractFormatter to use when the
 	*         component has focus
 	*/
-	@:overload public function getEditFormatter() : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter;
+	@:overload @:public public function getEditFormatter() : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter;
 	
 	/**
 	* Sets the formatter to use if the value of the JFormattedTextField is
@@ -156,7 +156,7 @@ extern class DefaultFormatterFactory extends javax.swing.JFormattedTextField.JFo
 	* @param atf JFormattedTextField.AbstractFormatter to use when
 	* the value of the JFormattedTextField is null.
 	*/
-	@:overload public function setNullFormatter(atf : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
+	@:overload @:public public function setNullFormatter(atf : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
 	
 	/**
 	* Returns the formatter to use if the value is null.
@@ -164,7 +164,7 @@ extern class DefaultFormatterFactory extends javax.swing.JFormattedTextField.JFo
 	* @return JFormattedTextField.AbstractFormatter to use when the value is
 	*         null
 	*/
-	@:overload public function getNullFormatter() : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter;
+	@:overload @:public public function getNullFormatter() : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter;
 	
 	/**
 	* Returns either the default formatter, display formatter, editor
@@ -176,7 +176,7 @@ extern class DefaultFormatterFactory extends javax.swing.JFormattedTextField.JFo
 	* @return JFormattedTextField.AbstractFormatter to handle
 	*         formatting duties.
 	*/
-	@:overload public function getFormatter(source : javax.swing.JFormattedTextField) : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter;
+	@:overload @:public override public function getFormatter(source : javax.swing.JFormattedTextField) : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter;
 	
 	
 }

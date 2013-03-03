@@ -60,7 +60,7 @@ extern class Functions
 	* @param value The long value to be converted.
 	* @return The hexadecimal string representation of the long value.
 	*/
-	@:overload public static function toFullHexString(value : haxe.Int64) : String;
+	@:overload @:public @:static public static function toFullHexString(value : haxe.Int64) : String;
 	
 	/**
 	* Converts a int value to a hexadecimal String of length 8. Includes
@@ -69,7 +69,7 @@ extern class Functions
 	* @param value The int value to be converted.
 	* @return The hexadecimal string representation of the int value.
 	*/
-	@:overload public static function toFullHexString(value : Int) : String;
+	@:overload @:public @:static public static function toFullHexString(value : Int) : String;
 	
 	/**
 	* converts a long value to a hexadecimal String
@@ -77,7 +77,7 @@ extern class Functions
 	* @param value the long value to be converted
 	* @return the hexadecimal string representation of the long value
 	*/
-	@:overload public static function toHexString(value : haxe.Int64) : String;
+	@:overload @:public @:static public static function toHexString(value : haxe.Int64) : String;
 	
 	/**
 	* Converts a byte array to a hexadecimal String. Each byte is presented by
@@ -87,7 +87,7 @@ extern class Functions
 	* @param value the byte array to be converted
 	* @return the hexadecimal string representation of the byte array
 	*/
-	@:overload public static function toHexString(value : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public @:static public static function toHexString(value : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	/**
 	* converts a long value to a binary String
@@ -95,7 +95,7 @@ extern class Functions
 	* @param value the long value to be converted
 	* @return the binary string representation of the long value
 	*/
-	@:overload public static function toBinaryString(value : haxe.Int64) : String;
+	@:overload @:public @:static public static function toBinaryString(value : haxe.Int64) : String;
 	
 	/**
 	* converts a byte array to a binary String
@@ -103,7 +103,7 @@ extern class Functions
 	* @param value the byte array to be converted
 	* @return the binary string representation of the byte array
 	*/
-	@:overload public static function toBinaryString(value : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public @:static public static function toBinaryString(value : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	/**
 	* converts the long value flags to a SlotInfoFlag string
@@ -111,7 +111,7 @@ extern class Functions
 	* @param flags the flags to be converted
 	* @return the SlotInfoFlag string representation of the flags
 	*/
-	@:overload public static function slotInfoFlagsToString(flags : haxe.Int64) : String;
+	@:overload @:public @:static public static function slotInfoFlagsToString(flags : haxe.Int64) : String;
 	
 	/**
 	* converts long value flags to a TokenInfoFlag string
@@ -119,7 +119,7 @@ extern class Functions
 	* @param flags the flags to be converted
 	* @return the TokenInfoFlag string representation of the flags
 	*/
-	@:overload public static function tokenInfoFlagsToString(flags : haxe.Int64) : String;
+	@:overload @:public @:static public static function tokenInfoFlagsToString(flags : haxe.Int64) : String;
 	
 	/**
 	* converts the long value flags to a SessionInfoFlag string
@@ -127,7 +127,7 @@ extern class Functions
 	* @param flags the flags to be converted
 	* @return the SessionInfoFlag string representation of the flags
 	*/
-	@:overload public static function sessionInfoFlagsToString(flags : haxe.Int64) : String;
+	@:overload @:public @:static public static function sessionInfoFlagsToString(flags : haxe.Int64) : String;
 	
 	/**
 	* converts the long value state to a SessionState string
@@ -135,7 +135,7 @@ extern class Functions
 	* @param state the state to be converted
 	* @return the SessionState string representation of the state
 	*/
-	@:overload public static function sessionStateToString(state : haxe.Int64) : String;
+	@:overload @:public @:static public static function sessionStateToString(state : haxe.Int64) : String;
 	
 	/**
 	* converts the long value flags to a MechanismInfoFlag string
@@ -143,25 +143,25 @@ extern class Functions
 	* @param flags the flags to be converted
 	* @return the MechanismInfoFlag string representation of the flags
 	*/
-	@:overload public static function mechanismInfoFlagsToString(flags : haxe.Int64) : String;
+	@:overload @:public @:static public static function mechanismInfoFlagsToString(flags : haxe.Int64) : String;
 	
-	@:overload public static function getId(idMap : java.util.Map<String, Null<Int>>, name : String) : haxe.Int64;
+	@:overload @:public @:static public static function getId(idMap : java.util.Map<String, Null<Int>>, name : String) : haxe.Int64;
 	
-	@:overload public static function getMechanismName(id : haxe.Int64) : String;
+	@:overload @:public @:static public static function getMechanismName(id : haxe.Int64) : String;
 	
-	@:overload public static function getMechanismId(name : String) : haxe.Int64;
+	@:overload @:public @:static public static function getMechanismId(name : String) : haxe.Int64;
 	
-	@:overload public static function getKeyName(id : haxe.Int64) : String;
+	@:overload @:public @:static public static function getKeyName(id : haxe.Int64) : String;
 	
-	@:overload public static function getKeyId(name : String) : haxe.Int64;
+	@:overload @:public @:static public static function getKeyId(name : String) : haxe.Int64;
 	
-	@:overload public static function getAttributeName(id : haxe.Int64) : String;
+	@:overload @:public @:static public static function getAttributeName(id : haxe.Int64) : String;
 	
-	@:overload public static function getAttributeId(name : String) : haxe.Int64;
+	@:overload @:public @:static public static function getAttributeId(name : String) : haxe.Int64;
 	
-	@:overload public static function getObjectClassName(id : haxe.Int64) : String;
+	@:overload @:public @:static public static function getObjectClassName(id : haxe.Int64) : String;
 	
-	@:overload public static function getObjectClassId(name : String) : haxe.Int64;
+	@:overload @:public @:static public static function getObjectClassId(name : String) : haxe.Int64;
 	
 	/**
 	* Check the given arrays for equalitiy. This method considers both arrays as
@@ -175,7 +175,7 @@ extern class Functions
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload public static function equals(array1 : java.NativeArray<java.StdTypes.Int8>, array2 : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public @:static public static function equals(array1 : java.NativeArray<java.StdTypes.Int8>, array2 : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/**
 	* Check the given arrays for equalitiy. This method considers both arrays as
@@ -189,7 +189,7 @@ extern class Functions
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload public static function equals(array1 : java.NativeArray<java.StdTypes.Char16>, array2 : java.NativeArray<java.StdTypes.Char16>) : Bool;
+	@:overload @:public @:static public static function equals(array1 : java.NativeArray<java.StdTypes.Char16>, array2 : java.NativeArray<java.StdTypes.Char16>) : Bool;
 	
 	/**
 	* Check the given dates for equalitiy. This method considers both dates as
@@ -203,7 +203,7 @@ extern class Functions
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload public static function equals(date1 : sun.security.pkcs11.wrapper.CK_DATE, date2 : sun.security.pkcs11.wrapper.CK_DATE) : Bool;
+	@:overload @:public @:static public static function equals(date1 : sun.security.pkcs11.wrapper.CK_DATE, date2 : sun.security.pkcs11.wrapper.CK_DATE) : Bool;
 	
 	/**
 	* Calculate a hash code for the given byte array.
@@ -213,7 +213,7 @@ extern class Functions
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload public static function hashCode(array : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public @:static public static function hashCode(array : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Calculate a hash code for the given char array.
@@ -223,7 +223,7 @@ extern class Functions
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload public static function hashCode(array : java.NativeArray<java.StdTypes.Char16>) : Int;
+	@:overload @:public @:static public static function hashCode(array : java.NativeArray<java.StdTypes.Char16>) : Int;
 	
 	/**
 	* Calculate a hash code for the given date object.
@@ -233,7 +233,7 @@ extern class Functions
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload public static function hashCode(date : sun.security.pkcs11.wrapper.CK_DATE) : Int;
+	@:overload @:public @:static public static function hashCode(date : sun.security.pkcs11.wrapper.CK_DATE) : Int;
 	
 	
 }

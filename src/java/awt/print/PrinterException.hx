@@ -34,7 +34,7 @@ extern class PrinterException extends java.lang.Exception
 	* Constructs a new <code>PrinterException</code> object
 	* without a detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>PrinterException</code> object
@@ -42,7 +42,7 @@ extern class PrinterException extends java.lang.Exception
 	* @param msg the message to generate when a
 	* <code>PrinterException</code> is thrown
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

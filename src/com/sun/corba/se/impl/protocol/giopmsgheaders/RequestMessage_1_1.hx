@@ -25,25 +25,25 @@ package com.sun.corba.se.impl.protocol.giopmsgheaders;
 */
 extern class RequestMessage_1_1 extends com.sun.corba.se.impl.protocol.giopmsgheaders.Message_1_1 implements com.sun.corba.se.impl.protocol.giopmsgheaders.RequestMessage
 {
-	@:overload public function getServiceContexts() : com.sun.corba.se.spi.servicecontext.ServiceContexts;
+	@:overload @:public public function getServiceContexts() : com.sun.corba.se.spi.servicecontext.ServiceContexts;
 	
-	@:overload public function getRequestId() : Int;
+	@:overload @:public public function getRequestId() : Int;
 	
-	@:overload public function isResponseExpected() : Bool;
+	@:overload @:public public function isResponseExpected() : Bool;
 	
-	@:overload public function getReserved() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getReserved() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getObjectKey() : com.sun.corba.se.spi.ior.ObjectKey;
+	@:overload @:public public function getObjectKey() : com.sun.corba.se.spi.ior.ObjectKey;
 	
-	@:overload public function getOperation() : String;
+	@:overload @:public public function getOperation() : String;
 	
-	@:overload public function getPrincipal() : org.omg.CORBA.Principal;
+	@:overload @:public public function getPrincipal() : org.omg.CORBA.Principal;
 	
-	@:overload override public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public override public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload override public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public override public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	//@:overload override public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
+	//@:overload @:public override public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
 	
 	
 }

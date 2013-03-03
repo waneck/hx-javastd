@@ -31,39 +31,39 @@ package com.sun.tools.internal.ws.processor.modeler.annotation;
 */
 extern class WebServiceWrapperGenerator extends com.sun.tools.internal.ws.processor.modeler.annotation.WebServiceVisitor
 {
-	@:overload public function new(builder : com.sun.tools.internal.ws.processor.modeler.annotation.ModelBuilder, context : com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext) : Void;
+	@:overload @:public public function new(builder : com.sun.tools.internal.ws.processor.modeler.annotation.ModelBuilder, context : com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext) : Void;
 	
-	@:overload private function processWebService(webService : javax.jws.WebService, d : com.sun.mirror.declaration.TypeDeclaration) : Void;
+	@:overload @:protected override private function processWebService(webService : javax.jws.WebService, d : com.sun.mirror.declaration.TypeDeclaration) : Void;
 	
-	@:overload private function postProcessWebService(webService : javax.jws.WebService, d : com.sun.mirror.declaration.InterfaceDeclaration) : Void;
+	@:overload @:protected override private function postProcessWebService(webService : javax.jws.WebService, d : com.sun.mirror.declaration.InterfaceDeclaration) : Void;
 	
-	@:overload private function postProcessWebService(webService : javax.jws.WebService, d : com.sun.mirror.declaration.ClassDeclaration) : Void;
+	@:overload @:protected override private function postProcessWebService(webService : javax.jws.WebService, d : com.sun.mirror.declaration.ClassDeclaration) : Void;
 	
-	@:overload private function doPostProcessWebService(webService : javax.jws.WebService, d : com.sun.mirror.declaration.TypeDeclaration) : Void;
+	@:overload @:protected private function doPostProcessWebService(webService : javax.jws.WebService, d : com.sun.mirror.declaration.TypeDeclaration) : Void;
 	
-	@:overload private function processMethod(method : com.sun.mirror.declaration.MethodDeclaration, webMethod : javax.jws.WebMethod) : Void;
+	@:overload @:protected override private function processMethod(method : com.sun.mirror.declaration.MethodDeclaration, webMethod : javax.jws.WebMethod) : Void;
 	
-	@:overload private function getCMClass(className : String, type : com.sun.codemodel.internal.ClassType) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:protected private function getCMClass(className : String, type : com.sun.codemodel.internal.ClassType) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload private function isWSDLException(members : java.util.Collection<com.sun.tools.internal.ws.processor.modeler.annotation.MemberInfo>, thrownDecl : com.sun.mirror.declaration.ClassDeclaration) : Bool;
+	@:overload @:protected private function isWSDLException(members : java.util.Collection<com.sun.tools.internal.ws.processor.modeler.annotation.MemberInfo>, thrownDecl : com.sun.mirror.declaration.ClassDeclaration) : Bool;
 	
 	
 }
 @:native('com$sun$tools$internal$ws$processor$modeler$annotation$WebServiceWrapperGenerator$APTWrapperBeanGenerator') @:internal extern class WebServiceWrapperGenerator_APTWrapperBeanGenerator extends com.sun.xml.internal.ws.model.AbstractWrapperBeanGenerator<com.sun.mirror.type.TypeMirror, com.sun.mirror.declaration.TypeDeclaration, com.sun.mirror.declaration.MethodDeclaration, com.sun.tools.internal.ws.processor.modeler.annotation.MemberInfo>
 {
-	@:overload private function new(annReader : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<com.sun.mirror.type.TypeMirror, com.sun.mirror.declaration.TypeDeclaration, Dynamic, com.sun.mirror.declaration.MethodDeclaration>, nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<com.sun.mirror.type.TypeMirror, com.sun.mirror.declaration.TypeDeclaration, Dynamic, com.sun.mirror.declaration.MethodDeclaration>, beanMemberFactory : com.sun.xml.internal.ws.model.AbstractWrapperBeanGenerator.AbstractWrapperBeanGenerator_BeanMemberFactory<com.sun.mirror.type.TypeMirror, com.sun.tools.internal.ws.processor.modeler.annotation.MemberInfo>) : Void;
+	@:overload @:protected private function new(annReader : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<com.sun.mirror.type.TypeMirror, com.sun.mirror.declaration.TypeDeclaration, Dynamic, com.sun.mirror.declaration.MethodDeclaration>, nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<com.sun.mirror.type.TypeMirror, com.sun.mirror.declaration.TypeDeclaration, Dynamic, com.sun.mirror.declaration.MethodDeclaration>, beanMemberFactory : com.sun.xml.internal.ws.model.AbstractWrapperBeanGenerator.AbstractWrapperBeanGenerator_BeanMemberFactory<com.sun.mirror.type.TypeMirror, com.sun.tools.internal.ws.processor.modeler.annotation.MemberInfo>) : Void;
 	
-	@:overload private function getSafeType(type : com.sun.mirror.type.TypeMirror) : com.sun.mirror.type.TypeMirror;
+	@:overload @:protected private function getSafeType(type : com.sun.mirror.type.TypeMirror) : com.sun.mirror.type.TypeMirror;
 	
-	@:overload private function getHolderValueType(paramType : com.sun.mirror.type.TypeMirror) : com.sun.mirror.type.TypeMirror;
+	@:overload @:protected private function getHolderValueType(paramType : com.sun.mirror.type.TypeMirror) : com.sun.mirror.type.TypeMirror;
 	
-	@:overload private function isVoidType(type : com.sun.mirror.type.TypeMirror) : Bool;
+	@:overload @:protected private function isVoidType(type : com.sun.mirror.type.TypeMirror) : Bool;
 	
 	
 }
 @:native('com$sun$tools$internal$ws$processor$modeler$annotation$WebServiceWrapperGenerator$FieldFactory') @:internal extern class WebServiceWrapperGenerator_FieldFactory implements com.sun.xml.internal.ws.model.AbstractWrapperBeanGenerator.AbstractWrapperBeanGenerator_BeanMemberFactory<com.sun.mirror.type.TypeMirror, com.sun.tools.internal.ws.processor.modeler.annotation.MemberInfo>
 {
-	@:overload public function createWrapperBeanMember(paramType : com.sun.mirror.type.TypeMirror, paramName : String, jaxb : java.util.List<java.lang.annotation.Annotation>) : com.sun.tools.internal.ws.processor.modeler.annotation.MemberInfo;
+	@:overload @:public public function createWrapperBeanMember(paramType : com.sun.mirror.type.TypeMirror, paramName : String, jaxb : java.util.List<java.lang.annotation.Annotation>) : com.sun.tools.internal.ws.processor.modeler.annotation.MemberInfo;
 	
 	
 }

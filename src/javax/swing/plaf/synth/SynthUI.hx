@@ -31,7 +31,7 @@ extern interface SynthUI extends javax.swing.plaf.synth.SynthConstants
 	* @param c Component requesting SynthContext.
 	* @return SynthContext describing component.
 	*/
-	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	
 	/**
 	* Paints the border.
@@ -43,7 +43,7 @@ extern interface SynthUI extends javax.swing.plaf.synth.SynthConstants
 	* @param w width of the border
 	* @param h height of the border
 	*/
-	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	
 }

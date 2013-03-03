@@ -25,9 +25,9 @@ package sun.awt;
 */
 extern class DefaultMouseInfoPeer implements java.awt.peer.MouseInfoPeer
 {
-	@:overload @:native public function fillPointWithCoords(point : java.awt.Point) : Int;
+	@:overload @:public @:native public function fillPointWithCoords(point : java.awt.Point) : Int;
 	
-	@:overload @:native public function isWindowUnderMouse(w : java.awt.Window) : Bool;
+	@:overload @:public @:native public function isWindowUnderMouse(w : java.awt.Window) : Bool;
 	
 	
 }

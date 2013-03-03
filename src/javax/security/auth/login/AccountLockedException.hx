@@ -38,7 +38,7 @@ package javax.security.auth.login;
 	* Constructs a AccountLockedException with no detail message.
 	* A detail message is a String that describes this particular exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a AccountLockedException with the specified
@@ -49,7 +49,7 @@ package javax.security.auth.login;
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

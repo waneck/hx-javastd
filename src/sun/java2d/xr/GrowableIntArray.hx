@@ -31,38 +31,38 @@ package sun.java2d.xr;
 */
 extern class GrowableIntArray
 {
-	@:overload public function new(cellSize : Int, initialSize : Int) : Void;
+	@:overload @:public public function new(cellSize : Int, initialSize : Int) : Void;
 	
 	/**
 	* @return a direct reference to the backing array.
 	*/
-	@:overload public function getArray() : java.NativeArray<Int>;
+	@:overload @:public public function getArray() : java.NativeArray<Int>;
 	
 	/**
 	* @return a copy of the backing array.
 	*/
-	@:overload public function getSizedArray() : java.NativeArray<Int>;
+	@:overload @:public public function getSizedArray() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the index of the next free cell,
 	* and grows the backing arrays if required.
 	*/
-	@:overload @:final public function getNextIndex() : Int;
+	@:overload @:public @:final public function getNextIndex() : Int;
 	
-	@:overload @:final private function getCellIndex(cellIndex : Int) : Int;
+	@:overload @:protected @:final private function getCellIndex(cellIndex : Int) : Int;
 	
-	@:overload @:final public function getInt(cellIndex : Int) : Int;
+	@:overload @:public @:final public function getInt(cellIndex : Int) : Int;
 	
-	@:overload @:final public function addInt(i : Int) : Void;
+	@:overload @:public @:final public function addInt(i : Int) : Void;
 	
 	/**
 	* @return The number of stored cells.
 	*/
-	@:overload @:final public function getSize() : Int;
+	@:overload @:public @:final public function getSize() : Int;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload private function growArray() : Void;
+	@:overload @:protected private function growArray() : Void;
 	
 	
 }

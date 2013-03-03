@@ -38,11 +38,11 @@ package com.sun.tools.hat.internal.model;
 */
 extern class HackJavaValue extends com.sun.tools.hat.internal.model.JavaValue
 {
-	@:overload public function new(value : String, size : Int) : Void;
+	@:overload @:public public function new(value : String, size : Int) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload override public function getSize() : Int;
+	@:overload @:public override public function getSize() : Int;
 	
 	
 }

@@ -21,7 +21,7 @@ package com.sun.org.apache.xml.internal.security.utils;
 */
 extern class XMLUtils
 {
-	@:overload public static function getNextElement(el : org.w3c.dom.Node) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function getNextElement(el : org.w3c.dom.Node) : org.w3c.dom.Element;
 	
 	/**
 	* @param rootNode
@@ -29,7 +29,7 @@ extern class XMLUtils
 	* @param exclude
 	* @param com wheather comments or not
 	*/
-	@:overload public static function getSet(rootNode : org.w3c.dom.Node, result : java.util.Set<Dynamic>, exclude : org.w3c.dom.Node, com : Bool) : Void;
+	@:overload @:public @:static public static function getSet(rootNode : org.w3c.dom.Node, result : java.util.Set<Dynamic>, exclude : org.w3c.dom.Node, com : Bool) : Void;
 	
 	/**
 	* Outputs a DOM tree to an {@link OutputStream}.
@@ -37,7 +37,7 @@ extern class XMLUtils
 	* @param contextNode root node of the DOM tree
 	* @param os the {@link OutputStream}
 	*/
-	@:overload public static function outputDOM(contextNode : org.w3c.dom.Node, os : java.io.OutputStream) : Void;
+	@:overload @:public @:static public static function outputDOM(contextNode : org.w3c.dom.Node, os : java.io.OutputStream) : Void;
 	
 	/**
 	* Outputs a DOM tree to an {@link OutputStream}. <I>If an Exception is
@@ -48,7 +48,7 @@ extern class XMLUtils
 	* @param os the {@link OutputStream}
 	* @param addPreamble
 	*/
-	@:overload public static function outputDOM(contextNode : org.w3c.dom.Node, os : java.io.OutputStream, addPreamble : Bool) : Void;
+	@:overload @:public @:static public static function outputDOM(contextNode : org.w3c.dom.Node, os : java.io.OutputStream, addPreamble : Bool) : Void;
 	
 	/**
 	* Serializes the <CODE>contextNode</CODE> into the OutputStream, <I>but
@@ -63,7 +63,7 @@ extern class XMLUtils
 	* @param contextNode
 	* @param os
 	*/
-	@:overload public static function outputDOMc14nWithComments(contextNode : org.w3c.dom.Node, os : java.io.OutputStream) : Void;
+	@:overload @:public @:static public static function outputDOMc14nWithComments(contextNode : org.w3c.dom.Node, os : java.io.OutputStream) : Void;
 	
 	/**
 	* Method getFullTextChildrenFromElement
@@ -71,7 +71,7 @@ extern class XMLUtils
 	* @param element
 	* @return the string of chi;ds
 	*/
-	@:overload public static function getFullTextChildrenFromElement(element : org.w3c.dom.Element) : String;
+	@:overload @:public @:static public static function getFullTextChildrenFromElement(element : org.w3c.dom.Element) : String;
 	
 	/**
 	* Creates an Element in the XML Signature specification namespace.
@@ -80,7 +80,7 @@ extern class XMLUtils
 	* @param elementName the local name of the Element
 	* @return the Element
 	*/
-	@:overload public static function createElementInSignatureSpace(doc : org.w3c.dom.Document, elementName : String) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function createElementInSignatureSpace(doc : org.w3c.dom.Document, elementName : String) : org.w3c.dom.Element;
 	
 	/**
 	* Returns true if the element is in XML Signature namespace and the local
@@ -90,7 +90,7 @@ extern class XMLUtils
 	* @param localName
 	* @return true if the element is in XML Signature namespace and the local name equals the supplied one
 	*/
-	@:overload public static function elementIsInSignatureSpace(element : org.w3c.dom.Element, localName : String) : Bool;
+	@:overload @:public @:static public static function elementIsInSignatureSpace(element : org.w3c.dom.Element, localName : String) : Bool;
 	
 	/**
 	* Returns true if the element is in XML Encryption namespace and the local
@@ -100,7 +100,7 @@ extern class XMLUtils
 	* @param localName
 	* @return true if the element is in XML Encryption namespace and the local name equals the supplied one
 	*/
-	@:overload public static function elementIsInEncryptionSpace(element : org.w3c.dom.Element, localName : String) : Bool;
+	@:overload @:public @:static public static function elementIsInEncryptionSpace(element : org.w3c.dom.Element, localName : String) : Bool;
 	
 	/**
 	* This method returns the owner document of a particular node.
@@ -111,7 +111,7 @@ extern class XMLUtils
 	* @param node
 	* @return the owner document of the node
 	*/
-	@:overload public static function getOwnerDocument(node : org.w3c.dom.Node) : org.w3c.dom.Document;
+	@:overload @:public @:static public static function getOwnerDocument(node : org.w3c.dom.Node) : org.w3c.dom.Document;
 	
 	/**
 	* This method returns the first non-null owner document of the Node's in this Set.
@@ -122,7 +122,7 @@ extern class XMLUtils
 	* @param xpathNodeSet
 	* @return the owner document
 	*/
-	@:overload public static function getOwnerDocument(xpathNodeSet : java.util.Set<Dynamic>) : org.w3c.dom.Document;
+	@:overload @:public @:static public static function getOwnerDocument(xpathNodeSet : java.util.Set<Dynamic>) : org.w3c.dom.Document;
 	
 	/**
 	* Method createDSctx
@@ -132,18 +132,18 @@ extern class XMLUtils
 	* @param namespace
 	* @return the element.
 	*/
-	@:overload public static function createDSctx(doc : org.w3c.dom.Document, prefix : String, namespace : String) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function createDSctx(doc : org.w3c.dom.Document, prefix : String, namespace : String) : org.w3c.dom.Element;
 	
 	/**
 	* Method addReturnToElement
 	*
 	* @param e
 	*/
-	@:overload public static function addReturnToElement(e : org.w3c.dom.Element) : Void;
+	@:overload @:public @:static public static function addReturnToElement(e : org.w3c.dom.Element) : Void;
 	
-	@:overload public static function addReturnToElement(doc : org.w3c.dom.Document, nl : com.sun.org.apache.xml.internal.security.utils.HelperNodeList) : Void;
+	@:overload @:public @:static public static function addReturnToElement(doc : org.w3c.dom.Document, nl : com.sun.org.apache.xml.internal.security.utils.HelperNodeList) : Void;
 	
-	@:overload public static function addReturnBeforeChild(e : org.w3c.dom.Element, child : org.w3c.dom.Node) : Void;
+	@:overload @:public @:static public static function addReturnBeforeChild(e : org.w3c.dom.Element, child : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Method convertNodelistToSet
@@ -151,7 +151,7 @@ extern class XMLUtils
 	* @param xpathNodeSet
 	* @return the set with the nodelist
 	*/
-	@:overload public static function convertNodelistToSet(xpathNodeSet : org.w3c.dom.NodeList) : java.util.Set<Dynamic>;
+	@:overload @:public @:static public static function convertNodelistToSet(xpathNodeSet : org.w3c.dom.NodeList) : java.util.Set<Dynamic>;
 	
 	/**
 	* This method spreads all namespace attributes in a DOM document to their
@@ -164,7 +164,7 @@ extern class XMLUtils
 	* @param doc
 	* @see <A HREF="http://nagoya.apache.org/bugzilla/show_bug.cgi?id=2650">Namespace axis resolution is not XPath compliant </A>
 	*/
-	@:overload public static function circumventBug2650(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public @:static public static function circumventBug2650(doc : org.w3c.dom.Document) : Void;
 	
 	/**
 	* @param sibling
@@ -172,7 +172,7 @@ extern class XMLUtils
 	* @param number
 	* @return nodes with the constrain
 	*/
-	@:overload public static function selectDsNode(sibling : org.w3c.dom.Node, nodeName : String, number : Int) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function selectDsNode(sibling : org.w3c.dom.Node, nodeName : String, number : Int) : org.w3c.dom.Element;
 	
 	/**
 	* @param sibling
@@ -180,7 +180,7 @@ extern class XMLUtils
 	* @param number
 	* @return nodes with the constrain
 	*/
-	@:overload public static function selectXencNode(sibling : org.w3c.dom.Node, nodeName : String, number : Int) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function selectXencNode(sibling : org.w3c.dom.Node, nodeName : String, number : Int) : org.w3c.dom.Element;
 	
 	/**
 	* @param sibling
@@ -188,7 +188,7 @@ extern class XMLUtils
 	* @param number
 	* @return nodes with the constrain
 	*/
-	@:overload public static function selectDsNodeText(sibling : org.w3c.dom.Node, nodeName : String, number : Int) : org.w3c.dom.Text;
+	@:overload @:public @:static public static function selectDsNodeText(sibling : org.w3c.dom.Node, nodeName : String, number : Int) : org.w3c.dom.Text;
 	
 	/**
 	* @param sibling
@@ -197,7 +197,7 @@ extern class XMLUtils
 	* @param number
 	* @return nodes with the constrain
 	*/
-	@:overload public static function selectNodeText(sibling : org.w3c.dom.Node, uri : String, nodeName : String, number : Int) : org.w3c.dom.Text;
+	@:overload @:public @:static public static function selectNodeText(sibling : org.w3c.dom.Node, uri : String, nodeName : String, number : Int) : org.w3c.dom.Text;
 	
 	/**
 	* @param sibling
@@ -206,14 +206,14 @@ extern class XMLUtils
 	* @param number
 	* @return nodes with the constrain
 	*/
-	@:overload public static function selectNode(sibling : org.w3c.dom.Node, uri : String, nodeName : String, number : Int) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function selectNode(sibling : org.w3c.dom.Node, uri : String, nodeName : String, number : Int) : org.w3c.dom.Element;
 	
 	/**
 	* @param sibling
 	* @param nodeName
 	* @return nodes with the constrain
 	*/
-	@:overload public static function selectDsNodes(sibling : org.w3c.dom.Node, nodeName : String) : java.NativeArray<org.w3c.dom.Element>;
+	@:overload @:public @:static public static function selectDsNodes(sibling : org.w3c.dom.Node, nodeName : String) : java.NativeArray<org.w3c.dom.Element>;
 	
 	/**
 	* @param sibling
@@ -221,14 +221,14 @@ extern class XMLUtils
 	* @param nodeName
 	* @return nodes with the constrain
 	*/
-	@:overload public static function selectNodes(sibling : org.w3c.dom.Node, uri : String, nodeName : String) : java.NativeArray<org.w3c.dom.Element>;
+	@:overload @:public @:static public static function selectNodes(sibling : org.w3c.dom.Node, uri : String, nodeName : String) : java.NativeArray<org.w3c.dom.Element>;
 	
 	/**
 	* @param signatureElement
 	* @param inputSet
 	* @return nodes with the constrain
 	*/
-	@:overload public static function excludeNodeFromSet(signatureElement : org.w3c.dom.Node, inputSet : java.util.Set<Dynamic>) : java.util.Set<Dynamic>;
+	@:overload @:public @:static public static function excludeNodeFromSet(signatureElement : org.w3c.dom.Node, inputSet : java.util.Set<Dynamic>) : java.util.Set<Dynamic>;
 	
 	/**
 	* Returns true if the descendantOrSelf is on the descendant-or-self axis
@@ -238,9 +238,9 @@ extern class XMLUtils
 	* @param descendantOrSelf
 	* @return true if the node is descendant
 	*/
-	@:overload public static function isDescendantOrSelf(ctx : org.w3c.dom.Node, descendantOrSelf : org.w3c.dom.Node) : Bool;
+	@:overload @:static @:public public static function isDescendantOrSelf(ctx : org.w3c.dom.Node, descendantOrSelf : org.w3c.dom.Node) : Bool;
 	
-	@:overload public static function ignoreLineBreaks() : Bool;
+	@:overload @:public @:static public static function ignoreLineBreaks() : Bool;
 	
 	
 }

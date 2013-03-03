@@ -84,13 +84,13 @@ extern interface RangeValueIterator
 	* @see Element
 	* @stable ICU 2.6
 	*/
-	@:overload public function next(element : sun.text.normalizer.RangeValueIterator.RangeValueIterator_Element) : Bool;
+	@:overload @:public public function next(element : sun.text.normalizer.RangeValueIterator.RangeValueIterator_Element) : Bool;
 	
 	/**
 	* Resets the iterator to the beginning of the iteration.
 	* @stable ICU 2.6
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }
@@ -107,26 +107,26 @@ extern interface RangeValueIterator
 	* value
 	* @stable ICU 2.6
 	*/
-	public var start : Int;
+	@:public public var start : Int;
 	
 	/**
 	* (End + 1) integer of continuous result range that has the same
 	* value
 	* @stable ICU 2.6
 	*/
-	public var limit : Int;
+	@:public public var limit : Int;
 	
 	/**
 	* Gets the common value of the continous result range
 	* @stable ICU 2.6
 	*/
-	public var value : Int;
+	@:public public var value : Int;
 	
 	/**
 	* Empty default constructor to make javadoc happy
 	* @stable ICU 2.4
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

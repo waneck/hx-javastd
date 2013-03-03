@@ -25,25 +25,25 @@ package sun.java2d.pipe;
 */
 extern class GeneralCompositePipe implements sun.java2d.pipe.CompositePipe
 {
-	@:overload public function startSequence(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape, devR : java.awt.Rectangle, abox : java.NativeArray<Int>) : Dynamic;
+	@:overload @:public public function startSequence(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape, devR : java.awt.Rectangle, abox : java.NativeArray<Int>) : Dynamic;
 	
-	@:overload public function needTile(ctx : Dynamic, x : Int, y : Int, w : Int, h : Int) : Bool;
+	@:overload @:public public function needTile(ctx : Dynamic, x : Int, y : Int, w : Int, h : Int) : Bool;
 	
 	/**
 	* GeneralCompositePipe.renderPathTile works with custom composite operator
 	* provided by an application
 	*/
-	@:overload public function renderPathTile(ctx : Dynamic, atile : java.NativeArray<java.StdTypes.Int8>, offset : Int, tilesize : Int, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function renderPathTile(ctx : Dynamic, atile : java.NativeArray<java.StdTypes.Int8>, offset : Int, tilesize : Int, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function skipTile(ctx : Dynamic, x : Int, y : Int) : Void;
+	@:overload @:public public function skipTile(ctx : Dynamic, x : Int, y : Int) : Void;
 	
-	@:overload public function endSequence(ctx : Dynamic) : Void;
+	@:overload @:public public function endSequence(ctx : Dynamic) : Void;
 	
 	
 }
 @:native('sun$java2d$pipe$GeneralCompositePipe$TileContext') @:internal extern class GeneralCompositePipe_TileContext
 {
-	@:overload public function new(sg : sun.java2d.SunGraphics2D, pCtx : java.awt.PaintContext, cCtx : java.awt.CompositeContext, cModel : java.awt.image.ColorModel) : Void;
+	@:overload @:public public function new(sg : sun.java2d.SunGraphics2D, pCtx : java.awt.PaintContext, cCtx : java.awt.CompositeContext, cModel : java.awt.image.ColorModel) : Void;
 	
 	
 }

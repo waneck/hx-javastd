@@ -28,7 +28,7 @@ extern class MailcapCommandMap extends javax.activation.CommandMap
 	/**
 	* The default Constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor that allows the caller to specify the path
@@ -37,7 +37,7 @@ extern class MailcapCommandMap extends javax.activation.CommandMap
 	* @param fileName The name of the <i>mailcap</i> file to open
 	* @exception       IOException     if the file can't be accessed
 	*/
-	@:overload public function new(fileName : String) : Void;
+	@:overload @:public public function new(fileName : String) : Void;
 	
 	/**
 	* Constructor that allows the caller to specify an <i>InputStream</i>
@@ -45,7 +45,7 @@ extern class MailcapCommandMap extends javax.activation.CommandMap
 	*
 	* @param is        InputStream of the <i>mailcap</i> file to open
 	*/
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	/**
 	* Get the preferred command list for a MIME Type. The MailcapCommandMap
@@ -60,7 +60,7 @@ extern class MailcapCommandMap extends javax.activation.CommandMap
 	* @param mimeType  the MIME type
 	* @return the CommandInfo objects representing the preferred commands.
 	*/
-	@:overload @:synchronized public function getPreferredCommands(mimeType : String) : java.NativeArray<javax.activation.CommandInfo>;
+	@:overload @:public @:synchronized override public function getPreferredCommands(mimeType : String) : java.NativeArray<javax.activation.CommandInfo>;
 	
 	/**
 	* Get all the available commands in all mailcap files known to
@@ -69,7 +69,7 @@ extern class MailcapCommandMap extends javax.activation.CommandMap
 	* @param mimeType  the MIME type
 	* @return the CommandInfo objects representing all the commands.
 	*/
-	@:overload @:synchronized public function getAllCommands(mimeType : String) : java.NativeArray<javax.activation.CommandInfo>;
+	@:overload @:public @:synchronized override public function getAllCommands(mimeType : String) : java.NativeArray<javax.activation.CommandInfo>;
 	
 	/**
 	* Get the command corresponding to <code>cmdName</code> for the MIME type.
@@ -78,7 +78,7 @@ extern class MailcapCommandMap extends javax.activation.CommandMap
 	* @param cmdName   the command name
 	* @return the CommandInfo object corresponding to the command.
 	*/
-	@:overload @:synchronized public function getCommand(mimeType : String, cmdName : String) : javax.activation.CommandInfo;
+	@:overload @:public @:synchronized override public function getCommand(mimeType : String, cmdName : String) : javax.activation.CommandInfo;
 	
 	/**
 	* Add entries to the registry.  Programmatically
@@ -89,7 +89,7 @@ extern class MailcapCommandMap extends javax.activation.CommandMap
 	*
 	* @param mail_cap a correctly formatted mailcap string
 	*/
-	@:overload @:synchronized public function addMailcap(mail_cap : String) : Void;
+	@:overload @:public @:synchronized public function addMailcap(mail_cap : String) : Void;
 	
 	/**
 	* Return the DataContentHandler for the specified MIME type.
@@ -97,7 +97,7 @@ extern class MailcapCommandMap extends javax.activation.CommandMap
 	* @param mimeType  the MIME type
 	* @return          the DataContentHandler
 	*/
-	@:overload @:synchronized public function createDataContentHandler(mimeType : String) : javax.activation.DataContentHandler;
+	@:overload @:public @:synchronized override public function createDataContentHandler(mimeType : String) : javax.activation.DataContentHandler;
 	
 	/**
 	* Get all the MIME types known to this command map.
@@ -105,7 +105,7 @@ extern class MailcapCommandMap extends javax.activation.CommandMap
 	* @return          array of MIME types as strings
 	* @since   JAF 1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function getMimeTypes() : java.NativeArray<String>;
+	@:require(java1) @:overload @:public @:synchronized override public function getMimeTypes() : java.NativeArray<String>;
 	
 	/**
 	* Get the native commands for the given MIME type.
@@ -121,7 +121,7 @@ extern class MailcapCommandMap extends javax.activation.CommandMap
 	* @return          array of native command entries
 	* @since   JAF 1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function getNativeCommands(mimeType : String) : java.NativeArray<String>;
+	@:require(java1) @:overload @:public @:synchronized public function getNativeCommands(mimeType : String) : java.NativeArray<String>;
 	
 	
 }

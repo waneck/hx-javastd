@@ -25,14 +25,14 @@ package com.sun.xml.internal.ws.binding;
 */
 extern class WebServiceFeatureList implements com.sun.xml.internal.ws.api.WSFeatureList
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : Void;
+	@:overload @:public public function new(features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : Void;
 	
 	/**
 	* Creates a list by reading featuers from the annotation on a class.
 	*/
-	@:overload public function new(endpointClass : Class<Dynamic>) : Void;
+	@:overload @:public public function new(endpointClass : Class<Dynamic>) : Void;
 	
 	/**
 	* Adds the corresponding features to the list for feature annotations(i.e
@@ -40,7 +40,7 @@ extern class WebServiceFeatureList implements com.sun.xml.internal.ws.api.WSFeat
 	*
 	* @param annIt collection of annotations(that can have non-feature annotations)
 	*/
-	@:overload public function parseAnnotations(annIt : java.lang.Iterable<java.lang.annotation.Annotation>) : Void;
+	@:overload @:public public function parseAnnotations(annIt : java.lang.Iterable<java.lang.annotation.Annotation>) : Void;
 	
 	/**
 	* Returns a corresponding feature for a feature annotation(i.e which has
@@ -49,7 +49,7 @@ extern class WebServiceFeatureList implements com.sun.xml.internal.ws.api.WSFeat
 	* @return corresponding feature for the annotation
 	*         null, if the annotation is nota feature annotation
 	*/
-	@:overload public static function getFeature(a : java.lang.annotation.Annotation) : javax.xml.ws.WebServiceFeature;
+	@:overload @:public @:static public static function getFeature(a : java.lang.annotation.Annotation) : javax.xml.ws.WebServiceFeature;
 	
 	/**
 	* Reads {@link WebServiceFeatureAnnotation feature annotations} on a class
@@ -57,25 +57,25 @@ extern class WebServiceFeatureList implements com.sun.xml.internal.ws.api.WSFeat
 	*
 	* @param endpointClass web service impl class
 	*/
-	@:overload public function parseAnnotations(endpointClass : Class<Dynamic>) : Void;
+	@:overload @:public public function parseAnnotations(endpointClass : Class<Dynamic>) : Void;
 	
-	@:overload public function iterator() : java.util.Iterator<javax.xml.ws.WebServiceFeature>;
+	@:overload @:public public function iterator() : java.util.Iterator<javax.xml.ws.WebServiceFeature>;
 	
-	@:overload public function toArray() : java.NativeArray<javax.xml.ws.WebServiceFeature>;
+	@:overload @:public public function toArray() : java.NativeArray<javax.xml.ws.WebServiceFeature>;
 	
-	@:overload public function isEnabled(feature : Class<javax.xml.ws.WebServiceFeature>) : Bool;
+	@:overload @:public public function isEnabled(feature : Class<javax.xml.ws.WebServiceFeature>) : Bool;
 	
-	@:overload public function get<F : javax.xml.ws.WebServiceFeature>(featureType : Class<F>) : F;
+	@:overload @:public public function get<F : javax.xml.ws.WebServiceFeature>(featureType : Class<F>) : F;
 	
 	/**
 	* Adds a feature to the list if it's not already added.
 	*/
-	@:overload public function add(f : javax.xml.ws.WebServiceFeature) : Void;
+	@:overload @:public public function add(f : javax.xml.ws.WebServiceFeature) : Void;
 	
 	/**
 	* Adds features to the list if it's not already added.
 	*/
-	@:overload public function addAll(list : com.sun.xml.internal.ws.api.WSFeatureList) : Void;
+	@:overload @:public public function addAll(list : com.sun.xml.internal.ws.api.WSFeatureList) : Void;
 	
 	/**
 	* Merges the extra features that are not already set on binding.
@@ -87,17 +87,17 @@ extern class WebServiceFeatureList implements com.sun.xml.internal.ws.api.WSFeat
 	*                          policy configuration) colflicts with feature setting in Deployed Service and
 	*                          logs warning if there are any conflicts.
 	*/
-	@:overload public function mergeFeatures(features : java.lang.Iterable<javax.xml.ws.WebServiceFeature>, reportConflicts : Bool) : Void;
+	@:overload @:public public function mergeFeatures(features : java.lang.Iterable<javax.xml.ws.WebServiceFeature>, reportConflicts : Bool) : Void;
 	
-	@:overload public function mergeFeatures(features : java.NativeArray<javax.xml.ws.WebServiceFeature>, reportConflicts : Bool) : Void;
+	@:overload @:public public function mergeFeatures(features : java.NativeArray<javax.xml.ws.WebServiceFeature>, reportConflicts : Bool) : Void;
 	
 	/**
 	* Set the parent features. Basically the parent feature list will be overriden
 	* by this feature list.
 	*/
-	@:overload public function setParentFeaturedObject(parent : com.sun.xml.internal.ws.api.model.wsdl.WSDLFeaturedObject) : Void;
+	@:overload @:public public function setParentFeaturedObject(parent : com.sun.xml.internal.ws.api.model.wsdl.WSDLFeaturedObject) : Void;
 	
-	@:overload public static function getFeature<F : javax.xml.ws.WebServiceFeature>(features : java.NativeArray<javax.xml.ws.WebServiceFeature>, featureType : Class<F>) : F;
+	@:overload @:public @:static public static function getFeature<F : javax.xml.ws.WebServiceFeature>(features : java.NativeArray<javax.xml.ws.WebServiceFeature>, featureType : Class<F>) : F;
 	
 	
 }
@@ -106,15 +106,15 @@ extern class WebServiceFeatureList implements com.sun.xml.internal.ws.api.WSFeat
 */
 @:native('com$sun$xml$internal$ws$binding$WebServiceFeatureList$MergedFeatures') @:internal extern class WebServiceFeatureList_MergedFeatures implements java.util.Iterator<javax.xml.ws.WebServiceFeature>
 {
-	@:overload public function new(parent : com.sun.xml.internal.ws.api.WSFeatureList) : Void;
+	@:overload @:public public function new(parent : com.sun.xml.internal.ws.api.WSFeatureList) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : javax.xml.ws.WebServiceFeature;
+	@:overload @:public public function next() : javax.xml.ws.WebServiceFeature;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
-	@:overload public function toArray() : java.NativeArray<javax.xml.ws.WebServiceFeature>;
+	@:overload @:public public function toArray() : java.NativeArray<javax.xml.ws.WebServiceFeature>;
 	
 	
 }

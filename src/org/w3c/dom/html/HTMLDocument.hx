@@ -44,27 +44,27 @@ extern interface HTMLDocument extends org.w3c.dom.Document
 	*  The title of a document as specified by the <code>TITLE</code> element
 	* in the head of the document.
 	*/
-	@:overload public function getTitle() : String;
+	@:overload @:public public function getTitle() : String;
 	
-	@:overload public function setTitle(title : String) : Void;
+	@:overload @:public public function setTitle(title : String) : Void;
 	
 	/**
 	*  Returns the URI  of the page that linked to this page. The value is an
 	* empty string if the user navigated to the page directly (not through a
 	* link, but, for example, via a bookmark).
 	*/
-	@:overload public function getReferrer() : String;
+	@:overload @:public public function getReferrer() : String;
 	
 	/**
 	*  The domain name of the server that served the document, or
 	* <code>null</code> if the server cannot be identified by a domain name.
 	*/
-	@:overload public function getDomain() : String;
+	@:overload @:public public function getDomain() : String;
 	
 	/**
 	*  The complete URI  of the document.
 	*/
-	@:overload public function getURL() : String;
+	@:overload @:public public function getURL() : String;
 	
 	/**
 	*  The element that contains the content for the document. In documents
@@ -72,34 +72,34 @@ extern interface HTMLDocument extends org.w3c.dom.Document
 	* element. In frameset documents, this returns the outermost
 	* <code>FRAMESET</code> element.
 	*/
-	@:overload public function getBody() : org.w3c.dom.html.HTMLElement;
+	@:overload @:public public function getBody() : org.w3c.dom.html.HTMLElement;
 	
-	@:overload public function setBody(body : org.w3c.dom.html.HTMLElement) : Void;
+	@:overload @:public public function setBody(body : org.w3c.dom.html.HTMLElement) : Void;
 	
 	/**
 	*  A collection of all the <code>IMG</code> elements in a document. The
 	* behavior is limited to <code>IMG</code> elements for backwards
 	* compatibility.
 	*/
-	@:overload public function getImages() : org.w3c.dom.html.HTMLCollection;
+	@:overload @:public public function getImages() : org.w3c.dom.html.HTMLCollection;
 	
 	/**
 	*  A collection of all the <code>OBJECT</code> elements that include
 	* applets and <code>APPLET</code> ( deprecated ) elements in a document.
 	*/
-	@:overload public function getApplets() : org.w3c.dom.html.HTMLCollection;
+	@:overload @:public public function getApplets() : org.w3c.dom.html.HTMLCollection;
 	
 	/**
 	*  A collection of all <code>AREA</code> elements and anchor (
 	* <code>A</code> ) elements in a document with a value for the
 	* <code>href</code> attribute.
 	*/
-	@:overload public function getLinks() : org.w3c.dom.html.HTMLCollection;
+	@:overload @:public public function getLinks() : org.w3c.dom.html.HTMLCollection;
 	
 	/**
 	*  A collection of all the forms of a document.
 	*/
-	@:overload public function getForms() : org.w3c.dom.html.HTMLCollection;
+	@:overload @:public public function getForms() : org.w3c.dom.html.HTMLCollection;
 	
 	/**
 	*  A collection of all the anchor (<code>A</code> ) elements in a document
@@ -108,7 +108,7 @@ extern interface HTMLDocument extends org.w3c.dom.Document
 	* those anchors created with the <code>name</code>  attribute, not those
 	* created with the <code>id</code> attribute.
 	*/
-	@:overload public function getAnchors() : org.w3c.dom.html.HTMLCollection;
+	@:overload @:public public function getAnchors() : org.w3c.dom.html.HTMLCollection;
 	
 	/**
 	*  The cookies associated with this document. If there are none, the
@@ -117,9 +117,9 @@ extern interface HTMLDocument extends org.w3c.dom.Document
 	* associated with the page. For example,
 	* <code>name=value;expires=date</code> .
 	*/
-	@:overload public function getCookie() : String;
+	@:overload @:public public function getCookie() : String;
 	
-	@:overload public function setCookie(cookie : String) : Void;
+	@:overload @:public public function setCookie(cookie : String) : Void;
 	
 	/**
 	*  Note. This method and the ones following  allow a user to add to or
@@ -131,13 +131,13 @@ extern interface HTMLDocument extends org.w3c.dom.Document
 	* <br> Open a document stream for writing. If a document exists in the
 	* target, this method clears it.
 	*/
-	@:overload public function open() : Void;
+	@:overload @:public public function open() : Void;
 	
 	/**
 	*  Closes a document stream opened by <code>open()</code> and forces
 	* rendering.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	*  Write a string of text to a document stream opened by
@@ -146,7 +146,7 @@ extern interface HTMLDocument extends org.w3c.dom.Document
 	* @param text  The string to be parsed into some structure in the
 	*   document structure model.
 	*/
-	@:overload public function write(text : String) : Void;
+	@:overload @:public public function write(text : String) : Void;
 	
 	/**
 	*  Write a string of text followed by a newline character to a document
@@ -155,7 +155,7 @@ extern interface HTMLDocument extends org.w3c.dom.Document
 	* @param text  The string to be parsed into some structure in the
 	*   document structure model.
 	*/
-	@:overload public function writeln(text : String) : Void;
+	@:overload @:public public function writeln(text : String) : Void;
 	
 	/**
 	*  Returns the (possibly empty) collection of elements whose
@@ -164,7 +164,7 @@ extern interface HTMLDocument extends org.w3c.dom.Document
 	*   element.
 	* @return  The matching elements.
 	*/
-	@:overload public function getElementsByName(elementName : String) : org.w3c.dom.NodeList;
+	@:overload @:public public function getElementsByName(elementName : String) : org.w3c.dom.NodeList;
 	
 	
 }

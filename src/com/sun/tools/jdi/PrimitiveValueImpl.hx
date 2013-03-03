@@ -25,21 +25,21 @@ package com.sun.tools.jdi;
 */
 extern class PrimitiveValueImpl extends com.sun.tools.jdi.ValueImpl implements com.sun.jdi.PrimitiveValue
 {
-	@:overload @:abstract public function booleanValue() : Bool;
+	@:overload @:abstract @:public public function booleanValue() : Bool;
 	
-	@:overload @:abstract public function byteValue() : java.StdTypes.Int8;
+	@:overload @:abstract @:public public function byteValue() : java.StdTypes.Int8;
 	
-	@:overload @:abstract public function charValue() : java.StdTypes.Char16;
+	@:overload @:abstract @:public public function charValue() : java.StdTypes.Char16;
 	
-	@:overload @:abstract public function shortValue() : java.StdTypes.Int16;
+	@:overload @:abstract @:public public function shortValue() : java.StdTypes.Int16;
 	
-	@:overload @:abstract public function intValue() : Int;
+	@:overload @:abstract @:public public function intValue() : Int;
 	
-	@:overload @:abstract public function longValue() : haxe.Int64;
+	@:overload @:abstract @:public public function longValue() : haxe.Int64;
 	
-	@:overload @:abstract public function floatValue() : Single;
+	@:overload @:abstract @:public public function floatValue() : Single;
 	
-	@:overload @:abstract public function doubleValue() : Float;
+	@:overload @:abstract @:public public function doubleValue() : Float;
 	
 	/**
 	* Returns the run-time type of this value.
@@ -48,7 +48,7 @@ extern class PrimitiveValueImpl extends com.sun.tools.jdi.ValueImpl implements c
 	* @return a {@link Type} which mirrors the value's type in the
 	* target VM.
 	*/
-	@:overload override public function type() : com.sun.jdi.Type;
+	@:overload @:public @:public override public function type() : com.sun.jdi.Type;
 	
 	/**
 	* Gets the VirtualMachine to which this
@@ -57,7 +57,7 @@ extern class PrimitiveValueImpl extends com.sun.tools.jdi.ValueImpl implements c
 	*
 	* @return the {@link VirtualMachine} for which this mirror is a proxy.
 	*/
-	@:overload @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public @:public @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	
 }

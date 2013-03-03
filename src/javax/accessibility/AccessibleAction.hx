@@ -53,7 +53,7 @@ extern interface AccessibleAction
 	*
 	* @return the zero-based number of Actions in this object
 	*/
-	@:overload public function getAccessibleActionCount() : Int;
+	@:overload @:public public function getAccessibleActionCount() : Int;
 	
 	/**
 	* Returns a description of the specified action of the object.
@@ -62,7 +62,7 @@ extern interface AccessibleAction
 	* @return a String description of the action
 	* @see #getAccessibleActionCount
 	*/
-	@:overload public function getAccessibleActionDescription(i : Int) : String;
+	@:overload @:public public function getAccessibleActionDescription(i : Int) : String;
 	
 	/**
 	* Performs the specified Action on the object
@@ -71,7 +71,7 @@ extern interface AccessibleAction
 	* @return true if the action was performed; otherwise false.
 	* @see #getAccessibleActionCount
 	*/
-	@:overload public function doAccessibleAction(i : Int) : Bool;
+	@:overload @:public public function doAccessibleAction(i : Int) : Bool;
 	
 	
 }

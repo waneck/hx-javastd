@@ -43,7 +43,7 @@ extern interface URIResolver
 	* @throws TransformerException if an error occurs when trying to
 	* resolve the URI.
 	*/
-	@:overload public function resolve(href : String, base : String) : javax.xml.transform.Source;
+	@:overload @:public public function resolve(href : String, base : String) : javax.xml.transform.Source;
 	
 	
 }

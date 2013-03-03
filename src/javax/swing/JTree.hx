@@ -130,30 +130,30 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	/**
 	* The model that defines the tree displayed by this object.
 	*/
-	@:transient private var treeModel : javax.swing.tree.TreeModel;
+	@:transient @:protected private var treeModel : javax.swing.tree.TreeModel;
 	
 	/**
 	* Models the set of selected nodes in this tree.
 	*/
-	@:transient private var selectionModel : javax.swing.tree.TreeSelectionModel;
+	@:transient @:protected private var selectionModel : javax.swing.tree.TreeSelectionModel;
 	
 	/**
 	* True if the root node is displayed, false if its children are
 	* the highest visible nodes.
 	*/
-	private var rootVisible : Bool;
+	@:protected private var rootVisible : Bool;
 	
 	/**
 	* The cell used to draw nodes. If <code>null</code>, the UI uses a default
 	* <code>cellRenderer</code>.
 	*/
-	@:transient private var cellRenderer : javax.swing.tree.TreeCellRenderer;
+	@:transient @:protected private var cellRenderer : javax.swing.tree.TreeCellRenderer;
 	
 	/**
 	* Height to use for each display row. If this is <= 0 the renderer
 	* determines the height for each row.
 	*/
-	private var rowHeight : Int;
+	@:protected private var rowHeight : Int;
 	
 	/**
 	* True if handles are displayed at the topmost level of the tree.
@@ -177,24 +177,24 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @see #rootVisible
 	*/
-	private var showsRootHandles : Bool;
+	@:protected private var showsRootHandles : Bool;
 	
 	/**
 	* Creates a new event and passed it off the
 	* <code>selectionListeners</code>.
 	*/
-	@:transient private var selectionRedirector : javax.swing.JTree.JTree_TreeSelectionRedirector;
+	@:protected @:transient private var selectionRedirector : javax.swing.JTree.JTree_TreeSelectionRedirector;
 	
 	/**
 	* Editor for the entries.  Default is <code>null</code>
 	* (tree is not editable).
 	*/
-	@:transient private var cellEditor : javax.swing.tree.TreeCellEditor;
+	@:transient @:protected private var cellEditor : javax.swing.tree.TreeCellEditor;
 	
 	/**
 	* Is the tree editable? Default is false.
 	*/
-	private var editable : Bool;
+	@:protected private var editable : Bool;
 	
 	/**
 	* Is this tree a large model? This is a code-optimization setting.
@@ -206,14 +206,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* This value is only a suggestion to the UI. Not all UIs will
 	* take advantage of it. Default value is false.
 	*/
-	private var largeModel : Bool;
+	@:protected private var largeModel : Bool;
 	
 	/**
 	* Number of rows to make visible at one time. This value is used for
 	* the <code>Scrollable</code> interface. It determines the preferred
 	* size of the display area.
 	*/
-	private var visibleRowCount : Int;
+	@:protected private var visibleRowCount : Int;
 	
 	/**
 	* If true, when editing is to be stopped by way of selection changing,
@@ -222,74 +222,74 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* <code>cancelCellEditing</code> is invoked, and changes
 	* are discarded. Default is false.
 	*/
-	private var invokesStopCellEditing : Bool;
+	@:protected private var invokesStopCellEditing : Bool;
 	
 	/**
 	* If true, when a node is expanded, as many of the descendants are
 	* scrolled to be visible.
 	*/
-	private var scrollsOnExpand : Bool;
+	@:protected private var scrollsOnExpand : Bool;
 	
 	/**
 	* Number of mouse clicks before a node is expanded.
 	*/
-	private var toggleClickCount : Int;
+	@:protected private var toggleClickCount : Int;
 	
 	/**
 	* Updates the <code>expandedState</code>.
 	*/
-	@:transient private var treeModelListener : javax.swing.event.TreeModelListener;
+	@:transient @:protected private var treeModelListener : javax.swing.event.TreeModelListener;
 	
 	/** Bound property name for <code>cellRenderer</code>. */
-	public static var CELL_RENDERER_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var CELL_RENDERER_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>treeModel</code>. */
-	public static var TREE_MODEL_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var TREE_MODEL_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>rootVisible</code>. */
-	public static var ROOT_VISIBLE_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var ROOT_VISIBLE_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>showsRootHandles</code>. */
-	public static var SHOWS_ROOT_HANDLES_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var SHOWS_ROOT_HANDLES_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>rowHeight</code>. */
-	public static var ROW_HEIGHT_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var ROW_HEIGHT_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>cellEditor</code>. */
-	public static var CELL_EDITOR_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var CELL_EDITOR_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>editable</code>. */
-	public static var EDITABLE_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var EDITABLE_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>largeModel</code>. */
-	public static var LARGE_MODEL_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var LARGE_MODEL_PROPERTY(default, null) : String;
 	
 	/** Bound property name for selectionModel. */
-	public static var SELECTION_MODEL_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var SELECTION_MODEL_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>visibleRowCount</code>. */
-	public static var VISIBLE_ROW_COUNT_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var VISIBLE_ROW_COUNT_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>messagesStopCellEditing</code>. */
-	public static var INVOKES_STOP_CELL_EDITING_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var INVOKES_STOP_CELL_EDITING_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>scrollsOnExpand</code>. */
-	public static var SCROLLS_ON_EXPAND_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var SCROLLS_ON_EXPAND_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>toggleClickCount</code>. */
-	public static var TOGGLE_CLICK_COUNT_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var TOGGLE_CLICK_COUNT_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>leadSelectionPath</code>.
 	* @since 1.3 */
-	@:require(java3) public static var LEAD_SELECTION_PATH_PROPERTY(default, null) : String;
+	@:require(java3) @:public @:final @:static public static var LEAD_SELECTION_PATH_PROPERTY(default, null) : String;
 	
 	/** Bound property name for anchor selection path.
 	* @since 1.3 */
-	@:require(java3) public static var ANCHOR_SELECTION_PATH_PROPERTY(default, null) : String;
+	@:require(java3) @:public @:final @:static public static var ANCHOR_SELECTION_PATH_PROPERTY(default, null) : String;
 	
 	/** Bound property name for expands selected paths property
 	* @since 1.3 */
-	@:require(java3) public static var EXPANDS_SELECTED_PATHS_PROPERTY(default, null) : String;
+	@:require(java3) @:public @:final @:static public static var EXPANDS_SELECTED_PATHS_PROPERTY(default, null) : String;
 	
 	/**
 	* Creates and returns a sample <code>TreeModel</code>.
@@ -297,7 +297,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return the default <code>TreeModel</code>
 	*/
-	@:overload private static function getDefaultTreeModel() : javax.swing.tree.TreeModel;
+	@:overload @:protected @:static private static function getDefaultTreeModel() : javax.swing.tree.TreeModel;
 	
 	/**
 	* Returns a <code>TreeModel</code> wrapping the specified object.
@@ -313,7 +313,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*          the <code>TreeModel</code>
 	* @return a <code>TreeModel</code> wrapping the specified object
 	*/
-	@:overload private static function createTreeModel(value : Dynamic) : javax.swing.tree.TreeModel;
+	@:overload @:protected @:static private static function createTreeModel(value : Dynamic) : javax.swing.tree.TreeModel;
 	
 	/**
 	* Returns a <code>JTree</code> with a sample model.
@@ -322,7 +322,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @see DefaultTreeModel#asksAllowsChildren
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns a <code>JTree</code> with each element of the
@@ -334,7 +334,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param value  an array of <code>Object</code>s
 	* @see DefaultTreeModel#asksAllowsChildren
 	*/
-	@:overload public function new(value : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(value : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Returns a <code>JTree</code> with each element of the specified
@@ -345,7 +345,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param value  a <code>Vector</code>
 	* @see DefaultTreeModel#asksAllowsChildren
 	*/
-	@:overload public function new(value : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function new(value : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* Returns a <code>JTree</code> created from a <code>Hashtable</code>
@@ -357,7 +357,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param value  a <code>Hashtable</code>
 	* @see DefaultTreeModel#asksAllowsChildren
 	*/
-	@:overload public function new(value : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(value : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Returns a <code>JTree</code> with the specified
@@ -368,7 +368,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param root  a <code>TreeNode</code> object
 	* @see DefaultTreeModel#asksAllowsChildren
 	*/
-	@:overload public function new(root : javax.swing.tree.TreeNode) : Void;
+	@:overload @:public public function new(root : javax.swing.tree.TreeNode) : Void;
 	
 	/**
 	* Returns a <code>JTree</code> with the specified <code>TreeNode</code>
@@ -382,7 +382,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*              children are leaf nodes
 	* @see DefaultTreeModel#asksAllowsChildren
 	*/
-	@:overload public function new(root : javax.swing.tree.TreeNode, asksAllowsChildren : Bool) : Void;
+	@:overload @:public public function new(root : javax.swing.tree.TreeNode, asksAllowsChildren : Bool) : Void;
 	
 	/**
 	* Returns an instance of <code>JTree</code> which displays the root node
@@ -390,14 +390,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param newModel  the <code>TreeModel</code> to use as the data model
 	*/
-	@:overload public function new(newModel : javax.swing.tree.TreeModel) : Void;
+	@:overload @:public public function new(newModel : javax.swing.tree.TreeModel) : Void;
 	
 	/**
 	* Returns the L&F object that renders this component.
 	*
 	* @return the <code>TreeUI</code> object that renders this component
 	*/
-	@:overload public function getUI() : javax.swing.plaf.TreeUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.TreeUI;
 	
 	/**
 	* Sets the L&F object that renders this component.
@@ -412,7 +412,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.TreeUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.TreeUI) : Void;
 	
 	/**
 	* Notification from the <code>UIManager</code> that the L&F has changed.
@@ -421,7 +421,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -430,7 +430,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Returns the current <code>TreeCellRenderer</code>
@@ -438,7 +438,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return the <code>TreeCellRenderer</code> that is rendering each cell
 	*/
-	@:overload public function getCellRenderer() : javax.swing.tree.TreeCellRenderer;
+	@:overload @:public public function getCellRenderer() : javax.swing.tree.TreeCellRenderer;
 	
 	/**
 	* Sets the <code>TreeCellRenderer</code> that will be used to
@@ -452,7 +452,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*  description: The TreeCellRenderer that will be used to draw
 	*               each cell.
 	*/
-	@:overload public function setCellRenderer(x : javax.swing.tree.TreeCellRenderer) : Void;
+	@:overload @:public public function setCellRenderer(x : javax.swing.tree.TreeCellRenderer) : Void;
 	
 	/**
 	* Determines whether the tree is editable. Fires a property
@@ -466,14 +466,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*        bound: true
 	*  description: Whether the tree is editable.
 	*/
-	@:overload public function setEditable(flag : Bool) : Void;
+	@:overload @:public public function setEditable(flag : Bool) : Void;
 	
 	/**
 	* Returns true if the tree is editable.
 	*
 	* @return true if the tree is editable
 	*/
-	@:overload public function isEditable() : Bool;
+	@:overload @:public public function isEditable() : Bool;
 	
 	/**
 	* Sets the cell editor.  A <code>null</code> value implies that the
@@ -489,7 +489,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*  description: The cell editor. A null value implies the tree
 	*               cannot be edited.
 	*/
-	@:overload public function setCellEditor(cellEditor : javax.swing.tree.TreeCellEditor) : Void;
+	@:overload @:public public function setCellEditor(cellEditor : javax.swing.tree.TreeCellEditor) : Void;
 	
 	/**
 	* Returns the editor used to edit entries in the tree.
@@ -497,14 +497,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return the <code>TreeCellEditor</code> in use,
 	*          or <code>null</code> if the tree cannot be edited
 	*/
-	@:overload public function getCellEditor() : javax.swing.tree.TreeCellEditor;
+	@:overload @:public public function getCellEditor() : javax.swing.tree.TreeCellEditor;
 	
 	/**
 	* Returns the <code>TreeModel</code> that is providing the data.
 	*
 	* @return the <code>TreeModel</code> that is providing the data
 	*/
-	@:overload public function getModel() : javax.swing.tree.TreeModel;
+	@:overload @:public public function getModel() : javax.swing.tree.TreeModel;
 	
 	/**
 	* Sets the <code>TreeModel</code> that will provide the data.
@@ -516,7 +516,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*        bound: true
 	*  description: The TreeModel that will provide the data.
 	*/
-	@:overload public function setModel(newModel : javax.swing.tree.TreeModel) : Void;
+	@:overload @:public public function setModel(newModel : javax.swing.tree.TreeModel) : Void;
 	
 	/**
 	* Returns true if the root node of the tree is displayed.
@@ -524,7 +524,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return true if the root node of the tree is displayed
 	* @see #rootVisible
 	*/
-	@:overload public function isRootVisible() : Bool;
+	@:overload @:public public function isRootVisible() : Bool;
 	
 	/**
 	* Determines whether or not the root node from
@@ -539,7 +539,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*  description: Whether or not the root node
 	*               from the TreeModel is visible.
 	*/
-	@:overload public function setRootVisible(rootVisible : Bool) : Void;
+	@:overload @:public public function setRootVisible(rootVisible : Bool) : Void;
 	
 	/**
 	* Sets the value of the <code>showsRootHandles</code> property,
@@ -560,7 +560,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*  description: Whether the node handles are to be
 	*               displayed.
 	*/
-	@:overload public function setShowsRootHandles(newValue : Bool) : Void;
+	@:overload @:public public function setShowsRootHandles(newValue : Bool) : Void;
 	
 	/**
 	* Returns the value of the <code>showsRootHandles</code> property.
@@ -568,7 +568,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return the value of the <code>showsRootHandles</code> property
 	* @see #showsRootHandles
 	*/
-	@:overload public function getShowsRootHandles() : Bool;
+	@:overload @:public public function getShowsRootHandles() : Bool;
 	
 	/**
 	* Sets the height of each cell, in pixels.  If the specified value
@@ -582,7 +582,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*        bound: true
 	*  description: The height of each cell.
 	*/
-	@:overload public function setRowHeight(rowHeight : Int) : Void;
+	@:overload @:public public function setRowHeight(rowHeight : Int) : Void;
 	
 	/**
 	* Returns the height of each row.  If the returned value is less than
@@ -590,14 +590,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* renderer.
 	*
 	*/
-	@:overload public function getRowHeight() : Int;
+	@:overload @:public public function getRowHeight() : Int;
 	
 	/**
 	* Returns true if the height of each display row is a fixed size.
 	*
 	* @return true if the height of each row is a fixed size
 	*/
-	@:overload public function isFixedRowHeight() : Bool;
+	@:overload @:public public function isFixedRowHeight() : Bool;
 	
 	/**
 	* Specifies whether the UI should use a large model.
@@ -613,7 +613,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*  description: Whether the UI should use a
 	*               large model.
 	*/
-	@:overload public function setLargeModel(newValue : Bool) : Void;
+	@:overload @:public public function setLargeModel(newValue : Bool) : Void;
 	
 	/**
 	* Returns true if the tree is configured for a large model.
@@ -621,7 +621,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return true if a large model is suggested
 	* @see #largeModel
 	*/
-	@:overload public function isLargeModel() : Bool;
+	@:overload @:public public function isLargeModel() : Bool;
 	
 	/**
 	* Determines what happens when editing is interrupted by selecting
@@ -640,7 +640,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*               selecting another node in the tree, a change in the
 	*               tree's data, or some other means.
 	*/
-	@:overload public function setInvokesStopCellEditing(newValue : Bool) : Void;
+	@:overload @:public public function setInvokesStopCellEditing(newValue : Bool) : Void;
 	
 	/**
 	* Returns the indicator that tells what happens when editing is
@@ -650,7 +650,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*         interrupted
 	* @see #setInvokesStopCellEditing
 	*/
-	@:overload public function getInvokesStopCellEditing() : Bool;
+	@:overload @:public public function getInvokesStopCellEditing() : Bool;
 	
 	/**
 	* Sets the <code>scrollsOnExpand</code> property,
@@ -673,14 +673,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*        bound: true
 	*  description: Indicates if a node descendant should be scrolled when expanded.
 	*/
-	@:overload public function setScrollsOnExpand(newValue : Bool) : Void;
+	@:overload @:public public function setScrollsOnExpand(newValue : Bool) : Void;
 	
 	/**
 	* Returns the value of the <code>scrollsOnExpand</code> property.
 	*
 	* @return the value of the <code>scrollsOnExpand</code> property
 	*/
-	@:overload public function getScrollsOnExpand() : Bool;
+	@:overload @:public public function getScrollsOnExpand() : Bool;
 	
 	/**
 	* Sets the number of mouse clicks before a node will expand or close.
@@ -693,7 +693,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*        bound: true
 	*  description: Number of clicks before a node will expand/collapse.
 	*/
-	@:require(java3) @:overload public function setToggleClickCount(clickCount : Int) : Void;
+	@:require(java3) @:overload @:public public function setToggleClickCount(clickCount : Int) : Void;
 	
 	/**
 	* Returns the number of mouse clicks needed to expand or close a node.
@@ -701,7 +701,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return number of mouse clicks before node is expanded
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getToggleClickCount() : Int;
+	@:require(java3) @:overload @:public public function getToggleClickCount() : Int;
 	
 	/**
 	* Configures the <code>expandsSelectedPaths</code> property. If
@@ -725,7 +725,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*  description: Indicates whether changes to the selection should make
 	*               the parent of the path visible.
 	*/
-	@:require(java3) @:overload public function setExpandsSelectedPaths(newValue : Bool) : Void;
+	@:require(java3) @:overload @:public public function setExpandsSelectedPaths(newValue : Bool) : Void;
 	
 	/**
 	* Returns the <code>expandsSelectedPaths</code> property.
@@ -734,7 +734,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @since 1.3
 	* @see #setExpandsSelectedPaths
 	*/
-	@:require(java3) @:overload public function getExpandsSelectedPaths() : Bool;
+	@:require(java3) @:overload @:public public function getExpandsSelectedPaths() : Bool;
 	
 	/**
 	* Turns on or off automatic drag handling. In order to enable automatic
@@ -769,7 +769,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*  description: determines whether automatic drag handling is enabled
 	*        bound: false
 	*/
-	@:require(java4) @:overload public function setDragEnabled(b : Bool) : Void;
+	@:require(java4) @:overload @:public public function setDragEnabled(b : Bool) : Void;
 	
 	/**
 	* Returns whether or not automatic drag handling is enabled.
@@ -778,7 +778,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @see #setDragEnabled
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getDragEnabled() : Bool;
+	@:require(java4) @:overload @:public public function getDragEnabled() : Bool;
 	
 	/**
 	* Sets the drop mode for this component. For backward compatibility,
@@ -808,7 +808,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @see TransferHandler
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function setDropMode(dropMode : javax.swing.DropMode) : Void;
+	@:require(java6) @:overload @:public @:final public function setDropMode(dropMode : javax.swing.DropMode) : Void;
 	
 	/**
 	* Returns the drop mode for this component.
@@ -817,7 +817,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @see #setDropMode
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getDropMode() : javax.swing.DropMode;
+	@:require(java6) @:overload @:public @:final public function getDropMode() : javax.swing.DropMode;
 	
 	/**
 	* Returns the location that this component should visually indicate
@@ -837,7 +837,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @see TransferHandler#canImport(TransferHandler.TransferSupport)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getDropLocation() : javax.swing.JTree.JTree_DropLocation;
+	@:require(java6) @:overload @:public @:final public function getDropLocation() : javax.swing.JTree.JTree_DropLocation;
 	
 	/**
 	* Returns <code>isEditable</code>. This is invoked from the UI before
@@ -848,7 +848,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return true if every parent node and the node itself is editable
 	* @see #isEditable
 	*/
-	@:overload public function isPathEditable(path : javax.swing.tree.TreePath) : Bool;
+	@:overload @:public public function isPathEditable(path : javax.swing.tree.TreePath) : Bool;
 	
 	/**
 	* Overrides <code>JComponent</code>'s <code>getToolTipText</code>
@@ -866,7 +866,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return a string containing the  tooltip or <code>null</code>
 	*          if <code>event</code> is null
 	*/
-	@:overload public function getToolTipText(event : java.awt.event.MouseEvent) : String;
+	@:overload @:public override public function getToolTipText(event : java.awt.event.MouseEvent) : String;
 	
 	/**
 	* Called by the renderers to convert the specified value to
@@ -883,7 +883,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param hasFocus true if the node has the focus
 	* @return the <code>String</code> representation of the node's value
 	*/
-	@:overload public function convertValueToText(value : Dynamic, selected : Bool, expanded : Bool, leaf : Bool, row : Int, hasFocus : Bool) : String;
+	@:overload @:public public function convertValueToText(value : Dynamic, selected : Bool, expanded : Bool, leaf : Bool, row : Int, hasFocus : Bool) : String;
 	
 	/**
 	* Returns the number of viewable nodes. A node is viewable if all of its
@@ -893,7 +893,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return the number of viewable nodes
 	*/
-	@:overload public function getRowCount() : Int;
+	@:overload @:public public function getRowCount() : Int;
 	
 	/**
 	* Selects the node identified by the specified path. If any
@@ -903,7 +903,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param path the <code>TreePath</code> specifying the node to select
 	*/
-	@:overload public function setSelectionPath(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function setSelectionPath(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Selects the nodes identified by the specified array of paths.
@@ -914,7 +914,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param paths an array of <code>TreePath</code> objects that specifies
 	*          the nodes to select
 	*/
-	@:overload public function setSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
+	@:overload @:public public function setSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
 	
 	/**
 	* Sets the path identifies as the lead. The lead may not be selected.
@@ -929,7 +929,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*        bound: true
 	*  description: Lead selection path
 	*/
-	@:require(java3) @:overload public function setLeadSelectionPath(newPath : javax.swing.tree.TreePath) : Void;
+	@:require(java3) @:overload @:public public function setLeadSelectionPath(newPath : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Sets the path identified as the anchor.
@@ -944,7 +944,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*        bound: true
 	*  description: Anchor selection path
 	*/
-	@:require(java3) @:overload public function setAnchorSelectionPath(newPath : javax.swing.tree.TreePath) : Void;
+	@:require(java3) @:overload @:public public function setAnchorSelectionPath(newPath : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Selects the node at the specified row in the display.
@@ -952,7 +952,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param row  the row to select, where 0 is the first row in
 	*             the display
 	*/
-	@:overload public function setSelectionRow(row : Int) : Void;
+	@:overload @:public public function setSelectionRow(row : Int) : Void;
 	
 	/**
 	* Selects the nodes corresponding to each of the specified rows
@@ -966,7 +966,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param rows  an array of ints specifying the rows to select,
 	*              where 0 indicates the first row in the display
 	*/
-	@:overload public function setSelectionRows(rows : java.NativeArray<Int>) : Void;
+	@:overload @:public public function setSelectionRows(rows : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Adds the node identified by the specified <code>TreePath</code>
@@ -980,7 +980,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param path the <code>TreePath</code> to add
 	*/
-	@:overload public function addSelectionPath(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function addSelectionPath(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Adds each path in the array of paths to the current selection. If
@@ -995,7 +995,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param paths an array of <code>TreePath</code> objects that specifies
 	*          the nodes to add
 	*/
-	@:overload public function addSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
+	@:overload @:public public function addSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
 	
 	/**
 	* Adds the path at the specified row to the current selection.
@@ -1003,7 +1003,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param row  an integer specifying the row of the node to add,
 	*             where 0 is the first row in the display
 	*/
-	@:overload public function addSelectionRow(row : Int) : Void;
+	@:overload @:public public function addSelectionRow(row : Int) : Void;
 	
 	/**
 	* Adds the paths at each of the specified rows to the current selection.
@@ -1011,7 +1011,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param rows  an array of ints specifying the rows to add,
 	*              where 0 indicates the first row in the display
 	*/
-	@:overload public function addSelectionRows(rows : java.NativeArray<Int>) : Void;
+	@:overload @:public public function addSelectionRows(rows : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Returns the last path component of the selected path. This is
@@ -1023,20 +1023,20 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*         <code>null</code> if nothing is selected
 	* @see TreePath#getLastPathComponent
 	*/
-	@:overload public function getLastSelectedPathComponent() : Dynamic;
+	@:overload @:public public function getLastSelectedPathComponent() : Dynamic;
 	
 	/**
 	* Returns the path identified as the lead.
 	* @return path identified as the lead
 	*/
-	@:overload public function getLeadSelectionPath() : javax.swing.tree.TreePath;
+	@:overload @:public public function getLeadSelectionPath() : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns the path identified as the anchor.
 	* @return path identified as the anchor
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAnchorSelectionPath() : javax.swing.tree.TreePath;
+	@:require(java3) @:overload @:public public function getAnchorSelectionPath() : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns the path to the first selected node.
@@ -1044,7 +1044,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return the <code>TreePath</code> for the first selected node,
 	*          or <code>null</code> if nothing is currently selected
 	*/
-	@:overload public function getSelectionPath() : javax.swing.tree.TreePath;
+	@:overload @:public public function getSelectionPath() : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns the paths of all selected values.
@@ -1052,7 +1052,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return an array of <code>TreePath</code> objects indicating the selected
 	*         nodes, or <code>null</code> if nothing is currently selected
 	*/
-	@:overload public function getSelectionPaths() : java.NativeArray<javax.swing.tree.TreePath>;
+	@:overload @:public public function getSelectionPaths() : java.NativeArray<javax.swing.tree.TreePath>;
 	
 	/**
 	* Returns all of the currently selected rows. This method is simply
@@ -1064,14 +1064,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return an array of integers that identifies all currently selected rows
 	*         where 0 is the first row in the display
 	*/
-	@:overload public function getSelectionRows() : java.NativeArray<Int>;
+	@:overload @:public public function getSelectionRows() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the number of nodes selected.
 	*
 	* @return the number of nodes selected
 	*/
-	@:overload public function getSelectionCount() : Int;
+	@:overload @:public public function getSelectionCount() : Int;
 	
 	/**
 	* Returns the smallest selected row. If the selection is empty, or
@@ -1079,7 +1079,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return the smallest selected row
 	*/
-	@:overload public function getMinSelectionRow() : Int;
+	@:overload @:public public function getMinSelectionRow() : Int;
 	
 	/**
 	* Returns the largest selected row. If the selection is empty, or
@@ -1087,7 +1087,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return the largest selected row
 	*/
-	@:overload public function getMaxSelectionRow() : Int;
+	@:overload @:public public function getMaxSelectionRow() : Int;
 	
 	/**
 	* Returns the row index corresponding to the lead path.
@@ -1096,7 +1096,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*          where 0 is the first row in the display; or -1
 	*          if <code>leadPath</code> is <code>null</code>
 	*/
-	@:overload public function getLeadSelectionRow() : Int;
+	@:overload @:public public function getLeadSelectionRow() : Int;
 	
 	/**
 	* Returns true if the item identified by the path is currently selected.
@@ -1104,7 +1104,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param path a <code>TreePath</code> identifying a node
 	* @return true if the node is selected
 	*/
-	@:overload public function isPathSelected(path : javax.swing.tree.TreePath) : Bool;
+	@:overload @:public public function isPathSelected(path : javax.swing.tree.TreePath) : Bool;
 	
 	/**
 	* Returns true if the node identified by row is selected.
@@ -1113,7 +1113,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*             row in the display
 	* @return true if the node is selected
 	*/
-	@:overload public function isRowSelected(row : Int) : Bool;
+	@:overload @:public public function isRowSelected(row : Int) : Bool;
 	
 	/**
 	* Returns an <code>Enumeration</code> of the descendants of the
@@ -1130,14 +1130,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*          <code>parent</code>, or <code>null</code> if
 	*          <code>parent</code> is not currently expanded
 	*/
-	@:overload public function getExpandedDescendants(parent : javax.swing.tree.TreePath) : java.util.Enumeration<javax.swing.tree.TreePath>;
+	@:overload @:public public function getExpandedDescendants(parent : javax.swing.tree.TreePath) : java.util.Enumeration<javax.swing.tree.TreePath>;
 	
 	/**
 	* Returns true if the node identified by the path has ever been
 	* expanded.
 	* @return true if the <code>path</code> has ever been expanded
 	*/
-	@:overload public function hasBeenExpanded(path : javax.swing.tree.TreePath) : Bool;
+	@:overload @:public public function hasBeenExpanded(path : javax.swing.tree.TreePath) : Bool;
 	
 	/**
 	* Returns true if the node identified by the path is currently expanded,
@@ -1146,7 +1146,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return false if any of the nodes in the node's path are collapsed,
 	*               true if all nodes in the path are expanded
 	*/
-	@:overload public function isExpanded(path : javax.swing.tree.TreePath) : Bool;
+	@:overload @:public public function isExpanded(path : javax.swing.tree.TreePath) : Bool;
 	
 	/**
 	* Returns true if the node at the specified display row is currently
@@ -1156,7 +1156,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*             display
 	* @return true if the node is currently expanded, otherwise false
 	*/
-	@:overload public function isExpanded(row : Int) : Bool;
+	@:overload @:public public function isExpanded(row : Int) : Bool;
 	
 	/**
 	* Returns true if the value identified by path is currently collapsed,
@@ -1167,7 +1167,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return true if any of the nodes in the node's path are collapsed,
 	*               false if all nodes in the path are expanded
 	*/
-	@:overload public function isCollapsed(path : javax.swing.tree.TreePath) : Bool;
+	@:overload @:public public function isCollapsed(path : javax.swing.tree.TreePath) : Bool;
 	
 	/**
 	* Returns true if the node at the specified display row is collapsed.
@@ -1176,14 +1176,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*             display
 	* @return true if the node is currently collapsed, otherwise false
 	*/
-	@:overload public function isCollapsed(row : Int) : Bool;
+	@:overload @:public public function isCollapsed(row : Int) : Bool;
 	
 	/**
 	* Ensures that the node identified by path is currently viewable.
 	*
 	* @param path  the <code>TreePath</code> to make visible
 	*/
-	@:overload public function makeVisible(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function makeVisible(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Returns true if the value identified by path is currently viewable,
@@ -1192,7 +1192,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return true if the node is viewable, otherwise false
 	*/
-	@:overload public function isVisible(path : javax.swing.tree.TreePath) : Bool;
+	@:overload @:public public function isVisible(path : javax.swing.tree.TreePath) : Bool;
 	
 	/**
 	* Returns the <code>Rectangle</code> that the specified node will be drawn
@@ -1207,7 +1207,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return the <code>Rectangle</code> the node is drawn in,
 	*          or <code>null</code>
 	*/
-	@:overload public function getPathBounds(path : javax.swing.tree.TreePath) : java.awt.Rectangle;
+	@:overload @:public public function getPathBounds(path : javax.swing.tree.TreePath) : java.awt.Rectangle;
 	
 	/**
 	* Returns the <code>Rectangle</code> that the node at the specified row is
@@ -1217,7 +1217,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*             display
 	* @return the <code>Rectangle</code> the node is drawn in
 	*/
-	@:overload public function getRowBounds(row : Int) : java.awt.Rectangle;
+	@:overload @:public public function getRowBounds(row : Int) : java.awt.Rectangle;
 	
 	/**
 	* Makes sure all the path components in path are expanded (except
@@ -1228,7 +1228,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param path  the <code>TreePath</code> identifying the node to
 	*          bring into view
 	*/
-	@:overload public function scrollPathToVisible(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function scrollPathToVisible(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Scrolls the item identified by row until it is displayed. The minimum
@@ -1239,7 +1239,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param row  an integer specifying the row to scroll, where 0 is the
 	*             first row in the display
 	*/
-	@:overload public function scrollRowToVisible(row : Int) : Void;
+	@:overload @:public public function scrollRowToVisible(row : Int) : Void;
 	
 	/**
 	* Returns the path for the specified row.  If <code>row</code> is
@@ -1251,7 +1251,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*          <code>null</code> if <code>row < 0</code>
 	*          or <code>row >= getRowCount()</code>
 	*/
-	@:overload public function getPathForRow(row : Int) : javax.swing.tree.TreePath;
+	@:overload @:public public function getPathForRow(row : Int) : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns the row that displays the node identified by the specified
@@ -1262,7 +1262,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*         row in the display, or -1 if any of the elements in path
 	*         are hidden under a collapsed parent.
 	*/
-	@:overload public function getRowForPath(path : javax.swing.tree.TreePath) : Int;
+	@:overload @:public public function getRowForPath(path : javax.swing.tree.TreePath) : Int;
 	
 	/**
 	* Ensures that the node identified by the specified path is
@@ -1271,7 +1271,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param path  the <code>TreePath</code> identifying a node
 	*/
-	@:overload public function expandPath(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function expandPath(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Ensures that the node in the specified row is expanded and
@@ -1283,7 +1283,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param row  an integer specifying a display row, where 0 is the
 	*             first row in the display
 	*/
-	@:overload public function expandRow(row : Int) : Void;
+	@:overload @:public public function expandRow(row : Int) : Void;
 	
 	/**
 	* Ensures that the node identified by the specified path is
@@ -1291,7 +1291,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param path  the <code>TreePath</code> identifying a node
 	*/
-	@:overload public function collapsePath(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function collapsePath(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Ensures that the node in the specified row is collapsed.
@@ -1302,7 +1302,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param row  an integer specifying a display row, where 0 is the
 	*             first row in the display
 	*/
-	@:overload public function collapseRow(row : Int) : Void;
+	@:overload @:public public function collapseRow(row : Int) : Void;
 	
 	/**
 	* Returns the path for the node at the specified location.
@@ -1313,7 +1313,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*          the top of the display area, minus any top margin
 	* @return  the <code>TreePath</code> for the node at that location
 	*/
-	@:overload public function getPathForLocation(x : Int, y : Int) : javax.swing.tree.TreePath;
+	@:overload @:public public function getPathForLocation(x : Int, y : Int) : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns the row for the specified location.
@@ -1326,7 +1326,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*         location is not within the bounds of a displayed cell
 	* @see #getClosestRowForLocation
 	*/
-	@:overload public function getRowForLocation(x : Int, y : Int) : Int;
+	@:overload @:public public function getRowForLocation(x : Int, y : Int) : Int;
 	
 	/**
 	* Returns the path to the node that is closest to x,y.  If
@@ -1345,7 +1345,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @see #getPathForLocation
 	* @see #getPathBounds
 	*/
-	@:overload public function getClosestPathForLocation(x : Int, y : Int) : javax.swing.tree.TreePath;
+	@:overload @:public public function getClosestPathForLocation(x : Int, y : Int) : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns the row to the node that is closest to x,y.  If no nodes
@@ -1364,7 +1364,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @see #getRowForLocation
 	* @see #getRowBounds
 	*/
-	@:overload public function getClosestRowForLocation(x : Int, y : Int) : Int;
+	@:overload @:public public function getClosestRowForLocation(x : Int, y : Int) : Int;
 	
 	/**
 	* Returns true if the tree is being edited. The item that is being
@@ -1373,7 +1373,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return true if the user is currently editing a node
 	* @see #getSelectionPath
 	*/
-	@:overload public function isEditing() : Bool;
+	@:overload @:public public function isEditing() : Bool;
 	
 	/**
 	* Ends the current editing session.
@@ -1390,13 +1390,13 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return true if editing was in progress and is now stopped,
 	*              false if editing was not in progress
 	*/
-	@:overload public function stopEditing() : Bool;
+	@:overload @:public public function stopEditing() : Bool;
 	
 	/**
 	* Cancels the current editing session. Has no effect if the
 	* tree isn't being edited.
 	*/
-	@:overload public function cancelEditing() : Void;
+	@:overload @:public public function cancelEditing() : Void;
 	
 	/**
 	* Selects the node identified by the specified path and initiates
@@ -1406,14 +1406,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param path  the <code>TreePath</code> identifying a node
 	*/
-	@:overload public function startEditingAtPath(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function startEditingAtPath(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Returns the path to the element that is currently being edited.
 	*
 	* @return  the <code>TreePath</code> for the node being edited
 	*/
-	@:overload public function getEditingPath() : javax.swing.tree.TreePath;
+	@:overload @:public public function getEditingPath() : javax.swing.tree.TreePath;
 	
 	/**
 	* Sets the tree's selection model. When a <code>null</code> value is
@@ -1429,7 +1429,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*        bound: true
 	*  description: The tree's selection model.
 	*/
-	@:overload public function setSelectionModel(selectionModel : javax.swing.tree.TreeSelectionModel) : Void;
+	@:overload @:public public function setSelectionModel(selectionModel : javax.swing.tree.TreeSelectionModel) : Void;
 	
 	/**
 	* Returns the model for selections. This should always return a
@@ -1440,7 +1440,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @see #setSelectionModel
 	*/
-	@:overload public function getSelectionModel() : javax.swing.tree.TreeSelectionModel;
+	@:overload @:public public function getSelectionModel() : javax.swing.tree.TreeSelectionModel;
 	
 	/**
 	* Returns the paths (inclusive) between the specified rows. If
@@ -1468,7 +1468,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param index1 the last index in the range
 	* @return the paths (inclusive) between the specified row indices
 	*/
-	@:overload private function getPathBetweenRows(index0 : Int, index1 : Int) : java.NativeArray<javax.swing.tree.TreePath>;
+	@:overload @:protected private function getPathBetweenRows(index0 : Int, index1 : Int) : java.NativeArray<javax.swing.tree.TreePath>;
 	
 	/**
 	* Selects the rows in the specified interval (inclusive). If
@@ -1490,7 +1490,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param index0 the first index in the range to select
 	* @param index1 the last index in the range to select
 	*/
-	@:overload public function setSelectionInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function setSelectionInterval(index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* Adds the specified rows (inclusive) to the selection. If the
@@ -1513,7 +1513,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param index0 the first index in the range to add to the selection
 	* @param index1 the last index in the range to add to the selection
 	*/
-	@:overload public function addSelectionInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function addSelectionInterval(index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* Removes the specified rows (inclusive) from the selection. If
@@ -1535,7 +1535,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param index0 the first row to remove from the selection
 	* @param index1 the last row to remove from the selection
 	*/
-	@:overload public function removeSelectionInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function removeSelectionInterval(index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* Removes the node identified by the specified path from the current
@@ -1543,7 +1543,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param path  the <code>TreePath</code> identifying a node
 	*/
-	@:overload public function removeSelectionPath(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function removeSelectionPath(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Removes the nodes identified by the specified paths from the
@@ -1552,7 +1552,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param paths an array of <code>TreePath</code> objects that
 	*              specifies the nodes to remove
 	*/
-	@:overload public function removeSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
+	@:overload @:public public function removeSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
 	
 	/**
 	* Removes the row at the index <code>row</code> from the current
@@ -1560,7 +1560,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param row  the row to remove
 	*/
-	@:overload public function removeSelectionRow(row : Int) : Void;
+	@:overload @:public public function removeSelectionRow(row : Int) : Void;
 	
 	/**
 	* Removes the rows that are selected at each of the specified
@@ -1569,19 +1569,19 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param rows  an array of ints specifying display rows, where 0 is
 	*             the first row in the display
 	*/
-	@:overload public function removeSelectionRows(rows : java.NativeArray<Int>) : Void;
+	@:overload @:public public function removeSelectionRows(rows : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Clears the selection.
 	*/
-	@:overload public function clearSelection() : Void;
+	@:overload @:public public function clearSelection() : Void;
 	
 	/**
 	* Returns true if the selection is currently empty.
 	*
 	* @return true if the selection is currently empty
 	*/
-	@:overload public function isSelectionEmpty() : Bool;
+	@:overload @:public public function isSelectionEmpty() : Bool;
 	
 	/**
 	* Adds a listener for <code>TreeExpansion</code> events.
@@ -1590,14 +1590,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*            a tree node is expanded or collapsed (a "negative
 	*            expansion")
 	*/
-	@:overload public function addTreeExpansionListener(tel : javax.swing.event.TreeExpansionListener) : Void;
+	@:overload @:public public function addTreeExpansionListener(tel : javax.swing.event.TreeExpansionListener) : Void;
 	
 	/**
 	* Removes a listener for <code>TreeExpansion</code> events.
 	*
 	* @param tel the <code>TreeExpansionListener</code> to remove
 	*/
-	@:overload public function removeTreeExpansionListener(tel : javax.swing.event.TreeExpansionListener) : Void;
+	@:overload @:public public function removeTreeExpansionListener(tel : javax.swing.event.TreeExpansionListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>TreeExpansionListener</code>s added
@@ -1607,7 +1607,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getTreeExpansionListeners() : java.NativeArray<javax.swing.event.TreeExpansionListener>;
+	@:require(java4) @:overload @:public public function getTreeExpansionListeners() : java.NativeArray<javax.swing.event.TreeExpansionListener>;
 	
 	/**
 	* Adds a listener for <code>TreeWillExpand</code> events.
@@ -1616,14 +1616,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*            when a tree node will be expanded or collapsed (a "negative
 	*            expansion")
 	*/
-	@:overload public function addTreeWillExpandListener(tel : javax.swing.event.TreeWillExpandListener) : Void;
+	@:overload @:public public function addTreeWillExpandListener(tel : javax.swing.event.TreeWillExpandListener) : Void;
 	
 	/**
 	* Removes a listener for <code>TreeWillExpand</code> events.
 	*
 	* @param tel the <code>TreeWillExpandListener</code> to remove
 	*/
-	@:overload public function removeTreeWillExpandListener(tel : javax.swing.event.TreeWillExpandListener) : Void;
+	@:overload @:public public function removeTreeWillExpandListener(tel : javax.swing.event.TreeWillExpandListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>TreeWillExpandListener</code>s added
@@ -1633,7 +1633,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getTreeWillExpandListeners() : java.NativeArray<javax.swing.event.TreeWillExpandListener>;
+	@:require(java4) @:overload @:public public function getTreeWillExpandListeners() : java.NativeArray<javax.swing.event.TreeWillExpandListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -1644,7 +1644,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*          expanded
 	* @see EventListenerList
 	*/
-	@:overload public function fireTreeExpanded(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function fireTreeExpanded(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -1655,7 +1655,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*          collapsed
 	* @see EventListenerList
 	*/
-	@:overload public function fireTreeCollapsed(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function fireTreeCollapsed(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -1666,7 +1666,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*          expanded
 	* @see EventListenerList
 	*/
-	@:overload public function fireTreeWillExpand(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function fireTreeWillExpand(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -1677,7 +1677,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*          expanded
 	* @see EventListenerList
 	*/
-	@:overload public function fireTreeWillCollapse(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public public function fireTreeWillCollapse(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Adds a listener for <code>TreeSelection</code> events.
@@ -1686,14 +1686,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*            when a node is selected or deselected (a "negative
 	*            selection")
 	*/
-	@:overload public function addTreeSelectionListener(tsl : javax.swing.event.TreeSelectionListener) : Void;
+	@:overload @:public public function addTreeSelectionListener(tsl : javax.swing.event.TreeSelectionListener) : Void;
 	
 	/**
 	* Removes a <code>TreeSelection</code> listener.
 	*
 	* @param tsl the <code>TreeSelectionListener</code> to remove
 	*/
-	@:overload public function removeTreeSelectionListener(tsl : javax.swing.event.TreeSelectionListener) : Void;
+	@:overload @:public public function removeTreeSelectionListener(tsl : javax.swing.event.TreeSelectionListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>TreeSelectionListener</code>s added
@@ -1703,7 +1703,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getTreeSelectionListeners() : java.NativeArray<javax.swing.event.TreeSelectionListener>;
+	@:require(java4) @:overload @:public public function getTreeSelectionListeners() : java.NativeArray<javax.swing.event.TreeSelectionListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -1715,7 +1715,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*          when a node is selected or deselected
 	* @see EventListenerList
 	*/
-	@:overload private function fireValueChanged(e : javax.swing.event.TreeSelectionEvent) : Void;
+	@:overload @:protected private function fireValueChanged(e : javax.swing.event.TreeSelectionEvent) : Void;
 	
 	/**
 	* Sent when the tree has changed enough that we need to resize
@@ -1724,7 +1724,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* nodes were inserted into the tree). You should never have to
 	* invoke this, the UI will invoke this as it needs to.
 	*/
-	@:overload public function treeDidChange() : Void;
+	@:overload @:public public function treeDidChange() : Void;
 	
 	/**
 	* Sets the number of rows that are to be displayed.
@@ -1739,14 +1739,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*        bound: true
 	*  description: The number of rows that are to be displayed.
 	*/
-	@:overload public function setVisibleRowCount(newCount : Int) : Void;
+	@:overload @:public public function setVisibleRowCount(newCount : Int) : Void;
 	
 	/**
 	* Returns the number of rows that are displayed in the display area.
 	*
 	* @return the number of rows displayed
 	*/
-	@:overload public function getVisibleRowCount() : Int;
+	@:overload @:public public function getVisibleRowCount() : Int;
 	
 	/**
 	* Returns the TreePath to the next tree element that
@@ -1764,7 +1764,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* or startingRow is out of bounds
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getNextMatch(prefix : String, startingRow : Int, bias : javax.swing.text.Position.Position_Bias) : javax.swing.tree.TreePath;
+	@:require(java4) @:overload @:public public function getNextMatch(prefix : String, startingRow : Int, bias : javax.swing.text.Position.Position_Bias) : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns the preferred display size of a <code>JTree</code>. The height is
@@ -1773,7 +1773,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return a <code>Dimension</code> object containing the preferred size
 	*/
-	@:overload public function getPreferredScrollableViewportSize() : java.awt.Dimension;
+	@:overload @:public public function getPreferredScrollableViewportSize() : java.awt.Dimension;
 	
 	/**
 	* Returns the amount to increment when scrolling. The amount is
@@ -1789,7 +1789,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return the "unit" increment for scrolling in the specified direction
 	* @see JScrollBar#setUnitIncrement(int)
 	*/
-	@:overload public function getScrollableUnitIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
+	@:overload @:public public function getScrollableUnitIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
 	
 	/**
 	* Returns the amount for a block increment, which is the height or
@@ -1803,7 +1803,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return the "block" increment for scrolling in the specified direction
 	* @see JScrollBar#setBlockIncrement(int)
 	*/
-	@:overload public function getScrollableBlockIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
+	@:overload @:public public function getScrollableBlockIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
 	
 	/**
 	* Returns false to indicate that the width of the viewport does not
@@ -1814,7 +1814,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return whether the tree should track the width of the viewport
 	* @see Scrollable#getScrollableTracksViewportWidth
 	*/
-	@:overload public function getScrollableTracksViewportWidth() : Bool;
+	@:overload @:public public function getScrollableTracksViewportWidth() : Bool;
 	
 	/**
 	* Returns false to indicate that the height of the viewport does not
@@ -1825,7 +1825,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return whether the tree should track the height of the viewport
 	* @see Scrollable#getScrollableTracksViewportHeight
 	*/
-	@:overload public function getScrollableTracksViewportHeight() : Bool;
+	@:overload @:public public function getScrollableTracksViewportHeight() : Bool;
 	
 	/**
 	* Sets the expanded state of this <code>JTree</code>.
@@ -1836,14 +1836,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* is marked collapsed.<p>
 	* This will fail if a <code>TreeWillExpandListener</code> vetos it.
 	*/
-	@:overload private function setExpandedState(path : javax.swing.tree.TreePath, state : Bool) : Void;
+	@:overload @:protected private function setExpandedState(path : javax.swing.tree.TreePath, state : Bool) : Void;
 	
 	/**
 	* Returns an <code>Enumeration</code> of <code>TreePaths</code>
 	* that have been expanded that
 	* are descendants of <code>parent</code>.
 	*/
-	@:overload private function getDescendantToggledPaths(parent : javax.swing.tree.TreePath) : java.util.Enumeration<javax.swing.tree.TreePath>;
+	@:overload @:protected private function getDescendantToggledPaths(parent : javax.swing.tree.TreePath) : java.util.Enumeration<javax.swing.tree.TreePath>;
 	
 	/**
 	* Removes any descendants of the <code>TreePaths</code> in
@@ -1856,13 +1856,13 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*         element that is not a {@code TreePath}; {@code null}
 	*         values are ignored
 	*/
-	@:overload private function removeDescendantToggledPaths(toRemove : java.util.Enumeration<javax.swing.tree.TreePath>) : Void;
+	@:overload @:protected private function removeDescendantToggledPaths(toRemove : java.util.Enumeration<javax.swing.tree.TreePath>) : Void;
 	
 	/**
 	* Clears the cache of toggled tree paths. This does NOT send out
 	* any <code>TreeExpansionListener</code> events.
 	*/
-	@:overload private function clearToggledPaths() : Void;
+	@:overload @:protected private function clearToggledPaths() : Void;
 	
 	/**
 	* Creates and returns an instance of <code>TreeModelHandler</code>.
@@ -1873,7 +1873,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* For more information on what expanded state means, see the
 	* <a href=#jtree_description>JTree description</a> above.
 	*/
-	@:overload private function createTreeModelListener() : javax.swing.event.TreeModelListener;
+	@:overload @:protected private function createTreeModelListener() : javax.swing.event.TreeModelListener;
 	
 	/**
 	* Removes any paths in the selection that are descendants of
@@ -1883,7 +1883,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return true if a descendant was selected
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function removeDescendantSelectedPaths(path : javax.swing.tree.TreePath, includePath : Bool) : Bool;
+	@:require(java3) @:overload @:protected private function removeDescendantSelectedPaths(path : javax.swing.tree.TreePath, includePath : Bool) : Bool;
 	
 	/**
 	* Returns a string representation of this <code>JTree</code>.
@@ -1895,7 +1895,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return  a string representation of this <code>JTree</code>.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JTree.
@@ -1906,7 +1906,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return an AccessibleJTree that serves as the
 	*         AccessibleContext of this JTree
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -1943,7 +1943,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return the child index
 	* @see #getPath
 	*/
-	@:overload public function getChildIndex() : Int;
+	@:overload @:public public function getChildIndex() : Int;
 	
 	/**
 	* Returns the path where dropped data should be placed in the
@@ -1980,7 +1980,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return the drop path
 	* @see #getChildIndex
 	*/
-	@:overload public function getPath() : javax.swing.tree.TreePath;
+	@:overload @:public public function getPath() : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns a string representation of this drop location.
@@ -1990,15 +1990,15 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return a string representation of this drop location
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('javax$swing$JTree$TreeTimer') @:internal extern class JTree_TreeTimer extends java.util.Timer
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function fireActionPerformed(ae : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function fireActionPerformed(ae : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -2022,7 +2022,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return single instance of {@code EmptySelectionModel}
 	*/
-	@:overload public static function sharedInstance() : javax.swing.JTree.JTree_EmptySelectionModel;
+	@:overload @:static @:public public static function sharedInstance() : javax.swing.JTree.JTree_EmptySelectionModel;
 	
 	/**
 	* This is overriden to do nothing; {@code EmptySelectionModel}
@@ -2030,7 +2030,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param paths the paths to select; this is ignored
 	*/
-	@:overload override public function setSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
+	@:overload @:public override public function setSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
 	
 	/**
 	* This is overriden to do nothing; {@code EmptySelectionModel}
@@ -2038,7 +2038,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param paths the paths to add to the selection; this is ignored
 	*/
-	@:overload override public function addSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
+	@:overload @:public override public function addSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
 	
 	/**
 	* This is overriden to do nothing; {@code EmptySelectionModel}
@@ -2046,7 +2046,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param paths the paths to remove; this is ignored
 	*/
-	@:overload override public function removeSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
+	@:overload @:public override public function removeSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
 	
 	/**
 	* This is overriden to do nothing; {@code EmptySelectionModel}
@@ -2055,7 +2055,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param mode the selection mode; this is ignored
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function setSelectionMode(mode : Int) : Void;
+	@:require(java7) @:overload @:public override public function setSelectionMode(mode : Int) : Void;
 	
 	/**
 	* This is overriden to do nothing; {@code EmptySelectionModel}
@@ -2064,7 +2064,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param mapper the {@code RowMapper} instance; this is ignored
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function setRowMapper(mapper : javax.swing.tree.RowMapper) : Void;
+	@:require(java7) @:overload @:public override public function setRowMapper(mapper : javax.swing.tree.RowMapper) : Void;
 	
 	/**
 	* This is overriden to do nothing; {@code EmptySelectionModel}
@@ -2073,7 +2073,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param listener the listener to add; this is ignored
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function addTreeSelectionListener(listener : javax.swing.event.TreeSelectionListener) : Void;
+	@:require(java7) @:overload @:public override public function addTreeSelectionListener(listener : javax.swing.event.TreeSelectionListener) : Void;
 	
 	/**
 	* This is overriden to do nothing; {@code EmptySelectionModel}
@@ -2082,7 +2082,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param listener the listener to remove; this is ignored
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function removeTreeSelectionListener(listener : javax.swing.event.TreeSelectionListener) : Void;
+	@:require(java7) @:overload @:public override public function removeTreeSelectionListener(listener : javax.swing.event.TreeSelectionListener) : Void;
 	
 	/**
 	* This is overriden to do nothing; {@code EmptySelectionModel}
@@ -2091,7 +2091,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param listener the listener to add; this is ignored
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:require(java7) @:overload @:public override public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* This is overriden to do nothing; {@code EmptySelectionModel}
@@ -2100,7 +2100,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param listener the listener to remove; this is ignored
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:require(java7) @:overload @:public override public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	
 }
@@ -2127,7 +2127,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param e the <code>TreeSelectionEvent</code> generated by the
 	*              <code>TreeSelectionModel</code>
 	*/
-	@:overload public function valueChanged(e : javax.swing.event.TreeSelectionEvent) : Void;
+	@:overload @:public public function valueChanged(e : javax.swing.event.TreeSelectionEvent) : Void;
 	
 	
 }
@@ -2137,13 +2137,13 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 */
 @:native('javax$swing$JTree$TreeModelHandler') extern class JTree_TreeModelHandler implements javax.swing.event.TreeModelListener
 {
-	@:overload public function treeNodesChanged(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload @:public public function treeNodesChanged(e : javax.swing.event.TreeModelEvent) : Void;
 	
-	@:overload public function treeNodesInserted(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload @:public public function treeNodesInserted(e : javax.swing.event.TreeModelEvent) : Void;
 	
-	@:overload public function treeStructureChanged(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload @:public public function treeStructureChanged(e : javax.swing.event.TreeModelEvent) : Void;
 	
-	@:overload public function treeNodesRemoved(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload @:public public function treeNodesRemoved(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	
 }
@@ -2168,13 +2168,13 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* Does the this <code>JTree</code> have children?
 	* This property is currently not implemented.
 	*/
-	private var hasChildren : Bool;
+	@:protected private var hasChildren : Bool;
 	
 	/** Value to create children with. */
-	private var childValue : Dynamic;
+	@:protected private var childValue : Dynamic;
 	
 	/** Have the children been loaded yet? */
-	private var loadedChildren : Bool;
+	@:protected private var loadedChildren : Bool;
 	
 	/**
 	* Adds to parent all the children in <code>children</code>.
@@ -2183,7 +2183,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* is a hashtable all the key/value pairs are added in the order
 	* <code>Enumeration</code> returns them.
 	*/
-	@:overload public static function createChildren(parent : javax.swing.tree.DefaultMutableTreeNode, children : Dynamic) : Void;
+	@:overload @:public @:static public static function createChildren(parent : javax.swing.tree.DefaultMutableTreeNode, children : Dynamic) : Void;
 	
 	/**
 	* Creates a node with the specified object as its value and
@@ -2202,7 +2202,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*              <code>null</code>,
 	*              then the node is not allowed to have children
 	*/
-	@:overload public function new(value : Dynamic, children : Dynamic) : Void;
+	@:overload @:public public function new(value : Dynamic, children : Dynamic) : Void;
 	
 	/**
 	* Returns true if this node allows children. Whether the node
@@ -2211,14 +2211,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return true if this node allows children, false otherwise
 	* @see #JTree.DynamicUtilTreeNode
 	*/
-	@:overload override public function isLeaf() : Bool;
+	@:overload @:public override public function isLeaf() : Bool;
 	
 	/**
 	* Returns the number of child nodes.
 	*
 	* @return the number of child nodes
 	*/
-	@:overload override public function getChildCount() : Int;
+	@:overload @:public override public function getChildCount() : Int;
 	
 	/**
 	* Loads the children based on <code>childValue</code>.
@@ -2228,17 +2228,17 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* each key/value pair is added in the order that
 	* <code>Enumeration</code> returns the keys.
 	*/
-	@:overload private function loadChildren() : Void;
+	@:overload @:protected private function loadChildren() : Void;
 	
 	/**
 	* Subclassed to load the children, if necessary.
 	*/
-	@:overload override public function getChildAt(index : Int) : javax.swing.tree.TreeNode;
+	@:overload @:public override public function getChildAt(index : Int) : javax.swing.tree.TreeNode;
 	
 	/**
 	* Subclassed to load the children, if necessary.
 	*/
-	@:overload override public function children() : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function children() : java.util.Enumeration<Dynamic>;
 	
 	
 }
@@ -2258,7 +2258,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 */
 @:native('javax$swing$JTree$AccessibleJTree') extern class JTree_AccessibleJTree extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.accessibility.AccessibleSelection implements javax.swing.event.TreeSelectionListener implements javax.swing.event.TreeModelListener implements javax.swing.event.TreeExpansionListener
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Tree Selection Listener value change method. Used to fire the
@@ -2267,7 +2267,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param e ListSelectionEvent
 	*
 	*/
-	@:overload public function valueChanged(e : javax.swing.event.TreeSelectionEvent) : Void;
+	@:overload @:public public function valueChanged(e : javax.swing.event.TreeSelectionEvent) : Void;
 	
 	/**
 	* Fire a visible data property change notification.
@@ -2278,49 +2278,49 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* appearance of the component has changed, so they can
 	* notify the user.
 	*/
-	@:overload public function fireVisibleDataPropertyChange() : Void;
+	@:overload @:public public function fireVisibleDataPropertyChange() : Void;
 	
 	/**
 	* Tree Model Node change notification.
 	*
 	* @param e  a Tree Model event
 	*/
-	@:overload public function treeNodesChanged(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload @:public public function treeNodesChanged(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	/**
 	* Tree Model Node change notification.
 	*
 	* @param e  a Tree node insertion event
 	*/
-	@:overload public function treeNodesInserted(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload @:public public function treeNodesInserted(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	/**
 	* Tree Model Node change notification.
 	*
 	* @param e  a Tree node(s) removal event
 	*/
-	@:overload public function treeNodesRemoved(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload @:public public function treeNodesRemoved(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	/**
 	* Tree Model structure change change notification.
 	*
 	* @param e  a Tree Model event
 	*/
-	@:overload public function treeStructureChanged(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload @:public public function treeStructureChanged(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	/**
 	* Tree Collapsed notification.
 	*
 	* @param e  a TreeExpansionEvent
 	*/
-	@:overload public function treeCollapsed(e : javax.swing.event.TreeExpansionEvent) : Void;
+	@:overload @:public public function treeCollapsed(e : javax.swing.event.TreeExpansionEvent) : Void;
 	
 	/**
 	* Tree Model Expansion notification.
 	*
 	* @param e  a Tree node insertion event
 	*/
-	@:overload public function treeExpanded(e : javax.swing.event.TreeExpansionEvent) : Void;
+	@:overload @:public public function treeExpanded(e : javax.swing.event.TreeExpansionEvent) : Void;
 	
 	/**
 	* Get the role of this object.
@@ -2329,7 +2329,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the <code>Accessible</code> child, if one exists,
@@ -2340,7 +2340,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return the <code>Accessible</code>, if it exists,
 	*    at the specified location; else <code>null</code>
 	*/
-	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of top-level children nodes of this
@@ -2348,7 +2348,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return the number of accessible children nodes in the tree.
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Return the nth Accessible child of the object.
@@ -2356,7 +2356,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param i zero-based index of child
 	* @return the nth Accessible child of the object
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Get the index of this object in its accessible parent.
@@ -2365,7 +2365,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* top-level object does not have an accessible parent.
 	* @see #getAccessibleParent
 	*/
-	@:overload override public function getAccessibleIndexInParent() : Int;
+	@:overload @:public override public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Get the AccessibleSelection associated with this object.  In the
@@ -2375,7 +2375,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload @:public override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Returns the number of items currently selected.
@@ -2383,7 +2383,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return the number of items currently selected.
 	*/
-	@:overload public function getAccessibleSelectionCount() : Int;
+	@:overload @:public public function getAccessibleSelectionCount() : Int;
 	
 	/**
 	* Returns an Accessible representing the specified selected item
@@ -2394,7 +2394,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param i the zero-based index of selected items
 	* @return an Accessible containing the selected item
 	*/
-	@:overload public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns true if the current child of this object is selected.
@@ -2402,7 +2402,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param i the zero-based index of the child in this Accessible object.
 	* @see AccessibleContext#getAccessibleChild
 	*/
-	@:overload public function isAccessibleChildSelected(i : Int) : Bool;
+	@:overload @:public public function isAccessibleChildSelected(i : Int) : Bool;
 	
 	/**
 	* Adds the specified selected item in the object to the object's
@@ -2413,7 +2413,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param i the zero-based index of selectable items
 	*/
-	@:overload public function addAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function addAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Removes the specified selected item in the object from the object's
@@ -2422,19 +2422,19 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param i the zero-based index of selectable items
 	*/
-	@:overload public function removeAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function removeAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Clears the selection in the object, so that nothing in the
 	* object is selected.
 	*/
-	@:overload public function clearAccessibleSelection() : Void;
+	@:overload @:public public function clearAccessibleSelection() : Void;
 	
 	/**
 	* Causes every selected item in the object to be selected
 	* if the object supports multiple selections.
 	*/
-	@:overload public function selectAllAccessibleSelection() : Void;
+	@:overload @:public public function selectAllAccessibleSelection() : Void;
 	
 	
 }
@@ -2449,7 +2449,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*  Constructs an AccessibleJTreeNode
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(t : javax.swing.JTree, p : javax.swing.tree.TreePath, ap : javax.accessibility.Accessible) : Void;
+	@:require(java4) @:overload @:public public function new(t : javax.swing.JTree, p : javax.swing.tree.TreePath, ap : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Get the AccessibleContext associated with this tree node.
@@ -2459,7 +2459,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Get the accessible name of this object.
@@ -2467,14 +2467,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return the localized name of the object; null if this
 	* object does not have a name
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Set the localized accessible name of this object.
 	*
 	* @param s the new localized name of the object.
 	*/
-	@:overload override public function setAccessibleName(s : String) : Void;
+	@:overload @:public override public function setAccessibleName(s : String) : Void;
 	
 	/**
 	* Get the accessible description of this object.
@@ -2482,14 +2482,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return the localized description of the object; null if
 	* this object does not have a description
 	*/
-	@:overload override public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
 	/**
 	* Set the accessible description of this object.
 	*
 	* @param s the new localized description of the object
 	*/
-	@:overload override public function setAccessibleDescription(s : String) : Void;
+	@:overload @:public override public function setAccessibleDescription(s : String) : Void;
 	
 	/**
 	* Get the role of this object.
@@ -2497,7 +2497,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the state set of this object.
@@ -2506,7 +2506,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* current state set of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the Accessible parent of this object.
@@ -2514,7 +2514,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return the Accessible parent of this object; null if this
 	* object does not have an Accessible parent
 	*/
-	@:overload override public function getAccessibleParent() : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleParent() : javax.accessibility.Accessible;
 	
 	/**
 	* Get the index of this object in its accessible parent.
@@ -2523,14 +2523,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* object does not have an accessible parent.
 	* @see #getAccessibleParent
 	*/
-	@:overload override public function getAccessibleIndexInParent() : Int;
+	@:overload @:public override public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Returns the number of accessible children in the object.
 	*
 	* @return the number of accessible children in the object.
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Return the specified Accessible child of the object.
@@ -2538,7 +2538,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param i zero-based index of child
 	* @return the Accessible child of the object
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the locale of the component. If the component does not have
@@ -2552,7 +2552,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* determined from the containing parent.
 	* @see #setLocale
 	*/
-	@:overload override public function getLocale() : java.util.Locale;
+	@:overload @:public override public function getLocale() : java.util.Locale;
 	
 	/**
 	* Add a PropertyChangeListener to the listener list.
@@ -2560,7 +2560,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param l  The PropertyChangeListener to be added
 	*/
-	@:overload override public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Remove a PropertyChangeListener from the listener list.
@@ -2569,7 +2569,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param l  The PropertyChangeListener to be removed
 	*/
-	@:overload override public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Get the AccessibleAction associated with this object.  In the
@@ -2579,7 +2579,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload @:public override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Get the AccessibleComponent associated with this object.  In the
@@ -2589,7 +2589,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
+	@:overload @:public override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
 	
 	/**
 	* Get the AccessibleSelection associated with this object if one
@@ -2597,7 +2597,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return the AccessibleSelection, or null
 	*/
-	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload @:public override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Get the AccessibleText associated with this object if one
@@ -2605,7 +2605,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return the AccessibleText, or null
 	*/
-	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload @:public override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Get the AccessibleValue associated with this object if one
@@ -2613,7 +2613,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return the AccessibleValue, or null
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Get the background color of this object.
@@ -2621,14 +2621,14 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return the background color, if supported, of the object;
 	* otherwise, null
 	*/
-	@:overload public function getBackground() : java.awt.Color;
+	@:overload @:public public function getBackground() : java.awt.Color;
 	
 	/**
 	* Set the background color of this object.
 	*
 	* @param c the new Color for the background
 	*/
-	@:overload public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Get the foreground color of this object.
@@ -2636,47 +2636,47 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return the foreground color, if supported, of the object;
 	* otherwise, null
 	*/
-	@:overload public function getForeground() : java.awt.Color;
+	@:overload @:public public function getForeground() : java.awt.Color;
 	
-	@:overload public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public public function setForeground(c : java.awt.Color) : Void;
 	
-	@:overload public function getCursor() : java.awt.Cursor;
+	@:overload @:public public function getCursor() : java.awt.Cursor;
 	
-	@:overload public function setCursor(c : java.awt.Cursor) : Void;
+	@:overload @:public public function setCursor(c : java.awt.Cursor) : Void;
 	
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public public function getFont() : java.awt.Font;
 	
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public public function setFont(f : java.awt.Font) : Void;
 	
-	@:overload public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public public function setEnabled(b : Bool) : Void;
 	
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
-	@:overload public function setVisible(b : Bool) : Void;
+	@:overload @:public public function setVisible(b : Bool) : Void;
 	
-	@:overload public function isShowing() : Bool;
+	@:overload @:public public function isShowing() : Bool;
 	
-	@:overload public function contains(p : java.awt.Point) : Bool;
+	@:overload @:public public function contains(p : java.awt.Point) : Bool;
 	
-	@:overload public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public public function getLocationOnScreen() : java.awt.Point;
 	
-	@:overload private function getLocationInJTree() : java.awt.Point;
+	@:overload @:protected private function getLocationInJTree() : java.awt.Point;
 	
-	@:overload public function getLocation() : java.awt.Point;
+	@:overload @:public public function getLocation() : java.awt.Point;
 	
-	@:overload public function setLocation(p : java.awt.Point) : Void;
+	@:overload @:public public function setLocation(p : java.awt.Point) : Void;
 	
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public public function getBounds() : java.awt.Rectangle;
 	
-	@:overload public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload @:public public function setBounds(r : java.awt.Rectangle) : Void;
 	
-	@:overload public function getSize() : java.awt.Dimension;
+	@:overload @:public public function getSize() : java.awt.Dimension;
 	
-	@:overload public function setSize(d : java.awt.Dimension) : Void;
+	@:overload @:public public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the <code>Accessible</code> child, if one exists,
@@ -2688,15 +2688,15 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return the <code>Accessible</code>, if it exists,
 	*    at the specified location; else <code>null</code>
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public public function isFocusTraversable() : Bool;
 	
-	@:overload public function requestFocus() : Void;
+	@:overload @:public public function requestFocus() : Void;
 	
-	@:overload public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
-	@:overload public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Returns the number of items currently selected.
@@ -2704,7 +2704,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return the number of items currently selected.
 	*/
-	@:overload public function getAccessibleSelectionCount() : Int;
+	@:overload @:public public function getAccessibleSelectionCount() : Int;
 	
 	/**
 	* Returns an Accessible representing the specified selected item
@@ -2715,7 +2715,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param i the zero-based index of selected items
 	* @return an Accessible containing the selected item
 	*/
-	@:overload public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns true if the current child of this object is selected.
@@ -2724,7 +2724,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* object.
 	* @see AccessibleContext#getAccessibleChild
 	*/
-	@:overload public function isAccessibleChildSelected(i : Int) : Bool;
+	@:overload @:public public function isAccessibleChildSelected(i : Int) : Bool;
 	
 	/**
 	* Adds the specified selected item in the object to the object's
@@ -2735,7 +2735,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param i the zero-based index of selectable items
 	*/
-	@:overload public function addAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function addAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Removes the specified selected item in the object from the
@@ -2745,19 +2745,19 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @param i the zero-based index of selectable items
 	*/
-	@:overload public function removeAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function removeAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Clears the selection in the object, so that nothing in the
 	* object is selected.
 	*/
-	@:overload public function clearAccessibleSelection() : Void;
+	@:overload @:public public function clearAccessibleSelection() : Void;
 	
 	/**
 	* Causes every selected item in the object to be selected
 	* if the object supports multiple selections.
 	*/
-	@:overload public function selectAllAccessibleSelection() : Void;
+	@:overload @:public public function selectAllAccessibleSelection() : Void;
 	
 	/**
 	* Returns the number of accessible actions available in this
@@ -2767,7 +2767,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return the number of Actions in this object
 	*/
-	@:overload public function getAccessibleActionCount() : Int;
+	@:overload @:public public function getAccessibleActionCount() : Int;
 	
 	/**
 	* Return a description of the specified action of the tree node.
@@ -2778,7 +2778,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param i zero-based index of the actions
 	* @return a description of the action
 	*/
-	@:overload public function getAccessibleActionDescription(i : Int) : String;
+	@:overload @:public public function getAccessibleActionDescription(i : Int) : String;
 	
 	/**
 	* Perform the specified Action on the tree node.  If this node
@@ -2789,7 +2789,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param i zero-based index of actions
 	* @return true if the the action was performed; else false.
 	*/
-	@:overload public function doAccessibleAction(i : Int) : Bool;
+	@:overload @:public public function doAccessibleAction(i : Int) : Bool;
 	
 	
 }

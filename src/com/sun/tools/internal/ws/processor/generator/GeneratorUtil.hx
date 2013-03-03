@@ -29,7 +29,7 @@ extern class GeneratorUtil implements com.sun.tools.internal.ws.processor.genera
 	*
 	* @author WS Development Team
 	*/
-	@:overload public static function classExists(options : com.sun.tools.internal.ws.wscompile.Options, className : String) : Bool;
+	@:overload @:public @:static public static function classExists(options : com.sun.tools.internal.ws.wscompile.Options, className : String) : Bool;
 	
 	
 }

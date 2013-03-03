@@ -49,9 +49,9 @@ package javax.swing;
 */
 extern class ImageIcon implements javax.swing.Icon implements java.io.Serializable implements javax.accessibility.Accessible
 {
-	private static var component(default, null) : java.awt.Component;
+	@:protected @:final @:static private static var component(default, null) : java.awt.Component;
 	
-	private static var tracker(default, null) : java.awt.MediaTracker;
+	@:protected @:final @:static private static var tracker(default, null) : java.awt.MediaTracker;
 	
 	/**
 	* Creates an ImageIcon from the specified file. The image will
@@ -61,7 +61,7 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	* @param description a brief textual description of the image
 	* @see #ImageIcon(String)
 	*/
-	@:overload public function new(filename : String, description : String) : Void;
+	@:overload @:public public function new(filename : String, description : String) : Void;
 	
 	/**
 	* Creates an ImageIcon from the specified file. The image will
@@ -79,7 +79,7 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	* @param filename a String specifying a filename or path
 	* @see #getDescription
 	*/
-	@:overload public function new(filename : String) : Void;
+	@:overload @:public public function new(filename : String) : Void;
 	
 	/**
 	* Creates an ImageIcon from the specified URL. The image will
@@ -89,7 +89,7 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	* @param description a brief textual description of the image
 	* @see #ImageIcon(String)
 	*/
-	@:overload public function new(location : java.net.URL, description : String) : Void;
+	@:overload @:public public function new(location : java.net.URL, description : String) : Void;
 	
 	/**
 	* Creates an ImageIcon from the specified URL. The image will
@@ -100,14 +100,14 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	* @param location the URL for the image
 	* @see #getDescription
 	*/
-	@:overload public function new(location : java.net.URL) : Void;
+	@:overload @:public public function new(location : java.net.URL) : Void;
 	
 	/**
 	* Creates an ImageIcon from the image.
 	* @param image the image
 	* @param description a brief textual description of the image
 	*/
-	@:overload public function new(image : java.awt.Image, description : String) : Void;
+	@:overload @:public public function new(image : java.awt.Image, description : String) : Void;
 	
 	/**
 	* Creates an ImageIcon from an image object.
@@ -117,7 +117,7 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	* @see #getDescription
 	* @see java.awt.Image#getProperty
 	*/
-	@:overload public function new(image : java.awt.Image) : Void;
+	@:overload @:public public function new(image : java.awt.Image) : Void;
 	
 	/**
 	* Creates an ImageIcon from an array of bytes which were
@@ -132,7 +132,7 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	* @param  description a brief textual description of the image
 	* @see    java.awt.Toolkit#createImage
 	*/
-	@:overload public function new(imageData : java.NativeArray<java.StdTypes.Int8>, description : String) : Void;
+	@:overload @:public public function new(imageData : java.NativeArray<java.StdTypes.Int8>, description : String) : Void;
 	
 	/**
 	* Creates an ImageIcon from an array of bytes which were
@@ -150,18 +150,18 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	* @see #getDescription
 	* @see java.awt.Image#getProperty
 	*/
-	@:overload public function new(imageData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(imageData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Creates an uninitialized image icon.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Loads the image, returning only when the image is loaded.
 	* @param image the image
 	*/
-	@:overload private function loadImage(image : java.awt.Image) : Void;
+	@:overload @:protected private function loadImage(image : java.awt.Image) : Void;
 	
 	/**
 	* Returns the status of the image loading operation.
@@ -170,19 +170,19 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	* @see java.awt.MediaTracker#ERRORED
 	* @see java.awt.MediaTracker#COMPLETE
 	*/
-	@:overload public function getImageLoadStatus() : Int;
+	@:overload @:public public function getImageLoadStatus() : Int;
 	
 	/**
 	* Returns this icon's <code>Image</code>.
 	* @return the <code>Image</code> object for this <code>ImageIcon</code>
 	*/
-	@:overload public function getImage() : java.awt.Image;
+	@:overload @:public public function getImage() : java.awt.Image;
 	
 	/**
 	* Sets the image displayed by this icon.
 	* @param image the image
 	*/
-	@:overload public function setImage(image : java.awt.Image) : Void;
+	@:overload @:public public function setImage(image : java.awt.Image) : Void;
 	
 	/**
 	* Gets the description of the image.  This is meant to be a brief
@@ -193,7 +193,7 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	*
 	* @return a brief textual description of the image
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	/**
 	* Sets the description of the image.  This is meant to be a brief
@@ -202,7 +202,7 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	* of the image.
 	* @param description a brief textual description of the image
 	*/
-	@:overload public function setDescription(description : String) : Void;
+	@:overload @:public public function setDescription(description : String) : Void;
 	
 	/**
 	* Paints the icon.
@@ -219,21 +219,21 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	* @param x the X coordinate of the icon's top-left corner
 	* @param y the Y coordinate of the icon's top-left corner
 	*/
-	@:overload @:synchronized public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public @:synchronized public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
 	/**
 	* Gets the width of the icon.
 	*
 	* @return the width in pixels of this icon
 	*/
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
 	/**
 	* Gets the height of the icon.
 	*
 	* @return the height in pixels of this icon
 	*/
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	/**
 	* Sets the image observer for the image.  Set this
@@ -248,21 +248,21 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	*
 	* @param observer the image observer
 	*/
-	@:overload public function setImageObserver(observer : java.awt.image.ImageObserver) : Void;
+	@:overload @:public public function setImageObserver(observer : java.awt.image.ImageObserver) : Void;
 	
 	/**
 	* Returns the image observer for the image.
 	*
 	* @return the image observer, which may be null
 	*/
-	@:overload public function getImageObserver() : java.awt.image.ImageObserver;
+	@:overload @:public public function getImageObserver() : java.awt.image.ImageObserver;
 	
 	/**
 	* Returns a string representation of this image.
 	*
 	* @return a string representing this image
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this ImageIcon.
@@ -277,7 +277,7 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	*  description: The AccessibleContext associated with this ImageIcon.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -306,7 +306,7 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the state of this object.
@@ -315,7 +315,7 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	* state set of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the Accessible parent of this object.  If the parent of this
@@ -325,7 +325,7 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	* @return the Accessible parent of this object -- can be null if this
 	* object does not have an Accessible parent
 	*/
-	@:overload override public function getAccessibleParent() : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleParent() : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the index of this object in its accessible parent.
@@ -334,7 +334,7 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	* object does not have an accessible parent.
 	* @see #getAccessibleParent
 	*/
-	@:overload override public function getAccessibleIndexInParent() : Int;
+	@:overload @:public override public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -343,7 +343,7 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	*
 	* @return the number of accessible children in the object.
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the nth Accessible child of the object.
@@ -351,14 +351,14 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	* @param i zero-based index of child
 	* @return the nth Accessible child of the object
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the locale of this object.
 	*
 	* @return the locale of this object
 	*/
-	@:overload override public function getLocale() : java.util.Locale;
+	@:overload @:public override public function getLocale() : java.util.Locale;
 	
 	/**
 	* Gets the description of the icon.  This is meant to be a brief
@@ -368,7 +368,7 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	*
 	* @return the description of the icon
 	*/
-	@:overload public function getAccessibleIconDescription() : String;
+	@:overload @:public public function getAccessibleIconDescription() : String;
 	
 	/**
 	* Sets the description of the icon.  This is meant to be a brief
@@ -378,21 +378,21 @@ extern class ImageIcon implements javax.swing.Icon implements java.io.Serializab
 	*
 	* @param description the description of the icon
 	*/
-	@:overload public function setAccessibleIconDescription(description : String) : Void;
+	@:overload @:public public function setAccessibleIconDescription(description : String) : Void;
 	
 	/**
 	* Gets the height of the icon.
 	*
 	* @return the height of the icon
 	*/
-	@:overload public function getAccessibleIconHeight() : Int;
+	@:overload @:public public function getAccessibleIconHeight() : Int;
 	
 	/**
 	* Gets the width of the icon.
 	*
 	* @return the width of the icon
 	*/
-	@:overload public function getAccessibleIconWidth() : Int;
+	@:overload @:public public function getAccessibleIconWidth() : Int;
 	
 	
 }

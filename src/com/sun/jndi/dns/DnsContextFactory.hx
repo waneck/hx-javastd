@@ -25,20 +25,20 @@ package com.sun.jndi.dns;
 */
 extern class DnsContextFactory implements javax.naming.spi.InitialContextFactory
 {
-	@:overload public function getInitialContext(env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
+	@:overload @:public public function getInitialContext(env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
 	
-	@:overload public static function getContext(domain : String, servers : java.NativeArray<String>, env : java.util.Hashtable<Dynamic, Dynamic>) : com.sun.jndi.dns.DnsContext;
+	@:overload @:public @:static public static function getContext(domain : String, servers : java.NativeArray<String>, env : java.util.Hashtable<Dynamic, Dynamic>) : com.sun.jndi.dns.DnsContext;
 	
 	/*
 	* "urls" are used to determine the servers, but any domain
 	* components are overridden by "domain".
 	*/
-	@:overload public static function getContext(domain : String, urls : java.NativeArray<com.sun.jndi.dns.DnsUrl>, env : java.util.Hashtable<Dynamic, Dynamic>) : com.sun.jndi.dns.DnsContext;
+	@:overload @:public @:static public static function getContext(domain : String, urls : java.NativeArray<com.sun.jndi.dns.DnsUrl>, env : java.util.Hashtable<Dynamic, Dynamic>) : com.sun.jndi.dns.DnsContext;
 	
 	/*
 	* Public for use by product test suite.
 	*/
-	@:overload public static function platformServersAvailable() : Bool;
+	@:overload @:public @:static public static function platformServersAvailable() : Bool;
 	
 	
 }

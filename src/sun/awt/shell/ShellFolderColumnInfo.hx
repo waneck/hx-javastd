@@ -25,43 +25,43 @@ package sun.awt.shell;
 */
 extern class ShellFolderColumnInfo
 {
-	@:overload public function new(title : String, width : Null<Int>, alignment : Null<Int>, visible : Bool, sortOrder : javax.swing.SortOrder, comparator : java.util.Comparator<Dynamic>, compareByColumn : Bool) : Void;
+	@:overload @:public public function new(title : String, width : Null<Int>, alignment : Null<Int>, visible : Bool, sortOrder : javax.swing.SortOrder, comparator : java.util.Comparator<Dynamic>, compareByColumn : Bool) : Void;
 	
-	@:overload public function new(title : String, width : Null<Int>, alignment : Null<Int>, visible : Bool, sortOrder : javax.swing.SortOrder, comparator : java.util.Comparator<Dynamic>) : Void;
+	@:overload @:public public function new(title : String, width : Null<Int>, alignment : Null<Int>, visible : Bool, sortOrder : javax.swing.SortOrder, comparator : java.util.Comparator<Dynamic>) : Void;
 	
 	/**
 	* This constructor is used by native code when getting column set for
 	* a folder under Windows
 	*/
-	@:overload public function new(title : String, width : Int, alignment : Int, visible : Bool) : Void;
+	@:overload @:public public function new(title : String, width : Int, alignment : Int, visible : Bool) : Void;
 	
-	@:overload public function getTitle() : String;
+	@:overload @:public public function getTitle() : String;
 	
-	@:overload public function setTitle(title : String) : Void;
+	@:overload @:public public function setTitle(title : String) : Void;
 	
-	@:overload public function getWidth() : Null<Int>;
+	@:overload @:public public function getWidth() : Null<Int>;
 	
-	@:overload public function setWidth(width : Null<Int>) : Void;
+	@:overload @:public public function setWidth(width : Null<Int>) : Void;
 	
-	@:overload public function getAlignment() : Null<Int>;
+	@:overload @:public public function getAlignment() : Null<Int>;
 	
-	@:overload public function setAlignment(alignment : Null<Int>) : Void;
+	@:overload @:public public function setAlignment(alignment : Null<Int>) : Void;
 	
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
-	@:overload public function setVisible(visible : Bool) : Void;
+	@:overload @:public public function setVisible(visible : Bool) : Void;
 	
-	@:overload public function getSortOrder() : javax.swing.SortOrder;
+	@:overload @:public public function getSortOrder() : javax.swing.SortOrder;
 	
-	@:overload public function setSortOrder(sortOrder : javax.swing.SortOrder) : Void;
+	@:overload @:public public function setSortOrder(sortOrder : javax.swing.SortOrder) : Void;
 	
-	@:overload public function getComparator() : java.util.Comparator<Dynamic>;
+	@:overload @:public public function getComparator() : java.util.Comparator<Dynamic>;
 	
-	@:overload public function setComparator(comparator : java.util.Comparator<Dynamic>) : Void;
+	@:overload @:public public function setComparator(comparator : java.util.Comparator<Dynamic>) : Void;
 	
-	@:overload public function isCompareByColumn() : Bool;
+	@:overload @:public public function isCompareByColumn() : Bool;
 	
-	@:overload public function setCompareByColumn(compareByColumn : Bool) : Void;
+	@:overload @:public public function setCompareByColumn(compareByColumn : Bool) : Void;
 	
 	
 }

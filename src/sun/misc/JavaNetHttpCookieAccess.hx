@@ -29,13 +29,13 @@ extern interface JavaNetHttpCookieAccess
 	* Constructs cookies from Set-Cookie or Set-Cookie2 header string,
 	* retaining the original header String in the cookie itself.
 	*/
-	@:overload public function parse(header : String) : java.util.List<java.net.HttpCookie>;
+	@:overload @:public public function parse(header : String) : java.util.List<java.net.HttpCookie>;
 	
 	/*
 	* Returns the original header this cookie was consructed from, if it was
 	* constructed by parsing a header, otherwise null.
 	*/
-	@:overload public function header(cookie : java.net.HttpCookie) : String;
+	@:overload @:public public function header(cookie : java.net.HttpCookie) : String;
 	
 	
 }

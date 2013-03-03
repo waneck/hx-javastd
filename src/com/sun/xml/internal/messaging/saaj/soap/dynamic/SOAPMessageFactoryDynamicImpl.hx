@@ -29,7 +29,7 @@ package com.sun.xml.internal.messaging.saaj.soap.dynamic;
 */
 extern class SOAPMessageFactoryDynamicImpl extends com.sun.xml.internal.messaging.saaj.soap.MessageFactoryImpl
 {
-	@:overload override public function createMessage() : javax.xml.soap.SOAPMessage;
+	@:overload @:public override public function createMessage() : javax.xml.soap.SOAPMessage;
 	
 	
 }

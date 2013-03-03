@@ -39,7 +39,7 @@ extern interface Principal
 	*
 	* @return the name of this principal.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

@@ -23,13 +23,13 @@ extern class ValidatedInfo
 	/**
 	* The normalized value of a string value
 	*/
-	public var normalizedValue : String;
+	@:public public var normalizedValue : String;
 	
 	/**
 	* The actual value from a string value (QName, Boolean, etc.)
 	* An array of Objects if the type is a list.
 	*/
-	public var actualValue : Dynamic;
+	@:public public var actualValue : Dynamic;
 	
 	/**
 	* The type of the actual value. It's one of the _DT constants
@@ -37,13 +37,13 @@ extern class ValidatedInfo
 	* the most specific built-in type.
 	* (i.e. short instead of decimal or integer).
 	*/
-	public var actualValueType : java.StdTypes.Int16;
+	@:public public var actualValueType : java.StdTypes.Int16;
 	
 	/**
 	* If the type is a union type, then the member type which
 	* actually validated the string value.
 	*/
-	public var memberType : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
+	@:public public var memberType : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
 	
 	/**
 	* If
@@ -52,7 +52,7 @@ extern class ValidatedInfo
 	* 2. the item type of the list is a union type
 	* then an array of member types used to validate the values.
 	*/
-	public var memberTypes : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType>;
+	@:public public var memberTypes : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType>;
 	
 	/**
 	* In the case the value is a list or a list of unions, this value
@@ -60,18 +60,18 @@ extern class ValidatedInfo
 	* For a normal list, the length of the array is 1; for list of unions,
 	* the length of the array is the same as the length of the list.
 	*/
-	public var itemValueTypes : com.sun.org.apache.xerces.internal.xs.ShortList;
+	@:public public var itemValueTypes : com.sun.org.apache.xerces.internal.xs.ShortList;
 	
 	/**
 	* reset the state of this object
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Return a string representation of the value. If there is an actual
 	* value, use toString; otherwise, use the normalized value.
 	*/
-	@:overload public function stringValue() : String;
+	@:overload @:public public function stringValue() : String;
 	
 	
 }

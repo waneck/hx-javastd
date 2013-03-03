@@ -27,7 +27,7 @@ extern class XSNamedMap4Types extends com.sun.org.apache.xerces.internal.impl.xs
 	* @param map       the map from local names to components
 	* @param type      the type of components
 	*/
-	@:overload public function new(namespace : String, map : com.sun.org.apache.xerces.internal.util.SymbolHash, type : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(namespace : String, map : com.sun.org.apache.xerces.internal.util.SymbolHash, type : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Construct an XSNamedMap implementation for a list of namespaces
@@ -37,14 +37,14 @@ extern class XSNamedMap4Types extends com.sun.org.apache.xerces.internal.impl.xs
 	* @param num        the number of namespaces
 	* @param type      the type of components
 	*/
-	@:overload public function new(namespaces : java.NativeArray<String>, maps : java.NativeArray<com.sun.org.apache.xerces.internal.util.SymbolHash>, num : Int, type : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(namespaces : java.NativeArray<String>, maps : java.NativeArray<com.sun.org.apache.xerces.internal.util.SymbolHash>, num : Int, type : java.StdTypes.Int16) : Void;
 	
 	/**
 	* The number of <code>XSObjects</code> in the <code>XSObjectList</code>. The
 	* range of valid child node indices is 0 to <code>length-1</code>
 	* inclusive.
 	*/
-	@:overload @:synchronized public function getLength() : Int;
+	@:overload @:public @:synchronized override public function getLength() : Int;
 	
 	/**
 	* Retrieves an <code>XSObject</code> specified by local name and namespace
@@ -56,7 +56,7 @@ extern class XSNamedMap4Types extends com.sun.org.apache.xerces.internal.impl.xs
 	*   name and namespace URI, or <code>null</code> if they do not
 	*   identify any <code>XSObject</code> in this map.
 	*/
-	@:overload public function itemByName(namespace : String, localName : String) : com.sun.org.apache.xerces.internal.xs.XSObject;
+	@:overload @:public override public function itemByName(namespace : String, localName : String) : com.sun.org.apache.xerces.internal.xs.XSObject;
 	
 	/**
 	* Returns the <code>index</code>th item in the map. The index starts at
@@ -68,7 +68,7 @@ extern class XSNamedMap4Types extends com.sun.org.apache.xerces.internal.impl.xs
 	*   in the <code>XSNamedMap</code>, or <code>null</code> if that is
 	*   not a valid index.
 	*/
-	@:overload @:synchronized public function item(index : Int) : com.sun.org.apache.xerces.internal.xs.XSObject;
+	@:overload @:public @:synchronized override public function item(index : Int) : com.sun.org.apache.xerces.internal.xs.XSObject;
 	
 	
 }

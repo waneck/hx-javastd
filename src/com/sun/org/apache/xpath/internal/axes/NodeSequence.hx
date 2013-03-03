@@ -24,179 +24,179 @@ package com.sun.org.apache.xpath.internal.axes;
 extern class NodeSequence extends com.sun.org.apache.xpath.internal.objects.XObject implements com.sun.org.apache.xml.internal.dtm.DTMIterator implements java.lang.Cloneable implements com.sun.org.apache.xpath.internal.axes.PathComponent
 {
 	/** The index of the last node in the iteration. */
-	private var m_last : Int;
+	@:protected private var m_last : Int;
 	
 	/**
 	* The index of the next node to be fetched.  Useful if this
 	* is a cached iterator, and is being used as random access
 	* NodeList.
 	*/
-	private var m_next : Int;
+	@:protected private var m_next : Int;
 	
 	/**
 	* If this iterator needs to cache nodes that are fetched, they
 	* are stored in the Vector in the generic object.
 	*/
-	@:overload private function getVector() : com.sun.org.apache.xml.internal.utils.NodeVector;
+	@:overload @:protected private function getVector() : com.sun.org.apache.xml.internal.utils.NodeVector;
 	
 	/**
 	* Set the vector where nodes will be cached.
 	*/
-	@:overload private function SetVector(v : com.sun.org.apache.xml.internal.utils.NodeVector) : Void;
+	@:overload @:protected private function SetVector(v : com.sun.org.apache.xml.internal.utils.NodeVector) : Void;
 	
 	/**
 	* If the iterator needs to cache nodes as they are fetched,
 	* then this method returns true.
 	*/
-	@:overload public function hasCache() : Bool;
+	@:overload @:public public function hasCache() : Bool;
 	
 	/**
 	* The functional iterator that fetches nodes.
 	*/
-	private var m_iter : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:protected private var m_iter : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Set the functional iterator that fetches nodes.
 	* @param iter The iterator that is to be contained.
 	*/
-	@:overload @:final public function setIter(iter : com.sun.org.apache.xml.internal.dtm.DTMIterator) : Void;
+	@:overload @:public @:final public function setIter(iter : com.sun.org.apache.xml.internal.dtm.DTMIterator) : Void;
 	
 	/**
 	* Get the functional iterator that fetches nodes.
 	* @return The contained iterator.
 	*/
-	@:overload @:final public function getContainedIter() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public @:final public function getContainedIter() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* The DTMManager to use if we're using a NodeVector only.
 	* We may well want to do away with this, and store it in the NodeVector.
 	*/
-	private var m_dtmMgr : com.sun.org.apache.xml.internal.dtm.DTMManager;
+	@:protected private var m_dtmMgr : com.sun.org.apache.xml.internal.dtm.DTMManager;
 	
 	/**
 	* Create a new NodeSequence from a (already cloned) iterator.
 	*
 	* @param nodeVector
 	*/
-	@:overload public function new(nodeVector : Dynamic) : Void;
+	@:overload @:public public function new(nodeVector : Dynamic) : Void;
 	
 	/**
 	* Create a new NodeSequence in an invalid (null) state.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* @see DTMIterator#getDTM(int)
 	*/
-	@:overload public function getDTM(nodeHandle : Int) : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public public function getDTM(nodeHandle : Int) : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* @see DTMIterator#getDTMManager()
 	*/
-	@:overload public function getDTMManager() : com.sun.org.apache.xml.internal.dtm.DTMManager;
+	@:overload @:public public function getDTMManager() : com.sun.org.apache.xml.internal.dtm.DTMManager;
 	
 	/**
 	* @see DTMIterator#getRoot()
 	*/
-	@:overload public function getRoot() : Int;
+	@:overload @:public public function getRoot() : Int;
 	
 	/**
 	* @see DTMIterator#setRoot(int, Object)
 	*/
-	@:overload public function setRoot(nodeHandle : Int, environment : Dynamic) : Void;
+	@:overload @:public public function setRoot(nodeHandle : Int, environment : Dynamic) : Void;
 	
 	/**
 	* @see DTMIterator#reset()
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* @see DTMIterator#getWhatToShow()
 	*/
-	@:overload public function getWhatToShow() : Int;
+	@:overload @:public public function getWhatToShow() : Int;
 	
 	/**
 	* @see DTMIterator#getExpandEntityReferences()
 	*/
-	@:overload public function getExpandEntityReferences() : Bool;
+	@:overload @:public public function getExpandEntityReferences() : Bool;
 	
 	/**
 	* @see DTMIterator#nextNode()
 	*/
-	@:overload public function nextNode() : Int;
+	@:overload @:public public function nextNode() : Int;
 	
 	/**
 	* @see DTMIterator#previousNode()
 	*/
-	@:overload public function previousNode() : Int;
+	@:overload @:public public function previousNode() : Int;
 	
 	/**
 	* @see DTMIterator#detach()
 	*/
-	@:overload public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	/**
 	* Calling this with a value of false will cause the nodeset
 	* to be cached.
 	* @see DTMIterator#allowDetachToRelease(boolean)
 	*/
-	@:overload public function allowDetachToRelease(allowRelease : Bool) : Void;
+	@:overload @:public override public function allowDetachToRelease(allowRelease : Bool) : Void;
 	
 	/**
 	* @see DTMIterator#getCurrentNode()
 	*/
-	@:overload public function getCurrentNode() : Int;
+	@:overload @:public public function getCurrentNode() : Int;
 	
 	/**
 	* @see DTMIterator#isFresh()
 	*/
-	@:overload public function isFresh() : Bool;
+	@:overload @:public public function isFresh() : Bool;
 	
 	/**
 	* @see DTMIterator#setShouldCacheNodes(boolean)
 	*/
-	@:overload public function setShouldCacheNodes(b : Bool) : Void;
+	@:overload @:public public function setShouldCacheNodes(b : Bool) : Void;
 	
 	/**
 	* @see DTMIterator#isMutable()
 	*/
-	@:overload public function isMutable() : Bool;
+	@:overload @:public public function isMutable() : Bool;
 	
 	/**
 	* @see DTMIterator#getCurrentPos()
 	*/
-	@:overload public function getCurrentPos() : Int;
+	@:overload @:public public function getCurrentPos() : Int;
 	
 	/**
 	* @see DTMIterator#runTo(int)
 	*/
-	@:overload public function runTo(index : Int) : Void;
+	@:overload @:public public function runTo(index : Int) : Void;
 	
 	/**
 	* @see DTMIterator#setCurrentPos(int)
 	*/
-	@:overload public function setCurrentPos(i : Int) : Void;
+	@:overload @:public public function setCurrentPos(i : Int) : Void;
 	
 	/**
 	* @see DTMIterator#item(int)
 	*/
-	@:overload public function item(index : Int) : Int;
+	@:overload @:public public function item(index : Int) : Int;
 	
 	/**
 	* @see DTMIterator#setItem(int, int)
 	*/
-	@:overload public function setItem(node : Int, index : Int) : Void;
+	@:overload @:public public function setItem(node : Int, index : Int) : Void;
 	
 	/**
 	* @see DTMIterator#getLength()
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Note: Not a deep clone.
 	* @see DTMIterator#cloneWithReset()
 	*/
-	@:overload public function cloneWithReset() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public public function cloneWithReset() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Get a clone of this iterator, but don't reset the iteration in the
@@ -207,27 +207,27 @@ extern class NodeSequence extends com.sun.org.apache.xpath.internal.objects.XObj
 	*
 	* @throws CloneNotSupportedException
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* @see DTMIterator#isDocOrdered()
 	*/
-	@:overload public function isDocOrdered() : Bool;
+	@:overload @:public public function isDocOrdered() : Bool;
 	
 	/**
 	* @see DTMIterator#getAxis()
 	*/
-	@:overload public function getAxis() : Int;
+	@:overload @:public public function getAxis() : Int;
 	
 	/**
 	* @see PathComponent#getAnalysisBits()
 	*/
-	@:overload public function getAnalysisBits() : Int;
+	@:overload @:public public function getAnalysisBits() : Int;
 	
 	/**
 	* @see org.apache.xpath.Expression#fixupVariables(Vector, int)
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Add the node into a vector of nodes where it should occur in
@@ -237,7 +237,7 @@ extern class NodeSequence extends com.sun.org.apache.xpath.internal.objects.XObj
 	* @throws RuntimeException thrown if this NodeSetDTM is not of
 	* a mutable type.
 	*/
-	@:overload private function addNodeInDocOrder(node : Int) : Int;
+	@:overload @:protected private function addNodeInDocOrder(node : Int) : Int;
 	
 	/**
 	* It used to be that many locations in the code simply
@@ -253,7 +253,7 @@ extern class NodeSequence extends com.sun.org.apache.xpath.internal.objects.XObj
 	* to update some caching information.
 	*
 	*/
-	@:overload private function setObject(obj : Dynamic) : Void;
+	@:overload @:protected override private function setObject(obj : Dynamic) : Void;
 	
 	/**
 	* Get the cached list of nodes appended with
@@ -261,7 +261,7 @@ extern class NodeSequence extends com.sun.org.apache.xpath.internal.objects.XObj
 	* a NodeSequence is walked when its
 	* nextNode() method is called.
 	*/
-	@:overload private function getIteratorCache() : com.sun.org.apache.xpath.internal.axes.NodeSequence.NodeSequence_IteratorCache;
+	@:overload @:protected private function getIteratorCache() : com.sun.org.apache.xpath.internal.axes.NodeSequence.NodeSequence_IteratorCache;
 	
 	
 }

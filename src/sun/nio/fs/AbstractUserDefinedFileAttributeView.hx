@@ -28,15 +28,15 @@ package sun.nio.fs;
 */
 @:internal extern class AbstractUserDefinedFileAttributeView implements java.nio.file.attribute.UserDefinedFileAttributeView implements sun.nio.fs.DynamicFileAttributeView
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function checkAccess(file : String, checkRead : Bool, checkWrite : Bool) : Void;
+	@:overload @:protected private function checkAccess(file : String, checkRead : Bool, checkWrite : Bool) : Void;
 	
-	@:overload @:final public function name() : String;
+	@:overload @:public @:final public function name() : String;
 	
-	@:overload @:final public function setAttribute(attribute : String, value : Dynamic) : Void;
+	@:overload @:public @:final public function setAttribute(attribute : String, value : Dynamic) : Void;
 	
-	@:overload @:final public function readAttributes(attributes : java.NativeArray<String>) : java.util.Map<String, Dynamic>;
+	@:overload @:public @:final public function readAttributes(attributes : java.NativeArray<String>) : java.util.Map<String, Dynamic>;
 	
 	/**
 	* Writes the value of a user-defined attribute from a buffer.
@@ -84,7 +84,7 @@ package sun.nio.fs;
 	*          or its {@link SecurityManager#checkWrite(String) checkWrite}
 	*          method denies write access to the file.
 	*/
-	@:overload public function write(name : String, src : java.nio.ByteBuffer) : Int;
+	@:overload @:public public function write(name : String, src : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* Returns a list containing the names of the user-defined attributes.
@@ -101,7 +101,7 @@ package sun.nio.fs;
 	*          or its {@link SecurityManager#checkRead(String) checkRead} method
 	*          denies read access to the file.
 	*/
-	@:overload public function list() : java.util.List<String>;
+	@:overload @:public public function list() : java.util.List<String>;
 	
 	/**
 	* Read the value of a user-defined attribute into a buffer.
@@ -149,7 +149,7 @@ package sun.nio.fs;
 	*
 	* @see #size
 	*/
-	@:overload public function read(name : String, dst : java.nio.ByteBuffer) : Int;
+	@:overload @:public public function read(name : String, dst : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* Returns the size of the value of a user-defined attribute.
@@ -170,7 +170,7 @@ package sun.nio.fs;
 	*          or its {@link SecurityManager#checkRead(String) checkRead} method
 	*          denies read access to the file.
 	*/
-	@:overload public function size(name : String) : Int;
+	@:overload @:public public function size(name : String) : Int;
 	
 	/**
 	* Deletes a user-defined attribute.
@@ -187,7 +187,7 @@ package sun.nio.fs;
 	*          or its {@link SecurityManager#checkWrite(String) checkWrite}
 	*          method denies write access to the file.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
 	
 }

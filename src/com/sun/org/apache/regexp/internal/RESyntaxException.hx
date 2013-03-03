@@ -34,7 +34,7 @@ extern class RESyntaxException extends java.lang.RuntimeException
 	* Constructor.
 	* @param s Further description of the syntax error
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

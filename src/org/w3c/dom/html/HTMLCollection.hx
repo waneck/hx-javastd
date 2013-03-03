@@ -43,7 +43,7 @@ extern interface HTMLCollection
 	/**
 	*  This attribute specifies the length or  size of the list.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	*  This method retrieves a node specified by ordinal index. Nodes are
@@ -54,7 +54,7 @@ extern interface HTMLCollection
 	*   success. A value of <code>null</code> is returned if the index is
 	*   out of range.
 	*/
-	@:overload public function item(index : Int) : org.w3c.dom.Node;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.Node;
 	
 	/**
 	*  This method retrieves a <code>Node</code> using a name. It first
@@ -68,7 +68,7 @@ extern interface HTMLCollection
 	*   string. Upon failure (e.g., no node with this name exists), returns
 	*   <code>null</code> .
 	*/
-	@:overload public function namedItem(name : String) : org.w3c.dom.Node;
+	@:overload @:public public function namedItem(name : String) : org.w3c.dom.Node;
 	
 	
 }

@@ -35,7 +35,7 @@ extern class OutputPropertyUtils
 	* @return  the value in this property list as a boolean value, or false
 	* if null or not "yes".
 	*/
-	@:overload public static function getBooleanProperty(key : String, props : java.util.Properties) : Bool;
+	@:overload @:public @:static public static function getBooleanProperty(key : String, props : java.util.Properties) : Bool;
 	
 	/**
 	* Searches for the int property with the specified key in the property list.
@@ -49,7 +49,7 @@ extern class OutputPropertyUtils
 	* @return  the value in this property list as a int value, or 0
 	* if null or not a number.
 	*/
-	@:overload public static function getIntProperty(key : String, props : java.util.Properties) : Int;
+	@:overload @:public @:static public static function getIntProperty(key : String, props : java.util.Properties) : Int;
 	
 	
 }

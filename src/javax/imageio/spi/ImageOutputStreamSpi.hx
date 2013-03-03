@@ -29,7 +29,7 @@ extern class ImageOutputStreamSpi extends javax.imageio.spi.IIOServiceProvider
 	* A <code>Class</code> object indicating the legal object type
 	* for use by the <code>createInputStreamInstance</code> method.
 	*/
-	private var outputClass : Class<Dynamic>;
+	@:protected private var outputClass : Class<Dynamic>;
 	
 	/**
 	* Constructs a blank <code>ImageOutputStreamSpi</code>.  It is up
@@ -37,7 +37,7 @@ extern class ImageOutputStreamSpi extends javax.imageio.spi.IIOServiceProvider
 	* override method implementations in order to provide working
 	* versions of all methods.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs an <code>ImageOutputStreamSpi</code> with a given
@@ -54,7 +54,7 @@ extern class ImageOutputStreamSpi extends javax.imageio.spi.IIOServiceProvider
 	* @exception IllegalArgumentException if <code>version</code>
 	* is <code>null</code>.
 	*/
-	@:overload public function new(vendorName : String, version : String, outputClass : Class<Dynamic>) : Void;
+	@:overload @:public public function new(vendorName : String, version : String, outputClass : Class<Dynamic>) : Void;
 	
 	/**
 	* Returns a <code>Class</code> object representing the class or
@@ -71,7 +71,7 @@ extern class ImageOutputStreamSpi extends javax.imageio.spi.IIOServiceProvider
 	*
 	* @see #createOutputStreamInstance(Object, boolean, File)
 	*/
-	@:overload public function getOutputClass() : Class<Dynamic>;
+	@:overload @:public public function getOutputClass() : Class<Dynamic>;
 	
 	/**
 	* Returns <code>true</code> if the <code>ImageOutputStream</code>
@@ -86,7 +86,7 @@ extern class ImageOutputStreamSpi extends javax.imageio.spi.IIOServiceProvider
 	* @return <code>true</code> if a cache file can be used by the
 	* output streams created by this service provider.
 	*/
-	@:overload public function canUseCacheFile() : Bool;
+	@:overload @:public public function canUseCacheFile() : Bool;
 	
 	/**
 	* Returns <code>true</code> if the <code>ImageOutputStream</code>
@@ -98,7 +98,7 @@ extern class ImageOutputStreamSpi extends javax.imageio.spi.IIOServiceProvider
 	* @return <code>true</code> if a cache file is needed by the
 	* output streams created by this service provider.
 	*/
-	@:overload public function needsCacheFile() : Bool;
+	@:overload @:public public function needsCacheFile() : Bool;
 	
 	/**
 	* Returns an instance of the <code>ImageOutputStream</code>
@@ -127,7 +127,7 @@ extern class ImageOutputStreamSpi extends javax.imageio.spi.IIOServiceProvider
 	*
 	* @see #getOutputClass
 	*/
-	@:overload @:abstract public function createOutputStreamInstance(output : Dynamic, useCache : Bool, cacheDir : java.io.File) : javax.imageio.stream.ImageOutputStream;
+	@:overload @:public @:abstract public function createOutputStreamInstance(output : Dynamic, useCache : Bool, cacheDir : java.io.File) : javax.imageio.stream.ImageOutputStream;
 	
 	/**
 	* Returns an instance of the <code>ImageOutputStream</code>
@@ -147,7 +147,7 @@ extern class ImageOutputStreamSpi extends javax.imageio.spi.IIOServiceProvider
 	*
 	* @see #getOutputClass()
 	*/
-	@:overload public function createOutputStreamInstance(output : Dynamic) : javax.imageio.stream.ImageOutputStream;
+	@:overload @:public public function createOutputStreamInstance(output : Dynamic) : javax.imageio.stream.ImageOutputStream;
 	
 	
 }

@@ -27,7 +27,7 @@ extern class IdResolver
 	* @param element the element to register
 	* @param idValue the value of the ID attribute
 	*/
-	@:overload public static function registerElementById(element : org.w3c.dom.Element, idValue : String) : Void;
+	@:overload @:public @:static public static function registerElementById(element : org.w3c.dom.Element, idValue : String) : Void;
 	
 	/**
 	* Method registerElementById
@@ -35,7 +35,7 @@ extern class IdResolver
 	* @param element the element to register
 	* @param id the ID attribute
 	*/
-	@:overload public static function registerElementById(element : org.w3c.dom.Element, id : org.w3c.dom.Attr) : Void;
+	@:overload @:public @:static public static function registerElementById(element : org.w3c.dom.Element, id : org.w3c.dom.Attr) : Void;
 	
 	/**
 	* Method getElementById
@@ -44,9 +44,9 @@ extern class IdResolver
 	* @param id the value of the ID
 	* @return the element obtained by the id, or null if it is not found.
 	*/
-	@:overload public static function getElementById(doc : org.w3c.dom.Document, id : String) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function getElementById(doc : org.w3c.dom.Document, id : String) : org.w3c.dom.Element;
 	
-	@:overload public static function isElement(el : org.w3c.dom.Element, id : String, els : java.NativeArray<org.w3c.dom.Element>) : Int;
+	@:overload @:public @:static public static function isElement(el : org.w3c.dom.Element, id : String, els : java.NativeArray<org.w3c.dom.Element>) : Int;
 	
 	
 }

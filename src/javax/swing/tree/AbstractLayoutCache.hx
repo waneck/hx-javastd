@@ -26,25 +26,25 @@ package javax.swing.tree;
 extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 {
 	/** Object responsible for getting the size of a node. */
-	private var nodeDimensions : javax.swing.tree.AbstractLayoutCache.AbstractLayoutCache_NodeDimensions;
+	@:protected private var nodeDimensions : javax.swing.tree.AbstractLayoutCache.AbstractLayoutCache_NodeDimensions;
 	
 	/** Model providing information. */
-	private var treeModel : javax.swing.tree.TreeModel;
+	@:protected private var treeModel : javax.swing.tree.TreeModel;
 	
 	/** Selection model. */
-	private var treeSelectionModel : javax.swing.tree.TreeSelectionModel;
+	@:protected private var treeSelectionModel : javax.swing.tree.TreeSelectionModel;
 	
 	/**
 	* True if the root node is displayed, false if its children are
 	* the highest visible nodes.
 	*/
-	private var rootVisible : Bool;
+	@:protected private var rootVisible : Bool;
 	
 	/**
 	* Height to use for each row.  If this is <= 0 the renderer will be
 	* used to determine the height for each row.
 	*/
-	private var rowHeight : Int;
+	@:protected private var rowHeight : Int;
 	
 	/**
 	* Sets the renderer that is responsible for drawing nodes in the tree
@@ -53,7 +53,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	*
 	* @param nd a <code>NodeDimensions</code> object
 	*/
-	@:overload public function setNodeDimensions(nd : javax.swing.tree.AbstractLayoutCache.AbstractLayoutCache_NodeDimensions) : Void;
+	@:overload @:public public function setNodeDimensions(nd : javax.swing.tree.AbstractLayoutCache.AbstractLayoutCache_NodeDimensions) : Void;
 	
 	/**
 	* Returns the object that renders nodes in the tree, and which is
@@ -61,7 +61,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	*
 	* @return the <code>NodeDimensions</code> object
 	*/
-	@:overload public function getNodeDimensions() : javax.swing.tree.AbstractLayoutCache.AbstractLayoutCache_NodeDimensions;
+	@:overload @:public public function getNodeDimensions() : javax.swing.tree.AbstractLayoutCache.AbstractLayoutCache_NodeDimensions;
 	
 	/**
 	* Sets the <code>TreeModel</code> that will provide the data.
@@ -69,14 +69,14 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	* @param newModel the <code>TreeModel</code> that is to
 	*          provide the data
 	*/
-	@:overload public function setModel(newModel : javax.swing.tree.TreeModel) : Void;
+	@:overload @:public public function setModel(newModel : javax.swing.tree.TreeModel) : Void;
 	
 	/**
 	* Returns the <code>TreeModel</code> that is providing the data.
 	*
 	* @return the <code>TreeModel</code> that is providing the data
 	*/
-	@:overload public function getModel() : javax.swing.tree.TreeModel;
+	@:overload @:public public function getModel() : javax.swing.tree.TreeModel;
 	
 	/**
 	* Determines whether or not the root node from
@@ -89,7 +89,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	*  description: Whether or not the root node
 	*               from the TreeModel is visible.
 	*/
-	@:overload public function setRootVisible(rootVisible : Bool) : Void;
+	@:overload @:public public function setRootVisible(rootVisible : Bool) : Void;
 	
 	/**
 	* Returns true if the root node of the tree is displayed.
@@ -97,7 +97,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	* @return true if the root node of the tree is displayed
 	* @see #rootVisible
 	*/
-	@:overload public function isRootVisible() : Bool;
+	@:overload @:public public function isRootVisible() : Bool;
 	
 	/**
 	* Sets the height of each cell.  If the specified value
@@ -109,14 +109,14 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	*        bound: true
 	*  description: The height of each cell.
 	*/
-	@:overload public function setRowHeight(rowHeight : Int) : Void;
+	@:overload @:public public function setRowHeight(rowHeight : Int) : Void;
 	
 	/**
 	* Returns the height of each row.  If the returned value is less than
 	* or equal to 0 the height for each row is determined by the
 	* renderer.
 	*/
-	@:overload public function getRowHeight() : Int;
+	@:overload @:public public function getRowHeight() : Int;
 	
 	/**
 	* Sets the <code>TreeSelectionModel</code> used to manage the
@@ -124,21 +124,21 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	*
 	* @param newLSM  the new <code>TreeSelectionModel</code>
 	*/
-	@:overload public function setSelectionModel(newLSM : javax.swing.tree.TreeSelectionModel) : Void;
+	@:overload @:public public function setSelectionModel(newLSM : javax.swing.tree.TreeSelectionModel) : Void;
 	
 	/**
 	* Returns the model used to maintain the selection.
 	*
 	* @return the <code>treeSelectionModel</code>
 	*/
-	@:overload public function getSelectionModel() : javax.swing.tree.TreeSelectionModel;
+	@:overload @:public public function getSelectionModel() : javax.swing.tree.TreeSelectionModel;
 	
 	/**
 	* Returns the preferred height.
 	*
 	* @return the preferred height
 	*/
-	@:overload public function getPreferredHeight() : Int;
+	@:overload @:public public function getPreferredHeight() : Int;
 	
 	/**
 	* Returns the preferred width for the passed in region.
@@ -153,12 +153,12 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	* @param bounds the region being queried
 	* @return the preferred width for the passed in region
 	*/
-	@:overload public function getPreferredWidth(bounds : java.awt.Rectangle) : Int;
+	@:overload @:public public function getPreferredWidth(bounds : java.awt.Rectangle) : Int;
 	
 	/**
 	* Returns true if the value identified by row is currently expanded.
 	*/
-	@:overload @:abstract public function isExpanded(path : javax.swing.tree.TreePath) : Bool;
+	@:overload @:public @:abstract public function isExpanded(path : javax.swing.tree.TreePath) : Bool;
 	
 	/**
 	* Returns a rectangle giving the bounds needed to draw path.
@@ -168,7 +168,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	*          available space
 	* @return a <code>Rectangle</code> object specifying the space to be used
 	*/
-	@:overload @:abstract public function getBounds(path : javax.swing.tree.TreePath, placeIn : java.awt.Rectangle) : java.awt.Rectangle;
+	@:overload @:public @:abstract public function getBounds(path : javax.swing.tree.TreePath, placeIn : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	/**
 	* Returns the path for passed in row.  If row is not visible
@@ -177,7 +177,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	* @param row  the row being queried
 	* @return the <code>TreePath</code> for the given row
 	*/
-	@:overload @:abstract public function getPathForRow(row : Int) : javax.swing.tree.TreePath;
+	@:overload @:public @:abstract public function getPathForRow(row : Int) : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns the row that the last item identified in path is visible
@@ -188,7 +188,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	* @return the row where the last item in path is visible or -1
 	*         if any elements in path aren't currently visible
 	*/
-	@:overload @:abstract public function getRowForPath(path : javax.swing.tree.TreePath) : Int;
+	@:overload @:public @:abstract public function getRowForPath(path : javax.swing.tree.TreePath) : Int;
 	
 	/**
 	* Returns the path to the node that is closest to x,y.  If
@@ -202,7 +202,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	* @param y the vertical component of the desired location
 	* @return the <code>TreePath</code> closest to the specified point
 	*/
-	@:overload @:abstract public function getPathClosestTo(x : Int, y : Int) : javax.swing.tree.TreePath;
+	@:overload @:public @:abstract public function getPathClosestTo(x : Int, y : Int) : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns an <code>Enumerator</code> that increments over the visible
@@ -215,7 +215,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	* @param path the starting location for the enumeration
 	* @return the <code>Enumerator</code> starting at the desired location
 	*/
-	@:overload @:abstract public function getVisiblePathsFrom(path : javax.swing.tree.TreePath) : java.util.Enumeration<javax.swing.tree.TreePath>;
+	@:overload @:public @:abstract public function getVisiblePathsFrom(path : javax.swing.tree.TreePath) : java.util.Enumeration<javax.swing.tree.TreePath>;
 	
 	/**
 	* Returns the number of visible children for row.
@@ -223,7 +223,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	* @param path  the path being queried
 	* @return the number of visible children for the specified path
 	*/
-	@:overload @:abstract public function getVisibleChildCount(path : javax.swing.tree.TreePath) : Int;
+	@:overload @:public @:abstract public function getVisibleChildCount(path : javax.swing.tree.TreePath) : Int;
 	
 	/**
 	* Marks the path <code>path</code> expanded state to
@@ -232,7 +232,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	* @param path  the path being expanded or collapsed
 	* @param isExpanded true if the path should be expanded, false otherwise
 	*/
-	@:overload @:abstract public function setExpandedState(path : javax.swing.tree.TreePath, isExpanded : Bool) : Void;
+	@:overload @:public @:abstract public function setExpandedState(path : javax.swing.tree.TreePath, isExpanded : Bool) : Void;
 	
 	/**
 	* Returns true if the path is expanded, and visible.
@@ -240,20 +240,20 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	* @param path  the path being queried
 	* @return true if the path is expanded and visible, false otherwise
 	*/
-	@:overload @:abstract public function getExpandedState(path : javax.swing.tree.TreePath) : Bool;
+	@:overload @:public @:abstract public function getExpandedState(path : javax.swing.tree.TreePath) : Bool;
 	
 	/**
 	* Number of rows being displayed.
 	*
 	* @return the number of rows being displayed
 	*/
-	@:overload @:abstract public function getRowCount() : Int;
+	@:overload @:public @:abstract public function getRowCount() : Int;
 	
 	/**
 	* Informs the <code>TreeState</code> that it needs to recalculate
 	* all the sizes it is referencing.
 	*/
-	@:overload @:abstract public function invalidateSizes() : Void;
+	@:overload @:public @:abstract public function invalidateSizes() : Void;
 	
 	/**
 	* Instructs the <code>LayoutCache</code> that the bounds for
@@ -261,7 +261,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	*
 	* @param path the path being updated
 	*/
-	@:overload @:abstract public function invalidatePathBounds(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public @:abstract public function invalidatePathBounds(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* <p>
@@ -278,7 +278,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	*
 	* @param e  the <code>TreeModelEvent</code>
 	*/
-	@:overload @:abstract public function treeNodesChanged(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload @:public @:abstract public function treeNodesChanged(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	/**
 	* <p>Invoked after nodes have been inserted into the tree.</p>
@@ -289,7 +289,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	*
 	* @param e the <code>TreeModelEvent</code>
 	*/
-	@:overload @:abstract public function treeNodesInserted(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload @:public @:abstract public function treeNodesInserted(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	/**
 	* <p>Invoked after nodes have been removed from the tree.  Note that
@@ -303,7 +303,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	*
 	* @param e the <code>TreeModelEvent</code>
 	*/
-	@:overload @:abstract public function treeNodesRemoved(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload @:public @:abstract public function treeNodesRemoved(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	/**
 	* <p>Invoked after the tree has drastically changed structure from a
@@ -317,7 +317,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	*
 	* @param e the <code>TreeModelEvent</code>
 	*/
-	@:overload @:abstract public function treeStructureChanged(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload @:public @:abstract public function treeStructureChanged(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	/**
 	* Returns the rows that the <code>TreePath</code> instances in
@@ -333,7 +333,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	*          <code>TreePath</code> is displayed; if <code>paths</code>
 	*          is <code>null</code>, <code>null</code> is returned
 	*/
-	@:overload public function getRowsForPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : java.NativeArray<Int>;
+	@:overload @:public public function getRowsForPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : java.NativeArray<Int>;
 	
 	/**
 	* Returns, by reference in <code>placeIn</code>,
@@ -352,12 +352,12 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	* @return a <code>Rectangle</code> containing the node dimensions,
 	*          or <code>null</code> if node has no dimension
 	*/
-	@:overload private function getNodeDimensions(value : Dynamic, row : Int, depth : Int, expanded : Bool, placeIn : java.awt.Rectangle) : java.awt.Rectangle;
+	@:overload @:protected private function getNodeDimensions(value : Dynamic, row : Int, depth : Int, expanded : Bool, placeIn : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	/**
 	* Returns true if the height of each row is a fixed size.
 	*/
-	@:overload private function isFixedRowHeight() : Bool;
+	@:overload @:protected private function isFixedRowHeight() : Bool;
 	
 	
 }
@@ -383,7 +383,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	* @return a <code>Rectangle</code> containing the node dimensions,
 	*              or <code>null</code> if node has no dimension
 	*/
-	@:overload @:abstract public function getNodeDimensions(value : Dynamic, row : Int, depth : Int, expanded : Bool, bounds : java.awt.Rectangle) : java.awt.Rectangle;
+	@:overload @:public @:abstract public function getNodeDimensions(value : Dynamic, row : Int, depth : Int, expanded : Bool, bounds : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	
 }

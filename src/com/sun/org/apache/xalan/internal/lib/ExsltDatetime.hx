@@ -36,7 +36,7 @@ extern class ExsltDatetime
 	* Universal Time or a + or - followed by the difference between the difference from UTC
 	* represented as hh:mm.
 	*/
-	@:overload public static function dateTime() : String;
+	@:overload @:public @:static public static function dateTime() : String;
 	
 	/**
 	* The date:date function returns the date specified in the date/time string given
@@ -59,12 +59,12 @@ extern class ExsltDatetime
 	* is specified and it does not specify a time zone, then the date string format must not include
 	* a time zone.
 	*/
-	@:overload public static function date(datetimeIn : String) : String;
+	@:overload @:public @:static public static function date(datetimeIn : String) : String;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function date() : String;
+	@:overload @:public @:static public static function date() : String;
 	
 	/**
 	* The date:time function returns the time specified in the date/time string given
@@ -88,12 +88,12 @@ extern class ExsltDatetime
 	* is specified and it does not specify a time zone, then the time string format must not include
 	* a time zone.
 	*/
-	@:overload public static function time(timeIn : String) : String;
+	@:overload @:public @:static public static function time(timeIn : String) : String;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function time() : String;
+	@:overload @:public @:static public static function time() : String;
 	
 	/**
 	* The date:year function returns the year of a date as a number. If no
@@ -110,12 +110,12 @@ extern class ExsltDatetime
 	*   xs:gYear (CCYY)
 	* If the date/time string is not in one of these formats, then NaN is returned.
 	*/
-	@:overload public static function year(datetimeIn : String) : Float;
+	@:overload @:public @:static public static function year(datetimeIn : String) : Float;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function year() : Float;
+	@:overload @:public @:static public static function year() : Float;
 	
 	/**
 	* The date:month-in-year function returns the month of a date as a number. If no argument
@@ -133,12 +133,12 @@ extern class ExsltDatetime
 	*    xs:gMonthDay (--MM-DD)
 	* If the date/time string is not in one of these formats, then NaN is returned.
 	*/
-	@:overload public static function monthInYear(datetimeIn : String) : Float;
+	@:overload @:public @:static public static function monthInYear(datetimeIn : String) : Float;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function monthInYear() : Float;
+	@:overload @:public @:static public static function monthInYear() : Float;
 	
 	/**
 	* The date:week-in-year function returns the week of the year as a number. If no argument
@@ -153,12 +153,12 @@ extern class ExsltDatetime
 	*    xs:date (CCYY-MM-DD)
 	* If the date/time string is not in one of these formats, then NaN is returned.
 	*/
-	@:overload public static function weekInYear(datetimeIn : String) : Float;
+	@:overload @:public @:static public static function weekInYear(datetimeIn : String) : Float;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function weekInYear() : Float;
+	@:overload @:public @:static public static function weekInYear() : Float;
 	
 	/**
 	* The date:day-in-year function returns the day of a date in a year
@@ -173,12 +173,12 @@ extern class ExsltDatetime
 	*     xs:date (CCYY-MM-DD)
 	* If the date/time string is not in one of these formats, then NaN is returned.
 	*/
-	@:overload public static function dayInYear(datetimeIn : String) : Float;
+	@:overload @:public @:static public static function dayInYear(datetimeIn : String) : Float;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function dayInYear() : Float;
+	@:overload @:public @:static public static function dayInYear() : Float;
 	
 	/**
 	* The date:day-in-month function returns the day of a date as a number.
@@ -195,12 +195,12 @@ extern class ExsltDatetime
 	*      xs:gDay (---DD)
 	* If the date/time string is not in one of these formats, then NaN is returned.
 	*/
-	@:overload public static function dayInMonth(datetimeIn : String) : Float;
+	@:overload @:public @:static public static function dayInMonth(datetimeIn : String) : Float;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function dayInMonth() : Float;
+	@:overload @:public @:static public static function dayInMonth() : Float;
 	
 	/**
 	* The date:day-of-week-in-month function returns the day-of-the-week
@@ -216,12 +216,12 @@ extern class ExsltDatetime
 	*      xs:date (CCYY-MM-DD)
 	* If the date/time string is not in one of these formats, then NaN is returned.
 	*/
-	@:overload public static function dayOfWeekInMonth(datetimeIn : String) : Float;
+	@:overload @:public @:static public static function dayOfWeekInMonth(datetimeIn : String) : Float;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function dayOfWeekInMonth() : Float;
+	@:overload @:public @:static public static function dayOfWeekInMonth() : Float;
 	
 	/**
 	* The date:day-in-week function returns the day of the week given in a
@@ -237,12 +237,12 @@ extern class ExsltDatetime
 	* If the date/time string is not in one of these formats, then NaN is returned.
 	The numbering of days of the week starts at 1 for Sunday, 2 for Monday and so on up to 7 for Saturday.
 	*/
-	@:overload public static function dayInWeek(datetimeIn : String) : Float;
+	@:overload @:public @:static public static function dayInWeek(datetimeIn : String) : Float;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function dayInWeek() : Float;
+	@:overload @:public @:static public static function dayInWeek() : Float;
 	
 	/**
 	* The date:hour-in-day function returns the hour of the day as a number.
@@ -257,12 +257,12 @@ extern class ExsltDatetime
 	*     xs:time (hh:mm:ss)
 	* If the date/time string is not in one of these formats, then NaN is returned.
 	*/
-	@:overload public static function hourInDay(datetimeIn : String) : Float;
+	@:overload @:public @:static public static function hourInDay(datetimeIn : String) : Float;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function hourInDay() : Float;
+	@:overload @:public @:static public static function hourInDay() : Float;
 	
 	/**
 	* The date:minute-in-hour function returns the minute of the hour
@@ -277,12 +277,12 @@ extern class ExsltDatetime
 	*      xs:time (hh:mm:ss)
 	* If the date/time string is not in one of these formats, then NaN is returned.
 	*/
-	@:overload public static function minuteInHour(datetimeIn : String) : Float;
+	@:overload @:public @:static public static function minuteInHour(datetimeIn : String) : Float;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function minuteInHour() : Float;
+	@:overload @:public @:static public static function minuteInHour() : Float;
 	
 	/**
 	* The date:second-in-minute function returns the second of the minute
@@ -297,12 +297,12 @@ extern class ExsltDatetime
 	*      xs:time (hh:mm:ss)
 	* If the date/time string is not in one of these formats, then NaN is returned.
 	*/
-	@:overload public static function secondInMinute(datetimeIn : String) : Float;
+	@:overload @:public @:static public static function secondInMinute(datetimeIn : String) : Float;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function secondInMinute() : Float;
+	@:overload @:public @:static public static function secondInMinute() : Float;
 	
 	/**
 	* The date:leap-year function returns true if the year given in a date
@@ -319,12 +319,12 @@ extern class ExsltDatetime
 	*    xs:gYear (CCYY)
 	* If the date/time string is not in one of these formats, then NaN is returned.
 	*/
-	@:overload public static function leapYear(datetimeIn : String) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public @:static public static function leapYear(datetimeIn : String) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function leapYear() : Bool;
+	@:overload @:public @:static public static function leapYear() : Bool;
 	
 	/**
 	* The date:month-name function returns the full name of the month of a date.
@@ -345,12 +345,12 @@ extern class ExsltDatetime
 	* 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November'
 	* or 'December'.
 	*/
-	@:overload public static function monthName(datetimeIn : String) : String;
+	@:overload @:public @:static public static function monthName(datetimeIn : String) : String;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function monthName() : String;
+	@:overload @:public @:static public static function monthName() : String;
 	
 	/**
 	* The date:month-abbreviation function returns the abbreviation of the month of
@@ -372,12 +372,12 @@ extern class ExsltDatetime
 	* An implementation of this extension function in the EXSLT date namespace must conform
 	* to the behaviour described in this document.
 	*/
-	@:overload public static function monthAbbreviation(datetimeIn : String) : String;
+	@:overload @:public @:static public static function monthAbbreviation(datetimeIn : String) : String;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function monthAbbreviation() : String;
+	@:overload @:public @:static public static function monthAbbreviation() : String;
 	
 	/**
 	* The date:day-name function returns the full name of the day of the week
@@ -397,12 +397,12 @@ extern class ExsltDatetime
 	* An implementation of this extension function in the EXSLT date namespace must conform
 	* to the behaviour described in this document.
 	*/
-	@:overload public static function dayName(datetimeIn : String) : String;
+	@:overload @:public @:static public static function dayName(datetimeIn : String) : String;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function dayName() : String;
+	@:overload @:public @:static public static function dayName() : String;
 	
 	/**
 	* The date:day-abbreviation function returns the abbreviation of the day
@@ -422,12 +422,12 @@ extern class ExsltDatetime
 	* An implementation of this extension function in the EXSLT date namespace must conform
 	* to the behaviour described in this document.
 	*/
-	@:overload public static function dayAbbreviation(datetimeIn : String) : String;
+	@:overload @:public @:static public static function dayAbbreviation(datetimeIn : String) : String;
 	
 	/**
 	* See above.
 	*/
-	@:overload public static function dayAbbreviation() : String;
+	@:overload @:public @:static public static function dayAbbreviation() : String;
 	
 	/**
 	* The date:format-date function formats a date/time according to a pattern.
@@ -465,7 +465,7 @@ extern class ExsltDatetime
 	*
 	* The author is Helg Bredow (helg.bredow@kalido.com)
 	*/
-	@:overload public static function formatDate(dateTime : String, pattern : String) : String;
+	@:overload @:public @:static public static function formatDate(dateTime : String, pattern : String) : String;
 	
 	
 }

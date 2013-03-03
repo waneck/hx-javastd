@@ -64,28 +64,28 @@ package com.sun.org.apache.xerces.internal.impl.dtd;
 extern class XMLEntityDecl
 {
 	/** name */
-	public var name : String;
+	@:public public var name : String;
 	
 	/** publicId */
-	public var publicId : String;
+	@:public public var publicId : String;
 	
 	/** systemId */
-	public var systemId : String;
+	@:public public var systemId : String;
 	
 	/** baseSystemId */
-	public var baseSystemId : String;
+	@:public public var baseSystemId : String;
 	
 	/** notation */
-	public var notation : String;
+	@:public public var notation : String;
 	
 	/** isPE */
-	public var isPE : Bool;
+	@:public public var isPE : Bool;
 	
 	/** <strong>Note:</strong> flag of where the entity is defined, not whether it is a external entity */
-	public var inExternal : Bool;
+	@:public public var inExternal : Bool;
 	
 	/** Value. */
-	public var value : String;
+	@:public public var value : String;
 	
 	/**
 	* setValues
@@ -98,7 +98,7 @@ extern class XMLEntityDecl
 	* @param isPE
 	* @param inExternal
 	*/
-	@:overload public function setValues(name : String, publicId : String, systemId : String, baseSystemId : String, notation : String, isPE : Bool, inExternal : Bool) : Void;
+	@:overload @:public public function setValues(name : String, publicId : String, systemId : String, baseSystemId : String, notation : String, isPE : Bool, inExternal : Bool) : Void;
 	
 	/**
 	* setValues
@@ -112,12 +112,12 @@ extern class XMLEntityDecl
 	* @param isPE
 	* @param inExternal
 	*/
-	@:overload public function setValues(name : String, publicId : String, systemId : String, baseSystemId : String, notation : String, value : String, isPE : Bool, inExternal : Bool) : Void;
+	@:overload @:public public function setValues(name : String, publicId : String, systemId : String, baseSystemId : String, notation : String, value : String, isPE : Bool, inExternal : Bool) : Void;
 	
 	/**
 	* clear
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

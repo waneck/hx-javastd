@@ -69,7 +69,7 @@ extern class LocalVariable implements com.sun.org.apache.bcel.internal.Constants
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use copy() for a physical copy.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.LocalVariable) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.LocalVariable) : Void;
 	
 	/**
 	* @param start_pc Range in which the variable
@@ -79,7 +79,7 @@ extern class LocalVariable implements com.sun.org.apache.bcel.internal.Constants
 	* @param index Variable is `index'th local variable on the method's frame
 	* @param constant_pool Array of constants
 	*/
-	@:overload public function new(start_pc : Int, length : Int, name_index : Int, signature_index : Int, index : Int, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function new(start_pc : Int, length : Int, name_index : Int, signature_index : Int, index : Int, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -88,7 +88,7 @@ extern class LocalVariable implements com.sun.org.apache.bcel.internal.Constants
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump local variable to file stream in binary format.
@@ -96,87 +96,87 @@ extern class LocalVariable implements com.sun.org.apache.bcel.internal.Constants
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Constant pool used by this object.
 	*/
-	@:overload @:final public function getConstantPool() : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
+	@:overload @:public @:final public function getConstantPool() : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
 	
 	/**
 	* @return Variable is valid within getStartPC() .. getStartPC()+getLength()
 	*/
-	@:overload @:final public function getLength() : Int;
+	@:overload @:public @:final public function getLength() : Int;
 	
 	/**
 	* @return Variable name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	/**
 	* @return Index in constant pool of variable name.
 	*/
-	@:overload @:final public function getNameIndex() : Int;
+	@:overload @:public @:final public function getNameIndex() : Int;
 	
 	/**
 	* @return Signature.
 	*/
-	@:overload @:final public function getSignature() : String;
+	@:overload @:public @:final public function getSignature() : String;
 	
 	/**
 	* @return Index in constant pool of variable signature.
 	*/
-	@:overload @:final public function getSignatureIndex() : Int;
+	@:overload @:public @:final public function getSignatureIndex() : Int;
 	
 	/**
 	* @return index of register where variable is stored
 	*/
-	@:overload @:final public function getIndex() : Int;
+	@:overload @:public @:final public function getIndex() : Int;
 	
 	/**
 	* @return Start of range where he variable is valid
 	*/
-	@:overload @:final public function getStartPC() : Int;
+	@:overload @:public @:final public function getStartPC() : Int;
 	
 	/**
 	* @param constant_pool Constant pool to be used for this object.
 	*/
-	@:overload @:final public function setConstantPool(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public @:final public function setConstantPool(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* @param length.
 	*/
-	@:overload @:final public function setLength(length : Int) : Void;
+	@:overload @:public @:final public function setLength(length : Int) : Void;
 	
 	/**
 	* @param name_index.
 	*/
-	@:overload @:final public function setNameIndex(name_index : Int) : Void;
+	@:overload @:public @:final public function setNameIndex(name_index : Int) : Void;
 	
 	/**
 	* @param signature_index.
 	*/
-	@:overload @:final public function setSignatureIndex(signature_index : Int) : Void;
+	@:overload @:public @:final public function setSignatureIndex(signature_index : Int) : Void;
 	
 	/**
 	* @param index.
 	*/
-	@:overload @:final public function setIndex(index : Int) : Void;
+	@:overload @:public @:final public function setIndex(index : Int) : Void;
 	
 	/**
 	* @param start_pc Specify range where the local variable is valid.
 	*/
-	@:overload @:final public function setStartPC(start_pc : Int) : Void;
+	@:overload @:public @:final public function setStartPC(start_pc : Int) : Void;
 	
 	/**
 	* @return string representation.
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/**
 	* @return deep copy of this object
 	*/
-	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.LocalVariable;
+	@:overload @:public public function copy() : com.sun.org.apache.bcel.internal.classfile.LocalVariable;
 	
 	
 }

@@ -23,13 +23,13 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class When extends com.sun.org.apache.xalan.internal.xsltc.compiler.Instruction
 {
-	@:overload public function display(indent : Int) : Void;
+	@:overload @:public override public function display(indent : Int) : Void;
 	
-	@:overload public function getTest() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
+	@:overload @:public public function getTest() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
 	
-	@:overload public function ignore() : Bool;
+	@:overload @:public public function ignore() : Bool;
 	
-	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Type-check this when element. The test should always be type checked,
@@ -38,13 +38,13 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* the support of a non-available element, and the <xsl:when> body contains
 	* this non-available element.
 	*/
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* This method should never be called. An Otherwise object will explicitly
 	* translate the "test" expression and and contents of this element.
 	*/
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

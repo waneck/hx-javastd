@@ -27,7 +27,7 @@ package com.sun.org.apache.xalan.internal.xsltc.runtime;
 */
 extern class InternalRuntimeError extends java.lang.Error
 {
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

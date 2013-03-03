@@ -28,7 +28,7 @@ extern class ImmutableDescriptor implements javax.management.Descriptor
 	/**
 	* An empty descriptor.
 	*/
-	public static var EMPTY_DESCRIPTOR(default, null) : javax.management.ImmutableDescriptor;
+	@:public @:static @:final public static var EMPTY_DESCRIPTOR(default, null) : javax.management.ImmutableDescriptor;
 	
 	/**
 	* Construct a descriptor containing the given fields and values.
@@ -38,7 +38,7 @@ extern class ImmutableDescriptor implements javax.management.Descriptor
 	* if a field name is null or empty, or if the same field name
 	* appears more than once.
 	*/
-	@:overload public function new(fieldNames : java.NativeArray<String>, fieldValues : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(fieldNames : java.NativeArray<String>, fieldValues : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Construct a descriptor containing the given fields.  Each String
@@ -52,7 +52,7 @@ extern class ImmutableDescriptor implements javax.management.Descriptor
 	* more than once, or if one of the strings does not contain
 	* an {@code =} character.
 	*/
-	@:overload public function new(fields : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(fields : java.NativeArray<String>) : Void;
 	
 	/**
 	* <p>Construct a descriptor where the names and values of the fields
@@ -63,7 +63,7 @@ extern class ImmutableDescriptor implements javax.management.Descriptor
 	* more than once (which can happen because field names are not case
 	* sensitive).
 	*/
-	@:overload public function new(fields : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function new(fields : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* <p>Return an {@code ImmutableDescriptor} whose contents are the union of
@@ -96,15 +96,15 @@ extern class ImmutableDescriptor implements javax.management.Descriptor
 	* the same elements.  Object array values are considered the same if
 	* {@link Arrays#deepEquals(Object[],Object[])} returns true.
 	*/
-	@:overload public static function union(descriptors : java.NativeArray<javax.management.Descriptor>) : javax.management.ImmutableDescriptor;
+	@:overload @:public @:static public static function union(descriptors : java.NativeArray<javax.management.Descriptor>) : javax.management.ImmutableDescriptor;
 	
-	@:overload @:final public function getFieldValue(fieldName : String) : Dynamic;
+	@:overload @:public @:final public function getFieldValue(fieldName : String) : Dynamic;
 	
-	@:overload @:final public function getFields() : java.NativeArray<String>;
+	@:overload @:public @:final public function getFields() : java.NativeArray<String>;
 	
-	@:overload @:final public function getFieldValues(fieldNames : java.NativeArray<String>) : java.NativeArray<Dynamic>;
+	@:overload @:public @:final public function getFieldValues(fieldNames : java.NativeArray<String>) : java.NativeArray<Dynamic>;
 	
-	@:overload @:final public function getFieldNames() : java.NativeArray<String>;
+	@:overload @:public @:final public function getFieldNames() : java.NativeArray<String>;
 	
 	/**
 	* Compares this descriptor to the given object.  The objects are equal if
@@ -128,7 +128,7 @@ extern class ImmutableDescriptor implements javax.management.Descriptor
 	* otherwise.
 	*
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* <p>Returns the hash code value for this descriptor.  The hash
@@ -150,9 +150,9 @@ extern class ImmutableDescriptor implements javax.management.Descriptor
 	* @return A hash code value for this object.
 	*
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns true if all of the fields have legal values given their
@@ -165,7 +165,7 @@ extern class ImmutableDescriptor implements javax.management.Descriptor
 	* The method returns false if the descriptor is not valid, but throws
 	* this exception if the attempt to determine validity fails.
 	*/
-	@:overload public function isValid() : Bool;
+	@:overload @:public public function isValid() : Bool;
 	
 	/**
 	* <p>Returns a descriptor which is equal to this descriptor.
@@ -181,7 +181,7 @@ extern class ImmutableDescriptor implements javax.management.Descriptor
 	* If the descriptor construction fails for any reason, this exception will
 	* be thrown.
 	*/
-	@:overload public function clone() : javax.management.Descriptor;
+	@:overload @:public public function clone() : javax.management.Descriptor;
 	
 	/**
 	* This operation is unsupported since this class is immutable.  If
@@ -192,7 +192,7 @@ extern class ImmutableDescriptor implements javax.management.Descriptor
 	* either an exception is thrown because of illegal parameters, or
 	* there is no effect.
 	*/
-	@:overload @:final public function setFields(fieldNames : java.NativeArray<String>, fieldValues : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public @:final public function setFields(fieldNames : java.NativeArray<String>, fieldValues : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* This operation is unsupported since this class is immutable.  If
@@ -203,7 +203,7 @@ extern class ImmutableDescriptor implements javax.management.Descriptor
 	* either an exception is thrown because of illegal parameters, or
 	* there is no effect.
 	*/
-	@:overload @:final public function setField(fieldName : String, fieldValue : Dynamic) : Void;
+	@:overload @:public @:final public function setField(fieldName : String, fieldValue : Dynamic) : Void;
 	
 	/**
 	* Removes a field from the descriptor.
@@ -216,7 +216,7 @@ extern class ImmutableDescriptor implements javax.management.Descriptor
 	* exists and the descriptor is immutable.  The wrapped exception will
 	* be an {@link UnsupportedOperationException}.
 	*/
-	@:overload @:final public function removeField(fieldName : String) : Void;
+	@:overload @:public @:final public function removeField(fieldName : String) : Void;
 	
 	
 }

@@ -35,27 +35,27 @@ package javax.swing.plaf.metal;
 */
 @:require(java4) @:internal extern class MetalTitlePane extends javax.swing.JComponent
 {
-	@:overload public function new(root : javax.swing.JRootPane, ui : javax.swing.plaf.metal.MetalRootPaneUI) : Void;
+	@:overload @:public public function new(root : javax.swing.JRootPane, ui : javax.swing.plaf.metal.MetalRootPaneUI) : Void;
 	
 	/**
 	* Returns the <code>JRootPane</code> this was created for.
 	*/
-	@:overload public function getRootPane() : javax.swing.JRootPane;
+	@:overload @:public override public function getRootPane() : javax.swing.JRootPane;
 	
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
-	@:overload override public function removeNotify() : Void;
+	@:overload @:public override public function removeNotify() : Void;
 	
 	/**
 	* Returns the <code>JMenuBar</code> displaying the appropriate
 	* system menu items.
 	*/
-	@:overload private function createMenuBar() : javax.swing.JMenuBar;
+	@:overload @:protected private function createMenuBar() : javax.swing.JMenuBar;
 	
 	/**
 	* Renders the TitlePane.
 	*/
-	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	
 }
@@ -64,9 +64,9 @@ package javax.swing.plaf.metal;
 */
 @:native('javax$swing$plaf$metal$MetalTitlePane$CloseAction') @:internal extern class MetalTitlePane_CloseAction extends javax.swing.AbstractAction
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -75,9 +75,9 @@ package javax.swing.plaf.metal;
 */
 @:native('javax$swing$plaf$metal$MetalTitlePane$IconifyAction') @:internal extern class MetalTitlePane_IconifyAction extends javax.swing.AbstractAction
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -86,9 +86,9 @@ package javax.swing.plaf.metal;
 */
 @:native('javax$swing$plaf$metal$MetalTitlePane$RestoreAction') @:internal extern class MetalTitlePane_RestoreAction extends javax.swing.AbstractAction
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -97,9 +97,9 @@ package javax.swing.plaf.metal;
 */
 @:native('javax$swing$plaf$metal$MetalTitlePane$MaximizeAction') @:internal extern class MetalTitlePane_MaximizeAction extends javax.swing.AbstractAction
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -110,25 +110,25 @@ package javax.swing.plaf.metal;
 */
 @:native('javax$swing$plaf$metal$MetalTitlePane$SystemMenuBar') @:internal extern class MetalTitlePane_SystemMenuBar extends javax.swing.JMenuBar
 {
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	
 }
 @:native('javax$swing$plaf$metal$MetalTitlePane$TitlePaneLayout') @:internal extern class MetalTitlePane_TitlePaneLayout implements java.awt.LayoutManager
 {
-	@:overload public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
 	
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
-	@:overload public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function layoutContainer(c : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(c : java.awt.Container) : Void;
 	
 	
 }
@@ -138,7 +138,7 @@ package javax.swing.plaf.metal;
 */
 @:native('javax$swing$plaf$metal$MetalTitlePane$PropertyChangeHandler') @:internal extern class MetalTitlePane_PropertyChangeHandler implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(pce : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(pce : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -147,9 +147,9 @@ package javax.swing.plaf.metal;
 */
 @:native('javax$swing$plaf$metal$MetalTitlePane$WindowHandler') @:internal extern class MetalTitlePane_WindowHandler extends java.awt.event.WindowAdapter
 {
-	@:overload public function windowActivated(ev : java.awt.event.WindowEvent) : Void;
+	@:overload @:public override public function windowActivated(ev : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowDeactivated(ev : java.awt.event.WindowEvent) : Void;
+	@:overload @:public override public function windowDeactivated(ev : java.awt.event.WindowEvent) : Void;
 	
 	
 }

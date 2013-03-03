@@ -25,13 +25,13 @@ package com.sun.tools.internal.xjc.generator.bean.field;
 */
 extern class UnboxedField extends com.sun.tools.internal.xjc.generator.bean.field.AbstractFieldWithVar
 {
-	@:overload private function new(outline : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : Void;
+	@:overload @:protected private function new(outline : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : Void;
 	
-	@:overload override private function getType(aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
+	@:overload @:protected override private function getType(aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
 	
-	@:overload override private function getFieldType() : com.sun.codemodel.internal.JType;
+	@:overload @:protected override private function getFieldType() : com.sun.codemodel.internal.JType;
 	
-	@:overload override public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.outline.FieldAccessor;
+	@:overload @:public override public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.outline.FieldAccessor;
 	
 	
 }

@@ -34,167 +34,167 @@ package com.sun.media.sound;
 */
 extern class DLSModulator
 {
-	public static var CONN_DST_NONE(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_NONE(default, null) : Int;
 	
-	public static var CONN_DST_GAIN(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_GAIN(default, null) : Int;
 	
-	public static var CONN_DST_PITCH(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_PITCH(default, null) : Int;
 	
-	public static var CONN_DST_PAN(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_PAN(default, null) : Int;
 	
-	public static var CONN_DST_LFO_FREQUENCY(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_LFO_FREQUENCY(default, null) : Int;
 	
-	public static var CONN_DST_LFO_STARTDELAY(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_LFO_STARTDELAY(default, null) : Int;
 	
-	public static var CONN_DST_EG1_ATTACKTIME(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_EG1_ATTACKTIME(default, null) : Int;
 	
-	public static var CONN_DST_EG1_DECAYTIME(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_EG1_DECAYTIME(default, null) : Int;
 	
-	public static var CONN_DST_EG1_RELEASETIME(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_EG1_RELEASETIME(default, null) : Int;
 	
-	public static var CONN_DST_EG1_SUSTAINLEVEL(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_EG1_SUSTAINLEVEL(default, null) : Int;
 	
-	public static var CONN_DST_EG2_ATTACKTIME(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_EG2_ATTACKTIME(default, null) : Int;
 	
-	public static var CONN_DST_EG2_DECAYTIME(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_EG2_DECAYTIME(default, null) : Int;
 	
-	public static var CONN_DST_EG2_RELEASETIME(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_EG2_RELEASETIME(default, null) : Int;
 	
-	public static var CONN_DST_EG2_SUSTAINLEVEL(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_EG2_SUSTAINLEVEL(default, null) : Int;
 	
-	public static var CONN_DST_KEYNUMBER(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_KEYNUMBER(default, null) : Int;
 	
-	public static var CONN_DST_LEFT(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_LEFT(default, null) : Int;
 	
-	public static var CONN_DST_RIGHT(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_RIGHT(default, null) : Int;
 	
-	public static var CONN_DST_CENTER(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_CENTER(default, null) : Int;
 	
-	public static var CONN_DST_LEFTREAR(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_LEFTREAR(default, null) : Int;
 	
-	public static var CONN_DST_RIGHTREAR(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_RIGHTREAR(default, null) : Int;
 	
-	public static var CONN_DST_LFE_CHANNEL(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_LFE_CHANNEL(default, null) : Int;
 	
-	public static var CONN_DST_CHORUS(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_CHORUS(default, null) : Int;
 	
-	public static var CONN_DST_REVERB(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_REVERB(default, null) : Int;
 	
-	public static var CONN_DST_VIB_FREQUENCY(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_VIB_FREQUENCY(default, null) : Int;
 	
-	public static var CONN_DST_VIB_STARTDELAY(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_VIB_STARTDELAY(default, null) : Int;
 	
-	public static var CONN_DST_EG1_DELAYTIME(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_EG1_DELAYTIME(default, null) : Int;
 	
-	public static var CONN_DST_EG1_HOLDTIME(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_EG1_HOLDTIME(default, null) : Int;
 	
-	public static var CONN_DST_EG1_SHUTDOWNTIME(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_EG1_SHUTDOWNTIME(default, null) : Int;
 	
-	public static var CONN_DST_EG2_DELAYTIME(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_EG2_DELAYTIME(default, null) : Int;
 	
-	public static var CONN_DST_EG2_HOLDTIME(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_EG2_HOLDTIME(default, null) : Int;
 	
-	public static var CONN_DST_FILTER_CUTOFF(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_FILTER_CUTOFF(default, null) : Int;
 	
-	public static var CONN_DST_FILTER_Q(default, null) : Int;
+	@:public @:static @:final public static var CONN_DST_FILTER_Q(default, null) : Int;
 	
-	public static var CONN_SRC_NONE(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_NONE(default, null) : Int;
 	
-	public static var CONN_SRC_LFO(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_LFO(default, null) : Int;
 	
-	public static var CONN_SRC_KEYONVELOCITY(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_KEYONVELOCITY(default, null) : Int;
 	
-	public static var CONN_SRC_KEYNUMBER(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_KEYNUMBER(default, null) : Int;
 	
-	public static var CONN_SRC_EG1(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_EG1(default, null) : Int;
 	
-	public static var CONN_SRC_EG2(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_EG2(default, null) : Int;
 	
-	public static var CONN_SRC_PITCHWHEEL(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_PITCHWHEEL(default, null) : Int;
 	
-	public static var CONN_SRC_CC1(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_CC1(default, null) : Int;
 	
-	public static var CONN_SRC_CC7(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_CC7(default, null) : Int;
 	
-	public static var CONN_SRC_CC10(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_CC10(default, null) : Int;
 	
-	public static var CONN_SRC_CC11(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_CC11(default, null) : Int;
 	
-	public static var CONN_SRC_RPN0(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_RPN0(default, null) : Int;
 	
-	public static var CONN_SRC_RPN1(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_RPN1(default, null) : Int;
 	
-	public static var CONN_SRC_RPN2(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_RPN2(default, null) : Int;
 	
-	public static var CONN_SRC_POLYPRESSURE(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_POLYPRESSURE(default, null) : Int;
 	
-	public static var CONN_SRC_CHANNELPRESSURE(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_CHANNELPRESSURE(default, null) : Int;
 	
-	public static var CONN_SRC_VIBRATO(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_VIBRATO(default, null) : Int;
 	
-	public static var CONN_SRC_MONOPRESSURE(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_MONOPRESSURE(default, null) : Int;
 	
-	public static var CONN_SRC_CC91(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_CC91(default, null) : Int;
 	
-	public static var CONN_SRC_CC93(default, null) : Int;
+	@:public @:static @:final public static var CONN_SRC_CC93(default, null) : Int;
 	
-	public static var CONN_TRN_NONE(default, null) : Int;
+	@:public @:static @:final public static var CONN_TRN_NONE(default, null) : Int;
 	
-	public static var CONN_TRN_CONCAVE(default, null) : Int;
+	@:public @:static @:final public static var CONN_TRN_CONCAVE(default, null) : Int;
 	
-	public static var CONN_TRN_CONVEX(default, null) : Int;
+	@:public @:static @:final public static var CONN_TRN_CONVEX(default, null) : Int;
 	
-	public static var CONN_TRN_SWITCH(default, null) : Int;
+	@:public @:static @:final public static var CONN_TRN_SWITCH(default, null) : Int;
 	
-	public static var DST_FORMAT_CB(default, null) : Int;
+	@:public @:static @:final public static var DST_FORMAT_CB(default, null) : Int;
 	
-	public static var DST_FORMAT_CENT(default, null) : Int;
+	@:public @:static @:final public static var DST_FORMAT_CENT(default, null) : Int;
 	
-	public static var DST_FORMAT_TIMECENT(default, null) : Int;
+	@:public @:static @:final public static var DST_FORMAT_TIMECENT(default, null) : Int;
 	
-	public static var DST_FORMAT_PERCENT(default, null) : Int;
+	@:public @:static @:final public static var DST_FORMAT_PERCENT(default, null) : Int;
 	
-	private var source : Int;
+	@:protected private var source : Int;
 	
-	private var control : Int;
+	@:protected private var control : Int;
 	
-	private var destination : Int;
+	@:protected private var destination : Int;
 	
-	private var transform : Int;
+	@:protected private var transform : Int;
 	
-	private var scale : Int;
+	@:protected private var scale : Int;
 	
-	private var version : Int;
+	@:protected private var version : Int;
 	
-	@:overload public function getControl() : Int;
+	@:overload @:public public function getControl() : Int;
 	
-	@:overload public function setControl(control : Int) : Void;
+	@:overload @:public public function setControl(control : Int) : Void;
 	
-	@:overload public static function getDestinationFormat(destination : Int) : Int;
+	@:overload @:public @:static public static function getDestinationFormat(destination : Int) : Int;
 	
-	@:overload public static function getDestinationName(destination : Int) : String;
+	@:overload @:public @:static public static function getDestinationName(destination : Int) : String;
 	
-	@:overload public static function getSourceName(source : Int) : String;
+	@:overload @:public @:static public static function getSourceName(source : Int) : String;
 	
-	@:overload public function getDestination() : Int;
+	@:overload @:public public function getDestination() : Int;
 	
-	@:overload public function setDestination(destination : Int) : Void;
+	@:overload @:public public function setDestination(destination : Int) : Void;
 	
-	@:overload public function getScale() : Int;
+	@:overload @:public public function getScale() : Int;
 	
-	@:overload public function setScale(scale : Int) : Void;
+	@:overload @:public public function setScale(scale : Int) : Void;
 	
-	@:overload public function getSource() : Int;
+	@:overload @:public public function getSource() : Int;
 	
-	@:overload public function setSource(source : Int) : Void;
+	@:overload @:public public function setSource(source : Int) : Void;
 	
-	@:overload public function getVersion() : Int;
+	@:overload @:public public function getVersion() : Int;
 	
-	@:overload public function setVersion(version : Int) : Void;
+	@:overload @:public public function setVersion(version : Int) : Void;
 	
-	@:overload public function getTransform() : Int;
+	@:overload @:public public function getTransform() : Int;
 	
-	@:overload public function setTransform(transform : Int) : Void;
+	@:overload @:public public function setTransform(transform : Int) : Void;
 	
 	
 }

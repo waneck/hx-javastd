@@ -25,7 +25,7 @@ package javax.xml.ws.wsaddressing;
 */
 extern class W3CEndpointReference extends javax.xml.ws.EndpointReference
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates an EPR from infoset representation
@@ -40,26 +40,26 @@ extern class W3CEndpointReference extends javax.xml.ws.EndpointReference
 	* @throws NullPointerException
 	*   If the <code>null</code> <code>source</code> value is given
 	*/
-	@:overload public function new(source : javax.xml.transform.Source) : Void;
+	@:overload @:public public function new(source : javax.xml.transform.Source) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function writeTo(result : javax.xml.transform.Result) : Void;
+	@:overload @:public override public function writeTo(result : javax.xml.transform.Result) : Void;
 	
-	private static var NS(default, null) : String;
+	@:protected @:static @:final private static var NS(default, null) : String;
 	
 	
 }
 @:native('javax$xml$ws$wsaddressing$W3CEndpointReference$Address') @:internal extern class W3CEndpointReference_Address
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	
 }
 @:native('javax$xml$ws$wsaddressing$W3CEndpointReference$Elements') @:internal extern class W3CEndpointReference_Elements
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	
 }

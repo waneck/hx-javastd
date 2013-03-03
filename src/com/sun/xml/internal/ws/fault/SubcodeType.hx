@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.fault;
 */
 @:internal extern class SubcodeType
 {
-	@:overload public function new(value : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(value : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

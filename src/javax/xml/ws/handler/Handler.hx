@@ -43,7 +43,7 @@ extern interface Handler<C>
 	*  @throws ProtocolException Causes the JAX-WS runtime to switch to
 	*    fault message processing.
 	**/
-	@:overload public function handleMessage(context : C) : Bool;
+	@:overload @:public public function handleMessage(context : C) : Bool;
 	
 	/** The <code>handleFault</code> method is invoked for fault message
 	*  processing.  Refer to the description of the handler
@@ -63,7 +63,7 @@ extern interface Handler<C>
 	*  @throws ProtocolException Causes the JAX-WS runtime to cease
 	*    handler fault processing and dispatch the fault.
 	**/
-	@:overload public function handleFault(context : C) : Bool;
+	@:overload @:public public function handleFault(context : C) : Bool;
 	
 	/**
 	* Called at the conclusion of a message exchange pattern just prior to
@@ -73,7 +73,7 @@ extern interface Handler<C>
 	*
 	* @param context the message context
 	**/
-	@:overload public function close(context : javax.xml.ws.handler.MessageContext) : Void;
+	@:overload @:public public function close(context : javax.xml.ws.handler.MessageContext) : Void;
 	
 	
 }

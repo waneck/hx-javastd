@@ -31,13 +31,13 @@ package com.sun.media.sound;
 */
 extern class ModelStandardDirector implements com.sun.media.sound.ModelDirector
 {
-	@:overload public function new(performers : java.NativeArray<com.sun.media.sound.ModelPerformer>, player : com.sun.media.sound.ModelDirectedPlayer) : Void;
+	@:overload @:public public function new(performers : java.NativeArray<com.sun.media.sound.ModelPerformer>, player : com.sun.media.sound.ModelDirectedPlayer) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function noteOff(noteNumber : Int, velocity : Int) : Void;
+	@:overload @:public public function noteOff(noteNumber : Int, velocity : Int) : Void;
 	
-	@:overload public function noteOn(noteNumber : Int, velocity : Int) : Void;
+	@:overload @:public public function noteOn(noteNumber : Int, velocity : Int) : Void;
 	
 	
 }

@@ -25,64 +25,64 @@ package com.sun.jndi.toolkit.dir;
 */
 extern class SearchFilter implements com.sun.jndi.toolkit.dir.AttrFilter
 {
-	private static var debug(default, null) : Bool;
+	@:protected @:static @:final private static var debug(default, null) : Bool;
 	
-	private static var BEGIN_FILTER_TOKEN(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var BEGIN_FILTER_TOKEN(default, null) : java.StdTypes.Char16;
 	
-	private static var END_FILTER_TOKEN(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var END_FILTER_TOKEN(default, null) : java.StdTypes.Char16;
 	
-	private static var AND_TOKEN(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var AND_TOKEN(default, null) : java.StdTypes.Char16;
 	
-	private static var OR_TOKEN(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var OR_TOKEN(default, null) : java.StdTypes.Char16;
 	
-	private static var NOT_TOKEN(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var NOT_TOKEN(default, null) : java.StdTypes.Char16;
 	
-	private static var EQUAL_TOKEN(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var EQUAL_TOKEN(default, null) : java.StdTypes.Char16;
 	
-	private static var APPROX_TOKEN(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var APPROX_TOKEN(default, null) : java.StdTypes.Char16;
 	
-	private static var LESS_TOKEN(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var LESS_TOKEN(default, null) : java.StdTypes.Char16;
 	
-	private static var GREATER_TOKEN(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var GREATER_TOKEN(default, null) : java.StdTypes.Char16;
 	
-	private static var EXTEND_TOKEN(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var EXTEND_TOKEN(default, null) : java.StdTypes.Char16;
 	
-	private static var WILDCARD_TOKEN(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var WILDCARD_TOKEN(default, null) : java.StdTypes.Char16;
 	
-	@:overload public function new(filter : String) : Void;
+	@:overload @:public public function new(filter : String) : Void;
 	
-	@:overload public function check(targetAttrs : javax.naming.directory.Attributes) : Bool;
+	@:overload @:public public function check(targetAttrs : javax.naming.directory.Attributes) : Bool;
 	
 	/*
 	* Utility routines used by member classes
 	*/
-	@:overload private function normalizeFilter() : Void;
+	@:overload @:protected private function normalizeFilter() : Void;
 	
-	@:overload private function createNextFilter() : com.sun.jndi.toolkit.dir.SearchFilter.SearchFilter_StringFilter;
+	@:overload @:protected private function createNextFilter() : com.sun.jndi.toolkit.dir.SearchFilter.SearchFilter_StringFilter;
 	
-	@:overload private function getCurrentChar() : java.StdTypes.Char16;
+	@:overload @:protected private function getCurrentChar() : java.StdTypes.Char16;
 	
-	@:overload private function relCharAt(i : Int) : java.StdTypes.Char16;
+	@:overload @:protected private function relCharAt(i : Int) : java.StdTypes.Char16;
 	
-	@:overload private function consumeChar() : Void;
+	@:overload @:protected private function consumeChar() : Void;
 	
-	@:overload private function consumeChars(i : Int) : Void;
+	@:overload @:protected private function consumeChars(i : Int) : Void;
 	
-	@:overload private function relIndexOf(ch : Int) : Int;
+	@:overload @:protected private function relIndexOf(ch : Int) : Int;
 	
-	@:overload private function relSubstring(beginIndex : Int, endIndex : Int) : String;
+	@:overload @:protected private function relSubstring(beginIndex : Int, endIndex : Int) : String;
 	
 	/**
 	* Creates an LDAP filter as a conjuction of the attributes supplied.
 	*/
-	@:overload public static function format(attrs : javax.naming.directory.Attributes) : String;
+	@:overload @:public @:static public static function format(attrs : javax.naming.directory.Attributes) : String;
 	
 	/**
 	* Finds the first occurrence of <tt>ch</tt> in <tt>val</tt> starting
 	* from position <tt>start</tt>. It doesn't count if <tt>ch</tt>
 	* has been escaped by a backslash (\)
 	*/
-	@:overload public static function findUnescaped(ch : java.StdTypes.Char16, val : String, start : Int) : Int;
+	@:overload @:public @:static public static function findUnescaped(ch : java.StdTypes.Char16, val : String, start : Int) : Int;
 	
 	/**
 	* Formats the expression <tt>expr</tt> using arguments from the array
@@ -96,13 +96,13 @@ extern class SearchFilter implements com.sun.jndi.toolkit.dir.AttrFilter
 	*
 	* Uses getEncodedStringRep() to do encoding.
 	*/
-	@:overload public static function format(expr : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static public static function format(expr : String, args : java.NativeArray<Dynamic>) : String;
 	
 	/*
 	* returns an Attributes instance containing only attributeIDs given in
 	* "attributeIDs" whose values come from the given DSContext.
 	*/
-	@:overload public static function selectAttributes(originals : javax.naming.directory.Attributes, attrIDs : java.NativeArray<String>) : javax.naming.directory.Attributes;
+	@:overload @:public @:static public static function selectAttributes(originals : javax.naming.directory.Attributes, attrIDs : java.NativeArray<String>) : javax.naming.directory.Attributes;
 	
 	
 }
@@ -114,7 +114,7 @@ extern class SearchFilter implements com.sun.jndi.toolkit.dir.AttrFilter
 */
 @:native('com$sun$jndi$toolkit$dir$SearchFilter$StringFilter') @:internal extern interface SearchFilter_StringFilter extends com.sun.jndi.toolkit.dir.AttrFilter
 {
-	@:overload public function parse() : Void;
+	@:overload @:public public function parse() : Void;
 	
 	
 }
@@ -123,9 +123,9 @@ extern class SearchFilter implements com.sun.jndi.toolkit.dir.AttrFilter
 */
 @:native('com$sun$jndi$toolkit$dir$SearchFilter$CompoundFilter') @:internal extern class SearchFilter_CompoundFilter implements com.sun.jndi.toolkit.dir.SearchFilter.SearchFilter_StringFilter
 {
-	@:overload public function parse() : Void;
+	@:overload @:public public function parse() : Void;
 	
-	@:overload public function check(targetAttrs : javax.naming.directory.Attributes) : Bool;
+	@:overload @:public public function check(targetAttrs : javax.naming.directory.Attributes) : Bool;
 	
 	
 }
@@ -134,9 +134,9 @@ extern class SearchFilter implements com.sun.jndi.toolkit.dir.AttrFilter
 */
 @:native('com$sun$jndi$toolkit$dir$SearchFilter$NotFilter') @:internal extern class SearchFilter_NotFilter implements com.sun.jndi.toolkit.dir.SearchFilter.SearchFilter_StringFilter
 {
-	@:overload public function parse() : Void;
+	@:overload @:public public function parse() : Void;
 	
-	@:overload public function check(targetAttrs : javax.naming.directory.Attributes) : Bool;
+	@:overload @:public public function check(targetAttrs : javax.naming.directory.Attributes) : Bool;
 	
 	
 }
@@ -145,9 +145,9 @@ extern class SearchFilter implements com.sun.jndi.toolkit.dir.AttrFilter
 */
 @:native('com$sun$jndi$toolkit$dir$SearchFilter$AtomicFilter') @:internal extern class SearchFilter_AtomicFilter implements com.sun.jndi.toolkit.dir.SearchFilter.SearchFilter_StringFilter
 {
-	@:overload public function parse() : Void;
+	@:overload @:public public function parse() : Void;
 	
-	@:overload public function check(targetAttrs : javax.naming.directory.Attributes) : Bool;
+	@:overload @:public public function check(targetAttrs : javax.naming.directory.Attributes) : Bool;
 	
 	
 }

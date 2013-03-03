@@ -47,9 +47,9 @@ extern class XMLStreamBufferResult extends javax.xml.transform.sax.SAXResult
 	* <li>setSystemId</li>
 	* </ul>
 	*/
-	private var _buffer : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer;
+	@:protected private var _buffer : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer;
 	
-	private var _bufferCreator : com.sun.xml.internal.stream.buffer.sax.SAXBufferCreator;
+	@:protected private var _bufferCreator : com.sun.xml.internal.stream.buffer.sax.SAXBufferCreator;
 	
 	/**
 	* The default XMLStreamBufferResult constructor.
@@ -57,32 +57,32 @@ extern class XMLStreamBufferResult extends javax.xml.transform.sax.SAXResult
 	* <p>
 	* A {@link MutableXMLStreamBuffer} is instantiated and used.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* XMLStreamBufferResult constructor.
 	*
 	* @param buffer the {@link MutableXMLStreamBuffer} to use.
 	*/
-	@:overload public function new(buffer : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer) : Void;
+	@:overload @:public public function new(buffer : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer) : Void;
 	
 	/**
 	* Get the {@link MutableXMLStreamBuffer} that is used.
 	*
 	* @return the {@link MutableXMLStreamBuffer}.
 	*/
-	@:overload public function getXMLStreamBuffer() : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer;
+	@:overload @:public public function getXMLStreamBuffer() : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer;
 	
 	/**
 	* Set the {@link MutableXMLStreamBuffer} to use.
 	*
 	* @param buffer the {@link MutableXMLStreamBuffer}.
 	*/
-	@:overload public function setXMLStreamBuffer(buffer : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer) : Void;
+	@:overload @:public public function setXMLStreamBuffer(buffer : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer) : Void;
 	
-	@:overload public function getHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public override public function getHandler() : org.xml.sax.ContentHandler;
 	
-	@:overload public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
+	@:overload @:public override public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
 	
 	
 }

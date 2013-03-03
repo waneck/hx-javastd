@@ -25,13 +25,13 @@ package com.sun.tools.internal.ws.resources;
 */
 extern class ProcessorMessages
 {
-	@:overload public static function localizablePROCESSOR_MISSING_MODEL() : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizablePROCESSOR_MISSING_MODEL() : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* model is missing
 	*
 	*/
-	@:overload public static function PROCESSOR_MISSING_MODEL() : String;
+	@:overload @:public @:static public static function PROCESSOR_MISSING_MODEL() : String;
 	
 	
 }

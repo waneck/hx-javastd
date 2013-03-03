@@ -27,13 +27,13 @@ extern interface IIOPProfileTemplate extends com.sun.corba.se.spi.ior.TaggedProf
 {
 	/** Return the GIOP version of this profile.
 	*/
-	@:overload public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:overload @:public public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
 	/** Return the IIOP address from the IIOP profile.  This is called the
 	* primary address here since other addresses may be contained in
 	* components.
 	*/
-	@:overload public function getPrimaryAddress() : com.sun.corba.se.spi.ior.iiop.IIOPAddress;
+	@:overload @:public public function getPrimaryAddress() : com.sun.corba.se.spi.ior.iiop.IIOPAddress;
 	
 	
 }

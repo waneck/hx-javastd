@@ -30,41 +30,41 @@ package sun.security.krb5.internal.crypto;
 */
 extern class KeyUsage
 {
-	public static var KU_UNKNOWN(default, null) : Int;
+	@:public @:static @:final public static var KU_UNKNOWN(default, null) : Int;
 	
-	public static var KU_PA_ENC_TS(default, null) : Int;
+	@:public @:static @:final public static var KU_PA_ENC_TS(default, null) : Int;
 	
-	public static var KU_TICKET(default, null) : Int;
+	@:public @:static @:final public static var KU_TICKET(default, null) : Int;
 	
-	public static var KU_ENC_AS_REP_PART(default, null) : Int;
+	@:public @:static @:final public static var KU_ENC_AS_REP_PART(default, null) : Int;
 	
-	public static var KU_TGS_REQ_AUTH_DATA_SESSKEY(default, null) : Int;
+	@:public @:static @:final public static var KU_TGS_REQ_AUTH_DATA_SESSKEY(default, null) : Int;
 	
-	public static var KU_TGS_REQ_AUTH_DATA_SUBKEY(default, null) : Int;
+	@:public @:static @:final public static var KU_TGS_REQ_AUTH_DATA_SUBKEY(default, null) : Int;
 	
-	public static var KU_PA_TGS_REQ_CKSUM(default, null) : Int;
+	@:public @:static @:final public static var KU_PA_TGS_REQ_CKSUM(default, null) : Int;
 	
-	public static var KU_PA_TGS_REQ_AUTHENTICATOR(default, null) : Int;
+	@:public @:static @:final public static var KU_PA_TGS_REQ_AUTHENTICATOR(default, null) : Int;
 	
-	public static var KU_ENC_TGS_REP_PART_SESSKEY(default, null) : Int;
+	@:public @:static @:final public static var KU_ENC_TGS_REP_PART_SESSKEY(default, null) : Int;
 	
-	public static var KU_ENC_TGS_REP_PART_SUBKEY(default, null) : Int;
+	@:public @:static @:final public static var KU_ENC_TGS_REP_PART_SUBKEY(default, null) : Int;
 	
-	public static var KU_AUTHENTICATOR_CKSUM(default, null) : Int;
+	@:public @:static @:final public static var KU_AUTHENTICATOR_CKSUM(default, null) : Int;
 	
-	public static var KU_AP_REQ_AUTHENTICATOR(default, null) : Int;
+	@:public @:static @:final public static var KU_AP_REQ_AUTHENTICATOR(default, null) : Int;
 	
-	public static var KU_ENC_AP_REP_PART(default, null) : Int;
+	@:public @:static @:final public static var KU_ENC_AP_REP_PART(default, null) : Int;
 	
-	public static var KU_ENC_KRB_PRIV_PART(default, null) : Int;
+	@:public @:static @:final public static var KU_ENC_KRB_PRIV_PART(default, null) : Int;
 	
-	public static var KU_ENC_KRB_CRED_PART(default, null) : Int;
+	@:public @:static @:final public static var KU_ENC_KRB_CRED_PART(default, null) : Int;
 	
-	public static var KU_KRB_SAFE_CKSUM(default, null) : Int;
+	@:public @:static @:final public static var KU_KRB_SAFE_CKSUM(default, null) : Int;
 	
-	public static var KU_AD_KDC_ISSUED_CKSUM(default, null) : Int;
+	@:public @:static @:final public static var KU_AD_KDC_ISSUED_CKSUM(default, null) : Int;
 	
-	@:overload @:final public static function isValid(usage : Int) : Bool;
+	@:overload @:public @:static @:final public static function isValid(usage : Int) : Bool;
 	
 	
 }

@@ -43,7 +43,7 @@ extern class MBeanPermission extends java.security.Permission
 	* @exception IllegalArgumentException if the <code>name</code> or
 	* <code>actions</code> is invalid.
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	/**
 	* <p>Create a new MBeanPermission object with the specified target name
@@ -72,7 +72,7 @@ extern class MBeanPermission extends java.security.Permission
 	* name.
 	* @param actions the action string.
 	*/
-	@:overload public function new(className : String, member : String, objectName : javax.management.ObjectName, actions : String) : Void;
+	@:overload @:public public function new(className : String, member : String, objectName : javax.management.ObjectName, actions : String) : Void;
 	
 	/**
 	* Returns the "canonical string representation" of the actions. That is,
@@ -80,14 +80,14 @@ extern class MBeanPermission extends java.security.Permission
 	*
 	* @return the canonical string representation of the actions.
 	*/
-	@:overload public function getActions() : String;
+	@:overload @:public override public function getActions() : String;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* <p>Checks if this MBeanPermission object "implies" the
@@ -131,7 +131,7 @@ extern class MBeanPermission extends java.security.Permission
 	* @return true if the specified permission is implied by this object,
 	* false if not.
 	*/
-	@:overload public function implies(p : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two MBeanPermission objects for equality. Checks
@@ -142,7 +142,7 @@ extern class MBeanPermission extends java.security.Permission
 	* @return true if obj is an MBeanPermission, and has the
 	* same name and actions as this MBeanPermission object.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	
 }

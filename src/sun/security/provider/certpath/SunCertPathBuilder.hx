@@ -30,7 +30,7 @@ extern class SunCertPathBuilder extends java.security.cert.CertPathBuilderSpi
 	*
 	* @throws CertPathBuilderException if an error occurs
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Attempts to build a certification path using the Sun build
@@ -52,7 +52,7 @@ extern class SunCertPathBuilder extends java.security.cert.CertPathBuilderSpi
 	* @throws InvalidAlgorithmParameterException if the given parameters are
 	*  inappropriate for this certification path builder.
 	*/
-	@:overload public function engineBuild(params : java.security.cert.CertPathParameters) : java.security.cert.CertPathBuilderResult;
+	@:overload @:public override public function engineBuild(params : java.security.cert.CertPathParameters) : java.security.cert.CertPathBuilderResult;
 	
 	
 }
@@ -62,7 +62,7 @@ extern class SunCertPathBuilder extends java.security.cert.CertPathBuilderSpi
 */
 @:native('sun$security$provider$certpath$SunCertPathBuilder$CertStoreComparator') @:internal extern class SunCertPathBuilder_CertStoreComparator implements java.util.Comparator<java.security.cert.CertStore>
 {
-	@:overload public function compare(store1 : java.security.cert.CertStore, store2 : java.security.cert.CertStore) : Int;
+	@:overload @:public public function compare(store1 : java.security.cert.CertStore, store2 : java.security.cert.CertStore) : Int;
 	
 	
 }

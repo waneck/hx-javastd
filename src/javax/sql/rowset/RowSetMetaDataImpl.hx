@@ -51,7 +51,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*        <code>RowSet</code> object
 	* @throws SQLException if the given number is equal to or less than zero
 	*/
-	@:overload public function setColumnCount(columnCount : Int) : Void;
+	@:overload @:public public function setColumnCount(columnCount : Int) : Void;
 	
 	/**
 	* Sets whether the designated column is automatically
@@ -67,7 +67,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws <code>SQLException</code> if a database access error occurs or
 	*         the given index is out of bounds
 	*/
-	@:overload public function setAutoIncrement(columnIndex : Int, property : Bool) : Void;
+	@:overload @:public public function setAutoIncrement(columnIndex : Int, property : Bool) : Void;
 	
 	/**
 	* Sets whether the name of the designated column is case sensitive to
@@ -81,7 +81,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs or
 	*         the given column number is out of bounds
 	*/
-	@:overload public function setCaseSensitive(columnIndex : Int, property : Bool) : Void;
+	@:overload @:public public function setCaseSensitive(columnIndex : Int, property : Bool) : Void;
 	
 	/**
 	* Sets whether a value stored in the designated column can be used
@@ -97,7 +97,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws <code>SQLException</code> if a database access error occurs or
 	*         the given column number is out of bounds
 	*/
-	@:overload public function setSearchable(columnIndex : Int, property : Bool) : Void;
+	@:overload @:public public function setSearchable(columnIndex : Int, property : Bool) : Void;
 	
 	/**
 	* Sets whether a value stored in the designated column is a cash
@@ -110,7 +110,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws <code>SQLException</code> if a database access error occurs
 	*         or the given column number is out of bounds
 	*/
-	@:overload public function setCurrency(columnIndex : Int, property : Bool) : Void;
+	@:overload @:public public function setCurrency(columnIndex : Int, property : Bool) : Void;
 	
 	/**
 	* Sets whether a value stored in the designated column can be set
@@ -132,7 +132,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*           <code>ResultSetMetaData.columnNullable</code>, or
 	*           <code>ResultSetMetaData.columnNullableUnknown</code>
 	*/
-	@:overload public function setNullable(columnIndex : Int, property : Int) : Void;
+	@:overload @:public public function setNullable(columnIndex : Int, property : Int) : Void;
 	
 	/**
 	* Sets whether a value stored in the designated column is a signed
@@ -146,7 +146,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	*         or the given column number is out of bounds
 	*/
-	@:overload public function setSigned(columnIndex : Int, property : Bool) : Void;
+	@:overload @:public public function setSigned(columnIndex : Int, property : Bool) : Void;
 	
 	/**
 	* Sets the normal maximum number of chars in the designated column
@@ -160,7 +160,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*        the given column number is out of bounds, or <i>size</i> is
 	*        less than <code>0</code>
 	*/
-	@:overload public function setColumnDisplaySize(columnIndex : Int, size : Int) : Void;
+	@:overload @:public public function setColumnDisplaySize(columnIndex : Int, size : Int) : Void;
 	
 	/**
 	* Sets the suggested column label for use in printouts and
@@ -176,7 +176,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	*         or the given column index is out of bounds
 	*/
-	@:overload public function setColumnLabel(columnIndex : Int, label : String) : Void;
+	@:overload @:public public function setColumnLabel(columnIndex : Int, label : String) : Void;
 	
 	/**
 	* Sets the column name of the designated column to the given name.
@@ -189,7 +189,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs or the given column
 	*      index is out of bounds
 	*/
-	@:overload public function setColumnName(columnIndex : Int, columnName : String) : Void;
+	@:overload @:public public function setColumnName(columnIndex : Int, columnName : String) : Void;
 	
 	/**
 	* Sets the designated column's table's schema name, if any, to
@@ -204,7 +204,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	*        or the given column number is out of bounds
 	*/
-	@:overload public function setSchemaName(columnIndex : Int, schemaName : String) : Void;
+	@:overload @:public public function setSchemaName(columnIndex : Int, schemaName : String) : Void;
 	
 	/**
 	* Sets the total number of decimal digits in a value stored in the
@@ -218,7 +218,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*         <i>columnIndex</i> is out of bounds, or <i>precision</i>
 	*         is less than <code>0</code>
 	*/
-	@:overload public function setPrecision(columnIndex : Int, precision : Int) : Void;
+	@:overload @:public public function setPrecision(columnIndex : Int, precision : Int) : Void;
 	
 	/**
 	* Sets the number of digits to the right of the decimal point in a value
@@ -232,7 +232,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*         <i>columnIndex</i> is out of bounds, or <i>scale</i>
 	*         is less than <code>0</code>
 	*/
-	@:overload public function setScale(columnIndex : Int, scale : Int) : Void;
+	@:overload @:public public function setScale(columnIndex : Int, scale : Int) : Void;
 	
 	/**
 	* Sets the name of the table from which the designated column
@@ -245,7 +245,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	*         or the given column number is out of bounds
 	*/
-	@:overload public function setTableName(columnIndex : Int, tableName : String) : Void;
+	@:overload @:public public function setTableName(columnIndex : Int, tableName : String) : Void;
 	
 	/**
 	* Sets the catalog name of the table from which the designated
@@ -259,7 +259,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	*         or the given column number is out of bounds
 	*/
-	@:overload public function setCatalogName(columnIndex : Int, catalogName : String) : Void;
+	@:overload @:public public function setCatalogName(columnIndex : Int, catalogName : String) : Void;
 	
 	/**
 	* Sets the SQL type code for values stored in the designated column
@@ -275,7 +275,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*         <code>java.sql.Types</code>
 	* @see java.sql.Types
 	*/
-	@:overload public function setColumnType(columnIndex : Int, SQLType : Int) : Void;
+	@:overload @:public public function setColumnType(columnIndex : Int, SQLType : Int) : Void;
 	
 	/**
 	* Sets the type name used by the data source for values stored in the
@@ -288,7 +288,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	*         or the given column number is out of bounds
 	*/
-	@:overload public function setColumnTypeName(columnIndex : Int, typeName : String) : Void;
+	@:overload @:public public function setColumnTypeName(columnIndex : Int, typeName : String) : Void;
 	
 	/**
 	* Retrieves the number of columns in the <code>RowSet</code> object
@@ -297,7 +297,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @return the number of columns
 	* @throws SQLException if an error occurs determining the column count
 	*/
-	@:overload public function getColumnCount() : Int;
+	@:overload @:public public function getColumnCount() : Int;
 	
 	/**
 	* Retrieves whether a value stored in the designated column is
@@ -310,7 +310,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	* or the given column number is out of bounds
 	*/
-	@:overload public function isAutoIncrement(columnIndex : Int) : Bool;
+	@:overload @:public public function isAutoIncrement(columnIndex : Int) : Bool;
 	
 	/**
 	* Indicates whether the case of the designated column's name
@@ -323,7 +323,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	* or the given column number is out of bounds
 	*/
-	@:overload public function isCaseSensitive(columnIndex : Int) : Bool;
+	@:overload @:public public function isCaseSensitive(columnIndex : Int) : Bool;
 	
 	/**
 	* Indicates whether a value stored in the designated column
@@ -336,7 +336,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	*         or the given column number is out of bounds
 	*/
-	@:overload public function isSearchable(columnIndex : Int) : Bool;
+	@:overload @:public public function isSearchable(columnIndex : Int) : Bool;
 	
 	/**
 	* Indicates whether a value stored in the designated column
@@ -349,7 +349,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	*         or the given column number is out of bounds
 	*/
-	@:overload public function isCurrency(columnIndex : Int) : Bool;
+	@:overload @:public public function isCurrency(columnIndex : Int) : Bool;
 	
 	/**
 	* Retrieves a constant indicating whether it is possible
@@ -364,7 +364,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	*         or the given column number is out of bounds
 	*/
-	@:overload public function isNullable(columnIndex : Int) : Int;
+	@:overload @:public public function isNullable(columnIndex : Int) : Int;
 	
 	/**
 	* Indicates whether a value stored in the designated column is
@@ -377,7 +377,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	*         or the given column number is out of bounds
 	*/
-	@:overload public function isSigned(columnIndex : Int) : Bool;
+	@:overload @:public public function isSigned(columnIndex : Int) : Bool;
 	
 	/**
 	* Retrieves the normal maximum width in chars of the designated column.
@@ -389,7 +389,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	*         or the given column number is out of bounds
 	*/
-	@:overload public function getColumnDisplaySize(columnIndex : Int) : Int;
+	@:overload @:public public function getColumnDisplaySize(columnIndex : Int) : Int;
 	
 	/**
 	* Retrieves the the suggested column title for the designated
@@ -401,7 +401,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	*         or the given column number is out of bounds
 	*/
-	@:overload public function getColumnLabel(columnIndex : Int) : String;
+	@:overload @:public public function getColumnLabel(columnIndex : Int) : String;
 	
 	/**
 	* Retrieves the name of the designated column.
@@ -412,7 +412,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	* or the given column number is out of bounds
 	*/
-	@:overload public function getColumnName(columnIndex : Int) : String;
+	@:overload @:public public function getColumnName(columnIndex : Int) : String;
 	
 	/**
 	* Retrieves the schema name of the table from which the value
@@ -426,7 +426,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	* or the given column number is out of bounds
 	*/
-	@:overload public function getSchemaName(columnIndex : Int) : String;
+	@:overload @:public public function getSchemaName(columnIndex : Int) : String;
 	
 	/**
 	* Retrieves the total number of digits for values stored in
@@ -438,7 +438,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	* or the given column number is out of bounds
 	*/
-	@:overload public function getPrecision(columnIndex : Int) : Int;
+	@:overload @:public public function getPrecision(columnIndex : Int) : Int;
 	
 	/**
 	* Retrieves the number of digits to the right of the decimal point
@@ -450,7 +450,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	* or the given column number is out of bounds
 	*/
-	@:overload public function getScale(columnIndex : Int) : Int;
+	@:overload @:public public function getScale(columnIndex : Int) : Int;
 	
 	/**
 	* Retrieves the name of the table from which the value
@@ -463,7 +463,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	* or the given column number is out of bounds
 	*/
-	@:overload public function getTableName(columnIndex : Int) : String;
+	@:overload @:public public function getTableName(columnIndex : Int) : String;
 	
 	/**
 	* Retrieves the catalog name of the table from which the value
@@ -476,7 +476,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	* or the given column number is out of bounds
 	*/
-	@:overload public function getCatalogName(columnIndex : Int) : String;
+	@:overload @:public public function getCatalogName(columnIndex : Int) : String;
 	
 	/**
 	* Retrieves the type code (one of the <code>java.sql.Types</code>
@@ -491,7 +491,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* or the given column number is out of bounds
 	* @see java.sql.Types
 	*/
-	@:overload public function getColumnType(columnIndex : Int) : Int;
+	@:overload @:public public function getColumnType(columnIndex : Int) : Int;
 	
 	/**
 	* Retrieves the DBMS-specific type name for values stored in the
@@ -503,7 +503,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	* or the given column number is out of bounds
 	*/
-	@:overload public function getColumnTypeName(columnIndex : Int) : String;
+	@:overload @:public public function getColumnTypeName(columnIndex : Int) : String;
 	
 	/**
 	* Indicates whether the designated column is definitely
@@ -516,7 +516,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	* or the given column number is out of bounds
 	*/
-	@:overload public function isReadOnly(columnIndex : Int) : Bool;
+	@:overload @:public public function isReadOnly(columnIndex : Int) : Bool;
 	
 	/**
 	* Indicates whether it is possible for a write operation on
@@ -531,7 +531,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	*         or the given column number is out of bounds
 	*/
-	@:overload public function isWritable(columnIndex : Int) : Bool;
+	@:overload @:public public function isWritable(columnIndex : Int) : Bool;
 	
 	/**
 	* Indicates whether a write operation on the designated column
@@ -544,7 +544,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	* or the given column number is out of bounds
 	*/
-	@:overload public function isDefinitelyWritable(columnIndex : Int) : Bool;
+	@:overload @:public public function isDefinitelyWritable(columnIndex : Int) : Bool;
 	
 	/**
 	* Retrieves the fully-qualified name of the class in the Java
@@ -568,7 +568,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws SQLException if a database access error occurs
 	*         or the given column number is out of bounds
 	*/
-	@:overload public function getColumnClassName(columnIndex : Int) : String;
+	@:overload @:public public function getColumnClassName(columnIndex : Int) : String;
 	
 	/**
 	* Returns an object that implements the given interface to allow access to non-standard methods,
@@ -584,7 +584,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* @throws java.sql.SQLException If no object found that implements the interface
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function unwrap<T>(iface : Class<T>) : T;
+	@:require(java6) @:overload @:public public function unwrap<T>(iface : Class<T>) : T;
 	
 	/**
 	* Returns true if this either implements the interface argument or is directly or indirectly a wrapper
@@ -601,7 +601,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	* for an object with the given interface.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function isWrapperFor(interfaces : Class<Dynamic>) : Bool;
+	@:require(java6) @:overload @:public public function isWrapperFor(interfaces : Class<Dynamic>) : Bool;
 	
 	
 }
@@ -615,7 +615,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*
 	* @serial
 	*/
-	public var autoIncrement : Bool;
+	@:public public var autoIncrement : Bool;
 	
 	/**
 	* The field that indicates whether the value in this column is case sensitive.
@@ -623,7 +623,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*
 	* @serial
 	*/
-	public var caseSensitive : Bool;
+	@:public public var caseSensitive : Bool;
 	
 	/**
 	* The field that indicates whether the value in this column is a cash value
@@ -631,7 +631,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*
 	* @serial
 	*/
-	public var currency : Bool;
+	@:public public var currency : Bool;
 	
 	/**
 	* The field that indicates whether the value in this column is nullable.
@@ -641,7 +641,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*
 	* @serial
 	*/
-	public var nullable : Int;
+	@:public public var nullable : Int;
 	
 	/**
 	* The field that indicates whether the value in this column is a signed number.
@@ -649,7 +649,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*
 	* @serial
 	*/
-	public var signed : Bool;
+	@:public public var signed : Bool;
 	
 	/**
 	* The field that indicates whether the value in this column can be used in
@@ -658,7 +658,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*
 	* @serial
 	*/
-	public var searchable : Bool;
+	@:public public var searchable : Bool;
 	
 	/**
 	* The field that indicates the normal maximum width in characters for
@@ -666,7 +666,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*
 	* @serial
 	*/
-	public var columnDisplaySize : Int;
+	@:public public var columnDisplaySize : Int;
 	
 	/**
 	* The field that holds the suggested column title for this column, to be
@@ -674,14 +674,14 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*
 	* @serial
 	*/
-	public var columnLabel : String;
+	@:public public var columnLabel : String;
 	
 	/**
 	* The field that holds the name of this column.
 	*
 	* @serial
 	*/
-	public var columnName : String;
+	@:public public var columnName : String;
 	
 	/**
 	* The field that holds the schema name for the table from which this column
@@ -689,7 +689,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*
 	* @serial
 	*/
-	public var schemaName : String;
+	@:public public var schemaName : String;
 	
 	/**
 	* The field that holds the precision of the value in this column.  For number
@@ -699,7 +699,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*
 	* @serial
 	*/
-	public var colPrecision : Int;
+	@:public public var colPrecision : Int;
 	
 	/**
 	* The field that holds the scale (number of digits to the right of the decimal
@@ -707,7 +707,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*
 	* @serial
 	*/
-	public var colScale : Int;
+	@:public public var colScale : Int;
 	
 	/**
 	* The field that holds the name of the table from which this column
@@ -716,7 +716,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*
 	* @serial
 	*/
-	public var tableName : String;
+	@:public public var tableName : String;
 	
 	/**
 	* The field that holds the catalog name for the table from which this column
@@ -725,7 +725,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*
 	* @serial
 	*/
-	public var catName : String;
+	@:public public var catName : String;
 	
 	/**
 	* The field that holds the type code from the class <code>java.sql.Types</code>
@@ -733,7 +733,7 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*
 	* @serial
 	*/
-	public var colType : Int;
+	@:public public var colType : Int;
 	
 	/**
 	* The field that holds the the type name used by this particular data source
@@ -741,21 +741,21 @@ extern class RowSetMetaDataImpl implements javax.sql.RowSetMetaData implements j
 	*
 	* @serial
 	*/
-	public var colTypeName : String;
+	@:public public var colTypeName : String;
 	
 	/**
 	* The field that holds the updatablity boolean per column of a RowSet
 	*
 	* @serial
 	*/
-	public var readOnly : Bool;
+	@:public public var readOnly : Bool;
 	
 	/**
 	* The field that hold the writable boolean per column of a RowSet
 	*
 	*@serial
 	*/
-	public var writable : Bool;
+	@:public public var writable : Bool;
 	
 	
 }

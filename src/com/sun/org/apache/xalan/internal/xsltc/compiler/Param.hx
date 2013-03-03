@@ -26,39 +26,39 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Display variable as single string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Set the instruction for loading the value of this variable onto the
 	* JVM stack and returns the old instruction.
 	*/
-	@:overload public function setLoadInstruction(instruction : com.sun.org.apache.bcel.internal.generic.Instruction) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function setLoadInstruction(instruction : com.sun.org.apache.bcel.internal.generic.Instruction) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/**
 	* Set the instruction for storing a value from the stack into this
 	* variable and returns the old instruction.
 	*/
-	@:overload public function setStoreInstruction(instruction : com.sun.org.apache.bcel.internal.generic.Instruction) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function setStoreInstruction(instruction : com.sun.org.apache.bcel.internal.generic.Instruction) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/**
 	* Display variable in a full AST dump
 	*/
-	@:overload public function display(indent : Int) : Void;
+	@:overload @:public override public function display(indent : Int) : Void;
 	
 	/**
 	* Parse the contents of the <xsl:param> element. This method must read
 	* the 'name' (required) and 'select' (optional) attributes.
 	*/
-	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Type-checks the parameter. The parameter type is determined by the
 	* 'select' expression (if present) or is a result tree if the parameter
 	* element has a body and no 'select' expression.
 	*/
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

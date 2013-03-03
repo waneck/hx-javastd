@@ -25,13 +25,13 @@ package com.sun.jndi.ldap;
 */
 @:internal extern class ClientId
 {
-	public static var debug(default, null) : Bool;
+	@:final @:public @:static public static var debug(default, null) : Bool;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

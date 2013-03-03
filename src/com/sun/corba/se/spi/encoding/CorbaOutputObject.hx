@@ -25,9 +25,9 @@ package com.sun.corba.se.spi.encoding;
 */
 extern class CorbaOutputObject extends com.sun.corba.se.impl.encoding.CDROutputStream implements com.sun.corba.se.pept.encoding.OutputObject
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion, encodingVersion : java.StdTypes.Int8, littleEndian : Bool, bufferManager : com.sun.corba.se.impl.encoding.BufferManagerWrite, streamFormatVersion : java.StdTypes.Int8, usePooledByteBuffers : Bool) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion, encodingVersion : java.StdTypes.Int8, littleEndian : Bool, bufferManager : com.sun.corba.se.impl.encoding.BufferManagerWrite, streamFormatVersion : java.StdTypes.Int8, usePooledByteBuffers : Bool) : Void;
 	
-	@:overload @:abstract public function writeTo(connection : com.sun.corba.se.spi.transport.CorbaConnection) : Void;
+	@:overload @:public @:abstract public function writeTo(connection : com.sun.corba.se.spi.transport.CorbaConnection) : Void;
 	
 	/**
 	* <p> An <code>OutputObject</code> is the interface used by the
@@ -53,11 +53,11 @@ extern class CorbaOutputObject extends com.sun.corba.se.impl.encoding.CDROutputS
 	*
 	* @author Harold Carr
 */
-	@:overload public function setMessageMediator(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
+	@:overload @:public @:public override public function setMessageMediator(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
 	
-	@:overload public function getMessageMediator() : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public @:public override public function getMessageMediator() : com.sun.corba.se.pept.protocol.MessageMediator;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public @:public override public function close() : Void;
 	
 	
 }

@@ -38,7 +38,7 @@ extern class JobImpressionsSupported extends javax.print.attribute.SetOfIntegerS
 	*     non-null range is specified with <CODE>lowerBound</CODE> less than
 	*     0.
 	*/
-	@:overload public function new(lowerBound : Int, upperBound : Int) : Void;
+	@:overload @:public public function new(lowerBound : Int, upperBound : Int) : Void;
 	
 	/**
 	* Returns whether this job impressions supported attribute is equivalent
@@ -59,7 +59,7 @@ extern class JobImpressionsSupported extends javax.print.attribute.SetOfIntegerS
 	* @return  True if <CODE>object</CODE> is equivalent to this job
 	*          impressions supported attribute, false otherwise.
 	*/
-	@:overload override public function equals(object : Dynamic) : Bool;
+	@:overload @:public override public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -71,7 +71,7 @@ extern class JobImpressionsSupported extends javax.print.attribute.SetOfIntegerS
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -82,7 +82,7 @@ extern class JobImpressionsSupported extends javax.print.attribute.SetOfIntegerS
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

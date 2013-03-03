@@ -29,26 +29,26 @@ package sun.awt.X11;
 */
 @:internal extern class XWM
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/*
 	* @return if WM implements the insets property - returns insets with values
 	* specified in that property, null otherwise.
 	*/
-	@:overload public static function getInsetsFromExtents(window : haxe.Int64) : java.awt.Insets;
+	@:overload @:public @:static public static function getInsetsFromExtents(window : haxe.Int64) : java.awt.Insets;
 	
 	/**
 	* Helper function reads property of type CARDINAL[4] = { left, right, top, bottom }
 	* and converts it to Insets object.
 	*/
-	@:overload public static function getInsetsFromProp(window : haxe.Int64, atom : sun.awt.X11.XAtom) : java.awt.Insets;
+	@:overload @:public @:static public static function getInsetsFromProp(window : haxe.Int64, atom : sun.awt.X11.XAtom) : java.awt.Insets;
 	
 	/**
 	* Asks WM to fill Frame Extents (insets) for the window.
 	*/
-	@:overload public static function requestWMExtents(window : haxe.Int64) : Void;
+	@:overload @:public @:static public static function requestWMExtents(window : haxe.Int64) : Void;
 	
-	@:overload public function getNETProtocol() : sun.awt.X11.XNETProtocol;
+	@:overload @:public public function getNETProtocol() : sun.awt.X11.XNETProtocol;
 	
 	/**
 	* Sets _NET_WN_ICON property on the window using the arrays of
@@ -59,7 +59,7 @@ package sun.awt.X11;
 	*
 	* @return true if hint was modified successfully, false otherwise
 	*/
-	@:overload public function setNetWMIcon(window : sun.awt.X11.XWindowPeer, icons : java.util.List<sun.awt.X11.XIconInfo>) : Bool;
+	@:overload @:public public function setNetWMIcon(window : sun.awt.X11.XWindowPeer, icons : java.util.List<sun.awt.X11.XIconInfo>) : Bool;
 	
 	
 }

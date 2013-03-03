@@ -65,21 +65,21 @@ extern interface PackageOutline
 	* <p>
 	* Null if no default
 	*/
-	@:overload public function getMostUsedNamespaceURI() : String;
+	@:overload @:public public function getMostUsedNamespaceURI() : String;
 	
 	/**
 	* The element form default for this package.
 	* <p>
 	* The value is computed by examining what would yield the smallest generated code.
 	*/
-	@:overload public function getElementFormDefault() : javax.xml.bind.annotation.XmlNsForm;
+	@:overload @:public public function getElementFormDefault() : javax.xml.bind.annotation.XmlNsForm;
 	
 	/**
 	* The attribute form default for this package.
 	* <p>
 	* The value is computed by examining what would yield the smallest generated code.
 	*/
-	@:overload public function getAttributeFormDefault() : javax.xml.bind.annotation.XmlNsForm;
+	@:overload @:public public function getAttributeFormDefault() : javax.xml.bind.annotation.XmlNsForm;
 	
 	
 }

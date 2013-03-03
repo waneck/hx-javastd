@@ -25,51 +25,51 @@ package sun.util.calendar;
 */
 extern class JulianCalendar extends sun.util.calendar.BaseCalendar
 {
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
-	@:overload override public function getCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload @:public override public function getCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload @:public override public function getCalendarDate(millis : haxe.Int64) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64, date : sun.util.calendar.CalendarDate) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload @:public override public function getCalendarDate(millis : haxe.Int64, date : sun.util.calendar.CalendarDate) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64, zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload @:public override public function getCalendarDate(millis : haxe.Int64, zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function newCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload @:public override public function newCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function newCalendarDate(zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload @:public override public function newCalendarDate(zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
 	/**
 	* @param jyear normalized Julian year
 	*/
-	@:overload override public function getFixedDate(jyear : Int, month : Int, dayOfMonth : Int, cache : sun.util.calendar.BaseCalendar.BaseCalendar_Date) : haxe.Int64;
+	@:overload @:public override public function getFixedDate(jyear : Int, month : Int, dayOfMonth : Int, cache : sun.util.calendar.BaseCalendar.BaseCalendar_Date) : haxe.Int64;
 	
-	@:overload override public function getCalendarDateFromFixedDate(date : sun.util.calendar.CalendarDate, fixedDate : haxe.Int64) : Void;
+	@:overload @:public override public function getCalendarDateFromFixedDate(date : sun.util.calendar.CalendarDate, fixedDate : haxe.Int64) : Void;
 	
 	/**
 	* Returns the normalized Julian year number of the given fixed date.
 	*/
-	@:overload override public function getYearFromFixedDate(fixedDate : haxe.Int64) : Int;
+	@:overload @:public override public function getYearFromFixedDate(fixedDate : haxe.Int64) : Int;
 	
-	@:overload override public function getDayOfWeek(date : sun.util.calendar.CalendarDate) : Int;
+	@:overload @:public override public function getDayOfWeek(date : sun.util.calendar.CalendarDate) : Int;
 	
 	
 }
 @:native('sun$util$calendar$JulianCalendar$Date') @:internal extern class JulianCalendar_Date extends sun.util.calendar.BaseCalendar.BaseCalendar_Date
 {
-	@:overload override private function new() : Void;
+	@:overload @:protected override private function new() : Void;
 	
-	@:overload override private function new(zone : java.util.TimeZone) : Void;
+	@:overload @:protected override private function new(zone : java.util.TimeZone) : Void;
 	
-	@:overload override public function setEra(era : sun.util.calendar.Era) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload @:public override public function setEra(era : sun.util.calendar.Era) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload private function setKnownEra(era : sun.util.calendar.Era) : Void;
+	@:overload @:protected private function setKnownEra(era : sun.util.calendar.Era) : Void;
 	
-	@:overload override public function getNormalizedYear() : Int;
+	@:overload @:public override public function getNormalizedYear() : Int;
 	
-	@:overload override public function setNormalizedYear(year : Int) : Void;
+	@:overload @:public override public function setNormalizedYear(year : Int) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

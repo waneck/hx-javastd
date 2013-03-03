@@ -25,15 +25,15 @@ package com.sun.tools.internal.xjc.reader.internalizer;
 */
 extern class VersionChecker extends org.xml.sax.helpers.XMLFilterImpl
 {
-	@:overload public function new(parent : org.xml.sax.XMLReader) : Void;
+	@:overload @:public public function new(parent : org.xml.sax.XMLReader) : Void;
 	
-	@:overload public function new(handler : org.xml.sax.ContentHandler, eh : org.xml.sax.ErrorHandler, er : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function new(handler : org.xml.sax.ContentHandler, eh : org.xml.sax.ErrorHandler, er : org.xml.sax.EntityResolver) : Void;
 	
-	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
-	@:overload override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	
 }

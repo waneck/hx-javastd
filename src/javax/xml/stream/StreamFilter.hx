@@ -44,7 +44,7 @@ package javax.xml.stream;
 	* @param reader the event to test
 	* @return true if this filter accepts this event, false otherwise
 	*/
-	@:overload public function accept(reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload @:public public function accept(reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
 	
 }

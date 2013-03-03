@@ -24,21 +24,21 @@ extern class REProgram implements java.io.Serializable
 	* Constructs a program object from a character array
 	* @param instruction Character array with RE opcode instructions in it
 	*/
-	@:overload public function new(instruction : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(instruction : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Constructs a program object from a character array
 	* @param parens Count of parens in the program
 	* @param instruction Character array with RE opcode instructions in it
 	*/
-	@:overload public function new(parens : Int, instruction : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(parens : Int, instruction : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Constructs a program object from a character array
 	* @param instruction Character array with RE opcode instructions in it
 	* @param lenInstruction Amount of instruction array in use
 	*/
-	@:overload public function new(instruction : java.NativeArray<java.StdTypes.Char16>, lenInstruction : Int) : Void;
+	@:overload @:public public function new(instruction : java.NativeArray<java.StdTypes.Char16>, lenInstruction : Int) : Void;
 	
 	/**
 	* Returns a copy of the current regular expression program in a character
@@ -46,7 +46,7 @@ extern class REProgram implements java.io.Serializable
 	* no program compiled yet, getInstructions() will return null.
 	* @return A copy of the current compiled RE program
 	*/
-	@:overload public function getInstructions() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getInstructions() : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Sets a new regular expression program to run.  It is this method which
@@ -58,7 +58,7 @@ extern class REProgram implements java.io.Serializable
 	* @param instruction Program instruction buffer
 	* @param lenInstruction Length of instruction buffer in use
 	*/
-	@:overload public function setInstructions(instruction : java.NativeArray<java.StdTypes.Char16>, lenInstruction : Int) : Void;
+	@:overload @:public public function setInstructions(instruction : java.NativeArray<java.StdTypes.Char16>, lenInstruction : Int) : Void;
 	
 	
 }

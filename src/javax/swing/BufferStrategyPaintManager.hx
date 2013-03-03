@@ -28,22 +28,22 @@ package javax.swing;
 	/**
 	* Cleans up any created BufferStrategies.
 	*/
-	@:overload override private function dispose() : Void;
+	@:overload @:protected override private function dispose() : Void;
 	
 	/**
 	* Shows the specified region of the back buffer.  This will return
 	* true if successful, false otherwise.  This is invoked on the
 	* toolkit thread in response to an expose event.
 	*/
-	@:overload override public function show(c : java.awt.Container, x : Int, y : Int, w : Int, h : Int) : Bool;
+	@:overload @:public override public function show(c : java.awt.Container, x : Int, y : Int, w : Int, h : Int) : Bool;
 	
-	@:overload override public function paint(paintingComponent : javax.swing.JComponent, bufferComponent : javax.swing.JComponent, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Bool;
+	@:overload @:public override public function paint(paintingComponent : javax.swing.JComponent, bufferComponent : javax.swing.JComponent, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Bool;
 	
-	@:overload override public function copyArea(c : javax.swing.JComponent, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, deltaX : Int, deltaY : Int, clip : Bool) : Void;
+	@:overload @:public override public function copyArea(c : javax.swing.JComponent, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, deltaX : Int, deltaY : Int, clip : Bool) : Void;
 	
-	@:overload override public function beginPaint() : Void;
+	@:overload @:public override public function beginPaint() : Void;
 	
-	@:overload override public function endPaint() : Void;
+	@:overload @:public override public function endPaint() : Void;
 	
 	/**
 	* Invoked when the double buffering or useTrueDoubleBuffering
@@ -51,7 +51,7 @@ package javax.swing;
 	* buffered, or true double buffering changes we throw out any
 	* cache we may have.
 	*/
-	@:overload override public function doubleBufferingChanged(rootPane : javax.swing.JRootPane) : Void;
+	@:overload @:public override public function doubleBufferingChanged(rootPane : javax.swing.JRootPane) : Void;
 	
 	
 }
@@ -64,29 +64,29 @@ package javax.swing;
 */
 @:native('javax$swing$BufferStrategyPaintManager$BufferInfo') @:internal extern class BufferStrategyPaintManager_BufferInfo extends java.awt.event.ComponentAdapter implements java.awt.event.WindowListener
 {
-	@:overload public function new(root : java.awt.Container) : Void;
+	@:overload @:public public function new(root : java.awt.Container) : Void;
 	
-	@:overload public function setPaintAllOnExpose(paintAllOnExpose : Bool) : Void;
+	@:overload @:public public function setPaintAllOnExpose(paintAllOnExpose : Bool) : Void;
 	
-	@:overload public function getPaintAllOnExpose() : Bool;
+	@:overload @:public public function getPaintAllOnExpose() : Bool;
 	
-	@:overload public function setContentsLostDuringExpose(value : Bool) : Void;
+	@:overload @:public public function setContentsLostDuringExpose(value : Bool) : Void;
 	
-	@:overload public function getContentsLostDuringExpose() : Bool;
+	@:overload @:public public function getContentsLostDuringExpose() : Bool;
 	
-	@:overload public function setInSync(inSync : Bool) : Void;
+	@:overload @:public public function setInSync(inSync : Bool) : Void;
 	
 	/**
 	* Whether or not the contents of the buffer strategy
 	* is in sync with the window.  This is set to true when the root
 	* pane paints all, and false when contents are lost/restored.
 	*/
-	@:overload public function isInSync() : Bool;
+	@:overload @:public public function isInSync() : Bool;
 	
 	/**
 	* Returns the Root (Window or Applet) that this BufferInfo references.
 	*/
-	@:overload public function getRoot() : java.awt.Container;
+	@:overload @:public public function getRoot() : java.awt.Container;
 	
 	/**
 	* Returns the BufferStartegy.  This will return null if
@@ -97,34 +97,34 @@ package javax.swing;
 	* @param create If true, and the BufferStartegy is currently null,
 	*               one will be created.
 	*/
-	@:overload public function getBufferStrategy(create : Bool) : java.awt.image.BufferStrategy;
+	@:overload @:public public function getBufferStrategy(create : Bool) : java.awt.image.BufferStrategy;
 	
 	/**
 	* Returns true if the buffer strategy of the component differs
 	* from current buffer strategy.
 	*/
-	@:overload public function hasBufferStrategyChanged() : Bool;
+	@:overload @:public public function hasBufferStrategyChanged() : Bool;
 	
 	/**
 	* Cleans up and removes any references.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public override public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function windowIconified(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowIconified(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowClosed(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowClosed(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowOpened(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowOpened(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowClosing(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowClosing(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowDeiconified(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowDeiconified(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowActivated(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowActivated(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowDeactivated(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowDeactivated(e : java.awt.event.WindowEvent) : Void;
 	
 	
 }

@@ -32,7 +32,7 @@ extern class FormatConversionProvider
 	* does not provide any conversion services, an array of length 0 is
 	* returned.
 	*/
-	@:overload @:abstract public function getSourceEncodings() : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
+	@:overload @:public @:abstract public function getSourceEncodings() : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
 	
 	/**
 	* Obtains the set of target format encodings to which format
@@ -41,7 +41,7 @@ extern class FormatConversionProvider
 	* does not provide any conversion services, an array of length 0 is
 	* returned.
 	*/
-	@:overload @:abstract public function getTargetEncodings() : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
+	@:overload @:public @:abstract public function getTargetEncodings() : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
 	
 	/**
 	* Indicates whether the format converter supports conversion from the
@@ -49,7 +49,7 @@ extern class FormatConversionProvider
 	* @param sourceEncoding the source format encoding for which support is queried
 	* @return <code>true</code> if the encoding is supported, otherwise <code>false</code>
 	*/
-	@:overload public function isSourceEncodingSupported(sourceEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding) : Bool;
+	@:overload @:public public function isSourceEncodingSupported(sourceEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding) : Bool;
 	
 	/**
 	* Indicates whether the format converter supports conversion to the
@@ -57,7 +57,7 @@ extern class FormatConversionProvider
 	* @param targetEncoding the target format encoding for which support is queried
 	* @return <code>true</code> if the encoding is supported, otherwise <code>false</code>
 	*/
-	@:overload public function isTargetEncodingSupported(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding) : Bool;
+	@:overload @:public public function isTargetEncodingSupported(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding) : Bool;
 	
 	/**
 	* Obtains the set of target format encodings supported by the format converter
@@ -66,7 +66,7 @@ extern class FormatConversionProvider
 	* an array of length 0 is returned.
 	* @return array of supported target format encodings.
 	*/
-	@:overload @:abstract public function getTargetEncodings(sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
+	@:overload @:public @:abstract public function getTargetEncodings(sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
 	
 	/**
 	* Indicates whether the format converter supports conversion to a particular encoding
@@ -75,7 +75,7 @@ extern class FormatConversionProvider
 	* @param sourceFormat format of the incoming data
 	* @return <code>true</code> if the conversion is supported, otherwise <code>false</code>
 	*/
-	@:overload public function isConversionSupported(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : Bool;
+	@:overload @:public public function isConversionSupported(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : Bool;
 	
 	/**
 	* Obtains the set of target formats with the encoding specified
@@ -84,7 +84,7 @@ extern class FormatConversionProvider
 	* for this source format, an array of length 0 is returned.
 	* @return array of supported target formats.
 	*/
-	@:overload @:abstract public function getTargetFormats(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat>;
+	@:overload @:public @:abstract public function getTargetFormats(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat>;
 	
 	/**
 	* Indicates whether the format converter supports conversion to one
@@ -93,7 +93,7 @@ extern class FormatConversionProvider
 	* @param sourceFormat format of the incoming data
 	* @return <code>true</code> if the conversion is supported, otherwise <code>false</code>
 	*/
-	@:overload public function isConversionSupported(targetFormat : javax.sound.sampled.AudioFormat, sourceFormat : javax.sound.sampled.AudioFormat) : Bool;
+	@:overload @:public public function isConversionSupported(targetFormat : javax.sound.sampled.AudioFormat, sourceFormat : javax.sound.sampled.AudioFormat) : Bool;
 	
 	/**
 	* Obtains an audio input stream with the specified encoding from the given audio
@@ -104,7 +104,7 @@ extern class FormatConversionProvider
 	* @throws IllegalArgumentException if the format combination supplied is
 	* not supported.
 	*/
-	@:overload @:abstract public function getAudioInputStream(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public @:abstract public function getAudioInputStream(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
 	
 	/**
 	* Obtains an audio input stream with the specified format from the given audio
@@ -115,7 +115,7 @@ extern class FormatConversionProvider
 	* @throws IllegalArgumentException if the format combination supplied is
 	* not supported.
 	*/
-	@:overload @:abstract public function getAudioInputStream(targetFormat : javax.sound.sampled.AudioFormat, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public @:abstract public function getAudioInputStream(targetFormat : javax.sound.sampled.AudioFormat, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
 	
 	
 }

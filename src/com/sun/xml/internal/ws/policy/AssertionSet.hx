@@ -36,7 +36,7 @@ extern class AssertionSet implements java.lang.Iterable<com.sun.xml.internal.ws.
 	*        May be {@code null} - empty assertion set is returned in such case.
 	* @return new instance of assertion set holding the content of all provided policy assertion sets.
 	*/
-	@:overload public static function createMergedAssertionSet(alternatives : java.util.Collection<com.sun.xml.internal.ws.policy.AssertionSet>) : com.sun.xml.internal.ws.policy.AssertionSet;
+	@:overload @:public @:static public static function createMergedAssertionSet(alternatives : java.util.Collection<com.sun.xml.internal.ws.policy.AssertionSet>) : com.sun.xml.internal.ws.policy.AssertionSet;
 	
 	/**
 	* Creates and returns new assertion set holding a set of provided policy assertions.
@@ -44,16 +44,16 @@ extern class AssertionSet implements java.lang.Iterable<com.sun.xml.internal.ws.
 	* @param assertions collection of provided policy assertions to be stored in the assertion set. May be {@code null}.
 	* @return new instance of assertion set holding the provided policy assertions
 	*/
-	@:overload public static function createAssertionSet(assertions : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>) : com.sun.xml.internal.ws.policy.AssertionSet;
+	@:overload @:public @:static public static function createAssertionSet(assertions : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>) : com.sun.xml.internal.ws.policy.AssertionSet;
 	
-	@:overload public static function emptyAssertionSet() : com.sun.xml.internal.ws.policy.AssertionSet;
+	@:overload @:public @:static public static function emptyAssertionSet() : com.sun.xml.internal.ws.policy.AssertionSet;
 	
 	/**
 	* Returns an iterator over a set of child policy assertion objects.
 	*
 	* @return policy assertion Iterator.
 	*/
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.policy.PolicyAssertion>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.policy.PolicyAssertion>;
 	
 	/**
 	* Searches for assertions with given name. Only assertions that are contained as immediate children of the assertion set are
@@ -63,14 +63,14 @@ extern class AssertionSet implements java.lang.Iterable<com.sun.xml.internal.ws.
 	* @return List of all assertions matching the requested name. If no assertions are found, the returned list is empty
 	* (i.e. {@code null} value is never returned).
 	*/
-	@:overload public function get(name : javax.xml.namespace.QName) : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>;
+	@:overload @:public public function get(name : javax.xml.namespace.QName) : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>;
 	
 	/**
 	* Returns {@code true} if this assertion set contains no assertions.
 	*
 	* @return {@code true} if this assertion set contains no assertions.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Returns true if the assertion set contains the assertion name specified in its vocabulary
@@ -78,28 +78,28 @@ extern class AssertionSet implements java.lang.Iterable<com.sun.xml.internal.ws.
 	* @param assertionName the fully qualified name of the assertion
 	* @return {@code true}, if an assertion with the given name could be found in the assertion set vocabulary {@code false} otherwise.
 	*/
-	@:overload public function contains(assertionName : javax.xml.namespace.QName) : Bool;
+	@:overload @:public public function contains(assertionName : javax.xml.namespace.QName) : Bool;
 	
 	/**
 	* An {@code Comparable<T>.compareTo(T o)} interface method implementation.
 	* @param that other alternative to compare with
 	*/
-	@:overload public function compareTo(that : com.sun.xml.internal.ws.policy.AssertionSet) : Int;
+	@:overload @:public public function compareTo(that : com.sun.xml.internal.ws.policy.AssertionSet) : Int;
 	
 	/**
 	* An {@code Object.equals(Object obj)} method override.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* An {@code Object.hashCode()} method override.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* An {@code Object.toString()} method override.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -38,14 +38,14 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	/**
 	* The default seperator for the simple tag option.
 	*/
-	public static var SIMPLE_TAGLET_OPT_SEPERATOR(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var SIMPLE_TAGLET_OPT_SEPERATOR(default, null) : java.StdTypes.Char16;
 	
 	/**
 	* The alternate seperator for simple tag options.  Use this
 	* with you want the default seperator to be in the name of the
 	* custom tag.
 	*/
-	public static var ALT_SIMPLE_TAGLET_OPT_SEPERATOR(default, null) : String;
+	@:public @:static @:final public static var ALT_SIMPLE_TAGLET_OPT_SEPERATOR(default, null) : String;
 	
 	/**
 	* Construct a new <code>TagletManager</code>.
@@ -54,7 +54,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @param showauthor true if we want to use @author tags.
 	* @param message the message retriever to print warnings.
 	*/
-	@:overload public function new(nosince : Bool, showversion : Bool, showauthor : Bool, message : com.sun.tools.doclets.internal.toolkit.util.MessageRetriever) : Void;
+	@:overload @:public public function new(nosince : Bool, showversion : Bool, showauthor : Bool, message : com.sun.tools.doclets.internal.toolkit.util.MessageRetriever) : Void;
 	
 	/**
 	* Add a new <code>CustomTag</code>.  This is used to add a Taglet from within
@@ -63,7 +63,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* Doclet.  We don't want to see this type of error message every time.
 	* @param customTag the new <code>CustomTag</code> to add.
 	*/
-	@:overload public function addCustomTag(customTag : com.sun.tools.doclets.internal.toolkit.taglets.Taglet) : Void;
+	@:overload @:public public function addCustomTag(customTag : com.sun.tools.doclets.internal.toolkit.taglets.Taglet) : Void;
 	
 	/**
 	* Add a new <code>Taglet</code>.  Print a message to indicate whether or not
@@ -71,7 +71,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @param classname  the name of the class representing the custom tag.
 	* @param tagletPath  the path to the class representing the custom tag.
 	*/
-	@:overload public function addCustomTag(classname : String, tagletPath : String) : Void;
+	@:overload @:public public function addCustomTag(classname : String, tagletPath : String) : Void;
 	
 	/**
 	* Add a new <code>SimpleTaglet</code>.  If this tag already exists
@@ -84,14 +84,14 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @param locations the possible locations that this tag
 	* can appear in.
 	*/
-	@:overload public function addNewSimpleCustomTag(tagName : String, header : String, locations : String) : Void;
+	@:overload @:public public function addNewSimpleCustomTag(tagName : String, header : String, locations : String) : Void;
 	
 	/**
 	* Given a name of a seen custom tag, remove it from the set of unseen
 	* custom tags.
 	* @param name the name of the seen custom tag.
 	*/
-	@:overload public function seenCustomTag(name : String) : Void;
+	@:overload @:public public function seenCustomTag(name : String) : Void;
 	
 	/**
 	* Given an array of <code>Tag</code>s, check for spelling mistakes.
@@ -99,7 +99,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @param tags the list of <code>Tag</code>s to check.
 	* @param areInlineTags true if the array of tags are inline and false otherwise.
 	*/
-	@:overload public function checkTags(doc : com.sun.javadoc.Doc, tags : java.NativeArray<com.sun.javadoc.Tag>, areInlineTags : Bool) : Void;
+	@:overload @:public public function checkTags(doc : com.sun.javadoc.Doc, tags : java.NativeArray<com.sun.javadoc.Tag>, areInlineTags : Bool) : Void;
 	
 	/**
 	* Return the array of <code>Taglet</code>s that can
@@ -107,7 +107,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @return the array of <code>Taglet</code>s that can
 	* appear in packages.
 	*/
-	@:overload public function getPackageCustomTags() : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
+	@:overload @:public public function getPackageCustomTags() : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
 	
 	/**
 	* Return the array of <code>Taglet</code>s that can
@@ -115,7 +115,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @return the array of <code>Taglet</code>s that can
 	* appear in classes or interfaces.
 	*/
-	@:overload public function getTypeCustomTags() : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
+	@:overload @:public public function getTypeCustomTags() : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
 	
 	/**
 	* Return the array of inline <code>Taglet</code>s that can
@@ -123,7 +123,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @return the array of <code>Taglet</code>s that can
 	* appear in comments.
 	*/
-	@:overload public function getInlineCustomTags() : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
+	@:overload @:public public function getInlineCustomTags() : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
 	
 	/**
 	* Return the array of <code>Taglet</code>s that can
@@ -131,7 +131,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @return the array of <code>Taglet</code>s that can
 	* appear in field.
 	*/
-	@:overload public function getFieldCustomTags() : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
+	@:overload @:public public function getFieldCustomTags() : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
 	
 	/**
 	* Return the array of <code>Taglet</code>s that can
@@ -139,13 +139,13 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @return the array of <code>Taglet</code>s that can
 	* appear in the serialized form.
 	*/
-	@:overload public function getSerializedFormTags() : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
+	@:overload @:public public function getSerializedFormTags() : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
 	
 	/**
 	* @return the array of <code>Taglet</code>s that can
 	* appear in the given Doc.
 	*/
-	@:overload public function getCustomTags(doc : com.sun.javadoc.Doc) : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
+	@:overload @:public public function getCustomTags(doc : com.sun.javadoc.Doc) : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
 	
 	/**
 	* Return the array of <code>Taglet</code>s that can
@@ -153,7 +153,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @return the array of <code>Taglet</code>s that can
 	* appear in constructors.
 	*/
-	@:overload public function getConstructorCustomTags() : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
+	@:overload @:public public function getConstructorCustomTags() : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
 	
 	/**
 	* Return the array of <code>Taglet</code>s that can
@@ -161,7 +161,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @return the array of <code>Taglet</code>s that can
 	* appear in methods.
 	*/
-	@:overload public function getMethodCustomTags() : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
+	@:overload @:public public function getMethodCustomTags() : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
 	
 	/**
 	* Return the array of <code>Taglet</code>s that can
@@ -169,16 +169,16 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @return the array of <code>Taglet</code>s that can
 	* appear in overview.
 	*/
-	@:overload public function getOverviewCustomTags() : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
+	@:overload @:public public function getOverviewCustomTags() : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>;
 	
-	@:overload public function isKnownCustomTag(tagName : String) : Bool;
+	@:overload @:public public function isKnownCustomTag(tagName : String) : Bool;
 	
 	/**
 	* Print a list of {@link Taglet}s that might conflict with
 	* standard tags in the future and a list of standard tags
 	* that have been overriden.
 	*/
-	@:overload public function printReport() : Void;
+	@:overload @:public public function printReport() : Void;
 	
 	/**
 	* Given the name of a tag, return the corresponding taglet.
@@ -188,7 +188,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @return return the corresponding taglet. Return null if the tag is
 	*         unknown.
 	*/
-	@:overload public function getTaglet(name : String) : com.sun.tools.doclets.internal.toolkit.taglets.Taglet;
+	@:overload @:public public function getTaglet(name : String) : com.sun.tools.doclets.internal.toolkit.taglets.Taglet;
 	
 	
 }

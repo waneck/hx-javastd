@@ -25,11 +25,11 @@ package sun.print;
 */
 extern class PSStreamPrinterFactory extends javax.print.StreamPrintServiceFactory
 {
-	@:overload override public function getOutputFormat() : String;
+	@:overload @:public override public function getOutputFormat() : String;
 	
-	@:overload override public function getSupportedDocFlavors() : java.NativeArray<javax.print.DocFlavor>;
+	@:overload @:public override public function getSupportedDocFlavors() : java.NativeArray<javax.print.DocFlavor>;
 	
-	@:overload override public function getPrintService(out : java.io.OutputStream) : javax.print.StreamPrintService;
+	@:overload @:public override public function getPrintService(out : java.io.OutputStream) : javax.print.StreamPrintService;
 	
 	
 }

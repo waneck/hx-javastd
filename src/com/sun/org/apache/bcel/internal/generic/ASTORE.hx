@@ -67,7 +67,7 @@ extern class ASTORE extends com.sun.org.apache.bcel.internal.generic.StoreInstru
 	/** Store reference into local variable
 	* @param n index of local variable
 	*/
-	@:overload public function new(n : Int) : Void;
+	@:overload @:public public function new(n : Int) : Void;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -77,7 +77,7 @@ extern class ASTORE extends com.sun.org.apache.bcel.internal.generic.StoreInstru
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

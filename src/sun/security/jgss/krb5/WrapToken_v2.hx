@@ -37,7 +37,7 @@ package sun.security.jgss.krb5;
 	* parsed token will be stored.
 	* @throws GSSException if the token is defective
 	*/
-	@:overload public function new(context : sun.security.jgss.krb5.Krb5Context, tokenBytes : java.NativeArray<java.StdTypes.Int8>, tokenOffset : Int, tokenLen : Int, prop : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public public function new(context : sun.security.jgss.krb5.Krb5Context, tokenBytes : java.NativeArray<java.StdTypes.Int8>, tokenOffset : Int, tokenLen : Int, prop : org.ietf.jgss.MessageProp) : Void;
 	
 	/**
 	* Constructs a WrapToken from token bytes read on the fly from
@@ -50,7 +50,7 @@ package sun.security.jgss.krb5;
 	* @throws GSSException if the token is defective or if there is
 	* a problem reading from the InputStream
 	*/
-	@:overload public function new(context : sun.security.jgss.krb5.Krb5Context, is : java.io.InputStream, prop : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public public function new(context : sun.security.jgss.krb5.Krb5Context, is : java.io.InputStream, prop : org.ietf.jgss.MessageProp) : Void;
 	
 	/**
 	* Obtains the application data that was transmitted in this
@@ -59,7 +59,7 @@ package sun.security.jgss.krb5;
 	* @throws GSSException if an error occurs while decrypting any
 	* cipher text and checking for validity
 	*/
-	@:overload public function getData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Obtains the application data that was transmitted in this
@@ -72,18 +72,18 @@ package sun.security.jgss.krb5;
 	* @throws GSSException if an error occurs while decrypting any
 	* cipher text and checking for validity
 	*/
-	@:overload public function getData(dataBuf : java.NativeArray<java.StdTypes.Int8>, dataBufOffset : Int) : Int;
+	@:overload @:public public function getData(dataBuf : java.NativeArray<java.StdTypes.Int8>, dataBufOffset : Int) : Int;
 	
 	/**
 	* Writes a WrapToken_v2 object
 	*/
-	@:overload public function new(context : sun.security.jgss.krb5.Krb5Context, prop : org.ietf.jgss.MessageProp, dataBytes : java.NativeArray<java.StdTypes.Int8>, dataOffset : Int, dataLen : Int) : Void;
+	@:overload @:public public function new(context : sun.security.jgss.krb5.Krb5Context, prop : org.ietf.jgss.MessageProp, dataBytes : java.NativeArray<java.StdTypes.Int8>, dataOffset : Int, dataLen : Int) : Void;
 	
-	@:overload public function encode(os : java.io.OutputStream) : Void;
+	@:overload @:public override public function encode(os : java.io.OutputStream) : Void;
 	
-	@:overload public function encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function encode() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function encode(outToken : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Int;
+	@:overload @:public public function encode(outToken : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Int;
 	
 	
 }

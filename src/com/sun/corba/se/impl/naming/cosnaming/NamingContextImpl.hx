@@ -51,7 +51,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* to these methods are synchronized; these methods should
 	* therefore not be synchronized.
 	*/
-	private var nsPOA : org.omg.PortableServer.POA;
+	@:protected private var nsPOA : org.omg.PortableServer.POA;
 	
 	/**
 	* Create a naming context servant.
@@ -59,9 +59,9 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* @param orb an ORB object.
 	* @exception java.lang.Exception a Java exception.
 	*/
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, poa : org.omg.PortableServer.POA) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, poa : org.omg.PortableServer.POA) : Void;
 	
-	@:overload public function getNSPOA() : org.omg.PortableServer.POA;
+	@:overload @:public public function getNSPOA() : org.omg.PortableServer.POA;
 	
 	/**
 	* Bind an object under a name in this NamingContext. If the name
@@ -87,7 +87,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* system exceptions.
 	* @see doBind
 	*/
-	@:overload override public function bind(n : java.NativeArray<org.omg.CosNaming.NameComponent>, obj : org.omg.CORBA.Object) : Void;
+	@:overload @:public override public function bind(n : java.NativeArray<org.omg.CosNaming.NameComponent>, obj : org.omg.CORBA.Object) : Void;
 	
 	/**
 	* Bind a NamingContext under a name in this NamingContext. If the name
@@ -111,7 +111,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* system exceptions.
 	* @see doBind
 	*/
-	@:overload override public function bind_context(n : java.NativeArray<org.omg.CosNaming.NameComponent>, nc : org.omg.CosNaming.NamingContext) : Void;
+	@:overload @:public override public function bind_context(n : java.NativeArray<org.omg.CosNaming.NameComponent>, nc : org.omg.CosNaming.NamingContext) : Void;
 	
 	/**
 	* Bind an object under a name in this NamingContext. If the name
@@ -135,7 +135,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* system exceptions.
 	* @see doBind
 	*/
-	@:overload override public function rebind(n : java.NativeArray<org.omg.CosNaming.NameComponent>, obj : org.omg.CORBA.Object) : Void;
+	@:overload @:public override public function rebind(n : java.NativeArray<org.omg.CosNaming.NameComponent>, obj : org.omg.CORBA.Object) : Void;
 	
 	/**
 	* Bind a NamingContext under a name in this NamingContext. If the name
@@ -158,7 +158,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* system exceptions.
 	* @see doBind
 	*/
-	@:overload override public function rebind_context(n : java.NativeArray<org.omg.CosNaming.NameComponent>, nc : org.omg.CosNaming.NamingContext) : Void;
+	@:overload @:public override public function rebind_context(n : java.NativeArray<org.omg.CosNaming.NameComponent>, nc : org.omg.CosNaming.NamingContext) : Void;
 	
 	/**
 	* Resolve a name in this NamingContext and return the object reference
@@ -180,7 +180,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* system exceptions.
 	* @see doResolve
 	*/
-	@:overload override public function resolve(n : java.NativeArray<org.omg.CosNaming.NameComponent>) : org.omg.CORBA.Object;
+	@:overload @:public override public function resolve(n : java.NativeArray<org.omg.CosNaming.NameComponent>) : org.omg.CORBA.Object;
 	
 	/**
 	* Remove a binding from this NamingContext. If the name contains
@@ -199,7 +199,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* system exceptions.
 	* @see doUnbind
 	*/
-	@:overload override public function unbind(n : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
+	@:overload @:public override public function unbind(n : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
 	
 	/**
 	* List the contents of this NamingContest. A sequence of bindings
@@ -214,7 +214,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* @see BindingListHolder
 	* @see BindingIteratorImpl
 	*/
-	@:overload override public function list(how_many : Int, bl : org.omg.CosNaming.BindingListHolder, bi : org.omg.CosNaming.BindingIteratorHolder) : Void;
+	@:overload @:public override public function list(how_many : Int, bl : org.omg.CosNaming.BindingListHolder, bi : org.omg.CosNaming.BindingIteratorHolder) : Void;
 	
 	/**
 	* Create a NamingContext object and return its object reference.
@@ -223,7 +223,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA
 	* system exceptions.
 	*/
-	@:overload @:synchronized override public function new_context() : org.omg.CosNaming.NamingContext;
+	@:overload @:public @:synchronized override public function new_context() : org.omg.CosNaming.NamingContext;
 	
 	/**
 	* Create a new NamingContext, bind it in this Naming Context and return
@@ -247,7 +247,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* @see new_context
 	* @see bind_context
 	*/
-	@:overload override public function bind_new_context(n : java.NativeArray<org.omg.CosNaming.NameComponent>) : org.omg.CosNaming.NamingContext;
+	@:overload @:public override public function bind_new_context(n : java.NativeArray<org.omg.CosNaming.NameComponent>) : org.omg.CosNaming.NamingContext;
 	
 	/**
 	* Destroy this NamingContext object. If this NamingContext contains
@@ -257,7 +257,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA
 	* system exceptions.
 	*/
-	@:overload override public function destroy() : Void;
+	@:overload @:public override public function destroy() : Void;
 	
 	/**
 	* Implements all four flavors of binding. It uses Resolve() to
@@ -293,7 +293,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* @see rebind
 	* @see rebind_context
 	*/
-	@:overload public static function doBind(impl : com.sun.corba.se.impl.naming.cosnaming.NamingContextDataStore, n : java.NativeArray<org.omg.CosNaming.NameComponent>, obj : org.omg.CORBA.Object, rebind : Bool, bt : org.omg.CosNaming.BindingType) : Void;
+	@:overload @:public @:static public static function doBind(impl : com.sun.corba.se.impl.naming.cosnaming.NamingContextDataStore, n : java.NativeArray<org.omg.CosNaming.NameComponent>, obj : org.omg.CORBA.Object, rebind : Bool, bt : org.omg.CosNaming.BindingType) : Void;
 	
 	/**
 	* Implements resolving names in this NamingContext. The first component
@@ -320,7 +320,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* exceptions.
 	* @see resolve
 	*/
-	@:overload public static function doResolve(impl : com.sun.corba.se.impl.naming.cosnaming.NamingContextDataStore, n : java.NativeArray<org.omg.CosNaming.NameComponent>) : org.omg.CORBA.Object;
+	@:overload @:public @:static public static function doResolve(impl : com.sun.corba.se.impl.naming.cosnaming.NamingContextDataStore, n : java.NativeArray<org.omg.CosNaming.NameComponent>) : org.omg.CORBA.Object;
 	
 	/**
 	* Implements unbinding bound names in this NamingContext. If the
@@ -342,7 +342,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
 	* @see resolve
 	*/
-	@:overload public static function doUnbind(impl : com.sun.corba.se.impl.naming.cosnaming.NamingContextDataStore, n : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
+	@:overload @:public @:static public static function doUnbind(impl : com.sun.corba.se.impl.naming.cosnaming.NamingContextDataStore, n : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
 	
 	/**
 	* Implements resolving a NameComponent in this context and
@@ -357,7 +357,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
 	* @see resolve
 	*/
-	@:overload private static function resolveFirstAsContext(impl : com.sun.corba.se.impl.naming.cosnaming.NamingContextDataStore, n : java.NativeArray<org.omg.CosNaming.NameComponent>) : org.omg.CosNaming.NamingContext;
+	@:overload @:protected @:static private static function resolveFirstAsContext(impl : com.sun.corba.se.impl.naming.cosnaming.NamingContextDataStore, n : java.NativeArray<org.omg.CosNaming.NameComponent>) : org.omg.CosNaming.NamingContext;
 	
 	/**
 	* This operation creates a stringified name from the array of Name
@@ -367,7 +367,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* Indicates the name does not identify a binding.<p>
 	*
 	*/
-	@:overload override public function to_string(n : java.NativeArray<org.omg.CosNaming.NameComponent>) : String;
+	@:overload @:public override public function to_string(n : java.NativeArray<org.omg.CosNaming.NameComponent>) : String;
 	
 	/**
 	* This operation  converts a Stringified Name into an  equivalent array
@@ -377,7 +377,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* Indicates the name does not identify a binding.<p>
 	*
 	*/
-	@:overload override public function to_name(sn : String) : java.NativeArray<org.omg.CosNaming.NameComponent>;
+	@:overload @:public override public function to_name(sn : String) : java.NativeArray<org.omg.CosNaming.NameComponent>;
 	
 	/**
 	* This operation creates a URL based "iiopname://" format name
@@ -392,7 +392,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* incorrect <p>
 	*
 	*/
-	@:overload override public function to_url(addr : String, sn : String) : String;
+	@:overload @:public override public function to_url(addr : String, sn : String) : String;
 	
 	/**
 	* This operation resolves the Stringified name into the object
@@ -408,20 +408,20 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* Indicates the name is already bound.<p>
 	*
 	*/
-	@:overload override public function resolve_str(sn : String) : org.omg.CORBA.Object;
+	@:overload @:public override public function resolve_str(sn : String) : org.omg.CORBA.Object;
 	
-	@:transient private var orb : com.sun.corba.se.spi.orb.ORB;
+	@:transient @:protected private var orb : com.sun.corba.se.spi.orb.ORB;
 	
-	@:overload public static function nameToString(name : java.NativeArray<org.omg.CosNaming.NameComponent>) : String;
+	@:overload @:public @:static public static function nameToString(name : java.NativeArray<org.omg.CosNaming.NameComponent>) : String;
 	
-	public static var debug(default, null) : Bool;
+	@:public @:static @:final public static var debug(default, null) : Bool;
 	
 	/**
 	* Method which implements unbinding a name.
 	* @return the object reference bound to the name, or null if not found.
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
 	*/
-	@:overload public function Unbind(n : org.omg.CosNaming.NameComponent) : org.omg.CORBA.Object;
+	@:overload @:public public function Unbind(n : org.omg.CosNaming.NameComponent) : org.omg.CORBA.Object;
 	
 	/**
 	* Method which implements binding a name to an object as
@@ -432,7 +432,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* @param bt Type of binding (as object or as context).
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
 	*/
-	@:overload public function Bind(n : org.omg.CosNaming.NameComponent, obj : org.omg.CORBA.Object, bt : org.omg.CosNaming.BindingType) : Void;
+	@:overload @:public public function Bind(n : org.omg.CosNaming.NameComponent, obj : org.omg.CORBA.Object, bt : org.omg.CosNaming.BindingType) : Void;
 	
 	/**
 	* Method which implements resolving the specified name,
@@ -444,7 +444,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* @return the object reference bound under the supplied name.
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
 	*/
-	@:overload public function Resolve(n : org.omg.CosNaming.NameComponent, bth : org.omg.CosNaming.BindingTypeHolder) : org.omg.CORBA.Object;
+	@:overload @:public public function Resolve(n : org.omg.CosNaming.NameComponent, bth : org.omg.CosNaming.BindingTypeHolder) : org.omg.CORBA.Object;
 	
 	/**
 	* Method which implements creating a new NamingContext.
@@ -452,20 +452,20 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* by this Name Server.
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
 	*/
-	@:overload public function NewContext() : org.omg.CosNaming.NamingContext;
+	@:overload @:public public function NewContext() : org.omg.CosNaming.NamingContext;
 	
 	/**
 	* Method which implements destroying this NamingContext.
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
 	*/
-	@:overload public function Destroy() : Void;
+	@:overload @:public public function Destroy() : Void;
 	
 	/**
 	* Method which returns whether this NamingContext is empty
 	* or not.
 	* @return true if this NamingContext contains no bindings.
 	*/
-	@:overload public function IsEmpty() : Bool;
+	@:overload @:public public function IsEmpty() : Bool;
 	
 	/**
 	* Method which implements listing the contents of this
@@ -475,7 +475,7 @@ extern class NamingContextImpl extends org.omg.CosNaming.NamingContextExtPOA imp
 	* @param bi The BindingIterator as an out parameter.
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
 	*/
-	@:overload public function List(how_many : Int, bl : org.omg.CosNaming.BindingListHolder, bi : org.omg.CosNaming.BindingIteratorHolder) : Void;
+	@:overload @:public public function List(how_many : Int, bl : org.omg.CosNaming.BindingListHolder, bi : org.omg.CosNaming.BindingIteratorHolder) : Void;
 	
 	
 }

@@ -28,12 +28,12 @@ extern class ZipEntry implements java.util.zip.ZipConstants implements java.lang
 	/**
 	* Compression method for uncompressed entries.
 	*/
-	public static var STORED(default, null) : Int;
+	@:public @:static @:final public static var STORED(default, null) : Int;
 	
 	/**
 	* Compression method for compressed (deflated) entries.
 	*/
-	public static var DEFLATED(default, null) : Int;
+	@:public @:static @:final public static var DEFLATED(default, null) : Int;
 	
 	/**
 	* Creates a new zip entry with the specified name.
@@ -43,20 +43,20 @@ extern class ZipEntry implements java.util.zip.ZipConstants implements java.lang
 	* @exception IllegalArgumentException if the entry name is longer than
 	*            0xFFFF bytes
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a new zip entry with fields taken from the specified
 	* zip entry.
 	* @param e a zip Entry object
 	*/
-	@:overload public function new(e : java.util.zip.ZipEntry) : Void;
+	@:overload @:public public function new(e : java.util.zip.ZipEntry) : Void;
 	
 	/**
 	* Returns the name of the entry.
 	* @return the name of the entry
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Sets the modification time of the entry.
@@ -64,14 +64,14 @@ extern class ZipEntry implements java.util.zip.ZipConstants implements java.lang
 	*             since the epoch
 	* @see #getTime()
 	*/
-	@:overload public function setTime(time : haxe.Int64) : Void;
+	@:overload @:public public function setTime(time : haxe.Int64) : Void;
 	
 	/**
 	* Returns the modification time of the entry, or -1 if not specified.
 	* @return the modification time of the entry, or -1 if not specified
 	* @see #setTime(long)
 	*/
-	@:overload public function getTime() : haxe.Int64;
+	@:overload @:public public function getTime() : haxe.Int64;
 	
 	/**
 	* Sets the uncompressed size of the entry data.
@@ -82,14 +82,14 @@ extern class ZipEntry implements java.util.zip.ZipConstants implements java.lang
 	*            or is less than 0 when ZIP64 is supported
 	* @see #getSize()
 	*/
-	@:overload public function setSize(size : haxe.Int64) : Void;
+	@:overload @:public public function setSize(size : haxe.Int64) : Void;
 	
 	/**
 	* Returns the uncompressed size of the entry data, or -1 if not known.
 	* @return the uncompressed size of the entry data, or -1 if not known
 	* @see #setSize(long)
 	*/
-	@:overload public function getSize() : haxe.Int64;
+	@:overload @:public public function getSize() : haxe.Int64;
 	
 	/**
 	* Returns the size of the compressed entry data, or -1 if not known.
@@ -98,14 +98,14 @@ extern class ZipEntry implements java.util.zip.ZipConstants implements java.lang
 	* @return the size of the compressed entry data, or -1 if not known
 	* @see #setCompressedSize(long)
 	*/
-	@:overload public function getCompressedSize() : haxe.Int64;
+	@:overload @:public public function getCompressedSize() : haxe.Int64;
 	
 	/**
 	* Sets the size of the compressed entry data.
 	* @param csize the compressed size to set to
 	* @see #getCompressedSize()
 	*/
-	@:overload public function setCompressedSize(csize : haxe.Int64) : Void;
+	@:overload @:public public function setCompressedSize(csize : haxe.Int64) : Void;
 	
 	/**
 	* Sets the CRC-32 checksum of the uncompressed entry data.
@@ -114,7 +114,7 @@ extern class ZipEntry implements java.util.zip.ZipConstants implements java.lang
 	*            less than 0 or greater than 0xFFFFFFFF
 	* @see #getCrc()
 	*/
-	@:overload public function setCrc(crc : haxe.Int64) : Void;
+	@:overload @:public public function setCrc(crc : haxe.Int64) : Void;
 	
 	/**
 	* Returns the CRC-32 checksum of the uncompressed entry data, or -1 if
@@ -123,7 +123,7 @@ extern class ZipEntry implements java.util.zip.ZipConstants implements java.lang
 	* not known
 	* @see #setCrc(long)
 	*/
-	@:overload public function getCrc() : haxe.Int64;
+	@:overload @:public public function getCrc() : haxe.Int64;
 	
 	/**
 	* Sets the compression method for the entry.
@@ -132,14 +132,14 @@ extern class ZipEntry implements java.util.zip.ZipConstants implements java.lang
 	*            method is invalid
 	* @see #getMethod()
 	*/
-	@:overload public function setMethod(method : Int) : Void;
+	@:overload @:public public function setMethod(method : Int) : Void;
 	
 	/**
 	* Returns the compression method of the entry, or -1 if not specified.
 	* @return the compression method of the entry, or -1 if not specified
 	* @see #setMethod(int)
 	*/
-	@:overload public function getMethod() : Int;
+	@:overload @:public public function getMethod() : Int;
 	
 	/**
 	* Sets the optional extra field data for the entry.
@@ -148,14 +148,14 @@ extern class ZipEntry implements java.util.zip.ZipConstants implements java.lang
 	*            extra field data is greater than 0xFFFF bytes
 	* @see #getExtra()
 	*/
-	@:overload public function setExtra(extra : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setExtra(extra : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the extra field data for the entry, or null if none.
 	* @return the extra field data for the entry, or null if none
 	* @see #setExtra(byte[])
 	*/
-	@:overload public function getExtra() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getExtra() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Sets the optional comment string for the entry.
@@ -168,36 +168,36 @@ extern class ZipEntry implements java.util.zip.ZipConstants implements java.lang
 	*
 	* @see #getComment()
 	*/
-	@:overload public function setComment(comment : String) : Void;
+	@:overload @:public public function setComment(comment : String) : Void;
 	
 	/**
 	* Returns the comment string for the entry, or null if none.
 	* @return the comment string for the entry, or null if none
 	* @see #setComment(String)
 	*/
-	@:overload public function getComment() : String;
+	@:overload @:public public function getComment() : String;
 	
 	/**
 	* Returns true if this is a directory entry. A directory entry is
 	* defined to be one whose name ends with a '/'.
 	* @return true if this is a directory entry
 	*/
-	@:overload public function isDirectory() : Bool;
+	@:overload @:public public function isDirectory() : Bool;
 	
 	/**
 	* Returns a string representation of the ZIP entry.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the hash code value for this entry.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a copy of this entry.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

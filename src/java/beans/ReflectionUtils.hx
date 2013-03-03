@@ -29,9 +29,9 @@ package java.beans;
 	* A utility class for reflectively finding methods, constuctors and fields
 	* using reflection.
 	*/
-	@:overload public static function isPrimitive(type : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function isPrimitive(type : Class<Dynamic>) : Bool;
 	
-	@:overload public static function primitiveTypeFor(wrapper : Class<Dynamic>) : Class<Dynamic>;
+	@:overload @:public @:static public static function primitiveTypeFor(wrapper : Class<Dynamic>) : Class<Dynamic>;
 	
 	/**
 	* Returns the value of a private field.
@@ -42,7 +42,7 @@ package java.beans;
 	* @param el an exception listener to handle exceptions; or null
 	* @return value of the field; null if not found or an error is encountered
 	*/
-	@:overload public static function getPrivateField(instance : Dynamic, cls : Class<Dynamic>, name : String, el : java.beans.ExceptionListener) : Dynamic;
+	@:overload @:public @:static public static function getPrivateField(instance : Dynamic, cls : Class<Dynamic>, name : String, el : java.beans.ExceptionListener) : Dynamic;
 	
 	
 }

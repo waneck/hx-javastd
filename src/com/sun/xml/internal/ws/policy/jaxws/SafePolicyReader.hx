@@ -36,9 +36,9 @@ extern class SafePolicyReader
 	* @param baseUrl The system id of the document read by the reader.
 	* @return The policy that was read from the XML stream.
 	*/
-	@:overload public function readPolicyElement(reader : javax.xml.stream.XMLStreamReader, baseUrl : String) : com.sun.xml.internal.ws.policy.jaxws.SafePolicyReader.SafePolicyReader_PolicyRecord;
+	@:overload @:public public function readPolicyElement(reader : javax.xml.stream.XMLStreamReader, baseUrl : String) : com.sun.xml.internal.ws.policy.jaxws.SafePolicyReader.SafePolicyReader_PolicyRecord;
 	
-	@:overload public function getUrlsRead() : java.util.Set<String>;
+	@:overload @:public public function getUrlsRead() : java.util.Set<String>;
 	
 	/**
 	* Reads policy reference element <wsp:PolicyReference/> and returns referenced policy URI as String
@@ -46,7 +46,7 @@ extern class SafePolicyReader
 	* @param reader The XMLStreamReader should be in START_ELEMENT state and point to the PolicyReference element.
 	* @return The URI contained in the PolicyReference
 	*/
-	@:overload public function readPolicyReferenceElement(reader : javax.xml.stream.XMLStreamReader) : String;
+	@:overload @:public public function readPolicyReferenceElement(reader : javax.xml.stream.XMLStreamReader) : String;
 	
 	/**
 	* Utility method to construct an absolute URL from a relative URI and a base URL.
@@ -58,7 +58,7 @@ extern class SafePolicyReader
 	* @return The relative URI appended to the base URL. If relativeUri already is
 	*   an absolute URL, the method returns the relativeUri.
 	*/
-	@:overload public static function relativeToAbsoluteUrl(relativeUri : String, baseUri : String) : String;
+	@:overload @:public @:static public static function relativeToAbsoluteUrl(relativeUri : String, baseUri : String) : String;
 	
 	
 }
@@ -73,11 +73,11 @@ extern class SafePolicyReader
 	* @throws PolicyException If there already is a policy recorded with the
 	*   same id.
 	*/
-	@:overload public function setUri(uri : String, id : String) : Void;
+	@:overload @:public public function setUri(uri : String, id : String) : Void;
 	
-	@:overload public function getUri() : String;
+	@:overload @:public public function getUri() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

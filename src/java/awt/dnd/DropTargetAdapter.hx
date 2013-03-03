@@ -77,7 +77,7 @@ package java.awt.dnd;
 	*
 	* @param dtde the <code>DropTargetDragEvent</code>
 	*/
-	@:overload public function dragEnter(dtde : java.awt.dnd.DropTargetDragEvent) : Void;
+	@:overload @:public public function dragEnter(dtde : java.awt.dnd.DropTargetDragEvent) : Void;
 	
 	/**
 	* Called when a drag operation is ongoing, while the mouse pointer is still
@@ -86,7 +86,7 @@ package java.awt.dnd;
 	*
 	* @param dtde the <code>DropTargetDragEvent</code>
 	*/
-	@:overload public function dragOver(dtde : java.awt.dnd.DropTargetDragEvent) : Void;
+	@:overload @:public public function dragOver(dtde : java.awt.dnd.DropTargetDragEvent) : Void;
 	
 	/**
 	* Called if the user has modified
@@ -94,7 +94,7 @@ package java.awt.dnd;
 	*
 	* @param dtde the <code>DropTargetDragEvent</code>
 	*/
-	@:overload public function dropActionChanged(dtde : java.awt.dnd.DropTargetDragEvent) : Void;
+	@:overload @:public public function dropActionChanged(dtde : java.awt.dnd.DropTargetDragEvent) : Void;
 	
 	/**
 	* Called while a drag operation is ongoing, when the mouse pointer has
@@ -103,7 +103,7 @@ package java.awt.dnd;
 	*
 	* @param dte the <code>DropTargetEvent</code>
 	*/
-	@:overload public function dragExit(dte : java.awt.dnd.DropTargetEvent) : Void;
+	@:overload @:public public function dragExit(dte : java.awt.dnd.DropTargetEvent) : Void;
 	
 	/**
 	* Called when the drag operation has terminated with a drop on
@@ -145,7 +145,7 @@ package java.awt.dnd;
 	* <P>
 	* @param dtde the <code>DropTargetDropEvent</code>
 	*/
-	@:overload public function drop(dtde : java.awt.dnd.DropTargetDropEvent) : Void;
+	@:overload @:public public function drop(dtde : java.awt.dnd.DropTargetDropEvent) : Void;
 	
 	
 }

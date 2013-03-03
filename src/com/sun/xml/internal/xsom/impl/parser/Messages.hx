@@ -26,35 +26,35 @@ package com.sun.xml.internal.xsom.impl.parser;
 extern class Messages
 {
 	/** Loads a string resource and formats it with specified arguments. */
-	@:overload public static function format(property : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static public static function format(property : String, args : java.NativeArray<Dynamic>) : String;
 	
-	public static var ERR_UNDEFINED_SIMPLETYPE(default, null) : String;
+	@:public @:static @:final public static var ERR_UNDEFINED_SIMPLETYPE(default, null) : String;
 	
-	public static var ERR_UNDEFINED_COMPLEXTYPE(default, null) : String;
+	@:public @:static @:final public static var ERR_UNDEFINED_COMPLEXTYPE(default, null) : String;
 	
-	public static var ERR_UNDEFINED_TYPE(default, null) : String;
+	@:public @:static @:final public static var ERR_UNDEFINED_TYPE(default, null) : String;
 	
-	public static var ERR_UNDEFINED_ELEMENT(default, null) : String;
+	@:public @:static @:final public static var ERR_UNDEFINED_ELEMENT(default, null) : String;
 	
-	public static var ERR_UNDEFINED_MODELGROUP(default, null) : String;
+	@:public @:static @:final public static var ERR_UNDEFINED_MODELGROUP(default, null) : String;
 	
-	public static var ERR_UNDEFINED_ATTRIBUTE(default, null) : String;
+	@:public @:static @:final public static var ERR_UNDEFINED_ATTRIBUTE(default, null) : String;
 	
-	public static var ERR_UNDEFINED_ATTRIBUTEGROUP(default, null) : String;
+	@:public @:static @:final public static var ERR_UNDEFINED_ATTRIBUTEGROUP(default, null) : String;
 	
-	public static var ERR_UNDEFINED_IDENTITY_CONSTRAINT(default, null) : String;
+	@:public @:static @:final public static var ERR_UNDEFINED_IDENTITY_CONSTRAINT(default, null) : String;
 	
-	public static var ERR_UNDEFINED_PREFIX(default, null) : String;
+	@:public @:static @:final public static var ERR_UNDEFINED_PREFIX(default, null) : String;
 	
-	public static var ERR_DOUBLE_DEFINITION(default, null) : String;
+	@:public @:static @:final public static var ERR_DOUBLE_DEFINITION(default, null) : String;
 	
-	public static var ERR_DOUBLE_DEFINITION_ORIGINAL(default, null) : String;
+	@:public @:static @:final public static var ERR_DOUBLE_DEFINITION_ORIGINAL(default, null) : String;
 	
-	public static var ERR_MISSING_SCHEMALOCATION(default, null) : String;
+	@:public @:static @:final public static var ERR_MISSING_SCHEMALOCATION(default, null) : String;
 	
-	public static var ERR_ENTITY_RESOLUTION_FAILURE(default, null) : String;
+	@:public @:static @:final public static var ERR_ENTITY_RESOLUTION_FAILURE(default, null) : String;
 	
-	public static var ERR_SIMPLE_CONTENT_EXPECTED(default, null) : String;
+	@:public @:static @:final public static var ERR_SIMPLE_CONTENT_EXPECTED(default, null) : String;
 	
 	
 }

@@ -29,7 +29,7 @@ package com.sun.xml.internal.ws.client.sei;
 }
 @:native('com$sun$xml$internal$ws$client$sei$BodyBuilder$Empty') @:internal extern class BodyBuilder_Empty extends com.sun.xml.internal.ws.client.sei.BodyBuilder
 {
-	@:overload public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
+	@:overload @:public public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
 	
 }
@@ -39,7 +39,7 @@ package com.sun.xml.internal.ws.client.sei;
 */
 @:native('com$sun$xml$internal$ws$client$sei$BodyBuilder$JAXB') @:internal extern class BodyBuilder_JAXB extends com.sun.xml.internal.ws.client.sei.BodyBuilder
 {
-	@:overload private function new(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
+	@:overload @:protected private function new(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
 	
 }
@@ -60,14 +60,14 @@ package com.sun.xml.internal.ws.client.sei;
 	/**
 	* Where in the method argument list do they come from?
 	*/
-	private var indices(default, null) : java.NativeArray<Int>;
+	@:protected @:final private var indices(default, null) : java.NativeArray<Int>;
 	
 	/**
 	* Abstracts away the {@link Holder} handling when touching method arguments.
 	*/
-	private var getters(default, null) : java.NativeArray<com.sun.xml.internal.ws.client.sei.ValueGetter>;
+	@:protected @:final private var getters(default, null) : java.NativeArray<com.sun.xml.internal.ws.client.sei.ValueGetter>;
 	
-	@:overload private function new(wp : com.sun.xml.internal.ws.model.WrapperParameter, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, getter : com.sun.xml.internal.ws.client.sei.ValueGetterFactory) : Void;
+	@:overload @:protected private function new(wp : com.sun.xml.internal.ws.model.WrapperParameter, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, getter : com.sun.xml.internal.ws.client.sei.ValueGetterFactory) : Void;
 	
 	
 }

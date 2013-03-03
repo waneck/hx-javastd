@@ -35,25 +35,25 @@ extern class JavacScope implements com.sun.source.tree.Scope
 	*
 	* @author Jonathan Gibbons;
 	*/
-	private var env(default, null) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
+	@:protected @:final private var env(default, null) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
-	@:overload public function getEnclosingScope() : com.sun.tools.javac.api.JavacScope;
+	@:overload @:public public function getEnclosingScope() : com.sun.tools.javac.api.JavacScope;
 	
-	@:overload public function getEnclosingClass() : javax.lang.model.element.TypeElement;
+	@:overload @:public public function getEnclosingClass() : javax.lang.model.element.TypeElement;
 	
-	@:overload public function getEnclosingMethod() : javax.lang.model.element.ExecutableElement;
+	@:overload @:public public function getEnclosingMethod() : javax.lang.model.element.ExecutableElement;
 	
-	@:overload public function getLocalElements() : java.lang.Iterable<javax.lang.model.element.Element>;
+	@:overload @:public public function getLocalElements() : java.lang.Iterable<javax.lang.model.element.Element>;
 	
-	@:overload public function getEnv() : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
+	@:overload @:public public function getEnv() : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
-	@:overload public function isStarImportScope() : Bool;
+	@:overload @:public public function isStarImportScope() : Bool;
 	
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

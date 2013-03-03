@@ -51,7 +51,7 @@ package java.applet;
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new() : Void;
+	@:require(java4) @:overload @:public public function new() : Void;
 	
 	/**
 	* Sets this applet's stub. This is done automatically by the system.
@@ -62,7 +62,7 @@ package java.applet;
 	* @param   stub   the new stub.
 	* @exception SecurityException if the caller cannot set the stub
 	*/
-	@:overload @:final public function setStub(stub : java.applet.AppletStub) : Void;
+	@:overload @:public @:final public function setStub(stub : java.applet.AppletStub) : Void;
 	
 	/**
 	* Determines if this applet is active. An applet is marked active
@@ -74,7 +74,7 @@ package java.applet;
 	* @see     java.applet.Applet#start()
 	* @see     java.applet.Applet#stop()
 	*/
-	@:overload public function isActive() : Bool;
+	@:overload @:public public function isActive() : Bool;
 	
 	/**
 	* Gets the URL of the document in which this applet is embedded.
@@ -92,7 +92,7 @@ package java.applet;
 	*          applet.
 	* @see     java.applet.Applet#getCodeBase()
 	*/
-	@:overload public function getDocumentBase() : java.net.URL;
+	@:overload @:public public function getDocumentBase() : java.net.URL;
 	
 	/**
 	* Gets the base URL. This is the URL of the directory which contains this applet.
@@ -101,7 +101,7 @@ package java.applet;
 	*          the directory which contains this applet.
 	* @see     java.applet.Applet#getDocumentBase()
 	*/
-	@:overload public function getCodeBase() : java.net.URL;
+	@:overload @:public public function getCodeBase() : java.net.URL;
 	
 	/**
 	* Returns the value of the named parameter in the HTML tag. For
@@ -121,7 +121,7 @@ package java.applet;
 	* @return  the value of the named parameter,
 	*          or <code>null</code> if not set.
 	*/
-	@:overload public function getParameter(name : String) : String;
+	@:overload @:public public function getParameter(name : String) : String;
 	
 	/**
 	* Determines this applet's context, which allows the applet to
@@ -132,7 +132,7 @@ package java.applet;
 	*
 	* @return  the applet's context.
 	*/
-	@:overload public function getAppletContext() : java.applet.AppletContext;
+	@:overload @:public public function getAppletContext() : java.applet.AppletContext;
 	
 	/**
 	* Requests that this applet be resized.
@@ -140,14 +140,14 @@ package java.applet;
 	* @param   width    the new requested width for the applet.
 	* @param   height   the new requested height for the applet.
 	*/
-	@:overload public function resize(width : Int, height : Int) : Void;
+	@:overload @:public override public function resize(width : Int, height : Int) : Void;
 	
 	/**
 	* Requests that this applet be resized.
 	*
 	* @param   d   an object giving the new width and height.
 	*/
-	@:overload public function resize(d : java.awt.Dimension) : Void;
+	@:overload @:public override public function resize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Indicates if this container is a validate root.
@@ -159,7 +159,7 @@ package java.applet;
 	* @since 1.7
 	* @see java.awt.Container#isValidateRoot
 	*/
-	@:require(java7) @:overload override public function isValidateRoot() : Bool;
+	@:require(java7) @:overload @:public override public function isValidateRoot() : Bool;
 	
 	/**
 	* Requests that the argument string be displayed in the
@@ -169,7 +169,7 @@ package java.applet;
 	*
 	* @param   msg   a string to display in the status window.
 	*/
-	@:overload public function showStatus(msg : String) : Void;
+	@:overload @:public public function showStatus(msg : String) : Void;
 	
 	/**
 	* Returns an <code>Image</code> object that can then be painted on
@@ -185,7 +185,7 @@ package java.applet;
 	* @return  the image at the specified URL.
 	* @see     java.awt.Image
 	*/
-	@:overload public function getImage(url : java.net.URL) : java.awt.Image;
+	@:overload @:public public function getImage(url : java.net.URL) : java.awt.Image;
 	
 	/**
 	* Returns an <code>Image</code> object that can then be painted on
@@ -204,7 +204,7 @@ package java.applet;
 	* @return  the image at the specified URL.
 	* @see     java.awt.Image
 	*/
-	@:overload public function getImage(url : java.net.URL, name : String) : java.awt.Image;
+	@:overload @:public public function getImage(url : java.net.URL, name : String) : java.awt.Image;
 	
 	/**
 	* Get an audio clip from the given URL.
@@ -214,7 +214,7 @@ package java.applet;
 	*
 	* @since       1.2
 	*/
-	@:require(java2) @:overload @:final public static function newAudioClip(url : java.net.URL) : java.applet.AudioClip;
+	@:require(java2) @:overload @:public @:final @:static public static function newAudioClip(url : java.net.URL) : java.applet.AudioClip;
 	
 	/**
 	* Returns the <code>AudioClip</code> object specified by the
@@ -228,7 +228,7 @@ package java.applet;
 	* @return  the audio clip at the specified URL.
 	* @see     java.applet.AudioClip
 	*/
-	@:overload public function getAudioClip(url : java.net.URL) : java.applet.AudioClip;
+	@:overload @:public public function getAudioClip(url : java.net.URL) : java.applet.AudioClip;
 	
 	/**
 	* Returns the <code>AudioClip</code> object specified by the
@@ -245,7 +245,7 @@ package java.applet;
 	* @return  the audio clip at the specified URL.
 	* @see     java.applet.AudioClip
 	*/
-	@:overload public function getAudioClip(url : java.net.URL, name : String) : java.applet.AudioClip;
+	@:overload @:public public function getAudioClip(url : java.net.URL, name : String) : java.applet.AudioClip;
 	
 	/**
 	* Returns information about this applet. An applet should override
@@ -258,7 +258,7 @@ package java.applet;
 	* @return  a string containing information about the author, version, and
 	*          copyright of the applet.
 	*/
-	@:overload public function getAppletInfo() : String;
+	@:overload @:public public function getAppletInfo() : String;
 	
 	/**
 	* Gets the locale of the applet. It allows the applet
@@ -269,7 +269,7 @@ package java.applet;
 	*          been set, the default locale is returned.
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function getLocale() : java.util.Locale;
+	@:require(java1) @:overload @:public override public function getLocale() : java.util.Locale;
 	
 	/**
 	* Returns information about the parameters that are understood by
@@ -292,7 +292,7 @@ package java.applet;
 	*
 	* @return  an array describing the parameters this applet looks for.
 	*/
-	@:overload public function getParameterInfo() : java.NativeArray<java.NativeArray<String>>;
+	@:overload @:public public function getParameterInfo() : java.NativeArray<java.NativeArray<String>>;
 	
 	/**
 	* Plays the audio clip at the specified absolute URL. Nothing
@@ -300,7 +300,7 @@ package java.applet;
 	*
 	* @param   url   an absolute URL giving the location of the audio clip.
 	*/
-	@:overload public function play(url : java.net.URL) : Void;
+	@:overload @:public public function play(url : java.net.URL) : Void;
 	
 	/**
 	* Plays the audio clip given the URL and a specifier that is
@@ -311,7 +311,7 @@ package java.applet;
 	* @param   name   the location of the audio clip, relative to the
 	*                 <code>url</code> argument.
 	*/
-	@:overload public function play(url : java.net.URL, name : String) : Void;
+	@:overload @:public public function play(url : java.net.URL, name : String) : Void;
 	
 	/**
 	* Called by the browser or applet viewer to inform
@@ -331,7 +331,7 @@ package java.applet;
 	* @see     java.applet.Applet#start()
 	* @see     java.applet.Applet#stop()
 	*/
-	@:overload public function init() : Void;
+	@:overload @:public public function init() : Void;
 	
 	/**
 	* Called by the browser or applet viewer to inform
@@ -362,7 +362,7 @@ package java.applet;
 	* @see     java.awt.Component#isShowing()
 	* @see     java.awt.event.ComponentListener#componentShown(java.awt.event.ComponentEvent)
 	*/
-	@:overload public function start() : Void;
+	@:overload @:public public function start() : Void;
 	
 	/**
 	* Called by the browser or applet viewer to inform
@@ -383,7 +383,7 @@ package java.applet;
 	* @see     java.applet.Applet#destroy()
 	* @see     java.applet.Applet#init()
 	*/
-	@:overload public function stop() : Void;
+	@:overload @:public public function stop() : Void;
 	
 	/**
 	* Called by the browser or applet viewer to inform
@@ -404,7 +404,7 @@ package java.applet;
 	* @see     java.applet.Applet#start()
 	* @see     java.applet.Applet#stop()
 	*/
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	/**
 	* Gets the AccessibleContext associated with this Applet.
@@ -416,7 +416,7 @@ package java.applet;
 	*         AccessibleContext of this Applet
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -434,7 +434,7 @@ package java.applet;
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the state of this object.
@@ -443,7 +443,7 @@ package java.applet;
 	* state set of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

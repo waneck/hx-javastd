@@ -35,7 +35,7 @@ extern class X500PrivateCredential implements javax.security.auth.Destroyable
 	* <code>key</code> is null
 	*
 	*/
-	@:overload public function new(cert : java.security.cert.X509Certificate, key : java.security.PrivateKey) : Void;
+	@:overload @:public public function new(cert : java.security.cert.X509Certificate, key : java.security.PrivateKey) : Void;
 	
 	/**
 	* Creates an X500PrivateCredential that associates an X.509 certificate,
@@ -48,34 +48,34 @@ extern class X500PrivateCredential implements javax.security.auth.Destroyable
 	* <code>key</code> or <code>alias</code> is null
 	*
 	*/
-	@:overload public function new(cert : java.security.cert.X509Certificate, key : java.security.PrivateKey, alias : String) : Void;
+	@:overload @:public public function new(cert : java.security.cert.X509Certificate, key : java.security.PrivateKey, alias : String) : Void;
 	
 	/**
 	* Returns the X.509 certificate.
 	* <p>
 	* @return the X509Certificate
 	*/
-	@:overload public function getCertificate() : java.security.cert.X509Certificate;
+	@:overload @:public public function getCertificate() : java.security.cert.X509Certificate;
 	
 	/**
 	* Returns the PrivateKey.
 	* <p>
 	* @return the PrivateKey
 	*/
-	@:overload public function getPrivateKey() : java.security.PrivateKey;
+	@:overload @:public public function getPrivateKey() : java.security.PrivateKey;
 	
 	/**
 	* Returns the KeyStore alias.
 	* <p>
 	* @return the KeyStore alias
 	*/
-	@:overload public function getAlias() : String;
+	@:overload @:public public function getAlias() : String;
 	
 	/**
 	* Clears the references to the X.509 certificate, private key and the
 	* KeyStore alias in this object.
 	*/
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	/**
 	* Determines if the references to the X.509 certificate and private key
@@ -84,7 +84,7 @@ extern class X500PrivateCredential implements javax.security.auth.Destroyable
 	* @return true if X509Certificate and the PrivateKey are null
 
 	*/
-	@:overload public function isDestroyed() : Bool;
+	@:overload @:public public function isDestroyed() : Bool;
 	
 	
 }

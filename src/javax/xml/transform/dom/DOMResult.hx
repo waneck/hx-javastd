@@ -29,7 +29,7 @@ extern class DOMResult implements javax.xml.transform.Result
 	* returns <code>true</code> when passed this value as an argument,
 	* the <code>Transformer</code> supports <code>Result</code> output of this type.</p>
 	*/
-	public static var FEATURE(default, null) : String;
+	@:public @:static @:final public static var FEATURE(default, null) : String;
 	
 	/**
 	* <p>Zero-argument default constructor.</p>
@@ -39,7 +39,7 @@ extern class DOMResult implements javax.xml.transform.Result
 	* <code>systemId</code>
 	* will be set to <code>null</code>.</p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* <p>Use a DOM node to create a new output target.</p>
@@ -56,7 +56,7 @@ extern class DOMResult implements javax.xml.transform.Result
 	*
 	* @param node The DOM node that will contain the result tree.
 	*/
-	@:overload public function new(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* <p>Use a DOM node to create a new output target with the specified System ID.<p>
@@ -72,7 +72,7 @@ extern class DOMResult implements javax.xml.transform.Result
 	* @param node The DOM node that will contain the result tree.
 	* @param systemId The system identifier which may be used in association with this node.
 	*/
-	@:overload public function new(node : org.w3c.dom.Node, systemId : String) : Void;
+	@:overload @:public public function new(node : org.w3c.dom.Node, systemId : String) : Void;
 	
 	/**
 	* <p>Use a DOM node to create a new output target specifying the child node where the result nodes should be inserted before.</p>
@@ -104,7 +104,7 @@ extern class DOMResult implements javax.xml.transform.Result
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(node : org.w3c.dom.Node, nextSibling : org.w3c.dom.Node) : Void;
+	@:require(java5) @:overload @:public public function new(node : org.w3c.dom.Node, nextSibling : org.w3c.dom.Node) : Void;
 	
 	/**
 	* <p>Use a DOM node to create a new output target specifying the child node where the result nodes should be inserted before and
@@ -137,7 +137,7 @@ extern class DOMResult implements javax.xml.transform.Result
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(node : org.w3c.dom.Node, nextSibling : org.w3c.dom.Node, systemId : String) : Void;
+	@:require(java5) @:overload @:public public function new(node : org.w3c.dom.Node, nextSibling : org.w3c.dom.Node, systemId : String) : Void;
 	
 	/**
 	* <p>Set the node that will contain the result DOM tree.<p>
@@ -162,7 +162,7 @@ extern class DOMResult implements javax.xml.transform.Result
 	*   <code>node</code> is <code>null</code> and
 	*   <code>nextSibling</code> is not <code>null</code>.
 	*/
-	@:overload public function setNode(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setNode(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* <p>Get the node that will contain the result DOM tree.</p>
@@ -178,7 +178,7 @@ extern class DOMResult implements javax.xml.transform.Result
 	*
 	* @return The node to which the transformation will be appended.
 	*/
-	@:overload public function getNode() : org.w3c.dom.Node;
+	@:overload @:public public function getNode() : org.w3c.dom.Node;
 	
 	/**
 	* <p>Set the child node before which the result nodes will be inserted.</p>
@@ -202,7 +202,7 @@ extern class DOMResult implements javax.xml.transform.Result
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setNextSibling(nextSibling : org.w3c.dom.Node) : Void;
+	@:require(java5) @:overload @:public public function setNextSibling(nextSibling : org.w3c.dom.Node) : Void;
 	
 	/**
 	* <p>Get the child node before which the result nodes will be inserted.</p>
@@ -217,14 +217,14 @@ extern class DOMResult implements javax.xml.transform.Result
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getNextSibling() : org.w3c.dom.Node;
+	@:require(java5) @:overload @:public public function getNextSibling() : org.w3c.dom.Node;
 	
 	/**
 	* <p>Set the systemId that may be used in association with the node.</p>
 	*
 	* @param systemId The system identifier as a URI string.
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	/**
 	* <p>Get the System Identifier.</p>
@@ -237,7 +237,7 @@ extern class DOMResult implements javax.xml.transform.Result
 	*
 	* @return The system identifier.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	
 }

@@ -29,21 +29,21 @@ package com.sun.xml.internal.messaging.saaj.soap.ver1_2;
 */
 extern class FaultElement1_2Impl extends com.sun.xml.internal.messaging.saaj.soap.impl.FaultElementImpl
 {
-	@:overload public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, qname : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, qname : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl) : Void;
 	
-	@:overload public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, qname : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, qname : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, localName : String) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, localName : String) : Void;
 	
-	@:overload private function isStandardFaultElement() : Bool;
+	@:overload @:protected override private function isStandardFaultElement() : Bool;
 	
-	@:overload public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
-	@:overload override public function setEncodingStyle(encodingStyle : String) : Void;
+	@:overload @:public override public function setEncodingStyle(encodingStyle : String) : Void;
 	
-	@:overload override public function addAttribute(name : javax.xml.soap.Name, value : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function addAttribute(name : javax.xml.soap.Name, value : String) : javax.xml.soap.SOAPElement;
 	
-	@:overload override public function addAttribute(name : javax.xml.namespace.QName, value : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function addAttribute(name : javax.xml.namespace.QName, value : String) : javax.xml.soap.SOAPElement;
 	
 	
 }

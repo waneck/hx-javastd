@@ -29,7 +29,7 @@ extern class MonitorDataException extends sun.jvmstat.monitor.MonitorException
 	* Constructs a <code>MonitorDataException</code> with <code>
 	* null</code> as its error detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>MonitorDataException</code> with the specified
@@ -39,7 +39,7 @@ extern class MonitorDataException extends sun.jvmstat.monitor.MonitorException
 	*
 	* @param s the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

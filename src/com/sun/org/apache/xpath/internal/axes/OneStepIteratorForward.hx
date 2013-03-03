@@ -24,7 +24,7 @@ package com.sun.org.apache.xpath.internal.axes;
 extern class OneStepIteratorForward extends com.sun.org.apache.xpath.internal.axes.ChildTestIterator
 {
 	/** The traversal axis from where the nodes will be filtered. */
-	private var m_axis : Int;
+	@:protected private var m_axis : Int;
 	
 	/**
 	* Create a OneStepIterator object that will just traverse the self axes.
@@ -33,7 +33,7 @@ extern class OneStepIteratorForward extends com.sun.org.apache.xpath.internal.ax
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function new(axis : Int) : Void;
+	@:overload @:public public function new(axis : Int) : Void;
 	
 	/**
 	* Initialize the context values for this expression
@@ -42,12 +42,12 @@ extern class OneStepIteratorForward extends com.sun.org.apache.xpath.internal.ax
 	* @param context The XPath runtime context for this
 	* transformation.
 	*/
-	@:overload override public function setRoot(context : Int, environment : Dynamic) : Void;
+	@:overload @:public override public function setRoot(context : Int, environment : Dynamic) : Void;
 	
 	/**
 	* Get the next node via getFirstAttribute && getNextAttribute.
 	*/
-	@:overload override private function getNextNode() : Int;
+	@:overload @:protected override private function getNextNode() : Int;
 	
 	/**
 	* Returns the axis being iterated, if it is known.
@@ -55,12 +55,12 @@ extern class OneStepIteratorForward extends com.sun.org.apache.xpath.internal.ax
 	* @return Axis.CHILD, etc., or -1 if the axis is not known or is of multiple
 	* types.
 	*/
-	@:overload override public function getAxis() : Int;
+	@:overload @:public override public function getAxis() : Int;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }

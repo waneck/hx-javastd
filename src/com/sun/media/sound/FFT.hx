@@ -30,9 +30,9 @@ package com.sun.media.sound;
 */
 extern class FFT
 {
-	@:overload public function new(fftFrameSize : Int, sign : Int) : Void;
+	@:overload @:public public function new(fftFrameSize : Int, sign : Int) : Void;
 	
-	@:overload public function transform(data : java.NativeArray<Float>) : Void;
+	@:overload @:public public function transform(data : java.NativeArray<Float>) : Void;
 	
 	
 }

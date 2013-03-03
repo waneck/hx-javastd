@@ -37,7 +37,7 @@ package java.lang;
 	* message.  The cause is not initialized, and may subsequently be
 	* initialized by a call to {@link #initCause}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new exception with the specified detail message.
@@ -47,7 +47,7 @@ package java.lang;
 	* @param   message   the detail message. The detail message is saved for
 	*          later retrieval by the {@link #getMessage()} method.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructs a new exception with the specified detail message
@@ -64,7 +64,7 @@ package java.lang;
 	*         permitted, and indicates that the cause is nonexistent or
 	*         unknown.)
 	*/
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a new exception with the specified cause and a detail
@@ -76,7 +76,7 @@ package java.lang;
 	*         permitted, and indicates that the cause is nonexistent or
 	*         unknown.)
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

@@ -28,47 +28,47 @@ package sun.awt.X11;
 	/**
 	* XStateProtocol
 	*/
-	@:overload public function supportsState(state : Int) : Bool;
+	@:overload @:public public function supportsState(state : Int) : Bool;
 	
-	@:overload public function setState(window : sun.awt.X11.XWindowPeer, state : Int) : Void;
+	@:overload @:public public function setState(window : sun.awt.X11.XWindowPeer, state : Int) : Void;
 	
-	@:overload public function getState(window : sun.awt.X11.XWindowPeer) : Int;
+	@:overload @:public public function getState(window : sun.awt.X11.XWindowPeer) : Int;
 	
-	@:overload public function isStateChange(e : sun.awt.X11.XPropertyEvent) : Bool;
+	@:overload @:public public function isStateChange(e : sun.awt.X11.XPropertyEvent) : Bool;
 	
 	/*
 	* Work around for 4775545.
 	*/
-	@:overload public function unshadeKludge(window : sun.awt.X11.XWindowPeer) : Void;
+	@:overload @:public public function unshadeKludge(window : sun.awt.X11.XWindowPeer) : Void;
 	
 	/**
 	* XLayerProtocol
 	*/
-	@:overload public function supportsLayer(layer : Int) : Bool;
+	@:overload @:public public function supportsLayer(layer : Int) : Bool;
 	
-	@:overload public function requestState(window : sun.awt.X11.XWindow, state : sun.awt.X11.XAtom, isAdd : Bool) : Void;
+	@:overload @:public public function requestState(window : sun.awt.X11.XWindow, state : sun.awt.X11.XAtom, isAdd : Bool) : Void;
 	
-	@:overload public function setLayer(window : sun.awt.X11.XWindowPeer, layer : Int) : Void;
+	@:overload @:public public function setLayer(window : sun.awt.X11.XWindowPeer, layer : Int) : Void;
 	
-	public var XA_NET_WM_WINDOW_TYPE(default, null) : sun.awt.X11.XAtom;
+	@:public @:final public var XA_NET_WM_WINDOW_TYPE(default, null) : sun.awt.X11.XAtom;
 	
-	public var XA_NET_WM_WINDOW_TYPE_NORMAL(default, null) : sun.awt.X11.XAtom;
+	@:public @:final public var XA_NET_WM_WINDOW_TYPE_NORMAL(default, null) : sun.awt.X11.XAtom;
 	
-	public var XA_NET_WM_WINDOW_TYPE_DIALOG(default, null) : sun.awt.X11.XAtom;
+	@:public @:final public var XA_NET_WM_WINDOW_TYPE_DIALOG(default, null) : sun.awt.X11.XAtom;
 	
-	public var XA_NET_WM_WINDOW_TYPE_UTILITY(default, null) : sun.awt.X11.XAtom;
+	@:public @:final public var XA_NET_WM_WINDOW_TYPE_UTILITY(default, null) : sun.awt.X11.XAtom;
 	
-	public var XA_NET_WM_WINDOW_TYPE_POPUP_MENU(default, null) : sun.awt.X11.XAtom;
+	@:public @:final public var XA_NET_WM_WINDOW_TYPE_POPUP_MENU(default, null) : sun.awt.X11.XAtom;
 	
-	@:overload public function getWMName() : String;
+	@:overload @:public public function getWMName() : String;
 	
 	/**
 	* Sets _NET_WM_ICON property on the window using the List of XIconInfo
 	* If icons is null or empty list, removes _NET_WM_ICON property
 	*/
-	@:overload public function setWMIcons(window : sun.awt.X11.XWindowPeer, icons : java.util.List<sun.awt.X11.XIconInfo>) : Void;
+	@:overload @:public public function setWMIcons(window : sun.awt.X11.XWindowPeer, icons : java.util.List<sun.awt.X11.XIconInfo>) : Void;
 	
-	@:overload public function isWMStateNetHidden(window : sun.awt.X11.XWindowPeer) : Bool;
+	@:overload @:public public function isWMStateNetHidden(window : sun.awt.X11.XWindowPeer) : Bool;
 	
 	
 }

@@ -40,19 +40,19 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* Minimum value that can be stored in a UnicodeSet.
 	* @stable ICU 2.0
 	*/
-	public static var MIN_VALUE(default, null) : Int;
+	@:public @:static @:final public static var MIN_VALUE(default, null) : Int;
 	
 	/**
 	* Maximum value that can be stored in a UnicodeSet.
 	* @stable ICU 2.0
 	*/
-	public static var MAX_VALUE(default, null) : Int;
+	@:public @:static @:final public static var MAX_VALUE(default, null) : Int;
 	
 	/**
 	* Constructs an empty set.
 	* @stable ICU 2.0
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a set containing the given range. If <code>end >
@@ -62,7 +62,7 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* @param end last character, inclusive, of range
 	* @stable ICU 2.0
 	*/
-	@:overload public function new(start : Int, end : Int) : Void;
+	@:overload @:public public function new(start : Int, end : Int) : Void;
 	
 	/**
 	* Constructs a set from the given pattern.  See the class description
@@ -72,7 +72,7 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* a syntax error.
 	* @stable ICU 2.0
 	*/
-	@:overload public function new(pattern : String) : Void;
+	@:overload @:public public function new(pattern : String) : Void;
 	
 	/**
 	* Make this object represent the same set as <code>other</code>.
@@ -80,7 +80,7 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* copied to this object
 	* @stable ICU 2.0
 	*/
-	@:overload public function set(other : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.UnicodeSet;
+	@:overload @:public public function set(other : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.UnicodeSet;
 	
 	/**
 	* Modifies this set to represent the set specified by the given pattern.
@@ -91,7 +91,7 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* contains a syntax error.
 	* @stable ICU 2.0
 	*/
-	@:overload @:final public function applyPattern(pattern : String) : sun.text.normalizer.UnicodeSet;
+	@:overload @:public @:final public function applyPattern(pattern : String) : sun.text.normalizer.UnicodeSet;
 	
 	/**
 	* Generate and append a string representation of this set to result.
@@ -100,7 +100,7 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* @param includeStrings if false, doesn't include the strings.
 	* @stable ICU 3.8
 	*/
-	@:overload public function _generatePattern(result : java.lang.StringBuffer, escapeUnprintable : Bool, includeStrings : Bool) : java.lang.StringBuffer;
+	@:overload @:public public function _generatePattern(result : java.lang.StringBuffer, escapeUnprintable : Bool, includeStrings : Bool) : java.lang.StringBuffer;
 	
 	/**
 	* Adds the specified character to this set if it is not already
@@ -108,7 +108,7 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* the call leaves this set unchanged.
 	* @stable ICU 2.0
 	*/
-	@:overload @:final public function add(c : Int) : sun.text.normalizer.UnicodeSet;
+	@:overload @:public @:final public function add(c : Int) : sun.text.normalizer.UnicodeSet;
 	
 	/**
 	* Adds the specified multicharacter to this set if it is not already
@@ -120,7 +120,7 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* @return this object, for chaining
 	* @stable ICU 2.0
 	*/
-	@:overload @:final public function add(s : String) : sun.text.normalizer.UnicodeSet;
+	@:overload @:public @:final public function add(s : String) : sun.text.normalizer.UnicodeSet;
 	
 	/**
 	* Complements the specified range in this set.  Any character in
@@ -134,14 +134,14 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* from this set.
 	* @stable ICU 2.0
 	*/
-	@:overload public function complement(start : Int, end : Int) : sun.text.normalizer.UnicodeSet;
+	@:overload @:public public function complement(start : Int, end : Int) : sun.text.normalizer.UnicodeSet;
 	
 	/**
 	* This is equivalent to
 	* <code>complement(MIN_VALUE, MAX_VALUE)</code>.
 	* @stable ICU 2.0
 	*/
-	@:overload public function complement() : sun.text.normalizer.UnicodeSet;
+	@:overload @:public public function complement() : sun.text.normalizer.UnicodeSet;
 	
 	/**
 	* Returns true if this set contains the given character.
@@ -149,7 +149,7 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* @return true if the test condition is met
 	* @stable ICU 2.0
 	*/
-	@:overload public function contains(c : Int) : Bool;
+	@:overload @:public public function contains(c : Int) : Bool;
 	
 	/**
 	* Adds all of the elements in the specified set to this set if
@@ -161,7 +161,7 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* @param c set whose elements are to be added to this set.
 	* @stable ICU 2.0
 	*/
-	@:overload public function addAll(c : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.UnicodeSet;
+	@:overload @:public public function addAll(c : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.UnicodeSet;
 	
 	/**
 	* Retains only the elements in this set that are contained in the
@@ -173,7 +173,7 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* @param c set that defines which elements this set will retain.
 	* @stable ICU 2.0
 	*/
-	@:overload public function retainAll(c : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.UnicodeSet;
+	@:overload @:public public function retainAll(c : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.UnicodeSet;
 	
 	/**
 	* Removes from this set all of its elements that are contained in the
@@ -185,14 +185,14 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	*          this set.
 	* @stable ICU 2.0
 	*/
-	@:overload public function removeAll(c : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.UnicodeSet;
+	@:overload @:public public function removeAll(c : sun.text.normalizer.UnicodeSet) : sun.text.normalizer.UnicodeSet;
 	
 	/**
 	* Removes all of the elements from this set.  This set will be
 	* empty after this call returns.
 	* @stable ICU 2.0
 	*/
-	@:overload public function clear() : sun.text.normalizer.UnicodeSet;
+	@:overload @:public public function clear() : sun.text.normalizer.UnicodeSet;
 	
 	/**
 	* Iteration method that returns the number of ranges contained in
@@ -201,7 +201,7 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* @see #getRangeEnd
 	* @stable ICU 2.0
 	*/
-	@:overload public function getRangeCount() : Int;
+	@:overload @:public public function getRangeCount() : Int;
 	
 	/**
 	* Iteration method that returns the first character in the
@@ -212,7 +212,7 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* @see #getRangeEnd
 	* @stable ICU 2.0
 	*/
-	@:overload public function getRangeStart(index : Int) : Int;
+	@:overload @:public public function getRangeStart(index : Int) : Int;
 	
 	/**
 	* Iteration method that returns the last character in the
@@ -223,7 +223,7 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* @see #getRangeEnd
 	* @stable ICU 2.0
 	*/
-	@:overload public function getRangeEnd(index : Int) : Int;
+	@:overload @:public public function getRangeEnd(index : Int) : Int;
 	
 	/**
 	* Modifies this set to contain those code points which have the
@@ -236,7 +236,7 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* @return this set
 	* @stable ICU 3.2
 	*/
-	@:overload public function applyPropertyAlias(propertyAlias : String, valueAlias : String, symbols : sun.text.normalizer.SymbolTable) : sun.text.normalizer.UnicodeSet;
+	@:overload @:public public function applyPropertyAlias(propertyAlias : String, valueAlias : String, symbols : sun.text.normalizer.SymbolTable) : sun.text.normalizer.UnicodeSet;
 	
 	/**
 	* Bitmask for constructor and applyPattern() indicating that
@@ -246,7 +246,7 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 	* with other selectors.
 	* @stable ICU 3.8
 	*/
-	public static var IGNORE_SPACE(default, null) : Int;
+	@:public @:static @:final public static var IGNORE_SPACE(default, null) : Int;
 	
 	
 }
@@ -258,7 +258,7 @@ extern class UnicodeSet implements sun.text.normalizer.UnicodeMatcher
 }
 @:native('sun$text$normalizer$UnicodeSet$VersionFilter') @:internal extern class UnicodeSet_VersionFilter implements sun.text.normalizer.UnicodeSet.UnicodeSet_Filter
 {
-	@:overload public function contains(ch : Int) : Bool;
+	@:overload @:public public function contains(ch : Int) : Bool;
 	
 	
 }

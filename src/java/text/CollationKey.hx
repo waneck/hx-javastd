@@ -105,12 +105,12 @@ extern class CollationKey implements java.lang.Comparable<java.text.CollationKey
 	* zero if this is greater than target.
 	* @see java.text.Collator#compare
 	*/
-	@:overload @:abstract public function compareTo(target : java.text.CollationKey) : Int;
+	@:overload @:abstract @:public public function compareTo(target : java.text.CollationKey) : Int;
 	
 	/**
 	* Returns the String that this CollationKey represents.
 	*/
-	@:overload public function getSourceString() : String;
+	@:overload @:public public function getSourceString() : String;
 	
 	/**
 	* Converts the CollationKey to a sequence of bits. If two CollationKeys
@@ -118,7 +118,7 @@ extern class CollationKey implements java.lang.Comparable<java.text.CollationKey
 	* for each of those keys to obtain the same result.  Byte arrays are
 	* organized most significant byte first.
 	*/
-	@:overload @:abstract public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:abstract @:public public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* CollationKey constructor.
@@ -127,7 +127,7 @@ extern class CollationKey implements java.lang.Comparable<java.text.CollationKey
 	* @exception NullPointerException if <code>source</code> is null.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function new(source : String) : Void;
+	@:require(java6) @:overload @:protected private function new(source : String) : Void;
 	
 	/**
 	* Compares this object with the specified object for order.  Returns a
@@ -168,7 +168,7 @@ extern class CollationKey implements java.lang.Comparable<java.text.CollationKey
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
 	
 	
 }

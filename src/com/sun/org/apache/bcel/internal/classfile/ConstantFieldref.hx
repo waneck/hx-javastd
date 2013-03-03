@@ -66,13 +66,13 @@ extern class ConstantFieldref extends com.sun.org.apache.bcel.internal.classfile
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantFieldref) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantFieldref) : Void;
 	
 	/**
 	* @param class_index Reference to the class containing the Field
 	* @param name_and_type_index and the Field signature
 	*/
-	@:overload public function new(class_index : Int, name_and_type_index : Int) : Void;
+	@:overload @:public public function new(class_index : Int, name_and_type_index : Int) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -81,7 +81,7 @@ extern class ConstantFieldref extends com.sun.org.apache.bcel.internal.classfile
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	
 }

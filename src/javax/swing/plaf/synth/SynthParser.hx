@@ -38,35 +38,35 @@ package javax.swing.plaf.synth;
 	* @param classResourceBase the Class used to resolve any resources, such as Images
 	* @param defaultsMap Map that UIDefaults properties are placed in
 	*/
-	@:overload public function parse(inputStream : java.io.InputStream, factory : javax.swing.plaf.synth.DefaultSynthStyleFactory, urlResourceBase : java.net.URL, classResourceBase : Class<Dynamic>, defaultsMap : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function parse(inputStream : java.io.InputStream, factory : javax.swing.plaf.synth.DefaultSynthStyleFactory, urlResourceBase : java.net.URL, classResourceBase : Class<Dynamic>, defaultsMap : java.util.Map<String, Dynamic>) : Void;
 	
-	@:overload public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public override public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
-	@:overload public function notationDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public override public function notationDecl(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
+	@:overload @:public override public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
 	
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
-	@:overload public function startElement(uri : String, local : String, name : String, attributes : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(uri : String, local : String, name : String, attributes : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function endElement(uri : String, local : String, name : String) : Void;
+	@:overload @:public override public function endElement(uri : String, local : String, name : String) : Void;
 	
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public override public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload public function warning(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function warning(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function error(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function fatalError(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function fatalError(e : org.xml.sax.SAXParseException) : Void;
 	
 	
 }
@@ -75,15 +75,15 @@ package javax.swing.plaf.synth;
 */
 @:native('javax$swing$plaf$synth$SynthParser$LazyImageIcon') @:internal extern class SynthParser_LazyImageIcon extends javax.swing.ImageIcon implements javax.swing.plaf.UIResource
 {
-	@:overload public function new(location : java.net.URL) : Void;
+	@:overload @:public public function new(location : java.net.URL) : Void;
 	
-	@:overload override public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public override public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload override public function getIconWidth() : Int;
+	@:overload @:public override public function getIconWidth() : Int;
 	
-	@:overload override public function getIconHeight() : Int;
+	@:overload @:public override public function getIconHeight() : Int;
 	
-	@:overload override public function getImage() : java.awt.Image;
+	@:overload @:public override public function getImage() : java.awt.Image;
 	
 	
 }

@@ -30,19 +30,19 @@ extern class SoftReceiver implements javax.sound.midi.MidiDeviceReceiver
 	*
 	* @author Karl Helgason
 	*/
-	private var open : Bool;
+	@:protected private var open : Bool;
 	
-	private var midimessages : java.util.TreeMap<Null<haxe.Int64>, Dynamic>;
+	@:protected private var midimessages : java.util.TreeMap<Null<haxe.Int64>, Dynamic>;
 	
-	private var mainmixer : com.sun.media.sound.SoftMainMixer;
+	@:protected private var mainmixer : com.sun.media.sound.SoftMainMixer;
 	
-	@:overload public function new(synth : com.sun.media.sound.SoftSynthesizer) : Void;
+	@:overload @:public public function new(synth : com.sun.media.sound.SoftSynthesizer) : Void;
 	
-	@:overload public function getMidiDevice() : javax.sound.midi.MidiDevice;
+	@:overload @:public public function getMidiDevice() : javax.sound.midi.MidiDevice;
 	
-	@:overload public function send(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
+	@:overload @:public public function send(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

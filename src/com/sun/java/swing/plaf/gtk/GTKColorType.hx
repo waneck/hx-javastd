@@ -28,19 +28,19 @@ extern class GTKColorType extends javax.swing.plaf.synth.ColorType
 	/**
 	* @author Scott Violet
 	*/
-	public static var LIGHT(default, null) : javax.swing.plaf.synth.ColorType;
+	@:public @:static @:final public static var LIGHT(default, null) : javax.swing.plaf.synth.ColorType;
 	
-	public static var DARK(default, null) : javax.swing.plaf.synth.ColorType;
+	@:public @:static @:final public static var DARK(default, null) : javax.swing.plaf.synth.ColorType;
 	
-	public static var MID(default, null) : javax.swing.plaf.synth.ColorType;
+	@:public @:static @:final public static var MID(default, null) : javax.swing.plaf.synth.ColorType;
 	
-	public static var BLACK(default, null) : javax.swing.plaf.synth.ColorType;
+	@:public @:static @:final public static var BLACK(default, null) : javax.swing.plaf.synth.ColorType;
 	
-	public static var WHITE(default, null) : javax.swing.plaf.synth.ColorType;
+	@:public @:static @:final public static var WHITE(default, null) : javax.swing.plaf.synth.ColorType;
 	
-	public static var MAX_COUNT(default, null) : Int;
+	@:public @:static @:final public static var MAX_COUNT(default, null) : Int;
 	
-	@:overload private function new(name : String) : Void;
+	@:overload @:protected private function new(name : String) : Void;
 	
 	
 }

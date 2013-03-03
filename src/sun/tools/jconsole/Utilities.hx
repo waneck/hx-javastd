@@ -28,7 +28,7 @@ package sun.tools.jconsole;
 */
 extern class Utilities
 {
-	@:overload public static function updateTransparency(comp : javax.swing.JComponent) : Void;
+	@:overload @:public @:static public static function updateTransparency(comp : javax.swing.JComponent) : Void;
 	
 	/**
 	* A slightly modified border for JScrollPane to be used with a JTable inside
@@ -36,11 +36,11 @@ extern class Utilities
 	* overall border less thick.
 	* The top border helps differentiating the containing table from its container.
 	*/
-	@:overload public static function newTableScrollPane(comp : javax.swing.JComponent) : javax.swing.JScrollPane;
+	@:overload @:public @:static public static function newTableScrollPane(comp : javax.swing.JComponent) : javax.swing.JScrollPane;
 	
-	@:overload public static function setAccessibleName(comp : javax.accessibility.Accessible, name : String) : Void;
+	@:overload @:public @:static public static function setAccessibleName(comp : javax.accessibility.Accessible, name : String) : Void;
 	
-	@:overload public static function setAccessibleDescription(comp : javax.accessibility.Accessible, description : String) : Void;
+	@:overload @:public @:static public static function setAccessibleDescription(comp : javax.accessibility.Accessible, description : String) : Void;
 	
 	/**
 	* Modifies color c1 to ensure it has acceptable contrast
@@ -49,17 +49,17 @@ extern class Utilities
 	* http://www.w3.org/TR/AERT#color-contrast
 	* http://www.cs.rit.edu/~ncs/color/t_convert.html#RGB%20to%20YIQ%20&%20YIQ%20to%20RGB
 	*/
-	@:overload public static function ensureContrast(c1 : java.awt.Color, c2 : java.awt.Color) : java.awt.Color;
+	@:overload @:public @:static public static function ensureContrast(c1 : java.awt.Color, c2 : java.awt.Color) : java.awt.Color;
 	
-	@:overload public static function getColorBrightness(c : java.awt.Color) : Float;
+	@:overload @:public @:static public static function getColorBrightness(c : java.awt.Color) : Float;
 	
 	
 }
 @:native('sun$tools$jconsole$Utilities$TableScrollPane') @:internal extern class Utilities_TableScrollPane extends javax.swing.JScrollPane
 {
-	@:overload public function new(comp : javax.swing.JComponent) : Void;
+	@:overload @:public public function new(comp : javax.swing.JComponent) : Void;
 	
-	@:overload private function paintBorder(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintBorder(g : java.awt.Graphics) : Void;
 	
 	
 }

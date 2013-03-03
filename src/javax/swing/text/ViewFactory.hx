@@ -33,7 +33,7 @@ extern interface ViewFactory
 	* @return the view
 	* @see View
 	*/
-	@:overload public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
+	@:overload @:public public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
 	
 	
 }

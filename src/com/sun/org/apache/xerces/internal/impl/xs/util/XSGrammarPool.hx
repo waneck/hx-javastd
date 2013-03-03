@@ -26,11 +26,11 @@ extern class XSGrammarPool extends com.sun.org.apache.xerces.internal.util.XMLGr
 	*
 	* @return  an <code>XSModel</code> representing this schema grammar
 	*/
-	@:overload public function toXSModel() : com.sun.org.apache.xerces.internal.xs.XSModel;
+	@:overload @:public public function toXSModel() : com.sun.org.apache.xerces.internal.xs.XSModel;
 	
-	@:overload public function toXSModel(schemaVersion : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.xs.XSModel;
+	@:overload @:public public function toXSModel(schemaVersion : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.xs.XSModel;
 	
-	@:overload private function toXSModel(grammars : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar>, schemaVersion : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.xs.XSModel;
+	@:overload @:protected private function toXSModel(grammars : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar>, schemaVersion : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.xs.XSModel;
 	
 	
 }

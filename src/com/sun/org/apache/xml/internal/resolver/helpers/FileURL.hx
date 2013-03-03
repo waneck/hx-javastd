@@ -38,7 +38,7 @@ extern class FileURL
 	*
 	* @version 1.0
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Construct a file: URL for a path name.
@@ -67,7 +67,7 @@ extern class FileURL
 	* @throws MalformedURLException if the pathname can't be turned into
 	*         a proper URL.
 	*/
-	@:overload public static function makeURL(pathname : String) : java.net.URL;
+	@:overload @:public @:static public static function makeURL(pathname : String) : java.net.URL;
 	
 	
 }

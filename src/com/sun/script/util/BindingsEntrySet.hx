@@ -31,33 +31,33 @@ package com.sun.script.util;
 */
 @:require(java6) extern class BindingsEntrySet extends java.util.AbstractSet<java.util.Map.Map_Entry<String, Dynamic>>
 {
-	@:overload public function new(base : com.sun.script.util.BindingsBase) : Void;
+	@:overload @:public public function new(base : com.sun.script.util.BindingsBase) : Void;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<String, Dynamic>>;
+	@:overload @:public override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<String, Dynamic>>;
 	
 	
 }
 @:native('com$sun$script$util$BindingsEntrySet$BindingsEntry') extern class BindingsEntrySet_BindingsEntry implements java.util.Map.Map_Entry<String, Dynamic>
 {
-	@:overload public function new(key : String) : Void;
+	@:overload @:public public function new(key : String) : Void;
 	
-	@:overload public function setValue(value : Dynamic) : Dynamic;
+	@:overload @:public public function setValue(value : Dynamic) : Dynamic;
 	
-	@:overload public function getKey() : String;
+	@:overload @:public public function getKey() : String;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	
 }
 @:native('com$sun$script$util$BindingsEntrySet$BindingsIterator') extern class BindingsEntrySet_BindingsIterator implements java.util.Iterator<java.util.Map.Map_Entry<String, Dynamic>>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : com.sun.script.util.BindingsEntrySet.BindingsEntrySet_BindingsEntry;
+	@:overload @:public public function next() : com.sun.script.util.BindingsEntrySet.BindingsEntrySet_BindingsEntry;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

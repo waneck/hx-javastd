@@ -51,7 +51,7 @@ extern interface NodeFilter
 	* @return A constant to determine whether the node is accepted,
 	*   rejected, or skipped, as defined above.
 	*/
-	@:overload public function acceptNode(n : org.w3c.dom.Node) : java.StdTypes.Int16;
+	@:overload @:public public function acceptNode(n : org.w3c.dom.Node) : java.StdTypes.Int16;
 	
 	
 }

@@ -35,7 +35,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	* @return          <code>true</code> if the type codes are equal;
 	*                <code>false</code> otherwise
 	*/
-	@:overload @:abstract public function equal(tc : org.omg.CORBA.TypeCode) : Bool;
+	@:overload @:public @:abstract public function equal(tc : org.omg.CORBA.TypeCode) : Bool;
 	
 	/**
 	* Tests to see if the given <code>TypeCode</code> object is
@@ -49,7 +49,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	*         this typecode; <code>false</code> otherwise
 	*
 	*/
-	@:overload @:abstract public function equivalent(tc : org.omg.CORBA.TypeCode) : Bool;
+	@:overload @:public @:abstract public function equivalent(tc : org.omg.CORBA.TypeCode) : Bool;
 	
 	/**
 	* Strips out all optional name and member name fields,
@@ -60,7 +60,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload @:abstract public function get_compact_typecode() : org.omg.CORBA.TypeCode;
+	@:overload @:public @:abstract public function get_compact_typecode() : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Retrieves the kind of this <code>TypeCode</code> object.
@@ -74,7 +74,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	*            value of the <code>kind</code> field of this
 	*                  <code>TypeCode</code> object
 	*/
-	@:overload @:abstract public function kind() : org.omg.CORBA.TCKind;
+	@:overload @:public @:abstract public function kind() : org.omg.CORBA.TCKind;
 	
 	/**
 	* Retrieves the RepositoryId globally identifying the type
@@ -98,7 +98,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	*           is invoked on an inappropriate kind of<code>TypeCode</code>
 	*           object
 	*/
-	@:overload @:abstract public function id() : String;
+	@:overload @:public @:abstract public function id() : String;
 	
 	/**
 	* Retrieves the simple name identifying this <code>TypeCode</code>
@@ -120,7 +120,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	*           is invoked on an inappropriate kind of<code>TypeCode</code>
 	*           object
 	*/
-	@:overload @:abstract public function name() : String;
+	@:overload @:public @:abstract public function name() : String;
 	
 	/**
 	* Retrieves the number of members in the type described by
@@ -138,7 +138,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	*           is invoked on an inappropriate kind of <code>TypeCode</code>
 	*           object
 	*/
-	@:overload @:abstract public function member_count() : Int;
+	@:overload @:public @:abstract public function member_count() : Int;
 	
 	/**
 	* Retrieves the simple name of the member identified by
@@ -162,7 +162,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	*           is invoked on an inappropriate kind of <code>TypeCode</code>
 	*           object
 	*/
-	@:overload @:abstract public function member_name(index : Int) : String;
+	@:overload @:public @:abstract public function member_name(index : Int) : String;
 	
 	/**
 	* Retrieves the <code>TypeCode</code> object describing the type
@@ -184,7 +184,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	*           is invoked on an inappropriate kind of <code>TypeCode</code>
 	*           object
 	*/
-	@:overload @:abstract public function member_type(index : Int) : org.omg.CORBA.TypeCode;
+	@:overload @:public @:abstract public function member_type(index : Int) : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Retrieves the label of the union member
@@ -206,7 +206,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	*           is invoked on a non-union <code>TypeCode</code>
 	*           object
 	*/
-	@:overload @:abstract public function member_label(index : Int) : org.omg.CORBA.Any;
+	@:overload @:public @:abstract public function member_label(index : Int) : org.omg.CORBA.Any;
 	
 	/**
 	* Returns a <code>TypeCode</code> object describing
@@ -220,7 +220,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	*           is invoked on a non-union <code>TypeCode</code>
 	*           object
 	*/
-	@:overload @:abstract public function discriminator_type() : org.omg.CORBA.TypeCode;
+	@:overload @:public @:abstract public function discriminator_type() : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Returns the index of the
@@ -235,7 +235,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	*           is invoked on a non-union <code>TypeCode</code>
 	*           object
 	*/
-	@:overload @:abstract public function default_index() : Int;
+	@:overload @:public @:abstract public function default_index() : Int;
 	
 	/**
 	* Returns the number of elements in the type described by
@@ -253,7 +253,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	*           is invoked on an inappropriate kind of <code>TypeCode</code>
 	*           object
 	*/
-	@:overload @:abstract public function length() : Int;
+	@:overload @:public @:abstract public function length() : Int;
 	
 	/**
 	* Returns the <code>TypeCode</code> object representing the
@@ -276,7 +276,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	*           is invoked on an inappropriate kind of <code>TypeCode</code>
 	*           object
 	*/
-	@:overload @:abstract public function content_type() : org.omg.CORBA.TypeCode;
+	@:overload @:public @:abstract public function content_type() : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Returns the number of digits in the fixed type described by this
@@ -290,7 +290,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	*           object
 	*
 	*/
-	@:overload @:abstract public function fixed_digits() : java.StdTypes.Int16;
+	@:overload @:public @:abstract public function fixed_digits() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the scale of the fixed type described by this
@@ -309,7 +309,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	*           is invoked on an inappropriate kind of <code>TypeCode</code>
 	*           object
 	*/
-	@:overload @:abstract public function fixed_scale() : java.StdTypes.Int16;
+	@:overload @:public @:abstract public function fixed_scale() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the constant that indicates the visibility of the member
@@ -330,7 +330,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload @:abstract public function member_visibility(index : Int) : java.StdTypes.Int16;
+	@:overload @:abstract @:public public function member_visibility(index : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Returns a constant indicating the modifier of the value type
@@ -348,7 +348,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload @:abstract public function type_modifier() : java.StdTypes.Int16;
+	@:overload @:abstract @:public public function type_modifier() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the <code>TypeCode</code> object that describes the concrete base type
@@ -363,7 +363,7 @@ extern class TypeCode implements org.omg.CORBA.portable.IDLEntity
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload @:abstract public function concrete_base_type() : org.omg.CORBA.TypeCode;
+	@:overload @:abstract @:public public function concrete_base_type() : org.omg.CORBA.TypeCode;
 	
 	
 }

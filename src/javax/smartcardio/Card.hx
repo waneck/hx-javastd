@@ -33,21 +33,21 @@ extern class Card
 	* method to obtain a Card
 	* object.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the ATR of this card.
 	*
 	* @return the ATR of this card.
 	*/
-	@:overload @:abstract public function getATR() : javax.smartcardio.ATR;
+	@:overload @:public @:abstract public function getATR() : javax.smartcardio.ATR;
 	
 	/**
 	* Returns the protocol in use for this card.
 	*
 	* @return the protocol in use for this card, for example "T=0" or "T=1"
 	*/
-	@:overload @:abstract public function getProtocol() : String;
+	@:overload @:public @:abstract public function getProtocol() : String;
 	
 	/**
 	* Returns the CardChannel for the basic logical channel. The basic
@@ -59,7 +59,7 @@ extern class Card
 	* @throws IllegalStateException if this card object has been disposed of
 	*   via the {@linkplain #disconnect disconnect()} method
 	*/
-	@:overload @:abstract public function getBasicChannel() : javax.smartcardio.CardChannel;
+	@:overload @:public @:abstract public function getBasicChannel() : javax.smartcardio.CardChannel;
 	
 	/**
 	* Opens a new logical channel to the card and returns it. The channel is
@@ -73,7 +73,7 @@ extern class Card
 	* @throws IllegalStateException if this card object has been disposed of
 	*   via the {@linkplain #disconnect disconnect()} method
 	*/
-	@:overload @:abstract public function openLogicalChannel() : javax.smartcardio.CardChannel;
+	@:overload @:public @:abstract public function openLogicalChannel() : javax.smartcardio.CardChannel;
 	
 	/**
 	* Requests exclusive access to this card.
@@ -96,7 +96,7 @@ extern class Card
 	* @throws IllegalStateException if this card object has been disposed of
 	*   via the {@linkplain #disconnect disconnect()} method
 	*/
-	@:overload @:abstract public function beginExclusive() : Void;
+	@:overload @:public @:abstract public function beginExclusive() : Void;
 	
 	/**
 	* Releases the exclusive access previously established using
@@ -111,7 +111,7 @@ extern class Card
 	*   via the {@linkplain #disconnect disconnect()} method
 	* @throws CardException if the operation failed
 	*/
-	@:overload @:abstract public function endExclusive() : Void;
+	@:overload @:public @:abstract public function endExclusive() : Void;
 	
 	/**
 	* Transmits a control command to the terminal device.
@@ -130,7 +130,7 @@ extern class Card
 	* @throws IllegalStateException if this card object has been disposed of
 	*   via the {@linkplain #disconnect disconnect()} method
 	*/
-	@:overload @:abstract public function transmitControlCommand(controlCode : Int, command : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function transmitControlCommand(controlCode : Int, command : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Disconnects the connection with this card. After this method returns,
@@ -145,7 +145,7 @@ extern class Card
 	*   caller does not have the required
 	*   {@linkplain CardPermission permission}
 	*/
-	@:overload @:abstract public function disconnect(reset : Bool) : Void;
+	@:overload @:public @:abstract public function disconnect(reset : Bool) : Void;
 	
 	
 }

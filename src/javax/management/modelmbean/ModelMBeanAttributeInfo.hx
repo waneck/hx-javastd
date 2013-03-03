@@ -47,7 +47,7 @@ extern class ModelMBeanAttributeInfo extends javax.management.MBeanAttributeInfo
 	* problem in the definition of this attribute.
 	*
 	*/
-	@:overload public function new(name : String, description : String, getter : java.lang.reflect.Method, setter : java.lang.reflect.Method) : Void;
+	@:overload @:public public function new(name : String, description : String, getter : java.lang.reflect.Method, setter : java.lang.reflect.Method) : Void;
 	
 	/**
 	* Constructs a ModelMBeanAttributeInfo object.  The {@link
@@ -75,7 +75,7 @@ extern class ModelMBeanAttributeInfo extends javax.management.MBeanAttributeInfo
 	* "descriptorType" is not equal to "attribute".
 	*
 	*/
-	@:overload public function new(name : String, description : String, getter : java.lang.reflect.Method, setter : java.lang.reflect.Method, descriptor : javax.management.Descriptor) : Void;
+	@:overload @:public public function new(name : String, description : String, getter : java.lang.reflect.Method, setter : java.lang.reflect.Method, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Constructs a ModelMBeanAttributeInfo object with a default descriptor.
@@ -88,7 +88,7 @@ extern class ModelMBeanAttributeInfo extends javax.management.MBeanAttributeInfo
 	* @param isIs True if the attribute has an "is" getter, false otherwise.
 	*
 	*/
-	@:overload public function new(name : String, type : String, description : String, isReadable : Bool, isWritable : Bool, isIs : Bool) : Void;
+	@:overload @:public public function new(name : String, type : String, description : String, isReadable : Bool, isWritable : Bool, isIs : Bool) : Void;
 	
 	/**
 	* Constructs a ModelMBeanAttributeInfo object.
@@ -110,7 +110,7 @@ extern class ModelMBeanAttributeInfo extends javax.management.MBeanAttributeInfo
 	* "descriptorType" is not equal to "attribute".
 	*
 	*/
-	@:overload public function new(name : String, type : String, description : String, isReadable : Bool, isWritable : Bool, isIs : Bool, descriptor : javax.management.Descriptor) : Void;
+	@:overload @:public public function new(name : String, type : String, description : String, isReadable : Bool, isWritable : Bool, isIs : Bool, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Constructs a new ModelMBeanAttributeInfo object from this
@@ -119,7 +119,7 @@ extern class ModelMBeanAttributeInfo extends javax.management.MBeanAttributeInfo
 	*
 	* @param inInfo the ModelMBeanAttributeInfo to be duplicated
 	*/
-	@:overload public function new(inInfo : javax.management.modelmbean.ModelMBeanAttributeInfo) : Void;
+	@:overload @:public public function new(inInfo : javax.management.modelmbean.ModelMBeanAttributeInfo) : Void;
 	
 	/**
 	* Gets a copy of the associated Descriptor for the
@@ -130,7 +130,7 @@ extern class ModelMBeanAttributeInfo extends javax.management.MBeanAttributeInfo
 	*
 	* @see #setDescriptor
 	*/
-	@:overload override public function getDescriptor() : javax.management.Descriptor;
+	@:overload @:public override public function getDescriptor() : javax.management.Descriptor;
 	
 	/**
 	* Sets associated Descriptor (full replace) for the
@@ -148,7 +148,7 @@ extern class ModelMBeanAttributeInfo extends javax.management.MBeanAttributeInfo
 	*
 	* @see #getDescriptor
 	*/
-	@:overload public function setDescriptor(inDescriptor : javax.management.Descriptor) : Void;
+	@:overload @:public public function setDescriptor(inDescriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Creates and returns a new ModelMBeanAttributeInfo which is a duplicate of this ModelMBeanAttributeInfo.
@@ -157,13 +157,13 @@ extern class ModelMBeanAttributeInfo extends javax.management.MBeanAttributeInfo
 	* field Names or field Values.  If the descriptor construction
 	* fails for any reason, this exception will be thrown.
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Returns a human-readable version of the
 	* ModelMBeanAttributeInfo instance.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

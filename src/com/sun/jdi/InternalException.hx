@@ -32,15 +32,15 @@ package com.sun.jdi;
 */
 @:require(java3) extern class InternalException extends java.lang.RuntimeException
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
-	@:overload public function new(errorCode : Int) : Void;
+	@:overload @:public public function new(errorCode : Int) : Void;
 	
-	@:overload public function new(s : String, errorCode : Int) : Void;
+	@:overload @:public public function new(s : String, errorCode : Int) : Void;
 	
-	@:overload public function errorCode() : Int;
+	@:overload @:public public function errorCode() : Int;
 	
 	
 }

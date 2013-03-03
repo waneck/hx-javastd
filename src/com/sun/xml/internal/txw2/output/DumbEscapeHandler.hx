@@ -25,9 +25,9 @@ package com.sun.xml.internal.txw2.output;
 */
 extern class DumbEscapeHandler implements com.sun.xml.internal.txw2.output.CharacterEscapeHandler
 {
-	public static var theInstance(default, null) : com.sun.xml.internal.txw2.output.CharacterEscapeHandler;
+	@:public @:static @:final public static var theInstance(default, null) : com.sun.xml.internal.txw2.output.CharacterEscapeHandler;
 	
-	@:overload public function escape(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, isAttVal : Bool, out : java.io.Writer) : Void;
+	@:overload @:public public function escape(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, isAttVal : Bool, out : java.io.Writer) : Void;
 	
 	
 }

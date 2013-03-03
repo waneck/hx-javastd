@@ -43,7 +43,7 @@ extern interface HotSpotDiagnosticMXBean extends java.lang.management.PlatformMa
 	* @throws UnsupportedOperationException if this operation is not supported.
 	* @throws NullPointerException if <tt>outputFile</tt> is <tt>null</tt>.
 	*/
-	@:overload public function dumpHeap(outputFile : String, live : Bool) : Void;
+	@:overload @:public public function dumpHeap(outputFile : String, live : Bool) : Void;
 	
 	/**
 	* Returns a list of <tt>VMOption</tt> objects for all diagnostic options.
@@ -53,7 +53,7 @@ extern interface HotSpotDiagnosticMXBean extends java.lang.management.PlatformMa
 	*
 	* @return a list of <tt>VMOption</tt> objects for all diagnostic options.
 	*/
-	@:overload public function getDiagnosticOptions() : java.util.List<com.sun.management.VMOption>;
+	@:overload @:public public function getDiagnosticOptions() : java.util.List<com.sun.management.VMOption>;
 	
 	/**
 	* Returns a <tt>VMOption</tt> object for a VM option of the given
@@ -64,7 +64,7 @@ extern interface HotSpotDiagnosticMXBean extends java.lang.management.PlatformMa
 	* @throws IllegalArgumentException if a VM option of the given name
 	*                                     does not exist.
 	*/
-	@:overload public function getVMOption(name : String) : com.sun.management.VMOption;
+	@:overload @:public public function getVMOption(name : String) : com.sun.management.VMOption;
 	
 	/**
 	* Sets a VM option of the given name to the specified value.
@@ -86,7 +86,7 @@ extern interface HotSpotDiagnosticMXBean extends java.lang.management.PlatformMa
 	*     if a security manager exists and the caller does not have
 	*     ManagementPermission("control").
 	*/
-	@:overload public function setVMOption(name : String, value : String) : Void;
+	@:overload @:public public function setVMOption(name : String, value : String) : Void;
 	
 	
 }

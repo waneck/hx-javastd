@@ -35,14 +35,14 @@ extern class CompilerError extends java.lang.Error
 	/**
 	* Constructor
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Create an exception given another exception.
 	*/
-	@:overload public function new(e : java.lang.Exception) : Void;
+	@:overload @:public public function new(e : java.lang.Exception) : Void;
 	
-	@:overload override public function printStackTrace() : Void;
+	@:overload @:public override public function printStackTrace() : Void;
 	
 	
 }

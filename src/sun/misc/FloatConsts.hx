@@ -31,71 +31,71 @@ package sun.misc;
 */
 extern class FloatConsts
 {
-	public static var POSITIVE_INFINITY(default, null) : Single;
+	@:public @:static @:final public static var POSITIVE_INFINITY(default, null) : Single;
 	
-	public static var NEGATIVE_INFINITY(default, null) : Single;
+	@:public @:static @:final public static var NEGATIVE_INFINITY(default, null) : Single;
 	
-	public static var NaN(default, null) : Single;
+	@:public @:static @:final public static var NaN(default, null) : Single;
 	
-	public static var MAX_VALUE(default, null) : Single;
+	@:public @:static @:final public static var MAX_VALUE(default, null) : Single;
 	
-	public static var MIN_VALUE(default, null) : Single;
+	@:public @:static @:final public static var MIN_VALUE(default, null) : Single;
 	
 	/**
 	* A constant holding the smallest positive normal value of type
 	* <code>float</code>, 2<sup>-126</sup>.  It is equal to the value
 	* returned by <code>Float.intBitsToFloat(0x00800000)</code>.
 	*/
-	public static var MIN_NORMAL(default, null) : Single;
+	@:public @:static @:final public static var MIN_NORMAL(default, null) : Single;
 	
 	/**
 	* The number of logical bits in the significand of a
 	* <code>float</code> number, including the implicit bit.
 	*/
-	public static var SIGNIFICAND_WIDTH(default, null) : Int;
+	@:public @:static @:final public static var SIGNIFICAND_WIDTH(default, null) : Int;
 	
 	/**
 	* Maximum exponent a finite <code>float</code> number may have.
 	* It is equal to the value returned by
 	* <code>Math.ilogb(Float.MAX_VALUE)</code>.
 	*/
-	public static var MAX_EXPONENT(default, null) : Int;
+	@:public @:static @:final public static var MAX_EXPONENT(default, null) : Int;
 	
 	/**
 	* Minimum exponent a normalized <code>float</code> number may
 	* have.  It is equal to the value returned by
 	* <code>Math.ilogb(Float.MIN_NORMAL)</code>.
 	*/
-	public static var MIN_EXPONENT(default, null) : Int;
+	@:public @:static @:final public static var MIN_EXPONENT(default, null) : Int;
 	
 	/**
 	* The exponent the smallest positive <code>float</code> subnormal
 	* value would have if it could be normalized.  It is equal to the
 	* value returned by <code>FpUtils.ilogb(Float.MIN_VALUE)</code>.
 	*/
-	public static var MIN_SUB_EXPONENT(default, null) : Int;
+	@:public @:static @:final public static var MIN_SUB_EXPONENT(default, null) : Int;
 	
 	/**
 	* Bias used in representing a <code>float</code> exponent.
 	*/
-	public static var EXP_BIAS(default, null) : Int;
+	@:public @:static @:final public static var EXP_BIAS(default, null) : Int;
 	
 	/**
 	* Bit mask to isolate the sign bit of a <code>float</code>.
 	*/
-	public static var SIGN_BIT_MASK(default, null) : Int;
+	@:public @:static @:final public static var SIGN_BIT_MASK(default, null) : Int;
 	
 	/**
 	* Bit mask to isolate the exponent field of a
 	* <code>float</code>.
 	*/
-	public static var EXP_BIT_MASK(default, null) : Int;
+	@:public @:static @:final public static var EXP_BIT_MASK(default, null) : Int;
 	
 	/**
 	* Bit mask to isolate the significand field of a
 	* <code>float</code>.
 	*/
-	public static var SIGNIF_BIT_MASK(default, null) : Int;
+	@:public @:static @:final public static var SIGNIF_BIT_MASK(default, null) : Int;
 	
 	
 }

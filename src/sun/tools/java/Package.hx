@@ -28,43 +28,43 @@ extern class Package
 	/**
 	* Create a package given a class path, and package name.
 	*/
-	@:overload public function new(path : sun.tools.java.ClassPath, pkg : sun.tools.java.Identifier) : Void;
+	@:overload @:public public function new(path : sun.tools.java.ClassPath, pkg : sun.tools.java.Identifier) : Void;
 	
 	/**
 	* Create a package given a source path, binary path, and package
 	* name.
 	*/
-	@:overload public function new(sourcePath : sun.tools.java.ClassPath, binaryPath : sun.tools.java.ClassPath, pkg : sun.tools.java.Identifier) : Void;
+	@:overload @:public public function new(sourcePath : sun.tools.java.ClassPath, binaryPath : sun.tools.java.ClassPath, pkg : sun.tools.java.Identifier) : Void;
 	
 	/**
 	* Check if a class is defined in this package.
 	* (If it is an inner class name, it is assumed to exist
 	* only if its binary file exists.  This is somewhat pessimistic.)
 	*/
-	@:overload public function classExists(className : sun.tools.java.Identifier) : Bool;
+	@:overload @:public public function classExists(className : sun.tools.java.Identifier) : Bool;
 	
 	/**
 	* Check if the package exists
 	*/
-	@:overload public function exists() : Bool;
+	@:overload @:public public function exists() : Bool;
 	
 	/**
 	* Get the .class file of a class
 	*/
-	@:overload public function getBinaryFile(className : sun.tools.java.Identifier) : sun.tools.java.ClassFile;
+	@:overload @:public public function getBinaryFile(className : sun.tools.java.Identifier) : sun.tools.java.ClassFile;
 	
 	/**
 	* Get the .java file of a class
 	*/
-	@:overload public function getSourceFile(className : sun.tools.java.Identifier) : sun.tools.java.ClassFile;
+	@:overload @:public public function getSourceFile(className : sun.tools.java.Identifier) : sun.tools.java.ClassFile;
 	
-	@:overload public function getSourceFile(fileName : String) : sun.tools.java.ClassFile;
+	@:overload @:public public function getSourceFile(fileName : String) : sun.tools.java.ClassFile;
 	
-	@:overload public function getSourceFiles() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getSourceFiles() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function getBinaryFiles() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getBinaryFiles() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

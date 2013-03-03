@@ -25,14 +25,14 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 */
 extern class CodeTaglet extends com.sun.tools.doclets.internal.toolkit.taglets.LiteralTaglet
 {
-	@:overload public static function register(map : java.util.Map<String, com.sun.tools.doclets.internal.toolkit.taglets.Taglet>) : Void;
+	@:overload @:public @:static public static function register(map : java.util.Map<String, com.sun.tools.doclets.internal.toolkit.taglets.Taglet>) : Void;
 	
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/*
 	* Wraps @literal's result in a <code> element.
 	*/
-	@:overload override public function toString(tag : com.sun.javadoc.Tag) : String;
+	@:overload @:public override public function toString(tag : com.sun.javadoc.Tag) : String;
 	
 	
 }

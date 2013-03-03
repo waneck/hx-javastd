@@ -25,9 +25,9 @@ package javax.swing;
 */
 @:internal extern class KeyboardManager
 {
-	@:overload public static function getCurrentManager() : javax.swing.KeyboardManager;
+	@:overload @:public @:static public static function getCurrentManager() : javax.swing.KeyboardManager;
 	
-	@:overload public static function setCurrentManager(km : javax.swing.KeyboardManager) : Void;
+	@:overload @:public @:static public static function setCurrentManager(km : javax.swing.KeyboardManager) : Void;
 	
 	/**
 	* register keystrokes here which are for the WHEN_IN_FOCUSED_WINDOW
@@ -35,9 +35,9 @@ package javax.swing;
 	* Other types of keystrokes will be handled by walking the hierarchy
 	* That simplifies some potentially hairy stuff.
 	*/
-	@:overload public function registerKeyStroke(k : javax.swing.KeyStroke, c : javax.swing.JComponent) : Void;
+	@:overload @:public public function registerKeyStroke(k : javax.swing.KeyStroke, c : javax.swing.JComponent) : Void;
 	
-	@:overload public function unregisterKeyStroke(ks : javax.swing.KeyStroke, c : javax.swing.JComponent) : Void;
+	@:overload @:public public function unregisterKeyStroke(ks : javax.swing.KeyStroke, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* This method is called when the focused component (and none of
@@ -46,13 +46,13 @@ package javax.swing;
 	* want a crack at the event.
 	* If one of them wants it, then it will "DO-THE-RIGHT-THING"
 	*/
-	@:overload public function fireKeyboardAction(e : java.awt.event.KeyEvent, pressed : Bool, topAncestor : java.awt.Container) : Bool;
+	@:overload @:public public function fireKeyboardAction(e : java.awt.event.KeyEvent, pressed : Bool, topAncestor : java.awt.Container) : Bool;
 	
-	@:overload public function registerMenuBar(mb : javax.swing.JMenuBar) : Void;
+	@:overload @:public public function registerMenuBar(mb : javax.swing.JMenuBar) : Void;
 	
-	@:overload public function unregisterMenuBar(mb : javax.swing.JMenuBar) : Void;
+	@:overload @:public public function unregisterMenuBar(mb : javax.swing.JMenuBar) : Void;
 	
-	@:overload private function registerNewTopContainer(topContainer : java.awt.Container) : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:protected private function registerNewTopContainer(topContainer : java.awt.Container) : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	
 }
@@ -63,11 +63,11 @@ package javax.swing;
 */
 @:native('javax$swing$KeyboardManager$ComponentKeyStrokePair') @:internal extern class KeyboardManager_ComponentKeyStrokePair
 {
-	@:overload public function new(comp : Dynamic, key : Dynamic) : Void;
+	@:overload @:public public function new(comp : Dynamic, key : Dynamic) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

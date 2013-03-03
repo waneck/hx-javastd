@@ -64,7 +64,7 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern interface MethodObserver
 {
-	@:overload public function notify(method : com.sun.org.apache.bcel.internal.generic.MethodGen) : Void;
+	@:overload @:public public function notify(method : com.sun.org.apache.bcel.internal.generic.MethodGen) : Void;
 	
 	
 }

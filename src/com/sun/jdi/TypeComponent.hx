@@ -53,7 +53,7 @@ package com.sun.jdi;
 	*
 	* @return a string containing the name.
 	*/
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/**
 	* Gets the JNI-style signature for this type component. The
@@ -67,7 +67,7 @@ package com.sun.jdi;
 	* @see <a href="doc-files/signature.html">Type Signatures</a>
 	* @return a string containing the signature
 	*/
-	@:overload public function signature() : String;
+	@:overload @:public public function signature() : String;
 	
 	/**
 	* Gets the generic signature for this TypeComponent if there is one.
@@ -79,7 +79,7 @@ package com.sun.jdi;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function genericSignature() : String;
+	@:require(java5) @:overload @:public public function genericSignature() : String;
 	
 	/**
 	* Returns the type in which this component was declared. The
@@ -89,7 +89,7 @@ package com.sun.jdi;
 	* @return a {@link ReferenceType} for the type that declared
 	* this type component.
 	*/
-	@:overload public function declaringType() : com.sun.jdi.ReferenceType;
+	@:overload @:public public function declaringType() : com.sun.jdi.ReferenceType;
 	
 	/**
 	* Determines if this TypeComponent is static.
@@ -98,7 +98,7 @@ package com.sun.jdi;
 	* @return <code>true</code> if this type component was declared
 	* static; false otherwise.
 	*/
-	@:overload public function isStatic() : Bool;
+	@:overload @:public public function isStatic() : Bool;
 	
 	/**
 	* Determines if this TypeComponent is final.
@@ -107,7 +107,7 @@ package com.sun.jdi;
 	* @return <code>true</code> if this type component was declared
 	* final; false otherwise.
 	*/
-	@:overload public function isFinal() : Bool;
+	@:overload @:public public function isFinal() : Bool;
 	
 	/**
 	* Determines if this TypeComponent is synthetic. Synthetic members
@@ -123,7 +123,7 @@ package com.sun.jdi;
 	* @throws java.lang.UnsupportedOperationException if the target
 	* VM cannot provide information on synthetic attributes.
 	*/
-	@:overload public function isSynthetic() : Bool;
+	@:overload @:public public function isSynthetic() : Bool;
 	
 	
 }

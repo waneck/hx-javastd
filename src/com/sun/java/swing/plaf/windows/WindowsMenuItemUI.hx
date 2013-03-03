@@ -37,7 +37,7 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsMenuItemUI extends javax.swing.plaf.basic.BasicMenuItemUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Method which renders the text of the current menu item.
@@ -47,9 +47,9 @@ extern class WindowsMenuItemUI extends javax.swing.plaf.basic.BasicMenuItemUI
 	* @param textRect Bounding rectangle to render the text.
 	* @param text String to render
 	*/
-	@:overload override private function paintText(g : java.awt.Graphics, menuItem : javax.swing.JMenuItem, textRect : java.awt.Rectangle, text : String) : Void;
+	@:overload @:protected override private function paintText(g : java.awt.Graphics, menuItem : javax.swing.JMenuItem, textRect : java.awt.Rectangle, text : String) : Void;
 	
-	@:overload override private function paintBackground(g : java.awt.Graphics, menuItem : javax.swing.JMenuItem, bgColor : java.awt.Color) : Void;
+	@:overload @:protected override private function paintBackground(g : java.awt.Graphics, menuItem : javax.swing.JMenuItem, bgColor : java.awt.Color) : Void;
 	
 	
 }

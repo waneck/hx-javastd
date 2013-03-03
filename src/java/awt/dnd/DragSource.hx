@@ -32,7 +32,7 @@ extern class DragSource implements java.io.Serializable
 	*
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	public static var DefaultCopyDrop(default, null) : java.awt.Cursor;
+	@:public @:static @:final public static var DefaultCopyDrop(default, null) : java.awt.Cursor;
 	
 	/**
 	* The default <code>Cursor</code> to use with a move operation indicating
@@ -41,7 +41,7 @@ extern class DragSource implements java.io.Serializable
 	*
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	public static var DefaultMoveDrop(default, null) : java.awt.Cursor;
+	@:public @:static @:final public static var DefaultMoveDrop(default, null) : java.awt.Cursor;
 	
 	/**
 	* The default <code>Cursor</code> to use with a link operation indicating
@@ -50,7 +50,7 @@ extern class DragSource implements java.io.Serializable
 	*
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	public static var DefaultLinkDrop(default, null) : java.awt.Cursor;
+	@:public @:static @:final public static var DefaultLinkDrop(default, null) : java.awt.Cursor;
 	
 	/**
 	* The default <code>Cursor</code> to use with a copy operation indicating
@@ -59,7 +59,7 @@ extern class DragSource implements java.io.Serializable
 	*
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	public static var DefaultCopyNoDrop(default, null) : java.awt.Cursor;
+	@:public @:static @:final public static var DefaultCopyNoDrop(default, null) : java.awt.Cursor;
 	
 	/**
 	* The default <code>Cursor</code> to use with a move operation indicating
@@ -68,7 +68,7 @@ extern class DragSource implements java.io.Serializable
 	*
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	public static var DefaultMoveNoDrop(default, null) : java.awt.Cursor;
+	@:public @:static @:final public static var DefaultMoveNoDrop(default, null) : java.awt.Cursor;
 	
 	/**
 	* The default <code>Cursor</code> to use with a link operation indicating
@@ -77,7 +77,7 @@ extern class DragSource implements java.io.Serializable
 	*
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	public static var DefaultLinkNoDrop(default, null) : java.awt.Cursor;
+	@:public @:static @:final public static var DefaultLinkNoDrop(default, null) : java.awt.Cursor;
 	
 	/**
 	* Gets the <code>DragSource</code> object associated with
@@ -88,7 +88,7 @@ extern class DragSource implements java.io.Serializable
 	*            returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function getDefaultDragSource() : java.awt.dnd.DragSource;
+	@:overload @:public @:static public static function getDefaultDragSource() : java.awt.dnd.DragSource;
 	
 	/**
 	* Reports
@@ -98,7 +98,7 @@ extern class DragSource implements java.io.Serializable
 	* <P>
 	* @return if the Drag Image support is available on this platform
 	*/
-	@:overload public static function isDragImageSupported() : Bool;
+	@:overload @:public @:static public static function isDragImageSupported() : Bool;
 	
 	/**
 	* Creates a new <code>DragSource</code>.
@@ -107,7 +107,7 @@ extern class DragSource implements java.io.Serializable
 	*            returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Start a drag, given the <code>DragGestureEvent</code>
@@ -139,7 +139,7 @@ extern class DragSource implements java.io.Serializable
 	*    attempts to start a drag while an existing drag operation
 	*    is still executing
 	*/
-	@:overload public function startDrag(trigger : java.awt.dnd.DragGestureEvent, dragCursor : java.awt.Cursor, dragImage : java.awt.Image, imageOffset : java.awt.Point, transferable : java.awt.datatransfer.Transferable, dsl : java.awt.dnd.DragSourceListener, flavorMap : java.awt.datatransfer.FlavorMap) : Void;
+	@:overload @:public public function startDrag(trigger : java.awt.dnd.DragGestureEvent, dragCursor : java.awt.Cursor, dragImage : java.awt.Image, imageOffset : java.awt.Point, transferable : java.awt.datatransfer.Transferable, dsl : java.awt.dnd.DragSourceListener, flavorMap : java.awt.datatransfer.FlavorMap) : Void;
 	
 	/**
 	* Start a drag, given the <code>DragGestureEvent</code>
@@ -165,7 +165,7 @@ extern class DragSource implements java.io.Serializable
 	*    attempts to start a drag while an existing drag operation
 	*    is still executing
 	*/
-	@:overload public function startDrag(trigger : java.awt.dnd.DragGestureEvent, dragCursor : java.awt.Cursor, transferable : java.awt.datatransfer.Transferable, dsl : java.awt.dnd.DragSourceListener, flavorMap : java.awt.datatransfer.FlavorMap) : Void;
+	@:overload @:public public function startDrag(trigger : java.awt.dnd.DragGestureEvent, dragCursor : java.awt.Cursor, transferable : java.awt.datatransfer.Transferable, dsl : java.awt.dnd.DragSourceListener, flavorMap : java.awt.datatransfer.FlavorMap) : Void;
 	
 	/**
 	* Start a drag, given the <code>DragGestureEvent</code>
@@ -195,7 +195,7 @@ extern class DragSource implements java.io.Serializable
 	*    attempts to start a drag while an existing drag operation
 	*    is still executing
 	*/
-	@:overload public function startDrag(trigger : java.awt.dnd.DragGestureEvent, dragCursor : java.awt.Cursor, dragImage : java.awt.Image, dragOffset : java.awt.Point, transferable : java.awt.datatransfer.Transferable, dsl : java.awt.dnd.DragSourceListener) : Void;
+	@:overload @:public public function startDrag(trigger : java.awt.dnd.DragGestureEvent, dragCursor : java.awt.Cursor, dragImage : java.awt.Image, dragOffset : java.awt.Point, transferable : java.awt.datatransfer.Transferable, dsl : java.awt.dnd.DragSourceListener) : Void;
 	
 	/**
 	* Start a drag, given the <code>DragGestureEvent</code>
@@ -219,7 +219,7 @@ extern class DragSource implements java.io.Serializable
 	*    attempts to start a drag while an existing drag operation
 	*    is still executing
 	*/
-	@:overload public function startDrag(trigger : java.awt.dnd.DragGestureEvent, dragCursor : java.awt.Cursor, transferable : java.awt.datatransfer.Transferable, dsl : java.awt.dnd.DragSourceListener) : Void;
+	@:overload @:public public function startDrag(trigger : java.awt.dnd.DragGestureEvent, dragCursor : java.awt.Cursor, transferable : java.awt.datatransfer.Transferable, dsl : java.awt.dnd.DragSourceListener) : Void;
 	
 	/**
 	* Creates the {@code DragSourceContext} to handle the current drag
@@ -267,7 +267,7 @@ extern class DragSource implements java.io.Serializable
 	*         <code>DragGestureRecognizer</code> associated with the trigger
 	*         event are equal to <code>DnDConstants.ACTION_NONE</code>.
 	*/
-	@:overload private function createDragSourceContext(dscp : java.awt.dnd.peer.DragSourceContextPeer, dgl : java.awt.dnd.DragGestureEvent, dragCursor : java.awt.Cursor, dragImage : java.awt.Image, imageOffset : java.awt.Point, t : java.awt.datatransfer.Transferable, dsl : java.awt.dnd.DragSourceListener) : java.awt.dnd.DragSourceContext;
+	@:overload @:protected private function createDragSourceContext(dscp : java.awt.dnd.peer.DragSourceContextPeer, dgl : java.awt.dnd.DragGestureEvent, dragCursor : java.awt.Cursor, dragImage : java.awt.Image, imageOffset : java.awt.Point, t : java.awt.datatransfer.Transferable, dsl : java.awt.dnd.DragSourceListener) : java.awt.dnd.DragSourceContext;
 	
 	/**
 	* This method returns the
@@ -275,7 +275,7 @@ extern class DragSource implements java.io.Serializable
 	* <P>
 	* @return the <code>FlavorMap</code> for this <code>DragSource</code>
 	*/
-	@:overload public function getFlavorMap() : java.awt.datatransfer.FlavorMap;
+	@:overload @:public public function getFlavorMap() : java.awt.datatransfer.FlavorMap;
 	
 	/**
 	* Creates a new <code>DragGestureRecognizer</code>
@@ -297,7 +297,7 @@ extern class DragSource implements java.io.Serializable
 	*    the requested <code>DragGestureRecognizer</code>
 	*    subclass and returns <code>null</code>
 	*/
-	@:overload public function createDragGestureRecognizer<T : java.awt.dnd.DragGestureRecognizer>(recognizerAbstractClass : Class<T>, c : java.awt.Component, actions : Int, dgl : java.awt.dnd.DragGestureListener) : T;
+	@:overload @:public public function createDragGestureRecognizer<T : java.awt.dnd.DragGestureRecognizer>(recognizerAbstractClass : Class<T>, c : java.awt.Component, actions : Int, dgl : java.awt.dnd.DragGestureListener) : T;
 	
 	/**
 	* Creates a new <code>DragGestureRecognizer</code>
@@ -321,7 +321,7 @@ extern class DragSource implements java.io.Serializable
 	*    the requested <code>DragGestureRecognizer</code>
 	*    subclass and returns <code>null</code>
 	*/
-	@:overload public function createDefaultDragGestureRecognizer(c : java.awt.Component, actions : Int, dgl : java.awt.dnd.DragGestureListener) : java.awt.dnd.DragGestureRecognizer;
+	@:overload @:public public function createDefaultDragGestureRecognizer(c : java.awt.Component, actions : Int, dgl : java.awt.dnd.DragGestureListener) : java.awt.dnd.DragGestureRecognizer;
 	
 	/**
 	* Adds the specified <code>DragSourceListener</code> to this
@@ -336,7 +336,7 @@ extern class DragSource implements java.io.Serializable
 	* @see      #getDragSourceListeners
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function addDragSourceListener(dsl : java.awt.dnd.DragSourceListener) : Void;
+	@:require(java4) @:overload @:public public function addDragSourceListener(dsl : java.awt.dnd.DragSourceListener) : Void;
 	
 	/**
 	* Removes the specified <code>DragSourceListener</code> from this
@@ -353,7 +353,7 @@ extern class DragSource implements java.io.Serializable
 	* @see      #getDragSourceListeners
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function removeDragSourceListener(dsl : java.awt.dnd.DragSourceListener) : Void;
+	@:require(java4) @:overload @:public public function removeDragSourceListener(dsl : java.awt.dnd.DragSourceListener) : Void;
 	
 	/**
 	* Gets all the <code>DragSourceListener</code>s
@@ -367,7 +367,7 @@ extern class DragSource implements java.io.Serializable
 	* @see      #removeDragSourceListener
 	* @since    1.4
 	*/
-	@:require(java4) @:overload public function getDragSourceListeners() : java.NativeArray<java.awt.dnd.DragSourceListener>;
+	@:require(java4) @:overload @:public public function getDragSourceListeners() : java.NativeArray<java.awt.dnd.DragSourceListener>;
 	
 	/**
 	* Adds the specified <code>DragSourceMotionListener</code> to this
@@ -382,7 +382,7 @@ extern class DragSource implements java.io.Serializable
 	* @see      #getDragSourceMotionListeners
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function addDragSourceMotionListener(dsml : java.awt.dnd.DragSourceMotionListener) : Void;
+	@:require(java4) @:overload @:public public function addDragSourceMotionListener(dsml : java.awt.dnd.DragSourceMotionListener) : Void;
 	
 	/**
 	* Removes the specified <code>DragSourceMotionListener</code> from this
@@ -399,7 +399,7 @@ extern class DragSource implements java.io.Serializable
 	* @see      #getDragSourceMotionListeners
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function removeDragSourceMotionListener(dsml : java.awt.dnd.DragSourceMotionListener) : Void;
+	@:require(java4) @:overload @:public public function removeDragSourceMotionListener(dsml : java.awt.dnd.DragSourceMotionListener) : Void;
 	
 	/**
 	* Gets all of the  <code>DragSourceMotionListener</code>s
@@ -413,7 +413,7 @@ extern class DragSource implements java.io.Serializable
 	* @see      #removeDragSourceMotionListener
 	* @since    1.4
 	*/
-	@:require(java4) @:overload public function getDragSourceMotionListeners() : java.NativeArray<java.awt.dnd.DragSourceMotionListener>;
+	@:require(java4) @:overload @:public public function getDragSourceMotionListeners() : java.NativeArray<java.awt.dnd.DragSourceMotionListener>;
 	
 	/**
 	* Gets all the objects currently registered as
@@ -436,7 +436,7 @@ extern class DragSource implements java.io.Serializable
 	* @see #getDragSourceMotionListeners
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java4) @:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Returns the drag gesture motion threshold. The drag gesture motion threshold
@@ -454,7 +454,7 @@ extern class DragSource implements java.io.Serializable
 	* @see MouseDragGestureRecognizer
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getDragThreshold() : Int;
+	@:require(java5) @:overload @:public @:static public static function getDragThreshold() : Int;
 	
 	
 }

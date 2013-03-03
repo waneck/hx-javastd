@@ -25,16 +25,16 @@ package com.sun.java.swing.plaf.motif;
 */
 extern class MotifPopupMenuUI extends javax.swing.plaf.basic.BasicPopupMenuUI
 {
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/* This has to deal with the fact that the title may be wider than
 	the widest child component.
 	*/
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload private function createChangeListener(m : javax.swing.JPopupMenu) : javax.swing.event.ChangeListener;
+	@:overload @:protected private function createChangeListener(m : javax.swing.JPopupMenu) : javax.swing.event.ChangeListener;
 	
-	@:overload override public function isPopupTrigger(e : java.awt.event.MouseEvent) : Bool;
+	@:overload @:public override public function isPopupTrigger(e : java.awt.event.MouseEvent) : Bool;
 	
 	
 }

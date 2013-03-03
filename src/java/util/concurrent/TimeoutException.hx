@@ -49,7 +49,7 @@ package java.util.concurrent;
 	* Constructs a <tt>TimeoutException</tt> with no specified detail
 	* message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <tt>TimeoutException</tt> with the specified detail
@@ -57,7 +57,7 @@ package java.util.concurrent;
 	*
 	* @param message the detail message
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

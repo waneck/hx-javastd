@@ -35,7 +35,7 @@ extern class ProtectionDomain
 	* @param codesource the codesource associated with this domain
 	* @param permissions the permissions granted to this domain
 	*/
-	@:overload public function new(codesource : java.security.CodeSource, permissions : java.security.PermissionCollection) : Void;
+	@:overload @:public public function new(codesource : java.security.CodeSource, permissions : java.security.PermissionCollection) : Void;
 	
 	/**
 	* Creates a new ProtectionDomain qualified by the given CodeSource,
@@ -66,14 +66,14 @@ extern class ProtectionDomain
 	* @see Policy#getPermissions(ProtectionDomain)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(codesource : java.security.CodeSource, permissions : java.security.PermissionCollection, classloader : java.lang.ClassLoader, principals : java.NativeArray<java.security.Principal>) : Void;
+	@:require(java4) @:overload @:public public function new(codesource : java.security.CodeSource, permissions : java.security.PermissionCollection, classloader : java.lang.ClassLoader, principals : java.NativeArray<java.security.Principal>) : Void;
 	
 	/**
 	* Returns the CodeSource of this domain.
 	* @return the CodeSource of this domain which may be null.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:final public function getCodeSource() : java.security.CodeSource;
+	@:require(java2) @:overload @:public @:final public function getCodeSource() : java.security.CodeSource;
 	
 	/**
 	* Returns the ClassLoader of this domain.
@@ -81,7 +81,7 @@ extern class ProtectionDomain
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final public function getClassLoader() : java.lang.ClassLoader;
+	@:require(java4) @:overload @:public @:final public function getClassLoader() : java.lang.ClassLoader;
 	
 	/**
 	* Returns an array of principals for this domain.
@@ -90,7 +90,7 @@ extern class ProtectionDomain
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final public function getPrincipals() : java.NativeArray<java.security.Principal>;
+	@:require(java4) @:overload @:public @:final public function getPrincipals() : java.NativeArray<java.security.Principal>;
 	
 	/**
 	* Returns the static permissions granted to this domain.
@@ -99,7 +99,7 @@ extern class ProtectionDomain
 	* @see Policy#refresh
 	* @see Policy#getPermissions(ProtectionDomain)
 	*/
-	@:overload @:final public function getPermissions() : java.security.PermissionCollection;
+	@:overload @:public @:final public function getPermissions() : java.security.PermissionCollection;
 	
 	/**
 	* Check and see if this ProtectionDomain implies the permissions
@@ -128,12 +128,12 @@ extern class ProtectionDomain
 	*
 	* @return true if "permission" is implicit to this ProtectionDomain.
 	*/
-	@:overload public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Convert a ProtectionDomain to a String.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

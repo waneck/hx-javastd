@@ -28,17 +28,17 @@ package sun.security.ssl;
 	/**
 	* Write the data out, NOW.
 	*/
-	@:overload @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:synchronized @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Write one byte now.
 	*/
-	@:overload @:synchronized override public function write(i : Int) : Void;
+	@:overload @:synchronized @:public override public function write(i : Int) : Void;
 	
 	/*
 	* Socket close is already synchronized, no need to block here.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

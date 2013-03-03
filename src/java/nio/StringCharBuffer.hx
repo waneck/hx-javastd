@@ -26,29 +26,29 @@ package java.nio;
 //// ## If the sequence is a string, use reflection to share its array
 @:internal extern class StringCharBuffer extends java.nio.CharBuffer
 {
-	@:overload override public function slice() : java.nio.CharBuffer;
+	@:overload @:public override public function slice() : java.nio.CharBuffer;
 	
-	@:overload override public function duplicate() : java.nio.CharBuffer;
+	@:overload @:public override public function duplicate() : java.nio.CharBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.CharBuffer;
+	@:overload @:public override public function asReadOnlyBuffer() : java.nio.CharBuffer;
 	
-	@:overload @:final override public function get() : java.StdTypes.Char16;
+	@:overload @:public @:final override public function get() : java.StdTypes.Char16;
 	
-	@:overload @:final override public function get(index : Int) : java.StdTypes.Char16;
+	@:overload @:public @:final override public function get(index : Int) : java.StdTypes.Char16;
 	
-	@:overload @:final override public function put(c : java.StdTypes.Char16) : java.nio.CharBuffer;
+	@:overload @:public @:final override public function put(c : java.StdTypes.Char16) : java.nio.CharBuffer;
 	
-	@:overload @:final override public function put(index : Int, c : java.StdTypes.Char16) : java.nio.CharBuffer;
+	@:overload @:public @:final override public function put(index : Int, c : java.StdTypes.Char16) : java.nio.CharBuffer;
 	
-	@:overload @:final override public function compact() : java.nio.CharBuffer;
+	@:overload @:public @:final override public function compact() : java.nio.CharBuffer;
 	
-	@:overload @:final public function isReadOnly() : Bool;
+	@:overload @:public @:final override public function isReadOnly() : Bool;
 	
-	@:overload @:final override public function subSequence(start : Int, end : Int) : java.nio.CharBuffer;
+	@:overload @:public @:final override public function subSequence(start : Int, end : Int) : java.nio.CharBuffer;
 	
-	@:overload override public function isDirect() : Bool;
+	@:overload @:public override public function isDirect() : Bool;
 	
-	@:overload override public function order() : java.nio.ByteOrder;
+	@:overload @:public override public function order() : java.nio.ByteOrder;
 	
 	
 }

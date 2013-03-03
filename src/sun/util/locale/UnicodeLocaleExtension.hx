@@ -31,25 +31,25 @@ package sun.util.locale;
 */
 extern class UnicodeLocaleExtension extends sun.util.locale.Extension
 {
-	public static var SINGLETON(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var SINGLETON(default, null) : java.StdTypes.Char16;
 	
-	public static var CA_JAPANESE(default, null) : sun.util.locale.UnicodeLocaleExtension;
+	@:public @:static @:final public static var CA_JAPANESE(default, null) : sun.util.locale.UnicodeLocaleExtension;
 	
-	public static var NU_THAI(default, null) : sun.util.locale.UnicodeLocaleExtension;
+	@:public @:static @:final public static var NU_THAI(default, null) : sun.util.locale.UnicodeLocaleExtension;
 	
-	@:overload public function getUnicodeLocaleAttributes() : java.util.Set<String>;
+	@:overload @:public public function getUnicodeLocaleAttributes() : java.util.Set<String>;
 	
-	@:overload public function getUnicodeLocaleKeys() : java.util.Set<String>;
+	@:overload @:public public function getUnicodeLocaleKeys() : java.util.Set<String>;
 	
-	@:overload public function getUnicodeLocaleType(unicodeLocaleKey : String) : String;
+	@:overload @:public public function getUnicodeLocaleType(unicodeLocaleKey : String) : String;
 	
-	@:overload public static function isSingletonChar(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isSingletonChar(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload public static function isAttribute(s : String) : Bool;
+	@:overload @:public @:static public static function isAttribute(s : String) : Bool;
 	
-	@:overload public static function isKey(s : String) : Bool;
+	@:overload @:public @:static public static function isKey(s : String) : Bool;
 	
-	@:overload public static function isTypeSubtag(s : String) : Bool;
+	@:overload @:public @:static public static function isTypeSubtag(s : String) : Bool;
 	
 	
 }

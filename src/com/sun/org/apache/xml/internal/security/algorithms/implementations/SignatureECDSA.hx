@@ -22,53 +22,53 @@ package com.sun.org.apache.xml.internal.security.algorithms.implementations;
 extern class SignatureECDSA extends com.sun.org.apache.xml.internal.security.algorithms.SignatureAlgorithmSpi
 {
 	/** @inheritDoc */
-	@:overload @:abstract public function engineGetURI() : String;
+	@:overload @:public @:abstract override public function engineGetURI() : String;
 	
 	/**
 	* Constructor SignatureRSA
 	*
 	* @throws XMLSignatureException
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** @inheritDoc */
-	@:overload private function engineSetParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineSetParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/** @inheritDoc */
-	@:overload private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:protected override private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/** @inheritDoc */
-	@:overload private function engineInitVerify(publicKey : java.security.Key) : Void;
+	@:overload @:protected override private function engineInitVerify(publicKey : java.security.Key) : Void;
 	
 	/** @inheritDoc */
-	@:overload private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** @inheritDoc */
-	@:overload private function engineInitSign(privateKey : java.security.Key, secureRandom : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInitSign(privateKey : java.security.Key, secureRandom : java.security.SecureRandom) : Void;
 	
 	/** @inheritDoc */
-	@:overload private function engineInitSign(privateKey : java.security.Key) : Void;
+	@:overload @:protected override private function engineInitSign(privateKey : java.security.Key) : Void;
 	
 	/** @inheritDoc */
-	@:overload private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/** @inheritDoc */
-	@:overload private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
 	/** @inheritDoc */
-	@:overload private function engineUpdate(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/** @inheritDoc */
-	@:overload private function engineGetJCEAlgorithmString() : String;
+	@:overload @:protected override private function engineGetJCEAlgorithmString() : String;
 	
 	/** @inheritDoc */
-	@:overload private function engineGetJCEProviderName() : String;
+	@:overload @:protected override private function engineGetJCEProviderName() : String;
 	
 	/** @inheritDoc */
-	@:overload private function engineSetHMACOutputLength(HMACOutputLength : Int) : Void;
+	@:overload @:protected override private function engineSetHMACOutputLength(HMACOutputLength : Int) : Void;
 	
 	/** @inheritDoc */
-	@:overload private function engineInitSign(signingKey : java.security.Key, algorithmParameterSpec : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineInitSign(signingKey : java.security.Key, algorithmParameterSpec : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	
 }
@@ -85,10 +85,10 @@ extern class SignatureECDSA extends com.sun.org.apache.xml.internal.security.alg
 	*
 	* @throws XMLSignatureException
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function engineGetURI() : String;
+	@:overload @:public override public function engineGetURI() : String;
 	
 	
 }

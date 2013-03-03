@@ -28,12 +28,12 @@ extern class SimpleJavaFileObject implements javax.tools.JavaFileObject
 	/**
 	* A URI for this file object.
 	*/
-	private var uri(default, null) : java.net.URI;
+	@:protected @:final private var uri(default, null) : java.net.URI;
 	
 	/**
 	* The kind of this file object.
 	*/
-	private var kind(default, null) : javax.tools.JavaFileObject.JavaFileObject_Kind;
+	@:protected @:final private var kind(default, null) : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	
 	/**
 	* Construct a SimpleJavaFileObject of the given kind and with the
@@ -42,19 +42,11 @@ extern class SimpleJavaFileObject implements javax.tools.JavaFileObject
 	* @param uri  the URI for this file object
 	* @param kind the kind of this file object
 	*/
-	@:overload private function new(uri : java.net.URI, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Void;
+	@:overload @:protected private function new(uri : java.net.URI, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Void;
 	
-	@:overload public function toUri() : java.net.URI;
+	@:overload @:public public function toUri() : java.net.URI;
 	
-	@:overload public function getName() : String;
-	
-	/**
-	* This implementation always throws {@linkplain
-	* UnsupportedOperationException}.  Subclasses can change this
-	* behavior as long as the contract of {@link FileObject} is
-	* obeyed.
-	*/
-	@:overload public function openInputStream() : java.io.InputStream;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* This implementation always throws {@linkplain
@@ -62,7 +54,15 @@ extern class SimpleJavaFileObject implements javax.tools.JavaFileObject
 	* behavior as long as the contract of {@link FileObject} is
 	* obeyed.
 	*/
-	@:overload public function openOutputStream() : java.io.OutputStream;
+	@:overload @:public public function openInputStream() : java.io.InputStream;
+	
+	/**
+	* This implementation always throws {@linkplain
+	* UnsupportedOperationException}.  Subclasses can change this
+	* behavior as long as the contract of {@link FileObject} is
+	* obeyed.
+	*/
+	@:overload @:public public function openOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Wraps the result of {@linkplain #getCharContent} in a Reader.
@@ -75,7 +75,7 @@ extern class SimpleJavaFileObject implements javax.tools.JavaFileObject
 	* @throws UnsupportedOperationException {@inheritDoc}
 	* @throws IOException {@inheritDoc}
 	*/
-	@:overload public function openReader(ignoreEncodingErrors : Bool) : java.io.Reader;
+	@:overload @:public public function openReader(ignoreEncodingErrors : Bool) : java.io.Reader;
 	
 	/**
 	* This implementation always throws {@linkplain
@@ -83,7 +83,7 @@ extern class SimpleJavaFileObject implements javax.tools.JavaFileObject
 	* behavior as long as the contract of {@link FileObject} is
 	* obeyed.
 	*/
-	@:overload public function getCharContent(ignoreEncodingErrors : Bool) : java.lang.CharSequence;
+	@:overload @:public public function getCharContent(ignoreEncodingErrors : Bool) : java.lang.CharSequence;
 	
 	/**
 	* Wraps the result of openOutputStream in a Writer.  Subclasses
@@ -95,7 +95,7 @@ extern class SimpleJavaFileObject implements javax.tools.JavaFileObject
 	* @throws UnsupportedOperationException {@inheritDoc}
 	* @throws IOException {@inheritDoc}
 	*/
-	@:overload public function openWriter() : java.io.Writer;
+	@:overload @:public public function openWriter() : java.io.Writer;
 	
 	/**
 	* This implementation returns {@code 0L}.  Subclasses can change
@@ -104,7 +104,7 @@ extern class SimpleJavaFileObject implements javax.tools.JavaFileObject
 	*
 	* @return {@code 0L}
 	*/
-	@:overload public function getLastModified() : haxe.Int64;
+	@:overload @:public public function getLastModified() : haxe.Int64;
 	
 	/**
 	* This implementation does nothing.  Subclasses can change this
@@ -113,12 +113,12 @@ extern class SimpleJavaFileObject implements javax.tools.JavaFileObject
 	*
 	* @return {@code false}
 	*/
-	@:overload public function delete() : Bool;
+	@:overload @:public public function delete() : Bool;
 	
 	/**
 	* @return {@code this.kind}
 	*/
-	@:overload public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
+	@:overload @:public public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	
 	/**
 	* This implementation compares the path of its URI to the given
@@ -134,23 +134,23 @@ extern class SimpleJavaFileObject implements javax.tools.JavaFileObject
 	* <p>Subclasses can change this behavior as long as the contract
 	* of {@link JavaFileObject} is obeyed.
 	*/
-	@:overload public function isNameCompatible(simpleName : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
+	@:overload @:public public function isNameCompatible(simpleName : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
 	
 	/**
 	* This implementation returns {@code null}.  Subclasses can
 	* change this behavior as long as the contract of
 	* {@link JavaFileObject} is obeyed.
 	*/
-	@:overload public function getNestingKind() : javax.lang.model.element.NestingKind;
+	@:overload @:public public function getNestingKind() : javax.lang.model.element.NestingKind;
 	
 	/**
 	* This implementation returns {@code null}.  Subclasses can
 	* change this behavior as long as the contract of
 	* {@link JavaFileObject} is obeyed.
 	*/
-	@:overload public function getAccessLevel() : javax.lang.model.element.Modifier;
+	@:overload @:public public function getAccessLevel() : javax.lang.model.element.Modifier;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -38,28 +38,28 @@ extern class OrientableFlowLayout extends java.awt.FlowLayout
 	/**
 	* The horizontal orientation constant.
 	*/
-	public static var HORIZONTAL(default, null) : Int;
+	@:public @:static @:final public static var HORIZONTAL(default, null) : Int;
 	
 	/**
 	* The vertical orientation constant.
 	*/
-	public static var VERTICAL(default, null) : Int;
+	@:public @:static @:final public static var VERTICAL(default, null) : Int;
 	
 	/**
 	* The top vertical alignment constant.
 	*/
-	public static var TOP(default, null) : Int;
+	@:public @:static @:final public static var TOP(default, null) : Int;
 	
 	/**
 	* The bottom vertical alignment constant.
 	*/
-	public static var BOTTOM(default, null) : Int;
+	@:public @:static @:final public static var BOTTOM(default, null) : Int;
 	
 	/**
 	* Constructs a new flow layout with a horizontal orientation and
 	* centered alignment.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new flow layout with the specified orientation and
@@ -67,7 +67,7 @@ extern class OrientableFlowLayout extends java.awt.FlowLayout
 	*
 	* @param orientation the orientation, one of HORIZONTAL or VERTICAL.
 	*/
-	@:overload public function new(orientation : Int) : Void;
+	@:overload @:public public function new(orientation : Int) : Void;
 	
 	/**
 	* Constructs a new flow layout with the specified orientation and
@@ -77,7 +77,7 @@ extern class OrientableFlowLayout extends java.awt.FlowLayout
 	* @param hAlign the horizontal alignment, one of LEFT, CENTER, or RIGHT.
 	* @param vAlign the vertical alignment, one of TOP, CENTER, or BOTTOM.
 	*/
-	@:overload public function new(orientation : Int, hAlign : Int, vAlign : Int) : Void;
+	@:overload @:public public function new(orientation : Int, hAlign : Int, vAlign : Int) : Void;
 	
 	/**
 	* Constructs a new flow layout with the specified orientation,
@@ -91,17 +91,17 @@ extern class OrientableFlowLayout extends java.awt.FlowLayout
 	* @param vHGap the horizontal gap between components in VERTICAL.
 	* @param vVGap the vertical gap between components in VERTICAL.
 	*/
-	@:overload public function new(orientation : Int, hAlign : Int, vAlign : Int, hHGap : Int, hVGap : Int, vHGap : Int, vVGap : Int) : Void;
+	@:overload @:public public function new(orientation : Int, hAlign : Int, vAlign : Int, hHGap : Int, hVGap : Int, vHGap : Int, vVGap : Int) : Void;
 	
 	/**
 	* Set the layout's current orientation to horizontal.
 	*/
-	@:overload @:synchronized public function orientHorizontally() : Void;
+	@:overload @:public @:synchronized public function orientHorizontally() : Void;
 	
 	/**
 	* Set the layout's current orientation to vertical.
 	*/
-	@:overload @:synchronized public function orientVertically() : Void;
+	@:overload @:public @:synchronized public function orientVertically() : Void;
 	
 	/**
 	* Returns the preferred dimensions for this layout given the
@@ -112,7 +112,7 @@ extern class OrientableFlowLayout extends java.awt.FlowLayout
 	* @see FlowLayout
 	* @see #minimumLayoutSize
 	*/
-	@:overload override public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public override public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the minimum dimensions needed to layout the components
@@ -121,7 +121,7 @@ extern class OrientableFlowLayout extends java.awt.FlowLayout
 	* @param target the component which needs to be laid out.
 	* @see #preferredLayoutSize.
 	*/
-	@:overload override public function minimumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public override public function minimumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Lays out the container.  This method will reshape the
@@ -131,12 +131,12 @@ extern class OrientableFlowLayout extends java.awt.FlowLayout
 	* @param target the specified component being laid out.
 	* @see Container.
 	*/
-	@:overload override public function layoutContainer(target : java.awt.Container) : Void;
+	@:overload @:public override public function layoutContainer(target : java.awt.Container) : Void;
 	
 	/**
 	* Returns the String representation of this layout's values.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

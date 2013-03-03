@@ -25,7 +25,7 @@ package sun.nio.ch;
 */
 extern class ThreadPool
 {
-	@:overload public static function wrap(executor : java.util.concurrent.ExecutorService, initialSize : Int) : sun.nio.ch.ThreadPool;
+	@:overload @:public @:static public static function wrap(executor : java.util.concurrent.ExecutorService, initialSize : Int) : sun.nio.ch.ThreadPool;
 	
 	
 }

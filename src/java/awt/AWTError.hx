@@ -36,7 +36,7 @@ extern class AWTError extends java.lang.Error
 	* @param   msg   the detail message.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function new(msg : String) : Void;
+	@:require(java0) @:overload @:public public function new(msg : String) : Void;
 	
 	
 }

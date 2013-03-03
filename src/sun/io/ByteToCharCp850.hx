@@ -31,9 +31,9 @@ extern class ByteToCharCp850 extends sun.io.ByteToCharSingleByte
 	* @author  ConverterGenerator tool
 	* @version >= JDK1.1.6
 	*/
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

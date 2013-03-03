@@ -21,39 +21,39 @@ package com.sun.org.apache.xerces.internal.parsers;
 extern class XMLGrammarPreparser
 {
 	/** Property identifier: symbol table. */
-	private static var SYMBOL_TABLE(default, null) : String;
+	@:protected @:static @:final private static var SYMBOL_TABLE(default, null) : String;
 	
 	/** Property identifier: error reporter. */
-	private static var ERROR_REPORTER(default, null) : String;
+	@:protected @:static @:final private static var ERROR_REPORTER(default, null) : String;
 	
 	/** Property identifier: error handler. */
-	private static var ERROR_HANDLER(default, null) : String;
+	@:protected @:static @:final private static var ERROR_HANDLER(default, null) : String;
 	
 	/** Property identifier: entity resolver. */
-	private static var ENTITY_RESOLVER(default, null) : String;
+	@:protected @:static @:final private static var ENTITY_RESOLVER(default, null) : String;
 	
 	/** Property identifier: grammar pool . */
-	private static var GRAMMAR_POOL(default, null) : String;
+	@:protected @:static @:final private static var GRAMMAR_POOL(default, null) : String;
 	
-	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
-	private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
+	@:protected private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
 	
-	private var fEntityResolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
+	@:protected private var fEntityResolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
 	
-	private var fGrammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
+	@:protected private var fGrammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
 	
-	private var fLocale : java.util.Locale;
+	@:protected private var fLocale : java.util.Locale;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a preparser using the specified symbol table.
 	*
 	* @param symbolTable The symbol table to use.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
 	/*
 	* Register a type of grammar to make it preparsable.   If
@@ -66,7 +66,7 @@ extern class XMLGrammarPreparser
 	* @return true if successful; false if no built-in knowledge of
 	*       the type or if unable to instantiate the string we know about
 	*/
-	@:overload public function registerPreparser(grammarType : String, loader : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarLoader) : Bool;
+	@:overload @:public public function registerPreparser(grammarType : String, loader : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarLoader) : Bool;
 	
 	/**
 	* Parse a grammar from a location identified by an
@@ -84,7 +84,7 @@ extern class XMLGrammarPreparser
 	* @exception IOException thrown if an error is encountered
 	* in reading the file
 	*/
-	@:overload public function preparseGrammar(type : String, is : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload @:public public function preparseGrammar(type : String, is : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
 	/**
 	* Set the locale to use for messages.
@@ -94,50 +94,50 @@ extern class XMLGrammarPreparser
 	* @exception XNIException Thrown if the parser does not support the
 	*                         specified locale.
 	*/
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
 	/** Return the Locale the XMLGrammarLoader is using. */
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	/**
 	* Sets the error handler.
 	*
 	* @param errorHandler The error handler.
 	*/
-	@:overload public function setErrorHandler(errorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler) : Void;
+	@:overload @:public public function setErrorHandler(errorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler) : Void;
 	
 	/** Returns the registered error handler.  */
-	@:overload public function getErrorHandler() : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
+	@:overload @:public public function getErrorHandler() : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
 	
 	/**
 	* Sets the entity resolver.
 	*
 	* @param entityResolver The new entity resolver.
 	*/
-	@:overload public function setEntityResolver(entityResolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(entityResolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver) : Void;
 	
 	/** Returns the registered entity resolver.  */
-	@:overload public function getEntityResolver() : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
+	@:overload @:public public function getEntityResolver() : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
 	
 	/**
 	* Sets the grammar pool.
 	*
 	* @param grammarPool The new grammar pool.
 	*/
-	@:overload public function setGrammarPool(grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
+	@:overload @:public public function setGrammarPool(grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
 	
 	/** Returns the registered grammar pool.  */
-	@:overload public function getGrammarPool() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
+	@:overload @:public public function getGrammarPool() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
 	
-	@:overload public function getLoader(type : String) : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarLoader;
+	@:overload @:public public function getLoader(type : String) : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarLoader;
 	
-	@:overload public function setFeature(featureId : String, value : Bool) : Void;
+	@:overload @:public public function setFeature(featureId : String, value : Bool) : Void;
 	
-	@:overload public function setProperty(propId : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(propId : String, value : Dynamic) : Void;
 	
-	@:overload public function getFeature(type : String, featureId : String) : Bool;
+	@:overload @:public public function getFeature(type : String, featureId : String) : Bool;
 	
-	@:overload public function getProperty(type : String, propertyId : String) : Dynamic;
+	@:overload @:public public function getProperty(type : String, propertyId : String) : Dynamic;
 	
 	
 }

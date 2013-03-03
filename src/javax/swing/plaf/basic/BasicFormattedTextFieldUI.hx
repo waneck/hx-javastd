@@ -31,7 +31,7 @@ extern class BasicFormattedTextFieldUI extends javax.swing.plaf.basic.BasicTextF
 	* @param c the formatted text field
 	* @return the UI
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Fetches the name used as a key to lookup properties through the
@@ -40,7 +40,7 @@ extern class BasicFormattedTextFieldUI extends javax.swing.plaf.basic.BasicTextF
 	*
 	* @return the name "FormattedTextField"
 	*/
-	@:overload override private function getPropertyPrefix() : String;
+	@:overload @:protected override private function getPropertyPrefix() : String;
 	
 	
 }

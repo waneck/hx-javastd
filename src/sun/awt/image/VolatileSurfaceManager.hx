@@ -36,24 +36,24 @@ extern class VolatileSurfaceManager extends sun.awt.image.SurfaceManager impleme
 	/**
 	* A reference to the VolatileImage whose contents are being managed.
 	*/
-	private var vImg : sun.awt.image.SunVolatileImage;
+	@:protected private var vImg : sun.awt.image.SunVolatileImage;
 	
 	/**
 	* The accelerated SurfaceData object.
 	*/
-	private var sdAccel : sun.java2d.SurfaceData;
+	@:protected private var sdAccel : sun.java2d.SurfaceData;
 	
 	/**
 	* The software-based SurfaceData object.  Only create when first asked
 	* to (otherwise it is a waste of memory as it will only be used in
 	* situations of surface loss).
 	*/
-	private var sdBackup : sun.java2d.SurfaceData;
+	@:protected private var sdBackup : sun.java2d.SurfaceData;
 	
 	/**
 	* The current SurfaceData object.
 	*/
-	private var sdCurrent : sun.java2d.SurfaceData;
+	@:protected private var sdCurrent : sun.java2d.SurfaceData;
 	
 	/**
 	* A record-keeping object.  This keeps track of which SurfaceData was
@@ -61,20 +61,20 @@ extern class VolatileSurfaceManager extends sun.awt.image.SurfaceManager impleme
 	* the SurfaceData object has changed since then and allows us to return
 	* the correct returnCode to the user in the validate() call.
 	*/
-	private var sdPrevious : sun.java2d.SurfaceData;
+	@:protected private var sdPrevious : sun.java2d.SurfaceData;
 	
 	/**
 	* Tracks loss of surface contents; queriable by user to see whether
 	* contents need to be restored.
 	*/
-	private var lostSurface : Bool;
+	@:protected private var lostSurface : Bool;
 	
 	/**
 	* Context for extra initialization parameters.
 	*/
-	private var context : Dynamic;
+	@:protected private var context : Dynamic;
 	
-	@:overload private function new(vImg : sun.awt.image.SunVolatileImage, context : Dynamic) : Void;
+	@:overload @:protected private function new(vImg : sun.awt.image.SunVolatileImage, context : Dynamic) : Void;
 	
 	/**
 	* This init function is separate from the constructor because the
@@ -82,16 +82,16 @@ extern class VolatileSurfaceManager extends sun.awt.image.SurfaceManager impleme
 	* Otherwise, we end up calling into a subclass' overridden method
 	* during construction, before that subclass is completely constructed.
 	*/
-	@:overload public function initialize() : Void;
+	@:overload @:public public function initialize() : Void;
 	
-	@:overload override public function getPrimarySurfaceData() : sun.java2d.SurfaceData;
+	@:overload @:public override public function getPrimarySurfaceData() : sun.java2d.SurfaceData;
 	
 	/**
 	* Returns true if acceleration is enabled.  If not, we simply use the
 	* backup SurfaceData object and return quickly from most methods
 	* in this class.
 	*/
-	@:overload @:abstract private function isAccelerationEnabled() : Bool;
+	@:overload @:protected @:abstract private function isAccelerationEnabled() : Bool;
 	
 	/**
 	* Get the image ready for rendering.  This method is called to make
@@ -111,14 +111,14 @@ extern class VolatileSurfaceManager extends sun.awt.image.SurfaceManager impleme
 	* then the contents have been altered and we must reflect that
 	* change to the user.
 	*/
-	@:overload public function validate(gc : java.awt.GraphicsConfiguration) : Int;
+	@:overload @:public public function validate(gc : java.awt.GraphicsConfiguration) : Int;
 	
 	/**
 	* Returns true if rendering data was lost since the last validate call.
 	*
 	* @see java.awt.image.VolatileImage#contentsLost
 	*/
-	@:overload public function contentsLost() : Bool;
+	@:overload @:public public function contentsLost() : Bool;
 	
 	/**
 	* Creates a new accelerated surface that is compatible with the
@@ -129,7 +129,7 @@ extern class VolatileSurfaceManager extends sun.awt.image.SurfaceManager impleme
 	* surface (e.g. a DirectDraw surface on Windows, an OpenGL pbuffer,
 	* or an X11 pixmap).
 	*/
-	@:overload @:abstract private function initAcceleratedSurface() : sun.java2d.SurfaceData;
+	@:overload @:protected @:abstract private function initAcceleratedSurface() : sun.java2d.SurfaceData;
 	
 	/**
 	* Creates a software-based surface (of type BufImgSurfaceData).
@@ -138,13 +138,13 @@ extern class VolatileSurfaceManager extends sun.awt.image.SurfaceManager impleme
 	* cannot be allocated.  This allows apps to at least run,
 	* albeit more slowly than they would otherwise.
 	*/
-	@:overload private function getBackupSurface() : sun.java2d.SurfaceData;
+	@:overload @:protected private function getBackupSurface() : sun.java2d.SurfaceData;
 	
 	/**
 	* Set contents of the current SurfaceData to default state (i.e. clear
 	* the background).
 	*/
-	@:overload public function initContents() : Void;
+	@:overload @:public public function initContents() : Void;
 	
 	/**
 	* Called from a SurfaceData object, indicating that our
@@ -152,7 +152,7 @@ extern class VolatileSurfaceManager extends sun.awt.image.SurfaceManager impleme
 	* using a backup system memory surface).  Returns the newly restored
 	* primary SurfaceData object.
 	*/
-	@:overload override public function restoreContents() : sun.java2d.SurfaceData;
+	@:overload @:public override public function restoreContents() : sun.java2d.SurfaceData;
 	
 	/**
 	* If the accelerated surface is the current SurfaceData for this manager,
@@ -161,14 +161,14 @@ extern class VolatileSurfaceManager extends sun.awt.image.SurfaceManager impleme
 	* validate method to tell the caller that the surface contents need to
 	* be restored.
 	*/
-	@:overload override public function acceleratedSurfaceLost() : Void;
+	@:overload @:public override public function acceleratedSurfaceLost() : Void;
 	
 	/**
 	* Restore sdAccel in case it was lost.  Do nothing in this
 	* default case; platform-specific implementations may do more in
 	* this situation as appropriate.
 	*/
-	@:overload private function restoreAcceleratedSurface() : Void;
+	@:overload @:protected private function restoreAcceleratedSurface() : Void;
 	
 	/**
 	* Called from SunGraphicsEnv when there has been a display mode change.
@@ -178,14 +178,14 @@ extern class VolatileSurfaceManager extends sun.awt.image.SurfaceManager impleme
 	* we just nullify the old surface data object and wait for a future
 	* method in the rendering process to recreate the surface.
 	*/
-	@:overload public function displayChanged() : Void;
+	@:overload @:public public function displayChanged() : Void;
 	
 	/**
 	* When device palette changes, need to force a new copy
 	* of the image into our hardware cache to update the
 	* color indices of the pixels (indexed mode only).
 	*/
-	@:overload public function paletteChanged() : Void;
+	@:overload @:public public function paletteChanged() : Void;
 	
 	/**
 	* Called by validate() to see whether the GC passed in is ok for
@@ -195,9 +195,9 @@ extern class VolatileSurfaceManager extends sun.awt.image.SurfaceManager impleme
 	* specific implementations may perform other checks as
 	* appropriate.
 	*/
-	@:overload private function isConfigValid(gc : java.awt.GraphicsConfiguration) : Bool;
+	@:overload @:protected private function isConfigValid(gc : java.awt.GraphicsConfiguration) : Bool;
 	
-	@:overload override public function getCapabilities(gc : java.awt.GraphicsConfiguration) : java.awt.ImageCapabilities;
+	@:overload @:public override public function getCapabilities(gc : java.awt.GraphicsConfiguration) : java.awt.ImageCapabilities;
 	
 	/**
 	* Releases any associated hardware memory for this image by
@@ -205,15 +205,15 @@ extern class VolatileSurfaceManager extends sun.awt.image.SurfaceManager impleme
 	* situation so any future operations on the image will need to
 	* revalidate the image first.
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	
 }
 @:native('sun$awt$image$VolatileSurfaceManager$AcceleratedImageCapabilities') @:internal extern class VolatileSurfaceManager_AcceleratedImageCapabilities extends java.awt.ImageCapabilities
 {
-	@:overload public function isAccelerated() : Bool;
+	@:overload @:public override public function isAccelerated() : Bool;
 	
-	@:overload public function isTrueVolatile() : Bool;
+	@:overload @:public override public function isTrueVolatile() : Bool;
 	
 	
 }

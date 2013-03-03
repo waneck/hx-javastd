@@ -49,37 +49,37 @@ extern class Option implements java.io.Serializable
 	*  option element.  The attributes are copied to
 	*  ensure they won't change.
 	*/
-	@:overload public function new(attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function new(attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Sets the label to be used for the option.
 	*/
-	@:overload public function setLabel(label : String) : Void;
+	@:overload @:public public function setLabel(label : String) : Void;
 	
 	/**
 	* Fetch the label associated with the option.
 	*/
-	@:overload public function getLabel() : String;
+	@:overload @:public public function getLabel() : String;
 	
 	/**
 	* Fetch the attributes associated with this option.
 	*/
-	@:overload public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* String representation is the label.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Sets the selected state.
 	*/
-	@:overload private function setSelection(state : Bool) : Void;
+	@:overload @:protected private function setSelection(state : Bool) : Void;
 	
 	/**
 	* Fetches the selection state associated with this option.
 	*/
-	@:overload public function isSelected() : Bool;
+	@:overload @:public public function isSelected() : Bool;
 	
 	/**
 	* Convenience method to return the string associated
@@ -87,7 +87,7 @@ extern class Option implements java.io.Serializable
 	* value has not been specified, the label will be
 	* returned.
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	
 }

@@ -26,42 +26,42 @@ package com.sun.xml.internal.stream;
 extern class XMLEntityStorage
 {
 	/** Property identifier: error reporter. */
-	private static var ERROR_REPORTER(default, null) : String;
+	@:protected @:static @:final private static var ERROR_REPORTER(default, null) : String;
 	
 	/** Feature identifier: warn on duplicate EntityDef */
-	private static var WARN_ON_DUPLICATE_ENTITYDEF(default, null) : String;
+	@:protected @:static @:final private static var WARN_ON_DUPLICATE_ENTITYDEF(default, null) : String;
 	
 	/** warn on duplicate Entity declaration.
 	*  http://apache.org/xml/features/warn-on-duplicate-entitydef
 	*/
-	private var fWarnDuplicateEntityDef : Bool;
+	@:protected private var fWarnDuplicateEntityDef : Bool;
 	
 	/** Entities. */
-	private var fEntities : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var fEntities : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	private var fCurrentEntity : com.sun.xml.internal.stream.Entity.Entity_ScannedEntity;
+	@:protected private var fCurrentEntity : com.sun.xml.internal.stream.Entity.Entity_ScannedEntity;
 	
 	/**
 	* Error reporter. This property identifier is:
 	* http://apache.org/xml/properties/internal/error-reporter
 	*/
-	private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
+	@:protected private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
 	
-	private var fPropertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager;
+	@:protected private var fPropertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager;
 	
 	/* To keep track whether an entity is declared in external or internal subset*/
-	private var fInExternalSubset : Bool;
+	@:protected private var fInExternalSubset : Bool;
 	
 	/** Creates a new instance of XMLEntityStorage */
-	@:overload public function new(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function new(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/*public XMLEntityStorage(Entity.ScannedEntity currentEntity) {
 	fCurrentEntity = currentEntity ;*/
-	@:overload public function new(entityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager) : Void;
+	@:overload @:public public function new(entityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager) : Void;
 	
-	@:overload public function reset(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function reset(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Resets the component. The component can query the component manager
@@ -77,7 +77,7 @@ extern class XMLEntityStorage
 	*                      SAXNotRecognizedException or a
 	*                      SAXNotSupportedException.
 	*/
-	@:overload public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/**
 	* Returns entity declaration.
@@ -86,13 +86,13 @@ extern class XMLEntityStorage
 	*
 	* @see SymbolTable
 	*/
-	@:overload public function getEntity(name : String) : com.sun.xml.internal.stream.Entity;
+	@:overload @:public public function getEntity(name : String) : com.sun.xml.internal.stream.Entity;
 	
-	@:overload public function hasEntities() : Bool;
+	@:overload @:public public function hasEntities() : Bool;
 	
-	@:overload public function getEntitySize() : Int;
+	@:overload @:public public function getEntitySize() : Int;
 	
-	@:overload public function getEntityKeys() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getEntityKeys() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Adds an internal entity declaration.
@@ -108,7 +108,7 @@ extern class XMLEntityStorage
 	*
 	* @see SymbolTable
 	*/
-	@:overload public function addInternalEntity(name : String, text : String) : Void;
+	@:overload @:public public function addInternalEntity(name : String, text : String) : Void;
 	
 	/**
 	* Adds an external entity declaration.
@@ -132,7 +132,7 @@ extern class XMLEntityStorage
 	*
 	* @see SymbolTable
 	*/
-	@:overload public function addExternalEntity(name : String, publicId : String, literalSystemId : String, baseSystemId : String) : Void;
+	@:overload @:public public function addExternalEntity(name : String, publicId : String, literalSystemId : String, baseSystemId : String) : Void;
 	
 	/**
 	* Checks whether an entity given by name is external.
@@ -141,7 +141,7 @@ extern class XMLEntityStorage
 	* @returns True if the entity is external, false otherwise
 	*           (including when the entity is not declared).
 	*/
-	@:overload public function isExternalEntity(entityName : String) : Bool;
+	@:overload @:public public function isExternalEntity(entityName : String) : Bool;
 	
 	/**
 	* Checks whether the declaration of an entity given by name is
@@ -151,7 +151,7 @@ extern class XMLEntityStorage
 	* @returns True if the entity was declared in the external subset, false otherwise
 	*           (including when the entity is not declared).
 	*/
-	@:overload public function isEntityDeclInExternalSubset(entityName : String) : Bool;
+	@:overload @:public public function isEntityDeclInExternalSubset(entityName : String) : Bool;
 	
 	/**
 	* Adds an unparsed entity declaration.
@@ -169,7 +169,7 @@ extern class XMLEntityStorage
 	*
 	* @see SymbolTable
 	*/
-	@:overload public function addUnparsedEntity(name : String, publicId : String, systemId : String, baseSystemId : String, notation : String) : Void;
+	@:overload @:public public function addUnparsedEntity(name : String, publicId : String, systemId : String, baseSystemId : String, notation : String) : Void;
 	
 	/**
 	* Checks whether an entity given by name is unparsed.
@@ -178,7 +178,7 @@ extern class XMLEntityStorage
 	* @returns True if the entity is unparsed, false otherwise
 	*          (including when the entity is not declared).
 	*/
-	@:overload public function isUnparsedEntity(entityName : String) : Bool;
+	@:overload @:public public function isUnparsedEntity(entityName : String) : Bool;
 	
 	/**
 	* Checks whether an entity given by name is declared.
@@ -186,7 +186,7 @@ extern class XMLEntityStorage
 	* @param entityName The name of the entity to check.
 	* @returns True if the entity is declared, false otherwise.
 	*/
-	@:overload public function isDeclaredEntity(entityName : String) : Bool;
+	@:overload @:public public function isDeclaredEntity(entityName : String) : Bool;
 	
 	/**
 	* Expands a system id and returns the system id as a URI, if
@@ -201,7 +201,7 @@ extern class XMLEntityStorage
 	*         system identifier is already expanded.
 	*
 	*/
-	@:overload public static function expandSystemId(systemId : String) : String;
+	@:overload @:public @:static public static function expandSystemId(systemId : String) : String;
 	
 	/**
 	* Expands a system id and returns the system id as a URI, if
@@ -216,7 +216,7 @@ extern class XMLEntityStorage
 	*         system identifier is already expanded.
 	*
 	*/
-	@:overload public static function expandSystemId(systemId : String, baseSystemId : String) : String;
+	@:overload @:public @:static public static function expandSystemId(systemId : String, baseSystemId : String) : String;
 	
 	/**
 	* Fixes a platform dependent filename to standard URI form.
@@ -225,11 +225,11 @@ extern class XMLEntityStorage
 	*
 	* @return Returns the fixed URI string.
 	*/
-	@:overload private static function fixURI(str : String) : String;
+	@:overload @:protected @:static private static function fixURI(str : String) : String;
 	
-	@:overload public function startExternalSubset() : Void;
+	@:overload @:public public function startExternalSubset() : Void;
 	
-	@:overload public function endExternalSubset() : Void;
+	@:overload @:public public function endExternalSubset() : Void;
 	
 	
 }

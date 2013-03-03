@@ -26,7 +26,7 @@ package sun.tools.jcmd;
 */
 extern class JCmd
 {
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }
@@ -36,7 +36,7 @@ extern class JCmd
 */
 @:native('sun$tools$jcmd$JCmd$AscendingMonitorComparator') @:internal extern class JCmd_AscendingMonitorComparator implements java.util.Comparator<sun.jvmstat.monitor.Monitor>
 {
-	@:overload public function compare(m1 : sun.jvmstat.monitor.Monitor, m2 : sun.jvmstat.monitor.Monitor) : Int;
+	@:overload @:public public function compare(m1 : sun.jvmstat.monitor.Monitor, m2 : sun.jvmstat.monitor.Monitor) : Int;
 	
 	
 }

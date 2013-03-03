@@ -62,42 +62,42 @@ extern class IINC extends com.sun.org.apache.bcel.internal.generic.LocalVariable
 	* @param n index of local variable
 	* @param c increment factor
 	*/
-	@:overload public function new(n : Int, c : Int) : Void;
+	@:overload @:public public function new(n : Int, c : Int) : Void;
 	
 	/**
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload override public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload @:public override public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* Read needed data (e.g. index) from file.
 	*/
-	@:overload override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload @:protected override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
 	/**
 	* @return mnemonic for instruction
 	*/
-	@:overload override public function toString(verbose : Bool) : String;
+	@:overload @:public override public function toString(verbose : Bool) : String;
 	
 	/**
 	* Set index of local variable.
 	*/
-	@:overload @:final override public function setIndex(n : Int) : Void;
+	@:overload @:public @:final override public function setIndex(n : Int) : Void;
 	
 	/**
 	* @return increment factor
 	*/
-	@:overload @:final public function getIncrement() : Int;
+	@:overload @:public @:final public function getIncrement() : Int;
 	
 	/**
 	* Set increment factor.
 	*/
-	@:overload @:final public function setIncrement(c : Int) : Void;
+	@:overload @:public @:final public function setIncrement(c : Int) : Void;
 	
 	/** @return int type
 	*/
-	@:overload override public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public override public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -107,7 +107,7 @@ extern class IINC extends com.sun.org.apache.bcel.internal.generic.LocalVariable
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

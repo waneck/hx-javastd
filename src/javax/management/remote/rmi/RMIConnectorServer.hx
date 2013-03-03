@@ -33,7 +33,7 @@ extern class RMIConnectorServer extends javax.management.remote.JMXConnectorServ
 	* is equal, ignoring case, to <code>"true"</code> or
 	* <code>"false"</code>.  The default value is false.</p>
 	*/
-	public static var JNDI_REBIND_ATTRIBUTE(default, null) : String;
+	@:public @:static @:final public static var JNDI_REBIND_ATTRIBUTE(default, null) : String;
 	
 	/**
 	* <p>Name of the attribute that specifies the {@link
@@ -43,7 +43,7 @@ extern class RMIConnectorServer extends javax.management.remote.JMXConnectorServ
 	* only be specified in the <code>Map</code> argument supplied when
 	* creating a connector server.</p>
 	*/
-	public static var RMI_CLIENT_SOCKET_FACTORY_ATTRIBUTE(default, null) : String;
+	@:public @:static @:final public static var RMI_CLIENT_SOCKET_FACTORY_ATTRIBUTE(default, null) : String;
 	
 	/**
 	* <p>Name of the attribute that specifies the {@link
@@ -53,7 +53,7 @@ extern class RMIConnectorServer extends javax.management.remote.JMXConnectorServ
 	* only be specified in the <code>Map</code> argument supplied when
 	* creating a connector server.</p>
 	*/
-	public static var RMI_SERVER_SOCKET_FACTORY_ATTRIBUTE(default, null) : String;
+	@:public @:static @:final public static var RMI_SERVER_SOCKET_FACTORY_ATTRIBUTE(default, null) : String;
 	
 	/**
 	* <p>Makes an <code>RMIConnectorServer</code>.
@@ -79,7 +79,7 @@ extern class RMIConnectorServer extends javax.management.remote.JMXConnectorServ
 	* for some reason or if it is inevitable that its {@link #start()
 	* start} method will fail.
 	*/
-	@:overload public function new(url : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function new(url : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* <p>Makes an <code>RMIConnectorServer</code> for the given MBean
@@ -110,7 +110,7 @@ extern class RMIConnectorServer extends javax.management.remote.JMXConnectorServ
 	* for some reason or if it is inevitable that its {@link #start()
 	* start} method will fail.
 	*/
-	@:overload public function new(url : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>, mbeanServer : javax.management.MBeanServer) : Void;
+	@:overload @:public public function new(url : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>, mbeanServer : javax.management.MBeanServer) : Void;
 	
 	/**
 	* <p>Makes an <code>RMIConnectorServer</code> for the given MBean
@@ -146,7 +146,7 @@ extern class RMIConnectorServer extends javax.management.remote.JMXConnectorServ
 	*
 	* @see #start
 	*/
-	@:overload public function new(url : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>, rmiServerImpl : javax.management.remote.rmi.RMIServerImpl, mbeanServer : javax.management.MBeanServer) : Void;
+	@:overload @:public public function new(url : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>, rmiServerImpl : javax.management.remote.rmi.RMIServerImpl, mbeanServer : javax.management.MBeanServer) : Void;
 	
 	/**
 	* <p>Returns a client stub for this connector server.  A client
@@ -171,7 +171,7 @@ extern class RMIConnectorServer extends javax.management.remote.JMXConnectorServ
 	* @exception IOException if a communications problem means that a
 	* stub cannot be created.
 	**/
-	@:overload public function toJMXConnector(env : java.util.Map<String, Dynamic>) : javax.management.remote.JMXConnector;
+	@:overload @:public override public function toJMXConnector(env : java.util.Map<String, Dynamic>) : javax.management.remote.JMXConnector;
 	
 	/**
 	* <p>Activates the connector server, that is starts listening for
@@ -233,7 +233,7 @@ extern class RMIConnectorServer extends javax.management.remote.JMXConnectorServ
 	* @exception IOException if the connector server cannot be
 	* started.
 	*/
-	@:overload @:synchronized override public function start() : Void;
+	@:overload @:public @:synchronized override public function start() : Void;
 	
 	/**
 	* <p>Deactivates the connector server, that is, stops listening for
@@ -280,24 +280,24 @@ extern class RMIConnectorServer extends javax.management.remote.JMXConnectorServ
 	* those that generated exceptions when the server attempted to
 	* close them.
 	*/
-	@:overload override public function stop() : Void;
+	@:overload @:public override public function stop() : Void;
 	
-	@:overload @:synchronized override public function isActive() : Bool;
+	@:overload @:public @:synchronized override public function isActive() : Bool;
 	
-	@:overload override public function getAddress() : javax.management.remote.JMXServiceURL;
+	@:overload @:public override public function getAddress() : javax.management.remote.JMXServiceURL;
 	
-	@:overload override public function getAttributes() : java.util.Map<String, Dynamic>;
+	@:overload @:public override public function getAttributes() : java.util.Map<String, Dynamic>;
 	
-	@:overload @:synchronized public function setMBeanServerForwarder(mbsf : javax.management.remote.MBeanServerForwarder) : Void;
+	@:overload @:public @:synchronized override public function setMBeanServerForwarder(mbsf : javax.management.remote.MBeanServerForwarder) : Void;
 	
 	/* We repeat the definitions of connection{Opened,Closed,Failed}
 	here so that they are accessible to other classes in this package
 	even though they have protected access.  */
-	@:overload private function connectionOpened(connectionId : String, message : String, userData : Dynamic) : Void;
+	@:overload @:protected override private function connectionOpened(connectionId : String, message : String, userData : Dynamic) : Void;
 	
-	@:overload private function connectionClosed(connectionId : String, message : String, userData : Dynamic) : Void;
+	@:overload @:protected override private function connectionClosed(connectionId : String, message : String, userData : Dynamic) : Void;
 	
-	@:overload private function connectionFailed(connectionId : String, message : String, userData : Dynamic) : Void;
+	@:overload @:protected override private function connectionFailed(connectionId : String, message : String, userData : Dynamic) : Void;
 	
 	
 }

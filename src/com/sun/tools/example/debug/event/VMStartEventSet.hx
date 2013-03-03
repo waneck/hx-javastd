@@ -38,9 +38,9 @@ extern class VMStartEventSet extends com.sun.tools.example.debug.event.AbstractE
 	* @return a {@link ThreadReference} which mirrors the event's
 	* thread in the target VM.
 	*/
-	@:overload public function getThread() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function getThread() : com.sun.jdi.ThreadReference;
 	
-	@:overload override public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
+	@:overload @:public override public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
 	
 	
 }

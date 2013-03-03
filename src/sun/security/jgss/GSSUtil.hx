@@ -29,28 +29,28 @@ extern class GSSUtil
 	* The GSSUtilImplementation that knows how to work with the internals of
 	* the GSS-API.
 	*/
-	public static var GSS_KRB5_MECH_OID(default, null) : org.ietf.jgss.Oid;
+	@:public @:static @:final public static var GSS_KRB5_MECH_OID(default, null) : org.ietf.jgss.Oid;
 	
-	public static var GSS_KRB5_MECH_OID2(default, null) : org.ietf.jgss.Oid;
+	@:public @:static @:final public static var GSS_KRB5_MECH_OID2(default, null) : org.ietf.jgss.Oid;
 	
-	public static var GSS_SPNEGO_MECH_OID(default, null) : org.ietf.jgss.Oid;
+	@:public @:static @:final public static var GSS_SPNEGO_MECH_OID(default, null) : org.ietf.jgss.Oid;
 	
-	public static var NT_GSS_KRB5_PRINCIPAL(default, null) : org.ietf.jgss.Oid;
+	@:public @:static @:final public static var NT_GSS_KRB5_PRINCIPAL(default, null) : org.ietf.jgss.Oid;
 	
-	@:overload public static function createOid(oidStr : String) : org.ietf.jgss.Oid;
+	@:overload @:public @:static public static function createOid(oidStr : String) : org.ietf.jgss.Oid;
 	
-	@:overload public static function isSpNegoMech(oid : org.ietf.jgss.Oid) : Bool;
+	@:overload @:public @:static public static function isSpNegoMech(oid : org.ietf.jgss.Oid) : Bool;
 	
-	@:overload public static function isKerberosMech(oid : org.ietf.jgss.Oid) : Bool;
+	@:overload @:public @:static public static function isKerberosMech(oid : org.ietf.jgss.Oid) : Bool;
 	
-	@:overload public static function getMechStr(oid : org.ietf.jgss.Oid) : String;
+	@:overload @:public @:static public static function getMechStr(oid : org.ietf.jgss.Oid) : String;
 	
 	/**
 	* Note: The current impl only works with Sun's impl of
 	* GSSName and GSSCredential since it depends on package
 	* private APIs.
 	*/
-	@:overload public static function getSubject(name : org.ietf.jgss.GSSName, creds : org.ietf.jgss.GSSCredential) : javax.security.auth.Subject;
+	@:overload @:public @:static public static function getSubject(name : org.ietf.jgss.GSSName, creds : org.ietf.jgss.GSSCredential) : javax.security.auth.Subject;
 	
 	/**
 	* Authenticate using the login module from the specified
@@ -60,7 +60,7 @@ extern class GSSUtil
 	* @param mech the mech to be used
 	* @return the authenticated subject
 	*/
-	@:overload public static function login(caller : sun.security.jgss.GSSCaller, mech : org.ietf.jgss.Oid) : javax.security.auth.Subject;
+	@:overload @:public @:static public static function login(caller : sun.security.jgss.GSSCaller, mech : org.ietf.jgss.Oid) : javax.security.auth.Subject;
 	
 	/**
 	* Determines if the application doesn't mind if the mechanism obtains
@@ -71,7 +71,7 @@ extern class GSSUtil
 	* The application indicates this by explicitly setting the system
 	* property javax.security.auth.useSubjectCredsOnly to false.
 	*/
-	@:overload public static function useSubjectCredsOnly(caller : sun.security.jgss.GSSCaller) : Bool;
+	@:overload @:public @:static public static function useSubjectCredsOnly(caller : sun.security.jgss.GSSCaller) : Bool;
 	
 	/**
 	* Determines the SPNEGO interoperability mode with Microsoft;
@@ -80,7 +80,7 @@ extern class GSSUtil
 	* To disable it, the application indicates this by explicitly setting
 	* the system property sun.security.spnego.interop to false.
 	*/
-	@:overload public static function useMSInterop() : Bool;
+	@:overload @:public @:static public static function useMSInterop() : Bool;
 	
 	/**
 	* Searches the private credentials of current Subject with the
@@ -89,7 +89,7 @@ extern class GSSUtil
 	* no Subject present or a Vector which contains 0 or more
 	* matching GSSCredentialSpi objects.
 	*/
-	@:overload public static function searchSubject(name : sun.security.jgss.spi.GSSNameSpi, mech : org.ietf.jgss.Oid, initiate : Bool, credCls : Class<Dynamic>) : java.util.Vector<Dynamic>;
+	@:overload @:public @:static public static function searchSubject(name : sun.security.jgss.spi.GSSNameSpi, mech : org.ietf.jgss.Oid, initiate : Bool, credCls : Class<Dynamic>) : java.util.Vector<Dynamic>;
 	
 	
 }

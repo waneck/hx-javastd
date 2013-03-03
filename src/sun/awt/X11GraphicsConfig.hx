@@ -32,17 +32,17 @@ extern class X11GraphicsConfig extends java.awt.GraphicsConfiguration implements
 	* @see GraphicsEnvironment
 	* @see GraphicsDevice
 	*/
-	private var screen : sun.awt.X11GraphicsDevice;
+	@:protected private var screen : sun.awt.X11GraphicsDevice;
 	
-	private var visual : Int;
+	@:protected private var visual : Int;
 	
-	private var bitsPerPixel : Int;
+	@:protected private var bitsPerPixel : Int;
 	
-	private var surfaceType : sun.java2d.loops.SurfaceType;
+	@:protected private var surfaceType : sun.java2d.loops.SurfaceType;
 	
-	public var solidloops : sun.java2d.loops.RenderLoops;
+	@:public public var solidloops : sun.java2d.loops.RenderLoops;
 	
-	@:overload public static function getConfig(device : sun.awt.X11GraphicsDevice, visualnum : Int, depth : Int, colormap : Int, doubleBuffer : Bool) : sun.awt.X11GraphicsConfig;
+	@:overload @:public @:static public static function getConfig(device : sun.awt.X11GraphicsDevice, visualnum : Int, depth : Int, colormap : Int, doubleBuffer : Bool) : sun.awt.X11GraphicsConfig;
 	
 	/*
 	* Note this method is currently here for backward compatability
@@ -53,60 +53,60 @@ extern class X11GraphicsConfig extends java.awt.GraphicsConfiguration implements
 	* the program exits. REMOVE this method after Java3D fcs is
 	* released!
 	*/
-	@:overload public static function getConfig(device : sun.awt.X11GraphicsDevice, visualnum : Int, depth : Int, colormap : Int, type : Int) : sun.awt.X11GraphicsConfig;
+	@:overload @:public @:static public static function getConfig(device : sun.awt.X11GraphicsDevice, visualnum : Int, depth : Int, colormap : Int, type : Int) : sun.awt.X11GraphicsConfig;
 	
-	@:overload private function new(device : sun.awt.X11GraphicsDevice, visualnum : Int, depth : Int, colormap : Int, doubleBuffer : Bool) : Void;
+	@:overload @:protected private function new(device : sun.awt.X11GraphicsDevice, visualnum : Int, depth : Int, colormap : Int, doubleBuffer : Bool) : Void;
 	
 	/**
 	* Return the graphics device associated with this configuration.
 	*/
-	@:overload public function getDevice() : java.awt.GraphicsDevice;
+	@:overload @:public override public function getDevice() : java.awt.GraphicsDevice;
 	
 	/**
 	* Returns the visual id associated with this configuration.
 	*/
-	@:overload public function getVisual() : Int;
+	@:overload @:public public function getVisual() : Int;
 	
 	/**
 	* Returns the depth associated with this configuration.
 	*/
-	@:overload public function getDepth() : Int;
+	@:overload @:public public function getDepth() : Int;
 	
 	/**
 	* Returns the colormap associated with this configuration.
 	*/
-	@:overload public function getColormap() : Int;
+	@:overload @:public public function getColormap() : Int;
 	
 	/**
 	* Returns a number of bits allocated per pixel
 	* (might be different from depth)
 	*/
-	@:overload public function getBitsPerPixel() : Int;
+	@:overload @:public public function getBitsPerPixel() : Int;
 	
-	@:overload @:synchronized public function getSurfaceType() : sun.java2d.loops.SurfaceType;
+	@:overload @:public @:synchronized public function getSurfaceType() : sun.java2d.loops.SurfaceType;
 	
-	@:overload public function getProxyKey() : Dynamic;
+	@:overload @:public public function getProxyKey() : Dynamic;
 	
 	/**
 	* Return the RenderLoops this type of destination uses for
 	* solid fills and strokes.
 	*/
-	@:overload @:synchronized public function getSolidLoops(stype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.RenderLoops;
+	@:overload @:public @:synchronized public function getSolidLoops(stype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.RenderLoops;
 	
 	/**
 	* Returns the color model associated with this configuration.
 	*/
-	@:overload @:synchronized public function getColorModel() : java.awt.image.ColorModel;
+	@:overload @:public @:synchronized override public function getColorModel() : java.awt.image.ColorModel;
 	
 	/**
 	* Returns the color model associated with this configuration that
 	* supports the specified transparency.
 	*/
-	@:overload public function getColorModel(transparency : Int) : java.awt.image.ColorModel;
+	@:overload @:public override public function getColorModel(transparency : Int) : java.awt.image.ColorModel;
 	
-	@:overload public static function createDCM32(rMask : Int, gMask : Int, bMask : Int, aMask : Int, aPre : Bool) : java.awt.image.DirectColorModel;
+	@:overload @:public @:static public static function createDCM32(rMask : Int, gMask : Int, bMask : Int, aMask : Int, aPre : Bool) : java.awt.image.DirectColorModel;
 	
-	@:overload public static function createABGRCCM() : java.awt.image.ComponentColorModel;
+	@:overload @:public @:static public static function createABGRCCM() : java.awt.image.ComponentColorModel;
 	
 	/**
 	* Returns the default Transform for this configuration.  This
@@ -117,7 +117,7 @@ extern class X11GraphicsConfig extends java.awt.GraphicsConfiguration implements
 	* increasing to the right and Y coordinates increasing downwards.
 	* For image buffers, this Transform will be the Identity transform.
 	*/
-	@:overload public function getDefaultTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public override public function getDefaultTransform() : java.awt.geom.AffineTransform;
 	
 	/**
 	*
@@ -138,33 +138,33 @@ extern class X11GraphicsConfig extends java.awt.GraphicsConfiguration implements
 	* For image buffers, this Transform will be the Identity transform,
 	* since there is no valid distance measurement.
 	*/
-	@:overload public function getNormalizingTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public override public function getNormalizingTransform() : java.awt.geom.AffineTransform;
 	
-	@:overload public function getAData() : haxe.Int64;
+	@:overload @:public public function getAData() : haxe.Int64;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public override public function getBounds() : java.awt.Rectangle;
 	
-	@:overload @:native public function pGetBounds(screenNum : Int) : java.awt.Rectangle;
+	@:overload @:public @:native public function pGetBounds(screenNum : Int) : java.awt.Rectangle;
 	
-	@:overload public function getBufferCapabilities() : java.awt.BufferCapabilities;
+	@:overload @:public override public function getBufferCapabilities() : java.awt.BufferCapabilities;
 	
-	@:overload public function getImageCapabilities() : java.awt.ImageCapabilities;
+	@:overload @:public override public function getImageCapabilities() : java.awt.ImageCapabilities;
 	
-	@:overload public function isDoubleBuffered() : Bool;
+	@:overload @:public public function isDoubleBuffered() : Bool;
 	
 	/**
 	* Creates a new SurfaceData that will be associated with the given
 	* X11ComponentPeer.
 	*/
-	@:overload public function createSurfaceData(peer : sun.awt.X11ComponentPeer) : sun.java2d.SurfaceData;
+	@:overload @:public public function createSurfaceData(peer : sun.awt.X11ComponentPeer) : sun.java2d.SurfaceData;
 	
 	/**
 	* Creates a new hidden-acceleration image of the given width and height
 	* that is associated with the target Component.
 	*/
-	@:overload public function createAcceleratedImage(target : java.awt.Component, width : Int, height : Int) : java.awt.Image;
+	@:overload @:public public function createAcceleratedImage(target : java.awt.Component, width : Int, height : Int) : java.awt.Image;
 	
 	/**
 	* Attempts to create an XDBE-based backbuffer for the given peer.  If
@@ -172,39 +172,39 @@ extern class X11GraphicsConfig extends java.awt.GraphicsConfiguration implements
 	* is thrown.  Otherwise, if the backbuffer creation is successful, a
 	* handle to the native backbuffer is returned.
 	*/
-	@:overload public function createBackBuffer(peer : sun.awt.X11ComponentPeer, numBuffers : Int, caps : java.awt.BufferCapabilities) : haxe.Int64;
+	@:overload @:public public function createBackBuffer(peer : sun.awt.X11ComponentPeer, numBuffers : Int, caps : java.awt.BufferCapabilities) : haxe.Int64;
 	
 	/**
 	* Destroys the backbuffer object represented by the given handle value.
 	*/
-	@:overload @:native public function destroyBackBuffer(backBuffer : haxe.Int64) : Void;
+	@:overload @:public @:native public function destroyBackBuffer(backBuffer : haxe.Int64) : Void;
 	
 	/**
 	* Creates a VolatileImage that essentially wraps the target Component's
 	* backbuffer, using the provided backbuffer handle.
 	*/
-	@:overload public function createBackBufferImage(target : java.awt.Component, backBuffer : haxe.Int64) : java.awt.image.VolatileImage;
+	@:overload @:public public function createBackBufferImage(target : java.awt.Component, backBuffer : haxe.Int64) : java.awt.image.VolatileImage;
 	
 	/**
 	* Performs the native XDBE flip operation for the given target Component.
 	*/
-	@:overload public function flip(peer : sun.awt.X11ComponentPeer, target : java.awt.Component, xBackBuffer : java.awt.image.VolatileImage, x1 : Int, y1 : Int, x2 : Int, y2 : Int, flipAction : java.awt.BufferCapabilities.BufferCapabilities_FlipContents) : Void;
+	@:overload @:public public function flip(peer : sun.awt.X11ComponentPeer, target : java.awt.Component, xBackBuffer : java.awt.image.VolatileImage, x1 : Int, y1 : Int, x2 : Int, y2 : Int, flipAction : java.awt.BufferCapabilities.BufferCapabilities_FlipContents) : Void;
 	
-	@:overload public function isTranslucencyCapable() : Bool;
+	@:overload @:public override public function isTranslucencyCapable() : Bool;
 	
 	
 }
 @:native('sun$awt$X11GraphicsConfig$XDBECapabilities') @:internal extern class X11GraphicsConfig_XDBECapabilities extends java.awt.BufferCapabilities
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('sun$awt$X11GraphicsConfig$X11GCDisposerRecord') @:internal extern class X11GraphicsConfig_X11GCDisposerRecord implements sun.java2d.DisposerRecord
 {
-	@:overload public function new(x11CfgData : haxe.Int64) : Void;
+	@:overload @:public public function new(x11CfgData : haxe.Int64) : Void;
 	
-	@:overload @:synchronized public function dispose() : Void;
+	@:overload @:public @:synchronized public function dispose() : Void;
 	
 	
 }

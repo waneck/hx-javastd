@@ -44,19 +44,19 @@ package java.lang;
 	* A constant holding the minimum value a {@code short} can
 	* have, -2<sup>15</sup>.
 	*/
-	public static var MIN_VALUE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var MIN_VALUE(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* A constant holding the maximum value a {@code short} can
 	* have, 2<sup>15</sup>-1.
 	*/
-	public static var MAX_VALUE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var MAX_VALUE(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* The {@code Class} instance representing the primitive type
 	* {@code short}.
 	*/
-	public static var TYPE(default, null) : Class<Null<java.StdTypes.Int16>>;
+	@:public @:static @:final public static var TYPE(default, null) : Class<Null<java.StdTypes.Int16>>;
 	
 	/**
 	* Returns a new {@code String} object representing the
@@ -66,7 +66,7 @@ package java.lang;
 	* @return the string representation of the specified {@code short}
 	* @see java.lang.Integer#toString(int)
 	*/
-	@:native('toString') @:overload public static function _toString(s : java.StdTypes.Int16) : String;
+	@:native('toString') @:overload @:public @:static public static function _toString(s : java.StdTypes.Int16) : String;
 	
 	/**
 	* Parses the string argument as a signed {@code short} in the
@@ -108,7 +108,7 @@ package java.lang;
 	* @throws          NumberFormatException If the {@code String}
 	*                  does not contain a parsable {@code short}.
 	*/
-	@:overload public static function parseShort(s : String, radix : Int) : java.StdTypes.Int16;
+	@:overload @:public @:static public static function parseShort(s : String, radix : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Parses the string argument as a signed decimal {@code
@@ -128,7 +128,7 @@ package java.lang;
 	* @throws  NumberFormatException If the string does not
 	*          contain a parsable {@code short}.
 	*/
-	@:overload public static function parseShort(s : String) : java.StdTypes.Int16;
+	@:overload @:public @:static public static function parseShort(s : String) : java.StdTypes.Int16;
 	
 	/**
 	* Returns a {@code Short} object holding the value
@@ -155,7 +155,7 @@ package java.lang;
 	* @throws          NumberFormatException If the {@code String} does
 	*                  not contain a parsable {@code short}.
 	*/
-	@:overload public static function valueOf(s : String, radix : Int) : Null<java.StdTypes.Int16>;
+	@:overload @:public @:static public static function valueOf(s : String, radix : Int) : Null<java.StdTypes.Int16>;
 	
 	/**
 	* Returns a {@code Short} object holding the
@@ -179,7 +179,7 @@ package java.lang;
 	* @throws  NumberFormatException If the {@code String} does
 	*          not contain a parsable {@code short}.
 	*/
-	@:overload public static function valueOf(s : String) : Null<java.StdTypes.Int16>;
+	@:overload @:public @:static public static function valueOf(s : String) : Null<java.StdTypes.Int16>;
 	
 	/**
 	* Returns a {@code Short} instance representing the specified
@@ -197,7 +197,7 @@ package java.lang;
 	* @return a {@code Short} instance representing {@code s}.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public static function valueOf(s : java.StdTypes.Int16) : Null<java.StdTypes.Int16>;
+	@:require(java5) @:overload @:public @:static public static function valueOf(s : java.StdTypes.Int16) : Null<java.StdTypes.Int16>;
 	
 	/**
 	* Decodes a {@code String} into a {@code Short}.
@@ -241,7 +241,7 @@ package java.lang;
 	*            contain a parsable {@code short}.
 	* @see java.lang.Short#parseShort(java.lang.String, int)
 	*/
-	@:overload public static function decode(nm : String) : Null<java.StdTypes.Int16>;
+	@:overload @:public @:static public static function decode(nm : String) : Null<java.StdTypes.Int16>;
 	
 	/**
 	* Constructs a newly allocated {@code Short} object that
@@ -250,7 +250,7 @@ package java.lang;
 	* @param value     the value to be represented by the
 	*                  {@code Short}.
 	*/
-	@:overload public function new(value : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(value : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Constructs a newly allocated {@code Short} object that
@@ -265,43 +265,43 @@ package java.lang;
 	*          does not contain a parsable {@code short}.
 	* @see     java.lang.Short#parseShort(java.lang.String, int)
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Returns the value of this {@code Short} as a
 	* {@code byte}.
 	*/
-	@:overload override public function byteValue() : java.StdTypes.Int8;
+	@:overload @:public override public function byteValue() : java.StdTypes.Int8;
 	
 	/**
 	* Returns the value of this {@code Short} as a
 	* {@code short}.
 	*/
-	@:overload override public function shortValue() : java.StdTypes.Int16;
+	@:overload @:public override public function shortValue() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the value of this {@code Short} as an
 	* {@code int}.
 	*/
-	@:overload override public function intValue() : Int;
+	@:overload @:public override public function intValue() : Int;
 	
 	/**
 	* Returns the value of this {@code Short} as a
 	* {@code long}.
 	*/
-	@:overload override public function longValue() : haxe.Int64;
+	@:overload @:public override public function longValue() : haxe.Int64;
 	
 	/**
 	* Returns the value of this {@code Short} as a
 	* {@code float}.
 	*/
-	@:overload override public function floatValue() : Single;
+	@:overload @:public override public function floatValue() : Single;
 	
 	/**
 	* Returns the value of this {@code Short} as a
 	* {@code double}.
 	*/
-	@:overload override public function doubleValue() : Float;
+	@:overload @:public override public function doubleValue() : Float;
 	
 	/**
 	* Returns a {@code String} object representing this
@@ -313,7 +313,7 @@ package java.lang;
 	* @return  a string representation of the value of this object in
 	*          base&nbsp;10.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hash code for this {@code Short}; equal to the result
@@ -321,7 +321,7 @@ package java.lang;
 	*
 	* @return a hash code value for this {@code Short}
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this object to the specified object.  The result is
@@ -333,7 +333,7 @@ package java.lang;
 	* @return          {@code true} if the objects are the same;
 	*                  {@code false} otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Compares two {@code Short} objects numerically.
@@ -348,7 +348,7 @@ package java.lang;
 	*           comparison).
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function compareTo(anotherShort : Null<java.StdTypes.Int16>) : Int;
+	@:require(java2) @:overload @:public public function compareTo(anotherShort : Null<java.StdTypes.Int16>) : Int;
 	
 	/**
 	* Compares two {@code short} values numerically.
@@ -364,14 +364,14 @@ package java.lang;
 	*         a value greater than {@code 0} if {@code x > y}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function compare(x : java.StdTypes.Int16, y : java.StdTypes.Int16) : Int;
+	@:require(java7) @:overload @:public @:static public static function compare(x : java.StdTypes.Int16, y : java.StdTypes.Int16) : Int;
 	
 	/**
 	* The number of bits used to represent a {@code short} value in two's
 	* complement binary form.
 	* @since 1.5
 	*/
-	@:require(java5) public static var SIZE(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var SIZE(default, null) : Int;
 	
 	/**
 	* Returns the value obtained by reversing the order of the bytes in the
@@ -381,7 +381,7 @@ package java.lang;
 	*     the bytes in the specified {@code short} value.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function reverseBytes(i : java.StdTypes.Int16) : java.StdTypes.Int16;
+	@:require(java5) @:overload @:public @:static public static function reverseBytes(i : java.StdTypes.Int16) : java.StdTypes.Int16;
 	
 	
 }

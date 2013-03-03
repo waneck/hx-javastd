@@ -37,7 +37,7 @@ extern class SystemIDResolver
 	*
 	* @return Resolved absolute URI
 	*/
-	@:overload public static function getAbsoluteURIFromRelative(localPath : String) : String;
+	@:overload @:public @:static public static function getAbsoluteURIFromRelative(localPath : String) : String;
 	
 	/**
 	* Return true if the systemId denotes an absolute URI .
@@ -45,7 +45,7 @@ extern class SystemIDResolver
 	* @param systemId The systemId string
 	* @return true if the systemId is an an absolute URI
 	*/
-	@:overload public static function isAbsoluteURI(systemId : String) : Bool;
+	@:overload @:public @:static public static function isAbsoluteURI(systemId : String) : Bool;
 	
 	/**
 	* Return true if the local path is an absolute path.
@@ -53,7 +53,7 @@ extern class SystemIDResolver
 	* @param systemId The path string
 	* @return true if the path is absolute
 	*/
-	@:overload public static function isAbsolutePath(systemId : String) : Bool;
+	@:overload @:public @:static public static function isAbsolutePath(systemId : String) : Bool;
 	
 	/**
 	* Take a SystemID string and try to turn it into a good absolute URI.
@@ -62,7 +62,7 @@ extern class SystemIDResolver
 	*
 	* @return The resolved absolute URI
 	*/
-	@:overload public static function getAbsoluteURI(systemId : String) : String;
+	@:overload @:public @:static public static function getAbsoluteURI(systemId : String) : String;
 	
 	/**
 	* Take a SystemID string and try to turn it into a good absolute URI.
@@ -73,7 +73,7 @@ extern class SystemIDResolver
 	* @return The resolved absolute URI
 	* @throws TransformerException thrown if the string can't be turned into a URI.
 	*/
-	@:overload public static function getAbsoluteURI(urlString : String, base : String) : String;
+	@:overload @:public @:static public static function getAbsoluteURI(urlString : String, base : String) : String;
 	
 	
 }

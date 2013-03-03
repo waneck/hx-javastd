@@ -50,13 +50,13 @@ extern interface CSSStyleSheet extends org.w3c.dom.stylesheets.StyleSheet
 	* <code>null</code> and the <code>ownerNode</code> attribute will
 	* contain the <code>Node</code>.
 	*/
-	@:overload public function getOwnerRule() : org.w3c.dom.css.CSSRule;
+	@:overload @:public public function getOwnerRule() : org.w3c.dom.css.CSSRule;
 	
 	/**
 	*  The list of all CSS rules contained within the style sheet. This
 	* includes both rule sets and at-rules.
 	*/
-	@:overload public function getCssRules() : org.w3c.dom.css.CSSRuleList;
+	@:overload @:public public function getCssRules() : org.w3c.dom.css.CSSRuleList;
 	
 	/**
 	*  Used to insert a new rule into the style sheet. The new rule now
@@ -82,7 +82,7 @@ extern interface CSSStyleSheet extends org.w3c.dom.stylesheets.StyleSheet
 	*   <br>SYNTAX_ERR: Raised if the specified rule has a syntax error and
 	*   is unparsable.
 	*/
-	@:overload public function insertRule(rule : String, index : Int) : Int;
+	@:overload @:public public function insertRule(rule : String, index : Int) : Int;
 	
 	/**
 	*  Used to delete a rule from the style sheet.
@@ -94,7 +94,7 @@ extern interface CSSStyleSheet extends org.w3c.dom.stylesheets.StyleSheet
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this style sheet is
 	*   readonly.
 	*/
-	@:overload public function deleteRule(index : Int) : Void;
+	@:overload @:public public function deleteRule(index : Int) : Void;
 	
 	
 }

@@ -31,7 +31,7 @@ extern class AWTEvent extends java.util.EventObject
 	* @see #getID()
 	* @see #AWTEvent
 	*/
-	private var id : Int;
+	@:protected private var id : Int;
 	
 	/**
 	* Controls whether or not the event is sent back down to the peer once the
@@ -42,117 +42,117 @@ extern class AWTEvent extends java.util.EventObject
 	* @see #consume
 	* @see #isConsumed
 	*/
-	private var consumed : Bool;
+	@:protected private var consumed : Bool;
 	
 	/**
 	* The event mask for selecting component events.
 	*/
-	public static var COMPONENT_EVENT_MASK(default, null) : haxe.Int64;
+	@:public @:final @:static public static var COMPONENT_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting container events.
 	*/
-	public static var CONTAINER_EVENT_MASK(default, null) : haxe.Int64;
+	@:public @:final @:static public static var CONTAINER_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting focus events.
 	*/
-	public static var FOCUS_EVENT_MASK(default, null) : haxe.Int64;
+	@:public @:final @:static public static var FOCUS_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting key events.
 	*/
-	public static var KEY_EVENT_MASK(default, null) : haxe.Int64;
+	@:public @:final @:static public static var KEY_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting mouse events.
 	*/
-	public static var MOUSE_EVENT_MASK(default, null) : haxe.Int64;
+	@:public @:final @:static public static var MOUSE_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting mouse motion events.
 	*/
-	public static var MOUSE_MOTION_EVENT_MASK(default, null) : haxe.Int64;
+	@:public @:final @:static public static var MOUSE_MOTION_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting window events.
 	*/
-	public static var WINDOW_EVENT_MASK(default, null) : haxe.Int64;
+	@:public @:final @:static public static var WINDOW_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting action events.
 	*/
-	public static var ACTION_EVENT_MASK(default, null) : haxe.Int64;
+	@:public @:final @:static public static var ACTION_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting adjustment events.
 	*/
-	public static var ADJUSTMENT_EVENT_MASK(default, null) : haxe.Int64;
+	@:public @:final @:static public static var ADJUSTMENT_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting item events.
 	*/
-	public static var ITEM_EVENT_MASK(default, null) : haxe.Int64;
+	@:public @:final @:static public static var ITEM_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting text events.
 	*/
-	public static var TEXT_EVENT_MASK(default, null) : haxe.Int64;
+	@:public @:final @:static public static var TEXT_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting input method events.
 	*/
-	public static var INPUT_METHOD_EVENT_MASK(default, null) : haxe.Int64;
+	@:public @:final @:static public static var INPUT_METHOD_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting paint events.
 	*/
-	public static var PAINT_EVENT_MASK(default, null) : haxe.Int64;
+	@:public @:final @:static public static var PAINT_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting invocation events.
 	*/
-	public static var INVOCATION_EVENT_MASK(default, null) : haxe.Int64;
+	@:public @:final @:static public static var INVOCATION_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting hierarchy events.
 	*/
-	public static var HIERARCHY_EVENT_MASK(default, null) : haxe.Int64;
+	@:public @:final @:static public static var HIERARCHY_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting hierarchy bounds events.
 	*/
-	public static var HIERARCHY_BOUNDS_EVENT_MASK(default, null) : haxe.Int64;
+	@:public @:final @:static public static var HIERARCHY_BOUNDS_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting mouse wheel events.
 	* @since 1.4
 	*/
-	@:require(java4) public static var MOUSE_WHEEL_EVENT_MASK(default, null) : haxe.Int64;
+	@:require(java4) @:public @:final @:static public static var MOUSE_WHEEL_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting window state events.
 	* @since 1.4
 	*/
-	@:require(java4) public static var WINDOW_STATE_EVENT_MASK(default, null) : haxe.Int64;
+	@:require(java4) @:public @:final @:static public static var WINDOW_STATE_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The event mask for selecting window focus events.
 	* @since 1.4
 	*/
-	@:require(java4) public static var WINDOW_FOCUS_EVENT_MASK(default, null) : haxe.Int64;
+	@:require(java4) @:public @:final @:static public static var WINDOW_FOCUS_EVENT_MASK(default, null) : haxe.Int64;
 	
 	/**
 	* The maximum value for reserved AWT event IDs. Programs defining
 	* their own event IDs should use IDs greater than this value.
 	*/
-	public static var RESERVED_ID_MAX(default, null) : Int;
+	@:public @:final @:static public static var RESERVED_ID_MAX(default, null) : Int;
 	
 	/**
 	* Constructs an AWTEvent object from the parameters of a 1.0-style event.
 	* @param event the old-style event
 	*/
-	@:overload public function new(event : java.awt.Event) : Void;
+	@:overload @:public public function new(event : java.awt.Event) : Void;
 	
 	/**
 	* Constructs an AWTEvent object with the specified source object and type.
@@ -160,7 +160,7 @@ extern class AWTEvent extends java.util.EventObject
 	* @param source the object where the event originated
 	* @param id the event type
 	*/
-	@:overload public function new(source : Dynamic, id : Int) : Void;
+	@:overload @:public public function new(source : Dynamic, id : Int) : Void;
 	
 	/**
 	* Retargets an event to a new source. This method is typically used to
@@ -174,17 +174,17 @@ extern class AWTEvent extends java.util.EventObject
 	* @param newSource the new Object to which the event should be dispatched
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setSource(newSource : Dynamic) : Void;
+	@:require(java4) @:overload @:public public function setSource(newSource : Dynamic) : Void;
 	
 	/**
 	* Returns the event type.
 	*/
-	@:overload public function getID() : Int;
+	@:overload @:public public function getID() : Int;
 	
 	/**
 	* Returns a String representation of this object.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Returns a string representing the state of this <code>Event</code>.
@@ -195,18 +195,18 @@ extern class AWTEvent extends java.util.EventObject
 	*
 	* @return  a string representation of this event
 	*/
-	@:overload public function paramString() : String;
+	@:overload @:public public function paramString() : String;
 	
 	/**
 	* Consumes this event, if this event can be consumed. Only low-level,
 	* system events can be consumed
 	*/
-	@:overload private function consume() : Void;
+	@:overload @:protected private function consume() : Void;
 	
 	/**
 	* Returns whether this event has been consumed.
 	*/
-	@:overload private function isConsumed() : Bool;
+	@:overload @:protected private function isConsumed() : Bool;
 	
 	
 }

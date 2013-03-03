@@ -30,7 +30,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* or <code>null</code> if its identity is not known or none
 	* exists.  By default it is initialized to <code>null</code>.
 	*/
-	private var originatingProvider : javax.imageio.spi.ImageWriterSpi;
+	@:protected private var originatingProvider : javax.imageio.spi.ImageWriterSpi;
 	
 	/**
 	* The <code>ImageOutputStream</code> or other <code>Object</code>
@@ -38,7 +38,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* <code>getOutput</code>.  By default it is initialized to
 	* <code>null</code>.
 	*/
-	private var output : Dynamic;
+	@:protected private var output : Dynamic;
 	
 	/**
 	* An array of <code>Locale</code>s that may be used to localize
@@ -46,14 +46,14 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* <code>null</code> if localization is not supported.  By default
 	* it is initialized to <code>null</code>.
 	*/
-	private var availableLocales : java.NativeArray<java.util.Locale>;
+	@:protected private var availableLocales : java.NativeArray<java.util.Locale>;
 	
 	/**
 	* The current <code>Locale</code> to be used for localization, or
 	* <code>null</code> if none has been set.  By default it is
 	* initialized to <code>null</code>.
 	*/
-	private var locale : java.util.Locale;
+	@:protected private var locale : java.util.Locale;
 	
 	/**
 	* A <code>List</code> of currently registered
@@ -61,7 +61,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* <code>null</code>, which is synonymous with an empty
 	* <code>List</code>.
 	*/
-	private var warningListeners : java.util.List<javax.imageio.event.IIOWriteWarningListener>;
+	@:protected private var warningListeners : java.util.List<javax.imageio.event.IIOWriteWarningListener>;
 	
 	/**
 	* A <code>List</code> of <code>Locale</code>s, one for each
@@ -69,7 +69,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* <code>null</code>, which is synonymous with an empty
 	* <code>List</code>.
 	*/
-	private var warningLocales : java.util.List<java.util.Locale>;
+	@:protected private var warningLocales : java.util.List<java.util.Locale>;
 	
 	/**
 	* A <code>List</code> of currently registered
@@ -77,7 +77,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* <code>null</code>, which is synonymous with an empty
 	* <code>List</code>.
 	*/
-	private var progressListeners : java.util.List<javax.imageio.event.IIOWriteProgressListener>;
+	@:protected private var progressListeners : java.util.List<javax.imageio.event.IIOWriteProgressListener>;
 	
 	/**
 	* Constructs an <code>ImageWriter</code> and sets its
@@ -93,7 +93,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* @param originatingProvider the <code>ImageWriterSpi</code> that
 	* is constructing this object, or <code>null</code>.
 	*/
-	@:overload private function new(originatingProvider : javax.imageio.spi.ImageWriterSpi) : Void;
+	@:overload @:protected private function new(originatingProvider : javax.imageio.spi.ImageWriterSpi) : Void;
 	
 	/**
 	* Returns the <code>ImageWriterSpi</code> object that created
@@ -107,7 +107,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	*
 	* @see ImageWriterSpi
 	*/
-	@:overload public function getOriginatingProvider() : javax.imageio.spi.ImageWriterSpi;
+	@:overload @:public public function getOriginatingProvider() : javax.imageio.spi.ImageWriterSpi;
 	
 	/**
 	* Sets the destination to the given
@@ -155,7 +155,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	*
 	* @see #getOutput
 	*/
-	@:overload public function setOutput(output : Dynamic) : Void;
+	@:overload @:public public function setOutput(output : Dynamic) : Void;
 	
 	/**
 	* Returns the <code>ImageOutputStream</code> or other
@@ -171,7 +171,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	*
 	* @see #setOutput
 	*/
-	@:overload public function getOutput() : Dynamic;
+	@:overload @:public public function getOutput() : Dynamic;
 	
 	/**
 	* Returns an array of <code>Locale</code>s that may be used to
@@ -186,7 +186,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* @return an array of <code>Locale</code>s that may be used as
 	* arguments to <code>setLocale</code>, or <code>null</code>.
 	*/
-	@:overload public function getAvailableLocales() : java.NativeArray<java.util.Locale>;
+	@:overload @:public public function getAvailableLocales() : java.NativeArray<java.util.Locale>;
 	
 	/**
 	* Sets the current <code>Locale</code> of this
@@ -210,7 +210,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	*
 	* @see #getLocale
 	*/
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
 	/**
 	* Returns the currently set <code>Locale</code>, or
@@ -223,7 +223,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	*
 	* @see #setLocale
 	*/
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	/**
 	* Returns a new <code>ImageWriteParam</code> object of the
@@ -248,7 +248,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* @return a new <code>ImageWriteParam</code> object containing
 	* default values.
 	*/
-	@:overload public function getDefaultWriteParam() : javax.imageio.ImageWriteParam;
+	@:overload @:public public function getDefaultWriteParam() : javax.imageio.ImageWriteParam;
 	
 	/**
 	* Returns an <code>IIOMetadata</code> object containing default
@@ -278,7 +278,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	*
 	* @return an <code>IIOMetadata</code> object.
 	*/
-	@:overload @:abstract public function getDefaultStreamMetadata(param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public @:abstract public function getDefaultStreamMetadata(param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
 	/**
 	* Returns an <code>IIOMetadata</code> object containing default
@@ -306,11 +306,11 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	*
 	* @return an <code>IIOMetadata</code> object.
 	*/
-	@:overload @:abstract public function getDefaultImageMetadata(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public @:abstract public function getDefaultImageMetadata(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload @:abstract public function convertStreamMetadata(inData : javax.imageio.metadata.IIOMetadata, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public @:abstract public function convertStreamMetadata(inData : javax.imageio.metadata.IIOMetadata, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload @:abstract public function convertImageMetadata(inData : javax.imageio.metadata.IIOMetadata, imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public @:abstract public function convertImageMetadata(inData : javax.imageio.metadata.IIOMetadata, imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
 	/**
 	* Returns the number of thumbnails suported by the format being
@@ -342,7 +342,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* supplied parameters, or <code>-1</code> if insufficient
 	* information is available.
 	*/
-	@:overload public function getNumThumbnailsSupported(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam, streamMetadata : javax.imageio.metadata.IIOMetadata, imageMetadata : javax.imageio.metadata.IIOMetadata) : Int;
+	@:overload @:public public function getNumThumbnailsSupported(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam, streamMetadata : javax.imageio.metadata.IIOMetadata, imageMetadata : javax.imageio.metadata.IIOMetadata) : Int;
 	
 	/**
 	* Returns an array of <code>Dimension</code>s indicating the
@@ -381,7 +381,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* @return an array of <code>Dimension</code>s with an even length
 	* of at least two, or <code>null</code>.
 	*/
-	@:overload public function getPreferredThumbnailSizes(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam, streamMetadata : javax.imageio.metadata.IIOMetadata, imageMetadata : javax.imageio.metadata.IIOMetadata) : java.NativeArray<java.awt.Dimension>;
+	@:overload @:public public function getPreferredThumbnailSizes(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam, streamMetadata : javax.imageio.metadata.IIOMetadata, imageMetadata : javax.imageio.metadata.IIOMetadata) : java.NativeArray<java.awt.Dimension>;
 	
 	/**
 	* Returns <code>true</code> if the methods that take an
@@ -397,7 +397,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* @return <code>true</code> if <code>Raster</code> sources are
 	* supported.
 	*/
-	@:overload public function canWriteRasters() : Bool;
+	@:overload @:public public function canWriteRasters() : Bool;
 	
 	/**
 	* Appends a complete image stream containing a single image and
@@ -450,7 +450,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* <code>null</code>.
 	* @exception IOException if an error occurs during writing.
 	*/
-	@:overload @:abstract public function write(streamMetadata : javax.imageio.metadata.IIOMetadata, image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
+	@:overload @:public @:abstract public function write(streamMetadata : javax.imageio.metadata.IIOMetadata, image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
 	
 	/**
 	* Appends a complete image stream containing a single image with
@@ -469,7 +469,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* returns <code>false</code>.
 	* @exception IOException if an error occurs during writing.
 	*/
-	@:overload public function write(image : javax.imageio.IIOImage) : Void;
+	@:overload @:public public function write(image : javax.imageio.IIOImage) : Void;
 	
 	/**
 	* Appends a complete image stream consisting of a single image
@@ -485,7 +485,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* <code>null</code>.
 	* @exception IOException if an error occurs during writing.
 	*/
-	@:overload public function write(image : java.awt.image.RenderedImage) : Void;
+	@:overload @:public public function write(image : java.awt.image.RenderedImage) : Void;
 	
 	/**
 	* Returns <code>true</code> if the writer is able to append an
@@ -500,7 +500,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	*
 	* @return <code>true</code> if images may be appended sequentially.
 	*/
-	@:overload public function canWriteSequence() : Bool;
+	@:overload @:public public function canWriteSequence() : Bool;
 	
 	/**
 	* Prepares a stream to accept a series of subsequent
@@ -539,7 +539,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* @exception IOException if an error occurs writing the stream
 	* metadata.
 	*/
-	@:overload public function prepareWriteSequence(streamMetadata : javax.imageio.metadata.IIOMetadata) : Void;
+	@:overload @:public public function prepareWriteSequence(streamMetadata : javax.imageio.metadata.IIOMetadata) : Void;
 	
 	/**
 	* Appends a single image and possibly associated metadata and
@@ -601,7 +601,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* returns <code>false</code>.
 	* @exception IOException if an error occurs during writing.
 	*/
-	@:overload public function writeToSequence(image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
+	@:overload @:public public function writeToSequence(image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
 	
 	/**
 	* Completes the writing of a sequence of images begun with
@@ -628,7 +628,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* <code>canWriteSequence</code> returns <code>false</code>.
 	* @exception IOException if an error occurs during writing.
 	*/
-	@:overload public function endWriteSequence() : Void;
+	@:overload @:public public function endWriteSequence() : Void;
 	
 	/**
 	* Returns <code>true</code> if it is possible to replace the
@@ -645,7 +645,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* been set.
 	* @exception IOException if an I/O error occurs during the query.
 	*/
-	@:overload public function canReplaceStreamMetadata() : Bool;
+	@:overload @:public public function canReplaceStreamMetadata() : Bool;
 	
 	/**
 	* Replaces the stream metadata in the output with new
@@ -674,7 +674,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* <code>false</code>.  modes do not include
 	* @exception IOException if an error occurs during writing.
 	*/
-	@:overload public function replaceStreamMetadata(streamMetadata : javax.imageio.metadata.IIOMetadata) : Void;
+	@:overload @:public public function replaceStreamMetadata(streamMetadata : javax.imageio.metadata.IIOMetadata) : Void;
 	
 	/**
 	* Returns <code>true</code> if it is possible to replace the
@@ -707,7 +707,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* largest available index.
 	* @exception IOException if an I/O error occurs during the query.
 	*/
-	@:overload public function canReplaceImageMetadata(imageIndex : Int) : Bool;
+	@:overload @:public public function canReplaceImageMetadata(imageIndex : Int) : Bool;
 	
 	/**
 	* Replaces the image metadata associated with an existing image.
@@ -735,7 +735,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* is less than 0 or greater than the largest available index.
 	* @exception IOException if an error occurs during writing.
 	*/
-	@:overload public function replaceImageMetadata(imageIndex : Int, imageMetadata : javax.imageio.metadata.IIOMetadata) : Void;
+	@:overload @:public public function replaceImageMetadata(imageIndex : Int, imageMetadata : javax.imageio.metadata.IIOMetadata) : Void;
 	
 	/**
 	* Returns <code>true</code> if the writer supports the insertion
@@ -767,7 +767,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* than -1 or greater than the largest available index.
 	* @exception IOException if an I/O error occurs during the query.
 	*/
-	@:overload public function canInsertImage(imageIndex : Int) : Bool;
+	@:overload @:public public function canInsertImage(imageIndex : Int) : Bool;
 	
 	/**
 	* Inserts a new image into an existing image stream.  Existing
@@ -817,7 +817,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* returns <code>false</code>.
 	* @exception IOException if an error occurs during writing.
 	*/
-	@:overload public function writeInsert(imageIndex : Int, image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
+	@:overload @:public public function writeInsert(imageIndex : Int, image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
 	
 	/**
 	* Returns <code>true</code> if the writer supports the removal
@@ -847,7 +847,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* @exception IOException if an I/O error occurs during the
 	* query.
 	*/
-	@:overload public function canRemoveImage(imageIndex : Int) : Bool;
+	@:overload @:public public function canRemoveImage(imageIndex : Int) : Bool;
 	
 	/**
 	* Removes an image from the stream.
@@ -874,7 +874,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* @exception IOException if an I/O error occurs during the
 	* removal.
 	*/
-	@:overload public function removeImage(imageIndex : Int) : Void;
+	@:overload @:public public function removeImage(imageIndex : Int) : Void;
 	
 	/**
 	* Returns <code>true</code> if the writer supports the writing of
@@ -898,7 +898,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* @exception IOException if an I/O error occurs during the
 	* query.
 	*/
-	@:overload public function canWriteEmpty() : Bool;
+	@:overload @:public public function canWriteEmpty() : Bool;
 	
 	/**
 	* Begins the writing of a complete image stream, consisting of a
@@ -968,7 +968,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* than 1.
 	* @exception IOException if an I/O error occurs during writing.
 	*/
-	@:overload public function prepareWriteEmpty(streamMetadata : javax.imageio.metadata.IIOMetadata, imageType : javax.imageio.ImageTypeSpecifier, width : Int, height : Int, imageMetadata : javax.imageio.metadata.IIOMetadata, thumbnails : java.util.List<java.awt.image.BufferedImage>, param : javax.imageio.ImageWriteParam) : Void;
+	@:overload @:public public function prepareWriteEmpty(streamMetadata : javax.imageio.metadata.IIOMetadata, imageType : javax.imageio.ImageTypeSpecifier, width : Int, height : Int, imageMetadata : javax.imageio.metadata.IIOMetadata, thumbnails : java.util.List<java.awt.image.BufferedImage>, param : javax.imageio.ImageWriteParam) : Void;
 	
 	/**
 	* Completes the writing of a new image that was begun with a
@@ -998,7 +998,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* matching call to <code>endReplacePixels</code>.
 	* @exception IOException if an I/O error occurs during writing.
 	*/
-	@:overload public function endWriteEmpty() : Void;
+	@:overload @:public public function endWriteEmpty() : Void;
 	
 	/**
 	* Returns <code>true</code> if the writer supports the insertion
@@ -1033,7 +1033,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* @exception IOException if an I/O error occurs during the
 	* query.
 	*/
-	@:overload public function canInsertEmpty(imageIndex : Int) : Bool;
+	@:overload @:public public function canInsertEmpty(imageIndex : Int) : Bool;
 	
 	/**
 	* Begins the insertion of a new image with undefined pixel values
@@ -1111,7 +1111,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* than 1.
 	* @exception IOException if an I/O error occurs during writing.
 	*/
-	@:overload public function prepareInsertEmpty(imageIndex : Int, imageType : javax.imageio.ImageTypeSpecifier, width : Int, height : Int, imageMetadata : javax.imageio.metadata.IIOMetadata, thumbnails : java.util.List<java.awt.image.BufferedImage>, param : javax.imageio.ImageWriteParam) : Void;
+	@:overload @:public public function prepareInsertEmpty(imageIndex : Int, imageType : javax.imageio.ImageTypeSpecifier, width : Int, height : Int, imageMetadata : javax.imageio.metadata.IIOMetadata, thumbnails : java.util.List<java.awt.image.BufferedImage>, param : javax.imageio.ImageWriteParam) : Void;
 	
 	/**
 	* Completes the insertion of a new image that was begun with a
@@ -1138,7 +1138,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* matching call to <code>endReplacePixels</code>.
 	* @exception IOException if an I/O error occurs during writing.
 	*/
-	@:overload public function endInsertEmpty() : Void;
+	@:overload @:public public function endInsertEmpty() : Void;
 	
 	/**
 	* Returns <code>true</code> if the writer allows pixels of the
@@ -1167,7 +1167,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* less than 0 or greater than the largest available index.
 	* @exception IOException if an I/O error occurs during the query.
 	*/
-	@:overload public function canReplacePixels(imageIndex : Int) : Bool;
+	@:overload @:public public function canReplacePixels(imageIndex : Int) : Bool;
 	
 	/**
 	* Prepares the writer to handle a series of calls to the
@@ -1204,7 +1204,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* @exception IOException if an I/O error occurs during the
 	* preparation.
 	*/
-	@:overload public function prepareReplacePixels(imageIndex : Int, region : java.awt.Rectangle) : Void;
+	@:overload @:public public function prepareReplacePixels(imageIndex : Int, region : java.awt.Rectangle) : Void;
 	
 	/**
 	* Replaces a portion of an image already present in the output
@@ -1259,7 +1259,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* </ul>
 	* @exception IOException if an I/O error occurs during writing.
 	*/
-	@:overload public function replacePixels(image : java.awt.image.RenderedImage, param : javax.imageio.ImageWriteParam) : Void;
+	@:overload @:public public function replacePixels(image : java.awt.image.RenderedImage, param : javax.imageio.ImageWriteParam) : Void;
 	
 	/**
 	* Replaces a portion of an image already present in the output
@@ -1317,7 +1317,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* </ul>
 	* @exception IOException if an I/O error occurs during writing.
 	*/
-	@:overload public function replacePixels(raster : java.awt.image.Raster, param : javax.imageio.ImageWriteParam) : Void;
+	@:overload @:public public function replacePixels(raster : java.awt.image.Raster, param : javax.imageio.ImageWriteParam) : Void;
 	
 	/**
 	* Terminates a sequence of calls to <code>replacePixels</code>.
@@ -1341,7 +1341,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* <code>endReplacePixels</code>.
 	* @exception IOException if an I/O error occurs during writing.
 	*/
-	@:overload public function endReplacePixels() : Void;
+	@:overload @:public public function endReplacePixels() : Void;
 	
 	/**
 	* Requests that any current write operation be aborted.  The
@@ -1351,7 +1351,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* beginning of each write operation, and poll the value of
 	* <code>abortRequested</code> regularly during the write.
 	*/
-	@:overload @:synchronized public function abort() : Void;
+	@:overload @:public @:synchronized public function abort() : Void;
 	
 	/**
 	* Returns <code>true</code> if a request to abort the current
@@ -1364,7 +1364,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* @see #abort
 	* @see #clearAbortRequest
 	*/
-	@:overload @:synchronized private function abortRequested() : Bool;
+	@:overload @:protected @:synchronized private function abortRequested() : Bool;
 	
 	/**
 	* Clears any previous abort request.  After this method has been
@@ -1374,7 +1374,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* @see #abort
 	* @see #abortRequested
 	*/
-	@:overload @:synchronized private function clearAbortRequest() : Void;
+	@:overload @:protected @:synchronized private function clearAbortRequest() : Void;
 	
 	/**
 	* Adds an <code>IIOWriteWarningListener</code> to the list of
@@ -1390,7 +1390,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	*
 	* @see #removeIIOWriteWarningListener
 	*/
-	@:overload public function addIIOWriteWarningListener(listener : javax.imageio.event.IIOWriteWarningListener) : Void;
+	@:overload @:public public function addIIOWriteWarningListener(listener : javax.imageio.event.IIOWriteWarningListener) : Void;
 	
 	/**
 	* Removes an <code>IIOWriteWarningListener</code> from the list
@@ -1404,7 +1404,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	*
 	* @see #addIIOWriteWarningListener
 	*/
-	@:overload public function removeIIOWriteWarningListener(listener : javax.imageio.event.IIOWriteWarningListener) : Void;
+	@:overload @:public public function removeIIOWriteWarningListener(listener : javax.imageio.event.IIOWriteWarningListener) : Void;
 	
 	/**
 	* Removes all currently registered
@@ -1414,7 +1414,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* <code>warningListeners</code> and <code>warningLocales</code>
 	* instance variables to <code>null</code>.
 	*/
-	@:overload public function removeAllIIOWriteWarningListeners() : Void;
+	@:overload @:public public function removeAllIIOWriteWarningListeners() : Void;
 	
 	/**
 	* Adds an <code>IIOWriteProgressListener</code> to the list of
@@ -1427,7 +1427,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	*
 	* @see #removeIIOWriteProgressListener
 	*/
-	@:overload public function addIIOWriteProgressListener(listener : javax.imageio.event.IIOWriteProgressListener) : Void;
+	@:overload @:public public function addIIOWriteProgressListener(listener : javax.imageio.event.IIOWriteProgressListener) : Void;
 	
 	/**
 	* Removes an <code>IIOWriteProgressListener</code> from the list
@@ -1441,7 +1441,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	*
 	* @see #addIIOWriteProgressListener
 	*/
-	@:overload public function removeIIOWriteProgressListener(listener : javax.imageio.event.IIOWriteProgressListener) : Void;
+	@:overload @:public public function removeIIOWriteProgressListener(listener : javax.imageio.event.IIOWriteProgressListener) : Void;
 	
 	/**
 	* Removes all currently registered
@@ -1451,7 +1451,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* <code>progressListeners</code> instance variable to
 	* <code>null</code>.
 	*/
-	@:overload public function removeAllIIOWriteProgressListeners() : Void;
+	@:overload @:public public function removeAllIIOWriteProgressListeners() : Void;
 	
 	/**
 	* Broadcasts the start of an image write to all registered
@@ -1461,7 +1461,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	*
 	* @param imageIndex the index of the image about to be written.
 	*/
-	@:overload private function processImageStarted(imageIndex : Int) : Void;
+	@:overload @:protected private function processImageStarted(imageIndex : Int) : Void;
 	
 	/**
 	* Broadcasts the current percentage of image completion to all
@@ -1472,7 +1472,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* @param percentageDone the current percentage of completion,
 	* as a <code>float</code>.
 	*/
-	@:overload private function processImageProgress(percentageDone : Single) : Void;
+	@:overload @:protected private function processImageProgress(percentageDone : Single) : Void;
 	
 	/**
 	* Broadcasts the completion of an image write to all registered
@@ -1480,7 +1480,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* <code>imageComplete</code> method.  Subclasses may use this
 	* method as a convenience.
 	*/
-	@:overload private function processImageComplete() : Void;
+	@:overload @:protected private function processImageComplete() : Void;
 	
 	/**
 	* Broadcasts the start of a thumbnail write to all registered
@@ -1492,7 +1492,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* thumbnail.
 	* @param thumbnailIndex the index of the thumbnail.
 	*/
-	@:overload private function processThumbnailStarted(imageIndex : Int, thumbnailIndex : Int) : Void;
+	@:overload @:protected private function processThumbnailStarted(imageIndex : Int, thumbnailIndex : Int) : Void;
 	
 	/**
 	* Broadcasts the current percentage of thumbnail completion to
@@ -1503,7 +1503,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* @param percentageDone the current percentage of completion,
 	* as a <code>float</code>.
 	*/
-	@:overload private function processThumbnailProgress(percentageDone : Single) : Void;
+	@:overload @:protected private function processThumbnailProgress(percentageDone : Single) : Void;
 	
 	/**
 	* Broadcasts the completion of a thumbnail write to all registered
@@ -1511,7 +1511,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* <code>thumbnailComplete</code> method.  Subclasses may use this
 	* method as a convenience.
 	*/
-	@:overload private function processThumbnailComplete() : Void;
+	@:overload @:protected private function processThumbnailComplete() : Void;
 	
 	/**
 	* Broadcasts that the write has been aborted to all registered
@@ -1519,7 +1519,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* <code>writeAborted</code> method.  Subclasses may use this
 	* method as a convenience.
 	*/
-	@:overload private function processWriteAborted() : Void;
+	@:overload @:protected private function processWriteAborted() : Void;
 	
 	/**
 	* Broadcasts a warning message to all registered
@@ -1534,7 +1534,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* @exception IllegalArgumentException if <code>warning</code>
 	* is <code>null</code>.
 	*/
-	@:overload private function processWarningOccurred(imageIndex : Int, warning : String) : Void;
+	@:overload @:protected private function processWarningOccurred(imageIndex : Int, warning : String) : Void;
 	
 	/**
 	* Broadcasts a localized warning message to all registered
@@ -1563,7 +1563,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* from the <code>ResourceBundle</code> is not a
 	* <code>String</code>.
 	*/
-	@:overload private function processWarningOccurred(imageIndex : Int, baseName : String, keyword : String) : Void;
+	@:overload @:protected private function processWarningOccurred(imageIndex : Int, baseName : String, keyword : String) : Void;
 	
 	/**
 	* Restores the <code>ImageWriter</code> to its initial state.
@@ -1574,7 +1574,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* <code>removeAllIIOWriteProgressListeners()</code>, and
 	* <code>clearAbortRequest</code>.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Allows any resources held by this object to be released.  The
@@ -1591,7 +1591,7 @@ extern class ImageWriter implements javax.imageio.ImageTranscoder
 	* nothing.  Subclass implementations should ensure that all resources,
 	* especially native resources, are released.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	
 }

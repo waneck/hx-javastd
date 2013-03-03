@@ -25,11 +25,11 @@ package sun.reflect.generics.tree;
 */
 extern class TypeVariableSignature implements sun.reflect.generics.tree.FieldTypeSignature
 {
-	@:overload public static function make(id : String) : sun.reflect.generics.tree.TypeVariableSignature;
+	@:overload @:public @:static public static function make(id : String) : sun.reflect.generics.tree.TypeVariableSignature;
 	
-	@:overload public function getIdentifier() : String;
+	@:overload @:public public function getIdentifier() : String;
 	
-	@:overload public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
+	@:overload @:public public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
 	
 	
 }

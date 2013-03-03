@@ -43,12 +43,12 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param classDoc the class whoses members are being documented.
 	* @param writer the doclet specific writer.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc, writer : com.sun.tools.doclets.internal.toolkit.AnnotationTypeOptionalMemberWriter) : com.sun.tools.doclets.internal.toolkit.builders.AnnotationTypeOptionalMemberBuilder;
+	@:overload @:public @:static public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc, writer : com.sun.tools.doclets.internal.toolkit.AnnotationTypeOptionalMemberWriter) : com.sun.tools.doclets.internal.toolkit.builders.AnnotationTypeOptionalMemberBuilder;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Build the annotation type optional member documentation.
@@ -56,7 +56,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param memberDetailsTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildAnnotationTypeOptionalMember(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildAnnotationTypeOptionalMember(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the default value for this optional member.
@@ -64,12 +64,12 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param annotationDocTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildDefaultValueInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildDefaultValueInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getWriter() : com.sun.tools.doclets.internal.toolkit.AnnotationTypeRequiredMemberWriter;
+	@:overload @:public override public function getWriter() : com.sun.tools.doclets.internal.toolkit.AnnotationTypeRequiredMemberWriter;
 	
 	
 }

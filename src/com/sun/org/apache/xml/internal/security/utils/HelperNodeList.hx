@@ -24,12 +24,12 @@ extern class HelperNodeList implements org.w3c.dom.NodeList
 	/**
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* @param allNodesMustHaveSameParent
 	*/
-	@:overload public function new(allNodesMustHaveSameParent : Bool) : Void;
+	@:overload @:public public function new(allNodesMustHaveSameParent : Bool) : Void;
 	
 	/**
 	* Method item
@@ -37,14 +37,14 @@ extern class HelperNodeList implements org.w3c.dom.NodeList
 	* @param index
 	* @return node with inde i
 	*/
-	@:overload public function item(index : Int) : org.w3c.dom.Node;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.Node;
 	
 	/**
 	* Method getLength
 	*
 	*  @return length of the list
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Method appendChild
@@ -52,12 +52,12 @@ extern class HelperNodeList implements org.w3c.dom.NodeList
 	* @param node
 	* @throws IllegalArgumentException
 	*/
-	@:overload public function appendChild(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function appendChild(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* @return the document that contains this nodelist
 	*/
-	@:overload public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload @:public public function getOwnerDocument() : org.w3c.dom.Document;
 	
 	
 }

@@ -25,9 +25,9 @@ package com.sun.java.util.jar.pack;
 */
 @:internal extern class NativeUnpack
 {
-	@:overload @:synchronized @:native private function setOption(opt : String, value : String) : Bool;
+	@:overload @:protected @:synchronized @:native private function setOption(opt : String, value : String) : Bool;
 	
-	@:overload @:synchronized @:native private function getOption(opt : String) : String;
+	@:overload @:protected @:synchronized @:native private function getOption(opt : String) : String;
 	
 	
 }

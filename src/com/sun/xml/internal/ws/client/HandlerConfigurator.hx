@@ -36,7 +36,7 @@ package com.sun.xml.internal.ws.client;
 */
 @:native('com$sun$xml$internal$ws$client$HandlerConfigurator$HandlerResolverImpl') @:internal extern class HandlerConfigurator_HandlerResolverImpl extends com.sun.xml.internal.ws.client.HandlerConfigurator
 {
-	@:overload public function new(resolver : javax.xml.ws.handler.HandlerResolver) : Void;
+	@:overload @:public public function new(resolver : javax.xml.ws.handler.HandlerResolver) : Void;
 	
 	
 }

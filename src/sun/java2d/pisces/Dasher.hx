@@ -32,33 +32,33 @@ package sun.java2d.pisces;
 	* @param dash an array of <code>float</code>s containing the dash pattern
 	* @param phase a <code>float</code> containing the dash phase
 	*/
-	@:overload public function new(out : sun.awt.geom.PathConsumer2D, dash : java.NativeArray<Single>, phase : Single) : Void;
+	@:overload @:public public function new(out : sun.awt.geom.PathConsumer2D, dash : java.NativeArray<Single>, phase : Single) : Void;
 	
-	@:overload public function moveTo(x0 : Single, y0 : Single) : Void;
+	@:overload @:public public function moveTo(x0 : Single, y0 : Single) : Void;
 	
-	@:overload public function lineTo(x1 : Single, y1 : Single) : Void;
+	@:overload @:public public function lineTo(x1 : Single, y1 : Single) : Void;
 	
-	@:overload public function curveTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single, x3 : Single, y3 : Single) : Void;
+	@:overload @:public public function curveTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single, x3 : Single, y3 : Single) : Void;
 	
-	@:overload public function quadTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
+	@:overload @:public public function quadTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
 	
-	@:overload public function closePath() : Void;
+	@:overload @:public public function closePath() : Void;
 	
-	@:overload public function pathDone() : Void;
+	@:overload @:public public function pathDone() : Void;
 	
-	@:overload public function getNativeConsumer() : haxe.Int64;
+	@:overload @:public public function getNativeConsumer() : haxe.Int64;
 	
 	
 }
 @:native('sun$java2d$pisces$Dasher$LengthIterator') @:internal extern class Dasher_LengthIterator
 {
-	@:overload public function new(reclimit : Int, err : Single) : Void;
+	@:overload @:public public function new(reclimit : Int, err : Single) : Void;
 	
-	@:overload public function initializeIterationOnCurve(pts : java.NativeArray<Single>, type : Int) : Void;
+	@:overload @:public public function initializeIterationOnCurve(pts : java.NativeArray<Single>, type : Int) : Void;
 	
-	@:overload public function next(len : Single) : Single;
+	@:overload @:public public function next(len : Single) : Single;
 	
-	@:overload public function lastSegLen() : Single;
+	@:overload @:public public function lastSegLen() : Single;
 	
 	
 }

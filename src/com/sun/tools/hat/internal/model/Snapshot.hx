@@ -35,31 +35,31 @@ extern class Snapshot
 	* This is the top-level "model" object read out of a single .hprof or .bod
 	* file.
 	*/
-	public static var SMALL_ID_MASK : haxe.Int64;
+	@:public @:static public static var SMALL_ID_MASK : haxe.Int64;
 	
-	public static var EMPTY_BYTE_ARRAY(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:public @:static @:final public static var EMPTY_BYTE_ARRAY(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function new(buf : com.sun.tools.hat.internal.parser.ReadBuffer) : Void;
+	@:overload @:public public function new(buf : com.sun.tools.hat.internal.parser.ReadBuffer) : Void;
 	
-	@:overload public function setSiteTrace(obj : com.sun.tools.hat.internal.model.JavaHeapObject, _trace : com.sun.tools.hat.internal.model.StackTrace) : Void;
+	@:overload @:public public function setSiteTrace(obj : com.sun.tools.hat.internal.model.JavaHeapObject, _trace : com.sun.tools.hat.internal.model.StackTrace) : Void;
 	
-	@:overload public function getSiteTrace(obj : com.sun.tools.hat.internal.model.JavaHeapObject) : com.sun.tools.hat.internal.model.StackTrace;
+	@:overload @:public public function getSiteTrace(obj : com.sun.tools.hat.internal.model.JavaHeapObject) : com.sun.tools.hat.internal.model.StackTrace;
 	
-	@:overload public function setNewStyleArrayClass(value : Bool) : Void;
+	@:overload @:public public function setNewStyleArrayClass(value : Bool) : Void;
 	
-	@:overload public function isNewStyleArrayClass() : Bool;
+	@:overload @:public public function isNewStyleArrayClass() : Bool;
 	
-	@:overload public function setIdentifierSize(size : Int) : Void;
+	@:overload @:public public function setIdentifierSize(size : Int) : Void;
 	
-	@:overload public function getIdentifierSize() : Int;
+	@:overload @:public public function getIdentifierSize() : Int;
 	
-	@:overload public function getMinimumObjectSize() : Int;
+	@:overload @:public public function getMinimumObjectSize() : Int;
 	
-	@:overload public function addHeapObject(id : haxe.Int64, ho : com.sun.tools.hat.internal.model.JavaHeapObject) : Void;
+	@:overload @:public public function addHeapObject(id : haxe.Int64, ho : com.sun.tools.hat.internal.model.JavaHeapObject) : Void;
 	
-	@:overload public function addRoot(r : com.sun.tools.hat.internal.model.Root) : Void;
+	@:overload @:public public function addRoot(r : com.sun.tools.hat.internal.model.Root) : Void;
 	
-	@:overload public function addClass(id : haxe.Int64, c : com.sun.tools.hat.internal.model.JavaClass) : Void;
+	@:overload @:public public function addClass(id : haxe.Int64, c : com.sun.tools.hat.internal.model.JavaClass) : Void;
 	
 	/**
 	* @return true iff it's possible that some JavaThing instances might
@@ -67,59 +67,59 @@ extern class Snapshot
 	*
 	* @see JavaThing.isNew()
 	*/
-	@:overload public function getHasNewSet() : Bool;
+	@:overload @:public public function getHasNewSet() : Bool;
 	
 	/**
 	* Called after reading complete, to initialize the structure
 	*/
-	@:overload public function resolve(calculateRefs : Bool) : Void;
+	@:overload @:public public function resolve(calculateRefs : Bool) : Void;
 	
-	@:overload public function markNewRelativeTo(baseline : com.sun.tools.hat.internal.model.Snapshot) : Void;
+	@:overload @:public public function markNewRelativeTo(baseline : com.sun.tools.hat.internal.model.Snapshot) : Void;
 	
-	@:overload public function getThings() : java.util.Enumeration<com.sun.tools.hat.internal.model.JavaHeapObject>;
+	@:overload @:public public function getThings() : java.util.Enumeration<com.sun.tools.hat.internal.model.JavaHeapObject>;
 	
-	@:overload public function findThing(id : haxe.Int64) : com.sun.tools.hat.internal.model.JavaHeapObject;
+	@:overload @:public public function findThing(id : haxe.Int64) : com.sun.tools.hat.internal.model.JavaHeapObject;
 	
-	@:overload public function findThing(id : String) : com.sun.tools.hat.internal.model.JavaHeapObject;
+	@:overload @:public public function findThing(id : String) : com.sun.tools.hat.internal.model.JavaHeapObject;
 	
-	@:overload public function findClass(name : String) : com.sun.tools.hat.internal.model.JavaClass;
+	@:overload @:public public function findClass(name : String) : com.sun.tools.hat.internal.model.JavaClass;
 	
 	/**
 	* Return an Iterator of all of the classes in this snapshot.
 	**/
-	@:overload public function getClasses() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getClasses() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function getClassesArray() : java.NativeArray<com.sun.tools.hat.internal.model.JavaClass>;
+	@:overload @:public public function getClassesArray() : java.NativeArray<com.sun.tools.hat.internal.model.JavaClass>;
 	
-	@:overload @:synchronized public function getFinalizerObjects() : java.util.Enumeration<Dynamic>;
+	@:overload @:public @:synchronized public function getFinalizerObjects() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function getRoots() : java.util.Enumeration<com.sun.tools.hat.internal.model.Root>;
+	@:overload @:public public function getRoots() : java.util.Enumeration<com.sun.tools.hat.internal.model.Root>;
 	
-	@:overload public function getRootsArray() : java.NativeArray<com.sun.tools.hat.internal.model.Root>;
+	@:overload @:public public function getRootsArray() : java.NativeArray<com.sun.tools.hat.internal.model.Root>;
 	
-	@:overload public function getRootAt(i : Int) : com.sun.tools.hat.internal.model.Root;
+	@:overload @:public public function getRootAt(i : Int) : com.sun.tools.hat.internal.model.Root;
 	
-	@:overload public function rootsetReferencesTo(target : com.sun.tools.hat.internal.model.JavaHeapObject, includeWeak : Bool) : java.NativeArray<com.sun.tools.hat.internal.model.ReferenceChain>;
+	@:overload @:public public function rootsetReferencesTo(target : com.sun.tools.hat.internal.model.JavaHeapObject, includeWeak : Bool) : java.NativeArray<com.sun.tools.hat.internal.model.ReferenceChain>;
 	
-	@:overload public function getUnresolvedObjectsOK() : Bool;
+	@:overload @:public public function getUnresolvedObjectsOK() : Bool;
 	
-	@:overload public function setUnresolvedObjectsOK(v : Bool) : Void;
+	@:overload @:public public function setUnresolvedObjectsOK(v : Bool) : Void;
 	
-	@:overload public function getWeakReferenceClass() : com.sun.tools.hat.internal.model.JavaClass;
+	@:overload @:public public function getWeakReferenceClass() : com.sun.tools.hat.internal.model.JavaClass;
 	
-	@:overload public function getReferentFieldIndex() : Int;
+	@:overload @:public public function getReferentFieldIndex() : Int;
 	
-	@:overload public function getNullThing() : com.sun.tools.hat.internal.model.JavaThing;
+	@:overload @:public public function getNullThing() : com.sun.tools.hat.internal.model.JavaThing;
 	
-	@:overload public function setReachableExcludes(e : com.sun.tools.hat.internal.model.ReachableExcludes) : Void;
+	@:overload @:public public function setReachableExcludes(e : com.sun.tools.hat.internal.model.ReachableExcludes) : Void;
 	
-	@:overload public function getReachableExcludes() : com.sun.tools.hat.internal.model.ReachableExcludes;
+	@:overload @:public public function getReachableExcludes() : com.sun.tools.hat.internal.model.ReachableExcludes;
 	
 	
 }
 @:native('com$sun$tools$hat$internal$model$Snapshot$MyVisitor') @:internal extern class Snapshot_MyVisitor extends com.sun.tools.hat.internal.model.AbstractJavaHeapObjectVisitor
 {
-	@:overload public function visit(other : com.sun.tools.hat.internal.model.JavaHeapObject) : Void;
+	@:overload @:public override public function visit(other : com.sun.tools.hat.internal.model.JavaHeapObject) : Void;
 	
 	
 }

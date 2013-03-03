@@ -32,11 +32,11 @@ extern class APTClassLoader extends java.net.URLClassLoader
 	* @param parent
 	*      The parent class loader to delegate to. Null to indicate bootstrap classloader.
 	*/
-	@:overload public function new(parent : java.lang.ClassLoader, packagePrefixes : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(parent : java.lang.ClassLoader, packagePrefixes : java.NativeArray<String>) : Void;
 	
-	@:overload public function loadClass(className : String) : Class<Dynamic>;
+	@:overload @:public override public function loadClass(className : String) : Class<Dynamic>;
 	
-	@:overload private function findClass(name : String) : Class<Dynamic>;
+	@:overload @:protected override private function findClass(name : String) : Class<Dynamic>;
 	
 	
 }

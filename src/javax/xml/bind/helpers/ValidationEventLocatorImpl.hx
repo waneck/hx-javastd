@@ -28,7 +28,7 @@ extern class ValidationEventLocatorImpl implements javax.xml.bind.ValidationEven
 	/**
 	* Creates an object with all fields unavailable.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an object from an org.xml.sax.Locator.
@@ -42,7 +42,7 @@ extern class ValidationEventLocatorImpl implements javax.xml.bind.ValidationEven
 	* event locator.
 	* @throws IllegalArgumentException if the Locator is null
 	*/
-	@:overload public function new(loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(loc : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Constructs an object from the location information of a SAXParseException.
@@ -56,7 +56,7 @@ extern class ValidationEventLocatorImpl implements javax.xml.bind.ValidationEven
 	* event locator.
 	* @throws IllegalArgumentException if the SAXParseException is null
 	*/
-	@:overload public function new(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function new(e : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Constructs an object that points to a DOM Node.
@@ -68,7 +68,7 @@ extern class ValidationEventLocatorImpl implements javax.xml.bind.ValidationEven
 	* event locator.
 	* @throws IllegalArgumentException if the Node is null
 	*/
-	@:overload public function new(_node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(_node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Constructs an object that points to a JAXB content object.
@@ -80,79 +80,79 @@ extern class ValidationEventLocatorImpl implements javax.xml.bind.ValidationEven
 	* event locator.
 	* @throws IllegalArgumentException if the Object is null
 	*/
-	@:overload public function new(_object : Dynamic) : Void;
+	@:overload @:public public function new(_object : Dynamic) : Void;
 	
 	/**
 	* @see javax.xml.bind.ValidationEventLocator#getURL()
 	*/
-	@:overload public function getURL() : java.net.URL;
+	@:overload @:public public function getURL() : java.net.URL;
 	
 	/**
 	* Set the URL field on this event locator.  Null values are allowed.
 	*
 	* @param _url the url
 	*/
-	@:overload public function setURL(_url : java.net.URL) : Void;
+	@:overload @:public public function setURL(_url : java.net.URL) : Void;
 	
 	/**
 	* @see javax.xml.bind.ValidationEventLocator#getOffset()
 	*/
-	@:overload public function getOffset() : Int;
+	@:overload @:public public function getOffset() : Int;
 	
 	/**
 	* Set the offset field on this event locator.
 	*
 	* @param _offset the offset
 	*/
-	@:overload public function setOffset(_offset : Int) : Void;
+	@:overload @:public public function setOffset(_offset : Int) : Void;
 	
 	/**
 	* @see javax.xml.bind.ValidationEventLocator#getLineNumber()
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* Set the lineNumber field on this event locator.
 	*
 	* @param _lineNumber the line number
 	*/
-	@:overload public function setLineNumber(_lineNumber : Int) : Void;
+	@:overload @:public public function setLineNumber(_lineNumber : Int) : Void;
 	
 	/**
 	* @see javax.xml.bind.ValidationEventLocator#getColumnNumber()
 	*/
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	/**
 	* Set the columnNumber field on this event locator.
 	*
 	* @param _columnNumber the column number
 	*/
-	@:overload public function setColumnNumber(_columnNumber : Int) : Void;
+	@:overload @:public public function setColumnNumber(_columnNumber : Int) : Void;
 	
 	/**
 	* @see javax.xml.bind.ValidationEventLocator#getObject()
 	*/
-	@:overload public function getObject() : Dynamic;
+	@:overload @:public public function getObject() : Dynamic;
 	
 	/**
 	* Set the Object field on this event locator.  Null values are allowed.
 	*
 	* @param _object the java content object
 	*/
-	@:overload public function setObject(_object : Dynamic) : Void;
+	@:overload @:public public function setObject(_object : Dynamic) : Void;
 	
 	/**
 	* @see javax.xml.bind.ValidationEventLocator#getNode()
 	*/
-	@:overload public function getNode() : org.w3c.dom.Node;
+	@:overload @:public public function getNode() : org.w3c.dom.Node;
 	
 	/**
 	* Set the Node field on this event locator.  Null values are allowed.
 	*
 	* @param _node the Node
 	*/
-	@:overload public function setNode(_node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setNode(_node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Returns a string representation of this object in a format
@@ -160,7 +160,7 @@ extern class ValidationEventLocatorImpl implements javax.xml.bind.ValidationEven
 	*
 	* @see Object#equals(Object)
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -37,79 +37,79 @@ package com.sun.tools.javac.jvm;
 extern class ClassReader implements Completer
 {
 	/** The context key for the class reader. */
-	private static var classReaderKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.jvm.ClassReader>;
+	@:protected @:static @:final private static var classReaderKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.jvm.ClassReader>;
 	
-	public static var INITIAL_BUFFER_SIZE(default, null) : Int;
+	@:public @:static @:final public static var INITIAL_BUFFER_SIZE(default, null) : Int;
 	
 	/** Switch: read constant pool and code sections. This switch is initially
 	*  set to false but can be turned on from outside.
 	*/
-	public var readAllOfClassFile : Bool;
+	@:public public var readAllOfClassFile : Bool;
 	
 	/** Switch: preserve parameter names from the variable table.
 	*/
-	public var saveParameterNames : Bool;
+	@:public public var saveParameterNames : Bool;
 	
 	/**
 	* Switch: prefer source files instead of newer when both source
 	* and class are available
 	**/
-	public var preferSource : Bool;
+	@:public public var preferSource : Bool;
 	
 	/** Can be reassigned from outside:
 	*  the completer to be used for ".java" files. If this remains unassigned
 	*  ".java" files will not be loaded.
 	*/
-	public var sourceCompleter : com.sun.tools.javac.jvm.ClassReader.ClassReader_SourceCompleter;
+	@:public public var sourceCompleter : com.sun.tools.javac.jvm.ClassReader.ClassReader_SourceCompleter;
 	
 	/** The current scope where type variables are entered.
 	*/
-	private var typevars : com.sun.tools.javac.code.Scope;
+	@:protected private var typevars : com.sun.tools.javac.code.Scope;
 	
 	/** The path name of the class file currently being read.
 	*/
-	private var currentClassFile : javax.tools.JavaFileObject;
+	@:protected private var currentClassFile : javax.tools.JavaFileObject;
 	
 	/** The class or method currently being read.
 	*/
-	private var currentOwner : com.sun.tools.javac.code.Symbol;
+	@:protected private var currentOwner : com.sun.tools.javac.code.Symbol;
 	
 	/** Get the ClassReader instance for this invocation. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.jvm.ClassReader;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.jvm.ClassReader;
 	
 	/** Initialize classes and packages, treating this as the definitive classreader. */
-	@:overload public function init(syms : com.sun.tools.javac.code.Symtab) : Void;
+	@:overload @:public public function init(syms : com.sun.tools.javac.code.Symtab) : Void;
 	
 	/** Construct a new class reader, optionally treated as the
 	*  definitive classreader for this invocation.
 	*/
-	@:overload private function new(context : com.sun.tools.javac.util.Context, definitive : Bool) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context, definitive : Bool) : Void;
 	
-	@:overload public function badClassFile(key : String, args : java.NativeArray<Dynamic>) : com.sun.tools.javac.jvm.ClassReader.ClassReader_BadClassFile;
+	@:overload @:public public function badClassFile(key : String, args : java.NativeArray<Dynamic>) : com.sun.tools.javac.jvm.ClassReader.ClassReader_BadClassFile;
 	
-	private var CLASS_ATTRIBUTE : java.util.Set<com.sun.tools.javac.jvm.ClassReader.ClassReader_AttributeKind>;
+	@:protected private var CLASS_ATTRIBUTE : java.util.Set<com.sun.tools.javac.jvm.ClassReader.ClassReader_AttributeKind>;
 	
-	private var MEMBER_ATTRIBUTE : java.util.Set<com.sun.tools.javac.jvm.ClassReader.ClassReader_AttributeKind>;
+	@:protected private var MEMBER_ATTRIBUTE : java.util.Set<com.sun.tools.javac.jvm.ClassReader.ClassReader_AttributeKind>;
 	
-	private var CLASS_OR_MEMBER_ATTRIBUTE : java.util.Set<com.sun.tools.javac.jvm.ClassReader.ClassReader_AttributeKind>;
+	@:protected private var CLASS_OR_MEMBER_ATTRIBUTE : java.util.Set<com.sun.tools.javac.jvm.ClassReader.ClassReader_AttributeKind>;
 	
-	private var attributeReaders : java.util.Map<com.sun.tools.javac.util.Name, com.sun.tools.javac.jvm.ClassReader.ClassReader_AttributeReader>;
+	@:protected private var attributeReaders : java.util.Map<com.sun.tools.javac.util.Name, com.sun.tools.javac.jvm.ClassReader.ClassReader_AttributeReader>;
 	
 	/** Enter type variables of this classtype and all enclosing ones in
 	*  `typevars'.
 	*/
-	@:overload private function enterTypevars(t : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:protected private function enterTypevars(t : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload private function enterTypevars(sym : com.sun.tools.javac.code.Symbol) : Void;
+	@:overload @:protected private function enterTypevars(sym : com.sun.tools.javac.code.Symbol) : Void;
 	
 	/** Define a new class given its name and owner.
 	*/
-	@:overload public function defineClass(name : com.sun.tools.javac.util.Name, owner : com.sun.tools.javac.code.Symbol) : ClassSymbol;
+	@:overload @:public public function defineClass(name : com.sun.tools.javac.util.Name, owner : com.sun.tools.javac.code.Symbol) : ClassSymbol;
 	
 	/** Create a new toplevel or member class symbol with given name
 	*  and owner and enter in `classes' unless already there.
 	*/
-	@:overload public function enterClass(name : com.sun.tools.javac.util.Name, owner : TypeSymbol) : ClassSymbol;
+	@:overload @:public public function enterClass(name : com.sun.tools.javac.util.Name, owner : TypeSymbol) : ClassSymbol;
 	
 	/**
 	* Creates a new toplevel class symbol with given flat name and
@@ -121,59 +121,59 @@ extern class ClassReader implements Completer
 	* @return a newly created class symbol
 	* @throws AssertionError if the class symbol already exists
 	*/
-	@:overload public function enterClass(flatName : com.sun.tools.javac.util.Name, classFile : javax.tools.JavaFileObject) : ClassSymbol;
+	@:overload @:public public function enterClass(flatName : com.sun.tools.javac.util.Name, classFile : javax.tools.JavaFileObject) : ClassSymbol;
 	
 	/** Create a new member or toplevel class symbol with given flat name
 	*  and enter in `classes' unless already there.
 	*/
-	@:overload public function enterClass(flatname : com.sun.tools.javac.util.Name) : ClassSymbol;
+	@:overload @:public public function enterClass(flatname : com.sun.tools.javac.util.Name) : ClassSymbol;
 	
 	/** Completion for classes to be loaded. Before a class is loaded
 	*  we make sure its enclosing class (if any) is loaded.
 	*/
-	@:overload public function complete(sym : com.sun.tools.javac.code.Symbol) : Void;
+	@:overload @:public public function complete(sym : com.sun.tools.javac.code.Symbol) : Void;
 	
 	/** Load a toplevel class with given fully qualified name
 	*  The class is entered into `classes' only if load was successful.
 	*/
-	@:overload public function loadClass(flatname : com.sun.tools.javac.util.Name) : ClassSymbol;
+	@:overload @:public public function loadClass(flatname : com.sun.tools.javac.util.Name) : ClassSymbol;
 	
 	/** Check to see if a package exists, given its fully qualified name.
 	*/
-	@:overload public function packageExists(fullname : com.sun.tools.javac.util.Name) : Bool;
+	@:overload @:public public function packageExists(fullname : com.sun.tools.javac.util.Name) : Bool;
 	
 	/** Make a package, given its fully qualified name.
 	*/
-	@:overload public function enterPackage(fullname : com.sun.tools.javac.util.Name) : PackageSymbol;
+	@:overload @:public public function enterPackage(fullname : com.sun.tools.javac.util.Name) : PackageSymbol;
 	
 	/** Make a package, given its unqualified name and enclosing package.
 	*/
-	@:overload public function enterPackage(name : com.sun.tools.javac.util.Name, owner : PackageSymbol) : PackageSymbol;
+	@:overload @:public public function enterPackage(name : com.sun.tools.javac.util.Name, owner : PackageSymbol) : PackageSymbol;
 	
 	/** Include class corresponding to given class file in package,
 	*  unless (1) we already have one the same kind (.class or .java), or
 	*         (2) we have one of the other kind, and the given class file
 	*             is older.
 	*/
-	@:overload private function includeClassFile(p : PackageSymbol, file : javax.tools.JavaFileObject) : Void;
+	@:overload @:protected private function includeClassFile(p : PackageSymbol, file : javax.tools.JavaFileObject) : Void;
 	
 	/** Implement policy to choose to derive information from a source
 	*  file or a class file when both are present.  May be overridden
 	*  by subclasses.
 	*/
-	@:overload private function preferredFileObject(a : javax.tools.JavaFileObject, b : javax.tools.JavaFileObject) : javax.tools.JavaFileObject;
+	@:overload @:protected private function preferredFileObject(a : javax.tools.JavaFileObject, b : javax.tools.JavaFileObject) : javax.tools.JavaFileObject;
 	
 	/**
 	* specifies types of files to be read when filling in a package symbol
 	*/
-	@:overload private function getPackageFileKinds() : java.util.EnumSet<javax.tools.JavaFileObject.JavaFileObject_Kind>;
+	@:overload @:protected private function getPackageFileKinds() : java.util.EnumSet<javax.tools.JavaFileObject.JavaFileObject_Kind>;
 	
 	/**
 	* this is used to support javadoc
 	*/
-	@:overload private function extraFileActions(pack : PackageSymbol, fe : javax.tools.JavaFileObject) : Void;
+	@:overload @:protected private function extraFileActions(pack : PackageSymbol, fe : javax.tools.JavaFileObject) : Void;
 	
-	private var currentLoc : javax.tools.JavaFileManager.JavaFileManager_Location;
+	@:protected private var currentLoc : javax.tools.JavaFileManager.JavaFileManager_Location;
 	
 	
 }
@@ -182,7 +182,7 @@ extern class ClassReader implements Completer
 ***********************************************************************/
 @:native('com$sun$tools$javac$jvm$ClassReader$BadClassFile') extern class ClassReader_BadClassFile extends CompletionFailure
 {
-	@:overload public function new(sym : TypeSymbol, file : javax.tools.JavaFileObject, diag : com.sun.tools.javac.util.JCDiagnostic) : Void;
+	@:overload @:public public function new(sym : TypeSymbol, file : javax.tools.JavaFileObject, diag : com.sun.tools.javac.util.JCDiagnostic) : Void;
 	
 	
 }
@@ -212,19 +212,19 @@ extern class ClassReader implements Completer
 }
 @:native('com$sun$tools$javac$jvm$ClassReader$EnumAttributeProxy') @:internal extern class ClassReader_EnumAttributeProxy extends com.sun.tools.javac.code.Attribute
 {
-	@:overload public function new(enumType : com.sun.tools.javac.code.Type, enumerator : com.sun.tools.javac.util.Name) : Void;
+	@:overload @:public public function new(enumType : com.sun.tools.javac.code.Type, enumerator : com.sun.tools.javac.util.Name) : Void;
 	
-	@:overload override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$javac$jvm$ClassReader$ArrayAttributeProxy') @:internal extern class ClassReader_ArrayAttributeProxy extends com.sun.tools.javac.code.Attribute
 {
-	@:overload override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -232,11 +232,11 @@ extern class ClassReader implements Completer
 */
 @:native('com$sun$tools$javac$jvm$ClassReader$CompoundAnnotationProxy') @:internal extern class ClassReader_CompoundAnnotationProxy extends com.sun.tools.javac.code.Attribute
 {
-	@:overload public function new(type : com.sun.tools.javac.code.Type, values : com.sun.tools.javac.util.List<com.sun.tools.javac.util.Pair<com.sun.tools.javac.util.Name, com.sun.tools.javac.code.Attribute>>) : Void;
+	@:overload @:public public function new(type : com.sun.tools.javac.code.Type, values : com.sun.tools.javac.util.List<com.sun.tools.javac.util.Pair<com.sun.tools.javac.util.Name, com.sun.tools.javac.code.Attribute>>) : Void;
 	
-	@:overload override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -244,45 +244,45 @@ extern class ClassReader implements Completer
 */
 @:native('com$sun$tools$javac$jvm$ClassReader$TypeAnnotationProxy') @:internal extern class ClassReader_TypeAnnotationProxy
 {
-	@:overload public function new(compound : com.sun.tools.javac.jvm.ClassReader.ClassReader_CompoundAnnotationProxy, position : com.sun.tools.javac.code.TypeAnnotationPosition) : Void;
+	@:overload @:public public function new(compound : com.sun.tools.javac.jvm.ClassReader.ClassReader_CompoundAnnotationProxy, position : com.sun.tools.javac.code.TypeAnnotationPosition) : Void;
 	
 	
 }
 @:native('com$sun$tools$javac$jvm$ClassReader$AnnotationDeproxy') @:internal extern class ClassReader_AnnotationDeproxy implements com.sun.tools.javac.jvm.ClassReader.ClassReader_ProxyVisitor
 {
-	@:overload public function visitConstant(value : com.sun.tools.javac.code.Attribute.Attribute_Constant) : Void;
+	@:overload @:public public function visitConstant(value : com.sun.tools.javac.code.Attribute.Attribute_Constant) : Void;
 	
-	@:overload public function visitClass(clazz : com.sun.tools.javac.code.Attribute.Attribute_Class) : Void;
+	@:overload @:public public function visitClass(clazz : com.sun.tools.javac.code.Attribute.Attribute_Class) : Void;
 	
-	@:overload public function visitEnum(e : com.sun.tools.javac.code.Attribute.Attribute_Enum) : Void;
+	@:overload @:public public function visitEnum(e : com.sun.tools.javac.code.Attribute.Attribute_Enum) : Void;
 	
-	@:overload public function visitCompound(compound : com.sun.tools.javac.code.Attribute.Attribute_Compound) : Void;
+	@:overload @:public public function visitCompound(compound : com.sun.tools.javac.code.Attribute.Attribute_Compound) : Void;
 	
-	@:overload public function visitArray(array : com.sun.tools.javac.code.Attribute.Attribute_Array) : Void;
+	@:overload @:public public function visitArray(array : com.sun.tools.javac.code.Attribute.Attribute_Array) : Void;
 	
-	@:overload public function visitError(e : com.sun.tools.javac.code.Attribute.Attribute_Error) : Void;
+	@:overload @:public public function visitError(e : com.sun.tools.javac.code.Attribute.Attribute_Error) : Void;
 	
-	@:overload public function visitEnumAttributeProxy(proxy : com.sun.tools.javac.jvm.ClassReader.ClassReader_EnumAttributeProxy) : Void;
+	@:overload @:public public function visitEnumAttributeProxy(proxy : com.sun.tools.javac.jvm.ClassReader.ClassReader_EnumAttributeProxy) : Void;
 	
-	@:overload public function visitArrayAttributeProxy(proxy : com.sun.tools.javac.jvm.ClassReader.ClassReader_ArrayAttributeProxy) : Void;
+	@:overload @:public public function visitArrayAttributeProxy(proxy : com.sun.tools.javac.jvm.ClassReader.ClassReader_ArrayAttributeProxy) : Void;
 	
-	@:overload public function visitCompoundAnnotationProxy(proxy : com.sun.tools.javac.jvm.ClassReader.ClassReader_CompoundAnnotationProxy) : Void;
+	@:overload @:public public function visitCompoundAnnotationProxy(proxy : com.sun.tools.javac.jvm.ClassReader.ClassReader_CompoundAnnotationProxy) : Void;
 	
 	
 }
 @:native('com$sun$tools$javac$jvm$ClassReader$AnnotationDefaultCompleter') @:internal extern class ClassReader_AnnotationDefaultCompleter extends com.sun.tools.javac.jvm.ClassReader.ClassReader_AnnotationDeproxy implements com.sun.tools.javac.comp.Annotate.Annotate_Annotator
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function enterAnnotation() : Void;
+	@:overload @:public public function enterAnnotation() : Void;
 	
 	
 }
 @:native('com$sun$tools$javac$jvm$ClassReader$AnnotationCompleter') @:internal extern class ClassReader_AnnotationCompleter extends com.sun.tools.javac.jvm.ClassReader.ClassReader_AnnotationDeproxy implements com.sun.tools.javac.comp.Annotate.Annotate_Annotator
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function enterAnnotation() : Void;
+	@:overload @:public public function enterAnnotation() : Void;
 	
 	
 }
@@ -300,33 +300,33 @@ extern class ClassReader implements Completer
 */
 @:native('com$sun$tools$javac$jvm$ClassReader$SourceFileObject') @:internal extern class ClassReader_SourceFileObject extends com.sun.tools.javac.file.BaseFileObject
 {
-	@:overload public function new(name : com.sun.tools.javac.util.Name, flatname : com.sun.tools.javac.util.Name) : Void;
+	@:overload @:public public function new(name : com.sun.tools.javac.util.Name, flatname : com.sun.tools.javac.util.Name) : Void;
 	
-	@:overload override public function toUri() : java.net.URI;
+	@:overload @:public override public function toUri() : java.net.URI;
 	
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
-	@:overload override public function getShortName() : String;
+	@:overload @:public override public function getShortName() : String;
 	
-	@:overload override public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
+	@:overload @:public override public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	
-	@:overload override public function openInputStream() : java.io.InputStream;
+	@:overload @:public override public function openInputStream() : java.io.InputStream;
 	
-	@:overload override public function openOutputStream() : java.io.OutputStream;
+	@:overload @:public override public function openOutputStream() : java.io.OutputStream;
 	
-	@:overload override public function getCharContent(ignoreEncodingErrors : Bool) : java.nio.CharBuffer;
+	@:overload @:public override public function getCharContent(ignoreEncodingErrors : Bool) : java.nio.CharBuffer;
 	
-	@:overload override public function openReader(ignoreEncodingErrors : Bool) : java.io.Reader;
+	@:overload @:public override public function openReader(ignoreEncodingErrors : Bool) : java.io.Reader;
 	
-	@:overload override public function openWriter() : java.io.Writer;
+	@:overload @:public override public function openWriter() : java.io.Writer;
 	
-	@:overload override public function getLastModified() : haxe.Int64;
+	@:overload @:public override public function getLastModified() : haxe.Int64;
 	
-	@:overload override public function delete() : Bool;
+	@:overload @:public override public function delete() : Bool;
 	
-	@:overload override private function inferBinaryName(path : java.lang.Iterable<java.io.File>) : String;
+	@:overload @:protected override private function inferBinaryName(path : java.lang.Iterable<java.io.File>) : String;
 	
-	@:overload override public function isNameCompatible(simpleName : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
+	@:overload @:public override public function isNameCompatible(simpleName : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
 	
 	/**
 	* Check if two file objects are equal.
@@ -334,9 +334,9 @@ extern class ClassReader implements Completer
 	* SourceFile attribute, and do not directly represent specific files.
 	* Two SourceFileObjects are equal if their names are equal.
 	*/
-	@:overload override public function equals(other : Dynamic) : Bool;
+	@:overload @:public override public function equals(other : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

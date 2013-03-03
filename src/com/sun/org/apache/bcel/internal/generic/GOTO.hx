@@ -63,18 +63,18 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class GOTO extends com.sun.org.apache.bcel.internal.generic.GotoInstruction implements com.sun.org.apache.bcel.internal.generic.VariableLengthInstruction
 {
-	@:overload public function new(target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function new(target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload override public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload @:public override public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/** Called in pass 2 of InstructionList.setPositions() in order to update
 	* the branch target, that may shift due to variable length instructions.
 	*/
-	@:overload override private function updatePosition(offset : Int, max_offset : Int) : Int;
+	@:overload @:protected override private function updatePosition(offset : Int, max_offset : Int) : Int;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -84,7 +84,7 @@ extern class GOTO extends com.sun.org.apache.bcel.internal.generic.GotoInstructi
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

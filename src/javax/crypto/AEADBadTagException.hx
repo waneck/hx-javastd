@@ -35,7 +35,7 @@ package javax.crypto;
 	/**
 	* Constructs a AEADBadTagException with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a AEADBadTagException with the specified
@@ -43,7 +43,7 @@ package javax.crypto;
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

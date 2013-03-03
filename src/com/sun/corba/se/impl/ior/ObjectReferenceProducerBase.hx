@@ -25,15 +25,15 @@ package com.sun.corba.se.impl.ior;
 */
 extern class ObjectReferenceProducerBase
 {
-	@:transient private var orb : com.sun.corba.se.spi.orb.ORB;
+	@:transient @:protected private var orb : com.sun.corba.se.spi.orb.ORB;
 	
-	@:overload @:abstract public function getIORFactory() : com.sun.corba.se.spi.ior.IORFactory;
+	@:overload @:public @:abstract public function getIORFactory() : com.sun.corba.se.spi.ior.IORFactory;
 	
-	@:overload @:abstract public function getIORTemplateList() : com.sun.corba.se.spi.ior.IORTemplateList;
+	@:overload @:public @:abstract public function getIORTemplateList() : com.sun.corba.se.spi.ior.IORTemplateList;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function make_object(repositoryId : String, objectId : java.NativeArray<java.StdTypes.Int8>) : org.omg.CORBA.Object;
+	@:overload @:public public function make_object(repositoryId : String, objectId : java.NativeArray<java.StdTypes.Int8>) : org.omg.CORBA.Object;
 	
 	
 }

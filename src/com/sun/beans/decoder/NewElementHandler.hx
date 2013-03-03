@@ -38,7 +38,7 @@ package com.sun.beans.decoder;
 	* @param name   the attribute name
 	* @param value  the attribute value
 	*/
-	@:overload override public function addAttribute(name : String, value : String) : Void;
+	@:overload @:public override public function addAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Adds the argument to the list of arguments
@@ -46,7 +46,7 @@ package com.sun.beans.decoder;
 	*
 	* @param argument  the value of the element that contained in this one
 	*/
-	@:overload @:final override private function addArgument(argument : Dynamic) : Void;
+	@:overload @:protected @:final override private function addArgument(argument : Dynamic) : Void;
 	
 	/**
 	* Returns the context of the method.
@@ -55,14 +55,14 @@ package com.sun.beans.decoder;
 	*
 	* @return the context of the method
 	*/
-	@:overload @:final override private function getContextBean() : Dynamic;
+	@:overload @:protected @:final override private function getContextBean() : Dynamic;
 	
 	/**
 	* Returns the value of this element.
 	*
 	* @return the value of this element
 	*/
-	@:overload @:final override private function getValueObject() : com.sun.beans.decoder.ValueObject;
+	@:overload @:protected @:final override private function getValueObject() : com.sun.beans.decoder.ValueObject;
 	
 	
 }

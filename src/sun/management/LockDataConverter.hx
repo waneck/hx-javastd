@@ -25,13 +25,13 @@ package sun.management;
 */
 @:internal extern class LockDataConverter extends javax.management.StandardMBean implements sun.management.LockDataConverterMXBean
 {
-	@:overload public function setLockInfo(l : java.lang.management.LockInfo) : Void;
+	@:overload @:public public function setLockInfo(l : java.lang.management.LockInfo) : Void;
 	
-	@:overload public function getLockInfo() : java.lang.management.LockInfo;
+	@:overload @:public public function getLockInfo() : java.lang.management.LockInfo;
 	
-	@:overload public function setLockedSynchronizers(l : java.NativeArray<java.lang.management.LockInfo>) : Void;
+	@:overload @:public public function setLockedSynchronizers(l : java.NativeArray<java.lang.management.LockInfo>) : Void;
 	
-	@:overload public function getLockedSynchronizers() : java.NativeArray<java.lang.management.LockInfo>;
+	@:overload @:public public function getLockedSynchronizers() : java.NativeArray<java.lang.management.LockInfo>;
 	
 	
 }

@@ -39,7 +39,7 @@ extern class SecureClassLoader extends java.lang.ClassLoader
 	*             creation of a class loader.
 	* @see SecurityManager#checkCreateClassLoader
 	*/
-	@:overload private function new(parent : java.lang.ClassLoader) : Void;
+	@:overload @:protected private function new(parent : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Creates a new SecureClassLoader using the default parent class
@@ -54,7 +54,7 @@ extern class SecureClassLoader extends java.lang.ClassLoader
 	*             creation of a class loader.
 	* @see SecurityManager#checkCreateClassLoader
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Converts an array of bytes into an instance of class Class,
@@ -86,7 +86,7 @@ extern class SecureClassLoader extends java.lang.ClassLoader
 	*             a different set of certificates than this class, or if
 	*             the class name begins with "java.".
 	*/
-	@:overload @:final private function defineClass(name : String, b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int, cs : java.security.CodeSource) : Class<Dynamic>;
+	@:overload @:protected @:final private function defineClass(name : String, b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int, cs : java.security.CodeSource) : Class<Dynamic>;
 	
 	/**
 	* Converts a {@link java.nio.ByteBuffer <tt>ByteBuffer</tt>}
@@ -114,7 +114,7 @@ extern class SecureClassLoader extends java.lang.ClassLoader
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload @:final private function defineClass(name : String, b : java.nio.ByteBuffer, cs : java.security.CodeSource) : Class<Dynamic>;
+	@:require(java5) @:overload @:protected @:final private function defineClass(name : String, b : java.nio.ByteBuffer, cs : java.security.CodeSource) : Class<Dynamic>;
 	
 	/**
 	* Returns the permissions for the given CodeSource object.
@@ -128,7 +128,7 @@ extern class SecureClassLoader extends java.lang.ClassLoader
 	* @return the permissions granted to the codesource.
 	*
 	*/
-	@:overload private function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
+	@:overload @:protected private function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
 	
 	
 }

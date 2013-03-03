@@ -25,51 +25,51 @@ package sun.java2d.xr;
 */
 extern class XRRenderer implements sun.java2d.pipe.PixelDrawPipe implements sun.java2d.pipe.PixelFillPipe implements sun.java2d.pipe.ShapeDrawPipe
 {
-	@:overload public function new(tileManager : sun.java2d.xr.MaskTileManager) : Void;
+	@:overload @:public public function new(tileManager : sun.java2d.xr.MaskTileManager) : Void;
 	
-	@:overload public function drawLine(sg2d : sun.java2d.SunGraphics2D, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public public function drawLine(sg2d : sun.java2d.SunGraphics2D, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
-	@:overload public function drawRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function drawRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function drawPolyline(sg2d : sun.java2d.SunGraphics2D, xpoints : java.NativeArray<Int>, ypoints : java.NativeArray<Int>, npoints : Int) : Void;
+	@:overload @:public public function drawPolyline(sg2d : sun.java2d.SunGraphics2D, xpoints : java.NativeArray<Int>, ypoints : java.NativeArray<Int>, npoints : Int) : Void;
 	
-	@:overload public function drawPolygon(sg2d : sun.java2d.SunGraphics2D, xpoints : java.NativeArray<Int>, ypoints : java.NativeArray<Int>, npoints : Int) : Void;
+	@:overload @:public public function drawPolygon(sg2d : sun.java2d.SunGraphics2D, xpoints : java.NativeArray<Int>, ypoints : java.NativeArray<Int>, npoints : Int) : Void;
 	
-	@:overload @:synchronized public function fillRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public @:synchronized public function fillRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function fillPolygon(sg2d : sun.java2d.SunGraphics2D, xpoints : java.NativeArray<Int>, ypoints : java.NativeArray<Int>, npoints : Int) : Void;
+	@:overload @:public public function fillPolygon(sg2d : sun.java2d.SunGraphics2D, xpoints : java.NativeArray<Int>, ypoints : java.NativeArray<Int>, npoints : Int) : Void;
 	
-	@:overload public function drawRoundRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
+	@:overload @:public public function drawRoundRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
 	
-	@:overload public function fillRoundRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
+	@:overload @:public public function fillRoundRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
 	
-	@:overload public function drawOval(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function drawOval(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function fillOval(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function fillOval(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function drawArc(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
+	@:overload @:public public function drawArc(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
 	
-	@:overload public function fillArc(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
+	@:overload @:public public function fillArc(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
 	
-	@:overload private function drawPath(sg2d : sun.java2d.SunGraphics2D, p2df : java.awt.geom.Path2D.Path2D_Float, transx : Int, transy : Int) : Void;
+	@:overload @:protected private function drawPath(sg2d : sun.java2d.SunGraphics2D, p2df : java.awt.geom.Path2D.Path2D_Float, transx : Int, transy : Int) : Void;
 	
-	@:overload private function fillPath(sg2d : sun.java2d.SunGraphics2D, p2df : java.awt.geom.Path2D.Path2D_Float, transx : Int, transy : Int) : Void;
+	@:overload @:protected private function fillPath(sg2d : sun.java2d.SunGraphics2D, p2df : java.awt.geom.Path2D.Path2D_Float, transx : Int, transy : Int) : Void;
 	
-	@:overload private function fillSpans(sg2d : sun.java2d.SunGraphics2D, si : sun.java2d.pipe.SpanIterator, transx : Int, transy : Int) : Void;
+	@:overload @:protected private function fillSpans(sg2d : sun.java2d.SunGraphics2D, si : sun.java2d.pipe.SpanIterator, transx : Int, transy : Int) : Void;
 	
-	@:overload public function draw(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
+	@:overload @:public public function draw(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
 	
-	@:overload public function fill(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
+	@:overload @:public public function fill(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
 	
 	
 }
 @:native('sun$java2d$xr$XRRenderer$XRDrawHandler') @:internal extern class XRRenderer_XRDrawHandler extends sun.java2d.loops.ProcessPath.ProcessPath_DrawHandler
 {
-	@:overload override public function drawLine(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public override public function drawLine(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
-	@:overload override public function drawPixel(x : Int, y : Int) : Void;
+	@:overload @:public override public function drawPixel(x : Int, y : Int) : Void;
 	
-	@:overload override public function drawScanline(x1 : Int, x2 : Int, y : Int) : Void;
+	@:overload @:public override public function drawScanline(x1 : Int, x2 : Int, y : Int) : Void;
 	
 	
 }

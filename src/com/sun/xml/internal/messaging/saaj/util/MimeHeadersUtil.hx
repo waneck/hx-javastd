@@ -29,7 +29,7 @@ package com.sun.xml.internal.messaging.saaj.util;
 */
 extern class MimeHeadersUtil
 {
-	@:overload public static function copy(headers : javax.xml.soap.MimeHeaders) : javax.xml.soap.MimeHeaders;
+	@:overload @:public @:static public static function copy(headers : javax.xml.soap.MimeHeaders) : javax.xml.soap.MimeHeaders;
 	
 	
 }

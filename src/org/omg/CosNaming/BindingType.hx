@@ -11,19 +11,19 @@ package org.omg.CosNaming;
 */
 extern class BindingType implements org.omg.CORBA.portable.IDLEntity
 {
-	public static var _nobject(default, null) : Int;
+	@:public @:static @:final public static var _nobject(default, null) : Int;
 	
-	public static var nobject(default, null) : org.omg.CosNaming.BindingType;
+	@:public @:static @:final public static var nobject(default, null) : org.omg.CosNaming.BindingType;
 	
-	public static var _ncontext(default, null) : Int;
+	@:public @:static @:final public static var _ncontext(default, null) : Int;
 	
-	public static var ncontext(default, null) : org.omg.CosNaming.BindingType;
+	@:public @:static @:final public static var ncontext(default, null) : org.omg.CosNaming.BindingType;
 	
-	@:overload public function value() : Int;
+	@:overload @:public public function value() : Int;
 	
-	@:overload public static function from_int(value : Int) : org.omg.CosNaming.BindingType;
+	@:overload @:public @:static public static function from_int(value : Int) : org.omg.CosNaming.BindingType;
 	
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	
 }

@@ -60,92 +60,92 @@ extern class DescendingVisitor implements com.sun.org.apache.bcel.internal.class
 {
 	/** @return container of current entitity, i.e., predecessor during traversal
 	*/
-	@:overload public function predecessor() : Dynamic;
+	@:overload @:public public function predecessor() : Dynamic;
 	
 	/**
 	* @param level nesting level, i.e., 0 returns the direct predecessor
 	* @return container of current entitity, i.e., predecessor during traversal
 	*/
-	@:overload public function predecessor(level : Int) : Dynamic;
+	@:overload @:public public function predecessor(level : Int) : Dynamic;
 	
 	/** @return current object
 	*/
-	@:overload public function current() : Dynamic;
+	@:overload @:public public function current() : Dynamic;
 	
 	/**
 	* @param clazz Class to traverse
 	* @param visitor visitor object to apply to all components
 	*/
-	@:overload public function new(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass, visitor : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public public function new(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass, visitor : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Start traversal.
 	*/
-	@:overload public function visit() : Void;
+	@:overload @:public public function visit() : Void;
 	
-	@:overload public function visitJavaClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
+	@:overload @:public public function visitJavaClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
 	
-	@:overload public function visitField(field : com.sun.org.apache.bcel.internal.classfile.Field) : Void;
+	@:overload @:public public function visitField(field : com.sun.org.apache.bcel.internal.classfile.Field) : Void;
 	
-	@:overload public function visitConstantValue(cv : com.sun.org.apache.bcel.internal.classfile.ConstantValue) : Void;
+	@:overload @:public public function visitConstantValue(cv : com.sun.org.apache.bcel.internal.classfile.ConstantValue) : Void;
 	
-	@:overload public function visitMethod(method : com.sun.org.apache.bcel.internal.classfile.Method) : Void;
+	@:overload @:public public function visitMethod(method : com.sun.org.apache.bcel.internal.classfile.Method) : Void;
 	
-	@:overload public function visitExceptionTable(table : com.sun.org.apache.bcel.internal.classfile.ExceptionTable) : Void;
+	@:overload @:public public function visitExceptionTable(table : com.sun.org.apache.bcel.internal.classfile.ExceptionTable) : Void;
 	
-	@:overload public function visitCode(code : com.sun.org.apache.bcel.internal.classfile.Code) : Void;
+	@:overload @:public public function visitCode(code : com.sun.org.apache.bcel.internal.classfile.Code) : Void;
 	
-	@:overload public function visitCodeException(ce : com.sun.org.apache.bcel.internal.classfile.CodeException) : Void;
+	@:overload @:public public function visitCodeException(ce : com.sun.org.apache.bcel.internal.classfile.CodeException) : Void;
 	
-	@:overload public function visitLineNumberTable(table : com.sun.org.apache.bcel.internal.classfile.LineNumberTable) : Void;
+	@:overload @:public public function visitLineNumberTable(table : com.sun.org.apache.bcel.internal.classfile.LineNumberTable) : Void;
 	
-	@:overload public function visitLineNumber(number : com.sun.org.apache.bcel.internal.classfile.LineNumber) : Void;
+	@:overload @:public public function visitLineNumber(number : com.sun.org.apache.bcel.internal.classfile.LineNumber) : Void;
 	
-	@:overload public function visitLocalVariableTable(table : com.sun.org.apache.bcel.internal.classfile.LocalVariableTable) : Void;
+	@:overload @:public public function visitLocalVariableTable(table : com.sun.org.apache.bcel.internal.classfile.LocalVariableTable) : Void;
 	
-	@:overload public function visitStackMap(table : com.sun.org.apache.bcel.internal.classfile.StackMap) : Void;
+	@:overload @:public public function visitStackMap(table : com.sun.org.apache.bcel.internal.classfile.StackMap) : Void;
 	
-	@:overload public function visitStackMapEntry(_var : com.sun.org.apache.bcel.internal.classfile.StackMapEntry) : Void;
+	@:overload @:public public function visitStackMapEntry(_var : com.sun.org.apache.bcel.internal.classfile.StackMapEntry) : Void;
 	
-	@:overload public function visitLocalVariable(_var : com.sun.org.apache.bcel.internal.classfile.LocalVariable) : Void;
+	@:overload @:public public function visitLocalVariable(_var : com.sun.org.apache.bcel.internal.classfile.LocalVariable) : Void;
 	
-	@:overload public function visitConstantPool(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function visitConstantPool(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
-	@:overload public function visitConstantClass(constant : com.sun.org.apache.bcel.internal.classfile.ConstantClass) : Void;
+	@:overload @:public public function visitConstantClass(constant : com.sun.org.apache.bcel.internal.classfile.ConstantClass) : Void;
 	
-	@:overload public function visitConstantDouble(constant : com.sun.org.apache.bcel.internal.classfile.ConstantDouble) : Void;
+	@:overload @:public public function visitConstantDouble(constant : com.sun.org.apache.bcel.internal.classfile.ConstantDouble) : Void;
 	
-	@:overload public function visitConstantFieldref(constant : com.sun.org.apache.bcel.internal.classfile.ConstantFieldref) : Void;
+	@:overload @:public public function visitConstantFieldref(constant : com.sun.org.apache.bcel.internal.classfile.ConstantFieldref) : Void;
 	
-	@:overload public function visitConstantFloat(constant : com.sun.org.apache.bcel.internal.classfile.ConstantFloat) : Void;
+	@:overload @:public public function visitConstantFloat(constant : com.sun.org.apache.bcel.internal.classfile.ConstantFloat) : Void;
 	
-	@:overload public function visitConstantInteger(constant : com.sun.org.apache.bcel.internal.classfile.ConstantInteger) : Void;
+	@:overload @:public public function visitConstantInteger(constant : com.sun.org.apache.bcel.internal.classfile.ConstantInteger) : Void;
 	
-	@:overload public function visitConstantInterfaceMethodref(constant : com.sun.org.apache.bcel.internal.classfile.ConstantInterfaceMethodref) : Void;
+	@:overload @:public public function visitConstantInterfaceMethodref(constant : com.sun.org.apache.bcel.internal.classfile.ConstantInterfaceMethodref) : Void;
 	
-	@:overload public function visitConstantLong(constant : com.sun.org.apache.bcel.internal.classfile.ConstantLong) : Void;
+	@:overload @:public public function visitConstantLong(constant : com.sun.org.apache.bcel.internal.classfile.ConstantLong) : Void;
 	
-	@:overload public function visitConstantMethodref(constant : com.sun.org.apache.bcel.internal.classfile.ConstantMethodref) : Void;
+	@:overload @:public public function visitConstantMethodref(constant : com.sun.org.apache.bcel.internal.classfile.ConstantMethodref) : Void;
 	
-	@:overload public function visitConstantNameAndType(constant : com.sun.org.apache.bcel.internal.classfile.ConstantNameAndType) : Void;
+	@:overload @:public public function visitConstantNameAndType(constant : com.sun.org.apache.bcel.internal.classfile.ConstantNameAndType) : Void;
 	
-	@:overload public function visitConstantString(constant : com.sun.org.apache.bcel.internal.classfile.ConstantString) : Void;
+	@:overload @:public public function visitConstantString(constant : com.sun.org.apache.bcel.internal.classfile.ConstantString) : Void;
 	
-	@:overload public function visitConstantUtf8(constant : com.sun.org.apache.bcel.internal.classfile.ConstantUtf8) : Void;
+	@:overload @:public public function visitConstantUtf8(constant : com.sun.org.apache.bcel.internal.classfile.ConstantUtf8) : Void;
 	
-	@:overload public function visitInnerClasses(ic : com.sun.org.apache.bcel.internal.classfile.InnerClasses) : Void;
+	@:overload @:public public function visitInnerClasses(ic : com.sun.org.apache.bcel.internal.classfile.InnerClasses) : Void;
 	
-	@:overload public function visitInnerClass(inner : com.sun.org.apache.bcel.internal.classfile.InnerClass) : Void;
+	@:overload @:public public function visitInnerClass(inner : com.sun.org.apache.bcel.internal.classfile.InnerClass) : Void;
 	
-	@:overload public function visitDeprecated(attribute : com.sun.org.apache.bcel.internal.classfile.Deprecated) : Void;
+	@:overload @:public public function visitDeprecated(attribute : com.sun.org.apache.bcel.internal.classfile.Deprecated) : Void;
 	
-	@:overload public function visitSignature(attribute : com.sun.org.apache.bcel.internal.classfile.Signature) : Void;
+	@:overload @:public public function visitSignature(attribute : com.sun.org.apache.bcel.internal.classfile.Signature) : Void;
 	
-	@:overload public function visitSourceFile(attribute : com.sun.org.apache.bcel.internal.classfile.SourceFile) : Void;
+	@:overload @:public public function visitSourceFile(attribute : com.sun.org.apache.bcel.internal.classfile.SourceFile) : Void;
 	
-	@:overload public function visitSynthetic(attribute : com.sun.org.apache.bcel.internal.classfile.Synthetic) : Void;
+	@:overload @:public public function visitSynthetic(attribute : com.sun.org.apache.bcel.internal.classfile.Synthetic) : Void;
 	
-	@:overload public function visitUnknown(attribute : com.sun.org.apache.bcel.internal.classfile.Unknown) : Void;
+	@:overload @:public public function visitUnknown(attribute : com.sun.org.apache.bcel.internal.classfile.Unknown) : Void;
 	
 	
 }

@@ -48,7 +48,7 @@ extern interface Connection
 	* @param byteBuffer ...
 	* </p>
 	*/
-	@:overload public function write(byteBuffer : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function write(byteBuffer : java.nio.ByteBuffer) : Void;
 	
 	/**
 	* <p>
@@ -58,7 +58,7 @@ extern interface Connection
 	* @return a EPTFactory with ...
 	* </p>
 	*/
-	@:overload public function getEPTFactory() : com.sun.pept.ept.EPTFactory;
+	@:overload @:public public function getEPTFactory() : com.sun.pept.ept.EPTFactory;
 	
 	/**
 	* <p>
@@ -70,7 +70,7 @@ extern interface Connection
 	* @param byteBuffer ...
 	* </p>
 	*/
-	@:overload public function read(byteBuffer : java.nio.ByteBuffer) : Int;
+	@:overload @:public public function read(byteBuffer : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* <p>
@@ -79,7 +79,7 @@ extern interface Connection
 	*
 	* </p>
 	*/
-	@:overload public function readUntilEnd() : java.nio.ByteBuffer;
+	@:overload @:public public function readUntilEnd() : java.nio.ByteBuffer;
 	
 	
 }

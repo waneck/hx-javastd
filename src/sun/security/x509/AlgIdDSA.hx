@@ -65,24 +65,24 @@ package sun.security.x509;
 extern class AlgIdDSA extends sun.security.x509.AlgorithmId implements java.security.interfaces.DSAParams
 {
 	/** Returns the DSS/DSA parameter "P" */
-	@:overload public function getP() : java.math.BigInteger;
+	@:overload @:public public function getP() : java.math.BigInteger;
 	
 	/** Returns the DSS/DSA parameter "Q" */
-	@:overload public function getQ() : java.math.BigInteger;
+	@:overload @:public public function getQ() : java.math.BigInteger;
 	
 	/** Returns the DSS/DSA parameter "G" */
-	@:overload public function getG() : java.math.BigInteger;
+	@:overload @:public public function getG() : java.math.BigInteger;
 	
 	/**
 	* Default constructor.  The OID and parameters must be
 	* deserialized before this algorithm ID is used.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct an AlgIdDSA from an X.509 encoded byte array.
 	*/
-	@:overload public function new(encodedAlg : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(encodedAlg : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs a DSS/DSA Algorithm ID from unsigned integers that
@@ -93,7 +93,7 @@ extern class AlgIdDSA extends sun.security.x509.AlgorithmId implements java.secu
 	* @param q the DSS/DSA paramter "Q"
 	* @param g the DSS/DSA paramter "G"
 	*/
-	@:overload public function new(p : java.NativeArray<java.StdTypes.Int8>, q : java.NativeArray<java.StdTypes.Int8>, g : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(p : java.NativeArray<java.StdTypes.Int8>, q : java.NativeArray<java.StdTypes.Int8>, g : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs a DSS/DSA Algorithm ID from numeric parameters.
@@ -104,29 +104,29 @@ extern class AlgIdDSA extends sun.security.x509.AlgorithmId implements java.secu
 	* @param q the DSS/DSA paramter "Q"
 	* @param g the DSS/DSA paramter "G"
 	*/
-	@:overload public function new(p : java.math.BigInteger, q : java.math.BigInteger, g : java.math.BigInteger) : Void;
+	@:overload @:public public function new(p : java.math.BigInteger, q : java.math.BigInteger, g : java.math.BigInteger) : Void;
 	
 	/**
 	* Returns "DSA", indicating the Digital Signature Algorithm (DSA) as
 	* defined by the Digital Signature Standard (DSS), FIPS 186.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Parses algorithm parameters P, Q, and G.  They're found
 	* in the "params" member, which never needs to be changed.
 	*/
-	@:overload private function decodeParams() : Void;
+	@:overload @:protected override private function decodeParams() : Void;
 	
 	/*
 	* Returns a formatted string describing the parameters.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/*
 	* Returns a string describing the parameters.
 	*/
-	@:overload private function paramsToString() : String;
+	@:overload @:protected override private function paramsToString() : String;
 	
 	
 }

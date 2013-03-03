@@ -26,13 +26,13 @@ package javax.swing.event;
 extern class ListDataEvent extends java.util.EventObject
 {
 	/** Identifies one or more changes in the lists contents. */
-	public static var CONTENTS_CHANGED(default, null) : Int;
+	@:public @:static @:final public static var CONTENTS_CHANGED(default, null) : Int;
 	
 	/** Identifies the addition of one or more contiguous items to the list */
-	public static var INTERVAL_ADDED(default, null) : Int;
+	@:public @:static @:final public static var INTERVAL_ADDED(default, null) : Int;
 	
 	/** Identifies the removal of one or more contiguous items from the list */
-	public static var INTERVAL_REMOVED(default, null) : Int;
+	@:public @:static @:final public static var INTERVAL_REMOVED(default, null) : Int;
 	
 	/**
 	* Returns the event type. The possible values are:
@@ -44,7 +44,7 @@ extern class ListDataEvent extends java.util.EventObject
 	*
 	* @return an int representing the type value
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Returns the lower index of the range. For a single
@@ -53,7 +53,7 @@ extern class ListDataEvent extends java.util.EventObject
 	*
 	* @return an int representing the lower index value
 	*/
-	@:overload public function getIndex0() : Int;
+	@:overload @:public public function getIndex0() : Int;
 	
 	/**
 	* Returns the upper index of the range. For a single
@@ -61,7 +61,7 @@ extern class ListDataEvent extends java.util.EventObject
 	*
 	* @return an int representing the upper index value
 	*/
-	@:overload public function getIndex1() : Int;
+	@:overload @:public public function getIndex1() : Int;
 	
 	/**
 	* Constructs a ListDataEvent object. If index0 is >
@@ -74,7 +74,7 @@ extern class ListDataEvent extends java.util.EventObject
 	* @param index0  one end of the new interval
 	* @param index1  the other end of the new interval
 	*/
-	@:overload public function new(source : Dynamic, type : Int, index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function new(source : Dynamic, type : Int, index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* Returns a string representation of this ListDataEvent. This method
@@ -86,7 +86,7 @@ extern class ListDataEvent extends java.util.EventObject
 	* @since 1.4
 	* @return  a string representation of this ListDataEvent.
 	*/
-	@:require(java4) @:overload override public function toString() : String;
+	@:require(java4) @:overload @:public override public function toString() : String;
 	
 	
 }

@@ -25,9 +25,9 @@ package sun.misc;
 */
 extern interface JavaIOAccess
 {
-	@:overload public function console() : java.io.Console;
+	@:overload @:public public function console() : java.io.Console;
 	
-	@:overload public function charset() : java.nio.charset.Charset;
+	@:overload @:public public function charset() : java.nio.charset.Charset;
 	
 	
 }

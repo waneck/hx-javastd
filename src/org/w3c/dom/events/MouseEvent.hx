@@ -44,51 +44,51 @@ extern interface MouseEvent extends org.w3c.dom.events.UIEvent
 	* The horizontal coordinate at which the event occurred relative to the
 	* origin of the screen coordinate system.
 	*/
-	@:overload public function getScreenX() : Int;
+	@:overload @:public public function getScreenX() : Int;
 	
 	/**
 	* The vertical coordinate at which the event occurred relative to the
 	* origin of the screen coordinate system.
 	*/
-	@:overload public function getScreenY() : Int;
+	@:overload @:public public function getScreenY() : Int;
 	
 	/**
 	* The horizontal coordinate at which the event occurred relative to the
 	* DOM implementation's client area.
 	*/
-	@:overload public function getClientX() : Int;
+	@:overload @:public public function getClientX() : Int;
 	
 	/**
 	* The vertical coordinate at which the event occurred relative to the DOM
 	* implementation's client area.
 	*/
-	@:overload public function getClientY() : Int;
+	@:overload @:public public function getClientY() : Int;
 	
 	/**
 	* Used to indicate whether the 'ctrl' key was depressed during the firing
 	* of the event.
 	*/
-	@:overload public function getCtrlKey() : Bool;
+	@:overload @:public public function getCtrlKey() : Bool;
 	
 	/**
 	* Used to indicate whether the 'shift' key was depressed during the
 	* firing of the event.
 	*/
-	@:overload public function getShiftKey() : Bool;
+	@:overload @:public public function getShiftKey() : Bool;
 	
 	/**
 	* Used to indicate whether the 'alt' key was depressed during the firing
 	* of the event. On some platforms this key may map to an alternative
 	* key name.
 	*/
-	@:overload public function getAltKey() : Bool;
+	@:overload @:public public function getAltKey() : Bool;
 	
 	/**
 	* Used to indicate whether the 'meta' key was depressed during the firing
 	* of the event. On some platforms this key may map to an alternative
 	* key name.
 	*/
-	@:overload public function getMetaKey() : Bool;
+	@:overload @:public public function getMetaKey() : Bool;
 	
 	/**
 	* During mouse events caused by the depression or release of a mouse
@@ -99,7 +99,7 @@ extern interface MouseEvent extends org.w3c.dom.events.UIEvent
 	* configured for left handed use in which the button actions are
 	* reversed the values are instead read from right to left.
 	*/
-	@:overload public function getButton() : java.StdTypes.Int16;
+	@:overload @:public public function getButton() : java.StdTypes.Int16;
 	
 	/**
 	* Used to identify a secondary <code>EventTarget</code> related to a UI
@@ -108,7 +108,7 @@ extern interface MouseEvent extends org.w3c.dom.events.UIEvent
 	* exited and with the mouseout event to indicate the
 	* <code>EventTarget</code> which the pointing device entered.
 	*/
-	@:overload public function getRelatedTarget() : org.w3c.dom.events.EventTarget;
+	@:overload @:public public function getRelatedTarget() : org.w3c.dom.events.EventTarget;
 	
 	/**
 	* The <code>initMouseEvent</code> method is used to initialize the value
@@ -145,7 +145,7 @@ extern interface MouseEvent extends org.w3c.dom.events.UIEvent
 	* @param relatedTargetArg Specifies the <code>Event</code>'s related
 	*   <code>EventTarget</code>.
 	*/
-	@:overload public function initMouseEvent(typeArg : String, canBubbleArg : Bool, cancelableArg : Bool, viewArg : org.w3c.dom.views.AbstractView, detailArg : Int, screenXArg : Int, screenYArg : Int, clientXArg : Int, clientYArg : Int, ctrlKeyArg : Bool, altKeyArg : Bool, shiftKeyArg : Bool, metaKeyArg : Bool, buttonArg : java.StdTypes.Int16, relatedTargetArg : org.w3c.dom.events.EventTarget) : Void;
+	@:overload @:public public function initMouseEvent(typeArg : String, canBubbleArg : Bool, cancelableArg : Bool, viewArg : org.w3c.dom.views.AbstractView, detailArg : Int, screenXArg : Int, screenYArg : Int, clientXArg : Int, clientYArg : Int, ctrlKeyArg : Bool, altKeyArg : Bool, shiftKeyArg : Bool, metaKeyArg : Bool, buttonArg : java.StdTypes.Int16, relatedTargetArg : org.w3c.dom.events.EventTarget) : Void;
 	
 	
 }

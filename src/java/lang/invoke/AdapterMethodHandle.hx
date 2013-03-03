@@ -33,11 +33,11 @@ package java.lang.invoke;
 }
 @:native('java$lang$invoke$AdapterMethodHandle$AsVarargsCollector') @:internal extern class AdapterMethodHandle_AsVarargsCollector extends java.lang.invoke.AdapterMethodHandle
 {
-	@:overload override public function isVarargsCollector() : Bool;
+	@:overload @:public override public function isVarargsCollector() : Bool;
 	
-	@:overload override public function asFixedArity() : java.lang.invoke.MethodHandle;
+	@:overload @:public override public function asFixedArity() : java.lang.invoke.MethodHandle;
 	
-	@:overload override public function asType(newType : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
+	@:overload @:public override public function asType(newType : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
 	
 	
 }

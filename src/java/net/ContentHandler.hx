@@ -34,7 +34,7 @@ extern class ContentHandler
 	* @return     the object read by the <code>ContentHandler</code>.
 	* @exception  IOException  if an I/O error occurs while reading the object.
 	*/
-	@:overload @:abstract public function getContent(urlc : java.net.URLConnection) : Dynamic;
+	@:overload @:abstract @:public public function getContent(urlc : java.net.URLConnection) : Dynamic;
 	
 	/**
 	* Given a URL connect stream positioned at the beginning of the
@@ -52,7 +52,7 @@ extern class ContentHandler
 	* @exception  IOException  if an I/O error occurs while reading the object.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getContent(urlc : java.net.URLConnection, classes : java.NativeArray<Class<Dynamic>>) : Dynamic;
+	@:require(java3) @:overload @:public public function getContent(urlc : java.net.URLConnection, classes : java.NativeArray<Class<Dynamic>>) : Dynamic;
 	
 	
 }

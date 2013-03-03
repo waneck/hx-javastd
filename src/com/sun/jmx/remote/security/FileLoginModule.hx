@@ -36,7 +36,7 @@ extern class FileLoginModule implements javax.security.auth.spi.LoginModule
 	*                  <code>Configuration</code> for this particular
 	*                  <code>LoginModule</code>.
 	*/
-	@:overload public function initialize(subject : javax.security.auth.Subject, callbackHandler : javax.security.auth.callback.CallbackHandler, sharedState : java.util.Map<String, Dynamic>, options : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function initialize(subject : javax.security.auth.Subject, callbackHandler : javax.security.auth.callback.CallbackHandler, sharedState : java.util.Map<String, Dynamic>, options : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* Begin user authentication (Authentication Phase 1).
@@ -50,7 +50,7 @@ extern class FileLoginModule implements javax.security.auth.spi.LoginModule
 	* @exception LoginException if this <code>LoginModule</code>
 	*          is unable to perform the authentication.
 	*/
-	@:overload public function login() : Bool;
+	@:overload @:public public function login() : Bool;
 	
 	/**
 	* Complete user authentication (Authentication Phase 2).
@@ -72,7 +72,7 @@ extern class FileLoginModule implements javax.security.auth.spi.LoginModule
 	* @return true if this LoginModule's own login and commit
 	*          attempts succeeded, or false otherwise.
 	*/
-	@:overload public function commit() : Bool;
+	@:overload @:public public function commit() : Bool;
 	
 	/**
 	* Abort user authentication (Authentication Phase 2).
@@ -90,7 +90,7 @@ extern class FileLoginModule implements javax.security.auth.spi.LoginModule
 	* @return false if this LoginModule's own login and/or commit attempts
 	*          failed, and true otherwise.
 	*/
-	@:overload public function abort() : Bool;
+	@:overload @:public public function abort() : Bool;
 	
 	/**
 	* Logout a user.
@@ -102,7 +102,7 @@ extern class FileLoginModule implements javax.security.auth.spi.LoginModule
 	* @return true in all cases since this <code>LoginModule</code>
 	*          should not be ignored.
 	*/
-	@:overload public function logout() : Bool;
+	@:overload @:public public function logout() : Bool;
 	
 	
 }

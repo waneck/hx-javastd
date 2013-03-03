@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.monitoring;
 */
 extern class MonitoringManagerFactoryImpl implements com.sun.corba.se.spi.monitoring.MonitoringManagerFactory
 {
-	@:overload @:synchronized public function createMonitoringManager(nameOfTheRoot : String, description : String) : com.sun.corba.se.spi.monitoring.MonitoringManager;
+	@:overload @:public @:synchronized public function createMonitoringManager(nameOfTheRoot : String, description : String) : com.sun.corba.se.spi.monitoring.MonitoringManager;
 	
-	@:overload @:synchronized public function remove(nameOfTheRoot : String) : Void;
+	@:overload @:public @:synchronized public function remove(nameOfTheRoot : String) : Void;
 	
 	
 }

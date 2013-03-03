@@ -43,14 +43,14 @@ extern class BASE64EncoderStream extends java.io.FilterOutputStream
 	* @param bytesPerLine  number of bytes per line. The encoder inserts
 	*                   a CRLF sequence after the specified number of bytes
 	*/
-	@:overload public function new(out : java.io.OutputStream, bytesPerLine : Int) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, bytesPerLine : Int) : Void;
 	
 	/**
 	* Create a BASE64 encoder that encodes the specified input stream.
 	* Inserts the CRLF sequence after outputting 76 bytes.
 	* @param out        the output stream
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Encodes <code>len</code> bytes from the specified
@@ -62,34 +62,34 @@ extern class BASE64EncoderStream extends java.io.FilterOutputStream
 	* @param      len   the number of bytes to write.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Encodes <code>b.length</code> bytes to this output stream.
 	* @param      b   the data to be written.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Encodes the specified <code>byte</code> to this output stream.
 	* @param      c   the <code>byte</code>.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function write(c : Int) : Void;
+	@:overload @:public override public function write(c : Int) : Void;
 	
 	/**
 	* Flushes this output stream and forces any buffered output bytes
 	* to be encoded out to the stream.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* Forces any buffered output bytes to be encoded out to the stream
 	* and closes this output stream
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Base64 encode a byte array.  No line breaks are inserted.
@@ -97,7 +97,7 @@ extern class BASE64EncoderStream extends java.io.FilterOutputStream
 	* in the IMAP AUTHENTICATE protocol, but not to encode the
 	* entire content of a MIME part.
 	*/
-	@:native('encode') @:overload public static function _encode(inbuf : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:native('encode') @:overload @:public @:static public static function _encode(inbuf : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

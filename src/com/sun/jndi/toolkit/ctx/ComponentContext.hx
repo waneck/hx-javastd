@@ -25,30 +25,30 @@ package com.sun.jndi.toolkit.ctx;
 */
 extern class ComponentContext extends com.sun.jndi.toolkit.ctx.PartialCompositeContext
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/* Equivalent methods in Context interface */
-	@:overload @:abstract private function c_lookup(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
+	@:overload @:protected @:abstract private function c_lookup(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
 	
-	@:overload @:abstract private function c_lookupLink(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
+	@:overload @:protected @:abstract private function c_lookupLink(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
 	
-	@:overload @:abstract private function c_list(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected @:abstract private function c_list(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload @:abstract private function c_listBindings(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected @:abstract private function c_listBindings(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload @:abstract private function c_bind(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected @:abstract private function c_bind(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload @:abstract private function c_rebind(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected @:abstract private function c_rebind(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload @:abstract private function c_unbind(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected @:abstract private function c_unbind(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload @:abstract private function c_destroySubcontext(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected @:abstract private function c_destroySubcontext(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload @:abstract private function c_createSubcontext(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.Context;
+	@:overload @:protected @:abstract private function c_createSubcontext(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.Context;
 	
-	@:overload @:abstract private function c_rename(oldname : javax.naming.Name, newname : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected @:abstract private function c_rename(oldname : javax.naming.Name, newname : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload @:abstract private function c_getNameParser(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NameParser;
+	@:overload @:protected @:abstract private function c_getNameParser(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NameParser;
 	
 	/**
 	* Determines which of the first components of 'name' belong
@@ -74,7 +74,7 @@ extern class ComponentContext extends com.sun.jndi.toolkit.ctx.PartialCompositeC
 	* select front components that have a equal sign).
 	* If none conforms, return an empty name.
 	*/
-	@:overload private function p_parseComponent(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : com.sun.jndi.toolkit.ctx.HeadTail;
+	@:overload @:protected private function p_parseComponent(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : com.sun.jndi.toolkit.ctx.HeadTail;
 	
 	/**
 	* Resolves the nns for 'name' when the named context is acting
@@ -106,30 +106,30 @@ extern class ComponentContext extends com.sun.jndi.toolkit.ctx.PartialCompositeC
 	* this.getClass().  Contexts supporting junctions for which this
 	* heuristic is inappropriate should override this method.
 	*/
-	@:overload private function c_resolveIntermediate_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
+	@:overload @:protected private function c_resolveIntermediate_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
 	
 	/* Equivalent of Context Methods for supporting nns */
-	@:overload private function c_lookup_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
+	@:overload @:protected private function c_lookup_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
 	
-	@:overload private function c_lookupLink_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
+	@:overload @:protected private function c_lookupLink_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
 	
-	@:overload private function c_list_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected private function c_list_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload private function c_listBindings_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected private function c_listBindings_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload private function c_bind_nns(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected private function c_bind_nns(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload private function c_rebind_nns(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected private function c_rebind_nns(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload private function c_unbind_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected private function c_unbind_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload private function c_createSubcontext_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.Context;
+	@:overload @:protected private function c_createSubcontext_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.Context;
 	
-	@:overload private function c_destroySubcontext_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected private function c_destroySubcontext_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload private function c_rename_nns(oldname : javax.naming.Name, newname : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected private function c_rename_nns(oldname : javax.naming.Name, newname : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload private function c_getNameParser_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NameParser;
+	@:overload @:protected private function c_getNameParser_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NameParser;
 	
 	/**
 	* Locates the nns using the default policy.  This policy fully
@@ -159,13 +159,13 @@ extern class ComponentContext extends com.sun.jndi.toolkit.ctx.PartialCompositeC
 	* overriding the c_*_nns() methods (which each call this method
 	* by default).
 	*/
-	@:overload private function c_processJunction_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected private function c_processJunction_nns(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	private static var USE_CONTINUATION(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var USE_CONTINUATION(default, null) : java.StdTypes.Int8;
 	
-	private static var TERMINAL_COMPONENT(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var TERMINAL_COMPONENT(default, null) : java.StdTypes.Int8;
 	
-	private static var TERMINAL_NNS_COMPONENT(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var TERMINAL_NNS_COMPONENT(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Determine whether 'name' is a terminal component in
@@ -179,35 +179,35 @@ extern class ComponentContext extends com.sun.jndi.toolkit.ctx.PartialCompositeC
 	*
 	* see test cases at bottom of file.
 	*/
-	@:overload private function p_resolveIntermediate(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : com.sun.jndi.toolkit.ctx.HeadTail;
+	@:overload @:protected private function p_resolveIntermediate(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : com.sun.jndi.toolkit.ctx.HeadTail;
 	
-	@:overload private function isAllEmpty(n : javax.naming.Name) : Bool;
+	@:overload @:protected private function isAllEmpty(n : javax.naming.Name) : Bool;
 	
 	/* implementation for Resolver method */
-	@:overload private function p_resolveToClass(name : javax.naming.Name, contextType : Class<Dynamic>, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.spi.ResolveResult;
+	@:overload @:protected override private function p_resolveToClass(name : javax.naming.Name, contextType : Class<Dynamic>, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.spi.ResolveResult;
 	
 	/* implementations of p_ Context methods */
-	@:overload private function p_lookup(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
+	@:overload @:protected override private function p_lookup(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
 	
-	@:overload private function p_list(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected override private function p_list(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload private function p_listBindings(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected override private function p_listBindings(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload private function p_bind(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function p_bind(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload private function p_rebind(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function p_rebind(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload private function p_unbind(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function p_unbind(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload private function p_destroySubcontext(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function p_destroySubcontext(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload private function p_createSubcontext(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.Context;
+	@:overload @:protected override private function p_createSubcontext(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.Context;
 	
-	@:overload private function p_rename(oldName : javax.naming.Name, newName : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected override private function p_rename(oldName : javax.naming.Name, newName : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload private function p_getNameParser(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NameParser;
+	@:overload @:protected override private function p_getNameParser(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NameParser;
 	
-	@:overload private function p_lookupLink(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
+	@:overload @:protected override private function p_lookupLink(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
 	
 	
 }

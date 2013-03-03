@@ -30,17 +30,17 @@ package com.sun.xml.internal.bind.v2.schemagen;
 	*
 	* Normall this runs recursively until we write out the whole content model.
 	*/
-	@:overload @:abstract private function write(parent : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ContentModelContainer, isOptional : Bool, repeated : Bool) : Void;
+	@:overload @:protected @:abstract private function write(parent : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ContentModelContainer, isOptional : Bool, repeated : Bool) : Void;
 	
 	/**
 	* Writes inside the given complex type.
 	*/
-	@:overload private function write(ct : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TypeDefParticle) : Void;
+	@:overload @:protected private function write(ct : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TypeDefParticle) : Void;
 	
 	/**
 	* Convenience method to write occurrence constraints.
 	*/
-	@:overload @:final private function writeOccurs(o : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Occurs, isOptional : Bool, repeated : Bool) : Void;
+	@:overload @:protected @:final private function writeOccurs(o : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Occurs, isOptional : Bool, repeated : Bool) : Void;
 	
 	
 }
@@ -56,7 +56,7 @@ package com.sun.xml.internal.bind.v2.schemagen;
 */
 @:native('com$sun$xml$internal$bind$v2$schemagen$Tree$Optional') @:internal extern class Tree_Optional extends com.sun.xml.internal.bind.v2.schemagen.Tree
 {
-	@:overload override private function write(parent : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ContentModelContainer, isOptional : Bool, repeated : Bool) : Void;
+	@:overload @:protected override private function write(parent : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ContentModelContainer, isOptional : Bool, repeated : Bool) : Void;
 	
 	
 }
@@ -65,7 +65,7 @@ package com.sun.xml.internal.bind.v2.schemagen;
 */
 @:native('com$sun$xml$internal$bind$v2$schemagen$Tree$Repeated') @:internal extern class Tree_Repeated extends com.sun.xml.internal.bind.v2.schemagen.Tree
 {
-	@:overload override private function write(parent : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ContentModelContainer, isOptional : Bool, repeated : Bool) : Void;
+	@:overload @:protected override private function write(parent : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ContentModelContainer, isOptional : Bool, repeated : Bool) : Void;
 	
 	
 }
@@ -74,7 +74,7 @@ package com.sun.xml.internal.bind.v2.schemagen;
 */
 @:native('com$sun$xml$internal$bind$v2$schemagen$Tree$Group') @:internal extern class Tree_Group extends com.sun.xml.internal.bind.v2.schemagen.Tree
 {
-	@:overload override private function write(parent : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ContentModelContainer, isOptional : Bool, repeated : Bool) : Void;
+	@:overload @:protected override private function write(parent : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ContentModelContainer, isOptional : Bool, repeated : Bool) : Void;
 	
 	
 }

@@ -29,14 +29,14 @@ extern class AudioPlayer extends java.lang.Thread
 	* The default audio player. This audio player is initialized
 	* automatically.
 	*/
-	public static var player(default, null) : sun.audio.AudioPlayer;
+	@:public @:static @:final public static var player(default, null) : sun.audio.AudioPlayer;
 	
 	/**
 	* Start playing a stream. The stream will continue to play
 	* until the stream runs out of data, or it is stopped.
 	* @see AudioPlayer#stop
 	*/
-	@:overload @:synchronized public function start(_in : java.io.InputStream) : Void;
+	@:overload @:public @:synchronized public function start(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Stop playing a stream. The stream will stop playing,
@@ -44,13 +44,13 @@ extern class AudioPlayer extends java.lang.Thread
 	* first place.
 	* @see AudioPlayer#start
 	*/
-	@:overload @:synchronized public function stop(_in : java.io.InputStream) : Void;
+	@:overload @:public @:synchronized public function stop(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Main mixing loop. This is called automatically when the AudioPlayer
 	* is created.
 	*/
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

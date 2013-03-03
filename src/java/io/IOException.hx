@@ -39,7 +39,7 @@ package java.io;
 	* Constructs an {@code IOException} with {@code null}
 	* as its error detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an {@code IOException} with the specified detail message.
@@ -48,7 +48,7 @@ package java.io;
 	*        The detail message (which is saved for later retrieval
 	*        by the {@link #getMessage()} method)
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructs an {@code IOException} with the specified detail message
@@ -69,7 +69,7 @@ package java.io;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs an {@code IOException} with the specified cause and a
@@ -85,7 +85,7 @@ package java.io;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

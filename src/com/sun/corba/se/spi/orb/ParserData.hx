@@ -25,19 +25,19 @@ package com.sun.corba.se.spi.orb;
 */
 extern interface ParserData
 {
-	@:overload public function getPropertyName() : String;
+	@:overload @:public public function getPropertyName() : String;
 	
-	@:overload public function getOperation() : com.sun.corba.se.spi.orb.Operation;
+	@:overload @:public public function getOperation() : com.sun.corba.se.spi.orb.Operation;
 	
-	@:overload public function getFieldName() : String;
+	@:overload @:public public function getFieldName() : String;
 	
-	@:overload public function getDefaultValue() : Dynamic;
+	@:overload @:public public function getDefaultValue() : Dynamic;
 	
-	@:overload public function getTestValue() : Dynamic;
+	@:overload @:public public function getTestValue() : Dynamic;
 	
-	@:overload public function addToParser(parser : com.sun.corba.se.spi.orb.PropertyParser) : Void;
+	@:overload @:public public function addToParser(parser : com.sun.corba.se.spi.orb.PropertyParser) : Void;
 	
-	@:overload public function addToProperties(props : java.util.Properties) : Void;
+	@:overload @:public public function addToProperties(props : java.util.Properties) : Void;
 	
 	
 }

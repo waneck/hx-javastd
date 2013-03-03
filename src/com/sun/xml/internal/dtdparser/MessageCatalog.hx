@@ -33,7 +33,7 @@ extern class MessageCatalog
 	*
 	* @param packageMember Class whose package has localized messages
 	*/
-	@:overload private function new(packageMember : Class<Dynamic>) : Void;
+	@:overload @:protected private function new(packageMember : Class<Dynamic>) : Void;
 	
 	/**
 	* Get a message localized to the specified locale, using the message ID
@@ -49,7 +49,7 @@ extern class MessageCatalog
 	* @param messageId The ID of the message to use.
 	* @return The message, localized as described above.
 	*/
-	@:overload public function getMessage(locale : java.util.Locale, messageId : String) : String;
+	@:overload @:public public function getMessage(locale : java.util.Locale, messageId : String) : String;
 	
 	/**
 	* Format a message localized to the specified locale, using the message
@@ -69,7 +69,7 @@ extern class MessageCatalog
 	* @return The message, localized as described above.
 	* @see java.text.MessageFormat
 	*/
-	@:overload public function getMessage(locale : java.util.Locale, messageId : String, parameters : java.NativeArray<Dynamic>) : String;
+	@:overload @:public public function getMessage(locale : java.util.Locale, messageId : String, parameters : java.NativeArray<Dynamic>) : String;
 	
 	/**
 	* Chooses a client locale to use, using the first language specified in
@@ -89,7 +89,7 @@ extern class MessageCatalog
 	* @return The most preferable supported locale, or null.
 	* @see java.util.Locale
 	*/
-	@:overload public function chooseLocale(languages : java.NativeArray<String>) : java.util.Locale;
+	@:overload @:public public function chooseLocale(languages : java.NativeArray<String>) : java.util.Locale;
 	
 	/**
 	* Returns true iff the specified locale has explicit language support.
@@ -112,7 +112,7 @@ extern class MessageCatalog
 	* @return True iff the language of that locale is supported.
 	* @see java.util.Locale
 	*/
-	@:overload public function isLocaleSupported(localeName : String) : Bool;
+	@:overload @:public public function isLocaleSupported(localeName : String) : Bool;
 	
 	
 }

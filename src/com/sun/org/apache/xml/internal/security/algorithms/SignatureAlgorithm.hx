@@ -22,7 +22,7 @@ package com.sun.org.apache.xml.internal.security.algorithms;
 extern class SignatureAlgorithm extends com.sun.org.apache.xml.internal.security.algorithms.Algorithm
 {
 	/** Field _signatureAlgorithm */
-	private var _signatureAlgorithm : com.sun.org.apache.xml.internal.security.algorithms.SignatureAlgorithmSpi;
+	@:protected private var _signatureAlgorithm : com.sun.org.apache.xml.internal.security.algorithms.SignatureAlgorithmSpi;
 	
 	/**
 	* Constructor SignatureAlgorithm
@@ -31,7 +31,7 @@ extern class SignatureAlgorithm extends com.sun.org.apache.xml.internal.security
 	* @param algorithmURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, algorithmURI : String) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, algorithmURI : String) : Void;
 	
 	/**
 	* Constructor SignatureAlgorithm
@@ -41,7 +41,7 @@ extern class SignatureAlgorithm extends com.sun.org.apache.xml.internal.security
 	* @param HMACOutputLength
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, algorithmURI : String, HMACOutputLength : Int) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, algorithmURI : String, HMACOutputLength : Int) : Void;
 	
 	/**
 	* Constructor SignatureAlgorithm
@@ -50,7 +50,7 @@ extern class SignatureAlgorithm extends com.sun.org.apache.xml.internal.security
 	* @param BaseURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#sign()}
@@ -59,7 +59,7 @@ extern class SignatureAlgorithm extends com.sun.org.apache.xml.internal.security
 	* @return the result of the {@link java.security.Signature#sign()} method
 	* @throws XMLSignatureException
 	*/
-	@:overload public function sign() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function sign() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#getAlgorithm}
@@ -67,14 +67,14 @@ extern class SignatureAlgorithm extends com.sun.org.apache.xml.internal.security
 	*
 	* @return the result of the {@link java.security.Signature#getAlgorithm} method
 	*/
-	@:overload public function getJCEAlgorithmString() : String;
+	@:overload @:public public function getJCEAlgorithmString() : String;
 	
 	/**
 	* Method getJCEProviderName
 	*
 	* @return The Provider of this Signature Alogrithm
 	*/
-	@:overload public function getJCEProviderName() : String;
+	@:overload @:public public function getJCEProviderName() : String;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#update(byte[])}
@@ -83,7 +83,7 @@ extern class SignatureAlgorithm extends com.sun.org.apache.xml.internal.security
 	* @param input
 	* @throws XMLSignatureException
 	*/
-	@:overload public function update(input : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function update(input : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#update(byte)}
@@ -92,7 +92,7 @@ extern class SignatureAlgorithm extends com.sun.org.apache.xml.internal.security
 	* @param input
 	* @throws XMLSignatureException
 	*/
-	@:overload public function update(input : java.StdTypes.Int8) : Void;
+	@:overload @:public public function update(input : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#update(byte[], int, int)}
@@ -103,7 +103,7 @@ extern class SignatureAlgorithm extends com.sun.org.apache.xml.internal.security
 	* @param len
 	* @throws XMLSignatureException
 	*/
-	@:overload public function update(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:public public function update(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#initSign(java.security.PrivateKey)}
@@ -112,7 +112,7 @@ extern class SignatureAlgorithm extends com.sun.org.apache.xml.internal.security
 	* @param signingKey
 	* @throws XMLSignatureException
 	*/
-	@:overload public function initSign(signingKey : java.security.Key) : Void;
+	@:overload @:public public function initSign(signingKey : java.security.Key) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#initSign(java.security.PrivateKey, java.security.SecureRandom)}
@@ -122,7 +122,7 @@ extern class SignatureAlgorithm extends com.sun.org.apache.xml.internal.security
 	* @param secureRandom
 	* @throws XMLSignatureException
 	*/
-	@:overload public function initSign(signingKey : java.security.Key, secureRandom : java.security.SecureRandom) : Void;
+	@:overload @:public public function initSign(signingKey : java.security.Key, secureRandom : java.security.SecureRandom) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#initSign(java.security.PrivateKey)}
@@ -132,7 +132,7 @@ extern class SignatureAlgorithm extends com.sun.org.apache.xml.internal.security
 	* @param algorithmParameterSpec
 	* @throws XMLSignatureException
 	*/
-	@:overload public function initSign(signingKey : java.security.Key, algorithmParameterSpec : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:public public function initSign(signingKey : java.security.Key, algorithmParameterSpec : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#setParameter(java.security.spec.AlgorithmParameterSpec)}
@@ -141,7 +141,7 @@ extern class SignatureAlgorithm extends com.sun.org.apache.xml.internal.security
 	* @param params
 	* @throws XMLSignatureException
 	*/
-	@:overload public function setParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:public public function setParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#initVerify(java.security.PublicKey)}
@@ -150,7 +150,7 @@ extern class SignatureAlgorithm extends com.sun.org.apache.xml.internal.security
 	* @param verificationKey
 	* @throws XMLSignatureException
 	*/
-	@:overload public function initVerify(verificationKey : java.security.Key) : Void;
+	@:overload @:public public function initVerify(verificationKey : java.security.Key) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#verify(byte[])}
@@ -161,20 +161,20 @@ extern class SignatureAlgorithm extends com.sun.org.apache.xml.internal.security
 	*
 	* @throws XMLSignatureException
 	*/
-	@:overload public function verify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public public function verify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/**
 	* Returns the URI representation of Transformation algorithm
 	*
 	* @return the URI representation of Transformation algorithm
 	*/
-	@:overload @:final public function getURI() : String;
+	@:overload @:public @:final public function getURI() : String;
 	
 	/**
 	* Initalizes for this {@link com.sun.org.apache.xml.internal.security.transforms.Transform}
 	*
 	*/
-	@:overload public static function providerInit() : Void;
+	@:overload @:public @:static public static function providerInit() : Void;
 	
 	/**
 	* Registers implementing class of the Transform algorithm with algorithmURI
@@ -184,21 +184,21 @@ extern class SignatureAlgorithm extends com.sun.org.apache.xml.internal.security
 	* @throws AlgorithmAlreadyRegisteredException if specified algorithmURI is already registered
 	* @throws XMLSignatureException
 	*/
-	@:overload public static function register(algorithmURI : String, implementingClass : String) : Void;
+	@:overload @:public @:static public static function register(algorithmURI : String, implementingClass : String) : Void;
 	
 	/**
 	* Method getBaseNamespace
 	*
 	* @return URI of this element
 	*/
-	@:overload override public function getBaseNamespace() : String;
+	@:overload @:public override public function getBaseNamespace() : String;
 	
 	/**
 	* Method getBaseLocalName
 	*
 	* @return Local name
 	*/
-	@:overload override public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

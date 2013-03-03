@@ -25,13 +25,13 @@ package sun.reflect.generics.tree;
 */
 extern class Wildcard implements sun.reflect.generics.tree.TypeArgument
 {
-	@:overload public static function make(ubs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, lbs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>) : sun.reflect.generics.tree.Wildcard;
+	@:overload @:public @:static public static function make(ubs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, lbs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>) : sun.reflect.generics.tree.Wildcard;
 	
-	@:overload public function getUpperBounds() : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>;
+	@:overload @:public public function getUpperBounds() : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>;
 	
-	@:overload public function getLowerBounds() : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>;
+	@:overload @:public public function getLowerBounds() : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>;
 	
-	@:overload public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
+	@:overload @:public public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
 	
 	
 }

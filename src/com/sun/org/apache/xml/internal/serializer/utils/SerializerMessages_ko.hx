@@ -23,7 +23,7 @@ package com.sun.org.apache.xml.internal.serializer.utils;
 */
 extern class SerializerMessages_ko extends java.util.ListResourceBundle
 {
-	@:overload override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:public override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

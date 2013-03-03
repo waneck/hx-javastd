@@ -28,42 +28,42 @@ extern class XMenuWindow extends sun.awt.X11.XBaseMenuWindow
 	/**
 	* @see XBaseMenuWindow.getParentMenuWindow()
 	*/
-	@:overload private function getParentMenuWindow() : sun.awt.X11.XBaseMenuWindow;
+	@:overload @:protected override private function getParentMenuWindow() : sun.awt.X11.XBaseMenuWindow;
 	
 	/**
 	* @see XBaseMenuWindow.map()
 	*/
-	@:overload private function map() : sun.awt.X11.XBaseMenuWindow.XBaseMenuWindow_MappingData;
+	@:overload @:protected override private function map() : sun.awt.X11.XBaseMenuWindow.XBaseMenuWindow_MappingData;
 	
 	/**
 	* @see XBaseMenuWindow.getSubmenuBounds()
 	*/
-	@:overload private function getSubmenuBounds(itemBounds : java.awt.Rectangle, windowSize : java.awt.Dimension) : java.awt.Rectangle;
+	@:overload @:protected override private function getSubmenuBounds(itemBounds : java.awt.Rectangle, windowSize : java.awt.Dimension) : java.awt.Rectangle;
 	
 	/**
 	* It's likely that size of items was changed
 	* invoke resizing of window on eventHandlerThread
 	*/
-	@:overload private function updateSize() : Void;
+	@:overload @:protected override private function updateSize() : Void;
 	
 	/**
 	* Returns size of menu window's caption or null
 	* if window has no caption.
 	* Can be overriden for popup menus and tear-off menus
 	*/
-	@:overload private function getCaptionSize() : java.awt.Dimension;
+	@:overload @:protected private function getCaptionSize() : java.awt.Dimension;
 	
 	/**
 	* Paints menu window's caption.
 	* Can be overriden for popup menus and tear-off menus.
 	* Default implementation does nothing
 	*/
-	@:overload private function paintCaption(g : java.awt.Graphics, rect : java.awt.Rectangle) : Void;
+	@:overload @:protected private function paintCaption(g : java.awt.Graphics, rect : java.awt.Rectangle) : Void;
 	
 	/**
 	* Paints menu window
 	*/
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public public function paint(g : java.awt.Graphics) : Void;
 	
 	
 }
@@ -74,15 +74,15 @@ extern class XMenuWindow extends sun.awt.X11.XBaseMenuWindow
 ************************************************/
 @:native('sun$awt$X11$XMenuWindow$MappingData') @:internal extern class XMenuWindow_MappingData extends sun.awt.X11.XBaseMenuWindow.XBaseMenuWindow_MappingData
 {
-	@:overload public function getCaptionRect() : java.awt.Rectangle;
+	@:overload @:public public function getCaptionRect() : java.awt.Rectangle;
 	
-	@:overload public function getDesiredSize() : java.awt.Dimension;
+	@:overload @:public public function getDesiredSize() : java.awt.Dimension;
 	
-	@:overload public function getShortcutOrigin() : Int;
+	@:overload @:public public function getShortcutOrigin() : Int;
 	
-	@:overload public function getLeftMarkWidth() : Int;
+	@:overload @:public public function getLeftMarkWidth() : Int;
 	
-	@:overload public function getRightMarkOrigin() : Int;
+	@:overload @:public public function getRightMarkOrigin() : Int;
 	
 	
 }

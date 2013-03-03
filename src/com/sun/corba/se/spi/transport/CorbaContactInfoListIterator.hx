@@ -25,9 +25,9 @@ package com.sun.corba.se.spi.transport;
 */
 extern interface CorbaContactInfoListIterator extends com.sun.corba.se.pept.transport.ContactInfoListIterator
 {
-	@:overload public function reportAddrDispositionRetry(contactInfo : com.sun.corba.se.spi.transport.CorbaContactInfo, disposition : java.StdTypes.Int16) : Void;
+	@:overload @:public public function reportAddrDispositionRetry(contactInfo : com.sun.corba.se.spi.transport.CorbaContactInfo, disposition : java.StdTypes.Int16) : Void;
 	
-	@:overload public function reportRedirect(contactInfo : com.sun.corba.se.spi.transport.CorbaContactInfo, forwardedIOR : com.sun.corba.se.spi.ior.IOR) : Void;
+	@:overload @:public public function reportRedirect(contactInfo : com.sun.corba.se.spi.transport.CorbaContactInfo, forwardedIOR : com.sun.corba.se.spi.ior.IOR) : Void;
 	
 	
 }

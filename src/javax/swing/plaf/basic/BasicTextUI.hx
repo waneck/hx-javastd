@@ -28,7 +28,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	/**
 	* Creates a new UI.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates the object to use for a caret.  By default an
@@ -38,7 +38,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*
 	* @return the caret object
 	*/
-	@:overload private function createCaret() : javax.swing.text.Caret;
+	@:overload @:protected private function createCaret() : javax.swing.text.Caret;
 	
 	/**
 	* Creates the object to use for adding highlights.  By default
@@ -48,7 +48,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*
 	* @return the highlighter
 	*/
-	@:overload private function createHighlighter() : javax.swing.text.Highlighter;
+	@:overload @:protected private function createHighlighter() : javax.swing.text.Highlighter;
 	
 	/**
 	* Fetches the name of the keymap that will be installed/used
@@ -58,7 +58,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*
 	* @return the name
 	*/
-	@:overload private function getKeymapName() : String;
+	@:overload @:protected private function getKeymapName() : String;
 	
 	/**
 	* Creates the keymap to use for the text component, and installs
@@ -77,7 +77,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @see #getKeymapName
 	* @see javax.swing.text.JTextComponent
 	*/
-	@:overload private function createKeymap() : javax.swing.text.Keymap;
+	@:overload @:protected private function createKeymap() : javax.swing.text.Keymap;
 	
 	/**
 	* This method gets called when a bound property is changed
@@ -93,7 +93,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*
 	* @param evt the property change event
 	*/
-	@:overload private function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* Gets the name used as a key to look up properties through the
@@ -102,7 +102,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*
 	* @return the name
 	*/
-	@:overload @:abstract private function getPropertyPrefix() : String;
+	@:overload @:protected @:abstract private function getPropertyPrefix() : String;
 	
 	/**
 	* Initializes component properties, such as font, foreground,
@@ -115,7 +115,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @see #uninstallDefaults
 	* @see #installUI
 	*/
-	@:overload private function installDefaults() : Void;
+	@:overload @:protected private function installDefaults() : Void;
 	
 	/**
 	* Sets the component properties that have not been explicitly overridden
@@ -125,21 +125,21 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @see #installDefaults
 	* @see #uninstallUI
 	*/
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected private function uninstallDefaults() : Void;
 	
 	/**
 	* Installs listeners for the UI.
 	*/
-	@:overload private function installListeners() : Void;
+	@:overload @:protected private function installListeners() : Void;
 	
 	/**
 	* Uninstalls listeners for the UI.
 	*/
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected private function uninstallListeners() : Void;
 	
-	@:overload private function installKeyboardActions() : Void;
+	@:overload @:protected private function installKeyboardActions() : Void;
 	
-	@:overload private function uninstallKeyboardActions() : Void;
+	@:overload @:protected private function uninstallKeyboardActions() : Void;
 	
 	/**
 	* Paints a background for the view.  This will only be
@@ -149,7 +149,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*
 	* @param g the graphics context
 	*/
-	@:overload private function paintBackground(g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paintBackground(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Fetches the text component associated with this
@@ -158,7 +158,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*
 	* @return the editor component
 	*/
-	@:overload @:final private function getComponent() : javax.swing.text.JTextComponent;
+	@:overload @:protected @:final private function getComponent() : javax.swing.text.JTextComponent;
 	
 	/**
 	* Flags model changes.
@@ -167,7 +167,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* to represent the default root element of the
 	* associated model.
 	*/
-	@:overload private function modelChanged() : Void;
+	@:overload @:protected private function modelChanged() : Void;
 	
 	/**
 	* Sets the current root of the view hierarchy and calls invalidate().
@@ -176,7 +176,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*
 	* @param v the root view
 	*/
-	@:overload @:final private function setView(v : javax.swing.text.View) : Void;
+	@:overload @:protected @:final private function setView(v : javax.swing.text.View) : Void;
 	
 	/**
 	* Paints the interface safely with a guarantee that
@@ -198,7 +198,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*
 	* @param g the graphics context
 	*/
-	@:overload private function paintSafely(g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paintSafely(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Installs the UI for a component.  This does the following
@@ -224,7 +224,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param c the editor component
 	* @see ComponentUI#installUI
 	*/
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Deinstalls the UI for a component.  This removes the listeners,
@@ -233,7 +233,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param c the editor component
 	* @see ComponentUI#uninstallUI
 	*/
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Superclass paints background in an uncontrollable way
@@ -245,7 +245,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* rendering of the background, although that is not an issue with the
 	* default rendering.
 	*/
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the interface.  This is routed to the
@@ -258,7 +258,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param g the graphics context
 	* @param c the editor component
 	*/
-	@:overload @:final override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public @:final override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Gets the preferred size for the editor component.  If the component
@@ -272,7 +272,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param c the editor component
 	* @return the size
 	*/
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Gets the minimum size for the editor component.
@@ -280,7 +280,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param c the editor component
 	* @return the size
 	*/
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Gets the maximum size for the editor component.
@@ -288,7 +288,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param c the editor component
 	* @return the size
 	*/
-	@:overload override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Gets the allocation to give the root View.  Due
@@ -300,7 +300,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*
 	* @return the bounding box for the root view
 	*/
-	@:overload private function getVisibleEditorRect() : java.awt.Rectangle;
+	@:overload @:protected private function getVisibleEditorRect() : java.awt.Rectangle;
 	
 	/**
 	* Converts the given location in the model to a place in
@@ -315,7 +315,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*   represent a valid location in the associated document
 	* @see TextUI#modelToView
 	*/
-	@:overload override public function modelToView(tc : javax.swing.text.JTextComponent, pos : Int) : java.awt.Rectangle;
+	@:overload @:public override public function modelToView(tc : javax.swing.text.JTextComponent, pos : Int) : java.awt.Rectangle;
 	
 	/**
 	* Converts the given location in the model to a place in
@@ -330,7 +330,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*   represent a valid location in the associated document
 	* @see TextUI#modelToView
 	*/
-	@:overload override public function modelToView(tc : javax.swing.text.JTextComponent, pos : Int, bias : javax.swing.text.Position.Position_Bias) : java.awt.Rectangle;
+	@:overload @:public override public function modelToView(tc : javax.swing.text.JTextComponent, pos : Int, bias : javax.swing.text.Position.Position_Bias) : java.awt.Rectangle;
 	
 	/**
 	* Converts the given place in the view coordinate system
@@ -345,7 +345,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*   -1 if not painted
 	* @see TextUI#viewToModel
 	*/
-	@:overload override public function viewToModel(tc : javax.swing.text.JTextComponent, pt : java.awt.Point) : Int;
+	@:overload @:public override public function viewToModel(tc : javax.swing.text.JTextComponent, pt : java.awt.Point) : Int;
 	
 	/**
 	* Converts the given place in the view coordinate system
@@ -360,12 +360,12 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*   -1 if the component doesn't yet have a positive size.
 	* @see TextUI#viewToModel
 	*/
-	@:overload override public function viewToModel(tc : javax.swing.text.JTextComponent, pt : java.awt.Point, biasReturn : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function viewToModel(tc : javax.swing.text.JTextComponent, pt : java.awt.Point, biasReturn : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getNextVisualPositionFrom(t : javax.swing.text.JTextComponent, pos : Int, b : javax.swing.text.Position.Position_Bias, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function getNextVisualPositionFrom(t : javax.swing.text.JTextComponent, pos : Int, b : javax.swing.text.Position.Position_Bias, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Causes the portion of the view responsible for the
@@ -377,7 +377,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param p1 the end of the range >= p0
 	* @see TextUI#damageRange
 	*/
-	@:overload override public function damageRange(tc : javax.swing.text.JTextComponent, p0 : Int, p1 : Int) : Void;
+	@:overload @:public override public function damageRange(tc : javax.swing.text.JTextComponent, p0 : Int, p1 : Int) : Void;
 	
 	/**
 	* Causes the portion of the view responsible for the
@@ -386,7 +386,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param p0 the beginning of the range >= 0
 	* @param p1 the end of the range >= p0
 	*/
-	@:overload override public function damageRange(t : javax.swing.text.JTextComponent, p0 : Int, p1 : Int, p0Bias : javax.swing.text.Position.Position_Bias, p1Bias : javax.swing.text.Position.Position_Bias) : Void;
+	@:overload @:public override public function damageRange(t : javax.swing.text.JTextComponent, p0 : Int, p1 : Int, p0Bias : javax.swing.text.Position.Position_Bias, p1Bias : javax.swing.text.Position.Position_Bias) : Void;
 	
 	/**
 	* Fetches the EditorKit for the UI.
@@ -395,7 +395,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @return the editor capabilities
 	* @see TextUI#getEditorKit
 	*/
-	@:overload override public function getEditorKit(tc : javax.swing.text.JTextComponent) : javax.swing.text.EditorKit;
+	@:overload @:public override public function getEditorKit(tc : javax.swing.text.JTextComponent) : javax.swing.text.EditorKit;
 	
 	/**
 	* Fetches a View with the allocation of the associated
@@ -415,7 +415,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @return the view
 	* @see TextUI#getRootView
 	*/
-	@:overload override public function getRootView(tc : javax.swing.text.JTextComponent) : javax.swing.text.View;
+	@:overload @:public override public function getRootView(tc : javax.swing.text.JTextComponent) : javax.swing.text.View;
 	
 	/**
 	* Returns the string to be used as the tooltip at the passed in location.
@@ -425,7 +425,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @see javax.swing.text.View#getToolTipText
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getToolTipText(t : javax.swing.text.JTextComponent, pt : java.awt.Point) : String;
+	@:require(java4) @:overload @:public override public function getToolTipText(t : javax.swing.text.JTextComponent, pt : java.awt.Point) : String;
 	
 	/**
 	* Creates a view for an element.
@@ -437,7 +437,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param elem the element
 	* @return the view
 	*/
-	@:overload public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
+	@:overload @:public public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
 	
 	/**
 	* Creates a view for an element.
@@ -451,7 +451,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param p1 the ending offset >= p0
 	* @return the view
 	*/
-	@:overload public function create(elem : javax.swing.text.Element, p0 : Int, p1 : Int) : javax.swing.text.View;
+	@:overload @:public public function create(elem : javax.swing.text.Element, p0 : Int, p1 : Int) : javax.swing.text.View;
 	
 	
 }
@@ -478,7 +478,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* level there are no attributes.  If an attribute is resolved
 	* up the view hierarchy this is the end of the line.
 	*/
-	@:overload override public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public override public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Determines the preferred span for this view along an axis.
@@ -489,7 +489,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*         that is returned, although there is no guarantee.
 	*         The parent may choose to resize or break the view.
 	*/
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the minimum span for this view along an axis.
@@ -500,7 +500,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*         that is returned, although there is no guarantee.
 	*         The parent may choose to resize or break the view.
 	*/
-	@:overload override public function getMinimumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMinimumSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the maximum span for this view along an axis.
@@ -511,7 +511,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*         that is returned, although there is no guarantee.
 	*         The parent may choose to resize or break the view.
 	*/
-	@:overload override public function getMaximumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMaximumSpan(axis : Int) : Single;
 	
 	/**
 	* Specifies that a preference has changed.
@@ -531,7 +531,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param width true if the width preference has changed
 	* @param height true if the height preference has changed
 	*/
-	@:overload override public function preferenceChanged(child : javax.swing.text.View, width : Bool, height : Bool) : Void;
+	@:overload @:public override public function preferenceChanged(child : javax.swing.text.View, width : Bool, height : Bool) : Void;
 	
 	/**
 	* Determines the desired alignment for this view along an axis.
@@ -540,7 +540,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @return the desired alignment, where 0.0 indicates the origin
 	*     and 1.0 the full span away from the origin
 	*/
-	@:overload override public function getAlignment(axis : Int) : Single;
+	@:overload @:public override public function getAlignment(axis : Int) : Single;
 	
 	/**
 	* Renders the view.
@@ -548,14 +548,14 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param g the graphics context
 	* @param allocation the region to render into
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
 	
 	/**
 	* Sets the view parent.
 	*
 	* @param parent the parent view
 	*/
-	@:overload override public function setParent(parent : javax.swing.text.View) : Void;
+	@:overload @:public override public function setParent(parent : javax.swing.text.View) : Void;
 	
 	/**
 	* Returns the number of views in this view.  Since
@@ -565,7 +565,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @return the number of views
 	* @see #getView
 	*/
-	@:overload override public function getViewCount() : Int;
+	@:overload @:public override public function getViewCount() : Int;
 	
 	/**
 	* Gets the n-th view in this container.
@@ -573,7 +573,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param n the number of the view to get
 	* @return the view
 	*/
-	@:overload override public function getView(n : Int) : javax.swing.text.View;
+	@:overload @:public override public function getView(n : Int) : javax.swing.text.View;
 	
 	/**
 	* Returns the child view index representing the given position in
@@ -585,7 +585,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*   -1 if no view represents that position
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getViewIndex(pos : Int, b : javax.swing.text.Position.Position_Bias) : Int;
+	@:require(java3) @:overload @:public override public function getViewIndex(pos : Int, b : javax.swing.text.Position.Position_Bias) : Int;
 	
 	/**
 	* Fetches the allocation for the given child view.
@@ -599,7 +599,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param a  the allocation to this view.
 	* @return the allocation to the child
 	*/
-	@:overload override public function getChildAllocation(index : Int, a : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public override public function getChildAllocation(index : Int, a : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -609,7 +609,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param a the allocated region to render into
 	* @return the bounding box of the given position
 	*/
-	@:overload override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload @:public override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -630,7 +630,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @exception IllegalArgumentException for an invalid bias argument
 	* @see View#viewToModel
 	*/
-	@:overload override public function modelToView(p0 : Int, b0 : javax.swing.text.Position.Position_Bias, p1 : Int, b1 : javax.swing.text.Position.Position_Bias, a : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public override public function modelToView(p0 : Int, b0 : javax.swing.text.Position.Position_Bias, p1 : Int, b1 : javax.swing.text.Position.Position_Bias, a : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -642,7 +642,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @return the location within the model that best represents the
 	*    given point in the view
 	*/
-	@:overload override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Provides a way to determine the next visually represented model
@@ -661,7 +661,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @exception BadLocationException
 	* @exception IllegalArgumentException for an invalid direction
 	*/
-	@:overload override public function getNextVisualPositionFrom(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function getNextVisualPositionFrom(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Gives notification that something was inserted into the document
@@ -671,7 +671,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param a the current allocation of the view
 	* @param f the factory to use to rebuild if the view has children
 	*/
-	@:overload override public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -681,7 +681,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param a the current allocation of the view
 	* @param f the factory to use to rebuild if the view has children
 	*/
-	@:overload override public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -691,35 +691,35 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param a the current allocation of the view
 	* @param f the factory to use to rebuild if the view has children
 	*/
-	@:overload override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Returns the document model underlying the view.
 	*
 	* @return the model
 	*/
-	@:overload override public function getDocument() : javax.swing.text.Document;
+	@:overload @:public override public function getDocument() : javax.swing.text.Document;
 	
 	/**
 	* Returns the starting offset into the model for this view.
 	*
 	* @return the starting offset
 	*/
-	@:overload override public function getStartOffset() : Int;
+	@:overload @:public override public function getStartOffset() : Int;
 	
 	/**
 	* Returns the ending offset into the model for this view.
 	*
 	* @return the ending offset
 	*/
-	@:overload override public function getEndOffset() : Int;
+	@:overload @:public override public function getEndOffset() : Int;
 	
 	/**
 	* Gets the element that this view is mapped to.
 	*
 	* @return the view
 	*/
-	@:overload override public function getElement() : javax.swing.text.Element;
+	@:overload @:public override public function getElement() : javax.swing.text.Element;
 	
 	/**
 	* Breaks this view on the given axis at the given length.
@@ -730,7 +730,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @return the fragment of the view that represents the given span
 	*   if the view can be broken, otherwise null
 	*/
-	@:overload public function breakView(axis : Int, len : Single, a : java.awt.Shape) : javax.swing.text.View;
+	@:overload @:public public function breakView(axis : Int, len : Single, a : java.awt.Shape) : javax.swing.text.View;
 	
 	/**
 	* Determines the resizability of the view along the
@@ -739,7 +739,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param axis may be either X_AXIS or Y_AXIS
 	* @return the weight
 	*/
-	@:overload override public function getResizeWeight(axis : Int) : Int;
+	@:overload @:public override public function getResizeWeight(axis : Int) : Int;
 	
 	/**
 	* Sets the view size.
@@ -747,7 +747,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param width the width
 	* @param height the height
 	*/
-	@:overload override public function setSize(width : Single, height : Single) : Void;
+	@:overload @:public override public function setSize(width : Single, height : Single) : Void;
 	
 	/**
 	* Fetches the container hosting the view.  This is useful for
@@ -757,7 +757,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*
 	* @return the container
 	*/
-	@:overload override public function getContainer() : java.awt.Container;
+	@:overload @:public override public function getContainer() : java.awt.Container;
 	
 	/**
 	* Fetches the factory to be used for building the
@@ -772,7 +772,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*
 	* @return the factory
 	*/
-	@:overload override public function getViewFactory() : javax.swing.text.ViewFactory;
+	@:overload @:public override public function getViewFactory() : javax.swing.text.ViewFactory;
 	
 	
 }
@@ -790,7 +790,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* This method gets called when a bound property is changed.
 	* We are looking for document changes on the editor.
 	*/
-	@:overload @:final public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public @:final public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* The insert notification.  Gets sent to the root of the view structure
@@ -802,7 +802,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*  document.
 	* @see DocumentListener#insertUpdate
 	*/
-	@:overload @:final public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public @:final public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	/**
 	* The remove notification.  Gets sent to the root of the view structure
@@ -814,7 +814,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*  document.
 	* @see DocumentListener#removeUpdate
 	*/
-	@:overload @:final public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public @:final public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	/**
 	* The change notification.  Gets sent to the root of the view structure
@@ -826,7 +826,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*  document.
 	* @see DocumentListener#changedUpdate(DocumentEvent)
 	*/
-	@:overload @:final public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public @:final public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	/**
 	* Adds the specified component with the specified name to
@@ -834,13 +834,13 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param name the component name
 	* @param comp the component to be added
 	*/
-	@:overload public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
 	
 	/**
 	* Removes the specified component from the layout.
 	* @param comp the component to be removed
 	*/
-	@:overload public function removeLayoutComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(comp : java.awt.Component) : Void;
 	
 	/**
 	* Calculates the preferred size dimensions for the specified
@@ -849,7 +849,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*
 	* @see #minimumLayoutSize
 	*/
-	@:overload public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Calculates the minimum size dimensions for the specified
@@ -857,7 +857,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param parent the component to be laid out
 	* @see #preferredLayoutSize
 	*/
-	@:overload public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Lays out the container in the specified panel.  This is
@@ -872,7 +872,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*
 	* @param parent the component which needs to be laid out
 	*/
-	@:overload public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(parent : java.awt.Container) : Void;
 	
 	/**
 	* Adds the specified component to the layout, using the specified
@@ -882,7 +882,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param comp the component to be added
 	* @param constraint  where/how the component is added to the layout.
 	*/
-	@:overload public function addLayoutComponent(comp : java.awt.Component, constraint : Dynamic) : Void;
+	@:overload @:public public function addLayoutComponent(comp : java.awt.Component, constraint : Dynamic) : Void;
 	
 	/**
 	* Returns the maximum size of this component.
@@ -890,7 +890,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @see java.awt.Component#getPreferredSize()
 	* @see LayoutManager
 	*/
-	@:overload public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the alignment along the x axis.  This specifies how
@@ -899,7 +899,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* where 0 represents alignment along the origin, 1 is aligned
 	* the furthest away from the origin, 0.5 is centered, etc.
 	*/
-	@:overload public function getLayoutAlignmentX(target : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentX(target : java.awt.Container) : Single;
 	
 	/**
 	* Returns the alignment along the y axis.  This specifies how
@@ -908,13 +908,13 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* where 0 represents alignment along the origin, 1 is aligned
 	* the furthest away from the origin, 0.5 is centered, etc.
 	*/
-	@:overload public function getLayoutAlignmentY(target : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentY(target : java.awt.Container) : Single;
 	
 	/**
 	* Invalidates the layout, indicating that if the layout manager
 	* has cached information it should be discarded.
 	*/
-	@:overload public function invalidateLayout(target : java.awt.Container) : Void;
+	@:overload @:public public function invalidateLayout(target : java.awt.Container) : Void;
 	
 	
 }
@@ -923,16 +923,16 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 */
 @:native('javax$swing$plaf$basic$BasicTextUI$TextActionWrapper') @:internal extern class BasicTextUI_TextActionWrapper extends javax.swing.text.TextAction
 {
-	@:overload public function new(action : javax.swing.text.TextAction) : Void;
+	@:overload @:public public function new(action : javax.swing.text.TextAction) : Void;
 	
 	/**
 	* The operation to perform when this action is triggered.
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
 	
 }
@@ -941,9 +941,9 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 */
 @:native('javax$swing$plaf$basic$BasicTextUI$FocusAction') @:internal extern class BasicTextUI_FocusAction extends javax.swing.AbstractAction
 {
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
 	
 }
@@ -953,13 +953,13 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 */
 @:native('javax$swing$plaf$basic$BasicTextUI$DragListener') @:internal extern class BasicTextUI_DragListener extends javax.swing.event.MouseInputAdapter implements javax.swing.plaf.basic.DragRecognitionSupport.DragRecognitionSupport_BeforeDrag
 {
-	@:overload public function dragStarting(me : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function dragStarting(me : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Determines if the following are true:
@@ -968,7 +968,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* <li>the press event is located over a selection
 	* </ul>
 	*/
-	@:overload private function isDragPossible(e : java.awt.event.MouseEvent) : Bool;
+	@:overload @:protected private function isDragPossible(e : java.awt.event.MouseEvent) : Bool;
 	
 	
 }
@@ -986,12 +986,12 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*     <li>Lastly, DataFlavor.stringFlavor is searched for.
 	* </ol>
 	*/
-	@:overload private function getImportFlavor(flavors : java.NativeArray<java.awt.datatransfer.DataFlavor>, c : javax.swing.text.JTextComponent) : java.awt.datatransfer.DataFlavor;
+	@:overload @:protected private function getImportFlavor(flavors : java.NativeArray<java.awt.datatransfer.DataFlavor>, c : javax.swing.text.JTextComponent) : java.awt.datatransfer.DataFlavor;
 	
 	/**
 	* Import the given stream data into the text component.
 	*/
-	@:overload private function handleReaderImport(_in : java.io.Reader, c : javax.swing.text.JTextComponent, useRead : Bool) : Void;
+	@:overload @:protected private function handleReaderImport(_in : java.io.Reader, c : javax.swing.text.JTextComponent, useRead : Bool) : Void;
 	
 	/**
 	* This is the type of transfer actions supported by the source.  Some models are
@@ -1005,7 +1005,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*  since exporting data via user gestures is not allowed.  If the text component is
 	*  editable, COPY_OR_MOVE is returned, otherwise just COPY is allowed.
 	*/
-	@:overload override public function getSourceActions(c : javax.swing.JComponent) : Int;
+	@:overload @:public override public function getSourceActions(c : javax.swing.JComponent) : Int;
 	
 	/**
 	* Create a Transferable to use as the source for a data transfer.
@@ -1016,7 +1016,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @return  The representation of the data to be transfered.
 	*
 	*/
-	@:overload override private function createTransferable(comp : javax.swing.JComponent) : java.awt.datatransfer.Transferable;
+	@:overload @:protected override private function createTransferable(comp : javax.swing.JComponent) : java.awt.datatransfer.Transferable;
 	
 	/**
 	* This method is called after data has been exported.  This method should remove
@@ -1027,9 +1027,9 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*               if the action is <code>NONE</code>.
 	* @param action The actual action that was performed.
 	*/
-	@:overload override private function exportDone(source : javax.swing.JComponent, data : java.awt.datatransfer.Transferable, action : Int) : Void;
+	@:overload @:protected override private function exportDone(source : javax.swing.JComponent, data : java.awt.datatransfer.Transferable, action : Int) : Void;
 	
-	@:overload override public function importData(support : javax.swing.TransferHandler.TransferHandler_TransferSupport) : Bool;
+	@:overload @:public override public function importData(support : javax.swing.TransferHandler.TransferHandler_TransferSupport) : Bool;
 	
 	/**
 	* This method causes a transfer to a component from a clipboard or a
@@ -1042,7 +1042,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param t     The data to import
 	* @return  true if the data was inserted into the component, false otherwise.
 	*/
-	@:overload override public function importData(comp : javax.swing.JComponent, t : java.awt.datatransfer.Transferable) : Bool;
+	@:overload @:public override public function importData(comp : javax.swing.JComponent, t : java.awt.datatransfer.Transferable) : Bool;
 	
 	/**
 	* This method indicates if a component would accept an import of the given
@@ -1054,7 +1054,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param flavors  The data formats available
 	* @return  true if the data can be inserted into the component, false otherwise.
 	*/
-	@:overload override public function canImport(comp : javax.swing.JComponent, flavors : java.NativeArray<java.awt.datatransfer.DataFlavor>) : Bool;
+	@:overload @:public override public function canImport(comp : javax.swing.JComponent, flavors : java.NativeArray<java.awt.datatransfer.DataFlavor>) : Bool;
 	
 	
 }
@@ -1073,12 +1073,12 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* If the EditorKit is not for text/plain or text/html, that format
 	* is supported through the "richer flavors" part of BasicTransferable.
 	*/
-	@:overload private function getRicherFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:protected override private function getRicherFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* The only richer format supported is the file list flavor
 	*/
-	@:overload private function getRicherData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
+	@:overload @:protected override private function getRicherData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
 	
 	
 }

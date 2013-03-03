@@ -40,22 +40,22 @@ extern class DOMManifest extends org.jcp.xml.dsig.internal.dom.DOMStructure impl
 	* @throws ClassCastException if <code>references</code> contains any
 	*    entries that are not of type {@link Reference}
 	*/
-	@:overload public function new(references : java.util.List<Dynamic>, id : String) : Void;
+	@:overload @:public public function new(references : java.util.List<Dynamic>, id : String) : Void;
 	
 	/**
 	* Creates a <code>DOMManifest</code> from an element.
 	*
 	* @param manElem a Manifest element
 	*/
-	@:overload public function new(manElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
+	@:overload @:public public function new(manElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
 	
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
-	@:overload public function getReferences() : java.util.List<Dynamic>;
+	@:overload @:public public function getReferences() : java.util.List<Dynamic>;
 	
-	@:overload override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }

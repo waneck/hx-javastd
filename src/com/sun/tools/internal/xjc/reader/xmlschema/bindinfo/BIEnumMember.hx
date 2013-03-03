@@ -31,21 +31,21 @@ extern class BIEnumMember extends com.sun.tools.internal.xjc.reader.xmlschema.bi
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/** Gets the specified class name, or null if not specified. */
-	public var name(default, null) : String;
+	@:public @:final public var name(default, null) : String;
 	
 	/**
 	* Gets the javadoc comment specified in the customization.
 	* Can be null if none is specified.
 	*/
-	public var javadoc(default, null) : String;
+	@:public @:final public var javadoc(default, null) : String;
 	
-	@:overload override public function getName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getName() : javax.xml.namespace.QName;
 	
 	/** Name of this declaration. */
-	public static var NAME(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var NAME(default, null) : javax.xml.namespace.QName;
 	
 	
 }

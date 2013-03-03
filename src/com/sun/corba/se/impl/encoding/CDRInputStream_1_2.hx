@@ -25,23 +25,23 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class CDRInputStream_1_2 extends com.sun.corba.se.impl.encoding.CDRInputStream_1_1
 {
-	private var headerPadding : Bool;
+	@:protected private var headerPadding : Bool;
 	
-	private var restoreHeaderPadding : Bool;
+	@:protected private var restoreHeaderPadding : Bool;
 	
-	@:overload override public function mark(readlimit : Int) : Void;
+	@:overload @:public override public function mark(readlimit : Int) : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload override public function dup() : com.sun.corba.se.impl.encoding.CDRInputStreamBase;
+	@:overload @:public override public function dup() : com.sun.corba.se.impl.encoding.CDRInputStreamBase;
 	
-	@:overload override private function alignAndCheck(align : Int, n : Int) : Void;
+	@:overload @:protected override private function alignAndCheck(align : Int, n : Int) : Void;
 	
-	@:overload override public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:overload @:public override public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	@:overload override public function read_wchar() : java.StdTypes.Char16;
+	@:overload @:public override public function read_wchar() : java.StdTypes.Char16;
 	
-	@:overload override public function read_wstring() : String;
+	@:overload @:public override public function read_wstring() : String;
 	
 	
 }

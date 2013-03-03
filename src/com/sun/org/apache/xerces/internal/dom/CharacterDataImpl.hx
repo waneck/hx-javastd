@@ -20,25 +20,25 @@ package com.sun.org.apache.xerces.internal.dom;
 */
 extern class CharacterDataImpl extends com.sun.org.apache.xerces.internal.dom.ChildNode
 {
-	private var data : String;
+	@:protected private var data : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Factory constructor. */
-	@:overload private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, data : String) : Void;
+	@:overload @:protected private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, data : String) : Void;
 	
 	/** Returns an empty node list. */
-	@:overload override public function getChildNodes() : org.w3c.dom.NodeList;
+	@:overload @:public override public function getChildNodes() : org.w3c.dom.NodeList;
 	
 	/*
 	* returns the content of this node
 	*/
-	@:overload override public function getNodeValue() : String;
+	@:overload @:public override public function getNodeValue() : String;
 	
 	/** Convenience wrapper for calling setNodeValueInternal when
 	* we are not performing a replacement operation
 	*/
-	@:overload private function setNodeValueInternal(value : String) : Void;
+	@:overload @:protected private function setNodeValueInternal(value : String) : Void;
 	
 	/** This function added so that we can distinguish whether
 	*  setNodeValue has been called from some other DOM functions.
@@ -47,13 +47,13 @@ extern class CharacterDataImpl extends com.sun.org.apache.xerces.internal.dom.Ch
 	*  from the high-level functions in CharacterData, and another
 	*  type if the client simply calls setNodeValue(value).
 	*/
-	@:overload private function setNodeValueInternal(value : String, replace : Bool) : Void;
+	@:overload @:protected private function setNodeValueInternal(value : String, replace : Bool) : Void;
 	
 	/**
 	* Sets the content, possibly firing related events,
 	* and updating ranges (via notification to the document)
 	*/
-	@:overload override public function setNodeValue(value : String) : Void;
+	@:overload @:public override public function setNodeValue(value : String) : Void;
 	
 	/**
 	* Retrieve character data currently stored in this node.
@@ -63,13 +63,13 @@ extern class CharacterDataImpl extends com.sun.org.apache.xerces.internal.dom.Ch
 	* getData() will throw this DOMException advising the user to
 	* instead retrieve the data in chunks via the substring() operation.
 	*/
-	@:overload public function getData() : String;
+	@:overload @:public public function getData() : String;
 	
 	/**
 	* Report number of characters currently stored in this node's
 	* data. It may be 0, meaning that the value is an empty string.
 	*/
-	@:overload override public function getLength() : Int;
+	@:overload @:public override public function getLength() : Int;
 	
 	/**
 	* Concatenate additional characters onto the end of the data
@@ -79,7 +79,7 @@ extern class CharacterDataImpl extends com.sun.org.apache.xerces.internal.dom.Ch
 	*
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR) if node is readonly.
 	*/
-	@:overload public function appendData(data : String) : Void;
+	@:overload @:public public function appendData(data : String) : Void;
 	
 	/**
 	* Remove a range of characters from the node's value. Throws a
@@ -93,7 +93,7 @@ extern class CharacterDataImpl extends com.sun.org.apache.xerces.internal.dom.Ch
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR) if node is
 	* readonly.
 	*/
-	@:overload public function deleteData(offset : Int, count : Int) : Void;
+	@:overload @:public public function deleteData(offset : Int, count : Int) : Void;
 	
 	/**
 	* Insert additional characters into the data stored in this node,
@@ -104,7 +104,7 @@ extern class CharacterDataImpl extends com.sun.org.apache.xerces.internal.dom.Ch
 	*
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR) if node is readonly.
 	*/
-	@:overload public function insertData(offset : Int, data : String) : Void;
+	@:overload @:public public function insertData(offset : Int, data : String) : Void;
 	
 	/**
 	* Replace a series of characters at the specified (zero-based)
@@ -130,14 +130,14 @@ extern class CharacterDataImpl extends com.sun.org.apache.xerces.internal.dom.Ch
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR) if node is
 	* readonly.
 	*/
-	@:overload public function replaceData(offset : Int, count : Int, data : String) : Void;
+	@:overload @:public public function replaceData(offset : Int, count : Int, data : String) : Void;
 	
 	/**
 	* Store character data into this node.
 	*
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR) if node is readonly.
 	*/
-	@:overload public function setData(value : String) : Void;
+	@:overload @:public public function setData(value : String) : Void;
 	
 	/**
 	* Substring is more than a convenience function. In some
@@ -159,7 +159,7 @@ extern class CharacterDataImpl extends com.sun.org.apache.xerces.internal.dom.Ch
 	* substring() will throw this DOMException advising the user to
 	* instead retrieve the data in smaller chunks.
 	*/
-	@:overload public function substringData(offset : Int, count : Int) : String;
+	@:overload @:public public function substringData(offset : Int, count : Int) : String;
 	
 	
 }

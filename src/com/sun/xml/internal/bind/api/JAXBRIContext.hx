@@ -35,7 +35,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:require(java0) @:overload private function new() : Void;
+	@:require(java0) @:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates a new {@link JAXBRIContext}.
@@ -63,7 +63,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*      Can be null.
 	* @since JAXB 2.1 EA2
 	*/
-	@:require(java1) @:overload public static function newInstance(classes : java.NativeArray<Class<Dynamic>>, typeRefs : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>, subclassReplacements : java.util.Map<Class<Dynamic>, Class<Dynamic>>, defaultNamespaceRemap : String, c14nSupport : Bool, ar : com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader) : com.sun.xml.internal.bind.api.JAXBRIContext;
+	@:require(java1) @:overload @:public @:static public static function newInstance(classes : java.NativeArray<Class<Dynamic>>, typeRefs : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>, subclassReplacements : java.util.Map<Class<Dynamic>, Class<Dynamic>>, defaultNamespaceRemap : String, c14nSupport : Bool, ar : com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader) : com.sun.xml.internal.bind.api.JAXBRIContext;
 	
 	/**
 	* Creates a new {@link JAXBRIContext}.
@@ -98,13 +98,13 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	* @param supressAccessorWarnings
 	*      See {@link #SUPRESS_ACCESSOR_WARNINGS} for the meaning of this parameter.
 	*/
-	@:overload public static function newInstance(classes : java.NativeArray<Class<Dynamic>>, typeRefs : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>, subclassReplacements : java.util.Map<Class<Dynamic>, Class<Dynamic>>, defaultNamespaceRemap : String, c14nSupport : Bool, ar : com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader, xmlAccessorFactorySupport : Bool, allNillable : Bool, retainPropertyInfo : Bool, supressAccessorWarnings : Bool) : com.sun.xml.internal.bind.api.JAXBRIContext;
+	@:overload @:public @:static public static function newInstance(classes : java.NativeArray<Class<Dynamic>>, typeRefs : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>, subclassReplacements : java.util.Map<Class<Dynamic>, Class<Dynamic>>, defaultNamespaceRemap : String, c14nSupport : Bool, ar : com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader, xmlAccessorFactorySupport : Bool, allNillable : Bool, retainPropertyInfo : Bool, supressAccessorWarnings : Bool) : com.sun.xml.internal.bind.api.JAXBRIContext;
 	
 	/**
 	* @deprecated
 	*      Compatibility with older versions.
 	*/
-	@:overload public static function newInstance(classes : java.NativeArray<Class<Dynamic>>, typeRefs : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>, defaultNamespaceRemap : String, c14nSupport : Bool) : com.sun.xml.internal.bind.api.JAXBRIContext;
+	@:overload @:public @:static public static function newInstance(classes : java.NativeArray<Class<Dynamic>>, typeRefs : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>, defaultNamespaceRemap : String, c14nSupport : Bool) : com.sun.xml.internal.bind.api.JAXBRIContext;
 	
 	/**
 	* Returns true if this context includes a class
@@ -112,7 +112,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*
 	* @since 2.1
 	*/
-	@:require(java1) @:overload @:abstract public function hasSwaRef() : Bool;
+	@:require(java1) @:overload @:public @:abstract public function hasSwaRef() : Bool;
 	
 	/**
 	* If the given object is bound to an element in XML by JAXB,
@@ -125,7 +125,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*
 	* @since 2.0 EA1
 	*/
-	@:require(java0) @:overload @:abstract public function getElementName(o : Dynamic) : javax.xml.namespace.QName;
+	@:require(java0) @:overload @:public @:abstract public function getElementName(o : Dynamic) : javax.xml.namespace.QName;
 	
 	/**
 	* Allows to retrieve the element name based on Class.
@@ -134,7 +134,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	* @throws javax.xml.bind.JAXBException
 	* @since 2.1.10
 	*/
-	@:require(java1) @:overload @:abstract public function getElementName(o : Class<Dynamic>) : javax.xml.namespace.QName;
+	@:require(java1) @:overload @:public @:abstract public function getElementName(o : Class<Dynamic>) : javax.xml.namespace.QName;
 	
 	/**
 	* Creates a mini-marshaller/unmarshaller that can process a {@link TypeReference}.
@@ -144,7 +144,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*
 	* @since 2.0 EA1
 	*/
-	@:require(java0) @:overload @:abstract public function createBridge(ref : com.sun.xml.internal.bind.api.TypeReference) : com.sun.xml.internal.bind.api.Bridge<Dynamic>;
+	@:require(java0) @:overload @:public @:abstract public function createBridge(ref : com.sun.xml.internal.bind.api.TypeReference) : com.sun.xml.internal.bind.api.Bridge<Dynamic>;
 	
 	/**
 	* Creates a new {@link BridgeContext} instance.
@@ -154,7 +154,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*
 	* @since 2.0 EA1
 	*/
-	@:require(java0) @:overload @:abstract public function createBridgeContext() : com.sun.xml.internal.bind.api.BridgeContext;
+	@:require(java0) @:overload @:public @:abstract public function createBridgeContext() : com.sun.xml.internal.bind.api.BridgeContext;
 	
 	/**
 	* Gets a {@link RawAccessor} for the specified element property of the specified wrapper bean class.
@@ -184,7 +184,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*
 	* @since 2.0 EA1
 	*/
-	@:require(java0) @:overload @:abstract public function getElementPropertyAccessor<B, V>(wrapperBean : Class<B>, nsUri : String, localName : String) : com.sun.xml.internal.bind.api.RawAccessor<B, V>;
+	@:require(java0) @:overload @:public @:abstract public function getElementPropertyAccessor<B, V>(wrapperBean : Class<B>, nsUri : String, localName : String) : com.sun.xml.internal.bind.api.RawAccessor<B, V>;
 	
 	/**
 	* Gets the namespace URIs statically known to this {@link JAXBContext}.
@@ -201,7 +201,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*
 	* @since 2.0 EA2
 	*/
-	@:require(java0) @:overload @:abstract public function getKnownNamespaceURIs() : java.util.List<String>;
+	@:require(java0) @:overload @:public @:abstract public function getKnownNamespaceURIs() : java.util.List<String>;
 	
 	/**
 	* Generates the schema documents from the model.
@@ -227,7 +227,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	* @throws IOException
 	*      if {@link SchemaOutputResolver} throws an {@link IOException}.
 	*/
-	@:overload @:abstract override public function generateSchema(outputResolver : javax.xml.bind.SchemaOutputResolver) : Void;
+	@:overload @:public @:abstract override public function generateSchema(outputResolver : javax.xml.bind.SchemaOutputResolver) : Void;
 	
 	/**
 	* Returns the name of the XML Type bound to the
@@ -244,7 +244,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	* @return null
 	*      if the referenced type is an anonymous and therefore doesn't have a name.
 	*/
-	@:overload @:abstract public function getTypeName(tr : com.sun.xml.internal.bind.api.TypeReference) : javax.xml.namespace.QName;
+	@:overload @:public @:abstract public function getTypeName(tr : com.sun.xml.internal.bind.api.TypeReference) : javax.xml.namespace.QName;
 	
 	/**
 	* Gets the build information of the JAXB runtime.
@@ -253,7 +253,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*      may be null, if the runtime is loaded by a class loader that doesn't support
 	*      the access to the manifest informatino.
 	*/
-	@:overload @:abstract public function getBuildId() : String;
+	@:overload @:public @:abstract public function getBuildId() : String;
 	
 	/**
 	* Generates the episode file that represents the binding known to this {@link JAXBContext},
@@ -268,7 +268,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*
 	* @since 2.1
 	*/
-	@:require(java1) @:overload @:abstract public function generateEpisode(output : javax.xml.transform.Result) : Void;
+	@:require(java1) @:overload @:public @:abstract public function generateEpisode(output : javax.xml.transform.Result) : Void;
 	
 	/**
 	* Allows you to access the runtime model information of the JAXB XML/Java binding.
@@ -279,7 +279,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*
 	* @since 2.1.10
 	*/
-	@:require(java1) @:overload @:abstract public function getRuntimeTypeInfoSet() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfoSet;
+	@:require(java1) @:overload @:public @:abstract public function getRuntimeTypeInfoSet() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfoSet;
 	
 	/**
 	* Computes a Java identifier from a local name.
@@ -297,7 +297,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	* @return
 	*      Typically, this method returns "nameLikeThis".
 	*/
-	@:overload public static function mangleNameToVariableName(localName : String) : String;
+	@:overload @:public @:static public static function mangleNameToVariableName(localName : String) : String;
 	
 	/**
 	* Computes a Java class name from a local name.
@@ -308,7 +308,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	* @return
 	*      Typically, this method returns "NameLikeThis".
 	*/
-	@:overload public static function mangleNameToClassName(localName : String) : String;
+	@:overload @:public @:static public static function mangleNameToClassName(localName : String) : String;
 	
 	/**
 	* Computes a Java class name from a local name.
@@ -321,7 +321,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	* @return
 	*      Typically, this method returns "NameLikeThis".
 	*/
-	@:overload public static function mangleNameToPropertyName(localName : String) : String;
+	@:overload @:public @:static public static function mangleNameToPropertyName(localName : String) : String;
 	
 	/**
 	* Gets the parameterization of the given base type.
@@ -349,7 +349,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*      or null if the type is not assignable to the base type.
 	* @since 2.0 FCS
 	*/
-	@:require(java0) @:overload public static function getBaseType(type : java.lang.reflect.Type, baseType : Class<Dynamic>) : java.lang.reflect.Type;
+	@:require(java0) @:overload @:public @:static public static function getBaseType(type : java.lang.reflect.Type, baseType : Class<Dynamic>) : java.lang.reflect.Type;
 	
 	/**
 	* The property that you can specify to {@link JAXBContext#newInstance}
@@ -361,7 +361,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*
 	* @since 2.0 EA1
 	*/
-	@:require(java0) public static var DEFAULT_NAMESPACE_REMAP(default, null) : String;
+	@:require(java0) @:public @:static @:final public static var DEFAULT_NAMESPACE_REMAP(default, null) : String;
 	
 	/**
 	* The property that you can specify to {@link JAXBContext#newInstance}
@@ -377,7 +377,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*
 	* @since 2.0 EA1
 	*/
-	@:require(java0) public static var TYPE_REFERENCES(default, null) : String;
+	@:require(java0) @:public @:static @:final public static var TYPE_REFERENCES(default, null) : String;
 	
 	/**
 	* The property that you can specify to {@link JAXBContext#newInstance}
@@ -387,7 +387,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	* @see C14nSupport_ArchitectureDocument
 	* @since 2.0 EA2
 	*/
-	@:require(java0) public static var CANONICALIZATION_SUPPORT(default, null) : String;
+	@:require(java0) @:public @:static @:final public static var CANONICALIZATION_SUPPORT(default, null) : String;
 	
 	/**
 	* The property that you can specify to {@link JAXBContext#newInstance}
@@ -396,7 +396,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*
 	* @since 2.1.3
 	*/
-	@:require(java1) public static var TREAT_EVERYTHING_NILLABLE(default, null) : String;
+	@:require(java1) @:public @:static @:final public static var TREAT_EVERYTHING_NILLABLE(default, null) : String;
 	
 	/**
 	* The property that you can specify to {@link JAXBContext#newInstance}
@@ -404,14 +404,14 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*
 	* @since 2.1 EA2
 	*/
-	@:require(java1) public static var ANNOTATION_READER(default, null) : String;
+	@:require(java1) @:public @:static @:final public static var ANNOTATION_READER(default, null) : String;
 	
 	/**
 	* Marshaller/Unmarshaller property to enable XOP processing.
 	*
 	* @since 2.0 EA2
 	*/
-	@:require(java0) public static var ENABLE_XOP(default, null) : String;
+	@:require(java0) @:public @:static @:final public static var ENABLE_XOP(default, null) : String;
 	
 	/**
 	* The property that you can specify to {@link JAXBContext#newInstance}
@@ -422,7 +422,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*
 	* @since 2.1 EA2
 	*/
-	@:require(java1) public static var SUBCLASS_REPLACEMENTS(default, null) : String;
+	@:require(java1) @:public @:static @:final public static var SUBCLASS_REPLACEMENTS(default, null) : String;
 	
 	/**
 	* The property that you can specify to {@link JAXBContext#newInstance}
@@ -430,28 +430,28 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*
 	* @since 2.1 EA2
 	*/
-	@:require(java1) public static var XMLACCESSORFACTORY_SUPPORT(default, null) : String;
+	@:require(java1) @:public @:static @:final public static var XMLACCESSORFACTORY_SUPPORT(default, null) : String;
 	
 	/**
 	* Retains references to PropertyInfos.
 	*
 	* @since 2.1.10
 	*/
-	@:require(java1) public static var RETAIN_REFERENCE_TO_INFO(default, null) : String;
+	@:require(java1) @:public @:static @:final public static var RETAIN_REFERENCE_TO_INFO(default, null) : String;
 	
 	/**
 	* Supress security warnings when trying to access fields through reflection.
 	*
 	* @since 2.1.14, 2.2.2
 	*/
-	@:require(java1) public static var SUPRESS_ACCESSOR_WARNINGS(default, null) : String;
+	@:require(java1) @:public @:static @:final public static var SUPRESS_ACCESSOR_WARNINGS(default, null) : String;
 	
 	/**
 	* Improves handling of xsi:type used on leaf properties.
 	*
 	* @since 2.2.3
 	*/
-	@:require(java2) public static var IMPROVED_XSI_TYPE_HANDLING(default, null) : String;
+	@:require(java2) @:public @:static @:final public static var IMPROVED_XSI_TYPE_HANDLING(default, null) : String;
 	
 	
 }

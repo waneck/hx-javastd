@@ -35,14 +35,14 @@ package sun.jvmstat.monitor;
 	/**
 	* Create a MonitorException
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a MonitorException with the given message.
 	*
 	* @param message the message to associate with the exception.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Create a MonitorException with the given message and cause.
@@ -50,14 +50,14 @@ package sun.jvmstat.monitor;
 	* @param message the message to associate with the exception.
 	* @param cause the exception causing this exception.
 	*/
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Create an InstrumentationException with the given cause.
 	*
 	* @param cause the exception causing this exception.
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

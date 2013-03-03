@@ -26,7 +26,7 @@ package sun.security.provider.certpath;
 @:internal extern class ForwardState implements sun.security.provider.certpath.State
 {
 	/* the checker used for revocation status */
-	public var crlChecker : sun.security.provider.certpath.CrlRevocationChecker;
+	@:public public var crlChecker : sun.security.provider.certpath.CrlRevocationChecker;
 	
 	/**
 	* Returns a boolean flag indicating if the state is initial
@@ -34,7 +34,7 @@ package sun.security.provider.certpath;
 	*
 	* @return boolean flag indicating if the state is initial (just starting)
 	*/
-	@:overload public function isInitial() : Bool;
+	@:overload @:public public function isInitial() : Bool;
 	
 	/**
 	* Return boolean flag indicating whether a public key that needs to inherit
@@ -43,26 +43,26 @@ package sun.security.provider.certpath;
 	* @return boolean true if key needing to inherit parameters has been
 	* encountered; false otherwise.
 	*/
-	@:overload public function keyParamsNeeded() : Bool;
+	@:overload @:public public function keyParamsNeeded() : Bool;
 	
 	/**
 	* Display state for debugging purposes
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Initialize the state.
 	*
 	* @param certPathCheckers the list of user-defined PKIXCertPathCheckers
 	*/
-	@:overload public function initState(certPathCheckers : java.util.List<java.security.cert.PKIXCertPathChecker>) : Void;
+	@:overload @:public public function initState(certPathCheckers : java.util.List<java.security.cert.PKIXCertPathChecker>) : Void;
 	
 	/**
 	* Update the state with the next certificate added to the path.
 	*
 	* @param cert the certificate which is used to update the state
 	*/
-	@:overload public function updateState(cert : java.security.cert.X509Certificate) : Void;
+	@:overload @:public public function updateState(cert : java.security.cert.X509Certificate) : Void;
 	
 	/*
 	* Clone current state. The state is cloned as each cert is
@@ -73,7 +73,7 @@ package sun.security.provider.certpath;
 	* because some of them will
 	* not have their contents modified by subsequent calls to updateState.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

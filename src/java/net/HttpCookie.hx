@@ -55,7 +55,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #setVersion
 	*
 	*/
-	@:overload public function new(name : String, value : String) : Void;
+	@:overload @:public public function new(name : String, value : String) : Void;
 	
 	/**
 	* Constructs cookies from set-cookie or set-cookie2 header string.
@@ -74,7 +74,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	*                                  reserved for use by the cookie protocol
 	* @throws NullPointerException     if the header string is <tt>null</tt>
 	*/
-	@:overload public static function parse(header : String) : java.util.List<java.net.HttpCookie>;
+	@:overload @:public @:static public static function parse(header : String) : java.util.List<java.net.HttpCookie>;
 	
 	/**
 	* Reports whether this http cookie has expired or not.
@@ -82,7 +82,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @return  <tt>true</tt> to indicate this http cookie has expired;
 	*          otherwise, <tt>false</tt>
 	*/
-	@:overload public function hasExpired() : Bool;
+	@:overload @:public public function hasExpired() : Bool;
 	
 	/**
 	*
@@ -97,7 +97,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #getComment
 	*
 	*/
-	@:overload public function setComment(purpose : String) : Void;
+	@:overload @:public public function setComment(purpose : String) : Void;
 	
 	/**
 	* Returns the comment describing the purpose of this cookie, or
@@ -109,7 +109,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #setComment
 	*
 	*/
-	@:overload public function getComment() : String;
+	@:overload @:public public function getComment() : String;
 	
 	/**
 	*
@@ -123,7 +123,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #getCommentURL
 	*
 	*/
-	@:overload public function setCommentURL(purpose : String) : Void;
+	@:overload @:public public function setCommentURL(purpose : String) : Void;
 	
 	/**
 	* Returns the comment url describing the purpose of this cookie, or
@@ -135,7 +135,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #setCommentURL
 	*
 	*/
-	@:overload public function getCommentURL() : String;
+	@:overload @:public public function getCommentURL() : String;
 	
 	/**
 	* Specify whether user agent should discard the cookie unconditionally.
@@ -145,7 +145,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	*
 	* @see #getDiscard
 	*/
-	@:overload public function setDiscard(discard : Bool) : Void;
+	@:overload @:public public function setDiscard(discard : Bool) : Void;
 	
 	/**
 	* Return the discard attribute of the cookie
@@ -154,7 +154,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	*
 	* @see #setDiscard
 	*/
-	@:overload public function getDiscard() : Bool;
+	@:overload @:public public function getDiscard() : Bool;
 	
 	/**
 	* Specify the portlist of the cookie, which restricts the port(s)
@@ -164,7 +164,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	*                  comma seperated series of digits
 	* @see #getPortlist
 	*/
-	@:overload public function setPortlist(ports : String) : Void;
+	@:overload @:public public function setPortlist(ports : String) : Void;
 	
 	/**
 	* Return the port list attribute of the cookie
@@ -173,7 +173,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	*          or <tt>null</tt> if none
 	* @see #setPortlist
 	*/
-	@:overload public function getPortlist() : String;
+	@:overload @:public public function getPortlist() : String;
 	
 	/**
 	*
@@ -194,7 +194,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #getDomain
 	*
 	*/
-	@:overload public function setDomain(pattern : String) : Void;
+	@:overload @:public public function setDomain(pattern : String) : Void;
 	
 	/**
 	* Returns the domain name set for this cookie. The form of
@@ -205,7 +205,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #setDomain
 	*
 	*/
-	@:overload public function getDomain() : String;
+	@:overload @:public public function getDomain() : String;
 	
 	/**
 	* Sets the maximum age of the cookie in seconds.
@@ -228,7 +228,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #getMaxAge
 	*
 	*/
-	@:overload public function setMaxAge(expiry : haxe.Int64) : Void;
+	@:overload @:public public function setMaxAge(expiry : haxe.Int64) : Void;
 	
 	/**
 	* Returns the maximum age of the cookie, specified in seconds.
@@ -243,7 +243,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #setMaxAge
 	*
 	*/
-	@:overload public function getMaxAge() : haxe.Int64;
+	@:overload @:public public function getMaxAge() : haxe.Int64;
 	
 	/**
 	* Specifies a path for the cookie
@@ -265,7 +265,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #getPath
 	*
 	*/
-	@:overload public function setPath(uri : String) : Void;
+	@:overload @:public public function setPath(uri : String) : Void;
 	
 	/**
 	* Returns the path on the server
@@ -279,7 +279,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #setPath
 	*
 	*/
-	@:overload public function getPath() : String;
+	@:overload @:public public function getPath() : String;
 	
 	/**
 	* Indicates whether the cookie should only be sent using a secure protocol,
@@ -294,7 +294,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #getSecure
 	*
 	*/
-	@:overload public function setSecure(flag : Bool) : Void;
+	@:overload @:public public function setSecure(flag : Bool) : Void;
 	
 	/**
 	* Returns <code>true</code> if sending this cookie should be
@@ -307,7 +307,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #setSecure
 	*
 	*/
-	@:overload public function getSecure() : Bool;
+	@:overload @:public public function getSecure() : Bool;
 	
 	/**
 	* Returns the name of the cookie. The name cannot be changed after
@@ -316,7 +316,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @return          a <code>String</code> specifying the cookie's name
 	*
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	*
@@ -335,7 +335,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #getValue
 	*
 	*/
-	@:overload public function setValue(newValue : String) : Void;
+	@:overload @:public public function setValue(newValue : String) : Void;
 	
 	/**
 	* Returns the value of the cookie.
@@ -346,7 +346,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #setValue
 	*
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	/**
 	* Returns the version of the protocol this cookie complies
@@ -363,7 +363,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #setVersion
 	*
 	*/
-	@:overload public function getVersion() : Int;
+	@:overload @:public public function getVersion() : Int;
 	
 	/**
 	* Sets the version of the cookie protocol this cookie complies
@@ -380,7 +380,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @see #getVersion
 	*
 	*/
-	@:overload public function setVersion(v : Int) : Void;
+	@:overload @:public public function setVersion(v : Int) : Void;
 	
 	/**
 	* Returns {@code true} if this cookie contains the <i>HttpOnly</i>
@@ -390,7 +390,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @return {@code true} if this cookie should be considered http only.
 	* @see #setHttpOnly(boolean)
 	*/
-	@:overload public function isHttpOnly() : Bool;
+	@:overload @:public public function isHttpOnly() : Bool;
 	
 	/**
 	* Indicates whether the cookie should be considered HTTP Only. If set to
@@ -401,7 +401,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	*                 only visible as part of an HTTP request.
 	* @see #isHttpOnly()
 	*/
-	@:overload public function setHttpOnly(httpOnly : Bool) : Void;
+	@:overload @:public public function setHttpOnly(httpOnly : Bool) : Void;
 	
 	/**
 	* The utility method to check whether a host name is in a domain
@@ -452,7 +452,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @param host      the host name in question
 	* @return          <tt>true</tt> if they domain-matches; <tt>false</tt> if not
 	*/
-	@:overload public static function domainMatches(domain : String, host : String) : Bool;
+	@:overload @:public @:static public static function domainMatches(domain : String, host : String) : Bool;
 	
 	/**
 	* Constructs a cookie header string representation of this cookie,
@@ -461,7 +461,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	*
 	* @return  a string form of the cookie. The string has the defined format
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Test the equality of two http cookies.
@@ -474,7 +474,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	* @return          <tt>true</tt> if 2 http cookies equal to each other;
 	*                  otherwise, <tt>false</tt>
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Return hash code of this http cookie. The result is the sum of
@@ -489,14 +489,14 @@ extern class HttpCookie implements java.lang.Cloneable
 	*
 	* @return          this http cookie's hash code
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Create and return a copy of this object.
 	*
 	* @return          a clone of this http cookie
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }
@@ -506,7 +506,7 @@ extern class HttpCookie implements java.lang.Cloneable
 */
 @:native('java$net$HttpCookie$CookieAttributeAssignor') @:internal extern interface HttpCookie_CookieAttributeAssignor
 {
-	@:overload public function assign(cookie : java.net.HttpCookie, attrName : String, attrValue : String) : Void;
+	@:overload @:public public function assign(cookie : java.net.HttpCookie, attrName : String, attrValue : String) : Void;
 	
 	
 }

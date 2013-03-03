@@ -35,13 +35,13 @@ package com.sun.tools.hat.internal.model;
 */
 extern class JavaValue extends com.sun.tools.hat.internal.model.JavaThing
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload override public function isHeapAllocated() : Bool;
+	@:overload @:public override public function isHeapAllocated() : Bool;
 	
-	@:overload @:abstract override public function toString() : String;
+	@:overload @:abstract @:public override public function toString() : String;
 	
-	@:overload override public function getSize() : Int;
+	@:overload @:public override public function getSize() : Int;
 	
 	
 }

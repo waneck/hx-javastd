@@ -44,29 +44,29 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	/**
 	* JavacMessages object used by this formatter for i18n.
 	*/
-	private var messages : com.sun.tools.javac.util.JavacMessages;
+	@:protected private var messages : com.sun.tools.javac.util.JavacMessages;
 	
 	/**
 	* Current depth level of the disgnostic being formatted
 	* (!= 0 for subdiagnostics)
 	*/
-	private var depth : Int;
+	@:protected private var depth : Int;
 	
 	/**
 	* Initialize an AbstractDiagnosticFormatter by setting its JavacMessages object.
 	* @param messages
 	*/
-	@:overload private function new(messages : com.sun.tools.javac.util.JavacMessages, config : com.sun.tools.javac.util.AbstractDiagnosticFormatter.AbstractDiagnosticFormatter_SimpleConfiguration) : Void;
+	@:overload @:protected private function new(messages : com.sun.tools.javac.util.JavacMessages, config : com.sun.tools.javac.util.AbstractDiagnosticFormatter.AbstractDiagnosticFormatter_SimpleConfiguration) : Void;
 	
-	@:overload public function formatKind(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
+	@:overload @:public public function formatKind(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
 	
-	@:overload public function format(d : com.sun.tools.javac.util.JCDiagnostic, locale : java.util.Locale) : String;
+	@:overload @:public public function format(d : com.sun.tools.javac.util.JCDiagnostic, locale : java.util.Locale) : String;
 	
-	@:overload @:abstract private function formatDiagnostic(d : com.sun.tools.javac.util.JCDiagnostic, locale : java.util.Locale) : String;
+	@:overload @:protected @:abstract private function formatDiagnostic(d : com.sun.tools.javac.util.JCDiagnostic, locale : java.util.Locale) : String;
 	
-	@:overload public function formatPosition(d : com.sun.tools.javac.util.JCDiagnostic, pk : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_PositionKind, l : java.util.Locale) : String;
+	@:overload @:public public function formatPosition(d : com.sun.tools.javac.util.JCDiagnostic, pk : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_PositionKind, l : java.util.Locale) : String;
 	
-	@:overload public function formatSource(d : com.sun.tools.javac.util.JCDiagnostic, fullname : Bool, l : java.util.Locale) : String;
+	@:overload @:public public function formatSource(d : com.sun.tools.javac.util.JCDiagnostic, fullname : Bool, l : java.util.Locale) : String;
 	
 	/**
 	* Format the arguments of a given diagnostic.
@@ -75,7 +75,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param l locale object to be used for i18n
 	* @return a Collection whose elements are the formatted arguments of the diagnostic
 	*/
-	@:overload private function formatArguments(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : java.util.Collection<String>;
+	@:overload @:protected private function formatArguments(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : java.util.Collection<String>;
 	
 	/**
 	* Format a single argument of a given diagnostic.
@@ -85,7 +85,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param l locale object to be used for i18n
 	* @return string representation of the diagnostic argument
 	*/
-	@:overload private function formatArgument(d : com.sun.tools.javac.util.JCDiagnostic, arg : Dynamic, l : java.util.Locale) : String;
+	@:overload @:protected private function formatArgument(d : com.sun.tools.javac.util.JCDiagnostic, arg : Dynamic, l : java.util.Locale) : String;
 	
 	/**
 	* Format an iterable argument of a given diagnostic.
@@ -95,7 +95,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param l locale object to be used for i18n
 	* @return string representation of the diagnostic iterable argument
 	*/
-	@:overload private function formatIterable(d : com.sun.tools.javac.util.JCDiagnostic, it : java.lang.Iterable<Dynamic>, l : java.util.Locale) : String;
+	@:overload @:protected private function formatIterable(d : com.sun.tools.javac.util.JCDiagnostic, it : java.lang.Iterable<Dynamic>, l : java.util.Locale) : String;
 	
 	/**
 	* Format all the subdiagnostics attached to a given diagnostic.
@@ -104,7 +104,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param l locale object to be used for i18n
 	* @return list of all string representations of the subdiagnostics
 	*/
-	@:overload private function formatSubdiagnostics(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : com.sun.tools.javac.util.List<String>;
+	@:overload @:protected private function formatSubdiagnostics(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : com.sun.tools.javac.util.List<String>;
 	
 	/**
 	* Format a subdiagnostics attached to a given diagnostic.
@@ -114,14 +114,14 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param l locale object to be used for i18n
 	* @return string representation of the subdiagnostics
 	*/
-	@:overload private function formatSubdiagnostic(parent : com.sun.tools.javac.util.JCDiagnostic, sub : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
+	@:overload @:protected private function formatSubdiagnostic(parent : com.sun.tools.javac.util.JCDiagnostic, sub : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
 	
 	/** Format the faulty source code line and point to the error.
 	*  @param d The diagnostic for which the error line should be printed
 	*/
-	@:overload private function formatSourceLine(d : com.sun.tools.javac.util.JCDiagnostic, nSpaces : Int) : String;
+	@:overload @:protected private function formatSourceLine(d : com.sun.tools.javac.util.JCDiagnostic, nSpaces : Int) : String;
 	
-	@:overload private function formatLintCategory(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
+	@:overload @:protected private function formatLintCategory(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
 	
 	/**
 	* Converts a String into a locale-dependent representation accordingly to a given locale.
@@ -131,11 +131,11 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param args localization arguments
 	* @return a locale-dependent string
 	*/
-	@:overload private function localize(l : java.util.Locale, key : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:protected private function localize(l : java.util.Locale, key : String, args : java.NativeArray<Dynamic>) : String;
 	
-	@:overload public function displaySource(d : com.sun.tools.javac.util.JCDiagnostic) : Bool;
+	@:overload @:public public function displaySource(d : com.sun.tools.javac.util.JCDiagnostic) : Bool;
 	
-	@:overload public function isRaw() : Bool;
+	@:overload @:public public function isRaw() : Bool;
 	
 	/**
 	* Creates a string with a given amount of empty spaces. Useful for
@@ -144,7 +144,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param nSpaces the amount of spaces to be added to the result string
 	* @return the indentation string
 	*/
-	@:overload private function indentString(nSpaces : Int) : String;
+	@:overload @:protected private function indentString(nSpaces : Int) : String;
 	
 	/**
 	* Indent a string by prepending a given amount of empty spaces to each line
@@ -155,13 +155,13 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* of the string
 	* @return an indented string
 	*/
-	@:overload private function indent(s : String, nSpaces : Int) : String;
+	@:overload @:protected private function indent(s : String, nSpaces : Int) : String;
 	
-	@:overload public function getConfiguration() : com.sun.tools.javac.util.AbstractDiagnosticFormatter.AbstractDiagnosticFormatter_SimpleConfiguration;
+	@:overload @:public public function getConfiguration() : com.sun.tools.javac.util.AbstractDiagnosticFormatter.AbstractDiagnosticFormatter_SimpleConfiguration;
 	
-	@:overload public function getPrinter() : com.sun.tools.javac.code.Printer;
+	@:overload @:public public function getPrinter() : com.sun.tools.javac.code.Printer;
 	
-	@:overload public function setPrinter(printer : com.sun.tools.javac.code.Printer) : Void;
+	@:overload @:public public function setPrinter(printer : com.sun.tools.javac.code.Printer) : Void;
 	
 	/**
 	* An enhanced printer for formatting types/symbols used by
@@ -172,7 +172,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* type referred by a given captured type C contains C itself) which might
 	* lead to infinite loops.
 	*/
-	private var printer : com.sun.tools.javac.code.Printer;
+	@:protected private var printer : com.sun.tools.javac.code.Printer;
 	
 	/**
 	* Whether the source code output for this diagnostic is to be displayed.
@@ -180,7 +180,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param diag diagnostic to be formatted
 	* @return true if the source line this diagnostic refers to is to be displayed
 	*/
-	@:overload public function displaySource(diag : Dynamic) : Bool;
+	@:overload @:public public function displaySource(diag : Dynamic) : Bool;
 	
 	/**
 	* Format the contents of a diagnostics.
@@ -189,7 +189,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param l locale object to be used for i18n
 	* @return a string representing the diagnostic
 	*/
-	@:overload @:public public function format(diag : Dynamic, l : java.util.Locale) : String;
+	@:overload @:public @:public public function format(diag : Dynamic, l : java.util.Locale) : String;
 	
 	/**
 	* Controls the way in which a diagnostic message is displayed.
@@ -198,7 +198,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param l locale object to be used for i18n
 	* @return string representation of the diagnostic message
 	*/
-	@:overload @:public public function formatMessage(diag : Dynamic, l : java.util.Locale) : String;
+	@:overload @:public @:public public function formatMessage(diag : Dynamic, l : java.util.Locale) : String;
 	
 	/**
 	* Controls the way in which a diagnostic kind is displayed.
@@ -207,7 +207,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param l locale object to be used for i18n
 	* @return string representation of the diagnostic prefix
 	*/
-	@:overload @:public public function formatKind(diag : Dynamic, l : java.util.Locale) : String;
+	@:overload @:public @:public public function formatKind(diag : Dynamic, l : java.util.Locale) : String;
 	
 	/**
 	* Controls the way in which a diagnostic position is displayed.
@@ -217,7 +217,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param l locale object to be used for i18n
 	* @return string representation of the diagnostic position
 	*/
-	@:overload @:public public function formatPosition(diag : Dynamic, pk : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_PositionKind, l : java.util.Locale) : String;
+	@:overload @:public @:public public function formatPosition(diag : Dynamic, pk : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_PositionKind, l : java.util.Locale) : String;
 	
 	/**
 	* Controls the way in which a diagnostic source is displayed.
@@ -227,31 +227,31 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param fullname whether the source fullname should be printed
 	* @return string representation of the diagnostic source
 	*/
-	@:overload @:public public function formatSource(diag : Dynamic, fullname : Bool, l : java.util.Locale) : String;
+	@:overload @:public @:public public function formatSource(diag : Dynamic, fullname : Bool, l : java.util.Locale) : String;
 	
 	
 }
 @:native('com$sun$tools$javac$util$AbstractDiagnosticFormatter$SimpleConfiguration') extern class AbstractDiagnosticFormatter_SimpleConfiguration implements com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration
 {
-	private var multilineLimits : java.util.Map<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_MultilineLimit, Null<Int>>;
+	@:protected private var multilineLimits : java.util.Map<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_MultilineLimit, Null<Int>>;
 	
-	private var visibleParts : java.util.EnumSet<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart>;
+	@:protected private var visibleParts : java.util.EnumSet<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart>;
 	
-	private var caretEnabled : Bool;
+	@:protected private var caretEnabled : Bool;
 	
-	@:overload public function new(parts : java.util.Set<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart>) : Void;
+	@:overload @:public public function new(parts : java.util.Set<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart>) : Void;
 	
-	@:overload public function new(options : com.sun.tools.javac.util.Options, parts : java.util.Set<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart>) : Void;
+	@:overload @:public public function new(options : com.sun.tools.javac.util.Options, parts : java.util.Set<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart>) : Void;
 	
-	@:overload public function getMultilineLimit(limit : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_MultilineLimit) : Int;
+	@:overload @:public public function getMultilineLimit(limit : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_MultilineLimit) : Int;
 	
-	@:overload public function getVisible() : java.util.EnumSet<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart>;
+	@:overload @:public public function getVisible() : java.util.EnumSet<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart>;
 	
-	@:overload public function setMultilineLimit(limit : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_MultilineLimit, value : Int) : Void;
+	@:overload @:public public function setMultilineLimit(limit : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_MultilineLimit, value : Int) : Void;
 	
-	@:overload public function setVisible(diagParts : java.util.Set<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart>) : Void;
+	@:overload @:public public function setVisible(diagParts : java.util.Set<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart>) : Void;
 	
-	@:overload public function setVisiblePart(diagParts : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart, enabled : Bool) : Void;
+	@:overload @:public public function setVisiblePart(diagParts : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart, enabled : Bool) : Void;
 	
 	/**
 	* Shows a '^' sign under the source line displayed by the formatter
@@ -259,14 +259,14 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	*
 	* @param caretEnabled if true enables caret
 	*/
-	@:overload public function setCaretEnabled(caretEnabled : Bool) : Void;
+	@:overload @:public public function setCaretEnabled(caretEnabled : Bool) : Void;
 	
 	/**
 	* Tells whether the caret display is active or not.
 	*
 	* @param caretEnabled if true the caret is enabled
 	*/
-	@:overload public function isCaretEnabled() : Bool;
+	@:overload @:public public function isCaretEnabled() : Bool;
 	
 	
 }

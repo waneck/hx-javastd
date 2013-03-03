@@ -32,7 +32,7 @@ extern class MenuShortcut implements java.io.Serializable
 	* this key were pressed.
 	* @see java.awt.event.KeyEvent
 	**/
-	@:overload public function new(key : Int) : Void;
+	@:overload @:public public function new(key : Int) : Void;
 	
 	/**
 	* Constructs a new MenuShortcut for the specified virtual keycode.
@@ -43,7 +43,7 @@ extern class MenuShortcut implements java.io.Serializable
 	* with the SHIFT key down.
 	* @see java.awt.event.KeyEvent
 	**/
-	@:overload public function new(key : Int, useShiftModifier : Bool) : Void;
+	@:overload @:public public function new(key : Int, useShiftModifier : Bool) : Void;
 	
 	/**
 	* Returns the raw keycode of this MenuShortcut.
@@ -51,7 +51,7 @@ extern class MenuShortcut implements java.io.Serializable
 	* @see java.awt.event.KeyEvent
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getKey() : Int;
+	@:require(java1) @:overload @:public public function getKey() : Int;
 	
 	/**
 	* Returns whether this MenuShortcut must be invoked using the SHIFT key.
@@ -59,7 +59,7 @@ extern class MenuShortcut implements java.io.Serializable
 	* SHIFT key, <code>false</code> otherwise.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function usesShiftModifier() : Bool;
+	@:require(java1) @:overload @:public public function usesShiftModifier() : Bool;
 	
 	/**
 	* Returns whether this MenuShortcut is the same as another:
@@ -70,7 +70,7 @@ extern class MenuShortcut implements java.io.Serializable
 	* <code>false</code> otherwise.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function equals(s : java.awt.MenuShortcut) : Bool;
+	@:require(java1) @:overload @:public public function equals(s : java.awt.MenuShortcut) : Bool;
 	
 	/**
 	* Returns whether this MenuShortcut is the same as another:
@@ -81,21 +81,21 @@ extern class MenuShortcut implements java.io.Serializable
 	* <code>false</code> otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function equals(obj : Dynamic) : Bool;
+	@:require(java2) @:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hashcode for this MenuShortcut.
 	* @return the hashcode for this MenuShortcut.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function hashCode() : Int;
+	@:require(java2) @:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns an internationalized description of the MenuShortcut.
 	* @return a string representation of this MenuShortcut.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function toString() : String;
+	@:require(java1) @:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the parameter string representing the state of this
@@ -103,7 +103,7 @@ extern class MenuShortcut implements java.io.Serializable
 	* @return    the parameter string of this MenuShortcut.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload private function paramString() : String;
+	@:require(java1) @:overload @:protected private function paramString() : String;
 	
 	
 }

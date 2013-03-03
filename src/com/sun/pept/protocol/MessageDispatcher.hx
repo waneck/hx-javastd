@@ -48,7 +48,7 @@ extern interface MessageDispatcher
 	* @param messageInfo ...
 	* </p>
 	*/
-	@:overload public function send(messageInfo : com.sun.pept.ept.MessageInfo) : Void;
+	@:overload @:public public function send(messageInfo : com.sun.pept.ept.MessageInfo) : Void;
 	
 	/**
 	* <p>
@@ -60,7 +60,7 @@ extern interface MessageDispatcher
 	* @param messageInfo ...
 	* </p>
 	*/
-	@:overload public function receive(messageInfo : com.sun.pept.ept.MessageInfo) : Void;
+	@:overload @:public public function receive(messageInfo : com.sun.pept.ept.MessageInfo) : Void;
 	
 	
 }

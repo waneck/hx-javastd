@@ -29,31 +29,31 @@ package com.sun.tools.internal.ws.processor.model;
 */
 extern class Service extends com.sun.tools.internal.ws.processor.model.ModelObject
 {
-	@:overload public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, javaInterface : com.sun.tools.internal.ws.processor.model.java.JavaInterface, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, javaInterface : com.sun.tools.internal.ws.processor.model.java.JavaInterface, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function setName(n : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setName(n : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function addPort(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
+	@:overload @:public public function addPort(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
 	
-	@:overload public function getPortByName(n : javax.xml.namespace.QName) : com.sun.tools.internal.ws.processor.model.Port;
-	
-	/* serialization */
-	@:overload public function getPorts() : java.util.List<com.sun.tools.internal.ws.processor.model.Port>;
+	@:overload @:public public function getPortByName(n : javax.xml.namespace.QName) : com.sun.tools.internal.ws.processor.model.Port;
 	
 	/* serialization */
-	@:overload public function setPorts(m : java.util.List<com.sun.tools.internal.ws.processor.model.Port>) : Void;
+	@:overload @:public public function getPorts() : java.util.List<com.sun.tools.internal.ws.processor.model.Port>;
 	
-	@:overload public function getJavaIntf() : com.sun.tools.internal.ws.processor.model.java.JavaInterface;
+	/* serialization */
+	@:overload @:public public function setPorts(m : java.util.List<com.sun.tools.internal.ws.processor.model.Port>) : Void;
 	
-	@:overload public function getJavaInterface() : com.sun.tools.internal.ws.processor.model.java.JavaInterface;
+	@:overload @:public public function getJavaIntf() : com.sun.tools.internal.ws.processor.model.java.JavaInterface;
 	
-	@:overload public function setJavaInterface(i : com.sun.tools.internal.ws.processor.model.java.JavaInterface) : Void;
+	@:overload @:public public function getJavaInterface() : com.sun.tools.internal.ws.processor.model.java.JavaInterface;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
+	@:overload @:public public function setJavaInterface(i : com.sun.tools.internal.ws.processor.model.java.JavaInterface) : Void;
+	
+	@:overload @:public override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
 	
 	
 }

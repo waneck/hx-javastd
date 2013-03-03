@@ -78,41 +78,41 @@ package com.sun.org.apache.bcel.internal.util;
 */
 extern class SyntheticRepository implements com.sun.org.apache.bcel.internal.util.Repository
 {
-	@:overload public static function getInstance() : com.sun.org.apache.bcel.internal.util.SyntheticRepository;
+	@:overload @:public @:static public static function getInstance() : com.sun.org.apache.bcel.internal.util.SyntheticRepository;
 	
-	@:overload public static function getInstance(classPath : com.sun.org.apache.bcel.internal.util.ClassPath) : com.sun.org.apache.bcel.internal.util.SyntheticRepository;
+	@:overload @:public @:static public static function getInstance(classPath : com.sun.org.apache.bcel.internal.util.ClassPath) : com.sun.org.apache.bcel.internal.util.SyntheticRepository;
 	
 	/**
 	* Store a new JavaClass instance into this Repository.
 	*/
-	@:overload public function storeClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
+	@:overload @:public public function storeClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
 	
 	/**
 	* Remove class from repository
 	*/
-	@:overload public function removeClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
+	@:overload @:public public function removeClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
 	
 	/**
 	* Find an already defined (cached) JavaClass object by name.
 	*/
-	@:overload public function findClass(className : String) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function findClass(className : String) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
 	/**
 	* Load a JavaClass object for the given class name using
 	* the CLASSPATH environment variable.
 	*/
-	@:overload public function loadClass(className : String) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function loadClass(className : String) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
 	/**
 	* Try to find class source via getResourceAsStream().
 	* @see Class
 	* @return JavaClass object for given runtime class
 	*/
-	@:overload public function loadClass(clazz : Class<Dynamic>) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function loadClass(clazz : Class<Dynamic>) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
 	/** Clear all entries from cache.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

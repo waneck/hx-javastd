@@ -7,13 +7,13 @@ package org.omg.CosNaming;
 */
 extern class Binding implements org.omg.CORBA.portable.IDLEntity
 {
-	public var binding_name : java.NativeArray<org.omg.CosNaming.NameComponent>;
+	@:public public var binding_name : java.NativeArray<org.omg.CosNaming.NameComponent>;
 	
-	public var binding_type : org.omg.CosNaming.BindingType;
+	@:public public var binding_type : org.omg.CosNaming.BindingType;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_binding_name : java.NativeArray<org.omg.CosNaming.NameComponent>, _binding_type : org.omg.CosNaming.BindingType) : Void;
+	@:overload @:public public function new(_binding_name : java.NativeArray<org.omg.CosNaming.NameComponent>, _binding_type : org.omg.CosNaming.BindingType) : Void;
 	
 	
 }

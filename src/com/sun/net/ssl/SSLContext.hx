@@ -35,7 +35,7 @@ extern class SSLContext
 	* @param provider the provider
 	* @param algorithm the algorithm
 	*/
-	@:overload private function new(contextSpi : javax.net.ssl.SSLContextSpi, provider : java.security.Provider, protocol : String) : Void;
+	@:overload @:protected private function new(contextSpi : javax.net.ssl.SSLContextSpi, provider : java.security.Provider, protocol : String) : Void;
 	
 	/**
 	* Generates a <code>SSLContext</code> object that implements the
@@ -49,7 +49,7 @@ extern class SSLContext
 	* available in the default provider package or any of the other provider
 	* packages that were searched.
 	*/
-	@:overload public static function getInstance(protocol : String) : com.sun.net.ssl.SSLContext;
+	@:overload @:public @:static public static function getInstance(protocol : String) : com.sun.net.ssl.SSLContext;
 	
 	/**
 	* Generates a <code>SSLContext</code> object that implements the
@@ -65,7 +65,7 @@ extern class SSLContext
 	* @exception NoSuchProviderException if the specified provider has not
 	* been configured.
 	*/
-	@:overload public static function getInstance(protocol : String, provider : String) : com.sun.net.ssl.SSLContext;
+	@:overload @:public @:static public static function getInstance(protocol : String, provider : String) : com.sun.net.ssl.SSLContext;
 	
 	/**
 	* Generates a <code>SSLContext</code> object that implements the
@@ -79,7 +79,7 @@ extern class SSLContext
 	* @exception NoSuchAlgorithmException if the specified protocol is not
 	* available from the specified provider.
 	*/
-	@:overload public static function getInstance(protocol : String, provider : java.security.Provider) : com.sun.net.ssl.SSLContext;
+	@:overload @:public @:static public static function getInstance(protocol : String, provider : java.security.Provider) : com.sun.net.ssl.SSLContext;
 	
 	/**
 	* Returns the protocol name of this <code>SSLContext</code> object.
@@ -90,14 +90,14 @@ extern class SSLContext
 	*
 	* @return the protocol name of this <code>SSLContext</code> object.
 	*/
-	@:overload @:final public function getProtocol() : String;
+	@:overload @:public @:final public function getProtocol() : String;
 	
 	/**
 	* Returns the provider of this <code>SSLContext</code> object.
 	*
 	* @return the provider of this <code>SSLContext</code> object
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Initializes this context. Either of the first two parameters
@@ -110,7 +110,7 @@ extern class SSLContext
 	* @param tm the sources of peer authentication trust decisions or null
 	* @param random the source of randomness for this generator or null
 	*/
-	@:overload @:final public function init(km : java.NativeArray<javax.net.ssl.KeyManager>, tm : java.NativeArray<javax.net.ssl.TrustManager>, random : java.security.SecureRandom) : Void;
+	@:overload @:public @:final public function init(km : java.NativeArray<javax.net.ssl.KeyManager>, tm : java.NativeArray<javax.net.ssl.TrustManager>, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Returns a <code>SocketFactory</code> object for this
@@ -118,7 +118,7 @@ extern class SSLContext
 	*
 	* @return the factory
 	*/
-	@:overload @:final public function getSocketFactory() : javax.net.ssl.SSLSocketFactory;
+	@:overload @:public @:final public function getSocketFactory() : javax.net.ssl.SSLSocketFactory;
 	
 	/**
 	* Returns a <code>ServerSocketFactory</code> object for
@@ -126,7 +126,7 @@ extern class SSLContext
 	*
 	* @return the factory
 	*/
-	@:overload @:final public function getServerSocketFactory() : javax.net.ssl.SSLServerSocketFactory;
+	@:overload @:public @:final public function getServerSocketFactory() : javax.net.ssl.SSLServerSocketFactory;
 	
 	
 }

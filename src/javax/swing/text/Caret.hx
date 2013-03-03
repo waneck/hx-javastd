@@ -33,7 +33,7 @@ extern interface Caret
 	*
 	* @param c the JTextComponent
 	*/
-	@:overload public function install(c : javax.swing.text.JTextComponent) : Void;
+	@:overload @:public public function install(c : javax.swing.text.JTextComponent) : Void;
 	
 	/**
 	* Called when the UI is being removed from the
@@ -42,14 +42,14 @@ extern interface Caret
 	*
 	* @param c the JTextComponent
 	*/
-	@:overload public function deinstall(c : javax.swing.text.JTextComponent) : Void;
+	@:overload @:public public function deinstall(c : javax.swing.text.JTextComponent) : Void;
 	
 	/**
 	* Renders the caret. This method is called by UI classes.
 	*
 	* @param g the graphics context
 	*/
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Adds a listener to track whenever the caret position
@@ -57,21 +57,21 @@ extern interface Caret
 	*
 	* @param l the change listener
 	*/
-	@:overload public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Removes a listener that was tracking caret position changes.
 	*
 	* @param l the change listener
 	*/
-	@:overload public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Determines if the caret is currently visible.
 	*
 	* @return true if the caret is visible else false
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
 	/**
 	* Sets the visibility of the caret.
@@ -79,14 +79,14 @@ extern interface Caret
 	* @param v  true if the caret should be shown,
 	*  and false if the caret should be hidden
 	*/
-	@:overload public function setVisible(v : Bool) : Void;
+	@:overload @:public public function setVisible(v : Bool) : Void;
 	
 	/**
 	* Determines if the selection is currently visible.
 	*
 	* @return true if the caret is visible else false
 	*/
-	@:overload public function isSelectionVisible() : Bool;
+	@:overload @:public public function isSelectionVisible() : Bool;
 	
 	/**
 	* Sets the visibility of the selection
@@ -94,7 +94,7 @@ extern interface Caret
 	* @param v  true if the caret should be shown,
 	*  and false if the caret should be hidden
 	*/
-	@:overload public function setSelectionVisible(v : Bool) : Void;
+	@:overload @:public public function setSelectionVisible(v : Bool) : Void;
 	
 	/**
 	* Set the current caret visual location.  This can be used when
@@ -108,7 +108,7 @@ extern interface Caret
 	* @param p  the Point to use for the saved position.  This
 	*   can be null to indicate there is no visual location.
 	*/
-	@:overload public function setMagicCaretPosition(p : java.awt.Point) : Void;
+	@:overload @:public public function setMagicCaretPosition(p : java.awt.Point) : Void;
 	
 	/**
 	* Gets the current caret visual location.
@@ -116,7 +116,7 @@ extern interface Caret
 	* @return the visual position.
 	* @see #setMagicCaretPosition
 	*/
-	@:overload public function getMagicCaretPosition() : java.awt.Point;
+	@:overload @:public public function getMagicCaretPosition() : java.awt.Point;
 	
 	/**
 	* Sets the blink rate of the caret.  This determines if
@@ -126,7 +126,7 @@ extern interface Caret
 	* @param rate  the delay in milliseconds >= 0.  If this is
 	*  zero the caret will not blink.
 	*/
-	@:overload public function setBlinkRate(rate : Int) : Void;
+	@:overload @:public public function setBlinkRate(rate : Int) : Void;
 	
 	/**
 	* Gets the blink rate of the caret.  This determines if
@@ -136,14 +136,14 @@ extern interface Caret
 	* @return the delay in milliseconds >= 0.  If this is
 	*  zero the caret will not blink.
 	*/
-	@:overload public function getBlinkRate() : Int;
+	@:overload @:public public function getBlinkRate() : Int;
 	
 	/**
 	* Fetches the current position of the caret.
 	*
 	* @return the position >= 0
 	*/
-	@:overload public function getDot() : Int;
+	@:overload @:public public function getDot() : Int;
 	
 	/**
 	* Fetches the current position of the mark.  If there
@@ -152,7 +152,7 @@ extern interface Caret
 	*
 	* @return the position >= 0
 	*/
-	@:overload public function getMark() : Int;
+	@:overload @:public public function getMark() : Int;
 	
 	/**
 	* Sets the caret position to some position.  This
@@ -164,7 +164,7 @@ extern interface Caret
 	*
 	* @param dot  the new position to set the caret to
 	*/
-	@:overload public function setDot(dot : Int) : Void;
+	@:overload @:public public function setDot(dot : Int) : Void;
 	
 	/**
 	* Moves the caret position (dot) to some other position,
@@ -173,7 +173,7 @@ extern interface Caret
 	*
 	* @param dot  the new position to move the caret to >= 0
 	*/
-	@:overload public function moveDot(dot : Int) : Void;
+	@:overload @:public public function moveDot(dot : Int) : Void;
 	
 	
 }

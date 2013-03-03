@@ -25,11 +25,11 @@ package sun.net.sdp;
 */
 extern class SdpProvider extends sun.net.NetHooks.NetHooks_Provider
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function implBeforeTcpBind(fdObj : java.io.FileDescriptor, address : java.net.InetAddress, port : Int) : Void;
+	@:overload @:public override public function implBeforeTcpBind(fdObj : java.io.FileDescriptor, address : java.net.InetAddress, port : Int) : Void;
 	
-	@:overload override public function implBeforeTcpConnect(fdObj : java.io.FileDescriptor, address : java.net.InetAddress, port : Int) : Void;
+	@:overload @:public override public function implBeforeTcpConnect(fdObj : java.io.FileDescriptor, address : java.net.InetAddress, port : Int) : Void;
 	
 	
 }
@@ -48,13 +48,13 @@ extern class SdpProvider extends sun.net.NetHooks.NetHooks_Provider
 }
 @:native('sun$net$sdp$SdpProvider$PortRangeRule') @:internal extern class SdpProvider_PortRangeRule implements sun.net.sdp.SdpProvider.SdpProvider_Rule
 {
-	@:overload public function match(action : sun.net.sdp.SdpProvider.SdpProvider_Action, address : java.net.InetAddress, port : Int) : Bool;
+	@:overload @:public public function match(action : sun.net.sdp.SdpProvider.SdpProvider_Action, address : java.net.InetAddress, port : Int) : Bool;
 	
 	
 }
 @:native('sun$net$sdp$SdpProvider$AddressPortRangeRule') @:internal extern class SdpProvider_AddressPortRangeRule extends sun.net.sdp.SdpProvider.SdpProvider_PortRangeRule
 {
-	@:overload override public function match(action : sun.net.sdp.SdpProvider.SdpProvider_Action, address : java.net.InetAddress, port : Int) : Bool;
+	@:overload @:public override public function match(action : sun.net.sdp.SdpProvider.SdpProvider_Action, address : java.net.InetAddress, port : Int) : Bool;
 	
 	
 }

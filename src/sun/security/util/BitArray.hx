@@ -28,7 +28,7 @@ extern class BitArray
 	/**
 	* Creates a BitArray of the specified size, initialized to zeros.
 	*/
-	@:overload public function new(length : Int) : Void;
+	@:overload @:public public function new(length : Int) : Void;
 	
 	/**
 	* Creates a BitArray of the specified size, initialized from the
@@ -37,28 +37,28 @@ extern class BitArray
 	* to specify a value for every bit in the BitArray.  In other words,
 	* 8*a.length <= length.
 	*/
-	@:overload public function new(length : Int, a : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(length : Int, a : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Create a BitArray whose bits are those of the given array
 	* of Booleans.
 	*/
-	@:overload public function new(bits : java.NativeArray<Bool>) : Void;
+	@:overload @:public public function new(bits : java.NativeArray<Bool>) : Void;
 	
 	/**
 	*  Returns the indexed bit in this BitArray.
 	*/
-	@:overload public function get(index : Int) : Bool;
+	@:overload @:public public function get(index : Int) : Bool;
 	
 	/**
 	*  Sets the indexed bit in this BitArray.
 	*/
-	@:overload public function set(index : Int, value : Bool) : Void;
+	@:overload @:public public function set(index : Int, value : Bool) : Void;
 	
 	/**
 	* Returns the length of this BitArray.
 	*/
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
 	/**
 	* Returns a Byte array containing the contents of this BitArray.
@@ -69,30 +69,30 @@ extern class BitArray
 	* bits in the BitArray.  (This matters only if the BitArray's size
 	* is not a multiple of 8.)
 	*/
-	@:overload public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Return a boolean array with the same bit values a this BitArray.
 	*/
-	@:overload public function toBooleanArray() : java.NativeArray<Bool>;
+	@:overload @:public public function toBooleanArray() : java.NativeArray<Bool>;
 	
 	/**
 	* Returns a hash code value for this bit array.
 	*
 	* @return  a hash code value for this bit array.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	*  Returns a string representation of this BitArray.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function truncate() : sun.security.util.BitArray;
+	@:overload @:public public function truncate() : sun.security.util.BitArray;
 	
 	
 }

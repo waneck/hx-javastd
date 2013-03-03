@@ -45,7 +45,7 @@ package javax.xml.crypto;
 	*    <code>false</code> otherwise
 	* @throws NullPointerException if <code>feature</code> is <code>null</code>
 	*/
-	@:overload public function isFeatureSupported(feature : String) : Bool;
+	@:overload @:public public function isFeatureSupported(feature : String) : Bool;
 	
 	
 }

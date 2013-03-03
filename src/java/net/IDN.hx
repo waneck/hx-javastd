@@ -28,12 +28,12 @@ extern class IDN
 	/**
 	* Flag to allow processing of unassigned code points
 	*/
-	public static var ALLOW_UNASSIGNED(default, null) : Int;
+	@:public @:static @:final public static var ALLOW_UNASSIGNED(default, null) : Int;
 	
 	/**
 	* Flag to turn on the check against STD-3 ASCII rules
 	*/
-	public static var USE_STD3_ASCII_RULES(default, null) : Int;
+	@:public @:static @:final public static var USE_STD3_ASCII_RULES(default, null) : Int;
 	
 	/**
 	* Translates a string from Unicode to ASCII Compatible Encoding (ACE),
@@ -59,7 +59,7 @@ extern class IDN
 	*
 	* @throws IllegalArgumentException   if the input string doesn't conform to RFC 3490 specification
 	*/
-	@:overload public static function toASCII(input : String, flag : Int) : String;
+	@:overload @:public @:static public static function toASCII(input : String, flag : Int) : String;
 	
 	/**
 	* Translates a string from Unicode to ASCII Compatible Encoding (ACE),
@@ -77,7 +77,7 @@ extern class IDN
 	*
 	* @throws IllegalArgumentException   if the input string doesn't conform to RFC 3490 specification
 	*/
-	@:overload public static function toASCII(input : String) : String;
+	@:overload @:public @:static public static function toASCII(input : String) : String;
 	
 	/**
 	* Translates a string from ASCII Compatible Encoding (ACE) to Unicode,
@@ -97,7 +97,7 @@ extern class IDN
 	*
 	* @return          the translated <tt>String</tt>
 	*/
-	@:overload public static function toUnicode(input : String, flag : Int) : String;
+	@:overload @:public @:static public static function toUnicode(input : String, flag : Int) : String;
 	
 	/**
 	* Translates a string from ASCII Compatible Encoding (ACE) to Unicode,
@@ -113,7 +113,7 @@ extern class IDN
 	*
 	* @return          the translated <tt>String</tt>
 	*/
-	@:overload public static function toUnicode(input : String) : String;
+	@:overload @:public @:static public static function toUnicode(input : String) : String;
 	
 	
 }

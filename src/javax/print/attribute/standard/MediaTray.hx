@@ -28,42 +28,42 @@ extern class MediaTray extends javax.print.attribute.standard.Media implements j
 	/**
 	* The top input tray in the printer.
 	*/
-	public static var TOP(default, null) : javax.print.attribute.standard.MediaTray;
+	@:public @:static @:final public static var TOP(default, null) : javax.print.attribute.standard.MediaTray;
 	
 	/**
 	* The middle input tray in the printe.
 	*/
-	public static var MIDDLE(default, null) : javax.print.attribute.standard.MediaTray;
+	@:public @:static @:final public static var MIDDLE(default, null) : javax.print.attribute.standard.MediaTray;
 	
 	/**
 	* The bottom input tray in the printer.
 	*/
-	public static var BOTTOM(default, null) : javax.print.attribute.standard.MediaTray;
+	@:public @:static @:final public static var BOTTOM(default, null) : javax.print.attribute.standard.MediaTray;
 	
 	/**
 	* The envelope input tray in the printer.
 	*/
-	public static var ENVELOPE(default, null) : javax.print.attribute.standard.MediaTray;
+	@:public @:static @:final public static var ENVELOPE(default, null) : javax.print.attribute.standard.MediaTray;
 	
 	/**
 	* The manual feed input tray in the printer.
 	*/
-	public static var MANUAL(default, null) : javax.print.attribute.standard.MediaTray;
+	@:public @:static @:final public static var MANUAL(default, null) : javax.print.attribute.standard.MediaTray;
 	
 	/**
 	* The large capacity input tray in the printer.
 	*/
-	public static var LARGE_CAPACITY(default, null) : javax.print.attribute.standard.MediaTray;
+	@:public @:static @:final public static var LARGE_CAPACITY(default, null) : javax.print.attribute.standard.MediaTray;
 	
 	/**
 	* The main input tray in the printer.
 	*/
-	public static var MAIN(default, null) : javax.print.attribute.standard.MediaTray;
+	@:public @:static @:final public static var MAIN(default, null) : javax.print.attribute.standard.MediaTray;
 	
 	/**
 	* The side input tray.
 	*/
-	public static var SIDE(default, null) : javax.print.attribute.standard.MediaTray;
+	@:public @:static @:final public static var SIDE(default, null) : javax.print.attribute.standard.MediaTray;
 	
 	/**
 	* Construct a new media tray enumeration value with the given integer
@@ -71,17 +71,17 @@ extern class MediaTray extends javax.print.attribute.standard.Media implements j
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class MediaTray.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class MediaTray.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	
 }

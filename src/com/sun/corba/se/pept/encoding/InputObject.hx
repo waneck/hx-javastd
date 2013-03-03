@@ -47,11 +47,11 @@ extern interface InputObject
 	*
 	* @author Harold Carr
 */
-	@:overload public function setMessageMediator(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
+	@:overload @:public public function setMessageMediator(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
 	
-	@:overload public function getMessageMediator() : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function getMessageMediator() : com.sun.corba.se.pept.protocol.MessageMediator;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

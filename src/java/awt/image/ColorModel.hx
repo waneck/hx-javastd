@@ -28,12 +28,12 @@ extern class ColorModel implements java.awt.Transparency
 	/**
 	* The total number of bits in the pixel.
 	*/
-	private var pixel_bits : Int;
+	@:protected private var pixel_bits : Int;
 	
 	/**
 	* Data type of the array used to represent pixel values.
 	*/
-	private var transferType : Int;
+	@:protected private var transferType : Int;
 	
 	/**
 	* Returns a <code>DirectColorModel</code> that describes the default
@@ -51,7 +51,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @return a <code>DirectColorModel</code>object describing default
 	*          RGB values.
 	*/
-	@:overload public static function getRGBdefault() : java.awt.image.ColorModel;
+	@:overload @:public @:static public static function getRGBdefault() : java.awt.image.ColorModel;
 	
 	/**
 	* Constructs a <code>ColorModel</code> that translates pixels of the
@@ -73,7 +73,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @throws IllegalArgumentException if the number
 	*          of bits in <code>bits</code> is less than 1
 	*/
-	@:overload public function new(bits : Int) : Void;
+	@:overload @:public public function new(bits : Int) : Void;
 	
 	/**
 	* Constructs a <code>ColorModel</code> that translates pixel values
@@ -121,7 +121,7 @@ extern class ColorModel implements java.awt.Transparency
 	*          any of the elements in <code>bits</code> is less than 0.
 	* @see java.awt.Transparency
 	*/
-	@:overload private function new(pixel_bits : Int, bits : java.NativeArray<Int>, cspace : java.awt.color.ColorSpace, hasAlpha : Bool, isAlphaPremultiplied : Bool, transparency : Int, transferType : Int) : Void;
+	@:overload @:protected private function new(pixel_bits : Int, bits : java.NativeArray<Int>, cspace : java.awt.color.ColorSpace, hasAlpha : Bool, isAlphaPremultiplied : Bool, transparency : Int, transferType : Int) : Void;
 	
 	/**
 	* Returns whether or not alpha is supported in this
@@ -129,7 +129,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @return <code>true</code> if alpha is supported in this
 	* <code>ColorModel</code>; <code>false</code> otherwise.
 	*/
-	@:overload @:final public function hasAlpha() : Bool;
+	@:overload @:final @:public public function hasAlpha() : Bool;
 	
 	/**
 	* Returns whether or not the alpha has been premultiplied in the
@@ -143,7 +143,7 @@ extern class ColorModel implements java.awt.Transparency
 	*          in the pixel values to be translated by this
 	*          <code>ColorModel</code>; <code>false</code> otherwise.
 	*/
-	@:overload @:final public function isAlphaPremultiplied() : Bool;
+	@:overload @:final @:public public function isAlphaPremultiplied() : Bool;
 	
 	/**
 	* Returns the transfer type of this <code>ColorModel</code>.
@@ -152,14 +152,14 @@ extern class ColorModel implements java.awt.Transparency
 	* @return the transfer type.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:final public function getTransferType() : Int;
+	@:require(java3) @:overload @:final @:public public function getTransferType() : Int;
 	
 	/**
 	* Returns the number of bits per pixel described by this
 	* <code>ColorModel</code>.
 	* @return the number of bits per pixel.
 	*/
-	@:overload public function getPixelSize() : Int;
+	@:overload @:public public function getPixelSize() : Int;
 	
 	/**
 	* Returns the number of bits for the specified color/alpha component.
@@ -179,7 +179,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @throws NullPointerException if the number of bits array is
 	*         <code>null</code>
 	*/
-	@:overload public function getComponentSize(componentIdx : Int) : Int;
+	@:overload @:public public function getComponentSize(componentIdx : Int) : Int;
 	
 	/**
 	* Returns an array of the number of bits per color/alpha component.
@@ -188,7 +188,7 @@ extern class ColorModel implements java.awt.Transparency
 	* present.
 	* @return an array of the number of bits per color/alpha component
 	*/
-	@:overload public function getComponentSize() : java.NativeArray<Int>;
+	@:overload @:public public function getComponentSize() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the transparency.  Returns either OPAQUE, BITMASK,
@@ -198,7 +198,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @see Transparency#BITMASK
 	* @see Transparency#TRANSLUCENT
 	*/
-	@:overload public function getTransparency() : Int;
+	@:overload @:public public function getTransparency() : Int;
 	
 	/**
 	* Returns the number of components, including alpha, in this
@@ -206,7 +206,7 @@ extern class ColorModel implements java.awt.Transparency
 	* components, optionally plus one, if there is an alpha component.
 	* @return the number of components in this <code>ColorModel</code>
 	*/
-	@:overload public function getNumComponents() : Int;
+	@:overload @:public public function getNumComponents() : Int;
 	
 	/**
 	* Returns the number of color components in this
@@ -217,7 +217,7 @@ extern class ColorModel implements java.awt.Transparency
 	* <code>ColorModel</code>.
 	* @see ColorSpace#getNumComponents
 	*/
-	@:overload public function getNumColorComponents() : Int;
+	@:overload @:public public function getNumColorComponents() : Int;
 	
 	/**
 	* Returns the red color component for the specified pixel, scaled
@@ -232,7 +232,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @param pixel a specified pixel
 	* @return the value of the red component of the specified pixel.
 	*/
-	@:overload @:abstract public function getRed(pixel : Int) : Int;
+	@:overload @:public @:abstract public function getRed(pixel : Int) : Int;
 	
 	/**
 	* Returns the green color component for the specified pixel, scaled
@@ -247,7 +247,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @param pixel the specified pixel
 	* @return the value of the green component of the specified pixel.
 	*/
-	@:overload @:abstract public function getGreen(pixel : Int) : Int;
+	@:overload @:public @:abstract public function getGreen(pixel : Int) : Int;
 	
 	/**
 	* Returns the blue color component for the specified pixel, scaled
@@ -262,7 +262,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @param pixel the specified pixel
 	* @return the value of the blue component of the specified pixel.
 	*/
-	@:overload @:abstract public function getBlue(pixel : Int) : Int;
+	@:overload @:public @:abstract public function getBlue(pixel : Int) : Int;
 	
 	/**
 	* Returns the alpha component for the specified pixel, scaled
@@ -273,7 +273,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @param pixel the specified pixel
 	* @return the value of alpha component of the specified pixel.
 	*/
-	@:overload @:abstract public function getAlpha(pixel : Int) : Int;
+	@:overload @:public @:abstract public function getAlpha(pixel : Int) : Int;
 	
 	/**
 	* Returns the color/alpha components of the pixel in the default
@@ -290,7 +290,7 @@ extern class ColorModel implements java.awt.Transparency
 	*          specified pixel.
 	* @see ColorModel#getRGBdefault
 	*/
-	@:overload public function getRGB(pixel : Int) : Int;
+	@:overload @:public public function getRGB(pixel : Int) : Int;
 	
 	/**
 	* Returns the red color component for the specified pixel, scaled
@@ -328,7 +328,7 @@ extern class ColorModel implements java.awt.Transparency
 	*  <code>tranferType</code> is not supported by this
 	*  <code>ColorModel</code>
 	*/
-	@:overload public function getRed(inData : Dynamic) : Int;
+	@:overload @:public public function getRed(inData : Dynamic) : Int;
 	
 	/**
 	* Returns the green color component for the specified pixel, scaled
@@ -366,7 +366,7 @@ extern class ColorModel implements java.awt.Transparency
 	*  <code>tranferType</code> is not supported by this
 	*  <code>ColorModel</code>
 	*/
-	@:overload public function getGreen(inData : Dynamic) : Int;
+	@:overload @:public public function getGreen(inData : Dynamic) : Int;
 	
 	/**
 	* Returns the blue color component for the specified pixel, scaled
@@ -404,7 +404,7 @@ extern class ColorModel implements java.awt.Transparency
 	*  <code>tranferType</code> is not supported by this
 	*  <code>ColorModel</code>
 	*/
-	@:overload public function getBlue(inData : Dynamic) : Int;
+	@:overload @:public public function getBlue(inData : Dynamic) : Int;
 	
 	/**
 	* Returns the alpha component for the specified pixel, scaled
@@ -438,7 +438,7 @@ extern class ColorModel implements java.awt.Transparency
 	*  <code>tranferType</code> is not supported by this
 	*  <code>ColorModel</code>
 	*/
-	@:overload public function getAlpha(inData : Dynamic) : Int;
+	@:overload @:public public function getAlpha(inData : Dynamic) : Int;
 	
 	/**
 	* Returns the color/alpha components for the specified pixel in the
@@ -457,7 +457,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @return the color and alpha components of the specified pixel.
 	* @see ColorModel#getRGBdefault
 	*/
-	@:overload public function getRGB(inData : Dynamic) : Int;
+	@:overload @:public public function getRGB(inData : Dynamic) : Int;
 	
 	/**
 	* Returns a data element array representation of a pixel in this
@@ -496,7 +496,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @see WritableRaster#setDataElements
 	* @see SampleModel#setDataElements
 	*/
-	@:overload public function getDataElements(rgb : Int, pixel : Dynamic) : Dynamic;
+	@:overload @:public public function getDataElements(rgb : Int, pixel : Dynamic) : Dynamic;
 	
 	/**
 	* Returns an array of unnormalized color/alpha components given a pixel
@@ -530,7 +530,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @throws UnsupportedOperationException if this
 	*          method is not supported by this <code>ColorModel</code>
 	*/
-	@:overload public function getComponents(pixel : Int, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
+	@:overload @:public public function getComponents(pixel : Int, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
 	
 	/**
 	* Returns an array of unnormalized color/alpha components given a pixel
@@ -569,7 +569,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @throws UnsupportedOperationException if this
 	*          method is not supported by this <code>ColorModel</code>
 	*/
-	@:overload public function getComponents(pixel : Dynamic, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
+	@:overload @:public public function getComponents(pixel : Dynamic, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
 	
 	/**
 	* Returns an array of all of the color/alpha components in unnormalized
@@ -617,7 +617,7 @@ extern class ColorModel implements java.awt.Transparency
 	*          override this method.  See the constructor,
 	*          {@link #ColorModel(int)}.
 	*/
-	@:overload public function getUnnormalizedComponents(normComponents : java.NativeArray<Single>, normOffset : Int, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
+	@:overload @:public public function getUnnormalizedComponents(normComponents : java.NativeArray<Single>, normOffset : Int, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
 	
 	/**
 	* Returns an array of all of the color/alpha components in normalized
@@ -669,7 +669,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @throws UnsupportedOperationException if this method is unable
 	*          to determine the number of bits per component
 	*/
-	@:overload public function getNormalizedComponents(components : java.NativeArray<Int>, offset : Int, normComponents : java.NativeArray<Single>, normOffset : Int) : java.NativeArray<Single>;
+	@:overload @:public public function getNormalizedComponents(components : java.NativeArray<Int>, offset : Int, normComponents : java.NativeArray<Single>, normOffset : Int) : java.NativeArray<Single>;
 	
 	/**
 	* Returns a pixel value represented as an <code>int</code> in this
@@ -706,7 +706,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @throws UnsupportedOperationException if this
 	*  method is not supported by this <code>ColorModel</code>
 	*/
-	@:overload public function getDataElement(components : java.NativeArray<Int>, offset : Int) : Int;
+	@:overload @:public public function getDataElement(components : java.NativeArray<Int>, offset : Int) : Int;
 	
 	/**
 	* Returns a data element array representation of a pixel in this
@@ -754,7 +754,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @see WritableRaster#setDataElements
 	* @see SampleModel#setDataElements
 	*/
-	@:overload public function getDataElements(components : java.NativeArray<Int>, offset : Int, obj : Dynamic) : Dynamic;
+	@:overload @:public public function getDataElements(components : java.NativeArray<Int>, offset : Int, obj : Dynamic) : Dynamic;
 	
 	/**
 	* Returns a pixel value represented as an <code>int</code> in this
@@ -788,7 +788,7 @@ extern class ColorModel implements java.awt.Transparency
 	*  <code>normOffset</code>
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getDataElement(normComponents : java.NativeArray<Single>, normOffset : Int) : Int;
+	@:require(java4) @:overload @:public public function getDataElement(normComponents : java.NativeArray<Single>, normOffset : Int) : Int;
 	
 	/**
 	* Returns a data element array representation of a pixel in this
@@ -831,7 +831,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @see SampleModel#setDataElements
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getDataElements(normComponents : java.NativeArray<Single>, normOffset : Int, obj : Dynamic) : Dynamic;
+	@:require(java4) @:overload @:public public function getDataElements(normComponents : java.NativeArray<Single>, normOffset : Int, obj : Dynamic) : Dynamic;
 	
 	/**
 	* Returns an array of all of the color/alpha components in normalized
@@ -886,7 +886,7 @@ extern class ColorModel implements java.awt.Transparency
 	*          to determine the number of bits per component
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getNormalizedComponents(pixel : Dynamic, normComponents : java.NativeArray<Single>, normOffset : Int) : java.NativeArray<Single>;
+	@:require(java4) @:overload @:public public function getNormalizedComponents(pixel : Dynamic, normComponents : java.NativeArray<Single>, normOffset : Int) : java.NativeArray<Single>;
 	
 	/**
 	* Tests if the specified <code>Object</code> is an instance of
@@ -897,14 +897,14 @@ extern class ColorModel implements java.awt.Transparency
 	* is an instance of <code>ColorModel</code> and equals this
 	* <code>ColorModel</code>; <code>false</code> otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code for this ColorModel.
 	*
 	* @return    a hash code for this ColorModel.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the <code>ColorSpace</code> associated with this
@@ -912,7 +912,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @return the <code>ColorSpace</code> of this
 	* <code>ColorModel</code>.
 	*/
-	@:overload @:final public function getColorSpace() : java.awt.color.ColorSpace;
+	@:overload @:final @:public public function getColorSpace() : java.awt.color.ColorSpace;
 	
 	/**
 	* Forces the raster data to match the state specified in the
@@ -935,7 +935,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @return a <code>ColorModel</code> object that represents the
 	* coerced data.
 	*/
-	@:overload public function coerceData(raster : java.awt.image.WritableRaster, isAlphaPremultiplied : Bool) : java.awt.image.ColorModel;
+	@:overload @:public public function coerceData(raster : java.awt.image.WritableRaster, isAlphaPremultiplied : Bool) : java.awt.image.ColorModel;
 	
 	/**
 	* Returns <code>true</code> if <code>raster</code> is compatible
@@ -952,7 +952,7 @@ extern class ColorModel implements java.awt.Transparency
 	*         method has not been implemented for this
 	*         <code>ColorModel</code>
 	*/
-	@:overload public function isCompatibleRaster(raster : java.awt.image.Raster) : Bool;
+	@:overload @:public public function isCompatibleRaster(raster : java.awt.image.Raster) : Bool;
 	
 	/**
 	* Creates a <code>WritableRaster</code> with the specified width and
@@ -971,7 +971,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @see WritableRaster
 	* @see SampleModel
 	*/
-	@:overload public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
+	@:overload @:public public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a <code>SampleModel</code> with the specified width and
@@ -989,7 +989,7 @@ extern class ColorModel implements java.awt.Transparency
 	*          method is not supported by this <code>ColorModel</code>
 	* @see SampleModel
 	*/
-	@:overload public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
+	@:overload @:public public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
 	
 	/** Checks if the <code>SampleModel</code> is compatible with this
 	* <code>ColorModel</code>.
@@ -1005,14 +1005,14 @@ extern class ColorModel implements java.awt.Transparency
 	*          method is not supported by this <code>ColorModel</code>
 	* @see SampleModel
 	*/
-	@:overload public function isCompatibleSampleModel(sm : java.awt.image.SampleModel) : Bool;
+	@:overload @:public public function isCompatibleSampleModel(sm : java.awt.image.SampleModel) : Bool;
 	
 	/**
 	* Disposes of system resources associated with this
 	* <code>ColorModel</code> once this <code>ColorModel</code> is no
 	* longer referenced.
 	*/
-	@:overload public function finalize() : Void;
+	@:overload @:public public function finalize() : Void;
 	
 	/**
 	* Returns a <code>Raster</code> representing the alpha channel of an
@@ -1039,7 +1039,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @return a <code>Raster</code> representing the alpha channel of
 	* an image, obtained from the specified <code>Raster</code>.
 	*/
-	@:overload public function getAlphaRaster(raster : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
+	@:overload @:public public function getAlphaRaster(raster : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns the <code>String</code> representation of the contents of
@@ -1047,7 +1047,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @return a <code>String</code> representing the contents of this
 	* <code>ColorModel</code> object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

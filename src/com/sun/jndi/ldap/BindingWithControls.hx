@@ -25,9 +25,9 @@ package com.sun.jndi.ldap;
 */
 @:internal extern class BindingWithControls extends javax.naming.Binding implements javax.naming.ldap.HasControls
 {
-	@:overload public function new(name : String, obj : Dynamic, controls : java.NativeArray<javax.naming.ldap.Control>) : Void;
+	@:overload @:public public function new(name : String, obj : Dynamic, controls : java.NativeArray<javax.naming.ldap.Control>) : Void;
 	
-	@:overload public function getControls() : java.NativeArray<javax.naming.ldap.Control>;
+	@:overload @:public public function getControls() : java.NativeArray<javax.naming.ldap.Control>;
 	
 	
 }

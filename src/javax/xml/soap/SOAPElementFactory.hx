@@ -58,7 +58,7 @@ extern class SOAPElementFactory
 	* @see javax.xml.soap.SOAPFactory#createElement(javax.xml.soap.Name)
 	* @see javax.xml.soap.SOAPFactory#createElement(javax.xml.namespace.QName)
 	*/
-	@:overload public function create(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
+	@:overload @:public public function create(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Create a <code>SOAPElement</code> object initialized with the
@@ -78,7 +78,7 @@ extern class SOAPElementFactory
 	*
 	* @see javax.xml.soap.SOAPFactory#createElement(java.lang.String)
 	*/
-	@:overload public function create(localName : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public public function create(localName : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Create a new <code>SOAPElement</code> object with the given
@@ -101,7 +101,7 @@ extern class SOAPElementFactory
 	*
 	* @see javax.xml.soap.SOAPFactory#createElement(java.lang.String, java.lang.String, java.lang.String)
 	*/
-	@:overload public function create(localName : String, prefix : String, uri : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public public function create(localName : String, prefix : String, uri : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Creates a new instance of <code>SOAPElementFactory</code>.
@@ -111,7 +111,7 @@ extern class SOAPElementFactory
 	* @exception SOAPException if there was an error creating the
 	*            default <code>SOAPElementFactory</code>
 	*/
-	@:overload public static function newInstance() : javax.xml.soap.SOAPElementFactory;
+	@:overload @:public @:static public static function newInstance() : javax.xml.soap.SOAPElementFactory;
 	
 	
 }

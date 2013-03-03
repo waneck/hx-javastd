@@ -31,7 +31,7 @@ extern class ImageTranscoderSpi extends javax.imageio.spi.IIOServiceProvider
 	* override method implementations in order to provide working
 	* versions of all methods.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs an <code>ImageTranscoderSpi</code> with a given set
@@ -40,7 +40,7 @@ extern class ImageTranscoderSpi extends javax.imageio.spi.IIOServiceProvider
 	* @param vendorName the vendor name.
 	* @param version a version identifier.
 	*/
-	@:overload public function new(vendorName : String, version : String) : Void;
+	@:overload @:public public function new(vendorName : String, version : String) : Void;
 	
 	/**
 	* Returns the fully qualified class name of an
@@ -53,7 +53,7 @@ extern class ImageTranscoderSpi extends javax.imageio.spi.IIOServiceProvider
 	*
 	* @see ImageReaderSpi
 	*/
-	@:overload @:abstract public function getReaderServiceProviderName() : String;
+	@:overload @:public @:abstract public function getReaderServiceProviderName() : String;
 	
 	/**
 	* Returns the fully qualified class name of an
@@ -66,7 +66,7 @@ extern class ImageTranscoderSpi extends javax.imageio.spi.IIOServiceProvider
 	*
 	* @see ImageWriterSpi
 	*/
-	@:overload @:abstract public function getWriterServiceProviderName() : String;
+	@:overload @:public @:abstract public function getWriterServiceProviderName() : String;
 	
 	/**
 	* Returns an instance of the <code>ImageTranscoder</code>
@@ -74,7 +74,7 @@ extern class ImageTranscoderSpi extends javax.imageio.spi.IIOServiceProvider
 	*
 	* @return an <code>ImageTranscoder</code> instance.
 	*/
-	@:overload @:abstract public function createTranscoderInstance() : javax.imageio.ImageTranscoder;
+	@:overload @:public @:abstract public function createTranscoderInstance() : javax.imageio.ImageTranscoder;
 	
 	
 }

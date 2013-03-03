@@ -28,14 +28,14 @@ package sun.awt.X11;
 */
 extern class XAWTFormatter extends java.util.logging.Formatter
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Format the given LogRecord.
 	* @param record the log record to be formatted.
 	* @return a formatted log record
 	*/
-	@:overload @:synchronized override public function format(record : java.util.logging.LogRecord) : String;
+	@:overload @:public @:synchronized override public function format(record : java.util.logging.LogRecord) : String;
 	
 	
 }

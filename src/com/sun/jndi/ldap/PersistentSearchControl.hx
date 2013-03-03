@@ -29,33 +29,33 @@ extern class PersistentSearchControl extends com.sun.jndi.ldap.BasicControl
 	* The persistent search control's assigned object identifier
 	* is 2.16.840.1.113730.3.4.3.
 	*/
-	public static var OID(default, null) : String;
+	@:public @:static @:final public static var OID(default, null) : String;
 	
 	/**
 	* Indicates interest in entries which have been added.
 	*/
-	public static var ADD(default, null) : Int;
+	@:public @:static @:final public static var ADD(default, null) : Int;
 	
 	/**
 	* Indicates interest in entries which have been deleted.
 	*/
-	public static var DELETE(default, null) : Int;
+	@:public @:static @:final public static var DELETE(default, null) : Int;
 	
 	/**
 	* Indicates interest in entries which have been modified.
 	*/
-	public static var MODIFY(default, null) : Int;
+	@:public @:static @:final public static var MODIFY(default, null) : Int;
 	
 	/**
 	* Indicates interest in entries which have been renamed.
 	*/
-	public static var RENAME(default, null) : Int;
+	@:public @:static @:final public static var RENAME(default, null) : Int;
 	
 	/**
 	* Indicates interest in entries which have been added, deleted,
 	* modified or renamed.
 	*/
-	public static var ANY(default, null) : Int;
+	@:public @:static @:final public static var ANY(default, null) : Int;
 	
 	/**
 	* Constructs a persistent search non-critical control.
@@ -65,7 +65,7 @@ extern class PersistentSearchControl extends com.sun.jndi.ldap.BasicControl
 	*
 	* @exception IOException If a BER encoding error occurs.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a persistent search control.
@@ -77,7 +77,7 @@ extern class PersistentSearchControl extends com.sun.jndi.ldap.BasicControl
 	* @param   criticality     The control's criticality.
 	* @exception IOException If a BER encoding error occurs.
 	*/
-	@:overload public function new(changeTypes : Int, changesOnly : Bool, returnControls : Bool, criticality : Bool) : Void;
+	@:overload @:public public function new(changeTypes : Int, changesOnly : Bool, returnControls : Bool, criticality : Bool) : Void;
 	
 	
 }

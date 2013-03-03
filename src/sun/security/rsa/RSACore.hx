@@ -30,26 +30,26 @@ extern class RSACore
 	* this BigInteger. Do not count a 0x00 byte toByteArray() would
 	* prefix for 2's complement form.
 	*/
-	@:overload public static function getByteLength(b : java.math.BigInteger) : Int;
+	@:overload @:public @:static public static function getByteLength(b : java.math.BigInteger) : Int;
 	
 	/**
 	* Return the number of bytes required to store the modulus of this
 	* RSA key.
 	*/
-	@:overload public static function getByteLength(key : java.security.interfaces.RSAKey) : Int;
+	@:overload @:public @:static public static function getByteLength(key : java.security.interfaces.RSAKey) : Int;
 	
-	@:overload public static function convert(b : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function convert(b : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Perform an RSA public key operation.
 	*/
-	@:overload public static function rsa(msg : java.NativeArray<java.StdTypes.Int8>, key : java.security.interfaces.RSAPublicKey) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function rsa(msg : java.NativeArray<java.StdTypes.Int8>, key : java.security.interfaces.RSAPublicKey) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Perform an RSA private key operation. Uses CRT if the key is a
 	* CRT key.
 	*/
-	@:overload public static function rsa(msg : java.NativeArray<java.StdTypes.Int8>, key : java.security.interfaces.RSAPrivateKey) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function rsa(msg : java.NativeArray<java.StdTypes.Int8>, key : java.security.interfaces.RSAPrivateKey) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

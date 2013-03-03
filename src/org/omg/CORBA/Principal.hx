@@ -38,14 +38,14 @@ extern class Principal
 	* @param value the value to be set in the <code>Principal</code>
 	* @deprecated Deprecated by CORBA 2.2.
 	*/
-	@:overload public function name(value : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function name(value : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Gets the name of this <code>Principal</code> object.
 	* @return the name of this <code>Principal</code> object
 	* @deprecated Deprecated by CORBA 2.2.
 	*/
-	@:overload public function name() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function name() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

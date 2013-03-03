@@ -60,13 +60,13 @@ package java.awt.event;
 	* released (regardless of whether the mouse position is within the
 	* bounds of the component).
 	*/
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse button has been moved on a component
 	* (with no buttons no down).
 	*/
-	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

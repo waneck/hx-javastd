@@ -28,7 +28,7 @@ extern class EditorKit implements java.lang.Cloneable implements java.io.Seriali
 	/**
 	* Construct an EditorKit.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a copy of the editor kit.  This is implemented
@@ -37,7 +37,7 @@ extern class EditorKit implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @return the copy
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Called when the kit is being installed into the
@@ -45,7 +45,7 @@ extern class EditorKit implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @param c the JEditorPane
 	*/
-	@:overload public function install(c : javax.swing.JEditorPane) : Void;
+	@:overload @:public public function install(c : javax.swing.JEditorPane) : Void;
 	
 	/**
 	* Called when the kit is being removed from the
@@ -54,7 +54,7 @@ extern class EditorKit implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @param c the JEditorPane
 	*/
-	@:overload public function deinstall(c : javax.swing.JEditorPane) : Void;
+	@:overload @:public public function deinstall(c : javax.swing.JEditorPane) : Void;
 	
 	/**
 	* Gets the MIME type of the data that this
@@ -62,7 +62,7 @@ extern class EditorKit implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @return the type
 	*/
-	@:overload @:abstract public function getContentType() : String;
+	@:overload @:public @:abstract public function getContentType() : String;
 	
 	/**
 	* Fetches a factory that is suitable for producing
@@ -71,7 +71,7 @@ extern class EditorKit implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @return the factory
 	*/
-	@:overload @:abstract public function getViewFactory() : javax.swing.text.ViewFactory;
+	@:overload @:public @:abstract public function getViewFactory() : javax.swing.text.ViewFactory;
 	
 	/**
 	* Fetches the set of commands that can be used
@@ -80,7 +80,7 @@ extern class EditorKit implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @return the set of actions
 	*/
-	@:overload @:abstract public function getActions() : java.NativeArray<javax.swing.Action>;
+	@:overload @:public @:abstract public function getActions() : java.NativeArray<javax.swing.Action>;
 	
 	/**
 	* Fetches a caret that can navigate through views
@@ -88,7 +88,7 @@ extern class EditorKit implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @return the caret
 	*/
-	@:overload @:abstract public function createCaret() : javax.swing.text.Caret;
+	@:overload @:public @:abstract public function createCaret() : javax.swing.text.Caret;
 	
 	/**
 	* Creates an uninitialized text storage model
@@ -96,7 +96,7 @@ extern class EditorKit implements java.lang.Cloneable implements java.io.Seriali
 	*
 	* @return the model
 	*/
-	@:overload @:abstract public function createDefaultDocument() : javax.swing.text.Document;
+	@:overload @:public @:abstract public function createDefaultDocument() : javax.swing.text.Document;
 	
 	/**
 	* Inserts content from the given stream which is expected
@@ -111,7 +111,7 @@ extern class EditorKit implements java.lang.Cloneable implements java.io.Seriali
 	* @exception BadLocationException if pos represents an invalid
 	*   location within the document.
 	*/
-	@:overload @:abstract public function read(_in : java.io.InputStream, doc : javax.swing.text.Document, pos : Int) : Void;
+	@:overload @:public @:abstract public function read(_in : java.io.InputStream, doc : javax.swing.text.Document, pos : Int) : Void;
 	
 	/**
 	* Writes content from a document to the given stream
@@ -126,7 +126,7 @@ extern class EditorKit implements java.lang.Cloneable implements java.io.Seriali
 	* @exception BadLocationException if pos represents an invalid
 	*   location within the document.
 	*/
-	@:overload @:abstract public function write(out : java.io.OutputStream, doc : javax.swing.text.Document, pos : Int, len : Int) : Void;
+	@:overload @:public @:abstract public function write(out : java.io.OutputStream, doc : javax.swing.text.Document, pos : Int, len : Int) : Void;
 	
 	/**
 	* Inserts content from the given stream which is expected
@@ -146,7 +146,7 @@ extern class EditorKit implements java.lang.Cloneable implements java.io.Seriali
 	* @exception BadLocationException if pos represents an invalid
 	*   location within the document.
 	*/
-	@:overload @:abstract public function read(_in : java.io.Reader, doc : javax.swing.text.Document, pos : Int) : Void;
+	@:overload @:public @:abstract public function read(_in : java.io.Reader, doc : javax.swing.text.Document, pos : Int) : Void;
 	
 	/**
 	* Writes content from a document to the given stream
@@ -166,7 +166,7 @@ extern class EditorKit implements java.lang.Cloneable implements java.io.Seriali
 	* @exception BadLocationException if pos represents an invalid
 	*   location within the document.
 	*/
-	@:overload @:abstract public function write(out : java.io.Writer, doc : javax.swing.text.Document, pos : Int, len : Int) : Void;
+	@:overload @:public @:abstract public function write(out : java.io.Writer, doc : javax.swing.text.Document, pos : Int, len : Int) : Void;
 	
 	
 }

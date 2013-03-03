@@ -30,22 +30,22 @@ package com.sun.org.apache.xml.internal.dtm.ref;
 * */
 extern class DTMSafeStringPool extends com.sun.org.apache.xml.internal.dtm.ref.DTMStringPool
 {
-	@:overload @:synchronized override public function removeAllElements() : Void;
+	@:overload @:public @:synchronized override public function removeAllElements() : Void;
 	
 	/** @return string whose value is uniquely identified by this integer index.
 	* @throws java.lang.ArrayIndexOutOfBoundsException
 	*  if index doesn't map to a string.
 	* */
-	@:overload @:synchronized override public function indexToString(i : Int) : String;
+	@:overload @:public @:synchronized override public function indexToString(i : Int) : String;
 	
 	/** @return integer index uniquely identifying the value of this string. */
-	@:overload @:synchronized override public function stringToIndex(s : String) : Int;
+	@:overload @:public @:synchronized override public function stringToIndex(s : String) : Int;
 	
 	/** Command-line unit test driver. This test relies on the fact that
 	* this version of the pool assigns indices consecutively, starting
 	* from zero, as new unique strings are encountered.
 	*/
-	@:overload public static function _main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function _main(args : java.NativeArray<String>) : Void;
 	
 	
 }

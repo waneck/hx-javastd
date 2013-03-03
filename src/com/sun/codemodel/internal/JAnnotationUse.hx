@@ -25,9 +25,9 @@ package com.sun.codemodel.internal;
 */
 extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 {
-	@:overload public function getAnnotationClass() : com.sun.codemodel.internal.JClass;
+	@:overload @:public public function getAnnotationClass() : com.sun.codemodel.internal.JClass;
 	
-	@:overload public function getAnnotationMembers() : java.util.Map<String, com.sun.codemodel.internal.JAnnotationValue>;
+	@:overload @:public public function getAnnotationMembers() : java.util.Map<String, com.sun.codemodel.internal.JAnnotationValue>;
 	
 	/**
 	* Adds a member value pair to this annotation
@@ -42,7 +42,7 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	*         be added to it using the same or the overloaded methods.
 	*
 	*/
-	@:overload public function param(name : String, value : Bool) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function param(name : String, value : Bool) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds a member value pair to this annotation
@@ -56,7 +56,7 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	*         be added to it using the same or the overloaded methods.
 	*
 	*/
-	@:overload public function param(name : String, value : java.StdTypes.Int8) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function param(name : String, value : java.StdTypes.Int8) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds a member value pair to this annotation
@@ -70,7 +70,7 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	*         be added to it using the same or the overloaded methods.
 	*
 	*/
-	@:overload public function param(name : String, value : java.StdTypes.Char16) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function param(name : String, value : java.StdTypes.Char16) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds a member value pair to this annotation
@@ -84,7 +84,7 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	*         be added to it using the same or the overloaded methods.
 	*
 	*/
-	@:overload public function param(name : String, value : Float) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function param(name : String, value : Float) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds a member value pair to this annotation
@@ -98,7 +98,7 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	*         be added to it using the same or the overloaded methods.
 	*
 	*/
-	@:overload public function param(name : String, value : Single) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function param(name : String, value : Single) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds a member value pair to this annotation
@@ -112,7 +112,7 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	*         be added to it using the same or the overloaded methods.
 	*
 	*/
-	@:overload public function param(name : String, value : haxe.Int64) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function param(name : String, value : haxe.Int64) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds a member value pair to this annotation
@@ -126,7 +126,7 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	*         be added to it using the same or the overloaded methods.
 	*
 	*/
-	@:overload public function param(name : String, value : java.StdTypes.Int16) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function param(name : String, value : java.StdTypes.Int16) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds a member value pair to this annotation
@@ -140,7 +140,7 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	*         be added to it using the same or the overloaded methods.
 	*
 	*/
-	@:overload public function param(name : String, value : Int) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function param(name : String, value : Int) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds a member value pair to this annotation
@@ -154,7 +154,7 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	*         be added to it using the same or the overloaded methods.
 	*
 	*/
-	@:overload public function param(name : String, value : String) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function param(name : String, value : String) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds a member value pair to this annotation
@@ -170,7 +170,7 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	*         be added to it using the same or the overloaded methods.
 	*
 	*/
-	@:overload public function annotationParam(name : String, value : Class<java.lang.annotation.Annotation>) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function annotationParam(name : String, value : Class<java.lang.annotation.Annotation>) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds a member value pair to this annotation
@@ -184,7 +184,7 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	*         be added to it using the same or the overloaded methods.
 	*
 	*/
-	@:overload public function param(name : String, value : java.lang.Enum<Dynamic>) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function param(name : String, value : java.lang.Enum<Dynamic>) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds a member value pair to this annotation
@@ -198,7 +198,7 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	*         be added to it using the same or the overloaded methods.
 	*
 	*/
-	@:overload public function param(name : String, value : com.sun.codemodel.internal.JEnumConstant) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function param(name : String, value : com.sun.codemodel.internal.JEnumConstant) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds a member value pair to this annotation
@@ -221,7 +221,7 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	*
 	*
 	*/
-	@:overload public function param(name : String, value : Class<Dynamic>) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function param(name : String, value : Class<Dynamic>) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds a member value pair to this annotation based on the
@@ -232,7 +232,7 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	* @return The JAnnotationUse. More member value pairs can
 	*         be added to it using the same or the overloaded methods.
 	*/
-	@:overload public function param(name : String, type : com.sun.codemodel.internal.JType) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function param(name : String, type : com.sun.codemodel.internal.JType) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds a member value pair to this annotation.
@@ -246,7 +246,7 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	*         be added to it using the same or the overloaded methods.
 	*
 	*/
-	@:overload public function param(name : String, value : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function param(name : String, value : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds a member value pair which is of type array to this annotation
@@ -258,7 +258,7 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	*         @see JAnnotationArrayMember
 	*
 	*/
-	@:overload public function paramArray(name : String) : com.sun.codemodel.internal.JAnnotationArrayMember;
+	@:overload @:public public function paramArray(name : String) : com.sun.codemodel.internal.JAnnotationArrayMember;
 	
 	/**
 	* This can be used to add annotations inside annotations
@@ -270,9 +270,9 @@ extern class JAnnotationUse extends com.sun.codemodel.internal.JAnnotationValue
 	* @deprecated
 	*      use {@link JAnnotationArrayMember#annotate}
 	*/
-	@:overload public function annotate(clazz : Class<java.lang.annotation.Annotation>) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function annotate(clazz : Class<java.lang.annotation.Annotation>) : com.sun.codemodel.internal.JAnnotationUse;
 	
-	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

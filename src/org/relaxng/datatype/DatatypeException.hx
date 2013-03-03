@@ -40,24 +40,24 @@ package org.relaxng.datatype;
 */
 extern class DatatypeException extends java.lang.Exception
 {
-	@:overload public function new(index : Int, msg : String) : Void;
+	@:overload @:public public function new(index : Int, msg : String) : Void;
 	
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* A constructor for those datatype libraries which don't support any
 	* diagnostic information at all.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	public static var UNKNOWN(default, null) : Int;
+	@:public @:static @:final public static var UNKNOWN(default, null) : Int;
 	
 	/**
 	* Gets the index of the content where the error occured.
 	* UNKNOWN can be returned to indicate that no index information
 	* is available.
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	
 }

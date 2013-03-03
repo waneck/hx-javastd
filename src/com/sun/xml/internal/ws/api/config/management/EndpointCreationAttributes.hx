@@ -33,35 +33,35 @@ extern class EndpointCreationAttributes
 	* @param resolver The original EntityResolver instance.
 	* @param isTransportSynchronous The original isTransportSynchronous setting.
 	*/
-	@:overload public function new(processHandlerAnnotation : Bool, invoker : com.sun.xml.internal.ws.api.server.Invoker, resolver : org.xml.sax.EntityResolver, isTransportSynchronous : Bool) : Void;
+	@:overload @:public public function new(processHandlerAnnotation : Bool, invoker : com.sun.xml.internal.ws.api.server.Invoker, resolver : org.xml.sax.EntityResolver, isTransportSynchronous : Bool) : Void;
 	
 	/**
 	* Return the original processHandlerAnnotation setting.
 	*
 	* @return The original processHandlerAnnotation setting.
 	*/
-	@:overload public function isProcessHandlerAnnotation() : Bool;
+	@:overload @:public public function isProcessHandlerAnnotation() : Bool;
 	
 	/**
 	* Return the original Invoker instance.
 	*
 	* @return The original Invoker instance.
 	*/
-	@:overload public function getInvoker() : com.sun.xml.internal.ws.api.server.Invoker;
+	@:overload @:public public function getInvoker() : com.sun.xml.internal.ws.api.server.Invoker;
 	
 	/**
 	* Return the original EntityResolver instance.
 	*
 	* @return The original EntityResolver instance.
 	*/
-	@:overload public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
 	/**
 	* Return the original isTransportSynchronous setting.
 	*
 	* @return The original isTransportSynchronous setting.
 	*/
-	@:overload public function isTransportSynchronous() : Bool;
+	@:overload @:public public function isTransportSynchronous() : Bool;
 	
 	
 }

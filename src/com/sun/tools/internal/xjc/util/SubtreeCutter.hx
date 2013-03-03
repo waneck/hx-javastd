@@ -25,9 +25,9 @@ package com.sun.tools.internal.xjc.util;
 */
 extern class SubtreeCutter extends org.xml.sax.helpers.XMLFilterImpl
 {
-	@:overload override public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
-	@:overload public function isCutting() : Bool;
+	@:overload @:public public function isCutting() : Bool;
 	
 	/**
 	* Starts cutting a sub-tree. Should be called from within the
@@ -35,13 +35,13 @@ extern class SubtreeCutter extends org.xml.sax.helpers.XMLFilterImpl
 	* before the execution is passed to {@link SubtreeCutter#startElement(String, String, String, Attributes)} .
 	* The current element will be cut.
 	*/
-	@:overload public function startCutting() : Void;
+	@:overload @:public public function startCutting() : Void;
 	
-	@:overload override public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public override public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
 	
 }

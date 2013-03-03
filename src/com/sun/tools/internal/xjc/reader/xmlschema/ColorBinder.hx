@@ -28,27 +28,61 @@ package com.sun.tools.internal.xjc.reader.xmlschema;
 	/**
 	* @author Kohsuke Kawaguchi
 	*/
-	private var builder(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder;
+	@:protected @:final private var builder(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder;
 	
-	private var selector(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.ClassSelector;
+	@:protected @:final private var selector(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.ClassSelector;
 	
-	@:overload @:final private function getCurrentBean() : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload @:protected @:final private function getCurrentBean() : com.sun.tools.internal.xjc.model.CClassInfo;
 	
-	@:overload @:final private function getCurrentRoot() : com.sun.xml.internal.xsom.XSComponent;
+	@:overload @:protected @:final private function getCurrentRoot() : com.sun.xml.internal.xsom.XSComponent;
 	
-	@:overload @:final private function createSimpleTypeProperty(type : com.sun.xml.internal.xsom.XSSimpleType, propName : String) : Void;
+	@:overload @:protected @:final private function createSimpleTypeProperty(type : com.sun.xml.internal.xsom.XSSimpleType, propName : String) : Void;
 	
-	@:overload @:final public function annotation(xsAnnotation : com.sun.xml.internal.xsom.XSAnnotation) : Void;
+	@:overload @:public @:final public function annotation(xsAnnotation : com.sun.xml.internal.xsom.XSAnnotation) : Void;
 	
-	@:overload @:final public function schema(xsSchema : com.sun.xml.internal.xsom.XSSchema) : Void;
+	@:overload @:public @:final public function schema(xsSchema : com.sun.xml.internal.xsom.XSSchema) : Void;
 	
-	@:overload @:final public function facet(xsFacet : com.sun.xml.internal.xsom.XSFacet) : Void;
+	@:overload @:public @:final public function facet(xsFacet : com.sun.xml.internal.xsom.XSFacet) : Void;
 	
-	@:overload @:final public function notation(xsNotation : com.sun.xml.internal.xsom.XSNotation) : Void;
+	@:overload @:public @:final public function notation(xsNotation : com.sun.xml.internal.xsom.XSNotation) : Void;
 	
-	@:overload @:final public function identityConstraint(xsIdentityConstraint : com.sun.xml.internal.xsom.XSIdentityConstraint) : Void;
+	@:overload @:public @:final public function identityConstraint(xsIdentityConstraint : com.sun.xml.internal.xsom.XSIdentityConstraint) : Void;
 	
-	@:overload @:final public function xpath(xsxPath : com.sun.xml.internal.xsom.XSXPath) : Void;
+	@:overload @:public @:final public function xpath(xsxPath : com.sun.xml.internal.xsom.XSXPath) : Void;
+	
+	@:overload @:public public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : Void;
+	
+	@:overload @:public public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
+	
+	/**
+	* Visitor that works on {@link XSContentType}.
+	*
+	* @author
+	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
+	*/
+	@:overload @:public public function simpleType(simpleType : com.sun.xml.internal.xsom.XSSimpleType) : Void;
+	
+	@:overload @:public public function particle(particle : com.sun.xml.internal.xsom.XSParticle) : Void;
+	
+	@:overload @:public public function complexType(type : com.sun.xml.internal.xsom.XSComplexType) : Void;
+	
+	@:overload @:public public function attGroupDecl(decl : com.sun.xml.internal.xsom.XSAttGroupDecl) : Void;
+	
+	@:overload @:public public function attributeUse(use : com.sun.xml.internal.xsom.XSAttributeUse) : Void;
+	
+	/**
+	* Visitor that works on {@link com.sun.xml.internal.xsom.XSTerm}.
+	*
+	* @author
+	*  Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
+	*/
+	@:overload @:public public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : Void;
+	
+	@:overload @:public public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
+	
+	@:overload @:public public function empty(empty : com.sun.xml.internal.xsom.XSContentType) : Void;
+	
+	@:overload @:public public function attributeDecl(decl : com.sun.xml.internal.xsom.XSAttributeDecl) : Void;
 	
 	
 }

@@ -102,7 +102,7 @@ package org.xml.sax;
 	*
 	* @return The number of attributes in the list.
 	*/
-	@:overload @:abstract public function getLength() : Int;
+	@:overload @:public @:abstract public function getLength() : Int;
 	
 	/**
 	* Return the name of an attribute in this list (by position).
@@ -120,7 +120,7 @@ package org.xml.sax;
 	*         if the index is out of range.
 	* @see #getLength
 	*/
-	@:overload @:abstract public function getName(i : Int) : String;
+	@:overload @:public @:abstract public function getName(i : Int) : String;
 	
 	/**
 	* Return the type of an attribute in the list (by position).
@@ -143,7 +143,7 @@ package org.xml.sax;
 	* @see #getLength
 	* @see #getType(java.lang.String)
 	*/
-	@:overload @:abstract public function getType(i : Int) : String;
+	@:overload @:public @:abstract public function getType(i : Int) : String;
 	
 	/**
 	* Return the value of an attribute in the list (by position).
@@ -158,7 +158,7 @@ package org.xml.sax;
 	* @see #getLength
 	* @see #getValue(java.lang.String)
 	*/
-	@:overload @:abstract public function getValue(i : Int) : String;
+	@:overload @:public @:abstract public function getValue(i : Int) : String;
 	
 	/**
 	* Return the type of an attribute in the list (by name).
@@ -174,7 +174,7 @@ package org.xml.sax;
 	*         such attribute exists.
 	* @see #getType(int)
 	*/
-	@:overload @:abstract public function getType(name : String) : String;
+	@:overload @:public @:abstract public function getType(name : String) : String;
 	
 	/**
 	* Return the value of an attribute in the list (by name).
@@ -190,7 +190,7 @@ package org.xml.sax;
 	*         no such attribute exists.
 	* @see #getValue(int)
 	*/
-	@:overload @:abstract public function getValue(name : String) : String;
+	@:overload @:public @:abstract public function getValue(name : String) : String;
 	
 	
 }

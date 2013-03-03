@@ -32,7 +32,7 @@ extern class InterOperableNamingImpl
 	* @param n Array of Name Components (Simple or Compound Names)
 	* @return string which is the stringified reference.
 	*/
-	@:overload public function convertToString(theNameComponents : java.NativeArray<org.omg.CosNaming.NameComponent>) : String;
+	@:overload @:public public function convertToString(theNameComponents : java.NativeArray<org.omg.CosNaming.NameComponent>) : String;
 	
 	/**
 	* Method which converts the Stringified name into Array of Name Components.
@@ -40,7 +40,7 @@ extern class InterOperableNamingImpl
 	* @param string which is the stringified name.
 	* @return  Array of Name Components (Simple or Compound Names)
 	*/
-	@:overload public function convertToNameComponent(theStringifiedName : String) : java.NativeArray<org.omg.CosNaming.NameComponent>;
+	@:overload @:public public function convertToNameComponent(theStringifiedName : String) : java.NativeArray<org.omg.CosNaming.NameComponent>;
 	
 	/**
 	* Method which converts the Stringified name  and Host Name Address into
@@ -50,7 +50,7 @@ extern class InterOperableNamingImpl
 	* @param name which is the stringified name.
 	* @return  url based Name.
 	*/
-	@:overload public function createURLBasedAddress(address : String, name : String) : String;
+	@:overload @:public public function createURLBasedAddress(address : String, name : String) : String;
 	
 	
 }

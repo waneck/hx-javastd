@@ -31,19 +31,19 @@ package com.sun.org.omg.CORBA;
 */
 extern class OperationMode implements org.omg.CORBA.portable.IDLEntity
 {
-	public static var _OP_NORMAL(default, null) : Int;
+	@:public @:static @:final public static var _OP_NORMAL(default, null) : Int;
 	
-	public static var OP_NORMAL(default, null) : com.sun.org.omg.CORBA.OperationMode;
+	@:public @:static @:final public static var OP_NORMAL(default, null) : com.sun.org.omg.CORBA.OperationMode;
 	
-	public static var _OP_ONEWAY(default, null) : Int;
+	@:public @:static @:final public static var _OP_ONEWAY(default, null) : Int;
 	
-	public static var OP_ONEWAY(default, null) : com.sun.org.omg.CORBA.OperationMode;
+	@:public @:static @:final public static var OP_ONEWAY(default, null) : com.sun.org.omg.CORBA.OperationMode;
 	
-	@:overload public function value() : Int;
+	@:overload @:public public function value() : Int;
 	
-	@:overload public static function from_int(value : Int) : com.sun.org.omg.CORBA.OperationMode;
+	@:overload @:public @:static public static function from_int(value : Int) : com.sun.org.omg.CORBA.OperationMode;
 	
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	
 }

@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.copyobject;
 */
 extern class ORBStreamObjectCopierImpl implements com.sun.corba.se.spi.copyobject.ObjectCopier
 {
-	@:overload public function new(orb : org.omg.CORBA.ORB) : Void;
+	@:overload @:public public function new(orb : org.omg.CORBA.ORB) : Void;
 	
-	@:overload public function copy(obj : Dynamic) : Dynamic;
+	@:overload @:public public function copy(obj : Dynamic) : Dynamic;
 	
 	
 }

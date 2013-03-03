@@ -40,12 +40,12 @@ package sun.awt.image;
 */
 extern class XbmImageDecoder extends sun.awt.image.ImageDecoder
 {
-	@:overload public function new(src : sun.awt.image.InputStreamImageSource, is : java.io.InputStream) : Void;
+	@:overload @:public public function new(src : sun.awt.image.InputStreamImageSource, is : java.io.InputStream) : Void;
 	
 	/**
 	* produce an image from the stream.
 	*/
-	@:overload public function produceImage() : Void;
+	@:overload @:public override public function produceImage() : Void;
 	
 	
 }

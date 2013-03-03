@@ -28,7 +28,7 @@ extern class MimetypesFileTypeMap extends javax.activation.FileTypeMap
 	/**
 	* The default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a MimetypesFileTypeMap with programmatic entries
@@ -36,7 +36,7 @@ extern class MimetypesFileTypeMap extends javax.activation.FileTypeMap
 	*
 	* @param mimeTypeFileName  the file name
 	*/
-	@:overload public function new(mimeTypeFileName : String) : Void;
+	@:overload @:public public function new(mimeTypeFileName : String) : Void;
 	
 	/**
 	* Construct a MimetypesFileTypeMap with programmatic entries
@@ -44,14 +44,14 @@ extern class MimetypesFileTypeMap extends javax.activation.FileTypeMap
 	*
 	* @param is        the input stream to read from
 	*/
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	/**
 	* Prepend the MIME type values to the registry.
 	*
 	* @param mime_types A .mime.types formatted string of entries.
 	*/
-	@:overload @:synchronized public function addMimeTypes(mime_types : String) : Void;
+	@:overload @:public @:synchronized public function addMimeTypes(mime_types : String) : Void;
 	
 	/**
 	* Return the MIME type of the file object.
@@ -61,7 +61,7 @@ extern class MimetypesFileTypeMap extends javax.activation.FileTypeMap
 	* @param f the file
 	* @return  the file's MIME type
 	*/
-	@:overload override public function getContentType(f : java.io.File) : String;
+	@:overload @:public override public function getContentType(f : java.io.File) : String;
 	
 	/**
 	* Return the MIME type based on the specified file name.
@@ -72,7 +72,7 @@ extern class MimetypesFileTypeMap extends javax.activation.FileTypeMap
 	* @param filename  the file name
 	* @return          the file's MIME type
 	*/
-	@:overload @:synchronized override public function getContentType(filename : String) : String;
+	@:overload @:public @:synchronized override public function getContentType(filename : String) : String;
 	
 	
 }

@@ -29,25 +29,35 @@ package java.awt;
 	* The PaintContext's ColorModel.  This is ARGB if colors are not all
 	* opaque, otherwise it is RGB.
 	*/
-	private var model : java.awt.image.ColorModel;
+	@:protected private var model : java.awt.image.ColorModel;
 	
 	/** The cached ColorModel. */
-	private static var cachedModel : java.awt.image.ColorModel;
+	@:protected @:static private static var cachedModel : java.awt.image.ColorModel;
 	
 	/** The cached raster, which is reusable among instances. */
-	private static var cached : java.lang.ref.WeakReference<java.awt.image.Raster>;
+	@:protected @:static private static var cached : java.lang.ref.WeakReference<java.awt.image.Raster>;
 	
 	/** Raster is reused whenever possible. */
-	private var saved : java.awt.image.Raster;
+	@:protected private var saved : java.awt.image.Raster;
 	
 	/** The method to use when painting out of the gradient bounds. */
-	private var cycleMethod : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod;
+	@:protected private var cycleMethod : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod;
 	
 	/** The ColorSpace in which to perform the interpolation */
-	private var colorSpace : java.awt.MultipleGradientPaint.MultipleGradientPaint_ColorSpaceType;
+	@:protected private var colorSpace : java.awt.MultipleGradientPaint.MultipleGradientPaint_ColorSpaceType;
 	
 	/** Elements of the inverse transform matrix. */
-	private var a00 : Single;
+	@:protected private var a00 : Single;
+	
+	@:protected private var a01 : Single;
+	
+	@:protected private var a10 : Single;
+	
+	@:protected private var a11 : Single;
+	
+	@:protected private var a02 : Single;
+	
+	@:protected private var a12 : Single;
 	
 	/**
 	* This boolean specifies wether we are in simple lookup mode, where an
@@ -56,33 +66,33 @@ package java.awt;
 	* to use a 2-step process where we have to determine which gradient array
 	* we fall into, then determine the index into that array.
 	*/
-	private var isSimpleLookup : Bool;
+	@:protected private var isSimpleLookup : Bool;
 	
 	/**
 	* Size of gradients array for scaling the 0-1 index when looking up
 	* colors the fast way.
 	*/
-	private var fastGradientArraySize : Int;
+	@:protected private var fastGradientArraySize : Int;
 	
 	/**
 	* Array which contains the interpolated color values for each interval,
 	* used by calculateSingleArrayGradient().  It is protected for possible
 	* direct access by subclasses.
 	*/
-	private var gradient : java.NativeArray<Int>;
+	@:protected private var gradient : java.NativeArray<Int>;
 	
 	/**
 	* Constant number of max colors between any 2 arbitrary colors.
 	* Used for creating and indexing gradients arrays.
 	*/
-	private static var GRADIENT_SIZE(default, null) : Int;
+	@:protected @:static @:final private static var GRADIENT_SIZE(default, null) : Int;
 	
-	private static var GRADIENT_SIZE_INDEX(default, null) : Int;
+	@:protected @:static @:final private static var GRADIENT_SIZE_INDEX(default, null) : Int;
 	
 	/**
 	* Constructor for MultipleGradientPaintContext superclass.
 	*/
-	@:overload private function new(mgp : java.awt.MultipleGradientPaint, cm : java.awt.image.ColorModel, deviceBounds : java.awt.Rectangle, userBounds : java.awt.geom.Rectangle2D, t : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod, colorSpace : java.awt.MultipleGradientPaint.MultipleGradientPaint_ColorSpaceType) : Void;
+	@:overload @:protected private function new(mgp : java.awt.MultipleGradientPaint, cm : java.awt.image.ColorModel, deviceBounds : java.awt.Rectangle, userBounds : java.awt.geom.Rectangle2D, t : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod, colorSpace : java.awt.MultipleGradientPaint.MultipleGradientPaint_ColorSpaceType) : Void;
 	
 	/**
 	* Helper function to index into the gradients array.  This is necessary
@@ -94,24 +104,24 @@ package java.awt;
 	*                 into the range 0 to 1
 	* @returns integer color to display
 	*/
-	@:overload @:final private function indexIntoGradientsArrays(position : Single) : Int;
+	@:overload @:protected @:final private function indexIntoGradientsArrays(position : Single) : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:final public function getRaster(x : Int, y : Int, w : Int, h : Int) : java.awt.image.Raster;
+	@:overload @:public @:final public function getRaster(x : Int, y : Int, w : Int, h : Int) : java.awt.image.Raster;
 	
-	@:overload @:abstract private function fillRaster(pixels : java.NativeArray<Int>, off : Int, adjust : Int, x : Int, y : Int, w : Int, h : Int) : Void;
-	
-	/**
-	* {@inheritDoc}
-	*/
-	@:overload @:final public function dispose() : Void;
+	@:overload @:protected @:abstract private function fillRaster(pixels : java.NativeArray<Int>, off : Int, adjust : Int, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:final public function getColorModel() : java.awt.image.ColorModel;
+	@:overload @:public @:final public function dispose() : Void;
+	
+	/**
+	* {@inheritDoc}
+	*/
+	@:overload @:public @:final public function getColorModel() : java.awt.image.ColorModel;
 	
 	
 }

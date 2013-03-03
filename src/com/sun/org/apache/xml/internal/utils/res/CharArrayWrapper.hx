@@ -28,11 +28,11 @@ package com.sun.org.apache.xml.internal.utils.res;
 */
 extern class CharArrayWrapper
 {
-	@:overload public function new(arg : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(arg : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
-	@:overload public function getChar(index : Int) : java.StdTypes.Char16;
+	@:overload @:public public function getChar(index : Int) : java.StdTypes.Char16;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	
 }

@@ -35,7 +35,7 @@ extern class XPathFilterParameterSpec implements javax.xml.crypto.dsig.spec.Tran
 	* @param xPath the XPath expression to be evaluated
 	* @throws NullPointerException if <code>xPath</code> is <code>null</code>
 	*/
-	@:overload public function new(xPath : String) : Void;
+	@:overload @:public public function new(xPath : String) : Void;
 	
 	/**
 	* Creates an <code>XPathFilterParameterSpec</code> with the specified
@@ -51,14 +51,14 @@ extern class XPathFilterParameterSpec implements javax.xml.crypto.dsig.spec.Tran
 	* @throws ClassCastException if any of the map's keys or entries are not
 	*    of type <code>String</code>
 	*/
-	@:overload public function new(xPath : String, namespaceMap : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(xPath : String, namespaceMap : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Returns the XPath expression to be evaluated.
 	*
 	* @return the XPath expression to be evaluated
 	*/
-	@:overload public function getXPath() : String;
+	@:overload @:public public function getXPath() : String;
 	
 	/**
 	* Returns a map of namespace prefixes. Each key is a namespace prefix
@@ -71,7 +71,7 @@ extern class XPathFilterParameterSpec implements javax.xml.crypto.dsig.spec.Tran
 	* @return a <code>Map</code> of namespace prefixes to namespace URIs (may
 	*    be empty, but never <code>null</code>)
 	*/
-	@:overload public function getNamespaceMap() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function getNamespaceMap() : java.util.Map<Dynamic, Dynamic>;
 	
 	
 }

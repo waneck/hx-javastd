@@ -62,7 +62,7 @@ extern class Activatable extends java.rmi.server.RemoteServer
 	* the object to the RMI runtime.
 	* @since 1.2
 	**/
-	@:require(java2) @:overload private function new(location : String, data : java.rmi.MarshalledObject<Dynamic>, restart : Bool, port : Int) : Void;
+	@:require(java2) @:overload @:protected private function new(location : String, data : java.rmi.MarshalledObject<Dynamic>, restart : Bool, port : Int) : Void;
 	
 	/**
 	* Constructs an activatable remote object by registering
@@ -104,7 +104,7 @@ extern class Activatable extends java.rmi.server.RemoteServer
 	* the object to the RMI runtime.
 	* @since 1.2
 	**/
-	@:require(java2) @:overload private function new(location : String, data : java.rmi.MarshalledObject<Dynamic>, restart : Bool, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : Void;
+	@:require(java2) @:overload @:protected private function new(location : String, data : java.rmi.MarshalledObject<Dynamic>, restart : Bool, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : Void;
 	
 	/**
 	* Constructor used to activate/export the object on a specified
@@ -126,7 +126,7 @@ extern class Activatable extends java.rmi.server.RemoteServer
 	* runtime fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function new(id : java.rmi.activation.ActivationID, port : Int) : Void;
+	@:require(java2) @:overload @:protected private function new(id : java.rmi.activation.ActivationID, port : Int) : Void;
 	
 	/**
 	* Constructor used to activate/export the object on a specified
@@ -151,7 +151,7 @@ extern class Activatable extends java.rmi.server.RemoteServer
 	* runtime fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function new(id : java.rmi.activation.ActivationID, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : Void;
+	@:require(java2) @:overload @:protected private function new(id : java.rmi.activation.ActivationID, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : Void;
 	
 	/**
 	* Returns the object's activation identifier.  The method is
@@ -160,7 +160,7 @@ extern class Activatable extends java.rmi.server.RemoteServer
 	* @return the object's activation identifier
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function getID() : java.rmi.activation.ActivationID;
+	@:require(java2) @:overload @:protected private function getID() : java.rmi.activation.ActivationID;
 	
 	/**
 	* Register an object descriptor for an activatable remote
@@ -174,7 +174,7 @@ extern class Activatable extends java.rmi.server.RemoteServer
 	* @exception RemoteException if remote call fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function register(desc : java.rmi.activation.ActivationDesc) : java.rmi.Remote;
+	@:require(java2) @:overload @:public @:static public static function register(desc : java.rmi.activation.ActivationDesc) : java.rmi.Remote;
 	
 	/**
 	* Informs the system that the object with the corresponding activation
@@ -201,7 +201,7 @@ extern class Activatable extends java.rmi.server.RemoteServer
 	* @exception RemoteException if call informing monitor fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function inactive(id : java.rmi.activation.ActivationID) : Bool;
+	@:require(java2) @:overload @:public @:static public static function inactive(id : java.rmi.activation.ActivationID) : Bool;
 	
 	/**
 	* Revokes previous registration for the activation descriptor
@@ -214,7 +214,7 @@ extern class Activatable extends java.rmi.server.RemoteServer
 	* @exception RemoteException if remote call to activation system fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function unregister(id : java.rmi.activation.ActivationID) : Void;
+	@:require(java2) @:overload @:public @:static public static function unregister(id : java.rmi.activation.ActivationID) : Void;
 	
 	/**
 	* Registers an activation descriptor (with the specified location,
@@ -254,7 +254,7 @@ extern class Activatable extends java.rmi.server.RemoteServer
 	* @exception RemoteException if object registration or export fails
 	* @since 1.2
 	**/
-	@:require(java2) @:overload public static function exportObject(obj : java.rmi.Remote, location : String, data : java.rmi.MarshalledObject<Dynamic>, restart : Bool, port : Int) : java.rmi.activation.ActivationID;
+	@:require(java2) @:overload @:public @:static public static function exportObject(obj : java.rmi.Remote, location : String, data : java.rmi.MarshalledObject<Dynamic>, restart : Bool, port : Int) : java.rmi.activation.ActivationID;
 	
 	/**
 	* Registers an activation descriptor (with the specified location,
@@ -319,7 +319,7 @@ extern class Activatable extends java.rmi.server.RemoteServer
 	* @exception RemoteException if object registration or export fails
 	* @since 1.2
 	**/
-	@:require(java2) @:overload public static function exportObject(obj : java.rmi.Remote, location : String, data : java.rmi.MarshalledObject<Dynamic>, restart : Bool, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : java.rmi.activation.ActivationID;
+	@:require(java2) @:overload @:public @:static public static function exportObject(obj : java.rmi.Remote, location : String, data : java.rmi.MarshalledObject<Dynamic>, restart : Bool, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : java.rmi.activation.ActivationID;
 	
 	/**
 	* Export the activatable remote object to the RMI runtime to make
@@ -340,7 +340,7 @@ extern class Activatable extends java.rmi.server.RemoteServer
 	* @exception RemoteException if object export fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function exportObject(obj : java.rmi.Remote, id : java.rmi.activation.ActivationID, port : Int) : java.rmi.Remote;
+	@:require(java2) @:overload @:public @:static public static function exportObject(obj : java.rmi.Remote, id : java.rmi.activation.ActivationID, port : Int) : java.rmi.Remote;
 	
 	/**
 	* Export the activatable remote object to the RMI runtime to make
@@ -364,7 +364,7 @@ extern class Activatable extends java.rmi.server.RemoteServer
 	* @exception RemoteException if object export fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function exportObject(obj : java.rmi.Remote, id : java.rmi.activation.ActivationID, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : java.rmi.Remote;
+	@:require(java2) @:overload @:public @:static public static function exportObject(obj : java.rmi.Remote, id : java.rmi.activation.ActivationID, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : java.rmi.Remote;
 	
 	/**
 	* Remove the remote object, obj, from the RMI runtime. If
@@ -384,7 +384,7 @@ extern class Activatable extends java.rmi.server.RemoteServer
 	* currently exported
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function unexportObject(obj : java.rmi.Remote, force : Bool) : Bool;
+	@:require(java2) @:overload @:public @:static public static function unexportObject(obj : java.rmi.Remote, force : Bool) : Bool;
 	
 	
 }

@@ -34,7 +34,7 @@ extern interface DataSource
 	*
 	* @return an InputStream
 	*/
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* This method returns an <code>OutputStream</code> where the
@@ -45,7 +45,7 @@ extern interface DataSource
 	*
 	* @return an OutputStream
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* This method returns the MIME type of the data in the form of a
@@ -55,7 +55,7 @@ extern interface DataSource
 	*
 	* @return the MIME Type
 	*/
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
 	/**
 	* Return the <i>name</i> of this object where the name of the object
@@ -66,7 +66,7 @@ extern interface DataSource
 	*
 	* @return the name of the object.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

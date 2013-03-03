@@ -26,7 +26,7 @@ package sun.reflect;
 @:internal extern class MethodAccessorImpl extends sun.reflect.MagicAccessorImpl implements sun.reflect.MethodAccessor
 {
 	/** Matches specification in {@link java.lang.reflect.Method} */
-	@:overload @:abstract public function invoke(obj : Dynamic, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public @:abstract public function invoke(obj : Dynamic, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

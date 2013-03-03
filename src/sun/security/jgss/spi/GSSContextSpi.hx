@@ -81,61 +81,61 @@ package sun.security.jgss.spi;
 */
 extern interface GSSContextSpi
 {
-	@:overload public function getProvider() : java.security.Provider;
+	@:overload @:public public function getProvider() : java.security.Provider;
 	
-	@:overload public function requestLifetime(lifetime : Int) : Void;
+	@:overload @:public public function requestLifetime(lifetime : Int) : Void;
 	
-	@:overload public function requestMutualAuth(state : Bool) : Void;
+	@:overload @:public public function requestMutualAuth(state : Bool) : Void;
 	
-	@:overload public function requestReplayDet(state : Bool) : Void;
+	@:overload @:public public function requestReplayDet(state : Bool) : Void;
 	
-	@:overload public function requestSequenceDet(state : Bool) : Void;
+	@:overload @:public public function requestSequenceDet(state : Bool) : Void;
 	
-	@:overload public function requestCredDeleg(state : Bool) : Void;
+	@:overload @:public public function requestCredDeleg(state : Bool) : Void;
 	
-	@:overload public function requestAnonymity(state : Bool) : Void;
+	@:overload @:public public function requestAnonymity(state : Bool) : Void;
 	
-	@:overload public function requestConf(state : Bool) : Void;
+	@:overload @:public public function requestConf(state : Bool) : Void;
 	
-	@:overload public function requestInteg(state : Bool) : Void;
+	@:overload @:public public function requestInteg(state : Bool) : Void;
 	
-	@:overload public function requestDelegPolicy(state : Bool) : Void;
+	@:overload @:public public function requestDelegPolicy(state : Bool) : Void;
 	
-	@:overload public function setChannelBinding(cb : org.ietf.jgss.ChannelBinding) : Void;
+	@:overload @:public public function setChannelBinding(cb : org.ietf.jgss.ChannelBinding) : Void;
 	
-	@:overload public function getCredDelegState() : Bool;
+	@:overload @:public public function getCredDelegState() : Bool;
 	
-	@:overload public function getMutualAuthState() : Bool;
+	@:overload @:public public function getMutualAuthState() : Bool;
 	
-	@:overload public function getReplayDetState() : Bool;
+	@:overload @:public public function getReplayDetState() : Bool;
 	
-	@:overload public function getSequenceDetState() : Bool;
+	@:overload @:public public function getSequenceDetState() : Bool;
 	
-	@:overload public function getAnonymityState() : Bool;
+	@:overload @:public public function getAnonymityState() : Bool;
 	
-	@:overload public function getDelegPolicyState() : Bool;
+	@:overload @:public public function getDelegPolicyState() : Bool;
 	
-	@:overload public function isTransferable() : Bool;
+	@:overload @:public public function isTransferable() : Bool;
 	
-	@:overload public function isProtReady() : Bool;
+	@:overload @:public public function isProtReady() : Bool;
 	
-	@:overload public function isInitiator() : Bool;
+	@:overload @:public public function isInitiator() : Bool;
 	
-	@:overload public function getConfState() : Bool;
+	@:overload @:public public function getConfState() : Bool;
 	
-	@:overload public function getIntegState() : Bool;
+	@:overload @:public public function getIntegState() : Bool;
 	
-	@:overload public function getLifetime() : Int;
+	@:overload @:public public function getLifetime() : Int;
 	
-	@:overload public function isEstablished() : Bool;
+	@:overload @:public public function isEstablished() : Bool;
 	
-	@:overload public function getSrcName() : sun.security.jgss.spi.GSSNameSpi;
+	@:overload @:public public function getSrcName() : sun.security.jgss.spi.GSSNameSpi;
 	
-	@:overload public function getTargName() : sun.security.jgss.spi.GSSNameSpi;
+	@:overload @:public public function getTargName() : sun.security.jgss.spi.GSSNameSpi;
 	
-	@:overload public function getMech() : org.ietf.jgss.Oid;
+	@:overload @:public public function getMech() : org.ietf.jgss.Oid;
 	
-	@:overload public function getDelegCred() : sun.security.jgss.spi.GSSCredentialSpi;
+	@:overload @:public public function getDelegCred() : sun.security.jgss.spi.GSSCredentialSpi;
 	
 	/**
 	* Initiator context establishment call. This method may be
@@ -175,7 +175,7 @@ extern interface GSSContextSpi
 	* the way out.
 	* @exception GSSException may be thrown
 	*/
-	@:overload public function initSecContext(is : java.io.InputStream, mechTokenSize : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function initSecContext(is : java.io.InputStream, mechTokenSize : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Acceptor's context establishment call. This method may be
@@ -214,7 +214,7 @@ extern interface GSSContextSpi
 	* the way out.
 	* @exception GSSException may be thrown
 	*/
-	@:overload public function acceptSecContext(is : java.io.InputStream, mechTokenSize : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function acceptSecContext(is : java.io.InputStream, mechTokenSize : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Queries the context for largest data size to accomodate
@@ -231,7 +231,7 @@ extern interface GSSContextSpi
 	*    requirements are met.
 	* @exception GSSException may be thrown
 	*/
-	@:overload public function getWrapSizeLimit(qop : Int, confReq : Bool, maxTokSize : Int) : Int;
+	@:overload @:public public function getWrapSizeLimit(qop : Int, confReq : Bool, maxTokSize : Int) : Int;
 	
 	/**
 	* Provides per-message token encapsulation.
@@ -244,12 +244,12 @@ extern interface GSSContextSpi
 	* @exception GSSException may be thrown
 	* @see unwrap
 	*/
-	@:overload public function wrap(is : java.io.InputStream, os : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public public function wrap(is : java.io.InputStream, os : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
 	
 	/**
 	* For apps that want simplicity and don't care about buffer copies.
 	*/
-	@:overload public function wrap(inBuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function wrap(inBuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the message token previously encapsulated in the wrap
@@ -262,12 +262,12 @@ extern interface GSSContextSpi
 	* @exception GSSException may be thrown
 	* @see wrap
 	*/
-	@:overload public function unwrap(is : java.io.InputStream, os : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public public function unwrap(is : java.io.InputStream, os : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
 	
 	/**
 	* For apps that want simplicity and dont care about buffer copies.
 	*/
-	@:overload public function unwrap(inBuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function unwrap(inBuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Applies per-message integrity services.
@@ -278,9 +278,9 @@ extern interface GSSContextSpi
 	* @param msgProp on input the desired QOP and output the applied QOP
 	* @exception GSSException
 	*/
-	@:overload public function getMIC(is : java.io.InputStream, os : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public public function getMIC(is : java.io.InputStream, os : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
 	
-	@:overload public function getMIC(inMsg : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getMIC(inMsg : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Checks the integrity of the supplied tokens.
@@ -292,9 +292,9 @@ extern interface GSSContextSpi
 	*    states of the token as well as any informatory status codes
 	* @exception GSSException may be thrown
 	*/
-	@:overload public function verifyMIC(is : java.io.InputStream, msgStr : java.io.InputStream, mProp : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public public function verifyMIC(is : java.io.InputStream, msgStr : java.io.InputStream, mProp : org.ietf.jgss.MessageProp) : Void;
 	
-	@:overload public function verifyMIC(inTok : java.NativeArray<java.StdTypes.Int8>, tokOffset : Int, tokLen : Int, inMsg : java.NativeArray<java.StdTypes.Int8>, msgOffset : Int, msgLen : Int, msgProp : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public public function verifyMIC(inTok : java.NativeArray<java.StdTypes.Int8>, tokOffset : Int, tokLen : Int, inMsg : java.NativeArray<java.StdTypes.Int8>, msgOffset : Int, msgLen : Int, msgProp : org.ietf.jgss.MessageProp) : Void;
 	
 	/**
 	* Produces a token representing this context. After this call
@@ -304,7 +304,7 @@ extern interface GSSContextSpi
 	* @return exported context token
 	* @exception GSSException may be thrown
 	*/
-	@:overload public function export() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function export() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Releases context resources and terminates the
@@ -312,7 +312,7 @@ extern interface GSSContextSpi
 	*
 	* @exception GSSException may be thrown
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* Return the mechanism-specific attribute associated with (@code type}.
@@ -322,7 +322,7 @@ extern interface GSSContextSpi
 	* @throws GSSException see {@link ExtendedGSSContext#inquireSecContext}
 	* for details
 	*/
-	@:overload public function inquireSecContext(type : com.sun.security.jgss.InquireType) : Dynamic;
+	@:overload @:public public function inquireSecContext(type : com.sun.security.jgss.InquireType) : Dynamic;
 	
 	
 }

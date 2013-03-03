@@ -38,12 +38,12 @@ package javax.management;
 	*
 	* @param val the inappropriate value.
 	*/
-	@:overload public function new(val : Dynamic) : Void;
+	@:overload @:public public function new(val : Dynamic) : Void;
 	
 	/**
 	* Returns the string representing the object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

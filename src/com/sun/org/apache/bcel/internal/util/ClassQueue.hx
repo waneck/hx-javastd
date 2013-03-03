@@ -65,15 +65,15 @@ extern class ClassQueue implements java.io.Serializable
 	* @author <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
 	* @see ClassVector
 */
-	private var vec : java.util.LinkedList<Dynamic>;
+	@:protected private var vec : java.util.LinkedList<Dynamic>;
 	
-	@:overload public function enqueue(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
+	@:overload @:public public function enqueue(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
 	
-	@:overload public function dequeue() : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function dequeue() : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
-	@:overload public function empty() : Bool;
+	@:overload @:public public function empty() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -31,11 +31,11 @@ extern class BasicComboBoxEditor implements javax.swing.ComboBoxEditor implement
 	* @author Arnaud Weber
 	* @author Mark Davidson
 	*/
-	private var editor : javax.swing.JTextField;
+	@:protected private var editor : javax.swing.JTextField;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getEditorComponent() : java.awt.Component;
+	@:overload @:public public function getEditorComponent() : java.awt.Component;
 	
 	/**
 	* Creates the internal editor component. Override this to provide
@@ -44,36 +44,36 @@ extern class BasicComboBoxEditor implements javax.swing.ComboBoxEditor implement
 	* @return a new editor component
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function createEditorComponent() : javax.swing.JTextField;
+	@:require(java6) @:overload @:protected private function createEditorComponent() : javax.swing.JTextField;
 	
 	/**
 	* Sets the item that should be edited.
 	*
 	* @param anObject the displayed value of the editor
 	*/
-	@:overload public function setItem(anObject : Dynamic) : Void;
+	@:overload @:public public function setItem(anObject : Dynamic) : Void;
 	
-	@:overload public function getItem() : Dynamic;
+	@:overload @:public public function getItem() : Dynamic;
 	
-	@:overload public function selectAll() : Void;
+	@:overload @:public public function selectAll() : Void;
 	
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function addActionListener(l : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function addActionListener(l : java.awt.event.ActionListener) : Void;
 	
-	@:overload public function removeActionListener(l : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function removeActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicComboBoxEditor$BorderlessTextField') @:internal extern class BasicComboBoxEditor_BorderlessTextField extends javax.swing.JTextField
 {
-	@:overload public function new(value : String, n : Int) : Void;
+	@:overload @:public public function new(value : String, n : Int) : Void;
 	
-	@:overload override public function setText(s : String) : Void;
+	@:overload @:public override public function setText(s : String) : Void;
 	
-	@:overload public function setBorder(b : javax.swing.border.Border) : Void;
+	@:overload @:public override public function setBorder(b : javax.swing.border.Border) : Void;
 	
 	
 }

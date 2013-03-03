@@ -37,7 +37,7 @@ extern class MIMEParsingException extends java.lang.RuntimeException
 	* Constructs a new exception with <code>null</code> as its
 	* detail message. The cause is not initialized.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new exception with the specified detail
@@ -46,7 +46,7 @@ extern class MIMEParsingException extends java.lang.RuntimeException
 	* @param message The detail message which is later
 	*                retrieved using the getMessage method
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructs a new exception with the specified detail
@@ -57,7 +57,7 @@ extern class MIMEParsingException extends java.lang.RuntimeException
 	* @param cause   The cause which is saved for the later
 	*                retrieval throw by the getCause method
 	*/
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a new WebServiceException with the specified cause
@@ -71,7 +71,7 @@ extern class MIMEParsingException extends java.lang.RuntimeException
 	*              indicates that the cause is nonexistent or
 	*              unknown.)
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

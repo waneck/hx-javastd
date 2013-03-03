@@ -26,13 +26,22 @@ package com.sun.tools.jdi;
 @:internal extern class ValueImpl extends com.sun.tools.jdi.MirrorImpl implements com.sun.jdi.Value
 {
 	/**
+	* Returns the run-time type of this value.
+	*
+	* @see Type
+	* @return a {@link Type} which mirrors the value's type in the
+	* target VM.
+	*/
+	@:overload @:public @:public override public function type() : com.sun.jdi.Type;
+	
+	/**
 	* Gets the VirtualMachine to which this
 	* Mirror belongs. A Mirror must be associated
 	* with a VirtualMachine to have any meaning.
 	*
 	* @return the {@link VirtualMachine} for which this mirror is a proxy.
 	*/
-	@:overload @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public @:public @:public @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	
 }

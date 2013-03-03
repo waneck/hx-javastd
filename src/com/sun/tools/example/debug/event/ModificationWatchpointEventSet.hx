@@ -36,9 +36,9 @@ extern class ModificationWatchpointEventSet extends com.sun.tools.example.debug.
 	* Value that will be assigned to the field when the instruction
 	* completes.
 	*/
-	@:overload public function getValueToBe() : com.sun.jdi.Value;
+	@:overload @:public public function getValueToBe() : com.sun.jdi.Value;
 	
-	@:overload public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
+	@:overload @:public override public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
 	
 	
 }

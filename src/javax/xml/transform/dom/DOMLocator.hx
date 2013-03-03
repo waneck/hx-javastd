@@ -30,7 +30,7 @@ extern interface DOMLocator extends javax.xml.transform.SourceLocator
 	*
 	* @return The node that is the location for the event.
 	*/
-	@:overload public function getOriginatingNode() : org.w3c.dom.Node;
+	@:overload @:public public function getOriginatingNode() : org.w3c.dom.Node;
 	
 	
 }

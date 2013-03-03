@@ -55,39 +55,39 @@ extern interface Event
 	/**
 	* The name of the event (case-insensitive). The name must be an XML name.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	* Used to indicate the <code>EventTarget</code> to which the event was
 	* originally dispatched.
 	*/
-	@:overload public function getTarget() : org.w3c.dom.events.EventTarget;
+	@:overload @:public public function getTarget() : org.w3c.dom.events.EventTarget;
 	
 	/**
 	* Used to indicate the <code>EventTarget</code> whose
 	* <code>EventListeners</code> are currently being processed. This is
 	* particularly useful during capturing and bubbling.
 	*/
-	@:overload public function getCurrentTarget() : org.w3c.dom.events.EventTarget;
+	@:overload @:public public function getCurrentTarget() : org.w3c.dom.events.EventTarget;
 	
 	/**
 	* Used to indicate which phase of event flow is currently being
 	* evaluated.
 	*/
-	@:overload public function getEventPhase() : java.StdTypes.Int16;
+	@:overload @:public public function getEventPhase() : java.StdTypes.Int16;
 	
 	/**
 	* Used to indicate whether or not an event is a bubbling event. If the
 	* event can bubble the value is true, else the value is false.
 	*/
-	@:overload public function getBubbles() : Bool;
+	@:overload @:public public function getBubbles() : Bool;
 	
 	/**
 	* Used to indicate whether or not an event can have its default action
 	* prevented. If the default action can be prevented the value is true,
 	* else the value is false.
 	*/
-	@:overload public function getCancelable() : Bool;
+	@:overload @:public public function getCancelable() : Bool;
 	
 	/**
 	*  Used to specify the time (in milliseconds relative to the epoch) at
@@ -97,7 +97,7 @@ extern interface Event
 	* will be returned. Examples of epoch time are the time of the system
 	* start or 0:0:0 UTC 1st January 1970.
 	*/
-	@:overload public function getTimeStamp() : haxe.Int64;
+	@:overload @:public public function getTimeStamp() : haxe.Int64;
 	
 	/**
 	* The <code>stopPropagation</code> method is used prevent further
@@ -107,7 +107,7 @@ extern interface Event
 	* on the current <code>EventTarget</code> before event flow stops. This
 	* method may be used during any stage of event flow.
 	*/
-	@:overload public function stopPropagation() : Void;
+	@:overload @:public public function stopPropagation() : Void;
 	
 	/**
 	* If an event is cancelable, the <code>preventDefault</code> method is
@@ -121,7 +121,7 @@ extern interface Event
 	* throughout the remainder of the event's propagation. This method may
 	* be used during any stage of event flow.
 	*/
-	@:overload public function preventDefault() : Void;
+	@:overload @:public public function preventDefault() : Void;
 	
 	/**
 	* The <code>initEvent</code> method is used to initialize the value of an
@@ -146,7 +146,7 @@ extern interface Event
 	* @param cancelableArg Specifies whether or not the event's default
 	*   action can be prevented.
 	*/
-	@:overload public function initEvent(eventTypeArg : String, canBubbleArg : Bool, cancelableArg : Bool) : Void;
+	@:overload @:public public function initEvent(eventTypeArg : String, canBubbleArg : Bool, cancelableArg : Bool) : Void;
 	
 	
 }

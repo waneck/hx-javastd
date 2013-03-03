@@ -25,13 +25,13 @@ package sun.awt.X11;
 */
 @:internal extern class XToolkitThreadBlockedHandler implements sun.awt.datatransfer.ToolkitThreadBlockedHandler
 {
-	@:overload public function lock() : Void;
+	@:overload @:public public function lock() : Void;
 	
-	@:overload public function unlock() : Void;
+	@:overload @:public public function unlock() : Void;
 	
-	@:overload public function enter() : Void;
+	@:overload @:public public function enter() : Void;
 	
-	@:overload public function exit() : Void;
+	@:overload @:public public function exit() : Void;
 	
 	
 }

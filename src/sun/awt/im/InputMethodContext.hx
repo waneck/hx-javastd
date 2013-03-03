@@ -28,55 +28,55 @@ extern class InputMethodContext extends sun.awt.im.InputContext implements java.
 	/**
 	* Constructs an InputMethodContext.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function dispatchInputMethodEvent(id : Int, text : java.text.AttributedCharacterIterator, committedCharacterCount : Int, caret : java.awt.font.TextHitInfo, visiblePosition : java.awt.font.TextHitInfo) : Void;
+	@:overload @:public public function dispatchInputMethodEvent(id : Int, text : java.text.AttributedCharacterIterator, committedCharacterCount : Int, caret : java.awt.font.TextHitInfo, visiblePosition : java.awt.font.TextHitInfo) : Void;
 	
-	@:overload override public function dispatchEvent(event : java.awt.AWTEvent) : Void;
+	@:overload @:public override public function dispatchEvent(event : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Calls the current client component's implementation of getTextLocation.
 	*/
-	@:overload public function getTextLocation(offset : java.awt.font.TextHitInfo) : java.awt.Rectangle;
+	@:overload @:public public function getTextLocation(offset : java.awt.font.TextHitInfo) : java.awt.Rectangle;
 	
 	/**
 	* Calls the current client component's implementation of getLocationOffset.
 	*/
-	@:overload public function getLocationOffset(x : Int, y : Int) : java.awt.font.TextHitInfo;
+	@:overload @:public public function getLocationOffset(x : Int, y : Int) : java.awt.font.TextHitInfo;
 	
 	/**
 	* Calls the current client component's implementation of getInsertPositionOffset.
 	*/
-	@:overload public function getInsertPositionOffset() : Int;
+	@:overload @:public public function getInsertPositionOffset() : Int;
 	
 	/**
 	* Calls the current client component's implementation of getCommittedText.
 	*/
-	@:overload public function getCommittedText(beginIndex : Int, endIndex : Int, attributes : java.NativeArray<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : java.text.AttributedCharacterIterator;
+	@:overload @:public public function getCommittedText(beginIndex : Int, endIndex : Int, attributes : java.NativeArray<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : java.text.AttributedCharacterIterator;
 	
 	/**
 	* Calls the current client component's implementation of getCommittedTextLength.
 	*/
-	@:overload public function getCommittedTextLength() : Int;
+	@:overload @:public public function getCommittedTextLength() : Int;
 	
 	/**
 	* Calls the current client component's implementation of cancelLatestCommittedText.
 	*/
-	@:overload public function cancelLatestCommittedText(attributes : java.NativeArray<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : java.text.AttributedCharacterIterator;
+	@:overload @:public public function cancelLatestCommittedText(attributes : java.NativeArray<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : java.text.AttributedCharacterIterator;
 	
 	/**
 	* Calls the current client component's implementation of getSelectedText.
 	*/
-	@:overload public function getSelectedText(attributes : java.NativeArray<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : java.text.AttributedCharacterIterator;
+	@:overload @:public public function getSelectedText(attributes : java.NativeArray<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : java.text.AttributedCharacterIterator;
 	
-	@:overload public function createInputMethodWindow(title : String, attachToInputContext : Bool) : java.awt.Window;
+	@:overload @:public public function createInputMethodWindow(title : String, attachToInputContext : Bool) : java.awt.Window;
 	
-	@:overload public function createInputMethodJFrame(title : String, attachToInputContext : Bool) : javax.swing.JFrame;
+	@:overload @:public public function createInputMethodJFrame(title : String, attachToInputContext : Bool) : javax.swing.JFrame;
 	
 	/**
 	* @see java.awt.im.spi.InputMethodContext#enableClientWindowNotification
 	*/
-	@:overload public function enableClientWindowNotification(inputMethod : java.awt.im.spi.InputMethod, enable : Bool) : Void;
+	@:overload @:public public function enableClientWindowNotification(inputMethod : java.awt.im.spi.InputMethod, enable : Bool) : Void;
 	
 	
 }

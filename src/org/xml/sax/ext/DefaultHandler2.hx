@@ -30,35 +30,35 @@ package org.xml.sax.ext;
 extern class DefaultHandler2 extends org.xml.sax.helpers.DefaultHandler implements org.xml.sax.ext.LexicalHandler implements org.xml.sax.ext.DeclHandler implements org.xml.sax.ext.EntityResolver2
 {
 	/** Constructs a handler which ignores all parsing events. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
-	@:overload public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
-	@:overload public function startEntity(name : String) : Void;
+	@:overload @:public public function startEntity(name : String) : Void;
 	
-	@:overload public function endEntity(name : String) : Void;
+	@:overload @:public public function endEntity(name : String) : Void;
 	
-	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function attributeDecl(eName : String, aName : String, type : String, mode : String, value : String) : Void;
+	@:overload @:public public function attributeDecl(eName : String, aName : String, type : String, mode : String, value : String) : Void;
 	
-	@:overload public function elementDecl(name : String, model : String) : Void;
+	@:overload @:public public function elementDecl(name : String, model : String) : Void;
 	
-	@:overload public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function internalEntityDecl(name : String, value : String) : Void;
+	@:overload @:public public function internalEntityDecl(name : String, value : String) : Void;
 	
 	/**
 	* Tells the parser that if no external subset has been declared
 	* in the document text, none should be used.
 	*/
-	@:overload public function getExternalSubset(name : String, baseURI : String) : org.xml.sax.InputSource;
+	@:overload @:public public function getExternalSubset(name : String, baseURI : String) : org.xml.sax.InputSource;
 	
 	/**
 	* Tells the parser to resolve the systemId against the baseURI
@@ -69,7 +69,7 @@ extern class DefaultHandler2 extends org.xml.sax.helpers.DefaultHandler implemen
 	* be invoked with null <em>name</em> and <em>baseURI</em>, and
 	* with the <em>systemId</em> already absolutized.
 	*/
-	@:overload public function resolveEntity(name : String, publicId : String, baseURI : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(name : String, publicId : String, baseURI : String, systemId : String) : org.xml.sax.InputSource;
 	
 	/**
 	* Invokes
@@ -77,7 +77,7 @@ extern class DefaultHandler2 extends org.xml.sax.helpers.DefaultHandler implemen
 	* with null entity name and base URI.
 	* You only need to override that method to use this class.
 	*/
-	@:overload override public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public override public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
 	
 }

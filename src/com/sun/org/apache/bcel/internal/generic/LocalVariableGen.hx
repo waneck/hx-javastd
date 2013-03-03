@@ -78,7 +78,7 @@ extern class LocalVariableGen implements com.sun.org.apache.bcel.internal.generi
 	* @param start from where the instruction is valid (null means from the start)
 	* @param end until where the instruction is valid (null means to the end)
 	*/
-	@:overload public function new(index : Int, name : String, type : com.sun.org.apache.bcel.internal.generic.Type, start : com.sun.org.apache.bcel.internal.generic.InstructionHandle, end : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function new(index : Int, name : String, type : com.sun.org.apache.bcel.internal.generic.Type, start : com.sun.org.apache.bcel.internal.generic.InstructionHandle, end : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* Get LocalVariable object.
@@ -95,48 +95,48 @@ extern class LocalVariableGen implements com.sun.org.apache.bcel.internal.generi
 	* @param il instruction list (byte code) which this variable belongs to
 	* @param cp constant pool
 	*/
-	@:overload public function getLocalVariable(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.classfile.LocalVariable;
+	@:overload @:public public function getLocalVariable(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.classfile.LocalVariable;
 	
-	@:overload public function setIndex(index : Int) : Void;
+	@:overload @:public public function setIndex(index : Int) : Void;
 	
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setType(type : com.sun.org.apache.bcel.internal.generic.Type) : Void;
+	@:overload @:public public function setType(type : com.sun.org.apache.bcel.internal.generic.Type) : Void;
 	
-	@:overload public function getType() : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType() : com.sun.org.apache.bcel.internal.generic.Type;
 	
-	@:overload public function getStart() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function getStart() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
-	@:overload public function getEnd() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function getEnd() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
-	@:overload public function setStart(start : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function setStart(start : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
-	@:overload public function setEnd(end : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function setEnd(end : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* @param old_ih old target, either start or end
 	* @param new_ih new target
 	*/
-	@:overload public function updateTarget(old_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function updateTarget(old_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* @return true, if ih is target of this variable
 	*/
-	@:overload public function containsTarget(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Bool;
+	@:overload @:public public function containsTarget(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Bool;
 	
 	/**
 	* We consider to local variables to be equal, if the use the same index and
 	* are valid in the same range.
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

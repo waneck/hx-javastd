@@ -152,24 +152,24 @@ package java.util.concurrent;
 	/**
 	* The main computation performed by this task.
 	*/
-	@:overload @:abstract private function compute() : Void;
+	@:overload @:protected @:abstract private function compute() : Void;
 	
 	/**
 	* Always returns {@code null}.
 	*
 	* @return {@code null} always
 	*/
-	@:overload @:final public function getRawResult() : java.lang.Void;
+	@:overload @:public @:final override public function getRawResult() : java.lang.Void;
 	
 	/**
 	* Requires null completion value.
 	*/
-	@:overload @:final private function setRawResult(mustBeNull : java.lang.Void) : Void;
+	@:overload @:protected @:final private function setRawResult(mustBeNull : java.lang.Void) : Void;
 	
 	/**
 	* Implements execution conventions for RecursiveActions.
 	*/
-	@:overload @:final private function exec() : Bool;
+	@:overload @:protected @:final override private function exec() : Bool;
 	
 	
 }

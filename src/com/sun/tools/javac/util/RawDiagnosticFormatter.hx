@@ -40,17 +40,17 @@ extern class RawDiagnosticFormatter extends com.sun.tools.javac.util.AbstractDia
 	* Create a formatter based on the supplied options.
 	* @param msgs
 	*/
-	@:overload public function new(options : com.sun.tools.javac.util.Options) : Void;
+	@:overload @:public public function new(options : com.sun.tools.javac.util.Options) : Void;
 	
-	@:overload override public function formatDiagnostic(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
+	@:overload @:public override public function formatDiagnostic(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
 	
-	@:overload public function formatMessage(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
+	@:overload @:public public function formatMessage(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
 	
-	@:overload override private function formatArgument(diag : com.sun.tools.javac.util.JCDiagnostic, arg : Dynamic, l : java.util.Locale) : String;
+	@:overload @:protected override private function formatArgument(diag : com.sun.tools.javac.util.JCDiagnostic, arg : Dynamic, l : java.util.Locale) : String;
 	
-	@:overload override private function localize(l : java.util.Locale, key : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:protected override private function localize(l : java.util.Locale, key : String, args : java.NativeArray<Dynamic>) : String;
 	
-	@:overload override public function isRaw() : Bool;
+	@:overload @:public override public function isRaw() : Bool;
 	
 	
 }

@@ -21,7 +21,7 @@ package com.sun.org.apache.xerces.internal.dom;
 extern interface DeferredNode extends org.w3c.dom.Node
 {
 	/** Returns the node index. */
-	@:overload public function getNodeIndex() : Int;
+	@:overload @:public public function getNodeIndex() : Int;
 	
 	
 }

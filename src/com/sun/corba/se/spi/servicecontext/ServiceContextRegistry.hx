@@ -25,7 +25,7 @@ package com.sun.corba.se.spi.servicecontext;
 */
 extern class ServiceContextRegistry
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
 	/** Register the ServiceContext class so that it will be recognized
 	* by the read method.
@@ -38,9 +38,9 @@ extern class ServiceContextRegistry
 	* org.omg.CORBA_2_3.portable.InputStream argument.</li>
 	* </ul>
 	*/
-	@:overload public function register(cls : Class<Dynamic>) : Void;
+	@:overload @:public public function register(cls : Class<Dynamic>) : Void;
 	
-	@:overload public function findServiceContextData(scId : Int) : com.sun.corba.se.spi.servicecontext.ServiceContextData;
+	@:overload @:public public function findServiceContextData(scId : Int) : com.sun.corba.se.spi.servicecontext.ServiceContextData;
 	
 	
 }

@@ -49,66 +49,66 @@ extern interface HTMLAreaElement extends org.w3c.dom.html.HTMLElement
 	*  A single character access key to give access to the form control. See
 	* the  accesskey attribute definition in HTML 4.0.
 	*/
-	@:overload public function getAccessKey() : String;
+	@:overload @:public public function getAccessKey() : String;
 	
-	@:overload public function setAccessKey(accessKey : String) : Void;
+	@:overload @:public public function setAccessKey(accessKey : String) : Void;
 	
 	/**
 	*  Alternate text for user agents not rendering the normal content of
 	* this element. See the  alt attribute definition in HTML 4.0.
 	*/
-	@:overload public function getAlt() : String;
+	@:overload @:public public function getAlt() : String;
 	
-	@:overload public function setAlt(alt : String) : Void;
+	@:overload @:public public function setAlt(alt : String) : Void;
 	
 	/**
 	*  Comma-separated list of lengths, defining an active region geometry.
 	* See also <code>shape</code> for the shape of the region. See the
 	* coords attribute definition in HTML 4.0.
 	*/
-	@:overload public function getCoords() : String;
+	@:overload @:public public function getCoords() : String;
 	
-	@:overload public function setCoords(coords : String) : Void;
+	@:overload @:public public function setCoords(coords : String) : Void;
 	
 	/**
 	*  The URI of the linked resource. See the  href attribute definition in
 	* HTML 4.0.
 	*/
-	@:overload public function getHref() : String;
+	@:overload @:public public function getHref() : String;
 	
-	@:overload public function setHref(href : String) : Void;
+	@:overload @:public public function setHref(href : String) : Void;
 	
 	/**
 	*  Specifies that this area is inactive, i.e., has no associated action.
 	* See the  nohref attribute definition in HTML 4.0.
 	*/
-	@:overload public function getNoHref() : Bool;
+	@:overload @:public public function getNoHref() : Bool;
 	
-	@:overload public function setNoHref(noHref : Bool) : Void;
+	@:overload @:public public function setNoHref(noHref : Bool) : Void;
 	
 	/**
 	*  The shape of the active area. The coordinates are given by
 	* <code>coords</code> . See the  shape attribute definition in HTML 4.0.
 	*/
-	@:overload public function getShape() : String;
+	@:overload @:public public function getShape() : String;
 	
-	@:overload public function setShape(shape : String) : Void;
+	@:overload @:public public function setShape(shape : String) : Void;
 	
 	/**
 	*  Index that represents the element's position in the tabbing order. See
 	* the  tabindex attribute definition in HTML 4.0.
 	*/
-	@:overload public function getTabIndex() : Int;
+	@:overload @:public public function getTabIndex() : Int;
 	
-	@:overload public function setTabIndex(tabIndex : Int) : Void;
+	@:overload @:public public function setTabIndex(tabIndex : Int) : Void;
 	
 	/**
 	*  Frame to render the resource in. See the  target attribute definition
 	* in HTML 4.0.
 	*/
-	@:overload public function getTarget() : String;
+	@:overload @:public public function getTarget() : String;
 	
-	@:overload public function setTarget(target : String) : Void;
+	@:overload @:public public function setTarget(target : String) : Void;
 	
 	
 }

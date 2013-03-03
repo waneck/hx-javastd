@@ -36,7 +36,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see java.awt.geom.Line2D.Double
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function new() : Void;
+	@:require(java2) @:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the X coordinate of the start point in double precision.
@@ -44,7 +44,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	*         {@code Line2D} object.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getX1() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getX1() : Float;
 	
 	/**
 	* Returns the Y coordinate of the start point in double precision.
@@ -52,14 +52,14 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	*         {@code Line2D} object.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getY1() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getY1() : Float;
 	
 	/**
 	* Returns the start <code>Point2D</code> of this <code>Line2D</code>.
 	* @return the start <code>Point2D</code> of this <code>Line2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getP1() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public @:abstract public function getP1() : java.awt.geom.Point2D;
 	
 	/**
 	* Returns the X coordinate of the end point in double precision.
@@ -67,7 +67,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	*         {@code Line2D} object.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getX2() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getX2() : Float;
 	
 	/**
 	* Returns the Y coordinate of the end point in double precision.
@@ -75,14 +75,14 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	*         {@code Line2D} object.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getY2() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getY2() : Float;
 	
 	/**
 	* Returns the end <code>Point2D</code> of this <code>Line2D</code>.
 	* @return the end <code>Point2D</code> of this <code>Line2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getP2() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public @:abstract public function getP2() : java.awt.geom.Point2D;
 	
 	/**
 	* Sets the location of the end points of this <code>Line2D</code> to
@@ -93,7 +93,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param y2 the Y coordinate of the end point
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function setLine(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
+	@:require(java2) @:overload @:public @:abstract public function setLine(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
 	
 	/**
 	* Sets the location of the end points of this <code>Line2D</code> to
@@ -102,7 +102,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param p2 the end <code>Point2D</code> of the line segment
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setLine(p1 : java.awt.geom.Point2D, p2 : java.awt.geom.Point2D) : Void;
+	@:require(java2) @:overload @:public public function setLine(p1 : java.awt.geom.Point2D, p2 : java.awt.geom.Point2D) : Void;
 	
 	/**
 	* Sets the location of the end points of this <code>Line2D</code> to
@@ -110,7 +110,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param l the specified <code>Line2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setLine(l : java.awt.geom.Line2D) : Void;
+	@:require(java2) @:overload @:public public function setLine(l : java.awt.geom.Line2D) : Void;
 	
 	/**
 	* Returns an indicator of where the specified point
@@ -154,7 +154,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	*                  by the first two specified coordinates.
 	* @since 1.2
 	*/
-	@:require(java2) @:native('relativeCCW') @:overload public static function _relativeCCW(x1 : Float, y1 : Float, x2 : Float, y2 : Float, px : Float, py : Float) : Int;
+	@:require(java2) @:native('relativeCCW') @:overload @:public @:static public static function _relativeCCW(x1 : Float, y1 : Float, x2 : Float, y2 : Float, px : Float, py : Float) : Int;
 	
 	/**
 	* Returns an indicator of where the specified point
@@ -171,7 +171,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #relativeCCW(double, double, double, double, double, double)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function relativeCCW(px : Float, py : Float) : Int;
+	@:require(java2) @:overload @:public public function relativeCCW(px : Float, py : Float) : Int;
 	
 	/**
 	* Returns an indicator of where the specified <code>Point2D</code>
@@ -186,7 +186,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #relativeCCW(double, double, double, double, double, double)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function relativeCCW(p : java.awt.geom.Point2D) : Int;
+	@:require(java2) @:overload @:public public function relativeCCW(p : java.awt.geom.Point2D) : Int;
 	
 	/**
 	* Tests if the line segment from {@code (x1,y1)} to
@@ -214,7 +214,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	*                  each other; <code>false</code> otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function linesIntersect(x1 : Float, y1 : Float, x2 : Float, y2 : Float, x3 : Float, y3 : Float, x4 : Float, y4 : Float) : Bool;
+	@:require(java2) @:overload @:public @:static public static function linesIntersect(x1 : Float, y1 : Float, x2 : Float, y2 : Float, x3 : Float, y3 : Float, x4 : Float, y4 : Float) : Bool;
 	
 	/**
 	* Tests if the line segment from {@code (x1,y1)} to
@@ -232,7 +232,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	*                  intersect each other; <code>false</code> otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function intersectsLine(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Bool;
+	@:require(java2) @:overload @:public public function intersectsLine(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Bool;
 	
 	/**
 	* Tests if the specified line segment intersects this line segment.
@@ -242,7 +242,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	*                  <code>false</code> otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function intersectsLine(l : java.awt.geom.Line2D) : Bool;
+	@:require(java2) @:overload @:public public function intersectsLine(l : java.awt.geom.Line2D) : Bool;
 	
 	/**
 	* Returns the square of the distance from a point to a line segment.
@@ -268,7 +268,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #ptLineDistSq(double, double, double, double, double, double)
 	* @since 1.2
 	*/
-	@:require(java2) @:native('ptSegDistSq') @:overload public static function _ptSegDistSq(x1 : Float, y1 : Float, x2 : Float, y2 : Float, px : Float, py : Float) : Float;
+	@:require(java2) @:native('ptSegDistSq') @:overload @:public @:static public static function _ptSegDistSq(x1 : Float, y1 : Float, x2 : Float, y2 : Float, px : Float, py : Float) : Float;
 	
 	/**
 	* Returns the distance from a point to a line segment.
@@ -294,7 +294,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #ptLineDist(double, double, double, double, double, double)
 	* @since 1.2
 	*/
-	@:require(java2) @:native('ptSegDist') @:overload public static function _ptSegDist(x1 : Float, y1 : Float, x2 : Float, y2 : Float, px : Float, py : Float) : Float;
+	@:require(java2) @:native('ptSegDist') @:overload @:public @:static public static function _ptSegDist(x1 : Float, y1 : Float, x2 : Float, y2 : Float, px : Float, py : Float) : Float;
 	
 	/**
 	* Returns the square of the distance from a point to this line segment.
@@ -312,7 +312,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #ptLineDistSq(double, double)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function ptSegDistSq(px : Float, py : Float) : Float;
+	@:require(java2) @:overload @:public public function ptSegDistSq(px : Float, py : Float) : Float;
 	
 	/**
 	* Returns the square of the distance from a <code>Point2D</code> to
@@ -329,7 +329,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #ptLineDistSq(Point2D)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function ptSegDistSq(pt : java.awt.geom.Point2D) : Float;
+	@:require(java2) @:overload @:public public function ptSegDistSq(pt : java.awt.geom.Point2D) : Float;
 	
 	/**
 	* Returns the distance from a point to this line segment.
@@ -347,7 +347,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #ptLineDist(double, double)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function ptSegDist(px : Float, py : Float) : Float;
+	@:require(java2) @:overload @:public public function ptSegDist(px : Float, py : Float) : Float;
 	
 	/**
 	* Returns the distance from a <code>Point2D</code> to this line
@@ -364,7 +364,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #ptLineDist(Point2D)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function ptSegDist(pt : java.awt.geom.Point2D) : Float;
+	@:require(java2) @:overload @:public public function ptSegDist(pt : java.awt.geom.Point2D) : Float;
 	
 	/**
 	* Returns the square of the distance from a point to a line.
@@ -386,7 +386,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #ptSegDistSq(double, double, double, double, double, double)
 	* @since 1.2
 	*/
-	@:require(java2) @:native('ptLineDistSq') @:overload public static function _ptLineDistSq(x1 : Float, y1 : Float, x2 : Float, y2 : Float, px : Float, py : Float) : Float;
+	@:require(java2) @:native('ptLineDistSq') @:overload @:public @:static public static function _ptLineDistSq(x1 : Float, y1 : Float, x2 : Float, y2 : Float, px : Float, py : Float) : Float;
 	
 	/**
 	* Returns the distance from a point to a line.
@@ -408,7 +408,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #ptSegDist(double, double, double, double, double, double)
 	* @since 1.2
 	*/
-	@:require(java2) @:native('ptLineDist') @:overload public static function _ptLineDist(x1 : Float, y1 : Float, x2 : Float, y2 : Float, px : Float, py : Float) : Float;
+	@:require(java2) @:native('ptLineDist') @:overload @:public @:static public static function _ptLineDist(x1 : Float, y1 : Float, x2 : Float, y2 : Float, px : Float, py : Float) : Float;
 	
 	/**
 	* Returns the square of the distance from a point to this line.
@@ -426,7 +426,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #ptSegDistSq(double, double)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function ptLineDistSq(px : Float, py : Float) : Float;
+	@:require(java2) @:overload @:public public function ptLineDistSq(px : Float, py : Float) : Float;
 	
 	/**
 	* Returns the square of the distance from a specified
@@ -443,7 +443,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #ptSegDistSq(Point2D)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function ptLineDistSq(pt : java.awt.geom.Point2D) : Float;
+	@:require(java2) @:overload @:public public function ptLineDistSq(pt : java.awt.geom.Point2D) : Float;
 	
 	/**
 	* Returns the distance from a point to this line.
@@ -461,7 +461,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #ptSegDist(double, double)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function ptLineDist(px : Float, py : Float) : Float;
+	@:require(java2) @:overload @:public public function ptLineDist(px : Float, py : Float) : Float;
 	
 	/**
 	* Returns the distance from a <code>Point2D</code> to this line.
@@ -475,7 +475,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #ptSegDist(Point2D)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function ptLineDist(pt : java.awt.geom.Point2D) : Float;
+	@:require(java2) @:overload @:public public function ptLineDist(pt : java.awt.geom.Point2D) : Float;
 	
 	/**
 	* Tests if a specified coordinate is inside the boundary of this
@@ -489,7 +489,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* no area.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(x : Float, y : Float) : Bool;
+	@:require(java2) @:overload @:public public function contains(x : Float, y : Float) : Bool;
 	
 	/**
 	* Tests if a given <code>Point2D</code> is inside the boundary of
@@ -502,19 +502,19 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* no area.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(p : java.awt.geom.Point2D) : Bool;
+	@:require(java2) @:overload @:public public function contains(p : java.awt.geom.Point2D) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function intersects(r : java.awt.geom.Rectangle2D) : Bool;
+	@:require(java2) @:overload @:public public function intersects(r : java.awt.geom.Rectangle2D) : Bool;
 	
 	/**
 	* Tests if the interior of this <code>Line2D</code> entirely contains
@@ -532,7 +532,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* no area.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* Tests if the interior of this <code>Line2D</code> entirely contains
@@ -545,13 +545,13 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* no area.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(r : java.awt.geom.Rectangle2D) : Bool;
+	@:require(java2) @:overload @:public public function contains(r : java.awt.geom.Rectangle2D) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getBounds() : java.awt.Rectangle;
+	@:require(java2) @:overload @:public public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Returns an iteration object that defines the boundary of this
@@ -566,7 +566,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	*          <code>Line2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
+	@:require(java2) @:overload @:public public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
 	
 	/**
 	* Returns an iteration object that defines the boundary of this
@@ -586,7 +586,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	*                  flattened <code>Line2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getPathIterator(at : java.awt.geom.AffineTransform, flatness : Float) : java.awt.geom.PathIterator;
+	@:require(java2) @:overload @:public public function getPathIterator(at : java.awt.geom.AffineTransform, flatness : Float) : java.awt.geom.PathIterator;
 	
 	/**
 	* Creates a new object of the same class as this object.
@@ -596,7 +596,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see        java.lang.Cloneable
 	* @since      1.2
 	*/
-	@:require(java2) @:overload public function clone() : Dynamic;
+	@:require(java2) @:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns a high precision and more accurate bounding box of
@@ -641,7 +641,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #getBounds
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:public @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public @:public @:public @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	
 }
@@ -656,34 +656,34 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var x1 : Single;
+	@:require(java2) @:public public var x1 : Single;
 	
 	/**
 	* The Y coordinate of the start point of the line segment.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var y1 : Single;
+	@:require(java2) @:public public var y1 : Single;
 	
 	/**
 	* The X coordinate of the end point of the line segment.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var x2 : Single;
+	@:require(java2) @:public public var x2 : Single;
 	
 	/**
 	* The Y coordinate of the end point of the line segment.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var y2 : Single;
+	@:require(java2) @:public public var y2 : Single;
 	
 	/**
 	* Constructs and initializes a Line with coordinates (0, 0) -> (0, 0).
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs and initializes a Line from the specified coordinates.
@@ -693,7 +693,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param y2 the Y coordinate of the end point
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
+	@:require(java2) @:overload @:public public function new(x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
 	
 	/**
 	* Constructs and initializes a <code>Line2D</code> from the
@@ -702,49 +702,49 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param p2 the end <code>Point2D</code> of this line segment
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(p1 : java.awt.geom.Point2D, p2 : java.awt.geom.Point2D) : Void;
+	@:require(java2) @:overload @:public public function new(p1 : java.awt.geom.Point2D, p2 : java.awt.geom.Point2D) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX1() : Float;
+	@:require(java2) @:overload @:public override public function getX1() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY1() : Float;
+	@:require(java2) @:overload @:public override public function getY1() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getP1() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public override public function getP1() : java.awt.geom.Point2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX2() : Float;
+	@:require(java2) @:overload @:public override public function getX2() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY2() : Float;
+	@:require(java2) @:overload @:public override public function getY2() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getP2() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public override public function getP2() : java.awt.geom.Point2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setLine(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
+	@:require(java2) @:overload @:public override public function setLine(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
 	
 	/**
 	* Sets the location of the end points of this <code>Line2D</code>
@@ -755,13 +755,13 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param y2 the Y coordinate of the end point
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setLine(x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
+	@:require(java2) @:overload @:public public function setLine(x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public override public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	
 }
@@ -776,34 +776,34 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var x1 : Float;
+	@:require(java2) @:public public var x1 : Float;
 	
 	/**
 	* The Y coordinate of the start point of the line segment.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var y1 : Float;
+	@:require(java2) @:public public var y1 : Float;
 	
 	/**
 	* The X coordinate of the end point of the line segment.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var x2 : Float;
+	@:require(java2) @:public public var x2 : Float;
 	
 	/**
 	* The Y coordinate of the end point of the line segment.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var y2 : Float;
+	@:require(java2) @:public public var y2 : Float;
 	
 	/**
 	* Constructs and initializes a Line with coordinates (0, 0) -> (0, 0).
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs and initializes a <code>Line2D</code> from the
@@ -814,7 +814,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param y2 the Y coordinate of the end point
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
+	@:require(java2) @:overload @:public public function new(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
 	
 	/**
 	* Constructs and initializes a <code>Line2D</code> from the
@@ -823,55 +823,55 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param p2 the end <code>Point2D</code> of this line segment
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(p1 : java.awt.geom.Point2D, p2 : java.awt.geom.Point2D) : Void;
+	@:require(java2) @:overload @:public public function new(p1 : java.awt.geom.Point2D, p2 : java.awt.geom.Point2D) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX1() : Float;
+	@:require(java2) @:overload @:public override public function getX1() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY1() : Float;
+	@:require(java2) @:overload @:public override public function getY1() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getP1() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public override public function getP1() : java.awt.geom.Point2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX2() : Float;
+	@:require(java2) @:overload @:public override public function getX2() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY2() : Float;
+	@:require(java2) @:overload @:public override public function getY2() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getP2() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public override public function getP2() : java.awt.geom.Point2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setLine(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
+	@:require(java2) @:overload @:public override public function setLine(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public override public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	
 }

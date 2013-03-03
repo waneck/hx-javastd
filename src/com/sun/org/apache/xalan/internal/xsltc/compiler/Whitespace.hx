@@ -26,35 +26,35 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* @author Morten Jorgensen
 	*/
-	public static var USE_PREDICATE(default, null) : Int;
+	@:public @:static @:final public static var USE_PREDICATE(default, null) : Int;
 	
-	public static var STRIP_SPACE(default, null) : Int;
+	@:public @:static @:final public static var STRIP_SPACE(default, null) : Int;
 	
-	public static var PRESERVE_SPACE(default, null) : Int;
+	@:public @:static @:final public static var PRESERVE_SPACE(default, null) : Int;
 	
-	public static var RULE_NONE(default, null) : Int;
+	@:public @:static @:final public static var RULE_NONE(default, null) : Int;
 	
-	public static var RULE_ELEMENT(default, null) : Int;
+	@:public @:static @:final public static var RULE_ELEMENT(default, null) : Int;
 	
-	public static var RULE_NAMESPACE(default, null) : Int;
+	@:public @:static @:final public static var RULE_NAMESPACE(default, null) : Int;
 	
-	public static var RULE_ALL(default, null) : Int;
+	@:public @:static @:final public static var RULE_ALL(default, null) : Int;
 	
 	/**
 	* Parse the attributes of the xsl:strip/preserve-space element.
 	* The element should have not contents (ignored if any).
 	*/
-	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* De-tokenize the elements listed in the 'elements' attribute and
 	* instanciate a set of strip/preserve rules.
 	*/
-	@:overload public function getRules() : java.util.Vector<Dynamic>;
+	@:overload @:public public function getRules() : java.util.Vector<Dynamic>;
 	
-	@:overload public static function compileStripSpace(strip : java.NativeArray<com.sun.org.apache.bcel.internal.generic.BranchHandle>, sCount : Int, il : com.sun.org.apache.bcel.internal.generic.InstructionList) : Void;
+	@:overload @:public @:static public static function compileStripSpace(strip : java.NativeArray<com.sun.org.apache.bcel.internal.generic.BranchHandle>, sCount : Int, il : com.sun.org.apache.bcel.internal.generic.InstructionList) : Void;
 	
-	@:overload public static function compilePreserveSpace(preserve : java.NativeArray<com.sun.org.apache.bcel.internal.generic.BranchHandle>, pCount : Int, il : com.sun.org.apache.bcel.internal.generic.InstructionList) : Void;
+	@:overload @:public @:static public static function compilePreserveSpace(preserve : java.NativeArray<com.sun.org.apache.bcel.internal.generic.BranchHandle>, pCount : Int, il : com.sun.org.apache.bcel.internal.generic.InstructionList) : Void;
 	
 	/**
 	* Takes a vector of WhitespaceRule objects and generates a predicate
@@ -64,17 +64,17 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	*    - STRIP_SPACE    (always strip whitespace text-nodes)
 	*    - PRESERVE_SPACE (always preserve whitespace text-nodes)
 	*/
-	@:overload public static function translateRules(rules : java.util.Vector<Dynamic>, classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator) : Int;
+	@:overload @:public @:static public static function translateRules(rules : java.util.Vector<Dynamic>, classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator) : Int;
 	
 	/**
 	* Type-check contents/attributes - nothing to do...
 	*/
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* This method should not produce any code
 	*/
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }
@@ -86,22 +86,22 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Strip/preserve rule constructor
 	*/
-	@:overload public function new(action : Int, element : String, precedence : Int) : Void;
+	@:overload @:public public function new(action : Int, element : String, precedence : Int) : Void;
 	
 	/**
 	* For sorting rules depending on priority
 	*/
-	@:overload public function compareTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.Whitespace.Whitespace_WhitespaceRule) : Int;
+	@:overload @:public public function compareTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.Whitespace.Whitespace_WhitespaceRule) : Int;
 	
-	@:overload public function getAction() : Int;
+	@:overload @:public public function getAction() : Int;
 	
-	@:overload public function getStrength() : Int;
+	@:overload @:public public function getStrength() : Int;
 	
-	@:overload public function getPriority() : Int;
+	@:overload @:public public function getPriority() : Int;
 	
-	@:overload public function getElement() : String;
+	@:overload @:public public function getElement() : String;
 	
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
 	
 }

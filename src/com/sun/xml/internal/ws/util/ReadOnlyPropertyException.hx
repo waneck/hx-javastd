@@ -25,12 +25,12 @@ package com.sun.xml.internal.ws.util;
 */
 extern class ReadOnlyPropertyException extends java.lang.IllegalArgumentException
 {
-	@:overload public function new(propertyName : String) : Void;
+	@:overload @:public public function new(propertyName : String) : Void;
 	
 	/**
 	* Gets the name of the property that was read-only.
 	*/
-	@:overload public function getPropertyName() : String;
+	@:overload @:public public function getPropertyName() : String;
 	
 	
 }

@@ -31,7 +31,7 @@ extern interface X509Extension
 	* @return <tt>true</tt> if a critical extension is found that is
 	* not supported, otherwise <tt>false</tt>.
 	*/
-	@:overload @:public public function hasUnsupportedCriticalExtension() : Bool;
+	@:overload @:public @:public @:public @:public public function hasUnsupportedCriticalExtension() : Bool;
 	
 	/**
 	* Gets a Set of the OID strings for the extension(s) marked
@@ -66,7 +66,7 @@ extern interface X509Extension
 	* If there are no extensions present at all, then this method returns
 	* null.
 	*/
-	@:overload @:public public function getCriticalExtensionOIDs() : java.util.Set<String>;
+	@:overload @:public @:public @:public @:public public function getCriticalExtensionOIDs() : java.util.Set<String>;
 	
 	/**
 	* Gets a Set of the OID strings for the extension(s) marked
@@ -110,7 +110,7 @@ extern interface X509Extension
 	* If there are no extensions present at all, then this method returns
 	* null.
 	*/
-	@:overload @:public public function getNonCriticalExtensionOIDs() : java.util.Set<String>;
+	@:overload @:public @:public @:public @:public public function getNonCriticalExtensionOIDs() : java.util.Set<String>;
 	
 	/**
 	* Gets the DER-encoded OCTET string for the extension value
@@ -151,7 +151,7 @@ extern interface X509Extension
 	* @return the DER-encoded octet string of the extension value or
 	* null if it is not present.
 	*/
-	@:overload @:public public function getExtensionValue(oid : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:public @:public @:public public function getExtensionValue(oid : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

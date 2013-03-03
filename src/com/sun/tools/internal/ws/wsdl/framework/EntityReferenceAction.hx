@@ -30,7 +30,7 @@ extern interface EntityReferenceAction
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function perform(kind : com.sun.tools.internal.ws.wsdl.framework.Kind, name : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function perform(kind : com.sun.tools.internal.ws.wsdl.framework.Kind, name : javax.xml.namespace.QName) : Void;
 	
 	
 }

@@ -30,7 +30,7 @@ extern class WebServicePermission extends java.security.BasicPermission
 	*
 	* @param name the name of the <code>WebServicePermission</code>
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a new permission with the specified name and actions.
@@ -41,7 +41,7 @@ extern class WebServicePermission extends java.security.BasicPermission
 	* @param name the name of the <code>WebServicePermission</code>
 	* @param actions should be <code>null</code>
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	
 }

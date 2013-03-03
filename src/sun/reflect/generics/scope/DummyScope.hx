@@ -29,7 +29,7 @@ extern class DummyScope implements sun.reflect.generics.scope.Scope
 	* Factory method. Enforces the singleton pattern - only one
 	* instance of this class ever exists.
 	*/
-	@:overload public static function make() : sun.reflect.generics.scope.DummyScope;
+	@:overload @:public @:static public static function make() : sun.reflect.generics.scope.DummyScope;
 	
 	/**
 	* Lookup a type variable in the scope, using its name. Always returns
@@ -37,7 +37,7 @@ extern class DummyScope implements sun.reflect.generics.scope.Scope
 	* @param name - the name of the type variable being looked up
 	* @return  null
 	*/
-	@:overload public function lookup(name : String) : java.lang.reflect.TypeVariable<Dynamic>;
+	@:overload @:public public function lookup(name : String) : java.lang.reflect.TypeVariable<Dynamic>;
 	
 	
 }

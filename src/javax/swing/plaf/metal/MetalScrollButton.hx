@@ -25,19 +25,19 @@ package javax.swing.plaf.metal;
 */
 extern class MetalScrollButton extends javax.swing.plaf.basic.BasicArrowButton
 {
-	@:overload public function new(direction : Int, width : Int, freeStanding : Bool) : Void;
+	@:overload @:public public function new(direction : Int, width : Int, freeStanding : Bool) : Void;
 	
-	@:overload public function setFreeStanding(freeStanding : Bool) : Void;
+	@:overload @:public public function setFreeStanding(freeStanding : Bool) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload override public function getMaximumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize() : java.awt.Dimension;
 	
-	@:overload public function getButtonWidth() : Int;
+	@:overload @:public public function getButtonWidth() : Int;
 	
 	
 }

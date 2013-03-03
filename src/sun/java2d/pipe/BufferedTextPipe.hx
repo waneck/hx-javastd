@@ -25,23 +25,23 @@ package sun.java2d.pipe;
 */
 extern class BufferedTextPipe extends sun.java2d.pipe.GlyphListPipe
 {
-	private var rq(default, null) : sun.java2d.pipe.RenderQueue;
+	@:protected @:final private var rq(default, null) : sun.java2d.pipe.RenderQueue;
 	
-	@:overload private function new(rq : sun.java2d.pipe.RenderQueue) : Void;
+	@:overload @:protected private function new(rq : sun.java2d.pipe.RenderQueue) : Void;
 	
-	@:overload override private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList) : Void;
+	@:overload @:protected override private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList) : Void;
 	
 	/**
 	* Called as a separate Runnable when the operation is too large to fit
 	* on the RenderQueue.  The OGL/D3D pipelines each have their own (small)
 	* native implementation of this method.
 	*/
-	@:overload @:abstract private function drawGlyphList(numGlyphs : Int, usePositions : Bool, subPixPos : Bool, rgbOrder : Bool, lcdContrast : Int, glOrigX : Single, glOrigY : Single, images : java.NativeArray<haxe.Int64>, positions : java.NativeArray<Single>) : Void;
+	@:overload @:protected @:abstract private function drawGlyphList(numGlyphs : Int, usePositions : Bool, subPixPos : Bool, rgbOrder : Bool, lcdContrast : Int, glOrigX : Single, glOrigY : Single, images : java.NativeArray<haxe.Int64>, positions : java.NativeArray<Single>) : Void;
 	
 	/**
 	* Validates the state in the provided SunGraphics2D object.
 	*/
-	@:overload @:abstract private function validateContext(sg2d : sun.java2d.SunGraphics2D, comp : java.awt.Composite) : Void;
+	@:overload @:protected @:abstract private function validateContext(sg2d : sun.java2d.SunGraphics2D, comp : java.awt.Composite) : Void;
 	
 	
 }

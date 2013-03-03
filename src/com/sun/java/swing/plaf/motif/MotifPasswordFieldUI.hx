@@ -31,7 +31,7 @@ extern class MotifPasswordFieldUI extends javax.swing.plaf.basic.BasicPasswordFi
 	* @param c the JPasswordField
 	* @return the UI
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Creates the object to use for a caret.  By default an
@@ -41,7 +41,7 @@ extern class MotifPasswordFieldUI extends javax.swing.plaf.basic.BasicPasswordFi
 	*
 	* @return the caret object
 	*/
-	@:overload override private function createCaret() : javax.swing.text.Caret;
+	@:overload @:protected override private function createCaret() : javax.swing.text.Caret;
 	
 	
 }

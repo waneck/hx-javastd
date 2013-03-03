@@ -42,14 +42,14 @@ extern class CharsetDecoder
 	* @throws  IllegalArgumentException
 	*          If the preconditions on the parameters do not hold
 	*/
-	@:overload private function new(cs : java.nio.charset.Charset, averageCharsPerByte : Single, maxCharsPerByte : Single) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, averageCharsPerByte : Single, maxCharsPerByte : Single) : Void;
 	
 	/**
 	* Returns the charset that created this decoder.  </p>
 	*
 	* @return  This decoder's charset
 	*/
-	@:overload @:final public function charset() : java.nio.charset.Charset;
+	@:overload @:public @:final public function charset() : java.nio.charset.Charset;
 	
 	/**
 	* Returns this decoder's replacement value. </p>
@@ -57,7 +57,7 @@ extern class CharsetDecoder
 	* @return  This decoder's current replacement,
 	*          which is never <tt>null</tt> and is never empty
 	*/
-	@:overload @:final public function replacement() : String;
+	@:overload @:public @:final public function replacement() : String;
 	
 	/**
 	* Changes this decoder's replacement value.
@@ -84,7 +84,7 @@ extern class CharsetDecoder
 	* @throws  IllegalArgumentException
 	*          If the preconditions on the parameter do not hold
 	*/
-	@:overload @:final public function replaceWith(newReplacement : String) : java.nio.charset.CharsetDecoder;
+	@:overload @:public @:final public function replaceWith(newReplacement : String) : java.nio.charset.CharsetDecoder;
 	
 	/**
 	* Reports a change to this decoder's replacement value.
@@ -95,14 +95,14 @@ extern class CharsetDecoder
 	*
 	* @param  newReplacement
 	*/
-	@:overload private function implReplaceWith(newReplacement : String) : Void;
+	@:overload @:protected private function implReplaceWith(newReplacement : String) : Void;
 	
 	/**
 	* Returns this decoder's current action for malformed-input errors.  </p>
 	*
 	* @return The current malformed-input action, which is never <tt>null</tt>
 	*/
-	@:overload public function malformedInputAction() : java.nio.charset.CodingErrorAction;
+	@:overload @:public public function malformedInputAction() : java.nio.charset.CodingErrorAction;
 	
 	/**
 	* Changes this decoder's action for malformed-input errors.  </p>
@@ -117,7 +117,7 @@ extern class CharsetDecoder
 	* @throws IllegalArgumentException
 	*         If the precondition on the parameter does not hold
 	*/
-	@:overload @:final public function onMalformedInput(newAction : java.nio.charset.CodingErrorAction) : java.nio.charset.CharsetDecoder;
+	@:overload @:public @:final public function onMalformedInput(newAction : java.nio.charset.CodingErrorAction) : java.nio.charset.CharsetDecoder;
 	
 	/**
 	* Reports a change to this decoder's malformed-input action.
@@ -126,7 +126,7 @@ extern class CharsetDecoder
 	* should be overridden by decoders that require notification of changes to
 	* the malformed-input action.  </p>
 	*/
-	@:overload private function implOnMalformedInput(newAction : java.nio.charset.CodingErrorAction) : Void;
+	@:overload @:protected private function implOnMalformedInput(newAction : java.nio.charset.CodingErrorAction) : Void;
 	
 	/**
 	* Returns this decoder's current action for unmappable-character errors.
@@ -135,7 +135,7 @@ extern class CharsetDecoder
 	* @return The current unmappable-character action, which is never
 	*         <tt>null</tt>
 	*/
-	@:overload public function unmappableCharacterAction() : java.nio.charset.CodingErrorAction;
+	@:overload @:public public function unmappableCharacterAction() : java.nio.charset.CodingErrorAction;
 	
 	/**
 	* Changes this decoder's action for unmappable-character errors.
@@ -150,7 +150,7 @@ extern class CharsetDecoder
 	* @throws IllegalArgumentException
 	*         If the precondition on the parameter does not hold
 	*/
-	@:overload @:final public function onUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : java.nio.charset.CharsetDecoder;
+	@:overload @:public @:final public function onUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : java.nio.charset.CharsetDecoder;
 	
 	/**
 	* Reports a change to this decoder's unmappable-character action.
@@ -159,7 +159,7 @@ extern class CharsetDecoder
 	* should be overridden by decoders that require notification of changes to
 	* the unmappable-character action.  </p>
 	*/
-	@:overload private function implOnUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : Void;
+	@:overload @:protected private function implOnUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : Void;
 	
 	/**
 	* Returns the average number of characters that will be produced for each
@@ -169,7 +169,7 @@ extern class CharsetDecoder
 	* @return  The average number of characters produced
 	*          per byte of input
 	*/
-	@:overload @:final public function averageCharsPerByte() : Single;
+	@:overload @:public @:final public function averageCharsPerByte() : Single;
 	
 	/**
 	* Returns the maximum number of characters that will be produced for each
@@ -179,7 +179,7 @@ extern class CharsetDecoder
 	* @return  The maximum number of characters that will be produced per
 	*          byte of input
 	*/
-	@:overload @:final public function maxCharsPerByte() : Single;
+	@:overload @:public @:final public function maxCharsPerByte() : Single;
 	
 	/**
 	* Decodes as many bytes as possible from the given input buffer,
@@ -279,7 +279,7 @@ extern class CharsetDecoder
 	*          If an invocation of the decodeLoop method threw
 	*          an unexpected exception
 	*/
-	@:overload @:final public function decode(_in : java.nio.ByteBuffer, out : java.nio.CharBuffer, endOfInput : Bool) : java.nio.charset.CoderResult;
+	@:overload @:public @:final public function decode(_in : java.nio.ByteBuffer, out : java.nio.CharBuffer, endOfInput : Bool) : java.nio.charset.CoderResult;
 	
 	/**
 	* Flushes this decoder.
@@ -320,7 +320,7 @@ extern class CharsetDecoder
 	*          with a value of <tt>true</tt> for the <tt>endOfInput</tt>
 	*          parameter
 	*/
-	@:overload @:final public function flush(out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:public @:final public function flush(out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
 	/**
 	* Flushes this decoder.
@@ -336,7 +336,7 @@ extern class CharsetDecoder
 	* @return  A coder-result object, either {@link CoderResult#UNDERFLOW} or
 	*          {@link CoderResult#OVERFLOW}
 	*/
-	@:overload private function implFlush(out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected private function implFlush(out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
 	/**
 	* Resets this decoder, clearing any internal state.
@@ -348,7 +348,7 @@ extern class CharsetDecoder
 	* @return  This decoder
 	*
 	*/
-	@:overload @:final public function reset() : java.nio.charset.CharsetDecoder;
+	@:overload @:public @:final public function reset() : java.nio.charset.CharsetDecoder;
 	
 	/**
 	* Resets this decoder, clearing any charset-specific internal state.
@@ -356,7 +356,7 @@ extern class CharsetDecoder
 	* <p> The default implementation of this method does nothing.  This method
 	* should be overridden by decoders that maintain internal state.  </p>
 	*/
-	@:overload private function implReset() : Void;
+	@:overload @:protected private function implReset() : Void;
 	
 	/**
 	* Decodes one or more bytes into one or more characters.
@@ -393,7 +393,7 @@ extern class CharsetDecoder
 	*
 	* @return  A coder-result object describing the reason for termination
 	*/
-	@:overload @:abstract private function decodeLoop(_in : java.nio.ByteBuffer, out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected @:abstract private function decodeLoop(_in : java.nio.ByteBuffer, out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
 	/**
 	* Convenience method that decodes the remaining content of a single input
@@ -426,7 +426,7 @@ extern class CharsetDecoder
 	*          the current unmappable-character action is {@link
 	*          CodingErrorAction#REPORT}
 	*/
-	@:overload @:final public function decode(_in : java.nio.ByteBuffer) : java.nio.CharBuffer;
+	@:overload @:public @:final public function decode(_in : java.nio.ByteBuffer) : java.nio.CharBuffer;
 	
 	/**
 	* Tells whether or not this decoder implements an auto-detecting charset.
@@ -438,7 +438,7 @@ extern class CharsetDecoder
 	* @return  <tt>true</tt> if, and only if, this decoder implements an
 	*          auto-detecting charset
 	*/
-	@:overload public function isAutoDetecting() : Bool;
+	@:overload @:public public function isAutoDetecting() : Bool;
 	
 	/**
 	* Tells whether or not this decoder has yet detected a
@@ -466,7 +466,7 @@ extern class CharsetDecoder
 	* @throws  UnsupportedOperationException
 	*          If this decoder does not implement an auto-detecting charset
 	*/
-	@:overload public function isCharsetDetected() : Bool;
+	@:overload @:public public function isCharsetDetected() : Bool;
 	
 	/**
 	* Retrieves the charset that was detected by this
@@ -492,7 +492,7 @@ extern class CharsetDecoder
 	* @throws  UnsupportedOperationException
 	*          If this decoder does not implement an auto-detecting charset
 	*/
-	@:overload public function detectedCharset() : java.nio.charset.Charset;
+	@:overload @:public public function detectedCharset() : java.nio.charset.Charset;
 	
 	
 }

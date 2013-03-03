@@ -68,33 +68,33 @@ extern class SAX2XNI implements org.xml.sax.ContentHandler implements com.sun.or
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload public function new(core : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler) : Void;
+	@:overload @:public public function new(core : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler) : Void;
 	
-	@:overload public function setDocumentHandler(handler : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler) : Void;
+	@:overload @:public public function setDocumentHandler(handler : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler) : Void;
 	
-	@:overload public function getDocumentHandler() : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
+	@:overload @:public public function getDocumentHandler() : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
-	@:overload public function startElement(uri : String, local : String, qname : String, att : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(uri : String, local : String, qname : String, att : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function endElement(uri : String, local : String, qname : String) : Void;
+	@:overload @:public public function endElement(uri : String, local : String, qname : String) : Void;
 	
-	@:overload public function characters(buf : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : Void;
+	@:overload @:public public function characters(buf : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : Void;
 	
-	@:overload public function ignorableWhitespace(buf : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(buf : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : Void;
 	
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
-	@:overload public function setDocumentLocator(_loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(_loc : org.xml.sax.Locator) : Void;
 	
 	
 }

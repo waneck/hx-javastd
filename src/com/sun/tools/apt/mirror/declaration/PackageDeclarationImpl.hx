@@ -28,42 +28,42 @@ package com.sun.tools.apt.mirror.declaration;
 */
 extern class PackageDeclarationImpl extends com.sun.tools.apt.mirror.declaration.DeclarationImpl implements com.sun.mirror.declaration.PackageDeclaration
 {
-	@:overload public function new(env : com.sun.tools.apt.mirror.AptEnv, sym : PackageSymbol) : Void;
+	@:overload @:public public function new(env : com.sun.tools.apt.mirror.AptEnv, sym : PackageSymbol) : Void;
 	
 	/**
 	* Returns the qualified name.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getQualifiedName() : String;
+	@:overload @:public public function getQualifiedName() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getClasses() : java.util.Collection<com.sun.mirror.declaration.ClassDeclaration>;
+	@:overload @:public public function getClasses() : java.util.Collection<com.sun.mirror.declaration.ClassDeclaration>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getEnums() : java.util.Collection<com.sun.mirror.declaration.EnumDeclaration>;
+	@:overload @:public public function getEnums() : java.util.Collection<com.sun.mirror.declaration.EnumDeclaration>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getInterfaces() : java.util.Collection<com.sun.mirror.declaration.InterfaceDeclaration>;
+	@:overload @:public public function getInterfaces() : java.util.Collection<com.sun.mirror.declaration.InterfaceDeclaration>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getAnnotationTypes() : java.util.Collection<com.sun.mirror.declaration.AnnotationTypeDeclaration>;
+	@:overload @:public public function getAnnotationTypes() : java.util.Collection<com.sun.mirror.declaration.AnnotationTypeDeclaration>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
 	
 	
 }

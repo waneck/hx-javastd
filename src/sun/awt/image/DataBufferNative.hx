@@ -39,18 +39,18 @@ extern class DataBufferNative extends java.awt.image.DataBuffer
 	* data stored in an offscreen vram surface, such as that created
 	* by the createVolatileImage() method.
 	*/
-	private var surfaceData : sun.java2d.SurfaceData;
+	@:protected private var surfaceData : sun.java2d.SurfaceData;
 	
-	private var width : Int;
+	@:protected private var width : Int;
 	
 	/**
 	* Constructor.  The constructor of this object requires a
 	* SurfaceData object; that surfaceData object will be used
 	* to access the actual pixel data in native code.
 	*/
-	@:overload public function new(sData : sun.java2d.SurfaceData, type : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function new(sData : sun.java2d.SurfaceData, type : Int, width : Int, height : Int) : Void;
 	
-	@:overload @:native private function getElem(x : Int, y : Int, sData : sun.java2d.SurfaceData) : Int;
+	@:overload @:protected @:native private function getElem(x : Int, y : Int, sData : sun.java2d.SurfaceData) : Int;
 	
 	/**
 	* getElem returns the pixel value for a given index into the
@@ -60,9 +60,9 @@ extern class DataBufferNative extends java.awt.image.DataBuffer
 	* from the index value and the native getElem() method is
 	* called with the internal surfaceData object.
 	*/
-	@:overload public function getElem(bank : Int, i : Int) : Int;
+	@:overload @:public override public function getElem(bank : Int, i : Int) : Int;
 	
-	@:overload @:native private function setElem(x : Int, y : Int, val : Int, sData : sun.java2d.SurfaceData) : Void;
+	@:overload @:protected @:native private function setElem(x : Int, y : Int, val : Int, sData : sun.java2d.SurfaceData) : Void;
 	
 	/**
 	* setElem sets the pixel value of a given index into the
@@ -72,7 +72,7 @@ extern class DataBufferNative extends java.awt.image.DataBuffer
 	* from the index value and the native setElem() method is
 	* called with the internal surfaceData object.
 	*/
-	@:overload public function setElem(bank : Int, i : Int, val : Int) : Void;
+	@:overload @:public override public function setElem(bank : Int, i : Int, val : Int) : Void;
 	
 	
 }

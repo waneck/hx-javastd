@@ -25,18 +25,18 @@ package com.sun.org.glassfish.external.statistics.impl;
 */
 extern class StatsImpl implements com.sun.org.glassfish.external.statistics.Stats
 {
-	@:overload private function new(statisticArray : java.NativeArray<com.sun.org.glassfish.external.statistics.impl.StatisticImpl>) : Void;
+	@:overload @:protected private function new(statisticArray : java.NativeArray<com.sun.org.glassfish.external.statistics.impl.StatisticImpl>) : Void;
 	
-	@:overload @:synchronized public function getStatistic(statisticName : String) : com.sun.org.glassfish.external.statistics.Statistic;
+	@:overload @:public @:synchronized public function getStatistic(statisticName : String) : com.sun.org.glassfish.external.statistics.Statistic;
 	
-	@:overload @:synchronized public function getStatisticNames() : java.NativeArray<String>;
+	@:overload @:public @:synchronized public function getStatisticNames() : java.NativeArray<String>;
 	
-	@:overload @:synchronized public function getStatistics() : java.NativeArray<com.sun.org.glassfish.external.statistics.Statistic>;
+	@:overload @:public @:synchronized public function getStatistics() : java.NativeArray<com.sun.org.glassfish.external.statistics.Statistic>;
 	
 	/**
 	* Call reset on all of the Statistic objects contained by this Stats object
 	*/
-	@:overload @:synchronized public function reset() : Void;
+	@:overload @:public @:synchronized public function reset() : Void;
 	
 	
 }

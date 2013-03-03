@@ -38,7 +38,7 @@ extern interface Generator
 	* @param main Report any errors using the main.error() methods.
 	* @return true if no errors, false otherwise.
 	*/
-	@:overload public function parseArgs(argv : java.NativeArray<String>, main : sun.rmi.rmic.Main) : Bool;
+	@:overload @:public public function parseArgs(argv : java.NativeArray<String>, main : sun.rmi.rmic.Main) : Bool;
 	
 	/**
 	* Generate output. Any source files created which need compilation should
@@ -51,7 +51,7 @@ extern interface Generator
 	* @param destDir   The directory for the root of the package hierarchy
 	*                          for generated files. May be null.
 	*/
-	@:overload public function generate(env : sun.rmi.rmic.BatchEnvironment, cdef : sun.tools.java.ClassDefinition, destDir : java.io.File) : Void;
+	@:overload @:public public function generate(env : sun.rmi.rmic.BatchEnvironment, cdef : sun.tools.java.ClassDefinition, destDir : java.io.File) : Void;
 	
 	
 }

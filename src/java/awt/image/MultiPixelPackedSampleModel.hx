@@ -74,7 +74,7 @@ extern class MultiPixelPackedSampleModel extends java.awt.image.SampleModel
 	*         <code>DataBuffer.TYPE_USHORT</code>, or
 	*         <code>DataBuffer.TYPE_INT</code>
 	*/
-	@:overload public function new(dataType : Int, w : Int, h : Int, numberOfBits : Int) : Void;
+	@:overload @:public public function new(dataType : Int, w : Int, h : Int, numberOfBits : Int) : Void;
 	
 	/**
 	* Constructs a <code>MultiPixelPackedSampleModel</code> with
@@ -99,7 +99,7 @@ extern class MultiPixelPackedSampleModel extends java.awt.image.SampleModel
 	*         <code>DataBuffer.TYPE_USHORT</code>, or
 	*         <code>DataBuffer.TYPE_INT</code>
 	*/
-	@:overload public function new(dataType : Int, w : Int, h : Int, numberOfBits : Int, scanlineStride : Int, dataBitOffset : Int) : Void;
+	@:overload @:public public function new(dataType : Int, w : Int, h : Int, numberOfBits : Int, scanlineStride : Int, dataBitOffset : Int) : Void;
 	
 	/**
 	* Creates a new <code>MultiPixelPackedSampleModel</code> with the
@@ -115,7 +115,7 @@ extern class MultiPixelPackedSampleModel extends java.awt.image.SampleModel
 	* @throws IllegalArgumentException if <code>w</code> or
 	*         <code>h</code> is not greater than 0
 	*/
-	@:overload override public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
+	@:overload @:public override public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
 	
 	/**
 	* Creates a <code>DataBuffer</code> that corresponds to this
@@ -126,7 +126,7 @@ extern class MultiPixelPackedSampleModel extends java.awt.image.SampleModel
 	* @return a <code>DataBuffer</code> with the same data type and
 	* size as this <code>MultiPixelPackedSampleModel</code>.
 	*/
-	@:overload override public function createDataBuffer() : java.awt.image.DataBuffer;
+	@:overload @:public override public function createDataBuffer() : java.awt.image.DataBuffer;
 	
 	/**
 	* Returns the number of data elements needed to transfer one pixel
@@ -135,20 +135,20 @@ extern class MultiPixelPackedSampleModel extends java.awt.image.SampleModel
 	* one.
 	* @return the number of data elements.
 	*/
-	@:overload override public function getNumDataElements() : Int;
+	@:overload @:public override public function getNumDataElements() : Int;
 	
 	/**
 	* Returns the number of bits per sample for all bands.
 	* @return the number of bits per sample.
 	*/
-	@:overload override public function getSampleSize() : java.NativeArray<Int>;
+	@:overload @:public override public function getSampleSize() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the number of bits per sample for the specified band.
 	* @param band the specified band
 	* @return the number of bits per sample for the specified band.
 	*/
-	@:overload override public function getSampleSize(band : Int) : Int;
+	@:overload @:public override public function getSampleSize(band : Int) : Int;
 	
 	/**
 	* Returns the offset of pixel (x,&nbsp;y) in data array elements.
@@ -156,7 +156,7 @@ extern class MultiPixelPackedSampleModel extends java.awt.image.SampleModel
 	* @param y the Y coordinate of the specified pixel
 	* @return the offset of the specified pixel.
 	*/
-	@:overload public function getOffset(x : Int, y : Int) : Int;
+	@:overload @:public public function getOffset(x : Int, y : Int) : Int;
 	
 	/**
 	*  Returns the offset, in bits, into the data element in which it is
@@ -165,14 +165,14 @@ extern class MultiPixelPackedSampleModel extends java.awt.image.SampleModel
 	*  @param x the specified pixel
 	*  @return the bit offset of the specified pixel.
 	*/
-	@:overload public function getBitOffset(x : Int) : Int;
+	@:overload @:public public function getBitOffset(x : Int) : Int;
 	
 	/**
 	* Returns the scanline stride.
 	* @return the scanline stride of this
 	* <code>MultiPixelPackedSampleModel</code>.
 	*/
-	@:overload public function getScanlineStride() : Int;
+	@:overload @:public public function getScanlineStride() : Int;
 	
 	/**
 	* Returns the pixel bit stride in bits.  This value is the same as
@@ -180,14 +180,14 @@ extern class MultiPixelPackedSampleModel extends java.awt.image.SampleModel
 	* @return the <code>pixelBitStride</code> of this
 	* <code>MultiPixelPackedSampleModel</code>.
 	*/
-	@:overload public function getPixelBitStride() : Int;
+	@:overload @:public public function getPixelBitStride() : Int;
 	
 	/**
 	* Returns the data bit offset in bits.
 	* @return the <code>dataBitOffset</code> of this
 	* <code>MultiPixelPackedSampleModel</code>.
 	*/
-	@:overload public function getDataBitOffset() : Int;
+	@:overload @:public public function getDataBitOffset() : Int;
 	
 	/**
 	*  Returns the TransferType used to transfer pixels by way of the
@@ -198,7 +198,7 @@ extern class MultiPixelPackedSampleModel extends java.awt.image.SampleModel
 	*  or DataBuffer.TYPE_INT.
 	*  @return the transfertype.
 	*/
-	@:overload override public function getTransferType() : Int;
+	@:overload @:public override public function getTransferType() : Int;
 	
 	/**
 	* Creates a new <code>MultiPixelPackedSampleModel</code> with a
@@ -215,7 +215,7 @@ extern class MultiPixelPackedSampleModel extends java.awt.image.SampleModel
 	* @throws IllegalArgumentException if <code>w</code> or
 	*         <code>h</code> is not greater than 0
 	*/
-	@:overload override public function createSubsetSampleModel(bands : java.NativeArray<Int>) : java.awt.image.SampleModel;
+	@:overload @:public override public function createSubsetSampleModel(bands : java.NativeArray<Int>) : java.awt.image.SampleModel;
 	
 	/**
 	* Returns as <code>int</code> the sample in a specified band for the
@@ -233,7 +233,7 @@ extern class MultiPixelPackedSampleModel extends java.awt.image.SampleModel
 	*          coordinates are not in bounds.
 	* @see #setSample(int, int, int, int, DataBuffer)
 	*/
-	@:overload override public function getSample(x : Int, y : Int, b : Int, data : java.awt.image.DataBuffer) : Int;
+	@:overload @:public override public function getSample(x : Int, y : Int, b : Int, data : java.awt.image.DataBuffer) : Int;
 	
 	/**
 	* Sets a sample in the specified band for the pixel located at
@@ -250,7 +250,7 @@ extern class MultiPixelPackedSampleModel extends java.awt.image.SampleModel
 	* not in bounds.
 	* @see #getSample(int, int, int, DataBuffer)
 	*/
-	@:overload override public function setSample(x : Int, y : Int, b : Int, s : Int, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public override public function setSample(x : Int, y : Int, b : Int, s : Int, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Returns data for a single pixel in a primitive array of type
@@ -302,7 +302,7 @@ extern class MultiPixelPackedSampleModel extends java.awt.image.SampleModel
 	* not large enough to hold the pixel data
 	* @see #setDataElements(int, int, Object, DataBuffer)
 	*/
-	@:overload override public function getDataElements(x : Int, y : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Dynamic;
+	@:overload @:public override public function getDataElements(x : Int, y : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Dynamic;
 	
 	/**
 	* Returns the specified single band pixel in the first element
@@ -319,7 +319,7 @@ extern class MultiPixelPackedSampleModel extends java.awt.image.SampleModel
 	*  are not in bounds
 	* @see #setPixel(int, int, int[], DataBuffer)
 	*/
-	@:overload override public function getPixel(x : Int, y : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
+	@:overload @:public override public function getPixel(x : Int, y : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
 	
 	/**
 	* Sets the data for a single pixel in the specified
@@ -361,7 +361,7 @@ extern class MultiPixelPackedSampleModel extends java.awt.image.SampleModel
 	* @param data the <code>DataBuffer</code> containing the image data
 	* @see #getDataElements(int, int, Object, DataBuffer)
 	*/
-	@:overload override public function setDataElements(x : Int, y : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public override public function setDataElements(x : Int, y : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets a pixel in the <code>DataBuffer</code> using an
@@ -374,11 +374,11 @@ extern class MultiPixelPackedSampleModel extends java.awt.image.SampleModel
 	* @param data the <code>DataBuffer</code> containing the image data
 	* @see #getPixel(int, int, int[], DataBuffer)
 	*/
-	@:overload override public function setPixel(x : Int, y : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public override public function setPixel(x : Int, y : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

@@ -35,7 +35,7 @@ extern class ExtendedType
 	* @param namespace Namespace of the node
 	* @param localName Local name of the node
 	*/
-	@:overload public function new(nodetype : Int, namespace : String, localName : String) : Void;
+	@:overload @:public public function new(nodetype : Int, namespace : String, localName : String) : Void;
 	
 	/**
 	* Create an ExtendedType object from node type, namespace, local name
@@ -46,26 +46,26 @@ extern class ExtendedType
 	* @param localName Local name of the node
 	* @param hash The given hash code
 	*/
-	@:overload public function new(nodetype : Int, namespace : String, localName : String, hash : Int) : Void;
+	@:overload @:public public function new(nodetype : Int, namespace : String, localName : String, hash : Int) : Void;
 	
 	/**
 	* Redefine this ExtendedType object to represent a different extended type.
 	* This is intended to be used ONLY on the hashET object. Using it elsewhere
 	* will mess up existing hashtable entries!
 	*/
-	@:overload private function redefine(nodetype : Int, namespace : String, localName : String) : Void;
+	@:overload @:protected private function redefine(nodetype : Int, namespace : String, localName : String) : Void;
 	
 	/**
 	* Redefine this ExtendedType object to represent a different extended type.
 	* This is intended to be used ONLY on the hashET object. Using it elsewhere
 	* will mess up existing hashtable entries!
 	*/
-	@:overload private function redefine(nodetype : Int, namespace : String, localName : String, hash : Int) : Void;
+	@:overload @:protected private function redefine(nodetype : Int, namespace : String, localName : String, hash : Int) : Void;
 	
 	/**
 	* Override the hashCode() method in the Object class
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Test if this ExtendedType object is equal to the given ExtendedType.
@@ -73,22 +73,22 @@ extern class ExtendedType
 	* @param other The other ExtendedType object to test for equality
 	* @return true if the two ExtendedType objects are equal.
 	*/
-	@:overload public function equals(other : com.sun.org.apache.xml.internal.dtm.ref.ExtendedType) : Bool;
+	@:overload @:public public function equals(other : com.sun.org.apache.xml.internal.dtm.ref.ExtendedType) : Bool;
 	
 	/**
 	* Return the node type
 	*/
-	@:overload public function getNodeType() : Int;
+	@:overload @:public public function getNodeType() : Int;
 	
 	/**
 	* Return the local name
 	*/
-	@:overload public function getLocalName() : String;
+	@:overload @:public public function getLocalName() : String;
 	
 	/**
 	* Return the namespace
 	*/
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
 	
 }

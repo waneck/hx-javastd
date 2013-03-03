@@ -29,11 +29,11 @@ package sun.security.provider.certpath;
 	* Initializes the internal state of the checker from parameters
 	* specified in the constructor
 	*/
-	@:overload override public function init(forward : Bool) : Void;
+	@:overload @:public override public function init(forward : Bool) : Void;
 	
-	@:overload override public function isForwardCheckingSupported() : Bool;
+	@:overload @:public override public function isForwardCheckingSupported() : Bool;
 	
-	@:overload override public function getSupportedExtensions() : java.util.Set<String>;
+	@:overload @:public override public function getSupportedExtensions() : java.util.Set<String>;
 	
 	/**
 	* Performs the revocation status check on the certificate using
@@ -45,7 +45,7 @@ package sun.security.provider.certpath;
 	* @exception CertPathValidatorException Exception thrown if
 	* certificate does not verify
 	*/
-	@:overload override public function check(cert : java.security.cert.Certificate, unresolvedCritExts : java.util.Collection<String>) : Void;
+	@:overload @:public override public function check(cert : java.security.cert.Certificate, unresolvedCritExts : java.util.Collection<String>) : Void;
 	
 	/**
 	* Performs the revocation status check on the certificate using
@@ -61,7 +61,7 @@ package sun.security.provider.certpath;
 	* @exception CertPathValidatorException Exception thrown if
 	*            certificate does not verify.
 	*/
-	@:overload public function check(currCert : java.security.cert.X509Certificate, prevKey : java.security.PublicKey, signFlag : Bool) : Bool;
+	@:overload @:public public function check(currCert : java.security.cert.X509Certificate, prevKey : java.security.PublicKey, signFlag : Bool) : Bool;
 	
 	
 }
@@ -80,7 +80,7 @@ package sun.security.provider.certpath;
 	* @return <code>true</code> if the <code>Certificate</code> should be
 	*         selected, <code>false</code> otherwise
 	*/
-	@:overload public function match(cert : java.security.cert.Certificate) : Bool;
+	@:overload @:public override public function match(cert : java.security.cert.Certificate) : Bool;
 	
 	/**
 	* Return a printable representation of the <code>CertSelector</code>.
@@ -88,7 +88,7 @@ package sun.security.provider.certpath;
 	* @return a <code>String</code> describing the contents of the
 	*         <code>CertSelector</code>
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

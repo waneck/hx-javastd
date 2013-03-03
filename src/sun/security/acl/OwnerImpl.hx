@@ -31,7 +31,7 @@ package sun.security.acl;
 */
 extern class OwnerImpl implements java.security.acl.Owner
 {
-	@:overload public function new(owner : java.security.Principal) : Void;
+	@:overload @:public public function new(owner : java.security.Principal) : Void;
 	
 	/**
 	* Adds an owner. Owners can modify ACL contents and can disassociate
@@ -45,7 +45,7 @@ extern class OwnerImpl implements java.security.acl.Owner
 	* @exception NotOwnerException if the caller principal is not on
 	* the owners list of the Acl.
 	*/
-	@:overload @:synchronized public function addOwner(caller : java.security.Principal, owner : java.security.Principal) : Bool;
+	@:overload @:public @:synchronized public function addOwner(caller : java.security.Principal, owner : java.security.Principal) : Bool;
 	
 	/**
 	* Delete owner. If this is the last owner in the ACL, an exception is
@@ -61,14 +61,14 @@ extern class OwnerImpl implements java.security.acl.Owner
 	* @exception LastOwnerException if there is only one owner left in the group, then
 	* deleteOwner would leave the ACL owner-less. This exception is raised in such a case.
 	*/
-	@:overload @:synchronized public function deleteOwner(caller : java.security.Principal, owner : java.security.Principal) : Bool;
+	@:overload @:public @:synchronized public function deleteOwner(caller : java.security.Principal, owner : java.security.Principal) : Bool;
 	
 	/**
 	* returns if the given principal belongs to the owner list.
 	* @param owner The owner to check if part of the owners list
 	* @return true if the passed principal is in the owner list, false if not.
 	*/
-	@:overload @:synchronized public function isOwner(owner : java.security.Principal) : Bool;
+	@:overload @:public @:synchronized public function isOwner(owner : java.security.Principal) : Bool;
 	
 	
 }

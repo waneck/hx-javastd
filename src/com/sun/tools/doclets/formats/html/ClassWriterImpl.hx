@@ -37,13 +37,13 @@ package com.sun.tools.doclets.formats.html;
 */
 extern class ClassWriterImpl extends com.sun.tools.doclets.formats.html.SubWriterHolderWriter implements com.sun.tools.doclets.internal.toolkit.ClassWriter
 {
-	private var classDoc : com.sun.javadoc.ClassDoc;
+	@:protected private var classDoc : com.sun.javadoc.ClassDoc;
 	
-	private var classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree;
+	@:protected private var classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree;
 	
-	private var prev : com.sun.javadoc.ClassDoc;
+	@:protected private var prev : com.sun.javadoc.ClassDoc;
 	
-	private var next : com.sun.javadoc.ClassDoc;
+	@:protected private var next : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* @param classDoc the class being documented.
@@ -51,172 +51,172 @@ extern class ClassWriterImpl extends com.sun.tools.doclets.formats.html.SubWrite
 	* @param nextClass the next class being documented.
 	* @param classTree the class tree for the given class.
 	*/
-	@:overload public function new(classDoc : com.sun.javadoc.ClassDoc, prevClass : com.sun.javadoc.ClassDoc, nextClass : com.sun.javadoc.ClassDoc, classTree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
+	@:overload @:public public function new(classDoc : com.sun.javadoc.ClassDoc, prevClass : com.sun.javadoc.ClassDoc, nextClass : com.sun.javadoc.ClassDoc, classTree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
 	
 	/**
 	* Get this package link.
 	*
 	* @return a content tree for the package link
 	*/
-	@:overload private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the class link.
 	*
 	* @return a content tree for the class link
 	*/
-	@:overload private function getNavLinkClass() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkClass() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the class use link.
 	*
 	* @return a content tree for the class use link
 	*/
-	@:overload private function getNavLinkClassUse() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkClassUse() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get link to previous class.
 	*
 	* @return a content tree for the previous class link
 	*/
-	@:overload public function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public override public function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get link to next class.
 	*
 	* @return a content tree for the next class link
 	*/
-	@:overload public function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public override public function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getHeader(header : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getHeader(header : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getClassContentHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getClassContentHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addFooter(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addFooter(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function printDocument(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function printDocument(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getClassInfoTreeHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getClassInfoTreeHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getClassInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getClassInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addClassSignature(modifiers : String, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addClassSignature(modifiers : String, classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addClassDescription(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addClassDescription(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addClassTagInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addClassTagInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addClassTree(classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addClassTree(classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addTypeParamInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addTypeParamInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addSubClassInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addSubClassInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addSubInterfacesInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addSubInterfacesInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addInterfaceUsageInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addInterfaceUsageInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addImplementedInterfacesInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addImplementedInterfacesInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addSuperInterfacesInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addSuperInterfacesInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addNestedClassInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addNestedClassInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addClassDeprecationInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addClassDeprecationInfo(classInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add summary details to the navigation bar.
 	*
 	* @param subDiv the content tree to which the summary detail links will be added
 	*/
-	@:overload private function addSummaryDetailLinks(subDiv : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected override private function addSummaryDetailLinks(subDiv : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get summary links for navigation bar.
 	*
 	* @return the content tree for the navigation summary links
 	*/
-	@:overload private function getNavSummaryLinks() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavSummaryLinks() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get detail links for the navigation bar.
 	*
 	* @return the content tree for the detail links
 	*/
-	@:overload private function getNavDetailLinks() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavDetailLinks() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add gap between navigation bar elements.
 	*
 	* @param liNav the content tree to which the gap will be added
 	*/
-	@:overload private function addNavGap(liNav : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addNavGap(liNav : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Return the classDoc being documented.
 	*
 	* @return the classDoc being documented.
 	*/
-	@:overload public function getClassDoc() : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function getClassDoc() : com.sun.javadoc.ClassDoc;
 	
 	
 }

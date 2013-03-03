@@ -25,68 +25,68 @@ package com.sun.java.util.jar.pack;
 */
 @:internal extern class Fixups extends java.util.AbstractCollection<com.sun.java.util.jar.pack.Fixups.Fixups_Fixup>
 {
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function trimToSize() : Void;
+	@:overload @:public public function trimToSize() : Void;
 	
-	@:overload public function visitRefs(refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
+	@:overload @:public public function visitRefs(refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function setBytes(newBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setBytes(newBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	public static var U2_FORMAT(default, null) : Int;
+	@:public @:static @:final public static var U2_FORMAT(default, null) : Int;
 	
-	public static var U1_FORMAT(default, null) : Int;
+	@:public @:static @:final public static var U1_FORMAT(default, null) : Int;
 	
-	@:overload override public function iterator() : java.util.Iterator<com.sun.java.util.jar.pack.Fixups.Fixups_Fixup>;
+	@:overload @:public override public function iterator() : java.util.Iterator<com.sun.java.util.jar.pack.Fixups.Fixups_Fixup>;
 	
-	@:overload public function add(location : Int, format : Int, entry : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Void;
+	@:overload @:public public function add(location : Int, format : Int, entry : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Void;
 	
-	@:overload public function add(f : com.sun.java.util.jar.pack.Fixups.Fixups_Fixup) : Bool;
+	@:overload @:public public function add(f : com.sun.java.util.jar.pack.Fixups.Fixups_Fixup) : Bool;
 	
-	@:overload override public function addAll(c : java.util.Collection<com.sun.java.util.jar.pack.Fixups.Fixups_Fixup>) : Bool;
+	@:overload @:public override public function addAll(c : java.util.Collection<com.sun.java.util.jar.pack.Fixups.Fixups_Fixup>) : Bool;
 	
-	@:native('add') @:overload public static function _add(prevFixups : Dynamic, bytes : java.NativeArray<java.StdTypes.Int8>, loc : Int, fmt : Int, e : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Dynamic;
+	@:native('add') @:overload @:public @:static public static function _add(prevFixups : Dynamic, bytes : java.NativeArray<java.StdTypes.Int8>, loc : Int, fmt : Int, e : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Dynamic;
 	
-	@:native('setBytes') @:overload public static function _setBytes(fixups : Dynamic, bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:native('setBytes') @:overload @:public @:static public static function _setBytes(fixups : Dynamic, bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:native('trimToSize') @:overload public static function _trimToSize(fixups : Dynamic) : Dynamic;
+	@:native('trimToSize') @:overload @:public @:static public static function _trimToSize(fixups : Dynamic) : Dynamic;
 	
-	@:native('visitRefs') @:overload public static function _visitRefs(fixups : Dynamic, refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
+	@:native('visitRefs') @:overload @:public @:static public static function _visitRefs(fixups : Dynamic, refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
 	
-	@:native('finishRefs') @:overload public static function _finishRefs(fixups : Dynamic, bytes : java.NativeArray<java.StdTypes.Int8>, ix : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index) : Void;
+	@:native('finishRefs') @:overload @:public @:static public static function _finishRefs(fixups : Dynamic, bytes : java.NativeArray<java.StdTypes.Int8>, ix : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index) : Void;
 	
 	
 }
 /** Simple and necessary tuple to present each fixup. */
 @:native('com$sun$java$util$jar$pack$Fixups$Fixup') extern class Fixups_Fixup implements java.lang.Comparable<com.sun.java.util.jar.pack.Fixups.Fixups_Fixup>
 {
-	@:overload public function new(loc : Int, fmt : Int, entry : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Void;
+	@:overload @:public public function new(loc : Int, fmt : Int, entry : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Void;
 	
-	@:overload public function location() : Int;
+	@:overload @:public public function location() : Int;
 	
-	@:overload public function format() : Int;
+	@:overload @:public public function format() : Int;
 	
-	@:overload public function entry() : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
+	@:overload @:public public function entry() : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
 	
-	@:overload public function compareTo(that : com.sun.java.util.jar.pack.Fixups.Fixups_Fixup) : Int;
+	@:overload @:public public function compareTo(that : com.sun.java.util.jar.pack.Fixups.Fixups_Fixup) : Int;
 	
-	@:overload public function equals(x : Dynamic) : Bool;
+	@:overload @:public public function equals(x : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('com$sun$java$util$jar$pack$Fixups$Itr') @:internal extern class Fixups_Itr implements java.util.Iterator<com.sun.java.util.jar.pack.Fixups.Fixups_Fixup>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
-	@:overload public function next() : com.sun.java.util.jar.pack.Fixups.Fixups_Fixup;
+	@:overload @:public public function next() : com.sun.java.util.jar.pack.Fixups.Fixups_Fixup;
 	
 	
 }

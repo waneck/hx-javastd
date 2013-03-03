@@ -25,31 +25,31 @@ package com.sun.jmx.remote.internal;
 */
 extern class ServerNotifForwarder
 {
-	@:overload public function new(mbeanServer : javax.management.MBeanServer, env : java.util.Map<String, Dynamic>, notifBuffer : com.sun.jmx.remote.internal.NotificationBuffer, connectionId : String) : Void;
+	@:overload @:public public function new(mbeanServer : javax.management.MBeanServer, env : java.util.Map<String, Dynamic>, notifBuffer : com.sun.jmx.remote.internal.NotificationBuffer, connectionId : String) : Void;
 	
-	@:overload public function addNotificationListener(name : javax.management.ObjectName, filter : javax.management.NotificationFilter) : Null<Int>;
+	@:overload @:public public function addNotificationListener(name : javax.management.ObjectName, filter : javax.management.NotificationFilter) : Null<Int>;
 	
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listenerIDs : java.NativeArray<Null<Int>>) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listenerIDs : java.NativeArray<Null<Int>>) : Void;
 	
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listenerID : Null<Int>) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listenerID : Null<Int>) : Void;
 	
-	@:overload public function fetchNotifs(startSequenceNumber : haxe.Int64, timeout : haxe.Int64, maxNotifications : Int) : javax.management.remote.NotificationResult;
+	@:overload @:public public function fetchNotifs(startSequenceNumber : haxe.Int64, timeout : haxe.Int64, maxNotifications : Int) : javax.management.remote.NotificationResult;
 	
-	@:overload public function terminate() : Void;
+	@:overload @:public public function terminate() : Void;
 	
 	/**
 	* Explicitly check the MBeanPermission for
 	* the current access control context.
 	*/
-	@:overload public function checkMBeanPermission(name : javax.management.ObjectName, actions : String) : Void;
+	@:overload @:public public function checkMBeanPermission(name : javax.management.ObjectName, actions : String) : Void;
 	
 	
 }
 @:native('com$sun$jmx$remote$internal$ServerNotifForwarder$IdAndFilter') @:internal extern class ServerNotifForwarder_IdAndFilter
 {
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }

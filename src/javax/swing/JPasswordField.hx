@@ -30,7 +30,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	* with a default document, <code>null</code> starting
 	* text string, and 0 column width.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>JPasswordField</code> initialized
@@ -39,7 +39,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @param text the text to be displayed, <code>null</code> if none
 	*/
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* Constructs a new empty <code>JPasswordField</code> with the specified
@@ -48,7 +48,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @param columns the number of columns >= 0
 	*/
-	@:overload public function new(columns : Int) : Void;
+	@:overload @:public public function new(columns : Int) : Void;
 	
 	/**
 	* Constructs a new <code>JPasswordField</code> initialized with
@@ -58,7 +58,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	* @param text the text to be displayed, <code>null</code> if none
 	* @param columns the number of columns >= 0
 	*/
-	@:overload public function new(text : String, columns : Int) : Void;
+	@:overload @:public public function new(text : String, columns : Int) : Void;
 	
 	/**
 	* Constructs a new <code>JPasswordField</code> that uses the
@@ -75,7 +75,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*   preferred width will be whatever naturally results from
 	*   the component implementation
 	*/
-	@:overload public function new(doc : javax.swing.text.Document, txt : String, columns : Int) : Void;
+	@:overload @:public public function new(doc : javax.swing.text.Document, txt : String, columns : Int) : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -84,13 +84,13 @@ extern class JPasswordField extends javax.swing.JTextField
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function updateUI() : Void;
+	@:require(java6) @:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the character to be used for echoing.  The default is '*'.
@@ -101,7 +101,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	* @see #setEchoChar
 	* @see #echoCharIsSet
 	*/
-	@:overload public function getEchoChar() : java.StdTypes.Char16;
+	@:overload @:public public function getEchoChar() : java.StdTypes.Char16;
 	
 	/**
 	* Sets the echo character for this <code>JPasswordField</code>.
@@ -118,7 +118,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	* description: character to display in place of the real characters
 	*   attribute: visualUpdate true
 	*/
-	@:overload public function setEchoChar(c : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setEchoChar(c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Returns true if this <code>JPasswordField</code> has a character
@@ -129,7 +129,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	* @see #setEchoChar
 	* @see #getEchoChar
 	*/
-	@:overload public function echoCharIsSet() : Bool;
+	@:overload @:public public function echoCharIsSet() : Bool;
 	
 	/**
 	* Invokes <code>provideErrorFeedback</code> on the current
@@ -139,7 +139,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	* to the system clipboard, and removing the contents from
 	* the model, is not acceptable for a password field.
 	*/
-	@:overload override public function cut() : Void;
+	@:overload @:public override public function cut() : Void;
 	
 	/**
 	* Invokes <code>provideErrorFeedback</code> on the current
@@ -149,7 +149,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	* to the system clipboard, and leaving the contents from
 	* the model, is not acceptable for a password field.
 	*/
-	@:overload override public function copy() : Void;
+	@:overload @:public override public function copy() : Void;
 	
 	/**
 	* Returns the text contained in this <code>TextComponent</code>.
@@ -162,7 +162,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	* replaced by <code>getPassword</code>.
 	* @return the text
 	*/
-	@:overload override public function getText() : String;
+	@:overload @:public override public function getText() : String;
 	
 	/**
 	* Fetches a portion of the text represented by the
@@ -177,7 +177,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	* @return the text
 	* @exception BadLocationException if the offset or length are invalid
 	*/
-	@:overload override public function getText(offs : Int, len : Int) : String;
+	@:overload @:public override public function getText(offs : Int, len : Int) : String;
 	
 	/**
 	* Returns the text contained in this <code>TextComponent</code>.
@@ -188,7 +188,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @return the text
 	*/
-	@:overload public function getPassword() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getPassword() : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Returns a string representation of this <code>JPasswordField</code>.
@@ -199,7 +199,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @return  a string representation of this <code>JPasswordField</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Returns the <code>AccessibleContext</code> associated with this
@@ -213,7 +213,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*         <code>AccessibleContext</code> of this
 	*         <code>JPasswordField</code>
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -241,7 +241,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*   object (AccessibleRole.PASSWORD_TEXT)
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the <code>AccessibleText</code> for the <code>JPasswordField</code>.
@@ -256,7 +256,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:require(java6) @:overload @:public override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Returns the <code>String</code> at a given <code>index</code>.
@@ -274,7 +274,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getAtIndex(part : Int, index : Int) : String;
+	@:require(java6) @:overload @:public override public function getAtIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the <code>String</code> after a given <code>index</code>.
@@ -292,7 +292,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getAfterIndex(part : Int, index : Int) : String;
+	@:require(java6) @:overload @:public override public function getAfterIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the <code>String</code> before a given <code>index</code>.
@@ -310,7 +310,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBeforeIndex(part : Int, index : Int) : String;
+	@:require(java6) @:overload @:public override public function getBeforeIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the text between two <code>indices</code>.
@@ -322,7 +322,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getTextRange(startIndex : Int, endIndex : Int) : String;
+	@:require(java6) @:overload @:public override public function getTextRange(startIndex : Int, endIndex : Int) : String;
 	
 	/**
 	* Returns the <code>AccessibleTextSequence</code> at a given
@@ -344,7 +344,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getTextSequenceAt(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
+	@:require(java6) @:overload @:public override public function getTextSequenceAt(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
 	
 	/**
 	* Returns the <code>AccessibleTextSequence</code> after a given
@@ -366,7 +366,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getTextSequenceAfter(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
+	@:require(java6) @:overload @:public override public function getTextSequenceAfter(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
 	
 	/**
 	* Returns the <code>AccessibleTextSequence</code> before a given
@@ -388,7 +388,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getTextSequenceBefore(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
+	@:require(java6) @:overload @:public override public function getTextSequenceBefore(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
 	
 	
 }

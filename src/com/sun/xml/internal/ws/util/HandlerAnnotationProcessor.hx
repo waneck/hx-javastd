@@ -39,9 +39,9 @@ extern class HandlerAnnotationProcessor
 	* handlers and roles. Will return null if the class passed
 	* in has no handler chain annotation.
 	*/
-	@:overload public static function buildHandlerInfo(clazz : Class<Dynamic>, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.util.HandlerAnnotationInfo;
+	@:overload @:public @:static public static function buildHandlerInfo(clazz : Class<Dynamic>, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.util.HandlerAnnotationInfo;
 	
-	@:overload public static function buildHandlerChainsModel(clazz : Class<Dynamic>) : com.sun.xml.internal.ws.handler.HandlerChainsModel;
+	@:overload @:public @:static public static function buildHandlerChainsModel(clazz : Class<Dynamic>) : com.sun.xml.internal.ws.handler.HandlerChainsModel;
 	
 	
 }

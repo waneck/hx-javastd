@@ -53,7 +53,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* @see #getByteOrder
 	* @see #readBits(int)
 	*/
-	@:overload public function setByteOrder(byteOrder : java.nio.ByteOrder) : Void;
+	@:overload @:public public function setByteOrder(byteOrder : java.nio.ByteOrder) : Void;
 	
 	/**
 	* Returns the byte order with which data values will be read from
@@ -67,7 +67,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* @see java.nio.ByteOrder
 	* @see #setByteOrder
 	*/
-	@:overload public function getByteOrder() : java.nio.ByteOrder;
+	@:overload @:public public function getByteOrder() : java.nio.ByteOrder;
 	
 	/**
 	* Reads a single byte from the stream and returns it as an
@@ -82,7 +82,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function read() : Int;
+	@:overload @:public public function read() : Int;
 	
 	/**
 	* Reads up to <code>b.length</code> bytes from the stream, and
@@ -103,7 +103,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Reads up to <code>len</code> bytes from the stream, and stores
@@ -129,7 +129,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* len</code> is greater than <code>b.length</code>.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Reads up to <code>len</code> bytes from the stream, and
@@ -151,7 +151,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function readBytes(buf : javax.imageio.stream.IIOByteBuffer, len : Int) : Void;
+	@:overload @:public public function readBytes(buf : javax.imageio.stream.IIOByteBuffer, len : Int) : Void;
 	
 	/**
 	* Reads a byte from the stream and returns a <code>boolean</code>
@@ -166,7 +166,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* @exception EOFException if the end of the stream is reached.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function readBoolean() : Bool;
+	@:overload @:public public function readBoolean() : Bool;
 	
 	/**
 	* Reads a byte from the stream and returns it as a
@@ -184,7 +184,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* @exception EOFException if the end of the stream is reached.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function readByte() : java.StdTypes.Int8;
+	@:overload @:public public function readByte() : java.StdTypes.Int8;
 	
 	/**
 	* Reads a byte from the stream, and (conceptually) converts it to
@@ -208,7 +208,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* @exception EOFException if the end of the stream is reached.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function readUnsignedByte() : Int;
+	@:overload @:public public function readUnsignedByte() : Int;
 	
 	/**
 	* Reads two bytes from the stream, and (conceptually)
@@ -226,7 +226,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @see #getByteOrder
 	*/
-	@:overload public function readShort() : java.StdTypes.Int16;
+	@:overload @:public public function readShort() : java.StdTypes.Int16;
 	
 	/**
 	* Reads two bytes from the stream, and (conceptually)
@@ -247,7 +247,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @see #getByteOrder
 	*/
-	@:overload public function readUnsignedShort() : Int;
+	@:overload @:public public function readUnsignedShort() : Int;
 	
 	/**
 	* Equivalent to <code>readUnsignedShort</code>, except that the
@@ -264,7 +264,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @see #readUnsignedShort
 	*/
-	@:overload public function readChar() : java.StdTypes.Char16;
+	@:overload @:public public function readChar() : java.StdTypes.Char16;
 	
 	/**
 	* Reads 4 bytes from the stream, and (conceptually) concatenates
@@ -282,7 +282,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @see #getByteOrder
 	*/
-	@:overload public function readInt() : Int;
+	@:overload @:public public function readInt() : Int;
 	
 	/**
 	* Reads 4 bytes from the stream, and (conceptually) concatenates
@@ -302,7 +302,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @see #getByteOrder
 	*/
-	@:overload public function readUnsignedInt() : haxe.Int64;
+	@:overload @:public public function readUnsignedInt() : haxe.Int64;
 	
 	/**
 	* Reads 8 bytes from the stream, and (conceptually) concatenates
@@ -320,7 +320,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @see #getByteOrder
 	*/
-	@:overload public function readLong() : haxe.Int64;
+	@:overload @:public public function readLong() : haxe.Int64;
 	
 	/**
 	* Reads 4 bytes from the stream, and (conceptually) concatenates
@@ -338,7 +338,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @see #getByteOrder
 	*/
-	@:overload public function readFloat() : Single;
+	@:overload @:public public function readFloat() : Single;
 	
 	/**
 	* Reads 8 bytes from the stream, and (conceptually) concatenates
@@ -356,7 +356,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @see #getByteOrder
 	*/
-	@:overload public function readDouble() : Float;
+	@:overload @:public public function readDouble() : Float;
 	
 	/**
 	* Reads the next line of text from the input stream.  It reads
@@ -390,7 +390,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function readLine() : String;
+	@:overload @:public public function readLine() : String;
 	
 	/**
 	* Reads in a string that has been encoded using a
@@ -474,7 +474,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* valid modified UTF-8 encoding of a string.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function readUTF() : String;
+	@:overload @:public public function readUTF() : String;
 	
 	/**
 	* Reads <code>len</code> bytes from the stream, and stores them
@@ -498,7 +498,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* reading all the bytes.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function readFully(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function readFully(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Reads <code>b.length</code> bytes from the stream, and stores them
@@ -517,7 +517,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* reading all the bytes.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Reads <code>len</code> shorts (signed 16-bit integers) from the
@@ -542,7 +542,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* reading all the bytes.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function readFully(s : java.NativeArray<java.StdTypes.Int16>, off : Int, len : Int) : Void;
+	@:overload @:public public function readFully(s : java.NativeArray<java.StdTypes.Int16>, off : Int, len : Int) : Void;
 	
 	/**
 	* Reads <code>len</code> chars (unsigned 16-bit integers) from the
@@ -567,7 +567,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* reading all the bytes.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function readFully(c : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public public function readFully(c : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
 	/**
 	* Reads <code>len</code> ints (signed 32-bit integers) from the
@@ -592,7 +592,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* reading all the bytes.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function readFully(i : java.NativeArray<Int>, off : Int, len : Int) : Void;
+	@:overload @:public public function readFully(i : java.NativeArray<Int>, off : Int, len : Int) : Void;
 	
 	/**
 	* Reads <code>len</code> longs (signed 64-bit integers) from the
@@ -617,7 +617,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* reading all the bytes.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function readFully(l : java.NativeArray<haxe.Int64>, off : Int, len : Int) : Void;
+	@:overload @:public public function readFully(l : java.NativeArray<haxe.Int64>, off : Int, len : Int) : Void;
 	
 	/**
 	* Reads <code>len</code> floats (32-bit IEEE single-precision
@@ -642,7 +642,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* reading all the bytes.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function readFully(f : java.NativeArray<Single>, off : Int, len : Int) : Void;
+	@:overload @:public public function readFully(f : java.NativeArray<Single>, off : Int, len : Int) : Void;
 	
 	/**
 	* Reads <code>len</code> doubles (64-bit IEEE double-precision
@@ -667,7 +667,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* reading all the bytes.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function readFully(d : java.NativeArray<Float>, off : Int, len : Int) : Void;
+	@:overload @:public public function readFully(d : java.NativeArray<Float>, off : Int, len : Int) : Void;
 	
 	/**
 	* Returns the current byte position of the stream.  The next read
@@ -677,7 +677,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function getStreamPosition() : haxe.Int64;
+	@:overload @:public public function getStreamPosition() : haxe.Int64;
 	
 	/**
 	* Returns the current bit offset, as an integer between 0 and 7,
@@ -698,7 +698,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @see #setBitOffset
 	*/
-	@:overload public function getBitOffset() : Int;
+	@:overload @:public public function getBitOffset() : Int;
 	
 	/**
 	* Sets the bit offset to an integer between 0 and 7, inclusive.
@@ -717,7 +717,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @see #getBitOffset
 	*/
-	@:overload public function setBitOffset(bitOffset : Int) : Void;
+	@:overload @:public public function setBitOffset(bitOffset : Int) : Void;
 	
 	/**
 	* Reads a single bit from the stream and returns it as an
@@ -732,7 +732,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* reading all the bits.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function readBit() : Int;
+	@:overload @:public public function readBit() : Int;
 	
 	/**
 	* Reads a bitstring from the stream and returns it as a
@@ -775,7 +775,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* reading all the bits.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function readBits(numBits : Int) : haxe.Int64;
+	@:overload @:public public function readBits(numBits : Int) : haxe.Int64;
 	
 	/**
 	* Returns the total length of the stream, if known.  Otherwise,
@@ -786,7 +786,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function length() : haxe.Int64;
+	@:overload @:public public function length() : haxe.Int64;
 	
 	/**
 	* Moves the stream position forward by a given number of bytes.  It
@@ -803,7 +803,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function skipBytes(n : Int) : Int;
+	@:overload @:public public function skipBytes(n : Int) : Int;
 	
 	/**
 	* Moves the stream position forward by a given number of bytes.
@@ -818,7 +818,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function skipBytes(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function skipBytes(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Sets the current stream position to the desired location.  The
@@ -840,7 +840,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* than the flushed position.
 	* @exception IOException if any other I/O error occurs.
 	*/
-	@:overload public function seek(pos : haxe.Int64) : Void;
+	@:overload @:public public function seek(pos : haxe.Int64) : Void;
 	
 	/**
 	* Marks a position in the stream to be returned to by a
@@ -865,7 +865,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* should not assume that the marked position will remain valid after
 	* the read operation has completed.
 	*/
-	@:overload public function mark() : Void;
+	@:overload @:public public function mark() : Void;
 	
 	/**
 	* Returns the stream pointer to its previous position, including
@@ -880,7 +880,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Discards the initial portion of the stream prior to the
@@ -910,7 +910,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* Returns the earliest position in the stream to which seeking
@@ -921,7 +921,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* @return the earliest legal position for seeking, as a
 	* <code>long</code>.
 	*/
-	@:overload public function getFlushedPosition() : haxe.Int64;
+	@:overload @:public public function getFlushedPosition() : haxe.Int64;
 	
 	/**
 	* Returns <code>true</code> if this <code>ImageInputStream</code>
@@ -935,7 +935,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* @see #isCachedMemory
 	* @see #isCachedFile
 	*/
-	@:overload public function isCached() : Bool;
+	@:overload @:public public function isCached() : Bool;
 	
 	/**
 	* Returns <code>true</code> if this <code>ImageInputStream</code>
@@ -950,7 +950,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* @see #isCached
 	* @see #isCachedFile
 	*/
-	@:overload public function isCachedMemory() : Bool;
+	@:overload @:public public function isCachedMemory() : Bool;
 	
 	/**
 	* Returns <code>true</code> if this <code>ImageInputStream</code>
@@ -965,7 +965,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	* @see #isCached
 	* @see #isCachedMemory
 	*/
-	@:overload public function isCachedFile() : Bool;
+	@:overload @:public public function isCachedFile() : Bool;
 	
 	/**
 	* Closes the stream.  Attempts to access a stream that has been
@@ -976,7 +976,7 @@ extern interface ImageInputStream extends java.io.DataInput extends java.io.Clos
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

@@ -36,19 +36,19 @@ package com.sun.tools.corba.se.idl.constExpr;
 //// NOTES:
 extern class BinaryExpr extends com.sun.tools.corba.se.idl.constExpr.Expression
 {
-	@:overload public function new(operation : String, leftOperand : com.sun.tools.corba.se.idl.constExpr.Expression, rightOperand : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
+	@:overload @:public public function new(operation : String, leftOperand : com.sun.tools.corba.se.idl.constExpr.Expression, rightOperand : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
 	
-	@:overload public function op(op : String) : Void;
+	@:overload @:public public function op(op : String) : Void;
 	
-	@:overload public function op() : String;
+	@:overload @:public public function op() : String;
 	
-	@:overload public function left(left : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
+	@:overload @:public public function left(left : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
 	
-	@:overload public function left() : com.sun.tools.corba.se.idl.constExpr.Expression;
+	@:overload @:public public function left() : com.sun.tools.corba.se.idl.constExpr.Expression;
 	
-	@:overload public function right(right : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
+	@:overload @:public public function right(right : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
 	
-	@:overload public function right() : com.sun.tools.corba.se.idl.constExpr.Expression;
+	@:overload @:public public function right() : com.sun.tools.corba.se.idl.constExpr.Expression;
 	
 	
 }

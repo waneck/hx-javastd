@@ -37,7 +37,7 @@ package sun.security.krb5;
 	* Sort records in ascending order of priority value. For records with
 	* equal priority move those with weight 0 to the top of the list.
 	*/
-	@:overload public function compareTo(o : Dynamic) : Int;
+	@:overload @:public public function compareTo(o : Dynamic) : Int;
 	
 	
 }

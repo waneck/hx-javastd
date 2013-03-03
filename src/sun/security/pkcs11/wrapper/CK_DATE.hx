@@ -67,7 +67,7 @@ extern class CK_DATE implements java.lang.Cloneable
 	*   CK_CHAR year[4];   - the year ("1900" - "9999")
 	* </PRE>
 	*/
-	public var year : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var year : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -75,7 +75,7 @@ extern class CK_DATE implements java.lang.Cloneable
 	*   CK_CHAR month[2];  - the month ("01" - "12")
 	* </PRE>
 	*/
-	public var month : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var month : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -83,24 +83,24 @@ extern class CK_DATE implements java.lang.Cloneable
 	*   CK_CHAR day[2];    - the day ("01" - "31")
 	* </PRE>
 	*/
-	public var day : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var day : java.NativeArray<java.StdTypes.Char16>;
 	
 	/* the day ("01" - "31") */
-	@:overload public function new(year : java.NativeArray<java.StdTypes.Char16>, month : java.NativeArray<java.StdTypes.Char16>, day : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(year : java.NativeArray<java.StdTypes.Char16>, month : java.NativeArray<java.StdTypes.Char16>, day : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Create a (deep) clone of this object.
 	*
 	* @return A clone of this object.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns the string representation of CK_DATE.
 	*
 	* @return the string representation of CK_DATE
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

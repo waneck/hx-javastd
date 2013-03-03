@@ -31,7 +31,7 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	* @param keyType the class object of the key type for this enum map
 	* @throws NullPointerException if <tt>keyType</tt> is null
 	*/
-	@:overload public function new(keyType : Class<K>) : Void;
+	@:overload @:public public function new(keyType : Class<K>) : Void;
 	
 	/**
 	* Creates an enum map with the same key type as the specified enum
@@ -40,7 +40,7 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	* @param m the enum map from which to initialize this enum map
 	* @throws NullPointerException if <tt>m</tt> is null
 	*/
-	@:overload public function new(m : java.util.EnumMap<K, V>) : Void;
+	@:overload @:public public function new(m : java.util.EnumMap<K, V>) : Void;
 	
 	/**
 	* Creates an enum map initialized from the specified map.  If the
@@ -54,14 +54,14 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	*     <tt>EnumMap</tt> instance and contains no mappings
 	* @throws NullPointerException if <tt>m</tt> is null
 	*/
-	@:overload public function new(m : java.util.Map<K, V>) : Void;
+	@:overload @:public public function new(m : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Returns the number of key-value mappings in this map.
 	*
 	* @return the number of key-value mappings in this map
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this map maps one or more keys to the
@@ -70,7 +70,7 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	* @param value the value whose presence in this map is to be tested
 	* @return <tt>true</tt> if this map maps one or more keys to this value
 	*/
-	@:overload override public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public override public function containsValue(value : Dynamic) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this map contains a mapping for the specified
@@ -80,7 +80,7 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	* @return <tt>true</tt> if this map contains a mapping for the specified
 	*            key
 	*/
-	@:overload override public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public override public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Returns the value to which the specified key is mapped,
@@ -97,7 +97,7 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	* The {@link #containsKey containsKey} operation may be used to
 	* distinguish these two cases.
 	*/
-	@:overload override public function get(key : Dynamic) : V;
+	@:overload @:public override public function get(key : Dynamic) : V;
 	
 	/**
 	* Associates the specified value with the specified key in this map.
@@ -113,7 +113,7 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	*     <tt>null</tt> with the specified key.)
 	* @throws NullPointerException if the specified key is null
 	*/
-	@:overload override public function put(key : K, value : V) : V;
+	@:overload @:public override public function put(key : K, value : V) : V;
 	
 	/**
 	* Removes the mapping for this key from this map if present.
@@ -124,7 +124,7 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	*     return can also indicate that the map previously associated
 	*     <tt>null</tt> with the specified key.)
 	*/
-	@:overload override public function remove(key : Dynamic) : V;
+	@:overload @:public override public function remove(key : Dynamic) : V;
 	
 	/**
 	* Copies all of the mappings from the specified map to this map.
@@ -135,12 +135,12 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	* @throws NullPointerException the specified map is null, or if
 	*     one or more keys in the specified map are null
 	*/
-	@:overload override public function putAll(m : java.util.Map<K, V>) : Void;
+	@:overload @:public override public function putAll(m : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Removes all mappings from this map.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns a {@link Set} view of the keys contained in this map.
@@ -151,7 +151,7 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	*
 	* @return a set view of the keys contained in this enum map
 	*/
-	@:overload override public function keySet() : java.util.Set<K>;
+	@:overload @:public override public function keySet() : java.util.Set<K>;
 	
 	/**
 	* Returns a {@link Collection} view of the values contained in this map.
@@ -163,7 +163,7 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	*
 	* @return a collection view of the values contained in this map
 	*/
-	@:overload override public function values() : java.util.Collection<V>;
+	@:overload @:public override public function values() : java.util.Collection<V>;
 	
 	/**
 	* Returns a {@link Set} view of the mappings contained in this map.
@@ -174,7 +174,7 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	*
 	* @return a set view of the mappings contained in this enum map
 	*/
-	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
 	/**
 	* Compares the specified object with this map for equality.  Returns
@@ -185,13 +185,13 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	* @param o the object to be compared for equality with this map
 	* @return <tt>true</tt> if the specified object is equal to this map
 	*/
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this map.  The hash code of a map is
 	* defined to be the sum of the hash codes of each entry in the map.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Returns a shallow copy of this enum map.  (The values themselves
@@ -199,61 +199,61 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	*
 	* @return a shallow copy of this enum map
 	*/
-	@:overload override public function clone() : java.util.EnumMap<K, V>;
+	@:overload @:public override public function clone() : java.util.EnumMap<K, V>;
 	
 	
 }
 @:native('java$util$EnumMap$KeySet') @:internal extern class EnumMap_KeySet extends java.util.AbstractSet<Dynamic>
 {
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }
 @:native('java$util$EnumMap$Values') @:internal extern class EnumMap_Values extends java.util.AbstractCollection<Dynamic>
 {
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }
 @:native('java$util$EnumMap$EntrySet') @:internal extern class EnumMap_EntrySet extends java.util.AbstractSet<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
+	@:overload @:public override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	
 }
 @:native('java$util$EnumMap$EnumMapIterator') @:internal extern class EnumMap_EnumMapIterator<T> implements java.util.Iterator<T>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	/**
 	* Returns the next element in the iteration.
@@ -261,43 +261,43 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	* @return the next element in the iteration
 	* @throws NoSuchElementException if the iteration has no more elements
 	*/
-	@:overload @:public public function next() : Dynamic;
+	@:overload @:public @:public @:public @:public public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$EnumMap$KeyIterator') @:internal extern class EnumMap_KeyIterator extends java.util.EnumMap.EnumMap_EnumMapIterator<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$EnumMap$ValueIterator') @:internal extern class EnumMap_ValueIterator extends java.util.EnumMap.EnumMap_EnumMapIterator<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$EnumMap$EntryIterator') @:internal extern class EnumMap_EntryIterator extends java.util.EnumMap.EnumMap_EnumMapIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
+	@:overload @:public override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	
-	@:overload override public function remove() : Void;
+	@:overload @:public override public function remove() : Void;
 	
 	
 }
 @:native('java$util$EnumMap$EntryIterator$Entry') @:internal extern class EnumMap_EntryIterator_Entry implements java.util.Map.Map_Entry<Dynamic, Dynamic>
 {
-	@:overload public function getKey() : Dynamic;
+	@:overload @:public public function getKey() : Dynamic;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
-	@:overload public function setValue(value : Dynamic) : Dynamic;
+	@:overload @:public public function setValue(value : Dynamic) : Dynamic;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

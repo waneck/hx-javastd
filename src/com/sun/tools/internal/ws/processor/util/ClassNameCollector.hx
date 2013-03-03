@@ -30,45 +30,45 @@ extern class ClassNameCollector extends com.sun.tools.internal.ws.processor.mode
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function process(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
+	@:overload @:public public function process(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
 	
-	@:overload public function getConflictingClassNames() : java.util.Set<Dynamic>;
+	@:overload @:public public function getConflictingClassNames() : java.util.Set<Dynamic>;
 	
-	@:overload private function postVisit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
+	@:overload @:protected override private function postVisit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
 	
-	@:overload private function preVisit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
+	@:overload @:protected override private function preVisit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
 	
-	@:overload private function processPort11x(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
+	@:overload @:protected private function processPort11x(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
 	
-	@:overload private function preVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
+	@:overload @:protected override private function preVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
 	
-	@:overload private function postVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
+	@:overload @:protected override private function postVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
 	
-	@:overload private function shouldVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Bool;
+	@:overload @:protected override private function shouldVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Bool;
 	
-	@:overload private function preVisit(fault : com.sun.tools.internal.ws.processor.model.Fault) : Void;
+	@:overload @:protected override private function preVisit(fault : com.sun.tools.internal.ws.processor.model.Fault) : Void;
 	
-	@:overload private function visitBodyBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
+	@:overload @:protected override private function visitBodyBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
-	@:overload private function visitHeaderBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
+	@:overload @:protected override private function visitHeaderBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
-	@:overload private function visitFaultBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
+	@:overload @:protected override private function visitFaultBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
-	@:overload private function visitBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
+	@:overload @:protected private function visitBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
-	@:overload private function visit(parameter : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
+	@:overload @:protected override private function visit(parameter : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
 	
-	@:overload public function getSeiClassNames() : java.util.Set<String>;
+	@:overload @:public public function getSeiClassNames() : java.util.Set<String>;
 	
-	@:overload public function getJaxbGeneratedClassNames() : java.util.Set<String>;
+	@:overload @:public public function getJaxbGeneratedClassNames() : java.util.Set<String>;
 	
-	@:overload public function getExceptionClassNames() : java.util.Set<String>;
+	@:overload @:public public function getExceptionClassNames() : java.util.Set<String>;
 	
-	@:overload public function visit(type : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType) : Void;
+	@:overload @:public public function visit(type : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType) : Void;
 	
-	@:overload public function visit(type : com.sun.tools.internal.ws.processor.model.jaxb.RpcLitStructure) : Void;
+	@:overload @:public public function visit(type : com.sun.tools.internal.ws.processor.model.jaxb.RpcLitStructure) : Void;
 	
 	
 }

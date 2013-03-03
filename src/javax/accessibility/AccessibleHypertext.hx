@@ -50,7 +50,7 @@ extern interface AccessibleHypertext extends javax.accessibility.AccessibleText
 	*
 	* @return number of links in this hypertext doc.
 	*/
-	@:overload @:abstract public function getLinkCount() : Int;
+	@:overload @:public @:abstract public function getLinkCount() : Int;
 	
 	/**
 	* Returns the nth Link of this Hypertext document.
@@ -58,7 +58,7 @@ extern interface AccessibleHypertext extends javax.accessibility.AccessibleText
 	* @param linkIndex within the links of this Hypertext
 	* @return Link object encapsulating the nth link(s)
 	*/
-	@:overload @:abstract public function getLink(linkIndex : Int) : javax.accessibility.AccessibleHyperlink;
+	@:overload @:public @:abstract public function getLink(linkIndex : Int) : javax.accessibility.AccessibleHyperlink;
 	
 	/**
 	* Returns the index into an array of hyperlinks that
@@ -68,7 +68,7 @@ extern interface AccessibleHypertext extends javax.accessibility.AccessibleText
 	* @param charIndex index within the text
 	* @return index into the set of hyperlinks for this hypertext doc.
 	*/
-	@:overload @:abstract public function getLinkIndex(charIndex : Int) : Int;
+	@:overload @:public @:abstract public function getLinkIndex(charIndex : Int) : Int;
 	
 	
 }

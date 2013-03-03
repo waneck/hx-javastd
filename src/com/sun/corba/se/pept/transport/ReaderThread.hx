@@ -28,9 +28,9 @@ package com.sun.corba.se.pept.transport;
 */
 extern interface ReaderThread
 {
-	@:overload public function getConnection() : com.sun.corba.se.pept.transport.Connection;
+	@:overload @:public public function getConnection() : com.sun.corba.se.pept.transport.Connection;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

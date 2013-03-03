@@ -28,12 +28,12 @@ extern class AiffFileReader extends com.sun.media.sound.SunFileReader
 	/**
 	* AIFF parser type
 	*/
-	public static var types(default, null) : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
+	@:public @:static @:final public static var types(default, null) : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
 	
 	/**
 	* Constructs a new AiffParser object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Obtains the audio file format of the input stream provided.  The stream must
@@ -53,7 +53,7 @@ extern class AiffFileReader extends com.sun.media.sound.SunFileReader
 	* @see InputStream#markSupported
 	* @see InputStream#mark
 	*/
-	@:overload override public function getAudioFileFormat(stream : java.io.InputStream) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:public override public function getAudioFileFormat(stream : java.io.InputStream) : javax.sound.sampled.AudioFileFormat;
 	
 	/**
 	* Obtains the audio file format of the URL provided.  The URL must
@@ -65,7 +65,7 @@ extern class AiffFileReader extends com.sun.media.sound.SunFileReader
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload override public function getAudioFileFormat(url : java.net.URL) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:public override public function getAudioFileFormat(url : java.net.URL) : javax.sound.sampled.AudioFileFormat;
 	
 	/**
 	* Obtains the audio file format of the File provided.  The File must
@@ -77,7 +77,7 @@ extern class AiffFileReader extends com.sun.media.sound.SunFileReader
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload override public function getAudioFileFormat(file : java.io.File) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:public override public function getAudioFileFormat(file : java.io.File) : javax.sound.sampled.AudioFileFormat;
 	
 	/**
 	* Obtains an audio stream from the input stream provided.  The stream must
@@ -98,7 +98,7 @@ extern class AiffFileReader extends com.sun.media.sound.SunFileReader
 	* @see InputStream#markSupported
 	* @see InputStream#mark
 	*/
-	@:overload override public function getAudioInputStream(stream : java.io.InputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public override public function getAudioInputStream(stream : java.io.InputStream) : javax.sound.sampled.AudioInputStream;
 	
 	/**
 	* Obtains an audio stream from the URL provided.  The URL must
@@ -111,7 +111,7 @@ extern class AiffFileReader extends com.sun.media.sound.SunFileReader
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload override public function getAudioInputStream(url : java.net.URL) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public override public function getAudioInputStream(url : java.net.URL) : javax.sound.sampled.AudioInputStream;
 	
 	/**
 	* Obtains an audio stream from the File provided.  The File must
@@ -124,7 +124,7 @@ extern class AiffFileReader extends com.sun.media.sound.SunFileReader
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload override public function getAudioInputStream(file : java.io.File) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public override public function getAudioInputStream(file : java.io.File) : javax.sound.sampled.AudioInputStream;
 	
 	
 }

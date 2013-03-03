@@ -70,7 +70,7 @@ extern class CK_SLOT_INFO
 	*   CK_UTF8CHAR slotDescription[64];
 	* </PRE>
 	*/
-	public var slotDescription : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var slotDescription : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* must be blank padded and only the first 32 chars will be used<p>
@@ -79,7 +79,7 @@ extern class CK_SLOT_INFO
 	*   CK_UTF8CHAR manufacturerID[32];
 	* </PRE>
 	*/
-	public var manufacturerID : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var manufacturerID : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -87,7 +87,7 @@ extern class CK_SLOT_INFO
 	*   CK_FLAGS flags;
 	* </PRE>
 	*/
-	public var flags : haxe.Int64;
+	@:public public var flags : haxe.Int64;
 	
 	/**
 	* version of hardware<p>
@@ -96,7 +96,7 @@ extern class CK_SLOT_INFO
 	*   CK_VERSION hardwareVersion;
 	* </PRE>
 	*/
-	public var hardwareVersion : sun.security.pkcs11.wrapper.CK_VERSION;
+	@:public public var hardwareVersion : sun.security.pkcs11.wrapper.CK_VERSION;
 	
 	/**
 	* version of firmware<p>
@@ -105,16 +105,16 @@ extern class CK_SLOT_INFO
 	*   CK_VERSION firmwareVersion;
 	* </PRE>
 	*/
-	public var firmwareVersion : sun.security.pkcs11.wrapper.CK_VERSION;
+	@:public public var firmwareVersion : sun.security.pkcs11.wrapper.CK_VERSION;
 	
-	@:overload public function new(slotDesc : java.NativeArray<java.StdTypes.Char16>, vendor : java.NativeArray<java.StdTypes.Char16>, flags : haxe.Int64, hwVer : sun.security.pkcs11.wrapper.CK_VERSION, fwVer : sun.security.pkcs11.wrapper.CK_VERSION) : Void;
+	@:overload @:public public function new(slotDesc : java.NativeArray<java.StdTypes.Char16>, vendor : java.NativeArray<java.StdTypes.Char16>, flags : haxe.Int64, hwVer : sun.security.pkcs11.wrapper.CK_VERSION, fwVer : sun.security.pkcs11.wrapper.CK_VERSION) : Void;
 	
 	/**
 	* Returns the string representation of CK_SLOT_INFO.
 	*
 	* @return the string representation of CK_SLOT_INFO
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

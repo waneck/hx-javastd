@@ -26,75 +26,75 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Initializes a predicate.
 	*/
-	@:overload public function new(exp : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression) : Void;
+	@:overload @:public public function new(exp : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression) : Void;
 	
 	/**
 	* Set the parser for this expression.
 	*/
-	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Returns a boolean value indicating if the nth position optimization
 	* is on. Must be call after type checking!
 	*/
-	@:overload public function isNthPositionFilter() : Bool;
+	@:overload @:public public function isNthPositionFilter() : Bool;
 	
 	/**
 	* Returns a boolean value indicating if the nth descendant optimization
 	* is on. Must be call after type checking!
 	*/
-	@:overload public function isNthDescendant() : Bool;
+	@:overload @:public public function isNthDescendant() : Bool;
 	
 	/**
 	* Turns off all optimizations for this predicate.
 	*/
-	@:overload public function dontOptimize() : Void;
+	@:overload @:public public function dontOptimize() : Void;
 	
 	/**
 	* Returns true if the expression in this predicate contains a call
 	* to position().
 	*/
-	@:overload public function hasPositionCall() : Bool;
+	@:overload @:public override public function hasPositionCall() : Bool;
 	
 	/**
 	* Returns true if the expression in this predicate contains a call
 	* to last().
 	*/
-	@:overload public function hasLastCall() : Bool;
+	@:overload @:public override public function hasLastCall() : Bool;
 	
 	/**
 	* Returns true if this closure is compiled in an inner class (i.e.
 	* if this is a real closure).
 	*/
-	@:overload public function inInnerClass() : Bool;
+	@:overload @:public public function inInnerClass() : Bool;
 	
 	/**
 	* Returns a reference to its parent closure or null if outermost.
 	*/
-	@:overload public function getParentClosure() : com.sun.org.apache.xalan.internal.xsltc.compiler.Closure;
+	@:overload @:public public function getParentClosure() : com.sun.org.apache.xalan.internal.xsltc.compiler.Closure;
 	
 	/**
 	* Returns the name of the auxiliary class or null if this predicate
 	* is compiled inside the Translet.
 	*/
-	@:overload public function getInnerClassName() : String;
+	@:overload @:public public function getInnerClassName() : String;
 	
 	/**
 	* Add new variable to the closure.
 	*/
-	@:overload public function addVariable(variableRef : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableRefBase) : Void;
+	@:overload @:public public function addVariable(variableRef : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableRefBase) : Void;
 	
 	/**
 	* Returns the node type of the expression owning this predicate. The
 	* return value is cached in <code>_ptype</code>.
 	*/
-	@:overload public function getPosType() : Int;
+	@:overload @:public public function getPosType() : Int;
 	
-	@:overload public function parentIsPattern() : Bool;
+	@:overload @:public public function parentIsPattern() : Bool;
 	
-	@:overload public function getExpr() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
+	@:overload @:public public function getExpr() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Type check a predicate expression. If the type of the expression is
@@ -107,42 +107,42 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* <code>dontOptimize()</code>. If so, the second time it should honor
 	* the new value of <code>_canOptimize</code>.
 	*/
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Returns true if the predicate is a test for the existance of an
 	* element or attribute. All we have to do is to get the first node
 	* from the step, check if it is there, and then return true/false.
 	*/
-	@:overload public function isBooleanTest() : Bool;
+	@:overload @:public public function isBooleanTest() : Bool;
 	
 	/**
 	* Method to see if we can optimise the predicate by using a specialised
 	* iterator for expressions like '/foo/bar[@attr = $var]', which are
 	* very common in many stylesheets
 	*/
-	@:overload public function isNodeValueTest() : Bool;
+	@:overload @:public public function isNodeValueTest() : Bool;
 	
 	/**
 	* Returns the step in an expression of the form 'step = value'.
 	* Null is returned if the expression is not of the right form.
 	* Optimization if off if null is returned.
 	*/
-	@:overload public function getStep() : com.sun.org.apache.xalan.internal.xsltc.compiler.Step;
+	@:overload @:public public function getStep() : com.sun.org.apache.xalan.internal.xsltc.compiler.Step;
 	
 	/**
 	* Returns the value in an expression of the form 'step = value'.
 	* A value may be either a literal string or a variable whose
 	* type is string. Optimization if off if null is returned.
 	*/
-	@:overload public function getCompareValue() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
+	@:overload @:public public function getCompareValue() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
 	
 	/**
 	* Translate a predicate expression. This translation pushes
 	* two references on the stack: a reference to a newly created
 	* filter object and a reference to the predicate's closure.
 	*/
-	@:overload public function translateFilter(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public public function translateFilter(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Translate a predicate expression. If non of the optimizations apply
@@ -150,7 +150,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* to a newly created filter object and a reference to the predicate's
 	* closure. See class <code>Step</code> for further details.
 	*/
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

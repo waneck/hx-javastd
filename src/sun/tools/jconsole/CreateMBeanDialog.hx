@@ -25,11 +25,11 @@ package sun.tools.jconsole;
 */
 extern class CreateMBeanDialog extends sun.tools.jconsole.InternalDialog implements java.awt.event.ActionListener
 {
-	@:overload public function new(jConsole : sun.tools.jconsole.JConsole) : Void;
+	@:overload @:public public function new(jConsole : sun.tools.jconsole.JConsole) : Void;
 	
-	@:overload public function actionPerformed(ev : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(ev : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function setVisible(b : Bool) : Void;
+	@:overload @:public override public function setVisible(b : Bool) : Void;
 	
 	
 }

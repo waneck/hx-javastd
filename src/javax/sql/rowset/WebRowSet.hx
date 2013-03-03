@@ -405,7 +405,7 @@ extern interface WebRowSet extends javax.sql.rowset.CachedRowSet
 
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function readXml(reader : java.io.Reader) : Void;
+	@:overload @:public public function readXml(reader : java.io.Reader) : Void;
 	
 	/**
 	* Reads a stream based XML input to populate this <code>WebRowSet</code>
@@ -416,7 +416,7 @@ extern interface WebRowSet extends javax.sql.rowset.CachedRowSet
 	* @throws SQLException if a data source access error occurs
 	* @throws IOException if an IO exception occurs
 	*/
-	@:overload public function readXml(iStream : java.io.InputStream) : Void;
+	@:overload @:public public function readXml(iStream : java.io.InputStream) : Void;
 	
 	/**
 	* Populates this <code>WebRowSet</code> object with
@@ -434,7 +434,7 @@ extern interface WebRowSet extends javax.sql.rowset.CachedRowSet
 	* @throws SQLException if an error occurs writing out the rowset
 	*          contents in XML format
 	*/
-	@:overload public function writeXml(rs : java.sql.ResultSet, writer : java.io.Writer) : Void;
+	@:overload @:public public function writeXml(rs : java.sql.ResultSet, writer : java.io.Writer) : Void;
 	
 	/**
 	* Populates this <code>WebRowSet</code> object with
@@ -452,7 +452,7 @@ extern interface WebRowSet extends javax.sql.rowset.CachedRowSet
 	* @throws SQLException if a data source access error occurs
 	* @throws IOException if a IO exception occurs
 	*/
-	@:overload public function writeXml(rs : java.sql.ResultSet, oStream : java.io.OutputStream) : Void;
+	@:overload @:public public function writeXml(rs : java.sql.ResultSet, oStream : java.io.OutputStream) : Void;
 	
 	/**
 	* Writes the data, properties, and metadata for this <code>WebRowSet</code> object
@@ -462,7 +462,7 @@ extern interface WebRowSet extends javax.sql.rowset.CachedRowSet
 	* @throws SQLException if an error occurs writing out the rowset
 	*          contents to XML
 	*/
-	@:overload public function writeXml(writer : java.io.Writer) : Void;
+	@:overload @:public public function writeXml(writer : java.io.Writer) : Void;
 	
 	/**
 	* Writes the data, properties, and metadata for this <code>WebRowSet</code> object
@@ -472,7 +472,7 @@ extern interface WebRowSet extends javax.sql.rowset.CachedRowSet
 	* @throws SQLException if a data source access error occurs
 	* @throws IOException if a IO exception occurs
 	*/
-	@:overload public function writeXml(oStream : java.io.OutputStream) : Void;
+	@:overload @:public public function writeXml(oStream : java.io.OutputStream) : Void;
 	
 	
 }

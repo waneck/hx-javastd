@@ -28,19 +28,19 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	/**
 	* The local port number.
 	*/
-	private var localPort : Int;
+	@:protected private var localPort : Int;
 	
 	/**
 	* The file descriptor object.
 	*/
-	private var fd : java.io.FileDescriptor;
+	@:protected private var fd : java.io.FileDescriptor;
 	
 	/**
 	* Creates a datagram socket.
 	* @exception SocketException if there is an error in the
 	* underlying protocol, such as a TCP error.
 	*/
-	@:overload @:abstract private function create() : Void;
+	@:overload @:protected @:abstract private function create() : Void;
 	
 	/**
 	* Binds a datagram socket to a local port and address.
@@ -49,7 +49,7 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	* @exception SocketException if there is an error in the
 	* underlying protocol, such as a TCP error.
 	*/
-	@:overload @:abstract private function bind(lport : Int, laddr : java.net.InetAddress) : Void;
+	@:overload @:protected @:abstract private function bind(lport : Int, laddr : java.net.InetAddress) : Void;
 	
 	/**
 	* Sends a datagram packet. The packet contains the data and the
@@ -61,7 +61,7 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	* to a currently unreachable destination. Note, there is no guarantee that
 	* the exception will be thrown.
 	*/
-	@:overload @:abstract private function send(p : java.net.DatagramPacket) : Void;
+	@:overload @:protected @:abstract private function send(p : java.net.DatagramPacket) : Void;
 	
 	/**
 	* Connects a datagram socket to a remote destination. This associates the remote
@@ -80,13 +80,13 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	* connected to the remote destination
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function connect(address : java.net.InetAddress, port : Int) : Void;
+	@:require(java4) @:overload @:protected private function connect(address : java.net.InetAddress, port : Int) : Void;
 	
 	/**
 	* Disconnects a datagram socket from its remote destination.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function disconnect() : Void;
+	@:require(java4) @:overload @:protected private function disconnect() : Void;
 	
 	/**
 	* Peek at the packet to see who it is from. Updates the specified <code>InetAddress</code>
@@ -98,7 +98,7 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	*       to a currently unreachable destination. Note, there is no guarantee that the
 	*       exception will be thrown.
 	*/
-	@:overload @:abstract private function peek(i : java.net.InetAddress) : Int;
+	@:overload @:protected @:abstract private function peek(i : java.net.InetAddress) : Int;
 	
 	/**
 	* Peek at the packet to see who it is from. The data is copied into the specified
@@ -113,7 +113,7 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	*       exception will be thrown.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:abstract private function peekData(p : java.net.DatagramPacket) : Int;
+	@:require(java4) @:overload @:protected @:abstract private function peekData(p : java.net.DatagramPacket) : Int;
 	
 	/**
 	* Receive the datagram packet.
@@ -124,7 +124,7 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	*       to a currently unreachable destination. Note, there is no guarantee that the
 	*       exception will be thrown.
 	*/
-	@:overload @:abstract private function receive(p : java.net.DatagramPacket) : Void;
+	@:overload @:protected @:abstract private function receive(p : java.net.DatagramPacket) : Void;
 	
 	/**
 	* Set the TTL (time-to-live) option.
@@ -135,7 +135,7 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	* the time-to-live option.
 	* @see #getTTL()
 	*/
-	@:overload @:abstract private function setTTL(ttl : java.StdTypes.Int8) : Void;
+	@:overload @:protected @:abstract private function setTTL(ttl : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Retrieve the TTL (time-to-live) option.
@@ -146,7 +146,7 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	* @return a byte representing the TTL value
 	* @see #setTTL(byte)
 	*/
-	@:overload @:abstract private function getTTL() : java.StdTypes.Int8;
+	@:overload @:protected @:abstract private function getTTL() : java.StdTypes.Int8;
 	
 	/**
 	* Set the TTL (time-to-live) option.
@@ -155,7 +155,7 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	* while setting the time-to-live option.
 	* @see #getTimeToLive()
 	*/
-	@:overload @:abstract private function setTimeToLive(ttl : Int) : Void;
+	@:overload @:protected @:abstract private function setTimeToLive(ttl : Int) : Void;
 	
 	/**
 	* Retrieve the TTL (time-to-live) option.
@@ -164,7 +164,7 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	* @return an <tt>int</tt> representing the time-to-live value
 	* @see #setTimeToLive(int)
 	*/
-	@:overload @:abstract private function getTimeToLive() : Int;
+	@:overload @:protected @:abstract private function getTimeToLive() : Int;
 	
 	/**
 	* Join the multicast group.
@@ -172,7 +172,7 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	* @exception IOException if an I/O exception occurs
 	* while joining the multicast group.
 	*/
-	@:overload @:abstract private function join(inetaddr : java.net.InetAddress) : Void;
+	@:overload @:protected @:abstract private function join(inetaddr : java.net.InetAddress) : Void;
 	
 	/**
 	* Leave the multicast group.
@@ -180,7 +180,7 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	* @exception IOException if an I/O exception occurs
 	* while leaving the multicast group.
 	*/
-	@:overload @:abstract private function leave(inetaddr : java.net.InetAddress) : Void;
+	@:overload @:protected @:abstract private function leave(inetaddr : java.net.InetAddress) : Void;
 	
 	/**
 	* Join the multicast group.
@@ -191,7 +191,7 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	* the multicast group
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:abstract private function joinGroup(mcastaddr : java.net.SocketAddress, netIf : java.net.NetworkInterface) : Void;
+	@:require(java4) @:overload @:protected @:abstract private function joinGroup(mcastaddr : java.net.SocketAddress, netIf : java.net.NetworkInterface) : Void;
 	
 	/**
 	* Leave the multicast group.
@@ -201,25 +201,25 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	* the multicast group
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:abstract private function leaveGroup(mcastaddr : java.net.SocketAddress, netIf : java.net.NetworkInterface) : Void;
+	@:require(java4) @:overload @:protected @:abstract private function leaveGroup(mcastaddr : java.net.SocketAddress, netIf : java.net.NetworkInterface) : Void;
 	
 	/**
 	* Close the socket.
 	*/
-	@:overload @:abstract private function close() : Void;
+	@:overload @:protected @:abstract private function close() : Void;
 	
 	/**
 	* Gets the local port.
 	* @return an <tt>int</tt> representing the local port value
 	*/
-	@:overload private function getLocalPort() : Int;
+	@:overload @:protected private function getLocalPort() : Int;
 	
 	/**
 	* Gets the datagram socket file descriptor.
 	* @return a <tt>FileDescriptor</tt> object representing the datagram socket
 	* file descriptor
 	*/
-	@:overload private function getFileDescriptor() : java.io.FileDescriptor;
+	@:overload @:protected private function getFileDescriptor() : java.io.FileDescriptor;
 	
 	/**
 	* Enable/disable the option specified by <I>optID</I>.  If the option
@@ -262,7 +262,7 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	* the socket is closed, or some low-level error occurred
 	* @see #getOption(int)
 	*/
-	@:overload @:public public function setOption(optID : Int, value : Dynamic) : Void;
+	@:overload @:public @:public public function setOption(optID : Int, value : Dynamic) : Void;
 	
 	/**
 	* Fetch the value of an option.
@@ -297,7 +297,7 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	*         protocol stack (including the SocketImpl)
 	* @see #setOption(int, java.lang.Object)
 	*/
-	@:overload @:public public function getOption(optID : Int) : Dynamic;
+	@:overload @:public @:public public function getOption(optID : Int) : Dynamic;
 	
 	
 }

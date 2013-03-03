@@ -77,7 +77,7 @@ exception statement from your version.
 	* 
 	* @return <code>true</code> if line is open
 	*/
-	@:overload public function isOpen() : Bool;
+	@:overload @:public public function isOpen() : Bool;
 	
 	
 }

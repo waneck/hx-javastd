@@ -37,7 +37,7 @@ package org.omg.CORBA;
 	* The value representing the value type in a typecode as per
 	* CORBA 2.3 spec.
 	*/
-	public var value(default, null) : java.StdTypes.Int16;
+	@:final public var value(default, null) : java.StdTypes.Int16;
 	
 	
 }

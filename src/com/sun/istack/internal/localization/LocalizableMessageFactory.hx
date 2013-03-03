@@ -28,9 +28,9 @@ package com.sun.istack.internal.localization;
 */
 extern class LocalizableMessageFactory
 {
-	@:overload public function new(bundlename : String) : Void;
+	@:overload @:public public function new(bundlename : String) : Void;
 	
-	@:overload public function getMessage(key : String, args : java.NativeArray<Dynamic>) : com.sun.istack.internal.localization.Localizable;
+	@:overload @:public public function getMessage(key : String, args : java.NativeArray<Dynamic>) : com.sun.istack.internal.localization.Localizable;
 	
 	
 }

@@ -30,95 +30,95 @@ extern class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider
 	* <code>getFormatNames</code>, initially <code>null</code>.
 	* Constructors should set this to a non-<code>null</code> value.
 	*/
-	private var names : java.NativeArray<String>;
+	@:protected private var names : java.NativeArray<String>;
 	
 	/**
 	* An array of strings to be returned from
 	* <code>getFileSuffixes</code>, initially <code>null</code>.
 	*/
-	private var suffixes : java.NativeArray<String>;
+	@:protected private var suffixes : java.NativeArray<String>;
 	
 	/**
 	* An array of strings to be returned from
 	* <code>getMIMETypes</code>, initially <code>null</code>.
 	*/
-	private var MIMETypes : java.NativeArray<String>;
+	@:protected private var MIMETypes : java.NativeArray<String>;
 	
 	/**
 	* A <code>String</code> containing the name of the associated
 	* plug-in class, initially <code>null</code>.
 	*/
-	private var pluginClassName : String;
+	@:protected private var pluginClassName : String;
 	
 	/**
 	* A boolean indicating whether this plug-in supports the
 	* standard metadata format for stream metadata, initially
 	* <code>false</code>.
 	*/
-	private var supportsStandardStreamMetadataFormat : Bool;
+	@:protected private var supportsStandardStreamMetadataFormat : Bool;
 	
 	/**
 	* A <code>String</code> containing the name of the native stream
 	* metadata format supported by this plug-in, initially
 	* <code>null</code>.
 	*/
-	private var nativeStreamMetadataFormatName : String;
+	@:protected private var nativeStreamMetadataFormatName : String;
 	
 	/**
 	* A <code>String</code> containing the class name of the native
 	* stream metadata format supported by this plug-in, initially
 	* <code>null</code>.
 	*/
-	private var nativeStreamMetadataFormatClassName : String;
+	@:protected private var nativeStreamMetadataFormatClassName : String;
 	
 	/**
 	* An array of <code>String</code>s containing the names of any
 	* additional stream metadata formats supported by this plug-in,
 	* initially <code>null</code>.
 	*/
-	private var extraStreamMetadataFormatNames : java.NativeArray<String>;
+	@:protected private var extraStreamMetadataFormatNames : java.NativeArray<String>;
 	
 	/**
 	* An array of <code>String</code>s containing the class names of
 	* any additional stream metadata formats supported by this plug-in,
 	* initially <code>null</code>.
 	*/
-	private var extraStreamMetadataFormatClassNames : java.NativeArray<String>;
+	@:protected private var extraStreamMetadataFormatClassNames : java.NativeArray<String>;
 	
 	/**
 	* A boolean indicating whether this plug-in supports the
 	* standard metadata format for image metadata, initially
 	* <code>false</code>.
 	*/
-	private var supportsStandardImageMetadataFormat : Bool;
+	@:protected private var supportsStandardImageMetadataFormat : Bool;
 	
 	/**
 	* A <code>String</code> containing the name of the
 	* native stream metadata format supported by this plug-in,
 	* initially <code>null</code>.
 	*/
-	private var nativeImageMetadataFormatName : String;
+	@:protected private var nativeImageMetadataFormatName : String;
 	
 	/**
 	* A <code>String</code> containing the class name of the
 	* native stream metadata format supported by this plug-in,
 	* initially <code>null</code>.
 	*/
-	private var nativeImageMetadataFormatClassName : String;
+	@:protected private var nativeImageMetadataFormatClassName : String;
 	
 	/**
 	* An array of <code>String</code>s containing the names of any
 	* additional image metadata formats supported by this plug-in,
 	* initially <code>null</code>.
 	*/
-	private var extraImageMetadataFormatNames : java.NativeArray<String>;
+	@:protected private var extraImageMetadataFormatNames : java.NativeArray<String>;
 	
 	/**
 	* An array of <code>String</code>s containing the class names of
 	* any additional image metadata formats supported by this
 	* plug-in, initially <code>null</code>.
 	*/
-	private var extraImageMetadataFormatClassNames : java.NativeArray<String>;
+	@:protected private var extraImageMetadataFormatClassNames : java.NativeArray<String>;
 	
 	/**
 	* Constructs an <code>ImageReaderWriterSpi</code> with a given
@@ -190,7 +190,7 @@ extern class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider
 	* @exception IllegalArgumentException if <code>pluginClassName</code>
 	* is <code>null</code>.
 	*/
-	@:overload public function new(vendorName : String, version : String, names : java.NativeArray<String>, suffixes : java.NativeArray<String>, MIMETypes : java.NativeArray<String>, pluginClassName : String, supportsStandardStreamMetadataFormat : Bool, nativeStreamMetadataFormatName : String, nativeStreamMetadataFormatClassName : String, extraStreamMetadataFormatNames : java.NativeArray<String>, extraStreamMetadataFormatClassNames : java.NativeArray<String>, supportsStandardImageMetadataFormat : Bool, nativeImageMetadataFormatName : String, nativeImageMetadataFormatClassName : String, extraImageMetadataFormatNames : java.NativeArray<String>, extraImageMetadataFormatClassNames : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(vendorName : String, version : String, names : java.NativeArray<String>, suffixes : java.NativeArray<String>, MIMETypes : java.NativeArray<String>, pluginClassName : String, supportsStandardStreamMetadataFormat : Bool, nativeStreamMetadataFormatName : String, nativeStreamMetadataFormatClassName : String, extraStreamMetadataFormatNames : java.NativeArray<String>, extraStreamMetadataFormatClassNames : java.NativeArray<String>, supportsStandardImageMetadataFormat : Bool, nativeImageMetadataFormatName : String, nativeImageMetadataFormatClassName : String, extraImageMetadataFormatNames : java.NativeArray<String>, extraImageMetadataFormatClassNames : java.NativeArray<String>) : Void;
 	
 	/**
 	* Constructs a blank <code>ImageReaderWriterSpi</code>.  It is up
@@ -198,7 +198,7 @@ extern class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider
 	* override method implementations in order to provide working
 	* versions of all methods.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns an array of <code>String</code>s containing
@@ -212,7 +212,7 @@ extern class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider
 	* or length at least 1 containing informal format names
 	* associated with this reader or writer.
 	*/
-	@:overload public function getFormatNames() : java.NativeArray<String>;
+	@:overload @:public public function getFormatNames() : java.NativeArray<String>;
 	
 	/**
 	* Returns an array of <code>String</code>s containing a list of
@@ -234,7 +234,7 @@ extern class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider
 	* containing common file suffixes associated with this reader or
 	* writer, or <code>null</code>.
 	*/
-	@:overload public function getFileSuffixes() : java.NativeArray<String>;
+	@:overload @:public public function getFileSuffixes() : java.NativeArray<String>;
 	
 	/**
 	* Returns an array of <code>String</code>s containing a list of
@@ -267,7 +267,7 @@ extern class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider
 	* containing MIME types associated with this reader or writer, or
 	* <code>null</code>.
 	*/
-	@:overload public function getMIMETypes() : java.NativeArray<String>;
+	@:overload @:public public function getMIMETypes() : java.NativeArray<String>;
 	
 	/**
 	* Returns the fully-qualified class name of the
@@ -277,7 +277,7 @@ extern class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider
 	* @return the class name, as a non-<code>null</code>
 	* <code>String</code>.
 	*/
-	@:overload public function getPluginClassName() : String;
+	@:overload @:public public function getPluginClassName() : String;
 	
 	/**
 	* Returns <code>true</code> if the standard metadata format is
@@ -289,7 +289,7 @@ extern class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider
 	* @return <code>true</code> if the standard format is supported
 	* for stream metadata.
 	*/
-	@:overload public function isStandardStreamMetadataFormatSupported() : Bool;
+	@:overload @:public public function isStandardStreamMetadataFormatSupported() : Bool;
 	
 	/**
 	* Returns the name of the "native" stream metadata format for
@@ -306,7 +306,7 @@ extern class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider
 	* <code>null</code>.
 	*
 	*/
-	@:overload public function getNativeStreamMetadataFormatName() : String;
+	@:overload @:public public function getNativeStreamMetadataFormatName() : String;
 	
 	/**
 	* Returns an array of <code>String</code>s containing the names
@@ -334,7 +334,7 @@ extern class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider
 	* @see #getExtraImageMetadataFormatNames
 	* @see #getNativeStreamMetadataFormatName
 	*/
-	@:overload public function getExtraStreamMetadataFormatNames() : java.NativeArray<String>;
+	@:overload @:public public function getExtraStreamMetadataFormatNames() : java.NativeArray<String>;
 	
 	/**
 	* Returns <code>true</code> if the standard metadata format is
@@ -346,7 +346,7 @@ extern class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider
 	* @return <code>true</code> if the standard format is supported
 	* for image metadata.
 	*/
-	@:overload public function isStandardImageMetadataFormatSupported() : Bool;
+	@:overload @:public public function isStandardImageMetadataFormatSupported() : Bool;
 	
 	/**
 	* Returns the name of the "native" image metadata format for
@@ -364,7 +364,7 @@ extern class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider
 	*
 	* @see #getExtraImageMetadataFormatNames
 	*/
-	@:overload public function getNativeImageMetadataFormatName() : String;
+	@:overload @:public public function getNativeImageMetadataFormatName() : String;
 	
 	/**
 	* Returns an array of <code>String</code>s containing the names
@@ -391,7 +391,7 @@ extern class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider
 	* @see #getExtraStreamMetadataFormatNames
 	* @see #getNativeImageMetadataFormatName
 	*/
-	@:overload public function getExtraImageMetadataFormatNames() : java.NativeArray<String>;
+	@:overload @:public public function getExtraImageMetadataFormatNames() : java.NativeArray<String>;
 	
 	/**
 	* Returns an <code>IIOMetadataFormat</code> object describing the
@@ -408,7 +408,7 @@ extern class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider
 	* @exception IllegalArgumentException if <code>formatName</code>
 	* is <code>null</code> or is not a supported name.
 	*/
-	@:overload public function getStreamMetadataFormat(formatName : String) : javax.imageio.metadata.IIOMetadataFormat;
+	@:overload @:public public function getStreamMetadataFormat(formatName : String) : javax.imageio.metadata.IIOMetadataFormat;
 	
 	/**
 	* Returns an <code>IIOMetadataFormat</code> object describing the
@@ -425,7 +425,7 @@ extern class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider
 	* @exception IllegalArgumentException if <code>formatName</code>
 	* is <code>null</code> or is not a supported name.
 	*/
-	@:overload public function getImageMetadataFormat(formatName : String) : javax.imageio.metadata.IIOMetadataFormat;
+	@:overload @:public public function getImageMetadataFormat(formatName : String) : javax.imageio.metadata.IIOMetadataFormat;
 	
 	
 }

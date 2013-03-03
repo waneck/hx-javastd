@@ -36,27 +36,27 @@ package java.nio;
 */
 @:internal extern class HeapFloatBufferR extends java.nio.HeapFloatBuffer
 {
-	@:overload private function new(buf : java.NativeArray<Single>, mark : Int, pos : Int, lim : Int, cap : Int, off : Int) : Void;
+	@:overload @:protected private function new(buf : java.NativeArray<Single>, mark : Int, pos : Int, lim : Int, cap : Int, off : Int) : Void;
 	
-	@:overload public function slice() : java.nio.FloatBuffer;
+	@:overload @:public override public function slice() : java.nio.FloatBuffer;
 	
-	@:overload public function duplicate() : java.nio.FloatBuffer;
+	@:overload @:public override public function duplicate() : java.nio.FloatBuffer;
 	
-	@:overload public function asReadOnlyBuffer() : java.nio.FloatBuffer;
+	@:overload @:public override public function asReadOnlyBuffer() : java.nio.FloatBuffer;
 	
-	@:overload public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload public function put(x : Single) : java.nio.FloatBuffer;
+	@:overload @:public override public function put(x : Single) : java.nio.FloatBuffer;
 	
-	@:overload public function put(i : Int, x : Single) : java.nio.FloatBuffer;
+	@:overload @:public override public function put(i : Int, x : Single) : java.nio.FloatBuffer;
 	
-	@:overload public function put(src : java.NativeArray<Single>, offset : Int, length : Int) : java.nio.FloatBuffer;
+	@:overload @:public override public function put(src : java.NativeArray<Single>, offset : Int, length : Int) : java.nio.FloatBuffer;
 	
-	@:overload public function put(src : java.nio.FloatBuffer) : java.nio.FloatBuffer;
+	@:overload @:public override public function put(src : java.nio.FloatBuffer) : java.nio.FloatBuffer;
 	
-	@:overload public function compact() : java.nio.FloatBuffer;
+	@:overload @:public override public function compact() : java.nio.FloatBuffer;
 	
-	@:overload public function order() : java.nio.ByteOrder;
+	@:overload @:public override public function order() : java.nio.ByteOrder;
 	
 	
 }

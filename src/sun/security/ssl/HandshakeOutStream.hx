@@ -30,16 +30,16 @@ extern class HandshakeOutStream extends java.io.OutputStream
 	* Hashes are updated automatically if something gets flushed to the
 	* network (e.g. a big cert message etc).
 	*/
-	@:overload public function write(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/*
 	* write-a-byte
 	*/
-	@:overload public function write(i : Int) : Void;
+	@:overload @:public override public function write(i : Int) : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload public function putBytes16(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function putBytes16(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

@@ -25,53 +25,53 @@ package sun.security.krb5.internal.crypto.dk;
 */
 extern class ArcFourCrypto extends sun.security.krb5.internal.crypto.dk.DkCrypto
 {
-	@:overload public function new(length : Int) : Void;
+	@:overload @:public public function new(length : Int) : Void;
 	
-	@:overload private function getKeySeedLength() : Int;
+	@:overload @:protected override private function getKeySeedLength() : Int;
 	
-	@:overload private function randomToKey(_in : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function randomToKey(_in : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function stringToKey(passwd : java.NativeArray<java.StdTypes.Char16>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function stringToKey(passwd : java.NativeArray<java.StdTypes.Char16>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function getCipher(key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, mode : Int) : javax.crypto.Cipher;
+	@:overload @:protected override private function getCipher(key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, mode : Int) : javax.crypto.Cipher;
 	
-	@:overload public function getChecksumLength() : Int;
+	@:overload @:public override public function getChecksumLength() : Int;
 	
 	/**
 	* Get the HMAC-MD5
 	*/
-	@:overload private function getHmac(key : java.NativeArray<java.StdTypes.Int8>, msg : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function getHmac(key : java.NativeArray<java.StdTypes.Int8>, msg : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Calculate the checksum
 	*/
-	@:overload public function calculateChecksum(baseKey : java.NativeArray<java.StdTypes.Int8>, usage : Int, input : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function calculateChecksum(baseKey : java.NativeArray<java.StdTypes.Int8>, usage : Int, input : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Performs encryption of Sequence Number using derived key.
 	*/
-	@:overload public function encryptSeq(baseKey : java.NativeArray<java.StdTypes.Int8>, usage : Int, checksum : java.NativeArray<java.StdTypes.Int8>, plaintext : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function encryptSeq(baseKey : java.NativeArray<java.StdTypes.Int8>, usage : Int, checksum : java.NativeArray<java.StdTypes.Int8>, plaintext : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Performs decryption of Sequence Number using derived key.
 	*/
-	@:overload public function decryptSeq(baseKey : java.NativeArray<java.StdTypes.Int8>, usage : Int, checksum : java.NativeArray<java.StdTypes.Int8>, ciphertext : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function decryptSeq(baseKey : java.NativeArray<java.StdTypes.Int8>, usage : Int, checksum : java.NativeArray<java.StdTypes.Int8>, ciphertext : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Performs encryption using derived key; adds confounder.
 	*/
-	@:overload public function encrypt(baseKey : java.NativeArray<java.StdTypes.Int8>, usage : Int, ivec : java.NativeArray<java.StdTypes.Int8>, new_ivec : java.NativeArray<java.StdTypes.Int8>, plaintext : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function encrypt(baseKey : java.NativeArray<java.StdTypes.Int8>, usage : Int, ivec : java.NativeArray<java.StdTypes.Int8>, new_ivec : java.NativeArray<java.StdTypes.Int8>, plaintext : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Performs encryption using derived key; does not add confounder.
 	*/
-	@:overload public function encryptRaw(baseKey : java.NativeArray<java.StdTypes.Int8>, usage : Int, seqNum : java.NativeArray<java.StdTypes.Int8>, plaintext : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function encryptRaw(baseKey : java.NativeArray<java.StdTypes.Int8>, usage : Int, seqNum : java.NativeArray<java.StdTypes.Int8>, plaintext : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* @param baseKey key from which keys are to be derived using usage
 	* @param ciphertext  E(Ke, conf | plaintext | padding, ivec) | H1[1..h]
 	*/
-	@:overload public function decrypt(baseKey : java.NativeArray<java.StdTypes.Int8>, usage : Int, ivec : java.NativeArray<java.StdTypes.Int8>, ciphertext : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function decrypt(baseKey : java.NativeArray<java.StdTypes.Int8>, usage : Int, ivec : java.NativeArray<java.StdTypes.Int8>, ciphertext : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Decrypts data using specified key and initial vector.
@@ -79,7 +79,7 @@ extern class ArcFourCrypto extends sun.security.krb5.internal.crypto.dk.DkCrypto
 	* @param ciphertext  encrypted data to be decrypted
 	* @param usage ignored
 	*/
-	@:overload public function decryptRaw(baseKey : java.NativeArray<java.StdTypes.Int8>, usage : Int, ivec : java.NativeArray<java.StdTypes.Int8>, ciphertext : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int, seqNum : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function decryptRaw(baseKey : java.NativeArray<java.StdTypes.Int8>, usage : Int, ivec : java.NativeArray<java.StdTypes.Int8>, ciphertext : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int, seqNum : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

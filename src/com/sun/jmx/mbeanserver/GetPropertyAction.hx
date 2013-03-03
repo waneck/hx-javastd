@@ -25,9 +25,9 @@ package com.sun.jmx.mbeanserver;
 */
 extern class GetPropertyAction implements java.security.PrivilegedAction<String>
 {
-	@:overload public function new(key : String) : Void;
+	@:overload @:public public function new(key : String) : Void;
 	
-	@:overload public function run() : String;
+	@:overload @:public public function run() : String;
 	
 	
 }

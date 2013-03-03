@@ -28,7 +28,7 @@ extern interface CurrentNodeListFilter
 	* @author Santiago Pericas-Geertsen
 	* @author Morten Jorgensen
 	*/
-	@:overload @:abstract public function test(node : Int, position : Int, last : Int, current : Int, translet : com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet, iter : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator) : Bool;
+	@:overload @:public @:abstract public function test(node : Int, position : Int, last : Int, current : Int, translet : com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet, iter : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator) : Bool;
 	
 	
 }

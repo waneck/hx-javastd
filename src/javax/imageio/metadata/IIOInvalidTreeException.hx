@@ -29,7 +29,7 @@ extern class IIOInvalidTreeException extends javax.imageio.IIOException
 	* The <code>Node</code> that led to the parsing error, or
 	* <code>null</code>.
 	*/
-	private var offendingNode : org.w3c.dom.Node;
+	@:protected private var offendingNode : org.w3c.dom.Node;
 	
 	/**
 	* Constructs an <code>IIOInvalidTreeException</code> with a
@@ -41,7 +41,7 @@ extern class IIOInvalidTreeException extends javax.imageio.IIOException
 	* @param offendingNode the DOM <code>Node</code> that caused the
 	* exception, or <code>null</code>.
 	*/
-	@:overload public function new(message : String, offendingNode : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(message : String, offendingNode : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Constructs an <code>IIOInvalidTreeException</code> with a
@@ -57,14 +57,14 @@ extern class IIOInvalidTreeException extends javax.imageio.IIOException
 	* @param offendingNode the DOM <code>Node</code> that caused the
 	* exception, or <code>null</code>.
 	*/
-	@:overload public function new(message : String, cause : java.lang.Throwable, offendingNode : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable, offendingNode : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Returns the <code>Node</code> that caused the error in parsing.
 	*
 	* @return the offending <code>Node</code>.
 	*/
-	@:overload public function getOffendingNode() : org.w3c.dom.Node;
+	@:overload @:public public function getOffendingNode() : org.w3c.dom.Node;
 	
 	
 }

@@ -50,75 +50,75 @@ extern interface HTMLTextAreaElement extends org.w3c.dom.html.HTMLElement
 	* an interactive user agent, changes. Changing this attribute, however,
 	* resets the contents of the form control.
 	*/
-	@:overload public function getDefaultValue() : String;
+	@:overload @:public public function getDefaultValue() : String;
 	
-	@:overload public function setDefaultValue(defaultValue : String) : Void;
+	@:overload @:public public function setDefaultValue(defaultValue : String) : Void;
 	
 	/**
 	*  Returns the <code>FORM</code> element containing this control. Returns
 	* <code>null</code> if this control is not within the context of a form.
 	*/
-	@:overload public function getForm() : org.w3c.dom.html.HTMLFormElement;
+	@:overload @:public public function getForm() : org.w3c.dom.html.HTMLFormElement;
 	
 	/**
 	*  A single character access key to give access to the form control. See
 	* the  accesskey attribute definition in HTML 4.0.
 	*/
-	@:overload public function getAccessKey() : String;
+	@:overload @:public public function getAccessKey() : String;
 	
-	@:overload public function setAccessKey(accessKey : String) : Void;
+	@:overload @:public public function setAccessKey(accessKey : String) : Void;
 	
 	/**
 	*  Width of control (in characters). See the  cols attribute definition
 	* in HTML 4.0.
 	*/
-	@:overload public function getCols() : Int;
+	@:overload @:public public function getCols() : Int;
 	
-	@:overload public function setCols(cols : Int) : Void;
+	@:overload @:public public function setCols(cols : Int) : Void;
 	
 	/**
 	*  The control is unavailable in this context. See the  disabled
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getDisabled() : Bool;
+	@:overload @:public public function getDisabled() : Bool;
 	
-	@:overload public function setDisabled(disabled : Bool) : Void;
+	@:overload @:public public function setDisabled(disabled : Bool) : Void;
 	
 	/**
 	*  Form control or object name when submitted with a form. See the  name
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	/**
 	*  This control is read-only. See the  readonly attribute definition in
 	* HTML 4.0.
 	*/
-	@:overload public function getReadOnly() : Bool;
+	@:overload @:public public function getReadOnly() : Bool;
 	
-	@:overload public function setReadOnly(readOnly : Bool) : Void;
+	@:overload @:public public function setReadOnly(readOnly : Bool) : Void;
 	
 	/**
 	*  Number of text rows. See the  rows attribute definition in HTML 4.0.
 	*/
-	@:overload public function getRows() : Int;
+	@:overload @:public public function getRows() : Int;
 	
-	@:overload public function setRows(rows : Int) : Void;
+	@:overload @:public public function setRows(rows : Int) : Void;
 	
 	/**
 	*  Index that represents the element's position in the tabbing order. See
 	* the  tabindex attribute definition in HTML 4.0.
 	*/
-	@:overload public function getTabIndex() : Int;
+	@:overload @:public public function getTabIndex() : Int;
 	
-	@:overload public function setTabIndex(tabIndex : Int) : Void;
+	@:overload @:public public function setTabIndex(tabIndex : Int) : Void;
 	
 	/**
 	*  The type of this form control. This the string "textarea".
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	*  Represents the current contents of the corresponding form control, in
@@ -127,24 +127,24 @@ extern interface HTMLTextAreaElement extends org.w3c.dom.html.HTMLElement
 	* element. If the entirety of the data can not fit into a single
 	* <code>DOMString</code> , the implementation may truncate the data.
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload public function setValue(value : String) : Void;
+	@:overload @:public public function setValue(value : String) : Void;
 	
 	/**
 	*  Removes keyboard focus from this element.
 	*/
-	@:overload public function blur() : Void;
+	@:overload @:public public function blur() : Void;
 	
 	/**
 	*  Gives keyboard focus to this element.
 	*/
-	@:overload public function focus() : Void;
+	@:overload @:public public function focus() : Void;
 	
 	/**
 	*  Select the contents of the <code>TEXTAREA</code> .
 	*/
-	@:overload public function select() : Void;
+	@:overload @:public public function select() : Void;
 	
 	
 }

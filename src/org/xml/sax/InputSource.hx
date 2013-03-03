@@ -38,7 +38,7 @@ extern class InputSource
 	* @see #setCharacterStream
 	* @see #setEncoding
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a new input source with a system identifier.
@@ -57,7 +57,7 @@ extern class InputSource
 	* @see #setEncoding
 	* @see #setCharacterStream
 	*/
-	@:overload public function new(systemId : String) : Void;
+	@:overload @:public public function new(systemId : String) : Void;
 	
 	/**
 	* Create a new input source with a byte stream.
@@ -74,7 +74,7 @@ extern class InputSource
 	* @see #setByteStream
 	* @see #setCharacterStream
 	*/
-	@:overload public function new(byteStream : java.io.InputStream) : Void;
+	@:overload @:public public function new(byteStream : java.io.InputStream) : Void;
 	
 	/**
 	* Create a new input source with a character stream.
@@ -90,7 +90,7 @@ extern class InputSource
 	* @see #setByteStream
 	* @see #setCharacterStream
 	*/
-	@:overload public function new(characterStream : java.io.Reader) : Void;
+	@:overload @:public public function new(characterStream : java.io.Reader) : Void;
 	
 	/**
 	* Set the public identifier for this input source.
@@ -104,7 +104,7 @@ extern class InputSource
 	* @see org.xml.sax.Locator#getPublicId
 	* @see org.xml.sax.SAXParseException#getPublicId
 	*/
-	@:overload public function setPublicId(publicId : String) : Void;
+	@:overload @:public public function setPublicId(publicId : String) : Void;
 	
 	/**
 	* Get the public identifier for this input source.
@@ -112,7 +112,7 @@ extern class InputSource
 	* @return The public identifier, or null if none was supplied.
 	* @see #setPublicId
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* Set the system identifier for this input source.
@@ -137,7 +137,7 @@ extern class InputSource
 	* @see org.xml.sax.Locator#getSystemId
 	* @see org.xml.sax.SAXParseException#getSystemId
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	/**
 	* Get the system identifier for this input source.
@@ -151,7 +151,7 @@ extern class InputSource
 	* @see #setSystemId
 	* @see #getEncoding
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* Set the byte stream for this input source.
@@ -170,7 +170,7 @@ extern class InputSource
 	* @see #getEncoding
 	* @see java.io.InputStream
 	*/
-	@:overload public function setByteStream(byteStream : java.io.InputStream) : Void;
+	@:overload @:public public function setByteStream(byteStream : java.io.InputStream) : Void;
 	
 	/**
 	* Get the byte stream for this input source.
@@ -182,7 +182,7 @@ extern class InputSource
 	* @see #getEncoding
 	* @see #setByteStream
 	*/
-	@:overload public function getByteStream() : java.io.InputStream;
+	@:overload @:public public function getByteStream() : java.io.InputStream;
 	
 	/**
 	* Set the character encoding, if known.
@@ -199,7 +199,7 @@ extern class InputSource
 	* @see #setByteStream
 	* @see #getEncoding
 	*/
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
 	/**
 	* Get the character encoding for a byte stream or URI.
@@ -211,7 +211,7 @@ extern class InputSource
 	* @see #getSystemId
 	* @see #getByteStream
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	* Set the character stream for this input source.
@@ -225,7 +225,7 @@ extern class InputSource
 	* @see #getCharacterStream
 	* @see java.io.Reader
 	*/
-	@:overload public function setCharacterStream(characterStream : java.io.Reader) : Void;
+	@:overload @:public public function setCharacterStream(characterStream : java.io.Reader) : Void;
 	
 	/**
 	* Get the character stream for this input source.
@@ -233,7 +233,7 @@ extern class InputSource
 	* @return The character stream, or null if none was supplied.
 	* @see #setCharacterStream
 	*/
-	@:overload public function getCharacterStream() : java.io.Reader;
+	@:overload @:public public function getCharacterStream() : java.io.Reader;
 	
 	
 }

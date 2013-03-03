@@ -32,7 +32,7 @@ extern class PolicyModelMarshaller
 	* @param storage reference to underlying storage that should be used for model marshalling
 	* @throws PolicyException If marshalling failed
 	*/
-	@:overload @:abstract public function marshal(model : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel, storage : Dynamic) : Void;
+	@:overload @:public @:abstract public function marshal(model : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel, storage : Dynamic) : Void;
 	
 	/**
 	* Marshalls the collection of policy source models using provided storage reference
@@ -41,7 +41,7 @@ extern class PolicyModelMarshaller
 	* @param storage reference to underlying storage that should be used for model marshalling
 	* @throws PolicyException If marshalling failed
 	*/
-	@:overload @:abstract public function marshal(models : java.util.Collection<com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel>, storage : Dynamic) : Void;
+	@:overload @:public @:abstract public function marshal(models : java.util.Collection<com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel>, storage : Dynamic) : Void;
 	
 	/**
 	* Factory methods that returns a marshaller instance based on input parameter.
@@ -52,7 +52,7 @@ extern class PolicyModelMarshaller
 	* @return policy model marshaller that either marshalls private assertions or not
 	*         based on the input argument.
 	*/
-	@:overload public static function getXmlMarshaller(marshallInvisible : Bool) : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelMarshaller;
+	@:overload @:public @:static public static function getXmlMarshaller(marshallInvisible : Bool) : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelMarshaller;
 	
 	
 }

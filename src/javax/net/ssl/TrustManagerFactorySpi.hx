@@ -45,7 +45,7 @@ package javax.net.ssl;
 	* @throws KeyStoreException if this operation fails
 	* @see TrustManagerFactory#init(KeyStore)
 	*/
-	@:overload @:abstract private function engineInit(ks : java.security.KeyStore) : Void;
+	@:overload @:protected @:abstract private function engineInit(ks : java.security.KeyStore) : Void;
 	
 	/**
 	* Initializes this factory with a source of provider-specific
@@ -65,7 +65,7 @@ package javax.net.ssl;
 	*          with the parameters
 	* @see TrustManagerFactory#init(ManagerFactoryParameters spec)
 	*/
-	@:overload @:abstract private function engineInit(spec : javax.net.ssl.ManagerFactoryParameters) : Void;
+	@:overload @:protected @:abstract private function engineInit(spec : javax.net.ssl.ManagerFactoryParameters) : Void;
 	
 	/**
 	* Returns one trust manager for each type of trust material.
@@ -74,7 +74,7 @@ package javax.net.ssl;
 	*
 	* @return the trust managers
 	*/
-	@:overload @:abstract private function engineGetTrustManagers() : java.NativeArray<javax.net.ssl.TrustManager>;
+	@:overload @:protected @:abstract private function engineGetTrustManagers() : java.NativeArray<javax.net.ssl.TrustManager>;
 	
 	
 }

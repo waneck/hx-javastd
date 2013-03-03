@@ -31,7 +31,7 @@ extern interface WSDLExtension
 	* @return
 	*      must not be null.
 	*/
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
 	
 }

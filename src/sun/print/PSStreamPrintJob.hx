@@ -25,26 +25,26 @@ package sun.print;
 */
 extern class PSStreamPrintJob implements javax.print.CancelablePrintJob
 {
-	@:overload public function getPrintService() : javax.print.PrintService;
+	@:overload @:public public function getPrintService() : javax.print.PrintService;
 	
-	@:overload public function getAttributes() : javax.print.attribute.PrintJobAttributeSet;
+	@:overload @:public public function getAttributes() : javax.print.attribute.PrintJobAttributeSet;
 	
-	@:overload public function addPrintJobListener(listener : javax.print.event.PrintJobListener) : Void;
+	@:overload @:public public function addPrintJobListener(listener : javax.print.event.PrintJobListener) : Void;
 	
-	@:overload public function removePrintJobListener(listener : javax.print.event.PrintJobListener) : Void;
+	@:overload @:public public function removePrintJobListener(listener : javax.print.event.PrintJobListener) : Void;
 	
-	@:overload public function addPrintJobAttributeListener(listener : javax.print.event.PrintJobAttributeListener, attributes : javax.print.attribute.PrintJobAttributeSet) : Void;
+	@:overload @:public public function addPrintJobAttributeListener(listener : javax.print.event.PrintJobAttributeListener, attributes : javax.print.attribute.PrintJobAttributeSet) : Void;
 	
-	@:overload public function removePrintJobAttributeListener(listener : javax.print.event.PrintJobAttributeListener) : Void;
+	@:overload @:public public function removePrintJobAttributeListener(listener : javax.print.event.PrintJobAttributeListener) : Void;
 	
-	@:overload public function print(doc : javax.print.Doc, attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
+	@:overload @:public public function print(doc : javax.print.Doc, attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
 	
-	@:overload public function printableJob(printable : java.awt.print.Printable, attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
+	@:overload @:public public function printableJob(printable : java.awt.print.Printable, attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
 	
-	@:overload public function pageableJob(pageable : java.awt.print.Pageable, attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
+	@:overload @:public public function pageableJob(pageable : java.awt.print.Pageable, attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
 	
 	/* Cancel PrinterJob jobs that haven't yet completed. */
-	@:overload public function cancel() : Void;
+	@:overload @:public public function cancel() : Void;
 	
 	
 }

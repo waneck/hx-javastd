@@ -27,21 +27,21 @@ extern class ObjectStack extends com.sun.org.apache.xml.internal.utils.ObjectVec
 	* Default constructor.  Note that the default
 	* block size is very small, for small lists.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a ObjectVector, using the given block size.
 	*
 	* @param blocksize Size of block to allocate
 	*/
-	@:overload public function new(blocksize : Int) : Void;
+	@:overload @:public public function new(blocksize : Int) : Void;
 	
 	/**
 	* Copy constructor for ObjectStack
 	*
 	* @param v ObjectStack to copy
 	*/
-	@:overload public function new(v : com.sun.org.apache.xml.internal.utils.ObjectStack) : Void;
+	@:overload @:public public function new(v : com.sun.org.apache.xml.internal.utils.ObjectStack) : Void;
 	
 	/**
 	* Pushes an item onto the top of this stack.
@@ -49,7 +49,7 @@ extern class ObjectStack extends com.sun.org.apache.xml.internal.utils.ObjectVec
 	* @param   i   the int to be pushed onto this stack.
 	* @return  the <code>item</code> argument.
 	*/
-	@:overload public function push(i : Dynamic) : Dynamic;
+	@:overload @:public public function push(i : Dynamic) : Dynamic;
 	
 	/**
 	* Removes the object at the top of this stack and returns that
@@ -57,12 +57,12 @@ extern class ObjectStack extends com.sun.org.apache.xml.internal.utils.ObjectVec
 	*
 	* @return     The object at the top of this stack.
 	*/
-	@:overload public function pop() : Dynamic;
+	@:overload @:public public function pop() : Dynamic;
 	
 	/**
 	* Quickly pops a number of items from the stack.
 	*/
-	@:overload public function quickPop(n : Int) : Void;
+	@:overload @:public public function quickPop(n : Int) : Void;
 	
 	/**
 	* Looks at the object at the top of this stack without removing it
@@ -71,7 +71,7 @@ extern class ObjectStack extends com.sun.org.apache.xml.internal.utils.ObjectVec
 	* @return     the object at the top of this stack.
 	* @throws  EmptyStackException  if this stack is empty.
 	*/
-	@:overload public function peek() : Dynamic;
+	@:overload @:public public function peek() : Dynamic;
 	
 	/**
 	* Looks at the object at the position the stack counting down n items.
@@ -80,7 +80,7 @@ extern class ObjectStack extends com.sun.org.apache.xml.internal.utils.ObjectVec
 	* @return     the object at n items down.
 	* @throws  EmptyStackException  if this stack is empty.
 	*/
-	@:overload public function peek(n : Int) : Dynamic;
+	@:overload @:public public function peek(n : Int) : Dynamic;
 	
 	/**
 	* Sets an object at a the top of the statck
@@ -89,7 +89,7 @@ extern class ObjectStack extends com.sun.org.apache.xml.internal.utils.ObjectVec
 	* @param val object to set at the top
 	* @throws  EmptyStackException  if this stack is empty.
 	*/
-	@:overload public function setTop(val : Dynamic) : Void;
+	@:overload @:public public function setTop(val : Dynamic) : Void;
 	
 	/**
 	* Tests if this stack is empty.
@@ -98,7 +98,7 @@ extern class ObjectStack extends com.sun.org.apache.xml.internal.utils.ObjectVec
 	*          <code>false</code> otherwise.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function empty() : Bool;
+	@:require(java0) @:overload @:public public function empty() : Bool;
 	
 	/**
 	* Returns where an object is on this stack.
@@ -109,14 +109,14 @@ extern class ObjectStack extends com.sun.org.apache.xml.internal.utils.ObjectVec
 	*          object is not on the stack.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function search(o : Dynamic) : Int;
+	@:require(java0) @:overload @:public public function search(o : Dynamic) : Int;
 	
 	/**
 	* Returns clone of current ObjectStack
 	*
 	* @return clone of current ObjectStack
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

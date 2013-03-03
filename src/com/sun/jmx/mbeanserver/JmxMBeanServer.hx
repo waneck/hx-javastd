@@ -28,7 +28,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	/** Control the default locking policy of the repository.
 	*  By default, we will be using a fair locking policy.
 	**/
-	public static var DEFAULT_FAIR_LOCK_POLICY(default, null) : Bool;
+	@:public @:static @:final public static var DEFAULT_FAIR_LOCK_POLICY(default, null) : Bool;
 	
 	/**
 	* Tell whether {@link MBeanServerInterceptor}s are enabled on this
@@ -37,7 +37,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*         enabled.
 	* @see #newMBeanServer(java.lang.String,javax.management.MBeanServer,javax.management.MBeanServerDelegate,boolean)
 	**/
-	@:overload public function interceptorsEnabled() : Bool;
+	@:overload @:public public function interceptorsEnabled() : Bool;
 	
 	/**
 	* Return the MBeanInstantiator associated to this MBeanServer.
@@ -46,7 +46,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*            are not enabled on this object.
 	* @see #interceptorsEnabled
 	**/
-	@:overload public function getMBeanInstantiator() : com.sun.jmx.mbeanserver.MBeanInstantiator;
+	@:overload @:public public function getMBeanInstantiator() : com.sun.jmx.mbeanserver.MBeanInstantiator;
 	
 	/**
 	* Instantiates and registers an MBean in the MBean server.
@@ -87,7 +87,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*     or no <CODE>ObjectName</CODE> is specified for the MBean.
 	*
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
 	/**
 	* Instantiates and registers an MBean in the MBean server.
@@ -130,7 +130,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*     passed in parameter contains a pattern or no
 	*     <CODE>ObjectName</CODE> is specified for the MBean.
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
 	/**
 	* Instantiates and registers an MBean in the MBean server.
@@ -173,7 +173,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*     <CODE>ObjectName</CODE> is specified for the MBean.
 	*
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
 	
 	/**
 	* Instantiates and registers an MBean in the MBean server.
@@ -219,7 +219,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*     <CODE>ObjectName</CODE> is specified for the MBean.
 	*
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
 	
 	/**
 	* Registers a pre-existing object as an MBean with the MBean server.
@@ -247,7 +247,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*      object passed in parameter is null or no object name is specified.
 	*
 	*/
-	@:overload public function registerMBean(object : Dynamic, name : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function registerMBean(object : Dynamic, name : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
 	/**
 	* De-registers an MBean from the MBean server. The MBean is identified by
@@ -268,7 +268,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*     {@link javax.management.MBeanServerDelegate MBeanServerDelegate}
 	*     MBean.
 	**/
-	@:overload public function unregisterMBean(name : javax.management.ObjectName) : Void;
+	@:overload @:public public function unregisterMBean(name : javax.management.ObjectName) : Void;
 	
 	/**
 	* Gets the <CODE>ObjectInstance</CODE> for a given MBean registered
@@ -282,7 +282,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	* @exception InstanceNotFoundException The MBean specified is not
 	*       registered in the MBean server.
 	*/
-	@:overload public function getObjectInstance(name : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function getObjectInstance(name : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
 	/**
 	* Gets MBeans controlled by the MBean server. This method allows any
@@ -307,7 +307,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*      If no MBean satisfies the query an empty list is returned.
 	*
 	*/
-	@:overload public function queryMBeans(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectInstance>;
+	@:overload @:public public function queryMBeans(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectInstance>;
 	
 	/**
 	* Gets the names of MBeans controlled by the MBean server. This method
@@ -331,7 +331,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*     If no MBean satisfies the query, an empty list is returned.
 	*
 	*/
-	@:overload public function queryNames(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectName>;
+	@:overload @:public public function queryNames(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectName>;
 	
 	/**
 	* Checks whether an MBean, identified by its object name, is already
@@ -347,12 +347,12 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*      name in parameter is null.
 	*
 	*/
-	@:overload public function isRegistered(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function isRegistered(name : javax.management.ObjectName) : Bool;
 	
 	/**
 	* Returns the number of MBeans registered in the MBean server.
 	*/
-	@:overload public function getMBeanCount() : Null<Int>;
+	@:overload @:public public function getMBeanCount() : Null<Int>;
 	
 	/**
 	* Gets the value of a specific attribute of a named MBean. The MBean
@@ -379,7 +379,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*     The object name in parameter is null or the attribute in
 	*     parameter is null.
 	*/
-	@:overload public function getAttribute(name : javax.management.ObjectName, attribute : String) : Dynamic;
+	@:overload @:public public function getAttribute(name : javax.management.ObjectName, attribute : String) : Dynamic;
 	
 	/**
 	* Enables the values of several attributes of a named MBean. The MBean
@@ -401,7 +401,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*     is null.
 	*
 	*/
-	@:overload public function getAttributes(name : javax.management.ObjectName, attributes : java.NativeArray<String>) : javax.management.AttributeList;
+	@:overload @:public public function getAttributes(name : javax.management.ObjectName, attributes : java.NativeArray<String>) : javax.management.AttributeList;
 	
 	/**
 	* Sets the value of a specific attribute of a named MBean. The MBean
@@ -428,7 +428,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*     object name in parameter is null or the attribute in parameter
 	*     is null.
 	*/
-	@:overload public function setAttribute(name : javax.management.ObjectName, attribute : javax.management.Attribute) : Void;
+	@:overload @:public public function setAttribute(name : javax.management.ObjectName, attribute : javax.management.Attribute) : Void;
 	
 	/**
 	* Sets the values of several attributes of a named MBean. The MBean is
@@ -451,7 +451,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*     parameter is null.
 	*
 	*/
-	@:overload public function setAttributes(name : javax.management.ObjectName, attributes : javax.management.AttributeList) : javax.management.AttributeList;
+	@:overload @:public public function setAttributes(name : javax.management.ObjectName, attributes : javax.management.AttributeList) : javax.management.AttributeList;
 	
 	/**
 	* Invokes an operation on an MBean.
@@ -478,16 +478,16 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*        to invoke the method.
 	*
 	*/
-	@:overload public function invoke(name : javax.management.ObjectName, operationName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function invoke(name : javax.management.ObjectName, operationName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
 	/**
 	* Returns the default domain used for naming the MBean.
 	* The default domain name is used as the domain part in the ObjectName
 	* of MBeans if no domain is specified by the user.
 	*/
-	@:overload public function getDefaultDomain() : String;
+	@:overload @:public public function getDefaultDomain() : String;
 	
-	@:overload public function getDomains() : java.NativeArray<String>;
+	@:overload @:public public function getDomains() : java.NativeArray<String>;
 	
 	/**
 	* Adds a listener to a registered MBean.
@@ -503,7 +503,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	* @exception InstanceNotFoundException The MBean name provided does
 	*       not match any of the registered MBeans.
 	*/
-	@:overload public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	/**
 	* Adds a listener to a registered MBean.
@@ -520,15 +520,15 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*       notification listener or of the notification broadcaster
 	*       does not match any of the registered MBeans.
 	*/
-	@:overload public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener) : Void;
 	
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName) : Void;
 	
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	/**
 	* This method discovers the attributes and operations that an MBean exposes
@@ -545,7 +545,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	* @exception ReflectionException An exception occurred when trying to
 	* invoke the getMBeanInfo of a Dynamic MBean.
 	*/
-	@:overload public function getMBeanInfo(name : javax.management.ObjectName) : javax.management.MBeanInfo;
+	@:overload @:public public function getMBeanInfo(name : javax.management.ObjectName) : javax.management.MBeanInfo;
 	
 	/**
 	* Instantiates an object using the list of all class loaders registered
@@ -570,7 +570,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*     The className passed in parameter is null.
 	*
 	*/
-	@:overload public function instantiate(className : String) : Dynamic;
+	@:overload @:public public function instantiate(className : String) : Dynamic;
 	
 	/**
 	* Instantiates an object using the class Loader specified by its
@@ -599,7 +599,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*     className passed in parameter is null.
 	*
 	*/
-	@:overload public function instantiate(className : String, loaderName : javax.management.ObjectName) : Dynamic;
+	@:overload @:public public function instantiate(className : String, loaderName : javax.management.ObjectName) : Dynamic;
 	
 	/**
 	* Instantiates an object using the list of all class loaders registered
@@ -628,7 +628,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*     The className passed in parameter is null.
 	*
 	*/
-	@:overload public function instantiate(className : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function instantiate(className : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
 	/**
 	* Instantiates an object. The class loader to be used is identified
@@ -660,7 +660,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*    The className passed in parameter is null.
 	*
 	*/
-	@:overload public function instantiate(className : String, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function instantiate(className : String, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
 	/**
 	* Returns true if the MBean specified is an instance of the specified
@@ -675,7 +675,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	* @exception InstanceNotFoundException The MBean specified is not
 	*     registered in the MBean server.
 	*/
-	@:overload public function isInstanceOf(name : javax.management.ObjectName, className : String) : Bool;
+	@:overload @:public public function isInstanceOf(name : javax.management.ObjectName, className : String) : Bool;
 	
 	/**
 	* De-serializes a byte array in the context of the class loader
@@ -693,7 +693,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*     related exceptions.
 	*
 	*/
-	@:overload public function deserialize(name : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
+	@:overload @:public public function deserialize(name : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
 	
 	/**
 	* De-serializes a byte array in the context of a given MBean class loader.
@@ -711,7 +711,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*      loaded by the default loader repository
 	*
 	*/
-	@:overload public function deserialize(className : String, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
+	@:overload @:public public function deserialize(className : String, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
 	
 	/**
 	* De-serializes a byte array in the context of a given MBean class loader.
@@ -737,7 +737,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*     be loaded by the specified class loader.
 	*
 	*/
-	@:overload public function deserialize(className : String, loaderName : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
+	@:overload @:public public function deserialize(className : String, loaderName : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
 	
 	/**
 	* Return the MBeanServerInterceptor.
@@ -746,7 +746,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*            are not enabled on this object.
 	* @see #interceptorsEnabled
 	**/
-	@:overload @:synchronized public function getMBeanServerInterceptor() : javax.management.MBeanServer;
+	@:overload @:public @:synchronized public function getMBeanServerInterceptor() : javax.management.MBeanServer;
 	
 	/**
 	* Set the MBeanServerInterceptor.
@@ -755,7 +755,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*            are not enabled on this object.
 	* @see #interceptorsEnabled
 	**/
-	@:overload @:synchronized public function setMBeanServerInterceptor(interceptor : javax.management.MBeanServer) : Void;
+	@:overload @:public @:synchronized public function setMBeanServerInterceptor(interceptor : javax.management.MBeanServer) : Void;
 	
 	/**
 	* <p>Return the {@link java.lang.ClassLoader} that was used for
@@ -764,7 +764,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	* @return The ClassLoader used for that MBean.
 	* @exception InstanceNotFoundException if the named MBean is not found.
 	*/
-	@:overload public function getClassLoaderFor(mbeanName : javax.management.ObjectName) : java.lang.ClassLoader;
+	@:overload @:public public function getClassLoaderFor(mbeanName : javax.management.ObjectName) : java.lang.ClassLoader;
 	
 	/**
 	* <p>Return the named {@link java.lang.ClassLoader}.
@@ -773,15 +773,15 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	* @exception InstanceNotFoundException if the named ClassLoader
 	* is not found.
 	*/
-	@:overload public function getClassLoader(loaderName : javax.management.ObjectName) : java.lang.ClassLoader;
+	@:overload @:public public function getClassLoader(loaderName : javax.management.ObjectName) : java.lang.ClassLoader;
 	
 	/**
 	* <p>Return the ClassLoaderRepository for that MBeanServer.
 	* @return The ClassLoaderRepository for that MBeanServer.
 	**/
-	@:overload public function getClassLoaderRepository() : javax.management.loading.ClassLoaderRepository;
+	@:overload @:public public function getClassLoaderRepository() : javax.management.loading.ClassLoaderRepository;
 	
-	@:overload public function getMBeanServerDelegate() : javax.management.MBeanServerDelegate;
+	@:overload @:public public function getMBeanServerDelegate() : javax.management.MBeanServerDelegate;
 	
 	/**
 	* This method creates a new MBeanServerDelegate for a new MBeanServer.
@@ -799,7 +799,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	*
 	* @return A new {@link javax.management.MBeanServerDelegate}.
 	**/
-	@:overload public static function newMBeanServerDelegate() : javax.management.MBeanServerDelegate;
+	@:overload @:public @:static public static function newMBeanServerDelegate() : javax.management.MBeanServerDelegate;
 	
 	/**
 	* This method creates a new MBeanServer implementation object.
@@ -844,7 +844,7 @@ extern class JmxMBeanServer implements com.sun.jmx.mbeanserver.SunJmxMBeanServer
 	* @see javax.management.MBeanServerBuilder
 	* @see com.sun.jmx.mbeanserver.JmxMBeanServerBuilder
 	**/
-	@:overload public static function newMBeanServer(defaultDomain : String, outer : javax.management.MBeanServer, delegate : javax.management.MBeanServerDelegate, interceptors : Bool) : javax.management.MBeanServer;
+	@:overload @:public @:static public static function newMBeanServer(defaultDomain : String, outer : javax.management.MBeanServer, delegate : javax.management.MBeanServerDelegate, interceptors : Bool) : javax.management.MBeanServer;
 	
 	
 }

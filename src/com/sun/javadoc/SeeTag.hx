@@ -64,7 +64,7 @@ extern interface SeeTag extends com.sun.javadoc.Tag
 	* </p>
 	* return the <code>PackageDoc</code> for <code>java.lang</code>.
 	*/
-	@:overload public function referencedPackage() : com.sun.javadoc.PackageDoc;
+	@:overload @:public public function referencedPackage() : com.sun.javadoc.PackageDoc;
 	
 	/**
 	* Get the class or interface name of the <code>@see</code> reference.

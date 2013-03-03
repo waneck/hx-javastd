@@ -49,7 +49,7 @@ extern class BridgeContext
 	*      The caller no longer needs to use this, as {@link Bridge} has
 	*      methods that can work without {@link BridgeContext}.
 	*/
-	@:require(java0) @:overload private function new() : Void;
+	@:require(java0) @:overload @:protected private function new() : Void;
 	
 	/**
 	* Registers the error handler that receives unmarshalling/marshalling errors.
@@ -59,21 +59,21 @@ extern class BridgeContext
 	*
 	* @since 2.0 EA1
 	*/
-	@:require(java0) @:overload @:abstract public function setErrorHandler(handler : javax.xml.bind.ValidationEventHandler) : Void;
+	@:require(java0) @:overload @:public @:abstract public function setErrorHandler(handler : javax.xml.bind.ValidationEventHandler) : Void;
 	
 	/**
 	* Sets the {@link AttachmentMarshaller}.
 	*
 	* @since 2.0 EA1
 	*/
-	@:require(java0) @:overload @:abstract public function setAttachmentMarshaller(m : javax.xml.bind.attachment.AttachmentMarshaller) : Void;
+	@:require(java0) @:overload @:public @:abstract public function setAttachmentMarshaller(m : javax.xml.bind.attachment.AttachmentMarshaller) : Void;
 	
 	/**
 	* Sets the {@link AttachmentUnmarshaller}.
 	*
 	* @since 2.0 EA1
 	*/
-	@:require(java0) @:overload @:abstract public function setAttachmentUnmarshaller(m : javax.xml.bind.attachment.AttachmentUnmarshaller) : Void;
+	@:require(java0) @:overload @:public @:abstract public function setAttachmentUnmarshaller(m : javax.xml.bind.attachment.AttachmentUnmarshaller) : Void;
 	
 	/**
 	* Gets the last {@link AttachmentMarshaller} set through
@@ -81,7 +81,7 @@ extern class BridgeContext
 	*
 	* @since 2.0 EA2
 	*/
-	@:require(java0) @:overload @:abstract public function getAttachmentMarshaller() : javax.xml.bind.attachment.AttachmentMarshaller;
+	@:require(java0) @:overload @:public @:abstract public function getAttachmentMarshaller() : javax.xml.bind.attachment.AttachmentMarshaller;
 	
 	/**
 	* Gets the last {@link AttachmentUnmarshaller} set through
@@ -89,7 +89,7 @@ extern class BridgeContext
 	*
 	* @since 2.0 EA2
 	*/
-	@:require(java0) @:overload @:abstract public function getAttachmentUnmarshaller() : javax.xml.bind.attachment.AttachmentUnmarshaller;
+	@:require(java0) @:overload @:public @:abstract public function getAttachmentUnmarshaller() : javax.xml.bind.attachment.AttachmentUnmarshaller;
 	
 	
 }

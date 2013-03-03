@@ -25,13 +25,13 @@ package com.sun.codemodel.internal;
 */
 extern class JTryBlock implements com.sun.codemodel.internal.JStatement
 {
-	@:overload public function body() : com.sun.codemodel.internal.JBlock;
+	@:overload @:public public function body() : com.sun.codemodel.internal.JBlock;
 	
-	@:overload public function _catch(exception : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JCatchBlock;
+	@:overload @:public public function _catch(exception : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JCatchBlock;
 	
-	@:overload public function _finally() : com.sun.codemodel.internal.JBlock;
+	@:overload @:public public function _finally() : com.sun.codemodel.internal.JBlock;
 	
-	@:overload public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

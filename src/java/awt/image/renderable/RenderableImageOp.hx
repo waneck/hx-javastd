@@ -46,7 +46,7 @@ extern class RenderableImageOp implements java.awt.image.renderable.RenderableIm
 	*        images and other parameters necessary for the operation
 	*        to run.
 	*/
-	@:overload public function new(CRIF : java.awt.image.renderable.ContextualRenderedImageFactory, paramBlock : java.awt.image.renderable.ParameterBlock) : Void;
+	@:overload @:public public function new(CRIF : java.awt.image.renderable.ContextualRenderedImageFactory, paramBlock : java.awt.image.renderable.ParameterBlock) : Void;
 	
 	/**
 	* Returns a vector of RenderableImages that are the sources of
@@ -56,7 +56,7 @@ extern class RenderableImageOp implements java.awt.image.renderable.RenderableIm
 	*
 	* @return a (possibly empty) Vector of RenderableImages, or null.
 	*/
-	@:overload public function getSources() : java.util.Vector<java.awt.image.renderable.RenderableImage>;
+	@:overload @:public public function getSources() : java.util.Vector<java.awt.image.renderable.RenderableImage>;
 	
 	/**
 	* Gets a property from the property set of this image.
@@ -67,13 +67,13 @@ extern class RenderableImageOp implements java.awt.image.renderable.RenderableIm
 	* @return a reference to the property Object, or the value
 	*         java.awt.Image.UndefinedProperty.
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	/**
 	* Return a list of names recognized by getProperty.
 	* @return a list of property names.
 	*/
-	@:overload public function getPropertyNames() : java.NativeArray<String>;
+	@:overload @:public public function getPropertyNames() : java.NativeArray<String>;
 	
 	/**
 	* Returns true if successive renderings (that is, calls to
@@ -85,7 +85,7 @@ extern class RenderableImageOp implements java.awt.image.renderable.RenderableIm
 	*         same arguments might produce different results;
 	*         <code>false</code> otherwise.
 	*/
-	@:overload public function isDynamic() : Bool;
+	@:overload @:public public function isDynamic() : Bool;
 	
 	/**
 	* Gets the width in user coordinate space.  By convention, the
@@ -94,7 +94,7 @@ extern class RenderableImageOp implements java.awt.image.renderable.RenderableIm
 	*
 	* @return the width of the image in user coordinates.
 	*/
-	@:overload public function getWidth() : Single;
+	@:overload @:public public function getWidth() : Single;
 	
 	/**
 	* Gets the height in user coordinate space.  By convention, the
@@ -102,17 +102,17 @@ extern class RenderableImageOp implements java.awt.image.renderable.RenderableIm
 	*
 	* @return the height of the image in user coordinates.
 	*/
-	@:overload public function getHeight() : Single;
+	@:overload @:public public function getHeight() : Single;
 	
 	/**
 	* Gets the minimum X coordinate of the rendering-independent image data.
 	*/
-	@:overload public function getMinX() : Single;
+	@:overload @:public public function getMinX() : Single;
 	
 	/**
 	* Gets the minimum Y coordinate of the rendering-independent image data.
 	*/
-	@:overload public function getMinY() : Single;
+	@:overload @:public public function getMinY() : Single;
 	
 	/**
 	* Change the current ParameterBlock of the operation, allowing
@@ -124,7 +124,7 @@ extern class RenderableImageOp implements java.awt.image.renderable.RenderableIm
 	* @return the old ParameterBlock.
 	* @see #getParameterBlock
 	*/
-	@:overload public function setParameterBlock(paramBlock : java.awt.image.renderable.ParameterBlock) : java.awt.image.renderable.ParameterBlock;
+	@:overload @:public public function setParameterBlock(paramBlock : java.awt.image.renderable.ParameterBlock) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Returns a reference to the current parameter block.
@@ -132,7 +132,7 @@ extern class RenderableImageOp implements java.awt.image.renderable.RenderableIm
 	*         <code>RenderableImageOp</code>.
 	* @see #setParameterBlock(ParameterBlock)
 	*/
-	@:overload public function getParameterBlock() : java.awt.image.renderable.ParameterBlock;
+	@:overload @:public public function getParameterBlock() : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Creates a RenderedImage instance of this image with width w, and
@@ -159,7 +159,7 @@ extern class RenderableImageOp implements java.awt.image.renderable.RenderableIm
 	* @param hints a RenderingHints object containg hints.
 	* @return a RenderedImage containing the rendered data.
 	*/
-	@:overload public function createScaledRendering(w : Int, h : Int, hints : java.awt.RenderingHints) : java.awt.image.RenderedImage;
+	@:overload @:public public function createScaledRendering(w : Int, h : Int, hints : java.awt.RenderingHints) : java.awt.image.RenderedImage;
 	
 	/**
 	* Gets a RenderedImage instance of this image with a default
@@ -171,7 +171,7 @@ extern class RenderableImageOp implements java.awt.image.renderable.RenderableIm
 	*
 	* @return a RenderedImage containing the rendered data.
 	*/
-	@:overload public function createDefaultRendering() : java.awt.image.RenderedImage;
+	@:overload @:public public function createDefaultRendering() : java.awt.image.RenderedImage;
 	
 	/**
 	* Creates a RenderedImage which represents this
@@ -211,7 +211,7 @@ extern class RenderableImageOp implements java.awt.image.renderable.RenderableIm
 	* @param renderContext The RenderContext to use to perform the rendering.
 	* @return a RenderedImage containing the desired output image.
 	*/
-	@:overload public function createRendering(renderContext : java.awt.image.renderable.RenderContext) : java.awt.image.RenderedImage;
+	@:overload @:public public function createRendering(renderContext : java.awt.image.renderable.RenderContext) : java.awt.image.RenderedImage;
 	
 	
 }

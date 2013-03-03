@@ -26,27 +26,27 @@ package java.nio;
 //// -- This file was mechanically generated: Do not edit! -- //
 @:internal extern class ByteBufferAsCharBufferRL extends java.nio.ByteBufferAsCharBufferL
 {
-	@:overload override public function slice() : java.nio.CharBuffer;
+	@:overload @:public override public function slice() : java.nio.CharBuffer;
 	
-	@:overload override public function duplicate() : java.nio.CharBuffer;
+	@:overload @:public override public function duplicate() : java.nio.CharBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.CharBuffer;
+	@:overload @:public override public function asReadOnlyBuffer() : java.nio.CharBuffer;
 	
-	@:overload override public function put(x : java.StdTypes.Char16) : java.nio.CharBuffer;
+	@:overload @:public override public function put(x : java.StdTypes.Char16) : java.nio.CharBuffer;
 	
-	@:overload override public function put(i : Int, x : java.StdTypes.Char16) : java.nio.CharBuffer;
+	@:overload @:public override public function put(i : Int, x : java.StdTypes.Char16) : java.nio.CharBuffer;
 	
-	@:overload override public function compact() : java.nio.CharBuffer;
+	@:overload @:public override public function compact() : java.nio.CharBuffer;
 	
-	@:overload override public function isDirect() : Bool;
+	@:overload @:public override public function isDirect() : Bool;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload public function toString(start : Int, end : Int) : String;
+	@:overload @:public override public function toString(start : Int, end : Int) : String;
 	
-	@:overload override public function subSequence(start : Int, end : Int) : java.nio.CharBuffer;
+	@:overload @:public override public function subSequence(start : Int, end : Int) : java.nio.CharBuffer;
 	
-	@:overload override public function order() : java.nio.ByteOrder;
+	@:overload @:public override public function order() : java.nio.ByteOrder;
 	
 	
 }

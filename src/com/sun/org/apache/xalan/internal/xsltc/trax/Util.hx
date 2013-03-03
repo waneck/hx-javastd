@@ -26,16 +26,16 @@ extern class Util
 	/**
 	* @author Santiago Pericas-Geertsen
 	*/
-	@:overload public static function baseName(name : String) : String;
+	@:overload @:public @:static public static function baseName(name : String) : String;
 	
-	@:overload public static function noExtName(name : String) : String;
+	@:overload @:public @:static public static function noExtName(name : String) : String;
 	
-	@:overload public static function toJavaName(name : String) : String;
+	@:overload @:public @:static public static function toJavaName(name : String) : String;
 	
 	/**
 	* Creates a SAX2 InputSource object from a TrAX Source object
 	*/
-	@:overload public static function getInputSource(xsltc : com.sun.org.apache.xalan.internal.xsltc.compiler.XSLTC, source : javax.xml.transform.Source) : org.xml.sax.InputSource;
+	@:overload @:public @:static public static function getInputSource(xsltc : com.sun.org.apache.xalan.internal.xsltc.compiler.XSLTC, source : javax.xml.transform.Source) : org.xml.sax.InputSource;
 	
 	
 }

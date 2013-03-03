@@ -38,7 +38,7 @@ extern class DeprecatedListWriter extends com.sun.tools.doclets.formats.html.Sub
 	*
 	* @param filename the file to be generated.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String) : Void;
 	
 	/**
 	* Get list of all the deprecated classes and members in all the Packages
@@ -47,14 +47,14 @@ extern class DeprecatedListWriter extends com.sun.tools.doclets.formats.html.Sub
 	*
 	* @param configuration the current configuration of the doclet.
 	*/
-	@:overload public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl) : Void;
+	@:overload @:public @:static public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl) : Void;
 	
 	/**
 	* Generate the deprecated API list.
 	*
 	* @param deprapi list of deprecated API built already.
 	*/
-	@:overload private function generateDeprecatedListFile(deprapi : com.sun.tools.doclets.internal.toolkit.util.DeprecatedAPIListBuilder) : Void;
+	@:overload @:protected private function generateDeprecatedListFile(deprapi : com.sun.tools.doclets.internal.toolkit.util.DeprecatedAPIListBuilder) : Void;
 	
 	/**
 	* Get the contents list.
@@ -62,21 +62,21 @@ extern class DeprecatedListWriter extends com.sun.tools.doclets.formats.html.Sub
 	* @param deprapi the deprecated list builder
 	* @return a content tree for the contents list
 	*/
-	@:overload public function getContentsList(deprapi : com.sun.tools.doclets.internal.toolkit.util.DeprecatedAPIListBuilder) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getContentsList(deprapi : com.sun.tools.doclets.internal.toolkit.util.DeprecatedAPIListBuilder) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the header for the deprecated API Listing.
 	*
 	* @return a content tree for the header
 	*/
-	@:overload public function getHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the deprecated label.
 	*
 	* @return a content tree for the deprecated label
 	*/
-	@:overload override private function getNavLinkDeprecated() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkDeprecated() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

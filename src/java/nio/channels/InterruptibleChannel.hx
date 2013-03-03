@@ -38,7 +38,7 @@ extern interface InterruptibleChannel extends java.nio.channels.Channel
 	*
 	* @throws  IOException  If an I/O error occurs
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

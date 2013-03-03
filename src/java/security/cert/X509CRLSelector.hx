@@ -29,7 +29,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	* Creates an <code>X509CRLSelector</code>. Initially, no criteria are set
 	* so any <code>X509CRL</code> will match.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets the issuerNames criterion. The issuer distinguished name in the
@@ -58,7 +58,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	* @see #getIssuers
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setIssuers(issuers : java.util.Collection<javax.security.auth.x500.X500Principal>) : Void;
+	@:require(java5) @:overload @:public public function setIssuers(issuers : java.util.Collection<javax.security.auth.x500.X500Principal>) : Void;
 	
 	/**
 	* <strong>Note:</strong> use {@linkplain #setIssuers(Collection)} instead
@@ -122,7 +122,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	* @throws IOException if a parsing error occurs
 	* @see #getIssuerNames
 	*/
-	@:overload public function setIssuerNames(names : java.util.Collection<Dynamic>) : Void;
+	@:overload @:public public function setIssuerNames(names : java.util.Collection<Dynamic>) : Void;
 	
 	/**
 	* Adds a name to the issuerNames criterion. The issuer distinguished
@@ -137,7 +137,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	* @param issuer the issuer as X500Principal
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function addIssuer(issuer : javax.security.auth.x500.X500Principal) : Void;
+	@:require(java5) @:overload @:public public function addIssuer(issuer : javax.security.auth.x500.X500Principal) : Void;
 	
 	/**
 	* <strong>Denigrated</strong>, use
@@ -159,7 +159,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	* @param name the name in RFC 2253 form
 	* @throws IOException if a parsing error occurs
 	*/
-	@:overload public function addIssuerName(name : String) : Void;
+	@:overload @:public public function addIssuerName(name : String) : Void;
 	
 	/**
 	* Adds a name to the issuerNames criterion. The issuer distinguished
@@ -185,7 +185,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	* @param name a byte array containing the name in ASN.1 DER encoded form
 	* @throws IOException if a parsing error occurs
 	*/
-	@:overload public function addIssuerName(name : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function addIssuerName(name : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the minCRLNumber criterion. The <code>X509CRL</code> must have a
@@ -195,7 +195,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	*
 	* @param minCRL the minimum CRL number accepted (or <code>null</code>)
 	*/
-	@:overload public function setMinCRLNumber(minCRL : java.math.BigInteger) : Void;
+	@:overload @:public public function setMinCRLNumber(minCRL : java.math.BigInteger) : Void;
 	
 	/**
 	* Sets the maxCRLNumber criterion. The <code>X509CRL</code> must have a
@@ -205,7 +205,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	*
 	* @param maxCRL the maximum CRL number accepted (or <code>null</code>)
 	*/
-	@:overload public function setMaxCRLNumber(maxCRL : java.math.BigInteger) : Void;
+	@:overload @:public public function setMaxCRLNumber(maxCRL : java.math.BigInteger) : Void;
 	
 	/**
 	* Sets the dateAndTime criterion. The specified date must be
@@ -222,7 +222,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	*                    (or <code>null</code>)
 	* @see #getDateAndTime
 	*/
-	@:overload public function setDateAndTime(dateAndTime : java.util.Date) : Void;
+	@:overload @:public public function setDateAndTime(dateAndTime : java.util.Date) : Void;
 	
 	/**
 	* Sets the certificate being checked. This is not a criterion. Rather,
@@ -235,7 +235,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	*             (or <code>null</code>)
 	* @see #getCertificateChecking
 	*/
-	@:overload public function setCertificateChecking(cert : java.security.cert.X509Certificate) : Void;
+	@:overload @:public public function setCertificateChecking(cert : java.security.cert.X509Certificate) : Void;
 	
 	/**
 	* Returns the issuerNames criterion. The issuer distinguished
@@ -251,7 +251,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	* @see #setIssuers
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getIssuers() : java.util.Collection<javax.security.auth.x500.X500Principal>;
+	@:require(java5) @:overload @:public public function getIssuers() : java.util.Collection<javax.security.auth.x500.X500Principal>;
 	
 	/**
 	* Returns a copy of the issuerNames criterion. The issuer distinguished
@@ -276,7 +276,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	* @return a <code>Collection</code> of names (or <code>null</code>)
 	* @see #setIssuerNames
 	*/
-	@:overload public function getIssuerNames() : java.util.Collection<Dynamic>;
+	@:overload @:public public function getIssuerNames() : java.util.Collection<Dynamic>;
 	
 	/**
 	* Returns the minCRLNumber criterion. The <code>X509CRL</code> must have a
@@ -285,7 +285,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	*
 	* @return the minimum CRL number accepted (or <code>null</code>)
 	*/
-	@:overload public function getMinCRL() : java.math.BigInteger;
+	@:overload @:public public function getMinCRL() : java.math.BigInteger;
 	
 	/**
 	* Returns the maxCRLNumber criterion. The <code>X509CRL</code> must have a
@@ -295,7 +295,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	*
 	* @return the maximum CRL number accepted (or <code>null</code>)
 	*/
-	@:overload public function getMaxCRL() : java.math.BigInteger;
+	@:overload @:public public function getMaxCRL() : java.math.BigInteger;
 	
 	/**
 	* Returns the dateAndTime criterion. The specified date must be
@@ -311,7 +311,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	* @return the <code>Date</code> to match against (or <code>null</code>)
 	* @see #setDateAndTime
 	*/
-	@:overload public function getDateAndTime() : java.util.Date;
+	@:overload @:public public function getDateAndTime() : java.util.Date;
 	
 	/**
 	* Returns the certificate being checked. This is not a criterion. Rather,
@@ -323,7 +323,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	* @return the certificate being checked (or <code>null</code>)
 	* @see #setCertificateChecking
 	*/
-	@:overload public function getCertificateChecking() : java.security.cert.X509Certificate;
+	@:overload @:public public function getCertificateChecking() : java.security.cert.X509Certificate;
 	
 	/**
 	* Returns a printable representation of the <code>X509CRLSelector</code>.
@@ -331,7 +331,7 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	* @return a <code>String</code> describing the contents of the
 	*         <code>X509CRLSelector</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Decides whether a <code>CRL</code> should be selected.
@@ -340,14 +340,14 @@ extern class X509CRLSelector implements java.security.cert.CRLSelector
 	* @return <code>true</code> if the <code>CRL</code> should be selected,
 	*         <code>false</code> otherwise
 	*/
-	@:overload public function match(crl : java.security.cert.CRL) : Bool;
+	@:overload @:public public function match(crl : java.security.cert.CRL) : Bool;
 	
 	/**
 	* Returns a copy of this object.
 	*
 	* @return the copy
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

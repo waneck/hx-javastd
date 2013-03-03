@@ -26,15 +26,15 @@ package sun.awt.X11;
 //// This class serves as the base class for all the wrappers.
 @:internal extern class XWrapperBase
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function zero() : Void;
+	@:overload @:public public function zero() : Void;
 	
-	@:overload @:abstract public function getDataSize() : Int;
+	@:overload @:public @:abstract public function getDataSize() : Int;
 	
-	@:overload @:abstract public function getPData() : haxe.Int64;
+	@:overload @:public @:abstract public function getPData() : haxe.Int64;
 	
-	@:overload public function clone() : sun.awt.X11.XEvent;
+	@:overload @:public public function clone() : sun.awt.X11.XEvent;
 	
 	
 }

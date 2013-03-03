@@ -32,7 +32,7 @@ package com.sun.tools.example.debug.event;
 */
 extern class VMDisconnectEventSet extends com.sun.tools.example.debug.event.AbstractEventSet
 {
-	@:overload override public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
+	@:overload @:public override public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
 	
 	
 }

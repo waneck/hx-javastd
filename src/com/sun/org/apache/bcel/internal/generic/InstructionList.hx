@@ -61,19 +61,19 @@ extern class InstructionList implements java.io.Serializable
 	/**
 	* Create (empty) instruction list.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create instruction list containing one instruction.
 	* @param i initial instruction
 	*/
-	@:overload public function new(i : com.sun.org.apache.bcel.internal.generic.Instruction) : Void;
+	@:overload @:public public function new(i : com.sun.org.apache.bcel.internal.generic.Instruction) : Void;
 	
 	/**
 	* Create instruction list containing one instruction.
 	* @param i initial instruction
 	*/
-	@:overload public function new(i : com.sun.org.apache.bcel.internal.generic.BranchInstruction) : Void;
+	@:overload @:public public function new(i : com.sun.org.apache.bcel.internal.generic.BranchInstruction) : Void;
 	
 	/**
 	* Initialize list with (nonnull) compound instruction. Consumes argument
@@ -81,12 +81,12 @@ extern class InstructionList implements java.io.Serializable
 	*
 	* @param c compound instruction (list)
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.generic.CompoundInstruction) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.generic.CompoundInstruction) : Void;
 	
 	/**
 	* Test for empty list.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Find the target instruction (handle) that corresponds to the given target
@@ -98,7 +98,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param target target position to search for
 	* @return target position's instruction handle if available
 	*/
-	@:native('findHandle') @:overload public static function _findHandle(ihs : java.NativeArray<com.sun.org.apache.bcel.internal.generic.InstructionHandle>, pos : java.NativeArray<Int>, count : Int, target : Int) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:native('findHandle') @:overload @:public @:static public static function _findHandle(ihs : java.NativeArray<com.sun.org.apache.bcel.internal.generic.InstructionHandle>, pos : java.NativeArray<Int>, count : Int, target : Int) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Get instruction handle for instruction at byte code position pos.
@@ -108,14 +108,14 @@ extern class InstructionList implements java.io.Serializable
 	* @param pos byte code position to search for
 	* @return target position's instruction handle if available
 	*/
-	@:overload public function findHandle(pos : Int) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function findHandle(pos : Int) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Initialize instruction list from byte array.
 	*
 	* @param code byte array containing the instructions
 	*/
-	@:overload public function new(code : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(code : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Append another list after instruction (handle) ih contained in this list.
@@ -125,7 +125,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param il Instruction list to append to this one
 	* @return instruction handle pointing to the <B>first</B> appended instruction
 	*/
-	@:overload public function append(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function append(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Append another list after instruction i contained in this list.
@@ -135,7 +135,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param il Instruction list to append to this one
 	* @return instruction handle pointing to the <B>first</B> appended instruction
 	*/
-	@:overload public function append(i : com.sun.org.apache.bcel.internal.generic.Instruction, il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function append(i : com.sun.org.apache.bcel.internal.generic.Instruction, il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Append another list to this one.
@@ -144,7 +144,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param il list to append to end of this list
 	* @return instruction handle of the <B>first</B> appended instruction
 	*/
-	@:overload public function append(il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function append(il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Append an instruction to the end of this list.
@@ -152,7 +152,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param i instruction to append
 	* @return instruction handle of the appended instruction
 	*/
-	@:overload public function append(i : com.sun.org.apache.bcel.internal.generic.Instruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function append(i : com.sun.org.apache.bcel.internal.generic.Instruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Append a branch instruction to the end of this list.
@@ -160,7 +160,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param i branch instruction to append
 	* @return branch instruction handle of the appended instruction
 	*/
-	@:overload public function append(i : com.sun.org.apache.bcel.internal.generic.BranchInstruction) : com.sun.org.apache.bcel.internal.generic.BranchHandle;
+	@:overload @:public public function append(i : com.sun.org.apache.bcel.internal.generic.BranchInstruction) : com.sun.org.apache.bcel.internal.generic.BranchHandle;
 	
 	/**
 	* Append a single instruction j after another instruction i, which
@@ -170,7 +170,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param j Instruction to append after i in list
 	* @return instruction handle of the first appended instruction
 	*/
-	@:overload public function append(i : com.sun.org.apache.bcel.internal.generic.Instruction, j : com.sun.org.apache.bcel.internal.generic.Instruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function append(i : com.sun.org.apache.bcel.internal.generic.Instruction, j : com.sun.org.apache.bcel.internal.generic.Instruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Append a compound instruction, after instruction i.
@@ -179,7 +179,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param c The composite instruction (containing an InstructionList)
 	* @return instruction handle of the first appended instruction
 	*/
-	@:overload public function append(i : com.sun.org.apache.bcel.internal.generic.Instruction, c : com.sun.org.apache.bcel.internal.generic.CompoundInstruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function append(i : com.sun.org.apache.bcel.internal.generic.Instruction, c : com.sun.org.apache.bcel.internal.generic.CompoundInstruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Append a compound instruction.
@@ -187,7 +187,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param c The composite instruction (containing an InstructionList)
 	* @return instruction handle of the first appended instruction
 	*/
-	@:overload public function append(c : com.sun.org.apache.bcel.internal.generic.CompoundInstruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function append(c : com.sun.org.apache.bcel.internal.generic.CompoundInstruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Append a compound instruction.
@@ -196,7 +196,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param c The composite instruction (containing an InstructionList)
 	* @return instruction handle of the first appended instruction
 	*/
-	@:overload public function append(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, c : com.sun.org.apache.bcel.internal.generic.CompoundInstruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function append(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, c : com.sun.org.apache.bcel.internal.generic.CompoundInstruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Append an instruction after instruction (handle) ih contained in this list.
@@ -205,7 +205,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param i Instruction to append
 	* @return instruction handle pointing to the <B>first</B> appended instruction
 	*/
-	@:overload public function append(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, i : com.sun.org.apache.bcel.internal.generic.Instruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function append(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, i : com.sun.org.apache.bcel.internal.generic.Instruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Append an instruction after instruction (handle) ih contained in this list.
@@ -214,7 +214,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param i Instruction to append
 	* @return instruction handle pointing to the <B>first</B> appended instruction
 	*/
-	@:overload public function append(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, i : com.sun.org.apache.bcel.internal.generic.BranchInstruction) : com.sun.org.apache.bcel.internal.generic.BranchHandle;
+	@:overload @:public public function append(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, i : com.sun.org.apache.bcel.internal.generic.BranchInstruction) : com.sun.org.apache.bcel.internal.generic.BranchHandle;
 	
 	/**
 	* Insert another list before Instruction handle ih contained in this list.
@@ -224,7 +224,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param il Instruction list to insert
 	* @return instruction handle of the first inserted instruction
 	*/
-	@:overload public function insert(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function insert(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Insert another list.
@@ -232,7 +232,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param il list to insert before start of this list
 	* @return instruction handle of the first inserted instruction
 	*/
-	@:overload public function insert(il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function insert(il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Insert another list before Instruction i contained in this list.
@@ -243,7 +243,7 @@ extern class InstructionList implements java.io.Serializable
 	* @return instruction handle pointing to the first inserted instruction,
 	* i.e., il.getStart()
 	*/
-	@:overload public function insert(i : com.sun.org.apache.bcel.internal.generic.Instruction, il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function insert(i : com.sun.org.apache.bcel.internal.generic.Instruction, il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Insert an instruction at start of this list.
@@ -251,7 +251,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param i instruction to insert
 	* @return instruction handle of the inserted instruction
 	*/
-	@:overload public function insert(i : com.sun.org.apache.bcel.internal.generic.Instruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function insert(i : com.sun.org.apache.bcel.internal.generic.Instruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Insert a branch instruction at start of this list.
@@ -259,7 +259,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param i branch instruction to insert
 	* @return branch instruction handle of the appended instruction
 	*/
-	@:overload public function insert(i : com.sun.org.apache.bcel.internal.generic.BranchInstruction) : com.sun.org.apache.bcel.internal.generic.BranchHandle;
+	@:overload @:public public function insert(i : com.sun.org.apache.bcel.internal.generic.BranchInstruction) : com.sun.org.apache.bcel.internal.generic.BranchHandle;
 	
 	/**
 	* Insert a single instruction j before another instruction i, which
@@ -269,7 +269,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param j Instruction to insert before i in list
 	* @return instruction handle of the first inserted instruction
 	*/
-	@:overload public function insert(i : com.sun.org.apache.bcel.internal.generic.Instruction, j : com.sun.org.apache.bcel.internal.generic.Instruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function insert(i : com.sun.org.apache.bcel.internal.generic.Instruction, j : com.sun.org.apache.bcel.internal.generic.Instruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Insert a compound instruction before instruction i.
@@ -278,7 +278,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param c The composite instruction (containing an InstructionList)
 	* @return instruction handle of the first inserted instruction
 	*/
-	@:overload public function insert(i : com.sun.org.apache.bcel.internal.generic.Instruction, c : com.sun.org.apache.bcel.internal.generic.CompoundInstruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function insert(i : com.sun.org.apache.bcel.internal.generic.Instruction, c : com.sun.org.apache.bcel.internal.generic.CompoundInstruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Insert a compound instruction.
@@ -286,7 +286,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param c The composite instruction (containing an InstructionList)
 	* @return instruction handle of the first inserted instruction
 	*/
-	@:overload public function insert(c : com.sun.org.apache.bcel.internal.generic.CompoundInstruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function insert(c : com.sun.org.apache.bcel.internal.generic.CompoundInstruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Insert an instruction before instruction (handle) ih contained in this list.
@@ -295,7 +295,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param i Instruction to insert
 	* @return instruction handle of the first inserted instruction
 	*/
-	@:overload public function insert(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, i : com.sun.org.apache.bcel.internal.generic.Instruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function insert(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, i : com.sun.org.apache.bcel.internal.generic.Instruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Insert a compound instruction.
@@ -304,7 +304,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param c The composite instruction (containing an InstructionList)
 	* @return instruction handle of the first inserted instruction
 	*/
-	@:overload public function insert(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, c : com.sun.org.apache.bcel.internal.generic.CompoundInstruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function insert(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, c : com.sun.org.apache.bcel.internal.generic.CompoundInstruction) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Insert an instruction before instruction (handle) ih contained in this list.
@@ -313,7 +313,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param i Instruction to insert
 	* @return instruction handle of the first inserted instruction
 	*/
-	@:overload public function insert(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, i : com.sun.org.apache.bcel.internal.generic.BranchInstruction) : com.sun.org.apache.bcel.internal.generic.BranchHandle;
+	@:overload @:public public function insert(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, i : com.sun.org.apache.bcel.internal.generic.BranchInstruction) : com.sun.org.apache.bcel.internal.generic.BranchHandle;
 	
 	/**
 	* Take all instructions (handles) from "start" to "end" and append them after the
@@ -326,7 +326,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param end    of moved block
 	* @param target of moved block
 	*/
-	@:overload public function move(start : com.sun.org.apache.bcel.internal.generic.InstructionHandle, end : com.sun.org.apache.bcel.internal.generic.InstructionHandle, target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function move(start : com.sun.org.apache.bcel.internal.generic.InstructionHandle, end : com.sun.org.apache.bcel.internal.generic.InstructionHandle, target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* Move a single instruction (handle) to a new location.
@@ -334,7 +334,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param ih     moved instruction
 	* @param target new location of moved instruction
 	*/
-	@:overload public function move(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function move(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* Remove instruction from this list. The corresponding Instruction
@@ -342,7 +342,7 @@ extern class InstructionList implements java.io.Serializable
 	*
 	* @param ih instruction (handle) to remove
 	*/
-	@:overload public function delete(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function delete(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* Remove instruction from this list. The corresponding Instruction
@@ -350,7 +350,7 @@ extern class InstructionList implements java.io.Serializable
 	*
 	* @param i instruction to remove
 	*/
-	@:overload public function delete(i : com.sun.org.apache.bcel.internal.generic.Instruction) : Void;
+	@:overload @:public public function delete(i : com.sun.org.apache.bcel.internal.generic.Instruction) : Void;
 	
 	/**
 	* Remove instructions from instruction `from' to instruction `to' contained
@@ -360,7 +360,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param from where to start deleting (inclusive)
 	* @param to   where to end deleting (inclusive)
 	*/
-	@:overload public function delete(from : com.sun.org.apache.bcel.internal.generic.InstructionHandle, to : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function delete(from : com.sun.org.apache.bcel.internal.generic.InstructionHandle, to : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* Remove instructions from instruction `from' to instruction `to' contained
@@ -370,13 +370,13 @@ extern class InstructionList implements java.io.Serializable
 	* @param from where to start deleting (inclusive)
 	* @param to   where to end deleting (inclusive)
 	*/
-	@:overload public function delete(from : com.sun.org.apache.bcel.internal.generic.Instruction, to : com.sun.org.apache.bcel.internal.generic.Instruction) : Void;
+	@:overload @:public public function delete(from : com.sun.org.apache.bcel.internal.generic.Instruction, to : com.sun.org.apache.bcel.internal.generic.Instruction) : Void;
 	
-	@:overload public function contains(i : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Bool;
+	@:overload @:public public function contains(i : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Bool;
 	
-	@:overload public function contains(i : com.sun.org.apache.bcel.internal.generic.Instruction) : Bool;
+	@:overload @:public public function contains(i : com.sun.org.apache.bcel.internal.generic.Instruction) : Bool;
 	
-	@:overload public function setPositions() : Void;
+	@:overload @:public public function setPositions() : Void;
 	
 	/**
 	* Give all instructions their position number (offset in byte stream), i.e.,
@@ -385,7 +385,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param check Perform sanity checks, e.g. if all targeted instructions really belong
 	* to this list
 	*/
-	@:overload public function setPositions(check : Bool) : Void;
+	@:overload @:public public function setPositions(check : Bool) : Void;
 	
 	/**
 	* When everything is finished, use this method to convert the instruction
@@ -393,30 +393,30 @@ extern class InstructionList implements java.io.Serializable
 	*
 	* @return the byte code ready to be dumped
 	*/
-	@:overload public function getByteCode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getByteCode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* @return an array of instructions without target information for branch instructions.
 	*/
-	@:overload public function getInstructions() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Instruction>;
+	@:overload @:public public function getInstructions() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Instruction>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* @param verbose toggle output format
 	* @return String containing all instructions in this list.
 	*/
-	@:overload public function toString(verbose : Bool) : String;
+	@:overload @:public public function toString(verbose : Bool) : String;
 	
 	/**
 	* @return Enumeration that lists all instructions (handles)
 	*/
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function iterator() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* @return array containing all instructions (handles)
 	*/
-	@:overload public function getInstructionHandles() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.InstructionHandle>;
+	@:overload @:public public function getInstructionHandles() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.InstructionHandle>;
 	
 	/**
 	* Get positions (offsets) of all instructions in the list. This relies on that
@@ -425,17 +425,17 @@ extern class InstructionList implements java.io.Serializable
 	*
 	* @return array containing all instruction's offset in byte code
 	*/
-	@:overload public function getInstructionPositions() : java.NativeArray<Int>;
+	@:overload @:public public function getInstructionPositions() : java.NativeArray<Int>;
 	
 	/**
 	* @return complete, i.e., deep copy of this list
 	*/
-	@:overload public function copy() : com.sun.org.apache.bcel.internal.generic.InstructionList;
+	@:overload @:public public function copy() : com.sun.org.apache.bcel.internal.generic.InstructionList;
 	
 	/** Replace all references to the old constant pool with references to the new
 	*  constant pool
 	*/
-	@:overload public function replaceConstantPool(old_cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, new_cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
+	@:overload @:public public function replaceConstantPool(old_cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, new_cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
 	
 	/**
 	* Delete contents of list. Provides besser memory utilization,
@@ -443,27 +443,27 @@ extern class InstructionList implements java.io.Serializable
 	* method is typically called right after
 	* <href="MethodGen.html#getMethod()">MethodGen.getMethod()</a>.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* @return start of list
 	*/
-	@:overload public function getStart() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function getStart() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* @return end of list
 	*/
-	@:overload public function getEnd() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function getEnd() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* @return length of list (Number of instructions, not bytes)
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* @return length of list (Number of instructions, not bytes)
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Redirect all references from old_target to new_target, i.e., update targets
@@ -472,7 +472,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param old_target the old target instruction handle
 	* @param new_target the new target instruction handle
 	*/
-	@:overload public function redirectBranches(old_target : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function redirectBranches(old_target : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* Redirect all references of local variables from old_target to new_target.
@@ -482,7 +482,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param new_target the new target instruction handle
 	* @see MethodGen
 	*/
-	@:overload public function redirectLocalVariables(lg : java.NativeArray<com.sun.org.apache.bcel.internal.generic.LocalVariableGen>, old_target : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function redirectLocalVariables(lg : java.NativeArray<com.sun.org.apache.bcel.internal.generic.LocalVariableGen>, old_target : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* Redirect all references of exception handlers from old_target to new_target.
@@ -492,21 +492,21 @@ extern class InstructionList implements java.io.Serializable
 	* @param new_target the new target instruction handle
 	* @see MethodGen
 	*/
-	@:overload public function redirectExceptionHandlers(exceptions : java.NativeArray<com.sun.org.apache.bcel.internal.generic.CodeExceptionGen>, old_target : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function redirectExceptionHandlers(exceptions : java.NativeArray<com.sun.org.apache.bcel.internal.generic.CodeExceptionGen>, old_target : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/** Add observer for this object.
 	*/
-	@:overload public function addObserver(o : com.sun.org.apache.bcel.internal.generic.InstructionListObserver) : Void;
+	@:overload @:public public function addObserver(o : com.sun.org.apache.bcel.internal.generic.InstructionListObserver) : Void;
 	
 	/** Remove observer for this object.
 	*/
-	@:overload public function removeObserver(o : com.sun.org.apache.bcel.internal.generic.InstructionListObserver) : Void;
+	@:overload @:public public function removeObserver(o : com.sun.org.apache.bcel.internal.generic.InstructionListObserver) : Void;
 	
 	/** Call notify() method on all observers. This method is not called
 	* automatically whenever the state has changed, but has to be
 	* called by the user after he has finished editing the object.
 	*/
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
 	
 }

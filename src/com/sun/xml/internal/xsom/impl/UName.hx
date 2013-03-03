@@ -29,26 +29,26 @@ extern class UName
 	* @param _nsUri
 	*      Use "" to indicate the no namespace.
 	*/
-	@:overload public function new(_nsUri : String, _localName : String, _qname : String) : Void;
+	@:overload @:public public function new(_nsUri : String, _localName : String, _qname : String) : Void;
 	
-	@:overload public function new(nsUri : String, localName : String) : Void;
+	@:overload @:public public function new(nsUri : String, localName : String) : Void;
 	
-	@:overload public function new(decl : com.sun.xml.internal.xsom.XSDeclaration) : Void;
+	@:overload @:public public function new(decl : com.sun.xml.internal.xsom.XSDeclaration) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
-	@:overload public function getQualifiedName() : String;
+	@:overload @:public public function getQualifiedName() : String;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares {@link UName}s by their names.
 	*/
-	public static var comparator(default, null) : java.util.Comparator<Dynamic>;
+	@:public @:static @:final public static var comparator(default, null) : java.util.Comparator<Dynamic>;
 	
 	
 }

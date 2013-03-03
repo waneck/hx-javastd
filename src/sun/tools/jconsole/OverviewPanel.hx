@@ -25,11 +25,11 @@ package sun.tools.jconsole;
 */
 @:internal extern class OverviewPanel extends sun.tools.jconsole.PlotterPanel
 {
-	@:overload public function new(title : String) : Void;
+	@:overload @:public public function new(title : String) : Void;
 	
-	@:overload public function new(title : String, plotterKey : String, plotterName : String, plotterUnit : sun.tools.jconsole.Plotter.Plotter_Unit) : Void;
+	@:overload @:public public function new(title : String, plotterKey : String, plotterName : String, plotterUnit : sun.tools.jconsole.Plotter.Plotter_Unit) : Void;
 	
-	@:overload public function getInfoLabel() : javax.swing.JLabel;
+	@:overload @:public public function getInfoLabel() : javax.swing.JLabel;
 	
 	
 }

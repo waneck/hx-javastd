@@ -30,140 +30,140 @@ extern class SunDropTargetContextPeer implements java.awt.dnd.peer.DropTargetCon
 	* SunDropTargetEvent is processed and return the status back
 	* to the native code.
 	*/
-	public static var DISPATCH_SYNC(default, null) : Bool;
+	@:public @:static @:final public static var DISPATCH_SYNC(default, null) : Bool;
 	
-	private var dropStatus : Int;
+	@:protected private var dropStatus : Int;
 	
 	/*
 	* global lock
 	*/
-	private static var _globalLock(default, null) : Dynamic;
+	@:protected @:static @:final private static var _globalLock(default, null) : Dynamic;
 	
 	/*
 	* a primitive mechanism for advertising intra-JVM Transferables
 	*/
-	private static var currentJVMLocalSourceTransferable : java.awt.datatransfer.Transferable;
+	@:protected @:static private static var currentJVMLocalSourceTransferable : java.awt.datatransfer.Transferable;
 	
-	@:overload public static function setCurrentJVMLocalSourceTransferable(t : java.awt.datatransfer.Transferable) : Void;
+	@:overload @:public @:static public static function setCurrentJVMLocalSourceTransferable(t : java.awt.datatransfer.Transferable) : Void;
 	
 	/*
 	* constants used by dropAccept() or dropReject()
 	*/
-	private static var STATUS_NONE(default, null) : Int;
+	@:protected @:final @:static private static var STATUS_NONE(default, null) : Int;
 	
-	private static var STATUS_WAIT(default, null) : Int;
+	@:protected @:final @:static private static var STATUS_WAIT(default, null) : Int;
 	
-	private static var STATUS_ACCEPT(default, null) : Int;
+	@:protected @:final @:static private static var STATUS_ACCEPT(default, null) : Int;
 	
-	private static var STATUS_REJECT(default, null) : Int;
+	@:protected @:final @:static private static var STATUS_REJECT(default, null) : Int;
 	
 	/**
 	* create the peer
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* @return the DropTarget associated with this peer
 	*/
-	@:overload public function getDropTarget() : java.awt.dnd.DropTarget;
+	@:overload @:public public function getDropTarget() : java.awt.dnd.DropTarget;
 	
 	/**
 	* @param actions set the current actions
 	*/
-	@:overload @:synchronized public function setTargetActions(actions : Int) : Void;
+	@:overload @:public @:synchronized public function setTargetActions(actions : Int) : Void;
 	
 	/**
 	* @return the current target actions
 	*/
-	@:overload public function getTargetActions() : Int;
+	@:overload @:public public function getTargetActions() : Int;
 	
 	/**
 	* get the Transferable associated with the drop
 	*/
-	@:overload public function getTransferable() : java.awt.datatransfer.Transferable;
+	@:overload @:public public function getTransferable() : java.awt.datatransfer.Transferable;
 	
 	/**
 	* @return current DataFlavors available
 	*/
-	@:overload public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* @return if the flavor is supported
 	*/
-	@:overload public function isDataFlavorSupported(df : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public public function isDataFlavorSupported(df : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* @return the data
 	*/
-	@:overload public function getTransferData(df : java.awt.datatransfer.DataFlavor) : Dynamic;
+	@:overload @:public public function getTransferData(df : java.awt.datatransfer.DataFlavor) : Dynamic;
 	
-	@:overload @:abstract private function getNativeData(format : haxe.Int64) : Dynamic;
+	@:overload @:protected @:abstract private function getNativeData(format : haxe.Int64) : Dynamic;
 	
 	/**
 	* @return if the transfer is a local one
 	*/
-	@:overload public function isTransferableJVMLocal() : Bool;
+	@:overload @:public public function isTransferableJVMLocal() : Bool;
 	
 	/**
 	* actual processing on EventQueue Thread
 	*/
-	@:overload private function processEnterMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
+	@:overload @:protected private function processEnterMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
 	
 	/**
 	*
 	*/
-	@:overload private function processExitMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
+	@:overload @:protected private function processExitMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
 	
 	/**
 	*
 	*/
-	@:overload private function processMotionMessage(event : sun.awt.dnd.SunDropTargetEvent, operationChanged : Bool) : Void;
+	@:overload @:protected private function processMotionMessage(event : sun.awt.dnd.SunDropTargetEvent, operationChanged : Bool) : Void;
 	
 	/**
 	*
 	*/
-	@:overload private function processDropMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
+	@:overload @:protected private function processDropMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
 	
-	@:overload private function postDropTargetEvent(component : java.awt.Component, x : Int, y : Int, dropAction : Int, actions : Int, formats : java.NativeArray<haxe.Int64>, nativeCtxt : haxe.Int64, eventID : Int, dispatchType : Bool) : Int;
+	@:overload @:protected private function postDropTargetEvent(component : java.awt.Component, x : Int, y : Int, dropAction : Int, actions : Int, formats : java.NativeArray<haxe.Int64>, nativeCtxt : haxe.Int64, eventID : Int, dispatchType : Bool) : Int;
 	
 	/**
 	* acceptDrag
 	*/
-	@:overload @:synchronized public function acceptDrag(dragOperation : Int) : Void;
+	@:overload @:public @:synchronized public function acceptDrag(dragOperation : Int) : Void;
 	
 	/**
 	* rejectDrag
 	*/
-	@:overload @:synchronized public function rejectDrag() : Void;
+	@:overload @:public @:synchronized public function rejectDrag() : Void;
 	
 	/**
 	* acceptDrop
 	*/
-	@:overload @:synchronized public function acceptDrop(dropOperation : Int) : Void;
+	@:overload @:public @:synchronized public function acceptDrop(dropOperation : Int) : Void;
 	
 	/**
 	* reject Drop
 	*/
-	@:overload @:synchronized public function rejectDrop() : Void;
+	@:overload @:public @:synchronized public function rejectDrop() : Void;
 	
 	/**
 	* signal drop complete
 	*/
-	@:overload @:synchronized public function dropComplete(success : Bool) : Void;
+	@:overload @:public @:synchronized public function dropComplete(success : Bool) : Void;
 	
-	@:overload @:abstract private function doDropDone(success : Bool, dropAction : Int, isLocal : Bool) : Void;
+	@:overload @:protected @:abstract private function doDropDone(success : Bool, dropAction : Int, isLocal : Bool) : Void;
 	
-	@:overload @:synchronized private function getNativeDragContext() : haxe.Int64;
+	@:overload @:protected @:synchronized private function getNativeDragContext() : haxe.Int64;
 	
-	@:overload private function eventPosted(e : sun.awt.dnd.SunDropTargetEvent) : Void;
+	@:overload @:protected private function eventPosted(e : sun.awt.dnd.SunDropTargetEvent) : Void;
 	
-	@:overload private function eventProcessed(e : sun.awt.dnd.SunDropTargetEvent, returnValue : Int, dispatcherDone : Bool) : Void;
+	@:overload @:protected private function eventProcessed(e : sun.awt.dnd.SunDropTargetEvent, returnValue : Int, dispatcherDone : Bool) : Void;
 	
 	
 }
 @:native('sun$awt$dnd$SunDropTargetContextPeer$EventDispatcher') extern class SunDropTargetContextPeer_EventDispatcher
 {
-	@:overload public function unregisterAllEvents() : Void;
+	@:overload @:public public function unregisterAllEvents() : Void;
 	
 	
 }

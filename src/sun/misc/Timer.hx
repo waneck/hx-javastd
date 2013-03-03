@@ -87,7 +87,7 @@ extern class Timer
 	* This is the owner of the timer.  Its tick method is
 	* called when the timer ticks.
 	*/
-	public var owner : sun.misc.Timeable;
+	@:public public var owner : sun.misc.Timeable;
 	
 	/**
 	* Creates a timer object that is owned by 'owner' and
@@ -98,12 +98,12 @@ extern class Timer
 	* @param owner    owner of the timer object
 	* @param interval interval of the timer in milliseconds
 	*/
-	@:overload public function new(owner : sun.misc.Timeable, interval : haxe.Int64) : Void;
+	@:overload @:public public function new(owner : sun.misc.Timeable, interval : haxe.Int64) : Void;
 	
 	/**
 	* Returns true if this timer is stopped.
 	*/
-	@:overload @:synchronized public function isStopped() : Bool;
+	@:overload @:public @:synchronized public function isStopped() : Bool;
 	
 	/**
 	* Stops the timer.  The amount of time the timer has already
@@ -115,7 +115,7 @@ extern class Timer
 	* implementation reasons, the synchronized modifier cannot
 	* be included in the method declaration.
 	*/
-	@:overload public function stop() : Void;
+	@:overload @:public public function stop() : Void;
 	
 	/**
 	* Continue the timer.  The next tick will come at getRemainingTime()
@@ -125,24 +125,24 @@ extern class Timer
 	* implementation reasons, the synchronized modifier cannot
 	* be included in the method declaration.
 	*/
-	@:overload public function cont() : Void;
+	@:overload @:public public function cont() : Void;
 	
 	/**
 	* Resets the timer's remaining time to the timer's interval.
 	* If the timer's running state is not altered.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Returns the time at which the timer was last stopped.  The
 	* return value is valid only if the timer is stopped.
 	*/
-	@:overload @:synchronized public function getStopTime() : haxe.Int64;
+	@:overload @:public @:synchronized public function getStopTime() : haxe.Int64;
 	
 	/**
 	* Returns the timer's interval.
 	*/
-	@:overload @:synchronized public function getInterval() : haxe.Int64;
+	@:overload @:public @:synchronized public function getInterval() : haxe.Int64;
 	
 	/**
 	* Changes the timer's interval.  The new interval setting
@@ -151,13 +151,13 @@ extern class Timer
 	* running state of the timer.
 	* @param interval new interval of the timer in milliseconds
 	*/
-	@:overload @:synchronized public function setInterval(interval : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function setInterval(interval : haxe.Int64) : Void;
 	
 	/**
 	* Returns the remaining time before the timer's next tick.
 	* The return value is valid only if timer is stopped.
 	*/
-	@:overload @:synchronized public function getRemainingTime() : haxe.Int64;
+	@:overload @:public @:synchronized public function getRemainingTime() : haxe.Int64;
 	
 	/**
 	* Sets the remaining time before the timer's next tick.
@@ -167,7 +167,7 @@ extern class Timer
 	* be included in the method declaration.
 	* @param time new remaining time in milliseconds.
 	*/
-	@:overload public function setRemainingTime(time : haxe.Int64) : Void;
+	@:overload @:public public function setRemainingTime(time : haxe.Int64) : Void;
 	
 	/**
 	* In regular mode, a timer ticks at the specified interval,
@@ -180,12 +180,12 @@ extern class Timer
 	* In irregular mode, a timer starts delaying for exactly
 	* the specified interval only after the tick() method returns.
 	*/
-	@:overload @:synchronized public function setRegular(regular : Bool) : Void;
+	@:overload @:public @:synchronized public function setRegular(regular : Bool) : Void;
 	
 	/*
 	* This method is used only for testing purposes.
 	*/
-	@:overload private function getTimerThread() : java.lang.Thread;
+	@:overload @:protected private function getTimerThread() : java.lang.Thread;
 	
 	
 }
@@ -194,11 +194,11 @@ extern class Timer
 	/*
 	* Set to true to get debugging output.
 	*/
-	public static var debug : Bool;
+	@:public @:static public static var debug : Bool;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload @:synchronized override public function run() : Void;
+	@:overload @:public @:synchronized override public function run() : Void;
 	
 	/*
 	* Uses timer.sleepUntil to determine where in the queue
@@ -208,14 +208,14 @@ extern class Timer
 	* The timer must not already be in the queue.
 	* Assumes the caller has the TimerThread monitor.
 	*/
-	@:overload private static function enqueue(timer : sun.misc.Timer) : Void;
+	@:overload @:static @:protected private static function enqueue(timer : sun.misc.Timer) : Void;
 	
 	/*
 	* If the timer is not in the queue, returns false;
 	* otherwise removes the timer from the timer queue and returns true.
 	* Assumes the caller has the TimerThread monitor.
 	*/
-	@:overload private static function dequeue(timer : sun.misc.Timer) : Bool;
+	@:overload @:static @:protected private static function dequeue(timer : sun.misc.Timer) : Bool;
 	
 	/*
 	* Inserts the timer back into the queue.  This method
@@ -224,7 +224,7 @@ extern class Timer
 	* the sleepUntil field.
 	* Assumes the caller has the TimerThread and Timer monitor.
 	*/
-	@:overload private static function requeue(timer : sun.misc.Timer) : Void;
+	@:overload @:protected @:static private static function requeue(timer : sun.misc.Timer) : Void;
 	
 	
 }
@@ -236,9 +236,9 @@ extern class Timer
 	* is available, otherwise, a new thread is created.
 	* The thread handle is returned.
 	*/
-	@:overload @:synchronized private static function call(timer : sun.misc.Timer, sleepUntil : haxe.Int64) : sun.misc.Timer.TimerTickThread;
+	@:overload @:protected @:static @:synchronized private static function call(timer : sun.misc.Timer, sleepUntil : haxe.Int64) : sun.misc.Timer.TimerTickThread;
 	
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

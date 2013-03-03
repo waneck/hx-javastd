@@ -25,9 +25,9 @@ package com.sun.tools.corba.se.idl.toJavaPortable;
 */
 extern class NameModifierImpl implements com.sun.tools.corba.se.idl.toJavaPortable.NameModifier
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(prefix : String, suffix : String) : Void;
+	@:overload @:public public function new(prefix : String, suffix : String) : Void;
 	
 	/** Construct a NameModifier from a pattern of the form xxx%xxx.
 	* The pattern must consist of characters chosen from the
@@ -38,9 +38,9 @@ extern class NameModifierImpl implements com.sun.tools.corba.se.idl.toJavaPortab
 	* The semantics of makeName are very simply: just replace the
 	* % character with the base in the pattern and return the result.
 	*/
-	@:overload public function new(pattern : String) : Void;
+	@:overload @:public public function new(pattern : String) : Void;
 	
-	@:overload public function makeName(base : String) : String;
+	@:overload @:public public function makeName(base : String) : String;
 	
 	
 }

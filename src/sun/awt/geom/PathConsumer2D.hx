@@ -28,27 +28,27 @@ extern interface PathConsumer2D
 	/**
 	* @see java.awt.geom.Path2D.Float.moveTo
 	*/
-	@:overload public function moveTo(x : Single, y : Single) : Void;
+	@:overload @:public public function moveTo(x : Single, y : Single) : Void;
 	
 	/**
 	* @see java.awt.geom.Path2D.Float.lineTo
 	*/
-	@:overload public function lineTo(x : Single, y : Single) : Void;
+	@:overload @:public public function lineTo(x : Single, y : Single) : Void;
 	
 	/**
 	* @see java.awt.geom.Path2D.Float.quadTo
 	*/
-	@:overload public function quadTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
+	@:overload @:public public function quadTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single) : Void;
 	
 	/**
 	* @see java.awt.geom.Path2D.Float.curveTo
 	*/
-	@:overload public function curveTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single, x3 : Single, y3 : Single) : Void;
+	@:overload @:public public function curveTo(x1 : Single, y1 : Single, x2 : Single, y2 : Single, x3 : Single, y3 : Single) : Void;
 	
 	/**
 	* @see java.awt.geom.Path2D.Float.closePath
 	*/
-	@:overload public function closePath() : Void;
+	@:overload @:public public function closePath() : Void;
 	
 	/**
 	* Called after the last segment of the last subpath when the
@@ -58,7 +58,7 @@ extern interface PathConsumer2D
 	* {@link java.awt.geom.PathIterator PathIterator}
 	* returns {@code true} from its {@code done} method.
 	*/
-	@:overload public function pathDone() : Void;
+	@:overload @:public public function pathDone() : Void;
 	
 	/**
 	* If a given PathConsumer performs all or most of its work
@@ -70,7 +70,7 @@ extern interface PathConsumer2D
 	* src/share/native/sun/java2d/pipe/PathConsumer2D.h
 	* @return a native pointer to a PathConsumerVec structure.
 	*/
-	@:overload public function getNativeConsumer() : haxe.Int64;
+	@:overload @:public public function getNativeConsumer() : haxe.Int64;
 	
 	
 }

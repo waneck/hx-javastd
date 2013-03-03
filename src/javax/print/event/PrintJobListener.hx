@@ -43,27 +43,27 @@ extern interface PrintJobListener
 	* event (completed/canceled/failed) before freeing the resources.
 	* @param pje the job generating this event
 	*/
-	@:overload public function printDataTransferCompleted(pje : javax.print.event.PrintJobEvent) : Void;
+	@:overload @:public public function printDataTransferCompleted(pje : javax.print.event.PrintJobEvent) : Void;
 	
 	/**
 	* Called to notify the client that the job completed successfully.
 	* @param pje the job generating this event
 	*/
-	@:overload public function printJobCompleted(pje : javax.print.event.PrintJobEvent) : Void;
+	@:overload @:public public function printJobCompleted(pje : javax.print.event.PrintJobEvent) : Void;
 	
 	/**
 	* Called to notify the client that the job failed to complete
 	* successfully and will have to be resubmitted.
 	* @param pje the job generating this event
 	*/
-	@:overload public function printJobFailed(pje : javax.print.event.PrintJobEvent) : Void;
+	@:overload @:public public function printJobFailed(pje : javax.print.event.PrintJobEvent) : Void;
 	
 	/**
 	* Called to notify the client that the job was canceled
 	* by a user or a program.
 	* @param pje the job generating this event
 	*/
-	@:overload public function printJobCanceled(pje : javax.print.event.PrintJobEvent) : Void;
+	@:overload @:public public function printJobCanceled(pje : javax.print.event.PrintJobEvent) : Void;
 	
 	/**
 	* Called to notify the client that no more events will be delivered.
@@ -74,7 +74,7 @@ extern interface PrintJobListener
 	* terminal events (completed/failed/canceled) are delivered.
 	* @param pje the job generating this event
 	*/
-	@:overload public function printJobNoMoreEvents(pje : javax.print.event.PrintJobEvent) : Void;
+	@:overload @:public public function printJobNoMoreEvents(pje : javax.print.event.PrintJobEvent) : Void;
 	
 	/**
 	* Called to notify the client that an error has occurred that the
@@ -82,7 +82,7 @@ extern interface PrintJobListener
 	* generate this event is when the printer runs out of paper.
 	* @param pje the job generating this event
 	*/
-	@:overload public function printJobRequiresAttention(pje : javax.print.event.PrintJobEvent) : Void;
+	@:overload @:public public function printJobRequiresAttention(pje : javax.print.event.PrintJobEvent) : Void;
 	
 	
 }

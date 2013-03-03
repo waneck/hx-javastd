@@ -39,7 +39,7 @@ extern class ContentType
 	/**
 	* No-arg Constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor.
@@ -48,7 +48,7 @@ extern class ContentType
 	* @param   subType subType
 	* @param   list    ParameterList
 	*/
-	@:overload public function new(primaryType : String, subType : String, list : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParameterList) : Void;
+	@:overload @:public public function new(primaryType : String, subType : String, list : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParameterList) : Void;
 	
 	/**
 	* Constructor that takes a Content-Type string. The String
@@ -58,21 +58,21 @@ extern class ContentType
 	* @param   s       the Content-Type string.
 	* @exception       ParseException if the parse fails.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
-	@:overload public function copy() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType;
+	@:overload @:public public function copy() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType;
 	
 	/**
 	* Return the primary type.
 	* @return the primary type
 	*/
-	@:overload public function getPrimaryType() : String;
+	@:overload @:public public function getPrimaryType() : String;
 	
 	/**
 	* Return the subType.
 	* @return the subType
 	*/
-	@:overload public function getSubType() : String;
+	@:overload @:public public function getSubType() : String;
 	
 	/**
 	* Return the MIME type string, without the parameters.
@@ -81,14 +81,14 @@ extern class ContentType
 	*
 	* @return the type
 	*/
-	@:overload public function getBaseType() : String;
+	@:overload @:public public function getBaseType() : String;
 	
 	/**
 	* Return the specified parameter value. Returns <code>null</code>
 	* if this parameter is absent.
 	* @return  parameter value
 	*/
-	@:overload public function getParameter(name : String) : String;
+	@:overload @:public public function getParameter(name : String) : String;
 	
 	/**
 	* Return a ParameterList object that holds all the available
@@ -96,19 +96,19 @@ extern class ContentType
 	*
 	* @return  ParameterList
 	*/
-	@:overload public function getParameterList() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParameterList;
+	@:overload @:public public function getParameterList() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParameterList;
 	
 	/**
 	* Set the primary type. Overrides existing primary type.
 	* @param   primaryType     primary type
 	*/
-	@:overload public function setPrimaryType(primaryType : String) : Void;
+	@:overload @:public public function setPrimaryType(primaryType : String) : Void;
 	
 	/**
 	* Set the subType. Overrides existing subType
 	* @param   subType subType
 	*/
-	@:overload public function setSubType(subType : String) : Void;
+	@:overload @:public public function setSubType(subType : String) : Void;
 	
 	/**
 	* Set the specified parameter. If this parameter already exists,
@@ -117,13 +117,13 @@ extern class ContentType
 	* @param   name    parameter name
 	* @param   value   parameter value
 	*/
-	@:overload public function setParameter(name : String, value : String) : Void;
+	@:overload @:public public function setParameter(name : String, value : String) : Void;
 	
 	/**
 	* Set a new ParameterList.
 	* @param   list    ParameterList
 	*/
-	@:overload public function setParameterList(list : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParameterList) : Void;
+	@:overload @:public public function setParameterList(list : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParameterList) : Void;
 	
 	/**
 	* Retrieve a RFC2045 style string representation of
@@ -132,7 +132,7 @@ extern class ContentType
 	*
 	* @return  RFC2045 style string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Match with the specified ContentType object. This method
@@ -152,7 +152,7 @@ extern class ContentType
 	*
 	* @param   cType to compare this against
 	*/
-	@:overload public function match(cType : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType) : Bool;
+	@:overload @:public public function match(cType : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType) : Bool;
 	
 	/**
 	* Match with the specified content-type string. This method
@@ -170,7 +170,7 @@ extern class ContentType
 	* comparing the ContentType for <strong>"text/plain"</strong>
 	* with <strong>"text/*" </strong>
 	*/
-	@:overload public function match(s : String) : Bool;
+	@:overload @:public public function match(s : String) : Bool;
 	
 	
 }

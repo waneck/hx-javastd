@@ -40,43 +40,43 @@ package sun.tools.jconsole;
 	Center: plotter
 
 	*/
-	@:overload public static function getTabName() : String;
+	@:overload @:public @:static public static function getTabName() : String;
 	
-	@:overload public function new(vmPanel : sun.tools.jconsole.VMPanel) : Void;
+	@:overload @:public public function new(vmPanel : sun.tools.jconsole.VMPanel) : Void;
 	
-	@:overload public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
+	@:overload @:public override public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
 	
-	@:overload public function valueChanged(ev : javax.swing.event.ListSelectionEvent) : Void;
+	@:overload @:public public function valueChanged(ev : javax.swing.event.ListSelectionEvent) : Void;
 	
-	@:overload public function getDeadlockedThreadIds() : java.NativeArray<java.NativeArray<Null<haxe.Int64>>>;
+	@:overload @:public public function getDeadlockedThreadIds() : java.NativeArray<java.NativeArray<Null<haxe.Int64>>>;
 	
-	@:overload public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$ThreadTab$ThreadJList') @:internal extern class ThreadTab_ThreadJList extends javax.swing.JList<Dynamic>
 {
-	@:overload public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	
 }
 @:native('sun$tools$jconsole$ThreadTab$PromptingTextField') @:internal extern class ThreadTab_PromptingTextField extends javax.swing.JTextField implements java.awt.event.FocusListener
 {
-	@:overload public function new(prompt : String, columns : Int) : Void;
+	@:overload @:public public function new(prompt : String, columns : Int) : Void;
 	
-	@:overload public function revalidate() : Void;
+	@:overload @:public override public function revalidate() : Void;
 	
-	@:overload public function getText() : String;
+	@:overload @:public override public function getText() : String;
 	
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
 	
 }

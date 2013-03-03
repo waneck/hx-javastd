@@ -64,9 +64,9 @@ extern class Class2HTML implements com.sun.org.apache.bcel.internal.Constants
 	* @param java_class The class to write
 	* @param dir The directory to put the files in
 	*/
-	@:overload public function new(java_class : com.sun.org.apache.bcel.internal.classfile.JavaClass, dir : String) : Void;
+	@:overload @:public public function new(java_class : com.sun.org.apache.bcel.internal.classfile.JavaClass, dir : String) : Void;
 	
-	@:overload public static function _main(argv : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function _main(argv : java.NativeArray<String>) : Void;
 	
 	
 }

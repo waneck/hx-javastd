@@ -29,7 +29,7 @@ extern class SOAPVersionMismatchException extends com.sun.xml.internal.messaging
 	* Constructs a <code>SOAPExceptionImpl</code> object with no
 	* reason or embedded <code>Throwable</code> object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>SOAPExceptionImpl</code> object with the given
@@ -37,7 +37,7 @@ extern class SOAPVersionMismatchException extends com.sun.xml.internal.messaging
 	*
 	* @param reason a description of what caused the exception
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	/**
 	* Constructs a <code>SOAPExceptionImpl</code> object with the given
@@ -49,13 +49,13 @@ extern class SOAPVersionMismatchException extends com.sun.xml.internal.messaging
 	* @param cause a <code>Throwable</code> object that is to
 	*        be embedded in this <code>SOAPExceptionImpl</code> object
 	*/
-	@:overload public function new(reason : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(reason : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a <code>SOAPExceptionImpl</code> object initialized
 	* with the given <code>Throwable</code> object.
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

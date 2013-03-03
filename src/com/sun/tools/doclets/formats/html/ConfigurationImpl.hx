@@ -47,140 +47,140 @@ extern class ConfigurationImpl extends com.sun.tools.doclets.internal.toolkit.Co
 	* The build date.  Note: For now, we will use
 	* a version number instead of a date.
 	*/
-	public static var BUILD_DATE(default, null) : String;
+	@:public @:static @:final public static var BUILD_DATE(default, null) : String;
 	
 	/**
 	* The name of the constant values file.
 	*/
-	public static var CONSTANTS_FILE_NAME(default, null) : String;
+	@:public @:static @:final public static var CONSTANTS_FILE_NAME(default, null) : String;
 	
 	/**
 	* Argument for command line option "-header".
 	*/
-	public var header : String;
+	@:public public var header : String;
 	
 	/**
 	* Argument for command line option "-packagesheader".
 	*/
-	public var packagesheader : String;
+	@:public public var packagesheader : String;
 	
 	/**
 	* Argument for command line option "-footer".
 	*/
-	public var footer : String;
+	@:public public var footer : String;
 	
 	/**
 	* Argument for command line option "-doctitle".
 	*/
-	public var doctitle : String;
+	@:public public var doctitle : String;
 	
 	/**
 	* Argument for command line option "-windowtitle".
 	*/
-	public var windowtitle : String;
+	@:public public var windowtitle : String;
 	
 	/**
 	* Argument for command line option "-top".
 	*/
-	public var top : String;
+	@:public public var top : String;
 	
 	/**
 	* Argument for command line option "-bottom".
 	*/
-	public var bottom : String;
+	@:public public var bottom : String;
 	
 	/**
 	* Argument for command line option "-helpfile".
 	*/
-	public var helpfile : String;
+	@:public public var helpfile : String;
 	
 	/**
 	* Argument for command line option "-stylesheetfile".
 	*/
-	public var stylesheetfile : String;
+	@:public public var stylesheetfile : String;
 	
 	/**
 	* Argument for command line option "-Xdocrootparent".
 	*/
-	public var docrootparent : String;
+	@:public public var docrootparent : String;
 	
 	/**
 	* True if command line option "-nohelp" is used. Default value is false.
 	*/
-	public var nohelp : Bool;
+	@:public public var nohelp : Bool;
 	
 	/**
 	* True if command line option "-splitindex" is used. Default value is
 	* false.
 	*/
-	public var splitindex : Bool;
+	@:public public var splitindex : Bool;
 	
 	/**
 	* False if command line option "-noindex" is used. Default value is true.
 	*/
-	public var createindex : Bool;
+	@:public public var createindex : Bool;
 	
 	/**
 	* True if command line option "-use" is used. Default value is false.
 	*/
-	public var classuse : Bool;
+	@:public public var classuse : Bool;
 	
 	/**
 	* False if command line option "-notree" is used. Default value is true.
 	*/
-	public var createtree : Bool;
+	@:public public var createtree : Bool;
 	
 	/**
 	* True if command line option "-nodeprecated" is used. Default value is
 	* false.
 	*/
-	public var nodeprecatedlist : Bool;
+	@:public public var nodeprecatedlist : Bool;
 	
 	/**
 	* True if command line option "-nonavbar" is used. Default value is false.
 	*/
-	public var nonavbar : Bool;
+	@:public public var nonavbar : Bool;
 	
 	/**
 	* True if command line option "-overview" is used. Default value is false.
 	*/
-	public var overview : Bool;
+	@:public public var overview : Bool;
 	
 	/**
 	* This is true if option "-overview" is used or option "-overview" is not
 	* used and number of packages is more than one.
 	*/
-	public var createoverview : Bool;
+	@:public public var createoverview : Bool;
 	
 	/**
 	* Unique Resource Handler for this package.
 	*/
-	public var standardmessage(default, null) : com.sun.tools.doclets.internal.toolkit.util.MessageRetriever;
+	@:public @:final public var standardmessage(default, null) : com.sun.tools.doclets.internal.toolkit.util.MessageRetriever;
 	
 	/**
 	* First file to appear in the right-hand frame in the generated
 	* documentation.
 	*/
-	public var topFile : String;
+	@:public public var topFile : String;
 	
 	/**
 	* The classdoc for the class file getting generated.
 	*/
-	public var currentcd : com.sun.javadoc.ClassDoc;
+	@:public public var currentcd : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Reset to a fresh new ConfigurationImpl, to allow multiple invocations
 	* of javadoc within a single VM. It would be better not to be using
 	* static fields at all, but .... (sigh).
 	*/
-	@:overload public static function reset() : Void;
+	@:overload @:public @:static public static function reset() : Void;
 	
-	@:overload public static function getInstance() : com.sun.tools.doclets.formats.html.ConfigurationImpl;
+	@:overload @:public @:static public static function getInstance() : com.sun.tools.doclets.formats.html.ConfigurationImpl;
 	
 	/**
 	* Return the build date for the doclet.
 	*/
-	@:overload override public function getDocletSpecificBuildDate() : String;
+	@:overload @:public override public function getDocletSpecificBuildDate() : String;
 	
 	/**
 	* Depending upon the command line options provided by the user, set
@@ -188,7 +188,7 @@ extern class ConfigurationImpl extends com.sun.tools.doclets.internal.toolkit.Co
 	*
 	* @param options The array of option names and values.
 	*/
-	@:overload override public function setSpecificDocletOptions(options : java.NativeArray<java.NativeArray<String>>) : Void;
+	@:overload @:public override public function setSpecificDocletOptions(options : java.NativeArray<java.NativeArray<String>>) : Void;
 	
 	/**
 	* Returns the "length" of a given option. If an option takes no
@@ -206,17 +206,17 @@ extern class ConfigurationImpl extends com.sun.tools.doclets.internal.toolkit.Co
 	* @return number of arguments + 1 for a option. Zero return means
 	* option not known.  Negative value means error occurred.
 	*/
-	@:overload override public function optionLength(option : String) : Int;
+	@:overload @:public override public function optionLength(option : String) : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function validOptions(options : java.NativeArray<java.NativeArray<String>>, reporter : com.sun.javadoc.DocErrorReporter) : Bool;
+	@:overload @:public override public function validOptions(options : java.NativeArray<java.NativeArray<String>>, reporter : com.sun.javadoc.DocErrorReporter) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getDocletSpecificMsg() : com.sun.tools.doclets.internal.toolkit.util.MessageRetriever;
+	@:overload @:public override public function getDocletSpecificMsg() : com.sun.tools.doclets.internal.toolkit.util.MessageRetriever;
 	
 	/**
 	* Decide the page which will appear first in the right-hand frame. It will
@@ -228,32 +228,32 @@ extern class ConfigurationImpl extends com.sun.tools.doclets.internal.toolkit.Co
 	*
 	* @param root Root of the program structure.
 	*/
-	@:overload private function setTopFile(root : com.sun.javadoc.RootDoc) : Void;
+	@:overload @:protected private function setTopFile(root : com.sun.javadoc.RootDoc) : Void;
 	
-	@:overload private function getValidClass(classarr : java.NativeArray<com.sun.javadoc.ClassDoc>) : com.sun.javadoc.ClassDoc;
+	@:overload @:protected private function getValidClass(classarr : java.NativeArray<com.sun.javadoc.ClassDoc>) : com.sun.javadoc.ClassDoc;
 	
-	@:overload private function checkForDeprecation(root : com.sun.javadoc.RootDoc) : Bool;
+	@:overload @:protected private function checkForDeprecation(root : com.sun.javadoc.RootDoc) : Bool;
 	
 	/**
 	* Generate "overview.html" page if option "-overview" is used or number of
 	* packages is more than one. Sets {@link #createoverview} field to true.
 	*/
-	@:overload private function setCreateOverview() : Void;
+	@:overload @:protected private function setCreateOverview() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getWriterFactory() : com.sun.tools.doclets.internal.toolkit.WriterFactory;
+	@:overload @:public override public function getWriterFactory() : com.sun.tools.doclets.internal.toolkit.WriterFactory;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getMemberComparator() : java.util.Comparator<com.sun.javadoc.ProgramElementDoc>;
+	@:overload @:public override public function getMemberComparator() : java.util.Comparator<com.sun.javadoc.ProgramElementDoc>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getLocale() : java.util.Locale;
+	@:overload @:public override public function getLocale() : java.util.Locale;
 	
 	
 }

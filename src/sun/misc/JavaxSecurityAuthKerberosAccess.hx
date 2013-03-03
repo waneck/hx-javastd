@@ -29,7 +29,7 @@ extern interface JavaxSecurityAuthKerberosAccess
 	* Returns keys for a principal in a keytab.
 	* @return the keys, never null, can be empty.
 	*/
-	@:overload public function keyTabGetEncryptionKeys(ktab : javax.security.auth.kerberos.KeyTab, principal : sun.security.krb5.PrincipalName) : java.NativeArray<sun.security.krb5.EncryptionKey>;
+	@:overload @:public public function keyTabGetEncryptionKeys(ktab : javax.security.auth.kerberos.KeyTab, principal : sun.security.krb5.PrincipalName) : java.NativeArray<sun.security.krb5.EncryptionKey>;
 	
 	
 }

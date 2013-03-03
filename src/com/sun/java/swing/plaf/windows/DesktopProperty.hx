@@ -41,36 +41,36 @@ extern class DesktopProperty implements javax.swing.UIDefaults.UIDefaults_Active
 	* @param key Key used in looking up desktop value.
 	* @param fallback Value used if desktop property is null.
 	*/
-	@:overload public function new(key : String, fallback : Dynamic) : Void;
+	@:overload @:public public function new(key : String, fallback : Dynamic) : Void;
 	
 	/**
 	* UIManager.LazyValue method, returns the value from the desktop
 	* or the fallback value if the desktop value is null.
 	*/
-	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	/**
 	* Returns the value from the desktop.
 	*/
-	@:overload private function getValueFromDesktop() : Dynamic;
+	@:overload @:protected private function getValueFromDesktop() : Dynamic;
 	
 	/**
 	* Returns the value to use if the desktop property is null.
 	*/
-	@:overload private function getDefaultValue() : Dynamic;
+	@:overload @:protected private function getDefaultValue() : Dynamic;
 	
 	/**
 	* Invalidates the current value.
 	*
 	* @param laf the LookAndFeel this DesktopProperty was created with
 	*/
-	@:overload public function invalidate(laf : javax.swing.LookAndFeel) : Void;
+	@:overload @:public public function invalidate(laf : javax.swing.LookAndFeel) : Void;
 	
 	/**
 	* Invalides the current value so that the next invocation of
 	* <code>createValue</code> will ask for the property again.
 	*/
-	@:overload public function invalidate() : Void;
+	@:overload @:public public function invalidate() : Void;
 	
 	/**
 	* Requests that all components in the GUI hierarchy be updated
@@ -79,18 +79,18 @@ extern class DesktopProperty implements javax.swing.UIDefaults.UIDefaults_Active
 	* batched and collapsed into a single update pass because often
 	* many desktop properties will change at once.
 	*/
-	@:overload private function updateUI() : Void;
+	@:overload @:protected private function updateUI() : Void;
 	
 	/**
 	* Configures the value as appropriate for a defaults property in
 	* the UIDefaults table.
 	*/
-	@:overload private function configureValue(value : Dynamic) : Dynamic;
+	@:overload @:protected private function configureValue(value : Dynamic) : Dynamic;
 	
 	/**
 	* Returns the key used to lookup the desktop properties value.
 	*/
-	@:overload private function getKey() : String;
+	@:overload @:protected private function getKey() : String;
 	
 	
 }
@@ -101,7 +101,7 @@ extern class DesktopProperty implements javax.swing.UIDefaults.UIDefaults_Active
 */
 @:native('com$sun$java$swing$plaf$windows$DesktopProperty$WeakPCL') @:internal extern class DesktopProperty_WeakPCL extends java.lang.ref.WeakReference<com.sun.java.swing.plaf.windows.DesktopProperty> implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(pce : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(pce : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

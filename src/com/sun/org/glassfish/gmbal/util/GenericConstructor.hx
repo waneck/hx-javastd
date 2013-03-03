@@ -35,7 +35,7 @@ extern class GenericConstructor<T>
 	* @param signature The signature of the desired constructor.
 	* @throws IllegalArgumentException if cls is not a subclass of type.
 	*/
-	@:overload public function new(type : Class<T>, className : String, signature : java.NativeArray<Class<Dynamic>>) : Void;
+	@:overload @:public public function new(type : Class<T>, className : String, signature : java.NativeArray<Class<Dynamic>>) : Void;
 	
 	/** Create an instance of type T using the constructor that
 	* matches the given arguments if possible.  The constructor
@@ -46,7 +46,7 @@ extern class GenericConstructor<T>
 	* @param args The constructor arguments.
 	* @return A new instance of the object.
 	*/
-	@:overload @:synchronized public function create(args : java.NativeArray<Dynamic>) : T;
+	@:overload @:public @:synchronized public function create(args : java.NativeArray<Dynamic>) : T;
 	
 	
 }

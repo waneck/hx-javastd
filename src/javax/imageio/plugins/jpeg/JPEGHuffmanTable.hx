@@ -28,22 +28,22 @@ extern class JPEGHuffmanTable
 	/**
 	* The standard DC luminance Huffman table.
 	*/
-	public static var StdDCLuminance(default, null) : javax.imageio.plugins.jpeg.JPEGHuffmanTable;
+	@:public @:static @:final public static var StdDCLuminance(default, null) : javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 	
 	/**
 	* The standard DC chrominance Huffman table.
 	*/
-	public static var StdDCChrominance(default, null) : javax.imageio.plugins.jpeg.JPEGHuffmanTable;
+	@:public @:static @:final public static var StdDCChrominance(default, null) : javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 	
 	/**
 	* The standard AC luminance Huffman table.
 	*/
-	public static var StdACLuminance(default, null) : javax.imageio.plugins.jpeg.JPEGHuffmanTable;
+	@:public @:static @:final public static var StdACLuminance(default, null) : javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 	
 	/**
 	* The standard AC chrominance Huffman table.
 	*/
-	public static var StdACChrominance(default, null) : javax.imageio.plugins.jpeg.JPEGHuffmanTable;
+	@:public @:static @:final public static var StdACChrominance(default, null) : javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 	
 	/**
 	* Creates a Huffman table and initializes it. The input arrays are copied.
@@ -61,7 +61,7 @@ extern class JPEGHuffmanTable
 	* if any value in <code>lengths</code> or <code>values</code> is less
 	* than zero, or if the arrays do not describe a valid Huffman table.
 	*/
-	@:overload public function new(lengths : java.NativeArray<java.StdTypes.Int16>, values : java.NativeArray<java.StdTypes.Int16>) : Void;
+	@:overload @:public public function new(lengths : java.NativeArray<java.StdTypes.Int16>, values : java.NativeArray<java.StdTypes.Int16>) : Void;
 	
 	/**
 	* Returns an array of <code>short</code>s containing the number of values
@@ -71,7 +71,7 @@ extern class JPEGHuffmanTable
 	* is equal to the number of values in the table of length <code>k</code>.
 	* @see #getValues
 	*/
-	@:overload public function getLengths() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getLengths() : java.NativeArray<java.StdTypes.Int16>;
 	
 	/**
 	* Returns an array of <code>short</code>s containing the values arranged
@@ -82,13 +82,13 @@ extern class JPEGHuffmanTable
 	* @return a <code>short</code> array of values.
 	* @see #getLengths
 	*/
-	@:overload public function getValues() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getValues() : java.NativeArray<java.StdTypes.Int16>;
 	
 	/**
 	* Returns a {@code String} representing this Huffman table.
 	* @return a {@code String} representing this Huffman table.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

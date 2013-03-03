@@ -28,31 +28,31 @@ package com.sun.xml.internal.fastinfoset.stax.events;
 extern class StAXFilteredEvent implements javax.xml.stream.XMLEventReader
 {
 	/** Creates a new instance of StAXFilteredEvent */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(reader : javax.xml.stream.XMLEventReader, filter : javax.xml.stream.EventFilter) : Void;
+	@:overload @:public public function new(reader : javax.xml.stream.XMLEventReader, filter : javax.xml.stream.EventFilter) : Void;
 	
-	@:overload public function setEventReader(reader : javax.xml.stream.XMLEventReader) : Void;
+	@:overload @:public public function setEventReader(reader : javax.xml.stream.XMLEventReader) : Void;
 	
-	@:overload public function setFilter(filter : javax.xml.stream.EventFilter) : Void;
+	@:overload @:public public function setFilter(filter : javax.xml.stream.EventFilter) : Void;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function nextEvent() : javax.xml.stream.events.XMLEvent;
+	@:overload @:public public function nextEvent() : javax.xml.stream.events.XMLEvent;
 	
-	@:overload public function getElementText() : String;
+	@:overload @:public public function getElementText() : String;
 	
-	@:overload public function nextTag() : javax.xml.stream.events.XMLEvent;
+	@:overload @:public public function nextTag() : javax.xml.stream.events.XMLEvent;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
-	@:overload public function peek() : javax.xml.stream.events.XMLEvent;
+	@:overload @:public public function peek() : javax.xml.stream.events.XMLEvent;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	
 }

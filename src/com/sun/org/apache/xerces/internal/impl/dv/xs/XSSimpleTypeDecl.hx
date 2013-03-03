@@ -28,195 +28,195 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*
 	* @version $Id: XSSimpleTypeDecl.java 3029 2011-04-24 17:50:18Z joehw $
 	*/
-	private static var DV_STRING(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_STRING(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_BOOLEAN(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_BOOLEAN(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_DECIMAL(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_DECIMAL(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_FLOAT(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_FLOAT(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_DOUBLE(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_DOUBLE(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_DURATION(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_DURATION(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_DATETIME(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_DATETIME(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_TIME(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_TIME(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_DATE(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_DATE(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_GYEARMONTH(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_GYEARMONTH(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_GYEAR(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_GYEAR(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_GMONTHDAY(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_GMONTHDAY(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_GDAY(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_GDAY(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_GMONTH(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_GMONTH(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_HEXBINARY(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_HEXBINARY(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_BASE64BINARY(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_BASE64BINARY(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_ANYURI(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_ANYURI(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_QNAME(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_QNAME(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_PRECISIONDECIMAL(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_PRECISIONDECIMAL(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_NOTATION(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_NOTATION(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_ANYSIMPLETYPE(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_ANYSIMPLETYPE(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_ID(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_ID(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_IDREF(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_IDREF(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_ENTITY(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_ENTITY(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_INTEGER(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_INTEGER(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_LIST(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_LIST(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_UNION(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_UNION(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_YEARMONTHDURATION(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_YEARMONTHDURATION(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_DAYTIMEDURATION(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_DAYTIMEDURATION(default, null) : java.StdTypes.Int16;
 	
-	private static var DV_ANYATOMICTYPE(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var DV_ANYATOMICTYPE(default, null) : java.StdTypes.Int16;
 	
-	public static var YEARMONTHDURATION_DT(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var YEARMONTHDURATION_DT(default, null) : java.StdTypes.Int16;
 	
-	public static var DAYTIMEDURATION_DT(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var DAYTIMEDURATION_DT(default, null) : java.StdTypes.Int16;
 	
-	public static var PRECISIONDECIMAL_DT(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var PRECISIONDECIMAL_DT(default, null) : java.StdTypes.Int16;
 	
-	public static var ANYATOMICTYPE_DT(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var ANYATOMICTYPE_DT(default, null) : java.StdTypes.Int16;
 	
-	@:overload private static function getGDVs() : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.xs.TypeValidator>;
+	@:overload @:protected @:static private static function getGDVs() : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.xs.TypeValidator>;
 	
-	@:overload private function setDVs(dvs : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.xs.TypeValidator>) : Void;
+	@:overload @:protected private function setDVs(dvs : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.xs.TypeValidator>) : Void;
 	
-	public var lengthAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var lengthAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var minLengthAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var minLengthAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var maxLengthAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var maxLengthAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var whiteSpaceAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var whiteSpaceAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var totalDigitsAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var totalDigitsAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var fractionDigitsAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var fractionDigitsAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var patternAnnotations : com.sun.org.apache.xerces.internal.impl.xs.util.XSObjectListImpl;
+	@:public public var patternAnnotations : com.sun.org.apache.xerces.internal.impl.xs.util.XSObjectListImpl;
 	
-	public var enumerationAnnotations : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:public public var enumerationAnnotations : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
-	public var maxInclusiveAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var maxInclusiveAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var maxExclusiveAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var maxExclusiveAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var minInclusiveAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var minInclusiveAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var minExclusiveAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var minExclusiveAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload private function new(base : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, name : String, validateDV : java.StdTypes.Int16, ordered : java.StdTypes.Int16, bounded : Bool, finite : Bool, numeric : Bool, isImmutable : Bool, builtInKind : java.StdTypes.Int16) : Void;
+	@:overload @:protected private function new(base : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, name : String, validateDV : java.StdTypes.Int16, ordered : java.StdTypes.Int16, bounded : Bool, finite : Bool, numeric : Bool, isImmutable : Bool, builtInKind : java.StdTypes.Int16) : Void;
 	
-	@:overload private function new(base : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, name : String, uri : String, finalSet : java.StdTypes.Int16, isImmutable : Bool, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList, builtInKind : java.StdTypes.Int16) : Void;
+	@:overload @:protected private function new(base : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, name : String, uri : String, finalSet : java.StdTypes.Int16, isImmutable : Bool, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList, builtInKind : java.StdTypes.Int16) : Void;
 	
-	@:overload private function new(base : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, name : String, uri : String, finalSet : java.StdTypes.Int16, isImmutable : Bool, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : Void;
+	@:overload @:protected private function new(base : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, name : String, uri : String, finalSet : java.StdTypes.Int16, isImmutable : Bool, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : Void;
 	
-	@:overload private function new(name : String, uri : String, finalSet : java.StdTypes.Int16, itemType : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, isImmutable : Bool, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : Void;
+	@:overload @:protected private function new(name : String, uri : String, finalSet : java.StdTypes.Int16, itemType : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, isImmutable : Bool, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : Void;
 	
-	@:overload private function new(name : String, uri : String, finalSet : java.StdTypes.Int16, memberTypes : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl>, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : Void;
+	@:overload @:protected private function new(name : String, uri : String, finalSet : java.StdTypes.Int16, memberTypes : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl>, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : Void;
 	
-	@:overload private function setRestrictionValues(base : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, name : String, uri : String, finalSet : java.StdTypes.Int16, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl;
+	@:overload @:protected private function setRestrictionValues(base : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, name : String, uri : String, finalSet : java.StdTypes.Int16, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl;
 	
-	@:overload private function setListValues(name : String, uri : String, finalSet : java.StdTypes.Int16, itemType : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl;
+	@:overload @:protected private function setListValues(name : String, uri : String, finalSet : java.StdTypes.Int16, itemType : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl;
 	
-	@:overload private function setUnionValues(name : String, uri : String, finalSet : java.StdTypes.Int16, memberTypes : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl>, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl;
+	@:overload @:protected private function setUnionValues(name : String, uri : String, finalSet : java.StdTypes.Int16, memberTypes : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl>, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl;
 	
-	@:overload public function getType() : java.StdTypes.Int16;
+	@:overload @:public public function getType() : java.StdTypes.Int16;
 	
-	@:overload public function getTypeCategory() : java.StdTypes.Int16;
+	@:overload @:public public function getTypeCategory() : java.StdTypes.Int16;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getTypeName() : String;
+	@:overload @:public public function getTypeName() : String;
 	
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
-	@:overload public function getFinal() : java.StdTypes.Int16;
+	@:overload @:public public function getFinal() : java.StdTypes.Int16;
 	
-	@:overload public function isFinal(derivation : java.StdTypes.Int16) : Bool;
+	@:overload @:public public function isFinal(derivation : java.StdTypes.Int16) : Bool;
 	
-	@:overload public function getBaseType() : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
+	@:overload @:public public function getBaseType() : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
 	
-	@:overload public function getAnonymous() : Bool;
+	@:overload @:public public function getAnonymous() : Bool;
 	
-	@:overload public function getVariety() : java.StdTypes.Int16;
+	@:overload @:public public function getVariety() : java.StdTypes.Int16;
 	
-	@:overload public function isIDType() : Bool;
+	@:overload @:public public function isIDType() : Bool;
 	
-	@:overload public function getWhitespace() : java.StdTypes.Int16;
+	@:overload @:public public function getWhitespace() : java.StdTypes.Int16;
 	
-	@:overload public function getPrimitiveKind() : java.StdTypes.Int16;
+	@:overload @:public public function getPrimitiveKind() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the closest built-in type category this type represents or
 	* derived from. For example, if this simple type is a built-in derived
 	* type integer the <code>INTEGER_DV</code> is returned.
 	*/
-	@:overload public function getBuiltInKind() : java.StdTypes.Int16;
+	@:overload @:public public function getBuiltInKind() : java.StdTypes.Int16;
 	
 	/**
 	* If variety is <code>atomic</code> the primitive type definition (a
 	* built-in primitive datatype definition or the simple ur-type
 	* definition) is available, otherwise <code>null</code>.
 	*/
-	@:overload public function getPrimitiveType() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
+	@:overload @:public public function getPrimitiveType() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
 	
 	/**
 	* If variety is <code>list</code> the item type definition (an atomic or
 	* union simple type definition) is available, otherwise
 	* <code>null</code>.
 	*/
-	@:overload public function getItemType() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
+	@:overload @:public public function getItemType() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
 	
 	/**
 	* If variety is <code>union</code> the list of member type definitions (a
 	* non-empty sequence of simple type definitions) is available,
 	* otherwise an empty <code>XSObjectList</code>.
 	*/
-	@:overload public function getMemberTypes() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getMemberTypes() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* If <restriction> is chosen
 	*/
-	@:overload public function applyFacets(facets : com.sun.org.apache.xerces.internal.impl.dv.XSFacets, presentFacet : java.StdTypes.Int16, fixedFacet : java.StdTypes.Int16, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
+	@:overload @:public public function applyFacets(facets : com.sun.org.apache.xerces.internal.impl.dv.XSFacets, presentFacet : java.StdTypes.Int16, fixedFacet : java.StdTypes.Int16, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
 	
 	/**
 	* validate a value, and return the compiled form
 	*/
-	@:overload public function validate(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext, validatedInfo : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo) : Dynamic;
+	@:overload @:public public function validate(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext, validatedInfo : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo) : Dynamic;
 	
-	@:overload private function getActualEnumValue(lexical : String, ctx : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext, info : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo) : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo;
-	
-	/**
-	* validate a value, and return the compiled form
-	*/
-	@:overload public function validateWithInfo(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext, validatedInfo : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo) : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo;
+	@:overload @:protected private function getActualEnumValue(lexical : String, ctx : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext, info : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo) : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo;
 	
 	/**
 	* validate a value, and return the compiled form
 	*/
-	@:overload public function validate(content : Dynamic, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext, validatedInfo : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo) : Dynamic;
+	@:overload @:public public function validateWithInfo(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext, validatedInfo : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo) : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo;
+	
+	/**
+	* validate a value, and return the compiled form
+	*/
+	@:overload @:public public function validate(content : Dynamic, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext, validatedInfo : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo) : Dynamic;
 	
 	/**
 	* validate an actual value against this DV
@@ -224,35 +224,35 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @param context       the validation context
 	* @param validatedInfo used to provide the actual value and member types
 	*/
-	@:overload public function validate(context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext, validatedInfo : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo) : Void;
+	@:overload @:public public function validate(context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext, validatedInfo : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo) : Void;
 	
-	@:overload public function isEqual(value1 : Dynamic, value2 : Dynamic) : Bool;
+	@:overload @:public public function isEqual(value1 : Dynamic, value2 : Dynamic) : Bool;
 	
-	@:overload public function isIdentical(value1 : Dynamic, value2 : Dynamic) : Bool;
+	@:overload @:public public function isIdentical(value1 : Dynamic, value2 : Dynamic) : Bool;
 	
-	@:native('normalize') @:overload public static function _normalize(content : String, ws : java.StdTypes.Int16) : String;
+	@:native('normalize') @:overload @:public @:static public static function _normalize(content : String, ws : java.StdTypes.Int16) : String;
 	
-	@:overload private function normalize(content : Dynamic, ws : java.StdTypes.Int16) : String;
+	@:overload @:protected private function normalize(content : Dynamic, ws : java.StdTypes.Int16) : String;
 	
 	/**
 	*  Fundamental Facet: ordered.
 	*/
-	@:overload public function getOrdered() : java.StdTypes.Int16;
+	@:overload @:public public function getOrdered() : java.StdTypes.Int16;
 	
 	/**
 	* Fundamental Facet: bounded.
 	*/
-	@:overload public function getBounded() : Bool;
+	@:overload @:public public function getBounded() : Bool;
 	
 	/**
 	* Fundamental Facet: cardinality.
 	*/
-	@:overload public function getFinite() : Bool;
+	@:overload @:public public function getFinite() : Bool;
 	
 	/**
 	* Fundamental Facet: numeric.
 	*/
-	@:overload public function getNumeric() : Bool;
+	@:overload @:public public function getNumeric() : Bool;
 	
 	/**
 	* Convenience method. [Facets]: check whether a facet is defined on this
@@ -260,13 +260,13 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @param facetName  The name of the facet.
 	* @return  True if the facet is defined, false otherwise.
 	*/
-	@:overload public function isDefinedFacet(facetName : java.StdTypes.Int16) : Bool;
+	@:overload @:public public function isDefinedFacet(facetName : java.StdTypes.Int16) : Bool;
 	
 	/**
 	* [facets]: all facets defined on this type. The value is a bit
 	* combination of FACET_XXX constants of all defined facets.
 	*/
-	@:overload public function getDefinedFacets() : java.StdTypes.Int16;
+	@:overload @:public public function getDefinedFacets() : java.StdTypes.Int16;
 	
 	/**
 	* Convenience method. [Facets]: check whether a facet is defined and
@@ -274,12 +274,12 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @param facetName  The name of the facet.
 	* @return  True if the facet is fixed, false otherwise.
 	*/
-	@:overload public function isFixedFacet(facetName : java.StdTypes.Int16) : Bool;
+	@:overload @:public public function isFixedFacet(facetName : java.StdTypes.Int16) : Bool;
 	
 	/**
 	* [facets]: all defined facets for this type which are fixed.
 	*/
-	@:overload public function getFixedFacets() : java.StdTypes.Int16;
+	@:overload @:public public function getFixedFacets() : java.StdTypes.Int16;
 	
 	/**
 	* Convenience method. Returns a value of a single constraining facet for
@@ -293,43 +293,43 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @return A value of the facet specified in <code>facetName</code> for
 	*   this simple type definition or <code>null</code>.
 	*/
-	@:overload public function getLexicalFacetValue(facetName : java.StdTypes.Int16) : String;
+	@:overload @:public public function getLexicalFacetValue(facetName : java.StdTypes.Int16) : String;
 	
 	/**
 	* A list of enumeration values if it exists, otherwise an empty
 	* <code>StringList</code>.
 	*/
-	@:overload public function getLexicalEnumeration() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getLexicalEnumeration() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
 	/**
 	* A list of actual enumeration values if it exists, otherwise an empty
 	* <code>ObjectList</code>.
 	*/
-	@:overload public function getActualEnumeration() : com.sun.org.apache.xerces.internal.xs.datatypes.ObjectList;
+	@:overload @:public public function getActualEnumeration() : com.sun.org.apache.xerces.internal.xs.datatypes.ObjectList;
 	
 	/**
 	* A list of enumeration type values (as a list of ShortList objects) if it exists, otherwise returns
 	* null
 	*/
-	@:overload public function getEnumerationItemTypeList() : com.sun.org.apache.xerces.internal.xs.datatypes.ObjectList;
+	@:overload @:public public function getEnumerationItemTypeList() : com.sun.org.apache.xerces.internal.xs.datatypes.ObjectList;
 	
-	@:overload public function getEnumerationTypeList() : com.sun.org.apache.xerces.internal.xs.ShortList;
+	@:overload @:public public function getEnumerationTypeList() : com.sun.org.apache.xerces.internal.xs.ShortList;
 	
 	/**
 	* A list of pattern values if it exists, otherwise an empty
 	* <code>StringList</code>.
 	*/
-	@:overload public function getLexicalPattern() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getLexicalPattern() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
 	/**
 	* [annotations]: a set of annotations for this simple type component if
 	* it exists, otherwise an empty <code>XSObjectList</code>.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
-	@:overload public function derivedFromType(ancestor : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, derivation : java.StdTypes.Int16) : Bool;
+	@:overload @:public public function derivedFromType(ancestor : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, derivation : java.StdTypes.Int16) : Bool;
 	
-	@:overload public function derivedFrom(ancestorNS : String, ancestorName : String, derivation : java.StdTypes.Int16) : Bool;
+	@:overload @:public public function derivedFrom(ancestorNS : String, ancestorName : String, derivation : java.StdTypes.Int16) : Bool;
 	
 	/**
 	* Checks if a type is derived from another by restriction, given the name
@@ -345,21 +345,21 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*
 	* @return boolean True if the ancestor type is derived from the reference type by the specifiied derivation method.
 	*/
-	@:overload public function isDOMDerivedFrom(ancestorNS : String, ancestorName : String, derivationMethod : Int) : Bool;
+	@:overload @:public public function isDOMDerivedFrom(ancestorNS : String, ancestorName : String, derivationMethod : Int) : Bool;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xs.XSObject#getNamespaceItem()
 	*/
-	@:overload public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
+	@:overload @:public public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
 	
-	@:overload public function setNamespaceItem(namespaceItem : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem) : Void;
+	@:overload @:public public function setNamespaceItem(namespaceItem : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem) : Void;
 	
 	/**
 	* @see java.lang.Object#toString()
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	*  A list of constraining facets if it exists, otherwise an empty
@@ -367,27 +367,27 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* retrieve values for <code>enumeration</code> and <code>pattern</code>
 	* facets.
 	*/
-	@:overload public function getFacets() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getFacets() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	*  A list of enumeration and pattern constraining facets if it exists,
 	* otherwise an empty <code>XSObjectList</code>.
 	*/
-	@:overload public function getMultiValueFacets() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getMultiValueFacets() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
-	@:overload public function getMinInclusiveValue() : Dynamic;
+	@:overload @:public public function getMinInclusiveValue() : Dynamic;
 	
-	@:overload public function getMinExclusiveValue() : Dynamic;
+	@:overload @:public public function getMinExclusiveValue() : Dynamic;
 	
-	@:overload public function getMaxInclusiveValue() : Dynamic;
+	@:overload @:public public function getMaxInclusiveValue() : Dynamic;
 	
-	@:overload public function getMaxExclusiveValue() : Dynamic;
+	@:overload @:public public function getMaxExclusiveValue() : Dynamic;
 	
-	@:overload public function setAnonymous(anon : Bool) : Void;
+	@:overload @:public public function setAnonymous(anon : Bool) : Void;
 	
-	@:overload public function getTypeNamespace() : String;
+	@:overload @:public public function getTypeNamespace() : String;
 	
-	@:overload public function isDerivedFrom(typeNamespaceArg : String, typeNameArg : String, derivationMethod : Int) : Bool;
+	@:overload @:public public function isDerivedFrom(typeNamespaceArg : String, typeNameArg : String, derivationMethod : Int) : Bool;
 	
 	
 }
@@ -397,129 +397,129 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 */
 @:native('com$sun$org$apache$xerces$internal$impl$dv$xs$XSSimpleTypeDecl$ValidationContextImpl') @:internal extern class XSSimpleTypeDecl_ValidationContextImpl implements com.sun.org.apache.xerces.internal.impl.dv.ValidationContext
 {
-	@:overload public function needFacetChecking() : Bool;
+	@:overload @:public public function needFacetChecking() : Bool;
 	
-	@:overload public function needExtraChecking() : Bool;
+	@:overload @:public public function needExtraChecking() : Bool;
 	
-	@:overload public function needToNormalize() : Bool;
+	@:overload @:public public function needToNormalize() : Bool;
 	
-	@:overload public function useNamespaces() : Bool;
+	@:overload @:public public function useNamespaces() : Bool;
 	
-	@:overload public function isEntityDeclared(name : String) : Bool;
+	@:overload @:public public function isEntityDeclared(name : String) : Bool;
 	
-	@:overload public function isEntityUnparsed(name : String) : Bool;
+	@:overload @:public public function isEntityUnparsed(name : String) : Bool;
 	
-	@:overload public function isIdDeclared(name : String) : Bool;
+	@:overload @:public public function isIdDeclared(name : String) : Bool;
 	
-	@:overload public function addId(name : String) : Void;
+	@:overload @:public public function addId(name : String) : Void;
 	
-	@:overload public function addIdRef(name : String) : Void;
+	@:overload @:public public function addIdRef(name : String) : Void;
 	
-	@:overload public function getSymbol(symbol : String) : String;
+	@:overload @:public public function getSymbol(symbol : String) : String;
 	
-	@:overload public function getURI(prefix : String) : String;
+	@:overload @:public public function getURI(prefix : String) : String;
 	
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$impl$dv$xs$XSSimpleTypeDecl$XSFacetImpl') @:internal extern class XSSimpleTypeDecl_XSFacetImpl implements com.sun.org.apache.xerces.internal.xs.XSFacet
 {
-	@:overload public function new(kind : java.StdTypes.Int16, value : String, fixed : Bool, annotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation) : Void;
+	@:overload @:public public function new(kind : java.StdTypes.Int16, value : String, fixed : Bool, annotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation) : Void;
 	
 	/**
 	* Optional. Annotation.
 	*/
-	@:overload public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:overload @:public public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
 	/**
 	* Optional. Annotations.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.XSFacet#getFacetKind()
 	*/
-	@:overload public function getFacetKind() : java.StdTypes.Int16;
+	@:overload @:public public function getFacetKind() : java.StdTypes.Int16;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.XSFacet#getLexicalFacetValue()
 	*/
-	@:overload public function getLexicalFacetValue() : String;
+	@:overload @:public public function getLexicalFacetValue() : String;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.XSFacet#isFixed()
 	*/
-	@:overload public function getFixed() : Bool;
+	@:overload @:public public function getFixed() : Bool;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.XSObject#getName()
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.XSObject#getNamespace()
 	*/
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.XSObject#getNamespaceItem()
 	*/
-	@:overload public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
+	@:overload @:public public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.XSObject#getType()
 	*/
-	@:overload public function getType() : java.StdTypes.Int16;
+	@:overload @:public public function getType() : java.StdTypes.Int16;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$impl$dv$xs$XSSimpleTypeDecl$XSMVFacetImpl') @:internal extern class XSSimpleTypeDecl_XSMVFacetImpl implements com.sun.org.apache.xerces.internal.xs.XSMultiValueFacet
 {
-	@:overload public function new(kind : java.StdTypes.Int16, values : com.sun.org.apache.xerces.internal.xs.StringList, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : Void;
+	@:overload @:public public function new(kind : java.StdTypes.Int16, values : com.sun.org.apache.xerces.internal.xs.StringList, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.XSFacet#getFacetKind()
 	*/
-	@:overload public function getFacetKind() : java.StdTypes.Int16;
+	@:overload @:public public function getFacetKind() : java.StdTypes.Int16;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.XSMultiValueFacet#getAnnotations()
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.XSMultiValueFacet#getLexicalFacetValues()
 	*/
-	@:overload public function getLexicalFacetValues() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getLexicalFacetValues() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.XSObject#getName()
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.XSObject#getNamespace()
 	*/
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.XSObject#getNamespaceItem()
 	*/
-	@:overload public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
+	@:overload @:public public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.XSObject#getType()
 	*/
-	@:overload public function getType() : java.StdTypes.Int16;
+	@:overload @:public public function getType() : java.StdTypes.Int16;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$impl$dv$xs$XSSimpleTypeDecl$AbstractObjectList') @:internal extern class XSSimpleTypeDecl_AbstractObjectList extends java.util.AbstractList<Dynamic> implements com.sun.org.apache.xerces.internal.xs.datatypes.ObjectList
 {
-	@:overload public function get(index : Int) : Dynamic;
+	@:overload @:public override public function get(index : Int) : Dynamic;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns an array containing all of the elements in this list in
@@ -559,7 +559,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*         this list
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public @:public @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Appends the specified element to the end of this list (optional
@@ -583,7 +583,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws IllegalArgumentException if some property of this element
 	*         prevents it from being added to this list
 	*/
-	@:overload public function add(e : Dynamic) : Bool;
+	@:overload @:public @:public override public function add(e : Dynamic) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains all of the elements of the
@@ -603,7 +603,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*         or if the specified collection is null
 	* @see #contains(Object)
 	*/
-	@:overload override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public @:public @:public override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Retains only the elements in this list that are contained in the
@@ -625,7 +625,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public @:public @:public override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Removes from this list all of its elements that are contained in the
@@ -645,7 +645,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public @:public @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Inserts all of the elements in the specified collection into this
@@ -674,7 +674,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt; size()</tt>)
 	*/
-	@:overload public function addAll(index : Int, c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public @:public override public function addAll(index : Int, c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Returns a list iterator over the elements in this list (in proper
@@ -691,7 +691,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         ({@code index < 0 || index > size()})
 	*/
-	@:overload public function listIterator(index : Int) : java.util.ListIterator<Dynamic>;
+	@:overload @:public @:public override public function listIterator(index : Int) : java.util.ListIterator<Dynamic>;
 	
 	/**
 	* Appends all of the elements in the specified collection to the end of
@@ -714,7 +714,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*         specified collection prevents it from being added to this list
 	* @see #add(Object)
 	*/
-	@:overload override public function addAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public @:public @:public override public function addAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Replaces the element at the specified position in this list with the
@@ -734,13 +734,13 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt;= size()</tt>)
 	*/
-	@:overload public function set(index : Int, element : Dynamic) : Dynamic;
+	@:overload @:public @:public override public function set(index : Int, element : Dynamic) : Dynamic;
 	
 	/**
 	* The number of <code>Object</code>s in the list. The range of
 	* valid child object indices is 0 to <code>length-1</code> inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public @:public public function getLength() : Int;
 	
 	/**
 	* Returns the <code>index</code>th item in the collection or
@@ -752,7 +752,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*   the index specified is not valid - greater than or equal to the
 	*   number of items in the list or less than zero.
 	*/
-	@:overload public function item(index : Int) : Dynamic;
+	@:overload @:public @:public public function item(index : Int) : Dynamic;
 	
 	/**
 	* Returns an array containing all of the elements in this list in proper
@@ -770,7 +770,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*         sequence
 	* @see Arrays#asList(Object[])
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public @:public @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns a list iterator over the elements in this list (in proper
@@ -779,7 +779,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @return a list iterator over the elements in this list (in proper
 	*         sequence)
 	*/
-	@:overload public function listIterator() : java.util.ListIterator<Dynamic>;
+	@:overload @:public @:public override public function listIterator() : java.util.ListIterator<Dynamic>;
 	
 	/**
 	* Returns a view of the portion of this list between the specified
@@ -815,14 +815,14 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*         (<tt>fromIndex &lt; 0 || toIndex &gt; size ||
 	*         fromIndex &gt; toIndex</tt>)
 	*/
-	@:overload public function subList(fromIndex : Int, toIndex : Int) : java.util.List<Dynamic>;
+	@:overload @:public @:public override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<Dynamic>;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains no elements.
 	*
 	* @return <tt>true</tt> if this list contains no elements
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public @:public @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Inserts the specified element at the specified position in this list
@@ -843,7 +843,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt; size()</tt>)
 	*/
-	@:overload public function add(index : Int, element : Dynamic) : Void;
+	@:overload @:public @:public override public function add(index : Int, element : Dynamic) : Void;
 	
 	/**
 	* Removes the element at the specified position in this list (optional
@@ -858,7 +858,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt;= size()</tt>)
 	*/
-	@:overload public function remove(index : Int) : Dynamic;
+	@:overload @:public @:public override public function remove(index : Int) : Dynamic;
 	
 	/**
 	* Removes the first occurrence of the specified element from this list,
@@ -881,7 +881,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws UnsupportedOperationException if the <tt>remove</tt> operation
 	*         is not supported by this list
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public @:public @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Removes all of the elements from this list (optional operation).
@@ -890,7 +890,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws UnsupportedOperationException if the <tt>clear</tt> operation
 	*         is not supported by this list
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public @:public override public function clear() : Void;
 	
 	/**
 	* Returns the index of the last occurrence of the specified element
@@ -909,14 +909,14 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*         list does not permit null elements
 	*         (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload public function lastIndexOf(o : Dynamic) : Int;
+	@:overload @:public @:public override public function lastIndexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns an iterator over the elements in this list in proper sequence.
 	*
 	* @return an iterator over the elements in this list in proper sequence
 	*/
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Checks if the <code>Object</code> <code>item</code> is a
@@ -926,7 +926,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @return  True if this list contains the <code>Object</code>
 	*   <code>item</code>.
 	*/
-	@:overload public function contains(item : Dynamic) : Bool;
+	@:overload @:public @:public override public function contains(item : Dynamic) : Bool;
 	
 	/**
 	* Returns the index of the first occurrence of the specified element
@@ -945,7 +945,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*         list does not permit null elements
 	*         (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload public function indexOf(o : Dynamic) : Int;
+	@:overload @:public @:public override public function indexOf(o : Dynamic) : Int;
 	
 	
 }

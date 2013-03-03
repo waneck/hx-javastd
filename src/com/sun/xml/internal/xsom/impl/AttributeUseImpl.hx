@@ -25,19 +25,19 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class AttributeUseImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl implements com.sun.xml.internal.xsom.XSAttributeUse
 {
-	@:overload public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, ann : com.sun.xml.internal.xsom.impl.AnnotationImpl, loc : org.xml.sax.Locator, fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _decl : com.sun.xml.internal.xsom.impl.Ref.Ref_Attribute, def : com.sun.xml.internal.xsom.XmlString, fixed : com.sun.xml.internal.xsom.XmlString, req : Bool) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, ann : com.sun.xml.internal.xsom.impl.AnnotationImpl, loc : org.xml.sax.Locator, fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _decl : com.sun.xml.internal.xsom.impl.Ref.Ref_Attribute, def : com.sun.xml.internal.xsom.XmlString, fixed : com.sun.xml.internal.xsom.XmlString, req : Bool) : Void;
 	
-	@:overload public function getDecl() : com.sun.xml.internal.xsom.XSAttributeDecl;
+	@:overload @:public public function getDecl() : com.sun.xml.internal.xsom.XSAttributeDecl;
 	
-	@:overload public function getDefaultValue() : com.sun.xml.internal.xsom.XmlString;
+	@:overload @:public public function getDefaultValue() : com.sun.xml.internal.xsom.XmlString;
 	
-	@:overload public function getFixedValue() : com.sun.xml.internal.xsom.XmlString;
+	@:overload @:public public function getFixedValue() : com.sun.xml.internal.xsom.XmlString;
 	
-	@:overload public function isRequired() : Bool;
+	@:overload @:public public function isRequired() : Bool;
 	
-	@:overload public function apply(f : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
+	@:overload @:public override public function apply(f : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
 	
-	@:overload public function visit(v : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload @:public override public function visit(v : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
 	
 }

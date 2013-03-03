@@ -33,7 +33,7 @@ extern class VerifyType
 	* @param recv the type by which we'd like to treat it
 	* @return whether the retyping can be done without motion or reformatting
 	*/
-	@:overload public static function isNullConversion(src : Class<Dynamic>, dst : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function isNullConversion(src : Class<Dynamic>, dst : Class<Dynamic>) : Bool;
 	
 	/**
 	* Specialization of isNullConversion to reference types.
@@ -42,12 +42,12 @@ extern class VerifyType
 	* @param recv the reference type by which we'd like to treat it
 	* @return whether the retyping can be done without a cast
 	*/
-	@:overload public static function isNullReferenceConversion(src : Class<Dynamic>, dst : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function isNullReferenceConversion(src : Class<Dynamic>, dst : Class<Dynamic>) : Bool;
 	
 	/**
 	* Is the given type java.lang.Null or an equivalent null-only type?
 	*/
-	@:overload public static function isNullType(type : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function isNullType(type : Class<Dynamic>) : Bool;
 	
 	/**
 	* True if a method handle can receive a call under a slightly different
@@ -57,7 +57,7 @@ extern class VerifyType
 	* @param recv the type of the method handle receiving the call
 	* @return whether the retyping can be done without motion or reformatting
 	*/
-	@:overload public static function isNullConversion(call : java.lang.invoke.MethodType, recv : java.lang.invoke.MethodType) : Bool;
+	@:overload @:public @:static public static function isNullConversion(call : java.lang.invoke.MethodType, recv : java.lang.invoke.MethodType) : Bool;
 	
 	/**
 	* Determine if the JVM verifier allows a value of type call to be
@@ -73,13 +73,13 @@ extern class VerifyType
 	* (Autoboxing is not supported here; it must be done via Java code.)
 	* Returns 0 otherwise.
 	*/
-	@:overload public static function canPassUnchecked(src : Class<Dynamic>, dst : Class<Dynamic>) : Int;
+	@:overload @:public @:static public static function canPassUnchecked(src : Class<Dynamic>, dst : Class<Dynamic>) : Int;
 	
-	@:overload public static function canPassRaw(src : Class<Dynamic>, dst : Class<Dynamic>) : Int;
+	@:overload @:public @:static public static function canPassRaw(src : Class<Dynamic>, dst : Class<Dynamic>) : Int;
 	
-	@:overload public static function isSpreadArgType(spreadArg : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function isSpreadArgType(spreadArg : Class<Dynamic>) : Bool;
 	
-	@:overload public static function spreadArgElementType(spreadArg : Class<Dynamic>, i : Int) : Class<Dynamic>;
+	@:overload @:public @:static public static function spreadArgElementType(spreadArg : Class<Dynamic>, i : Int) : Class<Dynamic>;
 	
 	
 }

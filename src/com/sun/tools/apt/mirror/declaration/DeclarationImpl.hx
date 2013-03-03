@@ -28,76 +28,76 @@ package com.sun.tools.apt.mirror.declaration;
 */
 extern class DeclarationImpl implements com.sun.mirror.declaration.Declaration
 {
-	private var env(default, null) : com.sun.tools.apt.mirror.AptEnv;
+	@:protected @:final private var env(default, null) : com.sun.tools.apt.mirror.AptEnv;
 	
-	public var sym(default, null) : com.sun.tools.javac.code.Symbol;
+	@:public @:final public var sym(default, null) : com.sun.tools.javac.code.Symbol;
 	
-	private static var identityFilter(default, null) : com.sun.mirror.util.DeclarationFilter;
+	@:protected @:static @:final private static var identityFilter(default, null) : com.sun.mirror.util.DeclarationFilter;
 	
 	/**
 	* "sym" should be completed before this constructor is called.
 	*/
-	@:overload private function new(env : com.sun.tools.apt.mirror.AptEnv, sym : com.sun.tools.javac.code.Symbol) : Void;
+	@:overload @:protected private function new(env : com.sun.tools.apt.mirror.AptEnv, sym : com.sun.tools.javac.code.Symbol) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* <p> ParameterDeclarationImpl overrides this implementation.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* <p> ParameterDeclarationImpl overrides this implementation.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getDocComment() : String;
+	@:overload @:public public function getDocComment() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getAnnotationMirrors() : java.util.Collection<com.sun.mirror.declaration.AnnotationMirror>;
+	@:overload @:public public function getAnnotationMirrors() : java.util.Collection<com.sun.mirror.declaration.AnnotationMirror>;
 	
 	/**
 	* {@inheritDoc}
 	* Overridden by ClassDeclarationImpl to handle @Inherited.
 	*/
-	@:overload public function getAnnotation<A : java.lang.annotation.Annotation>(annoType : Class<A>) : A;
+	@:overload @:public public function getAnnotation<A : java.lang.annotation.Annotation>(annoType : Class<A>) : A;
 	
-	@:overload private function getAnnotation<A : java.lang.annotation.Annotation>(annoType : Class<A>, annotated : com.sun.tools.javac.code.Symbol) : A;
+	@:overload @:protected private function getAnnotation<A : java.lang.annotation.Annotation>(annoType : Class<A>, annotated : com.sun.tools.javac.code.Symbol) : A;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getModifiers() : java.util.Collection<com.sun.mirror.declaration.Modifier>;
+	@:overload @:public public function getModifiers() : java.util.Collection<com.sun.mirror.declaration.Modifier>;
 	
 	/**
 	* {@inheritDoc}
 	* Overridden in some subclasses.
 	*/
-	@:overload public function getSimpleName() : String;
+	@:overload @:public public function getSimpleName() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getPosition() : com.sun.mirror.util.SourcePosition;
+	@:overload @:public public function getPosition() : com.sun.mirror.util.SourcePosition;
 	
 	/**
 	* Applies a visitor to this declaration.
 	*
 	* @param v the visitor operating on this declaration
 	*/
-	@:overload public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
+	@:overload @:public public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
 	
 	/**
 	* Returns the symbols of type or package members (and constructors)
 	* that are not synthetic or otherwise unwanted.
 	* Caches the result if "cache" is true.
 	*/
-	@:overload private function getMembers(cache : Bool) : java.util.Collection<com.sun.tools.javac.code.Symbol>;
+	@:overload @:protected private function getMembers(cache : Bool) : java.util.Collection<com.sun.tools.javac.code.Symbol>;
 	
 	
 }

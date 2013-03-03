@@ -29,18 +29,18 @@ extern class URLJarFile extends java.util.jar.JarFile
 	* Changed modifier from private to public in order to be able
 	* to instantiate URLJarFile from sun.plugin package.
 	*/
-	@:overload public function new(file : java.io.File) : Void;
+	@:overload @:public public function new(file : java.io.File) : Void;
 	
 	/*
 	* Changed modifier from private to public in order to be able
 	* to instantiate URLJarFile from sun.plugin package.
 	*/
-	@:overload public function new(file : java.io.File, closeController : sun.net.www.protocol.jar.URLJarFile.URLJarFile_URLJarFileCloseController) : Void;
+	@:overload @:public public function new(file : java.io.File, closeController : sun.net.www.protocol.jar.URLJarFile.URLJarFile_URLJarFileCloseController) : Void;
 	
 	/*
 	* close the jar file.
 	*/
-	@:overload override private function finalize() : Void;
+	@:overload @:protected override private function finalize() : Void;
 	
 	/**
 	* Returns the <code>ZipEntry</code> for the given entry name or
@@ -51,34 +51,34 @@ extern class URLJarFile extends java.util.jar.JarFile
 	*         <code>null</code> if not found
 	* @see java.util.zip.ZipEntry
 	*/
-	@:overload override public function getEntry(name : String) : java.util.zip.ZipEntry;
+	@:overload @:public override public function getEntry(name : String) : java.util.zip.ZipEntry;
 	
-	@:overload public function getManifest() : java.util.jar.Manifest;
+	@:overload @:public override public function getManifest() : java.util.jar.Manifest;
 	
 	/* If close controller is set the notify the controller about the pending close */
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/*
 	* Set the call back interface to call retrive function in sun.plugin
 	* package if plugin is running.
 	*/
-	@:overload public static function setCallBack(cb : sun.net.www.protocol.jar.URLJarFileCallBack) : Void;
+	@:overload @:public @:static public static function setCallBack(cb : sun.net.www.protocol.jar.URLJarFileCallBack) : Void;
 	
 	
 }
 @:native('sun$net$www$protocol$jar$URLJarFile$URLJarFileEntry') @:internal extern class URLJarFile_URLJarFileEntry extends java.util.jar.JarEntry
 {
-	@:overload public function getAttributes() : java.util.jar.Attributes;
+	@:overload @:public override public function getAttributes() : java.util.jar.Attributes;
 	
-	@:overload public function getCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public override public function getCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
-	@:overload public function getCodeSigners() : java.NativeArray<java.security.CodeSigner>;
+	@:overload @:public override public function getCodeSigners() : java.NativeArray<java.security.CodeSigner>;
 	
 	
 }
 @:native('sun$net$www$protocol$jar$URLJarFile$URLJarFileCloseController') extern interface URLJarFile_URLJarFileCloseController
 {
-	@:overload public function close(jarFile : java.util.jar.JarFile) : Void;
+	@:overload @:public public function close(jarFile : java.util.jar.JarFile) : Void;
 	
 	
 }

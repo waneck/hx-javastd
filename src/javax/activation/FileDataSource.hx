@@ -32,7 +32,7 @@ extern class FileDataSource implements javax.activation.DataSource
 	*
 	* @param file the file
 	*/
-	@:overload public function new(file : java.io.File) : Void;
+	@:overload @:public public function new(file : java.io.File) : Void;
 	
 	/**
 	* Creates a FileDataSource from
@@ -42,7 +42,7 @@ extern class FileDataSource implements javax.activation.DataSource
 	*
 	* @param name the system-dependent file name.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* This method will return an InputStream representing the
@@ -52,7 +52,7 @@ extern class FileDataSource implements javax.activation.DataSource
 	*
 	* @return an InputStream
 	*/
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* This method will return an OutputStream representing the
@@ -62,7 +62,7 @@ extern class FileDataSource implements javax.activation.DataSource
 	*
 	* @return an OutputStream
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* This method returns the MIME type of the data in the form of a
@@ -75,7 +75,7 @@ extern class FileDataSource implements javax.activation.DataSource
 	* @return the MIME Type
 	* @see javax.activation.FileTypeMap#getDefaultFileTypeMap
 	*/
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
 	/**
 	* Return the <i>name</i> of this object. The FileDataSource
@@ -84,20 +84,20 @@ extern class FileDataSource implements javax.activation.DataSource
 	* @return the name of the object.
 	* @see javax.activation.DataSource
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return the File object that corresponds to this FileDataSource.
 	* @return the File object for the file represented by this object.
 	*/
-	@:overload public function getFile() : java.io.File;
+	@:overload @:public public function getFile() : java.io.File;
 	
 	/**
 	* Set the FileTypeMap to use with this FileDataSource
 	*
 	* @param map The FileTypeMap for this object.
 	*/
-	@:overload public function setFileTypeMap(map : javax.activation.FileTypeMap) : Void;
+	@:overload @:public public function setFileTypeMap(map : javax.activation.FileTypeMap) : Void;
 	
 	
 }

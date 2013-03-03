@@ -45,7 +45,7 @@ extern interface MonitoredAttributeInfo
 	* @return a boolean with true or false
 	* </p>
 	*/
-	@:overload public function isWritable() : Bool;
+	@:overload @:public public function isWritable() : Bool;
 	
 	/**
 	* <p>
@@ -56,7 +56,7 @@ extern interface MonitoredAttributeInfo
 	* @return a boolean with true or false
 	* </p>
 	*/
-	@:overload public function isStatistic() : Bool;
+	@:overload @:public public function isStatistic() : Bool;
 	
 	/**
 	* <p>
@@ -68,7 +68,7 @@ extern interface MonitoredAttributeInfo
 	* @return a Class Type
 	* </p>
 	*/
-	@:overload public function type() : Class<Dynamic>;
+	@:overload @:public public function type() : Class<Dynamic>;
 	
 	/**
 	* <p>
@@ -79,7 +79,7 @@ extern interface MonitoredAttributeInfo
 	* @return a String with description
 	* </p>
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	
 }

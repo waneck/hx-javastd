@@ -36,13 +36,13 @@ package java.io;
 */
 @:internal extern class SerialCallbackContext
 {
-	@:overload public function new(obj : Dynamic, desc : java.io.ObjectStreamClass) : Void;
+	@:overload @:public public function new(obj : Dynamic, desc : java.io.ObjectStreamClass) : Void;
 	
-	@:overload public function getObj() : Dynamic;
+	@:overload @:public public function getObj() : Dynamic;
 	
-	@:overload public function getDesc() : java.io.ObjectStreamClass;
+	@:overload @:public public function getDesc() : java.io.ObjectStreamClass;
 	
-	@:overload public function setUsed() : Void;
+	@:overload @:public public function setUsed() : Void;
 	
 	
 }

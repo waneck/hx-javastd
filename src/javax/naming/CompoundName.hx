@@ -30,7 +30,7 @@ extern class CompoundName implements javax.naming.Name
 	* This field is initialized by the constructors and cannot be null.
 	* It should be treated as a read-only variable by subclasses.
 	*/
-	@:transient private var impl : javax.naming.NameImpl;
+	@:protected @:transient private var impl : javax.naming.NameImpl;
 	
 	/**
 	* Syntax properties for this compound name.
@@ -39,7 +39,7 @@ extern class CompoundName implements javax.naming.Name
 	* Any necessary changes to mySyntax should be made within constructors
 	* and not after the compound name has been instantiated.
 	*/
-	@:transient private var mySyntax : java.util.Properties;
+	@:protected @:transient private var mySyntax : java.util.Properties;
 	
 	/**
 	* Constructs a new compound name instance using the components
@@ -55,7 +55,7 @@ extern class CompoundName implements javax.naming.Name
 	*                 this compound name. See class description for
 	*                 contents of properties.
 	*/
-	@:overload private function new(comps : java.util.Enumeration<String>, syntax : java.util.Properties) : Void;
+	@:overload @:protected private function new(comps : java.util.Enumeration<String>, syntax : java.util.Properties) : Void;
 	
 	/**
 	* Constructs a new compound name instance by parsing the string n
@@ -68,7 +68,7 @@ extern class CompoundName implements javax.naming.Name
 	* @exception      InvalidNameException If 'n' violates the syntax specified
 	*                 by <code>syntax</code>.
 	*/
-	@:overload public function new(n : String, syntax : java.util.Properties) : Void;
+	@:overload @:public public function new(n : String, syntax : java.util.Properties) : Void;
 	
 	/**
 	* Generates the string representation of this compound name, using
@@ -82,7 +82,7 @@ extern class CompoundName implements javax.naming.Name
 	*
 	* @return A non-null string representation of this compound name.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Determines whether obj is syntactically equal to this compound name.
@@ -107,7 +107,7 @@ extern class CompoundName implements javax.naming.Name
 	* @return true if obj is equal to this compound name, false otherwise.
 	* @see #compareTo(java.lang.Object obj)
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Computes the hash code of this compound name.
@@ -120,7 +120,7 @@ extern class CompoundName implements javax.naming.Name
 	*
 	* @return An int representing the hash code of this name.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Creates a copy of this compound name.
@@ -130,7 +130,7 @@ extern class CompoundName implements javax.naming.Name
 	*
 	* @return A non-null copy of this compound name.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Compares this CompoundName with the specified Object for order.
@@ -163,14 +163,14 @@ extern class CompoundName implements javax.naming.Name
 	* @exception ClassCastException if obj is not a CompoundName.
 	* @see #equals(java.lang.Object)
 	*/
-	@:overload public function compareTo(obj : Dynamic) : Int;
+	@:overload @:public public function compareTo(obj : Dynamic) : Int;
 	
 	/**
 	* Retrieves the number of components in this compound name.
 	*
 	* @return The nonnegative number of components in this compound name.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Determines whether this compound name is empty.
@@ -178,7 +178,7 @@ extern class CompoundName implements javax.naming.Name
 	*
 	* @return true if this compound name is empty, false otherwise.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Retrieves the components of this compound name as an enumeration
@@ -189,7 +189,7 @@ extern class CompoundName implements javax.naming.Name
 	* @return A non-null enumeration of the components of this
 	* compound name. Each element of the enumeration is of class String.
 	*/
-	@:overload public function getAll() : java.util.Enumeration<String>;
+	@:overload @:public public function getAll() : java.util.Enumeration<String>;
 	
 	/**
 	* Retrieves a component of this compound name.
@@ -200,7 +200,7 @@ extern class CompoundName implements javax.naming.Name
 	* @exception ArrayIndexOutOfBoundsException if posn is outside the
 	*         specified range.
 	*/
-	@:overload public function get(posn : Int) : String;
+	@:overload @:public public function get(posn : Int) : String;
 	
 	/**
 	* Creates a compound name whose components consist of a prefix of the
@@ -217,7 +217,7 @@ extern class CompoundName implements javax.naming.Name
 	* @exception ArrayIndexOutOfBoundsException
 	*         If posn is outside the specified range.
 	*/
-	@:overload public function getPrefix(posn : Int) : javax.naming.Name;
+	@:overload @:public public function getPrefix(posn : Int) : javax.naming.Name;
 	
 	/**
 	* Creates a compound name whose components consist of a suffix of the
@@ -234,7 +234,7 @@ extern class CompoundName implements javax.naming.Name
 	* @exception ArrayIndexOutOfBoundsException
 	*         If posn is outside the specified range.
 	*/
-	@:overload public function getSuffix(posn : Int) : javax.naming.Name;
+	@:overload @:public public function getSuffix(posn : Int) : javax.naming.Name;
 	
 	/**
 	* Determines whether a compound name is a prefix of this compound name.
@@ -249,7 +249,7 @@ extern class CompoundName implements javax.naming.Name
 	* @return true if n is a CompoundName and
 	*                 is a prefix of this compound name, false otherwise.
 	*/
-	@:overload public function startsWith(n : javax.naming.Name) : Bool;
+	@:overload @:public public function startsWith(n : javax.naming.Name) : Bool;
 	
 	/**
 	* Determines whether a compound name is a suffix of this compound name.
@@ -264,7 +264,7 @@ extern class CompoundName implements javax.naming.Name
 	* @return true if n is a CompoundName and
 	*         is a suffix of this compound name, false otherwise.
 	*/
-	@:overload public function endsWith(n : javax.naming.Name) : Bool;
+	@:overload @:public public function endsWith(n : javax.naming.Name) : Bool;
 	
 	/**
 	* Adds the components of a compound name -- in order -- to the end of
@@ -278,7 +278,7 @@ extern class CompoundName implements javax.naming.Name
 	*            or if the addition of the components violates the syntax
 	*            of this compound name (e.g. exceeding number of components).
 	*/
-	@:overload public function addAll(suffix : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function addAll(suffix : javax.naming.Name) : javax.naming.Name;
 	
 	/**
 	* Adds the components of a compound name -- in order -- at a specified
@@ -300,7 +300,7 @@ extern class CompoundName implements javax.naming.Name
 	*            or if the addition of the components violates the syntax
 	*            of this compound name (e.g. exceeding number of components).
 	*/
-	@:overload public function addAll(posn : Int, n : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function addAll(posn : Int, n : javax.naming.Name) : javax.naming.Name;
 	
 	/**
 	* Adds a single component to the end of this compound name.
@@ -310,7 +310,7 @@ extern class CompoundName implements javax.naming.Name
 	* @exception InvalidNameException If adding comp at end of the name
 	*                         would violate the compound name's syntax.
 	*/
-	@:overload public function add(comp : String) : javax.naming.Name;
+	@:overload @:public public function add(comp : String) : javax.naming.Name;
 	
 	/**
 	* Adds a single component at a specified position within this
@@ -328,7 +328,7 @@ extern class CompoundName implements javax.naming.Name
 	* @exception InvalidNameException If adding comp at the specified position
 	*                         would violate the compound name's syntax.
 	*/
-	@:overload public function add(posn : Int, comp : String) : javax.naming.Name;
+	@:overload @:public public function add(posn : Int, comp : String) : javax.naming.Name;
 	
 	/**
 	* Deletes a component from this compound name.
@@ -345,7 +345,7 @@ extern class CompoundName implements javax.naming.Name
 	* @exception InvalidNameException If deleting the component
 	*                         would violate the compound name's syntax.
 	*/
-	@:overload public function remove(posn : Int) : Dynamic;
+	@:overload @:public public function remove(posn : Int) : Dynamic;
 	
 	
 }

@@ -31,7 +31,7 @@ extern interface DOMCatalogParser
 	* @param catalog The catalog for which this node is being considered.
 	* @param node The DOM Node from the catalog.
 	*/
-	@:overload public function parseCatalogEntry(catalog : com.sun.org.apache.xml.internal.resolver.Catalog, node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function parseCatalogEntry(catalog : com.sun.org.apache.xml.internal.resolver.Catalog, node : org.w3c.dom.Node) : Void;
 	
 	
 }

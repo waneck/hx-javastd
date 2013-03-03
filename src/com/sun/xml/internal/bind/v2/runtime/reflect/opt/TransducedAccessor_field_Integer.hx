@@ -35,13 +35,13 @@ extern class TransducedAccessor_field_Integer extends com.sun.xml.internal.bind.
 	*
 	* @see TransducedAccessor#get
 	*/
-	@:overload override public function print(o : Dynamic) : String;
+	@:overload @:public override public function print(o : Dynamic) : String;
 	
-	@:overload override public function parse(o : Dynamic, lexical : java.lang.CharSequence) : Void;
+	@:overload @:public override public function parse(o : Dynamic, lexical : java.lang.CharSequence) : Void;
 	
-	@:overload override public function hasValue(o : Dynamic) : Bool;
+	@:overload @:public override public function hasValue(o : Dynamic) : Bool;
 	
-	@:overload override public function writeLeafElement(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, tagName : com.sun.xml.internal.bind.v2.runtime.Name, o : Dynamic, fieldName : String) : Void;
+	@:overload @:public override public function writeLeafElement(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, tagName : com.sun.xml.internal.bind.v2.runtime.Name, o : Dynamic, fieldName : String) : Void;
 	
 	
 }

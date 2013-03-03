@@ -28,32 +28,32 @@ package sun.nio.ch;
 */
 @:internal extern class AbstractPollSelectorImpl extends sun.nio.ch.SelectorImpl
 {
-	private var INIT_CAP(default, null) : Int;
+	@:protected @:final private var INIT_CAP(default, null) : Int;
 	
-	private var channelArray : java.NativeArray<sun.nio.ch.SelectionKeyImpl>;
+	@:protected private var channelArray : java.NativeArray<sun.nio.ch.SelectionKeyImpl>;
 	
-	private var channelOffset : Int;
+	@:protected private var channelOffset : Int;
 	
-	private var totalChannels : Int;
+	@:protected private var totalChannels : Int;
 	
-	@:overload public function wakeup() : java.nio.channels.Selector;
+	@:overload @:public override public function wakeup() : java.nio.channels.Selector;
 	
-	@:overload @:abstract private function doSelect(timeout : haxe.Int64) : Int;
+	@:overload @:protected @:abstract override private function doSelect(timeout : haxe.Int64) : Int;
 	
-	@:overload private function implClose() : Void;
+	@:overload @:protected override private function implClose() : Void;
 	
-	@:overload @:abstract private function implCloseInterrupt() : Void;
+	@:overload @:protected @:abstract private function implCloseInterrupt() : Void;
 	
 	/**
 	* Copy the information in the pollfd structs into the opss
 	* of the corresponding Channels. Add the ready keys to the
 	* ready queue.
 	*/
-	@:overload private function updateSelectedKeys() : Int;
+	@:overload @:protected private function updateSelectedKeys() : Int;
 	
-	@:overload private function implRegister(ski : sun.nio.ch.SelectionKeyImpl) : Void;
+	@:overload @:protected override private function implRegister(ski : sun.nio.ch.SelectionKeyImpl) : Void;
 	
-	@:overload private function implDereg(ski : sun.nio.ch.SelectionKeyImpl) : Void;
+	@:overload @:protected override private function implDereg(ski : sun.nio.ch.SelectionKeyImpl) : Void;
 	
 	
 }

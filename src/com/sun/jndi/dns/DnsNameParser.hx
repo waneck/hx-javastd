@@ -30,11 +30,11 @@ package com.sun.jndi.dns;
 */
 @:internal extern class DnsNameParser implements javax.naming.NameParser
 {
-	@:overload public function parse(name : String) : javax.naming.Name;
+	@:overload @:public public function parse(name : String) : javax.naming.Name;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

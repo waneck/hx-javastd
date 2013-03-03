@@ -39,26 +39,26 @@ extern class DOMKeyInfo extends javax.xml.crypto.dom.DOMStructure implements jav
 	* @throws ClassCastException if <code>content</code> contains any entries
 	*    that are not of type {@link XMLStructure}
 	*/
-	@:overload public function new(content : java.util.List<Dynamic>, id : String) : Void;
+	@:overload @:public public function new(content : java.util.List<Dynamic>, id : String) : Void;
 	
 	/**
 	* Creates a <code>DOMKeyInfo</code> from XML.
 	*
 	* @param kiElem KeyInfo element
 	*/
-	@:overload public function new(kiElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
+	@:overload @:public public function new(kiElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
 	
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
-	@:overload public function getContent() : java.util.List<Dynamic>;
+	@:overload @:public public function getContent() : java.util.List<Dynamic>;
 	
-	@:overload public function marshal(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
+	@:overload @:public public function marshal(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
 	
-	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
-	@:overload public function marshal(parent : org.w3c.dom.Node, nextSibling : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public public function marshal(parent : org.w3c.dom.Node, nextSibling : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }

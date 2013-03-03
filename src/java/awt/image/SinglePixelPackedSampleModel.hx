@@ -51,7 +51,7 @@ extern class SinglePixelPackedSampleModel extends java.awt.image.SampleModel
 	*         <code>DataBuffer.TYPE_USHORT</code>, or
 	*         <code>DataBuffer.TYPE_INT</code>
 	*/
-	@:overload public function new(dataType : Int, w : Int, h : Int, bitMasks : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(dataType : Int, w : Int, h : Int, bitMasks : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Constructs a SinglePixelPackedSampleModel with bitMasks.length bands
@@ -76,14 +76,14 @@ extern class SinglePixelPackedSampleModel extends java.awt.image.SampleModel
 	*         <code>DataBuffer.TYPE_USHORT</code>, or
 	*         <code>DataBuffer.TYPE_INT</code>
 	*/
-	@:overload public function new(dataType : Int, w : Int, h : Int, scanlineStride : Int, bitMasks : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(dataType : Int, w : Int, h : Int, scanlineStride : Int, bitMasks : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Returns the number of data elements needed to transfer one pixel
 	* via the getDataElements and setDataElements methods.
 	* For a SinglePixelPackedSampleModel, this is one.
 	*/
-	@:overload override public function getNumDataElements() : Int;
+	@:overload @:public override public function getNumDataElements() : Int;
 	
 	/**
 	* Creates a new SinglePixelPackedSampleModel with the specified
@@ -97,7 +97,7 @@ extern class SinglePixelPackedSampleModel extends java.awt.image.SampleModel
 	* @throws IllegalArgumentException if <code>w</code> or
 	*         <code>h</code> is not greater than 0
 	*/
-	@:overload override public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
+	@:overload @:public override public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
 	
 	/**
 	* Creates a DataBuffer that corresponds to this
@@ -105,13 +105,13 @@ extern class SinglePixelPackedSampleModel extends java.awt.image.SampleModel
 	* will be consistent with this SinglePixelPackedSampleModel.  The
 	* DataBuffer will have a single bank.
 	*/
-	@:overload override public function createDataBuffer() : java.awt.image.DataBuffer;
+	@:overload @:public override public function createDataBuffer() : java.awt.image.DataBuffer;
 	
 	/** Returns the number of bits per sample for all bands. */
-	@:overload override public function getSampleSize() : java.NativeArray<Int>;
+	@:overload @:public override public function getSampleSize() : java.NativeArray<Int>;
 	
 	/** Returns the number of bits per sample for the specified band. */
-	@:overload override public function getSampleSize(band : Int) : Int;
+	@:overload @:public override public function getSampleSize(band : Int) : Int;
 	
 	/** Returns the offset (in data array elements) of pixel (x,y).
 	*  The data element containing pixel <code>x,y</code>
@@ -124,24 +124,24 @@ extern class SinglePixelPackedSampleModel extends java.awt.image.SampleModel
 	* @param y the Y coordinate of the specified pixel
 	* @return the offset of the specified pixel.
 	*/
-	@:overload public function getOffset(x : Int, y : Int) : Int;
+	@:overload @:public public function getOffset(x : Int, y : Int) : Int;
 	
 	/** Returns the bit offsets into the data array element representing
 	*  a pixel for all bands.
 	*  @return the bit offsets representing a pixel for all bands.
 	*/
-	@:overload public function getBitOffsets() : java.NativeArray<Int>;
+	@:overload @:public public function getBitOffsets() : java.NativeArray<Int>;
 	
 	/** Returns the bit masks for all bands.
 	*  @return the bit masks for all bands.
 	*/
-	@:overload public function getBitMasks() : java.NativeArray<Int>;
+	@:overload @:public public function getBitMasks() : java.NativeArray<Int>;
 	
 	/** Returns the scanline stride of this SinglePixelPackedSampleModel.
 	*  @return the scanline stride of this
 	*          <code>SinglePixelPackedSampleModel</code>.
 	*/
-	@:overload public function getScanlineStride() : Int;
+	@:overload @:public public function getScanlineStride() : Int;
 	
 	/**
 	* This creates a new SinglePixelPackedSampleModel with a subset of the
@@ -155,7 +155,7 @@ extern class SinglePixelPackedSampleModel extends java.awt.image.SampleModel
 	*                                  greater than the number of bands in
 	*                                  the sample model.
 	*/
-	@:overload override public function createSubsetSampleModel(bands : java.NativeArray<Int>) : java.awt.image.SampleModel;
+	@:overload @:public override public function createSubsetSampleModel(bands : java.NativeArray<Int>) : java.awt.image.SampleModel;
 	
 	/**
 	* Returns data for a single pixel in a primitive array of type
@@ -196,7 +196,7 @@ extern class SinglePixelPackedSampleModel extends java.awt.image.SampleModel
 	* @return the data for the specified pixel.
 	* @see #setDataElements(int, int, Object, DataBuffer)
 	*/
-	@:overload override public function getDataElements(x : Int, y : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Dynamic;
+	@:overload @:public override public function getDataElements(x : Int, y : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Dynamic;
 	
 	/**
 	* Returns all samples in for the specified pixel in an int array.
@@ -209,7 +209,7 @@ extern class SinglePixelPackedSampleModel extends java.awt.image.SampleModel
 	* @return all samples for the specified pixel.
 	* @see #setPixel(int, int, int[], DataBuffer)
 	*/
-	@:overload override public function getPixel(x : Int, y : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
+	@:overload @:public override public function getPixel(x : Int, y : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
 	
 	/**
 	* Returns all samples for the specified rectangle of pixels in
@@ -225,7 +225,7 @@ extern class SinglePixelPackedSampleModel extends java.awt.image.SampleModel
 	* @return all samples for the specified region of pixels.
 	* @see #setPixels(int, int, int, int, int[], DataBuffer)
 	*/
-	@:overload override public function getPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
+	@:overload @:public override public function getPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
 	
 	/**
 	* Returns as int the sample in a specified band for the pixel
@@ -240,7 +240,7 @@ extern class SinglePixelPackedSampleModel extends java.awt.image.SampleModel
 	*         pixel.
 	* @see #setSample(int, int, int, int, DataBuffer)
 	*/
-	@:overload override public function getSample(x : Int, y : Int, b : Int, data : java.awt.image.DataBuffer) : Int;
+	@:overload @:public override public function getSample(x : Int, y : Int, b : Int, data : java.awt.image.DataBuffer) : Int;
 	
 	/**
 	* Returns the samples for a specified band for the specified rectangle
@@ -258,7 +258,7 @@ extern class SinglePixelPackedSampleModel extends java.awt.image.SampleModel
 	*         region of pixels.
 	* @see #setSamples(int, int, int, int, int, int[], DataBuffer)
 	*/
-	@:overload override public function getSamples(x : Int, y : Int, w : Int, h : Int, b : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
+	@:overload @:public override public function getSamples(x : Int, y : Int, w : Int, h : Int, b : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : java.NativeArray<Int>;
 	
 	/**
 	* Sets the data for a single pixel in the specified DataBuffer from a
@@ -295,7 +295,7 @@ extern class SinglePixelPackedSampleModel extends java.awt.image.SampleModel
 	* @param data      The DataBuffer containing the image data.
 	* @see #getDataElements(int, int, Object, DataBuffer)
 	*/
-	@:overload override public function setDataElements(x : Int, y : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public override public function setDataElements(x : Int, y : Int, obj : Dynamic, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets a pixel in the DataBuffer using an int array of samples for input.
@@ -307,7 +307,7 @@ extern class SinglePixelPackedSampleModel extends java.awt.image.SampleModel
 	* @param data      The DataBuffer containing the image data.
 	* @see #getPixel(int, int, int[], DataBuffer)
 	*/
-	@:overload override public function setPixel(x : Int, y : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public override public function setPixel(x : Int, y : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets all samples for a rectangle of pixels from an int array containing
@@ -322,7 +322,7 @@ extern class SinglePixelPackedSampleModel extends java.awt.image.SampleModel
 	* @param data      The DataBuffer containing the image data.
 	* @see #getPixels(int, int, int, int, int[], DataBuffer)
 	*/
-	@:overload override public function setPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public override public function setPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets a sample in the specified band for the pixel located at (x,y)
@@ -336,7 +336,7 @@ extern class SinglePixelPackedSampleModel extends java.awt.image.SampleModel
 	* @param data      The DataBuffer containing the image data.
 	* @see #getSample(int, int, int, DataBuffer)
 	*/
-	@:overload override public function setSample(x : Int, y : Int, b : Int, s : Int, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public override public function setSample(x : Int, y : Int, b : Int, s : Int, data : java.awt.image.DataBuffer) : Void;
 	
 	/**
 	* Sets the samples in the specified band for the specified rectangle
@@ -352,11 +352,11 @@ extern class SinglePixelPackedSampleModel extends java.awt.image.SampleModel
 	* @param data      The DataBuffer containing the image data.
 	* @see #getSamples(int, int, int, int, int, int[], DataBuffer)
 	*/
-	@:overload override public function setSamples(x : Int, y : Int, w : Int, h : Int, b : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
+	@:overload @:public override public function setSamples(x : Int, y : Int, w : Int, h : Int, b : Int, iArray : java.NativeArray<Int>, data : java.awt.image.DataBuffer) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

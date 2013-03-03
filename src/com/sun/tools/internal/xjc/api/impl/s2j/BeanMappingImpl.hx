@@ -25,11 +25,11 @@ package com.sun.tools.internal.xjc.api.impl.s2j;
 */
 @:internal extern class BeanMappingImpl extends com.sun.tools.internal.xjc.api.impl.s2j.AbstractMappingImpl<com.sun.tools.internal.xjc.model.CClassInfo>
 {
-	@:overload public function getType() : com.sun.tools.internal.xjc.api.TypeAndAnnotation;
+	@:overload @:public override public function getType() : com.sun.tools.internal.xjc.api.TypeAndAnnotation;
 	
-	@:overload @:final public function getTypeClass() : String;
+	@:overload @:public @:final public function getTypeClass() : String;
 	
-	@:overload public function calcDrilldown() : java.util.List<com.sun.tools.internal.xjc.api.Property>;
+	@:overload @:public override public function calcDrilldown() : java.util.List<com.sun.tools.internal.xjc.api.Property>;
 	
 	
 }

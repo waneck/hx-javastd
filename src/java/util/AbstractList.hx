@@ -71,7 +71,7 @@ package java.util;
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Appends the specified element to the end of this list (optional
@@ -101,14 +101,14 @@ package java.util;
 	* @throws IllegalArgumentException if some property of this element
 	*         prevents it from being added to this list
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload @:abstract public function get(index : Int) : E;
+	@:overload @:abstract @:public public function get(index : Int) : E;
 	
 	/**
 	* {@inheritDoc}
@@ -122,7 +122,7 @@ package java.util;
 	* @throws IllegalArgumentException      {@inheritDoc}
 	* @throws IndexOutOfBoundsException     {@inheritDoc}
 	*/
-	@:overload public function set(index : Int, element : E) : E;
+	@:overload @:public public function set(index : Int, element : E) : E;
 	
 	/**
 	* {@inheritDoc}
@@ -136,7 +136,7 @@ package java.util;
 	* @throws IllegalArgumentException      {@inheritDoc}
 	* @throws IndexOutOfBoundsException     {@inheritDoc}
 	*/
-	@:overload public function add(index : Int, element : E) : Void;
+	@:overload @:public public function add(index : Int, element : E) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -147,7 +147,7 @@ package java.util;
 	* @throws UnsupportedOperationException {@inheritDoc}
 	* @throws IndexOutOfBoundsException     {@inheritDoc}
 	*/
-	@:overload public function remove(index : Int) : E;
+	@:overload @:public public function remove(index : Int) : E;
 	
 	/**
 	* {@inheritDoc}
@@ -159,7 +159,7 @@ package java.util;
 	* @throws ClassCastException   {@inheritDoc}
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function indexOf(o : Dynamic) : Int;
+	@:overload @:public public function indexOf(o : Dynamic) : Int;
 	
 	/**
 	* {@inheritDoc}
@@ -172,7 +172,7 @@ package java.util;
 	* @throws ClassCastException   {@inheritDoc}
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function lastIndexOf(o : Dynamic) : Int;
+	@:overload @:public public function lastIndexOf(o : Dynamic) : Int;
 	
 	/**
 	* Removes all of the elements from this list (optional operation).
@@ -188,7 +188,7 @@ package java.util;
 	* @throws UnsupportedOperationException if the {@code clear} operation
 	*         is not supported by this list
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -209,7 +209,7 @@ package java.util;
 	* @throws IllegalArgumentException      {@inheritDoc}
 	* @throws IndexOutOfBoundsException     {@inheritDoc}
 	*/
-	@:overload public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
+	@:overload @:public public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Returns an iterator over the elements in this list in proper sequence.
@@ -229,7 +229,7 @@ package java.util;
 	*
 	* @return an iterator over the elements in this list in proper sequence
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
 	/**
 	* {@inheritDoc}
@@ -238,7 +238,7 @@ package java.util;
 	*
 	* @see #listIterator(int)
 	*/
-	@:overload public function listIterator() : java.util.ListIterator<E>;
+	@:overload @:public public function listIterator() : java.util.ListIterator<E>;
 	
 	/**
 	* {@inheritDoc}
@@ -262,7 +262,7 @@ package java.util;
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function listIterator(index : Int) : java.util.ListIterator<E>;
+	@:overload @:public public function listIterator(index : Int) : java.util.ListIterator<E>;
 	
 	/**
 	* {@inheritDoc}
@@ -299,7 +299,7 @@ package java.util;
 	* @throws IllegalArgumentException if the endpoint indices are out of order
 	*         {@code (fromIndex > toIndex)}
 	*/
-	@:overload public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
+	@:overload @:public public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	/**
 	* Compares the specified object with this list for equality.  Returns
@@ -322,7 +322,7 @@ package java.util;
 	* @param o the object to be compared for equality with this list
 	* @return {@code true} if the specified object is equal to this list
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this list.
@@ -333,7 +333,7 @@ package java.util;
 	*
 	* @return the hash code value for this list
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Removes from this list all of the elements whose index is between
@@ -357,7 +357,7 @@ package java.util;
 	* @param fromIndex index of first element to be removed
 	* @param toIndex index after last element to be removed
 	*/
-	@:overload private function removeRange(fromIndex : Int, toIndex : Int) : Void;
+	@:overload @:protected private function removeRange(fromIndex : Int, toIndex : Int) : Void;
 	
 	/**
 	* The number of times this list has been <i>structurally modified</i>.
@@ -385,7 +385,7 @@ package java.util;
 	* does not wish to provide fail-fast iterators, this field may be
 	* ignored.
 	*/
-	@:transient private var modCount : Int;
+	@:protected @:transient private var modCount : Int;
 	
 	/**
 	* Returns an array containing all of the elements in this list in
@@ -425,7 +425,7 @@ package java.util;
 	*         this list
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Returns the number of elements in this list.  If this list contains
@@ -434,7 +434,7 @@ package java.util;
 	*
 	* @return the number of elements in this list
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains all of the elements of the
@@ -454,7 +454,7 @@ package java.util;
 	*         or if the specified collection is null
 	* @see #contains(Object)
 	*/
-	@:overload override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Retains only the elements in this list that are contained in the
@@ -476,7 +476,7 @@ package java.util;
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Removes from this list all of its elements that are contained in the
@@ -496,7 +496,7 @@ package java.util;
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Appends all of the elements in the specified collection to the end of
@@ -519,7 +519,7 @@ package java.util;
 	*         specified collection prevents it from being added to this list
 	* @see #add(Object)
 	*/
-	@:overload override public function addAll(c : java.util.Collection<E>) : Bool;
+	@:overload @:public override public function addAll(c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Returns an array containing all of the elements in this list in proper
@@ -537,14 +537,14 @@ package java.util;
 	*         sequence
 	* @see Arrays#asList(Object[])
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains no elements.
 	*
 	* @return <tt>true</tt> if this list contains no elements
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Removes the first occurrence of the specified element from this list,
@@ -567,7 +567,7 @@ package java.util;
 	* @throws UnsupportedOperationException if the <tt>remove</tt> operation
 	*         is not supported by this list
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains the specified element.
@@ -584,65 +584,65 @@ package java.util;
 	*         list does not permit null elements
 	* (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	
 }
 @:native('java$util$AbstractList$Itr') @:internal extern class AbstractList_Itr implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }
 @:native('java$util$AbstractList$ListItr') @:internal extern class AbstractList_ListItr extends java.util.AbstractList.AbstractList_Itr implements java.util.ListIterator<Dynamic>
 {
-	@:overload public function hasPrevious() : Bool;
+	@:overload @:public public function hasPrevious() : Bool;
 	
-	@:overload public function previous() : Dynamic;
+	@:overload @:public public function previous() : Dynamic;
 	
-	@:overload public function nextIndex() : Int;
+	@:overload @:public public function nextIndex() : Int;
 	
-	@:overload public function previousIndex() : Int;
+	@:overload @:public public function previousIndex() : Int;
 	
-	@:overload public function set(e : Dynamic) : Void;
+	@:overload @:public public function set(e : Dynamic) : Void;
 	
-	@:overload public function add(e : Dynamic) : Void;
+	@:overload @:public public function add(e : Dynamic) : Void;
 	
 	
 }
 @:internal extern class SubList<E> extends java.util.AbstractList<E>
 {
-	@:overload override public function set(index : Int, element : E) : E;
+	@:overload @:public override public function set(index : Int, element : E) : E;
 	
-	@:overload override public function get(index : Int) : E;
+	@:overload @:public override public function get(index : Int) : E;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function add(index : Int, element : E) : Void;
+	@:overload @:public override public function add(index : Int, element : E) : Void;
 	
-	@:overload override public function remove(index : Int) : E;
+	@:overload @:public override public function remove(index : Int) : E;
 	
-	@:overload override private function removeRange(fromIndex : Int, toIndex : Int) : Void;
+	@:overload @:protected override private function removeRange(fromIndex : Int, toIndex : Int) : Void;
 	
-	@:overload override public function addAll(c : java.util.Collection<E>) : Bool;
+	@:overload @:public override public function addAll(c : java.util.Collection<E>) : Bool;
 	
-	@:overload override public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
+	@:overload @:public override public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
 	
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
-	@:overload override public function listIterator(index : Int) : java.util.ListIterator<E>;
+	@:overload @:public override public function listIterator(index : Int) : java.util.ListIterator<E>;
 	
-	@:overload override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
+	@:overload @:public override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	
 }
 @:internal extern class RandomAccessSubList<E> extends java.util.AbstractList.SubList<E> implements java.util.RandomAccess
 {
-	@:overload override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
+	@:overload @:public override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	
 }

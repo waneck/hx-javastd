@@ -39,15 +39,15 @@ package javax.swing.plaf.metal;
 */
 extern class MetalCheckBoxIcon implements javax.swing.Icon implements javax.swing.plaf.UIResource implements java.io.Serializable
 {
-	@:overload private function getControlSize() : Int;
+	@:overload @:protected private function getControlSize() : Int;
 	
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload private function drawCheck(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:protected private function drawCheck(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }

@@ -43,7 +43,7 @@ package sun.jvmstat.monitor;
 	* @return byte[] - a copy of the bytes in the associated
 	*                  instrumenattion object.
 	*/
-	@:overload public function byteArrayValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function byteArrayValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Get the current value of an element of the ByteArrayInstrument object.
@@ -51,7 +51,7 @@ package sun.jvmstat.monitor;
 	* @return byte - the byte value at the specified index in the
 	*                associated instrumentation object.
 	*/
-	@:overload public function byteAt(index : Int) : java.StdTypes.Int8;
+	@:overload @:public public function byteAt(index : Int) : java.StdTypes.Int8;
 	
 	
 }

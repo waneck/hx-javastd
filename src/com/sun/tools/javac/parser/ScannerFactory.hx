@@ -26,17 +26,17 @@ package com.sun.tools.javac.parser;
 extern class ScannerFactory
 {
 	/** The context key for the scanner factory. */
-	public static var scannerFactoryKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.parser.ScannerFactory>;
+	@:public @:static @:final public static var scannerFactoryKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.parser.ScannerFactory>;
 	
 	/** Get the Factory instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.parser.ScannerFactory;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.parser.ScannerFactory;
 	
 	/** Create a new scanner factory. */
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function newScanner(input : java.lang.CharSequence, keepDocComments : Bool) : com.sun.tools.javac.parser.Scanner;
+	@:overload @:public public function newScanner(input : java.lang.CharSequence, keepDocComments : Bool) : com.sun.tools.javac.parser.Scanner;
 	
-	@:overload public function newScanner(input : java.NativeArray<java.StdTypes.Char16>, inputLength : Int, keepDocComments : Bool) : com.sun.tools.javac.parser.Scanner;
+	@:overload @:public public function newScanner(input : java.NativeArray<java.StdTypes.Char16>, inputLength : Int, keepDocComments : Bool) : com.sun.tools.javac.parser.Scanner;
 	
 	
 }

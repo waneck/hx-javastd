@@ -35,7 +35,7 @@ extern class ConstructorFinder extends com.sun.beans.finder.AbstractFinder<java.
 	* @throws NoSuchMethodException if constructor could not be found
 	*                               or some constructors are found
 	*/
-	@:overload public static function findConstructor(type : Class<Dynamic>, args : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Constructor<Dynamic>;
+	@:overload @:public @:static public static function findConstructor(type : Class<Dynamic>, args : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Constructor<Dynamic>;
 	
 	/**
 	* Returns an array of {@code Class} objects
@@ -45,7 +45,7 @@ extern class ConstructorFinder extends com.sun.beans.finder.AbstractFinder<java.
 	* @param constructor  the object that represents constructor
 	* @return the parameter types of the constructor
 	*/
-	@:overload private function getParameters(constructor : java.lang.reflect.Constructor<Dynamic>) : java.NativeArray<Class<Dynamic>>;
+	@:overload @:protected private function getParameters(constructor : java.lang.reflect.Constructor<Dynamic>) : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Returns {@code true} if and only if the constructor
@@ -56,7 +56,7 @@ extern class ConstructorFinder extends com.sun.beans.finder.AbstractFinder<java.
 	*         to take a variable number of arguments;
 	*         {@code false} otherwise
 	*/
-	@:overload private function isVarArgs(constructor : java.lang.reflect.Constructor<Dynamic>) : Bool;
+	@:overload @:protected private function isVarArgs(constructor : java.lang.reflect.Constructor<Dynamic>) : Bool;
 	
 	/**
 	* Checks validness of the constructor.
@@ -66,7 +66,7 @@ extern class ConstructorFinder extends com.sun.beans.finder.AbstractFinder<java.
 	* @return {@code true} if the constructor is valid,
 	*         {@code false} otherwise
 	*/
-	@:overload private function isValid(constructor : java.lang.reflect.Constructor<Dynamic>) : Bool;
+	@:overload @:protected private function isValid(constructor : java.lang.reflect.Constructor<Dynamic>) : Bool;
 	
 	
 }

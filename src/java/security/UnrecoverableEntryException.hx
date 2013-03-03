@@ -34,7 +34,7 @@ package java.security;
 	/**
 	* Constructs an UnrecoverableEntryException with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an UnrecoverableEntryException with the specified detail
@@ -43,7 +43,7 @@ package java.security;
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

@@ -29,7 +29,7 @@ package java.lang.ref;
 }
 @:native('java$lang$ref$Finalizer$FinalizerThread') @:internal extern class Finalizer_FinalizerThread extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

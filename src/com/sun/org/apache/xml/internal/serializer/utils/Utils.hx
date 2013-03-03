@@ -28,7 +28,7 @@ extern class Utils
 	* given resource bundle just once, it is
 	* used by multiple transformations as long as the JVM stays up.
 	*/
-	public static var messages(default, null) : com.sun.org.apache.xml.internal.serializer.utils.Messages;
+	@:public @:static @:final public static var messages(default, null) : com.sun.org.apache.xml.internal.serializer.utils.Messages;
 	
 	
 }

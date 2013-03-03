@@ -50,13 +50,13 @@ extern class Generator implements sun.rmi.rmic.Generator implements sun.rmi.rmic
 	* </pre>
 	* @author      Bryan Atsatt
 	*/
-	private var alwaysGenerate : Bool;
+	@:protected private var alwaysGenerate : Bool;
 	
-	private var env : sun.rmi.rmic.iiop.BatchEnvironment;
+	@:protected private var env : sun.rmi.rmic.iiop.BatchEnvironment;
 	
-	private var contextStack : sun.rmi.rmic.iiop.ContextStack;
+	@:protected private var contextStack : sun.rmi.rmic.iiop.ContextStack;
 	
-	private var idl : Bool;
+	@:protected private var idl : Bool;
 	
 	/**
 	* Examine and consume command line arguments.
@@ -65,13 +65,13 @@ extern class Generator implements sun.rmi.rmic.Generator implements sun.rmi.rmic
 	* @param error Report any errors using the main.error() methods.
 	* @return true if no errors, false otherwise.
 	*/
-	@:overload public function parseArgs(argv : java.NativeArray<String>, main : sun.rmi.rmic.Main) : Bool;
+	@:overload @:public public function parseArgs(argv : java.NativeArray<String>, main : sun.rmi.rmic.Main) : Bool;
 	
 	/**
 	* Return true if non-conforming types should be parsed.
 	* @param stack The context stack.
 	*/
-	@:overload @:abstract private function parseNonConforming(stack : sun.rmi.rmic.iiop.ContextStack) : Bool;
+	@:overload @:protected @:abstract private function parseNonConforming(stack : sun.rmi.rmic.iiop.ContextStack) : Bool;
 	
 	/**
 	* Create and return a top-level type.
@@ -79,7 +79,7 @@ extern class Generator implements sun.rmi.rmic.Generator implements sun.rmi.rmic
 	* @param stack The context stack.
 	* @return The compound type or null if is non-conforming.
 	*/
-	@:overload @:abstract private function getTopType(cdef : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack) : sun.rmi.rmic.iiop.CompoundType;
+	@:overload @:protected @:abstract private function getTopType(cdef : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack) : sun.rmi.rmic.iiop.CompoundType;
 	
 	/**
 	* Return an array containing all the file names and types that need to be
@@ -89,7 +89,7 @@ extern class Generator implements sun.rmi.rmic.Generator implements sun.rmi.rmic
 	* @param alreadyChecked A set of Types which have already been checked.
 	*  Intended to be passed to Type.collectMatching(filter,alreadyChecked).
 	*/
-	@:overload @:abstract private function getOutputTypesFor(topType : sun.rmi.rmic.iiop.CompoundType, alreadyChecked : java.util.HashSet<Dynamic>) : java.NativeArray<sun.rmi.rmic.iiop.Generator.Generator_OutputType>;
+	@:overload @:protected @:abstract private function getOutputTypesFor(topType : sun.rmi.rmic.iiop.CompoundType, alreadyChecked : java.util.HashSet<Dynamic>) : java.NativeArray<sun.rmi.rmic.iiop.Generator.Generator_OutputType>;
 	
 	/**
 	* Return the file name extension for the given file name (e.g. ".java").
@@ -98,7 +98,7 @@ extern class Generator implements sun.rmi.rmic.Generator implements sun.rmi.rmic
 	* method to return false.
 	* @param outputType One of the items returned by getOutputTypesFor(...)
 	*/
-	@:overload @:abstract private function getFileNameExtensionFor(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType) : String;
+	@:overload @:protected @:abstract private function getFileNameExtensionFor(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType) : String;
 	
 	/**
 	* Write the output for the given OutputFileName into the output stream.
@@ -107,7 +107,7 @@ extern class Generator implements sun.rmi.rmic.Generator implements sun.rmi.rmic
 	*  Intended to be passed to Type.collectMatching(filter,alreadyChecked).
 	* @param writer The output stream.
 	*/
-	@:overload @:abstract private function writeOutputFor(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType, alreadyChecked : java.util.HashSet<Dynamic>, writer : sun.rmi.rmic.IndentingWriter) : Void;
+	@:overload @:protected @:abstract private function writeOutputFor(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType, alreadyChecked : java.util.HashSet<Dynamic>, writer : sun.rmi.rmic.IndentingWriter) : Void;
 	
 	/**
 	* Return true if a new instance should be created for each
@@ -115,24 +115,24 @@ extern class Generator implements sun.rmi.rmic.Generator implements sun.rmi.rmic
 	* should override newInstance() to return an appropriately
 	* constructed instance.
 	*/
-	@:overload @:abstract private function requireNewInstance() : Bool;
+	@:overload @:protected @:abstract private function requireNewInstance() : Bool;
 	
 	/**
 	* Return true if the specified file needs generation.
 	*/
-	@:overload public function requiresGeneration(target : java.io.File, theType : sun.rmi.rmic.iiop.Type) : Bool;
+	@:overload @:public public function requiresGeneration(target : java.io.File, theType : sun.rmi.rmic.iiop.Type) : Bool;
 	
 	/**
 	* Create and return a new instance of self. Subclasses
 	* which need to do something other than default construction
 	* must override this method.
 	*/
-	@:overload private function newInstance() : sun.rmi.rmic.Generator;
+	@:overload @:protected private function newInstance() : sun.rmi.rmic.Generator;
 	
 	/**
 	* Default constructor for subclasses to use.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Generate output. Any source files created which need compilation should
@@ -145,14 +145,14 @@ extern class Generator implements sun.rmi.rmic.Generator implements sun.rmi.rmic
 	* @param destDir   The directory for the root of the package hierarchy
 	*                          for generated files. May be null.
 	*/
-	@:overload public function generate(env : sun.rmi.rmic.BatchEnvironment, cdef : sun.tools.java.ClassDefinition, destDir : java.io.File) : Void;
+	@:overload @:public public function generate(env : sun.rmi.rmic.BatchEnvironment, cdef : sun.tools.java.ClassDefinition, destDir : java.io.File) : Void;
 	
 	/**
 	* Create and return a new instance of self. Subclasses
 	* which need to do something other than default construction
 	* must override this method.
 	*/
-	@:overload private function generateOutputFiles(topType : sun.rmi.rmic.iiop.CompoundType, env : sun.rmi.rmic.iiop.BatchEnvironment, destDir : java.io.File) : Void;
+	@:overload @:protected private function generateOutputFiles(topType : sun.rmi.rmic.iiop.CompoundType, env : sun.rmi.rmic.iiop.BatchEnvironment, destDir : java.io.File) : Void;
 	
 	/**
 	* Return the File object that should be used as the output file
@@ -165,31 +165,31 @@ extern class Generator implements sun.rmi.rmic.Generator implements sun.rmi.rmic
 	* package directory lives in a zip or jar file rather than the
 	* file system), the current user directory is used.
 	*/
-	@:overload private function getFileFor(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType, destinationDir : java.io.File) : java.io.File;
+	@:overload @:protected private function getFileFor(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType, destinationDir : java.io.File) : java.io.File;
 	
 	/**
 	* Return an identifier to use for output.
 	* @param outputType the type for which output is to be generated.
 	* @return the new identifier. This implementation returns the input parameter.
 	*/
-	@:overload private function getOutputId(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType) : sun.tools.java.Identifier;
+	@:overload @:protected private function getOutputId(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType) : sun.tools.java.Identifier;
 	
 	/**
 	* Return true if the given file should be compiled.
 	* @param outputType One of the items returned by getOutputTypesFor(...) for
 	*   which getFileNameExtensionFor(OutputType) returned ".java".
 	*/
-	@:overload private function compileJavaSourceFile(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType) : Bool;
+	@:overload @:protected private function compileJavaSourceFile(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType) : Bool;
 	
 	
 }
 @:native('sun$rmi$rmic$iiop$Generator$OutputType') extern class Generator_OutputType
 {
-	@:overload public function new(name : String, type : sun.rmi.rmic.iiop.Type) : Void;
+	@:overload @:public public function new(name : String, type : sun.rmi.rmic.iiop.Type) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getType() : sun.rmi.rmic.iiop.Type;
+	@:overload @:public public function getType() : sun.rmi.rmic.iiop.Type;
 	
 	
 }

@@ -34,7 +34,7 @@ extern class DOMCryptoBinary extends org.jcp.xml.dsig.internal.dom.DOMStructure
 	* @param bigNum the arbitrary-length integer
 	* @throws NullPointerException if <code>bigNum</code> is <code>null</code>
 	*/
-	@:overload public function new(bigNum : java.math.BigInteger) : Void;
+	@:overload @:public public function new(bigNum : java.math.BigInteger) : Void;
 	
 	/**
 	* Creates a <code>DOMCryptoBinary</code> from a node.
@@ -42,16 +42,16 @@ extern class DOMCryptoBinary extends org.jcp.xml.dsig.internal.dom.DOMStructure
 	* @param cbNode a CryptoBinary text node
 	* @throws MarshalException if value cannot be decoded (invalid format)
 	*/
-	@:overload public function new(cbNode : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(cbNode : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Returns the <code>BigInteger</code> that this object contains.
 	*
 	* @return the <code>BigInteger</code> that this object contains
 	*/
-	@:overload public function getBigNum() : java.math.BigInteger;
+	@:overload @:public public function getBigNum() : java.math.BigInteger;
 	
-	@:overload public function marshal(parent : org.w3c.dom.Node, prefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public override public function marshal(parent : org.w3c.dom.Node, prefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
 	
 }

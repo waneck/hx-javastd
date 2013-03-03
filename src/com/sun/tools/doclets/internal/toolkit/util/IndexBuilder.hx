@@ -46,7 +46,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	* @param noDeprecated  true if -nodeprecated option is used,
 	*                      false otherwise.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, noDeprecated : Bool) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, noDeprecated : Bool) : Void;
 	
 	/**
 	* Constructor. Build the index map.
@@ -56,13 +56,13 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	*                      false otherwise.
 	* @param classesOnly   Include only classes in index.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, noDeprecated : Bool, classesOnly : Bool) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, noDeprecated : Bool, classesOnly : Bool) : Void;
 	
 	/**
 	* Sort the index map. Traverse the index map for all it's elements and
 	* sort each element which is a list.
 	*/
-	@:overload private function sortIndexMap() : Void;
+	@:overload @:protected private function sortIndexMap() : Void;
 	
 	/**
 	* Get all the members in all the Packages and all the Classes
@@ -71,7 +71,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	*
 	* @param root Root of the documemt.
 	*/
-	@:overload private function buildIndexMap(root : com.sun.javadoc.RootDoc) : Void;
+	@:overload @:protected private function buildIndexMap(root : com.sun.javadoc.RootDoc) : Void;
 	
 	/**
 	* Put all the members(fields, methods and constructors) in the classdoc
@@ -79,7 +79,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	*
 	* @param classdoc ClassDoc whose members will be added to the indexmap.
 	*/
-	@:overload private function putMembersInIndexMap(classdoc : com.sun.javadoc.ClassDoc) : Void;
+	@:overload @:protected private function putMembersInIndexMap(classdoc : com.sun.javadoc.ClassDoc) : Void;
 	
 	/**
 	* Adjust list of members according to their names. Check the first
@@ -88,19 +88,19 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	*
 	* @param elements Array of members.
 	*/
-	@:overload private function adjustIndexMap(elements : java.NativeArray<com.sun.javadoc.Doc>) : Void;
+	@:overload @:protected private function adjustIndexMap(elements : java.NativeArray<com.sun.javadoc.Doc>) : Void;
 	
 	/**
 	* Should this doc element be added to the index map?
 	*/
-	@:overload private function shouldAddToIndexMap(element : com.sun.javadoc.Doc) : Bool;
+	@:overload @:protected private function shouldAddToIndexMap(element : com.sun.javadoc.Doc) : Bool;
 	
 	/**
 	* Return a map of all the individual member lists with Unicode character.
 	*
 	* @return Map index map.
 	*/
-	@:overload public function getIndexMap() : java.util.Map<Null<java.StdTypes.Char16>, java.util.List<com.sun.javadoc.Doc>>;
+	@:overload @:public public function getIndexMap() : java.util.Map<Null<java.StdTypes.Char16>, java.util.List<com.sun.javadoc.Doc>>;
 	
 	/**
 	* Return the sorted list of members, for passed Unicode Character.
@@ -108,12 +108,12 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	* @param index index Unicode character.
 	* @return List member list for specific Unicode character.
 	*/
-	@:overload public function getMemberList(index : Null<java.StdTypes.Char16>) : java.util.List<com.sun.javadoc.Doc>;
+	@:overload @:public public function getMemberList(index : Null<java.StdTypes.Char16>) : java.util.List<com.sun.javadoc.Doc>;
 	
 	/**
 	* Array of IndexMap keys, Unicode characters.
 	*/
-	@:overload public function elements() : java.NativeArray<Dynamic>;
+	@:overload @:public public function elements() : java.NativeArray<Dynamic>;
 	
 	
 }
@@ -123,7 +123,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 */
 @:native('com$sun$tools$doclets$internal$toolkit$util$IndexBuilder$DocComparator') @:internal extern class IndexBuilder_DocComparator implements java.util.Comparator<com.sun.javadoc.Doc>
 {
-	@:overload public function compare(d1 : com.sun.javadoc.Doc, d2 : com.sun.javadoc.Doc) : Int;
+	@:overload @:public public function compare(d1 : com.sun.javadoc.Doc, d2 : com.sun.javadoc.Doc) : Int;
 	
 	
 }

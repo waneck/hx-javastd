@@ -31,23 +31,23 @@ package com.sun.corba.se.impl.protocol.giopmsgheaders;
 */
 extern class TargetAddress implements org.omg.CORBA.portable.IDLEntity
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function discriminator() : java.StdTypes.Int16;
+	@:overload @:public public function discriminator() : java.StdTypes.Int16;
 	
-	@:overload public function object_key() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function object_key() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function object_key(value : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function object_key(value : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function profile() : org.omg.IOP.TaggedProfile;
+	@:overload @:public public function profile() : org.omg.IOP.TaggedProfile;
 	
-	@:overload public function profile(value : org.omg.IOP.TaggedProfile) : Void;
+	@:overload @:public public function profile(value : org.omg.IOP.TaggedProfile) : Void;
 	
-	@:overload public function ior() : com.sun.corba.se.impl.protocol.giopmsgheaders.IORAddressingInfo;
+	@:overload @:public public function ior() : com.sun.corba.se.impl.protocol.giopmsgheaders.IORAddressingInfo;
 	
-	@:overload public function ior(value : com.sun.corba.se.impl.protocol.giopmsgheaders.IORAddressingInfo) : Void;
+	@:overload @:public public function ior(value : com.sun.corba.se.impl.protocol.giopmsgheaders.IORAddressingInfo) : Void;
 	
-	@:overload public function _default() : Void;
+	@:overload @:public public function _default() : Void;
 	
 	
 }

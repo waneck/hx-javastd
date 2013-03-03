@@ -31,9 +31,9 @@ extern class ClientMessageHandlerTube extends com.sun.xml.internal.ws.handler.Ha
 	/**
 	* Creates a new instance of MessageHandlerTube
 	*/
-	@:overload public function new(seiModel : com.sun.xml.internal.ws.api.model.SEIModel, binding : com.sun.xml.internal.ws.api.WSBinding, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
+	@:overload @:public public function new(seiModel : com.sun.xml.internal.ws.api.model.SEIModel, binding : com.sun.xml.internal.ws.api.WSBinding, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterTubeImpl;
+	@:overload @:public override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterTubeImpl;
 	
 	
 }

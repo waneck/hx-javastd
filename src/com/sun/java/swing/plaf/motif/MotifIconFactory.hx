@@ -25,69 +25,69 @@ package com.sun.java.swing.plaf.motif;
 */
 extern class MotifIconFactory implements java.io.Serializable
 {
-	@:overload public static function getMenuItemCheckIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function getMenuItemCheckIcon() : javax.swing.Icon;
 	
-	@:overload public static function getMenuItemArrowIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function getMenuItemArrowIcon() : javax.swing.Icon;
 	
-	@:overload public static function getMenuArrowIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function getMenuArrowIcon() : javax.swing.Icon;
 	
-	@:overload public static function getCheckBoxIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function getCheckBoxIcon() : javax.swing.Icon;
 	
-	@:overload public static function getRadioButtonIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function getRadioButtonIcon() : javax.swing.Icon;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifIconFactory$CheckBoxIcon') @:internal extern class MotifIconFactory_CheckBoxIcon implements javax.swing.Icon implements javax.swing.plaf.UIResource implements java.io.Serializable
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
-	@:overload public function drawCheckBezelOut(g : java.awt.Graphics, x : Int, y : Int, csize : Int) : Void;
+	@:overload @:public public function drawCheckBezelOut(g : java.awt.Graphics, x : Int, y : Int, csize : Int) : Void;
 	
-	@:overload public function drawCheckBezel(g : java.awt.Graphics, x : Int, y : Int, csize : Int, shade : Bool, out : Bool, check : Bool, flat : Bool) : Void;
+	@:overload @:public public function drawCheckBezel(g : java.awt.Graphics, x : Int, y : Int, csize : Int, shade : Bool, out : Bool, check : Bool, flat : Bool) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifIconFactory$RadioButtonIcon') @:internal extern class MotifIconFactory_RadioButtonIcon implements javax.swing.Icon implements javax.swing.plaf.UIResource implements java.io.Serializable
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifIconFactory$MenuItemCheckIcon') @:internal extern class MotifIconFactory_MenuItemCheckIcon implements javax.swing.Icon implements javax.swing.plaf.UIResource implements java.io.Serializable
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifIconFactory$MenuItemArrowIcon') @:internal extern class MotifIconFactory_MenuItemArrowIcon implements javax.swing.Icon implements javax.swing.plaf.UIResource implements java.io.Serializable
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifIconFactory$MenuArrowIcon') @:internal extern class MotifIconFactory_MenuArrowIcon implements javax.swing.Icon implements javax.swing.plaf.UIResource implements java.io.Serializable
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }

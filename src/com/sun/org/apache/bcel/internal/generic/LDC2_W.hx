@@ -65,11 +65,11 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class LDC2_W extends com.sun.org.apache.bcel.internal.generic.CPInstruction implements com.sun.org.apache.bcel.internal.generic.PushInstruction implements com.sun.org.apache.bcel.internal.generic.TypedInstruction
 {
-	@:overload public function new(index : Int) : Void;
+	@:overload @:public public function new(index : Int) : Void;
 	
-	@:overload override public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public override public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
-	@:overload public function getValue(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : java.lang.Number;
+	@:overload @:public public function getValue(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : java.lang.Number;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -79,7 +79,7 @@ extern class LDC2_W extends com.sun.org.apache.bcel.internal.generic.CPInstructi
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

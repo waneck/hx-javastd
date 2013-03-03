@@ -35,7 +35,7 @@ extern interface OpenMBeanConstructorInfo
 	*
 	* @return the description.
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	/**
 	* Returns the name of the constructor
@@ -43,7 +43,7 @@ extern interface OpenMBeanConstructorInfo
 	*
 	* @return the name.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns an array of <tt>OpenMBeanParameterInfo</tt> instances
@@ -52,7 +52,7 @@ extern interface OpenMBeanConstructorInfo
 	*
 	* @return the signature.
 	*/
-	@:overload public function getSignature() : java.NativeArray<javax.management.MBeanParameterInfo>;
+	@:overload @:public public function getSignature() : java.NativeArray<javax.management.MBeanParameterInfo>;
 	
 	
 }

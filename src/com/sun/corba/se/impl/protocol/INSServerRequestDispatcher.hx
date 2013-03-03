@@ -31,11 +31,11 @@ package com.sun.corba.se.impl.protocol;
 */
 extern class INSServerRequestDispatcher implements com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function locate(okey : com.sun.corba.se.spi.ior.ObjectKey) : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public public function locate(okey : com.sun.corba.se.spi.ior.ObjectKey) : com.sun.corba.se.spi.ior.IOR;
 	
-	@:overload public function dispatch(mediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
+	@:overload @:public public function dispatch(mediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
 	
 	
 }

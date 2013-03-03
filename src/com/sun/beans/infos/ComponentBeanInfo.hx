@@ -28,7 +28,7 @@ package com.sun.beans.infos;
 */
 extern class ComponentBeanInfo extends java.beans.SimpleBeanInfo
 {
-	@:overload override public function getPropertyDescriptors() : java.NativeArray<java.beans.PropertyDescriptor>;
+	@:overload @:public override public function getPropertyDescriptors() : java.NativeArray<java.beans.PropertyDescriptor>;
 	
 	
 }

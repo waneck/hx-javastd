@@ -38,7 +38,7 @@ extern class SQLException extends java.lang.Exception implements java.lang.Itera
 	* @param SQLState an XOPEN or SQL:2003 code identifying the exception
 	* @param vendorCode a database vendor-specific exception code
 	*/
-	@:overload public function new(reason : String, SQLState : String, vendorCode : Int) : Void;
+	@:overload @:public public function new(reason : String, SQLState : String, vendorCode : Int) : Void;
 	
 	/**
 	* Constructs a <code>SQLException</code> object with a given
@@ -52,7 +52,7 @@ extern class SQLException extends java.lang.Exception implements java.lang.Itera
 	* @param reason a description of the exception
 	* @param SQLState an XOPEN or SQL:2003 code identifying the exception
 	*/
-	@:overload public function new(reason : String, SQLState : String) : Void;
+	@:overload @:public public function new(reason : String, SQLState : String) : Void;
 	
 	/**
 	*  Constructs a <code>SQLException</code> object with a given
@@ -65,7 +65,7 @@ extern class SQLException extends java.lang.Exception implements java.lang.Itera
 	* <p>
 	* @param reason a description of the exception
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	/**
 	* Constructs a <code>SQLException</code> object.
@@ -77,7 +77,7 @@ extern class SQLException extends java.lang.Exception implements java.lang.Itera
 	* {@link Throwable#initCause(java.lang.Throwable)} method.
 	* <p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*  Constructs a <code>SQLException</code> object with a given
@@ -93,7 +93,7 @@ extern class SQLException extends java.lang.Exception implements java.lang.Itera
 	* may be null indicating the cause is non-existent or unknown.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a <code>SQLException</code> object with a given
@@ -107,7 +107,7 @@ extern class SQLException extends java.lang.Exception implements java.lang.Itera
 	* may be null indicating the cause is non-existent or unknown.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a <code>SQLException</code> object with a given
@@ -122,7 +122,7 @@ extern class SQLException extends java.lang.Exception implements java.lang.Itera
 	*     the cause is non-existent or unknown.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, sqlState : String, cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, sqlState : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a <code>SQLException</code> object with a given
@@ -137,14 +137,14 @@ extern class SQLException extends java.lang.Exception implements java.lang.Itera
 	* may be null indicating the cause is non-existent or unknown.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, sqlState : String, vendorCode : Int, cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, sqlState : String, vendorCode : Int, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Retrieves the SQLState for this <code>SQLException</code> object.
 	*
 	* @return the SQLState value
 	*/
-	@:overload public function getSQLState() : String;
+	@:overload @:public public function getSQLState() : String;
 	
 	/**
 	* Retrieves the vendor-specific exception code
@@ -152,7 +152,7 @@ extern class SQLException extends java.lang.Exception implements java.lang.Itera
 	*
 	* @return the vendor's error code
 	*/
-	@:overload public function getErrorCode() : Int;
+	@:overload @:public public function getErrorCode() : Int;
 	
 	/**
 	* Retrieves the exception chained to this
@@ -162,7 +162,7 @@ extern class SQLException extends java.lang.Exception implements java.lang.Itera
 	*         <code>null</code> if there are none
 	* @see #setNextException
 	*/
-	@:overload public function getNextException() : java.sql.SQLException;
+	@:overload @:public public function getNextException() : java.sql.SQLException;
 	
 	/**
 	* Adds an <code>SQLException</code> object to the end of the chain.
@@ -171,7 +171,7 @@ extern class SQLException extends java.lang.Exception implements java.lang.Itera
 	*            the <code>SQLException</code> chain
 	* @see #getNextException
 	*/
-	@:overload public function setNextException(ex : java.sql.SQLException) : Void;
+	@:overload @:public public function setNextException(ex : java.sql.SQLException) : Void;
 	
 	/**
 	* Returns an iterator over the chained SQLExceptions.  The iterator will
@@ -183,7 +183,7 @@ extern class SQLException extends java.lang.Exception implements java.lang.Itera
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function iterator() : java.util.Iterator<java.lang.Throwable>;
+	@:require(java6) @:overload @:public public function iterator() : java.util.Iterator<java.lang.Throwable>;
 	
 	
 }

@@ -64,13 +64,13 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern interface NamedAndTyped
 {
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getType() : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType() : com.sun.org.apache.bcel.internal.generic.Type;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
-	@:overload public function setType(type : com.sun.org.apache.bcel.internal.generic.Type) : Void;
+	@:overload @:public public function setType(type : com.sun.org.apache.bcel.internal.generic.Type) : Void;
 	
 	
 }

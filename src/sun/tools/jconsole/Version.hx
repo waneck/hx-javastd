@@ -25,9 +25,9 @@ package sun.tools.jconsole;
 */
 extern class Version
 {
-	@:overload public static function print(ps : java.io.PrintStream) : Void;
+	@:overload @:public @:static public static function print(ps : java.io.PrintStream) : Void;
 	
-	@:overload public static function printFullVersion(ps : java.io.PrintStream) : Void;
+	@:overload @:public @:static public static function printFullVersion(ps : java.io.PrintStream) : Void;
 	
 	
 }

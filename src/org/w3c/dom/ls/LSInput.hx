@@ -89,7 +89,7 @@ extern interface LSInput
 	* using character streams. If an XML declaration is present, the value
 	* of the encoding attribute will be ignored.
 	*/
-	@:overload public function getCharacterStream() : java.io.Reader;
+	@:overload @:public public function getCharacterStream() : java.io.Reader;
 	
 	/**
 	*  An attribute of a language and binding dependent type that represents
@@ -98,7 +98,7 @@ extern interface LSInput
 	* using character streams. If an XML declaration is present, the value
 	* of the encoding attribute will be ignored.
 	*/
-	@:overload public function setCharacterStream(characterStream : java.io.Reader) : Void;
+	@:overload @:public public function setCharacterStream(characterStream : java.io.Reader) : Void;
 	
 	/**
 	*  An attribute of a language and binding dependent type that represents
@@ -108,7 +108,7 @@ extern interface LSInput
 	* this way will override any encoding specified in an XML declaration
 	* in the data.
 	*/
-	@:overload public function getByteStream() : java.io.InputStream;
+	@:overload @:public public function getByteStream() : java.io.InputStream;
 	
 	/**
 	*  An attribute of a language and binding dependent type that represents
@@ -118,7 +118,7 @@ extern interface LSInput
 	* this way will override any encoding specified in an XML declaration
 	* in the data.
 	*/
-	@:overload public function setByteStream(byteStream : java.io.InputStream) : Void;
+	@:overload @:public public function setByteStream(byteStream : java.io.InputStream) : Void;
 	
 	/**
 	*  String data to parse. If provided, this will always be treated as a
@@ -127,7 +127,7 @@ extern interface LSInput
 	* <code>stringData</code>. If an XML declaration is present, the value
 	* of the encoding attribute will be ignored.
 	*/
-	@:overload public function getStringData() : String;
+	@:overload @:public public function getStringData() : String;
 	
 	/**
 	*  String data to parse. If provided, this will always be treated as a
@@ -136,7 +136,7 @@ extern interface LSInput
 	* <code>stringData</code>. If an XML declaration is present, the value
 	* of the encoding attribute will be ignored.
 	*/
-	@:overload public function setStringData(stringData : String) : Void;
+	@:overload @:public public function setStringData(stringData : String) : Void;
 	
 	/**
 	*  The system identifier, a URI reference [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>], for this
@@ -156,7 +156,7 @@ extern interface LSInput
 	* <code>baseURI</code> as the base, if that fails, the behavior is
 	* implementation dependent.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	*  The system identifier, a URI reference [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>], for this
@@ -176,7 +176,7 @@ extern interface LSInput
 	* <code>baseURI</code> as the base, if that fails, the behavior is
 	* implementation dependent.
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	/**
 	*  The public identifier for this input source. This may be mapped to an
@@ -185,7 +185,7 @@ extern interface LSInput
 	* may also be reported as part of the location information when errors
 	* are reported.
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	*  The public identifier for this input source. This may be mapped to an
@@ -194,7 +194,7 @@ extern interface LSInput
 	* may also be reported as part of the location information when errors
 	* are reported.
 	*/
-	@:overload public function setPublicId(publicId : String) : Void;
+	@:overload @:public public function setPublicId(publicId : String) : Void;
 	
 	/**
 	*  The base URI to be used (see section 5.1.4 in [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]) for
@@ -202,7 +202,7 @@ extern interface LSInput
 	* <br> If, when used, the base URI is itself a relative URI, an empty
 	* string, or null, the behavior is implementation dependent.
 	*/
-	@:overload public function getBaseURI() : String;
+	@:overload @:public public function getBaseURI() : String;
 	
 	/**
 	*  The base URI to be used (see section 5.1.4 in [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]) for
@@ -210,7 +210,7 @@ extern interface LSInput
 	* <br> If, when used, the base URI is itself a relative URI, an empty
 	* string, or null, the behavior is implementation dependent.
 	*/
-	@:overload public function setBaseURI(baseURI : String) : Void;
+	@:overload @:public public function setBaseURI(baseURI : String) : Void;
 	
 	/**
 	*  The character encoding, if known. The encoding must be a string
@@ -222,7 +222,7 @@ extern interface LSInput
 	* encoding specified in the XML declaration or the Text declaration, or
 	* an encoding obtained from a higher level protocol, such as HTTP [<a href='http://www.ietf.org/rfc/rfc2616.txt'>IETF RFC 2616</a>].
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	*  The character encoding, if known. The encoding must be a string
@@ -234,21 +234,21 @@ extern interface LSInput
 	* encoding specified in the XML declaration or the Text declaration, or
 	* an encoding obtained from a higher level protocol, such as HTTP [<a href='http://www.ietf.org/rfc/rfc2616.txt'>IETF RFC 2616</a>].
 	*/
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
 	/**
 	*  If set to true, assume that the input is certified (see section 2.13
 	* in [<a href='http://www.w3.org/TR/2004/REC-xml11-20040204/'>XML 1.1</a>]) when
 	* parsing [<a href='http://www.w3.org/TR/2004/REC-xml11-20040204/'>XML 1.1</a>].
 	*/
-	@:overload public function getCertifiedText() : Bool;
+	@:overload @:public public function getCertifiedText() : Bool;
 	
 	/**
 	*  If set to true, assume that the input is certified (see section 2.13
 	* in [<a href='http://www.w3.org/TR/2004/REC-xml11-20040204/'>XML 1.1</a>]) when
 	* parsing [<a href='http://www.w3.org/TR/2004/REC-xml11-20040204/'>XML 1.1</a>].
 	*/
-	@:overload public function setCertifiedText(certifiedText : Bool) : Void;
+	@:overload @:public public function setCertifiedText(certifiedText : Bool) : Void;
 	
 	
 }

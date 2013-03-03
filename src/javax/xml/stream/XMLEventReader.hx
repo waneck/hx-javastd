@@ -33,14 +33,14 @@ extern interface XMLEventReader extends java.util.Iterator<Dynamic>
 	* @throws XMLStreamException if there is an error with the underlying XML.
 	* @throws NoSuchElementException iteration has no more elements.
 	*/
-	@:overload public function nextEvent() : javax.xml.stream.events.XMLEvent;
+	@:overload @:public public function nextEvent() : javax.xml.stream.events.XMLEvent;
 	
 	/**
 	* Check if there are more events.
 	* Returns true if there are more events and false otherwise.
 	* @return true if the event reader has more events, false otherwise
 	*/
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
 	/**
 	* Check the next XMLEvent without reading it from the stream.
@@ -49,7 +49,7 @@ extern interface XMLEventReader extends java.util.Iterator<Dynamic>
 	* @see XMLEvent
 	* @throws XMLStreamException
 	*/
-	@:overload public function peek() : javax.xml.stream.events.XMLEvent;
+	@:overload @:public public function peek() : javax.xml.stream.events.XMLEvent;
 	
 	/**
 	* Reads the content of a text-only element. Precondition:
@@ -58,7 +58,7 @@ extern interface XMLEventReader extends java.util.Iterator<Dynamic>
 	* @throws XMLStreamException if the current event is not a START_ELEMENT
 	* or if a non text element is encountered
 	*/
-	@:overload public function getElementText() : String;
+	@:overload @:public public function getElementText() : String;
 	
 	/**
 	* Skips any insignificant space events until a START_ELEMENT or
@@ -69,7 +69,7 @@ extern interface XMLEventReader extends java.util.Iterator<Dynamic>
 	* the DTD is missing or not interpreted.
 	* @throws XMLStreamException if anything other than space characters are encountered
 	*/
-	@:overload public function nextTag() : javax.xml.stream.events.XMLEvent;
+	@:overload @:public public function nextTag() : javax.xml.stream.events.XMLEvent;
 	
 	/**
 	* Get the value of a feature/property from the underlying implementation
@@ -77,14 +77,14 @@ extern interface XMLEventReader extends java.util.Iterator<Dynamic>
 	* @return The value of the property
 	* @throws IllegalArgumentException if the property is not supported
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	/**
 	* Frees any resources associated with this Reader.  This method does not close the
 	* underlying input source.
 	* @throws XMLStreamException if there are errors freeing associated resources
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

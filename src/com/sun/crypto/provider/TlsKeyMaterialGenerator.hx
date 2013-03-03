@@ -31,15 +31,15 @@ package com.sun.crypto.provider;
 */
 @:require(java6) extern class TlsKeyMaterialGenerator extends javax.crypto.KeyGeneratorSpi
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function engineInit(random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineInit(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineInit(keysize : Int, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(keysize : Int, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineGenerateKey() : javax.crypto.SecretKey;
+	@:overload @:protected override private function engineGenerateKey() : javax.crypto.SecretKey;
 	
 	
 }

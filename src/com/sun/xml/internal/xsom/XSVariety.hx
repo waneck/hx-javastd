@@ -31,13 +31,13 @@ package com.sun.xml.internal.xsom;
 */
 extern class XSVariety
 {
-	public static var ATOMIC(default, null) : com.sun.xml.internal.xsom.XSVariety;
+	@:public @:static @:final public static var ATOMIC(default, null) : com.sun.xml.internal.xsom.XSVariety;
 	
-	public static var UNION(default, null) : com.sun.xml.internal.xsom.XSVariety;
+	@:public @:static @:final public static var UNION(default, null) : com.sun.xml.internal.xsom.XSVariety;
 	
-	public static var LIST(default, null) : com.sun.xml.internal.xsom.XSVariety;
+	@:public @:static @:final public static var LIST(default, null) : com.sun.xml.internal.xsom.XSVariety;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

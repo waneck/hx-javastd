@@ -29,29 +29,29 @@ package com.sun.xml.internal.messaging.saaj.soap.ver1_2;
 */
 extern class HeaderElement1_2Impl extends com.sun.xml.internal.messaging.saaj.soap.impl.HeaderElementImpl
 {
-	@:overload public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, qname : javax.xml.soap.Name) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, qname : javax.xml.soap.Name) : Void;
 	
-	@:overload public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, qname : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, qname : javax.xml.namespace.QName) : Void;
 	
-	@:overload override public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
-	@:overload override private function getRoleAttributeName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected override private function getRoleAttributeName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload override private function getActorAttributeName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected override private function getActorAttributeName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload override private function getMustunderstandAttributeName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected override private function getMustunderstandAttributeName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload override private function getMustunderstandLiteralValue(mustUnderstand : Bool) : String;
+	@:overload @:protected override private function getMustunderstandLiteralValue(mustUnderstand : Bool) : String;
 	
-	@:overload override private function getMustunderstandAttributeValue(mu : String) : Bool;
+	@:overload @:protected override private function getMustunderstandAttributeValue(mu : String) : Bool;
 	
-	@:overload override private function getRelayAttributeName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected override private function getRelayAttributeName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload override private function getRelayLiteralValue(relay : Bool) : String;
+	@:overload @:protected override private function getRelayLiteralValue(relay : Bool) : String;
 	
-	@:overload override private function getRelayAttributeValue(relay : String) : Bool;
+	@:overload @:protected override private function getRelayAttributeValue(relay : String) : Bool;
 	
-	@:overload override private function getActorOrRole() : String;
+	@:overload @:protected override private function getActorOrRole() : String;
 	
 	
 }

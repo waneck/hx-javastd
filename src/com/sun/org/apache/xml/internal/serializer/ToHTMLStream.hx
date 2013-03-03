@@ -24,21 +24,21 @@ package com.sun.org.apache.xml.internal.serializer;
 extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToStream
 {
 	/** This flag is set while receiving events from the DTD */
-	private var m_inDTD : Bool;
+	@:protected private var m_inDTD : Bool;
 	
 	/**
 	* Tells if the formatter should use special URL escaping.
 	*
 	* @param bool True if URLs should be specially escaped with the %xx form.
 	*/
-	@:overload public function setSpecialEscapeURLs(bool : Bool) : Void;
+	@:overload @:public public function setSpecialEscapeURLs(bool : Bool) : Void;
 	
 	/**
 	* Tells if the formatter should omit the META tag.
 	*
 	* @param bool True if the META tag should be omitted.
 	*/
-	@:overload public function setOmitMetaTag(bool : Bool) : Void;
+	@:overload @:public public function setOmitMetaTag(bool : Bool) : Void;
 	
 	/**
 	* Specifies an output format for this serializer. It the
@@ -56,7 +56,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	* @param format The output format or serialzation parameters
 	* to use.
 	*/
-	@:overload public function setOutputFormat(format : java.util.Properties) : Void;
+	@:overload @:public override public function setOutputFormat(format : java.util.Properties) : Void;
 	
 	/**
 	* Get a description of the given element.
@@ -66,12 +66,12 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	* @return non-null reference to ElemDesc, which may be m_dummy if no
 	*         element description matches the given name.
 	*/
-	@:overload @:final public static function getElemDesc(name : String) : com.sun.org.apache.xml.internal.serializer.ElemDesc;
+	@:overload @:public @:static @:final public static function getElemDesc(name : String) : com.sun.org.apache.xml.internal.serializer.ElemDesc;
 	
 	/**
 	* Default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Receive notification of the beginning of a document.
@@ -81,7 +81,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload private function startDocumentInternal() : Void;
+	@:overload @:protected override private function startDocumentInternal() : Void;
 	
 	/**
 	* Receive notification of the end of a document.
@@ -91,7 +91,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload @:final override public function endDocument() : Void;
+	@:overload @:public @:final override public function endDocument() : Void;
 	
 	/**
 	*  Receive notification of the beginning of an element.
@@ -106,7 +106,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*  @see #endElement
 	*  @see org.xml.sax.AttributeList
 	*/
-	@:overload override public function startElement(namespaceURI : String, localName : String, name : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, name : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	*  Receive notification of the end of an element.
@@ -118,7 +118,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*  @throws org.xml.sax.SAXException Any SAX exception, possibly
 	*             wrapping another exception.
 	*/
-	@:overload @:final override public function endElement(namespaceURI : String, localName : String, name : String) : Void;
+	@:overload @:public @:final override public function endElement(namespaceURI : String, localName : String, name : String) : Void;
 	
 	/**
 	* Process an attribute.
@@ -130,7 +130,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload private function processAttribute(writer : java.io.Writer, name : String, value : String, elemDesc : com.sun.org.apache.xml.internal.serializer.ElemDesc) : Void;
+	@:overload @:protected private function processAttribute(writer : java.io.Writer, name : String, value : String, elemDesc : com.sun.org.apache.xml.internal.serializer.ElemDesc) : Void;
 	
 	/**
 	* Write the specified <var>string</var> after substituting non ASCII characters,
@@ -142,7 +142,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException if a bad surrogate pair is detected.
 	*/
-	@:overload public function writeAttrURI(writer : java.io.Writer, string : String, doURLEscaping : Bool) : Void;
+	@:overload @:public public function writeAttrURI(writer : java.io.Writer, string : String, doURLEscaping : Bool) : Void;
 	
 	/**
 	* Writes the specified <var>string</var> after substituting <VAR>specials</VAR>,
@@ -153,7 +153,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function writeAttrString(writer : java.io.Writer, string : String, encoding : String) : Void;
+	@:overload @:public override public function writeAttrString(writer : java.io.Writer, string : String, encoding : String) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -182,7 +182,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload @:final override public function characters(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public @:final override public function characters(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	*  Receive notification of cdata.
@@ -211,7 +211,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload @:final public function cdata(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public @:final override public function cdata(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	*  Receive notification of a processing instruction.
@@ -224,7 +224,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public override public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* Receive notivication of a entityReference.
@@ -233,12 +233,12 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload @:final public function entityReference(name : String) : Void;
+	@:overload @:public @:final override public function entityReference(name : String) : Void;
 	
 	/**
 	* @see ExtendedContentHandler#endElement(String)
 	*/
-	@:overload @:final override public function endElement(elemName : String) : Void;
+	@:overload @:public @:final override public function endElement(elemName : String) : Void;
 	
 	/**
 	* Process the attributes, which means to write out the currently
@@ -251,7 +251,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function processAttributes(writer : java.io.Writer, nAttrs : Int) : Void;
+	@:overload @:public override public function processAttributes(writer : java.io.Writer, nAttrs : Int) : Void;
 	
 	/**
 	* For the enclosing elements starting tag write out out any attributes
@@ -259,7 +259,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	*@throws org.xml.sax.SAXException
 	*/
-	@:overload private function closeStartTag() : Void;
+	@:overload @:protected override private function closeStartTag() : Void;
 	
 	/**
 	* Initialize the serializer with the specified output stream and output
@@ -270,7 +270,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	* @throws UnsupportedEncodingException The encoding specified   in the
 	* output format is not supported
 	*/
-	@:overload @:synchronized private function init(output : java.io.OutputStream, format : java.util.Properties) : Void;
+	@:overload @:protected @:synchronized private function init(output : java.io.OutputStream, format : java.util.Properties) : Void;
 	
 	/**
 	* Specifies an output stream to which the document should be
@@ -283,7 +283,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @param output The output stream
 	*/
-	@:overload public function setOutputStream(output : java.io.OutputStream) : Void;
+	@:overload @:public override public function setOutputStream(output : java.io.OutputStream) : Void;
 	
 	/**
 	* This method is used when a prefix/uri namespace mapping
@@ -296,36 +296,36 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @see ExtendedContentHandler#namespaceAfterStartElement(String, String)
 	*/
-	@:overload public function namespaceAfterStartElement(prefix : String, uri : String) : Void;
+	@:overload @:public override public function namespaceAfterStartElement(prefix : String, uri : String) : Void;
 	
-	@:overload public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public override public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Report the end of DTD declarations.
 	* @throws org.xml.sax.SAXException The application may raise an exception.
 	* @see #startDTD
 	*/
-	@:overload public function endDTD() : Void;
+	@:overload @:public override public function endDTD() : Void;
 	
 	/**
 	* This method does nothing.
 	*/
-	@:overload public function attributeDecl(eName : String, aName : String, type : String, valueDefault : String, value : String) : Void;
+	@:overload @:public override public function attributeDecl(eName : String, aName : String, type : String, valueDefault : String, value : String) : Void;
 	
 	/**
 	* This method does nothing.
 	*/
-	@:overload public function elementDecl(name : String, model : String) : Void;
+	@:overload @:public override public function elementDecl(name : String, model : String) : Void;
 	
 	/**
 	* This method does nothing.
 	*/
-	@:overload public function internalEntityDecl(name : String, value : String) : Void;
+	@:overload @:public override public function internalEntityDecl(name : String, value : String) : Void;
 	
 	/**
 	* This method does nothing.
 	*/
-	@:overload public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public override public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* This method is used to add an attribute to the currently open element.
@@ -337,30 +337,30 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	* ASCII printable characters characters in the range 32 to 127 inclusive.
 	* @param flags the bit values of this integer give optimization information.
 	*/
-	@:overload override public function addUniqueAttribute(name : String, value : String, flags : Int) : Void;
+	@:overload @:public override public function addUniqueAttribute(name : String, value : String, flags : Int) : Void;
 	
-	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function reset() : Bool;
+	@:overload @:public override public function reset() : Bool;
 	
 	
 }
 @:native('com$sun$org$apache$xml$internal$serializer$ToHTMLStream$Trie') @:internal extern class ToHTMLStream_Trie
 {
 	/** Size of the m_nextChar array.  */
-	public static var ALPHA_SIZE(default, null) : Int;
+	@:public @:static @:final public static var ALPHA_SIZE(default, null) : Int;
 	
 	/**
 	* Construct the trie that has a case insensitive search.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct the trie given the desired case sensitivity with the key.
 	* @param lowerCaseOnly true if the search keys are to be loser case only,
 	* not case insensitive.
 	*/
-	@:overload public function new(lowerCaseOnly : Bool) : Void;
+	@:overload @:public public function new(lowerCaseOnly : Bool) : Void;
 	
 	/**
 	* Put an object into the trie for lookup.
@@ -370,7 +370,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @return The old object that matched key, or null.
 	*/
-	@:overload public function put(key : String, value : Dynamic) : Dynamic;
+	@:overload @:public public function put(key : String, value : Dynamic) : Dynamic;
 	
 	/**
 	* Get an object that matches the key.
@@ -379,7 +379,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @return The object that matches the key, or null.
 	*/
-	@:overload public function get(key : String) : Dynamic;
+	@:overload @:public public function get(key : String) : Dynamic;
 	
 	/**
 	* Construct the trie from another Trie.
@@ -389,7 +389,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @param existingTrie the Trie that this one is a copy of.
 	*/
-	@:overload public function new(existingTrie : com.sun.org.apache.xml.internal.serializer.ToHTMLStream.ToHTMLStream_Trie) : Void;
+	@:overload @:public public function new(existingTrie : com.sun.org.apache.xml.internal.serializer.ToHTMLStream.ToHTMLStream_Trie) : Void;
 	
 	/**
 	* Get an object that matches the key.
@@ -399,12 +399,12 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @return The object that matches the key, or null.
 	*/
-	@:overload public function get2(key : String) : Dynamic;
+	@:overload @:public public function get2(key : String) : Dynamic;
 	
 	/**
 	* Get the length of the longest key used in the table.
 	*/
-	@:overload public function getLongestKeyLength() : Int;
+	@:overload @:public public function getLongestKeyLength() : Int;
 	
 	
 }

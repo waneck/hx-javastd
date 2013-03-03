@@ -27,7 +27,7 @@ extern interface XMLDocumentScanner extends com.sun.org.apache.xerces.internal.x
 	*
 	* @throws IOException Thrown on i/o error.
 	*/
-	@:overload public function setInputSource(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public public function setInputSource(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**
 	* Scans a document.
@@ -42,9 +42,9 @@ extern interface XMLDocumentScanner extends com.sun.org.apache.xerces.internal.x
 	*
 	* @return True if there is more to scan, false otherwise.
 	*/
-	@:overload public function scanDocument(complete : Bool) : Bool;
+	@:overload @:public public function scanDocument(complete : Bool) : Bool;
 	
-	@:overload public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
 	
 }

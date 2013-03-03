@@ -40,7 +40,7 @@ extern class PrivateCredentialPermission extends java.security.Permission
 	* @throws IllegalArgumentException if <code>name</code> does not conform
 	*          to the correct syntax or if <code>actions</code> is not "read".
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	/**
 	* Returns the Class name of the Credential associated with this
@@ -51,7 +51,7 @@ extern class PrivateCredentialPermission extends java.security.Permission
 	* @return the Class name of the Credential associated with this
 	*          <code>PrivateCredentialPermission</code>.
 	*/
-	@:overload public function getCredentialClass() : String;
+	@:overload @:public public function getCredentialClass() : String;
 	
 	/**
 	* Returns the <code>Principal</code> classes and names
@@ -71,7 +71,7 @@ extern class PrivateCredentialPermission extends java.security.Permission
 	* @return the <code>Principal</code> class and names associated
 	*          with this <code>PrivateCredentialPermission</code>.
 	*/
-	@:overload public function getPrincipals() : java.NativeArray<java.NativeArray<String>>;
+	@:overload @:public public function getPrincipals() : java.NativeArray<java.NativeArray<String>>;
 	
 	/**
 	* Checks if this <code>PrivateCredentialPermission</code> implies
@@ -98,7 +98,7 @@ extern class PrivateCredentialPermission extends java.security.Permission
 	* @return true if this <code>PrivateCredentialPermission</code> implies
 	* the specified <code>Permission</code>, false if not.
 	*/
-	@:overload public function implies(p : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two <code>PrivateCredentialPermission</code> objects for
@@ -117,14 +117,14 @@ extern class PrivateCredentialPermission extends java.security.Permission
 	*          has the same credential class as this object,
 	*          and has the same Principals as this object.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Returns the "canonical string representation" of the actions.
@@ -134,7 +134,7 @@ extern class PrivateCredentialPermission extends java.security.Permission
 	*
 	* @return the actions (always returns "read").
 	*/
-	@:overload public function getActions() : String;
+	@:overload @:public override public function getActions() : String;
 	
 	/**
 	* Return a homogeneous collection of PrivateCredentialPermissions
@@ -146,7 +146,7 @@ extern class PrivateCredentialPermission extends java.security.Permission
 	*
 	* @return null in all cases.
 	*/
-	@:overload public function newPermissionCollection() : java.security.PermissionCollection;
+	@:overload @:public override public function newPermissionCollection() : java.security.PermissionCollection;
 	
 	
 }
@@ -155,9 +155,9 @@ extern class PrivateCredentialPermission extends java.security.Permission
 */
 @:native('javax$security$auth$PrivateCredentialPermission$CredOwner') @:internal extern class PrivateCredentialPermission_CredOwner implements java.io.Serializable
 {
-	@:overload public function implies(obj : Dynamic) : Bool;
+	@:overload @:public public function implies(obj : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

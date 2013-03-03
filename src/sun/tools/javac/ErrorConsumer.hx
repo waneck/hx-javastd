@@ -32,7 +32,7 @@ package sun.tools.javac;
 */
 extern interface ErrorConsumer
 {
-	@:overload public function pushError(errorFileName : String, line : Int, message : String, referenceText : String, referenceTextPointer : String) : Void;
+	@:overload @:public public function pushError(errorFileName : String, line : Int, message : String, referenceText : String, referenceTextPointer : String) : Void;
 	
 	
 }

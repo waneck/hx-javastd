@@ -25,37 +25,37 @@ package sun.java2d.cmm;
 */
 extern class CMSManager
 {
-	public static var GRAYspace : java.awt.color.ColorSpace;
+	@:public @:static public static var GRAYspace : java.awt.color.ColorSpace;
 	
-	public static var LINEAR_RGBspace : java.awt.color.ColorSpace;
+	@:public @:static public static var LINEAR_RGBspace : java.awt.color.ColorSpace;
 	
-	@:overload @:synchronized public static function getModule() : sun.java2d.cmm.PCMM;
+	@:overload @:public @:static @:synchronized public static function getModule() : sun.java2d.cmm.PCMM;
 	
 	
 }
 /* CMM trace routines */
 @:native('sun$java2d$cmm$CMSManager$CMMTracer') extern class CMSManager_CMMTracer implements sun.java2d.cmm.PCMM
 {
-	@:overload public function new(tcmm : sun.java2d.cmm.PCMM) : Void;
+	@:overload @:public public function new(tcmm : sun.java2d.cmm.PCMM) : Void;
 	
-	@:overload public function loadProfile(data : java.NativeArray<java.StdTypes.Int8>) : haxe.Int64;
+	@:overload @:public public function loadProfile(data : java.NativeArray<java.StdTypes.Int8>) : haxe.Int64;
 	
-	@:overload public function freeProfile(profileID : haxe.Int64) : Void;
+	@:overload @:public public function freeProfile(profileID : haxe.Int64) : Void;
 	
-	@:overload public function getProfileSize(profileID : haxe.Int64) : Int;
+	@:overload @:public public function getProfileSize(profileID : haxe.Int64) : Int;
 	
-	@:overload public function getProfileData(profileID : haxe.Int64, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function getProfileData(profileID : haxe.Int64, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function getTagSize(profileID : haxe.Int64, tagSignature : Int) : Int;
+	@:overload @:public public function getTagSize(profileID : haxe.Int64, tagSignature : Int) : Int;
 	
-	@:overload public function getTagData(profileID : haxe.Int64, tagSignature : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function getTagData(profileID : haxe.Int64, tagSignature : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function setTagData(profileID : haxe.Int64, tagSignature : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setTagData(profileID : haxe.Int64, tagSignature : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/* methods for creating ColorTransforms */
-	@:overload public function createTransform(profile : java.awt.color.ICC_Profile, renderType : Int, transformType : Int) : sun.java2d.cmm.ColorTransform;
+	@:overload @:public public function createTransform(profile : java.awt.color.ICC_Profile, renderType : Int, transformType : Int) : sun.java2d.cmm.ColorTransform;
 	
-	@:overload public function createTransform(transforms : java.NativeArray<sun.java2d.cmm.ColorTransform>) : sun.java2d.cmm.ColorTransform;
+	@:overload @:public public function createTransform(transforms : java.NativeArray<sun.java2d.cmm.ColorTransform>) : sun.java2d.cmm.ColorTransform;
 	
 	
 }

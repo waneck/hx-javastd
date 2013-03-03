@@ -43,7 +43,7 @@ extern class URLCanonicalizer
 	/**
 	* Creates the default canonicalizer instance.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Given a possibly abbreviated URL (missing a protocol name, typically),
@@ -52,19 +52,19 @@ extern class URLCanonicalizer
 	*
 	* For a correctly formed URL, this method should just return its argument.
 	*/
-	@:overload public function canonicalize(simpleURL : String) : String;
+	@:overload @:public public function canonicalize(simpleURL : String) : String;
 	
 	/**
 	* Given a possibly abbreviated URL, this predicate function returns
 	* true if it appears that the URL contains a protocol name
 	*/
-	@:overload public function hasProtocolName(url : String) : Bool;
+	@:overload @:public public function hasProtocolName(url : String) : Bool;
 	
 	/**
 	* Returns true if the URL is just a single name, no periods or
 	* slashes, false otherwise
 	**/
-	@:overload private function isSimpleHostName(url : String) : Bool;
+	@:overload @:protected private function isSimpleHostName(url : String) : Bool;
 	
 	
 }

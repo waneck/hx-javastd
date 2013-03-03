@@ -29,33 +29,33 @@ package sun.security.krb5.internal;
 */
 extern class AuthContext
 {
-	public var remoteAddress : sun.security.krb5.internal.HostAddress;
+	@:public public var remoteAddress : sun.security.krb5.internal.HostAddress;
 	
-	public var remotePort : Int;
+	@:public public var remotePort : Int;
 	
-	public var localAddress : sun.security.krb5.internal.HostAddress;
+	@:public public var localAddress : sun.security.krb5.internal.HostAddress;
 	
-	public var localPort : Int;
+	@:public public var localPort : Int;
 	
-	public var keyBlock : sun.security.krb5.EncryptionKey;
+	@:public public var keyBlock : sun.security.krb5.EncryptionKey;
 	
-	public var localSubkey : sun.security.krb5.EncryptionKey;
+	@:public public var localSubkey : sun.security.krb5.EncryptionKey;
 	
-	public var remoteSubkey : sun.security.krb5.EncryptionKey;
+	@:public public var remoteSubkey : sun.security.krb5.EncryptionKey;
 	
-	public var authContextFlags : java.util.BitSet;
+	@:public public var authContextFlags : java.util.BitSet;
 	
-	public var remoteSeqNumber : Int;
+	@:public public var remoteSeqNumber : Int;
 	
-	public var localSeqNumber : Int;
+	@:public public var localSeqNumber : Int;
 	
-	public var authenticator : sun.security.krb5.internal.Authenticator;
+	@:public public var authenticator : sun.security.krb5.internal.Authenticator;
 	
-	public var reqCksumType : Int;
+	@:public public var reqCksumType : Int;
 	
-	public var safeCksumType : Int;
+	@:public public var safeCksumType : Int;
 	
-	public var initializationVector : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var initializationVector : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

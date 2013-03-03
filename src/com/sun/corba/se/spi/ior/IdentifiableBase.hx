@@ -32,14 +32,14 @@ extern class IdentifiableBase implements com.sun.corba.se.spi.ior.Identifiable i
 	* an encapsulation stream, then extract the data and write
 	* it to os as an array of octets.
 	*/
-	@:overload @:final public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:final @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	/** Return the (type) identity of this entity.
 	* @return int
 	*/
-	@:overload @:public @:public override public function getId() : Int;
+	@:overload @:public @:public @:public override public function getId() : Int;
 	
-	@:overload public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	
 }

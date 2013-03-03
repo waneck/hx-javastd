@@ -39,7 +39,7 @@ extern class StreamMessage extends com.sun.xml.internal.ws.message.AbstractMessa
 	*      points at the start element/document of the payload (or the end element of the &lt;s:Body>
 	*      if there's no payload)
 	*/
-	@:overload public function new(headers : com.sun.xml.internal.ws.api.message.HeaderList, attachmentSet : com.sun.xml.internal.ws.api.message.AttachmentSet, reader : javax.xml.stream.XMLStreamReader, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
+	@:overload @:public public function new(headers : com.sun.xml.internal.ws.api.message.HeaderList, attachmentSet : com.sun.xml.internal.ws.api.message.AttachmentSet, reader : javax.xml.stream.XMLStreamReader, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
 	/**
 	* Creates a {@link StreamMessage} from a {@link XMLStreamReader}
@@ -53,37 +53,37 @@ extern class StreamMessage extends com.sun.xml.internal.ws.message.AbstractMessa
 	*      Null if the message didn't have a header tag.
 	*
 	*/
-	@:overload public function new(envelopeTag : com.sun.xml.internal.ws.encoding.TagInfoset, headerTag : com.sun.xml.internal.ws.encoding.TagInfoset, attachmentSet : com.sun.xml.internal.ws.api.message.AttachmentSet, headers : com.sun.xml.internal.ws.api.message.HeaderList, bodyTag : com.sun.xml.internal.ws.encoding.TagInfoset, reader : javax.xml.stream.XMLStreamReader, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
+	@:overload @:public public function new(envelopeTag : com.sun.xml.internal.ws.encoding.TagInfoset, headerTag : com.sun.xml.internal.ws.encoding.TagInfoset, attachmentSet : com.sun.xml.internal.ws.api.message.AttachmentSet, headers : com.sun.xml.internal.ws.api.message.HeaderList, bodyTag : com.sun.xml.internal.ws.encoding.TagInfoset, reader : javax.xml.stream.XMLStreamReader, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
-	@:overload public function hasHeaders() : Bool;
+	@:overload @:public override public function hasHeaders() : Bool;
 	
-	@:overload public function getHeaders() : com.sun.xml.internal.ws.api.message.HeaderList;
+	@:overload @:public override public function getHeaders() : com.sun.xml.internal.ws.api.message.HeaderList;
 	
-	@:overload public function getPayloadLocalPart() : String;
+	@:overload @:public override public function getPayloadLocalPart() : String;
 	
-	@:overload public function getPayloadNamespaceURI() : String;
+	@:overload @:public override public function getPayloadNamespaceURI() : String;
 	
-	@:overload public function hasPayload() : Bool;
+	@:overload @:public override public function hasPayload() : Bool;
 	
-	@:overload public function readPayloadAsSource() : javax.xml.transform.Source;
+	@:overload @:public override public function readPayloadAsSource() : javax.xml.transform.Source;
 	
-	@:overload public function readPayloadAsJAXB(unmarshaller : javax.xml.bind.Unmarshaller) : Dynamic;
+	@:overload @:public override public function readPayloadAsJAXB(unmarshaller : javax.xml.bind.Unmarshaller) : Dynamic;
 	
-	@:overload public function readPayloadAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
+	@:overload @:public override public function readPayloadAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
 	
-	@:overload public function consume() : Void;
+	@:overload @:public override public function consume() : Void;
 	
-	@:overload public function readPayload() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function readPayload() : javax.xml.stream.XMLStreamReader;
 	
-	@:overload public function writePayloadTo(writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function writePayloadTo(writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload public function writeTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function writeTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload public function writePayloadTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, fragment : Bool) : Void;
+	@:overload @:public override public function writePayloadTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, fragment : Bool) : Void;
 	
-	@:overload public function copy() : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public override public function copy() : com.sun.xml.internal.ws.api.message.Message;
 	
-	@:overload public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public override public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	
 }

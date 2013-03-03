@@ -31,25 +31,25 @@ package com.sun.corba.se.impl.naming.namingutil;
 */
 extern class INSURLBase implements com.sun.corba.se.impl.naming.namingutil.INSURL
 {
-	private var rirFlag : Bool;
+	@:protected private var rirFlag : Bool;
 	
-	private var theEndpointInfo : java.util.ArrayList<Dynamic>;
+	@:protected private var theEndpointInfo : java.util.ArrayList<Dynamic>;
 	
-	private var theKeyString : String;
+	@:protected private var theKeyString : String;
 	
-	private var theStringifiedName : String;
+	@:protected private var theStringifiedName : String;
 	
-	@:overload public function getRIRFlag() : Bool;
+	@:overload @:public public function getRIRFlag() : Bool;
 	
-	@:overload public function getEndpointInfo() : java.util.List<Dynamic>;
+	@:overload @:public public function getEndpointInfo() : java.util.List<Dynamic>;
 	
-	@:overload public function getKeyString() : String;
+	@:overload @:public public function getKeyString() : String;
 	
-	@:overload public function getStringifiedName() : String;
+	@:overload @:public public function getStringifiedName() : String;
 	
-	@:overload @:abstract public function isCorbanameURL() : Bool;
+	@:overload @:public @:abstract public function isCorbanameURL() : Bool;
 	
-	@:overload public function dPrint() : Void;
+	@:overload @:public public function dPrint() : Void;
 	
 	
 }

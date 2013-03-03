@@ -31,65 +31,65 @@ extern class WsgenOptions extends com.sun.tools.internal.ws.wscompile.Options
 	/**
 	* -servicename
 	*/
-	public var serviceName : javax.xml.namespace.QName;
+	@:public public var serviceName : javax.xml.namespace.QName;
 	
 	/**
 	* -portname
 	*/
-	public var portName : javax.xml.namespace.QName;
+	@:public public var portName : javax.xml.namespace.QName;
 	
 	/**
 	* -r
 	*/
-	public var nonclassDestDir : java.io.File;
+	@:public public var nonclassDestDir : java.io.File;
 	
 	/**
 	* -wsdl
 	*/
-	public var genWsdl : Bool;
+	@:public public var genWsdl : Bool;
 	
 	/**
 	* -inlineSchemas
 	*/
-	public var inlineSchemas : Bool;
+	@:public public var inlineSchemas : Bool;
 	
 	/**
 	* protocol value
 	*/
-	public var protocol : String;
+	@:public public var protocol : String;
 	
-	public var protocols : java.util.Set<String>;
+	@:public public var protocols : java.util.Set<String>;
 	
-	public var nonstdProtocols : java.util.Map<String, String>;
+	@:public public var nonstdProtocols : java.util.Map<String, String>;
 	
 	/**
 	* -XwsgenReport
 	*/
-	public var wsgenReport : java.io.File;
+	@:public public var wsgenReport : java.io.File;
 	
 	/**
 	* -Xdonotoverwrite
 	*/
-	public var doNotOverWrite : Bool;
+	@:public public var doNotOverWrite : Bool;
 	
-	public var filer : com.sun.mirror.apt.Filer;
+	@:public public var filer : com.sun.mirror.apt.Filer;
 	
 	/**
 	* Tells if user specified a specific protocol
 	*/
-	public var protocolSet : Bool;
+	@:public public var protocolSet : Bool;
 	
-	public static var X_SOAP12(default, null) : String;
+	@:public @:static @:final public static var X_SOAP12(default, null) : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function parseArguments(args : java.NativeArray<String>, i : Int) : Int;
+	@:overload @:protected override private function parseArguments(args : java.NativeArray<String>, i : Int) : Int;
 	
-	@:overload override private function addFile(arg : String) : Void;
+	@:overload @:protected override private function addFile(arg : String) : Void;
 	
-	public var endpoint : Class<Dynamic>;
+	@:public public var endpoint : Class<Dynamic>;
 	
-	@:overload public function validate() : Void;
+	@:overload @:public public function validate() : Void;
 	
 	
 }

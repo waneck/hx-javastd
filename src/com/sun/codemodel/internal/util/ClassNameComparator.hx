@@ -25,9 +25,9 @@ package com.sun.codemodel.internal.util;
 */
 extern class ClassNameComparator implements java.util.Comparator<com.sun.codemodel.internal.JClass>
 {
-	@:overload public function compare(l : com.sun.codemodel.internal.JClass, r : com.sun.codemodel.internal.JClass) : Int;
+	@:overload @:public public function compare(l : com.sun.codemodel.internal.JClass, r : com.sun.codemodel.internal.JClass) : Int;
 	
-	public static var theInstance(default, null) : java.util.Comparator<com.sun.codemodel.internal.JClass>;
+	@:public @:static @:final public static var theInstance(default, null) : java.util.Comparator<com.sun.codemodel.internal.JClass>;
 	
 	
 }

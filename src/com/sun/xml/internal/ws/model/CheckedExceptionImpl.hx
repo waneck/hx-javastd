@@ -35,35 +35,35 @@ extern class CheckedExceptionImpl implements com.sun.xml.internal.ws.api.model.C
 	* @param exceptionType
 	*            either ExceptionType.UserDefined or
 	*/
-	@:overload public function new(jm : com.sun.xml.internal.ws.model.JavaMethodImpl, exceptionClass : Class<Dynamic>, detail : com.sun.xml.internal.bind.api.TypeReference, exceptionType : com.sun.xml.internal.ws.api.model.ExceptionType) : Void;
+	@:overload @:public public function new(jm : com.sun.xml.internal.ws.model.JavaMethodImpl, exceptionClass : Class<Dynamic>, detail : com.sun.xml.internal.bind.api.TypeReference, exceptionType : com.sun.xml.internal.ws.api.model.ExceptionType) : Void;
 	
-	@:overload public function getOwner() : com.sun.xml.internal.ws.model.AbstractSEIModelImpl;
+	@:overload @:public public function getOwner() : com.sun.xml.internal.ws.model.AbstractSEIModelImpl;
 	
-	@:overload public function getParent() : com.sun.xml.internal.ws.api.model.JavaMethod;
+	@:overload @:public public function getParent() : com.sun.xml.internal.ws.api.model.JavaMethod;
 	
 	/**
 	* @return the <code>Class</clode> for this object
 	*
 	*/
-	@:overload public function getExceptionClass() : Class<Dynamic>;
+	@:overload @:public public function getExceptionClass() : Class<Dynamic>;
 	
-	@:overload public function getDetailBean() : Class<Dynamic>;
+	@:overload @:public public function getDetailBean() : Class<Dynamic>;
 	
-	@:overload public function getBridge() : com.sun.xml.internal.bind.api.Bridge<Dynamic>;
+	@:overload @:public public function getBridge() : com.sun.xml.internal.bind.api.Bridge<Dynamic>;
 	
-	@:overload public function getDetailType() : com.sun.xml.internal.bind.api.TypeReference;
+	@:overload @:public public function getDetailType() : com.sun.xml.internal.bind.api.TypeReference;
 	
-	@:overload public function getExceptionType() : com.sun.xml.internal.ws.api.model.ExceptionType;
+	@:overload @:public public function getExceptionType() : com.sun.xml.internal.ws.api.model.ExceptionType;
 	
-	@:overload public function getMessageName() : String;
+	@:overload @:public public function getMessageName() : String;
 	
-	@:overload public function setMessageName(messageName : String) : Void;
+	@:overload @:public public function setMessageName(messageName : String) : Void;
 	
-	@:overload public function getFaultAction() : String;
+	@:overload @:public public function getFaultAction() : String;
 	
-	@:overload public function setFaultAction(faultAction : String) : Void;
+	@:overload @:public public function setFaultAction(faultAction : String) : Void;
 	
-	@:overload public function getDefaultFaultAction() : String;
+	@:overload @:public public function getDefaultFaultAction() : String;
 	
 	
 }

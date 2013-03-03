@@ -37,73 +37,73 @@ package com.sun.crypto.provider;
 	/*
 	* Clones this object.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }
 @:native('com$sun$crypto$provider$HmacCore$HmacSHA256') extern class HmacCore_HmacSHA256 extends javax.crypto.MacSpi implements java.lang.Cloneable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function engineGetMacLength() : Int;
+	@:overload @:protected override private function engineGetMacLength() : Int;
 	
-	@:overload override private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
-	@:overload override private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
-	@:overload override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
-	@:overload override private function engineUpdate(input : java.nio.ByteBuffer) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.nio.ByteBuffer) : Void;
 	
-	@:overload override private function engineDoFinal() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineDoFinal() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineReset() : Void;
+	@:overload @:protected override private function engineReset() : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }
 @:native('com$sun$crypto$provider$HmacCore$HmacSHA384') extern class HmacCore_HmacSHA384 extends javax.crypto.MacSpi implements java.lang.Cloneable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function engineGetMacLength() : Int;
+	@:overload @:protected override private function engineGetMacLength() : Int;
 	
-	@:overload override private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
-	@:overload override private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
-	@:overload override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
-	@:overload override private function engineUpdate(input : java.nio.ByteBuffer) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.nio.ByteBuffer) : Void;
 	
-	@:overload override private function engineDoFinal() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineDoFinal() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineReset() : Void;
+	@:overload @:protected override private function engineReset() : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }
 @:native('com$sun$crypto$provider$HmacCore$HmacSHA512') extern class HmacCore_HmacSHA512 extends javax.crypto.MacSpi implements java.lang.Cloneable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function engineGetMacLength() : Int;
+	@:overload @:protected override private function engineGetMacLength() : Int;
 	
-	@:overload override private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
-	@:overload override private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
-	@:overload override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
-	@:overload override private function engineUpdate(input : java.nio.ByteBuffer) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.nio.ByteBuffer) : Void;
 	
-	@:overload override private function engineDoFinal() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineDoFinal() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineReset() : Void;
+	@:overload @:protected override private function engineReset() : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

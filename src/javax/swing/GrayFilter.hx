@@ -38,7 +38,7 @@ extern class GrayFilter extends java.awt.image.RGBImageFilter
 	/**
 	* Creates a disabled image
 	*/
-	@:overload public static function createDisabledImage(i : java.awt.Image) : java.awt.Image;
+	@:overload @:public @:static public static function createDisabledImage(i : java.awt.Image) : java.awt.Image;
 	
 	/**
 	* Constructs a GrayFilter object that filters a color image to a
@@ -49,12 +49,12 @@ extern class GrayFilter extends java.awt.image.RGBImageFilter
 	* @param p  an int in the range 0..100 that determines the percentage
 	*           of gray, where 100 is the darkest gray, and 0 is the lightest
 	*/
-	@:overload public function new(b : Bool, p : Int) : Void;
+	@:overload @:public public function new(b : Bool, p : Int) : Void;
 	
 	/**
 	* Overrides <code>RGBImageFilter.filterRGB</code>.
 	*/
-	@:overload override public function filterRGB(x : Int, y : Int, rgb : Int) : Int;
+	@:overload @:public override public function filterRGB(x : Int, y : Int, rgb : Int) : Int;
 	
 	
 }

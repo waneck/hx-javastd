@@ -35,7 +35,7 @@ extern class SolarisPrincipal implements java.security.Principal implements java
 	* @exception NullPointerException if the <code>name</code>
 	*                  is <code>null</code>.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Return the Unix username for this <code>SolarisPrincipal</code>.
@@ -44,7 +44,7 @@ extern class SolarisPrincipal implements java.security.Principal implements java
 	*
 	* @return the Unix username for this <code>SolarisPrincipal</code>
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return a string representation of this <code>SolarisPrincipal</code>.
@@ -53,7 +53,7 @@ extern class SolarisPrincipal implements java.security.Principal implements java
 	*
 	* @return a string representation of this <code>SolarisPrincipal</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares the specified Object with this <code>SolarisPrincipal</code>
@@ -69,7 +69,7 @@ extern class SolarisPrincipal implements java.security.Principal implements java
 	* @return true if the specified Object is equal equal to this
 	*          <code>SolarisPrincipal</code>.
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Return a hash code for this <code>SolarisPrincipal</code>.
@@ -78,7 +78,7 @@ extern class SolarisPrincipal implements java.security.Principal implements java
 	*
 	* @return a hash code for this <code>SolarisPrincipal</code>.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

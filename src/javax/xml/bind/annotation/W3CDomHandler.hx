@@ -31,7 +31,7 @@ extern class W3CDomHandler implements javax.xml.bind.annotation.DomHandler<org.w
 	* It is up to a JAXB provider to decide which DOM implementation
 	* to use or how that is configured.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor that allows applications to specify which DOM implementation
@@ -41,17 +41,17 @@ extern class W3CDomHandler implements javax.xml.bind.annotation.DomHandler<org.w
 	*      must not be null. JAXB uses this {@link DocumentBuilder} to create
 	*      a new element.
 	*/
-	@:overload public function new(builder : javax.xml.parsers.DocumentBuilder) : Void;
+	@:overload @:public public function new(builder : javax.xml.parsers.DocumentBuilder) : Void;
 	
-	@:overload public function getBuilder() : javax.xml.parsers.DocumentBuilder;
+	@:overload @:public public function getBuilder() : javax.xml.parsers.DocumentBuilder;
 	
-	@:overload public function setBuilder(builder : javax.xml.parsers.DocumentBuilder) : Void;
+	@:overload @:public public function setBuilder(builder : javax.xml.parsers.DocumentBuilder) : Void;
 	
-	@:overload public function createUnmarshaller(errorHandler : javax.xml.bind.ValidationEventHandler) : javax.xml.transform.dom.DOMResult;
+	@:overload @:public public function createUnmarshaller(errorHandler : javax.xml.bind.ValidationEventHandler) : javax.xml.transform.dom.DOMResult;
 	
-	@:overload public function getElement(r : javax.xml.transform.dom.DOMResult) : org.w3c.dom.Element;
+	@:overload @:public public function getElement(r : javax.xml.transform.dom.DOMResult) : org.w3c.dom.Element;
 	
-	@:overload public function marshal(element : org.w3c.dom.Element, errorHandler : javax.xml.bind.ValidationEventHandler) : javax.xml.transform.Source;
+	@:overload @:public public function marshal(element : org.w3c.dom.Element, errorHandler : javax.xml.bind.ValidationEventHandler) : javax.xml.transform.Source;
 	
 	
 }

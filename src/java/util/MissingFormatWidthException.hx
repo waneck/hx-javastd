@@ -41,16 +41,16 @@ package java.util;
 	* @param  s
 	*         The format specifier which does not have a width
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Returns the format specifier which does not have a width.
 	*
 	* @return  The format specifier which does not have a width
 	*/
-	@:overload public function getFormatSpecifier() : String;
+	@:overload @:public public function getFormatSpecifier() : String;
 	
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

@@ -31,7 +31,7 @@ extern class InternalError extends java.lang.Error
 	* Construct an <code>InternalError</code> with the specified error message.
 	* @param msg the error message
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

@@ -30,30 +30,30 @@ package com.sun.media.sound;
 	*
 	* @author Kara Kytle
 	*/
-	private var info : javax.sound.sampled.Line.Line_Info;
+	@:protected private var info : javax.sound.sampled.Line.Line_Info;
 	
-	private var controls : java.NativeArray<javax.sound.sampled.Control>;
+	@:protected private var controls : java.NativeArray<javax.sound.sampled.Control>;
 	
-	private var mixer : com.sun.media.sound.AbstractMixer;
+	@:protected private var mixer : com.sun.media.sound.AbstractMixer;
 	
 	/**
 	* Constructs a new AbstractLine.
 	* @param mixer the mixer with which this line is associated
 	* @param controls set of supported controls
 	*/
-	@:overload private function new(info : javax.sound.sampled.Line.Line_Info, mixer : com.sun.media.sound.AbstractMixer, controls : java.NativeArray<javax.sound.sampled.Control>) : Void;
+	@:overload @:protected private function new(info : javax.sound.sampled.Line.Line_Info, mixer : com.sun.media.sound.AbstractMixer, controls : java.NativeArray<javax.sound.sampled.Control>) : Void;
 	
-	@:overload public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload @:public public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
-	@:overload public function isOpen() : Bool;
+	@:overload @:public public function isOpen() : Bool;
 	
-	@:overload public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	/**
 	* Removes an audio listener.
 	* @param listener listener to remove
 	*/
-	@:overload public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	/**
 	* Obtains the set of controls supported by the
@@ -61,43 +61,43 @@ package com.sun.media.sound;
 	* array of length 0.
 	* @return control set
 	*/
-	@:overload public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
+	@:overload @:public public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
 	
-	@:overload public function isControlSupported(controlType : javax.sound.sampled.Control.Control_Type) : Bool;
+	@:overload @:public public function isControlSupported(controlType : javax.sound.sampled.Control.Control_Type) : Bool;
 	
-	@:overload public function getControl(controlType : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
+	@:overload @:public public function getControl(controlType : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
 	
 	/**
 	* This method sets the open state and generates
 	* events if it changes.
 	*/
-	@:overload private function setOpen(open : Bool) : Void;
+	@:overload @:protected private function setOpen(open : Bool) : Void;
 	
 	/**
 	* Send line events.
 	*/
-	@:overload private function sendEvents(event : javax.sound.sampled.LineEvent) : Void;
+	@:overload @:protected private function sendEvents(event : javax.sound.sampled.LineEvent) : Void;
 	
 	/**
 	* This is an error in the API: getFramePosition
 	* should return a long value. At CD quality,
 	* the int value wraps around after 13 hours.
 	*/
-	@:overload @:final public function getFramePosition() : Int;
+	@:overload @:public @:final public function getFramePosition() : Int;
 	
 	/**
 	* Return the frame position in a long value
 	* This implementation returns AudioSystem.NOT_SPECIFIED.
 	*/
-	@:overload public function getLongFramePosition() : haxe.Int64;
+	@:overload @:public public function getLongFramePosition() : haxe.Int64;
 	
-	@:overload private function getMixer() : com.sun.media.sound.AbstractMixer;
+	@:overload @:protected private function getMixer() : com.sun.media.sound.AbstractMixer;
 	
-	@:overload private function getEventDispatcher() : com.sun.media.sound.EventDispatcher;
+	@:overload @:protected private function getEventDispatcher() : com.sun.media.sound.EventDispatcher;
 	
-	@:overload @:abstract public function open() : Void;
+	@:overload @:public @:abstract public function open() : Void;
 	
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
 	
 }

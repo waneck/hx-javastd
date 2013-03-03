@@ -30,15 +30,15 @@ package sun.net.httpserver;
 */
 @:internal extern class FixedLengthInputStream extends sun.net.httpserver.LeftOverInputStream
 {
-	@:overload private function readImpl(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:protected override private function readImpl(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload public function mark(l : Int) : Void;
+	@:overload @:public override public function mark(l : Int) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }

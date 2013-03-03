@@ -25,21 +25,21 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
-	@:overload override private function createRolloverBorder() : javax.swing.border.Border;
+	@:overload @:protected override private function createRolloverBorder() : javax.swing.border.Border;
 	
-	@:overload override private function createNonRolloverBorder() : javax.swing.border.Border;
+	@:overload @:protected override private function createNonRolloverBorder() : javax.swing.border.Border;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function getRolloverBorder(b : javax.swing.AbstractButton) : javax.swing.border.Border;
+	@:require(java6) @:overload @:protected override private function getRolloverBorder(b : javax.swing.AbstractButton) : javax.swing.border.Border;
 	
 	
 }

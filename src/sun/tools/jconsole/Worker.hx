@@ -25,15 +25,15 @@ package sun.tools.jconsole;
 */
 extern class Worker extends java.lang.Thread
 {
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
-	@:overload @:synchronized public function stopWorker() : Void;
+	@:overload @:public @:synchronized public function stopWorker() : Void;
 	
-	@:overload public function add(job : java.lang.Runnable) : Void;
+	@:overload @:public public function add(job : java.lang.Runnable) : Void;
 	
-	@:overload public function queueFull() : Bool;
+	@:overload @:public public function queueFull() : Bool;
 	
 	
 }

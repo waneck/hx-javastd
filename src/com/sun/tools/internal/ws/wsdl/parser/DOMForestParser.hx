@@ -29,11 +29,11 @@ extern class DOMForestParser implements com.sun.xml.internal.xsom.parser.XMLPars
 	* @param fallbackParser This parser will be used when DOMForestParser needs to parse
 	*                       documents that are not in the forest.
 	*/
-	@:overload public function new(forest : com.sun.tools.internal.ws.wsdl.parser.DOMForest, fallbackParser : com.sun.xml.internal.xsom.parser.XMLParser) : Void;
+	@:overload @:public public function new(forest : com.sun.tools.internal.ws.wsdl.parser.DOMForest, fallbackParser : com.sun.xml.internal.xsom.parser.XMLParser) : Void;
 	
-	@:overload public function parse(source : org.xml.sax.InputSource, handler : org.xml.sax.ContentHandler, entityResolver : org.xml.sax.EntityResolver, errHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function parse(source : org.xml.sax.InputSource, handler : org.xml.sax.ContentHandler, entityResolver : org.xml.sax.EntityResolver, errHandler : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload public function parse(source : org.xml.sax.InputSource, handler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, entityResolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function parse(source : org.xml.sax.InputSource, handler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, entityResolver : org.xml.sax.EntityResolver) : Void;
 	
 	
 }

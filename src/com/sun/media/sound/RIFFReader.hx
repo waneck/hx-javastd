@@ -25,53 +25,53 @@ package com.sun.media.sound;
 */
 extern class RIFFReader extends java.io.InputStream
 {
-	@:overload public function new(stream : java.io.InputStream) : Void;
+	@:overload @:public public function new(stream : java.io.InputStream) : Void;
 	
-	@:overload public function getFilePointer() : haxe.Int64;
+	@:overload @:public public function getFilePointer() : haxe.Int64;
 	
-	@:overload public function hasNextChunk() : Bool;
+	@:overload @:public public function hasNextChunk() : Bool;
 	
-	@:overload public function nextChunk() : com.sun.media.sound.RIFFReader;
+	@:overload @:public public function nextChunk() : com.sun.media.sound.RIFFReader;
 	
-	@:overload public function getFormat() : String;
+	@:overload @:public public function getFormat() : String;
 	
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function getSize() : haxe.Int64;
+	@:overload @:public public function getSize() : haxe.Int64;
 	
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
 	
-	@:overload @:final public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:final public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:final public function readFully(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public @:final public function readFully(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload @:final public function skipBytes(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:final public function skipBytes(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload public function finish() : Void;
+	@:overload @:public public function finish() : Void;
 	
-	@:overload public function readString(len : Int) : String;
+	@:overload @:public public function readString(len : Int) : String;
 	
-	@:overload public function readByte() : java.StdTypes.Int8;
+	@:overload @:public public function readByte() : java.StdTypes.Int8;
 	
-	@:overload public function readShort() : java.StdTypes.Int16;
+	@:overload @:public public function readShort() : java.StdTypes.Int16;
 	
-	@:overload public function readInt() : Int;
+	@:overload @:public public function readInt() : Int;
 	
-	@:overload public function readLong() : haxe.Int64;
+	@:overload @:public public function readLong() : haxe.Int64;
 	
-	@:overload public function readUnsignedByte() : Int;
+	@:overload @:public public function readUnsignedByte() : Int;
 	
-	@:overload public function readUnsignedShort() : Int;
+	@:overload @:public public function readUnsignedShort() : Int;
 	
-	@:overload public function readUnsignedInt() : haxe.Int64;
+	@:overload @:public public function readUnsignedInt() : haxe.Int64;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

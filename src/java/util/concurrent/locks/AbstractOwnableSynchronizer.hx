@@ -49,7 +49,7 @@ package java.util.concurrent.locks;
 	/**
 	* Empty constructor for use by subclasses.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Sets the thread that currently owns exclusive access. A
@@ -57,7 +57,7 @@ package java.util.concurrent.locks;
 	* This method does not otherwise impose any synchronization or
 	* <tt>volatile</tt> field accesses.
 	*/
-	@:overload @:final private function setExclusiveOwnerThread(t : java.lang.Thread) : Void;
+	@:overload @:protected @:final private function setExclusiveOwnerThread(t : java.lang.Thread) : Void;
 	
 	/**
 	* Returns the thread last set by
@@ -66,7 +66,7 @@ package java.util.concurrent.locks;
 	* or <tt>volatile</tt> field accesses.
 	* @return the owner thread
 	*/
-	@:overload @:final private function getExclusiveOwnerThread() : java.lang.Thread;
+	@:overload @:protected @:final private function getExclusiveOwnerThread() : java.lang.Thread;
 	
 	
 }

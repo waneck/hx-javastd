@@ -32,13 +32,13 @@ package com.sun.tools.example.debug.gui;
 */
 extern class SingleLeafTreeSelectionModel extends javax.swing.tree.DefaultTreeSelectionModel
 {
-	@:overload override public function setSelectionPath(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public override public function setSelectionPath(path : javax.swing.tree.TreePath) : Void;
 	
-	@:overload override public function setSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
+	@:overload @:public override public function setSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
 	
-	@:overload override public function addSelectionPath(path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public override public function addSelectionPath(path : javax.swing.tree.TreePath) : Void;
 	
-	@:overload override public function addSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
+	@:overload @:public override public function addSelectionPaths(paths : java.NativeArray<javax.swing.tree.TreePath>) : Void;
 	
 	
 }

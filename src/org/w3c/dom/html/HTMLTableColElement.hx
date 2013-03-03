@@ -49,48 +49,48 @@ extern interface HTMLTableColElement extends org.w3c.dom.html.HTMLElement
 	*  Horizontal alignment of cell data in column. See the  align attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getAlign() : String;
+	@:overload @:public public function getAlign() : String;
 	
-	@:overload public function setAlign(align : String) : Void;
+	@:overload @:public public function setAlign(align : String) : Void;
 	
 	/**
 	*  Alignment character for cells in a column. See the  char attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getCh() : String;
+	@:overload @:public public function getCh() : String;
 	
-	@:overload public function setCh(ch : String) : Void;
+	@:overload @:public public function setCh(ch : String) : Void;
 	
 	/**
 	*  Offset of alignment character. See the  charoff attribute definition
 	* in HTML 4.0.
 	*/
-	@:overload public function getChOff() : String;
+	@:overload @:public public function getChOff() : String;
 	
-	@:overload public function setChOff(chOff : String) : Void;
+	@:overload @:public public function setChOff(chOff : String) : Void;
 	
 	/**
 	*  Indicates the number of columns in a group or affected by a grouping.
 	* See the  span attribute definition in HTML 4.0.
 	*/
-	@:overload public function getSpan() : Int;
+	@:overload @:public public function getSpan() : Int;
 	
-	@:overload public function setSpan(span : Int) : Void;
+	@:overload @:public public function setSpan(span : Int) : Void;
 	
 	/**
 	*  Vertical alignment of cell data in column. See the  valign attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getVAlign() : String;
+	@:overload @:public public function getVAlign() : String;
 	
-	@:overload public function setVAlign(vAlign : String) : Void;
+	@:overload @:public public function setVAlign(vAlign : String) : Void;
 	
 	/**
 	*  Default column width. See the  width attribute definition in HTML 4.0.
 	*/
-	@:overload public function getWidth() : String;
+	@:overload @:public public function getWidth() : String;
 	
-	@:overload public function setWidth(width : String) : Void;
+	@:overload @:public public function setWidth(width : String) : Void;
 	
 	
 }

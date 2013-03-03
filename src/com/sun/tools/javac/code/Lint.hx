@@ -34,41 +34,41 @@ package com.sun.tools.javac.code;
 extern class Lint
 {
 	/** The context key for the root Lint object. */
-	private static var lintKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.code.Lint>;
+	@:protected @:static @:final private static var lintKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.code.Lint>;
 	
 	/** Get the root Lint instance. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.code.Lint;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.code.Lint;
 	
 	/**
 	* Returns the result of combining the values in this object with
 	* the given annotation.
 	*/
-	@:overload public function augment(attr : com.sun.tools.javac.code.Attribute.Attribute_Compound) : com.sun.tools.javac.code.Lint;
+	@:overload @:public public function augment(attr : com.sun.tools.javac.code.Attribute.Attribute_Compound) : com.sun.tools.javac.code.Lint;
 	
 	/**
 	* Returns the result of combining the values in this object with
 	* the given annotations.
 	*/
-	@:overload public function augment(attrs : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Attribute.Attribute_Compound>) : com.sun.tools.javac.code.Lint;
+	@:overload @:public public function augment(attrs : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Attribute.Attribute_Compound>) : com.sun.tools.javac.code.Lint;
 	
 	/**
 	* Returns the result of combining the values in this object with
 	* the given annotations and flags.
 	*/
-	@:overload public function augment(attrs : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Attribute.Attribute_Compound>, flags : haxe.Int64) : com.sun.tools.javac.code.Lint;
+	@:overload @:public public function augment(attrs : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Attribute.Attribute_Compound>, flags : haxe.Int64) : com.sun.tools.javac.code.Lint;
 	
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload private function new(other : com.sun.tools.javac.code.Lint) : Void;
+	@:overload @:protected private function new(other : com.sun.tools.javac.code.Lint) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Checks if a warning category is enabled. A warning category may be enabled
 	* on the command line, or by default, and can be temporarily disabled with
 	* the SuppressWarnings annotation.
 	*/
-	@:overload public function isEnabled(lc : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Bool;
+	@:overload @:public public function isEnabled(lc : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Bool;
 	
 	/**
 	* Checks is a warning category has been specifically suppressed, by means
@@ -76,7 +76,7 @@ extern class Lint
 	* category, whether it has been implicitly suppressed by virtue of the
 	* current entity being itself deprecated.
 	*/
-	@:overload public function isSuppressed(lc : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Bool;
+	@:overload @:public public function isSuppressed(lc : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Bool;
 	
 	
 }
@@ -169,17 +169,17 @@ extern class Lint
 
 @:native('com$sun$tools$javac$code$Lint$AugmentVisitor') extern class Lint_AugmentVisitor implements com.sun.tools.javac.code.Attribute.Attribute_Visitor
 {
-	@:overload public function visitConstant(value : com.sun.tools.javac.code.Attribute.Attribute_Constant) : Void;
+	@:overload @:public public function visitConstant(value : com.sun.tools.javac.code.Attribute.Attribute_Constant) : Void;
 	
-	@:overload public function visitClass(clazz : com.sun.tools.javac.code.Attribute.Attribute_Class) : Void;
+	@:overload @:public public function visitClass(clazz : com.sun.tools.javac.code.Attribute.Attribute_Class) : Void;
 	
-	@:overload public function visitCompound(compound : com.sun.tools.javac.code.Attribute.Attribute_Compound) : Void;
+	@:overload @:public public function visitCompound(compound : com.sun.tools.javac.code.Attribute.Attribute_Compound) : Void;
 	
-	@:overload public function visitArray(array : com.sun.tools.javac.code.Attribute.Attribute_Array) : Void;
+	@:overload @:public public function visitArray(array : com.sun.tools.javac.code.Attribute.Attribute_Array) : Void;
 	
-	@:overload public function visitEnum(e : com.sun.tools.javac.code.Attribute.Attribute_Enum) : Void;
+	@:overload @:public public function visitEnum(e : com.sun.tools.javac.code.Attribute.Attribute_Enum) : Void;
 	
-	@:overload public function visitError(e : com.sun.tools.javac.code.Attribute.Attribute_Error) : Void;
+	@:overload @:public public function visitError(e : com.sun.tools.javac.code.Attribute.Attribute_Error) : Void;
 	
 	
 }

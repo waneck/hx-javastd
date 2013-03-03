@@ -29,23 +29,23 @@ package com.sun.tools.internal.ws.processor.model.java;
 */
 extern class JavaArrayType extends com.sun.tools.internal.ws.processor.model.java.JavaType
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload public function new(name : String, elementName : String, elementType : com.sun.tools.internal.ws.processor.model.java.JavaType) : Void;
+	@:overload @:public public function new(name : String, elementName : String, elementType : com.sun.tools.internal.ws.processor.model.java.JavaType) : Void;
 	
-	@:overload public function getElementName() : String;
+	@:overload @:public public function getElementName() : String;
 	
-	@:overload public function setElementName(name : String) : Void;
+	@:overload @:public public function setElementName(name : String) : Void;
 	
-	@:overload public function getElementType() : com.sun.tools.internal.ws.processor.model.java.JavaType;
+	@:overload @:public public function getElementType() : com.sun.tools.internal.ws.processor.model.java.JavaType;
 	
-	@:overload public function setElementType(type : com.sun.tools.internal.ws.processor.model.java.JavaType) : Void;
+	@:overload @:public public function setElementType(type : com.sun.tools.internal.ws.processor.model.java.JavaType) : Void;
 	
-	@:overload public function getSOAPArrayHolderName() : String;
+	@:overload @:public public function getSOAPArrayHolderName() : String;
 	
-	@:overload public function setSOAPArrayHolderName(holderName : String) : Void;
+	@:overload @:public public function setSOAPArrayHolderName(holderName : String) : Void;
 	
 	
 }

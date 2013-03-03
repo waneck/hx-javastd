@@ -111,7 +111,7 @@ extern interface AppletContext
 	* @param   target   a <code>String</code> indicating where to display
 	*                   the page.
 	*/
-	@:overload public function showDocument(url : java.net.URL, target : String) : Void;
+	@:overload @:public public function showDocument(url : java.net.URL, target : String) : Void;
 	
 	/**
 	* Requests that the argument string be displayed in the
@@ -141,7 +141,7 @@ extern interface AppletContext
 	*         interface.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setStream(key : String, stream : java.io.InputStream) : Void;
+	@:require(java4) @:overload @:public public function setStream(key : String, stream : java.io.InputStream) : Void;
 	
 	/**
 	* Returns the stream to which specified key is associated within this
@@ -156,7 +156,7 @@ extern interface AppletContext
 	* @param key key whose associated stream is to be returned.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getStream(key : String) : java.io.InputStream;
+	@:require(java4) @:overload @:public public function getStream(key : String) : java.io.InputStream;
 	
 	/**
 	* Finds all the keys of the streams in this applet context.
@@ -169,7 +169,7 @@ extern interface AppletContext
 	*          context.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getStreamKeys() : java.util.Iterator<String>;
+	@:require(java4) @:overload @:public public function getStreamKeys() : java.util.Iterator<String>;
 	
 	
 }

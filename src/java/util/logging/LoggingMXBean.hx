@@ -65,7 +65,7 @@ package java.util.logging;
 	* @return A list of <tt>String</tt> each of which is a
 	*         currently registered <tt>Logger</tt> name.
 	*/
-	@:overload public function getLoggerNames() : java.util.List<String>;
+	@:overload @:public public function getLoggerNames() : java.util.List<String>;
 	
 	/**
 	* Gets the name of the log level associated with the specified logger.
@@ -91,7 +91,7 @@ package java.util.logging;
 	*
 	* @see Logger#getLevel
 	*/
-	@:overload public function getLoggerLevel(loggerName : String) : String;
+	@:overload @:public public function getLoggerLevel(loggerName : String) : String;
 	
 	/**
 	* Sets the specified logger to the specified new level.
@@ -117,7 +117,7 @@ package java.util.logging;
 	*
 	* @see Logger#setLevel
 	*/
-	@:overload public function setLoggerLevel(loggerName : String, levelName : String) : Void;
+	@:overload @:public public function setLoggerLevel(loggerName : String, levelName : String) : Void;
 	
 	/**
 	* Returns the name of the parent for the specified logger.
@@ -132,7 +132,7 @@ package java.util.logging;
 	*         If the specified logger does not exist, <tt>null</tt>
 	*         is returned.
 	*/
-	@:overload public function getParentLoggerName(loggerName : String) : String;
+	@:overload @:public public function getParentLoggerName(loggerName : String) : String;
 	
 	
 }

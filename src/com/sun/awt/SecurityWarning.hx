@@ -38,7 +38,7 @@ extern class SecurityWarning
 	* @throws IllegalArgumentException if the window is trusted (i.e.
 	* the {@code getWarningString()} returns null)
 	*/
-	@:overload public static function getSize(window : java.awt.Window) : java.awt.Dimension;
+	@:overload @:public @:static public static function getSize(window : java.awt.Window) : java.awt.Dimension;
 	
 	/**
 	* Sets the position of the security warning.
@@ -96,7 +96,7 @@ extern class SecurityWarning
 	* @throws IllegalArgumentException if the alignmentX or alignmentY
 	* arguments are not within the range [0.0f ... 1.0f]
 	*/
-	@:overload public static function setPosition(window : java.awt.Window, point : java.awt.geom.Point2D, alignmentX : Single, alignmentY : Single) : Void;
+	@:overload @:public @:static public static function setPosition(window : java.awt.Window, point : java.awt.geom.Point2D, alignmentX : Single, alignmentY : Single) : Void;
 	
 	
 }

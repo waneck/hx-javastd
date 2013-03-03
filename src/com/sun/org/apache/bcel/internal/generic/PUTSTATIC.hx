@@ -58,11 +58,11 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class PUTSTATIC extends com.sun.org.apache.bcel.internal.generic.FieldInstruction implements com.sun.org.apache.bcel.internal.generic.ExceptionThrower implements com.sun.org.apache.bcel.internal.generic.PopInstruction
 {
-	@:overload public function new(index : Int) : Void;
+	@:overload @:public public function new(index : Int) : Void;
 	
-	@:overload public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
-	@:overload public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -72,7 +72,7 @@ extern class PUTSTATIC extends com.sun.org.apache.bcel.internal.generic.FieldIns
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

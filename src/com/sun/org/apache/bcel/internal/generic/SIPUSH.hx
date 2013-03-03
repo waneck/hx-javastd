@@ -58,28 +58,28 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class SIPUSH extends com.sun.org.apache.bcel.internal.generic.Instruction implements com.sun.org.apache.bcel.internal.generic.ConstantPushInstruction
 {
-	@:overload public function new(b : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(b : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Dump instruction as short code to stream out.
 	*/
-	@:overload public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload @:public override public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return mnemonic for instruction
 	*/
-	@:overload public function toString(verbose : Bool) : String;
+	@:overload @:public override public function toString(verbose : Bool) : String;
 	
 	/**
 	* Read needed data (e.g. index) from file.
 	*/
-	@:overload private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload @:protected override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
-	@:overload public function getValue() : java.lang.Number;
+	@:overload @:public public function getValue() : java.lang.Number;
 	
 	/** @return Type.SHORT
 	*/
-	@:overload public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -89,7 +89,7 @@ extern class SIPUSH extends com.sun.org.apache.bcel.internal.generic.Instruction
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

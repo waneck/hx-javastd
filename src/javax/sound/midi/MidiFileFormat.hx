@@ -30,12 +30,12 @@ extern class MidiFileFormat
 	* @see #getByteLength
 	* @see #getMicrosecondLength
 	*/
-	public static var UNKNOWN_LENGTH(default, null) : Int;
+	@:public @:static @:final public static var UNKNOWN_LENGTH(default, null) : Int;
 	
 	/**
 	* The type of MIDI file.
 	*/
-	private var type : Int;
+	@:protected private var type : Int;
 	
 	/**
 	* The division type of the MIDI file.
@@ -46,22 +46,22 @@ extern class MidiFileFormat
 	* @see Sequence#SMPTE_30DROP
 	* @see Sequence#SMPTE_30
 	*/
-	private var divisionType : Single;
+	@:protected private var divisionType : Single;
 	
 	/**
 	* The timing resolution of the MIDI file.
 	*/
-	private var resolution : Int;
+	@:protected private var resolution : Int;
 	
 	/**
 	* The length of the MIDI file in bytes.
 	*/
-	private var byteLength : Int;
+	@:protected private var byteLength : Int;
 	
 	/**
 	* The duration of the MIDI file in microseconds.
 	*/
-	private var microsecondLength : haxe.Int64;
+	@:protected private var microsecondLength : haxe.Int64;
 	
 	/**
 	* Constructs a <code>MidiFileFormat</code>.
@@ -78,7 +78,7 @@ extern class MidiFileFormat
 	* @see Sequence#SMPTE_30DROP
 	* @see Sequence#SMPTE_30
 	*/
-	@:overload public function new(type : Int, divisionType : Single, resolution : Int, bytes : Int, microseconds : haxe.Int64) : Void;
+	@:overload @:public public function new(type : Int, divisionType : Single, resolution : Int, bytes : Int, microseconds : haxe.Int64) : Void;
 	
 	/**
 	* Construct a <code>MidiFileFormat</code> with a set of properties.
@@ -102,13 +102,13 @@ extern class MidiFileFormat
 	* @see Sequence#SMPTE_30
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(type : Int, divisionType : Single, resolution : Int, bytes : Int, microseconds : haxe.Int64, properties : java.util.Map<String, Dynamic>) : Void;
+	@:require(java5) @:overload @:public public function new(type : Int, divisionType : Single, resolution : Int, bytes : Int, microseconds : haxe.Int64, properties : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* Obtains the MIDI file type.
 	* @return the file's type (0, 1, or 2)
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Obtains the timing division type for the MIDI file.
@@ -123,7 +123,7 @@ extern class MidiFileFormat
 	* @see Sequence#SMPTE_30
 	* @see Sequence#getDivisionType()
 	*/
-	@:overload public function getDivisionType() : Single;
+	@:overload @:public public function getDivisionType() : Single;
 	
 	/**
 	* Obtains the timing resolution for the MIDI file.
@@ -134,14 +134,14 @@ extern class MidiFileFormat
 	* @see #getDivisionType
 	* @see Sequence#getResolution()
 	*/
-	@:overload public function getResolution() : Int;
+	@:overload @:public public function getResolution() : Int;
 	
 	/**
 	* Obtains the length of the MIDI file, expressed in 8-bit bytes.
 	* @return the number of bytes in the file, or UNKNOWN_LENGTH if not known
 	* @see #UNKNOWN_LENGTH
 	*/
-	@:overload public function getByteLength() : Int;
+	@:overload @:public public function getByteLength() : Int;
 	
 	/**
 	* Obtains the length of the MIDI file, expressed in microseconds.
@@ -150,7 +150,7 @@ extern class MidiFileFormat
 	* @see #getByteLength
 	* @see #UNKNOWN_LENGTH
 	*/
-	@:overload public function getMicrosecondLength() : haxe.Int64;
+	@:overload @:public public function getMicrosecondLength() : haxe.Int64;
 	
 	/**
 	* Obtain an unmodifiable map of properties.
@@ -164,7 +164,7 @@ extern class MidiFileFormat
 	* @see #getProperty(String)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function properties() : java.util.Map<String, Dynamic>;
+	@:require(java5) @:overload @:public public function properties() : java.util.Map<String, Dynamic>;
 	
 	/**
 	* Obtain the property value specified by the key.
@@ -182,7 +182,7 @@ extern class MidiFileFormat
 	* @see #properties()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getProperty(key : String) : Dynamic;
+	@:require(java5) @:overload @:public public function getProperty(key : String) : Dynamic;
 	
 	
 }

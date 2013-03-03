@@ -33,26 +33,26 @@ extern class BufferManagerWrite
 	* BufferManager can then grow the output buffer or
 	* use some kind of fragmentation technique.
 	*/
-	private var orb : com.sun.corba.se.spi.orb.ORB;
+	@:protected private var orb : com.sun.corba.se.spi.orb.ORB;
 	
-	private var wrapper : com.sun.corba.se.impl.logging.ORBUtilSystemException;
+	@:protected private var wrapper : com.sun.corba.se.impl.logging.ORBUtilSystemException;
 	
 	/**
 	* Has the stream sent out any fragments so far?
 	*/
-	@:overload @:abstract public function sentFragment() : Bool;
+	@:overload @:public @:abstract public function sentFragment() : Bool;
 	
 	/**
 	* Has the entire message been sent?  (Has
 	* sendMessage been called?)
 	*/
-	@:overload public function sentFullMessage() : Bool;
+	@:overload @:public public function sentFullMessage() : Bool;
 	
 	/**
 	* Returns the correct buffer size for this type of
 	* buffer manager as set in the ORB.
 	*/
-	@:overload @:abstract public function getBufferSize() : Int;
+	@:overload @:public @:abstract public function getBufferSize() : Int;
 	
 	/*
 	* Called from CDROutputStream.grow.
@@ -78,7 +78,7 @@ extern class BufferManagerWrite
 	*
 	* Should set the bbwi.fragmented flag to true only in cases 2 and 3.
 	*/
-	@:overload @:abstract public function overflow(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
+	@:overload @:public @:abstract public function overflow(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
 	
 	/**
 	* Called after Stub._invoke (i.e., before complete message has been sent).
@@ -105,20 +105,20 @@ extern class BufferManagerWrite
 	*          Set no more fragments bit.
 	*          this.connection.send(bbwi).
 	*/
-	@:overload @:abstract public function sendMessage() : Void;
+	@:overload @:public @:abstract public function sendMessage() : Void;
 	
 	/**
 	* A reference to the connection level stream will be required when
 	* sending fragments.
 	*/
-	@:overload public function setOutputObject(outputObject : Dynamic) : Void;
+	@:overload @:public public function setOutputObject(outputObject : Dynamic) : Void;
 	
 	/**
 	* Close the BufferManagerWrite and do any outstanding cleanup.
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:abstract @:public public function close() : Void;
 	
-	private var outputObject : Dynamic;
+	@:protected private var outputObject : Dynamic;
 	
 	
 }

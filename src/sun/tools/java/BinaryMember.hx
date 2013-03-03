@@ -28,51 +28,51 @@ extern class BinaryMember extends sun.tools.java.MemberDefinition
 	/**
 	* Constructor
 	*/
-	@:overload public function new(clazz : sun.tools.java.ClassDefinition, modifiers : Int, type : sun.tools.java.Type, name : sun.tools.java.Identifier, atts : sun.tools.java.BinaryAttribute) : Void;
+	@:overload @:public public function new(clazz : sun.tools.java.ClassDefinition, modifiers : Int, type : sun.tools.java.Type, name : sun.tools.java.Identifier, atts : sun.tools.java.BinaryAttribute) : Void;
 	
 	/**
 	* Constructor for an inner class.
 	*/
-	@:overload public function new(innerClass : sun.tools.java.ClassDefinition) : Void;
+	@:overload @:public public function new(innerClass : sun.tools.java.ClassDefinition) : Void;
 	
 	/**
 	* Inline allowed (currently only allowed for the constructor of Object).
 	*/
-	@:overload public function isInlineable(env : sun.tools.java.Environment, fromFinal : Bool) : Bool;
+	@:overload @:public override public function isInlineable(env : sun.tools.java.Environment, fromFinal : Bool) : Bool;
 	
 	/**
 	* Get arguments
 	*/
-	@:overload public function getArguments() : java.util.Vector<Dynamic>;
+	@:overload @:public override public function getArguments() : java.util.Vector<Dynamic>;
 	
 	/**
 	* Get exceptions
 	*/
-	@:overload public function getExceptions(env : sun.tools.java.Environment) : java.NativeArray<sun.tools.java.ClassDeclaration>;
+	@:overload @:public override public function getExceptions(env : sun.tools.java.Environment) : java.NativeArray<sun.tools.java.ClassDeclaration>;
 	
 	/**
 	* Get documentation
 	*/
-	@:overload public function getDocumentation() : String;
+	@:overload @:public override public function getDocumentation() : String;
 	
-	@:overload public function isConstant() : Bool;
+	@:overload @:public override public function isConstant() : Bool;
 	
 	/**
 	* Get the value
 	*/
-	@:overload public function getValue(env : sun.tools.java.Environment) : sun.tools.tree.Node;
+	@:overload @:public override public function getValue(env : sun.tools.java.Environment) : sun.tools.tree.Node;
 	
 	/**
 	* Get a field attribute
 	*/
-	@:overload public function getAttribute(name : sun.tools.java.Identifier) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getAttribute(name : sun.tools.java.Identifier) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function deleteAttribute(name : sun.tools.java.Identifier) : Bool;
+	@:overload @:public public function deleteAttribute(name : sun.tools.java.Identifier) : Bool;
 	
 	/*
 	* Add an attribute to a field
 	*/
-	@:overload public function addAttribute(name : sun.tools.java.Identifier, data : java.NativeArray<java.StdTypes.Int8>, env : sun.tools.java.Environment) : Void;
+	@:overload @:public public function addAttribute(name : sun.tools.java.Identifier, data : java.NativeArray<java.StdTypes.Int8>, env : sun.tools.java.Environment) : Void;
 	
 	
 }

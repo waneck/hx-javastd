@@ -38,7 +38,7 @@ extern class RelationTypeSupport implements javax.management.relation.RelationTy
 	* <P>- no role info provided
 	* <P>- one null role info provided
 	*/
-	@:overload public function new(relationTypeName : String, roleInfoArray : java.NativeArray<javax.management.relation.RoleInfo>) : Void;
+	@:overload @:public public function new(relationTypeName : String, roleInfoArray : java.NativeArray<javax.management.relation.RoleInfo>) : Void;
 	
 	/**
 	* Constructor to be used for subclasses.
@@ -47,19 +47,19 @@ extern class RelationTypeSupport implements javax.management.relation.RelationTy
 	*
 	* @exception IllegalArgumentException  if null parameter.
 	*/
-	@:overload private function new(relationTypeName : String) : Void;
+	@:overload @:protected private function new(relationTypeName : String) : Void;
 	
 	/**
 	* Returns the relation type name.
 	*
 	* @return the relation type name.
 	*/
-	@:overload public function getRelationTypeName() : String;
+	@:overload @:public public function getRelationTypeName() : String;
 	
 	/**
 	* Returns the list of role definitions (ArrayList of RoleInfo objects).
 	*/
-	@:overload public function getRoleInfos() : java.util.List<javax.management.relation.RoleInfo>;
+	@:overload @:public public function getRoleInfos() : java.util.List<javax.management.relation.RoleInfo>;
 	
 	/**
 	* Returns the role info (RoleInfo object) for the given role info name
@@ -74,7 +74,7 @@ extern class RelationTypeSupport implements javax.management.relation.RelationTy
 	* @exception RoleInfoNotFoundException  if no role info with that name in
 	* relation type.
 	*/
-	@:overload public function getRoleInfo(roleInfoName : String) : javax.management.relation.RoleInfo;
+	@:overload @:public public function getRoleInfo(roleInfoName : String) : javax.management.relation.RoleInfo;
 	
 	/**
 	* Add a role info.
@@ -90,7 +90,7 @@ extern class RelationTypeSupport implements javax.management.relation.RelationTy
 	* @exception InvalidRelationTypeException  if there is already a role
 	*  info in current relation type with the same name.
 	*/
-	@:overload private function addRoleInfo(roleInfo : javax.management.relation.RoleInfo) : Void;
+	@:overload @:protected private function addRoleInfo(roleInfo : javax.management.relation.RoleInfo) : Void;
 	
 	
 }

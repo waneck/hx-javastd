@@ -37,7 +37,7 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsButtonListener extends javax.swing.plaf.basic.BasicButtonListener
 {
-	@:overload public function new(b : javax.swing.AbstractButton) : Void;
+	@:overload @:public public function new(b : javax.swing.AbstractButton) : Void;
 	
 	
 }

@@ -39,7 +39,7 @@ package com.sun.crypto.provider;
 	* @exception ShortBufferException if <code>in</code> is too small to hold
 	* the padding bytes
 	*/
-	@:overload public function padWithLen(_in : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function padWithLen(_in : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Returns the index where the padding starts.
@@ -54,7 +54,7 @@ package com.sun.crypto.provider;
 	* @return the index where the padding starts, or -1 if the input is
 	* not properly padded
 	*/
-	@:overload public function unpad(_in : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public public function unpad(_in : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Determines how long the padding will be for a given input length.
@@ -63,7 +63,7 @@ package com.sun.crypto.provider;
 	*
 	* @return the length of the padding
 	*/
-	@:overload public function padLength(len : Int) : Int;
+	@:overload @:public public function padLength(len : Int) : Int;
 	
 	
 }

@@ -25,17 +25,17 @@ package com.sun.xml.internal.ws.util;
 */
 extern class CompletedFuture<T> implements java.util.concurrent.Future<T>
 {
-	@:overload public function new(v : T, re : java.lang.Throwable) : Void;
+	@:overload @:public public function new(v : T, re : java.lang.Throwable) : Void;
 	
-	@:overload public function cancel(mayInterruptIfRunning : Bool) : Bool;
+	@:overload @:public public function cancel(mayInterruptIfRunning : Bool) : Bool;
 	
-	@:overload public function isCancelled() : Bool;
+	@:overload @:public public function isCancelled() : Bool;
 	
-	@:overload public function isDone() : Bool;
+	@:overload @:public public function isDone() : Bool;
 	
-	@:overload public function get() : T;
+	@:overload @:public public function get() : T;
 	
-	@:overload public function get(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : T;
+	@:overload @:public public function get(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : T;
 	
 	
 }

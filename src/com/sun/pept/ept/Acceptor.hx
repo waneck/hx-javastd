@@ -42,7 +42,7 @@ extern interface Acceptor extends com.sun.pept.ept.EPTFactory
 	*
 	* </p>
 	*/
-	@:overload public function accept() : Void;
+	@:overload @:public public function accept() : Void;
 	
 	
 }

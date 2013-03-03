@@ -61,38 +61,38 @@ extern class ObjectType extends com.sun.org.apache.bcel.internal.generic.Referen
 	/**
 	* @param class_name fully qualified class name, e.g. java.lang.String
 	*/
-	@:overload public function new(class_name : String) : Void;
+	@:overload @:public public function new(class_name : String) : Void;
 	
 	/** @return name of referenced class
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/** @return a hash code value for the object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/** @return true if both type objects refer to the same class.
 	*/
-	@:overload public function equals(type : Dynamic) : Bool;
+	@:overload @:public public function equals(type : Dynamic) : Bool;
 	
 	/**
 	* If "this" doesn't reference a class, it references an interface
 	* or a non-existant entity.
 	*/
-	@:overload public function referencesClass() : Bool;
+	@:overload @:public public function referencesClass() : Bool;
 	
 	/**
 	* If "this" doesn't reference an interface, it references a class
 	* or a non-existant entity.
 	*/
-	@:overload public function referencesInterface() : Bool;
+	@:overload @:public public function referencesInterface() : Bool;
 	
-	@:overload public function subclassOf(superclass : com.sun.org.apache.bcel.internal.generic.ObjectType) : Bool;
+	@:overload @:public public function subclassOf(superclass : com.sun.org.apache.bcel.internal.generic.ObjectType) : Bool;
 	
 	/**
 	* Java Virtual Machine Specification edition 2, 5.4.4 Access Control
 	*/
-	@:overload public function accessibleTo(accessor : com.sun.org.apache.bcel.internal.generic.ObjectType) : Bool;
+	@:overload @:public public function accessibleTo(accessor : com.sun.org.apache.bcel.internal.generic.ObjectType) : Bool;
 	
 	
 }

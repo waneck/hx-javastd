@@ -25,11 +25,11 @@ package sun.awt;
 */
 extern class EventQueueItem
 {
-	public var event : java.awt.AWTEvent;
+	@:public public var event : java.awt.AWTEvent;
 	
-	public var next : sun.awt.EventQueueItem;
+	@:public public var next : sun.awt.EventQueueItem;
 	
-	@:overload public function new(evt : java.awt.AWTEvent) : Void;
+	@:overload @:public public function new(evt : java.awt.AWTEvent) : Void;
 	
 	
 }

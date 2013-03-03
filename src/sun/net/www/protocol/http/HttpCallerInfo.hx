@@ -38,30 +38,36 @@ extern class HttpCallerInfo
 	*
 	* 2. Schemed: With the scheme field filled, can be used in JGSS-API calls.
 	*/
-	public var url(default, null) : java.net.URL;
+	@:final @:public public var url(default, null) : java.net.URL;
 	
-	public var host(default, null) : String;
+	@:final @:public public var host(default, null) : String;
 	
-	public var port(default, null) : Int;
+	@:final @:public public var protocol(default, null) : String;
 	
-	public var addr(default, null) : java.net.InetAddress;
+	@:final @:public public var prompt(default, null) : String;
 	
-	public var authType(default, null) : java.net.Authenticator.Authenticator_RequestorType;
+	@:final @:public public var scheme(default, null) : String;
+	
+	@:final @:public public var port(default, null) : Int;
+	
+	@:final @:public public var addr(default, null) : java.net.InetAddress;
+	
+	@:final @:public public var authType(default, null) : java.net.Authenticator.Authenticator_RequestorType;
 	
 	/**
 	* Create a schemed object based on an un-schemed one.
 	*/
-	@:overload public function new(old : sun.net.www.protocol.http.HttpCallerInfo, scheme : String) : Void;
+	@:overload @:public public function new(old : sun.net.www.protocol.http.HttpCallerInfo, scheme : String) : Void;
 	
 	/**
 	* Constructor an un-schemed object for site access.
 	*/
-	@:overload public function new(url : java.net.URL) : Void;
+	@:overload @:public public function new(url : java.net.URL) : Void;
 	
 	/**
 	* Constructor an un-schemed object for proxy access.
 	*/
-	@:overload public function new(url : java.net.URL, host : String, port : Int) : Void;
+	@:overload @:public public function new(url : java.net.URL, host : String, port : Int) : Void;
 	
 	
 }

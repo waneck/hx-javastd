@@ -43,7 +43,7 @@ extern class TRANSACTION_MODE extends org.omg.CORBA.SystemException
 	* minor code of 0, a completion state of CompletionStatus.COMPLETED_NO,
 	* and a null description.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>TRANSACTION_MODE</code> exception with the specified
@@ -51,7 +51,7 @@ extern class TRANSACTION_MODE extends org.omg.CORBA.SystemException
 	* COMPLETED_NO.
 	* @param s the String containing a detail message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs a <code>TRANSACTION_MODE</code> exception with the specified
@@ -59,7 +59,7 @@ extern class TRANSACTION_MODE extends org.omg.CORBA.SystemException
 	* @param minor the minor code
 	* @param completed the completion status
 	*/
-	@:overload public function new(minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
+	@:overload @:public public function new(minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
 	
 	/**
 	* Constructs a <code>TRANSACTION_MODE</code> exception with the specified
@@ -68,7 +68,7 @@ extern class TRANSACTION_MODE extends org.omg.CORBA.SystemException
 	* @param minor the minor code
 	* @param completed the completion status
 	*/
-	@:overload public function new(s : String, minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
+	@:overload @:public public function new(s : String, minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
 	
 	
 }

@@ -34,7 +34,7 @@ extern class PBEParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* @param iterationCount the iteration count.
 	* @exception NullPointerException if <code>salt</code> is null.
 	*/
-	@:overload public function new(salt : java.NativeArray<java.StdTypes.Int8>, iterationCount : Int) : Void;
+	@:overload @:public public function new(salt : java.NativeArray<java.StdTypes.Int8>, iterationCount : Int) : Void;
 	
 	/**
 	* Returns the salt.
@@ -42,14 +42,14 @@ extern class PBEParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* @return the salt. Returns a new array
 	* each time this method is called.
 	*/
-	@:overload public function getSalt() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getSalt() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the iteration count.
 	*
 	* @return the iteration count
 	*/
-	@:overload public function getIterationCount() : Int;
+	@:overload @:public public function getIterationCount() : Int;
 	
 	
 }

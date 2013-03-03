@@ -46,9 +46,9 @@ package com.sun.xml.internal.rngom.binary;
 */
 extern class SchemaPatternBuilder extends com.sun.xml.internal.rngom.binary.PatternBuilder
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function hasIdTypes() : Bool;
+	@:overload @:public public function hasIdTypes() : Bool;
 	
 	
 }

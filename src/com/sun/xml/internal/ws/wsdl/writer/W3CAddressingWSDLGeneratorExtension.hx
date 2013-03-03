@@ -25,17 +25,17 @@ package com.sun.xml.internal.ws.wsdl.writer;
 */
 extern class W3CAddressingWSDLGeneratorExtension extends com.sun.xml.internal.ws.api.wsdl.writer.WSDLGeneratorExtension
 {
-	@:overload override public function start(ctxt : com.sun.xml.internal.ws.api.wsdl.writer.WSDLGenExtnContext) : Void;
+	@:overload @:public override public function start(ctxt : com.sun.xml.internal.ws.api.wsdl.writer.WSDLGenExtnContext) : Void;
 	
-	@:overload override public function addOperationInputExtension(input : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
+	@:overload @:public override public function addOperationInputExtension(input : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
 	
-	@:overload @:final private static function getDefaultAction(method : com.sun.xml.internal.ws.api.model.JavaMethod) : String;
+	@:overload @:protected @:static @:final private static function getDefaultAction(method : com.sun.xml.internal.ws.api.model.JavaMethod) : String;
 	
-	@:overload override public function addOperationOutputExtension(output : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
+	@:overload @:public override public function addOperationOutputExtension(output : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
 	
-	@:overload override public function addOperationFaultExtension(fault : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod, ce : com.sun.xml.internal.ws.api.model.CheckedException) : Void;
+	@:overload @:public override public function addOperationFaultExtension(fault : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod, ce : com.sun.xml.internal.ws.api.model.CheckedException) : Void;
 	
-	@:overload override public function addBindingExtension(binding : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
+	@:overload @:public override public function addBindingExtension(binding : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
 	
 	
 }

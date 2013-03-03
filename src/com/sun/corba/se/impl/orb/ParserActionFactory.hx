@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.orb;
 */
 extern class ParserActionFactory
 {
-	@:overload public static function makeNormalAction(propertyName : String, operation : com.sun.corba.se.spi.orb.Operation, fieldName : String) : com.sun.corba.se.impl.orb.ParserAction;
+	@:overload @:public @:static public static function makeNormalAction(propertyName : String, operation : com.sun.corba.se.spi.orb.Operation, fieldName : String) : com.sun.corba.se.impl.orb.ParserAction;
 	
-	@:overload public static function makePrefixAction(propertyName : String, operation : com.sun.corba.se.spi.orb.Operation, fieldName : String, componentType : Class<Dynamic>) : com.sun.corba.se.impl.orb.ParserAction;
+	@:overload @:public @:static public static function makePrefixAction(propertyName : String, operation : com.sun.corba.se.spi.orb.Operation, fieldName : String, componentType : Class<Dynamic>) : com.sun.corba.se.impl.orb.ParserAction;
 	
 	
 }

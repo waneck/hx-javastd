@@ -29,18 +29,18 @@ extern class ActivatableServerRef extends sun.rmi.server.UnicastServerRef2
 	* Construct a Unicast server remote reference to be exported
 	* on the specified port.
 	*/
-	@:overload public function new(id : java.rmi.activation.ActivationID, port : Int) : Void;
+	@:overload @:public public function new(id : java.rmi.activation.ActivationID, port : Int) : Void;
 	
 	/**
 	* Construct a Unicast server remote reference to be exported
 	* on the specified port.
 	*/
-	@:overload public function new(id : java.rmi.activation.ActivationID, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : Void;
+	@:overload @:public public function new(id : java.rmi.activation.ActivationID, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : Void;
 	
 	/**
 	* Returns the class of the ref type to be serialized
 	*/
-	@:overload override public function getRefClass(out : java.io.ObjectOutput) : String;
+	@:overload @:public override public function getRefClass(out : java.io.ObjectOutput) : String;
 	
 	/**
 	* Return the client remote reference for this remoteRef.
@@ -48,12 +48,12 @@ extern class ActivatableServerRef extends sun.rmi.server.UnicastServerRef2
 	* For  a server remote reference, a client side one will have to
 	* found or created.
 	*/
-	@:overload override private function getClientRef() : java.rmi.server.RemoteRef;
+	@:overload @:protected override private function getClientRef() : java.rmi.server.RemoteRef;
 	
 	/**
 	* Prevents serialization (because deserializaion is impossible).
 	*/
-	@:overload override public function writeExternal(out : java.io.ObjectOutput) : Void;
+	@:overload @:public override public function writeExternal(out : java.io.ObjectOutput) : Void;
 	
 	
 }

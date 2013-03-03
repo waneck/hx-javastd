@@ -39,14 +39,14 @@ extern interface Transmitter extends java.lang.AutoCloseable
 	* If a receiver is currently set, it is replaced with this one.
 	* @param receiver the desired receiver.
 	*/
-	@:overload public function setReceiver(receiver : javax.sound.midi.Receiver) : Void;
+	@:overload @:public public function setReceiver(receiver : javax.sound.midi.Receiver) : Void;
 	
 	/**
 	* Obtains the current receiver to which this transmitter will deliver MIDI messages.
 	* @return the current receiver.  If no receiver is currently set,
 	* returns <code>null</code>
 	*/
-	@:overload public function getReceiver() : javax.sound.midi.Receiver;
+	@:overload @:public public function getReceiver() : javax.sound.midi.Receiver;
 	
 	/**
 	* Indicates that the application has finished using the transmitter, and
@@ -66,7 +66,7 @@ extern interface Transmitter extends java.lang.AutoCloseable
 	*
 	* @see javax.sound.midi.MidiSystem#getTransmitter
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

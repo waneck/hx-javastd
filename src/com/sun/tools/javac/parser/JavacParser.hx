@@ -38,50 +38,50 @@ extern class JavacParser implements com.sun.tools.javac.parser.Parser
 {
 	/** The scanner used for lexical analysis.
 	*/
-	private var S : com.sun.tools.javac.parser.Lexer;
+	@:protected private var S : com.sun.tools.javac.parser.Lexer;
 	
 	/** The factory to be used for abstract syntax tree construction.
 	*/
-	private var F : com.sun.tools.javac.tree.TreeMaker;
+	@:protected private var F : com.sun.tools.javac.tree.TreeMaker;
 	
 	/** Construct a parser from a given scanner, tree factory and log.
 	*/
-	@:overload private function new(fac : com.sun.tools.javac.parser.ParserFactory, S : com.sun.tools.javac.parser.Lexer, keepDocComments : Bool, keepLineMap : Bool) : Void;
+	@:overload @:protected private function new(fac : com.sun.tools.javac.parser.ParserFactory, S : com.sun.tools.javac.parser.Lexer, keepDocComments : Bool, keepLineMap : Bool) : Void;
 	
 	/** If next input token matches given token, skip it, otherwise report
 	*  an error.
 	*/
-	@:overload public function accept(token : com.sun.tools.javac.parser.Token) : Void;
+	@:overload @:public public function accept(token : com.sun.tools.javac.parser.Token) : Void;
 	
-	@:overload private function getErrorEndPos() : Int;
+	@:overload @:protected private function getErrorEndPos() : Int;
 	
 	/**
 	* Store ending position for a tree.
 	* @param tree   The tree.
 	* @param endpos The ending position to associate with the tree.
 	*/
-	@:overload private function storeEnd(tree : com.sun.tools.javac.tree.JCTree, endpos : Int) : Void;
+	@:overload @:protected private function storeEnd(tree : com.sun.tools.javac.tree.JCTree, endpos : Int) : Void;
 	
 	/**
 	* Store ending position for a tree.  The ending position should
 	* be the ending position of the current token.
 	* @param t The tree.
 	*/
-	@:overload private function to<T : com.sun.tools.javac.tree.JCTree>(t : T) : T;
+	@:overload @:protected private function to<T : com.sun.tools.javac.tree.JCTree>(t : T) : T;
 	
 	/**
 	* Store ending position for a tree.  The ending position should
 	* be greater of the ending position of the previous token and errorEndPos.
 	* @param t The tree.
 	*/
-	@:overload private function toP<T : com.sun.tools.javac.tree.JCTree>(t : T) : T;
+	@:overload @:protected private function toP<T : com.sun.tools.javac.tree.JCTree>(t : T) : T;
 	
 	/** Get the start position for a tree node.  The start position is
 	* defined to be the position of the first character of the first
 	* token of the node's source text.
 	* @param tree  The tree node
 	*/
-	@:overload public function getStartPos(tree : com.sun.tools.javac.tree.JCTree) : Int;
+	@:overload @:public public function getStartPos(tree : com.sun.tools.javac.tree.JCTree) : Int;
 	
 	/**
 	* Get the end position for a tree node.  The end position is
@@ -91,23 +91,23 @@ extern class JavacParser implements com.sun.tools.javac.parser.Parser
 	* found.
 	* @param tree  The tree node
 	*/
-	@:overload public function getEndPos(tree : com.sun.tools.javac.tree.JCTree) : Int;
+	@:overload @:public public function getEndPos(tree : com.sun.tools.javac.tree.JCTree) : Int;
 	
 	/**
 	* Qualident = Ident { DOT Ident }
 	*/
-	@:overload public function qualident() : JCExpression;
+	@:overload @:public public function qualident() : JCExpression;
 	
 	/** terms can be either expressions or types.
 	*/
-	@:overload public function parseExpression() : JCExpression;
+	@:overload @:public public function parseExpression() : JCExpression;
 	
-	@:overload public function parseType() : JCExpression;
+	@:overload @:public public function parseType() : JCExpression;
 	
 	/** If tree is a concatenation of string literals, replace it
 	*  by a single literal representing the concatenated string.
 	*/
-	@:overload private function foldStrings(tree : com.sun.tools.javac.tree.JCTree) : java.lang.StringBuffer;
+	@:overload @:protected private function foldStrings(tree : com.sun.tools.javac.tree.JCTree) : java.lang.StringBuffer;
 	
 	/** Expression3    = PrefixOp Expression3
 	*                 | "(" Expr | TypeNoParams ")" Expression3
@@ -136,13 +136,13 @@ extern class JavacParser implements com.sun.tools.javac.parser.Parser
 	*  TypeSelector   = "." Ident [TypeArguments]
 	*  SuperSuffix    = Arguments | "." Ident [Arguments]
 	*/
-	@:overload private function term3() : JCExpression;
+	@:overload @:protected private function term3() : JCExpression;
 	
 	/** VariableInitializer = ArrayInitializer | Expression
 	*/
-	@:overload public function variableInitializer() : JCExpression;
+	@:overload @:public public function variableInitializer() : JCExpression;
 	
-	@:overload public function block() : JCBlock;
+	@:overload @:public public function block() : JCBlock;
 	
 	/** Statement =
 	*       Block
@@ -164,25 +164,25 @@ extern class JavacParser implements com.sun.tools.javac.parser.Parser
 	*     | ExpressionStatement
 	*     | Ident ":" Statement
 	*/
-	@:overload public function parseStatement() : JCStatement;
+	@:overload @:public public function parseStatement() : JCStatement;
 	
 	/** CatchClause     = CATCH "(" FormalParameter ")" Block
 	*/
-	@:overload private function catchClause() : JCCatch;
+	@:overload @:protected private function catchClause() : JCCatch;
 	
-	@:overload private function modifiersOpt(partial : JCModifiers) : JCModifiers;
+	@:overload @:protected private function modifiersOpt(partial : JCModifiers) : JCModifiers;
 	
 	/** VariableDeclarators = VariableDeclarator { "," VariableDeclarator }
 	*/
-	@:overload public function variableDeclarators<T : com.sun.tools.javac.util.ListBuffer<JCVariableDecl>>(mods : JCModifiers, type : JCExpression, vdefs : T) : T;
+	@:overload @:public public function variableDeclarators<T : com.sun.tools.javac.util.ListBuffer<JCVariableDecl>>(mods : JCModifiers, type : JCExpression, vdefs : T) : T;
 	
 	/** Resource = VariableModifiersOpt Type VariableDeclaratorId = Expression
 	*/
-	@:overload private function resource() : com.sun.tools.javac.tree.JCTree;
+	@:overload @:protected private function resource() : com.sun.tools.javac.tree.JCTree;
 	
 	/** CompilationUnit = [ { "@" Annotation } PACKAGE Qualident ";"] {ImportDeclaration} {TypeDeclaration}
 	*/
-	@:overload public function parseCompilationUnit() : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit;
+	@:overload @:public public function parseCompilationUnit() : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit;
 	
 	/** ClassBodyDeclaration =
 	*      ";"
@@ -201,16 +201,16 @@ extern class JavacParser implements com.sun.tools.javac.parser.Parser
 	*    | ModifiersOpt Type Ident
 	*      ( ConstantDeclaratorsRest | InterfaceMethodDeclaratorRest ";" )
 	*/
-	@:overload private function classOrInterfaceBodyDeclaration(className : com.sun.tools.javac.util.Name, isInterface : Bool) : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>;
+	@:overload @:protected private function classOrInterfaceBodyDeclaration(className : com.sun.tools.javac.util.Name, isInterface : Bool) : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>;
 	
 	/** FormalParameter = { FINAL | '@' Annotation } Type VariableDeclaratorId
 	*  LastFormalParameter = { FINAL | '@' Annotation } Type '...' Ident | FormalParameter
 	*/
-	@:overload private function formalParameter() : JCVariableDecl;
+	@:overload @:protected private function formalParameter() : JCVariableDecl;
 	
 	/** Check that given tree is a legal expression statement.
 	*/
-	@:overload private function checkExprStat(t : JCExpression) : JCExpression;
+	@:overload @:protected private function checkExprStat(t : JCExpression) : JCExpression;
 	
 	
 }

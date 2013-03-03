@@ -33,7 +33,7 @@ extern interface Formattable
 	* @param messages messages object used for localization
 	* @return a locale-dependent string representing the object
 	*/
-	@:overload public function toString(locale : java.util.Locale, messages : com.sun.tools.javac.api.Messages) : String;
+	@:overload @:public public function toString(locale : java.util.Locale, messages : com.sun.tools.javac.api.Messages) : String;
 	
 	/**
 	* Retrieve a pretty name of this object's kind
@@ -45,13 +45,13 @@ extern interface Formattable
 }
 @:native('com$sun$tools$javac$api$Formattable$LocalizedString') @:internal extern class Formattable_LocalizedString implements com.sun.tools.javac.api.Formattable
 {
-	@:overload public function new(key : String) : Void;
+	@:overload @:public public function new(key : String) : Void;
 	
-	@:overload public function toString(l : java.util.Locale, messages : com.sun.tools.javac.api.Messages) : String;
+	@:overload @:public public function toString(l : java.util.Locale, messages : com.sun.tools.javac.api.Messages) : String;
 	
-	@:overload public function getKind() : String;
+	@:overload @:public public function getKind() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

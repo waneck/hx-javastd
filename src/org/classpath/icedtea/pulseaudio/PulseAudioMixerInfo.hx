@@ -37,9 +37,9 @@ exception statement from your version.
 */
 extern class PulseAudioMixerInfo extends javax.sound.sampled.Mixer.Mixer_Info
 {
-	@:overload private function new(name : String, vendor : String, description : String, version : String) : Void;
+	@:overload @:protected private function new(name : String, vendor : String, description : String, version : String) : Void;
 	
-	@:overload @:synchronized public static function getInfo() : org.classpath.icedtea.pulseaudio.PulseAudioMixerInfo;
+	@:overload @:synchronized @:public @:static public static function getInfo() : org.classpath.icedtea.pulseaudio.PulseAudioMixerInfo;
 	
 	
 }

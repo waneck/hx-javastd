@@ -28,21 +28,21 @@ package sun.nio.cs;
 */
 extern class UnicodeEncoder extends java.nio.charset.CharsetEncoder
 {
-	private static var BYTE_ORDER_MARK(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var BYTE_ORDER_MARK(default, null) : java.StdTypes.Char16;
 	
-	private static var REVERSED_MARK(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var REVERSED_MARK(default, null) : java.StdTypes.Char16;
 	
-	private static var BIG(default, null) : Int;
+	@:protected @:static @:final private static var BIG(default, null) : Int;
 	
-	private static var LITTLE(default, null) : Int;
+	@:protected @:static @:final private static var LITTLE(default, null) : Int;
 	
-	@:overload private function new(cs : java.nio.charset.Charset, bo : Int, m : Bool) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, bo : Int, m : Bool) : Void;
 	
-	@:overload override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function implReset() : Void;
+	@:overload @:protected override private function implReset() : Void;
 	
-	@:overload override public function canEncode(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canEncode(c : java.StdTypes.Char16) : Bool;
 	
 	
 }

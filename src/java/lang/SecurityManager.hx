@@ -33,7 +33,7 @@ extern class SecurityManager
 	*  It is recommended that the <code>checkPermission</code>
 	*  call be used instead.
 	*/
-	private var inCheck : Bool;
+	@:protected private var inCheck : Bool;
 	
 	/**
 	* Tests if there is a security check in progress.
@@ -47,7 +47,7 @@ extern class SecurityManager
 	*  It is recommended that the <code>checkPermission</code>
 	*  call be used instead.
 	*/
-	@:overload public function getInCheck() : Bool;
+	@:overload @:public public function getInCheck() : Bool;
 	
 	/**
 	* Constructs a new <code>SecurityManager</code>.
@@ -66,7 +66,7 @@ extern class SecurityManager
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	* @see java.lang.RuntimePermission
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the current execution stack as an array of classes.
@@ -78,7 +78,7 @@ extern class SecurityManager
 	*
 	* @return  the execution stack.
 	*/
-	@:overload @:native private function getClassContext() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:protected @:native private function getClassContext() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Returns the class loader of the most recently executing method from
@@ -116,7 +116,7 @@ extern class SecurityManager
 	* @see  java.lang.ClassLoader#getSystemClassLoader() getSystemClassLoader
 	* @see  #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload private function currentClassLoader() : java.lang.ClassLoader;
+	@:overload @:protected private function currentClassLoader() : java.lang.ClassLoader;
 	
 	/**
 	* Returns the class of the most recently executing method from
@@ -154,7 +154,7 @@ extern class SecurityManager
 	* @see  java.lang.ClassLoader#getSystemClassLoader() getSystemClassLoader
 	* @see  #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload private function currentLoadedClass() : Class<Dynamic>;
+	@:overload @:protected private function currentLoadedClass() : Class<Dynamic>;
 	
 	/**
 	* Returns the stack depth of the specified class.
@@ -168,7 +168,7 @@ extern class SecurityManager
 	*  call be used instead.
 	*
 	*/
-	@:overload @:native private function classDepth(name : String) : Int;
+	@:overload @:protected @:native private function classDepth(name : String) : Int;
 	
 	/**
 	* Returns the stack depth of the most recently executing method
@@ -205,7 +205,7 @@ extern class SecurityManager
 	* @see   java.lang.ClassLoader#getSystemClassLoader() getSystemClassLoader
 	* @see   #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload private function classLoaderDepth() : Int;
+	@:overload @:protected private function classLoaderDepth() : Int;
 	
 	/**
 	* Tests if a method from a class with the specified
@@ -218,7 +218,7 @@ extern class SecurityManager
 	*  It is recommended that the <code>checkPermission</code>
 	*  call be used instead.
 	*/
-	@:overload private function inClass(name : String) : Bool;
+	@:overload @:protected private function inClass(name : String) : Bool;
 	
 	/**
 	* Basically, tests if a method from a class defined using a
@@ -232,7 +232,7 @@ extern class SecurityManager
 	*  call be used instead.
 	* @see        #currentClassLoader() currentClassLoader
 	*/
-	@:overload private function inClassLoader() : Bool;
+	@:overload @:protected private function inClassLoader() : Bool;
 	
 	/**
 	* Creates an object that encapsulates the current execution
@@ -256,7 +256,7 @@ extern class SecurityManager
 	*   java.lang.Object) checkRead
 	* @see     java.security.AccessControlContext AccessControlContext
 	*/
-	@:overload public function getSecurityContext() : Dynamic;
+	@:overload @:public public function getSecurityContext() : Dynamic;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the requested
@@ -273,7 +273,7 @@ extern class SecurityManager
 	*            <code>null</code>.
 	* @since     1.2
 	*/
-	@:require(java2) @:overload public function checkPermission(perm : java.security.Permission) : Void;
+	@:require(java2) @:overload @:public public function checkPermission(perm : java.security.Permission) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -306,7 +306,7 @@ extern class SecurityManager
 	* @see java.security.AccessControlContext#checkPermission(java.security.Permission)
 	* @since      1.2
 	*/
-	@:require(java2) @:overload public function checkPermission(perm : java.security.Permission, context : Dynamic) : Void;
+	@:require(java2) @:overload @:public public function checkPermission(perm : java.security.Permission, context : Dynamic) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -327,7 +327,7 @@ extern class SecurityManager
 	* @see        java.lang.ClassLoader#ClassLoader()
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkCreateClassLoader() : Void;
+	@:overload @:public public function checkCreateClassLoader() : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -371,7 +371,7 @@ extern class SecurityManager
 	* @see        java.lang.Thread#suspend() suspend
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkAccess(t : java.lang.Thread) : Void;
+	@:overload @:public public function checkAccess(t : java.lang.Thread) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -416,7 +416,7 @@ extern class SecurityManager
 	* @see        java.lang.ThreadGroup#suspend() suspend
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkAccess(g : java.lang.ThreadGroup) : Void;
+	@:overload @:public public function checkAccess(g : java.lang.ThreadGroup) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -443,7 +443,7 @@ extern class SecurityManager
 	* @see        java.lang.Runtime#exit(int) exit
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkExit(status : Int) : Void;
+	@:overload @:public public function checkExit(status : Int) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -474,7 +474,7 @@ extern class SecurityManager
 	* @see     java.lang.Runtime#exec(java.lang.String[], java.lang.String[])
 	* @see     #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkExec(cmd : String) : Void;
+	@:overload @:public public function checkExec(cmd : String) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -503,7 +503,7 @@ extern class SecurityManager
 	* @see        java.lang.Runtime#loadLibrary(java.lang.String)
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkLink(lib : String) : Void;
+	@:overload @:public public function checkLink(lib : String) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -527,7 +527,7 @@ extern class SecurityManager
 	* @see        java.io.FileDescriptor
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkRead(fd : java.io.FileDescriptor) : Void;
+	@:overload @:public public function checkRead(fd : java.io.FileDescriptor) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -549,7 +549,7 @@ extern class SecurityManager
 	*             <code>null</code>.
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkRead(file : String) : Void;
+	@:overload @:public public function checkRead(file : String) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -581,7 +581,7 @@ extern class SecurityManager
 	* @see        java.lang.SecurityManager#getSecurityContext()
 	* @see        java.security.AccessControlContext#checkPermission(java.security.Permission)
 	*/
-	@:overload public function checkRead(file : String, context : Dynamic) : Void;
+	@:overload @:public public function checkRead(file : String, context : Dynamic) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -605,7 +605,7 @@ extern class SecurityManager
 	* @see        java.io.FileDescriptor
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkWrite(fd : java.io.FileDescriptor) : Void;
+	@:overload @:public public function checkWrite(fd : java.io.FileDescriptor) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -627,7 +627,7 @@ extern class SecurityManager
 	*             <code>null</code>.
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkWrite(file : String) : Void;
+	@:overload @:public public function checkWrite(file : String) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -652,7 +652,7 @@ extern class SecurityManager
 	* @see        java.io.File#delete()
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkDelete(file : String) : Void;
+	@:overload @:public public function checkDelete(file : String) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -683,7 +683,7 @@ extern class SecurityManager
 	*             <code>null</code>.
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkConnect(host : String, port : Int) : Void;
+	@:overload @:public public function checkConnect(host : String, port : Int) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -724,7 +724,7 @@ extern class SecurityManager
 	* @see        java.lang.SecurityManager#getSecurityContext()
 	* @see        java.security.AccessControlContext#checkPermission(java.security.Permission)
 	*/
-	@:overload public function checkConnect(host : String, port : Int, context : Dynamic) : Void;
+	@:overload @:public public function checkConnect(host : String, port : Int, context : Dynamic) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -747,7 +747,7 @@ extern class SecurityManager
 	*             permission to listen on the specified port.
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkListen(port : Int) : Void;
+	@:overload @:public public function checkListen(port : Int) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -774,7 +774,7 @@ extern class SecurityManager
 	* @see        java.net.ServerSocket#accept()
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkAccept(host : String, port : Int) : Void;
+	@:overload @:public public function checkAccept(host : String, port : Int) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -798,7 +798,7 @@ extern class SecurityManager
 	* @since      JDK1.1
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:require(java1) @:overload public function checkMulticast(maddr : java.net.InetAddress) : Void;
+	@:require(java1) @:overload @:public public function checkMulticast(maddr : java.net.InetAddress) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -826,7 +826,7 @@ extern class SecurityManager
 	* @deprecated Use #checkPermission(java.security.Permission) instead
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:require(java1) @:overload public function checkMulticast(maddr : java.net.InetAddress, ttl : java.StdTypes.Int8) : Void;
+	@:require(java1) @:overload @:public public function checkMulticast(maddr : java.net.InetAddress, ttl : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -851,7 +851,7 @@ extern class SecurityManager
 	* @see        java.lang.System#setProperties(java.util.Properties)
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkPropertiesAccess() : Void;
+	@:overload @:public public function checkPropertiesAccess() : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -881,7 +881,7 @@ extern class SecurityManager
 	* @see        java.lang.System#getProperty(java.lang.String)
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkPropertyAccess(key : String) : Void;
+	@:overload @:public public function checkPropertyAccess(key : String) : Void;
 	
 	/**
 	* Returns <code>false</code> if the calling
@@ -916,7 +916,7 @@ extern class SecurityManager
 	* @see        java.awt.Window
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkTopLevelWindow(window : Dynamic) : Bool;
+	@:overload @:public public function checkTopLevelWindow(window : Dynamic) : Bool;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -937,7 +937,7 @@ extern class SecurityManager
 	* @since   JDK1.1
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:require(java1) @:overload public function checkPrintJobAccess() : Void;
+	@:require(java1) @:overload @:public public function checkPrintJobAccess() : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -957,7 +957,7 @@ extern class SecurityManager
 	*             permission to access the system clipboard.
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:require(java1) @:overload public function checkSystemClipboardAccess() : Void;
+	@:require(java1) @:overload @:public public function checkSystemClipboardAccess() : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -976,7 +976,7 @@ extern class SecurityManager
 	*             permission to access the AWT event queue.
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:require(java1) @:overload public function checkAwtEventQueueAccess() : Void;
+	@:require(java1) @:overload @:public public function checkAwtEventQueueAccess() : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -1010,7 +1010,7 @@ extern class SecurityManager
 	* @see        java.security.Security#getProperty getProperty
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkPackageAccess(pkg : String) : Void;
+	@:overload @:public public function checkPackageAccess(pkg : String) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -1040,7 +1040,7 @@ extern class SecurityManager
 	* @see        java.security.Security#getProperty getProperty
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkPackageDefinition(pkg : String) : Void;
+	@:overload @:public public function checkPackageDefinition(pkg : String) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -1066,7 +1066,7 @@ extern class SecurityManager
 	* @see        java.net.URL#setURLStreamHandlerFactory(java.net.URLStreamHandlerFactory) setURLStreamHandlerFactory
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:overload public function checkSetFactory() : Void;
+	@:overload @:public public function checkSetFactory() : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -1096,7 +1096,7 @@ extern class SecurityManager
 	* @since JDK1.1
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:require(java1) @:overload public function checkMemberAccess(clazz : Class<Dynamic>, which : Int) : Void;
+	@:require(java1) @:overload @:public public function checkMemberAccess(clazz : Class<Dynamic>, which : Int) : Void;
 	
 	/**
 	* Determines whether the permission with the specified permission target
@@ -1128,7 +1128,7 @@ extern class SecurityManager
 	* @since   JDK1.1
 	* @see        #checkPermission(java.security.Permission) checkPermission
 	*/
-	@:require(java1) @:overload public function checkSecurityAccess(target : String) : Void;
+	@:require(java1) @:overload @:public public function checkSecurityAccess(target : String) : Void;
 	
 	/**
 	* Returns the thread group into which to instantiate any new
@@ -1141,7 +1141,7 @@ extern class SecurityManager
 	* @since   JDK1.1
 	* @see     java.lang.ThreadGroup
 	*/
-	@:require(java1) @:overload public function getThreadGroup() : java.lang.ThreadGroup;
+	@:require(java1) @:overload @:public public function getThreadGroup() : java.lang.ThreadGroup;
 	
 	
 }

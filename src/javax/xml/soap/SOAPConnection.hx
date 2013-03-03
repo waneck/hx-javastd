@@ -61,7 +61,7 @@ extern class SOAPConnection
 	*         message that was sent
 	* @throws SOAPException if there is a SOAP error
 	*/
-	@:overload @:abstract public function call(request : javax.xml.soap.SOAPMessage, to : Dynamic) : javax.xml.soap.SOAPMessage;
+	@:overload @:public @:abstract public function call(request : javax.xml.soap.SOAPMessage, to : Dynamic) : javax.xml.soap.SOAPMessage;
 	
 	/**
 	* Gets a message from a specific endpoint and blocks until it receives,
@@ -76,14 +76,14 @@ extern class SOAPConnection
 	* @throws SOAPException if there is a SOAP error
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function get(to : Dynamic) : javax.xml.soap.SOAPMessage;
+	@:require(java3) @:overload @:public public function get(to : Dynamic) : javax.xml.soap.SOAPMessage;
 	
 	/**
 	* Closes this <code>SOAPConnection</code> object.
 	*
 	* @throws SOAPException if there is a SOAP error
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
 	
 }

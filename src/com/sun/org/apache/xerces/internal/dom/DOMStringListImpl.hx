@@ -23,27 +23,27 @@ extern class DOMStringListImpl implements org.w3c.dom.DOMStringList
 	/**
 	* Construct an empty list of DOMStringListImpl
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct an empty list of DOMStringListImpl
 	*/
-	@:overload public function new(params : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function new(params : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* @see org.w3c.dom.DOMStringList#item(int)
 	*/
-	@:overload public function item(index : Int) : String;
+	@:overload @:public public function item(index : Int) : String;
 	
 	/**
 	* @see org.w3c.dom.DOMStringList#getLength()
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* @see org.w3c.dom.DOMStringList#contains(String)
 	*/
-	@:overload public function contains(param : String) : Bool;
+	@:overload @:public public function contains(param : String) : Bool;
 	
 	/**
 	* DOM Internal:
@@ -51,7 +51,7 @@ extern class DOMStringListImpl implements org.w3c.dom.DOMStringList
 	*
 	* @param domString A string to add to the list
 	*/
-	@:overload public function add(param : String) : Void;
+	@:overload @:public public function add(param : String) : Void;
 	
 	
 }

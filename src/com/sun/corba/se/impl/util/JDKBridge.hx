@@ -35,13 +35,13 @@ extern class JDKBridge
 	* Get local codebase System property (java.rmi.server.codebase).
 	* May be null or a space separated array of URLS.
 	*/
-	@:overload public static function getLocalCodebase() : String;
+	@:overload @:public @:static public static function getLocalCodebase() : String;
 	
 	/**
 	* Return true if the system property "java.rmi.server.useCodebaseOnly"
 	* is set, false otherwise.
 	*/
-	@:overload public static function useCodebaseOnly() : Bool;
+	@:overload @:public @:static public static function useCodebaseOnly() : Bool;
 	
 	/**
 	* Returns a class instance for the specified class.
@@ -53,7 +53,7 @@ extern class JDKBridge
 	* @return the <code>Class</code> object representing the loaded class.
 	* @exception throws ClassNotFoundException if class cannot be loaded.
 	*/
-	@:overload public static function loadClass(className : String, remoteCodebase : String, loader : java.lang.ClassLoader) : Class<Dynamic>;
+	@:overload @:public @:static public static function loadClass(className : String, remoteCodebase : String, loader : java.lang.ClassLoader) : Class<Dynamic>;
 	
 	/**
 	* Returns a class instance for the specified class.
@@ -63,7 +63,7 @@ extern class JDKBridge
 	* @return the <code>Class</code> object representing the loaded class.
 	* @exception throws ClassNotFoundException if class cannot be loaded.
 	*/
-	@:overload public static function loadClass(className : String, remoteCodebase : String) : Class<Dynamic>;
+	@:overload @:public @:static public static function loadClass(className : String, remoteCodebase : String) : Class<Dynamic>;
 	
 	/**
 	* Returns a class instance for the specified class.
@@ -71,21 +71,21 @@ extern class JDKBridge
 	* @return the <code>Class</code> object representing the loaded class.
 	* @exception throws ClassNotFoundException if class cannot be loaded.
 	*/
-	@:overload public static function loadClass(className : String) : Class<Dynamic>;
+	@:overload @:public @:static public static function loadClass(className : String) : Class<Dynamic>;
 	
-	@:overload @:final public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static @:final public static function main(args : java.NativeArray<String>) : Void;
 	
 	/**
 	* Set the codebase and useCodebaseOnly properties. This is public
 	* only for test code.
 	*/
-	@:overload @:synchronized public static function setCodebaseProperties() : Void;
+	@:overload @:public @:static @:synchronized public static function setCodebaseProperties() : Void;
 	
 	/**
 	* Set the default code base. This method is here only
 	* for test code.
 	*/
-	@:overload @:synchronized public static function setLocalCodebase(codebase : String) : Void;
+	@:overload @:public @:static @:synchronized public static function setLocalCodebase(codebase : String) : Void;
 	
 	
 }

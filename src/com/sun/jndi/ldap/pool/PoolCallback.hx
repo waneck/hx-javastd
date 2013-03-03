@@ -48,7 +48,7 @@ extern interface PoolCallback
 	* @return true if the connection released; false if the connection
 	* is no longer in the pool.
 	*/
-	@:overload @:abstract public function releasePooledConnection(conn : com.sun.jndi.ldap.pool.PooledConnection) : Bool;
+	@:overload @:public @:abstract public function releasePooledConnection(conn : com.sun.jndi.ldap.pool.PooledConnection) : Bool;
 	
 	/**
 	* Removes a connection from the pool. The connection should not be reused.
@@ -58,7 +58,7 @@ extern interface PoolCallback
 	* @return true if the connection was removed; false if the connection
 	* is no longer in the pool prior to removal.
 	*/
-	@:overload @:abstract public function removePooledConnection(conn : com.sun.jndi.ldap.pool.PooledConnection) : Bool;
+	@:overload @:public @:abstract public function removePooledConnection(conn : com.sun.jndi.ldap.pool.PooledConnection) : Bool;
 	
 	
 }

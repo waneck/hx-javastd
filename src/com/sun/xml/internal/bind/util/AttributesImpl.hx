@@ -32,7 +32,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	/**
 	* Construct a new, empty AttributesImpl object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Copy an existing Attributes object.
@@ -42,7 +42,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*
 	* @param atts The existing Attributes object.
 	*/
-	@:overload public function new(atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function new(atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Return the number of attributes in the list.
@@ -50,7 +50,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	* @return The number of attributes in the list.
 	* @see org.xml.sax.Attributes#getLength()
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Return an attribute's Namespace URI.
@@ -60,7 +60,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*         available, or null if the index is out of range.
 	* @see org.xml.sax.Attributes#getURI(int)
 	*/
-	@:overload public function getURI(index : Int) : String;
+	@:overload @:public public function getURI(index : Int) : String;
 	
 	/**
 	* Return an attribute's local name.
@@ -70,7 +70,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*         none is available, or null if the index if out of range.
 	* @see org.xml.sax.Attributes#getLocalName(int)
 	*/
-	@:overload public function getLocalName(index : Int) : String;
+	@:overload @:public public function getLocalName(index : Int) : String;
 	
 	/**
 	* Return an attribute's qualified (prefixed) name.
@@ -80,7 +80,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*         none is available, or null if the index is out of bounds.
 	* @see org.xml.sax.Attributes#getQName(int)
 	*/
-	@:overload public function getQName(index : Int) : String;
+	@:overload @:public public function getQName(index : Int) : String;
 	
 	/**
 	* Return an attribute's type by index.
@@ -90,7 +90,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*         if the index is out of bounds.
 	* @see org.xml.sax.Attributes#getType(int)
 	*/
-	@:overload public function getType(index : Int) : String;
+	@:overload @:public public function getType(index : Int) : String;
 	
 	/**
 	* Return an attribute's value by index.
@@ -99,7 +99,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	* @return The attribute's value or null if the index is out of bounds.
 	* @see org.xml.sax.Attributes#getValue(int)
 	*/
-	@:overload public function getValue(index : Int) : String;
+	@:overload @:public public function getValue(index : Int) : String;
 	
 	/**
 	* Look up an attribute's index by Namespace name.
@@ -114,12 +114,12 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	* @return The attribute's index, or -1 if none matches.
 	* @see org.xml.sax.Attributes#getIndex(java.lang.String,java.lang.String)
 	*/
-	@:overload public function getIndex(uri : String, localName : String) : Int;
+	@:overload @:public public function getIndex(uri : String, localName : String) : Int;
 	
 	/**
 	* Can be used if parameters are interned.
 	*/
-	@:overload public function getIndexFast(uri : String, localName : String) : Int;
+	@:overload @:public public function getIndexFast(uri : String, localName : String) : Int;
 	
 	/**
 	* Look up an attribute's index by qualified (prefixed) name.
@@ -128,7 +128,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	* @return The attribute's index, or -1 if none matches.
 	* @see org.xml.sax.Attributes#getIndex(java.lang.String)
 	*/
-	@:overload public function getIndex(qName : String) : Int;
+	@:overload @:public public function getIndex(qName : String) : Int;
 	
 	/**
 	* Look up an attribute's type by Namespace-qualified name.
@@ -140,7 +140,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*         matching attribute.
 	* @see org.xml.sax.Attributes#getType(java.lang.String,java.lang.String)
 	*/
-	@:overload public function getType(uri : String, localName : String) : String;
+	@:overload @:public public function getType(uri : String, localName : String) : String;
 	
 	/**
 	* Look up an attribute's type by qualified (prefixed) name.
@@ -150,7 +150,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*         matching attribute.
 	* @see org.xml.sax.Attributes#getType(java.lang.String)
 	*/
-	@:overload public function getType(qName : String) : String;
+	@:overload @:public public function getType(qName : String) : String;
 	
 	/**
 	* Look up an attribute's value by Namespace-qualified name.
@@ -162,7 +162,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*         matching attribute.
 	* @see org.xml.sax.Attributes#getValue(java.lang.String,java.lang.String)
 	*/
-	@:overload public function getValue(uri : String, localName : String) : String;
+	@:overload @:public public function getValue(uri : String, localName : String) : String;
 	
 	/**
 	* Look up an attribute's value by qualified (prefixed) name.
@@ -172,7 +172,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*         matching attribute.
 	* @see org.xml.sax.Attributes#getValue(java.lang.String)
 	*/
-	@:overload public function getValue(qName : String) : String;
+	@:overload @:public public function getValue(qName : String) : String;
 	
 	/**
 	* Clear the attribute list for reuse.
@@ -181,7 +181,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	* the current array is kept so it can be
 	* reused.</p>
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Copy an entire Attributes object.
@@ -191,7 +191,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*
 	* @param atts The attributes to copy.
 	*/
-	@:overload public function setAttributes(atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function setAttributes(atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Add an attribute to the end of the list.
@@ -210,7 +210,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	* @param type The attribute type as a string.
 	* @param value The attribute value.
 	*/
-	@:overload public function addAttribute(uri : String, localName : String, qName : String, type : String, value : String) : Void;
+	@:overload @:public public function addAttribute(uri : String, localName : String, qName : String, type : String, value : String) : Void;
 	
 	/**
 	* Set an attribute in the list.
@@ -233,7 +233,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*            supplied index does not point to an attribute
 	*            in the list.
 	*/
-	@:overload public function setAttribute(index : Int, uri : String, localName : String, qName : String, type : String, value : String) : Void;
+	@:overload @:public public function setAttribute(index : Int, uri : String, localName : String, qName : String, type : String, value : String) : Void;
 	
 	/**
 	* Remove an attribute from the list.
@@ -243,7 +243,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*            supplied index does not point to an attribute
 	*            in the list.
 	*/
-	@:overload public function removeAttribute(index : Int) : Void;
+	@:overload @:public public function removeAttribute(index : Int) : Void;
 	
 	/**
 	* Set the Namespace URI of a specific attribute.
@@ -255,7 +255,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*            supplied index does not point to an attribute
 	*            in the list.
 	*/
-	@:overload public function setURI(index : Int, uri : String) : Void;
+	@:overload @:public public function setURI(index : Int, uri : String) : Void;
 	
 	/**
 	* Set the local name of a specific attribute.
@@ -267,7 +267,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*            supplied index does not point to an attribute
 	*            in the list.
 	*/
-	@:overload public function setLocalName(index : Int, localName : String) : Void;
+	@:overload @:public public function setLocalName(index : Int, localName : String) : Void;
 	
 	/**
 	* Set the qualified name of a specific attribute.
@@ -279,7 +279,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*            supplied index does not point to an attribute
 	*            in the list.
 	*/
-	@:overload public function setQName(index : Int, qName : String) : Void;
+	@:overload @:public public function setQName(index : Int, qName : String) : Void;
 	
 	/**
 	* Set the type of a specific attribute.
@@ -290,7 +290,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*            supplied index does not point to an attribute
 	*            in the list.
 	*/
-	@:overload public function setType(index : Int, type : String) : Void;
+	@:overload @:public public function setType(index : Int, type : String) : Void;
 	
 	/**
 	* Set the value of a specific attribute.
@@ -301,7 +301,7 @@ extern class AttributesImpl implements org.xml.sax.Attributes
 	*            supplied index does not point to an attribute
 	*            in the list.
 	*/
-	@:overload public function setValue(index : Int, value : String) : Void;
+	@:overload @:public public function setValue(index : Int, value : String) : Void;
 	
 	
 }

@@ -32,7 +32,7 @@ extern class AlgorithmParameterGenerator
 	* @param provider the provider
 	* @param algorithm the algorithm
 	*/
-	@:overload private function new(paramGenSpi : java.security.AlgorithmParameterGeneratorSpi, provider : java.security.Provider, algorithm : String) : Void;
+	@:overload @:protected private function new(paramGenSpi : java.security.AlgorithmParameterGeneratorSpi, provider : java.security.Provider, algorithm : String) : Void;
 	
 	/**
 	* Returns the standard name of the algorithm this parameter
@@ -40,7 +40,7 @@ extern class AlgorithmParameterGenerator
 	*
 	* @return the string name of the algorithm.
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Returns an AlgorithmParameterGenerator object for generating
@@ -70,7 +70,7 @@ extern class AlgorithmParameterGenerator
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String) : java.security.AlgorithmParameterGenerator;
+	@:overload @:public @:static public static function getInstance(algorithm : String) : java.security.AlgorithmParameterGenerator;
 	
 	/**
 	* Returns an AlgorithmParameterGenerator object for generating
@@ -107,7 +107,7 @@ extern class AlgorithmParameterGenerator
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : String) : java.security.AlgorithmParameterGenerator;
+	@:overload @:public @:static public static function getInstance(algorithm : String, provider : String) : java.security.AlgorithmParameterGenerator;
 	
 	/**
 	* Returns an AlgorithmParameterGenerator object for generating
@@ -139,14 +139,14 @@ extern class AlgorithmParameterGenerator
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.AlgorithmParameterGenerator;
+	@:require(java4) @:overload @:public @:static public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.AlgorithmParameterGenerator;
 	
 	/**
 	* Returns the provider of this algorithm parameter generator object.
 	*
 	* @return the provider of this algorithm parameter generator object
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Initializes this parameter generator for a certain size.
@@ -159,7 +159,7 @@ extern class AlgorithmParameterGenerator
 	*
 	* @param size the size (number of bits).
 	*/
-	@:overload @:final public function init(size : Int) : Void;
+	@:overload @:public @:final public function init(size : Int) : Void;
 	
 	/**
 	* Initializes this parameter generator for a certain size and source
@@ -168,7 +168,7 @@ extern class AlgorithmParameterGenerator
 	* @param size the size (number of bits).
 	* @param random the source of randomness.
 	*/
-	@:overload @:final public function init(size : Int, random : java.security.SecureRandom) : Void;
+	@:overload @:public @:final public function init(size : Int, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this parameter generator with a set of algorithm-specific
@@ -185,7 +185,7 @@ extern class AlgorithmParameterGenerator
 	* @exception InvalidAlgorithmParameterException if the given parameter
 	* generation values are inappropriate for this parameter generator.
 	*/
-	@:overload @:final public function init(genParamSpec : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:public @:final public function init(genParamSpec : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Initializes this parameter generator with a set of algorithm-specific
@@ -197,14 +197,14 @@ extern class AlgorithmParameterGenerator
 	* @exception InvalidAlgorithmParameterException if the given parameter
 	* generation values are inappropriate for this parameter generator.
 	*/
-	@:overload @:final public function init(genParamSpec : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:public @:final public function init(genParamSpec : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Generates the parameters.
 	*
 	* @return the new AlgorithmParameters object.
 	*/
-	@:overload @:final public function generateParameters() : java.security.AlgorithmParameters;
+	@:overload @:public @:final public function generateParameters() : java.security.AlgorithmParameters;
 	
 	
 }

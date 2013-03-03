@@ -21,21 +21,21 @@ package com.sun.org.apache.xerces.internal.util;
 */
 extern class StAXInputSource extends com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource
 {
-	@:overload public function new(source : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function new(source : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload public function new(source : javax.xml.stream.XMLStreamReader, consumeRemainingContent : Bool) : Void;
+	@:overload @:public public function new(source : javax.xml.stream.XMLStreamReader, consumeRemainingContent : Bool) : Void;
 	
-	@:overload public function new(source : javax.xml.stream.XMLEventReader) : Void;
+	@:overload @:public public function new(source : javax.xml.stream.XMLEventReader) : Void;
 	
-	@:overload public function new(source : javax.xml.stream.XMLEventReader, consumeRemainingContent : Bool) : Void;
+	@:overload @:public public function new(source : javax.xml.stream.XMLEventReader, consumeRemainingContent : Bool) : Void;
 	
-	@:overload public function getXMLStreamReader() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public public function getXMLStreamReader() : javax.xml.stream.XMLStreamReader;
 	
-	@:overload public function getXMLEventReader() : javax.xml.stream.XMLEventReader;
+	@:overload @:public public function getXMLEventReader() : javax.xml.stream.XMLEventReader;
 	
-	@:overload public function shouldConsumeRemainingContent() : Bool;
+	@:overload @:public public function shouldConsumeRemainingContent() : Bool;
 	
-	@:overload override public function setSystemId(systemId : String) : Void;
+	@:overload @:public override public function setSystemId(systemId : String) : Void;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class MtomFeatureConfigurator implements com.sun.xml.internal.ws.policy.j
 	/**
 	* Creates a new instance of MtomFeatureConfigurator
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* process Mtom policy assertions and if found and is not optional then mtom is enabled on the
@@ -38,7 +38,7 @@ extern class MtomFeatureConfigurator implements com.sun.xml.internal.ws.policy.j
 	* @param policyMap Must be non-null
 	* @throws PolicyException If retrieving the policy triggered an exception
 	*/
-	@:overload public function getFeatures(key : com.sun.xml.internal.ws.policy.PolicyMapKey, policyMap : com.sun.xml.internal.ws.policy.PolicyMap) : java.util.Collection<javax.xml.ws.WebServiceFeature>;
+	@:overload @:public public function getFeatures(key : com.sun.xml.internal.ws.policy.PolicyMapKey, policyMap : com.sun.xml.internal.ws.policy.PolicyMap) : java.util.Collection<javax.xml.ws.WebServiceFeature>;
 	
 	
 }

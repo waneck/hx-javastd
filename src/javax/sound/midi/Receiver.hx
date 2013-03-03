@@ -45,7 +45,7 @@ extern interface Receiver extends java.lang.AutoCloseable
 	* @param timeStamp the time-stamp for the message, in microseconds.
 	* @throws IllegalStateException if the receiver is closed
 	*/
-	@:overload public function send(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
+	@:overload @:public public function send(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
 	
 	/**
 	* Indicates that the application has finished using the receiver, and
@@ -65,7 +65,7 @@ extern interface Receiver extends java.lang.AutoCloseable
 	*
 	* @see javax.sound.midi.MidiSystem#getReceiver
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

@@ -25,27 +25,27 @@ package sun.net.www.protocol.jar;
 */
 extern class JarURLConnection extends java.net.JarURLConnection
 {
-	@:overload public function new(url : java.net.URL, handler : sun.net.www.protocol.jar.Handler) : Void;
+	@:overload @:public public function new(url : java.net.URL, handler : sun.net.www.protocol.jar.Handler) : Void;
 	
-	@:overload public function getJarFile() : java.util.jar.JarFile;
+	@:overload @:public override public function getJarFile() : java.util.jar.JarFile;
 	
-	@:overload public function getJarEntry() : java.util.jar.JarEntry;
+	@:overload @:public override public function getJarEntry() : java.util.jar.JarEntry;
 	
-	@:overload override public function getPermission() : java.security.Permission;
+	@:overload @:public override public function getPermission() : java.security.Permission;
 	
-	@:overload override public function connect() : Void;
+	@:overload @:public override public function connect() : Void;
 	
-	@:overload override public function getInputStream() : java.io.InputStream;
+	@:overload @:public override public function getInputStream() : java.io.InputStream;
 	
-	@:overload override public function getContentLength() : Int;
+	@:overload @:public override public function getContentLength() : Int;
 	
-	@:overload override public function getContentLengthLong() : haxe.Int64;
+	@:overload @:public override public function getContentLengthLong() : haxe.Int64;
 	
-	@:overload override public function getContent() : Dynamic;
+	@:overload @:public override public function getContent() : Dynamic;
 	
-	@:overload override public function getContentType() : String;
+	@:overload @:public override public function getContentType() : String;
 	
-	@:overload override public function getHeaderField(name : String) : String;
+	@:overload @:public override public function getHeaderField(name : String) : String;
 	
 	/**
 	* Sets the general request property.
@@ -54,7 +54,7 @@ extern class JarURLConnection extends java.net.JarURLConnection
 	*                  (e.g., "<code>accept</code>").
 	* @param   value   the value associated with it.
 	*/
-	@:overload override public function setRequestProperty(key : String, value : String) : Void;
+	@:overload @:public override public function setRequestProperty(key : String, value : String) : Void;
 	
 	/**
 	* Returns the value of the named general request property for this
@@ -63,7 +63,7 @@ extern class JarURLConnection extends java.net.JarURLConnection
 	* @return  the value of the named general request property for this
 	*           connection.
 	*/
-	@:overload override public function getRequestProperty(key : String) : String;
+	@:overload @:public override public function getRequestProperty(key : String) : String;
 	
 	/**
 	* Adds a general request property specified by a
@@ -74,7 +74,7 @@ extern class JarURLConnection extends java.net.JarURLConnection
 	*                  (e.g., "<code>accept</code>").
 	* @param   value   the value associated with it.
 	*/
-	@:overload override public function addRequestProperty(key : String, value : String) : Void;
+	@:overload @:public override public function addRequestProperty(key : String, value : String) : Void;
 	
 	/**
 	* Returns an unmodifiable Map of general request
@@ -86,7 +86,7 @@ extern class JarURLConnection extends java.net.JarURLConnection
 	*
 	* @return  a Map of the general request properties for this connection.
 	*/
-	@:overload override public function getRequestProperties() : java.util.Map<String, java.util.List<String>>;
+	@:overload @:public override public function getRequestProperties() : java.util.Map<String, java.util.List<String>>;
 	
 	/**
 	* Set the value of the <code>allowUserInteraction</code> field of
@@ -95,7 +95,7 @@ extern class JarURLConnection extends java.net.JarURLConnection
 	* @param   allowuserinteraction   the new value.
 	* @see     java.net.URLConnection#allowUserInteraction
 	*/
-	@:overload override public function setAllowUserInteraction(allowuserinteraction : Bool) : Void;
+	@:overload @:public override public function setAllowUserInteraction(allowuserinteraction : Bool) : Void;
 	
 	/**
 	* Returns the value of the <code>allowUserInteraction</code> field for
@@ -105,7 +105,7 @@ extern class JarURLConnection extends java.net.JarURLConnection
 	*          this object.
 	* @see     java.net.URLConnection#allowUserInteraction
 	*/
-	@:overload override public function getAllowUserInteraction() : Bool;
+	@:overload @:public override public function getAllowUserInteraction() : Bool;
 	
 	/**
 	* Sets the value of the <code>useCaches</code> field of this
@@ -121,7 +121,7 @@ extern class JarURLConnection extends java.net.JarURLConnection
 	*
 	* @see     java.net.URLConnection#useCaches
 	*/
-	@:overload override public function setUseCaches(usecaches : Bool) : Void;
+	@:overload @:public override public function setUseCaches(usecaches : Bool) : Void;
 	
 	/**
 	* Returns the value of this <code>URLConnection</code>'s
@@ -131,7 +131,7 @@ extern class JarURLConnection extends java.net.JarURLConnection
 	*          <code>useCaches</code> field.
 	* @see     java.net.URLConnection#useCaches
 	*/
-	@:overload override public function getUseCaches() : Bool;
+	@:overload @:public override public function getUseCaches() : Bool;
 	
 	/**
 	* Sets the value of the <code>ifModifiedSince</code> field of
@@ -140,7 +140,7 @@ extern class JarURLConnection extends java.net.JarURLConnection
 	* @param   value   the new value.
 	* @see     java.net.URLConnection#ifModifiedSince
 	*/
-	@:overload override public function setIfModifiedSince(ifmodifiedsince : haxe.Int64) : Void;
+	@:overload @:public override public function setIfModifiedSince(ifmodifiedsince : haxe.Int64) : Void;
 	
 	/**
 	* Sets the default value of the <code>useCaches</code> field to the
@@ -149,7 +149,7 @@ extern class JarURLConnection extends java.net.JarURLConnection
 	* @param   defaultusecaches   the new value.
 	* @see     java.net.URLConnection#useCaches
 	*/
-	@:overload override public function setDefaultUseCaches(defaultusecaches : Bool) : Void;
+	@:overload @:public override public function setDefaultUseCaches(defaultusecaches : Bool) : Void;
 	
 	/**
 	* Returns the default value of a <code>URLConnection</code>'s
@@ -163,13 +163,13 @@ extern class JarURLConnection extends java.net.JarURLConnection
 	*          <code>useCaches</code> flag.
 	* @see     java.net.URLConnection#useCaches
 	*/
-	@:overload override public function getDefaultUseCaches() : Bool;
+	@:overload @:public override public function getDefaultUseCaches() : Bool;
 	
 	
 }
 @:native('sun$net$www$protocol$jar$JarURLConnection$JarURLInputStream') @:internal extern class JarURLConnection_JarURLInputStream extends java.io.FilterInputStream
 {
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

@@ -99,7 +99,7 @@ extern interface EntityResolver2 extends org.xml.sax.EntityResolver
 	* @exception IOException Probably indicating a failure to create
 	*  a new InputStream or Reader, or an illegal URL.
 	*/
-	@:overload public function getExternalSubset(name : String, baseURI : String) : org.xml.sax.InputSource;
+	@:overload @:public public function getExternalSubset(name : String, baseURI : String) : org.xml.sax.InputSource;
 	
 	/**
 	* Allows applications to map references to external entities into input
@@ -155,7 +155,7 @@ extern interface EntityResolver2 extends org.xml.sax.EntityResolver
 	* @exception IOException Probably indicating a failure to create
 	*  a new InputStream or Reader, or an illegal URL.
 	*/
-	@:overload public function resolveEntity(name : String, publicId : String, baseURI : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(name : String, publicId : String, baseURI : String, systemId : String) : org.xml.sax.InputSource;
 	
 	
 }

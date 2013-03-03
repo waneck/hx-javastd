@@ -34,20 +34,20 @@ extern class ECPrivateKeySpec implements java.security.spec.KeySpec
 	* @exception NullPointerException if <code>s</code>
 	* or <code>params</code> is null.
 	*/
-	@:overload public function new(s : java.math.BigInteger, params : java.security.spec.ECParameterSpec) : Void;
+	@:overload @:public public function new(s : java.math.BigInteger, params : java.security.spec.ECParameterSpec) : Void;
 	
 	/**
 	* Returns the private value S.
 	* @return the private value S.
 	*/
-	@:overload public function getS() : java.math.BigInteger;
+	@:overload @:public public function getS() : java.math.BigInteger;
 	
 	/**
 	* Returns the associated elliptic curve domain
 	* parameters.
 	* @return the EC domain parameters.
 	*/
-	@:overload public function getParams() : java.security.spec.ECParameterSpec;
+	@:overload @:public public function getParams() : java.security.spec.ECParameterSpec;
 	
 	
 }

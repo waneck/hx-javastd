@@ -28,18 +28,18 @@ extern class FixedHolder implements org.omg.CORBA.portable.Streamable
 	/**
 	* The value held by the FixedHolder
 	*/
-	public var value : java.math.BigDecimal;
+	@:public public var value : java.math.BigDecimal;
 	
 	/**
 	* Construct the FixedHolder without initializing the contained value.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct the FixedHolder and initialize it with the given value.
 	* @param initial the value used to initialize the FixedHolder
 	*/
-	@:overload public function new(initial : java.math.BigDecimal) : Void;
+	@:overload @:public public function new(initial : java.math.BigDecimal) : Void;
 	
 	/**
 	* Read a fixed point value from the input stream and store it in
@@ -47,7 +47,7 @@ extern class FixedHolder implements org.omg.CORBA.portable.Streamable
 	*
 	* @param input the <code>InputStream</code> to read from.
 	*/
-	@:overload public function _read(input : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function _read(input : org.omg.CORBA.portable.InputStream) : Void;
 	
 	/**
 	* Write the fixed point value stored in this holder to an
@@ -55,14 +55,14 @@ extern class FixedHolder implements org.omg.CORBA.portable.Streamable
 	*
 	* @param output the <code>OutputStream</code> to write into.
 	*/
-	@:overload public function _write(output : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function _write(output : org.omg.CORBA.portable.OutputStream) : Void;
 	
 	/**
 	* Return the <code>TypeCode</code> of this holder object.
 	*
 	* @return the <code>TypeCode</code> object.
 	*/
-	@:overload public function _type() : org.omg.CORBA.TypeCode;
+	@:overload @:public public function _type() : org.omg.CORBA.TypeCode;
 	
 	
 }

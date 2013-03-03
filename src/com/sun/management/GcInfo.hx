@@ -32,7 +32,7 @@ extern class GcInfo implements javax.management.openmbean.CompositeData implemen
 	* @return the identifier of this garbage collection which is
 	* the number of collections that this collector has done.
 	*/
-	@:overload public function getId() : haxe.Int64;
+	@:overload @:public public function getId() : haxe.Int64;
 	
 	/**
 	* Returns the start time of this GC in milliseconds
@@ -40,7 +40,7 @@ extern class GcInfo implements javax.management.openmbean.CompositeData implemen
 	*
 	* @return the start time of this GC.
 	*/
-	@:overload public function getStartTime() : haxe.Int64;
+	@:overload @:public public function getStartTime() : haxe.Int64;
 	
 	/**
 	* Returns the end time of this GC in milliseconds
@@ -48,14 +48,14 @@ extern class GcInfo implements javax.management.openmbean.CompositeData implemen
 	*
 	* @return the end time of this GC.
 	*/
-	@:overload public function getEndTime() : haxe.Int64;
+	@:overload @:public public function getEndTime() : haxe.Int64;
 	
 	/**
 	* Returns the elapsed time of this GC in milliseconds.
 	*
 	* @return the elapsed time of this GC in milliseconds.
 	*/
-	@:overload public function getDuration() : haxe.Int64;
+	@:overload @:public public function getDuration() : haxe.Int64;
 	
 	/**
 	* Returns the memory usage of all memory pools
@@ -68,7 +68,7 @@ extern class GcInfo implements javax.management.openmbean.CompositeData implemen
 	* @return a <tt>Map</tt> of memory pool names to the memory
 	* usage of a memory pool before GC starts.
 	*/
-	@:overload public function getMemoryUsageBeforeGc() : java.util.Map<String, java.lang.management.MemoryUsage>;
+	@:overload @:public public function getMemoryUsageBeforeGc() : java.util.Map<String, java.lang.management.MemoryUsage>;
 	
 	/**
 	* Returns the memory usage of all memory pools
@@ -81,7 +81,7 @@ extern class GcInfo implements javax.management.openmbean.CompositeData implemen
 	* @return a <tt>Map</tt> of memory pool names to the memory
 	* usage of a memory pool when GC finishes.
 	*/
-	@:overload public function getMemoryUsageAfterGc() : java.util.Map<String, java.lang.management.MemoryUsage>;
+	@:overload @:public public function getMemoryUsageAfterGc() : java.util.Map<String, java.lang.management.MemoryUsage>;
 	
 	/**
 	* Returns a <tt>GcInfo</tt> object represented by the
@@ -126,25 +126,25 @@ extern class GcInfo implements javax.management.openmbean.CompositeData implemen
 	* @return a <tt>GcInfo</tt> object represented by <tt>cd</tt>
 	* if <tt>cd</tt> is not <tt>null</tt>; <tt>null</tt> otherwise.
 	*/
-	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : com.sun.management.GcInfo;
+	@:overload @:public @:static public static function from(cd : javax.management.openmbean.CompositeData) : com.sun.management.GcInfo;
 	
-	@:overload public function containsKey(key : String) : Bool;
+	@:overload @:public public function containsKey(key : String) : Bool;
 	
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public public function containsValue(value : Dynamic) : Bool;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function get(key : String) : Dynamic;
+	@:overload @:public public function get(key : String) : Dynamic;
 	
-	@:overload public function getAll(keys : java.NativeArray<String>) : java.NativeArray<Dynamic>;
+	@:overload @:public public function getAll(keys : java.NativeArray<String>) : java.NativeArray<Dynamic>;
 	
-	@:overload public function getCompositeType() : javax.management.openmbean.CompositeType;
+	@:overload @:public public function getCompositeType() : javax.management.openmbean.CompositeType;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function values() : java.util.Collection<Dynamic>;
+	@:overload @:public public function values() : java.util.Collection<Dynamic>;
 	
 	/**
 	* <p>Return the {@code CompositeData} representation of this
@@ -158,7 +158,7 @@ extern class GcInfo implements javax.management.openmbean.CompositeData implemen
 	*
 	* @return the {@code CompositeData} representation.
 	*/
-	@:overload public function toCompositeData(ct : javax.management.openmbean.CompositeType) : javax.management.openmbean.CompositeData;
+	@:overload @:public public function toCompositeData(ct : javax.management.openmbean.CompositeType) : javax.management.openmbean.CompositeData;
 	
 	
 }

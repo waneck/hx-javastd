@@ -68,13 +68,13 @@ extern interface AATileGenerator
 	* Gets the width of the tiles that the generator batches output into.
 	* @return the width of the standard alpha tile
 	*/
-	@:overload public function getTileWidth() : Int;
+	@:overload @:public public function getTileWidth() : Int;
 	
 	/**
 	* Gets the height of the tiles that the generator batches output into.
 	* @return the height of the standard alpha tile
 	*/
-	@:overload public function getTileHeight() : Int;
+	@:overload @:public public function getTileHeight() : Int;
 	
 	/**
 	* Gets the typical alpha value that will characterize the current
@@ -86,27 +86,27 @@ extern interface AATileGenerator
 	* @return 0x00 for no coverage, 0xff for total coverage, or any other
 	*         value for partial coverage of the tile
 	*/
-	@:overload public function getTypicalAlpha() : Int;
+	@:overload @:public public function getTypicalAlpha() : Int;
 	
 	/**
 	* Skips the current tile and moves on to the next tile.
 	* Either this method, or the getAlpha() method should be called
 	* once per tile, but not both.
 	*/
-	@:overload public function nextTile() : Void;
+	@:overload @:public public function nextTile() : Void;
 	
 	/**
 	* Gets the alpha coverage values for the current tile.
 	* Either this method, or the nextTile() method should be called
 	* once per tile, but not both.
 	*/
-	@:overload public function getAlpha(tile : java.NativeArray<java.StdTypes.Int8>, offset : Int, rowstride : Int) : Void;
+	@:overload @:public public function getAlpha(tile : java.NativeArray<java.StdTypes.Int8>, offset : Int, rowstride : Int) : Void;
 	
 	/**
 	* Disposes this tile generator.
 	* No further calls will be made on this instance.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	
 }

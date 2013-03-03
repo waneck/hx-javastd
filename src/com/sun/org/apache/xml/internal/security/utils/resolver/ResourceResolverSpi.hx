@@ -22,7 +22,7 @@ package com.sun.org.apache.xml.internal.security.utils.resolver;
 extern class ResourceResolverSpi
 {
 	/** Field _properties */
-	private var _properties : java.util.Map<Dynamic, Dynamic>;
+	@:protected private var _properties : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* This is the workhorse method used to resolve resources.
@@ -33,7 +33,7 @@ extern class ResourceResolverSpi
 	*
 	* @throws ResourceResolverException
 	*/
-	@:overload @:abstract public function engineResolve(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public @:abstract public function engineResolve(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* Method engineSetProperty
@@ -41,7 +41,7 @@ extern class ResourceResolverSpi
 	* @param key
 	* @param value
 	*/
-	@:overload public function engineSetProperty(key : String, value : String) : Void;
+	@:overload @:public public function engineSetProperty(key : String, value : String) : Void;
 	
 	/**
 	* Method engineGetProperty
@@ -49,13 +49,13 @@ extern class ResourceResolverSpi
 	* @param key
 	* @return the value of the property
 	*/
-	@:overload public function engineGetProperty(key : String) : String;
+	@:overload @:public public function engineGetProperty(key : String) : String;
 	
 	/**
 	*
 	* @param properties
 	*/
-	@:overload public function engineAddProperies(properties : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function engineAddProperies(properties : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Tells if the implementation does can be reused by several threads safely.
@@ -63,7 +63,7 @@ extern class ResourceResolverSpi
 	* member change betwen engineCanResolve & engineResolve invocations. Or it mantians all
 	* member info in ThreadLocal methods.
 	*/
-	@:overload public function engineIsThreadSafe() : Bool;
+	@:overload @:public public function engineIsThreadSafe() : Bool;
 	
 	/**
 	* This method helps the {@link ResourceResolver} to decide whether a
@@ -73,14 +73,14 @@ extern class ResourceResolverSpi
 	* @param BaseURI
 	* @return true if the engine can resolve the uri
 	*/
-	@:overload @:abstract public function engineCanResolve(uri : org.w3c.dom.Attr, BaseURI : String) : Bool;
+	@:overload @:public @:abstract public function engineCanResolve(uri : org.w3c.dom.Attr, BaseURI : String) : Bool;
 	
 	/**
 	* Method engineGetPropertyKeys
 	*
 	* @return the property keys
 	*/
-	@:overload public function engineGetPropertyKeys() : java.NativeArray<String>;
+	@:overload @:public public function engineGetPropertyKeys() : java.NativeArray<String>;
 	
 	/**
 	* Method understandsProperty
@@ -88,7 +88,7 @@ extern class ResourceResolverSpi
 	* @param propertyToTest
 	* @return true if understands the property
 	*/
-	@:overload public function understandsProperty(propertyToTest : String) : Bool;
+	@:overload @:public public function understandsProperty(propertyToTest : String) : Bool;
 	
 	/**
 	* Fixes a platform dependent filename to standard URI form.
@@ -97,7 +97,7 @@ extern class ResourceResolverSpi
 	*
 	* @return Returns the fixed URI string.
 	*/
-	@:overload public static function fixURI(str : String) : String;
+	@:overload @:public @:static public static function fixURI(str : String) : String;
 	
 	
 }

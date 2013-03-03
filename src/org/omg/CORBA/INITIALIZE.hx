@@ -43,7 +43,7 @@ package org.omg.CORBA;
 	* minor code of 0 and a completion state of
 	* <code>CompletionStatus.COMPLETED_NO</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>INITIALIZE</code> exception with the specified detail
@@ -51,7 +51,7 @@ package org.omg.CORBA;
 	* <code>CompletionStatus.COMPLETED_NO</code>.
 	* @param s the String containing a detail message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs an <code>INITIALIZE</code> exception with the specified
@@ -61,7 +61,7 @@ package org.omg.CORBA;
 	*                  indicating the completion status of the method
 	*                  that threw this exception
 	*/
-	@:overload public function new(minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
+	@:overload @:public public function new(minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
 	
 	/**
 	* Constructs an <code>INITIALIZE</code> exception with the specified detail
@@ -73,7 +73,7 @@ package org.omg.CORBA;
 	*                  indicating the completion status of the method
 	*                  that threw this exception
 	*/
-	@:overload public function new(s : String, minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
+	@:overload @:public public function new(s : String, minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
 	
 	
 }

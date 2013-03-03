@@ -57,68 +57,68 @@ extern class Arguments
 	* file idl.config.
 	* @exception idl.InvalidArgument if the argument is unknown.
 	**/
-	@:overload private function parseOtherArgs(args : java.NativeArray<String>, properties : java.util.Properties) : Void;
+	@:overload @:protected private function parseOtherArgs(args : java.NativeArray<String>, properties : java.util.Properties) : Void;
 	
-	@:overload private function setDebugFlags(args : String) : Void;
+	@:overload @:protected private function setDebugFlags(args : String) : Void;
 	
 	/**
 	* The name of the IDL file.
 	**/
-	public var file : String;
+	@:public public var file : String;
 	
 	/**
 	* True if the user wishes to see processing remarks.
 	**/
-	public var verbose : Bool;
+	@:public public var verbose : Bool;
 	
 	/**
 	* If this is true, then existing files should not be overwritten
 	* by the compiler.
 	**/
-	public var keepOldFiles : Bool;
+	@:public public var keepOldFiles : Bool;
 	
 	/**
 	* If this is true, then the types in all included files are also emitted.
 	**/
-	public var emitAll : Bool;
+	@:public public var emitAll : Bool;
 	
 	/**
 	* A list of strings, each of which is a path from which included files
 	* are found.
 	**/
-	public var includePaths : java.util.Vector<Dynamic>;
+	@:public public var includePaths : java.util.Vector<Dynamic>;
 	
 	/**
 	* A table of defined symbols.  The key is the symbol name; the value
 	* (if any) is the replacement value for the symbol.
 	**/
-	public var definedSymbols : java.util.Hashtable<Dynamic, Dynamic>;
+	@:public public var definedSymbols : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* <f46082.46.01> True if new module entries are created for each
 	* re-opened module.
 	**/
-	public var cppModule : Bool;
+	@:public public var cppModule : Bool;
 	
 	/**
 	* -version option.
 	**/
-	public var versionRequest : Bool;
+	@:public public var versionRequest : Bool;
 	
 	/**
 	* -corba [level] option, where [level] is a floating-point number indicating
 	* the maximal level of CORBA IDL the parser framework can accept.
 	**/
-	public var corbaLevel : Single;
+	@:public public var corbaLevel : Single;
 	
 	/**
 	* -noWarn option.  Suppress warnings when true.
 	**/
-	public var noWarn : Bool;
+	@:public public var noWarn : Bool;
 	
-	public var scannerDebugFlag : Bool;
+	@:public public var scannerDebugFlag : Bool;
 	
-	public var tokenDebugFlag : Bool;
+	@:public public var tokenDebugFlag : Bool;
 	
 	
 }

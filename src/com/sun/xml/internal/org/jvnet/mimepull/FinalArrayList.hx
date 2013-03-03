@@ -33,11 +33,11 @@ package com.sun.xml.internal.org.jvnet.mimepull;
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(ts : java.util.Collection<T>) : Void;
+	@:overload @:public public function new(ts : java.util.Collection<T>) : Void;
 	
 	
 }

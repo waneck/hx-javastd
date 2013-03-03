@@ -56,249 +56,249 @@ extern class MBeanServerAccessController implements javax.management.remote.MBea
 	* users who do want the ability to use MLets are presumably advanced enough
 	* to handle policy files and security managers.</p>
 	*/
-	@:overload public function getMBeanServer() : javax.management.MBeanServer;
+	@:overload @:public public function getMBeanServer() : javax.management.MBeanServer;
 	
-	@:overload public function setMBeanServer(mbs : javax.management.MBeanServer) : Void;
+	@:overload @:public public function setMBeanServer(mbs : javax.management.MBeanServer) : Void;
 	
 	/**
 	* Check if the caller can do read operations. This method does
 	* nothing if so, otherwise throws SecurityException.
 	*/
-	@:overload @:abstract private function checkRead() : Void;
+	@:overload @:protected @:abstract private function checkRead() : Void;
 	
 	/**
 	* Check if the caller can do write operations.  This method does
 	* nothing if so, otherwise throws SecurityException.
 	*/
-	@:overload @:abstract private function checkWrite() : Void;
+	@:overload @:protected @:abstract private function checkWrite() : Void;
 	
 	/**
 	* Check if the caller can create the named class.  The default
 	* implementation of this method calls {@link #checkWrite()}.
 	*/
-	@:overload private function checkCreate(className : String) : Void;
+	@:overload @:protected private function checkCreate(className : String) : Void;
 	
 	/**
 	* Check if the caller can unregister the named MBean.  The default
 	* implementation of this method calls {@link #checkWrite()}.
 	*/
-	@:overload private function checkUnregister(name : javax.management.ObjectName) : Void;
+	@:overload @:protected private function checkUnregister(name : javax.management.ObjectName) : Void;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	/**
 	* Call <code>checkCreate(className)</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
 	/**
 	* Call <code>checkCreate(className)</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
 	
 	/**
 	* Call <code>checkCreate(className)</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
 	/**
 	* Call <code>checkCreate(className)</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function deserialize(name : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
+	@:overload @:public public function deserialize(name : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function deserialize(className : String, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
+	@:overload @:public public function deserialize(className : String, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function deserialize(className : String, loaderName : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
+	@:overload @:public public function deserialize(className : String, loaderName : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function getAttribute(name : javax.management.ObjectName, attribute : String) : Dynamic;
+	@:overload @:public public function getAttribute(name : javax.management.ObjectName, attribute : String) : Dynamic;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function getAttributes(name : javax.management.ObjectName, attributes : java.NativeArray<String>) : javax.management.AttributeList;
+	@:overload @:public public function getAttributes(name : javax.management.ObjectName, attributes : java.NativeArray<String>) : javax.management.AttributeList;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function getClassLoader(loaderName : javax.management.ObjectName) : java.lang.ClassLoader;
+	@:overload @:public public function getClassLoader(loaderName : javax.management.ObjectName) : java.lang.ClassLoader;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function getClassLoaderFor(mbeanName : javax.management.ObjectName) : java.lang.ClassLoader;
+	@:overload @:public public function getClassLoaderFor(mbeanName : javax.management.ObjectName) : java.lang.ClassLoader;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function getClassLoaderRepository() : javax.management.loading.ClassLoaderRepository;
+	@:overload @:public public function getClassLoaderRepository() : javax.management.loading.ClassLoaderRepository;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function getDefaultDomain() : String;
+	@:overload @:public public function getDefaultDomain() : String;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function getDomains() : java.NativeArray<String>;
+	@:overload @:public public function getDomains() : java.NativeArray<String>;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function getMBeanCount() : Null<Int>;
+	@:overload @:public public function getMBeanCount() : Null<Int>;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function getMBeanInfo(name : javax.management.ObjectName) : javax.management.MBeanInfo;
+	@:overload @:public public function getMBeanInfo(name : javax.management.ObjectName) : javax.management.MBeanInfo;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function getObjectInstance(name : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function getObjectInstance(name : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
 	/**
 	* Call <code>checkCreate(className)</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function instantiate(className : String) : Dynamic;
+	@:overload @:public public function instantiate(className : String) : Dynamic;
 	
 	/**
 	* Call <code>checkCreate(className)</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function instantiate(className : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function instantiate(className : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
 	/**
 	* Call <code>checkCreate(className)</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function instantiate(className : String, loaderName : javax.management.ObjectName) : Dynamic;
+	@:overload @:public public function instantiate(className : String, loaderName : javax.management.ObjectName) : Dynamic;
 	
 	/**
 	* Call <code>checkCreate(className)</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function instantiate(className : String, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function instantiate(className : String, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
 	/**
 	* Call <code>checkWrite()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function invoke(name : javax.management.ObjectName, operationName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function invoke(name : javax.management.ObjectName, operationName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function isInstanceOf(name : javax.management.ObjectName, className : String) : Bool;
+	@:overload @:public public function isInstanceOf(name : javax.management.ObjectName, className : String) : Bool;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function isRegistered(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function isRegistered(name : javax.management.ObjectName) : Bool;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function queryMBeans(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectInstance>;
+	@:overload @:public public function queryMBeans(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectInstance>;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function queryNames(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectName>;
+	@:overload @:public public function queryNames(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectName>;
 	
 	/**
 	* Call <code>checkWrite()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function registerMBean(object : Dynamic, name : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function registerMBean(object : Dynamic, name : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener) : Void;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName) : Void;
 	
 	/**
 	* Call <code>checkRead()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	/**
 	* Call <code>checkWrite()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function setAttribute(name : javax.management.ObjectName, attribute : javax.management.Attribute) : Void;
+	@:overload @:public public function setAttribute(name : javax.management.ObjectName, attribute : javax.management.Attribute) : Void;
 	
 	/**
 	* Call <code>checkWrite()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function setAttributes(name : javax.management.ObjectName, attributes : javax.management.AttributeList) : javax.management.AttributeList;
+	@:overload @:public public function setAttributes(name : javax.management.ObjectName, attributes : javax.management.AttributeList) : javax.management.AttributeList;
 	
 	/**
 	* Call <code>checkUnregister()</code>, then forward this method to the
 	* wrapped object.
 	*/
-	@:overload public function unregisterMBean(name : javax.management.ObjectName) : Void;
+	@:overload @:public public function unregisterMBean(name : javax.management.ObjectName) : Void;
 	
 	
 }

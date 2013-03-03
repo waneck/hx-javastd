@@ -66,7 +66,7 @@ extern class ComponentView extends javax.swing.text.View
 	*
 	* @param elem the element to decorate
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Create the component that is associated with
@@ -76,12 +76,12 @@ extern class ComponentView extends javax.swing.text.View
 	* as a result of being notified that attributes
 	* have changed.
 	*/
-	@:overload private function createComponent() : java.awt.Component;
+	@:overload @:protected private function createComponent() : java.awt.Component;
 	
 	/**
 	* Fetch the component associated with the view.
 	*/
-	@:overload @:final public function getComponent() : java.awt.Component;
+	@:overload @:public @:final public function getComponent() : java.awt.Component;
 	
 	/**
 	* The real paint behavior occurs naturally from the association
@@ -92,7 +92,7 @@ extern class ComponentView extends javax.swing.text.View
 	* @param a the shape
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
 	
 	/**
 	* Determines the preferred span for this view along an
@@ -107,7 +107,7 @@ extern class ComponentView extends javax.swing.text.View
 	*           The parent may choose to resize or break the view.
 	* @exception IllegalArgumentException for an invalid axis
 	*/
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the minimum span for this view along an
@@ -122,7 +122,7 @@ extern class ComponentView extends javax.swing.text.View
 	*           The parent may choose to resize or break the view.
 	* @exception IllegalArgumentException for an invalid axis
 	*/
-	@:overload override public function getMinimumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMinimumSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the maximum span for this view along an
@@ -137,7 +137,7 @@ extern class ComponentView extends javax.swing.text.View
 	*           The parent may choose to resize or break the view.
 	* @exception IllegalArgumentException for an invalid axis
 	*/
-	@:overload override public function getMaximumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMaximumSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the desired alignment for this view along an
@@ -151,7 +151,7 @@ extern class ComponentView extends javax.swing.text.View
 	*   away from the origin.  An alignment of 0.5 would be the
 	*   center of the view.
 	*/
-	@:overload override public function getAlignment(axis : Int) : Single;
+	@:overload @:public override public function getAlignment(axis : Int) : Single;
 	
 	/**
 	* Sets the parent for a child view.
@@ -175,7 +175,7 @@ extern class ComponentView extends javax.swing.text.View
 	*
 	* @param p the parent
 	*/
-	@:overload override public function setParent(p : javax.swing.text.View) : Void;
+	@:overload @:public override public function setParent(p : javax.swing.text.View) : Void;
 	
 	/**
 	* Provides a mapping from the coordinate space of the model to
@@ -188,7 +188,7 @@ extern class ComponentView extends javax.swing.text.View
 	*   represent a valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload @:public override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -201,7 +201,7 @@ extern class ComponentView extends javax.swing.text.View
 	*    the given point in the view
 	* @see View#viewToModel
 	*/
-	@:overload override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	
 }
@@ -221,13 +221,13 @@ extern class ComponentView extends javax.swing.text.View
 	* so the views (which position the component)
 	* can have their layout recomputed.
 	*/
-	@:overload override public function invalidate() : Void;
+	@:overload @:public override public function invalidate() : Void;
 	
-	@:overload override public function doLayout() : Void;
+	@:overload @:public override public function doLayout() : Void;
 	
-	@:overload override public function setBounds(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function setBounds(x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function validateIfNecessary() : Void;
+	@:overload @:public public function validateIfNecessary() : Void;
 	
 	/**
 	* Shows or hides this component depending on the value of parameter
@@ -237,28 +237,28 @@ extern class ComponentView extends javax.swing.text.View
 	* @see #isVisible
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload override public function setVisible(b : Bool) : Void;
+	@:require(java1) @:overload @:public override public function setVisible(b : Bool) : Void;
 	
 	/**
 	* Overridden to fix 4759054. Must return true so that content
 	* is painted when inside a CellRendererPane which is normally
 	* invisible.
 	*/
-	@:overload override public function isShowing() : Bool;
+	@:overload @:public override public function isShowing() : Bool;
 	
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
-	@:overload override public function getMaximumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize() : java.awt.Dimension;
 	
-	@:overload override public function getAlignmentX() : Single;
+	@:overload @:public override public function getAlignmentX() : Single;
 	
-	@:overload override public function getAlignmentY() : Single;
+	@:overload @:public override public function getAlignmentY() : Single;
 	
-	@:overload override public function getFocusTraversalKeys(id : Int) : java.util.Set<java.awt.AWTKeyStroke>;
+	@:overload @:public override public function getFocusTraversalKeys(id : Int) : java.util.Set<java.awt.AWTKeyStroke>;
 	
-	@:overload public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

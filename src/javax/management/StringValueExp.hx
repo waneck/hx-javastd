@@ -34,7 +34,7 @@ package javax.management;
 	/**
 	* Basic constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new <CODE>StringValueExp</CODE> representing the
@@ -42,7 +42,7 @@ package javax.management;
 	*
 	* @param val the string that will be the value of this expression
 	*/
-	@:overload public function new(val : String) : Void;
+	@:overload @:public public function new(val : String) : Void;
 	
 	/**
 	* Returns the string represented by the
@@ -50,17 +50,17 @@ package javax.management;
 	*
 	* @return the string.
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	/**
 	* Returns the string representing the object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/* There is no need for this method, because if a query is being
 	evaluated a StringValueExp can only appear inside a QueryExp,
 	and that QueryExp will itself have done setMBeanServer.  */
-	@:overload public function setMBeanServer(s : javax.management.MBeanServer) : Void;
+	@:overload @:public public function setMBeanServer(s : javax.management.MBeanServer) : Void;
 	
 	/**
 	* Applies the ValueExp on a MBean.
@@ -74,7 +74,7 @@ package javax.management;
 	* @exception BadAttributeValueExpException
 	* @exception InvalidApplicationException
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
+	@:overload @:public public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
 	
 	
 }

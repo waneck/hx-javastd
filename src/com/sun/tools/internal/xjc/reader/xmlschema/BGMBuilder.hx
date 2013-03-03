@@ -28,41 +28,41 @@ extern class BGMBuilder extends com.sun.tools.internal.xjc.reader.xmlschema.Bind
 	/**
 	* Entry point.
 	*/
-	@:overload public static function build(_schemas : com.sun.xml.internal.xsom.XSSchemaSet, codeModel : com.sun.codemodel.internal.JCodeModel, _errorReceiver : com.sun.tools.internal.xjc.ErrorReceiver, opts : com.sun.tools.internal.xjc.Options) : com.sun.tools.internal.xjc.model.Model;
+	@:overload @:public @:static public static function build(_schemas : com.sun.xml.internal.xsom.XSSchemaSet, codeModel : com.sun.codemodel.internal.JCodeModel, _errorReceiver : com.sun.tools.internal.xjc.ErrorReceiver, opts : com.sun.tools.internal.xjc.Options) : com.sun.tools.internal.xjc.model.Model;
 	
 	/**
 	* True if the compiler is running in the extension mode
 	* (as opposed to the strict conformance mode.)
 	*/
-	public var inExtensionMode(default, null) : Bool;
+	@:public @:final public var inExtensionMode(default, null) : Bool;
 	
 	/**
 	* If this is non-null, this package name takes over
 	* all the schema customizations.
 	*/
-	public var defaultPackage1(default, null) : String;
+	@:public @:final public var defaultPackage1(default, null) : String;
 	
 	/**
 	* If this is non-null, this package name will be
 	* used when no customization is specified.
 	*/
-	public var defaultPackage2(default, null) : String;
+	@:public @:final public var defaultPackage2(default, null) : String;
 	
-	public var model(default, null) : com.sun.tools.internal.xjc.model.Model;
+	@:public @:final public var model(default, null) : com.sun.tools.internal.xjc.model.Model;
 	
-	public var fieldRendererFactory(default, null) : com.sun.tools.internal.xjc.generator.bean.field.FieldRendererFactory;
+	@:public @:final public var fieldRendererFactory(default, null) : com.sun.tools.internal.xjc.generator.bean.field.FieldRendererFactory;
 	
-	@:overload private function new(defaultPackage1 : String, defaultPackage2 : String, _inExtensionMode : Bool, fieldRendererFactory : com.sun.tools.internal.xjc.generator.bean.field.FieldRendererFactory, activePlugins : java.util.List<com.sun.tools.internal.xjc.Plugin>) : Void;
+	@:overload @:protected private function new(defaultPackage1 : String, defaultPackage2 : String, _inExtensionMode : Bool, fieldRendererFactory : com.sun.tools.internal.xjc.generator.bean.field.FieldRendererFactory, activePlugins : java.util.List<com.sun.tools.internal.xjc.Plugin>) : Void;
 	
 	/**
 	* Gets the global bindings.
 	*/
-	@:overload public function getGlobalBinding() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIGlobalBinding;
+	@:overload @:public public function getGlobalBinding() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIGlobalBinding;
 	
 	/**
 	* Gets the particle binder for this binding.
 	*/
-	@:overload public function getParticleBinder() : com.sun.tools.internal.xjc.reader.xmlschema.ParticleBinder;
+	@:overload @:public public function getParticleBinder() : com.sun.tools.internal.xjc.reader.xmlschema.ParticleBinder;
 	
 	/**
 	* Name converter that implements "XML->Java name conversion"
@@ -75,7 +75,7 @@ extern class BGMBuilder extends com.sun.tools.internal.xjc.reader.xmlschema.Bind
 	* This object should be used to perform any name conversion
 	* needs, instead of the JJavaName class in CodeModel.
 	*/
-	@:overload public function getNameConverter() : com.sun.xml.internal.bind.api.impl.NameConverter;
+	@:overload @:public public function getNameConverter() : com.sun.xml.internal.bind.api.impl.NameConverter;
 	
 	/**
 	* Gets or creates the BindInfo object associated to a schema component.
@@ -85,7 +85,7 @@ extern class BGMBuilder extends com.sun.tools.internal.xjc.reader.xmlschema.Bind
 	*      Even if no declaration was specified, this method creates
 	*      a new BindInfo so that new decls can be added.
 	*/
-	@:overload public function getOrCreateBindInfo(schemaComponent : com.sun.xml.internal.xsom.XSComponent) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo;
+	@:overload @:public public function getOrCreateBindInfo(schemaComponent : com.sun.xml.internal.xsom.XSComponent) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo;
 	
 	/**
 	* Gets the BindInfo object associated to a schema component.
@@ -95,12 +95,12 @@ extern class BGMBuilder extends com.sun.tools.internal.xjc.reader.xmlschema.Bind
 	*      is specified for the given component, a dummy empty BindInfo
 	*      will be returned.
 	*/
-	@:overload public function getBindInfo(schemaComponent : com.sun.xml.internal.xsom.XSComponent) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo;
+	@:overload @:public public function getBindInfo(schemaComponent : com.sun.xml.internal.xsom.XSComponent) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo;
 	
 	/**
 	* Gets the {@link BIDom} object that applies to the given particle.
 	*/
-	@:overload @:final private function getLocalDomCustomization(p : com.sun.xml.internal.xsom.XSParticle) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDom;
+	@:overload @:protected @:final private function getLocalDomCustomization(p : com.sun.xml.internal.xsom.XSParticle) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDom;
 	
 	/**
 	* If the component maps to a property, forwards to purple, otherwise to green.
@@ -108,24 +108,24 @@ extern class BGMBuilder extends com.sun.tools.internal.xjc.reader.xmlschema.Bind
 	* If the component is mapped to a type, this method needs to return true.
 	* See the chart at the class javadoc.
 	*/
-	@:overload public function ying(sc : com.sun.xml.internal.xsom.XSComponent, referer : com.sun.xml.internal.xsom.XSComponent) : Void;
+	@:overload @:public public function ying(sc : com.sun.xml.internal.xsom.XSComponent, referer : com.sun.xml.internal.xsom.XSComponent) : Void;
 	
 	/**
 	* Gets the shared instance of the identity transformer.
 	*/
-	@:overload public function getIdentityTransformer() : javax.xml.transform.Transformer;
+	@:overload @:public public function getIdentityTransformer() : javax.xml.transform.Transformer;
 	
 	/**
 	* Find all types that refer to the given complex type.
 	*/
-	@:overload public function getReferer(c : com.sun.xml.internal.xsom.XSType) : java.util.Set<com.sun.xml.internal.xsom.XSComponent>;
+	@:overload @:public public function getReferer(c : com.sun.xml.internal.xsom.XSType) : java.util.Set<com.sun.xml.internal.xsom.XSComponent>;
 	
 	/**
 	* Returns the QName of the declaration.
 	* @return null
 	*      if the declaration is anonymous.
 	*/
-	@:overload public static function getName(decl : com.sun.xml.internal.xsom.XSDeclaration) : javax.xml.namespace.QName;
+	@:overload @:public @:static public static function getName(decl : com.sun.xml.internal.xsom.XSDeclaration) : javax.xml.namespace.QName;
 	
 	/**
 	* Derives a name from a schema component.
@@ -140,9 +140,9 @@ extern class BGMBuilder extends com.sun.tools.internal.xjc.reader.xmlschema.Bind
 	*      The component from which the base name was taken.
 	*      Used to determine how names are modified.
 	*/
-	@:overload public function deriveName(name : String, comp : com.sun.xml.internal.xsom.XSComponent) : String;
+	@:overload @:public public function deriveName(name : String, comp : com.sun.xml.internal.xsom.XSComponent) : String;
 	
-	@:overload public function isGenerateMixedExtensions() : Bool;
+	@:overload @:public public function isGenerateMixedExtensions() : Bool;
 	
 	
 }

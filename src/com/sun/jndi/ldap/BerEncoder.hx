@@ -28,25 +28,25 @@ extern class BerEncoder extends com.sun.jndi.ldap.Ber
 	/**
 	* Creates a BER buffer for encoding.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a BER buffer of a specified size for encoding.
 	* Specify the initial bufsize.  Buffer will be expanded as needed.
 	* @param bufsize The number of bytes for the buffer.
 	*/
-	@:overload public function new(bufsize : Int) : Void;
+	@:overload @:public public function new(bufsize : Int) : Void;
 	
 	/**
 	* Resets encoder to state when newly constructed.  Zeros out
 	* internal data structures.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Gets the number of encoded bytes in this BER buffer.
 	*/
-	@:overload public function getDataLen() : Int;
+	@:overload @:public public function getDataLen() : Int;
 	
 	/**
 	* Gets the buffer that contains the BER encoding. Throws an
@@ -56,29 +56,29 @@ extern class BerEncoder extends com.sun.jndi.ldap.Ber
 	* Use getBuffer(true) to get rid of excess bytes in array.
 	* @throws IllegalStateException If buffer contains unbalanced sequence.
 	*/
-	@:overload public function getBuf() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBuf() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the buffer that contains the BER encoding, trimming unused bytes.
 	*
 	* @throws IllegalStateException If buffer contains unbalanced sequence.
 	*/
-	@:overload public function getTrimmedBuf() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getTrimmedBuf() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Begin encoding a sequence with a tag.
 	*/
-	@:overload public function beginSeq(tag : Int) : Void;
+	@:overload @:public public function beginSeq(tag : Int) : Void;
 	
 	/**
 	* Terminate a BER sequence.
 	*/
-	@:overload public function endSeq() : Void;
+	@:overload @:public public function endSeq() : Void;
 	
 	/**
 	* Encode a single byte.
 	*/
-	@:overload public function encodeByte(b : Int) : Void;
+	@:overload @:public public function encodeByte(b : Int) : Void;
 	
 	/*
 	* Encodes an int.
@@ -86,7 +86,7 @@ extern class BerEncoder extends com.sun.jndi.ldap.Ber
 	* BER integer ::= 0x02 berlength byte {byte}*
 	*</pre></blockquote>
 	*/
-	@:overload public function encodeInt(i : Int) : Void;
+	@:overload @:public public function encodeInt(i : Int) : Void;
 	
 	/**
 	* Encodes an int and a tag.
@@ -94,7 +94,7 @@ extern class BerEncoder extends com.sun.jndi.ldap.Ber
 	* BER integer w tag ::= tag berlength byte {byte}*
 	*</pre></blockquote>
 	*/
-	@:overload public function encodeInt(i : Int, tag : Int) : Void;
+	@:overload @:public public function encodeInt(i : Int, tag : Int) : Void;
 	
 	/**
 	* Encodes a boolean.
@@ -102,7 +102,7 @@ extern class BerEncoder extends com.sun.jndi.ldap.Ber
 	* BER boolean ::= 0x01 0x01 {0xff|0x00}
 	*</pre></blockquote>
 	*/
-	@:overload public function encodeBoolean(b : Bool) : Void;
+	@:overload @:public public function encodeBoolean(b : Bool) : Void;
 	
 	/**
 	* Encodes a boolean and a tag
@@ -110,7 +110,7 @@ extern class BerEncoder extends com.sun.jndi.ldap.Ber
 	* BER boolean w TAG ::= tag 0x01 {0xff|0x00}
 	*</pre></blockquote>
 	*/
-	@:overload public function encodeBoolean(b : Bool, tag : Int) : Void;
+	@:overload @:public public function encodeBoolean(b : Bool, tag : Int) : Void;
 	
 	/**
 	* Encodes a string.
@@ -119,7 +119,7 @@ extern class BerEncoder extends com.sun.jndi.ldap.Ber
 	*</pre></blockquote>
 	* The string is converted into bytes using UTF-8 or ISO-Latin-1.
 	*/
-	@:overload public function encodeString(str : String, encodeUTF8 : Bool) : Void;
+	@:overload @:public public function encodeString(str : String, encodeUTF8 : Bool) : Void;
 	
 	/**
 	* Encodes a string and a tag.
@@ -127,22 +127,22 @@ extern class BerEncoder extends com.sun.jndi.ldap.Ber
 	* BER string w TAG ::= tag strlen byte1 byte2...
 	*</pre></blockquote>
 	*/
-	@:overload public function encodeString(str : String, tag : Int, encodeUTF8 : Bool) : Void;
+	@:overload @:public public function encodeString(str : String, tag : Int, encodeUTF8 : Bool) : Void;
 	
 	/**
 	* Encodes a portion of an octet string and a tag.
 	*/
-	@:overload public function encodeOctetString(tb : java.NativeArray<java.StdTypes.Int8>, tag : Int, tboffset : Int, length : Int) : Void;
+	@:overload @:public public function encodeOctetString(tb : java.NativeArray<java.StdTypes.Int8>, tag : Int, tboffset : Int, length : Int) : Void;
 	
 	/**
 	* Encodes an octet string and a tag.
 	*/
-	@:overload public function encodeOctetString(tb : java.NativeArray<java.StdTypes.Int8>, tag : Int) : Void;
+	@:overload @:public public function encodeOctetString(tb : java.NativeArray<java.StdTypes.Int8>, tag : Int) : Void;
 	
 	/**
 	* Encodes an array of strings.
 	*/
-	@:overload public function encodeStringArray(strs : java.NativeArray<String>, encodeUTF8 : Bool) : Void;
+	@:overload @:public public function encodeStringArray(strs : java.NativeArray<String>, encodeUTF8 : Bool) : Void;
 	
 	
 }

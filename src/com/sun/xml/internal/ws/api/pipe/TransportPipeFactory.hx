@@ -44,7 +44,7 @@ extern class TransportPipeFactory
 	*      back to the user application, and no further {@link TransportPipeFactory}s
 	*      are consulted.
 	*/
-	@:overload @:abstract public function doCreate(context : com.sun.xml.internal.ws.api.pipe.ClientPipeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public @:abstract public function doCreate(context : com.sun.xml.internal.ws.api.pipe.ClientPipeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	/**
 	* Locates {@link PipelineAssemblerFactory}s and create
@@ -58,7 +58,7 @@ extern class TransportPipeFactory
 	* @deprecated
 	*      Use {@link TransportTubeFactory#create(ClassLoader, ClientTubeAssemblerContext)}
 	*/
-	@:overload public static function create(classLoader : java.lang.ClassLoader, context : com.sun.xml.internal.ws.api.pipe.ClientPipeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public @:static public static function create(classLoader : java.lang.ClassLoader, context : com.sun.xml.internal.ws.api.pipe.ClientPipeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	
 }

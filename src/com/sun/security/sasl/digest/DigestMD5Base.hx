@@ -26,24 +26,24 @@ package com.sun.security.sasl.digest;
 @:internal extern class DigestMD5Base extends com.sun.security.sasl.util.AbstractSaslImpl
 {
 	/* Constants - defined in RFC2831 */
-	private static var MAX_CHALLENGE_LENGTH(default, null) : Int;
+	@:protected @:static @:final private static var MAX_CHALLENGE_LENGTH(default, null) : Int;
 	
-	private static var MAX_RESPONSE_LENGTH(default, null) : Int;
+	@:protected @:static @:final private static var MAX_RESPONSE_LENGTH(default, null) : Int;
 	
-	private static var DEFAULT_MAXBUF(default, null) : Int;
+	@:protected @:static @:final private static var DEFAULT_MAXBUF(default, null) : Int;
 	
 	/* Supported ciphers for 'auth-conf' */
-	private static var DES3(default, null) : Int;
+	@:protected @:static @:final private static var DES3(default, null) : Int;
 	
-	private static var RC4(default, null) : Int;
+	@:protected @:static @:final private static var RC4(default, null) : Int;
 	
-	private static var DES(default, null) : Int;
+	@:protected @:static @:final private static var DES(default, null) : Int;
 	
-	private static var RC4_56(default, null) : Int;
+	@:protected @:static @:final private static var RC4_56(default, null) : Int;
 	
-	private static var RC4_40(default, null) : Int;
+	@:protected @:static @:final private static var RC4_40(default, null) : Int;
 	
-	private static var CIPHER_TOKENS(default, null) : java.NativeArray<String>;
+	@:protected @:static @:final private static var CIPHER_TOKENS(default, null) : java.NativeArray<String>;
 	
 	/*
 	* If QOP is set to 'auth-conf', a DIGEST-MD5 mechanism must have
@@ -61,50 +61,50 @@ package com.sun.security.sasl.digest;
 	*                  - RC4 (56bit)
 	*  LOW_SRENGTH     - RC4 (40bit)
 	*/
-	private static var DES_3_STRENGTH(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var DES_3_STRENGTH(default, null) : java.StdTypes.Int8;
 	
-	private static var RC4_STRENGTH(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var RC4_STRENGTH(default, null) : java.StdTypes.Int8;
 	
-	private static var DES_STRENGTH(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var DES_STRENGTH(default, null) : java.StdTypes.Int8;
 	
-	private static var RC4_56_STRENGTH(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var RC4_56_STRENGTH(default, null) : java.StdTypes.Int8;
 	
-	private static var RC4_40_STRENGTH(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var RC4_40_STRENGTH(default, null) : java.StdTypes.Int8;
 	
-	private static var UNSET(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var UNSET(default, null) : java.StdTypes.Int8;
 	
-	private static var CIPHER_MASKS(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:protected @:static @:final private static var CIPHER_MASKS(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
-	private static var EMPTY_BYTE_ARRAY(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:protected @:static @:final private static var EMPTY_BYTE_ARRAY(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/* Used to track progress of authentication; step numbers from RFC 2831 */
-	private var step : Int;
+	@:protected private var step : Int;
 	
 	/* Used to obtain authorization, pw info, canonicalized authzid for server */
-	private var cbh : javax.security.auth.callback.CallbackHandler;
+	@:protected private var cbh : javax.security.auth.callback.CallbackHandler;
 	
-	private var secCtx : com.sun.security.sasl.digest.SecurityCtx;
+	@:protected private var secCtx : com.sun.security.sasl.digest.SecurityCtx;
 	
-	private var H_A1 : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var H_A1 : java.NativeArray<java.StdTypes.Int8>;
 	
-	private var nonce : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var nonce : java.NativeArray<java.StdTypes.Int8>;
 	
 	/* Variables set when parsing directives in digest challenge/response. */
-	private var negotiatedStrength : String;
+	@:protected private var negotiatedStrength : String;
 	
-	private var negotiatedCipher : String;
+	@:protected private var negotiatedCipher : String;
 	
-	private var negotiatedQop : String;
+	@:protected private var negotiatedQop : String;
 	
-	private var negotiatedRealm : String;
+	@:protected private var negotiatedRealm : String;
 	
-	private var useUTF8 : Bool;
+	@:protected private var useUTF8 : Bool;
 	
-	private var encoding : String;
+	@:protected private var encoding : String;
 	
-	private var digestUri : String;
+	@:protected private var digestUri : String;
 	
-	private var authzid : String;
+	@:protected private var authzid : String;
 	
 	/**
 	* Constucts an instance of DigestMD5Base. Calls super constructor
@@ -118,14 +118,14 @@ package com.sun.security.sasl.digest;
 	*
 	* @throws SaslException If invalid value found in props.
 	*/
-	@:overload private function new(props : java.util.Map<Dynamic, Dynamic>, className : String, firstStep : Int, digestUri : String, cbh : javax.security.auth.callback.CallbackHandler) : Void;
+	@:overload @:protected private function new(props : java.util.Map<Dynamic, Dynamic>, className : String, firstStep : Int, digestUri : String, cbh : javax.security.auth.callback.CallbackHandler) : Void;
 	
 	/**
 	* Retrieves the SASL mechanism IANA name.
 	*
 	* @return The String "DIGEST-MD5"
 	*/
-	@:overload public function getMechanismName() : String;
+	@:overload @:public public function getMechanismName() : String;
 	
 	/**
 	* Unwrap the incoming message using the wrap method of the secCtx object
@@ -139,7 +139,7 @@ package com.sun.security.sasl.digest;
 	* @throws SaslException if an error occurs when unwrapping the incoming
 	* message
 	*/
-	@:overload public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Wrap outgoing bytes using the wrap method of the secCtx object
@@ -153,21 +153,21 @@ package com.sun.security.sasl.digest;
 	* @throws SaslException if an error occurs when wrapping the outgoing
 	* message
 	*/
-	@:overload public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload override public function getNegotiatedProperty(propName : String) : Dynamic;
+	@:overload @:public override public function getNegotiatedProperty(propName : String) : Dynamic;
 	
-	@:overload @:final private static function generateNonce() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:static @:final private static function generateNonce() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Checks if a byte[] contains characters that must be quoted
 	* and write the resulting, possibly escaped, characters to out.
 	*/
-	@:overload private static function writeQuotedStringValue(out : java.io.ByteArrayOutputStream, buf : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected @:static private static function writeQuotedStringValue(out : java.io.ByteArrayOutputStream, buf : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload private static function quotedStringValue(str : String) : String;
+	@:overload @:protected @:static private static function quotedStringValue(str : String) : String;
 	
 	/**
 	* Convert a byte array to hexadecimal string.
@@ -175,7 +175,7 @@ package com.sun.security.sasl.digest;
 	* @param a non-null byte array
 	* @return a non-null String contain the HEX value
 	*/
-	@:overload private function binaryToHex(digest : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected private function binaryToHex(digest : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Used to convert username-value, passwd or realm to 8859_1 encoding
@@ -185,9 +185,9 @@ package com.sun.security.sasl.digest;
 	* @return a non-nuill byte array containing the correct character encoding
 	* for username, paswd or realm.
 	*/
-	@:overload private function stringToByte_8859_1(str : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected private function stringToByte_8859_1(str : String) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private static function getPlatformCiphers() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:static private static function getPlatformCiphers() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Assembles response-value for digest-response.
@@ -202,14 +202,14 @@ package com.sun.security.sasl.digest;
 	* @throws IOException if an error occurs writing to the output
 	* byte array buffer.
 	*/
-	@:overload private function generateResponseValue(authMethod : String, digestUriValue : String, qopValue : String, usernameValue : String, realmValue : String, passwdValue : java.NativeArray<java.StdTypes.Char16>, nonceValue : java.NativeArray<java.StdTypes.Int8>, cNonceValue : java.NativeArray<java.StdTypes.Int8>, nonceCount : Int, authzidValue : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected private function generateResponseValue(authMethod : String, digestUriValue : String, qopValue : String, usernameValue : String, realmValue : String, passwdValue : java.NativeArray<java.StdTypes.Char16>, nonceValue : java.NativeArray<java.StdTypes.Int8>, cNonceValue : java.NativeArray<java.StdTypes.Int8>, nonceCount : Int, authzidValue : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Takes 'nonceCount' value and returns HEX value of the value.
 	*
 	* @return A non-null String representing the current NONCE-COUNT
 	*/
-	@:overload private static function nonceCountToHex(count : Int) : String;
+	@:overload @:protected @:static private static function nonceCountToHex(count : Int) : String;
 	
 	/**
 	* Parses digest-challenge string, extracting each token
@@ -220,7 +220,7 @@ package com.sun.security.sasl.digest;
 	*  are allowed.
 	* @throws SaslException if the buf cannot be parsed according to RFC 2831
 	*/
-	@:overload private static function parseDirectives(buf : java.NativeArray<java.StdTypes.Int8>, keyTable : java.NativeArray<String>, realmChoices : java.util.List<java.NativeArray<java.StdTypes.Int8>>, realmIndex : Int) : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
+	@:overload @:protected @:static private static function parseDirectives(buf : java.NativeArray<java.StdTypes.Int8>, keyTable : java.NativeArray<String>, realmChoices : java.util.List<java.NativeArray<java.StdTypes.Int8>>, realmIndex : Int) : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
 	
 	
 }
@@ -239,17 +239,17 @@ package com.sun.security.sasl.digest;
 @:native('com$sun$security$sasl$digest$DigestMD5Base$DigestIntegrity') @:internal extern class DigestMD5Base_DigestIntegrity implements com.sun.security.sasl.digest.SecurityCtx
 {
 	/* Key pairs for integrity checking */
-	private var myKi : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var myKi : java.NativeArray<java.StdTypes.Int8>;
 	
-	private var peerKi : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var peerKi : java.NativeArray<java.StdTypes.Int8>;
 	
-	private var mySeqNum : Int;
+	@:protected private var mySeqNum : Int;
 	
-	private var peerSeqNum : Int;
+	@:protected private var peerSeqNum : Int;
 	
-	private var messageType(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:protected @:final private var messageType(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
-	private var sequenceNum(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:protected @:final private var sequenceNum(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Append MAC onto outgoing message.
@@ -263,7 +263,7 @@ package com.sun.security.sasl.digest;
 	* cannot be found or if there is an error writing to the byte array
 	* output buffers.
 	*/
-	@:overload public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Return verified message without MAC - only if the received MAC
@@ -280,7 +280,7 @@ package com.sun.security.sasl.digest;
 	* cannot be found or if there is an error writing to the byte array
 	* output buffers
 	*/
-	@:overload public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Generates MAC to be appended onto out-going messages.
@@ -294,12 +294,12 @@ package com.sun.security.sasl.digest;
 	*
 	* @throws SaslException if an error occurs when generating MAC.
 	*/
-	@:overload private function getHMAC(Ki : java.NativeArray<java.StdTypes.Int8>, seqnum : java.NativeArray<java.StdTypes.Int8>, msg : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected private function getHMAC(Ki : java.NativeArray<java.StdTypes.Int8>, seqnum : java.NativeArray<java.StdTypes.Int8>, msg : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Increment own sequence number and set answer in NBO sequenceNum field.
 	*/
-	@:overload private function incrementSeqNum() : Void;
+	@:overload @:protected private function incrementSeqNum() : Void;
 	
 	
 }
@@ -330,7 +330,7 @@ package com.sun.security.sasl.digest;
 	* cannot loaded or if an UTF-8 encoding is not supported on the
 	* platform.
 	*/
-	@:overload override public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/*
 	* Decrypt incoming messages and verify their integrity.
@@ -346,7 +346,7 @@ package com.sun.security.sasl.digest;
 	* @throws SaslException if there are the SASL buffer is empty or if
 	* if an error occurs reading the SASL buffer.
 	*/
-	@:overload override public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

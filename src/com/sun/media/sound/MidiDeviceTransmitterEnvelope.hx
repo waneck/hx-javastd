@@ -39,15 +39,15 @@ extern class MidiDeviceTransmitterEnvelope implements javax.sound.midi.MidiDevic
 	* @param device the owner {@code MidiDevice}
 	* @param transmitter the {@code Transmitter} to be enveloped
 	*/
-	@:overload public function new(device : javax.sound.midi.MidiDevice, transmitter : javax.sound.midi.Transmitter) : Void;
+	@:overload @:public public function new(device : javax.sound.midi.MidiDevice, transmitter : javax.sound.midi.Transmitter) : Void;
 	
-	@:overload public function setReceiver(receiver : javax.sound.midi.Receiver) : Void;
+	@:overload @:public public function setReceiver(receiver : javax.sound.midi.Receiver) : Void;
 	
-	@:overload public function getReceiver() : javax.sound.midi.Receiver;
+	@:overload @:public public function getReceiver() : javax.sound.midi.Receiver;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function getMidiDevice() : javax.sound.midi.MidiDevice;
+	@:overload @:public public function getMidiDevice() : javax.sound.midi.MidiDevice;
 	
 	/**
 	* Obtains the transmitter enveloped
@@ -55,7 +55,7 @@ extern class MidiDeviceTransmitterEnvelope implements javax.sound.midi.MidiDevic
 	*
 	* @return the enveloped transmitter
 	*/
-	@:overload public function getTransmitter() : javax.sound.midi.Transmitter;
+	@:overload @:public public function getTransmitter() : javax.sound.midi.Transmitter;
 	
 	
 }

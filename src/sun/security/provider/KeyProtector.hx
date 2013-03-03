@@ -35,25 +35,25 @@ package sun.security.provider;
 	* Phrases or words which are easily guessed, for example by
 	* being found in dictionaries, are bad.
 	*/
-	@:overload public function new(password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Ensures that the password bytes of this key protector are
 	* set to zero when there are no more references to it.
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	/*
 	* Protects the given plaintext key, using the password provided at
 	* construction time.
 	*/
-	@:overload public function protect(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function protect(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/*
 	* Recovers the plaintext version of the given key (in protected format),
 	* using the password provided at construction time.
 	*/
-	@:overload public function recover(encrInfo : sun.security.pkcs.EncryptedPrivateKeyInfo) : java.security.Key;
+	@:overload @:public public function recover(encrInfo : sun.security.pkcs.EncryptedPrivateKeyInfo) : java.security.Key;
 	
 	
 }

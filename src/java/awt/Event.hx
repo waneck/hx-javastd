@@ -61,217 +61,217 @@ package java.awt;
 	* This flag indicates that the Shift key was down when the event
 	* occurred.
 	*/
-	public static var SHIFT_MASK(default, null) : Int;
+	@:public @:static @:final public static var SHIFT_MASK(default, null) : Int;
 	
 	/**
 	* This flag indicates that the Control key was down when the event
 	* occurred.
 	*/
-	public static var CTRL_MASK(default, null) : Int;
+	@:public @:static @:final public static var CTRL_MASK(default, null) : Int;
 	
 	/**
 	* This flag indicates that the Meta key was down when the event
 	* occurred. For mouse events, this flag indicates that the right
 	* button was pressed or released.
 	*/
-	public static var META_MASK(default, null) : Int;
+	@:public @:static @:final public static var META_MASK(default, null) : Int;
 	
 	/**
 	* This flag indicates that the Alt key was down when
 	* the event occurred. For mouse events, this flag indicates that the
 	* middle mouse button was pressed or released.
 	*/
-	public static var ALT_MASK(default, null) : Int;
+	@:public @:static @:final public static var ALT_MASK(default, null) : Int;
 	
 	/**
 	* The Home key, a non-ASCII action key.
 	*/
-	public static var HOME(default, null) : Int;
+	@:public @:static @:final public static var HOME(default, null) : Int;
 	
 	/**
 	* The End key, a non-ASCII action key.
 	*/
-	public static var END(default, null) : Int;
+	@:public @:static @:final public static var END(default, null) : Int;
 	
 	/**
 	* The Page Up key, a non-ASCII action key.
 	*/
-	public static var PGUP(default, null) : Int;
+	@:public @:static @:final public static var PGUP(default, null) : Int;
 	
 	/**
 	* The Page Down key, a non-ASCII action key.
 	*/
-	public static var PGDN(default, null) : Int;
+	@:public @:static @:final public static var PGDN(default, null) : Int;
 	
 	/**
 	* The Up Arrow key, a non-ASCII action key.
 	*/
-	public static var UP(default, null) : Int;
+	@:public @:static @:final public static var UP(default, null) : Int;
 	
 	/**
 	* The Down Arrow key, a non-ASCII action key.
 	*/
-	public static var DOWN(default, null) : Int;
+	@:public @:static @:final public static var DOWN(default, null) : Int;
 	
 	/**
 	* The Left Arrow key, a non-ASCII action key.
 	*/
-	public static var LEFT(default, null) : Int;
+	@:public @:static @:final public static var LEFT(default, null) : Int;
 	
 	/**
 	* The Right Arrow key, a non-ASCII action key.
 	*/
-	public static var RIGHT(default, null) : Int;
+	@:public @:static @:final public static var RIGHT(default, null) : Int;
 	
 	/**
 	* The F1 function key, a non-ASCII action key.
 	*/
-	public static var F1(default, null) : Int;
+	@:public @:static @:final public static var F1(default, null) : Int;
 	
 	/**
 	* The F2 function key, a non-ASCII action key.
 	*/
-	public static var F2(default, null) : Int;
+	@:public @:static @:final public static var F2(default, null) : Int;
 	
 	/**
 	* The F3 function key, a non-ASCII action key.
 	*/
-	public static var F3(default, null) : Int;
+	@:public @:static @:final public static var F3(default, null) : Int;
 	
 	/**
 	* The F4 function key, a non-ASCII action key.
 	*/
-	public static var F4(default, null) : Int;
+	@:public @:static @:final public static var F4(default, null) : Int;
 	
 	/**
 	* The F5 function key, a non-ASCII action key.
 	*/
-	public static var F5(default, null) : Int;
+	@:public @:static @:final public static var F5(default, null) : Int;
 	
 	/**
 	* The F6 function key, a non-ASCII action key.
 	*/
-	public static var F6(default, null) : Int;
+	@:public @:static @:final public static var F6(default, null) : Int;
 	
 	/**
 	* The F7 function key, a non-ASCII action key.
 	*/
-	public static var F7(default, null) : Int;
+	@:public @:static @:final public static var F7(default, null) : Int;
 	
 	/**
 	* The F8 function key, a non-ASCII action key.
 	*/
-	public static var F8(default, null) : Int;
+	@:public @:static @:final public static var F8(default, null) : Int;
 	
 	/**
 	* The F9 function key, a non-ASCII action key.
 	*/
-	public static var F9(default, null) : Int;
+	@:public @:static @:final public static var F9(default, null) : Int;
 	
 	/**
 	* The F10 function key, a non-ASCII action key.
 	*/
-	public static var F10(default, null) : Int;
+	@:public @:static @:final public static var F10(default, null) : Int;
 	
 	/**
 	* The F11 function key, a non-ASCII action key.
 	*/
-	public static var F11(default, null) : Int;
+	@:public @:static @:final public static var F11(default, null) : Int;
 	
 	/**
 	* The F12 function key, a non-ASCII action key.
 	*/
-	public static var F12(default, null) : Int;
+	@:public @:static @:final public static var F12(default, null) : Int;
 	
 	/**
 	* The Print Screen key, a non-ASCII action key.
 	*/
-	public static var PRINT_SCREEN(default, null) : Int;
+	@:public @:static @:final public static var PRINT_SCREEN(default, null) : Int;
 	
 	/**
 	* The Scroll Lock key, a non-ASCII action key.
 	*/
-	public static var SCROLL_LOCK(default, null) : Int;
+	@:public @:static @:final public static var SCROLL_LOCK(default, null) : Int;
 	
 	/**
 	* The Caps Lock key, a non-ASCII action key.
 	*/
-	public static var CAPS_LOCK(default, null) : Int;
+	@:public @:static @:final public static var CAPS_LOCK(default, null) : Int;
 	
 	/**
 	* The Num Lock key, a non-ASCII action key.
 	*/
-	public static var NUM_LOCK(default, null) : Int;
+	@:public @:static @:final public static var NUM_LOCK(default, null) : Int;
 	
 	/**
 	* The Pause key, a non-ASCII action key.
 	*/
-	public static var PAUSE(default, null) : Int;
+	@:public @:static @:final public static var PAUSE(default, null) : Int;
 	
 	/**
 	* The Insert key, a non-ASCII action key.
 	*/
-	public static var INSERT(default, null) : Int;
+	@:public @:static @:final public static var INSERT(default, null) : Int;
 	
 	/**
 	* The Enter key.
 	*/
-	public static var ENTER(default, null) : Int;
+	@:public @:static @:final public static var ENTER(default, null) : Int;
 	
 	/**
 	* The BackSpace key.
 	*/
-	public static var BACK_SPACE(default, null) : Int;
+	@:public @:static @:final public static var BACK_SPACE(default, null) : Int;
 	
 	/**
 	* The Tab key.
 	*/
-	public static var TAB(default, null) : Int;
+	@:public @:static @:final public static var TAB(default, null) : Int;
 	
 	/**
 	* The Escape key.
 	*/
-	public static var ESCAPE(default, null) : Int;
+	@:public @:static @:final public static var ESCAPE(default, null) : Int;
 	
 	/**
 	* The Delete key.
 	*/
-	public static var DELETE(default, null) : Int;
+	@:public @:static @:final public static var DELETE(default, null) : Int;
 	
 	/**
 	* The user has asked the window manager to kill the window.
 	*/
-	public static var WINDOW_DESTROY(default, null) : Int;
+	@:public @:static @:final public static var WINDOW_DESTROY(default, null) : Int;
 	
 	/**
 	* The user has asked the window manager to expose the window.
 	*/
-	public static var WINDOW_EXPOSE(default, null) : Int;
+	@:public @:static @:final public static var WINDOW_EXPOSE(default, null) : Int;
 	
 	/**
 	* The user has asked the window manager to iconify the window.
 	*/
-	public static var WINDOW_ICONIFY(default, null) : Int;
+	@:public @:static @:final public static var WINDOW_ICONIFY(default, null) : Int;
 	
 	/**
 	* The user has asked the window manager to de-iconify the window.
 	*/
-	public static var WINDOW_DEICONIFY(default, null) : Int;
+	@:public @:static @:final public static var WINDOW_DEICONIFY(default, null) : Int;
 	
 	/**
 	* The user has asked the window manager to move the window.
 	*/
-	public static var WINDOW_MOVED(default, null) : Int;
+	@:public @:static @:final public static var WINDOW_MOVED(default, null) : Int;
 	
 	/**
 	* The user has pressed a normal key.
 	*/
-	public static var KEY_PRESS(default, null) : Int;
+	@:public @:static @:final public static var KEY_PRESS(default, null) : Int;
 	
 	/**
 	* The user has released a normal key.
 	*/
-	public static var KEY_RELEASE(default, null) : Int;
+	@:public @:static @:final public static var KEY_RELEASE(default, null) : Int;
 	
 	/**
 	* The user has pressed a non-ASCII <em>action</em> key.
@@ -281,7 +281,7 @@ package java.awt;
 	* Page Up, Page Down, Home, End, Print Screen, Scroll Lock,
 	* Caps Lock, Num Lock, Pause, and Insert.
 	*/
-	public static var KEY_ACTION(default, null) : Int;
+	@:public @:static @:final public static var KEY_ACTION(default, null) : Int;
 	
 	/**
 	* The user has released a non-ASCII <em>action</em> key.
@@ -291,7 +291,7 @@ package java.awt;
 	* Page Up, Page Down, Home, End, Print Screen, Scroll Lock,
 	* Caps Lock, Num Lock, Pause, and Insert.
 	*/
-	public static var KEY_ACTION_RELEASE(default, null) : Int;
+	@:public @:static @:final public static var KEY_ACTION_RELEASE(default, null) : Int;
 	
 	/**
 	* The user has pressed the mouse button. The <code>ALT_MASK</code>
@@ -301,7 +301,7 @@ package java.awt;
 	* @see     java.awt.Event#ALT_MASK
 	* @see     java.awt.Event#META_MASK
 	*/
-	public static var MOUSE_DOWN(default, null) : Int;
+	@:public @:static @:final public static var MOUSE_DOWN(default, null) : Int;
 	
 	/**
 	* The user has released the mouse button. The <code>ALT_MASK</code>
@@ -311,22 +311,22 @@ package java.awt;
 	* @see     java.awt.Event#ALT_MASK
 	* @see     java.awt.Event#META_MASK
 	*/
-	public static var MOUSE_UP(default, null) : Int;
+	@:public @:static @:final public static var MOUSE_UP(default, null) : Int;
 	
 	/**
 	* The mouse has moved with no button pressed.
 	*/
-	public static var MOUSE_MOVE(default, null) : Int;
+	@:public @:static @:final public static var MOUSE_MOVE(default, null) : Int;
 	
 	/**
 	* The mouse has entered a component.
 	*/
-	public static var MOUSE_ENTER(default, null) : Int;
+	@:public @:static @:final public static var MOUSE_ENTER(default, null) : Int;
 	
 	/**
 	* The mouse has exited a component.
 	*/
-	public static var MOUSE_EXIT(default, null) : Int;
+	@:public @:static @:final public static var MOUSE_EXIT(default, null) : Int;
 	
 	/**
 	* The user has moved the mouse with a button pressed. The
@@ -336,83 +336,83 @@ package java.awt;
 	* @see     java.awt.Event#ALT_MASK
 	* @see     java.awt.Event#META_MASK
 	*/
-	public static var MOUSE_DRAG(default, null) : Int;
+	@:public @:static @:final public static var MOUSE_DRAG(default, null) : Int;
 	
 	/**
 	* The user has activated the <em>line up</em>
 	* area of a scroll bar.
 	*/
-	public static var SCROLL_LINE_UP(default, null) : Int;
+	@:public @:static @:final public static var SCROLL_LINE_UP(default, null) : Int;
 	
 	/**
 	* The user has activated the <em>line down</em>
 	* area of a scroll bar.
 	*/
-	public static var SCROLL_LINE_DOWN(default, null) : Int;
+	@:public @:static @:final public static var SCROLL_LINE_DOWN(default, null) : Int;
 	
 	/**
 	* The user has activated the <em>page up</em>
 	* area of a scroll bar.
 	*/
-	public static var SCROLL_PAGE_UP(default, null) : Int;
+	@:public @:static @:final public static var SCROLL_PAGE_UP(default, null) : Int;
 	
 	/**
 	* The user has activated the <em>page down</em>
 	* area of a scroll bar.
 	*/
-	public static var SCROLL_PAGE_DOWN(default, null) : Int;
+	@:public @:static @:final public static var SCROLL_PAGE_DOWN(default, null) : Int;
 	
 	/**
 	* The user has moved the bubble (thumb) in a scroll bar,
 	* moving to an "absolute" position, rather than to
 	* an offset from the last postion.
 	*/
-	public static var SCROLL_ABSOLUTE(default, null) : Int;
+	@:public @:static @:final public static var SCROLL_ABSOLUTE(default, null) : Int;
 	
 	/**
 	* The scroll begin event.
 	*/
-	public static var SCROLL_BEGIN(default, null) : Int;
+	@:public @:static @:final public static var SCROLL_BEGIN(default, null) : Int;
 	
 	/**
 	* The scroll end event.
 	*/
-	public static var SCROLL_END(default, null) : Int;
+	@:public @:static @:final public static var SCROLL_END(default, null) : Int;
 	
 	/**
 	* An item in a list has been selected.
 	*/
-	public static var LIST_SELECT(default, null) : Int;
+	@:public @:static @:final public static var LIST_SELECT(default, null) : Int;
 	
 	/**
 	* An item in a list has been deselected.
 	*/
-	public static var LIST_DESELECT(default, null) : Int;
+	@:public @:static @:final public static var LIST_DESELECT(default, null) : Int;
 	
 	/**
 	* This event indicates that the user wants some action to occur.
 	*/
-	public static var ACTION_EVENT(default, null) : Int;
+	@:public @:static @:final public static var ACTION_EVENT(default, null) : Int;
 	
 	/**
 	* A file loading event.
 	*/
-	public static var LOAD_FILE(default, null) : Int;
+	@:public @:static @:final public static var LOAD_FILE(default, null) : Int;
 	
 	/**
 	* A file saving event.
 	*/
-	public static var SAVE_FILE(default, null) : Int;
+	@:public @:static @:final public static var SAVE_FILE(default, null) : Int;
 	
 	/**
 	* A component gained the focus.
 	*/
-	public static var GOT_FOCUS(default, null) : Int;
+	@:public @:static @:final public static var GOT_FOCUS(default, null) : Int;
 	
 	/**
 	* A component lost the focus.
 	*/
-	public static var LOST_FOCUS(default, null) : Int;
+	@:public @:static @:final public static var LOST_FOCUS(default, null) : Int;
 	
 	/**
 	* The target component. This indicates the component over which the
@@ -422,7 +422,7 @@ package java.awt;
 	* @serial
 	* @see java.awt.AWTEvent#getSource()
 	*/
-	public var target : Dynamic;
+	@:public public var target : Dynamic;
 	
 	/**
 	* The time stamp.
@@ -431,7 +431,7 @@ package java.awt;
 	* @serial
 	* @see java.awt.event.InputEvent#getWhen()
 	*/
-	public var when : haxe.Int64;
+	@:public public var when : haxe.Int64;
 	
 	/**
 	* Indicates which type of event the event is, and which
@@ -441,7 +441,7 @@ package java.awt;
 	* @serial
 	* @see java.awt.AWTEvent#getID()
 	*/
-	public var id : Int;
+	@:public public var id : Int;
 	
 	/**
 	* The <i>x</i> coordinate of the event.
@@ -450,7 +450,7 @@ package java.awt;
 	* @serial
 	* @see java.awt.event.MouseEvent#getX()
 	*/
-	public var x : Int;
+	@:public public var x : Int;
 	
 	/**
 	* The <i>y</i> coordinate of the event.
@@ -459,7 +459,7 @@ package java.awt;
 	* @serial
 	* @see java.awt.event.MouseEvent#getY()
 	*/
-	public var y : Int;
+	@:public public var y : Int;
 	
 	/**
 	* The key code of the key that was pressed in a keyboard event.
@@ -468,7 +468,7 @@ package java.awt;
 	* @serial
 	* @see java.awt.event.KeyEvent#getKeyCode()
 	*/
-	public var key : Int;
+	@:public public var key : Int;
 	
 	/**
 	* The state of the modifier keys.
@@ -479,7 +479,7 @@ package java.awt;
 	* @serial
 	* @see java.awt.event.InputEvent#getModifiers()
 	*/
-	public var modifiers : Int;
+	@:public public var modifiers : Int;
 	
 	/**
 	* For <code>MOUSE_DOWN</code> events, this field indicates the
@@ -490,7 +490,7 @@ package java.awt;
 	* @serial
 	* @see java.awt.event.MouseEvent#getClickCount().
 	*/
-	public var clickCount : Int;
+	@:public public var clickCount : Int;
 	
 	/**
 	* An arbitrary argument of the event. The value of this field
@@ -499,7 +499,7 @@ package java.awt;
 	*
 	* @serial
 	*/
-	public var arg : Dynamic;
+	@:public public var arg : Dynamic;
 	
 	/**
 	* The next event. This field is set when putting events into a
@@ -509,7 +509,7 @@ package java.awt;
 	* @serial
 	* @see java.awt.EventQueue
 	*/
-	public var evt : java.awt.Event;
+	@:public public var evt : java.awt.Event;
 	
 	/**
 	* <b>NOTE:</b> The <code>Event</code> class is obsolete and is
@@ -529,7 +529,7 @@ package java.awt;
 	* @param     modifiers  the state of the modifier keys.
 	* @param     arg        the specified argument.
 	*/
-	@:overload public function new(target : Dynamic, when : haxe.Int64, id : Int, x : Int, y : Int, key : Int, modifiers : Int, arg : Dynamic) : Void;
+	@:overload @:public public function new(target : Dynamic, when : haxe.Int64, id : Int, x : Int, y : Int, key : Int, modifiers : Int, arg : Dynamic) : Void;
 	
 	/**
 	* <b>NOTE:</b> The <code>Event</code> class is obsolete and is
@@ -548,7 +548,7 @@ package java.awt;
 	* @param     key        the key pressed in a keyboard event.
 	* @param     modifiers  the state of the modifier keys.
 	*/
-	@:overload public function new(target : Dynamic, when : haxe.Int64, id : Int, x : Int, y : Int, key : Int, modifiers : Int) : Void;
+	@:overload @:public public function new(target : Dynamic, when : haxe.Int64, id : Int, x : Int, y : Int, key : Int, modifiers : Int) : Void;
 	
 	/**
 	* <b>NOTE:</b> The <code>Event</code> class is obsolete and is
@@ -561,7 +561,7 @@ package java.awt;
 	* @param     id         the event type.
 	* @param     arg        the specified argument.
 	*/
-	@:overload public function new(target : Dynamic, id : Int, arg : Dynamic) : Void;
+	@:overload @:public public function new(target : Dynamic, id : Int, arg : Dynamic) : Void;
 	
 	/**
 	* <b>NOTE:</b> The <code>Event</code> class is obsolete and is
@@ -579,7 +579,7 @@ package java.awt;
 	* @param     dx     the distance to translate the <i>x</i> coordinate.
 	* @param     dy     the distance to translate the <i>y</i> coordinate.
 	*/
-	@:overload public function translate(dx : Int, dy : Int) : Void;
+	@:overload @:public public function translate(dx : Int, dy : Int) : Void;
 	
 	/**
 	* <b>NOTE:</b> The <code>Event</code> class is obsolete and is
@@ -593,7 +593,7 @@ package java.awt;
 	* @see       java.awt.Event#controlDown
 	* @see       java.awt.Event#metaDown
 	*/
-	@:overload public function shiftDown() : Bool;
+	@:overload @:public public function shiftDown() : Bool;
 	
 	/**
 	* <b>NOTE:</b> The <code>Event</code> class is obsolete and is
@@ -607,7 +607,7 @@ package java.awt;
 	* @see       java.awt.Event#shiftDown
 	* @see       java.awt.Event#metaDown
 	*/
-	@:overload public function controlDown() : Bool;
+	@:overload @:public public function controlDown() : Bool;
 	
 	/**
 	* <b>NOTE:</b> The <code>Event</code> class is obsolete and is
@@ -622,7 +622,7 @@ package java.awt;
 	* @see       java.awt.Event#shiftDown
 	* @see       java.awt.Event#controlDown
 	*/
-	@:overload public function metaDown() : Bool;
+	@:overload @:public public function metaDown() : Bool;
 	
 	/**
 	* <b>NOTE:</b> The <code>Event</code> class is obsolete and is
@@ -637,7 +637,7 @@ package java.awt;
 	*
 	* @return    the parameter string of this event
 	*/
-	@:overload private function paramString() : String;
+	@:overload @:protected private function paramString() : String;
 	
 	/**
 	* <b>NOTE:</b> The <code>Event</code> class is obsolete and is
@@ -650,7 +650,7 @@ package java.awt;
 	* @see       java.awt.Event#paramString
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function toString() : String;
+	@:require(java1) @:overload @:public public function toString() : String;
 	
 	
 }

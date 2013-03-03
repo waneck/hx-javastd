@@ -28,7 +28,7 @@ extern class KeyUtils
 	* @param os
 	* @throws XMLSecurityException
 	*/
-	@:overload public static function prinoutKeyInfo(ki : com.sun.org.apache.xml.internal.security.keys.KeyInfo, os : java.io.PrintStream) : Void;
+	@:overload @:public @:static public static function prinoutKeyInfo(ki : com.sun.org.apache.xml.internal.security.keys.KeyInfo, os : java.io.PrintStream) : Void;
 	
 	
 }

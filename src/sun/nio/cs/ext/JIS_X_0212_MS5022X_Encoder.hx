@@ -25,11 +25,11 @@ package sun.nio.cs.ext;
 */
 @:internal extern class JIS_X_0212_MS5022X_Encoder extends sun.nio.cs.ext.JIS_X_0212_Encoder
 {
-	@:overload public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:public public function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload private function encodeSingle(inputChar : java.StdTypes.Char16) : Int;
+	@:overload @:protected override private function encodeSingle(inputChar : java.StdTypes.Char16) : Int;
 	
-	@:overload private function encodeDouble(ch : java.StdTypes.Char16) : Int;
+	@:overload @:protected override private function encodeDouble(ch : java.StdTypes.Char16) : Int;
 	
 	
 }

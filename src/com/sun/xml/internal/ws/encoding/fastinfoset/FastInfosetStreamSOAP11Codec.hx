@@ -25,11 +25,11 @@ package com.sun.xml.internal.ws.encoding.fastinfoset;
 */
 @:internal extern class FastInfosetStreamSOAP11Codec extends com.sun.xml.internal.ws.encoding.fastinfoset.FastInfosetStreamSOAPCodec
 {
-	@:overload override public function copy() : com.sun.xml.internal.ws.api.pipe.Codec;
+	@:overload @:public override public function copy() : com.sun.xml.internal.ws.api.pipe.Codec;
 	
-	@:overload @:final override private function createHeader(reader : javax.xml.stream.XMLStreamReader, mark : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.message.stream.StreamHeader;
+	@:overload @:protected @:final override private function createHeader(reader : javax.xml.stream.XMLStreamReader, mark : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.message.stream.StreamHeader;
 	
-	@:overload override private function getContentType(soapAction : String) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:protected override private function getContentType(soapAction : String) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
 	
 }

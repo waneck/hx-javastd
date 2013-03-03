@@ -25,11 +25,11 @@ package sun.awt;
 */
 extern class DesktopBrowse
 {
-	@:overload public static function setInstance(instance : sun.awt.DesktopBrowse) : Void;
+	@:overload @:public @:static public static function setInstance(instance : sun.awt.DesktopBrowse) : Void;
 	
-	@:overload public static function getInstance() : sun.awt.DesktopBrowse;
+	@:overload @:public @:static public static function getInstance() : sun.awt.DesktopBrowse;
 	
-	@:overload @:abstract public function browse(url : java.net.URL) : Void;
+	@:overload @:public @:abstract public function browse(url : java.net.URL) : Void;
 	
 	
 }

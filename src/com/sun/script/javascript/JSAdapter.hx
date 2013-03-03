@@ -66,47 +66,47 @@ package com.sun.script.javascript;
 */
 @:require(java6) extern class JSAdapter implements Scriptable implements Function
 {
-	@:overload public static function init(cx : Context, scope : Scriptable, sealed : Bool) : Void;
+	@:overload @:public @:static public static function init(cx : Context, scope : Scriptable, sealed : Bool) : Void;
 	
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
-	@:overload public function get(name : String, start : Scriptable) : Dynamic;
+	@:overload @:public public function get(name : String, start : Scriptable) : Dynamic;
 	
-	@:overload public function get(index : Int, start : Scriptable) : Dynamic;
+	@:overload @:public public function get(index : Int, start : Scriptable) : Dynamic;
 	
-	@:overload public function has(name : String, start : Scriptable) : Bool;
+	@:overload @:public public function has(name : String, start : Scriptable) : Bool;
 	
-	@:overload public function has(index : Int, start : Scriptable) : Bool;
+	@:overload @:public public function has(index : Int, start : Scriptable) : Bool;
 	
-	@:overload public function put(name : String, start : Scriptable, value : Dynamic) : Void;
+	@:overload @:public public function put(name : String, start : Scriptable, value : Dynamic) : Void;
 	
-	@:overload public function put(index : Int, start : Scriptable, value : Dynamic) : Void;
+	@:overload @:public public function put(index : Int, start : Scriptable, value : Dynamic) : Void;
 	
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
-	@:overload public function delete(index : Int) : Void;
+	@:overload @:public public function delete(index : Int) : Void;
 	
-	@:overload public function getPrototype() : Scriptable;
+	@:overload @:public public function getPrototype() : Scriptable;
 	
-	@:overload public function setPrototype(prototype : Scriptable) : Void;
+	@:overload @:public public function setPrototype(prototype : Scriptable) : Void;
 	
-	@:overload public function getParentScope() : Scriptable;
+	@:overload @:public public function getParentScope() : Scriptable;
 	
-	@:overload public function setParentScope(parent : Scriptable) : Void;
+	@:overload @:public public function setParentScope(parent : Scriptable) : Void;
 	
-	@:overload public function getIds() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getIds() : java.NativeArray<Dynamic>;
 	
-	@:overload public function hasInstance(scriptable : Scriptable) : Bool;
+	@:overload @:public public function hasInstance(scriptable : Scriptable) : Bool;
 	
-	@:overload public function getDefaultValue(hint : Class<Dynamic>) : Dynamic;
+	@:overload @:public public function getDefaultValue(hint : Class<Dynamic>) : Dynamic;
 	
-	@:overload public function call(cx : Context, scope : Scriptable, thisObj : Scriptable, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function call(cx : Context, scope : Scriptable, thisObj : Scriptable, args : java.NativeArray<Dynamic>) : Dynamic;
 	
-	@:overload public function construct(cx : Context, scope : Scriptable, args : java.NativeArray<Dynamic>) : Scriptable;
+	@:overload @:public public function construct(cx : Context, scope : Scriptable, args : java.NativeArray<Dynamic>) : Scriptable;
 	
-	@:overload public function getAdaptee() : Scriptable;
+	@:overload @:public public function getAdaptee() : Scriptable;
 	
-	@:overload public function setAdaptee(adaptee : Scriptable) : Void;
+	@:overload @:public public function setAdaptee(adaptee : Scriptable) : Void;
 	
 	
 }

@@ -29,27 +29,27 @@ extern class EndpointMessageContextImpl extends java.util.AbstractMap<String, Dy
 	* @param packet
 	*      The {@link Packet} to wrap.
 	*/
-	@:overload public function new(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function new(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload override public function get(key : Dynamic) : Dynamic;
+	@:overload @:public override public function get(key : Dynamic) : Dynamic;
 	
-	@:overload public function put(key : String, value : Dynamic) : Dynamic;
+	@:overload @:public public function put(key : String, value : Dynamic) : Dynamic;
 	
-	@:overload override public function remove(key : Dynamic) : Dynamic;
+	@:overload @:public override public function remove(key : Dynamic) : Dynamic;
 	
-	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, Dynamic>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, Dynamic>>;
 	
-	@:overload public function setScope(name : String, scope : javax.xml.ws.handler.MessageContext.MessageContext_Scope) : Void;
+	@:overload @:public public function setScope(name : String, scope : javax.xml.ws.handler.MessageContext.MessageContext_Scope) : Void;
 	
-	@:overload public function getScope(name : String) : javax.xml.ws.handler.MessageContext.MessageContext_Scope;
+	@:overload @:public public function getScope(name : String) : javax.xml.ws.handler.MessageContext.MessageContext_Scope;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$server$EndpointMessageContextImpl$EntrySet') @:internal extern class EndpointMessageContextImpl_EntrySet extends java.util.AbstractSet<java.util.Map.Map_Entry<String, Dynamic>>
 {
-	@:overload override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<String, Dynamic>>;
+	@:overload @:public override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<String, Dynamic>>;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	
 }

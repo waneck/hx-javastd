@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.message.jaxb;
 */
 @:internal extern class AttachmentMarshallerImpl extends javax.xml.bind.attachment.AttachmentMarshaller
 {
-	@:overload public function new(attachemnts : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
+	@:overload @:public public function new(attachemnts : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
 	
-	@:overload public function addMtomAttachment(data : javax.activation.DataHandler, elementNamespace : String, elementLocalName : String) : String;
+	@:overload @:public override public function addMtomAttachment(data : javax.activation.DataHandler, elementNamespace : String, elementLocalName : String) : String;
 	
-	@:overload public function addMtomAttachment(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int, mimeType : String, elementNamespace : String, elementLocalName : String) : String;
+	@:overload @:public override public function addMtomAttachment(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int, mimeType : String, elementNamespace : String, elementLocalName : String) : String;
 	
-	@:overload public function addSwaRefAttachment(data : javax.activation.DataHandler) : String;
+	@:overload @:public override public function addSwaRefAttachment(data : javax.activation.DataHandler) : String;
 	
 	
 }

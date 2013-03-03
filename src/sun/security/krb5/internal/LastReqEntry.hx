@@ -29,7 +29,7 @@ package sun.security.krb5.internal;
 */
 extern class LastReqEntry
 {
-	@:overload public function new(Type : Int, time : sun.security.krb5.internal.KerberosTime) : Void;
+	@:overload @:public public function new(Type : Int, time : sun.security.krb5.internal.KerberosTime) : Void;
 	
 	/**
 	* Constructs a LastReqEntry object.
@@ -37,7 +37,7 @@ extern class LastReqEntry
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes an LastReqEntry object.
@@ -45,9 +45,9 @@ extern class LastReqEntry
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

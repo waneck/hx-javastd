@@ -33,7 +33,7 @@ extern interface StringCounter extends sun.management.counter.Counter
 	/**
 	* Get a copy of the value of the StringCounter.
 	*/
-	@:overload public function stringValue() : String;
+	@:overload @:public public function stringValue() : String;
 	
 	
 }

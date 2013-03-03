@@ -30,7 +30,7 @@ extern class ImageReader
 	* or <code>null</code> if its identity is not known or none
 	* exists.  By default it is initialized to <code>null</code>.
 	*/
-	private var originatingProvider : javax.imageio.spi.ImageReaderSpi;
+	@:protected private var originatingProvider : javax.imageio.spi.ImageReaderSpi;
 	
 	/**
 	* The <code>ImageInputStream</code> or other
@@ -38,7 +38,7 @@ extern class ImageReader
 	* by <code>getInput</code>.  By default it is initialized to
 	* <code>null</code>.
 	*/
-	private var input : Dynamic;
+	@:protected private var input : Dynamic;
 	
 	/**
 	* <code>true</code> if the current input source has been marked
@@ -48,7 +48,7 @@ extern class ImageReader
 	* @see #minIndex
 	* @see #setInput
 	*/
-	private var seekForwardOnly : Bool;
+	@:protected private var seekForwardOnly : Bool;
 	
 	/**
 	* <code>true</code> if the current input source has been marked
@@ -57,7 +57,7 @@ extern class ImageReader
 	*
 	* @see #setInput
 	*/
-	private var ignoreMetadata : Bool;
+	@:protected private var ignoreMetadata : Bool;
 	
 	/**
 	* The smallest valid index for reading, initially 0.  When
@@ -69,20 +69,20 @@ extern class ImageReader
 	* @see #seekForwardOnly
 	* @see #setInput
 	*/
-	private var minIndex : Int;
+	@:protected private var minIndex : Int;
 	
 	/**
 	* An array of <code>Locale</code>s which may be used to localize
 	* warning messages, or <code>null</code> if localization is not
 	* supported.
 	*/
-	private var availableLocales : java.NativeArray<java.util.Locale>;
+	@:protected private var availableLocales : java.NativeArray<java.util.Locale>;
 	
 	/**
 	* The current <code>Locale</code> to be used for localization, or
 	* <code>null</code> if none has been set.
 	*/
-	private var locale : java.util.Locale;
+	@:protected private var locale : java.util.Locale;
 	
 	/**
 	* A <code>List</code> of currently registered
@@ -90,7 +90,7 @@ extern class ImageReader
 	* <code>null</code>, which is synonymous with an empty
 	* <code>List</code>.
 	*/
-	private var warningListeners : java.util.List<javax.imageio.event.IIOReadWarningListener>;
+	@:protected private var warningListeners : java.util.List<javax.imageio.event.IIOReadWarningListener>;
 	
 	/**
 	* A <code>List</code> of the <code>Locale</code>s associated with
@@ -98,7 +98,7 @@ extern class ImageReader
 	* initialized by default to <code>null</code>, which is
 	* synonymous with an empty <code>List</code>.
 	*/
-	private var warningLocales : java.util.List<java.util.Locale>;
+	@:protected private var warningLocales : java.util.List<java.util.Locale>;
 	
 	/**
 	* A <code>List</code> of currently registered
@@ -106,7 +106,7 @@ extern class ImageReader
 	* to <code>null</code>, which is synonymous with an empty
 	* <code>List</code>.
 	*/
-	private var progressListeners : java.util.List<javax.imageio.event.IIOReadProgressListener>;
+	@:protected private var progressListeners : java.util.List<javax.imageio.event.IIOReadProgressListener>;
 	
 	/**
 	* A <code>List</code> of currently registered
@@ -114,7 +114,7 @@ extern class ImageReader
 	* <code>null</code>, which is synonymous with an empty
 	* <code>List</code>.
 	*/
-	private var updateListeners : java.util.List<javax.imageio.event.IIOReadUpdateListener>;
+	@:protected private var updateListeners : java.util.List<javax.imageio.event.IIOReadUpdateListener>;
 	
 	/**
 	* Constructs an <code>ImageReader</code> and sets its
@@ -129,7 +129,7 @@ extern class ImageReader
 	* @param originatingProvider the <code>ImageReaderSpi</code> that is
 	* invoking this constructor, or <code>null</code>.
 	*/
-	@:overload private function new(originatingProvider : javax.imageio.spi.ImageReaderSpi) : Void;
+	@:overload @:protected private function new(originatingProvider : javax.imageio.spi.ImageReaderSpi) : Void;
 	
 	/**
 	* Returns a <code>String</code> identifying the format of the
@@ -146,7 +146,7 @@ extern class ImageReader
 	*
 	* @return the format name, as a <code>String</code>.
 	*/
-	@:overload public function getFormatName() : String;
+	@:overload @:public public function getFormatName() : String;
 	
 	/**
 	* Returns the <code>ImageReaderSpi</code> that was passed in on
@@ -156,7 +156,7 @@ extern class ImageReader
 	*
 	* @see ImageReaderSpi
 	*/
-	@:overload public function getOriginatingProvider() : javax.imageio.spi.ImageReaderSpi;
+	@:overload @:public public function getOriginatingProvider() : javax.imageio.spi.ImageReaderSpi;
 	
 	/**
 	* Sets the input source to use to the given
@@ -226,7 +226,7 @@ extern class ImageReader
 	* @see #getInput
 	* @see javax.imageio.spi.ImageReaderSpi#getInputTypes
 	*/
-	@:overload public function setInput(input : Dynamic, seekForwardOnly : Bool, ignoreMetadata : Bool) : Void;
+	@:overload @:public public function setInput(input : Dynamic, seekForwardOnly : Bool, ignoreMetadata : Bool) : Void;
 	
 	/**
 	* Sets the input source to use to the given
@@ -263,7 +263,7 @@ extern class ImageReader
 	*
 	* @see #getInput
 	*/
-	@:overload public function setInput(input : Dynamic, seekForwardOnly : Bool) : Void;
+	@:overload @:public public function setInput(input : Dynamic, seekForwardOnly : Bool) : Void;
 	
 	/**
 	* Sets the input source to use to the given
@@ -286,7 +286,7 @@ extern class ImageReader
 	*
 	* @see #getInput
 	*/
-	@:overload public function setInput(input : Dynamic) : Void;
+	@:overload @:public public function setInput(input : Dynamic) : Void;
 	
 	/**
 	* Returns the <code>ImageInputStream</code> or other
@@ -299,7 +299,7 @@ extern class ImageReader
 	* @see ImageInputStream
 	* @see #setInput
 	*/
-	@:overload public function getInput() : Dynamic;
+	@:overload @:public public function getInput() : Dynamic;
 	
 	/**
 	* Returns <code>true</code> if the current input source has been
@@ -312,7 +312,7 @@ extern class ImageReader
 	*
 	* @see #setInput
 	*/
-	@:overload public function isSeekForwardOnly() : Bool;
+	@:overload @:public public function isSeekForwardOnly() : Bool;
 	
 	/**
 	* Returns <code>true</code> if the current input source has been
@@ -324,7 +324,7 @@ extern class ImageReader
 	*
 	* @see #setInput
 	*/
-	@:overload public function isIgnoringMetadata() : Bool;
+	@:overload @:public public function isIgnoringMetadata() : Bool;
 	
 	/**
 	* Returns the lowest valid index for reading an image, thumbnail,
@@ -336,7 +336,7 @@ extern class ImageReader
 	*
 	* @return the minimum legal index for reading.
 	*/
-	@:overload public function getMinIndex() : Int;
+	@:overload @:public public function getMinIndex() : Int;
 	
 	/**
 	* Returns an array of <code>Locale</code>s that may be used to
@@ -351,7 +351,7 @@ extern class ImageReader
 	* @return an array of <code>Locale</code>s that may be used as
 	* arguments to <code>setLocale</code>, or <code>null</code>.
 	*/
-	@:overload public function getAvailableLocales() : java.NativeArray<java.util.Locale>;
+	@:overload @:public public function getAvailableLocales() : java.NativeArray<java.util.Locale>;
 	
 	/**
 	* Sets the current <code>Locale</code> of this
@@ -368,7 +368,7 @@ extern class ImageReader
 	*
 	* @see #getLocale
 	*/
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
 	/**
 	* Returns the currently set <code>Locale</code>, or
@@ -378,7 +378,7 @@ extern class ImageReader
 	*
 	* @see #setLocale
 	*/
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	/**
 	* Returns the number of images, not including thumbnails, available
@@ -417,7 +417,7 @@ extern class ImageReader
 	*
 	* @see #setInput
 	*/
-	@:overload @:abstract public function getNumImages(allowSearch : Bool) : Int;
+	@:overload @:public @:abstract public function getNumImages(allowSearch : Bool) : Int;
 	
 	/**
 	* Returns the width in pixels of the given image within the input
@@ -436,7 +436,7 @@ extern class ImageReader
 	* @exception IOException if an error occurs reading the width
 	* information from the input source.
 	*/
-	@:overload @:abstract public function getWidth(imageIndex : Int) : Int;
+	@:overload @:public @:abstract public function getWidth(imageIndex : Int) : Int;
 	
 	/**
 	* Returns the height in pixels of the given image within the
@@ -455,7 +455,7 @@ extern class ImageReader
 	* @exception IOException if an error occurs reading the height
 	* information from the input source.
 	*/
-	@:overload @:abstract public function getHeight(imageIndex : Int) : Int;
+	@:overload @:public @:abstract public function getHeight(imageIndex : Int) : Int;
 	
 	/**
 	* Returns <code>true</code> if the storage format of the given
@@ -496,7 +496,7 @@ extern class ImageReader
 	* is out of bounds.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function isRandomAccessEasy(imageIndex : Int) : Bool;
+	@:overload @:public public function isRandomAccessEasy(imageIndex : Int) : Bool;
 	
 	/**
 	* Returns the aspect ratio of the given image (that is, its width
@@ -519,7 +519,7 @@ extern class ImageReader
 	* out of bounds.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function getAspectRatio(imageIndex : Int) : Single;
+	@:overload @:public public function getAspectRatio(imageIndex : Int) : Single;
 	
 	/**
 	* Returns an <code>ImageTypeSpecifier</code> indicating the
@@ -544,7 +544,7 @@ extern class ImageReader
 	* @exception IOException if an error occurs reading the format
 	* information from the input source.
 	*/
-	@:overload public function getRawImageType(imageIndex : Int) : javax.imageio.ImageTypeSpecifier;
+	@:overload @:public public function getRawImageType(imageIndex : Int) : javax.imageio.ImageTypeSpecifier;
 	
 	/**
 	* Returns an <code>Iterator</code> containing possible image
@@ -574,7 +574,7 @@ extern class ImageReader
 	* @see ImageReadParam#setDestination(BufferedImage)
 	* @see ImageReadParam#setDestinationType(ImageTypeSpecifier)
 	*/
-	@:overload @:abstract public function getImageTypes(imageIndex : Int) : java.util.Iterator<javax.imageio.ImageTypeSpecifier>;
+	@:overload @:public @:abstract public function getImageTypes(imageIndex : Int) : java.util.Iterator<javax.imageio.ImageTypeSpecifier>;
 	
 	/**
 	* Returns a default <code>ImageReadParam</code> object
@@ -591,7 +591,7 @@ extern class ImageReader
 	* @return an <code>ImageReadParam</code> object which may be used
 	* to control the decoding process using a set of default settings.
 	*/
-	@:overload public function getDefaultReadParam() : javax.imageio.ImageReadParam;
+	@:overload @:public public function getDefaultReadParam() : javax.imageio.ImageReadParam;
 	
 	/**
 	* Returns an <code>IIOMetadata</code> object representing the
@@ -604,7 +604,7 @@ extern class ImageReader
 	*
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload @:abstract public function getStreamMetadata() : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public @:abstract public function getStreamMetadata() : javax.imageio.metadata.IIOMetadata;
 	
 	/**
 	* Returns an <code>IIOMetadata</code> object representing the
@@ -647,7 +647,7 @@ extern class ImageReader
 	* is <code>null</code>.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function getStreamMetadata(formatName : String, nodeNames : java.util.Set<String>) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public public function getStreamMetadata(formatName : String, nodeNames : java.util.Set<String>) : javax.imageio.metadata.IIOMetadata;
 	
 	/**
 	* Returns an <code>IIOMetadata</code> object containing metadata
@@ -667,7 +667,7 @@ extern class ImageReader
 	* out of bounds.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload @:abstract public function getImageMetadata(imageIndex : Int) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public @:abstract public function getImageMetadata(imageIndex : Int) : javax.imageio.metadata.IIOMetadata;
 	
 	/**
 	* Returns an <code>IIOMetadata</code> object representing the
@@ -716,7 +716,7 @@ extern class ImageReader
 	* is <code>null</code>.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function getImageMetadata(imageIndex : Int, formatName : String, nodeNames : java.util.Set<String>) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public public function getImageMetadata(imageIndex : Int, formatName : String, nodeNames : java.util.Set<String>) : javax.imageio.metadata.IIOMetadata;
 	
 	/**
 	* Reads the image indexed by <code>imageIndex</code> and returns
@@ -750,7 +750,7 @@ extern class ImageReader
 	* out of bounds.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function read(imageIndex : Int) : java.awt.image.BufferedImage;
+	@:overload @:public public function read(imageIndex : Int) : java.awt.image.BufferedImage;
 	
 	/**
 	* Reads the image indexed by <code>imageIndex</code> and returns
@@ -807,7 +807,7 @@ extern class ImageReader
 	* have a width or height less than 1.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload @:abstract public function read(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.BufferedImage;
+	@:overload @:public @:abstract public function read(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.BufferedImage;
 	
 	/**
 	* Reads the image indexed by <code>imageIndex</code> and returns
@@ -869,7 +869,7 @@ extern class ImageReader
 	* would have a width or height less than 1.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function readAll(imageIndex : Int, param : javax.imageio.ImageReadParam) : javax.imageio.IIOImage;
+	@:overload @:public public function readAll(imageIndex : Int, param : javax.imageio.ImageReadParam) : javax.imageio.IIOImage;
 	
 	/**
 	* Returns an <code>Iterator</code> containing all the images,
@@ -945,7 +945,7 @@ extern class ImageReader
 	* @see ImageReadParam
 	* @see IIOImage
 	*/
-	@:overload public function readAll(params : java.util.Iterator<javax.imageio.ImageReadParam>) : java.util.Iterator<javax.imageio.IIOImage>;
+	@:overload @:public public function readAll(params : java.util.Iterator<javax.imageio.ImageReadParam>) : java.util.Iterator<javax.imageio.IIOImage>;
 	
 	/**
 	* Returns <code>true</code> if this plug-in supports reading
@@ -963,7 +963,7 @@ extern class ImageReader
 	* @see #readRaster
 	* @see #readTileRaster
 	*/
-	@:overload public function canReadRaster() : Bool;
+	@:overload @:public public function canReadRaster() : Bool;
 	
 	/**
 	* Returns a new <code>Raster</code> object containing the raw pixel data
@@ -1018,7 +1018,7 @@ extern class ImageReader
 	* @see #read
 	* @see java.awt.image.Raster
 	*/
-	@:overload public function readRaster(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.Raster;
+	@:overload @:public public function readRaster(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.Raster;
 	
 	/**
 	* Returns <code>true</code> if the image is organized into
@@ -1053,7 +1053,7 @@ extern class ImageReader
 	* is out of bounds.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function isImageTiled(imageIndex : Int) : Bool;
+	@:overload @:public public function isImageTiled(imageIndex : Int) : Bool;
 	
 	/**
 	* Returns the width of a tile in the given image.
@@ -1072,7 +1072,7 @@ extern class ImageReader
 	* out of bounds.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function getTileWidth(imageIndex : Int) : Int;
+	@:overload @:public public function getTileWidth(imageIndex : Int) : Int;
 	
 	/**
 	* Returns the height of a tile in the given image.
@@ -1091,7 +1091,7 @@ extern class ImageReader
 	* out of bounds.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function getTileHeight(imageIndex : Int) : Int;
+	@:overload @:public public function getTileHeight(imageIndex : Int) : Int;
 	
 	/**
 	* Returns the X coordinate of the upper-left corner of tile (0,
@@ -1119,7 +1119,7 @@ extern class ImageReader
 	* is out of bounds.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function getTileGridXOffset(imageIndex : Int) : Int;
+	@:overload @:public public function getTileGridXOffset(imageIndex : Int) : Int;
 	
 	/**
 	* Returns the Y coordinate of the upper-left corner of tile (0,
@@ -1147,7 +1147,7 @@ extern class ImageReader
 	* is out of bounds.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function getTileGridYOffset(imageIndex : Int) : Int;
+	@:overload @:public public function getTileGridYOffset(imageIndex : Int) : Int;
 	
 	/**
 	* Reads the tile indicated by the <code>tileX</code> and
@@ -1189,7 +1189,7 @@ extern class ImageReader
 	* out of bounds.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function readTile(imageIndex : Int, tileX : Int, tileY : Int) : java.awt.image.BufferedImage;
+	@:overload @:public public function readTile(imageIndex : Int, tileX : Int, tileY : Int) : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns a new <code>Raster</code> object containing the raw
@@ -1229,7 +1229,7 @@ extern class ImageReader
 	* @see #readRaster
 	* @see java.awt.image.Raster
 	*/
-	@:overload public function readTileRaster(imageIndex : Int, tileX : Int, tileY : Int) : java.awt.image.Raster;
+	@:overload @:public public function readTileRaster(imageIndex : Int, tileX : Int, tileY : Int) : java.awt.image.Raster;
 	
 	/**
 	* Returns a <code>RenderedImage</code> object that contains the
@@ -1275,7 +1275,7 @@ extern class ImageReader
 	* would have a width or height less than 1.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function readAsRenderedImage(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.RenderedImage;
+	@:overload @:public public function readAsRenderedImage(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.RenderedImage;
 	
 	/**
 	* Returns <code>true</code> if the image format understood by
@@ -1294,7 +1294,7 @@ extern class ImageReader
 	*
 	* @return <code>true</code> if thumbnails are supported.
 	*/
-	@:overload public function readerSupportsThumbnails() : Bool;
+	@:overload @:public public function readerSupportsThumbnails() : Bool;
 	
 	/**
 	* Returns <code>true</code> if the given image has thumbnail
@@ -1317,7 +1317,7 @@ extern class ImageReader
 	* thumbnails but <code>imageIndex</code> is out of bounds.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function hasThumbnails(imageIndex : Int) : Bool;
+	@:overload @:public public function hasThumbnails(imageIndex : Int) : Bool;
 	
 	/**
 	* Returns the number of thumbnail preview images associated with
@@ -1341,7 +1341,7 @@ extern class ImageReader
 	* thumbnails but <code>imageIndex</code> is out of bounds.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function getNumThumbnails(imageIndex : Int) : Int;
+	@:overload @:public public function getNumThumbnails(imageIndex : Int) : Int;
 	
 	/**
 	* Returns the width of the thumbnail preview image indexed by
@@ -1371,7 +1371,7 @@ extern class ImageReader
 	* indices are out of bounds.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function getThumbnailWidth(imageIndex : Int, thumbnailIndex : Int) : Int;
+	@:overload @:public public function getThumbnailWidth(imageIndex : Int, thumbnailIndex : Int) : Int;
 	
 	/**
 	* Returns the height of the thumbnail preview image indexed by
@@ -1401,7 +1401,7 @@ extern class ImageReader
 	* indices are out of bounds.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function getThumbnailHeight(imageIndex : Int, thumbnailIndex : Int) : Int;
+	@:overload @:public public function getThumbnailHeight(imageIndex : Int, thumbnailIndex : Int) : Int;
 	
 	/**
 	* Returns the thumbnail preview image indexed by
@@ -1434,7 +1434,7 @@ extern class ImageReader
 	* indices are out of bounds.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public function readThumbnail(imageIndex : Int, thumbnailIndex : Int) : java.awt.image.BufferedImage;
+	@:overload @:public public function readThumbnail(imageIndex : Int, thumbnailIndex : Int) : java.awt.image.BufferedImage;
 	
 	/**
 	* Requests that any current read operation be aborted.  The
@@ -1444,7 +1444,7 @@ extern class ImageReader
 	* beginning of each read operation, and poll the value of
 	* <code>abortRequested</code> regularly during the read.
 	*/
-	@:overload @:synchronized public function abort() : Void;
+	@:overload @:public @:synchronized public function abort() : Void;
 	
 	/**
 	* Returns <code>true</code> if a request to abort the current
@@ -1457,7 +1457,7 @@ extern class ImageReader
 	* @see #abort
 	* @see #clearAbortRequest
 	*/
-	@:overload @:synchronized private function abortRequested() : Bool;
+	@:overload @:protected @:synchronized private function abortRequested() : Bool;
 	
 	/**
 	* Clears any previous abort request.  After this method has been
@@ -1467,7 +1467,7 @@ extern class ImageReader
 	* @see #abort
 	* @see #abortRequested
 	*/
-	@:overload @:synchronized private function clearAbortRequest() : Void;
+	@:overload @:protected @:synchronized private function clearAbortRequest() : Void;
 	
 	/**
 	* Adds an <code>IIOReadWarningListener</code> to the list of
@@ -1482,7 +1482,7 @@ extern class ImageReader
 	*
 	* @see #removeIIOReadWarningListener
 	*/
-	@:overload public function addIIOReadWarningListener(listener : javax.imageio.event.IIOReadWarningListener) : Void;
+	@:overload @:public public function addIIOReadWarningListener(listener : javax.imageio.event.IIOReadWarningListener) : Void;
 	
 	/**
 	* Removes an <code>IIOReadWarningListener</code> from the list of
@@ -1494,7 +1494,7 @@ extern class ImageReader
 	*
 	* @see #addIIOReadWarningListener
 	*/
-	@:overload public function removeIIOReadWarningListener(listener : javax.imageio.event.IIOReadWarningListener) : Void;
+	@:overload @:public public function removeIIOReadWarningListener(listener : javax.imageio.event.IIOReadWarningListener) : Void;
 	
 	/**
 	* Removes all currently registered
@@ -1504,7 +1504,7 @@ extern class ImageReader
 	* <code>warningListeners</code> and <code>warningLocales</code>
 	* instance variables to <code>null</code>.
 	*/
-	@:overload public function removeAllIIOReadWarningListeners() : Void;
+	@:overload @:public public function removeAllIIOReadWarningListeners() : Void;
 	
 	/**
 	* Adds an <code>IIOReadProgressListener</code> to the list of
@@ -1516,7 +1516,7 @@ extern class ImageReader
 	*
 	* @see #removeIIOReadProgressListener
 	*/
-	@:overload public function addIIOReadProgressListener(listener : javax.imageio.event.IIOReadProgressListener) : Void;
+	@:overload @:public public function addIIOReadProgressListener(listener : javax.imageio.event.IIOReadProgressListener) : Void;
 	
 	/**
 	* Removes an <code>IIOReadProgressListener</code> from the list
@@ -1529,7 +1529,7 @@ extern class ImageReader
 	*
 	* @see #addIIOReadProgressListener
 	*/
-	@:overload public function removeIIOReadProgressListener(listener : javax.imageio.event.IIOReadProgressListener) : Void;
+	@:overload @:public public function removeIIOReadProgressListener(listener : javax.imageio.event.IIOReadProgressListener) : Void;
 	
 	/**
 	* Removes all currently registered
@@ -1539,7 +1539,7 @@ extern class ImageReader
 	* <code>progressListeners</code> instance variable to
 	* <code>null</code>.
 	*/
-	@:overload public function removeAllIIOReadProgressListeners() : Void;
+	@:overload @:public public function removeAllIIOReadProgressListeners() : Void;
 	
 	/**
 	* Adds an <code>IIOReadUpdateListener</code> to the list of
@@ -1574,7 +1574,7 @@ extern class ImageReader
 	*
 	* @see #removeIIOReadUpdateListener
 	*/
-	@:overload public function addIIOReadUpdateListener(listener : javax.imageio.event.IIOReadUpdateListener) : Void;
+	@:overload @:public public function addIIOReadUpdateListener(listener : javax.imageio.event.IIOReadUpdateListener) : Void;
 	
 	/**
 	* Removes an <code>IIOReadUpdateListener</code> from the list of
@@ -1587,7 +1587,7 @@ extern class ImageReader
 	*
 	* @see #addIIOReadUpdateListener
 	*/
-	@:overload public function removeIIOReadUpdateListener(listener : javax.imageio.event.IIOReadUpdateListener) : Void;
+	@:overload @:public public function removeIIOReadUpdateListener(listener : javax.imageio.event.IIOReadUpdateListener) : Void;
 	
 	/**
 	* Removes all currently registered
@@ -1597,7 +1597,7 @@ extern class ImageReader
 	* <code>updateListeners</code> instance variable to
 	* <code>null</code>.
 	*/
-	@:overload public function removeAllIIOReadUpdateListeners() : Void;
+	@:overload @:public public function removeAllIIOReadUpdateListeners() : Void;
 	
 	/**
 	* Broadcasts the start of an sequence of image reads to all
@@ -1607,7 +1607,7 @@ extern class ImageReader
 	*
 	* @param minIndex the lowest index being read.
 	*/
-	@:overload private function processSequenceStarted(minIndex : Int) : Void;
+	@:overload @:protected private function processSequenceStarted(minIndex : Int) : Void;
 	
 	/**
 	* Broadcasts the completion of an sequence of image reads to all
@@ -1615,7 +1615,7 @@ extern class ImageReader
 	* their <code>sequenceComplete</code> method.  Subclasses may use
 	* this method as a convenience.
 	*/
-	@:overload private function processSequenceComplete() : Void;
+	@:overload @:protected private function processSequenceComplete() : Void;
 	
 	/**
 	* Broadcasts the start of an image read to all registered
@@ -1625,7 +1625,7 @@ extern class ImageReader
 	*
 	* @param imageIndex the index of the image about to be read.
 	*/
-	@:overload private function processImageStarted(imageIndex : Int) : Void;
+	@:overload @:protected private function processImageStarted(imageIndex : Int) : Void;
 	
 	/**
 	* Broadcasts the current percentage of image completion to all
@@ -1636,7 +1636,7 @@ extern class ImageReader
 	* @param percentageDone the current percentage of completion,
 	* as a <code>float</code>.
 	*/
-	@:overload private function processImageProgress(percentageDone : Single) : Void;
+	@:overload @:protected private function processImageProgress(percentageDone : Single) : Void;
 	
 	/**
 	* Broadcasts the completion of an image read to all registered
@@ -1644,7 +1644,7 @@ extern class ImageReader
 	* <code>imageComplete</code> method.  Subclasses may use this
 	* method as a convenience.
 	*/
-	@:overload private function processImageComplete() : Void;
+	@:overload @:protected private function processImageComplete() : Void;
 	
 	/**
 	* Broadcasts the start of a thumbnail read to all registered
@@ -1656,7 +1656,7 @@ extern class ImageReader
 	* thumbnail.
 	* @param thumbnailIndex the index of the thumbnail.
 	*/
-	@:overload private function processThumbnailStarted(imageIndex : Int, thumbnailIndex : Int) : Void;
+	@:overload @:protected private function processThumbnailStarted(imageIndex : Int, thumbnailIndex : Int) : Void;
 	
 	/**
 	* Broadcasts the current percentage of thumbnail completion to
@@ -1667,7 +1667,7 @@ extern class ImageReader
 	* @param percentageDone the current percentage of completion,
 	* as a <code>float</code>.
 	*/
-	@:overload private function processThumbnailProgress(percentageDone : Single) : Void;
+	@:overload @:protected private function processThumbnailProgress(percentageDone : Single) : Void;
 	
 	/**
 	* Broadcasts the completion of a thumbnail read to all registered
@@ -1675,7 +1675,7 @@ extern class ImageReader
 	* <code>thumbnailComplete</code> method.  Subclasses may use this
 	* method as a convenience.
 	*/
-	@:overload private function processThumbnailComplete() : Void;
+	@:overload @:protected private function processThumbnailComplete() : Void;
 	
 	/**
 	* Broadcasts that the read has been aborted to all registered
@@ -1683,7 +1683,7 @@ extern class ImageReader
 	* <code>readAborted</code> method.  Subclasses may use this
 	* method as a convenience.
 	*/
-	@:overload private function processReadAborted() : Void;
+	@:overload @:protected private function processReadAborted() : Void;
 	
 	/**
 	* Broadcasts the beginning of a progressive pass to all
@@ -1704,7 +1704,7 @@ extern class ImageReader
 	* @param bands an array of <code>int</code>s indicating the
 	* set of affected bands of the destination.
 	*/
-	@:overload private function processPassStarted(theImage : java.awt.image.BufferedImage, pass : Int, minPass : Int, maxPass : Int, minX : Int, minY : Int, periodX : Int, periodY : Int, bands : java.NativeArray<Int>) : Void;
+	@:overload @:protected private function processPassStarted(theImage : java.awt.image.BufferedImage, pass : Int, minPass : Int, maxPass : Int, minX : Int, minY : Int, periodX : Int, periodY : Int, bands : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Broadcasts the update of a set of samples to all registered
@@ -1726,7 +1726,7 @@ extern class ImageReader
 	* @param bands an array of <code>int</code>s indicating the
 	* set of affected bands of the destination.
 	*/
-	@:overload private function processImageUpdate(theImage : java.awt.image.BufferedImage, minX : Int, minY : Int, width : Int, height : Int, periodX : Int, periodY : Int, bands : java.NativeArray<Int>) : Void;
+	@:overload @:protected private function processImageUpdate(theImage : java.awt.image.BufferedImage, minX : Int, minY : Int, width : Int, height : Int, periodX : Int, periodY : Int, bands : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Broadcasts the end of a progressive pass to all
@@ -1736,7 +1736,7 @@ extern class ImageReader
 	*
 	* @param theImage the <code>BufferedImage</code> being updated.
 	*/
-	@:overload private function processPassComplete(theImage : java.awt.image.BufferedImage) : Void;
+	@:overload @:protected private function processPassComplete(theImage : java.awt.image.BufferedImage) : Void;
 	
 	/**
 	* Broadcasts the beginning of a thumbnail progressive pass to all
@@ -1758,7 +1758,7 @@ extern class ImageReader
 	* @param bands an array of <code>int</code>s indicating the
 	* set of affected bands of the destination.
 	*/
-	@:overload private function processThumbnailPassStarted(theThumbnail : java.awt.image.BufferedImage, pass : Int, minPass : Int, maxPass : Int, minX : Int, minY : Int, periodX : Int, periodY : Int, bands : java.NativeArray<Int>) : Void;
+	@:overload @:protected private function processThumbnailPassStarted(theThumbnail : java.awt.image.BufferedImage, pass : Int, minPass : Int, maxPass : Int, minX : Int, minY : Int, periodX : Int, periodY : Int, bands : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Broadcasts the update of a set of samples in a thumbnail image
@@ -1781,7 +1781,7 @@ extern class ImageReader
 	* @param bands an array of <code>int</code>s indicating the
 	* set of affected bands of the destination.
 	*/
-	@:overload private function processThumbnailUpdate(theThumbnail : java.awt.image.BufferedImage, minX : Int, minY : Int, width : Int, height : Int, periodX : Int, periodY : Int, bands : java.NativeArray<Int>) : Void;
+	@:overload @:protected private function processThumbnailUpdate(theThumbnail : java.awt.image.BufferedImage, minX : Int, minY : Int, width : Int, height : Int, periodX : Int, periodY : Int, bands : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Broadcasts the end of a thumbnail progressive pass to all
@@ -1792,7 +1792,7 @@ extern class ImageReader
 	* @param theThumbnail the <code>BufferedImage</code> thumbnail
 	* being updated.
 	*/
-	@:overload private function processThumbnailPassComplete(theThumbnail : java.awt.image.BufferedImage) : Void;
+	@:overload @:protected private function processThumbnailPassComplete(theThumbnail : java.awt.image.BufferedImage) : Void;
 	
 	/**
 	* Broadcasts a warning message to all registered
@@ -1805,7 +1805,7 @@ extern class ImageReader
 	* @exception IllegalArgumentException if <code>warning</code>
 	* is <code>null</code>.
 	*/
-	@:overload private function processWarningOccurred(warning : String) : Void;
+	@:overload @:protected private function processWarningOccurred(warning : String) : Void;
 	
 	/**
 	* Broadcasts a localized warning message to all registered
@@ -1832,7 +1832,7 @@ extern class ImageReader
 	* from the <code>ResourceBundle</code> is not a
 	* <code>String</code>.
 	*/
-	@:overload private function processWarningOccurred(baseName : String, keyword : String) : Void;
+	@:overload @:protected private function processWarningOccurred(baseName : String, keyword : String) : Void;
 	
 	/**
 	* Restores the <code>ImageReader</code> to its initial state.
@@ -1844,7 +1844,7 @@ extern class ImageReader
 	* <code>removeAllIIOReadProgressListeners()</code>, and
 	* <code>clearAbortRequest</code>.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Allows any resources held by this object to be released.  The
@@ -1861,7 +1861,7 @@ extern class ImageReader
 	* nothing.  Subclass implementations should ensure that all resources,
 	* especially native resources, are released.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* A utility method that may be used by readers to compute the
@@ -1881,7 +1881,7 @@ extern class ImageReader
 	*
 	* @return the source region as a <code>Rectangle</code>.
 	*/
-	@:overload private static function getSourceRegion(param : javax.imageio.ImageReadParam, srcWidth : Int, srcHeight : Int) : java.awt.Rectangle;
+	@:overload @:protected @:static private static function getSourceRegion(param : javax.imageio.ImageReadParam, srcWidth : Int, srcHeight : Int) : java.awt.Rectangle;
 	
 	/**
 	* Computes the source region of interest and the destination
@@ -1927,7 +1927,7 @@ extern class ImageReader
 	* @exception IllegalArgumentException if the resulting source or
 	* destination region is empty.
 	*/
-	@:overload private static function computeRegions(param : javax.imageio.ImageReadParam, srcWidth : Int, srcHeight : Int, image : java.awt.image.BufferedImage, srcRegion : java.awt.Rectangle, destRegion : java.awt.Rectangle) : Void;
+	@:overload @:protected @:static private static function computeRegions(param : javax.imageio.ImageReadParam, srcWidth : Int, srcHeight : Int, image : java.awt.image.BufferedImage, srcRegion : java.awt.Rectangle, destRegion : java.awt.Rectangle) : Void;
 	
 	/**
 	* A utility method that may be used by readers to test the
@@ -1965,7 +1965,7 @@ extern class ImageReader
 	* contains an invalid specification of a source and/or
 	* destination band subset.
 	*/
-	@:overload private static function checkReadParamBandSettings(param : javax.imageio.ImageReadParam, numSrcBands : Int, numDstBands : Int) : Void;
+	@:overload @:protected @:static private static function checkReadParamBandSettings(param : javax.imageio.ImageReadParam, numSrcBands : Int, numDstBands : Int) : Void;
 	
 	/**
 	* Returns the <code>BufferedImage</code> to which decoded pixel
@@ -2015,7 +2015,7 @@ extern class ImageReader
 	* <code>width</code> and <code>height</code> is greater than
 	* <code>Integer.MAX_VALUE</code>.
 	*/
-	@:overload private static function getDestination(param : javax.imageio.ImageReadParam, imageTypes : java.util.Iterator<javax.imageio.ImageTypeSpecifier>, width : Int, height : Int) : java.awt.image.BufferedImage;
+	@:overload @:protected @:static private static function getDestination(param : javax.imageio.ImageReadParam, imageTypes : java.util.Iterator<javax.imageio.ImageTypeSpecifier>, width : Int, height : Int) : java.awt.image.BufferedImage;
 	
 	
 }

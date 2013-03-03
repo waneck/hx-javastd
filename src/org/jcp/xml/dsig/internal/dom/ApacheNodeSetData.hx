@@ -27,11 +27,11 @@ package org.jcp.xml.dsig.internal.dom;
 */
 extern class ApacheNodeSetData implements org.jcp.xml.dsig.internal.dom.ApacheData implements javax.xml.crypto.NodeSetData
 {
-	@:overload public function new(xi : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput) : Void;
+	@:overload @:public public function new(xi : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput) : Void;
 	
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function getXMLSignatureInput() : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public public function getXMLSignatureInput() : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	
 }

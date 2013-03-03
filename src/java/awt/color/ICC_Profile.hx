@@ -37,611 +37,611 @@ extern class ICC_Profile implements java.io.Serializable
 	/**
 	* Profile class is input.
 	*/
-	public static var CLASS_INPUT(default, null) : Int;
+	@:public @:static @:final public static var CLASS_INPUT(default, null) : Int;
 	
 	/**
 	* Profile class is display.
 	*/
-	public static var CLASS_DISPLAY(default, null) : Int;
+	@:public @:static @:final public static var CLASS_DISPLAY(default, null) : Int;
 	
 	/**
 	* Profile class is output.
 	*/
-	public static var CLASS_OUTPUT(default, null) : Int;
+	@:public @:static @:final public static var CLASS_OUTPUT(default, null) : Int;
 	
 	/**
 	* Profile class is device link.
 	*/
-	public static var CLASS_DEVICELINK(default, null) : Int;
+	@:public @:static @:final public static var CLASS_DEVICELINK(default, null) : Int;
 	
 	/**
 	* Profile class is color space conversion.
 	*/
-	public static var CLASS_COLORSPACECONVERSION(default, null) : Int;
+	@:public @:static @:final public static var CLASS_COLORSPACECONVERSION(default, null) : Int;
 	
 	/**
 	* Profile class is abstract.
 	*/
-	public static var CLASS_ABSTRACT(default, null) : Int;
+	@:public @:static @:final public static var CLASS_ABSTRACT(default, null) : Int;
 	
 	/**
 	* Profile class is named color.
 	*/
-	public static var CLASS_NAMEDCOLOR(default, null) : Int;
+	@:public @:static @:final public static var CLASS_NAMEDCOLOR(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'XYZ '.
 	*/
-	public static var icSigXYZData(default, null) : Int;
+	@:public @:static @:final public static var icSigXYZData(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'Lab '.
 	*/
-	public static var icSigLabData(default, null) : Int;
+	@:public @:static @:final public static var icSigLabData(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'Luv '.
 	*/
-	public static var icSigLuvData(default, null) : Int;
+	@:public @:static @:final public static var icSigLuvData(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'YCbr'.
 	*/
-	public static var icSigYCbCrData(default, null) : Int;
+	@:public @:static @:final public static var icSigYCbCrData(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'Yxy '.
 	*/
-	public static var icSigYxyData(default, null) : Int;
+	@:public @:static @:final public static var icSigYxyData(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'RGB '.
 	*/
-	public static var icSigRgbData(default, null) : Int;
+	@:public @:static @:final public static var icSigRgbData(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'GRAY'.
 	*/
-	public static var icSigGrayData(default, null) : Int;
+	@:public @:static @:final public static var icSigGrayData(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'HSV'.
 	*/
-	public static var icSigHsvData(default, null) : Int;
+	@:public @:static @:final public static var icSigHsvData(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'HLS'.
 	*/
-	public static var icSigHlsData(default, null) : Int;
+	@:public @:static @:final public static var icSigHlsData(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'CMYK'.
 	*/
-	public static var icSigCmykData(default, null) : Int;
+	@:public @:static @:final public static var icSigCmykData(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'CMY '.
 	*/
-	public static var icSigCmyData(default, null) : Int;
+	@:public @:static @:final public static var icSigCmyData(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: '2CLR'.
 	*/
-	public static var icSigSpace2CLR(default, null) : Int;
+	@:public @:static @:final public static var icSigSpace2CLR(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: '3CLR'.
 	*/
-	public static var icSigSpace3CLR(default, null) : Int;
+	@:public @:static @:final public static var icSigSpace3CLR(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: '4CLR'.
 	*/
-	public static var icSigSpace4CLR(default, null) : Int;
+	@:public @:static @:final public static var icSigSpace4CLR(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: '5CLR'.
 	*/
-	public static var icSigSpace5CLR(default, null) : Int;
+	@:public @:static @:final public static var icSigSpace5CLR(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: '6CLR'.
 	*/
-	public static var icSigSpace6CLR(default, null) : Int;
+	@:public @:static @:final public static var icSigSpace6CLR(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: '7CLR'.
 	*/
-	public static var icSigSpace7CLR(default, null) : Int;
+	@:public @:static @:final public static var icSigSpace7CLR(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: '8CLR'.
 	*/
-	public static var icSigSpace8CLR(default, null) : Int;
+	@:public @:static @:final public static var icSigSpace8CLR(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: '9CLR'.
 	*/
-	public static var icSigSpace9CLR(default, null) : Int;
+	@:public @:static @:final public static var icSigSpace9CLR(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'ACLR'.
 	*/
-	public static var icSigSpaceACLR(default, null) : Int;
+	@:public @:static @:final public static var icSigSpaceACLR(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'BCLR'.
 	*/
-	public static var icSigSpaceBCLR(default, null) : Int;
+	@:public @:static @:final public static var icSigSpaceBCLR(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'CCLR'.
 	*/
-	public static var icSigSpaceCCLR(default, null) : Int;
+	@:public @:static @:final public static var icSigSpaceCCLR(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'DCLR'.
 	*/
-	public static var icSigSpaceDCLR(default, null) : Int;
+	@:public @:static @:final public static var icSigSpaceDCLR(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'ECLR'.
 	*/
-	public static var icSigSpaceECLR(default, null) : Int;
+	@:public @:static @:final public static var icSigSpaceECLR(default, null) : Int;
 	
 	/**
 	* ICC Profile Color Space Type Signature: 'FCLR'.
 	*/
-	public static var icSigSpaceFCLR(default, null) : Int;
+	@:public @:static @:final public static var icSigSpaceFCLR(default, null) : Int;
 	
 	/**
 	* ICC Profile Class Signature: 'scnr'.
 	*/
-	public static var icSigInputClass(default, null) : Int;
+	@:public @:static @:final public static var icSigInputClass(default, null) : Int;
 	
 	/**
 	* ICC Profile Class Signature: 'mntr'.
 	*/
-	public static var icSigDisplayClass(default, null) : Int;
+	@:public @:static @:final public static var icSigDisplayClass(default, null) : Int;
 	
 	/**
 	* ICC Profile Class Signature: 'prtr'.
 	*/
-	public static var icSigOutputClass(default, null) : Int;
+	@:public @:static @:final public static var icSigOutputClass(default, null) : Int;
 	
 	/**
 	* ICC Profile Class Signature: 'link'.
 	*/
-	public static var icSigLinkClass(default, null) : Int;
+	@:public @:static @:final public static var icSigLinkClass(default, null) : Int;
 	
 	/**
 	* ICC Profile Class Signature: 'abst'.
 	*/
-	public static var icSigAbstractClass(default, null) : Int;
+	@:public @:static @:final public static var icSigAbstractClass(default, null) : Int;
 	
 	/**
 	* ICC Profile Class Signature: 'spac'.
 	*/
-	public static var icSigColorSpaceClass(default, null) : Int;
+	@:public @:static @:final public static var icSigColorSpaceClass(default, null) : Int;
 	
 	/**
 	* ICC Profile Class Signature: 'nmcl'.
 	*/
-	public static var icSigNamedColorClass(default, null) : Int;
+	@:public @:static @:final public static var icSigNamedColorClass(default, null) : Int;
 	
 	/**
 	* ICC Profile Rendering Intent: Perceptual.
 	*/
-	public static var icPerceptual(default, null) : Int;
+	@:public @:static @:final public static var icPerceptual(default, null) : Int;
 	
 	/**
 	* ICC Profile Rendering Intent: RelativeColorimetric.
 	*/
-	public static var icRelativeColorimetric(default, null) : Int;
+	@:public @:static @:final public static var icRelativeColorimetric(default, null) : Int;
 	
 	/**
 	* ICC Profile Rendering Intent: Media-RelativeColorimetric.
 	* @since 1.5
 	*/
-	@:require(java5) public static var icMediaRelativeColorimetric(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var icMediaRelativeColorimetric(default, null) : Int;
 	
 	/**
 	* ICC Profile Rendering Intent: Saturation.
 	*/
-	public static var icSaturation(default, null) : Int;
+	@:public @:static @:final public static var icSaturation(default, null) : Int;
 	
 	/**
 	* ICC Profile Rendering Intent: AbsoluteColorimetric.
 	*/
-	public static var icAbsoluteColorimetric(default, null) : Int;
+	@:public @:static @:final public static var icAbsoluteColorimetric(default, null) : Int;
 	
 	/**
 	* ICC Profile Rendering Intent: ICC-AbsoluteColorimetric.
 	* @since 1.5
 	*/
-	@:require(java5) public static var icICCAbsoluteColorimetric(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var icICCAbsoluteColorimetric(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'head' - special.
 	*/
-	public static var icSigHead(default, null) : Int;
+	@:public @:static @:final public static var icSigHead(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'A2B0'.
 	*/
-	public static var icSigAToB0Tag(default, null) : Int;
+	@:public @:static @:final public static var icSigAToB0Tag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'A2B1'.
 	*/
-	public static var icSigAToB1Tag(default, null) : Int;
+	@:public @:static @:final public static var icSigAToB1Tag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'A2B2'.
 	*/
-	public static var icSigAToB2Tag(default, null) : Int;
+	@:public @:static @:final public static var icSigAToB2Tag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'bXYZ'.
 	*/
-	public static var icSigBlueColorantTag(default, null) : Int;
+	@:public @:static @:final public static var icSigBlueColorantTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'bXYZ'.
 	* @since 1.5
 	*/
-	@:require(java5) public static var icSigBlueMatrixColumnTag(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var icSigBlueMatrixColumnTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'bTRC'.
 	*/
-	public static var icSigBlueTRCTag(default, null) : Int;
+	@:public @:static @:final public static var icSigBlueTRCTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'B2A0'.
 	*/
-	public static var icSigBToA0Tag(default, null) : Int;
+	@:public @:static @:final public static var icSigBToA0Tag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'B2A1'.
 	*/
-	public static var icSigBToA1Tag(default, null) : Int;
+	@:public @:static @:final public static var icSigBToA1Tag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'B2A2'.
 	*/
-	public static var icSigBToA2Tag(default, null) : Int;
+	@:public @:static @:final public static var icSigBToA2Tag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'calt'.
 	*/
-	public static var icSigCalibrationDateTimeTag(default, null) : Int;
+	@:public @:static @:final public static var icSigCalibrationDateTimeTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'targ'.
 	*/
-	public static var icSigCharTargetTag(default, null) : Int;
+	@:public @:static @:final public static var icSigCharTargetTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'cprt'.
 	*/
-	public static var icSigCopyrightTag(default, null) : Int;
+	@:public @:static @:final public static var icSigCopyrightTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'crdi'.
 	*/
-	public static var icSigCrdInfoTag(default, null) : Int;
+	@:public @:static @:final public static var icSigCrdInfoTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'dmnd'.
 	*/
-	public static var icSigDeviceMfgDescTag(default, null) : Int;
+	@:public @:static @:final public static var icSigDeviceMfgDescTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'dmdd'.
 	*/
-	public static var icSigDeviceModelDescTag(default, null) : Int;
+	@:public @:static @:final public static var icSigDeviceModelDescTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'devs'.
 	*/
-	public static var icSigDeviceSettingsTag(default, null) : Int;
+	@:public @:static @:final public static var icSigDeviceSettingsTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'gamt'.
 	*/
-	public static var icSigGamutTag(default, null) : Int;
+	@:public @:static @:final public static var icSigGamutTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'kTRC'.
 	*/
-	public static var icSigGrayTRCTag(default, null) : Int;
+	@:public @:static @:final public static var icSigGrayTRCTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'gXYZ'.
 	*/
-	public static var icSigGreenColorantTag(default, null) : Int;
+	@:public @:static @:final public static var icSigGreenColorantTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'gXYZ'.
 	* @since 1.5
 	*/
-	@:require(java5) public static var icSigGreenMatrixColumnTag(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var icSigGreenMatrixColumnTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'gTRC'.
 	*/
-	public static var icSigGreenTRCTag(default, null) : Int;
+	@:public @:static @:final public static var icSigGreenTRCTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'lumi'.
 	*/
-	public static var icSigLuminanceTag(default, null) : Int;
+	@:public @:static @:final public static var icSigLuminanceTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'meas'.
 	*/
-	public static var icSigMeasurementTag(default, null) : Int;
+	@:public @:static @:final public static var icSigMeasurementTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'bkpt'.
 	*/
-	public static var icSigMediaBlackPointTag(default, null) : Int;
+	@:public @:static @:final public static var icSigMediaBlackPointTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'wtpt'.
 	*/
-	public static var icSigMediaWhitePointTag(default, null) : Int;
+	@:public @:static @:final public static var icSigMediaWhitePointTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'ncl2'.
 	*/
-	public static var icSigNamedColor2Tag(default, null) : Int;
+	@:public @:static @:final public static var icSigNamedColor2Tag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'resp'.
 	*/
-	public static var icSigOutputResponseTag(default, null) : Int;
+	@:public @:static @:final public static var icSigOutputResponseTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'pre0'.
 	*/
-	public static var icSigPreview0Tag(default, null) : Int;
+	@:public @:static @:final public static var icSigPreview0Tag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'pre1'.
 	*/
-	public static var icSigPreview1Tag(default, null) : Int;
+	@:public @:static @:final public static var icSigPreview1Tag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'pre2'.
 	*/
-	public static var icSigPreview2Tag(default, null) : Int;
+	@:public @:static @:final public static var icSigPreview2Tag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'desc'.
 	*/
-	public static var icSigProfileDescriptionTag(default, null) : Int;
+	@:public @:static @:final public static var icSigProfileDescriptionTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'pseq'.
 	*/
-	public static var icSigProfileSequenceDescTag(default, null) : Int;
+	@:public @:static @:final public static var icSigProfileSequenceDescTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'psd0'.
 	*/
-	public static var icSigPs2CRD0Tag(default, null) : Int;
+	@:public @:static @:final public static var icSigPs2CRD0Tag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'psd1'.
 	*/
-	public static var icSigPs2CRD1Tag(default, null) : Int;
+	@:public @:static @:final public static var icSigPs2CRD1Tag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'psd2'.
 	*/
-	public static var icSigPs2CRD2Tag(default, null) : Int;
+	@:public @:static @:final public static var icSigPs2CRD2Tag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'psd3'.
 	*/
-	public static var icSigPs2CRD3Tag(default, null) : Int;
+	@:public @:static @:final public static var icSigPs2CRD3Tag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'ps2s'.
 	*/
-	public static var icSigPs2CSATag(default, null) : Int;
+	@:public @:static @:final public static var icSigPs2CSATag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'ps2i'.
 	*/
-	public static var icSigPs2RenderingIntentTag(default, null) : Int;
+	@:public @:static @:final public static var icSigPs2RenderingIntentTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'rXYZ'.
 	*/
-	public static var icSigRedColorantTag(default, null) : Int;
+	@:public @:static @:final public static var icSigRedColorantTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'rXYZ'.
 	* @since 1.5
 	*/
-	@:require(java5) public static var icSigRedMatrixColumnTag(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var icSigRedMatrixColumnTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'rTRC'.
 	*/
-	public static var icSigRedTRCTag(default, null) : Int;
+	@:public @:static @:final public static var icSigRedTRCTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'scrd'.
 	*/
-	public static var icSigScreeningDescTag(default, null) : Int;
+	@:public @:static @:final public static var icSigScreeningDescTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'scrn'.
 	*/
-	public static var icSigScreeningTag(default, null) : Int;
+	@:public @:static @:final public static var icSigScreeningTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'tech'.
 	*/
-	public static var icSigTechnologyTag(default, null) : Int;
+	@:public @:static @:final public static var icSigTechnologyTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'bfd '.
 	*/
-	public static var icSigUcrBgTag(default, null) : Int;
+	@:public @:static @:final public static var icSigUcrBgTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'vued'.
 	*/
-	public static var icSigViewingCondDescTag(default, null) : Int;
+	@:public @:static @:final public static var icSigViewingCondDescTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'view'.
 	*/
-	public static var icSigViewingConditionsTag(default, null) : Int;
+	@:public @:static @:final public static var icSigViewingConditionsTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'chrm'.
 	*/
-	public static var icSigChromaticityTag(default, null) : Int;
+	@:public @:static @:final public static var icSigChromaticityTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'chad'.
 	* @since 1.5
 	*/
-	@:require(java5) public static var icSigChromaticAdaptationTag(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var icSigChromaticAdaptationTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'clro'.
 	* @since 1.5
 	*/
-	@:require(java5) public static var icSigColorantOrderTag(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var icSigColorantOrderTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Tag Signature: 'clrt'.
 	* @since 1.5
 	*/
-	@:require(java5) public static var icSigColorantTableTag(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var icSigColorantTableTag(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: profile size in bytes.
 	*/
-	public static var icHdrSize(default, null) : Int;
+	@:public @:static @:final public static var icHdrSize(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: CMM for this profile.
 	*/
-	public static var icHdrCmmId(default, null) : Int;
+	@:public @:static @:final public static var icHdrCmmId(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: format version number.
 	*/
-	public static var icHdrVersion(default, null) : Int;
+	@:public @:static @:final public static var icHdrVersion(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: type of profile.
 	*/
-	public static var icHdrDeviceClass(default, null) : Int;
+	@:public @:static @:final public static var icHdrDeviceClass(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: color space of data.
 	*/
-	public static var icHdrColorSpace(default, null) : Int;
+	@:public @:static @:final public static var icHdrColorSpace(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: PCS - XYZ or Lab only.
 	*/
-	public static var icHdrPcs(default, null) : Int;
+	@:public @:static @:final public static var icHdrPcs(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: date profile was created.
 	*/
-	public static var icHdrDate(default, null) : Int;
+	@:public @:static @:final public static var icHdrDate(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: icMagicNumber.
 	*/
-	public static var icHdrMagic(default, null) : Int;
+	@:public @:static @:final public static var icHdrMagic(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: primary platform.
 	*/
-	public static var icHdrPlatform(default, null) : Int;
+	@:public @:static @:final public static var icHdrPlatform(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: various bit settings.
 	*/
-	public static var icHdrFlags(default, null) : Int;
+	@:public @:static @:final public static var icHdrFlags(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: device manufacturer.
 	*/
-	public static var icHdrManufacturer(default, null) : Int;
+	@:public @:static @:final public static var icHdrManufacturer(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: device model number.
 	*/
-	public static var icHdrModel(default, null) : Int;
+	@:public @:static @:final public static var icHdrModel(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: device attributes.
 	*/
-	public static var icHdrAttributes(default, null) : Int;
+	@:public @:static @:final public static var icHdrAttributes(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: rendering intent.
 	*/
-	public static var icHdrRenderingIntent(default, null) : Int;
+	@:public @:static @:final public static var icHdrRenderingIntent(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: profile illuminant.
 	*/
-	public static var icHdrIlluminant(default, null) : Int;
+	@:public @:static @:final public static var icHdrIlluminant(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: profile creator.
 	*/
-	public static var icHdrCreator(default, null) : Int;
+	@:public @:static @:final public static var icHdrCreator(default, null) : Int;
 	
 	/**
 	* ICC Profile Header Location: profile's ID.
 	* @since 1.5
 	*/
-	@:require(java5) public static var icHdrProfileID(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var icHdrProfileID(default, null) : Int;
 	
 	/**
 	* ICC Profile Constant: tag type signaturE.
 	*/
-	public static var icTagType(default, null) : Int;
+	@:public @:static @:final public static var icTagType(default, null) : Int;
 	
 	/**
 	* ICC Profile Constant: reserved.
 	*/
-	public static var icTagReserved(default, null) : Int;
+	@:public @:static @:final public static var icTagReserved(default, null) : Int;
 	
 	/**
 	* ICC Profile Constant: curveType count.
 	*/
-	public static var icCurveCount(default, null) : Int;
+	@:public @:static @:final public static var icCurveCount(default, null) : Int;
 	
 	/**
 	* ICC Profile Constant: curveType data.
 	*/
-	public static var icCurveData(default, null) : Int;
+	@:public @:static @:final public static var icCurveData(default, null) : Int;
 	
 	/**
 	* ICC Profile Constant: XYZNumber X.
 	*/
-	public static var icXYZNumberX(default, null) : Int;
+	@:public @:static @:final public static var icXYZNumberX(default, null) : Int;
 	
 	/**
 	* Frees the resources associated with an ICC_Profile object.
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	/**
 	* Constructs an ICC_Profile object corresponding to the data in
@@ -651,7 +651,7 @@ extern class ICC_Profile implements java.io.Serializable
 	* @return an <code>ICC_Profile</code> object corresponding to
 	*          the data in the specified <code>data</code> array.
 	*/
-	@:overload public static function getInstance(data : java.NativeArray<java.StdTypes.Int8>) : java.awt.color.ICC_Profile;
+	@:overload @:public @:static public static function getInstance(data : java.NativeArray<java.StdTypes.Int8>) : java.awt.color.ICC_Profile;
 	
 	/**
 	* Constructs an ICC_Profile corresponding to one of the specific color
@@ -668,7 +668,7 @@ extern class ICC_Profile implements java.io.Serializable
 	* @exception IllegalArgumentException If <CODE>cspace</CODE> is not
 	* one of the predefined color space types.
 	*/
-	@:overload public static function getInstance(cspace : Int) : java.awt.color.ICC_Profile;
+	@:overload @:public @:static public static function getInstance(cspace : Int) : java.awt.color.ICC_Profile;
 	
 	/**
 	* Constructs an ICC_Profile corresponding to the data in a file.
@@ -696,7 +696,7 @@ extern class ICC_Profile implements java.io.Serializable
 	* @exception SecurityException If a security manager is installed
 	* and it does not permit read access to the given file.
 	*/
-	@:overload public static function getInstance(fileName : String) : java.awt.color.ICC_Profile;
+	@:overload @:public @:static public static function getInstance(fileName : String) : java.awt.color.ICC_Profile;
 	
 	/**
 	* Constructs an ICC_Profile corresponding to the data in an InputStream.
@@ -713,25 +713,25 @@ extern class ICC_Profile implements java.io.Serializable
 	* @exception IllegalArgumentException If the stream does not
 	* contain valid ICC Profile data.
 	*/
-	@:overload public static function getInstance(s : java.io.InputStream) : java.awt.color.ICC_Profile;
+	@:overload @:public @:static public static function getInstance(s : java.io.InputStream) : java.awt.color.ICC_Profile;
 	
 	/**
 	* Returns profile major version.
 	* @return  The major version of the profile.
 	*/
-	@:overload public function getMajorVersion() : Int;
+	@:overload @:public public function getMajorVersion() : Int;
 	
 	/**
 	* Returns profile minor version.
 	* @return The minor version of the profile.
 	*/
-	@:overload public function getMinorVersion() : Int;
+	@:overload @:public public function getMinorVersion() : Int;
 	
 	/**
 	* Returns the profile class.
 	* @return One of the predefined profile class constants.
 	*/
-	@:overload public function getProfileClass() : Int;
+	@:overload @:public public function getProfileClass() : Int;
 	
 	/**
 	* Returns the color space type.  Returns one of the color space type
@@ -745,7 +745,7 @@ extern class ICC_Profile implements java.io.Serializable
 	* @return One of the color space type constants defined in the
 	* <CODE>ColorSpace</CODE> class.
 	*/
-	@:overload public function getColorSpaceType() : Int;
+	@:overload @:public public function getColorSpaceType() : Int;
 	
 	/**
 	* Returns the color space type of the Profile Connection Space (PCS).
@@ -759,7 +759,7 @@ extern class ICC_Profile implements java.io.Serializable
 	* @return One of the color space type constants defined in the
 	* <CODE>ColorSpace</CODE> class.
 	*/
-	@:overload public function getPCSType() : Int;
+	@:overload @:public public function getPCSType() : Int;
 	
 	/**
 	* Write this ICC_Profile to a file.
@@ -769,7 +769,7 @@ extern class ICC_Profile implements java.io.Serializable
 	* @exception IOException If the file cannot be opened for writing
 	* or an I/O error occurs while writing to the file.
 	*/
-	@:overload public function write(fileName : String) : Void;
+	@:overload @:public public function write(fileName : String) : Void;
 	
 	/**
 	* Write this ICC_Profile to an OutputStream.
@@ -779,14 +779,14 @@ extern class ICC_Profile implements java.io.Serializable
 	* @exception IOException If an I/O error occurs while writing to the
 	* stream.
 	*/
-	@:overload public function write(s : java.io.OutputStream) : Void;
+	@:overload @:public public function write(s : java.io.OutputStream) : Void;
 	
 	/**
 	* Returns a byte array corresponding to the data of this ICC_Profile.
 	* @return A byte array that contains the profile data.
 	* @see #setData(int, byte[])
 	*/
-	@:overload public function getData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a particular tagged data element from the profile as
@@ -803,7 +803,7 @@ extern class ICC_Profile implements java.io.Serializable
 	* <code>null</code> if the specified tag doesn't exist.
 	* @see #setData(int, byte[])
 	*/
-	@:overload public function getData(tagSignature : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData(tagSignature : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Sets a particular tagged data element in the profile from
@@ -822,7 +822,7 @@ extern class ICC_Profile implements java.io.Serializable
 	*         to the {@code tagSignature}.
 	* @see #getData
 	*/
-	@:overload public function setData(tagSignature : Int, tagData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setData(tagSignature : Int, tagData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the number of color components in the "input" color
@@ -835,7 +835,7 @@ extern class ICC_Profile implements java.io.Serializable
 	* @throws ProfileDataException if color space is in the profile
 	*         is invalid
 	*/
-	@:overload public function getNumComponents() : Int;
+	@:overload @:public public function getNumComponents() : Int;
 	
 	/**
 	* Resolves instances being deserialized into instances registered
@@ -845,7 +845,7 @@ extern class ICC_Profile implements java.io.Serializable
 	*     never thrown, but mandated by the serialization spec.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function readResolve() : Dynamic;
+	@:require(java3) @:overload @:protected private function readResolve() : Dynamic;
 	
 	
 }

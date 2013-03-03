@@ -30,61 +30,61 @@ package sun.font;
 */
 extern class XRGlyphCacheEntry
 {
-	@:overload public function new(glyphInfoPtr : haxe.Int64, gl : sun.font.GlyphList) : Void;
+	@:overload @:public public function new(glyphInfoPtr : haxe.Int64, gl : sun.font.GlyphList) : Void;
 	
-	@:overload public function getXOff() : Int;
+	@:overload @:public public function getXOff() : Int;
 	
-	@:overload public function getYOff() : Int;
+	@:overload @:public public function getYOff() : Int;
 	
-	@:overload public function setGlyphSet(glyphSet : Int) : Void;
+	@:overload @:public public function setGlyphSet(glyphSet : Int) : Void;
 	
-	@:overload public function getGlyphSet() : Int;
+	@:overload @:public public function getGlyphSet() : Int;
 	
-	@:native('getGlyphID') @:overload public static function _getGlyphID(glyphInfoPtr : haxe.Int64) : Int;
+	@:native('getGlyphID') @:overload @:public @:static public static function _getGlyphID(glyphInfoPtr : haxe.Int64) : Int;
 	
-	@:native('setGlyphID') @:overload public static function _setGlyphID(glyphInfoPtr : haxe.Int64, id : Int) : Void;
+	@:native('setGlyphID') @:overload @:public @:static public static function _setGlyphID(glyphInfoPtr : haxe.Int64, id : Int) : Void;
 	
-	@:overload public function getGlyphID() : Int;
+	@:overload @:public public function getGlyphID() : Int;
 	
-	@:overload public function setGlyphID(id : Int) : Void;
+	@:overload @:public public function setGlyphID(id : Int) : Void;
 	
-	@:overload public function getXAdvance() : Single;
+	@:overload @:public public function getXAdvance() : Single;
 	
-	@:overload public function getYAdvance() : Single;
+	@:overload @:public public function getYAdvance() : Single;
 	
-	@:overload public function getSourceRowBytes() : Int;
+	@:overload @:public public function getSourceRowBytes() : Int;
 	
-	@:overload public function getWidth() : Int;
+	@:overload @:public public function getWidth() : Int;
 	
-	@:overload public function getHeight() : Int;
+	@:overload @:public public function getHeight() : Int;
 	
-	@:overload public function writePixelData(os : java.io.ByteArrayOutputStream, uploadAsLCD : Bool) : Void;
+	@:overload @:public public function writePixelData(os : java.io.ByteArrayOutputStream, uploadAsLCD : Bool) : Void;
 	
-	@:overload public function getTopLeftXOffset() : Single;
+	@:overload @:public public function getTopLeftXOffset() : Single;
 	
-	@:overload public function getTopLeftYOffset() : Single;
+	@:overload @:public public function getTopLeftYOffset() : Single;
 	
-	@:overload public function getGlyphInfoPtr() : haxe.Int64;
+	@:overload @:public public function getGlyphInfoPtr() : haxe.Int64;
 	
-	@:overload public function isGrayscale(listContainsLCDGlyphs : Bool) : Bool;
+	@:overload @:public public function isGrayscale(listContainsLCDGlyphs : Bool) : Bool;
 	
-	@:overload public function getPaddedWidth(listContainsLCDGlyphs : Bool) : Int;
+	@:overload @:public public function getPaddedWidth(listContainsLCDGlyphs : Bool) : Int;
 	
-	@:overload public function getDestinationRowBytes(listContainsLCDGlyphs : Bool) : Int;
+	@:overload @:public public function getDestinationRowBytes(listContainsLCDGlyphs : Bool) : Int;
 	
-	@:overload public function getGlyphDataLenth(listContainsLCDGlyphs : Bool) : Int;
+	@:overload @:public public function getGlyphDataLenth(listContainsLCDGlyphs : Bool) : Int;
 	
-	@:overload public function setPinned() : Void;
+	@:overload @:public public function setPinned() : Void;
 	
-	@:overload public function setUnpinned() : Void;
+	@:overload @:public public function setUnpinned() : Void;
 	
-	@:overload public function getLastUsed() : Int;
+	@:overload @:public public function getLastUsed() : Int;
 	
-	@:overload public function setLastUsed(lastUsed : Int) : Void;
+	@:overload @:public public function setLastUsed(lastUsed : Int) : Void;
 	
-	@:overload public function getPixelCnt() : Int;
+	@:overload @:public public function getPixelCnt() : Int;
 	
-	@:overload public function isPinned() : Bool;
+	@:overload @:public public function isPinned() : Bool;
 	
 	
 }

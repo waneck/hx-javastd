@@ -46,7 +46,7 @@ extern interface XPathNamespace extends org.w3c.dom.Node
 	* if the document changes such that the namespace goes out of scope on
 	* that element and this node is no longer found there by XPath.
 	*/
-	@:overload public function getOwnerElement() : org.w3c.dom.Element;
+	@:overload @:public public function getOwnerElement() : org.w3c.dom.Element;
 	
 	
 }

@@ -61,44 +61,44 @@ extern class InvokeInstruction extends com.sun.org.apache.bcel.internal.classfil
 	/**
 	* @param index to constant pool
 	*/
-	@:overload private function new(opcode : java.StdTypes.Int16, index : Int) : Void;
+	@:overload @:protected private function new(opcode : java.StdTypes.Int16, index : Int) : Void;
 	
 	/**
 	* @return mnemonic for instruction with symbolic references resolved
 	*/
-	@:overload public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
+	@:overload @:public public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
 	
 	/**
 	* Also works for instructions whose stack effect depends on the
 	* constant pool entry they reference.
 	* @return Number of words consumed from stack by this instruction
 	*/
-	@:overload public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	/**
 	* Also works for instructions whose stack effect depends on the
 	* constant pool entry they reference.
 	* @return Number of words produced onto stack by this instruction
 	*/
-	@:overload public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	/** @return return type of referenced method.
 	*/
-	@:overload public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/** @return name of referenced method.
 	*/
-	@:overload public function getMethodName(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : String;
+	@:overload @:public public function getMethodName(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : String;
 	
 	/** @return return type of referenced method.
 	*/
-	@:overload public function getReturnType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getReturnType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/** @return argument types of referenced method.
 	*/
-	@:overload public function getArgumentTypes(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>;
+	@:overload @:public public function getArgumentTypes(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>;
 	
-	@:overload @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
 	
 }

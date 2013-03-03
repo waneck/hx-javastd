@@ -33,7 +33,7 @@ extern class DispatchImpl<T> extends com.sun.xml.internal.ws.client.Stub impleme
 	* @param pipe    Master pipe for the pipeline
 	* @param binding Binding of this Dispatch instance, current one of SOAP/HTTP or XML/HTTP
 	*/
-	@:overload private function new(port : javax.xml.namespace.QName, mode : javax.xml.ws.Service.Service_Mode, owner : com.sun.xml.internal.ws.client.WSServiceDelegate, pipe : com.sun.xml.internal.ws.api.pipe.Tube, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
+	@:overload @:protected private function new(port : javax.xml.namespace.QName, mode : javax.xml.ws.Service.Service_Mode, owner : com.sun.xml.internal.ws.client.WSServiceDelegate, pipe : com.sun.xml.internal.ws.api.pipe.Tube, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
 	
 	/**
 	*
@@ -41,11 +41,11 @@ extern class DispatchImpl<T> extends com.sun.xml.internal.ws.client.Stub impleme
 	* @param mode     Service.mode associated with this Dispatch instance - Service.mode.MESSAGE or Service.mode.PAYLOAD
 	* @param binding  Binding of this Dispatch instance, current one of SOAP/HTTP or XML/HTTP
 	*/
-	@:overload private function new(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, mode : javax.xml.ws.Service.Service_Mode, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
+	@:overload @:protected private function new(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, mode : javax.xml.ws.Service.Service_Mode, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
 	
-	@:overload @:final public function invokeAsync(param : T) : javax.xml.ws.Response<T>;
+	@:overload @:public @:final public function invokeAsync(param : T) : javax.xml.ws.Response<T>;
 	
-	@:overload @:final public function invokeAsync(param : T, asyncHandler : javax.xml.ws.AsyncHandler<T>) : java.util.concurrent.Future<Dynamic>;
+	@:overload @:public @:final public function invokeAsync(param : T, asyncHandler : javax.xml.ws.AsyncHandler<T>) : java.util.concurrent.Future<Dynamic>;
 	
 	/**
 	* Synchronously invokes a service.
@@ -53,27 +53,40 @@ extern class DispatchImpl<T> extends com.sun.xml.internal.ws.client.Stub impleme
 	* See {@link #process(Packet, RequestContext, ResponseContextReceiver)} on
 	* why it takes a {@link RequestContext} and {@link ResponseContextReceiver} as a parameter.
 	*/
-	@:overload @:final public function doInvoke(_in : T, rc : com.sun.xml.internal.ws.client.RequestContext, receiver : com.sun.xml.internal.ws.client.ResponseContextReceiver) : T;
+	@:overload @:public @:final public function doInvoke(_in : T, rc : com.sun.xml.internal.ws.client.RequestContext, receiver : com.sun.xml.internal.ws.client.ResponseContextReceiver) : T;
 	
-	@:overload @:final public function invoke(_in : T) : T;
+	@:overload @:public @:final public function invoke(_in : T) : T;
 	
-	@:overload @:final public function invokeOneWay(_in : T) : Void;
+	@:overload @:public @:final public function invokeOneWay(_in : T) : Void;
 	
-	@:overload public static function checkValidSOAPMessageDispatch(binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode) : Void;
+	@:overload @:public @:static public static function checkValidSOAPMessageDispatch(binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode) : Void;
 	
-	@:overload public static function checkValidDataSourceDispatch(binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode) : Void;
+	@:overload @:public @:static public static function checkValidDataSourceDispatch(binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode) : Void;
 	
-	@:overload @:final private function getPortName() : javax.xml.namespace.QName;
+	@:overload @:protected @:final override private function getPortName() : javax.xml.namespace.QName;
 	
-	@:overload private function resolveURI(endpointURI : java.net.URI, pathInfo : String, queryString : String) : String;
+	@:overload @:protected private function resolveURI(endpointURI : java.net.URI, pathInfo : String, queryString : String) : String;
 	
-	@:overload private function setOutboundAttachments() : com.sun.xml.internal.ws.api.message.AttachmentSet;
+	@:overload @:protected private function setOutboundAttachments() : com.sun.xml.internal.ws.api.message.AttachmentSet;
 	
-	@:overload public function setOutboundHeaders(headers : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public override public function setOutboundHeaders(headers : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public static function createSourceDispatch(port : javax.xml.namespace.QName, mode : javax.xml.ws.Service.Service_Mode, owner : com.sun.xml.internal.ws.client.WSServiceDelegate, pipe : com.sun.xml.internal.ws.api.pipe.Tube, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.xml.transform.Source>;
+	@:overload @:public @:static public static function createSourceDispatch(port : javax.xml.namespace.QName, mode : javax.xml.ws.Service.Service_Mode, owner : com.sun.xml.internal.ws.client.WSServiceDelegate, pipe : com.sun.xml.internal.ws.api.pipe.Tube, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.xml.transform.Source>;
 	
-	@:overload public static function createSourceDispatch(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, mode : javax.xml.ws.Service.Service_Mode, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.xml.transform.Source>;
+	@:overload @:public @:static public static function createSourceDispatch(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, mode : javax.xml.ws.Service.Service_Mode, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.xml.transform.Source>;
+	
+	/**
+	* Get the context that resulted from processing a response message.
+	*
+	* The returned context is for the most recently completed synchronous
+	* operation. Subsequent synchronous operation invocations overwrite the
+	* response context. Asynchronous operations return their response context
+	* via the Response interface.
+	*
+	* @return The context that resulted from processing the latest
+	* response messages.
+	**/
+	@:overload @:public override public function getResponseContext() : java.util.Map<String, Dynamic>;
 	
 	/**
 	* Returns the <code>EndpointReference</code> associated with
@@ -93,7 +106,26 @@ extern class DispatchImpl<T> extends com.sun.xml.internal.ws.client.Stub impleme
 	*
 	* @since JAX-WS 2.1
 	*/
-	@:require(java1) @:overload public function getEndpointReference() : javax.xml.ws.EndpointReference;
+	@:require(java1) @:overload @:public @:public override public function getEndpointReference() : javax.xml.ws.EndpointReference;
+	
+	/**
+	* Get the Binding for this binding provider.
+	*
+	* @return The Binding for this binding provider.
+	**/
+	@:overload @:public override public function getBinding() : javax.xml.ws.Binding;
+	
+	/**
+	* Get the context that is used to initialize the message context
+	* for request messages.
+	*
+	* Modifications to the request context do not affect the message context of
+	* either synchronous or asynchronous operations that have already been
+	* started.
+	*
+	* @return The context that is used in processing request messages.
+	**/
+	@:overload @:public override public function getRequestContext() : java.util.Map<String, Dynamic>;
 	
 	/**
 	* Returns the <code>EndpointReference</code> associated with
@@ -114,7 +146,7 @@ extern class DispatchImpl<T> extends com.sun.xml.internal.ws.client.Stub impleme
 	*
 	* @since JAX-WS 2.1
 	*/
-	@:require(java1) @:overload public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>) : T;
+	@:require(java1) @:overload @:public @:public override public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>) : T;
 	
 	
 }
@@ -123,7 +155,7 @@ extern class DispatchImpl<T> extends com.sun.xml.internal.ws.client.Stub impleme
 */
 @:native('com$sun$xml$internal$ws$client$dispatch$DispatchImpl$Invoker') @:internal extern class DispatchImpl_Invoker implements java.util.concurrent.Callable<Dynamic>
 {
-	@:overload public function call() : Dynamic;
+	@:overload @:public public function call() : Dynamic;
 	
 	
 }
@@ -132,7 +164,7 @@ extern class DispatchImpl<T> extends com.sun.xml.internal.ws.client.Stub impleme
 */
 @:native('com$sun$xml$internal$ws$client$dispatch$DispatchImpl$DispatchAsyncInvoker') @:internal extern class DispatchImpl_DispatchAsyncInvoker extends com.sun.xml.internal.ws.client.AsyncInvoker
 {
-	@:overload override public function do_run() : Void;
+	@:overload @:public override public function do_run() : Void;
 	
 	
 }

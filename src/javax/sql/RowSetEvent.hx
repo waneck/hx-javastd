@@ -48,7 +48,7 @@ package javax.sql;
 	*        whose cursor has moved
 	* @throws IllegalArgumentException if <code>source</code> is null.
 	*/
-	@:overload public function new(source : javax.sql.RowSet) : Void;
+	@:overload @:public public function new(source : javax.sql.RowSet) : Void;
 	
 	
 }

@@ -43,7 +43,7 @@ extern interface PrimitiveTypeContentHandler
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload public function booleans(b : java.NativeArray<Bool>, start : Int, length : Int) : Void;
+	@:overload @:public public function booleans(b : java.NativeArray<Bool>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of character data as an array of byte.
@@ -67,7 +67,7 @@ extern interface PrimitiveTypeContentHandler
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload public function bytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
+	@:overload @:public public function bytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of character data as an array of short.
@@ -85,7 +85,7 @@ extern interface PrimitiveTypeContentHandler
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload public function shorts(s : java.NativeArray<java.StdTypes.Int16>, start : Int, length : Int) : Void;
+	@:overload @:public public function shorts(s : java.NativeArray<java.StdTypes.Int16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of character data as an array of int.
@@ -103,7 +103,7 @@ extern interface PrimitiveTypeContentHandler
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload public function ints(i : java.NativeArray<Int>, start : Int, length : Int) : Void;
+	@:overload @:public public function ints(i : java.NativeArray<Int>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of character data as an array of long.
@@ -121,7 +121,7 @@ extern interface PrimitiveTypeContentHandler
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload public function longs(l : java.NativeArray<haxe.Int64>, start : Int, length : Int) : Void;
+	@:overload @:public public function longs(l : java.NativeArray<haxe.Int64>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of character data as an array of float.
@@ -139,7 +139,7 @@ extern interface PrimitiveTypeContentHandler
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload public function floats(f : java.NativeArray<Single>, start : Int, length : Int) : Void;
+	@:overload @:public public function floats(f : java.NativeArray<Single>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of character data as an array of double.
@@ -157,7 +157,7 @@ extern interface PrimitiveTypeContentHandler
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload public function doubles(d : java.NativeArray<Float>, start : Int, length : Int) : Void;
+	@:overload @:public public function doubles(d : java.NativeArray<Float>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of character data as an two array of UUID.
@@ -177,7 +177,7 @@ extern interface PrimitiveTypeContentHandler
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload public function uuids(msblsb : java.NativeArray<haxe.Int64>, start : Int, length : Int) : Void;
+	@:overload @:public public function uuids(msblsb : java.NativeArray<haxe.Int64>, start : Int, length : Int) : Void;
 	
 	
 }

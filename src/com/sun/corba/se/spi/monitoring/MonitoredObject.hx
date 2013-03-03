@@ -33,7 +33,7 @@ extern interface MonitoredObject
 	* @return a String with name of this Monitored Object
 	* </p>
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* <p>
@@ -43,7 +43,7 @@ extern interface MonitoredObject
 	* @return a String with Monitored Object Description.
 	* </p>
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	/**
 	* <p>
@@ -52,7 +52,7 @@ extern interface MonitoredObject
 	* <p>
 	* </p>
 	*/
-	@:overload public function addChild(m : com.sun.corba.se.spi.monitoring.MonitoredObject) : Void;
+	@:overload @:public public function addChild(m : com.sun.corba.se.spi.monitoring.MonitoredObject) : Void;
 	
 	/**
 	* <p>
@@ -62,7 +62,7 @@ extern interface MonitoredObject
 	* @param name of the ChildMonitored Object
 	* </p>
 	*/
-	@:overload public function removeChild(name : String) : Void;
+	@:overload @:public public function removeChild(name : String) : Void;
 	
 	/**
 	* <p>
@@ -78,7 +78,7 @@ extern interface MonitoredObject
 	* @param name of the ChildMonitored Object
 	* </p>
 	*/
-	@:overload public function getChild(name : String) : com.sun.corba.se.spi.monitoring.MonitoredObject;
+	@:overload @:public public function getChild(name : String) : com.sun.corba.se.spi.monitoring.MonitoredObject;
 	
 	/**
 	* <p>
@@ -90,7 +90,7 @@ extern interface MonitoredObject
 	* @return Collection of immediate Children associated with this MonitoredObject.
 	* </p>
 	*/
-	@:overload public function getChildren() : java.util.Collection<Dynamic>;
+	@:overload @:public public function getChildren() : java.util.Collection<Dynamic>;
 	
 	/**
 	* <p>
@@ -99,7 +99,7 @@ extern interface MonitoredObject
 	* <p>
 	* </p>
 	*/
-	@:overload public function setParent(m : com.sun.corba.se.spi.monitoring.MonitoredObject) : Void;
+	@:overload @:public public function setParent(m : com.sun.corba.se.spi.monitoring.MonitoredObject) : Void;
 	
 	/**
 	* <p>
@@ -111,7 +111,7 @@ extern interface MonitoredObject
 	* @return a MonitoredObject which is a Parent of this Monitored Object instance
 	* </p>
 	*/
-	@:overload public function getParent() : com.sun.corba.se.spi.monitoring.MonitoredObject;
+	@:overload @:public public function getParent() : com.sun.corba.se.spi.monitoring.MonitoredObject;
 	
 	/**
 	* <p>
@@ -125,7 +125,7 @@ extern interface MonitoredObject
 	* attribute of this MonitoredObject.
 	* </p>
 	*/
-	@:overload public function addAttribute(value : com.sun.corba.se.spi.monitoring.MonitoredAttribute) : Void;
+	@:overload @:public public function addAttribute(value : com.sun.corba.se.spi.monitoring.MonitoredAttribute) : Void;
 	
 	/**
 	* <p>
@@ -138,7 +138,7 @@ extern interface MonitoredObject
 	* @param name is the MonitoredAttribute name
 	* </p>
 	*/
-	@:overload public function removeAttribute(name : String) : Void;
+	@:overload @:public public function removeAttribute(name : String) : Void;
 	
 	/**
 	* <p>
@@ -152,7 +152,7 @@ extern interface MonitoredObject
 	* @param name of the attribute
 	* </p>
 	*/
-	@:overload public function getAttribute(name : String) : com.sun.corba.se.spi.monitoring.MonitoredAttribute;
+	@:overload @:public public function getAttribute(name : String) : com.sun.corba.se.spi.monitoring.MonitoredAttribute;
 	
 	/**
 	* <p>
@@ -165,7 +165,7 @@ extern interface MonitoredObject
 	* @return Collection of all the Attributes for this MonitoredObject
 	* </p>
 	*/
-	@:overload public function getAttributes() : java.util.Collection<Dynamic>;
+	@:overload @:public public function getAttributes() : java.util.Collection<Dynamic>;
 	
 	/**
 	* <p>
@@ -176,7 +176,7 @@ extern interface MonitoredObject
 	* </p>
 	*
 	*/
-	@:overload public function clearState() : Void;
+	@:overload @:public public function clearState() : Void;
 	
 	
 }

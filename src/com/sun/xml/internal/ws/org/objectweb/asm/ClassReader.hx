@@ -64,7 +64,7 @@ extern class ClassReader
 	* attribute won't be visited. This can be used, for example, to retrieve
 	* annotations for methods and method parameters.
 	*/
-	public static var SKIP_CODE(default, null) : Int;
+	@:public @:static @:final public static var SKIP_CODE(default, null) : Int;
 	
 	/**
 	* Flag to skip the debug information in the class. If this flag is set the
@@ -73,7 +73,7 @@ extern class ClassReader
 	* {@link MethodVisitor#visitLineNumber visitLineNumber} methods will not be
 	* called.
 	*/
-	public static var SKIP_DEBUG(default, null) : Int;
+	@:public @:static @:final public static var SKIP_DEBUG(default, null) : Int;
 	
 	/**
 	* Flag to skip the stack map frames in the class. If this flag is set the
@@ -83,7 +83,7 @@ extern class ClassReader
 	* used: it avoids visiting frames that will be ignored and recomputed from
 	* scratch in the class writer.
 	*/
-	public static var SKIP_FRAMES(default, null) : Int;
+	@:public @:static @:final public static var SKIP_FRAMES(default, null) : Int;
 	
 	/**
 	* Flag to expand the stack map frames. By default stack map frames are
@@ -93,27 +93,27 @@ extern class ClassReader
 	* (this option adds a decompression/recompression step in ClassReader and
 	* ClassWriter which degrades performances quite a lot).
 	*/
-	public static var EXPAND_FRAMES(default, null) : Int;
+	@:public @:static @:final public static var EXPAND_FRAMES(default, null) : Int;
 	
 	/**
 	* The class to be parsed. <i>The content of this array must not be
 	* modified. This field is intended for {@link Attribute} sub classes, and
 	* is normally not needed by class generators or adapters.</i>
 	*/
-	public var b(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:public @:final public var b(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Start index of the class header information (access, name...) in
 	* {@link #b b}.
 	*/
-	public var header(default, null) : Int;
+	@:public @:final public var header(default, null) : Int;
 	
 	/**
 	* Constructs a new {@link ClassReader} object.
 	*
 	* @param b the bytecode of the class to be read.
 	*/
-	@:overload public function new(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs a new {@link ClassReader} object.
@@ -122,7 +122,7 @@ extern class ClassReader
 	* @param off the start offset of the class data.
 	* @param len the length of the class data.
 	*/
-	@:overload public function new(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function new(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Returns the class's access flags (see {@link Opcodes}). This value may
@@ -133,7 +133,7 @@ extern class ClassReader
 	*
 	* @see ClassVisitor#visit(int, int, String, String, String, String[])
 	*/
-	@:overload public function getAccess() : Int;
+	@:overload @:public public function getAccess() : Int;
 	
 	/**
 	* Returns the internal name of the class (see
@@ -143,7 +143,7 @@ extern class ClassReader
 	*
 	* @see ClassVisitor#visit(int, int, String, String, String, String[])
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Returns the internal of name of the super class (see
@@ -155,7 +155,7 @@ extern class ClassReader
 	*
 	* @see ClassVisitor#visit(int, int, String, String, String, String[])
 	*/
-	@:overload public function getSuperName() : String;
+	@:overload @:public public function getSuperName() : String;
 	
 	/**
 	* Returns the internal names of the class's interfaces (see
@@ -166,7 +166,7 @@ extern class ClassReader
 	*
 	* @see ClassVisitor#visit(int, int, String, String, String, String[])
 	*/
-	@:overload public function getInterfaces() : java.NativeArray<String>;
+	@:overload @:public public function getInterfaces() : java.NativeArray<String>;
 	
 	/**
 	* Constructs a new {@link ClassReader} object.
@@ -174,7 +174,7 @@ extern class ClassReader
 	* @param is an input stream from which to read the class.
 	* @throws IOException if a problem occurs during reading.
 	*/
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	/**
 	* Constructs a new {@link ClassReader} object.
@@ -182,7 +182,7 @@ extern class ClassReader
 	* @param name the fully qualified name of the class to be read.
 	* @throws IOException if an exception occurs during reading.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Makes the given visitor visit the Java class of this {@link ClassReader}.
@@ -194,7 +194,7 @@ extern class ClassReader
 	*        of this class. See {@link #SKIP_DEBUG}, {@link #EXPAND_FRAMES},
 	*        {@link #SKIP_FRAMES}, {@link #SKIP_CODE}.
 	*/
-	@:overload public function accept(classVisitor : com.sun.xml.internal.ws.org.objectweb.asm.ClassVisitor, flags : Int) : Void;
+	@:overload @:public public function accept(classVisitor : com.sun.xml.internal.ws.org.objectweb.asm.ClassVisitor, flags : Int) : Void;
 	
 	/**
 	* Makes the given visitor visit the Java class of this {@link ClassReader}.
@@ -214,7 +214,7 @@ extern class ClassReader
 	*        of this class. See {@link #SKIP_DEBUG}, {@link #EXPAND_FRAMES},
 	*        {@link #SKIP_FRAMES}, {@link #SKIP_CODE}.
 	*/
-	@:overload public function accept(classVisitor : com.sun.xml.internal.ws.org.objectweb.asm.ClassVisitor, attrs : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Attribute>, flags : Int) : Void;
+	@:overload @:public public function accept(classVisitor : com.sun.xml.internal.ws.org.objectweb.asm.ClassVisitor, attrs : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Attribute>, flags : Int) : Void;
 	
 	/**
 	* Returns the label corresponding to the given offset. The default
@@ -227,7 +227,7 @@ extern class ClassReader
 	*        one. Otherwise it must store the new label in this array.
 	* @return a non null Label, which must be equal to labels[offset].
 	*/
-	@:overload private function readLabel(offset : Int, labels : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Label>) : com.sun.xml.internal.ws.org.objectweb.asm.Label;
+	@:overload @:protected private function readLabel(offset : Int, labels : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Label>) : com.sun.xml.internal.ws.org.objectweb.asm.Label;
 	
 	/**
 	* Returns the start index of the constant pool item in {@link #b b}, plus
@@ -238,7 +238,7 @@ extern class ClassReader
 	* @return the start index of the constant pool item in {@link #b b}, plus
 	*         one.
 	*/
-	@:overload public function getItem(item : Int) : Int;
+	@:overload @:public public function getItem(item : Int) : Int;
 	
 	/**
 	* Reads a byte value in {@link #b b}. <i>This method is intended for
@@ -248,7 +248,7 @@ extern class ClassReader
 	* @param index the start index of the value to be read in {@link #b b}.
 	* @return the read value.
 	*/
-	@:overload public function readByte(index : Int) : Int;
+	@:overload @:public public function readByte(index : Int) : Int;
 	
 	/**
 	* Reads an unsigned short value in {@link #b b}. <i>This method is
@@ -258,7 +258,7 @@ extern class ClassReader
 	* @param index the start index of the value to be read in {@link #b b}.
 	* @return the read value.
 	*/
-	@:overload public function readUnsignedShort(index : Int) : Int;
+	@:overload @:public public function readUnsignedShort(index : Int) : Int;
 	
 	/**
 	* Reads a signed short value in {@link #b b}. <i>This method is intended
@@ -268,7 +268,7 @@ extern class ClassReader
 	* @param index the start index of the value to be read in {@link #b b}.
 	* @return the read value.
 	*/
-	@:overload public function readShort(index : Int) : java.StdTypes.Int16;
+	@:overload @:public public function readShort(index : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Reads a signed int value in {@link #b b}. <i>This method is intended for
@@ -278,7 +278,7 @@ extern class ClassReader
 	* @param index the start index of the value to be read in {@link #b b}.
 	* @return the read value.
 	*/
-	@:overload public function readInt(index : Int) : Int;
+	@:overload @:public public function readInt(index : Int) : Int;
 	
 	/**
 	* Reads a signed long value in {@link #b b}. <i>This method is intended
@@ -288,7 +288,7 @@ extern class ClassReader
 	* @param index the start index of the value to be read in {@link #b b}.
 	* @return the read value.
 	*/
-	@:overload public function readLong(index : Int) : haxe.Int64;
+	@:overload @:public public function readLong(index : Int) : haxe.Int64;
 	
 	/**
 	* Reads an UTF8 string constant pool item in {@link #b b}. <i>This method
@@ -301,7 +301,7 @@ extern class ClassReader
 	*        sufficiently large. It is not automatically resized.
 	* @return the String corresponding to the specified UTF8 item.
 	*/
-	@:overload public function readUTF8(index : Int, buf : java.NativeArray<java.StdTypes.Char16>) : String;
+	@:overload @:public public function readUTF8(index : Int, buf : java.NativeArray<java.StdTypes.Char16>) : String;
 	
 	/**
 	* Reads a class constant pool item in {@link #b b}. <i>This method is
@@ -314,7 +314,7 @@ extern class ClassReader
 	*        sufficiently large. It is not automatically resized.
 	* @return the String corresponding to the specified class item.
 	*/
-	@:overload public function readClass(index : Int, buf : java.NativeArray<java.StdTypes.Char16>) : String;
+	@:overload @:public public function readClass(index : Int, buf : java.NativeArray<java.StdTypes.Char16>) : String;
 	
 	/**
 	* Reads a numeric or string constant pool item in {@link #b b}. <i>This
@@ -328,7 +328,7 @@ extern class ClassReader
 	*         {@link Double}, {@link String} or {@link Type} corresponding to
 	*         the given constant pool item.
 	*/
-	@:overload public function readConst(item : Int, buf : java.NativeArray<java.StdTypes.Char16>) : Dynamic;
+	@:overload @:public public function readConst(item : Int, buf : java.NativeArray<java.StdTypes.Char16>) : Dynamic;
 	
 	
 }

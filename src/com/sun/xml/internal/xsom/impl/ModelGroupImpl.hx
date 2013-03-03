@@ -25,47 +25,47 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class ModelGroupImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl implements com.sun.xml.internal.xsom.XSModelGroup implements com.sun.xml.internal.xsom.impl.Ref.Ref_Term
 {
-	@:overload public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _compositor : com.sun.xml.internal.xsom.XSModelGroup.XSModelGroup_Compositor, _children : java.NativeArray<com.sun.xml.internal.xsom.impl.ParticleImpl>) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _compositor : com.sun.xml.internal.xsom.XSModelGroup.XSModelGroup_Compositor, _children : java.NativeArray<com.sun.xml.internal.xsom.impl.ParticleImpl>) : Void;
 	
-	@:overload public function getChild(idx : Int) : com.sun.xml.internal.xsom.impl.ParticleImpl;
+	@:overload @:public public function getChild(idx : Int) : com.sun.xml.internal.xsom.impl.ParticleImpl;
 	
-	@:overload public function getSize() : Int;
+	@:overload @:public public function getSize() : Int;
 	
-	@:overload public function getChildren() : java.NativeArray<com.sun.xml.internal.xsom.impl.ParticleImpl>;
+	@:overload @:public public function getChildren() : java.NativeArray<com.sun.xml.internal.xsom.impl.ParticleImpl>;
 	
-	@:overload public function getCompositor() : com.sun.xml.internal.xsom.XSModelGroup.XSModelGroup_Compositor;
+	@:overload @:public public function getCompositor() : com.sun.xml.internal.xsom.XSModelGroup.XSModelGroup_Compositor;
 	
-	@:overload public function redefine(oldMG : com.sun.xml.internal.xsom.impl.ModelGroupDeclImpl) : Void;
+	@:overload @:public public function redefine(oldMG : com.sun.xml.internal.xsom.impl.ModelGroupDeclImpl) : Void;
 	
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.xsom.XSParticle>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.xsom.XSParticle>;
 	
-	@:overload public function isWildcard() : Bool;
+	@:overload @:public public function isWildcard() : Bool;
 	
-	@:overload public function isModelGroupDecl() : Bool;
+	@:overload @:public public function isModelGroupDecl() : Bool;
 	
-	@:overload public function isModelGroup() : Bool;
+	@:overload @:public public function isModelGroup() : Bool;
 	
-	@:overload public function isElementDecl() : Bool;
+	@:overload @:public public function isElementDecl() : Bool;
 	
-	@:overload public function asWildcard() : com.sun.xml.internal.xsom.XSWildcard;
+	@:overload @:public public function asWildcard() : com.sun.xml.internal.xsom.XSWildcard;
 	
-	@:overload public function asModelGroupDecl() : com.sun.xml.internal.xsom.XSModelGroupDecl;
+	@:overload @:public public function asModelGroupDecl() : com.sun.xml.internal.xsom.XSModelGroupDecl;
 	
-	@:overload public function asModelGroup() : com.sun.xml.internal.xsom.XSModelGroup;
+	@:overload @:public public function asModelGroup() : com.sun.xml.internal.xsom.XSModelGroup;
 	
-	@:overload public function asElementDecl() : com.sun.xml.internal.xsom.XSElementDecl;
+	@:overload @:public public function asElementDecl() : com.sun.xml.internal.xsom.XSElementDecl;
 	
-	@:overload override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
-	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSTermVisitor) : Void;
+	@:overload @:public public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSTermVisitor) : Void;
 	
-	@:overload public function apply(_function : com.sun.xml.internal.xsom.visitor.XSTermFunction<Dynamic>) : Dynamic;
+	@:overload @:public public function apply(_function : com.sun.xml.internal.xsom.visitor.XSTermFunction<Dynamic>) : Dynamic;
 	
-	@:overload public function apply<T, P>(_function : com.sun.xml.internal.xsom.visitor.XSTermFunctionWithParam<T, P>, param : P) : T;
+	@:overload @:public public function apply<T, P>(_function : com.sun.xml.internal.xsom.visitor.XSTermFunctionWithParam<T, P>, param : P) : T;
 	
-	@:overload override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
+	@:overload @:public override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
 	
-	@:overload public function getTerm() : com.sun.xml.internal.xsom.XSTerm;
+	@:overload @:public public function getTerm() : com.sun.xml.internal.xsom.XSTerm;
 	
 	
 }

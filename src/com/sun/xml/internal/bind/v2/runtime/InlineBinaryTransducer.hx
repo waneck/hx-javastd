@@ -30,13 +30,13 @@ extern class InlineBinaryTransducer<V> extends com.sun.xml.internal.bind.v2.runt
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new(core : com.sun.xml.internal.bind.v2.runtime.Transducer<V>) : Void;
+	@:overload @:public public function new(core : com.sun.xml.internal.bind.v2.runtime.Transducer<V>) : Void;
 	
-	@:overload public function print(o : V) : java.lang.CharSequence;
+	@:overload @:public override public function print(o : V) : java.lang.CharSequence;
 	
-	@:overload public function writeText(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, o : V, fieldName : String) : Void;
+	@:overload @:public override public function writeText(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, o : V, fieldName : String) : Void;
 	
-	@:overload public function writeLeafElement(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, tagName : com.sun.xml.internal.bind.v2.runtime.Name, o : V, fieldName : String) : Void;
+	@:overload @:public override public function writeLeafElement(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, tagName : com.sun.xml.internal.bind.v2.runtime.Name, o : V, fieldName : String) : Void;
 	
 	
 }

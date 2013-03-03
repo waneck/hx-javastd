@@ -67,7 +67,7 @@ package com.sun.org.apache.xpath.internal.domapi;
 	* @see org.w3c.dom.xpath.XPathExpression#evaluate(Node, short, XPathResult)
 	* @xsl.usage internal
 	*/
-	@:overload public function evaluate(contextNode : org.w3c.dom.Node, type : java.StdTypes.Int16, result : Dynamic) : Dynamic;
+	@:overload @:public public function evaluate(contextNode : org.w3c.dom.Node, type : java.StdTypes.Int16, result : Dynamic) : Dynamic;
 	
 	
 }

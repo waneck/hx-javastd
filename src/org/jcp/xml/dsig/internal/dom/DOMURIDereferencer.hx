@@ -32,7 +32,7 @@ package org.jcp.xml.dsig.internal.dom;
 */
 extern class DOMURIDereferencer implements javax.xml.crypto.URIDereferencer
 {
-	@:overload public function dereference(uriRef : javax.xml.crypto.URIReference, context : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
+	@:overload @:public public function dereference(uriRef : javax.xml.crypto.URIReference, context : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
 	
 	
 }

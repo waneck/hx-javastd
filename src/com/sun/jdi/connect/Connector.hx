@@ -34,7 +34,7 @@ extern interface Connector
 	*
 	* @return the name of this connector.
 	*/
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/**
 	* Returns a human-readable description of this connector
@@ -42,7 +42,7 @@ extern interface Connector
 	*
 	* @return the description of this connector
 	*/
-	@:overload public function description() : String;
+	@:overload @:public public function description() : String;
 	
 	/**
 	* Returns the transport mechanism used by this connector to establish
@@ -50,7 +50,7 @@ extern interface Connector
 	*
 	* @return the {@link Transport} used by this connector.
 	*/
-	@:overload public function transport() : com.sun.jdi.connect.Transport;
+	@:overload @:public @:public public function transport() : com.sun.jdi.connect.Transport;
 	
 	/**
 	* Returns the arguments accepted by this Connector and their
@@ -61,7 +61,7 @@ extern interface Connector
 	* @return the map associating argument names with argument
 	* information and default value.
 	*/
-	@:overload public function defaultArguments() : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>;
+	@:overload @:public public function defaultArguments() : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>;
 	
 	
 }

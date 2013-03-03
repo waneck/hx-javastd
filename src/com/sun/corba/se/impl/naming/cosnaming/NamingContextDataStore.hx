@@ -35,7 +35,7 @@ extern interface NamingContextDataStore
 	* @param bt Type of binding (as object or as context).
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
 	*/
-	@:overload public function Bind(n : org.omg.CosNaming.NameComponent, obj : org.omg.CORBA.Object, bt : org.omg.CosNaming.BindingType) : Void;
+	@:overload @:public public function Bind(n : org.omg.CosNaming.NameComponent, obj : org.omg.CORBA.Object, bt : org.omg.CosNaming.BindingType) : Void;
 	
 	/**
 	* Method which implements resolving the specified name,
@@ -47,14 +47,14 @@ extern interface NamingContextDataStore
 	* @return the object reference bound under the supplied name.
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
 	*/
-	@:overload public function Resolve(n : org.omg.CosNaming.NameComponent, bth : org.omg.CosNaming.BindingTypeHolder) : org.omg.CORBA.Object;
+	@:overload @:public public function Resolve(n : org.omg.CosNaming.NameComponent, bth : org.omg.CosNaming.BindingTypeHolder) : org.omg.CORBA.Object;
 	
 	/**
 	* Method which implements unbinding a name.
 	* @return the object reference bound to the name, or null if not found.
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
 	*/
-	@:overload public function Unbind(n : org.omg.CosNaming.NameComponent) : org.omg.CORBA.Object;
+	@:overload @:public public function Unbind(n : org.omg.CosNaming.NameComponent) : org.omg.CORBA.Object;
 	
 	/**
 	* Method which implements listing the contents of this
@@ -64,7 +64,7 @@ extern interface NamingContextDataStore
 	* @param bi The BindingIterator as an out parameter.
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
 	*/
-	@:overload public function List(how_many : Int, bl : org.omg.CosNaming.BindingListHolder, bi : org.omg.CosNaming.BindingIteratorHolder) : Void;
+	@:overload @:public public function List(how_many : Int, bl : org.omg.CosNaming.BindingListHolder, bi : org.omg.CosNaming.BindingIteratorHolder) : Void;
 	
 	/**
 	* Method which implements creating a new NamingContext.
@@ -72,20 +72,20 @@ extern interface NamingContextDataStore
 	* by this Name Server.
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
 	*/
-	@:overload public function NewContext() : org.omg.CosNaming.NamingContext;
+	@:overload @:public public function NewContext() : org.omg.CosNaming.NamingContext;
 	
 	/**
 	* Method which implements destroying this NamingContext.
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA system exceptions.
 	*/
-	@:overload public function Destroy() : Void;
+	@:overload @:public public function Destroy() : Void;
 	
 	/**
 	* Method which returns whether this NamingContext is empty
 	* or not.
 	* @return true if this NamingContext contains no bindings.
 	*/
-	@:overload public function IsEmpty() : Bool;
+	@:overload @:public public function IsEmpty() : Bool;
 	
 	@:overload public function getNSPOA() : org.omg.PortableServer.POA;
 	

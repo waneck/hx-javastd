@@ -25,13 +25,13 @@ package com.sun.tools.internal.xjc.reader.xmlschema;
 */
 extern class WildcardNameClassBuilder implements com.sun.xml.internal.xsom.visitor.XSWildcardFunction<com.sun.xml.internal.rngom.nc.NameClass>
 {
-	@:overload public static function build(wc : com.sun.xml.internal.xsom.XSWildcard) : com.sun.xml.internal.rngom.nc.NameClass;
+	@:overload @:public @:static public static function build(wc : com.sun.xml.internal.xsom.XSWildcard) : com.sun.xml.internal.rngom.nc.NameClass;
 	
-	@:overload public function any(wc : com.sun.xml.internal.xsom.XSWildcard.XSWildcard_Any) : com.sun.xml.internal.rngom.nc.NameClass;
+	@:overload @:public public function any(wc : com.sun.xml.internal.xsom.XSWildcard.XSWildcard_Any) : com.sun.xml.internal.rngom.nc.NameClass;
 	
-	@:overload public function other(wc : com.sun.xml.internal.xsom.XSWildcard.XSWildcard_Other) : com.sun.xml.internal.rngom.nc.NameClass;
+	@:overload @:public public function other(wc : com.sun.xml.internal.xsom.XSWildcard.XSWildcard_Other) : com.sun.xml.internal.rngom.nc.NameClass;
 	
-	@:overload public function union(wc : com.sun.xml.internal.xsom.XSWildcard.XSWildcard_Union) : com.sun.xml.internal.rngom.nc.NameClass;
+	@:overload @:public public function union(wc : com.sun.xml.internal.xsom.XSWildcard.XSWildcard_Union) : com.sun.xml.internal.rngom.nc.NameClass;
 	
 	
 }

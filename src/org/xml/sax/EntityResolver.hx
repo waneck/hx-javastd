@@ -70,7 +70,7 @@ extern interface EntityResolver
 	*            or Reader for the InputSource.
 	* @see org.xml.sax.InputSource
 	*/
-	@:overload @:abstract public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public @:abstract public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
 	
 }

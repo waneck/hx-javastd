@@ -33,7 +33,7 @@ extern interface Timestamper
 	* @throws IOException The exception is thrown if a problem occurs while
 	*         communicating with the TSA.
 	*/
-	@:overload public function generateTimestamp(tsQuery : sun.security.timestamp.TSRequest) : sun.security.timestamp.TSResponse;
+	@:overload @:public public function generateTimestamp(tsQuery : sun.security.timestamp.TSRequest) : sun.security.timestamp.TSResponse;
 	
 	
 }

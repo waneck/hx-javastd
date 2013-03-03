@@ -25,15 +25,15 @@ package com.sun.java.swing.plaf.motif;
 */
 extern class MotifScrollPaneUI extends javax.swing.plaf.basic.BasicScrollPaneUI
 {
-	@:overload private function installListeners(scrollPane : javax.swing.JScrollPane) : Void;
+	@:overload @:protected override private function installListeners(scrollPane : javax.swing.JScrollPane) : Void;
 	
-	@:overload private function uninstallListeners(scrollPane : javax.swing.JScrollPane) : Void;
+	@:overload @:protected private function uninstallListeners(scrollPane : javax.swing.JScrollPane) : Void;
 	
-	@:overload private function installDefaults(scrollpane : javax.swing.JScrollPane) : Void;
+	@:overload @:protected override private function installDefaults(scrollpane : javax.swing.JScrollPane) : Void;
 	
-	@:overload private function uninstallDefaults(c : javax.swing.JScrollPane) : Void;
+	@:overload @:protected override private function uninstallDefaults(c : javax.swing.JScrollPane) : Void;
 	
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	
 }

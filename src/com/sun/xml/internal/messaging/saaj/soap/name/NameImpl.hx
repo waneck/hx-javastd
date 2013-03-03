@@ -25,144 +25,144 @@ package com.sun.xml.internal.messaging.saaj.soap.name;
 */
 extern class NameImpl implements javax.xml.soap.Name
 {
-	public static var XML_NAMESPACE_PREFIX(default, null) : String;
+	@:public @:static @:final public static var XML_NAMESPACE_PREFIX(default, null) : String;
 	
-	public static var XML_SCHEMA_NAMESPACE_PREFIX(default, null) : String;
+	@:public @:static @:final public static var XML_SCHEMA_NAMESPACE_PREFIX(default, null) : String;
 	
-	public static var SOAP_ENVELOPE_PREFIX(default, null) : String;
+	@:public @:static @:final public static var SOAP_ENVELOPE_PREFIX(default, null) : String;
 	
-	public static var XML_NAMESPACE(default, null) : String;
+	@:public @:static @:final public static var XML_NAMESPACE(default, null) : String;
 	
-	public static var SOAP11_NAMESPACE(default, null) : String;
+	@:public @:static @:final public static var SOAP11_NAMESPACE(default, null) : String;
 	
-	public static var SOAP12_NAMESPACE(default, null) : String;
+	@:public @:static @:final public static var SOAP12_NAMESPACE(default, null) : String;
 	
-	public static var XML_SCHEMA_NAMESPACE(default, null) : String;
+	@:public @:static @:final public static var XML_SCHEMA_NAMESPACE(default, null) : String;
 	
-	private var uri : String;
+	@:protected private var uri : String;
 	
-	private var localName : String;
+	@:protected private var localName : String;
 	
-	private var prefix : String;
+	@:protected private var prefix : String;
 	
-	private static var log(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var log(default, null) : java.util.logging.Logger;
 	
 	/**
 	* XML Information Set REC
 	* all namespace attributes (including those named xmlns,
 	* whose [prefix] property has no value) have a namespace URI of http://www.w3.org/2000/xmlns/
 	*/
-	public static var XMLNS_URI(default, null) : String;
+	@:public @:final @:static public static var XMLNS_URI(default, null) : String;
 	
-	@:overload private function new(name : String) : Void;
+	@:overload @:protected private function new(name : String) : Void;
 	
-	@:overload private function new(name : String, prefix : String, uri : String) : Void;
+	@:overload @:protected private function new(name : String, prefix : String, uri : String) : Void;
 	
-	@:overload public static function convertToName(qname : javax.xml.namespace.QName) : javax.xml.soap.Name;
+	@:overload @:public @:static public static function convertToName(qname : javax.xml.namespace.QName) : javax.xml.soap.Name;
 	
-	@:overload public static function convertToQName(name : javax.xml.soap.Name) : javax.xml.namespace.QName;
+	@:overload @:public @:static public static function convertToQName(name : javax.xml.soap.Name) : javax.xml.namespace.QName;
 	
-	@:overload public static function createFromUnqualifiedName(name : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createFromUnqualifiedName(name : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function createFromTagName(tagName : String) : javax.xml.soap.Name;
+	@:overload @:public @:static public static function createFromTagName(tagName : String) : javax.xml.soap.Name;
 	
-	@:overload public static function createFromQualifiedName(qualifiedName : String, uri : String) : javax.xml.soap.Name;
+	@:overload @:public @:static public static function createFromQualifiedName(qualifiedName : String, uri : String) : javax.xml.soap.Name;
 	
-	@:overload private static function createFromTagAndUri(tagName : String, uri : String) : javax.xml.soap.Name;
+	@:overload @:protected @:static private static function createFromTagAndUri(tagName : String, uri : String) : javax.xml.soap.Name;
 	
-	@:overload private static function getPrefixSeparatorIndex(qualifiedName : String) : Int;
+	@:overload @:protected @:static private static function getPrefixSeparatorIndex(qualifiedName : String) : Int;
 	
-	@:overload public static function getPrefixFromQualifiedName(qualifiedName : String) : String;
+	@:overload @:public @:static public static function getPrefixFromQualifiedName(qualifiedName : String) : String;
 	
-	@:overload public static function getLocalNameFromQualifiedName(qualifiedName : String) : String;
+	@:overload @:public @:static public static function getLocalNameFromQualifiedName(qualifiedName : String) : String;
 	
-	@:overload public static function getPrefixFromTagName(tagName : String) : String;
+	@:overload @:public @:static public static function getPrefixFromTagName(tagName : String) : String;
 	
-	@:overload public static function getLocalNameFromTagName(tagName : String) : String;
+	@:overload @:public @:static public static function getLocalNameFromTagName(tagName : String) : String;
 	
-	@:overload public static function isQualified(tagName : String) : Bool;
+	@:overload @:public @:static public static function isQualified(tagName : String) : Bool;
 	
-	@:overload public static function create(name : String, prefix : String, uri : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function create(name : String, prefix : String, uri : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function createQName(prefix : String, localName : String) : String;
+	@:overload @:public @:static public static function createQName(prefix : String, localName : String) : String;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Get the local name part of this XML Name.
 	*
 	* @return a string for the local name.
 	*/
-	@:overload public function getLocalName() : String;
+	@:overload @:public public function getLocalName() : String;
 	
 	/**
 	* Returns the prefix associated with the namespace of the name.
 	*
 	* @return the prefix as a string.
 	*/
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
 	/**
 	* Returns the URI associated of the namespace.
 	*
 	* @return the uri as a string.
 	*/
-	@:overload public function getURI() : String;
+	@:overload @:public public function getURI() : String;
 	
 	/**
 	* Returns a String version of the name suitable for use in an XML document.
 	*/
-	@:overload public function getQualifiedName() : String;
+	@:overload @:public public function getQualifiedName() : String;
 	
 	/**
 	* Create a name object for a SOAP1.1 Envelope.
 	*/
-	@:overload public static function createEnvelope1_1Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createEnvelope1_1Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.2 Envelope.
 	*/
-	@:overload public static function createEnvelope1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createEnvelope1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.1 Header.
 	*/
-	@:overload public static function createHeader1_1Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createHeader1_1Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.2 Header.
 	*/
-	@:overload public static function createHeader1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createHeader1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.1 Body.
 	*/
-	@:overload public static function createBody1_1Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createBody1_1Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.2 Body.
 	*/
-	@:overload public static function createBody1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createBody1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.1 Fault.
 	*/
-	@:overload public static function createFault1_1Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createFault1_1Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.2 NotUnderstood element.
 	*/
-	@:overload public static function createNotUnderstood1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createNotUnderstood1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.2 Upgrade element.
 	*/
-	@:overload public static function createUpgrade1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createUpgrade1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.2 SupportedEnvelope Upgrade element.
 	*/
-	@:overload public static function createSupportedEnvelope1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createSupportedEnvelope1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.2
@@ -170,35 +170,35 @@ extern class NameImpl implements javax.xml.soap.Name
 	*
 	* @param localName Local Name of element
 	*/
-	@:overload public static function createFault1_2Name(localName : String, prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createFault1_2Name(localName : String, prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.2 Fault/Code or Subcode.
 	*
 	* @param localName Either "Code" or "Subcode"
 	*/
-	@:overload public static function createCodeSubcode1_2Name(prefix : String, localName : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createCodeSubcode1_2Name(prefix : String, localName : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.1 Fault Detail.
 	*/
-	@:overload public static function createDetail1_1Name() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createDetail1_1Name() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function createDetail1_1Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createDetail1_1Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function createFaultElement1_1Name(localName : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createFaultElement1_1Name(localName : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function createFaultElement1_1Name(localName : String, prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createFaultElement1_1Name(localName : String, prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function createSOAP11Name(string : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createSOAP11Name(string : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function createSOAP12Name(string : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createSOAP12Name(string : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function createSOAP12Name(localName : String, prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createSOAP12Name(localName : String, prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function createXmlName(localName : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:public @:static public static function createXmlName(localName : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function copyElementName(element : org.w3c.dom.Element) : javax.xml.soap.Name;
+	@:overload @:public @:static public static function copyElementName(element : org.w3c.dom.Element) : javax.xml.soap.Name;
 	
 	
 }

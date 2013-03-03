@@ -28,7 +28,7 @@ extern class TypeCast
 	/**
 	* Makes sure that a map contains the right type, and returns it to the desirable type.
 	*/
-	@:overload public static function checkedCast<K, V>(m : java.util.Map<Dynamic, Dynamic>, keyType : Class<K>, valueType : Class<V>) : java.util.Map<K, V>;
+	@:overload @:public @:static public static function checkedCast<K, V>(m : java.util.Map<Dynamic, Dynamic>, keyType : Class<K>, valueType : Class<V>) : java.util.Map<K, V>;
 	
 	
 }

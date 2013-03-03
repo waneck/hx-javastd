@@ -37,7 +37,7 @@ extern class SoftCache extends java.util.AbstractMap<Dynamic, Dynamic> implement
 	*                                   or equal to zero, or if the load
 	*                                   factor is less than zero
 	*/
-	@:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
 	/**
 	* Construct a new, empty <code>SoftCache</code> with the given
@@ -48,24 +48,24 @@ extern class SoftCache extends java.util.AbstractMap<Dynamic, Dynamic> implement
 	* @throws IllegalArgumentException  If the initial capacity is less than
 	*                                   or equal to zero
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Construct a new, empty <code>SoftCache</code> with the default
 	* capacity and the default load factor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Return the number of key-value mappings in this cache.  The time
 	* required by this operation is linear in the size of the map.
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Return <code>true</code> if this cache contains no key-value mappings.
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Return <code>true</code> if this cache contains a mapping for the
@@ -74,7 +74,7 @@ extern class SoftCache extends java.util.AbstractMap<Dynamic, Dynamic> implement
 	*
 	* @param   key   The key whose presence in the cache is to be tested
 	*/
-	@:overload override public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public override public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Create a value object for the given <code>key</code>.  This method is
@@ -93,7 +93,7 @@ extern class SoftCache extends java.util.AbstractMap<Dynamic, Dynamic> implement
 	*              could not be computed
 	* @see #get
 	*/
-	@:overload private function fill(key : Dynamic) : Dynamic;
+	@:overload @:protected private function fill(key : Dynamic) : Dynamic;
 	
 	/**
 	* Return the value to which this cache maps the specified
@@ -111,7 +111,7 @@ extern class SoftCache extends java.util.AbstractMap<Dynamic, Dynamic> implement
 	*
 	* @see #fill
 	*/
-	@:overload override public function get(key : Dynamic) : Dynamic;
+	@:overload @:public override public function get(key : Dynamic) : Dynamic;
 	
 	/**
 	* Update this cache so that the given <code>key</code> maps to the given
@@ -127,7 +127,7 @@ extern class SoftCache extends java.util.AbstractMap<Dynamic, Dynamic> implement
 	* @return  The previous value to which this key was mapped, or
 	*          <code>null</code> if if there was no mapping for the key
 	*/
-	@:overload override public function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:overload @:public override public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
 	/**
 	* Remove the mapping for the given <code>key</code> from this cache, if
@@ -138,17 +138,17 @@ extern class SoftCache extends java.util.AbstractMap<Dynamic, Dynamic> implement
 	* @return  The value to which this key was mapped, or <code>null</code> if
 	*          there was no mapping for the key
 	*/
-	@:overload override public function remove(key : Dynamic) : Dynamic;
+	@:overload @:public override public function remove(key : Dynamic) : Dynamic;
 	
 	/**
 	* Remove all mappings from this cache.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Return a <code>Set</code> view of the mappings in this cache.
 	*/
-	@:overload override public function entrySet() : java.util.Set<Dynamic>;
+	@:overload @:public override public function entrySet() : java.util.Set<Dynamic>;
 	
 	
 }
@@ -170,28 +170,28 @@ Because it uses SoftCache.this.queue, this class cannot be static.
 */
 @:native('sun$misc$SoftCache$Entry') @:internal extern class SoftCache_Entry implements java.util.Map.Map_Entry<Dynamic, Dynamic>
 {
-	@:overload public function getKey() : Dynamic;
+	@:overload @:public public function getKey() : Dynamic;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
-	@:overload public function setValue(value : Dynamic) : Dynamic;
+	@:overload @:public public function setValue(value : Dynamic) : Dynamic;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
 /* Internal class for entry sets */
 @:native('sun$misc$SoftCache$EntrySet') @:internal extern class SoftCache_EntrySet extends java.util.AbstractSet<Dynamic>
 {
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	
 }

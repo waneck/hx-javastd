@@ -27,7 +27,7 @@ extern class DTMConfigurationException extends com.sun.org.apache.xml.internal.d
 	* Create a new <code>DTMConfigurationException</code> with no
 	* detail mesage.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a new <code>DTMConfigurationException</code> with
@@ -35,7 +35,7 @@ extern class DTMConfigurationException extends com.sun.org.apache.xml.internal.d
 	*
 	* @param msg The error message for the exception.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Create a new <code>DTMConfigurationException</code> with a
@@ -44,7 +44,7 @@ extern class DTMConfigurationException extends com.sun.org.apache.xml.internal.d
 	* @param e The exception to be encapsulated in a
 	* DTMConfigurationException.
 	*/
-	@:overload public function new(e : java.lang.Throwable) : Void;
+	@:overload @:public public function new(e : java.lang.Throwable) : Void;
 	
 	/**
 	* Create a new <code>DTMConfigurationException</code> with the
@@ -53,7 +53,7 @@ extern class DTMConfigurationException extends com.sun.org.apache.xml.internal.d
 	* @param msg The detail message.
 	* @param e The exception to be wrapped in a DTMConfigurationException
 	*/
-	@:overload public function new(msg : String, e : java.lang.Throwable) : Void;
+	@:overload @:public public function new(msg : String, e : java.lang.Throwable) : Void;
 	
 	/**
 	* Create a new DTMConfigurationException from a message and a Locator.
@@ -65,7 +65,7 @@ extern class DTMConfigurationException extends com.sun.org.apache.xml.internal.d
 	* @param message The error or warning message.
 	* @param locator The locator object for the error or warning.
 	*/
-	@:overload public function new(message : String, locator : javax.xml.transform.SourceLocator) : Void;
+	@:overload @:public public function new(message : String, locator : javax.xml.transform.SourceLocator) : Void;
 	
 	/**
 	* Wrap an existing exception in a DTMConfigurationException.
@@ -75,7 +75,7 @@ extern class DTMConfigurationException extends com.sun.org.apache.xml.internal.d
 	* @param locator The locator object for the error or warning.
 	* @param e Any exception.
 	*/
-	@:overload public function new(message : String, locator : javax.xml.transform.SourceLocator, e : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, locator : javax.xml.transform.SourceLocator, e : java.lang.Throwable) : Void;
 	
 	
 }

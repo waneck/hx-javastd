@@ -28,14 +28,14 @@ extern class JobSheets extends javax.print.attribute.EnumSyntax implements javax
 	/**
 	* No job sheets are printed.
 	*/
-	public static var NONE(default, null) : javax.print.attribute.standard.JobSheets;
+	@:public @:static @:final public static var NONE(default, null) : javax.print.attribute.standard.JobSheets;
 	
 	/**
 	* One or more site specific standard job sheets are printed. e.g. a
 	* single start sheet is printed, or both start and end sheets are
 	* printed.
 	*/
-	public static var STANDARD(default, null) : javax.print.attribute.standard.JobSheets;
+	@:public @:static @:final public static var STANDARD(default, null) : javax.print.attribute.standard.JobSheets;
 	
 	/**
 	* Construct a new job sheets enumeration value with the given integer
@@ -43,17 +43,17 @@ extern class JobSheets extends javax.print.attribute.EnumSyntax implements javax
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class JobSheets.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class JobSheets.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -65,7 +65,7 @@ extern class JobSheets extends javax.print.attribute.EnumSyntax implements javax
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -76,7 +76,7 @@ extern class JobSheets extends javax.print.attribute.EnumSyntax implements javax
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

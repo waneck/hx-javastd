@@ -51,7 +51,7 @@ package javax.management;
 	* Notification type which indicates that the observed MBean attribute value has changed.
 	* <BR>The value of this type string is <CODE>jmx.attribute.change</CODE>.
 	*/
-	public static var ATTRIBUTE_CHANGE(default, null) : String;
+	@:public @:static @:final public static var ATTRIBUTE_CHANGE(default, null) : String;
 	
 	/**
 	* Constructs an attribute change notification object.
@@ -67,35 +67,35 @@ package javax.management;
 	* @param oldValue An object representing value of the attribute before the change.
 	* @param newValue An object representing value of the attribute after the change.
 	*/
-	@:overload public function new(source : Dynamic, sequenceNumber : haxe.Int64, timeStamp : haxe.Int64, msg : String, attributeName : String, attributeType : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:public public function new(source : Dynamic, sequenceNumber : haxe.Int64, timeStamp : haxe.Int64, msg : String, attributeName : String, attributeType : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Gets the name of the attribute which has changed.
 	*
 	* @return A String containing the name of the attribute.
 	*/
-	@:overload public function getAttributeName() : String;
+	@:overload @:public public function getAttributeName() : String;
 	
 	/**
 	* Gets the type of the attribute which has changed.
 	*
 	* @return A String containing the type of the attribute.
 	*/
-	@:overload public function getAttributeType() : String;
+	@:overload @:public public function getAttributeType() : String;
 	
 	/**
 	* Gets the old value of the attribute which has changed.
 	*
 	* @return An Object containing the old value of the attribute.
 	*/
-	@:overload public function getOldValue() : Dynamic;
+	@:overload @:public public function getOldValue() : Dynamic;
 	
 	/**
 	* Gets the new value of the attribute which has changed.
 	*
 	* @return An Object containing the new value of the attribute.
 	*/
-	@:overload public function getNewValue() : Dynamic;
+	@:overload @:public public function getNewValue() : Dynamic;
 	
 	
 }

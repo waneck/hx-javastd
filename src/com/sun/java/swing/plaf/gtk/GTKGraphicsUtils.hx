@@ -28,7 +28,7 @@ package com.sun.java.swing.plaf.gtk;
 	/**
 	* @author Joshua Outwater
 	*/
-	@:overload override public function paintText(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, text : String, x : Int, y : Int, mnemonicIndex : Int) : Void;
+	@:overload @:public override public function paintText(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, text : String, x : Int, y : Int, mnemonicIndex : Int) : Void;
 	
 	/**
 	* Paints text at the specified location. This will not attempt to
@@ -41,7 +41,7 @@ package com.sun.java.swing.plaf.gtk;
 	* @param bounds Bounds of the text to be drawn.
 	* @param mnemonicIndex Index to draw string at.
 	*/
-	@:overload override public function paintText(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, text : String, bounds : java.awt.Rectangle, mnemonicIndex : Int) : Void;
+	@:overload @:public override public function paintText(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, text : String, bounds : java.awt.Rectangle, mnemonicIndex : Int) : Void;
 	
 	
 }

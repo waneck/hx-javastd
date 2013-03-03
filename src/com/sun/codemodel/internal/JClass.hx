@@ -33,7 +33,7 @@ extern class JClass extends com.sun.codemodel.internal.JType
 	* To be exact, this object represents an "use" of a reference type,
 	* not necessarily a declaration of it, which is modeled as {@link JDefinedClass}.
 	*/
-	@:overload private function new(_owner : com.sun.codemodel.internal.JCodeModel) : Void;
+	@:overload @:protected private function new(_owner : com.sun.codemodel.internal.JCodeModel) : Void;
 	
 	/**
 	* Gets the name of this class.
@@ -43,22 +43,22 @@ extern class JClass extends com.sun.codemodel.internal.JType
 	*  For example, this method returns "String" for
 	*  <code>java.lang.String</code>.
 	*/
-	@:overload @:abstract override public function name() : String;
+	@:overload @:abstract @:public override public function name() : String;
 	
 	/**
 	* Gets the package to which this class belongs.
 	* TODO: shall we move move this down?
 	*/
-	@:overload @:abstract public function _package() : com.sun.codemodel.internal.JPackage;
+	@:overload @:abstract @:public public function _package() : com.sun.codemodel.internal.JPackage;
 	
 	/**
 	* Returns the class in which this class is nested, or <tt>null</tt> if
 	* this is a top-level class.
 	*/
-	@:overload public function outer() : com.sun.codemodel.internal.JClass;
+	@:overload @:public public function outer() : com.sun.codemodel.internal.JClass;
 	
 	/** Gets the JCodeModel object to which this object belongs. */
-	@:overload @:final override public function owner() : com.sun.codemodel.internal.JCodeModel;
+	@:overload @:public @:final override public function owner() : com.sun.codemodel.internal.JCodeModel;
 	
 	/**
 	* Gets the super class of this class.
@@ -71,7 +71,7 @@ extern class JClass extends com.sun.codemodel.internal.JType
 	*      {@link JClass} for {@link Object}.
 	*      If this JClass represents {@link Object}, return null.
 	*/
-	@:overload @:abstract public function _extends() : com.sun.codemodel.internal.JClass;
+	@:overload @:abstract @:public public function _extends() : com.sun.codemodel.internal.JClass;
 	
 	/**
 	* Iterates all super interfaces directly implemented by
@@ -82,7 +82,7 @@ extern class JClass extends com.sun.codemodel.internal.JType
 	*          {@link JClass} objects that represents those interfaces
 	*          implemented by this object.
 	*/
-	@:overload @:abstract public function _implements() : java.util.Iterator<com.sun.codemodel.internal.JClass>;
+	@:overload @:abstract @:public public function _implements() : java.util.Iterator<com.sun.codemodel.internal.JClass>;
 	
 	/**
 	* Iterates all the type parameters of this class/interface.
@@ -92,40 +92,40 @@ extern class JClass extends com.sun.codemodel.internal.JType
 	* <code>Set&lt;T></code>, this method returns an array
 	* that contains single {@link JTypeVar} for 'T'.
 	*/
-	@:overload public function typeParams() : java.NativeArray<com.sun.codemodel.internal.JTypeVar>;
+	@:overload @:public public function typeParams() : java.NativeArray<com.sun.codemodel.internal.JTypeVar>;
 	
 	/**
 	* Sometimes useful reusable empty array.
 	*/
-	private static var EMPTY_ARRAY(default, null) : java.NativeArray<com.sun.codemodel.internal.JTypeVar>;
+	@:protected @:static @:final private static var EMPTY_ARRAY(default, null) : java.NativeArray<com.sun.codemodel.internal.JTypeVar>;
 	
 	/**
 	* Checks if this object represents an interface.
 	*/
-	@:overload @:abstract public function isInterface() : Bool;
+	@:overload @:abstract @:public public function isInterface() : Bool;
 	
 	/**
 	* Checks if this class is an abstract class.
 	*/
-	@:overload @:abstract public function isAbstract() : Bool;
+	@:overload @:abstract @:public public function isAbstract() : Bool;
 	
 	/**
 	* If this class represents one of the wrapper classes
 	* defined in the java.lang package, return the corresponding
 	* primitive type. Otherwise null.
 	*/
-	@:overload public function getPrimitiveType() : com.sun.codemodel.internal.JPrimitiveType;
+	@:overload @:public public function getPrimitiveType() : com.sun.codemodel.internal.JPrimitiveType;
 	
 	/**
 	* @deprecated calling this method from {@link JClass}
 	* would be meaningless, since it's always guaranteed to
 	* return <tt>this</tt>.
 	*/
-	@:overload override public function boxify() : com.sun.codemodel.internal.JClass;
+	@:overload @:public override public function boxify() : com.sun.codemodel.internal.JClass;
 	
-	@:overload override public function unboxify() : com.sun.codemodel.internal.JType;
+	@:overload @:public override public function unboxify() : com.sun.codemodel.internal.JType;
 	
-	@:overload override public function erasure() : com.sun.codemodel.internal.JClass;
+	@:overload @:public override public function erasure() : com.sun.codemodel.internal.JClass;
 	
 	/**
 	* Checks the relationship between two classes.
@@ -133,7 +133,7 @@ extern class JClass extends com.sun.codemodel.internal.JType
 	* This method works in the same way as {@link Class#isAssignableFrom(Class)}
 	* works. For example, baseClass.isAssignableFrom(derivedClass)==true.
 	*/
-	@:overload @:final public function isAssignableFrom(derived : com.sun.codemodel.internal.JClass) : Bool;
+	@:overload @:public @:final public function isAssignableFrom(derived : com.sun.codemodel.internal.JClass) : Bool;
 	
 	/**
 	* Gets the parameterization of the given base type.
@@ -158,22 +158,11 @@ extern class JClass extends com.sun.codemodel.internal.JType
 	*      The use of {@code baseType} in {@code this} type.
 	*      or null if the type is not assignable to the base type.
 	*/
-	@:overload @:final public function getBaseClass(baseType : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JClass;
+	@:overload @:public @:final public function getBaseClass(baseType : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JClass;
 	
-	@:overload @:final public function getBaseClass(baseType : Class<Dynamic>) : com.sun.codemodel.internal.JClass;
+	@:overload @:public @:final public function getBaseClass(baseType : Class<Dynamic>) : com.sun.codemodel.internal.JClass;
 	
-	@:overload override public function array() : com.sun.codemodel.internal.JClass;
-	
-	/**
-	* "Narrows" a generic class to a concrete class by specifying
-	* a type argument.
-	*
-	* <p>
-	* <code>.narrow(X)</code> builds <code>Set&lt;X></code> from <code>Set</code>.
-	*/
-	@:overload public function narrow(clazz : Class<Dynamic>) : com.sun.codemodel.internal.JClass;
-	
-	@:overload public function narrow(clazz : java.NativeArray<Class<Dynamic>>) : com.sun.codemodel.internal.JClass;
+	@:overload @:public override public function array() : com.sun.codemodel.internal.JClass;
 	
 	/**
 	* "Narrows" a generic class to a concrete class by specifying
@@ -182,30 +171,41 @@ extern class JClass extends com.sun.codemodel.internal.JType
 	* <p>
 	* <code>.narrow(X)</code> builds <code>Set&lt;X></code> from <code>Set</code>.
 	*/
-	@:overload public function narrow(clazz : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JClass;
+	@:overload @:public public function narrow(clazz : Class<Dynamic>) : com.sun.codemodel.internal.JClass;
 	
-	@:overload public function narrow(type : com.sun.codemodel.internal.JType) : com.sun.codemodel.internal.JClass;
+	@:overload @:public public function narrow(clazz : java.NativeArray<Class<Dynamic>>) : com.sun.codemodel.internal.JClass;
 	
-	@:overload public function narrow(clazz : java.NativeArray<com.sun.codemodel.internal.JClass>) : com.sun.codemodel.internal.JClass;
+	/**
+	* "Narrows" a generic class to a concrete class by specifying
+	* a type argument.
+	*
+	* <p>
+	* <code>.narrow(X)</code> builds <code>Set&lt;X></code> from <code>Set</code>.
+	*/
+	@:overload @:public public function narrow(clazz : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JClass;
 	
-	@:overload public function narrow(clazz : java.util.List<com.sun.codemodel.internal.JClass>) : com.sun.codemodel.internal.JClass;
+	@:overload @:public public function narrow(type : com.sun.codemodel.internal.JType) : com.sun.codemodel.internal.JClass;
+	
+	@:overload @:public public function narrow(clazz : java.NativeArray<com.sun.codemodel.internal.JClass>) : com.sun.codemodel.internal.JClass;
+	
+	@:overload @:public public function narrow(clazz : java.util.List<com.sun.codemodel.internal.JClass>) : com.sun.codemodel.internal.JClass;
 	
 	/**
 	* If this class is parameterized, return the type parameter of the given index.
 	*/
-	@:overload public function getTypeParameters() : java.util.List<com.sun.codemodel.internal.JClass>;
+	@:overload @:public public function getTypeParameters() : java.util.List<com.sun.codemodel.internal.JClass>;
 	
 	/**
 	* Returns true if this class is a parameterized class.
 	*/
-	@:overload @:final public function isParameterized() : Bool;
+	@:overload @:public @:final public function isParameterized() : Bool;
 	
 	/**
 	* Create "? extends T" from T.
 	*
 	* @return never null
 	*/
-	@:overload @:final public function wildcard() : com.sun.codemodel.internal.JClass;
+	@:overload @:public @:final public function wildcard() : com.sun.codemodel.internal.JClass;
 	
 	/**
 	* Substitutes the type variables with their actual arguments.
@@ -219,25 +219,25 @@ extern class JClass extends com.sun.codemodel.internal.JType
 	* <p>
 	* This method needs to work recursively.
 	*/
-	@:overload @:abstract private function substituteParams(variables : java.NativeArray<com.sun.codemodel.internal.JTypeVar>, bindings : java.util.List<com.sun.codemodel.internal.JClass>) : com.sun.codemodel.internal.JClass;
+	@:overload @:protected @:abstract private function substituteParams(variables : java.NativeArray<com.sun.codemodel.internal.JTypeVar>, bindings : java.util.List<com.sun.codemodel.internal.JClass>) : com.sun.codemodel.internal.JClass;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload @:final public function dotclass() : com.sun.codemodel.internal.JExpression;
-	
-	/** Generates a static method invocation. */
-	@:overload @:final public function staticInvoke(method : com.sun.codemodel.internal.JMethod) : com.sun.codemodel.internal.JInvocation;
+	@:overload @:public @:final public function dotclass() : com.sun.codemodel.internal.JExpression;
 	
 	/** Generates a static method invocation. */
-	@:overload @:final public function staticInvoke(method : String) : com.sun.codemodel.internal.JInvocation;
+	@:overload @:public @:final public function staticInvoke(method : com.sun.codemodel.internal.JMethod) : com.sun.codemodel.internal.JInvocation;
+	
+	/** Generates a static method invocation. */
+	@:overload @:public @:final public function staticInvoke(method : String) : com.sun.codemodel.internal.JInvocation;
 	
 	/** Static field reference. */
-	@:overload @:final public function staticRef(field : String) : com.sun.codemodel.internal.JFieldRef;
+	@:overload @:public @:final public function staticRef(field : String) : com.sun.codemodel.internal.JFieldRef;
 	
 	/** Static field reference. */
-	@:overload @:final public function staticRef(field : com.sun.codemodel.internal.JVar) : com.sun.codemodel.internal.JFieldRef;
+	@:overload @:public @:final public function staticRef(field : com.sun.codemodel.internal.JVar) : com.sun.codemodel.internal.JFieldRef;
 	
-	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

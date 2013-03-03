@@ -25,29 +25,29 @@ package com.sun.corba.se.impl.oa.poa;
 */
 extern class POAPolicyMediatorImpl_NR_USM extends com.sun.corba.se.impl.oa.poa.POAPolicyMediatorBase
 {
-	@:overload private function internalGetServant(id : java.NativeArray<java.StdTypes.Int8>, operation : String) : Dynamic;
+	@:overload @:protected override private function internalGetServant(id : java.NativeArray<java.StdTypes.Int8>, operation : String) : Dynamic;
 	
-	@:overload public function returnServant() : Void;
+	@:overload @:public override public function returnServant() : Void;
 	
-	@:overload public function etherealizeAll() : Void;
+	@:overload @:public override public function etherealizeAll() : Void;
 	
-	@:overload public function clearAOM() : Void;
+	@:overload @:public override public function clearAOM() : Void;
 	
-	@:overload public function getServantManager() : org.omg.PortableServer.ServantManager;
+	@:overload @:public override public function getServantManager() : org.omg.PortableServer.ServantManager;
 	
-	@:overload public function setServantManager(servantManager : org.omg.PortableServer.ServantManager) : Void;
+	@:overload @:public override public function setServantManager(servantManager : org.omg.PortableServer.ServantManager) : Void;
 	
-	@:overload public function getDefaultServant() : org.omg.PortableServer.Servant;
+	@:overload @:public override public function getDefaultServant() : org.omg.PortableServer.Servant;
 	
-	@:overload public function setDefaultServant(servant : org.omg.PortableServer.Servant) : Void;
+	@:overload @:public override public function setDefaultServant(servant : org.omg.PortableServer.Servant) : Void;
 	
-	@:overload @:final public function activateObject(id : java.NativeArray<java.StdTypes.Int8>, servant : org.omg.PortableServer.Servant) : Void;
+	@:overload @:public @:final override public function activateObject(id : java.NativeArray<java.StdTypes.Int8>, servant : org.omg.PortableServer.Servant) : Void;
 	
-	@:overload public function deactivateObject(id : java.NativeArray<java.StdTypes.Int8>) : org.omg.PortableServer.Servant;
+	@:overload @:public override public function deactivateObject(id : java.NativeArray<java.StdTypes.Int8>) : org.omg.PortableServer.Servant;
 	
-	@:overload public function servantToId(servant : org.omg.PortableServer.Servant) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function servantToId(servant : org.omg.PortableServer.Servant) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function idToServant(id : java.NativeArray<java.StdTypes.Int8>) : org.omg.PortableServer.Servant;
+	@:overload @:public override public function idToServant(id : java.NativeArray<java.StdTypes.Int8>) : org.omg.PortableServer.Servant;
 	
 	
 }

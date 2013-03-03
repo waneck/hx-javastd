@@ -25,7 +25,7 @@ package sun.awt.image;
 */
 extern class ImageRepresentation extends sun.awt.image.ImageWatched implements java.awt.image.ImageConsumer
 {
-	private var cmodel : java.awt.image.ColorModel;
+	@:protected private var cmodel : java.awt.image.ColorModel;
 	
 	/**
 	* Create an ImageRepresentation for the given Image.  The
@@ -34,16 +34,16 @@ extern class ImageRepresentation extends sun.awt.image.ImageWatched implements j
 	* the buffered image.  If null, the src color model will
 	* be used.
 	*/
-	@:overload public function new(im : sun.awt.image.ToolkitImage, cmodel : java.awt.image.ColorModel, forceCMhint : Bool) : Void;
+	@:overload @:public public function new(im : sun.awt.image.ToolkitImage, cmodel : java.awt.image.ColorModel, forceCMhint : Bool) : Void;
 	
 	/* REMIND: Only used for Frame.setIcon - should use ImageWatcher instead */
-	@:overload @:synchronized public function reconstruct(flags : Int) : Void;
+	@:overload @:public @:synchronized public function reconstruct(flags : Int) : Void;
 	
-	@:overload public function setDimensions(w : Int, h : Int) : Void;
+	@:overload @:public public function setDimensions(w : Int, h : Int) : Void;
 	
-	@:overload public function getWidth() : Int;
+	@:overload @:public public function getWidth() : Int;
 	
-	@:overload public function getHeight() : Int;
+	@:overload @:public public function getHeight() : Int;
 	
 	/**
 	* Returns the BufferedImage that will be used as the representation of
@@ -54,37 +54,37 @@ extern class ImageRepresentation extends sun.awt.image.ImageWatched implements j
 	* It is subclass' responsibility to propagate acceleration priority
 	* to the newly created image.
 	*/
-	@:overload private function createImage(cm : java.awt.image.ColorModel, raster : java.awt.image.WritableRaster, isRasterPremultiplied : Bool, properties : java.util.Hashtable<Dynamic, Dynamic>) : java.awt.image.BufferedImage;
+	@:overload @:protected private function createImage(cm : java.awt.image.ColorModel, raster : java.awt.image.WritableRaster, isRasterPremultiplied : Bool, properties : java.util.Hashtable<Dynamic, Dynamic>) : java.awt.image.BufferedImage;
 	
-	@:overload public function setProperties(props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function setProperties(props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function setColorModel(model : java.awt.image.ColorModel) : Void;
+	@:overload @:public public function setColorModel(model : java.awt.image.ColorModel) : Void;
 	
-	@:overload public function setHints(h : Int) : Void;
+	@:overload @:public public function setHints(h : Int) : Void;
 	
-	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pix : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Void;
+	@:overload @:public public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pix : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Void;
 	
-	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pix : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
+	@:overload @:public public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pix : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
 	
-	@:overload public function getOpaqueRGBImage() : java.awt.image.BufferedImage;
+	@:overload @:public public function getOpaqueRGBImage() : java.awt.image.BufferedImage;
 	
-	@:overload public function imageComplete(status : Int) : Void;
+	@:overload @:public public function imageComplete(status : Int) : Void;
 	
-	@:overload @:synchronized public function notifyWatcherListEmpty() : Void;
+	@:overload @:public @:synchronized override public function notifyWatcherListEmpty() : Void;
 	
-	@:overload public function prepare(iw : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public public function prepare(iw : java.awt.image.ImageObserver) : Bool;
 	
-	@:overload public function check(iw : java.awt.image.ImageObserver) : Int;
+	@:overload @:public public function check(iw : java.awt.image.ImageObserver) : Int;
 	
-	@:overload public function drawToBufImage(g : java.awt.Graphics, img : sun.awt.image.ToolkitImage, x : Int, y : Int, bg : java.awt.Color, iw : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public public function drawToBufImage(g : java.awt.Graphics, img : sun.awt.image.ToolkitImage, x : Int, y : Int, bg : java.awt.Color, iw : java.awt.image.ImageObserver) : Bool;
 	
-	@:overload public function drawToBufImage(g : java.awt.Graphics, img : sun.awt.image.ToolkitImage, x : Int, y : Int, w : Int, h : Int, bg : java.awt.Color, iw : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public public function drawToBufImage(g : java.awt.Graphics, img : sun.awt.image.ToolkitImage, x : Int, y : Int, w : Int, h : Int, bg : java.awt.Color, iw : java.awt.image.ImageObserver) : Bool;
 	
-	@:overload public function drawToBufImage(g : java.awt.Graphics, img : sun.awt.image.ToolkitImage, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bg : java.awt.Color, iw : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public public function drawToBufImage(g : java.awt.Graphics, img : sun.awt.image.ToolkitImage, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bg : java.awt.Color, iw : java.awt.image.ImageObserver) : Bool;
 	
-	@:overload public function drawToBufImage(g : java.awt.Graphics, img : sun.awt.image.ToolkitImage, xform : java.awt.geom.AffineTransform, iw : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public public function drawToBufImage(g : java.awt.Graphics, img : sun.awt.image.ToolkitImage, xform : java.awt.geom.AffineTransform, iw : java.awt.image.ImageObserver) : Bool;
 	
-	@:overload public function setAccelerationPriority(priority : Single) : Void;
+	@:overload @:public public function setAccelerationPriority(priority : Single) : Void;
 	
 	
 }

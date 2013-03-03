@@ -54,11 +54,11 @@ package org.relaxng.datatype.helpers;
 */
 extern class ParameterlessDatatypeBuilder implements org.relaxng.datatype.DatatypeBuilder
 {
-	@:overload public function new(baseType : org.relaxng.datatype.Datatype) : Void;
+	@:overload @:public public function new(baseType : org.relaxng.datatype.Datatype) : Void;
 	
-	@:overload public function addParameter(name : String, strValue : String, context : org.relaxng.datatype.ValidationContext) : Void;
+	@:overload @:public public function addParameter(name : String, strValue : String, context : org.relaxng.datatype.ValidationContext) : Void;
 	
-	@:overload public function createDatatype() : org.relaxng.datatype.Datatype;
+	@:overload @:public public function createDatatype() : org.relaxng.datatype.Datatype;
 	
 	
 }

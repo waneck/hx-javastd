@@ -34,7 +34,7 @@ package javax.swing.text.html;
 	/**
 	* Creates an IsindexView
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Creates the components necessary to to implement
@@ -42,7 +42,7 @@ package javax.swing.text.html;
 	* that contains the PROMPT to the left and <code>JTextField</code>
 	* to the right.
 	*/
-	@:overload override public function createComponent() : java.awt.Component;
+	@:overload @:public override public function createComponent() : java.awt.Component;
 	
 	/**
 	* Responsible for processing the ActionEvent.
@@ -53,7 +53,7 @@ package javax.swing.text.html;
 	* contents of the JTextField.  The search
 	* contents are URLEncoded.
 	*/
-	@:overload public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
 	
 }

@@ -37,7 +37,7 @@ extern class SecureRandom extends java.security.SecureRandomSpi implements java.
 	* rely on the same (internal) pseudo-random number generator for their
 	* seed bits.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the given number of seed bytes, computed using the seed
@@ -55,7 +55,7 @@ extern class SecureRandom extends java.security.SecureRandomSpi implements java.
 	*
 	* @return the seed bytes.
 	*/
-	@:overload public function engineGenerateSeed(numBytes : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function engineGenerateSeed(numBytes : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Reseeds this random object. The given seed supplements, rather than
@@ -64,14 +64,14 @@ extern class SecureRandom extends java.security.SecureRandomSpi implements java.
 	*
 	* @param seed the seed.
 	*/
-	@:overload @:synchronized public function engineSetSeed(seed : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:synchronized @:public override public function engineSetSeed(seed : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Generates a user-specified number of random bytes.
 	*
 	* @param bytes the array to be filled in with random bytes.
 	*/
-	@:overload @:synchronized public function engineNextBytes(result : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:synchronized override public function engineNextBytes(result : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

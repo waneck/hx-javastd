@@ -25,21 +25,21 @@ package com.sun.xml.internal.ws.encoding;
 */
 extern class XmlDataContentHandler implements javax.activation.DataContentHandler
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
-	@:overload public function getTransferData(df : java.awt.datatransfer.DataFlavor, ds : javax.activation.DataSource) : Dynamic;
+	@:overload @:public public function getTransferData(df : java.awt.datatransfer.DataFlavor, ds : javax.activation.DataSource) : Dynamic;
 	
 	/**
 	* Create an object from the input stream
 	*/
-	@:overload public function getContent(ds : javax.activation.DataSource) : Dynamic;
+	@:overload @:public public function getContent(ds : javax.activation.DataSource) : Dynamic;
 	
 	/**
 	* Convert the object to a byte stream
 	*/
-	@:overload public function writeTo(obj : Dynamic, mimeType : String, os : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(obj : Dynamic, mimeType : String, os : java.io.OutputStream) : Void;
 	
 	
 }

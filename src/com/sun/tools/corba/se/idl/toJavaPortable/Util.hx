@@ -73,33 +73,33 @@ extern class Util extends com.sun.tools.corba.se.idl.Util
 	* compiler from the appropriate properties file.
 	* @return the version number of this compiler build.
 	**/
-	@:overload public static function getVersion() : String;
+	@:overload @:public @:static public static function getVersion() : String;
 	
-	@:overload public static function setPackageTranslation(pkgtrans : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public @:static public static function setPackageTranslation(pkgtrans : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
-	@:overload public static function isInterface(name : String) : Bool;
+	@:overload @:public @:static public static function isInterface(name : String) : Bool;
 	
-	@:overload public static function sansArrayInfo(arrayInfo : java.util.Vector<Dynamic>) : String;
+	@:overload @:public @:static public static function sansArrayInfo(arrayInfo : java.util.Vector<Dynamic>) : String;
 	
-	@:overload public static function sansArrayInfo(name : String) : String;
+	@:overload @:static @:public public static function sansArrayInfo(name : String) : String;
 	
 	/**
 	* Given a symbol table entry, return the name of
 	* the file which should be created.
 	**/
-	@:overload public static function fileName(entry : com.sun.tools.corba.se.idl.SymtabEntry, extension : String) : String;
+	@:overload @:public @:static public static function fileName(entry : com.sun.tools.corba.se.idl.SymtabEntry, extension : String) : String;
 	
-	@:overload public static function fileName(entry : com.sun.tools.corba.se.idl.SymtabEntry, modifier : com.sun.tools.corba.se.idl.toJavaPortable.NameModifier, extension : String) : String;
+	@:overload @:public @:static public static function fileName(entry : com.sun.tools.corba.se.idl.SymtabEntry, modifier : com.sun.tools.corba.se.idl.toJavaPortable.NameModifier, extension : String) : String;
 	
-	@:overload public static function stream(entry : com.sun.tools.corba.se.idl.SymtabEntry, extension : String) : com.sun.tools.corba.se.idl.GenFileStream;
+	@:overload @:public @:static public static function stream(entry : com.sun.tools.corba.se.idl.SymtabEntry, extension : String) : com.sun.tools.corba.se.idl.GenFileStream;
 	
-	@:overload public static function stream(entry : com.sun.tools.corba.se.idl.SymtabEntry, modifier : com.sun.tools.corba.se.idl.toJavaPortable.NameModifier, extension : String) : com.sun.tools.corba.se.idl.GenFileStream;
+	@:overload @:public @:static public static function stream(entry : com.sun.tools.corba.se.idl.SymtabEntry, modifier : com.sun.tools.corba.se.idl.toJavaPortable.NameModifier, extension : String) : com.sun.tools.corba.se.idl.GenFileStream;
 	
-	@:overload public static function getStream(name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry) : com.sun.tools.corba.se.idl.GenFileStream;
+	@:overload @:public @:static public static function getStream(name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry) : com.sun.tools.corba.se.idl.GenFileStream;
 	
-	@:overload public static function containerFullName(container : com.sun.tools.corba.se.idl.SymtabEntry) : String;
+	@:overload @:public @:static public static function containerFullName(container : com.sun.tools.corba.se.idl.SymtabEntry) : String;
 	
-	@:overload public static function translate(name : String) : String;
+	@:overload @:public @:static public static function translate(name : String) : String;
 	
 	/**
 	* Given a SymtabEntry, return the string which should be used
@@ -107,100 +107,100 @@ extern class Util extends com.sun.tools.corba.se.idl.Util
 	* sequences are converted to their info types. javaQualifiedName
 	* does not do any of these conversions.
 	**/
-	@:overload public static function javaName(entry : com.sun.tools.corba.se.idl.SymtabEntry) : String;
+	@:overload @:public @:static public static function javaName(entry : com.sun.tools.corba.se.idl.SymtabEntry) : String;
 	
-	@:overload public static function javaPrimName(name : String) : String;
+	@:overload @:public @:static public static function javaPrimName(name : String) : String;
 	
-	@:overload public static function javaNativeName(name : String) : String;
+	@:overload @:public @:static public static function javaNativeName(name : String) : String;
 	
 	/**
 	* Given a symtabEntry, return the name of this entry. This
 	* method does not do any conversions like javaName does.
 	**/
-	@:overload public static function javaQualifiedName(entry : com.sun.tools.corba.se.idl.SymtabEntry) : String;
+	@:overload @:public @:static public static function javaQualifiedName(entry : com.sun.tools.corba.se.idl.SymtabEntry) : String;
 	
 	/**
 	* Collapse primitive type names.
 	**/
-	@:overload public static function collapseName(name : String) : String;
+	@:overload @:public @:static public static function collapseName(name : String) : String;
 	
 	/**
 	*
 	**/
-	@:overload public static function typeOf(entry : com.sun.tools.corba.se.idl.SymtabEntry) : com.sun.tools.corba.se.idl.SymtabEntry;
+	@:overload @:public @:static public static function typeOf(entry : com.sun.tools.corba.se.idl.SymtabEntry) : com.sun.tools.corba.se.idl.SymtabEntry;
 	
 	/**
 	*
 	**/
-	@:overload public static function holderName(entry : com.sun.tools.corba.se.idl.SymtabEntry) : String;
+	@:overload @:public @:static public static function holderName(entry : com.sun.tools.corba.se.idl.SymtabEntry) : String;
 	
 	/**
 	* <d61056>
 	**/
-	@:overload public static function helperName(entry : com.sun.tools.corba.se.idl.SymtabEntry, qualifiedName : Bool) : String;
+	@:overload @:public @:static public static function helperName(entry : com.sun.tools.corba.se.idl.SymtabEntry, qualifiedName : Bool) : String;
 	
-	public static var TypeFile(default, null) : java.StdTypes.Int16;
-	
-	/**
-	*
-	**/
-	@:overload public static function writePackage(stream : java.io.PrintWriter, entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:public @:static @:final public static var TypeFile(default, null) : java.StdTypes.Int16;
 	
 	/**
 	*
 	**/
-	@:overload public static function writePackage(stream : java.io.PrintWriter, entry : com.sun.tools.corba.se.idl.SymtabEntry, name : String, type : java.StdTypes.Int16) : Void;
+	@:overload @:public @:static public static function writePackage(stream : java.io.PrintWriter, entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/**
 	*
 	**/
-	@:overload public static function writePackage(stream : java.io.PrintWriter, entry : com.sun.tools.corba.se.idl.SymtabEntry, type : java.StdTypes.Int16) : Void;
+	@:overload @:public @:static public static function writePackage(stream : java.io.PrintWriter, entry : com.sun.tools.corba.se.idl.SymtabEntry, name : String, type : java.StdTypes.Int16) : Void;
 	
 	/**
 	*
 	**/
-	@:overload public static function writeInitializer(indent : String, name : String, arrayDcl : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
+	@:overload @:public @:static public static function writePackage(stream : java.io.PrintWriter, entry : com.sun.tools.corba.se.idl.SymtabEntry, type : java.StdTypes.Int16) : Void;
 	
 	/**
 	*
 	**/
-	@:overload public static function writeInitializer(indent : String, name : String, arrayDcl : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, initializer : String, stream : java.io.PrintWriter) : Void;
+	@:overload @:public @:static public static function writeInitializer(indent : String, name : String, arrayDcl : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	*
 	**/
-	@:overload public static function mkdir(name : String) : Void;
+	@:overload @:public @:static public static function writeInitializer(indent : String, name : String, arrayDcl : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, initializer : String, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	*
 	**/
-	@:overload public static function writeProlog(stream : java.io.PrintWriter, filename : String) : Void;
+	@:overload @:public @:static public static function mkdir(name : String) : Void;
 	
 	/**
 	*
 	**/
-	@:overload public static function stripLeadingUnderscores(string : String) : String;
+	@:overload @:public @:static public static function writeProlog(stream : java.io.PrintWriter, filename : String) : Void;
 	
 	/**
 	*
 	**/
-	@:overload public static function stripLeadingUnderscoresFromID(string : String) : String;
+	@:overload @:public @:static public static function stripLeadingUnderscores(string : String) : String;
 	
 	/**
 	*
 	**/
-	@:overload public static function parseExpression(e : com.sun.tools.corba.se.idl.constExpr.Expression) : String;
+	@:overload @:public @:static public static function stripLeadingUnderscoresFromID(string : String) : String;
 	
 	/**
 	*
 	**/
-	@:overload public static function IDLEntity(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Bool;
+	@:overload @:public @:static public static function parseExpression(e : com.sun.tools.corba.se.idl.constExpr.Expression) : String;
+	
+	/**
+	*
+	**/
+	@:overload @:public @:static public static function IDLEntity(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Bool;
 	
 	/**
 	* @return true if the current setting of corbaLevel is within delta of
 	*    the range min <= corbaLevel <= max
 	**/
-	@:overload public static function corbaLevel(min : Single, max : Single) : Bool;
+	@:overload @:public @:static public static function corbaLevel(min : Single, max : Single) : Bool;
 	
 	
 }

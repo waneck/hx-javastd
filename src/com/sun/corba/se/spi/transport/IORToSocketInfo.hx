@@ -33,7 +33,7 @@ extern interface IORToSocketInfo
 	* @return List - a list of SocketInfo.
 	*
 	*/
-	@:overload public function getSocketInfo(ior : com.sun.corba.se.spi.ior.IOR) : java.util.List<Dynamic>;
+	@:overload @:public public function getSocketInfo(ior : com.sun.corba.se.spi.ior.IOR) : java.util.List<Dynamic>;
 	
 	
 }

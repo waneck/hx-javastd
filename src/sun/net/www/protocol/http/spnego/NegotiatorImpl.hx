@@ -29,13 +29,13 @@ extern class NegotiatorImpl extends sun.net.www.protocol.http.Negotiator
 	* Constructor
 	* @throws java.io.IOException If negotiator cannot be constructed
 	*/
-	@:overload public function new(hci : sun.net.www.protocol.http.HttpCallerInfo) : Void;
+	@:overload @:public public function new(hci : sun.net.www.protocol.http.HttpCallerInfo) : Void;
 	
 	/**
 	* Return the first token of GSS, in SPNEGO, it's called NegTokenInit
 	* @return the first token
 	*/
-	@:overload override public function firstToken() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function firstToken() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Return the rest tokens of GSS, in SPNEGO, it's called NegTokenTarg
@@ -43,7 +43,7 @@ extern class NegotiatorImpl extends sun.net.www.protocol.http.Negotiator
 	* @return the next token
 	* @throws java.io.IOException if the token cannot be created successfully
 	*/
-	@:overload override public function nextToken(token : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function nextToken(token : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

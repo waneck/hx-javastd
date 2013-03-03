@@ -25,21 +25,21 @@ package com.sun.tools.internal.xjc;
 */
 extern class ConsoleErrorReporter extends com.sun.tools.internal.xjc.ErrorReceiver
 {
-	@:overload public function new(out : java.io.PrintStream) : Void;
+	@:overload @:public public function new(out : java.io.PrintStream) : Void;
 	
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function warning(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function warning(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function error(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function fatalError(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function fatalError(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function info(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function info(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function hadError() : Bool;
+	@:overload @:public public function hadError() : Bool;
 	
 	
 }

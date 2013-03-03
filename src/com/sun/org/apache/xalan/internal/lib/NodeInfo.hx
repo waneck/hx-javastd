@@ -30,7 +30,7 @@ extern class NodeInfo
 	* @param context an <code>ExpressionContext</code> value
 	* @return a <code>String</code> value
 	*/
-	@:overload public static function systemId(context : com.sun.org.apache.xalan.internal.extensions.ExpressionContext) : String;
+	@:overload @:public @:static public static function systemId(context : com.sun.org.apache.xalan.internal.extensions.ExpressionContext) : String;
 	
 	/**
 	* <code>systemId</code> returns the system id of the node passed as
@@ -40,7 +40,7 @@ extern class NodeInfo
 	* @param nodeList a <code>NodeList</code> value
 	* @return a <code>String</code> value
 	*/
-	@:overload public static function systemId(nodeList : org.w3c.dom.NodeList) : String;
+	@:overload @:public @:static public static function systemId(nodeList : org.w3c.dom.NodeList) : String;
 	
 	/**
 	* <code>publicId</code> returns the public identifier of the current
@@ -51,7 +51,7 @@ extern class NodeInfo
 	* @param context an <code>ExpressionContext</code> value
 	* @return a <code>String</code> value
 	*/
-	@:overload public static function publicId(context : com.sun.org.apache.xalan.internal.extensions.ExpressionContext) : String;
+	@:overload @:public @:static public static function publicId(context : com.sun.org.apache.xalan.internal.extensions.ExpressionContext) : String;
 	
 	/**
 	* <code>publicId</code> returns the public identifier of the node passed as
@@ -63,7 +63,7 @@ extern class NodeInfo
 	* @param nodeList a <code>NodeList</code> value
 	* @return a <code>String</code> value
 	*/
-	@:overload public static function publicId(nodeList : org.w3c.dom.NodeList) : String;
+	@:overload @:public @:static public static function publicId(nodeList : org.w3c.dom.NodeList) : String;
 	
 	/**
 	* <code>lineNumber</code> returns the line number of the current
@@ -79,7 +79,7 @@ extern class NodeInfo
 	* @return an <code>int</code> value. This may be -1 to indicate that the
 	* line number is not known.
 	*/
-	@:overload public static function lineNumber(context : com.sun.org.apache.xalan.internal.extensions.ExpressionContext) : Int;
+	@:overload @:public @:static public static function lineNumber(context : com.sun.org.apache.xalan.internal.extensions.ExpressionContext) : Int;
 	
 	/**
 	* <code>lineNumber</code> returns the line number of the node
@@ -96,7 +96,7 @@ extern class NodeInfo
 	* @return an <code>int</code> value. This may be -1 to indicate that the
 	* line number is not known.
 	*/
-	@:overload public static function lineNumber(nodeList : org.w3c.dom.NodeList) : Int;
+	@:overload @:public @:static public static function lineNumber(nodeList : org.w3c.dom.NodeList) : Int;
 	
 	/**
 	* <code>columnNumber</code> returns the column number of the
@@ -112,7 +112,7 @@ extern class NodeInfo
 	* @return an <code>int</code> value. This may be -1 to indicate that the
 	* column number is not known.
 	*/
-	@:overload public static function columnNumber(context : com.sun.org.apache.xalan.internal.extensions.ExpressionContext) : Int;
+	@:overload @:public @:static public static function columnNumber(context : com.sun.org.apache.xalan.internal.extensions.ExpressionContext) : Int;
 	
 	/**
 	* <code>columnNumber</code> returns the column number of the node
@@ -129,7 +129,7 @@ extern class NodeInfo
 	* @return an <code>int</code> value. This may be -1 to indicate that the
 	* column number is not known.
 	*/
-	@:overload public static function columnNumber(nodeList : org.w3c.dom.NodeList) : Int;
+	@:overload @:public @:static public static function columnNumber(nodeList : org.w3c.dom.NodeList) : Int;
 	
 	
 }

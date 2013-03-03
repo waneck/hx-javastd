@@ -25,17 +25,17 @@ package com.sun.xml.internal.ws.wsdl.parser;
 */
 extern class W3CAddressingMetadataWSDLParserExtension extends com.sun.xml.internal.ws.wsdl.parser.W3CAddressingWSDLParserExtension
 {
-	@:overload public function bindingElements(binding : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundPortType, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload @:public override public function bindingElements(binding : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundPortType, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload public function portElements(port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload @:public override public function portElements(port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload public function bindingOperationElements(operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload @:public override public function bindingOperationElements(operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload private function patchAnonymousDefault(binding : com.sun.xml.internal.ws.model.wsdl.WSDLBoundPortTypeImpl) : Void;
+	@:overload @:protected override private function patchAnonymousDefault(binding : com.sun.xml.internal.ws.model.wsdl.WSDLBoundPortTypeImpl) : Void;
 	
-	@:overload private function getNamespaceURI() : String;
+	@:overload @:protected override private function getNamespaceURI() : String;
 	
-	@:overload private function getWsdlActionTag() : javax.xml.namespace.QName;
+	@:overload @:protected override private function getWsdlActionTag() : javax.xml.namespace.QName;
 	
 	
 }

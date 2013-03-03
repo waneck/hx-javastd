@@ -42,23 +42,23 @@ extern class Method
 	/**
 	* The output method type for XML documents: <tt>xml</tt>.
 	*/
-	public static var XML(default, null) : String;
+	@:public @:static @:final public static var XML(default, null) : String;
 	
 	/**
 	* The output method type for HTML documents: <tt>html</tt>.
 	*/
-	public static var HTML(default, null) : String;
+	@:public @:static @:final public static var HTML(default, null) : String;
 	
 	/**
 	* The output method for XHTML documents,
 	* this method type is not currently supported: <tt>xhtml</tt>.
 	*/
-	public static var XHTML(default, null) : String;
+	@:public @:static @:final public static var XHTML(default, null) : String;
 	
 	/**
 	* The output method type for text documents: <tt>text</tt>.
 	*/
-	public static var TEXT(default, null) : String;
+	@:public @:static @:final public static var TEXT(default, null) : String;
 	
 	/**
 	* The "internal" method, just used when no method is
@@ -66,7 +66,7 @@ extern class Method
 	* XML or HTML type (depending on the first tag in the output being html or
 	* not)
 	*/
-	public static var UNKNOWN(default, null) : String;
+	@:public @:static @:final public static var UNKNOWN(default, null) : String;
 	
 	
 }

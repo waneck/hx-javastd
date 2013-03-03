@@ -32,11 +32,11 @@ package com.sun.tools.example.debug.bdi;
 */
 extern class ExceptionSpec extends com.sun.tools.example.debug.bdi.EventRequestSpec
 {
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

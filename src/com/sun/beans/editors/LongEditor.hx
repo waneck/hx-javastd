@@ -29,9 +29,9 @@ package com.sun.beans.editors;
 */
 extern class LongEditor extends com.sun.beans.editors.NumberEditor
 {
-	@:overload override public function getJavaInitializationString() : String;
+	@:overload @:public override public function getJavaInitializationString() : String;
 	
-	@:overload override public function setAsText(text : String) : Void;
+	@:overload @:public override public function setAsText(text : String) : Void;
 	
 	
 }

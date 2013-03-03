@@ -53,7 +53,7 @@ extern class ActivationDesc implements java.io.Serializable
 	* @exception ActivationException if the current group is nonexistent
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(className : String, location : String, data : java.rmi.MarshalledObject<Dynamic>) : Void;
+	@:require(java2) @:overload @:public public function new(className : String, location : String, data : java.rmi.MarshalledObject<Dynamic>) : Void;
 	
 	/**
 	* Constructs an object descriptor for an object whose class name
@@ -83,7 +83,7 @@ extern class ActivationDesc implements java.io.Serializable
 	* @exception ActivationException if the current group is nonexistent
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(className : String, location : String, data : java.rmi.MarshalledObject<Dynamic>, restart : Bool) : Void;
+	@:require(java2) @:overload @:public public function new(className : String, location : String, data : java.rmi.MarshalledObject<Dynamic>, restart : Bool) : Void;
 	
 	/**
 	* Constructs an object descriptor for an object whose class name
@@ -109,7 +109,7 @@ extern class ActivationDesc implements java.io.Serializable
 	* @exception IllegalArgumentException if <code>groupID</code> is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(groupID : java.rmi.activation.ActivationGroupID, className : String, location : String, data : java.rmi.MarshalledObject<Dynamic>) : Void;
+	@:require(java2) @:overload @:public public function new(groupID : java.rmi.activation.ActivationGroupID, className : String, location : String, data : java.rmi.MarshalledObject<Dynamic>) : Void;
 	
 	/**
 	* Constructs an object descriptor for an object whose class name
@@ -135,7 +135,7 @@ extern class ActivationDesc implements java.io.Serializable
 	* @exception IllegalArgumentException if <code>groupID</code> is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(groupID : java.rmi.activation.ActivationGroupID, className : String, location : String, data : java.rmi.MarshalledObject<Dynamic>, restart : Bool) : Void;
+	@:require(java2) @:overload @:public public function new(groupID : java.rmi.activation.ActivationGroupID, className : String, location : String, data : java.rmi.MarshalledObject<Dynamic>, restart : Bool) : Void;
 	
 	/**
 	* Returns the group identifier for the object specified by this
@@ -146,7 +146,7 @@ extern class ActivationDesc implements java.io.Serializable
 	* @return the group identifier
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getGroupID() : java.rmi.activation.ActivationGroupID;
+	@:require(java2) @:overload @:public public function getGroupID() : java.rmi.activation.ActivationGroupID;
 	
 	/**
 	* Returns the class name for the object specified by this
@@ -154,7 +154,7 @@ extern class ActivationDesc implements java.io.Serializable
 	* @return the class name
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getClassName() : String;
+	@:require(java2) @:overload @:public public function getClassName() : String;
 	
 	/**
 	* Returns the code location for the object specified by
@@ -162,7 +162,7 @@ extern class ActivationDesc implements java.io.Serializable
 	* @return the code location
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getLocation() : String;
+	@:require(java2) @:overload @:public public function getLocation() : String;
 	
 	/**
 	* Returns a "marshalled object" containing intialization/activation
@@ -170,7 +170,7 @@ extern class ActivationDesc implements java.io.Serializable
 	* @return the object specific "initialization" data
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getData() : java.rmi.MarshalledObject<Dynamic>;
+	@:require(java2) @:overload @:public public function getData() : java.rmi.MarshalledObject<Dynamic>;
 	
 	/**
 	* Returns the "restart" mode of the object associated with
@@ -186,7 +186,7 @@ extern class ActivationDesc implements java.io.Serializable
 	* a newly registered object;  initial activation is lazy.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getRestartMode() : Bool;
+	@:require(java2) @:overload @:public public function getRestartMode() : Bool;
 	
 	/**
 	* Compares two activation descriptors for content equality.
@@ -196,14 +196,14 @@ extern class ActivationDesc implements java.io.Serializable
 	* @see             java.util.Hashtable
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function equals(obj : Dynamic) : Bool;
+	@:require(java2) @:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Return the same hashCode for similar <code>ActivationDesc</code>s.
 	* @return an integer
 	* @see java.util.Hashtable
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

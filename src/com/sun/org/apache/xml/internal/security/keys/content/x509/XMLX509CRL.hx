@@ -28,7 +28,7 @@ extern class XMLX509CRL extends com.sun.org.apache.xml.internal.security.utils.S
 	* @param BaseURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Constructor X509CRL
@@ -36,7 +36,7 @@ extern class XMLX509CRL extends com.sun.org.apache.xml.internal.security.utils.S
 	* @param doc
 	* @param crlBytes
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, crlBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, crlBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Method getCRLBytes
@@ -44,10 +44,10 @@ extern class XMLX509CRL extends com.sun.org.apache.xml.internal.security.utils.S
 	* @return the CRL bytes
 	* @throws XMLSecurityException
 	*/
-	@:overload public function getCRLBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getCRLBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** @inheritDoc */
-	@:overload public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

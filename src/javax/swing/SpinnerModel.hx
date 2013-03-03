@@ -69,7 +69,7 @@ package javax.swing;
 	* @return the current spinner value.
 	* @see #setValue
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	/**
 	* Changes current value of the model, typically this value is displayed
@@ -84,7 +84,7 @@ package javax.swing;
 	* @throws IllegalArgumentException if <code>value</code> isn't allowed
 	* @see #getValue
 	*/
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public public function setValue(value : Dynamic) : Void;
 	
 	/**
 	* Return the object in the sequence that comes after the object returned
@@ -95,7 +95,7 @@ package javax.swing;
 	* @see #getValue
 	* @see #getPreviousValue
 	*/
-	@:overload public function getNextValue() : Dynamic;
+	@:overload @:public public function getNextValue() : Dynamic;
 	
 	/**
 	* Return the object in the sequence that comes before the object returned
@@ -106,7 +106,7 @@ package javax.swing;
 	* @see #getValue
 	* @see #getNextValue
 	*/
-	@:overload public function getPreviousValue() : Dynamic;
+	@:overload @:public public function getPreviousValue() : Dynamic;
 	
 	/**
 	* Adds a <code>ChangeListener</code> to the model's listener list.  The

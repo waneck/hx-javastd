@@ -28,15 +28,15 @@ extern class GlyphListPipe implements sun.java2d.pipe.TextPipe
 	/**
 	* A delegate pipe of SG2D for drawing text.
 	*/
-	@:overload public function drawString(sg2d : sun.java2d.SunGraphics2D, s : String, x : Float, y : Float) : Void;
+	@:overload @:public public function drawString(sg2d : sun.java2d.SunGraphics2D, s : String, x : Float, y : Float) : Void;
 	
-	@:overload public function drawChars(sg2d : sun.java2d.SunGraphics2D, data : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, ix : Int, iy : Int) : Void;
+	@:overload @:public public function drawChars(sg2d : sun.java2d.SunGraphics2D, data : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, ix : Int, iy : Int) : Void;
 	
-	@:overload public function drawGlyphVector(sg2d : sun.java2d.SunGraphics2D, gv : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
+	@:overload @:public public function drawGlyphVector(sg2d : sun.java2d.SunGraphics2D, gv : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
 	
-	@:overload @:abstract private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList) : Void;
+	@:overload @:protected @:abstract private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList) : Void;
 	
-	@:overload private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList, aaHint : Int) : Void;
+	@:overload @:protected private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList, aaHint : Int) : Void;
 	
 	
 }

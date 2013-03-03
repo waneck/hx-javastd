@@ -79,7 +79,7 @@ extern class FieldPosition
 	* @see java.text.DateFormat#YEAR_FIELD
 	* @see java.text.DateFormat#MONTH_FIELD
 	*/
-	@:overload public function new(field : Int) : Void;
+	@:overload @:public public function new(field : Int) : Void;
 	
 	/**
 	* Creates a FieldPosition object for the given field constant. Fields are
@@ -90,7 +90,7 @@ extern class FieldPosition
 	* @param attribute Format.Field constant identifying a field
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(attribute : java.text.Format.Format_Field) : Void;
+	@:require(java4) @:overload @:public public function new(attribute : java.text.Format.Format_Field) : Void;
 	
 	/**
 	* Creates a <code>FieldPosition</code> object for the given field.
@@ -108,7 +108,7 @@ extern class FieldPosition
 	* @param fieldID integer constantce identifying a field
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(attribute : java.text.Format.Format_Field, fieldID : Int) : Void;
+	@:require(java4) @:overload @:public public function new(attribute : java.text.Format.Format_Field, fieldID : Int) : Void;
 	
 	/**
 	* Returns the field identifier as an attribute constant
@@ -118,52 +118,52 @@ extern class FieldPosition
 	* @return Identifier for the field
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getFieldAttribute() : java.text.Format.Format_Field;
+	@:require(java4) @:overload @:public public function getFieldAttribute() : java.text.Format.Format_Field;
 	
 	/**
 	* Retrieves the field identifier.
 	*/
-	@:overload public function getField() : Int;
+	@:overload @:public public function getField() : Int;
 	
 	/**
 	* Retrieves the index of the first character in the requested field.
 	*/
-	@:overload public function getBeginIndex() : Int;
+	@:overload @:public public function getBeginIndex() : Int;
 	
 	/**
 	* Retrieves the index of the character following the last character in the
 	* requested field.
 	*/
-	@:overload public function getEndIndex() : Int;
+	@:overload @:public public function getEndIndex() : Int;
 	
 	/**
 	* Sets the begin index.  For use by subclasses of Format.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setBeginIndex(bi : Int) : Void;
+	@:require(java2) @:overload @:public public function setBeginIndex(bi : Int) : Void;
 	
 	/**
 	* Sets the end index.  For use by subclasses of Format.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setEndIndex(ei : Int) : Void;
+	@:require(java2) @:overload @:public public function setEndIndex(ei : Int) : Void;
 	
 	/**
 	* Overrides equals
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code for this FieldPosition.
 	* @return a hash code value for this object
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Return a string representation of this FieldPosition.
 	* @return  a string representation of this object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -174,9 +174,9 @@ extern class FieldPosition
 */
 @:native('java$text$FieldPosition$Delegate') @:internal extern class FieldPosition_Delegate implements java.text.Format.Format_FieldDelegate
 {
-	@:overload public function formatted(attr : java.text.Format.Format_Field, value : Dynamic, start : Int, end : Int, buffer : java.lang.StringBuffer) : Void;
+	@:overload @:public public function formatted(attr : java.text.Format.Format_Field, value : Dynamic, start : Int, end : Int, buffer : java.lang.StringBuffer) : Void;
 	
-	@:overload public function formatted(fieldID : Int, attr : java.text.Format.Format_Field, value : Dynamic, start : Int, end : Int, buffer : java.lang.StringBuffer) : Void;
+	@:overload @:public public function formatted(fieldID : Int, attr : java.text.Format.Format_Field, value : Dynamic, start : Int, end : Int, buffer : java.lang.StringBuffer) : Void;
 	
 	
 }

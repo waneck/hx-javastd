@@ -32,34 +32,34 @@ package com.sun.corba.se.impl.javax.rmi.CORBA;
 //// Util (sed marker, don't remove!)
 extern class Util implements javax.rmi.CORBA.UtilDelegate
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function getInstance() : com.sun.corba.se.impl.javax.rmi.CORBA.Util;
+	@:overload @:public @:static public static function getInstance() : com.sun.corba.se.impl.javax.rmi.CORBA.Util;
 	
-	@:overload public static function isInstanceDefined() : Bool;
+	@:overload @:public @:static public static function isInstanceDefined() : Bool;
 	
-	@:overload public function unregisterTargetsForORB(orb : org.omg.CORBA.ORB) : Void;
+	@:overload @:public public function unregisterTargetsForORB(orb : org.omg.CORBA.ORB) : Void;
 	
 	/**
 	* Maps a SystemException to a RemoteException.
 	* @param ex the SystemException to map.
 	* @return the mapped exception.
 	*/
-	@:overload public function mapSystemException(ex : org.omg.CORBA.SystemException) : java.rmi.RemoteException;
+	@:overload @:public public function mapSystemException(ex : org.omg.CORBA.SystemException) : java.rmi.RemoteException;
 	
 	/**
 	* Writes any java.lang.Object as a CORBA any.
 	* @param out the stream in which to write the any.
 	* @param obj the object to write as an any.
 	*/
-	@:overload public function writeAny(out : org.omg.CORBA.portable.OutputStream, obj : Dynamic) : Void;
+	@:overload @:public public function writeAny(out : org.omg.CORBA.portable.OutputStream, obj : Dynamic) : Void;
 	
 	/**
 	* Reads a java.lang.Object as a CORBA any.
 	* @param in the stream from which to read the any.
 	* @return the object read from the stream.
 	*/
-	@:overload public function readAny(_in : org.omg.CORBA.portable.InputStream) : Dynamic;
+	@:overload @:public public function readAny(_in : org.omg.CORBA.portable.InputStream) : Dynamic;
 	
 	/**
 	* Writes a java.lang.Object as a CORBA Object. If <code>obj</code> is
@@ -70,7 +70,7 @@ extern class Util implements javax.rmi.CORBA.UtilDelegate
 	* @param out the stream in which to write the object.
 	* @param obj the object to write.
 	*/
-	@:overload public function writeRemoteObject(out : org.omg.CORBA.portable.OutputStream, obj : Dynamic) : Void;
+	@:overload @:public public function writeRemoteObject(out : org.omg.CORBA.portable.OutputStream, obj : Dynamic) : Void;
 	
 	/**
 	* Writes a java.lang.Object as either a value or a CORBA Object.
@@ -81,7 +81,7 @@ extern class Util implements javax.rmi.CORBA.UtilDelegate
 	* @param out the stream in which to write the object.
 	* @param obj the object to write.
 	*/
-	@:overload public function writeAbstractObject(out : org.omg.CORBA.portable.OutputStream, obj : Dynamic) : Void;
+	@:overload @:public public function writeAbstractObject(out : org.omg.CORBA.portable.OutputStream, obj : Dynamic) : Void;
 	
 	/**
 	* Registers a target for a tie. Adds the tie to an internal table and calls
@@ -89,36 +89,36 @@ extern class Util implements javax.rmi.CORBA.UtilDelegate
 	* @param tie the tie to register.
 	* @param target the target for the tie.
 	*/
-	@:overload public function registerTarget(tie : javax.rmi.CORBA.Tie, target : java.rmi.Remote) : Void;
+	@:overload @:public public function registerTarget(tie : javax.rmi.CORBA.Tie, target : java.rmi.Remote) : Void;
 	
 	/**
 	* Removes the associated tie from an internal table and calls {@link Tie#deactivate}
 	* to deactivate the object.
 	* @param target the object to unexport.
 	*/
-	@:overload public function unexportObject(target : java.rmi.Remote) : Void;
+	@:overload @:public public function unexportObject(target : java.rmi.Remote) : Void;
 	
-	@:overload private function cleanUpTie(cachedTie : javax.rmi.CORBA.Tie) : Void;
+	@:overload @:protected private function cleanUpTie(cachedTie : javax.rmi.CORBA.Tie) : Void;
 	
 	/**
 	* Returns the tie (if any) for a given target object.
 	* @return the tie or null if no tie is registered for the given target.
 	*/
-	@:overload public function getTie(target : java.rmi.Remote) : javax.rmi.CORBA.Tie;
+	@:overload @:public public function getTie(target : java.rmi.Remote) : javax.rmi.CORBA.Tie;
 	
 	/**
 	* Returns a singleton instance of a class that implements the
 	* {@link ValueHandler} interface.
 	* @return a class which implements the ValueHandler interface.
 	*/
-	@:overload public function createValueHandler() : javax.rmi.CORBA.ValueHandler;
+	@:overload @:public public function createValueHandler() : javax.rmi.CORBA.ValueHandler;
 	
 	/**
 	* Returns the codebase, if any, for the given class.
 	* @param clz the class to get a codebase for.
 	* @return a space-separated list of URLs, or null.
 	*/
-	@:overload public function getCodebase(clz : Class<Dynamic>) : String;
+	@:overload @:public public function getCodebase(clz : Class<Dynamic>) : String;
 	
 	/**
 	* Returns a class instance for the specified class.
@@ -130,7 +130,7 @@ extern class Util implements javax.rmi.CORBA.UtilDelegate
 	* @return the <code>Class</code> object representing the loaded class.
 	* @exception ClassNotFoundException if class cannot be loaded.
 	*/
-	@:overload public function loadClass(className : String, remoteCodebase : String, loader : java.lang.ClassLoader) : Class<Dynamic>;
+	@:overload @:public public function loadClass(className : String, remoteCodebase : String, loader : java.lang.ClassLoader) : Class<Dynamic>;
 	
 	/**
 	* The <tt>isLocal</tt> method has the same semantics as the
@@ -152,7 +152,7 @@ extern class Util implements javax.rmi.CORBA.UtilDelegate
 	* @throws RemoteException The Java to IDL specification does to
 	* specify the conditions that cause a RemoteException to be thrown.
 	*/
-	@:overload public function isLocal(stub : javax.rmi.CORBA.Stub) : Bool;
+	@:overload @:public public function isLocal(stub : javax.rmi.CORBA.Stub) : Bool;
 	
 	/**
 	* Wraps an exception thrown by an implementation
@@ -160,7 +160,7 @@ extern class Util implements javax.rmi.CORBA.UtilDelegate
 	* @param orig the exception to wrap.
 	* @return the wrapped exception.
 	*/
-	@:overload public function wrapException(orig : java.lang.Throwable) : java.rmi.RemoteException;
+	@:overload @:public public function wrapException(orig : java.lang.Throwable) : java.rmi.RemoteException;
 	
 	/**
 	* Copies or connects an array of objects. Used by local stubs
@@ -171,7 +171,7 @@ extern class Util implements javax.rmi.CORBA.UtilDelegate
 	* @return the copied or connected objects.
 	* @exception RemoteException if any object could not be copied or connected.
 	*/
-	@:overload public function copyObjects(obj : java.NativeArray<Dynamic>, orb : org.omg.CORBA.ORB) : java.NativeArray<Dynamic>;
+	@:overload @:public public function copyObjects(obj : java.NativeArray<Dynamic>, orb : org.omg.CORBA.ORB) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Copies or connects an object. Used by local stubs to copy
@@ -181,17 +181,17 @@ extern class Util implements javax.rmi.CORBA.UtilDelegate
 	* @return the copy or connected object.
 	* @exception RemoteException if the object could not be copied or connected.
 	*/
-	@:overload public function copyObject(obj : Dynamic, orb : org.omg.CORBA.ORB) : Dynamic;
+	@:overload @:public public function copyObject(obj : Dynamic, orb : org.omg.CORBA.ORB) : Dynamic;
 	
 	
 }
 @:internal extern class KeepAlive extends java.lang.Thread
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:synchronized override public function run() : Void;
+	@:overload @:public @:synchronized override public function run() : Void;
 	
-	@:overload @:synchronized public function quit() : Void;
+	@:overload @:public @:synchronized public function quit() : Void;
 	
 	
 }

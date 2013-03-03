@@ -33,7 +33,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function new() : Void;
+	@:require(java1) @:overload @:public public function new() : Void;
 	
 	/**
 	* Create a check box menu item with the specified label.
@@ -45,7 +45,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(label : String) : Void;
+	@:overload @:public public function new(label : String) : Void;
 	
 	/**
 	* Create a check box menu item with the specified label and state.
@@ -59,7 +59,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function new(label : String, state : Bool) : Void;
+	@:require(java1) @:overload @:public public function new(label : String, state : Bool) : Void;
 	
 	/**
 	* Creates the peer of the checkbox item.  This peer allows us to
@@ -69,7 +69,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @see     java.awt.Toolkit#createCheckboxMenuItem(java.awt.CheckboxMenuItem)
 	* @see     java.awt.Component#getToolkit()
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Determines whether the state of this check box menu item
@@ -80,7 +80,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	*                     <code>false</code> indicates "off"
 	* @see        #setState
 	*/
-	@:overload public function getState() : Bool;
+	@:overload @:public public function getState() : Bool;
 	
 	/**
 	* Sets this check box menu item to the specifed state.
@@ -98,14 +98,14 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	*             menu item is on, otherwise <code>false</code>
 	* @see        #getState
 	*/
-	@:overload @:synchronized public function setState(b : Bool) : Void;
+	@:overload @:public @:synchronized public function setState(b : Bool) : Void;
 	
 	/**
 	* Returns the an array (length 1) containing the checkbox menu item
 	* label or null if the checkbox is not selected.
 	* @see ItemSelectable
 	*/
-	@:overload @:synchronized public function getSelectedObjects() : java.NativeArray<Dynamic>;
+	@:overload @:public @:synchronized public function getSelectedObjects() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Adds the specified item listener to receive item events from
@@ -123,7 +123,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @see           java.awt.event.ItemListener
 	* @since         JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function addItemListener(l : java.awt.event.ItemListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function addItemListener(l : java.awt.event.ItemListener) : Void;
 	
 	/**
 	* Removes the specified item listener so that it no longer receives
@@ -139,7 +139,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @see           java.awt.event.ItemListener
 	* @since         JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeItemListener(l : java.awt.event.ItemListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeItemListener(l : java.awt.event.ItemListener) : Void;
 	
 	/**
 	* Returns an array of all the item listeners
@@ -155,7 +155,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @see           java.awt.event.ItemListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getItemListeners() : java.NativeArray<java.awt.event.ItemListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getItemListeners() : java.NativeArray<java.awt.event.ItemListener>;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -190,7 +190,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @see #getItemListeners
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Processes events on this check box menu item.
@@ -209,7 +209,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @see          #processItemEvent
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload override private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:require(java1) @:overload @:protected override private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes item events occurring on this check box menu item by
@@ -234,7 +234,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @see         java.awt.MenuItem#enableEvents
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload private function processItemEvent(e : java.awt.event.ItemEvent) : Void;
+	@:require(java1) @:overload @:protected private function processItemEvent(e : java.awt.event.ItemEvent) : Void;
 	
 	/**
 	* Returns a string representing the state of this
@@ -246,7 +246,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	*
 	* @return     the parameter string of this check box menu item
 	*/
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this CheckboxMenuItem.
@@ -258,7 +258,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	*         AccessibleContext of this CheckboxMenuItem
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -284,7 +284,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload @:public override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Get the AccessibleValue associated with this object.  In the
@@ -294,7 +294,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Returns the number of Actions available in this object.
@@ -303,14 +303,14 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	*
 	* @return the number of Actions in this object
 	*/
-	@:overload override public function getAccessibleActionCount() : Int;
+	@:overload @:public override public function getAccessibleActionCount() : Int;
 	
 	/**
 	* Return a description of the specified action of the object.
 	*
 	* @param i zero-based index of the actions
 	*/
-	@:overload override public function getAccessibleActionDescription(i : Int) : String;
+	@:overload @:public override public function getAccessibleActionDescription(i : Int) : String;
 	
 	/**
 	* Perform the specified Action on the object
@@ -318,7 +318,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @param i zero-based index of actions
 	* @return true if the action was performed; otherwise false.
 	*/
-	@:overload override public function doAccessibleAction(i : Int) : Bool;
+	@:overload @:public override public function doAccessibleAction(i : Int) : Bool;
 	
 	/**
 	* Get the value of this object as a Number.  If the value has not been
@@ -327,7 +327,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @return value of the object
 	* @see #setCurrentAccessibleValue
 	*/
-	@:overload override public function getCurrentAccessibleValue() : java.lang.Number;
+	@:overload @:public override public function getCurrentAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Set the value of this object as a Number.
@@ -335,7 +335,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @return true if the value was set; otherwise false
 	* @see #getCurrentAccessibleValue
 	*/
-	@:overload override public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
+	@:overload @:public override public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
 	
 	/**
 	* Get the minimum value of this object as a Number.
@@ -344,7 +344,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* have a minimum value
 	* @see #getMaximumAccessibleValue
 	*/
-	@:overload override public function getMinimumAccessibleValue() : java.lang.Number;
+	@:overload @:public override public function getMinimumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Get the maximum value of this object as a Number.
@@ -353,7 +353,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* have a maximum value
 	* @see #getMinimumAccessibleValue
 	*/
-	@:overload override public function getMaximumAccessibleValue() : java.lang.Number;
+	@:overload @:public override public function getMaximumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Get the role of this object.
@@ -361,7 +361,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

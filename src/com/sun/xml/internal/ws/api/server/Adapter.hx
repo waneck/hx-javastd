@@ -64,7 +64,7 @@ extern class Adapter<TK> implements com.sun.xml.internal.ws.api.config.managemen
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	private var endpoint(default, null) : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>;
+	@:protected @:final private var endpoint(default, null) : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>;
 	
 	/**
 	* Pool of {@link Toolkit}s.
@@ -73,20 +73,20 @@ extern class Adapter<TK> implements com.sun.xml.internal.ws.api.config.managemen
 	* an object out of the pool, you must make sure that it is recycled by the
 	* same instance of the pool.
 	*/
-	@:volatile private var pool : com.sun.xml.internal.ws.util.Pool<TK>;
+	@:protected @:volatile private var pool : com.sun.xml.internal.ws.util.Pool<TK>;
 	
 	/**
 	* Creates an {@link Adapter} that delivers
 	* messages to the given endpoint.
 	*/
-	@:overload private function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
+	@:overload @:protected private function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
 	
 	/**
 	* The pool instance needs to be recreated to prevent reuse of old Toolkit instances.
 	*/
-	@:overload public function reconfigure() : Void;
+	@:overload @:public public function reconfigure() : Void;
 	
-	@:overload public function getSPI<T>(spiType : Class<T>) : T;
+	@:overload @:public public function getSPI<T>(spiType : Class<T>) : T;
 	
 	/**
 	* Gets the endpoint that this {@link Adapter} is serving.
@@ -94,7 +94,7 @@ extern class Adapter<TK> implements com.sun.xml.internal.ws.api.config.managemen
 	* @return
 	*      always non-null.
 	*/
-	@:overload public function getEndpoint() : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>;
+	@:overload @:public public function getEndpoint() : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>;
 	
 	/**
 	* Returns a reference to the pool of Toolkits for this adapter.
@@ -106,7 +106,7 @@ extern class Adapter<TK> implements com.sun.xml.internal.ws.api.config.managemen
 	*
 	* @return
 	*/
-	@:overload private function getPool() : com.sun.xml.internal.ws.util.Pool<TK>;
+	@:overload @:protected private function getPool() : com.sun.xml.internal.ws.util.Pool<TK>;
 	
 	/**
 	* Creates a {@link Toolkit} instance.
@@ -115,7 +115,7 @@ extern class Adapter<TK> implements com.sun.xml.internal.ws.api.config.managemen
 	* If the derived class doesn't have to add any per-thread state
 	* to {@link Toolkit}, simply implement this as {@code new Toolkit()}.
 	*/
-	@:overload @:abstract private function createToolkit() : TK;
+	@:overload @:protected @:abstract private function createToolkit() : TK;
 	
 	
 }
@@ -127,14 +127,14 @@ extern class Adapter<TK> implements com.sun.xml.internal.ws.api.config.managemen
 	/**
 	* For encoding/decoding infoset to/from the byte stream.
 	*/
-	public var codec(default, null) : com.sun.xml.internal.ws.api.pipe.Codec;
+	@:public @:final public var codec(default, null) : com.sun.xml.internal.ws.api.pipe.Codec;
 	
 	/**
 	* This object from {@link WSEndpoint} serves the request.
 	*/
-	public var head(default, null) : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_PipeHead;
+	@:public @:final public var head(default, null) : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_PipeHead;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

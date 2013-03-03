@@ -89,7 +89,7 @@ extern interface ObjectAdapter
 	/** Must be called every time getInvocationServant is called after
 	* the request has completed.
 	*/
-	@:overload public function returnServant() : Void;
+	@:overload @:public public function returnServant() : Void;
 	
 	/** Create an instance of InvocationInfo that is appropriate for this
 	* Object adapter.

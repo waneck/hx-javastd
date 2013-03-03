@@ -25,21 +25,21 @@ package com.sun.corba.se.impl.transport;
 */
 extern class ReaderThreadImpl implements com.sun.corba.se.pept.transport.ReaderThread implements com.sun.corba.se.spi.orbutil.threadpool.Work
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, connection : com.sun.corba.se.pept.transport.Connection, selector : com.sun.corba.se.pept.transport.Selector) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, connection : com.sun.corba.se.pept.transport.Connection, selector : com.sun.corba.se.pept.transport.Selector) : Void;
 	
-	@:overload public function getConnection() : com.sun.corba.se.pept.transport.Connection;
+	@:overload @:public public function getConnection() : com.sun.corba.se.pept.transport.Connection;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function doWork() : Void;
+	@:overload @:public public function doWork() : Void;
 	
-	@:overload public function setEnqueueTime(timeInMillis : haxe.Int64) : Void;
+	@:overload @:public public function setEnqueueTime(timeInMillis : haxe.Int64) : Void;
 	
-	@:overload public function getEnqueueTime() : haxe.Int64;
+	@:overload @:public public function getEnqueueTime() : haxe.Int64;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload private function dprint(msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:protected private function dprint(msg : String, t : java.lang.Throwable) : Void;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class FilterExprWalker extends com.sun.org.apache.xpath.internal.axes.Axe
 	*
 	* @param locPathIterator non-null reference to the parent iterator.
 	*/
-	@:overload public function new(locPathIterator : com.sun.org.apache.xpath.internal.axes.WalkingIterator) : Void;
+	@:overload @:public public function new(locPathIterator : com.sun.org.apache.xpath.internal.axes.WalkingIterator) : Void;
 	
 	/**
 	* Init a FilterExprWalker.
@@ -39,14 +39,14 @@ extern class FilterExprWalker extends com.sun.org.apache.xpath.internal.axes.Axe
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function init(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int, stepType : Int) : Void;
+	@:overload @:public override public function init(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int, stepType : Int) : Void;
 	
 	/**
 	* Detaches the walker from the set which it iterated over, releasing
 	* any computational resources and placing the iterator in the INVALID
 	* state.
 	*/
-	@:overload override public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	/**
 	*  Set the root node of the TreeWalker.
@@ -54,7 +54,7 @@ extern class FilterExprWalker extends com.sun.org.apache.xpath.internal.axes.Axe
 	* @param root non-null reference to the root, or starting point of
 	*        the query.
 	*/
-	@:overload override public function setRoot(root : Int) : Void;
+	@:overload @:public override public function setRoot(root : Int) : Void;
 	
 	/**
 	* Get a cloned FilterExprWalker.
@@ -63,7 +63,7 @@ extern class FilterExprWalker extends com.sun.org.apache.xpath.internal.axes.Axe
 	*
 	* @throws CloneNotSupportedException
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* This method needs to override AxesWalker.acceptNode because FilterExprWalkers
@@ -72,7 +72,7 @@ extern class FilterExprWalker extends com.sun.org.apache.xpath.internal.axes.Axe
 	* @return  a constant to determine whether the node is accepted,
 	*   rejected, or skipped, as defined  above .
 	*/
-	@:overload override public function acceptNode(n : Int) : java.StdTypes.Int16;
+	@:overload @:public override public function acceptNode(n : Int) : java.StdTypes.Int16;
 	
 	/**
 	*  Moves the <code>TreeWalker</code> to the next visible node in document
@@ -83,7 +83,7 @@ extern class FilterExprWalker extends com.sun.org.apache.xpath.internal.axes.Axe
 	* @return  The new node, or <code>null</code> if the current node has no
 	*   next node  in the TreeWalker's logical view.
 	*/
-	@:overload override public function getNextNode() : Int;
+	@:overload @:public override public function getNextNode() : Int;
 	
 	/**
 	* Get the index of the last node that can be itterated to.
@@ -93,7 +93,7 @@ extern class FilterExprWalker extends com.sun.org.apache.xpath.internal.axes.Axe
 	*
 	* @return the index of the last node that can be itterated to.
 	*/
-	@:overload override public function getLastPos(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public override public function getLastPos(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* This function is used to fixup variables from QNames to stack frame
@@ -105,23 +105,23 @@ extern class FilterExprWalker extends com.sun.org.apache.xpath.internal.axes.Axe
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Get the inner contained expression of this filter.
 	*/
-	@:overload public function getInnerExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getInnerExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Set the inner contained expression of this filter.
 	*/
-	@:overload public function setInnerExpression(expr : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setInnerExpression(expr : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	/**
 	* Get the analysis bits for this walker, as defined in the WalkerFactory.
 	* @return One of WalkerFactory#BIT_DESCENDANT, etc.
 	*/
-	@:overload override public function getAnalysisBits() : Int;
+	@:overload @:public override public function getAnalysisBits() : Int;
 	
 	/**
 	* Returns true if all the nodes in the iteration well be returned in document
@@ -130,7 +130,7 @@ extern class FilterExprWalker extends com.sun.org.apache.xpath.internal.axes.Axe
 	*
 	* @return true as a default.
 	*/
-	@:overload override public function isDocOrdered() : Bool;
+	@:overload @:public override public function isDocOrdered() : Bool;
 	
 	/**
 	* Returns the axis being iterated, if it is known.
@@ -138,7 +138,7 @@ extern class FilterExprWalker extends com.sun.org.apache.xpath.internal.axes.Axe
 	* @return Axis.CHILD, etc., or -1 if the axis is not known or is of multiple
 	* types.
 	*/
-	@:overload override public function getAxis() : Int;
+	@:overload @:public override public function getAxis() : Int;
 	
 	/**
 	* This will traverse the heararchy, calling the visitor for
@@ -147,12 +147,12 @@ extern class FilterExprWalker extends com.sun.org.apache.xpath.internal.axes.Axe
 	*
 	* @param visitor The visitor whose appropriate method will be called.
 	*/
-	@:overload override public function callPredicateVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callPredicateVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }
@@ -161,12 +161,12 @@ extern class FilterExprWalker extends com.sun.org.apache.xpath.internal.axes.Axe
 	/**
 	* @see ExpressionOwner#getExpression()
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see ExpressionOwner#setExpression(Expression)
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	
 }

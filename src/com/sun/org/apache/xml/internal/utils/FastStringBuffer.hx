@@ -60,20 +60,20 @@ extern class FastStringBuffer
 	* chunk.
 	* @see #sendNormalizedSAXcharacters(org.xml.sax.ContentHandler,int,int)
 	*/
-	public static var SUPPRESS_LEADING_WS(default, null) : Int;
+	@:public @:static @:final public static var SUPPRESS_LEADING_WS(default, null) : Int;
 	
 	/** Manifest constant: Suppress trailing whitespace.
 	* This should be used when normalize-to-SAX is called for the last chunk of a
 	* multi-chunk output; it may have to be or'ed with SUPPRESS_LEADING_WS.
 	*/
-	public static var SUPPRESS_TRAILING_WS(default, null) : Int;
+	@:public @:static @:final public static var SUPPRESS_TRAILING_WS(default, null) : Int;
 	
 	/** Manifest constant: Suppress both leading and trailing whitespace.
 	* This should be used when normalize-to-SAX is called for a complete string.
 	* (I'm not wild about the name of this one. Ideas welcome.)
 	* @see #sendNormalizedSAXcharacters(org.xml.sax.ContentHandler,int,int)
 	*/
-	public static var SUPPRESS_BOTH(default, null) : Int;
+	@:public @:static @:final public static var SUPPRESS_BOTH(default, null) : Int;
 	
 	/**
 	* Construct a FastStringBuffer, with allocation policy as per parameters.
@@ -97,7 +97,7 @@ extern class FastStringBuffer
 	* @param rebundleBits Number of character-offset bits that addressing should
 	* advance before we attempt to take a step from initChunkBits to maxChunkBits
 	*/
-	@:overload public function new(initChunkBits : Int, maxChunkBits : Int, rebundleBits : Int) : Void;
+	@:overload @:public public function new(initChunkBits : Int, maxChunkBits : Int, rebundleBits : Int) : Void;
 	
 	/**
 	* Construct a FastStringBuffer, using a default rebundleBits value.
@@ -105,7 +105,7 @@ extern class FastStringBuffer
 	* NEEDSDOC @param initChunkBits
 	* NEEDSDOC @param maxChunkBits
 	*/
-	@:overload public function new(initChunkBits : Int, maxChunkBits : Int) : Void;
+	@:overload @:public public function new(initChunkBits : Int, maxChunkBits : Int) : Void;
 	
 	/**
 	* Construct a FastStringBuffer, using default maxChunkBits and
@@ -116,33 +116,33 @@ extern class FastStringBuffer
 	*
 	* NEEDSDOC @param initChunkBits
 	*/
-	@:overload public function new(initChunkBits : Int) : Void;
+	@:overload @:public public function new(initChunkBits : Int) : Void;
 	
 	/**
 	* Construct a FastStringBuffer, using a default allocation policy.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Get the length of the list. Synonym for length().
 	*
 	* @return the number of characters in the FastStringBuffer's content.
 	*/
-	@:overload @:final public function size() : Int;
+	@:overload @:public @:final public function size() : Int;
 	
 	/**
 	* Get the length of the list. Synonym for size().
 	*
 	* @return the number of characters in the FastStringBuffer's content.
 	*/
-	@:overload @:final public function length() : Int;
+	@:overload @:public @:final public function length() : Int;
 	
 	/**
 	* Discard the content of the FastStringBuffer, and most of the memory
 	* that was allocated by it, restoring the initial state. Note that this
 	* may eventually be different from setLength(0), which see.
 	*/
-	@:overload @:final public function reset() : Void;
+	@:overload @:public @:final public function reset() : Void;
 	
 	/**
 	* Directly set how much of the FastStringBuffer's storage is to be
@@ -156,7 +156,7 @@ extern class FastStringBuffer
 	* @param l New length. If l<0 or l>=getLength(), this operation will
 	* not report an error but future operations will almost certainly fail.
 	*/
-	@:overload @:final public function setLength(l : Int) : Void;
+	@:overload @:public @:final public function setLength(l : Int) : Void;
 	
 	/**
 	* Note that this operation has been somewhat deoptimized by the shift to a
@@ -171,7 +171,7 @@ extern class FastStringBuffer
 	*
 	* @return the contents of the FastStringBuffer as a standard Java string.
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/**
 	* Append a single character onto the FastStringBuffer, growing the
@@ -183,7 +183,7 @@ extern class FastStringBuffer
 	*
 	* @param value character to be appended.
 	*/
-	@:overload @:final public function append(value : java.StdTypes.Char16) : Void;
+	@:overload @:public @:final public function append(value : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Append the contents of a String onto the FastStringBuffer,
@@ -194,7 +194,7 @@ extern class FastStringBuffer
 	*
 	* @param value String whose contents are to be appended.
 	*/
-	@:overload @:final public function append(value : String) : Void;
+	@:overload @:public @:final public function append(value : String) : Void;
 	
 	/**
 	* Append the contents of a StringBuffer onto the FastStringBuffer,
@@ -205,7 +205,7 @@ extern class FastStringBuffer
 	*
 	* @param value StringBuffer whose contents are to be appended.
 	*/
-	@:overload @:final public function append(value : java.lang.StringBuffer) : Void;
+	@:overload @:public @:final public function append(value : java.lang.StringBuffer) : Void;
 	
 	/**
 	* Append part of the contents of a Character Array onto the
@@ -219,7 +219,7 @@ extern class FastStringBuffer
 	* zero-based.
 	* @param length number of characters to be copied
 	*/
-	@:overload @:final public function append(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public @:final public function append(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Append the contents of another FastStringBuffer onto
@@ -231,7 +231,7 @@ extern class FastStringBuffer
 	* @param value FastStringBuffer whose contents are
 	* to be appended.
 	*/
-	@:overload @:final public function append(value : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
+	@:overload @:public @:final public function append(value : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
 	
 	/**
 	* @return true if the specified range of characters are all whitespace,
@@ -242,7 +242,7 @@ extern class FastStringBuffer
 	* @param start Offset of first character in the range.
 	* @param length Number of characters to send.
 	*/
-	@:overload public function isWhitespace(start : Int, length : Int) : Bool;
+	@:overload @:public public function isWhitespace(start : Int, length : Int) : Bool;
 	
 	/**
 	* @param start Offset of first character in the range.
@@ -250,9 +250,9 @@ extern class FastStringBuffer
 	* @return a new String object initialized from the specified range of
 	* characters.
 	*/
-	@:overload public function getString(start : Int, length : Int) : String;
+	@:overload @:public public function getString(start : Int, length : Int) : String;
 	
-	@:overload private function getOneChunkString(startChunk : Int, startColumn : Int, length : Int) : String;
+	@:overload @:protected private function getOneChunkString(startChunk : Int, startColumn : Int, length : Int) : String;
 	
 	/**
 	* Get a single character from the string buffer.
@@ -261,7 +261,7 @@ extern class FastStringBuffer
 	* @param pos character position requested.
 	* @return A character from the requested position.
 	*/
-	@:overload public function charAt(pos : Int) : java.StdTypes.Char16;
+	@:overload @:public public function charAt(pos : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Sends the specified range of characters as one or more SAX characters()
@@ -282,7 +282,7 @@ extern class FastStringBuffer
 	* @exception org.xml.sax.SAXException may be thrown by handler's
 	* characters() method.
 	*/
-	@:overload public function sendSAXcharacters(ch : org.xml.sax.ContentHandler, start : Int, length : Int) : Void;
+	@:overload @:public public function sendSAXcharacters(ch : org.xml.sax.ContentHandler, start : Int, length : Int) : Void;
 	
 	/**
 	* Sends the specified range of characters as one or more SAX characters()
@@ -307,7 +307,7 @@ extern class FastStringBuffer
 	* @exception org.xml.sax.SAXException may be thrown by handler's
 	* characters() method.
 	*/
-	@:overload public function sendNormalizedSAXcharacters(ch : org.xml.sax.ContentHandler, start : Int, length : Int) : Int;
+	@:overload @:public public function sendNormalizedSAXcharacters(ch : org.xml.sax.ContentHandler, start : Int, length : Int) : Int;
 	
 	/**
 	* Directly normalize and dispatch the character array.
@@ -319,7 +319,7 @@ extern class FastStringBuffer
 	* @exception org.xml.sax.SAXException Any SAX exception, possibly
 	*            wrapping another exception.
 	*/
-	@:native('sendNormalizedSAXcharacters') @:overload public static function _sendNormalizedSAXcharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, handler : org.xml.sax.ContentHandler) : Void;
+	@:native('sendNormalizedSAXcharacters') @:overload @:public @:static public static function _sendNormalizedSAXcharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, handler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Sends the specified range of characters as sax Comment.
@@ -333,7 +333,7 @@ extern class FastStringBuffer
 	* @exception org.xml.sax.SAXException may be thrown by handler's
 	* characters() method.
 	*/
-	@:overload public function sendSAXComment(ch : org.xml.sax.ext.LexicalHandler, start : Int, length : Int) : Void;
+	@:overload @:public public function sendSAXComment(ch : org.xml.sax.ext.LexicalHandler, start : Int, length : Int) : Void;
 	
 	
 }

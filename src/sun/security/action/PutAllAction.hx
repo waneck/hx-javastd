@@ -25,9 +25,9 @@ package sun.security.action;
 */
 extern class PutAllAction implements java.security.PrivilegedAction<java.lang.Void>
 {
-	@:overload public function new(provider : java.security.Provider, map : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(provider : java.security.Provider, map : java.util.Map<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function run() : java.lang.Void;
+	@:overload @:public public function run() : java.lang.Void;
 	
 	
 }

@@ -28,25 +28,25 @@ package sun.nio.cs;
 //// -- This file was mechanically generated: Do not edit! -- //
 extern class StandardCharsets extends sun.nio.cs.FastCharsetProvider
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('sun$nio$cs$StandardCharsets$Aliases') @:internal extern class StandardCharsets_Aliases extends sun.util.PreHashedMap<String>
 {
-	@:overload override private function init(ht : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected override private function init(ht : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
 @:native('sun$nio$cs$StandardCharsets$Classes') @:internal extern class StandardCharsets_Classes extends sun.util.PreHashedMap<String>
 {
-	@:overload override private function init(ht : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected override private function init(ht : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
 @:native('sun$nio$cs$StandardCharsets$Cache') @:internal extern class StandardCharsets_Cache extends sun.util.PreHashedMap<java.nio.charset.Charset>
 {
-	@:overload override private function init(ht : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected override private function init(ht : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

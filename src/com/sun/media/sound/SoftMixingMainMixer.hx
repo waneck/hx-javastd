@@ -30,43 +30,43 @@ extern class SoftMixingMainMixer
 	*
 	* @author Karl Helgason
 	*/
-	public static var CHANNEL_LEFT(default, null) : Int;
+	@:public @:final @:static public static var CHANNEL_LEFT(default, null) : Int;
 	
-	public static var CHANNEL_RIGHT(default, null) : Int;
+	@:public @:final @:static public static var CHANNEL_RIGHT(default, null) : Int;
 	
-	public static var CHANNEL_EFFECT1(default, null) : Int;
+	@:public @:final @:static public static var CHANNEL_EFFECT1(default, null) : Int;
 	
-	public static var CHANNEL_EFFECT2(default, null) : Int;
+	@:public @:final @:static public static var CHANNEL_EFFECT2(default, null) : Int;
 	
-	public static var CHANNEL_EFFECT3(default, null) : Int;
+	@:public @:final @:static public static var CHANNEL_EFFECT3(default, null) : Int;
 	
-	public static var CHANNEL_EFFECT4(default, null) : Int;
+	@:public @:final @:static public static var CHANNEL_EFFECT4(default, null) : Int;
 	
-	public static var CHANNEL_LEFT_DRY(default, null) : Int;
+	@:public @:final @:static public static var CHANNEL_LEFT_DRY(default, null) : Int;
 	
-	public static var CHANNEL_RIGHT_DRY(default, null) : Int;
+	@:public @:final @:static public static var CHANNEL_RIGHT_DRY(default, null) : Int;
 	
-	public static var CHANNEL_SCRATCH1(default, null) : Int;
+	@:public @:final @:static public static var CHANNEL_SCRATCH1(default, null) : Int;
 	
-	public static var CHANNEL_SCRATCH2(default, null) : Int;
+	@:public @:final @:static public static var CHANNEL_SCRATCH2(default, null) : Int;
 	
-	public static var CHANNEL_CHANNELMIXER_LEFT(default, null) : Int;
+	@:public @:final @:static public static var CHANNEL_CHANNELMIXER_LEFT(default, null) : Int;
 	
-	public static var CHANNEL_CHANNELMIXER_RIGHT(default, null) : Int;
+	@:public @:final @:static public static var CHANNEL_CHANNELMIXER_RIGHT(default, null) : Int;
 	
-	@:overload public function getInputStream() : javax.sound.sampled.AudioInputStream;
+	@:overload @:public public function getInputStream() : javax.sound.sampled.AudioInputStream;
 	
-	@:overload private function processAudioBuffers() : Void;
+	@:overload @:protected private function processAudioBuffers() : Void;
 	
-	@:overload public function new(mixer : com.sun.media.sound.SoftMixingMixer) : Void;
+	@:overload @:public public function new(mixer : com.sun.media.sound.SoftMixingMixer) : Void;
 	
-	@:overload public function openLine(line : com.sun.media.sound.SoftMixingDataLine) : Void;
+	@:overload @:public public function openLine(line : com.sun.media.sound.SoftMixingDataLine) : Void;
 	
-	@:overload public function closeLine(line : com.sun.media.sound.SoftMixingDataLine) : Void;
+	@:overload @:public public function closeLine(line : com.sun.media.sound.SoftMixingDataLine) : Void;
 	
-	@:overload public function getOpenLines() : java.NativeArray<com.sun.media.sound.SoftMixingDataLine>;
+	@:overload @:public public function getOpenLines() : java.NativeArray<com.sun.media.sound.SoftMixingDataLine>;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

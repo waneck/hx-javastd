@@ -31,7 +31,7 @@ package com.sun.org.apache.xerces.internal.impl.dv.dtd;
 */
 extern class NOTATIONDatatypeValidator implements com.sun.org.apache.xerces.internal.impl.dv.DatatypeValidator
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Checks that "content" string is valid NOTATION value.
@@ -43,7 +43,7 @@ extern class NOTATIONDatatypeValidator implements com.sun.org.apache.xerces.inte
 	*         invalid according to the rules for the validators
 	* @see InvalidDatatypeValueException
 	*/
-	@:overload public function validate(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
+	@:overload @:public public function validate(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
 	
 	
 }

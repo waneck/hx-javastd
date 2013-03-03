@@ -33,9 +33,9 @@ extern class DOMCanonicalXMLC14NMethod extends org.jcp.xml.dsig.internal.dom.Apa
 	*
 	* @author Sean Mullan
 	*/
-	@:overload public function init(params : javax.xml.crypto.dsig.spec.TransformParameterSpec) : Void;
+	@:overload @:public override public function init(params : javax.xml.crypto.dsig.spec.TransformParameterSpec) : Void;
 	
-	@:overload override public function transform(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
+	@:overload @:public override public function transform(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
 	
 	
 }

@@ -36,19 +36,19 @@ package sun.rmi.transport.proxy;
 	* @param in the InputStream to filter from
 	* @param owner the HttpSendSocket that is providing this stream
 	*/
-	@:overload public function new(_in : java.io.InputStream, owner : sun.rmi.transport.proxy.HttpSendSocket) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, owner : sun.rmi.transport.proxy.HttpSendSocket) : Void;
 	
 	/**
 	* Mark this stream as inactive for its owner socket, so the next time
 	* a read is attempted, the owner will be notified and a new underlying
 	* input stream obtained.
 	*/
-	@:overload public function deactivate() : Void;
+	@:overload @:public public function deactivate() : Void;
 	
 	/**
 	* Read a byte of data from the stream.
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Read into an array of bytes.
@@ -56,39 +56,39 @@ package sun.rmi.transport.proxy;
 	* @param off the start offset of the data
 	* @param len the maximum number of bytes to read
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skip bytes of input.
 	* @param n the number of bytes to be skipped
 	*/
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Return the number of bytes that can be read without blocking.
 	*/
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	/**
 	* Close the stream.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Mark the current position in the stream.
 	* @param readlimit how many bytes can be read before mark becomes invalid
 	*/
-	@:overload @:synchronized override public function mark(readlimit : Int) : Void;
+	@:overload @:public @:synchronized override public function mark(readlimit : Int) : Void;
 	
 	/**
 	* Reposition the stream to the last marked position.
 	*/
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
 	/**
 	* Return true if this stream type supports mark/reset.
 	*/
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	
 }

@@ -30,7 +30,7 @@ extern interface PooledConnectionFactory
 	* @param pcb callback responsible for removing and releasing the pooled
 	* connection from the pool.
 	*/
-	@:overload @:abstract public function createPooledConnection(pcb : com.sun.jndi.ldap.pool.PoolCallback) : com.sun.jndi.ldap.pool.PooledConnection;
+	@:overload @:public @:abstract public function createPooledConnection(pcb : com.sun.jndi.ldap.pool.PoolCallback) : com.sun.jndi.ldap.pool.PooledConnection;
 	
 	
 }

@@ -63,7 +63,7 @@ extern class Service
 	* @see #providers(java.lang.Class)
 	* @see #installedProviders(java.lang.Class)
 	*/
-	@:overload public static function providers(service : Class<Dynamic>, loader : java.lang.ClassLoader) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:static public static function providers(service : Class<Dynamic>, loader : java.lang.ClassLoader) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Locates and incrementally instantiates the available providers of a
@@ -90,7 +90,7 @@ extern class Service
 	*
 	* @see #providers(java.lang.Class, java.lang.ClassLoader)
 	*/
-	@:overload public static function providers(service : Class<Dynamic>) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:static public static function providers(service : Class<Dynamic>) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Locates and incrementally instantiates the available providers of a
@@ -121,7 +121,7 @@ extern class Service
 	*
 	* @see #providers(java.lang.Class, java.lang.ClassLoader)
 	*/
-	@:overload public static function installedProviders(service : Class<Dynamic>) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:static public static function installedProviders(service : Class<Dynamic>) : java.util.Iterator<Dynamic>;
 	
 	
 }
@@ -130,11 +130,11 @@ extern class Service
 */
 @:native('sun$misc$Service$LazyIterator') @:internal extern class Service_LazyIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

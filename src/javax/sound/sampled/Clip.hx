@@ -59,7 +59,7 @@ extern interface Clip extends javax.sound.sampled.DataLine
 	* @see #isOpen
 	* @see LineListener
 	*/
-	@:overload public function open(format : javax.sound.sampled.AudioFormat, data : java.NativeArray<java.StdTypes.Int8>, offset : Int, bufferSize : Int) : Void;
+	@:overload @:public public function open(format : javax.sound.sampled.AudioFormat, data : java.NativeArray<java.StdTypes.Int8>, offset : Int, bufferSize : Int) : Void;
 	
 	/**
 	* Opens the clip with the format and audio data present in the provided audio
@@ -93,7 +93,7 @@ extern interface Clip extends javax.sound.sampled.DataLine
 	* @see #isOpen
 	* @see LineListener
 	*/
-	@:overload public function open(stream : javax.sound.sampled.AudioInputStream) : Void;
+	@:overload @:public public function open(stream : javax.sound.sampled.AudioInputStream) : Void;
 	
 	/**
 	* Obtains the media length in sample frames.
@@ -101,7 +101,7 @@ extern interface Clip extends javax.sound.sampled.DataLine
 	* or <code>AudioSystem.NOT_SPECIFIED</code> if the line is not open.
 	* @see AudioSystem#NOT_SPECIFIED
 	*/
-	@:overload public function getFrameLength() : Int;
+	@:overload @:public public function getFrameLength() : Int;
 	
 	/**
 	* Obtains the media duration in microseconds
@@ -109,7 +109,7 @@ extern interface Clip extends javax.sound.sampled.DataLine
 	* or <code>AudioSystem.NOT_SPECIFIED</code> if the line is not open.
 	* @see AudioSystem#NOT_SPECIFIED
 	*/
-	@:overload public function getMicrosecondLength() : haxe.Int64;
+	@:overload @:public public function getMicrosecondLength() : haxe.Int64;
 	
 	/**
 	* Sets the media position in sample frames.  The position is zero-based;
@@ -122,7 +122,7 @@ extern interface Clip extends javax.sound.sampled.DataLine
 	*
 	* @param frames the desired new media position, expressed in sample frames
 	*/
-	@:overload public function setFramePosition(frames : Int) : Void;
+	@:overload @:public public function setFramePosition(frames : Int) : Void;
 	
 	/**
 	* Sets the media position in microseconds.  When the clip begins playing the
@@ -138,7 +138,7 @@ extern interface Clip extends javax.sound.sampled.DataLine
 	*
 	* @param microseconds the desired new media position, expressed in microseconds
 	*/
-	@:overload public function setMicrosecondPosition(microseconds : haxe.Int64) : Void;
+	@:overload @:public public function setMicrosecondPosition(microseconds : haxe.Int64) : Void;
 	
 	/**
 	* Sets the first and last sample frames that will be played in
@@ -155,7 +155,7 @@ extern interface Clip extends javax.sound.sampled.DataLine
 	* the media's duration or because the ending point is
 	* before the starting point
 	*/
-	@:overload public function setLoopPoints(start : Int, end : Int) : Void;
+	@:overload @:public public function setLoopPoints(start : Int, end : Int) : Void;
 	
 	/**
 	* Starts looping playback from the current position.   Playback will
@@ -181,7 +181,7 @@ extern interface Clip extends javax.sound.sampled.DataLine
 	* <code>{@link #LOOP_CONTINUOUSLY}</code> to indicate that looping should
 	* continue until interrupted
 	*/
-	@:overload public function loop(count : Int) : Void;
+	@:overload @:public public function loop(count : Int) : Void;
 	
 	
 }

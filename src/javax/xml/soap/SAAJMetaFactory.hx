@@ -40,7 +40,7 @@ package javax.xml.soap;
 */
 @:require(java3) extern class SAAJMetaFactory
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates a <code>MessageFactory</code> object for
@@ -53,7 +53,7 @@ package javax.xml.soap;
 	* @see SOAPConstants#SOAP_1_2_PROTOCOL
 	* @see SOAPConstants#DYNAMIC_SOAP_PROTOCOL
 	*/
-	@:overload @:abstract private function newMessageFactory(protocol : String) : javax.xml.soap.MessageFactory;
+	@:overload @:protected @:abstract private function newMessageFactory(protocol : String) : javax.xml.soap.MessageFactory;
 	
 	/**
 	* Creates a <code>SOAPFactory</code> object for
@@ -66,7 +66,7 @@ package javax.xml.soap;
 	* @see SOAPConstants#SOAP_1_2_PROTOCOL
 	* @see SOAPConstants#DYNAMIC_SOAP_PROTOCOL
 	*/
-	@:overload @:abstract private function newSOAPFactory(protocol : String) : javax.xml.soap.SOAPFactory;
+	@:overload @:protected @:abstract private function newSOAPFactory(protocol : String) : javax.xml.soap.SOAPFactory;
 	
 	
 }

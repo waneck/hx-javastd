@@ -38,14 +38,14 @@ extern class TargetedNotification implements java.io.Serializable
 	* @exception IllegalArgumentException if the <var>listenerID</var>
 	*        or <var>notification</var> is null.
 	*/
-	@:overload public function new(notification : javax.management.Notification, listenerID : Null<Int>) : Void;
+	@:overload @:public public function new(notification : javax.management.Notification, listenerID : Null<Int>) : Void;
 	
 	/**
 	* <p>The emitted notification.</p>
 	*
 	* @return The notification.
 	*/
-	@:overload public function getNotification() : javax.management.Notification;
+	@:overload @:public public function getNotification() : javax.management.Notification;
 	
 	/**
 	* <p>The ID of the listener to which the notification is
@@ -53,14 +53,14 @@ extern class TargetedNotification implements java.io.Serializable
 	*
 	* @return The listener ID.
 	*/
-	@:overload public function getListenerID() : Null<Int>;
+	@:overload @:public public function getListenerID() : Null<Int>;
 	
 	/**
 	* Returns a textual representation of this Targeted Notification.
 	*
 	* @return a String representation of this Targeted Notification.
 	**/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

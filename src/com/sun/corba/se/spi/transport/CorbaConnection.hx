@@ -28,45 +28,45 @@ extern interface CorbaConnection extends com.sun.corba.se.spi.legacy.connection.
 	/**
 	* @author Harold Carr
 	*/
-	@:overload public function shouldUseDirectByteBuffers() : Bool;
+	@:overload @:public public function shouldUseDirectByteBuffers() : Bool;
 	
-	@:overload public function shouldReadGiopHeaderOnly() : Bool;
+	@:overload @:public public function shouldReadGiopHeaderOnly() : Bool;
 	
-	@:overload public function read(size : Int, offset : Int, length : Int, max_wait_time : haxe.Int64) : java.nio.ByteBuffer;
+	@:overload @:public public function read(size : Int, offset : Int, length : Int, max_wait_time : haxe.Int64) : java.nio.ByteBuffer;
 	
-	@:overload public function read(byteBuffer : java.nio.ByteBuffer, offset : Int, length : Int, max_wait_time : haxe.Int64) : java.nio.ByteBuffer;
+	@:overload @:public public function read(byteBuffer : java.nio.ByteBuffer, offset : Int, length : Int, max_wait_time : haxe.Int64) : java.nio.ByteBuffer;
 	
-	@:overload public function write(byteBuffer : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function write(byteBuffer : java.nio.ByteBuffer) : Void;
 	
-	@:overload public function dprint(msg : String) : Void;
+	@:overload @:public public function dprint(msg : String) : Void;
 	
-	@:overload public function getNextRequestId() : Int;
+	@:overload @:public public function getNextRequestId() : Int;
 	
-	@:overload public function getBroker() : com.sun.corba.se.spi.orb.ORB;
+	@:overload @:public public function getBroker() : com.sun.corba.se.spi.orb.ORB;
 	
-	@:overload public function getCodeSetContext() : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetContext;
+	@:overload @:public public function getCodeSetContext() : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetContext;
 	
-	@:overload public function setCodeSetContext(csc : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetContext) : Void;
+	@:overload @:public public function setCodeSetContext(csc : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetContext) : Void;
 	
-	@:overload public function clientRequestMapGet(requestId : Int) : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function clientRequestMapGet(requestId : Int) : com.sun.corba.se.pept.protocol.MessageMediator;
 	
-	@:overload public function clientReply_1_1_Put(x : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
+	@:overload @:public public function clientReply_1_1_Put(x : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
 	
-	@:overload public function clientReply_1_1_Get() : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function clientReply_1_1_Get() : com.sun.corba.se.pept.protocol.MessageMediator;
 	
-	@:overload public function clientReply_1_1_Remove() : Void;
+	@:overload @:public public function clientReply_1_1_Remove() : Void;
 	
-	@:overload public function serverRequest_1_1_Put(x : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
+	@:overload @:public public function serverRequest_1_1_Put(x : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
 	
-	@:overload public function serverRequest_1_1_Get() : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function serverRequest_1_1_Get() : com.sun.corba.se.pept.protocol.MessageMediator;
 	
-	@:overload public function serverRequest_1_1_Remove() : Void;
+	@:overload @:public public function serverRequest_1_1_Remove() : Void;
 	
-	@:overload public function isPostInitialContexts() : Bool;
+	@:overload @:public public function isPostInitialContexts() : Bool;
 	
-	@:overload public function setPostInitialContexts() : Void;
+	@:overload @:public public function setPostInitialContexts() : Void;
 	
-	@:overload public function purgeCalls(systemException : org.omg.CORBA.SystemException, die : Bool, lockHeld : Bool) : Void;
+	@:overload @:public public function purgeCalls(systemException : org.omg.CORBA.SystemException, die : Bool, lockHeld : Bool) : Void;
 	
 	@:overload public function setCodeBaseIOR(ior : com.sun.corba.se.spi.ior.IOR) : Void;
 	
@@ -74,31 +74,31 @@ extern interface CorbaConnection extends com.sun.corba.se.spi.legacy.connection.
 	
 	@:overload public function getCodeBase() : com.sun.org.omg.SendingContext.CodeBase;
 	
-	@:overload public function sendCloseConnection(giopVersion : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
+	@:overload @:public public function sendCloseConnection(giopVersion : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
 	
-	@:overload public function sendMessageError(giopVersion : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
+	@:overload @:public public function sendMessageError(giopVersion : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
 	
-	@:overload public function sendCancelRequest(giopVersion : com.sun.corba.se.spi.ior.iiop.GIOPVersion, requestId : Int) : Void;
+	@:overload @:public public function sendCancelRequest(giopVersion : com.sun.corba.se.spi.ior.iiop.GIOPVersion, requestId : Int) : Void;
 	
-	@:overload public function sendCancelRequestWithLock(giopVersion : com.sun.corba.se.spi.ior.iiop.GIOPVersion, requestId : Int) : Void;
+	@:overload @:public public function sendCancelRequestWithLock(giopVersion : com.sun.corba.se.spi.ior.iiop.GIOPVersion, requestId : Int) : Void;
 	
-	@:overload public function getResponseWaitingRoom() : com.sun.corba.se.pept.transport.ResponseWaitingRoom;
+	@:overload @:public public function getResponseWaitingRoom() : com.sun.corba.se.pept.transport.ResponseWaitingRoom;
 	
-	@:overload public function serverRequestMapPut(requestId : Int, messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
+	@:overload @:public public function serverRequestMapPut(requestId : Int, messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
 	
-	@:overload public function serverRequestMapGet(requestId : Int) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
+	@:overload @:public public function serverRequestMapGet(requestId : Int) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
 	
-	@:overload public function serverRequestMapRemove(requestId : Int) : Void;
+	@:overload @:public public function serverRequestMapRemove(requestId : Int) : Void;
 	
-	@:overload public function getSocketChannel() : java.nio.channels.SocketChannel;
+	@:overload @:public public function getSocketChannel() : java.nio.channels.SocketChannel;
 	
-	@:overload public function serverRequestProcessingBegins() : Void;
+	@:overload @:public public function serverRequestProcessingBegins() : Void;
 	
-	@:overload public function serverRequestProcessingEnds() : Void;
+	@:overload @:public public function serverRequestProcessingEnds() : Void;
 	
 	/** Clean up all connection resources.  Used when shutting down an ORB.
 	*/
-	@:overload public function closeConnectionResources() : Void;
+	@:overload @:public public function closeConnectionResources() : Void;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class MalformedURLException extends java.io.IOException
 	/**
 	* Constructs a <code>MalformedURLException</code> with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>MalformedURLException</code> with the
@@ -36,7 +36,7 @@ extern class MalformedURLException extends java.io.IOException
 	*
 	* @param   msg   the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

@@ -31,41 +31,41 @@ package sun.misc;
 */
 extern class MessageUtils
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function subst(patt : String, arg : String) : String;
+	@:overload @:public @:static public static function subst(patt : String, arg : String) : String;
 	
-	@:overload public static function subst(patt : String, arg1 : String, arg2 : String) : String;
+	@:overload @:public @:static public static function subst(patt : String, arg1 : String, arg2 : String) : String;
 	
-	@:overload public static function subst(patt : String, arg1 : String, arg2 : String, arg3 : String) : String;
+	@:overload @:public @:static public static function subst(patt : String, arg1 : String, arg2 : String, arg3 : String) : String;
 	
-	@:overload public static function subst(patt : String, args : java.NativeArray<String>) : String;
+	@:overload @:public @:static public static function subst(patt : String, args : java.NativeArray<String>) : String;
 	
-	@:overload public static function substProp(propName : String, arg : String) : String;
+	@:overload @:public @:static public static function substProp(propName : String, arg : String) : String;
 	
-	@:overload public static function substProp(propName : String, arg1 : String, arg2 : String) : String;
+	@:overload @:public @:static public static function substProp(propName : String, arg1 : String, arg2 : String) : String;
 	
-	@:overload public static function substProp(propName : String, arg1 : String, arg2 : String, arg3 : String) : String;
+	@:overload @:public @:static public static function substProp(propName : String, arg1 : String, arg2 : String, arg3 : String) : String;
 	
 	/**
 	*  Print a message directly to stderr, bypassing all the
 	*  character conversion methods.
 	*  @param msg   message to print
 	*/
-	@:overload @:native public static function toStderr(msg : String) : Void;
+	@:overload @:public @:static @:native public static function toStderr(msg : String) : Void;
 	
 	/**
 	*  Print a message directly to stdout, bypassing all the
 	*  character conversion methods.
 	*  @param msg   message to print
 	*/
-	@:overload @:native public static function toStdout(msg : String) : Void;
+	@:overload @:public @:static @:native public static function toStdout(msg : String) : Void;
 	
-	@:overload public static function err(s : String) : Void;
+	@:overload @:public @:static public static function err(s : String) : Void;
 	
-	@:overload public static function out(s : String) : Void;
+	@:overload @:public @:static public static function out(s : String) : Void;
 	
-	@:overload public static function where() : Void;
+	@:overload @:public @:static public static function where() : Void;
 	
 	
 }

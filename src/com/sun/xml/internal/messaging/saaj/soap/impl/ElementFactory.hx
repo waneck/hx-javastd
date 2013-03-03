@@ -25,15 +25,15 @@ package com.sun.xml.internal.messaging.saaj.soap.impl;
 */
 extern class ElementFactory
 {
-	@:overload public static function createElement(ownerDocument : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:static public static function createElement(ownerDocument : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
 	
-	@:overload public static function createElement(ownerDocument : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, name : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:static public static function createElement(ownerDocument : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, name : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
-	@:overload public static function createElement(ownerDocument : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, localName : String, prefix : String, namespaceUri : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:static public static function createElement(ownerDocument : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, localName : String, prefix : String, namespaceUri : String) : javax.xml.soap.SOAPElement;
 	
-	@:overload public static function createNamedElement(ownerDocument : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, localName : String, prefix : String, namespaceUri : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:static public static function createNamedElement(ownerDocument : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, localName : String, prefix : String, namespaceUri : String) : javax.xml.soap.SOAPElement;
 	
-	@:overload private static function invalidCreate(msg : String) : Void;
+	@:overload @:protected @:static private static function invalidCreate(msg : String) : Void;
 	
 	
 }

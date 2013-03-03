@@ -38,7 +38,7 @@ extern class InstanceResolver<T>
 	*      Always non-null. Represents the request message to be served.
 	*      The caller may not consume the {@link Message}.
 	*/
-	@:overload @:abstract public function resolve(request : com.sun.xml.internal.ws.api.message.Packet) : T;
+	@:overload @:public @:abstract public function resolve(request : com.sun.xml.internal.ws.api.message.Packet) : T;
 	
 	/**
 	* Called by the default {@link Invoker} after the method call is done.
@@ -57,7 +57,7 @@ extern class InstanceResolver<T>
 	*      The object returned from the {@link #resolve(Packet)} method.
 	* @since 2.1.2
 	*/
-	@:require(java1) @:overload public function postInvoke(request : com.sun.xml.internal.ws.api.message.Packet, servant : T) : Void;
+	@:require(java1) @:overload @:public public function postInvoke(request : com.sun.xml.internal.ws.api.message.Packet, servant : T) : Void;
 	
 	/**
 	* Called by {@link WSEndpoint} when it's set up.
@@ -70,13 +70,13 @@ extern class InstanceResolver<T>
 	*      The {@link WebServiceContext} instance to be injected
 	*      to the user instances (assuming {@link InstanceResolver}
 	*/
-	@:overload public function start(wsc : com.sun.xml.internal.ws.api.server.WSWebServiceContext, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
+	@:overload @:public public function start(wsc : com.sun.xml.internal.ws.api.server.WSWebServiceContext, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
 	
 	/**
 	* @deprecated
 	*      Use {@link #start(WSWebServiceContext,WSEndpoint)}.
 	*/
-	@:overload public function start(wsc : javax.xml.ws.WebServiceContext) : Void;
+	@:overload @:public public function start(wsc : javax.xml.ws.WebServiceContext) : Void;
 	
 	/**
 	* Called by {@link WSEndpoint}
@@ -87,13 +87,13 @@ extern class InstanceResolver<T>
 	* <p>
 	* This method is guaranteed to be only called once by {@link WSEndpoint}.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* Creates a {@link InstanceResolver} implementation that always
 	* returns the specified singleton instance.
 	*/
-	@:overload public static function createSingleton<T>(singleton : T) : com.sun.xml.internal.ws.api.server.InstanceResolver<T>;
+	@:overload @:public @:static public static function createSingleton<T>(singleton : T) : com.sun.xml.internal.ws.api.server.InstanceResolver<T>;
 	
 	/**
 	* @deprecated
@@ -101,25 +101,25 @@ extern class InstanceResolver<T>
 	*      with this signature. Please do not use this. Will be removed
 	*      after the next GF integration.
 	*/
-	@:overload public static function createDefault<T>(clazz : Class<T>, bool : Bool) : com.sun.xml.internal.ws.api.server.InstanceResolver<T>;
+	@:overload @:public @:static public static function createDefault<T>(clazz : Class<T>, bool : Bool) : com.sun.xml.internal.ws.api.server.InstanceResolver<T>;
 	
 	/**
 	* Creates a default {@link InstanceResolver} that serves the given class.
 	*/
-	@:overload public static function createDefault<T>(clazz : Class<T>) : com.sun.xml.internal.ws.api.server.InstanceResolver<T>;
+	@:overload @:public @:static public static function createDefault<T>(clazz : Class<T>) : com.sun.xml.internal.ws.api.server.InstanceResolver<T>;
 	
 	/**
 	* Checks for {@link InstanceResolverAnnotation} and creates an instance resolver from it if any.
 	* Otherwise null.
 	*/
-	@:overload public static function createFromInstanceResolverAnnotation<T>(clazz : Class<T>) : com.sun.xml.internal.ws.api.server.InstanceResolver<T>;
+	@:overload @:public @:static public static function createFromInstanceResolverAnnotation<T>(clazz : Class<T>) : com.sun.xml.internal.ws.api.server.InstanceResolver<T>;
 	
-	@:overload private static function createNewInstance<T>(cl : Class<T>) : T;
+	@:overload @:protected @:static private static function createNewInstance<T>(cl : Class<T>) : T;
 	
 	/**
 	* Wraps this {@link InstanceResolver} into an {@link Invoker}.
 	*/
-	@:overload public function createInvoker() : com.sun.xml.internal.ws.api.server.Invoker;
+	@:overload @:public public function createInvoker() : com.sun.xml.internal.ws.api.server.Invoker;
 	
 	
 }

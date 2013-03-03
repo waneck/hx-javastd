@@ -25,14 +25,14 @@ extern class InvalidCanonicalizerException extends com.sun.org.apache.xml.intern
 	* Constructor InvalidCanonicalizerException
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor InvalidCanonicalizerException
 	*
 	* @param _msgID
 	*/
-	@:overload public function new(_msgID : String) : Void;
+	@:overload @:public public function new(_msgID : String) : Void;
 	
 	/**
 	* Constructor InvalidCanonicalizerException
@@ -40,7 +40,7 @@ extern class InvalidCanonicalizerException extends com.sun.org.apache.xml.intern
 	* @param _msgID
 	* @param exArgs
 	*/
-	@:overload public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Constructor InvalidCanonicalizerException
@@ -48,7 +48,7 @@ extern class InvalidCanonicalizerException extends com.sun.org.apache.xml.intern
 	* @param _msgID
 	* @param _originalException
 	*/
-	@:overload public function new(_msgID : String, _originalException : java.lang.Exception) : Void;
+	@:overload @:public public function new(_msgID : String, _originalException : java.lang.Exception) : Void;
 	
 	/**
 	* Constructor InvalidCanonicalizerException
@@ -57,7 +57,7 @@ extern class InvalidCanonicalizerException extends com.sun.org.apache.xml.intern
 	* @param exArgs
 	* @param _originalException
 	*/
-	@:overload public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, _originalException : java.lang.Exception) : Void;
+	@:overload @:public public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, _originalException : java.lang.Exception) : Void;
 	
 	
 }

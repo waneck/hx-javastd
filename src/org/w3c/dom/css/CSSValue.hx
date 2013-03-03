@@ -43,7 +43,7 @@ extern interface CSSValue
 	/**
 	*  A string representation of the current value.
 	*/
-	@:overload public function getCssText() : String;
+	@:overload @:public public function getCssText() : String;
 	
 	/**
 	*  A string representation of the current value.
@@ -55,12 +55,12 @@ extern interface CSSValue
 	*   by the CSS property.
 	*   <br> NO_MODIFICATION_ALLOWED_ERR: Raised if this value is readonly.
 	*/
-	@:overload public function setCssText(cssText : String) : Void;
+	@:overload @:public public function setCssText(cssText : String) : Void;
 	
 	/**
 	*  A code defining the type of the value as defined above.
 	*/
-	@:overload public function getCssValueType() : java.StdTypes.Int16;
+	@:overload @:public public function getCssValueType() : java.StdTypes.Int16;
 	
 	
 }

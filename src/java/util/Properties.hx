@@ -31,19 +31,19 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	*
 	* @serial
 	*/
-	private var defaults : java.util.Properties;
+	@:protected private var defaults : java.util.Properties;
 	
 	/**
 	* Creates an empty property list with no default values.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an empty property list with the specified defaults.
 	*
 	* @param   defaults   the defaults.
 	*/
-	@:overload public function new(defaults : java.util.Properties) : Void;
+	@:overload @:public public function new(defaults : java.util.Properties) : Void;
 	
 	/**
 	* Calls the <tt>Hashtable</tt> method <code>put</code>. Provided for
@@ -58,7 +58,7 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see #getProperty
 	* @since    1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function setProperty(key : String, value : String) : Dynamic;
+	@:require(java2) @:overload @:public @:synchronized public function setProperty(key : String, value : String) : Dynamic;
 	
 	/**
 	* Reads a property list (key and element pairs) from the input
@@ -211,7 +211,7 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	*          appears in the input.
 	* @since   1.6
 	*/
-	@:require(java6) @:overload @:synchronized public function load(reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public @:synchronized public function load(reader : java.io.Reader) : Void;
 	
 	/**
 	* Reads a property list (key and element pairs) from the input
@@ -233,7 +233,7 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	*             malformed Unicode escape sequence.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function load(inStream : java.io.InputStream) : Void;
+	@:require(java2) @:overload @:public @:synchronized public function load(inStream : java.io.InputStream) : Void;
 	
 	/**
 	* Calls the <code>store(OutputStream out, String comments)</code> method
@@ -251,7 +251,7 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	*             contains any keys or values that are not
 	*             <code>Strings</code>.
 	*/
-	@:overload public function save(out : java.io.OutputStream, comments : String) : Void;
+	@:overload @:public public function save(out : java.io.OutputStream, comments : String) : Void;
 	
 	/**
 	* Writes this property list (key and element pairs) in this
@@ -301,7 +301,7 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	* @exception  NullPointerException  if <code>writer</code> is null.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function store(writer : java.io.Writer, comments : String) : Void;
+	@:require(java6) @:overload @:public public function store(writer : java.io.Writer, comments : String) : Void;
 	
 	/**
 	* Writes this property list (key and element pairs) in this
@@ -341,7 +341,7 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	* @exception  NullPointerException  if <code>out</code> is null.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function store(out : java.io.OutputStream, comments : String) : Void;
+	@:require(java2) @:overload @:public public function store(out : java.io.OutputStream, comments : String) : Void;
 	
 	/**
 	* Loads all of the properties represented by the XML document on the
@@ -365,7 +365,7 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see    #storeToXML(OutputStream, String, String)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized public function loadFromXML(_in : java.io.InputStream) : Void;
+	@:require(java5) @:overload @:public @:synchronized public function loadFromXML(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Emits an XML document representing all of the properties contained
@@ -387,7 +387,7 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see    #loadFromXML(InputStream)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function storeToXML(os : java.io.OutputStream, comment : String) : Void;
+	@:require(java5) @:overload @:public public function storeToXML(os : java.io.OutputStream, comment : String) : Void;
 	
 	/**
 	* Emits an XML document representing all of the properties contained
@@ -420,7 +420,7 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see    #loadFromXML(InputStream)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function storeToXML(os : java.io.OutputStream, comment : String, encoding : String) : Void;
+	@:require(java5) @:overload @:public public function storeToXML(os : java.io.OutputStream, comment : String, encoding : String) : Void;
 	
 	/**
 	* Searches for the property with the specified key in this property list.
@@ -433,7 +433,7 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see     #setProperty
 	* @see     #defaults
 	*/
-	@:overload public function getProperty(key : String) : String;
+	@:overload @:public public function getProperty(key : String) : String;
 	
 	/**
 	* Searches for the property with the specified key in this property list.
@@ -448,7 +448,7 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see     #setProperty
 	* @see     #defaults
 	*/
-	@:overload public function getProperty(key : String, defaultValue : String) : String;
+	@:overload @:public public function getProperty(key : String, defaultValue : String) : String;
 	
 	/**
 	* Returns an enumeration of all the keys in this property list,
@@ -464,7 +464,7 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see     java.util.Properties#defaults
 	* @see     #stringPropertyNames
 	*/
-	@:overload public function propertyNames() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function propertyNames() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Returns a set of keys in this property list where
@@ -484,7 +484,7 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	* @see     java.util.Properties#defaults
 	* @since   1.6
 	*/
-	@:require(java6) @:overload public function stringPropertyNames() : java.util.Set<String>;
+	@:require(java6) @:overload @:public public function stringPropertyNames() : java.util.Set<String>;
 	
 	/**
 	* Prints this property list out to the specified output stream.
@@ -494,14 +494,14 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	* @throws  ClassCastException if any key in this property list
 	*          is not a string.
 	*/
-	@:overload public function list(out : java.io.PrintStream) : Void;
+	@:overload @:public public function list(out : java.io.PrintStream) : Void;
 	
 	/*
 	* Rather than use an anonymous inner class to share common code, this
 	* method is duplicated in order to ensure that a non-1.1 compiler can
 	* compile this file.
 	*/
-	@:overload public function list(out : java.io.PrintWriter) : Void;
+	@:overload @:public public function list(out : java.io.PrintWriter) : Void;
 	
 	
 }
@@ -513,9 +513,9 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 */
 @:native('java$util$Properties$LineReader') @:internal extern class Properties_LineReader
 {
-	@:overload public function new(inStream : java.io.InputStream) : Void;
+	@:overload @:public public function new(inStream : java.io.InputStream) : Void;
 	
-	@:overload public function new(reader : java.io.Reader) : Void;
+	@:overload @:public public function new(reader : java.io.Reader) : Void;
 	
 	
 }

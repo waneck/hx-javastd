@@ -25,19 +25,19 @@ package com.sun.tools.classfile;
 */
 extern class EnclosingMethod_attribute extends com.sun.tools.classfile.Attribute
 {
-	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, class_index : Int, method_index : Int) : Void;
+	@:overload @:public public function new(constant_pool : com.sun.tools.classfile.ConstantPool, class_index : Int, method_index : Int) : Void;
 	
-	@:overload public function new(name_index : Int, class_index : Int, method_index : Int) : Void;
+	@:overload @:public public function new(name_index : Int, class_index : Int, method_index : Int) : Void;
 	
-	@:overload public function getClassName(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
+	@:overload @:public public function getClassName(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	@:overload public function getMethodName(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
+	@:overload @:public public function getMethodName(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
-	public var class_index(default, null) : Int;
+	@:public @:final public var class_index(default, null) : Int;
 	
-	public var method_index(default, null) : Int;
+	@:public @:final public var method_index(default, null) : Int;
 	
 	
 }

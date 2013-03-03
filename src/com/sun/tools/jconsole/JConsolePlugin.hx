@@ -28,7 +28,7 @@ extern class JConsolePlugin
 	/**
 	* Constructor.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Sets the {@link JConsoleContext JConsoleContext} object representing
@@ -40,7 +40,7 @@ extern class JConsolePlugin
 	*
 	* @param context a {@code JConsoleContext} object
 	*/
-	@:overload @:final @:synchronized public function setContext(context : com.sun.tools.jconsole.JConsoleContext) : Void;
+	@:overload @:public @:final @:synchronized public function setContext(context : com.sun.tools.jconsole.JConsoleContext) : Void;
 	
 	/**
 	* Returns the {@link JConsoleContext JConsoleContext} object representing
@@ -50,7 +50,7 @@ extern class JConsolePlugin
 	* @return the {@link JConsoleContext JConsoleContext} object representing
 	*         the connection to an application.
 	*/
-	@:overload @:final public function getContext() : com.sun.tools.jconsole.JConsoleContext;
+	@:overload @:public @:final public function getContext() : com.sun.tools.jconsole.JConsoleContext;
 	
 	/**
 	* Returns the tabs to be added in JConsole window.
@@ -67,7 +67,7 @@ extern class JConsolePlugin
 	*         representing the tabs to be added in the JConsole window;
 	*         or an empty map.
 	*/
-	@:overload @:abstract public function getTabs() : java.util.Map<String, javax.swing.JPanel>;
+	@:overload @:public @:abstract public function getTabs() : java.util.Map<String, javax.swing.JPanel>;
 	
 	/**
 	* Returns a {@link SwingWorker} to perform
@@ -101,7 +101,7 @@ extern class JConsolePlugin
 	* @return a <tt>SwingWorker</tt> to perform the GUI update; or
 	*         <tt>null</tt>.
 	*/
-	@:overload @:abstract public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
+	@:overload @:public @:abstract public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
 	
 	/**
 	* Dispose this plugin. This method is called by JConsole to inform
@@ -111,7 +111,7 @@ extern class JConsolePlugin
 	* {@link JConsoleContext#getConnectionState connection state} when
 	* this method is called.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* Adds a {@link PropertyChangeListener PropertyChangeListener}
@@ -131,7 +131,7 @@ extern class JConsolePlugin
 	*
 	* @throws NullPointerException if {@code listener} is {@code null}.
 	*/
-	@:overload @:final public function addContextPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:final public function addContextPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a {@link PropertyChangeListener PropertyChangeListener}
@@ -144,7 +144,7 @@ extern class JConsolePlugin
 	*
 	* @throws NullPointerException if {@code listener} is {@code null}.
 	*/
-	@:overload @:final public function removeContextPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:final public function removeContextPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	
 }

@@ -25,9 +25,9 @@ package com.sun.tools.classfile;
 */
 extern class RuntimeParameterAnnotations_attribute extends com.sun.tools.classfile.Attribute
 {
-	@:overload private function new(name_index : Int, parameter_annotations : java.NativeArray<java.NativeArray<com.sun.tools.classfile.Annotation>>) : Void;
+	@:overload @:protected private function new(name_index : Int, parameter_annotations : java.NativeArray<java.NativeArray<com.sun.tools.classfile.Annotation>>) : Void;
 	
-	public var parameter_annotations(default, null) : java.NativeArray<java.NativeArray<com.sun.tools.classfile.Annotation>>;
+	@:public @:final public var parameter_annotations(default, null) : java.NativeArray<java.NativeArray<com.sun.tools.classfile.Annotation>>;
 	
 	
 }

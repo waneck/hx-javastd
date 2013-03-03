@@ -28,15 +28,15 @@ package sun.nio.ch;
 //// AUTOMATICALLY GENERATED FILE - DO NOT EDIT
 @:internal extern class SocketOptionRegistry
 {
-	@:overload public static function findOption(name : java.net.SocketOption<Dynamic>, family : java.net.ProtocolFamily) : sun.nio.ch.OptionKey;
+	@:overload @:public @:static public static function findOption(name : java.net.SocketOption<Dynamic>, family : java.net.ProtocolFamily) : sun.nio.ch.OptionKey;
 	
 	
 }
 @:native('sun$nio$ch$SocketOptionRegistry$RegistryKey') @:internal extern class SocketOptionRegistry_RegistryKey
 {
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(ob : Dynamic) : Bool;
+	@:overload @:public public function equals(ob : Dynamic) : Bool;
 	
 	
 }

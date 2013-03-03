@@ -58,7 +58,7 @@ package javax.management;
 	* the MBean Server and re-thrown as an {@link
 	* MBeanRegistrationException}.
 	*/
-	@:overload public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
+	@:overload @:public public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
 	
 	/**
 	* Allows the MBean to perform any operations needed after having been
@@ -80,7 +80,7 @@ package javax.management;
 	* been successfully registered in the MBean server. The value
 	* false means that the registration phase has failed.
 	*/
-	@:overload public function postRegister(registrationDone : Null<Bool>) : Void;
+	@:overload @:public public function postRegister(registrationDone : Null<Bool>) : Void;
 	
 	/**
 	* Allows the MBean to perform any operations it needs before
@@ -90,7 +90,7 @@ package javax.management;
 	* the MBean server and re-thrown as an {@link
 	* MBeanRegistrationException}.
 	*/
-	@:overload public function preDeregister() : Void;
+	@:overload @:public public function preDeregister() : Void;
 	
 	/**
 	* Allows the MBean to perform any operations needed after having been
@@ -107,7 +107,7 @@ package javax.management;
 	* {@code postDeregister} do not throw Runtime Exceptions or Errors if it
 	* can be avoided.</p>
 	*/
-	@:overload public function postDeregister() : Void;
+	@:overload @:public public function postDeregister() : Void;
 	
 	
 }

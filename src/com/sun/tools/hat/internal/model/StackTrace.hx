@@ -37,18 +37,18 @@ package com.sun.tools.hat.internal.model;
 */
 extern class StackTrace
 {
-	@:overload public function new(frames : java.NativeArray<com.sun.tools.hat.internal.model.StackFrame>) : Void;
+	@:overload @:public public function new(frames : java.NativeArray<com.sun.tools.hat.internal.model.StackFrame>) : Void;
 	
 	/**
 	* @param depth.  The minimum reasonable depth is 1.
 	*
 	* @return a (possibly new) StackTrace that is limited to depth.
 	*/
-	@:overload public function traceForDepth(depth : Int) : com.sun.tools.hat.internal.model.StackTrace;
+	@:overload @:public public function traceForDepth(depth : Int) : com.sun.tools.hat.internal.model.StackTrace;
 	
-	@:overload public function resolve(snapshot : com.sun.tools.hat.internal.model.Snapshot) : Void;
+	@:overload @:public public function resolve(snapshot : com.sun.tools.hat.internal.model.Snapshot) : Void;
 	
-	@:overload public function getFrames() : java.NativeArray<com.sun.tools.hat.internal.model.StackFrame>;
+	@:overload @:public public function getFrames() : java.NativeArray<com.sun.tools.hat.internal.model.StackFrame>;
 	
 	
 }

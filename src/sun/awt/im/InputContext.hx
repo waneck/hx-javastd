@@ -28,70 +28,70 @@ extern class InputContext extends java.awt.im.InputContext implements java.awt.e
 	/**
 	* Constructs an InputContext.
 	*/
-	@:overload override private function new() : Void;
+	@:overload @:protected override private function new() : Void;
 	
 	/**
 	* @see java.awt.im.InputContext#selectInputMethod
 	* @exception NullPointerException when the locale is null.
 	*/
-	@:overload @:synchronized override public function selectInputMethod(locale : java.util.Locale) : Bool;
+	@:overload @:public @:synchronized override public function selectInputMethod(locale : java.util.Locale) : Bool;
 	
 	/**
 	* @see java.awt.im.InputContext#getLocale
 	*/
-	@:overload override public function getLocale() : java.util.Locale;
+	@:overload @:public override public function getLocale() : java.util.Locale;
 	
 	/**
 	* @see java.awt.im.InputContext#setCharacterSubsets
 	*/
-	@:overload override public function setCharacterSubsets(subsets : java.NativeArray<java.lang.Character.Character_Subset>) : Void;
+	@:overload @:public override public function setCharacterSubsets(subsets : java.NativeArray<java.lang.Character.Character_Subset>) : Void;
 	
 	/**
 	* @see java.awt.im.InputContext#reconvert
 	* @since 1.3
 	* @exception UnsupportedOperationException when input method is null
 	*/
-	@:require(java3) @:overload @:synchronized override public function reconvert() : Void;
+	@:require(java3) @:overload @:public @:synchronized override public function reconvert() : Void;
 	
 	/**
 	* @see java.awt.im.InputContext#dispatchEvent
 	*/
-	@:overload override public function dispatchEvent(event : java.awt.AWTEvent) : Void;
+	@:overload @:public override public function dispatchEvent(event : java.awt.AWTEvent) : Void;
 	
 	/**
 	* @see java.awt.im.InputContext#removeNotify
 	* @exception NullPointerException when the component is null.
 	*/
-	@:overload @:synchronized override public function removeNotify(component : java.awt.Component) : Void;
+	@:overload @:public @:synchronized override public function removeNotify(component : java.awt.Component) : Void;
 	
 	/**
 	* @see java.awt.im.InputContext#dispose
 	* @exception IllegalStateException when the currentClientComponent is not null
 	*/
-	@:overload @:synchronized override public function dispose() : Void;
+	@:overload @:public @:synchronized override public function dispose() : Void;
 	
 	/**
 	* @see java.awt.im.InputContext#getInputMethodControlObject
 	*/
-	@:overload @:synchronized override public function getInputMethodControlObject() : Dynamic;
+	@:overload @:public @:synchronized override public function getInputMethodControlObject() : Dynamic;
 	
 	/**
 	* @see java.awt.im.InputContext#setCompositionEnabled(boolean)
 	* @exception UnsupportedOperationException when input method is null
 	*/
-	@:overload override public function setCompositionEnabled(enable : Bool) : Void;
+	@:overload @:public override public function setCompositionEnabled(enable : Bool) : Void;
 	
 	/**
 	* @see java.awt.im.InputContext#isCompositionEnabled
 	* @exception UnsupportedOperationException when input method is null
 	*/
-	@:overload override public function isCompositionEnabled() : Bool;
+	@:overload @:public override public function isCompositionEnabled() : Bool;
 	
 	/**
 	* @return a string with information about the current input method.
 	* @exception UnsupportedOperationException when input method is null
 	*/
-	@:overload public function getInputMethodInfo() : String;
+	@:overload @:public public function getInputMethodInfo() : String;
 	
 	/**
 	* Turns off the native IM. The native IM is diabled when
@@ -100,37 +100,37 @@ extern class InputContext extends java.awt.im.InputContext implements java.awt.e
 	* peer component. This method is provided to explicitly disable
 	* the native IM.
 	*/
-	@:overload public function disableNativeIM() : Void;
+	@:overload @:public public function disableNativeIM() : Void;
 	
 	/**
 	* @see java.awt.im.InputContext#endComposition
 	*/
-	@:overload @:synchronized override public function endComposition() : Void;
+	@:overload @:public @:synchronized override public function endComposition() : Void;
 	
 	/*
 	* ComponentListener and WindowListener implementation
 	*/
-	@:overload public function componentResized(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentResized(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentShown(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentShown(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function windowOpened(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowOpened(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowClosing(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowClosing(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowClosed(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowClosed(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowIconified(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowIconified(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowDeiconified(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowDeiconified(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowActivated(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowActivated(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowDeactivated(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowDeactivated(e : java.awt.event.WindowEvent) : Void;
 	
 	
 }

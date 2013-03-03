@@ -33,7 +33,7 @@ package com.sun.xml.internal.ws.client.sei;
 }
 @:native('com$sun$xml$internal$ws$client$sei$ValueSetter$Param') @:internal extern class ValueSetter_Param extends com.sun.xml.internal.ws.client.sei.ValueSetter
 {
-	@:overload public function new(idx : Int) : Void;
+	@:overload @:public public function new(idx : Int) : Void;
 	
 	
 }

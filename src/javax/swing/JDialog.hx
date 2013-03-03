@@ -95,7 +95,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see #getRootPane
 	* @see #setRootPane
 	*/
-	private var rootPane : javax.swing.JRootPane;
+	@:protected private var rootPane : javax.swing.JRootPane;
 	
 	/**
 	* If true then calls to {@code add} and {@code setLayout}
@@ -106,7 +106,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	private var rootPaneCheckingEnabled : Bool;
+	@:protected private var rootPaneCheckingEnabled : Bool;
 	
 	/**
 	* Creates a modeless dialog without a title and without a specified
@@ -127,7 +127,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @see JComponent#getDefaultLocale
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a modeless dialog with the specified {@code Frame}
@@ -150,7 +150,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @see JComponent#getDefaultLocale
 	*/
-	@:overload public function new(owner : java.awt.Frame) : Void;
+	@:overload @:public public function new(owner : java.awt.Frame) : Void;
 	
 	/**
 	* Creates a dialog with an empty title and the specified modality and
@@ -175,7 +175,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @see JComponent#getDefaultLocale
 	*/
-	@:overload public function new(owner : java.awt.Frame, modal : Bool) : Void;
+	@:overload @:public public function new(owner : java.awt.Frame, modal : Bool) : Void;
 	
 	/**
 	* Creates a modeless dialog with the specified title and
@@ -200,7 +200,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @see JComponent#getDefaultLocale
 	*/
-	@:overload public function new(owner : java.awt.Frame, title : String) : Void;
+	@:overload @:public public function new(owner : java.awt.Frame, title : String) : Void;
 	
 	/**
 	* Creates a dialog with the specified title, owner {@code Frame}
@@ -237,7 +237,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @see JComponent#getDefaultLocale
 	*/
-	@:overload public function new(owner : java.awt.Frame, title : String, modal : Bool) : Void;
+	@:overload @:public public function new(owner : java.awt.Frame, title : String, modal : Bool) : Void;
 	
 	/**
 	* Creates a dialog with the specified title,
@@ -278,7 +278,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see JComponent#getDefaultLocale
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(owner : java.awt.Frame, title : String, modal : Bool, gc : java.awt.GraphicsConfiguration) : Void;
+	@:require(java4) @:overload @:public public function new(owner : java.awt.Frame, title : String, modal : Bool, gc : java.awt.GraphicsConfiguration) : Void;
 	
 	/**
 	* Creates a modeless dialog with the specified {@code Dialog}
@@ -294,7 +294,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @see JComponent#getDefaultLocale
 	*/
-	@:overload public function new(owner : java.awt.Dialog) : Void;
+	@:overload @:public public function new(owner : java.awt.Dialog) : Void;
 	
 	/**
 	* Creates a dialog with an empty title and the specified modality and
@@ -318,7 +318,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @see JComponent#getDefaultLocale
 	*/
-	@:overload public function new(owner : java.awt.Dialog, modal : Bool) : Void;
+	@:overload @:public public function new(owner : java.awt.Dialog, modal : Bool) : Void;
 	
 	/**
 	* Creates a modeless dialog with the specified title and
@@ -336,7 +336,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @see JComponent#getDefaultLocale
 	*/
-	@:overload public function new(owner : java.awt.Dialog, title : String) : Void;
+	@:overload @:public public function new(owner : java.awt.Dialog, title : String) : Void;
 	
 	/**
 	* Creates a dialog with the specified title, modality
@@ -362,7 +362,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @see JComponent#getDefaultLocale
 	*/
-	@:overload public function new(owner : java.awt.Dialog, title : String, modal : Bool) : Void;
+	@:overload @:public public function new(owner : java.awt.Dialog, title : String, modal : Bool) : Void;
 	
 	/**
 	* Creates a dialog with the specified title, owner {@code Dialog},
@@ -397,7 +397,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see JComponent#getDefaultLocale
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(owner : java.awt.Dialog, title : String, modal : Bool, gc : java.awt.GraphicsConfiguration) : Void;
+	@:require(java4) @:overload @:public public function new(owner : java.awt.Dialog, title : String, modal : Bool, gc : java.awt.GraphicsConfiguration) : Void;
 	
 	/**
 	* Creates a modeless dialog with the specified {@code Window}
@@ -422,7 +422,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(owner : java.awt.Window) : Void;
+	@:require(java6) @:overload @:public public function new(owner : java.awt.Window) : Void;
 	
 	/**
 	* Creates a dialog with an empty title and the specified modality and
@@ -456,7 +456,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(owner : java.awt.Window, modalityType : java.awt.Dialog.Dialog_ModalityType) : Void;
+	@:require(java6) @:overload @:public public function new(owner : java.awt.Window, modalityType : java.awt.Dialog.Dialog_ModalityType) : Void;
 	
 	/**
 	* Creates a modeless dialog with the specified title and owner
@@ -483,7 +483,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(owner : java.awt.Window, title : String) : Void;
+	@:require(java6) @:overload @:public public function new(owner : java.awt.Window, title : String) : Void;
 	
 	/**
 	* Creates a dialog with the specified title, owner {@code Window} and
@@ -519,7 +519,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(owner : java.awt.Window, title : String, modalityType : java.awt.Dialog.Dialog_ModalityType) : Void;
+	@:require(java6) @:overload @:public public function new(owner : java.awt.Window, title : String, modalityType : java.awt.Dialog.Dialog_ModalityType) : Void;
 	
 	/**
 	* Creates a dialog with the specified title, owner {@code Window},
@@ -561,18 +561,18 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(owner : java.awt.Window, title : String, modalityType : java.awt.Dialog.Dialog_ModalityType, gc : java.awt.GraphicsConfiguration) : Void;
+	@:require(java6) @:overload @:public public function new(owner : java.awt.Window, title : String, modalityType : java.awt.Dialog.Dialog_ModalityType, gc : java.awt.GraphicsConfiguration) : Void;
 	
 	/**
 	* Called by the constructors to init the {@code JDialog} properly.
 	*/
-	@:overload private function dialogInit() : Void;
+	@:overload @:protected private function dialogInit() : Void;
 	
 	/**
 	* Called by the constructor methods to create the default
 	* {@code rootPane}.
 	*/
-	@:overload private function createRootPane() : javax.swing.JRootPane;
+	@:overload @:protected private function createRootPane() : javax.swing.JRootPane;
 	
 	/**
 	* Handles window events depending on the state of the
@@ -580,7 +580,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*
 	* @see #setDefaultCloseOperation
 	*/
-	@:overload override private function processWindowEvent(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:protected override private function processWindowEvent(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Sets the operation that will happen by default when
@@ -632,7 +632,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*              DISPOSE_ON_CLOSE    WindowConstants.DISPOSE_ON_CLOSE
 	* description: The dialog's default close operation.
 	*/
-	@:overload public function setDefaultCloseOperation(operation : Int) : Void;
+	@:overload @:public public function setDefaultCloseOperation(operation : Int) : Void;
 	
 	/**
 	* Returns the operation which occurs when the user
@@ -641,7 +641,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @return an integer indicating the window-close operation
 	* @see #setDefaultCloseOperation
 	*/
-	@:overload public function getDefaultCloseOperation() : Int;
+	@:overload @:public public function getDefaultCloseOperation() : Int;
 	
 	/**
 	* Sets the {@code transferHandler} property, which is a mechanism to
@@ -676,7 +676,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*       hidden: true
 	*  description: Mechanism for transfer of data into the component
 	*/
-	@:require(java6) @:overload public function setTransferHandler(newHandler : javax.swing.TransferHandler) : Void;
+	@:require(java6) @:overload @:public public function setTransferHandler(newHandler : javax.swing.TransferHandler) : Void;
 	
 	/**
 	* Gets the {@code transferHandler} property.
@@ -687,7 +687,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see #setTransferHandler
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getTransferHandler() : javax.swing.TransferHandler;
+	@:require(java6) @:overload @:public public function getTransferHandler() : javax.swing.TransferHandler;
 	
 	/**
 	* Calls {@code paint(g)}.  This method was overridden to
@@ -695,7 +695,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*
 	* @param g  the {@code Graphics} context in which to paint
 	*/
-	@:overload override public function update(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Sets the menubar for this dialog.
@@ -708,14 +708,14 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*      hidden: true
 	* description: The menubar for accessing pulldown menus from this dialog.
 	*/
-	@:overload public function setJMenuBar(menu : javax.swing.JMenuBar) : Void;
+	@:overload @:public public function setJMenuBar(menu : javax.swing.JMenuBar) : Void;
 	
 	/**
 	* Returns the menubar set on this dialog.
 	*
 	* @see #setJMenuBar
 	*/
-	@:overload public function getJMenuBar() : javax.swing.JMenuBar;
+	@:overload @:public public function getJMenuBar() : javax.swing.JMenuBar;
 	
 	/**
 	* Returns whether calls to {@code add} and
@@ -729,7 +729,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload private function isRootPaneCheckingEnabled() : Bool;
+	@:overload @:protected private function isRootPaneCheckingEnabled() : Bool;
 	
 	/**
 	* Sets whether calls to {@code add} and
@@ -747,7 +747,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*      hidden: true
 	* description: Whether the add and setLayout methods are forwarded
 	*/
-	@:overload private function setRootPaneCheckingEnabled(enabled : Bool) : Void;
+	@:overload @:protected private function setRootPaneCheckingEnabled(enabled : Bool) : Void;
 	
 	/**
 	* Adds the specified child {@code Component}.
@@ -768,7 +768,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload @:protected override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Removes the specified component from the container. If
@@ -782,7 +782,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see #add
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload override public function remove(comp : java.awt.Component) : Void;
+	@:overload @:public override public function remove(comp : java.awt.Component) : Void;
 	
 	/**
 	* Sets the {@code LayoutManager}.
@@ -795,7 +795,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload override public function setLayout(manager : java.awt.LayoutManager) : Void;
+	@:overload @:public override public function setLayout(manager : java.awt.LayoutManager) : Void;
 	
 	/**
 	* Returns the {@code rootPane} object for this dialog.
@@ -803,7 +803,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see #setRootPane
 	* @see RootPaneContainer#getRootPane
 	*/
-	@:overload public function getRootPane() : javax.swing.JRootPane;
+	@:overload @:public public function getRootPane() : javax.swing.JRootPane;
 	
 	/**
 	* Sets the {@code rootPane} property.
@@ -817,7 +817,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*   hidden: true
 	* description: the RootPane object for this dialog.
 	*/
-	@:overload private function setRootPane(root : javax.swing.JRootPane) : Void;
+	@:overload @:protected private function setRootPane(root : javax.swing.JRootPane) : Void;
 	
 	/**
 	* Returns the {@code contentPane} object for this dialog.
@@ -827,7 +827,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see #setContentPane
 	* @see RootPaneContainer#getContentPane
 	*/
-	@:overload public function getContentPane() : java.awt.Container;
+	@:overload @:public public function getContentPane() : java.awt.Container;
 	
 	/**
 	* Sets the {@code contentPane} property.
@@ -851,7 +851,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*     description: The client area of the dialog where child
 	*                  components are normally inserted.
 	*/
-	@:overload public function setContentPane(contentPane : java.awt.Container) : Void;
+	@:overload @:public public function setContentPane(contentPane : java.awt.Container) : Void;
 	
 	/**
 	* Returns the {@code layeredPane} object for this dialog.
@@ -861,7 +861,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see #setLayeredPane
 	* @see RootPaneContainer#getLayeredPane
 	*/
-	@:overload public function getLayeredPane() : javax.swing.JLayeredPane;
+	@:overload @:public public function getLayeredPane() : javax.swing.JLayeredPane;
 	
 	/**
 	* Sets the {@code layeredPane} property.
@@ -878,7 +878,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*     hidden: true
 	*     description: The pane which holds the various dialog layers.
 	*/
-	@:overload public function setLayeredPane(layeredPane : javax.swing.JLayeredPane) : Void;
+	@:overload @:public public function setLayeredPane(layeredPane : javax.swing.JLayeredPane) : Void;
 	
 	/**
 	* Returns the {@code glassPane} object for this dialog.
@@ -888,7 +888,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see #setGlassPane
 	* @see RootPaneContainer#getGlassPane
 	*/
-	@:overload public function getGlassPane() : java.awt.Component;
+	@:overload @:public public function getGlassPane() : java.awt.Component;
 	
 	/**
 	* Sets the {@code glassPane} property.
@@ -902,14 +902,14 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*     hidden: true
 	*     description: A transparent pane used for menu rendering.
 	*/
-	@:overload public function setGlassPane(glassPane : java.awt.Component) : Void;
+	@:overload @:public public function setGlassPane(glassPane : java.awt.Component) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getGraphics() : java.awt.Graphics;
+	@:require(java6) @:overload @:public override public function getGraphics() : java.awt.Graphics;
 	
 	/**
 	* Repaints the specified rectangle of this component within
@@ -924,7 +924,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see       RepaintManager
 	* @since     1.6
 	*/
-	@:require(java6) @:overload override public function repaint(time : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java6) @:overload @:public override public function repaint(time : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Provides a hint as to whether or not newly created {@code JDialog}s
@@ -950,7 +950,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @see javax.swing.LookAndFeel#getSupportsWindowDecorations
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function setDefaultLookAndFeelDecorated(defaultLookAndFeelDecorated : Bool) : Void;
+	@:require(java4) @:overload @:public @:static public static function setDefaultLookAndFeelDecorated(defaultLookAndFeelDecorated : Bool) : Void;
 	
 	/**
 	* Returns true if newly created {@code JDialog}s should have their
@@ -960,7 +960,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @return true if look and feel should provide Window decorations.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function isDefaultLookAndFeelDecorated() : Bool;
+	@:require(java4) @:overload @:public @:static public static function isDefaultLookAndFeelDecorated() : Bool;
 	
 	/**
 	* Returns a string representation of this {@code JDialog}.
@@ -972,9 +972,9 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*
 	* @return  a string representation of this {@code JDialog}.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
-	private var accessibleContext : javax.accessibility.AccessibleContext;
+	@:protected private var accessibleContext : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Gets the AccessibleContext associated with this JDialog.
@@ -985,7 +985,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @return an AccessibleJDialog that serves as the
 	*         AccessibleContext of this JDialog
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -1003,7 +1003,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @return the localized name of the object -- can be null if this
 	* object does not have a name
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Get the state of this object.
@@ -1012,7 +1012,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* state set of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

@@ -26,7 +26,7 @@ extern class UnionPathIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	/**
 	* Constructor to create an instance which you can add location paths to.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Initialize the context values for this expression
@@ -35,14 +35,14 @@ extern class UnionPathIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	* @param context The XPath runtime context for this
 	* transformation.
 	*/
-	@:overload override public function setRoot(context : Int, environment : Dynamic) : Void;
+	@:overload @:public override public function setRoot(context : Int, environment : Dynamic) : Void;
 	
 	/**
 	* Add an iterator to the union list.
 	*
 	* @param expr non-null reference to a location path iterator.
 	*/
-	@:overload public function addIterator(expr : com.sun.org.apache.xml.internal.dtm.DTMIterator) : Void;
+	@:overload @:public public function addIterator(expr : com.sun.org.apache.xml.internal.dtm.DTMIterator) : Void;
 	
 	/**
 	*  Detaches the iterator from the set which it iterated over, releasing
@@ -51,7 +51,7 @@ extern class UnionPathIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	* <code>nextNode</code> or<code>previousNode</code> will raise the
 	* exception INVALID_STATE_ERR.
 	*/
-	@:overload override public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	/**
 	* Create a UnionPathIterator object, including creation
@@ -65,7 +65,7 @@ extern class UnionPathIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function new(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int) : Void;
+	@:overload @:public public function new(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int) : Void;
 	
 	/**
 	* This will return an iterator capable of handling the union of paths given.
@@ -79,13 +79,13 @@ extern class UnionPathIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public static function createUnionIterator(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int) : com.sun.org.apache.xpath.internal.axes.LocPathIterator;
+	@:overload @:public @:static public static function createUnionIterator(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int) : com.sun.org.apache.xpath.internal.axes.LocPathIterator;
 	
 	/**
 	* Get the analysis bits for this walker, as defined in the WalkerFactory.
 	* @return One of WalkerFactory#BIT_DESCENDANT, etc.
 	*/
-	@:overload override public function getAnalysisBits() : Int;
+	@:overload @:public override public function getAnalysisBits() : Int;
 	
 	/**
 	* Get a cloned LocPathIterator that holds the same
@@ -95,7 +95,7 @@ extern class UnionPathIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	*
 	* @throws CloneNotSupportedException
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Create a new location path iterator.
@@ -108,7 +108,7 @@ extern class UnionPathIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function createDTMIterator(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int) : com.sun.org.apache.xpath.internal.axes.LocPathIterator;
+	@:overload @:protected private function createDTMIterator(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int) : com.sun.org.apache.xpath.internal.axes.LocPathIterator;
 	
 	/**
 	* Initialize the location path iterators.  Recursive.
@@ -121,7 +121,7 @@ extern class UnionPathIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function loadLocationPaths(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int, count : Int) : Void;
+	@:overload @:protected private function loadLocationPaths(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int, count : Int) : Void;
 	
 	/**
 	*  Returns the next node in the set and advances the position of the
@@ -130,7 +130,7 @@ extern class UnionPathIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	* @return  The next <code>Node</code> in the set being iterated over, or
 	*   <code>null</code> if there are no more members in that set.
 	*/
-	@:overload override public function nextNode() : Int;
+	@:overload @:public override public function nextNode() : Int;
 	
 	/**
 	* This function is used to fixup variables from QNames to stack frame
@@ -142,7 +142,7 @@ extern class UnionPathIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* The location path iterators, one for each
@@ -150,7 +150,7 @@ extern class UnionPathIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	* path</a> contained in the union expression.
 	* @serial
 	*/
-	private var m_exprs : java.NativeArray<com.sun.org.apache.xpath.internal.axes.LocPathIterator>;
+	@:protected private var m_exprs : java.NativeArray<com.sun.org.apache.xpath.internal.axes.LocPathIterator>;
 	
 	/**
 	* The location path iterators, one for each
@@ -158,7 +158,7 @@ extern class UnionPathIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	* path</a> contained in the union expression.
 	* @serial
 	*/
-	private var m_iterators : java.NativeArray<com.sun.org.apache.xml.internal.dtm.DTMIterator>;
+	@:protected private var m_iterators : java.NativeArray<com.sun.org.apache.xml.internal.dtm.DTMIterator>;
 	
 	/**
 	* Returns the axis being iterated, if it is known.
@@ -166,17 +166,17 @@ extern class UnionPathIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	* @return Axis.CHILD, etc., or -1 if the axis is not known or is of multiple
 	* types.
 	*/
-	@:overload override public function getAxis() : Int;
+	@:overload @:public override public function getAxis() : Int;
 	
 	/**
 	* @see com.sun.org.apache.xpath.internal.XPathVisitable#callVisitors(ExpressionOwner, XPathVisitor)
 	*/
-	@:overload override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }
@@ -185,12 +185,12 @@ extern class UnionPathIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	/**
 	* @see ExpressionOwner#getExpression()
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see ExpressionOwner#setExpression(Expression)
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	
 }

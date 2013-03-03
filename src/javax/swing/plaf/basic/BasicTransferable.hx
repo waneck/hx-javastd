@@ -31,11 +31,11 @@ package javax.swing.plaf.basic;
 	*
 	* @author  Timothy Prinzing
 	*/
-	private var plainData : String;
+	@:protected private var plainData : String;
 	
-	private var htmlData : String;
+	@:protected private var htmlData : String;
 	
-	@:overload public function new(plainData : String, htmlData : String) : Void;
+	@:overload @:public public function new(plainData : String, htmlData : String) : Void;
 	
 	/**
 	* Returns an array of DataFlavor objects indicating the flavors the data
@@ -43,7 +43,7 @@ package javax.swing.plaf.basic;
 	* for providing the data (from most richly descriptive to least descriptive).
 	* @return an array of data flavors in which this data can be transferred
 	*/
-	@:overload public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Returns whether or not the specified data flavor is supported for
@@ -51,7 +51,7 @@ package javax.swing.plaf.basic;
 	* @param flavor the requested flavor for the data
 	* @return boolean indicating whether or not the data flavor is supported
 	*/
-	@:overload public function isDataFlavorSupported(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public public function isDataFlavorSupported(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Returns an object which represents the data to be transferred.  The class
@@ -64,18 +64,18 @@ package javax.swing.plaf.basic;
 	* @exception UnsupportedFlavorException if the requested data flavor is
 	*              not supported.
 	*/
-	@:overload public function getTransferData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
+	@:overload @:public public function getTransferData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
 	
-	@:overload private function isRicherFlavor(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:protected private function isRicherFlavor(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Some subclasses will have flavors that are more descriptive than HTML
 	* or plain text.  If this method returns a non-null value, it will be
 	* placed at the start of the array of supported flavors.
 	*/
-	@:overload private function getRicherFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:protected private function getRicherFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
-	@:overload private function getRicherData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
+	@:overload @:protected private function getRicherData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
 	
 	/**
 	* Returns whether or not the specified data flavor is an HTML flavor that
@@ -83,18 +83,18 @@ package javax.swing.plaf.basic;
 	* @param flavor the requested flavor for the data
 	* @return boolean indicating whether or not the data flavor is supported
 	*/
-	@:overload private function isHTMLFlavor(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:protected private function isHTMLFlavor(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Should the HTML flavors be offered?  If so, the method
 	* getHTMLData should be implemented to provide something reasonable.
 	*/
-	@:overload private function isHTMLSupported() : Bool;
+	@:overload @:protected private function isHTMLSupported() : Bool;
 	
 	/**
 	* Fetch the data in a text/html format
 	*/
-	@:overload private function getHTMLData() : String;
+	@:overload @:protected private function getHTMLData() : String;
 	
 	/**
 	* Returns whether or not the specified data flavor is an plain flavor that
@@ -102,18 +102,18 @@ package javax.swing.plaf.basic;
 	* @param flavor the requested flavor for the data
 	* @return boolean indicating whether or not the data flavor is supported
 	*/
-	@:overload private function isPlainFlavor(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:protected private function isPlainFlavor(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Should the plain text flavors be offered?  If so, the method
 	* getPlainData should be implemented to provide something reasonable.
 	*/
-	@:overload private function isPlainSupported() : Bool;
+	@:overload @:protected private function isPlainSupported() : Bool;
 	
 	/**
 	* Fetch the data in a text/plain format.
 	*/
-	@:overload private function getPlainData() : String;
+	@:overload @:protected private function getPlainData() : String;
 	
 	/**
 	* Returns whether or not the specified data flavor is a String flavor that
@@ -121,7 +121,7 @@ package javax.swing.plaf.basic;
 	* @param flavor the requested flavor for the data
 	* @return boolean indicating whether or not the data flavor is supported
 	*/
-	@:overload private function isStringFlavor(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:protected private function isStringFlavor(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	
 }

@@ -26,37 +26,37 @@ package com.sun.xml.internal.ws.handler;
 @:internal extern class MessageContextImpl implements javax.xml.ws.handler.MessageContext
 {
 	/** Creates a new instance of MessageContextImpl */
-	@:overload public function new(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function new(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload private function updatePacket() : Void;
+	@:overload @:protected private function updatePacket() : Void;
 	
-	@:overload public function setScope(name : String, scope : javax.xml.ws.handler.MessageContext.MessageContext_Scope) : Void;
+	@:overload @:public public function setScope(name : String, scope : javax.xml.ws.handler.MessageContext.MessageContext_Scope) : Void;
 	
-	@:overload public function getScope(name : String) : javax.xml.ws.handler.MessageContext.MessageContext_Scope;
+	@:overload @:public public function getScope(name : String) : javax.xml.ws.handler.MessageContext.MessageContext_Scope;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public public function containsKey(key : Dynamic) : Bool;
 	
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public public function containsValue(value : Dynamic) : Bool;
 	
-	@:overload public function put(key : String, value : Dynamic) : Dynamic;
+	@:overload @:public public function put(key : String, value : Dynamic) : Dynamic;
 	
-	@:overload public function get(key : Dynamic) : Dynamic;
+	@:overload @:public public function get(key : Dynamic) : Dynamic;
 	
-	@:overload public function putAll(t : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function putAll(t : java.util.Map<String, Dynamic>) : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function remove(key : Dynamic) : Dynamic;
+	@:overload @:public public function remove(key : Dynamic) : Dynamic;
 	
-	@:overload public function keySet() : java.util.Set<String>;
+	@:overload @:public public function keySet() : java.util.Set<String>;
 	
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, Dynamic>>;
+	@:overload @:public public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, Dynamic>>;
 	
-	@:overload public function values() : java.util.Collection<Dynamic>;
+	@:overload @:public public function values() : java.util.Collection<Dynamic>;
 	
 	
 }

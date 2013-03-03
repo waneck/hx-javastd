@@ -29,9 +29,9 @@ package com.sun.corba.se.impl.presentation.rmi;
 */
 extern class IDLTypeException extends java.lang.Exception
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

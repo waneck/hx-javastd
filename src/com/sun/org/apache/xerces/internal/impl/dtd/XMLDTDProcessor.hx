@@ -62,78 +62,78 @@ package com.sun.org.apache.xerces.internal.impl.dtd;
 extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.parser.XMLComponent implements com.sun.org.apache.xerces.internal.xni.parser.XMLDTDFilter implements com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelFilter
 {
 	/** Feature identifier: validation. */
-	private static var VALIDATION(default, null) : String;
+	@:protected @:static @:final private static var VALIDATION(default, null) : String;
 	
 	/** Feature identifier: notify character references. */
-	private static var NOTIFY_CHAR_REFS(default, null) : String;
+	@:protected @:static @:final private static var NOTIFY_CHAR_REFS(default, null) : String;
 	
 	/** Feature identifier: warn on duplicate attdef */
-	private static var WARN_ON_DUPLICATE_ATTDEF(default, null) : String;
+	@:protected @:static @:final private static var WARN_ON_DUPLICATE_ATTDEF(default, null) : String;
 	
 	/** Feature identifier: warn on undeclared element referenced in content model. */
-	private static var WARN_ON_UNDECLARED_ELEMDEF(default, null) : String;
+	@:protected @:static @:final private static var WARN_ON_UNDECLARED_ELEMDEF(default, null) : String;
 	
-	private static var PARSER_SETTINGS(default, null) : String;
+	@:protected @:static @:final private static var PARSER_SETTINGS(default, null) : String;
 	
 	/** Property identifier: symbol table. */
-	private static var SYMBOL_TABLE(default, null) : String;
+	@:protected @:static @:final private static var SYMBOL_TABLE(default, null) : String;
 	
 	/** Property identifier: error reporter. */
-	private static var ERROR_REPORTER(default, null) : String;
+	@:protected @:static @:final private static var ERROR_REPORTER(default, null) : String;
 	
 	/** Property identifier: grammar pool. */
-	private static var GRAMMAR_POOL(default, null) : String;
+	@:protected @:static @:final private static var GRAMMAR_POOL(default, null) : String;
 	
 	/** Property identifier: validator . */
-	private static var DTD_VALIDATOR(default, null) : String;
+	@:protected @:static @:final private static var DTD_VALIDATOR(default, null) : String;
 	
 	/** Validation. */
-	private var fValidation : Bool;
+	@:protected private var fValidation : Bool;
 	
 	/** Validation against only DTD */
-	private var fDTDValidation : Bool;
+	@:protected private var fDTDValidation : Bool;
 	
 	/** warn on duplicate attribute definition, this feature works only when validation is true */
-	private var fWarnDuplicateAttdef : Bool;
+	@:protected private var fWarnDuplicateAttdef : Bool;
 	
 	/** warn on undeclared element referenced in content model, this feature only works when valiation is true */
-	private var fWarnOnUndeclaredElemdef : Bool;
+	@:protected private var fWarnOnUndeclaredElemdef : Bool;
 	
 	/** Symbol table. */
-	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
 	/** Error reporter. */
-	private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
+	@:protected private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
 	
 	/** Grammar bucket. */
-	private var fGrammarBucket : com.sun.org.apache.xerces.internal.impl.dtd.DTDGrammarBucket;
+	@:protected private var fGrammarBucket : com.sun.org.apache.xerces.internal.impl.dtd.DTDGrammarBucket;
 	
-	private var fValidator : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator;
+	@:protected private var fValidator : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator;
 	
-	private var fGrammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
+	@:protected private var fGrammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
 	
-	private var fLocale : java.util.Locale;
+	@:protected private var fLocale : java.util.Locale;
 	
 	/** DTD handler. */
-	private var fDTDHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler;
+	@:protected private var fDTDHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler;
 	
 	/** DTD source. */
-	private var fDTDSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource;
+	@:protected private var fDTDSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource;
 	
 	/** DTD content model handler. */
-	private var fDTDContentModelHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler;
+	@:protected private var fDTDContentModelHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler;
 	
 	/** DTD content model source. */
-	private var fDTDContentModelSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource;
+	@:protected private var fDTDContentModelSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource;
 	
 	/** DTD Grammar. */
-	private var fDTDGrammar : com.sun.org.apache.xerces.internal.impl.dtd.DTDGrammar;
+	@:protected private var fDTDGrammar : com.sun.org.apache.xerces.internal.impl.dtd.DTDGrammar;
 	
 	/** True if in an ignore conditional section of the DTD. */
-	private var fInDTDIgnore : Bool;
+	@:protected private var fInDTDIgnore : Bool;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/*
 	* Resets the component. The component can query the component manager
@@ -149,16 +149,16 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*                      SAXNotRecognizedException or a
 	*                      SAXNotSupportedException.
 	*/
-	@:overload public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
-	@:overload private function reset() : Void;
+	@:overload @:protected private function reset() : Void;
 	
 	/**
 	* Returns a list of feature identifiers that are recognized by
 	* this component. This method may return null if no features
 	* are recognized by this component.
 	*/
-	@:overload public function getRecognizedFeatures() : java.NativeArray<String>;
+	@:overload @:public public function getRecognizedFeatures() : java.NativeArray<String>;
 	
 	/**
 	* Sets the state of a feature. This method is called by the component
@@ -175,14 +175,14 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	* @throws SAXNotSupportedException The component should not throw
 	*                                  this exception.
 	*/
-	@:overload public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload @:public public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* Returns a list of property identifiers that are recognized by
 	* this component. This method may return null if no properties
 	* are recognized by this component.
 	*/
-	@:overload public function getRecognizedProperties() : java.NativeArray<String>;
+	@:overload @:public public function getRecognizedProperties() : java.NativeArray<String>;
 	
 	/**
 	* Sets the value of a property. This method is called by the component
@@ -199,7 +199,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	* @throws SAXNotSupportedException The component should not throw
 	*                                  this exception.
 	*/
-	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/**
 	* Returns the default state for a feature, or null if this
@@ -210,7 +210,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload public function getFeatureDefault(featureId : String) : Null<Bool>;
+	@:require(java2) @:overload @:public public function getFeatureDefault(featureId : String) : Null<Bool>;
 	
 	/**
 	* Returns the default state for a property, or null if this
@@ -221,35 +221,35 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload public function getPropertyDefault(propertyId : String) : Dynamic;
+	@:require(java2) @:overload @:public public function getPropertyDefault(propertyId : String) : Dynamic;
 	
 	/**
 	* Sets the DTD handler.
 	*
 	* @param dtdHandler The DTD handler.
 	*/
-	@:overload public function setDTDHandler(dtdHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler) : Void;
+	@:overload @:public public function setDTDHandler(dtdHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler) : Void;
 	
 	/**
 	* Returns the DTD handler.
 	*
 	* @return The DTD handler.
 	*/
-	@:overload public function getDTDHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler;
+	@:overload @:public public function getDTDHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler;
 	
 	/**
 	* Sets the DTD content model handler.
 	*
 	* @param dtdContentModelHandler The DTD content model handler.
 	*/
-	@:overload public function setDTDContentModelHandler(dtdContentModelHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler) : Void;
+	@:overload @:public public function setDTDContentModelHandler(dtdContentModelHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler) : Void;
 	
 	/**
 	* Gets the DTD content model handler.
 	*
 	* @return dtdContentModelHandler The DTD content model handler.
 	*/
-	@:overload public function getDTDContentModelHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler;
+	@:overload @:public public function getDTDContentModelHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler;
 	
 	/**
 	* The start of the DTD external subset.
@@ -259,7 +259,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startExternalSubset(identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startExternalSubset(identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of the DTD external subset.
@@ -269,7 +269,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endExternalSubset(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endExternalSubset(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Check standalone entity reference.
@@ -282,7 +282,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by application to signal an error.
 	*/
-	@:overload private static function checkStandaloneEntityRef(name : String, grammar : com.sun.org.apache.xerces.internal.impl.dtd.DTDGrammar, tempEntityDecl : com.sun.org.apache.xerces.internal.impl.dtd.XMLEntityDecl, errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter) : Void;
+	@:overload @:protected @:static private static function checkStandaloneEntityRef(name : String, grammar : com.sun.org.apache.xerces.internal.impl.dtd.DTDGrammar, tempEntityDecl : com.sun.org.apache.xerces.internal.impl.dtd.XMLEntityDecl, errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter) : Void;
 	
 	/**
 	* A comment.
@@ -292,7 +292,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by application to signal an error.
 	*/
-	@:overload public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A processing instruction. Processing instructions consist of a
@@ -311,7 +311,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of the DTD.
@@ -327,7 +327,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startDTD(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startDTD(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Characters within an IGNORE conditional section.
@@ -338,7 +338,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function ignoredCharacters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function ignoredCharacters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Notifies of the presence of a TextDecl line in an entity. If present,
@@ -354,7 +354,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function textDecl(version : String, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function textDecl(version : String, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies of the start of a parameter entity. The parameter
@@ -371,7 +371,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startParameterEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startParameterEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies the end of a parameter entity. Parameter entity
@@ -383,7 +383,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endParameterEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endParameterEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An element declaration.
@@ -395,7 +395,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function elementDecl(name : String, contentModel : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function elementDecl(name : String, contentModel : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of an attribute list.
@@ -407,7 +407,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startAttlist(elementName : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startAttlist(elementName : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An attribute declaration.
@@ -434,7 +434,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function attributeDecl(elementName : String, attributeName : String, type : String, enumeration : java.NativeArray<String>, defaultType : String, defaultValue : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedDefaultValue : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function attributeDecl(elementName : String, attributeName : String, type : String, enumeration : java.NativeArray<String>, defaultType : String, defaultValue : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedDefaultValue : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of an attribute list.
@@ -444,7 +444,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endAttlist(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endAttlist(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An internal entity declaration.
@@ -462,7 +462,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function internalEntityDecl(name : String, text : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedText : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function internalEntityDecl(name : String, text : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedText : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An external entity declaration.
@@ -477,7 +477,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function externalEntityDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function externalEntityDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An unparsed entity declaration.
@@ -491,7 +491,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function unparsedEntityDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, notation : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function unparsedEntityDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, notation : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A notation declaration
@@ -504,7 +504,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function notationDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function notationDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of a conditional section.
@@ -519,7 +519,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	* @see #CONDITIONAL_INCLUDE
 	* @see #CONDITIONAL_IGNORE
 	*/
-	@:overload public function startConditional(type : java.StdTypes.Int16, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startConditional(type : java.StdTypes.Int16, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a conditional section.
@@ -529,7 +529,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endConditional(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endConditional(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of the DTD.
@@ -539,15 +539,15 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endDTD(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endDTD(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function setDTDSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource) : Void;
+	@:overload @:public public function setDTDSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource) : Void;
 	
-	@:overload public function getDTDSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource;
+	@:overload @:public public function getDTDSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource;
 	
-	@:overload public function setDTDContentModelSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource) : Void;
+	@:overload @:public public function setDTDContentModelSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource) : Void;
 	
-	@:overload public function getDTDContentModelSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource;
+	@:overload @:public public function getDTDContentModelSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource;
 	
 	/**
 	* The start of a content model. Depending on the type of the content
@@ -560,7 +560,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startContentModel(elementName : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startContentModel(elementName : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A content model of ANY.
@@ -573,7 +573,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	* @see #empty
 	* @see #startGroup
 	*/
-	@:overload public function any(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function any(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A content model of EMPTY.
@@ -586,7 +586,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	* @see #any
 	* @see #startGroup
 	*/
-	@:overload public function empty(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function empty(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A start of either a mixed or children content model. A mixed
@@ -602,7 +602,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	* @see #any
 	* @see #empty
 	*/
-	@:overload public function startGroup(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startGroup(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The appearance of "#PCDATA" within a group signifying a
@@ -616,7 +616,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @see #startGroup
 	*/
-	@:overload public function pcdata(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function pcdata(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A referenced element in a mixed or children content model.
@@ -627,7 +627,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function element(elementName : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function element(elementName : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The separator between choices or sequences of a mixed or children
@@ -642,7 +642,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	* @see #SEPARATOR_CHOICE
 	* @see #SEPARATOR_SEQUENCE
 	*/
-	@:overload public function separator(separator : java.StdTypes.Int16, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function separator(separator : java.StdTypes.Int16, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The occurrence count for a child in a children content model or
@@ -659,7 +659,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	* @see #OCCURS_ZERO_OR_MORE
 	* @see #OCCURS_ONE_OR_MORE
 	*/
-	@:overload public function occurrence(occurrence : java.StdTypes.Int16, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function occurrence(occurrence : java.StdTypes.Int16, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a group for mixed or children content models.
@@ -669,7 +669,7 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endGroup(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endGroup(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a content model.
@@ -679,11 +679,11 @@ extern class XMLDTDProcessor implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endContentModel(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endContentModel(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload private function isValidNmtoken(nmtoken : String) : Bool;
+	@:overload @:protected private function isValidNmtoken(nmtoken : String) : Bool;
 	
-	@:overload private function isValidName(name : String) : Bool;
+	@:overload @:protected private function isValidName(name : String) : Bool;
 	
 	
 }

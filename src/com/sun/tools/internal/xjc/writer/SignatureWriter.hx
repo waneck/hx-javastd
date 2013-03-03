@@ -32,7 +32,7 @@ extern class SignatureWriter
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload public static function write(model : com.sun.tools.internal.xjc.outline.Outline, out : java.io.Writer) : Void;
+	@:overload @:public @:static public static function write(model : com.sun.tools.internal.xjc.outline.Outline, out : java.io.Writer) : Void;
 	
 	
 }

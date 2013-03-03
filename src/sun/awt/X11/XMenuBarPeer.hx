@@ -28,7 +28,7 @@ extern class XMenuBarPeer extends sun.awt.X11.XBaseMenuWindow implements java.aw
 	/*
 	* From MenuComponentPeer
 	*/
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public public function setFont(f : java.awt.Font) : Void;
 	
 	/*
 	* Functions addMenu, delMenu, addHelpMenu
@@ -52,71 +52,71 @@ extern class XMenuBarPeer extends sun.awt.X11.XBaseMenuWindow implements java.aw
 	* Note that these functions don't perform
 	* type checks and checks for nulls or duplicates
 	*/
-	@:overload public function addMenu(m : java.awt.Menu) : Void;
+	@:overload @:public public function addMenu(m : java.awt.Menu) : Void;
 	
-	@:overload public function delMenu(index : Int) : Void;
+	@:overload @:public public function delMenu(index : Int) : Void;
 	
-	@:overload public function addHelpMenu(m : java.awt.Menu) : Void;
+	@:overload @:public public function addHelpMenu(m : java.awt.Menu) : Void;
 	
 	/**
 	* called from XFramePeer.setMenuBar
 	*/
-	@:overload public function init(frame : java.awt.Frame) : Void;
+	@:overload @:public public function init(frame : java.awt.Frame) : Void;
 	
 	/**
 	* Menu bar is always root window in menu window's
 	* hierarchy
 	*/
-	@:overload private function getParentMenuWindow() : sun.awt.X11.XBaseMenuWindow;
+	@:overload @:protected override private function getParentMenuWindow() : sun.awt.X11.XBaseMenuWindow;
 	
 	/**
 	* @see XBaseMenuWindow.map
 	*/
-	@:overload private function map() : sun.awt.X11.XBaseMenuWindow.XBaseMenuWindow_MappingData;
+	@:overload @:protected override private function map() : sun.awt.X11.XBaseMenuWindow.XBaseMenuWindow_MappingData;
 	
 	/**
 	* @see XBaseMenuWindow.getSubmenuBounds
 	*/
-	@:overload private function getSubmenuBounds(itemBounds : java.awt.Rectangle, windowSize : java.awt.Dimension) : java.awt.Rectangle;
+	@:overload @:protected override private function getSubmenuBounds(itemBounds : java.awt.Rectangle, windowSize : java.awt.Dimension) : java.awt.Rectangle;
 	
 	/**
 	* This function is called when it's likely that
 	* size of items has changed.
 	* Invokes framePeer's updateChildrenSizes()
 	*/
-	@:overload private function updateSize() : Void;
+	@:overload @:protected override private function updateSize() : Void;
 	
 	/**
 	* @see XBaseMenuWindow.doDispose()
 	*/
-	@:overload private function doDispose() : Void;
+	@:overload @:protected override private function doDispose() : Void;
 	
 	/**
 	* For menu bars this function is called from framePeer's
 	* reshape(...) and updateChildrenSizes()
 	*/
-	@:overload public function reshape(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function reshape(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/************************************************
 	*
 	* Overriden XWindow painting & printing
 	*
 	************************************************/
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public public function paint(g : java.awt.Graphics) : Void;
 	
 	/************************************************
 	*
 	* Overriden XBaseMenuWindow event handling
 	*
 	************************************************/
-	@:overload private function handleEvent(event : java.awt.AWTEvent) : Void;
+	@:overload @:protected override private function handleEvent(event : java.awt.AWTEvent) : Void;
 	
 	/*
 	* In previous version keys were handled in handleKeyPress.
 	* Now we override this function do disable F10 explicit
 	* processing. All processing is done using KeyEvent.
 	*/
-	@:overload public function handleKeyPress(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleKeyPress(xev : sun.awt.X11.XEvent) : Void;
 	
 	
 }
@@ -126,7 +126,7 @@ extern class XMenuBarPeer extends sun.awt.X11.XBaseMenuWindow implements java.aw
 */
 @:native('sun$awt$X11$XMenuBarPeer$MappingData') @:internal extern class XMenuBarPeer_MappingData extends sun.awt.X11.XBaseMenuWindow.XBaseMenuWindow_MappingData
 {
-	@:overload public function getDesiredHeight() : Int;
+	@:overload @:public public function getDesiredHeight() : Int;
 	
 	
 }

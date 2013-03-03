@@ -35,21 +35,21 @@ extern interface Attribute extends javax.xml.stream.events.XMLEvent
 	/**
 	* Gets the normalized value of this attribute
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	/**
 	* Gets the type of this attribute, default is
 	* the String "CDATA"
 	* @return the type as a String, default is "CDATA"
 	*/
-	@:overload public function getDTDType() : String;
+	@:overload @:public public function getDTDType() : String;
 	
 	/**
 	* A flag indicating whether this attribute was actually
 	* specified in the start-tag of its element, or was defaulted from the schema.
 	* @return returns true if this was specified in the start element
 	*/
-	@:overload public function isSpecified() : Bool;
+	@:overload @:public public function isSpecified() : Bool;
 	
 	
 }

@@ -34,19 +34,19 @@ extern class DirectoryLoader extends java.lang.ClassLoader
 	/**
 	* Constructor.
 	*/
-	@:overload public function new(rootDir : java.io.File) : Void;
+	@:overload @:public public function new(rootDir : java.io.File) : Void;
 	
 	/**
 	* Convenience version of loadClass which sets 'resolve' == true.
 	*/
-	@:overload public function loadClass(className : String) : Class<Dynamic>;
+	@:overload @:public override public function loadClass(className : String) : Class<Dynamic>;
 	
 	/**
 	* This is the required version of loadClass which is called
 	* both from loadClass above and from the internal function
 	* FindClassFromClass.
 	*/
-	@:overload @:synchronized public function loadClass(className : String, resolve : Bool) : Class<Dynamic>;
+	@:overload @:public @:synchronized override public function loadClass(className : String, resolve : Bool) : Class<Dynamic>;
 	
 	
 }

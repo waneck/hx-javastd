@@ -30,7 +30,7 @@ extern class StylesheetPIHandler extends org.xml.sax.helpers.DefaultHandler
 	* @param resolver An object that implements the URIResolver interface,
 	* or null.
 	*/
-	@:overload public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
+	@:overload @:public public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
 	
 	/**
 	* Get the object that will be used to resolve URIs in href
@@ -38,7 +38,7 @@ extern class StylesheetPIHandler extends org.xml.sax.helpers.DefaultHandler
 	*
 	* @return The URIResolver that was set with setURIResolver.
 	*/
-	@:overload public function getURIResolver() : javax.xml.transform.URIResolver;
+	@:overload @:public public function getURIResolver() : javax.xml.transform.URIResolver;
 	
 	/**
 	* Construct a StylesheetPIHandler instance that will search
@@ -50,7 +50,7 @@ extern class StylesheetPIHandler extends org.xml.sax.helpers.DefaultHandler
 	* @param title The desired title criteria.
 	* @param charset The desired character set criteria.
 	*/
-	@:overload public function new(baseID : String, media : String, title : String, charset : String) : Void;
+	@:overload @:public public function new(baseID : String, media : String, title : String, charset : String) : Void;
 	
 	/**
 	* Return the last stylesheet found that match the constraints.
@@ -58,7 +58,7 @@ extern class StylesheetPIHandler extends org.xml.sax.helpers.DefaultHandler
 	* @return Source object that references the last stylesheet reference
 	*         that matches the constraints.
 	*/
-	@:overload public function getAssociatedStylesheet() : javax.xml.transform.Source;
+	@:overload @:public public function getAssociatedStylesheet() : javax.xml.transform.Source;
 	
 	/**
 	* Handle the xml-stylesheet processing instruction.
@@ -71,7 +71,7 @@ extern class StylesheetPIHandler extends org.xml.sax.helpers.DefaultHandler
 	* @see org.xml.sax.ContentHandler#processingInstruction
 	* @see <a href="http://www.w3.org/TR/xml-stylesheet/">Associating Style Sheets with XML documents, Version 1.0</a>
 	*/
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public override public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* The spec notes that "The xml-stylesheet processing instruction is allowed only in the prolog of an XML document.",
@@ -86,16 +86,16 @@ extern class StylesheetPIHandler extends org.xml.sax.helpers.DefaultHandler
 	* @throws StopParseException since there can be no valid xml-stylesheet processing
 	*                            instructions past the first element.
 	*/
-	@:overload public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Added additional getter and setter methods for the Base Id
 	* to fix bugzilla bug 24187
 	*
 	*/
-	@:overload public function setBaseId(baseId : String) : Void;
+	@:overload @:public public function setBaseId(baseId : String) : Void;
 	
-	@:overload public function getBaseId() : String;
+	@:overload @:public public function getBaseId() : String;
 	
 	
 }

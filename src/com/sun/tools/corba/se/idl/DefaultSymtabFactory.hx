@@ -40,67 +40,67 @@ package com.sun.tools.corba.se.idl;
 **/
 extern class DefaultSymtabFactory implements com.sun.tools.corba.se.idl.SymtabFactory
 {
-	@:overload public function attributeEntry() : com.sun.tools.corba.se.idl.AttributeEntry;
+	@:overload @:public public function attributeEntry() : com.sun.tools.corba.se.idl.AttributeEntry;
 	
-	@:overload public function attributeEntry(container : com.sun.tools.corba.se.idl.InterfaceEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.AttributeEntry;
+	@:overload @:public public function attributeEntry(container : com.sun.tools.corba.se.idl.InterfaceEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.AttributeEntry;
 	
-	@:overload public function constEntry() : com.sun.tools.corba.se.idl.ConstEntry;
+	@:overload @:public public function constEntry() : com.sun.tools.corba.se.idl.ConstEntry;
 	
-	@:overload public function constEntry(container : com.sun.tools.corba.se.idl.SymtabEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.ConstEntry;
+	@:overload @:public public function constEntry(container : com.sun.tools.corba.se.idl.SymtabEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.ConstEntry;
 	
-	@:overload public function nativeEntry() : com.sun.tools.corba.se.idl.NativeEntry;
+	@:overload @:public public function nativeEntry() : com.sun.tools.corba.se.idl.NativeEntry;
 	
-	@:overload public function nativeEntry(container : com.sun.tools.corba.se.idl.SymtabEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.NativeEntry;
+	@:overload @:public public function nativeEntry(container : com.sun.tools.corba.se.idl.SymtabEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.NativeEntry;
 	
-	@:overload public function enumEntry() : com.sun.tools.corba.se.idl.EnumEntry;
+	@:overload @:public public function enumEntry() : com.sun.tools.corba.se.idl.EnumEntry;
 	
-	@:overload public function enumEntry(container : com.sun.tools.corba.se.idl.SymtabEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.EnumEntry;
+	@:overload @:public public function enumEntry(container : com.sun.tools.corba.se.idl.SymtabEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.EnumEntry;
 	
-	@:overload public function exceptionEntry() : com.sun.tools.corba.se.idl.ExceptionEntry;
+	@:overload @:public public function exceptionEntry() : com.sun.tools.corba.se.idl.ExceptionEntry;
 	
-	@:overload public function exceptionEntry(container : com.sun.tools.corba.se.idl.SymtabEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.ExceptionEntry;
+	@:overload @:public public function exceptionEntry(container : com.sun.tools.corba.se.idl.SymtabEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.ExceptionEntry;
 	
-	@:overload public function forwardEntry() : com.sun.tools.corba.se.idl.ForwardEntry;
+	@:overload @:public public function forwardEntry() : com.sun.tools.corba.se.idl.ForwardEntry;
 	
-	@:overload public function forwardEntry(container : com.sun.tools.corba.se.idl.ModuleEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.ForwardEntry;
+	@:overload @:public public function forwardEntry(container : com.sun.tools.corba.se.idl.ModuleEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.ForwardEntry;
 	
-	@:overload public function forwardValueEntry() : com.sun.tools.corba.se.idl.ForwardValueEntry;
+	@:overload @:public public function forwardValueEntry() : com.sun.tools.corba.se.idl.ForwardValueEntry;
 	
-	@:overload public function forwardValueEntry(container : com.sun.tools.corba.se.idl.ModuleEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.ForwardValueEntry;
+	@:overload @:public public function forwardValueEntry(container : com.sun.tools.corba.se.idl.ModuleEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.ForwardValueEntry;
 	
-	@:overload public function includeEntry() : com.sun.tools.corba.se.idl.IncludeEntry;
+	@:overload @:public public function includeEntry() : com.sun.tools.corba.se.idl.IncludeEntry;
 	
-	@:overload public function includeEntry(container : com.sun.tools.corba.se.idl.SymtabEntry) : com.sun.tools.corba.se.idl.IncludeEntry;
+	@:overload @:public public function includeEntry(container : com.sun.tools.corba.se.idl.SymtabEntry) : com.sun.tools.corba.se.idl.IncludeEntry;
 	
-	@:overload public function interfaceEntry() : com.sun.tools.corba.se.idl.InterfaceEntry;
+	@:overload @:public public function interfaceEntry() : com.sun.tools.corba.se.idl.InterfaceEntry;
 	
-	@:overload public function interfaceEntry(container : com.sun.tools.corba.se.idl.ModuleEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.InterfaceEntry;
+	@:overload @:public public function interfaceEntry(container : com.sun.tools.corba.se.idl.ModuleEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.InterfaceEntry;
 	
-	@:overload public function valueEntry() : com.sun.tools.corba.se.idl.ValueEntry;
+	@:overload @:public public function valueEntry() : com.sun.tools.corba.se.idl.ValueEntry;
 	
-	@:overload public function valueEntry(container : com.sun.tools.corba.se.idl.ModuleEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.ValueEntry;
+	@:overload @:public public function valueEntry(container : com.sun.tools.corba.se.idl.ModuleEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.ValueEntry;
 	
-	@:overload public function valueBoxEntry() : com.sun.tools.corba.se.idl.ValueBoxEntry;
+	@:overload @:public public function valueBoxEntry() : com.sun.tools.corba.se.idl.ValueBoxEntry;
 	
-	@:overload public function valueBoxEntry(container : com.sun.tools.corba.se.idl.ModuleEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.ValueBoxEntry;
+	@:overload @:public public function valueBoxEntry(container : com.sun.tools.corba.se.idl.ModuleEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.ValueBoxEntry;
 	
-	@:overload public function methodEntry() : com.sun.tools.corba.se.idl.MethodEntry;
+	@:overload @:public public function methodEntry() : com.sun.tools.corba.se.idl.MethodEntry;
 	
-	@:overload public function methodEntry(container : com.sun.tools.corba.se.idl.InterfaceEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.MethodEntry;
+	@:overload @:public public function methodEntry(container : com.sun.tools.corba.se.idl.InterfaceEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.MethodEntry;
 	
-	@:overload public function moduleEntry() : com.sun.tools.corba.se.idl.ModuleEntry;
+	@:overload @:public public function moduleEntry() : com.sun.tools.corba.se.idl.ModuleEntry;
 	
-	@:overload public function moduleEntry(container : com.sun.tools.corba.se.idl.ModuleEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.ModuleEntry;
+	@:overload @:public public function moduleEntry(container : com.sun.tools.corba.se.idl.ModuleEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.ModuleEntry;
 	
-	@:overload public function parameterEntry() : com.sun.tools.corba.se.idl.ParameterEntry;
+	@:overload @:public public function parameterEntry() : com.sun.tools.corba.se.idl.ParameterEntry;
 	
-	@:overload public function parameterEntry(container : com.sun.tools.corba.se.idl.MethodEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.ParameterEntry;
+	@:overload @:public public function parameterEntry(container : com.sun.tools.corba.se.idl.MethodEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.ParameterEntry;
 	
-	@:overload public function pragmaEntry() : com.sun.tools.corba.se.idl.PragmaEntry;
+	@:overload @:public public function pragmaEntry() : com.sun.tools.corba.se.idl.PragmaEntry;
 	
-	@:overload public function pragmaEntry(container : com.sun.tools.corba.se.idl.SymtabEntry) : com.sun.tools.corba.se.idl.PragmaEntry;
+	@:overload @:public public function pragmaEntry(container : com.sun.tools.corba.se.idl.SymtabEntry) : com.sun.tools.corba.se.idl.PragmaEntry;
 	
-	@:overload public function primitiveEntry() : com.sun.tools.corba.se.idl.PrimitiveEntry;
+	@:overload @:public public function primitiveEntry() : com.sun.tools.corba.se.idl.PrimitiveEntry;
 	
 	/** "name" can be, but is not limited to, the primitive idl type names:
 	'char', 'octet', 'short', 'long', etc.  The reason it is not limited
@@ -108,25 +108,25 @@ extern class DefaultSymtabFactory implements com.sun.tools.corba.se.idl.SymtabFa
 	For instance, when generating Java code, octet translates to byte, so
 	there is an entry in Compile.overrideNames:  <"octet", "byte"> and a
 	PrimitiveEntry in the symbol table for "byte". */
-	@:overload public function primitiveEntry(name : String) : com.sun.tools.corba.se.idl.PrimitiveEntry;
+	@:overload @:public public function primitiveEntry(name : String) : com.sun.tools.corba.se.idl.PrimitiveEntry;
 	
-	@:overload public function sequenceEntry() : com.sun.tools.corba.se.idl.SequenceEntry;
+	@:overload @:public public function sequenceEntry() : com.sun.tools.corba.se.idl.SequenceEntry;
 	
-	@:overload public function sequenceEntry(container : com.sun.tools.corba.se.idl.SymtabEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.SequenceEntry;
+	@:overload @:public public function sequenceEntry(container : com.sun.tools.corba.se.idl.SymtabEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.SequenceEntry;
 	
-	@:overload public function stringEntry() : com.sun.tools.corba.se.idl.StringEntry;
+	@:overload @:public public function stringEntry() : com.sun.tools.corba.se.idl.StringEntry;
 	
-	@:overload public function structEntry() : com.sun.tools.corba.se.idl.StructEntry;
+	@:overload @:public public function structEntry() : com.sun.tools.corba.se.idl.StructEntry;
 	
-	@:overload public function structEntry(container : com.sun.tools.corba.se.idl.SymtabEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.StructEntry;
+	@:overload @:public public function structEntry(container : com.sun.tools.corba.se.idl.SymtabEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.StructEntry;
 	
-	@:overload public function typedefEntry() : com.sun.tools.corba.se.idl.TypedefEntry;
+	@:overload @:public public function typedefEntry() : com.sun.tools.corba.se.idl.TypedefEntry;
 	
-	@:overload public function typedefEntry(container : com.sun.tools.corba.se.idl.SymtabEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.TypedefEntry;
+	@:overload @:public public function typedefEntry(container : com.sun.tools.corba.se.idl.SymtabEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.TypedefEntry;
 	
-	@:overload public function unionEntry() : com.sun.tools.corba.se.idl.UnionEntry;
+	@:overload @:public public function unionEntry() : com.sun.tools.corba.se.idl.UnionEntry;
 	
-	@:overload public function unionEntry(container : com.sun.tools.corba.se.idl.SymtabEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.UnionEntry;
+	@:overload @:public public function unionEntry(container : com.sun.tools.corba.se.idl.SymtabEntry, id : com.sun.tools.corba.se.idl.IDLID) : com.sun.tools.corba.se.idl.UnionEntry;
 	
 	
 }

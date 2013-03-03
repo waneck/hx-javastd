@@ -25,22 +25,22 @@ package com.sun.xml.internal.ws.message;
 */
 extern class MimeAttachmentSet implements com.sun.xml.internal.ws.api.message.AttachmentSet
 {
-	@:overload public function new(mpp : com.sun.xml.internal.ws.encoding.MimeMultipartParser) : Void;
+	@:overload @:public public function new(mpp : com.sun.xml.internal.ws.encoding.MimeMultipartParser) : Void;
 	
-	@:overload public function get(contentId : String) : com.sun.xml.internal.ws.api.message.Attachment;
+	@:overload @:public public function get(contentId : String) : com.sun.xml.internal.ws.api.message.Attachment;
 	
 	/**
 	* This is expensive operation, its going to to read all the underlying
 	* attachments in {@link MimeMultipartParser}.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function add(att : com.sun.xml.internal.ws.api.message.Attachment) : Void;
+	@:overload @:public public function add(att : com.sun.xml.internal.ws.api.message.Attachment) : Void;
 	
 	/**
 	* Expensive operation.
 	*/
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.api.message.Attachment>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.api.message.Attachment>;
 	
 	
 }

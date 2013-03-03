@@ -28,36 +28,36 @@ package com.sun.tools.internal.ws.wsdl.parser;
 */
 extern class MetadataFinder extends com.sun.tools.internal.ws.wsdl.parser.DOMForest
 {
-	public var isMexMetadata : Bool;
+	@:public public var isMexMetadata : Bool;
 	
-	@:overload public function new(logic : com.sun.tools.internal.ws.wsdl.parser.InternalizationLogic, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function new(logic : com.sun.tools.internal.ws.wsdl.parser.InternalizationLogic, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function parseWSDL() : Void;
+	@:overload @:public public function parseWSDL() : Void;
 	
 	/**
 	* Gives the root wsdl document systemId. A root wsdl document is the one which has wsdl:service.
 	* @return null if there is no root wsdl
 	*/
-	@:overload public function getRootWSDL() : String;
+	@:overload @:public public function getRootWSDL() : String;
 	
 	/**
 	* Gives all the WSDL documents.
 	*/
-	@:overload public function getRootWSDLs() : java.util.Set<String>;
+	@:overload @:public public function getRootWSDLs() : java.util.Set<String>;
 	
 	
 }
 @:native('com$sun$tools$internal$ws$wsdl$parser$MetadataFinder$WSEntityResolver') extern class MetadataFinder_WSEntityResolver implements org.xml.sax.EntityResolver
 {
-	@:overload public function new(options : com.sun.tools.internal.ws.wscompile.WsimportOptions, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function new(options : com.sun.tools.internal.ws.wscompile.WsimportOptions, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
 	
 }
 @:native('com$sun$tools$internal$ws$wsdl$parser$MetadataFinder$HttpClientVerifier') @:internal extern class MetadataFinder_HttpClientVerifier implements javax.net.ssl.HostnameVerifier
 {
-	@:overload public function verify(s : String, sslSession : javax.net.ssl.SSLSession) : Bool;
+	@:overload @:public public function verify(s : String, sslSession : javax.net.ssl.SSLSession) : Bool;
 	
 	
 }

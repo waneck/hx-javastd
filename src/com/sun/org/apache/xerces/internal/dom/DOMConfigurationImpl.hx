@@ -21,115 +21,115 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.util.ParserConfigurationSettings implements com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration implements org.w3c.dom.DOMConfiguration
 {
 	/** Feature identifier: validation. */
-	private static var XERCES_VALIDATION(default, null) : String;
+	@:protected @:static @:final private static var XERCES_VALIDATION(default, null) : String;
 	
 	/** Feature identifier: namespaces. */
-	private static var XERCES_NAMESPACES(default, null) : String;
+	@:protected @:static @:final private static var XERCES_NAMESPACES(default, null) : String;
 	
-	private static var SCHEMA(default, null) : String;
+	@:protected @:static @:final private static var SCHEMA(default, null) : String;
 	
-	private static var SCHEMA_FULL_CHECKING(default, null) : String;
+	@:protected @:static @:final private static var SCHEMA_FULL_CHECKING(default, null) : String;
 	
-	private static var DYNAMIC_VALIDATION(default, null) : String;
+	@:protected @:static @:final private static var DYNAMIC_VALIDATION(default, null) : String;
 	
-	private static var NORMALIZE_DATA(default, null) : String;
+	@:protected @:static @:final private static var NORMALIZE_DATA(default, null) : String;
 	
 	/** sending psvi in the pipeline */
-	private static var SEND_PSVI(default, null) : String;
+	@:protected @:static @:final private static var SEND_PSVI(default, null) : String;
 	
-	private static var DTD_VALIDATOR_FACTORY_PROPERTY(default, null) : String;
+	@:protected @:final @:static private static var DTD_VALIDATOR_FACTORY_PROPERTY(default, null) : String;
 	
 	/** Feature identifier: namespace growth */
-	private static var NAMESPACE_GROWTH(default, null) : String;
+	@:protected @:static @:final private static var NAMESPACE_GROWTH(default, null) : String;
 	
-	private static var TOLERATE_DUPLICATES(default, null) : String;
+	@:protected @:static @:final private static var TOLERATE_DUPLICATES(default, null) : String;
 	
 	/** Property identifier: entity manager. */
-	private static var ENTITY_MANAGER(default, null) : String;
+	@:protected @:static @:final private static var ENTITY_MANAGER(default, null) : String;
 	
 	/** Property identifier: error reporter. */
-	private static var ERROR_REPORTER(default, null) : String;
+	@:protected @:static @:final private static var ERROR_REPORTER(default, null) : String;
 	
 	/** Property identifier: xml string. */
-	private static var XML_STRING(default, null) : String;
+	@:protected @:static @:final private static var XML_STRING(default, null) : String;
 	
 	/** Property identifier: symbol table. */
-	private static var SYMBOL_TABLE(default, null) : String;
+	@:protected @:static @:final private static var SYMBOL_TABLE(default, null) : String;
 	
 	/** Property id: Grammar pool*/
-	private static var GRAMMAR_POOL(default, null) : String;
+	@:protected @:static @:final private static var GRAMMAR_POOL(default, null) : String;
 	
 	/** Property identifier: error handler. */
-	private static var ERROR_HANDLER(default, null) : String;
+	@:protected @:static @:final private static var ERROR_HANDLER(default, null) : String;
 	
 	/** Property identifier: entity resolver. */
-	private static var ENTITY_RESOLVER(default, null) : String;
+	@:protected @:static @:final private static var ENTITY_RESOLVER(default, null) : String;
 	
 	/** Property identifier: JAXP schema language / DOM schema-type. */
-	private static var JAXP_SCHEMA_LANGUAGE(default, null) : String;
+	@:protected @:static @:final private static var JAXP_SCHEMA_LANGUAGE(default, null) : String;
 	
 	/** Property identifier: JAXP schema source/ DOM schema-location. */
-	private static var JAXP_SCHEMA_SOURCE(default, null) : String;
+	@:protected @:static @:final private static var JAXP_SCHEMA_SOURCE(default, null) : String;
 	
-	private static var VALIDATION_MANAGER(default, null) : String;
+	@:protected @:static @:final private static var VALIDATION_MANAGER(default, null) : String;
 	
 	/** Property identifier: Schema DV Factory */
-	private static var SCHEMA_DV_FACTORY(default, null) : String;
+	@:protected @:static @:final private static var SCHEMA_DV_FACTORY(default, null) : String;
 	
 	/** Normalization features*/
-	private var features : java.StdTypes.Int16;
+	@:protected private var features : java.StdTypes.Int16;
 	
-	private static var NAMESPACES(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var NAMESPACES(default, null) : java.StdTypes.Int16;
 	
-	private static var DTNORMALIZATION(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var DTNORMALIZATION(default, null) : java.StdTypes.Int16;
 	
-	private static var ENTITIES(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var ENTITIES(default, null) : java.StdTypes.Int16;
 	
-	private static var CDATA(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var CDATA(default, null) : java.StdTypes.Int16;
 	
-	private static var SPLITCDATA(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var SPLITCDATA(default, null) : java.StdTypes.Int16;
 	
-	private static var COMMENTS(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var COMMENTS(default, null) : java.StdTypes.Int16;
 	
-	private static var VALIDATE(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var VALIDATE(default, null) : java.StdTypes.Int16;
 	
-	private static var PSVI(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var PSVI(default, null) : java.StdTypes.Int16;
 	
-	private static var WELLFORMED(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var WELLFORMED(default, null) : java.StdTypes.Int16;
 	
-	private static var NSDECL(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var NSDECL(default, null) : java.StdTypes.Int16;
 	
-	private static var INFOSET_TRUE_PARAMS(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var INFOSET_TRUE_PARAMS(default, null) : java.StdTypes.Int16;
 	
-	private static var INFOSET_FALSE_PARAMS(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var INFOSET_FALSE_PARAMS(default, null) : java.StdTypes.Int16;
 	
-	private static var INFOSET_MASK(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var INFOSET_MASK(default, null) : java.StdTypes.Int16;
 	
 	/** Symbol table. */
-	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
 	/** Components. */
-	private var fComponents : java.util.ArrayList<Dynamic>;
+	@:protected private var fComponents : java.util.ArrayList<Dynamic>;
 	
-	private var fValidationManager : com.sun.org.apache.xerces.internal.impl.validation.ValidationManager;
+	@:protected private var fValidationManager : com.sun.org.apache.xerces.internal.impl.validation.ValidationManager;
 	
 	/** Locale. */
-	private var fLocale : java.util.Locale;
+	@:protected private var fLocale : java.util.Locale;
 	
 	/** Error reporter */
-	private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
+	@:protected private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
 	
-	private var fErrorHandlerWrapper(default, null) : com.sun.org.apache.xerces.internal.util.DOMErrorHandlerWrapper;
+	@:protected @:final private var fErrorHandlerWrapper(default, null) : com.sun.org.apache.xerces.internal.util.DOMErrorHandlerWrapper;
 	
 	/** Default Constructor. */
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table.
 	*
 	* @param symbolTable The symbol table to use.
 	*/
-	@:overload private function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:protected private function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table
@@ -138,7 +138,7 @@ extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.uti
 	* @param symbolTable    The symbol table to use.
 	* @param parentSettings The parent settings.
 	*/
-	@:overload private function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, parentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:protected private function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, parentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/**
 	* Parse an XML document.
@@ -164,7 +164,7 @@ extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.uti
 	*                         from a byte stream or character stream
 	*                         supplied by the parser.
 	*/
-	@:overload public function parse(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public public function parse(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**
 	* Sets the document handler on the last component in the pipeline
@@ -172,30 +172,30 @@ extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.uti
 	*
 	* @param documentHandler   The document handler.
 	*/
-	@:overload public function setDocumentHandler(documentHandler : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler) : Void;
+	@:overload @:public public function setDocumentHandler(documentHandler : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler) : Void;
 	
 	/** Returns the registered document handler. */
-	@:overload public function getDocumentHandler() : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
+	@:overload @:public public function getDocumentHandler() : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
 	
 	/**
 	* Sets the DTD handler.
 	*
 	* @param dtdHandler The DTD handler.
 	*/
-	@:overload public function setDTDHandler(dtdHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler) : Void;
+	@:overload @:public public function setDTDHandler(dtdHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler) : Void;
 	
 	/** Returns the registered DTD handler. */
-	@:overload public function getDTDHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler;
+	@:overload @:public public function getDTDHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler;
 	
 	/**
 	* Sets the DTD content model handler.
 	*
 	* @param handler The DTD content model handler.
 	*/
-	@:overload public function setDTDContentModelHandler(handler : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler) : Void;
+	@:overload @:public public function setDTDContentModelHandler(handler : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler) : Void;
 	
 	/** Returns the registered DTD content model handler. */
-	@:overload public function getDTDContentModelHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler;
+	@:overload @:public public function getDTDContentModelHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler;
 	
 	/**
 	* Sets the resolver used to resolve external entities. The EntityResolver
@@ -204,7 +204,7 @@ extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.uti
 	* @param resolver The new entity resolver. Passing a null value will
 	*                 uninstall the currently installed resolver.
 	*/
-	@:overload public function setEntityResolver(resolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(resolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver) : Void;
 	
 	/**
 	* Return the current entity resolver.
@@ -213,7 +213,7 @@ extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.uti
 	*         has been registered.
 	* @see #setEntityResolver
 	*/
-	@:overload public function getEntityResolver() : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
+	@:overload @:public public function getEntityResolver() : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
 	
 	/**
 	* Allow an application to register an error event handler.
@@ -233,7 +233,7 @@ extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.uti
 	*            argument is null.
 	* @see #getErrorHandler
 	*/
-	@:overload public function setErrorHandler(errorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler) : Void;
+	@:overload @:public public function setErrorHandler(errorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler) : Void;
 	
 	/**
 	* Return the current error handler.
@@ -242,7 +242,7 @@ extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.uti
 	*         has been registered.
 	* @see #setErrorHandler
 	*/
-	@:overload public function getErrorHandler() : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
+	@:overload @:public public function getErrorHandler() : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
 	
 	/**
 	* Set the state of a feature.
@@ -257,7 +257,7 @@ extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.uti
 	* @exception com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException If the
 	*            requested feature is not known.
 	*/
-	@:overload public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload @:public override public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* setProperty
@@ -265,7 +265,7 @@ extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.uti
 	* @param propertyId
 	* @param value
 	*/
-	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public override public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/**
 	* Set the locale to use for messages.
@@ -275,22 +275,22 @@ extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.uti
 	* @exception XNIException Thrown if the parser does not support the
 	*                         specified locale.
 	*/
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
 	/** Returns the locale. */
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	/**
 	* DOM Level 3 WD - Experimental.
 	* setParameter
 	*/
-	@:overload public function setParameter(name : String, value : Dynamic) : Void;
+	@:overload @:public public function setParameter(name : String, value : Dynamic) : Void;
 	
 	/**
 	* DOM Level 3 WD - Experimental.
 	* getParameter
 	*/
-	@:overload public function getParameter(name : String) : Dynamic;
+	@:overload @:public public function getParameter(name : String) : Dynamic;
 	
 	/**
 	* DOM Level 3 WD - Experimental.
@@ -305,7 +305,7 @@ extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.uti
 	* the requested value is not supported. This does not change the
 	* current value of the parameter itself.
 	*/
-	@:overload public function canSetParameter(name : String, value : Dynamic) : Bool;
+	@:overload @:public public function canSetParameter(name : String, value : Dynamic) : Bool;
 	
 	/**
 	*  DOM Level 3 CR - Experimental.
@@ -315,12 +315,12 @@ extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.uti
 	* can be set by the application. Note that this list can also contain
 	* parameter names defined outside this specification.
 	*/
-	@:overload public function getParameterNames() : org.w3c.dom.DOMStringList;
+	@:overload @:public public function getParameterNames() : org.w3c.dom.DOMStringList;
 	
 	/**
 	* reset all components before parsing
 	*/
-	@:overload private function reset() : Void;
+	@:overload @:protected private function reset() : Void;
 	
 	/**
 	* Check a property. If the property is known and supported, this method
@@ -331,11 +331,11 @@ extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.uti
 	* @exception com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException If the
 	*            requested feature is not known or supported.
 	*/
-	@:overload private function checkProperty(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:overload @:protected override private function checkProperty(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
-	@:overload private function addComponent(component : com.sun.org.apache.xerces.internal.xni.parser.XMLComponent) : Void;
+	@:overload @:protected private function addComponent(component : com.sun.org.apache.xerces.internal.xni.parser.XMLComponent) : Void;
 	
-	@:overload private function createValidationManager() : com.sun.org.apache.xerces.internal.impl.validation.ValidationManager;
+	@:overload @:protected private function createValidationManager() : com.sun.org.apache.xerces.internal.impl.validation.ValidationManager;
 	
 	
 }

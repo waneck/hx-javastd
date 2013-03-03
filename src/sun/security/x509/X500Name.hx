@@ -32,7 +32,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @param DN X.500 Distinguished Name
 	*/
-	@:overload public function new(dname : String) : Void;
+	@:overload @:public public function new(dname : String) : Void;
 	
 	/**
 	* Constructs a name from a conventionally formatted string, such
@@ -42,7 +42,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	* @param DN X.500 Distinguished Name
 	* @param keywordMap an additional keyword/OID map
 	*/
-	@:overload public function new(dname : String, keywordMap : java.util.Map<String, String>) : Void;
+	@:overload @:public public function new(dname : String, keywordMap : java.util.Map<String, String>) : Void;
 	
 	/**
 	* Constructs a name from a string formatted according to format.
@@ -53,7 +53,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @param DN X.500 Distinguished Name
 	*/
-	@:overload public function new(dname : String, format : String) : Void;
+	@:overload @:public public function new(dname : String, format : String) : Void;
 	
 	/**
 	* Constructs a name from fields common in enterprise application
@@ -68,7 +68,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	* @param organizationName large organization name, e.g. "Onizuka, Inc."
 	* @param country two letter country code, e.g. "CH"
 	*/
-	@:overload public function new(commonName : String, organizationUnit : String, organizationName : String, country : String) : Void;
+	@:overload @:public public function new(commonName : String, organizationUnit : String, organizationName : String, country : String) : Void;
 	
 	/**
 	* Constructs a name from fields common in Internet application
@@ -85,7 +85,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	* @param stateName state name, e.g. "California"
 	* @param country two letter country code, e.g. "CH"
 	*/
-	@:overload public function new(commonName : String, organizationUnit : String, organizationName : String, localityName : String, stateName : String, country : String) : Void;
+	@:overload @:public public function new(commonName : String, organizationUnit : String, organizationName : String, localityName : String, stateName : String, country : String) : Void;
 	
 	/**
 	* Constructs a name from an array of relative distinguished names
@@ -93,7 +93,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	* @param rdnArray array of relative distinguished names
 	* @throws IOException on error
 	*/
-	@:overload public function new(rdnArray : java.NativeArray<sun.security.x509.RDN>) : Void;
+	@:overload @:public public function new(rdnArray : java.NativeArray<sun.security.x509.RDN>) : Void;
 	
 	/**
 	* Constructs a name from an ASN.1 encoded value.  The encoding
@@ -101,7 +101,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @param value a DER-encoded value holding an X.500 name.
 	*/
-	@:overload public function new(value : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(value : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Constructs a name from an ASN.1 encoded input stream.  The encoding
@@ -109,60 +109,60 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @param in DER-encoded data holding an X.500 name.
 	*/
-	@:overload public function new(_in : sun.security.util.DerInputStream) : Void;
+	@:overload @:public public function new(_in : sun.security.util.DerInputStream) : Void;
 	
 	/**
 	*  Constructs a name from an ASN.1 encoded byte array.
 	*
 	* @param name DER-encoded byte array holding an X.500 name.
 	*/
-	@:overload public function new(name : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(name : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Return an immutable List of all RDNs in this X500Name.
 	*/
-	@:overload public function rdns() : java.util.List<sun.security.x509.RDN>;
+	@:overload @:public public function rdns() : java.util.List<sun.security.x509.RDN>;
 	
 	/**
 	* Return the number of RDNs in this X500Name.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Return an immutable List of the the AVAs contained in all the
 	* RDNs of this X500Name.
 	*/
-	@:overload public function allAvas() : java.util.List<sun.security.x509.AVA>;
+	@:overload @:public public function allAvas() : java.util.List<sun.security.x509.AVA>;
 	
 	/**
 	* Return the total number of AVAs contained in all the RDNs of
 	* this X500Name.
 	*/
-	@:overload public function avaSize() : Int;
+	@:overload @:public public function avaSize() : Int;
 	
 	/**
 	* Return whether this X500Name is empty. An X500Name is not empty
 	* if it has at least one RDN containing at least one AVA.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Calculates a hash code value for the object.  Objects
 	* which are equal will also have the same hashcode.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this name with another, for equality.
 	*
 	* @return true iff the names are identical.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Return type of GeneralName.
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Returns a "Country" name component.  If more than one
@@ -170,7 +170,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @return "C=" component of the name, if any.
 	*/
-	@:overload public function getCountry() : String;
+	@:overload @:public public function getCountry() : String;
 	
 	/**
 	* Returns an "Organization" name component.  If more than
@@ -178,7 +178,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @return "O=" component of the name, if any.
 	*/
-	@:overload public function getOrganization() : String;
+	@:overload @:public public function getOrganization() : String;
 	
 	/**
 	* Returns an "Organizational Unit" name component.  If more
@@ -186,7 +186,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @return "OU=" component of the name, if any.
 	*/
-	@:overload public function getOrganizationalUnit() : String;
+	@:overload @:public public function getOrganizationalUnit() : String;
 	
 	/**
 	* Returns a "Common Name" component.  If more than one such
@@ -194,7 +194,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @return "CN=" component of the name, if any.
 	*/
-	@:overload public function getCommonName() : String;
+	@:overload @:public public function getCommonName() : String;
 	
 	/**
 	* Returns a "Locality" name component.  If more than one
@@ -202,7 +202,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @return "L=" component of the name, if any.
 	*/
-	@:overload public function getLocality() : String;
+	@:overload @:public public function getLocality() : String;
 	
 	/**
 	* Returns a "State" name component.  If more than one
@@ -210,7 +210,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @return "S=" component of the name, if any.
 	*/
-	@:overload public function getState() : String;
+	@:overload @:public public function getState() : String;
 	
 	/**
 	* Returns a "Domain" name component.  If more than one
@@ -218,7 +218,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @return "DC=" component of the name, if any.
 	*/
-	@:overload public function getDomain() : String;
+	@:overload @:public public function getDomain() : String;
 	
 	/**
 	* Returns a "DN Qualifier" name component.  If more than one
@@ -226,7 +226,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @return "DNQ=" component of the name, if any.
 	*/
-	@:overload public function getDNQualifier() : String;
+	@:overload @:public public function getDNQualifier() : String;
 	
 	/**
 	* Returns a "Surname" name component.  If more than one
@@ -234,7 +234,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @return "SURNAME=" component of the name, if any.
 	*/
-	@:overload public function getSurname() : String;
+	@:overload @:public public function getSurname() : String;
 	
 	/**
 	* Returns a "Given Name" name component.  If more than one
@@ -242,7 +242,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @return "GIVENNAME=" component of the name, if any.
 	*/
-	@:overload public function getGivenName() : String;
+	@:overload @:public public function getGivenName() : String;
 	
 	/**
 	* Returns an "Initials" name component.  If more than one
@@ -250,7 +250,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @return "INITIALS=" component of the name, if any.
 	*/
-	@:overload public function getInitials() : String;
+	@:overload @:public public function getInitials() : String;
 	
 	/**
 	* Returns a "Generation Qualifier" name component.  If more than one
@@ -258,7 +258,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @return "GENERATION=" component of the name, if any.
 	*/
-	@:overload public function getGeneration() : String;
+	@:overload @:public public function getGeneration() : String;
 	
 	/**
 	* Returns an "IP address" name component.  If more than one
@@ -266,7 +266,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* @return "IP=" component of the name, if any.
 	*/
-	@:overload public function getIP() : String;
+	@:overload @:public public function getIP() : String;
 	
 	/**
 	* Returns a string form of the X.500 distinguished name.
@@ -274,14 +274,14 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	* may contain non-standardised keywords for more readability
 	* (keywords from RFCs 1779, 2253, and 3280).
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a string form of the X.500 distinguished name
 	* using the algorithm defined in RFC 1779. Only standard attribute type
 	* keywords defined in RFC 1779 are emitted.
 	*/
-	@:overload public function getRFC1779Name() : String;
+	@:overload @:public public function getRFC1779Name() : String;
 	
 	/**
 	* Returns a string form of the X.500 distinguished name
@@ -289,14 +289,14 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	* keywords defined in RFC 1779 are emitted, as well as additional
 	* keywords contained in the OID/keyword map.
 	*/
-	@:overload public function getRFC1779Name(oidMap : java.util.Map<String, String>) : String;
+	@:overload @:public public function getRFC1779Name(oidMap : java.util.Map<String, String>) : String;
 	
 	/**
 	* Returns a string form of the X.500 distinguished name
 	* using the algorithm defined in RFC 2253. Only standard attribute type
 	* keywords defined in RFC 2253 are emitted.
 	*/
-	@:overload public function getRFC2253Name() : String;
+	@:overload @:public public function getRFC2253Name() : String;
 	
 	/**
 	* Returns a string form of the X.500 distinguished name
@@ -304,21 +304,21 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	* keywords defined in RFC 2253 are emitted, as well as additional
 	* keywords contained in the OID/keyword map.
 	*/
-	@:overload public function getRFC2253Name(oidMap : java.util.Map<String, String>) : String;
+	@:overload @:public public function getRFC2253Name(oidMap : java.util.Map<String, String>) : String;
 	
-	@:overload public function getRFC2253CanonicalName() : String;
+	@:overload @:public public function getRFC2253CanonicalName() : String;
 	
 	/**
 	* Returns the value of toString().  This call is needed to
 	* implement the java.security.Principal interface.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Find the most specific ("last") attribute of the given
 	* type.
 	*/
-	@:overload public function findMostSpecificAttribute(attribute : sun.security.util.ObjectIdentifier) : sun.security.util.DerValue;
+	@:overload @:public public function findMostSpecificAttribute(attribute : sun.security.util.ObjectIdentifier) : sun.security.util.DerValue;
 	
 	/**
 	* Encodes the name in DER-encoded form.
@@ -326,62 +326,62 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	* @deprecated Use encode() instead
 	* @param out where to put the DER-encoded X.500 name
 	*/
-	@:overload public function emit(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function emit(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Encodes the name in DER-encoded form.
 	*
 	* @param out where to put the DER-encoded X.500 name
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Returned the encoding as an uncloned byte array. Callers must
 	* guarantee that they neither modify it not expose it to untrusted
 	* code.
 	*/
-	@:overload public function getEncodedInternal() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncodedInternal() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the name in DER-encoded form.
 	*
 	* @return the DER encoded byte array of this name.
 	*/
-	@:overload public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
-	public static var commonName_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var commonName_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var countryName_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var countryName_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var localityName_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var localityName_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var orgName_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var orgName_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var orgUnitName_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var orgUnitName_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var stateName_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var stateName_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var streetAddress_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var streetAddress_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var title_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var title_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var DNQUALIFIER_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var DNQUALIFIER_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var SURNAME_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var SURNAME_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var GIVENNAME_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var GIVENNAME_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var INITIALS_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var INITIALS_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var GENERATIONQUALIFIER_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var GENERATIONQUALIFIER_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var ipAddress_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var ipAddress_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var DOMAIN_COMPONENT_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var DOMAIN_COMPONENT_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var userid_oid(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var userid_oid(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var SERIALNUMBER_OID(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var SERIALNUMBER_OID(default, null) : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Return constraint type:<ul>
@@ -400,7 +400,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	* @throws UnsupportedOperationException if name is not exact match, but
 	*         narrowing and widening are not supported for this name type.
 	*/
-	@:overload public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
+	@:overload @:public public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
 	
 	/**
 	* Return subtree depth of this name for purposes of determining
@@ -410,7 +410,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	* @returns distance of name from root
 	* @throws UnsupportedOperationException if not supported for this name type
 	*/
-	@:overload public function subtreeDepth() : Int;
+	@:overload @:public public function subtreeDepth() : Int;
 	
 	/**
 	* Return lowest common ancestor of this name and other name
@@ -418,7 +418,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	* @param other another X500Name
 	* @return X500Name of lowest common ancestor; null if none
 	*/
-	@:overload public function commonAncestor(other : sun.security.x509.X500Name) : sun.security.x509.X500Name;
+	@:overload @:public public function commonAncestor(other : sun.security.x509.X500Name) : sun.security.x509.X500Name;
 	
 	/**
 	* Get an X500Principal backed by this X500Name.
@@ -426,14 +426,14 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	* Note that we are using privileged reflection to access the hidden
 	* package private constructor in X500Principal.
 	*/
-	@:overload public function asX500Principal() : javax.security.auth.x500.X500Principal;
+	@:overload @:public public function asX500Principal() : javax.security.auth.x500.X500Principal;
 	
 	/**
 	* Get the X500Name contained in the given X500Principal.
 	*
 	* Note that the X500Name is retrieved using reflection.
 	*/
-	@:overload public static function asX500Name(p : javax.security.auth.x500.X500Principal) : sun.security.x509.X500Name;
+	@:overload @:public @:static public static function asX500Name(p : javax.security.auth.x500.X500Principal) : sun.security.x509.X500Name;
 	
 	
 }

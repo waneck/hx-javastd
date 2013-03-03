@@ -32,7 +32,7 @@ extern class WeakCache<K, V>
 	* @param key  the key whose associated value is returned
 	* @return a value to which the specified {@code key} is mapped
 	*/
-	@:overload public function get(key : K) : V;
+	@:overload @:public public function get(key : K) : V;
 	
 	/**
 	* Associates the specified {@code value} with the specified {@code key}.
@@ -44,12 +44,12 @@ extern class WeakCache<K, V>
 	* @param key    the key with which the specified value is associated
 	* @param value  the value to be associated with the specified key
 	*/
-	@:overload public function put(key : K, value : V) : Void;
+	@:overload @:public public function put(key : K, value : V) : Void;
 	
 	/**
 	* Removes all of the mappings from this cache.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

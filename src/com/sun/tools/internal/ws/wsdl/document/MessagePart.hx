@@ -30,59 +30,59 @@ extern class MessagePart extends com.sun.tools.internal.ws.wsdl.framework.Entity
 	*
 	* @author WS Development Team
 	*/
-	public static var SOAP_BODY_BINDING(default, null) : Int;
+	@:public @:static @:final public static var SOAP_BODY_BINDING(default, null) : Int;
 	
-	public static var SOAP_HEADER_BINDING(default, null) : Int;
+	@:public @:static @:final public static var SOAP_HEADER_BINDING(default, null) : Int;
 	
-	public static var SOAP_HEADERFAULT_BINDING(default, null) : Int;
+	@:public @:static @:final public static var SOAP_HEADERFAULT_BINDING(default, null) : Int;
 	
-	public static var SOAP_FAULT_BINDING(default, null) : Int;
+	@:public @:static @:final public static var SOAP_FAULT_BINDING(default, null) : Int;
 	
-	public static var WSDL_MIME_BINDING(default, null) : Int;
+	@:public @:static @:final public static var WSDL_MIME_BINDING(default, null) : Int;
 	
-	public static var PART_NOT_BOUNDED(default, null) : Int;
+	@:public @:static @:final public static var PART_NOT_BOUNDED(default, null) : Int;
 	
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
-	@:overload public function getDescriptor() : javax.xml.namespace.QName;
+	@:overload @:public public function getDescriptor() : javax.xml.namespace.QName;
 	
-	@:overload public function setDescriptor(n : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setDescriptor(n : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getDescriptorKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:overload @:public public function getDescriptorKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	@:overload public function setDescriptorKind(k : com.sun.tools.internal.ws.wsdl.framework.Kind) : Void;
+	@:overload @:public public function setDescriptorKind(k : com.sun.tools.internal.ws.wsdl.framework.Kind) : Void;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function getBindingExtensibilityElementKind() : Int;
+	@:overload @:public public function getBindingExtensibilityElementKind() : Int;
 	
-	@:overload public function setBindingExtensibilityElementKind(kind : Int) : Void;
+	@:overload @:public public function setBindingExtensibilityElementKind(kind : Int) : Void;
 	
-	@:overload override public function withAllQNamesDo(action : com.sun.tools.internal.ws.wsdl.framework.QNameAction) : Void;
+	@:overload @:public override public function withAllQNamesDo(action : com.sun.tools.internal.ws.wsdl.framework.QNameAction) : Void;
 	
-	@:overload override public function withAllEntityReferencesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityReferenceAction) : Void;
+	@:overload @:public override public function withAllEntityReferencesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityReferenceAction) : Void;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
+	@:overload @:public public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload @:public override public function validateThis() : Void;
 	
-	@:overload public function setMode(mode : Mode) : Void;
+	@:overload @:public public function setMode(mode : Mode) : Void;
 	
-	@:overload public function getMode() : Mode;
+	@:overload @:public public function getMode() : Mode;
 	
-	@:overload public function isINOUT() : Bool;
+	@:overload @:public public function isINOUT() : Bool;
 	
-	@:overload public function isIN() : Bool;
+	@:overload @:public public function isIN() : Bool;
 	
-	@:overload public function isOUT() : Bool;
+	@:overload @:public public function isOUT() : Bool;
 	
-	@:overload public function setReturn(ret : Bool) : Void;
+	@:overload @:public public function setReturn(ret : Bool) : Void;
 	
-	@:overload public function isReturn() : Bool;
+	@:overload @:public public function isReturn() : Bool;
 	
 	
 }

@@ -83,7 +83,7 @@ package java.awt;
 	* returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a button with the specified label.
@@ -94,7 +94,7 @@ package java.awt;
 	* returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(label : String) : Void;
+	@:overload @:public public function new(label : String) : Void;
 	
 	/**
 	* Creates the peer of the button.  The button's peer allows the
@@ -104,7 +104,7 @@ package java.awt;
 	* @see     java.awt.Toolkit#createButton(java.awt.Button)
 	* @see     java.awt.Component#getToolkit()
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Gets the label of this button.
@@ -113,7 +113,7 @@ package java.awt;
 	*                if the button has no label.
 	* @see       java.awt.Button#setLabel
 	*/
-	@:overload public function getLabel() : String;
+	@:overload @:public public function getLabel() : String;
 	
 	/**
 	* Sets the button's label to be the specified string.
@@ -122,7 +122,7 @@ package java.awt;
 	*                if the button has no label.
 	* @see       java.awt.Button#getLabel
 	*/
-	@:overload public function setLabel(label : String) : Void;
+	@:overload @:public public function setLabel(label : String) : Void;
 	
 	/**
 	* Sets the command name for the action event fired
@@ -136,14 +136,14 @@ package java.awt;
 	* @see       java.awt.event.ActionEvent
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function setActionCommand(command : String) : Void;
+	@:require(java1) @:overload @:public public function setActionCommand(command : String) : Void;
 	
 	/**
 	* Returns the command name of the action event fired by this button.
 	* If the command name is <code>null</code> (default) then this method
 	* returns the label of the button.
 	*/
-	@:overload public function getActionCommand() : String;
+	@:overload @:public public function getActionCommand() : String;
 	
 	/**
 	* Adds the specified action listener to receive action events from
@@ -159,7 +159,7 @@ package java.awt;
 	* @see           java.awt.event.ActionListener
 	* @since         JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function addActionListener(l : java.awt.event.ActionListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function addActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Removes the specified action listener so that it no longer
@@ -175,7 +175,7 @@ package java.awt;
 	* @see             java.awt.event.ActionListener
 	* @since           JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeActionListener(l : java.awt.event.ActionListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Returns an array of all the action listeners
@@ -190,7 +190,7 @@ package java.awt;
 	* @see             java.awt.event.ActionListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -225,7 +225,7 @@ package java.awt;
 	* @see #getActionListeners
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Processes events on this button. If an event is
@@ -241,7 +241,7 @@ package java.awt;
 	* @see          java.awt.Button#processActionEvent
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload override private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:require(java1) @:overload @:protected override private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes action events occurring on this button
@@ -266,7 +266,7 @@ package java.awt;
 	* @see         java.awt.Component#enableEvents
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload private function processActionEvent(e : java.awt.event.ActionEvent) : Void;
+	@:require(java1) @:overload @:protected private function processActionEvent(e : java.awt.event.ActionEvent) : Void;
 	
 	/**
 	* Returns a string representing the state of this <code>Button</code>.
@@ -277,7 +277,7 @@ package java.awt;
 	*
 	* @return     the parameter string of this button
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with
@@ -294,7 +294,7 @@ package java.awt;
 	*  description: The AccessibleContext associated with this Button.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -312,7 +312,7 @@ package java.awt;
 	* @return the localized name of the object -- can be null if this
 	* object does not have a name
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Get the AccessibleAction associated with this object.  In the
@@ -322,7 +322,7 @@ package java.awt;
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload @:public override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Get the AccessibleValue associated with this object.  In the
@@ -332,7 +332,7 @@ package java.awt;
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Returns the number of Actions available in this object.  The
@@ -341,14 +341,14 @@ package java.awt;
 	*
 	* @return 1, the number of Actions in this object
 	*/
-	@:overload public function getAccessibleActionCount() : Int;
+	@:overload @:public public function getAccessibleActionCount() : Int;
 	
 	/**
 	* Return a description of the specified action of the object.
 	*
 	* @param i zero-based index of the actions
 	*/
-	@:overload public function getAccessibleActionDescription(i : Int) : String;
+	@:overload @:public public function getAccessibleActionDescription(i : Int) : String;
 	
 	/**
 	* Perform the specified Action on the object
@@ -356,7 +356,7 @@ package java.awt;
 	* @param i zero-based index of actions
 	* @return true if the the action was performed; else false.
 	*/
-	@:overload public function doAccessibleAction(i : Int) : Bool;
+	@:overload @:public public function doAccessibleAction(i : Int) : Bool;
 	
 	/**
 	* Get the value of this object as a Number.
@@ -365,28 +365,28 @@ package java.awt;
 	* this is selected.
 	* @see javax.swing.AbstractButton#isSelected()
 	*/
-	@:overload public function getCurrentAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getCurrentAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Set the value of this object as a Number.
 	*
 	* @return True if the value was set.
 	*/
-	@:overload public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
+	@:overload @:public public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
 	
 	/**
 	* Get the minimum value of this object as a Number.
 	*
 	* @return An Integer of 0.
 	*/
-	@:overload public function getMinimumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMinimumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Get the maximum value of this object as a Number.
 	*
 	* @return An Integer of 0.
 	*/
-	@:overload public function getMaximumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMaximumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Get the role of this object.
@@ -395,7 +395,7 @@ package java.awt;
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

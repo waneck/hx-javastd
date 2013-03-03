@@ -40,7 +40,7 @@ package com.sun.beans.decoder;
 	* @param name   the attribute name
 	* @param value  the attribute value
 	*/
-	@:overload public function addAttribute(name : String, value : String) : Void;
+	@:overload @:public override public function addAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Tests whether the value of this element can be used
@@ -50,7 +50,7 @@ package com.sun.beans.decoder;
 	*         as an argument of the element that contained in this one,
 	*         {@code false} otherwise
 	*/
-	@:overload private function isArgument() : Bool;
+	@:overload @:protected override private function isArgument() : Bool;
 	
 	/**
 	* Returns the value of the property with specified {@code name}.
@@ -58,7 +58,7 @@ package com.sun.beans.decoder;
 	* @param name  the name of the property
 	* @return the value of the specified property
 	*/
-	@:overload private function getValue(name : String) : Dynamic;
+	@:overload @:protected override private function getValue(name : String) : Dynamic;
 	
 	/**
 	* Sets the new value for the property with specified {@code name}.
@@ -66,7 +66,7 @@ package com.sun.beans.decoder;
 	* @param name   the name of the property
 	* @param value  the new value for the specified property
 	*/
-	@:overload private function setValue(name : String, value : Dynamic) : Void;
+	@:overload @:protected override private function setValue(name : String, value : Dynamic) : Void;
 	
 	
 }

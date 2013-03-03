@@ -25,14 +25,14 @@ package sun.security.ssl;
 */
 @:internal extern class TrustManagerFactoryImpl extends javax.net.ssl.TrustManagerFactorySpi
 {
-	@:overload override private function engineInit(ks : java.security.KeyStore) : Void;
+	@:overload @:protected override private function engineInit(ks : java.security.KeyStore) : Void;
 	
-	@:overload override private function engineInit(spec : javax.net.ssl.ManagerFactoryParameters) : Void;
+	@:overload @:protected override private function engineInit(spec : javax.net.ssl.ManagerFactoryParameters) : Void;
 	
 	/**
 	* Returns one trust manager for each type of trust material.
 	*/
-	@:overload override private function engineGetTrustManagers() : java.NativeArray<javax.net.ssl.TrustManager>;
+	@:overload @:protected override private function engineGetTrustManagers() : java.NativeArray<javax.net.ssl.TrustManager>;
 	
 	
 }

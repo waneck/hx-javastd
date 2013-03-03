@@ -36,34 +36,34 @@ extern class FontInfo implements java.lang.Cloneable
 	* time. I am reluctant to add the overhead of that machinery here without
 	* a proven benefit.
 	*/
-	public var font : java.awt.Font;
+	@:public public var font : java.awt.Font;
 	
-	public var font2D : sun.font.Font2D;
+	@:public public var font2D : sun.font.Font2D;
 	
-	public var fontStrike : sun.font.FontStrike;
+	@:public public var fontStrike : sun.font.FontStrike;
 	
-	public var devTx : java.NativeArray<Float>;
+	@:public public var devTx : java.NativeArray<Float>;
 	
-	public var glyphTx : java.NativeArray<Float>;
+	@:public public var glyphTx : java.NativeArray<Float>;
 	
-	public var pixelHeight : Int;
+	@:public public var pixelHeight : Int;
 	
-	public var originX : Single;
+	@:public public var originX : Single;
 	
-	public var originY : Single;
+	@:public public var originY : Single;
 	
-	public var aaHint : Int;
+	@:public public var aaHint : Int;
 	
-	public var lcdRGBOrder : Bool;
+	@:public public var lcdRGBOrder : Bool;
 	
 	/* lcdSubPixPos is used if FM is ON for HRGB/HBGR LCD text mode */
-	public var lcdSubPixPos : Bool;
+	@:public public var lcdSubPixPos : Bool;
 	
-	@:overload public function mtx(matrix : java.NativeArray<Float>) : String;
+	@:overload @:public public function mtx(matrix : java.NativeArray<Float>) : String;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

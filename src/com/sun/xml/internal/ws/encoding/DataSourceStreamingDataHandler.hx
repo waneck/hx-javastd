@@ -28,13 +28,13 @@ extern class DataSourceStreamingDataHandler extends com.sun.xml.internal.org.jvn
 	/**
 	* @author Jitendra Kotamraju
 	*/
-	@:overload public function new(ds : javax.activation.DataSource) : Void;
+	@:overload @:public public function new(ds : javax.activation.DataSource) : Void;
 	
-	@:overload public function readOnce() : java.io.InputStream;
+	@:overload @:public override public function readOnce() : java.io.InputStream;
 	
-	@:overload public function moveTo(file : java.io.File) : Void;
+	@:overload @:public override public function moveTo(file : java.io.File) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

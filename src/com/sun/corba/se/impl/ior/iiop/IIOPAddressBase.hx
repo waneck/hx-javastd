@@ -28,24 +28,24 @@ package com.sun.corba.se.impl.ior.iiop;
 	/**
 	* @author
 	*/
-	@:overload private function intToShort(value : Int) : java.StdTypes.Int16;
+	@:overload @:protected private function intToShort(value : Int) : java.StdTypes.Int16;
 	
-	@:overload private function shortToInt(value : java.StdTypes.Int16) : Int;
+	@:overload @:protected private function shortToInt(value : java.StdTypes.Int16) : Int;
 	
-	@:overload public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload @:public public function getPort() : Int;
+	@:overload @:public @:public public function getPort() : Int;
 	
 	/** IIOPAddress represents the host and port used to establish a
 	* TCP connection for an IIOP request.
 	*/
-	@:overload @:public public function getHost() : String;
+	@:overload @:public @:public public function getHost() : String;
 	
 	
 }

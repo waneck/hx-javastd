@@ -50,7 +50,7 @@ package com.sun.jdi.event;
 	* @return an {@link ObjectReference} which mirrors the thrown object in
 	* the target VM.
 	*/
-	@:overload public function exception() : com.sun.jdi.ObjectReference;
+	@:overload @:public public function exception() : com.sun.jdi.ObjectReference;
 	
 	/**
 	* Gets the location where the exception will be caught. An exception
@@ -86,7 +86,7 @@ package com.sun.jdi.event;
 	* @return the {@link Location} where the exception will be caught or null if
 	* the exception is uncaught.
 	*/
-	@:overload public function catchLocation() : com.sun.jdi.Location;
+	@:overload @:public public function catchLocation() : com.sun.jdi.Location;
 	
 	
 }

@@ -28,21 +28,21 @@ package javax.xml.bind;
 	/**
 	* To avoid re-creating instances, we cache one instance.
 	*/
-	public static var theInstance(default, null) : javax.xml.bind.DatatypeConverterInterface;
+	@:public @:static @:final public static var theInstance(default, null) : javax.xml.bind.DatatypeConverterInterface;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload public function parseString(lexicalXSDString : String) : String;
+	@:overload @:public public function parseString(lexicalXSDString : String) : String;
 	
-	@:overload public function parseInteger(lexicalXSDInteger : String) : java.math.BigInteger;
+	@:overload @:public public function parseInteger(lexicalXSDInteger : String) : java.math.BigInteger;
 	
-	@:overload public static function _parseInteger(s : java.lang.CharSequence) : java.math.BigInteger;
+	@:overload @:public @:static public static function _parseInteger(s : java.lang.CharSequence) : java.math.BigInteger;
 	
-	@:overload public function printInteger(val : java.math.BigInteger) : String;
+	@:overload @:public public function printInteger(val : java.math.BigInteger) : String;
 	
-	@:overload public static function _printInteger(val : java.math.BigInteger) : String;
+	@:overload @:public @:static public static function _printInteger(val : java.math.BigInteger) : String;
 	
-	@:overload public function parseInt(s : String) : Int;
+	@:overload @:public public function parseInt(s : String) : Int;
 	
 	/**
 	* Faster but less robust String->int conversion.
@@ -54,125 +54,125 @@ package javax.xml.bind;
 	*      {@link Integer#valueOf(String)} doesn't allow any.
 	* </ol>
 	*/
-	@:overload public static function _parseInt(s : java.lang.CharSequence) : Int;
+	@:overload @:public @:static public static function _parseInt(s : java.lang.CharSequence) : Int;
 	
-	@:overload public function parseLong(lexicalXSLong : String) : haxe.Int64;
+	@:overload @:public public function parseLong(lexicalXSLong : String) : haxe.Int64;
 	
-	@:overload public static function _parseLong(s : java.lang.CharSequence) : haxe.Int64;
+	@:overload @:public @:static public static function _parseLong(s : java.lang.CharSequence) : haxe.Int64;
 	
-	@:overload public function parseShort(lexicalXSDShort : String) : java.StdTypes.Int16;
+	@:overload @:public public function parseShort(lexicalXSDShort : String) : java.StdTypes.Int16;
 	
-	@:overload public static function _parseShort(s : java.lang.CharSequence) : java.StdTypes.Int16;
+	@:overload @:public @:static public static function _parseShort(s : java.lang.CharSequence) : java.StdTypes.Int16;
 	
-	@:overload public function printShort(val : java.StdTypes.Int16) : String;
+	@:overload @:public public function printShort(val : java.StdTypes.Int16) : String;
 	
-	@:overload public static function _printShort(val : java.StdTypes.Int16) : String;
+	@:overload @:public @:static public static function _printShort(val : java.StdTypes.Int16) : String;
 	
-	@:overload public function parseDecimal(content : String) : java.math.BigDecimal;
+	@:overload @:public public function parseDecimal(content : String) : java.math.BigDecimal;
 	
-	@:overload public static function _parseDecimal(content : java.lang.CharSequence) : java.math.BigDecimal;
+	@:overload @:public @:static public static function _parseDecimal(content : java.lang.CharSequence) : java.math.BigDecimal;
 	
-	@:overload public function parseFloat(lexicalXSDFloat : String) : Single;
+	@:overload @:public public function parseFloat(lexicalXSDFloat : String) : Single;
 	
-	@:overload public static function _parseFloat(_val : java.lang.CharSequence) : Single;
+	@:overload @:public @:static public static function _parseFloat(_val : java.lang.CharSequence) : Single;
 	
-	@:overload public function printFloat(v : Single) : String;
+	@:overload @:public public function printFloat(v : Single) : String;
 	
-	@:overload public static function _printFloat(v : Single) : String;
+	@:overload @:public @:static public static function _printFloat(v : Single) : String;
 	
-	@:overload public function parseDouble(lexicalXSDDouble : String) : Float;
+	@:overload @:public public function parseDouble(lexicalXSDDouble : String) : Float;
 	
-	@:overload public static function _parseDouble(_val : java.lang.CharSequence) : Float;
+	@:overload @:public @:static public static function _parseDouble(_val : java.lang.CharSequence) : Float;
 	
-	@:overload public function parseBoolean(lexicalXSDBoolean : String) : Bool;
+	@:overload @:public public function parseBoolean(lexicalXSDBoolean : String) : Bool;
 	
-	@:overload public static function _parseBoolean(literal : java.lang.CharSequence) : Null<Bool>;
+	@:overload @:public @:static public static function _parseBoolean(literal : java.lang.CharSequence) : Null<Bool>;
 	
-	@:overload public function printBoolean(val : Bool) : String;
+	@:overload @:public public function printBoolean(val : Bool) : String;
 	
-	@:overload public static function _printBoolean(val : Bool) : String;
+	@:overload @:public @:static public static function _printBoolean(val : Bool) : String;
 	
-	@:overload public function parseByte(lexicalXSDByte : String) : java.StdTypes.Int8;
+	@:overload @:public public function parseByte(lexicalXSDByte : String) : java.StdTypes.Int8;
 	
-	@:overload public static function _parseByte(literal : java.lang.CharSequence) : java.StdTypes.Int8;
+	@:overload @:public @:static public static function _parseByte(literal : java.lang.CharSequence) : java.StdTypes.Int8;
 	
-	@:overload public function printByte(val : java.StdTypes.Int8) : String;
+	@:overload @:public public function printByte(val : java.StdTypes.Int8) : String;
 	
-	@:overload public static function _printByte(val : java.StdTypes.Int8) : String;
+	@:overload @:public @:static public static function _printByte(val : java.StdTypes.Int8) : String;
 	
-	@:overload public function parseQName(lexicalXSDQName : String, nsc : javax.xml.namespace.NamespaceContext) : javax.xml.namespace.QName;
+	@:overload @:public public function parseQName(lexicalXSDQName : String, nsc : javax.xml.namespace.NamespaceContext) : javax.xml.namespace.QName;
 	
 	/**
 	* @return null if fails to convert.
 	*/
-	@:overload public static function _parseQName(text : java.lang.CharSequence, nsc : javax.xml.namespace.NamespaceContext) : javax.xml.namespace.QName;
+	@:overload @:public @:static public static function _parseQName(text : java.lang.CharSequence, nsc : javax.xml.namespace.NamespaceContext) : javax.xml.namespace.QName;
 	
-	@:overload public function parseDateTime(lexicalXSDDateTime : String) : java.util.Calendar;
+	@:overload @:public public function parseDateTime(lexicalXSDDateTime : String) : java.util.Calendar;
 	
-	@:overload public static function _parseDateTime(s : java.lang.CharSequence) : java.util.GregorianCalendar;
+	@:overload @:public @:static public static function _parseDateTime(s : java.lang.CharSequence) : java.util.GregorianCalendar;
 	
-	@:overload public function printDateTime(val : java.util.Calendar) : String;
+	@:overload @:public public function printDateTime(val : java.util.Calendar) : String;
 	
-	@:overload public static function _printDateTime(val : java.util.Calendar) : String;
+	@:overload @:public @:static public static function _printDateTime(val : java.util.Calendar) : String;
 	
-	@:overload public function parseBase64Binary(lexicalXSDBase64Binary : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function parseBase64Binary(lexicalXSDBase64Binary : String) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function parseHexBinary(s : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function parseHexBinary(s : String) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function printHexBinary(data : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public public function printHexBinary(data : java.NativeArray<java.StdTypes.Int8>) : String;
 	
-	@:overload public function parseUnsignedInt(lexicalXSDUnsignedInt : String) : haxe.Int64;
+	@:overload @:public public function parseUnsignedInt(lexicalXSDUnsignedInt : String) : haxe.Int64;
 	
-	@:overload public function printUnsignedInt(val : haxe.Int64) : String;
+	@:overload @:public public function printUnsignedInt(val : haxe.Int64) : String;
 	
-	@:overload public function parseUnsignedShort(lexicalXSDUnsignedShort : String) : Int;
+	@:overload @:public public function parseUnsignedShort(lexicalXSDUnsignedShort : String) : Int;
 	
-	@:overload public function parseTime(lexicalXSDTime : String) : java.util.Calendar;
+	@:overload @:public public function parseTime(lexicalXSDTime : String) : java.util.Calendar;
 	
-	@:overload public function printTime(val : java.util.Calendar) : String;
+	@:overload @:public public function printTime(val : java.util.Calendar) : String;
 	
-	@:overload public function parseDate(lexicalXSDDate : String) : java.util.Calendar;
+	@:overload @:public public function parseDate(lexicalXSDDate : String) : java.util.Calendar;
 	
-	@:overload public function printDate(val : java.util.Calendar) : String;
+	@:overload @:public public function printDate(val : java.util.Calendar) : String;
 	
-	@:overload public static function _printDate(val : java.util.Calendar) : String;
+	@:overload @:public @:static public static function _printDate(val : java.util.Calendar) : String;
 	
-	@:overload public function parseAnySimpleType(lexicalXSDAnySimpleType : String) : String;
+	@:overload @:public public function parseAnySimpleType(lexicalXSDAnySimpleType : String) : String;
 	
-	@:overload public function printString(val : String) : String;
+	@:overload @:public public function printString(val : String) : String;
 	
-	@:overload public function printInt(val : Int) : String;
+	@:overload @:public public function printInt(val : Int) : String;
 	
-	@:overload public static function _printInt(val : Int) : String;
+	@:overload @:public @:static public static function _printInt(val : Int) : String;
 	
-	@:overload public function printLong(val : haxe.Int64) : String;
+	@:overload @:public public function printLong(val : haxe.Int64) : String;
 	
-	@:overload public static function _printLong(val : haxe.Int64) : String;
+	@:overload @:public @:static public static function _printLong(val : haxe.Int64) : String;
 	
-	@:overload public function printDecimal(val : java.math.BigDecimal) : String;
+	@:overload @:public public function printDecimal(val : java.math.BigDecimal) : String;
 	
-	@:overload public static function _printDecimal(val : java.math.BigDecimal) : String;
+	@:overload @:public @:static public static function _printDecimal(val : java.math.BigDecimal) : String;
 	
-	@:overload public function printDouble(v : Float) : String;
+	@:overload @:public public function printDouble(v : Float) : String;
 	
-	@:overload public static function _printDouble(v : Float) : String;
+	@:overload @:public @:static public static function _printDouble(v : Float) : String;
 	
-	@:overload public function printQName(val : javax.xml.namespace.QName, nsc : javax.xml.namespace.NamespaceContext) : String;
+	@:overload @:public public function printQName(val : javax.xml.namespace.QName, nsc : javax.xml.namespace.NamespaceContext) : String;
 	
-	@:overload public static function _printQName(val : javax.xml.namespace.QName, nsc : javax.xml.namespace.NamespaceContext) : String;
+	@:overload @:public @:static public static function _printQName(val : javax.xml.namespace.QName, nsc : javax.xml.namespace.NamespaceContext) : String;
 	
-	@:overload public function printBase64Binary(val : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public public function printBase64Binary(val : java.NativeArray<java.StdTypes.Int8>) : String;
 	
-	@:overload public function printUnsignedShort(val : Int) : String;
+	@:overload @:public public function printUnsignedShort(val : Int) : String;
 	
-	@:overload public function printAnySimpleType(val : String) : String;
+	@:overload @:public public function printAnySimpleType(val : String) : String;
 	
 	/**
 	* Just return the string passed as a parameter but
 	* installs an instance of this class as the DatatypeConverter
 	* implementation. Used from static fixed value initializers.
 	*/
-	@:overload public static function installHook(s : String) : String;
+	@:overload @:public @:static public static function installHook(s : String) : String;
 	
 	/**
 	* @param text
@@ -183,15 +183,15 @@ package javax.xml.bind;
 	*      A benchmark showed that taking {@link String} is faster, presumably
 	*      because JIT can inline a lot of string access (with data of 1K chars, it was twice as fast)
 	*/
-	@:overload public static function _parseBase64Binary(text : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function _parseBase64Binary(text : String) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function encode(i : Int) : java.StdTypes.Char16;
+	@:overload @:public @:static public static function encode(i : Int) : java.StdTypes.Char16;
 	
-	@:overload public static function encodeByte(i : Int) : java.StdTypes.Int8;
+	@:overload @:public @:static public static function encodeByte(i : Int) : java.StdTypes.Int8;
 	
-	@:overload public static function _printBase64Binary(input : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public @:static public static function _printBase64Binary(input : java.NativeArray<java.StdTypes.Int8>) : String;
 	
-	@:overload public static function _printBase64Binary(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : String;
+	@:overload @:public @:static public static function _printBase64Binary(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : String;
 	
 	/**
 	* Encodes a byte array into a char array by doing base64 encoding.
@@ -202,7 +202,7 @@ package javax.xml.bind;
 	*      the value of {@code ptr+((len+2)/3)*4}, which is the new offset
 	*      in the output buffer where the further bytes should be placed.
 	*/
-	@:overload public static function _printBase64Binary(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, buf : java.NativeArray<java.StdTypes.Char16>, ptr : Int) : Int;
+	@:overload @:public @:static public static function _printBase64Binary(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, buf : java.NativeArray<java.StdTypes.Char16>, ptr : Int) : Int;
 	
 	/**
 	* Encodes a byte array into another byte array by first doing base64 encoding
@@ -214,13 +214,13 @@ package javax.xml.bind;
 	*      the value of {@code ptr+((len+2)/3)*4}, which is the new offset
 	*      in the output buffer where the further bytes should be placed.
 	*/
-	@:overload public static function _printBase64Binary(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, out : java.NativeArray<java.StdTypes.Int8>, ptr : Int) : Int;
+	@:overload @:public @:static public static function _printBase64Binary(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, out : java.NativeArray<java.StdTypes.Int8>, ptr : Int) : Int;
 	
 	
 }
 @:native('javax$xml$bind$DatatypeConverterImpl$CalendarFormatter') @:internal extern class DatatypeConverterImpl_CalendarFormatter
 {
-	@:overload public static function doFormat(format : String, cal : java.util.Calendar) : String;
+	@:overload @:public @:static public static function doFormat(format : String, cal : java.util.Calendar) : String;
 	
 	
 }

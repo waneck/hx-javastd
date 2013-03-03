@@ -31,12 +31,12 @@ extern class BasicTextFieldUI extends javax.swing.plaf.basic.BasicTextUI
 	* @param c the text field
 	* @return the UI
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Creates a new BasicTextFieldUI.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Fetches the name used as a key to lookup properties through the
@@ -45,7 +45,7 @@ extern class BasicTextFieldUI extends javax.swing.plaf.basic.BasicTextUI
 	*
 	* @return the name ("TextField")
 	*/
-	@:overload override private function getPropertyPrefix() : String;
+	@:overload @:protected override private function getPropertyPrefix() : String;
 	
 	/**
 	* Creates a view (FieldView) based on an element.
@@ -53,7 +53,7 @@ extern class BasicTextFieldUI extends javax.swing.plaf.basic.BasicTextUI
 	* @param elem the element
 	* @return the view
 	*/
-	@:overload override public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
+	@:overload @:public override public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
 	
 	/**
 	* Returns the baseline.
@@ -63,7 +63,7 @@ extern class BasicTextFieldUI extends javax.swing.plaf.basic.BasicTextUI
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
+	@:require(java6) @:overload @:public override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
 	
 	/**
 	* Returns an enum indicating how the baseline of the component
@@ -73,7 +73,7 @@ extern class BasicTextFieldUI extends javax.swing.plaf.basic.BasicTextUI
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
+	@:require(java6) @:overload @:public override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
 	
 	
 }
@@ -89,9 +89,9 @@ extern class BasicTextFieldUI extends javax.swing.plaf.basic.BasicTextUI
 	* a field since it scrolls, so this is implemented to
 	* return <code>Integer.MAX_VALUE</code>.
 	*/
-	@:overload override public function getFlowSpan(index : Int) : Int;
+	@:overload @:public override public function getFlowSpan(index : Int) : Int;
 	
-	@:overload override private function setJustification(j : Int) : Void;
+	@:overload @:protected override private function setJustification(j : Int) : Void;
 	
 	/**
 	* Renders using the given rendering surface and area on that surface.
@@ -103,7 +103,7 @@ extern class BasicTextFieldUI extends javax.swing.plaf.basic.BasicTextUI
 	*
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
 	
 	/**
 	* Determines the resizability of the view along the
@@ -112,7 +112,7 @@ extern class BasicTextFieldUI extends javax.swing.plaf.basic.BasicTextUI
 	* @param axis View.X_AXIS or View.Y_AXIS
 	* @return the weight -> 1 for View.X_AXIS, else 0
 	*/
-	@:overload override public function getResizeWeight(axis : Int) : Int;
+	@:overload @:public override public function getResizeWeight(axis : Int) : Int;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -125,7 +125,7 @@ extern class BasicTextFieldUI extends javax.swing.plaf.basic.BasicTextUI
 	*   represent a valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload @:public override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -146,7 +146,7 @@ extern class BasicTextFieldUI extends javax.swing.plaf.basic.BasicTextUI
 	* @exception IllegalArgumentException for an invalid bias argument
 	* @see View#viewToModel
 	*/
-	@:overload override public function modelToView(p0 : Int, b0 : javax.swing.text.Position.Position_Bias, p1 : Int, b1 : javax.swing.text.Position.Position_Bias, a : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public override public function modelToView(p0 : Int, b0 : javax.swing.text.Position.Position_Bias, p1 : Int, b1 : javax.swing.text.Position.Position_Bias, a : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -159,7 +159,7 @@ extern class BasicTextFieldUI extends javax.swing.plaf.basic.BasicTextUI
 	*  given point in the view
 	* @see View#viewToModel
 	*/
-	@:overload override public function viewToModel(fx : Single, fy : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function viewToModel(fx : Single, fy : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Gives notification that something was inserted into the document
@@ -170,7 +170,7 @@ extern class BasicTextFieldUI extends javax.swing.plaf.basic.BasicTextUI
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#insertUpdate
 	*/
-	@:overload override public function insertUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function insertUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -181,7 +181,7 @@ extern class BasicTextFieldUI extends javax.swing.plaf.basic.BasicTextUI
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#removeUpdate
 	*/
-	@:overload override public function removeUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function removeUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	
 }

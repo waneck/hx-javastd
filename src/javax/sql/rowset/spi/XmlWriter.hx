@@ -58,7 +58,7 @@ extern interface XmlWriter extends javax.sql.RowSetWriter
 	*            this <code>XmlWriter</code> object is not the writer
 	*            for the given <code>WebRowSet</code> object
 	*/
-	@:overload public function writeXML(caller : javax.sql.rowset.WebRowSet, writer : java.io.Writer) : Void;
+	@:overload @:public public function writeXML(caller : javax.sql.rowset.WebRowSet, writer : java.io.Writer) : Void;
 	
 	
 }

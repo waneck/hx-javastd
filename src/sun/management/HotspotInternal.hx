@@ -29,15 +29,15 @@ extern class HotspotInternal implements sun.management.HotspotInternalMBean impl
 	* Default constructor that registers all hotspot internal MBeans
 	* to the MBeanServer that creates this MBean.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
+	@:overload @:public public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
 	
-	@:overload public function postRegister(registrationDone : Null<Bool>) : Void;
+	@:overload @:public public function postRegister(registrationDone : Null<Bool>) : Void;
 	
-	@:overload public function preDeregister() : Void;
+	@:overload @:public public function preDeregister() : Void;
 	
-	@:overload public function postDeregister() : Void;
+	@:overload @:public public function postDeregister() : Void;
 	
 	
 }

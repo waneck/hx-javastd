@@ -32,12 +32,12 @@ package com.sun.tools.internal.xjc;
 	* @param v
 	*      Either "1.0" or "2.0", indicating the version of the -source value.
 	*/
-	@:overload private static function createProtectiveClassLoader(cl : java.lang.ClassLoader, v : String) : java.lang.ClassLoader;
+	@:overload @:protected @:static private static function createProtectiveClassLoader(cl : java.lang.ClassLoader, v : String) : java.lang.ClassLoader;
 	
 	/**
 	* Escape hatch in case this class loader hack breaks.
 	*/
-	public static var noHack(default, null) : Bool;
+	@:public @:static @:final public static var noHack(default, null) : Bool;
 	
 	
 }

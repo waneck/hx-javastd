@@ -35,19 +35,19 @@ package sun.jvmstat.perfdata.monitor.protocol.file;
 	/**
 	* The default polling interval. Not used by the <em>file:</em> protocol.
 	*/
-	public static var DEFAULT_POLLING_INTERVAL(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_POLLING_INTERVAL(default, null) : Int;
 	
 	/**
 	* Create a MonitoredHostProvider instance using the given HostIdentifier.
 	*
 	* @param hostId the host identifier for this MonitoredHost
 	*/
-	@:overload public function new(hostId : sun.jvmstat.monitor.HostIdentifier) : Void;
+	@:overload @:public public function new(hostId : sun.jvmstat.monitor.HostIdentifier) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getMonitoredVm(vmid : sun.jvmstat.monitor.VmIdentifier) : sun.jvmstat.monitor.MonitoredVm;
+	@:overload @:public override public function getMonitoredVm(vmid : sun.jvmstat.monitor.VmIdentifier) : sun.jvmstat.monitor.MonitoredVm;
 	
 	/**
 	* {@inheritDoc}.
@@ -55,12 +55,12 @@ package sun.jvmstat.perfdata.monitor.protocol.file;
 	* Note - the <em>file:</em> protocol silently ignores the
 	* <tt>interval</tt> parameter.
 	*/
-	@:overload override public function getMonitoredVm(vmid : sun.jvmstat.monitor.VmIdentifier, interval : Int) : sun.jvmstat.monitor.MonitoredVm;
+	@:overload @:public override public function getMonitoredVm(vmid : sun.jvmstat.monitor.VmIdentifier, interval : Int) : sun.jvmstat.monitor.MonitoredVm;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function detach(vm : sun.jvmstat.monitor.MonitoredVm) : Void;
+	@:overload @:public override public function detach(vm : sun.jvmstat.monitor.MonitoredVm) : Void;
 	
 	/**
 	* {@inheritDoc}.
@@ -69,7 +69,7 @@ package sun.jvmstat.perfdata.monitor.protocol.file;
 	* registration or notification of event listeners. This method
 	* silently ignores the add request.
 	*/
-	@:overload override public function addHostListener(listener : sun.jvmstat.monitor.event.HostListener) : Void;
+	@:overload @:public override public function addHostListener(listener : sun.jvmstat.monitor.event.HostListener) : Void;
 	
 	/**
 	* {@inheritDoc}.
@@ -78,7 +78,7 @@ package sun.jvmstat.perfdata.monitor.protocol.file;
 	* registration or notification of event listeners. This method
 	* silently ignores the remove request.
 	*/
-	@:overload override public function removeHostListener(listener : sun.jvmstat.monitor.event.HostListener) : Void;
+	@:overload @:public override public function removeHostListener(listener : sun.jvmstat.monitor.event.HostListener) : Void;
 	
 	/**
 	* {@inheritDoc}.
@@ -87,7 +87,7 @@ package sun.jvmstat.perfdata.monitor.protocol.file;
 	* notion of tracking active or inactive Java Virtual Machines. This
 	* method currently returns an empty set.
 	*/
-	@:overload override public function activeVms() : java.util.Set<Null<Int>>;
+	@:overload @:public override public function activeVms() : java.util.Set<Null<Int>>;
 	
 	
 }

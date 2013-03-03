@@ -26,33 +26,33 @@ package com.sun.tools.internal.xjc.reader.internalizer;
 extern class DOMForest
 {
 	/** Stores location information for all the trees in this forest. */
-	public var locatorTable(default, null) : com.sun.tools.internal.xjc.reader.internalizer.LocatorTable;
+	@:public @:final public var locatorTable(default, null) : com.sun.tools.internal.xjc.reader.internalizer.LocatorTable;
 	
 	/** Stores all the outer-most &lt;jaxb:bindings> customizations. */
-	public var outerMostBindings(default, null) : java.util.Set<org.w3c.dom.Element>;
+	@:public @:final public var outerMostBindings(default, null) : java.util.Set<org.w3c.dom.Element>;
 	
 	/** Schema language dependent part of the processing. */
-	private var logic(default, null) : com.sun.tools.internal.xjc.reader.internalizer.InternalizationLogic;
+	@:protected @:final private var logic(default, null) : com.sun.tools.internal.xjc.reader.internalizer.InternalizationLogic;
 	
-	@:overload public function new(parserFactory : javax.xml.parsers.SAXParserFactory, documentBuilder : javax.xml.parsers.DocumentBuilder, logic : com.sun.tools.internal.xjc.reader.internalizer.InternalizationLogic) : Void;
+	@:overload @:public public function new(parserFactory : javax.xml.parsers.SAXParserFactory, documentBuilder : javax.xml.parsers.DocumentBuilder, logic : com.sun.tools.internal.xjc.reader.internalizer.InternalizationLogic) : Void;
 	
-	@:overload public function new(logic : com.sun.tools.internal.xjc.reader.internalizer.InternalizationLogic) : Void;
+	@:overload @:public public function new(logic : com.sun.tools.internal.xjc.reader.internalizer.InternalizationLogic) : Void;
 	
 	/**
 	* Gets the DOM tree associated with the specified system ID,
 	* or null if none is found.
 	*/
-	@:overload public function get(systemId : String) : org.w3c.dom.Document;
+	@:overload @:public public function get(systemId : String) : org.w3c.dom.Document;
 	
 	/**
 	* Returns a read-only set of root document system IDs.
 	*/
-	@:overload public function getRootDocuments() : java.util.Set<String>;
+	@:overload @:public public function getRootDocuments() : java.util.Set<String>;
 	
 	/**
 	* Picks one document at random and returns it.
 	*/
-	@:overload public function getOneDocument() : org.w3c.dom.Document;
+	@:overload @:public public function getOneDocument() : org.w3c.dom.Document;
 	
 	/**
 	* Checks the correctness of the XML Schema documents and return true
@@ -65,16 +65,16 @@ extern class DOMForest
 	*
 	* @see SchemaConstraintChecker
 	*/
-	@:overload public function checkSchemaCorrectness(errorHandler : com.sun.tools.internal.xjc.ErrorReceiver) : Bool;
+	@:overload @:public public function checkSchemaCorrectness(errorHandler : com.sun.tools.internal.xjc.ErrorReceiver) : Bool;
 	
 	/**
 	* Gets the system ID from which the given DOM is parsed.
 	* <p>
 	* Poor-man's base URI.
 	*/
-	@:overload public function getSystemId(dom : org.w3c.dom.Document) : String;
+	@:overload @:public public function getSystemId(dom : org.w3c.dom.Document) : String;
 	
-	@:overload public function parse(source : org.xml.sax.InputSource, root : Bool) : org.w3c.dom.Document;
+	@:overload @:public public function parse(source : org.xml.sax.InputSource, root : Bool) : org.w3c.dom.Document;
 	
 	/**
 	* Parses an XML at the given location (
@@ -83,7 +83,7 @@ extern class DOMForest
 	*
 	* @return the parsed DOM document object.
 	*/
-	@:overload public function parse(systemId : String, root : Bool) : org.w3c.dom.Document;
+	@:overload @:public public function parse(systemId : String, root : Bool) : org.w3c.dom.Document;
 	
 	/**
 	* Returns a {@link ContentHandler} to feed SAX events into.
@@ -92,7 +92,7 @@ extern class DOMForest
 	* The client of this class can feed SAX events into the handler
 	* to parse a document into this DOM forest.
 	*/
-	@:overload public function getParserHandler(systemId : String, root : Bool) : com.sun.tools.internal.xjc.reader.internalizer.DOMForest.DOMForest_Handler;
+	@:overload @:public public function getParserHandler(systemId : String, root : Bool) : com.sun.tools.internal.xjc.reader.internalizer.DOMForest.DOMForest_Handler;
 	
 	/**
 	* Parses the given document and add it to the DOM forest.
@@ -100,9 +100,9 @@ extern class DOMForest
 	* @return
 	*      null if there was a parse error. otherwise non-null.
 	*/
-	@:overload public function parse(systemId : String, inputSource : org.xml.sax.InputSource, root : Bool) : org.w3c.dom.Document;
+	@:overload @:public public function parse(systemId : String, inputSource : org.xml.sax.InputSource, root : Bool) : org.w3c.dom.Document;
 	
-	@:overload public function parse(systemId : String, parser : javax.xml.stream.XMLStreamReader, root : Bool) : org.w3c.dom.Document;
+	@:overload @:public public function parse(systemId : String, parser : javax.xml.stream.XMLStreamReader, root : Bool) : org.w3c.dom.Document;
 	
 	/**
 	* Performs internalization.
@@ -114,7 +114,7 @@ extern class DOMForest
 	*      the returned bindings need to be applied after schema
 	*      components are built.
 	*/
-	@:overload public function transform(enableSCD : Bool) : com.sun.tools.internal.xjc.reader.internalizer.SCDBasedBindingSet;
+	@:overload @:public public function transform(enableSCD : Bool) : com.sun.tools.internal.xjc.reader.internalizer.SCDBasedBindingSet;
 	
 	/**
 	* Performs the schema correctness check by using JAXP 1.3.
@@ -135,13 +135,13 @@ extern class DOMForest
 	* <p>
 	* To receive errors, use {@link SchemaFactory#setErrorHandler(ErrorHandler)}.
 	*/
-	@:overload public function weakSchemaCorrectnessCheck(sf : javax.xml.validation.SchemaFactory) : Void;
+	@:overload @:public public function weakSchemaCorrectnessCheck(sf : javax.xml.validation.SchemaFactory) : Void;
 	
 	/**
 	* Creates a {@link SAXSource} that, when parsed, reads from this {@link DOMForest}
 	* (instead of parsing the original source identified by the system ID.)
 	*/
-	@:overload public function createSAXSource(systemId : String) : javax.xml.transform.sax.SAXSource;
+	@:overload @:public public function createSAXSource(systemId : String) : javax.xml.transform.sax.SAXSource;
 	
 	/**
 	* Creates {@link XMLParser} for XSOM which reads documents from
@@ -150,32 +150,32 @@ extern class DOMForest
 	* The net effect is that XSOM will read transformed XML Schemas
 	* instead of the original documents.
 	*/
-	@:overload public function createParser() : com.sun.xml.internal.xsom.parser.XMLParser;
+	@:overload @:public public function createParser() : com.sun.xml.internal.xsom.parser.XMLParser;
 	
-	@:overload public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
-	@:overload public function setEntityResolver(entityResolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(entityResolver : org.xml.sax.EntityResolver) : Void;
 	
-	@:overload public function getErrorHandler() : com.sun.tools.internal.xjc.ErrorReceiver;
+	@:overload @:public public function getErrorHandler() : com.sun.tools.internal.xjc.ErrorReceiver;
 	
-	@:overload public function setErrorHandler(errorHandler : com.sun.tools.internal.xjc.ErrorReceiver) : Void;
+	@:overload @:public public function setErrorHandler(errorHandler : com.sun.tools.internal.xjc.ErrorReceiver) : Void;
 	
 	/**
 	* Gets all the parsed documents.
 	*/
-	@:overload public function listDocuments() : java.NativeArray<org.w3c.dom.Document>;
+	@:overload @:public public function listDocuments() : java.NativeArray<org.w3c.dom.Document>;
 	
 	/**
 	* Gets all the system IDs of the documents.
 	*/
-	@:overload public function listSystemIDs() : java.NativeArray<String>;
+	@:overload @:public public function listSystemIDs() : java.NativeArray<String>;
 	
 	/**
 	* Dumps the contents of the forest to the specified stream.
 	*
 	* This is a debug method. As such, error handling is sloppy.
 	*/
-	@:overload public function dump(out : java.io.OutputStream) : Void;
+	@:overload @:public public function dump(out : java.io.OutputStream) : Void;
 	
 	
 }
@@ -184,7 +184,7 @@ extern class DOMForest
 	/**
 	* Gets the DOM that was built.
 	*/
-	@:overload @:public public function getDocument() : org.w3c.dom.Document;
+	@:overload @:public @:public public function getDocument() : org.w3c.dom.Document;
 	
 	
 }
@@ -201,7 +201,7 @@ extern class DOMForest
 	*            wrapping another exception
 	* @see #endDocument
 	*/
-	@:overload @:public override public function startDocument() : Void;
+	@:overload @:public @:public @:public override public function startDocument() : Void;
 	
 	/**
 	* Begin the scope of a prefix-URI Namespace mapping.
@@ -241,7 +241,7 @@ extern class DOMForest
 	* @see #endPrefixMapping
 	* @see #startElement
 	*/
-	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public @:public @:public @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	/**
 	* Receive notification of a skipped entity.
@@ -268,7 +268,7 @@ extern class DOMForest
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload @:public override public function skippedEntity(name : String) : Void;
+	@:overload @:public @:public @:public @:public override public function skippedEntity(name : String) : Void;
 	
 	/**
 	* Receive an object for locating the origin of SAX document events.
@@ -297,7 +297,7 @@ extern class DOMForest
 	*                any SAX document event
 	* @see org.xml.sax.Locator
 	*/
-	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public @:public @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Receive notification of the beginning of an element.
@@ -363,7 +363,7 @@ extern class DOMForest
 	* @see org.xml.sax.Attributes
 	* @see org.xml.sax.helpers.AttributesImpl
 	*/
-	@:overload @:public override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -408,7 +408,7 @@ extern class DOMForest
 	* @see #ignorableWhitespace
 	* @see org.xml.sax.Locator
 	*/
-	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public @:public @:public @:public @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of a processing instruction.
@@ -432,7 +432,7 @@ extern class DOMForest
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload @:public override public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public @:public @:public @:public override public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* End the scope of a prefix-URI mapping.
@@ -450,7 +450,7 @@ extern class DOMForest
 	* @see #startPrefixMapping
 	* @see #endElement
 	*/
-	@:overload @:public override public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public @:public @:public @:public override public function endPrefixMapping(prefix : String) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -473,7 +473,7 @@ extern class DOMForest
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload @:public override public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public override public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Receive notification of ignorable whitespace in element content.
@@ -500,7 +500,7 @@ extern class DOMForest
 	*            wrapping another exception
 	* @see #characters
 	*/
-	@:overload @:public override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public @:public @:public @:public override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of the end of a document.
@@ -523,12 +523,12 @@ extern class DOMForest
 	*            wrapping another exception
 	* @see #startDocument
 	*/
-	@:overload @:public override public function endDocument() : Void;
+	@:overload @:public @:public @:public @:public override public function endDocument() : Void;
 	
 	/**
 	* Gets the DOM that was built.
 	*/
-	@:overload public function getDocument() : org.w3c.dom.Document;
+	@:overload @:public @:public public function getDocument() : org.w3c.dom.Document;
 	
 	
 }

@@ -25,7 +25,7 @@ package java.awt;
 */
 extern class TextComponent extends java.awt.Component implements javax.accessibility.Accessible
 {
-	@:transient private var textListener : java.awt.event.TextListener;
+	@:transient @:protected private var textListener : java.awt.event.TextListener;
 	
 	/**
 	* Enables or disables input method support for this text component. If input
@@ -39,9 +39,9 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see #processKeyEvent
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function enableInputMethods(enable : Bool) : Void;
+	@:require(java2) @:overload @:public override public function enableInputMethods(enable : Bool) : Void;
 	
-	@:overload override public function getInputMethodRequests() : java.awt.im.InputMethodRequests;
+	@:overload @:public override public function getInputMethodRequests() : java.awt.im.InputMethodRequests;
 	
 	/**
 	* Makes this Component displayable by connecting it to a
@@ -50,7 +50,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* not be called directly by programs.
 	* @see       java.awt.TextComponent#removeNotify
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Removes the <code>TextComponent</code>'s peer.
@@ -58,7 +58,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* <code>TextComponent</code> without changing its
 	* functionality.
 	*/
-	@:overload override public function removeNotify() : Void;
+	@:overload @:public override public function removeNotify() : Void;
 	
 	/**
 	* Sets the text that is presented by this
@@ -68,7 +68,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	*                  the text is set to the empty string ""
 	* @see         java.awt.TextComponent#getText
 	*/
-	@:overload @:synchronized public function setText(t : String) : Void;
+	@:overload @:public @:synchronized public function setText(t : String) : Void;
 	
 	/**
 	* Returns the text that is presented by this text component.
@@ -77,7 +77,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @return the value of this <code>TextComponent</code>
 	* @see     java.awt.TextComponent#setText
 	*/
-	@:overload @:synchronized public function getText() : String;
+	@:overload @:public @:synchronized public function getText() : String;
 	
 	/**
 	* Returns the selected text from the text that is
@@ -85,7 +85,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @return      the selected text of this text component
 	* @see         java.awt.TextComponent#select
 	*/
-	@:overload @:synchronized public function getSelectedText() : String;
+	@:overload @:public @:synchronized public function getSelectedText() : String;
 	
 	/**
 	* Indicates whether or not this text component is editable.
@@ -94,7 +94,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see        java.awt.TextComponent#setEditable
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload public function isEditable() : Bool;
+	@:require(java0) @:overload @:public public function isEditable() : Bool;
 	
 	/**
 	* Sets the flag that determines whether or not this
@@ -112,7 +112,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see       java.awt.TextComponent#isEditable
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload @:synchronized public function setEditable(b : Bool) : Void;
+	@:require(java0) @:overload @:public @:synchronized public function setEditable(b : Bool) : Void;
 	
 	/**
 	* Gets the background color of this text component.
@@ -127,7 +127,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see #setBackground(Color)
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload override public function getBackground() : java.awt.Color;
+	@:require(java0) @:overload @:public override public function getBackground() : java.awt.Color;
 	
 	/**
 	* Sets the background color of this text component.
@@ -138,7 +138,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see #getBackground()
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload override public function setBackground(c : java.awt.Color) : Void;
+	@:require(java0) @:overload @:public override public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Gets the start position of the selected text in
@@ -147,7 +147,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see         java.awt.TextComponent#setSelectionStart
 	* @see         java.awt.TextComponent#getSelectionEnd
 	*/
-	@:overload @:synchronized public function getSelectionStart() : Int;
+	@:overload @:public @:synchronized public function getSelectionStart() : Int;
 	
 	/**
 	* Sets the selection start for this text component to
@@ -164,7 +164,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see         java.awt.TextComponent#setSelectionEnd
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function setSelectionStart(selectionStart : Int) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function setSelectionStart(selectionStart : Int) : Void;
 	
 	/**
 	* Gets the end position of the selected text in
@@ -173,7 +173,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see         java.awt.TextComponent#setSelectionEnd
 	* @see         java.awt.TextComponent#getSelectionStart
 	*/
-	@:overload @:synchronized public function getSelectionEnd() : Int;
+	@:overload @:public @:synchronized public function getSelectionEnd() : Int;
 	
 	/**
 	* Sets the selection end for this text component to
@@ -189,7 +189,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see         java.awt.TextComponent#setSelectionStart
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function setSelectionEnd(selectionEnd : Int) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function setSelectionEnd(selectionEnd : Int) : Void;
 	
 	/**
 	* Selects the text between the specified start and end positions.
@@ -223,13 +223,13 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see          java.awt.TextComponent#setSelectionEnd
 	* @see          java.awt.TextComponent#selectAll
 	*/
-	@:overload @:synchronized public function select(selectionStart : Int, selectionEnd : Int) : Void;
+	@:overload @:public @:synchronized public function select(selectionStart : Int, selectionEnd : Int) : Void;
 	
 	/**
 	* Selects all the text in this text component.
 	* @see        java.awt.TextComponent#select
 	*/
-	@:overload @:synchronized public function selectAll() : Void;
+	@:overload @:public @:synchronized public function selectAll() : Void;
 	
 	/**
 	* Sets the position of the text insertion caret.
@@ -247,7 +247,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	*               is less than zero
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function setCaretPosition(position : Int) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function setCaretPosition(position : Int) : Void;
 	
 	/**
 	* Returns the position of the text insertion caret.
@@ -260,7 +260,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see #setCaretPosition(int)
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function getCaretPosition() : Int;
+	@:require(java1) @:overload @:public @:synchronized public function getCaretPosition() : Int;
 	
 	/**
 	* Adds the specified text event listener to receive text events
@@ -275,7 +275,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see             #getTextListeners
 	* @see             java.awt.event.TextListener
 	*/
-	@:overload @:synchronized public function addTextListener(l : java.awt.event.TextListener) : Void;
+	@:overload @:public @:synchronized public function addTextListener(l : java.awt.event.TextListener) : Void;
 	
 	/**
 	* Removes the specified text event listener so that it no longer
@@ -291,7 +291,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see             java.awt.event.TextListener
 	* @since           JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeTextListener(l : java.awt.event.TextListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeTextListener(l : java.awt.event.TextListener) : Void;
 	
 	/**
 	* Returns an array of all the text listeners
@@ -306,7 +306,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see #removeTextListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getTextListeners() : java.NativeArray<java.awt.event.TextListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getTextListeners() : java.NativeArray<java.awt.event.TextListener>;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -341,7 +341,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see #getTextListeners
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Processes events on this text component. If the event is a
@@ -353,7 +353,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	*
 	* @param e the event
 	*/
-	@:overload override private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:overload @:protected override private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes text events occurring on this text component by
@@ -374,7 +374,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @param e the text event
 	* @see Component#enableEvents
 	*/
-	@:overload private function processTextEvent(e : java.awt.event.TextEvent) : Void;
+	@:overload @:protected private function processTextEvent(e : java.awt.event.TextEvent) : Void;
 	
 	/**
 	* Returns a string representing the state of this
@@ -386,7 +386,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	*
 	* @return      the parameter string of this text component
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this TextComponent.
@@ -398,7 +398,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	*         AccessibleContext of this TextComponent
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -415,12 +415,12 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* Constructs an AccessibleAWTTextComponent.  Adds a listener to track
 	* caret change.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* TextListener notification of a text value change.
 	*/
-	@:overload public function textValueChanged(textEvent : java.awt.event.TextEvent) : Void;
+	@:overload @:public public function textValueChanged(textEvent : java.awt.event.TextEvent) : Void;
 	
 	/**
 	* Gets the state set of the TextComponent.
@@ -435,7 +435,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see AccessibleState
 	* @see #addPropertyChangeListener
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the role of this object.
@@ -444,7 +444,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* object (AccessibleRole.TEXT)
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the AccessibleText associated with this object.  In the
@@ -454,7 +454,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload @:public override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Given a point in local coordinates, return the zero-based index
@@ -464,7 +464,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @param p the Point in local coordinates
 	* @return the zero-based index of the character under Point p.
 	*/
-	@:overload public function getIndexAtPoint(p : java.awt.Point) : Int;
+	@:overload @:public public function getIndexAtPoint(p : java.awt.Point) : Int;
 	
 	/**
 	* Determines the bounding box of the character at the given
@@ -475,14 +475,14 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @param i the index into the String >= 0
 	* @return the screen coordinates of the character's bounding box
 	*/
-	@:overload public function getCharacterBounds(i : Int) : java.awt.Rectangle;
+	@:overload @:public public function getCharacterBounds(i : Int) : java.awt.Rectangle;
 	
 	/**
 	* Returns the number of characters (valid indicies)
 	*
 	* @return the number of characters >= 0
 	*/
-	@:overload public function getCharCount() : Int;
+	@:overload @:public public function getCharCount() : Int;
 	
 	/**
 	* Returns the zero-based offset of the caret.
@@ -493,7 +493,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	*
 	* @return the zero-based offset of the caret.
 	*/
-	@:overload public function getCaretPosition() : Int;
+	@:overload @:public public function getCaretPosition() : Int;
 	
 	/**
 	* Returns the AttributeSet for a given character (at a given index).
@@ -501,7 +501,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @param i the zero-based index into the text
 	* @return the AttributeSet of the character
 	*/
-	@:overload public function getCharacterAttribute(i : Int) : javax.swing.text.AttributeSet;
+	@:overload @:public public function getCharacterAttribute(i : Int) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Returns the start offset within the selected text.
@@ -512,7 +512,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	*
 	* @return the index into the text of the start of the selection >= 0
 	*/
-	@:overload public function getSelectionStart() : Int;
+	@:overload @:public public function getSelectionStart() : Int;
 	
 	/**
 	* Returns the end offset within the selected text.
@@ -523,14 +523,14 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	*
 	* @return the index into teh text of the end of the selection >= 0
 	*/
-	@:overload public function getSelectionEnd() : Int;
+	@:overload @:public public function getSelectionEnd() : Int;
 	
 	/**
 	* Returns the portion of the text that is selected.
 	*
 	* @return the text, null if no selection
 	*/
-	@:overload public function getSelectedText() : String;
+	@:overload @:public public function getSelectedText() : String;
 	
 	/**
 	* Returns the String at a given index.
@@ -541,7 +541,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @return the letter, word, or sentence,
 	*   null for an invalid index or part
 	*/
-	@:overload public function getAtIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getAtIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the String after a given index.
@@ -552,7 +552,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @return the letter, word, or sentence, null for an invalid
 	*  index or part
 	*/
-	@:overload public function getAfterIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getAfterIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the String before a given index.
@@ -563,7 +563,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @return the letter, word, or sentence, null for an invalid index
 	*  or part
 	*/
-	@:overload public function getBeforeIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getBeforeIndex(part : Int, index : Int) : String;
 	
 	
 }

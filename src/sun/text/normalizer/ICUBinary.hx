@@ -84,7 +84,7 @@ extern class ICUBinary
 	*            when header authentication fails.
 	* @draft 2.1
 	*/
-	@:overload @:final public static function readHeader(inputStream : java.io.InputStream, dataFormatIDExpected : java.NativeArray<java.StdTypes.Int8>, authenticate : sun.text.normalizer.ICUBinary.ICUBinary_Authenticate) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static @:final public static function readHeader(inputStream : java.io.InputStream, dataFormatIDExpected : java.NativeArray<java.StdTypes.Int8>, authenticate : sun.text.normalizer.ICUBinary.ICUBinary_Authenticate) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
@@ -99,7 +99,7 @@ extern class ICUBinary
 	* @param version version of the current data
 	* @return true if dataformat is an acceptable version, false otherwise
 	*/
-	@:overload public function isDataVersionAcceptable(version : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public public function isDataVersionAcceptable(version : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	
 }

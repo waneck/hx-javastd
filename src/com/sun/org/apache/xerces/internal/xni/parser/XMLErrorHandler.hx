@@ -36,7 +36,7 @@ extern interface XMLErrorHandler
 	* @throws XNIException Thrown to signal that the parser should stop
 	*                      parsing the document.
 	*/
-	@:overload public function warning(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
+	@:overload @:public public function warning(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
 	
 	/**
 	* Reports an error. Errors are non-fatal and usually signify that the
@@ -54,7 +54,7 @@ extern interface XMLErrorHandler
 	* @throws XNIException Thrown to signal that the parser should stop
 	*                      parsing the document.
 	*/
-	@:overload public function error(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
+	@:overload @:public public function error(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
 	
 	/**
 	* Report a fatal error. Fatal errors usually occur when the document
@@ -80,7 +80,7 @@ extern interface XMLErrorHandler
 	* @throws XNIException Thrown to signal that the parser should stop
 	*                      parsing the document.
 	*/
-	@:overload public function fatalError(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
+	@:overload @:public public function fatalError(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
 	
 	
 }

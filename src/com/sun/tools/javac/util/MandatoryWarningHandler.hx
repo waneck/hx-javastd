@@ -38,17 +38,17 @@ extern class MandatoryWarningHandler
 	*                the messages that may be generated.
 	* @param lc      An associated lint category for the warnings, or null if none.
 	*/
-	@:overload public function new(log : com.sun.tools.javac.util.Log, verbose : Bool, enforceMandatory : Bool, prefix : String, lc : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Void;
+	@:overload @:public public function new(log : com.sun.tools.javac.util.Log, verbose : Bool, enforceMandatory : Bool, prefix : String, lc : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Void;
 	
 	/**
 	* Report a mandatory warning.
 	*/
-	@:overload public function report(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, msg : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function report(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, msg : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Report any diagnostic that might have been deferred by previous calls of report().
 	*/
-	@:overload public function reportDeferredDiagnostic() : Void;
+	@:overload @:public public function reportDeferredDiagnostic() : Void;
 	
 	
 }

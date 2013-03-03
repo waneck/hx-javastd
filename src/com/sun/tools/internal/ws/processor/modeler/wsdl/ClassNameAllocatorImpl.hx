@@ -30,15 +30,15 @@ extern class ClassNameAllocatorImpl implements com.sun.tools.internal.xjc.api.Cl
 	*         <p/>
 	*         Implementation of Callback interface that allows the driver of the XJC API to rename JAXB-generated classes/interfaces/enums.
 	*/
-	@:overload public function new(classNameCollector : com.sun.tools.internal.ws.processor.util.ClassNameCollector) : Void;
+	@:overload @:public public function new(classNameCollector : com.sun.tools.internal.ws.processor.util.ClassNameCollector) : Void;
 	
-	@:overload public function assignClassName(packageName : String, className : String) : String;
+	@:overload @:public public function assignClassName(packageName : String, className : String) : String;
 	
 	/**
 	*
 	* @return jaxbGenerated classNames
 	*/
-	@:overload public function getJaxbGeneratedClasses() : java.util.Set<String>;
+	@:overload @:public public function getJaxbGeneratedClasses() : java.util.Set<String>;
 	
 	
 }

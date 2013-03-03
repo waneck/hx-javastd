@@ -25,17 +25,17 @@ package sun.swing;
 */
 extern class DefaultLayoutStyle extends javax.swing.LayoutStyle
 {
-	@:overload public static function getInstance() : javax.swing.LayoutStyle;
+	@:overload @:public @:static public static function getInstance() : javax.swing.LayoutStyle;
 	
-	@:overload public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : javax.swing.LayoutStyle.LayoutStyle_ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
+	@:overload @:public override public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : javax.swing.LayoutStyle.LayoutStyle_ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
 	
-	@:overload public function getContainerGap(component : javax.swing.JComponent, position : Int, parent : java.awt.Container) : Int;
+	@:overload @:public override public function getContainerGap(component : javax.swing.JComponent, position : Int, parent : java.awt.Container) : Int;
 	
 	/**
 	* Returns true if the classes identify a JLabel and a non-JLabel
 	* along the horizontal axis.
 	*/
-	@:overload private function isLabelAndNonlabel(c1 : javax.swing.JComponent, c2 : javax.swing.JComponent, position : Int) : Bool;
+	@:overload @:protected private function isLabelAndNonlabel(c1 : javax.swing.JComponent, c2 : javax.swing.JComponent, position : Int) : Bool;
 	
 	/**
 	* For some look and feels check boxs and radio buttons typically
@@ -50,7 +50,7 @@ extern class DefaultLayoutStyle extends javax.swing.LayoutStyle
 	* @param offset Ideal offset, not including border/margin
 	* @return offset - border/margin around the component.
 	*/
-	@:overload private function getButtonGap(source : javax.swing.JComponent, target : javax.swing.JComponent, position : Int, offset : Int) : Int;
+	@:overload @:protected private function getButtonGap(source : javax.swing.JComponent, target : javax.swing.JComponent, position : Int, offset : Int) : Int;
 	
 	/**
 	* For some look and feels check boxs and radio buttons typically
@@ -64,22 +64,22 @@ extern class DefaultLayoutStyle extends javax.swing.LayoutStyle
 	* @param offset Ideal offset, not including border/margin
 	* @return offset - border/margin around the component.
 	*/
-	@:overload private function getButtonGap(source : javax.swing.JComponent, position : Int, offset : Int) : Int;
+	@:overload @:protected private function getButtonGap(source : javax.swing.JComponent, position : Int, offset : Int) : Int;
 	
 	/**
 	* If <code>c</code> is a check box or radio button, and the border is
 	* not painted this returns the inset along the specified axis.
 	*/
-	@:overload public function getButtonGap(c : javax.swing.JComponent, position : Int) : Int;
+	@:overload @:public public function getButtonGap(c : javax.swing.JComponent, position : Int) : Int;
 	
-	@:overload private function flipDirection(position : Int) : Int;
+	@:overload @:protected private function flipDirection(position : Int) : Int;
 	
 	/**
 	* Returns the amount to indent the specified component if it's
 	* a JCheckBox or JRadioButton.  If the component is not a JCheckBox or
 	* JRadioButton, 0 will be returned.
 	*/
-	@:overload private function getIndent(c : javax.swing.JComponent, position : Int) : Int;
+	@:overload @:protected private function getIndent(c : javax.swing.JComponent, position : Int) : Int;
 	
 	
 }

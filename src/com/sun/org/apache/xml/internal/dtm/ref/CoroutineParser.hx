@@ -29,17 +29,17 @@ extern interface CoroutineParser
 	* the common transactions with the CoroutineParser, so you shouldn't
 	* need this in most cases.
 	* */
-	@:overload public function getParserCoroutineID() : Int;
+	@:overload @:public public function getParserCoroutineID() : Int;
 	
 	/** @return the CoroutineManager for this CoroutineParser object.
 	* If you're using the do...() methods, applications should only
 	* need to talk to the CoroutineManager once, to obtain the
 	* application's Coroutine ID.
 	* */
-	@:overload public function getCoroutineManager() : com.sun.org.apache.xml.internal.dtm.ref.CoroutineManager;
+	@:overload @:public public function getCoroutineManager() : com.sun.org.apache.xml.internal.dtm.ref.CoroutineManager;
 	
 	/** Register a SAX-style content handler for us to output to */
-	@:overload public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
 	
 	/**  Register a SAX-style lexical handler for us to output to
 	*  Not all parsers support this...
@@ -47,7 +47,7 @@ extern interface CoroutineParser
 	* %REVIEW% Not called setLexicalHandler because Xalan uses that name
 	* internally, which causes subclassing nuisances.
 	*/
-	@:overload public function setLexHandler(handler : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public public function setLexHandler(handler : org.xml.sax.ext.LexicalHandler) : Void;
 	
 	/** doParse() is a simple API which tells the coroutine parser
 	* to begin reading from a file.  This is intended to be called from one
@@ -66,7 +66,7 @@ extern interface CoroutineParser
 	* for further parsing. Boolean.FALSE if parsing ran to completion.
 	* Exception if the parser objected for some reason.
 	* */
-	@:overload public function doParse(source : org.xml.sax.InputSource, appCoroutine : Int) : Dynamic;
+	@:overload @:public public function doParse(source : org.xml.sax.InputSource, appCoroutine : Int) : Dynamic;
 	
 	/** doMore() is a simple API which tells the coroutine parser
 	* that we need more nodes.  This is intended to be called from one
@@ -84,7 +84,7 @@ extern interface CoroutineParser
 	* for further parsing. Boolean.FALSE if parsing ran to completion.
 	* Exception if the parser objected for some reason.
 	* */
-	@:overload public function doMore(parsemore : Bool, appCoroutine : Int) : Dynamic;
+	@:overload @:public public function doMore(parsemore : Bool, appCoroutine : Int) : Dynamic;
 	
 	/** doTerminate() is a simple API which tells the coroutine
 	* parser to terminate itself.  This is intended to be called from
@@ -98,14 +98,14 @@ extern interface CoroutineParser
 	* this method, so it can be resumed after the parser has responded to the
 	* request.
 	* */
-	@:overload public function doTerminate(appCoroutine : Int) : Void;
+	@:overload @:public public function doTerminate(appCoroutine : Int) : Void;
 	
 	/**
 	* Initialize the coroutine parser. Same parameters could be passed
 	* in a non-default constructor, or by using using context ClassLoader
 	* and newInstance and then calling init()
 	*/
-	@:overload public function init(co : com.sun.org.apache.xml.internal.dtm.ref.CoroutineManager, appCoroutineID : Int, parser : org.xml.sax.XMLReader) : Void;
+	@:overload @:public public function init(co : com.sun.org.apache.xml.internal.dtm.ref.CoroutineManager, appCoroutineID : Int, parser : org.xml.sax.XMLReader) : Void;
 	
 	
 }

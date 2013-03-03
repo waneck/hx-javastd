@@ -30,7 +30,7 @@ extern interface RSAPublicKey extends java.security.PublicKey extends java.secur
 	*
 	* @return the public exponent
 	*/
-	@:overload public function getPublicExponent() : java.math.BigInteger;
+	@:overload @:public public function getPublicExponent() : java.math.BigInteger;
 	
 	
 }

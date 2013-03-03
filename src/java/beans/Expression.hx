@@ -61,7 +61,7 @@ package java.beans;
 	*
 	* @see #getValue
 	*/
-	@:overload public function new(target : Dynamic, methodName : String, arguments : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(target : Dynamic, methodName : String, arguments : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Creates a new {@link Expression} object with the specified value
@@ -84,7 +84,7 @@ package java.beans;
 	*
 	* @see #setValue
 	*/
-	@:overload public function new(value : Dynamic, target : Dynamic, methodName : String, arguments : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(value : Dynamic, target : Dynamic, methodName : String, arguments : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -104,7 +104,7 @@ package java.beans;
 	* @see java.lang.reflect.Method
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function execute() : Void;
+	@:require(java7) @:overload @:public override public function execute() : Void;
 	
 	/**
 	* If the value property of this instance is not already set,
@@ -133,7 +133,7 @@ package java.beans;
 	*
 	* @return The result of applying this method to these arguments.
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	/**
 	* Sets the value of this expression to <code>value</code>.
@@ -145,12 +145,12 @@ package java.beans;
 	*
 	* @see #getValue
 	*/
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public public function setValue(value : Dynamic) : Void;
 	
 	/**
 	* Prints the value of this expression using a Java-style syntax.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

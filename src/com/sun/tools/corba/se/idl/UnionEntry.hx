@@ -39,13 +39,13 @@ extern class UnionEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	/**
 	* This is the symbol table entry for unions.
 	**/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.UnionEntry) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.UnionEntry) : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/** Invoke the union generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -53,29 +53,29 @@ extern class UnionEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload @:public override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the union generator.
 	@returns an object which implements the UnionGen interface.
 	@see UnionGen */
-	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload @:public override public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
-	@:overload public function addBranch(branch : com.sun.tools.corba.se.idl.UnionBranch) : Void;
+	@:overload @:public public function addBranch(branch : com.sun.tools.corba.se.idl.UnionBranch) : Void;
 	
 	/** This is a vector of UnionBranch's. */
-	@:overload public function branches() : java.util.Vector<Dynamic>;
+	@:overload @:public public function branches() : java.util.Vector<Dynamic>;
 	
 	/** This TypedefEntry describes the type and name for the default branch.
 	Like the entries in the branches vector, only the type and name fields
 	are pertinent. */
-	@:overload public function defaultBranch(branch : com.sun.tools.corba.se.idl.TypedefEntry) : Void;
+	@:overload @:public public function defaultBranch(branch : com.sun.tools.corba.se.idl.TypedefEntry) : Void;
 	
 	/** This TypedefEntry describes the type and name for the default branch.
 	Like the entries in the branches vector, only the type and name fields
 	are pertinent. */
-	@:overload public function defaultBranch() : com.sun.tools.corba.se.idl.TypedefEntry;
+	@:overload @:public public function defaultBranch() : com.sun.tools.corba.se.idl.TypedefEntry;
 	
-	@:overload public function addContained(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:public public function addContained(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/** This is a vector of SymtabEntry's.  It itemizes any types which
 	this union contains.  For example:
@@ -94,7 +94,7 @@ extern class UnionEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	}
 	</pre>
 	Struct B is contained within union A. */
-	@:overload public function contained() : java.util.Vector<Dynamic>;
+	@:overload @:public public function contained() : java.util.Vector<Dynamic>;
 	
 	
 }

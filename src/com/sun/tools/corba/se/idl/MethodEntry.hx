@@ -40,13 +40,13 @@ extern class MethodEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	/**
 	* This is the symbol table entry for methods.
 	**/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.MethodEntry) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.MethodEntry) : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.InterfaceEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.InterfaceEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/** Invoke the method generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -54,55 +54,55 @@ extern class MethodEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload @:public override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the method generator.
 	@returns an object which implements the MethodGen interface.
 	@see MethodGen */
-	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload @:public override public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
-	@:overload public function type(newType : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:public override public function type(newType : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/** Add an exception to the exception list. */
-	@:overload public function addException(exception : com.sun.tools.corba.se.idl.ExceptionEntry) : Void;
+	@:overload @:public public function addException(exception : com.sun.tools.corba.se.idl.ExceptionEntry) : Void;
 	
 	/** This a a vector of the exceptions which this method raises. */
-	@:overload public function exceptions() : java.util.Vector<Dynamic>;
+	@:overload @:public public function exceptions() : java.util.Vector<Dynamic>;
 	
 	/** Add an exception name to the list of exception names. */
-	@:overload public function addExceptionName(name : String) : Void;
+	@:overload @:public public function addExceptionName(name : String) : Void;
 	
 	/** This is a vector of strings, each of which is the full name of an
 	exception which this method throws.  This vector corresponds to the
 	exceptions vector.  The first element of this vector is the name
 	of the first element of the exceptions vector, etc. */
-	@:overload public function exceptionNames() : java.util.Vector<Dynamic>;
+	@:overload @:public public function exceptionNames() : java.util.Vector<Dynamic>;
 	
 	/* Add a context to the context list. */
-	@:overload public function addContext(context : String) : Void;
+	@:overload @:public public function addContext(context : String) : Void;
 	
 	/** This is a vector of strings, each of which is the name of a context. */
-	@:overload public function contexts() : java.util.Vector<Dynamic>;
+	@:overload @:public public function contexts() : java.util.Vector<Dynamic>;
 	
 	/** Add a parameter to the parameter list. */
-	@:overload public function addParameter(parameter : com.sun.tools.corba.se.idl.ParameterEntry) : Void;
+	@:overload @:public public function addParameter(parameter : com.sun.tools.corba.se.idl.ParameterEntry) : Void;
 	
 	/** This is a vector of ParameterEntry's.  They are the parameters on
 	this method and their order in the vector is the order they appear
 	on the method. */
-	@:overload public function parameters() : java.util.Vector<Dynamic>;
+	@:overload @:public public function parameters() : java.util.Vector<Dynamic>;
 	
 	/** Is this a oneway method? */
-	@:overload public function oneway(yes : Bool) : Void;
+	@:overload @:public public function oneway(yes : Bool) : Void;
 	
 	/** Is this a oneway method? */
-	@:overload public function oneway() : Bool;
+	@:overload @:public public function oneway() : Bool;
 	
 	/** Is this a value method? */
-	@:overload public function valueMethod(yes : Bool) : Void;
+	@:overload @:public public function valueMethod(yes : Bool) : Void;
 	
 	/** Is this a value method? */
-	@:overload public function valueMethod() : Bool;
+	@:overload @:public public function valueMethod() : Bool;
 	
 	
 }

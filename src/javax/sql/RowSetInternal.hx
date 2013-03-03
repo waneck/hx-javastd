@@ -79,7 +79,7 @@ package javax.sql;
 	* @return the original value of the rowset
 	* @exception SQLException if a database access error occurs
 	*/
-	@:overload public function getOriginal() : java.sql.ResultSet;
+	@:overload @:public public function getOriginal() : java.sql.ResultSet;
 	
 	/**
 	* Retrieves a <code>ResultSet</code> object containing the original value
@@ -93,7 +93,7 @@ package javax.sql;
 	*           is called while the cursor is on the insert row, before the
 	*           first row, or after the last row
 	*/
-	@:overload public function getOriginalRow() : java.sql.ResultSet;
+	@:overload @:public public function getOriginalRow() : java.sql.ResultSet;
 	
 	
 }

@@ -25,19 +25,19 @@ package sun.java2d.opengl;
 */
 extern class GLXVolatileSurfaceManager extends sun.awt.image.VolatileSurfaceManager
 {
-	@:overload public function new(vImg : sun.awt.image.SunVolatileImage, context : Dynamic) : Void;
+	@:overload @:public public function new(vImg : sun.awt.image.SunVolatileImage, context : Dynamic) : Void;
 	
-	@:overload private function isAccelerationEnabled() : Bool;
+	@:overload @:protected override private function isAccelerationEnabled() : Bool;
 	
 	/**
 	* Create a pbuffer-based SurfaceData object (or init the backbuffer
 	* of an existing window if this is a double buffered GraphicsConfig)
 	*/
-	@:overload private function initAcceleratedSurface() : sun.java2d.SurfaceData;
+	@:overload @:protected override private function initAcceleratedSurface() : sun.java2d.SurfaceData;
 	
-	@:overload private function isConfigValid(gc : java.awt.GraphicsConfiguration) : Bool;
+	@:overload @:protected override private function isConfigValid(gc : java.awt.GraphicsConfiguration) : Bool;
 	
-	@:overload public function initContents() : Void;
+	@:overload @:public override public function initContents() : Void;
 	
 	
 }

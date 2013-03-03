@@ -32,14 +32,14 @@ package com.sun.tools.doclets.formats.html;
 */
 extern class HtmlSerialMethodWriter extends com.sun.tools.doclets.formats.html.MethodWriterImpl implements com.sun.tools.doclets.internal.toolkit.SerializedFormWriter.SerializedFormWriter_SerialMethodWriter
 {
-	@:overload public function new(writer : com.sun.tools.doclets.formats.html.SubWriterHolderWriter, classdoc : com.sun.javadoc.ClassDoc) : Void;
+	@:overload @:public public function new(writer : com.sun.tools.doclets.formats.html.SubWriterHolderWriter, classdoc : com.sun.javadoc.ClassDoc) : Void;
 	
 	/**
 	* Return the header for serializable methods section.
 	*
 	* @return a content tree for the header
 	*/
-	@:overload public function getSerializableMethodsHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSerializableMethodsHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Return the header for serializable methods content section.
@@ -47,7 +47,7 @@ extern class HtmlSerialMethodWriter extends com.sun.tools.doclets.formats.html.M
 	* @param isLastContent true if the cotent being documented is the last content.
 	* @return a content tree for the header
 	*/
-	@:overload public function getMethodsContentHeader(isLastContent : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMethodsContentHeader(isLastContent : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add serializable methods.
@@ -57,7 +57,7 @@ extern class HtmlSerialMethodWriter extends com.sun.tools.doclets.formats.html.M
 	*        content tree
 	* @return a content tree for the serializable methods content
 	*/
-	@:overload public function getSerializableMethods(heading : String, serializableMethodContent : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSerializableMethods(heading : String, serializableMethodContent : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Return the no customization message.
@@ -65,7 +65,7 @@ extern class HtmlSerialMethodWriter extends com.sun.tools.doclets.formats.html.M
 	* @param msg the message to be displayed
 	* @return no customization message content
 	*/
-	@:overload public function getNoCustomizationMsg(msg : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getNoCustomizationMsg(msg : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add the member header.
@@ -73,7 +73,7 @@ extern class HtmlSerialMethodWriter extends com.sun.tools.doclets.formats.html.M
 	* @param member the method document to be listed
 	* @param methodsContentTree the content tree to which the member header will be added
 	*/
-	@:overload public function addMemberHeader(member : com.sun.javadoc.MethodDoc, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addMemberHeader(member : com.sun.javadoc.MethodDoc, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the deprecated information for this member.
@@ -81,7 +81,7 @@ extern class HtmlSerialMethodWriter extends com.sun.tools.doclets.formats.html.M
 	* @param member the method to document.
 	* @param methodsContentTree the tree to which the deprecated info will be added
 	*/
-	@:overload public function addDeprecatedMemberInfo(member : com.sun.javadoc.MethodDoc, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addDeprecatedMemberInfo(member : com.sun.javadoc.MethodDoc, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the description text for this member.
@@ -89,7 +89,7 @@ extern class HtmlSerialMethodWriter extends com.sun.tools.doclets.formats.html.M
 	* @param member the method to document.
 	* @param methodsContentTree the tree to which the deprecated info will be added
 	*/
-	@:overload public function addMemberDescription(member : com.sun.javadoc.MethodDoc, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addMemberDescription(member : com.sun.javadoc.MethodDoc, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the tag information for this member.
@@ -97,9 +97,9 @@ extern class HtmlSerialMethodWriter extends com.sun.tools.doclets.formats.html.M
 	* @param member the method to document.
 	* @param methodsContentTree the tree to which the member tags info will be added
 	*/
-	@:overload public function addMemberTags(member : com.sun.javadoc.MethodDoc, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addMemberTags(member : com.sun.javadoc.MethodDoc, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
-	@:overload private function printTypeLinkNoDimension(type : com.sun.javadoc.Type) : Void;
+	@:overload @:protected private function printTypeLinkNoDimension(type : com.sun.javadoc.Type) : Void;
 	
 	
 }

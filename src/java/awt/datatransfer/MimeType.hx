@@ -30,7 +30,7 @@ package java.awt.datatransfer;
 	* called directly by an application, since the result will be an
 	* uninitialized, immutable <code>MimeType</code> object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Builds a <code>MimeType</code> from a <code>String</code>.
@@ -38,7 +38,7 @@ package java.awt.datatransfer;
 	* @param rawdata text used to initialize the <code>MimeType</code>
 	* @throws NullPointerException if <code>rawdata</code> is null
 	*/
-	@:overload public function new(rawdata : String) : Void;
+	@:overload @:public public function new(rawdata : String) : Void;
 	
 	/**
 	* Builds a <code>MimeType</code> with the given primary and sub
@@ -49,7 +49,7 @@ package java.awt.datatransfer;
 	* @throws NullPointerException if either <code>primary</code> or
 	*         <code>sub</code> is null
 	*/
-	@:overload public function new(primary : String, sub : String) : Void;
+	@:overload @:public public function new(primary : String, sub : String) : Void;
 	
 	/**
 	* Builds a <code>MimeType</code> with a pre-defined
@@ -61,9 +61,9 @@ package java.awt.datatransfer;
 	* @throws NullPointerException if either <code>primary</code>,
 	*         <code>sub</code> or <code>mtpl</code> is null
 	*/
-	@:overload public function new(primary : String, sub : String, mtpl : java.awt.datatransfer.MimeTypeParameterList) : Void;
+	@:overload @:public public function new(primary : String, sub : String, mtpl : java.awt.datatransfer.MimeTypeParameterList) : Void;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* <code>MimeType</code>s are equal if their primary types,
@@ -74,28 +74,28 @@ package java.awt.datatransfer;
 	* @return <code>true</code> if <code>thatObject</code> is
 	*    a <code>MimeType</code>; otherwise returns <code>false</code>
 	*/
-	@:overload public function equals(thatObject : Dynamic) : Bool;
+	@:overload @:public public function equals(thatObject : Dynamic) : Bool;
 	
 	/**
 	* Retrieve the primary type of this object.
 	*/
-	@:overload public function getPrimaryType() : String;
+	@:overload @:public public function getPrimaryType() : String;
 	
 	/**
 	* Retrieve the sub type of this object.
 	*/
-	@:overload public function getSubType() : String;
+	@:overload @:public public function getSubType() : String;
 	
 	/**
 	* Retrieve a copy of this object's parameter list.
 	*/
-	@:overload public function getParameters() : java.awt.datatransfer.MimeTypeParameterList;
+	@:overload @:public public function getParameters() : java.awt.datatransfer.MimeTypeParameterList;
 	
 	/**
 	* Retrieve the value associated with the given name, or null if there
 	* is no current association.
 	*/
-	@:overload public function getParameter(name : String) : String;
+	@:overload @:public public function getParameter(name : String) : String;
 	
 	/**
 	* Set the value to be associated with the given name, replacing
@@ -103,25 +103,25 @@ package java.awt.datatransfer;
 	*
 	* @throw IllegalArgumentException if parameter or value is illegal
 	*/
-	@:overload public function setParameter(name : String, value : String) : Void;
+	@:overload @:public public function setParameter(name : String, value : String) : Void;
 	
 	/**
 	* Remove any value associated with the given name.
 	*
 	* @throw IllegalArgumentExcpetion if parameter may not be deleted
 	*/
-	@:overload public function removeParameter(name : String) : Void;
+	@:overload @:public public function removeParameter(name : String) : Void;
 	
 	/**
 	* Return the String representation of this object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Return a String representation of this object
 	* without the parameter list.
 	*/
-	@:overload public function getBaseType() : String;
+	@:overload @:public public function getBaseType() : String;
 	
 	/**
 	* Returns <code>true</code> if the primary type and the
@@ -134,7 +134,7 @@ package java.awt.datatransfer;
 	*    specified <code>type</code>; otherwise returns
 	*    <code>false</code>
 	*/
-	@:overload public function match(type : java.awt.datatransfer.MimeType) : Bool;
+	@:overload @:public public function match(type : java.awt.datatransfer.MimeType) : Bool;
 	
 	/**
 	* Returns <code>true</code> if the primary type and the
@@ -149,7 +149,7 @@ package java.awt.datatransfer;
 	*    <code>false</code>; if <code>rawdata</code> is
 	*    <code>null</code>, returns <code>false</code>
 	*/
-	@:overload public function match(rawdata : String) : Bool;
+	@:overload @:public public function match(rawdata : String) : Bool;
 	
 	/**
 	* The object implements the writeExternal method to save its contents
@@ -158,7 +158,7 @@ package java.awt.datatransfer;
 	* and arrays.
 	* @exception IOException Includes any I/O exceptions that may occur
 	*/
-	@:overload public function writeExternal(out : java.io.ObjectOutput) : Void;
+	@:overload @:public public function writeExternal(out : java.io.ObjectOutput) : Void;
 	
 	/**
 	* The object implements the readExternal method to restore its
@@ -169,13 +169,13 @@ package java.awt.datatransfer;
 	* @exception ClassNotFoundException If the class for an object being
 	*              restored cannot be found.
 	*/
-	@:overload public function readExternal(_in : java.io.ObjectInput) : Void;
+	@:overload @:public public function readExternal(_in : java.io.ObjectInput) : Void;
 	
 	/**
 	* Returns a clone of this object.
 	* @return a clone of this object
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

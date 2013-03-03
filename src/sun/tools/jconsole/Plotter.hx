@@ -25,45 +25,45 @@ package sun.tools.jconsole;
 */
 extern class Plotter extends javax.swing.JComponent implements javax.accessibility.Accessible implements java.awt.event.ActionListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(unit : sun.tools.jconsole.Plotter.Plotter_Unit) : Void;
+	@:overload @:public public function new(unit : sun.tools.jconsole.Plotter.Plotter_Unit) : Void;
 	
-	@:overload public function new(unit : sun.tools.jconsole.Plotter.Plotter_Unit, decimals : Int) : Void;
+	@:overload @:public public function new(unit : sun.tools.jconsole.Plotter.Plotter_Unit, decimals : Int) : Void;
 	
-	@:overload public function new(unit : sun.tools.jconsole.Plotter.Plotter_Unit, decimals : Int, displayLegend : Bool) : Void;
+	@:overload @:public public function new(unit : sun.tools.jconsole.Plotter.Plotter_Unit, decimals : Int, displayLegend : Bool) : Void;
 	
-	@:overload public function setUnit(unit : sun.tools.jconsole.Plotter.Plotter_Unit) : Void;
+	@:overload @:public public function setUnit(unit : sun.tools.jconsole.Plotter.Plotter_Unit) : Void;
 	
-	@:overload public function setDecimals(decimals : Int) : Void;
+	@:overload @:public public function setDecimals(decimals : Int) : Void;
 	
-	@:overload public function createSequence(key : String, name : String, color : java.awt.Color, isPlotted : Bool) : Void;
+	@:overload @:public public function createSequence(key : String, name : String, color : java.awt.Color, isPlotted : Bool) : Void;
 	
-	@:overload public function setUseDashedTransitions(key : String, b : Bool) : Void;
+	@:overload @:public public function setUseDashedTransitions(key : String, b : Bool) : Void;
 	
-	@:overload public function setIsPlotted(key : String, isPlotted : Bool) : Void;
+	@:overload @:public public function setIsPlotted(key : String, isPlotted : Bool) : Void;
 	
-	@:overload @:synchronized public function addValues(time : haxe.Int64, values : java.NativeArray<haxe.Int64>) : Void;
+	@:overload @:public @:synchronized public function addValues(time : haxe.Int64, values : java.NativeArray<haxe.Int64>) : Void;
 	
 	/**
 	* @return the displayed time range in minutes, or -1 for all data
 	*/
-	@:overload public function getViewRange() : Int;
+	@:overload @:public public function getViewRange() : Int;
 	
 	/**
 	* @param minutes the displayed time range in minutes, or -1 to diaplay all data
 	*/
-	@:overload public function setViewRange(minutes : Int) : Void;
+	@:overload @:public public function setViewRange(minutes : Int) : Void;
 	
-	@:overload public function getComponentPopupMenu() : javax.swing.JPopupMenu;
+	@:overload @:public override public function getComponentPopupMenu() : javax.swing.JPopupMenu;
 	
-	@:overload public function actionPerformed(ev : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(ev : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
-	@:overload public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -80,38 +80,38 @@ extern class Plotter extends javax.swing.JComponent implements javax.accessibili
 	/**
 	* Returns the time stamp for index i
 	*/
-	@:overload public function time(i : Int) : haxe.Int64;
+	@:overload @:public public function time(i : Int) : haxe.Int64;
 	
-	@:overload public function add(time : haxe.Int64) : Void;
+	@:overload @:public public function add(time : haxe.Int64) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$Plotter$Sequence') @:internal extern class Plotter_Sequence
 {
-	@:overload public function new(key : String) : Void;
+	@:overload @:public public function new(key : String) : Void;
 	
 	/**
 	* Returns the value at index i
 	*/
-	@:overload public function value(i : Int) : haxe.Int64;
+	@:overload @:public public function value(i : Int) : haxe.Int64;
 	
-	@:overload public function add(value : haxe.Int64) : Void;
+	@:overload @:public public function add(value : haxe.Int64) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$Plotter$SaveDataFileChooser') @:internal extern class Plotter_SaveDataFileChooser extends javax.swing.JFileChooser
 {
-	@:overload public function approveSelection() : Void;
+	@:overload @:public override public function approveSelection() : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$Plotter$AccessiblePlotter') extern class Plotter_AccessiblePlotter extends javax.swing.JComponent.JComponent_AccessibleJComponent
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

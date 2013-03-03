@@ -32,71 +32,71 @@ package com.sun.tools.example.debug.gui;
 */
 extern class CommandTool extends javax.swing.JPanel
 {
-	@:overload public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
+	@:overload @:public public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$CommandTool$TTYDebugListener') @:internal extern class CommandTool_TTYDebugListener implements com.sun.tools.example.debug.event.JDIListener implements com.sun.tools.example.debug.bdi.SessionListener implements com.sun.tools.example.debug.bdi.SpecListener implements com.sun.tools.example.debug.gui.ContextListener
 {
-	@:overload public function accessWatchpoint(e : com.sun.tools.example.debug.event.AccessWatchpointEventSet) : Void;
+	@:overload @:public public function accessWatchpoint(e : com.sun.tools.example.debug.event.AccessWatchpointEventSet) : Void;
 	
-	@:overload public function classPrepare(e : com.sun.tools.example.debug.event.ClassPrepareEventSet) : Void;
+	@:overload @:public public function classPrepare(e : com.sun.tools.example.debug.event.ClassPrepareEventSet) : Void;
 	
-	@:overload public function classUnload(e : com.sun.tools.example.debug.event.ClassUnloadEventSet) : Void;
+	@:overload @:public public function classUnload(e : com.sun.tools.example.debug.event.ClassUnloadEventSet) : Void;
 	
-	@:overload public function exception(e : com.sun.tools.example.debug.event.ExceptionEventSet) : Void;
+	@:overload @:public public function exception(e : com.sun.tools.example.debug.event.ExceptionEventSet) : Void;
 	
-	@:overload public function locationTrigger(e : com.sun.tools.example.debug.event.LocationTriggerEventSet) : Void;
+	@:overload @:public public function locationTrigger(e : com.sun.tools.example.debug.event.LocationTriggerEventSet) : Void;
 	
-	@:overload public function modificationWatchpoint(e : com.sun.tools.example.debug.event.ModificationWatchpointEventSet) : Void;
+	@:overload @:public public function modificationWatchpoint(e : com.sun.tools.example.debug.event.ModificationWatchpointEventSet) : Void;
 	
-	@:overload public function threadDeath(e : com.sun.tools.example.debug.event.ThreadDeathEventSet) : Void;
+	@:overload @:public public function threadDeath(e : com.sun.tools.example.debug.event.ThreadDeathEventSet) : Void;
 	
-	@:overload public function threadStart(e : com.sun.tools.example.debug.event.ThreadStartEventSet) : Void;
+	@:overload @:public public function threadStart(e : com.sun.tools.example.debug.event.ThreadStartEventSet) : Void;
 	
-	@:overload public function vmDeath(e : com.sun.tools.example.debug.event.VMDeathEventSet) : Void;
+	@:overload @:public public function vmDeath(e : com.sun.tools.example.debug.event.VMDeathEventSet) : Void;
 	
-	@:overload public function vmDisconnect(e : com.sun.tools.example.debug.event.VMDisconnectEventSet) : Void;
+	@:overload @:public public function vmDisconnect(e : com.sun.tools.example.debug.event.VMDisconnectEventSet) : Void;
 	
-	@:overload public function vmStart(e : com.sun.tools.example.debug.event.VMStartEventSet) : Void;
+	@:overload @:public public function vmStart(e : com.sun.tools.example.debug.event.VMStartEventSet) : Void;
 	
-	@:overload public function sessionStart(e : java.util.EventObject) : Void;
+	@:overload @:public public function sessionStart(e : java.util.EventObject) : Void;
 	
-	@:overload public function sessionInterrupt(e : java.util.EventObject) : Void;
+	@:overload @:public public function sessionInterrupt(e : java.util.EventObject) : Void;
 	
-	@:overload public function sessionContinue(e : java.util.EventObject) : Void;
+	@:overload @:public public function sessionContinue(e : java.util.EventObject) : Void;
 	
-	@:overload public function breakpointSet(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function breakpointSet(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function breakpointDeferred(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function breakpointDeferred(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function breakpointDeleted(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function breakpointDeleted(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function breakpointResolved(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function breakpointResolved(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function breakpointError(e : com.sun.tools.example.debug.bdi.SpecErrorEvent) : Void;
+	@:overload @:public public function breakpointError(e : com.sun.tools.example.debug.bdi.SpecErrorEvent) : Void;
 	
-	@:overload public function watchpointSet(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function watchpointSet(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function watchpointDeferred(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function watchpointDeferred(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function watchpointDeleted(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function watchpointDeleted(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function watchpointResolved(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function watchpointResolved(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function watchpointError(e : com.sun.tools.example.debug.bdi.SpecErrorEvent) : Void;
+	@:overload @:public public function watchpointError(e : com.sun.tools.example.debug.bdi.SpecErrorEvent) : Void;
 	
-	@:overload public function exceptionInterceptSet(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function exceptionInterceptSet(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function exceptionInterceptDeferred(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function exceptionInterceptDeferred(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function exceptionInterceptDeleted(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function exceptionInterceptDeleted(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function exceptionInterceptResolved(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function exceptionInterceptResolved(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function exceptionInterceptError(e : com.sun.tools.example.debug.bdi.SpecErrorEvent) : Void;
+	@:overload @:public public function exceptionInterceptError(e : com.sun.tools.example.debug.bdi.SpecErrorEvent) : Void;
 	
-	@:overload public function currentFrameChanged(e : com.sun.tools.example.debug.gui.CurrentFrameChangedEvent) : Void;
+	@:overload @:public public function currentFrameChanged(e : com.sun.tools.example.debug.gui.CurrentFrameChangedEvent) : Void;
 	
 	
 }

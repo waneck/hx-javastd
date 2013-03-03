@@ -48,7 +48,7 @@ package java.io;
 	* stream;  element <code>buf[pos]</code> is
 	* the next byte to be read.
 	*/
-	private var buf : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var buf : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* The index of the next character to read from the input stream buffer.
@@ -57,7 +57,7 @@ package java.io;
 	* The next byte to be read from the input stream buffer
 	* will be <code>buf[pos]</code>.
 	*/
-	private var pos : Int;
+	@:protected private var pos : Int;
 	
 	/**
 	* The index one greater than the last valid character in the input
@@ -68,7 +68,7 @@ package java.io;
 	* the last byte within <code>buf</code> that
 	* can ever be read  from the input stream buffer.
 	*/
-	private var count : Int;
+	@:protected private var count : Int;
 	
 	/**
 	* Creates a <code>ByteArrayInputStream</code>
@@ -82,7 +82,7 @@ package java.io;
 	*
 	* @param   buf   the input buffer.
 	*/
-	@:overload public function new(buf : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(buf : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Creates <code>ByteArrayInputStream</code>
@@ -98,7 +98,7 @@ package java.io;
 	* @param   offset   the offset in the buffer of the first byte to read.
 	* @param   length   the maximum number of bytes to read from the buffer.
 	*/
-	@:overload public function new(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
+	@:overload @:public public function new(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Reads the next byte of data from this input stream. The value
@@ -113,7 +113,7 @@ package java.io;
 	* @return  the next byte of data, or <code>-1</code> if the end of the
 	*          stream has been reached.
 	*/
-	@:overload @:synchronized override public function read() : Int;
+	@:overload @:public @:synchronized override public function read() : Int;
 	
 	/**
 	* Reads up to <code>len</code> bytes of data into an array of bytes
@@ -144,7 +144,7 @@ package java.io;
 	* <code>len</code> is negative, or <code>len</code> is greater than
 	* <code>b.length - off</code>
 	*/
-	@:overload @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips <code>n</code> bytes of input from this input stream. Fewer
@@ -158,7 +158,7 @@ package java.io;
 	* @param   n   the number of bytes to be skipped.
 	* @return  the actual number of bytes skipped.
 	*/
-	@:overload @:synchronized override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:synchronized override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the number of remaining bytes that can be read (or skipped over)
@@ -170,7 +170,7 @@ package java.io;
 	* @return  the number of remaining bytes that can be read (or skipped
 	*          over) from this input stream without blocking.
 	*/
-	@:overload @:synchronized override public function available() : Int;
+	@:overload @:public @:synchronized override public function available() : Int;
 	
 	/**
 	* Tests if this <code>InputStream</code> supports mark/reset. The
@@ -179,7 +179,7 @@ package java.io;
 	*
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload override public function markSupported() : Bool;
+	@:require(java1) @:overload @:public override public function markSupported() : Bool;
 	
 	/**
 	* Set the current marked position in the stream.
@@ -196,14 +196,14 @@ package java.io;
 	*
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload override public function mark(readAheadLimit : Int) : Void;
+	@:require(java1) @:overload @:public override public function mark(readAheadLimit : Int) : Void;
 	
 	/**
 	* Resets the buffer to the marked position.  The marked position
 	* is 0 unless another position was marked or an offset was specified
 	* in the constructor.
 	*/
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
 	/**
 	* Closing a <tt>ByteArrayInputStream</tt> has no effect. The methods in
@@ -211,7 +211,7 @@ package java.io;
 	* generating an <tt>IOException</tt>.
 	* <p>
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

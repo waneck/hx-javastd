@@ -35,12 +35,12 @@ extern class ZipOutputStream extends java.util.zip.DeflaterOutputStream implemen
 	/**
 	* Compression method for uncompressed (STORED) entries.
 	*/
-	public static var STORED(default, null) : Int;
+	@:public @:static @:final public static var STORED(default, null) : Int;
 	
 	/**
 	* Compression method for compressed (DEFLATED) entries.
 	*/
-	public static var DEFLATED(default, null) : Int;
+	@:public @:static @:final public static var DEFLATED(default, null) : Int;
 	
 	/**
 	* Creates a new ZIP output stream.
@@ -50,7 +50,7 @@ extern class ZipOutputStream extends java.util.zip.DeflaterOutputStream implemen
 	*
 	* @param out the actual output stream
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Creates a new ZIP output stream.
@@ -62,7 +62,7 @@ extern class ZipOutputStream extends java.util.zip.DeflaterOutputStream implemen
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(out : java.io.OutputStream, charset : java.nio.charset.Charset) : Void;
+	@:require(java7) @:overload @:public public function new(out : java.io.OutputStream, charset : java.nio.charset.Charset) : Void;
 	
 	/**
 	* Sets the ZIP file comment.
@@ -70,7 +70,7 @@ extern class ZipOutputStream extends java.util.zip.DeflaterOutputStream implemen
 	* @exception IllegalArgumentException if the length of the specified
 	*            ZIP file comment is greater than 0xFFFF bytes
 	*/
-	@:overload public function setComment(comment : String) : Void;
+	@:overload @:public public function setComment(comment : String) : Void;
 	
 	/**
 	* Sets the default compression method for subsequent entries. This
@@ -80,7 +80,7 @@ extern class ZipOutputStream extends java.util.zip.DeflaterOutputStream implemen
 	* @exception IllegalArgumentException if the specified compression method
 	*            is invalid
 	*/
-	@:overload public function setMethod(method : Int) : Void;
+	@:overload @:public public function setMethod(method : Int) : Void;
 	
 	/**
 	* Sets the compression level for subsequent entries which are DEFLATED.
@@ -88,7 +88,7 @@ extern class ZipOutputStream extends java.util.zip.DeflaterOutputStream implemen
 	* @param level the compression level (0-9)
 	* @exception IllegalArgumentException if the compression level is invalid
 	*/
-	@:overload public function setLevel(level : Int) : Void;
+	@:overload @:public public function setLevel(level : Int) : Void;
 	
 	/**
 	* Begins writing a new ZIP file entry and positions the stream to the
@@ -100,7 +100,7 @@ extern class ZipOutputStream extends java.util.zip.DeflaterOutputStream implemen
 	* @exception ZipException if a ZIP format error has occurred
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function putNextEntry(e : java.util.zip.ZipEntry) : Void;
+	@:overload @:public public function putNextEntry(e : java.util.zip.ZipEntry) : Void;
 	
 	/**
 	* Closes the current ZIP entry and positions the stream for writing
@@ -108,7 +108,7 @@ extern class ZipOutputStream extends java.util.zip.DeflaterOutputStream implemen
 	* @exception ZipException if a ZIP format error has occurred
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function closeEntry() : Void;
+	@:overload @:public public function closeEntry() : Void;
 	
 	/**
 	* Writes an array of bytes to the current ZIP entry data. This method
@@ -119,7 +119,7 @@ extern class ZipOutputStream extends java.util.zip.DeflaterOutputStream implemen
 	* @exception ZipException if a ZIP file error has occurred
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Finishes writing the contents of the ZIP output stream without closing
@@ -128,24 +128,24 @@ extern class ZipOutputStream extends java.util.zip.DeflaterOutputStream implemen
 	* @exception ZipException if a ZIP file error has occurred
 	* @exception IOException if an I/O exception has occurred
 	*/
-	@:overload public function finish() : Void;
+	@:overload @:public override public function finish() : Void;
 	
 	/**
 	* Closes the ZIP output stream as well as the stream being filtered.
 	* @exception ZipException if a ZIP file error has occurred
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
 @:native('java$util$zip$ZipOutputStream$XEntry') @:internal extern class ZipOutputStream_XEntry
 {
-	public var entry(default, null) : java.util.zip.ZipEntry;
+	@:public @:final public var entry(default, null) : java.util.zip.ZipEntry;
 	
-	public var offset(default, null) : haxe.Int64;
+	@:public @:final public var offset(default, null) : haxe.Int64;
 	
-	@:overload public function new(entry : java.util.zip.ZipEntry, offset : haxe.Int64) : Void;
+	@:overload @:public public function new(entry : java.util.zip.ZipEntry, offset : haxe.Int64) : Void;
 	
 	
 }

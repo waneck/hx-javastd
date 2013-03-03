@@ -56,7 +56,7 @@ extern interface XPathNSResolver
 	* @return Returns the associated namespace URI or <code>null</code> if
 	*   none is found.
 	*/
-	@:overload public function lookupNamespaceURI(prefix : String) : String;
+	@:overload @:public public function lookupNamespaceURI(prefix : String) : String;
 	
 	
 }

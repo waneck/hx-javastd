@@ -53,12 +53,12 @@ extern class TimeZoneNamesBundle extends sun.util.resources.OpenListResourceBund
 	* <code>getContents</code> implementations, while the time zone
 	* ID is inserted into the returned array by this method.
 	*/
-	@:overload override public function handleGetObject(key : String) : Dynamic;
+	@:overload @:public override public function handleGetObject(key : String) : Dynamic;
 	
 	/**
 	* Use LinkedHashMap to preserve order of bundle entries.
 	*/
-	@:overload override private function createMap(size : Int) : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:protected override private function createMap(size : Int) : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* Provides key/value mappings for a specific
@@ -76,7 +76,7 @@ extern class TimeZoneNamesBundle extends sun.util.resources.OpenListResourceBund
 	*     </ul>
 	* </ul>
 	*/
-	@:overload @:abstract override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:protected @:abstract override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

@@ -25,29 +25,29 @@ package com.sun.xml.internal.bind.v2.runtime;
 */
 @:internal extern class ValueListBeanInfoImpl extends com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo<Dynamic>
 {
-	@:overload public function new(owner : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, arrayType : Class<Dynamic>) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, arrayType : Class<Dynamic>) : Void;
 	
-	@:overload override public function serializeBody(array : Dynamic, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public override public function serializeBody(array : Dynamic, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload @:final override public function serializeURIs(array : Dynamic, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public @:final override public function serializeURIs(array : Dynamic, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload @:final override public function getElementNamespaceURI(array : Dynamic) : String;
+	@:overload @:public @:final override public function getElementNamespaceURI(array : Dynamic) : String;
 	
-	@:overload @:final override public function getElementLocalName(array : Dynamic) : String;
+	@:overload @:public @:final override public function getElementLocalName(array : Dynamic) : String;
 	
-	@:overload @:final override public function createInstance(context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : Dynamic;
+	@:overload @:public @:final override public function createInstance(context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : Dynamic;
 	
-	@:overload @:final override public function reset(array : Dynamic, context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : Bool;
+	@:overload @:public @:final override public function reset(array : Dynamic, context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : Bool;
 	
-	@:overload @:final override public function getId(array : Dynamic, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : String;
+	@:overload @:public @:final override public function getId(array : Dynamic, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : String;
 	
-	@:overload @:final override public function serializeAttributes(array : Dynamic, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public @:final override public function serializeAttributes(array : Dynamic, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload @:final override public function serializeRoot(array : Dynamic, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public @:final override public function serializeRoot(array : Dynamic, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload @:final override public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<Dynamic>;
+	@:overload @:public @:final override public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<Dynamic>;
 	
-	@:overload @:final override public function getLoader(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, typeSubstitutionCapable : Bool) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
+	@:overload @:public @:final override public function getLoader(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, typeSubstitutionCapable : Bool) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 	
 	
 }

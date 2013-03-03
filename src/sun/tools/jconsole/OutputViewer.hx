@@ -31,17 +31,17 @@ package sun.tools.jconsole;
 */
 extern class OutputViewer
 {
-	@:overload public static function init() : Void;
+	@:overload @:public @:static public static function init() : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$OutputViewer$PipeListener') @:internal extern class OutputViewer_PipeListener extends java.lang.Thread
 {
-	public var ps : java.io.PrintStream;
+	@:public public var ps : java.io.PrintStream;
 	
-	@:overload public static function create(name : String) : java.io.PrintStream;
+	@:overload @:public @:static public static function create(name : String) : java.io.PrintStream;
 	
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

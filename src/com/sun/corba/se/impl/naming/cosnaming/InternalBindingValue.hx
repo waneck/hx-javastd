@@ -30,15 +30,15 @@ extern class InternalBindingValue
 	* a org.omg.CosNaming::Binding and an CORBA object reference, which are the two
 	* components associated with the binding.
 	*/
-	public var theBinding : org.omg.CosNaming.Binding;
+	@:public public var theBinding : org.omg.CosNaming.Binding;
 	
-	public var strObjectRef : String;
+	@:public public var strObjectRef : String;
 	
-	public var theObjectRef : org.omg.CORBA.Object;
+	@:public public var theObjectRef : org.omg.CORBA.Object;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(b : org.omg.CosNaming.Binding, o : String) : Void;
+	@:overload @:public public function new(b : org.omg.CosNaming.Binding, o : String) : Void;
 	
 	
 }

@@ -30,67 +30,67 @@ extern class WriterUtility
 	*
 	* @author Neeraj Bajaj,K.Venugopal Sun Microsystems.
 	*/
-	public static var START_COMMENT(default, null) : String;
+	@:public @:static @:final public static var START_COMMENT(default, null) : String;
 	
-	public static var END_COMMENT(default, null) : String;
+	@:public @:static @:final public static var END_COMMENT(default, null) : String;
 	
-	public static var DEFAULT_ENCODING(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_ENCODING(default, null) : String;
 	
-	public static var DEFAULT_XMLDECL(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_XMLDECL(default, null) : String;
 	
-	public static var DEFAULT_XML_VERSION(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_XML_VERSION(default, null) : String;
 	
-	public static var CLOSE_START_TAG(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var CLOSE_START_TAG(default, null) : java.StdTypes.Char16;
 	
-	public static var OPEN_START_TAG(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var OPEN_START_TAG(default, null) : java.StdTypes.Char16;
 	
-	public static var OPEN_END_TAG(default, null) : String;
+	@:public @:static @:final public static var OPEN_END_TAG(default, null) : String;
 	
-	public static var CLOSE_END_TAG(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var CLOSE_END_TAG(default, null) : java.StdTypes.Char16;
 	
-	public static var START_CDATA(default, null) : String;
+	@:public @:static @:final public static var START_CDATA(default, null) : String;
 	
-	public static var END_CDATA(default, null) : String;
+	@:public @:static @:final public static var END_CDATA(default, null) : String;
 	
-	public static var CLOSE_EMPTY_ELEMENT(default, null) : String;
+	@:public @:static @:final public static var CLOSE_EMPTY_ELEMENT(default, null) : String;
 	
-	public static var SPACE(default, null) : String;
+	@:public @:static @:final public static var SPACE(default, null) : String;
 	
-	public static var UTF_8(default, null) : String;
+	@:public @:static @:final public static var UTF_8(default, null) : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Creates a new instance of WriterUtility */
-	@:overload public function new(writer : java.io.Writer) : Void;
+	@:overload @:public public function new(writer : java.io.Writer) : Void;
 	
 	/**
 	* sets the writer object
 	* @param writer file to write into
 	*/
-	@:overload public function setWriter(writer : java.io.Writer) : Void;
+	@:overload @:public public function setWriter(writer : java.io.Writer) : Void;
 	
-	@:overload public function setEscapeCharacters(escape : Bool) : Void;
+	@:overload @:public public function setEscapeCharacters(escape : Bool) : Void;
 	
-	@:overload public function getEscapeCharacters() : Bool;
-	
-	/**
-	* writes xml content (characters and element content
-	* @param content
-	*/
-	@:overload public function writeXMLContent(content : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function getEscapeCharacters() : Bool;
 	
 	/**
 	* writes xml content (characters and element content
 	* @param content
 	*/
-	@:overload public function writeXMLContent(content : String) : Void;
+	@:overload @:public public function writeXMLContent(content : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	
+	/**
+	* writes xml content (characters and element content
+	* @param content
+	*/
+	@:overload @:public public function writeXMLContent(content : String) : Void;
 	
 	/**
 	* Write Attribute value to the underlying stream.
 	*
 	* @param value
 	*/
-	@:overload public function writeXMLAttributeValue(value : String) : Void;
+	@:overload @:public public function writeXMLAttributeValue(value : String) : Void;
 	
 	
 }

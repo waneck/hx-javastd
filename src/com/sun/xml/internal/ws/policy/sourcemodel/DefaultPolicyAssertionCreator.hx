@@ -28,12 +28,12 @@ package com.sun.xml.internal.ws.policy.sourcemodel;
 	/**
 	* See {@link PolicyAssertionCreator#getSupportedDomainNamespaceURIs() method documentation in interface}
 	*/
-	@:overload public function getSupportedDomainNamespaceURIs() : java.NativeArray<String>;
+	@:overload @:public public function getSupportedDomainNamespaceURIs() : java.NativeArray<String>;
 	
 	/**
 	* See {@link PolicyAssertionCreator#createAssertion(AssertionData, Collection, AssertionSet, PolicyAssertionCreator) method documentation in interface}
 	*/
-	@:overload public function createAssertion(data : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>, nestedAlternative : com.sun.xml.internal.ws.policy.AssertionSet, defaultCreator : com.sun.xml.internal.ws.policy.spi.PolicyAssertionCreator) : com.sun.xml.internal.ws.policy.PolicyAssertion;
+	@:overload @:public public function createAssertion(data : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>, nestedAlternative : com.sun.xml.internal.ws.policy.AssertionSet, defaultCreator : com.sun.xml.internal.ws.policy.spi.PolicyAssertionCreator) : com.sun.xml.internal.ws.policy.PolicyAssertion;
 	
 	
 }

@@ -25,13 +25,13 @@ package com.sun.jndi.ldap;
 */
 @:internal extern class LdapSearchEnumeration extends com.sun.jndi.ldap.LdapNamingEnumeration
 {
-	@:overload override private function createItem(dn : String, attrs : javax.naming.directory.Attributes, respCtls : java.util.Vector<Dynamic>) : javax.naming.NameClassPair;
+	@:overload @:protected override private function createItem(dn : String, attrs : javax.naming.directory.Attributes, respCtls : java.util.Vector<Dynamic>) : javax.naming.NameClassPair;
 	
-	@:overload public function appendUnprocessedReferrals(ex : javax.naming.ldap.LdapReferralException) : Void;
+	@:overload @:public public function appendUnprocessedReferrals(ex : javax.naming.ldap.LdapReferralException) : Void;
 	
-	@:overload override private function getReferredResults(refCtx : com.sun.jndi.ldap.LdapReferralContext) : com.sun.jndi.ldap.LdapNamingEnumeration;
+	@:overload @:protected override private function getReferredResults(refCtx : com.sun.jndi.ldap.LdapReferralContext) : com.sun.jndi.ldap.LdapNamingEnumeration;
 	
-	@:overload override private function update(ne : com.sun.jndi.ldap.LdapNamingEnumeration) : Void;
+	@:overload @:protected override private function update(ne : com.sun.jndi.ldap.LdapNamingEnumeration) : Void;
 	
 	
 }

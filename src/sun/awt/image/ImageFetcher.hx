@@ -31,28 +31,28 @@ package sun.awt.image;
 	* If there is no available fetcher to process an ImageFetchable, then
 	* reports failure to caller.
 	*/
-	@:overload public static function add(src : sun.awt.image.ImageFetchable) : Bool;
+	@:overload @:public @:static public static function add(src : sun.awt.image.ImageFetchable) : Bool;
 	
 	/**
 	* Removes an ImageFetchable from the queue of items to fetch.
 	*/
-	@:overload public static function remove(src : sun.awt.image.ImageFetchable) : Void;
+	@:overload @:public @:static public static function remove(src : sun.awt.image.ImageFetchable) : Void;
 	
 	/**
 	* Checks to see if the given thread is one of the ImageFetchers.
 	*/
-	@:overload public static function isFetcher(t : java.lang.Thread) : Bool;
+	@:overload @:public @:static public static function isFetcher(t : java.lang.Thread) : Bool;
 	
 	/**
 	* Checks to see if the current thread is one of the ImageFetchers.
 	*/
-	@:overload public static function amFetcher() : Bool;
+	@:overload @:public @:static public static function amFetcher() : Bool;
 	
 	/**
 	* The main run() method of an ImageFetcher Thread.  Calls fetchloop()
 	* to do the work, then removes itself from the array of ImageFetchers.
 	*/
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

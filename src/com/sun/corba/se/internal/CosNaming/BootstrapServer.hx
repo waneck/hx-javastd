@@ -33,7 +33,7 @@ extern class BootstrapServer
 	* BootstrapServerRequestDispatcher.
 	* @param args the command-line arguments to the main program.
 	*/
-	@:overload @:final public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static @:final public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

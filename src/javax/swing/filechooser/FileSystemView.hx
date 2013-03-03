@@ -43,9 +43,9 @@ package javax.swing.filechooser;
 //// to handle their particular type of file system.
 extern class FileSystemView
 {
-	@:overload public static function getFileSystemView() : javax.swing.filechooser.FileSystemView;
+	@:overload @:public @:static public static function getFileSystemView() : javax.swing.filechooser.FileSystemView;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Determines if the given file is a root in the navigatable tree(s).
@@ -59,7 +59,7 @@ extern class FileSystemView
 	* @return <code>true</code> if <code>f</code> is a root in the navigatable tree.
 	* @see #isFileSystemRoot
 	*/
-	@:overload public function isRoot(f : java.io.File) : Bool;
+	@:overload @:public public function isRoot(f : java.io.File) : Bool;
 	
 	/**
 	* Returns true if the file (directory) can be visited.
@@ -71,7 +71,7 @@ extern class FileSystemView
 	* @see FileView#isTraversable
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isTraversable(f : java.io.File) : Null<Bool>;
+	@:require(java4) @:overload @:public public function isTraversable(f : java.io.File) : Null<Bool>;
 	
 	/**
 	* Name of a file, directory, or folder as it would be displayed in
@@ -85,7 +85,7 @@ extern class FileSystemView
 	* @see JFileChooser#getName
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getSystemDisplayName(f : java.io.File) : String;
+	@:require(java4) @:overload @:public public function getSystemDisplayName(f : java.io.File) : String;
 	
 	/**
 	* Type description for a file, directory, or folder as it would be displayed in
@@ -100,7 +100,7 @@ extern class FileSystemView
 	* @see JFileChooser#getTypeDescription
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getSystemTypeDescription(f : java.io.File) : String;
+	@:require(java4) @:overload @:public public function getSystemTypeDescription(f : java.io.File) : String;
 	
 	/**
 	* Icon for a file, directory, or folder as it would be displayed in
@@ -114,7 +114,7 @@ extern class FileSystemView
 	* @see JFileChooser#getIcon
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getSystemIcon(f : java.io.File) : javax.swing.Icon;
+	@:require(java4) @:overload @:public public function getSystemIcon(f : java.io.File) : javax.swing.Icon;
 	
 	/**
 	* On Windows, a file can appear in multiple folders, other than its
@@ -126,7 +126,7 @@ extern class FileSystemView
 	* @return <code>true</code> if <code>folder</code> is a directory or special folder and contains <code>file</code>.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isParent(folder : java.io.File, file : java.io.File) : Bool;
+	@:require(java4) @:overload @:public public function isParent(folder : java.io.File, file : java.io.File) : Bool;
 	
 	/**
 	*
@@ -138,7 +138,7 @@ extern class FileSystemView
 	* a <code>ShellFolder</code> object.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getChild(parent : java.io.File, fileName : String) : java.io.File;
+	@:require(java4) @:overload @:public public function getChild(parent : java.io.File, fileName : String) : java.io.File;
 	
 	/**
 	* Checks if <code>f</code> represents a real directory or file as opposed to a
@@ -149,17 +149,17 @@ extern class FileSystemView
 	* @return <code>true</code> if <code>f</code> is a real file or directory.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isFileSystem(f : java.io.File) : Bool;
+	@:require(java4) @:overload @:public public function isFileSystem(f : java.io.File) : Bool;
 	
 	/**
 	* Creates a new folder with a default folder name.
 	*/
-	@:overload @:abstract public function createNewFolder(containingDir : java.io.File) : java.io.File;
+	@:overload @:public @:abstract public function createNewFolder(containingDir : java.io.File) : java.io.File;
 	
 	/**
 	* Returns whether a file is hidden or not.
 	*/
-	@:overload public function isHiddenFile(f : java.io.File) : Bool;
+	@:overload @:public public function isHiddenFile(f : java.io.File) : Bool;
 	
 	/**
 	* Is dir the root of a tree in the file system, such as a drive
@@ -170,7 +170,7 @@ extern class FileSystemView
 	* @see #isRoot
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isFileSystemRoot(dir : java.io.File) : Bool;
+	@:require(java4) @:overload @:public public function isFileSystemRoot(dir : java.io.File) : Bool;
 	
 	/**
 	* Used by UI classes to decide whether to display a special icon
@@ -182,7 +182,7 @@ extern class FileSystemView
 	* @return <code>false</code> always
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isDrive(dir : java.io.File) : Bool;
+	@:require(java4) @:overload @:public public function isDrive(dir : java.io.File) : Bool;
 	
 	/**
 	* Used by UI classes to decide whether to display a special icon
@@ -194,7 +194,7 @@ extern class FileSystemView
 	* @return <code>false</code> always
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isFloppyDrive(dir : java.io.File) : Bool;
+	@:require(java4) @:overload @:public public function isFloppyDrive(dir : java.io.File) : Bool;
 	
 	/**
 	* Used by UI classes to decide whether to display a special icon
@@ -206,16 +206,16 @@ extern class FileSystemView
 	* @return <code>false</code> always
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isComputerNode(dir : java.io.File) : Bool;
+	@:require(java4) @:overload @:public public function isComputerNode(dir : java.io.File) : Bool;
 	
 	/**
 	* Returns all root partitions on this system. For example, on
 	* Windows, this would be the "Desktop" folder, while on DOS this
 	* would be the A: through Z: drives.
 	*/
-	@:overload public function getRoots() : java.NativeArray<java.io.File>;
+	@:overload @:public public function getRoots() : java.NativeArray<java.io.File>;
 	
-	@:overload public function getHomeDirectory() : java.io.File;
+	@:overload @:public public function getHomeDirectory() : java.io.File;
 	
 	/**
 	* Return the user's default starting directory for the file chooser.
@@ -224,22 +224,22 @@ extern class FileSystemView
 	*         starting folder
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getDefaultDirectory() : java.io.File;
+	@:require(java4) @:overload @:public public function getDefaultDirectory() : java.io.File;
 	
 	/**
 	* Returns a File object constructed in dir from the given filename.
 	*/
-	@:overload public function createFileObject(dir : java.io.File, filename : String) : java.io.File;
+	@:overload @:public public function createFileObject(dir : java.io.File, filename : String) : java.io.File;
 	
 	/**
 	* Returns a File object constructed from the given path string.
 	*/
-	@:overload public function createFileObject(path : String) : java.io.File;
+	@:overload @:public public function createFileObject(path : String) : java.io.File;
 	
 	/**
 	* Gets the list of shown (i.e. not hidden) files.
 	*/
-	@:overload public function getFiles(dir : java.io.File, useFileHiding : Bool) : java.NativeArray<java.io.File>;
+	@:overload @:public public function getFiles(dir : java.io.File, useFileHiding : Bool) : java.NativeArray<java.io.File>;
 	
 	/**
 	* Returns the parent directory of <code>dir</code>.
@@ -247,7 +247,7 @@ extern class FileSystemView
 	* @return the parent directory of <code>dir</code>, or
 	*   <code>null</code> if <code>dir</code> is <code>null</code>
 	*/
-	@:overload public function getParentDirectory(dir : java.io.File) : java.io.File;
+	@:overload @:public public function getParentDirectory(dir : java.io.File) : java.io.File;
 	
 	/**
 	* Creates a new <code>File</code> object for <code>f</code> with correct
@@ -258,19 +258,19 @@ extern class FileSystemView
 	* @return a new <code>File</code> object
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function createFileSystemRoot(f : java.io.File) : java.io.File;
+	@:require(java4) @:overload @:protected private function createFileSystemRoot(f : java.io.File) : java.io.File;
 	
 	
 }
 @:native('javax$swing$filechooser$FileSystemView$FileSystemRoot') @:internal extern class FileSystemView_FileSystemRoot extends java.io.File
 {
-	@:overload public function new(f : java.io.File) : Void;
+	@:overload @:public public function new(f : java.io.File) : Void;
 	
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
-	@:overload public function isDirectory() : Bool;
+	@:overload @:public override public function isDirectory() : Bool;
 	
-	@:overload public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	
 }
@@ -279,23 +279,23 @@ extern class FileSystemView
 	/**
 	* Creates a new folder with a default folder name.
 	*/
-	@:overload override public function createNewFolder(containingDir : java.io.File) : java.io.File;
+	@:overload @:public override public function createNewFolder(containingDir : java.io.File) : java.io.File;
 	
-	@:overload override public function isFileSystemRoot(dir : java.io.File) : Bool;
+	@:overload @:public override public function isFileSystemRoot(dir : java.io.File) : Bool;
 	
-	@:overload override public function isDrive(dir : java.io.File) : Bool;
+	@:overload @:public override public function isDrive(dir : java.io.File) : Bool;
 	
-	@:overload override public function isFloppyDrive(dir : java.io.File) : Bool;
+	@:overload @:public override public function isFloppyDrive(dir : java.io.File) : Bool;
 	
-	@:overload override public function isComputerNode(dir : java.io.File) : Bool;
+	@:overload @:public override public function isComputerNode(dir : java.io.File) : Bool;
 	
 	
 }
 @:internal extern class WindowsFileSystemView extends javax.swing.filechooser.FileSystemView
 {
-	@:overload override public function isTraversable(f : java.io.File) : Null<Bool>;
+	@:overload @:public override public function isTraversable(f : java.io.File) : Null<Bool>;
 	
-	@:overload override public function getChild(parent : java.io.File, fileName : String) : java.io.File;
+	@:overload @:public override public function getChild(parent : java.io.File, fileName : String) : java.io.File;
 	
 	/**
 	* Type description for a file, directory, or folder as it would be displayed in
@@ -304,28 +304,28 @@ extern class FileSystemView
 	*
 	* The Windows implementation gets information from the ShellFolder class.
 	*/
-	@:overload override public function getSystemTypeDescription(f : java.io.File) : String;
+	@:overload @:public override public function getSystemTypeDescription(f : java.io.File) : String;
 	
 	/**
 	* @return the Desktop folder.
 	*/
-	@:overload override public function getHomeDirectory() : java.io.File;
+	@:overload @:public override public function getHomeDirectory() : java.io.File;
 	
 	/**
 	* Creates a new folder with a default folder name.
 	*/
-	@:overload override public function createNewFolder(containingDir : java.io.File) : java.io.File;
+	@:overload @:public override public function createNewFolder(containingDir : java.io.File) : java.io.File;
 	
-	@:overload override public function isDrive(dir : java.io.File) : Bool;
+	@:overload @:public override public function isDrive(dir : java.io.File) : Bool;
 	
-	@:overload override public function isFloppyDrive(dir : java.io.File) : Bool;
+	@:overload @:public override public function isFloppyDrive(dir : java.io.File) : Bool;
 	
 	/**
 	* Returns a File object constructed from the given path string.
 	*/
-	@:overload override public function createFileObject(path : String) : java.io.File;
+	@:overload @:public override public function createFileObject(path : String) : java.io.File;
 	
-	@:overload override private function createFileSystemRoot(f : java.io.File) : java.io.File;
+	@:overload @:protected override private function createFileSystemRoot(f : java.io.File) : java.io.File;
 	
 	
 }
@@ -334,7 +334,7 @@ extern class FileSystemView
 	/**
 	* Creates a new folder with a default folder name.
 	*/
-	@:overload override public function createNewFolder(containingDir : java.io.File) : java.io.File;
+	@:overload @:public override public function createNewFolder(containingDir : java.io.File) : java.io.File;
 	
 	
 }

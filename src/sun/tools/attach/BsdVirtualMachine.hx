@@ -28,7 +28,7 @@ extern class BsdVirtualMachine extends sun.tools.attach.HotSpotVirtualMachine
 	/**
 	* Detach from the target VM
 	*/
-	@:overload public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	
 }
@@ -37,13 +37,13 @@ extern class BsdVirtualMachine extends sun.tools.attach.HotSpotVirtualMachine
 */
 @:native('sun$tools$attach$BsdVirtualMachine$SocketInputStream') @:internal extern class BsdVirtualMachine_SocketInputStream extends java.io.InputStream
 {
-	@:overload public function new(s : Int) : Void;
+	@:overload @:public public function new(s : Int) : Void;
 	
-	@:overload @:synchronized public function read() : Int;
+	@:overload @:public @:synchronized override public function read() : Int;
 	
-	@:overload @:synchronized public function read(bs : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public @:synchronized override public function read(bs : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

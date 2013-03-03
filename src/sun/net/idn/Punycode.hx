@@ -49,7 +49,7 @@ extern class Punycode
 	* @return
 	* @throws ParseException
 	*/
-	@:overload public static function encode(src : java.lang.StringBuffer, caseFlags : java.NativeArray<Bool>) : java.lang.StringBuffer;
+	@:overload @:public @:static public static function encode(src : java.lang.StringBuffer, caseFlags : java.NativeArray<Bool>) : java.lang.StringBuffer;
 	
 	/**
 	* Converts Punycode to Unicode.
@@ -60,7 +60,7 @@ extern class Punycode
 	* @return
 	* @throws ParseException
 	*/
-	@:overload public static function decode(src : java.lang.StringBuffer, caseFlags : java.NativeArray<Bool>) : java.lang.StringBuffer;
+	@:overload @:public @:static public static function decode(src : java.lang.StringBuffer, caseFlags : java.NativeArray<Bool>) : java.lang.StringBuffer;
 	
 	
 }

@@ -37,7 +37,7 @@ extern class SpinnerListModel extends javax.swing.AbstractSpinnerModel implement
 	* @throws IllegalArugmentException if <code>values</code> is
 	*    <code>null</code> or zero size
 	*/
-	@:overload public function new(values : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function new(values : java.util.List<Dynamic>) : Void;
 	
 	/**
 	* Constructs a <code>SpinnerModel</code> whose sequence of values
@@ -50,14 +50,14 @@ extern class SpinnerListModel extends javax.swing.AbstractSpinnerModel implement
 	* @throws IllegalArugmentException if <code>values</code> is
 	*    <code>null</code> or zero length
 	*/
-	@:overload public function new(values : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(values : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Constructs an effectively empty <code>SpinnerListModel</code>.
 	* The model's list will contain a single
 	* <code>"empty"</code> string element.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the <code>List</code> that defines the sequence for this model.
@@ -65,7 +65,7 @@ extern class SpinnerListModel extends javax.swing.AbstractSpinnerModel implement
 	* @return the value of the <code>list</code> property
 	* @see #setList
 	*/
-	@:overload public function getList() : java.util.List<Dynamic>;
+	@:overload @:public public function getList() : java.util.List<Dynamic>;
 	
 	/**
 	* Changes the list that defines this sequence and resets the index
@@ -80,7 +80,7 @@ extern class SpinnerListModel extends javax.swing.AbstractSpinnerModel implement
 	*    <code>null</code> or zero length
 	* @see #getList
 	*/
-	@:overload public function setList(list : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function setList(list : java.util.List<Dynamic>) : Void;
 	
 	/**
 	* Returns the current element of the sequence.
@@ -89,7 +89,7 @@ extern class SpinnerListModel extends javax.swing.AbstractSpinnerModel implement
 	* @see SpinnerModel#getValue
 	* @see #setValue
 	*/
-	@:overload override public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
 	/**
 	* Changes the current element of the sequence and notifies
@@ -109,7 +109,7 @@ extern class SpinnerListModel extends javax.swing.AbstractSpinnerModel implement
 	* @see SpinnerModel#setValue
 	* @see #getValue
 	*/
-	@:overload override public function setValue(elt : Dynamic) : Void;
+	@:overload @:public override public function setValue(elt : Dynamic) : Void;
 	
 	/**
 	* Returns the next legal value of the underlying sequence or
@@ -120,7 +120,7 @@ extern class SpinnerListModel extends javax.swing.AbstractSpinnerModel implement
 	* @see SpinnerModel#getNextValue
 	* @see #getPreviousValue
 	*/
-	@:overload override public function getNextValue() : Dynamic;
+	@:overload @:public override public function getNextValue() : Dynamic;
 	
 	/**
 	* Returns the previous element of the underlying sequence or
@@ -131,7 +131,7 @@ extern class SpinnerListModel extends javax.swing.AbstractSpinnerModel implement
 	* @see SpinnerModel#getPreviousValue
 	* @see #getNextValue
 	*/
-	@:overload override public function getPreviousValue() : Dynamic;
+	@:overload @:public override public function getPreviousValue() : Dynamic;
 	
 	
 }

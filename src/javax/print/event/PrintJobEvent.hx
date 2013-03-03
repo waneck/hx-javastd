@@ -28,18 +28,18 @@ extern class PrintJobEvent extends javax.print.event.PrintEvent
 	/**
 	* The job was canceled by the {@link javax.print.PrintService PrintService}.
 	*/
-	public static var JOB_CANCELED(default, null) : Int;
+	@:public @:static @:final public static var JOB_CANCELED(default, null) : Int;
 	
 	/**
 	* The document cis completely printed.
 	*/
-	public static var JOB_COMPLETE(default, null) : Int;
+	@:public @:static @:final public static var JOB_COMPLETE(default, null) : Int;
 	
 	/**
 	* The print service reports that the job cannot be completed.
 	* The application must resubmit the job.
 	*/
-	public static var JOB_FAILED(default, null) : Int;
+	@:public @:static @:final public static var JOB_FAILED(default, null) : Int;
 	
 	/**
 	* The print service indicates that a - possibly transient - problem
@@ -47,7 +47,7 @@ extern class PrintJobEvent extends javax.print.event.PrintEvent
 	* continue.  One example of an event that can
 	* generate this message is when the printer runs out of paper.
 	*/
-	public static var REQUIRES_ATTENTION(default, null) : Int;
+	@:public @:static @:final public static var REQUIRES_ATTENTION(default, null) : Int;
 	
 	/**
 	* Not all print services may be capable of delivering interesting
@@ -59,14 +59,14 @@ extern class PrintJobEvent extends javax.print.event.PrintEvent
 	* before receiving this message, the only inference that should be drawn
 	* is that the print service does not support delivering such an event.
 	*/
-	public static var NO_MORE_EVENTS(default, null) : Int;
+	@:public @:static @:final public static var NO_MORE_EVENTS(default, null) : Int;
 	
 	/**
 	* The job is not necessarily printed yet, but the data has been transferred
 	* successfully from the client to the print service. The client may
 	* free data resources.
 	*/
-	public static var DATA_TRANSFER_COMPLETE(default, null) : Int;
+	@:public @:static @:final public static var DATA_TRANSFER_COMPLETE(default, null) : Int;
 	
 	/**
 	* Constructs a <code>PrintJobEvent</code> object.
@@ -76,13 +76,13 @@ extern class PrintJobEvent extends javax.print.event.PrintEvent
 	* @throws IllegalArgumentException if <code>source</code> is
 	*         <code>null</code>.
 	*/
-	@:overload public function new(source : javax.print.DocPrintJob, reason : Int) : Void;
+	@:overload @:public public function new(source : javax.print.DocPrintJob, reason : Int) : Void;
 	
 	/**
 	* Gets the reason for this event.
 	* @return  reason int.
 	*/
-	@:overload public function getPrintEventType() : Int;
+	@:overload @:public public function getPrintEventType() : Int;
 	
 	/**
 	* Determines the <code>DocPrintJob</code> to which this print job
@@ -93,7 +93,7 @@ extern class PrintJobEvent extends javax.print.event.PrintEvent
 	*          <code>PrintJobEvent</code>.
 	*
 	*/
-	@:overload public function getPrintJob() : javax.print.DocPrintJob;
+	@:overload @:public public function getPrintJob() : javax.print.DocPrintJob;
 	
 	
 }

@@ -28,32 +28,32 @@ package com.sun.tools.apt.mirror.declaration;
 	/**
 	* Implementation of FieldDeclaration
 	*/
-	private var sym : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol;
+	@:protected private var sym : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol;
 	
 	/**
 	* Returns the field's name.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getType() : com.sun.mirror.type.TypeMirror;
+	@:overload @:public public function getType() : com.sun.mirror.type.TypeMirror;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getConstantValue() : Dynamic;
+	@:overload @:public public function getConstantValue() : Dynamic;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getConstantExpression() : String;
+	@:overload @:public public function getConstantExpression() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
 	
 	
 }

@@ -53,14 +53,14 @@ package javax.swing.plaf.synth;
 	*
 	* @param cache SynthStyleFactory the UIs should use.
 	*/
-	@:overload public static function setStyleFactory(cache : javax.swing.plaf.synth.SynthStyleFactory) : Void;
+	@:overload @:public @:static public static function setStyleFactory(cache : javax.swing.plaf.synth.SynthStyleFactory) : Void;
 	
 	/**
 	* Returns the current SynthStyleFactory.
 	*
 	* @return SynthStyleFactory
 	*/
-	@:overload public static function getStyleFactory() : javax.swing.plaf.synth.SynthStyleFactory;
+	@:overload @:public @:static public static function getStyleFactory() : javax.swing.plaf.synth.SynthStyleFactory;
 	
 	/**
 	* Gets a SynthStyle for the specified region of the specified component.
@@ -71,7 +71,7 @@ package javax.swing.plaf.synth;
 	* @param region Identifies the region of the specified component
 	* @return SynthStyle to use.
 	*/
-	@:overload public static function getStyle(c : javax.swing.JComponent, region : javax.swing.plaf.synth.Region) : javax.swing.plaf.synth.SynthStyle;
+	@:overload @:public @:static public static function getStyle(c : javax.swing.JComponent, region : javax.swing.plaf.synth.Region) : javax.swing.plaf.synth.SynthStyle;
 	
 	/**
 	* Updates the style associated with <code>c</code>, and all its children.
@@ -80,7 +80,7 @@ package javax.swing.plaf.synth;
 	*
 	* @param c Component to update style for.
 	*/
-	@:overload public static function updateStyles(c : java.awt.Component) : Void;
+	@:overload @:public @:static public static function updateStyles(c : java.awt.Component) : Void;
 	
 	/**
 	* Returns the Region for the JComponent <code>c</code>.
@@ -88,7 +88,7 @@ package javax.swing.plaf.synth;
 	* @param c JComponent to fetch the Region for
 	* @return Region corresponding to <code>c</code>
 	*/
-	@:overload public static function getRegion(c : javax.swing.JComponent) : javax.swing.plaf.synth.Region;
+	@:overload @:public @:static public static function getRegion(c : javax.swing.JComponent) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Creates the Synth look and feel <code>ComponentUI</code> for
@@ -97,7 +97,7 @@ package javax.swing.plaf.synth;
 	* @param c JComponent to create the <code>ComponentUI</code> for
 	* @return ComponentUI to use for <code>c</code>
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Creates a SynthLookAndFeel.
@@ -109,7 +109,7 @@ package javax.swing.plaf.synth;
 	* @see #load
 	* @see #setStyleFactory
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Loads the set of <code>SynthStyle</code>s that will be used by
@@ -125,7 +125,7 @@ package javax.swing.plaf.synth;
 	* @throws ParseException if there is an error in parsing
 	* @throws IllegalArgumentException if input or resourceBase is <code>null</code>
 	*/
-	@:overload public function load(input : java.io.InputStream, resourceBase : Class<Dynamic>) : Void;
+	@:overload @:public public function load(input : java.io.InputStream, resourceBase : Class<Dynamic>) : Void;
 	
 	/**
 	* Loads the set of <code>SynthStyle</code>s that will be used by
@@ -143,59 +143,59 @@ package javax.swing.plaf.synth;
 	* @throws IOException if synthSet cannot be opened as an <code>InputStream</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function load(url : java.net.URL) : Void;
+	@:require(java6) @:overload @:public public function load(url : java.net.URL) : Void;
 	
 	/**
 	* Called by UIManager when this look and feel is installed.
 	*/
-	@:overload override public function initialize() : Void;
+	@:overload @:public override public function initialize() : Void;
 	
 	/**
 	* Called by UIManager when this look and feel is uninstalled.
 	*/
-	@:overload override public function uninitialize() : Void;
+	@:overload @:public override public function uninitialize() : Void;
 	
 	/**
 	* Returns the defaults for this SynthLookAndFeel.
 	*
 	* @return Defaults table.
 	*/
-	@:overload override public function getDefaults() : javax.swing.UIDefaults;
+	@:overload @:public override public function getDefaults() : javax.swing.UIDefaults;
 	
 	/**
 	* Returns true, SynthLookAndFeel is always supported.
 	*
 	* @return true.
 	*/
-	@:overload override public function isSupportedLookAndFeel() : Bool;
+	@:overload @:public override public function isSupportedLookAndFeel() : Bool;
 	
 	/**
 	* Returns false, SynthLookAndFeel is not a native look and feel.
 	*
 	* @return false
 	*/
-	@:overload override public function isNativeLookAndFeel() : Bool;
+	@:overload @:public override public function isNativeLookAndFeel() : Bool;
 	
 	/**
 	* Returns a textual description of SynthLookAndFeel.
 	*
 	* @return textual description of synth.
 	*/
-	@:overload override public function getDescription() : String;
+	@:overload @:public override public function getDescription() : String;
 	
 	/**
 	* Return a short string that identifies this look and feel.
 	*
 	* @return a short string identifying this look and feel.
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Return a string that identifies this look and feel.
 	*
 	* @return a short string identifying this look and feel.
 	*/
-	@:overload override public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
 	/**
 	* Returns whether or not the UIs should update their
@@ -209,7 +209,7 @@ package javax.swing.plaf.synth;
 	* <code>SynthStyles</code> from the <code>SynthStyleFactory</code>
 	* when the ancestor changed.
 	*/
-	@:overload public function shouldUpdateStyleOnAncestorChanged() : Bool;
+	@:overload @:public public function shouldUpdateStyleOnAncestorChanged() : Bool;
 	
 	/**
 	* Returns whether or not the UIs should update their styles when a
@@ -219,21 +219,21 @@ package javax.swing.plaf.synth;
 	* @return whether or not the UIs should update their styles
 	* @since 1.7
 	*/
-	@:require(java7) @:overload private function shouldUpdateStyleOnEvent(ev : java.beans.PropertyChangeEvent) : Bool;
+	@:require(java7) @:overload @:protected private function shouldUpdateStyleOnEvent(ev : java.beans.PropertyChangeEvent) : Bool;
 	
 	
 }
 @:native('javax$swing$plaf$synth$SynthLookAndFeel$AATextListener') @:internal extern class SynthLookAndFeel_AATextListener extends java.lang.ref.WeakReference<javax.swing.LookAndFeel> implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(pce : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(pce : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function updateUI() : Void;
+	@:overload @:protected private function updateUI() : Void;
 	
 	
 }
 @:native('javax$swing$plaf$synth$SynthLookAndFeel$Handler') @:internal extern class SynthLookAndFeel_Handler implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

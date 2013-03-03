@@ -30,28 +30,28 @@ package sun.font;
 */
 extern class Type1GlyphMapper extends sun.font.CharToGlyphMapper
 {
-	@:overload public function new(font : sun.font.Type1Font) : Void;
+	@:overload @:public public function new(font : sun.font.Type1Font) : Void;
 	
-	@:overload public function getNumGlyphs() : Int;
+	@:overload @:public override public function getNumGlyphs() : Int;
 	
-	@:overload public function getMissingGlyphCode() : Int;
+	@:overload @:public override public function getMissingGlyphCode() : Int;
 	
-	@:overload public function canDisplay(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canDisplay(ch : java.StdTypes.Char16) : Bool;
 	
-	@:overload public function charToGlyph(ch : java.StdTypes.Char16) : Int;
+	@:overload @:public override public function charToGlyph(ch : java.StdTypes.Char16) : Int;
 	
-	@:overload public function charToGlyph(ch : Int) : Int;
+	@:overload @:public override public function charToGlyph(ch : Int) : Int;
 	
-	@:overload public function charsToGlyphs(count : Int, unicodes : java.NativeArray<java.StdTypes.Char16>, glyphs : java.NativeArray<Int>) : Void;
+	@:overload @:public override public function charsToGlyphs(count : Int, unicodes : java.NativeArray<java.StdTypes.Char16>, glyphs : java.NativeArray<Int>) : Void;
 	
-	@:overload public function charsToGlyphs(count : Int, unicodes : java.NativeArray<Int>, glyphs : java.NativeArray<Int>) : Void;
+	@:overload @:public override public function charsToGlyphs(count : Int, unicodes : java.NativeArray<Int>, glyphs : java.NativeArray<Int>) : Void;
 	
 	/* This variant checks if shaping is needed and immediately
 	* returns true if it does. A caller of this method should be expecting
 	* to check the return type because it needs to know how to handle
 	* the character data for display.
 	*/
-	@:overload public function charsToGlyphsNS(count : Int, unicodes : java.NativeArray<java.StdTypes.Char16>, glyphs : java.NativeArray<Int>) : Bool;
+	@:overload @:public override public function charsToGlyphsNS(count : Int, unicodes : java.NativeArray<java.StdTypes.Char16>, glyphs : java.NativeArray<Int>) : Bool;
 	
 	
 }

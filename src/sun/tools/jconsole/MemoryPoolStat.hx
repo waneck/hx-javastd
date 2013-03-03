@@ -28,29 +28,29 @@ extern class MemoryPoolStat
 	/**
 	* Returns the memory pool name.
 	*/
-	@:overload public function getPoolName() : String;
+	@:overload @:public public function getPoolName() : String;
 	
 	/**
 	* Returns the current memory usage.
 	*/
-	@:overload public function getUsage() : java.lang.management.MemoryUsage;
+	@:overload @:public public function getUsage() : java.lang.management.MemoryUsage;
 	
 	/**
 	* Returns the current usage threshold.
 	* -1 if not supported.
 	*/
-	@:overload public function getUsageThreshold() : haxe.Int64;
+	@:overload @:public public function getUsageThreshold() : haxe.Int64;
 	
 	/**
 	* Returns the current collection usage threshold.
 	* -1 if not supported.
 	*/
-	@:overload public function getCollectionUsageThreshold() : haxe.Int64;
+	@:overload @:public public function getCollectionUsageThreshold() : haxe.Int64;
 	
 	/**
 	* Returns the Id of GC.
 	*/
-	@:overload public function getLastGcId() : haxe.Int64;
+	@:overload @:public public function getLastGcId() : haxe.Int64;
 	
 	/**
 	* Returns the start time of the most recent GC on
@@ -58,7 +58,7 @@ extern class MemoryPoolStat
 	*
 	* Return 0 if no GC occurs.
 	*/
-	@:overload public function getLastGcStartTime() : haxe.Int64;
+	@:overload @:public public function getLastGcStartTime() : haxe.Int64;
 	
 	/**
 	* Returns the end time of the most recent GC on
@@ -66,19 +66,19 @@ extern class MemoryPoolStat
 	*
 	* Return 0 if no GC occurs.
 	*/
-	@:overload public function getLastGcEndTime() : haxe.Int64;
+	@:overload @:public public function getLastGcEndTime() : haxe.Int64;
 	
 	/**
 	* Returns the memory usage before the most recent GC started.
 	* null if no GC occurs.
 	*/
-	@:overload public function getBeforeGcUsage() : java.lang.management.MemoryUsage;
+	@:overload @:public public function getBeforeGcUsage() : java.lang.management.MemoryUsage;
 	
 	/**
 	* Returns the memory usage after the most recent GC finished.
 	* null if no GC occurs.
 	*/
-	@:overload public function getAfterGcUsage() : java.lang.management.MemoryUsage;
+	@:overload @:public public function getAfterGcUsage() : java.lang.management.MemoryUsage;
 	
 	
 }

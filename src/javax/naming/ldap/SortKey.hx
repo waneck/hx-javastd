@@ -43,7 +43,7 @@ package javax.naming.ldap;
 	* @param   attrID  The non-null ID of the attribute to be used as a sort
 	*          key.
 	*/
-	@:overload public function new(attrID : String) : Void;
+	@:overload @:public public function new(attrID : String) : Void;
 	
 	/**
 	* Creates a sort key for an attribute. Entries will be sorted according to
@@ -60,21 +60,21 @@ package javax.naming.ldap;
 	*                          specified then the ordering matching rule
 	*                          defined for the sort key attribute is used.
 	*/
-	@:overload public function new(attrID : String, ascendingOrder : Bool, matchingRuleID : String) : Void;
+	@:overload @:public public function new(attrID : String, ascendingOrder : Bool, matchingRuleID : String) : Void;
 	
 	/**
 	* Retrieves the attribute ID of the sort key.
 	*
 	* @return    The non-null Attribute ID of the sort key.
 	*/
-	@:overload public function getAttributeID() : String;
+	@:overload @:public public function getAttributeID() : String;
 	
 	/**
 	* Determines the sort order.
 	*
 	* @return    true if the sort order is ascending, false if descending.
 	*/
-	@:overload public function isAscending() : Bool;
+	@:overload @:public public function isAscending() : Bool;
 	
 	/**
 	* Retrieves the matching rule ID used to order the attribute values.
@@ -83,7 +83,7 @@ package javax.naming.ldap;
 	*            ordering matching rule defined for the sort key attribute
 	*            is used.
 	*/
-	@:overload public function getMatchingRuleID() : String;
+	@:overload @:public public function getMatchingRuleID() : String;
 	
 	
 }

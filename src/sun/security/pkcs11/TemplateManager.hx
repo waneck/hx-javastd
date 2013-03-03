@@ -57,11 +57,11 @@ package sun.security.pkcs11;
 */
 @:native('sun$security$pkcs11$TemplateManager$TemplateKey') @:internal extern class TemplateManager_TemplateKey
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -70,7 +70,7 @@ package sun.security.pkcs11;
 */
 @:native('sun$security$pkcs11$TemplateManager$Template') @:internal extern class TemplateManager_Template
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

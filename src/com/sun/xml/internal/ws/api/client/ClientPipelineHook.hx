@@ -47,7 +47,7 @@ extern class ClientPipelineHook
 	*      no additional pipe is inserted. If the implementation adds
 	*      new pipes, return the new head pipe.
 	*/
-	@:overload public function createSecurityPipe(ctxt : com.sun.xml.internal.ws.api.pipe.ClientPipeAssemblerContext, tail : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public public function createSecurityPipe(ctxt : com.sun.xml.internal.ws.api.pipe.ClientPipeAssemblerContext, tail : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	
 }

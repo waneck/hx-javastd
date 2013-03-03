@@ -43,7 +43,7 @@ extern class FileImageInputStream extends javax.imageio.stream.ImageInputStreamI
 	* directory or cannot be opened for reading for any other reason.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function new(f : java.io.File) : Void;
+	@:overload @:public public function new(f : java.io.File) : Void;
 	
 	/**
 	* Constructs a <code>FileImageInputStream</code> that will read
@@ -58,11 +58,11 @@ extern class FileImageInputStream extends javax.imageio.stream.ImageInputStreamI
 	* @exception IllegalArgumentException if <code>raf</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function new(raf : java.io.RandomAccessFile) : Void;
+	@:overload @:public public function new(raf : java.io.RandomAccessFile) : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Returns the length of the underlying file, or <code>-1</code>
@@ -71,16 +71,16 @@ extern class FileImageInputStream extends javax.imageio.stream.ImageInputStreamI
 	* @return the file length as a <code>long</code>, or
 	* <code>-1</code>.
 	*/
-	@:overload override public function length() : haxe.Int64;
+	@:overload @:public override public function length() : haxe.Int64;
 	
-	@:overload override public function seek(pos : haxe.Int64) : Void;
+	@:overload @:public override public function seek(pos : haxe.Int64) : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function finalize() : Void;
+	@:overload @:protected override private function finalize() : Void;
 	
 	
 }

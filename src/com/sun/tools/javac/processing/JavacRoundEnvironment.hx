@@ -36,9 +36,9 @@ package com.sun.tools.javac.processing;
 */
 extern class JavacRoundEnvironment implements javax.annotation.processing.RoundEnvironment
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function processingOver() : Bool;
+	@:overload @:public public function processingOver() : Bool;
 	
 	/**
 	* Returns {@code true} if an error was raised in the prior round
@@ -47,7 +47,7 @@ extern class JavacRoundEnvironment implements javax.annotation.processing.RoundE
 	* @return {@code true} if an error was raised in the prior round
 	* of processing; returns {@code false} otherwise.
 	*/
-	@:overload public function errorRaised() : Bool;
+	@:overload @:public public function errorRaised() : Bool;
 	
 	/**
 	* Returns the type elements specified by the prior round.
@@ -55,7 +55,7 @@ extern class JavacRoundEnvironment implements javax.annotation.processing.RoundE
 	* @return the types elements specified by the prior round, or an
 	* empty set if there were none
 	*/
-	@:overload public function getRootElements() : java.util.Set<javax.lang.model.element.Element>;
+	@:overload @:public public function getRootElements() : java.util.Set<javax.lang.model.element.Element>;
 	
 	/**
 	* Returns the elements annotated with the given annotation type.
@@ -69,18 +69,18 @@ extern class JavacRoundEnvironment implements javax.annotation.processing.RoundE
 	* @return the elements annotated with the given annotation type,
 	* or an empty set if there are none
 	*/
-	@:overload public function getElementsAnnotatedWith(a : javax.lang.model.element.TypeElement) : java.util.Set<javax.lang.model.element.Element>;
+	@:overload @:public public function getElementsAnnotatedWith(a : javax.lang.model.element.TypeElement) : java.util.Set<javax.lang.model.element.Element>;
 	
 	/**
 	* {@inheritdoc}
 	*/
-	@:overload public function getElementsAnnotatedWith(a : Class<java.lang.annotation.Annotation>) : java.util.Set<javax.lang.model.element.Element>;
+	@:overload @:public public function getElementsAnnotatedWith(a : Class<java.lang.annotation.Annotation>) : java.util.Set<javax.lang.model.element.Element>;
 	
 	
 }
 @:native('com$sun$tools$javac$processing$JavacRoundEnvironment$AnnotationSetScanner') @:internal extern class JavacRoundEnvironment_AnnotationSetScanner extends javax.lang.model.util.ElementScanner7<java.util.Set<javax.lang.model.element.Element>, javax.lang.model.type.DeclaredType>
 {
-	@:overload public function scan(e : javax.lang.model.element.Element, p : javax.lang.model.type.DeclaredType) : java.util.Set<javax.lang.model.element.Element>;
+	@:overload @:public public function scan(e : javax.lang.model.element.Element, p : javax.lang.model.type.DeclaredType) : java.util.Set<javax.lang.model.element.Element>;
 	
 	
 }

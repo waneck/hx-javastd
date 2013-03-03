@@ -47,12 +47,12 @@ package com.sun.tools.javadoc;
 	/**
 	* Return the serialziable field name.
 	*/
-	@:overload public function fieldName() : String;
+	@:overload @:public public function fieldName() : String;
 	
 	/**
 	* Return the field type string.
 	*/
-	@:overload public function fieldType() : String;
+	@:overload @:public public function fieldType() : String;
 	
 	/**
 	* Return the ClassDocImpl for field type.
@@ -60,23 +60,23 @@ package com.sun.tools.javadoc;
 	* @returns null if no ClassDocImpl for field type is visible from
 	*          containingClass context.
 	*/
-	@:overload public function fieldTypeDoc() : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function fieldTypeDoc() : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Return the field comment. If there is no serialField comment, return
 	* javadoc comment of corresponding FieldDocImpl.
 	*/
-	@:overload public function description() : String;
+	@:overload @:public public function description() : String;
 	
 	/**
 	* Return the kind of this tag.
 	*/
-	@:overload override public function kind() : String;
+	@:overload @:public override public function kind() : String;
 	
 	/**
 	* Convert this object to a string.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Compares this Object with the specified Object for order.  Returns a
@@ -92,7 +92,7 @@ package com.sun.tools.javadoc;
 	*            from being compared to this Object.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function compareTo(obj : Dynamic) : Int;
+	@:require(java2) @:overload @:public public function compareTo(obj : Dynamic) : Int;
 	
 	
 }

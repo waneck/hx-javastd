@@ -34,14 +34,14 @@ package java.awt.datatransfer;
 	/**
 	* Constructs a MimeTypeParseException with no specified detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a MimeTypeParseException with the specified detail message.
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

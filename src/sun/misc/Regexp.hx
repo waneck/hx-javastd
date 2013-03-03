@@ -30,22 +30,28 @@ package sun.misc;
 extern class Regexp
 {
 	/** if true then the matching process ignores case. */
-	public var ignoreCase : Bool;
+	@:public public var ignoreCase : Bool;
 	
 	/*
 	* regular expressions are carved into three regions: a constant string
 	* prefix, a constant string suffix, and a series of floating strings in
 	* between.  In the input regular expression, they are separated by *s
 	*/
-	public var exp : String;
+	@:public public var exp : String;
 	
-	public var prefix : String;
+	@:public public var prefix : String;
 	
-	public var exact : Bool;
+	@:public public var suffix : String;
 	
-	public var prefixLen : Int;
+	@:public public var exact : Bool;
 	
-	public var mids : java.NativeArray<String>;
+	@:public public var prefixLen : Int;
+	
+	@:public public var suffixLen : Int;
+	
+	@:public public var totalLen : Int;
+	
+	@:public public var mids : java.NativeArray<String>;
 	
 	/** Create a new regular expression object.  The regular expression
 	is a series of constant strings separated by *s.  For example:
@@ -58,7 +64,7 @@ extern class Regexp
 	and ends with ".gif" and has "new" somewhere in between.
 	</dl>
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

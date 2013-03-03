@@ -28,7 +28,7 @@ extern class MIMEMessage
 	/**
 	* @see MIMEMessage(InputStream, String, MIMEConfig)
 	*/
-	@:overload public function new(_in : java.io.InputStream, boundary : String) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, boundary : String) : Void;
 	
 	/**
 	* Creates a MIME message from the content's stream. The content stream
@@ -38,7 +38,7 @@ extern class MIMEMessage
 	* @param boundary the separator for parts(pass it without --)
 	* @param config various configuration parameters
 	*/
-	@:overload public function new(_in : java.io.InputStream, boundary : String, config : com.sun.xml.internal.org.jvnet.mimepull.MIMEConfig) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, boundary : String, config : com.sun.xml.internal.org.jvnet.mimepull.MIMEConfig) : Void;
 	
 	/**
 	* Gets all the attachments by parsing the entire MIME message. Avoid
@@ -46,7 +46,7 @@ extern class MIMEMessage
 	*
 	* @return list of attachments.
 	*/
-	@:overload public function getAttachments() : java.util.List<com.sun.xml.internal.org.jvnet.mimepull.MIMEPart>;
+	@:overload @:public public function getAttachments() : java.util.List<com.sun.xml.internal.org.jvnet.mimepull.MIMEPart>;
 	
 	/**
 	* Creates nth attachment lazily. It doesn't validate
@@ -58,7 +58,7 @@ extern class MIMEMessage
 	* @param index sequential order of the part. starts with zero.
 	* @return attachemnt part
 	*/
-	@:overload public function getPart(index : Int) : com.sun.xml.internal.org.jvnet.mimepull.MIMEPart;
+	@:overload @:public public function getPart(index : Int) : com.sun.xml.internal.org.jvnet.mimepull.MIMEPart;
 	
 	/**
 	* Creates a lazy attachment for a given Content-ID. It doesn't validate
@@ -69,12 +69,12 @@ extern class MIMEMessage
 	* @param contentId Content-ID of the part, expects Content-ID without <, >
 	* @return attachemnt part
 	*/
-	@:overload public function getPart(contentId : String) : com.sun.xml.internal.org.jvnet.mimepull.MIMEPart;
+	@:overload @:public public function getPart(contentId : String) : com.sun.xml.internal.org.jvnet.mimepull.MIMEPart;
 	
 	/**
 	* Parses the whole MIME message eagerly
 	*/
-	@:overload public function parseAll() : Void;
+	@:overload @:public public function parseAll() : Void;
 	
 	/**
 	* Parses the MIME message in a pull fashion.
@@ -82,7 +82,7 @@ extern class MIMEMessage
 	* @return
 	*      false if the parsing is completed.
 	*/
-	@:overload @:synchronized public function makeProgress() : Bool;
+	@:overload @:public @:synchronized public function makeProgress() : Bool;
 	
 	
 }

@@ -25,17 +25,17 @@ package com.sun.xml.internal.bind.v2.runtime;
 */
 extern class IllegalAnnotationException extends javax.xml.bind.JAXBException
 {
-	@:overload public function new(message : String, src : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : Void;
+	@:overload @:public public function new(message : String, src : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : Void;
 	
-	@:overload public function new(message : String, src : java.lang.annotation.Annotation) : Void;
+	@:overload @:public public function new(message : String, src : java.lang.annotation.Annotation) : Void;
 	
-	@:overload public function new(message : String, src1 : com.sun.xml.internal.bind.v2.model.annotation.Locatable, src2 : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : Void;
+	@:overload @:public public function new(message : String, src1 : com.sun.xml.internal.bind.v2.model.annotation.Locatable, src2 : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : Void;
 	
-	@:overload public function new(message : String, src1 : java.lang.annotation.Annotation, src2 : java.lang.annotation.Annotation) : Void;
+	@:overload @:public public function new(message : String, src1 : java.lang.annotation.Annotation, src2 : java.lang.annotation.Annotation) : Void;
 	
-	@:overload public function new(message : String, src1 : java.lang.annotation.Annotation, src2 : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : Void;
+	@:overload @:public public function new(message : String, src1 : java.lang.annotation.Annotation, src2 : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : Void;
 	
-	@:overload public function new(message : String, cause : java.lang.Throwable, src : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable, src : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : Void;
 	
 	/**
 	* Returns a read-only list of {@link Location} that indicates
@@ -87,7 +87,7 @@ extern class IllegalAnnotationException extends javax.xml.bind.JAXBException
 	*      but never null. The returned list will never contain
 	*      null nor length-0 {@link List}.
 	*/
-	@:overload public function getSourcePos() : java.util.List<java.util.List<com.sun.xml.internal.bind.v2.runtime.Location>>;
+	@:overload @:public public function getSourcePos() : java.util.List<java.util.List<com.sun.xml.internal.bind.v2.runtime.Location>>;
 	
 	/**
 	* Returns the exception name, message, and related information
@@ -98,7 +98,7 @@ extern class IllegalAnnotationException extends javax.xml.bind.JAXBException
 	* this crucial detail to show up even when this exception is nested
 	* inside other exceptions.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

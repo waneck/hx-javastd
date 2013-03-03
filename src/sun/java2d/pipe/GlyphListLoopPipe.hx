@@ -30,7 +30,7 @@ extern class GlyphListLoopPipe extends sun.java2d.pipe.GlyphListPipe implements 
 	* for the src mode loops in the drawGlyphVector case where
 	* the installed loop may not match the glyphvector.
 	*/
-	@:overload override private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList, aaHint : Int) : Void;
+	@:overload @:protected override private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList, aaHint : Int) : Void;
 	
 	
 }

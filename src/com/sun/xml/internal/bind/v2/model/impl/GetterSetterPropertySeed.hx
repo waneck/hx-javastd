@@ -31,24 +31,24 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	* We allow the getter or setter to be null, in which case the bean
 	* can only participate in unmarshalling (or marshalling)
 	*/
-	private var getter(default, null) : MethodT;
+	@:protected @:final private var getter(default, null) : MethodT;
 	
-	private var setter(default, null) : MethodT;
+	@:protected @:final private var setter(default, null) : MethodT;
 	
-	@:overload public function getRawType() : TypeT;
+	@:overload @:public public function getRawType() : TypeT;
 	
-	@:overload public function readAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>) : A;
+	@:overload @:public public function readAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>) : A;
 	
-	@:overload public function hasAnnotation(annotationType : Class<java.lang.annotation.Annotation>) : Bool;
+	@:overload @:public public function hasAnnotation(annotationType : Class<java.lang.annotation.Annotation>) : Bool;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Use the enclosing class as the upsream {@link Location}.
 	*/
-	@:overload public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
+	@:overload @:public public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
-	@:overload public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
 	
 }

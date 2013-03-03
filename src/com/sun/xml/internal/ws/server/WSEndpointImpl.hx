@@ -25,55 +25,55 @@ package com.sun.xml.internal.ws.server;
 */
 extern class WSEndpointImpl<T> extends com.sun.xml.internal.ws.api.server.WSEndpoint<T>
 {
-	@:overload public function getEndpointReferenceExtensions() : java.util.Collection<com.sun.xml.internal.ws.api.addressing.WSEndpointReference.WSEndpointReference_EPRExtension>;
+	@:overload @:public public function getEndpointReferenceExtensions() : java.util.Collection<com.sun.xml.internal.ws.api.addressing.WSEndpointReference.WSEndpointReference_EPRExtension>;
 	
 	/**
 	* Nullable when there is no associated WSDL Model
 	* @return
 	*/
-	@:overload public function getOperationDispatcher() : com.sun.xml.internal.ws.wsdl.OperationDispatcher;
+	@:overload @:public public function getOperationDispatcher() : com.sun.xml.internal.ws.wsdl.OperationDispatcher;
 	
-	@:overload override public function getPolicyMap() : com.sun.xml.internal.ws.policy.PolicyMap;
+	@:overload @:public override public function getPolicyMap() : com.sun.xml.internal.ws.policy.PolicyMap;
 	
-	@:overload override public function getImplementationClass() : Class<T>;
+	@:overload @:public override public function getImplementationClass() : Class<T>;
 	
-	@:overload override public function getBinding() : com.sun.xml.internal.ws.api.WSBinding;
+	@:overload @:public override public function getBinding() : com.sun.xml.internal.ws.api.WSBinding;
 	
-	@:overload override public function getContainer() : com.sun.xml.internal.ws.api.server.Container;
+	@:overload @:public override public function getContainer() : com.sun.xml.internal.ws.api.server.Container;
 	
-	@:overload override public function getPort() : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
+	@:overload @:public override public function getPort() : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
 	
-	@:overload override public function getSEIModel() : com.sun.xml.internal.ws.api.model.SEIModel;
+	@:overload @:public override public function getSEIModel() : com.sun.xml.internal.ws.api.model.SEIModel;
 	
-	@:overload override public function setExecutor(exec : java.util.concurrent.Executor) : Void;
+	@:overload @:public override public function setExecutor(exec : java.util.concurrent.Executor) : Void;
 	
-	@:overload override public function schedule(request : com.sun.xml.internal.ws.api.message.Packet, _callback : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_CompletionCallback, interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
+	@:overload @:public override public function schedule(request : com.sun.xml.internal.ws.api.message.Packet, _callback : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_CompletionCallback, interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
 	
-	@:overload override public function process(request : com.sun.xml.internal.ws.api.message.Packet, _callback : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_CompletionCallback, interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
+	@:overload @:public override public function process(request : com.sun.xml.internal.ws.api.message.Packet, _callback : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_CompletionCallback, interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
 	
-	@:overload override public function createPipeHead() : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_PipeHead;
+	@:overload @:public override public function createPipeHead() : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_PipeHead;
 	
-	@:overload @:synchronized override public function dispose() : Void;
+	@:overload @:public @:synchronized override public function dispose() : Void;
 	
-	@:overload override public function getServiceDefinition() : com.sun.xml.internal.ws.server.ServiceDefinitionImpl;
+	@:overload @:public override public function getServiceDefinition() : com.sun.xml.internal.ws.server.ServiceDefinitionImpl;
 	
-	@:overload override public function getComponentRegistry() : java.util.Set<com.sun.xml.internal.ws.api.server.EndpointComponent>;
+	@:overload @:public override public function getComponentRegistry() : java.util.Set<com.sun.xml.internal.ws.api.server.EndpointComponent>;
 	
-	@:overload public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>, address : String, wsdlAddress : String, referenceParameters : java.NativeArray<org.w3c.dom.Element>) : T;
+	@:overload @:public public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>, address : String, wsdlAddress : String, referenceParameters : java.NativeArray<org.w3c.dom.Element>) : T;
 	
-	@:overload public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>, address : String, wsdlAddress : String, metadata : java.util.List<org.w3c.dom.Element>, referenceParameters : java.util.List<org.w3c.dom.Element>) : T;
+	@:overload @:public public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>, address : String, wsdlAddress : String, metadata : java.util.List<org.w3c.dom.Element>, referenceParameters : java.util.List<org.w3c.dom.Element>) : T;
 	
-	@:overload override public function getPortName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getPortName() : javax.xml.namespace.QName;
 	
-	@:overload override public function createCodec() : com.sun.xml.internal.ws.api.pipe.Codec;
+	@:overload @:public override public function createCodec() : com.sun.xml.internal.ws.api.pipe.Codec;
 	
-	@:overload override public function getServiceName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getServiceName() : javax.xml.namespace.QName;
 	
-	@:overload override public function getManagedObjectManager() : com.sun.org.glassfish.gmbal.ManagedObjectManager;
+	@:overload @:public override public function getManagedObjectManager() : com.sun.org.glassfish.gmbal.ManagedObjectManager;
 	
-	@:overload override public function closeManagedObjectManager() : Void;
+	@:overload @:public override public function closeManagedObjectManager() : Void;
 	
-	@:overload override public function getAssemblerContext() : com.sun.xml.internal.ws.api.pipe.ServerTubeAssemblerContext;
+	@:overload @:public override public function getAssemblerContext() : com.sun.xml.internal.ws.api.pipe.ServerTubeAssemblerContext;
 	
 	
 }

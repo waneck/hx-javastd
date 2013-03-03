@@ -28,9 +28,9 @@ package com.sun.codemodel.internal;
 */
 extern class JDoLoop implements com.sun.codemodel.internal.JStatement
 {
-	@:overload public function body() : com.sun.codemodel.internal.JBlock;
+	@:overload @:public public function body() : com.sun.codemodel.internal.JBlock;
 	
-	@:overload public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

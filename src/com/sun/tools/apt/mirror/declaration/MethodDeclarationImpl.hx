@@ -28,12 +28,12 @@ extern class MethodDeclarationImpl extends com.sun.tools.apt.mirror.declaration.
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getReturnType() : com.sun.mirror.type.TypeMirror;
+	@:overload @:public public function getReturnType() : com.sun.mirror.type.TypeMirror;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
 	
 	
 }

@@ -25,18 +25,18 @@ package sun.java2d.pipe;
 */
 extern class BufferedBufImgOps
 {
-	@:overload public static function enableBufImgOp(rq : sun.java2d.pipe.RenderQueue, srcData : sun.java2d.SurfaceData, srcImg : java.awt.image.BufferedImage, biop : java.awt.image.BufferedImageOp) : Void;
+	@:overload @:public @:static public static function enableBufImgOp(rq : sun.java2d.pipe.RenderQueue, srcData : sun.java2d.SurfaceData, srcImg : java.awt.image.BufferedImage, biop : java.awt.image.BufferedImageOp) : Void;
 	
-	@:overload public static function disableBufImgOp(rq : sun.java2d.pipe.RenderQueue, biop : java.awt.image.BufferedImageOp) : Void;
+	@:overload @:public @:static public static function disableBufImgOp(rq : sun.java2d.pipe.RenderQueue, biop : java.awt.image.BufferedImageOp) : Void;
 	
 	/**************************** ConvolveOp support ****************************/
-	@:overload public static function isConvolveOpValid(cop : java.awt.image.ConvolveOp) : Bool;
+	@:overload @:public @:static public static function isConvolveOpValid(cop : java.awt.image.ConvolveOp) : Bool;
 	
 	/**************************** RescaleOp support *****************************/
-	@:overload public static function isRescaleOpValid(rop : java.awt.image.RescaleOp, srcImg : java.awt.image.BufferedImage) : Bool;
+	@:overload @:public @:static public static function isRescaleOpValid(rop : java.awt.image.RescaleOp, srcImg : java.awt.image.BufferedImage) : Bool;
 	
 	/**************************** LookupOp support ******************************/
-	@:overload public static function isLookupOpValid(lop : java.awt.image.LookupOp, srcImg : java.awt.image.BufferedImage) : Bool;
+	@:overload @:public @:static public static function isLookupOpValid(lop : java.awt.image.LookupOp, srcImg : java.awt.image.BufferedImage) : Bool;
 	
 	
 }

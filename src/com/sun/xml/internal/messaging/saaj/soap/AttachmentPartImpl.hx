@@ -30,49 +30,49 @@ extern class AttachmentPartImpl extends javax.xml.soap.AttachmentPart
 	*
 	* @author Anil Vijendran (akv@eng.sun.com)
 	*/
-	private static var log(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var log(default, null) : java.util.logging.Logger;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(part : com.sun.xml.internal.org.jvnet.mimepull.MIMEPart) : Void;
+	@:overload @:public public function new(part : com.sun.xml.internal.org.jvnet.mimepull.MIMEPart) : Void;
 	
-	@:overload override public function getSize() : Int;
+	@:overload @:public override public function getSize() : Int;
 	
-	@:overload override public function clearContent() : Void;
+	@:overload @:public override public function clearContent() : Void;
 	
-	@:overload override public function getContent() : Dynamic;
+	@:overload @:public override public function getContent() : Dynamic;
 	
-	@:overload override public function setContent(object : Dynamic, contentType : String) : Void;
+	@:overload @:public override public function setContent(object : Dynamic, contentType : String) : Void;
 	
-	@:overload override public function getDataHandler() : javax.activation.DataHandler;
+	@:overload @:public override public function getDataHandler() : javax.activation.DataHandler;
 	
-	@:overload override public function setDataHandler(dataHandler : javax.activation.DataHandler) : Void;
+	@:overload @:public override public function setDataHandler(dataHandler : javax.activation.DataHandler) : Void;
 	
-	@:overload override public function removeAllMimeHeaders() : Void;
+	@:overload @:public override public function removeAllMimeHeaders() : Void;
 	
-	@:overload override public function removeMimeHeader(header : String) : Void;
+	@:overload @:public override public function removeMimeHeader(header : String) : Void;
 	
-	@:overload override public function getMimeHeader(name : String) : java.NativeArray<String>;
+	@:overload @:public override public function getMimeHeader(name : String) : java.NativeArray<String>;
 	
-	@:overload override public function setMimeHeader(name : String, value : String) : Void;
+	@:overload @:public override public function setMimeHeader(name : String, value : String) : Void;
 	
-	@:overload override public function addMimeHeader(name : String, value : String) : Void;
+	@:overload @:public override public function addMimeHeader(name : String, value : String) : Void;
 	
-	@:overload override public function getAllMimeHeaders() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function getAllMimeHeaders() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function getMatchingMimeHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function getMatchingMimeHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function getNonMatchingMimeHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function getNonMatchingMimeHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
 	
-	@:overload public static function copyMimeHeaders(headers : javax.xml.soap.MimeHeaders, mbp : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart) : Void;
+	@:overload @:public @:static public static function copyMimeHeaders(headers : javax.xml.soap.MimeHeaders, mbp : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart) : Void;
 	
-	@:overload public static function copyMimeHeaders(mbp : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart, ap : com.sun.xml.internal.messaging.saaj.soap.AttachmentPartImpl) : Void;
+	@:overload @:public @:static public static function copyMimeHeaders(mbp : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart, ap : com.sun.xml.internal.messaging.saaj.soap.AttachmentPartImpl) : Void;
 	
-	@:overload override public function setBase64Content(content : java.io.InputStream, contentType : String) : Void;
+	@:overload @:public override public function setBase64Content(content : java.io.InputStream, contentType : String) : Void;
 	
-	@:overload override public function getBase64Content() : java.io.InputStream;
+	@:overload @:public override public function getBase64Content() : java.io.InputStream;
 	
-	@:overload override public function setRawContent(content : java.io.InputStream, contentType : String) : Void;
+	@:overload @:public override public function setRawContent(content : java.io.InputStream, contentType : String) : Void;
 	
 	/*
 	public void setRawContentBytes(byte[] content, String contentType)
@@ -91,15 +91,15 @@ extern class AttachmentPartImpl extends javax.xml.soap.AttachmentPart
 	throw new SOAPExceptionImpl(e.getLocalizedMessage());
 	}
 	} */
-	@:overload override public function setRawContentBytes(content : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int, contentType : String) : Void;
+	@:overload @:public override public function setRawContentBytes(content : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int, contentType : String) : Void;
 	
-	@:overload override public function getRawContent() : java.io.InputStream;
+	@:overload @:public override public function getRawContent() : java.io.InputStream;
 	
-	@:overload override public function getRawContentBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getRawContentBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function getMimeHeaders() : javax.xml.soap.MimeHeaders;
+	@:overload @:public public function getMimeHeaders() : javax.xml.soap.MimeHeaders;
 	
 	
 }

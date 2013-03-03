@@ -73,7 +73,7 @@ extern class ConstantPool implements java.lang.Cloneable implements com.sun.org.
 	/**
 	* @param constant_pool Array of constants
 	*/
-	@:overload public function new(constant_pool : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Constant>) : Void;
+	@:overload @:public public function new(constant_pool : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Constant>) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -82,7 +82,7 @@ extern class ConstantPool implements java.lang.Cloneable implements com.sun.org.
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Resolve constant to a string representation.
@@ -90,7 +90,7 @@ extern class ConstantPool implements java.lang.Cloneable implements com.sun.org.
 	* @param  constant Constant to be printed
 	* @return String representation
 	*/
-	@:overload public function constantToString(c : com.sun.org.apache.bcel.internal.classfile.Constant) : String;
+	@:overload @:public public function constantToString(c : com.sun.org.apache.bcel.internal.classfile.Constant) : String;
 	
 	/**
 	* Retrieve constant at `index' from constant pool and resolve it to
@@ -100,7 +100,7 @@ extern class ConstantPool implements java.lang.Cloneable implements com.sun.org.
 	* @param  tag expected type
 	* @return String representation
 	*/
-	@:overload public function constantToString(index : Int, tag : java.StdTypes.Int8) : String;
+	@:overload @:public public function constantToString(index : Int, tag : java.StdTypes.Int8) : String;
 	
 	/**
 	* Dump constant pool to file stream in binary format.
@@ -108,7 +108,7 @@ extern class ConstantPool implements java.lang.Cloneable implements com.sun.org.
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* Get constant from constant pool.
@@ -117,7 +117,7 @@ extern class ConstantPool implements java.lang.Cloneable implements com.sun.org.
 	* @return Constant value
 	* @see    Constant
 	*/
-	@:overload public function getConstant(index : Int) : com.sun.org.apache.bcel.internal.classfile.Constant;
+	@:overload @:public public function getConstant(index : Int) : com.sun.org.apache.bcel.internal.classfile.Constant;
 	
 	/**
 	* Get constant from constant pool and check whether it has the
@@ -129,13 +129,13 @@ extern class ConstantPool implements java.lang.Cloneable implements com.sun.org.
 	* @see    Constant
 	* @throws  ClassFormatException
 	*/
-	@:overload public function getConstant(index : Int, tag : java.StdTypes.Int8) : com.sun.org.apache.bcel.internal.classfile.Constant;
+	@:overload @:public public function getConstant(index : Int, tag : java.StdTypes.Int8) : com.sun.org.apache.bcel.internal.classfile.Constant;
 	
 	/**
 	* @return Array of constants.
 	* @see    Constant
 	*/
-	@:overload public function getConstantPool() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Constant>;
+	@:overload @:public public function getConstantPool() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Constant>;
 	
 	/**
 	* Get string from constant pool and bypass the indirection of
@@ -150,32 +150,32 @@ extern class ConstantPool implements java.lang.Cloneable implements com.sun.org.
 	* @see    ConstantString
 	* @throws  ClassFormatException
 	*/
-	@:overload public function getConstantString(index : Int, tag : java.StdTypes.Int8) : String;
+	@:overload @:public public function getConstantString(index : Int, tag : java.StdTypes.Int8) : String;
 	
 	/**
 	* @return Length of constant pool.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* @param constant Constant to set
 	*/
-	@:overload public function setConstant(index : Int, constant : com.sun.org.apache.bcel.internal.classfile.Constant) : Void;
+	@:overload @:public public function setConstant(index : Int, constant : com.sun.org.apache.bcel.internal.classfile.Constant) : Void;
 	
 	/**
 	* @param constant_pool
 	*/
-	@:overload public function setConstantPool(constant_pool : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Constant>) : Void;
+	@:overload @:public public function setConstantPool(constant_pool : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Constant>) : Void;
 	
 	/**
 	* @return String representation.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* @return deep copy of this constant pool
 	*/
-	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
+	@:overload @:public public function copy() : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
 	
 	
 }

@@ -25,9 +25,9 @@ package sun.font;
 */
 @:internal extern class FreetypeFontScaler extends sun.font.FontScaler
 {
-	@:overload public function new(font : sun.font.Font2D, indexInCollection : Int, supportsCJK : Bool, filesize : Int) : Void;
+	@:overload @:public public function new(font : sun.font.Font2D, indexInCollection : Int, supportsCJK : Bool, filesize : Int) : Void;
 	
-	@:overload @:synchronized override public function dispose() : Void;
+	@:overload @:public @:synchronized override public function dispose() : Void;
 	
 	
 }

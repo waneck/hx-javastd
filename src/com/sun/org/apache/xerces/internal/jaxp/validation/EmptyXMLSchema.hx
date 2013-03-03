@@ -20,29 +20,29 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 */
 @:internal extern class EmptyXMLSchema extends com.sun.org.apache.xerces.internal.jaxp.validation.AbstractXMLSchema implements com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/*
 	* XMLGrammarPool methods
 	*/
-	@:overload public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
+	@:overload @:public public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
 	
-	@:overload public function cacheGrammars(grammarType : String, grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>) : Void;
+	@:overload @:public public function cacheGrammars(grammarType : String, grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>) : Void;
 	
-	@:overload public function retrieveGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload @:public public function retrieveGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
-	@:overload public function lockPool() : Void;
+	@:overload @:public public function lockPool() : Void;
 	
-	@:overload public function unlockPool() : Void;
+	@:overload @:public public function unlockPool() : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/*
 	* XSGrammarPoolContainer methods
 	*/
-	@:overload override public function getGrammarPool() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
+	@:overload @:public override public function getGrammarPool() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
 	
-	@:overload override public function isFullyComposed() : Bool;
+	@:overload @:public override public function isFullyComposed() : Bool;
 	
 	
 }

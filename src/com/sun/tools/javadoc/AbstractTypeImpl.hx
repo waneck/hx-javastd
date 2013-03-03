@@ -33,37 +33,37 @@ package com.sun.tools.javadoc;
 	* @author Scott Seligman
 	* @since 1.5
 	*/
-	@:require(java5) private var env(default, null) : com.sun.tools.javadoc.DocEnv;
+	@:require(java5) @:protected @:final private var env(default, null) : com.sun.tools.javadoc.DocEnv;
 	
-	private var type(default, null) : com.sun.javadoc.Type;
+	@:protected @:final private var type(default, null) : com.sun.javadoc.Type;
 	
-	@:overload private function new(env : com.sun.tools.javadoc.DocEnv, type : com.sun.javadoc.Type) : Void;
+	@:overload @:protected private function new(env : com.sun.tools.javadoc.DocEnv, type : com.sun.javadoc.Type) : Void;
 	
-	@:overload public function typeName() : String;
+	@:overload @:public public function typeName() : String;
 	
-	@:overload public function qualifiedTypeName() : String;
+	@:overload @:public public function qualifiedTypeName() : String;
 	
-	@:overload public function simpleTypeName() : String;
+	@:overload @:public public function simpleTypeName() : String;
 	
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function qualifiedName() : String;
+	@:overload @:public public function qualifiedName() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function dimension() : String;
+	@:overload @:public public function dimension() : String;
 	
-	@:overload public function isPrimitive() : Bool;
+	@:overload @:public public function isPrimitive() : Bool;
 	
-	@:overload public function asClassDoc() : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function asClassDoc() : com.sun.javadoc.ClassDoc;
 	
-	@:overload public function asTypeVariable() : com.sun.javadoc.TypeVariable;
+	@:overload @:public public function asTypeVariable() : com.sun.javadoc.TypeVariable;
 	
-	@:overload public function asWildcardType() : com.sun.javadoc.WildcardType;
+	@:overload @:public public function asWildcardType() : com.sun.javadoc.WildcardType;
 	
-	@:overload public function asParameterizedType() : com.sun.javadoc.ParameterizedType;
+	@:overload @:public public function asParameterizedType() : com.sun.javadoc.ParameterizedType;
 	
-	@:overload public function asAnnotationTypeDoc() : com.sun.javadoc.AnnotationTypeDoc;
+	@:overload @:public public function asAnnotationTypeDoc() : com.sun.javadoc.AnnotationTypeDoc;
 	
 	
 }

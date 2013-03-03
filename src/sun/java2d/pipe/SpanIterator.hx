@@ -47,13 +47,13 @@ extern interface SpanIterator
 	*     {PathMinX, PathMinY, PathMaxX, PathMaxY}.
 	* </pre>
 	*/
-	@:overload public function getPathBox(pathbox : java.NativeArray<Int>) : Void;
+	@:overload @:public public function getPathBox(pathbox : java.NativeArray<Int>) : Void;
 	
 	/**
 	* This method constrains the spans returned by nextSpan() to the
 	* rectangle whose bounds are given.
 	*/
-	@:overload public function intersectClipBox(lox : Int, loy : Int, hix : Int, hiy : Int) : Void;
+	@:overload @:public public function intersectClipBox(lox : Int, loy : Int, hix : Int, hiy : Int) : Void;
 	
 	/**
 	* This method returns the next span in the shape being iterated.
@@ -63,7 +63,7 @@ extern interface SpanIterator
 	*     {SpanMinX, SpanMinY, SpanMaxX, SpanMaxY}.
 	* </pre>
 	*/
-	@:overload public function nextSpan(spanbox : java.NativeArray<Int>) : Bool;
+	@:overload @:public public function nextSpan(spanbox : java.NativeArray<Int>) : Bool;
 	
 	/**
 	* This method tells the iterator that it may skip all spans
@@ -77,7 +77,7 @@ extern interface SpanIterator
 	* doing so could potentially cause the caller to make this callback
 	* for each span that is being skipped.
 	*/
-	@:overload public function skipDownTo(y : Int) : Void;
+	@:overload @:public public function skipDownTo(y : Int) : Void;
 	
 	/**
 	* This method returns a native pointer to a function block that
@@ -90,7 +90,7 @@ extern interface SpanIterator
 	*     src/share/native/sun/java2d/pipe/SpanIterator.h
 	* </pre>
 	*/
-	@:overload public function getNativeIterator() : haxe.Int64;
+	@:overload @:public public function getNativeIterator() : haxe.Int64;
 	
 	
 }

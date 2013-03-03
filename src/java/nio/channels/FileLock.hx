@@ -46,7 +46,7 @@ extern class FileLock implements java.lang.AutoCloseable
 	* @throws IllegalArgumentException
 	*         If the preconditions on the parameters do not hold
 	*/
-	@:overload private function new(channel : java.nio.channels.FileChannel, position : haxe.Int64, size : haxe.Int64, shared : Bool) : Void;
+	@:overload @:protected private function new(channel : java.nio.channels.FileChannel, position : haxe.Int64, size : haxe.Int64, shared : Bool) : Void;
 	
 	/**
 	* Initializes a new instance of this class.
@@ -71,7 +71,7 @@ extern class FileLock implements java.lang.AutoCloseable
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload private function new(channel : java.nio.channels.AsynchronousFileChannel, position : haxe.Int64, size : haxe.Int64, shared : Bool) : Void;
+	@:require(java7) @:overload @:protected private function new(channel : java.nio.channels.AsynchronousFileChannel, position : haxe.Int64, size : haxe.Int64, shared : Bool) : Void;
 	
 	/**
 	* Returns the file channel upon whose file this lock was acquired.
@@ -82,7 +82,7 @@ extern class FileLock implements java.lang.AutoCloseable
 	* @return  The file channel, or {@code null} if the file lock was not
 	*          acquired by a file channel.
 	*/
-	@:overload @:final public function channel() : java.nio.channels.FileChannel;
+	@:overload @:public @:final public function channel() : java.nio.channels.FileChannel;
 	
 	/**
 	* Returns the channel upon whose file this lock was acquired.
@@ -91,7 +91,7 @@ extern class FileLock implements java.lang.AutoCloseable
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function acquiredBy() : java.nio.channels.Channel;
+	@:require(java7) @:overload @:public public function acquiredBy() : java.nio.channels.Channel;
 	
 	/**
 	* Returns the position within the file of the first byte of the locked
@@ -103,7 +103,7 @@ extern class FileLock implements java.lang.AutoCloseable
 	*
 	* @return  The position
 	*/
-	@:overload @:final public function position() : haxe.Int64;
+	@:overload @:public @:final public function position() : haxe.Int64;
 	
 	/**
 	* Returns the size of the locked region in bytes.
@@ -114,7 +114,7 @@ extern class FileLock implements java.lang.AutoCloseable
 	*
 	* @return  The size of the locked region
 	*/
-	@:overload @:final public function size() : haxe.Int64;
+	@:overload @:public @:final public function size() : haxe.Int64;
 	
 	/**
 	* Tells whether this lock is shared.  </p>
@@ -122,7 +122,7 @@ extern class FileLock implements java.lang.AutoCloseable
 	* @return <tt>true</tt> if lock is shared,
 	*         <tt>false</tt> if it is exclusive
 	*/
-	@:overload @:final public function isShared() : Bool;
+	@:overload @:public @:final public function isShared() : Bool;
 	
 	/**
 	* Tells whether or not this lock overlaps the given lock range.  </p>
@@ -130,7 +130,7 @@ extern class FileLock implements java.lang.AutoCloseable
 	* @return  <tt>true</tt> if, and only if, this lock and the given lock
 	*          range overlap by at least one byte
 	*/
-	@:overload @:final public function overlaps(position : haxe.Int64, size : haxe.Int64) : Bool;
+	@:overload @:public @:final public function overlaps(position : haxe.Int64, size : haxe.Int64) : Bool;
 	
 	/**
 	* Tells whether or not this lock is valid.
@@ -140,7 +140,7 @@ extern class FileLock implements java.lang.AutoCloseable
 	*
 	* @return  <tt>true</tt> if, and only if, this lock is valid
 	*/
-	@:overload @:abstract public function isValid() : Bool;
+	@:overload @:public @:abstract public function isValid() : Bool;
 	
 	/**
 	* Releases this lock.
@@ -156,7 +156,7 @@ extern class FileLock implements java.lang.AutoCloseable
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:abstract public function release() : Void;
+	@:overload @:public @:abstract public function release() : Void;
 	
 	/**
 	* This method invokes the {@link #release} method. It was added
@@ -165,14 +165,14 @@ extern class FileLock implements java.lang.AutoCloseable
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:final public function close() : Void;
+	@:require(java7) @:overload @:public @:final public function close() : Void;
 	
 	/**
 	* Returns a string describing the range, type, and validity of this lock.
 	*
 	* @return  A descriptive string
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	
 }

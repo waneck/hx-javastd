@@ -29,9 +29,9 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* @author Morten Jorgensen
 	* @author Erwin Bolwidt <ejb@klomp.org>
 	*/
-	@:overload public function new(variable : com.sun.org.apache.xalan.internal.xsltc.compiler.Variable) : Void;
+	@:overload @:public public function new(variable : com.sun.org.apache.xalan.internal.xsltc.compiler.Variable) : Void;
 	
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

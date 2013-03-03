@@ -25,11 +25,11 @@ package sun.reflect.generics.tree;
 */
 extern class ClassTypeSignature implements sun.reflect.generics.tree.FieldTypeSignature
 {
-	@:overload public static function make(p : java.util.List<sun.reflect.generics.tree.SimpleClassTypeSignature>) : sun.reflect.generics.tree.ClassTypeSignature;
+	@:overload @:public @:static public static function make(p : java.util.List<sun.reflect.generics.tree.SimpleClassTypeSignature>) : sun.reflect.generics.tree.ClassTypeSignature;
 	
-	@:overload public function getPath() : java.util.List<sun.reflect.generics.tree.SimpleClassTypeSignature>;
+	@:overload @:public public function getPath() : java.util.List<sun.reflect.generics.tree.SimpleClassTypeSignature>;
 	
-	@:overload public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
+	@:overload @:public public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
 	
 	
 }

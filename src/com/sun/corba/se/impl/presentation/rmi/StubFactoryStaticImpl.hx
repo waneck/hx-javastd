@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.presentation.rmi;
 */
 extern class StubFactoryStaticImpl extends com.sun.corba.se.impl.presentation.rmi.StubFactoryBase
 {
-	@:overload public function new(cls : Class<Dynamic>) : Void;
+	@:overload @:public public function new(cls : Class<Dynamic>) : Void;
 	
-	@:overload public function makeStub() : org.omg.CORBA.Object;
+	@:overload @:public override public function makeStub() : org.omg.CORBA.Object;
 	
 	
 }

@@ -27,7 +27,7 @@ extern class ErrorMessages_ja extends java.util.ListResourceBundle
 	*
 	* @return The message lookup table.
 	*/
-	@:overload override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:public override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

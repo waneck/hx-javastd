@@ -26,31 +26,31 @@ package java.nio;
 //// -- This file was mechanically generated: Do not edit! -- //
 @:internal extern class DirectCharBufferRU extends java.nio.DirectCharBufferU implements sun.nio.ch.DirectBuffer
 {
-	@:overload public function slice() : java.nio.CharBuffer;
+	@:overload @:public override public function slice() : java.nio.CharBuffer;
 	
-	@:overload public function duplicate() : java.nio.CharBuffer;
+	@:overload @:public override public function duplicate() : java.nio.CharBuffer;
 	
-	@:overload public function asReadOnlyBuffer() : java.nio.CharBuffer;
+	@:overload @:public override public function asReadOnlyBuffer() : java.nio.CharBuffer;
 	
-	@:overload public function put(x : java.StdTypes.Char16) : java.nio.CharBuffer;
+	@:overload @:public override public function put(x : java.StdTypes.Char16) : java.nio.CharBuffer;
 	
-	@:overload public function put(i : Int, x : java.StdTypes.Char16) : java.nio.CharBuffer;
+	@:overload @:public override public function put(i : Int, x : java.StdTypes.Char16) : java.nio.CharBuffer;
 	
-	@:overload public function put(src : java.nio.CharBuffer) : java.nio.CharBuffer;
+	@:overload @:public override public function put(src : java.nio.CharBuffer) : java.nio.CharBuffer;
 	
-	@:overload public function put(src : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : java.nio.CharBuffer;
+	@:overload @:public override public function put(src : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : java.nio.CharBuffer;
 	
-	@:overload public function compact() : java.nio.CharBuffer;
+	@:overload @:public override public function compact() : java.nio.CharBuffer;
 	
-	@:overload public function isDirect() : Bool;
+	@:overload @:public override public function isDirect() : Bool;
 	
-	@:overload public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload public function toString(start : Int, end : Int) : String;
+	@:overload @:public override public function toString(start : Int, end : Int) : String;
 	
-	@:overload public function subSequence(start : Int, end : Int) : java.nio.CharBuffer;
+	@:overload @:public override public function subSequence(start : Int, end : Int) : java.nio.CharBuffer;
 	
-	@:overload public function order() : java.nio.ByteOrder;
+	@:overload @:public override public function order() : java.nio.ByteOrder;
 	
 	
 }

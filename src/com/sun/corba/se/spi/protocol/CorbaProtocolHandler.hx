@@ -28,21 +28,21 @@ extern interface CorbaProtocolHandler extends com.sun.corba.se.pept.protocol.Pro
 	/**
 	* @author Harold Carr
 	*/
-	@:overload public function handleRequest(header : com.sun.corba.se.impl.protocol.giopmsgheaders.RequestMessage, messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
+	@:overload @:public public function handleRequest(header : com.sun.corba.se.impl.protocol.giopmsgheaders.RequestMessage, messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
 	
-	@:overload public function handleRequest(header : com.sun.corba.se.impl.protocol.giopmsgheaders.LocateRequestMessage, messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
+	@:overload @:public public function handleRequest(header : com.sun.corba.se.impl.protocol.giopmsgheaders.LocateRequestMessage, messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
 	
-	@:overload public function createResponse(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, svc : com.sun.corba.se.spi.servicecontext.ServiceContexts) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
+	@:overload @:public public function createResponse(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, svc : com.sun.corba.se.spi.servicecontext.ServiceContexts) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
 	
-	@:overload public function createUserExceptionResponse(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, svc : com.sun.corba.se.spi.servicecontext.ServiceContexts) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
+	@:overload @:public public function createUserExceptionResponse(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, svc : com.sun.corba.se.spi.servicecontext.ServiceContexts) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
 	
-	@:overload public function createUnknownExceptionResponse(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, ex : org.omg.CORBA.portable.UnknownException) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
+	@:overload @:public public function createUnknownExceptionResponse(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, ex : org.omg.CORBA.portable.UnknownException) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
 	
-	@:overload public function createSystemExceptionResponse(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, ex : org.omg.CORBA.SystemException, svc : com.sun.corba.se.spi.servicecontext.ServiceContexts) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
+	@:overload @:public public function createSystemExceptionResponse(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, ex : org.omg.CORBA.SystemException, svc : com.sun.corba.se.spi.servicecontext.ServiceContexts) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
 	
-	@:overload public function createLocationForward(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, ior : com.sun.corba.se.spi.ior.IOR, svc : com.sun.corba.se.spi.servicecontext.ServiceContexts) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
+	@:overload @:public public function createLocationForward(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, ior : com.sun.corba.se.spi.ior.IOR, svc : com.sun.corba.se.spi.servicecontext.ServiceContexts) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
 	
-	@:overload public function handleThrowableDuringServerDispatch(request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, exception : java.lang.Throwable, completionStatus : org.omg.CORBA.CompletionStatus) : Void;
+	@:overload @:public public function handleThrowableDuringServerDispatch(request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, exception : java.lang.Throwable, completionStatus : org.omg.CORBA.CompletionStatus) : Void;
 	
 	
 }

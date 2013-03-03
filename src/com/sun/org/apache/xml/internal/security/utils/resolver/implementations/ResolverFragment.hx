@@ -21,7 +21,7 @@ package com.sun.org.apache.xml.internal.security.utils.resolver.implementations;
 */
 extern class ResolverFragment extends com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolverSpi
 {
-	@:overload override public function engineIsThreadSafe() : Bool;
+	@:overload @:public override public function engineIsThreadSafe() : Bool;
 	
 	/**
 	* Method engineResolve
@@ -33,7 +33,7 @@ extern class ResolverFragment extends com.sun.org.apache.xml.internal.security.u
 	* @param BaseURI
 	*
 	*/
-	@:overload override public function engineResolve(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public override public function engineResolve(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* Method engineCanResolve
@@ -42,7 +42,7 @@ extern class ResolverFragment extends com.sun.org.apache.xml.internal.security.u
 	* @param BaseURI
 	*
 	*/
-	@:overload override public function engineCanResolve(uri : org.w3c.dom.Attr, BaseURI : String) : Bool;
+	@:overload @:public override public function engineCanResolve(uri : org.w3c.dom.Attr, BaseURI : String) : Bool;
 	
 	
 }

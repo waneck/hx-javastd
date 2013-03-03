@@ -31,7 +31,7 @@ extern class Which
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload public static function which(clazz : Class<Dynamic>) : String;
+	@:overload @:public @:static public static function which(clazz : Class<Dynamic>) : String;
 	
 	/**
 	* Search the specified classloader for the given classname.
@@ -40,7 +40,7 @@ extern class Which
 	* @param loader the classloader to search
 	* @return the source location of the resource, or null if it wasn't found
 	*/
-	@:overload public static function which(classname : String, loader : java.lang.ClassLoader) : String;
+	@:overload @:public @:static public static function which(classname : String, loader : java.lang.ClassLoader) : String;
 	
 	
 }

@@ -25,7 +25,7 @@ package com.sun.crypto.provider;
 */
 extern class SunJCE extends java.security.Provider
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

@@ -40,17 +40,17 @@ extern class BasicLookAndFeel extends javax.swing.LookAndFeel implements java.io
 	* @see #initSystemColorDefaults
 	* @see #initComponentDefaults
 	*/
-	@:overload override public function getDefaults() : javax.swing.UIDefaults;
+	@:overload @:public override public function getDefaults() : javax.swing.UIDefaults;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function initialize() : Void;
+	@:overload @:public override public function initialize() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function uninitialize() : Void;
+	@:overload @:public override public function uninitialize() : Void;
 	
 	/**
 	* Populates {@code table} with mappings from {@code uiClassID} to the
@@ -67,7 +67,7 @@ extern class BasicLookAndFeel extends javax.swing.LookAndFeel implements java.io
 	* @see javax.swing.LookAndFeel
 	* @see #getDefaults
 	*/
-	@:overload private function initClassDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload @:protected private function initClassDefaults(table : javax.swing.UIDefaults) : Void;
 	
 	/**
 	* Populates {@code table} with system colors. This creates an
@@ -108,7 +108,7 @@ extern class BasicLookAndFeel extends javax.swing.LookAndFeel implements java.io
 	* @see #getDefaults
 	* @see #loadSystemColors
 	*/
-	@:overload private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload @:protected private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
 	
 	/**
 	* Populates {@code table} with the {@code name-color} pairs in
@@ -155,7 +155,7 @@ extern class BasicLookAndFeel extends javax.swing.LookAndFeel implements java.io
 	* @see java.awt.SystemColor
 	* @see java.awt.Color#decode(String)
 	*/
-	@:overload private function loadSystemColors(table : javax.swing.UIDefaults, systemColors : java.NativeArray<String>, useNative : Bool) : Void;
+	@:overload @:protected private function loadSystemColors(table : javax.swing.UIDefaults, systemColors : java.NativeArray<String>, useNative : Bool) : Void;
 	
 	/**
 	* Populates {@code table} with the defaults for the basic look and
@@ -164,7 +164,7 @@ extern class BasicLookAndFeel extends javax.swing.LookAndFeel implements java.io
 	* @param table the {@code UIDefaults} to add the values to
 	* @throws NullPointerException if {@code table} is {@code null}
 	*/
-	@:overload private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload @:protected private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
 	
 	/**
 	* Returns an <code>ActionMap</code> containing the audio actions
@@ -214,7 +214,7 @@ extern class BasicLookAndFeel extends javax.swing.LookAndFeel implements java.io
 	* @see #playSound(Action)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function getAudioActionMap() : javax.swing.ActionMap;
+	@:require(java4) @:overload @:protected private function getAudioActionMap() : javax.swing.ActionMap;
 	
 	/**
 	* Creates and returns an {@code Action} used to play a sound.
@@ -232,7 +232,7 @@ extern class BasicLookAndFeel extends javax.swing.LookAndFeel implements java.io
 	* @see #playSound(Action)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function createAudioAction(key : Dynamic) : javax.swing.Action;
+	@:require(java4) @:overload @:protected private function createAudioAction(key : Dynamic) : javax.swing.Action;
 	
 	/**
 	* If necessary, invokes {@code actionPerformed} on
@@ -251,7 +251,7 @@ extern class BasicLookAndFeel extends javax.swing.LookAndFeel implements java.io
 	*         is not an {@code Object[]}
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function playSound(audioAction : javax.swing.Action) : Void;
+	@:require(java4) @:overload @:protected private function playSound(audioAction : javax.swing.Action) : Void;
 	
 	
 }
@@ -270,11 +270,11 @@ extern class BasicLookAndFeel extends javax.swing.LookAndFeel implements java.io
 	* points to the audio resource.
 	* The byte[] is a buffer of the audio bits.
 	*/
-	@:overload public function new(name : String, resource : String) : Void;
+	@:overload @:public public function new(name : String, resource : String) : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function update(event : javax.sound.sampled.LineEvent) : Void;
+	@:overload @:public public function update(event : javax.sound.sampled.LineEvent) : Void;
 	
 	
 }
@@ -284,9 +284,9 @@ extern class BasicLookAndFeel extends javax.swing.LookAndFeel implements java.io
 */
 @:native('javax$swing$plaf$basic$BasicLookAndFeel$AWTEventHelper') @:internal extern class BasicLookAndFeel_AWTEventHelper implements java.awt.event.AWTEventListener implements java.security.PrivilegedAction<Dynamic>
 {
-	@:overload public function run() : Dynamic;
+	@:overload @:public public function run() : Dynamic;
 	
-	@:overload public function eventDispatched(ev : java.awt.AWTEvent) : Void;
+	@:overload @:public public function eventDispatched(ev : java.awt.AWTEvent) : Void;
 	
 	
 }

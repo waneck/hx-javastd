@@ -30,25 +30,25 @@ package sun.java2d.xr;
 */
 extern class GrowableRectArray extends sun.java2d.xr.GrowableIntArray
 {
-	@:overload public function new(initialSize : Int) : Void;
+	@:overload @:public public function new(initialSize : Int) : Void;
 	
-	@:overload @:final public function setX(index : Int, x : Int) : Void;
+	@:overload @:public @:final public function setX(index : Int, x : Int) : Void;
 	
-	@:overload @:final public function setY(index : Int, y : Int) : Void;
+	@:overload @:public @:final public function setY(index : Int, y : Int) : Void;
 	
-	@:overload @:final public function setWidth(index : Int, width : Int) : Void;
+	@:overload @:public @:final public function setWidth(index : Int, width : Int) : Void;
 	
-	@:overload @:final public function setHeight(index : Int, height : Int) : Void;
+	@:overload @:public @:final public function setHeight(index : Int, height : Int) : Void;
 	
-	@:overload @:final public function getX(index : Int) : Int;
+	@:overload @:public @:final public function getX(index : Int) : Int;
 	
-	@:overload @:final public function getY(index : Int) : Int;
+	@:overload @:public @:final public function getY(index : Int) : Int;
 	
-	@:overload @:final public function getWidth(index : Int) : Int;
+	@:overload @:public @:final public function getWidth(index : Int) : Int;
 	
-	@:overload @:final public function getHeight(index : Int) : Int;
+	@:overload @:public @:final public function getHeight(index : Int) : Int;
 	
-	@:overload @:final public function translateRects(x : Int, y : Int) : Void;
+	@:overload @:public @:final public function translateRects(x : Int, y : Int) : Void;
 	
 	
 }

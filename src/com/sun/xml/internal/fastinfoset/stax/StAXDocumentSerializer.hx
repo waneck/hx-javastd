@@ -37,123 +37,123 @@ extern class StAXDocumentSerializer extends com.sun.xml.internal.fastinfoset.Enc
 	* More than one fast infoset document may be encoded to the
 	* {@link java.io.OutputStream}.
 	*/
-	private var _manager : com.sun.xml.internal.fastinfoset.stax.StAXManager;
+	@:protected private var _manager : com.sun.xml.internal.fastinfoset.stax.StAXManager;
 	
-	private var _encoding : String;
+	@:protected private var _encoding : String;
 	
 	/**
 	* Local name of current element.
 	*/
-	private var _currentLocalName : String;
+	@:protected private var _currentLocalName : String;
 	
 	/**
 	* Namespace of current element.
 	*/
-	private var _currentUri : String;
+	@:protected private var _currentUri : String;
 	
 	/**
 	* Prefix of current element.
 	*/
-	private var _currentPrefix : String;
+	@:protected private var _currentPrefix : String;
 	
 	/**
 	* This flag indicates when there is a pending start element event.
 	*/
-	private var _inStartElement : Bool;
+	@:protected private var _inStartElement : Bool;
 	
 	/**
 	* This flag indicates if the current element is empty.
 	*/
-	private var _isEmptyElement : Bool;
+	@:protected private var _isEmptyElement : Bool;
 	
 	/**
 	* List of attributes qnames and values defined in the current element.
 	*/
-	private var _attributesArray : java.NativeArray<String>;
+	@:protected private var _attributesArray : java.NativeArray<String>;
 	
-	private var _attributesArrayIndex : Int;
+	@:protected private var _attributesArrayIndex : Int;
 	
-	private var _nsSupportContextStack : java.NativeArray<Bool>;
+	@:protected private var _nsSupportContextStack : java.NativeArray<Bool>;
 	
-	private var _stackCount : Int;
+	@:protected private var _stackCount : Int;
 	
 	/**
 	* Mapping between uris and prefixes.
 	*/
-	private var _nsContext : com.sun.xml.internal.fastinfoset.util.NamespaceContextImplementation;
+	@:protected private var _nsContext : com.sun.xml.internal.fastinfoset.util.NamespaceContextImplementation;
 	
 	/**
 	* List of namespaces defined in the current element.
 	*/
-	private var _namespacesArray : java.NativeArray<String>;
+	@:protected private var _namespacesArray : java.NativeArray<String>;
 	
-	private var _namespacesArrayIndex : Int;
+	@:protected private var _namespacesArrayIndex : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(outputStream : java.io.OutputStream) : Void;
+	@:overload @:public public function new(outputStream : java.io.OutputStream) : Void;
 	
-	@:overload public function new(outputStream : java.io.OutputStream, manager : com.sun.xml.internal.fastinfoset.stax.StAXManager) : Void;
+	@:overload @:public public function new(outputStream : java.io.OutputStream, manager : com.sun.xml.internal.fastinfoset.stax.StAXManager) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload public function writeStartDocument() : Void;
+	@:overload @:public public function writeStartDocument() : Void;
 	
-	@:overload public function writeStartDocument(version : String) : Void;
+	@:overload @:public public function writeStartDocument(version : String) : Void;
 	
-	@:overload public function writeStartDocument(encoding : String, version : String) : Void;
+	@:overload @:public public function writeStartDocument(encoding : String, version : String) : Void;
 	
-	@:overload public function writeEndDocument() : Void;
+	@:overload @:public public function writeEndDocument() : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
-	@:overload public function writeStartElement(localName : String) : Void;
+	@:overload @:public public function writeStartElement(localName : String) : Void;
 	
-	@:overload public function writeStartElement(namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function writeStartElement(namespaceURI : String, localName : String) : Void;
 	
-	@:overload public function writeStartElement(prefix : String, localName : String, namespaceURI : String) : Void;
+	@:overload @:public public function writeStartElement(prefix : String, localName : String, namespaceURI : String) : Void;
 	
-	@:overload public function writeEmptyElement(localName : String) : Void;
+	@:overload @:public public function writeEmptyElement(localName : String) : Void;
 	
-	@:overload public function writeEmptyElement(namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function writeEmptyElement(namespaceURI : String, localName : String) : Void;
 	
-	@:overload public function writeEmptyElement(prefix : String, localName : String, namespaceURI : String) : Void;
+	@:overload @:public public function writeEmptyElement(prefix : String, localName : String, namespaceURI : String) : Void;
 	
-	@:overload public function writeEndElement() : Void;
+	@:overload @:public public function writeEndElement() : Void;
 	
-	@:overload public function writeAttribute(localName : String, value : String) : Void;
+	@:overload @:public public function writeAttribute(localName : String, value : String) : Void;
 	
-	@:overload public function writeAttribute(namespaceURI : String, localName : String, value : String) : Void;
+	@:overload @:public public function writeAttribute(namespaceURI : String, localName : String, value : String) : Void;
 	
-	@:overload public function writeAttribute(prefix : String, namespaceURI : String, localName : String, value : String) : Void;
+	@:overload @:public public function writeAttribute(prefix : String, namespaceURI : String, localName : String, value : String) : Void;
 	
-	@:overload public function writeNamespace(prefix : String, namespaceURI : String) : Void;
+	@:overload @:public public function writeNamespace(prefix : String, namespaceURI : String) : Void;
 	
-	@:overload public function writeDefaultNamespace(namespaceURI : String) : Void;
+	@:overload @:public public function writeDefaultNamespace(namespaceURI : String) : Void;
 	
-	@:overload public function writeComment(data : String) : Void;
+	@:overload @:public public function writeComment(data : String) : Void;
 	
-	@:overload public function writeProcessingInstruction(target : String) : Void;
+	@:overload @:public public function writeProcessingInstruction(target : String) : Void;
 	
-	@:overload public function writeProcessingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function writeProcessingInstruction(target : String, data : String) : Void;
 	
-	@:overload public function writeCData(text : String) : Void;
+	@:overload @:public public function writeCData(text : String) : Void;
 	
-	@:overload public function writeDTD(dtd : String) : Void;
+	@:overload @:public public function writeDTD(dtd : String) : Void;
 	
-	@:overload public function writeEntityRef(name : String) : Void;
+	@:overload @:public public function writeEntityRef(name : String) : Void;
 	
-	@:overload public function writeCharacters(text : String) : Void;
+	@:overload @:public public function writeCharacters(text : String) : Void;
 	
-	@:overload public function writeCharacters(text : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload @:public public function writeCharacters(text : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
-	@:overload public function getPrefix(uri : String) : String;
+	@:overload @:public public function getPrefix(uri : String) : String;
 	
-	@:overload public function setPrefix(prefix : String, uri : String) : Void;
+	@:overload @:public public function setPrefix(prefix : String, uri : String) : Void;
 	
-	@:overload public function setDefaultNamespace(uri : String) : Void;
+	@:overload @:public public function setDefaultNamespace(uri : String) : Void;
 	
 	/**
 	* Sets the current namespace context for prefix and uri bindings.
@@ -169,63 +169,63 @@ extern class StAXDocumentSerializer extends com.sun.xml.internal.fastinfoset.Enc
 	* @param context the namespace context to use for this writer, may not be null
 	* @throws XMLStreamException
 	*/
-	@:overload public function setNamespaceContext(context : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public public function setNamespaceContext(context : javax.xml.namespace.NamespaceContext) : Void;
 	
-	@:overload public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
 	
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
-	@:overload public function setManager(manager : com.sun.xml.internal.fastinfoset.stax.StAXManager) : Void;
+	@:overload @:public public function setManager(manager : com.sun.xml.internal.fastinfoset.stax.StAXManager) : Void;
 	
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
-	@:overload public function writeOctets(b : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : Void;
+	@:overload @:public public function writeOctets(b : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : Void;
 	
-	@:overload private function encodeTerminationAndCurrentElement(terminateAfter : Bool) : Void;
+	@:overload @:protected private function encodeTerminationAndCurrentElement(terminateAfter : Bool) : Void;
 	
-	@:overload @:final public function initiateLowLevelWriting() : Void;
+	@:overload @:public @:final public function initiateLowLevelWriting() : Void;
 	
-	@:overload @:final public function getNextElementIndex() : Int;
+	@:overload @:public @:final public function getNextElementIndex() : Int;
 	
-	@:overload @:final public function getNextAttributeIndex() : Int;
+	@:overload @:public @:final public function getNextAttributeIndex() : Int;
 	
-	@:overload @:final public function getLocalNameIndex() : Int;
+	@:overload @:public @:final public function getLocalNameIndex() : Int;
 	
-	@:overload @:final public function getNextLocalNameIndex() : Int;
+	@:overload @:public @:final public function getNextLocalNameIndex() : Int;
 	
-	@:overload @:final public function writeLowLevelTerminationAndMark() : Void;
+	@:overload @:public @:final public function writeLowLevelTerminationAndMark() : Void;
 	
-	@:overload @:final public function writeLowLevelStartElementIndexed(type : Int, index : Int) : Void;
+	@:overload @:public @:final public function writeLowLevelStartElementIndexed(type : Int, index : Int) : Void;
 	
-	@:overload @:final public function writeLowLevelStartElement(type : Int, prefix : String, localName : String, namespaceURI : String) : Bool;
+	@:overload @:public @:final public function writeLowLevelStartElement(type : Int, prefix : String, localName : String, namespaceURI : String) : Bool;
 	
-	@:overload @:final public function writeLowLevelStartNamespaces() : Void;
+	@:overload @:public @:final public function writeLowLevelStartNamespaces() : Void;
 	
-	@:overload @:final public function writeLowLevelNamespace(prefix : String, namespaceName : String) : Void;
+	@:overload @:public @:final public function writeLowLevelNamespace(prefix : String, namespaceName : String) : Void;
 	
-	@:overload @:final public function writeLowLevelEndNamespaces() : Void;
+	@:overload @:public @:final public function writeLowLevelEndNamespaces() : Void;
 	
-	@:overload @:final public function writeLowLevelStartAttributes() : Void;
+	@:overload @:public @:final public function writeLowLevelStartAttributes() : Void;
 	
-	@:overload @:final public function writeLowLevelAttributeIndexed(index : Int) : Void;
+	@:overload @:public @:final public function writeLowLevelAttributeIndexed(index : Int) : Void;
 	
-	@:overload @:final public function writeLowLevelAttribute(prefix : String, namespaceURI : String, localName : String) : Bool;
+	@:overload @:public @:final public function writeLowLevelAttribute(prefix : String, namespaceURI : String, localName : String) : Bool;
 	
-	@:overload @:final public function writeLowLevelAttributeValue(value : String) : Void;
+	@:overload @:public @:final public function writeLowLevelAttributeValue(value : String) : Void;
 	
-	@:overload @:final public function writeLowLevelStartNameLiteral(type : Int, prefix : String, utf8LocalName : java.NativeArray<java.StdTypes.Int8>, namespaceURI : String) : Void;
+	@:overload @:public @:final public function writeLowLevelStartNameLiteral(type : Int, prefix : String, utf8LocalName : java.NativeArray<java.StdTypes.Int8>, namespaceURI : String) : Void;
 	
-	@:overload @:final public function writeLowLevelStartNameLiteral(type : Int, prefix : String, localNameIndex : Int, namespaceURI : String) : Void;
+	@:overload @:public @:final public function writeLowLevelStartNameLiteral(type : Int, prefix : String, localNameIndex : Int, namespaceURI : String) : Void;
 	
-	@:overload @:final public function writeLowLevelEndStartElement() : Void;
+	@:overload @:public @:final public function writeLowLevelEndStartElement() : Void;
 	
-	@:overload @:final public function writeLowLevelEndElement() : Void;
+	@:overload @:public @:final public function writeLowLevelEndElement() : Void;
 	
-	@:overload @:final public function writeLowLevelText(text : java.NativeArray<java.StdTypes.Char16>, length : Int) : Void;
+	@:overload @:public @:final public function writeLowLevelText(text : java.NativeArray<java.StdTypes.Char16>, length : Int) : Void;
 	
-	@:overload @:final public function writeLowLevelText(text : String) : Void;
+	@:overload @:public @:final public function writeLowLevelText(text : String) : Void;
 	
-	@:overload @:final public function writeLowLevelOctets(octets : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
+	@:overload @:public @:final public function writeLowLevelOctets(octets : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
 	
 	
 }

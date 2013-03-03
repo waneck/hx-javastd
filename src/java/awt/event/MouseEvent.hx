@@ -28,87 +28,87 @@ extern class MouseEvent extends java.awt.event.InputEvent
 	/**
 	* The first number in the range of ids used for mouse events.
 	*/
-	public static var MOUSE_FIRST(default, null) : Int;
+	@:public @:static @:final public static var MOUSE_FIRST(default, null) : Int;
 	
 	/**
 	* The last number in the range of ids used for mouse events.
 	*/
-	public static var MOUSE_LAST(default, null) : Int;
+	@:public @:static @:final public static var MOUSE_LAST(default, null) : Int;
 	
 	/**
 	* The "mouse clicked" event. This <code>MouseEvent</code>
 	* occurs when a mouse button is pressed and released.
 	*/
-	public static var MOUSE_CLICKED(default, null) : Int;
+	@:public @:static @:final public static var MOUSE_CLICKED(default, null) : Int;
 	
 	/**
 	* The "mouse pressed" event. This <code>MouseEvent</code>
 	* occurs when a mouse button is pushed down.
 	*/
-	public static var MOUSE_PRESSED(default, null) : Int;
+	@:public @:static @:final public static var MOUSE_PRESSED(default, null) : Int;
 	
 	/**
 	* The "mouse released" event. This <code>MouseEvent</code>
 	* occurs when a mouse button is let up.
 	*/
-	public static var MOUSE_RELEASED(default, null) : Int;
+	@:public @:static @:final public static var MOUSE_RELEASED(default, null) : Int;
 	
 	/**
 	* The "mouse moved" event. This <code>MouseEvent</code>
 	* occurs when the mouse position changes.
 	*/
-	public static var MOUSE_MOVED(default, null) : Int;
+	@:public @:static @:final public static var MOUSE_MOVED(default, null) : Int;
 	
 	/**
 	* The "mouse entered" event. This <code>MouseEvent</code>
 	* occurs when the mouse cursor enters the unobscured part of component's
 	* geometry.
 	*/
-	public static var MOUSE_ENTERED(default, null) : Int;
+	@:public @:static @:final public static var MOUSE_ENTERED(default, null) : Int;
 	
 	/**
 	* The "mouse exited" event. This <code>MouseEvent</code>
 	* occurs when the mouse cursor exits the unobscured part of component's
 	* geometry.
 	*/
-	public static var MOUSE_EXITED(default, null) : Int;
+	@:public @:static @:final public static var MOUSE_EXITED(default, null) : Int;
 	
 	/**
 	* The "mouse dragged" event. This <code>MouseEvent</code>
 	* occurs when the mouse position changes while a mouse button is pressed.
 	*/
-	public static var MOUSE_DRAGGED(default, null) : Int;
+	@:public @:static @:final public static var MOUSE_DRAGGED(default, null) : Int;
 	
 	/**
 	* The "mouse wheel" event.  This is the only <code>MouseWheelEvent</code>.
 	* It occurs when a mouse equipped with a wheel has its wheel rotated.
 	* @since 1.4
 	*/
-	@:require(java4) public static var MOUSE_WHEEL(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var MOUSE_WHEEL(default, null) : Int;
 	
 	/**
 	* Indicates no mouse buttons; used by {@link #getButton}.
 	* @since 1.4
 	*/
-	@:require(java4) public static var NOBUTTON(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var NOBUTTON(default, null) : Int;
 	
 	/**
 	* Indicates mouse button #1; used by {@link #getButton}.
 	* @since 1.4
 	*/
-	@:require(java4) public static var BUTTON1(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var BUTTON1(default, null) : Int;
 	
 	/**
 	* Indicates mouse button #2; used by {@link #getButton}.
 	* @since 1.4
 	*/
-	@:require(java4) public static var BUTTON2(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var BUTTON2(default, null) : Int;
 	
 	/**
 	* Indicates mouse button #3; used by {@link #getButton}.
 	* @since 1.4
 	*/
-	@:require(java4) public static var BUTTON3(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var BUTTON3(default, null) : Int;
 	
 	/**
 	* Returns the absolute x, y position of the event.
@@ -124,7 +124,7 @@ extern class MouseEvent extends java.awt.event.InputEvent
 	* @see java.awt.GraphicsConfiguration
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getLocationOnScreen() : java.awt.Point;
+	@:require(java6) @:overload @:public public function getLocationOnScreen() : java.awt.Point;
 	
 	/**
 	* Returns the absolute horizontal x position of the event.
@@ -139,7 +139,7 @@ extern class MouseEvent extends java.awt.event.InputEvent
 	* @see java.awt.GraphicsConfiguration
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getXOnScreen() : Int;
+	@:require(java6) @:overload @:public public function getXOnScreen() : Int;
 	
 	/**
 	* Returns the absolute vertical y position of the event.
@@ -154,7 +154,7 @@ extern class MouseEvent extends java.awt.event.InputEvent
 	* @see java.awt.GraphicsConfiguration
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getYOnScreen() : Int;
+	@:require(java6) @:overload @:public public function getYOnScreen() : Int;
 	
 	/**
 	* Constructs a <code>MouseEvent</code> object with the
@@ -244,7 +244,7 @@ extern class MouseEvent extends java.awt.event.InputEvent
 	* @see #getButton()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, x : Int, y : Int, clickCount : Int, popupTrigger : Bool, button : Int) : Void;
+	@:require(java4) @:overload @:public public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, x : Int, y : Int, clickCount : Int, popupTrigger : Bool, button : Int) : Void;
 	
 	/**
 	* Constructs a <code>MouseEvent</code> object with the
@@ -296,12 +296,12 @@ extern class MouseEvent extends java.awt.event.InputEvent
 	* @see #getClickCount()
 	* @see #isPopupTrigger()
 	*/
-	@:overload public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, x : Int, y : Int, clickCount : Int, popupTrigger : Bool) : Void;
+	@:overload @:public public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, x : Int, y : Int, clickCount : Int, popupTrigger : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getModifiersEx() : Int;
+	@:overload @:public override public function getModifiersEx() : Int;
 	
 	/**
 	* Constructs a <code>MouseEvent</code> object with the
@@ -395,7 +395,7 @@ extern class MouseEvent extends java.awt.event.InputEvent
 	* @see InputEvent#getMaskForButton(int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, x : Int, y : Int, xAbs : Int, yAbs : Int, clickCount : Int, popupTrigger : Bool, button : Int) : Void;
+	@:require(java6) @:overload @:public public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, x : Int, y : Int, xAbs : Int, yAbs : Int, clickCount : Int, popupTrigger : Bool, button : Int) : Void;
 	
 	/**
 	* Returns the horizontal x position of the event relative to the
@@ -404,7 +404,7 @@ extern class MouseEvent extends java.awt.event.InputEvent
 	* @return x  an integer indicating horizontal position relative to
 	*            the component
 	*/
-	@:overload public function getX() : Int;
+	@:overload @:public public function getX() : Int;
 	
 	/**
 	* Returns the vertical y position of the event relative to the
@@ -413,7 +413,7 @@ extern class MouseEvent extends java.awt.event.InputEvent
 	* @return y  an integer indicating vertical position relative to
 	*            the component
 	*/
-	@:overload public function getY() : Int;
+	@:overload @:public public function getY() : Int;
 	
 	/**
 	* Returns the x,y position of the event relative to the source component.
@@ -422,7 +422,7 @@ extern class MouseEvent extends java.awt.event.InputEvent
 	*         relative to the source component
 	*
 	*/
-	@:overload public function getPoint() : java.awt.Point;
+	@:overload @:public public function getPoint() : java.awt.Point;
 	
 	/**
 	* Translates the event's coordinates to a new position
@@ -434,14 +434,14 @@ extern class MouseEvent extends java.awt.event.InputEvent
 	* @param y the vertical y value to add to the current y
 	coordinate position
 	*/
-	@:overload @:synchronized public function translatePoint(x : Int, y : Int) : Void;
+	@:overload @:public @:synchronized public function translatePoint(x : Int, y : Int) : Void;
 	
 	/**
 	* Returns the number of mouse clicks associated with this event.
 	*
 	* @return integer value for the number of clicks
 	*/
-	@:overload public function getClickCount() : Int;
+	@:overload @:public public function getClickCount() : Int;
 	
 	/**
 	* Returns which, if any, of the mouse buttons has changed state.
@@ -495,7 +495,7 @@ extern class MouseEvent extends java.awt.event.InputEvent
 	* @see #MouseEvent(Component, int, long, int, int, int, int, int, int, boolean, int)
 	* @see InputEvent#getMaskForButton(int)
 	*/
-	@:require(java4) @:overload public function getButton() : Int;
+	@:require(java4) @:overload @:public public function getButton() : Int;
 	
 	/**
 	* Returns whether or not this mouse event is the popup menu
@@ -509,7 +509,7 @@ extern class MouseEvent extends java.awt.event.InputEvent
 	* @return boolean, true if this event is the popup menu trigger
 	*         for this platform
 	*/
-	@:overload public function isPopupTrigger() : Bool;
+	@:overload @:public public function isPopupTrigger() : Bool;
 	
 	/**
 	* Returns a <code>String</code> instance describing the modifier keys and
@@ -536,7 +536,7 @@ extern class MouseEvent extends java.awt.event.InputEvent
 	* @see InputEvent#getModifiersExText(int)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getMouseModifiersText(modifiers : Int) : String;
+	@:require(java4) @:overload @:public @:static public static function getMouseModifiersText(modifiers : Int) : String;
 	
 	/**
 	* Returns a parameter string identifying this event.
@@ -544,7 +544,7 @@ extern class MouseEvent extends java.awt.event.InputEvent
 	*
 	* @return a string identifying the event and its attributes
 	*/
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	
 }

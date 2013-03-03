@@ -29,15 +29,15 @@ extern class FragmentContentHandler extends org.xml.sax.helpers.XMLFilterImpl
 	* {@link XMLFilterImpl} that masks start/end document SAX events.
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(parent : org.xml.sax.XMLReader) : Void;
+	@:overload @:public public function new(parent : org.xml.sax.XMLReader) : Void;
 	
-	@:overload public function new(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function new(handler : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload override public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
-	@:overload override public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
 	
 }

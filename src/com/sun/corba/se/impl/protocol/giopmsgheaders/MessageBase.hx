@@ -32,75 +32,75 @@ extern class MessageBase implements com.sun.corba.se.impl.protocol.giopmsgheader
 	*
 	* @author Ram Jeyaraman 05/14/2000
 	*/
-	public var giopHeader : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var giopHeader : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function typeToString(type : Int) : String;
+	@:overload @:public @:static public static function typeToString(type : Int) : String;
 	
-	@:overload public static function typeToString(type : java.StdTypes.Int8) : String;
+	@:overload @:public @:static public static function typeToString(type : java.StdTypes.Int8) : String;
 	
-	@:overload public static function readGIOPMessage(orb : com.sun.corba.se.spi.orb.ORB, connection : com.sun.corba.se.spi.transport.CorbaConnection) : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageBase;
+	@:overload @:public @:static public static function readGIOPMessage(orb : com.sun.corba.se.spi.orb.ORB, connection : com.sun.corba.se.spi.transport.CorbaConnection) : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageBase;
 	
-	@:overload public static function readGIOPHeader(orb : com.sun.corba.se.spi.orb.ORB, connection : com.sun.corba.se.spi.transport.CorbaConnection) : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageBase;
+	@:overload @:public @:static public static function readGIOPHeader(orb : com.sun.corba.se.spi.orb.ORB, connection : com.sun.corba.se.spi.transport.CorbaConnection) : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageBase;
 	
-	@:overload public static function readGIOPBody(orb : com.sun.corba.se.spi.orb.ORB, connection : com.sun.corba.se.spi.transport.CorbaConnection, msg : com.sun.corba.se.impl.protocol.giopmsgheaders.Message) : com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
+	@:overload @:public @:static public static function readGIOPBody(orb : com.sun.corba.se.spi.orb.ORB, connection : com.sun.corba.se.spi.transport.CorbaConnection, msg : com.sun.corba.se.impl.protocol.giopmsgheaders.Message) : com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
 	
-	@:overload public static function createRequest(orb : com.sun.corba.se.spi.orb.ORB, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion, encodingVersion : java.StdTypes.Int8, request_id : Int, response_expected : Bool, ior : com.sun.corba.se.spi.ior.IOR, addrDisp : java.StdTypes.Int16, operation : String, service_contexts : com.sun.corba.se.spi.servicecontext.ServiceContexts, requesting_principal : org.omg.CORBA.Principal) : com.sun.corba.se.impl.protocol.giopmsgheaders.RequestMessage;
+	@:overload @:public @:static public static function createRequest(orb : com.sun.corba.se.spi.orb.ORB, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion, encodingVersion : java.StdTypes.Int8, request_id : Int, response_expected : Bool, ior : com.sun.corba.se.spi.ior.IOR, addrDisp : java.StdTypes.Int16, operation : String, service_contexts : com.sun.corba.se.spi.servicecontext.ServiceContexts, requesting_principal : org.omg.CORBA.Principal) : com.sun.corba.se.impl.protocol.giopmsgheaders.RequestMessage;
 	
-	@:overload public static function createReply(orb : com.sun.corba.se.spi.orb.ORB, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion, encodingVersion : java.StdTypes.Int8, request_id : Int, reply_status : Int, service_contexts : com.sun.corba.se.spi.servicecontext.ServiceContexts, ior : com.sun.corba.se.spi.ior.IOR) : com.sun.corba.se.impl.protocol.giopmsgheaders.ReplyMessage;
+	@:overload @:public @:static public static function createReply(orb : com.sun.corba.se.spi.orb.ORB, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion, encodingVersion : java.StdTypes.Int8, request_id : Int, reply_status : Int, service_contexts : com.sun.corba.se.spi.servicecontext.ServiceContexts, ior : com.sun.corba.se.spi.ior.IOR) : com.sun.corba.se.impl.protocol.giopmsgheaders.ReplyMessage;
 	
-	@:overload public static function createLocateRequest(orb : com.sun.corba.se.spi.orb.ORB, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion, encodingVersion : java.StdTypes.Int8, request_id : Int, object_key : java.NativeArray<java.StdTypes.Int8>) : com.sun.corba.se.impl.protocol.giopmsgheaders.LocateRequestMessage;
+	@:overload @:public @:static public static function createLocateRequest(orb : com.sun.corba.se.spi.orb.ORB, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion, encodingVersion : java.StdTypes.Int8, request_id : Int, object_key : java.NativeArray<java.StdTypes.Int8>) : com.sun.corba.se.impl.protocol.giopmsgheaders.LocateRequestMessage;
 	
-	@:overload public static function createLocateReply(orb : com.sun.corba.se.spi.orb.ORB, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion, encodingVersion : java.StdTypes.Int8, request_id : Int, locate_status : Int, ior : com.sun.corba.se.spi.ior.IOR) : com.sun.corba.se.impl.protocol.giopmsgheaders.LocateReplyMessage;
+	@:overload @:public @:static public static function createLocateReply(orb : com.sun.corba.se.spi.orb.ORB, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion, encodingVersion : java.StdTypes.Int8, request_id : Int, locate_status : Int, ior : com.sun.corba.se.spi.ior.IOR) : com.sun.corba.se.impl.protocol.giopmsgheaders.LocateReplyMessage;
 	
-	@:overload public static function createCancelRequest(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion, request_id : Int) : com.sun.corba.se.impl.protocol.giopmsgheaders.CancelRequestMessage;
+	@:overload @:public @:static public static function createCancelRequest(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion, request_id : Int) : com.sun.corba.se.impl.protocol.giopmsgheaders.CancelRequestMessage;
 	
-	@:overload public static function createCloseConnection(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
+	@:overload @:public @:static public static function createCloseConnection(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
 	
-	@:overload public static function createMessageError(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
+	@:overload @:public @:static public static function createMessageError(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
 	
-	@:native('createFragmentMessage') @:overload public static function _createFragmentMessage(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage;
+	@:native('createFragmentMessage') @:overload @:public @:static public static function _createFragmentMessage(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage;
 	
-	@:overload public static function getRequestId(msg : com.sun.corba.se.impl.protocol.giopmsgheaders.Message) : Int;
+	@:overload @:public @:static public static function getRequestId(msg : com.sun.corba.se.impl.protocol.giopmsgheaders.Message) : Int;
 	
 	/**
 	* Set a flag in the given buffer (fragment bit, byte order bit, etc)
 	*/
-	@:overload public static function setFlag(byteBuffer : java.nio.ByteBuffer, flag : Int) : Void;
+	@:overload @:public @:static public static function setFlag(byteBuffer : java.nio.ByteBuffer, flag : Int) : Void;
 	
 	/**
 	* Clears a flag in the given buffer
 	*/
-	@:overload public static function clearFlag(buf : java.NativeArray<java.StdTypes.Int8>, flag : Int) : Void;
+	@:overload @:public @:static public static function clearFlag(buf : java.NativeArray<java.StdTypes.Int8>, flag : Int) : Void;
 	
-	//@:overload public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
+	//@:overload @:public public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
 	
-	@:overload public function getByteBuffer() : java.nio.ByteBuffer;
+	@:overload @:public public function getByteBuffer() : java.nio.ByteBuffer;
 	
-	@:overload public function setByteBuffer(byteBuffer : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function setByteBuffer(byteBuffer : java.nio.ByteBuffer) : Void;
 	
-	@:overload public function getThreadPoolToUse() : Int;
+	@:overload @:public public function getThreadPoolToUse() : Int;
 	
-	@:overload public function getEncodingVersion() : java.StdTypes.Int8;
+	@:overload @:public public function getEncodingVersion() : java.StdTypes.Int8;
 	
-	@:overload public function setEncodingVersion(version : java.StdTypes.Int8) : Void;
+	@:overload @:public public function setEncodingVersion(version : java.StdTypes.Int8) : Void;
 	
-	@:overload public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload public function isLittleEndian() : Bool;
+	@:overload @:public public function isLittleEndian() : Bool;
 	
-	@:overload public function moreFragmentsToFollow() : Bool;
+	@:overload @:public public function moreFragmentsToFollow() : Bool;
 	
-	@:overload public function createFragmentMessage() : com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage;
+	@:overload @:public public function createFragmentMessage() : com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage;
 	
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
-	@:overload public function setSize(byteBuffer : java.nio.ByteBuffer, size : Int) : Void;
+	@:overload @:public public function setSize(byteBuffer : java.nio.ByteBuffer, size : Int) : Void;
 	
-	@:overload public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:overload @:public public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	@:overload public function getSize() : Int;
+	@:overload @:public public function getSize() : Int;
 	
 	
 }

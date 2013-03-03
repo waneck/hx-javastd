@@ -64,82 +64,82 @@ extern class AccessFlags implements java.io.Serializable
 	*
 	* @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
 	*/
-	private var access_flags : Int;
+	@:protected private var access_flags : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* @param a inital access flags
 	*/
-	@:overload public function new(a : Int) : Void;
+	@:overload @:public public function new(a : Int) : Void;
 	
 	/**
 	* @return Access flags of the object aka. "modifiers".
 	*/
-	@:overload @:final public function getAccessFlags() : Int;
+	@:overload @:public @:final public function getAccessFlags() : Int;
 	
 	/**
 	* @return Access flags of the object aka. "modifiers".
 	*/
-	@:overload @:final public function getModifiers() : Int;
+	@:overload @:public @:final public function getModifiers() : Int;
 	
 	/** Set access flags aka "modifiers".
 	* @param access_flags Access flags of the object.
 	*/
-	@:overload @:final public function setAccessFlags(access_flags : Int) : Void;
+	@:overload @:public @:final public function setAccessFlags(access_flags : Int) : Void;
 	
 	/** Set access flags aka "modifiers".
 	* @param access_flags Access flags of the object.
 	*/
-	@:overload @:final public function setModifiers(access_flags : Int) : Void;
+	@:overload @:public @:final public function setModifiers(access_flags : Int) : Void;
 	
-	@:overload @:final public function isPublic(flag : Bool) : Void;
+	@:overload @:public @:final public function isPublic(flag : Bool) : Void;
 	
-	@:overload @:final public function isPublic() : Bool;
+	@:overload @:public @:final public function isPublic() : Bool;
 	
-	@:overload @:final public function isPrivate(flag : Bool) : Void;
+	@:overload @:public @:final public function isPrivate(flag : Bool) : Void;
 	
-	@:overload @:final public function isPrivate() : Bool;
+	@:overload @:public @:final public function isPrivate() : Bool;
 	
-	@:overload @:final public function isProtected(flag : Bool) : Void;
+	@:overload @:public @:final public function isProtected(flag : Bool) : Void;
 	
-	@:overload @:final public function isProtected() : Bool;
+	@:overload @:public @:final public function isProtected() : Bool;
 	
-	@:overload @:final public function isStatic(flag : Bool) : Void;
+	@:overload @:public @:final public function isStatic(flag : Bool) : Void;
 	
-	@:overload @:final public function isStatic() : Bool;
+	@:overload @:public @:final public function isStatic() : Bool;
 	
-	@:overload @:final public function isFinal(flag : Bool) : Void;
+	@:overload @:public @:final public function isFinal(flag : Bool) : Void;
 	
-	@:overload @:final public function isFinal() : Bool;
+	@:overload @:public @:final public function isFinal() : Bool;
 	
-	@:overload @:final public function isSynchronized(flag : Bool) : Void;
+	@:overload @:public @:final public function isSynchronized(flag : Bool) : Void;
 	
-	@:overload @:final public function isSynchronized() : Bool;
+	@:overload @:public @:final public function isSynchronized() : Bool;
 	
-	@:overload @:final public function isVolatile(flag : Bool) : Void;
+	@:overload @:public @:final public function isVolatile(flag : Bool) : Void;
 	
-	@:overload @:final public function isVolatile() : Bool;
+	@:overload @:public @:final public function isVolatile() : Bool;
 	
-	@:overload @:final public function isTransient(flag : Bool) : Void;
+	@:overload @:public @:final public function isTransient(flag : Bool) : Void;
 	
-	@:overload @:final public function isTransient() : Bool;
+	@:overload @:public @:final public function isTransient() : Bool;
 	
-	@:overload @:final public function isNative(flag : Bool) : Void;
+	@:overload @:public @:final public function isNative(flag : Bool) : Void;
 	
-	@:overload @:final public function isNative() : Bool;
+	@:overload @:public @:final public function isNative() : Bool;
 	
-	@:overload @:final public function isInterface(flag : Bool) : Void;
+	@:overload @:public @:final public function isInterface(flag : Bool) : Void;
 	
-	@:overload @:final public function isInterface() : Bool;
+	@:overload @:public @:final public function isInterface() : Bool;
 	
-	@:overload @:final public function isAbstract(flag : Bool) : Void;
+	@:overload @:public @:final public function isAbstract(flag : Bool) : Void;
 	
-	@:overload @:final public function isAbstract() : Bool;
+	@:overload @:public @:final public function isAbstract() : Bool;
 	
-	@:overload @:final public function isStrictfp(flag : Bool) : Void;
+	@:overload @:public @:final public function isStrictfp(flag : Bool) : Void;
 	
-	@:overload @:final public function isStrictfp() : Bool;
+	@:overload @:public @:final public function isStrictfp() : Bool;
 	
 	
 }

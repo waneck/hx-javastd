@@ -36,14 +36,14 @@ extern class XSLTTransformParameterSpec implements javax.xml.crypto.dsig.spec.Tr
 	* @throws NullPointerException if <code>stylesheet</code> is
 	*    <code>null</code>
 	*/
-	@:overload public function new(stylesheet : javax.xml.crypto.XMLStructure) : Void;
+	@:overload @:public public function new(stylesheet : javax.xml.crypto.XMLStructure) : Void;
 	
 	/**
 	* Returns the stylesheet.
 	*
 	* @return the stylesheet
 	*/
-	@:overload public function getStylesheet() : javax.xml.crypto.XMLStructure;
+	@:overload @:public public function getStylesheet() : javax.xml.crypto.XMLStructure;
 	
 	
 }

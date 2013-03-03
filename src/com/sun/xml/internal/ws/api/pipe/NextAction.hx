@@ -31,7 +31,7 @@ extern class NextAction
 	* then later invoke the current tube's {@link Tube#processResponse(Packet)}
 	* with the response packet.
 	*/
-	@:overload public function invoke(next : com.sun.xml.internal.ws.api.pipe.Tube, p : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function invoke(next : com.sun.xml.internal.ws.api.pipe.Tube, p : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	/**
 	* Indicates that the next action should be to
@@ -39,13 +39,13 @@ extern class NextAction
 	* but the current tube doesn't want to receive the response packet to
 	* its {@link Tube#processResponse(Packet)}.
 	*/
-	@:overload public function invokeAndForget(next : com.sun.xml.internal.ws.api.pipe.Tube, p : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function invokeAndForget(next : com.sun.xml.internal.ws.api.pipe.Tube, p : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	/**
 	* Indicates that the next action is to flip the processing direction
 	* and starts response processing.
 	*/
-	@:overload public function returnWith(response : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function returnWith(response : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	/**
 	* Indicates that the next action is to flip the processing direction
@@ -56,36 +56,36 @@ extern class NextAction
 	*      take {@link Throwable} because {@link Tube#processException(Throwable)}
 	*      takes {@link Throwable}.
 	*/
-	@:overload public function throwException(t : java.lang.Throwable) : Void;
+	@:overload @:public public function throwException(t : java.lang.Throwable) : Void;
 	
 	/**
 	* Indicates that the fiber should be suspended.
 	* Once {@link Fiber#resume(Packet) resumed}, return the response processing.
 	*/
-	@:overload public function suspend() : Void;
+	@:overload @:public public function suspend() : Void;
 	
 	/**
 	* Indicates that the fiber should be suspended.
 	* Once {@link Fiber#resume(Packet) resumed}, resume with the
 	* {@link Tube#processRequest(Packet)} on the given next tube.
 	*/
-	@:overload public function suspend(next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
+	@:overload @:public public function suspend(next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload public function getNext() : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public public function getNext() : com.sun.xml.internal.ws.api.pipe.Tube;
 	
-	@:overload public function getPacket() : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public public function getPacket() : com.sun.xml.internal.ws.api.message.Packet;
 	
-	@:overload public function getThrowable() : java.lang.Throwable;
+	@:overload @:public public function getThrowable() : java.lang.Throwable;
 	
 	/**
 	* Dumps the contents to assist debugging.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns {@link #kind} in a human readable string, to assist debugging.
 	*/
-	@:overload public function getKindString() : String;
+	@:overload @:public public function getKindString() : String;
 	
 	
 }

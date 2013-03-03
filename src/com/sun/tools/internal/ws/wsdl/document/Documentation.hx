@@ -30,13 +30,13 @@ package com.sun.tools.internal.ws.wsdl.document;
 */
 extern class Documentation
 {
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
-	@:overload public function getContent() : String;
+	@:overload @:public public function getContent() : String;
 	
-	@:overload public function setContent(s : String) : Void;
+	@:overload @:public public function setContent(s : String) : Void;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
+	@:overload @:public public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
 	
 	
 }

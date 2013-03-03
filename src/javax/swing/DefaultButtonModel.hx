@@ -40,145 +40,145 @@ package javax.swing;
 extern class DefaultButtonModel implements javax.swing.ButtonModel implements java.io.Serializable
 {
 	/** The bitmask used to store the state of the button. */
-	private var stateMask : Int;
+	@:protected private var stateMask : Int;
 	
 	/** The action command string fired by the button. */
-	private var actionCommand : String;
+	@:protected private var actionCommand : String;
 	
 	/** The button group that the button belongs to. */
-	private var group : javax.swing.ButtonGroup;
+	@:protected private var group : javax.swing.ButtonGroup;
 	
 	/** The button's mnemonic. */
-	private var mnemonic : Int;
+	@:protected private var mnemonic : Int;
 	
 	/**
 	* Only one <code>ChangeEvent</code> is needed per button model
 	* instance since the event's only state is the source property.
 	* The source of events generated is always "this".
 	*/
-	@:transient private var changeEvent : javax.swing.event.ChangeEvent;
+	@:protected @:transient private var changeEvent : javax.swing.event.ChangeEvent;
 	
 	/** Stores the listeners on this model. */
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
 	/**
 	* Constructs a <code>DefaultButtonModel</code>.
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Identifies the "armed" bit in the bitmask, which
 	* indicates partial commitment towards choosing/triggering
 	* the button.
 	*/
-	public static var ARMED(default, null) : Int;
+	@:public @:final @:static public static var ARMED(default, null) : Int;
 	
 	/**
 	* Identifies the "selected" bit in the bitmask, which
 	* indicates that the button has been selected. Only needed for
 	* certain types of buttons - such as radio button or check box.
 	*/
-	public static var SELECTED(default, null) : Int;
+	@:public @:final @:static public static var SELECTED(default, null) : Int;
 	
 	/**
 	* Identifies the "pressed" bit in the bitmask, which
 	* indicates that the button is pressed.
 	*/
-	public static var PRESSED(default, null) : Int;
+	@:public @:final @:static public static var PRESSED(default, null) : Int;
 	
 	/**
 	* Identifies the "enabled" bit in the bitmask, which
 	* indicates that the button can be selected by
 	* an input device (such as a mouse pointer).
 	*/
-	public static var ENABLED(default, null) : Int;
+	@:public @:final @:static public static var ENABLED(default, null) : Int;
 	
 	/**
 	* Identifies the "rollover" bit in the bitmask, which
 	* indicates that the mouse is over the button.
 	*/
-	public static var ROLLOVER(default, null) : Int;
+	@:public @:final @:static public static var ROLLOVER(default, null) : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setActionCommand(actionCommand : String) : Void;
+	@:overload @:public public function setActionCommand(actionCommand : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getActionCommand() : String;
+	@:overload @:public public function getActionCommand() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function isArmed() : Bool;
+	@:overload @:public public function isArmed() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function isSelected() : Bool;
+	@:overload @:public public function isSelected() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function isPressed() : Bool;
+	@:overload @:public public function isPressed() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function isRollover() : Bool;
+	@:overload @:public public function isRollover() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setArmed(b : Bool) : Void;
+	@:overload @:public public function setArmed(b : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setSelected(b : Bool) : Void;
+	@:overload @:public public function setSelected(b : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setPressed(b : Bool) : Void;
+	@:overload @:public public function setPressed(b : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setRollover(b : Bool) : Void;
+	@:overload @:public public function setRollover(b : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setMnemonic(key : Int) : Void;
+	@:overload @:public public function setMnemonic(key : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getMnemonic() : Int;
+	@:overload @:public public function getMnemonic() : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the change listeners
@@ -193,7 +193,7 @@ extern class DefaultButtonModel implements javax.swing.ButtonModel implements ja
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
+	@:require(java4) @:overload @:public public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -202,17 +202,17 @@ extern class DefaultButtonModel implements javax.swing.ButtonModel implements ja
 	*
 	* @see EventListenerList
 	*/
-	@:overload private function fireStateChanged() : Void;
+	@:overload @:protected private function fireStateChanged() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addActionListener(l : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function addActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function removeActionListener(l : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function removeActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Returns an array of all the action listeners
@@ -227,7 +227,7 @@ extern class DefaultButtonModel implements javax.swing.ButtonModel implements ja
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
+	@:require(java4) @:overload @:public public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -236,17 +236,17 @@ extern class DefaultButtonModel implements javax.swing.ButtonModel implements ja
 	* @param e the <code>ActionEvent</code> to deliver to listeners
 	* @see EventListenerList
 	*/
-	@:overload private function fireActionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:protected private function fireActionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addItemListener(l : java.awt.event.ItemListener) : Void;
+	@:overload @:public public function addItemListener(l : java.awt.event.ItemListener) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function removeItemListener(l : java.awt.event.ItemListener) : Void;
+	@:overload @:public public function removeItemListener(l : java.awt.event.ItemListener) : Void;
 	
 	/**
 	* Returns an array of all the item listeners
@@ -261,7 +261,7 @@ extern class DefaultButtonModel implements javax.swing.ButtonModel implements ja
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getItemListeners() : java.NativeArray<java.awt.event.ItemListener>;
+	@:require(java4) @:overload @:public public function getItemListeners() : java.NativeArray<java.awt.event.ItemListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -270,7 +270,7 @@ extern class DefaultButtonModel implements javax.swing.ButtonModel implements ja
 	* @param e the <code>ItemEvent</code> to deliver to listeners
 	* @see EventListenerList
 	*/
-	@:overload private function fireItemStateChanged(e : java.awt.event.ItemEvent) : Void;
+	@:overload @:protected private function fireItemStateChanged(e : java.awt.event.ItemEvent) : Void;
 	
 	/**
 	* Returns an array of all the objects currently registered as
@@ -309,15 +309,15 @@ extern class DefaultButtonModel implements javax.swing.ButtonModel implements ja
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/** Overridden to return <code>null</code>. */
-	@:overload public function getSelectedObjects() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getSelectedObjects() : java.NativeArray<Dynamic>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setGroup(group : javax.swing.ButtonGroup) : Void;
+	@:overload @:public public function setGroup(group : javax.swing.ButtonGroup) : Void;
 	
 	/**
 	* Returns the group that the button belongs to.
@@ -328,7 +328,7 @@ extern class DefaultButtonModel implements javax.swing.ButtonModel implements ja
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getGroup() : javax.swing.ButtonGroup;
+	@:require(java3) @:overload @:public public function getGroup() : javax.swing.ButtonGroup;
 	
 	
 }

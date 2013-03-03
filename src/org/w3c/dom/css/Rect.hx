@@ -51,22 +51,22 @@ extern interface Rect
 	/**
 	*  This attribute is used for the top of the rect.
 	*/
-	@:overload public function getTop() : org.w3c.dom.css.CSSPrimitiveValue;
+	@:overload @:public public function getTop() : org.w3c.dom.css.CSSPrimitiveValue;
 	
 	/**
 	*  This attribute is used for the right of the rect.
 	*/
-	@:overload public function getRight() : org.w3c.dom.css.CSSPrimitiveValue;
+	@:overload @:public public function getRight() : org.w3c.dom.css.CSSPrimitiveValue;
 	
 	/**
 	*  This attribute is used for the bottom of the rect.
 	*/
-	@:overload public function getBottom() : org.w3c.dom.css.CSSPrimitiveValue;
+	@:overload @:public public function getBottom() : org.w3c.dom.css.CSSPrimitiveValue;
 	
 	/**
 	*  This attribute is used for the left of the rect.
 	*/
-	@:overload public function getLeft() : org.w3c.dom.css.CSSPrimitiveValue;
+	@:overload @:public public function getLeft() : org.w3c.dom.css.CSSPrimitiveValue;
 	
 	
 }

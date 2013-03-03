@@ -30,17 +30,17 @@ extern class MultiplicityCounter implements com.sun.xml.internal.xsom.visitor.XS
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	public static var theInstance(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.MultiplicityCounter;
+	@:public @:static @:final public static var theInstance(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.MultiplicityCounter;
 	
-	@:overload public function particle(p : com.sun.xml.internal.xsom.XSParticle) : com.sun.tools.internal.xjc.model.Multiplicity;
+	@:overload @:public public function particle(p : com.sun.xml.internal.xsom.XSParticle) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
-	@:overload public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : com.sun.tools.internal.xjc.model.Multiplicity;
+	@:overload @:public public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
-	@:overload public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : com.sun.tools.internal.xjc.model.Multiplicity;
+	@:overload @:public public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
-	@:overload public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : com.sun.tools.internal.xjc.model.Multiplicity;
+	@:overload @:public public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
-	@:overload public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : com.sun.tools.internal.xjc.model.Multiplicity;
+	@:overload @:public public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
 	
 }

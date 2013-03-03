@@ -36,7 +36,7 @@ extern class PipelineAssemblerFactory
 	* @return
 	*      null if this factory doesn't recognize the given binding ID.
 	*/
-	@:overload @:abstract public function doCreate(bindingId : com.sun.xml.internal.ws.api.BindingID) : com.sun.xml.internal.ws.api.pipe.PipelineAssembler;
+	@:overload @:public @:abstract public function doCreate(bindingId : com.sun.xml.internal.ws.api.BindingID) : com.sun.xml.internal.ws.api.pipe.PipelineAssembler;
 	
 	/**
 	* Locates {@link PipelineAssemblerFactory}s and create
@@ -48,7 +48,7 @@ extern class PipelineAssemblerFactory
 	* @return
 	*      Always non-null, since we fall back to our default {@link PipelineAssembler}.
 	*/
-	@:overload public static function create(classLoader : java.lang.ClassLoader, bindingId : com.sun.xml.internal.ws.api.BindingID) : com.sun.xml.internal.ws.api.pipe.PipelineAssembler;
+	@:overload @:public @:static public static function create(classLoader : java.lang.ClassLoader, bindingId : com.sun.xml.internal.ws.api.BindingID) : com.sun.xml.internal.ws.api.pipe.PipelineAssembler;
 	
 	
 }

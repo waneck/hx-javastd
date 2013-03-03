@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.config.management.policy;
 */
 extern class ManagementPrefixMapper implements com.sun.xml.internal.ws.policy.spi.PrefixMapper
 {
-	@:overload public function getPrefixMap() : java.util.Map<String, String>;
+	@:overload @:public public function getPrefixMap() : java.util.Map<String, String>;
 	
 	
 }

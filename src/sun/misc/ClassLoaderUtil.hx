@@ -40,7 +40,7 @@ extern class ClassLoaderUtil
 	* be created before the underlying resources can be accessed again.
 	* @param classLoader the instance of URLClassLoader (or a subclass)
 	*/
-	@:overload public static function releaseLoader(classLoader : java.net.URLClassLoader) : Void;
+	@:overload @:public @:static public static function releaseLoader(classLoader : java.net.URLClassLoader) : Void;
 	
 	/**
 	* Releases resources held by a URLClassLoader.  Notably, close the jars
@@ -55,7 +55,7 @@ extern class ClassLoaderUtil
 	* release the loader; empty indicates a successful release; non-empty
 	* indicates at least one error attempting to close an open jar.
 	*/
-	@:overload public static function releaseLoader(classLoader : java.net.URLClassLoader, jarsClosed : java.util.List<String>) : java.util.List<java.io.IOException>;
+	@:overload @:public @:static public static function releaseLoader(classLoader : java.net.URLClassLoader, jarsClosed : java.util.List<String>) : java.util.List<java.io.IOException>;
 	
 	
 }

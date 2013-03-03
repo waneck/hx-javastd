@@ -75,7 +75,7 @@ package java.net;
 	* @see SecurityManager#checkPermission
 	* @see java.net.NetPermission
 	*/
-	@:overload @:synchronized public static function setDefault(a : java.net.Authenticator) : Void;
+	@:overload @:public @:synchronized @:static public static function setDefault(a : java.net.Authenticator) : Void;
 	
 	/**
 	* Ask the authenticator that has been registered with the system
@@ -104,7 +104,7 @@ package java.net;
 	* @see SecurityManager#checkPermission
 	* @see java.net.NetPermission
 	*/
-	@:overload public static function requestPasswordAuthentication(addr : java.net.InetAddress, port : Int, protocol : String, prompt : String, scheme : String) : java.net.PasswordAuthentication;
+	@:overload @:public @:static public static function requestPasswordAuthentication(addr : java.net.InetAddress, port : Int, protocol : String, prompt : String, scheme : String) : java.net.PasswordAuthentication;
 	
 	/**
 	* Ask the authenticator that has been registered with the system
@@ -137,7 +137,7 @@ package java.net;
 	* @see java.net.NetPermission
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function requestPasswordAuthentication(host : String, addr : java.net.InetAddress, port : Int, protocol : String, prompt : String, scheme : String) : java.net.PasswordAuthentication;
+	@:require(java4) @:overload @:public @:static public static function requestPasswordAuthentication(host : String, addr : java.net.InetAddress, port : Int, protocol : String, prompt : String, scheme : String) : java.net.PasswordAuthentication;
 	
 	/**
 	* Ask the authenticator that has been registered with the system
@@ -172,7 +172,7 @@ package java.net;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function requestPasswordAuthentication(host : String, addr : java.net.InetAddress, port : Int, protocol : String, prompt : String, scheme : String, url : java.net.URL, reqType : java.net.Authenticator.Authenticator_RequestorType) : java.net.PasswordAuthentication;
+	@:require(java5) @:overload @:public @:static public static function requestPasswordAuthentication(host : String, addr : java.net.InetAddress, port : Int, protocol : String, prompt : String, scheme : String, url : java.net.URL, reqType : java.net.Authenticator.Authenticator_RequestorType) : java.net.PasswordAuthentication;
 	
 	/**
 	* Gets the <code>hostname</code> of the
@@ -183,7 +183,7 @@ package java.net;
 	*          if it's not available.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final private function getRequestingHost() : String;
+	@:require(java4) @:overload @:protected @:final private function getRequestingHost() : String;
 	
 	/**
 	* Gets the <code>InetAddress</code> of the
@@ -193,14 +193,14 @@ package java.net;
 	* @return the InetAddress of the site requesting authorization, or null
 	*          if it's not available.
 	*/
-	@:overload @:final private function getRequestingSite() : java.net.InetAddress;
+	@:overload @:protected @:final private function getRequestingSite() : java.net.InetAddress;
 	
 	/**
 	* Gets the port number for the requested connection.
 	* @return an <code>int</code> indicating the
 	* port for the requested connection.
 	*/
-	@:overload @:final private function getRequestingPort() : Int;
+	@:overload @:protected @:final private function getRequestingPort() : Int;
 	
 	/**
 	* Give the protocol that's requesting the connection.  Often this
@@ -212,7 +212,7 @@ package java.net;
 	*
 	* @see java.net.URL#getProtocol()
 	*/
-	@:overload @:final private function getRequestingProtocol() : String;
+	@:overload @:protected @:final private function getRequestingProtocol() : String;
 	
 	/**
 	* Gets the prompt string given by the requestor.
@@ -220,7 +220,7 @@ package java.net;
 	* @return the prompt string given by the requestor (realm for
 	*          http requests)
 	*/
-	@:overload @:final private function getRequestingPrompt() : String;
+	@:overload @:protected @:final private function getRequestingPrompt() : String;
 	
 	/**
 	* Gets the scheme of the requestor (the HTTP scheme
@@ -229,7 +229,7 @@ package java.net;
 	* @return the scheme of the requestor
 	*
 	*/
-	@:overload @:final private function getRequestingScheme() : String;
+	@:overload @:protected @:final private function getRequestingScheme() : String;
 	
 	/**
 	* Called when password authorization is needed.  Subclasses should
@@ -237,7 +237,7 @@ package java.net;
 	* @return The PasswordAuthentication collected from the
 	*          user, or null if none is provided.
 	*/
-	@:overload private function getPasswordAuthentication() : java.net.PasswordAuthentication;
+	@:overload @:protected private function getPasswordAuthentication() : java.net.PasswordAuthentication;
 	
 	/**
 	* Returns the URL that resulted in this
@@ -248,7 +248,7 @@ package java.net;
 	* @return the requesting URL
 	*
 	*/
-	@:require(java5) @:overload private function getRequestingURL() : java.net.URL;
+	@:require(java5) @:overload @:protected private function getRequestingURL() : java.net.URL;
 	
 	/**
 	* Returns whether the requestor is a Proxy or a Server.
@@ -258,7 +258,7 @@ package java.net;
 	* @return the authentication type of the requestor
 	*
 	*/
-	@:require(java5) @:overload private function getRequestorType() : java.net.Authenticator.Authenticator_RequestorType;
+	@:require(java5) @:overload @:protected private function getRequestorType() : java.net.Authenticator.Authenticator_RequestorType;
 	
 	
 }

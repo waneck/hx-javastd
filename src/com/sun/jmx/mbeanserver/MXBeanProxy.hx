@@ -34,17 +34,17 @@ extern class MXBeanProxy
 
 	@since 1.6
 */
-	@:require(java6) @:overload public function new(mxbeanInterface : Class<Dynamic>) : Void;
+	@:require(java6) @:overload @:public public function new(mxbeanInterface : Class<Dynamic>) : Void;
 	
-	@:overload public function invoke(mbsc : javax.management.MBeanServerConnection, name : javax.management.ObjectName, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(mbsc : javax.management.MBeanServerConnection, name : javax.management.ObjectName, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }
 @:native('com$sun$jmx$mbeanserver$MXBeanProxy$Visitor') @:internal extern class MXBeanProxy_Visitor implements com.sun.jmx.mbeanserver.MBeanAnalyzer.MBeanAnalyzer_MBeanVisitor<com.sun.jmx.mbeanserver.ConvertingMethod>
 {
-	@:overload public function visitAttribute(attributeName : String, getter : com.sun.jmx.mbeanserver.ConvertingMethod, setter : com.sun.jmx.mbeanserver.ConvertingMethod) : Void;
+	@:overload @:public public function visitAttribute(attributeName : String, getter : com.sun.jmx.mbeanserver.ConvertingMethod, setter : com.sun.jmx.mbeanserver.ConvertingMethod) : Void;
 	
-	@:overload public function visitOperation(operationName : String, operation : com.sun.jmx.mbeanserver.ConvertingMethod) : Void;
+	@:overload @:public public function visitOperation(operationName : String, operation : com.sun.jmx.mbeanserver.ConvertingMethod) : Void;
 	
 	
 }

@@ -70,7 +70,7 @@ extern class Connection
 	*
 	*
 	*/
-	@:overload @:abstract public function readPacket() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function readPacket() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Writes a packet to the target VM.
@@ -134,7 +134,7 @@ extern class Connection
 	*          If the value of the <tt>length</tt> field is invalid,
 	*          or the byte array is of insufficient length.
 	*/
-	@:overload @:abstract public function writePacket(pkt : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:abstract public function writePacket(pkt : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Closes this connection.
@@ -156,14 +156,14 @@ extern class Connection
 	* @throws  java.io.IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
 	/**
 	* Tells whether or not this connection is open.  </p>
 	*
 	* @return <tt>true</tt> if, and only if, this connection is open
 	*/
-	@:overload @:abstract public function isOpen() : Bool;
+	@:overload @:public @:abstract public function isOpen() : Bool;
 	
 	
 }

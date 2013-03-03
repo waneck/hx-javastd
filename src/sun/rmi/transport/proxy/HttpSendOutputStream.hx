@@ -36,19 +36,19 @@ package sun.rmi.transport.proxy;
 	* @param out the OutputStream to filter from
 	* @param owner the HttpSendSocket that is providing this stream
 	*/
-	@:overload public function new(out : java.io.OutputStream, owner : sun.rmi.transport.proxy.HttpSendSocket) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, owner : sun.rmi.transport.proxy.HttpSendSocket) : Void;
 	
 	/**
 	* Mark this stream as inactive for its owner socket, so the next time
 	* a write is attempted, the owner will be notified and a new underlying
 	* output stream obtained.
 	*/
-	@:overload public function deactivate() : Void;
+	@:overload @:public public function deactivate() : Void;
 	
 	/**
 	* Write a byte of data to the stream.
 	*/
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
 	/**
 	* Write a subarray of bytes.
@@ -56,17 +56,17 @@ package sun.rmi.transport.proxy;
 	* @param off the start offset of the data
 	* @param len the number of bytes to be written
 	*/
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Flush the stream.
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* Close the stream.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

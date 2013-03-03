@@ -32,7 +32,7 @@ extern interface SOAPMessageContext extends javax.xml.ws.handler.MessageContext
 	*  @return Returns the <code>SOAPMessage</code>; returns <code>null</code> if no
 	*          <code>SOAPMessage</code> is present in this message context
 	**/
-	@:overload public function getMessage() : javax.xml.soap.SOAPMessage;
+	@:overload @:public public function getMessage() : javax.xml.soap.SOAPMessage;
 	
 	/** Sets the SOAPMessage in this message context
 	*
@@ -42,7 +42,7 @@ extern interface SOAPMessageContext extends javax.xml.ws.handler.MessageContext
 	*  @throws java.lang.UnsupportedOperationException If this
 	*          operation is not supported
 	**/
-	@:overload public function setMessage(message : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public public function setMessage(message : javax.xml.soap.SOAPMessage) : Void;
 	
 	/** Gets headers that have a particular qualified name from the message in the
 	*  message context. Note that a SOAP message can contain multiple headers
@@ -62,7 +62,7 @@ extern interface SOAPMessageContext extends javax.xml.ws.handler.MessageContext
 	*     <code>JAXBContext</code> to unmarshall. The cause of
 	*     the <code>WebServiceException</code> is the original <code>JAXBException</code>.
 	**/
-	@:overload public function getHeaders(header : javax.xml.namespace.QName, context : javax.xml.bind.JAXBContext, allRoles : Bool) : java.NativeArray<Dynamic>;
+	@:overload @:public public function getHeaders(header : javax.xml.namespace.QName, context : javax.xml.bind.JAXBContext, allRoles : Bool) : java.NativeArray<Dynamic>;
 	
 	/** Gets the SOAP actor roles associated with an execution
 	*  of the handler chain.
@@ -76,7 +76,7 @@ extern interface SOAPMessageContext extends javax.xml.ws.handler.MessageContext
 	*
 	*  @return Array of <code>String</code> for SOAP actor roles
 	**/
-	@:overload public function getRoles() : java.util.Set<String>;
+	@:overload @:public public function getRoles() : java.util.Set<String>;
 	
 	
 }

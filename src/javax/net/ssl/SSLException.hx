@@ -31,7 +31,7 @@ extern class SSLException extends java.io.IOException
 	*
 	* @param reason describes the problem.
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	/**
 	* Creates a <code>SSLException</code> with the specified
@@ -45,7 +45,7 @@ extern class SSLException extends java.io.IOException
 	*          unknown.)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:require(java5) @:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Creates a <code>SSLException</code> with the specified cause
@@ -59,7 +59,7 @@ extern class SSLException extends java.io.IOException
 	*          unknown.)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(cause : java.lang.Throwable) : Void;
+	@:require(java5) @:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

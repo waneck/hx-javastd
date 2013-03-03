@@ -31,14 +31,14 @@ extern class ActivationGroupID implements java.io.Serializable
 	* @param system the group's activation system
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(system : java.rmi.activation.ActivationSystem) : Void;
+	@:require(java2) @:overload @:public public function new(system : java.rmi.activation.ActivationSystem) : Void;
 	
 	/**
 	* Returns the group's activation system.
 	* @return the group's activation system
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getSystem() : java.rmi.activation.ActivationSystem;
+	@:require(java2) @:overload @:public public function getSystem() : java.rmi.activation.ActivationSystem;
 	
 	/**
 	* Returns a hashcode for the group's identifier.  Two group
@@ -48,7 +48,7 @@ extern class ActivationGroupID implements java.io.Serializable
 	* @see java.util.Hashtable
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function hashCode() : Int;
+	@:require(java2) @:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares two group identifiers for content equality.
@@ -62,7 +62,7 @@ extern class ActivationGroupID implements java.io.Serializable
 	* @see             java.util.Hashtable
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function equals(obj : Dynamic) : Bool;
+	@:require(java2) @:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

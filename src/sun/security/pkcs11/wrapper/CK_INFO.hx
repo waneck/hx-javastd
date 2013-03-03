@@ -70,7 +70,7 @@ extern class CK_INFO
 	*   CK_VERSION cryptokiVersion;
 	* </PRE>
 	*/
-	public var cryptokiVersion : sun.security.pkcs11.wrapper.CK_VERSION;
+	@:public public var cryptokiVersion : sun.security.pkcs11.wrapper.CK_VERSION;
 	
 	/**
 	* ID of the Cryptoki library manufacturer. must be blank
@@ -80,7 +80,7 @@ extern class CK_INFO
 	*   CK_UTF8CHAR manufacturerID[32];
 	* </PRE>
 	*/
-	public var manufacturerID : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var manufacturerID : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* bit flags reserved for future versions. must be zero<p>
@@ -89,7 +89,7 @@ extern class CK_INFO
 	*   CK_FLAGS flags;
 	* </PRE>
 	*/
-	public var flags : haxe.Int64;
+	@:public public var flags : haxe.Int64;
 	
 	/**
 	* must be blank padded - only the first 32 chars will be used<p>
@@ -98,7 +98,7 @@ extern class CK_INFO
 	*   CK_UTF8CHAR libraryDescription[32];
 	* </PRE>
 	*/
-	public var libraryDescription : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var libraryDescription : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Cryptoki library version number<p>
@@ -107,16 +107,16 @@ extern class CK_INFO
 	*   CK_VERSION libraryVersion;
 	* </PRE>
 	*/
-	public var libraryVersion : sun.security.pkcs11.wrapper.CK_VERSION;
+	@:public public var libraryVersion : sun.security.pkcs11.wrapper.CK_VERSION;
 	
-	@:overload public function new(cryptoVer : sun.security.pkcs11.wrapper.CK_VERSION, vendor : java.NativeArray<java.StdTypes.Char16>, flags : haxe.Int64, libDesc : java.NativeArray<java.StdTypes.Char16>, libVer : sun.security.pkcs11.wrapper.CK_VERSION) : Void;
+	@:overload @:public public function new(cryptoVer : sun.security.pkcs11.wrapper.CK_VERSION, vendor : java.NativeArray<java.StdTypes.Char16>, flags : haxe.Int64, libDesc : java.NativeArray<java.StdTypes.Char16>, libVer : sun.security.pkcs11.wrapper.CK_VERSION) : Void;
 	
 	/**
 	* Returns the string representation of CK_INFO.
 	*
 	* @return the string representation of CK_INFO
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

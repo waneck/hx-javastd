@@ -29,7 +29,7 @@ extern class Activation implements java.io.Serializable
 	* Main program to start the activation system. <br>
 	* The usage is as follows: rmid [-port num] [-log dir].
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }
@@ -41,59 +41,59 @@ extern class Activation implements java.io.Serializable
 	* returns the result of invoking super.lookup with the specified
 	* name.
 	*/
-	@:overload override public function lookup(name : String) : java.rmi.Remote;
+	@:overload @:public override public function lookup(name : String) : java.rmi.Remote;
 	
-	@:overload override public function list() : java.NativeArray<String>;
+	@:overload @:public override public function list() : java.NativeArray<String>;
 	
-	@:overload override public function bind(name : String, obj : java.rmi.Remote) : Void;
+	@:overload @:public override public function bind(name : String, obj : java.rmi.Remote) : Void;
 	
-	@:overload override public function unbind(name : String) : Void;
+	@:overload @:public override public function unbind(name : String) : Void;
 	
-	@:overload override public function rebind(name : String, obj : java.rmi.Remote) : Void;
+	@:overload @:public override public function rebind(name : String, obj : java.rmi.Remote) : Void;
 	
 	
 }
 @:native('sun$rmi$server$Activation$ActivatorImpl') @:internal extern class Activation_ActivatorImpl extends java.rmi.server.RemoteServer implements java.rmi.activation.Activator
 {
-	@:overload public function activate(id : java.rmi.activation.ActivationID, force : Bool) : java.rmi.MarshalledObject<java.rmi.Remote>;
+	@:overload @:public public function activate(id : java.rmi.activation.ActivationID, force : Bool) : java.rmi.MarshalledObject<java.rmi.Remote>;
 	
 	
 }
 @:native('sun$rmi$server$Activation$ActivationMonitorImpl') @:internal extern class Activation_ActivationMonitorImpl extends java.rmi.server.UnicastRemoteObject implements java.rmi.activation.ActivationMonitor
 {
-	@:overload public function inactiveObject(id : java.rmi.activation.ActivationID) : Void;
+	@:overload @:public public function inactiveObject(id : java.rmi.activation.ActivationID) : Void;
 	
-	@:overload public function activeObject(id : java.rmi.activation.ActivationID, mobj : java.rmi.MarshalledObject<java.rmi.Remote>) : Void;
+	@:overload @:public public function activeObject(id : java.rmi.activation.ActivationID, mobj : java.rmi.MarshalledObject<java.rmi.Remote>) : Void;
 	
-	@:overload public function inactiveGroup(id : java.rmi.activation.ActivationGroupID, incarnation : haxe.Int64) : Void;
+	@:overload @:public public function inactiveGroup(id : java.rmi.activation.ActivationGroupID, incarnation : haxe.Int64) : Void;
 	
 	
 }
 @:native('sun$rmi$server$Activation$ActivationSystemImpl') @:internal extern class Activation_ActivationSystemImpl extends java.rmi.server.RemoteServer implements java.rmi.activation.ActivationSystem
 {
-	@:overload public function registerObject(desc : java.rmi.activation.ActivationDesc) : java.rmi.activation.ActivationID;
+	@:overload @:public public function registerObject(desc : java.rmi.activation.ActivationDesc) : java.rmi.activation.ActivationID;
 	
-	@:overload public function unregisterObject(id : java.rmi.activation.ActivationID) : Void;
+	@:overload @:public public function unregisterObject(id : java.rmi.activation.ActivationID) : Void;
 	
-	@:overload public function registerGroup(desc : java.rmi.activation.ActivationGroupDesc) : java.rmi.activation.ActivationGroupID;
+	@:overload @:public public function registerGroup(desc : java.rmi.activation.ActivationGroupDesc) : java.rmi.activation.ActivationGroupID;
 	
-	@:overload public function activeGroup(id : java.rmi.activation.ActivationGroupID, group : java.rmi.activation.ActivationInstantiator, incarnation : haxe.Int64) : java.rmi.activation.ActivationMonitor;
+	@:overload @:public public function activeGroup(id : java.rmi.activation.ActivationGroupID, group : java.rmi.activation.ActivationInstantiator, incarnation : haxe.Int64) : java.rmi.activation.ActivationMonitor;
 	
-	@:overload public function unregisterGroup(id : java.rmi.activation.ActivationGroupID) : Void;
+	@:overload @:public public function unregisterGroup(id : java.rmi.activation.ActivationGroupID) : Void;
 	
-	@:overload public function setActivationDesc(id : java.rmi.activation.ActivationID, desc : java.rmi.activation.ActivationDesc) : java.rmi.activation.ActivationDesc;
+	@:overload @:public public function setActivationDesc(id : java.rmi.activation.ActivationID, desc : java.rmi.activation.ActivationDesc) : java.rmi.activation.ActivationDesc;
 	
-	@:overload public function setActivationGroupDesc(id : java.rmi.activation.ActivationGroupID, desc : java.rmi.activation.ActivationGroupDesc) : java.rmi.activation.ActivationGroupDesc;
+	@:overload @:public public function setActivationGroupDesc(id : java.rmi.activation.ActivationGroupID, desc : java.rmi.activation.ActivationGroupDesc) : java.rmi.activation.ActivationGroupDesc;
 	
-	@:overload public function getActivationDesc(id : java.rmi.activation.ActivationID) : java.rmi.activation.ActivationDesc;
+	@:overload @:public public function getActivationDesc(id : java.rmi.activation.ActivationID) : java.rmi.activation.ActivationDesc;
 	
-	@:overload public function getActivationGroupDesc(id : java.rmi.activation.ActivationGroupID) : java.rmi.activation.ActivationGroupDesc;
+	@:overload @:public public function getActivationGroupDesc(id : java.rmi.activation.ActivationGroupID) : java.rmi.activation.ActivationGroupDesc;
 	
 	/**
 	* Shutdown the activation system. Destroys all groups spawned by
 	* the activation daemon and exits the activation daemon.
 	*/
-	@:overload public function shutdown() : Void;
+	@:overload @:public public function shutdown() : Void;
 	
 	
 }
@@ -102,14 +102,14 @@ extern class Activation implements java.io.Serializable
 */
 @:native('sun$rmi$server$Activation$Shutdown') @:internal extern class Activation_Shutdown extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }
 /** Thread to destroy children in the event of abnormal termination. */
 @:native('sun$rmi$server$Activation$ShutdownHook') @:internal extern class Activation_ShutdownHook extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }
@@ -133,7 +133,7 @@ extern class Activation implements java.io.Serializable
 */
 @:native('sun$rmi$server$Activation$GroupEntry$Watchdog') @:internal extern class Activation_GroupEntry_Watchdog extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }
@@ -147,9 +147,9 @@ extern class Activation implements java.io.Serializable
 */
 @:native('sun$rmi$server$Activation$ActLogHandler') @:internal extern class Activation_ActLogHandler extends sun.rmi.log.LogHandler
 {
-	@:overload override public function initialSnapshot() : Dynamic;
+	@:overload @:public override public function initialSnapshot() : Dynamic;
 	
-	@:overload override public function applyUpdate(update : Dynamic, state : Dynamic) : Dynamic;
+	@:overload @:public override public function applyUpdate(update : Dynamic, state : Dynamic) : Dynamic;
 	
 	
 }
@@ -219,7 +219,7 @@ extern class Activation implements java.io.Serializable
 */
 @:native('sun$rmi$server$Activation$DefaultExecPolicy') extern class Activation_DefaultExecPolicy
 {
-	@:overload public function checkExecCommand(desc : java.rmi.activation.ActivationGroupDesc, cmd : java.NativeArray<String>) : Void;
+	@:overload @:public public function checkExecCommand(desc : java.rmi.activation.ActivationGroupDesc, cmd : java.NativeArray<String>) : Void;
 	
 	
 }
@@ -239,7 +239,7 @@ extern class Activation implements java.io.Serializable
 	* Returns the server socket specified during construction wrapped
 	* in a 'DelayedAcceptServerSocket'.
 	**/
-	@:overload public function createServerSocket(port : Int) : java.net.ServerSocket;
+	@:overload @:public public function createServerSocket(port : Int) : java.net.ServerSocket;
 	
 	
 }
@@ -251,43 +251,43 @@ extern class Activation implements java.io.Serializable
 **/
 @:native('sun$rmi$server$Activation$DelayedAcceptServerSocket') @:internal extern class Activation_DelayedAcceptServerSocket extends java.net.ServerSocket
 {
-	@:overload public function bind(endpoint : java.net.SocketAddress) : Void;
+	@:overload @:public override public function bind(endpoint : java.net.SocketAddress) : Void;
 	
-	@:overload public function bind(endpoint : java.net.SocketAddress, backlog : Int) : Void;
+	@:overload @:public override public function bind(endpoint : java.net.SocketAddress, backlog : Int) : Void;
 	
-	@:overload public function getInetAddress() : java.net.InetAddress;
+	@:overload @:public override public function getInetAddress() : java.net.InetAddress;
 	
-	@:overload public function getLocalPort() : Int;
+	@:overload @:public override public function getLocalPort() : Int;
 	
-	@:overload public function getLocalSocketAddress() : java.net.SocketAddress;
+	@:overload @:public override public function getLocalSocketAddress() : java.net.SocketAddress;
 	
 	/**
 	* Delays calling accept on the underlying server socket until the
 	* remote service is bound in the registry.
 	**/
-	@:overload public function accept() : java.net.Socket;
+	@:overload @:public override public function accept() : java.net.Socket;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload public function getChannel() : java.nio.channels.ServerSocketChannel;
+	@:overload @:public override public function getChannel() : java.nio.channels.ServerSocketChannel;
 	
-	@:overload public function isBound() : Bool;
+	@:overload @:public override public function isBound() : Bool;
 	
-	@:overload public function isClosed() : Bool;
+	@:overload @:public override public function isClosed() : Bool;
 	
-	@:overload public function setSoTimeout(timeout : Int) : Void;
+	@:overload @:public override public function setSoTimeout(timeout : Int) : Void;
 	
-	@:overload public function getSoTimeout() : Int;
+	@:overload @:public override public function getSoTimeout() : Int;
 	
-	@:overload public function setReuseAddress(on : Bool) : Void;
+	@:overload @:public override public function setReuseAddress(on : Bool) : Void;
 	
-	@:overload public function getReuseAddress() : Bool;
+	@:overload @:public override public function getReuseAddress() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload public function setReceiveBufferSize(size : Int) : Void;
+	@:overload @:public override public function setReceiveBufferSize(size : Int) : Void;
 	
-	@:overload public function getReceiveBufferSize() : Int;
+	@:overload @:public override public function getReceiveBufferSize() : Int;
 	
 	
 }
@@ -300,7 +300,7 @@ extern class Activation implements java.io.Serializable
 	* annotation string followed by the buffered data and a line
 	* separator.
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

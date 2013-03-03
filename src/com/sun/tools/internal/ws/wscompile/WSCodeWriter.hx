@@ -25,9 +25,9 @@ package com.sun.tools.internal.ws.wscompile;
 */
 extern class WSCodeWriter extends com.sun.codemodel.internal.writer.FileCodeWriter
 {
-	@:overload public function new(outDir : java.io.File, options : com.sun.tools.internal.ws.wscompile.Options) : Void;
+	@:overload @:public public function new(outDir : java.io.File, options : com.sun.tools.internal.ws.wscompile.Options) : Void;
 	
-	@:overload override private function getFile(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.File;
+	@:overload @:protected override private function getFile(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.File;
 	
 	
 }

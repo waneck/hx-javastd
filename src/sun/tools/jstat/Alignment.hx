@@ -31,22 +31,22 @@ package sun.tools.jstat;
 */
 @:require(java5) extern class Alignment
 {
-	@:overload @:abstract private function align(s : String, width : Int) : String;
+	@:overload @:protected @:abstract private function align(s : String, width : Int) : String;
 	
 	/**
 	* Alignment representing a Centered alignment
 	*/
-	public static var CENTER(default, null) : sun.tools.jstat.Alignment;
+	@:public @:static @:final public static var CENTER(default, null) : sun.tools.jstat.Alignment;
 	
 	/**
 	* Alignment representing a Left alignment
 	*/
-	public static var LEFT(default, null) : sun.tools.jstat.Alignment;
+	@:public @:static @:final public static var LEFT(default, null) : sun.tools.jstat.Alignment;
 	
 	/**
 	* Alignment representing a Right alignment
 	*/
-	public static var RIGHT(default, null) : sun.tools.jstat.Alignment;
+	@:public @:static @:final public static var RIGHT(default, null) : sun.tools.jstat.Alignment;
 	
 	/**
 	* Maps a string value to its corresponding Alignment object.
@@ -54,16 +54,16 @@ package sun.tools.jstat;
 	* @param   s  an string to match against Alignment objects.
 	* @return     The Alignment object matching the given string.
 	*/
-	@:overload public static function toAlignment(s : String) : sun.tools.jstat.Alignment;
+	@:overload @:public @:static public static function toAlignment(s : String) : sun.tools.jstat.Alignment;
 	
 	/**
 	* Returns an enumeration of the keys for this enumerated type
 	*
 	* @return     Set of Key Words for this enumeration.
 	*/
-	@:overload public static function keySet() : java.util.Set<Dynamic>;
+	@:overload @:public @:static public static function keySet() : java.util.Set<Dynamic>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

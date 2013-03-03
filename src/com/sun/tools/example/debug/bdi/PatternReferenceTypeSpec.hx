@@ -35,13 +35,13 @@ package com.sun.tools.example.debug.bdi;
 	/**
 	* Does the specified ReferenceType match this spec.
 	*/
-	@:overload public function matches(refType : com.sun.jdi.ReferenceType) : Bool;
+	@:overload @:public public function matches(refType : com.sun.jdi.ReferenceType) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

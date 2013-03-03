@@ -27,49 +27,49 @@ package com.sun.xml.internal.fastinfoset.util;
 */
 extern class StringIntMap extends com.sun.xml.internal.fastinfoset.util.KeyIntMap
 {
-	private static var NULL_ENTRY(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap.StringIntMap_Entry;
+	@:protected @:static @:final private static var NULL_ENTRY(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap.StringIntMap_Entry;
 	
-	private var _readOnlyMap : com.sun.xml.internal.fastinfoset.util.StringIntMap;
+	@:protected private var _readOnlyMap : com.sun.xml.internal.fastinfoset.util.StringIntMap;
 	
-	private var _lastEntry : com.sun.xml.internal.fastinfoset.util.StringIntMap.StringIntMap_Entry;
+	@:protected private var _lastEntry : com.sun.xml.internal.fastinfoset.util.StringIntMap.StringIntMap_Entry;
 	
-	private var _table : java.NativeArray<com.sun.xml.internal.fastinfoset.util.StringIntMap.StringIntMap_Entry>;
+	@:protected private var _table : java.NativeArray<com.sun.xml.internal.fastinfoset.util.StringIntMap.StringIntMap_Entry>;
 	
-	private var _index : Int;
+	@:protected private var _index : Int;
 	
-	private var _totalCharacterCount : Int;
+	@:protected private var _totalCharacterCount : Int;
 	
-	@:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload override public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.KeyIntMap, clear : Bool) : Void;
+	@:overload @:public override public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.KeyIntMap, clear : Bool) : Void;
 	
-	@:overload @:final public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.StringIntMap, clear : Bool) : Void;
+	@:overload @:public @:final public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.StringIntMap, clear : Bool) : Void;
 	
-	@:overload @:final public function getNextIndex() : Int;
+	@:overload @:public @:final public function getNextIndex() : Int;
 	
-	@:overload @:final public function getIndex() : Int;
+	@:overload @:public @:final public function getIndex() : Int;
 	
-	@:overload @:final public function obtainIndex(key : String) : Int;
+	@:overload @:public @:final public function obtainIndex(key : String) : Int;
 	
-	@:overload @:final public function add(key : String) : Void;
+	@:overload @:public @:final public function add(key : String) : Void;
 	
-	@:overload @:final public function get(key : String) : Int;
+	@:overload @:public @:final public function get(key : String) : Int;
 	
-	@:overload @:final public function getTotalCharacterCount() : Int;
+	@:overload @:public @:final public function getTotalCharacterCount() : Int;
 	
-	@:overload @:final private function resize(newCapacity : Int) : Void;
+	@:overload @:protected @:final private function resize(newCapacity : Int) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$fastinfoset$util$StringIntMap$Entry') extern class StringIntMap_Entry extends com.sun.xml.internal.fastinfoset.util.KeyIntMap.KeyIntMap_BaseEntry
 {
-	@:overload public function new(key : String, hash : Int, value : Int, next : com.sun.xml.internal.fastinfoset.util.StringIntMap.StringIntMap_Entry) : Void;
+	@:overload @:public public function new(key : String, hash : Int, value : Int, next : com.sun.xml.internal.fastinfoset.util.StringIntMap.StringIntMap_Entry) : Void;
 	
 	
 }

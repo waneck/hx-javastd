@@ -91,36 +91,36 @@ package javax.swing.text.html.parser;
 */
 extern class DocumentParser extends javax.swing.text.html.parser.Parser
 {
-	@:overload public function new(dtd : javax.swing.text.html.parser.DTD) : Void;
+	@:overload @:public public function new(dtd : javax.swing.text.html.parser.DTD) : Void;
 	
-	@:overload public function parse(_in : java.io.Reader, _callback : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_ParserCallback, ignoreCharSet : Bool) : Void;
+	@:overload @:public public function parse(_in : java.io.Reader, _callback : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_ParserCallback, ignoreCharSet : Bool) : Void;
 	
 	/**
 	* Handle Start Tag.
 	*/
-	@:overload override private function handleStartTag(tag : javax.swing.text.html.parser.TagElement) : Void;
+	@:overload @:protected override private function handleStartTag(tag : javax.swing.text.html.parser.TagElement) : Void;
 	
-	@:overload override private function handleComment(text : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:protected override private function handleComment(text : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Handle Empty Tag.
 	*/
-	@:overload override private function handleEmptyTag(tag : javax.swing.text.html.parser.TagElement) : Void;
+	@:overload @:protected override private function handleEmptyTag(tag : javax.swing.text.html.parser.TagElement) : Void;
 	
 	/**
 	* Handle End Tag.
 	*/
-	@:overload override private function handleEndTag(tag : javax.swing.text.html.parser.TagElement) : Void;
+	@:overload @:protected override private function handleEndTag(tag : javax.swing.text.html.parser.TagElement) : Void;
 	
 	/**
 	* Handle Text.
 	*/
-	@:overload override private function handleText(data : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:protected override private function handleText(data : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/*
 	* Error handling.
 	*/
-	@:overload override private function handleError(ln : Int, errorMsg : String) : Void;
+	@:overload @:protected override private function handleError(ln : Int, errorMsg : String) : Void;
 	
 	
 }

@@ -42,7 +42,7 @@ extern interface EncodingAlgorithmAttributes extends org.xml.sax.Attributes
 	* @param index The attribute index (zero-based).
 	* @return The URI. If the index is out of range then null is returned.
 	*/
-	@:overload public function getAlgorithmURI(index : Int) : String;
+	@:overload @:public public function getAlgorithmURI(index : Int) : String;
 	
 	/**
 	* Return the index of the encoding algorithm.
@@ -54,7 +54,7 @@ extern interface EncodingAlgorithmAttributes extends org.xml.sax.Attributes
 	* @return The algorithm index. If index is out of range then -1 is returned.
 	* @see com.sun.xml.internal.org.jvnet.fastinfoset.EncodingAlgorithmIndexes
 	*/
-	@:overload public function getAlgorithmIndex(index : Int) : Int;
+	@:overload @:public public function getAlgorithmIndex(index : Int) : Int;
 	
 	/**
 	* Return the data of the encoding algorithm.
@@ -74,7 +74,7 @@ extern interface EncodingAlgorithmAttributes extends org.xml.sax.Attributes
 	* @param index The attribute index (zero-based).
 	* @return The data. If the index is out of range then null is returned.
 	*/
-	@:overload public function getAlgorithmData(index : Int) : Dynamic;
+	@:overload @:public public function getAlgorithmData(index : Int) : Dynamic;
 	
 	/**
 	* Return the alphabet associated with the attribute value.
@@ -84,7 +84,7 @@ extern interface EncodingAlgorithmAttributes extends org.xml.sax.Attributes
 	*         If the index is out of range then null is returned.
 	*         If there is is no alphabet then null is returned.
 	*/
-	@:overload public function getAlpababet(index : Int) : String;
+	@:overload @:public public function getAlpababet(index : Int) : String;
 	
 	/**
 	* Return the whether the attribute value should be indexed or not.
@@ -92,7 +92,7 @@ extern interface EncodingAlgorithmAttributes extends org.xml.sax.Attributes
 	* @param index The attribute index (zero-based).
 	* @return True if attribute value should be indexed, otherwise false.
 	*/
-	@:overload public function getToIndex(index : Int) : Bool;
+	@:overload @:public public function getToIndex(index : Int) : Bool;
 	
 	
 }

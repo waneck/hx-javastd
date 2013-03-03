@@ -28,7 +28,7 @@ package com.sun.org.apache.xerces.internal.impl.xs.traversers;
 	* @author Neil Graham, IBM
 	* @version $Id: XSDKeyrefTraverser.java,v 1.7 2010-11-01 04:40:02 joehw Exp $
 	*/
-	@:overload public function new(handler : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler, gAttrCheck : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSAttributeChecker) : Void;
+	@:overload @:public public function new(handler : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler, gAttrCheck : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSAttributeChecker) : Void;
 	
 	
 }

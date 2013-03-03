@@ -43,7 +43,7 @@ extern class GlyphMetrics
 	* Indicates a glyph that represents a single standard
 	* character.
 	*/
-	public static var STANDARD(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var STANDARD(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Indicates a glyph that represents multiple characters
@@ -52,14 +52,14 @@ extern class GlyphMetrics
 	* glyphs can be intermixed to control positioning of accent marks
 	* on the logically preceeding ligature.
 	*/
-	public static var LIGATURE(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var LIGATURE(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Indicates a glyph that represents a combining character,
 	* such as an umlaut.  There is no caret position between this glyph
 	* and the preceeding glyph.
 	*/
-	public static var COMBINING(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var COMBINING(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Indicates a glyph with no corresponding character in the
@@ -69,13 +69,13 @@ extern class GlyphMetrics
 	* existing glyphs.  There is no caret position between this glyph
 	* and the preceeding glyph.
 	*/
-	public static var COMPONENT(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var COMPONENT(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Indicates a glyph with no visual representation. It can
 	* be added to the other code values to indicate an invisible glyph.
 	*/
-	public static var WHITESPACE(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var WHITESPACE(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Constructs a <code>GlyphMetrics</code> object.
@@ -83,7 +83,7 @@ extern class GlyphMetrics
 	* @param bounds the black box bounds of the glyph
 	* @param glyphType the type of the glyph
 	*/
-	@:overload public function new(advance : Single, bounds : java.awt.geom.Rectangle2D, glyphType : java.StdTypes.Int8) : Void;
+	@:overload @:public public function new(advance : Single, bounds : java.awt.geom.Rectangle2D, glyphType : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Constructs a <code>GlyphMetrics</code> object.
@@ -95,28 +95,28 @@ extern class GlyphMetrics
 	* @param glyphType the type of the glyph
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(horizontal : Bool, advanceX : Single, advanceY : Single, bounds : java.awt.geom.Rectangle2D, glyphType : java.StdTypes.Int8) : Void;
+	@:require(java4) @:overload @:public public function new(horizontal : Bool, advanceX : Single, advanceY : Single, bounds : java.awt.geom.Rectangle2D, glyphType : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Returns the advance of the glyph along the baseline (either
 	* horizontal or vertical).
 	* @return the advance of the glyph
 	*/
-	@:overload public function getAdvance() : Single;
+	@:overload @:public public function getAdvance() : Single;
 	
 	/**
 	* Returns the x-component of the advance of the glyph.
 	* @return the x-component of the advance of the glyph
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAdvanceX() : Single;
+	@:require(java4) @:overload @:public public function getAdvanceX() : Single;
 	
 	/**
 	* Returns the y-component of the advance of the glyph.
 	* @return the y-component of the advance of the glyph
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAdvanceY() : Single;
+	@:require(java4) @:overload @:public public function getAdvanceY() : Single;
 	
 	/**
 	* Returns the bounds of the glyph. This is the bounding box of the glyph outline.
@@ -124,7 +124,7 @@ extern class GlyphMetrics
 	* enclose the pixels that are affected when rendering the glyph.
 	* @return a {@link Rectangle2D} that is the bounds of the glyph.
 	*/
-	@:overload public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns the left (top) side bearing of the glyph.
@@ -134,7 +134,7 @@ extern class GlyphMetrics
 	* origin, the LSB is negative.
 	* @return the left side bearing of the glyph.
 	*/
-	@:overload public function getLSB() : Single;
+	@:overload @:public public function getLSB() : Single;
 	
 	/**
 	* Returns the right (bottom) side bearing of the glyph.
@@ -144,48 +144,48 @@ extern class GlyphMetrics
 	* the advance, the RSB is negative.
 	* @return the right side bearing of the glyph.
 	*/
-	@:overload public function getRSB() : Single;
+	@:overload @:public public function getRSB() : Single;
 	
 	/**
 	* Returns the raw glyph type code.
 	* @return the raw glyph type code.
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Returns <code>true</code> if this is a standard glyph.
 	* @return <code>true</code> if this is a standard glyph;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload public function isStandard() : Bool;
+	@:overload @:public public function isStandard() : Bool;
 	
 	/**
 	* Returns <code>true</code> if this is a ligature glyph.
 	* @return <code>true</code> if this is a ligature glyph;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload public function isLigature() : Bool;
+	@:overload @:public public function isLigature() : Bool;
 	
 	/**
 	* Returns <code>true</code> if this is a combining glyph.
 	* @return <code>true</code> if this is a combining glyph;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload public function isCombining() : Bool;
+	@:overload @:public public function isCombining() : Bool;
 	
 	/**
 	* Returns <code>true</code> if this is a component glyph.
 	* @return <code>true</code> if this is a component glyph;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload public function isComponent() : Bool;
+	@:overload @:public public function isComponent() : Bool;
 	
 	/**
 	* Returns <code>true</code> if this is a whitespace glyph.
 	* @return <code>true</code> if this is a whitespace glyph;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload public function isWhitespace() : Bool;
+	@:overload @:public public function isWhitespace() : Bool;
 	
 	
 }

@@ -25,23 +25,23 @@ package java.beans;
 */
 @:internal extern class NameGenerator
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Clears the name cache. Should be called to near the end of
 	* the encoding cycle.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns the root name of the class.
 	*/
-	@:overload public static function unqualifiedClassName(type : Class<Dynamic>) : String;
+	@:overload @:public @:static public static function unqualifiedClassName(type : Class<Dynamic>) : String;
 	
 	/**
 	* Returns a String which capitalizes the first letter of the string.
 	*/
-	@:overload public static function capitalize(name : String) : String;
+	@:overload @:public @:static public static function capitalize(name : String) : String;
 	
 	/**
 	* Returns a unique string which identifies the object instance.
@@ -51,7 +51,7 @@ package java.beans;
 	* @param instance object used to generate string
 	* @return a unique string representing the object
 	*/
-	@:overload public function instanceName(instance : Dynamic) : String;
+	@:overload @:public public function instanceName(instance : Dynamic) : String;
 	
 	
 }

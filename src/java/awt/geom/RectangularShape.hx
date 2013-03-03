@@ -34,7 +34,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* @see RoundRectangle2D
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function new() : Void;
+	@:require(java2) @:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the X coordinate of the upper-left corner of
@@ -43,7 +43,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* the framing rectangle.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getX() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getX() : Float;
 	
 	/**
 	* Returns the Y coordinate of the upper-left corner of
@@ -52,7 +52,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* the framing rectangle.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getY() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getY() : Float;
 	
 	/**
 	* Returns the width of the framing rectangle in
@@ -60,7 +60,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* @return the width of the framing rectangle.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getWidth() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getWidth() : Float;
 	
 	/**
 	* Returns the height of the framing rectangle
@@ -68,7 +68,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* @return the height of the framing rectangle.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getHeight() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getHeight() : Float;
 	
 	/**
 	* Returns the smallest X coordinate of the framing
@@ -78,7 +78,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	*          rectangle of the <code>Shape</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getMinX() : Float;
+	@:require(java2) @:overload @:public public function getMinX() : Float;
 	
 	/**
 	* Returns the smallest Y coordinate of the framing
@@ -88,7 +88,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	*          rectangle of the <code>Shape</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getMinY() : Float;
+	@:require(java2) @:overload @:public public function getMinY() : Float;
 	
 	/**
 	* Returns the largest X coordinate of the framing
@@ -98,7 +98,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	*          rectangle of the <code>Shape</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getMaxX() : Float;
+	@:require(java2) @:overload @:public public function getMaxX() : Float;
 	
 	/**
 	* Returns the largest Y coordinate of the framing
@@ -108,7 +108,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	*          rectangle of the <code>Shape</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getMaxY() : Float;
+	@:require(java2) @:overload @:public public function getMaxY() : Float;
 	
 	/**
 	* Returns the X coordinate of the center of the framing
@@ -118,7 +118,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	*          of the <code>Shape</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getCenterX() : Float;
+	@:require(java2) @:overload @:public public function getCenterX() : Float;
 	
 	/**
 	* Returns the Y coordinate of the center of the framing
@@ -128,7 +128,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	*          of the <code>Shape</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getCenterY() : Float;
+	@:require(java2) @:overload @:public public function getCenterY() : Float;
 	
 	/**
 	* Returns the framing {@link Rectangle2D}
@@ -140,7 +140,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* @see #setFrame(Rectangle2D)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getFrame() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public public function getFrame() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Determines whether the <code>RectangularShape</code> is empty.
@@ -150,7 +150,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	*          <code>false</code> otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function isEmpty() : Bool;
+	@:require(java2) @:overload @:public @:abstract public function isEmpty() : Bool;
 	
 	/**
 	* Sets the location and size of the framing rectangle of this
@@ -165,7 +165,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* @see #getFrame
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function setFrame(x : Float, y : Float, w : Float, h : Float) : Void;
+	@:require(java2) @:overload @:public @:abstract public function setFrame(x : Float, y : Float, w : Float, h : Float) : Void;
 	
 	/**
 	* Sets the location and size of the framing rectangle of this
@@ -178,7 +178,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* @see #getFrame
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setFrame(loc : java.awt.geom.Point2D, size : java.awt.geom.Dimension2D) : Void;
+	@:require(java2) @:overload @:public public function setFrame(loc : java.awt.geom.Point2D, size : java.awt.geom.Dimension2D) : Void;
 	
 	/**
 	* Sets the framing rectangle of this <code>Shape</code> to
@@ -189,7 +189,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* @see #getFrame
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setFrame(r : java.awt.geom.Rectangle2D) : Void;
+	@:require(java2) @:overload @:public public function setFrame(r : java.awt.geom.Rectangle2D) : Void;
 	
 	/**
 	* Sets the diagonal of the framing rectangle of this <code>Shape</code>
@@ -203,7 +203,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* @param y2 the Y coordinate of the end point of the specified diagonal
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setFrameFromDiagonal(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
+	@:require(java2) @:overload @:public public function setFrameFromDiagonal(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Void;
 	
 	/**
 	* Sets the diagonal of the framing rectangle of this <code>Shape</code>
@@ -215,7 +215,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* @param p2 the end <code>Point2D</code> of the specified diagonal
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setFrameFromDiagonal(p1 : java.awt.geom.Point2D, p2 : java.awt.geom.Point2D) : Void;
+	@:require(java2) @:overload @:public public function setFrameFromDiagonal(p1 : java.awt.geom.Point2D, p2 : java.awt.geom.Point2D) : Void;
 	
 	/**
 	* Sets the framing rectangle of this <code>Shape</code>
@@ -229,7 +229,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* @param cornerY the Y coordinate of the specified corner point
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setFrameFromCenter(centerX : Float, centerY : Float, cornerX : Float, cornerY : Float) : Void;
+	@:require(java2) @:overload @:public public function setFrameFromCenter(centerX : Float, centerY : Float, cornerX : Float, cornerY : Float) : Void;
 	
 	/**
 	* Sets the framing rectangle of this <code>Shape</code> based on a
@@ -240,31 +240,31 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* @param corner the specified corner <code>Point2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setFrameFromCenter(center : java.awt.geom.Point2D, corner : java.awt.geom.Point2D) : Void;
+	@:require(java2) @:overload @:public public function setFrameFromCenter(center : java.awt.geom.Point2D, corner : java.awt.geom.Point2D) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(p : java.awt.geom.Point2D) : Bool;
+	@:require(java2) @:overload @:public public function contains(p : java.awt.geom.Point2D) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function intersects(r : java.awt.geom.Rectangle2D) : Bool;
+	@:require(java2) @:overload @:public public function intersects(r : java.awt.geom.Rectangle2D) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(r : java.awt.geom.Rectangle2D) : Bool;
+	@:require(java2) @:overload @:public public function contains(r : java.awt.geom.Rectangle2D) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getBounds() : java.awt.Rectangle;
+	@:require(java2) @:overload @:public public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Returns an iterator object that iterates along the
@@ -292,7 +292,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	*          the <code>Shape</code> object's flattened geometry.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getPathIterator(at : java.awt.geom.AffineTransform, flatness : Float) : java.awt.geom.PathIterator;
+	@:require(java2) @:overload @:public public function getPathIterator(at : java.awt.geom.AffineTransform, flatness : Float) : java.awt.geom.PathIterator;
 	
 	/**
 	* Creates a new object of the same class and with the same
@@ -302,7 +302,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* @see        java.lang.Cloneable
 	* @since      1.2
 	*/
-	@:require(java2) @:overload public function clone() : Dynamic;
+	@:require(java2) @:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns an iterator object that iterates along the
@@ -328,7 +328,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	*          traverses the geometry of the <code>Shape</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
+	@:require(java2) @:overload @:public @:public @:public public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
 	
 	/**
 	* Tests if the interior of the <code>Shape</code> intersects the
@@ -368,7 +368,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* @see java.awt.geom.Area
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public @:public public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* Tests if the specified coordinates are inside the boundary of the
@@ -382,7 +382,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	*         otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(x : Float, y : Float) : Bool;
+	@:require(java2) @:overload @:public @:public public function contains(x : Float, y : Float) : Bool;
 	
 	/**
 	* Tests if the interior of the <code>Shape</code> entirely contains
@@ -426,7 +426,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* @see #intersects
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public @:public public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* Returns a high precision and more accurate bounding box of
@@ -471,7 +471,7 @@ extern class RectangularShape implements java.awt.Shape implements java.lang.Clo
 	* @see #getBounds
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public @:public @:public @:public @:public @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	
 }

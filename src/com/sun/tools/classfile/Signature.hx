@@ -33,17 +33,17 @@ package com.sun.tools.classfile;
 */
 extern class Signature extends com.sun.tools.classfile.Descriptor
 {
-	@:overload public function new(index : Int) : Void;
+	@:overload @:public public function new(index : Int) : Void;
 	
-	@:overload public function getType(constant_pool : com.sun.tools.classfile.ConstantPool) : com.sun.tools.classfile.Type;
+	@:overload @:public public function getType(constant_pool : com.sun.tools.classfile.ConstantPool) : com.sun.tools.classfile.Type;
 	
-	@:overload override public function getParameterCount(constant_pool : com.sun.tools.classfile.ConstantPool) : Int;
+	@:overload @:public override public function getParameterCount(constant_pool : com.sun.tools.classfile.ConstantPool) : Int;
 	
-	@:overload override public function getParameterTypes(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
+	@:overload @:public override public function getParameterTypes(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	@:overload override public function getReturnType(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
+	@:overload @:public override public function getReturnType(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	@:overload override public function getFieldType(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
+	@:overload @:public override public function getFieldType(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
 	
 }

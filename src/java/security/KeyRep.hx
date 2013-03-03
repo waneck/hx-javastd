@@ -44,7 +44,7 @@ extern class KeyRep implements java.io.Serializable
 	*          if format is <code>null</code>,
 	*          or if encoded is <code>null</code>
 	*/
-	@:overload public function new(type : java.security.KeyRep.KeyRep_Type, algorithm : String, format : String, encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(type : java.security.KeyRep.KeyRep_Type, algorithm : String, format : String, encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Resolve the Key object.
@@ -70,7 +70,7 @@ extern class KeyRep implements java.io.Serializable
 	*  encoded key bytes are unrecognized/invalid, of if the
 	*  resolution of the key fails for any reason
 	*/
-	@:overload private function readResolve() : Dynamic;
+	@:overload @:protected private function readResolve() : Dynamic;
 	
 	
 }

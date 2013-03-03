@@ -36,7 +36,7 @@ extern class CollectionCertStore extends java.security.cert.CertStoreSpi
 	* @exception InvalidAlgorithmParameterException if params is not an
 	*   instance of <code>CollectionCertStoreParameters</code>
 	*/
-	@:overload public function new(params : java.security.cert.CertStoreParameters) : Void;
+	@:overload @:public public function new(params : java.security.cert.CertStoreParameters) : Void;
 	
 	/**
 	* Returns a <code>Collection</code> of <code>Certificate</code>s that
@@ -50,7 +50,7 @@ extern class CollectionCertStore extends java.security.cert.CertStoreSpi
 	*         match the specified selector
 	* @throws CertStoreException if an exception occurs
 	*/
-	@:overload public function engineGetCertificates(selector : java.security.cert.CertSelector) : java.util.Collection<java.security.cert.Certificate>;
+	@:overload @:public override public function engineGetCertificates(selector : java.security.cert.CertSelector) : java.util.Collection<java.security.cert.Certificate>;
 	
 	/**
 	* Returns a <code>Collection</code> of <code>CRL</code>s that
@@ -64,7 +64,7 @@ extern class CollectionCertStore extends java.security.cert.CertStoreSpi
 	*         match the specified selector
 	* @throws CertStoreException if an exception occurs
 	*/
-	@:overload public function engineGetCRLs(selector : java.security.cert.CRLSelector) : java.util.Collection<java.security.cert.CRL>;
+	@:overload @:public override public function engineGetCRLs(selector : java.security.cert.CRLSelector) : java.util.Collection<java.security.cert.CRL>;
 	
 	
 }

@@ -77,92 +77,92 @@ extern class OGLSurfaceData extends sun.java2d.SurfaceData implements sun.java2d
 	*
 	* @see sun.java2d.pipe.hw.AccelSurface
 	*/
-	public static var PBUFFER(default, null) : Int;
+	@:public @:static @:final public static var PBUFFER(default, null) : Int;
 	
-	public static var FBOBJECT(default, null) : Int;
+	@:public @:static @:final public static var FBOBJECT(default, null) : Int;
 	
 	/**
 	* Pixel formats
 	*/
-	public static var PF_INT_ARGB(default, null) : Int;
+	@:public @:static @:final public static var PF_INT_ARGB(default, null) : Int;
 	
-	public static var PF_INT_ARGB_PRE(default, null) : Int;
+	@:public @:static @:final public static var PF_INT_ARGB_PRE(default, null) : Int;
 	
-	public static var PF_INT_RGB(default, null) : Int;
+	@:public @:static @:final public static var PF_INT_RGB(default, null) : Int;
 	
-	public static var PF_INT_RGBX(default, null) : Int;
+	@:public @:static @:final public static var PF_INT_RGBX(default, null) : Int;
 	
-	public static var PF_INT_BGR(default, null) : Int;
+	@:public @:static @:final public static var PF_INT_BGR(default, null) : Int;
 	
-	public static var PF_INT_BGRX(default, null) : Int;
+	@:public @:static @:final public static var PF_INT_BGRX(default, null) : Int;
 	
-	public static var PF_USHORT_565_RGB(default, null) : Int;
+	@:public @:static @:final public static var PF_USHORT_565_RGB(default, null) : Int;
 	
-	public static var PF_USHORT_555_RGB(default, null) : Int;
+	@:public @:static @:final public static var PF_USHORT_555_RGB(default, null) : Int;
 	
-	public static var PF_USHORT_555_RGBX(default, null) : Int;
+	@:public @:static @:final public static var PF_USHORT_555_RGBX(default, null) : Int;
 	
-	public static var PF_BYTE_GRAY(default, null) : Int;
+	@:public @:static @:final public static var PF_BYTE_GRAY(default, null) : Int;
 	
-	public static var PF_USHORT_GRAY(default, null) : Int;
+	@:public @:static @:final public static var PF_USHORT_GRAY(default, null) : Int;
 	
-	public static var PF_3BYTE_BGR(default, null) : Int;
+	@:public @:static @:final public static var PF_3BYTE_BGR(default, null) : Int;
 	
-	private var type : Int;
+	@:protected private var type : Int;
 	
-	private static var oglRenderPipe : sun.java2d.opengl.OGLRenderer;
+	@:protected @:static private static var oglRenderPipe : sun.java2d.opengl.OGLRenderer;
 	
-	private static var oglTxRenderPipe : sun.java2d.pipe.PixelToParallelogramConverter;
+	@:protected @:static private static var oglTxRenderPipe : sun.java2d.pipe.PixelToParallelogramConverter;
 	
-	private static var oglAAPgramPipe : sun.java2d.pipe.ParallelogramPipe;
+	@:protected @:static private static var oglAAPgramPipe : sun.java2d.pipe.ParallelogramPipe;
 	
-	private static var oglTextPipe : sun.java2d.opengl.OGLTextRenderer;
+	@:protected @:static private static var oglTextPipe : sun.java2d.opengl.OGLTextRenderer;
 	
-	private static var oglImagePipe : sun.java2d.opengl.OGLDrawImage;
+	@:protected @:static private static var oglImagePipe : sun.java2d.opengl.OGLDrawImage;
 	
-	@:overload @:native private function initTexture(pData : haxe.Int64, isOpaque : Bool, texNonPow2 : Bool, texRect : Bool, width : Int, height : Int) : Bool;
+	@:overload @:protected @:native private function initTexture(pData : haxe.Int64, isOpaque : Bool, texNonPow2 : Bool, texRect : Bool, width : Int, height : Int) : Bool;
 	
-	@:overload @:native private function initFBObject(pData : haxe.Int64, isOpaque : Bool, texNonPow2 : Bool, texRect : Bool, width : Int, height : Int) : Bool;
+	@:overload @:protected @:native private function initFBObject(pData : haxe.Int64, isOpaque : Bool, texNonPow2 : Bool, texRect : Bool, width : Int, height : Int) : Bool;
 	
-	@:overload @:native private function initFlipBackbuffer(pData : haxe.Int64) : Bool;
+	@:overload @:protected @:native private function initFlipBackbuffer(pData : haxe.Int64) : Bool;
 	
-	@:overload @:abstract private function initPbuffer(pData : haxe.Int64, pConfigInfo : haxe.Int64, isOpaque : Bool, width : Int, height : Int) : Bool;
+	@:overload @:protected @:abstract private function initPbuffer(pData : haxe.Int64, pConfigInfo : haxe.Int64, isOpaque : Bool, width : Int, height : Int) : Bool;
 	
-	@:overload private function new(gc : sun.java2d.opengl.OGLGraphicsConfig, cm : java.awt.image.ColorModel, type : Int) : Void;
+	@:overload @:protected private function new(gc : sun.java2d.opengl.OGLGraphicsConfig, cm : java.awt.image.ColorModel, type : Int) : Void;
 	
-	@:overload override public function makeProxyFor(srcData : sun.java2d.SurfaceData) : sun.java2d.SurfaceDataProxy;
+	@:overload @:public override public function makeProxyFor(srcData : sun.java2d.SurfaceData) : sun.java2d.SurfaceDataProxy;
 	
 	/**
 	* Initializes the appropriate OpenGL offscreen surface based on the value
 	* of the type parameter.  If the surface creation fails for any reason,
 	* an OutOfMemoryError will be thrown.
 	*/
-	@:overload private function initSurface(width : Int, height : Int) : Void;
+	@:overload @:protected private function initSurface(width : Int, height : Int) : Void;
 	
 	/**
 	* Returns the OGLContext for the GraphicsConfig associated with this
 	* surface.
 	*/
-	@:overload @:final public function getContext() : sun.java2d.opengl.OGLContext;
+	@:overload @:public @:final public function getContext() : sun.java2d.opengl.OGLContext;
 	
 	/**
 	* Returns one of the surface type constants defined above.
 	*/
-	@:overload @:final public function getType() : Int;
+	@:overload @:public @:final public function getType() : Int;
 	
 	/**
 	* If this surface is backed by a texture object, returns the target
 	* for that texture (either GL_TEXTURE_2D or GL_TEXTURE_RECTANGLE_ARB).
 	* Otherwise, this method will return zero.
 	*/
-	@:overload @:final public function getTextureTarget() : Int;
+	@:overload @:public @:final public function getTextureTarget() : Int;
 	
 	/**
 	* If this surface is backed by a texture object, returns the texture ID
 	* for that texture.
 	* Otherwise, this method will return zero.
 	*/
-	@:overload @:final public function getTextureID() : Int;
+	@:overload @:public @:final public function getTextureID() : Int;
 	
 	/**
 	* Returns native resource of specified {@code resType} associated with
@@ -181,9 +181,9 @@ extern class OGLSurfaceData extends sun.java2d.SurfaceData implements sun.java2d
 	* such resource doesn't exist or can not be retrieved.
 	* @see sun.java2d.pipe.hw.AccelSurface#getNativeResource
 	*/
-	@:overload public function getNativeResource(resType : Int) : haxe.Int64;
+	@:overload @:public public function getNativeResource(resType : Int) : haxe.Int64;
 	
-	@:overload override public function getRaster(x : Int, y : Int, w : Int, h : Int) : java.awt.image.Raster;
+	@:overload @:public override public function getRaster(x : Int, y : Int, w : Int, h : Int) : java.awt.image.Raster;
 	
 	/**
 	* For now, we can only render LCD text if:
@@ -196,17 +196,17 @@ extern class OGLSurfaceData extends sun.java2d.SurfaceData implements sun.java2d
 	* and remove the above restrictions, but that would require significantly
 	* more code just to support a few uncommon cases.
 	*/
-	@:overload override public function canRenderLCDText(sg2d : sun.java2d.SunGraphics2D) : Bool;
+	@:overload @:public override public function canRenderLCDText(sg2d : sun.java2d.SunGraphics2D) : Bool;
 	
-	@:overload override public function validatePipe(sg2d : sun.java2d.SunGraphics2D) : Void;
+	@:overload @:public override public function validatePipe(sg2d : sun.java2d.SunGraphics2D) : Void;
 	
-	@:overload override private function getMaskFill(sg2d : sun.java2d.SunGraphics2D) : sun.java2d.loops.MaskFill;
+	@:overload @:protected override private function getMaskFill(sg2d : sun.java2d.SunGraphics2D) : sun.java2d.loops.MaskFill;
 	
-	@:overload override public function copyArea(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, w : Int, h : Int, dx : Int, dy : Int) : Bool;
+	@:overload @:public override public function copyArea(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, w : Int, h : Int, dx : Int, dy : Int) : Bool;
 	
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload public function getNativeBounds() : java.awt.Rectangle;
+	@:overload @:public public function getNativeBounds() : java.awt.Rectangle;
 	
 	/**
 	* Returns whether this surface is lost. The return value is only valid
@@ -216,7 +216,7 @@ extern class OGLSurfaceData extends sun.java2d.SurfaceData implements sun.java2d
 	*
 	* @return true if the surface is known to be lost, false otherwise
 	*/
-	@:overload @:public override public function isSurfaceLost() : Bool;
+	@:overload @:public @:public override public function isSurfaceLost() : Bool;
 	
 	/**
 	* Returns a pointer to the native surface data associated with this
@@ -225,7 +225,7 @@ extern class OGLSurfaceData extends sun.java2d.SurfaceData implements sun.java2d
 	*
 	* @return pointer to the native surface's data
 	*/
-	@:overload @:public override public function getNativeOps() : haxe.Int64;
+	@:overload @:public @:public override public function getNativeOps() : haxe.Int64;
 	
 	/**
 	* Returns whether the pipeline considers this surface valid. A surface
@@ -233,7 +233,7 @@ extern class OGLSurfaceData extends sun.java2d.SurfaceData implements sun.java2d
 	*
 	* @return true if valid, false otherwise
 	*/
-	@:overload @:public override public function isValid() : Bool;
+	@:overload @:public @:public override public function isValid() : Bool;
 	
 	/**
 	* Returns the requested bounds of the destination surface. The real bounds
@@ -242,12 +242,12 @@ extern class OGLSurfaceData extends sun.java2d.SurfaceData implements sun.java2d
 	*
 	* @return Rectangle representing java surface's bounds
 	*/
-	@:overload @:public override public function getBounds() : java.awt.Rectangle;
+	@:overload @:public @:public override public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Marks this surface dirty.
 	*/
-	@:overload @:public override public function markDirty() : Void;
+	@:overload @:public @:public override public function markDirty() : Void;
 	
 	
 }

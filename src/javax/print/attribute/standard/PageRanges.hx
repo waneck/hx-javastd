@@ -42,7 +42,7 @@ extern class PageRanges extends javax.print.attribute.SetOfIntegerSyntax impleme
 	*     thrown if <CODE>members</CODE> is a zero-length array or if any
 	*     member of the set is less than 1.
 	*/
-	@:overload public function new(members : java.NativeArray<java.NativeArray<Int>>) : Void;
+	@:overload @:public public function new(members : java.NativeArray<java.NativeArray<Int>>) : Void;
 	
 	/**
 	* Construct a new  page ranges attribute with the given members in
@@ -63,7 +63,7 @@ extern class PageRanges extends javax.print.attribute.SetOfIntegerSyntax impleme
 	*     zero-length array or if any
 	*     member of the set is less than 1.
 	*/
-	@:overload public function new(members : String) : Void;
+	@:overload @:public public function new(members : String) : Void;
 	
 	/**
 	* Construct a new page ranges attribute containing a single integer. That
@@ -75,7 +75,7 @@ extern class PageRanges extends javax.print.attribute.SetOfIntegerSyntax impleme
 	*     (Unchecked exception) Thrown if <CODE>member</CODE> is less than
 	*     1.
 	*/
-	@:overload public function new(member : Int) : Void;
+	@:overload @:public public function new(member : Int) : Void;
 	
 	/**
 	* Construct a new page ranges attribute containing a single range of
@@ -89,7 +89,7 @@ extern class PageRanges extends javax.print.attribute.SetOfIntegerSyntax impleme
 	*     non-null range is specified with <CODE>lowerBound</CODE> less than
 	*     1.
 	*/
-	@:overload public function new(lowerBound : Int, upperBound : Int) : Void;
+	@:overload @:public public function new(lowerBound : Int, upperBound : Int) : Void;
 	
 	/**
 	* Returns whether this page ranges attribute is equivalent to the passed
@@ -110,7 +110,7 @@ extern class PageRanges extends javax.print.attribute.SetOfIntegerSyntax impleme
 	* @return  True if <CODE>object</CODE> is equivalent to this page ranges
 	*          attribute, false otherwise.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public override public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -121,7 +121,7 @@ extern class PageRanges extends javax.print.attribute.SetOfIntegerSyntax impleme
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -131,7 +131,7 @@ extern class PageRanges extends javax.print.attribute.SetOfIntegerSyntax impleme
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

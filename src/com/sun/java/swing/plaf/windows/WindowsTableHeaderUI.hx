@@ -25,21 +25,21 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsTableHeaderUI extends javax.swing.plaf.basic.BasicTableHeaderUI
 {
-	@:overload public static function createUI(h : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(h : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function rolloverColumnUpdated(oldColumn : Int, newColumn : Int) : Void;
+	@:overload @:protected override private function rolloverColumnUpdated(oldColumn : Int, newColumn : Int) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsTableHeaderUI$XPDefaultRenderer') @:internal extern class WindowsTableHeaderUI_XPDefaultRenderer extends sun.swing.table.DefaultTableCellHeaderRenderer
 {
-	@:overload override public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
+	@:overload @:public override public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	
 }
@@ -54,13 +54,13 @@ extern class WindowsTableHeaderUI extends javax.swing.plaf.basic.BasicTableHeade
 	* @param icon - icon to paint for this border
 	* @param top, left, bottom, right - outer insets for this border
 	*/
-	@:overload public function new(icon : javax.swing.Icon, top : Int, left : Int, bottom : Int, right : Int) : Void;
+	@:overload @:public public function new(icon : javax.swing.Icon, top : Int, left : Int, bottom : Int, right : Int) : Void;
 	
-	@:overload public function getBorderInsets(c : java.awt.Component) : java.awt.Insets;
+	@:overload @:public public function getBorderInsets(c : java.awt.Component) : java.awt.Insets;
 	
-	@:overload public function isBorderOpaque() : Bool;
+	@:overload @:public public function isBorderOpaque() : Bool;
 	
-	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	
 }

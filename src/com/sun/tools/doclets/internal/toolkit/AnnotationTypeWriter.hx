@@ -42,21 +42,21 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param header the header string to write
 	* @return a content tree for the header documentation
 	*/
-	@:overload public function getHeader(header : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getHeader(header : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the annotation content header.
 	*
 	* @return annotation content header that needs to be added to the documentation
 	*/
-	@:overload public function getAnnotationContentHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getAnnotationContentHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the annotation information tree header.
 	*
 	* @return annotation information tree header that needs to be added to the documentation
 	*/
-	@:overload public function getAnnotationInfoTreeHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getAnnotationInfoTreeHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the annotation information.
@@ -64,7 +64,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param annotationInfoTree content tree containing the annotation information
 	* @return a content tree for the annotation
 	*/
-	@:overload public function getAnnotationInfo(annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getAnnotationInfo(annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add the signature of the current annotation type.
@@ -72,42 +72,42 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param modifiers the modifiers for the signature
 	* @param annotationInfoTree the annotation content tree to which the signature will be added
 	*/
-	@:overload public function addAnnotationTypeSignature(modifiers : String, annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addAnnotationTypeSignature(modifiers : String, annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the annotation type description.
 	*
 	* @param annotationInfoTree content tree to which the description will be added
 	*/
-	@:overload public function addAnnotationTypeDescription(annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addAnnotationTypeDescription(annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the tag information for the current annotation type.
 	*
 	* @param annotationInfoTree content tree to which the tag information will be added
 	*/
-	@:overload public function addAnnotationTypeTagInfo(annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addAnnotationTypeTagInfo(annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* If this annotation is deprecated, add the appropriate information.
 	*
 	* @param annotationInfoTree content tree to which the deprecated information will be added
 	*/
-	@:overload public function addAnnotationTypeDeprecationInfo(annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addAnnotationTypeDeprecationInfo(annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the annotation type details marker.
 	*
 	* @param memberDetails the content tree representing member details marker
 	*/
-	@:overload public function addAnnotationDetailsMarker(memberDetails : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addAnnotationDetailsMarker(memberDetails : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get the member tree header for the annotation type.
 	*
 	* @return a content tree for the member tree header
 	*/
-	@:overload public function getMemberTreeHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMemberTreeHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the member tree.
@@ -115,7 +115,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param memberTree the content tree that will be modified and returned
 	* @return a content tree for the member
 	*/
-	@:overload public function getMemberTree(memberTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMemberTree(memberTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the member summary tree.
@@ -123,7 +123,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param memberTree the content tree that will be used to build the summary tree
 	* @return a content tree for the member summary
 	*/
-	@:overload public function getMemberSummaryTree(memberTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMemberSummaryTree(memberTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the member details tree.
@@ -131,33 +131,33 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param memberTree the content tree that will be used to build the details tree
 	* @return a content tree for the member details
 	*/
-	@:overload public function getMemberDetailsTree(memberTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMemberDetailsTree(memberTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add the footer of the page.
 	*
 	* @param contentTree content tree to which the footer will be added
 	*/
-	@:overload public function addFooter(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addFooter(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Print the document.
 	*
 	* @param contentTree content tree that will be printed as a document
 	*/
-	@:overload public function printDocument(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function printDocument(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Close the writer.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Return the {@link AnnotationTypeDoc} being documented.
 	*
 	* @return the AnnotationTypeDoc being documented.
 	*/
-	@:overload public function getAnnotationTypeDoc() : com.sun.javadoc.AnnotationTypeDoc;
+	@:overload @:public public function getAnnotationTypeDoc() : com.sun.javadoc.AnnotationTypeDoc;
 	
 	
 }

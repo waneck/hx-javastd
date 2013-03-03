@@ -28,7 +28,7 @@ extern class BufferedContext
 	/**
 	* Indicates that no flags are needed; take all default code paths.
 	*/
-	public static var NO_CONTEXT_FLAGS(default, null) : Int;
+	@:public @:static @:final public static var NO_CONTEXT_FLAGS(default, null) : Int;
 	
 	/**
 	* Indicates that the source surface (or color value, if it is a simple
@@ -36,17 +36,17 @@ extern class BufferedContext
 	* flag is present, it allows us to disable blending in certain
 	* situations in order to improve performance.
 	*/
-	public static var SRC_IS_OPAQUE(default, null) : Int;
+	@:public @:static @:final public static var SRC_IS_OPAQUE(default, null) : Int;
 	
 	/**
 	* Indicates that the operation uses an alpha mask, which may determine
 	* the code path that is used when setting up the current paint state.
 	*/
-	public static var USE_MASK(default, null) : Int;
+	@:public @:static @:final public static var USE_MASK(default, null) : Int;
 	
-	private var rq : sun.java2d.pipe.RenderQueue;
+	@:protected private var rq : sun.java2d.pipe.RenderQueue;
 	
-	private var buf : sun.java2d.pipe.RenderBuffer;
+	@:protected private var buf : sun.java2d.pipe.RenderBuffer;
 	
 	/**
 	* This is a reference to the most recently validated BufferedContext.  If
@@ -55,9 +55,9 @@ extern class BufferedContext
 	* check to see if the BufferedContext passed to that method is the same
 	* as the one we've cached here.
 	*/
-	private static var currentContext : sun.java2d.pipe.BufferedContext;
+	@:protected @:static private static var currentContext : sun.java2d.pipe.BufferedContext;
 	
-	@:overload private function new(rq : sun.java2d.pipe.RenderQueue) : Void;
+	@:overload @:protected private function new(rq : sun.java2d.pipe.RenderQueue) : Void;
 	
 	/**
 	* Fetches the BufferedContextContext associated with the dst. surface
@@ -74,7 +74,7 @@ extern class BufferedContext
 	* @see RenderQueue#lock
 	* @see RenderQueue#unlock
 	*/
-	@:overload public static function validateContext(srcData : sun.java2d.pipe.hw.AccelSurface, dstData : sun.java2d.pipe.hw.AccelSurface, clip : sun.java2d.pipe.Region, comp : java.awt.Composite, xform : java.awt.geom.AffineTransform, paint : java.awt.Paint, sg2d : sun.java2d.SunGraphics2D, flags : Int) : Void;
+	@:overload @:public @:static public static function validateContext(srcData : sun.java2d.pipe.hw.AccelSurface, dstData : sun.java2d.pipe.hw.AccelSurface, clip : sun.java2d.pipe.Region, comp : java.awt.Composite, xform : java.awt.geom.AffineTransform, paint : java.awt.Paint, sg2d : sun.java2d.SunGraphics2D, flags : Int) : Void;
 	
 	/**
 	* Fetches the BufferedContextassociated with the surface
@@ -89,7 +89,7 @@ extern class BufferedContext
 	* @see RenderQueue#lock
 	* @see RenderQueue#unlock
 	*/
-	@:overload public static function validateContext(surface : sun.java2d.pipe.hw.AccelSurface) : Void;
+	@:overload @:public @:static public static function validateContext(surface : sun.java2d.pipe.hw.AccelSurface) : Void;
 	
 	/**
 	* Validates the given parameters against the current state for this
@@ -110,7 +110,7 @@ extern class BufferedContext
 	* @throws InvalidPipeException if either src or dest surface is not valid
 	* or lost
 	*/
-	@:overload public function validate(srcData : sun.java2d.pipe.hw.AccelSurface, dstData : sun.java2d.pipe.hw.AccelSurface, clip : sun.java2d.pipe.Region, comp : java.awt.Composite, xform : java.awt.geom.AffineTransform, paint : java.awt.Paint, sg2d : sun.java2d.SunGraphics2D, flags : Int) : Void;
+	@:overload @:public public function validate(srcData : sun.java2d.pipe.hw.AccelSurface, dstData : sun.java2d.pipe.hw.AccelSurface, clip : sun.java2d.pipe.Region, comp : java.awt.Composite, xform : java.awt.geom.AffineTransform, paint : java.awt.Paint, sg2d : sun.java2d.SunGraphics2D, flags : Int) : Void;
 	
 	/**
 	* Invalidates the surfaces associated with this context.  This is
@@ -122,7 +122,7 @@ extern class BufferedContext
 	* @see RenderQueue#lock
 	* @see RenderQueue#unlock
 	*/
-	@:overload public function invalidateSurfaces() : Void;
+	@:overload @:public public function invalidateSurfaces() : Void;
 	
 	/**
 	* Resets this context's surfaces and all attributes.
@@ -132,7 +132,7 @@ extern class BufferedContext
 	* @see RenderQueue#lock
 	* @see RenderQueue#unlock
 	*/
-	@:overload public function invalidateContext() : Void;
+	@:overload @:public public function invalidateContext() : Void;
 	
 	/**
 	* Returns a singleton {@code RenderQueue} object used by the rendering
@@ -141,7 +141,7 @@ extern class BufferedContext
 	* @return a render queue
 	* @see RenderQueue
 	*/
-	@:overload @:abstract public function getRenderQueue() : sun.java2d.pipe.RenderQueue;
+	@:overload @:public @:abstract public function getRenderQueue() : sun.java2d.pipe.RenderQueue;
 	
 	/**
 	* Saves the the state of this context.
@@ -152,7 +152,7 @@ extern class BufferedContext
 	* @see RenderQueue#lock
 	* @see RenderQueue#unlock
 	*/
-	@:overload @:abstract public function saveState() : Void;
+	@:overload @:public @:abstract public function saveState() : Void;
 	
 	/**
 	* Restores the native state of this context.
@@ -163,7 +163,7 @@ extern class BufferedContext
 	* @see RenderQueue#lock
 	* @see RenderQueue#unlock
 	*/
-	@:overload @:abstract public function restoreState() : Void;
+	@:overload @:public @:abstract public function restoreState() : Void;
 	
 	
 }

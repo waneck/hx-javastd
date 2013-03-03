@@ -25,19 +25,19 @@ package com.sun.xml.internal.ws.handler;
 */
 extern class MessageHandlerContextImpl extends com.sun.xml.internal.ws.handler.MessageUpdatableContext implements com.sun.xml.internal.ws.api.handler.MessageHandlerContext
 {
-	@:overload public function new(seiModel : com.sun.xml.internal.ws.api.model.SEIModel, binding : com.sun.xml.internal.ws.api.WSBinding, wsdlModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, packet : com.sun.xml.internal.ws.api.message.Packet, roles : java.util.Set<String>) : Void;
+	@:overload @:public public function new(seiModel : com.sun.xml.internal.ws.api.model.SEIModel, binding : com.sun.xml.internal.ws.api.WSBinding, wsdlModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, packet : com.sun.xml.internal.ws.api.message.Packet, roles : java.util.Set<String>) : Void;
 	
-	@:overload public function getMessage() : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public public function getMessage() : com.sun.xml.internal.ws.api.message.Message;
 	
-	@:overload public function setMessage(message : com.sun.xml.internal.ws.api.message.Message) : Void;
+	@:overload @:public public function setMessage(message : com.sun.xml.internal.ws.api.message.Message) : Void;
 	
-	@:overload public function getRoles() : java.util.Set<String>;
+	@:overload @:public public function getRoles() : java.util.Set<String>;
 	
-	@:overload public function getWSBinding() : com.sun.xml.internal.ws.api.WSBinding;
+	@:overload @:public public function getWSBinding() : com.sun.xml.internal.ws.api.WSBinding;
 	
-	@:overload public function getSEIModel() : com.sun.xml.internal.ws.api.model.SEIModel;
+	@:overload @:public public function getSEIModel() : com.sun.xml.internal.ws.api.model.SEIModel;
 	
-	@:overload public function getPort() : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
+	@:overload @:public public function getPort() : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
 	
 	
 }

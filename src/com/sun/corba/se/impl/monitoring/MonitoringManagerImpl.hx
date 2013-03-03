@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.monitoring;
 */
 extern class MonitoringManagerImpl implements com.sun.corba.se.spi.monitoring.MonitoringManager
 {
-	@:overload public function clearState() : Void;
+	@:overload @:public public function clearState() : Void;
 	
-	@:overload public function getRootMonitoredObject() : com.sun.corba.se.spi.monitoring.MonitoredObject;
+	@:overload @:public public function getRootMonitoredObject() : com.sun.corba.se.spi.monitoring.MonitoredObject;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

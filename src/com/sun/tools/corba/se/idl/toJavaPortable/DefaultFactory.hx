@@ -40,7 +40,7 @@ extern class DefaultFactory implements com.sun.tools.corba.se.idl.toJavaPortable
 	/**
 	* Public zero-argument constructor.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Generate the default value factory class. Provides general algorithm for
@@ -55,67 +55,67 @@ extern class DefaultFactory implements com.sun.tools.corba.se.idl.toJavaPortable
 	* 6.) Write class closing (close curly)
 	* 7.) Close the print stream
 	**/
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:public public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/**
 	* Initialize variables unique to this generator.
 	**/
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
 	/**
 	* @return true if entry has any factory methods declared
 	**/
-	@:overload private function hasFactoryMethods() : Bool;
+	@:overload @:protected private function hasFactoryMethods() : Bool;
 	
 	/**
 	* Open the print stream for subsequent output.
 	**/
-	@:overload private function openStream() : Void;
+	@:overload @:protected private function openStream() : Void;
 	
 	/**
 	* Generate the heading, including the package, imports,
 	* source comment, class statement, and left curly.
 	**/
-	@:overload private function writeHeading() : Void;
+	@:overload @:protected private function writeHeading() : Void;
 	
 	/**
 	* Generate the contents of this class
 	**/
-	@:overload private function writeBody() : Void;
+	@:overload @:protected private function writeBody() : Void;
 	
 	/**
 	* Generate members of this class.
 	**/
-	@:overload private function writeFactoryMethods() : Void;
+	@:overload @:protected private function writeFactoryMethods() : Void;
 	
 	/**
 	* Generate default read_value
 	**/
-	@:overload private function writeReadValue() : Void;
+	@:overload @:protected private function writeReadValue() : Void;
 	
 	/**
 	* Generate the closing statements.
 	**/
-	@:overload private function writeClosing() : Void;
+	@:overload @:protected private function writeClosing() : Void;
 	
 	/**
 	* Write the stream to file by closing the print stream.
 	**/
-	@:overload private function closeStream() : Void;
+	@:overload @:protected private function closeStream() : Void;
 	
-	private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	private var entry : com.sun.tools.corba.se.idl.SymtabEntry;
+	@:protected private var entry : com.sun.tools.corba.se.idl.SymtabEntry;
 	
-	private var stream : com.sun.tools.corba.se.idl.GenFileStream;
+	@:protected private var stream : com.sun.tools.corba.se.idl.GenFileStream;
 	
-	private var factoryClass : String;
+	@:protected private var factoryClass : String;
 	
-	private var factoryInterface : String;
+	@:protected private var factoryInterface : String;
 	
-	private var factoryType : String;
+	@:protected private var factoryType : String;
 	
-	private var implType : String;
+	@:protected private var implType : String;
 	
 	
 }

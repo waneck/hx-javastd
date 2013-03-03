@@ -25,27 +25,27 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class ListSimpleTypeImpl extends com.sun.xml.internal.xsom.impl.SimpleTypeImpl implements com.sun.xml.internal.xsom.XSListSimpleType
 {
-	@:overload public function new(_parent : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _name : String, _anonymous : Bool, finalSet : java.util.Set<com.sun.xml.internal.xsom.XSVariety>, _itemType : com.sun.xml.internal.xsom.impl.Ref.Ref_SimpleType) : Void;
+	@:overload @:public public function new(_parent : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _name : String, _anonymous : Bool, finalSet : java.util.Set<com.sun.xml.internal.xsom.XSVariety>, _itemType : com.sun.xml.internal.xsom.impl.Ref.Ref_SimpleType) : Void;
 	
-	@:overload public function getItemType() : com.sun.xml.internal.xsom.XSSimpleType;
+	@:overload @:public public function getItemType() : com.sun.xml.internal.xsom.XSSimpleType;
 	
-	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSSimpleTypeVisitor) : Void;
+	@:overload @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSSimpleTypeVisitor) : Void;
 	
-	@:overload public function apply(_function : com.sun.xml.internal.xsom.visitor.XSSimpleTypeFunction<Dynamic>) : Dynamic;
+	@:overload @:public override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSSimpleTypeFunction<Dynamic>) : Dynamic;
 	
-	@:overload public function getFacet(name : String) : com.sun.xml.internal.xsom.XSFacet;
+	@:overload @:public override public function getFacet(name : String) : com.sun.xml.internal.xsom.XSFacet;
 	
-	@:overload public function getFacets(name : String) : java.util.List<com.sun.xml.internal.xsom.XSFacet>;
+	@:overload @:public override public function getFacets(name : String) : java.util.List<com.sun.xml.internal.xsom.XSFacet>;
 	
-	@:overload public function getVariety() : com.sun.xml.internal.xsom.XSVariety;
+	@:overload @:public override public function getVariety() : com.sun.xml.internal.xsom.XSVariety;
 	
-	@:overload public function getPrimitiveType() : com.sun.xml.internal.xsom.XSSimpleType;
+	@:overload @:public override public function getPrimitiveType() : com.sun.xml.internal.xsom.XSSimpleType;
 	
-	@:overload public function getBaseListType() : com.sun.xml.internal.xsom.XSListSimpleType;
+	@:overload @:public override public function getBaseListType() : com.sun.xml.internal.xsom.XSListSimpleType;
 	
-	@:overload public function isList() : Bool;
+	@:overload @:public override public function isList() : Bool;
 	
-	@:overload public function asList() : com.sun.xml.internal.xsom.XSListSimpleType;
+	@:overload @:public override public function asList() : com.sun.xml.internal.xsom.XSListSimpleType;
 	
 	
 }

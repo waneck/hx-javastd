@@ -61,13 +61,13 @@ extern class PKCS11Exception extends java.lang.Exception
 	/**
 	* The code of the error which was the reason for this exception.
 	*/
-	private var errorCode_ : haxe.Int64;
+	@:protected private var errorCode_ : haxe.Int64;
 	
 	/**
 	* Constructor taking the error code as defined for the CKR_* constants
 	* in PKCS#11.
 	*/
-	@:overload public function new(errorCode : haxe.Int64) : Void;
+	@:overload @:public public function new(errorCode : haxe.Int64) : Void;
 	
 	/**
 	* This method gets the corresponding text error message from
@@ -79,7 +79,7 @@ extern class PKCS11Exception extends java.lang.Exception
 	* @preconditions
 	* @postconditions (result <> null)
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	/**
 	* Returns the PKCS#11 error code.
@@ -88,7 +88,7 @@ extern class PKCS11Exception extends java.lang.Exception
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload public function getErrorCode() : haxe.Int64;
+	@:overload @:public public function getErrorCode() : haxe.Int64;
 	
 	
 }

@@ -27,13 +27,13 @@ extern class FilterExprIterator extends com.sun.org.apache.xpath.internal.axes.B
 	* Create a FilterExprIterator object.
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a FilterExprIterator object.
 	*
 	*/
-	@:overload public function new(expr : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function new(expr : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	/**
 	* Initialize the context values for this expression
@@ -42,20 +42,20 @@ extern class FilterExprIterator extends com.sun.org.apache.xpath.internal.axes.B
 	* @param context The XPath runtime context for this
 	* transformation.
 	*/
-	@:overload override public function setRoot(context : Int, environment : Dynamic) : Void;
+	@:overload @:public override public function setRoot(context : Int, environment : Dynamic) : Void;
 	
 	/**
 	* Get the next node via getNextXXX.  Bottlenecked for derived class override.
 	* @return The next node on the axis, or DTM.NULL.
 	*/
-	@:overload private function getNextNode() : Int;
+	@:overload @:protected override private function getNextNode() : Int;
 	
 	/**
 	* Detaches the walker from the set which it iterated over, releasing
 	* any computational resources and placing the iterator in the INVALID
 	* state.
 	*/
-	@:overload override public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	/**
 	* This function is used to fixup variables from QNames to stack frame
@@ -67,23 +67,23 @@ extern class FilterExprIterator extends com.sun.org.apache.xpath.internal.axes.B
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Get the inner contained expression of this filter.
 	*/
-	@:overload public function getInnerExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getInnerExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Set the inner contained expression of this filter.
 	*/
-	@:overload public function setInnerExpression(expr : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setInnerExpression(expr : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	/**
 	* Get the analysis bits for this walker, as defined in the WalkerFactory.
 	* @return One of WalkerFactory#BIT_DESCENDANT, etc.
 	*/
-	@:overload override public function getAnalysisBits() : Int;
+	@:overload @:public override public function getAnalysisBits() : Int;
 	
 	/**
 	* Returns true if all the nodes in the iteration well be returned in document
@@ -92,7 +92,7 @@ extern class FilterExprIterator extends com.sun.org.apache.xpath.internal.axes.B
 	*
 	* @return true as a default.
 	*/
-	@:overload override public function isDocOrdered() : Bool;
+	@:overload @:public override public function isDocOrdered() : Bool;
 	
 	/**
 	* This will traverse the heararchy, calling the visitor for
@@ -101,12 +101,12 @@ extern class FilterExprIterator extends com.sun.org.apache.xpath.internal.axes.B
 	*
 	* @param visitor The visitor whose appropriate method will be called.
 	*/
-	@:overload public function callPredicateVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callPredicateVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }
@@ -115,12 +115,12 @@ extern class FilterExprIterator extends com.sun.org.apache.xpath.internal.axes.B
 	/**
 	* @see ExpressionOwner#getExpression()
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see ExpressionOwner#setExpression(Expression)
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	
 }

@@ -50,34 +50,34 @@ extern interface MutationEvent extends org.w3c.dom.events.Event
 	* the DOMAttrModified event it indicates the <code>Attr</code> node
 	* which was modified, added, or removed.
 	*/
-	@:overload public function getRelatedNode() : org.w3c.dom.Node;
+	@:overload @:public public function getRelatedNode() : org.w3c.dom.Node;
 	
 	/**
 	*  <code>prevValue</code> indicates the previous value of the
 	* <code>Attr</code> node in DOMAttrModified events, and of the
 	* <code>CharacterData</code> node in DOMCharacterDataModified events.
 	*/
-	@:overload public function getPrevValue() : String;
+	@:overload @:public public function getPrevValue() : String;
 	
 	/**
 	*  <code>newValue</code> indicates the new value of the <code>Attr</code>
 	* node in DOMAttrModified events, and of the <code>CharacterData</code>
 	* node in DOMCharacterDataModified events.
 	*/
-	@:overload public function getNewValue() : String;
+	@:overload @:public public function getNewValue() : String;
 	
 	/**
 	*  <code>attrName</code> indicates the name of the changed
 	* <code>Attr</code> node in a DOMAttrModified event.
 	*/
-	@:overload public function getAttrName() : String;
+	@:overload @:public public function getAttrName() : String;
 	
 	/**
 	*  <code>attrChange</code> indicates the type of change which triggered
 	* the DOMAttrModified event. The values can be <code>MODIFICATION</code>
 	* , <code>ADDITION</code>, or <code>REMOVAL</code>.
 	*/
-	@:overload public function getAttrChange() : java.StdTypes.Int16;
+	@:overload @:public public function getAttrChange() : java.StdTypes.Int16;
 	
 	/**
 	* The <code>initMutationEvent</code> method is used to initialize the
@@ -101,7 +101,7 @@ extern interface MutationEvent extends org.w3c.dom.events.Event
 	* @param attrChangeArg Specifies the <code>Event</code>'s
 	*   <code>attrChange</code> attribute
 	*/
-	@:overload public function initMutationEvent(typeArg : String, canBubbleArg : Bool, cancelableArg : Bool, relatedNodeArg : org.w3c.dom.Node, prevValueArg : String, newValueArg : String, attrNameArg : String, attrChangeArg : java.StdTypes.Int16) : Void;
+	@:overload @:public public function initMutationEvent(typeArg : String, canBubbleArg : Bool, cancelableArg : Bool, relatedNodeArg : org.w3c.dom.Node, prevValueArg : String, newValueArg : String, attrNameArg : String, attrChangeArg : java.StdTypes.Int16) : Void;
 	
 	
 }

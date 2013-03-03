@@ -40,7 +40,7 @@ int      iov_len;
 }
 @:native('sun$nio$ch$IOVecWrapper$Deallocator') @:internal extern class IOVecWrapper_Deallocator implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

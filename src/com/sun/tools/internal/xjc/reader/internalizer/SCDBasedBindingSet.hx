@@ -28,7 +28,7 @@ extern class SCDBasedBindingSet
 	/**
 	* Applies the additional binding customizations.
 	*/
-	@:overload public function apply(schema : com.sun.xml.internal.xsom.XSSchemaSet, errorReceiver : com.sun.tools.internal.xjc.ErrorReceiver) : Void;
+	@:overload @:public public function apply(schema : com.sun.xml.internal.xsom.XSSchemaSet, errorReceiver : com.sun.tools.internal.xjc.ErrorReceiver) : Void;
 	
 	
 }

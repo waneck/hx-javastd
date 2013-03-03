@@ -61,7 +61,7 @@ extern class RelationSupport implements javax.management.relation.RelationSuppor
 	* (relation id, relation service ObjectName, or relation type name) is
 	* {@code null}.
 	*/
-	@:overload public function new(relationId : String, relationServiceName : javax.management.ObjectName, relationTypeName : String, list : javax.management.relation.RoleList) : Void;
+	@:overload @:public public function new(relationId : String, relationServiceName : javax.management.ObjectName, relationTypeName : String, list : javax.management.relation.RoleList) : Void;
 	
 	/**
 	* Creates a {@code RelationSupport} object.
@@ -111,7 +111,7 @@ extern class RelationSupport implements javax.management.relation.RelationSuppor
 	* (relation id, relation service ObjectName, relation service MBeanServer,
 	* or relation type name) is {@code null}.
 	*/
-	@:overload public function new(relationId : String, relationServiceName : javax.management.ObjectName, relationServiceMBeanServer : javax.management.MBeanServer, relationTypeName : String, list : javax.management.relation.RoleList) : Void;
+	@:overload @:public public function new(relationId : String, relationServiceName : javax.management.ObjectName, relationServiceMBeanServer : javax.management.MBeanServer, relationTypeName : String, list : javax.management.relation.RoleList) : Void;
 	
 	/**
 	* Retrieves role value for given role name.
@@ -131,7 +131,7 @@ extern class RelationSupport implements javax.management.relation.RelationSuppor
 	*
 	* @see #setRole
 	*/
-	@:overload public function getRole(roleName : String) : java.util.List<javax.management.ObjectName>;
+	@:overload @:public public function getRole(roleName : String) : java.util.List<javax.management.ObjectName>;
 	
 	/**
 	* Retrieves values of roles with given names.
@@ -150,7 +150,7 @@ extern class RelationSupport implements javax.management.relation.RelationSuppor
 	*
 	* @see #setRoles
 	*/
-	@:overload public function getRoles(roleNameArray : java.NativeArray<String>) : javax.management.relation.RoleResult;
+	@:overload @:public public function getRoles(roleNameArray : java.NativeArray<String>) : javax.management.relation.RoleResult;
 	
 	/**
 	* Returns all roles present in the relation.
@@ -162,14 +162,14 @@ extern class RelationSupport implements javax.management.relation.RelationSuppor
 	* @exception RelationServiceNotRegisteredException  if the Relation
 	* Service is not registered in the MBean Server
 	*/
-	@:overload public function getAllRoles() : javax.management.relation.RoleResult;
+	@:overload @:public public function getAllRoles() : javax.management.relation.RoleResult;
 	
 	/**
 	* Returns all roles in the relation without checking read mode.
 	*
 	* @return a RoleList
 	*/
-	@:overload public function retrieveAllRoles() : javax.management.relation.RoleList;
+	@:overload @:public public function retrieveAllRoles() : javax.management.relation.RoleList;
 	
 	/**
 	* Returns the number of MBeans currently referenced in the given role.
@@ -181,7 +181,7 @@ extern class RelationSupport implements javax.management.relation.RelationSuppor
 	* @exception IllegalArgumentException  if null role name
 	* @exception RoleNotFoundException  if there is no role with given name
 	*/
-	@:overload public function getRoleCardinality(roleName : String) : Null<Int>;
+	@:overload @:public public function getRoleCardinality(roleName : String) : Null<Int>;
 	
 	/**
 	* Sets the given role.
@@ -215,7 +215,7 @@ extern class RelationSupport implements javax.management.relation.RelationSuppor
 	*
 	* @see #getRole
 	*/
-	@:overload public function setRole(role : javax.management.relation.Role) : Void;
+	@:overload @:public public function setRole(role : javax.management.relation.Role) : Void;
 	
 	/**
 	* Sets the given roles.
@@ -241,7 +241,7 @@ extern class RelationSupport implements javax.management.relation.RelationSuppor
 	*
 	* @see #getRoles
 	*/
-	@:overload public function setRoles(list : javax.management.relation.RoleList) : javax.management.relation.RoleResult;
+	@:overload @:public public function setRoles(list : javax.management.relation.RoleList) : javax.management.relation.RoleResult;
 	
 	/**
 	* Callback used by the Relation Service when a MBean referenced in a role
@@ -269,7 +269,7 @@ extern class RelationSupport implements javax.management.relation.RelationSuppor
 	* @exception RelationNotFoundException  if this method is called for a
 	* relation MBean not added in the Relation Service.
 	*/
-	@:overload public function handleMBeanUnregistration(objectName : javax.management.ObjectName, roleName : String) : Void;
+	@:overload @:public public function handleMBeanUnregistration(objectName : javax.management.ObjectName, roleName : String) : Void;
 	
 	/**
 	* Retrieves MBeans referenced in the various roles of the relation.
@@ -277,19 +277,19 @@ extern class RelationSupport implements javax.management.relation.RelationSuppor
 	* @return a HashMap mapping:
 	* <P> ObjectName -> ArrayList of String (role names)
 	*/
-	@:overload public function getReferencedMBeans() : java.util.Map<javax.management.ObjectName, java.util.List<String>>;
+	@:overload @:public public function getReferencedMBeans() : java.util.Map<javax.management.ObjectName, java.util.List<String>>;
 	
 	/**
 	* Returns name of associated relation type.
 	*/
-	@:overload public function getRelationTypeName() : String;
+	@:overload @:public public function getRelationTypeName() : String;
 	
 	/**
 	* Returns ObjectName of the Relation Service handling the relation.
 	*
 	* @return the ObjectName of the Relation Service.
 	*/
-	@:overload public function getRelationServiceName() : javax.management.ObjectName;
+	@:overload @:public public function getRelationServiceName() : javax.management.ObjectName;
 	
 	/**
 	* Returns relation identifier (used to uniquely identify the relation
@@ -297,23 +297,23 @@ extern class RelationSupport implements javax.management.relation.RelationSuppor
 	*
 	* @return the relation id.
 	*/
-	@:overload public function getRelationId() : String;
+	@:overload @:public public function getRelationId() : String;
 	
-	@:overload public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
+	@:overload @:public public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
 	
-	@:overload public function postRegister(registrationDone : Null<Bool>) : Void;
+	@:overload @:public public function postRegister(registrationDone : Null<Bool>) : Void;
 	
-	@:overload public function preDeregister() : Void;
+	@:overload @:public public function preDeregister() : Void;
 	
-	@:overload public function postDeregister() : Void;
+	@:overload @:public public function postDeregister() : Void;
 	
 	/**
 	* Returns an internal flag specifying if the object is still handled by
 	* the Relation Service.
 	*/
-	@:overload public function isInRelationService() : Null<Bool>;
+	@:overload @:public public function isInRelationService() : Null<Bool>;
 	
-	@:overload public function setRelationServiceManagementFlag(flag : Null<Bool>) : Void;
+	@:overload @:public public function setRelationServiceManagementFlag(flag : Null<Bool>) : Void;
 	
 	
 }

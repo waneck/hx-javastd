@@ -23,31 +23,31 @@ package com.sun.org.apache.xalan.internal.xsltc.dom;
 */
 extern class ArrayNodeListIterator implements com.sun.org.apache.xml.internal.dtm.DTMAxisIterator
 {
-	@:overload public function new(nodes : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(nodes : java.NativeArray<Int>) : Void;
 	
-	@:overload public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
-	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload public function getLast() : Int;
+	@:overload @:public public function getLast() : Int;
 	
-	@:overload public function getPosition() : Int;
+	@:overload @:public public function getPosition() : Int;
 	
-	@:overload public function setMark() : Void;
+	@:overload @:public public function setMark() : Void;
 	
-	@:overload public function gotoMark() : Void;
+	@:overload @:public public function gotoMark() : Void;
 	
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload public function getStartNode() : Int;
+	@:overload @:public public function getStartNode() : Int;
 	
-	@:overload public function isReverse() : Bool;
+	@:overload @:public public function isReverse() : Bool;
 	
-	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload public function setRestartable(isRestartable : Bool) : Void;
+	@:overload @:public public function setRestartable(isRestartable : Bool) : Void;
 	
-	@:overload public function getNodeByPosition(position : Int) : Int;
+	@:overload @:public public function getNodeByPosition(position : Int) : Int;
 	
 	
 }

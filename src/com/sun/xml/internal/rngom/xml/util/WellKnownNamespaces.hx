@@ -46,21 +46,21 @@ package com.sun.xml.internal.rngom.xml.util;
 */
 extern class WellKnownNamespaces
 {
-	public static var XML(default, null) : String;
+	@:static @:public @:final public static var XML(default, null) : String;
 	
-	public static var XMLNS(default, null) : String;
+	@:static @:public @:final public static var XMLNS(default, null) : String;
 	
-	public static var XML_SCHEMA_DATATYPES(default, null) : String;
+	@:static @:public @:final public static var XML_SCHEMA_DATATYPES(default, null) : String;
 	
-	public static var XML_SCHEMA(default, null) : String;
+	@:static @:public @:final public static var XML_SCHEMA(default, null) : String;
 	
-	public static var RELAX_NG_COMPATIBILITY_DATATYPES(default, null) : String;
+	@:static @:public @:final public static var RELAX_NG_COMPATIBILITY_DATATYPES(default, null) : String;
 	
-	public static var RELAX_NG(default, null) : String;
+	@:static @:public @:final public static var RELAX_NG(default, null) : String;
 	
-	public static var RELAX_NG_0_9(default, null) : String;
+	@:static @:public @:final public static var RELAX_NG_0_9(default, null) : String;
 	
-	public static var RELAX_NG_COMPATIBILITY_ANNOTATIONS(default, null) : String;
+	@:static @:public @:final public static var RELAX_NG_COMPATIBILITY_ANNOTATIONS(default, null) : String;
 	
 	
 }

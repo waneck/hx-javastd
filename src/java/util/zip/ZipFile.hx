@@ -37,7 +37,7 @@ extern class ZipFile implements java.util.zip.ZipConstants implements java.io.Cl
 	/**
 	* Mode flag to open a zip file for reading.
 	*/
-	public static var OPEN_READ(default, null) : Int;
+	@:public @:static @:final public static var OPEN_READ(default, null) : Int;
 	
 	/**
 	* Mode flag to open a zip file and mark it for deletion.  The file will be
@@ -46,7 +46,7 @@ extern class ZipFile implements java.util.zip.ZipConstants implements java.io.Cl
 	* <tt>ZipFile</tt> object until either the close method is invoked or the
 	* virtual machine exits.
 	*/
-	public static var OPEN_DELETE(default, null) : Int;
+	@:public @:static @:final public static var OPEN_DELETE(default, null) : Int;
 	
 	/**
 	* Opens a zip file for reading.
@@ -66,7 +66,7 @@ extern class ZipFile implements java.util.zip.ZipConstants implements java.io.Cl
 	*
 	* @see SecurityManager#checkRead(java.lang.String)
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Opens a new <code>ZipFile</code> to read from the specified
@@ -93,7 +93,7 @@ extern class ZipFile implements java.util.zip.ZipConstants implements java.io.Cl
 	* @see SecurityManager#checkRead(java.lang.String)
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(file : java.io.File, mode : Int) : Void;
+	@:require(java3) @:overload @:public public function new(file : java.io.File, mode : Int) : Void;
 	
 	/**
 	* Opens a ZIP file for reading given the specified File object.
@@ -105,7 +105,7 @@ extern class ZipFile implements java.util.zip.ZipConstants implements java.io.Cl
 	* @throws ZipException if a ZIP format error has occurred
 	* @throws IOException if an I/O error has occurred
 	*/
-	@:overload public function new(file : java.io.File) : Void;
+	@:overload @:public public function new(file : java.io.File) : Void;
 	
 	/**
 	* Opens a new <code>ZipFile</code> to read from the specified
@@ -139,7 +139,7 @@ extern class ZipFile implements java.util.zip.ZipConstants implements java.io.Cl
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(file : java.io.File, mode : Int, charset : java.nio.charset.Charset) : Void;
+	@:require(java7) @:overload @:public public function new(file : java.io.File, mode : Int, charset : java.nio.charset.Charset) : Void;
 	
 	/**
 	* Opens a zip file for reading.
@@ -165,7 +165,7 @@ extern class ZipFile implements java.util.zip.ZipConstants implements java.io.Cl
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(name : String, charset : java.nio.charset.Charset) : Void;
+	@:require(java7) @:overload @:public public function new(name : String, charset : java.nio.charset.Charset) : Void;
 	
 	/**
 	* Opens a ZIP file for reading given the specified File object.
@@ -182,7 +182,7 @@ extern class ZipFile implements java.util.zip.ZipConstants implements java.io.Cl
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(file : java.io.File, charset : java.nio.charset.Charset) : Void;
+	@:require(java7) @:overload @:public public function new(file : java.io.File, charset : java.nio.charset.Charset) : Void;
 	
 	/**
 	* Returns the zip file comment, or null if none.
@@ -193,7 +193,7 @@ extern class ZipFile implements java.util.zip.ZipConstants implements java.io.Cl
 	*
 	* Since 1.7
 	*/
-	@:overload public function getComment() : String;
+	@:overload @:public public function getComment() : String;
 	
 	/**
 	* Returns the zip file entry for the specified name, or null
@@ -203,7 +203,7 @@ extern class ZipFile implements java.util.zip.ZipConstants implements java.io.Cl
 	* @return the zip file entry, or null if not found
 	* @throws IllegalStateException if the zip file has been closed
 	*/
-	@:overload public function getEntry(name : String) : java.util.zip.ZipEntry;
+	@:overload @:public public function getEntry(name : String) : java.util.zip.ZipEntry;
 	
 	/**
 	* Returns an input stream for reading the contents of the specified
@@ -219,27 +219,27 @@ extern class ZipFile implements java.util.zip.ZipConstants implements java.io.Cl
 	* @throws IOException if an I/O error has occurred
 	* @throws IllegalStateException if the zip file has been closed
 	*/
-	@:overload public function getInputStream(entry : java.util.zip.ZipEntry) : java.io.InputStream;
+	@:overload @:public public function getInputStream(entry : java.util.zip.ZipEntry) : java.io.InputStream;
 	
 	/**
 	* Returns the path name of the ZIP file.
 	* @return the path name of the ZIP file
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns an enumeration of the ZIP file entries.
 	* @return an enumeration of the ZIP file entries
 	* @throws IllegalStateException if the zip file has been closed
 	*/
-	@:overload public function entries() : java.util.Enumeration<java.util.zip.ZipEntry>;
+	@:overload @:public public function entries() : java.util.Enumeration<java.util.zip.ZipEntry>;
 	
 	/**
 	* Returns the number of entries in the ZIP file.
 	* @return the number of entries in the ZIP file
 	* @throws IllegalStateException if the zip file has been closed
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Closes the ZIP file.
@@ -249,7 +249,7 @@ extern class ZipFile implements java.util.zip.ZipConstants implements java.io.Cl
 	*
 	* @throws IOException if an I/O error has occurred
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Ensures that the system resources held by this ZipFile object are
@@ -265,19 +265,19 @@ extern class ZipFile implements java.util.zip.ZipConstants implements java.io.Cl
 	* @throws IOException if an I/O error has occurred
 	* @see    java.util.zip.ZipFile#close()
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }
 @:native('java$util$zip$ZipFile$ZipFileInflaterInputStream') @:internal extern class ZipFile_ZipFileInflaterInputStream extends java.util.zip.InflaterInputStream
 {
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload override private function fill() : Void;
+	@:overload @:protected override private function fill() : Void;
 	
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }
@@ -287,23 +287,23 @@ extern class ZipFile implements java.util.zip.ZipConstants implements java.io.Cl
 */
 @:native('java$util$zip$ZipFile$ZipFileInputStream') @:internal extern class ZipFile_ZipFileInputStream extends java.io.InputStream
 {
-	private var jzentry : haxe.Int64;
+	@:protected private var jzentry : haxe.Int64;
 	
-	private var rem : haxe.Int64;
+	@:protected private var rem : haxe.Int64;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload public function size() : haxe.Int64;
+	@:overload @:public public function size() : haxe.Int64;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

@@ -47,12 +47,12 @@ extern class BasicTextAreaUI extends javax.swing.plaf.basic.BasicTextUI
 	* @param ta a text area
 	* @return the UI
 	*/
-	@:overload public static function createUI(ta : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(ta : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Constructs a new BasicTextAreaUI object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Fetches the name used as a key to look up properties through the
@@ -61,9 +61,9 @@ extern class BasicTextAreaUI extends javax.swing.plaf.basic.BasicTextUI
 	*
 	* @return the name ("TextArea")
 	*/
-	@:overload override private function getPropertyPrefix() : String;
+	@:overload @:protected override private function getPropertyPrefix() : String;
 	
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
 	/**
 	* This method gets called when a bound property is changed
@@ -75,7 +75,7 @@ extern class BasicTextAreaUI extends javax.swing.plaf.basic.BasicTextUI
 	*
 	* @param evt the property change event
 	*/
-	@:overload override private function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected override private function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* The method is overridden to take into account caret width.
@@ -86,7 +86,7 @@ extern class BasicTextAreaUI extends javax.swing.plaf.basic.BasicTextUI
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:require(java5) @:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* The method is overridden to take into account caret width.
@@ -97,7 +97,7 @@ extern class BasicTextAreaUI extends javax.swing.plaf.basic.BasicTextUI
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:require(java5) @:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Creates the view for an element.  Returns a WrappedPlainView or
@@ -106,7 +106,7 @@ extern class BasicTextAreaUI extends javax.swing.plaf.basic.BasicTextUI
 	* @param elem the element
 	* @return the view
 	*/
-	@:overload override public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
+	@:overload @:public override public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
 	
 	/**
 	* Returns the baseline.
@@ -116,7 +116,7 @@ extern class BasicTextAreaUI extends javax.swing.plaf.basic.BasicTextUI
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
+	@:require(java6) @:overload @:public override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
 	
 	/**
 	* Returns an enum indicating how the baseline of the component
@@ -126,7 +126,7 @@ extern class BasicTextAreaUI extends javax.swing.plaf.basic.BasicTextUI
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
+	@:require(java6) @:overload @:public override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
 	
 	
 }
@@ -136,17 +136,17 @@ extern class BasicTextAreaUI extends javax.swing.plaf.basic.BasicTextUI
 */
 @:native('javax$swing$plaf$basic$BasicTextAreaUI$PlainParagraph') @:internal extern class BasicTextAreaUI_PlainParagraph extends javax.swing.text.ParagraphView
 {
-	@:overload override public function setParent(parent : javax.swing.text.View) : Void;
+	@:overload @:public override public function setParent(parent : javax.swing.text.View) : Void;
 	
-	@:overload override private function setPropertiesFromAttributes() : Void;
+	@:overload @:protected override private function setPropertiesFromAttributes() : Void;
 	
 	/**
 	* Fetch the constraining span to flow against for
 	* the given child index.
 	*/
-	@:overload override public function getFlowSpan(index : Int) : Int;
+	@:overload @:public override public function getFlowSpan(index : Int) : Int;
 	
-	@:overload override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
 	/**
 	* Sets the size of the view.  If the size has changed, layout
@@ -156,7 +156,7 @@ extern class BasicTextAreaUI extends javax.swing.plaf.basic.BasicTextUI
 	* @param width the width >= 0
 	* @param height the height >= 0
 	*/
-	@:overload override public function setSize(width : Single, height : Single) : Void;
+	@:overload @:public override public function setSize(width : Single, height : Single) : Void;
 	
 	
 }
@@ -169,13 +169,13 @@ extern class BasicTextAreaUI extends javax.swing.plaf.basic.BasicTextUI
 */
 @:native('javax$swing$plaf$basic$BasicTextAreaUI$PlainParagraph$LogicalView') @:internal extern class BasicTextAreaUI_PlainParagraph_LogicalView extends javax.swing.text.CompositeView
 {
-	@:overload override private function getViewIndexAtPosition(pos : Int) : Int;
+	@:overload @:protected override private function getViewIndexAtPosition(pos : Int) : Int;
 	
-	@:overload override private function updateChildren(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, f : javax.swing.text.ViewFactory) : Bool;
+	@:overload @:protected override private function updateChildren(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, f : javax.swing.text.ViewFactory) : Bool;
 	
-	@:overload override private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:protected override private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
 	
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Forward the DocumentEvent to the given child view.  This
@@ -191,17 +191,17 @@ extern class BasicTextAreaUI extends javax.swing.plaf.basic.BasicTextUI
 	* @see #forwardUpdate
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override private function forwardUpdateToView(v : javax.swing.text.View, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:require(java3) @:overload @:protected override private function forwardUpdateToView(v : javax.swing.text.View, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
 	
-	@:overload override private function isBefore(x : Int, y : Int, alloc : java.awt.Rectangle) : Bool;
+	@:overload @:protected override private function isBefore(x : Int, y : Int, alloc : java.awt.Rectangle) : Bool;
 	
-	@:overload override private function isAfter(x : Int, y : Int, alloc : java.awt.Rectangle) : Bool;
+	@:overload @:protected override private function isAfter(x : Int, y : Int, alloc : java.awt.Rectangle) : Bool;
 	
-	@:overload override private function getViewAtPoint(x : Int, y : Int, alloc : java.awt.Rectangle) : javax.swing.text.View;
+	@:overload @:protected override private function getViewAtPoint(x : Int, y : Int, alloc : java.awt.Rectangle) : javax.swing.text.View;
 	
-	@:overload override private function childAllocation(index : Int, a : java.awt.Rectangle) : Void;
+	@:overload @:protected override private function childAllocation(index : Int, a : java.awt.Rectangle) : Void;
 	
 	
 }

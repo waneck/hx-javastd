@@ -66,7 +66,7 @@ extern interface Header
 	*      true if no error needs to be reported. False if an error needs to be raised.
 	*      See the method javadoc for more discussion.
 	*/
-	@:overload public function isIgnorable(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, roles : java.util.Set<String>) : Bool;
+	@:overload @:public public function isIgnorable(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, roles : java.util.Set<String>) : Bool;
 	
 	/**
 	* Gets the value of the soap:role attribute (or soap:actor for SOAP 1.1).
@@ -82,7 +82,7 @@ extern interface Header
 	* @return
 	*      never null. This string need not be interned.
 	*/
-	@:overload public function getRole(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : String;
+	@:overload @:public public function getRole(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : String;
 	
 	/**
 	* True if this header is to be relayed if not processed.
@@ -101,7 +101,7 @@ extern interface Header
 	* @return
 	*      false.
 	*/
-	@:overload public function isRelay() : Bool;
+	@:overload @:public public function isRelay() : Bool;
 	
 	/**
 	* Gets the namespace URI of this header element.
@@ -109,7 +109,7 @@ extern interface Header
 	* @return
 	*      this string must be interned.
 	*/
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public @:public public function getNamespaceURI() : String;
 	
 	/**
 	* Gets the local name of this header element.
@@ -117,7 +117,7 @@ extern interface Header
 	* @return
 	*      this string must be interned.
 	*/
-	@:overload public function getLocalPart() : String;
+	@:overload @:public @:public public function getLocalPart() : String;
 	
 	/**
 	* Gets the attribute value on the header element.
@@ -134,7 +134,7 @@ extern interface Header
 	*      whitespace-normalizing attributes, so {@link Header} implementation
 	*      doesn't have to do anything.
 	*/
-	@:overload public function getAttribute(nsUri : String, localName : String) : String;
+	@:overload @:public public function getAttribute(nsUri : String, localName : String) : String;
 	
 	/**
 	* Gets the attribute value on the header element.
@@ -177,17 +177,17 @@ extern interface Header
 	* @return
 	*      must not null.
 	*/
-	@:overload public function readHeader() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:public public function readHeader() : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* Reads the header as a JAXB object by using the given unmarshaller.
 	*/
-	@:overload public function readAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
+	@:overload @:public public function readAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
 	
 	/**
 	* Reads the header as a JAXB object by using the given unmarshaller.
 	*/
-	@:overload public function readAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
+	@:overload @:public public function readAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
 	
 	/**
 	* Reads this header as an {@link WSEndpointReference}.
@@ -200,7 +200,7 @@ extern interface Header
 	* @return
 	*      On a successful return, this method never returns null.
 	*/
-	@:overload public function readAsEPR(expected : com.sun.xml.internal.ws.api.addressing.AddressingVersion) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
+	@:overload @:public public function readAsEPR(expected : com.sun.xml.internal.ws.api.addressing.AddressingVersion) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
 	
 	/**
 	* Writes out the header as a fragment.
@@ -209,7 +209,7 @@ extern interface Header
 	*      if the operation fails for some reason. This leaves the
 	*      writer to an undefined state.
 	*/
-	@:overload public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public @:public public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Writes out the header to the given SOAPMessage.
@@ -223,7 +223,7 @@ extern interface Header
 	*      if the operation fails for some reason. This leaves the
 	*      writer to an undefined state.
 	*/
-	@:overload public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public @:public public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
 	
 	/**
 	* Writes out the header as SAX events.
@@ -250,7 +250,7 @@ extern interface Header
 	* @param errorHandler
 	*      The {@link ErrorHandler} that receives parsing errors.
 	*/
-	@:overload public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public @:public public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Used to obtain value XYZ from a header that looks like
@@ -264,7 +264,7 @@ extern interface Header
 	* @return
 	*      Can be empty but always non-null.
 	*/
-	@:overload public function getStringContent() : String;
+	@:overload @:public public function getStringContent() : String;
 	
 	
 }

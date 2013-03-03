@@ -45,7 +45,7 @@ extern interface Decoder
 	* @param messageInfo ...
 	* </p>
 	*/
-	@:overload public function decode(messageInfo : com.sun.pept.ept.MessageInfo) : Void;
+	@:overload @:public public function decode(messageInfo : com.sun.pept.ept.MessageInfo) : Void;
 	
 	/**
 	* <p>
@@ -57,7 +57,7 @@ extern interface Decoder
 	* @param messageInfo ...
 	* </p>
 	*/
-	@:overload public function receiveAndDecode(messageInfo : com.sun.pept.ept.MessageInfo) : Void;
+	@:overload @:public public function receiveAndDecode(messageInfo : com.sun.pept.ept.MessageInfo) : Void;
 	
 	
 }

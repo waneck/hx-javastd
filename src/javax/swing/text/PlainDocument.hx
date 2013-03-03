@@ -30,20 +30,20 @@ extern class PlainDocument extends javax.swing.text.AbstractDocument
 	* size for tabs contained in the content.  The
 	* type for the value is Integer.
 	*/
-	public static var tabSizeAttribute(default, null) : String;
+	@:public @:static @:final public static var tabSizeAttribute(default, null) : String;
 	
 	/**
 	* Name of the attribute that specifies the maximum
 	* length of a line, if there is a maximum length.
 	* The type for the value is Integer.
 	*/
-	public static var lineLimitAttribute(default, null) : String;
+	@:public @:static @:final public static var lineLimitAttribute(default, null) : String;
 	
 	/**
 	* Constructs a plain text document.  A default model using
 	* <code>GapContent</code> is constructed and set.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a plain text document.  A default root element is created,
@@ -51,7 +51,7 @@ extern class PlainDocument extends javax.swing.text.AbstractDocument
 	*
 	* @param c  the container for the content
 	*/
-	@:overload public function new(c : javax.swing.text.AbstractDocument.AbstractDocument_Content) : Void;
+	@:overload @:public public function new(c : javax.swing.text.AbstractDocument.AbstractDocument_Content) : Void;
 	
 	/**
 	* Inserts some content into the document.
@@ -71,7 +71,7 @@ extern class PlainDocument extends javax.swing.text.AbstractDocument
 	*   position within the document
 	* @see Document#insertString
 	*/
-	@:overload override public function insertString(offs : Int, str : String, a : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public override public function insertString(offs : Int, str : String, a : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Gets the default root element for the document model.
@@ -79,7 +79,7 @@ extern class PlainDocument extends javax.swing.text.AbstractDocument
 	* @return the root
 	* @see Document#getDefaultRootElement
 	*/
-	@:overload override public function getDefaultRootElement() : javax.swing.text.Element;
+	@:overload @:public override public function getDefaultRootElement() : javax.swing.text.Element;
 	
 	/**
 	* Creates the root element to be used to represent the
@@ -87,13 +87,13 @@ extern class PlainDocument extends javax.swing.text.AbstractDocument
 	*
 	* @return the element base
 	*/
-	@:overload private function createDefaultRoot() : javax.swing.text.AbstractDocument.AbstractDocument_AbstractElement;
+	@:overload @:protected private function createDefaultRoot() : javax.swing.text.AbstractDocument.AbstractDocument_AbstractElement;
 	
 	/**
 	* Get the paragraph element containing the given position.  Since this
 	* document only models lines, it returns the line instead.
 	*/
-	@:overload override public function getParagraphElement(pos : Int) : javax.swing.text.Element;
+	@:overload @:public override public function getParagraphElement(pos : Int) : javax.swing.text.Element;
 	
 	/**
 	* Updates document structure as a result of text insertion.  This
@@ -103,7 +103,7 @@ extern class PlainDocument extends javax.swing.text.AbstractDocument
 	* @param chng the change event describing the dit
 	* @param attr the set of attributes for the inserted text
 	*/
-	@:overload override private function insertUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:protected override private function insertUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Updates any document structure as a result of text removal.
@@ -114,7 +114,7 @@ extern class PlainDocument extends javax.swing.text.AbstractDocument
 	*
 	* @param chng the change event describing the edit
 	*/
-	@:overload override private function removeUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
+	@:overload @:protected override private function removeUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
 	
 	
 }

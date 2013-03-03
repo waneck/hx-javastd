@@ -25,25 +25,25 @@ package sun.misc;
 */
 extern class Version
 {
-	@:overload public static function init() : Void;
+	@:overload @:public @:static public static function init() : Void;
 	
 	/**
 	* In case you were wondering this method is called by java -version.
 	* Sad that it prints to stderr; would be nicer if default printed on
 	* stdout.
 	*/
-	@:overload public static function print() : Void;
+	@:overload @:public @:static public static function print() : Void;
 	
 	/**
 	* This is the same as print except that it adds an extra line-feed
 	* at the end, typically used by the -showversion in the launcher
 	*/
-	@:overload public static function println() : Void;
+	@:overload @:public @:static public static function println() : Void;
 	
 	/**
 	* Give a stream, it will print version info on it.
 	*/
-	@:overload public static function print(ps : java.io.PrintStream) : Void;
+	@:overload @:public @:static public static function print(ps : java.io.PrintStream) : Void;
 	
 	/**
 	* Returns the major version of the running JVM if it's 1.6 or newer
@@ -52,7 +52,7 @@ extern class Version
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:synchronized public static function jvmMajorVersion() : Int;
+	@:require(java6) @:overload @:public @:static @:synchronized public static function jvmMajorVersion() : Int;
 	
 	/**
 	* Returns the minor version of the running JVM if it's 1.6 or newer
@@ -60,7 +60,7 @@ extern class Version
 	* 1.4.x build.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:synchronized public static function jvmMinorVersion() : Int;
+	@:require(java6) @:overload @:public @:static @:synchronized public static function jvmMinorVersion() : Int;
 	
 	/**
 	* Returns the micro version of the running JVM if it's 1.6 or newer
@@ -68,62 +68,62 @@ extern class Version
 	* 1.4.x build.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:synchronized public static function jvmMicroVersion() : Int;
+	@:require(java6) @:overload @:public @:static @:synchronized public static function jvmMicroVersion() : Int;
 	
 	/**
 	* Returns the update release version of the running JVM if it's
 	* a RE build. It will return 0 if it's an internal build.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:synchronized public static function jvmUpdateVersion() : Int;
+	@:require(java6) @:overload @:public @:static @:synchronized public static function jvmUpdateVersion() : Int;
 	
-	@:overload @:synchronized public static function jvmSpecialVersion() : String;
+	@:overload @:public @:static @:synchronized public static function jvmSpecialVersion() : String;
 	
-	@:overload @:native public static function getJvmSpecialVersion() : String;
+	@:overload @:public @:static @:native public static function getJvmSpecialVersion() : String;
 	
 	/**
 	* Returns the build number of the running JVM if it's a RE build
 	* It will return 0 if it's an internal build.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:synchronized public static function jvmBuildNumber() : Int;
+	@:require(java6) @:overload @:public @:static @:synchronized public static function jvmBuildNumber() : Int;
 	
 	/**
 	* Returns the major version of the running JDK.
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:synchronized public static function jdkMajorVersion() : Int;
+	@:require(java6) @:overload @:public @:static @:synchronized public static function jdkMajorVersion() : Int;
 	
 	/**
 	* Returns the minor version of the running JDK.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:synchronized public static function jdkMinorVersion() : Int;
+	@:require(java6) @:overload @:public @:static @:synchronized public static function jdkMinorVersion() : Int;
 	
 	/**
 	* Returns the micro version of the running JDK.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:synchronized public static function jdkMicroVersion() : Int;
+	@:require(java6) @:overload @:public @:static @:synchronized public static function jdkMicroVersion() : Int;
 	
 	/**
 	* Returns the update release version of the running JDK if it's
 	* a RE build. It will return 0 if it's an internal build.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:synchronized public static function jdkUpdateVersion() : Int;
+	@:require(java6) @:overload @:public @:static @:synchronized public static function jdkUpdateVersion() : Int;
 	
-	@:overload @:synchronized public static function jdkSpecialVersion() : String;
+	@:overload @:public @:static @:synchronized public static function jdkSpecialVersion() : String;
 	
-	@:overload @:native public static function getJdkSpecialVersion() : String;
+	@:overload @:public @:static @:native public static function getJdkSpecialVersion() : String;
 	
 	/**
 	* Returns the build number of the running JDK if it's a RE build
 	* It will return 0 if it's an internal build.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:synchronized public static function jdkBuildNumber() : Int;
+	@:require(java6) @:overload @:public @:static @:synchronized public static function jdkBuildNumber() : Int;
 	
 	
 }

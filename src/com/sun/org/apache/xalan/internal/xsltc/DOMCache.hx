@@ -50,7 +50,7 @@ extern interface DOMCache
 	* @param href The href argument passed to the document function.
 	* @param translet A reference to the translet requesting the document
 	*/
-	@:overload public function retrieveDocument(baseURI : String, href : String, translet : com.sun.org.apache.xalan.internal.xsltc.Translet) : com.sun.org.apache.xalan.internal.xsltc.DOM;
+	@:overload @:public public function retrieveDocument(baseURI : String, href : String, translet : com.sun.org.apache.xalan.internal.xsltc.Translet) : com.sun.org.apache.xalan.internal.xsltc.DOM;
 	
 	
 }

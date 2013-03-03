@@ -28,7 +28,7 @@ extern interface ActionListener extends java.util.EventListener
 	/**
 	* Invoked when an action occurs.
 	*/
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public @:public @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }

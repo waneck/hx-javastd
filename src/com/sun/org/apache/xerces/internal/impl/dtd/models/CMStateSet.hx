@@ -80,28 +80,28 @@ package com.sun.org.apache.xerces.internal.impl.dtd.models;
 //// the XS content models from the schema package -neilg.
 extern class CMStateSet
 {
-	@:overload public function new(bitCount : Int) : Void;
+	@:overload @:public public function new(bitCount : Int) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload @:final public function intersection(setToAnd : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
+	@:overload @:public @:final public function intersection(setToAnd : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
-	@:overload @:final public function getBit(bitToGet : Int) : Bool;
+	@:overload @:public @:final public function getBit(bitToGet : Int) : Bool;
 	
-	@:overload @:final public function isEmpty() : Bool;
+	@:overload @:public @:final public function isEmpty() : Bool;
 	
-	@:overload @:final public function union(setToOr : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
+	@:overload @:public @:final public function union(setToOr : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
-	@:overload @:final public function setBit(bitToSet : Int) : Void;
+	@:overload @:public @:final public function setBit(bitToSet : Int) : Void;
 	
-	@:overload @:final public function setTo(srcSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
+	@:overload @:public @:final public function setTo(srcSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
-	@:overload @:final public function zeroBits() : Void;
+	@:overload @:public @:final public function zeroBits() : Void;
 	
 	/* Optimization(Jan, 2001) */
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

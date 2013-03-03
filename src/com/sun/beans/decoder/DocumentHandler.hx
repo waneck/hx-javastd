@@ -28,7 +28,7 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	/**
 	* Creates new instance of document handler.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the class loader used to instantiate objects.
@@ -37,7 +37,7 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	*
 	* @return the class loader used to instantiate objects
 	*/
-	@:overload public function getClassLoader() : java.lang.ClassLoader;
+	@:overload @:public public function getClassLoader() : java.lang.ClassLoader;
 	
 	/**
 	* Sets the class loader used to instantiate objects.
@@ -46,7 +46,7 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	*
 	* @param loader  a classloader to use
 	*/
-	@:overload public function setClassLoader(loader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function setClassLoader(loader : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Returns the exception listener for parsing.
@@ -57,7 +57,7 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	*
 	* @return the exception listener for parsing
 	*/
-	@:overload public function getExceptionListener() : java.beans.ExceptionListener;
+	@:overload @:public public function getExceptionListener() : java.beans.ExceptionListener;
 	
 	/**
 	* Sets the exception listener for parsing.
@@ -66,21 +66,21 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	*
 	* @param listener  the exception listener for parsing
 	*/
-	@:overload public function setExceptionListener(listener : java.beans.ExceptionListener) : Void;
+	@:overload @:public public function setExceptionListener(listener : java.beans.ExceptionListener) : Void;
 	
 	/**
 	* Returns the owner of this document handler.
 	*
 	* @return the owner of this document handler
 	*/
-	@:overload public function getOwner() : Dynamic;
+	@:overload @:public public function getOwner() : Dynamic;
 	
 	/**
 	* Sets the owner of this document handler.
 	*
 	* @param owner  the owner of this document handler
 	*/
-	@:overload public function setOwner(owner : Dynamic) : Void;
+	@:overload @:public public function setOwner(owner : Dynamic) : Void;
 	
 	/**
 	* Returns the handler for the element with specified name.
@@ -88,7 +88,7 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	* @param name  the name of the element
 	* @return the corresponding element handler
 	*/
-	@:overload public function getElementHandler(name : String) : Class<com.sun.beans.decoder.ElementHandler>;
+	@:overload @:public public function getElementHandler(name : String) : Class<com.sun.beans.decoder.ElementHandler>;
 	
 	/**
 	* Sets the handler for the element with specified name.
@@ -96,7 +96,7 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	* @param name     the name of the element
 	* @param handler  the corresponding element handler
 	*/
-	@:overload public function setElementHandler(name : String, handler : Class<com.sun.beans.decoder.ElementHandler>) : Void;
+	@:overload @:public public function setElementHandler(name : String, handler : Class<com.sun.beans.decoder.ElementHandler>) : Void;
 	
 	/**
 	* Indicates whether the variable with specified identifier is defined.
@@ -105,7 +105,7 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	* @return @{code true} if the variable is defined;
 	*         @{code false} otherwise
 	*/
-	@:overload public function hasVariable(id : String) : Bool;
+	@:overload @:public public function hasVariable(id : String) : Bool;
 	
 	/**
 	* Returns the value of the variable with specified identifier.
@@ -113,7 +113,7 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	* @param id  the identifier
 	* @return the value of the variable
 	*/
-	@:overload public function getVariable(id : String) : Dynamic;
+	@:overload @:public public function getVariable(id : String) : Dynamic;
 	
 	/**
 	* Sets new value of the variable with specified identifier.
@@ -121,19 +121,19 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	* @param id     the identifier
 	* @param value  new value of the variable
 	*/
-	@:overload public function setVariable(id : String, value : Dynamic) : Void;
+	@:overload @:public public function setVariable(id : String, value : Dynamic) : Void;
 	
 	/**
 	* Returns the array of readed objects.
 	*
 	* @return the array of readed objects
 	*/
-	@:overload public function getObjects() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getObjects() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Prepares this handler to read objects from XML document.
 	*/
-	@:overload public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
 	/**
 	* Parses opening tag of XML element
@@ -148,7 +148,7 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	*                    if qualified names are not available
 	* @param attributes  the attributes attached to the element
 	*/
-	@:overload public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Parses closing tag of XML element
@@ -162,7 +162,7 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	* @param qName      the qualified name (with prefix), or the empty string
 	*                   if qualified names are not available
 	*/
-	@:overload public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Parses character data inside XML element.
@@ -171,7 +171,7 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	* @param start   the start position in the character array
 	* @param length  the number of characters to use
 	*/
-	@:overload public function characters(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Handles an exception using current exception listener.
@@ -179,14 +179,14 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	* @param exception  an exception to handle
 	* @see #setExceptionListener
 	*/
-	@:overload public function handleException(exception : java.lang.Exception) : Void;
+	@:overload @:public public function handleException(exception : java.lang.Exception) : Void;
 	
 	/**
 	* Starts parsing of the specified input source.
 	*
 	* @param input  the input source to parse
 	*/
-	@:overload public function parse(input : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function parse(input : org.xml.sax.InputSource) : Void;
 	
 	/**
 	* Resolves class by name using current class loader.
@@ -195,7 +195,7 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	* @param name  the name of the class
 	* @return the object that represents the class
 	*/
-	@:overload public function findClass(name : String) : Class<Dynamic>;
+	@:overload @:public public function findClass(name : String) : Class<Dynamic>;
 	
 	
 }

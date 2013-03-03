@@ -28,38 +28,38 @@ extern class ClassBeanInfoImpl<BeanT> extends com.sun.xml.internal.bind.v2.runti
 	/**
 	* Properties of this bean class but not its ancestor classes.
 	*/
-	public var properties(default, null) : java.NativeArray<com.sun.xml.internal.bind.v2.runtime.property.Property<BeanT>>;
+	@:public @:final public var properties(default, null) : java.NativeArray<com.sun.xml.internal.bind.v2.runtime.property.Property<BeanT>>;
 	
 	/**
 	* {@link ClassBeanInfoImpl} that represents the super class of {@link #jaxbType}.
 	*/
-	public var superClazz(default, null) : com.sun.xml.internal.bind.v2.runtime.ClassBeanInfoImpl<BeanT>;
+	@:public @:final public var superClazz(default, null) : com.sun.xml.internal.bind.v2.runtime.ClassBeanInfoImpl<BeanT>;
 	
-	@:overload override private function link(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
+	@:overload @:protected override private function link(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
 	
-	@:overload override public function wrapUp() : Void;
+	@:overload @:public override public function wrapUp() : Void;
 	
-	@:overload override public function getElementNamespaceURI(bean : BeanT) : String;
+	@:overload @:public override public function getElementNamespaceURI(bean : BeanT) : String;
 	
-	@:overload override public function getElementLocalName(bean : BeanT) : String;
+	@:overload @:public override public function getElementLocalName(bean : BeanT) : String;
 	
-	@:overload override public function createInstance(context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : BeanT;
+	@:overload @:public override public function createInstance(context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : BeanT;
 	
-	@:overload override public function reset(bean : BeanT, context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : Bool;
+	@:overload @:public override public function reset(bean : BeanT, context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : Bool;
 	
-	@:overload override public function getId(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : String;
+	@:overload @:public override public function getId(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : String;
 	
-	@:overload override public function serializeRoot(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public override public function serializeRoot(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload override public function serializeBody(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public override public function serializeBody(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload override public function serializeAttributes(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public override public function serializeAttributes(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload override public function serializeURIs(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public override public function serializeURIs(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload override public function getLoader(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, typeSubstitutionCapable : Bool) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
+	@:overload @:public override public function getLoader(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, typeSubstitutionCapable : Bool) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 	
-	@:overload override public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<BeanT>;
+	@:overload @:public override public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<BeanT>;
 	
 	
 }

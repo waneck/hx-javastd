@@ -21,21 +21,21 @@ package com.sun.org.apache.xerces.internal.impl.xs.models;
 extern class CMNodeFactory
 {
 	/** default constructor */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
-	@:overload public function getCMLeafNode(type : Int, leaf : Dynamic, id : Int, position : Int) : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode;
+	@:overload @:public public function getCMLeafNode(type : Int, leaf : Dynamic, id : Int, position : Int) : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode;
 	
-	@:overload public function getCMRepeatingLeafNode(type : Int, leaf : Dynamic, minOccurs : Int, maxOccurs : Int, id : Int, position : Int) : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode;
+	@:overload @:public public function getCMRepeatingLeafNode(type : Int, leaf : Dynamic, minOccurs : Int, maxOccurs : Int, id : Int, position : Int) : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode;
 	
-	@:overload public function getCMUniOpNode(type : Int, childNode : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode) : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode;
+	@:overload @:public public function getCMUniOpNode(type : Int, childNode : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode) : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode;
 	
-	@:overload public function getCMBinOpNode(type : Int, leftNode : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode, rightNode : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode) : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode;
+	@:overload @:public public function getCMBinOpNode(type : Int, leftNode : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode, rightNode : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode) : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode;
 	
-	@:overload public function nodeCountCheck() : Void;
+	@:overload @:public public function nodeCountCheck() : Void;
 	
-	@:overload public function resetNodeCount() : Void;
+	@:overload @:public public function resetNodeCount() : Void;
 	
 	/**
 	* Sets the value of a property. This method is called by the component
@@ -52,7 +52,7 @@ extern class CMNodeFactory
 	* @throws SAXNotSupportedException The component should not throw
 	*                                  this exception.
 	*/
-	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	
 }

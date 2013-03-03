@@ -26,7 +26,7 @@ package sun.util;
 //// -- This file was mechanically generated: Do not edit! -- //
 extern class CoreResourceBundleControl extends java.util.ResourceBundle.ResourceBundle_Control
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* This method is to provide a customized ResourceBundle.Control to speed
@@ -34,7 +34,7 @@ extern class CoreResourceBundleControl extends java.util.ResourceBundle.Resource
 	*
 	* @return the instance of resource bundle control.
 	*/
-	@:overload public static function getRBControlInstance() : sun.util.CoreResourceBundleControl;
+	@:overload @:public @:static public static function getRBControlInstance() : sun.util.CoreResourceBundleControl;
 	
 	/**
 	* This method is to provide a customized ResourceBundle.Control to speed
@@ -44,20 +44,20 @@ extern class CoreResourceBundleControl extends java.util.ResourceBundle.Resource
 	* @return the instance of resource bundle control if the bundle is JDK's,
 	*    otherwise returns null.
 	*/
-	@:overload public static function getRBControlInstance(bundleName : String) : sun.util.CoreResourceBundleControl;
+	@:overload @:public @:static public static function getRBControlInstance(bundleName : String) : sun.util.CoreResourceBundleControl;
 	
 	/**
 	* @returns a list of candidate locales to search from.
 	* @exception NullPointerException if baseName or locale is null.
 	*/
-	@:overload override public function getCandidateLocales(baseName : String, locale : java.util.Locale) : java.util.List<java.util.Locale>;
+	@:overload @:public override public function getCandidateLocales(baseName : String, locale : java.util.Locale) : java.util.List<java.util.Locale>;
 	
 	/**
 	* @ returns TTL_DONT_CACHE so that ResourceBundle instance won't be cached.
 	* User of this CoreResourceBundleControl should probably maintain a hard reference
 	* to the ResourceBundle object themselves.
 	*/
-	@:overload override public function getTimeToLive(baseName : String, locale : java.util.Locale) : haxe.Int64;
+	@:overload @:public override public function getTimeToLive(baseName : String, locale : java.util.Locale) : haxe.Int64;
 	
 	
 }

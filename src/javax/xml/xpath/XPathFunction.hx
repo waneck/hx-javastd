@@ -39,7 +39,7 @@ extern interface XPathFunction
 	*
 	* @throws XPathFunctionException If <code>args</code> cannot be evaluated with this <code>XPath</code> function.
 	*/
-	@:overload public function evaluate(args : java.util.List<Dynamic>) : Dynamic;
+	@:overload @:public public function evaluate(args : java.util.List<Dynamic>) : Dynamic;
 	
 	
 }

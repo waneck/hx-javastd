@@ -33,7 +33,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 */
 extern class CommentedMethodFinder extends com.sun.tools.doclets.internal.toolkit.util.MethodFinder
 {
-	@:overload public function isCorrectMethod(method : com.sun.javadoc.MethodDoc) : Bool;
+	@:overload @:public public function isCorrectMethod(method : com.sun.javadoc.MethodDoc) : Bool;
 	
 	
 }

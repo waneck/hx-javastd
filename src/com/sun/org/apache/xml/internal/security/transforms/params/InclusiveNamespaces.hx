@@ -22,13 +22,13 @@ package com.sun.org.apache.xml.internal.security.transforms.params;
 extern class InclusiveNamespaces extends com.sun.org.apache.xml.internal.security.utils.ElementProxy implements com.sun.org.apache.xml.internal.security.transforms.TransformParam
 {
 	/** Field _TAG_EC_INCLUSIVENAMESPACES */
-	public static var _TAG_EC_INCLUSIVENAMESPACES(default, null) : String;
+	@:public @:static @:final public static var _TAG_EC_INCLUSIVENAMESPACES(default, null) : String;
 	
 	/** Field _ATT_EC_PREFIXLIST */
-	public static var _ATT_EC_PREFIXLIST(default, null) : String;
+	@:public @:static @:final public static var _ATT_EC_PREFIXLIST(default, null) : String;
 	
 	/** Field ExclusiveCanonicalizationNamespace */
-	public static var ExclusiveCanonicalizationNamespace(default, null) : String;
+	@:public @:static @:final public static var ExclusiveCanonicalizationNamespace(default, null) : String;
 	
 	/**
 	* Constructor XPathContainer
@@ -36,7 +36,7 @@ extern class InclusiveNamespaces extends com.sun.org.apache.xml.internal.securit
 	* @param doc
 	* @param prefixList
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, prefixList : String) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, prefixList : String) : Void;
 	
 	/**
 	* Constructor InclusiveNamespaces
@@ -44,14 +44,14 @@ extern class InclusiveNamespaces extends com.sun.org.apache.xml.internal.securit
 	* @param doc
 	* @param prefixes
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, prefixes : java.util.Set<Dynamic>) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, prefixes : java.util.Set<Dynamic>) : Void;
 	
 	/**
 	* Method getInclusiveNamespaces
 	*
 	* @return The Inclusive Namespace string
 	*/
-	@:overload public function getInclusiveNamespaces() : String;
+	@:overload @:public public function getInclusiveNamespaces() : String;
 	
 	/**
 	* Constructor InclusiveNamespaces
@@ -60,7 +60,7 @@ extern class InclusiveNamespaces extends com.sun.org.apache.xml.internal.securit
 	* @param BaseURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Decodes the <code>inclusiveNamespaces</code> String and returns all
@@ -79,21 +79,21 @@ extern class InclusiveNamespaces extends com.sun.org.apache.xml.internal.securit
 	* @param inclusiveNamespaces
 	* @return A set to string
 	*/
-	@:overload public static function prefixStr2Set(inclusiveNamespaces : String) : java.util.SortedSet<Dynamic>;
+	@:overload @:public @:static public static function prefixStr2Set(inclusiveNamespaces : String) : java.util.SortedSet<Dynamic>;
 	
 	/**
 	* Method getBaseNamespace
 	*
 	* @inheritDoc
 	*/
-	@:overload public function getBaseNamespace() : String;
+	@:overload @:public override public function getBaseNamespace() : String;
 	
 	/**
 	* Method getBaseLocalName
 	*
 	* @inheritDoc
 	*/
-	@:overload public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

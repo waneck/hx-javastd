@@ -64,7 +64,7 @@ package java.rmi.server;
 	* creation
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function createServerSocket(port : Int) : java.net.ServerSocket;
+	@:require(java2) @:overload @:public public function createServerSocket(port : Int) : java.net.ServerSocket;
 	
 	
 }

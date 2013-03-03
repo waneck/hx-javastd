@@ -36,14 +36,14 @@ extern class AmbiguousClass extends sun.tools.java.ClassNotFound
 	/**
 	* The class that was not found
 	*/
-	public var name1 : sun.tools.java.Identifier;
+	@:public public var name1 : sun.tools.java.Identifier;
 	
-	public var name2 : sun.tools.java.Identifier;
+	@:public public var name2 : sun.tools.java.Identifier;
 	
 	/**
 	* Constructor
 	*/
-	@:overload public function new(name1 : sun.tools.java.Identifier, name2 : sun.tools.java.Identifier) : Void;
+	@:overload @:public public function new(name1 : sun.tools.java.Identifier, name2 : sun.tools.java.Identifier) : Void;
 	
 	
 }

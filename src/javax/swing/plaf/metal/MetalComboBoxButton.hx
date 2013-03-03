@@ -40,39 +40,39 @@ extern class MetalComboBoxButton extends javax.swing.JButton
 	* @see MetalComboBoxButton
 	* @author Tom Santos
 	*/
-	private var comboBox : javax.swing.JComboBox<Dynamic>;
+	@:protected private var comboBox : javax.swing.JComboBox<Dynamic>;
 	
-	private var listBox : javax.swing.JList<Dynamic>;
+	@:protected private var listBox : javax.swing.JList<Dynamic>;
 	
-	private var rendererPane : javax.swing.CellRendererPane;
+	@:protected private var rendererPane : javax.swing.CellRendererPane;
 	
-	private var comboIcon : javax.swing.Icon;
+	@:protected private var comboIcon : javax.swing.Icon;
 	
-	private var iconOnly : Bool;
+	@:protected private var iconOnly : Bool;
 	
-	@:overload @:final public function getComboBox() : javax.swing.JComboBox<Dynamic>;
+	@:overload @:public @:final public function getComboBox() : javax.swing.JComboBox<Dynamic>;
 	
-	@:overload @:final public function setComboBox(cb : javax.swing.JComboBox<Dynamic>) : Void;
+	@:overload @:public @:final public function setComboBox(cb : javax.swing.JComboBox<Dynamic>) : Void;
 	
-	@:overload @:final public function getComboIcon() : javax.swing.Icon;
+	@:overload @:public @:final public function getComboIcon() : javax.swing.Icon;
 	
-	@:overload @:final public function setComboIcon(i : javax.swing.Icon) : Void;
+	@:overload @:public @:final public function setComboIcon(i : javax.swing.Icon) : Void;
 	
-	@:overload @:final public function isIconOnly() : Bool;
+	@:overload @:public @:final public function isIconOnly() : Bool;
 	
-	@:overload @:final public function setIconOnly(isIconOnly : Bool) : Void;
+	@:overload @:public @:final public function setIconOnly(isIconOnly : Bool) : Void;
 	
-	@:overload public function new(cb : javax.swing.JComboBox<Dynamic>, i : javax.swing.Icon, pane : javax.swing.CellRendererPane, list : javax.swing.JList<Dynamic>) : Void;
+	@:overload @:public public function new(cb : javax.swing.JComboBox<Dynamic>, i : javax.swing.Icon, pane : javax.swing.CellRendererPane, list : javax.swing.JList<Dynamic>) : Void;
 	
-	@:overload public function new(cb : javax.swing.JComboBox<Dynamic>, i : javax.swing.Icon, onlyIcon : Bool, pane : javax.swing.CellRendererPane, list : javax.swing.JList<Dynamic>) : Void;
+	@:overload @:public public function new(cb : javax.swing.JComboBox<Dynamic>, i : javax.swing.Icon, onlyIcon : Bool, pane : javax.swing.CellRendererPane, list : javax.swing.JList<Dynamic>) : Void;
 	
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public override public function isFocusTraversable() : Bool;
 	
-	@:overload public function setEnabled(enabled : Bool) : Void;
+	@:overload @:public override public function setEnabled(enabled : Bool) : Void;
 	
-	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
 	
 }

@@ -38,7 +38,7 @@ extern class MtomPolicyMapConfigurator implements com.sun.xml.internal.ws.policy
 	* </ol>
 	*
 	*/
-	@:overload public function update(policyMap : com.sun.xml.internal.ws.policy.PolicyMap, model : com.sun.xml.internal.ws.api.model.SEIModel, wsBinding : com.sun.xml.internal.ws.api.WSBinding) : java.util.Collection<com.sun.xml.internal.ws.policy.PolicySubject>;
+	@:overload @:public public function update(policyMap : com.sun.xml.internal.ws.policy.PolicyMap, model : com.sun.xml.internal.ws.api.model.SEIModel, wsBinding : com.sun.xml.internal.ws.api.WSBinding) : java.util.Collection<com.sun.xml.internal.ws.policy.PolicySubject>;
 	
 	
 }

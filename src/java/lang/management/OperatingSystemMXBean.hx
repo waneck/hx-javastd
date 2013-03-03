@@ -73,7 +73,7 @@ package java.lang.management;
 	* @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
 	* @see java.lang.System#getProperty
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the operating system architecture.
@@ -88,7 +88,7 @@ package java.lang.management;
 	* @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
 	* @see java.lang.System#getProperty
 	*/
-	@:overload public function getArch() : String;
+	@:overload @:public public function getArch() : String;
 	
 	/**
 	* Returns the operating system version.
@@ -103,7 +103,7 @@ package java.lang.management;
 	* @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
 	* @see java.lang.System#getProperty
 	*/
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
 	/**
 	* Returns the number of processors available to the Java virtual machine.
@@ -115,7 +115,7 @@ package java.lang.management;
 	* @return  the number of processors available to the virtual
 	*          machine; never smaller than one.
 	*/
-	@:overload public function getAvailableProcessors() : Int;
+	@:overload @:public public function getAvailableProcessors() : Int;
 	
 	/**
 	* Returns the system load average for the last minute.
@@ -137,7 +137,7 @@ package java.lang.management;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getSystemLoadAverage() : Float;
+	@:require(java6) @:overload @:public public function getSystemLoadAverage() : Float;
 	
 	
 }

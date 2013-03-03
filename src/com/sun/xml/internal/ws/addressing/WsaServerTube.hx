@@ -25,29 +25,29 @@ package com.sun.xml.internal.ws.addressing;
 */
 extern class WsaServerTube extends com.sun.xml.internal.ws.addressing.WsaTube
 {
-	@:overload public function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
+	@:overload @:public public function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload public function new(that : com.sun.xml.internal.ws.addressing.WsaServerTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload @:public public function new(that : com.sun.xml.internal.ws.addressing.WsaServerTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
-	@:overload override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.addressing.WsaServerTube;
+	@:overload @:public override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.addressing.WsaServerTube;
 	
-	@:overload override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload private function isAnonymousRequired(wbo : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation) : Bool;
+	@:overload @:protected private function isAnonymousRequired(wbo : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation) : Bool;
 	
-	@:overload private function checkAnonymousSemantics(wbo : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, replyTo : com.sun.xml.internal.ws.api.addressing.WSEndpointReference, faultTo : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
+	@:overload @:protected private function checkAnonymousSemantics(wbo : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, replyTo : com.sun.xml.internal.ws.api.addressing.WSEndpointReference, faultTo : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
 	
-	@:overload override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override private function validateAction(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:protected override private function validateAction(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload override private function checkMessageAddressingProperties(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:protected override private function checkMessageAddressingProperties(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	/**
 	* @deprecated
 	*      Use {@link JAXWSProperties#ADDRESSING_MESSAGEID}.
 	*/
-	public static var REQUEST_MESSAGE_ID(default, null) : String;
+	@:public @:static @:final public static var REQUEST_MESSAGE_ID(default, null) : String;
 	
 	
 }

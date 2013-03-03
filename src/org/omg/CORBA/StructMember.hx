@@ -45,26 +45,26 @@ extern class StructMember implements org.omg.CORBA.portable.IDLEntity
 	* this <code>StructMember</code> object.
 	* @serial
 	*/
-	public var name : String;
+	@:public public var name : String;
 	
 	/**
 	* The type of the struct member described by
 	* this <code>StructMember</code> object.
 	* @serial
 	*/
-	public var type : org.omg.CORBA.TypeCode;
+	@:public public var type : org.omg.CORBA.TypeCode;
 	
 	/**
 	* The typedef that represents the IDL type of the struct member described by
 	* this <code>StructMember</code> object.
 	* @serial
 	*/
-	public var type_def : org.omg.CORBA.IDLType;
+	@:public public var type_def : org.omg.CORBA.IDLType;
 	
 	/**
 	* Constructs a default <code>StructMember</code> object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>StructMember</code> object initialized with the
@@ -76,7 +76,7 @@ extern class StructMember implements org.omg.CORBA.portable.IDLEntity
 	* @param __type_def an <code>IDLType</code> object representing the IDL type
 	*        of the struct member
 	*/
-	@:overload public function new(__name : String, __type : org.omg.CORBA.TypeCode, __type_def : org.omg.CORBA.IDLType) : Void;
+	@:overload @:public public function new(__name : String, __type : org.omg.CORBA.TypeCode, __type_def : org.omg.CORBA.IDLType) : Void;
 	
 	
 }

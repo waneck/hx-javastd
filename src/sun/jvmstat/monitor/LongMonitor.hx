@@ -37,7 +37,7 @@ package sun.jvmstat.monitor;
 	*
 	* @return long - the current value of the associated LongInstrument object.
 	*/
-	@:overload public function longValue() : haxe.Int64;
+	@:overload @:public public function longValue() : haxe.Int64;
 	
 	
 }

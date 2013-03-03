@@ -25,13 +25,13 @@ package com.sun.imageio.plugins.png;
 */
 extern class PNGImageReaderSpi extends javax.imageio.spi.ImageReaderSpi
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function getDescription(locale : java.util.Locale) : String;
+	@:overload @:public override public function getDescription(locale : java.util.Locale) : String;
 	
-	@:overload override public function canDecodeInput(input : Dynamic) : Bool;
+	@:overload @:public override public function canDecodeInput(input : Dynamic) : Bool;
 	
-	@:overload override public function createReaderInstance(extension : Dynamic) : javax.imageio.ImageReader;
+	@:overload @:public override public function createReaderInstance(extension : Dynamic) : javax.imageio.ImageReader;
 	
 	
 }

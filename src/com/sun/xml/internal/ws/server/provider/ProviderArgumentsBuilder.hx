@@ -28,27 +28,27 @@ package com.sun.xml.internal.ws.server.provider;
 	/**
 	* Creates a fault {@link Message} from method invocation's exception
 	*/
-	@:overload @:abstract private function getResponseMessage(e : java.lang.Exception) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:protected @:abstract private function getResponseMessage(e : java.lang.Exception) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates {@link Message} from method invocation's return value
 	*/
-	@:overload private function getResponse(request : com.sun.xml.internal.ws.api.message.Packet, e : java.lang.Exception, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:protected private function getResponse(request : com.sun.xml.internal.ws.api.message.Packet, e : java.lang.Exception, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	/**
 	* Binds {@link com.sun.xml.internal.ws.api.message.Message} to method invocation parameter
 	* @param packet
 	*/
-	@:overload @:abstract private function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : T;
+	@:overload @:protected @:abstract private function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : T;
 	
-	@:overload @:abstract private function getResponseMessage(returnValue : T) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:protected @:abstract private function getResponseMessage(returnValue : T) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates {@link Packet} from method invocation's return value
 	*/
-	@:overload private function getResponse(request : com.sun.xml.internal.ws.api.message.Packet, returnValue : T, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:protected private function getResponse(request : com.sun.xml.internal.ws.api.message.Packet, returnValue : T, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.api.message.Packet;
 	
-	@:overload public static function create(model : com.sun.xml.internal.ws.server.provider.ProviderEndpointModel<Dynamic>, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.server.provider.ProviderArgumentsBuilder<Dynamic>;
+	@:overload @:public @:static public static function create(model : com.sun.xml.internal.ws.server.provider.ProviderEndpointModel<Dynamic>, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.server.provider.ProviderArgumentsBuilder<Dynamic>;
 	
 	
 }

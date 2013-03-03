@@ -30,15 +30,15 @@ package sun.misc;
 */
 extern class LRUCache<N, V>
 {
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
-	@:overload @:abstract private function create(name : N) : V;
+	@:overload @:abstract @:protected private function create(name : N) : V;
 	
-	@:overload @:abstract private function hasName(ob : V, name : N) : Bool;
+	@:overload @:abstract @:protected private function hasName(ob : V, name : N) : Bool;
 	
-	@:overload public static function moveToFront(oa : java.NativeArray<Dynamic>, i : Int) : Void;
+	@:overload @:public @:static public static function moveToFront(oa : java.NativeArray<Dynamic>, i : Int) : Void;
 	
-	@:overload public function forName(name : N) : V;
+	@:overload @:public public function forName(name : N) : V;
 	
 	
 }

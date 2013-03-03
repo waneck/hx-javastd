@@ -26,7 +26,7 @@ package com.sun.xml.internal.xsom.impl.parser;
 extern class ParserContext
 {
 	/** SchemaSet to which a newly parsed schema is put in. */
-	public var schemaSet(default, null) : com.sun.xml.internal.xsom.impl.SchemaSetImpl;
+	@:public @:final public var schemaSet(default, null) : com.sun.xml.internal.xsom.impl.SchemaSetImpl;
 	
 	/**
 	* Documents that are parsed already. Used to avoid cyclic inclusion/double
@@ -35,22 +35,22 @@ extern class ParserContext
 	* The actual data structure is map from {@link SchemaDocumentImpl} to itself,
 	* so that we can access the {@link SchemaDocumentImpl} itself.
 	*/
-	public var parsedDocuments(default, null) : java.util.Map<com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl>;
+	@:public @:final public var parsedDocuments(default, null) : java.util.Map<com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl>;
 	
-	@:overload public function new(owner : com.sun.xml.internal.xsom.parser.XSOMParser, parser : com.sun.xml.internal.xsom.parser.XMLParser) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.xsom.parser.XSOMParser, parser : com.sun.xml.internal.xsom.parser.XMLParser) : Void;
 	
-	@:overload public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
-	@:overload public function getAnnotationParserFactory() : com.sun.xml.internal.xsom.parser.AnnotationParserFactory;
+	@:overload @:public public function getAnnotationParserFactory() : com.sun.xml.internal.xsom.parser.AnnotationParserFactory;
 	
 	/**
 	* Parses a new XML Schema document.
 	*/
-	@:overload public function parse(source : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function parse(source : org.xml.sax.InputSource) : Void;
 	
-	@:overload public function getResult() : com.sun.xml.internal.xsom.XSSchemaSet;
+	@:overload @:public public function getResult() : com.sun.xml.internal.xsom.XSSchemaSet;
 	
-	@:overload public function newNGCCRuntime() : com.sun.xml.internal.xsom.impl.parser.NGCCRuntimeEx;
+	@:overload @:public public function newNGCCRuntime() : com.sun.xml.internal.xsom.impl.parser.NGCCRuntimeEx;
 	
 	
 }

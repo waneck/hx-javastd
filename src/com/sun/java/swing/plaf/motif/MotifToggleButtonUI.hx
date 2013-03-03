@@ -37,19 +37,19 @@ package com.sun.java.swing.plaf.motif;
 */
 extern class MotifToggleButtonUI extends javax.swing.plaf.basic.BasicToggleButtonUI
 {
-	private var selectColor : java.awt.Color;
+	@:protected private var selectColor : java.awt.Color;
 	
-	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function installDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:public override public function installDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload private function getSelectColor() : java.awt.Color;
+	@:overload @:protected private function getSelectColor() : java.awt.Color;
 	
-	@:overload private function paintButtonPressed(g : java.awt.Graphics, b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function paintButtonPressed(g : java.awt.Graphics, b : javax.swing.AbstractButton) : Void;
 	
-	@:overload public function getInsets(c : javax.swing.JComponent) : java.awt.Insets;
+	@:overload @:public public function getInsets(c : javax.swing.JComponent) : java.awt.Insets;
 	
 	
 }

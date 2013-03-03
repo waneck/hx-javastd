@@ -29,13 +29,13 @@ package javax.swing.text.html;
 	* Stores the Option that has been marked its
 	* selected attribute set.
 	*/
-	@:overload public function setInitialSelection(option : javax.swing.text.html.Option) : Void;
+	@:overload @:public public function setInitialSelection(option : javax.swing.text.html.Option) : Void;
 	
 	/**
 	* Fetches the Option item that represents that was
 	* initially set to a selected state.
 	*/
-	@:overload public function getInitialSelection() : javax.swing.text.html.Option;
+	@:overload @:public public function getInitialSelection() : javax.swing.text.html.Option;
 	
 	
 }

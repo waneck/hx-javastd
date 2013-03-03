@@ -76,7 +76,7 @@ extern class InvalidDatatypeValueException extends com.sun.org.apache.xerces.int
 	* @param key  error code
 	* @param args error arguments
 	*/
-	@:overload public function new(key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(key : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

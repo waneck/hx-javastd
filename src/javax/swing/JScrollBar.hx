@@ -30,22 +30,22 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* (aka "visibleAmount") and current value.
 	* @see #setModel
 	*/
-	private var model : javax.swing.BoundedRangeModel;
+	@:protected private var model : javax.swing.BoundedRangeModel;
 	
 	/**
 	* @see #setOrientation
 	*/
-	private var orientation : Int;
+	@:protected private var orientation : Int;
 	
 	/**
 	* @see #setUnitIncrement
 	*/
-	private var unitIncrement : Int;
+	@:protected private var unitIncrement : Int;
 	
 	/**
 	* @see #setBlockIncrement
 	*/
-	private var blockIncrement : Int;
+	@:protected private var blockIncrement : Int;
 	
 	/**
 	* Creates a scrollbar with the specified orientation,
@@ -66,7 +66,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @see #setMinimum
 	* @see #setMaximum
 	*/
-	@:overload public function new(orientation : Int, value : Int, extent : Int, min : Int, max : Int) : Void;
+	@:overload @:public public function new(orientation : Int, value : Int, extent : Int, min : Int, max : Int) : Void;
 	
 	/**
 	* Creates a scrollbar with the specified orientation
@@ -78,7 +78,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* extent = 10
 	* </pre>
 	*/
-	@:overload public function new(orientation : Int) : Void;
+	@:overload @:public public function new(orientation : Int) : Void;
 	
 	/**
 	* Creates a vertical scrollbar with the following initial values:
@@ -89,7 +89,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* extent = 10
 	* </pre>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets the L&F object that renders this component.
@@ -103,7 +103,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel
 	*/
-	@:require(java4) @:overload public function setUI(ui : javax.swing.plaf.ScrollBarUI) : Void;
+	@:require(java4) @:overload @:public public function setUI(ui : javax.swing.plaf.ScrollBarUI) : Void;
 	
 	/**
 	* Returns the delegate that implements the look and feel for
@@ -111,13 +111,13 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	*
 	* @see JComponent#setUI
 	*/
-	@:overload public function getUI() : javax.swing.plaf.ScrollBarUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.ScrollBarUI;
 	
 	/**
 	* Overrides <code>JComponent.updateUI</code>.
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the LookAndFeel class for this component.
@@ -126,7 +126,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Returns the component's orientation (horizontal or vertical).
@@ -135,7 +135,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @see #setOrientation
 	* @see java.awt.Adjustable#getOrientation
 	*/
-	@:overload public function getOrientation() : Int;
+	@:overload @:public public function getOrientation() : Int;
 	
 	/**
 	* Set the scrollbar's orientation to either VERTICAL or
@@ -151,7 +151,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	*         enum: VERTICAL JScrollBar.VERTICAL
 	*               HORIZONTAL JScrollBar.HORIZONTAL
 	*/
-	@:overload public function setOrientation(orientation : Int) : Void;
+	@:overload @:public public function setOrientation(orientation : Int) : Void;
 	
 	/**
 	* Returns data model that handles the scrollbar's four
@@ -159,7 +159,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	*
 	* @see #setModel
 	*/
-	@:overload public function getModel() : javax.swing.BoundedRangeModel;
+	@:overload @:public public function getModel() : javax.swing.BoundedRangeModel;
 	
 	/**
 	* Sets the model that handles the scrollbar's four
@@ -171,7 +171,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	*       expert: true
 	* description: The scrollbar's BoundedRangeModel.
 	*/
-	@:overload public function setModel(newModel : javax.swing.BoundedRangeModel) : Void;
+	@:overload @:public public function setModel(newModel : javax.swing.BoundedRangeModel) : Void;
 	
 	/**
 	* Returns the amount to change the scrollbar's value by,
@@ -193,7 +193,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @see #setValue
 	* @see Scrollable#getScrollableUnitIncrement
 	*/
-	@:overload public function getUnitIncrement(direction : Int) : Int;
+	@:overload @:public public function getUnitIncrement(direction : Int) : Int;
 	
 	/**
 	* Sets the unitIncrement property.
@@ -206,7 +206,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	*       bound: true
 	* description: The scrollbar's unit increment.
 	*/
-	@:overload public function setUnitIncrement(unitIncrement : Int) : Void;
+	@:overload @:public public function setUnitIncrement(unitIncrement : Int) : Void;
 	
 	/**
 	* Returns the amount to change the scrollbar's value by,
@@ -228,7 +228,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @see #setValue
 	* @see Scrollable#getScrollableBlockIncrement
 	*/
-	@:overload public function getBlockIncrement(direction : Int) : Int;
+	@:overload @:public public function getBlockIncrement(direction : Int) : Int;
 	
 	/**
 	* Sets the blockIncrement property.
@@ -241,28 +241,28 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	*       bound: true
 	* description: The scrollbar's block increment.
 	*/
-	@:overload public function setBlockIncrement(blockIncrement : Int) : Void;
+	@:overload @:public public function setBlockIncrement(blockIncrement : Int) : Void;
 	
 	/**
 	* For backwards compatibility with java.awt.Scrollbar.
 	* @see Adjustable#getUnitIncrement
 	* @see #getUnitIncrement(int)
 	*/
-	@:overload public function getUnitIncrement() : Int;
+	@:overload @:public public function getUnitIncrement() : Int;
 	
 	/**
 	* For backwards compatibility with java.awt.Scrollbar.
 	* @see Adjustable#getBlockIncrement
 	* @see #getBlockIncrement(int)
 	*/
-	@:overload public function getBlockIncrement() : Int;
+	@:overload @:public public function getBlockIncrement() : Int;
 	
 	/**
 	* Returns the scrollbar's value.
 	* @return the model's value property
 	* @see #setValue
 	*/
-	@:overload public function getValue() : Int;
+	@:overload @:public public function getValue() : Int;
 	
 	/**
 	* Sets the scrollbar's value.  This method just forwards the value
@@ -274,7 +274,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	*   preferred: true
 	* description: The scrollbar's current value.
 	*/
-	@:overload public function setValue(value : Int) : Void;
+	@:overload @:public public function setValue(value : Int) : Void;
 	
 	/**
 	* Returns the scrollbar's extent, aka its "visibleAmount".  In many
@@ -284,7 +284,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @return the value of the model's extent property
 	* @see #setVisibleAmount
 	*/
-	@:overload public function getVisibleAmount() : Int;
+	@:overload @:public public function getVisibleAmount() : Int;
 	
 	/**
 	* Set the model's extent property.
@@ -295,7 +295,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	*   preferred: true
 	* description: The amount of the view that is currently visible.
 	*/
-	@:overload public function setVisibleAmount(extent : Int) : Void;
+	@:overload @:public public function setVisibleAmount(extent : Int) : Void;
 	
 	/**
 	* Returns the minimum value supported by the scrollbar
@@ -304,7 +304,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @return the value of the model's minimum property
 	* @see #setMinimum
 	*/
-	@:overload public function getMinimum() : Int;
+	@:overload @:public public function getMinimum() : Int;
 	
 	/**
 	* Sets the model's minimum property.
@@ -315,7 +315,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	*   preferred: true
 	* description: The scrollbar's minimum value.
 	*/
-	@:overload public function setMinimum(minimum : Int) : Void;
+	@:overload @:public public function setMinimum(minimum : Int) : Void;
 	
 	/**
 	* The maximum value of the scrollbar is maximum - extent.
@@ -323,7 +323,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @return the value of the model's maximum property
 	* @see #setMaximum
 	*/
-	@:overload public function getMaximum() : Int;
+	@:overload @:public public function getMaximum() : Int;
 	
 	/**
 	* Sets the model's maximum property.  Note that the scrollbar's value
@@ -335,7 +335,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	*   preferred: true
 	* description: The scrollbar's maximum value.
 	*/
-	@:overload public function setMaximum(maximum : Int) : Void;
+	@:overload @:public public function setMaximum(maximum : Int) : Void;
 	
 	/**
 	* True if the scrollbar knob is being dragged.
@@ -343,7 +343,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @return the value of the model's valueIsAdjusting property
 	* @see #setValueIsAdjusting
 	*/
-	@:overload public function getValueIsAdjusting() : Bool;
+	@:overload @:public public function getValueIsAdjusting() : Bool;
 	
 	/**
 	* Sets the model's valueIsAdjusting property.  Scrollbar look and
@@ -358,7 +358,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	*      expert: true
 	* description: True if the scrollbar thumb is being dragged.
 	*/
-	@:overload public function setValueIsAdjusting(b : Bool) : Void;
+	@:overload @:public public function setValueIsAdjusting(b : Bool) : Void;
 	
 	/**
 	* Sets the four BoundedRangeModel properties after forcing
@@ -374,7 +374,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @see #setMinimum
 	* @see #setMaximum
 	*/
-	@:overload public function setValues(newValue : Int, newExtent : Int, newMin : Int, newMax : Int) : Void;
+	@:overload @:public public function setValues(newValue : Int, newExtent : Int, newMin : Int, newMax : Int) : Void;
 	
 	/**
 	* Adds an AdjustmentListener.  Adjustment listeners are notified
@@ -393,7 +393,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @see #removeAdjustmentListener
 	* @see BoundedRangeModel#addChangeListener
 	*/
-	@:overload public function addAdjustmentListener(l : java.awt.event.AdjustmentListener) : Void;
+	@:overload @:public public function addAdjustmentListener(l : java.awt.event.AdjustmentListener) : Void;
 	
 	/**
 	* Removes an AdjustmentEvent listener.
@@ -401,7 +401,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @param l the AdjustmentLister to remove
 	* @see #addAdjustmentListener
 	*/
-	@:overload public function removeAdjustmentListener(l : java.awt.event.AdjustmentListener) : Void;
+	@:overload @:public public function removeAdjustmentListener(l : java.awt.event.AdjustmentListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>AdjustmentListener</code>s added
@@ -411,7 +411,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAdjustmentListeners() : java.NativeArray<java.awt.event.AdjustmentListener>;
+	@:require(java4) @:overload @:public public function getAdjustmentListeners() : java.NativeArray<java.awt.event.AdjustmentListener>;
 	
 	/**
 	* Notify listeners that the scrollbar's model has changed.
@@ -419,19 +419,19 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @see #addAdjustmentListener
 	* @see EventListenerList
 	*/
-	@:overload private function fireAdjustmentValueChanged(id : Int, type : Int, value : Int) : Void;
+	@:overload @:protected private function fireAdjustmentValueChanged(id : Int, type : Int, value : Int) : Void;
 	
 	/**
 	* The scrollbar is flexible along it's scrolling axis and
 	* rigid along the other axis.
 	*/
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
 	/**
 	* The scrollbar is flexible along it's scrolling axis and
 	* rigid along the other axis.
 	*/
-	@:overload override public function getMaximumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize() : java.awt.Dimension;
 	
 	/**
 	* Enables the component so that the knob position can be changed.
@@ -440,7 +440,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @param x a boolean value, where true enables the component and
 	*          false disables it
 	*/
-	@:overload override public function setEnabled(x : Bool) : Void;
+	@:overload @:public override public function setEnabled(x : Bool) : Void;
 	
 	/**
 	* Returns a string representation of this JScrollBar. This method
@@ -451,7 +451,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	*
 	* @return  a string representation of this JScrollBar.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JScrollBar.
@@ -462,7 +462,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @return an AccessibleJScrollBar that serves as the
 	*         AccessibleContext of this JScrollBar
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -475,7 +475,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 */
 @:native('javax$swing$JScrollBar$ModelListener') @:internal extern class JScrollBar_ModelListener implements javax.swing.event.ChangeListener implements java.io.Serializable
 {
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }
@@ -503,7 +503,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the role of this object.
@@ -511,7 +511,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the AccessibleValue associated with this object.  In the
@@ -521,35 +521,35 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Get the accessible value of this object.
 	*
 	* @return The current value of this object.
 	*/
-	@:overload public function getCurrentAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getCurrentAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Set the value of this object as a Number.
 	*
 	* @return True if the value was set.
 	*/
-	@:overload public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
+	@:overload @:public public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
 	
 	/**
 	* Get the minimum accessible value of this object.
 	*
 	* @return The minimum value of this object.
 	*/
-	@:overload public function getMinimumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMinimumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Get the maximum accessible value of this object.
 	*
 	* @return The maximum value of this object.
 	*/
-	@:overload public function getMaximumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMaximumAccessibleValue() : java.lang.Number;
 	
 	
 }

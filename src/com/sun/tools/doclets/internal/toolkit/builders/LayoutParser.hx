@@ -39,24 +39,24 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param configuration the current configuration of the doclet.
 	* @return an instance of the BuilderXML.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : com.sun.tools.doclets.internal.toolkit.builders.LayoutParser;
+	@:overload @:public @:static public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : com.sun.tools.doclets.internal.toolkit.builders.LayoutParser;
 	
 	/**
 	* Parse the XML specifying the layout of the documentation.
 	*
 	* @return the list of XML elements parsed.
 	*/
-	@:overload public function parseXML(root : String) : com.sun.tools.doclets.internal.toolkit.builders.XMLNode;
+	@:overload @:public public function parseXML(root : String) : com.sun.tools.doclets.internal.toolkit.builders.XMLNode;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function startElement(namespaceURI : String, sName : String, qName : String, attrs : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, sName : String, qName : String, attrs : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function endElement(namespaceURI : String, sName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, sName : String, qName : String) : Void;
 	
 	
 }

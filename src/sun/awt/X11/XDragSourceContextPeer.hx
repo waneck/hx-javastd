@@ -25,40 +25,40 @@ package sun.awt.X11;
 */
 extern class XDragSourceContextPeer extends sun.awt.dnd.SunDragSourceContextPeer implements sun.awt.X11.XDragSourceProtocolListener
 {
-	@:overload private function startDrag(transferable : java.awt.datatransfer.Transferable, formats : java.NativeArray<haxe.Int64>, formatMap : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:protected override private function startDrag(transferable : java.awt.datatransfer.Transferable, formats : java.NativeArray<haxe.Int64>, formatMap : java.util.Map<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function getProxyModeSourceWindow() : haxe.Int64;
+	@:overload @:public public function getProxyModeSourceWindow() : haxe.Int64;
 	
-	@:overload public static function setProxyModeSourceWindow(window : haxe.Int64) : Void;
+	@:overload @:public @:static public static function setProxyModeSourceWindow(window : haxe.Int64) : Void;
 	
 	/**
 	* set cursor
 	*/
-	@:overload public function setCursor(c : java.awt.Cursor) : Void;
+	@:overload @:public override public function setCursor(c : java.awt.Cursor) : Void;
 	
-	@:overload private function setNativeCursor(nativeCtxt : haxe.Int64, c : java.awt.Cursor, cType : Int) : Void;
+	@:overload @:protected override private function setNativeCursor(nativeCtxt : haxe.Int64, c : java.awt.Cursor, cType : Int) : Void;
 	
-	@:overload private function needsBogusExitBeforeDrop() : Bool;
+	@:overload @:protected private function needsBogusExitBeforeDrop() : Bool;
 	
 	/**
 	* The caller must own awtLock.
 	*/
-	@:overload public function cleanup(time : haxe.Int64) : Void;
+	@:overload @:public public function cleanup(time : haxe.Int64) : Void;
 	
 	/* XDragSourceProtocolListener implementation */
-	@:overload public function handleDragReply(action : Int) : Void;
+	@:overload @:public public function handleDragReply(action : Int) : Void;
 	
-	@:overload public function handleDragReply(action : Int, x : Int, y : Int) : Void;
+	@:overload @:public public function handleDragReply(action : Int, x : Int, y : Int) : Void;
 	
-	@:overload public function handleDragReply(action : Int, x : Int, y : Int, modifiers : Int) : Void;
+	@:overload @:public public function handleDragReply(action : Int, x : Int, y : Int, modifiers : Int) : Void;
 	
-	@:overload public function handleDragFinished() : Void;
+	@:overload @:public public function handleDragFinished() : Void;
 	
-	@:overload public function handleDragFinished(success : Bool) : Void;
+	@:overload @:public public function handleDragFinished(success : Bool) : Void;
 	
-	@:overload public function handleDragFinished(success : Bool, action : Int) : Void;
+	@:overload @:public public function handleDragFinished(success : Bool, action : Int) : Void;
 	
-	@:overload public function handleDragFinished(success : Bool, action : Int, x : Int, y : Int) : Void;
+	@:overload @:public public function handleDragFinished(success : Bool, action : Int, x : Int, y : Int) : Void;
 	
 	
 }

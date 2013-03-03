@@ -30,11 +30,11 @@ package com.sun.media.sound;
 */
 extern class SF2LayerRegion extends com.sun.media.sound.SF2Region
 {
-	private var sample : com.sun.media.sound.SF2Sample;
+	@:protected private var sample : com.sun.media.sound.SF2Sample;
 	
-	@:overload public function getSample() : com.sun.media.sound.SF2Sample;
+	@:overload @:public public function getSample() : com.sun.media.sound.SF2Sample;
 	
-	@:overload public function setSample(sample : com.sun.media.sound.SF2Sample) : Void;
+	@:overload @:public public function setSample(sample : com.sun.media.sound.SF2Sample) : Void;
 	
 	
 }

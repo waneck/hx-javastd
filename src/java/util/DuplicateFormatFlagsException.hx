@@ -41,16 +41,16 @@ package java.util;
 	* @param  f
 	*         The set of format flags which contain a duplicate flag.
 	*/
-	@:overload public function new(f : String) : Void;
+	@:overload @:public public function new(f : String) : Void;
 	
 	/**
 	* Returns the set of flags which contains a duplicate flag.
 	*
 	* @return  The flags
 	*/
-	@:overload public function getFlags() : String;
+	@:overload @:public public function getFlags() : String;
 	
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

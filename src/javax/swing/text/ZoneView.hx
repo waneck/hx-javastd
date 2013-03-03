@@ -78,12 +78,12 @@ package javax.swing.text;
 	* @param elem the element this view is responsible for
 	* @param axis either View.X_AXIS or View.Y_AXIS
 	*/
-	@:overload public function new(elem : javax.swing.text.Element, axis : Int) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element, axis : Int) : Void;
 	
 	/**
 	* Get the current maximum zone size.
 	*/
-	@:overload public function getMaximumZoneSize() : Int;
+	@:overload @:public public function getMaximumZoneSize() : Int;
 	
 	/**
 	* Set the desired maximum zone size.  A
@@ -96,13 +96,13 @@ package javax.swing.text;
 	* may represent before attempting to break
 	* the zone into a smaller size.
 	*/
-	@:overload public function setMaximumZoneSize(size : Int) : Void;
+	@:overload @:public public function setMaximumZoneSize(size : Int) : Void;
 	
 	/**
 	* Get the current setting of the number of zones
 	* allowed to be loaded at the same time.
 	*/
-	@:overload public function getMaxZonesLoaded() : Int;
+	@:overload @:public public function getMaxZonesLoaded() : Int;
 	
 	/**
 	* Sets the current setting of the number of zones
@@ -114,7 +114,7 @@ package javax.swing.text;
 	*  to be actively loaded, must be greater than 0
 	* @exception IllegalArgumentException if <code>mzl</code> is < 1
 	*/
-	@:overload public function setMaxZonesLoaded(mzl : Int) : Void;
+	@:overload @:public public function setMaxZonesLoaded(mzl : Int) : Void;
 	
 	/**
 	* Called by a zone when it gets loaded.  This happens when
@@ -125,7 +125,7 @@ package javax.swing.text;
 	*
 	* @param zone the child view that was just loaded.
 	*/
-	@:overload private function zoneWasLoaded(zone : javax.swing.text.View) : Void;
+	@:overload @:protected private function zoneWasLoaded(zone : javax.swing.text.View) : Void;
 	
 	/**
 	* Unload a zone (Convert the zone to its memory saving state).
@@ -137,7 +137,7 @@ package javax.swing.text;
 	* @param zone the child view desired to be set to an
 	*  unloaded state.
 	*/
-	@:overload private function unloadZone(zone : javax.swing.text.View) : Void;
+	@:overload @:protected private function unloadZone(zone : javax.swing.text.View) : Void;
 	
 	/**
 	* Determine if a zone is in the loaded state.
@@ -146,7 +146,7 @@ package javax.swing.text;
 	* Therefore, the default implementation is to return
 	* true if the view has children.
 	*/
-	@:overload private function isZoneLoaded(zone : javax.swing.text.View) : Bool;
+	@:overload @:protected private function isZoneLoaded(zone : javax.swing.text.View) : Bool;
 	
 	/**
 	* Create a view to represent a zone for the given
@@ -163,7 +163,7 @@ package javax.swing.text;
 	*  be > getStartOffset() and <= getEndOffset().  This
 	*  value should also be > p0.
 	*/
-	@:overload private function createZone(p0 : Int, p1 : Int) : javax.swing.text.View;
+	@:overload @:protected private function createZone(p0 : Int, p1 : Int) : javax.swing.text.View;
 	
 	/**
 	* Loads all of the children to initialize the view.
@@ -176,7 +176,7 @@ package javax.swing.text;
 	*
 	* @param f the view factory
 	*/
-	@:overload override private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:protected override private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Returns the child view index representing the given position in
@@ -186,7 +186,7 @@ package javax.swing.text;
 	* @return  index of the view representing the given position, or
 	*   -1 if no view represents that position
 	*/
-	@:overload override private function getViewIndexAtPosition(pos : Int) : Int;
+	@:overload @:protected override private function getViewIndexAtPosition(pos : Int) : Int;
 	
 	/**
 	* The superclass behavior will try to update the child views
@@ -195,7 +195,7 @@ package javax.swing.text;
 	* associated element.  This is reimplemented to do nothing
 	* and return false.
 	*/
-	@:overload private function updateChildren(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, f : javax.swing.text.ViewFactory) : Bool;
+	@:overload @:protected override private function updateChildren(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, f : javax.swing.text.ViewFactory) : Bool;
 	
 	/**
 	* Gives notification that something was inserted into the document
@@ -209,7 +209,7 @@ package javax.swing.text;
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#insertUpdate
 	*/
-	@:overload public function insertUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function insertUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -223,7 +223,7 @@ package javax.swing.text;
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#removeUpdate
 	*/
-	@:overload public function removeUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function removeUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	
 }
@@ -234,7 +234,7 @@ package javax.swing.text;
 */
 @:native('javax$swing$text$ZoneView$Zone') @:internal extern class ZoneView_Zone extends javax.swing.text.AsyncBoxView
 {
-	@:overload public function new(elem : javax.swing.text.Element, start : javax.swing.text.Position, end : javax.swing.text.Position) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element, start : javax.swing.text.Position, end : javax.swing.text.Position) : Void;
 	
 	/**
 	* Creates the child views and populates the
@@ -243,19 +243,19 @@ package javax.swing.text;
 	* and building views to those elements.  If the
 	* zone is already loaded, this does nothing.
 	*/
-	@:overload public function load() : Void;
+	@:overload @:public public function load() : Void;
 	
 	/**
 	* Removes the child views and returns to a
 	* state of unloaded.
 	*/
-	@:overload public function unload() : Void;
+	@:overload @:public public function unload() : Void;
 	
 	/**
 	* Determines if the zone is in the loaded state
 	* or not.
 	*/
-	@:overload public function isLoaded() : Bool;
+	@:overload @:public public function isLoaded() : Bool;
 	
 	/**
 	* This method is reimplemented to not build the children
@@ -266,7 +266,7 @@ package javax.swing.text;
 	* setEstimatedMajorSpan(true) followed by setSpan for
 	* the major axis with the estimated span.
 	*/
-	@:overload private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:protected override private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Publish the changes in preferences upward to the parent
@@ -278,7 +278,7 @@ package javax.swing.text;
 	* best estimate and a calculated span for no children
 	* is undesirable.
 	*/
-	@:overload private function flushRequirementChanges() : Void;
+	@:overload @:protected override private function flushRequirementChanges() : Void;
 	
 	/**
 	* Returns the child view index representing the given position in
@@ -292,16 +292,16 @@ package javax.swing.text;
 	*   -1 if no view represents that position
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getViewIndex(pos : Int, b : javax.swing.text.Position.Position_Bias) : Int;
+	@:require(java3) @:overload @:public override public function getViewIndex(pos : Int, b : javax.swing.text.Position.Position_Bias) : Int;
 	
-	@:overload private function updateChildren(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, f : javax.swing.text.ViewFactory) : Bool;
+	@:overload @:protected override private function updateChildren(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, f : javax.swing.text.ViewFactory) : Bool;
 	
 	/**
 	* Fetches the attributes to use when rendering.  This view
 	* isn't directly responsible for an element so it returns
 	* the outer classes attributes.
 	*/
-	@:overload public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public override public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Renders using the given rendering surface and area on that
@@ -312,7 +312,7 @@ package javax.swing.text;
 	* @param a the allocated region to render into
 	* @see View#paint
 	*/
-	@:overload public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -327,7 +327,7 @@ package javax.swing.text;
 	*  given point in the view >= 0
 	* @see View#viewToModel
 	*/
-	@:overload public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -343,19 +343,19 @@ package javax.swing.text;
 	*   valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload @:public override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Start of the zones range.
 	*
 	* @see View#getStartOffset
 	*/
-	@:overload public function getStartOffset() : Int;
+	@:overload @:public override public function getStartOffset() : Int;
 	
 	/**
 	* End of the zones range.
 	*/
-	@:overload public function getEndOffset() : Int;
+	@:overload @:public override public function getEndOffset() : Int;
 	
 	/**
 	* Gives notification that something was inserted into
@@ -368,7 +368,7 @@ package javax.swing.text;
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#insertUpdate
 	*/
-	@:overload public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -381,7 +381,7 @@ package javax.swing.text;
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#removeUpdate
 	*/
-	@:overload public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -394,7 +394,7 @@ package javax.swing.text;
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#removeUpdate
 	*/
-	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	
 }

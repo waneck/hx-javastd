@@ -33,7 +33,7 @@ extern class TextComponentPrintable implements sun.swing.text.CountingPrintable
 	* @param footerFormat the page footer, or {@code null} for none
 	* @return {@code TextComponentPrintable} to print {@code textComponent}
 	*/
-	@:overload public static function getPrintable(textComponent : javax.swing.text.JTextComponent, headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat) : java.awt.print.Printable;
+	@:overload @:public @:static public static function getPrintable(textComponent : javax.swing.text.JTextComponent, headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat) : java.awt.print.Printable;
 	
 	/**
 	* Returns the number of pages in this printable.
@@ -42,7 +42,7 @@ extern class TextComponentPrintable implements sun.swing.text.CountingPrintable
 	*
 	* @return the number of pages.
 	*/
-	@:overload public function getNumberOfPages() : Int;
+	@:overload @:public public function getNumberOfPages() : Int;
 	
 	/**
 	* See Printable.print for the API description.
@@ -53,7 +53,7 @@ extern class TextComponentPrintable implements sun.swing.text.CountingPrintable
 	*
 	* print triggers printOnEDT
 	*/
-	@:overload public function print(graphics : java.awt.Graphics, pf : java.awt.print.PageFormat, pageIndex : Int) : Int;
+	@:overload @:public public function print(graphics : java.awt.Graphics, pf : java.awt.print.PageFormat, pageIndex : Int) : Int;
 	
 	
 }
@@ -64,13 +64,13 @@ extern class TextComponentPrintable implements sun.swing.text.CountingPrintable
 */
 @:native('sun$swing$text$TextComponentPrintable$IntegerSegment') @:internal extern class TextComponentPrintable_IntegerSegment implements java.lang.Comparable<sun.swing.text.TextComponentPrintable.TextComponentPrintable_IntegerSegment>
 {
-	@:overload public function compareTo(object : sun.swing.text.TextComponentPrintable.TextComponentPrintable_IntegerSegment) : Int;
+	@:overload @:public public function compareTo(object : sun.swing.text.TextComponentPrintable.TextComponentPrintable_IntegerSegment) : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

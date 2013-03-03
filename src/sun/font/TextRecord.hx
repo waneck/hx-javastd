@@ -32,17 +32,17 @@ package sun.font;
 */
 extern class TextRecord
 {
-	public var text : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var text : java.NativeArray<java.StdTypes.Char16>;
 	
-	public var start : Int;
+	@:public public var start : Int;
 	
-	public var limit : Int;
+	@:public public var limit : Int;
 	
-	public var min : Int;
+	@:public public var min : Int;
 	
-	public var max : Int;
+	@:public public var max : Int;
 	
-	@:overload public function init(text : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int, min : Int, max : Int) : Void;
+	@:overload @:public public function init(text : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int, min : Int, max : Int) : Void;
 	
 	
 }

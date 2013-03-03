@@ -32,7 +32,7 @@ extern interface DOMSerializer
 	* @param node the DOM node to serialize
 	* @throws IOException if an I/O exception occured while serializing
 	*/
-	@:overload public function serialize(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function serialize(node : org.w3c.dom.Node) : Void;
 	
 	
 }

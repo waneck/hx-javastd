@@ -40,7 +40,7 @@ extern class RealmChoiceCallback extends javax.security.auth.callback.ChoiceCall
 	* <tt>choices</tt> is null or empty, or if <tt>defaultChoice</tt>
 	* does not fall within the array boundary of <tt>choices</tt>
 	*/
-	@:overload public function new(prompt : String, choices : java.NativeArray<String>, defaultChoice : Int, multiple : Bool) : Void;
+	@:overload @:public public function new(prompt : String, choices : java.NativeArray<String>, defaultChoice : Int, multiple : Bool) : Void;
 	
 	
 }

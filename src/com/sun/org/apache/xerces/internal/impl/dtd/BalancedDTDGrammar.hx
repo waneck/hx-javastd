@@ -22,7 +22,7 @@ package com.sun.org.apache.xerces.internal.impl.dtd;
 @:internal extern class BalancedDTDGrammar extends com.sun.org.apache.xerces.internal.impl.dtd.DTDGrammar
 {
 	/** Default constructor. */
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, desc : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDDescription) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, desc : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDDescription) : Void;
 	
 	/**
 	* The start of a content model. Depending on the type of the content
@@ -34,7 +34,7 @@ package com.sun.org.apache.xerces.internal.impl.dtd;
 	*                      augmentations.
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload @:final override public function startContentModel(elementName : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public @:final override public function startContentModel(elementName : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A start of either a mixed or children content model. A mixed
@@ -49,7 +49,7 @@ package com.sun.org.apache.xerces.internal.impl.dtd;
 	* @see #any
 	* @see #empty
 	*/
-	@:overload @:final override public function startGroup(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public @:final override public function startGroup(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The appearance of "#PCDATA" within a group signifying a
@@ -63,7 +63,7 @@ package com.sun.org.apache.xerces.internal.impl.dtd;
 	*
 	* @see #startGroup
 	*/
-	@:overload @:final override public function pcdata(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public @:final override public function pcdata(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A referenced element in a mixed or children content model.
@@ -74,7 +74,7 @@ package com.sun.org.apache.xerces.internal.impl.dtd;
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload @:final override public function element(elementName : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public @:final override public function element(elementName : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The separator between choices or sequences of a mixed or children
@@ -88,7 +88,7 @@ package com.sun.org.apache.xerces.internal.impl.dtd;
 	* @see org.apache.xerces.xni.XMLDTDContentModelHandler#SEPARATOR_CHOICE
 	* @see org.apache.xerces.xni.XMLDTDContentModelHandler#SEPARATOR_SEQUENCE
 	*/
-	@:overload @:final override public function separator(separator : java.StdTypes.Int16, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public @:final override public function separator(separator : java.StdTypes.Int16, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The occurrence count for a child in a children content model or
@@ -104,7 +104,7 @@ package com.sun.org.apache.xerces.internal.impl.dtd;
 	* @see org.apache.xerces.xni.XMLDTDContentModelHandler#OCCURS_ZERO_OR_MORE
 	* @see org.apache.xerces.xni.XMLDTDContentModelHandler#OCCURS_ONE_OR_MORE
 	*/
-	@:overload @:final override public function occurrence(occurrence : java.StdTypes.Int16, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public @:final override public function occurrence(occurrence : java.StdTypes.Int16, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a group for mixed or children content models.
@@ -113,7 +113,7 @@ package com.sun.org.apache.xerces.internal.impl.dtd;
 	*                      augmentations.
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload @:final override public function endGroup(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public @:final override public function endGroup(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of the DTD.
@@ -122,12 +122,12 @@ package com.sun.org.apache.xerces.internal.impl.dtd;
 	*                      augmentations.
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload @:final override public function endDTD(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public @:final override public function endDTD(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Adds the content spec to the given element declaration.
 	*/
-	@:overload @:final override private function addContentSpecToElement(elementDecl : com.sun.org.apache.xerces.internal.impl.dtd.XMLElementDecl) : Void;
+	@:overload @:protected @:final override private function addContentSpecToElement(elementDecl : com.sun.org.apache.xerces.internal.impl.dtd.XMLElementDecl) : Void;
 	
 	
 }

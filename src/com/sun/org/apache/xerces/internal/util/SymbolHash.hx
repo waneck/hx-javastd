@@ -30,23 +30,23 @@ package com.sun.org.apache.xerces.internal.util;
 extern class SymbolHash
 {
 	/** Default table size. */
-	private var fTableSize : Int;
+	@:protected private var fTableSize : Int;
 	
 	/** Buckets. */
-	private var fBuckets : java.NativeArray<com.sun.org.apache.xerces.internal.util.SymbolHash.SymbolHash_Entry>;
+	@:protected private var fBuckets : java.NativeArray<com.sun.org.apache.xerces.internal.util.SymbolHash.SymbolHash_Entry>;
 	
 	/** Number of elements. */
-	private var fNum : Int;
+	@:protected private var fNum : Int;
 	
 	/** Constructs a key table with the default size. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a key table with a given size.
 	*
 	* @param size  the size of the key table.
 	*/
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
 	/**
 	* Adds the key/value mapping to the key table. If the key already exists,
@@ -56,7 +56,7 @@ extern class SymbolHash
 	* @param key
 	* @param value
 	*/
-	@:overload public function put(key : Dynamic, value : Dynamic) : Void;
+	@:overload @:public public function put(key : Dynamic, value : Dynamic) : Void;
 	
 	/**
 	* Get the value associated with the given key.
@@ -64,14 +64,14 @@ extern class SymbolHash
 	* @param key
 	* @return the value associated with the given key.
 	*/
-	@:overload public function get(key : Dynamic) : Dynamic;
+	@:overload @:public public function get(key : Dynamic) : Dynamic;
 	
 	/**
 	* Get the number of key/value pairs stored in this table.
 	*
 	* @return the number of key/value pairs stored in this table.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Add all values to the given array. The array must have enough entry.
@@ -80,25 +80,25 @@ extern class SymbolHash
 	* @param from      where to start store element in the array
 	* @return          number of elements copied to the array
 	*/
-	@:overload public function getValues(elements : java.NativeArray<Dynamic>, from : Int) : Int;
+	@:overload @:public public function getValues(elements : java.NativeArray<Dynamic>, from : Int) : Int;
 	
 	/**
 	* Return key/value pairs of all entries in the map
 	*/
-	@:overload public function getEntries() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getEntries() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Make a clone of this object.
 	*/
-	@:overload public function makeClone() : com.sun.org.apache.xerces.internal.util.SymbolHash;
+	@:overload @:public public function makeClone() : com.sun.org.apache.xerces.internal.util.SymbolHash;
 	
 	/**
 	* Remove all key/value assocaition. This tries to save a bit of GC'ing
 	* by at least keeping the fBuckets array around.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload private function search(key : Dynamic, bucket : Int) : com.sun.org.apache.xerces.internal.util.SymbolHash.SymbolHash_Entry;
+	@:overload @:protected private function search(key : Dynamic, bucket : Int) : com.sun.org.apache.xerces.internal.util.SymbolHash.SymbolHash_Entry;
 	
 	
 }
@@ -108,18 +108,18 @@ extern class SymbolHash
 */
 @:native('com$sun$org$apache$xerces$internal$util$SymbolHash$Entry') extern class SymbolHash_Entry
 {
-	public var key : Dynamic;
+	@:public public var key : Dynamic;
 	
-	public var value : Dynamic;
+	@:public public var value : Dynamic;
 	
 	/** The next entry. */
-	public var next : com.sun.org.apache.xerces.internal.util.SymbolHash.SymbolHash_Entry;
+	@:public public var next : com.sun.org.apache.xerces.internal.util.SymbolHash.SymbolHash_Entry;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(key : Dynamic, value : Dynamic, next : com.sun.org.apache.xerces.internal.util.SymbolHash.SymbolHash_Entry) : Void;
+	@:overload @:public public function new(key : Dynamic, value : Dynamic, next : com.sun.org.apache.xerces.internal.util.SymbolHash.SymbolHash_Entry) : Void;
 	
-	@:overload public function makeClone() : com.sun.org.apache.xerces.internal.util.SymbolHash.SymbolHash_Entry;
+	@:overload @:public public function makeClone() : com.sun.org.apache.xerces.internal.util.SymbolHash.SymbolHash_Entry;
 	
 	
 }

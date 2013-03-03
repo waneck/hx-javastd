@@ -45,40 +45,40 @@ extern class GeneralSubtree
 	* @params min the minimum BaseDistance
 	* @params max the maximum BaseDistance
 	*/
-	@:overload public function new(name : sun.security.x509.GeneralName, min : Int, max : Int) : Void;
+	@:overload @:public public function new(name : sun.security.x509.GeneralName, min : Int, max : Int) : Void;
 	
 	/**
 	* Create the object from its DER encoded form.
 	*
 	* @param val the DER encoded from of the same.
 	*/
-	@:overload public function new(val : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(val : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Return the GeneralName.
 	*
 	* @return the GeneralName
 	*/
-	@:overload public function getName() : sun.security.x509.GeneralName;
+	@:overload @:public public function getName() : sun.security.x509.GeneralName;
 	
 	/**
 	* Return the minimum BaseDistance.
 	*
 	* @return the minimum BaseDistance. Default is 0 if not set.
 	*/
-	@:overload public function getMinimum() : Int;
+	@:overload @:public public function getMinimum() : Int;
 	
 	/**
 	* Return the maximum BaseDistance.
 	*
 	* @return the maximum BaseDistance, or -1 if not set.
 	*/
-	@:overload public function getMaximum() : Int;
+	@:overload @:public public function getMaximum() : Int;
 	
 	/**
 	* Return a printable string of the GeneralSubtree.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compare this GeneralSubtree with another
@@ -86,21 +86,21 @@ extern class GeneralSubtree
 	* @param other GeneralSubtree to compare to this
 	* @returns true if match
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code for this GeneralSubtree.
 	*
 	* @return a hash code value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Encode the GeneralSubtree.
 	*
 	* @params out the DerOutputStream to encode this object to.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	
 }

@@ -25,23 +25,23 @@ package com.sun.tools.internal.xjc.model;
 */
 @:internal extern class TypeUseImpl implements com.sun.tools.internal.xjc.model.TypeUse
 {
-	@:overload public function new(itemType : com.sun.tools.internal.xjc.model.CNonElement, collection : Bool, id : com.sun.xml.internal.bind.v2.model.core.ID, expectedMimeType : javax.activation.MimeType, adapter : com.sun.tools.internal.xjc.model.CAdapter) : Void;
+	@:overload @:public public function new(itemType : com.sun.tools.internal.xjc.model.CNonElement, collection : Bool, id : com.sun.xml.internal.bind.v2.model.core.ID, expectedMimeType : javax.activation.MimeType, adapter : com.sun.tools.internal.xjc.model.CAdapter) : Void;
 	
-	@:overload public function isCollection() : Bool;
+	@:overload @:public public function isCollection() : Bool;
 	
-	@:overload public function getInfo() : com.sun.tools.internal.xjc.model.CNonElement;
+	@:overload @:public public function getInfo() : com.sun.tools.internal.xjc.model.CNonElement;
 	
-	@:overload public function getAdapterUse() : com.sun.tools.internal.xjc.model.CAdapter;
+	@:overload @:public public function getAdapterUse() : com.sun.tools.internal.xjc.model.CAdapter;
 	
-	@:overload public function idUse() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload @:public public function idUse() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
-	@:overload public function getExpectedMimeType() : javax.activation.MimeType;
+	@:overload @:public public function getExpectedMimeType() : javax.activation.MimeType;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function createConstant(outline : com.sun.tools.internal.xjc.outline.Outline, lexical : com.sun.xml.internal.xsom.XmlString) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public public function createConstant(outline : com.sun.tools.internal.xjc.outline.Outline, lexical : com.sun.xml.internal.xsom.XmlString) : com.sun.codemodel.internal.JExpression;
 	
 	
 }

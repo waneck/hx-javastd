@@ -37,7 +37,7 @@ extern interface AccelSurface extends sun.java2d.pipe.hw.BufferedContextProvider
 	* @see AccelSurface#FLIP_BACKBUFFER
 	* @see AccelSurface#RT_TEXTURE
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Returns a pointer to the native surface data associated with this
@@ -46,7 +46,7 @@ extern interface AccelSurface extends sun.java2d.pipe.hw.BufferedContextProvider
 	*
 	* @return pointer to the native surface's data
 	*/
-	@:overload public function getNativeOps() : haxe.Int64;
+	@:overload @:public @:public public function getNativeOps() : haxe.Int64;
 	
 	/**
 	* Returns a pointer to the real native resource
@@ -57,12 +57,12 @@ extern interface AccelSurface extends sun.java2d.pipe.hw.BufferedContextProvider
 	* @return a long containing a pointer to the native resource of the
 	* specified type or 0L if such resource doesn't exist for this surface
 	*/
-	@:overload public function getNativeResource(resType : Int) : haxe.Int64;
+	@:overload @:public public function getNativeResource(resType : Int) : haxe.Int64;
 	
 	/**
 	* Marks this surface dirty.
 	*/
-	@:overload public function markDirty() : Void;
+	@:overload @:public @:public public function markDirty() : Void;
 	
 	/**
 	* Returns whether the pipeline considers this surface valid. A surface
@@ -70,7 +70,7 @@ extern interface AccelSurface extends sun.java2d.pipe.hw.BufferedContextProvider
 	*
 	* @return true if valid, false otherwise
 	*/
-	@:overload public function isValid() : Bool;
+	@:overload @:public @:public public function isValid() : Bool;
 	
 	/**
 	* Returns whether this surface is lost. The return value is only valid
@@ -80,7 +80,7 @@ extern interface AccelSurface extends sun.java2d.pipe.hw.BufferedContextProvider
 	*
 	* @return true if the surface is known to be lost, false otherwise
 	*/
-	@:overload public function isSurfaceLost() : Bool;
+	@:overload @:public @:public public function isSurfaceLost() : Bool;
 	
 	/**
 	* Returns the requested bounds of the destination surface. The real bounds
@@ -89,7 +89,7 @@ extern interface AccelSurface extends sun.java2d.pipe.hw.BufferedContextProvider
 	*
 	* @return Rectangle representing java surface's bounds
 	*/
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public @:public public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Returns real bounds of the native surface, which may differ from those
@@ -97,7 +97,7 @@ extern interface AccelSurface extends sun.java2d.pipe.hw.BufferedContextProvider
 	*
 	* @return Rectangle representing native surface's bounds
 	*/
-	@:overload public function getNativeBounds() : java.awt.Rectangle;
+	@:overload @:public public function getNativeBounds() : java.awt.Rectangle;
 	
 	
 }

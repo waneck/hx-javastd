@@ -25,19 +25,19 @@ package sun.awt.image;
 */
 extern class OffScreenImageSource implements java.awt.image.ImageProducer
 {
-	@:overload public function new(image : java.awt.image.BufferedImage, properties : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(image : java.awt.image.BufferedImage, properties : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function new(image : java.awt.image.BufferedImage) : Void;
+	@:overload @:public public function new(image : java.awt.image.BufferedImage) : Void;
 	
-	@:overload @:synchronized public function addConsumer(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public @:synchronized public function addConsumer(ic : java.awt.image.ImageConsumer) : Void;
 	
-	@:overload @:synchronized public function isConsumer(ic : java.awt.image.ImageConsumer) : Bool;
+	@:overload @:public @:synchronized public function isConsumer(ic : java.awt.image.ImageConsumer) : Bool;
 	
-	@:overload @:synchronized public function removeConsumer(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public @:synchronized public function removeConsumer(ic : java.awt.image.ImageConsumer) : Void;
 	
-	@:overload public function startProduction(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public public function startProduction(ic : java.awt.image.ImageConsumer) : Void;
 	
-	@:overload public function requestTopDownLeftRightResend(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public public function requestTopDownLeftRightResend(ic : java.awt.image.ImageConsumer) : Void;
 	
 	
 }

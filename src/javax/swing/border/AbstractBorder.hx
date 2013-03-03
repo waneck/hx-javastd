@@ -34,7 +34,7 @@ extern class AbstractBorder implements javax.swing.border.Border implements java
 	* @param width the width of the painted border
 	* @param height the height of the painted border
 	*/
-	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* This default implementation returns a new {@link Insets} object
@@ -46,7 +46,7 @@ extern class AbstractBorder implements javax.swing.border.Border implements java
 	* @param c  the component for which this border insets value applies
 	* @return a new {@link Insets} object
 	*/
-	@:overload public function getBorderInsets(c : java.awt.Component) : java.awt.Insets;
+	@:overload @:public public function getBorderInsets(c : java.awt.Component) : java.awt.Insets;
 	
 	/**
 	* Reinitializes the insets parameter with this Border's current Insets.
@@ -54,13 +54,13 @@ extern class AbstractBorder implements javax.swing.border.Border implements java
 	* @param insets the object to be reinitialized
 	* @return the <code>insets</code> object
 	*/
-	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* This default implementation returns false.
 	* @return false
 	*/
-	@:overload public function isBorderOpaque() : Bool;
+	@:overload @:public public function isBorderOpaque() : Bool;
 	
 	/**
 	* This convenience method calls the static method.
@@ -71,7 +71,7 @@ extern class AbstractBorder implements javax.swing.border.Border implements java
 	* @param height the height of the border
 	* @return a <code>Rectangle</code> containing the interior coordinates
 	*/
-	@:overload public function getInteriorRectangle(c : java.awt.Component, x : Int, y : Int, width : Int, height : Int) : java.awt.Rectangle;
+	@:overload @:public public function getInteriorRectangle(c : java.awt.Component, x : Int, y : Int, width : Int, height : Int) : java.awt.Rectangle;
 	
 	/**
 	* Returns a rectangle using the arguments minus the
@@ -85,7 +85,7 @@ extern class AbstractBorder implements javax.swing.border.Border implements java
 	* @param height the height of the border
 	* @return a <code>Rectangle</code> containing the interior coordinates
 	*/
-	@:native('getInteriorRectangle') @:overload public static function _getInteriorRectangle(c : java.awt.Component, b : javax.swing.border.Border, x : Int, y : Int, width : Int, height : Int) : java.awt.Rectangle;
+	@:native('getInteriorRectangle') @:overload @:public @:static public static function _getInteriorRectangle(c : java.awt.Component, b : javax.swing.border.Border, x : Int, y : Int, width : Int, height : Int) : java.awt.Rectangle;
 	
 	/**
 	* Returns the baseline.  A return value less than 0 indicates the border
@@ -107,7 +107,7 @@ extern class AbstractBorder implements javax.swing.border.Border implements java
 	* @see java.awt.Component#getBaselineResizeBehavior()
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getBaseline(c : java.awt.Component, width : Int, height : Int) : Int;
+	@:require(java6) @:overload @:public public function getBaseline(c : java.awt.Component, width : Int, height : Int) : Int;
 	
 	/**
 	* Returns an enum indicating how the baseline of a component
@@ -132,7 +132,7 @@ extern class AbstractBorder implements javax.swing.border.Border implements java
 	* @see java.awt.Component#getBaselineResizeBehavior()
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getBaselineResizeBehavior(c : java.awt.Component) : java.awt.Component.Component_BaselineResizeBehavior;
+	@:require(java6) @:overload @:public public function getBaselineResizeBehavior(c : java.awt.Component) : java.awt.Component.Component_BaselineResizeBehavior;
 	
 	
 }

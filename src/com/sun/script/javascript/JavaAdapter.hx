@@ -44,11 +44,11 @@ package com.sun.script.javascript;
 */
 @:require(java6) @:internal extern class JavaAdapter extends ScriptableObject implements Function
 {
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
-	@:overload public function call(cx : Context, scope : Scriptable, thisObj : Scriptable, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function call(cx : Context, scope : Scriptable, thisObj : Scriptable, args : java.NativeArray<Dynamic>) : Dynamic;
 	
-	@:overload public function construct(cx : Context, scope : Scriptable, args : java.NativeArray<Dynamic>) : Scriptable;
+	@:overload @:public public function construct(cx : Context, scope : Scriptable, args : java.NativeArray<Dynamic>) : Scriptable;
 	
 	
 }

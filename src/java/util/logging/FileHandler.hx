@@ -120,7 +120,7 @@ package java.util.logging;
 	*             the caller does not have <tt>LoggingPermission("control"))</tt>.
 	* @exception  NullPointerException if pattern property is an empty String.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Initialize a <tt>FileHandler</tt> to write to the given filename.
@@ -139,7 +139,7 @@ package java.util.logging;
 	*             the caller does not have <tt>LoggingPermission("control")</tt>.
 	* @exception  IllegalArgumentException if pattern is an empty string
 	*/
-	@:overload public function new(pattern : String) : Void;
+	@:overload @:public public function new(pattern : String) : Void;
 	
 	/**
 	* Initialize a <tt>FileHandler</tt> to write to the given filename,
@@ -161,7 +161,7 @@ package java.util.logging;
 	*             the caller does not have <tt>LoggingPermission("control")</tt>.
 	* @exception  IllegalArgumentException if pattern is an empty string
 	*/
-	@:overload public function new(pattern : String, append : Bool) : Void;
+	@:overload @:public public function new(pattern : String, append : Bool) : Void;
 	
 	/**
 	* Initialize a <tt>FileHandler</tt> to write to a set of files.  When
@@ -186,7 +186,7 @@ package java.util.logging;
 	* @exception IllegalArgumentException if limit < 0, or count < 1.
 	* @exception  IllegalArgumentException if pattern is an empty string
 	*/
-	@:overload public function new(pattern : String, limit : Int, count : Int) : Void;
+	@:overload @:public public function new(pattern : String, limit : Int, count : Int) : Void;
 	
 	/**
 	* Initialize a <tt>FileHandler</tt> to write to a set of files
@@ -214,7 +214,7 @@ package java.util.logging;
 	* @exception  IllegalArgumentException if pattern is an empty string
 	*
 	*/
-	@:overload public function new(pattern : String, limit : Int, count : Int, append : Bool) : Void;
+	@:overload @:public public function new(pattern : String, limit : Int, count : Int, append : Bool) : Void;
 	
 	/**
 	* Format and publish a <tt>LogRecord</tt>.
@@ -222,7 +222,7 @@ package java.util.logging;
 	* @param  record  description of the log event. A null record is
 	*                 silently ignored and is not published
 	*/
-	@:overload @:synchronized override public function publish(record : java.util.logging.LogRecord) : Void;
+	@:overload @:public @:synchronized override public function publish(record : java.util.logging.LogRecord) : Void;
 	
 	/**
 	* Close all the files.
@@ -230,27 +230,27 @@ package java.util.logging;
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have <tt>LoggingPermission("control")</tt>.
 	*/
-	@:overload @:synchronized override public function close() : Void;
+	@:overload @:public @:synchronized override public function close() : Void;
 	
 	
 }
 @:native('java$util$logging$FileHandler$MeteredStream') @:internal extern class FileHandler_MeteredStream extends java.io.OutputStream
 {
-	@:overload public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload public function write(buff : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(buff : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function write(buff : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(buff : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
 @:native('java$util$logging$FileHandler$InitializationErrorManager') @:internal extern class FileHandler_InitializationErrorManager extends java.util.logging.ErrorManager
 {
-	@:overload public function error(msg : String, ex : java.lang.Exception, code : Int) : Void;
+	@:overload @:public override public function error(msg : String, ex : java.lang.Exception, code : Int) : Void;
 	
 	
 }

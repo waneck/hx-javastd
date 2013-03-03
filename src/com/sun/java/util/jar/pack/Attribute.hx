@@ -32,47 +32,47 @@ package com.sun.java.util.jar.pack;
 */
 @:internal extern class Attribute implements java.lang.Comparable<com.sun.java.util.jar.pack.Attribute>
 {
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function layout() : com.sun.java.util.jar.pack.Attribute.Attribute_Layout;
+	@:overload @:public public function layout() : com.sun.java.util.jar.pack.Attribute.Attribute_Layout;
 	
-	@:overload public function bytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function bytes() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function getNameRef() : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
+	@:overload @:public public function getNameRef() : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
 	
-	@:overload public function new(def : com.sun.java.util.jar.pack.Attribute.Attribute_Layout, bytes : java.NativeArray<java.StdTypes.Int8>, fixups : Dynamic) : Void;
+	@:overload @:public public function new(def : com.sun.java.util.jar.pack.Attribute.Attribute_Layout, bytes : java.NativeArray<java.StdTypes.Int8>, fixups : Dynamic) : Void;
 	
-	@:overload public function new(def : com.sun.java.util.jar.pack.Attribute.Attribute_Layout, bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(def : com.sun.java.util.jar.pack.Attribute.Attribute_Layout, bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function addContent(bytes : java.NativeArray<java.StdTypes.Int8>, fixups : Dynamic) : com.sun.java.util.jar.pack.Attribute;
+	@:overload @:public public function addContent(bytes : java.NativeArray<java.StdTypes.Int8>, fixups : Dynamic) : com.sun.java.util.jar.pack.Attribute;
 	
-	@:overload public function addContent(bytes : java.NativeArray<java.StdTypes.Int8>) : com.sun.java.util.jar.pack.Attribute;
+	@:overload @:public public function addContent(bytes : java.NativeArray<java.StdTypes.Int8>) : com.sun.java.util.jar.pack.Attribute;
 	
-	@:overload public function finishRefs(ix : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index) : Void;
+	@:overload @:public public function finishRefs(ix : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index) : Void;
 	
-	@:overload public function isCanonical() : Bool;
+	@:overload @:public public function isCanonical() : Bool;
 	
-	@:overload public function compareTo(that : com.sun.java.util.jar.pack.Attribute) : Int;
+	@:overload @:public public function compareTo(that : com.sun.java.util.jar.pack.Attribute) : Int;
 	
-	@:overload public static function getCanonList(al : java.util.List<com.sun.java.util.jar.pack.Attribute>) : java.util.List<com.sun.java.util.jar.pack.Attribute>;
+	@:overload @:public @:static public static function getCanonList(al : java.util.List<com.sun.java.util.jar.pack.Attribute>) : java.util.List<com.sun.java.util.jar.pack.Attribute>;
 	
-	@:overload public static function find(ctype : Int, name : String, layout : String) : com.sun.java.util.jar.pack.Attribute;
+	@:overload @:public @:static public static function find(ctype : Int, name : String, layout : String) : com.sun.java.util.jar.pack.Attribute;
 	
-	@:overload public static function keyForLookup(ctype : Int, name : String) : com.sun.java.util.jar.pack.Attribute.Attribute_Layout;
+	@:overload @:public @:static public static function keyForLookup(ctype : Int, name : String) : com.sun.java.util.jar.pack.Attribute.Attribute_Layout;
 	
-	@:overload public static function lookup(defs : java.util.Map<com.sun.java.util.jar.pack.Attribute.Attribute_Layout, com.sun.java.util.jar.pack.Attribute>, ctype : Int, name : String) : com.sun.java.util.jar.pack.Attribute;
+	@:overload @:public @:static public static function lookup(defs : java.util.Map<com.sun.java.util.jar.pack.Attribute.Attribute_Layout, com.sun.java.util.jar.pack.Attribute>, ctype : Int, name : String) : com.sun.java.util.jar.pack.Attribute;
 	
-	@:overload public static function define(defs : java.util.Map<com.sun.java.util.jar.pack.Attribute.Attribute_Layout, com.sun.java.util.jar.pack.Attribute>, ctype : Int, name : String, layout : String) : com.sun.java.util.jar.pack.Attribute;
+	@:overload @:public @:static public static function define(defs : java.util.Map<com.sun.java.util.jar.pack.Attribute.Attribute_Layout, com.sun.java.util.jar.pack.Attribute>, ctype : Int, name : String, layout : String) : com.sun.java.util.jar.pack.Attribute;
 	
-	@:overload public static function contextName(ctype : Int) : String;
+	@:overload @:public @:static public static function contextName(ctype : Int) : String;
 	
-	@:overload public function parse(holder : com.sun.java.util.jar.pack.Attribute.Attribute_Holder, bytes : java.NativeArray<java.StdTypes.Int8>, pos : Int, len : Int, out : com.sun.java.util.jar.pack.Attribute.Attribute_ValueStream) : Void;
+	@:overload @:public public function parse(holder : com.sun.java.util.jar.pack.Attribute.Attribute_Holder, bytes : java.NativeArray<java.StdTypes.Int8>, pos : Int, len : Int, out : com.sun.java.util.jar.pack.Attribute.Attribute_ValueStream) : Void;
 	
-	@:overload public function unparse(_in : com.sun.java.util.jar.pack.Attribute.Attribute_ValueStream, out : java.io.ByteArrayOutputStream) : Dynamic;
+	@:overload @:public public function unparse(_in : com.sun.java.util.jar.pack.Attribute.Attribute_ValueStream, out : java.io.ByteArrayOutputStream) : Dynamic;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/** Remove any informal "pretty printing" from the layout string.
 	*  Removes blanks and control chars.
@@ -80,7 +80,7 @@ package com.sun.java.util.jar.pack;
 	*  Replaces '\c' by the decimal code of the character c.
 	*  Replaces '0xNNN' by the decimal code of the hex number NNN.
 	*/
-	@:overload public static function normalizeLayoutString(layout : String) : String;
+	@:overload @:static @:public public static function normalizeLayoutString(layout : String) : String;
 	
 	
 }
@@ -91,55 +91,55 @@ package com.sun.java.util.jar.pack;
 */
 @:native('com$sun$java$util$jar$pack$Attribute$Holder') extern class Attribute_Holder
 {
-	@:overload @:abstract private function getCPMap() : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>;
+	@:overload @:protected @:abstract private function getCPMap() : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>;
 	
-	private var flags : Int;
+	@:protected private var flags : Int;
 	
-	private var attributes : java.util.List<com.sun.java.util.jar.pack.Attribute>;
+	@:protected private var attributes : java.util.List<com.sun.java.util.jar.pack.Attribute>;
 	
-	@:overload public function attributeSize() : Int;
+	@:overload @:public public function attributeSize() : Int;
 	
-	@:overload public function trimToSize() : Void;
+	@:overload @:public public function trimToSize() : Void;
 	
-	@:overload public function addAttribute(a : com.sun.java.util.jar.pack.Attribute) : Void;
+	@:overload @:public public function addAttribute(a : com.sun.java.util.jar.pack.Attribute) : Void;
 	
-	@:overload public function removeAttribute(a : com.sun.java.util.jar.pack.Attribute) : com.sun.java.util.jar.pack.Attribute;
+	@:overload @:public public function removeAttribute(a : com.sun.java.util.jar.pack.Attribute) : com.sun.java.util.jar.pack.Attribute;
 	
-	@:overload public function getAttribute(n : Int) : com.sun.java.util.jar.pack.Attribute;
+	@:overload @:public public function getAttribute(n : Int) : com.sun.java.util.jar.pack.Attribute;
 	
-	@:overload private function visitRefs(mode : Int, refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
+	@:overload @:protected private function visitRefs(mode : Int, refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
 	
-	@:overload public function getAttributes() : java.util.List<com.sun.java.util.jar.pack.Attribute>;
+	@:overload @:public public function getAttributes() : java.util.List<com.sun.java.util.jar.pack.Attribute>;
 	
-	@:overload public function setAttributes(attrList : java.util.List<com.sun.java.util.jar.pack.Attribute>) : Void;
+	@:overload @:public public function setAttributes(attrList : java.util.List<com.sun.java.util.jar.pack.Attribute>) : Void;
 	
-	@:overload public function getAttribute(attrName : String) : com.sun.java.util.jar.pack.Attribute;
+	@:overload @:public public function getAttribute(attrName : String) : com.sun.java.util.jar.pack.Attribute;
 	
-	@:overload public function getAttribute(attrDef : com.sun.java.util.jar.pack.Attribute.Attribute_Layout) : com.sun.java.util.jar.pack.Attribute;
+	@:overload @:public public function getAttribute(attrDef : com.sun.java.util.jar.pack.Attribute.Attribute_Layout) : com.sun.java.util.jar.pack.Attribute;
 	
-	@:overload public function removeAttribute(attrName : String) : com.sun.java.util.jar.pack.Attribute;
+	@:overload @:public public function removeAttribute(attrName : String) : com.sun.java.util.jar.pack.Attribute;
 	
-	@:overload public function removeAttribute(attrDef : com.sun.java.util.jar.pack.Attribute.Attribute_Layout) : com.sun.java.util.jar.pack.Attribute;
+	@:overload @:public public function removeAttribute(attrDef : com.sun.java.util.jar.pack.Attribute.Attribute_Layout) : com.sun.java.util.jar.pack.Attribute;
 	
-	@:overload public function strip(attrName : String) : Void;
+	@:overload @:public public function strip(attrName : String) : Void;
 	
 	
 }
 @:native('com$sun$java$util$jar$pack$Attribute$ValueStream') extern class Attribute_ValueStream
 {
-	@:overload public function getInt(bandIndex : Int) : Int;
+	@:overload @:public public function getInt(bandIndex : Int) : Int;
 	
-	@:overload public function putInt(bandIndex : Int, value : Int) : Void;
+	@:overload @:public public function putInt(bandIndex : Int, value : Int) : Void;
 	
-	@:overload public function getRef(bandIndex : Int) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
+	@:overload @:public public function getRef(bandIndex : Int) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
 	
-	@:overload public function putRef(bandIndex : Int, ref : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Void;
+	@:overload @:public public function putRef(bandIndex : Int, ref : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Void;
 	
-	@:overload public function decodeBCI(bciCode : Int) : Int;
+	@:overload @:public public function decodeBCI(bciCode : Int) : Int;
 	
-	@:overload public function encodeBCI(bci : Int) : Int;
+	@:overload @:public public function encodeBCI(bci : Int) : Int;
 	
-	@:overload public function noteBackCall(whichCallable : Int) : Void;
+	@:overload @:public public function noteBackCall(whichCallable : Int) : Void;
 	
 	
 }
@@ -148,69 +148,69 @@ package com.sun.java.util.jar.pack;
 */
 @:native('com$sun$java$util$jar$pack$Attribute$Layout') extern class Attribute_Layout implements java.lang.Comparable<com.sun.java.util.jar.pack.Attribute.Attribute_Layout>
 {
-	@:overload public function ctype() : Int;
+	@:overload @:public public function ctype() : Int;
 	
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function layout() : String;
+	@:overload @:public public function layout() : String;
 	
-	@:overload public function canonicalInstance() : com.sun.java.util.jar.pack.Attribute;
+	@:overload @:public public function canonicalInstance() : com.sun.java.util.jar.pack.Attribute;
 	
-	@:overload public function getNameRef() : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
+	@:overload @:public public function getNameRef() : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function new(ctype : Int, name : String, layout : String) : Void;
+	@:overload @:public public function new(ctype : Int, name : String, layout : String) : Void;
 	
-	@:overload public function addContent(bytes : java.NativeArray<java.StdTypes.Int8>, fixups : Dynamic) : com.sun.java.util.jar.pack.Attribute;
+	@:overload @:public public function addContent(bytes : java.NativeArray<java.StdTypes.Int8>, fixups : Dynamic) : com.sun.java.util.jar.pack.Attribute;
 	
-	@:overload public function addContent(bytes : java.NativeArray<java.StdTypes.Int8>) : com.sun.java.util.jar.pack.Attribute;
+	@:overload @:public public function addContent(bytes : java.NativeArray<java.StdTypes.Int8>) : com.sun.java.util.jar.pack.Attribute;
 	
-	@:overload public function equals(x : Dynamic) : Bool;
+	@:overload @:public public function equals(x : Dynamic) : Bool;
 	
-	@:overload public function equals(that : com.sun.java.util.jar.pack.Attribute.Attribute_Layout) : Bool;
+	@:overload @:public public function equals(that : com.sun.java.util.jar.pack.Attribute.Attribute_Layout) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function compareTo(that : com.sun.java.util.jar.pack.Attribute.Attribute_Layout) : Int;
+	@:overload @:public public function compareTo(that : com.sun.java.util.jar.pack.Attribute.Attribute_Layout) : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function hasCallables() : Bool;
+	@:overload @:public public function hasCallables() : Bool;
 	
-	@:overload public function getCallables() : java.NativeArray<com.sun.java.util.jar.pack.Attribute.Attribute_Layout_Element>;
+	@:overload @:public public function getCallables() : java.NativeArray<com.sun.java.util.jar.pack.Attribute.Attribute_Layout_Element>;
 	
-	@:overload public function getEntryPoint() : java.NativeArray<com.sun.java.util.jar.pack.Attribute.Attribute_Layout_Element>;
+	@:overload @:public public function getEntryPoint() : java.NativeArray<com.sun.java.util.jar.pack.Attribute.Attribute_Layout_Element>;
 	
 	/** Return a sequence of tokens from the given attribute bytes.
 	*  Sequence elements will be 1-1 correspondent with my layout tokens.
 	*/
-	@:overload public function parse(holder : com.sun.java.util.jar.pack.Attribute.Attribute_Holder, bytes : java.NativeArray<java.StdTypes.Int8>, pos : Int, len : Int, out : com.sun.java.util.jar.pack.Attribute.Attribute_ValueStream) : Void;
+	@:overload @:public public function parse(holder : com.sun.java.util.jar.pack.Attribute.Attribute_Holder, bytes : java.NativeArray<java.StdTypes.Int8>, pos : Int, len : Int, out : com.sun.java.util.jar.pack.Attribute.Attribute_ValueStream) : Void;
 	
 	/** Given a sequence of tokens, return the attribute bytes.
 	*  Sequence elements must be 1-1 correspondent with my layout tokens.
 	*  The returned object is a cookie for Fixups.finishRefs, which
 	*  must be used to harden any references into integer indexes.
 	*/
-	@:overload public function unparse(_in : com.sun.java.util.jar.pack.Attribute.Attribute_ValueStream, out : java.io.ByteArrayOutputStream) : Dynamic;
+	@:overload @:public public function unparse(_in : com.sun.java.util.jar.pack.Attribute.Attribute_ValueStream, out : java.io.ByteArrayOutputStream) : Dynamic;
 	
-	@:overload public function layoutForPackageMajver(majver : Int) : String;
+	@:overload @:public public function layoutForPackageMajver(majver : Int) : String;
 	
 	
 }
 @:native('com$sun$java$util$jar$pack$Attribute$Layout$Element') extern class Attribute_Layout_Element
 {
-	@:overload public function hasBand() : Bool;
+	@:overload @:public public function hasBand() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('com$sun$java$util$jar$pack$Attribute$FormatException') extern class Attribute_FormatException extends java.io.IOException
 {
-	@:overload public function new(message : String, ctype : Int, name : String, layout : String) : Void;
+	@:overload @:public public function new(message : String, ctype : Int, name : String, layout : String) : Void;
 	
-	@:overload public function new(message : String, ctype : Int, name : String) : Void;
+	@:overload @:public public function new(message : String, ctype : Int, name : String) : Void;
 	
 	
 }

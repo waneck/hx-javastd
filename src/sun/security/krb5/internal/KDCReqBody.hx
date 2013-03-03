@@ -61,23 +61,23 @@ extern class KDCReqBody
 	* <a href="http://www.ietf.org/rfc/rfc4120.txt">
 	* http://www.ietf.org/rfc/rfc4120.txt</a>.
 	*/
-	public var kdcOptions : sun.security.krb5.internal.KDCOptions;
+	@:public public var kdcOptions : sun.security.krb5.internal.KDCOptions;
 	
-	public var cname : sun.security.krb5.PrincipalName;
+	@:public public var cname : sun.security.krb5.PrincipalName;
 	
-	public var crealm : sun.security.krb5.Realm;
+	@:public public var crealm : sun.security.krb5.Realm;
 	
-	public var sname : sun.security.krb5.PrincipalName;
+	@:public public var sname : sun.security.krb5.PrincipalName;
 	
-	public var from : sun.security.krb5.internal.KerberosTime;
+	@:public public var from : sun.security.krb5.internal.KerberosTime;
 	
-	public var till : sun.security.krb5.internal.KerberosTime;
+	@:public public var till : sun.security.krb5.internal.KerberosTime;
 	
-	public var rtime : sun.security.krb5.internal.KerberosTime;
+	@:public public var rtime : sun.security.krb5.internal.KerberosTime;
 	
-	public var addresses : sun.security.krb5.internal.HostAddresses;
+	@:public public var addresses : sun.security.krb5.internal.HostAddresses;
 	
-	@:overload public function new(new_kdcOptions : sun.security.krb5.internal.KDCOptions, new_cname : sun.security.krb5.PrincipalName, new_crealm : sun.security.krb5.Realm, new_sname : sun.security.krb5.PrincipalName, new_from : sun.security.krb5.internal.KerberosTime, new_till : sun.security.krb5.internal.KerberosTime, new_rtime : sun.security.krb5.internal.KerberosTime, new_nonce : Int, new_eType : java.NativeArray<Int>, new_addresses : sun.security.krb5.internal.HostAddresses, new_encAuthorizationData : sun.security.krb5.EncryptedData, new_additionalTickets : java.NativeArray<sun.security.krb5.internal.Ticket>) : Void;
+	@:overload @:public public function new(new_kdcOptions : sun.security.krb5.internal.KDCOptions, new_cname : sun.security.krb5.PrincipalName, new_crealm : sun.security.krb5.Realm, new_sname : sun.security.krb5.PrincipalName, new_from : sun.security.krb5.internal.KerberosTime, new_till : sun.security.krb5.internal.KerberosTime, new_rtime : sun.security.krb5.internal.KerberosTime, new_nonce : Int, new_eType : java.NativeArray<Int>, new_addresses : sun.security.krb5.internal.HostAddresses, new_encAuthorizationData : sun.security.krb5.EncryptedData, new_additionalTickets : java.NativeArray<sun.security.krb5.internal.Ticket>) : Void;
 	
 	/**
 	* Constructs a KDCReqBody object.
@@ -88,7 +88,7 @@ extern class KDCReqBody
 	* @exception RealmException if an error occurs while constructing a Realm object from the encoded data.
 	*
 	*/
-	@:overload public function new(encoding : sun.security.util.DerValue, msgType : Int) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue, msgType : Int) : Void;
 	
 	/**
 	* Encodes this object to an OutputStream.
@@ -98,9 +98,9 @@ extern class KDCReqBody
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*
 	*/
-	@:overload public function asn1Encode(msgType : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode(msgType : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getNonce() : Int;
+	@:overload @:public public function getNonce() : Int;
 	
 	
 }

@@ -48,7 +48,7 @@ extern class MemoryUsage
 	*      <tt>max</tt> if defined.</li>
 	* </ul>
 	*/
-	@:overload public function new(init : haxe.Int64, used : haxe.Int64, committed : haxe.Int64, max : haxe.Int64) : Void;
+	@:overload @:public public function new(init : haxe.Int64, used : haxe.Int64, committed : haxe.Int64, max : haxe.Int64) : Void;
 	
 	/**
 	* Returns the amount of memory in bytes that the Java virtual machine
@@ -58,7 +58,7 @@ extern class MemoryUsage
 	* @return the initial size of memory in bytes;
 	* <tt>-1</tt> if undefined.
 	*/
-	@:overload public function getInit() : haxe.Int64;
+	@:overload @:public public function getInit() : haxe.Int64;
 	
 	/**
 	* Returns the amount of used memory in bytes.
@@ -66,7 +66,7 @@ extern class MemoryUsage
 	* @return the amount of used memory in bytes.
 	*
 	*/
-	@:overload public function getUsed() : haxe.Int64;
+	@:overload @:public public function getUsed() : haxe.Int64;
 	
 	/**
 	* Returns the amount of memory in bytes that is committed for
@@ -76,7 +76,7 @@ extern class MemoryUsage
 	* @return the amount of committed memory in bytes.
 	*
 	*/
-	@:overload public function getCommitted() : haxe.Int64;
+	@:overload @:public public function getCommitted() : haxe.Int64;
 	
 	/**
 	* Returns the maximum amount of memory in bytes that can be
@@ -92,12 +92,12 @@ extern class MemoryUsage
 	* @return the maximum amount of memory in bytes;
 	* <tt>-1</tt> if undefined.
 	*/
-	@:overload public function getMax() : haxe.Int64;
+	@:overload @:public public function getMax() : haxe.Int64;
 	
 	/**
 	* Returns a descriptive representation of this memory usage.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a <tt>MemoryUsage</tt> object represented by the
@@ -139,7 +139,7 @@ extern class MemoryUsage
 	*         if <tt>cd</tt> is not <tt>null</tt>;
 	*         <tt>null</tt> otherwise.
 	*/
-	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : java.lang.management.MemoryUsage;
+	@:overload @:public @:static public static function from(cd : javax.management.openmbean.CompositeData) : java.lang.management.MemoryUsage;
 	
 	
 }

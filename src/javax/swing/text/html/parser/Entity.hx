@@ -32,11 +32,11 @@ extern class Entity implements javax.swing.text.html.parser.DTDConstants
 	* @see DTD
 	* @author Arthur van Hoff
 	*/
-	public var name : String;
+	@:public public var name : String;
 	
-	public var type : Int;
+	@:public public var type : Int;
 	
-	public var data : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var data : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Creates an entity.
@@ -44,43 +44,43 @@ extern class Entity implements javax.swing.text.html.parser.DTDConstants
 	* @param type the type of the entity
 	* @param data the char array of data
 	*/
-	@:overload public function new(name : String, type : Int, data : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(name : String, type : Int, data : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Gets the name of the entity.
 	* @return the name of the entity, as a <code>String</code>
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Gets the type of the entity.
 	* @return the type of the entity
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Returns <code>true</code> if it is a parameter entity.
 	* @return <code>true</code> if it is a parameter entity
 	*/
-	@:overload public function isParameter() : Bool;
+	@:overload @:public public function isParameter() : Bool;
 	
 	/**
 	* Returns <code>true</code> if it is a general entity.
 	* @return <code>true</code> if it is a general entity
 	*/
-	@:overload public function isGeneral() : Bool;
+	@:overload @:public public function isGeneral() : Bool;
 	
 	/**
 	* Returns the <code>data</code>.
 	* @return the <code>data</code>
 	*/
-	@:overload public function getData() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getData() : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Returns the data as a <code>String</code>.
 	* @return the data as a <code>String</code>
 	*/
-	@:overload public function getString() : String;
+	@:overload @:public public function getString() : String;
 	
 	/**
 	* Converts <code>nm</code> string to the corresponding
@@ -93,7 +93,7 @@ extern class Entity implements javax.swing.text.html.parser.DTDConstants
 	* @return the corresponding entity type, or the type corresponding
 	*   to "CDATA", if none exists
 	*/
-	@:overload public static function name2type(nm : String) : Int;
+	@:overload @:public @:static public static function name2type(nm : String) : Int;
 	
 	
 }

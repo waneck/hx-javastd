@@ -33,7 +33,7 @@ extern class XmlOutputAbstractImpl implements com.sun.xml.internal.bind.v2.runti
 	* @param fragment
 	*      true if we are marshalling a fragment.
 	*/
-	@:overload public function startDocument(serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, fragment : Bool, nsUriIndex2prefixIndex : java.NativeArray<Int>, nsContext : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl) : Void;
+	@:overload @:public public function startDocument(serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, fragment : Bool, nsUriIndex2prefixIndex : java.NativeArray<Int>, nsContext : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl) : Void;
 	
 	/**
 	* Called at the very end.
@@ -41,7 +41,7 @@ extern class XmlOutputAbstractImpl implements com.sun.xml.internal.bind.v2.runti
 	* @param fragment
 	*      false if we are writing the whole document.
 	*/
-	@:overload public function endDocument(fragment : Bool) : Void;
+	@:overload @:public public function endDocument(fragment : Bool) : Void;
 	
 	/**
 	* Writes a start tag.
@@ -53,24 +53,24 @@ extern class XmlOutputAbstractImpl implements com.sun.xml.internal.bind.v2.runti
 	* <p>
 	* This method is used for writing tags that are indexed.
 	*/
-	@:overload public function beginStartTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
+	@:overload @:public public function beginStartTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
 	
-	@:overload @:abstract public function beginStartTag(prefix : Int, localName : String) : Void;
+	@:overload @:public @:abstract public function beginStartTag(prefix : Int, localName : String) : Void;
 	
-	@:overload public function attribute(name : com.sun.xml.internal.bind.v2.runtime.Name, value : String) : Void;
+	@:overload @:public public function attribute(name : com.sun.xml.internal.bind.v2.runtime.Name, value : String) : Void;
 	
 	/**
 	* @param prefix
 	*      -1 if this attribute does not have a prefix
 	*      (this handling differs from that of elements.)
 	*/
-	@:overload @:abstract public function attribute(prefix : Int, localName : String, value : String) : Void;
+	@:overload @:public @:abstract public function attribute(prefix : Int, localName : String, value : String) : Void;
 	
-	@:overload @:abstract public function endStartTag() : Void;
+	@:overload @:public @:abstract public function endStartTag() : Void;
 	
-	@:overload public function endTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
+	@:overload @:public public function endTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
 	
-	@:overload @:abstract public function endTag(prefix : Int, localName : String) : Void;
+	@:overload @:public @:abstract public function endTag(prefix : Int, localName : String) : Void;
 	
 	/**
 	* The conversion table from the namespace URI index to prefix index.
@@ -81,24 +81,14 @@ extern class XmlOutputAbstractImpl implements com.sun.xml.internal.bind.v2.runti
 	* This allows {@link Name#nsUriIndex} to be converted to prefix index
 	* (for {@link NamespaceContextImpl}) quickly.
 	*/
-	private var nsUriIndex2prefixIndex : java.NativeArray<Int>;
+	@:protected private var nsUriIndex2prefixIndex : java.NativeArray<Int>;
 	
 	/**
 	* Set by the marshaller before the start tag is written for the root element.
 	*/
-	private var nsContext : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl;
+	@:protected private var nsContext : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl;
 	
-	private var serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer;
-	
-	/**
-	* Writes XML text with character escaping, if necessary.
-	*
-	* @param value
-	*      this string can contain characters that might need escaping
-	*      (such as '&amp;' or '>')
-	* @param needsSeparatingWhitespace
-	*/
-	@:overload @:public public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needsSeparatingWhitespace : Bool) : Void;
+	@:protected private var serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer;
 	
 	/**
 	* Writes XML text with character escaping, if necessary.
@@ -108,7 +98,17 @@ extern class XmlOutputAbstractImpl implements com.sun.xml.internal.bind.v2.runti
 	*      (such as '&amp;' or '>')
 	* @param needsSeparatingWhitespace
 	*/
-	@:overload @:public public function text(value : String, needsSeparatingWhitespace : Bool) : Void;
+	@:overload @:public @:public public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needsSeparatingWhitespace : Bool) : Void;
+	
+	/**
+	* Writes XML text with character escaping, if necessary.
+	*
+	* @param value
+	*      this string can contain characters that might need escaping
+	*      (such as '&amp;' or '>')
+	* @param needsSeparatingWhitespace
+	*/
+	@:overload @:public @:public public function text(value : String, needsSeparatingWhitespace : Bool) : Void;
 	
 	
 }

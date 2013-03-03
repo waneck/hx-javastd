@@ -25,15 +25,15 @@ package sun.swing;
 */
 extern class WindowsPlacesBar extends javax.swing.JToolBar implements java.awt.event.ActionListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function new(fc : javax.swing.JFileChooser, isXPStyle : Bool) : Void;
+	@:overload @:public public function new(fc : javax.swing.JFileChooser, isXPStyle : Bool) : Void;
 	
-	@:overload private function doDirectoryChanged(f : java.io.File) : Void;
+	@:overload @:protected private function doDirectoryChanged(f : java.io.File) : Void;
 	
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	
 }

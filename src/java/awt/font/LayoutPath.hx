@@ -45,7 +45,7 @@ extern class LayoutPath
 	* @throws NullPointerException if point or location is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function pointToPath(point : java.awt.geom.Point2D, location : java.awt.geom.Point2D) : Bool;
+	@:require(java6) @:overload @:public @:abstract public function pointToPath(point : java.awt.geom.Point2D, location : java.awt.geom.Point2D) : Bool;
 	
 	/**
 	* Convert a location relative to the path to a point in user
@@ -66,7 +66,7 @@ extern class LayoutPath
 	* @throws NullPointerException if location or point is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:abstract public function pathToPoint(location : java.awt.geom.Point2D, preceding : Bool, point : java.awt.geom.Point2D) : Void;
+	@:require(java6) @:overload @:public @:abstract public function pathToPoint(location : java.awt.geom.Point2D, preceding : Bool, point : java.awt.geom.Point2D) : Void;
 	
 	
 }

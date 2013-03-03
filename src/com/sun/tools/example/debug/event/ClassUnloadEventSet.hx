@@ -35,14 +35,14 @@ extern class ClassUnloadEventSet extends com.sun.tools.example.debug.event.Abstr
 	/**
 	* Returns the name of the class that has been unloaded.
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Returns the JNI-style signature of the class that has been unloaded.
 	*/
-	@:overload public function getClassSignature() : String;
+	@:overload @:public public function getClassSignature() : String;
 	
-	@:overload override public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
+	@:overload @:public override public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
 	
 	
 }

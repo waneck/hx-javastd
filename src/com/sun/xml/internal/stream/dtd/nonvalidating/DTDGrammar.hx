@@ -20,28 +20,28 @@ package com.sun.xml.internal.stream.dtd.nonvalidating;
 extern class DTDGrammar
 {
 	/** Top level scope (-1). */
-	public static var TOP_LEVEL_SCOPE(default, null) : Int;
+	@:public @:static @:final public static var TOP_LEVEL_SCOPE(default, null) : Int;
 	
-	private var fDTDSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource;
+	@:protected private var fDTDSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource;
 	
-	private var fDTDContentModelSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource;
+	@:protected private var fDTDContentModelSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource;
 	
 	/** Current element index. */
-	private var fCurrentElementIndex : Int;
+	@:protected private var fCurrentElementIndex : Int;
 	
 	/** Current attribute index. */
-	private var fCurrentAttributeIndex : Int;
+	@:protected private var fCurrentAttributeIndex : Int;
 	
 	/** fReadingExternalDTD */
-	private var fReadingExternalDTD : Bool;
+	@:protected private var fReadingExternalDTD : Bool;
 	
 	/** Temporary Attribute decl. */
-	private var fAttributeDecl : com.sun.xml.internal.stream.dtd.nonvalidating.XMLAttributeDecl;
+	@:protected private var fAttributeDecl : com.sun.xml.internal.stream.dtd.nonvalidating.XMLAttributeDecl;
 	
 	/** Default constructor. */
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
-	@:overload public function getAttributeDeclIndex(elementDeclIndex : Int, attributeDeclName : String) : Int;
+	@:overload @:public public function getAttributeDeclIndex(elementDeclIndex : Int, attributeDeclName : String) : Int;
 	
 	/**
 	* The start of the DTD.
@@ -57,7 +57,7 @@ extern class DTDGrammar
 	*                      augmentations.
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startDTD(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startDTD(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An element declaration.
@@ -68,7 +68,7 @@ extern class DTDGrammar
 	*                      augmentations.
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function elementDecl(name : String, contentModel : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function elementDecl(name : String, contentModel : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An attribute declaration.
@@ -95,10 +95,10 @@ extern class DTDGrammar
 	*                      augmentations.
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function attributeDecl(elementName : String, attributeName : String, type : String, enumeration : java.NativeArray<String>, defaultType : String, defaultValue : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedDefaultValue : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function attributeDecl(elementName : String, attributeName : String, type : String, enumeration : java.NativeArray<String>, defaultType : String, defaultValue : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedDefaultValue : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/** Returns the symbol table. */
-	@:overload public function getSymbolTable() : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:overload @:public public function getSymbolTable() : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
 	/**
 	* Returns the index of the first element declaration. This index
@@ -107,7 +107,7 @@ extern class DTDGrammar
 	* @see #getNextElementDeclIndex
 	* @see #getElementDecl
 	*/
-	@:overload public function getFirstElementDeclIndex() : Int;
+	@:overload @:public public function getFirstElementDeclIndex() : Int;
 	
 	/**
 	* Returns the next index of the element declaration following the
@@ -115,7 +115,7 @@ extern class DTDGrammar
 	*
 	* @param elementDeclIndex The element declaration index.
 	*/
-	@:overload public function getNextElementDeclIndex(elementDeclIndex : Int) : Int;
+	@:overload @:public public function getNextElementDeclIndex(elementDeclIndex : Int) : Int;
 	
 	/**
 	* getElementDeclIndex
@@ -124,17 +124,17 @@ extern class DTDGrammar
 	*
 	* @return index of the elementDeclName in scope
 	*/
-	@:overload public function getElementDeclIndex(elementDeclName : String) : Int;
+	@:overload @:public public function getElementDeclIndex(elementDeclName : String) : Int;
 	
 	/** Returns the element decl index.
 	* @param elementDeclQName qualilfied name of the element
 	*/
-	@:overload public function getElementDeclIndex(elementDeclQName : com.sun.org.apache.xerces.internal.xni.QName) : Int;
+	@:overload @:public public function getElementDeclIndex(elementDeclQName : com.sun.org.apache.xerces.internal.xni.QName) : Int;
 	
 	/** make separate function for getting contentSpecType of element.
 	* we can avoid setting of the element values.
 	*/
-	@:overload public function getContentSpecType(elementIndex : Int) : java.StdTypes.Int16;
+	@:overload @:public public function getContentSpecType(elementIndex : Int) : java.StdTypes.Int16;
 	
 	/**
 	* getElementDecl
@@ -144,7 +144,7 @@ extern class DTDGrammar
 	*
 	* @return True if find the element, False otherwise.
 	*/
-	@:overload public function getElementDecl(elementDeclIndex : Int, elementDecl : com.sun.xml.internal.stream.dtd.nonvalidating.XMLElementDecl) : Bool;
+	@:overload @:public public function getElementDecl(elementDeclIndex : Int, elementDecl : com.sun.xml.internal.stream.dtd.nonvalidating.XMLElementDecl) : Bool;
 	
 	/**
 	* getFirstAttributeDeclIndex
@@ -153,7 +153,7 @@ extern class DTDGrammar
 	*
 	* @return index of the first attribute for element declaration elementDeclIndex
 	*/
-	@:overload public function getFirstAttributeDeclIndex(elementDeclIndex : Int) : Int;
+	@:overload @:public public function getFirstAttributeDeclIndex(elementDeclIndex : Int) : Int;
 	
 	/**
 	* getNextAttributeDeclIndex
@@ -162,7 +162,7 @@ extern class DTDGrammar
 	*
 	* @return index of the next attribute of the attribute at attributeDeclIndex
 	*/
-	@:overload public function getNextAttributeDeclIndex(attributeDeclIndex : Int) : Int;
+	@:overload @:public public function getNextAttributeDeclIndex(attributeDeclIndex : Int) : Int;
 	
 	/**
 	* getAttributeDecl
@@ -172,7 +172,7 @@ extern class DTDGrammar
 	*
 	* @return true if getAttributeDecl was able to fill in the value of attributeDecl
 	*/
-	@:overload public function getAttributeDecl(attributeDeclIndex : Int, attributeDecl : com.sun.xml.internal.stream.dtd.nonvalidating.XMLAttributeDecl) : Bool;
+	@:overload @:public public function getAttributeDecl(attributeDeclIndex : Int, attributeDecl : com.sun.xml.internal.stream.dtd.nonvalidating.XMLAttributeDecl) : Bool;
 	
 	/**
 	* Returns whether the given attribute is of type CDATA or not
@@ -182,27 +182,27 @@ extern class DTDGrammar
 	*
 	* @return true if the attribute is of type CDATA
 	*/
-	@:overload public function isCDATAAttribute(elName : com.sun.org.apache.xerces.internal.xni.QName, atName : com.sun.org.apache.xerces.internal.xni.QName) : Bool;
+	@:overload @:public public function isCDATAAttribute(elName : com.sun.org.apache.xerces.internal.xni.QName, atName : com.sun.org.apache.xerces.internal.xni.QName) : Bool;
 	
-	@:overload public function printElements() : Void;
+	@:overload @:public public function printElements() : Void;
 	
-	@:overload public function printAttributes(elementDeclIndex : Int) : Void;
+	@:overload @:public public function printAttributes(elementDeclIndex : Int) : Void;
 	
-	@:overload private function createElementDecl() : Int;
+	@:overload @:protected private function createElementDecl() : Int;
 	
-	@:overload private function setElementDecl(elementDeclIndex : Int, elementDecl : com.sun.xml.internal.stream.dtd.nonvalidating.XMLElementDecl) : Void;
+	@:overload @:protected private function setElementDecl(elementDeclIndex : Int, elementDecl : com.sun.xml.internal.stream.dtd.nonvalidating.XMLElementDecl) : Void;
 	
-	@:overload private function setFirstAttributeDeclIndex(elementDeclIndex : Int, newFirstAttrIndex : Int) : Void;
+	@:overload @:protected private function setFirstAttributeDeclIndex(elementDeclIndex : Int, newFirstAttrIndex : Int) : Void;
 	
-	@:overload private function createAttributeDecl() : Int;
+	@:overload @:protected private function createAttributeDecl() : Int;
 	
-	@:overload private function setAttributeDecl(elementDeclIndex : Int, attributeDeclIndex : Int, attributeDecl : com.sun.xml.internal.stream.dtd.nonvalidating.XMLAttributeDecl) : Void;
+	@:overload @:protected private function setAttributeDecl(elementDeclIndex : Int, attributeDeclIndex : Int, attributeDecl : com.sun.xml.internal.stream.dtd.nonvalidating.XMLAttributeDecl) : Void;
 	
-	@:overload public function notationDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function notationDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function getNotationDecls() : java.util.List<Dynamic>;
+	@:overload @:public public function getNotationDecls() : java.util.List<Dynamic>;
 	
-	@:overload public function endDTD(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endDTD(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	
 }
@@ -215,16 +215,16 @@ extern class DTDGrammar
 */
 @:native('com$sun$xml$internal$stream$dtd$nonvalidating$DTDGrammar$QNameHashtable') extern class DTDGrammar_QNameHashtable
 {
-	public static var UNIQUE_STRINGS(default, null) : Bool;
+	@:public @:static @:final public static var UNIQUE_STRINGS(default, null) : Bool;
 	
 	/** Associates the given value with the specified key tuple. */
-	@:overload public function put(key : String, value : Int) : Void;
+	@:overload @:public public function put(key : String, value : Int) : Void;
 	
 	/** Returns the value associated with the specified key tuple. */
-	@:overload public function get(key : String) : Int;
+	@:overload @:public public function get(key : String) : Int;
 	
 	/** Returns a hash value for the specified symbol. */
-	@:overload private function hash(symbol : String) : Int;
+	@:overload @:protected private function hash(symbol : String) : Int;
 	
 	
 }

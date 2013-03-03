@@ -67,7 +67,7 @@ extern interface LexicalHandler
 	* @see #endDTD
 	* @see #startEntity
 	*/
-	@:overload @:abstract public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public @:abstract @:public public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Report the end of DTD declarations.
@@ -79,7 +79,7 @@ extern interface LexicalHandler
 	* @exception SAXException The application may raise an exception.
 	* @see #startDTD
 	*/
-	@:overload @:abstract public function endDTD() : Void;
+	@:overload @:public @:abstract @:public public function endDTD() : Void;
 	
 	/**
 	* Report the beginning of some internal and external XML entities.
@@ -130,7 +130,7 @@ extern interface LexicalHandler
 	* @see org.xml.sax.ext.DeclHandler#internalEntityDecl
 	* @see org.xml.sax.ext.DeclHandler#externalEntityDecl
 	*/
-	@:overload @:abstract public function startEntity(name : String) : Void;
+	@:overload @:public @:abstract @:public public function startEntity(name : String) : Void;
 	
 	/**
 	* Report the end of an entity.
@@ -139,7 +139,7 @@ extern interface LexicalHandler
 	* @exception SAXException The application may raise an exception.
 	* @see #startEntity
 	*/
-	@:overload @:abstract public function endEntity(name : String) : Void;
+	@:overload @:public @:abstract public function endEntity(name : String) : Void;
 	
 	/**
 	* Report the start of a CDATA section.
@@ -152,7 +152,7 @@ extern interface LexicalHandler
 	* @exception SAXException The application may raise an exception.
 	* @see #endCDATA
 	*/
-	@:overload @:abstract public function startCDATA() : Void;
+	@:overload @:public @:abstract @:public public function startCDATA() : Void;
 	
 	/**
 	* Report the end of a CDATA section.
@@ -160,7 +160,7 @@ extern interface LexicalHandler
 	* @exception SAXException The application may raise an exception.
 	* @see #startCDATA
 	*/
-	@:overload @:abstract public function endCDATA() : Void;
+	@:overload @:public @:abstract @:public public function endCDATA() : Void;
 	
 	/**
 	* Report an XML comment anywhere in the document.
@@ -176,7 +176,7 @@ extern interface LexicalHandler
 	* @param length The number of characters to use from the array.
 	* @exception SAXException The application may raise an exception.
 	*/
-	@:overload @:abstract public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public @:abstract @:public public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	
 }

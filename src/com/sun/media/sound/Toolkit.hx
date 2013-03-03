@@ -25,7 +25,7 @@ package com.sun.media.sound;
 */
 extern class Toolkit
 {
-	@:overload public static function getPCMConvertedAudioInputStream(ais : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public @:static public static function getPCMConvertedAudioInputStream(ais : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
 	
 	
 }

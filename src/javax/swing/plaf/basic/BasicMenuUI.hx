@@ -33,49 +33,49 @@ extern class BasicMenuUI extends javax.swing.plaf.basic.BasicMenuItemUI
 	* @author David Karlton
 	* @author Arnaud Weber
 	*/
-	private var changeListener : javax.swing.event.ChangeListener;
+	@:protected private var changeListener : javax.swing.event.ChangeListener;
 	
-	private var menuListener : javax.swing.event.MenuListener;
+	@:protected private var menuListener : javax.swing.event.MenuListener;
 	
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
-	@:overload override private function getPropertyPrefix() : String;
+	@:overload @:protected override private function getPropertyPrefix() : String;
 	
-	@:overload override private function installListeners() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
-	@:overload override private function installKeyboardActions() : Void;
+	@:overload @:protected override private function installKeyboardActions() : Void;
 	
-	@:overload override private function uninstallKeyboardActions() : Void;
+	@:overload @:protected override private function uninstallKeyboardActions() : Void;
 	
-	@:overload override private function createMouseInputListener(c : javax.swing.JComponent) : javax.swing.event.MouseInputListener;
+	@:overload @:protected override private function createMouseInputListener(c : javax.swing.JComponent) : javax.swing.event.MouseInputListener;
 	
-	@:overload private function createMenuListener(c : javax.swing.JComponent) : javax.swing.event.MenuListener;
+	@:overload @:protected private function createMenuListener(c : javax.swing.JComponent) : javax.swing.event.MenuListener;
 	
-	@:overload private function createChangeListener(c : javax.swing.JComponent) : javax.swing.event.ChangeListener;
+	@:overload @:protected private function createChangeListener(c : javax.swing.JComponent) : javax.swing.event.ChangeListener;
 	
-	@:overload override private function createPropertyChangeListener(c : javax.swing.JComponent) : java.beans.PropertyChangeListener;
+	@:overload @:protected override private function createPropertyChangeListener(c : javax.swing.JComponent) : java.beans.PropertyChangeListener;
 	
-	@:overload override private function uninstallDefaults() : Void;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
-	@:overload override private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
-	@:overload override private function createMenuDragMouseListener(c : javax.swing.JComponent) : javax.swing.event.MenuDragMouseListener;
+	@:overload @:protected override private function createMenuDragMouseListener(c : javax.swing.JComponent) : javax.swing.event.MenuDragMouseListener;
 	
-	@:overload override private function createMenuKeyListener(c : javax.swing.JComponent) : javax.swing.event.MenuKeyListener;
+	@:overload @:protected override private function createMenuKeyListener(c : javax.swing.JComponent) : javax.swing.event.MenuKeyListener;
 	
-	@:overload override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload private function setupPostTimer(menu : javax.swing.JMenu) : Void;
+	@:overload @:protected private function setupPostTimer(menu : javax.swing.JMenu) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicMenuUI$Actions') @:internal extern class BasicMenuUI_Actions extends sun.swing.UIAction
 {
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function isEnabled(c : Dynamic) : Bool;
+	@:overload @:public override public function isEnabled(c : Dynamic) : Bool;
 	
 	
 }
@@ -94,7 +94,7 @@ extern class BasicMenuUI extends javax.swing.plaf.basic.BasicMenuItemUI
 */
 @:require(java4) @:native('javax$swing$plaf$basic$BasicMenuUI$MouseInputHandler') extern class BasicMenuUI_MouseInputHandler implements javax.swing.event.MouseInputListener
 {
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse has been clicked on the menu. This
@@ -103,7 +103,7 @@ extern class BasicMenuUI extends javax.swing.plaf.basic.BasicMenuItemUI
 	*
 	* @param e the mouse event
 	*/
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse has been released on the menu. Delegates the
@@ -111,7 +111,7 @@ extern class BasicMenuUI extends javax.swing.plaf.basic.BasicMenuItemUI
 	*
 	* @param e the mouse event
 	*/
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the cursor enters the menu. This method sets the selected
@@ -121,9 +121,9 @@ extern class BasicMenuUI extends javax.swing.plaf.basic.BasicMenuItemUI
 	*
 	* @param e the mouse event; not used
 	*/
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when a mouse button is pressed on the menu and then dragged.
@@ -132,9 +132,9 @@ extern class BasicMenuUI extends javax.swing.plaf.basic.BasicMenuItemUI
 	* @param e the mouse event
 	* @see java.awt.event.MouseMotionListener#mouseDragged
 	*/
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -144,25 +144,25 @@ extern class BasicMenuUI extends javax.swing.plaf.basic.BasicMenuItemUI
 */
 @:native('javax$swing$plaf$basic$BasicMenuUI$ChangeHandler') extern class BasicMenuUI_ChangeHandler implements javax.swing.event.ChangeListener
 {
-	public var menu : javax.swing.JMenu;
+	@:public public var menu : javax.swing.JMenu;
 	
-	public var ui : javax.swing.plaf.basic.BasicMenuUI;
+	@:public public var ui : javax.swing.plaf.basic.BasicMenuUI;
 	
-	public var isSelected : Bool;
+	@:public public var isSelected : Bool;
 	
-	public var wasFocused : java.awt.Component;
+	@:public public var wasFocused : java.awt.Component;
 	
-	@:overload public function new(m : javax.swing.JMenu, ui : javax.swing.plaf.basic.BasicMenuUI) : Void;
+	@:overload @:public public function new(m : javax.swing.JMenu, ui : javax.swing.plaf.basic.BasicMenuUI) : Void;
 	
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicMenuUI$Handler') @:internal extern class BasicMenuUI_Handler extends javax.swing.plaf.basic.BasicMenuItemUI.BasicMenuItemUI_Handler implements javax.swing.event.MenuKeyListener
 {
-	@:overload override public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public override public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload override public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse has been clicked on the menu. This
@@ -171,7 +171,7 @@ extern class BasicMenuUI extends javax.swing.plaf.basic.BasicMenuItemUI
 	*
 	* @param e the mouse event
 	*/
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse has been released on the menu. Delegates the
@@ -179,7 +179,7 @@ extern class BasicMenuUI extends javax.swing.plaf.basic.BasicMenuItemUI
 	*
 	* @param e the mouse event
 	*/
-	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the cursor enters the menu. This method sets the selected
@@ -189,9 +189,9 @@ extern class BasicMenuUI extends javax.swing.plaf.basic.BasicMenuItemUI
 	*
 	* @param e the mouse event; not used
 	*/
-	@:overload override public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when a mouse button is pressed on the menu and then dragged.
@@ -200,26 +200,26 @@ extern class BasicMenuUI extends javax.swing.plaf.basic.BasicMenuItemUI
 	* @param e the mouse event
 	* @see java.awt.event.MouseMotionListener#mouseDragged
 	*/
-	@:overload override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function menuDragMouseEntered(e : javax.swing.event.MenuDragMouseEvent) : Void;
+	@:overload @:public override public function menuDragMouseEntered(e : javax.swing.event.MenuDragMouseEvent) : Void;
 	
-	@:overload override public function menuDragMouseDragged(e : javax.swing.event.MenuDragMouseEvent) : Void;
+	@:overload @:public override public function menuDragMouseDragged(e : javax.swing.event.MenuDragMouseEvent) : Void;
 	
-	@:overload override public function menuDragMouseExited(e : javax.swing.event.MenuDragMouseEvent) : Void;
+	@:overload @:public override public function menuDragMouseExited(e : javax.swing.event.MenuDragMouseEvent) : Void;
 	
-	@:overload override public function menuDragMouseReleased(e : javax.swing.event.MenuDragMouseEvent) : Void;
+	@:overload @:public override public function menuDragMouseReleased(e : javax.swing.event.MenuDragMouseEvent) : Void;
 	
 	/**
 	* Open the Menu
 	*/
-	@:overload public function menuKeyTyped(e : javax.swing.event.MenuKeyEvent) : Void;
+	@:overload @:public public function menuKeyTyped(e : javax.swing.event.MenuKeyEvent) : Void;
 	
-	@:overload public function menuKeyPressed(e : javax.swing.event.MenuKeyEvent) : Void;
+	@:overload @:public public function menuKeyPressed(e : javax.swing.event.MenuKeyEvent) : Void;
 	
-	@:overload public function menuKeyReleased(e : javax.swing.event.MenuKeyEvent) : Void;
+	@:overload @:public public function menuKeyReleased(e : javax.swing.event.MenuKeyEvent) : Void;
 	
 	
 }

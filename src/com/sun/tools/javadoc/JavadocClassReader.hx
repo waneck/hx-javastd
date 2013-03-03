@@ -28,21 +28,21 @@ extern class JavadocClassReader extends com.sun.tools.javac.jvm.ClassReader
 	/** Javadoc uses an extended class reader that records package.html entries
 	*  @author Neal Gafter
 	*/
-	@:overload public static function instance0(context : com.sun.tools.javac.util.Context) : com.sun.tools.javadoc.JavadocClassReader;
+	@:overload @:public @:static public static function instance0(context : com.sun.tools.javac.util.Context) : com.sun.tools.javadoc.JavadocClassReader;
 	
-	@:overload public static function preRegister(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:public @:static public static function preRegister(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:public public function new(context : com.sun.tools.javac.util.Context) : Void;
 	
 	/**
 	* Override getPackageFileKinds to include search for package.html
 	*/
-	@:overload private function getPackageFileKinds() : java.util.EnumSet<javax.tools.JavaFileObject.JavaFileObject_Kind>;
+	@:overload @:protected override private function getPackageFileKinds() : java.util.EnumSet<javax.tools.JavaFileObject.JavaFileObject_Kind>;
 	
 	/**
 	* Override extraFileActions to check for package documentation
 	*/
-	@:overload private function extraFileActions(pack : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol, fo : javax.tools.JavaFileObject) : Void;
+	@:overload @:protected private function extraFileActions(pack : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol, fo : javax.tools.JavaFileObject) : Void;
 	
 	
 }

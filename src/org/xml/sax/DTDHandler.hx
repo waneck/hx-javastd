@@ -97,7 +97,7 @@ package org.xml.sax;
 	* @see #unparsedEntityDecl
 	* @see org.xml.sax.Attributes
 	*/
-	@:overload @:abstract public function notationDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public @:abstract public function notationDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Receive notification of an unparsed entity declaration event.
@@ -122,7 +122,7 @@ package org.xml.sax;
 	* @see #notationDecl
 	* @see org.xml.sax.Attributes
 	*/
-	@:overload @:abstract public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
+	@:overload @:public @:abstract public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
 	
 	
 }

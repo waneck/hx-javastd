@@ -42,13 +42,13 @@ package java.text;
 	/**
 	* A token used as a character-category value to identify ignore characters
 	*/
-	private static var IGNORE(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var IGNORE(default, null) : java.StdTypes.Int8;
 	
 	/**
 	* Constructs a RuleBasedBreakIterator according to the datafile
 	* provided.
 	*/
-	@:overload public function new(datafile : String) : Void;
+	@:overload @:public public function new(datafile : String) : Void;
 	
 	/**
 	* Read datafile. The datafile's format is as follows:
@@ -98,47 +98,47 @@ package java.text;
 	*   }
 	* </pre>
 	*/
-	@:overload private function readTables(datafile : String) : Void;
+	@:overload @:protected private function readTables(datafile : String) : Void;
 	
-	@:overload private function readFile(datafile : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected private function readFile(datafile : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Clones this iterator.
 	* @return A newly-constructed RuleBasedBreakIterator with the same
 	* behavior as this one.
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Returns true if both BreakIterators are of the same class, have the same
 	* rules, and iterate over the same text.
 	*/
-	@:overload public function equals(that : Dynamic) : Bool;
+	@:overload @:public public function equals(that : Dynamic) : Bool;
 	
 	/**
 	* Returns text
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compute a hashcode for this BreakIterator
 	* @return A hash code
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Sets the current iteration position to the beginning of the text.
 	* (i.e., the CharacterIterator's starting offset).
 	* @return The offset of the beginning of the text.
 	*/
-	@:overload override public function first() : Int;
+	@:overload @:public override public function first() : Int;
 	
 	/**
 	* Sets the current iteration position to the end of the text.
 	* (i.e., the CharacterIterator's ending offset).
 	* @return The text's past-the-end offset.
 	*/
-	@:overload override public function last() : Int;
+	@:overload @:public override public function last() : Int;
 	
 	/**
 	* Advances the iterator either forward or backward the specified number of steps.
@@ -149,24 +149,24 @@ package java.text;
 	* @return The character offset of the boundary position n boundaries away from
 	* the current one.
 	*/
-	@:overload override public function next(n : Int) : Int;
+	@:overload @:public override public function next(n : Int) : Int;
 	
 	/**
 	* Advances the iterator to the next boundary position.
 	* @return The position of the first boundary after this one.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	/**
 	* Advances the iterator backwards, to the last boundary preceding this one.
 	* @return The position of the last boundary position preceding this one.
 	*/
-	@:overload override public function previous() : Int;
+	@:overload @:public override public function previous() : Int;
 	
 	/**
 	* Throw IllegalArgumentException unless begin <= offset < end.
 	*/
-	@:overload @:final private static function checkOffset(offset : Int, text : java.text.CharacterIterator) : Void;
+	@:overload @:protected @:static @:final private static function checkOffset(offset : Int, text : java.text.CharacterIterator) : Void;
 	
 	/**
 	* Sets the iterator to refer to the first boundary position following
@@ -174,7 +174,7 @@ package java.text;
 	* @offset The position from which to begin searching for a break position.
 	* @return The position of the first break after the current position.
 	*/
-	@:overload override public function following(offset : Int) : Int;
+	@:overload @:public override public function following(offset : Int) : Int;
 	
 	/**
 	* Sets the iterator to refer to the last boundary position before the
@@ -182,7 +182,7 @@ package java.text;
 	* @offset The position to begin searching for a break from.
 	* @return The position of the last boundary before the starting position.
 	*/
-	@:overload override public function preceding(offset : Int) : Int;
+	@:overload @:public override public function preceding(offset : Int) : Int;
 	
 	/**
 	* Returns true if the specfied position is a boundary position.  As a side
@@ -191,13 +191,13 @@ package java.text;
 	* @param offset the offset to check.
 	* @return True if "offset" is a boundary position.
 	*/
-	@:overload override public function isBoundary(offset : Int) : Bool;
+	@:overload @:public override public function isBoundary(offset : Int) : Bool;
 	
 	/**
 	* Returns the current iteration position.
 	* @return The current iteration position.
 	*/
-	@:overload override public function current() : Int;
+	@:overload @:public override public function current() : Int;
 	
 	/**
 	* Return a CharacterIterator over the text being analyzed.  This version
@@ -206,14 +206,14 @@ package java.text;
 	* you need to change it, clone it first.
 	* @return An iterator over the text being analyzed.
 	*/
-	@:overload override public function getText() : java.text.CharacterIterator;
+	@:overload @:public override public function getText() : java.text.CharacterIterator;
 	
 	/**
 	* Set the iterator to analyze a new piece of text.  This function resets
 	* the current iteration position to the beginning of the text.
 	* @param newText An iterator over the text to analyze.
 	*/
-	@:overload override public function setText(newText : java.text.CharacterIterator) : Void;
+	@:overload @:public override public function setText(newText : java.text.CharacterIterator) : Void;
 	
 	/**
 	* This method is the actual implementation of the next() method.  All iteration
@@ -222,7 +222,7 @@ package java.text;
 	* of the text or the state machine transitions to state 0.  We update our return
 	* value every time the state machine passes through a possible end state.
 	*/
-	@:overload private function handleNext() : Int;
+	@:overload @:protected private function handleNext() : Int;
 	
 	/**
 	* This method backs the iterator back up to a "safe position" in the text.
@@ -231,25 +231,25 @@ package java.text;
 	* the appropriate position to return.  (For more information, see the description
 	* of buildBackwardsStateTable() in RuleBasedBreakIterator.Builder.)
 	*/
-	@:overload private function handlePrevious() : Int;
+	@:overload @:protected private function handlePrevious() : Int;
 	
 	/**
 	* Looks up a character's category (i.e., its category for breaking purposes,
 	* not its Unicode category)
 	*/
-	@:overload private function lookupCategory(c : Int) : Int;
+	@:overload @:protected private function lookupCategory(c : Int) : Int;
 	
 	/**
 	* Given a current state and a character category, looks up the
 	* next state to transition to in the state table.
 	*/
-	@:overload private function lookupState(state : Int, category : Int) : Int;
+	@:overload @:protected private function lookupState(state : Int, category : Int) : Int;
 	
 	/**
 	* Given a current state and a character category, looks up the
 	* next state to transition to in the backwards state table.
 	*/
-	@:overload private function lookupBackwardState(state : Int, category : Int) : Int;
+	@:overload @:protected private function lookupBackwardState(state : Int, category : Int) : Int;
 	
 	
 }
@@ -264,25 +264,25 @@ package java.text;
 */
 @:native('java$text$RuleBasedBreakIterator$SafeCharIterator') @:internal extern class RuleBasedBreakIterator_SafeCharIterator implements java.text.CharacterIterator implements java.lang.Cloneable
 {
-	@:overload public function first() : java.StdTypes.Char16;
+	@:overload @:public public function first() : java.StdTypes.Char16;
 	
-	@:overload public function last() : java.StdTypes.Char16;
+	@:overload @:public public function last() : java.StdTypes.Char16;
 	
-	@:overload public function current() : java.StdTypes.Char16;
+	@:overload @:public public function current() : java.StdTypes.Char16;
 	
-	@:overload public function next() : java.StdTypes.Char16;
+	@:overload @:public public function next() : java.StdTypes.Char16;
 	
-	@:overload public function previous() : java.StdTypes.Char16;
+	@:overload @:public public function previous() : java.StdTypes.Char16;
 	
-	@:overload public function setIndex(i : Int) : java.StdTypes.Char16;
+	@:overload @:public public function setIndex(i : Int) : java.StdTypes.Char16;
 	
-	@:overload public function getBeginIndex() : Int;
+	@:overload @:public public function getBeginIndex() : Int;
 	
-	@:overload public function getEndIndex() : Int;
+	@:overload @:public public function getEndIndex() : Int;
 	
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

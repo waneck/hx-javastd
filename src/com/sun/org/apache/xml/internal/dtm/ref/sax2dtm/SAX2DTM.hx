@@ -40,73 +40,73 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* Made protected rather than private so SAX2RTFDTM can access it.
 	*/
-	private var m_chars : com.sun.org.apache.xml.internal.utils.FastStringBuffer;
+	@:protected private var m_chars : com.sun.org.apache.xml.internal.utils.FastStringBuffer;
 	
 	/** This vector holds offset and length data.
 	*/
-	private var m_data : com.sun.org.apache.xml.internal.utils.SuballocatedIntVector;
+	@:protected private var m_data : com.sun.org.apache.xml.internal.utils.SuballocatedIntVector;
 	
 	/** The parent stack, needed only for construction.
 	* Made protected rather than private so SAX2RTFDTM can access it.
 	*/
-	@:transient private var m_parents : com.sun.org.apache.xml.internal.utils.IntStack;
+	@:transient @:protected private var m_parents : com.sun.org.apache.xml.internal.utils.IntStack;
 	
 	/** The current previous node, needed only for construction time.
 	* Made protected rather than private so SAX2RTFDTM can access it.
 	*/
-	@:transient private var m_previous : Int;
+	@:transient @:protected private var m_previous : Int;
 	
 	/** Namespace support, only relevent at construction time.
 	* Made protected rather than private so SAX2RTFDTM can access it.
 	*/
-	@:transient private var m_prefixMappings : java.util.Vector<Dynamic>;
+	@:transient @:protected private var m_prefixMappings : java.util.Vector<Dynamic>;
 	
 	/** Namespace support, only relevent at construction time.
 	* Made protected rather than private so SAX2RTFDTM can access it.
 	*/
-	@:transient private var m_contextIndexes : com.sun.org.apache.xml.internal.utils.IntStack;
+	@:transient @:protected private var m_contextIndexes : com.sun.org.apache.xml.internal.utils.IntStack;
 	
 	/** Type of next characters() event within text block in prgress. */
-	@:transient private var m_textType : Int;
+	@:transient @:protected private var m_textType : Int;
 	
 	/**
 	* Type of coalesced text block. See logic in the characters()
 	* method.
 	*/
-	@:transient private var m_coalescedTextType : Int;
+	@:transient @:protected private var m_coalescedTextType : Int;
 	
 	/** The SAX Document locator */
-	@:transient private var m_locator : org.xml.sax.Locator;
+	@:transient @:protected private var m_locator : org.xml.sax.Locator;
 	
 	/** We are inside the DTD.  This is used for ignoring comments.  */
-	@:transient private var m_insideDTD : Bool;
+	@:transient @:protected private var m_insideDTD : Bool;
 	
 	/** Tree Walker for dispatchToEvents. */
-	private var m_walker : com.sun.org.apache.xml.internal.dtm.ref.DTMTreeWalker;
+	@:protected private var m_walker : com.sun.org.apache.xml.internal.dtm.ref.DTMTreeWalker;
 	
 	/** pool of string values that come as strings. */
-	private var m_valuesOrPrefixes : com.sun.org.apache.xml.internal.dtm.ref.DTMStringPool;
+	@:protected private var m_valuesOrPrefixes : com.sun.org.apache.xml.internal.dtm.ref.DTMStringPool;
 	
 	/** End document has been reached.
 	* Made protected rather than private so SAX2RTFDTM can access it.
 	*/
-	private var m_endDocumentOccured : Bool;
+	@:protected private var m_endDocumentOccured : Bool;
 	
 	/** Data or qualified name values, one array element for each node. */
-	private var m_dataOrQName : com.sun.org.apache.xml.internal.utils.SuballocatedIntVector;
+	@:protected private var m_dataOrQName : com.sun.org.apache.xml.internal.utils.SuballocatedIntVector;
 	
 	/**
 	* This table holds the ID string to node associations, for
 	* XML IDs.
 	*/
-	private var m_idAttributes : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var m_idAttributes : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* The starting offset within m_chars for the text or
 	* CDATA_SECTION node currently being acumulated,
 	* or -1 if there is no text node in progress
 	*/
-	private var m_textPendingStart : Int;
+	@:protected private var m_textPendingStart : Int;
 	
 	/**
 	* Describes whether information about document source location
@@ -114,19 +114,19 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* Made protected for access by SAX2RTFDTM.
 	*/
-	private var m_useSourceLocationProperty : Bool;
+	@:protected private var m_useSourceLocationProperty : Bool;
 	
 	/** Made protected for access by SAX2RTFDTM.
 	*/
-	private var m_sourceSystemId : com.sun.org.apache.xml.internal.utils.StringVector;
+	@:protected private var m_sourceSystemId : com.sun.org.apache.xml.internal.utils.StringVector;
 	
 	/** Made protected for access by SAX2RTFDTM.
 	*/
-	private var m_sourceLine : com.sun.org.apache.xml.internal.utils.IntVector;
+	@:protected private var m_sourceLine : com.sun.org.apache.xml.internal.utils.IntVector;
 	
 	/** Made protected for access by SAX2RTFDTM.
 	*/
-	private var m_sourceColumn : com.sun.org.apache.xml.internal.utils.IntVector;
+	@:protected private var m_sourceColumn : com.sun.org.apache.xml.internal.utils.IntVector;
 	
 	/**
 	* Construct a SAX2DTM object using the default block size.
@@ -140,7 +140,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param doIndexing true if the caller considers it worth it to use
 	*                   indexing schemes.
 	*/
-	@:overload public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool) : Void;
+	@:overload @:public public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool) : Void;
 	
 	/**
 	* Construct a SAX2DTM object ready to be constructed from SAX2
@@ -158,13 +158,13 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param usePrevsib true if we want to build the previous sibling node array.
 	* @param newNameTable true if we want to use a new ExpandedNameTable for this DTM.
 	*/
-	@:overload public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool, blocksize : Int, usePrevsib : Bool, newNameTable : Bool) : Void;
+	@:overload @:public public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool, blocksize : Int, usePrevsib : Bool, newNameTable : Bool) : Void;
 	
 	/**
 	* Set whether information about document source location
 	* should be maintained or not.
 	*/
-	@:overload public function setUseSourceLocation(useSourceLocation : Bool) : Void;
+	@:overload @:public public function setUseSourceLocation(useSourceLocation : Bool) : Void;
 	
 	/**
 	* Get the data or qualified name for the given node identity.
@@ -173,12 +173,12 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @return The data or qualified name, or DTM.NULL.
 	*/
-	@:overload private function _dataOrQName(identity : Int) : Int;
+	@:overload @:protected private function _dataOrQName(identity : Int) : Int;
 	
 	/**
 	* Ask the CoRoutine parser to doTerminate and clear the reference.
 	*/
-	@:overload public function clearCoRoutine() : Void;
+	@:overload @:public public function clearCoRoutine() : Void;
 	
 	/**
 	* Ask the CoRoutine parser to doTerminate and clear the reference. If
@@ -187,7 +187,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param callDoTerminate true of doTerminate should be called on the
 	* coRoutine parser.
 	*/
-	@:overload public function clearCoRoutine(callDoTerminate : Bool) : Void;
+	@:overload @:public public function clearCoRoutine(callDoTerminate : Bool) : Void;
 	
 	/**
 	* Bind a IncrementalSAXSource to this DTM. If we discover we need nodes
@@ -201,7 +201,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param incrementalSAXSource The parser that we want to recieve events from
 	* on demand.
 	*/
-	@:overload public function setIncrementalSAXSource(incrementalSAXSource : com.sun.org.apache.xml.internal.dtm.ref.IncrementalSAXSource) : Void;
+	@:overload @:public public function setIncrementalSAXSource(incrementalSAXSource : com.sun.org.apache.xml.internal.dtm.ref.IncrementalSAXSource) : Void;
 	
 	/**
 	* getContentHandler returns "our SAX builder" -- the thing that
@@ -218,7 +218,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* Note that IncrementalSAXSource_Filter is package private, hence
 	* it can be statically referenced using instanceof (CR 6537912).
 	*/
-	@:overload override public function getContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public override public function getContentHandler() : org.xml.sax.ContentHandler;
 	
 	/**
 	* Return this DTM's lexical handler.
@@ -233,35 +233,35 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* Note that IncrementalSAXSource_Filter is package private, hence
 	* it can be statically referenced using instanceof (CR 6537912).
 	*/
-	@:overload override public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
+	@:overload @:public override public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
 	
 	/**
 	* Return this DTM's EntityResolver.
 	*
 	* @return null if this model doesn't respond to SAX entity ref events.
 	*/
-	@:overload override public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public override public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
 	/**
 	* Return this DTM's DTDHandler.
 	*
 	* @return null if this model doesn't respond to SAX dtd events.
 	*/
-	@:overload override public function getDTDHandler() : org.xml.sax.DTDHandler;
+	@:overload @:public override public function getDTDHandler() : org.xml.sax.DTDHandler;
 	
 	/**
 	* Return this DTM's ErrorHandler.
 	*
 	* @return null if this model doesn't respond to SAX error events.
 	*/
-	@:overload override public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public override public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
 	/**
 	* Return this DTM's DeclHandler.
 	*
 	* @return null if this model doesn't respond to SAX Decl events.
 	*/
-	@:overload override public function getDeclHandler() : org.xml.sax.ext.DeclHandler;
+	@:overload @:public override public function getDeclHandler() : org.xml.sax.ext.DeclHandler;
 	
 	/**
 	* @return true iff we're building this model incrementally (eg
@@ -269,7 +269,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* transformation and the parse run simultaneously. Guidance to the
 	* DTMManager.
 	*/
-	@:overload override public function needsTwoThreads() : Bool;
+	@:overload @:public override public function needsTwoThreads() : Bool;
 	
 	/**
 	* Directly call the
@@ -288,7 +288,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @throws SAXException
 	*/
-	@:overload override public function dispatchCharactersEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler, normalize : Bool) : Void;
+	@:overload @:public override public function dispatchCharactersEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler, normalize : Bool) : Void;
 	
 	/**
 	* Given a node handle, return its DOM-style node name. This will
@@ -299,7 +299,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* %REVIEW% Document when empty string is possible...
 	* %REVIEW-COMMENT% It should never be empty, should it?
 	*/
-	@:overload override public function getNodeName(nodeHandle : Int) : String;
+	@:overload @:public override public function getNodeName(nodeHandle : Int) : String;
 	
 	/**
 	* Given a node handle, return the XPath node name.  This should be
@@ -309,7 +309,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param nodeHandle the id of the node.
 	* @return String Name of this node, which may be an empty string.
 	*/
-	@:overload override public function getNodeNameX(nodeHandle : Int) : String;
+	@:overload @:public override public function getNodeNameX(nodeHandle : Int) : String;
 	
 	/**
 	*     5. [specified] A flag indicating whether this attribute was actually
@@ -320,7 +320,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @return <code>true</code> if the attribute was specified;
 	*         <code>false</code> if it was defaulted.
 	*/
-	@:overload override public function isAttributeSpecified(attributeHandle : Int) : Bool;
+	@:overload @:public override public function isAttributeSpecified(attributeHandle : Int) : Bool;
 	
 	/**
 	*   A document type declaration information item has the following properties:
@@ -330,7 +330,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @return the system identifier String object, or null if there is none.
 	*/
-	@:overload override public function getDocumentTypeDeclarationSystemIdentifier() : String;
+	@:overload @:public override public function getDocumentTypeDeclarationSystemIdentifier() : String;
 	
 	/**
 	* Get the next node identity value in the list, and call the iterator
@@ -339,7 +339,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param identity The node identity (index).
 	* @return identity+1, or DTM.NULL.
 	*/
-	@:overload override private function getNextNodeIdentity(identity : Int) : Int;
+	@:overload @:protected override private function getNextNodeIdentity(identity : Int) : Int;
 	
 	/**
 	* Directly create SAX parser events from a subtree.
@@ -349,14 +349,14 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function dispatchToEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public override public function dispatchToEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Get the number of nodes that have been added.
 	*
 	* @return The number of that are currently in the tree.
 	*/
-	@:overload override public function getNumberOfNodes() : Int;
+	@:overload @:public override public function getNumberOfNodes() : Int;
 	
 	/**
 	* This method should try and build one or more nodes in the table.
@@ -364,7 +364,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @return The true if a next node is found or false if
 	*         there are no more nodes.
 	*/
-	@:overload override private function nextNode() : Bool;
+	@:overload @:protected override private function nextNode() : Bool;
 	
 	/**
 	* Construct the node map from the node.
@@ -379,14 +379,14 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @return The index identity of the node that was added.
 	*/
-	@:overload private function addNode(type : Int, expandedTypeID : Int, parentIndex : Int, previousSibling : Int, dataOrPrefix : Int, canHaveFirstChild : Bool) : Int;
+	@:overload @:protected private function addNode(type : Int, expandedTypeID : Int, parentIndex : Int, previousSibling : Int, dataOrPrefix : Int, canHaveFirstChild : Bool) : Int;
 	
 	/**
 	* Get a new DTM ID beginning at the specified node index.
 	* @param  nodeIndex The node identity at which the new DTM ID will begin
 	* addressing.
 	*/
-	@:overload private function addNewDTMID(nodeIndex : Int) : Void;
+	@:overload @:protected private function addNewDTMID(nodeIndex : Int) : Void;
 	
 	/**
 	* Migrate a DTM built with an old DTMManager to a new DTMManager.
@@ -395,13 +395,13 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* This is used to support DTM sharing between multiple transformations.
 	* @param manager the DTMManager
 	*/
-	@:overload override public function migrateTo(manager : com.sun.org.apache.xml.internal.dtm.DTMManager) : Void;
+	@:overload @:public override public function migrateTo(manager : com.sun.org.apache.xml.internal.dtm.DTMManager) : Void;
 	
 	/**
 	* Store the source location of the current node.  This method must be called
 	* as every node is added to the DTM or for no node.
 	*/
-	@:overload private function setSourceLocation() : Void;
+	@:overload @:protected private function setSourceLocation() : Void;
 	
 	/**
 	* Given a node handle, return its node value. This is mostly
@@ -412,7 +412,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @return String Value of this node, or null if not
 	* meaningful for this node type.
 	*/
-	@:overload override public function getNodeValue(nodeHandle : Int) : String;
+	@:overload @:public override public function getNodeValue(nodeHandle : Int) : String;
 	
 	/**
 	* Given a node handle, return its XPath-style localname.
@@ -422,7 +422,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param nodeHandle the id of the node.
 	* @return String Local name of this node.
 	*/
-	@:overload override public function getLocalName(nodeHandle : Int) : String;
+	@:overload @:public override public function getLocalName(nodeHandle : Int) : String;
 	
 	/**
 	* The getUnparsedEntityURI function returns the URI of the unparsed
@@ -458,7 +458,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @return String containing the URI of the Unparsed Entity, or an
 	* empty string if no such entity exists.
 	*/
-	@:overload override public function getUnparsedEntityURI(name : String) : String;
+	@:overload @:public override public function getUnparsedEntityURI(name : String) : String;
 	
 	/**
 	* Given a namespace handle, return the prefix that the namespace decl is
@@ -472,7 +472,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @return String prefix of this node's name, or "" if no explicit
 	* namespace prefix was given.
 	*/
-	@:overload override public function getPrefix(nodeHandle : Int) : String;
+	@:overload @:public override public function getPrefix(nodeHandle : Int) : String;
 	
 	/**
 	* Retrieves an attribute node by by qualified name and namespace URI.
@@ -486,7 +486,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*   <code>nodeName</code>) or <code>DTM.NULL</code> if there is no such
 	*   attribute.
 	*/
-	@:overload override public function getAttributeNode(nodeHandle : Int, namespaceURI : String, name : String) : Int;
+	@:overload @:public override public function getAttributeNode(nodeHandle : Int, namespaceURI : String, name : String) : Int;
 	
 	/**
 	* Return the public identifier of the external subset,
@@ -496,7 +496,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @return the public identifier String object, or null if there is none.
 	*/
-	@:overload override public function getDocumentTypeDeclarationPublicIdentifier() : String;
+	@:overload @:public override public function getDocumentTypeDeclarationPublicIdentifier() : String;
 	
 	/**
 	* Given a node handle, return its DOM-style namespace URI
@@ -509,7 +509,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @return String URI value of this node's namespace, or null if no
 	* namespace was resolved.
 	*/
-	@:overload override public function getNamespaceURI(nodeHandle : Int) : String;
+	@:overload @:public override public function getNamespaceURI(nodeHandle : Int) : String;
 	
 	/**
 	* Get the string-value of a node as a String object
@@ -520,7 +520,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @return A string object that represents the string-value of the given node.
 	*/
-	@:overload override public function getStringValue(nodeHandle : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public override public function getStringValue(nodeHandle : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Determine if the string-value of a node is whitespace
@@ -529,7 +529,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @return Return true if the given node is whitespace.
 	*/
-	@:overload public function isWhitespace(nodeHandle : Int) : Bool;
+	@:overload @:public public function isWhitespace(nodeHandle : Int) : Bool;
 	
 	/**
 	* Returns the <code>Element</code> whose <code>ID</code> is given by
@@ -548,7 +548,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param elementId The unique <code>id</code> value for an element.
 	* @return The handle of the matching element.
 	*/
-	@:overload override public function getElementById(elementId : String) : Int;
+	@:overload @:public override public function getElementById(elementId : String) : Int;
 	
 	/**
 	* Get a prefix either from the qname or from the uri mapping, or just make
@@ -559,7 +559,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @return The prefix if there is one, or null.
 	*/
-	@:overload public function getPrefix(qname : String, uri : String) : String;
+	@:overload @:public public function getPrefix(qname : String, uri : String) : String;
 	
 	/**
 	* Get a prefix either from the uri mapping, or just make
@@ -569,7 +569,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @return The prefix if there is one, or null.
 	*/
-	@:overload public function getIdForNamespace(uri : String) : Int;
+	@:overload @:public public function getIdForNamespace(uri : String) : Int;
 	
 	/**
 	* Get a prefix either from the qname or from the uri mapping, or just make
@@ -577,7 +577,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @return The prefix if there is one, or null.
 	*/
-	@:overload public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public public function getNamespaceURI(prefix : String) : String;
 	
 	/**
 	* Set an ID string to node association in the ID table.
@@ -585,13 +585,13 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param id The ID string.
 	* @param elem The associated element handle.
 	*/
-	@:overload public function setIDAttribute(id : String, elem : Int) : Void;
+	@:overload @:public public function setIDAttribute(id : String, elem : Int) : Void;
 	
 	/**
 	* Check whether accumulated text should be stripped; if not,
 	* append the appropriate flavor of text/cdata node.
 	*/
-	@:overload private function charactersFlush() : Void;
+	@:overload @:protected private function charactersFlush() : Void;
 	
 	/**
 	* Resolve an external entity.
@@ -614,7 +614,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @throws SAXException
 	*/
-	@:overload public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
 	/**
 	* Receive notification of a notation declaration.
@@ -633,7 +633,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @throws SAXException
 	*/
-	@:overload public function notationDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function notationDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Receive notification of an unparsed entity declaration.
@@ -653,7 +653,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*
 	* @throws SAXException
 	*/
-	@:overload public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
+	@:overload @:public public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
 	
 	/**
 	* Receive a Locator object for document events.
@@ -666,7 +666,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @see org.xml.sax.ContentHandler#setDocumentLocator
 	* @see org.xml.sax.Locator
 	*/
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Receive notification of the beginning of the document.
@@ -675,7 +675,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#startDocument
 	*/
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
 	/**
 	* Receive notification of the end of the document.
@@ -684,7 +684,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#endDocument
 	*/
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
 	/**
 	* Receive notification of the start of a Namespace mapping.
@@ -699,7 +699,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#startPrefixMapping
 	*/
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	/**
 	* Receive notification of the end of a Namespace mapping.
@@ -713,7 +713,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#endPrefixMapping
 	*/
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
 	/**
 	* Check if a declaration has already been made for a given prefix.
@@ -723,7 +723,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @return true if the declaration has already been declared in the
 	*         current context.
 	*/
-	@:overload private function declAlreadyDeclared(prefix : String) : Bool;
+	@:overload @:protected private function declAlreadyDeclared(prefix : String) : Bool;
 	
 	/**
 	* Receive notification of the start of an element.
@@ -746,7 +746,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#startElement
 	*/
-	@:overload public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -768,7 +768,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#endElement
 	*/
-	@:overload public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Receive notification of character data inside an element.
@@ -786,7 +786,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#characters
 	*/
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of ignorable whitespace in element content.
@@ -804,7 +804,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#ignorableWhitespace
 	*/
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of a processing instruction.
@@ -821,7 +821,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#processingInstruction
 	*/
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* Receive notification of a skipped entity.
@@ -836,7 +836,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#processingInstruction
 	*/
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
 	/**
 	* Receive notification of a parser warning.
@@ -852,7 +852,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @see org.xml.sax.ErrorHandler#warning
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload public function warning(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(e : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Receive notification of a recoverable parser error.
@@ -868,7 +868,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @see org.xml.sax.ErrorHandler#warning
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(e : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Report a fatal XML parsing error.
@@ -887,7 +887,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @see org.xml.sax.ErrorHandler#fatalError
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload public function fatalError(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(e : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Report an element type declaration.
@@ -902,7 +902,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param model The content model as a normalized string.
 	* @throws SAXException The application may raise an exception.
 	*/
-	@:overload public function elementDecl(name : String, model : String) : Void;
+	@:overload @:public public function elementDecl(name : String, model : String) : Void;
 	
 	/**
 	* Report an attribute type declaration.
@@ -923,7 +923,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	*        or null if there is none.
 	* @throws SAXException The application may raise an exception.
 	*/
-	@:overload public function attributeDecl(eName : String, aName : String, type : String, valueDefault : String, value : String) : Void;
+	@:overload @:public public function attributeDecl(eName : String, aName : String, type : String, valueDefault : String, value : String) : Void;
 	
 	/**
 	* Report an internal entity declaration.
@@ -938,7 +938,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @see #externalEntityDecl
 	* @see org.xml.sax.DTDHandler#unparsedEntityDecl
 	*/
-	@:overload public function internalEntityDecl(name : String, value : String) : Void;
+	@:overload @:public public function internalEntityDecl(name : String, value : String) : Void;
 	
 	/**
 	* Report a parsed external entity declaration.
@@ -955,7 +955,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @see #internalEntityDecl
 	* @see org.xml.sax.DTDHandler#unparsedEntityDecl
 	*/
-	@:overload public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Report the start of DTD declarations, if any.
@@ -978,7 +978,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @see #endDTD
 	* @see #startEntity
 	*/
-	@:overload public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Report the end of DTD declarations.
@@ -986,7 +986,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @throws SAXException The application may raise an exception.
 	* @see #startDTD
 	*/
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
 	/**
 	* Report the beginning of an entity in content.
@@ -1010,7 +1010,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @see org.xml.sax.ext.DeclHandler#internalEntityDecl
 	* @see org.xml.sax.ext.DeclHandler#externalEntityDecl
 	*/
-	@:overload public function startEntity(name : String) : Void;
+	@:overload @:public public function startEntity(name : String) : Void;
 	
 	/**
 	* Report the end of an entity.
@@ -1019,7 +1019,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @throws SAXException The application may raise an exception.
 	* @see #startEntity
 	*/
-	@:overload public function endEntity(name : String) : Void;
+	@:overload @:public public function endEntity(name : String) : Void;
 	
 	/**
 	* Report the start of a CDATA section.
@@ -1031,7 +1031,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @throws SAXException The application may raise an exception.
 	* @see #endCDATA
 	*/
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
 	/**
 	* Report the end of a CDATA section.
@@ -1039,7 +1039,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @throws SAXException The application may raise an exception.
 	* @see #startCDATA
 	*/
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
 	/**
 	* Report an XML comment anywhere in the document.
@@ -1053,7 +1053,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param length The number of characters to use from the array.
 	* @throws SAXException The application may raise an exception.
 	*/
-	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Set a run time property for this DTM instance.
@@ -1064,7 +1064,7 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* @param property a <code>String</code> value
 	* @param value an <code>Object</code> value
 	*/
-	@:overload override public function setProperty(property : String, value : Dynamic) : Void;
+	@:overload @:public override public function setProperty(property : String, value : Dynamic) : Void;
 	
 	/** Retrieve the SourceLocator associated with a specific node.
 	* This is only meaningful if the XalanProperties.SOURCE_LOCATION flag was
@@ -1074,9 +1074,9 @@ extern class SAX2DTM extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultB
 	* (We _could_ return a locator with the document's base URI and bogus
 	* line/column information. Trying that; see the else clause.)
 	* */
-	@:overload override public function getSourceLocatorFor(node : Int) : javax.xml.transform.SourceLocator;
+	@:overload @:public override public function getSourceLocatorFor(node : Int) : javax.xml.transform.SourceLocator;
 	
-	@:overload public function getFixedNames(type : Int) : String;
+	@:overload @:public public function getFixedNames(type : Int) : String;
 	
 	
 }

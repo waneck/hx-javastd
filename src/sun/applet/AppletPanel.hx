@@ -28,46 +28,46 @@ extern class AppletPanel extends java.awt.Panel implements java.applet.AppletStu
 	/**
 	* The applet (if loaded).
 	*/
-	private var applet : java.applet.Applet;
+	@:protected private var applet : java.applet.Applet;
 	
 	/**
 	* Applet will allow initialization.  Should be
 	* set to false if loading a serialized applet
 	* that was pickled in the init=true state.
 	*/
-	private var doInit : Bool;
+	@:protected private var doInit : Bool;
 	
 	/**
 	* The classloader for the applet.
 	*/
-	private var loader : sun.applet.AppletClassLoader;
+	@:protected private var loader : sun.applet.AppletClassLoader;
 	
 	/* applet event ids */
-	public static var APPLET_DISPOSE(default, null) : Int;
+	@:public @:final @:static public static var APPLET_DISPOSE(default, null) : Int;
 	
-	public static var APPLET_LOAD(default, null) : Int;
+	@:public @:final @:static public static var APPLET_LOAD(default, null) : Int;
 	
-	public static var APPLET_INIT(default, null) : Int;
+	@:public @:final @:static public static var APPLET_INIT(default, null) : Int;
 	
-	public static var APPLET_START(default, null) : Int;
+	@:public @:final @:static public static var APPLET_START(default, null) : Int;
 	
-	public static var APPLET_STOP(default, null) : Int;
+	@:public @:final @:static public static var APPLET_STOP(default, null) : Int;
 	
-	public static var APPLET_DESTROY(default, null) : Int;
+	@:public @:final @:static public static var APPLET_DESTROY(default, null) : Int;
 	
-	public static var APPLET_QUIT(default, null) : Int;
+	@:public @:final @:static public static var APPLET_QUIT(default, null) : Int;
 	
-	public static var APPLET_ERROR(default, null) : Int;
+	@:public @:final @:static public static var APPLET_ERROR(default, null) : Int;
 	
 	/* send to the parent to force relayout */
-	public static var APPLET_RESIZE(default, null) : Int;
+	@:public @:final @:static public static var APPLET_RESIZE(default, null) : Int;
 	
 	/* sent to a (distant) parent to indicate that the applet is being
 	* loaded or as completed loading
 	*/
-	public static var APPLET_LOADING(default, null) : Int;
+	@:public @:final @:static public static var APPLET_LOADING(default, null) : Int;
 	
-	public static var APPLET_LOADING_COMPLETED(default, null) : Int;
+	@:public @:final @:static public static var APPLET_LOADING_COMPLETED(default, null) : Int;
 	
 	/**
 	* The current status. One of:
@@ -79,67 +79,67 @@ extern class AppletPanel extends java.awt.Panel implements java.applet.AppletStu
 	*    APPLET_DESTROY,
 	*    APPLET_ERROR.
 	*/
-	private var status : Int;
+	@:protected private var status : Int;
 	
 	/**
 	* The thread for the applet.
 	*/
-	private var handler : java.lang.Thread;
+	@:protected private var handler : java.lang.Thread;
 	
 	/* abstract classes */
-	@:overload @:abstract private function getCode() : String;
+	@:overload @:abstract @:protected private function getCode() : String;
 	
-	@:overload @:abstract private function getJarFiles() : String;
+	@:overload @:abstract @:protected private function getJarFiles() : String;
 	
-	@:overload @:abstract private function getSerializedObject() : String;
+	@:overload @:abstract @:protected private function getSerializedObject() : String;
 	
-	@:overload @:abstract public function getWidth() : Int;
+	@:overload @:abstract @:public override public function getWidth() : Int;
 	
-	@:overload @:abstract public function getHeight() : Int;
+	@:overload @:abstract @:public override public function getHeight() : Int;
 	
-	@:overload @:abstract public function hasInitialFocus() : Bool;
+	@:overload @:abstract @:public public function hasInitialFocus() : Bool;
 	
-	@:overload private function setupAppletAppContext() : Void;
+	@:overload @:protected private function setupAppletAppContext() : Void;
 	
 	/*
 	* Creates a thread to run the applet. This method is called
 	* each time an applet is loaded and reloaded.
 	*/
-	@:overload @:synchronized private function createAppletThread() : Void;
+	@:overload @:protected @:synchronized private function createAppletThread() : Void;
 	
 	/**
 	* Construct an applet viewer and start the applet.
 	*/
-	@:overload public function init() : Void;
+	@:overload @:public public function init() : Void;
 	
 	/**
 	* Minimum size
 	*/
-	@:overload override public function minimumSize() : java.awt.Dimension;
+	@:overload @:public override public function minimumSize() : java.awt.Dimension;
 	
 	/**
 	* Preferred size
 	*/
-	@:overload override public function preferredSize() : java.awt.Dimension;
+	@:overload @:public override public function preferredSize() : java.awt.Dimension;
 	
-	@:overload @:synchronized public function addAppletListener(l : sun.applet.AppletListener) : Void;
+	@:overload @:synchronized @:public public function addAppletListener(l : sun.applet.AppletListener) : Void;
 	
-	@:overload @:synchronized public function removeAppletListener(l : sun.applet.AppletListener) : Void;
+	@:overload @:synchronized @:public public function removeAppletListener(l : sun.applet.AppletListener) : Void;
 	
 	/**
 	* Dispatch event to the listeners..
 	*/
-	@:overload public function dispatchAppletEvent(id : Int, argument : Dynamic) : Void;
+	@:overload @:public public function dispatchAppletEvent(id : Int, argument : Dynamic) : Void;
 	
 	/**
 	* Send an event. Queue it for execution by the handler thread.
 	*/
-	@:overload public function sendEvent(id : Int) : Void;
+	@:overload @:public public function sendEvent(id : Int) : Void;
 	
 	/**
 	* Get an event from the queue.
 	*/
-	@:overload @:synchronized private function getNextEvent() : sun.applet.AppletEvent;
+	@:overload @:protected @:synchronized private function getNextEvent() : sun.applet.AppletEvent;
 	
 	/**
 	* Execute applet events.
@@ -170,7 +170,7 @@ extern class AppletPanel extends java.awt.Panel implements java.applet.AppletStu
 	*
 	*
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	/**
 	* Load the applet into memory.
@@ -178,74 +178,74 @@ extern class AppletPanel extends java.awt.Panel implements java.applet.AppletStu
 	* applet event processing so that it can be gracefully interrupted from
 	* things like HotJava.
 	*/
-	@:overload private function runLoader() : Void;
+	@:overload @:protected private function runLoader() : Void;
 	
-	@:overload private function createApplet(loader : sun.applet.AppletClassLoader) : java.applet.Applet;
+	@:overload @:protected private function createApplet(loader : sun.applet.AppletClassLoader) : java.applet.Applet;
 	
-	@:overload private function loadJarFiles(loader : sun.applet.AppletClassLoader) : Void;
+	@:overload @:protected private function loadJarFiles(loader : sun.applet.AppletClassLoader) : Void;
 	
 	/**
 	* Request that the loading of the applet be stopped.
 	*/
-	@:overload @:synchronized private function stopLoading() : Void;
+	@:overload @:protected @:synchronized private function stopLoading() : Void;
 	
-	@:overload @:synchronized private function okToLoad() : Bool;
+	@:overload @:protected @:synchronized private function okToLoad() : Bool;
 	
-	@:overload @:synchronized private function clearLoadAbortRequest() : Void;
+	@:overload @:protected @:synchronized private function clearLoadAbortRequest() : Void;
 	
-	@:overload @:synchronized private function setLoadAbortRequest() : Void;
+	@:overload @:protected @:synchronized private function setLoadAbortRequest() : Void;
 	
 	/**
 	* Return true when the applet has been started.
 	*/
-	@:overload public function isActive() : Bool;
+	@:overload @:public public function isActive() : Bool;
 	
 	/**
 	* Is called when the applet wants to be resized.
 	*/
-	@:overload public function appletResize(width : Int, height : Int) : Void;
+	@:overload @:public public function appletResize(width : Int, height : Int) : Void;
 	
-	@:overload public function setBounds(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function setBounds(x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function getApplet() : java.applet.Applet;
+	@:overload @:public public function getApplet() : java.applet.Applet;
 	
 	/**
 	* Status line. Called by the AppletPanel to provide
 	* feedback on the Applet's state.
 	*/
-	@:overload private function showAppletStatus(status : String) : Void;
+	@:overload @:protected private function showAppletStatus(status : String) : Void;
 	
-	@:overload private function showAppletStatus(status : String, arg : Dynamic) : Void;
+	@:overload @:protected private function showAppletStatus(status : String, arg : Dynamic) : Void;
 	
-	@:overload private function showAppletStatus(status : String, arg1 : Dynamic, arg2 : Dynamic) : Void;
+	@:overload @:protected private function showAppletStatus(status : String, arg1 : Dynamic, arg2 : Dynamic) : Void;
 	
 	/**
 	* Called by the AppletPanel to print to the log.
 	*/
-	@:overload private function showAppletLog(msg : String) : Void;
+	@:overload @:protected private function showAppletLog(msg : String) : Void;
 	
-	@:overload private function showAppletLog(msg : String, arg : Dynamic) : Void;
+	@:overload @:protected private function showAppletLog(msg : String, arg : Dynamic) : Void;
 	
 	/**
 	* Called by the AppletPanel to provide
 	* feedback when an exception has happened.
 	*/
-	@:overload private function showAppletException(t : java.lang.Throwable) : Void;
+	@:overload @:protected private function showAppletException(t : java.lang.Throwable) : Void;
 	
 	/**
 	* Get caching key for classloader cache
 	*/
-	@:overload public function getClassLoaderCacheKey() : String;
+	@:overload @:public public function getClassLoaderCacheKey() : String;
 	
 	/**
 	* Flush a class loader.
 	*/
-	@:overload @:synchronized public static function flushClassLoader(key : String) : Void;
+	@:overload @:public @:static @:synchronized public static function flushClassLoader(key : String) : Void;
 	
 	/**
 	* Flush all class loaders.
 	*/
-	@:overload @:synchronized public static function flushClassLoaders() : Void;
+	@:overload @:public @:static @:synchronized public static function flushClassLoaders() : Void;
 	
 	/**
 	* This method actually creates an AppletClassLoader.
@@ -253,25 +253,77 @@ extern class AppletPanel extends java.awt.Panel implements java.applet.AppletStu
 	* It can be override by subclasses (such as the Plug-in)
 	* to provide different classloaders.
 	*/
-	@:overload private function createClassLoader(codebase : java.net.URL) : sun.applet.AppletClassLoader;
+	@:overload @:protected private function createClassLoader(codebase : java.net.URL) : sun.applet.AppletClassLoader;
 	
-	@:overload public function getAppletHandlerThread() : java.lang.Thread;
+	@:overload @:public public function getAppletHandlerThread() : java.lang.Thread;
 	
-	@:overload public function getAppletWidth() : Int;
+	@:overload @:public public function getAppletWidth() : Int;
 	
-	@:overload public function getAppletHeight() : Int;
+	@:overload @:public public function getAppletHeight() : Int;
 	
-	@:overload public static function changeFrameAppContext(frame : java.awt.Frame, newAppContext : sun.awt.AppContext) : Void;
+	@:overload @:public @:static public static function changeFrameAppContext(frame : java.awt.Frame, newAppContext : sun.awt.AppContext) : Void;
 	
 	/**
 	* Return true if applet is targeted to JDK 1.1.
 	*/
-	@:overload private function isJDK11Applet() : Bool;
+	@:overload @:protected private function isJDK11Applet() : Bool;
 	
 	/**
 	* Return true if applet is targeted to JDK1.2.
 	*/
-	@:overload private function isJDK12Applet() : Bool;
+	@:overload @:protected private function isJDK12Applet() : Bool;
+	
+	/**
+	* Gets the URL of the document in which the applet is embedded.
+	* For example, suppose an applet is contained
+	* within the document:
+	* <blockquote><pre>
+	*    http://java.sun.com/products/jdk/1.2/index.html
+	* </pre></blockquote>
+	* The document base is:
+	* <blockquote><pre>
+	*    http://java.sun.com/products/jdk/1.2/index.html
+	* </pre></blockquote>
+	*
+	* @return  the {@link java.net.URL} of the document that contains the
+	*          applet.
+	* @see     java.applet.AppletStub#getCodeBase()
+	*/
+	@:overload @:public public function getDocumentBase() : java.net.URL;
+	
+	/**
+	* Gets the base URL. This is the URL of the directory which contains the applet.
+	*
+	* @return  the base {@link java.net.URL} of
+	*          the directory which contains the applet.
+	* @see     java.applet.AppletStub#getDocumentBase()
+	*/
+	@:overload @:public public function getCodeBase() : java.net.URL;
+	
+	/**
+	* Returns the value of the named parameter in the HTML tag. For
+	* example, if an applet is specified as
+	* <blockquote><pre>
+	* &lt;applet code="Clock" width=50 height=50&gt;
+	* &lt;param name=Color value="blue"&gt;
+	* &lt;/applet&gt;
+	* </pre></blockquote>
+	* <p>
+	* then a call to <code>getParameter("Color")</code> returns the
+	* value <code>"blue"</code>.
+	*
+	* @param   name   a parameter name.
+	* @return  the value of the named parameter,
+	* or <tt>null</tt> if not set.
+	*/
+	@:overload @:public public function getParameter(name : String) : String;
+	
+	/**
+	* Returns the applet's context.
+	*
+	* @return  the applet's context.
+	*/
+	@:overload @:public public function getAppletContext() : java.applet.AppletContext;
 	
 	
 }

@@ -25,13 +25,13 @@ package com.sun.corba.se.impl.dynamicany;
 */
 extern class DynStructImpl extends com.sun.corba.se.impl.dynamicany.DynAnyComplexImpl implements org.omg.DynamicAny.DynStruct
 {
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, any : org.omg.CORBA.Any, copyValue : Bool) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, any : org.omg.CORBA.Any, copyValue : Bool) : Void;
 	
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload public function get_members() : java.NativeArray<org.omg.DynamicAny.NameValuePair>;
+	@:overload @:public public function get_members() : java.NativeArray<org.omg.DynamicAny.NameValuePair>;
 	
-	@:overload public function get_members_as_dyn_any() : java.NativeArray<org.omg.DynamicAny.NameDynAnyPair>;
+	@:overload @:public public function get_members_as_dyn_any() : java.NativeArray<org.omg.DynamicAny.NameDynAnyPair>;
 	
 	
 }

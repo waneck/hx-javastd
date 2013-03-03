@@ -31,27 +31,27 @@ extern class AbstractScope<D> implements sun.reflect.generics.scope.Scope
 	* @param D - A generic declaration whose scope the newly
 	* constructed instance will represent
 	*/
-	@:overload private function new(decl : D) : Void;
+	@:overload @:protected private function new(decl : D) : Void;
 	
 	/**
 	* Accessor for the receiver - the object whose scope this <tt>Scope</tt>
 	* object represents.
 	* @return The object whose scope this <tt>Scope</tt> object represents
 	*/
-	@:overload private function getRecvr() : D;
+	@:overload @:protected private function getRecvr() : D;
 	
 	/** This method must be implemented by any concrete subclass.
 	* It must return the enclosing scope of this scope. If this scope
 	* is a top-level scope, an instance of  DummyScope must be returned.
 	* @return The enclosing scope of this scope
 	*/
-	@:overload @:abstract private function computeEnclosingScope() : sun.reflect.generics.scope.Scope;
+	@:overload @:protected @:abstract private function computeEnclosingScope() : sun.reflect.generics.scope.Scope;
 	
 	/**
 	* Accessor for the enclosing scope, which is computed lazily and cached.
 	* @return the enclosing scope
 	*/
-	@:overload private function getEnclosingScope() : sun.reflect.generics.scope.Scope;
+	@:overload @:protected private function getEnclosingScope() : sun.reflect.generics.scope.Scope;
 	
 	/**
 	* Lookup a type variable in the scope, using its name. Returns null if
@@ -60,7 +60,7 @@ extern class AbstractScope<D> implements sun.reflect.generics.scope.Scope
 	* @param name - the name of the type variable being looked up
 	* @return the requested type variable, if found
 	*/
-	@:overload public function lookup(name : String) : java.lang.reflect.TypeVariable<Dynamic>;
+	@:overload @:public public function lookup(name : String) : java.lang.reflect.TypeVariable<Dynamic>;
 	
 	
 }

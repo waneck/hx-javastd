@@ -32,9 +32,9 @@ package com.sun.tools.example.debug.gui;
 */
 extern class TypeScript extends javax.swing.JPanel
 {
-	@:overload public function new(prompt : String) : Void;
+	@:overload @:public public function new(prompt : String) : Void;
 	
-	@:overload public function new(prompt : String, echoInput : Bool) : Void;
+	@:overload @:public public function new(prompt : String, echoInput : Bool) : Void;
 	
 	/******
 	public void setFont(Font f) {
@@ -42,19 +42,19 @@ extern class TypeScript extends javax.swing.JPanel
 	history.setFont(f);
 	}
 	******/
-	@:overload public function setPrompt(prompt : String) : Void;
+	@:overload @:public public function setPrompt(prompt : String) : Void;
 	
-	@:overload public function append(text : String) : Void;
+	@:overload @:public public function append(text : String) : Void;
 	
-	@:overload public function newline() : Void;
+	@:overload @:public public function newline() : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
-	@:overload public function addActionListener(a : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function addActionListener(a : java.awt.event.ActionListener) : Void;
 	
-	@:overload public function removeActionListener(a : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function removeActionListener(a : java.awt.event.ActionListener) : Void;
 	
-	@:overload public function readln() : String;
+	@:overload @:public public function readln() : String;
 	
 	
 }

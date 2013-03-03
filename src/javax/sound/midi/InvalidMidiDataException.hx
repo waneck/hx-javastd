@@ -41,7 +41,7 @@ extern class InvalidMidiDataException extends java.lang.Exception
 	* Constructs an <code>InvalidMidiDataException</code> with
 	* <code>null</code> for its error detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*  Constructs an <code>InvalidMidiDataException</code> with the
@@ -49,7 +49,7 @@ extern class InvalidMidiDataException extends java.lang.Exception
 	*
 	* @param message the string to display as an error detail message
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

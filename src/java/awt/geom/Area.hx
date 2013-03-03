@@ -29,7 +29,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* Default constructor which creates an empty area.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* The <code>Area</code> class creates an area geometry from the
@@ -41,7 +41,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* @throws NullPointerException if <code>s</code> is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(s : java.awt.Shape) : Void;
+	@:require(java2) @:overload @:public public function new(s : java.awt.Shape) : Void;
 	
 	/**
 	* Adds the shape of the specified <code>Area</code> to the
@@ -71,7 +71,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* @throws NullPointerException if <code>rhs</code> is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function add(rhs : java.awt.geom.Area) : Void;
+	@:require(java2) @:overload @:public public function add(rhs : java.awt.geom.Area) : Void;
 	
 	/**
 	* Subtracts the shape of the specified <code>Area</code> from the
@@ -101,7 +101,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* @throws NullPointerException if <code>rhs</code> is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function subtract(rhs : java.awt.geom.Area) : Void;
+	@:require(java2) @:overload @:public public function subtract(rhs : java.awt.geom.Area) : Void;
 	
 	/**
 	* Sets the shape of this <code>Area</code> to the intersection of
@@ -131,7 +131,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* @throws NullPointerException if <code>rhs</code> is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function intersect(rhs : java.awt.geom.Area) : Void;
+	@:require(java2) @:overload @:public public function intersect(rhs : java.awt.geom.Area) : Void;
 	
 	/**
 	* Sets the shape of this <code>Area</code> to be the combined area
@@ -162,14 +162,14 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* @throws NullPointerException if <code>rhs</code> is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function exclusiveOr(rhs : java.awt.geom.Area) : Void;
+	@:require(java2) @:overload @:public public function exclusiveOr(rhs : java.awt.geom.Area) : Void;
 	
 	/**
 	* Removes all of the geometry from this <code>Area</code> and
 	* restores it to an empty area.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function reset() : Void;
+	@:require(java2) @:overload @:public public function reset() : Void;
 	
 	/**
 	* Tests whether this <code>Area</code> object encloses any area.
@@ -177,7 +177,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* represents an empty area; <code>false</code> otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function isEmpty() : Bool;
+	@:require(java2) @:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Tests whether this <code>Area</code> consists entirely of
@@ -187,7 +187,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* <code>false</code> otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function isPolygonal() : Bool;
+	@:require(java2) @:overload @:public public function isPolygonal() : Bool;
 	
 	/**
 	* Tests whether this <code>Area</code> is rectangular in shape.
@@ -196,7 +196,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function isRectangular() : Bool;
+	@:require(java2) @:overload @:public public function isRectangular() : Bool;
 	
 	/**
 	* Tests whether this <code>Area</code> is comprised of a single
@@ -209,7 +209,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* of a single basic geometry; <code>false</code> otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function isSingular() : Bool;
+	@:require(java2) @:overload @:public public function isSingular() : Bool;
 	
 	/**
 	* Returns a high precision bounding {@link Rectangle2D} that
@@ -224,7 +224,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* <code>Area</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns a bounding {@link Rectangle} that completely encloses
@@ -242,14 +242,14 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* <code>Area</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getBounds() : java.awt.Rectangle;
+	@:require(java2) @:overload @:public public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Returns an exact copy of this <code>Area</code> object.
 	* @return    Created clone object
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function clone() : Dynamic;
+	@:require(java2) @:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Tests whether the geometries of the two <code>Area</code> objects
@@ -261,7 +261,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	*          <code>false</code> otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function equals(other : java.awt.geom.Area) : Bool;
+	@:require(java2) @:overload @:public public function equals(other : java.awt.geom.Area) : Bool;
 	
 	/**
 	* Transforms the geometry of this <code>Area</code> using the specified
@@ -271,7 +271,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* @throws NullPointerException if <code>t</code> is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function transform(t : java.awt.geom.AffineTransform) : Void;
+	@:require(java2) @:overload @:public public function transform(t : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Creates a new <code>Area</code> object that contains the same
@@ -285,43 +285,43 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	*           geometry.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function createTransformedArea(t : java.awt.geom.AffineTransform) : java.awt.geom.Area;
+	@:require(java2) @:overload @:public public function createTransformedArea(t : java.awt.geom.AffineTransform) : java.awt.geom.Area;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(x : Float, y : Float) : Bool;
+	@:require(java2) @:overload @:public public function contains(x : Float, y : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(p : java.awt.geom.Point2D) : Bool;
+	@:require(java2) @:overload @:public public function contains(p : java.awt.geom.Point2D) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(r : java.awt.geom.Rectangle2D) : Bool;
+	@:require(java2) @:overload @:public public function contains(r : java.awt.geom.Rectangle2D) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function intersects(r : java.awt.geom.Rectangle2D) : Bool;
+	@:require(java2) @:overload @:public public function intersects(r : java.awt.geom.Rectangle2D) : Bool;
 	
 	/**
 	* Creates a {@link PathIterator} for the outline of this
@@ -334,7 +334,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	*          segment at a time.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
+	@:require(java2) @:overload @:public public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
 	
 	/**
 	* Creates a <code>PathIterator</code> for the flattened outline of
@@ -354,23 +354,23 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* at a time.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getPathIterator(at : java.awt.geom.AffineTransform, flatness : Float) : java.awt.geom.PathIterator;
+	@:require(java2) @:overload @:public public function getPathIterator(at : java.awt.geom.AffineTransform, flatness : Float) : java.awt.geom.PathIterator;
 	
 	
 }
 @:internal extern class AreaIterator implements java.awt.geom.PathIterator
 {
-	@:overload public function new(curves : java.util.Vector<Dynamic>, at : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public public function new(curves : java.util.Vector<Dynamic>, at : java.awt.geom.AffineTransform) : Void;
 	
-	@:overload public function getWindingRule() : Int;
+	@:overload @:public public function getWindingRule() : Int;
 	
-	@:overload public function isDone() : Bool;
+	@:overload @:public public function isDone() : Bool;
 	
-	@:overload public function next() : Void;
+	@:overload @:public public function next() : Void;
 	
-	@:overload public function currentSegment(coords : java.NativeArray<Single>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Single>) : Int;
 	
-	@:overload public function currentSegment(coords : java.NativeArray<Float>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Float>) : Int;
 	
 	
 }

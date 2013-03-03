@@ -257,7 +257,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #setLayoutOrientation
 	* @since 1.4
 	*/
-	@:require(java4) public static var VERTICAL(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var VERTICAL(default, null) : Int;
 	
 	/**
 	* Indicates a "newspaper style" layout with cells flowing vertically
@@ -265,7 +265,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #setLayoutOrientation
 	* @since 1.4
 	*/
-	@:require(java4) public static var VERTICAL_WRAP(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var VERTICAL_WRAP(default, null) : Int;
 	
 	/**
 	* Indicates a "newspaper style" layout with cells flowing horizontally
@@ -273,7 +273,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #setLayoutOrientation
 	* @since 1.4
 	*/
-	@:require(java4) public static var HORIZONTAL_WRAP(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var HORIZONTAL_WRAP(default, null) : Int;
 	
 	/**
 	* Constructs a {@code JList} that displays elements from the specified,
@@ -286,7 +286,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @param dataModel the model for the list
 	* @exception IllegalArgumentException if the model is {@code null}
 	*/
-	@:overload public function new(dataModel : javax.swing.ListModel<E>) : Void;
+	@:overload @:public public function new(dataModel : javax.swing.ListModel<E>) : Void;
 	
 	/**
 	* Constructs a <code>JList</code> that displays the elements in
@@ -302,7 +302,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @param  listData  the array of Objects to be loaded into the data model,
 	*                   {@code non-null}
 	*/
-	@:overload public function new(listData : java.NativeArray<E>) : Void;
+	@:overload @:public public function new(listData : java.NativeArray<E>) : Void;
 	
 	/**
 	* Constructs a <code>JList</code> that displays the elements in
@@ -318,12 +318,12 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @param  listData  the <code>Vector</code> to be loaded into the
 	*                   data model, {@code non-null}
 	*/
-	@:overload public function new(listData : java.util.Vector<E>) : Void;
+	@:overload @:public public function new(listData : java.util.Vector<E>) : Void;
 	
 	/**
 	* Constructs a <code>JList</code> with an empty, read-only, model.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the {@code ListUI}, the look and feel object that
@@ -331,7 +331,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @return the <code>ListUI</code> object that renders this component
 	*/
-	@:overload public function getUI() : javax.swing.plaf.ListUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.ListUI;
 	
 	/**
 	* Sets the {@code ListUI}, the look and feel object that
@@ -345,7 +345,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.ListUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.ListUI) : Void;
 	
 	/**
 	* Resets the {@code ListUI} property by setting it to the value provided
@@ -357,7 +357,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see UIManager#getUI
 	* @see SwingUtilities#updateComponentTreeUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns {@code "ListUI"}, the <code>UIDefaults</code> key used to look
@@ -368,7 +368,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Returns the "prototypical" cell value -- a value used to calculate a
@@ -378,7 +378,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @return the value of the {@code prototypeCellValue} property
 	* @see #setPrototypeCellValue
 	*/
-	@:overload public function getPrototypeCellValue() : E;
+	@:overload @:public public function getPrototypeCellValue() : E;
 	
 	/**
 	* Sets the {@code prototypeCellValue} property, and then (if the new value
@@ -416,7 +416,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*   attribute: visualUpdate true
 	* description: The cell prototype value, used to compute cell width and height.
 	*/
-	@:overload public function setPrototypeCellValue(prototypeCellValue : E) : Void;
+	@:overload @:public public function setPrototypeCellValue(prototypeCellValue : E) : Void;
 	
 	/**
 	* Returns the value of the {@code fixedCellWidth} property.
@@ -424,7 +424,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @return the fixed cell width
 	* @see #setFixedCellWidth
 	*/
-	@:overload public function getFixedCellWidth() : Int;
+	@:overload @:public public function getFixedCellWidth() : Int;
 	
 	/**
 	* Sets a fixed value to be used for the width of every cell in the list.
@@ -445,7 +445,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*   attribute: visualUpdate true
 	* description: Defines a fixed cell width when greater than zero.
 	*/
-	@:overload public function setFixedCellWidth(width : Int) : Void;
+	@:overload @:public public function setFixedCellWidth(width : Int) : Void;
 	
 	/**
 	* Returns the value of the {@code fixedCellHeight} property.
@@ -453,7 +453,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @return the fixed cell height
 	* @see #setFixedCellHeight
 	*/
-	@:overload public function getFixedCellHeight() : Int;
+	@:overload @:public public function getFixedCellHeight() : Int;
 	
 	/**
 	* Sets a fixed value to be used for the height of every cell in the list.
@@ -474,7 +474,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*   attribute: visualUpdate true
 	* description: Defines a fixed cell height when greater than zero.
 	*/
-	@:overload public function setFixedCellHeight(height : Int) : Void;
+	@:overload @:public public function setFixedCellHeight(height : Int) : Void;
 	
 	/**
 	* Returns the object responsible for painting list items.
@@ -482,7 +482,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @return the value of the {@code cellRenderer} property
 	* @see #setCellRenderer
 	*/
-	@:overload public function getCellRenderer() : javax.swing.ListCellRenderer<E>;
+	@:overload @:public public function getCellRenderer() : javax.swing.ListCellRenderer<E>;
 	
 	/**
 	* Sets the delegate that is used to paint each cell in the list.
@@ -508,7 +508,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*   attribute: visualUpdate true
 	* description: The component used to draw the cells.
 	*/
-	@:overload public function setCellRenderer(cellRenderer : javax.swing.ListCellRenderer<E>) : Void;
+	@:overload @:public public function setCellRenderer(cellRenderer : javax.swing.ListCellRenderer<E>) : Void;
 	
 	/**
 	* Returns the color used to draw the foreground of selected items.
@@ -520,7 +520,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #setSelectionForeground
 	* @see DefaultListCellRenderer
 	*/
-	@:overload public function getSelectionForeground() : java.awt.Color;
+	@:overload @:public public function getSelectionForeground() : java.awt.Color;
 	
 	/**
 	* Sets the color used to draw the foreground of selected items, which
@@ -547,7 +547,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*   attribute: visualUpdate true
 	* description: The foreground color of selected cells.
 	*/
-	@:overload public function setSelectionForeground(selectionForeground : java.awt.Color) : Void;
+	@:overload @:public public function setSelectionForeground(selectionForeground : java.awt.Color) : Void;
 	
 	/**
 	* Returns the color used to draw the background of selected items.
@@ -559,7 +559,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #setSelectionBackground
 	* @see DefaultListCellRenderer
 	*/
-	@:overload public function getSelectionBackground() : java.awt.Color;
+	@:overload @:public public function getSelectionBackground() : java.awt.Color;
 	
 	/**
 	* Sets the color used to draw the background of selected items, which
@@ -586,7 +586,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*   attribute: visualUpdate true
 	* description: The background color of selected cells.
 	*/
-	@:overload public function setSelectionBackground(selectionBackground : java.awt.Color) : Void;
+	@:overload @:public public function setSelectionBackground(selectionBackground : java.awt.Color) : Void;
 	
 	/**
 	* Returns the value of the {@code visibleRowCount} property. See the
@@ -596,7 +596,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @return the value of the {@code visibleRowCount} property.
 	* @see #setVisibleRowCount
 	*/
-	@:overload public function getVisibleRowCount() : Int;
+	@:overload @:public public function getVisibleRowCount() : Int;
 	
 	/**
 	* Sets the {@code visibleRowCount} property, which has different meanings
@@ -635,7 +635,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* description: The preferred number of rows to display without
 	*              requiring scrolling
 	*/
-	@:overload public function setVisibleRowCount(visibleRowCount : Int) : Void;
+	@:overload @:public public function setVisibleRowCount(visibleRowCount : Int) : Void;
 	
 	/**
 	* Returns the layout orientation property for the list: {@code VERTICAL}
@@ -648,7 +648,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #setLayoutOrientation
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getLayoutOrientation() : Int;
+	@:require(java4) @:overload @:public public function getLayoutOrientation() : Int;
 	
 	/**
 	* Defines the way list cells are layed out. Consider a {@code JList}
@@ -708,7 +708,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*              HORIZONTAL_WRAP JList.HORIZONTAL_WRAP
 	*              VERTICAL_WRAP JList.VERTICAL_WRAP
 	*/
-	@:require(java4) @:overload public function setLayoutOrientation(layoutOrientation : Int) : Void;
+	@:require(java4) @:overload @:public public function setLayoutOrientation(layoutOrientation : Int) : Void;
 	
 	/**
 	* Returns the smallest list index that is currently visible.
@@ -722,7 +722,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #getLastVisibleIndex
 	* @see JComponent#getVisibleRect
 	*/
-	@:overload public function getFirstVisibleIndex() : Int;
+	@:overload @:public public function getFirstVisibleIndex() : Int;
 	
 	/**
 	* Returns the largest list index that is currently visible.
@@ -733,7 +733,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #getFirstVisibleIndex
 	* @see JComponent#getVisibleRect
 	*/
-	@:overload public function getLastVisibleIndex() : Int;
+	@:overload @:public public function getLastVisibleIndex() : Int;
 	
 	/**
 	* Scrolls the list within an enclosing viewport to make the specified
@@ -748,7 +748,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see JComponent#scrollRectToVisible
 	* @see #getVisibleRect
 	*/
-	@:overload public function ensureIndexIsVisible(index : Int) : Void;
+	@:overload @:public public function ensureIndexIsVisible(index : Int) : Void;
 	
 	/**
 	* Turns on or off automatic drag handling. In order to enable automatic
@@ -783,7 +783,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*  description: determines whether automatic drag handling is enabled
 	*        bound: false
 	*/
-	@:require(java4) @:overload public function setDragEnabled(b : Bool) : Void;
+	@:require(java4) @:overload @:public public function setDragEnabled(b : Bool) : Void;
 	
 	/**
 	* Returns whether or not automatic drag handling is enabled.
@@ -792,7 +792,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #setDragEnabled
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getDragEnabled() : Bool;
+	@:require(java4) @:overload @:public public function getDragEnabled() : Bool;
 	
 	/**
 	* Sets the drop mode for this component. For backward compatibility,
@@ -821,7 +821,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see TransferHandler
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function setDropMode(dropMode : javax.swing.DropMode) : Void;
+	@:require(java6) @:overload @:public @:final public function setDropMode(dropMode : javax.swing.DropMode) : Void;
 	
 	/**
 	* Returns the drop mode for this component.
@@ -830,7 +830,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #setDropMode
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getDropMode() : javax.swing.DropMode;
+	@:require(java6) @:overload @:public @:final public function getDropMode() : javax.swing.DropMode;
 	
 	/**
 	* Returns the location that this component should visually indicate
@@ -857,7 +857,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see TransferHandler#canImport(TransferHandler.TransferSupport)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getDropLocation() : javax.swing.JList.JList_DropLocation;
+	@:require(java6) @:overload @:public @:final public function getDropLocation() : javax.swing.JList.JList_DropLocation;
 	
 	/**
 	* Returns the next list element whose {@code toString} value
@@ -873,7 +873,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* or startIndex is out of bounds
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getNextMatch(prefix : String, startIndex : Int, bias : javax.swing.text.Position.Position_Bias) : Int;
+	@:require(java4) @:overload @:public public function getNextMatch(prefix : String, startIndex : Int, bias : javax.swing.text.Position.Position_Bias) : Int;
 	
 	/**
 	* Returns the tooltip text to be used for the given event. This overrides
@@ -894,7 +894,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see JComponent#setToolTipText
 	* @see JComponent#getToolTipText
 	*/
-	@:overload public function getToolTipText(event : java.awt.event.MouseEvent) : String;
+	@:overload @:public override public function getToolTipText(event : java.awt.event.MouseEvent) : String;
 	
 	/**
 	* Returns the cell index closest to the given location in the list's
@@ -910,7 +910,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @param location the coordinates of the point
 	* @return the cell index closest to the given location, or {@code -1}
 	*/
-	@:overload public function locationToIndex(location : java.awt.Point) : Int;
+	@:overload @:public public function locationToIndex(location : java.awt.Point) : Int;
 	
 	/**
 	* Returns the origin of the specified item in the list's coordinate
@@ -923,7 +923,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @param index the cell index
 	* @return the origin of the cell, or {@code null}
 	*/
-	@:overload public function indexToLocation(index : Int) : java.awt.Point;
+	@:overload @:public public function indexToLocation(index : Int) : java.awt.Point;
 	
 	/**
 	* Returns the bounding rectangle, in the list's coordinate system,
@@ -943,7 +943,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @param index1 the second index in the range
 	* @return the bounding rectangle for the range of cells, or {@code null}
 	*/
-	@:overload public function getCellBounds(index0 : Int, index1 : Int) : java.awt.Rectangle;
+	@:overload @:public public function getCellBounds(index0 : Int, index1 : Int) : java.awt.Rectangle;
 	
 	/**
 	* Returns the data model that holds the list of items displayed
@@ -953,7 +953,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*                          list of items
 	* @see #setModel
 	*/
-	@:overload public function getModel() : javax.swing.ListModel<E>;
+	@:overload @:public public function getModel() : javax.swing.ListModel<E>;
 	
 	/**
 	* Sets the model that represents the contents or "value" of the
@@ -973,7 +973,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*   attribute: visualUpdate true
 	* description: The object that contains the data to be drawn by this JList.
 	*/
-	@:overload public function setModel(model : javax.swing.ListModel<E>) : Void;
+	@:overload @:public public function setModel(model : javax.swing.ListModel<E>) : Void;
 	
 	/**
 	* Constructs a read-only <code>ListModel</code> from an array of items,
@@ -988,7 +988,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*        display in the list
 	* @see #setModel
 	*/
-	@:overload public function setListData(listData : java.NativeArray<E>) : Void;
+	@:overload @:public public function setListData(listData : java.NativeArray<E>) : Void;
 	
 	/**
 	* Constructs a read-only <code>ListModel</code> from a <code>Vector</code>
@@ -1003,7 +1003,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*                                          display in the list
 	* @see #setModel
 	*/
-	@:overload public function setListData(listData : java.util.Vector<E>) : Void;
+	@:overload @:public public function setListData(listData : java.util.Vector<E>) : Void;
 	
 	/**
 	* Returns an instance of {@code DefaultListSelectionModel}; called
@@ -1015,7 +1015,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #setSelectionModel
 	* @see DefaultListSelectionModel
 	*/
-	@:overload private function createSelectionModel() : javax.swing.ListSelectionModel;
+	@:overload @:protected private function createSelectionModel() : javax.swing.ListSelectionModel;
 	
 	/**
 	* Returns the current selection model. The selection model maintains the
@@ -1028,7 +1028,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #setSelectionModel
 	* @see ListSelectionModel
 	*/
-	@:overload public function getSelectionModel() : javax.swing.ListSelectionModel;
+	@:overload @:public public function getSelectionModel() : javax.swing.ListSelectionModel;
 	
 	/**
 	* Notifies {@code ListSelectionListener}s added directly to the list
@@ -1051,7 +1051,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see javax.swing.event.ListSelectionEvent
 	* @see EventListenerList
 	*/
-	@:overload private function fireSelectionValueChanged(firstIndex : Int, lastIndex : Int, isAdjusting : Bool) : Void;
+	@:overload @:protected private function fireSelectionValueChanged(firstIndex : Int, lastIndex : Int, isAdjusting : Bool) : Void;
 	
 	/**
 	* Adds a listener to the list, to be notified each time a change to the
@@ -1065,7 +1065,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #getSelectionModel
 	* @see #getListSelectionListeners
 	*/
-	@:overload public function addListSelectionListener(listener : javax.swing.event.ListSelectionListener) : Void;
+	@:overload @:public public function addListSelectionListener(listener : javax.swing.event.ListSelectionListener) : Void;
 	
 	/**
 	* Removes a selection listener from the list.
@@ -1074,7 +1074,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #addListSelectionListener
 	* @see #getSelectionModel
 	*/
-	@:overload public function removeListSelectionListener(listener : javax.swing.event.ListSelectionListener) : Void;
+	@:overload @:public public function removeListSelectionListener(listener : javax.swing.event.ListSelectionListener) : Void;
 	
 	/**
 	* Returns an array of all the {@code ListSelectionListener}s added
@@ -1085,7 +1085,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #addListSelectionListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getListSelectionListeners() : java.NativeArray<javax.swing.event.ListSelectionListener>;
+	@:require(java4) @:overload @:public public function getListSelectionListeners() : java.NativeArray<javax.swing.event.ListSelectionListener>;
 	
 	/**
 	* Sets the <code>selectionModel</code> for the list to a
@@ -1105,7 +1105,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*       bound: true
 	* description: The selection model, recording which cells are selected.
 	*/
-	@:overload public function setSelectionModel(selectionModel : javax.swing.ListSelectionModel) : Void;
+	@:overload @:public public function setSelectionModel(selectionModel : javax.swing.ListSelectionModel) : Void;
 	
 	/**
 	* Sets the selection mode for the list. This is a cover method that sets
@@ -1139,7 +1139,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*              SINGLE_INTERVAL_SELECTION   ListSelectionModel.SINGLE_INTERVAL_SELECTION
 	*              MULTIPLE_INTERVAL_SELECTION ListSelectionModel.MULTIPLE_INTERVAL_SELECTION
 	*/
-	@:overload public function setSelectionMode(selectionMode : Int) : Void;
+	@:overload @:public public function setSelectionMode(selectionMode : Int) : Void;
 	
 	/**
 	* Returns the current selection mode for the list. This is a cover
@@ -1149,7 +1149,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @return the current selection mode
 	* @see #setSelectionMode
 	*/
-	@:overload public function getSelectionMode() : Int;
+	@:overload @:public public function getSelectionMode() : Int;
 	
 	/**
 	* Returns the anchor selection index. This is a cover method that
@@ -1158,7 +1158,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @return the anchor selection index
 	* @see ListSelectionModel#getAnchorSelectionIndex
 	*/
-	@:overload public function getAnchorSelectionIndex() : Int;
+	@:overload @:public public function getAnchorSelectionIndex() : Int;
 	
 	/**
 	* Returns the lead selection index. This is a cover method that
@@ -1169,7 +1169,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @beaninfo
 	* description: The lead selection index.
 	*/
-	@:overload public function getLeadSelectionIndex() : Int;
+	@:overload @:public public function getLeadSelectionIndex() : Int;
 	
 	/**
 	* Returns the smallest selected cell index, or {@code -1} if the selection
@@ -1179,7 +1179,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @return the smallest selected cell index, or {@code -1}
 	* @see ListSelectionModel#getMinSelectionIndex
 	*/
-	@:overload public function getMinSelectionIndex() : Int;
+	@:overload @:public public function getMinSelectionIndex() : Int;
 	
 	/**
 	* Returns the largest selected cell index, or {@code -1} if the selection
@@ -1189,7 +1189,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @return the largest selected cell index
 	* @see ListSelectionModel#getMaxSelectionIndex
 	*/
-	@:overload public function getMaxSelectionIndex() : Int;
+	@:overload @:public public function getMaxSelectionIndex() : Int;
 	
 	/**
 	* Returns {@code true} if the specified index is selected,
@@ -1202,7 +1202,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see ListSelectionModel#isSelectedIndex
 	* @see #setSelectedIndex
 	*/
-	@:overload public function isSelectedIndex(index : Int) : Bool;
+	@:overload @:public public function isSelectedIndex(index : Int) : Bool;
 	
 	/**
 	* Returns {@code true} if nothing is selected, else {@code false}.
@@ -1213,7 +1213,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see ListSelectionModel#isSelectionEmpty
 	* @see #clearSelection
 	*/
-	@:overload public function isSelectionEmpty() : Bool;
+	@:overload @:public public function isSelectionEmpty() : Bool;
 	
 	/**
 	* Clears the selection; after calling this method, {@code isSelectionEmpty}
@@ -1223,7 +1223,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see ListSelectionModel#clearSelection
 	* @see #isSelectionEmpty
 	*/
-	@:overload public function clearSelection() : Void;
+	@:overload @:public public function clearSelection() : Void;
 	
 	/**
 	* Selects the specified interval. Both {@code anchor} and {@code lead}
@@ -1242,7 +1242,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #addSelectionInterval
 	* @see #removeSelectionInterval
 	*/
-	@:overload public function setSelectionInterval(anchor : Int, lead : Int) : Void;
+	@:overload @:public public function setSelectionInterval(anchor : Int, lead : Int) : Void;
 	
 	/**
 	* Sets the selection to be the union of the specified interval with current
@@ -1262,7 +1262,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #setSelectionInterval
 	* @see #removeSelectionInterval
 	*/
-	@:overload public function addSelectionInterval(anchor : Int, lead : Int) : Void;
+	@:overload @:public public function addSelectionInterval(anchor : Int, lead : Int) : Void;
 	
 	/**
 	* Sets the selection to be the set difference of the specified interval
@@ -1282,7 +1282,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #setSelectionInterval
 	* @see #addSelectionInterval
 	*/
-	@:overload public function removeSelectionInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function removeSelectionInterval(index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* Sets the selection model's {@code valueIsAdjusting} property. When
@@ -1308,7 +1308,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see javax.swing.event.ListSelectionEvent#getValueIsAdjusting
 	* @see #getValueIsAdjusting
 	*/
-	@:overload public function setValueIsAdjusting(b : Bool) : Void;
+	@:overload @:public public function setValueIsAdjusting(b : Bool) : Void;
 	
 	/**
 	* Returns the value of the selection model's {@code isAdjusting} property.
@@ -1321,7 +1321,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #setValueIsAdjusting
 	* @see ListSelectionModel#getValueIsAdjusting
 	*/
-	@:overload public function getValueIsAdjusting() : Bool;
+	@:overload @:public public function getValueIsAdjusting() : Bool;
 	
 	/**
 	* Returns an array of all of the selected indices, in increasing
@@ -1332,7 +1332,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #removeSelectionInterval
 	* @see #addListSelectionListener
 	*/
-	@:overload public function getSelectedIndices() : java.NativeArray<Int>;
+	@:overload @:public public function getSelectedIndices() : java.NativeArray<Int>;
 	
 	/**
 	* Selects a single cell. Does nothing if the given index is greater
@@ -1348,7 +1348,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @beaninfo
 	* description: The index of the selected cell.
 	*/
-	@:overload public function setSelectedIndex(index : Int) : Void;
+	@:overload @:public public function setSelectedIndex(index : Int) : Void;
 	
 	/**
 	* Changes the selection to be the set of indices specified by the given
@@ -1365,7 +1365,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #addListSelectionListener
 	* @throws NullPointerException if the given array is {@code null}
 	*/
-	@:overload public function setSelectedIndices(indices : java.NativeArray<Int>) : Void;
+	@:overload @:public public function setSelectedIndices(indices : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Returns an array of all the selected values, in increasing order based
@@ -1378,7 +1378,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @deprecated As of JDK 1.7, replaced by {@link #getSelectedValuesList()}
 	*/
-	@:overload public function getSelectedValues() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getSelectedValues() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns a list of all the selected items, in increasing order based
@@ -1391,7 +1391,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getSelectedValuesList() : java.util.List<E>;
+	@:require(java7) @:overload @:public public function getSelectedValuesList() : java.util.List<E>;
 	
 	/**
 	* Returns the smallest selected cell index; <i>the selection</i> when only
@@ -1405,7 +1405,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #getMinSelectionIndex
 	* @see #addListSelectionListener
 	*/
-	@:overload public function getSelectedIndex() : Int;
+	@:overload @:public public function getSelectedIndex() : Int;
 	
 	/**
 	* Returns the value for the smallest selected cell index;
@@ -1421,7 +1421,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #getModel
 	* @see #addListSelectionListener
 	*/
-	@:overload public function getSelectedValue() : E;
+	@:overload @:public public function getSelectedValue() : E;
 	
 	/**
 	* Selects the specified object from the list.
@@ -1430,7 +1430,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @param shouldScroll  {@code true} if the list should scroll to display
 	*                      the selected object, if one exists; otherwise {@code false}
 	*/
-	@:overload public function setSelectedValue(anObject : Dynamic, shouldScroll : Bool) : Void;
+	@:overload @:public public function setSelectedValue(anObject : Dynamic, shouldScroll : Bool) : Void;
 	
 	/**
 	* Computes the size of viewport needed to display {@code visibleRowCount}
@@ -1469,7 +1469,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see #getPreferredScrollableViewportSize
 	* @see #setPrototypeCellValue
 	*/
-	@:overload public function getPreferredScrollableViewportSize() : java.awt.Dimension;
+	@:overload @:public public function getPreferredScrollableViewportSize() : java.awt.Dimension;
 	
 	/**
 	* Returns the distance to scroll to expose the next or previous
@@ -1492,7 +1492,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*         {@code orientation} isn't one of {@code SwingConstants.VERTICAL} or
 	*         {@code SwingConstants.HORIZONTAL}
 	*/
-	@:overload public function getScrollableUnitIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
+	@:overload @:public public function getScrollableUnitIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
 	
 	/**
 	* Returns the distance to scroll to expose the next or previous block.
@@ -1536,7 +1536,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*         {@code orientation} isn't one of {@code SwingConstants.VERTICAL} or
 	*         {@code SwingConstants.HORIZONTAL}
 	*/
-	@:overload public function getScrollableBlockIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
+	@:overload @:public public function getScrollableBlockIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
 	
 	/**
 	* Returns {@code true} if this {@code JList} is displayed in a
@@ -1552,7 +1552,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*         width to match its own
 	* @see Scrollable#getScrollableTracksViewportWidth
 	*/
-	@:overload public function getScrollableTracksViewportWidth() : Bool;
+	@:overload @:public public function getScrollableTracksViewportWidth() : Bool;
 	
 	/**
 	* Returns {@code true} if this {@code JList} is displayed in a
@@ -1568,7 +1568,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*         height to match its own
 	* @see Scrollable#getScrollableTracksViewportHeight
 	*/
-	@:overload public function getScrollableTracksViewportHeight() : Bool;
+	@:overload @:public public function getScrollableTracksViewportHeight() : Bool;
 	
 	/**
 	* Returns a {@code String} representation of this {@code JList}.
@@ -1579,7 +1579,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @return  a {@code String} representation of this {@code JList}.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the {@code AccessibleContext} associated with this {@code JList}.
@@ -1591,7 +1591,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @return an {@code AccessibleJList} that serves as the
 	*         {@code AccessibleContext} of this {@code JList}
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -1621,7 +1621,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @return the drop index
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* Returns whether or not this location represents an insert
@@ -1629,7 +1629,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @return whether or not this is an insert location
 	*/
-	@:overload public function isInsert() : Bool;
+	@:overload @:public public function isInsert() : Bool;
 	
 	/**
 	* Returns a string representation of this drop location.
@@ -1639,7 +1639,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @return a string representation of this drop location
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -1650,7 +1650,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 */
 @:native('javax$swing$JList$ListSelectionHandler') @:internal extern class JList_ListSelectionHandler implements javax.swing.event.ListSelectionListener implements java.io.Serializable
 {
-	@:overload public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
+	@:overload @:public public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	
 	
 }
@@ -1671,7 +1671,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 */
 @:native('javax$swing$JList$AccessibleJList') extern class JList_AccessibleJList extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.accessibility.AccessibleSelection implements java.beans.PropertyChangeListener implements javax.swing.event.ListSelectionListener implements javax.swing.event.ListDataListener
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Property Change Listener change method. Used to track changes
@@ -1681,7 +1681,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @param e PropertyChangeEvent
 	*/
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* List Selection Listener value change method. Used to fire
@@ -1690,7 +1690,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @param e ListSelectionEvent
 	*
 	*/
-	@:overload public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
+	@:overload @:public public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	
 	/**
 	* List Data Listener interval added method. Used to fire the visible data property change
@@ -1698,7 +1698,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @param e ListDataEvent
 	*
 	*/
-	@:overload public function intervalAdded(e : javax.swing.event.ListDataEvent) : Void;
+	@:overload @:public public function intervalAdded(e : javax.swing.event.ListDataEvent) : Void;
 	
 	/**
 	* List Data Listener interval removed method. Used to fire the visible data property change
@@ -1706,7 +1706,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @param e ListDataEvent
 	*
 	*/
-	@:overload public function intervalRemoved(e : javax.swing.event.ListDataEvent) : Void;
+	@:overload @:public public function intervalRemoved(e : javax.swing.event.ListDataEvent) : Void;
 	
 	/**
 	* List Data Listener contents changed method. Used to fire the visible data property change
@@ -1714,7 +1714,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @param e ListDataEvent
 	*
 	*/
-	@:overload public function contentsChanged(e : javax.swing.event.ListDataEvent) : Void;
+	@:overload @:public public function contentsChanged(e : javax.swing.event.ListDataEvent) : Void;
 	
 	/**
 	* Get the state set of this object.
@@ -1723,7 +1723,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the role of this object.
@@ -1732,7 +1732,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the <code>Accessible</code> child contained at
@@ -1742,7 +1742,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @return the <code>Accessible</code> at the specified
 	*    location, if it exists
 	*/
-	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -1751,7 +1751,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @return the number of accessible children in the object.
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Return the nth Accessible child of the object.
@@ -1759,7 +1759,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @param i zero-based index of child
 	* @return the nth Accessible child of the object
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Get the AccessibleSelection associated with this object.  In the
@@ -1769,7 +1769,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload @:public override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Returns the number of items currently selected.
@@ -1777,7 +1777,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @return the number of items currently selected.
 	*/
-	@:overload public function getAccessibleSelectionCount() : Int;
+	@:overload @:public public function getAccessibleSelectionCount() : Int;
 	
 	/**
 	* Returns an Accessible representing the specified selected item
@@ -1788,7 +1788,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @param i the zero-based index of selected items
 	* @return an Accessible containing the selected item
 	*/
-	@:overload public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns true if the current child of this object is selected.
@@ -1797,7 +1797,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* object.
 	* @see AccessibleContext#getAccessibleChild
 	*/
-	@:overload public function isAccessibleChildSelected(i : Int) : Bool;
+	@:overload @:public public function isAccessibleChildSelected(i : Int) : Bool;
 	
 	/**
 	* Adds the specified selected item in the object to the object's
@@ -1808,7 +1808,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @param i the zero-based index of selectable items
 	*/
-	@:overload public function addAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function addAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Removes the specified selected item in the object from the object's
@@ -1817,19 +1817,19 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @param i the zero-based index of selectable items
 	*/
-	@:overload public function removeAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function removeAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Clears the selection in the object, so that nothing in the
 	* object is selected.
 	*/
-	@:overload public function clearAccessibleSelection() : Void;
+	@:overload @:public public function clearAccessibleSelection() : Void;
 	
 	/**
 	* Causes every selected item in the object to be selected
 	* if the object supports multiple selections.
 	*/
-	@:overload public function selectAllAccessibleSelection() : Void;
+	@:overload @:public public function selectAllAccessibleSelection() : Void;
 	
 	
 }
@@ -1839,7 +1839,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 */
 @:native('javax$swing$JList$AccessibleJList$AccessibleJListChild') extern class JList_AccessibleJList_AccessibleJListChild extends javax.accessibility.AccessibleContext implements javax.accessibility.Accessible implements javax.accessibility.AccessibleComponent
 {
-	@:overload public function new(parent : javax.swing.JList<Dynamic>, indexInParent : Int) : Void;
+	@:overload @:public public function new(parent : javax.swing.JList<Dynamic>, indexInParent : Int) : Void;
 	
 	/**
 	* Get the AccessibleContext for this object. In the
@@ -1848,33 +1848,33 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
-	@:overload override public function setAccessibleName(s : String) : Void;
+	@:overload @:public override public function setAccessibleName(s : String) : Void;
 	
-	@:overload override public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
-	@:overload override public function setAccessibleDescription(s : String) : Void;
+	@:overload @:public override public function setAccessibleDescription(s : String) : Void;
 	
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
-	@:overload override public function getAccessibleIndexInParent() : Int;
+	@:overload @:public override public function getAccessibleIndexInParent() : Int;
 	
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
-	@:overload override public function getLocale() : java.util.Locale;
+	@:overload @:public override public function getLocale() : java.util.Locale;
 	
-	@:overload override public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload override public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload @:public override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Get the AccessibleComponent associated with this object.  In the
@@ -1884,67 +1884,67 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
+	@:overload @:public override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
 	
-	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload @:public override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
-	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload @:public override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
-	@:overload public function getBackground() : java.awt.Color;
+	@:overload @:public public function getBackground() : java.awt.Color;
 	
-	@:overload public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public public function setBackground(c : java.awt.Color) : Void;
 	
-	@:overload public function getForeground() : java.awt.Color;
+	@:overload @:public public function getForeground() : java.awt.Color;
 	
-	@:overload public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public public function setForeground(c : java.awt.Color) : Void;
 	
-	@:overload public function getCursor() : java.awt.Cursor;
+	@:overload @:public public function getCursor() : java.awt.Cursor;
 	
-	@:overload public function setCursor(c : java.awt.Cursor) : Void;
+	@:overload @:public public function setCursor(c : java.awt.Cursor) : Void;
 	
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public public function getFont() : java.awt.Font;
 	
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public public function setFont(f : java.awt.Font) : Void;
 	
-	@:overload public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public public function setEnabled(b : Bool) : Void;
 	
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
-	@:overload public function setVisible(b : Bool) : Void;
+	@:overload @:public public function setVisible(b : Bool) : Void;
 	
-	@:overload public function isShowing() : Bool;
+	@:overload @:public public function isShowing() : Bool;
 	
-	@:overload public function contains(p : java.awt.Point) : Bool;
+	@:overload @:public public function contains(p : java.awt.Point) : Bool;
 	
-	@:overload public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public public function getLocationOnScreen() : java.awt.Point;
 	
-	@:overload public function getLocation() : java.awt.Point;
+	@:overload @:public public function getLocation() : java.awt.Point;
 	
-	@:overload public function setLocation(p : java.awt.Point) : Void;
+	@:overload @:public public function setLocation(p : java.awt.Point) : Void;
 	
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public public function getBounds() : java.awt.Rectangle;
 	
-	@:overload public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload @:public public function setBounds(r : java.awt.Rectangle) : Void;
 	
-	@:overload public function getSize() : java.awt.Dimension;
+	@:overload @:public public function getSize() : java.awt.Dimension;
 	
-	@:overload public function setSize(d : java.awt.Dimension) : Void;
+	@:overload @:public public function setSize(d : java.awt.Dimension) : Void;
 	
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public public function isFocusTraversable() : Bool;
 	
-	@:overload public function requestFocus() : Void;
+	@:overload @:public public function requestFocus() : Void;
 	
-	@:overload public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
-	@:overload public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Returns the icon for the element renderer, as the only item
@@ -1955,7 +1955,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*         or a <code>null</code> array if none
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
+	@:require(java3) @:overload @:public override public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
 	
 	
 }

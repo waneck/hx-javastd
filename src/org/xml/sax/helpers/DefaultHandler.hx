@@ -51,7 +51,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	*            wrapping another exception.
 	* @see org.xml.sax.EntityResolver#resolveEntity
 	*/
-	@:overload public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
 	/**
 	* Receive notification of a notation declaration.
@@ -68,7 +68,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	*            wrapping another exception.
 	* @see org.xml.sax.DTDHandler#notationDecl
 	*/
-	@:overload public function notationDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function notationDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Receive notification of an unparsed entity declaration.
@@ -86,7 +86,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	*            wrapping another exception.
 	* @see org.xml.sax.DTDHandler#unparsedEntityDecl
 	*/
-	@:overload public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
+	@:overload @:public public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
 	
 	/**
 	* Receive a Locator object for document events.
@@ -99,7 +99,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	* @see org.xml.sax.ContentHandler#setDocumentLocator
 	* @see org.xml.sax.Locator
 	*/
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Receive notification of the beginning of the document.
@@ -113,7 +113,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#startDocument
 	*/
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
 	/**
 	* Receive notification of the end of the document.
@@ -127,7 +127,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#endDocument
 	*/
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
 	/**
 	* Receive notification of the start of a Namespace mapping.
@@ -142,7 +142,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#startPrefixMapping
 	*/
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	/**
 	* Receive notification of the end of a Namespace mapping.
@@ -156,7 +156,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#endPrefixMapping
 	*/
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
 	/**
 	* Receive notification of the start of an element.
@@ -181,7 +181,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#startElement
 	*/
-	@:overload public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -203,7 +203,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#endElement
 	*/
-	@:overload public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Receive notification of character data inside an element.
@@ -221,7 +221,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#characters
 	*/
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of ignorable whitespace in element content.
@@ -239,7 +239,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#ignorableWhitespace
 	*/
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of a processing instruction.
@@ -256,7 +256,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#processingInstruction
 	*/
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* Receive notification of a skipped entity.
@@ -271,7 +271,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#processingInstruction
 	*/
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
 	/**
 	* Receive notification of a parser warning.
@@ -287,7 +287,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	* @see org.xml.sax.ErrorHandler#warning
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload public function warning(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(e : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Receive notification of a recoverable parser error.
@@ -303,7 +303,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	* @see org.xml.sax.ErrorHandler#warning
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(e : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Report a fatal XML parsing error.
@@ -322,7 +322,7 @@ extern class DefaultHandler implements org.xml.sax.EntityResolver implements org
 	* @see org.xml.sax.ErrorHandler#fatalError
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload public function fatalError(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(e : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

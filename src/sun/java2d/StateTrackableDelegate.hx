@@ -40,14 +40,14 @@ extern class StateTrackableDelegate implements sun.java2d.StateTrackable
 	* of the StateTrackable interface that is permanently in the
 	* {@link State#UNTRACKABLE UNTRACKABLE} state.
 	*/
-	public static var UNTRACKABLE_DELEGATE(default, null) : sun.java2d.StateTrackableDelegate;
+	@:public @:final @:static public static var UNTRACKABLE_DELEGATE(default, null) : sun.java2d.StateTrackableDelegate;
 	
 	/**
 	* The {@code IMMUTABLE_DELEGATE} provides an implementation
 	* of the StateTrackable interface that is permanently in the
 	* {@link State#IMMUTABLE IMMUTABLE} state.
 	*/
-	public static var IMMUTABLE_DELEGATE(default, null) : sun.java2d.StateTrackableDelegate;
+	@:public @:final @:static public static var IMMUTABLE_DELEGATE(default, null) : sun.java2d.StateTrackableDelegate;
 	
 	/**
 	* Returns a {@code StateTrackableDelegate} instance with the
@@ -59,19 +59,19 @@ extern class StateTrackableDelegate implements sun.java2d.StateTrackable
 	* {@link #UNTRACKABLE_DELEGATE} or {@link #IMMUTABLE_DELEGATE}
 	* is returned.
 	*/
-	@:overload public static function createInstance(state : sun.java2d.StateTrackable.StateTrackable_State) : sun.java2d.StateTrackableDelegate;
+	@:overload @:public @:static public static function createInstance(state : sun.java2d.StateTrackable.StateTrackable_State) : sun.java2d.StateTrackableDelegate;
 	
 	/**
 	* @inheritDoc
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getState() : sun.java2d.StateTrackable.StateTrackable_State;
+	@:require(java7) @:overload @:public public function getState() : sun.java2d.StateTrackable.StateTrackable_State;
 	
 	/**
 	* @inheritDoc
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:synchronized public function getStateTracker() : sun.java2d.StateTracker;
+	@:require(java7) @:overload @:public @:synchronized public function getStateTracker() : sun.java2d.StateTracker;
 	
 	/**
 	* This method provides an easy way for delegating classes to
@@ -82,7 +82,7 @@ extern class StateTrackableDelegate implements sun.java2d.StateTrackable
 	* @see #setUntrackable
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:synchronized public function setImmutable() : Void;
+	@:require(java7) @:overload @:public @:synchronized public function setImmutable() : Void;
 	
 	/**
 	* This method provides an easy way for delegating classes to
@@ -95,7 +95,7 @@ extern class StateTrackableDelegate implements sun.java2d.StateTrackable
 	* @see #setImmutable
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:synchronized public function setUntrackable() : Void;
+	@:require(java7) @:overload @:public @:synchronized public function setUntrackable() : Void;
 	
 	/**
 	* This method provides an easy way for delegating classes to
@@ -119,7 +119,7 @@ extern class StateTrackableDelegate implements sun.java2d.StateTrackable
 	*         {@link State#IMMUTABLE IMMUTABLE}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:synchronized public function addDynamicAgent() : Void;
+	@:require(java7) @:overload @:public @:synchronized public function addDynamicAgent() : Void;
 	
 	/**
 	* This method provides an easy way for delegating classes to
@@ -144,7 +144,7 @@ extern class StateTrackableDelegate implements sun.java2d.StateTrackable
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:synchronized private function removeDynamicAgent() : Void;
+	@:require(java7) @:overload @:protected @:synchronized private function removeDynamicAgent() : Void;
 	
 	/**
 	* This method provides an easy way for delegating classes to
@@ -163,7 +163,7 @@ extern class StateTrackableDelegate implements sun.java2d.StateTrackable
 	* {@code IMMUTABLE} delegate is never modified.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:final public function markDirty() : Void;
+	@:require(java7) @:overload @:public @:final public function markDirty() : Void;
 	
 	
 }

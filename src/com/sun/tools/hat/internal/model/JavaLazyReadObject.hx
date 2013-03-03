@@ -30,43 +30,43 @@ package com.sun.tools.hat.internal.model;
 */
 extern class JavaLazyReadObject extends com.sun.tools.hat.internal.model.JavaHeapObject
 {
-	@:overload private function new(offset : haxe.Int64) : Void;
+	@:overload @:protected private function new(offset : haxe.Int64) : Void;
 	
-	@:overload @:final override public function getSize() : Int;
+	@:overload @:public @:final override public function getSize() : Int;
 	
-	@:overload @:final private function getOffset() : haxe.Int64;
+	@:overload @:protected @:final private function getOffset() : haxe.Int64;
 	
-	@:overload @:final private function getValueLength() : Int;
+	@:overload @:protected @:final private function getValueLength() : Int;
 	
-	@:overload @:final private function getValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:final private function getValue() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:final override public function getId() : haxe.Int64;
+	@:overload @:public @:final override public function getId() : haxe.Int64;
 	
-	@:overload @:abstract private function readValueLength() : Int;
+	@:overload @:protected @:abstract private function readValueLength() : Int;
 	
-	@:overload @:abstract private function readValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:abstract private function readValue() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private static function makeId(id : haxe.Int64) : java.lang.Number;
+	@:overload @:protected @:static private static function makeId(id : haxe.Int64) : java.lang.Number;
 	
-	@:overload private static function getIdValue(num : java.lang.Number) : haxe.Int64;
+	@:overload @:protected @:static private static function getIdValue(num : java.lang.Number) : haxe.Int64;
 	
-	@:overload @:final private function objectIdAt(index : Int, data : java.NativeArray<java.StdTypes.Int8>) : haxe.Int64;
+	@:overload @:protected @:final private function objectIdAt(index : Int, data : java.NativeArray<java.StdTypes.Int8>) : haxe.Int64;
 	
-	@:overload private static function byteAt(index : Int, value : java.NativeArray<java.StdTypes.Int8>) : java.StdTypes.Int8;
+	@:overload @:protected @:static private static function byteAt(index : Int, value : java.NativeArray<java.StdTypes.Int8>) : java.StdTypes.Int8;
 	
-	@:overload private static function booleanAt(index : Int, value : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:protected @:static private static function booleanAt(index : Int, value : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
-	@:overload private static function charAt(index : Int, value : java.NativeArray<java.StdTypes.Int8>) : java.StdTypes.Char16;
+	@:overload @:protected @:static private static function charAt(index : Int, value : java.NativeArray<java.StdTypes.Int8>) : java.StdTypes.Char16;
 	
-	@:overload private static function shortAt(index : Int, value : java.NativeArray<java.StdTypes.Int8>) : java.StdTypes.Int16;
+	@:overload @:protected @:static private static function shortAt(index : Int, value : java.NativeArray<java.StdTypes.Int8>) : java.StdTypes.Int16;
 	
-	@:overload private static function intAt(index : Int, value : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:protected @:static private static function intAt(index : Int, value : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload private static function longAt(index : Int, value : java.NativeArray<java.StdTypes.Int8>) : haxe.Int64;
+	@:overload @:protected @:static private static function longAt(index : Int, value : java.NativeArray<java.StdTypes.Int8>) : haxe.Int64;
 	
-	@:overload private static function floatAt(index : Int, value : java.NativeArray<java.StdTypes.Int8>) : Single;
+	@:overload @:protected @:static private static function floatAt(index : Int, value : java.NativeArray<java.StdTypes.Int8>) : Single;
 	
-	@:overload private static function doubleAt(index : Int, value : java.NativeArray<java.StdTypes.Int8>) : Float;
+	@:overload @:protected @:static private static function doubleAt(index : Int, value : java.NativeArray<java.StdTypes.Int8>) : Float;
 	
 	
 }

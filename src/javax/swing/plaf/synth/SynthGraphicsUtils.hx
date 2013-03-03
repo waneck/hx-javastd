@@ -34,7 +34,7 @@ package javax.swing.plaf.synth;
 	/**
 	* Creates a <code>SynthGraphicsUtils</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Draws a line between the two end points.
@@ -48,7 +48,7 @@ package javax.swing.plaf.synth;
 	* @param x2 x destination
 	* @param y2 y destination
 	*/
-	@:overload public function drawLine(context : javax.swing.plaf.synth.SynthContext, paintKey : Dynamic, g : java.awt.Graphics, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public public function drawLine(context : javax.swing.plaf.synth.SynthContext, paintKey : Dynamic, g : java.awt.Graphics, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
 	/**
 	* Draws a line between the two end points.
@@ -69,7 +69,7 @@ package javax.swing.plaf.synth;
 	* @param styleKey identifies the requested style of the line (e.g. "dashed")
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function drawLine(context : javax.swing.plaf.synth.SynthContext, paintKey : Dynamic, g : java.awt.Graphics, x1 : Int, y1 : Int, x2 : Int, y2 : Int, styleKey : Dynamic) : Void;
+	@:require(java6) @:overload @:public public function drawLine(context : javax.swing.plaf.synth.SynthContext, paintKey : Dynamic, g : java.awt.Graphics, x1 : Int, y1 : Int, x2 : Int, y2 : Int, styleKey : Dynamic) : Void;
 	
 	/**
 	* Lays out text and an icon returning, by reference, the location to
@@ -88,7 +88,7 @@ package javax.swing.plaf.synth;
 	* @param textR Rectangle to place text in
 	* @param iconTextGap gap between icon and text
 	*/
-	@:overload public function layoutText(ss : javax.swing.plaf.synth.SynthContext, fm : java.awt.FontMetrics, text : String, icon : javax.swing.Icon, hAlign : Int, vAlign : Int, hTextPosition : Int, vTextPosition : Int, viewR : java.awt.Rectangle, iconR : java.awt.Rectangle, textR : java.awt.Rectangle, iconTextGap : Int) : String;
+	@:overload @:public public function layoutText(ss : javax.swing.plaf.synth.SynthContext, fm : java.awt.FontMetrics, text : String, icon : javax.swing.Icon, hAlign : Int, vAlign : Int, hTextPosition : Int, vTextPosition : Int, viewR : java.awt.Rectangle, iconR : java.awt.Rectangle, textR : java.awt.Rectangle, iconTextGap : Int) : String;
 	
 	/**
 	* Returns the size of the passed in string.
@@ -98,7 +98,7 @@ package javax.swing.plaf.synth;
 	* @param metrics FontMetrics, may be ignored
 	* @param text Text to get size of.
 	*/
-	@:overload public function computeStringWidth(ss : javax.swing.plaf.synth.SynthContext, font : java.awt.Font, metrics : java.awt.FontMetrics, text : String) : Int;
+	@:overload @:public public function computeStringWidth(ss : javax.swing.plaf.synth.SynthContext, font : java.awt.Font, metrics : java.awt.FontMetrics, text : String) : Int;
 	
 	/**
 	* Returns the minimum size needed to properly render an icon and text.
@@ -115,7 +115,7 @@ package javax.swing.plaf.synth;
 	* @param mnemonicIndex Index into text to render the mnemonic at, -1
 	*        indicates no mnemonic.
 	*/
-	@:overload public function getMinimumSize(ss : javax.swing.plaf.synth.SynthContext, font : java.awt.Font, text : String, icon : javax.swing.Icon, hAlign : Int, vAlign : Int, hTextPosition : Int, vTextPosition : Int, iconTextGap : Int, mnemonicIndex : Int) : java.awt.Dimension;
+	@:overload @:public public function getMinimumSize(ss : javax.swing.plaf.synth.SynthContext, font : java.awt.Font, text : String, icon : javax.swing.Icon, hAlign : Int, vAlign : Int, hTextPosition : Int, vTextPosition : Int, iconTextGap : Int, mnemonicIndex : Int) : java.awt.Dimension;
 	
 	/**
 	* Returns the maximum size needed to properly render an icon and text.
@@ -132,7 +132,7 @@ package javax.swing.plaf.synth;
 	* @param mnemonicIndex Index into text to render the mnemonic at, -1
 	*        indicates no mnemonic.
 	*/
-	@:overload public function getMaximumSize(ss : javax.swing.plaf.synth.SynthContext, font : java.awt.Font, text : String, icon : javax.swing.Icon, hAlign : Int, vAlign : Int, hTextPosition : Int, vTextPosition : Int, iconTextGap : Int, mnemonicIndex : Int) : java.awt.Dimension;
+	@:overload @:public public function getMaximumSize(ss : javax.swing.plaf.synth.SynthContext, font : java.awt.Font, text : String, icon : javax.swing.Icon, hAlign : Int, vAlign : Int, hTextPosition : Int, vTextPosition : Int, iconTextGap : Int, mnemonicIndex : Int) : java.awt.Dimension;
 	
 	/**
 	* Returns the maximum height of the the Font from the passed in
@@ -142,7 +142,7 @@ package javax.swing.plaf.synth;
 	* @return maximum height of the characters for the font from the passed
 	*         in context.
 	*/
-	@:overload public function getMaximumCharHeight(context : javax.swing.plaf.synth.SynthContext) : Int;
+	@:overload @:public public function getMaximumCharHeight(context : javax.swing.plaf.synth.SynthContext) : Int;
 	
 	/**
 	* Returns the preferred size needed to properly render an icon and text.
@@ -159,7 +159,7 @@ package javax.swing.plaf.synth;
 	* @param mnemonicIndex Index into text to render the mnemonic at, -1
 	*        indicates no mnemonic.
 	*/
-	@:overload public function getPreferredSize(ss : javax.swing.plaf.synth.SynthContext, font : java.awt.Font, text : String, icon : javax.swing.Icon, hAlign : Int, vAlign : Int, hTextPosition : Int, vTextPosition : Int, iconTextGap : Int, mnemonicIndex : Int) : java.awt.Dimension;
+	@:overload @:public public function getPreferredSize(ss : javax.swing.plaf.synth.SynthContext, font : java.awt.Font, text : String, icon : javax.swing.Icon, hAlign : Int, vAlign : Int, hTextPosition : Int, vTextPosition : Int, iconTextGap : Int, mnemonicIndex : Int) : java.awt.Dimension;
 	
 	/**
 	* Paints text at the specified location. This will not attempt to
@@ -172,7 +172,7 @@ package javax.swing.plaf.synth;
 	* @param bounds Bounds of the text to be drawn.
 	* @param mnemonicIndex Index to draw string at.
 	*/
-	@:overload public function paintText(ss : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, text : String, bounds : java.awt.Rectangle, mnemonicIndex : Int) : Void;
+	@:overload @:public public function paintText(ss : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, text : String, bounds : java.awt.Rectangle, mnemonicIndex : Int) : Void;
 	
 	/**
 	* Paints text at the specified location. This will not attempt to
@@ -186,7 +186,7 @@ package javax.swing.plaf.synth;
 	* @param y Upper left corner to draw text at.
 	* @param mnemonicIndex Index to draw string at.
 	*/
-	@:overload public function paintText(ss : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, text : String, x : Int, y : Int, mnemonicIndex : Int) : Void;
+	@:overload @:public public function paintText(ss : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, text : String, x : Int, y : Int, mnemonicIndex : Int) : Void;
 	
 	/**
 	* Paints an icon and text. This will render the text as html, if
@@ -205,7 +205,7 @@ package javax.swing.plaf.synth;
 	*        indicates no mnemonic.
 	* @param textOffset Amount to offset the text when painting
 	*/
-	@:overload public function paintText(ss : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, text : String, icon : javax.swing.Icon, hAlign : Int, vAlign : Int, hTextPosition : Int, vTextPosition : Int, iconTextGap : Int, mnemonicIndex : Int, textOffset : Int) : Void;
+	@:overload @:public public function paintText(ss : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, text : String, icon : javax.swing.Icon, hAlign : Int, vAlign : Int, hTextPosition : Int, vTextPosition : Int, iconTextGap : Int, mnemonicIndex : Int, textOffset : Int) : Void;
 	
 	
 }
@@ -215,11 +215,11 @@ package javax.swing.plaf.synth;
 */
 @:native('javax$swing$plaf$synth$SynthGraphicsUtils$SynthIconWrapper') @:internal extern class SynthGraphicsUtils_SynthIconWrapper implements javax.swing.Icon
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }

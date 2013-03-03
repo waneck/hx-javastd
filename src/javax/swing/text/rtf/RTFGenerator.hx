@@ -41,36 +41,36 @@ package javax.swing.text.rtf;
 {
 	/** The default color, used for text without an explicit color
 	*  attribute. */
-	public static var defaultRTFColor(default, null) : java.awt.Color;
+	@:static @:public @:final public static var defaultRTFColor(default, null) : java.awt.Color;
 	
-	public static var defaultFontSize(default, null) : Single;
+	@:static @:public @:final public static var defaultFontSize(default, null) : Single;
 	
-	public static var defaultFontFamily(default, null) : String;
+	@:static @:public @:final public static var defaultFontFamily(default, null) : String;
 	
-	private static var textKeywords : java.NativeArray<javax.swing.text.rtf.RTFGenerator.RTFGenerator_CharacterKeywordPair>;
+	@:static @:protected private static var textKeywords : java.NativeArray<javax.swing.text.rtf.RTFGenerator.RTFGenerator_CharacterKeywordPair>;
 	
-	@:overload public static function writeDocument(d : javax.swing.text.Document, to : java.io.OutputStream) : Void;
+	@:overload @:static @:public public static function writeDocument(d : javax.swing.text.Document, to : java.io.OutputStream) : Void;
 	
-	@:overload public function new(to : java.io.OutputStream) : Void;
+	@:overload @:public public function new(to : java.io.OutputStream) : Void;
 	
-	@:overload public function examineElement(el : javax.swing.text.Element) : Void;
+	@:overload @:public public function examineElement(el : javax.swing.text.Element) : Void;
 	
 	/* Writes a line break to the output file, for ease in debugging */
-	@:overload public function writeLineBreak() : Void;
+	@:overload @:public public function writeLineBreak() : Void;
 	
-	@:overload public function writeRTFHeader() : Void;
+	@:overload @:public public function writeRTFHeader() : Void;
 	
-	@:overload public function writeRTFTrailer() : Void;
+	@:overload @:public public function writeRTFTrailer() : Void;
 	
-	@:overload private function checkNumericControlWord(currentAttributes : javax.swing.text.MutableAttributeSet, newAttributes : javax.swing.text.AttributeSet, attrName : Dynamic, controlWord : String, dflt : Single, scale : Single) : Void;
+	@:overload @:protected private function checkNumericControlWord(currentAttributes : javax.swing.text.MutableAttributeSet, newAttributes : javax.swing.text.AttributeSet, attrName : Dynamic, controlWord : String, dflt : Single, scale : Single) : Void;
 	
-	@:overload private function checkControlWord(currentAttributes : javax.swing.text.MutableAttributeSet, newAttributes : javax.swing.text.AttributeSet, word : javax.swing.text.rtf.RTFAttribute) : Void;
+	@:overload @:protected private function checkControlWord(currentAttributes : javax.swing.text.MutableAttributeSet, newAttributes : javax.swing.text.AttributeSet, word : javax.swing.text.rtf.RTFAttribute) : Void;
 	
-	@:overload private function checkControlWords(currentAttributes : javax.swing.text.MutableAttributeSet, newAttributes : javax.swing.text.AttributeSet, words : java.NativeArray<javax.swing.text.rtf.RTFAttribute>, domain : Int) : Void;
+	@:overload @:protected private function checkControlWords(currentAttributes : javax.swing.text.MutableAttributeSet, newAttributes : javax.swing.text.AttributeSet, words : java.NativeArray<javax.swing.text.rtf.RTFAttribute>, domain : Int) : Void;
 	
-	@:overload private function resetSectionAttributes(currentAttributes : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:protected private function resetSectionAttributes(currentAttributes : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload public function writeParagraphElement(el : javax.swing.text.Element) : Void;
+	@:overload @:public public function writeParagraphElement(el : javax.swing.text.Element) : Void;
 	
 	/* debugging. TODO: remove.
 private static String tabdump(Object tso)
@@ -92,30 +92,30 @@ private static String tabdump(Object tso)
 	return buf + "]";
 }
 */
-	@:overload private function resetParagraphAttributes(currentAttributes : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:protected private function resetParagraphAttributes(currentAttributes : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload private function resetCharacterAttributes(currentAttributes : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:protected private function resetCharacterAttributes(currentAttributes : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload public function writeTextElement(el : javax.swing.text.Element) : Void;
+	@:overload @:public public function writeTextElement(el : javax.swing.text.Element) : Void;
 	
-	@:overload public function writeText(s : javax.swing.text.Segment) : Void;
+	@:overload @:public public function writeText(s : javax.swing.text.Segment) : Void;
 	
-	@:overload public function writeText(s : String) : Void;
+	@:overload @:public public function writeText(s : String) : Void;
 	
-	@:overload public function writeRawString(str : String) : Void;
+	@:overload @:public public function writeRawString(str : String) : Void;
 	
-	@:overload public function writeControlWord(keyword : String) : Void;
+	@:overload @:public public function writeControlWord(keyword : String) : Void;
 	
-	@:overload public function writeControlWord(keyword : String, arg : Int) : Void;
+	@:overload @:public public function writeControlWord(keyword : String, arg : Int) : Void;
 	
-	@:overload public function writeBegingroup() : Void;
+	@:overload @:public public function writeBegingroup() : Void;
 	
-	@:overload public function writeEndgroup() : Void;
+	@:overload @:public public function writeEndgroup() : Void;
 	
-	@:overload public function writeCharacter(ch : java.StdTypes.Char16) : Void;
+	@:overload @:public public function writeCharacter(ch : java.StdTypes.Char16) : Void;
 	
 	/* Not very efficient. TODO. */
-	@:overload private static function convertCharacter(conversion : java.NativeArray<Int>, ch : java.StdTypes.Char16) : Int;
+	@:overload @:static @:protected private static function convertCharacter(conversion : java.NativeArray<Int>, ch : java.StdTypes.Char16) : Int;
 	
 	
 }
@@ -125,9 +125,9 @@ would require allocating an object for every character
 written (slow!). */
 @:native('javax$swing$text$rtf$RTFGenerator$CharacterKeywordPair') @:internal extern class RTFGenerator_CharacterKeywordPair
 {
-	public var character : java.StdTypes.Char16;
+	@:public public var character : java.StdTypes.Char16;
 	
-	public var keyword : String;
+	@:public public var keyword : String;
 	
 	
 }

@@ -34,7 +34,7 @@ package com.sun.jndi.dns;
 */
 @:internal extern class Resolver
 {
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

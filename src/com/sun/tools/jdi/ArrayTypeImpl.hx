@@ -25,38 +25,38 @@ package com.sun.tools.jdi;
 */
 extern class ArrayTypeImpl extends com.sun.tools.jdi.ReferenceTypeImpl implements com.sun.jdi.ArrayType
 {
-	@:overload private function new(aVm : com.sun.jdi.VirtualMachine, aRef : haxe.Int64) : Void;
+	@:overload @:protected private function new(aVm : com.sun.jdi.VirtualMachine, aRef : haxe.Int64) : Void;
 	
-	@:overload public function newInstance(length : Int) : com.sun.jdi.ArrayReference;
+	@:overload @:public public function newInstance(length : Int) : com.sun.jdi.ArrayReference;
 	
-	@:overload public function componentSignature() : String;
+	@:overload @:public public function componentSignature() : String;
 	
-	@:overload public function componentTypeName() : String;
+	@:overload @:public public function componentTypeName() : String;
 	
-	@:overload override public function allMethods() : java.util.List<com.sun.jdi.Method>;
+	@:overload @:public override public function allMethods() : java.util.List<com.sun.jdi.Method>;
 	
-	@:overload public function componentType() : com.sun.jdi.Type;
+	@:overload @:public public function componentType() : com.sun.jdi.Type;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/*
 	* Save a pointless trip over the wire for these methods
 	* which have undefined results for arrays.
 	*/
-	@:overload override public function isPrepared() : Bool;
+	@:overload @:public override public function isPrepared() : Bool;
 	
-	@:overload override public function isVerified() : Bool;
+	@:overload @:public override public function isVerified() : Bool;
 	
-	@:overload override public function isInitialized() : Bool;
+	@:overload @:public override public function isInitialized() : Bool;
 	
-	@:overload override public function failedToInitialize() : Bool;
+	@:overload @:public override public function failedToInitialize() : Bool;
 	
-	@:overload override public function isAbstract() : Bool;
+	@:overload @:public override public function isAbstract() : Bool;
 	
 	/*
 	* Defined always to be true for arrays
 	*/
-	@:overload override public function isFinal() : Bool;
+	@:overload @:public override public function isFinal() : Bool;
 	
 	
 }

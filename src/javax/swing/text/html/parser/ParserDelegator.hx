@@ -25,13 +25,13 @@ package javax.swing.text.html.parser;
 */
 extern class ParserDelegator extends javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_Parser implements java.io.Serializable
 {
-	@:overload private static function setDefaultDTD() : Void;
+	@:overload @:protected @:static private static function setDefaultDTD() : Void;
 	
-	@:overload private static function createDTD(dtd : javax.swing.text.html.parser.DTD, name : String) : javax.swing.text.html.parser.DTD;
+	@:overload @:protected @:static private static function createDTD(dtd : javax.swing.text.html.parser.DTD, name : String) : javax.swing.text.html.parser.DTD;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function parse(r : java.io.Reader, cb : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_ParserCallback, ignoreCharSet : Bool) : Void;
+	@:overload @:public override public function parse(r : java.io.Reader, cb : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_ParserCallback, ignoreCharSet : Bool) : Void;
 	
 	
 }

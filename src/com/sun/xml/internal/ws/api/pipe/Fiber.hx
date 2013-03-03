@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.api.pipe;
 */
 extern class Fiber implements java.lang.Runnable
 {
-	public var owner(default, null) : com.sun.xml.internal.ws.api.pipe.Engine;
+	@:public @:final public var owner(default, null) : com.sun.xml.internal.ws.api.pipe.Engine;
 	
 	/**
 	* Starts the execution of this fiber asynchronously.
@@ -43,9 +43,9 @@ extern class Fiber implements java.lang.Runnable
 	*
 	* @see #runSync(Tube,Packet)
 	*/
-	@:overload public function start(tubeline : com.sun.xml.internal.ws.api.pipe.Tube, request : com.sun.xml.internal.ws.api.message.Packet, completionCallback : com.sun.xml.internal.ws.api.pipe.Fiber.Fiber_CompletionCallback) : Void;
+	@:overload @:public public function start(tubeline : com.sun.xml.internal.ws.api.pipe.Tube, request : com.sun.xml.internal.ws.api.message.Packet, completionCallback : com.sun.xml.internal.ws.api.pipe.Fiber.Fiber_CompletionCallback) : Void;
 	
-	@:overload public function runAsync(tubeline : com.sun.xml.internal.ws.api.pipe.Tube, request : com.sun.xml.internal.ws.api.message.Packet, completionCallback : com.sun.xml.internal.ws.api.pipe.Fiber.Fiber_CompletionCallback) : Void;
+	@:overload @:public public function runAsync(tubeline : com.sun.xml.internal.ws.api.pipe.Tube, request : com.sun.xml.internal.ws.api.message.Packet, completionCallback : com.sun.xml.internal.ws.api.pipe.Fiber.Fiber_CompletionCallback) : Void;
 	
 	/**
 	* Wakes up a suspended fiber.
@@ -70,7 +70,7 @@ extern class Fiber implements java.lang.Runnable
 	*
 	* @param resumePacket packet used in the resumed processing
 	*/
-	@:overload @:synchronized public function resume(resumePacket : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public @:synchronized public function resume(resumePacket : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	/**
 	* Wakes up a suspended fiber with an exception.
@@ -88,7 +88,7 @@ extern class Fiber implements java.lang.Runnable
 	*
 	* @param throwable exception that is used in the resumed processing
 	*/
-	@:overload @:synchronized public function resume(throwable : java.lang.Throwable) : Void;
+	@:overload @:public @:synchronized public function resume(throwable : java.lang.Throwable) : Void;
 	
 	/**
 	* Adds a new {@link FiberContextSwitchInterceptor} to this fiber.
@@ -109,7 +109,7 @@ extern class Fiber implements java.lang.Runnable
 	*  <li>Y.processRequest()
 	* </ol>
 	*/
-	@:overload public function addInterceptor(interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
+	@:overload @:public public function addInterceptor(interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
 	
 	/**
 	* Removes a {@link FiberContextSwitchInterceptor} from this fiber.
@@ -135,23 +135,23 @@ extern class Fiber implements java.lang.Runnable
 	*      true if the specified interceptor was removed. False if
 	*      the specified interceptor was not registered with this fiber to begin with.
 	*/
-	@:overload public function removeInterceptor(interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Bool;
+	@:overload @:public public function removeInterceptor(interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Bool;
 	
 	/**
 	* Gets the context {@link ClassLoader} of this fiber.
 	*/
-	@:overload public function getContextClassLoader() : java.lang.ClassLoader;
+	@:overload @:public public function getContextClassLoader() : java.lang.ClassLoader;
 	
 	/**
 	* Sets the context {@link ClassLoader} of this fiber.
 	*/
-	@:overload public function setContextClassLoader(contextClassLoader : java.lang.ClassLoader) : java.lang.ClassLoader;
+	@:overload @:public public function setContextClassLoader(contextClassLoader : java.lang.ClassLoader) : java.lang.ClassLoader;
 	
 	/**
 	* DO NOT CALL THIS METHOD. This is an implementation detail
 	* of {@link Fiber}.
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	/**
 	* Runs a given {@link Tube} (and everything thereafter) synchronously.
@@ -183,9 +183,9 @@ extern class Fiber implements java.lang.Runnable
 	*
 	* @see #start(Tube, Packet, CompletionCallback)
 	*/
-	@:overload @:synchronized public function runSync(tubeline : com.sun.xml.internal.ws.api.pipe.Tube, request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public @:synchronized public function runSync(tubeline : com.sun.xml.internal.ws.api.pipe.Tube, request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Packet;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Gets the current {@link Packet} associated with this fiber.
@@ -193,12 +193,12 @@ extern class Fiber implements java.lang.Runnable
 	* <p>
 	* This method returns null if no packet has been associated with the fiber yet.
 	*/
-	@:overload public function getPacket() : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public public function getPacket() : com.sun.xml.internal.ws.api.message.Packet;
 	
 	/**
 	* Returns true if this fiber is still running or suspended.
 	*/
-	@:overload public function isAlive() : Bool;
+	@:overload @:public public function isAlive() : Bool;
 	
 	/**
 	* (ADVANCED) Returns true if the current fiber is being executed synchronously.
@@ -222,7 +222,7 @@ extern class Fiber implements java.lang.Runnable
 	* it might find it faster to do {@link #runSync(Tube, Packet)}
 	* if it's already running synchronously.
 	*/
-	@:overload public static function isSynchronous() : Bool;
+	@:overload @:public @:static public static function isSynchronous() : Bool;
 	
 	/**
 	* Gets the current fiber that's running.
@@ -231,13 +231,13 @@ extern class Fiber implements java.lang.Runnable
 	* This works like {@link Thread#currentThread()}.
 	* This method only works when invoked from {@link Tube}.
 	*/
-	@:overload public static function current() : com.sun.xml.internal.ws.api.pipe.Fiber;
+	@:overload @:public @:static public static function current() : com.sun.xml.internal.ws.api.pipe.Fiber;
 	
 	/**
 	* Set this boolean to true to execute fibers sequentially one by one.
 	* See class javadoc.
 	*/
-	@:volatile public static var serializeExecution : Bool;
+	@:public @:static @:volatile public static var serializeExecution : Bool;
 	
 	
 }
@@ -269,7 +269,7 @@ extern class Fiber implements java.lang.Runnable
 */
 @:native('com$sun$xml$internal$ws$api$pipe$Fiber$InterceptorHandler') @:internal extern class Fiber_InterceptorHandler implements com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor.FiberContextSwitchInterceptor_Work<com.sun.xml.internal.ws.api.pipe.Tube, com.sun.xml.internal.ws.api.pipe.Tube>
 {
-	@:overload public function execute(next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public public function execute(next : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	
 }

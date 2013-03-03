@@ -37,7 +37,7 @@ package java.util;
 	* Constructs a new <code>EmptyStackException</code> with <tt>null</tt>
 	* as its error message string.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

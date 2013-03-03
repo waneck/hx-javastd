@@ -34,12 +34,12 @@ extern class LocaleUtils
 	/**
 	* Compares two ASCII Strings s1 and s2, ignoring case.
 	*/
-	@:overload public static function caseIgnoreMatch(s1 : String, s2 : String) : Bool;
+	@:overload @:public @:static public static function caseIgnoreMatch(s1 : String, s2 : String) : Bool;
 	
 	/**
 	* Converts the given ASCII String to lower-case.
 	*/
-	@:overload public static function toLowerString(s : String) : String;
+	@:overload @:public @:static public static function toLowerString(s : String) : String;
 	
 	
 }

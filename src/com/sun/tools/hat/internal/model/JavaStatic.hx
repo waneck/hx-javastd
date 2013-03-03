@@ -37,13 +37,13 @@ package com.sun.tools.hat.internal.model;
 */
 extern class JavaStatic
 {
-	@:overload public function new(field : com.sun.tools.hat.internal.model.JavaField, value : com.sun.tools.hat.internal.model.JavaThing) : Void;
+	@:overload @:public public function new(field : com.sun.tools.hat.internal.model.JavaField, value : com.sun.tools.hat.internal.model.JavaThing) : Void;
 	
-	@:overload public function resolve(clazz : com.sun.tools.hat.internal.model.JavaClass, snapshot : com.sun.tools.hat.internal.model.Snapshot) : Void;
+	@:overload @:public public function resolve(clazz : com.sun.tools.hat.internal.model.JavaClass, snapshot : com.sun.tools.hat.internal.model.Snapshot) : Void;
 	
-	@:overload public function getField() : com.sun.tools.hat.internal.model.JavaField;
+	@:overload @:public public function getField() : com.sun.tools.hat.internal.model.JavaField;
 	
-	@:overload public function getValue() : com.sun.tools.hat.internal.model.JavaThing;
+	@:overload @:public public function getValue() : com.sun.tools.hat.internal.model.JavaThing;
 	
 	
 }

@@ -32,7 +32,7 @@ package com.sun.tools.example.debug.gui;
 */
 extern class ApplicationTool extends javax.swing.JPanel
 {
-	@:overload public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
+	@:overload @:public public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
 	
 	
 }

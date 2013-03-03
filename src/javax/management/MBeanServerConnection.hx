@@ -94,7 +94,7 @@ extern interface MBeanServerConnection
 	* talking to the MBean server.
 	* @see javax.management.MBeanRegistration
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
 	/**
 	* <p>Instantiates and registers an MBean in the MBean server.  The
@@ -167,7 +167,7 @@ extern interface MBeanServerConnection
 	* talking to the MBean server.
 	* @see javax.management.MBeanRegistration
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
 	/**
 	* Instantiates and registers an MBean in the MBean server.  The
@@ -236,7 +236,7 @@ extern interface MBeanServerConnection
 	* talking to the MBean server.
 	* @see javax.management.MBeanRegistration
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
 	
 	/**
 	* <p>Instantiates and registers an MBean in the MBean server.  The
@@ -308,7 +308,7 @@ extern interface MBeanServerConnection
 	* talking to the MBean server.
 	* @see javax.management.MBeanRegistration
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
 	
 	/**
 	* Unregisters an MBean from the MBean server. The MBean is
@@ -350,7 +350,7 @@ extern interface MBeanServerConnection
 	* talking to the MBean server.
 	* @see javax.management.MBeanRegistration
 	*/
-	@:overload public function unregisterMBean(name : javax.management.ObjectName) : Void;
+	@:overload @:public public function unregisterMBean(name : javax.management.ObjectName) : Void;
 	
 	/**
 	* Gets the <CODE>ObjectInstance</CODE> for a given MBean
@@ -368,7 +368,7 @@ extern interface MBeanServerConnection
 	* @exception IOException A communication problem occurred when
 	* talking to the MBean server.
 	*/
-	@:overload public function getObjectInstance(name : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function getObjectInstance(name : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
 	/**
 	* Gets MBeans controlled by the MBean server. This method allows
@@ -396,7 +396,7 @@ extern interface MBeanServerConnection
 	* @exception IOException A communication problem occurred when
 	* talking to the MBean server.
 	*/
-	@:overload public function queryMBeans(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectInstance>;
+	@:overload @:public public function queryMBeans(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectInstance>;
 	
 	/**
 	* Gets the names of MBeans controlled by the MBean server. This
@@ -423,7 +423,7 @@ extern interface MBeanServerConnection
 	* @exception IOException A communication problem occurred when
 	* talking to the MBean server.
 	*/
-	@:overload public function queryNames(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectName>;
+	@:overload @:public public function queryNames(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectName>;
 	
 	/**
 	* Checks whether an MBean, identified by its object name, is
@@ -440,7 +440,7 @@ extern interface MBeanServerConnection
 	* @exception IOException A communication problem occurred when
 	* talking to the MBean server.
 	*/
-	@:overload public function isRegistered(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function isRegistered(name : javax.management.ObjectName) : Bool;
 	
 	/**
 	* Returns the number of MBeans registered in the MBean server.
@@ -450,7 +450,7 @@ extern interface MBeanServerConnection
 	* @exception IOException A communication problem occurred when
 	* talking to the MBean server.
 	*/
-	@:overload public function getMBeanCount() : Null<Int>;
+	@:overload @:public public function getMBeanCount() : Null<Int>;
 	
 	/**
 	* Gets the value of a specific attribute of a named MBean. The MBean
@@ -481,7 +481,7 @@ extern interface MBeanServerConnection
 	*
 	* @see #setAttribute
 	*/
-	@:overload public function getAttribute(name : javax.management.ObjectName, attribute : String) : Dynamic;
+	@:overload @:public public function getAttribute(name : javax.management.ObjectName, attribute : String) : Dynamic;
 	
 	/**
 	* <p>Retrieves the values of several attributes of a named MBean. The MBean
@@ -528,7 +528,7 @@ extern interface MBeanServerConnection
 	*
 	* @see #setAttributes
 	*/
-	@:overload public function getAttributes(name : javax.management.ObjectName, attributes : java.NativeArray<String>) : javax.management.AttributeList;
+	@:overload @:public public function getAttributes(name : javax.management.ObjectName, attributes : java.NativeArray<String>) : javax.management.AttributeList;
 	
 	/**
 	* Sets the value of a specific attribute of a named MBean. The MBean
@@ -559,7 +559,7 @@ extern interface MBeanServerConnection
 	*
 	* @see #getAttribute
 	*/
-	@:overload public function setAttribute(name : javax.management.ObjectName, attribute : javax.management.Attribute) : Void;
+	@:overload @:public public function setAttribute(name : javax.management.ObjectName, attribute : javax.management.Attribute) : Void;
 	
 	/**
 	* <p>Sets the values of several attributes of a named MBean. The MBean is
@@ -614,7 +614,7 @@ extern interface MBeanServerConnection
 	*
 	* @see #getAttributes
 	*/
-	@:overload public function setAttributes(name : javax.management.ObjectName, attributes : javax.management.AttributeList) : javax.management.AttributeList;
+	@:overload @:public public function setAttributes(name : javax.management.ObjectName, attributes : javax.management.AttributeList) : javax.management.AttributeList;
 	
 	/**
 	* <p>Invokes an operation on an MBean.</p>
@@ -676,7 +676,7 @@ extern interface MBeanServerConnection
 	* talking to the MBean server.
 	*
 	*/
-	@:overload public function invoke(name : javax.management.ObjectName, operationName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function invoke(name : javax.management.ObjectName, operationName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
 	/**
 	* Returns the default domain used for naming the MBean.
@@ -688,7 +688,7 @@ extern interface MBeanServerConnection
 	* @exception IOException A communication problem occurred when
 	* talking to the MBean server.
 	*/
-	@:overload public function getDefaultDomain() : String;
+	@:overload @:public public function getDefaultDomain() : String;
 	
 	/**
 	* <p>Returns the list of domains in which any MBean is currently
@@ -704,7 +704,7 @@ extern interface MBeanServerConnection
 	* talking to the MBean server.
 	*
 	*/
-	@:overload public function getDomains() : java.NativeArray<String>;
+	@:overload @:public public function getDomains() : java.NativeArray<String>;
 	
 	/**
 	* <p>Adds a listener to a registered MBean.
@@ -728,7 +728,7 @@ extern interface MBeanServerConnection
 	* @see #removeNotificationListener(ObjectName, NotificationListener,
 	* NotificationFilter, Object)
 	*/
-	@:overload public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	/**
 	* <p>Adds a listener to a registered MBean.</p>
@@ -767,7 +767,7 @@ extern interface MBeanServerConnection
 	* @see #removeNotificationListener(ObjectName, ObjectName,
 	* NotificationFilter, Object)
 	*/
-	@:overload public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	/**
 	* Removes a listener from a registered MBean.
@@ -790,7 +790,7 @@ extern interface MBeanServerConnection
 	* @see #addNotificationListener(ObjectName, ObjectName,
 	* NotificationFilter, Object)
 	*/
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName) : Void;
 	
 	/**
 	* <p>Removes a listener from a registered MBean.</p>
@@ -824,7 +824,7 @@ extern interface MBeanServerConnection
 	* NotificationFilter, Object)
 	*
 	*/
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	/**
 	* <p>Removes a listener from a registered MBean.</p>
@@ -847,7 +847,7 @@ extern interface MBeanServerConnection
 	* @see #addNotificationListener(ObjectName, NotificationListener,
 	* NotificationFilter, Object)
 	*/
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener) : Void;
 	
 	/**
 	* <p>Removes a listener from a registered MBean.</p>
@@ -881,7 +881,7 @@ extern interface MBeanServerConnection
 	* NotificationFilter, Object)
 	*
 	*/
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	/**
 	* This method discovers the attributes and operations that an
@@ -901,7 +901,7 @@ extern interface MBeanServerConnection
 	* @exception IOException A communication problem occurred when
 	* talking to the MBean server.
 	*/
-	@:overload public function getMBeanInfo(name : javax.management.ObjectName) : javax.management.MBeanInfo;
+	@:overload @:public public function getMBeanInfo(name : javax.management.ObjectName) : javax.management.MBeanInfo;
 	
 	/**
 	* <p>Returns true if the MBean specified is an instance of the
@@ -939,7 +939,7 @@ extern interface MBeanServerConnection
 	*
 	* @see Class#isInstance
 	*/
-	@:overload public function isInstanceOf(name : javax.management.ObjectName, className : String) : Bool;
+	@:overload @:public public function isInstanceOf(name : javax.management.ObjectName, className : String) : Bool;
 	
 	
 }

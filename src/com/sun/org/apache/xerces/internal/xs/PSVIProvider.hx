@@ -57,7 +57,7 @@ extern interface PSVIProvider
 	*   choose to provide all the PSVI properties in the scope of the
 	*   method that reports the end of an element.
 	*/
-	@:overload public function getElementPSVI() : com.sun.org.apache.xerces.internal.xs.ElementPSVI;
+	@:overload @:public public function getElementPSVI() : com.sun.org.apache.xerces.internal.xs.ElementPSVI;
 	
 	/**
 	* Provides <code>AttributePSVI</code> given the index of an attribute
@@ -71,7 +71,7 @@ extern interface PSVIProvider
 	* @param index The attribute index.
 	* @return The post schema validation properties of the attribute.
 	*/
-	@:overload public function getAttributePSVI(index : Int) : com.sun.org.apache.xerces.internal.xs.AttributePSVI;
+	@:overload @:public public function getAttributePSVI(index : Int) : com.sun.org.apache.xerces.internal.xs.AttributePSVI;
 	
 	/**
 	* Provides <code>AttributePSVI</code> given the namespace name and the
@@ -86,7 +86,7 @@ extern interface PSVIProvider
 	* @param localname The local name of an attribute.
 	* @return The post schema validation properties of the attribute.
 	*/
-	@:overload public function getAttributePSVIByName(uri : String, localname : String) : com.sun.org.apache.xerces.internal.xs.AttributePSVI;
+	@:overload @:public public function getAttributePSVIByName(uri : String, localname : String) : com.sun.org.apache.xerces.internal.xs.AttributePSVI;
 	
 	
 }

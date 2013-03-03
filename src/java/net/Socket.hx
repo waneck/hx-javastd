@@ -32,7 +32,7 @@ extern class Socket implements java.io.Closeable
 	* @since   JDK1.1
 	* @revised 1.4
 	*/
-	@:require(java1) @:overload public function new() : Void;
+	@:require(java1) @:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an unconnected socket, specifying the type of proxy, if any,
@@ -62,7 +62,7 @@ extern class Socket implements java.io.Closeable
 	*
 	* @since   1.5
 	*/
-	@:require(java5) @:overload public function new(proxy : java.net.Proxy) : Void;
+	@:require(java5) @:overload @:public public function new(proxy : java.net.Proxy) : Void;
 	
 	/**
 	* Creates an unconnected Socket with a user-specified
@@ -75,7 +75,7 @@ extern class Socket implements java.io.Closeable
 	* such as a TCP error.
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload private function new(impl : java.net.SocketImpl) : Void;
+	@:require(java1) @:overload @:protected private function new(impl : java.net.SocketImpl) : Void;
 	
 	/**
 	* Creates a stream socket and connects it to the specified port
@@ -112,7 +112,7 @@ extern class Socket implements java.io.Closeable
 	* @see        java.net.SocketImplFactory#createSocketImpl()
 	* @see        SecurityManager#checkConnect
 	*/
-	@:overload public function new(host : String, port : Int) : Void;
+	@:overload @:public public function new(host : String, port : Int) : Void;
 	
 	/**
 	* Creates a stream socket and connects it to the specified port
@@ -141,7 +141,7 @@ extern class Socket implements java.io.Closeable
 	* @see        java.net.SocketImplFactory#createSocketImpl()
 	* @see        SecurityManager#checkConnect
 	*/
-	@:overload public function new(address : java.net.InetAddress, port : Int) : Void;
+	@:overload @:public public function new(address : java.net.InetAddress, port : Int) : Void;
 	
 	/**
 	* Creates a socket and connects it to the specified remote host on
@@ -176,7 +176,7 @@ extern class Socket implements java.io.Closeable
 	* @see        SecurityManager#checkConnect
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function new(host : String, port : Int, localAddr : java.net.InetAddress, localPort : Int) : Void;
+	@:require(java1) @:overload @:public public function new(host : String, port : Int, localAddr : java.net.InetAddress, localPort : Int) : Void;
 	
 	/**
 	* Creates a socket and connects it to the specified remote address on
@@ -210,7 +210,7 @@ extern class Socket implements java.io.Closeable
 	* @see        SecurityManager#checkConnect
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function new(address : java.net.InetAddress, port : Int, localAddr : java.net.InetAddress, localPort : Int) : Void;
+	@:require(java1) @:overload @:public public function new(address : java.net.InetAddress, port : Int, localAddr : java.net.InetAddress, localPort : Int) : Void;
 	
 	/**
 	* Creates a stream socket and connects it to the specified port
@@ -252,7 +252,7 @@ extern class Socket implements java.io.Closeable
 	* @see        SecurityManager#checkConnect
 	* @deprecated Use DatagramSocket instead for UDP transport.
 	*/
-	@:overload public function new(host : String, port : Int, stream : Bool) : Void;
+	@:overload @:public public function new(host : String, port : Int, stream : Bool) : Void;
 	
 	/**
 	* Creates a socket and connects it to the specified port number at
@@ -290,7 +290,7 @@ extern class Socket implements java.io.Closeable
 	* @see        SecurityManager#checkConnect
 	* @deprecated Use DatagramSocket instead for UDP transport.
 	*/
-	@:overload public function new(host : java.net.InetAddress, port : Int, stream : Bool) : Void;
+	@:overload @:public public function new(host : java.net.InetAddress, port : Int, stream : Bool) : Void;
 	
 	/**
 	* Connects this socket to the server.
@@ -305,7 +305,7 @@ extern class Socket implements java.io.Closeable
 	* @since 1.4
 	* @spec JSR-51
 	*/
-	@:require(java4) @:overload public function connect(endpoint : java.net.SocketAddress) : Void;
+	@:require(java4) @:overload @:public public function connect(endpoint : java.net.SocketAddress) : Void;
 	
 	/**
 	* Connects this socket to the server with a specified timeout value.
@@ -324,7 +324,7 @@ extern class Socket implements java.io.Closeable
 	* @since 1.4
 	* @spec JSR-51
 	*/
-	@:require(java4) @:overload public function connect(endpoint : java.net.SocketAddress, timeout : Int) : Void;
+	@:require(java4) @:overload @:public public function connect(endpoint : java.net.SocketAddress, timeout : Int) : Void;
 	
 	/**
 	* Binds the socket to a local address.
@@ -341,7 +341,7 @@ extern class Socket implements java.io.Closeable
 	* @since   1.4
 	* @see #isBound
 	*/
-	@:require(java4) @:overload public function bind(bindpoint : java.net.SocketAddress) : Void;
+	@:require(java4) @:overload @:public public function bind(bindpoint : java.net.SocketAddress) : Void;
 	
 	/**
 	* Returns the address to which the socket is connected.
@@ -353,7 +353,7 @@ extern class Socket implements java.io.Closeable
 	* @return  the remote IP address to which this socket is connected,
 	*          or <code>null</code> if the socket is not connected.
 	*/
-	@:overload public function getInetAddress() : java.net.InetAddress;
+	@:overload @:public public function getInetAddress() : java.net.InetAddress;
 	
 	/**
 	* Gets the local address to which the socket is bound.
@@ -363,7 +363,7 @@ extern class Socket implements java.io.Closeable
 	*         if the socket is closed or not bound yet.
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function getLocalAddress() : java.net.InetAddress;
+	@:require(java1) @:overload @:public public function getLocalAddress() : java.net.InetAddress;
 	
 	/**
 	* Returns the remote port number to which this socket is connected.
@@ -375,7 +375,7 @@ extern class Socket implements java.io.Closeable
 	* @return  the remote port number to which this socket is connected, or
 	*          0 if the socket is not connected yet.
 	*/
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
 	/**
 	* Returns the local port number to which this socket is bound.
@@ -387,7 +387,7 @@ extern class Socket implements java.io.Closeable
 	* @return  the local port number to which this socket is bound or -1
 	*          if the socket is not bound yet.
 	*/
-	@:overload public function getLocalPort() : Int;
+	@:overload @:public public function getLocalPort() : Int;
 	
 	/**
 	* Returns the address of the endpoint this socket is connected to, or
@@ -406,7 +406,7 @@ extern class Socket implements java.io.Closeable
 	* @see #connect(SocketAddress)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getRemoteSocketAddress() : java.net.SocketAddress;
+	@:require(java4) @:overload @:public public function getRemoteSocketAddress() : java.net.SocketAddress;
 	
 	/**
 	* Returns the address of the endpoint this socket is bound to, or
@@ -427,7 +427,7 @@ extern class Socket implements java.io.Closeable
 	* @see #bind(SocketAddress)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getLocalSocketAddress() : java.net.SocketAddress;
+	@:require(java4) @:overload @:public public function getLocalSocketAddress() : java.net.SocketAddress;
 	
 	/**
 	* Returns the unique {@link java.nio.channels.SocketChannel SocketChannel}
@@ -446,7 +446,7 @@ extern class Socket implements java.io.Closeable
 	* @since 1.4
 	* @spec JSR-51
 	*/
-	@:require(java4) @:overload public function getChannel() : java.nio.channels.SocketChannel;
+	@:require(java4) @:overload @:public public function getChannel() : java.nio.channels.SocketChannel;
 	
 	/**
 	* Returns an input stream for this socket.
@@ -493,7 +493,7 @@ extern class Socket implements java.io.Closeable
 	* @revised 1.4
 	* @spec JSR-51
 	*/
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Returns an output stream for this socket.
@@ -513,7 +513,7 @@ extern class Socket implements java.io.Closeable
 	* @revised 1.4
 	* @spec JSR-51
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Enable/disable TCP_NODELAY (disable/enable Nagle's algorithm).
@@ -528,7 +528,7 @@ extern class Socket implements java.io.Closeable
 	*
 	* @see #getTcpNoDelay()
 	*/
-	@:require(java1) @:overload public function setTcpNoDelay(on : Bool) : Void;
+	@:require(java1) @:overload @:public public function setTcpNoDelay(on : Bool) : Void;
 	
 	/**
 	* Tests if TCP_NODELAY is enabled.
@@ -539,7 +539,7 @@ extern class Socket implements java.io.Closeable
 	* @since   JDK1.1
 	* @see #setTcpNoDelay(boolean)
 	*/
-	@:require(java1) @:overload public function getTcpNoDelay() : Bool;
+	@:require(java1) @:overload @:public public function getTcpNoDelay() : Bool;
 	
 	/**
 	* Enable/disable SO_LINGER with the specified linger time in seconds.
@@ -555,7 +555,7 @@ extern class Socket implements java.io.Closeable
 	* @since JDK1.1
 	* @see #getSoLinger()
 	*/
-	@:require(java1) @:overload public function setSoLinger(on : Bool, linger : Int) : Void;
+	@:require(java1) @:overload @:public public function setSoLinger(on : Bool, linger : Int) : Void;
 	
 	/**
 	* Returns setting for SO_LINGER. -1 returns implies that the
@@ -569,7 +569,7 @@ extern class Socket implements java.io.Closeable
 	* @since   JDK1.1
 	* @see #setSoLinger(boolean, int)
 	*/
-	@:require(java1) @:overload public function getSoLinger() : Int;
+	@:require(java1) @:overload @:public public function getSoLinger() : Int;
 	
 	/**
 	* Send one byte of urgent data on the socket. The byte to be sent is the lowest eight
@@ -581,7 +581,7 @@ extern class Socket implements java.io.Closeable
 	*  sending the data.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function sendUrgentData(data : Int) : Void;
+	@:require(java4) @:overload @:public public function sendUrgentData(data : Int) : Void;
 	
 	/**
 	* Enable/disable OOBINLINE (receipt of TCP urgent data)
@@ -606,7 +606,7 @@ extern class Socket implements java.io.Closeable
 	*
 	* @see #getOOBInline()
 	*/
-	@:require(java4) @:overload public function setOOBInline(on : Bool) : Void;
+	@:require(java4) @:overload @:public public function setOOBInline(on : Bool) : Void;
 	
 	/**
 	* Tests if OOBINLINE is enabled.
@@ -617,7 +617,7 @@ extern class Socket implements java.io.Closeable
 	* @since   1.4
 	* @see #setOOBInline(boolean)
 	*/
-	@:require(java4) @:overload public function getOOBInline() : Bool;
+	@:require(java4) @:overload @:public public function getOOBInline() : Bool;
 	
 	/**
 	*  Enable/disable SO_TIMEOUT with the specified timeout, in
@@ -635,7 +635,7 @@ extern class Socket implements java.io.Closeable
 	* @since   JDK 1.1
 	* @see #getSoTimeout()
 	*/
-	@:require(java1) @:overload @:synchronized public function setSoTimeout(timeout : Int) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function setSoTimeout(timeout : Int) : Void;
 	
 	/**
 	* Returns setting for SO_TIMEOUT.  0 returns implies that the
@@ -646,7 +646,7 @@ extern class Socket implements java.io.Closeable
 	* @since   JDK1.1
 	* @see #setSoTimeout(int)
 	*/
-	@:require(java1) @:overload @:synchronized public function getSoTimeout() : Int;
+	@:require(java1) @:overload @:public @:synchronized public function getSoTimeout() : Int;
 	
 	/**
 	* Sets the SO_SNDBUF option to the specified value for this
@@ -670,7 +670,7 @@ extern class Socket implements java.io.Closeable
 	* @see #getSendBufferSize()
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function setSendBufferSize(size : Int) : Void;
+	@:require(java2) @:overload @:public @:synchronized public function setSendBufferSize(size : Int) : Void;
 	
 	/**
 	* Get value of the SO_SNDBUF option for this <tt>Socket</tt>,
@@ -684,7 +684,7 @@ extern class Socket implements java.io.Closeable
 	* @see #setSendBufferSize(int)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function getSendBufferSize() : Int;
+	@:require(java2) @:overload @:public @:synchronized public function getSendBufferSize() : Int;
 	
 	/**
 	* Sets the SO_RCVBUF option to the specified value for this
@@ -725,7 +725,7 @@ extern class Socket implements java.io.Closeable
 	* @see ServerSocket#setReceiveBufferSize(int)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function setReceiveBufferSize(size : Int) : Void;
+	@:require(java2) @:overload @:public @:synchronized public function setReceiveBufferSize(size : Int) : Void;
 	
 	/**
 	* Gets the value of the SO_RCVBUF option for this <tt>Socket</tt>,
@@ -738,7 +738,7 @@ extern class Socket implements java.io.Closeable
 	* @see #setReceiveBufferSize(int)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function getReceiveBufferSize() : Int;
+	@:require(java2) @:overload @:public @:synchronized public function getReceiveBufferSize() : Int;
 	
 	/**
 	* Enable/disable SO_KEEPALIVE.
@@ -749,7 +749,7 @@ extern class Socket implements java.io.Closeable
 	* @since 1.3
 	* @see #getKeepAlive()
 	*/
-	@:require(java3) @:overload public function setKeepAlive(on : Bool) : Void;
+	@:require(java3) @:overload @:public public function setKeepAlive(on : Bool) : Void;
 	
 	/**
 	* Tests if SO_KEEPALIVE is enabled.
@@ -760,7 +760,7 @@ extern class Socket implements java.io.Closeable
 	* @since   1.3
 	* @see #setKeepAlive(boolean)
 	*/
-	@:require(java3) @:overload public function getKeepAlive() : Bool;
+	@:require(java3) @:overload @:public public function getKeepAlive() : Bool;
 	
 	/**
 	* Sets traffic class or type-of-service octet in the IP
@@ -807,7 +807,7 @@ extern class Socket implements java.io.Closeable
 	* @since 1.4
 	* @see #getTrafficClass
 	*/
-	@:require(java4) @:overload public function setTrafficClass(tc : Int) : Void;
+	@:require(java4) @:overload @:public public function setTrafficClass(tc : Int) : Void;
 	
 	/**
 	* Gets traffic class or type-of-service in the IP header
@@ -824,7 +824,7 @@ extern class Socket implements java.io.Closeable
 	* @since 1.4
 	* @see #setTrafficClass(int)
 	*/
-	@:require(java4) @:overload public function getTrafficClass() : Int;
+	@:require(java4) @:overload @:public public function getTrafficClass() : Int;
 	
 	/**
 	* Enable/disable the SO_REUSEADDR socket option.
@@ -860,7 +860,7 @@ extern class Socket implements java.io.Closeable
 	* @see #isClosed()
 	* @see #isBound()
 	*/
-	@:require(java4) @:overload public function setReuseAddress(on : Bool) : Void;
+	@:require(java4) @:overload @:public public function setReuseAddress(on : Bool) : Void;
 	
 	/**
 	* Tests if SO_REUSEADDR is enabled.
@@ -871,7 +871,7 @@ extern class Socket implements java.io.Closeable
 	* @since   1.4
 	* @see #setReuseAddress(boolean)
 	*/
-	@:require(java4) @:overload public function getReuseAddress() : Bool;
+	@:require(java4) @:overload @:public public function getReuseAddress() : Bool;
 	
 	/**
 	* Closes this socket.
@@ -895,7 +895,7 @@ extern class Socket implements java.io.Closeable
 	* @spec JSR-51
 	* @see #isClosed
 	*/
-	@:overload @:synchronized public function close() : Void;
+	@:overload @:public @:synchronized public function close() : Void;
 	
 	/**
 	* Places the input stream for this socket at "end of stream".
@@ -914,7 +914,7 @@ extern class Socket implements java.io.Closeable
 	* @see java.net.Socket#setSoLinger(boolean, int)
 	* @see #isInputShutdown
 	*/
-	@:require(java3) @:overload public function shutdownInput() : Void;
+	@:require(java3) @:overload @:public public function shutdownInput() : Void;
 	
 	/**
 	* Disables the output stream for this socket.
@@ -934,14 +934,14 @@ extern class Socket implements java.io.Closeable
 	* @see java.net.Socket#setSoLinger(boolean, int)
 	* @see #isOutputShutdown
 	*/
-	@:require(java3) @:overload public function shutdownOutput() : Void;
+	@:require(java3) @:overload @:public public function shutdownOutput() : Void;
 	
 	/**
 	* Converts this socket to a <code>String</code>.
 	*
 	* @return  a string representation of this socket.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the connection state of the socket.
@@ -954,7 +954,7 @@ extern class Socket implements java.io.Closeable
 	* @return true if the socket was successfuly connected to a server
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isConnected() : Bool;
+	@:require(java4) @:overload @:public public function isConnected() : Bool;
 	
 	/**
 	* Returns the binding state of the socket.
@@ -968,7 +968,7 @@ extern class Socket implements java.io.Closeable
 	* @since 1.4
 	* @see #bind
 	*/
-	@:require(java4) @:overload public function isBound() : Bool;
+	@:require(java4) @:overload @:public public function isBound() : Bool;
 	
 	/**
 	* Returns the closed state of the socket.
@@ -977,7 +977,7 @@ extern class Socket implements java.io.Closeable
 	* @since 1.4
 	* @see #close
 	*/
-	@:require(java4) @:overload public function isClosed() : Bool;
+	@:require(java4) @:overload @:public public function isClosed() : Bool;
 	
 	/**
 	* Returns whether the read-half of the socket connection is closed.
@@ -986,7 +986,7 @@ extern class Socket implements java.io.Closeable
 	* @since 1.4
 	* @see #shutdownInput
 	*/
-	@:require(java4) @:overload public function isInputShutdown() : Bool;
+	@:require(java4) @:overload @:public public function isInputShutdown() : Bool;
 	
 	/**
 	* Returns whether the write-half of the socket connection is closed.
@@ -995,7 +995,7 @@ extern class Socket implements java.io.Closeable
 	* @since 1.4
 	* @see #shutdownOutput
 	*/
-	@:require(java4) @:overload public function isOutputShutdown() : Bool;
+	@:require(java4) @:overload @:public public function isOutputShutdown() : Bool;
 	
 	/**
 	* Sets the client socket implementation factory for the
@@ -1021,7 +1021,7 @@ extern class Socket implements java.io.Closeable
 	* @see        java.net.SocketImplFactory#createSocketImpl()
 	* @see        SecurityManager#checkSetFactory
 	*/
-	@:overload @:synchronized public static function setSocketImplFactory(fac : java.net.SocketImplFactory) : Void;
+	@:overload @:public @:static @:synchronized public static function setSocketImplFactory(fac : java.net.SocketImplFactory) : Void;
 	
 	/**
 	* Sets performance preferences for this socket.
@@ -1061,7 +1061,7 @@ extern class Socket implements java.io.Closeable
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setPerformancePreferences(connectionTime : Int, latency : Int, bandwidth : Int) : Void;
+	@:require(java5) @:overload @:public public function setPerformancePreferences(connectionTime : Int, latency : Int, bandwidth : Int) : Void;
 	
 	
 }

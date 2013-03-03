@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.naming.cosnaming;
 */
 extern class TransientNameServer
 {
-	@:native('trace') @:overload public static function _trace(msg : String) : Void;
+	@:native('trace') @:overload @:static @:public public static function _trace(msg : String) : Void;
 	
-	@:overload public static function initDebug(args : java.NativeArray<String>) : Void;
+	@:overload @:static @:public public static function initDebug(args : java.NativeArray<String>) : Void;
 	
 	/**
 	* Main startup routine. It instantiates a TransientNameService
@@ -35,7 +35,7 @@ extern class TransientNameServer
 	* happen.
 	* @param args an array of strings representing the startup arguments.
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

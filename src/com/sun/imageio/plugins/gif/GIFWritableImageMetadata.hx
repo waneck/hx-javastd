@@ -25,15 +25,15 @@ package com.sun.imageio.plugins.gif;
 */
 @:internal extern class GIFWritableImageMetadata extends com.sun.imageio.plugins.gif.GIFImageMetadata
 {
-	@:overload override public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload override private function mergeNativeTree(root : org.w3c.dom.Node) : Void;
+	@:overload @:protected override private function mergeNativeTree(root : org.w3c.dom.Node) : Void;
 	
-	@:overload override private function mergeStandardTree(root : org.w3c.dom.Node) : Void;
+	@:overload @:protected override private function mergeStandardTree(root : org.w3c.dom.Node) : Void;
 	
-	@:overload override public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
+	@:overload @:public override public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
 	
 	
 }

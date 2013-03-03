@@ -28,32 +28,32 @@ package javax.imageio.spi;
 	/**
 	* Constructs a <code>PartiallyOrderedSet</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns an iterator over the elements contained in this
 	* collection, with an ordering that respects the orderings set
 	* by the <code>setOrdering</code> method.
 	*/
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Adds an <code>Object</code> to this
 	* <code>PartiallyOrderedSet</code>.
 	*/
-	@:overload override public function add(o : Dynamic) : Bool;
+	@:overload @:public override public function add(o : Dynamic) : Bool;
 	
 	/**
 	* Removes an <code>Object</code> from this
 	* <code>PartiallyOrderedSet</code>.
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Sets an ordering between two nodes.  When an iterator is
@@ -64,32 +64,32 @@ package javax.imageio.spi;
 	* @return <code>true</code> if no prior ordering existed
 	* between the nodes, <code>false</code>otherwise.
 	*/
-	@:overload public function setOrdering(first : Dynamic, second : Dynamic) : Bool;
+	@:overload @:public public function setOrdering(first : Dynamic, second : Dynamic) : Bool;
 	
 	/**
 	* Removes any ordering between two nodes.
 	*
 	* @return true if a prior prefence existed between the nodes.
 	*/
-	@:overload public function unsetOrdering(first : Dynamic, second : Dynamic) : Bool;
+	@:overload @:public public function unsetOrdering(first : Dynamic, second : Dynamic) : Bool;
 	
 	/**
 	* Returns <code>true</code> if an ordering exists between two
 	* nodes.
 	*/
-	@:overload public function hasOrdering(preferred : Dynamic, other : Dynamic) : Bool;
+	@:overload @:public public function hasOrdering(preferred : Dynamic, other : Dynamic) : Bool;
 	
 	
 }
 @:internal extern class PartialOrderIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function new(iter : java.util.Iterator<Dynamic>) : Void;
+	@:overload @:public public function new(iter : java.util.Iterator<Dynamic>) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

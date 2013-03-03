@@ -58,9 +58,9 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class INVOKEVIRTUAL extends com.sun.org.apache.bcel.internal.generic.InvokeInstruction
 {
-	@:overload public function new(index : Int) : Void;
+	@:overload @:public public function new(index : Int) : Void;
 	
-	@:overload public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public override public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -70,7 +70,7 @@ extern class INVOKEVIRTUAL extends com.sun.org.apache.bcel.internal.generic.Invo
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

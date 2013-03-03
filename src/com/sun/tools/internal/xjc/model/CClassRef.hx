@@ -30,41 +30,41 @@ extern class CClassRef extends com.sun.tools.internal.xjc.model.AbstractCElement
 	* @param decl
 	*      The {@link BIClass} declaration that has {@link BIClass#getExistingClassRef()}
 	*/
-	@:overload public function new(model : com.sun.tools.internal.xjc.model.Model, source : com.sun.xml.internal.xsom.XSComponent, decl : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIClass, customizations : com.sun.tools.internal.xjc.model.CCustomizations) : Void;
+	@:overload @:public public function new(model : com.sun.tools.internal.xjc.model.Model, source : com.sun.xml.internal.xsom.XSComponent, decl : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIClass, customizations : com.sun.tools.internal.xjc.model.CCustomizations) : Void;
 	
 	/**
 	*
 	* @param decl
 	*      The {@link BIClass} declaration that has {@link BIEnum#ref}
 	*/
-	@:overload public function new(model : com.sun.tools.internal.xjc.model.Model, source : com.sun.xml.internal.xsom.XSComponent, decl : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIEnum, customizations : com.sun.tools.internal.xjc.model.CCustomizations) : Void;
+	@:overload @:public public function new(model : com.sun.tools.internal.xjc.model.Model, source : com.sun.xml.internal.xsom.XSComponent, decl : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIEnum, customizations : com.sun.tools.internal.xjc.model.CCustomizations) : Void;
 	
-	@:overload override public function setAbstract() : Void;
+	@:overload @:public override public function setAbstract() : Void;
 	
-	@:overload override public function isAbstract() : Bool;
+	@:overload @:public override public function isAbstract() : Bool;
 	
-	@:overload override public function getType() : com.sun.tools.internal.xjc.model.nav.NType;
+	@:overload @:public override public function getType() : com.sun.tools.internal.xjc.model.nav.NType;
 	
-	@:overload override public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JClass;
+	@:overload @:public override public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JClass;
 	
-	@:overload public function fullName() : String;
+	@:overload @:public public function fullName() : String;
 	
-	@:overload public function getTypeName() : javax.xml.namespace.QName;
+	@:overload @:public public function getTypeName() : javax.xml.namespace.QName;
 	
 	/**
 	* Guaranteed to return this.
 	*/
-	@:overload public function getInfo() : com.sun.tools.internal.xjc.model.CNonElement;
+	@:overload @:public public function getInfo() : com.sun.tools.internal.xjc.model.CNonElement;
 	
-	@:overload override public function getSubstitutionHead() : com.sun.tools.internal.xjc.model.CElement;
+	@:overload @:public override public function getSubstitutionHead() : com.sun.tools.internal.xjc.model.CElement;
 	
-	@:overload override public function getScope() : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload @:public override public function getScope() : com.sun.tools.internal.xjc.model.CClassInfo;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function isBoxedType() : Bool;
+	@:overload @:public public function isBoxedType() : Bool;
 	
-	@:overload public function isSimpleType() : Bool;
+	@:overload @:public public function isSimpleType() : Bool;
 	
 	
 }

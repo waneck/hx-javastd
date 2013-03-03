@@ -37,11 +37,11 @@ package sun.security.provider;
 */
 extern class MD4 extends sun.security.provider.DigestBase
 {
-	@:overload public static function getInstance() : java.security.MessageDigest;
+	@:overload @:public @:static public static function getInstance() : java.security.MessageDigest;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

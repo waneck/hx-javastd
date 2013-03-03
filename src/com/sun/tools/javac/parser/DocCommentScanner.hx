@@ -38,33 +38,33 @@ extern class DocCommentScanner extends com.sun.tools.javac.parser.Scanner
 	/** Create a scanner from the input buffer.  buffer must implement
 	*  array() and compact(), and remaining() must be less than limit().
 	*/
-	@:overload private function new(fac : com.sun.tools.javac.parser.ScannerFactory, buffer : java.nio.CharBuffer) : Void;
+	@:overload @:protected private function new(fac : com.sun.tools.javac.parser.ScannerFactory, buffer : java.nio.CharBuffer) : Void;
 	
 	/** Create a scanner from the input array.  The array must have at
 	*  least a single character of extra space.
 	*/
-	@:overload private function new(fac : com.sun.tools.javac.parser.ScannerFactory, input : java.NativeArray<java.StdTypes.Char16>, inputLength : Int) : Void;
+	@:overload @:protected private function new(fac : com.sun.tools.javac.parser.ScannerFactory, input : java.NativeArray<java.StdTypes.Char16>, inputLength : Int) : Void;
 	
 	/* Reset doc comment before reading each new token
 	*/
-	@:overload override public function nextToken() : Void;
+	@:overload @:public override public function nextToken() : Void;
 	
 	/**
 	* Returns the documentation string of the current token.
 	*/
-	@:overload override public function docComment() : String;
+	@:overload @:public override public function docComment() : String;
 	
 	/**
 	* Process a doc comment and make the string content available.
 	* Strips leading whitespace and stars.
 	*/
-	@:overload override private function processComment(style : com.sun.tools.javac.parser.Scanner.Scanner_CommentStyle) : Void;
+	@:overload @:protected override private function processComment(style : com.sun.tools.javac.parser.Scanner.Scanner_CommentStyle) : Void;
 	
 	/** Build a map for translating between line numbers and
 	* positions in the input.
 	*
 	* @return a LineMap */
-	@:overload override public function getLineMap() : com.sun.tools.javac.util.Position.Position_LineMap;
+	@:overload @:public override public function getLineMap() : com.sun.tools.javac.util.Position.Position_LineMap;
 	
 	
 }

@@ -25,25 +25,25 @@ package com.sun.corba.se.impl.ior;
 */
 extern class GenericTaggedProfile extends com.sun.corba.se.impl.ior.GenericIdentifiable implements com.sun.corba.se.spi.ior.TaggedProfile
 {
-	@:overload public function new(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	@:overload @:public public function new(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, id : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, id : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function getTaggedProfileTemplate() : com.sun.corba.se.spi.ior.TaggedProfileTemplate;
+	@:overload @:public public function getTaggedProfileTemplate() : com.sun.corba.se.spi.ior.TaggedProfileTemplate;
 	
-	@:overload public function getObjectId() : com.sun.corba.se.spi.ior.ObjectId;
+	@:overload @:public public function getObjectId() : com.sun.corba.se.spi.ior.ObjectId;
 	
-	@:overload public function getObjectKeyTemplate() : com.sun.corba.se.spi.ior.ObjectKeyTemplate;
+	@:overload @:public public function getObjectKeyTemplate() : com.sun.corba.se.spi.ior.ObjectKeyTemplate;
 	
-	@:overload public function getObjectKey() : com.sun.corba.se.spi.ior.ObjectKey;
+	@:overload @:public public function getObjectKey() : com.sun.corba.se.spi.ior.ObjectKey;
 	
-	@:overload public function isEquivalent(prof : com.sun.corba.se.spi.ior.TaggedProfile) : Bool;
+	@:overload @:public public function isEquivalent(prof : com.sun.corba.se.spi.ior.TaggedProfile) : Bool;
 	
-	@:overload public function makeImmutable() : Void;
+	@:overload @:public public function makeImmutable() : Void;
 	
-	@:overload public function isLocal() : Bool;
+	@:overload @:public public function isLocal() : Bool;
 	
-	@:overload public function getIOPProfile() : org.omg.IOP.TaggedProfile;
+	@:overload @:public public function getIOPProfile() : org.omg.IOP.TaggedProfile;
 	
 	
 }

@@ -29,13 +29,13 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* True when the viewport dimensions have been determined.
 	* The default is false.
 	*/
-	private var isViewSizeSet : Bool;
+	@:protected private var isViewSizeSet : Bool;
 	
 	/**
 	* The last <code>viewPosition</code> that we've painted, so we know how
 	* much of the backing store image is valid.
 	*/
-	private var lastPaintPosition : java.awt.Point;
+	@:protected private var lastPaintPosition : java.awt.Point;
 	
 	/**
 	* True when this viewport is maintaining an offscreen image of its
@@ -46,10 +46,10 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @deprecated As of Java 2 platform v1.3
 	* @see #setScrollMode
 	*/
-	private var backingStore : Bool;
+	@:protected private var backingStore : Bool;
 	
 	/** The view image used for a backing store. */
-	@:transient private var backingStoreImage : java.awt.Image;
+	@:transient @:protected private var backingStoreImage : java.awt.Image;
 	
 	/**
 	* The <code>scrollUnderway</code> flag is used for components like
@@ -67,7 +67,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* <code>setBackingStoreEnabled</code>.  The default is
 	* <code>false</code>.
 	*/
-	private var scrollUnderway : Bool;
+	@:protected private var scrollUnderway : Bool;
 	
 	/**
 	* Use <code>graphics.copyArea</code> to implement scrolling.
@@ -76,7 +76,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @see #setScrollMode
 	* @since 1.3
 	*/
-	@:require(java3) public static var BLIT_SCROLL_MODE(default, null) : Int;
+	@:require(java3) @:public @:static @:final public static var BLIT_SCROLL_MODE(default, null) : Int;
 	
 	/**
 	* Draws viewport contents into an offscreen image.
@@ -87,7 +87,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @see #setScrollMode
 	* @since 1.3
 	*/
-	@:require(java3) public static var BACKINGSTORE_SCROLL_MODE(default, null) : Int;
+	@:require(java3) @:public @:static @:final public static var BACKINGSTORE_SCROLL_MODE(default, null) : Int;
 	
 	/**
 	* This mode uses the very simple method of redrawing the entire
@@ -99,10 +99,10 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @see #setScrollMode
 	* @since 1.3
 	*/
-	@:require(java3) public static var SIMPLE_SCROLL_MODE(default, null) : Int;
+	@:require(java3) @:public @:static @:final public static var SIMPLE_SCROLL_MODE(default, null) : Int;
 	
 	/** Creates a <code>JViewport</code>. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the L&F object that renders this component.
@@ -110,7 +110,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @return a <code>ViewportUI</code> object
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getUI() : javax.swing.plaf.ViewportUI;
+	@:require(java3) @:overload @:public public function getUI() : javax.swing.plaf.ViewportUI;
 	
 	/**
 	* Sets the L&F object that renders this component.
@@ -124,14 +124,14 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	*  description: The UI object that implements the Component's LookAndFeel.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setUI(ui : javax.swing.plaf.ViewportUI) : Void;
+	@:require(java3) @:overload @:public public function setUI(ui : javax.swing.plaf.ViewportUI) : Void;
 	
 	/**
 	* Resets the UI property to a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns a string that specifies the name of the L&F class
@@ -142,7 +142,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Sets the <code>JViewport</code>'s one lightweight child,
@@ -156,14 +156,14 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @param index       the index
 	* @see #setView
 	*/
-	@:overload override private function addImpl(child : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload @:protected override private function addImpl(child : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Removes the <code>Viewport</code>s one lightweight child.
 	*
 	* @see #setView
 	*/
-	@:overload override public function remove(child : java.awt.Component) : Void;
+	@:overload @:public override public function remove(child : java.awt.Component) : Void;
 	
 	/**
 	* Scrolls the view so that <code>Rectangle</code>
@@ -186,7 +186,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @see java.awt.Component#isValid
 	* @see java.awt.Component#getPeer
 	*/
-	@:overload override public function scrollRectToVisible(contentRect : java.awt.Rectangle) : Void;
+	@:overload @:public override public function scrollRectToVisible(contentRect : java.awt.Rectangle) : Void;
 	
 	/**
 	* The viewport "scrolls" its child (called the "view") by the
@@ -203,7 +203,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @param border the <code>Border</code> to set
 	* @exception IllegalArgumentException this method is not implemented
 	*/
-	@:overload @:final override public function setBorder(border : javax.swing.border.Border) : Void;
+	@:overload @:public @:final override public function setBorder(border : javax.swing.border.Border) : Void;
 	
 	/**
 	* Returns the insets (border) dimensions as (0,0,0,0), since borders
@@ -212,7 +212,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @return a <code>Rectange</code> of zero dimension and zero origin
 	* @see #setBorder
 	*/
-	@:overload @:final override public function getInsets() : java.awt.Insets;
+	@:overload @:public @:final override public function getInsets() : java.awt.Insets;
 	
 	/**
 	* Returns an <code>Insets</code> object containing this
@@ -226,7 +226,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @beaninfo
 	*   expert: true
 	*/
-	@:overload @:final override public function getInsets(insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public @:final override public function getInsets(insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* The <code>JViewport</code> overrides the default implementation of
@@ -239,7 +239,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @return false
 	*/
-	@:overload override public function isOptimizedDrawingEnabled() : Bool;
+	@:overload @:public override public function isOptimizedDrawingEnabled() : Bool;
 	
 	/**
 	* Returns true if scroll mode is a {@code BACKINGSTORE_SCROLL_MODE} to cause
@@ -249,7 +249,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @return true if if scroll mode is a {@code BACKINGSTORE_SCROLL_MODE}.
 	* @see JComponent#isPaintingOrigin()
 	*/
-	@:overload override private function isPaintingOrigin() : Bool;
+	@:overload @:protected override private function isPaintingOrigin() : Bool;
 	
 	/**
 	* Depending on whether the <code>backingStore</code> is enabled,
@@ -264,7 +264,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @param g the <code>Graphics</code> context within which to paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Sets the bounds of this viewport.  If the viewport's width
@@ -277,7 +277,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @see JComponent#reshape(int, int, int, int)
 	*/
-	@:overload override public function reshape(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function reshape(x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Used to control the method of scrolling the viewport contents.
@@ -304,7 +304,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setScrollMode(mode : Int) : Void;
+	@:require(java3) @:overload @:public public function setScrollMode(mode : Int) : Void;
 	
 	/**
 	* Returns the current scrolling mode.
@@ -313,7 +313,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @see #setScrollMode
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getScrollMode() : Int;
+	@:require(java3) @:overload @:public public function getScrollMode() : Int;
 	
 	/**
 	* Returns <code>true</code> if this viewport is maintaining
@@ -325,7 +325,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @deprecated As of Java 2 platform v1.3, replaced by
 	*             <code>getScrollMode()</code>.
 	*/
-	@:overload public function isBackingStoreEnabled() : Bool;
+	@:overload @:public public function isBackingStoreEnabled() : Bool;
 	
 	/**
 	* If true if this viewport will maintain an offscreen
@@ -339,7 +339,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @deprecated As of Java 2 platform v1.3, replaced by
 	*             <code>setScrollMode()</code>.
 	*/
-	@:overload public function setBackingStoreEnabled(enabled : Bool) : Void;
+	@:overload @:public public function setBackingStoreEnabled(enabled : Bool) : Void;
 	
 	/**
 	* Returns the <code>JViewport</code>'s one child or <code>null</code>.
@@ -348,7 +348,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @see #setView
 	*/
-	@:overload public function getView() : java.awt.Component;
+	@:overload @:public public function getView() : java.awt.Component;
 	
 	/**
 	* Sets the <code>JViewport</code>'s one lightweight child
@@ -358,7 +358,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @see #getView
 	*/
-	@:overload public function setView(view : java.awt.Component) : Void;
+	@:overload @:public public function setView(view : java.awt.Component) : Void;
 	
 	/**
 	* If the view's size hasn't been explicitly set, return the
@@ -367,7 +367,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @return a <code>Dimension</code> object specifying the size of the view
 	*/
-	@:overload public function getViewSize() : java.awt.Dimension;
+	@:overload @:public public function getViewSize() : java.awt.Dimension;
 	
 	/**
 	* Sets the size of the view.  A state changed event will be fired.
@@ -375,7 +375,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @param newSize a <code>Dimension</code> object specifying the new
 	*          size of the view
 	*/
-	@:overload public function setViewSize(newSize : java.awt.Dimension) : Void;
+	@:overload @:public public function setViewSize(newSize : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the view coordinates that appear in the upper left
@@ -383,7 +383,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @return a <code>Point</code> object giving the upper left coordinates
 	*/
-	@:overload public function getViewPosition() : java.awt.Point;
+	@:overload @:public public function getViewPosition() : java.awt.Point;
 	
 	/**
 	* Sets the view coordinates that appear in the upper left
@@ -391,7 +391,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @param p  a <code>Point</code> object giving the upper left coordinates
 	*/
-	@:overload public function setViewPosition(p : java.awt.Point) : Void;
+	@:overload @:public public function setViewPosition(p : java.awt.Point) : Void;
 	
 	/**
 	* Returns a rectangle whose origin is <code>getViewPosition</code>
@@ -401,7 +401,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @return a <code>Rectangle</code> giving the visible part of
 	*          the view using view coordinates.
 	*/
-	@:overload public function getViewRect() : java.awt.Rectangle;
+	@:overload @:public public function getViewRect() : java.awt.Rectangle;
 	
 	/**
 	* Computes the parameters for a blit where the backing store image
@@ -419,14 +419,14 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @return  true if the parameters are modified and we're ready to blit;
 	*          false otherwise
 	*/
-	@:overload private function computeBlit(dx : Int, dy : Int, blitFrom : java.awt.Point, blitTo : java.awt.Point, blitSize : java.awt.Dimension, blitPaint : java.awt.Rectangle) : Bool;
+	@:overload @:protected private function computeBlit(dx : Int, dy : Int, blitFrom : java.awt.Point, blitTo : java.awt.Point, blitSize : java.awt.Dimension, blitPaint : java.awt.Rectangle) : Bool;
 	
 	/**
 	* Returns the size of the visible part of the view in view coordinates.
 	*
 	* @return a <code>Dimension</code> object giving the size of the view
 	*/
-	@:overload public function getExtentSize() : java.awt.Dimension;
+	@:overload @:public public function getExtentSize() : java.awt.Dimension;
 	
 	/**
 	* Converts a size in pixel coordinates to view coordinates.
@@ -436,7 +436,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @param size  a <code>Dimension</code> object using pixel coordinates
 	* @return a <code>Dimension</code> object converted to view coordinates
 	*/
-	@:overload public function toViewCoordinates(size : java.awt.Dimension) : java.awt.Dimension;
+	@:overload @:public public function toViewCoordinates(size : java.awt.Dimension) : java.awt.Dimension;
 	
 	/**
 	* Converts a point in pixel coordinates to view coordinates.
@@ -446,7 +446,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @param p  a <code>Point</code> object using pixel coordinates
 	* @return a <code>Point</code> object converted to view coordinates
 	*/
-	@:overload public function toViewCoordinates(p : java.awt.Point) : java.awt.Point;
+	@:overload @:public public function toViewCoordinates(p : java.awt.Point) : java.awt.Point;
 	
 	/**
 	* Sets the size of the visible part of the view using view coordinates.
@@ -454,13 +454,13 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @param newExtent  a <code>Dimension</code> object specifying
 	*          the size of the view
 	*/
-	@:overload public function setExtentSize(newExtent : java.awt.Dimension) : Void;
+	@:overload @:public public function setExtentSize(newExtent : java.awt.Dimension) : Void;
 	
 	/**
 	* Creates a listener for the view.
 	* @return a <code>ViewListener</code>
 	*/
-	@:overload private function createViewListener() : javax.swing.JViewport.JViewport_ViewListener;
+	@:overload @:protected private function createViewListener() : javax.swing.JViewport.JViewport_ViewListener;
 	
 	/**
 	* Subclassers can override this to install a different
@@ -469,7 +469,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @return a <code>LayoutManager</code>
 	*/
-	@:overload private function createLayoutManager() : java.awt.LayoutManager;
+	@:overload @:protected private function createLayoutManager() : java.awt.LayoutManager;
 	
 	/**
 	* Adds a <code>ChangeListener</code> to the list that is
@@ -482,7 +482,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @see #setViewSize
 	* @see #setExtentSize
 	*/
-	@:overload public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Removes a <code>ChangeListener</code> from the list that's notified each
@@ -492,7 +492,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @param l the <code>ChangeListener</code> to remove
 	* @see #addChangeListener
 	*/
-	@:overload public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ChangeListener</code>s added
@@ -502,7 +502,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
+	@:require(java4) @:overload @:public public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
 	
 	/**
 	* Notifies all <code>ChangeListeners</code> when the views
@@ -512,7 +512,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @see #removeChangeListener
 	* @see EventListenerList
 	*/
-	@:overload private function fireStateChanged() : Void;
+	@:overload @:protected private function fireStateChanged() : Void;
 	
 	/**
 	* Always repaint in the parents coordinate system to make sure
@@ -525,7 +525,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @param     h   the height
 	* @see       java.awt.Component#update(java.awt.Graphics)
 	*/
-	@:overload override public function repaint(tm : haxe.Int64, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function repaint(tm : haxe.Int64, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Returns a string representation of this <code>JViewport</code>.
@@ -537,7 +537,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @return  a string representation of this <code>JViewport</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Notifies listeners of a property change. This is subclassed to update
@@ -548,7 +548,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @param oldValue the old value of the property
 	* @param newValue  the new value of the property
 	*/
-	@:overload override private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:protected override private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Gets the AccessibleContext associated with this JViewport.
@@ -559,7 +559,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @return an AccessibleJViewport that serves as the
 	*         AccessibleContext of this JViewport
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -577,7 +577,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 */
 @:native('javax$swing$JViewport$ViewListener') extern class JViewport_ViewListener extends java.awt.event.ComponentAdapter implements java.io.Serializable
 {
-	@:overload override public function componentResized(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public override public function componentResized(e : java.awt.event.ComponentEvent) : Void;
 	
 	
 }
@@ -603,7 +603,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @return an instance of AccessibleRole describing the role of
 	* the object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

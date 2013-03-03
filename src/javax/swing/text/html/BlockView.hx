@@ -39,7 +39,7 @@ extern class BlockView extends javax.swing.text.BoxView
 	* @param elem the element to create a view for
 	* @param axis either View.X_AXIS or View.Y_AXIS
 	*/
-	@:overload public function new(elem : javax.swing.text.Element, axis : Int) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element, axis : Int) : Void;
 	
 	/**
 	* Establishes the parent view for this view.  This is
@@ -58,7 +58,7 @@ extern class BlockView extends javax.swing.text.BoxView
 	*  being removed from a parent it was previously added
 	*  to
 	*/
-	@:overload override public function setParent(parent : javax.swing.text.View) : Void;
+	@:overload @:public override public function setParent(parent : javax.swing.text.View) : Void;
 	
 	/**
 	* Calculate the requirements of the block along the major
@@ -67,7 +67,7 @@ extern class BlockView extends javax.swing.text.BoxView
 	* CSS width or height attribute is specified and applicable to
 	* the axis.
 	*/
-	@:overload override private function calculateMajorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMajorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
 	/**
 	* Calculate the requirements of the block along the minor
@@ -77,7 +77,7 @@ extern class BlockView extends javax.swing.text.BoxView
 	* CSS width or height attribute is specified and applicable to
 	* the axis.
 	*/
-	@:overload override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
 	/**
 	* Performs layout for the minor axis of the box (i.e. the
@@ -95,7 +95,7 @@ extern class BlockView extends javax.swing.text.BoxView
 	* @param spans the span of each child view; this is a return
 	*  value and is filled in by the implementation of this method
 	*/
-	@:overload override private function layoutMinorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:protected override private function layoutMinorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Renders using the given rendering surface and area on that
@@ -107,14 +107,14 @@ extern class BlockView extends javax.swing.text.BoxView
 	* @param allocation the allocated region to render into
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
 	
 	/**
 	* Fetches the attributes to use when rendering.  This is
 	* implemented to multiplex the attributes specified in the
 	* model with a StyleSheet.
 	*/
-	@:overload override public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public override public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Gets the resize weight.
@@ -123,7 +123,7 @@ extern class BlockView extends javax.swing.text.BoxView
 	* @return the weight
 	* @exception IllegalArgumentException for an invalid axis
 	*/
-	@:overload override public function getResizeWeight(axis : Int) : Int;
+	@:overload @:public override public function getResizeWeight(axis : Int) : Int;
 	
 	/**
 	* Gets the alignment.
@@ -131,9 +131,9 @@ extern class BlockView extends javax.swing.text.BoxView
 	* @param axis may be either X_AXIS or Y_AXIS
 	* @return the alignment
 	*/
-	@:overload override public function getAlignment(axis : Int) : Single;
+	@:overload @:public override public function getAlignment(axis : Int) : Single;
 	
-	@:overload override public function changedUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function changedUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Determines the preferred span for this view along an
@@ -147,7 +147,7 @@ extern class BlockView extends javax.swing.text.BoxView
 	*           the parent may choose to resize or break the view
 	* @exception IllegalArgumentException for an invalid axis type
 	*/
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the minimum span for this view along an
@@ -161,7 +161,7 @@ extern class BlockView extends javax.swing.text.BoxView
 	*           the parent may choose to resize or break the view
 	* @exception IllegalArgumentException for an invalid axis type
 	*/
-	@:overload override public function getMinimumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMinimumSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the maximum span for this view along an
@@ -175,14 +175,14 @@ extern class BlockView extends javax.swing.text.BoxView
 	*           the parent may choose to resize or break the view
 	* @exception IllegalArgumentException for an invalid axis type
 	*/
-	@:overload override public function getMaximumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMaximumSpan(axis : Int) : Single;
 	
 	/**
 	* Update any cached values that come from attributes.
 	*/
-	@:overload private function setPropertiesFromAttributes() : Void;
+	@:overload @:protected private function setPropertiesFromAttributes() : Void;
 	
-	@:overload private function getStyleSheet() : javax.swing.text.html.StyleSheet;
+	@:overload @:protected private function getStyleSheet() : javax.swing.text.html.StyleSheet;
 	
 	
 }

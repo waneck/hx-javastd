@@ -37,7 +37,7 @@ extern class NetPermission extends java.security.BasicPermission
 	* @throws NullPointerException if <code>name</code> is <code>null</code>.
 	* @throws IllegalArgumentException if <code>name</code> is empty.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a new NetPermission object with the specified name.
@@ -50,7 +50,7 @@ extern class NetPermission extends java.security.BasicPermission
 	* @throws NullPointerException if <code>name</code> is <code>null</code>.
 	* @throws IllegalArgumentException if <code>name</code> is empty.
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	
 }

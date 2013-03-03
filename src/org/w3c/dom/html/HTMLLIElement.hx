@@ -48,18 +48,18 @@ extern interface HTMLLIElement extends org.w3c.dom.html.HTMLElement
 	*  List item bullet style. See the  type attribute definition in HTML
 	* 4.0. This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function setType(type : String) : Void;
+	@:overload @:public public function setType(type : String) : Void;
 	
 	/**
 	*  Reset sequence number when used in <code>OL</code> . See the  value
 	* attribute definition in HTML 4.0. This attribute is deprecated in HTML
 	* 4.0.
 	*/
-	@:overload public function getValue() : Int;
+	@:overload @:public public function getValue() : Int;
 	
-	@:overload public function setValue(value : Int) : Void;
+	@:overload @:public public function setValue(value : Int) : Void;
 	
 	
 }

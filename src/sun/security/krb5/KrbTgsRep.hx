@@ -33,7 +33,7 @@ extern class KrbTgsRep extends sun.security.krb5.KrbKdcRep
 	/**
 	* Return the credentials that were contained in this KRB-TGS-REP.
 	*/
-	@:overload public function getCreds() : sun.security.krb5.Credentials;
+	@:overload @:public public function getCreds() : sun.security.krb5.Credentials;
 	
 	
 }

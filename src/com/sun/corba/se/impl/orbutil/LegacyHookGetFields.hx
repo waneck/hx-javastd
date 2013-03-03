@@ -30,60 +30,60 @@ package com.sun.corba.se.impl.orbutil;
 	/**
 	* Get the ObjectStreamClass that describes the fields in the stream.
 	*/
-	@:overload override public function getObjectStreamClass() : java.io.ObjectStreamClass;
+	@:overload @:public override public function getObjectStreamClass() : java.io.ObjectStreamClass;
 	
 	/**
 	* Return true if the named field is defaulted and has no value
 	* in this stream.
 	*/
-	@:overload override public function defaulted(name : String) : Bool;
+	@:overload @:public override public function defaulted(name : String) : Bool;
 	
 	/**
 	* Get the value of the named boolean field from the persistent field.
 	*/
-	@:overload override public function get(name : String, defvalue : Bool) : Bool;
+	@:overload @:public override public function get(name : String, defvalue : Bool) : Bool;
 	
 	/**
 	* Get the value of the named char field from the persistent fields.
 	*/
-	@:overload override public function get(name : String, defvalue : java.StdTypes.Char16) : java.StdTypes.Char16;
+	@:overload @:public override public function get(name : String, defvalue : java.StdTypes.Char16) : java.StdTypes.Char16;
 	
 	/**
 	* Get the value of the named byte field from the persistent fields.
 	*/
-	@:overload override public function get(name : String, defvalue : java.StdTypes.Int8) : java.StdTypes.Int8;
+	@:overload @:public override public function get(name : String, defvalue : java.StdTypes.Int8) : java.StdTypes.Int8;
 	
 	/**
 	* Get the value of the named short field from the persistent fields.
 	*/
-	@:overload override public function get(name : String, defvalue : java.StdTypes.Int16) : java.StdTypes.Int16;
+	@:overload @:public override public function get(name : String, defvalue : java.StdTypes.Int16) : java.StdTypes.Int16;
 	
 	/**
 	* Get the value of the named int field from the persistent fields.
 	*/
-	@:overload override public function get(name : String, defvalue : Int) : Int;
+	@:overload @:public override public function get(name : String, defvalue : Int) : Int;
 	
 	/**
 	* Get the value of the named long field from the persistent fields.
 	*/
-	@:overload override public function get(name : String, defvalue : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function get(name : String, defvalue : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Get the value of the named float field from the persistent fields.
 	*/
-	@:overload override public function get(name : String, defvalue : Single) : Single;
+	@:overload @:public override public function get(name : String, defvalue : Single) : Single;
 	
 	/**
 	* Get the value of the named double field from the persistent field.
 	*/
-	@:overload override public function get(name : String, defvalue : Float) : Float;
+	@:overload @:public override public function get(name : String, defvalue : Float) : Float;
 	
 	/**
 	* Get the value of the named Object field from the persistent field.
 	*/
-	@:overload override public function get(name : String, defvalue : Dynamic) : Dynamic;
+	@:overload @:public override public function get(name : String, defvalue : Dynamic) : Dynamic;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

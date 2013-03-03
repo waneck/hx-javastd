@@ -25,11 +25,11 @@ package com.sun.tools.internal.xjc.reader.gbind;
 */
 extern class Element extends com.sun.tools.internal.xjc.reader.gbind.Expression implements com.sun.tools.internal.xjc.reader.gbind.ElementSet
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload public function addNext(element : com.sun.tools.internal.xjc.reader.gbind.Element) : Void;
+	@:overload @:public public function addNext(element : com.sun.tools.internal.xjc.reader.gbind.Element) : Void;
 	
-	@:overload public function contains(rhs : com.sun.tools.internal.xjc.reader.gbind.ElementSet) : Bool;
+	@:overload @:public public function contains(rhs : com.sun.tools.internal.xjc.reader.gbind.ElementSet) : Bool;
 	
 	/**
 	* Just to satisfy the {@link ElementSet} contract.
@@ -37,15 +37,15 @@ extern class Element extends com.sun.tools.internal.xjc.reader.gbind.Expression 
 	* @deprecated
 	*      if you statically call this method, there's something wrong.
 	*/
-	@:overload public function iterator() : java.util.Iterator<com.sun.tools.internal.xjc.reader.gbind.Element>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.tools.internal.xjc.reader.gbind.Element>;
 	
 	/**
 	* Builds a set of strongly connected components and puts them
 	* all into the given set.
 	*/
-	@:overload public function buildStronglyConnectedComponents(ccs : java.util.List<com.sun.tools.internal.xjc.reader.gbind.ConnectedComponent>) : Void;
+	@:overload @:public public function buildStronglyConnectedComponents(ccs : java.util.List<com.sun.tools.internal.xjc.reader.gbind.ConnectedComponent>) : Void;
 	
-	@:overload public function hasSelfLoop() : Bool;
+	@:overload @:public public function hasSelfLoop() : Bool;
 	
 	
 }

@@ -35,7 +35,7 @@ extern class CompositeDataInvocationHandler implements java.lang.reflect.Invocat
 	@throws IllegalArgumentException if {@code compositeData}
 	is null.
 	*/
-	@:overload public function new(compositeData : javax.management.openmbean.CompositeData) : Void;
+	@:overload @:public public function new(compositeData : javax.management.openmbean.CompositeData) : Void;
 	
 	/**
 	Return the {@code CompositeData} that was supplied to the
@@ -43,9 +43,9 @@ extern class CompositeDataInvocationHandler implements java.lang.reflect.Invocat
 	@return the {@code CompositeData} that this handler is backed
 	by.  This is never null.
 	*/
-	@:overload public function getCompositeData() : javax.management.openmbean.CompositeData;
+	@:overload @:public public function getCompositeData() : javax.management.openmbean.CompositeData;
 	
-	@:overload public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

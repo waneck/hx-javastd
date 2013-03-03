@@ -30,32 +30,32 @@ extern class PsuedoNames
 	/**
 	* Psuedo name for a wild card pattern ('*').
 	*/
-	public static var PSEUDONAME_ANY(default, null) : String;
+	@:public @:static @:final public static var PSEUDONAME_ANY(default, null) : String;
 	
 	/**
 	* Psuedo name for the root node.
 	*/
-	public static var PSEUDONAME_ROOT(default, null) : String;
+	@:public @:static @:final public static var PSEUDONAME_ROOT(default, null) : String;
 	
 	/**
 	* Psuedo name for a text node.
 	*/
-	public static var PSEUDONAME_TEXT(default, null) : String;
+	@:public @:static @:final public static var PSEUDONAME_TEXT(default, null) : String;
 	
 	/**
 	* Psuedo name for a comment node.
 	*/
-	public static var PSEUDONAME_COMMENT(default, null) : String;
+	@:public @:static @:final public static var PSEUDONAME_COMMENT(default, null) : String;
 	
 	/**
 	* Psuedo name for a processing instruction node.
 	*/
-	public static var PSEUDONAME_PI(default, null) : String;
+	@:public @:static @:final public static var PSEUDONAME_PI(default, null) : String;
 	
 	/**
 	* Psuedo name for an unknown type value.
 	*/
-	public static var PSEUDONAME_OTHER(default, null) : String;
+	@:public @:static @:final public static var PSEUDONAME_OTHER(default, null) : String;
 	
 	
 }

@@ -28,21 +28,21 @@ package sun.nio.fs;
 */
 @:internal extern class UnixDirectoryStream implements java.nio.file.DirectoryStream<java.nio.file.Path>
 {
-	@:overload @:final private function directory() : sun.nio.fs.UnixPath;
+	@:overload @:protected @:final private function directory() : sun.nio.fs.UnixPath;
 	
-	@:overload @:final private function readLock() : java.util.concurrent.locks.Lock;
+	@:overload @:protected @:final private function readLock() : java.util.concurrent.locks.Lock;
 	
-	@:overload @:final private function writeLock() : java.util.concurrent.locks.Lock;
+	@:overload @:protected @:final private function writeLock() : java.util.concurrent.locks.Lock;
 	
-	@:overload @:final private function isOpen() : Bool;
+	@:overload @:protected @:final private function isOpen() : Bool;
 	
-	@:overload @:final private function closeImpl() : Bool;
+	@:overload @:protected @:final private function closeImpl() : Bool;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload @:final private function iterator(ds : java.nio.file.DirectoryStream<java.nio.file.Path>) : java.util.Iterator<java.nio.file.Path>;
+	@:overload @:protected @:final private function iterator(ds : java.nio.file.DirectoryStream<java.nio.file.Path>) : java.util.Iterator<java.nio.file.Path>;
 	
-	@:overload public function iterator() : java.util.Iterator<java.nio.file.Path>;
+	@:overload @:public public function iterator() : java.util.Iterator<java.nio.file.Path>;
 	
 	
 }
@@ -51,11 +51,11 @@ package sun.nio.fs;
 */
 @:native('sun$nio$fs$UnixDirectoryStream$UnixDirectoryIterator') @:internal extern class UnixDirectoryStream_UnixDirectoryIterator implements java.util.Iterator<java.nio.file.Path>
 {
-	@:overload @:synchronized public function hasNext() : Bool;
+	@:overload @:public @:synchronized public function hasNext() : Bool;
 	
-	@:overload @:synchronized public function next() : java.nio.file.Path;
+	@:overload @:public @:synchronized public function next() : java.nio.file.Path;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

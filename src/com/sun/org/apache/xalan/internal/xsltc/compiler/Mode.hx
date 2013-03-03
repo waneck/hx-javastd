@@ -31,7 +31,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* @param suffix A suffix to append to the method name for this mode
 	*               (normally a sequence number - still in a String).
 	*/
-	@:overload public function new(name : com.sun.org.apache.xalan.internal.xsltc.compiler.QName, stylesheet : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet, suffix : String) : Void;
+	@:overload @:public public function new(name : com.sun.org.apache.xalan.internal.xsltc.compiler.QName, stylesheet : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet, suffix : String) : Void;
 	
 	/**
 	* Returns the name of the method (_not_ function) that will be
@@ -40,30 +40,30 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	*
 	* @return Method name for this mode
 	*/
-	@:overload public function functionName() : String;
+	@:overload @:public public function functionName() : String;
 	
-	@:overload public function functionName(min : Int, max : Int) : String;
+	@:overload @:public public function functionName(min : Int, max : Int) : String;
 	
-	@:overload public function getStylesheet() : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet;
+	@:overload @:public public function getStylesheet() : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet;
 	
-	@:overload public function addTemplate(template : com.sun.org.apache.xalan.internal.xsltc.compiler.Template) : Void;
+	@:overload @:public public function addTemplate(template : com.sun.org.apache.xalan.internal.xsltc.compiler.Template) : Void;
 	
 	/**
 	* Process all the test patterns in this mode
 	*/
-	@:overload public function processPatterns(keys : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function processPatterns(keys : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
-	@:overload public static function compileGetChildren(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, node : Int) : Void;
+	@:overload @:public @:static public static function compileGetChildren(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, node : Int) : Void;
 	
 	/**
 	* Compiles the applyTemplates() method and adds it to the translet.
 	* This is the main dispatch method.
 	*/
-	@:overload public function compileApplyTemplates(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator) : Void;
+	@:overload @:public public function compileApplyTemplates(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator) : Void;
 	
-	@:overload public function compileApplyImports(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, min : Int, max : Int) : Void;
+	@:overload @:public public function compileApplyImports(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, min : Int, max : Int) : Void;
 	
-	@:overload public function getTemplateInstructionHandle(template : com.sun.org.apache.xalan.internal.xsltc.compiler.Template) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function getTemplateInstructionHandle(template : com.sun.org.apache.xalan.internal.xsltc.compiler.Template) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	
 }

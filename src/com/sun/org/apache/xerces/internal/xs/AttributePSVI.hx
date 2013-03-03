@@ -27,7 +27,7 @@ extern interface AttributePSVI extends com.sun.org.apache.xerces.internal.xs.Ite
 	* [attribute declaration]: An item isomorphic to the declaration
 	* component itself.
 	*/
-	@:overload public function getAttributeDeclaration() : com.sun.org.apache.xerces.internal.xs.XSAttributeDeclaration;
+	@:overload @:public public function getAttributeDeclaration() : com.sun.org.apache.xerces.internal.xs.XSAttributeDeclaration;
 	
 	
 }

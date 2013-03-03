@@ -28,28 +28,28 @@ extern class MotifSliderUI extends javax.swing.plaf.basic.BasicSliderUI
 	/**
 	* MotifSliderUI Constructor
 	*/
-	@:overload public function new(b : javax.swing.JSlider) : Void;
+	@:overload @:public public function new(b : javax.swing.JSlider) : Void;
 	
 	/**
 	* create a MotifSliderUI object
 	*/
-	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function getPreferredHorizontalSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredHorizontalSize() : java.awt.Dimension;
 	
-	@:overload public function getPreferredVerticalSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredVerticalSize() : java.awt.Dimension;
 	
-	@:overload public function getMinimumHorizontalSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumHorizontalSize() : java.awt.Dimension;
 	
-	@:overload public function getMinimumVerticalSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumVerticalSize() : java.awt.Dimension;
 	
-	@:overload private function getThumbSize() : java.awt.Dimension;
+	@:overload @:protected override private function getThumbSize() : java.awt.Dimension;
 	
-	@:overload public function paintFocus(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintFocus(g : java.awt.Graphics) : Void;
 	
-	@:overload public function paintTrack(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintTrack(g : java.awt.Graphics) : Void;
 	
-	@:overload public function paintThumb(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintThumb(g : java.awt.Graphics) : Void;
 	
 	
 }

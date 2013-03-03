@@ -64,9 +64,9 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern interface IndexedInstruction
 {
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
-	@:overload public function setIndex(index : Int) : Void;
+	@:overload @:public public function setIndex(index : Int) : Void;
 	
 	
 }

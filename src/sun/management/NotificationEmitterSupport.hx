@@ -28,23 +28,23 @@ package sun.management;
 	/**
 	* Abstract helper class for notification emitter support.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload public function addNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload public function removeNotificationListener(listener : javax.management.NotificationListener) : Void;
+	@:overload @:public public function removeNotificationListener(listener : javax.management.NotificationListener) : Void;
 	
-	@:overload public function removeNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload @:abstract public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload @:abstract @:public public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
 	
 }
 @:native('sun$management$NotificationEmitterSupport$ListenerInfo') @:internal extern class NotificationEmitterSupport_ListenerInfo
 {
-	public var listener : javax.management.NotificationListener;
+	@:public public var listener : javax.management.NotificationListener;
 	
-	@:overload public function new(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function new(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	
 }

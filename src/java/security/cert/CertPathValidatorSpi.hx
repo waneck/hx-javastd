@@ -28,7 +28,7 @@ extern class CertPathValidatorSpi
 	/**
 	* The default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Validates the specified certification path using the specified
@@ -49,7 +49,7 @@ extern class CertPathValidatorSpi
 	* parameters or the type of the specified <code>CertPath</code> are
 	* inappropriate for this <code>CertPathValidator</code>
 	*/
-	@:overload @:abstract public function engineValidate(certPath : java.security.cert.CertPath, params : java.security.cert.CertPathParameters) : java.security.cert.CertPathValidatorResult;
+	@:overload @:public @:abstract public function engineValidate(certPath : java.security.cert.CertPath, params : java.security.cert.CertPathParameters) : java.security.cert.CertPathValidatorResult;
 	
 	
 }

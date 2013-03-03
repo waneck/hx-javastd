@@ -31,7 +31,7 @@ package sun.security.pkcs11;
 */
 @:require(java5) extern class P11Util
 {
-	@:overload public static function getMagnitude(bi : java.math.BigInteger) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function getMagnitude(bi : java.math.BigInteger) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

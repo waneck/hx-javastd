@@ -29,22 +29,22 @@ extern class LocalMember extends sun.tools.java.MemberDefinition
 	* Return current nesting level, i.e., the value of 'scopeNumber'.
 	* Made public for the benefit of 'ClassDefinition.resolveName'.
 	*/
-	@:overload public function getScopeNumber() : Int;
+	@:overload @:public public function getScopeNumber() : Int;
 	
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, clazz : sun.tools.java.ClassDefinition, modifiers : Int, type : sun.tools.java.Type, name : sun.tools.java.Identifier) : Void;
+	@:overload @:public public function new(where : haxe.Int64, clazz : sun.tools.java.ClassDefinition, modifiers : Int, type : sun.tools.java.Type, name : sun.tools.java.Identifier) : Void;
 	
 	/**
 	* Constructor for a block-inner class.
 	*/
-	@:overload public function new(innerClass : sun.tools.java.ClassDefinition) : Void;
+	@:overload @:public public function new(innerClass : sun.tools.java.ClassDefinition) : Void;
 	
 	/**
 	* Special checks
 	*/
-	@:overload override public function isLocal() : Bool;
+	@:overload @:public override public function isLocal() : Bool;
 	
 	/**
 	* Make a copy of this field, which is an argument to a method
@@ -53,7 +53,7 @@ extern class LocalMember extends sun.tools.java.MemberDefinition
 	* the expression nodes will replace the original argument by the
 	* fresh copy.
 	*/
-	@:overload public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.LocalMember;
+	@:overload @:public public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.LocalMember;
 	
 	/**
 	* Returns the previous result of copyInline(ctx).
@@ -61,39 +61,39 @@ extern class LocalMember extends sun.tools.java.MemberDefinition
 	* operation that immediately follows the LocalMember.copyInline().
 	* Return "this" if there is no such copy.
 	*/
-	@:overload public function getCurrentInlineCopy(ctx : sun.tools.tree.Context) : sun.tools.tree.LocalMember;
+	@:overload @:public public function getCurrentInlineCopy(ctx : sun.tools.tree.Context) : sun.tools.tree.LocalMember;
 	
 	/**
 	* May inline copies of all the arguments of the given method.
 	*/
-	@:overload public static function copyArguments(ctx : sun.tools.tree.Context, field : sun.tools.java.MemberDefinition) : java.NativeArray<sun.tools.tree.LocalMember>;
+	@:overload @:static @:public public static function copyArguments(ctx : sun.tools.tree.Context, field : sun.tools.java.MemberDefinition) : java.NativeArray<sun.tools.tree.LocalMember>;
 	
 	/**
 	* Call this when finished with the result of a copyArguments() call.
 	*/
-	@:overload public static function doneWithArguments(ctx : sun.tools.tree.Context, res : java.NativeArray<sun.tools.tree.LocalMember>) : Void;
+	@:overload @:static @:public public static function doneWithArguments(ctx : sun.tools.tree.Context, res : java.NativeArray<sun.tools.tree.LocalMember>) : Void;
 	
 	/**
 	* Is this local variable's value stable and simple enough to be directly
 	* substituted for occurrences of the variable itself?
 	* (This decision is made by VarDeclarationStatement.inline().)
 	*/
-	@:overload override public function isInlineable(env : sun.tools.java.Environment, fromFinal : Bool) : Bool;
+	@:overload @:public override public function isInlineable(env : sun.tools.java.Environment, fromFinal : Bool) : Bool;
 	
 	/**
 	* Check if used
 	*/
-	@:overload public function isUsed() : Bool;
+	@:overload @:public public function isUsed() : Bool;
 	
 	/**
 	* Return value
 	*/
-	@:overload override public function getValue(env : sun.tools.java.Environment) : sun.tools.tree.Node;
+	@:overload @:public override public function getValue(env : sun.tools.java.Environment) : sun.tools.tree.Node;
 	
 	/**
 	* Value number for vsets, or -1 if none.
 	*/
-	@:overload public function getNumber(ctx : sun.tools.tree.Context) : Int;
+	@:overload @:public public function getNumber(ctx : sun.tools.tree.Context) : Int;
 	
 	
 }

@@ -36,14 +36,14 @@ extern class UniqueIdentity
 	*
 	* @param id the byte array containing the unique identifier.
 	*/
-	@:overload public function new(id : sun.security.util.BitArray) : Void;
+	@:overload @:public public function new(id : sun.security.util.BitArray) : Void;
 	
 	/**
 	* The default constructor for this class.
 	*
 	* @param id the byte array containing the unique identifier.
 	*/
-	@:overload public function new(id : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(id : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Create the object, decoding the values from the passed DER stream.
@@ -51,7 +51,7 @@ extern class UniqueIdentity
 	* @param in the DerInputStream to read the UniqueIdentity from.
 	* @exception IOException on decoding errors.
 	*/
-	@:overload public function new(_in : sun.security.util.DerInputStream) : Void;
+	@:overload @:public public function new(_in : sun.security.util.DerInputStream) : Void;
 	
 	/**
 	* Create the object, decoding the values from the passed DER stream.
@@ -60,12 +60,12 @@ extern class UniqueIdentity
 	* @param tag the tag the value is encoded under.
 	* @exception IOException on decoding errors.
 	*/
-	@:overload public function new(derVal : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(derVal : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Return the UniqueIdentity as a printable string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Encode the UniqueIdentity in DER form to the stream.
@@ -74,12 +74,12 @@ extern class UniqueIdentity
 	* @param tag enocode it under the following tag.
 	* @exception IOException on errors.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream, tag : java.StdTypes.Int8) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream, tag : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Return the unique id.
 	*/
-	@:overload public function getId() : java.NativeArray<Bool>;
+	@:overload @:public public function getId() : java.NativeArray<Bool>;
 	
 	
 }

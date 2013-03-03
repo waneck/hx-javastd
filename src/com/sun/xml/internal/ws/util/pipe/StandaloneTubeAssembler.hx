@@ -32,19 +32,19 @@ extern class StandaloneTubeAssembler implements com.sun.xml.internal.ws.api.pipe
 	*
 	* @author Jitendra Kotamraju
 	*/
-	@:overload public function createClient(context : com.sun.xml.internal.ws.api.pipe.ClientTubeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public public function createClient(context : com.sun.xml.internal.ws.api.pipe.ClientTubeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	/**
 	* On Server-side, HandlerChains cannot be changed after it is deployed.
 	* During assembling the Pipelines, we can decide if we really need a
 	* SOAPHandlerPipe and LogicalHandlerPipe for a particular Endpoint.
 	*/
-	@:overload public function createServer(context : com.sun.xml.internal.ws.api.pipe.ServerTubeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public public function createServer(context : com.sun.xml.internal.ws.api.pipe.ServerTubeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	/**
 	* Are we going to dump the message to System.out?
 	*/
-	public static var dump(default, null) : Bool;
+	@:public @:static @:final public static var dump(default, null) : Bool;
 	
 	
 }

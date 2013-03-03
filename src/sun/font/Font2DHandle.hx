@@ -61,9 +61,9 @@ package sun.font;
 */
 extern class Font2DHandle
 {
-	public var font2D : sun.font.Font2D;
+	@:public public var font2D : sun.font.Font2D;
 	
-	@:overload public function new(font : sun.font.Font2D) : Void;
+	@:overload @:public public function new(font : sun.font.Font2D) : Void;
 	
 	
 }

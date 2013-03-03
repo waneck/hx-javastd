@@ -52,15 +52,15 @@ package sun.security.ssl;
 */
 extern class SunJSSE extends java.security.Provider
 {
-	@:overload @:synchronized private static function isFIPS() : Bool;
+	@:overload @:protected @:static @:synchronized private static function isFIPS() : Bool;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(cryptoProvider : java.security.Provider) : Void;
+	@:overload @:protected private function new(cryptoProvider : java.security.Provider) : Void;
 	
-	@:overload private function new(cryptoProvider : String) : Void;
+	@:overload @:protected private function new(cryptoProvider : String) : Void;
 	
-	@:overload @:final private function finalize() : Void;
+	@:overload @:protected @:final private function finalize() : Void;
 	
 	
 }

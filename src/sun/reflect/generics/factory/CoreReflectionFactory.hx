@@ -42,37 +42,37 @@ extern class CoreReflectionFactory implements sun.reflect.generics.factory.Gener
 	* type variables
 	* @return an instance of <tt>CoreReflectionFactory</tt>
 	*/
-	@:overload public static function make(d : java.lang.reflect.GenericDeclaration, s : sun.reflect.generics.scope.Scope) : sun.reflect.generics.factory.CoreReflectionFactory;
+	@:overload @:public @:static public static function make(d : java.lang.reflect.GenericDeclaration, s : sun.reflect.generics.scope.Scope) : sun.reflect.generics.factory.CoreReflectionFactory;
 	
-	@:overload public function makeTypeVariable(name : String, bounds : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>) : java.lang.reflect.TypeVariable<Dynamic>;
+	@:overload @:public public function makeTypeVariable(name : String, bounds : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>) : java.lang.reflect.TypeVariable<Dynamic>;
 	
-	@:overload public function makeWildcard(ubs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, lbs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>) : java.lang.reflect.WildcardType;
+	@:overload @:public public function makeWildcard(ubs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, lbs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>) : java.lang.reflect.WildcardType;
 	
-	@:overload public function makeParameterizedType(declaration : java.lang.reflect.Type, typeArgs : java.NativeArray<java.lang.reflect.Type>, owner : java.lang.reflect.Type) : java.lang.reflect.ParameterizedType;
+	@:overload @:public public function makeParameterizedType(declaration : java.lang.reflect.Type, typeArgs : java.NativeArray<java.lang.reflect.Type>, owner : java.lang.reflect.Type) : java.lang.reflect.ParameterizedType;
 	
-	@:overload public function findTypeVariable(name : String) : java.lang.reflect.TypeVariable<Dynamic>;
+	@:overload @:public public function findTypeVariable(name : String) : java.lang.reflect.TypeVariable<Dynamic>;
 	
-	@:overload public function makeNamedType(name : String) : java.lang.reflect.Type;
+	@:overload @:public public function makeNamedType(name : String) : java.lang.reflect.Type;
 	
-	@:overload public function makeArrayType(componentType : java.lang.reflect.Type) : java.lang.reflect.Type;
+	@:overload @:public public function makeArrayType(componentType : java.lang.reflect.Type) : java.lang.reflect.Type;
 	
-	@:overload public function makeByte() : java.lang.reflect.Type;
+	@:overload @:public public function makeByte() : java.lang.reflect.Type;
 	
-	@:overload public function makeBool() : java.lang.reflect.Type;
+	@:overload @:public public function makeBool() : java.lang.reflect.Type;
 	
-	@:overload public function makeShort() : java.lang.reflect.Type;
+	@:overload @:public public function makeShort() : java.lang.reflect.Type;
 	
-	@:overload public function makeChar() : java.lang.reflect.Type;
+	@:overload @:public public function makeChar() : java.lang.reflect.Type;
 	
-	@:overload public function makeInt() : java.lang.reflect.Type;
+	@:overload @:public public function makeInt() : java.lang.reflect.Type;
 	
-	@:overload public function makeLong() : java.lang.reflect.Type;
+	@:overload @:public public function makeLong() : java.lang.reflect.Type;
 	
-	@:overload public function makeFloat() : java.lang.reflect.Type;
+	@:overload @:public public function makeFloat() : java.lang.reflect.Type;
 	
-	@:overload public function makeDouble() : java.lang.reflect.Type;
+	@:overload @:public public function makeDouble() : java.lang.reflect.Type;
 	
-	@:overload public function makeVoid() : java.lang.reflect.Type;
+	@:overload @:public public function makeVoid() : java.lang.reflect.Type;
 	
 	
 }

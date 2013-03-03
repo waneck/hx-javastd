@@ -35,7 +35,7 @@ extern class AccessControlContext
 	* changes to the array will not affect this AccessControlContext.
 	* @throws NullPointerException if <code>context</code> is <code>null</code>
 	*/
-	@:overload public function new(context : java.NativeArray<java.security.ProtectionDomain>) : Void;
+	@:overload @:public public function new(context : java.NativeArray<java.security.ProtectionDomain>) : Void;
 	
 	/**
 	* Create a new <code>AccessControlContext</code> with the given
@@ -60,7 +60,7 @@ extern class AccessControlContext
 	*          {@link SecurityPermission}
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(acc : java.security.AccessControlContext, combiner : java.security.DomainCombiner) : Void;
+	@:require(java3) @:overload @:public public function new(acc : java.security.AccessControlContext, combiner : java.security.DomainCombiner) : Void;
 	
 	/**
 	* Get the <code>DomainCombiner</code> associated with this
@@ -77,7 +77,7 @@ extern class AccessControlContext
 	*          {@link SecurityPermission}
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getDomainCombiner() : java.security.DomainCombiner;
+	@:require(java3) @:overload @:public public function getDomainCombiner() : java.security.DomainCombiner;
 	
 	/**
 	* Determines whether the access request indicated by the
@@ -98,7 +98,7 @@ extern class AccessControlContext
 	* context encapsulated by this object.
 	* @exception NullPointerException if the permission to check for is null.
 	*/
-	@:overload public function checkPermission(perm : java.security.Permission) : Void;
+	@:overload @:public public function checkPermission(perm : java.security.Permission) : Void;
 	
 	/**
 	* Checks two AccessControlContext objects for equality.
@@ -110,7 +110,7 @@ extern class AccessControlContext
 	* @return true if <i>obj</i> is an AccessControlContext, and has the
 	* same set of ProtectionDomains as this context, false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this context. The hash code
@@ -119,7 +119,7 @@ extern class AccessControlContext
 	*
 	* @return a hash code value for this context.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

@@ -31,7 +31,7 @@ extern class StubConnectImpl
 	* @param stub The stub implementation that extends ObjectImpl
 	* @param orb The ORB to which we connect the stub.
 	*/
-	@:overload public static function connect(ior : com.sun.corba.se.impl.ior.StubIORImpl, proxy : org.omg.CORBA.Object, stub : org.omg.CORBA.portable.ObjectImpl, orb : org.omg.CORBA.ORB) : com.sun.corba.se.impl.ior.StubIORImpl;
+	@:overload @:public @:static public static function connect(ior : com.sun.corba.se.impl.ior.StubIORImpl, proxy : org.omg.CORBA.Object, stub : org.omg.CORBA.portable.ObjectImpl, orb : org.omg.CORBA.ORB) : com.sun.corba.se.impl.ior.StubIORImpl;
 	
 	
 }

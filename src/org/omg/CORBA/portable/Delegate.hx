@@ -30,20 +30,20 @@ extern class Delegate
 	* @param self The object reference whose InterfaceDef needs to be returned
 	* @return the InterfaceDef
 	*/
-	@:overload @:abstract public function get_interface_def(self : org.omg.CORBA.Object) : org.omg.CORBA.Object;
+	@:overload @:public @:abstract public function get_interface_def(self : org.omg.CORBA.Object) : org.omg.CORBA.Object;
 	
 	/**
 	* Returns a duplicate of the object reference provided.
 	* @param obj The object reference whose duplicate needs to be returned
 	* @return the duplicate object reference
 	*/
-	@:overload @:abstract public function duplicate(obj : org.omg.CORBA.Object) : org.omg.CORBA.Object;
+	@:overload @:public @:abstract public function duplicate(obj : org.omg.CORBA.Object) : org.omg.CORBA.Object;
 	
 	/**
 	* Releases resources associated with the object reference provided.
 	* @param obj The object reference whose resources need to be released
 	*/
-	@:overload @:abstract public function release(obj : org.omg.CORBA.Object) : Void;
+	@:overload @:public @:abstract public function release(obj : org.omg.CORBA.Object) : Void;
 	
 	/**
 	* Checks if the object reference is an instance of the given interface.
@@ -52,7 +52,7 @@ extern class Delegate
 	* to check against.
 	* @return true if the object reference supports the interface
 	*/
-	@:overload @:abstract public function is_a(obj : org.omg.CORBA.Object, repository_id : String) : Bool;
+	@:overload @:public @:abstract public function is_a(obj : org.omg.CORBA.Object, repository_id : String) : Bool;
 	
 	/**
 	* Determines whether the server object for the object reference has been
@@ -61,7 +61,7 @@ extern class Delegate
 	* @return true if the ORB knows authoritatively that the server object does
 	* not exist, false otherwise
 	*/
-	@:overload @:abstract public function non_existent(obj : org.omg.CORBA.Object) : Bool;
+	@:overload @:public @:abstract public function non_existent(obj : org.omg.CORBA.Object) : Bool;
 	
 	/**
 	* Determines if the two object references are equivalent.
@@ -69,7 +69,7 @@ extern class Delegate
 	* @param other The object reference to check equivalence against.
 	* @return true if the objects are CORBA-equivalent.
 	*/
-	@:overload @:abstract public function is_equivalent(obj : org.omg.CORBA.Object, other : org.omg.CORBA.Object) : Bool;
+	@:overload @:public @:abstract public function is_equivalent(obj : org.omg.CORBA.Object, other : org.omg.CORBA.Object) : Bool;
 	
 	/**
 	* Returns an ORB-internal identifier (hashcode) for this object reference.
@@ -78,7 +78,7 @@ extern class Delegate
 	*            the ORB.
 	* @return ORB-internal hash identifier for object reference
 	*/
-	@:overload @:abstract public function hash(obj : org.omg.CORBA.Object, max : Int) : Int;
+	@:overload @:public @:abstract public function hash(obj : org.omg.CORBA.Object, max : Int) : Int;
 	
 	/**
 	* Creates a Request instance for use in the Dynamic Invocation Interface.
@@ -87,7 +87,7 @@ extern class Delegate
 	*                  Request instance.
 	* @return the created Request instance
 	*/
-	@:overload @:abstract public function request(obj : org.omg.CORBA.Object, operation : String) : org.omg.CORBA.Request;
+	@:overload @:public @:abstract public function request(obj : org.omg.CORBA.Object, operation : String) : org.omg.CORBA.Request;
 	
 	/**
 	* Creates a Request instance for use in the Dynamic Invocation Interface.
@@ -102,7 +102,7 @@ extern class Delegate
 	* @return                 The created Request object.
 	*
 	*/
-	@:overload @:abstract public function create_request(obj : org.omg.CORBA.Object, ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue) : org.omg.CORBA.Request;
+	@:overload @:public @:abstract public function create_request(obj : org.omg.CORBA.Object, ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue) : org.omg.CORBA.Request;
 	
 	/**
 	* Creates a Request instance for use in the Dynamic Invocation Interface.
@@ -121,7 +121,7 @@ extern class Delegate
 	*                                 Request.
 	* @return                 The created Request object.
 	*/
-	@:overload @:abstract public function create_request(obj : org.omg.CORBA.Object, ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue, exclist : org.omg.CORBA.ExceptionList, ctxlist : org.omg.CORBA.ContextList) : org.omg.CORBA.Request;
+	@:overload @:public @:abstract public function create_request(obj : org.omg.CORBA.Object, ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue, exclist : org.omg.CORBA.ExceptionList, ctxlist : org.omg.CORBA.ContextList) : org.omg.CORBA.Request;
 	
 	/**
 	* Provides a reference to the orb associated with its parameter.
@@ -131,7 +131,7 @@ extern class Delegate
 	* @see <a href="package-summary.html#unimpl"><code>portable</code>
 	* package comments for unimplemented features</a>
 	*/
-	@:overload public function orb(obj : org.omg.CORBA.Object) : org.omg.CORBA.ORB;
+	@:overload @:public public function orb(obj : org.omg.CORBA.Object) : org.omg.CORBA.ORB;
 	
 	/**
 	* Returns the <code>Policy</code> object of the specified type
@@ -148,7 +148,7 @@ extern class Delegate
 	* @see <a href="package-summary.html#unimpl"><code>portable</code>
 	* package comments for unimplemented features</a>
 	*/
-	@:overload public function get_policy(self : org.omg.CORBA.Object, policy_type : Int) : org.omg.CORBA.Policy;
+	@:overload @:public public function get_policy(self : org.omg.CORBA.Object, policy_type : Int) : org.omg.CORBA.Policy;
 	
 	/**
 	* Retrieves the <code>DomainManagers</code> of this object.
@@ -164,7 +164,7 @@ extern class Delegate
 	* @see <a href="package-summary.html#unimpl"><code>portable</code>
 	* package comments for unimplemented features</a>
 	*/
-	@:overload public function get_domain_managers(self : org.omg.CORBA.Object) : java.NativeArray<org.omg.CORBA.DomainManager>;
+	@:overload @:public public function get_domain_managers(self : org.omg.CORBA.Object) : java.NativeArray<org.omg.CORBA.DomainManager>;
 	
 	/**
 	* Associates the policies passed in
@@ -185,7 +185,7 @@ extern class Delegate
 	* @see <a href="package-summary.html#unimpl"><code>portable</code>
 	* package comments for unimplemented features</a>
 	*/
-	@:overload public function set_policy_override(self : org.omg.CORBA.Object, policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : org.omg.CORBA.Object;
+	@:overload @:public public function set_policy_override(self : org.omg.CORBA.Object, policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : org.omg.CORBA.Object;
 	
 	/**
 	* Returns true if this object is implemented by a local servant.
@@ -196,7 +196,7 @@ extern class Delegate
 	* does not support local stubs for this particular servant. The default
 	* behavior of is_local() is to return false.
 	*/
-	@:overload public function is_local(self : org.omg.CORBA.Object) : Bool;
+	@:overload @:public public function is_local(self : org.omg.CORBA.Object) : Bool;
 	
 	/**
 	* Returns a Java reference to the servant which should be used for this
@@ -224,7 +224,7 @@ extern class Delegate
 	* this optimization (e.g. due to security, transactions, etc).
 	* The method must return null if the servant is not of the expected type.
 	*/
-	@:overload public function servant_preinvoke(self : org.omg.CORBA.Object, operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
+	@:overload @:public public function servant_preinvoke(self : org.omg.CORBA.Object, operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
 	
 	/**
 	* servant_postinvoke() is invoked by the local stub after the operation
@@ -239,7 +239,7 @@ extern class Delegate
 	* @param servant the instance of the ServantObject returned from
 	*  the servant_preinvoke() method.
 	*/
-	@:overload public function servant_postinvoke(self : org.omg.CORBA.Object, servant : org.omg.CORBA.portable.ServantObject) : Void;
+	@:overload @:public public function servant_postinvoke(self : org.omg.CORBA.Object, servant : org.omg.CORBA.portable.ServantObject) : Void;
 	
 	/**
 	* request is called by a stub to obtain an OutputStream for
@@ -258,7 +258,7 @@ extern class Delegate
 	* @see <a href="package-summary.html#unimpl"><code>portable</code>
 	* package comments for unimplemented features</a>
 	*/
-	@:overload public function request(self : org.omg.CORBA.Object, operation : String, responseExpected : Bool) : org.omg.CORBA.portable.OutputStream;
+	@:overload @:public public function request(self : org.omg.CORBA.Object, operation : String, responseExpected : Bool) : org.omg.CORBA.portable.OutputStream;
 	
 	/**
 	* invoke is called by a stub to invoke an operation. The stub provides an
@@ -279,7 +279,7 @@ extern class Delegate
 	* @see <a href="package-summary.html#unimpl"><code>portable</code>
 	* package comments for unimplemented features</a>
 	*/
-	@:overload public function invoke(self : org.omg.CORBA.Object, output : org.omg.CORBA.portable.OutputStream) : org.omg.CORBA.portable.InputStream;
+	@:overload @:public public function invoke(self : org.omg.CORBA.Object, output : org.omg.CORBA.portable.OutputStream) : org.omg.CORBA.portable.InputStream;
 	
 	/**
 	* releaseReply may optionally be called by a stub to release a
@@ -294,7 +294,7 @@ extern class Delegate
 	* @see <a href="package-summary.html#unimpl"><code>portable</code>
 	* package comments for unimplemented features</a>
 	*/
-	@:overload public function releaseReply(self : org.omg.CORBA.Object, input : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function releaseReply(self : org.omg.CORBA.Object, input : org.omg.CORBA.portable.InputStream) : Void;
 	
 	/**
 	* Provides the implementation to override the toString() method
@@ -305,7 +305,7 @@ extern class Delegate
 	*         reference that delegated to this <code>Delegate</code>
 	*         object
 	*/
-	@:overload public function toString(self : org.omg.CORBA.Object) : String;
+	@:overload @:public public function toString(self : org.omg.CORBA.Object) : String;
 	
 	/**
 	* Provides the implementation to override the hashCode() method
@@ -316,7 +316,7 @@ extern class Delegate
 	*         object reference that delegated to this <code>Delegate</code>
 	*         object
 	*/
-	@:overload public function hashCode(self : org.omg.CORBA.Object) : Int;
+	@:overload @:public public function hashCode(self : org.omg.CORBA.Object) : Int;
 	
 	/**
 	* Provides the implementation to override the equals(java.lang.Object obj)
@@ -327,7 +327,7 @@ extern class Delegate
 	* @return <code>true</code> if <code>obj</code> equals <code>self</code>;
 	*         <code>false</code> otherwise
 	*/
-	@:overload public function equals(self : org.omg.CORBA.Object, obj : Dynamic) : Bool;
+	@:overload @:public public function equals(self : org.omg.CORBA.Object, obj : Dynamic) : Bool;
 	
 	
 }

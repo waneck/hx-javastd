@@ -31,11 +31,11 @@ extern interface XSContentTypeVisitor
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload public function simpleType(simpleType : com.sun.xml.internal.xsom.XSSimpleType) : Void;
+	@:overload @:public public function simpleType(simpleType : com.sun.xml.internal.xsom.XSSimpleType) : Void;
 	
-	@:overload public function particle(particle : com.sun.xml.internal.xsom.XSParticle) : Void;
+	@:overload @:public public function particle(particle : com.sun.xml.internal.xsom.XSParticle) : Void;
 	
-	@:overload public function empty(empty : com.sun.xml.internal.xsom.XSContentType) : Void;
+	@:overload @:public public function empty(empty : com.sun.xml.internal.xsom.XSContentType) : Void;
 	
 	
 }

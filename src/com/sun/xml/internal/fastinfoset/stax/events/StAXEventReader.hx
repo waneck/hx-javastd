@@ -27,19 +27,19 @@ package com.sun.xml.internal.fastinfoset.stax.events;
 */
 extern class StAXEventReader implements javax.xml.stream.XMLEventReader
 {
-	private var _streamReader : javax.xml.stream.XMLStreamReader;
+	@:protected private var _streamReader : javax.xml.stream.XMLStreamReader;
 	
-	private var _eventAllocator : javax.xml.stream.util.XMLEventAllocator;
+	@:protected private var _eventAllocator : javax.xml.stream.util.XMLEventAllocator;
 	
-	@:overload public function new(reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function new(reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function nextEvent() : javax.xml.stream.events.XMLEvent;
+	@:overload @:public public function nextEvent() : javax.xml.stream.events.XMLEvent;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/** Reads the content of a text-only element. Precondition:
 	* the current event is START_ELEMENT. Postcondition:
@@ -47,14 +47,14 @@ extern class StAXEventReader implements javax.xml.stream.XMLEventReader
 	* @throws XMLStreamException if the current event is not a START_ELEMENT
 	* or if a non text element is encountered
 	*/
-	@:overload public function getElementText() : String;
+	@:overload @:public public function getElementText() : String;
 	
 	/** Get the value of a feature/property from the underlying implementation
 	* @param name The name of the property
 	* @return The value of the property
 	* @throws IllegalArgumentException if the property is not supported
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	/** Skips any insignificant space events until a START_ELEMENT or
 	* END_ELEMENT is reached. If anything other than space characters are
@@ -64,13 +64,13 @@ extern class StAXEventReader implements javax.xml.stream.XMLEventReader
 	* the DTD is missing or not interpreted.
 	* @throws XMLStreamException if anything other than space characters are encountered
 	*/
-	@:overload public function nextTag() : javax.xml.stream.events.XMLEvent;
+	@:overload @:public public function nextTag() : javax.xml.stream.events.XMLEvent;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function peek() : javax.xml.stream.events.XMLEvent;
+	@:overload @:public public function peek() : javax.xml.stream.events.XMLEvent;
 	
-	@:overload public function setAllocator(allocator : javax.xml.stream.util.XMLEventAllocator) : Void;
+	@:overload @:public public function setAllocator(allocator : javax.xml.stream.util.XMLEventAllocator) : Void;
 	
 	
 }

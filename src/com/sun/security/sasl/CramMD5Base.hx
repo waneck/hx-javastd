@@ -31,20 +31,20 @@ package com.sun.security.sasl;
 	* @author Vincent Ryan
 	* @author Rosanna Lee
 	*/
-	private var completed : Bool;
+	@:protected private var completed : Bool;
 	
-	private var aborted : Bool;
+	@:protected private var aborted : Bool;
 	
-	private var pw : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var pw : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Retrieves this mechanism's name.
 	*
 	* @return  The string "CRAM-MD5".
 	*/
-	@:overload public function getMechanismName() : String;
+	@:overload @:public public function getMechanismName() : String;
 	
 	/**
 	* Determines whether this mechanism has completed.
@@ -52,21 +52,21 @@ package com.sun.security.sasl;
 	*
 	* @return true if has completed; false otherwise;
 	*/
-	@:overload public function isComplete() : Bool;
+	@:overload @:public public function isComplete() : Bool;
 	
 	/**
 	* Unwraps the incoming buffer. CRAM-MD5 supports no security layer.
 	*
 	* @throws SaslException If attempt to use this method.
 	*/
-	@:overload public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Wraps the outgoing buffer. CRAM-MD5 supports no security layer.
 	*
 	* @throws SaslException If attempt to use this method.
 	*/
-	@:overload public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the negotiated property.
@@ -77,15 +77,15 @@ package com.sun.security.sasl;
 	* @return value of property; only QOP is applicable to CRAM-MD5.
 	* @exception IllegalStateException if this authentication exchange has not completed
 	*/
-	@:overload public function getNegotiatedProperty(propName : String) : Dynamic;
+	@:overload @:public public function getNegotiatedProperty(propName : String) : Dynamic;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload private function clearPassword() : Void;
+	@:overload @:protected private function clearPassword() : Void;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
-	private static var logger : java.util.logging.Logger;
+	@:protected @:static private static var logger : java.util.logging.Logger;
 	
 	
 }

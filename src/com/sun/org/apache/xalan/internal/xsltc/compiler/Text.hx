@@ -26,40 +26,40 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Create a blank Text syntax tree node.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create text syntax tree node.
 	* @param text is the text to put in the node.
 	*/
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* Returns the text wrapped inside this node
 	* @return The text wrapped inside this node
 	*/
-	@:overload private function getText() : String;
+	@:overload @:protected private function getText() : String;
 	
 	/**
 	* Set the text for this node. Appends the given text to any already
 	* existing text (using string concatenation, so use only when needed).
 	* @param text is the text to wrap inside this node.
 	*/
-	@:overload private function setText(text : String) : Void;
+	@:overload @:protected private function setText(text : String) : Void;
 	
-	@:overload public function display(indent : Int) : Void;
+	@:overload @:public override public function display(indent : Int) : Void;
 	
-	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload public function ignore() : Void;
+	@:overload @:public public function ignore() : Void;
 	
-	@:overload public function isIgnore() : Bool;
+	@:overload @:public public function isIgnore() : Bool;
 	
-	@:overload public function isTextElement() : Bool;
+	@:overload @:public public function isTextElement() : Bool;
 	
-	@:overload private function contextDependent() : Bool;
+	@:overload @:protected override private function contextDependent() : Bool;
 	
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Check whether this Text node can be stored in a char[] in the translet.
@@ -67,7 +67,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* @see #loadAsArrayOffsetLength(ClassGenerator,MethodGenerator)
 	* @return true if this Text node can be
 	*/
-	@:overload public function canLoadAsArrayOffsetLength() : Bool;
+	@:overload @:public public function canLoadAsArrayOffsetLength() : Bool;
 	
 	/**
 	* Generates code that loads the array that will contain the character
@@ -78,7 +78,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* canLoadAsArrayOffsetLength() returns true.
 	* @see #canLoadArrayOffsetLength()
 	*/
-	@:overload public function loadAsArrayOffsetLength(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public public function loadAsArrayOffsetLength(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

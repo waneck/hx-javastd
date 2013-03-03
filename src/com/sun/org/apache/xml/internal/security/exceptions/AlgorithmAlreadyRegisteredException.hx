@@ -33,14 +33,14 @@ extern class AlgorithmAlreadyRegisteredException extends com.sun.org.apache.xml.
 	* Constructor AlgorithmAlreadyRegisteredException
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor AlgorithmAlreadyRegisteredException
 	*
 	* @param _msgID
 	*/
-	@:overload public function new(_msgID : String) : Void;
+	@:overload @:public public function new(_msgID : String) : Void;
 	
 	/**
 	* Constructor AlgorithmAlreadyRegisteredException
@@ -48,7 +48,7 @@ extern class AlgorithmAlreadyRegisteredException extends com.sun.org.apache.xml.
 	* @param _msgID
 	* @param exArgs
 	*/
-	@:overload public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Constructor AlgorithmAlreadyRegisteredException
@@ -56,7 +56,7 @@ extern class AlgorithmAlreadyRegisteredException extends com.sun.org.apache.xml.
 	* @param _msgID
 	* @param _originalException
 	*/
-	@:overload public function new(_msgID : String, _originalException : java.lang.Exception) : Void;
+	@:overload @:public public function new(_msgID : String, _originalException : java.lang.Exception) : Void;
 	
 	/**
 	* Constructor AlgorithmAlreadyRegisteredException
@@ -65,7 +65,7 @@ extern class AlgorithmAlreadyRegisteredException extends com.sun.org.apache.xml.
 	* @param exArgs
 	* @param _originalException
 	*/
-	@:overload public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, _originalException : java.lang.Exception) : Void;
+	@:overload @:public public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, _originalException : java.lang.Exception) : Void;
 	
 	
 }

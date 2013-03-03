@@ -25,20 +25,20 @@ package javax.swing.plaf.basic;
 */
 extern class BasicDirectoryModel extends javax.swing.AbstractListModel<Dynamic> implements java.beans.PropertyChangeListener
 {
-	@:overload public function new(filechooser : javax.swing.JFileChooser) : Void;
+	@:overload @:public public function new(filechooser : javax.swing.JFileChooser) : Void;
 	
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* This method is used to interrupt file loading thread.
 	*/
-	@:overload public function invalidateFileCache() : Void;
+	@:overload @:public public function invalidateFileCache() : Void;
 	
-	@:overload public function getDirectories() : java.util.Vector<java.io.File>;
+	@:overload @:public public function getDirectories() : java.util.Vector<java.io.File>;
 	
-	@:overload public function getFiles() : java.util.Vector<java.io.File>;
+	@:overload @:public public function getFiles() : java.util.Vector<java.io.File>;
 	
-	@:overload public function validateFileCache() : Void;
+	@:overload @:public public function validateFileCache() : Void;
 	
 	/**
 	* Renames a file in the underlying file system.
@@ -51,31 +51,31 @@ extern class BasicDirectoryModel extends javax.swing.AbstractListModel<Dynamic> 
 	*        otherwise <code>false</code>
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function renameFile(oldFile : java.io.File, newFile : java.io.File) : Bool;
+	@:require(java4) @:overload @:public public function renameFile(oldFile : java.io.File, newFile : java.io.File) : Bool;
 	
-	@:overload public function fireContentsChanged() : Void;
+	@:overload @:public public function fireContentsChanged() : Void;
 	
-	@:overload public function getSize() : Int;
+	@:overload @:public override public function getSize() : Int;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public public function contains(o : Dynamic) : Bool;
 	
-	@:overload public function indexOf(o : Dynamic) : Int;
+	@:overload @:public public function indexOf(o : Dynamic) : Int;
 	
-	@:overload public function getElementAt(index : Int) : Dynamic;
-	
-	/**
-	* Obsolete - not used.
-	*/
-	@:overload public function intervalAdded(e : javax.swing.event.ListDataEvent) : Void;
+	@:overload @:public override public function getElementAt(index : Int) : Dynamic;
 	
 	/**
 	* Obsolete - not used.
 	*/
-	@:overload public function intervalRemoved(e : javax.swing.event.ListDataEvent) : Void;
+	@:overload @:public public function intervalAdded(e : javax.swing.event.ListDataEvent) : Void;
 	
-	@:overload private function sort(v : java.util.Vector<java.io.File>) : Void;
+	/**
+	* Obsolete - not used.
+	*/
+	@:overload @:public public function intervalRemoved(e : javax.swing.event.ListDataEvent) : Void;
 	
-	@:overload private function lt(a : java.io.File, b : java.io.File) : Bool;
+	@:overload @:protected private function sort(v : java.util.Vector<java.io.File>) : Void;
+	
+	@:overload @:protected private function lt(a : java.io.File, b : java.io.File) : Bool;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list. The listener is
@@ -91,7 +91,7 @@ extern class BasicDirectoryModel extends javax.swing.AbstractListModel<Dynamic> 
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:require(java6) @:overload @:public public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a PropertyChangeListener from the listener list.
@@ -105,7 +105,7 @@ extern class BasicDirectoryModel extends javax.swing.AbstractListModel<Dynamic> 
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:require(java6) @:overload @:public public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the property change listeners
@@ -121,7 +121,7 @@ extern class BasicDirectoryModel extends javax.swing.AbstractListModel<Dynamic> 
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:require(java6) @:overload @:public public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	/**
 	* Support for reporting bound property changes for boolean properties.
@@ -135,29 +135,29 @@ extern class BasicDirectoryModel extends javax.swing.AbstractListModel<Dynamic> 
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:require(java6) @:overload @:protected private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicDirectoryModel$LoadFilesThread') @:internal extern class BasicDirectoryModel_LoadFilesThread extends java.lang.Thread
 {
-	@:overload public function new(currentDirectory : java.io.File, fid : Int) : Void;
+	@:overload @:public public function new(currentDirectory : java.io.File, fid : Int) : Void;
 	
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
-	@:overload public function run0() : Void;
+	@:overload @:public public function run0() : Void;
 	
-	@:overload public function cancelRunnables(runnables : java.util.Vector<javax.swing.plaf.basic.BasicDirectoryModel.BasicDirectoryModel_DoChangeContents>) : Void;
+	@:overload @:public public function cancelRunnables(runnables : java.util.Vector<javax.swing.plaf.basic.BasicDirectoryModel.BasicDirectoryModel_DoChangeContents>) : Void;
 	
-	@:overload public function cancelRunnables() : Void;
+	@:overload @:public public function cancelRunnables() : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicDirectoryModel$DoChangeContents') @:internal extern class BasicDirectoryModel_DoChangeContents implements java.lang.Runnable
 {
-	@:overload public function new(addFiles : java.util.List<java.io.File>, addStart : Int, remFiles : java.util.List<java.io.File>, remStart : Int, fid : Int) : Void;
+	@:overload @:public public function new(addFiles : java.util.List<java.io.File>, addStart : Int, remFiles : java.util.List<java.io.File>, remStart : Int, fid : Int) : Void;
 	
-	@:overload @:synchronized public function run() : Void;
+	@:overload @:public @:synchronized public function run() : Void;
 	
 	
 }

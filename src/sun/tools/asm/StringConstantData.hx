@@ -28,7 +28,7 @@ package sun.tools.asm;
 	/**
 	* toString
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

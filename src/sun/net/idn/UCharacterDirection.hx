@@ -51,7 +51,7 @@ package sun.net.idn;
 	* @return directional name
 	* @stable ICU 2.1
 	*/
-	@:overload public static function toString(dir : Int) : String;
+	@:overload @:public @:static public static function toString(dir : Int) : String;
 	
 	
 }

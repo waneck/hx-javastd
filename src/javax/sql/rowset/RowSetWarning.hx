@@ -35,14 +35,14 @@ extern class RowSetWarning extends java.sql.SQLException
 	*        this constructor behaves like the default (zero parameter)
 	*        <code>RowSetWarning</code> constructor
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	/**
 	* Constructs a default <code>RowSetWarning</code> object. The reason
 	* defaults to <code>null</code>, SQLState defaults to null and vendorCode
 	* defaults to 0.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>RowSetWarning</code> object initialized with the
@@ -57,7 +57,7 @@ extern class RowSetWarning extends java.sql.SQLException
 	* @param SQLState an XOPEN code identifying the warning; if a non standard
 	*        XOPEN <i>SQLState</i> is supplied, no exception is thrown.
 	*/
-	@:overload public function new(reason : String, SQLState : String) : Void;
+	@:overload @:public public function new(reason : String, SQLState : String) : Void;
 	
 	/**
 	* Constructs a fully specified <code>RowSetWarning</code> object initialized
@@ -73,7 +73,7 @@ extern class RowSetWarning extends java.sql.SQLException
 	*        XPOEN <i>SQLState</i> is supplied, no exception is thrown.
 	* @param vendorCode a database vendor-specific warning code
 	*/
-	@:overload public function new(reason : String, SQLState : String, vendorCode : Int) : Void;
+	@:overload @:public public function new(reason : String, SQLState : String, vendorCode : Int) : Void;
 	
 	/**
 	* Retrieves the warning chained to this <code>RowSetWarning</code>
@@ -84,7 +84,7 @@ extern class RowSetWarning extends java.sql.SQLException
 	*         <code>null</code> is returned (default value)
 	* @see #setNextWarning
 	*/
-	@:overload public function getNextWarning() : javax.sql.rowset.RowSetWarning;
+	@:overload @:public public function getNextWarning() : javax.sql.rowset.RowSetWarning;
 	
 	/**
 	* Sets <i>warning</i> as the next warning, that is, the warning chained
@@ -95,7 +95,7 @@ extern class RowSetWarning extends java.sql.SQLException
 	*     represents the finish point in the warning chain
 	* @see #getNextWarning
 	*/
-	@:overload public function setNextWarning(warning : javax.sql.rowset.RowSetWarning) : Void;
+	@:overload @:public public function setNextWarning(warning : javax.sql.rowset.RowSetWarning) : Void;
 	
 	
 }

@@ -25,7 +25,7 @@ package sun.security.rsa;
 */
 extern class SunRsaSign extends java.security.Provider
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

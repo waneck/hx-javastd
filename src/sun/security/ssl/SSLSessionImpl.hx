@@ -43,40 +43,40 @@ package sun.security.ssl;
 */
 @:internal extern class SSLSessionImpl extends javax.net.ssl.ExtendedSSLSession
 {
-	@:overload @:synchronized override public function isValid() : Bool;
+	@:overload @:public @:synchronized override public function isValid() : Bool;
 	
 	/**
 	* Returns the ID for this session.  The ID is fixed for the
 	* duration of the session; neither it, nor its value, changes.
 	*/
-	@:overload override public function getId() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getId() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* For server sessions, this returns the set of sessions which
 	* are currently valid in this process.  For client sessions,
 	* this returns null.
 	*/
-	@:overload override public function getSessionContext() : javax.net.ssl.SSLSessionContext;
+	@:overload @:public override public function getSessionContext() : javax.net.ssl.SSLSessionContext;
 	
 	/**
 	* Returns the name of the cipher suite in use on this session
 	*/
-	@:overload override public function getCipherSuite() : String;
+	@:overload @:public override public function getCipherSuite() : String;
 	
 	/**
 	* Returns the standard name of the protocol in use on this session
 	*/
-	@:overload override public function getProtocol() : String;
+	@:overload @:public override public function getProtocol() : String;
 	
 	/**
 	* Returns the hashcode for this session
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns true if sessions have same ids, false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Return the cert chain presented by the peer in the
@@ -88,7 +88,7 @@ package sun.security.ssl;
 	* @return array of peer X.509 certs, with the peer's own cert
 	*  first in the chain, and with the "root" CA last.
 	*/
-	@:overload override public function getPeerCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public override public function getPeerCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Return the cert chain presented to the peer in the
@@ -99,7 +99,7 @@ package sun.security.ssl;
 	* @return array of peer X.509 certs, with the peer's own cert
 	*  first in the chain, and with the "root" CA last.
 	*/
-	@:overload override public function getLocalCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public override public function getLocalCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Return the cert chain presented by the peer in the
@@ -111,7 +111,7 @@ package sun.security.ssl;
 	* @return array of peer X.509 certs, with the peer's own cert
 	*  first in the chain, and with the "root" CA last.
 	*/
-	@:overload override public function getPeerCertificateChain() : java.NativeArray<javax.security.cert.X509Certificate>;
+	@:overload @:public override public function getPeerCertificateChain() : java.NativeArray<javax.security.cert.X509Certificate>;
 	
 	/**
 	* Return the cert chain presented by the peer.
@@ -122,7 +122,7 @@ package sun.security.ssl;
 	* @return array of peer X.509 certs, with the peer's own cert
 	*  first in the chain, and with the "root" CA last.
 	*/
-	@:overload public function getCertificateChain() : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public public function getCertificateChain() : java.NativeArray<java.security.cert.X509Certificate>;
 	
 	/**
 	* Returns the identity of the peer which was established as part of
@@ -135,7 +135,7 @@ package sun.security.ssl;
 	* @throws SSLPeerUnverifiedException if the peer's identity has not
 	*          been verified
 	*/
-	@:overload override public function getPeerPrincipal() : java.security.Principal;
+	@:overload @:public override public function getPeerPrincipal() : java.security.Principal;
 	
 	/**
 	* Returns the principal that was sent to the peer during handshaking.
@@ -145,18 +145,18 @@ package sun.security.ssl;
 	* Principal for Kerberos cipher suites. If no principal was
 	* sent, then null is returned.
 	*/
-	@:overload override public function getLocalPrincipal() : java.security.Principal;
+	@:overload @:public override public function getLocalPrincipal() : java.security.Principal;
 	
 	/**
 	* Returns the time this session was created.
 	*/
-	@:overload override public function getCreationTime() : haxe.Int64;
+	@:overload @:public override public function getCreationTime() : haxe.Int64;
 	
 	/**
 	* Returns the last time this session was used to initialize
 	* a connection.
 	*/
-	@:overload override public function getLastAccessedTime() : haxe.Int64;
+	@:overload @:public override public function getLastAccessedTime() : haxe.Int64;
 	
 	/**
 	* Returns the network address of the session's peer.  This
@@ -164,90 +164,90 @@ package sun.security.ssl;
 	* different ports on the same host must necessarily belong
 	* to different sessions, though that is of course allowed.
 	*/
-	@:overload public function getPeerAddress() : java.net.InetAddress;
+	@:overload @:public public function getPeerAddress() : java.net.InetAddress;
 	
-	@:overload override public function getPeerHost() : String;
+	@:overload @:public override public function getPeerHost() : String;
 	
 	/**
 	* Need to provide the port info for caching sessions based on
 	* host and port. Accessed by SSLSessionContextImpl
 	*/
-	@:overload override public function getPeerPort() : Int;
+	@:overload @:public override public function getPeerPort() : Int;
 	
 	/**
 	* Invalidate a session.  Active connections may still exist, but
 	* no connections will be able to rejoin this session.
 	*/
-	@:overload @:synchronized override public function invalidate() : Void;
+	@:overload @:synchronized @:public override public function invalidate() : Void;
 	
 	/**
 	* Assigns a session value.  Session change events are given if
 	* appropriate, to any original value as well as the new value.
 	*/
-	@:overload override public function putValue(key : String, value : Dynamic) : Void;
+	@:overload @:public override public function putValue(key : String, value : Dynamic) : Void;
 	
 	/**
 	* Returns the specified session value.
 	*/
-	@:overload override public function getValue(key : String) : Dynamic;
+	@:overload @:public override public function getValue(key : String) : Dynamic;
 	
 	/**
 	* Removes the specified session value, delivering a session changed
 	* event as appropriate.
 	*/
-	@:overload override public function removeValue(key : String) : Void;
+	@:overload @:public override public function removeValue(key : String) : Void;
 	
 	/**
 	* Lists the names of the session values.
 	*/
-	@:overload override public function getValueNames() : java.NativeArray<String>;
+	@:overload @:public override public function getValueNames() : java.NativeArray<String>;
 	
 	/**
 	* Expand the buffer size of both SSL/TLS network packet and
 	* application data.
 	*/
-	@:overload @:synchronized private function expandBufferSizes() : Void;
+	@:overload @:protected @:synchronized private function expandBufferSizes() : Void;
 	
 	/**
 	* Gets the current size of the largest SSL/TLS packet that is expected
 	* when using this session.
 	*/
-	@:overload @:synchronized override public function getPacketBufferSize() : Int;
+	@:overload @:public @:synchronized override public function getPacketBufferSize() : Int;
 	
 	/**
 	* Gets the current size of the largest application data that is
 	* expected when using this session.
 	*/
-	@:overload @:synchronized override public function getApplicationBufferSize() : Int;
+	@:overload @:public @:synchronized override public function getApplicationBufferSize() : Int;
 	
 	/**
 	* Gets an array of supported signature algorithms that the local side is
 	* willing to verify.
 	*/
-	@:overload override public function getLocalSupportedSignatureAlgorithms() : java.NativeArray<String>;
+	@:overload @:public override public function getLocalSupportedSignatureAlgorithms() : java.NativeArray<String>;
 	
 	/**
 	* Gets an array of supported signature algorithms that the peer is
 	* able to verify.
 	*/
-	@:overload override public function getPeerSupportedSignatureAlgorithms() : java.NativeArray<String>;
+	@:overload @:public override public function getPeerSupportedSignatureAlgorithms() : java.NativeArray<String>;
 	
 	/** Returns a string representation of this SSL session */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* When SSL sessions are finalized, all values bound to
 	* them are removed.
 	*/
-	@:overload public function finalize() : Void;
+	@:overload @:public public function finalize() : Void;
 	
 	
 }
 @:internal extern class SecureKey
 {
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }

@@ -58,33 +58,33 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class INVOKEINTERFACE extends com.sun.org.apache.bcel.internal.generic.InvokeInstruction
 {
-	@:overload public function new(index : Int, nargs : Int) : Void;
+	@:overload @:public public function new(index : Int, nargs : Int) : Void;
 	
 	/**
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload override public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload @:public override public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* The <B>count</B> argument according to the Java Language Specification,
 	* Second Edition.
 	*/
-	@:overload public function getCount() : Int;
+	@:overload @:public public function getCount() : Int;
 	
 	/**
 	* Read needed data (i.e., index) from file.
 	*/
-	@:overload private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload @:protected private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
 	/**
 	* @return mnemonic for instruction with symbolic references resolved
 	*/
-	@:overload public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
+	@:overload @:public override public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
 	
-	@:overload public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public override public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
-	@:overload public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public override public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -94,7 +94,7 @@ extern class INVOKEINTERFACE extends com.sun.org.apache.bcel.internal.generic.In
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

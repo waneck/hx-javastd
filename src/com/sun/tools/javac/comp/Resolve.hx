@@ -32,25 +32,25 @@ extern class Resolve
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	private static var resolveKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Resolve>;
+	@:protected @:static @:final private static var resolveKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Resolve>;
 	
-	public var boxingEnabled(default, null) : Bool;
+	@:public @:final public var boxingEnabled(default, null) : Bool;
 	
-	public var varargsEnabled(default, null) : Bool;
+	@:public @:final public var varargsEnabled(default, null) : Bool;
 	
-	public var allowMethodHandles(default, null) : Bool;
+	@:public @:final public var allowMethodHandles(default, null) : Bool;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Resolve;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Resolve;
 	
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
 	/** Is class accessible in given evironment?
 	*  @param env    The current environment.
 	*  @param c      The class whose accessibility is checked.
 	*/
-	@:overload public function isAccessible(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, c : TypeSymbol) : Bool;
+	@:overload @:public public function isAccessible(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, c : TypeSymbol) : Bool;
 	
-	@:overload public function isAccessible(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, c : TypeSymbol, checkInner : Bool) : Bool;
+	@:overload @:public public function isAccessible(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, c : TypeSymbol, checkInner : Bool) : Bool;
 	
 	/** Is symbol accessible as a member of given type in given evironment?
 	*  @param env    The current environment.
@@ -58,9 +58,9 @@ extern class Resolve
 	*                as a member.
 	*  @param sym    The symbol.
 	*/
-	@:overload public function isAccessible(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, site : com.sun.tools.javac.code.Type, sym : com.sun.tools.javac.code.Symbol) : Bool;
+	@:overload @:public public function isAccessible(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, site : com.sun.tools.javac.code.Type, sym : com.sun.tools.javac.code.Symbol) : Bool;
 	
-	@:overload public function isAccessible(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, site : com.sun.tools.javac.code.Type, sym : com.sun.tools.javac.code.Symbol, checkInner : Bool) : Bool;
+	@:overload @:public public function isAccessible(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, site : com.sun.tools.javac.code.Type, sym : com.sun.tools.javac.code.Symbol, checkInner : Bool) : Bool;
 	
 	/** Resolve a field identifier, throw a fatal error if not found.
 	*  @param pos       The position to use for error reporting.
@@ -69,14 +69,14 @@ extern class Resolve
 	*                   identifier is searched.
 	*  @param name      The identifier's name.
 	*/
-	@:overload public function resolveInternalField(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, site : com.sun.tools.javac.code.Type, name : com.sun.tools.javac.util.Name) : VarSymbol;
+	@:overload @:public public function resolveInternalField(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, site : com.sun.tools.javac.code.Type, name : com.sun.tools.javac.util.Name) : VarSymbol;
 	
 	/** print all scopes starting with scope s and proceeding outwards.
 	*  used for debugging.
 	*/
-	@:overload public function printscopes(s : com.sun.tools.javac.code.Scope) : Void;
+	@:overload @:public public function printscopes(s : com.sun.tools.javac.code.Scope) : Void;
 	
-	@:overload public function printscopes(t : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function printscopes(t : com.sun.tools.javac.code.Type) : Void;
 	
 	/** Resolve a qualified method identifier, throw a fatal error if not
 	*  found.
@@ -88,7 +88,7 @@ extern class Resolve
 	*  @param argtypes  The types of the invocation's value arguments.
 	*  @param typeargtypes  The types of the invocation's type arguments.
 	*/
-	@:overload public function resolveInternalMethod(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, site : com.sun.tools.javac.code.Type, name : com.sun.tools.javac.util.Name, argtypes : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, typeargtypes : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : MethodSymbol;
+	@:overload @:public public function resolveInternalMethod(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, site : com.sun.tools.javac.code.Type, name : com.sun.tools.javac.util.Name, argtypes : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, typeargtypes : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : MethodSymbol;
 	
 	/** Resolve a constructor, throw a fatal error if not found.
 	*  @param pos       The position to use for error reporting.
@@ -97,20 +97,20 @@ extern class Resolve
 	*  @param argtypes  The types of the invocation's value arguments.
 	*  @param typeargtypes  The types of the invocation's type arguments.
 	*/
-	@:overload public function resolveInternalConstructor(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, site : com.sun.tools.javac.code.Type, argtypes : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, typeargtypes : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : MethodSymbol;
+	@:overload @:public public function resolveInternalConstructor(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, site : com.sun.tools.javac.code.Type, argtypes : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, typeargtypes : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : MethodSymbol;
 	
 	/* ***************************************************************************
 	*  ResolveError classes, indicating error situations when accessing symbols
 	****************************************************************************/
-	@:overload public function logAccessErrorInternal(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, tree : com.sun.tools.javac.tree.JCTree, type : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function logAccessErrorInternal(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, tree : com.sun.tools.javac.tree.JCTree, type : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload public function methodArguments(argtypes : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : Dynamic;
+	@:overload @:public public function methodArguments(argtypes : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : Dynamic;
 	
 	
 }
 @:native('com$sun$tools$javac$comp$Resolve$InapplicableMethodException') extern class Resolve_InapplicableMethodException extends java.lang.RuntimeException
 {
-	@:overload public function getDiagnostic() : com.sun.tools.javac.util.JCDiagnostic;
+	@:overload @:public public function getDiagnostic() : com.sun.tools.javac.util.JCDiagnostic;
 	
 	
 }
@@ -121,11 +121,11 @@ extern class Resolve
 */
 @:native('com$sun$tools$javac$comp$Resolve$ResolveError') @:internal extern class Resolve_ResolveError extends com.sun.tools.javac.code.Symbol
 {
-	@:overload override public function accept<R, P>(v : javax.lang.model.element.ElementVisitor<R, P>, p : P) : R;
+	@:overload @:public override public function accept<R, P>(v : javax.lang.model.element.ElementVisitor<R, P>, p : P) : R;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload override public function exists() : Bool;
+	@:overload @:public override public function exists() : Bool;
 	
 	/**
 	* Create an external representation for this erroneous symbol to be
@@ -136,7 +136,7 @@ extern class Resolve
 	* @param name     the name used during resolution
 	* @param location the location from which the symbol is accessed
 	*/
-	@:overload private function access(name : com.sun.tools.javac.util.Name, location : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : com.sun.tools.javac.code.Symbol;
+	@:overload @:protected private function access(name : com.sun.tools.javac.util.Name, location : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : com.sun.tools.javac.code.Symbol;
 	
 	
 }
@@ -146,11 +146,11 @@ extern class Resolve
 */
 @:native('com$sun$tools$javac$comp$Resolve$InvalidSymbolError') @:internal extern class Resolve_InvalidSymbolError extends com.sun.tools.javac.comp.Resolve.Resolve_ResolveError
 {
-	@:overload override public function exists() : Bool;
+	@:overload @:public override public function exists() : Bool;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload override public function access(name : com.sun.tools.javac.util.Name, location : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : com.sun.tools.javac.code.Symbol;
+	@:overload @:public override public function access(name : com.sun.tools.javac.util.Name, location : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : com.sun.tools.javac.code.Symbol;
 	
 	
 }
@@ -169,9 +169,9 @@ extern class Resolve
 */
 @:native('com$sun$tools$javac$comp$Resolve$InapplicableSymbolError') @:internal extern class Resolve_InapplicableSymbolError extends com.sun.tools.javac.comp.Resolve.Resolve_InvalidSymbolError
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload public function access(name : com.sun.tools.javac.util.Name, location : TypeSymbol) : com.sun.tools.javac.code.Symbol;
+	@:overload @:public public function access(name : com.sun.tools.javac.util.Name, location : TypeSymbol) : com.sun.tools.javac.code.Symbol;
 	
 	
 }
@@ -186,7 +186,7 @@ extern class Resolve
 }
 @:native('com$sun$tools$javac$comp$Resolve$InapplicableSymbolsError$Candidate') @:internal extern class Resolve_InapplicableSymbolsError_Candidate
 {
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }
@@ -196,7 +196,7 @@ extern class Resolve
 */
 @:native('com$sun$tools$javac$comp$Resolve$AccessError') @:internal extern class Resolve_AccessError extends com.sun.tools.javac.comp.Resolve.Resolve_InvalidSymbolError
 {
-	@:overload override public function exists() : Bool;
+	@:overload @:public override public function exists() : Bool;
 	
 	
 }

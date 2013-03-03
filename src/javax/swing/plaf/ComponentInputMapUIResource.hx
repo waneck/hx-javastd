@@ -32,7 +32,7 @@ extern class ComponentInputMapUIResource extends javax.swing.ComponentInputMap i
 	* @author Scott Violet
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(component : javax.swing.JComponent) : Void;
+	@:require(java3) @:overload @:public public function new(component : javax.swing.JComponent) : Void;
 	
 	
 }

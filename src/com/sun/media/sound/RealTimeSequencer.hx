@@ -34,127 +34,127 @@ package com.sun.media.sound;
 @:internal extern class RealTimeSequencer extends com.sun.media.sound.AbstractMidiDevice implements javax.sound.midi.Sequencer implements com.sun.media.sound.AutoConnectSequencer
 {
 	/* ****************************** CONSTRUCTOR ****************************** */
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/* ****************************** SEQUENCER METHODS ******************** */
-	@:overload @:synchronized public function setSequence(sequence : javax.sound.midi.Sequence) : Void;
+	@:overload @:public @:synchronized public function setSequence(sequence : javax.sound.midi.Sequence) : Void;
 	
-	@:overload @:synchronized public function setSequence(stream : java.io.InputStream) : Void;
+	@:overload @:public @:synchronized public function setSequence(stream : java.io.InputStream) : Void;
 	
-	@:overload public function getSequence() : javax.sound.midi.Sequence;
+	@:overload @:public public function getSequence() : javax.sound.midi.Sequence;
 	
-	@:overload @:synchronized public function start() : Void;
+	@:overload @:public @:synchronized public function start() : Void;
 	
-	@:overload @:synchronized public function stop() : Void;
+	@:overload @:public @:synchronized public function stop() : Void;
 	
-	@:overload public function isRunning() : Bool;
+	@:overload @:public public function isRunning() : Bool;
 	
-	@:overload public function startRecording() : Void;
+	@:overload @:public public function startRecording() : Void;
 	
-	@:overload public function stopRecording() : Void;
+	@:overload @:public public function stopRecording() : Void;
 	
-	@:overload public function isRecording() : Bool;
+	@:overload @:public public function isRecording() : Bool;
 	
-	@:overload public function recordEnable(track : javax.sound.midi.Track, channel : Int) : Void;
+	@:overload @:public public function recordEnable(track : javax.sound.midi.Track, channel : Int) : Void;
 	
-	@:overload public function recordDisable(track : javax.sound.midi.Track) : Void;
+	@:overload @:public public function recordDisable(track : javax.sound.midi.Track) : Void;
 	
-	@:overload public function getTempoInBPM() : Single;
+	@:overload @:public public function getTempoInBPM() : Single;
 	
-	@:overload public function setTempoInBPM(bpm : Single) : Void;
+	@:overload @:public public function setTempoInBPM(bpm : Single) : Void;
 	
-	@:overload public function getTempoInMPQ() : Single;
+	@:overload @:public public function getTempoInMPQ() : Single;
 	
-	@:overload public function setTempoInMPQ(mpq : Single) : Void;
+	@:overload @:public public function setTempoInMPQ(mpq : Single) : Void;
 	
-	@:overload public function setTempoFactor(factor : Single) : Void;
+	@:overload @:public public function setTempoFactor(factor : Single) : Void;
 	
-	@:overload public function getTempoFactor() : Single;
+	@:overload @:public public function getTempoFactor() : Single;
 	
-	@:overload public function getTickLength() : haxe.Int64;
+	@:overload @:public public function getTickLength() : haxe.Int64;
 	
-	@:overload @:synchronized public function getTickPosition() : haxe.Int64;
+	@:overload @:public @:synchronized public function getTickPosition() : haxe.Int64;
 	
-	@:overload @:synchronized public function setTickPosition(tick : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function setTickPosition(tick : haxe.Int64) : Void;
 	
-	@:overload public function getMicrosecondLength() : haxe.Int64;
+	@:overload @:public public function getMicrosecondLength() : haxe.Int64;
 	
-	@:overload public function getMicrosecondPosition() : haxe.Int64;
+	@:overload @:public override public function getMicrosecondPosition() : haxe.Int64;
 	
-	@:overload public function setMicrosecondPosition(microseconds : haxe.Int64) : Void;
+	@:overload @:public public function setMicrosecondPosition(microseconds : haxe.Int64) : Void;
 	
-	@:overload public function setMasterSyncMode(sync : javax.sound.midi.Sequencer.Sequencer_SyncMode) : Void;
+	@:overload @:public public function setMasterSyncMode(sync : javax.sound.midi.Sequencer.Sequencer_SyncMode) : Void;
 	
-	@:overload public function getMasterSyncMode() : javax.sound.midi.Sequencer.Sequencer_SyncMode;
+	@:overload @:public public function getMasterSyncMode() : javax.sound.midi.Sequencer.Sequencer_SyncMode;
 	
-	@:overload public function getMasterSyncModes() : java.NativeArray<javax.sound.midi.Sequencer.Sequencer_SyncMode>;
+	@:overload @:public public function getMasterSyncModes() : java.NativeArray<javax.sound.midi.Sequencer.Sequencer_SyncMode>;
 	
-	@:overload public function setSlaveSyncMode(sync : javax.sound.midi.Sequencer.Sequencer_SyncMode) : Void;
+	@:overload @:public public function setSlaveSyncMode(sync : javax.sound.midi.Sequencer.Sequencer_SyncMode) : Void;
 	
-	@:overload public function getSlaveSyncMode() : javax.sound.midi.Sequencer.Sequencer_SyncMode;
+	@:overload @:public public function getSlaveSyncMode() : javax.sound.midi.Sequencer.Sequencer_SyncMode;
 	
-	@:overload public function getSlaveSyncModes() : java.NativeArray<javax.sound.midi.Sequencer.Sequencer_SyncMode>;
+	@:overload @:public public function getSlaveSyncModes() : java.NativeArray<javax.sound.midi.Sequencer.Sequencer_SyncMode>;
 	
-	@:overload private function getTrackCount() : Int;
+	@:overload @:protected private function getTrackCount() : Int;
 	
-	@:overload @:synchronized public function setTrackMute(track : Int, mute : Bool) : Void;
+	@:overload @:public @:synchronized public function setTrackMute(track : Int, mute : Bool) : Void;
 	
-	@:overload @:synchronized public function getTrackMute(track : Int) : Bool;
+	@:overload @:public @:synchronized public function getTrackMute(track : Int) : Bool;
 	
-	@:overload @:synchronized public function setTrackSolo(track : Int, solo : Bool) : Void;
+	@:overload @:public @:synchronized public function setTrackSolo(track : Int, solo : Bool) : Void;
 	
-	@:overload @:synchronized public function getTrackSolo(track : Int) : Bool;
+	@:overload @:public @:synchronized public function getTrackSolo(track : Int) : Bool;
 	
-	@:overload public function addMetaEventListener(listener : javax.sound.midi.MetaEventListener) : Bool;
+	@:overload @:public public function addMetaEventListener(listener : javax.sound.midi.MetaEventListener) : Bool;
 	
-	@:overload public function removeMetaEventListener(listener : javax.sound.midi.MetaEventListener) : Void;
+	@:overload @:public public function removeMetaEventListener(listener : javax.sound.midi.MetaEventListener) : Void;
 	
-	@:overload public function addControllerEventListener(listener : javax.sound.midi.ControllerEventListener, controllers : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public public function addControllerEventListener(listener : javax.sound.midi.ControllerEventListener, controllers : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
-	@:overload public function removeControllerEventListener(listener : javax.sound.midi.ControllerEventListener, controllers : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public public function removeControllerEventListener(listener : javax.sound.midi.ControllerEventListener, controllers : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
-	@:overload public function setLoopStartPoint(tick : haxe.Int64) : Void;
+	@:overload @:public public function setLoopStartPoint(tick : haxe.Int64) : Void;
 	
-	@:overload public function getLoopStartPoint() : haxe.Int64;
+	@:overload @:public public function getLoopStartPoint() : haxe.Int64;
 	
-	@:overload public function setLoopEndPoint(tick : haxe.Int64) : Void;
+	@:overload @:public public function setLoopEndPoint(tick : haxe.Int64) : Void;
 	
-	@:overload public function getLoopEndPoint() : haxe.Int64;
+	@:overload @:public public function getLoopEndPoint() : haxe.Int64;
 	
-	@:overload public function setLoopCount(count : Int) : Void;
+	@:overload @:public public function setLoopCount(count : Int) : Void;
 	
-	@:overload public function getLoopCount() : Int;
+	@:overload @:public public function getLoopCount() : Int;
 	
 	/*
 	*/
-	@:overload private function implOpen() : Void;
+	@:overload @:protected override private function implOpen() : Void;
 	
-	@:overload @:synchronized private function implClose() : Void;
+	@:overload @:protected @:synchronized override private function implClose() : Void;
 	
-	@:overload private function implStart() : Void;
+	@:overload @:protected private function implStart() : Void;
 	
-	@:overload private function implStop() : Void;
+	@:overload @:protected private function implStop() : Void;
 	
 	/**
 	* Send midi player events.
 	* must not be synchronized on "this"
 	*/
-	@:overload private function sendMetaEvents(message : javax.sound.midi.MidiMessage) : Void;
+	@:overload @:protected private function sendMetaEvents(message : javax.sound.midi.MidiMessage) : Void;
 	
 	/**
 	* Send midi player events.
 	*/
-	@:overload private function sendControllerEvents(message : javax.sound.midi.MidiMessage) : Void;
+	@:overload @:protected private function sendControllerEvents(message : javax.sound.midi.MidiMessage) : Void;
 	
-	@:overload private function hasReceivers() : Bool;
+	@:overload @:protected override private function hasReceivers() : Bool;
 	
-	@:overload private function createReceiver() : javax.sound.midi.Receiver;
+	@:overload @:protected override private function createReceiver() : javax.sound.midi.Receiver;
 	
-	@:overload private function hasTransmitters() : Bool;
+	@:overload @:protected override private function hasTransmitters() : Bool;
 	
-	@:overload private function createTransmitter() : javax.sound.midi.Transmitter;
+	@:overload @:protected override private function createTransmitter() : javax.sound.midi.Transmitter;
 	
-	@:overload public function setAutoConnect(autoConnectedReceiver : javax.sound.midi.Receiver) : Void;
+	@:overload @:public public function setAutoConnect(autoConnectedReceiver : javax.sound.midi.Receiver) : Void;
 	
 	
 }
@@ -168,7 +168,7 @@ package com.sun.media.sound;
 }
 @:native('com$sun$media$sound$RealTimeSequencer$SequencerReceiver') @:internal extern class RealTimeSequencer_SequencerReceiver extends com.sun.media.sound.AbstractMidiDevice.AbstractMidiDevice_AbstractReceiver
 {
-	@:overload private function implSend(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
+	@:overload @:protected override private function implSend(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
 	
 	
 }
@@ -192,7 +192,7 @@ package com.sun.media.sound;
 	* Make sure to NOT synchronize on RealTimeSequencer
 	* anywhere here (even implicit). That is a sure deadlock!
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

@@ -72,7 +72,7 @@ package java.lang.management;
 	*
 	* @return the total number of collections that have occurred.
 	*/
-	@:overload public function getCollectionCount() : haxe.Int64;
+	@:overload @:public public function getCollectionCount() : haxe.Int64;
 	
 	/**
 	* Returns the approximate accumulated collection elapsed time
@@ -87,7 +87,7 @@ package java.lang.management;
 	* @return the approximate accumulated collection elapsed time
 	* in milliseconds.
 	*/
-	@:overload public function getCollectionTime() : haxe.Int64;
+	@:overload @:public public function getCollectionTime() : haxe.Int64;
 	
 	
 }

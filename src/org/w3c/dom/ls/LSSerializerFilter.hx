@@ -55,7 +55,7 @@ extern interface LSSerializerFilter extends org.w3c.dom.traversal.NodeFilter
 	* <br> The constants used here are defined in [<a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113'>DOM Level 2 Traversal and      Range</a>]
 	* .
 	*/
-	@:overload public function getWhatToShow() : Int;
+	@:overload @:public public function getWhatToShow() : Int;
 	
 	
 }

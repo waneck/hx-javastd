@@ -25,37 +25,37 @@ package com.sun.xml.internal.ws.resources;
 */
 extern class SenderMessages
 {
-	@:overload public static function localizableSENDER_REQUEST_ILLEGAL_VALUE_FOR_CONTENT_NEGOTIATION(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableSENDER_REQUEST_ILLEGAL_VALUE_FOR_CONTENT_NEGOTIATION(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* illegal value for content negotiation property "{0}"
 	*
 	*/
-	@:overload public static function SENDER_REQUEST_ILLEGAL_VALUE_FOR_CONTENT_NEGOTIATION(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function SENDER_REQUEST_ILLEGAL_VALUE_FOR_CONTENT_NEGOTIATION(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableSENDER_RESPONSE_CANNOT_DECODE_FAULT_DETAIL() : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableSENDER_RESPONSE_CANNOT_DECODE_FAULT_DETAIL() : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* fault detail cannot be decoded
 	*
 	*/
-	@:overload public static function SENDER_RESPONSE_CANNOT_DECODE_FAULT_DETAIL() : String;
+	@:overload @:public @:static public static function SENDER_RESPONSE_CANNOT_DECODE_FAULT_DETAIL() : String;
 	
-	@:overload public static function localizableSENDER_NESTED_ERROR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableSENDER_NESTED_ERROR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* sender error: {0}
 	*
 	*/
-	@:overload public static function SENDER_NESTED_ERROR(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function SENDER_NESTED_ERROR(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableSENDER_REQUEST_MESSAGE_NOT_READY() : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableSENDER_REQUEST_MESSAGE_NOT_READY() : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* message not ready to be sent
 	*
 	*/
-	@:overload public static function SENDER_REQUEST_MESSAGE_NOT_READY() : String;
+	@:overload @:public @:static public static function SENDER_REQUEST_MESSAGE_NOT_READY() : String;
 	
 	
 }

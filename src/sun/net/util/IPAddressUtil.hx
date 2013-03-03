@@ -32,7 +32,7 @@ extern class IPAddressUtil
 	* @param src a String representing an IPv4 address in standard format
 	* @return a byte array representing the IPv4 numeric address
 	*/
-	@:overload public static function textToNumericFormatV4(src : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function textToNumericFormatV4(src : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/*
 	* Convert IPv6 presentation level address to network order binary form.
@@ -44,19 +44,19 @@ extern class IPAddressUtil
 	* @param src a String representing an IPv6 address in textual format
 	* @return a byte array representing the IPv6 numeric address
 	*/
-	@:overload public static function textToNumericFormatV6(src : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function textToNumericFormatV6(src : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* @param src a String representing an IPv4 address in textual format
 	* @return a boolean indicating whether src is an IPv4 literal address
 	*/
-	@:overload public static function isIPv4LiteralAddress(src : String) : Bool;
+	@:overload @:public @:static public static function isIPv4LiteralAddress(src : String) : Bool;
 	
 	/**
 	* @param src a String representing an IPv6 address in textual format
 	* @return a boolean indicating whether src is an IPv6 literal address
 	*/
-	@:overload public static function isIPv6LiteralAddress(src : String) : Bool;
+	@:overload @:public @:static public static function isIPv6LiteralAddress(src : String) : Bool;
 	
 	/*
 	* Convert IPv4-Mapped address to IPv4 address. Both input and
@@ -65,7 +65,7 @@ extern class IPAddressUtil
 	* @param src a String representing an IPv4-Mapped address in textual format
 	* @return a byte array representing the IPv4 numeric address
 	*/
-	@:overload public static function convertFromIPv4MappedAddress(addr : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function convertFromIPv4MappedAddress(addr : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

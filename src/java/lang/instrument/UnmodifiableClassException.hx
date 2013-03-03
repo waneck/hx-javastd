@@ -37,7 +37,7 @@ package java.lang.instrument;
 	* Constructs an <code>UnmodifiableClassException</code> with no
 	* detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>UnmodifiableClassException</code> with the
@@ -45,7 +45,7 @@ package java.lang.instrument;
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

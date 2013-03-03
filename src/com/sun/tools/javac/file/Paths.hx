@@ -36,29 +36,29 @@ package com.sun.tools.javac.file;
 extern class Paths
 {
 	/** The context key for the todo list */
-	private static var pathsKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.file.Paths>;
+	@:protected @:static @:final private static var pathsKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.file.Paths>;
 	
 	/** Get the Paths instance for this context.
 	*  @param context the context
 	*  @return the Paths instance for this context
 	*/
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.file.Paths;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.file.Paths;
 	
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function isDefaultBootClassPath() : Bool;
+	@:overload @:public public function isDefaultBootClassPath() : Bool;
 	
-	@:overload private function lazy() : Void;
+	@:overload @:protected private function lazy() : Void;
 	
-	@:overload public function bootClassPath() : java.util.Collection<java.io.File>;
+	@:overload @:public public function bootClassPath() : java.util.Collection<java.io.File>;
 	
-	@:overload public function userClassPath() : java.util.Collection<java.io.File>;
+	@:overload @:public public function userClassPath() : java.util.Collection<java.io.File>;
 	
-	@:overload public function sourcePath() : java.util.Collection<java.io.File>;
+	@:overload @:public public function sourcePath() : java.util.Collection<java.io.File>;
 	
-	@:overload public function sourceSearchPath() : java.util.Collection<java.io.File>;
+	@:overload @:public public function sourceSearchPath() : java.util.Collection<java.io.File>;
 	
-	@:overload public function classSearchPath() : java.util.Collection<java.io.File>;
+	@:overload @:public public function classSearchPath() : java.util.Collection<java.io.File>;
 	
 	/**
 	* Utility method for converting a search path string to an array
@@ -69,27 +69,27 @@ extern class Paths
 	* @param path the search path string
 	* @return the resulting array of directory and JAR file URLs
 	*/
-	@:overload public static function pathToURLs(path : String) : java.NativeArray<java.net.URL>;
+	@:overload @:public @:static public static function pathToURLs(path : String) : java.NativeArray<java.net.URL>;
 	
 	
 }
 @:native('com$sun$tools$javac$file$Paths$Path') @:internal extern class Paths_Path extends java.util.LinkedHashSet<java.io.File>
 {
-	@:overload public function expandJarClassPaths(x : Bool) : com.sun.tools.javac.file.Paths.Paths_Path;
+	@:overload @:public public function expandJarClassPaths(x : Bool) : com.sun.tools.javac.file.Paths.Paths_Path;
 	
-	@:overload public function emptyPathDefault(x : java.io.File) : com.sun.tools.javac.file.Paths.Paths_Path;
+	@:overload @:public public function emptyPathDefault(x : java.io.File) : com.sun.tools.javac.file.Paths.Paths_Path;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function addDirectories(dirs : String, warn : Bool) : com.sun.tools.javac.file.Paths.Paths_Path;
+	@:overload @:public public function addDirectories(dirs : String, warn : Bool) : com.sun.tools.javac.file.Paths.Paths_Path;
 	
-	@:overload public function addDirectories(dirs : String) : com.sun.tools.javac.file.Paths.Paths_Path;
+	@:overload @:public public function addDirectories(dirs : String) : com.sun.tools.javac.file.Paths.Paths_Path;
 	
-	@:overload public function addFiles(files : String, warn : Bool) : com.sun.tools.javac.file.Paths.Paths_Path;
+	@:overload @:public public function addFiles(files : String, warn : Bool) : com.sun.tools.javac.file.Paths.Paths_Path;
 	
-	@:overload public function addFiles(files : String) : com.sun.tools.javac.file.Paths.Paths_Path;
+	@:overload @:public public function addFiles(files : String) : com.sun.tools.javac.file.Paths.Paths_Path;
 	
-	@:overload public function addFile(file : java.io.File, warn : Bool) : Void;
+	@:overload @:public public function addFile(file : java.io.File, warn : Bool) : Void;
 	
 	
 }

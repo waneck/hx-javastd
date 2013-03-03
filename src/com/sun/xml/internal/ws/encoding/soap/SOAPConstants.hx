@@ -29,45 +29,45 @@ extern class SOAPConstants
 	*
 	* @author WS Development Team
 	*/
-	public static var URI_ENVELOPE(default, null) : String;
+	@:public @:static @:final public static var URI_ENVELOPE(default, null) : String;
 	
-	public static var URI_HTTP(default, null) : String;
+	@:public @:static @:final public static var URI_HTTP(default, null) : String;
 	
-	public static var URI_ENCODING(default, null) : String;
+	@:public @:static @:final public static var URI_ENCODING(default, null) : String;
 	
-	public static var NS_WSDL_SOAP(default, null) : String;
+	@:public @:static @:final public static var NS_WSDL_SOAP(default, null) : String;
 	
-	public static var QNAME_ENVELOPE_ENCODINGSTYLE(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var QNAME_ENVELOPE_ENCODINGSTYLE(default, null) : javax.xml.namespace.QName;
 	
-	public static var QNAME_SOAP_ENVELOPE(default, null) : javax.xml.namespace.QName;
+	@:public @:final @:static public static var QNAME_SOAP_ENVELOPE(default, null) : javax.xml.namespace.QName;
 	
-	public static var QNAME_SOAP_HEADER(default, null) : javax.xml.namespace.QName;
+	@:public @:final @:static public static var QNAME_SOAP_HEADER(default, null) : javax.xml.namespace.QName;
 	
-	public static var QNAME_MUSTUNDERSTAND(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var QNAME_MUSTUNDERSTAND(default, null) : javax.xml.namespace.QName;
 	
-	public static var QNAME_ROLE(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var QNAME_ROLE(default, null) : javax.xml.namespace.QName;
 	
-	public static var QNAME_SOAP_BODY(default, null) : javax.xml.namespace.QName;
+	@:public @:final @:static public static var QNAME_SOAP_BODY(default, null) : javax.xml.namespace.QName;
 	
-	public static var QNAME_SOAP_FAULT(default, null) : javax.xml.namespace.QName;
+	@:public @:final @:static public static var QNAME_SOAP_FAULT(default, null) : javax.xml.namespace.QName;
 	
-	public static var QNAME_SOAP_FAULT_CODE(default, null) : javax.xml.namespace.QName;
+	@:public @:final @:static public static var QNAME_SOAP_FAULT_CODE(default, null) : javax.xml.namespace.QName;
 	
-	public static var QNAME_SOAP_FAULT_STRING(default, null) : javax.xml.namespace.QName;
+	@:public @:final @:static public static var QNAME_SOAP_FAULT_STRING(default, null) : javax.xml.namespace.QName;
 	
-	public static var QNAME_SOAP_FAULT_ACTOR(default, null) : javax.xml.namespace.QName;
+	@:public @:final @:static public static var QNAME_SOAP_FAULT_ACTOR(default, null) : javax.xml.namespace.QName;
 	
-	public static var QNAME_SOAP_FAULT_DETAIL(default, null) : javax.xml.namespace.QName;
+	@:public @:final @:static public static var QNAME_SOAP_FAULT_DETAIL(default, null) : javax.xml.namespace.QName;
 	
-	public static var FAULT_CODE_MUST_UNDERSTAND(default, null) : javax.xml.namespace.QName;
+	@:public @:final @:static public static var FAULT_CODE_MUST_UNDERSTAND(default, null) : javax.xml.namespace.QName;
 	
-	public static var FAULT_CODE_VERSION_MISMATCH(default, null) : javax.xml.namespace.QName;
+	@:public @:final @:static public static var FAULT_CODE_VERSION_MISMATCH(default, null) : javax.xml.namespace.QName;
 	
-	public static var FAULT_CODE_DATA_ENCODING_UNKNOWN(default, null) : javax.xml.namespace.QName;
+	@:public @:final @:static public static var FAULT_CODE_DATA_ENCODING_UNKNOWN(default, null) : javax.xml.namespace.QName;
 	
-	public static var FAULT_CODE_PROCEDURE_NOT_PRESENT(default, null) : javax.xml.namespace.QName;
+	@:public @:final @:static public static var FAULT_CODE_PROCEDURE_NOT_PRESENT(default, null) : javax.xml.namespace.QName;
 	
-	public static var FAULT_CODE_BAD_ARGUMENTS(default, null) : javax.xml.namespace.QName;
+	@:public @:final @:static public static var FAULT_CODE_BAD_ARGUMENTS(default, null) : javax.xml.namespace.QName;
 	
 	
 }

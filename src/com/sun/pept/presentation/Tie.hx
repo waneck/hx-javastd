@@ -45,7 +45,7 @@ extern interface Tie
 	* @param servant ...
 	* </p>
 	*/
-	@:overload public function _setServant(servant : Dynamic) : Void;
+	@:overload @:public public function _setServant(servant : Dynamic) : Void;
 	
 	/**
 	* <p>
@@ -55,7 +55,7 @@ extern interface Tie
 	* @return a Object with ...
 	* </p>
 	*/
-	@:overload public function _getServant() : Dynamic;
+	@:overload @:public public function _getServant() : Dynamic;
 	
 	/**
 	* <p>
@@ -67,7 +67,7 @@ extern interface Tie
 	* @param messageInfo ...
 	* </p>
 	*/
-	@:overload public function _invoke(messageInfo : com.sun.pept.ept.MessageInfo) : Void;
+	@:overload @:public public function _invoke(messageInfo : com.sun.pept.ept.MessageInfo) : Void;
 	
 	
 }

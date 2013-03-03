@@ -179,82 +179,82 @@ package javax.swing;
 	/**
 	* Specifies the top edge of a component's bounding rectangle.
 	*/
-	public static var NORTH(default, null) : String;
+	@:public @:static @:final public static var NORTH(default, null) : String;
 	
 	/**
 	* Specifies the bottom edge of a component's bounding rectangle.
 	*/
-	public static var SOUTH(default, null) : String;
+	@:public @:static @:final public static var SOUTH(default, null) : String;
 	
 	/**
 	* Specifies the right edge of a component's bounding rectangle.
 	*/
-	public static var EAST(default, null) : String;
+	@:public @:static @:final public static var EAST(default, null) : String;
 	
 	/**
 	* Specifies the left edge of a component's bounding rectangle.
 	*/
-	public static var WEST(default, null) : String;
+	@:public @:static @:final public static var WEST(default, null) : String;
 	
 	/**
 	* Specifies the horizontal center of a component's bounding rectangle.
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var HORIZONTAL_CENTER(default, null) : String;
+	@:require(java6) @:public @:static @:final public static var HORIZONTAL_CENTER(default, null) : String;
 	
 	/**
 	* Specifies the vertical center of a component's bounding rectangle.
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var VERTICAL_CENTER(default, null) : String;
+	@:require(java6) @:public @:static @:final public static var VERTICAL_CENTER(default, null) : String;
 	
 	/**
 	* Specifies the baseline of a component.
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var BASELINE(default, null) : String;
+	@:require(java6) @:public @:static @:final public static var BASELINE(default, null) : String;
 	
 	/**
 	* Specifies the width of a component's bounding rectangle.
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var WIDTH(default, null) : String;
+	@:require(java6) @:public @:static @:final public static var WIDTH(default, null) : String;
 	
 	/**
 	* Specifies the height of a component's bounding rectangle.
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var HEIGHT(default, null) : String;
+	@:require(java6) @:public @:static @:final public static var HEIGHT(default, null) : String;
 	
 	/**
 	* Constructs a new <code>SpringLayout</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Has no effect,
 	* since this layout manager does not
 	* use a per-component string.
 	*/
-	@:overload public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
 	
 	/**
 	* Removes the constraints associated with the specified component.
 	*
 	* @param c the component being removed from the container
 	*/
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
-	@:overload public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function maximumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function maximumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* If <code>constraints</code> is an instance of
@@ -266,19 +266,19 @@ package javax.swing;
 	*
 	* @see SpringLayout.Constraints
 	*/
-	@:overload public function addLayoutComponent(component : java.awt.Component, constraints : Dynamic) : Void;
+	@:overload @:public public function addLayoutComponent(component : java.awt.Component, constraints : Dynamic) : Void;
 	
 	/**
 	* Returns 0.5f (centered).
 	*/
-	@:overload public function getLayoutAlignmentX(p : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentX(p : java.awt.Container) : Single;
 	
 	/**
 	* Returns 0.5f (centered).
 	*/
-	@:overload public function getLayoutAlignmentY(p : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentY(p : java.awt.Container) : Single;
 	
-	@:overload public function invalidateLayout(p : java.awt.Container) : Void;
+	@:overload @:public public function invalidateLayout(p : java.awt.Container) : Void;
 	
 	/**
 	* Links edge <code>e1</code> of component <code>c1</code> to
@@ -297,7 +297,7 @@ package javax.swing;
 	*
 	* @see #putConstraint(String, Component, Spring, String, Component)
 	*/
-	@:overload public function putConstraint(e1 : String, c1 : java.awt.Component, pad : Int, e2 : String, c2 : java.awt.Component) : Void;
+	@:overload @:public public function putConstraint(e1 : String, c1 : java.awt.Component, pad : Int, e2 : String, c2 : java.awt.Component) : Void;
 	
 	/**
 	* Links edge <code>e1</code> of component <code>c1</code> to
@@ -329,7 +329,7 @@ package javax.swing;
 	* @see #HORIZONTAL_CENTER
 	* @see #BASELINE
 	*/
-	@:overload public function putConstraint(e1 : String, c1 : java.awt.Component, s : javax.swing.Spring, e2 : String, c2 : java.awt.Component) : Void;
+	@:overload @:public public function putConstraint(e1 : String, c1 : java.awt.Component, s : javax.swing.Spring, e2 : String, c2 : java.awt.Component) : Void;
 	
 	/**
 	* Returns the constraints for the specified component.
@@ -353,7 +353,7 @@ package javax.swing;
 	*
 	* @return      the constraints for the specified component
 	*/
-	@:overload public function getConstraints(c : java.awt.Component) : javax.swing.SpringLayout.SpringLayout_Constraints;
+	@:overload @:public public function getConstraints(c : java.awt.Component) : javax.swing.SpringLayout.SpringLayout_Constraints;
 	
 	/**
 	* Returns the spring controlling the distance between
@@ -391,9 +391,9 @@ package javax.swing;
 	* @see #HORIZONTAL_CENTER
 	* @see #BASELINE
 	*/
-	@:overload public function getConstraint(edgeName : String, c : java.awt.Component) : javax.swing.Spring;
+	@:overload @:public public function getConstraint(edgeName : String, c : java.awt.Component) : javax.swing.Spring;
 	
-	@:overload public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(parent : java.awt.Container) : Void;
 	
 	
 }
@@ -466,7 +466,7 @@ package javax.swing;
 	/**
 	* Creates an empty <code>Constraints</code> object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>Constraints</code> object with the
@@ -478,7 +478,7 @@ package javax.swing;
 	* @param x  the spring controlling the component's <em>x</em> value
 	* @param y  the spring controlling the component's <em>y</em> value
 	*/
-	@:overload public function new(x : javax.swing.Spring, y : javax.swing.Spring) : Void;
+	@:overload @:public public function new(x : javax.swing.Spring, y : javax.swing.Spring) : Void;
 	
 	/**
 	* Creates a <code>Constraints</code> object with the
@@ -495,7 +495,7 @@ package javax.swing;
 	* @param width  the spring value for the <code>width</code> property
 	* @param height  the spring value for the <code>height</code> property
 	*/
-	@:overload public function new(x : javax.swing.Spring, y : javax.swing.Spring, width : javax.swing.Spring, height : javax.swing.Spring) : Void;
+	@:overload @:public public function new(x : javax.swing.Spring, y : javax.swing.Spring, width : javax.swing.Spring, height : javax.swing.Spring) : Void;
 	
 	/**
 	* Creates a <code>Constraints</code> object with
@@ -513,7 +513,7 @@ package javax.swing;
 	* @throws NullPointerException if <code>c</code> is null.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(c : java.awt.Component) : Void;
+	@:require(java5) @:overload @:public public function new(c : java.awt.Component) : Void;
 	
 	/**
 	* Sets the <code>x</code> property,
@@ -526,7 +526,7 @@ package javax.swing;
 	* @see #getX
 	* @see SpringLayout.Constraints
 	*/
-	@:overload public function setX(x : javax.swing.Spring) : Void;
+	@:overload @:public public function setX(x : javax.swing.Spring) : Void;
 	
 	/**
 	* Returns the value of the <code>x</code> property.
@@ -537,7 +537,7 @@ package javax.swing;
 	* @see #setX
 	* @see SpringLayout.Constraints
 	*/
-	@:overload public function getX() : javax.swing.Spring;
+	@:overload @:public public function getX() : javax.swing.Spring;
 	
 	/**
 	* Sets the <code>y</code> property,
@@ -550,7 +550,7 @@ package javax.swing;
 	* @see #getY
 	* @see SpringLayout.Constraints
 	*/
-	@:overload public function setY(y : javax.swing.Spring) : Void;
+	@:overload @:public public function setY(y : javax.swing.Spring) : Void;
 	
 	/**
 	* Returns the value of the <code>y</code> property.
@@ -561,7 +561,7 @@ package javax.swing;
 	* @see #setY
 	* @see SpringLayout.Constraints
 	*/
-	@:overload public function getY() : javax.swing.Spring;
+	@:overload @:public public function getY() : javax.swing.Spring;
 	
 	/**
 	* Sets the <code>width</code> property,
@@ -573,7 +573,7 @@ package javax.swing;
 	* @see #getWidth
 	* @see SpringLayout.Constraints
 	*/
-	@:overload public function setWidth(width : javax.swing.Spring) : Void;
+	@:overload @:public public function setWidth(width : javax.swing.Spring) : Void;
 	
 	/**
 	* Returns the value of the <code>width</code> property.
@@ -583,7 +583,7 @@ package javax.swing;
 	* @see #setWidth
 	* @see SpringLayout.Constraints
 	*/
-	@:overload public function getWidth() : javax.swing.Spring;
+	@:overload @:public public function getWidth() : javax.swing.Spring;
 	
 	/**
 	* Sets the <code>height</code> property,
@@ -595,7 +595,7 @@ package javax.swing;
 	* @see #getHeight
 	* @see SpringLayout.Constraints
 	*/
-	@:overload public function setHeight(height : javax.swing.Spring) : Void;
+	@:overload @:public public function setHeight(height : javax.swing.Spring) : Void;
 	
 	/**
 	* Returns the value of the <code>height</code> property.
@@ -605,7 +605,7 @@ package javax.swing;
 	* @see #setHeight
 	* @see SpringLayout.Constraints
 	*/
-	@:overload public function getHeight() : javax.swing.Spring;
+	@:overload @:public public function getHeight() : javax.swing.Spring;
 	
 	/**
 	* Sets the spring controlling the specified edge.
@@ -643,7 +643,7 @@ package javax.swing;
 	* @see #HEIGHT
 	* @see SpringLayout.Constraints
 	*/
-	@:overload public function setConstraint(edgeName : String, s : javax.swing.Spring) : Void;
+	@:overload @:public public function setConstraint(edgeName : String, s : javax.swing.Spring) : Void;
 	
 	/**
 	* Returns the value of the specified edge, which may be
@@ -681,25 +681,25 @@ package javax.swing;
 	* @see #HEIGHT
 	* @see SpringLayout.Constraints
 	*/
-	@:overload public function getConstraint(edgeName : String) : javax.swing.Spring;
+	@:overload @:public public function getConstraint(edgeName : String) : javax.swing.Spring;
 	
 	
 }
 @:native('javax$swing$SpringLayout$SpringProxy') @:internal extern class SpringLayout_SpringProxy extends javax.swing.Spring
 {
-	@:overload public function new(edgeName : String, c : java.awt.Component, l : javax.swing.SpringLayout) : Void;
+	@:overload @:public public function new(edgeName : String, c : java.awt.Component, l : javax.swing.SpringLayout) : Void;
 	
-	@:overload override public function getMinimumValue() : Int;
+	@:overload @:public override public function getMinimumValue() : Int;
 	
-	@:overload override public function getPreferredValue() : Int;
+	@:overload @:public override public function getPreferredValue() : Int;
 	
-	@:overload override public function getMaximumValue() : Int;
+	@:overload @:public override public function getMaximumValue() : Int;
 	
-	@:overload override public function getValue() : Int;
+	@:overload @:public override public function getValue() : Int;
 	
-	@:overload override public function setValue(size : Int) : Void;
+	@:overload @:public override public function setValue(size : Int) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

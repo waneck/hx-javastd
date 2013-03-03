@@ -25,7 +25,7 @@ package com.sun.tools.internal.xjc.reader.internalizer;
 */
 @:internal extern class DOMForestParser implements com.sun.xml.internal.xsom.parser.XMLParser
 {
-	@:overload public function parse(source : org.xml.sax.InputSource, contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, entityResolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function parse(source : org.xml.sax.InputSource, contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, entityResolver : org.xml.sax.EntityResolver) : Void;
 	
 	
 }

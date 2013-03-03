@@ -27,24 +27,24 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* Construct an alternative pattern. The method <code>setParent</code>
 	* should not be called in this case.
 	*/
-	@:overload public function new(left : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern, right : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern) : Void;
+	@:overload @:public public function new(left : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern, right : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern) : Void;
 	
-	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload public function getLeft() : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern;
+	@:overload @:public public function getLeft() : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern;
 	
-	@:overload public function getRight() : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern;
+	@:overload @:public public function getRight() : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern;
 	
 	/**
 	* The type of an '|' is not really defined, hence null is returned.
 	*/
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload override public function getPriority() : Float;
+	@:overload @:public override public function getPriority() : Float;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

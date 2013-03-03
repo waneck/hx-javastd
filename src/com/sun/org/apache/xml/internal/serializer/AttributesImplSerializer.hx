@@ -29,7 +29,7 @@ extern class AttributesImplSerializer extends org.xml.sax.helpers.AttributesImpl
 	* @return the integer index of the attribute.
 	* @see org.xml.sax.Attributes#getIndex(String)
 	*/
-	@:overload @:final override public function getIndex(qname : String) : Int;
+	@:overload @:public @:final override public function getIndex(qname : String) : Int;
 	
 	/**
 	* This method adds the attribute, but also records its qName/index pair in
@@ -43,14 +43,14 @@ extern class AttributesImplSerializer extends org.xml.sax.helpers.AttributesImpl
 	* @see org.xml.sax.helpers.AttributesImpl#addAttribute(String, String, String, String, String)
 	* @see #getIndex(String)
 	*/
-	@:overload @:final override public function addAttribute(uri : String, local : String, qname : String, type : String, val : String) : Void;
+	@:overload @:public @:final override public function addAttribute(uri : String, local : String, qname : String, type : String, val : String) : Void;
 	
 	/**
 	* This method clears the accumulated attributes.
 	*
 	* @see org.xml.sax.helpers.AttributesImpl#clear()
 	*/
-	@:overload @:final override public function clear() : Void;
+	@:overload @:public @:final override public function clear() : Void;
 	
 	/**
 	* This method sets the attributes, previous attributes are cleared,
@@ -60,7 +60,7 @@ extern class AttributesImplSerializer extends org.xml.sax.helpers.AttributesImpl
 	* @see org.xml.sax.helpers.AttributesImpl#setAttributes(Attributes)
 	* @see #getIndex(String)
 	*/
-	@:overload @:final override public function setAttributes(atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public @:final override public function setAttributes(atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* This method gets the index of an attribute given its uri and locanName.
@@ -69,7 +69,7 @@ extern class AttributesImplSerializer extends org.xml.sax.helpers.AttributesImpl
 	* @return the integer index of the attribute.
 	* @see org.xml.sax.Attributes#getIndex(String)
 	*/
-	@:overload @:final override public function getIndex(uri : String, localName : String) : Int;
+	@:overload @:public @:final override public function getIndex(uri : String, localName : String) : Int;
 	
 	
 }

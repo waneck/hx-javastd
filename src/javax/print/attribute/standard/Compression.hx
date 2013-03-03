@@ -28,23 +28,23 @@ extern class Compression extends javax.print.attribute.EnumSyntax implements jav
 	/**
 	* No compression is used.
 	*/
-	public static var NONE(default, null) : javax.print.attribute.standard.Compression;
+	@:public @:static @:final public static var NONE(default, null) : javax.print.attribute.standard.Compression;
 	
 	/**
 	* ZIP public domain inflate/deflate compression technology.
 	*/
-	public static var DEFLATE(default, null) : javax.print.attribute.standard.Compression;
+	@:public @:static @:final public static var DEFLATE(default, null) : javax.print.attribute.standard.Compression;
 	
 	/**
 	* GNU zip compression technology described in
 	* <A HREF="http://www.ietf.org/rfc/rfc1952.txt">RFC 1952</A>.
 	*/
-	public static var GZIP(default, null) : javax.print.attribute.standard.Compression;
+	@:public @:static @:final public static var GZIP(default, null) : javax.print.attribute.standard.Compression;
 	
 	/**
 	* UNIX compression technology.
 	*/
-	public static var COMPRESS(default, null) : javax.print.attribute.standard.Compression;
+	@:public @:static @:final public static var COMPRESS(default, null) : javax.print.attribute.standard.Compression;
 	
 	/**
 	* Construct a new compression enumeration value with the given integer
@@ -52,17 +52,17 @@ extern class Compression extends javax.print.attribute.EnumSyntax implements jav
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class Compression.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class Compression.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -74,7 +74,7 @@ extern class Compression extends javax.print.attribute.EnumSyntax implements jav
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -85,7 +85,7 @@ extern class Compression extends javax.print.attribute.EnumSyntax implements jav
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

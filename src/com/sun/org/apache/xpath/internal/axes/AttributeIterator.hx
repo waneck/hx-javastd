@@ -26,7 +26,7 @@ extern class AttributeIterator extends com.sun.org.apache.xpath.internal.axes.Ch
 	/**
 	* Get the next node via getFirstAttribute && getNextAttribute.
 	*/
-	@:overload private function getNextNode() : Int;
+	@:overload @:protected override private function getNextNode() : Int;
 	
 	/**
 	* Returns the axis being iterated, if it is known.
@@ -34,7 +34,7 @@ extern class AttributeIterator extends com.sun.org.apache.xpath.internal.axes.Ch
 	* @return Axis.CHILD, etc., or -1 if the axis is not known or is of multiple
 	* types.
 	*/
-	@:overload override public function getAxis() : Int;
+	@:overload @:public override public function getAxis() : Int;
 	
 	
 }

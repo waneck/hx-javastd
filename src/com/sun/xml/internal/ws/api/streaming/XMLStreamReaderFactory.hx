@@ -29,17 +29,17 @@ extern class XMLStreamReaderFactory
 	* Overrides the singleton {@link XMLStreamReaderFactory} instance that
 	* the JAX-WS RI uses.
 	*/
-	@:overload public static function set(f : com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory) : Void;
+	@:overload @:public @:static public static function set(f : com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory) : Void;
 	
-	@:overload public static function get() : com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory;
+	@:overload @:public @:static public static function get() : com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory;
 	
-	@:overload public static function create(source : org.xml.sax.InputSource, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:static public static function create(source : org.xml.sax.InputSource, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
-	@:overload public static function create(systemId : String, _in : java.io.InputStream, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:static public static function create(systemId : String, _in : java.io.InputStream, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
-	@:overload public static function create(systemId : String, _in : java.io.InputStream, encoding : String, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:static public static function create(systemId : String, _in : java.io.InputStream, encoding : String, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
-	@:overload public static function create(systemId : String, reader : java.io.Reader, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:static public static function create(systemId : String, reader : java.io.Reader, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* Should be invoked when the code finished using an {@link XMLStreamReader}.
@@ -64,13 +64,13 @@ extern class XMLStreamReaderFactory
 	*      the ones that were created from this factory. So the implementation
 	*      of this class needs to be aware of that.
 	*/
-	@:overload public static function recycle(r : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public @:static public static function recycle(r : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload @:abstract public function doCreate(systemId : String, _in : java.io.InputStream, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:abstract public function doCreate(systemId : String, _in : java.io.InputStream, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
-	@:overload @:abstract public function doCreate(systemId : String, reader : java.io.Reader, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:abstract public function doCreate(systemId : String, reader : java.io.Reader, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
-	@:overload @:abstract public function doRecycle(r : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public @:abstract public function doRecycle(r : javax.xml.stream.XMLStreamReader) : Void;
 	
 	
 }
@@ -97,15 +97,15 @@ extern class XMLStreamReaderFactory
 	* Creates {@link Zephyr} instance if the given {@link XMLInputFactory} is the one
 	* from Zephyr.
 	*/
-	@:overload public static function newInstance(xif : javax.xml.stream.XMLInputFactory) : com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory;
+	@:overload @:public @:static public static function newInstance(xif : javax.xml.stream.XMLInputFactory) : com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory;
 	
-	@:overload public function new(xif : javax.xml.stream.XMLInputFactory, clazz : Class<Dynamic>) : Void;
+	@:overload @:public public function new(xif : javax.xml.stream.XMLInputFactory, clazz : Class<Dynamic>) : Void;
 	
-	@:overload override public function doRecycle(r : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public override public function doRecycle(r : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload override public function doCreate(systemId : String, _in : java.io.InputStream, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function doCreate(systemId : String, _in : java.io.InputStream, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
-	@:overload override public function doCreate(systemId : String, _in : java.io.Reader, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function doCreate(systemId : String, _in : java.io.Reader, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
 	
 }
@@ -121,11 +121,11 @@ extern class XMLStreamReaderFactory
 */
 @:native('com$sun$xml$internal$ws$api$streaming$XMLStreamReaderFactory$Default') extern class XMLStreamReaderFactory_Default extends com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory
 {
-	@:overload override public function doCreate(systemId : String, _in : java.io.InputStream, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function doCreate(systemId : String, _in : java.io.InputStream, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
-	@:overload override public function doCreate(systemId : String, _in : java.io.Reader, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function doCreate(systemId : String, _in : java.io.Reader, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
-	@:overload override public function doRecycle(r : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public override public function doRecycle(r : javax.xml.stream.XMLStreamReader) : Void;
 	
 	
 }
@@ -137,13 +137,13 @@ extern class XMLStreamReaderFactory
 */
 @:native('com$sun$xml$internal$ws$api$streaming$XMLStreamReaderFactory$NoLock') extern class XMLStreamReaderFactory_NoLock extends com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory
 {
-	@:overload public function new(xif : javax.xml.stream.XMLInputFactory) : Void;
+	@:overload @:public public function new(xif : javax.xml.stream.XMLInputFactory) : Void;
 	
-	@:overload override public function doCreate(systemId : String, _in : java.io.InputStream, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function doCreate(systemId : String, _in : java.io.InputStream, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
-	@:overload override public function doCreate(systemId : String, _in : java.io.Reader, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function doCreate(systemId : String, _in : java.io.Reader, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
-	@:overload override public function doRecycle(r : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public override public function doRecycle(r : javax.xml.stream.XMLStreamReader) : Void;
 	
 	
 }
@@ -153,11 +153,11 @@ extern class XMLStreamReaderFactory
 */
 @:native('com$sun$xml$internal$ws$api$streaming$XMLStreamReaderFactory$Woodstox') extern class XMLStreamReaderFactory_Woodstox extends com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory.XMLStreamReaderFactory_NoLock
 {
-	@:overload public function new(xif : javax.xml.stream.XMLInputFactory) : Void;
+	@:overload @:public public function new(xif : javax.xml.stream.XMLInputFactory) : Void;
 	
-	@:overload override public function doCreate(systemId : String, _in : java.io.InputStream, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function doCreate(systemId : String, _in : java.io.InputStream, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
-	@:overload override public function doCreate(systemId : String, _in : java.io.Reader, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function doCreate(systemId : String, _in : java.io.Reader, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
 	
 }

@@ -34,41 +34,41 @@ package com.sun.media.sound;
 */
 extern class SoftFilter
 {
-	public static var FILTERTYPE_LP6(default, null) : Int;
+	@:public @:final @:static public static var FILTERTYPE_LP6(default, null) : Int;
 	
-	public static var FILTERTYPE_LP12(default, null) : Int;
+	@:public @:final @:static public static var FILTERTYPE_LP12(default, null) : Int;
 	
-	public static var FILTERTYPE_HP12(default, null) : Int;
+	@:public @:final @:static public static var FILTERTYPE_HP12(default, null) : Int;
 	
-	public static var FILTERTYPE_BP12(default, null) : Int;
+	@:public @:final @:static public static var FILTERTYPE_BP12(default, null) : Int;
 	
-	public static var FILTERTYPE_NP12(default, null) : Int;
+	@:public @:final @:static public static var FILTERTYPE_NP12(default, null) : Int;
 	
-	public static var FILTERTYPE_LP24(default, null) : Int;
+	@:public @:final @:static public static var FILTERTYPE_LP24(default, null) : Int;
 	
-	public static var FILTERTYPE_HP24(default, null) : Int;
+	@:public @:final @:static public static var FILTERTYPE_HP24(default, null) : Int;
 	
-	@:overload public function new(samplerate : Single) : Void;
+	@:overload @:public public function new(samplerate : Single) : Void;
 	
-	@:overload public function setFrequency(cent : Float) : Void;
+	@:overload @:public public function setFrequency(cent : Float) : Void;
 	
-	@:overload public function setResonance(db : Float) : Void;
+	@:overload @:public public function setResonance(db : Float) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function setFilterType(filtertype : Int) : Void;
+	@:overload @:public public function setFilterType(filtertype : Int) : Void;
 	
-	@:overload public function processAudio(sbuffer : com.sun.media.sound.SoftAudioBuffer) : Void;
+	@:overload @:public public function processAudio(sbuffer : com.sun.media.sound.SoftAudioBuffer) : Void;
 	
-	@:overload public function filter4(sbuffer : com.sun.media.sound.SoftAudioBuffer) : Void;
+	@:overload @:public public function filter4(sbuffer : com.sun.media.sound.SoftAudioBuffer) : Void;
 	
-	@:overload public function filter2calc() : Void;
+	@:overload @:public public function filter2calc() : Void;
 	
-	@:overload public function filter2(sbuffer : com.sun.media.sound.SoftAudioBuffer) : Void;
+	@:overload @:public public function filter2(sbuffer : com.sun.media.sound.SoftAudioBuffer) : Void;
 	
-	@:overload public function filter1calc() : Void;
+	@:overload @:public public function filter1calc() : Void;
 	
-	@:overload public function filter1(sbuffer : com.sun.media.sound.SoftAudioBuffer) : Void;
+	@:overload @:public public function filter1(sbuffer : com.sun.media.sound.SoftAudioBuffer) : Void;
 	
 	
 }

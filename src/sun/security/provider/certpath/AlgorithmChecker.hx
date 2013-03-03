@@ -33,7 +33,7 @@ extern class AlgorithmChecker extends java.security.cert.PKIXCertPathChecker
 	* @param anchor the trust anchor selected to validate the target
 	*     certificate
 	*/
-	@:overload public function new(anchor : java.security.cert.TrustAnchor) : Void;
+	@:overload @:public public function new(anchor : java.security.cert.TrustAnchor) : Void;
 	
 	/**
 	* Create a new <code>AlgorithmChecker</code> with the
@@ -45,7 +45,7 @@ extern class AlgorithmChecker extends java.security.cert.PKIXCertPathChecker
 	*
 	* @param constraints the algorithm constraints (or null)
 	*/
-	@:overload public function new(constraints : java.security.AlgorithmConstraints) : Void;
+	@:overload @:public public function new(constraints : java.security.AlgorithmConstraints) : Void;
 	
 	/**
 	* Create a new <code>AlgorithmChecker</code> with the
@@ -57,15 +57,15 @@ extern class AlgorithmChecker extends java.security.cert.PKIXCertPathChecker
 	*
 	* @throws IllegalArgumentException if the <code>anchor</code> is null
 	*/
-	@:overload public function new(anchor : java.security.cert.TrustAnchor, constraints : java.security.AlgorithmConstraints) : Void;
+	@:overload @:public public function new(anchor : java.security.cert.TrustAnchor, constraints : java.security.AlgorithmConstraints) : Void;
 	
-	@:overload override public function init(forward : Bool) : Void;
+	@:overload @:public override public function init(forward : Bool) : Void;
 	
-	@:overload override public function isForwardCheckingSupported() : Bool;
+	@:overload @:public override public function isForwardCheckingSupported() : Bool;
 	
-	@:overload override public function getSupportedExtensions() : java.util.Set<String>;
+	@:overload @:public override public function getSupportedExtensions() : java.util.Set<String>;
 	
-	@:overload override public function check(cert : java.security.cert.Certificate, unresolvedCritExts : java.util.Collection<String>) : Void;
+	@:overload @:public override public function check(cert : java.security.cert.Certificate, unresolvedCritExts : java.util.Collection<String>) : Void;
 	
 	
 }

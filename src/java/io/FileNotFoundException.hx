@@ -42,7 +42,7 @@ package java.io;
 	* Constructs a <code>FileNotFoundException</code> with
 	* <code>null</code> as its error detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>FileNotFoundException</code> with the
@@ -53,7 +53,7 @@ package java.io;
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

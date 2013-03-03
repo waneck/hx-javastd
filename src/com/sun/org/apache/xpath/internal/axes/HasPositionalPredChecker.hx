@@ -30,7 +30,7 @@ extern class HasPositionalPredChecker extends com.sun.org.apache.xpath.internal.
 	* @return true if the path is confirmed to be absolute, false if it
 	* may contain context dependencies.
 	*/
-	@:overload public static function check(path : com.sun.org.apache.xpath.internal.axes.LocPathIterator) : Bool;
+	@:overload @:public @:static public static function check(path : com.sun.org.apache.xpath.internal.axes.LocPathIterator) : Bool;
 	
 	/**
 	* Visit a function.
@@ -39,7 +39,7 @@ extern class HasPositionalPredChecker extends com.sun.org.apache.xpath.internal.
 	* @param func The function reference object.
 	* @return true if the sub expressions should be traversed.
 	*/
-	@:overload override public function visitFunction(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, func : com.sun.org.apache.xpath.internal.functions.Function) : Bool;
+	@:overload @:public override public function visitFunction(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, func : com.sun.org.apache.xpath.internal.functions.Function) : Bool;
 	
 	/**
 	* Visit a predicate within a location path.  Note that there isn't a
@@ -51,7 +51,7 @@ extern class HasPositionalPredChecker extends com.sun.org.apache.xpath.internal.
 	* @param pred The predicate object.
 	* @return true if the sub expressions should be traversed.
 	*/
-	@:overload override public function visitPredicate(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, pred : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function visitPredicate(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, pred : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }

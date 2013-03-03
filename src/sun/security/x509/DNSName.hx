@@ -49,7 +49,7 @@ extern class DNSName implements sun.security.x509.GeneralNameInterface
 	* @param derValue the encoded DER DNSName.
 	* @exception IOException on error.
 	*/
-	@:overload public function new(derValue : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(derValue : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Create the DNSName object with the specified name.
@@ -57,17 +57,17 @@ extern class DNSName implements sun.security.x509.GeneralNameInterface
 	* @param name the DNSName.
 	* @throws IOException if the name is not a valid DNSName subjectAltName
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Return the type of the GeneralName.
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Return the actual name value of the GeneralName.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Encode the DNS name into the DerOutputStream.
@@ -75,12 +75,12 @@ extern class DNSName implements sun.security.x509.GeneralNameInterface
 	* @param out the DER stream to encode the DNSName to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Convert the name into user readable string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares this name with another, for equality.
@@ -88,14 +88,14 @@ extern class DNSName implements sun.security.x509.GeneralNameInterface
 	* @return true iff the names are equivalent
 	* according to RFC2459.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Return type of constraint inputName places on this name:<ul>
@@ -127,7 +127,7 @@ extern class DNSName implements sun.security.x509.GeneralNameInterface
 	* @throws UnsupportedOperationException if name is not exact match, but narrowing and widening are
 	*          not supported for this name type.
 	*/
-	@:overload public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
+	@:overload @:public public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
 	
 	/**
 	* Return subtree depth of this name for purposes of determining
@@ -137,7 +137,7 @@ extern class DNSName implements sun.security.x509.GeneralNameInterface
 	* @returns distance of name from root
 	* @throws UnsupportedOperationException if not supported for this name type
 	*/
-	@:overload public function subtreeDepth() : Int;
+	@:overload @:public public function subtreeDepth() : Int;
 	
 	
 }

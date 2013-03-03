@@ -31,61 +31,61 @@ package com.sun.media.sound;
 */
 extern class ModelAbstractChannelMixer implements com.sun.media.sound.ModelChannelMixer
 {
-	@:overload @:abstract public function process(buffer : java.NativeArray<java.NativeArray<Single>>, offset : Int, len : Int) : Bool;
+	@:overload @:public @:abstract public function process(buffer : java.NativeArray<java.NativeArray<Single>>, offset : Int, len : Int) : Bool;
 	
-	@:overload @:abstract public function stop() : Void;
+	@:overload @:public @:abstract public function stop() : Void;
 	
-	@:overload public function allNotesOff() : Void;
+	@:overload @:public public function allNotesOff() : Void;
 	
-	@:overload public function allSoundOff() : Void;
+	@:overload @:public public function allSoundOff() : Void;
 	
-	@:overload public function controlChange(controller : Int, value : Int) : Void;
+	@:overload @:public public function controlChange(controller : Int, value : Int) : Void;
 	
-	@:overload public function getChannelPressure() : Int;
+	@:overload @:public public function getChannelPressure() : Int;
 	
-	@:overload public function getController(controller : Int) : Int;
+	@:overload @:public public function getController(controller : Int) : Int;
 	
-	@:overload public function getMono() : Bool;
+	@:overload @:public public function getMono() : Bool;
 	
-	@:overload public function getMute() : Bool;
+	@:overload @:public public function getMute() : Bool;
 	
-	@:overload public function getOmni() : Bool;
+	@:overload @:public public function getOmni() : Bool;
 	
-	@:overload public function getPitchBend() : Int;
+	@:overload @:public public function getPitchBend() : Int;
 	
-	@:overload public function getPolyPressure(noteNumber : Int) : Int;
+	@:overload @:public public function getPolyPressure(noteNumber : Int) : Int;
 	
-	@:overload public function getProgram() : Int;
+	@:overload @:public public function getProgram() : Int;
 	
-	@:overload public function getSolo() : Bool;
+	@:overload @:public public function getSolo() : Bool;
 	
-	@:overload public function localControl(on : Bool) : Bool;
+	@:overload @:public public function localControl(on : Bool) : Bool;
 	
-	@:overload public function noteOff(noteNumber : Int) : Void;
+	@:overload @:public public function noteOff(noteNumber : Int) : Void;
 	
-	@:overload public function noteOff(noteNumber : Int, velocity : Int) : Void;
+	@:overload @:public public function noteOff(noteNumber : Int, velocity : Int) : Void;
 	
-	@:overload public function noteOn(noteNumber : Int, velocity : Int) : Void;
+	@:overload @:public public function noteOn(noteNumber : Int, velocity : Int) : Void;
 	
-	@:overload public function programChange(program : Int) : Void;
+	@:overload @:public public function programChange(program : Int) : Void;
 	
-	@:overload public function programChange(bank : Int, program : Int) : Void;
+	@:overload @:public public function programChange(bank : Int, program : Int) : Void;
 	
-	@:overload public function resetAllControllers() : Void;
+	@:overload @:public public function resetAllControllers() : Void;
 	
-	@:overload public function setChannelPressure(pressure : Int) : Void;
+	@:overload @:public public function setChannelPressure(pressure : Int) : Void;
 	
-	@:overload public function setMono(on : Bool) : Void;
+	@:overload @:public public function setMono(on : Bool) : Void;
 	
-	@:overload public function setMute(mute : Bool) : Void;
+	@:overload @:public public function setMute(mute : Bool) : Void;
 	
-	@:overload public function setOmni(on : Bool) : Void;
+	@:overload @:public public function setOmni(on : Bool) : Void;
 	
-	@:overload public function setPitchBend(bend : Int) : Void;
+	@:overload @:public public function setPitchBend(bend : Int) : Void;
 	
-	@:overload public function setPolyPressure(noteNumber : Int, pressure : Int) : Void;
+	@:overload @:public public function setPolyPressure(noteNumber : Int, pressure : Int) : Void;
 	
-	@:overload public function setSolo(soloState : Bool) : Void;
+	@:overload @:public public function setSolo(soloState : Bool) : Void;
 	
 	
 }

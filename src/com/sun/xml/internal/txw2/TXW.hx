@@ -35,7 +35,7 @@ extern class TXW
 	* @param out
 	*      The target of the writing.
 	*/
-	@:overload public static function create<T : com.sun.xml.internal.txw2.TypedXmlWriter>(rootElement : Class<T>, out : com.sun.xml.internal.txw2.output.XmlSerializer) : T;
+	@:overload @:public @:static public static function create<T : com.sun.xml.internal.txw2.TypedXmlWriter>(rootElement : Class<T>, out : com.sun.xml.internal.txw2.output.XmlSerializer) : T;
 	
 	/**
 	* Creates a new {@link TypedXmlWriter} to write a new instance of a document.
@@ -49,7 +49,7 @@ extern class TXW
 	*
 	* @see #create(Class,XmlSerializer)
 	*/
-	@:overload public static function create<T : com.sun.xml.internal.txw2.TypedXmlWriter>(tagName : javax.xml.namespace.QName, rootElement : Class<T>, out : com.sun.xml.internal.txw2.output.XmlSerializer) : T;
+	@:overload @:public @:static public static function create<T : com.sun.xml.internal.txw2.TypedXmlWriter>(tagName : javax.xml.namespace.QName, rootElement : Class<T>, out : com.sun.xml.internal.txw2.output.XmlSerializer) : T;
 	
 	
 }

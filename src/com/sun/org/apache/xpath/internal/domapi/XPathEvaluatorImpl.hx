@@ -29,14 +29,14 @@ extern class XPathEvaluatorImpl implements org.w3c.dom.xpath.XPathEvaluator
 	* @param doc The document to be searched, to parallel the case where''
 	*            the XPathEvaluator is obtained by casting the document.
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document) : Void;
 	
 	/**
 	* Constructor in the case that the XPath expression can be evaluated
 	* without needing an XML document at all.
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a parsed XPath expression with resolved namespaces. This is
@@ -62,7 +62,7 @@ extern class XPathEvaluatorImpl implements org.w3c.dom.xpath.XPathEvaluator
 	*
 	* @see org.w3c.dom.xpath.XPathEvaluator#createExpression(String, XPathNSResolver)
 	*/
-	@:overload public function createExpression(expression : String, resolver : org.w3c.dom.xpath.XPathNSResolver) : org.w3c.dom.xpath.XPathExpression;
+	@:overload @:public public function createExpression(expression : String, resolver : org.w3c.dom.xpath.XPathNSResolver) : org.w3c.dom.xpath.XPathExpression;
 	
 	/**
 	* Adapts any DOM node to resolve namespaces so that an XPath expression
@@ -80,7 +80,7 @@ extern class XPathEvaluatorImpl implements org.w3c.dom.xpath.XPathEvaluator
 	*
 	* @see org.w3c.dom.xpath.XPathEvaluator#createNSResolver(Node)
 	*/
-	@:overload public function createNSResolver(nodeResolver : org.w3c.dom.Node) : org.w3c.dom.xpath.XPathNSResolver;
+	@:overload @:public public function createNSResolver(nodeResolver : org.w3c.dom.Node) : org.w3c.dom.xpath.XPathNSResolver;
 	
 	/**
 	* Evaluates an XPath expression string and returns a result of the
@@ -133,7 +133,7 @@ extern class XPathEvaluatorImpl implements org.w3c.dom.xpath.XPathEvaluator
 	*
 	* @see org.w3c.dom.xpath.XPathEvaluator#evaluate(String, Node, XPathNSResolver, short, XPathResult)
 	*/
-	@:overload public function evaluate(expression : String, contextNode : org.w3c.dom.Node, resolver : org.w3c.dom.xpath.XPathNSResolver, type : java.StdTypes.Int16, result : Dynamic) : Dynamic;
+	@:overload @:public public function evaluate(expression : String, contextNode : org.w3c.dom.Node, resolver : org.w3c.dom.xpath.XPathNSResolver, type : java.StdTypes.Int16, result : Dynamic) : Dynamic;
 	
 	
 }
@@ -151,7 +151,7 @@ extern class XPathEvaluatorImpl implements org.w3c.dom.xpath.XPathEvaluator
 	*
 	* @see com.sun.org.apache.xml.internal.utils.PrefixResolver#getNamespaceForPrefix(String, Node)
 	*/
-	@:overload public function getNamespaceForPrefix(prefix : String, context : org.w3c.dom.Node) : String;
+	@:overload @:public public function getNamespaceForPrefix(prefix : String, context : org.w3c.dom.Node) : String;
 	
 	/**
 	* @exception DOMException
@@ -159,17 +159,17 @@ extern class XPathEvaluatorImpl implements org.w3c.dom.xpath.XPathEvaluator
 	*
 	* @see com.sun.org.apache.xml.internal.utils.PrefixResolver#getNamespaceForPrefix(String)
 	*/
-	@:overload public function getNamespaceForPrefix(prefix : String) : String;
+	@:overload @:public public function getNamespaceForPrefix(prefix : String) : String;
 	
 	/**
 	* @see com.sun.org.apache.xml.internal.utils.PrefixResolver#handlesNullPrefixes()
 	*/
-	@:overload public function handlesNullPrefixes() : Bool;
+	@:overload @:public public function handlesNullPrefixes() : Bool;
 	
 	/**
 	* @see com.sun.org.apache.xml.internal.utils.PrefixResolver#getBaseIdentifier()
 	*/
-	@:overload public function getBaseIdentifier() : String;
+	@:overload @:public public function getBaseIdentifier() : String;
 	
 	
 }

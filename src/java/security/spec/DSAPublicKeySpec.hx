@@ -36,35 +36,35 @@ extern class DSAPublicKeySpec implements java.security.spec.KeySpec
 	*
 	* @param g the base.
 	*/
-	@:overload public function new(y : java.math.BigInteger, p : java.math.BigInteger, q : java.math.BigInteger, g : java.math.BigInteger) : Void;
+	@:overload @:public public function new(y : java.math.BigInteger, p : java.math.BigInteger, q : java.math.BigInteger, g : java.math.BigInteger) : Void;
 	
 	/**
 	* Returns the public key <code>y</code>.
 	*
 	* @return the public key <code>y</code>.
 	*/
-	@:overload public function getY() : java.math.BigInteger;
+	@:overload @:public public function getY() : java.math.BigInteger;
 	
 	/**
 	* Returns the prime <code>p</code>.
 	*
 	* @return the prime <code>p</code>.
 	*/
-	@:overload public function getP() : java.math.BigInteger;
+	@:overload @:public public function getP() : java.math.BigInteger;
 	
 	/**
 	* Returns the sub-prime <code>q</code>.
 	*
 	* @return the sub-prime <code>q</code>.
 	*/
-	@:overload public function getQ() : java.math.BigInteger;
+	@:overload @:public public function getQ() : java.math.BigInteger;
 	
 	/**
 	* Returns the base <code>g</code>.
 	*
 	* @return the base <code>g</code>.
 	*/
-	@:overload public function getG() : java.math.BigInteger;
+	@:overload @:public public function getG() : java.math.BigInteger;
 	
 	
 }

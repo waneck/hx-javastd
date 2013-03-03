@@ -35,7 +35,7 @@ extern class JMXPluggableAuthenticator implements javax.management.remote.JMXAut
 	* @exception SecurityException if the authentication mechanism cannot be
 	*            initialized.
 	*/
-	@:overload public function new(env : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(env : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Authenticate the <code>MBeanServerConnection</code> client
@@ -53,7 +53,7 @@ extern class JMXPluggableAuthenticator implements javax.management.remote.JMXAut
 	* @exception SecurityException if the server cannot authenticate the user
 	* with the provided credentials.
 	*/
-	@:overload public function authenticate(credentials : Dynamic) : javax.security.auth.Subject;
+	@:overload @:public public function authenticate(credentials : Dynamic) : javax.security.auth.Subject;
 	
 	
 }
@@ -68,7 +68,7 @@ extern class JMXPluggableAuthenticator implements javax.management.remote.JMXAut
 	/**
 	* Sets the username and password in the appropriate Callback object.
 	*/
-	@:overload public function handle(callbacks : java.NativeArray<javax.security.auth.callback.Callback>) : Void;
+	@:overload @:public public function handle(callbacks : java.NativeArray<javax.security.auth.callback.Callback>) : Void;
 	
 	
 }
@@ -89,17 +89,17 @@ extern class JMXPluggableAuthenticator implements javax.management.remote.JMXAut
 	* @param passwordFile A filepath that identifies the password file to use.
 	*                     If null then the default password file is used.
 	*/
-	@:overload public function new(passwordFile : String) : Void;
+	@:overload @:public public function new(passwordFile : String) : Void;
 	
 	/**
 	* Gets the JAAS configuration for file-based authentication
 	*/
-	@:overload public function getAppConfigurationEntry(name : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
+	@:overload @:public override public function getAppConfigurationEntry(name : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
 	
 	/**
 	* Refreshes the configuration.
 	*/
-	@:overload public function refresh() : Void;
+	@:overload @:public override public function refresh() : Void;
 	
 	
 }

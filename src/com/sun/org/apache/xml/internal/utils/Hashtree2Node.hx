@@ -42,7 +42,7 @@ extern class Hashtree2Node
 	* @param container Node to append our report to
 	* @param factory Document providing createElement, etc. services
 	*/
-	@:overload public static function appendHashToNode(hash : java.util.Hashtable<Dynamic, Dynamic>, name : String, container : org.w3c.dom.Node, factory : org.w3c.dom.Document) : Void;
+	@:overload @:public @:static public static function appendHashToNode(hash : java.util.Hashtable<Dynamic, Dynamic>, name : String, container : org.w3c.dom.Node, factory : org.w3c.dom.Document) : Void;
 	
 	
 }

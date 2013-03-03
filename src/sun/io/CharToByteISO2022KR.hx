@@ -25,17 +25,17 @@ package sun.io;
 */
 extern class CharToByteISO2022KR extends sun.io.CharToByteISO2022
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* returns the maximum number of bytes needed to convert a char
 	*/
-	@:overload override public function getMaxBytesPerChar() : Int;
+	@:overload @:public override public function getMaxBytesPerChar() : Int;
 	
 	/**
 	* Return the character set ID
 	*/
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
 	
 }

@@ -32,16 +32,16 @@ package com.sun.codemodel.internal;
 */
 extern class JForEach implements com.sun.codemodel.internal.JStatement
 {
-	@:overload public function new(vartype : com.sun.codemodel.internal.JType, variable : String, collection : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:public public function new(vartype : com.sun.codemodel.internal.JType, variable : String, collection : com.sun.codemodel.internal.JExpression) : Void;
 	
 	/**
 	* Returns a reference to the loop variable.
 	*/
-	//@:overload public function _var() : com.sun.codemodel.internal.JVar;
+	//@:overload @:public public function _var() : com.sun.codemodel.internal.JVar;
 	
-	@:overload public function body() : com.sun.codemodel.internal.JBlock;
+	@:overload @:public public function body() : com.sun.codemodel.internal.JBlock;
 	
-	@:overload public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

@@ -29,7 +29,7 @@ package sun.security.acl;
 */
 extern class AllPermissionsImpl extends sun.security.acl.PermissionImpl
 {
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* This function returns true if the permission passed matches the permission represented in
@@ -37,7 +37,7 @@ extern class AllPermissionsImpl extends sun.security.acl.PermissionImpl
 	* @param another The Permission object to compare with.
 	* @returns true always
 	*/
-	@:overload public function equals(another : java.security.acl.Permission) : Bool;
+	@:overload @:public public function equals(another : java.security.acl.Permission) : Bool;
 	
 	
 }

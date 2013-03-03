@@ -25,42 +25,42 @@ package com.sun.tools.internal.xjc.model;
 */
 extern class CCustomizations extends java.util.ArrayList<com.sun.tools.internal.xjc.model.CPluginCustomization>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(cPluginCustomizations : java.util.Collection<com.sun.tools.internal.xjc.model.CPluginCustomization>) : Void;
+	@:overload @:public public function new(cPluginCustomizations : java.util.Collection<com.sun.tools.internal.xjc.model.CPluginCustomization>) : Void;
 	
 	/**
 	* Gets the model component that carries this customization.
 	*
 	* @return never null.
 	*/
-	@:overload public function getOwner() : com.sun.tools.internal.xjc.model.CCustomizable;
+	@:overload @:public public function getOwner() : com.sun.tools.internal.xjc.model.CCustomizable;
 	
 	/**
 	* Finds the first {@link CPluginCustomization} that belongs to the given namespace URI.
 	* @return null if not found
 	*/
-	@:overload public function find(nsUri : String) : com.sun.tools.internal.xjc.model.CPluginCustomization;
+	@:overload @:public public function find(nsUri : String) : com.sun.tools.internal.xjc.model.CPluginCustomization;
 	
 	/**
 	* Finds the first {@link CPluginCustomization} that belongs to the given namespace URI and the local name.
 	* @return null if not found
 	*/
-	@:overload public function find(nsUri : String, localName : String) : com.sun.tools.internal.xjc.model.CPluginCustomization;
+	@:overload @:public public function find(nsUri : String, localName : String) : com.sun.tools.internal.xjc.model.CPluginCustomization;
 	
 	/**
 	* Convenient singleton instance that represents an empty {@link CCustomizations}.
 	*/
-	public static var EMPTY(default, null) : com.sun.tools.internal.xjc.model.CCustomizations;
+	@:public @:static @:final public static var EMPTY(default, null) : com.sun.tools.internal.xjc.model.CCustomizations;
 	
 	/**
 	* Merges two {@link CCustomizations} objects into one.
 	*/
-	@:overload public static function merge(lhs : com.sun.tools.internal.xjc.model.CCustomizations, rhs : com.sun.tools.internal.xjc.model.CCustomizations) : com.sun.tools.internal.xjc.model.CCustomizations;
+	@:overload @:public @:static public static function merge(lhs : com.sun.tools.internal.xjc.model.CCustomizations, rhs : com.sun.tools.internal.xjc.model.CCustomizations) : com.sun.tools.internal.xjc.model.CCustomizations;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

@@ -28,39 +28,39 @@ extern class HotSpotVirtualMachine extends com.sun.tools.attach.VirtualMachine
 	/*
 	* Load agent library - library name will be expanded in target VM
 	*/
-	@:overload override public function loadAgentLibrary(agentLibrary : String, options : String) : Void;
+	@:overload @:public override public function loadAgentLibrary(agentLibrary : String, options : String) : Void;
 	
 	/*
 	* Load agent - absolute path of library provided to target VM
 	*/
-	@:overload override public function loadAgentPath(agentLibrary : String, options : String) : Void;
+	@:overload @:public override public function loadAgentPath(agentLibrary : String, options : String) : Void;
 	
 	/*
 	* Load JPLIS agent which will load the agent JAR file and invoke
 	* the agentmain method.
 	*/
-	@:overload override public function loadAgent(agent : String, options : String) : Void;
+	@:overload @:public override public function loadAgent(agent : String, options : String) : Void;
 	
 	/*
 	* Send "properties" command to target VM
 	*/
-	@:overload override public function getSystemProperties() : java.util.Properties;
+	@:overload @:public override public function getSystemProperties() : java.util.Properties;
 	
-	@:overload override public function getAgentProperties() : java.util.Properties;
+	@:overload @:public override public function getAgentProperties() : java.util.Properties;
 	
-	@:overload public function localDataDump() : Void;
+	@:overload @:public public function localDataDump() : Void;
 	
-	@:overload public function remoteDataDump(args : java.NativeArray<Dynamic>) : java.io.InputStream;
+	@:overload @:public public function remoteDataDump(args : java.NativeArray<Dynamic>) : java.io.InputStream;
 	
-	@:overload public function dumpHeap(args : java.NativeArray<Dynamic>) : java.io.InputStream;
+	@:overload @:public public function dumpHeap(args : java.NativeArray<Dynamic>) : java.io.InputStream;
 	
-	@:overload public function heapHisto(args : java.NativeArray<Dynamic>) : java.io.InputStream;
+	@:overload @:public public function heapHisto(args : java.NativeArray<Dynamic>) : java.io.InputStream;
 	
-	@:overload public function setFlag(name : String, value : String) : java.io.InputStream;
+	@:overload @:public public function setFlag(name : String, value : String) : java.io.InputStream;
 	
-	@:overload public function printFlag(name : String) : java.io.InputStream;
+	@:overload @:public public function printFlag(name : String) : java.io.InputStream;
 	
-	@:overload public function executeJCmd(command : String) : java.io.InputStream;
+	@:overload @:public public function executeJCmd(command : String) : java.io.InputStream;
 	
 	
 }

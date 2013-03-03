@@ -36,7 +36,7 @@ extern interface Element
 	*
 	* @return the document
 	*/
-	@:overload public function getDocument() : javax.swing.text.Document;
+	@:overload @:public public function getDocument() : javax.swing.text.Document;
 	
 	/**
 	* Fetches the parent element.  If the element is a root level
@@ -44,7 +44,7 @@ extern interface Element
 	*
 	* @return the parent element
 	*/
-	@:overload public function getParentElement() : javax.swing.text.Element;
+	@:overload @:public public function getParentElement() : javax.swing.text.Element;
 	
 	/**
 	* Fetches the name of the element.  If the element is used to
@@ -53,14 +53,14 @@ extern interface Element
 	*
 	* @return the element name
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Fetches the collection of attributes this element contains.
 	*
 	* @return the attributes for the element
 	*/
-	@:overload public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Fetches the offset from the beginning of the document
@@ -72,7 +72,7 @@ extern interface Element
 	* @see Document
 	* @see AbstractDocument
 	*/
-	@:overload public function getStartOffset() : Int;
+	@:overload @:public public function getStartOffset() : Int;
 	
 	/**
 	* Fetches the offset from the beginning of the document
@@ -91,7 +91,7 @@ extern interface Element
 	* @see Document
 	* @see AbstractDocument
 	*/
-	@:overload public function getEndOffset() : Int;
+	@:overload @:public public function getEndOffset() : Int;
 	
 	/**
 	* Gets the child element index closest to the given offset.
@@ -107,7 +107,7 @@ extern interface Element
 	* @param offset the specified offset >= 0
 	* @return the element index >= 0
 	*/
-	@:overload public function getElementIndex(offset : Int) : Int;
+	@:overload @:public public function getElementIndex(offset : Int) : Int;
 	
 	/**
 	* Gets the number of child elements contained by this element.
@@ -115,7 +115,7 @@ extern interface Element
 	*
 	* @return the number of child elements >= 0
 	*/
-	@:overload public function getElementCount() : Int;
+	@:overload @:public public function getElementCount() : Int;
 	
 	/**
 	* Fetches the child element at the given index.
@@ -123,7 +123,7 @@ extern interface Element
 	* @param index the specified index >= 0
 	* @return the child element
 	*/
-	@:overload public function getElement(index : Int) : javax.swing.text.Element;
+	@:overload @:public public function getElement(index : Int) : javax.swing.text.Element;
 	
 	/**
 	* Is this element a leaf element? An element that
@@ -132,7 +132,7 @@ extern interface Element
 	*
 	* @return true if a leaf element else false
 	*/
-	@:overload public function isLeaf() : Bool;
+	@:overload @:public public function isLeaf() : Bool;
 	
 	
 }

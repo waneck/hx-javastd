@@ -39,7 +39,7 @@ extern class TextUI extends javax.swing.plaf.ComponentUI
 	* @exception BadLocationException  if the given position does not
 	*   represent a valid location in the associated document
 	*/
-	@:overload @:abstract public function modelToView(t : javax.swing.text.JTextComponent, pos : Int) : java.awt.Rectangle;
+	@:overload @:public @:abstract public function modelToView(t : javax.swing.text.JTextComponent, pos : Int) : java.awt.Rectangle;
 	
 	/**
 	* Converts the given location in the model to a place in
@@ -50,7 +50,7 @@ extern class TextUI extends javax.swing.plaf.ComponentUI
 	* @exception BadLocationException  if the given position does not
 	*   represent a valid location in the associated document
 	*/
-	@:overload @:abstract public function modelToView(t : javax.swing.text.JTextComponent, pos : Int, bias : javax.swing.text.Position.Position_Bias) : java.awt.Rectangle;
+	@:overload @:public @:abstract public function modelToView(t : javax.swing.text.JTextComponent, pos : Int, bias : javax.swing.text.Position.Position_Bias) : java.awt.Rectangle;
 	
 	/**
 	* Converts the given place in the view coordinate system
@@ -61,7 +61,7 @@ extern class TextUI extends javax.swing.plaf.ComponentUI
 	*   events.
 	* @return the offset from the start of the document >= 0
 	*/
-	@:overload @:abstract public function viewToModel(t : javax.swing.text.JTextComponent, pt : java.awt.Point) : Int;
+	@:overload @:public @:abstract public function viewToModel(t : javax.swing.text.JTextComponent, pt : java.awt.Point) : Int;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -78,7 +78,7 @@ extern class TextUI extends javax.swing.plaf.ComponentUI
 	* @return the location within the model that best represents the
 	*         given point in the view >= 0
 	*/
-	@:overload @:abstract public function viewToModel(t : javax.swing.text.JTextComponent, pt : java.awt.Point, biasReturn : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public @:abstract public function viewToModel(t : javax.swing.text.JTextComponent, pt : java.awt.Point, biasReturn : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Provides a way to determine the next visually represented model
@@ -99,7 +99,7 @@ extern class TextUI extends javax.swing.plaf.ComponentUI
 	* @exception BadLocationException
 	* @exception IllegalArgumentException for an invalid direction
 	*/
-	@:overload @:abstract public function getNextVisualPositionFrom(t : javax.swing.text.JTextComponent, pos : Int, b : javax.swing.text.Position.Position_Bias, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public @:abstract public function getNextVisualPositionFrom(t : javax.swing.text.JTextComponent, pos : Int, b : javax.swing.text.Position.Position_Bias, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Causes the portion of the view responsible for the
@@ -108,7 +108,7 @@ extern class TextUI extends javax.swing.plaf.ComponentUI
 	* @param p0 the beginning of the range >= 0
 	* @param p1 the end of the range >= p0
 	*/
-	@:overload @:abstract public function damageRange(t : javax.swing.text.JTextComponent, p0 : Int, p1 : Int) : Void;
+	@:overload @:public @:abstract public function damageRange(t : javax.swing.text.JTextComponent, p0 : Int, p1 : Int) : Void;
 	
 	/**
 	* Causes the portion of the view responsible for the
@@ -117,7 +117,7 @@ extern class TextUI extends javax.swing.plaf.ComponentUI
 	* @param p0 the beginning of the range >= 0
 	* @param p1 the end of the range >= p0
 	*/
-	@:overload @:abstract public function damageRange(t : javax.swing.text.JTextComponent, p0 : Int, p1 : Int, firstBias : javax.swing.text.Position.Position_Bias, secondBias : javax.swing.text.Position.Position_Bias) : Void;
+	@:overload @:public @:abstract public function damageRange(t : javax.swing.text.JTextComponent, p0 : Int, p1 : Int, firstBias : javax.swing.text.Position.Position_Bias, secondBias : javax.swing.text.Position.Position_Bias) : Void;
 	
 	/**
 	* Fetches the binding of services that set a policy
@@ -127,7 +127,7 @@ extern class TextUI extends javax.swing.plaf.ComponentUI
 	*
 	* @return the editor kit binding
 	*/
-	@:overload @:abstract public function getEditorKit(t : javax.swing.text.JTextComponent) : javax.swing.text.EditorKit;
+	@:overload @:public @:abstract public function getEditorKit(t : javax.swing.text.JTextComponent) : javax.swing.text.EditorKit;
 	
 	/**
 	* Fetches a View with the allocation of the associated
@@ -137,7 +137,7 @@ extern class TextUI extends javax.swing.plaf.ComponentUI
 	*
 	* @return the view
 	*/
-	@:overload @:abstract public function getRootView(t : javax.swing.text.JTextComponent) : javax.swing.text.View;
+	@:overload @:public @:abstract public function getRootView(t : javax.swing.text.JTextComponent) : javax.swing.text.View;
 	
 	/**
 	* Returns the string to be used as the tooltip at the passed in location.
@@ -145,7 +145,7 @@ extern class TextUI extends javax.swing.plaf.ComponentUI
 	* @see javax.swing.text.JTextComponent#getToolTipText
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getToolTipText(t : javax.swing.text.JTextComponent, pt : java.awt.Point) : String;
+	@:require(java4) @:overload @:public public function getToolTipText(t : javax.swing.text.JTextComponent, pt : java.awt.Point) : String;
 	
 	
 }

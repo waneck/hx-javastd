@@ -95,27 +95,27 @@ package com.sun.tools.javac.util;
 extern class Context
 {
 	/** Set the factory for the key in this context. */
-	@:overload public function put<T>(key : com.sun.tools.javac.util.Context.Context_Key<T>, fac : com.sun.tools.javac.util.Context.Context_Factory<T>) : Void;
+	@:overload @:public public function put<T>(key : com.sun.tools.javac.util.Context.Context_Key<T>, fac : com.sun.tools.javac.util.Context.Context_Factory<T>) : Void;
 	
 	/** Set the value for the key in this context. */
-	@:overload public function put<T>(key : com.sun.tools.javac.util.Context.Context_Key<T>, data : T) : Void;
+	@:overload @:public public function put<T>(key : com.sun.tools.javac.util.Context.Context_Key<T>, data : T) : Void;
 	
 	/** Get the value for the key in this context. */
-	@:overload public function get<T>(key : com.sun.tools.javac.util.Context.Context_Key<T>) : T;
+	@:overload @:public public function get<T>(key : com.sun.tools.javac.util.Context.Context_Key<T>) : T;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(prev : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:public public function new(prev : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function get<T>(clazz : Class<T>) : T;
+	@:overload @:public public function get<T>(clazz : Class<T>) : T;
 	
-	@:overload public function put<T>(clazz : Class<T>, data : T) : Void;
+	@:overload @:public public function put<T>(clazz : Class<T>, data : T) : Void;
 	
-	@:overload public function put<T>(clazz : Class<T>, fac : com.sun.tools.javac.util.Context.Context_Factory<T>) : Void;
+	@:overload @:public public function put<T>(clazz : Class<T>, fac : com.sun.tools.javac.util.Context.Context_Factory<T>) : Void;
 	
-	@:overload public function dump() : Void;
+	@:overload @:public public function dump() : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

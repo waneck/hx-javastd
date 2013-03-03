@@ -34,7 +34,7 @@ package java.awt;
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(dispatchThread : java.awt.EventDispatchThread) : Void;
+	@:require(java7) @:overload @:public public function new(dispatchThread : java.awt.EventDispatchThread) : Void;
 	
 	/**
 	* Creates a {@code WaitDispatchSupport} instance to
@@ -47,7 +47,7 @@ package java.awt;
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(dispatchThread : java.awt.EventDispatchThread, extCond : java.awt.Conditional) : Void;
+	@:require(java7) @:overload @:public public function new(dispatchThread : java.awt.EventDispatchThread, extCond : java.awt.Conditional) : Void;
 	
 	/**
 	* Creates a {@code WaitDispatchSupport} instance to
@@ -68,17 +68,17 @@ package java.awt;
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(dispatchThread : java.awt.EventDispatchThread, extCondition : java.awt.Conditional, filter : java.awt.EventFilter, interval : haxe.Int64) : Void;
+	@:require(java7) @:overload @:public public function new(dispatchThread : java.awt.EventDispatchThread, extCondition : java.awt.Conditional, filter : java.awt.EventFilter, interval : haxe.Int64) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function enter() : Bool;
+	@:overload @:public public function enter() : Bool;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function exit() : Bool;
+	@:overload @:public public function exit() : Bool;
 	
 	
 }

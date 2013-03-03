@@ -111,7 +111,7 @@ extern class ExecutorCompletionService<V> implements java.util.concurrent.Comple
 	* @param executor the executor to use
 	* @throws NullPointerException if executor is {@code null}
 	*/
-	@:overload public function new(executor : java.util.concurrent.Executor) : Void;
+	@:overload @:public public function new(executor : java.util.concurrent.Executor) : Void;
 	
 	/**
 	* Creates an ExecutorCompletionService using the supplied
@@ -126,17 +126,17 @@ extern class ExecutorCompletionService<V> implements java.util.concurrent.Comple
 	*        them not to be retrievable.
 	* @throws NullPointerException if executor or completionQueue are {@code null}
 	*/
-	@:overload public function new(executor : java.util.concurrent.Executor, completionQueue : java.util.concurrent.BlockingQueue<java.util.concurrent.Future<V>>) : Void;
+	@:overload @:public public function new(executor : java.util.concurrent.Executor, completionQueue : java.util.concurrent.BlockingQueue<java.util.concurrent.Future<V>>) : Void;
 	
-	@:overload public function submit(task : java.util.concurrent.Callable<V>) : java.util.concurrent.Future<V>;
+	@:overload @:public public function submit(task : java.util.concurrent.Callable<V>) : java.util.concurrent.Future<V>;
 	
-	@:overload public function submit(task : java.lang.Runnable, result : V) : java.util.concurrent.Future<V>;
+	@:overload @:public public function submit(task : java.lang.Runnable, result : V) : java.util.concurrent.Future<V>;
 	
-	@:overload public function take() : java.util.concurrent.Future<V>;
+	@:overload @:public public function take() : java.util.concurrent.Future<V>;
 	
-	@:overload public function poll() : java.util.concurrent.Future<V>;
+	@:overload @:public public function poll() : java.util.concurrent.Future<V>;
 	
-	@:overload public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.Future<V>;
+	@:overload @:public public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.Future<V>;
 	
 	
 }
@@ -145,7 +145,7 @@ extern class ExecutorCompletionService<V> implements java.util.concurrent.Comple
 */
 @:native('java$util$concurrent$ExecutorCompletionService$QueueingFuture') @:internal extern class ExecutorCompletionService_QueueingFuture extends java.util.concurrent.FutureTask<java.lang.Void>
 {
-	@:overload override private function done() : Void;
+	@:overload @:protected override private function done() : Void;
 	
 	
 }

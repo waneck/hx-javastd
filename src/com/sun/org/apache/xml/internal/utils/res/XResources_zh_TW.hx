@@ -35,7 +35,7 @@ extern class XResources_zh_TW extends com.sun.org.apache.xml.internal.utils.res.
 	*
 	* @return The association list.
 	*/
-	@:overload override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:public override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

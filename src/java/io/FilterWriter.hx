@@ -39,7 +39,7 @@ package java.io;
 	/**
 	* The underlying character-output stream.
 	*/
-	private var out : java.io.Writer;
+	@:protected private var out : java.io.Writer;
 	
 	/**
 	* Create a new filtered writer.
@@ -47,14 +47,14 @@ package java.io;
 	* @param out  a Writer object to provide the underlying stream.
 	* @throws NullPointerException if <code>out</code> is <code>null</code>
 	*/
-	@:overload private function new(out : java.io.Writer) : Void;
+	@:overload @:protected private function new(out : java.io.Writer) : Void;
 	
 	/**
 	* Writes a single character.
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(c : Int) : Void;
+	@:overload @:public override public function write(c : Int) : Void;
 	
 	/**
 	* Writes a portion of an array of characters.
@@ -65,7 +65,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
 	/**
 	* Writes a portion of a string.
@@ -76,16 +76,16 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(str : String, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(str : String, off : Int, len : Int) : Void;
 	
 	/**
 	* Flushes the stream.
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

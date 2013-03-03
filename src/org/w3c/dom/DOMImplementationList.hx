@@ -59,13 +59,13 @@ extern interface DOMImplementationList
 	*   th position in the <code>DOMImplementationList</code>, or
 	*   <code>null</code> if that is not a valid index.
 	*/
-	@:overload public function item(index : Int) : org.w3c.dom.DOMImplementation;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.DOMImplementation;
 	
 	/**
 	*  The number of <code>DOMImplementation</code>s in the list. The range
 	* of valid child node indices is 0 to <code>length-1</code> inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	
 }

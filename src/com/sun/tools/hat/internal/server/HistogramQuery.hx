@@ -34,7 +34,7 @@ extern class HistogramQuery extends com.sun.tools.hat.internal.server.QueryHandl
 	* Prints histogram sortable by class name, count and size.
 	*
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

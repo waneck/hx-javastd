@@ -47,7 +47,7 @@ extern interface ActivationMonitor extends java.rmi.Remote
 	* @exception RemoteException if remote call fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function inactiveObject(id : java.rmi.activation.ActivationID) : Void;
+	@:require(java2) @:overload @:public public function inactiveObject(id : java.rmi.activation.ActivationID) : Void;
 	
 	/**
 	* Informs that an object is now active. An <code>ActivationGroup</code>
@@ -61,7 +61,7 @@ extern interface ActivationMonitor extends java.rmi.Remote
 	* @exception RemoteException if remote call fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function activeObject(id : java.rmi.activation.ActivationID, obj : java.rmi.MarshalledObject<java.rmi.Remote>) : Void;
+	@:require(java2) @:overload @:public public function activeObject(id : java.rmi.activation.ActivationID, obj : java.rmi.MarshalledObject<java.rmi.Remote>) : Void;
 	
 	/**
 	* Informs that the group is now inactive. The group will be
@@ -75,7 +75,7 @@ extern interface ActivationMonitor extends java.rmi.Remote
 	* @exception RemoteException if remote call fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function inactiveGroup(id : java.rmi.activation.ActivationGroupID, incarnation : haxe.Int64) : Void;
+	@:require(java2) @:overload @:public public function inactiveGroup(id : java.rmi.activation.ActivationGroupID, incarnation : haxe.Int64) : Void;
 	
 	
 }

@@ -28,14 +28,14 @@ package sun.net.www.protocol.http;
 	/**
 	* Create a DigestAuthentication
 	*/
-	@:overload public function new(isProxy : Bool, url : java.net.URL, realm : String, authMethod : String, pw : java.net.PasswordAuthentication, params : sun.net.www.protocol.http.DigestAuthentication.DigestAuthentication_Parameters) : Void;
+	@:overload @:public public function new(isProxy : Bool, url : java.net.URL, realm : String, authMethod : String, pw : java.net.PasswordAuthentication, params : sun.net.www.protocol.http.DigestAuthentication.DigestAuthentication_Parameters) : Void;
 	
-	@:overload public function new(isProxy : Bool, host : String, port : Int, realm : String, authMethod : String, pw : java.net.PasswordAuthentication, params : sun.net.www.protocol.http.DigestAuthentication.DigestAuthentication_Parameters) : Void;
+	@:overload @:public public function new(isProxy : Bool, host : String, port : Int, realm : String, authMethod : String, pw : java.net.PasswordAuthentication, params : sun.net.www.protocol.http.DigestAuthentication.DigestAuthentication_Parameters) : Void;
 	
 	/**
 	* @return true if this authentication supports preemptive authorization
 	*/
-	@:overload override public function supportsPreemptiveAuthorization() : Bool;
+	@:overload @:public override public function supportsPreemptiveAuthorization() : Bool;
 	
 	/**
 	* Reclaculates the request-digest and returns it.
@@ -51,7 +51,7 @@ package sun.net.www.protocol.http;
 	*
 	* @return the value of the HTTP header this authentication wants set
 	*/
-	@:overload override public function getHeaderValue(url : java.net.URL, method : String) : String;
+	@:overload @:public override public function getHeaderValue(url : java.net.URL, method : String) : String;
 	
 	/**
 	* Check if the header indicates that the current auth. parameters are stale.
@@ -61,7 +61,7 @@ package sun.net.www.protocol.http;
 	* returning false means we have to go back to the user to ask for a new
 	* username password.
 	*/
-	@:overload override public function isAuthorizationStale(header : String) : Bool;
+	@:overload @:public override public function isAuthorizationStale(header : String) : Bool;
 	
 	/**
 	* Set header(s) on the given connection.
@@ -70,11 +70,11 @@ package sun.net.www.protocol.http;
 	* @param raw Raw header values for this connection, if needed.
 	* @return true if all goes well, false if no headers were set.
 	*/
-	@:overload override public function setHeaders(conn : sun.net.www.protocol.http.HttpURLConnection, p : sun.net.www.HeaderParser, raw : String) : Bool;
+	@:overload @:public override public function setHeaders(conn : sun.net.www.protocol.http.HttpURLConnection, p : sun.net.www.HeaderParser, raw : String) : Bool;
 	
-	@:overload public function checkResponse(header : String, method : String, url : java.net.URL) : Void;
+	@:overload @:public public function checkResponse(header : String, method : String, url : java.net.URL) : Void;
 	
-	@:overload public function checkResponse(header : String, method : String, uri : String) : Void;
+	@:overload @:public public function checkResponse(header : String, method : String, uri : String) : Void;
 	
 	
 }

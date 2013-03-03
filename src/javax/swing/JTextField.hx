@@ -30,7 +30,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	* the initial string is <code>null</code>,
 	* and the number of columns is set to 0.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>TextField</code> initialized with the
@@ -39,7 +39,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*
 	* @param text the text to be displayed, or <code>null</code>
 	*/
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* Constructs a new empty <code>TextField</code> with the specified
@@ -52,7 +52,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*   preferred width will be whatever naturally results from
 	*   the component implementation
 	*/
-	@:overload public function new(columns : Int) : Void;
+	@:overload @:public public function new(columns : Int) : Void;
 	
 	/**
 	* Constructs a new <code>TextField</code> initialized with the
@@ -64,7 +64,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*   preferred width will be whatever naturally results from
 	*   the component implementation
 	*/
-	@:overload public function new(text : String, columns : Int) : Void;
+	@:overload @:public public function new(text : String, columns : Int) : Void;
 	
 	/**
 	* Constructs a new <code>JTextField</code> that uses the given text
@@ -82,7 +82,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*   naturally results from the component implementation
 	* @exception IllegalArgumentException if <code>columns</code> < 0
 	*/
-	@:overload public function new(doc : javax.swing.text.Document, text : String, columns : Int) : Void;
+	@:overload @:public public function new(doc : javax.swing.text.Document, text : String, columns : Int) : Void;
 	
 	/**
 	* Gets the class ID for a UI.
@@ -91,7 +91,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Associates the editor with a text document.
@@ -106,7 +106,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*        bound: true
 	*       expert: true
 	*/
-	@:overload override public function setDocument(doc : javax.swing.text.Document) : Void;
+	@:overload @:public override public function setDocument(doc : javax.swing.text.Document) : Void;
 	
 	/**
 	* Calls to <code>revalidate</code> that come from within the
@@ -122,7 +122,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	* @see JComponent#isValidateRoot
 	* @see java.awt.Container#isValidateRoot
 	*/
-	@:overload override public function isValidateRoot() : Bool;
+	@:overload @:public override public function isValidateRoot() : Bool;
 	
 	/**
 	* Returns the horizontal alignment of the text.
@@ -137,7 +137,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*
 	* @return the horizontal alignment
 	*/
-	@:overload public function getHorizontalAlignment() : Int;
+	@:overload @:public public function getHorizontalAlignment() : Int;
 	
 	/**
 	* Sets the horizontal alignment of the text.
@@ -164,7 +164,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*        enum: LEFT JTextField.LEFT CENTER JTextField.CENTER RIGHT JTextField.RIGHT
 	*              LEADING JTextField.LEADING TRAILING JTextField.TRAILING
 	*/
-	@:overload public function setHorizontalAlignment(alignment : Int) : Void;
+	@:overload @:public public function setHorizontalAlignment(alignment : Int) : Void;
 	
 	/**
 	* Creates the default implementation of the model
@@ -173,14 +173,14 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*
 	* @return the default model implementation
 	*/
-	@:overload private function createDefaultModel() : javax.swing.text.Document;
+	@:overload @:protected private function createDefaultModel() : javax.swing.text.Document;
 	
 	/**
 	* Returns the number of columns in this <code>TextField</code>.
 	*
 	* @return the number of columns >= 0
 	*/
-	@:overload public function getColumns() : Int;
+	@:overload @:public public function getColumns() : Int;
 	
 	/**
 	* Sets the number of columns in this <code>TextField</code>,
@@ -192,7 +192,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	* @beaninfo
 	* description: the number of columns preferred for display
 	*/
-	@:overload public function setColumns(columns : Int) : Void;
+	@:overload @:public public function setColumns(columns : Int) : Void;
 	
 	/**
 	* Returns the column width.
@@ -204,7 +204,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*
 	* @return the column width >= 1
 	*/
-	@:overload private function getColumnWidth() : Int;
+	@:overload @:protected private function getColumnWidth() : Int;
 	
 	/**
 	* Returns the preferred size <code>Dimensions</code> needed for this
@@ -214,7 +214,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*
 	* @return the dimension of this textfield
 	*/
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	/**
 	* Sets the current font.  This removes cached row height and column
@@ -223,7 +223,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*
 	* @param f the new font
 	*/
-	@:overload override public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public override public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Adds the specified action listener to receive
@@ -231,7 +231,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*
 	* @param l the action listener to be added
 	*/
-	@:overload @:synchronized public function addActionListener(l : java.awt.event.ActionListener) : Void;
+	@:overload @:public @:synchronized public function addActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Removes the specified action listener so that it no longer
@@ -239,7 +239,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*
 	* @param l the action listener to be removed
 	*/
-	@:overload @:synchronized public function removeActionListener(l : java.awt.event.ActionListener) : Void;
+	@:overload @:public @:synchronized public function removeActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ActionListener</code>s added
@@ -249,7 +249,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -259,14 +259,14 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	* first order.
 	* @see EventListenerList
 	*/
-	@:overload private function fireActionPerformed() : Void;
+	@:overload @:protected private function fireActionPerformed() : Void;
 	
 	/**
 	* Sets the command string used for action events.
 	*
 	* @param command the command string
 	*/
-	@:overload public function setActionCommand(command : String) : Void;
+	@:overload @:public public function setActionCommand(command : String) : Void;
 	
 	/**
 	* Sets the <code>Action</code> for the <code>ActionEvent</code> source.
@@ -308,7 +308,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*    attribute: visualUpdate true
 	*  description: the Action instance connected with this ActionEvent source
 	*/
-	@:require(java3) @:overload public function setAction(a : javax.swing.Action) : Void;
+	@:require(java3) @:overload @:public public function setAction(a : javax.swing.Action) : Void;
 	
 	/**
 	* Returns the currently set <code>Action</code> for this
@@ -321,7 +321,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	* @see Action
 	* @see #setAction
 	*/
-	@:require(java3) @:overload public function getAction() : javax.swing.Action;
+	@:require(java3) @:overload @:public public function getAction() : javax.swing.Action;
 	
 	/**
 	* Sets the properties on this textfield to match those in the specified
@@ -335,7 +335,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	* @see Action
 	* @see #setAction
 	*/
-	@:require(java3) @:overload private function configurePropertiesFromAction(a : javax.swing.Action) : Void;
+	@:require(java3) @:overload @:protected private function configurePropertiesFromAction(a : javax.swing.Action) : Void;
 	
 	/**
 	* Updates the textfield's state in response to property changes in
@@ -356,7 +356,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	* @see Action
 	* @see #configurePropertiesFromAction
 	*/
-	@:require(java6) @:overload private function actionPropertyChanged(action : javax.swing.Action, propertyName : String) : Void;
+	@:require(java6) @:overload @:protected private function actionPropertyChanged(action : javax.swing.Action, propertyName : String) : Void;
 	
 	/**
 	* Creates and returns a <code>PropertyChangeListener</code> that is
@@ -372,7 +372,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	* @see Action
 	* @see #setAction
 	*/
-	@:require(java3) @:overload private function createActionPropertyChangeListener(a : javax.swing.Action) : java.beans.PropertyChangeListener;
+	@:require(java3) @:overload @:protected private function createActionPropertyChangeListener(a : javax.swing.Action) : java.beans.PropertyChangeListener;
 	
 	/**
 	* Fetches the command list for the editor.  This is
@@ -383,7 +383,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*
 	* @return the command list
 	*/
-	@:overload override public function getActions() : java.NativeArray<javax.swing.Action>;
+	@:overload @:public override public function getActions() : java.NativeArray<javax.swing.Action>;
 	
 	/**
 	* Processes action events occurring on this textfield by
@@ -391,7 +391,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	* This is normally called by the controller registered with
 	* textfield.
 	*/
-	@:overload public function postActionEvent() : Void;
+	@:overload @:public public function postActionEvent() : Void;
 	
 	/**
 	* Gets the visibility of the text field.  This can
@@ -407,35 +407,35 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	* @return the visibility
 	* @see BoundedRangeModel
 	*/
-	@:overload public function getHorizontalVisibility() : javax.swing.BoundedRangeModel;
+	@:overload @:public public function getHorizontalVisibility() : javax.swing.BoundedRangeModel;
 	
 	/**
 	* Gets the scroll offset, in pixels.
 	*
 	* @return the offset >= 0
 	*/
-	@:overload public function getScrollOffset() : Int;
+	@:overload @:public public function getScrollOffset() : Int;
 	
 	/**
 	* Sets the scroll offset, in pixels.
 	*
 	* @param scrollOffset the offset >= 0
 	*/
-	@:overload public function setScrollOffset(scrollOffset : Int) : Void;
+	@:overload @:public public function setScrollOffset(scrollOffset : Int) : Void;
 	
 	/**
 	* Scrolls the field left or right.
 	*
 	* @param r the region to scroll
 	*/
-	@:overload override public function scrollRectToVisible(r : java.awt.Rectangle) : Void;
+	@:overload @:public override public function scrollRectToVisible(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Name of the action to send notification that the
 	* contents of the field have been accepted.  Typically
 	* this is bound to a carriage-return.
 	*/
-	public static var notifyAction(default, null) : String;
+	@:public @:static @:final public static var notifyAction(default, null) : String;
 	
 	/**
 	* Returns a string representation of this <code>JTextField</code>.
@@ -446,7 +446,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	*
 	* @return  a string representation of this <code>JTextField</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with this
@@ -459,27 +459,27 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	* @return an <code>AccessibleJTextField</code> that serves as the
 	*         <code>AccessibleContext</code> of this <code>JTextField</code>
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
 @:native('javax$swing$JTextField$TextFieldActionPropertyChangeListener') @:internal extern class JTextField_TextFieldActionPropertyChangeListener extends javax.swing.ActionPropertyChangeListener<javax.swing.JTextField>
 {
-	@:overload private function actionPropertyChanged(textField : javax.swing.JTextField, action : javax.swing.Action, e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function actionPropertyChanged(textField : javax.swing.JTextField, action : javax.swing.Action, e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$JTextField$NotifyAction') @:internal extern class JTextField_NotifyAction extends javax.swing.text.TextAction
 {
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
 	
 }
 @:native('javax$swing$JTextField$ScrollRepainter') @:internal extern class JTextField_ScrollRepainter implements javax.swing.event.ChangeListener implements java.io.Serializable
 {
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }
@@ -507,7 +507,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

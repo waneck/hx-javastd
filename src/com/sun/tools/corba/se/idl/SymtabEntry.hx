@@ -54,80 +54,80 @@ extern class SymtabEntry
 	* @see TypedefEntry
 	* @see UnionEntry
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** This is a shallow copy clone */
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/** @return the concatenation of the module and the name, delimited by '/'. */
-	@:overload @:final public function fullName() : String;
+	@:overload @:public @:final public function fullName() : String;
 	
 	/** Get the name of this entry's module.  If there are modules within
 	modules, each module name is separated by '/'.
 	@returns this entry's module name. */
-	@:overload public function module() : String;
+	@:overload @:public public function module() : String;
 	
 	/** Set the module for this entry.
 	@param newName the new name of the module. */
-	@:overload public function module(newName : String) : Void;
+	@:overload @:public public function module(newName : String) : Void;
 	
 	/** @return the name of this entry. */
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/** Set the name.
 	@param newName the new name. */
-	@:overload public function name(newName : String) : Void;
+	@:overload @:public public function name(newName : String) : Void;
 	
 	/** @return the type name of this entry. */
-	@:overload public function typeName() : String;
+	@:overload @:public public function typeName() : String;
 	
-	@:overload private function typeName(typeName : String) : Void;
+	@:overload @:protected private function typeName(typeName : String) : Void;
 	
 	/** @return the type entry of this entry */
-	@:overload public function type() : com.sun.tools.corba.se.idl.SymtabEntry;
+	@:overload @:public public function type() : com.sun.tools.corba.se.idl.SymtabEntry;
 	
-	@:overload public function type(newType : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
-	
-	/** The file name in which this entry was defined. */
-	@:overload public function sourceFile() : com.sun.tools.corba.se.idl.IncludeEntry;
+	@:overload @:public public function type(newType : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/** The file name in which this entry was defined. */
-	@:overload public function sourceFile(file : com.sun.tools.corba.se.idl.IncludeEntry) : Void;
+	@:overload @:public public function sourceFile() : com.sun.tools.corba.se.idl.IncludeEntry;
+	
+	/** The file name in which this entry was defined. */
+	@:overload @:public public function sourceFile(file : com.sun.tools.corba.se.idl.IncludeEntry) : Void;
 	
 	/** This must be either an InterfaceEntry or a ModuleEntry.
 	It can be nothing else. */
-	@:overload public function container() : com.sun.tools.corba.se.idl.SymtabEntry;
+	@:overload @:public public function container() : com.sun.tools.corba.se.idl.SymtabEntry;
 	
 	/** This must be either an InterfaceEntry or a ModuleEntry.
 	It can be nothing else. */
-	@:overload public function container(newContainer : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:public public function container(newContainer : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/** @return the repository ID for this entry. */
-	@:overload public function repositoryID() : com.sun.tools.corba.se.idl.RepositoryID;
+	@:overload @:public public function repositoryID() : com.sun.tools.corba.se.idl.RepositoryID;
 	
 	/** Set the repository ID for this entry.
 	@param id the new repository ID. */
-	@:overload public function repositoryID(id : com.sun.tools.corba.se.idl.RepositoryID) : Void;
+	@:overload @:public public function repositoryID(id : com.sun.tools.corba.se.idl.RepositoryID) : Void;
 	
 	/** Should this type be emitted? */
-	@:overload public function emit() : Bool;
+	@:overload @:public public function emit() : Bool;
 	
-	@:overload public function emit(emit : Bool) : Void;
+	@:overload @:public public function emit(emit : Bool) : Void;
 	
 	/* <21jul1997daz> Accessors for comment */
-	@:overload public function comment() : com.sun.tools.corba.se.idl.Comment;
+	@:overload @:public public function comment() : com.sun.tools.corba.se.idl.Comment;
 	
-	@:overload public function comment(comment : com.sun.tools.corba.se.idl.Comment) : Void;
+	@:overload @:public public function comment(comment : com.sun.tools.corba.se.idl.Comment) : Void;
 	
-	@:overload public function isReferencable() : Bool;
+	@:overload @:public public function isReferencable() : Bool;
 	
-	@:overload public function isReferencable(value : Bool) : Void;
+	@:overload @:public public function isReferencable(value : Bool) : Void;
 	
 	/** Other variables besides the default ones can be dynamically placed
 	into SymTabEntry (and therefore on all symbol table entries) by
 	extenders.  Before such a variable can exist, its key must be
 	obtained by calling getVariableKey. */
-	@:overload public static function getVariableKey() : Int;
+	@:overload @:public @:static public static function getVariableKey() : Int;
 	
 	/** Other variables besides the default ones can be dynamically placed
 	into SymTabEntry (and therefore on all symbol table entries) by
@@ -135,7 +135,7 @@ extern class SymtabEntry
 	given key.  A valid key must be obtained by calling the method
 	getVariableKey.  If the key is invalid, NoSuchFieldException is
 	thrown. */
-	@:overload public function dynamicVariable(key : Int, value : Dynamic) : Void;
+	@:overload @:public public function dynamicVariable(key : Int, value : Dynamic) : Void;
 	
 	/** Other variables besides the default ones can be dynamically placed
 	into SymTabEntry (and therefore on all symbol table entries) by
@@ -143,7 +143,7 @@ extern class SymtabEntry
 	given key.  A valid key must be obtained by calling the method
 	getVariableKey.  If the key is invalid, NoSuchFieldException is
 	thrown. */
-	@:overload public function dynamicVariable(key : Int) : Dynamic;
+	@:overload @:public public function dynamicVariable(key : Int) : Dynamic;
 	
 	/** Invoke a generator.  A call to this method is only meaningful
 	for subclasses of SymtabEntry.  If called on this class, it
@@ -152,13 +152,13 @@ extern class SymtabEntry
 	a fully qualified type name and whose value is a SymtabEntry or
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output. */
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload @:public public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access a generator.  A call to this method is only meaningful
 	for subclasses of SymtabEntry.  If called on this class, it
 	is a no-op.
 	@return an object which implements the Generator interface. */
-	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload @:public public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	
 }

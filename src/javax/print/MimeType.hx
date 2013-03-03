@@ -37,23 +37,23 @@ package javax.print;
 	*     (unchecked exception) Thrown if <CODE>s</CODE> does not obey the
 	*     syntax for a MIME media type string.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Returns this MIME type object's MIME type string based on the canonical
 	* form. Each parameter value is enclosed in quotes.
 	*/
-	@:overload public function getMimeType() : String;
+	@:overload @:public public function getMimeType() : String;
 	
 	/**
 	* Returns this MIME type object's media type.
 	*/
-	@:overload public function getMediaType() : String;
+	@:overload @:public public function getMediaType() : String;
 	
 	/**
 	* Returns this MIME type object's media subtype.
 	*/
-	@:overload public function getMediaSubtype() : String;
+	@:overload @:public public function getMediaSubtype() : String;
 	
 	/**
 	* Returns an unmodifiable map view of the parameters in this MIME type
@@ -63,7 +63,7 @@ package javax.print;
 	*
 	* @return  Parameter map for this MIME type object.
 	*/
-	@:overload public function getParameterMap() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function getParameterMap() : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* Converts this MIME type object to a string.
@@ -71,12 +71,12 @@ package javax.print;
 	* @return  MIME type string based on the canonical form. Each parameter
 	*          value is enclosed in quotes.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hash code for this MIME type object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Determine if this MIME type object is equal to the given object. The two
@@ -94,7 +94,7 @@ package javax.print;
 	* @return  True if this MIME type object equals <CODE>obj</CODE>, false
 	*          otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }
@@ -103,17 +103,17 @@ package javax.print;
 */
 @:native('javax$print$MimeType$ParameterMapEntry') @:internal extern class MimeType_ParameterMapEntry implements java.util.Map.Map_Entry<Dynamic, Dynamic>
 {
-	@:overload public function new(theIndex : Int) : Void;
+	@:overload @:public public function new(theIndex : Int) : Void;
 	
-	@:overload public function getKey() : Dynamic;
+	@:overload @:public public function getKey() : Dynamic;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
-	@:overload public function setValue(value : Dynamic) : Dynamic;
+	@:overload @:public public function setValue(value : Dynamic) : Dynamic;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
@@ -122,11 +122,11 @@ package javax.print;
 */
 @:native('javax$print$MimeType$ParameterMapEntrySetIterator') @:internal extern class MimeType_ParameterMapEntrySetIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }
@@ -135,9 +135,9 @@ package javax.print;
 */
 @:native('javax$print$MimeType$ParameterMapEntrySet') @:internal extern class MimeType_ParameterMapEntrySet extends java.util.AbstractSet<Dynamic>
 {
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	
 }
@@ -146,33 +146,33 @@ package javax.print;
 */
 @:native('javax$print$MimeType$ParameterMap') @:internal extern class MimeType_ParameterMap extends java.util.AbstractMap<Dynamic, Dynamic>
 {
-	@:overload public function entrySet() : java.util.Set<Dynamic>;
+	@:overload @:public override public function entrySet() : java.util.Set<Dynamic>;
 	
 	
 }
 @:native('javax$print$MimeType$LexicalAnalyzer') @:internal extern class MimeType_LexicalAnalyzer
 {
-	private var mySource : String;
+	@:protected private var mySource : String;
 	
-	private var mySourceLength : Int;
+	@:protected private var mySourceLength : Int;
 	
-	private var myCurrentIndex : Int;
+	@:protected private var myCurrentIndex : Int;
 	
-	private var myLexemeType : Int;
+	@:protected private var myLexemeType : Int;
 	
-	private var myLexemeBeginIndex : Int;
+	@:protected private var myLexemeBeginIndex : Int;
 	
-	private var myLexemeEndIndex : Int;
+	@:protected private var myLexemeEndIndex : Int;
 	
-	@:overload public function new(theSource : String) : Void;
+	@:overload @:public public function new(theSource : String) : Void;
 	
-	@:overload public function getLexemeType() : Int;
+	@:overload @:public public function getLexemeType() : Int;
 	
-	@:overload public function getLexeme() : String;
+	@:overload @:public public function getLexeme() : String;
 	
-	@:overload public function getLexemeFirstCharacter() : java.StdTypes.Char16;
+	@:overload @:public public function getLexemeFirstCharacter() : java.StdTypes.Char16;
 	
-	@:overload public function nextLexeme() : Void;
+	@:overload @:public public function nextLexeme() : Void;
 	
 	
 }

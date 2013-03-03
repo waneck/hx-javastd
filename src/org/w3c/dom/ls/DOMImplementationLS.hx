@@ -81,7 +81,7 @@ extern interface DOMImplementationLS
 	*    NOT_SUPPORTED_ERR: Raised if the requested mode or schema type is
 	*   not supported.
 	*/
-	@:overload public function createLSParser(mode : java.StdTypes.Int16, schemaType : String) : org.w3c.dom.ls.LSParser;
+	@:overload @:public public function createLSParser(mode : java.StdTypes.Int16, schemaType : String) : org.w3c.dom.ls.LSParser;
 	
 	/**
 	*  Create a new <code>LSSerializer</code> object.
@@ -95,7 +95,7 @@ extern interface DOMImplementationLS
 	*   parameter on the new <code>LSSerializer</code> object contains a
 	*   reference to the default error handler.
 	*/
-	@:overload public function createLSSerializer() : org.w3c.dom.ls.LSSerializer;
+	@:overload @:public public function createLSSerializer() : org.w3c.dom.ls.LSSerializer;
 	
 	/**
 	*  Create a new empty input source object where
@@ -106,7 +106,7 @@ extern interface DOMImplementationLS
 	* <code>LSInput.certifiedText</code> is false.
 	* @return  The newly created input object.
 	*/
-	@:overload public function createLSInput() : org.w3c.dom.ls.LSInput;
+	@:overload @:public public function createLSInput() : org.w3c.dom.ls.LSInput;
 	
 	/**
 	*  Create a new empty output destination object where
@@ -115,7 +115,7 @@ extern interface DOMImplementationLS
 	* <code>LSOutput.encoding</code> are null.
 	* @return  The newly created output object.
 	*/
-	@:overload public function createLSOutput() : org.w3c.dom.ls.LSOutput;
+	@:overload @:public public function createLSOutput() : org.w3c.dom.ls.LSOutput;
 	
 	
 }

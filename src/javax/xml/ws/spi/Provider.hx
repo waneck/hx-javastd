@@ -30,12 +30,12 @@ extern class Provider
 	* name of a <code>Provider</code> implementation
 	* class.
 	*/
-	public static var JAXWSPROVIDER_PROPERTY(default, null) : String;
+	@:static @:public @:final public static var JAXWSPROVIDER_PROPERTY(default, null) : String;
 	
 	/**
 	* Creates a new instance of Provider
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	*
@@ -67,7 +67,7 @@ extern class Provider
 	* </ul>
 	*
 	*/
-	@:overload public static function provider() : javax.xml.ws.spi.Provider;
+	@:overload @:public @:static public static function provider() : javax.xml.ws.spi.Provider;
 	
 	/**
 	* Creates a service delegate object.
@@ -79,7 +79,7 @@ extern class Provider
 	*        <code>javax.xml.ws.Service</code> or a subclass thereof.
 	* @return The newly created service delegate.
 	*/
-	@:overload @:abstract public function createServiceDelegate(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName, serviceClass : Class<javax.xml.ws.Service>) : javax.xml.ws.spi.ServiceDelegate;
+	@:overload @:public @:abstract public function createServiceDelegate(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName, serviceClass : Class<javax.xml.ws.Service>) : javax.xml.ws.spi.ServiceDelegate;
 	
 	/**
 	* Creates a service delegate object.
@@ -96,7 +96,7 @@ extern class Provider
 	*
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:overload public function createServiceDelegate(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName, serviceClass : Class<javax.xml.ws.Service>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.spi.ServiceDelegate;
+	@:require(java2) @:overload @:public public function createServiceDelegate(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName, serviceClass : Class<javax.xml.ws.Service>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.spi.ServiceDelegate;
 	
 	/**
 	*
@@ -110,7 +110,7 @@ extern class Provider
 	*        annotations.
 	* @return The newly created endpoint.
 	*/
-	@:overload @:abstract public function createEndpoint(bindingId : String, implementor : Dynamic) : javax.xml.ws.Endpoint;
+	@:overload @:public @:abstract public function createEndpoint(bindingId : String, implementor : Dynamic) : javax.xml.ws.Endpoint;
 	
 	/**
 	* Creates and publishes an endpoint object with the specified
@@ -126,7 +126,7 @@ extern class Provider
 	*        annotations.
 	* @return The newly created endpoint.
 	*/
-	@:overload @:abstract public function createAndPublishEndpoint(address : String, implementor : Dynamic) : javax.xml.ws.Endpoint;
+	@:overload @:public @:abstract public function createAndPublishEndpoint(address : String, implementor : Dynamic) : javax.xml.ws.Endpoint;
 	
 	/**
 	* read an EndpointReference from the infoset contained in
@@ -145,7 +145,7 @@ extern class Provider
 	*
 	* @since JAX-WS 2.1
 	**/
-	@:require(java1) @:overload @:abstract public function readEndpointReference(eprInfoset : javax.xml.transform.Source) : javax.xml.ws.EndpointReference;
+	@:require(java1) @:overload @:public @:abstract public function readEndpointReference(eprInfoset : javax.xml.transform.Source) : javax.xml.ws.EndpointReference;
 	
 	/**
 	* The getPort method returns a proxy.  If there
@@ -197,7 +197,7 @@ extern class Provider
 	*
 	* @since JAX-WS 2.1
 	**/
-	@:require(java1) @:overload @:abstract public function getPort<T>(endpointReference : javax.xml.ws.EndpointReference, serviceEndpointInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
+	@:require(java1) @:overload @:public @:abstract public function getPort<T>(endpointReference : javax.xml.ws.EndpointReference, serviceEndpointInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
 	
 	/**
 	* Factory method to create a <code>W3CEndpointReference</code>.
@@ -257,7 +257,7 @@ extern class Provider
 	*
 	* @since JAX-WS 2.1
 	*/
-	@:require(java1) @:overload @:abstract public function createW3CEndpointReference(address : String, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, metadata : java.util.List<org.w3c.dom.Element>, wsdlDocumentLocation : String, referenceParameters : java.util.List<org.w3c.dom.Element>) : javax.xml.ws.wsaddressing.W3CEndpointReference;
+	@:require(java1) @:overload @:public @:abstract public function createW3CEndpointReference(address : String, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, metadata : java.util.List<org.w3c.dom.Element>, wsdlDocumentLocation : String, referenceParameters : java.util.List<org.w3c.dom.Element>) : javax.xml.ws.wsaddressing.W3CEndpointReference;
 	
 	/**
 	* Factory method to create a <code>W3CEndpointReference</code>.
@@ -329,7 +329,7 @@ extern class Provider
 	*                             <code>W3CEndpointReference</code>.
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:overload public function createW3CEndpointReference(address : String, interfaceName : javax.xml.namespace.QName, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, metadata : java.util.List<org.w3c.dom.Element>, wsdlDocumentLocation : String, referenceParameters : java.util.List<org.w3c.dom.Element>, elements : java.util.List<org.w3c.dom.Element>, attributes : java.util.Map<javax.xml.namespace.QName, String>) : javax.xml.ws.wsaddressing.W3CEndpointReference;
+	@:require(java2) @:overload @:public public function createW3CEndpointReference(address : String, interfaceName : javax.xml.namespace.QName, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, metadata : java.util.List<org.w3c.dom.Element>, wsdlDocumentLocation : String, referenceParameters : java.util.List<org.w3c.dom.Element>, elements : java.util.List<org.w3c.dom.Element>, attributes : java.util.Map<javax.xml.namespace.QName, String>) : javax.xml.ws.wsaddressing.W3CEndpointReference;
 	
 	/**
 	* Creates and publishes an endpoint object with the specified
@@ -351,7 +351,7 @@ extern class Provider
 	* @return The newly created endpoint.
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:overload public function createAndPublishEndpoint(address : String, implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
+	@:require(java2) @:overload @:public public function createAndPublishEndpoint(address : String, implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
 	
 	/**
 	* Creates an endpoint object with the provided binding, implementation
@@ -369,7 +369,7 @@ extern class Provider
 	* @return The newly created endpoint.
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:overload public function createEndpoint(bindingId : String, implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
+	@:require(java2) @:overload @:public public function createEndpoint(bindingId : String, implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
 	
 	/**
 	* Creates an endpoint object with the provided binding, implementation
@@ -389,7 +389,7 @@ extern class Provider
 	* @return The newly created endpoint.
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:overload public function createEndpoint(bindingId : String, implementorClass : Class<Dynamic>, invoker : javax.xml.ws.spi.Invoker, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
+	@:require(java2) @:overload @:public public function createEndpoint(bindingId : String, implementorClass : Class<Dynamic>, invoker : javax.xml.ws.spi.Invoker, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
 	
 	
 }

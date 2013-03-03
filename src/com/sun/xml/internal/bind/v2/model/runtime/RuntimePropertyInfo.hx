@@ -51,7 +51,7 @@ extern interface RuntimePropertyInfo extends com.sun.xml.internal.bind.v2.model.
 	/**
 	* Returns true if this property has an element-only content. False otherwise.
 	*/
-	@:overload public function elementOnlyContent() : Bool;
+	@:overload @:public public function elementOnlyContent() : Bool;
 	
 	/**
 	* Gets the "raw" type of the field.

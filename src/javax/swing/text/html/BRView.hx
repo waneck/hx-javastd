@@ -35,14 +35,14 @@ package javax.swing.text.html;
 	*
 	* @param elem the element to create a view for
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Forces a line break.
 	*
 	* @return View.ForcedBreakWeight
 	*/
-	@:overload override public function getBreakWeight(axis : Int, pos : Single, len : Single) : Int;
+	@:overload @:public override public function getBreakWeight(axis : Int, pos : Single, len : Single) : Int;
 	
 	
 }

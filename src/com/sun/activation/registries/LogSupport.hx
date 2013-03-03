@@ -28,11 +28,11 @@ package com.sun.activation.registries;
 */
 extern class LogSupport
 {
-	@:overload public static function log(msg : String) : Void;
+	@:overload @:public @:static public static function log(msg : String) : Void;
 	
-	@:overload public static function log(msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:static public static function log(msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload public static function isLoggable() : Bool;
+	@:overload @:public @:static public static function isLoggable() : Bool;
 	
 	
 }

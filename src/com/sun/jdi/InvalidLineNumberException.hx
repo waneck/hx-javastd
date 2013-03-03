@@ -34,9 +34,9 @@ package com.sun.jdi;
 */
 @:require(java3) extern class InvalidLineNumberException extends java.lang.RuntimeException
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

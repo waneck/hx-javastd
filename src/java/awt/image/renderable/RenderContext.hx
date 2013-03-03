@@ -62,7 +62,7 @@ extern class RenderContext implements java.lang.Cloneable
 	* @param aoi a Shape representing the area of interest.
 	* @param hints a RenderingHints object containing rendering hints.
 	*/
-	@:overload public function new(usr2dev : java.awt.geom.AffineTransform, aoi : java.awt.Shape, hints : java.awt.RenderingHints) : Void;
+	@:overload @:public public function new(usr2dev : java.awt.geom.AffineTransform, aoi : java.awt.Shape, hints : java.awt.RenderingHints) : Void;
 	
 	/**
 	* Constructs a RenderContext with a given transform.
@@ -71,7 +71,7 @@ extern class RenderContext implements java.lang.Cloneable
 	*
 	* @param usr2dev an AffineTransform.
 	*/
-	@:overload public function new(usr2dev : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public public function new(usr2dev : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Constructs a RenderContext with a given transform and rendering hints.
@@ -80,7 +80,7 @@ extern class RenderContext implements java.lang.Cloneable
 	* @param usr2dev an AffineTransform.
 	* @param hints a RenderingHints object containing rendering hints.
 	*/
-	@:overload public function new(usr2dev : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : Void;
+	@:overload @:public public function new(usr2dev : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : Void;
 	
 	/**
 	* Constructs a RenderContext with a given transform and area of interest.
@@ -90,7 +90,7 @@ extern class RenderContext implements java.lang.Cloneable
 	* @param usr2dev an AffineTransform.
 	* @param aoi a Shape representing the area of interest.
 	*/
-	@:overload public function new(usr2dev : java.awt.geom.AffineTransform, aoi : java.awt.Shape) : Void;
+	@:overload @:public public function new(usr2dev : java.awt.geom.AffineTransform, aoi : java.awt.Shape) : Void;
 	
 	/**
 	* Gets the rendering hints of this <code>RenderContext</code>.
@@ -98,7 +98,7 @@ extern class RenderContext implements java.lang.Cloneable
 	* the rendering hints of this <code>RenderContext</code>.
 	* @see #setRenderingHints(RenderingHints)
 	*/
-	@:overload public function getRenderingHints() : java.awt.RenderingHints;
+	@:overload @:public public function getRenderingHints() : java.awt.RenderingHints;
 	
 	/**
 	* Sets the rendering hints of this <code>RenderContext</code>.
@@ -106,7 +106,7 @@ extern class RenderContext implements java.lang.Cloneable
 	* the rendering hints to assign to this <code>RenderContext</code>.
 	* @see #getRenderingHints
 	*/
-	@:overload public function setRenderingHints(hints : java.awt.RenderingHints) : Void;
+	@:overload @:public public function setRenderingHints(hints : java.awt.RenderingHints) : Void;
 	
 	/**
 	* Sets the current user-to-device AffineTransform contained
@@ -115,7 +115,7 @@ extern class RenderContext implements java.lang.Cloneable
 	* @param newTransform the new AffineTransform.
 	* @see #getTransform
 	*/
-	@:overload public function setTransform(newTransform : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public public function setTransform(newTransform : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Modifies the current user-to-device transform by prepending another
@@ -128,7 +128,7 @@ extern class RenderContext implements java.lang.Cloneable
 	*        current usr2dev transform.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function preConcatenateTransform(modTransform : java.awt.geom.AffineTransform) : Void;
+	@:require(java3) @:overload @:public public function preConcatenateTransform(modTransform : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Modifies the current user-to-device transform by prepending another
@@ -145,7 +145,7 @@ extern class RenderContext implements java.lang.Cloneable
 	* @deprecated     replaced by
 	*                 <code>preConcatenateTransform(AffineTransform)</code>.
 	*/
-	@:overload public function preConcetenateTransform(modTransform : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public public function preConcetenateTransform(modTransform : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Modifies the current user-to-device transform by appending another
@@ -158,7 +158,7 @@ extern class RenderContext implements java.lang.Cloneable
 	*        current usr2dev transform.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function concatenateTransform(modTransform : java.awt.geom.AffineTransform) : Void;
+	@:require(java3) @:overload @:public public function concatenateTransform(modTransform : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Modifies the current user-to-device transform by appending another
@@ -175,7 +175,7 @@ extern class RenderContext implements java.lang.Cloneable
 	* @deprecated     replaced by
 	*                 <code>concatenateTransform(AffineTransform)</code>.
 	*/
-	@:overload public function concetenateTransform(modTransform : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public public function concetenateTransform(modTransform : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Gets the current user-to-device AffineTransform.
@@ -183,7 +183,7 @@ extern class RenderContext implements java.lang.Cloneable
 	* @return a reference to the current AffineTransform.
 	* @see #setTransform(AffineTransform)
 	*/
-	@:overload public function getTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public public function getTransform() : java.awt.geom.AffineTransform;
 	
 	/**
 	* Sets the current area of interest.  The old area is discarded.
@@ -191,7 +191,7 @@ extern class RenderContext implements java.lang.Cloneable
 	* @param newAoi The new area of interest.
 	* @see #getAreaOfInterest
 	*/
-	@:overload public function setAreaOfInterest(newAoi : java.awt.Shape) : Void;
+	@:overload @:public public function setAreaOfInterest(newAoi : java.awt.Shape) : Void;
 	
 	/**
 	* Gets the ares of interest currently contained in the
@@ -201,7 +201,7 @@ extern class RenderContext implements java.lang.Cloneable
 	*         or null if none is specified.
 	* @see #setAreaOfInterest(Shape)
 	*/
-	@:overload public function getAreaOfInterest() : java.awt.Shape;
+	@:overload @:public public function getAreaOfInterest() : java.awt.Shape;
 	
 	/**
 	* Makes a copy of a RenderContext. The area of interest is copied
@@ -210,7 +210,7 @@ extern class RenderContext implements java.lang.Cloneable
 	*
 	* @return the new cloned RenderContext.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

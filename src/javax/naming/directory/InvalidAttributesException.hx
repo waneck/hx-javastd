@@ -31,13 +31,13 @@ extern class InvalidAttributesException extends javax.naming.NamingException
 	* @param   explanation     Additional detail about this exception. Can be null.
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload public function new(explanation : String) : Void;
+	@:overload @:public public function new(explanation : String) : Void;
 	
 	/**
 	* Constructs a new instance of InvalidAttributesException.
 	* All fields are set to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

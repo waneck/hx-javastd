@@ -31,42 +31,42 @@ extern class BaseFileObject implements javax.tools.JavaFileObject
 	* This code and its internal interfaces are subject to change or
 	* deletion without notice.</b>
 */
-	@:overload private function new(fileManager : com.sun.tools.javac.file.JavacFileManager) : Void;
+	@:overload @:protected private function new(fileManager : com.sun.tools.javac.file.JavacFileManager) : Void;
 	
 	/** Return a short name for the object, such as for use in raw diagnostics
 	*/
-	@:overload @:abstract public function getShortName() : String;
+	@:overload @:public @:abstract public function getShortName() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getNestingKind() : javax.lang.model.element.NestingKind;
+	@:overload @:public public function getNestingKind() : javax.lang.model.element.NestingKind;
 	
-	@:overload public function getAccessLevel() : javax.lang.model.element.Modifier;
+	@:overload @:public public function getAccessLevel() : javax.lang.model.element.Modifier;
 	
-	@:overload public function openReader(ignoreEncodingErrors : Bool) : java.io.Reader;
+	@:overload @:public public function openReader(ignoreEncodingErrors : Bool) : java.io.Reader;
 	
-	@:overload private function getDecoder(ignoreEncodingErrors : Bool) : java.nio.charset.CharsetDecoder;
+	@:overload @:protected private function getDecoder(ignoreEncodingErrors : Bool) : java.nio.charset.CharsetDecoder;
 	
-	@:overload @:abstract private function inferBinaryName(path : java.lang.Iterable<java.io.File>) : String;
+	@:overload @:protected @:abstract private function inferBinaryName(path : java.lang.Iterable<java.io.File>) : String;
 	
-	@:native('getKind') @:overload private static function _getKind(filename : String) : javax.tools.JavaFileObject.JavaFileObject_Kind;
+	@:native('getKind') @:overload @:protected @:static private static function _getKind(filename : String) : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	
-	@:overload private static function removeExtension(fileName : String) : String;
+	@:overload @:protected @:static private static function removeExtension(fileName : String) : String;
 	
-	@:overload private static function createJarUri(jarFile : java.io.File, entryName : String) : java.net.URI;
+	@:overload @:protected @:static private static function createJarUri(jarFile : java.io.File, entryName : String) : java.net.URI;
 	
 	/** Return the last component of a presumed hierarchical URI.
 	*  From the scheme specific part of the URI, it returns the substring
 	*  after the last "/" if any, or everything if no "/" is found.
 	*/
-	@:overload public static function getSimpleName(fo : javax.tools.FileObject) : String;
+	@:overload @:public @:static public static function getSimpleName(fo : javax.tools.FileObject) : String;
 	
-	@:overload @:abstract public function equals(other : Dynamic) : Bool;
+	@:overload @:public @:abstract public function equals(other : Dynamic) : Bool;
 	
-	@:overload @:abstract public function hashCode() : Int;
+	@:overload @:public @:abstract public function hashCode() : Int;
 	
 	/** The file manager that created this JavaFileObject. */
-	private var fileManager(default, null) : com.sun.tools.javac.file.JavacFileManager;
+	@:protected @:final private var fileManager(default, null) : com.sun.tools.javac.file.JavacFileManager;
 	
 	/**
 	* Gets a user-friendly name for this file object.  The exact
@@ -80,7 +80,7 @@ extern class BaseFileObject implements javax.tools.JavaFileObject
 	*
 	* @return a user-friendly name
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Gets a Writer for this file object.
@@ -92,14 +92,14 @@ extern class BaseFileObject implements javax.tools.JavaFileObject
 	* file object does not support character access
 	* @throws IOException if an I/O error occurred
 	*/
-	@:overload public function openWriter() : java.io.Writer;
+	@:overload @:public public function openWriter() : java.io.Writer;
 	
 	/**
 	* Gets the kind of this file object.
 	*
 	* @return the kind
 	*/
-	@:overload public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
+	@:overload @:public public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	
 	/**
 	* Gets the character content of this file object, if available.
@@ -115,7 +115,7 @@ extern class BaseFileObject implements javax.tools.JavaFileObject
 	* file object does not support character access
 	* @throws IOException if an I/O error occurred
 	*/
-	@:overload public function getCharContent(ignoreEncodingErrors : Bool) : java.lang.CharSequence;
+	@:overload @:public public function getCharContent(ignoreEncodingErrors : Bool) : java.lang.CharSequence;
 	
 	/**
 	* Gets an InputStream for this file object.
@@ -127,7 +127,7 @@ extern class BaseFileObject implements javax.tools.JavaFileObject
 	* object does not support byte access
 	* @throws IOException if an I/O error occurred
 	*/
-	@:overload public function openInputStream() : java.io.InputStream;
+	@:overload @:public public function openInputStream() : java.io.InputStream;
 	
 	/**
 	* Checks if this file object is compatible with the specified
@@ -141,13 +141,13 @@ extern class BaseFileObject implements javax.tools.JavaFileObject
 	* @return {@code true} if this file object is compatible; false
 	* otherwise
 	*/
-	@:overload public function isNameCompatible(simpleName : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
+	@:overload @:public public function isNameCompatible(simpleName : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
 	
 	/**
 	* Returns a URI identifying this file object.
 	* @return a URI
 	*/
-	@:overload public function toUri() : java.net.URI;
+	@:overload @:public public function toUri() : java.net.URI;
 	
 	/**
 	* Gets an OutputStream for this file object.
@@ -159,7 +159,7 @@ extern class BaseFileObject implements javax.tools.JavaFileObject
 	* file object does not support byte access
 	* @throws IOException if an I/O error occurred
 	*/
-	@:overload public function openOutputStream() : java.io.OutputStream;
+	@:overload @:public public function openOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Gets the time this file object was last modified.  The time is
@@ -170,14 +170,14 @@ extern class BaseFileObject implements javax.tools.JavaFileObject
 	* the file object does not exist, if an I/O error occurred, or if
 	* the operation is not supported
 	*/
-	@:overload public function getLastModified() : haxe.Int64;
+	@:overload @:public public function getLastModified() : haxe.Int64;
 	
 	/**
 	* Deletes this file object.  In case of errors, returns false.
 	* @return true if and only if this file object is successfully
 	* deleted; false otherwise
 	*/
-	@:overload public function delete() : Bool;
+	@:overload @:public public function delete() : Bool;
 	
 	
 }
@@ -185,7 +185,7 @@ extern class BaseFileObject implements javax.tools.JavaFileObject
 *  implementations of (Base)FileObject.toURI(). */
 @:native('com$sun$tools$javac$file$BaseFileObject$CannotCreateUriError') extern class BaseFileObject_CannotCreateUriError extends java.lang.Error
 {
-	@:overload public function new(value : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(value : String, cause : java.lang.Throwable) : Void;
 	
 	
 }

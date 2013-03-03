@@ -25,23 +25,23 @@ package sun.io;
 */
 extern class ByteToCharEUC_JP_Solaris extends sun.io.ByteToCharEUC_JP
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public override public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Resets the converter.
 	* Call this method to reset the converter to its initial state
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
-	@:overload override private function convSingleByte(b : Int) : java.StdTypes.Char16;
+	@:overload @:protected override private function convSingleByte(b : Int) : java.StdTypes.Char16;
 	
-	@:overload override private function getUnicode(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
+	@:overload @:protected override private function getUnicode(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
 	
-	@:overload override private function decode0212(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
+	@:overload @:protected override private function decode0212(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Converts sequences of bytes to characters.
@@ -57,7 +57,7 @@ extern class ByteToCharEUC_JP_Solaris extends sun.io.ByteToCharEUC_JP
 	* @throw UnsupportedCharacterException for any bytes
 	* that cannot be converted to the external character set.
 	*/
-	@:overload override public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
+	@:overload @:public override public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
 	
 	
 }

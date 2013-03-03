@@ -31,7 +31,7 @@ extern class Servant
 	* @return <code>_delegate</code> the ORB vendor-specific
 	* implementation of <code>PortableServer::Servant</code>.
 	*/
-	@:overload @:final public function _get_delegate() : org.omg.PortableServer.portable.Delegate;
+	@:overload @:final @:public public function _get_delegate() : org.omg.PortableServer.portable.Delegate;
 	
 	/**
 	* Supports the Java ORB portability
@@ -40,7 +40,7 @@ extern class Servant
 	* @param delegate ORB vendor-specific implementation of
 	*                 the <code>PortableServer::Servant</code>.
 	*/
-	@:overload @:final public function _set_delegate(delegate : org.omg.PortableServer.portable.Delegate) : Void;
+	@:overload @:final @:public public function _set_delegate(delegate : org.omg.PortableServer.portable.Delegate) : Void;
 	
 	/**
 	* Allows the servant to obtain the object reference for
@@ -48,7 +48,7 @@ extern class Servant
 	* @return <code>this_object</code> <code>Object</code> reference
 	* associated with the request.
 	*/
-	@:overload @:final public function _this_object() : org.omg.CORBA.Object;
+	@:overload @:final @:public public function _this_object() : org.omg.CORBA.Object;
 	
 	/**
 	* Allows the servant to obtain the object reference for
@@ -56,7 +56,7 @@ extern class Servant
 	* @param orb ORB with which the servant is associated.
 	* @return <code>_this_object</code> reference associated with the request.
 	*/
-	@:overload @:final public function _this_object(orb : org.omg.CORBA.ORB) : org.omg.CORBA.Object;
+	@:overload @:final @:public public function _this_object(orb : org.omg.CORBA.ORB) : org.omg.CORBA.Object;
 	
 	/**
 	* Returns the instance of the ORB
@@ -64,14 +64,14 @@ extern class Servant
 	* @return <code>orb</code> the instance of the ORB currently
 	* associated with the <code>Servant</code>.
 	*/
-	@:overload @:final public function _orb() : org.omg.CORBA.ORB;
+	@:overload @:final @:public public function _orb() : org.omg.CORBA.ORB;
 	
 	/**
 	* Allows easy execution of common methods, equivalent to
 	* <code>PortableServer::Current:get_POA</code>.
 	* @return <code>poa</code> POA associated with the servant.
 	*/
-	@:overload @:final public function _poa() : org.omg.PortableServer.POA;
+	@:overload @:final @:public public function _poa() : org.omg.PortableServer.POA;
 	
 	/**
 	* Allows easy execution of
@@ -80,7 +80,7 @@ extern class Servant
 	* @return <code>object_id</code> the <code>Object</code> ID associated
 	* with this servant.
 	*/
-	@:overload @:final public function _object_id() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:final @:public public function _object_id() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the
@@ -89,7 +89,7 @@ extern class Servant
 	* @return <code>default_POA</code> the POA associated with the
 	* <code>Servant</code>.
 	*/
-	@:overload public function _default_POA() : org.omg.PortableServer.POA;
+	@:overload @:public public function _default_POA() : org.omg.PortableServer.POA;
 	
 	/**
 	* Checks to see if the specified <code>repository_id</code> is present
@@ -103,7 +103,7 @@ extern class Servant
 	*         in the repository list or is same as a generic CORBA
 	*         object.
 	*/
-	@:overload public function _is_a(repository_id : String) : Bool;
+	@:overload @:public public function _is_a(repository_id : String) : Bool;
 	
 	/**
 	* Checks for the existence of an
@@ -113,7 +113,7 @@ extern class Servant
 	* @return <code>non_existent</code> <code>true</code> if that object does
 	*           not exist,  <code>false</code> otherwise.
 	*/
-	@:overload public function _non_existent() : Bool;
+	@:overload @:public public function _non_existent() : Bool;
 	
 	/**
 	* Returns an <code>InterfaceDef</code> object as a
@@ -138,7 +138,7 @@ extern class Servant
 	* <code>CORBA::Object</code> that defines the runtime type of the
 	* <code>CORBA::Object</code> implemented by the <code>Servant</code>.
 	*/
-	@:overload public function _get_interface_def() : org.omg.CORBA.Object;
+	@:overload @:public public function _get_interface_def() : org.omg.CORBA.Object;
 	
 	/**
 	* Used by the ORB to obtain complete type
@@ -148,7 +148,7 @@ extern class Servant
 	*         associated with this servant.
 	* @return list of type information for the object.
 	*/
-	@:overload @:abstract public function _all_interfaces(poa : org.omg.PortableServer.POA, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
+	@:overload @:abstract @:public public function _all_interfaces(poa : org.omg.PortableServer.POA, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
 	
 }

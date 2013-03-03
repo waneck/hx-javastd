@@ -44,27 +44,27 @@ package com.sun.tools.javadoc;
 	/**
 	* Return the name of this tag.
 	*/
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/**
 	* Return the containing {@link Doc} of this Tag element.
 	*/
-	@:overload public function holder() : com.sun.javadoc.Doc;
+	@:overload @:public public function holder() : com.sun.javadoc.Doc;
 	
 	/**
 	* Return the kind of this tag.
 	*/
-	@:overload public function kind() : String;
+	@:overload @:public public function kind() : String;
 	
 	/**
 	* Return the text of this tag, that is, portion beyond tag name.
 	*/
-	@:overload public function text() : String;
+	@:overload @:public public function text() : String;
 	
 	/**
 	* convert this object to a string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* For documentation comment with embedded @link tags, return the array of
@@ -82,18 +82,18 @@ package com.sun.tools.javadoc;
 	* @see ParamTagImpl
 	* @see ThrowsTagImpl
 	*/
-	@:overload public function inlineTags() : java.NativeArray<com.sun.javadoc.Tag>;
+	@:overload @:public public function inlineTags() : java.NativeArray<com.sun.javadoc.Tag>;
 	
 	/**
 	* Return array of tags for the first sentence in the doc comment text.
 	*/
-	@:overload public function firstSentenceTags() : java.NativeArray<com.sun.javadoc.Tag>;
+	@:overload @:public public function firstSentenceTags() : java.NativeArray<com.sun.javadoc.Tag>;
 	
 	/**
 	* Return the doc item to which this tag is attached.
 	* @return the doc item to which this tag is attached.
 	*/
-	@:overload public function position() : com.sun.javadoc.SourcePosition;
+	@:overload @:public public function position() : com.sun.javadoc.SourcePosition;
 	
 	
 }

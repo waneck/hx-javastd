@@ -45,7 +45,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the <code>attributes</code> or the <code>map</code>
 	*        is a <code>null</code> value
 	*/
-	@:overload public function new(attributes : java.NativeArray<Dynamic>, map : java.util.Map<String, Class<Dynamic>>) : Void;
+	@:overload @:public public function new(attributes : java.NativeArray<Dynamic>, map : java.util.Map<String, Class<Dynamic>>) : Void;
 	
 	/**
 	* Retrieves the next attribute in this <code>SQLInputImpl</code> object as
@@ -61,7 +61,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	*     position or if there are no further values in the stream.
 	*/
-	@:overload public function readString() : String;
+	@:overload @:public public function readString() : String;
 	
 	/**
 	* Retrieves the next attribute in this <code>SQLInputImpl</code> object as
@@ -77,7 +77,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	*     position or if there are no further values in the stream.
 	*/
-	@:overload public function readBoolean() : Bool;
+	@:overload @:public public function readBoolean() : Bool;
 	
 	/**
 	* Retrieves the next attribute in this <code>SQLInputImpl</code> object as
@@ -93,7 +93,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	*     position or if there are no further values in the stream
 	*/
-	@:overload public function readByte() : java.StdTypes.Int8;
+	@:overload @:public public function readByte() : java.StdTypes.Int8;
 	
 	/**
 	* Retrieves the next attribute in this <code>SQLInputImpl</code> object
@@ -108,7 +108,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	*       position or if there are no more values in the stream
 	*/
-	@:overload public function readShort() : java.StdTypes.Int16;
+	@:overload @:public public function readShort() : java.StdTypes.Int16;
 	
 	/**
 	* Retrieves the next attribute in this <code>SQLInputImpl</code> object
@@ -123,7 +123,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	*       position or if there are no more values in the stream
 	*/
-	@:overload public function readInt() : Int;
+	@:overload @:public public function readInt() : Int;
 	
 	/**
 	* Retrieves the next attribute in this <code>SQLInputImpl</code> object
@@ -138,7 +138,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	*       position or if there are no more values in the stream
 	*/
-	@:overload public function readLong() : haxe.Int64;
+	@:overload @:public public function readLong() : haxe.Int64;
 	
 	/**
 	* Retrieves the next attribute in this <code>SQLInputImpl</code> object
@@ -153,7 +153,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	*       position or if there are no more values in the stream
 	*/
-	@:overload public function readFloat() : Single;
+	@:overload @:public public function readFloat() : Single;
 	
 	/**
 	* Retrieves the next attribute in this <code>SQLInputImpl</code> object
@@ -168,7 +168,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	*       position or if there are no more values in the stream
 	*/
-	@:overload public function readDouble() : Float;
+	@:overload @:public public function readDouble() : Float;
 	
 	/**
 	* Retrieves the next attribute in this <code>SQLInputImpl</code> object
@@ -183,7 +183,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	*       position or if there are no more values in the stream
 	*/
-	@:overload public function readBigDecimal() : java.math.BigDecimal;
+	@:overload @:public public function readBigDecimal() : java.math.BigDecimal;
 	
 	/**
 	* Retrieves the next attribute in this <code>SQLInputImpl</code> object
@@ -198,7 +198,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	*       position or if there are no more values in the stream
 	*/
-	@:overload public function readBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function readBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the next attribute in this <code>SQLInputImpl</code> as
@@ -213,7 +213,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	*       position or if there are no more values in the stream
 	*/
-	@:overload public function readDate() : java.sql.Date;
+	@:overload @:public public function readDate() : java.sql.Date;
 	
 	/**
 	* Retrieves the next attribute in this <code>SQLInputImpl</code> object as
@@ -229,7 +229,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	* position; or if there are no further values in the stream.
 	*/
-	@:overload public function readTime() : java.sql.Time;
+	@:overload @:public public function readTime() : java.sql.Time;
 	
 	/**
 	* Retrieves the next attribute in this <code>SQLInputImpl</code> object as
@@ -240,7 +240,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	* position; or if there are no further values in the stream.
 	*/
-	@:overload public function readTimestamp() : java.sql.Timestamp;
+	@:overload @:public public function readTimestamp() : java.sql.Timestamp;
 	
 	/**
 	* Retrieves the next attribute in this <code>SQLInputImpl</code> object
@@ -255,7 +255,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	* position; or if there are no further values in the stream.
 	*/
-	@:overload public function readCharacterStream() : java.io.Reader;
+	@:overload @:public public function readCharacterStream() : java.io.Reader;
 	
 	/**
 	* Returns the next attribute in this <code>SQLInputImpl</code> object
@@ -271,7 +271,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	* position; or if there are no further values in the stream.
 	*/
-	@:overload public function readAsciiStream() : java.io.InputStream;
+	@:overload @:public public function readAsciiStream() : java.io.InputStream;
 	
 	/**
 	* Returns the next attribute in this <code>SQLInputImpl</code> object
@@ -287,7 +287,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	* position; or if there are no further values in the stream.
 	*/
-	@:overload public function readBinaryStream() : java.io.InputStream;
+	@:overload @:public public function readBinaryStream() : java.io.InputStream;
 	
 	/**
 	* Retrieves the value at the head of this <code>SQLInputImpl</code>
@@ -315,7 +315,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	* position; or if there are no further values in the stream.
 	*/
-	@:overload public function readObject() : Dynamic;
+	@:overload @:public public function readObject() : Dynamic;
 	
 	/**
 	* Retrieves the value at the head of this <code>SQLInputImpl</code> object
@@ -327,7 +327,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	*         position; or if there are no further values in the stream.
 	*/
-	@:overload public function readRef() : java.sql.Ref;
+	@:overload @:public public function readRef() : java.sql.Ref;
 	
 	/**
 	* Retrieves the <code>BLOB</code> value at the head of this
@@ -346,7 +346,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	* position; or if there are no further values in the stream.
 	*/
-	@:overload public function readBlob() : java.sql.Blob;
+	@:overload @:public public function readBlob() : java.sql.Blob;
 	
 	/**
 	* Retrieves the <code>CLOB</code> value at the head of this
@@ -365,7 +365,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	* position; or if there are no further values in the stream.
 	*/
-	@:overload public function readClob() : java.sql.Clob;
+	@:overload @:public public function readClob() : java.sql.Clob;
 	
 	/**
 	* Reads an SQL <code>ARRAY</code> value from the stream and
@@ -385,7 +385,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* position; or if there are no further values in the stream.
 
 	*/
-	@:overload public function readArray() : java.sql.Array;
+	@:overload @:public public function readArray() : java.sql.Array;
 	
 	/**
 	* Ascertains whether the last value read from this
@@ -397,7 +397,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if an error occurs determining the last value
 	*         read was a <code>null</code> value or not;
 	*/
-	@:overload public function wasNull() : Bool;
+	@:overload @:public public function wasNull() : Bool;
 	
 	/**
 	* Reads an SQL <code>DATALINK</code> value from the stream and
@@ -416,7 +416,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @throws SQLException if the read position is located at an invalid
 	* position; or if there are no further values in the stream.
 	*/
-	@:overload public function readURL() : java.net.URL;
+	@:overload @:public public function readURL() : java.net.URL;
 	
 	/**
 	* Reads an SQL <code>NCLOB</code> value from the stream and returns it as a
@@ -427,7 +427,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* SQL <code>NULL</code>
 	* @exception SQLException if a database access error occurs
 	*/
-	@:overload public function readNClob() : java.sql.NClob;
+	@:overload @:public public function readNClob() : java.sql.NClob;
 	
 	/**
 	* Reads the next attribute in the stream and returns it as a <code>String</code>
@@ -438,7 +438,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* @return the attribute; if the value is SQL <code>NULL</code>, returns <code>null</code>
 	* @exception SQLException if a database access error occurs
 	*/
-	@:overload public function readNString() : String;
+	@:overload @:public public function readNString() : String;
 	
 	/**
 	* Reads an SQL <code>XML</code> value from the stream and returns it as a
@@ -449,7 +449,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* SQL <code>NULL</code>
 	* @exception SQLException if a database access error occurs
 	*/
-	@:overload public function readSQLXML() : java.sql.SQLXML;
+	@:overload @:public public function readSQLXML() : java.sql.SQLXML;
 	
 	/**
 	* Reads an SQL <code>ROWID</code> value from the stream and returns it as a
@@ -460,7 +460,7 @@ extern class SQLInputImpl implements java.sql.SQLInput
 	* SQL <code>NULL</code>
 	* @exception SQLException if a database access error occurs
 	*/
-	@:overload public function readRowId() : java.sql.RowId;
+	@:overload @:public public function readRowId() : java.sql.RowId;
 	
 	
 }

@@ -31,22 +31,22 @@ package com.sun.tools.doclets.formats.html;
 */
 @:require(java5) extern class LinkFactoryImpl extends com.sun.tools.doclets.internal.toolkit.util.links.LinkFactory
 {
-	@:overload public function new(writer : com.sun.tools.doclets.formats.html.HtmlDocletWriter) : Void;
+	@:overload @:public public function new(writer : com.sun.tools.doclets.formats.html.HtmlDocletWriter) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload private function getOutputInstance() : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
+	@:overload @:protected override private function getOutputInstance() : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload private function getClassLink(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
+	@:overload @:protected override private function getClassLink(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload private function getTypeParameterLink(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo, typeParam : com.sun.javadoc.Type) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
+	@:overload @:protected override private function getTypeParameterLink(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo, typeParam : com.sun.javadoc.Type) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
 	
 	
 }

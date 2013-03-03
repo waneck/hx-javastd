@@ -29,7 +29,7 @@ extern class Policy
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the installed Policy object.
@@ -48,7 +48,7 @@ extern class Policy
 	*
 	* @see #setPolicy
 	*/
-	@:overload public static function getPolicy() : javax.security.auth.Policy;
+	@:overload @:public @:static public static function getPolicy() : javax.security.auth.Policy;
 	
 	/**
 	* Sets the system-wide Policy object. This method first calls
@@ -65,7 +65,7 @@ extern class Policy
 	*
 	* @see #getPolicy
 	*/
-	@:overload public static function setPolicy(policy : javax.security.auth.Policy) : Void;
+	@:overload @:public @:static public static function setPolicy(policy : javax.security.auth.Policy) : Void;
 	
 	/**
 	* Retrieve the Permissions granted to the Principals associated with
@@ -91,7 +91,7 @@ extern class Policy
 	*                  the provided <i>subject</i> and <i>cs</i>
 	*                  parameters.
 	*/
-	@:overload @:abstract public function getPermissions(subject : javax.security.auth.Subject, cs : java.security.CodeSource) : java.security.PermissionCollection;
+	@:overload @:public @:abstract public function getPermissions(subject : javax.security.auth.Subject, cs : java.security.CodeSource) : java.security.PermissionCollection;
 	
 	/**
 	* Refresh and reload the Policy.
@@ -106,7 +106,7 @@ extern class Policy
 	* @exception SecurityException if the caller does not have permission
 	*                          to refresh the Policy.
 	*/
-	@:overload @:abstract public function refresh() : Void;
+	@:overload @:public @:abstract public function refresh() : Void;
 	
 	
 }

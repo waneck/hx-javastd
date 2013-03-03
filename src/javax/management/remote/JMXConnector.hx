@@ -36,7 +36,7 @@ extern interface JMXConnector extends java.io.Closeable
 	* @exception SecurityException if the connection could not be
 	* made for security reasons.
 	*/
-	@:overload public function connect() : Void;
+	@:overload @:public public function connect() : Void;
 	
 	/**
 	* <p>Establishes the connection to the connector server.</p>
@@ -62,7 +62,7 @@ extern interface JMXConnector extends java.io.Closeable
 	* @exception SecurityException if the connection could not be
 	* made for security reasons.
 	*/
-	@:overload public function connect(env : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function connect(env : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* <p>Returns an <code>MBeanServerConnection</code> object
@@ -99,7 +99,7 @@ extern interface JMXConnector extends java.io.Closeable
 	* not yet been established (with the {@link #connect(Map)
 	* connect} method), or it has been closed, or it has broken.
 	*/
-	@:overload public function getMBeanServerConnection() : javax.management.MBeanServerConnection;
+	@:overload @:public public function getMBeanServerConnection() : javax.management.MBeanServerConnection;
 	
 	/**
 	* <p>Returns an <code>MBeanServerConnection</code> object representing
@@ -136,7 +136,7 @@ extern interface JMXConnector extends java.io.Closeable
 	* MBean server has not yet been established (with the {@link #connect(Map)
 	* connect} method), or it has been closed, or it has broken.
 	*/
-	@:overload public function getMBeanServerConnection(delegationSubject : javax.security.auth.Subject) : javax.management.MBeanServerConnection;
+	@:overload @:public public function getMBeanServerConnection(delegationSubject : javax.security.auth.Subject) : javax.management.MBeanServerConnection;
 	
 	/**
 	* <p>Closes the client connection to its server.  Any ongoing or new
@@ -162,7 +162,7 @@ extern interface JMXConnector extends java.io.Closeable
 	* cleanly.  If this exception is thrown, it is not known whether
 	* the server end of the connection has been cleanly closed.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* <p>Adds a listener to be informed of changes in connection
@@ -192,7 +192,7 @@ extern interface JMXConnector extends java.io.Closeable
 	* @see #removeConnectionNotificationListener
 	* @see javax.management.NotificationBroadcaster#addNotificationListener
 	*/
-	@:overload public function addConnectionNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addConnectionNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	/**
 	* <p>Removes a listener from the list to be informed of changes
@@ -213,7 +213,7 @@ extern interface JMXConnector extends java.io.Closeable
 	* @see #addConnectionNotificationListener
 	* @see javax.management.NotificationEmitter#removeNotificationListener
 	*/
-	@:overload public function removeConnectionNotificationListener(listener : javax.management.NotificationListener) : Void;
+	@:overload @:public public function removeConnectionNotificationListener(listener : javax.management.NotificationListener) : Void;
 	
 	/**
 	* <p>Removes a listener from the list to be informed of changes
@@ -235,7 +235,7 @@ extern interface JMXConnector extends java.io.Closeable
 	* @see #addConnectionNotificationListener
 	* @see javax.management.NotificationEmitter#removeNotificationListener
 	*/
-	@:overload public function removeConnectionNotificationListener(l : javax.management.NotificationListener, f : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeConnectionNotificationListener(l : javax.management.NotificationListener, f : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	/**
 	* <p>Gets this connection's ID from the connector server.  For a
@@ -252,7 +252,7 @@ extern interface JMXConnector extends java.io.Closeable
 	* @exception IOException if the connection ID cannot be obtained,
 	* for instance because the connection is closed or broken.
 	*/
-	@:overload public function getConnectionId() : String;
+	@:overload @:public public function getConnectionId() : String;
 	
 	
 }

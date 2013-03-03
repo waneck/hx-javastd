@@ -74,7 +74,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	* <code>StyledEditorKit</code> is
 	* created and set, and the document model set to <code>null</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new <code>JTextPane</code>, with a specified document model.
@@ -83,7 +83,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	*
 	* @param doc the document model
 	*/
-	@:overload public function new(doc : javax.swing.text.StyledDocument) : Void;
+	@:overload @:public public function new(doc : javax.swing.text.StyledDocument) : Void;
 	
 	/**
 	* Returns the class ID for the UI.
@@ -93,7 +93,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Associates the editor with a text document.  This
@@ -104,7 +104,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	*   be narrowed to a <code>StyledDocument</code> which is the
 	*   required type of model for this text component
 	*/
-	@:overload public function setDocument(doc : javax.swing.text.Document) : Void;
+	@:overload @:public override public function setDocument(doc : javax.swing.text.Document) : Void;
 	
 	/**
 	* Associates the editor with a text document.
@@ -113,14 +113,14 @@ extern class JTextPane extends javax.swing.JEditorPane
 	*
 	* @param doc  the document to display/edit
 	*/
-	@:overload public function setStyledDocument(doc : javax.swing.text.StyledDocument) : Void;
+	@:overload @:public public function setStyledDocument(doc : javax.swing.text.StyledDocument) : Void;
 	
 	/**
 	* Fetches the model associated with the editor.
 	*
 	* @return the model
 	*/
-	@:overload public function getStyledDocument() : javax.swing.text.StyledDocument;
+	@:overload @:public public function getStyledDocument() : javax.swing.text.StyledDocument;
 	
 	/**
 	* Replaces the currently selected content with new content
@@ -133,7 +133,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	*
 	* @param content  the content to replace the selection with
 	*/
-	@:overload override public function replaceSelection(content : String) : Void;
+	@:overload @:public override public function replaceSelection(content : String) : Void;
 	
 	/**
 	* Inserts a component into the document as a replacement
@@ -159,7 +159,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	*
 	* @param c    the component to insert
 	*/
-	@:overload public function insertComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function insertComponent(c : java.awt.Component) : Void;
 	
 	/**
 	* Inserts an icon into the document as a replacement
@@ -172,7 +172,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	* @param g    the icon to insert
 	* @see Icon
 	*/
-	@:overload public function insertIcon(g : javax.swing.Icon) : Void;
+	@:overload @:public public function insertIcon(g : javax.swing.Icon) : Void;
 	
 	/**
 	* Adds a new style into the logical style hierarchy.  Style attributes
@@ -191,7 +191,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	*   attributes need not be resolved in some other style.
 	* @return the new <code>Style</code>
 	*/
-	@:overload public function addStyle(nm : String, parent : javax.swing.text.Style) : javax.swing.text.Style;
+	@:overload @:public public function addStyle(nm : String, parent : javax.swing.text.Style) : javax.swing.text.Style;
 	
 	/**
 	* Removes a named non-<code>null</code> style previously added to
@@ -199,7 +199,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	*
 	* @param nm  the name of the style to remove
 	*/
-	@:overload public function removeStyle(nm : String) : Void;
+	@:overload @:public public function removeStyle(nm : String) : Void;
 	
 	/**
 	* Fetches a named non-<code>null</code> style previously added.
@@ -207,7 +207,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	* @param nm  the name of the style
 	* @return the <code>Style</code>
 	*/
-	@:overload public function getStyle(nm : String) : javax.swing.text.Style;
+	@:overload @:public public function getStyle(nm : String) : javax.swing.text.Style;
 	
 	/**
 	* Sets the logical style to use for the paragraph at the
@@ -220,7 +220,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	* @param s  the logical style to assign to the paragraph,
 	*          or <code>null</code> for no style
 	*/
-	@:overload public function setLogicalStyle(s : javax.swing.text.Style) : Void;
+	@:overload @:public public function setLogicalStyle(s : javax.swing.text.Style) : Void;
 	
 	/**
 	* Fetches the logical style assigned to the paragraph represented
@@ -228,7 +228,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	*
 	* @return the <code>Style</code>
 	*/
-	@:overload public function getLogicalStyle() : javax.swing.text.Style;
+	@:overload @:public public function getLogicalStyle() : javax.swing.text.Style;
 	
 	/**
 	* Fetches the character attributes in effect at the
@@ -236,7 +236,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	*
 	* @return the attributes, or <code>null</code>
 	*/
-	@:overload public function getCharacterAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public public function getCharacterAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Applies the given attributes to character
@@ -249,7 +249,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	* @param attr the attributes
 	* @param replace if true, then replace the existing attributes first
 	*/
-	@:overload public function setCharacterAttributes(attr : javax.swing.text.AttributeSet, replace : Bool) : Void;
+	@:overload @:public public function setCharacterAttributes(attr : javax.swing.text.AttributeSet, replace : Bool) : Void;
 	
 	/**
 	* Fetches the current paragraph attributes in effect
@@ -257,7 +257,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	*
 	* @return the attributes
 	*/
-	@:overload public function getParagraphAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public public function getParagraphAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Applies the given attributes to paragraphs.  If
@@ -269,21 +269,21 @@ extern class JTextPane extends javax.swing.JEditorPane
 	* @param attr the non-<code>null</code> attributes
 	* @param replace if true, replace the existing attributes first
 	*/
-	@:overload public function setParagraphAttributes(attr : javax.swing.text.AttributeSet, replace : Bool) : Void;
+	@:overload @:public public function setParagraphAttributes(attr : javax.swing.text.AttributeSet, replace : Bool) : Void;
 	
 	/**
 	* Gets the input attributes for the pane.
 	*
 	* @return the attributes
 	*/
-	@:overload public function getInputAttributes() : javax.swing.text.MutableAttributeSet;
+	@:overload @:public public function getInputAttributes() : javax.swing.text.MutableAttributeSet;
 	
 	/**
 	* Gets the editor kit.
 	*
 	* @return the editor kit
 	*/
-	@:overload @:final private function getStyledEditorKit() : javax.swing.text.StyledEditorKit;
+	@:overload @:protected @:final private function getStyledEditorKit() : javax.swing.text.StyledEditorKit;
 	
 	/**
 	* Creates the <code>EditorKit</code> to use by default.  This
@@ -291,7 +291,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	*
 	* @return the editor kit
 	*/
-	@:overload override private function createDefaultEditorKit() : javax.swing.text.EditorKit;
+	@:overload @:protected override private function createDefaultEditorKit() : javax.swing.text.EditorKit;
 	
 	/**
 	* Sets the currently installed kit for handling
@@ -302,7 +302,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	* @exception IllegalArgumentException if kit is not a
 	*          <code>StyledEditorKit</code>
 	*/
-	@:overload @:final override public function setEditorKit(kit : javax.swing.text.EditorKit) : Void;
+	@:overload @:public @:final override public function setEditorKit(kit : javax.swing.text.EditorKit) : Void;
 	
 	/**
 	* Returns a string representation of this <code>JTextPane</code>.
@@ -314,7 +314,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	*
 	* @return  a string representation of this <code>JTextPane</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	
 }

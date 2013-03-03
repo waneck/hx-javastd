@@ -21,84 +21,84 @@ package com.sun.org.apache.xerces.internal.impl.xs.traversers;
 extern class XSDHandler
 {
 	/** Feature identifier: validation. */
-	private static var VALIDATION(default, null) : String;
+	@:protected @:static @:final private static var VALIDATION(default, null) : String;
 	
 	/** feature identifier: XML Schema validation */
-	private static var XMLSCHEMA_VALIDATION(default, null) : String;
+	@:protected @:static @:final private static var XMLSCHEMA_VALIDATION(default, null) : String;
 	
 	/** Feature identifier:  allow java encodings */
-	private static var ALLOW_JAVA_ENCODINGS(default, null) : String;
+	@:protected @:static @:final private static var ALLOW_JAVA_ENCODINGS(default, null) : String;
 	
 	/** Feature identifier:  continue after fatal error */
-	private static var CONTINUE_AFTER_FATAL_ERROR(default, null) : String;
+	@:protected @:static @:final private static var CONTINUE_AFTER_FATAL_ERROR(default, null) : String;
 	
 	/** Feature identifier:  allow java encodings */
-	private static var STANDARD_URI_CONFORMANT_FEATURE(default, null) : String;
+	@:protected @:static @:final private static var STANDARD_URI_CONFORMANT_FEATURE(default, null) : String;
 	
 	/** Feature: disallow doctype*/
-	private static var DISALLOW_DOCTYPE(default, null) : String;
+	@:protected @:static @:final private static var DISALLOW_DOCTYPE(default, null) : String;
 	
 	/** Feature: generate synthetic annotations */
-	private static var GENERATE_SYNTHETIC_ANNOTATIONS(default, null) : String;
+	@:protected @:static @:final private static var GENERATE_SYNTHETIC_ANNOTATIONS(default, null) : String;
 	
 	/** Feature identifier: validate annotations. */
-	private static var VALIDATE_ANNOTATIONS(default, null) : String;
+	@:protected @:static @:final private static var VALIDATE_ANNOTATIONS(default, null) : String;
 	
 	/** Feature identifier: honour all schemaLocations */
-	private static var HONOUR_ALL_SCHEMALOCATIONS(default, null) : String;
+	@:protected @:static @:final private static var HONOUR_ALL_SCHEMALOCATIONS(default, null) : String;
 	
 	/** Feature identifier: namespace growth */
-	private static var NAMESPACE_GROWTH(default, null) : String;
+	@:protected @:static @:final private static var NAMESPACE_GROWTH(default, null) : String;
 	
 	/** Feature identifier: tolerate duplicates */
-	private static var TOLERATE_DUPLICATES(default, null) : String;
+	@:protected @:static @:final private static var TOLERATE_DUPLICATES(default, null) : String;
 	
 	/** Feature identifier: string interning. */
-	private static var STRING_INTERNING(default, null) : String;
+	@:protected @:static @:final private static var STRING_INTERNING(default, null) : String;
 	
 	/** Property identifier: error handler. */
-	private static var ERROR_HANDLER(default, null) : String;
+	@:protected @:static @:final private static var ERROR_HANDLER(default, null) : String;
 	
 	/** Property identifier: JAXP schema source. */
-	private static var JAXP_SCHEMA_SOURCE(default, null) : String;
+	@:protected @:static @:final private static var JAXP_SCHEMA_SOURCE(default, null) : String;
 	
 	/** Property identifier: entity resolver. */
-	public static var ENTITY_RESOLVER(default, null) : String;
+	@:public @:static @:final public static var ENTITY_RESOLVER(default, null) : String;
 	
 	/** Property identifier: entity manager. */
-	private static var ENTITY_MANAGER(default, null) : String;
+	@:protected @:static @:final private static var ENTITY_MANAGER(default, null) : String;
 	
 	/** Property identifier: error reporter. */
-	public static var ERROR_REPORTER(default, null) : String;
+	@:public @:static @:final public static var ERROR_REPORTER(default, null) : String;
 	
 	/** Property identifier: grammar pool. */
-	public static var XMLGRAMMAR_POOL(default, null) : String;
+	@:public @:static @:final public static var XMLGRAMMAR_POOL(default, null) : String;
 	
 	/** Property identifier: symbol table. */
-	public static var SYMBOL_TABLE(default, null) : String;
+	@:public @:static @:final public static var SYMBOL_TABLE(default, null) : String;
 	
 	/** Property identifier: security manager. */
-	private static var SECURITY_MANAGER(default, null) : String;
+	@:protected @:static @:final private static var SECURITY_MANAGER(default, null) : String;
 	
 	/** Property identifier: locale. */
-	private static var LOCALE(default, null) : String;
+	@:protected @:static @:final private static var LOCALE(default, null) : String;
 	
-	private static var DEBUG_NODE_POOL(default, null) : Bool;
+	@:protected @:static @:final private static var DEBUG_NODE_POOL(default, null) : Bool;
 	
-	public static var REDEF_IDENTIFIER(default, null) : String;
+	@:public @:final @:static public static var REDEF_IDENTIFIER(default, null) : String;
 	
-	private var fDeclPool : com.sun.org.apache.xerces.internal.impl.xs.XSDeclarationPool;
+	@:protected private var fDeclPool : com.sun.org.apache.xerces.internal.impl.xs.XSDeclarationPool;
 	
 	/**
 	* <p>Security manager in effect.</p>
 	*
 	* <p>Protected to allow access by any traverser.</p>
 	*/
-	private var fSecureProcessing : com.sun.org.apache.xerces.internal.util.SecurityManager;
+	@:protected private var fSecureProcessing : com.sun.org.apache.xerces.internal.util.SecurityManager;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(gBucket : com.sun.org.apache.xerces.internal.impl.xs.XSGrammarBucket) : Void;
+	@:overload @:public public function new(gBucket : com.sun.org.apache.xerces.internal.impl.xs.XSGrammarBucket) : Void;
 	
 	/**
 	* This method initiates the parse of a schema.  It will likely be
@@ -111,67 +111,67 @@ extern class XSDHandler
 	* @return the SchemaGrammar
 	* @throws IOException
 	*/
-	@:overload public function parseSchema(is : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource, desc : com.sun.org.apache.xerces.internal.impl.xs.XSDDescription, locationPairs : java.util.Map<Dynamic, Dynamic>) : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar;
+	@:overload @:public public function parseSchema(is : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource, desc : com.sun.org.apache.xerces.internal.impl.xs.XSDDescription, locationPairs : java.util.Map<Dynamic, Dynamic>) : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar;
 	
 	/**
 	* First try to find a grammar in the bucket, if failed, consult the
 	* grammar pool. If a grammar is found in the pool, then add it (and all
 	* imported ones) into the bucket.
 	*/
-	@:overload private function findGrammar(desc : com.sun.org.apache.xerces.internal.impl.xs.XSDDescription, ignoreConflict : Bool) : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar;
+	@:overload @:protected private function findGrammar(desc : com.sun.org.apache.xerces.internal.impl.xs.XSDDescription, ignoreConflict : Bool) : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar;
 	
-	@:overload private function constructTrees(schemaRoot : org.w3c.dom.Element, locationHint : String, desc : com.sun.org.apache.xerces.internal.impl.xs.XSDDescription, nsCollision : Bool) : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo;
+	@:overload @:protected private function constructTrees(schemaRoot : org.w3c.dom.Element, locationHint : String, desc : com.sun.org.apache.xerces.internal.impl.xs.XSDDescription, nsCollision : Bool) : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo;
 	
-	@:overload private function buildGlobalNameRegistries() : Void;
+	@:overload @:protected private function buildGlobalNameRegistries() : Void;
 	
-	@:overload private function traverseSchemas(annotationInfo : java.util.ArrayList<Dynamic>) : Void;
+	@:overload @:protected private function traverseSchemas(annotationInfo : java.util.ArrayList<Dynamic>) : Void;
 	
-	@:overload private function getGlobalDecl(currSchema : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo, declType : Int, declToTraverse : com.sun.org.apache.xerces.internal.xni.QName, elmNode : org.w3c.dom.Element) : Dynamic;
+	@:overload @:protected private function getGlobalDecl(currSchema : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo, declType : Int, declToTraverse : com.sun.org.apache.xerces.internal.xni.QName, elmNode : org.w3c.dom.Element) : Dynamic;
 	
-	@:overload private function getGlobalDecl(declKey : String, declType : Int) : Dynamic;
+	@:overload @:protected private function getGlobalDecl(declKey : String, declType : Int) : Dynamic;
 	
-	@:overload private function getGlobalDeclFromGrammar(sGrammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar, declType : Int, localpart : String) : Dynamic;
+	@:overload @:protected private function getGlobalDeclFromGrammar(sGrammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar, declType : Int, localpart : String) : Dynamic;
 	
-	@:overload private function getGlobalDeclFromGrammar(sGrammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar, declType : Int, localpart : String, schemaLoc : String) : Dynamic;
+	@:overload @:protected private function getGlobalDeclFromGrammar(sGrammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar, declType : Int, localpart : String, schemaLoc : String) : Dynamic;
 	
-	@:overload private function traverseGlobalDecl(declType : Int, decl : org.w3c.dom.Element, schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo, grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar) : Dynamic;
+	@:overload @:protected private function traverseGlobalDecl(declType : Int, decl : org.w3c.dom.Element, schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo, grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar) : Dynamic;
 	
-	@:overload public function schemaDocument2SystemId(schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo) : String;
+	@:overload @:public public function schemaDocument2SystemId(schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo) : String;
 	
-	@:overload private function resolveKeyRefs() : Void;
+	@:overload @:protected private function resolveKeyRefs() : Void;
 	
-	@:overload private function getIDRegistry() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:protected private function getIDRegistry() : java.util.Map<Dynamic, Dynamic>;
 	
-	@:overload private function getIDRegistry_sub() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:protected private function getIDRegistry_sub() : java.util.Map<Dynamic, Dynamic>;
 	
-	@:overload private function storeKeyRef(keyrefToStore : org.w3c.dom.Element, schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo, currElemDecl : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl) : Void;
+	@:overload @:protected private function storeKeyRef(keyrefToStore : org.w3c.dom.Element, schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo, currElemDecl : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl) : Void;
 	
-	@:overload public function setDeclPool(declPool : com.sun.org.apache.xerces.internal.impl.xs.XSDeclarationPool) : Void;
+	@:overload @:public public function setDeclPool(declPool : com.sun.org.apache.xerces.internal.impl.xs.XSDeclarationPool) : Void;
 	
-	@:overload public function setDVFactory(dvFactory : com.sun.org.apache.xerces.internal.impl.dv.SchemaDVFactory) : Void;
+	@:overload @:public public function setDVFactory(dvFactory : com.sun.org.apache.xerces.internal.impl.dv.SchemaDVFactory) : Void;
 	
-	@:overload public function getDVFactory() : com.sun.org.apache.xerces.internal.impl.dv.SchemaDVFactory;
+	@:overload @:public public function getDVFactory() : com.sun.org.apache.xerces.internal.impl.dv.SchemaDVFactory;
 	
-	@:overload public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/**
 	* Extract location information from an Element node, and create a
 	* new SimpleLocator object from such information. Returning null means
 	* no information can be retrieved from the element.
 	*/
-	@:overload public function element2Locator(e : org.w3c.dom.Element) : com.sun.org.apache.xerces.internal.impl.xs.util.SimpleLocator;
+	@:overload @:public public function element2Locator(e : org.w3c.dom.Element) : com.sun.org.apache.xerces.internal.impl.xs.util.SimpleLocator;
 	
 	/**
 	* Extract location information from an Element node, store such
 	* information in the passed-in SimpleLocator object, then return
 	* true. Returning false means can't extract or store such information.
 	*/
-	@:overload public function element2Locator(e : org.w3c.dom.Element, l : com.sun.org.apache.xerces.internal.impl.xs.util.SimpleLocator) : Bool;
+	@:overload @:public public function element2Locator(e : org.w3c.dom.Element, l : com.sun.org.apache.xerces.internal.impl.xs.util.SimpleLocator) : Bool;
 	
 	/**
 	* @param state
 	*/
-	@:overload public function setGenerateSyntheticAnnotations(state : Bool) : Void;
+	@:overload @:public public function setGenerateSyntheticAnnotations(state : Bool) : Void;
 	
 	
 }
@@ -183,19 +183,19 @@ extern class XSDHandler
 */
 @:native('com$sun$org$apache$xerces$internal$impl$xs$traversers$XSDHandler$XSAnnotationGrammarPool') @:internal extern class XSDHandler_XSAnnotationGrammarPool implements com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool
 {
-	@:overload public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
+	@:overload @:public public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
 	
-	@:overload public function cacheGrammars(grammarType : String, grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>) : Void;
+	@:overload @:public public function cacheGrammars(grammarType : String, grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>) : Void;
 	
-	@:overload public function retrieveGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload @:public public function retrieveGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
-	@:overload public function refreshGrammars(gBucket : com.sun.org.apache.xerces.internal.impl.xs.XSGrammarBucket) : Void;
+	@:overload @:public public function refreshGrammars(gBucket : com.sun.org.apache.xerces.internal.impl.xs.XSGrammarBucket) : Void;
 	
-	@:overload public function lockPool() : Void;
+	@:overload @:public public function lockPool() : Void;
 	
-	@:overload public function unlockPool() : Void;
+	@:overload @:public public function unlockPool() : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }
@@ -238,17 +238,17 @@ extern class XSDHandler
 */
 @:native('com$sun$org$apache$xerces$internal$impl$xs$traversers$XSDHandler$XSDKey') @:internal extern class XSDHandler_XSDKey
 {
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$impl$xs$traversers$XSDHandler$SAX2XNIUtil') @:internal extern class XSDHandler_SAX2XNIUtil extends com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper
 {
-	@:overload public static function createXMLParseException0(exception : org.xml.sax.SAXParseException) : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException;
+	@:overload @:public @:static public static function createXMLParseException0(exception : org.xml.sax.SAXParseException) : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException;
 	
-	@:overload public static function createXNIException0(exception : org.xml.sax.SAXException) : com.sun.org.apache.xerces.internal.xni.XNIException;
+	@:overload @:public @:static public static function createXNIException0(exception : org.xml.sax.SAXException) : com.sun.org.apache.xerces.internal.xni.XNIException;
 	
 	
 }

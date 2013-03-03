@@ -26,12 +26,12 @@ extern class XSLTCSource implements javax.xml.transform.Source
 	/**
 	* Create a new XSLTC-specific source from a system ID
 	*/
-	@:overload public function new(systemId : String) : Void;
+	@:overload @:public public function new(systemId : String) : Void;
 	
 	/**
 	* Create a new XSLTC-specific source from a JAXP Source
 	*/
-	@:overload public function new(source : javax.xml.transform.Source) : Void;
+	@:overload @:public public function new(source : javax.xml.transform.Source) : Void;
 	
 	/**
 	* Implements javax.xml.transform.Source.setSystemId()
@@ -41,7 +41,7 @@ extern class XSLTCSource implements javax.xml.transform.Source
 	* ContentHandler/LexicalHandler interfaces.
 	* @param systemId The system Id for this Source
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	/**
 	* Implements javax.xml.transform.Source.getSystemId()
@@ -49,12 +49,12 @@ extern class XSLTCSource implements javax.xml.transform.Source
 	* @return The system identifier that was set with setSystemId,
 	*         or null if setSystemId was not called.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* Internal interface which returns a DOM for a given DTMManager and translet.
 	*/
-	@:overload private function getDOM(dtmManager : com.sun.org.apache.xalan.internal.xsltc.dom.XSLTCDTMManager, translet : com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet) : com.sun.org.apache.xalan.internal.xsltc.DOM;
+	@:overload @:protected private function getDOM(dtmManager : com.sun.org.apache.xalan.internal.xsltc.dom.XSLTCDTMManager, translet : com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet) : com.sun.org.apache.xalan.internal.xsltc.DOM;
 	
 	
 }

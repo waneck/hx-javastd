@@ -33,7 +33,7 @@ extern interface MutableAttributeSet extends javax.swing.text.AttributeSet
 	* @param name the name
 	* @param value the value
 	*/
-	@:overload public function addAttribute(name : Dynamic, value : Dynamic) : Void;
+	@:overload @:public public function addAttribute(name : Dynamic, value : Dynamic) : Void;
 	
 	/**
 	* Creates a new attribute set similar to this one except that it contains
@@ -41,28 +41,28 @@ extern interface MutableAttributeSet extends javax.swing.text.AttributeSet
 	*
 	* @param attributes the set of attributes
 	*/
-	@:overload public function addAttributes(attributes : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function addAttributes(attributes : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Removes an attribute with the given <code>name</code>.
 	*
 	* @param name the attribute name
 	*/
-	@:overload public function removeAttribute(name : Dynamic) : Void;
+	@:overload @:public public function removeAttribute(name : Dynamic) : Void;
 	
 	/**
 	* Removes an attribute set with the given <code>names</code>.
 	*
 	* @param names the set of names
 	*/
-	@:overload public function removeAttributes(names : java.util.Enumeration<Dynamic>) : Void;
+	@:overload @:public public function removeAttributes(names : java.util.Enumeration<Dynamic>) : Void;
 	
 	/**
 	* Removes a set of attributes with the given <code>name</code>.
 	*
 	* @param attributes the set of attributes
 	*/
-	@:overload public function removeAttributes(attributes : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function removeAttributes(attributes : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Sets the resolving parent.  This is the set
@@ -71,7 +71,7 @@ extern interface MutableAttributeSet extends javax.swing.text.AttributeSet
 	*
 	* @param parent the parent
 	*/
-	@:overload public function setResolveParent(parent : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function setResolveParent(parent : javax.swing.text.AttributeSet) : Void;
 	
 	
 }

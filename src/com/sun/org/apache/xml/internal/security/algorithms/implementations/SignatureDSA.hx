@@ -22,80 +22,80 @@ package com.sun.org.apache.xml.internal.security.algorithms.implementations;
 extern class SignatureDSA extends com.sun.org.apache.xml.internal.security.algorithms.SignatureAlgorithmSpi
 {
 	/** Field _URI */
-	public static var _URI(default, null) : String;
+	@:public @:static @:final public static var _URI(default, null) : String;
 	
 	/**
 	* Method engineGetURI
 	*
 	* @inheritDoc
 	*/
-	@:overload override private function engineGetURI() : String;
+	@:overload @:protected override private function engineGetURI() : String;
 	
 	/**
 	* Constructor SignatureDSA
 	*
 	* @throws XMLSignatureException
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function engineSetParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineSetParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:protected override private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function engineInitVerify(publicKey : java.security.Key) : Void;
+	@:overload @:protected override private function engineInitVerify(publicKey : java.security.Key) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function engineInitSign(privateKey : java.security.Key, secureRandom : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInitSign(privateKey : java.security.Key, secureRandom : java.security.SecureRandom) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function engineInitSign(privateKey : java.security.Key) : Void;
+	@:overload @:protected override private function engineInitSign(privateKey : java.security.Key) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function engineUpdate(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* Method engineGetJCEAlgorithmString
 	*
 	* @inheritDoc
 	*/
-	@:overload override private function engineGetJCEAlgorithmString() : String;
+	@:overload @:protected override private function engineGetJCEAlgorithmString() : String;
 	
 	/**
 	* Method engineGetJCEProviderName
 	*
 	* @inheritDoc
 	*/
-	@:overload override private function engineGetJCEProviderName() : String;
+	@:overload @:protected override private function engineGetJCEProviderName() : String;
 	
 	/**
 	* Method engineSetHMACOutputLength
@@ -103,7 +103,7 @@ extern class SignatureDSA extends com.sun.org.apache.xml.internal.security.algor
 	* @param HMACOutputLength
 	* @throws XMLSignatureException
 	*/
-	@:overload override private function engineSetHMACOutputLength(HMACOutputLength : Int) : Void;
+	@:overload @:protected override private function engineSetHMACOutputLength(HMACOutputLength : Int) : Void;
 	
 	/**
 	* Method engineInitSign
@@ -112,7 +112,7 @@ extern class SignatureDSA extends com.sun.org.apache.xml.internal.security.algor
 	* @param algorithmParameterSpec
 	* @throws XMLSignatureException
 	*/
-	@:overload override private function engineInitSign(signingKey : java.security.Key, algorithmParameterSpec : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineInitSign(signingKey : java.security.Key, algorithmParameterSpec : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	
 }

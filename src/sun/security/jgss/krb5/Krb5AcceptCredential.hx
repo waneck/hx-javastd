@@ -32,7 +32,7 @@ extern class Krb5AcceptCredential implements sun.security.jgss.krb5.Krb5CredElem
 	* @return GSSNameSpi representing principal name of this credential
 	* @exception GSSException may be thrown
 	*/
-	@:overload @:final public function getName() : sun.security.jgss.spi.GSSNameSpi;
+	@:overload @:public @:final public function getName() : sun.security.jgss.spi.GSSNameSpi;
 	
 	/**
 	* Returns the init lifetime remaining.
@@ -40,7 +40,7 @@ extern class Krb5AcceptCredential implements sun.security.jgss.krb5.Krb5CredElem
 	* @return the init lifetime remaining in seconds
 	* @exception GSSException may be thrown
 	*/
-	@:overload public function getInitLifetime() : Int;
+	@:overload @:public public function getInitLifetime() : Int;
 	
 	/**
 	* Returns the accept lifetime remaining.
@@ -48,11 +48,11 @@ extern class Krb5AcceptCredential implements sun.security.jgss.krb5.Krb5CredElem
 	* @return the accept lifetime remaining in seconds
 	* @exception GSSException may be thrown
 	*/
-	@:overload public function getAcceptLifetime() : Int;
+	@:overload @:public public function getAcceptLifetime() : Int;
 	
-	@:overload public function isInitiatorCredential() : Bool;
+	@:overload @:public public function isInitiatorCredential() : Bool;
 	
-	@:overload public function isAcceptorCredential() : Bool;
+	@:overload @:public public function isAcceptorCredential() : Bool;
 	
 	/**
 	* Returns the oid representing the underlying credential
@@ -61,20 +61,20 @@ extern class Krb5AcceptCredential implements sun.security.jgss.krb5.Krb5CredElem
 	* @return the Oid for this credential mechanism
 	* @exception GSSException may be thrown
 	*/
-	@:overload @:final public function getMechanism() : org.ietf.jgss.Oid;
+	@:overload @:public @:final public function getMechanism() : org.ietf.jgss.Oid;
 	
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Called to invalidate this credential element.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* Destroys the locally cached EncryptionKey value and then calls
 	* destroy in the base class.
 	*/
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	
 }

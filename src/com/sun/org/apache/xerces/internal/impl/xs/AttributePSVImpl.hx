@@ -21,41 +21,41 @@ package com.sun.org.apache.xerces.internal.impl.xs;
 extern class AttributePSVImpl implements com.sun.org.apache.xerces.internal.xs.AttributePSVI
 {
 	/** attribute declaration */
-	private var fDeclaration : com.sun.org.apache.xerces.internal.xs.XSAttributeDeclaration;
+	@:protected private var fDeclaration : com.sun.org.apache.xerces.internal.xs.XSAttributeDeclaration;
 	
 	/** type of attribute, simpleType */
-	private var fTypeDecl : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
+	@:protected private var fTypeDecl : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
 	
 	/** If this attribute was explicitly given a
 	* value in the original document, this is false; otherwise, it is true */
-	private var fSpecified : Bool;
+	@:protected private var fSpecified : Bool;
 	
 	/** schema normalized value property */
-	private var fNormalizedValue : String;
+	@:protected private var fNormalizedValue : String;
 	
 	/** schema actual value */
-	private var fActualValue : Dynamic;
+	@:protected private var fActualValue : Dynamic;
 	
 	/** schema actual value type */
-	private var fActualValueType : java.StdTypes.Int16;
+	@:protected private var fActualValueType : java.StdTypes.Int16;
 	
 	/** actual value types if the value is a list */
-	private var fItemValueTypes : com.sun.org.apache.xerces.internal.xs.ShortList;
+	@:protected private var fItemValueTypes : com.sun.org.apache.xerces.internal.xs.ShortList;
 	
 	/** member type definition against which attribute was validated */
-	private var fMemberType : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
+	@:protected private var fMemberType : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
 	
 	/** validation attempted: none, partial, full */
-	private var fValidationAttempted : java.StdTypes.Int16;
+	@:protected private var fValidationAttempted : java.StdTypes.Int16;
 	
 	/** validity: valid, invalid, unknown */
-	private var fValidity : java.StdTypes.Int16;
+	@:protected private var fValidity : java.StdTypes.Int16;
 	
 	/** error codes */
-	private var fErrorCodes : java.NativeArray<String>;
+	@:protected private var fErrorCodes : java.NativeArray<String>;
 	
 	/** validation context: could be QName or XPath expression*/
-	private var fValidationContext : String;
+	@:protected private var fValidationContext : String;
 	
 	/**
 	* [schema default]
@@ -63,7 +63,7 @@ extern class AttributePSVImpl implements com.sun.org.apache.xerces.internal.xs.A
 	* @return The canonical lexical representation of the declaration's {value constraint} value.
 	* @see <a href="http://www.w3.org/TR/xmlschema-1/#e-schema_default>XML Schema Part 1: Structures [schema default]</a>
 	*/
-	@:overload public function getSchemaDefault() : String;
+	@:overload @:public public function getSchemaDefault() : String;
 	
 	/**
 	* [schema normalized value]
@@ -72,14 +72,14 @@ extern class AttributePSVImpl implements com.sun.org.apache.xerces.internal.xs.A
 	* @see <a href="http://www.w3.org/TR/xmlschema-1/#e-schema_normalized_value>XML Schema Part 1: Structures [schema normalized value]</a>
 	* @return the normalized value of this item after validation
 	*/
-	@:overload public function getSchemaNormalizedValue() : String;
+	@:overload @:public public function getSchemaNormalizedValue() : String;
 	
 	/**
 	* [schema specified]
 	* @see <a href="http://www.w3.org/TR/xmlschema-1/#e-schema_specified">XML Schema Part 1: Structures [schema specified]</a>
 	* @return true - value was specified in schema, false - value comes from the infoset
 	*/
-	@:overload public function getIsSchemaSpecified() : Bool;
+	@:overload @:public public function getIsSchemaSpecified() : Bool;
 	
 	/**
 	* Determines the extent to which the document has been validated
@@ -87,7 +87,7 @@ extern class AttributePSVImpl implements com.sun.org.apache.xerces.internal.xs.A
 	* @return return the [validation attempted] property. The possible values are
 	*         NO_VALIDATION, PARTIAL_VALIDATION and FULL_VALIDATION
 	*/
-	@:overload public function getValidationAttempted() : java.StdTypes.Int16;
+	@:overload @:public public function getValidationAttempted() : java.StdTypes.Int16;
 	
 	/**
 	* Determine the validity of the node with respect
@@ -96,7 +96,7 @@ extern class AttributePSVImpl implements com.sun.org.apache.xerces.internal.xs.A
 	* @return return the [validity] property. Possible values are:
 	*         UNKNOWN_VALIDITY, INVALID_VALIDITY, VALID_VALIDITY
 	*/
-	@:overload public function getValidity() : java.StdTypes.Int16;
+	@:overload @:public public function getValidity() : java.StdTypes.Int16;
 	
 	/**
 	* A list of error codes generated from validation attempts.
@@ -104,16 +104,16 @@ extern class AttributePSVImpl implements com.sun.org.apache.xerces.internal.xs.A
 	*
 	* @return list of error codes
 	*/
-	@:overload public function getErrorCodes() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getErrorCodes() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
-	@:overload public function getValidationContext() : String;
+	@:overload @:public public function getValidationContext() : String;
 	
 	/**
 	* An item isomorphic to the type definition used to validate this element.
 	*
 	* @return  a type declaration
 	*/
-	@:overload public function getTypeDefinition() : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
+	@:overload @:public public function getTypeDefinition() : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
 	
 	/**
 	* If and only if that type definition is a simple type definition
@@ -124,7 +124,7 @@ extern class AttributePSVImpl implements com.sun.org.apache.xerces.internal.xs.A
 	*
 	* @return  a simple type declaration
 	*/
-	@:overload public function getMemberTypeDefinition() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
+	@:overload @:public public function getMemberTypeDefinition() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
 	
 	/**
 	* An item isomorphic to the attribute declaration used to validate
@@ -132,27 +132,27 @@ extern class AttributePSVImpl implements com.sun.org.apache.xerces.internal.xs.A
 	*
 	* @return  an attribute declaration
 	*/
-	@:overload public function getAttributeDeclaration() : com.sun.org.apache.xerces.internal.xs.XSAttributeDeclaration;
+	@:overload @:public public function getAttributeDeclaration() : com.sun.org.apache.xerces.internal.xs.XSAttributeDeclaration;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.ItemPSVI#getActualNormalizedValue()
 	*/
-	@:overload public function getActualNormalizedValue() : Dynamic;
+	@:overload @:public public function getActualNormalizedValue() : Dynamic;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.ItemPSVI#getActualNormalizedValueType()
 	*/
-	@:overload public function getActualNormalizedValueType() : java.StdTypes.Int16;
+	@:overload @:public public function getActualNormalizedValueType() : java.StdTypes.Int16;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.ItemPSVI#getItemValueTypes()
 	*/
-	@:overload public function getItemValueTypes() : com.sun.org.apache.xerces.internal.xs.ShortList;
+	@:overload @:public public function getItemValueTypes() : com.sun.org.apache.xerces.internal.xs.ShortList;
 	
 	/**
 	* Reset()
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

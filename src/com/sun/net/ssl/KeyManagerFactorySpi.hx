@@ -47,13 +47,13 @@ extern class KeyManagerFactorySpi
 	* @param ks the key store or null
 	* @param password the password for recovering keys
 	*/
-	@:overload @:abstract private function engineInit(ks : java.security.KeyStore, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:protected @:abstract private function engineInit(ks : java.security.KeyStore, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Returns one trust manager for each type of trust material.
 	* @return the key managers
 	*/
-	@:overload @:abstract private function engineGetKeyManagers() : java.NativeArray<com.sun.net.ssl.KeyManager>;
+	@:overload @:protected @:abstract private function engineGetKeyManagers() : java.NativeArray<com.sun.net.ssl.KeyManager>;
 	
 	
 }

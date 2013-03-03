@@ -34,7 +34,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see JRootPane
 	* @see RootPaneContainer
 	*/
-	private var rootPane : javax.swing.JRootPane;
+	@:protected private var rootPane : javax.swing.JRootPane;
 	
 	/**
 	* If true then calls to <code>add</code> and <code>setLayout</code>
@@ -46,13 +46,13 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	private var rootPaneCheckingEnabled : Bool;
+	@:protected private var rootPaneCheckingEnabled : Bool;
 	
 	/** The frame can be closed. */
-	private var closable : Bool;
+	@:protected private var closable : Bool;
 	
 	/** The frame can be expanded to the size of the desktop pane. */
-	private var maximizable : Bool;
+	@:protected private var maximizable : Bool;
 	
 	/**
 	* The frame can "iconified" (shrunk down and displayed as
@@ -60,64 +60,64 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see JInternalFrame.JDesktopIcon
 	* @see #setIconifiable
 	*/
-	private var iconable : Bool;
+	@:protected private var iconable : Bool;
 	
 	/** The frame's size can be changed. */
-	private var resizable : Bool;
+	@:protected private var resizable : Bool;
 	
 	/** The icon shown in the top-left corner of this internal frame. */
-	private var frameIcon : javax.swing.Icon;
+	@:protected private var frameIcon : javax.swing.Icon;
 	
 	/** The title displayed in this internal frame's title bar. */
-	private var title : String;
+	@:protected private var title : String;
 	
 	/**
 	* The icon that is displayed when this internal frame is iconified.
 	* @see #iconable
 	*/
-	private var desktopIcon : javax.swing.JInternalFrame.JInternalFrame_JDesktopIcon;
+	@:protected private var desktopIcon : javax.swing.JInternalFrame.JInternalFrame_JDesktopIcon;
 	
 	/** Bound property name. */
-	public static var CONTENT_PANE_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var CONTENT_PANE_PROPERTY(default, null) : String;
 	
 	/** Bound property name. */
-	public static var MENU_BAR_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var MENU_BAR_PROPERTY(default, null) : String;
 	
 	/** Bound property name. */
-	public static var TITLE_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var TITLE_PROPERTY(default, null) : String;
 	
 	/** Bound property name. */
-	public static var LAYERED_PANE_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var LAYERED_PANE_PROPERTY(default, null) : String;
 	
 	/** Bound property name. */
-	public static var ROOT_PANE_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var ROOT_PANE_PROPERTY(default, null) : String;
 	
 	/** Bound property name. */
-	public static var GLASS_PANE_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var GLASS_PANE_PROPERTY(default, null) : String;
 	
 	/** Bound property name. */
-	public static var FRAME_ICON_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var FRAME_ICON_PROPERTY(default, null) : String;
 	
 	/**
 	* Constrained property name indicated that this frame has
 	* selected status.
 	*/
-	public static var IS_SELECTED_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var IS_SELECTED_PROPERTY(default, null) : String;
 	
 	/** Constrained property name indicating that the internal frame is closed. */
-	public static var IS_CLOSED_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var IS_CLOSED_PROPERTY(default, null) : String;
 	
 	/** Constrained property name indicating that the internal frame is maximized. */
-	public static var IS_MAXIMUM_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var IS_MAXIMUM_PROPERTY(default, null) : String;
 	
 	/** Constrained property name indicating that the internal frame is iconified. */
-	public static var IS_ICON_PROPERTY(default, null) : String;
+	@:public @:final @:static public static var IS_ICON_PROPERTY(default, null) : String;
 	
 	/**
 	* Creates a non-resizable, non-closable, non-maximizable,
 	* non-iconifiable <code>JInternalFrame</code> with no title.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a non-resizable, non-closable, non-maximizable,
@@ -128,7 +128,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @param title  the non-<code>null</code> <code>String</code>
 	*     to display in the title bar
 	*/
-	@:overload public function new(title : String) : Void;
+	@:overload @:public public function new(title : String) : Void;
 	
 	/**
 	* Creates a non-closable, non-maximizable, non-iconifiable
@@ -138,7 +138,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @param title      the <code>String</code> to display in the title bar
 	* @param resizable  if <code>true</code>, the internal frame can be resized
 	*/
-	@:overload public function new(title : String, resizable : Bool) : Void;
+	@:overload @:public public function new(title : String, resizable : Bool) : Void;
 	
 	/**
 	* Creates a non-maximizable, non-iconifiable <code>JInternalFrame</code>
@@ -149,7 +149,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @param resizable  if <code>true</code>, the internal frame can be resized
 	* @param closable   if <code>true</code>, the internal frame can be closed
 	*/
-	@:overload public function new(title : String, resizable : Bool, closable : Bool) : Void;
+	@:overload @:public public function new(title : String, resizable : Bool, closable : Bool) : Void;
 	
 	/**
 	* Creates a non-iconifiable <code>JInternalFrame</code>
@@ -161,7 +161,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @param closable    if <code>true</code>, the internal frame can be closed
 	* @param maximizable if <code>true</code>, the internal frame can be maximized
 	*/
-	@:overload public function new(title : String, resizable : Bool, closable : Bool, maximizable : Bool) : Void;
+	@:overload @:public public function new(title : String, resizable : Bool, closable : Bool, maximizable : Bool) : Void;
 	
 	/**
 	* Creates a <code>JInternalFrame</code> with the specified title,
@@ -174,14 +174,14 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @param maximizable if <code>true</code>, the internal frame can be maximized
 	* @param iconifiable if <code>true</code>, the internal frame can be iconified
 	*/
-	@:overload public function new(title : String, resizable : Bool, closable : Bool, maximizable : Bool, iconifiable : Bool) : Void;
+	@:overload @:public public function new(title : String, resizable : Bool, closable : Bool, maximizable : Bool, iconifiable : Bool) : Void;
 	
 	/**
 	* Called by the constructor to set up the <code>JRootPane</code>.
 	* @return  a new <code>JRootPane</code>
 	* @see JRootPane
 	*/
-	@:overload private function createRootPane() : javax.swing.JRootPane;
+	@:overload @:protected private function createRootPane() : javax.swing.JRootPane;
 	
 	/**
 	* Returns the look-and-feel object that renders this component.
@@ -189,7 +189,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return the <code>InternalFrameUI</code> object that renders
 	*          this component
 	*/
-	@:overload public function getUI() : javax.swing.plaf.InternalFrameUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.InternalFrameUI;
 	
 	/**
 	* Sets the UI delegate for this <code>JInternalFrame</code>.
@@ -200,7 +200,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.InternalFrameUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.InternalFrameUI) : Void;
 	
 	/**
 	* Notification from the <code>UIManager</code> that the look and feel
@@ -210,7 +210,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the look-and-feel
@@ -224,7 +224,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @beaninfo
 	*     description: UIClassID
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Returns whether calls to <code>add</code> and
@@ -238,7 +238,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload private function isRootPaneCheckingEnabled() : Bool;
+	@:overload @:protected private function isRootPaneCheckingEnabled() : Bool;
 	
 	/**
 	* Sets whether calls to <code>add</code> and
@@ -256,7 +256,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*      hidden: true
 	* description: Whether the add and setLayout methods are forwarded
 	*/
-	@:overload private function setRootPaneCheckingEnabled(enabled : Bool) : Void;
+	@:overload @:protected private function setRootPaneCheckingEnabled(enabled : Bool) : Void;
 	
 	/**
 	* Adds the specified child <code>Component</code>.
@@ -277,7 +277,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload @:protected override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Removes the specified component from the container. If
@@ -289,7 +289,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see #add
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload override public function remove(comp : java.awt.Component) : Void;
+	@:overload @:public override public function remove(comp : java.awt.Component) : Void;
 	
 	/**
 	* Ensures that, by default, the layout of this component cannot be set.
@@ -301,7 +301,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @param manager the <code>LayoutManager</code>
 	* @see #setRootPaneCheckingEnabled
 	*/
-	@:overload override public function setLayout(manager : java.awt.LayoutManager) : Void;
+	@:overload @:public override public function setLayout(manager : java.awt.LayoutManager) : Void;
 	
 	/**
 	* Returns the current <code>JMenuBar</code> for this
@@ -312,7 +312,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @deprecated As of Swing version 1.0.3,
 	* replaced by <code>getJMenuBar()</code>.
 	*/
-	@:overload public function getMenuBar() : javax.swing.JMenuBar;
+	@:overload @:public public function getMenuBar() : javax.swing.JMenuBar;
 	
 	/**
 	* Returns the current <code>JMenuBar</code> for this
@@ -322,7 +322,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return  the <code>JMenuBar</code> used by this internal frame
 	* @see #setJMenuBar
 	*/
-	@:overload public function getJMenuBar() : javax.swing.JMenuBar;
+	@:overload @:public public function getJMenuBar() : javax.swing.JMenuBar;
 	
 	/**
 	* Sets the <code>menuBar</code> property for this <code>JInternalFrame</code>.
@@ -332,7 +332,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @deprecated As of Swing version 1.0.3
 	*  replaced by <code>setJMenuBar(JMenuBar m)</code>.
 	*/
-	@:overload public function setMenuBar(m : javax.swing.JMenuBar) : Void;
+	@:overload @:public public function setMenuBar(m : javax.swing.JMenuBar) : Void;
 	
 	/**
 	* Sets the <code>menuBar</code> property for this <code>JInternalFrame</code>.
@@ -345,13 +345,13 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*     description: The menu bar for accessing pulldown menus
 	*                  from this internal frame.
 	*/
-	@:overload public function setJMenuBar(m : javax.swing.JMenuBar) : Void;
+	@:overload @:public public function setJMenuBar(m : javax.swing.JMenuBar) : Void;
 	
 	/**
 	* Returns the content pane for this internal frame.
 	* @return the content pane
 	*/
-	@:overload public function getContentPane() : java.awt.Container;
+	@:overload @:public public function getContentPane() : java.awt.Container;
 	
 	/**
 	* Sets this <code>JInternalFrame</code>'s <code>contentPane</code>
@@ -368,7 +368,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*     description: The client area of the internal frame where child
 	*                  components are normally inserted.
 	*/
-	@:overload public function setContentPane(c : java.awt.Container) : Void;
+	@:overload @:public public function setContentPane(c : java.awt.Container) : Void;
 	
 	/**
 	* Returns the layered pane for this internal frame.
@@ -377,7 +377,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see RootPaneContainer#setLayeredPane
 	* @see RootPaneContainer#getLayeredPane
 	*/
-	@:overload public function getLayeredPane() : javax.swing.JLayeredPane;
+	@:overload @:public public function getLayeredPane() : javax.swing.JLayeredPane;
 	
 	/**
 	* Sets this <code>JInternalFrame</code>'s
@@ -393,7 +393,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*     bound: true
 	*     description: The pane which holds the various desktop layers.
 	*/
-	@:overload public function setLayeredPane(layered : javax.swing.JLayeredPane) : Void;
+	@:overload @:public public function setLayeredPane(layered : javax.swing.JLayeredPane) : Void;
 	
 	/**
 	* Returns the glass pane for this internal frame.
@@ -401,7 +401,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return the glass pane
 	* @see RootPaneContainer#setGlassPane
 	*/
-	@:overload public function getGlassPane() : java.awt.Component;
+	@:overload @:public public function getGlassPane() : java.awt.Component;
 	
 	/**
 	* Sets this <code>JInternalFrame</code>'s
@@ -414,7 +414,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*     hidden: true
 	*     description: A transparent pane used for menu rendering.
 	*/
-	@:overload public function setGlassPane(glass : java.awt.Component) : Void;
+	@:overload @:public public function setGlassPane(glass : java.awt.Component) : Void;
 	
 	/**
 	* Returns the <code>rootPane</code> object for this internal frame.
@@ -422,7 +422,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return the <code>rootPane</code> property
 	* @see RootPaneContainer#getRootPane
 	*/
-	@:overload override public function getRootPane() : javax.swing.JRootPane;
+	@:overload @:public override public function getRootPane() : javax.swing.JRootPane;
 	
 	/**
 	* Sets the <code>rootPane</code> property
@@ -435,7 +435,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*     hidden: true
 	*     description: The root pane used by this internal frame.
 	*/
-	@:overload private function setRootPane(root : javax.swing.JRootPane) : Void;
+	@:overload @:protected private function setRootPane(root : javax.swing.JRootPane) : Void;
 	
 	/**
 	* Sets whether this <code>JInternalFrame</code> can be closed by
@@ -446,20 +446,20 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*           bound: true
 	*     description: Indicates whether this internal frame can be closed.
 	*/
-	@:overload public function setClosable(b : Bool) : Void;
+	@:overload @:public public function setClosable(b : Bool) : Void;
 	
 	/**
 	* Returns whether this <code>JInternalFrame</code> can be closed by
 	* some user action.
 	* @return <code>true</code> if this internal frame can be closed
 	*/
-	@:overload public function isClosable() : Bool;
+	@:overload @:public public function isClosable() : Bool;
 	
 	/**
 	* Returns whether this <code>JInternalFrame</code> is currently closed.
 	* @return <code>true</code> if this internal frame is closed, <code>false</code> otherwise
 	*/
-	@:overload public function isClosed() : Bool;
+	@:overload @:public public function isClosed() : Bool;
 	
 	/**
 	* Closes this internal frame if the argument is <code>true</code>.
@@ -504,7 +504,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*     constrained: true
 	*     description: Indicates whether this internal frame has been closed.
 	*/
-	@:overload public function setClosed(b : Bool) : Void;
+	@:overload @:public public function setClosed(b : Bool) : Void;
 	
 	/**
 	* Sets whether the <code>JInternalFrame</code> can be resized by some
@@ -517,7 +517,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*     description: Determines whether this internal frame can be resized
 	*                  by the user.
 	*/
-	@:overload public function setResizable(b : Bool) : Void;
+	@:overload @:public public function setResizable(b : Bool) : Void;
 	
 	/**
 	* Returns whether the <code>JInternalFrame</code> can be resized
@@ -525,7 +525,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*
 	* @return <code>true</code> if this internal frame can be resized, <code>false</code> otherwise
 	*/
-	@:overload public function isResizable() : Bool;
+	@:overload @:public public function isResizable() : Bool;
 	
 	/**
 	* Sets the <code>iconable</code> property,
@@ -541,7 +541,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	bound: true
 	*     description: Determines whether this internal frame can be iconified.
 	*/
-	@:overload public function setIconifiable(b : Bool) : Void;
+	@:overload @:public public function setIconifiable(b : Bool) : Void;
 	
 	/**
 	* Gets the <code>iconable</code> property,
@@ -551,14 +551,14 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*
 	* @see #setIconifiable
 	*/
-	@:overload public function isIconifiable() : Bool;
+	@:overload @:public public function isIconifiable() : Bool;
 	
 	/**
 	* Returns whether the <code>JInternalFrame</code> is currently iconified.
 	*
 	* @return <code>true</code> if this internal frame is iconified
 	*/
-	@:overload public function isIcon() : Bool;
+	@:overload @:public public function isIcon() : Bool;
 	
 	/**
 	* Iconifies or de-iconifies this internal frame,
@@ -581,7 +581,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*     constrained: true
 	*     description: The image displayed when this internal frame is minimized.
 	*/
-	@:overload public function setIcon(b : Bool) : Void;
+	@:overload @:public public function setIcon(b : Bool) : Void;
 	
 	/**
 	* Sets the <code>maximizable</code> property,
@@ -597,7 +597,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*     preferred: true
 	*     description: Determines whether this internal frame can be maximized.
 	*/
-	@:overload public function setMaximizable(b : Bool) : Void;
+	@:overload @:public public function setMaximizable(b : Bool) : Void;
 	
 	/**
 	* Gets the value of the <code>maximizable</code> property.
@@ -605,14 +605,14 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return the value of the <code>maximizable</code> property
 	* @see #setMaximizable
 	*/
-	@:overload public function isMaximizable() : Bool;
+	@:overload @:public public function isMaximizable() : Bool;
 	
 	/**
 	* Returns whether the <code>JInternalFrame</code> is currently maximized.
 	*
 	* @return <code>true</code> if this internal frame is maximized, <code>false</code> otherwise
 	*/
-	@:overload public function isMaximum() : Bool;
+	@:overload @:public public function isMaximum() : Bool;
 	
 	/**
 	* Maximizes and restores this internal frame.  A maximized frame is resized to
@@ -630,7 +630,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*     constrained: true
 	*     description: Indicates whether this internal frame is maximized.
 	*/
-	@:overload public function setMaximum(b : Bool) : Void;
+	@:overload @:public public function setMaximum(b : Bool) : Void;
 	
 	/**
 	* Returns the title of the <code>JInternalFrame</code>.
@@ -638,7 +638,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return a <code>String</code> containing this internal frame's title
 	* @see #setTitle
 	*/
-	@:overload public function getTitle() : String;
+	@:overload @:public public function getTitle() : String;
 	
 	/**
 	* Sets the <code>JInternalFrame</code> title. <code>title</code>
@@ -651,7 +651,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*     bound: true
 	*     description: The text displayed in the title bar.
 	*/
-	@:overload public function setTitle(title : String) : Void;
+	@:overload @:public public function setTitle(title : String) : Void;
 	
 	/**
 	* Selects or deselects the internal frame
@@ -683,7 +683,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*     description: Indicates whether this internal frame is currently
 	*                  the active frame.
 	*/
-	@:overload public function setSelected(selected : Bool) : Void;
+	@:overload @:public public function setSelected(selected : Bool) : Void;
 	
 	/**
 	* Returns whether the <code>JInternalFrame</code> is the
@@ -692,7 +692,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return <code>true</code> if this internal frame is currently selected (active)
 	* @see #setSelected
 	*/
-	@:overload public function isSelected() : Bool;
+	@:overload @:public public function isSelected() : Bool;
 	
 	/**
 	* Sets an image to be displayed in the titlebar of this internal frame (usually
@@ -713,7 +713,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*           bound: true
 	*     description: The icon shown in the top-left corner of this internal frame.
 	*/
-	@:overload public function setFrameIcon(icon : javax.swing.Icon) : Void;
+	@:overload @:public public function setFrameIcon(icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Returns the image displayed in the title bar of this internal frame (usually
@@ -722,19 +722,19 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return the <code>Icon</code> displayed in the title bar
 	* @see #setFrameIcon
 	*/
-	@:overload public function getFrameIcon() : javax.swing.Icon;
+	@:overload @:public public function getFrameIcon() : javax.swing.Icon;
 	
 	/**
 	* Convenience method that moves this component to position 0 if its
 	* parent is a <code>JLayeredPane</code>.
 	*/
-	@:overload public function moveToFront() : Void;
+	@:overload @:public public function moveToFront() : Void;
 	
 	/**
 	* Convenience method that moves this component to position -1 if its
 	* parent is a <code>JLayeredPane</code>.
 	*/
-	@:overload public function moveToBack() : Void;
+	@:overload @:public public function moveToBack() : Void;
 	
 	/**
 	* Returns the last <code>Cursor</code> that was set by the
@@ -744,13 +744,13 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return the last non-resizable <code>Cursor</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getLastCursor() : java.awt.Cursor;
+	@:require(java6) @:overload @:public public function getLastCursor() : java.awt.Cursor;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setCursor(cursor : java.awt.Cursor) : Void;
+	@:require(java6) @:overload @:public override public function setCursor(cursor : java.awt.Cursor) : Void;
 	
 	/**
 	* Convenience method for setting the layer attribute of this component.
@@ -762,7 +762,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*     expert: true
 	*     description: Specifies what desktop layer is used.
 	*/
-	@:overload public function setLayer(layer : Null<Int>) : Void;
+	@:overload @:public public function setLayer(layer : Null<Int>) : Void;
 	
 	/**
 	* Convenience method for setting the layer attribute of this component.
@@ -781,7 +781,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*     expert: true
 	*     description: Specifies what desktop layer is used.
 	*/
-	@:require(java3) @:overload public function setLayer(layer : Int) : Void;
+	@:require(java3) @:overload @:public public function setLayer(layer : Int) : Void;
 	
 	/**
 	* Convenience method for getting the layer attribute of this component.
@@ -790,7 +790,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*          frame's desktop layer
 	* @see JLayeredPane
 	*/
-	@:overload public function getLayer() : Int;
+	@:overload @:public public function getLayer() : Int;
 	
 	/**
 	* Convenience method that searches the ancestor hierarchy for a
@@ -800,7 +800,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return the <code>JDesktopPane</code> this internal frame belongs to,
 	*         or <code>null</code> if none is found
 	*/
-	@:overload public function getDesktopPane() : javax.swing.JDesktopPane;
+	@:overload @:public public function getDesktopPane() : javax.swing.JDesktopPane;
 	
 	/**
 	* Sets the <code>JDesktopIcon</code> associated with this
@@ -812,7 +812,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*           bound: true
 	*     description: The icon shown when this internal frame is minimized.
 	*/
-	@:overload public function setDesktopIcon(d : javax.swing.JInternalFrame.JInternalFrame_JDesktopIcon) : Void;
+	@:overload @:public public function setDesktopIcon(d : javax.swing.JInternalFrame.JInternalFrame_JDesktopIcon) : Void;
 	
 	/**
 	* Returns the <code>JDesktopIcon</code> used when this
@@ -821,7 +821,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return the <code>JDesktopIcon</code> displayed on the desktop
 	* @see #setDesktopIcon
 	*/
-	@:overload public function getDesktopIcon() : javax.swing.JInternalFrame.JInternalFrame_JDesktopIcon;
+	@:overload @:public public function getDesktopIcon() : javax.swing.JInternalFrame.JInternalFrame_JDesktopIcon;
 	
 	/**
 	* If the <code>JInternalFrame</code> is not in maximized state, returns
@@ -832,7 +832,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*          frame when in the normal state
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getNormalBounds() : java.awt.Rectangle;
+	@:require(java3) @:overload @:public public function getNormalBounds() : java.awt.Rectangle;
 	
 	/**
 	* Sets the normal bounds for this internal frame, the bounds that
@@ -842,7 +842,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @param r the bounds that this internal frame should be restored to
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setNormalBounds(r : java.awt.Rectangle) : Void;
+	@:require(java3) @:overload @:public public function setNormalBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* If this <code>JInternalFrame</code> is active,
@@ -852,7 +852,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return the component with focus, or <code>null</code> if no children have focus
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getFocusOwner() : java.awt.Component;
+	@:require(java3) @:overload @:public public function getFocusOwner() : java.awt.Component;
 	
 	/**
 	* Returns the child component of this <code>JInternalFrame</code>
@@ -875,7 +875,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see #isSelected
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getMostRecentFocusOwner() : java.awt.Component;
+	@:require(java4) @:overload @:public public function getMostRecentFocusOwner() : java.awt.Component;
 	
 	/**
 	* Requests the internal frame to restore focus to the
@@ -885,7 +885,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function restoreSubcomponentFocus() : Void;
+	@:require(java3) @:overload @:public public function restoreSubcomponentFocus() : Void;
 	
 	/**
 	* Moves and resizes this component.  Unlike other components,
@@ -899,7 +899,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @param width  an integer giving the component's new width in pixels
 	* @param height an integer giving the component's new height in pixels
 	*/
-	@:overload override public function reshape(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function reshape(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Adds the specified listener to receive internal
@@ -907,7 +907,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*
 	* @param l the internal frame listener
 	*/
-	@:overload public function addInternalFrameListener(l : javax.swing.event.InternalFrameListener) : Void;
+	@:overload @:public public function addInternalFrameListener(l : javax.swing.event.InternalFrameListener) : Void;
 	
 	/**
 	* Removes the specified internal frame listener so that it no longer
@@ -915,7 +915,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*
 	* @param l the internal frame listener
 	*/
-	@:overload public function removeInternalFrameListener(l : javax.swing.event.InternalFrameListener) : Void;
+	@:overload @:public public function removeInternalFrameListener(l : javax.swing.event.InternalFrameListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>InternalFrameListener</code>s added
@@ -928,7 +928,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*
 	* @see #addInternalFrameListener
 	*/
-	@:require(java4) @:overload public function getInternalFrameListeners() : java.NativeArray<javax.swing.event.InternalFrameListener>;
+	@:require(java4) @:overload @:public public function getInternalFrameListeners() : java.NativeArray<javax.swing.event.InternalFrameListener>;
 	
 	/**
 	* Fires an internal frame event.
@@ -945,7 +945,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* </ul>
 	* If the event type is not one of the above, nothing happens.
 	*/
-	@:overload private function fireInternalFrameEvent(id : Int) : Void;
+	@:overload @:protected private function fireInternalFrameEvent(id : Int) : Void;
 	
 	/**
 	* Fires an
@@ -960,7 +960,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see #setDefaultCloseOperation
 	* @see javax.swing.event.InternalFrameEvent#INTERNAL_FRAME_CLOSING
 	*/
-	@:require(java3) @:overload public function doDefaultCloseAction() : Void;
+	@:require(java3) @:overload @:public public function doDefaultCloseAction() : Void;
 	
 	/**
 	* Sets the operation that will happen by default when
@@ -998,7 +998,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see #dispose
 	* @see InternalFrameEvent#INTERNAL_FRAME_CLOSING
 	*/
-	@:overload public function setDefaultCloseOperation(operation : Int) : Void;
+	@:overload @:public public function setDefaultCloseOperation(operation : Int) : Void;
 	
 	/**
 	* Returns the default operation that occurs when the user
@@ -1007,7 +1007,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*         frame
 	* @see #setDefaultCloseOperation
 	*/
-	@:overload public function getDefaultCloseOperation() : Int;
+	@:overload @:public public function getDefaultCloseOperation() : Int;
 	
 	/**
 	* Causes subcomponents of this <code>JInternalFrame</code>
@@ -1018,7 +1018,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*
 	* @see       java.awt.Window#pack
 	*/
-	@:overload public function pack() : Void;
+	@:overload @:public public function pack() : Void;
 	
 	/**
 	* If the internal frame is not visible,
@@ -1037,9 +1037,9 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see InternalFrameEvent#INTERNAL_FRAME_OPENED
 	* @see #setVisible
 	*/
-	@:overload override public function show() : Void;
+	@:overload @:public override public function show() : Void;
 	
-	@:overload override public function hide() : Void;
+	@:overload @:public override public function hide() : Void;
 	
 	/**
 	* Makes this internal frame
@@ -1058,7 +1058,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see #setSelected
 	* @see #setClosed
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* Brings this internal frame to the front.
@@ -1069,7 +1069,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see       java.awt.Window#toFront
 	* @see       #moveToFront
 	*/
-	@:overload public function toFront() : Void;
+	@:overload @:public public function toFront() : Void;
 	
 	/**
 	* Sends this internal frame to the back.
@@ -1080,7 +1080,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see       java.awt.Window#toBack
 	* @see       #moveToBack
 	*/
-	@:overload public function toBack() : Void;
+	@:overload @:public public function toBack() : Void;
 	
 	/**
 	* Does nothing because <code>JInternalFrame</code>s must always be roots of a focus
@@ -1092,7 +1092,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see java.awt.Container#getFocusTraversalPolicy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final override public function setFocusCycleRoot(focusCycleRoot : Bool) : Void;
+	@:require(java4) @:overload @:public @:final override public function setFocusCycleRoot(focusCycleRoot : Bool) : Void;
 	
 	/**
 	* Always returns <code>true</code> because all <code>JInternalFrame</code>s must be
@@ -1104,7 +1104,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see java.awt.Container#getFocusTraversalPolicy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final override public function isFocusCycleRoot() : Bool;
+	@:require(java4) @:overload @:public @:final override public function isFocusCycleRoot() : Bool;
 	
 	/**
 	* Always returns <code>null</code> because <code>JInternalFrame</code>s
@@ -1115,7 +1115,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see java.awt.Container#isFocusCycleRoot()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final override public function getFocusCycleRootAncestor() : java.awt.Container;
+	@:require(java4) @:overload @:public @:final override public function getFocusCycleRootAncestor() : java.awt.Container;
 	
 	/**
 	* Gets the warning string that is displayed with this internal frame.
@@ -1125,7 +1125,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return    <code>null</code>
 	* @see       java.awt.Window#getWarningString
 	*/
-	@:overload @:final public function getWarningString() : String;
+	@:overload @:public @:final public function getWarningString() : String;
 	
 	/**
 	* Returns a string representation of this <code>JInternalFrame</code>.
@@ -1137,13 +1137,13 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*
 	* @return  a string representation of this <code>JInternalFrame</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Overridden to allow optimized painting when the
 	* internal frame is being dragged.
 	*/
-	@:overload override private function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintComponent(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with this
@@ -1158,13 +1158,13 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*         <code>JInternalFrame</code>
 	* @see AccessibleJInternalFrame
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
 @:native('javax$swing$JInternalFrame$FocusPropertyChangeListener') @:internal extern class JInternalFrame_FocusPropertyChangeListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -1192,7 +1192,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* object does not have a name
 	* @see #setAccessibleName
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Get the role of this object.
@@ -1201,7 +1201,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the AccessibleValue associated with this object.  In the
@@ -1211,7 +1211,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Get the value of this object as a Number.
@@ -1219,14 +1219,14 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return value of the object -- can be <code>null</code> if this object does not
 	* have a value
 	*/
-	@:overload public function getCurrentAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getCurrentAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Set the value of this object as a Number.
 	*
 	* @return <code>true</code> if the value was set
 	*/
-	@:overload public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
+	@:overload @:public public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
 	
 	/**
 	* Get the minimum value of this object as a Number.
@@ -1234,7 +1234,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return Minimum value of the object; <code>null</code> if this object does not
 	* have a minimum value
 	*/
-	@:overload public function getMinimumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMinimumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Get the maximum value of this object as a Number.
@@ -1242,7 +1242,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return Maximum value of the object; <code>null</code> if this object does not
 	* have a maximum value
 	*/
-	@:overload public function getMaximumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMaximumAccessibleValue() : java.lang.Number;
 	
 	
 }
@@ -1275,7 +1275,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @param f  the <code>JInternalFrame</code>
 	*              for which the icon is created
 	*/
-	@:overload public function new(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function new(f : javax.swing.JInternalFrame) : Void;
 	
 	/**
 	* Returns the look-and-feel object that renders this component.
@@ -1283,7 +1283,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return the <code>DesktopIconUI</code> object that renders
 	*              this component
 	*/
-	@:overload public function getUI() : javax.swing.plaf.DesktopIconUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.DesktopIconUI;
 	
 	/**
 	* Sets the look-and-feel object that renders this component.
@@ -1291,7 +1291,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @param ui  the <code>DesktopIconUI</code> look-and-feel object
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.DesktopIconUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.DesktopIconUI) : Void;
 	
 	/**
 	* Returns the <code>JInternalFrame</code> that this
@@ -1300,7 +1300,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return the <code>JInternalFrame</code> with which this icon
 	*              is associated
 	*/
-	@:overload public function getInternalFrame() : javax.swing.JInternalFrame;
+	@:overload @:public public function getInternalFrame() : javax.swing.JInternalFrame;
 	
 	/**
 	* Sets the <code>JInternalFrame</code> with which this
@@ -1309,7 +1309,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @param f  the <code>JInternalFrame</code> with which this icon
 	*              is associated
 	*/
-	@:overload public function setInternalFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function setInternalFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/**
 	* Convenience method to ask the icon for the <code>Desktop</code>
@@ -1318,7 +1318,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return the <code>JDesktopPane</code> that contains this
 	*           icon's internal frame, or <code>null</code> if none found
 	*/
-	@:overload public function getDesktopPane() : javax.swing.JDesktopPane;
+	@:overload @:public public function getDesktopPane() : javax.swing.JDesktopPane;
 	
 	/**
 	* Notification from the <code>UIManager</code> that the look and feel
@@ -1328,7 +1328,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the look-and-feel
@@ -1338,7 +1338,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JDesktopIcon.
@@ -1349,7 +1349,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return an AccessibleJDesktopIcon that serves as the
 	*         AccessibleContext of this JDesktopIcon
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -1377,7 +1377,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the AccessibleValue associated with this object.  In the
@@ -1387,7 +1387,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Gets the value of this object as a <code>Number</code>.
@@ -1395,14 +1395,14 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return value of the object -- can be <code>null</code> if this object does not
 	* have a value
 	*/
-	@:overload public function getCurrentAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getCurrentAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Sets the value of this object as a <code>Number</code>.
 	*
 	* @return <code>true</code> if the value was set
 	*/
-	@:overload public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
+	@:overload @:public public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
 	
 	/**
 	* Gets the minimum value of this object as a <code>Number</code>.
@@ -1410,7 +1410,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return minimum value of the object; <code>null</code> if this object does not
 	* have a minimum value
 	*/
-	@:overload public function getMinimumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMinimumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Gets the maximum value of this object as a <code>Number</code>.
@@ -1418,7 +1418,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return maximum value of the object; <code>null</code> if this object does not
 	* have a maximum value
 	*/
-	@:overload public function getMaximumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMaximumAccessibleValue() : java.lang.Number;
 	
 	
 }

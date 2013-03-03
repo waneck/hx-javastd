@@ -26,17 +26,17 @@ package sun.reflect;
 /** Assists in iterating down a method's signature */
 extern class SignatureIterator
 {
-	@:overload public function new(sig : String) : Void;
+	@:overload @:public public function new(sig : String) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function atEnd() : Bool;
+	@:overload @:public public function atEnd() : Bool;
 	
-	@:overload public function next() : String;
+	@:overload @:public public function next() : String;
 	
 	/** Should only be called when atEnd() is true. Does not change
 	state of iterator. */
-	@:overload public function returnType() : String;
+	@:overload @:public public function returnType() : String;
 	
 	
 }

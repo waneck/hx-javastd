@@ -52,11 +52,11 @@ extern class Pattern implements com.sun.xml.internal.rngom.ast.om.ParsedPattern
 	* <p>
 	* A pattern is nullable when it can match the empty sequence.
 	*/
-	@:overload @:final public function isNullable() : Bool;
+	@:overload @:public @:final public function isNullable() : Bool;
 	
-	@:overload @:abstract public function accept(visitor : com.sun.xml.internal.rngom.binary.visitor.PatternVisitor) : Void;
+	@:overload @:public @:abstract public function accept(visitor : com.sun.xml.internal.rngom.binary.visitor.PatternVisitor) : Void;
 	
-	@:overload @:abstract public function apply(f : com.sun.xml.internal.rngom.binary.visitor.PatternFunction) : Dynamic;
+	@:overload @:public @:abstract public function apply(f : com.sun.xml.internal.rngom.binary.visitor.PatternFunction) : Dynamic;
 	
 	
 }

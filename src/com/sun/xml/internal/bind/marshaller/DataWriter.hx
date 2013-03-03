@@ -36,9 +36,9 @@ extern class DataWriter extends com.sun.xml.internal.bind.marshaller.XMLWriter
 	*      If non-null string is specified, it is written as a part
 	*      of the XML declaration.
 	*/
-	@:overload public function new(writer : java.io.Writer, encoding : String, _escapeHandler : com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler) : Void;
+	@:overload @:public public function new(writer : java.io.Writer, encoding : String, _escapeHandler : com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler) : Void;
 	
-	@:overload public function new(writer : java.io.Writer, encoding : String) : Void;
+	@:overload @:public public function new(writer : java.io.Writer, encoding : String) : Void;
 	
 	/**
 	* Return the current indent step.
@@ -54,7 +54,7 @@ extern class DataWriter extends com.sun.xml.internal.bind.marshaller.XMLWriter
 	* @deprecated
 	*      Only return the length of the indent string.
 	*/
-	@:overload public function getIndentStep() : Int;
+	@:overload @:public public function getIndentStep() : Int;
 	
 	/**
 	* Set the current indent step.
@@ -66,9 +66,9 @@ extern class DataWriter extends com.sun.xml.internal.bind.marshaller.XMLWriter
 	* @deprecated
 	*      Should use the version that takes string.
 	*/
-	@:overload public function setIndentStep(indentStep : Int) : Void;
+	@:overload @:public public function setIndentStep(indentStep : Int) : Void;
 	
-	@:overload public function setIndentStep(s : String) : Void;
+	@:overload @:public public function setIndentStep(s : String) : Void;
 	
 	/**
 	* Reset the writer so that it can be reused.
@@ -78,9 +78,9 @@ extern class DataWriter extends com.sun.xml.internal.bind.marshaller.XMLWriter
 	*
 	* @see XMLWriter#reset()
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload override private function writeXmlDecl(decl : String) : Void;
+	@:overload @:protected override private function writeXmlDecl(decl : String) : Void;
 	
 	/**
 	* Write a start tag.
@@ -101,7 +101,7 @@ extern class DataWriter extends com.sun.xml.internal.bind.marshaller.XMLWriter
 	*            down the chain raises an exception.
 	* @see XMLWriter#startElement(String, String, String, Attributes)
 	*/
-	@:overload override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Write an end tag.
@@ -121,9 +121,9 @@ extern class DataWriter extends com.sun.xml.internal.bind.marshaller.XMLWriter
 	*            down the chain raises an exception.
 	* @see XMLWriter#endElement(String, String, String)
 	*/
-	@:overload override public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(uri : String, localName : String, qName : String) : Void;
 	
-	@:overload override public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
 	/**
 	* Write a sequence of characters.
@@ -136,7 +136,7 @@ extern class DataWriter extends com.sun.xml.internal.bind.marshaller.XMLWriter
 	*            down the chain raises an exception.
 	* @see XMLWriter#characters(char[], int, int)
 	*/
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	
 }

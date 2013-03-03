@@ -30,61 +30,61 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 	* Default is an empty <code>JViewport</code>.
 	* @see JScrollPane#setViewport
 	*/
-	private var viewport : javax.swing.JViewport;
+	@:protected private var viewport : javax.swing.JViewport;
 	
 	/**
 	* The scrollpane's vertical scrollbar child.
 	* Default is a <code>JScrollBar</code>.
 	* @see JScrollPane#setVerticalScrollBar
 	*/
-	private var vsb : javax.swing.JScrollBar;
+	@:protected private var vsb : javax.swing.JScrollBar;
 	
 	/**
 	* The scrollpane's horizontal scrollbar child.
 	* Default is a <code>JScrollBar</code>.
 	* @see JScrollPane#setHorizontalScrollBar
 	*/
-	private var hsb : javax.swing.JScrollBar;
+	@:protected private var hsb : javax.swing.JScrollBar;
 	
 	/**
 	* The row header child.  Default is <code>null</code>.
 	* @see JScrollPane#setRowHeader
 	*/
-	private var rowHead : javax.swing.JViewport;
+	@:protected private var rowHead : javax.swing.JViewport;
 	
 	/**
 	* The column header child.  Default is <code>null</code>.
 	* @see JScrollPane#setColumnHeader
 	*/
-	private var colHead : javax.swing.JViewport;
+	@:protected private var colHead : javax.swing.JViewport;
 	
 	/**
 	* The component to display in the lower left corner.
 	* Default is <code>null</code>.
 	* @see JScrollPane#setCorner
 	*/
-	private var lowerLeft : java.awt.Component;
+	@:protected private var lowerLeft : java.awt.Component;
 	
 	/**
 	* The component to display in the lower right corner.
 	* Default is <code>null</code>.
 	* @see JScrollPane#setCorner
 	*/
-	private var lowerRight : java.awt.Component;
+	@:protected private var lowerRight : java.awt.Component;
 	
 	/**
 	* The component to display in the upper left corner.
 	* Default is <code>null</code>.
 	* @see JScrollPane#setCorner
 	*/
-	private var upperLeft : java.awt.Component;
+	@:protected private var upperLeft : java.awt.Component;
 	
 	/**
 	* The component to display in the upper right corner.
 	* Default is <code>null</code>.
 	* @see JScrollPane#setCorner
 	*/
-	private var upperRight : java.awt.Component;
+	@:protected private var upperRight : java.awt.Component;
 	
 	/**
 	* The display policy for the vertical scrollbar.
@@ -94,7 +94,7 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 	*
 	* @see JScrollPane#setVerticalScrollBarPolicy
 	*/
-	private var vsbPolicy : Int;
+	@:protected private var vsbPolicy : Int;
 	
 	/**
 	* The display policy for the horizontal scrollbar.
@@ -104,7 +104,7 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 	*
 	* @see JScrollPane#setHorizontalScrollBarPolicy
 	*/
-	private var hsbPolicy : Int;
+	@:protected private var hsbPolicy : Int;
 	
 	/**
 	* This method is invoked after the ScrollPaneLayout is set as the
@@ -121,7 +121,7 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 	* scrollpane.setLayout(mySPLayout):
 	* </pre>
 	*/
-	@:overload public function syncWithScrollPane(sp : javax.swing.JScrollPane) : Void;
+	@:overload @:public public function syncWithScrollPane(sp : javax.swing.JScrollPane) : Void;
 	
 	/**
 	* Removes an existing component.  When a new component, such as
@@ -136,7 +136,7 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 	* @param newC the <code>Component</code> to add
 	* @return the <code>newC</code>
 	*/
-	@:overload private function addSingletonComponent(oldC : java.awt.Component, newC : java.awt.Component) : java.awt.Component;
+	@:overload @:protected private function addSingletonComponent(oldC : java.awt.Component, newC : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* Adds the specified component to the layout. The layout is
@@ -157,14 +157,14 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 	* @param c the the component to be added
 	* @exception IllegalArgumentException if <code>s</code> is an invalid key
 	*/
-	@:overload public function addLayoutComponent(s : String, c : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(s : String, c : java.awt.Component) : Void;
 	
 	/**
 	* Removes the specified component from the layout.
 	*
 	* @param c the component to remove
 	*/
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
 	/**
 	* Returns the vertical scrollbar-display policy.
@@ -172,7 +172,7 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 	* @return an integer giving the display policy
 	* @see #setVerticalScrollBarPolicy
 	*/
-	@:overload public function getVerticalScrollBarPolicy() : Int;
+	@:overload @:public public function getVerticalScrollBarPolicy() : Int;
 	
 	/**
 	* Sets the vertical scrollbar-display policy. The options
@@ -190,7 +190,7 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 	* @exception IllegalArgumentException if <code>x</code> is an invalid
 	*          vertical scroll bar policy, as listed above
 	*/
-	@:overload public function setVerticalScrollBarPolicy(x : Int) : Void;
+	@:overload @:public public function setVerticalScrollBarPolicy(x : Int) : Void;
 	
 	/**
 	* Returns the horizontal scrollbar-display policy.
@@ -198,7 +198,7 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 	* @return an integer giving the display policy
 	* @see #setHorizontalScrollBarPolicy
 	*/
-	@:overload public function getHorizontalScrollBarPolicy() : Int;
+	@:overload @:public public function getHorizontalScrollBarPolicy() : Int;
 	
 	/**
 	* Sets the horizontal scrollbar-display policy.
@@ -215,7 +215,7 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 	* @exception IllegalArgumentException if <code>x</code> is not a valid
 	*          horizontal scrollbar policy, as listed above
 	*/
-	@:overload public function setHorizontalScrollBarPolicy(x : Int) : Void;
+	@:overload @:public public function setHorizontalScrollBarPolicy(x : Int) : Void;
 	
 	/**
 	* Returns the <code>JViewport</code> object that displays the
@@ -223,35 +223,35 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 	* @return the <code>JViewport</code> object that displays the scrollable contents
 	* @see JScrollPane#getViewport
 	*/
-	@:overload public function getViewport() : javax.swing.JViewport;
+	@:overload @:public public function getViewport() : javax.swing.JViewport;
 	
 	/**
 	* Returns the <code>JScrollBar</code> object that handles horizontal scrolling.
 	* @return the <code>JScrollBar</code> object that handles horizontal scrolling
 	* @see JScrollPane#getHorizontalScrollBar
 	*/
-	@:overload public function getHorizontalScrollBar() : javax.swing.JScrollBar;
+	@:overload @:public public function getHorizontalScrollBar() : javax.swing.JScrollBar;
 	
 	/**
 	* Returns the <code>JScrollBar</code> object that handles vertical scrolling.
 	* @return the <code>JScrollBar</code> object that handles vertical scrolling
 	* @see JScrollPane#getVerticalScrollBar
 	*/
-	@:overload public function getVerticalScrollBar() : javax.swing.JScrollBar;
+	@:overload @:public public function getVerticalScrollBar() : javax.swing.JScrollBar;
 	
 	/**
 	* Returns the <code>JViewport</code> object that is the row header.
 	* @return the <code>JViewport</code> object that is the row header
 	* @see JScrollPane#getRowHeader
 	*/
-	@:overload public function getRowHeader() : javax.swing.JViewport;
+	@:overload @:public public function getRowHeader() : javax.swing.JViewport;
 	
 	/**
 	* Returns the <code>JViewport</code> object that is the column header.
 	* @return the <code>JViewport</code> object that is the column header
 	* @see JScrollPane#getColumnHeader
 	*/
-	@:overload public function getColumnHeader() : javax.swing.JViewport;
+	@:overload @:public public function getColumnHeader() : javax.swing.JViewport;
 	
 	/**
 	* Returns the <code>Component</code> at the specified corner.
@@ -261,7 +261,7 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 	*          four corners, <code>null</code> is returned
 	* @see JScrollPane#getCorner
 	*/
-	@:overload public function getCorner(key : String) : java.awt.Component;
+	@:overload @:public public function getCorner(key : String) : java.awt.Component;
 	
 	/**
 	* The preferred size of a <code>ScrollPane</code> is the size of the insets,
@@ -278,7 +278,7 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 	* @see ViewportLayout
 	* @see LayoutManager
 	*/
-	@:overload public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* The minimum size of a <code>ScrollPane</code> is the size of the insets
@@ -290,7 +290,7 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 	* @param parent the <code>Container</code> that will be laid out
 	* @return a <code>Dimension</code> object specifying the minimum size
 	*/
-	@:overload public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Lays out the scrollpane. The positioning of components depends on
@@ -325,7 +325,7 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 	*
 	* @param parent the <code>Container</code> to lay out
 	*/
-	@:overload public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(parent : java.awt.Container) : Void;
 	
 	/**
 	* Returns the bounds of the border around the specified scroll pane's
@@ -335,7 +335,7 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 	* @deprecated As of JDK version Swing1.1
 	*    replaced by <code>JScrollPane.getViewportBorderBounds()</code>.
 	*/
-	@:overload public function getViewportBorderBounds(scrollpane : javax.swing.JScrollPane) : java.awt.Rectangle;
+	@:overload @:public public function getViewportBorderBounds(scrollpane : javax.swing.JScrollPane) : java.awt.Rectangle;
 	
 	
 }

@@ -25,9 +25,9 @@ package sun.reflect;
 */
 @:internal extern class Label
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function bind() : Void;
+	@:overload @:public public function bind() : Void;
 	
 	
 }

@@ -32,43 +32,43 @@ package javax.swing.plaf.synth;
 	* @author Joshua Outwater
 	* @author Steve Wilson
 	*/
-	private var systemPopupMenu : javax.swing.JPopupMenu;
+	@:protected private var systemPopupMenu : javax.swing.JPopupMenu;
 	
-	private var menuButton : javax.swing.JButton;
+	@:protected private var menuButton : javax.swing.JButton;
 	
-	@:overload public function new(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function new(f : javax.swing.JInternalFrame) : Void;
 	
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
-	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	
-	@:overload public function getContext(c : javax.swing.JComponent, state : Int) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getContext(c : javax.swing.JComponent, state : Int) : javax.swing.plaf.synth.SynthContext;
 	
-	@:overload override private function addSubComponents() : Void;
+	@:overload @:protected override private function addSubComponents() : Void;
 	
-	@:overload override private function installListeners() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
-	@:overload override private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
-	@:overload override private function uninstallDefaults() : Void;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
-	@:overload override private function assembleSystemMenu() : Void;
+	@:overload @:protected override private function assembleSystemMenu() : Void;
 	
-	@:overload private function addSystemMenuItems(menu : javax.swing.JPopupMenu) : Void;
+	@:overload @:protected private function addSystemMenuItems(menu : javax.swing.JPopupMenu) : Void;
 	
-	@:overload override private function showSystemMenu() : Void;
+	@:overload @:protected override private function showSystemMenu() : Void;
 	
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
-	@:overload private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
-	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override private function createLayout() : java.awt.LayoutManager;
+	@:overload @:protected override private function createLayout() : java.awt.LayoutManager;
 	
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -78,15 +78,15 @@ package javax.swing.plaf.synth;
 }
 @:native('javax$swing$plaf$synth$SynthInternalFrameTitlePane$SynthTitlePaneLayout') @:internal extern class SynthInternalFrameTitlePane_SynthTitlePaneLayout implements java.awt.LayoutManager
 {
-	@:overload public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
 	
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
-	@:overload public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function layoutContainer(c : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(c : java.awt.Container) : Void;
 	
 	
 }

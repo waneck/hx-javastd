@@ -37,13 +37,13 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsCheckBoxUI extends com.sun.java.swing.plaf.windows.WindowsRadioButtonUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function getPropertyPrefix() : String;
+	@:overload @:public override public function getPropertyPrefix() : String;
 	
-	@:overload public function installDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:public override public function installDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload public function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:public override public function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
 	
 	
 }

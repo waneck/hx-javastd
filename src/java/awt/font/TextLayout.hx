@@ -47,7 +47,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* the same, a hit on the leading edge of a character is stronger
 	* than a hit on the trailing edge of a character.
 	*/
-	public static var DEFAULT_CARET_POLICY(default, null) : java.awt.font.TextLayout.TextLayout_CaretPolicy;
+	@:public @:static @:final public static var DEFAULT_CARET_POLICY(default, null) : java.awt.font.TextLayout.TextLayout_CaretPolicy;
 	
 	/**
 	* Constructs a <code>TextLayout</code> from a <code>String</code>
@@ -66,7 +66,7 @@ extern class TextLayout implements java.lang.Cloneable
 	*       parameter does not specify a translation between the
 	*       <code>TextLayout</code> and user space.
 	*/
-	@:overload public function new(string : String, font : java.awt.Font, frc : java.awt.font.FontRenderContext) : Void;
+	@:overload @:public public function new(string : String, font : java.awt.Font, frc : java.awt.font.FontRenderContext) : Void;
 	
 	/**
 	* Constructs a <code>TextLayout</code> from a <code>String</code>
@@ -85,7 +85,7 @@ extern class TextLayout implements java.lang.Cloneable
 	*       parameter does not specify a translation between the
 	*       <code>TextLayout</code> and user space.
 	*/
-	@:overload public function new(string : String, attributes : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>, frc : java.awt.font.FontRenderContext) : Void;
+	@:overload @:public public function new(string : String, attributes : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>, frc : java.awt.font.FontRenderContext) : Void;
 	
 	/**
 	* Constructs a <code>TextLayout</code> from an iterator over styled text.
@@ -101,12 +101,12 @@ extern class TextLayout implements java.lang.Cloneable
 	*       parameter does not specify a translation between the
 	*       <code>TextLayout</code> and user space.
 	*/
-	@:overload public function new(text : java.text.AttributedCharacterIterator, frc : java.awt.font.FontRenderContext) : Void;
+	@:overload @:public public function new(text : java.text.AttributedCharacterIterator, frc : java.awt.font.FontRenderContext) : Void;
 	
 	/**
 	* Creates a copy of this <code>TextLayout</code>.
 	*/
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected private function clone() : Dynamic;
 	
 	/**
 	* Creates a copy of this <code>TextLayout</code> justified to the
@@ -123,7 +123,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @exception Error if this layout has already been justified, an Error is
 	* thrown.
 	*/
-	@:overload public function getJustifiedLayout(justificationWidth : Single) : java.awt.font.TextLayout;
+	@:overload @:public public function getJustifiedLayout(justificationWidth : Single) : java.awt.font.TextLayout;
 	
 	/**
 	* Justify this layout.  Overridden by subclassers to control justification
@@ -146,7 +146,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* advance of the line.
 	* @see #getJustifiedLayout(float)
 	*/
-	@:overload private function handleJustify(justificationWidth : Single) : Void;
+	@:overload @:protected private function handleJustify(justificationWidth : Single) : Void;
 	
 	/**
 	* Returns the baseline for this <code>TextLayout</code>.
@@ -158,7 +158,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @see #getBaselineOffsets()
 	* @see Font
 	*/
-	@:overload public function getBaseline() : java.StdTypes.Int8;
+	@:overload @:public public function getBaseline() : java.StdTypes.Int8;
 	
 	/**
 	* Returns the offsets array for the baselines used for this
@@ -175,7 +175,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @see #getBaseline()
 	* @see Font
 	*/
-	@:overload public function getBaselineOffsets() : java.NativeArray<Single>;
+	@:overload @:public public function getBaselineOffsets() : java.NativeArray<Single>;
 	
 	/**
 	* Returns the advance of this <code>TextLayout</code>.
@@ -184,7 +184,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* coordinates.
 	* @return the advance of this <code>TextLayout</code>.
 	*/
-	@:overload public function getAdvance() : Single;
+	@:overload @:public public function getAdvance() : Single;
 	
 	/**
 	* Returns the advance of this <code>TextLayout</code>, minus trailing
@@ -193,7 +193,7 @@ extern class TextLayout implements java.lang.Cloneable
 	*      trailing whitespace.
 	* @see #getAdvance()
 	*/
-	@:overload public function getVisibleAdvance() : Single;
+	@:overload @:public public function getVisibleAdvance() : Single;
 	
 	/**
 	* Returns the ascent of this <code>TextLayout</code>.
@@ -206,7 +206,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* TextLayout.  It is in baseline-relative coordinates.
 	* @return the ascent of this <code>TextLayout</code>.
 	*/
-	@:overload public function getAscent() : Single;
+	@:overload @:public public function getAscent() : Single;
 	
 	/**
 	* Returns the descent of this <code>TextLayout</code>.
@@ -218,7 +218,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* the TextLayout.  It is in baseline-relative coordinates.
 	* @return the descent of this <code>TextLayout</code>.
 	*/
-	@:overload public function getDescent() : Single;
+	@:overload @:public public function getDescent() : Single;
 	
 	/**
 	* Returns the leading of the <code>TextLayout</code>.
@@ -241,7 +241,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* </pre></blockquote>
 	* @return the leading of this <code>TextLayout</code>.
 	*/
-	@:overload public function getLeading() : Single;
+	@:overload @:public public function getLeading() : Single;
 	
 	/**
 	* Returns the bounds of this <code>TextLayout</code>.
@@ -253,7 +253,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a {@link Rectangle2D} that is the bounds of this
 	*        <code>TextLayout</code>.
 	*/
-	@:overload public function getBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getBounds() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns the pixel bounds of this <code>TextLayout</code> when
@@ -271,7 +271,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @see GlyphVector#getPixelBounds
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getPixelBounds(frc : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
+	@:require(java6) @:overload @:public public function getPixelBounds(frc : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
 	
 	/**
 	* Returns <code>true</code> if this <code>TextLayout</code> has
@@ -289,21 +289,21 @@ extern class TextLayout implements java.lang.Cloneable
 	*         <code>TextLayout</code> is left-to-right; <code>false</code>
 	*         otherwise.
 	*/
-	@:overload public function isLeftToRight() : Bool;
+	@:overload @:public public function isLeftToRight() : Bool;
 	
 	/**
 	* Returns <code>true</code> if this <code>TextLayout</code> is vertical.
 	* @return <code>true</code> if this <code>TextLayout</code> is vertical;
 	*      <code>false</code> otherwise.
 	*/
-	@:overload public function isVertical() : Bool;
+	@:overload @:public public function isVertical() : Bool;
 	
 	/**
 	* Returns the number of characters represented by this
 	* <code>TextLayout</code>.
 	* @return the number of characters in this <code>TextLayout</code>.
 	*/
-	@:overload public function getCharacterCount() : Int;
+	@:overload @:public public function getCharacterCount() : Int;
 	
 	/**
 	* Returns information about the caret corresponding to <code>hit</code>.
@@ -322,7 +322,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @see #getCaretShapes(int, Rectangle2D, TextLayout.CaretPolicy)
 	* @see Font#getItalicAngle
 	*/
-	@:overload public function getCaretInfo(hit : java.awt.font.TextHitInfo, bounds : java.awt.geom.Rectangle2D) : java.NativeArray<Single>;
+	@:overload @:public public function getCaretInfo(hit : java.awt.font.TextHitInfo, bounds : java.awt.geom.Rectangle2D) : java.NativeArray<Single>;
 	
 	/**
 	* Returns information about the caret corresponding to <code>hit</code>.
@@ -332,7 +332,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return the information about a caret corresponding to a hit.  The
 	*     returned caret info is in baseline-relative coordinates.
 	*/
-	@:overload public function getCaretInfo(hit : java.awt.font.TextHitInfo) : java.NativeArray<Single>;
+	@:overload @:public public function getCaretInfo(hit : java.awt.font.TextHitInfo) : java.NativeArray<Single>;
 	
 	/**
 	* Returns the hit for the next caret to the right (bottom); if there
@@ -343,7 +343,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a hit whose caret appears at the next position to the
 	* right (bottom) of the caret of the provided hit or <code>null</code>.
 	*/
-	@:overload public function getNextRightHit(hit : java.awt.font.TextHitInfo) : java.awt.font.TextHitInfo;
+	@:overload @:public public function getNextRightHit(hit : java.awt.font.TextHitInfo) : java.awt.font.TextHitInfo;
 	
 	/**
 	* Returns the hit for the next caret to the right (bottom); if no
@@ -359,7 +359,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a hit whose caret appears at the next position to the
 	* right (bottom) of the caret of the provided hit, or <code>null</code>.
 	*/
-	@:overload public function getNextRightHit(offset : Int, policy : java.awt.font.TextLayout.TextLayout_CaretPolicy) : java.awt.font.TextHitInfo;
+	@:overload @:public public function getNextRightHit(offset : Int, policy : java.awt.font.TextLayout.TextLayout_CaretPolicy) : java.awt.font.TextHitInfo;
 	
 	/**
 	* Returns the hit for the next caret to the right (bottom); if no
@@ -374,7 +374,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a hit whose caret appears at the next position to the
 	* right (bottom) of the caret of the provided hit, or <code>null</code>.
 	*/
-	@:overload public function getNextRightHit(offset : Int) : java.awt.font.TextHitInfo;
+	@:overload @:public public function getNextRightHit(offset : Int) : java.awt.font.TextHitInfo;
 	
 	/**
 	* Returns the hit for the next caret to the left (top); if no such
@@ -385,7 +385,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a hit whose caret appears at the next position to the
 	* left (top) of the caret of the provided hit, or <code>null</code>.
 	*/
-	@:overload public function getNextLeftHit(hit : java.awt.font.TextHitInfo) : java.awt.font.TextHitInfo;
+	@:overload @:public public function getNextLeftHit(hit : java.awt.font.TextHitInfo) : java.awt.font.TextHitInfo;
 	
 	/**
 	* Returns the hit for the next caret to the left (top); if no
@@ -401,7 +401,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a hit whose caret appears at the next position to the
 	* left (top) of the caret of the provided hit, or <code>null</code>.
 	*/
-	@:overload public function getNextLeftHit(offset : Int, policy : java.awt.font.TextLayout.TextLayout_CaretPolicy) : java.awt.font.TextHitInfo;
+	@:overload @:public public function getNextLeftHit(offset : Int, policy : java.awt.font.TextLayout.TextLayout_CaretPolicy) : java.awt.font.TextHitInfo;
 	
 	/**
 	* Returns the hit for the next caret to the left (top); if no
@@ -416,7 +416,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a hit whose caret appears at the next position to the
 	* left (top) of the caret of the provided hit, or <code>null</code>.
 	*/
-	@:overload public function getNextLeftHit(offset : Int) : java.awt.font.TextHitInfo;
+	@:overload @:public public function getNextLeftHit(offset : Int) : java.awt.font.TextHitInfo;
 	
 	/**
 	* Returns the hit on the opposite side of the specified hit's caret.
@@ -424,7 +424,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a hit that is on the opposite side of the specified hit's
 	*    caret.
 	*/
-	@:overload public function getVisualOtherHit(hit : java.awt.font.TextHitInfo) : java.awt.font.TextHitInfo;
+	@:overload @:public public function getVisualOtherHit(hit : java.awt.font.TextHitInfo) : java.awt.font.TextHitInfo;
 	
 	/**
 	* Returns a {@link Shape} representing the caret at the specified
@@ -436,7 +436,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a <code>Shape</code> representing the caret.  The returned
 	*    shape is in standard coordinates.
 	*/
-	@:overload public function getCaretShape(hit : java.awt.font.TextHitInfo, bounds : java.awt.geom.Rectangle2D) : java.awt.Shape;
+	@:overload @:public public function getCaretShape(hit : java.awt.font.TextHitInfo, bounds : java.awt.geom.Rectangle2D) : java.awt.Shape;
 	
 	/**
 	* Returns a <code>Shape</code> representing the caret at the specified
@@ -445,7 +445,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a <code>Shape</code> representing the caret.  The returned
 	*     shape is in standard coordinates.
 	*/
-	@:overload public function getCaretShape(hit : java.awt.font.TextHitInfo) : java.awt.Shape;
+	@:overload @:public public function getCaretShape(hit : java.awt.font.TextHitInfo) : java.awt.Shape;
 	
 	/**
 	* Returns the level of the character at <code>index</code>.
@@ -454,7 +454,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @param index the index of the character from which to get the level
 	* @return the level of the character at the specified index.
 	*/
-	@:overload public function getCharacterLevel(index : Int) : java.StdTypes.Int8;
+	@:overload @:public public function getCharacterLevel(index : Int) : java.StdTypes.Int8;
 	
 	/**
 	* Returns two paths corresponding to the strong and weak caret.
@@ -467,7 +467,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* otherwise it is <code>null</code>. The returned shapes
 	* are in standard coordinates.
 	*/
-	@:overload public function getCaretShapes(offset : Int, bounds : java.awt.geom.Rectangle2D, policy : java.awt.font.TextLayout.TextLayout_CaretPolicy) : java.NativeArray<java.awt.Shape>;
+	@:overload @:public public function getCaretShapes(offset : Int, bounds : java.awt.geom.Rectangle2D, policy : java.awt.font.TextLayout.TextLayout_CaretPolicy) : java.NativeArray<java.awt.Shape>;
 	
 	/**
 	* Returns two paths corresponding to the strong and weak caret.
@@ -480,7 +480,7 @@ extern class TextLayout implements java.lang.Cloneable
 	*    defined by the <code>DEFAULT_CARET_POLICY</code>.  These are
 	*    in standard coordinates.
 	*/
-	@:overload public function getCaretShapes(offset : Int, bounds : java.awt.geom.Rectangle2D) : java.NativeArray<java.awt.Shape>;
+	@:overload @:public public function getCaretShapes(offset : Int, bounds : java.awt.geom.Rectangle2D) : java.NativeArray<java.awt.Shape>;
 	
 	/**
 	* Returns two paths corresponding to the strong and weak caret.
@@ -492,7 +492,7 @@ extern class TextLayout implements java.lang.Cloneable
 	*    defined by the <code>DEFAULT_CARET_POLICY</code>.  These are
 	*    in standard coordinates.
 	*/
-	@:overload public function getCaretShapes(offset : Int) : java.NativeArray<java.awt.Shape>;
+	@:overload @:public public function getCaretShapes(offset : Int) : java.NativeArray<java.awt.Shape>;
 	
 	/**
 	* Returns the logical ranges of text corresponding to a visual selection.
@@ -503,7 +503,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* selected ranges.
 	* @see #getVisualHighlightShape(TextHitInfo, TextHitInfo, Rectangle2D)
 	*/
-	@:overload public function getLogicalRangesForVisualSelection(firstEndpoint : java.awt.font.TextHitInfo, secondEndpoint : java.awt.font.TextHitInfo) : java.NativeArray<Int>;
+	@:overload @:public public function getLogicalRangesForVisualSelection(firstEndpoint : java.awt.font.TextHitInfo, secondEndpoint : java.awt.font.TextHitInfo) : java.NativeArray<Int>;
 	
 	/**
 	* Returns a path enclosing the visual selection in the specified range,
@@ -541,7 +541,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @see #getLogicalRangesForVisualSelection(TextHitInfo, TextHitInfo)
 	* @see #getLogicalHighlightShape(int, int, Rectangle2D)
 	*/
-	@:overload public function getVisualHighlightShape(firstEndpoint : java.awt.font.TextHitInfo, secondEndpoint : java.awt.font.TextHitInfo, bounds : java.awt.geom.Rectangle2D) : java.awt.Shape;
+	@:overload @:public public function getVisualHighlightShape(firstEndpoint : java.awt.font.TextHitInfo, secondEndpoint : java.awt.font.TextHitInfo, bounds : java.awt.geom.Rectangle2D) : java.awt.Shape;
 	
 	/**
 	* Returns a <code>Shape</code> enclosing the visual selection in the
@@ -553,7 +553,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a <code>Shape</code> enclosing the selection.  This is
 	*     in standard coordinates.
 	*/
-	@:overload public function getVisualHighlightShape(firstEndpoint : java.awt.font.TextHitInfo, secondEndpoint : java.awt.font.TextHitInfo) : java.awt.Shape;
+	@:overload @:public public function getVisualHighlightShape(firstEndpoint : java.awt.font.TextHitInfo, secondEndpoint : java.awt.font.TextHitInfo) : java.awt.Shape;
 	
 	/**
 	* Returns a <code>Shape</code> enclosing the logical selection in the
@@ -594,7 +594,7 @@ extern class TextLayout implements java.lang.Cloneable
 	*     coordinates.
 	* @see #getVisualHighlightShape(TextHitInfo, TextHitInfo, Rectangle2D)
 	*/
-	@:overload public function getLogicalHighlightShape(firstEndpoint : Int, secondEndpoint : Int, bounds : java.awt.geom.Rectangle2D) : java.awt.Shape;
+	@:overload @:public public function getLogicalHighlightShape(firstEndpoint : Int, secondEndpoint : Int, bounds : java.awt.geom.Rectangle2D) : java.awt.Shape;
 	
 	/**
 	* Returns a <code>Shape</code> enclosing the logical selection in the
@@ -610,7 +610,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a <code>Shape</code> enclosing the selection.  This is in
 	*     standard coordinates.
 	*/
-	@:overload public function getLogicalHighlightShape(firstEndpoint : Int, secondEndpoint : Int) : java.awt.Shape;
+	@:overload @:public public function getLogicalHighlightShape(firstEndpoint : Int, secondEndpoint : Int) : java.awt.Shape;
 	
 	/**
 	* Returns the black box bounds of the characters in the specified range.
@@ -623,7 +623,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a <code>Shape</code> enclosing the black box bounds.  This is
 	*     in standard coordinates.
 	*/
-	@:overload public function getBlackBoxBounds(firstEndpoint : Int, secondEndpoint : Int) : java.awt.Shape;
+	@:overload @:public public function getBlackBoxBounds(firstEndpoint : Int, secondEndpoint : Int) : java.awt.Shape;
 	
 	/**
 	* Returns a <code>TextHitInfo</code> corresponding to the
@@ -642,7 +642,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a hit describing the character and edge (leading or trailing)
 	*     under the specified point.
 	*/
-	@:overload public function hitTestChar(x : Single, y : Single, bounds : java.awt.geom.Rectangle2D) : java.awt.font.TextHitInfo;
+	@:overload @:public public function hitTestChar(x : Single, y : Single, bounds : java.awt.geom.Rectangle2D) : java.awt.font.TextHitInfo;
 	
 	/**
 	* Returns a <code>TextHitInfo</code> corresponding to the
@@ -656,13 +656,13 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a hit describing the character and edge (leading or trailing)
 	* under the specified point.
 	*/
-	@:overload public function hitTestChar(x : Single, y : Single) : java.awt.font.TextHitInfo;
+	@:overload @:public public function hitTestChar(x : Single, y : Single) : java.awt.font.TextHitInfo;
 	
 	/**
 	* Returns the hash code of this <code>TextLayout</code>.
 	* @return the hash code of this <code>TextLayout</code>.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns <code>true</code> if the specified <code>Object</code> is a
@@ -673,7 +673,7 @@ extern class TextLayout implements java.lang.Cloneable
 	*      equals this <code>TextLayout</code>; <code>false</code>
 	*      otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns <code>true</code> if the two layouts are equal.
@@ -684,14 +684,14 @@ extern class TextLayout implements java.lang.Cloneable
 	*      equals this <code>TextLayout</code>.
 	*
 	*/
-	@:overload public function equals(rhs : java.awt.font.TextLayout) : Bool;
+	@:overload @:public public function equals(rhs : java.awt.font.TextLayout) : Bool;
 	
 	/**
 	* Returns debugging information for this <code>TextLayout</code>.
 	* @return the <code>textLine</code> of this <code>TextLayout</code>
 	*        as a <code>String</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Renders this <code>TextLayout</code> at the specified location in
@@ -706,7 +706,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @param y the Y coordinate of the origin of this <code>TextLayout</code>
 	* @see #getBounds()
 	*/
-	@:overload public function draw(g2 : java.awt.Graphics2D, x : Single, y : Single) : Void;
+	@:overload @:public public function draw(g2 : java.awt.Graphics2D, x : Single, y : Single) : Void;
 	
 	/**
 	* Returns a <code>Shape</code> representing the outline of this
@@ -716,7 +716,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a <code>Shape</code> that is the outline of this
 	*     <code>TextLayout</code>.  This is in standard coordinates.
 	*/
-	@:overload public function getOutline(tx : java.awt.geom.AffineTransform) : java.awt.Shape;
+	@:overload @:public public function getOutline(tx : java.awt.geom.AffineTransform) : java.awt.Shape;
 	
 	/**
 	* Return the LayoutPath, or null if the layout path is the
@@ -724,7 +724,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return the layout path
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getLayoutPath() : java.awt.font.LayoutPath;
+	@:require(java6) @:overload @:public public function getLayoutPath() : java.awt.font.LayoutPath;
 	
 	/**
 	* Convert a hit to a point in standard coordinates.  The point is
@@ -741,7 +741,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @throws NullPointerException if hit or point is null.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function hitToPoint(hit : java.awt.font.TextHitInfo, point : java.awt.geom.Point2D) : Void;
+	@:require(java6) @:overload @:public public function hitToPoint(hit : java.awt.font.TextHitInfo, point : java.awt.geom.Point2D) : Void;
 	
 	
 }
@@ -767,7 +767,7 @@ extern class TextLayout implements java.lang.Cloneable
 	/**
 	* Constructs a <code>CaretPolicy</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Chooses one of the specified <code>TextHitInfo</code> instances as
@@ -780,7 +780,7 @@ extern class TextLayout implements java.lang.Cloneable
 	*        (or an equivalent <code>TextHitInfo</code>), indicating the
 	*        strong caret.
 	*/
-	@:overload public function getStrongCaret(hit1 : java.awt.font.TextHitInfo, hit2 : java.awt.font.TextHitInfo, layout : java.awt.font.TextLayout) : java.awt.font.TextHitInfo;
+	@:overload @:public public function getStrongCaret(hit1 : java.awt.font.TextHitInfo, hit2 : java.awt.font.TextHitInfo, layout : java.awt.font.TextLayout) : java.awt.font.TextHitInfo;
 	
 	
 }

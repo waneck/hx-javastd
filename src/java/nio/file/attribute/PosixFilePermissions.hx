@@ -44,7 +44,7 @@ package java.nio.file.attribute;
 	*
 	* @return  the string representation of the permission set
 	*/
-	@:overload public static function toString(perms : java.util.Set<java.nio.file.attribute.PosixFilePermission>) : String;
+	@:overload @:public @:static public static function toString(perms : java.util.Set<java.nio.file.attribute.PosixFilePermission>) : String;
 	
 	/**
 	* Returns the set of permissions corresponding to a given {@code String}
@@ -77,7 +77,7 @@ package java.nio.file.attribute;
 	*
 	* @see #toString(Set)
 	*/
-	@:overload public static function fromString(perms : String) : java.util.Set<java.nio.file.attribute.PosixFilePermission>;
+	@:overload @:public @:static public static function fromString(perms : String) : java.util.Set<java.nio.file.attribute.PosixFilePermission>;
 	
 	/**
 	* Creates a {@link FileAttribute}, encapsulating a copy of the given file
@@ -95,7 +95,7 @@ package java.nio.file.attribute;
 	*          if the set contains elements that are not of type {@code
 	*          PosixFilePermission}
 	*/
-	@:overload public static function asFileAttribute(perms : java.util.Set<java.nio.file.attribute.PosixFilePermission>) : java.nio.file.attribute.FileAttribute<java.util.Set<java.nio.file.attribute.PosixFilePermission>>;
+	@:overload @:public @:static public static function asFileAttribute(perms : java.util.Set<java.nio.file.attribute.PosixFilePermission>) : java.nio.file.attribute.FileAttribute<java.util.Set<java.nio.file.attribute.PosixFilePermission>>;
 	
 	
 }

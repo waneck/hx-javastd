@@ -25,18 +25,18 @@ package sun.net.httpserver;
 */
 extern class AuthFilter extends com.sun.net.httpserver.Filter
 {
-	@:overload public function new(authenticator : com.sun.net.httpserver.Authenticator) : Void;
+	@:overload @:public public function new(authenticator : com.sun.net.httpserver.Authenticator) : Void;
 	
-	@:overload override public function description() : String;
+	@:overload @:public override public function description() : String;
 	
-	@:overload public function setAuthenticator(a : com.sun.net.httpserver.Authenticator) : Void;
+	@:overload @:public public function setAuthenticator(a : com.sun.net.httpserver.Authenticator) : Void;
 	
-	@:overload public function consumeInput(t : com.sun.net.httpserver.HttpExchange) : Void;
+	@:overload @:public public function consumeInput(t : com.sun.net.httpserver.HttpExchange) : Void;
 	
 	/**
 	* The filter's implementation, which is invoked by the server
 	*/
-	@:overload override public function doFilter(t : com.sun.net.httpserver.HttpExchange, chain : com.sun.net.httpserver.Filter.Filter_Chain) : Void;
+	@:overload @:public override public function doFilter(t : com.sun.net.httpserver.HttpExchange, chain : com.sun.net.httpserver.Filter.Filter_Chain) : Void;
 	
 	
 }

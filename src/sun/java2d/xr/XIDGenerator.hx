@@ -32,7 +32,7 @@ package sun.java2d.xr;
 */
 extern class XIDGenerator
 {
-	@:overload public function getNextXID() : Int;
+	@:overload @:public public function getNextXID() : Int;
 	
 	
 }

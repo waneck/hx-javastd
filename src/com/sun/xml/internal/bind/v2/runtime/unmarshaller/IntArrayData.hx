@@ -25,9 +25,9 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 */
 extern class IntArrayData extends com.sun.xml.internal.bind.v2.runtime.output.Pcdata
 {
-	@:overload public function new(data : java.NativeArray<Int>, start : Int, len : Int) : Void;
+	@:overload @:public public function new(data : java.NativeArray<Int>, start : Int, len : Int) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets the int[] data to this object.
@@ -38,17 +38,17 @@ extern class IntArrayData extends com.sun.xml.internal.bind.v2.runtime.output.Pc
 	* but he should do so with a care. The unmarshalling code isn't expecting
 	* the value to be changed while it's being routed.
 	*/
-	@:overload public function set(data : java.NativeArray<Int>, start : Int, len : Int) : Void;
+	@:overload @:public public function set(data : java.NativeArray<Int>, start : Int, len : Int) : Void;
 	
-	@:overload override public function length() : Int;
+	@:overload @:public override public function length() : Int;
 	
-	@:overload override public function charAt(index : Int) : java.StdTypes.Char16;
+	@:overload @:public override public function charAt(index : Int) : java.StdTypes.Char16;
 	
-	@:overload override public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
+	@:overload @:public override public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload override public function writeTo(output : com.sun.xml.internal.bind.v2.runtime.output.UTF8XmlOutput) : Void;
+	@:overload @:public override public function writeTo(output : com.sun.xml.internal.bind.v2.runtime.output.UTF8XmlOutput) : Void;
 	
 	
 }

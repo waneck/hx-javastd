@@ -37,7 +37,7 @@ extern class UnixNumericUserPrincipal implements java.security.Principal impleme
 	* @exception NullPointerException if the <code>name</code>
 	*                  is <code>null</code>.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Create a <code>UnixNumericUserPrincipal</code> using a
@@ -48,7 +48,7 @@ extern class UnixNumericUserPrincipal implements java.security.Principal impleme
 	* @param name the user identification number (UID) for this user
 	*                  represented as a long.
 	*/
-	@:overload public function new(name : haxe.Int64) : Void;
+	@:overload @:public public function new(name : haxe.Int64) : Void;
 	
 	/**
 	* Return the user identification number (UID) for this
@@ -59,7 +59,7 @@ extern class UnixNumericUserPrincipal implements java.security.Principal impleme
 	* @return the user identification number (UID) for this
 	*          <code>UnixNumericUserPrincipal</code>
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return the user identification number (UID) for this
@@ -70,7 +70,7 @@ extern class UnixNumericUserPrincipal implements java.security.Principal impleme
 	* @return the user identification number (UID) for this
 	*          <code>UnixNumericUserPrincipal</code> as a long.
 	*/
-	@:overload public function longValue() : haxe.Int64;
+	@:overload @:public public function longValue() : haxe.Int64;
 	
 	/**
 	* Return a string representation of this
@@ -81,7 +81,7 @@ extern class UnixNumericUserPrincipal implements java.security.Principal impleme
 	* @return a string representation of this
 	*          <code>UnixNumericUserPrincipal</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares the specified Object with this
@@ -99,7 +99,7 @@ extern class UnixNumericUserPrincipal implements java.security.Principal impleme
 	* @return true if the specified Object is equal equal to this
 	*          <code>UnixNumericUserPrincipal</code>.
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Return a hash code for this <code>UnixNumericUserPrincipal</code>.
@@ -108,7 +108,7 @@ extern class UnixNumericUserPrincipal implements java.security.Principal impleme
 	*
 	* @return a hash code for this <code>UnixNumericUserPrincipal</code>.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

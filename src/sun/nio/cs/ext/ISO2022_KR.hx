@@ -27,29 +27,29 @@ package sun.nio.cs.ext;
 */
 extern class ISO2022_KR extends sun.nio.cs.ext.ISO2022 implements sun.nio.cs.HistoricallyNamedCharset
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload public function historicalName() : String;
+	@:overload @:public public function historicalName() : String;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	
 }
 @:native('sun$nio$cs$ext$ISO2022_KR$Decoder') @:internal extern class ISO2022_KR_Decoder extends sun.nio.cs.ext.ISO2022.ISO2022_Decoder
 {
-	@:overload override public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:public override public function new(cs : java.nio.charset.Charset) : Void;
 	
 	
 }
 @:native('sun$nio$cs$ext$ISO2022_KR$Encoder') @:internal extern class ISO2022_KR_Encoder extends sun.nio.cs.ext.ISO2022.ISO2022_Encoder
 {
-	@:overload override public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:public override public function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override public function canEncode(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canEncode(c : java.StdTypes.Char16) : Bool;
 	
 	
 }

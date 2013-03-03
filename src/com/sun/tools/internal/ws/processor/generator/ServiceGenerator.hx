@@ -29,9 +29,9 @@ extern class ServiceGenerator extends com.sun.tools.internal.ws.processor.genera
 	* @author WS Development Team
 	* @author Jitendra Kotamraju
 	*/
-	@:overload public static function generate(model : com.sun.tools.internal.ws.processor.model.Model, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public @:static public static function generate(model : com.sun.tools.internal.ws.processor.model.Model, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function visit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
+	@:overload @:public override public function visit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
 	
 	
 }

@@ -25,41 +25,41 @@ package com.sun.jmx.mbeanserver;
 */
 extern class MBeanSupport<M> implements com.sun.jmx.mbeanserver.DynamicMBean2 implements javax.management.MBeanRegistration
 {
-	@:overload @:final public function isMXBean() : Bool;
+	@:overload @:public @:final public function isMXBean() : Bool;
 	
-	@:overload @:abstract public function register(mbs : javax.management.MBeanServer, name : javax.management.ObjectName) : Void;
+	@:overload @:public @:abstract public function register(mbs : javax.management.MBeanServer, name : javax.management.ObjectName) : Void;
 	
-	@:overload @:abstract public function unregister() : Void;
+	@:overload @:public @:abstract public function unregister() : Void;
 	
-	@:overload @:final public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
+	@:overload @:public @:final public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
 	
-	@:overload @:final public function preRegister2(server : javax.management.MBeanServer, name : javax.management.ObjectName) : Void;
+	@:overload @:public @:final public function preRegister2(server : javax.management.MBeanServer, name : javax.management.ObjectName) : Void;
 	
-	@:overload @:final public function registerFailed() : Void;
+	@:overload @:public @:final public function registerFailed() : Void;
 	
-	@:overload @:final public function postRegister(registrationDone : Null<Bool>) : Void;
+	@:overload @:public @:final public function postRegister(registrationDone : Null<Bool>) : Void;
 	
-	@:overload @:final public function preDeregister() : Void;
+	@:overload @:public @:final public function preDeregister() : Void;
 	
-	@:overload @:final public function postDeregister() : Void;
+	@:overload @:public @:final public function postDeregister() : Void;
 	
-	@:overload @:final public function getAttribute(attribute : String) : Dynamic;
+	@:overload @:public @:final public function getAttribute(attribute : String) : Dynamic;
 	
-	@:overload @:final public function getAttributes(attributes : java.NativeArray<String>) : javax.management.AttributeList;
+	@:overload @:public @:final public function getAttributes(attributes : java.NativeArray<String>) : javax.management.AttributeList;
 	
-	@:overload @:final public function setAttribute(attribute : javax.management.Attribute) : Void;
+	@:overload @:public @:final public function setAttribute(attribute : javax.management.Attribute) : Void;
 	
-	@:overload @:final public function setAttributes(attributes : javax.management.AttributeList) : javax.management.AttributeList;
+	@:overload @:public @:final public function setAttributes(attributes : javax.management.AttributeList) : javax.management.AttributeList;
 	
-	@:overload @:final public function invoke(operation : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public @:final public function invoke(operation : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
-	@:overload public function getMBeanInfo() : javax.management.MBeanInfo;
+	@:overload @:public public function getMBeanInfo() : javax.management.MBeanInfo;
 	
-	@:overload @:final public function getClassName() : String;
+	@:overload @:public @:final public function getClassName() : String;
 	
-	@:overload @:final public function getResource() : Dynamic;
+	@:overload @:public @:final public function getResource() : Dynamic;
 	
-	@:overload @:final public function getMBeanInterface() : Class<Dynamic>;
+	@:overload @:public @:final public function getMBeanInterface() : Class<Dynamic>;
 	
 	
 }

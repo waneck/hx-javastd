@@ -26,18 +26,18 @@ package sun.io;
 extern class Converters
 {
 	/* Converter type constants and names */
-	public static var BYTE_TO_CHAR(default, null) : Int;
+	@:public @:static @:final public static var BYTE_TO_CHAR(default, null) : Int;
 	
-	public static var CHAR_TO_BYTE(default, null) : Int;
+	@:public @:static @:final public static var CHAR_TO_BYTE(default, null) : Int;
 	
 	/* Used to avoid doing expensive charset lookups for charsets that are not
 	* yet directly supported by NIO.
 	*/
-	@:overload public static function isCached(type : Int, encoding : String) : Bool;
+	@:overload @:public @:static public static function isCached(type : Int, encoding : String) : Bool;
 	
-	@:overload public static function getDefaultEncodingName() : String;
+	@:overload @:public @:static public static function getDefaultEncodingName() : String;
 	
-	@:overload public static function resetDefaultEncodingName() : Void;
+	@:overload @:public @:static public static function resetDefaultEncodingName() : Void;
 	
 	
 }

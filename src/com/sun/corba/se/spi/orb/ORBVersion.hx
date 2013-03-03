@@ -41,7 +41,7 @@ extern interface ORBVersion extends java.lang.Comparable<Dynamic>
 	
 	@:overload public function write(os : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload public function lessThan(version : com.sun.corba.se.spi.orb.ORBVersion) : Bool;
+	@:overload @:public public function lessThan(version : com.sun.corba.se.spi.orb.ORBVersion) : Bool;
 	
 	
 }

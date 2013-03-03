@@ -30,7 +30,7 @@ package com.sun.xml.internal.txw2;
 */
 @:internal extern class Comment extends com.sun.xml.internal.txw2.Content
 {
-	@:overload public function new(document : com.sun.xml.internal.txw2.Document, nsResolver : com.sun.xml.internal.txw2.NamespaceResolver, obj : Dynamic) : Void;
+	@:overload @:public public function new(document : com.sun.xml.internal.txw2.Document, nsResolver : com.sun.xml.internal.txw2.NamespaceResolver, obj : Dynamic) : Void;
 	
 	
 }

@@ -54,23 +54,23 @@ package org.omg.CORBA;
 */
 extern class WStringValueHelper implements org.omg.CORBA.portable.BoxedValueHelper
 {
-	@:overload public static function insert(a : org.omg.CORBA.Any, that : String) : Void;
+	@:overload @:public @:static public static function insert(a : org.omg.CORBA.Any, that : String) : Void;
 	
-	@:overload public static function extract(a : org.omg.CORBA.Any) : String;
+	@:overload @:public @:static public static function extract(a : org.omg.CORBA.Any) : String;
 	
-	@:overload @:synchronized public static function type() : org.omg.CORBA.TypeCode;
+	@:overload @:synchronized @:public @:static public static function type() : org.omg.CORBA.TypeCode;
 	
-	@:overload public static function id() : String;
+	@:overload @:public @:static public static function id() : String;
 	
-	@:overload public static function read(istream : org.omg.CORBA.portable.InputStream) : String;
+	@:overload @:public @:static public static function read(istream : org.omg.CORBA.portable.InputStream) : String;
 	
-	@:overload public function read_value(istream : org.omg.CORBA.portable.InputStream) : java.io.Serializable;
+	@:overload @:public public function read_value(istream : org.omg.CORBA.portable.InputStream) : java.io.Serializable;
 	
-	@:overload public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : String) : Void;
+	@:overload @:public @:static public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : String) : Void;
 	
-	@:overload public function write_value(ostream : org.omg.CORBA.portable.OutputStream, value : java.io.Serializable) : Void;
+	@:overload @:public public function write_value(ostream : org.omg.CORBA.portable.OutputStream, value : java.io.Serializable) : Void;
 	
-	@:overload public function get_id() : String;
+	@:overload @:public public function get_id() : String;
 	
 	
 }

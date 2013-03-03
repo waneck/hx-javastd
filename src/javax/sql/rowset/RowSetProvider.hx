@@ -25,7 +25,7 @@ package javax.sql.rowset;
 */
 extern class RowSetProvider
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* <p>Creates a new instance of a <code>RowSetFactory</code>
@@ -69,7 +69,7 @@ extern class RowSetProvider
 	* @see ServiceLoader
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function newFactory() : javax.sql.rowset.RowSetFactory;
+	@:require(java7) @:overload @:public @:static public static function newFactory() : javax.sql.rowset.RowSetFactory;
 	
 	/**
 	* <p>Creates  a new instance of a <code>RowSetFactory</code> from the
@@ -97,7 +97,7 @@ extern class RowSetProvider
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function newFactory(factoryClassName : String, cl : java.lang.ClassLoader) : javax.sql.rowset.RowSetFactory;
+	@:require(java7) @:overload @:public @:static public static function newFactory(factoryClassName : String, cl : java.lang.ClassLoader) : javax.sql.rowset.RowSetFactory;
 	
 	
 }

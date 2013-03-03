@@ -46,7 +46,7 @@ extern class ClassTree
 	* @param noDeprecated Don't add deprecated classes in the class tree, if
 	* true.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, noDeprecated : Bool) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, noDeprecated : Bool) : Void;
 	
 	/**
 	* Constructor. Build the Tree using the Root of this Javadoc run.
@@ -54,7 +54,7 @@ extern class ClassTree
 	* @param root Root of the Document.
 	* @param configuration The curren configuration of the doclet.
 	*/
-	@:overload public function new(root : com.sun.javadoc.RootDoc, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
+	@:overload @:public public function new(root : com.sun.javadoc.RootDoc, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
 	
 	/**
 	* Constructor. Build the tree for the given array of classes.
@@ -62,28 +62,28 @@ extern class ClassTree
 	* @param classes Array of classes.
 	* @param configuration The curren configuration of the doclet.
 	*/
-	@:overload public function new(classes : java.NativeArray<com.sun.javadoc.ClassDoc>, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
+	@:overload @:public public function new(classes : java.NativeArray<com.sun.javadoc.ClassDoc>, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
 	
 	/**
 	*  Return the sub-class list for the class passed.
 	*
 	* @param cd class whose sub-class list is required.
 	*/
-	@:overload public function subclasses(cd : com.sun.javadoc.ClassDoc) : java.util.List<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function subclasses(cd : com.sun.javadoc.ClassDoc) : java.util.List<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	*  Return the sub-interface list for the interface passed.
 	*
 	* @param cd interface whose sub-interface list is required.
 	*/
-	@:overload public function subinterfaces(cd : com.sun.javadoc.ClassDoc) : java.util.List<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function subinterfaces(cd : com.sun.javadoc.ClassDoc) : java.util.List<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	*  Return the list of classes which implement the interface passed.
 	*
 	* @param cd interface whose implementing-classes list is required.
 	*/
-	@:overload public function implementingclasses(cd : com.sun.javadoc.ClassDoc) : java.util.List<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function implementingclasses(cd : com.sun.javadoc.ClassDoc) : java.util.List<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	*  Return the sub-class/interface list for the class/interface passed.
@@ -92,7 +92,7 @@ extern class ClassTree
 	* @param isEnum true if the subclasses should be forced to come from the
 	* enum tree.
 	*/
-	@:overload public function subs(cd : com.sun.javadoc.ClassDoc, isEnum : Bool) : java.util.List<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function subs(cd : com.sun.javadoc.ClassDoc, isEnum : Bool) : java.util.List<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Return a list of all direct or indirect, sub-classes and subinterfaces
@@ -102,32 +102,32 @@ extern class ClassTree
 	* @param isEnum true if the subclasses should be forced to come from the
 	* enum tree.
 	*/
-	@:overload public function allSubs(cd : com.sun.javadoc.ClassDoc, isEnum : Bool) : java.util.List<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function allSubs(cd : com.sun.javadoc.ClassDoc, isEnum : Bool) : java.util.List<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	*  Return the base-classes list. This will have only one element namely
 	*  thw classdoc for java.lang.Object, since this is the base class for all
 	*  classes.
 	*/
-	@:overload public function baseclasses() : java.util.List<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function baseclasses() : java.util.List<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	*  Return the list of base interfaces. This is the list of interfaces
 	*  which do not have super-interface.
 	*/
-	@:overload public function baseinterfaces() : java.util.List<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function baseinterfaces() : java.util.List<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	*  Return the list of base enums. This is the list of enums
 	*  which do not have super-enums.
 	*/
-	@:overload public function baseEnums() : java.util.List<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function baseEnums() : java.util.List<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	*  Return the list of base annotation types. This is the list of
 	*  annotation types which do not have super-annotation types.
 	*/
-	@:overload public function baseAnnotationTypes() : java.util.List<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function baseAnnotationTypes() : java.util.List<com.sun.javadoc.ClassDoc>;
 	
 	
 }

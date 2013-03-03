@@ -25,71 +25,71 @@ package java.io;
 */
 @:internal extern class UnixFileSystem extends java.io.FileSystem
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/* -- Normalization and construction -- */
-	@:overload public function getSeparator() : java.StdTypes.Char16;
+	@:overload @:public override public function getSeparator() : java.StdTypes.Char16;
 	
-	@:overload public function getPathSeparator() : java.StdTypes.Char16;
+	@:overload @:public override public function getPathSeparator() : java.StdTypes.Char16;
 	
 	/* Check that the given pathname is normal.  If not, invoke the real
 	normalizer on the part of the pathname that requires normalization.
 	This way we iterate through the whole pathname string only once. */
-	@:overload public function normalize(pathname : String) : String;
+	@:overload @:public override public function normalize(pathname : String) : String;
 	
-	@:overload public function prefixLength(pathname : String) : Int;
+	@:overload @:public override public function prefixLength(pathname : String) : Int;
 	
-	@:overload public function resolve(parent : String, child : String) : String;
+	@:overload @:public override public function resolve(parent : String, child : String) : String;
 	
-	@:overload public function getDefaultParent() : String;
+	@:overload @:public override public function getDefaultParent() : String;
 	
-	@:overload public function fromURIPath(path : String) : String;
+	@:overload @:public override public function fromURIPath(path : String) : String;
 	
 	/* -- Path operations -- */
-	@:overload public function isAbsolute(f : java.io.File) : Bool;
+	@:overload @:public override public function isAbsolute(f : java.io.File) : Bool;
 	
-	@:overload public function resolve(f : java.io.File) : String;
+	@:overload @:public override public function resolve(f : java.io.File) : String;
 	
-	@:overload public function canonicalize(path : String) : String;
+	@:overload @:public override public function canonicalize(path : String) : String;
 	
 	/* -- Attribute accessors -- */
-	@:overload @:native public function getBooleanAttributes0(f : java.io.File) : Int;
+	@:overload @:public @:native public function getBooleanAttributes0(f : java.io.File) : Int;
 	
-	@:overload public function getBooleanAttributes(f : java.io.File) : Int;
+	@:overload @:public override public function getBooleanAttributes(f : java.io.File) : Int;
 	
-	@:overload @:native public function checkAccess(f : java.io.File, access : Int) : Bool;
+	@:overload @:public @:native override public function checkAccess(f : java.io.File, access : Int) : Bool;
 	
-	@:overload @:native public function getLastModifiedTime(f : java.io.File) : haxe.Int64;
+	@:overload @:public @:native override public function getLastModifiedTime(f : java.io.File) : haxe.Int64;
 	
-	@:overload @:native public function getLength(f : java.io.File) : haxe.Int64;
+	@:overload @:public @:native override public function getLength(f : java.io.File) : haxe.Int64;
 	
-	@:overload @:native public function setPermission(f : java.io.File, access : Int, enable : Bool, owneronly : Bool) : Bool;
+	@:overload @:public @:native override public function setPermission(f : java.io.File, access : Int, enable : Bool, owneronly : Bool) : Bool;
 	
 	/* -- File operations -- */
-	@:overload @:native public function createFileExclusively(path : String) : Bool;
+	@:overload @:public @:native override public function createFileExclusively(path : String) : Bool;
 	
-	@:overload public function delete(f : java.io.File) : Bool;
+	@:overload @:public override public function delete(f : java.io.File) : Bool;
 	
-	@:overload @:native public function list(f : java.io.File) : java.NativeArray<String>;
+	@:overload @:public @:native override public function list(f : java.io.File) : java.NativeArray<String>;
 	
-	@:overload @:native public function createDirectory(f : java.io.File) : Bool;
+	@:overload @:public @:native override public function createDirectory(f : java.io.File) : Bool;
 	
-	@:overload public function rename(f1 : java.io.File, f2 : java.io.File) : Bool;
+	@:overload @:public override public function rename(f1 : java.io.File, f2 : java.io.File) : Bool;
 	
-	@:overload @:native public function setLastModifiedTime(f : java.io.File, time : haxe.Int64) : Bool;
+	@:overload @:public @:native override public function setLastModifiedTime(f : java.io.File, time : haxe.Int64) : Bool;
 	
-	@:overload @:native public function setReadOnly(f : java.io.File) : Bool;
+	@:overload @:public @:native override public function setReadOnly(f : java.io.File) : Bool;
 	
 	/* -- Filesystem interface -- */
-	@:overload public function listRoots() : java.NativeArray<java.io.File>;
+	@:overload @:public override public function listRoots() : java.NativeArray<java.io.File>;
 	
 	/* -- Disk usage -- */
-	@:overload @:native public function getSpace(f : java.io.File, t : Int) : haxe.Int64;
+	@:overload @:public @:native override public function getSpace(f : java.io.File, t : Int) : haxe.Int64;
 	
 	/* -- Basic infrastructure -- */
-	@:overload public function compare(f1 : java.io.File, f2 : java.io.File) : Int;
+	@:overload @:public override public function compare(f1 : java.io.File, f2 : java.io.File) : Int;
 	
-	@:overload public function hashCode(f : java.io.File) : Int;
+	@:overload @:public override public function hashCode(f : java.io.File) : Int;
 	
 	
 }

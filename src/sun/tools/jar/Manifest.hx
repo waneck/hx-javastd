@@ -25,40 +25,40 @@ package sun.tools.jar;
 */
 extern class Manifest
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	/**
 	* Parse a manifest from a stream, optionally computing hashes
 	* for the files.
 	*/
-	@:overload public function new(is : java.io.InputStream, compute : Bool) : Void;
+	@:overload @:public public function new(is : java.io.InputStream, compute : Bool) : Void;
 	
 	/* recursively generate manifests from directory tree */
-	@:overload public function new(files : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(files : java.NativeArray<String>) : Void;
 	
-	@:overload public function addEntry(entry : sun.net.www.MessageHeader) : Void;
+	@:overload @:public public function addEntry(entry : sun.net.www.MessageHeader) : Void;
 	
-	@:overload public function getEntry(name : String) : sun.net.www.MessageHeader;
+	@:overload @:public public function getEntry(name : String) : sun.net.www.MessageHeader;
 	
-	@:overload public function entryAt(i : Int) : sun.net.www.MessageHeader;
+	@:overload @:public public function entryAt(i : Int) : sun.net.www.MessageHeader;
 	
-	@:overload public function entries() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function entries() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function addFiles(dir : java.io.File, files : java.NativeArray<String>) : Void;
+	@:overload @:public public function addFiles(dir : java.io.File, files : java.NativeArray<String>) : Void;
 	
-	@:overload public function addFile(f : java.io.File) : Void;
+	@:overload @:public public function addFile(f : java.io.File) : Void;
 	
-	@:overload public function doHashes(mh : sun.net.www.MessageHeader) : Void;
+	@:overload @:public public function doHashes(mh : sun.net.www.MessageHeader) : Void;
 	
 	/* Add a manifest file at current position in a stream
 	*/
-	@:overload public function stream(os : java.io.OutputStream) : Void;
+	@:overload @:public public function stream(os : java.io.OutputStream) : Void;
 	
-	@:overload public static function isManifestName(name : String) : Bool;
+	@:overload @:public @:static public static function isManifestName(name : String) : Bool;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	/**
 	* Public constructor
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Retrieves the conflict status of the current row of this
@@ -40,7 +40,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         <code>SyncResolver.DELETE_ROW_CONFLICT</code>, or
 	*         <code>SyncResolver.INSERT_ROW_CONFLICT</code>
 	*/
-	@:overload public function getStatus() : Int;
+	@:overload @:public public function getStatus() : Int;
 	
 	/**
 	* Retrieves the value in the designated column in the current row of this
@@ -50,7 +50,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*        <code>SyncResolver</code> object from which to retrieve the value
 	*        causing a conflict
 	*/
-	@:overload public function getConflictValue(index : Int) : Dynamic;
+	@:overload @:public public function getConflictValue(index : Int) : Dynamic;
 	
 	/**
 	* Retrieves the value in the designated column in the current row of this
@@ -60,7 +60,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*        <code>SyncResolver</code> object from which to retrieve the value
 	*        causing a conflict
 	*/
-	@:overload public function getConflictValue(columnName : String) : Dynamic;
+	@:overload @:public public function getConflictValue(columnName : String) : Dynamic;
 	
 	/**
 	* Sets <i>obj</i> as the value in column <i>index</i> in the current row of the
@@ -71,7 +71,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*        set the value to be persisted
 	* @param obj an <code>Object</code> that is the value to be set in the data source
 	*/
-	@:overload public function setResolvedValue(index : Int, obj : Dynamic) : Void;
+	@:overload @:public public function setResolvedValue(index : Int, obj : Dynamic) : Void;
 	
 	/**
 	* Sets <i>obj</i> as the value in column <i>columnName</i> in the current row of the
@@ -82,7 +82,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*        into which to set the value to be persisted
 	* @param obj an <code>Object</code> that is the value to be set in the data source
 	*/
-	@:overload public function setResolvedValue(columnName : String, obj : Dynamic) : Void;
+	@:overload @:public public function setResolvedValue(columnName : String, obj : Dynamic) : Void;
 	
 	/**
 	* Moves the cursor down one row from its current position. A <code>SyncResolver</code>
@@ -98,7 +98,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if a database access occurs
 	*
 	*/
-	@:overload public function nextConflict() : Bool;
+	@:overload @:public public function nextConflict() : Bool;
 	
 	/**
 	* Moves the cursor to the previous conflict row in this <code>SyncResolver</code> object.
@@ -108,7 +108,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if a database access error occurs or the result set type
 	*     is TYPE_FORWARD_ONLY
 	*/
-	@:overload public function previousConflict() : Bool;
+	@:overload @:public public function previousConflict() : Bool;
 	
 	/**
 	* Sets this <code>CachedRowSetImpl</code> object's command property
@@ -124,7 +124,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            that will be set as the command; may be <code>null</code>
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function setCommand(cmd : String) : Void;
+	@:overload @:public override public function setCommand(cmd : String) : Void;
 	
 	/**
 	* Populates this <code>CachedRowSetImpl</code> object with data from
@@ -150,7 +150,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*          violated while populating the RowSet
 	* @see #execute
 	*/
-	@:overload public function populate(data : java.sql.ResultSet) : Void;
+	@:overload @:public override public function populate(data : java.sql.ResultSet) : Void;
 	
 	/**
 	* Populates this <code>CachedRowSetImpl</code> object with data,
@@ -170,7 +170,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @see #populate
 	* @see java.sql.Connection
 	*/
-	@:overload public function execute(conn : java.sql.Connection) : Void;
+	@:overload @:public override public function execute(conn : java.sql.Connection) : Void;
 	
 	/**
 	* Propagates all row update, insert, and delete changes to the
@@ -206,7 +206,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @see javax.sql.RowSetWriter
 	* @see javax.sql.rowset.spi.SyncProvider
 	*/
-	@:overload public function acceptChanges() : Void;
+	@:overload @:public override public function acceptChanges() : Void;
 	
 	/**
 	* Propagates all row update, insert, and delete changes to the
@@ -230,7 +230,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @see javax.sql.rowset.spi.SyncFactory
 	* @see javax.sql.rowset.spi.SyncProvider
 	*/
-	@:overload public function acceptChanges(con : java.sql.Connection) : Void;
+	@:overload @:public override public function acceptChanges(con : java.sql.Connection) : Void;
 	
 	/**
 	* Restores this <code>CachedRowSetImpl</code> object to its original state,
@@ -243,7 +243,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*           state to the definied original value.
 	* @see javax.sql.RowSetListener#rowSetChanged
 	*/
-	@:overload public function restoreOriginal() : Void;
+	@:overload @:public override public function restoreOriginal() : Void;
 	
 	/**
 	* Releases the current contents of this <code>CachedRowSetImpl</code>
@@ -254,7 +254,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*           RowSet.
 	* @see javax.sql.RowSetListener#rowSetChanged
 	*/
-	@:overload public function release() : Void;
+	@:overload @:public override public function release() : Void;
 	
 	/**
 	* Cancels deletion of the current row and notifies listeners that
@@ -265,7 +265,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*
 	* @throws SQLException if the cursor is not on a valid row
 	*/
-	@:overload public function undoDelete() : Void;
+	@:overload @:public override public function undoDelete() : Void;
 	
 	/**
 	* Immediately removes the current row from this
@@ -280,7 +280,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*                         the cursor is not on a valid row,
 	*                         or the row has not been inserted
 	*/
-	@:overload public function undoInsert() : Void;
+	@:overload @:public override public function undoInsert() : Void;
 	
 	/**
 	* Immediately reverses the last update operation if the
@@ -300,7 +300,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @see #undoInsert
 	* @see java.sql.ResultSet#cancelRowUpdates
 	*/
-	@:overload public function undoUpdate() : Void;
+	@:overload @:public override public function undoUpdate() : Void;
 	
 	/**
 	* Returns a new <code>RowSet</code> object backed by the same data as
@@ -315,7 +315,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @see javax.sql.RowSetEvent
 	* @see javax.sql.RowSetListener
 	*/
-	@:overload public function createShared() : javax.sql.RowSet;
+	@:overload @:public override public function createShared() : javax.sql.RowSet;
 	
 	/**
 	* Returns a new <code>RowSet</code> object containing by the same data
@@ -333,7 +333,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* attempting to clone this <code>CachedRowSetImpl</code> object
 	* @see #createShared
 	*/
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected override private function clone() : Dynamic;
 	
 	/**
 	* Creates a <code>RowSet</code> object that is a deep copy of
@@ -356,7 +356,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @see javax.sql.RowSetEvent
 	* @see javax.sql.RowSetListener
 	*/
-	@:overload public function createCopy() : javax.sql.rowset.CachedRowSet;
+	@:overload @:public override public function createCopy() : javax.sql.rowset.CachedRowSet;
 	
 	/**
 	* Creates a <code>RowSet</code> object that is a copy of
@@ -380,7 +380,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @see javax.sql.RowSetEvent
 	* @see javax.sql.RowSetListener
 	*/
-	@:overload public function createCopySchema() : javax.sql.rowset.CachedRowSet;
+	@:overload @:public override public function createCopySchema() : javax.sql.rowset.CachedRowSet;
 	
 	/**
 	* Creates a <code>CachedRowSet</code> object that is a copy of
@@ -400,7 +400,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @see javax.sql.RowSetEvent
 	* @see javax.sql.RowSetListener
 	*/
-	@:overload public function createCopyNoConstraints() : javax.sql.rowset.CachedRowSet;
+	@:overload @:public override public function createCopyNoConstraints() : javax.sql.rowset.CachedRowSet;
 	
 	/**
 	* Converts this <code>CachedRowSetImpl</code> object to a collection
@@ -417,7 +417,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @see #toCollection(String)
 	* @see java.util.TreeMap
 	*/
-	@:overload public function toCollection() : java.util.Collection<Dynamic>;
+	@:overload @:public override public function toCollection() : java.util.Collection<Dynamic>;
 	
 	/**
 	* Returns the specified column of this <code>CachedRowSetImpl</code> object
@@ -437,7 +437,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @see #toCollection(String)
 	* @see java.util.Vector
 	*/
-	@:overload public function toCollection(column : Int) : java.util.Collection<Dynamic>;
+	@:overload @:public override public function toCollection(column : Int) : java.util.Collection<Dynamic>;
 	
 	/**
 	* Returns the specified column of this <code>CachedRowSetImpl</code> object
@@ -457,7 +457,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @see #toCollection(int)
 	* @see java.util.Vector
 	*/
-	@:overload public function toCollection(column : String) : java.util.Collection<Dynamic>;
+	@:overload @:public override public function toCollection(column : String) : java.util.Collection<Dynamic>;
 	
 	/**
 	* Returns the <code>SyncProvider</code> implementation being used
@@ -469,7 +469,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if error occurs while return the
 	*          <code>SyncProvider</code> instance.
 	*/
-	@:overload public function getSyncProvider() : javax.sql.rowset.spi.SyncProvider;
+	@:overload @:public override public function getSyncProvider() : javax.sql.rowset.spi.SyncProvider;
 	
 	/**
 	* Sets the active <code>SyncProvider</code> and attempts to load
@@ -478,7 +478,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if an error occurs while resetting the
 	*          <code>SyncProvider</code>.
 	*/
-	@:overload public function setSyncProvider(providerStr : String) : Void;
+	@:overload @:public override public function setSyncProvider(providerStr : String) : Void;
 	
 	/**
 	* Populates this <code>CachedRowSetImpl</code> object with data.
@@ -503,7 +503,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if an error occurs or the
 	*                         necessary properties have not been set
 	*/
-	@:overload public function execute() : Void;
+	@:overload @:public override public function execute() : Void;
 	
 	/**
 	* Moves the cursor down one row from its current position and
@@ -525,7 +525,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            the cursor is not positioned in the rowset, before
 	*            the first row, or after the last row
 	*/
-	@:overload public function next() : Bool;
+	@:overload @:public override public function next() : Bool;
 	
 	/**
 	* Moves this <code>CachedRowSetImpl</code> object's cursor to the next
@@ -550,7 +550,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         rowset; <code>false</code> if it is after the last row
 	* @throws SQLException if an error occurs
 	*/
-	@:overload private function internalNext() : Bool;
+	@:overload @:protected override private function internalNext() : Bool;
 	
 	/**
 	* Closes this <code>CachedRowSetImpl</code> objecy and releases any resources
@@ -559,7 +559,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if an error occurs when releasing any resources in use
 	* by this <code>CachedRowSetImpl</code> object
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Reports whether the last column read was SQL <code>NULL</code>.
@@ -572,7 +572,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         was SQL <code>NULL</code>; <code>false</code> otherwise
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function wasNull() : Bool;
+	@:overload @:public override public function wasNull() : Bool;
 	
 	/**
 	* Returns the insert row or the current row of this
@@ -581,7 +581,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @return the <code>Row</code> object on which this <code>CachedRowSetImpl</code>
 	* objects's cursor is positioned
 	*/
-	@:overload private function getCurrentRow() : com.sun.rowset.internal.BaseRow;
+	@:overload @:protected override private function getCurrentRow() : com.sun.rowset.internal.BaseRow;
 	
 	/**
 	* Removes the row on which the cursor is positioned.
@@ -592,7 +592,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if the cursor is positioned on the insert
 	*            row
 	*/
-	@:overload private function removeCurrentRow() : Void;
+	@:overload @:protected override private function removeCurrentRow() : Void;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -612,7 +612,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* or <code>LONGVARCHAR</code> value. The bold SQL type designates the
 	* recommended return type.
 	*/
-	@:overload public function getString(columnIndex : Int) : String;
+	@:overload @:public override public function getString(columnIndex : Int) : String;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -630,7 +630,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            SQL <code>BOOLEAN</code> value
 	* @see #getBoolean(String)
 	*/
-	@:overload public function getBoolean(columnIndex : Int) : Bool;
+	@:overload @:public override public function getBoolean(columnIndex : Int) : Bool;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -651,7 +651,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            designates the recommended return type.
 	* @see #getByte(String)
 	*/
-	@:overload public function getByte(columnIndex : Int) : java.StdTypes.Int8;
+	@:overload @:public override public function getByte(columnIndex : Int) : java.StdTypes.Int8;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -672,7 +672,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* recommended return type.
 	* @see #getShort(String)
 	*/
-	@:overload public function getShort(columnIndex : Int) : java.StdTypes.Int16;
+	@:overload @:public override public function getShort(columnIndex : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -692,7 +692,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* or <code>LONGVARCHAR</code> value. The bold SQL type designates the
 	* recommended return type.
 	*/
-	@:overload public function getInt(columnIndex : Int) : Int;
+	@:overload @:public override public function getInt(columnIndex : Int) : Int;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -713,7 +713,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* recommended return type.
 	* @see #getLong(String)
 	*/
-	@:overload public function getLong(columnIndex : Int) : haxe.Int64;
+	@:overload @:public override public function getLong(columnIndex : Int) : haxe.Int64;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -734,7 +734,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* recommended return type.
 	* @see #getFloat(String)
 	*/
-	@:overload public function getFloat(columnIndex : Int) : Single;
+	@:overload @:public override public function getFloat(columnIndex : Int) : Single;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -756,7 +756,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @see #getDouble(String)
 	*
 	*/
-	@:overload public function getDouble(columnIndex : Int) : Float;
+	@:overload @:public override public function getDouble(columnIndex : Int) : Float;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -779,7 +779,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            the cursor is not on a valid row, or this method fails
 	* @deprecated
 	*/
-	@:overload public function getBigDecimal(columnIndex : Int, scale : Int) : java.math.BigDecimal;
+	@:overload @:public override public function getBigDecimal(columnIndex : Int, scale : Int) : java.math.BigDecimal;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -801,7 +801,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* The bold SQL type designates the recommended return type.
 	* @see #getBytes(String)
 	*/
-	@:overload public function getBytes(columnIndex : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getBytes(columnIndex : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -817,7 +817,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or this method fails
 	*/
-	@:overload public function getDate(columnIndex : Int) : java.sql.Date;
+	@:overload @:public override public function getDate(columnIndex : Int) : java.sql.Date;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -832,7 +832,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if the given column index is out of bounds,
 	*         the cursor is not on a valid row, or this method fails
 	*/
-	@:overload public function getTime(columnIndex : Int) : java.sql.Time;
+	@:overload @:public override public function getTime(columnIndex : Int) : java.sql.Time;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -847,7 +847,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or this method fails
 	*/
-	@:overload public function getTimestamp(columnIndex : Int) : java.sql.Timestamp;
+	@:overload @:public override public function getTimestamp(columnIndex : Int) : java.sql.Timestamp;
 	
 	/**
 	* Retrieves the value of the designated column in the current row of this
@@ -880,7 +880,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* used to retrieve.
 	* @see #getAsciiStream(String)
 	*/
-	@:overload public function getAsciiStream(columnIndex : Int) : java.io.InputStream;
+	@:overload @:public override public function getAsciiStream(columnIndex : Int) : java.io.InputStream;
 	
 	/**
 	* A column value can be retrieved as a stream of Unicode characters
@@ -903,7 +903,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if an error occurs
 	* @deprecated
 	*/
-	@:overload public function getUnicodeStream(columnIndex : Int) : java.io.InputStream;
+	@:overload @:public override public function getUnicodeStream(columnIndex : Int) : java.io.InputStream;
 	
 	/**
 	* Retrieves the value of the designated column in the current row of this
@@ -935,7 +935,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* to retrieve.
 	* @see #getBinaryStream(String)
 	*/
-	@:overload public function getBinaryStream(columnIndex : Int) : java.io.InputStream;
+	@:overload @:public override public function getBinaryStream(columnIndex : Int) : java.io.InputStream;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -953,7 +953,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* <b>VARCHAR</b></code> or <code>LONGVARCHAR<</code> value. The bold SQL type
 	* designates the recommended return type.
 	*/
-	@:overload public function getString(columnName : String) : String;
+	@:overload @:public override public function getString(columnName : String) : String;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -970,7 +970,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            column does not store an SQL <code>BOOLEAN</code> value
 	* @see #getBoolean(int)
 	*/
-	@:overload public function getBoolean(columnName : String) : Bool;
+	@:overload @:public override public function getBoolean(columnName : String) : Bool;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -988,7 +988,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* VARCHAR</code> or <code>LONGVARCHAR</code> value. The
 	* bold type designates the recommended return type
 	*/
-	@:overload public function getByte(columnName : String) : java.StdTypes.Int8;
+	@:overload @:public override public function getByte(columnName : String) : java.StdTypes.Int8;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -1007,7 +1007,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* designates the recommended return type.
 	* @see #getShort(int)
 	*/
-	@:overload public function getShort(columnName : String) : java.StdTypes.Int16;
+	@:overload @:public override public function getShort(columnName : String) : java.StdTypes.Int16;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -1026,7 +1026,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* or <code>LONGVARCHAR</code> value. The bold SQL type designates the
 	* recommended return type.
 	*/
-	@:overload public function getInt(columnName : String) : Int;
+	@:overload @:public override public function getInt(columnName : String) : Int;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -1045,7 +1045,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* designates the recommended return type.
 	* @see #getLong(int)
 	*/
-	@:overload public function getLong(columnName : String) : haxe.Int64;
+	@:overload @:public override public function getLong(columnName : String) : haxe.Int64;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -1064,7 +1064,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* designates the recommended return type.
 	* @see #getFloat(String)
 	*/
-	@:overload public function getFloat(columnName : String) : Single;
+	@:overload @:public override public function getFloat(columnName : String) : Single;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -1084,7 +1084,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* designates the recommended return types.
 	* @see #getDouble(int)
 	*/
-	@:overload public function getDouble(columnName : String) : Float;
+	@:overload @:public override public function getDouble(columnName : String) : Float;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -1106,7 +1106,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @deprecated Use the <code>getBigDecimal(String columnName)</code>
 	*             method instead
 	*/
-	@:overload public function getBigDecimal(columnName : String, scale : Int) : java.math.BigDecimal;
+	@:overload @:public override public function getBigDecimal(columnName : String, scale : Int) : java.math.BigDecimal;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -1125,7 +1125,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* The bold SQL type designates the recommended return type.
 	* @see #getBytes(int)
 	*/
-	@:overload public function getBytes(columnName : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getBytes(columnName : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -1141,7 +1141,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            column does not store an SQL <code>DATE</code> or
 	*            <code>TIMESTAMP</code> value
 	*/
-	@:overload public function getDate(columnName : String) : java.sql.Date;
+	@:overload @:public override public function getDate(columnName : String) : java.sql.Date;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -1155,7 +1155,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            this rowset's column names or the cursor is not on one of
 	*            this rowset's rows or its insert row
 	*/
-	@:overload public function getTime(columnName : String) : java.sql.Time;
+	@:overload @:public override public function getTime(columnName : String) : java.sql.Time;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -1169,7 +1169,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            this rowset's column names or the cursor is not on one of
 	*            this rowset's rows or its insert row
 	*/
-	@:overload public function getTimestamp(columnName : String) : java.sql.Timestamp;
+	@:overload @:public override public function getTimestamp(columnName : String) : java.sql.Timestamp;
 	
 	/**
 	* Retrieves the value of the designated column in the current row of this
@@ -1201,7 +1201,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* used to retrieve.
 	* @see #getAsciiStream(int)
 	*/
-	@:overload public function getAsciiStream(columnName : String) : java.io.InputStream;
+	@:overload @:public override public function getAsciiStream(columnName : String) : java.io.InputStream;
 	
 	/**
 	* A column value can be retrieved as a stream of Unicode characters
@@ -1224,7 +1224,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            this rowset's rows or its insert row
 	* @deprecated use the method <code>getCharacterStream</code> instead
 	*/
-	@:overload public function getUnicodeStream(columnName : String) : java.io.InputStream;
+	@:overload @:public override public function getUnicodeStream(columnName : String) : java.io.InputStream;
 	
 	/**
 	* Retrieves the value of the designated column in the current row of this
@@ -1255,7 +1255,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @see #getBinaryStream(int)
 	*
 	*/
-	@:overload public function getBinaryStream(columnName : String) : java.io.InputStream;
+	@:overload @:public override public function getBinaryStream(columnName : String) : java.io.InputStream;
 	
 	/**
 	* The first warning reported by calls on this <code>CachedRowSetImpl</code>
@@ -1272,7 +1272,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*
 	* @return the first SQLWarning or null
 	*/
-	@:overload public function getWarnings() : java.sql.SQLWarning;
+	@:overload @:public override public function getWarnings() : java.sql.SQLWarning;
 	
 	/**
 	* Clears all the warnings reporeted for the <code>CachedRowSetImpl</code>
@@ -1280,7 +1280,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* returns <code>null</code> until a new warning is reported for this
 	* <code>CachedRowSetImpl</code> object.
 	*/
-	@:overload public function clearWarnings() : Void;
+	@:overload @:public override public function clearWarnings() : Void;
 	
 	/**
 	* Retrieves the name of the SQL cursor used by this
@@ -1306,7 +1306,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         cursor
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function getCursorName() : String;
+	@:overload @:public override public function getCursorName() : String;
 	
 	/**
 	* Retrieves a <code>ResultSetMetaData</code> object instance that
@@ -1334,7 +1334,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* meta data; or if the <code>CachedRowSetImpl</code> is empty.
 	* @see javax.sql.RowSetMetaData
 	*/
-	@:overload public function getMetaData() : java.sql.ResultSetMetaData;
+	@:overload @:public override public function getMetaData() : java.sql.ResultSetMetaData;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -1368,7 +1368,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            the <code>Class</code> object for a custom mapping
 	* @see #getObject(String)
 	*/
-	@:overload public function getObject(columnIndex : Int) : Dynamic;
+	@:overload @:public override public function getObject(columnIndex : Int) : Dynamic;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -1402,7 +1402,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            the <code>Class</code> object for a custom mapping
 	* @see #getObject(int)
 	*/
-	@:overload public function getObject(columnName : String) : Dynamic;
+	@:overload @:public override public function getObject(columnName : String) : Dynamic;
 	
 	/**
 	* Maps the given column name for one of this <code>CachedRowSetImpl</code>
@@ -1414,7 +1414,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if the given column name does not match one
 	*            of this rowset's column names
 	*/
-	@:overload public function findColumn(columnName : String) : Int;
+	@:overload @:public override public function findColumn(columnName : String) : Int;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -1439,7 +1439,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* The bold SQL type designates the recommended return type.
 	* @see #getCharacterStream(String)
 	*/
-	@:overload public function getCharacterStream(columnIndex : Int) : java.io.Reader;
+	@:overload @:public override public function getCharacterStream(columnIndex : Int) : java.io.Reader;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -1461,7 +1461,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* BINARY, VARYBINARY</code> or <code>LONGVARBINARY</code> value.
 	* The bold SQL type designates the recommended return type.
 	*/
-	@:overload public function getCharacterStream(columnName : String) : java.io.Reader;
+	@:overload @:public override public function getCharacterStream(columnName : String) : java.io.Reader;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -1482,7 +1482,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* recommended return types that this method is used to retrieve.
 	* @see #getBigDecimal(String)
 	*/
-	@:overload public function getBigDecimal(columnIndex : Int) : java.math.BigDecimal;
+	@:overload @:public override public function getBigDecimal(columnIndex : Int) : java.math.BigDecimal;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -1503,14 +1503,14 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* retrieve
 	* @see #getBigDecimal(int)
 	*/
-	@:overload public function getBigDecimal(columnName : String) : java.math.BigDecimal;
+	@:overload @:public override public function getBigDecimal(columnName : String) : java.math.BigDecimal;
 	
 	/**
 	* Returns the number of rows in this <code>CachedRowSetImpl</code> object.
 	*
 	* @return number of rows in the rowset
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Indicates whether the cursor is before the first row in this
@@ -1520,7 +1520,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         <code>false</code> otherwise or if the rowset contains no rows
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function isBeforeFirst() : Bool;
+	@:overload @:public override public function isBeforeFirst() : Bool;
 	
 	/**
 	* Indicates whether the cursor is after the last row in this
@@ -1530,7 +1530,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         <code>false</code> otherwise or if the rowset contains no rows
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function isAfterLast() : Bool;
+	@:overload @:public override public function isAfterLast() : Bool;
 	
 	/**
 	* Indicates whether the cursor is on the first row in this
@@ -1540,7 +1540,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         <code>false</code> otherwise or if the rowset contains no rows
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function isFirst() : Bool;
+	@:overload @:public override public function isFirst() : Bool;
 	
 	/**
 	* Indicates whether the cursor is on the last row in this
@@ -1554,7 +1554,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         <code>false</code> otherwise or if this rowset contains no rows
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function isLast() : Bool;
+	@:overload @:public override public function isLast() : Bool;
 	
 	/**
 	* Moves this <code>CachedRowSetImpl</code> object's cursor to the front of
@@ -1564,7 +1564,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if an error occurs or the type of this rowset
 	*            is <code>ResultSet.TYPE_FORWARD_ONLY</code>
 	*/
-	@:overload public function beforeFirst() : Void;
+	@:overload @:public override public function beforeFirst() : Void;
 	
 	/**
 	* Moves this <code>CachedRowSetImpl</code> object's cursor to the end of
@@ -1573,7 +1573,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function afterLast() : Void;
+	@:overload @:public override public function afterLast() : Void;
 	
 	/**
 	* Moves this <code>CachedRowSetImpl</code> object's cursor to the first row
@@ -1586,7 +1586,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if the type of this rowset
 	*            is <code>ResultSet.TYPE_FORWARD_ONLY</code>
 	*/
-	@:overload public function first() : Bool;
+	@:overload @:public override public function first() : Bool;
 	
 	/**
 	* Moves this <code>CachedRowSetImpl</code> object's cursor to the first
@@ -1604,7 +1604,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         <code>false</code> otherwise
 	* @throws SQLException if an error occurs
 	*/
-	@:overload private function internalFirst() : Bool;
+	@:overload @:protected override private function internalFirst() : Bool;
 	
 	/**
 	* Moves this <code>CachedRowSetImpl</code> object's cursor to the last row
@@ -1617,7 +1617,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if the type of this rowset
 	*            is <code>ResultSet.TYPE_FORWARD_ONLY</code>
 	*/
-	@:overload public function last() : Bool;
+	@:overload @:public override public function last() : Bool;
 	
 	/**
 	* Moves this <code>CachedRowSetImpl</code> object's cursor to the last
@@ -1636,7 +1636,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         <code>false</code> otherwise
 	* @throws SQLException if an error occurs
 	*/
-	@:overload private function internalLast() : Bool;
+	@:overload @:protected override private function internalLast() : Bool;
 	
 	/**
 	* Returns the number of the current row in this <code>CachedRowSetImpl</code>
@@ -1647,7 +1647,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if an error occurs; or if the <code>CacheRowSetImpl</code>
 	*         is empty
 	*/
-	@:overload public function getRow() : Int;
+	@:overload @:public override public function getRow() : Int;
 	
 	/**
 	* Moves this <code>CachedRowSetImpl</code> object's cursor to the row number
@@ -1696,7 +1696,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if the given cursor position is <code>0</code> or the
 	*            type of this rowset is <code>ResultSet.TYPE_FORWARD_ONLY</code>
 	*/
-	@:overload public function absolute(row : Int) : Bool;
+	@:overload @:public override public function absolute(row : Int) : Bool;
 	
 	/**
 	* Moves the cursor the specified number of rows from the current
@@ -1753,7 +1753,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         positioned either before the first row or after the last row, or
 	*         the rowset is type <code>ResultSet.TYPE_FORWARD_ONLY</code>
 	*/
-	@:overload public function relative(rows : Int) : Bool;
+	@:overload @:public override public function relative(rows : Int) : Bool;
 	
 	/**
 	* Moves this <code>CachedRowSetImpl</code> object's cursor to the
@@ -1797,7 +1797,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if the cursor is not on a valid position or the
 	*           type of this rowset is <code>ResultSet.TYPE_FORWARD_ONLY</code>
 	*/
-	@:overload public function previous() : Bool;
+	@:overload @:public override public function previous() : Bool;
 	
 	/**
 	* Moves the cursor to the previous row in this <code>CachedRowSetImpl</code>
@@ -1815,7 +1815,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         the first row
 	* @throws SQLException if an error occurs
 	*/
-	@:overload private function internalPrevious() : Bool;
+	@:overload @:protected override private function internalPrevious() : Bool;
 	
 	/**
 	* Indicates whether the current row of this <code>CachedRowSetImpl</code>
@@ -1831,7 +1831,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*
 	* @see DatabaseMetaData#updatesAreDetected
 	*/
-	@:overload public function rowUpdated() : Bool;
+	@:overload @:public override public function rowUpdated() : Bool;
 	
 	/**
 	* Indicates whether the designated column of the current row of
@@ -1847,7 +1847,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*          on a valid row
 	* @see DatabaseMetaData#updatesAreDetected
 	*/
-	@:overload public function columnUpdated(idx : Int) : Bool;
+	@:overload @:public override public function columnUpdated(idx : Int) : Bool;
 	
 	/**
 	* Indicates whether the designated column of the current row of
@@ -1864,7 +1864,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*          on a valid row
 	* @see DatabaseMetaData#updatesAreDetected
 	*/
-	@:overload public function columnUpdated(columnName : String) : Bool;
+	@:overload @:public override public function columnUpdated(columnName : String) : Bool;
 	
 	/**
 	* Indicates whether the current row has been inserted.  The value returned
@@ -1877,7 +1877,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*
 	* @see DatabaseMetaData#insertsAreDetected
 	*/
-	@:overload public function rowInserted() : Bool;
+	@:overload @:public override public function rowInserted() : Bool;
 	
 	/**
 	* Indicates whether the current row has been deleted.  A deleted row
@@ -1892,7 +1892,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if the cursor is on a valid row in this rowset
 	* @see DatabaseMetaData#deletesAreDetected
 	*/
-	@:overload public function rowDeleted() : Bool;
+	@:overload @:public override public function rowDeleted() : Bool;
 	
 	/**
 	* Sets the designated nullable column in the current row or the
@@ -1920,7 +1920,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateNull(columnIndex : Int) : Void;
+	@:overload @:public override public function updateNull(columnIndex : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1945,7 +1945,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBoolean(columnIndex : Int, x : Bool) : Void;
+	@:overload @:public override public function updateBoolean(columnIndex : Int, x : Bool) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1970,7 +1970,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateByte(columnIndex : Int, x : java.StdTypes.Int8) : Void;
+	@:overload @:public override public function updateByte(columnIndex : Int, x : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1995,7 +1995,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateShort(columnIndex : Int, x : java.StdTypes.Int16) : Void;
+	@:overload @:public override public function updateShort(columnIndex : Int, x : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2020,7 +2020,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateInt(columnIndex : Int, x : Int) : Void;
+	@:overload @:public override public function updateInt(columnIndex : Int, x : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2045,7 +2045,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateLong(columnIndex : Int, x : haxe.Int64) : Void;
+	@:overload @:public override public function updateLong(columnIndex : Int, x : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2070,7 +2070,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateFloat(columnIndex : Int, x : Single) : Void;
+	@:overload @:public override public function updateFloat(columnIndex : Int, x : Single) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2095,7 +2095,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateDouble(columnIndex : Int, x : Float) : Void;
+	@:overload @:public override public function updateDouble(columnIndex : Int, x : Float) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2120,7 +2120,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBigDecimal(columnIndex : Int, x : java.math.BigDecimal) : Void;
+	@:overload @:public override public function updateBigDecimal(columnIndex : Int, x : java.math.BigDecimal) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2148,7 +2148,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateString(columnIndex : Int, x : String) : Void;
+	@:overload @:public override public function updateString(columnIndex : Int, x : String) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2173,7 +2173,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBytes(columnIndex : Int, x : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function updateBytes(columnIndex : Int, x : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2199,7 +2199,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            an SQL <code>DATE</code> or <code>TIMESTAMP</code>, or
 	*            (4) this rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateDate(columnIndex : Int, x : java.sql.Date) : Void;
+	@:overload @:public override public function updateDate(columnIndex : Int, x : java.sql.Date) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2225,7 +2225,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            an SQL <code>TIME</code> or <code>TIMESTAMP</code>, or
 	*            (4) this rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateTime(columnIndex : Int, x : java.sql.Time) : Void;
+	@:overload @:public override public function updateTime(columnIndex : Int, x : java.sql.Time) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2252,7 +2252,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            <code>TIMESTAMP</code>, or (4) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateTimestamp(columnIndex : Int, x : java.sql.Timestamp) : Void;
+	@:overload @:public override public function updateTimestamp(columnIndex : Int, x : java.sql.Timestamp) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2275,7 +2275,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @param length the number of one-byte ASCII characters in the stream
 	* @throws SQLException if this method is invoked
 	*/
-	@:overload public function updateAsciiStream(columnIndex : Int, x : java.io.InputStream, length : Int) : Void;
+	@:overload @:public override public function updateAsciiStream(columnIndex : Int, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2303,7 +2303,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            insert row, (3) the data in the stream is not binary, or
 	*            (4) this rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBinaryStream(columnIndex : Int, x : java.io.InputStream, length : Int) : Void;
+	@:overload @:public override public function updateBinaryStream(columnIndex : Int, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2333,7 +2333,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            character type, or (4) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateCharacterStream(columnIndex : Int, x : java.io.Reader, length : Int) : Void;
+	@:overload @:public override public function updateCharacterStream(columnIndex : Int, x : java.io.Reader, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2363,7 +2363,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateObject(columnIndex : Int, x : Dynamic, scale : Int) : Void;
+	@:overload @:public override public function updateObject(columnIndex : Int, x : Dynamic, scale : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2388,7 +2388,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateObject(columnIndex : Int, x : Dynamic) : Void;
+	@:overload @:public override public function updateObject(columnIndex : Int, x : Dynamic) : Void;
 	
 	/**
 	* Sets the designated nullable column in the current row or the
@@ -2410,7 +2410,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateNull(columnName : String) : Void;
+	@:overload @:public override public function updateNull(columnName : String) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2434,7 +2434,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBoolean(columnName : String, x : Bool) : Void;
+	@:overload @:public override public function updateBoolean(columnName : String, x : Bool) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2458,7 +2458,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateByte(columnName : String, x : java.StdTypes.Int8) : Void;
+	@:overload @:public override public function updateByte(columnName : String, x : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2482,7 +2482,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateShort(columnName : String, x : java.StdTypes.Int16) : Void;
+	@:overload @:public override public function updateShort(columnName : String, x : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2506,7 +2506,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateInt(columnName : String, x : Int) : Void;
+	@:overload @:public override public function updateInt(columnName : String, x : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2530,7 +2530,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateLong(columnName : String, x : haxe.Int64) : Void;
+	@:overload @:public override public function updateLong(columnName : String, x : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2554,7 +2554,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateFloat(columnName : String, x : Single) : Void;
+	@:overload @:public override public function updateFloat(columnName : String, x : Single) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2578,7 +2578,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateDouble(columnName : String, x : Float) : Void;
+	@:overload @:public override public function updateDouble(columnName : String, x : Float) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2602,7 +2602,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBigDecimal(columnName : String, x : java.math.BigDecimal) : Void;
+	@:overload @:public override public function updateBigDecimal(columnName : String, x : java.math.BigDecimal) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2626,7 +2626,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateString(columnName : String, x : String) : Void;
+	@:overload @:public override public function updateString(columnName : String, x : String) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2650,7 +2650,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBytes(columnName : String, x : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function updateBytes(columnName : String, x : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2676,7 +2676,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            <code>TIMESTAMP</code>, or (4) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateDate(columnName : String, x : java.sql.Date) : Void;
+	@:overload @:public override public function updateDate(columnName : String, x : java.sql.Date) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2702,7 +2702,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            <code>TIMESTAMP</code>, or (4) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateTime(columnName : String, x : java.sql.Time) : Void;
+	@:overload @:public override public function updateTime(columnName : String, x : java.sql.Time) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2731,7 +2731,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            <code>TIME</code>, or <code>TIMESTAMP</code>, or (4) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateTimestamp(columnName : String, x : java.sql.Timestamp) : Void;
+	@:overload @:public override public function updateTimestamp(columnName : String, x : java.sql.Timestamp) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2752,7 +2752,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @param x the new column value
 	* @param length the number of one-byte ASCII characters in the stream
 	*/
-	@:overload public function updateAsciiStream(columnName : String, x : java.io.InputStream, length : Int) : Void;
+	@:overload @:public override public function updateAsciiStream(columnName : String, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2780,7 +2780,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            in the stream is not binary, or (4) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBinaryStream(columnName : String, x : java.io.InputStream, length : Int) : Void;
+	@:overload @:public override public function updateBinaryStream(columnName : String, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2809,7 +2809,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            in the stream is not a binary or character type, or (4) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateCharacterStream(columnName : String, reader : java.io.Reader, length : Int) : Void;
+	@:overload @:public override public function updateCharacterStream(columnName : String, reader : java.io.Reader, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2838,7 +2838,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateObject(columnName : String, x : Dynamic, scale : Int) : Void;
+	@:overload @:public override public function updateObject(columnName : String, x : Dynamic, scale : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2862,7 +2862,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateObject(columnName : String, x : Dynamic) : Void;
+	@:overload @:public override public function updateObject(columnName : String, x : Dynamic) : Void;
 	
 	/**
 	* Inserts the contents of this <code>CachedRowSetImpl</code> object's insert
@@ -2879,7 +2879,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            row has not been given a value, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function insertRow() : Void;
+	@:overload @:public override public function insertRow() : Void;
 	
 	/**
 	* Marks the current row of this <code>CachedRowSetImpl</code> object as
@@ -2894,7 +2894,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if the cursor is on the insert row or this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateRow() : Void;
+	@:overload @:public override public function updateRow() : Void;
 	
 	/**
 	* Deletes the current row from this <code>CachedRowSetImpl</code> object and
@@ -2911,7 +2911,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            last row or (2) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function deleteRow() : Void;
+	@:overload @:public override public function deleteRow() : Void;
 	
 	/**
 	* Sets the current row with its original value and marks the row as
@@ -2923,7 +2923,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if the cursor is on the insert row, before the
 	*            first row, or after the last row
 	*/
-	@:overload public function refreshRow() : Void;
+	@:overload @:public override public function refreshRow() : Void;
 	
 	/**
 	* Rolls back any updates made to the current row of this
@@ -2937,7 +2937,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if the cursor is on the insert row, before the
 	*            first row, or after the last row
 	*/
-	@:overload public function cancelRowUpdates() : Void;
+	@:overload @:public override public function cancelRowUpdates() : Void;
 	
 	/**
 	* Moves the cursor for this <code>CachedRowSetImpl</code> object
@@ -2965,7 +2965,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if this <code>CachedRowSetImpl</code> object is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function moveToInsertRow() : Void;
+	@:overload @:public override public function moveToInsertRow() : Void;
 	
 	/**
 	* Moves the cursor for this <code>CachedRowSetImpl</code> object to
@@ -2977,7 +2977,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function moveToCurrentRow() : Void;
+	@:overload @:public override public function moveToCurrentRow() : Void;
 	
 	/**
 	* Returns <code>null</code>.
@@ -2985,7 +2985,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @return <code>null</code>
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function getStatement() : java.sql.Statement;
+	@:overload @:public override public function getStatement() : java.sql.Statement;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -3005,7 +3005,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            the cursor is not on one of this rowset's rows or its
 	*            insert row
 	*/
-	@:overload public function getObject(columnIndex : Int, map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
+	@:overload @:public override public function getObject(columnIndex : Int, map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -3022,7 +3022,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            SQL <code>REF</code> value
 	* @see #getRef(String)
 	*/
-	@:overload public function getRef(columnIndex : Int) : java.sql.Ref;
+	@:overload @:public override public function getRef(columnIndex : Int) : java.sql.Ref;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -3039,7 +3039,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            SQL <code>BLOB</code> value
 	* @see #getBlob(String)
 	*/
-	@:overload public function getBlob(columnIndex : Int) : java.sql.Blob;
+	@:overload @:public override public function getBlob(columnIndex : Int) : java.sql.Blob;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -3056,7 +3056,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            SQL <code>CLOB</code> value
 	* @see #getClob(String)
 	*/
-	@:overload public function getClob(columnIndex : Int) : java.sql.Clob;
+	@:overload @:public override public function getClob(columnIndex : Int) : java.sql.Clob;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -3074,7 +3074,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            SQL <code>ARRAY</code> value
 	* @see #getArray(String)
 	*/
-	@:overload public function getArray(columnIndex : Int) : java.sql.Array;
+	@:overload @:public override public function getArray(columnIndex : Int) : java.sql.Array;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -3093,7 +3093,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         a column in this rowset or the cursor is not on one of
 	*         this rowset's rows or its insert row
 	*/
-	@:overload public function getObject(columnName : String, map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
+	@:overload @:public override public function getObject(columnName : String, map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -3109,7 +3109,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            is not an SQL <code>REF</code> value
 	* @see #getRef(int)
 	*/
-	@:overload public function getRef(colName : String) : java.sql.Ref;
+	@:overload @:public override public function getRef(colName : String) : java.sql.Ref;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -3125,7 +3125,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            column does not store an SQL <code>BLOB</code> value
 	* @see #getBlob(int)
 	*/
-	@:overload public function getBlob(colName : String) : java.sql.Blob;
+	@:overload @:public override public function getBlob(colName : String) : java.sql.Blob;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -3142,7 +3142,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            column does not store an SQL <code>CLOB</code> value
 	* @see #getClob(int)
 	*/
-	@:overload public function getClob(colName : String) : java.sql.Clob;
+	@:overload @:public override public function getClob(colName : String) : java.sql.Clob;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -3159,7 +3159,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            column does not store an SQL <code>ARRAY</code> value
 	* @see #getArray(int)
 	*/
-	@:overload public function getArray(colName : String) : java.sql.Array;
+	@:overload @:public override public function getArray(colName : String) : java.sql.Array;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -3180,7 +3180,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            column does not store an SQL <code>DATE</code> or
 	*            <code>TIMESTAMP</code> value
 	*/
-	@:overload public function getDate(columnIndex : Int, cal : java.util.Calendar) : java.sql.Date;
+	@:overload @:public override public function getDate(columnIndex : Int, cal : java.util.Calendar) : java.sql.Date;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -3200,7 +3200,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            column does not store an SQL <code>DATE</code> or
 	*            <code>TIMESTAMP</code> value
 	*/
-	@:overload public function getDate(columnName : String, cal : java.util.Calendar) : java.sql.Date;
+	@:overload @:public override public function getDate(columnName : String, cal : java.util.Calendar) : java.sql.Date;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -3221,7 +3221,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            column does not store an SQL <code>TIME</code> or
 	*            <code>TIMESTAMP</code> value
 	*/
-	@:overload public function getTime(columnIndex : Int, cal : java.util.Calendar) : java.sql.Time;
+	@:overload @:public override public function getTime(columnIndex : Int, cal : java.util.Calendar) : java.sql.Time;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -3241,7 +3241,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            column does not store an SQL <code>TIME</code> or
 	*            <code>TIMESTAMP</code> value
 	*/
-	@:overload public function getTime(columnName : String, cal : java.util.Calendar) : java.sql.Time;
+	@:overload @:public override public function getTime(columnName : String, cal : java.util.Calendar) : java.sql.Time;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -3262,7 +3262,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            column does not store an SQL <code>TIME</code> or
 	*            <code>TIMESTAMP</code> value
 	*/
-	@:overload public function getTimestamp(columnIndex : Int, cal : java.util.Calendar) : java.sql.Timestamp;
+	@:overload @:public override public function getTimestamp(columnIndex : Int, cal : java.util.Calendar) : java.sql.Timestamp;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -3283,7 +3283,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            column does not store an SQL <code>DATE</code>,
 	*            <code>TIME</code>, or <code>TIMESTAMP</code> value
 	*/
-	@:overload public function getTimestamp(columnName : String, cal : java.util.Calendar) : java.sql.Timestamp;
+	@:overload @:public override public function getTimestamp(columnName : String, cal : java.util.Calendar) : java.sql.Timestamp;
 	
 	/**
 	* Retrieves the <code>Connection</code> object passed to this
@@ -3295,7 +3295,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         may be <code>null</code> if there is no connection
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function getConnection() : java.sql.Connection;
+	@:overload @:public override public function getConnection() : java.sql.Connection;
 	
 	/**
 	* Sets the metadata for this <code>CachedRowSetImpl</code> object
@@ -3306,7 +3306,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if invalid meta data is supplied to the
 	*            rowset
 	*/
-	@:overload public function setMetaData(md : javax.sql.RowSetMetaData) : Void;
+	@:overload @:public override public function setMetaData(md : javax.sql.RowSetMetaData) : Void;
 	
 	/**
 	* Returns a result set containing the original value of the rowset. The
@@ -3322,7 +3322,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if an error occurs produce the
 	*           <code>ResultSet</code> object
 	*/
-	@:overload public function getOriginal() : java.sql.ResultSet;
+	@:overload @:public override public function getOriginal() : java.sql.ResultSet;
 	
 	/**
 	* Returns a result set containing the original value of the current
@@ -3335,7 +3335,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if there is no current row
 	* @see #setOriginalRow
 	*/
-	@:overload public function getOriginalRow() : java.sql.ResultSet;
+	@:overload @:public override public function getOriginalRow() : java.sql.ResultSet;
 	
 	/**
 	* Marks the current row in this rowset as being an original row.
@@ -3343,7 +3343,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if there is no current row
 	* @see #getOriginalRow
 	*/
-	@:overload public function setOriginalRow() : Void;
+	@:overload @:public override public function setOriginalRow() : Void;
 	
 	/**
 	* Marks all rows in this rowset as being original rows. Any updates
@@ -3352,7 +3352,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function setOriginal() : Void;
+	@:overload @:public override public function setOriginal() : Void;
 	
 	/**
 	* Returns an identifier for the object (table) that was used to create this
@@ -3362,7 +3362,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         which this <code>CachedRowSetImpl</code> object was derived
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function getTableName() : String;
+	@:overload @:public override public function getTableName() : String;
 	
 	/**
 	* Sets the identifier for the table from which this rowset was derived
@@ -3373,7 +3373,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*          was derived
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function setTableName(tabName : String) : Void;
+	@:overload @:public override public function setTableName(tabName : String) : Void;
 	
 	/**
 	* Returns the columns that make a key to uniquely identify a
@@ -3386,7 +3386,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*           are designated as primary keys
 	* @see #setKeyColumns
 	*/
-	@:overload public function getKeyColumns() : java.NativeArray<Int>;
+	@:overload @:public override public function getKeyColumns() : java.NativeArray<Int>;
 	
 	/**
 	* Sets this <code>CachedRowSetImpl</code> object's
@@ -3404,7 +3404,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            given array is not valid for this rowset
 	* @see #getKeyColumns
 	*/
-	@:overload public function setKeyColumns(keys : java.NativeArray<Int>) : Void;
+	@:overload @:public override public function setKeyColumns(keys : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -3429,7 +3429,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*        insert row, or (3) this rowset is
 	*        <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateRef(columnIndex : Int, ref : java.sql.Ref) : Void;
+	@:overload @:public override public function updateRef(columnIndex : Int, ref : java.sql.Ref) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -3453,7 +3453,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*        one of this rowset's rows or its insert row, or (3) this
 	*        rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateRef(columnName : String, ref : java.sql.Ref) : Void;
+	@:overload @:public override public function updateRef(columnName : String, ref : java.sql.Ref) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -3478,7 +3478,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*        insert row, or (3) this rowset is
 	*        <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateClob(columnIndex : Int, c : java.sql.Clob) : Void;
+	@:overload @:public override public function updateClob(columnIndex : Int, c : java.sql.Clob) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -3502,7 +3502,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateClob(columnName : String, c : java.sql.Clob) : Void;
+	@:overload @:public override public function updateClob(columnName : String, c : java.sql.Clob) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -3527,7 +3527,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBlob(columnIndex : Int, b : java.sql.Blob) : Void;
+	@:overload @:public override public function updateBlob(columnIndex : Int, b : java.sql.Blob) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -3551,7 +3551,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBlob(columnName : String, b : java.sql.Blob) : Void;
+	@:overload @:public override public function updateBlob(columnName : String, b : java.sql.Blob) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -3576,7 +3576,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateArray(columnIndex : Int, a : java.sql.Array) : Void;
+	@:overload @:public override public function updateArray(columnIndex : Int, a : java.sql.Array) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -3600,7 +3600,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateArray(columnName : String, a : java.sql.Array) : Void;
+	@:overload @:public override public function updateArray(columnName : String, a : java.sql.Array) : Void;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -3615,7 +3615,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* SQL <code>DATALINK</code> value.
 	* @see #getURL(String)
 	*/
-	@:overload public function getURL(columnIndex : Int) : java.net.URL;
+	@:overload @:public override public function getURL(columnIndex : Int) : java.net.URL;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -3631,7 +3631,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* SQL <code>DATALINK</code> value.
 	* @see #getURL(int)
 	*/
-	@:overload public function getURL(columnName : String) : java.net.URL;
+	@:overload @:public override public function getURL(columnName : String) : java.net.URL;
 	
 	/**
 	* The first warning reported by calls on this <code>CachedRowSetImpl</code>
@@ -3652,7 +3652,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @return the first SQLWarning or null
 	*
 	*/
-	@:overload public function getRowSetWarnings() : javax.sql.rowset.RowSetWarning;
+	@:overload @:public override public function getRowSetWarnings() : javax.sql.rowset.RowSetWarning;
 	
 	/**
 	* Commits all changes performed by the <code>acceptChanges()</code>
@@ -3660,7 +3660,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*
 	* @see java.sql.Connection#commit
 	*/
-	@:overload public function commit() : Void;
+	@:overload @:public override public function commit() : Void;
 	
 	/**
 	* Rolls back all changes performed by the <code>acceptChanges()</code>
@@ -3668,7 +3668,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*
 	* @see java.sql.Connection#rollback
 	*/
-	@:overload public function rollback() : Void;
+	@:overload @:public override public function rollback() : Void;
 	
 	/**
 	* Rolls back all changes performed by the <code>acceptChanges()</code>
@@ -3676,7 +3676,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*
 	* @see java.sql.Connection#rollback(Savepoint)
 	*/
-	@:overload public function rollback(s : java.sql.Savepoint) : Void;
+	@:overload @:public override public function rollback(s : java.sql.Savepoint) : Void;
 	
 	/**
 	* Unsets the designated parameter to the given int array.
@@ -3692,7 +3692,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*  parameter index is out of bounds or if the columnIdx is
 	*  not the same as set using <code>setMatchColumn(int [])</code>
 	*/
-	@:overload public function unsetMatchColumn(columnIdxes : java.NativeArray<Int>) : Void;
+	@:overload @:public override public function unsetMatchColumn(columnIdxes : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Unsets the designated parameter to the given String array.
@@ -3708,7 +3708,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*  parameter index is out of bounds or if the columnName is
 	*  not the same as set using <code>setMatchColumn(String [])</code>
 	*/
-	@:overload public function unsetMatchColumn(columnIdxes : java.NativeArray<String>) : Void;
+	@:overload @:public override public function unsetMatchColumn(columnIdxes : java.NativeArray<String>) : Void;
 	
 	/**
 	* Retrieves the column name as <code>String</code> array
@@ -3720,7 +3720,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*
 	* @throws SQLException if an error occurs or column name is not set
 	*/
-	@:overload public function getMatchColumnNames() : java.NativeArray<String>;
+	@:overload @:public override public function getMatchColumnNames() : java.NativeArray<String>;
 	
 	/**
 	* Retrieves the column id as <code>int</code> array that was set using
@@ -3731,7 +3731,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*
 	* @throws SQLException if an error occurs or column index is not set
 	*/
-	@:overload public function getMatchColumnIndexes() : java.NativeArray<Int>;
+	@:overload @:public override public function getMatchColumnIndexes() : java.NativeArray<Int>;
 	
 	/**
 	* Sets the designated parameter to the given int array.
@@ -3750,7 +3750,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if an error occurs or the
 	*                         parameter index is out of bounds
 	*/
-	@:overload public function setMatchColumn(columnIdxes : java.NativeArray<Int>) : Void;
+	@:overload @:public override public function setMatchColumn(columnIdxes : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Sets the designated parameter to the given String array.
@@ -3767,7 +3767,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if an error occurs or the
 	*  parameter index is out of bounds
 	*/
-	@:overload public function setMatchColumn(columnNames : java.NativeArray<String>) : Void;
+	@:overload @:public override public function setMatchColumn(columnNames : java.NativeArray<String>) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>int</code>
@@ -3786,7 +3786,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if an error occurs or the
 	*                         parameter index is out of bounds
 	*/
-	@:overload public function setMatchColumn(columnIdx : Int) : Void;
+	@:overload @:public override public function setMatchColumn(columnIdx : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>String</code>
@@ -3803,7 +3803,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @throws SQLException if an error occurs or the
 	*  parameter index is out of bounds
 	*/
-	@:overload public function setMatchColumn(columnName : String) : Void;
+	@:overload @:public override public function setMatchColumn(columnName : String) : Void;
 	
 	/**
 	* Unsets the designated parameter to the given <code>int</code>
@@ -3819,7 +3819,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*  parameter index is out of bounds or if the columnIdx is
 	*  not the same as set using <code>setMatchColumn(int)</code>
 	*/
-	@:overload public function unsetMatchColumn(columnIdx : Int) : Void;
+	@:overload @:public override public function unsetMatchColumn(columnIdx : Int) : Void;
 	
 	/**
 	* Unsets the designated parameter to the given <code>String</code>
@@ -3835,7 +3835,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*  parameter index is out of bounds or if the columnName is
 	*  not the same as set using <code>setMatchColumn(String)</code>
 	*/
-	@:overload public function unsetMatchColumn(columnName : String) : Void;
+	@:overload @:public override public function unsetMatchColumn(columnName : String) : Void;
 	
 	/**
 	* Notifies registered listeners that a RowSet object in the given RowSetEvent
@@ -3850,7 +3850,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*     <code>CachedRowSet</code> populated should fire; the default value
 	*     is zero; cannot be less than <code>fetchSize</code> or zero
 	*/
-	@:overload public function rowSetPopulated(event : javax.sql.RowSetEvent, numRows : Int) : Void;
+	@:overload @:public override public function rowSetPopulated(event : javax.sql.RowSetEvent, numRows : Int) : Void;
 	
 	/**
 	* Populates this <code>CachedRowSet</code> object with data from
@@ -3884,7 +3884,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*          is negative.
 	* @see #execute
 	*/
-	@:overload public function populate(data : java.sql.ResultSet, start : Int) : Void;
+	@:overload @:public override public function populate(data : java.sql.ResultSet, start : Int) : Void;
 	
 	/**
 	* The nextPage gets the next page, that is a <code>CachedRowSetImpl</code> object
@@ -3893,7 +3893,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         false indicating that this is the last page.
 	* @throws SQLException if an error occurs or this called before calling populate.
 	*/
-	@:overload public function nextPage() : Bool;
+	@:overload @:public override public function nextPage() : Bool;
 	
 	/**
 	* This is the setter function for setting the size of the page, which specifies
@@ -3902,14 +3902,14 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @param size which is the page size
 	* @throws SQLException if size is less than zero or greater than max rows.
 	*/
-	@:overload public function setPageSize(size : Int) : Void;
+	@:overload @:public override public function setPageSize(size : Int) : Void;
 	
 	/**
 	* This is the getter function for the size of the page.
 	*
 	* @return an integer that is the page size.
 	*/
-	@:overload public function getPageSize() : Int;
+	@:overload @:public override public function getPageSize() : Int;
 	
 	/**
 	* Retrieves the data present in the page prior to the page from where it is
@@ -3920,7 +3920,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	*         is of type <code>ResultSet.TYPE_FORWARD_ONLY</code> or if an error
 	*         occurs.
 	*/
-	@:overload public function previousPage() : Bool;
+	@:overload @:public override public function previousPage() : Bool;
 	
 	/**
 	* Updates the designated column with a character stream value, which will
@@ -3937,7 +3937,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @exception SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateNCharacterStream(columnIndex : Int, x : java.io.Reader, length : Int) : Void;
+	@:require(java6) @:overload @:public public function updateNCharacterStream(columnIndex : Int, x : java.io.Reader, length : Int) : Void;
 	
 	/**
 	* Updates the designated column with a character stream value, which will
@@ -3954,7 +3954,7 @@ extern class SyncResolverImpl extends com.sun.rowset.CachedRowSetImpl implements
 	* @exception SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateNCharacterStream(columnName : String, x : java.io.Reader, length : Int) : Void;
+	@:require(java6) @:overload @:public public function updateNCharacterStream(columnName : String, x : java.io.Reader, length : Int) : Void;
 	
 	
 }

@@ -30,9 +30,9 @@ package sun.applet;
 */
 extern class AppletIllegalArgumentException extends java.lang.IllegalArgumentException
 {
-	@:overload public function new(key : String) : Void;
+	@:overload @:public public function new(key : String) : Void;
 	
-	@:overload override public function getLocalizedMessage() : String;
+	@:overload @:public override public function getLocalizedMessage() : String;
 	
 	
 }

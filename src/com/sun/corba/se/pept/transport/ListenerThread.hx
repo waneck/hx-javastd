@@ -28,9 +28,9 @@ package com.sun.corba.se.pept.transport;
 */
 extern interface ListenerThread
 {
-	@:overload public function getAcceptor() : com.sun.corba.se.pept.transport.Acceptor;
+	@:overload @:public public function getAcceptor() : com.sun.corba.se.pept.transport.Acceptor;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

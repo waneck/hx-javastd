@@ -25,19 +25,19 @@ package javax.swing.plaf.basic;
 */
 extern class BasicToggleButtonUI extends javax.swing.plaf.basic.BasicButtonUI
 {
-	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function getPropertyPrefix() : String;
+	@:overload @:protected override private function getPropertyPrefix() : String;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload private function paintIcon(g : java.awt.Graphics, b : javax.swing.AbstractButton, iconRect : java.awt.Rectangle) : Void;
+	@:overload @:protected private function paintIcon(g : java.awt.Graphics, b : javax.swing.AbstractButton, iconRect : java.awt.Rectangle) : Void;
 	
 	/**
 	* Overriden so that the text will not be rendered as shifted for
 	* Toggle buttons and subclasses.
 	*/
-	@:overload override private function getTextShiftOffset() : Int;
+	@:overload @:protected override private function getTextShiftOffset() : Int;
 	
 	
 }

@@ -31,34 +31,34 @@ extern class PageFormat implements java.lang.Cloneable
 	*  Note that this is not the Macintosh landscape but
 	*  is the Window's and PostScript landscape.
 	*/
-	public static var LANDSCAPE(default, null) : Int;
+	@:public @:static @:final public static var LANDSCAPE(default, null) : Int;
 	
 	/**
 	*  The origin is at the top left of the paper with
 	*  x running to the right and y running down the
 	*  paper.
 	*/
-	public static var PORTRAIT(default, null) : Int;
+	@:public @:static @:final public static var PORTRAIT(default, null) : Int;
 	
 	/**
 	*  The origin is at the top right of the paper with x
 	*  running top to bottom and y running right to left.
 	*  Note that this is the Macintosh landscape.
 	*/
-	public static var REVERSE_LANDSCAPE(default, null) : Int;
+	@:public @:static @:final public static var REVERSE_LANDSCAPE(default, null) : Int;
 	
 	/**
 	* Creates a default, portrait-oriented
 	* <code>PageFormat</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Makes a copy of this <code>PageFormat</code> with the same
 	* contents as this <code>PageFormat</code>.
 	* @return a copy of this <code>PageFormat</code>.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns the width, in 1/72nds of an inch, of the page.
@@ -66,7 +66,7 @@ extern class PageFormat implements java.lang.Cloneable
 	* page when determining the width.
 	* @return the width of the page.
 	*/
-	@:overload public function getWidth() : Float;
+	@:overload @:public public function getWidth() : Float;
 	
 	/**
 	* Returns the height, in 1/72nds of an inch, of the page.
@@ -74,7 +74,7 @@ extern class PageFormat implements java.lang.Cloneable
 	* page when determining the height.
 	* @return the height of the page.
 	*/
-	@:overload public function getHeight() : Float;
+	@:overload @:public public function getHeight() : Float;
 	
 	/**
 	* Returns the x coordinate of the upper left point of the
@@ -86,7 +86,7 @@ extern class PageFormat implements java.lang.Cloneable
 	* imageable area of the <code>Paper</code> object
 	* associated with this <code>PageFormat</code>.
 	*/
-	@:overload public function getImageableX() : Float;
+	@:overload @:public public function getImageableX() : Float;
 	
 	/**
 	* Returns the y coordinate of the upper left point of the
@@ -98,7 +98,7 @@ extern class PageFormat implements java.lang.Cloneable
 	* imageable area of the <code>Paper</code> object
 	* associated with this <code>PageFormat</code>.
 	*/
-	@:overload public function getImageableY() : Float;
+	@:overload @:public public function getImageableY() : Float;
 	
 	/**
 	* Returns the width, in 1/72nds of an inch, of the imageable
@@ -106,7 +106,7 @@ extern class PageFormat implements java.lang.Cloneable
 	* of the page.
 	* @return the width of the page.
 	*/
-	@:overload public function getImageableWidth() : Float;
+	@:overload @:public public function getImageableWidth() : Float;
 	
 	/**
 	* Return the height, in 1/72nds of an inch, of the imageable
@@ -114,7 +114,7 @@ extern class PageFormat implements java.lang.Cloneable
 	* of the page.
 	* @return the height of the page.
 	*/
-	@:overload public function getImageableHeight() : Float;
+	@:overload @:public public function getImageableHeight() : Float;
 	
 	/**
 	* Returns a copy of the {@link Paper} object associated
@@ -130,7 +130,7 @@ extern class PageFormat implements java.lang.Cloneable
 	*          with this <code>PageFormat</code>.
 	* @see #setPaper
 	*/
-	@:overload public function getPaper() : java.awt.print.Paper;
+	@:overload @:public public function getPaper() : java.awt.print.Paper;
 	
 	/**
 	* Sets the <code>Paper</code> object for this
@@ -141,7 +141,7 @@ extern class PageFormat implements java.lang.Cloneable
 	*              a null paper instance was passed as a parameter.
 	* @see #getPaper
 	*/
-	@:overload public function setPaper(paper : java.awt.print.Paper) : Void;
+	@:overload @:public public function setPaper(paper : java.awt.print.Paper) : Void;
 	
 	/**
 	* Sets the page orientation. <code>orientation</code> must be
@@ -152,14 +152,14 @@ extern class PageFormat implements java.lang.Cloneable
 	*          an unknown orientation was requested
 	* @see #getOrientation
 	*/
-	@:overload public function setOrientation(orientation : Int) : Void;
+	@:overload @:public public function setOrientation(orientation : Int) : Void;
 	
 	/**
 	* Returns the orientation of this <code>PageFormat</code>.
 	* @return this <code>PageFormat</code> object's orientation.
 	* @see #setOrientation
 	*/
-	@:overload public function getOrientation() : Int;
+	@:overload @:public public function getOrientation() : Int;
 	
 	/**
 	* Returns a transformation matrix that translates user
@@ -173,7 +173,7 @@ extern class PageFormat implements java.lang.Cloneable
 	* to the orientation of the page.
 	* @see java.awt.geom.AffineTransform
 	*/
-	@:overload public function getMatrix() : java.NativeArray<Float>;
+	@:overload @:public public function getMatrix() : java.NativeArray<Float>;
 	
 	
 }

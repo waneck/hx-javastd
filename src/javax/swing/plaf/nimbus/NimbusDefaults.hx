@@ -25,7 +25,7 @@ package javax.swing.plaf.nimbus;
 */
 @:internal extern class NimbusDefaults
 {
-	@:overload public function clearOverridesCache(c : javax.swing.JComponent) : Void;
+	@:overload @:public public function clearOverridesCache(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Get a derived color, derived colors are shared instances and will be
@@ -40,7 +40,7 @@ package javax.swing.plaf.nimbus;
 	*        false if it should not be a UIResource
 	* @return The stored derived color
 	*/
-	@:overload public function getDerivedColor(parentUin : String, hOffset : Single, sOffset : Single, bOffset : Single, aOffset : Int, uiResource : Bool) : javax.swing.plaf.nimbus.DerivedColor;
+	@:overload @:public public function getDerivedColor(parentUin : String, hOffset : Single, sOffset : Single, bOffset : Single, aOffset : Int, uiResource : Bool) : javax.swing.plaf.nimbus.DerivedColor;
 	
 	
 }
@@ -79,12 +79,12 @@ package javax.swing.plaf.nimbus;
 	*               then this new font will inherit the italic setting of
 	*               the source font.
 	*/
-	@:overload public function new(key : String, sizeOffset : Single, bold : Null<Bool>, italic : Null<Bool>) : Void;
+	@:overload @:public public function new(key : String, sizeOffset : Single, bold : Null<Bool>, italic : Null<Bool>) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function createValue(defaults : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public public function createValue(defaults : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
@@ -99,7 +99,7 @@ package javax.swing.plaf.nimbus;
 */
 @:native('javax$swing$plaf$nimbus$NimbusDefaults$LazyPainter') @:internal extern class NimbusDefaults_LazyPainter implements javax.swing.UIDefaults.UIDefaults_LazyValue
 {
-	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
@@ -128,21 +128,21 @@ package javax.swing.plaf.nimbus;
 }
 @:native('javax$swing$plaf$nimbus$NimbusDefaults$ColorTree') @:internal extern class NimbusDefaults_ColorTree implements java.beans.PropertyChangeListener
 {
-	@:overload public function getColor(uin : String) : java.awt.Color;
+	@:overload @:public public function getColor(uin : String) : java.awt.Color;
 	
-	@:overload public function addColor(uin : String, color : java.awt.Color) : Void;
+	@:overload @:public public function addColor(uin : String, color : java.awt.Color) : Void;
 	
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
-	@:overload public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$nimbus$NimbusDefaults$ColorTree$Node') @:internal extern class NimbusDefaults_ColorTree_Node
 {
-	@:overload public function set(color : java.awt.Color, parent : javax.swing.plaf.nimbus.NimbusDefaults.NimbusDefaults_ColorTree_Node) : Void;
+	@:overload @:public public function set(color : java.awt.Color, parent : javax.swing.plaf.nimbus.NimbusDefaults.NimbusDefaults_ColorTree_Node) : Void;
 	
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
 	
 }
@@ -151,17 +151,17 @@ package javax.swing.plaf.nimbus;
 */
 @:native('javax$swing$plaf$nimbus$NimbusDefaults$DefaultsListener') @:internal extern class NimbusDefaults_DefaultsListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$nimbus$NimbusDefaults$PainterBorder') @:internal extern class NimbusDefaults_PainterBorder implements javax.swing.border.Border implements javax.swing.plaf.UIResource
 {
-	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function getBorderInsets(c : java.awt.Component) : java.awt.Insets;
+	@:overload @:public public function getBorderInsets(c : java.awt.Component) : java.awt.Insets;
 	
-	@:overload public function isBorderOpaque() : Bool;
+	@:overload @:public public function isBorderOpaque() : Bool;
 	
 	
 }

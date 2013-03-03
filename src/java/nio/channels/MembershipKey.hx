@@ -28,7 +28,7 @@ extern class MembershipKey
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Tells whether or not this membership is valid.
@@ -40,7 +40,7 @@ extern class MembershipKey
 	* @return  {@code true} if this membership key is valid, {@code false}
 	*          otherwise
 	*/
-	@:overload @:abstract public function isValid() : Bool;
+	@:overload @:public @:abstract public function isValid() : Bool;
 	
 	/**
 	* Drop membership.
@@ -62,7 +62,7 @@ extern class MembershipKey
 	* method has no effect. Once a multicast group membership is invalid,
 	* it remains invalid forever.
 	*/
-	@:overload @:abstract public function drop() : Void;
+	@:overload @:public @:abstract public function drop() : Void;
 	
 	/**
 	* Block multicast datagrams from the given source address.
@@ -91,7 +91,7 @@ extern class MembershipKey
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:abstract public function block(source : java.net.InetAddress) : java.nio.channels.MembershipKey;
+	@:overload @:public @:abstract public function block(source : java.net.InetAddress) : java.nio.channels.MembershipKey;
 	
 	/**
 	* Unblock multicast datagrams from the given source address that was
@@ -106,7 +106,7 @@ extern class MembershipKey
 	*          If the given source address is not currently blocked or the
 	*          membership key is no longer valid
 	*/
-	@:overload @:abstract public function unblock(source : java.net.InetAddress) : java.nio.channels.MembershipKey;
+	@:overload @:public @:abstract public function unblock(source : java.net.InetAddress) : java.nio.channels.MembershipKey;
 	
 	/**
 	* Returns the channel for which this membership key was created. This
@@ -115,7 +115,7 @@ extern class MembershipKey
 	*
 	* @return  the channel
 	*/
-	@:overload @:abstract public function channel() : java.nio.channels.MulticastChannel;
+	@:overload @:public @:abstract public function channel() : java.nio.channels.MulticastChannel;
 	
 	/**
 	* Returns the multicast group for which this membership key was created.
@@ -124,7 +124,7 @@ extern class MembershipKey
 	*
 	* @return  the multicast group
 	*/
-	@:overload @:abstract public function group() : java.net.InetAddress;
+	@:overload @:public @:abstract public function group() : java.net.InetAddress;
 	
 	/**
 	* Returns the network interface for which this membership key was created.
@@ -133,7 +133,7 @@ extern class MembershipKey
 	*
 	* @return  the network interface
 	*/
-	@:overload @:abstract public function networkInterface() : java.net.NetworkInterface;
+	@:overload @:public @:abstract public function networkInterface() : java.net.NetworkInterface;
 	
 	/**
 	* Returns the source address if this membership key is source-specific,
@@ -142,7 +142,7 @@ extern class MembershipKey
 	* @return  The source address if this membership key is source-specific,
 	*          otherwise {@code null}
 	*/
-	@:overload @:abstract public function sourceAddress() : java.net.InetAddress;
+	@:overload @:public @:abstract public function sourceAddress() : java.net.InetAddress;
 	
 	
 }

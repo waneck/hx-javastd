@@ -31,14 +31,14 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*
 	* @see #setOrientation
 	*/
-	private var orientation : Int;
+	@:protected private var orientation : Int;
 	
 	/**
 	* The object that holds the data for the progress bar.
 	*
 	* @see #setModel
 	*/
-	private var model : javax.swing.BoundedRangeModel;
+	@:protected private var model : javax.swing.BoundedRangeModel;
 	
 	/**
 	* An optional string that can be displayed on the progress bar.
@@ -49,7 +49,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @see #setString
 	* @see #setStringPainted
 	*/
-	private var progressString : String;
+	@:protected private var progressString : String;
 	
 	/**
 	* Whether to display a string of text on the progress bar.
@@ -64,7 +64,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @see #setStringPainted
 	* @see #setString
 	*/
-	private var paintString : Bool;
+	@:protected private var paintString : Bool;
 	
 	/**
 	* Only one <code>ChangeEvent</code> is needed per instance since the
@@ -75,7 +75,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*
 	* @see #fireStateChanged
 	*/
-	@:transient private var changeEvent : javax.swing.event.ChangeEvent;
+	@:protected @:transient private var changeEvent : javax.swing.event.ChangeEvent;
 	
 	/**
 	* Listens for change events sent by the progress bar's model,
@@ -85,7 +85,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*
 	* @see #createChangeListener
 	*/
-	private var changeListener : javax.swing.event.ChangeListener;
+	@:protected private var changeListener : javax.swing.event.ChangeListener;
 	
 	/**
 	* Creates a horizontal progress bar
@@ -99,7 +99,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @see #setString
 	* @see #setIndeterminate
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a progress bar with the specified orientation,
@@ -119,7 +119,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @see #setString
 	* @see #setIndeterminate
 	*/
-	@:overload public function new(orient : Int) : Void;
+	@:overload @:public public function new(orient : Int) : Void;
 	
 	/**
 	* Creates a horizontal progress bar
@@ -142,7 +142,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @see #setString
 	* @see #setIndeterminate
 	*/
-	@:overload public function new(min : Int, max : Int) : Void;
+	@:overload @:public public function new(min : Int, max : Int) : Void;
 	
 	/**
 	* Creates a progress bar using the specified orientation,
@@ -167,7 +167,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @see #setString
 	* @see #setIndeterminate
 	*/
-	@:overload public function new(orient : Int, min : Int, max : Int) : Void;
+	@:overload @:public public function new(orient : Int, min : Int, max : Int) : Void;
 	
 	/**
 	* Creates a horizontal progress bar
@@ -183,7 +183,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @see #setString
 	* @see #setIndeterminate
 	*/
-	@:overload public function new(newModel : javax.swing.BoundedRangeModel) : Void;
+	@:overload @:public public function new(newModel : javax.swing.BoundedRangeModel) : Void;
 	
 	/**
 	* Returns {@code SwingConstants.VERTICAL} or
@@ -194,7 +194,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @return <code>HORIZONTAL</code> or <code>VERTICAL</code>
 	* @see #setOrientation
 	*/
-	@:overload public function getOrientation() : Int;
+	@:overload @:public public function getOrientation() : Int;
 	
 	/**
 	* Sets the progress bar's orientation to <code>newOrientation</code>,
@@ -213,7 +213,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*    attribute: visualUpdate true
 	*  description: Set the progress bar's orientation.
 	*/
-	@:overload public function setOrientation(newOrientation : Int) : Void;
+	@:overload @:public public function setOrientation(newOrientation : Int) : Void;
 	
 	/**
 	* Returns the value of the <code>stringPainted</code> property.
@@ -222,7 +222,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @see    #setStringPainted
 	* @see    #setString
 	*/
-	@:overload public function isStringPainted() : Bool;
+	@:overload @:public public function isStringPainted() : Bool;
 	
 	/**
 	* Sets the value of the <code>stringPainted</code> property,
@@ -241,7 +241,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*    attribute: visualUpdate true
 	*  description: Whether the progress bar should render a string.
 	*/
-	@:overload public function setStringPainted(b : Bool) : Void;
+	@:overload @:public public function setStringPainted(b : Bool) : Void;
 	
 	/**
 	* Returns a {@code String} representation of the current progress.
@@ -253,7 +253,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*         if the progress string is {@code null}
 	* @see    #setString
 	*/
-	@:overload public function getString() : String;
+	@:overload @:public public function getString() : String;
 	
 	/**
 	* Sets the value of the progress string. By default,
@@ -274,7 +274,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*    attribute: visualUpdate true
 	*  description: Specifies the progress string to paint
 	*/
-	@:overload public function setString(s : String) : Void;
+	@:overload @:public public function setString(s : String) : Void;
 	
 	/**
 	* Returns the percent complete for the progress bar.
@@ -282,7 +282,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*
 	* @return the percent complete for this progress bar
 	*/
-	@:overload public function getPercentComplete() : Float;
+	@:overload @:public public function getPercentComplete() : Float;
 	
 	/**
 	* Returns the <code>borderPainted</code> property.
@@ -292,7 +292,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @beaninfo
 	*  description: Does the progress bar paint its border
 	*/
-	@:overload public function isBorderPainted() : Bool;
+	@:overload @:public public function isBorderPainted() : Bool;
 	
 	/**
 	* Sets the <code>borderPainted</code> property, which is
@@ -310,7 +310,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*    attribute: visualUpdate true
 	*  description: Whether the progress bar should paint its border.
 	*/
-	@:overload public function setBorderPainted(b : Bool) : Void;
+	@:overload @:public public function setBorderPainted(b : Bool) : Void;
 	
 	/**
 	* Paints the progress bar's border if the <code>borderPainted</code>
@@ -322,14 +322,14 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @see #isBorderPainted
 	* @see #setBorderPainted
 	*/
-	@:overload private function paintBorder(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintBorder(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Returns the look-and-feel object that renders this component.
 	*
 	* @return the <code>ProgressBarUI</code> object that renders this component
 	*/
-	@:overload public function getUI() : javax.swing.plaf.ProgressBarUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.ProgressBarUI;
 	
 	/**
 	* Sets the look-and-feel object that renders this component.
@@ -342,14 +342,14 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.ProgressBarUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.ProgressBarUI) : Void;
 	
 	/**
 	* Resets the UI property to a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the look-and-feel class that renders this component.
@@ -361,7 +361,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*        expert: true
 	*   description: A string that specifies the name of the look-and-feel class.
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Subclasses that want to handle change events
@@ -378,21 +378,21 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @see javax.swing.event.ChangeListener
 	* @see javax.swing.BoundedRangeModel
 	*/
-	@:overload private function createChangeListener() : javax.swing.event.ChangeListener;
+	@:overload @:protected private function createChangeListener() : javax.swing.event.ChangeListener;
 	
 	/**
 	* Adds the specified <code>ChangeListener</code> to the progress bar.
 	*
 	* @param l the <code>ChangeListener</code> to add
 	*/
-	@:overload public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Removes a <code>ChangeListener</code> from the progress bar.
 	*
 	* @param l the <code>ChangeListener</code> to remove
 	*/
-	@:overload public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ChangeListener</code>s added
@@ -402,7 +402,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
+	@:require(java4) @:overload @:public public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
 	
 	/**
 	* Send a {@code ChangeEvent}, whose source is this {@code JProgressBar}, to
@@ -418,7 +418,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @see #addChangeListener
 	* @see EventListenerList
 	*/
-	@:overload private function fireStateChanged() : Void;
+	@:overload @:protected private function fireStateChanged() : Void;
 	
 	/**
 	* Returns the data model used by this progress bar.
@@ -427,7 +427,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @see #setModel
 	* @see    BoundedRangeModel
 	*/
-	@:overload public function getModel() : javax.swing.BoundedRangeModel;
+	@:overload @:public public function getModel() : javax.swing.BoundedRangeModel;
 	
 	/**
 	* Sets the data model used by the <code>JProgressBar</code>.
@@ -440,7 +440,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*    expert: true
 	* description: The data model used by the JProgressBar.
 	*/
-	@:overload public function setModel(newModel : javax.swing.BoundedRangeModel) : Void;
+	@:overload @:public public function setModel(newModel : javax.swing.BoundedRangeModel) : Void;
 	
 	/**
 	* Returns the progress bar's current {@code value}
@@ -452,7 +452,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @see     #setValue
 	* @see     BoundedRangeModel#getValue
 	*/
-	@:overload public function getValue() : Int;
+	@:overload @:public public function getValue() : Int;
 	
 	/**
 	* Returns the progress bar's {@code minimum} value
@@ -462,7 +462,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @see     #setMinimum
 	* @see     BoundedRangeModel#getMinimum
 	*/
-	@:overload public function getMinimum() : Int;
+	@:overload @:public public function getMinimum() : Int;
 	
 	/**
 	* Returns the progress bar's {@code maximum} value
@@ -472,7 +472,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @see     #setMaximum
 	* @see     BoundedRangeModel#getMaximum
 	*/
-	@:overload public function getMaximum() : Int;
+	@:overload @:public public function getMaximum() : Int;
 	
 	/**
 	* Sets the progress bar's current value to {@code n}.  This method
@@ -494,7 +494,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*    preferred: true
 	*  description: The progress bar's current value.
 	*/
-	@:overload public function setValue(n : Int) : Void;
+	@:overload @:public public function setValue(n : Int) : Void;
 	
 	/**
 	* Sets the progress bar's minimum value
@@ -516,7 +516,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*  preferred: true
 	* description: The progress bar's minimum value.
 	*/
-	@:overload public function setMinimum(n : Int) : Void;
+	@:overload @:public public function setMinimum(n : Int) : Void;
 	
 	/**
 	* Sets the progress bar's maximum value
@@ -537,7 +537,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*    preferred: true
 	*  description: The progress bar's maximum value.
 	*/
-	@:overload public function setMaximum(n : Int) : Void;
+	@:overload @:public public function setMaximum(n : Int) : Void;
 	
 	/**
 	* Sets the <code>indeterminate</code> property of the progress bar,
@@ -570,7 +570,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*  description: Set whether the progress bar is indeterminate (true)
 	*               or normal (false).
 	*/
-	@:require(java4) @:overload public function setIndeterminate(newValue : Bool) : Void;
+	@:require(java4) @:overload @:public public function setIndeterminate(newValue : Bool) : Void;
 	
 	/**
 	* Returns the value of the <code>indeterminate</code> property.
@@ -584,7 +584,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*  description: Is the progress bar indeterminate (true)
 	*               or normal (false)?
 	*/
-	@:require(java4) @:overload public function isIndeterminate() : Bool;
+	@:require(java4) @:overload @:public public function isIndeterminate() : Bool;
 	
 	/**
 	* Returns a string representation of this <code>JProgressBar</code>.
@@ -595,7 +595,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*
 	* @return  a string representation of this <code>JProgressBar</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with this
@@ -610,7 +610,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*       expert: true
 	*  description: The AccessibleContext associated with this ProgressBar.
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -628,7 +628,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 */
 @:native('javax$swing$JProgressBar$ModelListener') @:internal extern class JProgressBar_ModelListener implements javax.swing.event.ChangeListener implements java.io.Serializable
 {
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }
@@ -656,7 +656,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the role of this object.
@@ -664,7 +664,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the <code>AccessibleValue</code> associated with this object.  In the
@@ -674,35 +674,35 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Gets the accessible value of this object.
 	*
 	* @return the current value of this object
 	*/
-	@:overload public function getCurrentAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getCurrentAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Sets the value of this object as a <code>Number</code>.
 	*
 	* @return <code>true</code> if the value was set
 	*/
-	@:overload public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
+	@:overload @:public public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
 	
 	/**
 	* Gets the minimum accessible value of this object.
 	*
 	* @return the minimum value of this object
 	*/
-	@:overload public function getMinimumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMinimumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Gets the maximum accessible value of this object.
 	*
 	* @return the maximum value of this object
 	*/
-	@:overload public function getMaximumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMaximumAccessibleValue() : java.lang.Number;
 	
 	
 }

@@ -35,14 +35,14 @@ extern class ExceptionHasMessage extends com.sun.xml.internal.ws.util.exception.
 	*
 	* @author Jitendra Kotamraju
 	*/
-	@:overload public function new(key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(key : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Returns the exception into a fault Message
 	*
 	* @return Message for this exception
 	*/
-	@:overload @:abstract public function getFaultMessage() : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:abstract public function getFaultMessage() : com.sun.xml.internal.ws.api.message.Message;
 	
 	
 }

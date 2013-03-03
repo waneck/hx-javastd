@@ -25,11 +25,11 @@ package com.sun.xml.internal.ws.handler;
 */
 @:internal extern class LogicalMessageContextImpl extends com.sun.xml.internal.ws.handler.MessageUpdatableContext implements javax.xml.ws.handler.LogicalMessageContext
 {
-	@:overload public function new(binding : com.sun.xml.internal.ws.api.WSBinding, defaultJAXBContext : javax.xml.bind.JAXBContext, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function new(binding : com.sun.xml.internal.ws.api.WSBinding, defaultJAXBContext : javax.xml.bind.JAXBContext, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload public function getMessage() : javax.xml.ws.LogicalMessage;
+	@:overload @:public public function getMessage() : javax.xml.ws.LogicalMessage;
 	
-	@:overload private function updateMessage() : Void;
+	@:overload @:protected private function updateMessage() : Void;
 	
 	
 }

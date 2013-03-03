@@ -31,15 +31,15 @@ extern class JavahTool implements com.sun.tools.javah.NativeHeaderTool
 	* risk.  This code and its internal interfaces are subject to change
 	* or deletion without notice.</b></p>
 	*/
-	@:overload public function getTask(out : java.io.Writer, fileManager : javax.tools.JavaFileManager, diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, options : java.lang.Iterable<String>, classes : java.lang.Iterable<String>) : com.sun.tools.javah.NativeHeaderTool.NativeHeaderTool_NativeHeaderTask;
+	@:overload @:public public function getTask(out : java.io.Writer, fileManager : javax.tools.JavaFileManager, diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, options : java.lang.Iterable<String>, classes : java.lang.Iterable<String>) : com.sun.tools.javah.NativeHeaderTool.NativeHeaderTool_NativeHeaderTask;
 	
-	@:overload public function getStandardFileManager(diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, locale : java.util.Locale, charset : java.nio.charset.Charset) : javax.tools.StandardJavaFileManager;
+	@:overload @:public public function getStandardFileManager(diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, locale : java.util.Locale, charset : java.nio.charset.Charset) : javax.tools.StandardJavaFileManager;
 	
-	@:overload public function run(_in : java.io.InputStream, out : java.io.OutputStream, err : java.io.OutputStream, arguments : java.NativeArray<String>) : Int;
+	@:overload @:public public function run(_in : java.io.InputStream, out : java.io.OutputStream, err : java.io.OutputStream, arguments : java.NativeArray<String>) : Int;
 	
-	@:overload public function getSourceVersions() : java.util.Set<javax.lang.model.SourceVersion>;
+	@:overload @:public public function getSourceVersions() : java.util.Set<javax.lang.model.SourceVersion>;
 	
-	@:overload public function isSupportedOption(option : String) : Int;
+	@:overload @:public public function isSupportedOption(option : String) : Int;
 	
 	
 }

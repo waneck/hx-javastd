@@ -34,13 +34,13 @@ extern class AttributeModificationException extends javax.naming.NamingException
 
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload public function new(explanation : String) : Void;
+	@:overload @:public public function new(explanation : String) : Void;
 	
 	/**
 	* Constructs a new instance of AttributeModificationException.
 	* All fields are set to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets the unexecuted modification list to be e.
@@ -53,7 +53,7 @@ extern class AttributeModificationException extends javax.naming.NamingException
 	* @param e        The possibly null list of unexecuted modifications.
 	* @see #getUnexecutedModifications
 	*/
-	@:overload public function setUnexecutedModifications(e : java.NativeArray<javax.naming.directory.ModificationItem>) : Void;
+	@:overload @:public public function setUnexecutedModifications(e : java.NativeArray<javax.naming.directory.ModificationItem>) : Void;
 	
 	/**
 	* Retrieves the unexecuted modification list.
@@ -66,7 +66,7 @@ extern class AttributeModificationException extends javax.naming.NamingException
 	* @return The possibly null unexecuted modification list.
 	* @see #setUnexecutedModifications
 	*/
-	@:overload public function getUnexecutedModifications() : java.NativeArray<javax.naming.directory.ModificationItem>;
+	@:overload @:public public function getUnexecutedModifications() : java.NativeArray<javax.naming.directory.ModificationItem>;
 	
 	/**
 	* The string representation of this exception consists of
@@ -76,7 +76,7 @@ extern class AttributeModificationException extends javax.naming.NamingException
 	* programmatically.
 	* @return The non-null string representation of this exception.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

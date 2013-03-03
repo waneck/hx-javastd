@@ -31,7 +31,7 @@ extern class AnnotationType
 	* @throw IllegalArgumentException if the specified class object for
 	*     does not represent a valid annotation type
 	*/
-	@:overload @:synchronized public static function getInstance(annotationClass : Class<java.lang.annotation.Annotation>) : sun.reflect.annotation.AnnotationType;
+	@:overload @:public @:static @:synchronized public static function getInstance(annotationClass : Class<java.lang.annotation.Annotation>) : sun.reflect.annotation.AnnotationType;
 	
 	/**
 	* Returns the type that must be returned by the invocation handler
@@ -39,40 +39,40 @@ extern class AnnotationType
 	* the specified type (which is assumed to be a legal member type
 	* for an annotation).
 	*/
-	@:overload public static function invocationHandlerReturnType(type : Class<Dynamic>) : Class<Dynamic>;
+	@:overload @:public @:static public static function invocationHandlerReturnType(type : Class<Dynamic>) : Class<Dynamic>;
 	
 	/**
 	* Returns member types for this annotation type
 	* (member name -> type mapping).
 	*/
-	@:overload public function memberTypes() : java.util.Map<String, Class<Dynamic>>;
+	@:overload @:public public function memberTypes() : java.util.Map<String, Class<Dynamic>>;
 	
 	/**
 	* Returns members of this annotation type
 	* (member name -> associated Method object mapping).
 	*/
-	@:overload public function members() : java.util.Map<String, java.lang.reflect.Method>;
+	@:overload @:public public function members() : java.util.Map<String, java.lang.reflect.Method>;
 	
 	/**
 	* Returns the default values for this annotation type
 	* (Member name -> default value mapping).
 	*/
-	@:overload public function memberDefaults() : java.util.Map<String, Dynamic>;
+	@:overload @:public public function memberDefaults() : java.util.Map<String, Dynamic>;
 	
 	/**
 	* Returns the retention policy for this annotation type.
 	*/
-	@:overload public function retention() : java.lang.annotation.RetentionPolicy;
+	@:overload @:public public function retention() : java.lang.annotation.RetentionPolicy;
 	
 	/**
 	* Returns true if this this annotation type is inherited.
 	*/
-	@:overload public function isInherited() : Bool;
+	@:overload @:public public function isInherited() : Bool;
 	
 	/**
 	* For debugging.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

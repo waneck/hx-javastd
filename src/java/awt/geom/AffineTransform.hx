@@ -44,7 +44,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #getType
 	* @since 1.2
 	*/
-	@:require(java2) public static var TYPE_IDENTITY(default, null) : Int;
+	@:require(java2) @:public @:static @:final public static var TYPE_IDENTITY(default, null) : Int;
 	
 	/**
 	* This flag bit indicates that the transform defined by this object
@@ -62,7 +62,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #getType
 	* @since 1.2
 	*/
-	@:require(java2) public static var TYPE_TRANSLATION(default, null) : Int;
+	@:require(java2) @:public @:static @:final public static var TYPE_TRANSLATION(default, null) : Int;
 	
 	/**
 	* This flag bit indicates that the transform defined by this object
@@ -82,7 +82,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #getType
 	* @since 1.2
 	*/
-	@:require(java2) public static var TYPE_UNIFORM_SCALE(default, null) : Int;
+	@:require(java2) @:public @:static @:final public static var TYPE_UNIFORM_SCALE(default, null) : Int;
 	
 	/**
 	* This flag bit indicates that the transform defined by this object
@@ -102,7 +102,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #getType
 	* @since 1.2
 	*/
-	@:require(java2) public static var TYPE_GENERAL_SCALE(default, null) : Int;
+	@:require(java2) @:public @:static @:final public static var TYPE_GENERAL_SCALE(default, null) : Int;
 	
 	/**
 	* This constant is a bit mask for any of the scale flag bits.
@@ -110,7 +110,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #TYPE_GENERAL_SCALE
 	* @since 1.2
 	*/
-	@:require(java2) public static var TYPE_MASK_SCALE(default, null) : Int;
+	@:require(java2) @:public @:static @:final public static var TYPE_MASK_SCALE(default, null) : Int;
 	
 	/**
 	* This flag bit indicates that the transform defined by this object
@@ -137,7 +137,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #getType
 	* @since 1.2
 	*/
-	@:require(java2) public static var TYPE_FLIP(default, null) : Int;
+	@:require(java2) @:public @:static @:final public static var TYPE_FLIP(default, null) : Int;
 	
 	/**
 	* This flag bit indicates that the transform defined by this object
@@ -157,7 +157,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #getType
 	* @since 1.2
 	*/
-	@:require(java2) public static var TYPE_QUADRANT_ROTATION(default, null) : Int;
+	@:require(java2) @:public @:static @:final public static var TYPE_QUADRANT_ROTATION(default, null) : Int;
 	
 	/**
 	* This flag bit indicates that the transform defined by this object
@@ -178,7 +178,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #getType
 	* @since 1.2
 	*/
-	@:require(java2) public static var TYPE_GENERAL_ROTATION(default, null) : Int;
+	@:require(java2) @:public @:static @:final public static var TYPE_GENERAL_ROTATION(default, null) : Int;
 	
 	/**
 	* This constant is a bit mask for any of the rotation flag bits.
@@ -186,7 +186,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #TYPE_GENERAL_ROTATION
 	* @since 1.2
 	*/
-	@:require(java2) public static var TYPE_MASK_ROTATION(default, null) : Int;
+	@:require(java2) @:public @:static @:final public static var TYPE_MASK_ROTATION(default, null) : Int;
 	
 	/**
 	* This constant indicates that the transform defined by this object
@@ -205,14 +205,14 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #getType
 	* @since 1.2
 	*/
-	@:require(java2) public static var TYPE_GENERAL_TRANSFORM(default, null) : Int;
+	@:require(java2) @:public @:static @:final public static var TYPE_GENERAL_TRANSFORM(default, null) : Int;
 	
 	/**
 	* Constructs a new <code>AffineTransform</code> representing the
 	* Identity transformation.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>AffineTransform</code> that is a copy of
@@ -220,7 +220,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param Tx the <code>AffineTransform</code> object to copy
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(Tx : java.awt.geom.AffineTransform) : Void;
+	@:require(java2) @:overload @:public public function new(Tx : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Constructs a new <code>AffineTransform</code> from 6 floating point
@@ -235,7 +235,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param m12 the Y coordinate translation element of the 3x3 matrix
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(m00 : Single, m10 : Single, m01 : Single, m11 : Single, m02 : Single, m12 : Single) : Void;
+	@:require(java2) @:overload @:public public function new(m00 : Single, m10 : Single, m01 : Single, m11 : Single, m02 : Single, m12 : Single) : Void;
 	
 	/**
 	* Constructs a new <code>AffineTransform</code> from an array of
@@ -250,7 +250,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* the array is greater than 6, the first 6 values are taken.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(flatmatrix : java.NativeArray<Single>) : Void;
+	@:require(java2) @:overload @:public public function new(flatmatrix : java.NativeArray<Single>) : Void;
 	
 	/**
 	* Constructs a new <code>AffineTransform</code> from 6 double
@@ -265,7 +265,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param m12 the Y coordinate translation element of the 3x3 matrix
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(m00 : Float, m10 : Float, m01 : Float, m11 : Float, m02 : Float, m12 : Float) : Void;
+	@:require(java2) @:overload @:public public function new(m00 : Float, m10 : Float, m01 : Float, m11 : Float, m02 : Float, m12 : Float) : Void;
 	
 	/**
 	* Constructs a new <code>AffineTransform</code> from an array of
@@ -280,7 +280,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* the array is greater than 6, the first 6 values are taken.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(flatmatrix : java.NativeArray<Float>) : Void;
+	@:require(java2) @:overload @:public public function new(flatmatrix : java.NativeArray<Float>) : Void;
 	
 	/**
 	* Returns a transform representing a translation transformation.
@@ -298,7 +298,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	*  translation transformation, created with the specified vector.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function getTranslateInstance(tx : Float, ty : Float) : java.awt.geom.AffineTransform;
+	@:require(java2) @:overload @:public @:static public static function getTranslateInstance(tx : Float, ty : Float) : java.awt.geom.AffineTransform;
 	
 	/**
 	* Returns a transform representing a rotation transformation.
@@ -318,7 +318,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	*  transformation, created with the specified angle of rotation.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function getRotateInstance(theta : Float) : java.awt.geom.AffineTransform;
+	@:require(java2) @:overload @:public @:static public static function getRotateInstance(theta : Float) : java.awt.geom.AffineTransform;
 	
 	/**
 	* Returns a transform that rotates coordinates around an anchor point.
@@ -355,7 +355,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	*  rotation.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function getRotateInstance(theta : Float, anchorx : Float, anchory : Float) : java.awt.geom.AffineTransform;
+	@:require(java2) @:overload @:public @:static public static function getRotateInstance(theta : Float, anchorx : Float, anchory : Float) : java.awt.geom.AffineTransform;
 	
 	/**
 	* Returns a transform that rotates coordinates according to
@@ -377,7 +377,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	*  coordinates according to the specified rotation vector.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getRotateInstance(vecx : Float, vecy : Float) : java.awt.geom.AffineTransform;
+	@:require(java6) @:overload @:public @:static public static function getRotateInstance(vecx : Float, vecy : Float) : java.awt.geom.AffineTransform;
 	
 	/**
 	* Returns a transform that rotates coordinates around an anchor
@@ -404,7 +404,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	*  specified rotation vector.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getRotateInstance(vecx : Float, vecy : Float, anchorx : Float, anchory : Float) : java.awt.geom.AffineTransform;
+	@:require(java6) @:overload @:public @:static public static function getRotateInstance(vecx : Float, vecy : Float, anchorx : Float, anchory : Float) : java.awt.geom.AffineTransform;
 	
 	/**
 	* Returns a transform that rotates coordinates by the specified
@@ -420,7 +420,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	*  coordinates by the specified number of quadrants.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getQuadrantRotateInstance(numquadrants : Int) : java.awt.geom.AffineTransform;
+	@:require(java6) @:overload @:public @:static public static function getQuadrantRotateInstance(numquadrants : Int) : java.awt.geom.AffineTransform;
 	
 	/**
 	* Returns a transform that rotates coordinates by the specified
@@ -441,7 +441,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	*  specified anchor point.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getQuadrantRotateInstance(numquadrants : Int, anchorx : Float, anchory : Float) : java.awt.geom.AffineTransform;
+	@:require(java6) @:overload @:public @:static public static function getQuadrantRotateInstance(numquadrants : Int, anchorx : Float, anchory : Float) : java.awt.geom.AffineTransform;
 	
 	/**
 	* Returns a transform representing a scaling transformation.
@@ -459,7 +459,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	*  coordinates by the specified factors.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function getScaleInstance(sx : Float, sy : Float) : java.awt.geom.AffineTransform;
+	@:require(java2) @:overload @:public @:static public static function getScaleInstance(sx : Float, sy : Float) : java.awt.geom.AffineTransform;
 	
 	/**
 	* Returns a transform representing a shearing transformation.
@@ -477,7 +477,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	*  coordinates by the specified multipliers.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function getShearInstance(shx : Float, shy : Float) : java.awt.geom.AffineTransform;
+	@:require(java2) @:overload @:public @:static public static function getShearInstance(shx : Float, shy : Float) : java.awt.geom.AffineTransform;
 	
 	/**
 	* Retrieves the flag bits describing the conversion properties of
@@ -503,7 +503,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #TYPE_GENERAL_TRANSFORM
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getType() : Int;
+	@:require(java2) @:overload @:public public function getType() : Int;
 	
 	/**
 	* Returns the determinant of the matrix representation of the transform.
@@ -546,7 +546,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #TYPE_UNIFORM_SCALE
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getDeterminant() : Float;
+	@:require(java2) @:overload @:public public function getDeterminant() : Float;
 	
 	/**
 	* Retrieves the 6 specifiable values in the 3x3 affine transformation
@@ -567,7 +567,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #getTranslateY
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getMatrix(flatmatrix : java.NativeArray<Float>) : Void;
+	@:require(java2) @:overload @:public public function getMatrix(flatmatrix : java.NativeArray<Float>) : Void;
 	
 	/**
 	* Returns the X coordinate scaling element (m00) of the 3x3
@@ -577,7 +577,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #getMatrix
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getScaleX() : Float;
+	@:require(java2) @:overload @:public public function getScaleX() : Float;
 	
 	/**
 	* Returns the Y coordinate scaling element (m11) of the 3x3
@@ -587,7 +587,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #getMatrix
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getScaleY() : Float;
+	@:require(java2) @:overload @:public public function getScaleY() : Float;
 	
 	/**
 	* Returns the X coordinate shearing element (m01) of the 3x3
@@ -597,7 +597,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #getMatrix
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getShearX() : Float;
+	@:require(java2) @:overload @:public public function getShearX() : Float;
 	
 	/**
 	* Returns the Y coordinate shearing element (m10) of the 3x3
@@ -607,7 +607,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #getMatrix
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getShearY() : Float;
+	@:require(java2) @:overload @:public public function getShearY() : Float;
 	
 	/**
 	* Returns the X coordinate of the translation element (m02) of the
@@ -617,7 +617,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #getMatrix
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getTranslateX() : Float;
+	@:require(java2) @:overload @:public public function getTranslateX() : Float;
 	
 	/**
 	* Returns the Y coordinate of the translation element (m12) of the
@@ -627,7 +627,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #getMatrix
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getTranslateY() : Float;
+	@:require(java2) @:overload @:public public function getTranslateY() : Float;
 	
 	/**
 	* Concatenates this transform with a translation transformation.
@@ -644,7 +644,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* Y axis direction
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function translate(tx : Float, ty : Float) : Void;
+	@:require(java2) @:overload @:public public function translate(tx : Float, ty : Float) : Void;
 	
 	/**
 	* Concatenates this transform with a rotation transformation.
@@ -663,7 +663,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param theta the angle of rotation measured in radians
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function rotate(theta : Float) : Void;
+	@:require(java2) @:overload @:public public function rotate(theta : Float) : Void;
 	
 	/**
 	* Concatenates this transform with a transform that rotates
@@ -691,7 +691,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param anchory the Y coordinate of the rotation anchor point
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function rotate(theta : Float, anchorx : Float, anchory : Float) : Void;
+	@:require(java2) @:overload @:public public function rotate(theta : Float, anchorx : Float, anchory : Float) : Void;
 	
 	/**
 	* Concatenates this transform with a transform that rotates
@@ -711,7 +711,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param vecy the Y coordinate of the rotation vector
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function rotate(vecx : Float, vecy : Float) : Void;
+	@:require(java6) @:overload @:public public function rotate(vecx : Float, vecy : Float) : Void;
 	
 	/**
 	* Concatenates this transform with a transform that rotates
@@ -735,7 +735,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param anchory the Y coordinate of the rotation anchor point
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function rotate(vecx : Float, vecy : Float, anchorx : Float, anchory : Float) : Void;
+	@:require(java6) @:overload @:public public function rotate(vecx : Float, vecy : Float, anchorx : Float, anchory : Float) : Void;
 	
 	/**
 	* Concatenates this transform with a transform that rotates
@@ -749,7 +749,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param numquadrants the number of 90 degree arcs to rotate by
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function quadrantRotate(numquadrants : Int) : Void;
+	@:require(java6) @:overload @:public public function quadrantRotate(numquadrants : Int) : Void;
 	
 	/**
 	* Concatenates this transform with a transform that rotates
@@ -767,7 +767,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param anchory the Y coordinate of the rotation anchor point
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function quadrantRotate(numquadrants : Int, anchorx : Float, anchory : Float) : Void;
+	@:require(java6) @:overload @:public public function quadrantRotate(numquadrants : Int, anchorx : Float, anchory : Float) : Void;
 	
 	/**
 	* Concatenates this transform with a scaling transformation.
@@ -784,7 +784,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* Y axis direction
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function scale(sx : Float, sy : Float) : Void;
+	@:require(java2) @:overload @:public public function scale(sx : Float, sy : Float) : Void;
 	
 	/**
 	* Concatenates this transform with a shearing transformation.
@@ -801,13 +801,13 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* direction of the positive Y axis as a factor of their X coordinate
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function shear(shx : Float, shy : Float) : Void;
+	@:require(java2) @:overload @:public public function shear(shx : Float, shy : Float) : Void;
 	
 	/**
 	* Resets this transform to the Identity transform.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setToIdentity() : Void;
+	@:require(java2) @:overload @:public public function setToIdentity() : Void;
 	
 	/**
 	* Sets this transform to a translation transformation.
@@ -823,7 +823,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* Y axis direction
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setToTranslation(tx : Float, ty : Float) : Void;
+	@:require(java2) @:overload @:public public function setToTranslation(tx : Float, ty : Float) : Void;
 	
 	/**
 	* Sets this transform to a rotation transformation.
@@ -841,7 +841,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param theta the angle of rotation measured in radians
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setToRotation(theta : Float) : Void;
+	@:require(java2) @:overload @:public public function setToRotation(theta : Float) : Void;
 	
 	/**
 	* Sets this transform to a translated rotation transformation.
@@ -874,7 +874,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param anchory the Y coordinate of the rotation anchor point
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setToRotation(theta : Float, anchorx : Float, anchory : Float) : Void;
+	@:require(java2) @:overload @:public public function setToRotation(theta : Float, anchorx : Float, anchory : Float) : Void;
 	
 	/**
 	* Sets this transform to a rotation transformation that rotates
@@ -894,7 +894,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param vecy the Y coordinate of the rotation vector
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setToRotation(vecx : Float, vecy : Float) : Void;
+	@:require(java6) @:overload @:public public function setToRotation(vecx : Float, vecy : Float) : Void;
 	
 	/**
 	* Sets this transform to a rotation transformation that rotates
@@ -918,7 +918,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param anchory the Y coordinate of the rotation anchor point
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setToRotation(vecx : Float, vecy : Float, anchorx : Float, anchory : Float) : Void;
+	@:require(java6) @:overload @:public public function setToRotation(vecx : Float, vecy : Float, anchorx : Float, anchory : Float) : Void;
 	
 	/**
 	* Sets this transform to a rotation transformation that rotates
@@ -932,7 +932,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param numquadrants the number of 90 degree arcs to rotate by
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setToQuadrantRotation(numquadrants : Int) : Void;
+	@:require(java6) @:overload @:public public function setToQuadrantRotation(numquadrants : Int) : Void;
 	
 	/**
 	* Sets this transform to a translated rotation transformation
@@ -950,7 +950,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param anchory the Y coordinate of the rotation anchor point
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setToQuadrantRotation(numquadrants : Int, anchorx : Float, anchory : Float) : Void;
+	@:require(java6) @:overload @:public public function setToQuadrantRotation(numquadrants : Int, anchorx : Float, anchory : Float) : Void;
 	
 	/**
 	* Sets this transform to a scaling transformation.
@@ -966,7 +966,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* Y axis direction
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setToScale(sx : Float, sy : Float) : Void;
+	@:require(java2) @:overload @:public public function setToScale(sx : Float, sy : Float) : Void;
 	
 	/**
 	* Sets this transform to a shearing transformation.
@@ -982,7 +982,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* direction of the positive Y axis as a factor of their X coordinate
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setToShear(shx : Float, shy : Float) : Void;
+	@:require(java2) @:overload @:public public function setToShear(shx : Float, shy : Float) : Void;
 	
 	/**
 	* Sets this transform to a copy of the transform in the specified
@@ -991,7 +991,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* copy the transform
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setTransform(Tx : java.awt.geom.AffineTransform) : Void;
+	@:require(java2) @:overload @:public public function setTransform(Tx : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Sets this transform to the matrix specified by the 6
@@ -1005,7 +1005,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param m12 the Y coordinate translation element of the 3x3 matrix
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setTransform(m00 : Float, m10 : Float, m01 : Float, m11 : Float, m02 : Float, m12 : Float) : Void;
+	@:require(java2) @:overload @:public public function setTransform(m00 : Float, m10 : Float, m01 : Float, m11 : Float, m02 : Float, m12 : Float) : Void;
 	
 	/**
 	* Concatenates an <code>AffineTransform</code> <code>Tx</code> to
@@ -1028,7 +1028,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #preConcatenate
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function concatenate(Tx : java.awt.geom.AffineTransform) : Void;
+	@:require(java2) @:overload @:public public function concatenate(Tx : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Concatenates an <code>AffineTransform</code> <code>Tx</code> to
@@ -1054,7 +1054,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @see #concatenate
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function preConcatenate(Tx : java.awt.geom.AffineTransform) : Void;
+	@:require(java2) @:overload @:public public function preConcatenate(Tx : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Returns an <code>AffineTransform</code> object representing the
@@ -1078,7 +1078,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* if the matrix cannot be inverted.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function createInverse() : java.awt.geom.AffineTransform;
+	@:require(java2) @:overload @:public public function createInverse() : java.awt.geom.AffineTransform;
 	
 	/**
 	* Sets this transform to the inverse of itself.
@@ -1099,7 +1099,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* if the matrix cannot be inverted.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function invert() : Void;
+	@:require(java6) @:overload @:public public function invert() : Void;
 	
 	/**
 	* Transforms the specified <code>ptSrc</code> and stores the result
@@ -1119,7 +1119,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* <code>ptSrc</code> and stroring the result in <code>ptDst</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function transform(ptSrc : java.awt.geom.Point2D, ptDst : java.awt.geom.Point2D) : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public public function transform(ptSrc : java.awt.geom.Point2D, ptDst : java.awt.geom.Point2D) : java.awt.geom.Point2D;
 	
 	/**
 	* Transforms an array of point objects by this transform.
@@ -1152,7 +1152,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param numPts the number of point objects to be transformed
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function transform(ptSrc : java.NativeArray<java.awt.geom.Point2D>, srcOff : Int, ptDst : java.NativeArray<java.awt.geom.Point2D>, dstOff : Int, numPts : Int) : Void;
+	@:require(java2) @:overload @:public public function transform(ptSrc : java.NativeArray<java.awt.geom.Point2D>, srcOff : Int, ptDst : java.NativeArray<java.awt.geom.Point2D>, dstOff : Int, numPts : Int) : Void;
 	
 	/**
 	* Transforms an array of floating point coordinates by this transform.
@@ -1175,7 +1175,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param numPts the number of points to be transformed
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function transform(srcPts : java.NativeArray<Single>, srcOff : Int, dstPts : java.NativeArray<Single>, dstOff : Int, numPts : Int) : Void;
+	@:require(java2) @:overload @:public public function transform(srcPts : java.NativeArray<Single>, srcOff : Int, dstPts : java.NativeArray<Single>, dstOff : Int, numPts : Int) : Void;
 	
 	/**
 	* Transforms an array of double precision coordinates by this transform.
@@ -1198,7 +1198,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param numPts the number of point objects to be transformed
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function transform(srcPts : java.NativeArray<Float>, srcOff : Int, dstPts : java.NativeArray<Float>, dstOff : Int, numPts : Int) : Void;
+	@:require(java2) @:overload @:public public function transform(srcPts : java.NativeArray<Float>, srcOff : Int, dstPts : java.NativeArray<Float>, dstOff : Int, numPts : Int) : Void;
 	
 	/**
 	* Transforms an array of floating point coordinates by this transform
@@ -1217,7 +1217,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param numPts the number of points to be transformed
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function transform(srcPts : java.NativeArray<Single>, srcOff : Int, dstPts : java.NativeArray<Float>, dstOff : Int, numPts : Int) : Void;
+	@:require(java2) @:overload @:public public function transform(srcPts : java.NativeArray<Single>, srcOff : Int, dstPts : java.NativeArray<Float>, dstOff : Int, numPts : Int) : Void;
 	
 	/**
 	* Transforms an array of double precision coordinates by this transform
@@ -1236,7 +1236,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* @param numPts the number of point objects to be transformed
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function transform(srcPts : java.NativeArray<Float>, srcOff : Int, dstPts : java.NativeArray<Single>, dstOff : Int, numPts : Int) : Void;
+	@:require(java2) @:overload @:public public function transform(srcPts : java.NativeArray<Float>, srcOff : Int, dstPts : java.NativeArray<Single>, dstOff : Int, numPts : Int) : Void;
 	
 	/**
 	* Inverse transforms the specified <code>ptSrc</code> and stores the
@@ -1257,7 +1257,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	*                                         inverted.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function inverseTransform(ptSrc : java.awt.geom.Point2D, ptDst : java.awt.geom.Point2D) : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public public function inverseTransform(ptSrc : java.awt.geom.Point2D, ptDst : java.awt.geom.Point2D) : java.awt.geom.Point2D;
 	
 	/**
 	* Inverse transforms an array of double precision coordinates by
@@ -1283,7 +1283,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	*                                         inverted.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function inverseTransform(srcPts : java.NativeArray<Float>, srcOff : Int, dstPts : java.NativeArray<Float>, dstOff : Int, numPts : Int) : Void;
+	@:require(java2) @:overload @:public public function inverseTransform(srcPts : java.NativeArray<Float>, srcOff : Int, dstPts : java.NativeArray<Float>, dstOff : Int, numPts : Int) : Void;
 	
 	/**
 	* Transforms the relative distance vector specified by
@@ -1310,7 +1310,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* transformation.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function deltaTransform(ptSrc : java.awt.geom.Point2D, ptDst : java.awt.geom.Point2D) : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public public function deltaTransform(ptSrc : java.awt.geom.Point2D, ptDst : java.awt.geom.Point2D) : java.awt.geom.Point2D;
 	
 	/**
 	* Transforms an array of relative distance vectors by this
@@ -1343,7 +1343,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* transformed
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function deltaTransform(srcPts : java.NativeArray<Float>, srcOff : Int, dstPts : java.NativeArray<Float>, dstOff : Int, numPts : Int) : Void;
+	@:require(java2) @:overload @:public public function deltaTransform(srcPts : java.NativeArray<Float>, srcOff : Int, dstPts : java.NativeArray<Float>, dstOff : Int, numPts : Int) : Void;
 	
 	/**
 	* Returns a new {@link Shape} object defined by the geometry of the
@@ -1355,7 +1355,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* of the transformed <code>Shape</code>, or null if {@code pSrc} is null.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function createTransformedShape(pSrc : java.awt.Shape) : java.awt.Shape;
+	@:require(java2) @:overload @:public public function createTransformedShape(pSrc : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Returns a <code>String</code> that represents the value of this
@@ -1364,7 +1364,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* <code>Object</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function toString() : String;
+	@:require(java2) @:overload @:public public function toString() : String;
 	
 	/**
 	* Returns <code>true</code> if this <code>AffineTransform</code> is
@@ -1373,7 +1373,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* an identity transform; <code>false</code> otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function isIdentity() : Bool;
+	@:require(java2) @:overload @:public public function isIdentity() : Bool;
 	
 	/**
 	* Returns a copy of this <code>AffineTransform</code> object.
@@ -1381,14 +1381,14 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* <code>AffineTransform</code> object.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function clone() : Dynamic;
+	@:require(java2) @:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns the hashcode for this transform.
 	* @return      a hash code for this transform.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function hashCode() : Int;
+	@:require(java2) @:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns <code>true</code> if this <code>AffineTransform</code>
@@ -1400,7 +1400,7 @@ extern class AffineTransform implements java.lang.Cloneable implements java.io.S
 	* <code>AffineTransform</code> object; <code>false</code> otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function equals(obj : Dynamic) : Bool;
+	@:require(java2) @:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

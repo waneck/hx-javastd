@@ -29,19 +29,19 @@ extern class BIInterface
 	* Gets the name of this interface.
 	* This name should also used as the class name.
 	*/
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/**
 	* Gets the names of interfaces/classes that implement
 	* this interface.
 	*/
-	@:overload public function members() : java.NativeArray<String>;
+	@:overload @:public public function members() : java.NativeArray<String>;
 	
 	/** Gets the names of fields in this interface. */
-	@:overload public function fields() : java.NativeArray<String>;
+	@:overload @:public public function fields() : java.NativeArray<String>;
 	
 	/** Gets the location where this declaration is declared. */
-	@:overload public function getSourceLocation() : org.xml.sax.Locator;
+	@:overload @:public public function getSourceLocation() : org.xml.sax.Locator;
 	
 	
 }

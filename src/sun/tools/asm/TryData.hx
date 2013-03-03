@@ -28,17 +28,17 @@ extern class TryData
 	/**
 	* Add a label
 	*/
-	@:overload public function add(type : Dynamic) : sun.tools.asm.CatchData;
+	@:overload @:public public function add(type : Dynamic) : sun.tools.asm.CatchData;
 	
 	/**
 	* Get a label
 	*/
-	@:overload public function getCatch(n : Int) : sun.tools.asm.CatchData;
+	@:overload @:public public function getCatch(n : Int) : sun.tools.asm.CatchData;
 	
 	/**
 	* Get the default label
 	*/
-	@:overload public function getEndLabel() : sun.tools.asm.Label;
+	@:overload @:public public function getEndLabel() : sun.tools.asm.Label;
 	
 	
 }

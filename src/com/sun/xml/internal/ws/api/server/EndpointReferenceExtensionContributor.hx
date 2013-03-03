@@ -32,13 +32,13 @@ extern class EndpointReferenceExtensionContributor
 	*
 	* @return  EPRExtension that should be finally configured on an Endpoint.
 	*/
-	@:overload @:abstract public function getEPRExtension(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, extension : com.sun.xml.internal.ws.api.addressing.WSEndpointReference.WSEndpointReference_EPRExtension) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference.WSEndpointReference_EPRExtension;
+	@:overload @:public @:abstract public function getEPRExtension(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, extension : com.sun.xml.internal.ws.api.addressing.WSEndpointReference.WSEndpointReference_EPRExtension) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference.WSEndpointReference_EPRExtension;
 	
 	/**
 	*
 	* @return QName of the extensibility element that is contributed by this extension.
 	*/
-	@:overload @:abstract public function getQName() : javax.xml.namespace.QName;
+	@:overload @:public @:abstract public function getQName() : javax.xml.namespace.QName;
 	
 	
 }

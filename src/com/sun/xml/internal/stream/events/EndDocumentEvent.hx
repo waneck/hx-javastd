@@ -30,13 +30,13 @@ extern class EndDocumentEvent extends com.sun.xml.internal.stream.events.DummyEv
 	*
 	* @author Neeraj Bajaj, Sun Microsystems.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload @:protected override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	
 }

@@ -39,7 +39,7 @@ package javax.script;
 	* @see java.lang.System#out
 	* @see java.io.PrintWriter
 	*/
-	private var writer : java.io.Writer;
+	@:protected private var writer : java.io.Writer;
 	
 	/**
 	* This is the writer to be used to output errors from scripts.
@@ -49,7 +49,7 @@ package javax.script;
 	* @see java.lang.System#err
 	* @see java.io.PrintWriter
 	*/
-	private var errorWriter : java.io.Writer;
+	@:protected private var errorWriter : java.io.Writer;
 	
 	/**
 	* This is the reader to be used for input from scripts.
@@ -59,7 +59,7 @@ package javax.script;
 	* @see java.lang.System#in
 	* @see java.io.InputStreamReader
 	*/
-	private var reader : java.io.Reader;
+	@:protected private var reader : java.io.Reader;
 	
 	/**
 	* This is the engine scope bindings.
@@ -67,16 +67,16 @@ package javax.script;
 	* methods setBindings, getBindings are used to manage this field.
 	* @see SimpleBindings
 	*/
-	private var engineScope : javax.script.Bindings;
+	@:protected private var engineScope : javax.script.Bindings;
 	
 	/**
 	* This is the global scope bindings.
 	* By default, a null value (which means no global scope) is used. Accessor
 	* methods setBindings, getBindings are used to manage this field.
 	*/
-	private var globalScope : javax.script.Bindings;
+	@:protected private var globalScope : javax.script.Bindings;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets a <code>Bindings</code> of attributes for the given scope.  If the value
@@ -92,7 +92,7 @@ package javax.script;
 	* @throws NullPointerException if the value of scope is <code>ENGINE_SCOPE</code> and
 	* the specified <code>Bindings</code> is null.
 	*/
-	@:overload public function setBindings(bindings : javax.script.Bindings, scope : Int) : Void;
+	@:overload @:public public function setBindings(bindings : javax.script.Bindings, scope : Int) : Void;
 	
 	/**
 	* Retrieves the value of the attribute with the given name in
@@ -107,7 +107,7 @@ package javax.script;
 	* @throws NullPointerException if the name is null.
 	* @throws IllegalArgumentException if the name is empty.
 	*/
-	@:overload public function getAttribute(name : String) : Dynamic;
+	@:overload @:public public function getAttribute(name : String) : Dynamic;
 	
 	/**
 	* Gets the value of an attribute in a given scope.
@@ -121,7 +121,7 @@ package javax.script;
 	*         if the name is empty or if the value of scope is invalid.
 	* @throws NullPointerException if the name is null.
 	*/
-	@:overload public function getAttribute(name : String, scope : Int) : Dynamic;
+	@:overload @:public public function getAttribute(name : String, scope : Int) : Dynamic;
 	
 	/**
 	* Remove an attribute in a given scope.
@@ -134,7 +134,7 @@ package javax.script;
 	*         if the name is empty or if the scope is invalid.
 	* @throws NullPointerException if the name is null.
 	*/
-	@:overload public function removeAttribute(name : String, scope : Int) : Dynamic;
+	@:overload @:public public function removeAttribute(name : String, scope : Int) : Dynamic;
 	
 	/**
 	* Sets the value of an attribute in a given scope.
@@ -147,25 +147,25 @@ package javax.script;
 	*         if the name is empty or if the scope is invalid.
 	* @throws NullPointerException if the name is null.
 	*/
-	@:overload public function setAttribute(name : String, value : Dynamic, scope : Int) : Void;
+	@:overload @:public public function setAttribute(name : String, value : Dynamic, scope : Int) : Void;
 	
 	/** {@inheritDoc} */
-	@:overload public function getWriter() : java.io.Writer;
+	@:overload @:public public function getWriter() : java.io.Writer;
 	
 	/** {@inheritDoc} */
-	@:overload public function getReader() : java.io.Reader;
+	@:overload @:public public function getReader() : java.io.Reader;
 	
 	/** {@inheritDoc} */
-	@:overload public function setReader(reader : java.io.Reader) : Void;
+	@:overload @:public public function setReader(reader : java.io.Reader) : Void;
 	
 	/** {@inheritDoc} */
-	@:overload public function setWriter(writer : java.io.Writer) : Void;
+	@:overload @:public public function setWriter(writer : java.io.Writer) : Void;
 	
 	/** {@inheritDoc} */
-	@:overload public function getErrorWriter() : java.io.Writer;
+	@:overload @:public public function getErrorWriter() : java.io.Writer;
 	
 	/** {@inheritDoc} */
-	@:overload public function setErrorWriter(writer : java.io.Writer) : Void;
+	@:overload @:public public function setErrorWriter(writer : java.io.Writer) : Void;
 	
 	/**
 	* Get the lowest scope in which an attribute is defined.
@@ -176,7 +176,7 @@ package javax.script;
 	* @throws NullPointerException if name is null.
 	* @throws IllegalArgumentException if name is empty.
 	*/
-	@:overload public function getAttributesScope(name : String) : Int;
+	@:overload @:public public function getAttributesScope(name : String) : Int;
 	
 	/**
 	* Returns the value of the <code>engineScope</code> field if specified scope is
@@ -187,10 +187,10 @@ package javax.script;
 	* @return The value of either the  <code>engineScope</code> or <code>globalScope</code> field.
 	* @throws IllegalArgumentException if the value of scope is invalid.
 	*/
-	@:overload public function getBindings(scope : Int) : javax.script.Bindings;
+	@:overload @:public public function getBindings(scope : Int) : javax.script.Bindings;
 	
 	/** {@inheritDoc} */
-	@:overload public function getScopes() : java.util.List<Null<Int>>;
+	@:overload @:public public function getScopes() : java.util.List<Null<Int>>;
 	
 	
 }

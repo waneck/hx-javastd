@@ -32,7 +32,7 @@ extern class ClosedWatchServiceException extends java.lang.IllegalStateException
 	/**
 	* Constructs an instance of this class.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

@@ -35,9 +35,9 @@ package com.sun.tools.hat.internal.model;
 */
 extern class JavaDouble extends com.sun.tools.hat.internal.model.JavaValue
 {
-	@:overload public function new(value : Float) : Void;
+	@:overload @:public public function new(value : Float) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

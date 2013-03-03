@@ -27,7 +27,7 @@ extern class XMLWriter extends java.io.Writer
 {
 	/** Creates the instance of <code>XMLWriter</code>
 	*/
-	@:overload public function new(writer : java.io.Writer) : Void;
+	@:overload @:public public function new(writer : java.io.Writer) : Void;
 	
 	/**
 	* Creates the instnace of <code>XMLWriter</code>.
@@ -35,7 +35,7 @@ extern class XMLWriter extends java.io.Writer
 	* atleast buffers the input to the
 	* <code>size</code> specified.
 	*/
-	@:overload public function new(writer : java.io.Writer, size : Int) : Void;
+	@:overload @:public public function new(writer : java.io.Writer, size : Int) : Void;
 	
 	/**
 	* Write a single character.  The character to be written is contained in
@@ -48,7 +48,7 @@ extern class XMLWriter extends java.io.Writer
 	* @param c  int specifying a character to be written.
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(c : Int) : Void;
+	@:overload @:public override public function write(c : Int) : Void;
 	
 	/**
 	* Write an array of characters.
@@ -57,7 +57,7 @@ extern class XMLWriter extends java.io.Writer
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Write a portion of an array of characters.
@@ -68,7 +68,7 @@ extern class XMLWriter extends java.io.Writer
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
 	/**
 	* Write a portion of a string.
@@ -79,7 +79,7 @@ extern class XMLWriter extends java.io.Writer
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(str : String, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(str : String, off : Int, len : Int) : Void;
 	
 	/**
 	* Write a string.
@@ -88,7 +88,7 @@ extern class XMLWriter extends java.io.Writer
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(str : String) : Void;
+	@:overload @:public override public function write(str : String) : Void;
 	
 	/**
 	* Close the stream, flushing it first.  Once a stream has been closed,
@@ -97,7 +97,7 @@ extern class XMLWriter extends java.io.Writer
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Flush the stream.  If the stream has saved any characters from the
@@ -108,32 +108,32 @@ extern class XMLWriter extends java.io.Writer
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/** Reset this Writer.
 	*
 	* see @setWriter()
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Set the given <code>Writer</code>.
 	*
 	* @param Writer Writer.
 	*/
-	@:overload public function setWriter(writer : java.io.Writer) : Void;
+	@:overload @:public public function setWriter(writer : java.io.Writer) : Void;
 	
 	/** Set the given <code>Writer</code>
 	*
 	* @param Writer Writer.
 	* @param int    Writer will buffer the character data size, after that data is written to stream.
 	*/
-	@:overload public function setWriter(writer : java.io.Writer, size : Int) : Void;
+	@:overload @:public public function setWriter(writer : java.io.Writer, size : Int) : Void;
 	
 	/**
 	* Returns underlying <code>Writer</code>
 	*/
-	@:overload private function getWriter() : java.io.Writer;
+	@:overload @:protected private function getWriter() : java.io.Writer;
 	
 	
 }

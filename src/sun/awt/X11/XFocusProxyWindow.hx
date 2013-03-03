@@ -30,23 +30,23 @@ package sun.awt.X11;
 */
 extern class XFocusProxyWindow extends sun.awt.X11.XBaseWindow
 {
-	@:overload public function new(owner : sun.awt.X11.XWindowPeer) : Void;
+	@:overload @:public public function new(owner : sun.awt.X11.XWindowPeer) : Void;
 	
-	@:overload public function postInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload @:public public function postInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
-	@:overload override private function getWMName() : String;
+	@:overload @:protected override private function getWMName() : String;
 	
-	@:overload private function getWMClass() : java.NativeArray<String>;
+	@:overload @:protected private function getWMClass() : java.NativeArray<String>;
 	
-	@:overload public function getOwner() : sun.awt.X11.XWindowPeer;
+	@:overload @:public public function getOwner() : sun.awt.X11.XWindowPeer;
 	
-	@:overload override public function dispatchEvent(ev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function dispatchEvent(ev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function handleFocusEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handleFocusEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload override public function handleKeyPress(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleKeyPress(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload override public function handleKeyRelease(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handleKeyRelease(xev : sun.awt.X11.XEvent) : Void;
 	
 	
 }

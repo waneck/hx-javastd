@@ -33,25 +33,25 @@ extern class BinaryCode implements sun.tools.java.Constants
 	/**
 	* Construct the binary code from the code attribute
 	*/
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>, cpool : sun.tools.java.BinaryConstantPool, env : sun.tools.java.Environment) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>, cpool : sun.tools.java.BinaryConstantPool, env : sun.tools.java.Environment) : Void;
 	
 	/**
 	* Accessors
 	*/
-	@:overload public function getExceptionHandlers() : java.NativeArray<sun.tools.java.BinaryExceptionHandler>;
+	@:overload @:public public function getExceptionHandlers() : java.NativeArray<sun.tools.java.BinaryExceptionHandler>;
 	
-	@:overload public function getCode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getCode() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getMaxStack() : Int;
+	@:overload @:public public function getMaxStack() : Int;
 	
-	@:overload public function getMaxLocals() : Int;
+	@:overload @:public public function getMaxLocals() : Int;
 	
-	@:overload public function getAttributes() : sun.tools.java.BinaryAttribute;
+	@:overload @:public public function getAttributes() : sun.tools.java.BinaryAttribute;
 	
 	/**
 	* Load a binary class
 	*/
-	@:overload public static function load(bf : sun.tools.java.BinaryMember, cpool : sun.tools.java.BinaryConstantPool, env : sun.tools.java.Environment) : sun.tools.java.BinaryCode;
+	@:overload @:public @:static public static function load(bf : sun.tools.java.BinaryMember, cpool : sun.tools.java.BinaryConstantPool, env : sun.tools.java.Environment) : sun.tools.java.BinaryCode;
 	
 	
 }

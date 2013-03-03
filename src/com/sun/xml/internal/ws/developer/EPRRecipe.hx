@@ -28,36 +28,36 @@ extern class EPRRecipe
 	/**
 	* Gets all the reference parameters added so far.
 	*/
-	@:overload public function getReferenceParameters() : java.util.List<com.sun.xml.internal.ws.api.message.Header>;
+	@:overload @:public public function getReferenceParameters() : java.util.List<com.sun.xml.internal.ws.api.message.Header>;
 	
 	/**
 	* Gets all the metadata added so far.
 	*/
-	@:overload public function getMetadata() : java.util.List<javax.xml.transform.Source>;
+	@:overload @:public public function getMetadata() : java.util.List<javax.xml.transform.Source>;
 	
 	/**
 	* Adds a new reference parameter.
 	*/
-	@:overload public function addReferenceParameter(h : com.sun.xml.internal.ws.api.message.Header) : com.sun.xml.internal.ws.developer.EPRRecipe;
+	@:overload @:public public function addReferenceParameter(h : com.sun.xml.internal.ws.api.message.Header) : com.sun.xml.internal.ws.developer.EPRRecipe;
 	
 	/**
 	* Adds all the headers as reference parameters.
 	*/
-	@:overload public function addReferenceParameters(headers : java.NativeArray<com.sun.xml.internal.ws.api.message.Header>) : com.sun.xml.internal.ws.developer.EPRRecipe;
+	@:overload @:public public function addReferenceParameters(headers : java.NativeArray<com.sun.xml.internal.ws.api.message.Header>) : com.sun.xml.internal.ws.developer.EPRRecipe;
 	
 	/**
 	* Adds all the headers as reference parameters.
 	*/
-	@:overload public function addReferenceParameters(headers : java.lang.Iterable<com.sun.xml.internal.ws.api.message.Header>) : com.sun.xml.internal.ws.developer.EPRRecipe;
+	@:overload @:public public function addReferenceParameters(headers : java.lang.Iterable<com.sun.xml.internal.ws.api.message.Header>) : com.sun.xml.internal.ws.developer.EPRRecipe;
 	
 	/**
 	* Adds a new metadata.
 	*/
-	@:overload public function addMetadata(source : javax.xml.transform.Source) : com.sun.xml.internal.ws.developer.EPRRecipe;
+	@:overload @:public public function addMetadata(source : javax.xml.transform.Source) : com.sun.xml.internal.ws.developer.EPRRecipe;
 	
-	@:overload public function addMetadata(sources : java.NativeArray<javax.xml.transform.Source>) : com.sun.xml.internal.ws.developer.EPRRecipe;
+	@:overload @:public public function addMetadata(sources : java.NativeArray<javax.xml.transform.Source>) : com.sun.xml.internal.ws.developer.EPRRecipe;
 	
-	@:overload public function addMetadata(sources : java.lang.Iterable<javax.xml.transform.Source>) : com.sun.xml.internal.ws.developer.EPRRecipe;
+	@:overload @:public public function addMetadata(sources : java.lang.Iterable<javax.xml.transform.Source>) : com.sun.xml.internal.ws.developer.EPRRecipe;
 	
 	
 }

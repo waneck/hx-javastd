@@ -44,7 +44,7 @@ extern class Introspector
 	*         Dynamic MBeans, <code>false</code> otherwise.
 	*
 	**/
-	@:overload @:final public static function isDynamic(c : Class<Dynamic>) : Bool;
+	@:overload @:public @:static @:final public static function isDynamic(c : Class<Dynamic>) : Bool;
 	
 	/**
 	* Basic method for testing that a MBean of a given class can be
@@ -60,11 +60,11 @@ extern class Introspector
 	*            MBeanServer.
 	*
 	**/
-	@:overload public static function testCreation(c : Class<Dynamic>) : Void;
+	@:overload @:public @:static public static function testCreation(c : Class<Dynamic>) : Void;
 	
-	@:overload public static function checkCompliance(mbeanClass : Class<Dynamic>) : Void;
+	@:overload @:public @:static public static function checkCompliance(mbeanClass : Class<Dynamic>) : Void;
 	
-	@:overload public static function makeDynamicMBean<T>(mbean : T) : javax.management.DynamicMBean;
+	@:overload @:public @:static public static function makeDynamicMBean<T>(mbean : T) : javax.management.DynamicMBean;
 	
 	/**
 	* Basic method for testing if a given class is a JMX compliant MBean.
@@ -76,9 +76,9 @@ extern class Introspector
 	* @exception NotCompliantMBeanException The specified class is not a
 	*            JMX compliant MBean
 	*/
-	@:overload public static function testCompliance(baseClass : Class<Dynamic>) : javax.management.MBeanInfo;
+	@:overload @:public @:static public static function testCompliance(baseClass : Class<Dynamic>) : javax.management.MBeanInfo;
 	
-	@:overload public static function testComplianceMXBeanInterface(interfaceClass : Class<Dynamic>) : Void;
+	@:overload @:public @:static public static function testComplianceMXBeanInterface(interfaceClass : Class<Dynamic>) : Void;
 	
 	/**
 	* Basic method for testing if a given class is a JMX compliant
@@ -94,7 +94,7 @@ extern class Introspector
 	* @exception NotCompliantMBeanException The specified class is not a
 	*            JMX compliant Standard MBean
 	*/
-	@:overload @:synchronized public static function testCompliance(baseClass : Class<Dynamic>, mbeanInterface : Class<Dynamic>) : javax.management.MBeanInfo;
+	@:overload @:public @:static @:synchronized public static function testCompliance(baseClass : Class<Dynamic>, mbeanInterface : Class<Dynamic>) : javax.management.MBeanInfo;
 	
 	/**
 	* Get the MBean interface implemented by a JMX Standard
@@ -107,7 +107,7 @@ extern class Introspector
 	*         Return <code>null</code> if the MBean is a DynamicMBean,
 	*         or if no MBean interface is found.
 	*/
-	@:overload public static function getMBeanInterface(baseClass : Class<Dynamic>) : Class<Dynamic>;
+	@:overload @:public @:static public static function getMBeanInterface(baseClass : Class<Dynamic>) : Class<Dynamic>;
 	
 	/**
 	* Get the MBean interface implemented by a JMX Standard MBean class.
@@ -119,7 +119,7 @@ extern class Introspector
 	* @throws NotCompliantMBeanException The specified class is
 	* not a JMX compliant Standard MBean.
 	*/
-	@:overload public static function getStandardMBeanInterface<T>(baseClass : Class<T>) : Class<T>;
+	@:overload @:public @:static public static function getStandardMBeanInterface<T>(baseClass : Class<T>) : Class<T>;
 	
 	/**
 	* Get the MXBean interface implemented by a JMX MXBean class.
@@ -131,13 +131,13 @@ extern class Introspector
 	* @throws NotCompliantMBeanException The specified class is
 	* not a JMX compliant MXBean.
 	*/
-	@:overload public static function getMXBeanInterface<T>(baseClass : Class<T>) : Class<T>;
+	@:overload @:public @:static public static function getMXBeanInterface<T>(baseClass : Class<T>) : Class<T>;
 	
-	@:overload public static function descriptorForElement(elmt : java.lang.reflect.AnnotatedElement) : javax.management.Descriptor;
+	@:overload @:public @:static public static function descriptorForElement(elmt : java.lang.reflect.AnnotatedElement) : javax.management.Descriptor;
 	
-	@:overload public static function descriptorForAnnotations(annots : java.NativeArray<java.lang.annotation.Annotation>) : javax.management.Descriptor;
+	@:overload @:public @:static public static function descriptorForAnnotations(annots : java.NativeArray<java.lang.annotation.Annotation>) : javax.management.Descriptor;
 	
-	@:overload public static function elementFromComplex(complex : Dynamic, element : String) : Dynamic;
+	@:overload @:public @:static public static function elementFromComplex(complex : Dynamic, element : String) : Dynamic;
 	
 	
 }

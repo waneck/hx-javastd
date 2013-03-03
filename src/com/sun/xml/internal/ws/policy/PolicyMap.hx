@@ -31,83 +31,83 @@ extern class PolicyMap implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	* @param mutators collection of mutators that should be connected to the newly created map.
 	* @return new policy map instance (mutable via provided collection of mutators).
 	*/
-	@:overload public static function createPolicyMap(mutators : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapMutator>) : com.sun.xml.internal.ws.policy.PolicyMap;
+	@:overload @:public @:static public static function createPolicyMap(mutators : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapMutator>) : com.sun.xml.internal.ws.policy.PolicyMap;
 	
-	@:overload public function getServiceEffectivePolicy(key : com.sun.xml.internal.ws.policy.PolicyMapKey) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public public function getServiceEffectivePolicy(key : com.sun.xml.internal.ws.policy.PolicyMapKey) : com.sun.xml.internal.ws.policy.Policy;
 	
-	@:overload public function getEndpointEffectivePolicy(key : com.sun.xml.internal.ws.policy.PolicyMapKey) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public public function getEndpointEffectivePolicy(key : com.sun.xml.internal.ws.policy.PolicyMapKey) : com.sun.xml.internal.ws.policy.Policy;
 	
-	@:overload public function getOperationEffectivePolicy(key : com.sun.xml.internal.ws.policy.PolicyMapKey) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public public function getOperationEffectivePolicy(key : com.sun.xml.internal.ws.policy.PolicyMapKey) : com.sun.xml.internal.ws.policy.Policy;
 	
-	@:overload public function getInputMessageEffectivePolicy(key : com.sun.xml.internal.ws.policy.PolicyMapKey) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public public function getInputMessageEffectivePolicy(key : com.sun.xml.internal.ws.policy.PolicyMapKey) : com.sun.xml.internal.ws.policy.Policy;
 	
-	@:overload public function getOutputMessageEffectivePolicy(key : com.sun.xml.internal.ws.policy.PolicyMapKey) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public public function getOutputMessageEffectivePolicy(key : com.sun.xml.internal.ws.policy.PolicyMapKey) : com.sun.xml.internal.ws.policy.Policy;
 	
-	@:overload public function getFaultMessageEffectivePolicy(key : com.sun.xml.internal.ws.policy.PolicyMapKey) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public public function getFaultMessageEffectivePolicy(key : com.sun.xml.internal.ws.policy.PolicyMapKey) : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* Returns all service scope keys stored in this policy map
 	*
 	* @return collection of service scope policy map keys stored in the map.
 	*/
-	@:overload public function getAllServiceScopeKeys() : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapKey>;
+	@:overload @:public public function getAllServiceScopeKeys() : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapKey>;
 	
 	/**
 	* Returns all endpoint scope keys stored in this policy map
 	*
 	* @return collection of endpoint scope policy map keys stored in the map.
 	*/
-	@:overload public function getAllEndpointScopeKeys() : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapKey>;
+	@:overload @:public public function getAllEndpointScopeKeys() : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapKey>;
 	
 	/**
 	* Returns all operation scope keys stored in this policy map
 	*
 	* @return collection of operation scope policy map keys stored in the map.
 	*/
-	@:overload public function getAllOperationScopeKeys() : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapKey>;
+	@:overload @:public public function getAllOperationScopeKeys() : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapKey>;
 	
 	/**
 	* Returns all input message scope keys stored in this policy map
 	*
 	* @return collection of input message scope policy map keys stored in the map.
 	*/
-	@:overload public function getAllInputMessageScopeKeys() : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapKey>;
+	@:overload @:public public function getAllInputMessageScopeKeys() : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapKey>;
 	
 	/**
 	* Returns all output message scope keys stored in this policy map
 	*
 	* @return collection of output message scope policy map keys stored in the map.
 	*/
-	@:overload public function getAllOutputMessageScopeKeys() : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapKey>;
+	@:overload @:public public function getAllOutputMessageScopeKeys() : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapKey>;
 	
 	/**
 	* Returns all fault message scope keys stored in this policy map
 	*
 	* @return collection of input message scope policy map keys stored in the map.
 	*/
-	@:overload public function getAllFaultMessageScopeKeys() : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapKey>;
+	@:overload @:public public function getAllFaultMessageScopeKeys() : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapKey>;
 	
 	/**
 	* Returns all policy subjects contained by this map.
 	*
 	* @return All policy subjects contained by this map
 	*/
-	@:overload public function getPolicySubjects() : java.util.Collection<com.sun.xml.internal.ws.policy.PolicySubject>;
+	@:overload @:public public function getPolicySubjects() : java.util.Collection<com.sun.xml.internal.ws.policy.PolicySubject>;
 	
 	/*
 	* TODO: reconsider this QUICK HACK
 	*/
-	@:overload public function isInputMessageSubject(subject : com.sun.xml.internal.ws.policy.PolicySubject) : Bool;
+	@:overload @:public public function isInputMessageSubject(subject : com.sun.xml.internal.ws.policy.PolicySubject) : Bool;
 	
 	/*
 	* TODO: reconsider this QUICK HACK
 	*/
-	@:overload public function isOutputMessageSubject(subject : com.sun.xml.internal.ws.policy.PolicySubject) : Bool;
+	@:overload @:public public function isOutputMessageSubject(subject : com.sun.xml.internal.ws.policy.PolicySubject) : Bool;
 	
 	/*
 	* TODO: reconsider this QUICK HACK
 	*/
-	@:overload public function isFaultMessageSubject(subject : com.sun.xml.internal.ws.policy.PolicySubject) : Bool;
+	@:overload @:public public function isFaultMessageSubject(subject : com.sun.xml.internal.ws.policy.PolicySubject) : Bool;
 	
 	/**
 	* Returns true if this map contains no key - policy pairs
@@ -116,7 +116,7 @@ extern class PolicyMap implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	*
 	* @return true if this map contains no key - policy pairs
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Creates a service policy scope <emph>locator</emph> object, that serves as a access key into
@@ -125,7 +125,7 @@ extern class PolicyMap implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	* @param service qualified name of the service. Must not be {@code null}.
 	* @throws IllegalArgumentException in case service, port or operation parameter is {@code null}.
 	*/
-	@:overload public static function createWsdlServiceScopeKey(service : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.PolicyMapKey;
+	@:overload @:public @:static public static function createWsdlServiceScopeKey(service : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.PolicyMapKey;
 	
 	/**
 	* Creates an endpoint policy scope <emph>locator</emph> object, that serves as a access key into
@@ -135,7 +135,7 @@ extern class PolicyMap implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	* @param port qualified name of the endpoint. Must not be {@code null}.
 	* @throws IllegalArgumentException in case service, port or operation parameter is {@code null}.
 	*/
-	@:overload public static function createWsdlEndpointScopeKey(service : javax.xml.namespace.QName, port : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.PolicyMapKey;
+	@:overload @:public @:static public static function createWsdlEndpointScopeKey(service : javax.xml.namespace.QName, port : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.PolicyMapKey;
 	
 	/**
 	* Creates an operation policy scope <emph>locator</emph> object, that serves as a access key into
@@ -146,7 +146,7 @@ extern class PolicyMap implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	* @param operation qualified name of the operation. Must not be {@code null}.
 	* @throws IllegalArgumentException in case service, port or operation parameter is {@code null}.
 	*/
-	@:overload public static function createWsdlOperationScopeKey(service : javax.xml.namespace.QName, port : javax.xml.namespace.QName, operation : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.PolicyMapKey;
+	@:overload @:public @:static public static function createWsdlOperationScopeKey(service : javax.xml.namespace.QName, port : javax.xml.namespace.QName, operation : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.PolicyMapKey;
 	
 	/**
 	* Creates an input/output message policy scope <emph>locator</emph> object identified by a bound operation, that serves as a
@@ -162,7 +162,7 @@ extern class PolicyMap implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	* @throws IllegalArgumentException in case service, port or operation parameter is {@code null}.
 	*
 	*/
-	@:overload public static function createWsdlMessageScopeKey(service : javax.xml.namespace.QName, port : javax.xml.namespace.QName, operation : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.PolicyMapKey;
+	@:overload @:public @:static public static function createWsdlMessageScopeKey(service : javax.xml.namespace.QName, port : javax.xml.namespace.QName, operation : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.PolicyMapKey;
 	
 	/**
 	* Creates a fault message policy scope <emph>locator</emph> object identified by a bound operation, that serves as a
@@ -180,11 +180,11 @@ extern class PolicyMap implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	* @throws IllegalArgumentException in case service, port or operation parameter is {@code null}.
 	*
 	*/
-	@:overload public static function createWsdlFaultMessageScopeKey(service : javax.xml.namespace.QName, port : javax.xml.namespace.QName, operation : javax.xml.namespace.QName, fault : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.PolicyMapKey;
+	@:overload @:public @:static public static function createWsdlFaultMessageScopeKey(service : javax.xml.namespace.QName, port : javax.xml.namespace.QName, operation : javax.xml.namespace.QName, fault : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.PolicyMapKey;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.policy.Policy>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.policy.Policy>;
 	
 	
 }
@@ -201,11 +201,11 @@ extern class PolicyMap implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 
 @:native('com$sun$xml$internal$ws$policy$PolicyMap$ScopeMap') @:internal extern class PolicyMap_ScopeMap implements java.lang.Iterable<com.sun.xml.internal.ws.policy.Policy>
 {
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.policy.Policy>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.policy.Policy>;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

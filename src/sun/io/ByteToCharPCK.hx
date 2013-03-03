@@ -25,11 +25,11 @@ package sun.io;
 */
 extern class ByteToCharPCK extends sun.io.ByteToCharSJIS
 {
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
-	@:overload private function convSingleByte(b : Int) : java.StdTypes.Char16;
+	@:overload @:protected override private function convSingleByte(b : Int) : java.StdTypes.Char16;
 	
-	@:overload private function getUnicode(c1 : Int, c2 : Int) : java.StdTypes.Char16;
+	@:overload @:protected override private function getUnicode(c1 : Int, c2 : Int) : java.StdTypes.Char16;
 	
 	
 }

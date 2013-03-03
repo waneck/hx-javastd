@@ -46,7 +46,7 @@ extern interface MonitoringManager extends java.io.Closeable
 	* @param MonitoredObject ...
 	* </p>
 	*/
-	@:overload public function getRootMonitoredObject() : com.sun.corba.se.spi.monitoring.MonitoredObject;
+	@:overload @:public public function getRootMonitoredObject() : com.sun.corba.se.spi.monitoring.MonitoredObject;
 	
 	/**
 	* <p>
@@ -56,7 +56,7 @@ extern interface MonitoringManager extends java.io.Closeable
 	* </p>
 	*
 	*/
-	@:overload public function clearState() : Void;
+	@:overload @:public public function clearState() : Void;
 	
 	
 }

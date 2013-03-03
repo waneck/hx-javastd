@@ -29,7 +29,7 @@ extern class RegisteredDomain
 	* Return the registered part of a qualified domain
 	* name or the original if no match is found.
 	*/
-	@:overload public static function getRegisteredDomain(cname : String) : String;
+	@:overload @:public @:static public static function getRegisteredDomain(cname : String) : String;
 	
 	
 }

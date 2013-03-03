@@ -35,28 +35,28 @@ package sun.rmi.transport.tcp;
 	* @param orig true if this endpoint intiated the underlying
 	*        connection (needs to be set differently at both ends)
 	*/
-	@:overload public function new(channel : sun.rmi.transport.tcp.TCPChannel, _in : java.io.InputStream, out : java.io.OutputStream, orig : Bool) : Void;
+	@:overload @:public public function new(channel : sun.rmi.transport.tcp.TCPChannel, _in : java.io.InputStream, out : java.io.OutputStream, orig : Bool) : Void;
 	
 	/**
 	* Process multiplexing protocol received from underlying connection.
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	/**
 	* Initiate a new multiplexed connection through the underlying
 	* connection.
 	*/
-	@:overload @:synchronized public function openConnection() : sun.rmi.transport.tcp.TCPConnection;
+	@:overload @:public @:synchronized public function openConnection() : sun.rmi.transport.tcp.TCPConnection;
 	
 	/**
 	* Shut down all connections and clean up.
 	*/
-	@:overload public function shutDown() : Void;
+	@:overload @:public public function shutDown() : Void;
 	
 	/**
 	* Shut down connection upon finalization.
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

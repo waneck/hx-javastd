@@ -27,25 +27,25 @@ extern class DOMErrorHandlerWrapper implements com.sun.org.apache.xerces.interna
 	*
 	* @author Gopal Sharma, SUN Microsystems Inc.
 	*/
-	private var fDomErrorHandler : org.w3c.dom.DOMErrorHandler;
+	@:protected private var fDomErrorHandler : org.w3c.dom.DOMErrorHandler;
 	
-	private var fOut : java.io.PrintWriter;
+	@:protected private var fOut : java.io.PrintWriter;
 	
-	public var fCurrentNode : org.w3c.dom.Node;
+	@:public public var fCurrentNode : org.w3c.dom.Node;
 	
 	/** Error code for comparisons. **/
-	private var fErrorCode(default, null) : com.sun.org.apache.xerces.internal.util.XMLErrorCode;
+	@:protected @:final private var fErrorCode(default, null) : com.sun.org.apache.xerces.internal.util.XMLErrorCode;
 	
-	private var fDOMError(default, null) : com.sun.org.apache.xerces.internal.dom.DOMErrorImpl;
+	@:protected @:final private var fDOMError(default, null) : com.sun.org.apache.xerces.internal.dom.DOMErrorImpl;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(domErrorHandler : org.w3c.dom.DOMErrorHandler) : Void;
+	@:overload @:public public function new(domErrorHandler : org.w3c.dom.DOMErrorHandler) : Void;
 	
 	/** Sets the DOM error handler. */
-	@:overload public function setErrorHandler(errorHandler : org.w3c.dom.DOMErrorHandler) : Void;
+	@:overload @:public public function setErrorHandler(errorHandler : org.w3c.dom.DOMErrorHandler) : Void;
 	
-	@:overload public function getErrorHandler() : org.w3c.dom.DOMErrorHandler;
+	@:overload @:public public function getErrorHandler() : org.w3c.dom.DOMErrorHandler;
 	
 	/**
 	* Reports a warning. Warnings are non-fatal and can be safely ignored
@@ -63,7 +63,7 @@ extern class DOMErrorHandlerWrapper implements com.sun.org.apache.xerces.interna
 	* @throws XNIException Thrown to signal that the parser should stop
 	*                      parsing the document.
 	*/
-	@:overload public function warning(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
+	@:overload @:public public function warning(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
 	
 	/**
 	* Reports an error. Errors are non-fatal and usually signify that the
@@ -81,7 +81,7 @@ extern class DOMErrorHandlerWrapper implements com.sun.org.apache.xerces.interna
 	* @throws XNIException Thrown to signal that the parser should stop
 	*                      parsing the document.
 	*/
-	@:overload public function error(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
+	@:overload @:public public function error(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
 	
 	/**
 	* Report a fatal error. Fatal errors usually occur when the document
@@ -107,9 +107,9 @@ extern class DOMErrorHandlerWrapper implements com.sun.org.apache.xerces.interna
 	* @throws XNIException Thrown to signal that the parser should stop
 	*                      parsing the document.
 	*/
-	@:overload public function fatalError(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
+	@:overload @:public public function fatalError(domain : String, key : String, exception : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
 	
-	@:overload public function handleError(error : org.w3c.dom.DOMError) : Bool;
+	@:overload @:public public function handleError(error : org.w3c.dom.DOMError) : Bool;
 	
 	
 }
@@ -119,7 +119,7 @@ extern class DOMErrorHandlerWrapper implements com.sun.org.apache.xerces.interna
 */
 @:native('com$sun$org$apache$xerces$internal$util$DOMErrorHandlerWrapper$DOMErrorTypeMap') @:internal extern class DOMErrorHandlerWrapper_DOMErrorTypeMap
 {
-	@:overload public static function getDOMErrorType(error : com.sun.org.apache.xerces.internal.util.XMLErrorCode) : String;
+	@:overload @:public @:static public static function getDOMErrorType(error : com.sun.org.apache.xerces.internal.util.XMLErrorCode) : String;
 	
 	
 }

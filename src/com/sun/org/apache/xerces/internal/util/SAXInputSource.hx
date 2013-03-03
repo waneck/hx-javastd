@@ -20,33 +20,33 @@ package com.sun.org.apache.xerces.internal.util;
 */
 extern class SAXInputSource extends com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(inputSource : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function new(inputSource : org.xml.sax.InputSource) : Void;
 	
-	@:overload public function new(reader : org.xml.sax.XMLReader, inputSource : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function new(reader : org.xml.sax.XMLReader, inputSource : org.xml.sax.InputSource) : Void;
 	
-	@:overload public function setXMLReader(reader : org.xml.sax.XMLReader) : Void;
+	@:overload @:public public function setXMLReader(reader : org.xml.sax.XMLReader) : Void;
 	
-	@:overload public function getXMLReader() : org.xml.sax.XMLReader;
+	@:overload @:public public function getXMLReader() : org.xml.sax.XMLReader;
 	
-	@:overload public function setInputSource(inputSource : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function setInputSource(inputSource : org.xml.sax.InputSource) : Void;
 	
-	@:overload public function getInputSource() : org.xml.sax.InputSource;
+	@:overload @:public public function getInputSource() : org.xml.sax.InputSource;
 	
 	/**
 	* Sets the public identifier.
 	*
 	* @param publicId The new public identifier.
 	*/
-	@:overload public function setPublicId(publicId : String) : Void;
+	@:overload @:public override public function setPublicId(publicId : String) : Void;
 	
 	/**
 	* Sets the system identifier.
 	*
 	* @param systemId The new system identifier.
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public override public function setSystemId(systemId : String) : Void;
 	
 	/**
 	* Sets the byte stream. If the byte stream is not already opened
@@ -57,7 +57,7 @@ extern class SAXInputSource extends com.sun.org.apache.xerces.internal.xni.parse
 	*
 	* @param byteStream The new byte stream.
 	*/
-	@:overload public function setByteStream(byteStream : java.io.InputStream) : Void;
+	@:overload @:public override public function setByteStream(byteStream : java.io.InputStream) : Void;
 	
 	/**
 	* Sets the character stream. If the character stream is not already
@@ -70,14 +70,14 @@ extern class SAXInputSource extends com.sun.org.apache.xerces.internal.xni.parse
 	*
 	* @see #setEncoding
 	*/
-	@:overload public function setCharacterStream(charStream : java.io.Reader) : Void;
+	@:overload @:public override public function setCharacterStream(charStream : java.io.Reader) : Void;
 	
 	/**
 	* Sets the encoding of the stream.
 	*
 	* @param encoding The new encoding.
 	*/
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public override public function setEncoding(encoding : String) : Void;
 	
 	
 }

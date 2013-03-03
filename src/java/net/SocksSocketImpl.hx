@@ -39,7 +39,7 @@ package java.net;
 	* @throws  IllegalArgumentException if endpoint is null or a
 	*          SocketAddress subclass not supported by this socket
 	*/
-	@:overload override private function connect(endpoint : java.net.SocketAddress, timeout : Int) : Void;
+	@:overload @:protected override private function connect(endpoint : java.net.SocketAddress, timeout : Int) : Void;
 	
 	/**
 	* Sends the Bind request to the SOCKS proxy. In the SOCKS protocol, bind
@@ -49,7 +49,7 @@ package java.net;
 	* @param      addr   the Socket address of the remote host.
 	* @exception  IOException  if an I/O error occurs when binding this socket.
 	*/
-	@:overload @:synchronized private function socksBind(saddr : java.net.InetSocketAddress) : Void;
+	@:overload @:protected @:synchronized private function socksBind(saddr : java.net.InetSocketAddress) : Void;
 	
 	/**
 	* Accepts a connection from a specific host.
@@ -60,7 +60,7 @@ package java.net;
 	* @exception  IOException  if an I/O error occurs when accepting the
 	*               connection.
 	*/
-	@:overload private function acceptFrom(s : java.net.SocketImpl, saddr : java.net.InetSocketAddress) : Void;
+	@:overload @:protected private function acceptFrom(s : java.net.SocketImpl, saddr : java.net.InetSocketAddress) : Void;
 	
 	/**
 	* Returns the value of this socket's <code>address</code> field.
@@ -68,7 +68,7 @@ package java.net;
 	* @return  the value of this socket's <code>address</code> field.
 	* @see     java.net.SocketImpl#address
 	*/
-	@:overload override private function getInetAddress() : java.net.InetAddress;
+	@:overload @:protected override private function getInetAddress() : java.net.InetAddress;
 	
 	/**
 	* Returns the value of this socket's <code>port</code> field.
@@ -76,11 +76,11 @@ package java.net;
 	* @return  the value of this socket's <code>port</code> field.
 	* @see     java.net.SocketImpl#port
 	*/
-	@:overload override private function getPort() : Int;
+	@:overload @:protected override private function getPort() : Int;
 	
-	@:overload override private function getLocalPort() : Int;
+	@:overload @:protected override private function getLocalPort() : Int;
 	
-	@:overload override private function close() : Void;
+	@:overload @:protected override private function close() : Void;
 	
 	
 }

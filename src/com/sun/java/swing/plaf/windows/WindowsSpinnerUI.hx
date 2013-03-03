@@ -25,17 +25,17 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsSpinnerUI extends javax.swing.plaf.basic.BasicSpinnerUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:require(java6) @:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function createPreviousButton() : java.awt.Component;
+	@:overload @:protected override private function createPreviousButton() : java.awt.Component;
 	
-	@:overload override private function createNextButton() : java.awt.Component;
+	@:overload @:protected override private function createNextButton() : java.awt.Component;
 	
 	
 }

@@ -43,7 +43,7 @@ package javax.swing;
 	* @param component  a non-null <code>JComponent</code>
 	* @throws IllegalArgumentException  if <code>component</code> is null
 	*/
-	@:overload public function new(component : javax.swing.JComponent) : Void;
+	@:overload @:public public function new(component : javax.swing.JComponent) : Void;
 	
 	/**
 	* Sets the parent, which must be a <code>ComponentInputMap</code>
@@ -56,29 +56,29 @@ package javax.swing;
 	*         is not a <code>ComponentInputMap</code>
 	*         or is not associated with the same component
 	*/
-	@:overload override public function setParent(map : javax.swing.InputMap) : Void;
+	@:overload @:public override public function setParent(map : javax.swing.InputMap) : Void;
 	
 	/**
 	* Returns the component the <code>InputMap</code> was created for.
 	*/
-	@:overload public function getComponent() : javax.swing.JComponent;
+	@:overload @:public public function getComponent() : javax.swing.JComponent;
 	
 	/**
 	* Adds a binding for <code>keyStroke</code> to <code>actionMapKey</code>.
 	* If <code>actionMapKey</code> is null, this removes the current binding
 	* for <code>keyStroke</code>.
 	*/
-	@:overload override public function put(keyStroke : javax.swing.KeyStroke, actionMapKey : Dynamic) : Void;
+	@:overload @:public override public function put(keyStroke : javax.swing.KeyStroke, actionMapKey : Dynamic) : Void;
 	
 	/**
 	* Removes the binding for <code>key</code> from this object.
 	*/
-	@:overload override public function remove(key : javax.swing.KeyStroke) : Void;
+	@:overload @:public override public function remove(key : javax.swing.KeyStroke) : Void;
 	
 	/**
 	* Removes all the mappings from this object.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }

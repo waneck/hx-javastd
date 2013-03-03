@@ -64,7 +64,7 @@ package org.xml.sax;
 	*
 	* @param parent The parent reader.
 	*/
-	@:overload @:abstract public function setParent(parent : org.xml.sax.XMLReader) : Void;
+	@:overload @:public @:abstract public function setParent(parent : org.xml.sax.XMLReader) : Void;
 	
 	/**
 	* Get the parent reader.
@@ -76,7 +76,7 @@ package org.xml.sax;
 	*
 	* @return The parent filter, or null if none has been set.
 	*/
-	@:overload @:abstract public function getParent() : org.xml.sax.XMLReader;
+	@:overload @:public @:abstract public function getParent() : org.xml.sax.XMLReader;
 	
 	
 }

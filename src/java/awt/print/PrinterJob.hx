@@ -42,7 +42,7 @@ extern class PrinterJob
 	*          {@link java.lang.SecurityManager#checkPrintJobAccess}
 	*          method disallows this thread from creating a print job request
 	*/
-	@:overload public static function getPrinterJob() : java.awt.print.PrinterJob;
+	@:overload @:public @:static public static function getPrinterJob() : java.awt.print.PrinterJob;
 	
 	/**
 	* A convenience method which looks up 2D print services.
@@ -56,7 +56,7 @@ extern class PrinterJob
 	* @return a possibly empty array of 2D print services.
 	* @since     1.4
 	*/
-	@:require(java4) @:overload public static function lookupPrintServices() : java.NativeArray<javax.print.PrintService>;
+	@:require(java4) @:overload @:public @:static public static function lookupPrintServices() : java.NativeArray<javax.print.PrintService>;
 	
 	/**
 	* A convenience method which locates factories for stream print
@@ -92,13 +92,13 @@ extern class PrinterJob
 	* @return a possibly empty array of 2D stream print service factories.
 	* @since     1.4
 	*/
-	@:require(java4) @:overload public static function lookupStreamPrintServices(mimeType : String) : java.NativeArray<javax.print.StreamPrintServiceFactory>;
+	@:require(java4) @:overload @:public @:static public static function lookupStreamPrintServices(mimeType : String) : java.NativeArray<javax.print.StreamPrintServiceFactory>;
 	
 	/**
 	* A <code>PrinterJob</code> object should be created using the
 	* static {@link #getPrinterJob() <code>getPrinterJob</code>} method.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the service (printer) for this printer job.
@@ -110,7 +110,7 @@ extern class PrinterJob
 	* @see #getPrinterJob()
 	* @since     1.4
 	*/
-	@:require(java4) @:overload public function getPrintService() : javax.print.PrintService;
+	@:require(java4) @:overload @:public public function getPrintService() : javax.print.PrintService;
 	
 	/**
 	* Associate this PrinterJob with a new PrintService.
@@ -128,7 +128,7 @@ extern class PrinterJob
 	* @see #getPrintService
 	* @since     1.4
 	*/
-	@:require(java4) @:overload public function setPrintService(service : javax.print.PrintService) : Void;
+	@:require(java4) @:overload @:public public function setPrintService(service : javax.print.PrintService) : Void;
 	
 	/**
 	* Calls <code>painter</code> to render the pages.  The pages in the
@@ -139,7 +139,7 @@ extern class PrinterJob
 	* @param painter the <code>Printable</code> that renders each page of
 	* the document.
 	*/
-	@:overload @:abstract public function setPrintable(painter : java.awt.print.Printable) : Void;
+	@:overload @:public @:abstract public function setPrintable(painter : java.awt.print.Printable) : Void;
 	
 	/**
 	* Calls <code>painter</code> to render the pages in the specified
@@ -152,7 +152,7 @@ extern class PrinterJob
 	* @param format the size and orientation of each page to
 	*                   be printed
 	*/
-	@:overload @:abstract public function setPrintable(painter : java.awt.print.Printable, format : java.awt.print.PageFormat) : Void;
+	@:overload @:public @:abstract public function setPrintable(painter : java.awt.print.Printable, format : java.awt.print.PageFormat) : Void;
 	
 	/**
 	* Queries <code>document</code> for the number of pages and
@@ -166,7 +166,7 @@ extern class PrinterJob
 	* @see PageFormat
 	* @see Printable
 	*/
-	@:overload @:abstract public function setPageable(document : java.awt.print.Pageable) : Void;
+	@:overload @:public @:abstract public function setPageable(document : java.awt.print.Pageable) : Void;
 	
 	/**
 	* Presents a dialog to the user for changing the properties of
@@ -187,7 +187,7 @@ extern class PrinterJob
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload @:abstract public function printDialog() : Bool;
+	@:overload @:public @:abstract public function printDialog() : Bool;
 	
 	/**
 	* A convenience method which displays a cross-platform print dialog
@@ -235,7 +235,7 @@ extern class PrinterJob
 	* @since     1.4
 	*
 	*/
-	@:require(java4) @:overload public function printDialog(attributes : javax.print.attribute.PrintRequestAttributeSet) : Bool;
+	@:require(java4) @:overload @:public public function printDialog(attributes : javax.print.attribute.PrintRequestAttributeSet) : Bool;
 	
 	/**
 	* Displays a dialog that allows modification of a
@@ -259,7 +259,7 @@ extern class PrinterJob
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since     1.2
 	*/
-	@:require(java2) @:overload @:abstract public function pageDialog(page : java.awt.print.PageFormat) : java.awt.print.PageFormat;
+	@:require(java2) @:overload @:public @:abstract public function pageDialog(page : java.awt.print.PageFormat) : java.awt.print.PageFormat;
 	
 	/**
 	* A convenience method which displays a cross-platform page setup dialog.
@@ -290,7 +290,7 @@ extern class PrinterJob
 	* @since     1.4
 	*
 	*/
-	@:require(java4) @:overload public function pageDialog(attributes : javax.print.attribute.PrintRequestAttributeSet) : java.awt.print.PageFormat;
+	@:require(java4) @:overload @:public public function pageDialog(attributes : javax.print.attribute.PrintRequestAttributeSet) : java.awt.print.PageFormat;
 	
 	/**
 	* Clones the <code>PageFormat</code> argument and alters the
@@ -299,7 +299,7 @@ extern class PrinterJob
 	* @return clone of <code>page</code>, altered to describe a default
 	*                      <code>PageFormat</code>.
 	*/
-	@:overload @:abstract public function defaultPage(page : java.awt.print.PageFormat) : java.awt.print.PageFormat;
+	@:overload @:public @:abstract public function defaultPage(page : java.awt.print.PageFormat) : java.awt.print.PageFormat;
 	
 	/**
 	* Creates a new <code>PageFormat</code> instance and
@@ -307,7 +307,7 @@ extern class PrinterJob
 	* @return a <code>PageFormat</code> set to a default size and
 	*          orientation.
 	*/
-	@:overload public function defaultPage() : java.awt.print.PageFormat;
+	@:overload @:public public function defaultPage() : java.awt.print.PageFormat;
 	
 	/**
 	* Calculates a <code>PageFormat</code> with values consistent with those
@@ -326,7 +326,7 @@ extern class PrinterJob
 	* those of the current service and the specified attributes.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getPageFormat(attributes : javax.print.attribute.PrintRequestAttributeSet) : java.awt.print.PageFormat;
+	@:require(java6) @:overload @:public public function getPageFormat(attributes : javax.print.attribute.PrintRequestAttributeSet) : java.awt.print.PageFormat;
 	
 	/**
 	* Returns the clone of <code>page</code> with its settings
@@ -342,7 +342,7 @@ extern class PrinterJob
 	*          <code>page</code> and whose settings are changed
 	*          to conform with this <code>PrinterJob</code>.
 	*/
-	@:overload @:abstract public function validatePage(page : java.awt.print.PageFormat) : java.awt.print.PageFormat;
+	@:overload @:public @:abstract public function validatePage(page : java.awt.print.PageFormat) : java.awt.print.PageFormat;
 	
 	/**
 	* Prints a set of pages.
@@ -352,7 +352,7 @@ extern class PrinterJob
 	* @see Pageable
 	* @see Printable
 	*/
-	@:overload @:abstract public function print() : Void;
+	@:overload @:public @:abstract public function print() : Void;
 	
 	/**
 	* Prints a set of pages using the settings in the attribute
@@ -392,27 +392,27 @@ extern class PrinterJob
 	* @see Printable
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function print(attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
+	@:require(java4) @:overload @:public public function print(attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
 	
 	/**
 	* Sets the number of copies to be printed.
 	* @param copies the number of copies to be printed
 	* @see #getCopies
 	*/
-	@:overload @:abstract public function setCopies(copies : Int) : Void;
+	@:overload @:public @:abstract public function setCopies(copies : Int) : Void;
 	
 	/**
 	* Gets the number of copies to be printed.
 	* @return the number of copies to be printed.
 	* @see #setCopies
 	*/
-	@:overload @:abstract public function getCopies() : Int;
+	@:overload @:public @:abstract public function getCopies() : Int;
 	
 	/**
 	* Gets the name of the printing user.
 	* @return the name of the printing user
 	*/
-	@:overload @:abstract public function getUserName() : String;
+	@:overload @:public @:abstract public function getUserName() : String;
 	
 	/**
 	* Sets the name of the document to be printed.
@@ -420,14 +420,14 @@ extern class PrinterJob
 	* @param jobName the name of the document to be printed
 	* @see #getJobName
 	*/
-	@:overload @:abstract public function setJobName(jobName : String) : Void;
+	@:overload @:public @:abstract public function setJobName(jobName : String) : Void;
 	
 	/**
 	* Gets the name of the document to be printed.
 	* @return the name of the document to be printed.
 	* @see #setJobName
 	*/
-	@:overload @:abstract public function getJobName() : String;
+	@:overload @:public @:abstract public function getJobName() : String;
 	
 	/**
 	* Cancels a print job that is in progress.  If
@@ -437,7 +437,7 @@ extern class PrinterJob
 	* chance. If there is no print job in progress then
 	* this call does nothing.
 	*/
-	@:overload @:abstract public function cancel() : Void;
+	@:overload @:public @:abstract public function cancel() : Void;
 	
 	/**
 	* Returns <code>true</code> if a print job is
@@ -447,7 +447,7 @@ extern class PrinterJob
 	* @return <code>true</code> if the job in progress
 	* is going to be cancelled; <code>false</code> otherwise.
 	*/
-	@:overload @:abstract public function isCancelled() : Bool;
+	@:overload @:public @:abstract public function isCancelled() : Bool;
 	
 	
 }

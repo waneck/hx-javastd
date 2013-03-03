@@ -29,14 +29,14 @@ extern interface ListModel<E>
 	* Returns the length of the list.
 	* @return the length of the list
 	*/
-	@:overload public function getSize() : Int;
+	@:overload @:public public function getSize() : Int;
 	
 	/**
 	* Returns the value at the specified index.
 	* @param index the requested index
 	* @return the value at <code>index</code>
 	*/
-	@:overload public function getElementAt(index : Int) : E;
+	@:overload @:public public function getElementAt(index : Int) : E;
 	
 	/**
 	* Adds a listener to the list that's notified each time a change

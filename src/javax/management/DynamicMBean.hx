@@ -44,7 +44,7 @@ package javax.management;
 	*
 	* @see #setAttribute
 	*/
-	@:overload public function getAttribute(attribute : String) : Dynamic;
+	@:overload @:public public function getAttribute(attribute : String) : Dynamic;
 	
 	/**
 	* Set the value of a specific attribute of the Dynamic MBean.
@@ -59,7 +59,7 @@ package javax.management;
 	*
 	* @see #getAttribute
 	*/
-	@:overload public function setAttribute(attribute : javax.management.Attribute) : Void;
+	@:overload @:public public function setAttribute(attribute : javax.management.Attribute) : Void;
 	
 	/**
 	* Get the values of several attributes of the Dynamic MBean.
@@ -70,7 +70,7 @@ package javax.management;
 	*
 	* @see #setAttributes
 	*/
-	@:overload public function getAttributes(attributes : java.NativeArray<String>) : javax.management.AttributeList;
+	@:overload @:public public function getAttributes(attributes : java.NativeArray<String>) : javax.management.AttributeList;
 	
 	/**
 	* Sets the values of several attributes of the Dynamic MBean.
@@ -82,7 +82,7 @@ package javax.management;
 	*
 	* @see #getAttributes
 	*/
-	@:overload public function setAttributes(attributes : javax.management.AttributeList) : javax.management.AttributeList;
+	@:overload @:public public function setAttributes(attributes : javax.management.AttributeList) : javax.management.AttributeList;
 	
 	/**
 	* Allows an action to be invoked on the Dynamic MBean.
@@ -100,7 +100,7 @@ package javax.management;
 	* @exception MBeanException  Wraps a <CODE>java.lang.Exception</CODE> thrown by the MBean's invoked method.
 	* @exception ReflectionException  Wraps a <CODE>java.lang.Exception</CODE> thrown while trying to invoke the method
 	*/
-	@:overload public function invoke(actionName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function invoke(actionName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
 	/**
 	* Provides the exposed attributes and actions of the Dynamic MBean using an MBeanInfo object.
@@ -109,7 +109,7 @@ package javax.management;
 	* exposed by this Dynamic MBean to be retrieved.
 	*
 	*/
-	@:overload public function getMBeanInfo() : javax.management.MBeanInfo;
+	@:overload @:public public function getMBeanInfo() : javax.management.MBeanInfo;
 	
 	
 }

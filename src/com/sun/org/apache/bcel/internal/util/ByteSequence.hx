@@ -65,9 +65,9 @@ package com.sun.org.apache.bcel.internal.util;
 */
 extern class ByteSequence extends java.io.DataInputStream
 {
-	@:overload public function new(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:final public function getIndex() : Int;
+	@:overload @:public @:final public function getIndex() : Int;
 	
 	
 }

@@ -29,7 +29,7 @@ extern interface NotificationBufferFilter
 	* Add the given notification coming from the given MBean to the list
 	* iff it matches this filter's rules.
 	*/
-	@:overload public function apply(targetedNotifs : java.util.List<javax.management.remote.TargetedNotification>, source : javax.management.ObjectName, notif : javax.management.Notification) : Void;
+	@:overload @:public public function apply(targetedNotifs : java.util.List<javax.management.remote.TargetedNotification>, source : javax.management.ObjectName, notif : javax.management.Notification) : Void;
 	
 	
 }

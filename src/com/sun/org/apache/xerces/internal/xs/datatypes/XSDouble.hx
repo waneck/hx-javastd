@@ -29,7 +29,7 @@ extern interface XSDouble
 	/**
 	* @return a double value
 	*/
-	@:overload public function getValue() : Float;
+	@:overload @:public public function getValue() : Float;
 	
 	
 }

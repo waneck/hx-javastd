@@ -38,7 +38,7 @@ package com.sun.org.apache.xalan.internal.xsltc;
 */
 extern class ProcessorVersion
 {
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

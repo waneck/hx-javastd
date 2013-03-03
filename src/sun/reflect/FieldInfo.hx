@@ -25,18 +25,18 @@ package sun.reflect;
 */
 extern class FieldInfo
 {
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/** This is in "external" format, i.e. having '.' as separator
 	rather than '/' */
-	@:overload public function signature() : String;
+	@:overload @:public public function signature() : String;
 	
-	@:overload public function modifiers() : Int;
+	@:overload @:public public function modifiers() : Int;
 	
-	@:overload public function slot() : Int;
+	@:overload @:public public function slot() : Int;
 	
 	/** Convenience routine */
-	@:overload public function isPublic() : Bool;
+	@:overload @:public public function isPublic() : Bool;
 	
 	
 }

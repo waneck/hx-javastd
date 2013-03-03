@@ -37,7 +37,7 @@ extern interface DOMOrder
 	* node2, and if they're equal node1 and node2 are the same node. No
 	* promises are made beyond that.
 	*/
-	@:overload public function getUid() : Int;
+	@:overload @:public public function getUid() : Int;
 	
 	
 }

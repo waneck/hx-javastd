@@ -28,23 +28,23 @@ extern class TypeVariableImpl extends com.sun.tools.apt.mirror.type.TypeMirrorIm
 	/**
 	* Implementation of TypeVariable
 	*/
-	private var type : com.sun.tools.javac.code.Type.Type_TypeVar;
+	@:protected private var type : com.sun.tools.javac.code.Type.Type_TypeVar;
 	
 	/**
 	* Returns the simple name of this type variable.  Bounds are
 	* not included.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getDeclaration() : com.sun.mirror.declaration.TypeParameterDeclaration;
+	@:overload @:public public function getDeclaration() : com.sun.mirror.declaration.TypeParameterDeclaration;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
 	
 	
 }

@@ -80,7 +80,7 @@ extern class Code extends com.sun.org.apache.bcel.internal.classfile.Attribute
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use copy() for a physical copy.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.Code) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.Code) : Void;
 	
 	/**
 	* @param name_index Index pointing to the name <em>Code</em>
@@ -92,7 +92,7 @@ extern class Code extends com.sun.org.apache.bcel.internal.classfile.Attribute
 	* @param attributes Attributes of code: LineNumber or LocalVariable
 	* @param constant_pool Array of constants
 	*/
-	@:overload public function new(name_index : Int, length : Int, max_stack : Int, max_locals : Int, code : java.NativeArray<java.StdTypes.Int8>, exception_table : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.CodeException>, attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function new(name_index : Int, length : Int, max_stack : Int, max_locals : Int, code : java.NativeArray<java.StdTypes.Int8>, exception_table : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.CodeException>, attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -101,7 +101,7 @@ extern class Code extends com.sun.org.apache.bcel.internal.classfile.Attribute
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump code attribute to file stream in binary format.
@@ -109,84 +109,84 @@ extern class Code extends com.sun.org.apache.bcel.internal.classfile.Attribute
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final override public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Collection of code attributes.
 	* @see Attribute
 	*/
-	@:overload @:final public function getAttributes() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>;
+	@:overload @:public @:final public function getAttributes() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>;
 	
 	/**
 	* @return LineNumberTable of Code, if it has one
 	*/
-	@:overload public function getLineNumberTable() : com.sun.org.apache.bcel.internal.classfile.LineNumberTable;
+	@:overload @:public public function getLineNumberTable() : com.sun.org.apache.bcel.internal.classfile.LineNumberTable;
 	
 	/**
 	* @return LocalVariableTable of Code, if it has one
 	*/
-	@:overload public function getLocalVariableTable() : com.sun.org.apache.bcel.internal.classfile.LocalVariableTable;
+	@:overload @:public public function getLocalVariableTable() : com.sun.org.apache.bcel.internal.classfile.LocalVariableTable;
 	
 	/**
 	* @return Actual byte code of the method.
 	*/
-	@:overload @:final public function getCode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getCode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* @return Table of handled exceptions.
 	* @see CodeException
 	*/
-	@:overload @:final public function getExceptionTable() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.CodeException>;
+	@:overload @:public @:final public function getExceptionTable() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.CodeException>;
 	
 	/**
 	* @return Number of local variables.
 	*/
-	@:overload @:final public function getMaxLocals() : Int;
+	@:overload @:public @:final public function getMaxLocals() : Int;
 	
 	/**
 	* @return Maximum size of stack used by this method.
 	*/
-	@:overload @:final public function getMaxStack() : Int;
+	@:overload @:public @:final public function getMaxStack() : Int;
 	
 	/**
 	* @param attributes.
 	*/
-	@:overload @:final public function setAttributes(attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>) : Void;
+	@:overload @:public @:final public function setAttributes(attributes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Attribute>) : Void;
 	
 	/**
 	* @param code byte code
 	*/
-	@:overload @:final public function setCode(code : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:final public function setCode(code : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* @param exception_table exception table
 	*/
-	@:overload @:final public function setExceptionTable(exception_table : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.CodeException>) : Void;
+	@:overload @:public @:final public function setExceptionTable(exception_table : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.CodeException>) : Void;
 	
 	/**
 	* @param max_locals maximum number of local variables
 	*/
-	@:overload @:final public function setMaxLocals(max_locals : Int) : Void;
+	@:overload @:public @:final public function setMaxLocals(max_locals : Int) : Void;
 	
 	/**
 	* @param max_stack maximum stack size
 	*/
-	@:overload @:final public function setMaxStack(max_stack : Int) : Void;
+	@:overload @:public @:final public function setMaxStack(max_stack : Int) : Void;
 	
 	/**
 	* @return String representation of code chunk.
 	*/
-	@:overload @:final public function toString(verbose : Bool) : String;
+	@:overload @:public @:final public function toString(verbose : Bool) : String;
 	
 	/**
 	* @return String representation of code chunk.
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	/**
 	* @return deep copy of this attribute
 	*/
-	@:overload override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
+	@:overload @:public override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
 	
 }

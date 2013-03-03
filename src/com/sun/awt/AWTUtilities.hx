@@ -40,7 +40,7 @@ extern class AWTUtilities
 	*                         TRANSLUCENT, or PERPIXEL_TRANSLUCENT)
 	* @return whether the given translucency kind is supported
 	*/
-	@:overload public static function isTranslucencySupported(translucencyKind : com.sun.awt.AWTUtilities.AWTUtilities_Translucency) : Bool;
+	@:overload @:public @:static public static function isTranslucencySupported(translucencyKind : com.sun.awt.AWTUtilities.AWTUtilities_Translucency) : Bool;
 	
 	/**
 	* Set the opacity of the window. The opacity is at the range [0..1].
@@ -66,7 +66,7 @@ extern class AWTUtilities
 	* @throws UnsupportedOperationException if the TRANSLUCENT translucency
 	*                                       kind is not supported
 	*/
-	@:overload public static function setWindowOpacity(window : java.awt.Window, opacity : Single) : Void;
+	@:overload @:public @:static public static function setWindowOpacity(window : java.awt.Window, opacity : Single) : Void;
 	
 	/**
 	* Get the opacity of the window. If the opacity has not
@@ -75,7 +75,7 @@ extern class AWTUtilities
 	* @param window the window to get the opacity level from
 	* @throws NullPointerException if the window argument is null
 	*/
-	@:overload public static function getWindowOpacity(window : java.awt.Window) : Single;
+	@:overload @:public @:static public static function getWindowOpacity(window : java.awt.Window) : Single;
 	
 	/**
 	* Returns whether the windowing system supports changing the shape
@@ -84,7 +84,7 @@ extern class AWTUtilities
 	* windowing system may still not support the concept of
 	* shaping (due to the bugs in the windowing system).
 	*/
-	@:overload public static function isWindowShapingSupported() : Bool;
+	@:overload @:public @:static public static function isWindowShapingSupported() : Bool;
 	
 	/**
 	* Returns an object that implements the Shape interface and represents
@@ -96,7 +96,7 @@ extern class AWTUtilities
 	* @return the current shape of the window
 	* @throws NullPointerException if the window argument is null
 	*/
-	@:overload public static function getWindowShape(window : java.awt.Window) : java.awt.Shape;
+	@:overload @:public @:static public static function getWindowShape(window : java.awt.Window) : java.awt.Shape;
 	
 	/**
 	* Sets a shape for the given window.
@@ -121,7 +121,7 @@ extern class AWTUtilities
 	* @throws UnsupportedOperationException if the PERPIXEL_TRANSPARENT
 	*                                       translucency kind is not supported
 	*/
-	@:overload public static function setWindowShape(window : java.awt.Window, shape : java.awt.Shape) : Void;
+	@:overload @:public @:static public static function setWindowShape(window : java.awt.Window, shape : java.awt.Shape) : Void;
 	
 	/**
 	* Enables the per-pixel alpha support for the given window.
@@ -171,7 +171,7 @@ extern class AWTUtilities
 	* @throws UnsupportedOperationException if the PERPIXEL_TRANSLUCENT
 	*                                       translucency kind is not supported
 	*/
-	@:overload public static function setWindowOpaque(window : java.awt.Window, isOpaque : Bool) : Void;
+	@:overload @:public @:static public static function setWindowOpaque(window : java.awt.Window, isOpaque : Bool) : Void;
 	
 	/**
 	* Returns whether the window is opaque or translucent.
@@ -181,7 +181,7 @@ extern class AWTUtilities
 	*         or translucent (false)
 	* @throws NullPointerException if the window argument is null
 	*/
-	@:overload public static function isWindowOpaque(window : java.awt.Window) : Bool;
+	@:overload @:public @:static public static function isWindowOpaque(window : java.awt.Window) : Bool;
 	
 	/**
 	* Verifies whether a given GraphicsConfiguration supports
@@ -200,7 +200,7 @@ extern class AWTUtilities
 	* @return whether the given GraphicsConfiguration supports
 	*         the translucency effects.
 	*/
-	@:overload public static function isTranslucencyCapable(gc : java.awt.GraphicsConfiguration) : Bool;
+	@:overload @:public @:static public static function isTranslucencyCapable(gc : java.awt.GraphicsConfiguration) : Bool;
 	
 	/**
 	* Sets a 'mixing-cutout' shape for the given component.
@@ -241,7 +241,7 @@ extern class AWTUtilities
 	* @param shape the new 'mixing-cutout' shape
 	* @throws NullPointerException if the component argument is {@code null}
 	*/
-	@:overload public static function setComponentMixingCutoutShape(component : java.awt.Component, shape : java.awt.Shape) : Void;
+	@:overload @:public @:static public static function setComponentMixingCutoutShape(component : java.awt.Component, shape : java.awt.Shape) : Void;
 	
 	
 }

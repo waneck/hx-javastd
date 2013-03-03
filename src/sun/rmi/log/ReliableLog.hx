@@ -70,9 +70,9 @@ extern class ReliableLog
 	* @author Ann Wollrath
 	*
 	*/
-	public static var PreferredMajorVersion(default, null) : Int;
+	@:public @:final @:static public static var PreferredMajorVersion(default, null) : Int;
 	
-	public static var PreferredMinorVersion(default, null) : Int;
+	@:public @:final @:static public static var PreferredMinorVersion(default, null) : Int;
 	
 	/**
 	* Creates a ReliableLog to handle checkpoints and logging in a
@@ -87,7 +87,7 @@ extern class ReliableLog
 	* if an exception occurs during invocation of the handler's
 	* snapshot method or if other IOException occurs.
 	*/
-	@:overload public function new(dirPath : String, handler : sun.rmi.log.LogHandler, pad : Bool) : Void;
+	@:overload @:public public function new(dirPath : String, handler : sun.rmi.log.LogHandler, pad : Bool) : Void;
 	
 	/**
 	* Creates a ReliableLog to handle checkpoints and logging in a
@@ -99,7 +99,7 @@ extern class ReliableLog
 	* @exception IOException If a directory creation error has
 	* occurred or if initialSnapshot callback raises an exception
 	*/
-	@:overload public function new(dirPath : String, handler : sun.rmi.log.LogHandler) : Void;
+	@:overload @:public public function new(dirPath : String, handler : sun.rmi.log.LogHandler) : Void;
 	
 	/**
 	* Returns an object which is the value recorded in the current
@@ -111,7 +111,7 @@ extern class ReliableLog
 	* corruption, read update failure, or if an exception occurs
 	* during the recover callback
 	*/
-	@:overload @:synchronized public function recover() : Dynamic;
+	@:overload @:public @:synchronized public function recover() : Dynamic;
 	
 	/**
 	* Records this update in the log file (does not force update to disk).
@@ -123,7 +123,7 @@ extern class ReliableLog
 	* @exception IOException If an exception occurred during a
 	* writeUpdate callback or if other I/O error has occurred.
 	*/
-	@:overload @:synchronized public function update(value : Dynamic) : Void;
+	@:overload @:public @:synchronized public function update(value : Dynamic) : Void;
 	
 	/**
 	* Records this update in the log file.  The update is recorded by
@@ -137,7 +137,7 @@ extern class ReliableLog
 	* exception occurred during the writeUpdate callback or if other
 	* I/O error occurs while updating the log.
 	*/
-	@:overload @:synchronized public function update(value : Dynamic, forceToDisk : Bool) : Void;
+	@:overload @:public @:synchronized public function update(value : Dynamic, forceToDisk : Bool) : Void;
 	
 	/**
 	* Records this value as the current snapshot by invoking the client
@@ -148,7 +148,7 @@ extern class ReliableLog
 	* snapshot callback or if other I/O error has occurred during the
 	* snapshot process
 	*/
-	@:overload @:synchronized public function snapshot(value : Dynamic) : Void;
+	@:overload @:public @:synchronized public function snapshot(value : Dynamic) : Void;
 	
 	/**
 	* Close the stable storage directory in an orderly manner.
@@ -156,17 +156,17 @@ extern class ReliableLog
 	* @exception IOException If an I/O error occurs when the log is
 	* closed
 	*/
-	@:overload @:synchronized public function close() : Void;
+	@:overload @:public @:synchronized public function close() : Void;
 	
 	/**
 	* Returns the size of the snapshot file in bytes;
 	*/
-	@:overload public function snapshotSize() : haxe.Int64;
+	@:overload @:public public function snapshotSize() : haxe.Int64;
 	
 	/**
 	* Returns the size of the log file in bytes;
 	*/
-	@:overload public function logSize() : haxe.Int64;
+	@:overload @:public public function logSize() : haxe.Int64;
 	
 	
 }
@@ -179,19 +179,19 @@ extern class ReliableLog
 	/**
 	* Constructs a LogFile and initializes the file descriptor.
 	**/
-	@:overload public function new(name : String, mode : String) : Void;
+	@:overload @:public public function new(name : String, mode : String) : Void;
 	
 	/**
 	* Invokes sync on the file descriptor for this log file.
 	*/
-	@:overload private function sync() : Void;
+	@:overload @:protected private function sync() : Void;
 	
 	/**
 	* Returns true if writing 4 bytes starting at the specified file
 	* position, would span a 512 byte sector boundary; otherwise returns
 	* false.
 	**/
-	@:overload private function checkSpansBoundary(fp : haxe.Int64) : Bool;
+	@:overload @:protected private function checkSpansBoundary(fp : haxe.Int64) : Bool;
 	
 	
 }

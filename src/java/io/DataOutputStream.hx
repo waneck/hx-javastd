@@ -38,7 +38,7 @@ package java.io;
 	* The number of bytes written to the data output stream so far.
 	* If this counter overflows, it will be wrapped to Integer.MAX_VALUE.
 	*/
-	private var written : Int;
+	@:protected private var written : Int;
 	
 	/**
 	* Creates a new data output stream to write data to the specified
@@ -49,7 +49,7 @@ package java.io;
 	*                use.
 	* @see     java.io.FilterOutputStream#out
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Writes the specified byte (the low eight bits of the argument
@@ -63,7 +63,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterOutputStream#out
 	*/
-	@:overload @:synchronized override public function write(b : Int) : Void;
+	@:overload @:public @:synchronized override public function write(b : Int) : Void;
 	
 	/**
 	* Writes <code>len</code> bytes from the specified byte array
@@ -77,7 +77,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterOutputStream#out
 	*/
-	@:overload @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Flushes this data output stream. This forces any buffered output
@@ -90,7 +90,7 @@ package java.io;
 	* @see        java.io.FilterOutputStream#out
 	* @see        java.io.OutputStream#flush()
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* Writes a <code>boolean</code> to the underlying output stream as
@@ -104,7 +104,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterOutputStream#out
 	*/
-	@:overload @:final public function writeBoolean(v : Bool) : Void;
+	@:overload @:public @:final public function writeBoolean(v : Bool) : Void;
 	
 	/**
 	* Writes out a <code>byte</code> to the underlying output stream as
@@ -115,7 +115,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterOutputStream#out
 	*/
-	@:overload @:final public function writeByte(v : Int) : Void;
+	@:overload @:public @:final public function writeByte(v : Int) : Void;
 	
 	/**
 	* Writes a <code>short</code> to the underlying output stream as two
@@ -126,7 +126,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterOutputStream#out
 	*/
-	@:overload @:final public function writeShort(v : Int) : Void;
+	@:overload @:public @:final public function writeShort(v : Int) : Void;
 	
 	/**
 	* Writes a <code>char</code> to the underlying output stream as a
@@ -137,7 +137,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterOutputStream#out
 	*/
-	@:overload @:final public function writeChar(v : Int) : Void;
+	@:overload @:public @:final public function writeChar(v : Int) : Void;
 	
 	/**
 	* Writes an <code>int</code> to the underlying output stream as four
@@ -148,7 +148,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterOutputStream#out
 	*/
-	@:overload @:final public function writeInt(v : Int) : Void;
+	@:overload @:public @:final public function writeInt(v : Int) : Void;
 	
 	/**
 	* Writes a <code>long</code> to the underlying output stream as eight
@@ -159,7 +159,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterOutputStream#out
 	*/
-	@:overload @:final public function writeLong(v : haxe.Int64) : Void;
+	@:overload @:public @:final public function writeLong(v : haxe.Int64) : Void;
 	
 	/**
 	* Converts the float argument to an <code>int</code> using the
@@ -174,7 +174,7 @@ package java.io;
 	* @see        java.io.FilterOutputStream#out
 	* @see        java.lang.Float#floatToIntBits(float)
 	*/
-	@:overload @:final public function writeFloat(v : Single) : Void;
+	@:overload @:public @:final public function writeFloat(v : Single) : Void;
 	
 	/**
 	* Converts the double argument to a <code>long</code> using the
@@ -189,7 +189,7 @@ package java.io;
 	* @see        java.io.FilterOutputStream#out
 	* @see        java.lang.Double#doubleToLongBits(double)
 	*/
-	@:overload @:final public function writeDouble(v : Float) : Void;
+	@:overload @:public @:final public function writeDouble(v : Float) : Void;
 	
 	/**
 	* Writes out the string to the underlying output stream as a
@@ -202,7 +202,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterOutputStream#out
 	*/
-	@:overload @:final public function writeBytes(s : String) : Void;
+	@:overload @:public @:final public function writeBytes(s : String) : Void;
 	
 	/**
 	* Writes a string to the underlying output stream as a sequence of
@@ -216,7 +216,7 @@ package java.io;
 	* @see        java.io.DataOutputStream#writeChar(int)
 	* @see        java.io.FilterOutputStream#out
 	*/
-	@:overload @:final public function writeChars(s : String) : Void;
+	@:overload @:public @:final public function writeChars(s : String) : Void;
 	
 	/**
 	* Writes a string to the underlying output stream using
@@ -237,7 +237,7 @@ package java.io;
 	* @param      str   a string to be written.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:final public function writeUTF(str : String) : Void;
+	@:overload @:public @:final public function writeUTF(str : String) : Void;
 	
 	/**
 	* Returns the current value of the counter <code>written</code>,
@@ -247,7 +247,7 @@ package java.io;
 	* @return  the value of the <code>written</code> field.
 	* @see     java.io.DataOutputStream#written
 	*/
-	@:overload @:final public function size() : Int;
+	@:overload @:public @:final public function size() : Int;
 	
 	
 }

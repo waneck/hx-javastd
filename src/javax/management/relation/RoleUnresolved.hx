@@ -37,7 +37,7 @@ extern class RoleUnresolved implements java.io.Serializable
 	* @exception IllegalArgumentException  if null parameter or incorrect
 	* problem type
 	*/
-	@:overload public function new(name : String, value : java.util.List<javax.management.ObjectName>, pbType : Int) : Void;
+	@:overload @:public public function new(name : String, value : java.util.List<javax.management.ObjectName>, pbType : Int) : Void;
 	
 	/**
 	* Retrieves role name.
@@ -46,7 +46,7 @@ extern class RoleUnresolved implements java.io.Serializable
 	*
 	* @see #setRoleName
 	*/
-	@:overload public function getRoleName() : String;
+	@:overload @:public public function getRoleName() : String;
 	
 	/**
 	* Retrieves role value.
@@ -57,7 +57,7 @@ extern class RoleUnresolved implements java.io.Serializable
 	*
 	* @see #setRoleValue
 	*/
-	@:overload public function getRoleValue() : java.util.List<javax.management.ObjectName>;
+	@:overload @:public public function getRoleValue() : java.util.List<javax.management.ObjectName>;
 	
 	/**
 	* Retrieves problem type.
@@ -67,7 +67,7 @@ extern class RoleUnresolved implements java.io.Serializable
 	*
 	* @see #setProblemType
 	*/
-	@:overload public function getProblemType() : Int;
+	@:overload @:public public function getProblemType() : Int;
 	
 	/**
 	* Sets role name.
@@ -78,7 +78,7 @@ extern class RoleUnresolved implements java.io.Serializable
 	*
 	* @see #getRoleName
 	*/
-	@:overload public function setRoleName(name : String) : Void;
+	@:overload @:public public function setRoleName(name : String) : Void;
 	
 	/**
 	* Sets role value.
@@ -88,7 +88,7 @@ extern class RoleUnresolved implements java.io.Serializable
 	*
 	* @see #getRoleValue
 	*/
-	@:overload public function setRoleValue(value : java.util.List<javax.management.ObjectName>) : Void;
+	@:overload @:public public function setRoleValue(value : java.util.List<javax.management.ObjectName>) : Void;
 	
 	/**
 	* Sets problem type.
@@ -100,21 +100,21 @@ extern class RoleUnresolved implements java.io.Serializable
 	*
 	* @see #getProblemType
 	*/
-	@:overload public function setProblemType(pbType : Int) : Void;
+	@:overload @:public public function setProblemType(pbType : Int) : Void;
 	
 	/**
 	* Clone this object.
 	*
 	* @return an independent clone.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Return a string describing this object.
 	*
 	* @return a description of this RoleUnresolved object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -21,26 +21,26 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNode implements org.w3c.dom.Element implements org.w3c.dom.TypeInfo
 {
 	/** Element name. */
-	private var name : String;
+	@:protected private var name : String;
 	
 	/** Attributes. */
-	private var attributes : com.sun.org.apache.xerces.internal.dom.AttributeMap;
+	@:protected private var attributes : com.sun.org.apache.xerces.internal.dom.AttributeMap;
 	
 	/** Factory constructor. */
-	@:overload public function new(ownerDoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, name : String) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, name : String) : Void;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* A short integer indicating what type of node this is. The named
 	* constants for this value are defined in the org.w3c.dom.Node interface.
 	*/
-	@:overload override public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public override public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the element name
 	*/
-	@:overload override public function getNodeName() : String;
+	@:overload @:public override public function getNodeName() : String;
 	
 	/**
 	* Retrieve all the Attributes as a set. Note that this API is inherited
@@ -48,7 +48,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	* ever have Attributes, but they want to allow folks to "blindly" operate
 	* on the tree as a set of Nodes.
 	*/
-	@:overload override public function getAttributes() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public override public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
 	/**
 	* Return a duplicate copy of this Element. Note that its children
@@ -57,13 +57,13 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	*
 	* @see org.w3c.dom.Node#cloneNode(boolean)
 	*/
-	@:overload override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* DOM Level 3 WD - Experimental.
 	* Retrieve baseURI
 	*/
-	@:overload override public function getBaseURI() : String;
+	@:overload @:public override public function getBaseURI() : String;
 	
 	/**
 	* Look up a single Attribute by name. Returns the Attribute's
@@ -74,7 +74,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	* returns the "flattened" string obtained from Attribute.getValue().
 	* If you need the structure information, see getAttributeNode().
 	*/
-	@:overload public function getAttribute(name : String) : String;
+	@:overload @:public public function getAttribute(name : String) : String;
 	
 	/**
 	* Look up a single Attribute by name. Returns the Attribute Node,
@@ -83,7 +83,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	* <p>
 	* If no matching attribute is available, returns null.
 	*/
-	@:overload public function getAttributeNode(name : String) : org.w3c.dom.Attr;
+	@:overload @:public public function getAttributeNode(name : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Returns a NodeList of all descendent nodes (children,
@@ -100,7 +100,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	*
 	* @see DeepNodeListImpl
 	*/
-	@:overload public function getElementsByTagName(tagname : String) : org.w3c.dom.NodeList;
+	@:overload @:public public function getElementsByTagName(tagname : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* Returns the name of the Element. Note that Element.nodeName() is
@@ -109,7 +109,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	* This is case-preserving in XML. HTML should uppercasify it on the
 	* way in.
 	*/
-	@:overload public function getTagName() : String;
+	@:overload @:public public function getTagName() : String;
 	
 	/**
 	* In "normal form" (as read from a source file), there will never be two
@@ -125,7 +125,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	* Text -- is considered "markup" and will _not_ be merged either with
 	* normal Text or with other CDATASections.
 	*/
-	@:overload override public function normalize() : Void;
+	@:overload @:public override public function normalize() : Void;
 	
 	/**
 	* Remove the named attribute from this Element. If the removed
@@ -142,7 +142,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR) if the node is
 	* readonly.
 	*/
-	@:overload public function removeAttribute(name : String) : Void;
+	@:overload @:public public function removeAttribute(name : String) : Void;
 	
 	/**
 	* Remove the specified attribute/value pair. If the removed
@@ -160,7 +160,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR) if the node is
 	* readonly.
 	*/
-	@:overload public function removeAttributeNode(oldAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public public function removeAttributeNode(oldAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	* Add a new name/value pair, or replace the value of the existing
@@ -181,7 +181,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR) if the node is
 	* readonly.
 	*/
-	@:overload public function setAttribute(name : String, value : String) : Void;
+	@:overload @:public public function setAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Add a new attribute/value pair, or replace the value of the
@@ -196,7 +196,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	* @throws DOMException(INUSE_ATTRIBUTE_ERR) if the Attribute object
 	* has already been assigned to another Element.
 	*/
-	@:overload public function setAttributeNode(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public public function setAttributeNode(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -212,7 +212,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	*                      does not have a specified or default value.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function getAttributeNS(namespaceURI : String, localName : String) : String;
+	@:overload @:public public function getAttributeNS(namespaceURI : String, localName : String) : String;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -255,7 +255,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	*                          namespaceURI is null or an empty string.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function setAttributeNS(namespaceURI : String, qualifiedName : String, value : String) : Void;
+	@:overload @:public public function setAttributeNS(namespaceURI : String, qualifiedName : String, value : String) : Void;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -272,7 +272,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	*                          node is readonly.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function removeAttributeNS(namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function removeAttributeNS(namespaceURI : String, localName : String) : Void;
 	
 	/**
 	* Retrieves an Attr node by local name and namespace URI.
@@ -285,7 +285,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	*                      URI or null if there is no such attribute.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
+	@:overload @:public public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -314,32 +314,32 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	*                  them in other elements.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function setAttributeNodeNS(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public public function setAttributeNodeNS(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	* NON-DOM: sets attribute node for this element
 	*/
-	@:overload private function setXercesAttributeNode(attr : org.w3c.dom.Attr) : Int;
+	@:overload @:protected private function setXercesAttributeNode(attr : org.w3c.dom.Attr) : Int;
 	
 	/**
 	* NON-DOM: get inded of an attribute
 	*/
-	@:overload private function getXercesAttribute(namespaceURI : String, localName : String) : Int;
+	@:overload @:protected private function getXercesAttribute(namespaceURI : String, localName : String) : Int;
 	
 	/**
 	* Introduced in DOM Level 2.
 	*/
-	@:overload override public function hasAttributes() : Bool;
+	@:overload @:public override public function hasAttributes() : Bool;
 	
 	/**
 	* Introduced in DOM Level 2.
 	*/
-	@:overload public function hasAttribute(name : String) : Bool;
+	@:overload @:public public function hasAttribute(name : String) : Bool;
 	
 	/**
 	* Introduced in DOM Level 2.
 	*/
-	@:overload public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
+	@:overload @:public public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -359,39 +359,39 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	*                     Elements.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
+	@:overload @:public public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* DOM Level 3 WD- Experimental.
 	* Override inherited behavior from NodeImpl and ParentNode to check on
 	* attributes
 	*/
-	@:overload override public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
+	@:overload @:public override public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* DOM Level 3: register the given attribute node as an ID attribute
 	*/
-	@:overload public function setIdAttributeNode(at : org.w3c.dom.Attr, makeId : Bool) : Void;
+	@:overload @:public public function setIdAttributeNode(at : org.w3c.dom.Attr, makeId : Bool) : Void;
 	
 	/**
 	* DOM Level 3: register the given attribute node as an ID attribute
 	*/
-	@:overload public function setIdAttribute(name : String, makeId : Bool) : Void;
+	@:overload @:public public function setIdAttribute(name : String, makeId : Bool) : Void;
 	
 	/**
 	* DOM Level 3: register the given attribute node as an ID attribute
 	*/
-	@:overload public function setIdAttributeNS(namespaceURI : String, localName : String, makeId : Bool) : Void;
+	@:overload @:public public function setIdAttributeNS(namespaceURI : String, localName : String, makeId : Bool) : Void;
 	
 	/**
 	* @see org.w3c.dom.TypeInfo#getTypeName()
 	*/
-	@:overload public function getTypeName() : String;
+	@:overload @:public public function getTypeName() : String;
 	
 	/**
 	* @see org.w3c.dom.TypeInfo#getTypeNamespace()
 	*/
-	@:overload public function getTypeNamespace() : String;
+	@:overload @:public public function getTypeNamespace() : String;
 	
 	/**
 	* Introduced in DOM Level 3. <p>
@@ -408,31 +408,31 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ParentNo
 	* @return boolean True if the type is derived by restriciton for the
 	*         reference type
 	*/
-	@:overload public function isDerivedFrom(typeNamespaceArg : String, typeNameArg : String, derivationMethod : Int) : Bool;
+	@:overload @:public public function isDerivedFrom(typeNamespaceArg : String, typeNameArg : String, derivationMethod : Int) : Bool;
 	
 	/**
 	* Method getSchemaTypeInfo.
 	* @return TypeInfo
 	*/
-	@:overload public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
+	@:overload @:public public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
 	
 	/**
 	* NON-DOM: Subclassed to flip the attributes' readonly switch as well.
 	* @see NodeImpl#setReadOnly
 	*/
-	@:overload override public function setReadOnly(readOnly : Bool, deep : Bool) : Void;
+	@:overload @:public override public function setReadOnly(readOnly : Bool, deep : Bool) : Void;
 	
 	/** Synchronizes the data (name and value) for fast nodes. */
-	@:overload override private function synchronizeData() : Void;
+	@:overload @:protected override private function synchronizeData() : Void;
 	
 	/** Setup the default attributes. */
-	@:overload private function setupDefaultAttributes() : Void;
+	@:overload @:protected private function setupDefaultAttributes() : Void;
 	
 	/** Reconcile default attributes. */
-	@:overload private function reconcileDefaultAttributes() : Void;
+	@:overload @:protected private function reconcileDefaultAttributes() : Void;
 	
 	/** Get the default attributes. */
-	@:overload private function getDefaultAttributes() : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl;
+	@:overload @:protected private function getDefaultAttributes() : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl;
 	
 	
 }

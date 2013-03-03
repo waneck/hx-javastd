@@ -25,27 +25,27 @@ package com.sun.corba.se.impl.naming.pcosnaming;
 */
 extern class ServantManagerImpl extends org.omg.CORBA.LocalObject implements org.omg.PortableServer.ServantLocator
 {
-	@:overload public function preinvoke(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA, operation : String, cookie : org.omg.PortableServer.ServantLocatorPackage.CookieHolder) : org.omg.PortableServer.Servant;
+	@:overload @:public public function preinvoke(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA, operation : String, cookie : org.omg.PortableServer.ServantLocatorPackage.CookieHolder) : org.omg.PortableServer.Servant;
 	
-	@:overload public function postinvoke(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA, operation : String, cookie : Dynamic, servant : org.omg.PortableServer.Servant) : Void;
+	@:overload @:public public function postinvoke(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA, operation : String, cookie : Dynamic, servant : org.omg.PortableServer.Servant) : Void;
 	
-	@:overload public function readInContext(objKey : String) : com.sun.corba.se.impl.naming.pcosnaming.NamingContextImpl;
+	@:overload @:public public function readInContext(objKey : String) : com.sun.corba.se.impl.naming.pcosnaming.NamingContextImpl;
 	
-	@:overload public function addContext(objKey : String, context : com.sun.corba.se.impl.naming.pcosnaming.NamingContextImpl) : com.sun.corba.se.impl.naming.pcosnaming.NamingContextImpl;
+	@:overload @:public public function addContext(objKey : String, context : com.sun.corba.se.impl.naming.pcosnaming.NamingContextImpl) : com.sun.corba.se.impl.naming.pcosnaming.NamingContextImpl;
 	
-	@:overload public function updateContext(objKey : String, context : com.sun.corba.se.impl.naming.pcosnaming.NamingContextImpl) : Void;
+	@:overload @:public public function updateContext(objKey : String, context : com.sun.corba.se.impl.naming.pcosnaming.NamingContextImpl) : Void;
 	
-	@:overload public static function getRootObjectKey() : String;
+	@:overload @:public @:static public static function getRootObjectKey() : String;
 	
-	@:overload public function getNewObjectKey() : String;
+	@:overload @:public public function getNewObjectKey() : String;
 	
 	
 }
 @:internal extern class CounterDB implements java.io.Serializable
 {
-	@:overload @:synchronized public function getNextCounter() : Int;
+	@:overload @:public @:synchronized public function getNextCounter() : Int;
 	
-	public static var rootCounter(default, null) : Int;
+	@:public @:final @:static public static var rootCounter(default, null) : Int;
 	
 	
 }

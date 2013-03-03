@@ -29,7 +29,7 @@ extern class Encodings
 	*
 	* @return the default size
 	*/
-	@:overload public static function getLastPrintable() : Int;
+	@:overload @:public @:static public static function getLastPrintable() : Int;
 	
 	/**
 	* Try the best we can to convert a Java encoding to a XML-style encoding.
@@ -38,7 +38,7 @@ extern class Encodings
 	*
 	* @return ISO-style encoding string.
 	*/
-	@:overload public static function convertMime2JavaEncoding(encoding : String) : String;
+	@:overload @:public @:static public static function convertMime2JavaEncoding(encoding : String) : String;
 	
 	
 }

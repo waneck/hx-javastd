@@ -29,7 +29,7 @@ extern class StreamSource implements javax.xml.transform.Source
 	* returns true when passed this value as an argument,
 	* the Transformer supports Source input of this type.
 	*/
-	public static var FEATURE(default, null) : String;
+	@:public @:static @:final public static var FEATURE(default, null) : String;
 	
 	/**
 	* <p>Zero-argument default constructor.  If this constructor is used, and
@@ -42,7 +42,7 @@ extern class StreamSource implements javax.xml.transform.Source
 	*
 	* @see javax.xml.transform.Transformer#transform(Source xmlSource, Result outputTarget)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a StreamSource from a byte stream.  Normally,
@@ -56,7 +56,7 @@ extern class StreamSource implements javax.xml.transform.Source
 	*
 	* @param inputStream A valid InputStream reference to an XML stream.
 	*/
-	@:overload public function new(inputStream : java.io.InputStream) : Void;
+	@:overload @:public public function new(inputStream : java.io.InputStream) : Void;
 	
 	/**
 	* Construct a StreamSource from a byte stream.  Normally,
@@ -71,7 +71,7 @@ extern class StreamSource implements javax.xml.transform.Source
 	* @param inputStream A valid InputStream reference to an XML stream.
 	* @param systemId Must be a String that conforms to the URI syntax.
 	*/
-	@:overload public function new(inputStream : java.io.InputStream, systemId : String) : Void;
+	@:overload @:public public function new(inputStream : java.io.InputStream, systemId : String) : Void;
 	
 	/**
 	* Construct a StreamSource from a character reader.  Normally,
@@ -83,7 +83,7 @@ extern class StreamSource implements javax.xml.transform.Source
 	*
 	* @param reader A valid Reader reference to an XML character stream.
 	*/
-	@:overload public function new(reader : java.io.Reader) : Void;
+	@:overload @:public public function new(reader : java.io.Reader) : Void;
 	
 	/**
 	* Construct a StreamSource from a character reader.  Normally,
@@ -96,21 +96,21 @@ extern class StreamSource implements javax.xml.transform.Source
 	* @param reader A valid Reader reference to an XML character stream.
 	* @param systemId Must be a String that conforms to the URI syntax.
 	*/
-	@:overload public function new(reader : java.io.Reader, systemId : String) : Void;
+	@:overload @:public public function new(reader : java.io.Reader, systemId : String) : Void;
 	
 	/**
 	* Construct a StreamSource from a URL.
 	*
 	* @param systemId Must be a String that conforms to the URI syntax.
 	*/
-	@:overload public function new(systemId : String) : Void;
+	@:overload @:public public function new(systemId : String) : Void;
 	
 	/**
 	* Construct a StreamSource from a File.
 	*
 	* @param f Must a non-null File reference.
 	*/
-	@:overload public function new(f : java.io.File) : Void;
+	@:overload @:public public function new(f : java.io.File) : Void;
 	
 	/**
 	* Set the byte stream to be used as input.  Normally,
@@ -124,7 +124,7 @@ extern class StreamSource implements javax.xml.transform.Source
 	*
 	* @param inputStream A valid InputStream reference to an XML stream.
 	*/
-	@:overload public function setInputStream(inputStream : java.io.InputStream) : Void;
+	@:overload @:public public function setInputStream(inputStream : java.io.InputStream) : Void;
 	
 	/**
 	* Get the byte stream that was set with setByteStream.
@@ -132,7 +132,7 @@ extern class StreamSource implements javax.xml.transform.Source
 	* @return The byte stream that was set with setByteStream, or null
 	* if setByteStream or the ByteStream constructor was not called.
 	*/
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Set the input to be a character reader.  Normally,
@@ -144,7 +144,7 @@ extern class StreamSource implements javax.xml.transform.Source
 	*
 	* @param reader A valid Reader reference to an XML CharacterStream.
 	*/
-	@:overload public function setReader(reader : java.io.Reader) : Void;
+	@:overload @:public public function setReader(reader : java.io.Reader) : Void;
 	
 	/**
 	* Get the character stream that was set with setReader.
@@ -152,7 +152,7 @@ extern class StreamSource implements javax.xml.transform.Source
 	* @return The character stream that was set with setReader, or null
 	* if setReader or the Reader constructor was not called.
 	*/
-	@:overload public function getReader() : java.io.Reader;
+	@:overload @:public public function getReader() : java.io.Reader;
 	
 	/**
 	* Set the public identifier for this Source.
@@ -163,7 +163,7 @@ extern class StreamSource implements javax.xml.transform.Source
 	*
 	* @param publicId The public identifier as a string.
 	*/
-	@:overload public function setPublicId(publicId : String) : Void;
+	@:overload @:public public function setPublicId(publicId : String) : Void;
 	
 	/**
 	* Get the public identifier that was set with setPublicId.
@@ -171,7 +171,7 @@ extern class StreamSource implements javax.xml.transform.Source
 	* @return The public identifier that was set with setPublicId, or null
 	* if setPublicId was not called.
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* Set the system identifier for this Source.
@@ -185,7 +185,7 @@ extern class StreamSource implements javax.xml.transform.Source
 	*
 	* @param systemId The system identifier as a URL string.
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	/**
 	* Get the system identifier that was set with setSystemId.
@@ -193,14 +193,14 @@ extern class StreamSource implements javax.xml.transform.Source
 	* @return The system identifier that was set with setSystemId, or null
 	* if setSystemId was not called.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* Set the system ID from a File reference.
 	*
 	* @param f Must a non-null File reference.
 	*/
-	@:overload public function setSystemId(f : java.io.File) : Void;
+	@:overload @:public public function setSystemId(f : java.io.File) : Void;
 	
 	
 }

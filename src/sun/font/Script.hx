@@ -29,150 +29,150 @@ package sun.font;
 */
 extern class Script
 {
-	public static var INVALID_CODE(default, null) : Int;
+	@:public @:static @:final public static var INVALID_CODE(default, null) : Int;
 	
-	public static var COMMON(default, null) : Int;
+	@:public @:static @:final public static var COMMON(default, null) : Int;
 	
 	/* Zyyy */
-	public static var INHERITED(default, null) : Int;
+	@:public @:static @:final public static var INHERITED(default, null) : Int;
 	
 	/* Qaai */
-	public static var ARABIC(default, null) : Int;
+	@:public @:static @:final public static var ARABIC(default, null) : Int;
 	
 	/* Arab */
-	public static var ARMENIAN(default, null) : Int;
+	@:public @:static @:final public static var ARMENIAN(default, null) : Int;
 	
 	/* Armn */
-	public static var BENGALI(default, null) : Int;
+	@:public @:static @:final public static var BENGALI(default, null) : Int;
 	
 	/* Beng */
-	public static var BOPOMOFO(default, null) : Int;
+	@:public @:static @:final public static var BOPOMOFO(default, null) : Int;
 	
 	/* Bopo */
-	public static var CHEROKEE(default, null) : Int;
+	@:public @:static @:final public static var CHEROKEE(default, null) : Int;
 	
 	/* Cher */
-	public static var COPTIC(default, null) : Int;
+	@:public @:static @:final public static var COPTIC(default, null) : Int;
 	
 	/* Qaac */
-	public static var CYRILLIC(default, null) : Int;
+	@:public @:static @:final public static var CYRILLIC(default, null) : Int;
 	
 	/* Cyrl (Cyrs) */
-	public static var DESERET(default, null) : Int;
+	@:public @:static @:final public static var DESERET(default, null) : Int;
 	
 	/* Dsrt */
-	public static var DEVANAGARI(default, null) : Int;
+	@:public @:static @:final public static var DEVANAGARI(default, null) : Int;
 	
 	/* Deva */
-	public static var ETHIOPIC(default, null) : Int;
+	@:public @:static @:final public static var ETHIOPIC(default, null) : Int;
 	
 	/* Ethi */
-	public static var GEORGIAN(default, null) : Int;
+	@:public @:static @:final public static var GEORGIAN(default, null) : Int;
 	
 	/* Geor (Geon; Geoa) */
-	public static var GOTHIC(default, null) : Int;
+	@:public @:static @:final public static var GOTHIC(default, null) : Int;
 	
 	/* Goth */
-	public static var GREEK(default, null) : Int;
+	@:public @:static @:final public static var GREEK(default, null) : Int;
 	
 	/* Grek */
-	public static var GUJARATI(default, null) : Int;
+	@:public @:static @:final public static var GUJARATI(default, null) : Int;
 	
 	/* Gujr */
-	public static var GURMUKHI(default, null) : Int;
+	@:public @:static @:final public static var GURMUKHI(default, null) : Int;
 	
 	/* Guru */
-	public static var HAN(default, null) : Int;
+	@:public @:static @:final public static var HAN(default, null) : Int;
 	
 	/* Hani */
-	public static var HANGUL(default, null) : Int;
+	@:public @:static @:final public static var HANGUL(default, null) : Int;
 	
 	/* Hang */
-	public static var HEBREW(default, null) : Int;
+	@:public @:static @:final public static var HEBREW(default, null) : Int;
 	
 	/* Hebr */
-	public static var HIRAGANA(default, null) : Int;
+	@:public @:static @:final public static var HIRAGANA(default, null) : Int;
 	
 	/* Hira */
-	public static var KANNADA(default, null) : Int;
+	@:public @:static @:final public static var KANNADA(default, null) : Int;
 	
 	/* Knda */
-	public static var KATAKANA(default, null) : Int;
+	@:public @:static @:final public static var KATAKANA(default, null) : Int;
 	
 	/* Kana */
-	public static var KHMER(default, null) : Int;
+	@:public @:static @:final public static var KHMER(default, null) : Int;
 	
 	/* Khmr */
-	public static var LAO(default, null) : Int;
+	@:public @:static @:final public static var LAO(default, null) : Int;
 	
 	/* Laoo */
-	public static var LATIN(default, null) : Int;
+	@:public @:static @:final public static var LATIN(default, null) : Int;
 	
 	/* Latn (Latf; Latg) */
-	public static var MALAYALAM(default, null) : Int;
+	@:public @:static @:final public static var MALAYALAM(default, null) : Int;
 	
 	/* Mlym */
-	public static var MONGOLIAN(default, null) : Int;
+	@:public @:static @:final public static var MONGOLIAN(default, null) : Int;
 	
 	/* Mong */
-	public static var MYANMAR(default, null) : Int;
+	@:public @:static @:final public static var MYANMAR(default, null) : Int;
 	
 	/* Mymr */
-	public static var OGHAM(default, null) : Int;
+	@:public @:static @:final public static var OGHAM(default, null) : Int;
 	
 	/* Ogam */
-	public static var OLD_ITALIC(default, null) : Int;
+	@:public @:static @:final public static var OLD_ITALIC(default, null) : Int;
 	
 	/* Ital */
-	public static var ORIYA(default, null) : Int;
+	@:public @:static @:final public static var ORIYA(default, null) : Int;
 	
 	/* Orya */
-	public static var RUNIC(default, null) : Int;
+	@:public @:static @:final public static var RUNIC(default, null) : Int;
 	
 	/* Runr */
-	public static var SINHALA(default, null) : Int;
+	@:public @:static @:final public static var SINHALA(default, null) : Int;
 	
 	/* Sinh */
-	public static var SYRIAC(default, null) : Int;
+	@:public @:static @:final public static var SYRIAC(default, null) : Int;
 	
 	/* Syrc (Syrj; Syrn; Syre) */
-	public static var TAMIL(default, null) : Int;
+	@:public @:static @:final public static var TAMIL(default, null) : Int;
 	
 	/* Taml */
-	public static var TELUGU(default, null) : Int;
+	@:public @:static @:final public static var TELUGU(default, null) : Int;
 	
 	/* Telu */
-	public static var THAANA(default, null) : Int;
+	@:public @:static @:final public static var THAANA(default, null) : Int;
 	
 	/* Thaa */
-	public static var THAI(default, null) : Int;
+	@:public @:static @:final public static var THAI(default, null) : Int;
 	
 	/* Thai */
-	public static var TIBETAN(default, null) : Int;
+	@:public @:static @:final public static var TIBETAN(default, null) : Int;
 	
 	/* Tibt */
-	public static var CANADIAN_ABORIGINAL(default, null) : Int;
+	@:public @:static @:final public static var CANADIAN_ABORIGINAL(default, null) : Int;
 	
 	/* Cans */
-	public static var UCAS(default, null) : Int;
+	@:public @:static @:final public static var UCAS(default, null) : Int;
 	
 	/* Cans */
-	public static var YI(default, null) : Int;
+	@:public @:static @:final public static var YI(default, null) : Int;
 	
 	/* Yiii */
-	public static var TAGALOG(default, null) : Int;
+	@:public @:static @:final public static var TAGALOG(default, null) : Int;
 	
 	/* Tglg */
-	public static var HANUNOO(default, null) : Int;
+	@:public @:static @:final public static var HANUNOO(default, null) : Int;
 	
 	/* Hano */
-	public static var BUHID(default, null) : Int;
+	@:public @:static @:final public static var BUHID(default, null) : Int;
 	
 	/* Buhd */
-	public static var TAGBANWA(default, null) : Int;
+	@:public @:static @:final public static var TAGBANWA(default, null) : Int;
 	
 	/* Tagb */
-	public static var CODE_LIMIT(default, null) : Int;
+	@:public @:static @:final public static var CODE_LIMIT(default, null) : Int;
 	
 	
 }

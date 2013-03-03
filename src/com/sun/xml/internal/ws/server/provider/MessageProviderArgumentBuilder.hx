@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.server.provider;
 */
 @:internal extern class MessageProviderArgumentBuilder extends com.sun.xml.internal.ws.server.provider.ProviderArgumentsBuilder<com.sun.xml.internal.ws.api.message.Message>
 {
-	@:overload public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
+	@:overload @:public public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
-	@:overload private function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:protected override private function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Message;
 	
-	@:overload private function getResponseMessage(returnValue : com.sun.xml.internal.ws.api.message.Message) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:protected private function getResponseMessage(returnValue : com.sun.xml.internal.ws.api.message.Message) : com.sun.xml.internal.ws.api.message.Message;
 	
-	@:overload private function getResponseMessage(e : java.lang.Exception) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:protected override private function getResponseMessage(e : java.lang.Exception) : com.sun.xml.internal.ws.api.message.Message;
 	
 	
 }

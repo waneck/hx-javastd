@@ -28,17 +28,17 @@ extern class Imports implements sun.tools.java.Constants
 	/**
 	* Are the import names checked yet?
 	*/
-	private var checked : Int;
+	@:protected private var checked : Int;
 	
 	/**
 	* Constructor, always import java.lang.
 	*/
-	@:overload public function new(env : sun.tools.java.Environment) : Void;
+	@:overload @:public public function new(env : sun.tools.java.Environment) : Void;
 	
 	/**
 	* Check the names of the imports.
 	*/
-	@:overload @:synchronized public function resolve(env : sun.tools.java.Environment) : Void;
+	@:overload @:public @:synchronized public function resolve(env : sun.tools.java.Environment) : Void;
 	
 	/**
 	* Lookup a class, given the current set of imports,
@@ -47,13 +47,13 @@ extern class Imports implements sun.tools.java.Constants
 	* is thrown if the class is not found in the imported classes
 	* and packages.
 	*/
-	@:overload @:synchronized public function resolve(env : sun.tools.java.Environment, nm : sun.tools.java.Identifier) : sun.tools.java.Identifier;
+	@:overload @:public @:synchronized public function resolve(env : sun.tools.java.Environment, nm : sun.tools.java.Identifier) : sun.tools.java.Identifier;
 	
 	/**
 	* Check to see if 'id' names an importable class in `env'.
 	* This method was made public and static for utility.
 	*/
-	@:overload public static function importable(id : sun.tools.java.Identifier, env : sun.tools.java.Environment) : Bool;
+	@:overload @:static @:public public static function importable(id : sun.tools.java.Identifier, env : sun.tools.java.Environment) : Bool;
 	
 	/**
 	* Suppose a resolve() call has failed.
@@ -61,62 +61,62 @@ extern class Imports implements sun.tools.java.Constants
 	* default qualification (the current package) to the identifier.
 	* This decision is recorded for future reference.
 	*/
-	@:overload @:synchronized public function forceResolve(env : sun.tools.java.Environment, nm : sun.tools.java.Identifier) : sun.tools.java.Identifier;
+	@:overload @:public @:synchronized public function forceResolve(env : sun.tools.java.Environment, nm : sun.tools.java.Identifier) : sun.tools.java.Identifier;
 	
 	/**
 	* Add a class import
 	*/
-	@:overload @:synchronized public function addClass(t : sun.tools.java.IdentifierToken) : Void;
+	@:overload @:public @:synchronized public function addClass(t : sun.tools.java.IdentifierToken) : Void;
 	
-	@:overload public function addClass(nm : sun.tools.java.Identifier) : Void;
+	@:overload @:public public function addClass(nm : sun.tools.java.Identifier) : Void;
 	
 	/**
 	* Add a package import, or perhaps an inner class scope.
 	* Ignore any duplicate imports.
 	*/
-	@:overload @:synchronized public function addPackage(t : sun.tools.java.IdentifierToken) : Void;
+	@:overload @:public @:synchronized public function addPackage(t : sun.tools.java.IdentifierToken) : Void;
 	
-	@:overload public function addPackage(id : sun.tools.java.Identifier) : Void;
+	@:overload @:public public function addPackage(id : sun.tools.java.Identifier) : Void;
 	
 	/**
 	* Specify the current package with an IdentifierToken.
 	*/
-	@:overload @:synchronized public function setCurrentPackage(t : sun.tools.java.IdentifierToken) : Void;
+	@:overload @:public @:synchronized public function setCurrentPackage(t : sun.tools.java.IdentifierToken) : Void;
 	
 	/**
 	* Specify the current package
 	*/
-	@:overload @:synchronized public function setCurrentPackage(id : sun.tools.java.Identifier) : Void;
+	@:overload @:public @:synchronized public function setCurrentPackage(id : sun.tools.java.Identifier) : Void;
 	
 	/**
 	* Report the current package
 	*/
-	@:overload public function getCurrentPackage() : sun.tools.java.Identifier;
+	@:overload @:public public function getCurrentPackage() : sun.tools.java.Identifier;
 	
 	/**
 	* Return an unmodifiable list of IdentifierToken representing
 	* packages specified as imports.
 	*/
-	@:overload public function getImportedPackages() : java.util.List<Dynamic>;
+	@:overload @:public public function getImportedPackages() : java.util.List<Dynamic>;
 	
 	/**
 	* Return an unmodifiable list of IdentifierToken representing
 	* classes specified as imports.
 	*/
-	@:overload public function getImportedClasses() : java.util.List<Dynamic>;
+	@:overload @:public public function getImportedClasses() : java.util.List<Dynamic>;
 	
 	/**
 	* Extend an environment with my resolve() method.
 	*/
-	@:overload public function newEnvironment(env : sun.tools.java.Environment) : sun.tools.java.Environment;
+	@:overload @:public public function newEnvironment(env : sun.tools.java.Environment) : sun.tools.java.Environment;
 	
 	
 }
 @:internal extern class ImportEnvironment extends sun.tools.java.Environment
 {
-	@:overload public function resolve(nm : sun.tools.java.Identifier) : sun.tools.java.Identifier;
+	@:overload @:public override public function resolve(nm : sun.tools.java.Identifier) : sun.tools.java.Identifier;
 	
-	@:overload public function getImports() : sun.tools.java.Imports;
+	@:overload @:public override public function getImports() : sun.tools.java.Imports;
 	
 	
 }

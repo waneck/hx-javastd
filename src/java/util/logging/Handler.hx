@@ -31,7 +31,7 @@ extern class Handler
 	* <tt>Filter</tt>.  A default <tt>ErrorManager</tt> instance is installed
 	* as the <tt>ErrorManager</tt>.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Publish a <tt>LogRecord</tt>.
@@ -45,12 +45,12 @@ extern class Handler
 	* @param  record  description of the log event. A null record is
 	*                 silently ignored and is not published
 	*/
-	@:overload @:abstract public function publish(record : java.util.logging.LogRecord) : Void;
+	@:overload @:public @:abstract public function publish(record : java.util.logging.LogRecord) : Void;
 	
 	/**
 	* Flush any buffered output.
 	*/
-	@:overload @:abstract public function flush() : Void;
+	@:overload @:public @:abstract public function flush() : Void;
 	
 	/**
 	* Close the <tt>Handler</tt> and free all associated resources.
@@ -63,7 +63,7 @@ extern class Handler
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have <tt>LoggingPermission("control")</tt>.
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
 	/**
 	* Set a <tt>Formatter</tt>.  This <tt>Formatter</tt> will be used
@@ -76,13 +76,13 @@ extern class Handler
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have <tt>LoggingPermission("control")</tt>.
 	*/
-	@:overload public function setFormatter(newFormatter : java.util.logging.Formatter) : Void;
+	@:overload @:public public function setFormatter(newFormatter : java.util.logging.Formatter) : Void;
 	
 	/**
 	* Return the <tt>Formatter</tt> for this <tt>Handler</tt>.
 	* @return the <tt>Formatter</tt> (may be null).
 	*/
-	@:overload public function getFormatter() : java.util.logging.Formatter;
+	@:overload @:public public function getFormatter() : java.util.logging.Formatter;
 	
 	/**
 	* Set the character encoding used by this <tt>Handler</tt>.
@@ -97,7 +97,7 @@ extern class Handler
 	* @exception  UnsupportedEncodingException if the named encoding is
 	*          not supported.
 	*/
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
 	/**
 	* Return the character encoding for this <tt>Handler</tt>.
@@ -105,7 +105,7 @@ extern class Handler
 	* @return  The encoding name.  May be null, which indicates the
 	*          default encoding should be used.
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	* Set a <tt>Filter</tt> to control output on this <tt>Handler</tt>.
@@ -118,14 +118,14 @@ extern class Handler
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have <tt>LoggingPermission("control")</tt>.
 	*/
-	@:overload public function setFilter(newFilter : java.util.logging.Filter) : Void;
+	@:overload @:public public function setFilter(newFilter : java.util.logging.Filter) : Void;
 	
 	/**
 	* Get the current <tt>Filter</tt> for this <tt>Handler</tt>.
 	*
 	* @return  a <tt>Filter</tt> object (may be null)
 	*/
-	@:overload public function getFilter() : java.util.logging.Filter;
+	@:overload @:public public function getFilter() : java.util.logging.Filter;
 	
 	/**
 	* Define an ErrorManager for this Handler.
@@ -137,7 +137,7 @@ extern class Handler
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have <tt>LoggingPermission("control")</tt>.
 	*/
-	@:overload public function setErrorManager(em : java.util.logging.ErrorManager) : Void;
+	@:overload @:public public function setErrorManager(em : java.util.logging.ErrorManager) : Void;
 	
 	/**
 	* Retrieves the ErrorManager for this Handler.
@@ -145,7 +145,7 @@ extern class Handler
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have <tt>LoggingPermission("control")</tt>.
 	*/
-	@:overload public function getErrorManager() : java.util.logging.ErrorManager;
+	@:overload @:public public function getErrorManager() : java.util.logging.ErrorManager;
 	
 	/**
 	* Protected convenience method to report an error to this Handler's
@@ -157,7 +157,7 @@ extern class Handler
 	* @param ex     an exception (may be null)
 	* @param code   an error code defined in ErrorManager
 	*/
-	@:overload private function reportError(msg : String, ex : java.lang.Exception, code : Int) : Void;
+	@:overload @:protected private function reportError(msg : String, ex : java.lang.Exception, code : Int) : Void;
 	
 	/**
 	* Set the log level specifying which message levels will be
@@ -172,7 +172,7 @@ extern class Handler
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have <tt>LoggingPermission("control")</tt>.
 	*/
-	@:overload @:synchronized public function setLevel(newLevel : java.util.logging.Level) : Void;
+	@:overload @:public @:synchronized public function setLevel(newLevel : java.util.logging.Level) : Void;
 	
 	/**
 	* Get the log level specifying which messages will be
@@ -180,7 +180,7 @@ extern class Handler
 	* than this level will be discarded.
 	* @return  the level of messages being logged.
 	*/
-	@:overload @:synchronized public function getLevel() : java.util.logging.Level;
+	@:overload @:public @:synchronized public function getLevel() : java.util.logging.Level;
 	
 	/**
 	* Check if this <tt>Handler</tt> would actually log a given <tt>LogRecord</tt>.
@@ -195,7 +195,7 @@ extern class Handler
 	* @return true if the <tt>LogRecord</tt> would be logged.
 	*
 	*/
-	@:overload public function isLoggable(record : java.util.logging.LogRecord) : Bool;
+	@:overload @:public public function isLoggable(record : java.util.logging.LogRecord) : Bool;
 	
 	
 }

@@ -34,7 +34,7 @@ extern class ResultFactory
 	* @param result the Result that will receive output from the XmlSerializer
 	* @return an implementation of XmlSerializer that will produce output on the supplied Result
 	*/
-	@:overload public static function createSerializer(result : javax.xml.transform.Result) : com.sun.xml.internal.txw2.output.XmlSerializer;
+	@:overload @:public @:static public static function createSerializer(result : javax.xml.transform.Result) : com.sun.xml.internal.txw2.output.XmlSerializer;
 	
 	
 }

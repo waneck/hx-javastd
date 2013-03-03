@@ -28,7 +28,7 @@ extern class RoleInfo implements java.io.Serializable
 	/**
 	* To specify an unlimited cardinality.
 	*/
-	public static var ROLE_CARDINALITY_INFINITY(default, null) : Int;
+	@:public @:static @:final public static var ROLE_CARDINALITY_INFINITY(default, null) : Int;
 	
 	/**
 	* Constructor.
@@ -61,7 +61,7 @@ extern class RoleInfo implements java.io.Serializable
 	* @exception NotCompliantMBeanException  if the class mbeanClassName
 	* is not a MBean class.
 	*/
-	@:overload public function new(roleName : String, mbeanClassName : String, read : Bool, write : Bool, min : Int, max : Int, descr : String) : Void;
+	@:overload @:public public function new(roleName : String, mbeanClassName : String, read : Bool, write : Bool, min : Int, max : Int, descr : String) : Void;
 	
 	/**
 	* Constructor.
@@ -87,7 +87,7 @@ extern class RoleInfo implements java.io.Serializable
 	* exception can no longer be thrown.  It is retained in the
 	* declaration of this class for compatibility with existing code.
 	*/
-	@:overload public function new(roleName : String, mbeanClassName : String, read : Bool, write : Bool) : Void;
+	@:overload @:public public function new(roleName : String, mbeanClassName : String, read : Bool, write : Bool) : Void;
 	
 	/**
 	* Constructor.
@@ -110,7 +110,7 @@ extern class RoleInfo implements java.io.Serializable
 	* exception can no longer be thrown.  It is retained in the
 	* declaration of this class for compatibility with existing code.
 	*/
-	@:overload public function new(roleName : String, mbeanClassName : String) : Void;
+	@:overload @:public public function new(roleName : String, mbeanClassName : String) : Void;
 	
 	/**
 	* Copy constructor.
@@ -119,49 +119,49 @@ extern class RoleInfo implements java.io.Serializable
 	*
 	* @exception IllegalArgumentException  if null parameter
 	*/
-	@:overload public function new(roleInfo : javax.management.relation.RoleInfo) : Void;
+	@:overload @:public public function new(roleInfo : javax.management.relation.RoleInfo) : Void;
 	
 	/**
 	* Returns the name of the role.
 	*
 	* @return the name of the role.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns read access mode for the role (true if it is readable).
 	*
 	* @return true if the role is readable.
 	*/
-	@:overload public function isReadable() : Bool;
+	@:overload @:public public function isReadable() : Bool;
 	
 	/**
 	* Returns write access mode for the role (true if it is writable).
 	*
 	* @return true if the role is writable.
 	*/
-	@:overload public function isWritable() : Bool;
+	@:overload @:public public function isWritable() : Bool;
 	
 	/**
 	* Returns description text for the role.
 	*
 	* @return the description of the role.
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	/**
 	* Returns minimum degree for corresponding role reference.
 	*
 	* @return the minimum degree.
 	*/
-	@:overload public function getMinDegree() : Int;
+	@:overload @:public public function getMinDegree() : Int;
 	
 	/**
 	* Returns maximum degree for corresponding role reference.
 	*
 	* @return the maximum degree.
 	*/
-	@:overload public function getMaxDegree() : Int;
+	@:overload @:public public function getMaxDegree() : Int;
 	
 	/**
 	* <p>Returns name of type of MBean expected to be referenced in
@@ -169,7 +169,7 @@ extern class RoleInfo implements java.io.Serializable
 	*
 	* @return the name of the referenced type.
 	*/
-	@:overload public function getRefMBeanClassName() : String;
+	@:overload @:public public function getRefMBeanClassName() : String;
 	
 	/**
 	* Returns true if the <tt>value</tt> parameter is greater than or equal to
@@ -179,7 +179,7 @@ extern class RoleInfo implements java.io.Serializable
 	*
 	* @return true if greater than or equal to minimum degree, false otherwise.
 	*/
-	@:overload public function checkMinDegree(value : Int) : Bool;
+	@:overload @:public public function checkMinDegree(value : Int) : Bool;
 	
 	/**
 	* Returns true if the <tt>value</tt> parameter is lower than or equal to
@@ -189,14 +189,14 @@ extern class RoleInfo implements java.io.Serializable
 	*
 	* @return true if lower than or equal to maximum degree, false otherwise.
 	*/
-	@:overload public function checkMaxDegree(value : Int) : Bool;
+	@:overload @:public public function checkMaxDegree(value : Int) : Bool;
 	
 	/**
 	* Returns a string describing the role info.
 	*
 	* @return a description of the role info.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

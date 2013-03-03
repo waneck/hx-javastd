@@ -52,7 +52,7 @@ extern class FileInputStream extends java.io.InputStream
 	*               to the file.
 	* @see        java.lang.SecurityManager#checkRead(java.lang.String)
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a <code>FileInputStream</code> by
@@ -81,7 +81,7 @@ extern class FileInputStream extends java.io.InputStream
 	* @see        java.io.File#getPath()
 	* @see        java.lang.SecurityManager#checkRead(java.lang.String)
 	*/
-	@:overload public function new(file : java.io.File) : Void;
+	@:overload @:public public function new(file : java.io.File) : Void;
 	
 	/**
 	* Creates a <code>FileInputStream</code> by using the file descriptor
@@ -107,7 +107,7 @@ extern class FileInputStream extends java.io.InputStream
 	*                 file descriptor.
 	* @see        SecurityManager#checkRead(java.io.FileDescriptor)
 	*/
-	@:overload public function new(fdObj : java.io.FileDescriptor) : Void;
+	@:overload @:public public function new(fdObj : java.io.FileDescriptor) : Void;
 	
 	/**
 	* Reads a byte of data from this input stream. This method blocks
@@ -117,7 +117,7 @@ extern class FileInputStream extends java.io.InputStream
 	*             file is reached.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:native override public function read() : Int;
+	@:overload @:public @:native override public function read() : Int;
 	
 	/**
 	* Reads up to <code>b.length</code> bytes of data from this input
@@ -130,7 +130,7 @@ extern class FileInputStream extends java.io.InputStream
 	*             the file has been reached.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Reads up to <code>len</code> bytes of data from this input stream
@@ -150,7 +150,7 @@ extern class FileInputStream extends java.io.InputStream
 	* <code>b.length - off</code>
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips over and discards <code>n</code> bytes of data from the
@@ -174,7 +174,7 @@ extern class FileInputStream extends java.io.InputStream
 	* @exception  IOException  if n is negative, if the stream does not
 	*             support seek, or if an I/O error occurs.
 	*/
-	@:overload @:native override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:native override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns an estimate of the number of remaining bytes that can be read (or
@@ -192,7 +192,7 @@ extern class FileInputStream extends java.io.InputStream
 	* @exception  IOException  if this file input stream has been closed by calling
 	*             {@code close} or an I/O error occurs.
 	*/
-	@:overload @:native override public function available() : Int;
+	@:overload @:public @:native override public function available() : Int;
 	
 	/**
 	* Closes this file input stream and releases any system resources
@@ -206,7 +206,7 @@ extern class FileInputStream extends java.io.InputStream
 	* @revised 1.4
 	* @spec JSR-51
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Returns the <code>FileDescriptor</code>
@@ -218,7 +218,7 @@ extern class FileInputStream extends java.io.InputStream
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FileDescriptor
 	*/
-	@:overload @:final public function getFD() : java.io.FileDescriptor;
+	@:overload @:public @:final public function getFD() : java.io.FileDescriptor;
 	
 	/**
 	* Returns the unique {@link java.nio.channels.FileChannel FileChannel}
@@ -236,7 +236,7 @@ extern class FileInputStream extends java.io.InputStream
 	* @since 1.4
 	* @spec JSR-51
 	*/
-	@:require(java4) @:overload public function getChannel() : java.nio.channels.FileChannel;
+	@:require(java4) @:overload @:public public function getChannel() : java.nio.channels.FileChannel;
 	
 	/**
 	* Ensures that the <code>close</code> method of this file input stream is
@@ -245,7 +245,7 @@ extern class FileInputStream extends java.io.InputStream
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FileInputStream#close()
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

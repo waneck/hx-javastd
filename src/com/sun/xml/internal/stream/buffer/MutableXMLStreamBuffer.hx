@@ -29,19 +29,19 @@ extern class MutableXMLStreamBuffer extends com.sun.xml.internal.stream.buffer.X
 	* The default array size for the arrays used in internal representation
 	* of the XML infoset.
 	*/
-	public static var DEFAULT_ARRAY_SIZE(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_ARRAY_SIZE(default, null) : Int;
 	
 	/**
 	* Create a new MutableXMLStreamBuffer using the
 	* {@link MutableXMLStreamBuffer#DEFAULT_ARRAY_SIZE}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Set the system identifier for this buffer.
 	* @param systemId The system identifier.
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	/**
 	* Create a new MutableXMLStreamBuffer.
@@ -52,7 +52,7 @@ extern class MutableXMLStreamBuffer extends com.sun.xml.internal.stream.buffer.X
 	* @throws NegativeArraySizeException
 	* If the <code>size</code> argument is less than <code>0</code>.
 	*/
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
 	/**
 	* Create contents of a buffer from a XMLStreamReader.
@@ -67,7 +67,7 @@ extern class MutableXMLStreamBuffer extends com.sun.xml.internal.stream.buffer.X
 	* @param reader
 	* A XMLStreamReader to read from to create.
 	*/
-	@:overload public function createFromXMLStreamReader(reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function createFromXMLStreamReader(reader : javax.xml.stream.XMLStreamReader) : Void;
 	
 	/**
 	* Create contents of a buffer from a XMLStreamWriter.
@@ -79,7 +79,7 @@ extern class MutableXMLStreamBuffer extends com.sun.xml.internal.stream.buffer.X
 	* The MutableXMLStreamBuffer is created by consuming events on a XMLStreamWriter using
 	* an instance of {@link StreamWriterBufferCreator}.
 	*/
-	@:overload public function createFromXMLStreamWriter() : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public public function createFromXMLStreamWriter() : javax.xml.stream.XMLStreamWriter;
 	
 	/**
 	* Create contents of a buffer from a {@link SAXBufferCreator}.
@@ -93,7 +93,7 @@ extern class MutableXMLStreamBuffer extends com.sun.xml.internal.stream.buffer.X
 	*
 	* @return The {@link SAXBufferCreator} to create from.
 	*/
-	@:overload public function createFromSAXBufferCreator() : com.sun.xml.internal.stream.buffer.sax.SAXBufferCreator;
+	@:overload @:public public function createFromSAXBufferCreator() : com.sun.xml.internal.stream.buffer.sax.SAXBufferCreator;
 	
 	/**
 	* Create contents of a buffer from a {@link XMLReader} and {@link InputStream}.
@@ -110,7 +110,7 @@ extern class MutableXMLStreamBuffer extends com.sun.xml.internal.stream.buffer.X
 	* @param in
 	* The {@link InputStream} to be parsed.
 	*/
-	@:overload public function createFromXMLReader(reader : org.xml.sax.XMLReader, _in : java.io.InputStream) : Void;
+	@:overload @:public public function createFromXMLReader(reader : org.xml.sax.XMLReader, _in : java.io.InputStream) : Void;
 	
 	/**
 	* Create contents of a buffer from a {@link XMLReader} and {@link InputStream}.
@@ -129,7 +129,7 @@ extern class MutableXMLStreamBuffer extends com.sun.xml.internal.stream.buffer.X
 	* @param systemId
 	* The system ID of the input stream.
 	*/
-	@:overload public function createFromXMLReader(reader : org.xml.sax.XMLReader, _in : java.io.InputStream, systemId : String) : Void;
+	@:overload @:public public function createFromXMLReader(reader : org.xml.sax.XMLReader, _in : java.io.InputStream, systemId : String) : Void;
 	
 	/**
 	* Reset the MutableXMLStreamBuffer.
@@ -141,9 +141,9 @@ extern class MutableXMLStreamBuffer extends com.sun.xml.internal.stream.buffer.X
 	* <p>
 	* As many Objects as possible will be retained for reuse in future creation.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload private function setHasInternedStrings(hasInternedStrings : Bool) : Void;
+	@:overload @:protected private function setHasInternedStrings(hasInternedStrings : Bool) : Void;
 	
 	
 }

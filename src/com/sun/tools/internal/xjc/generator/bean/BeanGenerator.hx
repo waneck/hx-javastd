@@ -39,15 +39,15 @@ extern class BeanGenerator implements com.sun.tools.internal.xjc.outline.Outline
 	*      or null if the processing fails (errors should have been
 	*      reported to the error recevier.)
 	*/
-	@:overload public static function generate(model : com.sun.tools.internal.xjc.model.Model, _errorReceiver : com.sun.tools.internal.xjc.ErrorReceiver) : com.sun.tools.internal.xjc.outline.Outline;
+	@:overload @:public @:static public static function generate(model : com.sun.tools.internal.xjc.model.Model, _errorReceiver : com.sun.tools.internal.xjc.ErrorReceiver) : com.sun.tools.internal.xjc.outline.Outline;
 	
-	@:overload public function getModel() : com.sun.tools.internal.xjc.model.Model;
+	@:overload @:public public function getModel() : com.sun.tools.internal.xjc.model.Model;
 	
-	@:overload public function getCodeModel() : com.sun.codemodel.internal.JCodeModel;
+	@:overload @:public public function getCodeModel() : com.sun.codemodel.internal.JCodeModel;
 	
-	@:overload public function getContainer(parent : com.sun.tools.internal.xjc.model.CClassInfoParent, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JClassContainer;
+	@:overload @:public public function getContainer(parent : com.sun.tools.internal.xjc.model.CClassInfoParent, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JClassContainer;
 	
-	@:overload @:final public function resolve(ref : com.sun.tools.internal.xjc.model.CTypeRef, a : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
+	@:overload @:public @:final public function resolve(ref : com.sun.tools.internal.xjc.model.CTypeRef, a : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
 	
 	/**
 	* Returns all <i>used</i> JPackages.
@@ -62,38 +62,38 @@ extern class BeanGenerator implements com.sun.tools.internal.xjc.outline.Outline
 	*         Given the same input, the order of packages in the array
 	*         is always the same regardless of the environment.
 	*/
-	@:overload @:final public function getUsedPackages(aspect : com.sun.tools.internal.xjc.outline.Aspect) : java.NativeArray<com.sun.codemodel.internal.JPackage>;
+	@:overload @:public @:final public function getUsedPackages(aspect : com.sun.tools.internal.xjc.outline.Aspect) : java.NativeArray<com.sun.codemodel.internal.JPackage>;
 	
-	@:overload public function getErrorReceiver() : com.sun.tools.internal.xjc.ErrorReceiver;
+	@:overload @:public public function getErrorReceiver() : com.sun.tools.internal.xjc.ErrorReceiver;
 	
-	@:overload public function getClassFactory() : com.sun.tools.internal.xjc.util.CodeModelClassFactory;
+	@:overload @:public public function getClassFactory() : com.sun.tools.internal.xjc.util.CodeModelClassFactory;
 	
-	@:overload public function getPackageContext(p : com.sun.codemodel.internal.JPackage) : com.sun.tools.internal.xjc.generator.bean.PackageOutlineImpl;
+	@:overload @:public public function getPackageContext(p : com.sun.codemodel.internal.JPackage) : com.sun.tools.internal.xjc.generator.bean.PackageOutlineImpl;
 	
-	@:overload public function getClasses() : java.util.Collection<com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl>;
+	@:overload @:public public function getClasses() : java.util.Collection<com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl>;
 	
-	@:overload public function getClazz(bean : com.sun.tools.internal.xjc.model.CClassInfo) : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl;
+	@:overload @:public public function getClazz(bean : com.sun.tools.internal.xjc.model.CClassInfo) : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl;
 	
-	@:overload public function getElement(ei : com.sun.tools.internal.xjc.model.CElementInfo) : com.sun.tools.internal.xjc.generator.bean.ElementOutlineImpl;
+	@:overload @:public public function getElement(ei : com.sun.tools.internal.xjc.model.CElementInfo) : com.sun.tools.internal.xjc.generator.bean.ElementOutlineImpl;
 	
-	@:overload public function getEnum(eli : com.sun.tools.internal.xjc.model.CEnumLeafInfo) : com.sun.tools.internal.xjc.outline.EnumOutline;
+	@:overload @:public public function getEnum(eli : com.sun.tools.internal.xjc.model.CEnumLeafInfo) : com.sun.tools.internal.xjc.outline.EnumOutline;
 	
-	@:overload public function getEnums() : java.util.Collection<com.sun.tools.internal.xjc.outline.EnumOutline>;
+	@:overload @:public public function getEnums() : java.util.Collection<com.sun.tools.internal.xjc.outline.EnumOutline>;
 	
-	@:overload public function getAllPackageContexts() : java.lang.Iterable<com.sun.tools.internal.xjc.outline.PackageOutline>;
+	@:overload @:public public function getAllPackageContexts() : java.lang.Iterable<com.sun.tools.internal.xjc.outline.PackageOutline>;
 	
-	@:overload public function getField(prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : com.sun.tools.internal.xjc.outline.FieldOutline;
+	@:overload @:public public function getField(prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : com.sun.tools.internal.xjc.outline.FieldOutline;
 	
 	/**
 	* Generates {@link XmlJavaTypeAdapter} from {@link PropertyInfo} if necessary.
 	* Also generates other per-property annotations
 	* (such as {@link XmlID}, {@link XmlIDREF}, and {@link XmlMimeType} if necessary.
 	*/
-	@:overload @:final public function generateAdapterIfNecessary(prop : com.sun.tools.internal.xjc.model.CPropertyInfo, field : com.sun.codemodel.internal.JAnnotatable) : Void;
+	@:overload @:public @:final public function generateAdapterIfNecessary(prop : com.sun.tools.internal.xjc.model.CPropertyInfo, field : com.sun.codemodel.internal.JAnnotatable) : Void;
 	
-	@:overload @:final public function addRuntime(clazz : Class<Dynamic>) : com.sun.codemodel.internal.JClass;
+	@:overload @:public @:final public function addRuntime(clazz : Class<Dynamic>) : com.sun.codemodel.internal.JClass;
 	
-	@:overload public function generateStaticClass(src : Class<Dynamic>, out : com.sun.codemodel.internal.JPackage) : com.sun.codemodel.internal.JClass;
+	@:overload @:public public function generateStaticClass(src : Class<Dynamic>, out : com.sun.codemodel.internal.JPackage) : com.sun.codemodel.internal.JClass;
 	
 	
 }

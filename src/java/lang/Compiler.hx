@@ -56,7 +56,7 @@ package java.lang;
 	* @throws  NullPointerException
 	*          If {@code clazz} is {@code null}
 	*/
-	@:overload @:native public static function compileClass(clazz : Class<Dynamic>) : Bool;
+	@:overload @:public @:static @:native public static function compileClass(clazz : Class<Dynamic>) : Bool;
 	
 	/**
 	* Compiles all classes whose name matches the specified string.
@@ -70,7 +70,7 @@ package java.lang;
 	* @throws  NullPointerException
 	*          If {@code string} is {@code null}
 	*/
-	@:overload @:native public static function compileClasses(string : String) : Bool;
+	@:overload @:public @:static @:native public static function compileClasses(string : String) : Bool;
 	
 	/**
 	* Examines the argument type and its fields and perform some documented
@@ -85,17 +85,17 @@ package java.lang;
 	* @throws  NullPointerException
 	*          If {@code any} is {@code null}
 	*/
-	@:overload @:native public static function command(any : Dynamic) : Dynamic;
+	@:overload @:public @:static @:native public static function command(any : Dynamic) : Dynamic;
 	
 	/**
 	* Cause the Compiler to resume operation.
 	*/
-	@:overload @:native public static function enable() : Void;
+	@:overload @:public @:static @:native public static function enable() : Void;
 	
 	/**
 	* Cause the Compiler to cease operation.
 	*/
-	@:overload @:native public static function disable() : Void;
+	@:overload @:public @:static @:native public static function disable() : Void;
 	
 	
 }

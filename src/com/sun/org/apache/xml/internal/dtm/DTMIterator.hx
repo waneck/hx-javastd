@@ -58,7 +58,7 @@ extern interface DTMIterator
 	*
 	* @return a non-null DTM reference.
 	*/
-	@:overload public function getDTM(nodeHandle : Int) : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public public function getDTM(nodeHandle : Int) : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Get an instance of the DTMManager.  Since a node
@@ -67,7 +67,7 @@ extern interface DTMIterator
 	*
 	* @return a non-null DTMManager reference.
 	*/
-	@:overload public function getDTMManager() : com.sun.org.apache.xml.internal.dtm.DTMManager;
+	@:overload @:public public function getDTMManager() : com.sun.org.apache.xml.internal.dtm.DTMManager;
 	
 	/**
 	* The root node of the <code>DTMIterator</code>, as specified when it
@@ -77,7 +77,7 @@ extern interface DTMIterator
 	*
 	* @return nodeHandle int Handle of the context node.
 	*/
-	@:overload public function getRoot() : Int;
+	@:overload @:public public function getRoot() : Int;
 	
 	/**
 	* Reset the root node of the <code>DTMIterator</code>, overriding
@@ -100,14 +100,14 @@ extern interface DTMIterator
 	* dependent.  Probably a proper interface will be created fairly soon.</p>
 	*
 	*/
-	@:overload public function setRoot(nodeHandle : Int, environment : Dynamic) : Void;
+	@:overload @:public public function setRoot(nodeHandle : Int, environment : Dynamic) : Void;
 	
 	/**
 	* Reset the iterator to the start. After resetting, the next node returned
 	* will be the root node -- or, if that's filtered out, the first node
 	* within the root's subtree which is _not_ skipped by the filters.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* This attribute determines which node types are presented via the
@@ -118,7 +118,7 @@ extern interface DTMIterator
 	*
 	* @return one of the SHOW_XXX constants, or several ORed together.
 	*/
-	@:overload public function getWhatToShow() : Int;
+	@:overload @:public public function getWhatToShow() : Int;
 	
 	/**
 	* <p>The value of this flag determines whether the children of entity
@@ -140,7 +140,7 @@ extern interface DTMIterator
 	* flag will have no effect.</p>
 	*
 	* @return true if entity references will be expanded.  */
-	@:overload public function getExpandEntityReferences() : Bool;
+	@:overload @:public public function getExpandEntityReferences() : Bool;
 	
 	/**
 	* Returns the next node in the set and advances the position of the
@@ -151,7 +151,7 @@ extern interface DTMIterator
 	* @return The next node handle in the set being iterated over, or
 	*  <code>DTM.NULL</code> if there are no more members in that set.
 	*/
-	@:overload public function nextNode() : Int;
+	@:overload @:public public function nextNode() : Int;
 	
 	/**
 	* Returns the previous node in the set and moves the position of the
@@ -159,7 +159,7 @@ extern interface DTMIterator
 	* @return The previous node handle in the set being iterated over,
 	*   or <code>DTM.NULL</code> if there are no more members in that set.
 	*/
-	@:overload public function previousNode() : Int;
+	@:overload @:public public function previousNode() : Int;
 	
 	/**
 	* Detaches the <code>DTMIterator</code> from the set which it iterated
@@ -168,7 +168,7 @@ extern interface DTMIterator
 	* calls to <code>nextNode</code> or <code>previousNode</code> will
 	* raise a runtime exception.
 	*/
-	@:overload public function detach() : Void;
+	@:overload @:public public function detach() : Void;
 	
 	/**
 	* Specify if it's OK for detach to release the iterator for reuse.
@@ -176,7 +176,7 @@ extern interface DTMIterator
 	* @param allowRelease true if it is OK for detach to release this iterator
 	* for pooling.
 	*/
-	@:overload public function allowDetachToRelease(allowRelease : Bool) : Void;
+	@:overload @:public public function allowDetachToRelease(allowRelease : Bool) : Void;
 	
 	/**
 	* Get the current node in the iterator. Note that this differs from
@@ -185,7 +185,7 @@ extern interface DTMIterator
 	*
 	* @return The current node handle, or -1.
 	*/
-	@:overload public function getCurrentNode() : Int;
+	@:overload @:public public function getCurrentNode() : Int;
 	
 	/**
 	* Tells if this NodeSetDTM is "fresh", in other words, if
@@ -194,7 +194,7 @@ extern interface DTMIterator
 	*
 	* @return true if the iteration of this list has not yet begun.
 	*/
-	@:overload public function isFresh() : Bool;
+	@:overload @:public public function isFresh() : Bool;
 	
 	/**
 	* If setShouldCacheNodes(true) is called, then nodes will
@@ -206,7 +206,7 @@ extern interface DTMIterator
 	*
 	* @param b true if the nodes should be cached.
 	*/
-	@:overload public function setShouldCacheNodes(b : Bool) : Void;
+	@:overload @:public public function setShouldCacheNodes(b : Bool) : Void;
 	
 	/**
 	* Tells if this iterator can have nodes added to it or set via
@@ -214,7 +214,7 @@ extern interface DTMIterator
 	*
 	* @return True if the nodelist can be mutated.
 	*/
-	@:overload public function isMutable() : Bool;
+	@:overload @:public public function isMutable() : Bool;
 	
 	/** Get the current position within the cached list, which is one
 	* less than the next nextNode() call will retrieve.  i.e. if you
@@ -223,7 +223,7 @@ extern interface DTMIterator
 	*
 	* @return The position of the iteration.
 	*/
-	@:overload public function getCurrentPos() : Int;
+	@:overload @:public public function getCurrentPos() : Int;
 	
 	/**
 	* If an index is requested, NodeSetDTM will call this method
@@ -235,14 +235,14 @@ extern interface DTMIterator
 	* @param index The index to run to, or -1 if the iterator should be run
 	*              to the end.
 	*/
-	@:overload public function runTo(index : Int) : Void;
+	@:overload @:public public function runTo(index : Int) : Void;
 	
 	/**
 	* Set the current position in the node set.
 	*
 	* @param i Must be a valid index.
 	*/
-	@:overload public function setCurrentPos(i : Int) : Void;
+	@:overload @:public public function setCurrentPos(i : Int) : Void;
 	
 	/**
 	* Returns the <code>node handle</code> of an item in the collection. If
@@ -254,7 +254,7 @@ extern interface DTMIterator
 	*   <code>DTMIterator</code>, or <code>-1</code> if that is not a valid
 	*   index.
 	*/
-	@:overload public function item(index : Int) : Int;
+	@:overload @:public public function item(index : Int) : Int;
 	
 	/**
 	* Sets the node at the specified index of this vector to be the
@@ -269,7 +269,7 @@ extern interface DTMIterator
 	* @param node Node to set
 	* @param index Index of where to set the node
 	*/
-	@:overload public function setItem(node : Int, index : Int) : Void;
+	@:overload @:public public function setItem(node : Int, index : Int) : Void;
 	
 	/**
 	* The number of nodes in the list. The range of valid child node indices
@@ -278,7 +278,7 @@ extern interface DTMIterator
 	*
 	* @return The number of nodes in the list.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Get a cloned Iterator that is reset to the start of the iteration.
@@ -287,7 +287,7 @@ extern interface DTMIterator
 	*
 	* @throws CloneNotSupportedException
 	*/
-	@:overload public function cloneWithReset() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public public function cloneWithReset() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Returns true if all the nodes in the iteration well be returned in document
@@ -296,7 +296,7 @@ extern interface DTMIterator
 	* @return true if all the nodes in the iteration well be returned in document
 	* order.
 	*/
-	@:overload public function isDocOrdered() : Bool;
+	@:overload @:public public function isDocOrdered() : Bool;
 	
 	/**
 	* Returns the axis being iterated, if it is known.
@@ -304,7 +304,7 @@ extern interface DTMIterator
 	* @return Axis.CHILD, etc., or -1 if the axis is not known or is of multiple
 	* types.
 	*/
-	@:overload public function getAxis() : Int;
+	@:overload @:public public function getAxis() : Int;
 	
 	
 }

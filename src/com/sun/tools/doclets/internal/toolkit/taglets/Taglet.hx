@@ -63,7 +63,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in field documentation and false
 	* otherwise.
 	*/
-	@:overload @:abstract public function inField() : Bool;
+	@:overload @:public @:abstract public function inField() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -72,7 +72,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in constructor documentation and false
 	* otherwise.
 	*/
-	@:overload @:abstract public function inConstructor() : Bool;
+	@:overload @:public @:abstract public function inConstructor() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -81,7 +81,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in method documentation and false
 	* otherwise.
 	*/
-	@:overload @:abstract public function inMethod() : Bool;
+	@:overload @:public @:abstract public function inMethod() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -90,7 +90,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in method documentation and false
 	* otherwise.
 	*/
-	@:overload @:abstract public function inOverview() : Bool;
+	@:overload @:public @:abstract public function inOverview() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -99,7 +99,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in package documentation and false
 	* otherwise.
 	*/
-	@:overload @:abstract public function inPackage() : Bool;
+	@:overload @:public @:abstract public function inPackage() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -109,7 +109,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in type documentation and false
 	* otherwise.
 	*/
-	@:overload @:abstract public function inType() : Bool;
+	@:overload @:public @:abstract public function inType() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -117,13 +117,13 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @return true if this <code>Taglet</code>
 	* is an inline tag and false otherwise.
 	*/
-	@:overload @:abstract public function isInlineTag() : Bool;
+	@:overload @:public @:abstract public function isInlineTag() : Bool;
 	
 	/**
 	* Return the name of this custom tag.
 	* @return the name of this custom tag.
 	*/
-	@:overload @:abstract public function getName() : String;
+	@:overload @:public @:abstract public function getName() : String;
 	
 	/**
 	* Given the <code>Tag</code> representation of this custom
@@ -134,7 +134,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @throws IllegalArgumentException thrown when the method is not supported by the taglet.
 	* @return the TagletOutput representation of this <code>Tag</code>.
 	*/
-	@:overload @:abstract public function getTagletOutput(tag : com.sun.javadoc.Tag, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public @:abstract public function getTagletOutput(tag : com.sun.javadoc.Tag, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* Given a <code>Doc</code> object, check if it holds any tags of
@@ -145,7 +145,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @throws IllegalArgumentException thrown when the method is not supported by the taglet.
 	* @return the TagletOutput representation of this <code>Tag</code>.
 	*/
-	@:overload @:abstract public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public @:abstract public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

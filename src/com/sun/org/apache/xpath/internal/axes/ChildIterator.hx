@@ -31,7 +31,7 @@ extern class ChildIterator extends com.sun.org.apache.xpath.internal.axes.LocPat
 	* @param xctxt The XPath runtime context.
 	* @return the first node out of the nodeset, or DTM.NULL.
 	*/
-	@:overload override public function asNode(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public override public function asNode(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	*  Returns the next node in the set and advances the position of the
@@ -41,7 +41,7 @@ extern class ChildIterator extends com.sun.org.apache.xpath.internal.axes.LocPat
 	* @return  The next <code>Node</code> in the set being iterated over, or
 	*   <code>null</code> if there are no more members in that set.
 	*/
-	@:overload override public function nextNode() : Int;
+	@:overload @:public override public function nextNode() : Int;
 	
 	/**
 	* Returns the axis being iterated, if it is known.
@@ -49,7 +49,7 @@ extern class ChildIterator extends com.sun.org.apache.xpath.internal.axes.LocPat
 	* @return Axis.CHILD, etc., or -1 if the axis is not known or is of multiple
 	* types.
 	*/
-	@:overload override public function getAxis() : Int;
+	@:overload @:public override public function getAxis() : Int;
 	
 	
 }

@@ -76,7 +76,7 @@ package javax.crypto;
 	* inappropriate for this key agreement, e.g., is of the wrong type or
 	* has an incompatible algorithm type.
 	*/
-	@:overload @:abstract private function engineInit(key : java.security.Key, random : java.security.SecureRandom) : Void;
+	@:overload @:protected @:abstract private function engineInit(key : java.security.Key, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this key agreement with the given key, set of
@@ -94,7 +94,7 @@ package javax.crypto;
 	* @exception InvalidAlgorithmParameterException if the given parameters
 	* are inappropriate for this key agreement.
 	*/
-	@:overload @:abstract private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:protected @:abstract private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Executes the next phase of this key agreement with the given
@@ -115,7 +115,7 @@ package javax.crypto;
 	* @exception IllegalStateException if this key agreement has not been
 	* initialized.
 	*/
-	@:overload @:abstract private function engineDoPhase(key : java.security.Key, lastPhase : Bool) : java.security.Key;
+	@:overload @:protected @:abstract private function engineDoPhase(key : java.security.Key, lastPhase : Bool) : java.security.Key;
 	
 	/**
 	* Generates the shared secret and returns it in a new buffer.
@@ -132,7 +132,7 @@ package javax.crypto;
 	* @exception IllegalStateException if this key agreement has not been
 	* completed yet
 	*/
-	@:overload @:abstract private function engineGenerateSecret() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:abstract private function engineGenerateSecret() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Generates the shared secret, and places it into the buffer
@@ -160,7 +160,7 @@ package javax.crypto;
 	* @exception ShortBufferException if the given output buffer is too small
 	* to hold the secret
 	*/
-	@:overload @:abstract private function engineGenerateSecret(sharedSecret : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Int;
+	@:overload @:protected @:abstract private function engineGenerateSecret(sharedSecret : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Int;
 	
 	/**
 	* Creates the shared secret and returns it as a secret key object
@@ -185,7 +185,7 @@ package javax.crypto;
 	* be used to generate a secret key of the requested algorithm type (e.g.,
 	* the key material is too short)
 	*/
-	@:overload @:abstract private function engineGenerateSecret(algorithm : String) : javax.crypto.SecretKey;
+	@:overload @:protected @:abstract private function engineGenerateSecret(algorithm : String) : javax.crypto.SecretKey;
 	
 	
 }

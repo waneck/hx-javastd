@@ -28,28 +28,28 @@ package com.sun.tools.apt.mirror.declaration;
 */
 extern class TypeParameterDeclarationImpl extends com.sun.tools.apt.mirror.declaration.DeclarationImpl implements com.sun.mirror.declaration.TypeParameterDeclaration
 {
-	private var sym : TypeSymbol;
+	@:protected private var sym : TypeSymbol;
 	
 	/**
 	* Returns the type parameter's name along with any "extends" clause.
 	* Class names are qualified.  No implicit "extends Object" is added.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getBounds() : java.util.Collection<com.sun.mirror.type.ReferenceType>;
+	@:overload @:public public function getBounds() : java.util.Collection<com.sun.mirror.type.ReferenceType>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getOwner() : com.sun.mirror.declaration.Declaration;
+	@:overload @:public public function getOwner() : com.sun.mirror.declaration.Declaration;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
 	
 	
 }

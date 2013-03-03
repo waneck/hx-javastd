@@ -31,7 +31,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* method for the constructor
 	* <code>HTMLDocument(Content, StyleSheet)</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an HTML document with the default content
@@ -42,7 +42,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @param styles  the styles
 	*/
-	@:overload public function new(styles : javax.swing.text.html.StyleSheet) : Void;
+	@:overload @:public public function new(styles : javax.swing.text.html.StyleSheet) : Void;
 	
 	/**
 	* Constructs an HTML document with the given content
@@ -52,7 +52,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @param c  the container for the content
 	* @param styles the styles
 	*/
-	@:overload public function new(c : javax.swing.text.AbstractDocument.AbstractDocument_Content, styles : javax.swing.text.html.StyleSheet) : Void;
+	@:overload @:public public function new(c : javax.swing.text.AbstractDocument.AbstractDocument_Content, styles : javax.swing.text.html.StyleSheet) : Void;
 	
 	/**
 	* Fetches the reader for the parser to use when loading the document
@@ -66,7 +66,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @param pos the starting position
 	* @return the reader used by the parser to load the document
 	*/
-	@:overload public function getReader(pos : Int) : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_ParserCallback;
+	@:overload @:public public function getReader(pos : Int) : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_ParserCallback;
 	
 	/**
 	* Returns the reader for the parser to use to load the document
@@ -88,7 +88,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @param insertTag  the first tag to start inserting into document
 	* @return the reader used by the parser to load the document
 	*/
-	@:overload public function getReader(pos : Int, popDepth : Int, pushDepth : Int, insertTag : javax.swing.text.html.HTML.HTML_Tag) : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_ParserCallback;
+	@:overload @:public public function getReader(pos : Int, popDepth : Int, pushDepth : Int, insertTag : javax.swing.text.html.HTML.HTML_Tag) : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_ParserCallback;
 	
 	/**
 	* Returns the location to resolve relative URLs against.  By
@@ -98,7 +98,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @return the base location
 	*/
-	@:overload public function getBase() : java.net.URL;
+	@:overload @:public public function getBase() : java.net.URL;
 	
 	/**
 	* Sets the location to resolve relative URLs against.  By
@@ -110,7 +110,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @param u  the desired base URL
 	*/
-	@:overload public function setBase(u : java.net.URL) : Void;
+	@:overload @:public public function setBase(u : java.net.URL) : Void;
 	
 	/**
 	* Inserts new elements in bulk.  This is how elements get created
@@ -126,7 +126,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @exception BadLocationException  if the given position does not
 	*   represent a valid location in the associated document.
 	*/
-	@:overload override private function insert(offset : Int, data : java.NativeArray<javax.swing.text.DefaultStyledDocument.DefaultStyledDocument_ElementSpec>) : Void;
+	@:overload @:protected override private function insert(offset : Int, data : java.NativeArray<javax.swing.text.DefaultStyledDocument.DefaultStyledDocument_ElementSpec>) : Void;
 	
 	/**
 	* Updates document structure as a result of text insertion.  This
@@ -137,7 +137,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @param chng a description of the document change
 	* @param attr the attributes
 	*/
-	@:overload override private function insertUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:protected override private function insertUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Replaces the contents of the document with the given
@@ -147,7 +147,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @param data  the new contents of the document
 	*/
-	@:overload override private function create(data : java.NativeArray<javax.swing.text.DefaultStyledDocument.DefaultStyledDocument_ElementSpec>) : Void;
+	@:overload @:protected override private function create(data : java.NativeArray<javax.swing.text.DefaultStyledDocument.DefaultStyledDocument_ElementSpec>) : Void;
 	
 	/**
 	* Sets attributes for a paragraph.
@@ -162,7 +162,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @param s the attributes
 	* @param replace whether to replace existing attributes, or merge them
 	*/
-	@:overload override public function setParagraphAttributes(offset : Int, length : Int, s : javax.swing.text.AttributeSet, replace : Bool) : Void;
+	@:overload @:public override public function setParagraphAttributes(offset : Int, length : Int, s : javax.swing.text.AttributeSet, replace : Bool) : Void;
 	
 	/**
 	* Fetches the <code>StyleSheet</code> with the document-specific display
@@ -170,7 +170,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @return the <code>StyleSheet</code>
 	*/
-	@:overload public function getStyleSheet() : javax.swing.text.html.StyleSheet;
+	@:overload @:public public function getStyleSheet() : javax.swing.text.html.StyleSheet;
 	
 	/**
 	* Fetches an iterator for the specified HTML tag.
@@ -182,7 +182,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @return the <code>Iterator</code> for the given HTML tag
 	* @see javax.swing.text.html.HTML.Tag
 	*/
-	@:overload public function getIterator(t : javax.swing.text.html.HTML.HTML_Tag) : javax.swing.text.html.HTMLDocument.HTMLDocument_Iterator;
+	@:overload @:public public function getIterator(t : javax.swing.text.html.HTML.HTML_Tag) : javax.swing.text.html.HTMLDocument.HTMLDocument_Iterator;
 	
 	/**
 	* Creates a document leaf element that directly represents
@@ -196,7 +196,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @param p1 the end of the range (must be at least p0)
 	* @return the new element
 	*/
-	@:overload override private function createLeafElement(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet, p0 : Int, p1 : Int) : javax.swing.text.Element;
+	@:overload @:protected override private function createLeafElement(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet, p0 : Int, p1 : Int) : javax.swing.text.Element;
 	
 	/**
 	* Creates a document branch element, that can contain other elements.
@@ -207,7 +207,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @param a the attributes
 	* @return the element
 	*/
-	@:overload override private function createBranchElement(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet) : javax.swing.text.Element;
+	@:overload @:protected override private function createBranchElement(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet) : javax.swing.text.Element;
 	
 	/**
 	* Creates the root element to be used to represent the
@@ -215,7 +215,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @return the element base
 	*/
-	@:overload override private function createDefaultRoot() : javax.swing.text.AbstractDocument.AbstractDocument_AbstractElement;
+	@:overload @:protected override private function createDefaultRoot() : javax.swing.text.AbstractDocument.AbstractDocument_AbstractElement;
 	
 	/**
 	* Sets the number of tokens to buffer before trying to update
@@ -223,7 +223,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @param n  the number of tokens to buffer
 	*/
-	@:overload public function setTokenThreshold(n : Int) : Void;
+	@:overload @:public public function setTokenThreshold(n : Int) : Void;
 	
 	/**
 	* Gets the number of tokens to buffer before trying to update
@@ -232,7 +232,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @return the number of tokens to buffer
 	*/
-	@:overload public function getTokenThreshold() : Int;
+	@:overload @:public public function getTokenThreshold() : Int;
 	
 	/**
 	* Determines how unknown tags are handled by the parser.
@@ -243,7 +243,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*          saved in the model, otherwise tags are dropped
 	* @see javax.swing.text.html.HTML.Tag
 	*/
-	@:overload public function setPreservesUnknownTags(preservesTags : Bool) : Void;
+	@:overload @:public public function setPreservesUnknownTags(preservesTags : Bool) : Void;
 	
 	/**
 	* Returns the behavior the parser observes when encountering
@@ -252,7 +252,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @see javax.swing.text.html.HTML.Tag
 	* @return true if unknown tags are to be preserved when parsing
 	*/
-	@:overload public function getPreservesUnknownTags() : Bool;
+	@:overload @:public public function getPreservesUnknownTags() : Bool;
 	
 	/**
 	* Processes <code>HyperlinkEvents</code> that
@@ -294,7 +294,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @param e the event
 	*/
-	@:overload public function processHTMLFrameHyperlinkEvent(e : javax.swing.text.html.HTMLFrameHyperlinkEvent) : Void;
+	@:overload @:public public function processHTMLFrameHyperlinkEvent(e : javax.swing.text.html.HTMLFrameHyperlinkEvent) : Void;
 	
 	/**
 	* Sets the parser that is used by the methods that insert html
@@ -308,7 +308,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setParser(parser : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_Parser) : Void;
+	@:require(java3) @:overload @:public public function setParser(parser : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_Parser) : Void;
 	
 	/**
 	* Returns the parser that is used when inserting HTML into the existing
@@ -317,7 +317,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getParser() : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_Parser;
+	@:require(java3) @:overload @:public public function getParser() : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_Parser;
 	
 	/**
 	* Replaces the children of the given element with the contents
@@ -368,7 +368,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*         has not been defined
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setInnerHTML(elem : javax.swing.text.Element, htmlText : String) : Void;
+	@:require(java3) @:overload @:public public function setInnerHTML(elem : javax.swing.text.Element, htmlText : String) : Void;
 	
 	/**
 	* Replaces the given element in the parent with the contents
@@ -428,7 +428,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*         been set
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setOuterHTML(elem : javax.swing.text.Element, htmlText : String) : Void;
+	@:require(java3) @:overload @:public public function setOuterHTML(elem : javax.swing.text.Element, htmlText : String) : Void;
 	
 	/**
 	* Inserts the HTML specified as a string at the start
@@ -480,7 +480,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*         been set on the document
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function insertAfterStart(elem : javax.swing.text.Element, htmlText : String) : Void;
+	@:require(java3) @:overload @:public public function insertAfterStart(elem : javax.swing.text.Element, htmlText : String) : Void;
 	
 	/**
 	* Inserts the HTML specified as a string at the end of
@@ -537,7 +537,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*         been set on the document
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function insertBeforeEnd(elem : javax.swing.text.Element, htmlText : String) : Void;
+	@:require(java3) @:overload @:public public function insertBeforeEnd(elem : javax.swing.text.Element, htmlText : String) : Void;
 	
 	/**
 	* Inserts the HTML specified as a string before the start of
@@ -585,7 +585,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*         been set on the document
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function insertBeforeStart(elem : javax.swing.text.Element, htmlText : String) : Void;
+	@:require(java3) @:overload @:public public function insertBeforeStart(elem : javax.swing.text.Element, htmlText : String) : Void;
 	
 	/**
 	* Inserts the HTML specified as a string after the the end of the
@@ -633,7 +633,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*         been set on the document
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function insertAfterEnd(elem : javax.swing.text.Element, htmlText : String) : Void;
+	@:require(java3) @:overload @:public public function insertAfterEnd(elem : javax.swing.text.Element, htmlText : String) : Void;
 	
 	/**
 	* Returns the element that has the given id <code>Attribute</code>.
@@ -653,7 +653,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @see javax.swing.text.html.HTML.Attribute
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getElement(id : String) : javax.swing.text.Element;
+	@:require(java3) @:overload @:public public function getElement(id : String) : javax.swing.text.Element;
 	
 	/**
 	* Returns the child element of <code>e</code> that contains the
@@ -669,7 +669,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @see javax.swing.text.html.HTML.Attribute
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getElement(e : javax.swing.text.Element, attribute : Dynamic, value : Dynamic) : javax.swing.text.Element;
+	@:require(java3) @:overload @:public public function getElement(e : javax.swing.text.Element, attribute : Dynamic, value : Dynamic) : javax.swing.text.Element;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -680,7 +680,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @param e the event
 	* @see EventListenerList
 	*/
-	@:overload override private function fireChangedUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:protected override private function fireChangedUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -691,13 +691,13 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @param e the event
 	* @see EventListenerList
 	*/
-	@:overload override private function fireUndoableEditUpdate(e : javax.swing.event.UndoableEditEvent) : Void;
+	@:overload @:protected override private function fireUndoableEditUpdate(e : javax.swing.event.UndoableEditEvent) : Void;
 	
 	/**
 	* Document property key value. The value for the key will be a Vector
 	* of Strings that are comments not found in the body.
 	*/
-	public static var AdditionalComments(default, null) : String;
+	@:public @:static @:final public static var AdditionalComments(default, null) : String;
 	
 	
 }
@@ -716,7 +716,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @return the <code>AttributeSet</code> for this tag, or
 	*      <code>null</code> if none can be found
 	*/
-	@:overload @:abstract public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public @:abstract public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Returns the start of the range for which the current occurrence of
@@ -724,7 +724,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @return the start of the range, or -1 if it can't be found
 	*/
-	@:overload @:abstract public function getStartOffset() : Int;
+	@:overload @:public @:abstract public function getStartOffset() : Int;
 	
 	/**
 	* Returns the end of the range for which the current occurrence of
@@ -732,13 +732,13 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @return the end of the range
 	*/
-	@:overload @:abstract public function getEndOffset() : Int;
+	@:overload @:public @:abstract public function getEndOffset() : Int;
 	
 	/**
 	* Move the iterator forward to the next occurrence
 	* of the tag it represents.
 	*/
-	@:overload @:abstract public function next() : Void;
+	@:overload @:public @:abstract public function next() : Void;
 	
 	/**
 	* Indicates if the iterator is currently
@@ -747,12 +747,12 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @return true if the iterator is currently representing an
 	*              occurrence of a tag, otherwise returns false
 	*/
-	@:overload @:abstract public function isValid() : Bool;
+	@:overload @:public @:abstract public function isValid() : Bool;
 	
 	/**
 	* Type of tag this iterator represents.
 	*/
-	@:overload @:abstract public function getTag() : javax.swing.text.html.HTML.HTML_Tag;
+	@:overload @:public @:abstract public function getTag() : javax.swing.text.html.HTML.HTML_Tag;
 	
 	
 }
@@ -766,7 +766,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @return the <code>AttributeSet</code> for this tag,
 	*              or <code>null</code> if none can be found
 	*/
-	@:overload override public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public override public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Returns the start of the range for which the current occurrence of
@@ -774,7 +774,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @return the start of the range, or -1 if it can't be found
 	*/
-	@:overload override public function getStartOffset() : Int;
+	@:overload @:public override public function getStartOffset() : Int;
 	
 	/**
 	* Returns the end of the range for which the current occurrence of
@@ -782,13 +782,13 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @return the end of the range
 	*/
-	@:overload override public function getEndOffset() : Int;
+	@:overload @:public override public function getEndOffset() : Int;
 	
 	/**
 	* Moves the iterator forward to the next occurrence
 	* of the tag it represents.
 	*/
-	@:overload override public function next() : Void;
+	@:overload @:public override public function next() : Void;
 	
 	/**
 	* Returns the type of tag this iterator represents.
@@ -796,14 +796,14 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @return the <code>HTML.Tag</code> that this iterator represents.
 	* @see javax.swing.text.html.HTML.Tag
 	*/
-	@:overload override public function getTag() : javax.swing.text.html.HTML.HTML_Tag;
+	@:overload @:public override public function getTag() : javax.swing.text.html.HTML.HTML_Tag;
 	
 	/**
 	* Returns true if the current position is not <code>null</code>.
 	* @return true if current position is not <code>null</code>,
 	*              otherwise returns false
 	*/
-	@:overload override public function isValid() : Bool;
+	@:overload @:public override public function isValid() : Bool;
 	
 	
 }
@@ -953,9 +953,9 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 */
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader') extern class HTMLDocument_HTMLReader extends javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_ParserCallback
 {
-	@:overload public function new(offset : Int) : Void;
+	@:overload @:public public function new(offset : Int) : Void;
 	
-	@:overload public function new(offset : Int, popDepth : Int, pushDepth : Int, insertTag : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public public function new(offset : Int, popDepth : Int, pushDepth : Int, insertTag : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	/**
 	* The last method called on the reader.  It allows
@@ -963,33 +963,33 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* Since this is currently loading synchronously, the entire
 	* set of changes are pushed in at this point.
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* Called by the parser to indicate a block of text was
 	* encountered.
 	*/
-	@:overload override public function handleText(data : java.NativeArray<java.StdTypes.Char16>, pos : Int) : Void;
+	@:overload @:public override public function handleText(data : java.NativeArray<java.StdTypes.Char16>, pos : Int) : Void;
 	
 	/**
 	* Callback from the parser.  Route to the appropriate
 	* handler for the tag.
 	*/
-	@:overload override public function handleStartTag(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet, pos : Int) : Void;
+	@:overload @:public override public function handleStartTag(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet, pos : Int) : Void;
 	
-	@:overload override public function handleComment(data : java.NativeArray<java.StdTypes.Char16>, pos : Int) : Void;
-	
-	/**
-	* Callback from the parser.  Route to the appropriate
-	* handler for the tag.
-	*/
-	@:overload override public function handleEndTag(t : javax.swing.text.html.HTML.HTML_Tag, pos : Int) : Void;
+	@:overload @:public override public function handleComment(data : java.NativeArray<java.StdTypes.Char16>, pos : Int) : Void;
 	
 	/**
 	* Callback from the parser.  Route to the appropriate
 	* handler for the tag.
 	*/
-	@:overload override public function handleSimpleTag(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet, pos : Int) : Void;
+	@:overload @:public override public function handleEndTag(t : javax.swing.text.html.HTML.HTML_Tag, pos : Int) : Void;
+	
+	/**
+	* Callback from the parser.  Route to the appropriate
+	* handler for the tag.
+	*/
+	@:overload @:public override public function handleSimpleTag(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet, pos : Int) : Void;
 	
 	/**
 	* This is invoked after the stream has been parsed, but before
@@ -999,7 +999,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function handleEndOfLineString(eol : String) : Void;
+	@:require(java3) @:overload @:public override public function handleEndOfLineString(eol : String) : Void;
 	
 	/**
 	* Registers a handler for the given tag.  By default
@@ -1007,19 +1007,19 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* This can be used to change the handling of a particular
 	* tag or to add support for custom tags.
 	*/
-	@:overload private function registerTag(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_TagAction) : Void;
+	@:overload @:protected private function registerTag(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_TagAction) : Void;
 	
 	/**
 	* Pushes the current character style on a stack in preparation
 	* for forming a new nested character style.
 	*/
-	@:overload private function pushCharacterStyle() : Void;
+	@:overload @:protected private function pushCharacterStyle() : Void;
 	
 	/**
 	* Pops a previously pushed character style off the stack
 	* to return to a previous style.
 	*/
-	@:overload private function popCharacterStyle() : Void;
+	@:overload @:protected private function popCharacterStyle() : Void;
 	
 	/**
 	* Adds the given content to the textarea document.
@@ -1028,7 +1028,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* to the text area and is hence added to the
 	* TextAreaDocument associated with the text area.
 	*/
-	@:overload private function textAreaContent(data : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:protected private function textAreaContent(data : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Adds the given content that was encountered in a
@@ -1036,19 +1036,19 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* runs of text, and makes calls to addContent to
 	* actually add the text.
 	*/
-	@:overload private function preContent(data : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:protected private function preContent(data : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Adds an instruction to the parse buffer to create a
 	* block element with the given attributes.
 	*/
-	@:overload private function blockOpen(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:protected private function blockOpen(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
 	
 	/**
 	* Adds an instruction to the parse buffer to close out
 	* a block element of the given type.
 	*/
-	@:overload private function blockClose(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:protected private function blockClose(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	/**
 	* Adds some text with the current character attributes.
@@ -1057,7 +1057,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @param offs the initial offset
 	* @param length the length
 	*/
-	@:overload private function addContent(data : java.NativeArray<java.StdTypes.Char16>, offs : Int, length : Int) : Void;
+	@:overload @:protected private function addContent(data : java.NativeArray<java.StdTypes.Char16>, offs : Int, length : Int) : Void;
 	
 	/**
 	* Adds some text with the current character attributes.
@@ -1068,17 +1068,17 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @param generateImpliedPIfNecessary whether to generate implied
 	* paragraphs
 	*/
-	@:overload private function addContent(data : java.NativeArray<java.StdTypes.Char16>, offs : Int, length : Int, generateImpliedPIfNecessary : Bool) : Void;
+	@:overload @:protected private function addContent(data : java.NativeArray<java.StdTypes.Char16>, offs : Int, length : Int, generateImpliedPIfNecessary : Bool) : Void;
 	
 	/**
 	* Adds content that is basically specified entirely
 	* in the attribute set.
 	*/
-	@:overload private function addSpecialElement(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:protected private function addSpecialElement(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
 	
-	private var parseBuffer : java.util.Vector<javax.swing.text.DefaultStyledDocument.DefaultStyledDocument_ElementSpec>;
+	@:protected private var parseBuffer : java.util.Vector<javax.swing.text.DefaultStyledDocument.DefaultStyledDocument_ElementSpec>;
 	
-	private var charAttr : javax.swing.text.MutableAttributeSet;
+	@:protected private var charAttr : javax.swing.text.MutableAttributeSet;
 	
 	
 }
@@ -1098,7 +1098,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* many tags.  By default this does nothing and
 	* completely ignores the tag.
 	*/
-	@:overload public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
 	
 	/**
 	* Called when an end tag is seen for the
@@ -1108,15 +1108,15 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* many tags.  By default this does nothing and
 	* completely ignores the tag.
 	*/
-	@:overload public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$BlockAction') extern class HTMLDocument_HTMLReader_BlockAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_TagAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	
 }
@@ -1126,37 +1126,37 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 */
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$FormTagAction') @:internal extern class HTMLDocument_HTMLReader_FormTagAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_BlockAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$ParagraphAction') extern class HTMLDocument_HTMLReader_ParagraphAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_BlockAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$SpecialAction') extern class HTMLDocument_HTMLReader_SpecialAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_TagAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$IsindexAction') extern class HTMLDocument_HTMLReader_IsindexAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_TagAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$HiddenAction') extern class HTMLDocument_HTMLReader_HiddenAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_TagAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	
 }
@@ -1166,7 +1166,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 */
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$MetaAction') @:internal extern class HTMLDocument_HTMLReader_MetaAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_HiddenAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
 	
 	
 }
@@ -1178,9 +1178,9 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 */
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$HeadAction') @:internal extern class HTMLDocument_HTMLReader_HeadAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_BlockAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	
 }
@@ -1191,47 +1191,47 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 */
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$LinkAction') @:internal extern class HTMLDocument_HTMLReader_LinkAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_HiddenAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$MapAction') @:internal extern class HTMLDocument_HTMLReader_MapAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_TagAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$AreaAction') @:internal extern class HTMLDocument_HTMLReader_AreaAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_TagAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$StyleAction') @:internal extern class HTMLDocument_HTMLReader_StyleAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_TagAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$PreAction') extern class HTMLDocument_HTMLReader_PreAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_BlockAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$CharacterAction') extern class HTMLDocument_HTMLReader_CharacterAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_TagAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	
 }
@@ -1242,39 +1242,39 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 */
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$ConvertAction') @:internal extern class HTMLDocument_HTMLReader_ConvertAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_TagAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$AnchorAction') @:internal extern class HTMLDocument_HTMLReader_AnchorAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_CharacterAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$TitleAction') @:internal extern class HTMLDocument_HTMLReader_TitleAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_HiddenAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$BaseAction') @:internal extern class HTMLDocument_HTMLReader_BaseAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_TagAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$ObjectAction') @:internal extern class HTMLDocument_HTMLReader_ObjectAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_SpecialAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	
 }
@@ -1329,9 +1329,9 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 */
 @:native('javax$swing$text$html$HTMLDocument$HTMLReader$FormAction') extern class HTMLDocument_HTMLReader_FormAction extends javax.swing.text.html.HTMLDocument.HTMLDocument_HTMLReader_SpecialAction
 {
-	@:overload override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:public override public function start(t : javax.swing.text.html.HTML.HTML_Tag, attr : javax.swing.text.MutableAttributeSet) : Void;
 	
-	@:overload override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
+	@:overload @:public override public function end(t : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
 	
 }
@@ -1360,14 +1360,14 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @param offs1   the end offset (must be at least offs0)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet, offs0 : Int, offs1 : Int) : Void;
+	@:require(java4) @:overload @:public public function new(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet, offs0 : Int, offs1 : Int) : Void;
 	
 	/**
 	* Gets the name of the element.
 	*
 	* @return the name, null if none
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Gets the resolving parent.  HTML attributes are not inherited
@@ -1376,7 +1376,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @return null, there are none
 	* @see AttributeSet#getResolveParent
 	*/
-	@:overload override public function getResolveParent() : javax.swing.text.AttributeSet;
+	@:overload @:public override public function getResolveParent() : javax.swing.text.AttributeSet;
 	
 	
 }
@@ -1394,14 +1394,14 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @param a       the attributes for the element
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet) : Void;
+	@:require(java4) @:overload @:public public function new(parent : javax.swing.text.Element, a : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Gets the name of the element.
 	*
 	* @return the name, null if none
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Gets the resolving parent.  HTML attributes are not inherited
@@ -1410,7 +1410,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @return null, there are none
 	* @see AttributeSet#getResolveParent
 	*/
-	@:overload override public function getResolveParent() : javax.swing.text.AttributeSet;
+	@:overload @:public override public function getResolveParent() : javax.swing.text.AttributeSet;
 	
 	
 }
@@ -1419,9 +1419,9 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 */
 @:native('javax$swing$text$html$HTMLDocument$FixedLengthDocument') @:internal extern class HTMLDocument_FixedLengthDocument extends javax.swing.text.PlainDocument
 {
-	@:overload public function new(maxLength : Int) : Void;
+	@:overload @:public public function new(maxLength : Int) : Void;
 	
-	@:overload override public function insertString(offset : Int, str : String, a : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public override public function insertString(offset : Int, str : String, a : javax.swing.text.AttributeSet) : Void;
 	
 	
 }

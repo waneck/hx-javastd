@@ -75,7 +75,7 @@ extern class EndpointReference
 	* @see Service
 	* @since JAX-WS 2.1
 	*/
-	@:require(java1) @:overload private function new() : Void;
+	@:require(java1) @:overload @:protected private function new() : Void;
 	
 	/**
 	* Factory method to read an EndpointReference from the infoset contained in
@@ -92,7 +92,7 @@ extern class EndpointReference
 	* @throws java.lang.IllegalArgumentException
 	*     if the <code>null</code> <code>eprInfoset</code> value is given.
 	*/
-	@:overload public static function readFrom(eprInfoset : javax.xml.transform.Source) : javax.xml.ws.EndpointReference;
+	@:overload @:public @:static public static function readFrom(eprInfoset : javax.xml.transform.Source) : javax.xml.ws.EndpointReference;
 	
 	/**
 	* write this <code>EndpointReference</code> to the specified infoset format
@@ -105,7 +105,7 @@ extern class EndpointReference
 	* @throws java.lang.IllegalArgumentException
 	*      If the <code>null</code> <code>result</code> value is given.
 	*/
-	@:overload @:abstract public function writeTo(result : javax.xml.transform.Result) : Void;
+	@:overload @:public @:abstract public function writeTo(result : javax.xml.transform.Result) : Void;
 	
 	/**
 	* The <code>getPort</code> method returns a proxy. If there
@@ -159,12 +159,12 @@ extern class EndpointReference
 	* @see java.lang.reflect.Proxy
 	* @see WebServiceFeature
 	**/
-	@:overload public function getPort<T>(serviceEndpointInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
+	@:overload @:public public function getPort<T>(serviceEndpointInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
 	
 	/**
 	* Displays EPR infoset for debugging convenience.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

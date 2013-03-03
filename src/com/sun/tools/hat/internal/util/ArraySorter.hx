@@ -49,12 +49,12 @@ extern class ArraySorter
 	/**
 	* Sort the given array, using c for comparison
 	**/
-	@:overload public static function sort(arr : java.NativeArray<Dynamic>, c : com.sun.tools.hat.internal.util.Comparer) : Void;
+	@:overload @:static @:public public static function sort(arr : java.NativeArray<Dynamic>, c : com.sun.tools.hat.internal.util.Comparer) : Void;
 	
 	/**
 	* Sort an array of strings, using String.compareTo()
 	**/
-	@:overload public static function sortArrayOfStrings(arr : java.NativeArray<Dynamic>) : Void;
+	@:overload @:static @:public public static function sortArrayOfStrings(arr : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

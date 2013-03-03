@@ -25,13 +25,13 @@ package com.sun.tools.jdi;
 */
 @:internal extern class StratumLineInfo implements com.sun.tools.jdi.LineInfo
 {
-	@:overload public function liStratum() : String;
+	@:overload @:public public function liStratum() : String;
 	
-	@:overload public function liLineNumber() : Int;
+	@:overload @:public public function liLineNumber() : Int;
 	
-	@:overload public function liSourceName() : String;
+	@:overload @:public public function liSourceName() : String;
 	
-	@:overload public function liSourcePath() : String;
+	@:overload @:public public function liSourcePath() : String;
 	
 	
 }

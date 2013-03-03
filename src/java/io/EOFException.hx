@@ -43,7 +43,7 @@ package java.io;
 	* Constructs an <code>EOFException</code> with <code>null</code>
 	* as its error detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>EOFException</code> with the specified detail
@@ -53,7 +53,7 @@ package java.io;
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

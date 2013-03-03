@@ -58,7 +58,7 @@ extern class PackedColorModel extends java.awt.image.ColorModel
 	* @throws IllegalArgumentException if <code>bits</code> is less than
 	*         1 or greater than 32
 	*/
-	@:overload public function new(space : java.awt.color.ColorSpace, bits : Int, colorMaskArray : java.NativeArray<Int>, alphaMask : Int, isAlphaPremultiplied : Bool, trans : Int, transferType : Int) : Void;
+	@:overload @:public public function new(space : java.awt.color.ColorSpace, bits : Int, colorMaskArray : java.NativeArray<Int>, alphaMask : Int, isAlphaPremultiplied : Bool, trans : Int, transferType : Int) : Void;
 	
 	/**
 	* Constructs a <code>PackedColorModel</code> from the specified
@@ -100,7 +100,7 @@ extern class PackedColorModel extends java.awt.image.ColorModel
 	*         TYPE_RGB space
 	* @see ColorSpace
 	*/
-	@:overload public function new(space : java.awt.color.ColorSpace, bits : Int, rmask : Int, gmask : Int, bmask : Int, amask : Int, isAlphaPremultiplied : Bool, trans : Int, transferType : Int) : Void;
+	@:overload @:public public function new(space : java.awt.color.ColorSpace, bits : Int, rmask : Int, gmask : Int, bmask : Int, amask : Int, isAlphaPremultiplied : Bool, trans : Int, transferType : Int) : Void;
 	
 	/**
 	* Returns the mask indicating which bits in a pixel
@@ -122,7 +122,7 @@ extern class PackedColorModel extends java.awt.image.ColorModel
 	*         <code>PackedColorModel</code> or if <code>index</code> is
 	*         less than zero
 	*/
-	@:overload @:final public function getMask(index : Int) : Int;
+	@:overload @:final @:public public function getMask(index : Int) : Int;
 	
 	/**
 	* Returns a mask array indicating which bits in a pixel
@@ -131,7 +131,7 @@ extern class PackedColorModel extends java.awt.image.ColorModel
 	*         <code>int</code> pixel
 	*         representation contain the color or alpha samples.
 	*/
-	@:overload @:final public function getMasks() : java.NativeArray<Int>;
+	@:overload @:final @:public public function getMasks() : java.NativeArray<Int>;
 	
 	/**
 	* Creates a <code>SampleModel</code> with the specified width and
@@ -146,7 +146,7 @@ extern class PackedColorModel extends java.awt.image.ColorModel
 	*         <code>h</code> is not greater than 0
 	* @see SampleModel
 	*/
-	@:overload override public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
+	@:overload @:public override public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
 	
 	/**
 	* Checks if the specified <code>SampleModel</code> is compatible
@@ -159,7 +159,7 @@ extern class PackedColorModel extends java.awt.image.ColorModel
 	*         <code>false</code> otherwise.
 	* @see SampleModel
 	*/
-	@:overload override public function isCompatibleSampleModel(sm : java.awt.image.SampleModel) : Bool;
+	@:overload @:public override public function isCompatibleSampleModel(sm : java.awt.image.SampleModel) : Bool;
 	
 	/**
 	* Returns a {@link WritableRaster} representing the alpha channel of
@@ -174,7 +174,7 @@ extern class PackedColorModel extends java.awt.image.ColorModel
 	* @return a <code>WritableRaster</code> that represents the alpha
 	*         channel of the image contained in <code>raster</code>.
 	*/
-	@:overload override public function getAlphaRaster(raster : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
+	@:overload @:public override public function getAlphaRaster(raster : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Tests if the specified <code>Object</code> is an instance
@@ -185,7 +185,7 @@ extern class PackedColorModel extends java.awt.image.ColorModel
 	* is an instance of <code>PackedColorModel</code> and equals this
 	* <code>PackedColorModel</code>; <code>false</code> otherwise.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	
 }

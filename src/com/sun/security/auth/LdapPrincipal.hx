@@ -33,7 +33,7 @@ extern class LdapPrincipal implements java.security.Principal implements java.io
 	* @exception NullPointerException If the <code>name</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Compares this principal to the specified object.
@@ -41,21 +41,21 @@ extern class LdapPrincipal implements java.security.Principal implements java.io
 	* @param object The object to compare this principal against.
 	* @return true if they are equal; false otherwise.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Computes the hash code for this principal.
 	*
 	* @return The principal's hash code.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the name originally used to create this principal.
 	*
 	* @return The principal's string name.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Creates a string representation of this principal's name in the format
@@ -64,7 +64,7 @@ extern class LdapPrincipal implements java.security.Principal implements java.io
 	*
 	* @return The principal's string name.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

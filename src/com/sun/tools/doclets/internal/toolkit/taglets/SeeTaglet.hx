@@ -35,17 +35,17 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 */
 @:require(java4) extern class SeeTaglet extends com.sun.tools.doclets.internal.toolkit.taglets.BaseTaglet implements com.sun.tools.doclets.internal.toolkit.taglets.InheritableTaglet
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function inherit(input : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Input, output : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Output) : Void;
+	@:overload @:public public function inherit(input : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Input, output : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Output) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

@@ -31,28 +31,28 @@ extern class DummyListField extends com.sun.tools.internal.xjc.generator.bean.fi
 	*      An instance of this class will be used to store data
 	*      for this field.
 	*/
-	@:overload private function new(context : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo, coreList : com.sun.codemodel.internal.JClass) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo, coreList : com.sun.codemodel.internal.JClass) : Void;
 	
 	/**
 	* Annotate the field according to the recipes given as {@link CPropertyInfo}.
 	*/
-	@:overload override private function annotate(field : com.sun.codemodel.internal.JAnnotatable) : Void;
+	@:overload @:protected override private function annotate(field : com.sun.codemodel.internal.JAnnotatable) : Void;
 	
-	@:overload @:final private function getCoreListType() : com.sun.codemodel.internal.JClass;
+	@:overload @:protected @:final override private function getCoreListType() : com.sun.codemodel.internal.JClass;
 	
-	@:overload public function generateAccessors() : Void;
+	@:overload @:public override public function generateAccessors() : Void;
 	
-	@:overload public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.generator.bean.field.AbstractField.AbstractField_Accessor;
+	@:overload @:public override public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.generator.bean.field.AbstractField.AbstractField_Accessor;
 	
 	
 }
 @:native('com$sun$tools$internal$xjc$generator$bean$field$DummyListField$Accessor') @:internal extern class DummyListField_Accessor extends com.sun.tools.internal.xjc.generator.bean.field.AbstractListField.AbstractListField_Accessor
 {
-	@:overload override private function new($target : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:protected override private function new($target : com.sun.codemodel.internal.JExpression) : Void;
 	
-	@:overload public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
+	@:overload @:public override public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
 	
-	@:overload public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:public override public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
 	
 	
 }

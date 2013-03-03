@@ -40,7 +40,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*
 	* @return the <code>TypeCode</code> object.
 	*/
-	@:overload public function type() : org.omg.CORBA.TypeCode;
+	@:overload @:public public function type() : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Copy the contents from one Dynamic Any into another.
@@ -50,7 +50,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	* @throws Invalid if the source <code>DynAny</code> is
 	*            invalid
 	*/
-	@:overload public function assign(dyn_any : org.omg.CORBA.DynAny) : Void;
+	@:overload @:public public function assign(dyn_any : org.omg.CORBA.DynAny) : Void;
 	
 	/**
 	* Make a <code>DynAny</code> object from an <code>Any</code>
@@ -60,7 +60,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	* @throws Invalid if the source <code>Any</code> object is
 	*                    empty or bad
 	*/
-	@:overload public function from_any(value : org.omg.CORBA.Any) : Void;
+	@:overload @:public public function from_any(value : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* Convert a <code>DynAny</code> object to an <code>Any</code>
@@ -71,7 +71,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*                    bad.
 	*            created or does not contain a meaningful value
 	*/
-	@:overload public function to_any() : org.omg.CORBA.Any;
+	@:overload @:public public function to_any() : org.omg.CORBA.Any;
 	
 	/**
 	* Destroys this <code>DynAny</code> object and frees any resources
@@ -86,14 +86,14 @@ extern interface DynAny extends org.omg.CORBA.Object
 	* should first create a <code>DynAny</code> object for the component
 	* and then make a copy of the created <code>DynAny</code> object.
 	*/
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	/**
 	* Clones this <code>DynAny</code> object.
 	*
 	* @return a copy of this <code>DynAny</code> object
 	*/
-	@:overload public function copy() : org.omg.CORBA.DynAny;
+	@:overload @:public public function copy() : org.omg.CORBA.DynAny;
 	
 	/**
 	* Inserts the given <code>boolean</code> as the value for this
@@ -109,7 +109,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_boolean(value : Bool) : Void;
+	@:overload @:public public function insert_boolean(value : Bool) : Void;
 	
 	/**
 	* Inserts the given <code>byte</code> as the value for this
@@ -125,7 +125,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_octet(value : java.StdTypes.Int8) : Void;
+	@:overload @:public public function insert_octet(value : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Inserts the given <code>char</code> as the value for this
@@ -141,7 +141,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_char(value : java.StdTypes.Char16) : Void;
+	@:overload @:public public function insert_char(value : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Inserts the given <code>short</code> as the value for this
@@ -157,7 +157,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_short(value : java.StdTypes.Int16) : Void;
+	@:overload @:public public function insert_short(value : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Inserts the given <code>short</code> as the value for this
@@ -173,7 +173,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_ushort(value : java.StdTypes.Int16) : Void;
+	@:overload @:public public function insert_ushort(value : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Inserts the given <code>int</code> as the value for this
@@ -189,7 +189,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_long(value : Int) : Void;
+	@:overload @:public public function insert_long(value : Int) : Void;
 	
 	/**
 	* Inserts the given <code>int</code> as the value for this
@@ -205,7 +205,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_ulong(value : Int) : Void;
+	@:overload @:public public function insert_ulong(value : Int) : Void;
 	
 	/**
 	* Inserts the given <code>float</code> as the value for this
@@ -221,7 +221,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_float(value : Single) : Void;
+	@:overload @:public public function insert_float(value : Single) : Void;
 	
 	/**
 	* Inserts the given <code>double</code> as the value for this
@@ -237,7 +237,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_double(value : Float) : Void;
+	@:overload @:public public function insert_double(value : Float) : Void;
 	
 	/**
 	* Inserts the given <code>String</code> object as the value for this
@@ -253,7 +253,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_string(value : String) : Void;
+	@:overload @:public public function insert_string(value : String) : Void;
 	
 	/**
 	* Inserts the given <code>org.omg.CORBA.Object</code> as the value for this
@@ -269,7 +269,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_reference(value : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function insert_reference(value : org.omg.CORBA.Object) : Void;
 	
 	/**
 	* Inserts the given <code>org.omg.CORBA.TypeCode</code> as the value for this
@@ -285,7 +285,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_typecode(value : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:public public function insert_typecode(value : org.omg.CORBA.TypeCode) : Void;
 	
 	/**
 	* Inserts the given <code>long</code> as the value for this
@@ -301,7 +301,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_longlong(value : haxe.Int64) : Void;
+	@:overload @:public public function insert_longlong(value : haxe.Int64) : Void;
 	
 	/**
 	* Inserts the given <code>long</code> as the value for this
@@ -317,7 +317,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_ulonglong(value : haxe.Int64) : Void;
+	@:overload @:public public function insert_ulonglong(value : haxe.Int64) : Void;
 	
 	/**
 	* Inserts the given <code>char</code> as the value for this
@@ -333,7 +333,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_wchar(value : java.StdTypes.Char16) : Void;
+	@:overload @:public public function insert_wchar(value : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Inserts the given <code>String</code> as the value for this
@@ -349,7 +349,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_wstring(value : String) : Void;
+	@:overload @:public public function insert_wstring(value : String) : Void;
 	
 	/**
 	* Inserts the given <code>org.omg.CORBA.Any</code> object as the value for this
@@ -365,7 +365,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_any(value : org.omg.CORBA.Any) : Void;
+	@:overload @:public public function insert_any(value : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* Inserts the given <code>java.io.Serializable</code> object as the value for this
@@ -381,7 +381,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*            if the value inserted is not consistent with the type
 	*            of the accessed component in this <code>DynAny</code> object
 	*/
-	@:overload public function insert_val(value : java.io.Serializable) : Void;
+	@:overload @:public public function insert_val(value : java.io.Serializable) : Void;
 	
 	/**
 	* Retrieves the <code>java.io.Serializable</code> object contained
@@ -394,7 +394,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for a <code>java.io.Serializable</code> object
 	*/
-	@:overload public function get_val() : java.io.Serializable;
+	@:overload @:public public function get_val() : java.io.Serializable;
 	
 	/**
 	* Retrieves the <code>boolean</code> contained
@@ -407,7 +407,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for a <code>boolean</code>
 	*/
-	@:overload public function get_boolean() : Bool;
+	@:overload @:public public function get_boolean() : Bool;
 	
 	/**
 	* Retrieves the <code>byte</code> contained
@@ -420,7 +420,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for a <code>byte</code>
 	*/
-	@:overload public function get_octet() : java.StdTypes.Int8;
+	@:overload @:public public function get_octet() : java.StdTypes.Int8;
 	
 	/**
 	* Retrieves the <code>char</code> contained
@@ -433,7 +433,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for a <code>char</code>
 	*/
-	@:overload public function get_char() : java.StdTypes.Char16;
+	@:overload @:public public function get_char() : java.StdTypes.Char16;
 	
 	/**
 	* Retrieves the <code>short</code> contained
@@ -446,7 +446,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for a <code>short</code>
 	*/
-	@:overload public function get_short() : java.StdTypes.Int16;
+	@:overload @:public public function get_short() : java.StdTypes.Int16;
 	
 	/**
 	* Retrieves the <code>short</code> contained
@@ -459,7 +459,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for a <code>short</code>
 	*/
-	@:overload public function get_ushort() : java.StdTypes.Int16;
+	@:overload @:public public function get_ushort() : java.StdTypes.Int16;
 	
 	/**
 	* Retrieves the <code>int</code> contained
@@ -472,7 +472,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for a <code>int</code>
 	*/
-	@:overload public function get_long() : Int;
+	@:overload @:public public function get_long() : Int;
 	
 	/**
 	* Retrieves the <code>int</code> contained
@@ -485,7 +485,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for a <code>int</code>
 	*/
-	@:overload public function get_ulong() : Int;
+	@:overload @:public public function get_ulong() : Int;
 	
 	/**
 	* Retrieves the <code>float</code> contained
@@ -498,7 +498,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for a <code>float</code>
 	*/
-	@:overload public function get_float() : Single;
+	@:overload @:public public function get_float() : Single;
 	
 	/**
 	* Retrieves the <code>double</code> contained
@@ -511,7 +511,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for a <code>double</code>
 	*/
-	@:overload public function get_double() : Float;
+	@:overload @:public public function get_double() : Float;
 	
 	/**
 	* Retrieves the <code>String</code> contained
@@ -524,7 +524,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for a <code>String</code>
 	*/
-	@:overload public function get_string() : String;
+	@:overload @:public public function get_string() : String;
 	
 	/**
 	* Retrieves the <code>org.omg.CORBA.Other</code> contained
@@ -537,7 +537,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for an <code>org.omg.CORBA.Other</code>
 	*/
-	@:overload public function get_reference() : org.omg.CORBA.Object;
+	@:overload @:public public function get_reference() : org.omg.CORBA.Object;
 	
 	/**
 	* Retrieves the <code>org.omg.CORBA.TypeCode</code> contained
@@ -550,7 +550,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for a <code>org.omg.CORBA.TypeCode</code>
 	*/
-	@:overload public function get_typecode() : org.omg.CORBA.TypeCode;
+	@:overload @:public public function get_typecode() : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Retrieves the <code>long</code> contained
@@ -563,7 +563,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for a <code>long</code>
 	*/
-	@:overload public function get_longlong() : haxe.Int64;
+	@:overload @:public public function get_longlong() : haxe.Int64;
 	
 	/**
 	* Retrieves the <code>long</code> contained
@@ -576,7 +576,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for a <code>long</code>
 	*/
-	@:overload public function get_ulonglong() : haxe.Int64;
+	@:overload @:public public function get_ulonglong() : haxe.Int64;
 	
 	/**
 	* Retrieves the <code>char</code> contained
@@ -589,7 +589,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for a <code>char</code>
 	*/
-	@:overload public function get_wchar() : java.StdTypes.Char16;
+	@:overload @:public public function get_wchar() : java.StdTypes.Char16;
 	
 	/**
 	* Retrieves the <code>String</code> contained
@@ -602,7 +602,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for a <code>String</code>
 	*/
-	@:overload public function get_wstring() : String;
+	@:overload @:public public function get_wstring() : String;
 	
 	/**
 	* Retrieves the <code>org.omg.CORBA.Any</code> contained
@@ -615,7 +615,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*               <code>DynAny</code> object is not equivalent to
 	*               the type code for an <code>org.omg.CORBA.Any</code>
 	*/
-	@:overload public function get_any() : org.omg.CORBA.Any;
+	@:overload @:public public function get_any() : org.omg.CORBA.Any;
 	
 	/**
 	* Returns a <code>DynAny</code> object reference that can
@@ -631,7 +631,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*         used to retrieve or set the value of the component currently
 	*         accessed
 	*/
-	@:overload public function current_component() : org.omg.CORBA.DynAny;
+	@:overload @:public public function current_component() : org.omg.CORBA.DynAny;
 	
 	/**
 	* Moves to the next component of this <code>DynAny</code> object.
@@ -645,7 +645,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	* <code>DynAny</code> is associated with a basic type rather than
 	* a constructed type
 	*/
-	@:overload public function next() : Bool;
+	@:overload @:public public function next() : Bool;
 	
 	/**
 	* Moves the internal pointer to the given index. Logically, this method
@@ -659,12 +659,12 @@ extern interface DynAny extends org.omg.CORBA.Object
 	* basic type, this method returns <code>false</code> for any index
 	* other than 0.
 	*/
-	@:overload public function seek(index : Int) : Bool;
+	@:overload @:public public function seek(index : Int) : Bool;
 	
 	/**
 	* Moves the internal pointer to the first component.
 	*/
-	@:overload public function rewind() : Void;
+	@:overload @:public public function rewind() : Void;
 	
 	
 }

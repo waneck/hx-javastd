@@ -32,15 +32,15 @@ package com.sun.tools.example.debug.gui;
 */
 extern class CurrentFrameChangedEvent extends java.util.EventObject
 {
-	@:overload public function new(source : Dynamic, tinfo : com.sun.tools.example.debug.bdi.ThreadInfo, index : Int, invalidate : Bool) : Void;
+	@:overload @:public public function new(source : Dynamic, tinfo : com.sun.tools.example.debug.bdi.ThreadInfo, index : Int, invalidate : Bool) : Void;
 	
-	@:overload public function getThread() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function getThread() : com.sun.jdi.ThreadReference;
 	
-	@:overload public function getThreadInfo() : com.sun.tools.example.debug.bdi.ThreadInfo;
+	@:overload @:public public function getThreadInfo() : com.sun.tools.example.debug.bdi.ThreadInfo;
 	
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
-	@:overload public function getInvalidate() : Bool;
+	@:overload @:public public function getInvalidate() : Bool;
 	
 	
 }

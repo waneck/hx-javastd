@@ -28,14 +28,14 @@ extern class ActionMap implements java.io.Serializable
 	/**
 	* Creates an <code>ActionMap</code> with no parent and no mappings.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets this <code>ActionMap</code>'s parent.
 	*
 	* @param map  the <code>ActionMap</code> that is the parent of this one
 	*/
-	@:overload public function setParent(map : javax.swing.ActionMap) : Void;
+	@:overload @:public public function setParent(map : javax.swing.ActionMap) : Void;
 	
 	/**
 	* Returns this <code>ActionMap</code>'s parent.
@@ -43,7 +43,7 @@ extern class ActionMap implements java.io.Serializable
 	* @return the <code>ActionMap</code> that is the parent of this one,
 	*         or null if this <code>ActionMap</code> has no parent
 	*/
-	@:overload public function getParent() : javax.swing.ActionMap;
+	@:overload @:public public function getParent() : javax.swing.ActionMap;
 	
 	/**
 	* Adds a binding for <code>key</code> to <code>action</code>.
@@ -52,42 +52,42 @@ extern class ActionMap implements java.io.Serializable
 	* <p>In most instances, <code>key</code> will be
 	* <code>action.getValue(NAME)</code>.
 	*/
-	@:overload public function put(key : Dynamic, action : javax.swing.Action) : Void;
+	@:overload @:public public function put(key : Dynamic, action : javax.swing.Action) : Void;
 	
 	/**
 	* Returns the binding for <code>key</code>, messaging the
 	* parent <code>ActionMap</code> if the binding is not locally defined.
 	*/
-	@:overload public function get(key : Dynamic) : javax.swing.Action;
+	@:overload @:public public function get(key : Dynamic) : javax.swing.Action;
 	
 	/**
 	* Removes the binding for <code>key</code> from this <code>ActionMap</code>.
 	*/
-	@:overload public function remove(key : Dynamic) : Void;
+	@:overload @:public public function remove(key : Dynamic) : Void;
 	
 	/**
 	* Removes all the mappings from this <code>ActionMap</code>.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns the <code>Action</code> names that are bound in this <code>ActionMap</code>.
 	*/
-	@:overload public function keys() : java.NativeArray<Dynamic>;
+	@:overload @:public public function keys() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns the number of bindings in this {@code ActionMap}.
 	*
 	* @return the number of bindings in this {@code ActionMap}
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Returns an array of the keys defined in this <code>ActionMap</code> and
 	* its parent. This method differs from <code>keys()</code> in that
 	* this method includes the keys defined in the parent.
 	*/
-	@:overload public function allKeys() : java.NativeArray<Dynamic>;
+	@:overload @:public public function allKeys() : java.NativeArray<Dynamic>;
 	
 	
 }

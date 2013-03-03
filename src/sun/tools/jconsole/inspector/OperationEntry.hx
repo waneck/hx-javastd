@@ -31,13 +31,13 @@ package sun.tools.jconsole.inspector;
 ////
 extern class OperationEntry extends javax.swing.JPanel
 {
-	@:overload public function new(operation : javax.management.MBeanOperationInfo, isCallable : Bool, button : javax.swing.JButton, xoperations : sun.tools.jconsole.inspector.XOperations) : Void;
+	@:overload @:public public function new(operation : javax.management.MBeanOperationInfo, isCallable : Bool, button : javax.swing.JButton, xoperations : sun.tools.jconsole.inspector.XOperations) : Void;
 	
-	@:overload public function getSignature() : java.NativeArray<String>;
+	@:overload @:public public function getSignature() : java.NativeArray<String>;
 	
-	@:overload public function getParameters() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getParameters() : java.NativeArray<Dynamic>;
 	
-	@:overload public function getReturnType() : String;
+	@:overload @:public public function getReturnType() : String;
 	
 	
 }

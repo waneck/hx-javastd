@@ -36,23 +36,23 @@ extern class PixelToParallelogramConverter extends sun.java2d.pipe.PixelToShapeC
 	*                   constants are also applied to fill operations
 	*                   (normally true for non-AA, false for AA)
 	*/
-	@:overload public function new(shapepipe : sun.java2d.pipe.ShapeDrawPipe, pgrampipe : sun.java2d.pipe.ParallelogramPipe, minPenSize : Float, normPosition : Float, adjustfill : Bool) : Void;
+	@:overload @:public public function new(shapepipe : sun.java2d.pipe.ShapeDrawPipe, pgrampipe : sun.java2d.pipe.ParallelogramPipe, minPenSize : Float, normPosition : Float, adjustfill : Bool) : Void;
 	
-	@:overload override public function drawLine(sg2d : sun.java2d.SunGraphics2D, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public override public function drawLine(sg2d : sun.java2d.SunGraphics2D, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
-	@:overload override public function drawRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function drawRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function fillRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function fillRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function draw(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
+	@:overload @:public public function draw(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
 	
-	@:overload public function fill(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
+	@:overload @:public public function fill(sg2d : sun.java2d.SunGraphics2D, s : java.awt.Shape) : Void;
 	
-	@:overload public function drawGeneralLine(sg2d : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float) : Bool;
+	@:overload @:public public function drawGeneralLine(sg2d : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float) : Bool;
 	
-	@:overload public function fillRectangle(sg2d : sun.java2d.SunGraphics2D, rx : Float, ry : Float, rw : Float, rh : Float) : Void;
+	@:overload @:public public function fillRectangle(sg2d : sun.java2d.SunGraphics2D, rx : Float, ry : Float, rw : Float, rh : Float) : Void;
 	
-	@:overload public function drawRectangle(sg2d : sun.java2d.SunGraphics2D, rx : Float, ry : Float, rw : Float, rh : Float, lw : Float) : Void;
+	@:overload @:public public function drawRectangle(sg2d : sun.java2d.SunGraphics2D, rx : Float, ry : Float, rw : Float, rh : Float, lw : Float) : Void;
 	
 	/**
 	* This utility function handles the case where a drawRectangle
@@ -61,7 +61,7 @@ extern class PixelToParallelogramConverter extends sun.java2d.pipe.PixelToShapeC
 	* width.  It calculates the outer parallelogram of the stroke
 	* and issues a single fillParallelogram request to fill it.
 	*/
-	@:overload public function fillOuterParallelogram(sg2d : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, px : Float, py : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, len1 : Float, len2 : Float, lw1 : Float, lw2 : Float) : Void;
+	@:overload @:public public function fillOuterParallelogram(sg2d : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, px : Float, py : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, len1 : Float, len2 : Float, lw1 : Float, lw2 : Float) : Void;
 	
 	
 }

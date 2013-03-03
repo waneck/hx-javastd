@@ -49,7 +49,7 @@ extern class VersionInfo
 	*                is not in the right format
 	* @stable ICU 2.6
 	*/
-	@:overload public static function getInstance(version : String) : sun.text.normalizer.VersionInfo;
+	@:overload @:public @:static public static function getInstance(version : String) : sun.text.normalizer.VersionInfo;
 	
 	/**
 	* Returns an instance of VersionInfo with the argument version.
@@ -61,7 +61,7 @@ extern class VersionInfo
 	*                                     negative or > 255
 	* @stable ICU 2.6
 	*/
-	@:overload public static function getInstance(major : Int, minor : Int, milli : Int, micro : Int) : sun.text.normalizer.VersionInfo;
+	@:overload @:public @:static public static function getInstance(major : Int, minor : Int, milli : Int, micro : Int) : sun.text.normalizer.VersionInfo;
 	
 	/**
 	* Compares other with this VersionInfo.
@@ -74,7 +74,7 @@ extern class VersionInfo
 	*           has version information less than this object.
 	* @stable ICU 2.6
 	*/
-	@:overload public function compareTo(other : sun.text.normalizer.VersionInfo) : Int;
+	@:overload @:public public function compareTo(other : sun.text.normalizer.VersionInfo) : Int;
 	
 	
 }

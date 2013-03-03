@@ -75,19 +75,19 @@ extern interface Entity extends org.w3c.dom.Node
 	* The public identifier associated with the entity if specified, and
 	* <code>null</code> otherwise.
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* The system identifier associated with the entity if specified, and
 	* <code>null</code> otherwise. This may be an absolute URI or not.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* For unparsed entities, the name of the notation for the entity. For
 	* parsed entities, this is <code>null</code>.
 	*/
-	@:overload public function getNotationName() : String;
+	@:overload @:public public function getNotationName() : String;
 	
 	/**
 	* An attribute specifying the encoding used for this entity at the time
@@ -96,7 +96,7 @@ extern interface Entity extends org.w3c.dom.Node
 	* is not known.
 	* @since DOM Level 3
 	*/
-	@:overload public function getInputEncoding() : String;
+	@:overload @:public public function getInputEncoding() : String;
 	
 	/**
 	* An attribute specifying, as part of the text declaration, the encoding
@@ -104,7 +104,7 @@ extern interface Entity extends org.w3c.dom.Node
 	* <code>null</code> otherwise.
 	* @since DOM Level 3
 	*/
-	@:overload public function getXmlEncoding() : String;
+	@:overload @:public public function getXmlEncoding() : String;
 	
 	/**
 	* An attribute specifying, as part of the text declaration, the version
@@ -112,7 +112,7 @@ extern interface Entity extends org.w3c.dom.Node
 	* <code>null</code> otherwise.
 	* @since DOM Level 3
 	*/
-	@:overload public function getXmlVersion() : String;
+	@:overload @:public public function getXmlVersion() : String;
 	
 	
 }

@@ -36,7 +36,7 @@ extern class Module
 	* @return
 	*      always return the same non-null instance.
 	*/
-	@:overload @:abstract public function getBoundEndpoints() : java.util.List<com.sun.xml.internal.ws.api.server.BoundEndpoint>;
+	@:overload @:public @:abstract public function getBoundEndpoints() : java.util.List<com.sun.xml.internal.ws.api.server.BoundEndpoint>;
 	
 	
 }

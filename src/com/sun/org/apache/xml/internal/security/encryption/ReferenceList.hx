@@ -28,21 +28,21 @@ extern interface ReferenceList
 	* @throws IllegalAccessException if the <code>Reference</code> is not an
 	*   instance of <code>DataReference</code> or <code>KeyReference</code>.
 	*/
-	@:overload public function add(reference : com.sun.org.apache.xml.internal.security.encryption.Reference) : Void;
+	@:overload @:public public function add(reference : com.sun.org.apache.xml.internal.security.encryption.Reference) : Void;
 	
 	/**
 	* Removes a reference from the <code>ReferenceList</code>.
 	*
 	* @param reference the reference to remove.
 	*/
-	@:overload public function remove(reference : com.sun.org.apache.xml.internal.security.encryption.Reference) : Void;
+	@:overload @:public public function remove(reference : com.sun.org.apache.xml.internal.security.encryption.Reference) : Void;
 	
 	/**
 	* Returns the size of the <code>ReferenceList</code>.
 	*
 	* @return the size of the <code>ReferenceList</code>.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Indicates if the <code>ReferenceList</code> is empty.
@@ -50,7 +50,7 @@ extern interface ReferenceList
 	* @return <code><b>true</b></code> if the <code>ReferenceList</code> is
 	*     empty, else <code><b>false</b></code>.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the <code>Reference</code>s
@@ -58,7 +58,7 @@ extern interface ReferenceList
 	*
 	* @return Iterator.
 	*/
-	@:overload public function getReferences() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getReferences() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* <code>DataReference</code> factory method. Returns a
@@ -66,7 +66,7 @@ extern interface ReferenceList
 	* @param uri
 	* @return
 	*/
-	@:overload public function newDataReference(uri : String) : com.sun.org.apache.xml.internal.security.encryption.Reference;
+	@:overload @:public public function newDataReference(uri : String) : com.sun.org.apache.xml.internal.security.encryption.Reference;
 	
 	/**
 	* <code>KeyReference</code> factory method. Returns a
@@ -74,7 +74,7 @@ extern interface ReferenceList
 	* @param uri
 	* @return
 	*/
-	@:overload public function newKeyReference(uri : String) : com.sun.org.apache.xml.internal.security.encryption.Reference;
+	@:overload @:public public function newKeyReference(uri : String) : com.sun.org.apache.xml.internal.security.encryption.Reference;
 	
 	
 }

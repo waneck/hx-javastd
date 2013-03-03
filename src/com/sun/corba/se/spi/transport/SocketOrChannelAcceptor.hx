@@ -28,7 +28,7 @@ extern interface SocketOrChannelAcceptor
 	/**
 	* @author Harold Carr
 	*/
-	@:overload public function getServerSocket() : java.net.ServerSocket;
+	@:overload @:public public function getServerSocket() : java.net.ServerSocket;
 	
 	
 }

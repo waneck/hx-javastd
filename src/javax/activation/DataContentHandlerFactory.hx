@@ -41,7 +41,7 @@ package javax.activation;
 	* @return The new <code>DataContentHandler</code>, or <i>null</i>
 	* if none are found.
 	*/
-	@:overload public function createDataContentHandler(mimeType : String) : javax.activation.DataContentHandler;
+	@:overload @:public public function createDataContentHandler(mimeType : String) : javax.activation.DataContentHandler;
 	
 	
 }

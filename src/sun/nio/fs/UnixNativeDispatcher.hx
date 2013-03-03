@@ -28,7 +28,7 @@ package sun.nio.fs;
 	/**
 	* Unix system and library calls.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	
 }

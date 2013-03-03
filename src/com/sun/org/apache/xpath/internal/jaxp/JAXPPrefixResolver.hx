@@ -21,27 +21,27 @@ package com.sun.org.apache.xpath.internal.jaxp;
 //// $Id: JAXPPrefixResolver.java,v 1.1.2.1 2005/08/01 01:30:18 jeffsuttor Exp $
 extern class JAXPPrefixResolver implements com.sun.org.apache.xml.internal.utils.PrefixResolver
 {
-	@:overload public function new(nsContext : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public public function new(nsContext : javax.xml.namespace.NamespaceContext) : Void;
 	
-	@:overload public function getNamespaceForPrefix(prefix : String) : String;
+	@:overload @:public public function getNamespaceForPrefix(prefix : String) : String;
 	
 	/**
 	* Return the base identifier.
 	*
 	* @return null
 	*/
-	@:overload public function getBaseIdentifier() : String;
+	@:overload @:public public function getBaseIdentifier() : String;
 	
 	/**
 	* @see PrefixResolver#handlesNullPrefixes()
 	*/
-	@:overload public function handlesNullPrefixes() : Bool;
+	@:overload @:public public function handlesNullPrefixes() : Bool;
 	
 	/**
 	* The URI for the XML namespace.
 	* (Duplicate of that found in com.sun.org.apache.xpath.internal.XPathContext).
 	*/
-	public static var S_XMLNAMESPACEURI(default, null) : String;
+	@:public @:static @:final public static var S_XMLNAMESPACEURI(default, null) : String;
 	
 	/**
 	* Given a prefix and a Context Node, get the corresponding namespace.
@@ -53,7 +53,7 @@ extern class JAXPPrefixResolver implements com.sun.org.apache.xml.internal.utils
 	* @return Namespace that prefix resolves to, or null if prefix
 	* is not bound.
 	*/
-	@:overload public function getNamespaceForPrefix(prefix : String, namespaceContext : org.w3c.dom.Node) : String;
+	@:overload @:public public function getNamespaceForPrefix(prefix : String, namespaceContext : org.w3c.dom.Node) : String;
 	
 	
 }

@@ -31,15 +31,15 @@ package com.sun.corba.se.impl.corba;
 */
 extern class ExceptionListImpl extends org.omg.CORBA.ExceptionList
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function count() : Int;
+	@:overload @:public override public function count() : Int;
 	
-	@:overload override public function add(tc : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:public override public function add(tc : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload override public function item(index : Int) : org.omg.CORBA.TypeCode;
+	@:overload @:public override public function item(index : Int) : org.omg.CORBA.TypeCode;
 	
-	@:overload override public function remove(index : Int) : Void;
+	@:overload @:public override public function remove(index : Int) : Void;
 	
 	
 }

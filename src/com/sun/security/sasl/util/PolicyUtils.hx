@@ -25,17 +25,17 @@ package com.sun.security.sasl.util;
 */
 extern class PolicyUtils
 {
-	public static var NOPLAINTEXT(default, null) : Int;
+	@:public @:final @:static public static var NOPLAINTEXT(default, null) : Int;
 	
-	public static var NOACTIVE(default, null) : Int;
+	@:public @:final @:static public static var NOACTIVE(default, null) : Int;
 	
-	public static var NODICTIONARY(default, null) : Int;
+	@:public @:final @:static public static var NODICTIONARY(default, null) : Int;
 	
-	public static var FORWARD_SECRECY(default, null) : Int;
+	@:public @:final @:static public static var FORWARD_SECRECY(default, null) : Int;
 	
-	public static var NOANONYMOUS(default, null) : Int;
+	@:public @:final @:static public static var NOANONYMOUS(default, null) : Int;
 	
-	public static var PASS_CREDENTIALS(default, null) : Int;
+	@:public @:final @:static public static var PASS_CREDENTIALS(default, null) : Int;
 	
 	/**
 	* Determines whether a mechanism's characteristics, as defined in flags,
@@ -44,7 +44,7 @@ extern class PolicyUtils
 	* @param props The security policy properties to check
 	* @return true if passes; false if fails
 	*/
-	@:overload public static function checkPolicy(flags : Int, props : java.util.Map<Dynamic, Dynamic>) : Bool;
+	@:overload @:public @:static public static function checkPolicy(flags : Int, props : java.util.Map<Dynamic, Dynamic>) : Bool;
 	
 	/**
 	* Given a list of mechanisms and their characteristics, select the
@@ -52,7 +52,7 @@ extern class PolicyUtils
 	* Useful for SaslXXXFactory.getMechanismNames(props) implementations.
 	*
 	*/
-	@:overload public static function filterMechs(mechs : java.NativeArray<String>, policies : java.NativeArray<Int>, props : java.util.Map<Dynamic, Dynamic>) : java.NativeArray<String>;
+	@:overload @:public @:static public static function filterMechs(mechs : java.NativeArray<String>, policies : java.NativeArray<Int>, props : java.util.Map<Dynamic, Dynamic>) : java.NativeArray<String>;
 	
 	
 }

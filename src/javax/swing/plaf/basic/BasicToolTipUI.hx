@@ -25,35 +25,35 @@ package javax.swing.plaf.basic;
 */
 extern class BasicToolTipUI extends javax.swing.plaf.ToolTipUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installDefaults(c : javax.swing.JComponent) : Void;
+	@:overload @:protected private function installDefaults(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function uninstallDefaults(c : javax.swing.JComponent) : Void;
+	@:overload @:protected private function uninstallDefaults(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installListeners(c : javax.swing.JComponent) : Void;
+	@:overload @:protected private function installListeners(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function uninstallListeners(c : javax.swing.JComponent) : Void;
+	@:overload @:protected private function uninstallListeners(c : javax.swing.JComponent) : Void;
 	
-	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicToolTipUI$PropertyChangeHandler') @:internal extern class BasicToolTipUI_PropertyChangeHandler implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

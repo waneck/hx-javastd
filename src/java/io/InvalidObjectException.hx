@@ -41,7 +41,7 @@ package java.io;
 	*
 	* @see ObjectInputValidation
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	
 }

@@ -31,19 +31,19 @@ extern class AuthorizeCallback implements javax.security.auth.callback.Callback 
 	* @param authnID   The (authenticated) authentication id.
 	* @param authzID   The authorization id.
 	*/
-	@:overload public function new(authnID : String, authzID : String) : Void;
+	@:overload @:public public function new(authnID : String, authzID : String) : Void;
 	
 	/**
 	* Returns the authentication id to check.
 	* @return The authentication id to check.
 	*/
-	@:overload public function getAuthenticationID() : String;
+	@:overload @:public public function getAuthenticationID() : String;
 	
 	/**
 	* Returns the authorization id to check.
 	* @return The authentication id to check.
 	*/
-	@:overload public function getAuthorizationID() : String;
+	@:overload @:public public function getAuthorizationID() : String;
 	
 	/**
 	* Determines whether the authentication id is allowed to
@@ -53,7 +53,7 @@ extern class AuthorizeCallback implements javax.security.auth.callback.Callback 
 	* @see #setAuthorized(boolean)
 	* @see #getAuthorizedID()
 	*/
-	@:overload public function isAuthorized() : Bool;
+	@:overload @:public public function isAuthorized() : Bool;
 	
 	/**
 	* Sets whether the authorization is allowed.
@@ -61,7 +61,7 @@ extern class AuthorizeCallback implements javax.security.auth.callback.Callback 
 	* @see #isAuthorized
 	* @see #setAuthorizedID(java.lang.String)
 	*/
-	@:overload public function setAuthorized(ok : Bool) : Void;
+	@:overload @:public public function setAuthorized(ok : Bool) : Void;
 	
 	/**
 	* Returns the id of the authorized user.
@@ -70,7 +70,7 @@ extern class AuthorizeCallback implements javax.security.auth.callback.Callback 
 	* @see #setAuthorized(boolean)
 	* @see #setAuthorizedID(java.lang.String)
 	*/
-	@:overload public function getAuthorizedID() : String;
+	@:overload @:public public function getAuthorizedID() : String;
 	
 	/**
 	* Sets the id of the authorized entity. Called by handler only when the id
@@ -81,7 +81,7 @@ extern class AuthorizeCallback implements javax.security.auth.callback.Callback 
 	* @see #setAuthorized(boolean)
 	* @see #getAuthorizedID
 	*/
-	@:overload public function setAuthorizedID(id : String) : Void;
+	@:overload @:public public function setAuthorizedID(id : String) : Void;
 	
 	
 }

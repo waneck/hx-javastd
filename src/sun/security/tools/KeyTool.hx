@@ -37,27 +37,27 @@ package sun.security.tools;
 */
 @:require(java2) extern class KeyTool
 {
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	/**
 	* Loads CRLs from a source. This method is also called in JarSigner.
 	* @param src the source, which means System.in if null, or a URI,
 	*        or a bare file path name
 	*/
-	@:overload public static function loadCRLs(src : String) : java.util.Collection<java.security.cert.CRL>;
+	@:overload @:public @:static public static function loadCRLs(src : String) : java.util.Collection<java.security.cert.CRL>;
 	
 	/**
 	* Returns CRLs described in a X509Certificate's CRLDistributionPoints
 	* Extension. Only those containing a general name of type URI are read.
 	*/
-	@:overload public static function readCRLsFromCert(cert : java.security.cert.X509Certificate) : java.util.List<java.security.cert.CRL>;
+	@:overload @:public @:static public static function readCRLsFromCert(cert : java.security.cert.X509Certificate) : java.util.List<java.security.cert.CRL>;
 	
 	/**
 	* Returns the keystore with the configured CA certificates.
 	*/
-	@:overload public static function getCacertsKeyStore() : java.security.KeyStore;
+	@:overload @:public @:static public static function getCacertsKeyStore() : java.security.KeyStore;
 	
-	@:overload public static function getPassWithModifier(modifier : String, arg : String) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public @:static public static function getPassWithModifier(modifier : String, arg : String) : java.NativeArray<java.StdTypes.Char16>;
 	
 	
 }
@@ -135,19 +135,19 @@ package sun.security.tools;
 
 @:internal extern class Pair<A, B>
 {
-	public var fst(default, null) : A;
+	@:public @:final public var fst(default, null) : A;
 	
-	public var snd(default, null) : B;
+	@:public @:final public var snd(default, null) : B;
 	
-	@:overload public function new(fst : A, snd : B) : Void;
+	@:overload @:public public function new(fst : A, snd : B) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public static function of<A, B>(a : A, b : B) : sun.security.tools.KeyTool.Pair<A, B>;
+	@:overload @:public @:static public static function of<A, B>(a : A, b : B) : sun.security.tools.KeyTool.Pair<A, B>;
 	
 	
 }

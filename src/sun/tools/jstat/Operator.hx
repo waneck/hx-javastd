@@ -31,26 +31,26 @@ package sun.tools.jstat;
 */
 @:require(java5) extern class Operator
 {
-	@:overload @:abstract private function eval(x : Float, y : Float) : Float;
+	@:overload @:protected @:abstract private function eval(x : Float, y : Float) : Float;
 	
 	/* Operator '+' */
-	public static var PLUS(default, null) : sun.tools.jstat.Operator;
+	@:public @:static @:final public static var PLUS(default, null) : sun.tools.jstat.Operator;
 	
 	/* Operator '-' */
-	public static var MINUS(default, null) : sun.tools.jstat.Operator;
+	@:public @:static @:final public static var MINUS(default, null) : sun.tools.jstat.Operator;
 	
 	/* Operator '/' */
-	public static var DIVIDE(default, null) : sun.tools.jstat.Operator;
+	@:public @:static @:final public static var DIVIDE(default, null) : sun.tools.jstat.Operator;
 	
 	/* Operator '*' */
-	public static var MULTIPLY(default, null) : sun.tools.jstat.Operator;
+	@:public @:static @:final public static var MULTIPLY(default, null) : sun.tools.jstat.Operator;
 	
 	/**
 	* Returns the string representation of this Operator object.
 	*
 	* @return  the string representation of this Operator object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Maps a string to its corresponding Operator object.
@@ -58,7 +58,7 @@ package sun.tools.jstat;
 	* @param   s  an string to match against Operator objects.
 	* @return     The Operator object matching the given string.
 	*/
-	@:overload public static function toOperator(s : String) : sun.tools.jstat.Operator;
+	@:overload @:public @:static public static function toOperator(s : String) : sun.tools.jstat.Operator;
 	
 	/**
 	* Returns an enumeration of the keys for this enumerated type
@@ -66,7 +66,7 @@ package sun.tools.jstat;
 	* @param   s  an string to match against Operator objects.
 	* @return     The Operator object matching the given string.
 	*/
-	@:overload private static function keySet() : java.util.Set<Dynamic>;
+	@:overload @:protected @:static private static function keySet() : java.util.Set<Dynamic>;
 	
 	
 }

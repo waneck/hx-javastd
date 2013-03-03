@@ -36,7 +36,7 @@ extern class AudioDataStream extends java.io.ByteArrayInputStream
 	/**
 	* Constructor
 	*/
-	@:overload public function new(data : sun.audio.AudioData) : Void;
+	@:overload @:public public function new(data : sun.audio.AudioData) : Void;
 	
 	
 }

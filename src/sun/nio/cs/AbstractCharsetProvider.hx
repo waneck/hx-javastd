@@ -25,25 +25,25 @@ package sun.nio.cs;
 */
 extern class AbstractCharsetProvider extends java.nio.charset.spi.CharsetProvider
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(pkgPrefixName : String) : Void;
+	@:overload @:protected private function new(pkgPrefixName : String) : Void;
 	
 	/* Declare support for the given charset
 	*/
-	@:overload private function charset(name : String, className : String, aliases : java.NativeArray<String>) : Void;
+	@:overload @:protected private function charset(name : String, className : String, aliases : java.NativeArray<String>) : Void;
 	
-	@:overload private function deleteCharset(name : String, aliases : java.NativeArray<String>) : Void;
+	@:overload @:protected private function deleteCharset(name : String, aliases : java.NativeArray<String>) : Void;
 	
 	/* Late initialization hook, needed by some providers
 	*/
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
-	@:overload @:final override public function charsetForName(charsetName : String) : java.nio.charset.Charset;
+	@:overload @:public @:final override public function charsetForName(charsetName : String) : java.nio.charset.Charset;
 	
-	@:overload @:final override public function charsets() : java.util.Iterator<java.nio.charset.Charset>;
+	@:overload @:public @:final override public function charsets() : java.util.Iterator<java.nio.charset.Charset>;
 	
-	@:overload @:final public function aliases(charsetName : String) : java.NativeArray<String>;
+	@:overload @:public @:final public function aliases(charsetName : String) : java.NativeArray<String>;
 	
 	
 }

@@ -25,9 +25,9 @@ package com.sun.xml.internal.org.jvnet.mimepull;
 */
 extern class MIMEConfig
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setParseEagerly(parseEagerly : Bool) : Void;
+	@:overload @:public public function setParseEagerly(parseEagerly : Bool) : Void;
 	
 	/**
 	* If the attachment is greater than the threshold, it is
@@ -36,18 +36,18 @@ extern class MIMEConfig
 	* @param memoryThreshold no of bytes per attachment
 	*        if -1, then the whole attachment is kept in memory
 	*/
-	@:overload public function setMemoryThreshold(memoryThreshold : haxe.Int64) : Void;
+	@:overload @:public public function setMemoryThreshold(memoryThreshold : haxe.Int64) : Void;
 	
 	/**
 	* @param dir
 	*/
-	@:overload public function setDir(dir : String) : Void;
+	@:overload @:public public function setDir(dir : String) : Void;
 	
 	/**
 	* Validates if it can create temporary files. Otherwise, it stores
 	* attachment contents in memory.
 	*/
-	@:overload public function validate() : Void;
+	@:overload @:public public function validate() : Void;
 	
 	
 }

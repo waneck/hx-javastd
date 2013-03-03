@@ -31,15 +31,15 @@ package sun.net.www.http;
 */
 extern class HttpCaptureOutputStream extends java.io.FilterOutputStream
 {
-	@:overload public function new(out : java.io.OutputStream, cap : sun.net.www.http.HttpCapture) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, cap : sun.net.www.http.HttpCapture) : Void;
 	
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload override public function write(ba : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(ba : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	
 }

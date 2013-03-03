@@ -47,12 +47,12 @@ package com.sun.corba.se.impl.io;
 	* The number of bytes of primitive data available to be read
 	* in the current buffer.
 	*/
-	public var length : Int;
+	@:public public var length : Int;
 	
 	/**
 	* True if there is no more data in the buffered part of the stream.
 	*/
-	public var eof : Bool;
+	@:public public var eof : Bool;
 	
 	
 }

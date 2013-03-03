@@ -44,7 +44,7 @@ extern class EventSetDescriptor extends java.beans.FeatureDescriptor
 	* @exception IntrospectionException if an exception occurs during
 	*              introspection.
 	*/
-	@:overload public function new(sourceClass : Class<Dynamic>, eventSetName : String, listenerType : Class<Dynamic>, listenerMethodName : String) : Void;
+	@:overload @:public public function new(sourceClass : Class<Dynamic>, eventSetName : String, listenerType : Class<Dynamic>, listenerMethodName : String) : Void;
 	
 	/**
 	* Creates an <TT>EventSetDescriptor</TT> from scratch using
@@ -64,7 +64,7 @@ extern class EventSetDescriptor extends java.beans.FeatureDescriptor
 	* @exception IntrospectionException if an exception occurs during
 	*              introspection.
 	*/
-	@:overload public function new(sourceClass : Class<Dynamic>, eventSetName : String, listenerType : Class<Dynamic>, listenerMethodNames : java.NativeArray<String>, addListenerMethodName : String, removeListenerMethodName : String) : Void;
+	@:overload @:public public function new(sourceClass : Class<Dynamic>, eventSetName : String, listenerType : Class<Dynamic>, listenerMethodNames : java.NativeArray<String>, addListenerMethodName : String, removeListenerMethodName : String) : Void;
 	
 	/**
 	* This constructor creates an EventSetDescriptor from scratch using
@@ -87,7 +87,7 @@ extern class EventSetDescriptor extends java.beans.FeatureDescriptor
 	*              introspection.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(sourceClass : Class<Dynamic>, eventSetName : String, listenerType : Class<Dynamic>, listenerMethodNames : java.NativeArray<String>, addListenerMethodName : String, removeListenerMethodName : String, getListenerMethodName : String) : Void;
+	@:require(java4) @:overload @:public public function new(sourceClass : Class<Dynamic>, eventSetName : String, listenerType : Class<Dynamic>, listenerMethodNames : java.NativeArray<String>, addListenerMethodName : String, removeListenerMethodName : String, getListenerMethodName : String) : Void;
 	
 	/**
 	* Creates an <TT>EventSetDescriptor</TT> from scratch using
@@ -104,7 +104,7 @@ extern class EventSetDescriptor extends java.beans.FeatureDescriptor
 	* @exception IntrospectionException if an exception occurs during
 	*              introspection.
 	*/
-	@:overload public function new(eventSetName : String, listenerType : Class<Dynamic>, listenerMethods : java.NativeArray<java.lang.reflect.Method>, addListenerMethod : java.lang.reflect.Method, removeListenerMethod : java.lang.reflect.Method) : Void;
+	@:overload @:public public function new(eventSetName : String, listenerType : Class<Dynamic>, listenerMethods : java.NativeArray<java.lang.reflect.Method>, addListenerMethod : java.lang.reflect.Method, removeListenerMethod : java.lang.reflect.Method) : Void;
 	
 	/**
 	* This constructor creates an EventSetDescriptor from scratch using
@@ -124,7 +124,7 @@ extern class EventSetDescriptor extends java.beans.FeatureDescriptor
 	*              introspection.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(eventSetName : String, listenerType : Class<Dynamic>, listenerMethods : java.NativeArray<java.lang.reflect.Method>, addListenerMethod : java.lang.reflect.Method, removeListenerMethod : java.lang.reflect.Method, getListenerMethod : java.lang.reflect.Method) : Void;
+	@:require(java4) @:overload @:public public function new(eventSetName : String, listenerType : Class<Dynamic>, listenerMethods : java.NativeArray<java.lang.reflect.Method>, addListenerMethod : java.lang.reflect.Method, removeListenerMethod : java.lang.reflect.Method, getListenerMethod : java.lang.reflect.Method) : Void;
 	
 	/**
 	* Creates an <TT>EventSetDescriptor</TT> from scratch using
@@ -143,7 +143,7 @@ extern class EventSetDescriptor extends java.beans.FeatureDescriptor
 	* @exception IntrospectionException if an exception occurs during
 	*              introspection.
 	*/
-	@:overload public function new(eventSetName : String, listenerType : Class<Dynamic>, listenerMethodDescriptors : java.NativeArray<java.beans.MethodDescriptor>, addListenerMethod : java.lang.reflect.Method, removeListenerMethod : java.lang.reflect.Method) : Void;
+	@:overload @:public public function new(eventSetName : String, listenerType : Class<Dynamic>, listenerMethodDescriptors : java.NativeArray<java.beans.MethodDescriptor>, addListenerMethod : java.lang.reflect.Method, removeListenerMethod : java.lang.reflect.Method) : Void;
 	
 	/**
 	* Gets the <TT>Class</TT> object for the target interface.
@@ -151,7 +151,7 @@ extern class EventSetDescriptor extends java.beans.FeatureDescriptor
 	* @return The Class object for the target interface that will
 	* get invoked when the event is fired.
 	*/
-	@:overload public function getListenerType() : Class<Dynamic>;
+	@:overload @:public public function getListenerType() : Class<Dynamic>;
 	
 	/**
 	* Gets the methods of the target listener interface.
@@ -160,7 +160,7 @@ extern class EventSetDescriptor extends java.beans.FeatureDescriptor
 	* within the target listener interface that will get called when
 	* events are fired.
 	*/
-	@:overload @:synchronized public function getListenerMethods() : java.NativeArray<java.lang.reflect.Method>;
+	@:overload @:public @:synchronized public function getListenerMethods() : java.NativeArray<java.lang.reflect.Method>;
 	
 	/**
 	* Gets the <code>MethodDescriptor</code>s of the target listener interface.
@@ -169,21 +169,21 @@ extern class EventSetDescriptor extends java.beans.FeatureDescriptor
 	* within the target listener interface that will get called when
 	* events are fired.
 	*/
-	@:overload @:synchronized public function getListenerMethodDescriptors() : java.NativeArray<java.beans.MethodDescriptor>;
+	@:overload @:public @:synchronized public function getListenerMethodDescriptors() : java.NativeArray<java.beans.MethodDescriptor>;
 	
 	/**
 	* Gets the method used to add event listeners.
 	*
 	* @return The method used to register a listener at the event source.
 	*/
-	@:overload @:synchronized public function getAddListenerMethod() : java.lang.reflect.Method;
+	@:overload @:public @:synchronized public function getAddListenerMethod() : java.lang.reflect.Method;
 	
 	/**
 	* Gets the method used to remove event listeners.
 	*
 	* @return The method used to remove a listener at the event source.
 	*/
-	@:overload @:synchronized public function getRemoveListenerMethod() : java.lang.reflect.Method;
+	@:overload @:public @:synchronized public function getRemoveListenerMethod() : java.lang.reflect.Method;
 	
 	/**
 	* Gets the method used to access the registered event listeners.
@@ -192,14 +192,14 @@ extern class EventSetDescriptor extends java.beans.FeatureDescriptor
 	*         source or null if it doesn't exist.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getGetListenerMethod() : java.lang.reflect.Method;
+	@:require(java4) @:overload @:public @:synchronized public function getGetListenerMethod() : java.lang.reflect.Method;
 	
 	/**
 	* Mark an event set as unicast (or not).
 	*
 	* @param unicast  True if the event set is unicast.
 	*/
-	@:overload public function setUnicast(unicast : Bool) : Void;
+	@:overload @:public public function setUnicast(unicast : Bool) : Void;
 	
 	/**
 	* Normally event sources are multicast.  However there are some
@@ -208,7 +208,7 @@ extern class EventSetDescriptor extends java.beans.FeatureDescriptor
 	* @return  <TT>true</TT> if the event set is unicast.
 	*          Defaults to <TT>false</TT>.
 	*/
-	@:overload public function isUnicast() : Bool;
+	@:overload @:public public function isUnicast() : Bool;
 	
 	/**
 	* Marks an event set as being in the &quot;default&quot; set (or not).
@@ -218,7 +218,7 @@ extern class EventSetDescriptor extends java.beans.FeatureDescriptor
 	*                          the &quot;default&quot; set,
 	*                          <code>false</code> if not
 	*/
-	@:overload public function setInDefaultEventSet(inDefaultEventSet : Bool) : Void;
+	@:overload @:public public function setInDefaultEventSet(inDefaultEventSet : Bool) : Void;
 	
 	/**
 	* Reports if an event set is in the &quot;default&quot; set.
@@ -226,7 +226,7 @@ extern class EventSetDescriptor extends java.beans.FeatureDescriptor
 	* @return  <TT>true</TT> if the event set is in
 	*          the &quot;default&quot; set.  Defaults to <TT>true</TT>.
 	*/
-	@:overload public function isInDefaultEventSet() : Bool;
+	@:overload @:public public function isInDefaultEventSet() : Bool;
 	
 	
 }

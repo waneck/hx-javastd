@@ -25,19 +25,19 @@ package com.sun.xml.internal.bind.v2.util;
 */
 extern class DataSourceSource extends javax.xml.transform.stream.StreamSource
 {
-	@:overload public function new(dh : javax.activation.DataHandler) : Void;
+	@:overload @:public public function new(dh : javax.activation.DataHandler) : Void;
 	
-	@:overload public function new(source : javax.activation.DataSource) : Void;
+	@:overload @:public public function new(source : javax.activation.DataSource) : Void;
 	
-	@:overload public function setReader(reader : java.io.Reader) : Void;
+	@:overload @:public override public function setReader(reader : java.io.Reader) : Void;
 	
-	@:overload public function setInputStream(inputStream : java.io.InputStream) : Void;
+	@:overload @:public override public function setInputStream(inputStream : java.io.InputStream) : Void;
 	
-	@:overload public function getReader() : java.io.Reader;
+	@:overload @:public override public function getReader() : java.io.Reader;
 	
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public override public function getInputStream() : java.io.InputStream;
 	
-	@:overload public function getDataSource() : javax.activation.DataSource;
+	@:overload @:public public function getDataSource() : javax.activation.DataSource;
 	
 	
 }

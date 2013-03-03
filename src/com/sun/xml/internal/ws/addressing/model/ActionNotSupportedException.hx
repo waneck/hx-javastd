@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.addressing.model;
 */
 extern class ActionNotSupportedException extends javax.xml.ws.WebServiceException
 {
-	@:overload public function new(action : String) : Void;
+	@:overload @:public public function new(action : String) : Void;
 	
-	@:overload public function getAction() : String;
+	@:overload @:public public function getAction() : String;
 	
 	
 }

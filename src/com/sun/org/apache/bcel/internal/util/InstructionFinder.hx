@@ -87,12 +87,12 @@ extern class InstructionFinder
 	/**
 	* @param il instruction list to search for given patterns
 	*/
-	@:overload public function new(il : com.sun.org.apache.bcel.internal.generic.InstructionList) : Void;
+	@:overload @:public public function new(il : com.sun.org.apache.bcel.internal.generic.InstructionList) : Void;
 	
 	/**
 	* Reread the instruction list, e.g., after you've altered the list upon a match.
 	*/
-	@:overload @:final public function reread() : Void;
+	@:overload @:public @:final public function reread() : Void;
 	
 	/**
 	* Search for the given pattern in the instruction list. You can search for any valid
@@ -121,7 +121,7 @@ extern class InstructionFinder
 	* @return iterator of matches where e.nextElement() returns an array of instruction handles
 	* describing the matched area
 	*/
-	@:overload @:final public function search(pattern : String, from : com.sun.org.apache.bcel.internal.generic.InstructionHandle, constraint : com.sun.org.apache.bcel.internal.util.InstructionFinder.InstructionFinder_CodeConstraint) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:final public function search(pattern : String, from : com.sun.org.apache.bcel.internal.generic.InstructionHandle, constraint : com.sun.org.apache.bcel.internal.util.InstructionFinder.InstructionFinder_CodeConstraint) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Start search beginning from the start of the given instruction list.
@@ -131,7 +131,7 @@ extern class InstructionFinder
 	* returns an array of instruction handles describing the matched
 	* area
 	*/
-	@:overload @:final public function search(pattern : String) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:final public function search(pattern : String) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Start search beginning from `from'.
@@ -141,7 +141,7 @@ extern class InstructionFinder
 	* @return  iterator of matches where e.nextElement() returns an array of instruction handles
 	* describing the matched area
 	*/
-	@:overload @:final public function search(pattern : String, from : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:final public function search(pattern : String, from : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Start search beginning from the start of the given instruction list.
@@ -151,12 +151,12 @@ extern class InstructionFinder
 	* @param constraint constraints to be checked on matching code
 	* @return instruction handle or `null' if the match failed
 	*/
-	@:overload @:final public function search(pattern : String, constraint : com.sun.org.apache.bcel.internal.util.InstructionFinder.InstructionFinder_CodeConstraint) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:final public function search(pattern : String, constraint : com.sun.org.apache.bcel.internal.util.InstructionFinder.InstructionFinder_CodeConstraint) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* @return the inquired instruction list
 	*/
-	@:overload @:final public function getInstructionList() : com.sun.org.apache.bcel.internal.generic.InstructionList;
+	@:overload @:public @:final public function getInstructionList() : com.sun.org.apache.bcel.internal.generic.InstructionList;
 	
 	
 }
@@ -172,7 +172,7 @@ extern class InstructionFinder
 	* @param match array of instructions matching the requested pattern
 	* @return true if the matched area is really useful
 	*/
-	@:overload public function checkCode(match : java.NativeArray<com.sun.org.apache.bcel.internal.generic.InstructionHandle>) : Bool;
+	@:overload @:public public function checkCode(match : java.NativeArray<com.sun.org.apache.bcel.internal.generic.InstructionHandle>) : Bool;
 	
 	
 }

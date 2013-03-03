@@ -25,14 +25,14 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 	*
 	* @return always return non-null valid object.
 	*/
-	@:overload @:final public static function toXMLInputSource(_in : javax.xml.transform.stream.StreamSource) : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
+	@:overload @:public @:static @:final public static function toXMLInputSource(_in : javax.xml.transform.stream.StreamSource) : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
 	
 	/**
 	* Reconstructs {@link SAXException} from XNIException.
 	*/
-	@:overload public static function toSAXException(e : com.sun.org.apache.xerces.internal.xni.XNIException) : org.xml.sax.SAXException;
+	@:overload @:public @:static public static function toSAXException(e : com.sun.org.apache.xerces.internal.xni.XNIException) : org.xml.sax.SAXException;
 	
-	@:overload public static function toSAXParseException(e : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : org.xml.sax.SAXParseException;
+	@:overload @:public @:static public static function toSAXParseException(e : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : org.xml.sax.SAXParseException;
 	
 	
 }

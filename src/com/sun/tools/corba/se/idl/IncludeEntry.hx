@@ -39,13 +39,13 @@ extern class IncludeEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	/**
 	* This is the symbol table entry for the #include statement.
 	**/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.IncludeEntry) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.IncludeEntry) : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/** Invoke the Include type generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -53,26 +53,26 @@ extern class IncludeEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload @:public override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the Include type generator.
 	@returns an object which implements the IncludeGen interface.
 	@see IncludeGen */
-	@:overload override public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload @:public override public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	/** Set the fully-qualified file specification of this include file. */
-	@:overload public function absFilename(afn : String) : Void;
+	@:overload @:public public function absFilename(afn : String) : Void;
 	
 	/** Access the fully-qualified file specification of this include.
 	@returns a string containing the path of the include file. */
-	@:overload public function absFilename() : String;
+	@:overload @:public public function absFilename() : String;
 	
 	/** Add an IncludeEntry to the list of files which this included
 	file includes. */
-	@:overload public function addInclude(entry : com.sun.tools.corba.se.idl.IncludeEntry) : Void;
+	@:overload @:public public function addInclude(entry : com.sun.tools.corba.se.idl.IncludeEntry) : Void;
 	
 	/** Get the list of files which this file includes. */
-	@:overload public function includes() : java.util.Vector<Dynamic>;
+	@:overload @:public public function includes() : java.util.Vector<Dynamic>;
 	
 	
 }

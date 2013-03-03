@@ -31,7 +31,7 @@ extern class XmlResolver implements org.xml.sax.EntityResolver
 	* This is an implementation of org.xml.sax
 	*
 	*/
-	@:overload public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
 	
 }

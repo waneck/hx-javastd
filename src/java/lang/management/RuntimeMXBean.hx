@@ -69,7 +69,7 @@ package java.lang.management;
 	*
 	* @return the name representing the running Java virtual machine.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the Java virtual machine implementation name.
@@ -85,7 +85,7 @@ package java.lang.management;
 	* @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
 	* @see java.lang.System#getProperty
 	*/
-	@:overload public function getVmName() : String;
+	@:overload @:public public function getVmName() : String;
 	
 	/**
 	* Returns the Java virtual machine implementation vendor.
@@ -101,7 +101,7 @@ package java.lang.management;
 	* @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
 	* @see java.lang.System#getProperty
 	*/
-	@:overload public function getVmVendor() : String;
+	@:overload @:public public function getVmVendor() : String;
 	
 	/**
 	* Returns the Java virtual machine implementation version.
@@ -117,7 +117,7 @@ package java.lang.management;
 	* @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
 	* @see java.lang.System#getProperty
 	*/
-	@:overload public function getVmVersion() : String;
+	@:overload @:public public function getVmVersion() : String;
 	
 	/**
 	* Returns the Java virtual machine specification name.
@@ -133,7 +133,7 @@ package java.lang.management;
 	* @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
 	* @see java.lang.System#getProperty
 	*/
-	@:overload public function getSpecName() : String;
+	@:overload @:public public function getSpecName() : String;
 	
 	/**
 	* Returns the Java virtual machine specification vendor.
@@ -149,7 +149,7 @@ package java.lang.management;
 	* @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
 	* @see java.lang.System#getProperty
 	*/
-	@:overload public function getSpecVendor() : String;
+	@:overload @:public public function getSpecVendor() : String;
 	
 	/**
 	* Returns the Java virtual machine specification version.
@@ -165,7 +165,7 @@ package java.lang.management;
 	* @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
 	* @see java.lang.System#getProperty
 	*/
-	@:overload public function getSpecVersion() : String;
+	@:overload @:public public function getSpecVersion() : String;
 	
 	/**
 	* Returns the version of the specification for the management interface
@@ -174,7 +174,7 @@ package java.lang.management;
 	* @return the version of the specification for the management interface
 	* implemented by the running Java virtual machine.
 	*/
-	@:overload public function getManagementSpecVersion() : String;
+	@:overload @:public public function getManagementSpecVersion() : String;
 	
 	/**
 	* Returns the Java class path that is used by the system class loader
@@ -195,7 +195,7 @@ package java.lang.management;
 	* @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
 	* @see java.lang.System#getProperty
 	*/
-	@:overload public function getClassPath() : String;
+	@:overload @:public public function getClassPath() : String;
 	
 	/**
 	* Returns the Java library path.
@@ -215,7 +215,7 @@ package java.lang.management;
 	* @see java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
 	* @see java.lang.System#getProperty
 	*/
-	@:overload public function getLibraryPath() : String;
+	@:overload @:public public function getLibraryPath() : String;
 	
 	/**
 	* Tests if the Java virtual machine supports the boot class path
@@ -225,7 +225,7 @@ package java.lang.management;
 	* @return <tt>true</tt> if the Java virtual machine supports the
 	* class path mechanism; <tt>false</tt> otherwise.
 	*/
-	@:overload public function isBootClassPathSupported() : Bool;
+	@:overload @:public public function isBootClassPathSupported() : Bool;
 	
 	/**
 	* Returns the boot class path that is used by the bootstrap class loader
@@ -250,7 +250,7 @@ package java.lang.management;
 	*     if a security manager exists and the caller does not have
 	*     ManagementPermission("monitor").
 	*/
-	@:overload public function getBootClassPath() : String;
+	@:overload @:public public function getBootClassPath() : String;
 	
 	/**
 	* Returns the input arguments passed to the Java virtual machine
@@ -279,14 +279,14 @@ package java.lang.management;
 	*     if a security manager exists and the caller does not have
 	*     ManagementPermission("monitor").
 	*/
-	@:overload public function getInputArguments() : java.util.List<String>;
+	@:overload @:public public function getInputArguments() : java.util.List<String>;
 	
 	/**
 	* Returns the uptime of the Java virtual machine in milliseconds.
 	*
 	* @return uptime of the Java virtual machine in milliseconds.
 	*/
-	@:overload public function getUptime() : haxe.Int64;
+	@:overload @:public public function getUptime() : haxe.Int64;
 	
 	/**
 	* Returns the start time of the Java virtual machine in milliseconds.
@@ -296,7 +296,7 @@ package java.lang.management;
 	* @return start time of the Java virtual machine in milliseconds.
 	*
 	*/
-	@:overload public function getStartTime() : haxe.Int64;
+	@:overload @:public public function getStartTime() : haxe.Int64;
 	
 	/**
 	* Returns a map of names and values of all system properties.
@@ -333,7 +333,7 @@ package java.lang.management;
 	*     <code>checkPropertiesAccess</code> method doesn't allow access
 	*     to the system properties.
 	*/
-	@:overload public function getSystemProperties() : java.util.Map<String, String>;
+	@:overload @:public public function getSystemProperties() : java.util.Map<String, String>;
 	
 	
 }

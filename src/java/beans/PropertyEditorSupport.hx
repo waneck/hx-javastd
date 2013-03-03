@@ -35,7 +35,7 @@ extern class PropertyEditorSupport implements java.beans.PropertyEditor
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new() : Void;
+	@:require(java5) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>PropertyEditorSupport</code> object.
@@ -43,7 +43,7 @@ extern class PropertyEditorSupport implements java.beans.PropertyEditor
 	* @param source the source used for event firing
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(source : Dynamic) : Void;
+	@:require(java5) @:overload @:public public function new(source : Dynamic) : Void;
 	
 	/**
 	* Returns the bean that is used as the
@@ -54,7 +54,7 @@ extern class PropertyEditorSupport implements java.beans.PropertyEditor
 	* @return the source object or this instance
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getSource() : Dynamic;
+	@:require(java5) @:overload @:public public function getSource() : Dynamic;
 	
 	/**
 	* Sets the source bean.
@@ -66,7 +66,7 @@ extern class PropertyEditorSupport implements java.beans.PropertyEditor
 	* @param source source object to be used for events
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setSource(source : Dynamic) : Void;
+	@:require(java5) @:overload @:public public function setSource(source : Dynamic) : Void;
 	
 	/**
 	* Set (or change) the object that is to be edited.
@@ -76,21 +76,21 @@ extern class PropertyEditorSupport implements java.beans.PropertyEditor
 	*     the PropertyEditor should create a new object to hold any
 	*     modified value.
 	*/
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public public function setValue(value : Dynamic) : Void;
 	
 	/**
 	* Gets the value of the property.
 	*
 	* @return The value of the property.
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	/**
 	* Determines whether the class will honor the paintValue method.
 	*
 	* @return  True if the class will honor the paintValue method.
 	*/
-	@:overload public function isPaintable() : Bool;
+	@:overload @:public public function isPaintable() : Bool;
 	
 	/**
 	* Paint a representation of the value into a given area of screen
@@ -103,7 +103,7 @@ extern class PropertyEditorSupport implements java.beans.PropertyEditor
 	* @param gfx  Graphics object to paint into.
 	* @param box  Rectangle within graphics object into which we should paint.
 	*/
-	@:overload public function paintValue(gfx : java.awt.Graphics, box : java.awt.Rectangle) : Void;
+	@:overload @:public public function paintValue(gfx : java.awt.Graphics, box : java.awt.Rectangle) : Void;
 	
 	/**
 	* This method is intended for use when generating Java code to set
@@ -116,7 +116,7 @@ extern class PropertyEditorSupport implements java.beans.PropertyEditor
 	* @return A fragment of Java code representing an initializer for the
 	*          current value.
 	*/
-	@:overload public function getJavaInitializationString() : String;
+	@:overload @:public public function getJavaInitializationString() : String;
 	
 	/**
 	* Gets the property value as a string suitable for presentation
@@ -128,7 +128,7 @@ extern class PropertyEditorSupport implements java.beans.PropertyEditor
 	* <p>   If a non-null value is returned, then the PropertyEditor should
 	*       be prepared to parse that string back in setAsText().
 	*/
-	@:overload public function getAsText() : String;
+	@:overload @:public public function getAsText() : String;
 	
 	/**
 	* Sets the property value by parsing a given String.  May raise
@@ -138,7 +138,7 @@ extern class PropertyEditorSupport implements java.beans.PropertyEditor
 	*
 	* @param text  The string to be parsed.
 	*/
-	@:overload public function setAsText(text : String) : Void;
+	@:overload @:public public function setAsText(text : String) : Void;
 	
 	/**
 	* If the property value must be one of a set of known tagged values,
@@ -151,7 +151,7 @@ extern class PropertyEditorSupport implements java.beans.PropertyEditor
 	*   property cannot be represented as a tagged value.
 	*
 	*/
-	@:overload public function getTags() : java.NativeArray<String>;
+	@:overload @:public public function getTags() : java.NativeArray<String>;
 	
 	/**
 	* A PropertyEditor may chose to make available a full custom Component
@@ -167,14 +167,14 @@ extern class PropertyEditorSupport implements java.beans.PropertyEditor
 	*      edit the current property value.  May be null if this is
 	*      not supported.
 	*/
-	@:overload public function getCustomEditor() : java.awt.Component;
+	@:overload @:public public function getCustomEditor() : java.awt.Component;
 	
 	/**
 	* Determines whether the propertyEditor can provide a custom editor.
 	*
 	* @return  True if the propertyEditor can provide a custom editor.
 	*/
-	@:overload public function supportsCustomEditor() : Bool;
+	@:overload @:public public function supportsCustomEditor() : Bool;
 	
 	/**
 	* Adds a listener for the value change.
@@ -192,7 +192,7 @@ extern class PropertyEditorSupport implements java.beans.PropertyEditor
 	*
 	* @param listener  the {@link PropertyChangeListener} to add
 	*/
-	@:overload @:synchronized public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a listener for the value change.
@@ -204,12 +204,12 @@ extern class PropertyEditorSupport implements java.beans.PropertyEditor
 	*
 	* @param listener  the {@link PropertyChangeListener} to remove
 	*/
-	@:overload @:synchronized public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Report that we have been modified to any interested listeners.
 	*/
-	@:overload public function firePropertyChange() : Void;
+	@:overload @:public public function firePropertyChange() : Void;
 	
 	
 }

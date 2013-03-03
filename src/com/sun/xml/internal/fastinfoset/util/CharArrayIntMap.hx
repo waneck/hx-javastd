@@ -27,19 +27,19 @@ package com.sun.xml.internal.fastinfoset.util;
 */
 extern class CharArrayIntMap extends com.sun.xml.internal.fastinfoset.util.KeyIntMap
 {
-	private var _totalCharacterCount : Int;
+	@:protected private var _totalCharacterCount : Int;
 	
-	@:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:final override public function clear() : Void;
+	@:overload @:public @:final override public function clear() : Void;
 	
-	@:overload @:final override public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.KeyIntMap, clear : Bool) : Void;
+	@:overload @:public @:final override public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.KeyIntMap, clear : Bool) : Void;
 	
-	@:overload @:final public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.CharArrayIntMap, clear : Bool) : Void;
+	@:overload @:public @:final public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.CharArrayIntMap, clear : Bool) : Void;
 	
 	/**
 	* Method returns an index of the passed character buffer in
@@ -48,7 +48,7 @@ extern class CharArrayIntMap extends com.sun.xml.internal.fastinfoset.util.KeyIn
 	* @return index of character buffer in <code>CharArrayIntMap</code>,
 	* otherwise NOT_PRESENT.
 	*/
-	@:overload @:final public function get(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Int;
+	@:overload @:public @:final public function get(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Int;
 	
 	/**
 	* Method returns an index of the passed character buffer in
@@ -58,17 +58,17 @@ extern class CharArrayIntMap extends com.sun.xml.internal.fastinfoset.util.KeyIn
 	* @return index of character buffer in <code>CharArrayIntMap</code>, or
 	* NOT_PRESENT if character buffer was just added.
 	*/
-	@:overload @:final public function obtainIndex(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, clone : Bool) : Int;
+	@:overload @:public @:final public function obtainIndex(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, clone : Bool) : Int;
 	
-	@:overload @:final public function getTotalCharacterCount() : Int;
+	@:overload @:public @:final public function getTotalCharacterCount() : Int;
 	
 	
 }
 @:native('com$sun$xml$internal$fastinfoset$util$CharArrayIntMap$Entry') @:internal extern class CharArrayIntMap_Entry extends com.sun.xml.internal.fastinfoset.util.KeyIntMap.KeyIntMap_BaseEntry
 {
-	@:overload public function new(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, hash : Int, value : Int, next : com.sun.xml.internal.fastinfoset.util.CharArrayIntMap.CharArrayIntMap_Entry) : Void;
+	@:overload @:public public function new(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, hash : Int, value : Int, next : com.sun.xml.internal.fastinfoset.util.CharArrayIntMap.CharArrayIntMap_Entry) : Void;
 	
-	@:overload @:final public function equalsCharArray(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Bool;
+	@:overload @:public @:final public function equalsCharArray(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Bool;
 	
 	
 }

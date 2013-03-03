@@ -28,12 +28,12 @@ extern class InputStreamMessage extends com.sun.xml.internal.ws.api.message.stre
 	/**
 	* The MIME content-type of the encoding.
 	*/
-	public var contentType(default, null) : String;
+	@:public @:final public var contentType(default, null) : String;
 	
 	/**
 	* The message represented as an {@link InputStream}.
 	*/
-	public var msg(default, null) : java.io.InputStream;
+	@:public @:final public var msg(default, null) : java.io.InputStream;
 	
 	/**
 	* Create a new message.
@@ -48,7 +48,7 @@ extern class InputStreamMessage extends com.sun.xml.internal.ws.api.message.stre
 	*      always a non-null unconsumed {@link InputStream} that
 	*      represents a request.
 	*/
-	@:overload public function new(properties : com.sun.xml.internal.ws.api.message.Packet, contentType : String, msg : java.io.InputStream) : Void;
+	@:overload @:public public function new(properties : com.sun.xml.internal.ws.api.message.Packet, contentType : String, msg : java.io.InputStream) : Void;
 	
 	/**
 	* Create a new message.
@@ -66,7 +66,7 @@ extern class InputStreamMessage extends com.sun.xml.internal.ws.api.message.stre
 	*      always a non-null unconsumed {@link InputStream} that
 	*      represents a request.
 	*/
-	@:overload public function new(properties : com.sun.xml.internal.ws.api.message.Packet, attachments : com.sun.xml.internal.ws.api.message.AttachmentSet, contentType : String, msg : java.io.InputStream) : Void;
+	@:overload @:public public function new(properties : com.sun.xml.internal.ws.api.message.Packet, attachments : com.sun.xml.internal.ws.api.message.AttachmentSet, contentType : String, msg : java.io.InputStream) : Void;
 	
 	
 }

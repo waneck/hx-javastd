@@ -25,13 +25,13 @@ package sun.reflect.generics.repository;
 */
 extern class GenericDeclRepository<S> extends sun.reflect.generics.repository.AbstractRepository<S>
 {
-	@:overload private function new(rawSig : String, f : sun.reflect.generics.factory.GenericsFactory) : Void;
+	@:overload @:protected private function new(rawSig : String, f : sun.reflect.generics.factory.GenericsFactory) : Void;
 	
 	/**
 	* Return the formal type parameters of this generic declaration.
 	* @return the formal type parameters of this generic declaration
 	*/
-	@:overload public function getTypeParameters() : java.NativeArray<java.lang.reflect.TypeVariable<Dynamic>>;
+	@:overload @:public public function getTypeParameters() : java.NativeArray<java.lang.reflect.TypeVariable<Dynamic>>;
 	
 	
 }

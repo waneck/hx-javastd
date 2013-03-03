@@ -1904,7 +1904,7 @@ package javax.sql;
 	*  error could occur; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNString(parameterName : String, value : String) : Void;
+	@:require(java6) @:overload @:public public function setNString(parameterName : String, value : String) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object. The
@@ -1934,7 +1934,7 @@ package javax.sql;
 	*  error could occur; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNCharacterStream(parameterName : String, value : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function setNCharacterStream(parameterName : String, value : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object. The

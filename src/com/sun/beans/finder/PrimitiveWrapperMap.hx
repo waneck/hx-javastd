@@ -32,7 +32,7 @@ extern class PrimitiveWrapperMap
 	* @return found wrapper for primitive type,
 	*         or {@code null} if not found
 	*/
-	@:overload public static function getType(name : String) : Class<Dynamic>;
+	@:overload @:public @:static public static function getType(name : String) : Class<Dynamic>;
 	
 	
 }

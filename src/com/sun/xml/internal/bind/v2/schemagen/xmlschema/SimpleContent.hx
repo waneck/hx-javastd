@@ -25,9 +25,9 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface SimpleContent extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.Annotated extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function extension() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.SimpleExtension;
+	@:overload @:public public function extension() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.SimpleExtension;
 	
-	@:overload public function restriction() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.SimpleRestriction;
+	@:overload @:public public function restriction() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.SimpleRestriction;
 	
 	
 }

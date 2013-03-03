@@ -25,9 +25,9 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 */
 extern class TextLoader extends com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader
 {
-	@:overload public function new(xducer : com.sun.xml.internal.bind.v2.runtime.Transducer<Dynamic>) : Void;
+	@:overload @:public public function new(xducer : com.sun.xml.internal.bind.v2.runtime.Transducer<Dynamic>) : Void;
 	
-	@:overload public function text(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, text : java.lang.CharSequence) : Void;
+	@:overload @:public override public function text(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, text : java.lang.CharSequence) : Void;
 	
 	
 }

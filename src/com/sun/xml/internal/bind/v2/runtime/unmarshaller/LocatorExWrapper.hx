@@ -25,17 +25,17 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 */
 @:internal extern class LocatorExWrapper implements com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx
 {
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function getLocation() : javax.xml.bind.ValidationEventLocator;
+	@:overload @:public public function getLocation() : javax.xml.bind.ValidationEventLocator;
 	
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	
 }

@@ -54,7 +54,7 @@ extern class Preprocessor
 	/**
 	*
 	**/
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected private function clone() : Dynamic;
 	
 	
 }

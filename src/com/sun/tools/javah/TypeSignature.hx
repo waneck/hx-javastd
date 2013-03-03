@@ -25,17 +25,17 @@ package com.sun.tools.javah;
 */
 extern class TypeSignature
 {
-	@:overload public function new(elems : javax.lang.model.util.Elements) : Void;
+	@:overload @:public public function new(elems : javax.lang.model.util.Elements) : Void;
 	
 	/*
 	* Returns the type signature of a field according to JVM specs
 	*/
-	@:overload public function getTypeSignature(javasignature : String) : String;
+	@:overload @:public public function getTypeSignature(javasignature : String) : String;
 	
 	/*
 	* Returns the type signature of a method according to JVM specs
 	*/
-	@:overload public function getTypeSignature(javasignature : String, returnType : javax.lang.model.type.TypeMirror) : String;
+	@:overload @:public public function getTypeSignature(javasignature : String, returnType : javax.lang.model.type.TypeMirror) : String;
 	
 	
 }

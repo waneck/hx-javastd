@@ -44,23 +44,23 @@ package java.util;
 	* @param  c
 	*         The conversion
 	*/
-	@:overload public function new(f : String, c : java.StdTypes.Char16) : Void;
+	@:overload @:public public function new(f : String, c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Returns the incompatible flag.
 	*
 	* @return  The flag
 	*/
-	@:overload public function getFlags() : String;
+	@:overload @:public public function getFlags() : String;
 	
 	/**
 	* Returns the incompatible conversion.
 	*
 	* @return  The conversion
 	*/
-	@:overload public function getConversion() : java.StdTypes.Char16;
+	@:overload @:public public function getConversion() : java.StdTypes.Char16;
 	
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

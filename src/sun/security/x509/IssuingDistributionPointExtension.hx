@@ -29,24 +29,24 @@ extern class IssuingDistributionPointExtension extends java.security.cert.Extens
 	* Identifier for this attribute, to be used with the
 	* get, set, delete methods of Certificate, x509 type.
 	*/
-	public static var IDENT(default, null) : String;
+	@:public @:static @:final public static var IDENT(default, null) : String;
 	
 	/**
 	* Attribute names.
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
-	public static var POINT(default, null) : String;
+	@:public @:static @:final public static var POINT(default, null) : String;
 	
-	public static var REASONS(default, null) : String;
+	@:public @:static @:final public static var REASONS(default, null) : String;
 	
-	public static var ONLY_USER_CERTS(default, null) : String;
+	@:public @:static @:final public static var ONLY_USER_CERTS(default, null) : String;
 	
-	public static var ONLY_CA_CERTS(default, null) : String;
+	@:public @:static @:final public static var ONLY_CA_CERTS(default, null) : String;
 	
-	public static var ONLY_ATTRIBUTE_CERTS(default, null) : String;
+	@:public @:static @:final public static var ONLY_ATTRIBUTE_CERTS(default, null) : String;
 	
-	public static var INDIRECT_CRL(default, null) : String;
+	@:public @:static @:final public static var INDIRECT_CRL(default, null) : String;
 	
 	/**
 	* Creates a critical IssuingDistributionPointExtension.
@@ -70,7 +70,7 @@ extern class IssuingDistributionPointExtension extends java.security.cert.Extens
 	*        <code>hasOnlyAttributeCerts</code> is set to <code>true</code>.
 	* @throws IOException on encoding error.
 	*/
-	@:overload public function new(distributionPoint : sun.security.x509.DistributionPointName, revocationReasons : sun.security.x509.ReasonFlags, hasOnlyUserCerts : Bool, hasOnlyCACerts : Bool, hasOnlyAttributeCerts : Bool, isIndirectCRL : Bool) : Void;
+	@:overload @:public public function new(distributionPoint : sun.security.x509.DistributionPointName, revocationReasons : sun.security.x509.ReasonFlags, hasOnlyUserCerts : Bool, hasOnlyCACerts : Bool, hasOnlyAttributeCerts : Bool, isIndirectCRL : Bool) : Void;
 	
 	/**
 	* Creates a critical IssuingDistributionPointExtension from its
@@ -80,12 +80,12 @@ extern class IssuingDistributionPointExtension extends java.security.cert.Extens
 	* @param value the DER-encoded value. It must be a <code>byte[]</code>.
 	* @exception IOException on decoding error.
 	*/
-	@:overload public function new(critical : Null<Bool>, value : Dynamic) : Void;
+	@:overload @:public public function new(critical : Null<Bool>, value : Dynamic) : Void;
 	
 	/**
 	* Returns the name of this attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Encodes the issuing distribution point extension and writes it to the
@@ -94,33 +94,33 @@ extern class IssuingDistributionPointExtension extends java.security.cert.Extens
 	* @param out the output stream.
 	* @exception IOException on encoding error.
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public override public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Sets the attribute value.
 	*/
-	@:overload public function set(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function set(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Gets the attribute value.
 	*/
-	@:overload public function get(name : String) : Dynamic;
+	@:overload @:public public function get(name : String) : Dynamic;
 	
 	/**
 	* Deletes the attribute value.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
 	/**
 	* Returns an enumeration of names of attributes existing within this
 	* attribute.
 	*/
-	@:overload public function getElements() : java.util.Enumeration<String>;
+	@:overload @:public public function getElements() : java.util.Enumeration<String>;
 	
 	/**
 	* Returns the extension as user readable string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -30,72 +30,72 @@ extern class Trees
 	* @param task the compilation task for which to get the Trees object
 	* @throws IllegalArgumentException if the task does not support the Trees API.
 	*/
-	@:overload public static function instance(task : javax.tools.JavaCompiler.JavaCompiler_CompilationTask) : com.sun.source.util.Trees;
+	@:overload @:public @:static public static function instance(task : javax.tools.JavaCompiler.JavaCompiler_CompilationTask) : com.sun.source.util.Trees;
 	
 	/**
 	* Gets a Trees object for a given ProcessingEnvironment.
 	* @param env the processing environment for which to get the Trees object
 	* @throws IllegalArgumentException if the env does not support the Trees API.
 	*/
-	@:overload public static function instance(env : javax.annotation.processing.ProcessingEnvironment) : com.sun.source.util.Trees;
+	@:overload @:public @:static public static function instance(env : javax.annotation.processing.ProcessingEnvironment) : com.sun.source.util.Trees;
 	
 	/**
 	* Gets a utility object for obtaining source positions.
 	*/
-	@:overload @:abstract public function getSourcePositions() : com.sun.source.util.SourcePositions;
+	@:overload @:public @:abstract public function getSourcePositions() : com.sun.source.util.SourcePositions;
 	
 	/**
 	* Gets the Tree node for a given Element.
 	* Returns null if the node can not be found.
 	*/
-	@:overload @:abstract public function getTree(element : javax.lang.model.element.Element) : com.sun.source.tree.Tree;
+	@:overload @:public @:abstract public function getTree(element : javax.lang.model.element.Element) : com.sun.source.tree.Tree;
 	
 	/**
 	* Gets the ClassTree node for a given TypeElement.
 	* Returns null if the node can not be found.
 	*/
-	@:overload @:abstract public function getTree(element : javax.lang.model.element.TypeElement) : com.sun.source.tree.ClassTree;
+	@:overload @:public @:abstract public function getTree(element : javax.lang.model.element.TypeElement) : com.sun.source.tree.ClassTree;
 	
 	/**
 	* Gets the MethodTree node for a given ExecutableElement.
 	* Returns null if the node can not be found.
 	*/
-	@:overload @:abstract public function getTree(method : javax.lang.model.element.ExecutableElement) : com.sun.source.tree.MethodTree;
+	@:overload @:public @:abstract public function getTree(method : javax.lang.model.element.ExecutableElement) : com.sun.source.tree.MethodTree;
 	
 	/**
 	* Gets the Tree node for an AnnotationMirror on a given Element.
 	* Returns null if the node can not be found.
 	*/
-	@:overload @:abstract public function getTree(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror) : com.sun.source.tree.Tree;
+	@:overload @:public @:abstract public function getTree(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror) : com.sun.source.tree.Tree;
 	
 	/**
 	* Gets the Tree node for an AnnotationValue for an AnnotationMirror on a given Element.
 	* Returns null if the node can not be found.
 	*/
-	@:overload @:abstract public function getTree(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror, v : javax.lang.model.element.AnnotationValue) : com.sun.source.tree.Tree;
+	@:overload @:public @:abstract public function getTree(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror, v : javax.lang.model.element.AnnotationValue) : com.sun.source.tree.Tree;
 	
 	/**
 	* Gets the path to tree node within the specified compilation unit.
 	*/
-	@:overload @:abstract public function getPath(unit : com.sun.source.tree.CompilationUnitTree, node : com.sun.source.tree.Tree) : com.sun.source.util.TreePath;
+	@:overload @:public @:abstract public function getPath(unit : com.sun.source.tree.CompilationUnitTree, node : com.sun.source.tree.Tree) : com.sun.source.util.TreePath;
 	
 	/**
 	* Gets the TreePath node for a given Element.
 	* Returns null if the node can not be found.
 	*/
-	@:overload @:abstract public function getPath(e : javax.lang.model.element.Element) : com.sun.source.util.TreePath;
+	@:overload @:public @:abstract public function getPath(e : javax.lang.model.element.Element) : com.sun.source.util.TreePath;
 	
 	/**
 	* Gets the TreePath node for an AnnotationMirror on a given Element.
 	* Returns null if the node can not be found.
 	*/
-	@:overload @:abstract public function getPath(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror) : com.sun.source.util.TreePath;
+	@:overload @:public @:abstract public function getPath(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror) : com.sun.source.util.TreePath;
 	
 	/**
 	* Gets the TreePath node for an AnnotationValue for an AnnotationMirror on a given Element.
 	* Returns null if the node can not be found.
 	*/
-	@:overload @:abstract public function getPath(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror, v : javax.lang.model.element.AnnotationValue) : com.sun.source.util.TreePath;
+	@:overload @:public @:abstract public function getPath(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror, v : javax.lang.model.element.AnnotationValue) : com.sun.source.util.TreePath;
 	
 	/**
 	* Gets the Element for the Tree node identified by a given TreePath.
@@ -103,7 +103,7 @@ extern class Trees
 	* @throws IllegalArgumentException is the TreePath does not identify
 	* a Tree node that might have an associated Element.
 	*/
-	@:overload @:abstract public function getElement(path : com.sun.source.util.TreePath) : javax.lang.model.element.Element;
+	@:overload @:public @:abstract public function getElement(path : com.sun.source.util.TreePath) : javax.lang.model.element.Element;
 	
 	/**
 	* Gets the TypeMirror for the Tree node identified by a given TreePath.
@@ -111,19 +111,19 @@ extern class Trees
 	* @throws IllegalArgumentException is the TreePath does not identify
 	* a Tree node that might have an associated TypeMirror.
 	*/
-	@:overload @:abstract public function getTypeMirror(path : com.sun.source.util.TreePath) : javax.lang.model.type.TypeMirror;
+	@:overload @:public @:abstract public function getTypeMirror(path : com.sun.source.util.TreePath) : javax.lang.model.type.TypeMirror;
 	
 	/**
 	* Gets the Scope for the Tree node identified by a given TreePath.
 	* Returns null if the Scope is not available.
 	*/
-	@:overload @:abstract public function getScope(path : com.sun.source.util.TreePath) : com.sun.source.tree.Scope;
+	@:overload @:public @:abstract public function getScope(path : com.sun.source.util.TreePath) : com.sun.source.tree.Scope;
 	
 	/**
 	* Gets the doc comment, if any, for the Tree node identified by a given TreePath.
 	* Returns null if no doc comment was found.
 	*/
-	@:overload @:abstract public function getDocComment(path : com.sun.source.util.TreePath) : String;
+	@:overload @:public @:abstract public function getDocComment(path : com.sun.source.util.TreePath) : String;
 	
 	/**
 	* Checks whether a given type is accessible in a given scope.
@@ -131,7 +131,7 @@ extern class Trees
 	* @param type the type to be checked
 	* @return true if {@code type} is accessible
 	*/
-	@:overload @:abstract public function isAccessible(scope : com.sun.source.tree.Scope, type : javax.lang.model.element.TypeElement) : Bool;
+	@:overload @:public @:abstract public function isAccessible(scope : com.sun.source.tree.Scope, type : javax.lang.model.element.TypeElement) : Bool;
 	
 	/**
 	* Checks whether the given element is accessible as a member of the given
@@ -141,14 +141,14 @@ extern class Trees
 	* @param type the type for which to check if the member is accessible
 	* @return true if {@code member} is accessible in {@code type}
 	*/
-	@:overload @:abstract public function isAccessible(scope : com.sun.source.tree.Scope, member : javax.lang.model.element.Element, type : javax.lang.model.type.DeclaredType) : Bool;
+	@:overload @:public @:abstract public function isAccessible(scope : com.sun.source.tree.Scope, member : javax.lang.model.element.Element, type : javax.lang.model.type.DeclaredType) : Bool;
 	
 	/**
 	* Gets the original type from the ErrorType object.
 	* @param errorType The errorType for which we want to get the original type.
 	* @return javax.lang.model.type.TypeMirror corresponding to the original type, replaced by the ErrorType.
 	*/
-	@:overload @:abstract public function getOriginalType(errorType : javax.lang.model.type.ErrorType) : javax.lang.model.type.TypeMirror;
+	@:overload @:public @:abstract public function getOriginalType(errorType : javax.lang.model.type.ErrorType) : javax.lang.model.type.TypeMirror;
 	
 	/**
 	* Prints a message of the specified kind at the location of the
@@ -159,14 +159,14 @@ extern class Trees
 	* @param t    the tree to use as a position hint
 	* @param root the compilation unit that contains tree
 	*/
-	@:overload @:abstract public function printMessage(kind : javax.tools.Diagnostic.Diagnostic_Kind, msg : java.lang.CharSequence, t : com.sun.source.tree.Tree, root : com.sun.source.tree.CompilationUnitTree) : Void;
+	@:overload @:public @:abstract public function printMessage(kind : javax.tools.Diagnostic.Diagnostic_Kind, msg : java.lang.CharSequence, t : com.sun.source.tree.Tree, root : com.sun.source.tree.CompilationUnitTree) : Void;
 	
 	/**
 	* Gets the lub of an exception parameter declared in a catch clause.
 	* @param tree the tree for the catch clause
 	* @return The lub of the exception parameter
 	*/
-	@:overload @:abstract public function getLub(tree : com.sun.source.tree.CatchTree) : javax.lang.model.type.TypeMirror;
+	@:overload @:public @:abstract public function getLub(tree : com.sun.source.tree.CatchTree) : javax.lang.model.type.TypeMirror;
 	
 	
 }

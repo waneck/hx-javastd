@@ -27,11 +27,11 @@ package com.sun.xml.internal.org.jvnet.fastinfoset;
 */
 extern class EncodingAlgorithmException extends com.sun.xml.internal.org.jvnet.fastinfoset.FastInfosetException
 {
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
-	@:overload public function new(message : String, e : java.lang.Exception) : Void;
+	@:overload @:public public function new(message : String, e : java.lang.Exception) : Void;
 	
-	@:overload public function new(e : java.lang.Exception) : Void;
+	@:overload @:public public function new(e : java.lang.Exception) : Void;
 	
 	
 }

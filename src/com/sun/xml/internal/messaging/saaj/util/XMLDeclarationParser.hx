@@ -25,15 +25,15 @@ package com.sun.xml.internal.messaging.saaj.util;
 */
 extern class XMLDeclarationParser
 {
-	@:overload public function new(pr : java.io.PushbackReader) : Void;
+	@:overload @:public public function new(pr : java.io.PushbackReader) : Void;
 	
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
-	@:overload public function getXmlDeclaration() : String;
+	@:overload @:public public function getXmlDeclaration() : String;
 	
-	@:overload public function parse() : Void;
+	@:overload @:public public function parse() : Void;
 	
-	@:overload public function writeTo(wr : java.io.Writer) : Void;
+	@:overload @:public public function writeTo(wr : java.io.Writer) : Void;
 	
 	
 }

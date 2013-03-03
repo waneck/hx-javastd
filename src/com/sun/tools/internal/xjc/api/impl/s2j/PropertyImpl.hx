@@ -28,20 +28,20 @@ extern class PropertyImpl implements com.sun.tools.internal.xjc.api.Property
 	/**
 	* @author Kohsuke Kawaguchi
 	*/
-	private var fr(default, null) : com.sun.tools.internal.xjc.outline.FieldOutline;
+	@:protected @:final private var fr(default, null) : com.sun.tools.internal.xjc.outline.FieldOutline;
 	
-	private var parent(default, null) : com.sun.tools.internal.xjc.api.Mapping;
+	@:protected @:final private var parent(default, null) : com.sun.tools.internal.xjc.api.Mapping;
 	
-	private var codeModel(default, null) : com.sun.codemodel.internal.JCodeModel;
+	@:protected @:final private var codeModel(default, null) : com.sun.codemodel.internal.JCodeModel;
 	
-	@:overload @:final public function name() : String;
+	@:overload @:public @:final public function name() : String;
 	
 	/** Returns raw schema name for simpleType property. May return null for other types. */
-	@:overload @:final public function rawName() : javax.xml.namespace.QName;
+	@:overload @:public @:final public function rawName() : javax.xml.namespace.QName;
 	
-	@:overload @:final public function elementName() : javax.xml.namespace.QName;
+	@:overload @:public @:final public function elementName() : javax.xml.namespace.QName;
 	
-	@:overload @:final public function type() : com.sun.codemodel.internal.JType;
+	@:overload @:public @:final public function type() : com.sun.codemodel.internal.JType;
 	
 	
 }

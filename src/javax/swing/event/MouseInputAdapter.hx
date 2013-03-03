@@ -28,18 +28,18 @@ extern class MouseInputAdapter extends java.awt.event.MouseAdapter implements ja
 	/**
 	* Invoked when a mouse button has been pressed on a component.
 	*/
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse cursor has been moved onto a component
 	* but no buttons have been pushed.
 	*/
-	@:overload @:public override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:public override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse exits a component.
 	*/
-	@:overload override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:public override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when a mouse button is pressed on a component and then
@@ -52,23 +52,23 @@ extern class MouseInputAdapter extends java.awt.event.MouseAdapter implements ja
 	* <code>MOUSE_DRAGGED</code> events may not be delivered during a native
 	* Drag&Drop operation.
 	*/
-	@:overload @:public override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:public override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse button has been clicked (pressed
 	* and released) on a component.
 	*/
-	@:overload override public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:public override public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when a mouse button has been released on a component.
 	*/
-	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:public override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse enters a component.
 	*/
-	@:overload override public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:public override public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

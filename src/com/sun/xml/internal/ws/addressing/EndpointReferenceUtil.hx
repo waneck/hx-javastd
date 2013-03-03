@@ -29,7 +29,7 @@ extern class EndpointReferenceUtil
 	* Gives the EPR based on the clazz. It may need to perform tranformation from
 	* W3C EPR to MS EPR or vise-versa.
 	*/
-	@:overload public static function transform<T : javax.xml.ws.EndpointReference>(clazz : Class<T>, epr : javax.xml.ws.EndpointReference) : T;
+	@:overload @:public @:static public static function transform<T : javax.xml.ws.EndpointReference>(clazz : Class<T>, epr : javax.xml.ws.EndpointReference) : T;
 	
 	
 }

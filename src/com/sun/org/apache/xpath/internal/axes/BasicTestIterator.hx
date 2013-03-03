@@ -29,7 +29,7 @@ extern class BasicTestIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	* @param nscontext The namespace context for this iterator,
 	* should be OK if null.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Create a LocPathIterator object.
@@ -37,7 +37,7 @@ extern class BasicTestIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	* @param nscontext The namespace context for this iterator,
 	* should be OK if null.
 	*/
-	@:overload private function new(nscontext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
+	@:overload @:protected private function new(nscontext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
 	
 	/**
 	* Create a LocPathIterator object, including creation
@@ -51,7 +51,7 @@ extern class BasicTestIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function new(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int, analysis : Int) : Void;
+	@:overload @:protected private function new(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int, analysis : Int) : Void;
 	
 	/**
 	* Create a LocPathIterator object, including creation
@@ -68,13 +68,13 @@ extern class BasicTestIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function new(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int, analysis : Int, shouldLoadWalkers : Bool) : Void;
+	@:overload @:protected private function new(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int, analysis : Int, shouldLoadWalkers : Bool) : Void;
 	
 	/**
 	* Get the next node via getNextXXX.  Bottlenecked for derived class override.
 	* @return The next node on the axis, or DTM.NULL.
 	*/
-	@:overload @:abstract private function getNextNode() : Int;
+	@:overload @:protected @:abstract private function getNextNode() : Int;
 	
 	/**
 	*  Returns the next node in the set and advances the position of the
@@ -84,7 +84,7 @@ extern class BasicTestIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	* @return  The next <code>Node</code> in the set being iterated over, or
 	*   <code>null</code> if there are no more members in that set.
 	*/
-	@:overload override public function nextNode() : Int;
+	@:overload @:public override public function nextNode() : Int;
 	
 	/**
 	*  Get a cloned Iterator that is reset to the beginning
@@ -94,7 +94,7 @@ extern class BasicTestIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	*
 	*  @throws CloneNotSupportedException
 	*/
-	@:overload override public function cloneWithReset() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public override public function cloneWithReset() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	
 }

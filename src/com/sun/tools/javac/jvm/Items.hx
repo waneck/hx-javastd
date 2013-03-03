@@ -39,7 +39,7 @@ package com.sun.tools.javac.jvm;
 */
 extern class Items
 {
-	@:overload public function new(pool : com.sun.tools.javac.jvm.Pool, code : com.sun.tools.javac.jvm.Code, syms : com.sun.tools.javac.code.Symtab, types : com.sun.tools.javac.code.Types) : Void;
+	@:overload @:public public function new(pool : com.sun.tools.javac.jvm.Pool, code : com.sun.tools.javac.jvm.Code, syms : com.sun.tools.javac.code.Symtab, types : com.sun.tools.javac.code.Types) : Void;
 	
 	
 }
@@ -47,7 +47,7 @@ extern class Items
 */
 @:native('com$sun$tools$javac$jvm$Items$Item') @:internal extern class Items_Item
 {
-	@:overload @:abstract public function toString() : String;
+	@:overload @:public @:abstract public function toString() : String;
 	
 	
 }
@@ -55,7 +55,7 @@ extern class Items
 */
 @:native('com$sun$tools$javac$jvm$Items$StackItem') @:internal extern class Items_StackItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -63,7 +63,7 @@ extern class Items
 */
 @:native('com$sun$tools$javac$jvm$Items$IndexedItem') @:internal extern class Items_IndexedItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -71,7 +71,7 @@ extern class Items
 */
 @:native('com$sun$tools$javac$jvm$Items$SelfItem') @:internal extern class Items_SelfItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -79,7 +79,7 @@ extern class Items
 */
 @:native('com$sun$tools$javac$jvm$Items$LocalItem') @:internal extern class Items_LocalItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -87,7 +87,7 @@ extern class Items
 */
 @:native('com$sun$tools$javac$jvm$Items$StaticItem') @:internal extern class Items_StaticItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -95,7 +95,7 @@ extern class Items
 */
 @:native('com$sun$tools$javac$jvm$Items$MemberItem') @:internal extern class Items_MemberItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -103,7 +103,7 @@ extern class Items
 */
 @:native('com$sun$tools$javac$jvm$Items$ImmediateItem') @:internal extern class Items_ImmediateItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -111,7 +111,7 @@ extern class Items
 */
 @:native('com$sun$tools$javac$jvm$Items$AssignItem') @:internal extern class Items_AssignItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -119,7 +119,7 @@ extern class Items
 */
 @:native('com$sun$tools$javac$jvm$Items$CondItem') @:internal extern class Items_CondItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

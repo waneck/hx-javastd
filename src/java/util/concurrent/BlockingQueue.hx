@@ -176,7 +176,7 @@ extern interface BlockingQueue<E> extends java.util.Queue<E>
 	* @throws NullPointerException if the specified element is null
 	*         (<a href="../Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Removes all available elements from this queue and adds them

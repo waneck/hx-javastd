@@ -35,28 +35,28 @@ package javax.management;
 	/**
 	* Basic Constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new BetweenQueryExp with v1 checked value, v2 lower bound
 	* and v3 upper bound values.
 	*/
-	@:overload public function new(v1 : javax.management.ValueExp, v2 : javax.management.ValueExp, v3 : javax.management.ValueExp) : Void;
+	@:overload @:public public function new(v1 : javax.management.ValueExp, v2 : javax.management.ValueExp, v3 : javax.management.ValueExp) : Void;
 	
 	/**
 	* Returns the checked value of the query.
 	*/
-	@:overload public function getCheckedValue() : javax.management.ValueExp;
+	@:overload @:public public function getCheckedValue() : javax.management.ValueExp;
 	
 	/**
 	* Returns the lower bound value of the query.
 	*/
-	@:overload public function getLowerBound() : javax.management.ValueExp;
+	@:overload @:public public function getLowerBound() : javax.management.ValueExp;
 	
 	/**
 	* Returns the upper bound value of the query.
 	*/
-	@:overload public function getUpperBound() : javax.management.ValueExp;
+	@:overload @:public public function getUpperBound() : javax.management.ValueExp;
 	
 	/**
 	* Applies the BetweenQueryExp on an MBean.
@@ -70,12 +70,12 @@ package javax.management;
 	* @exception BadAttributeValueExpException
 	* @exception InvalidApplicationException
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function apply(name : javax.management.ObjectName) : Bool;
 	
 	/**
 	* Returns the string representing the object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

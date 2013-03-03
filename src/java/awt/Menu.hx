@@ -33,7 +33,7 @@ extern class Menu extends java.awt.MenuItem implements java.awt.MenuContainer im
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function new() : Void;
+	@:require(java1) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new menu with the specified label. This menu is not
@@ -44,7 +44,7 @@ extern class Menu extends java.awt.MenuItem implements java.awt.MenuContainer im
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(label : String) : Void;
+	@:overload @:public public function new(label : String) : Void;
 	
 	/**
 	* Constructs a new menu with the specified label,
@@ -62,19 +62,19 @@ extern class Menu extends java.awt.MenuItem implements java.awt.MenuContainer im
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since       JDK1.0.
 	*/
-	@:require(java0) @:overload public function new(label : String, tearOff : Bool) : Void;
+	@:require(java0) @:overload @:public public function new(label : String, tearOff : Bool) : Void;
 	
 	/**
 	* Creates the menu's peer.  The peer allows us to modify the
 	* appearance of the menu without changing its functionality.
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Removes the menu's peer.  The peer allows us to modify the appearance
 	* of the menu without changing its functionality.
 	*/
-	@:overload override public function removeNotify() : Void;
+	@:overload @:public override public function removeNotify() : Void;
 	
 	/**
 	* Indicates whether this menu is a tear-off menu.
@@ -85,27 +85,27 @@ extern class Menu extends java.awt.MenuItem implements java.awt.MenuContainer im
 	* @return      <code>true</code> if this is a tear-off menu;
 	*                         <code>false</code> otherwise.
 	*/
-	@:overload public function isTearOff() : Bool;
+	@:overload @:public public function isTearOff() : Bool;
 	
 	/**
 	* Get the number of items in this menu.
 	* @return     the number of items in this menu.
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getItemCount() : Int;
+	@:require(java1) @:overload @:public public function getItemCount() : Int;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getItemCount()</code>.
 	*/
-	@:overload public function countItems() : Int;
+	@:overload @:public public function countItems() : Int;
 	
 	/**
 	* Gets the item located at the specified index of this menu.
 	* @param     index the position of the item to be returned.
 	* @return    the item located at the specified index.
 	*/
-	@:overload public function getItem(index : Int) : java.awt.MenuItem;
+	@:overload @:public public function getItem(index : Int) : java.awt.MenuItem;
 	
 	/**
 	* Adds the specified menu item to this menu. If the
@@ -117,7 +117,7 @@ extern class Menu extends java.awt.MenuItem implements java.awt.MenuContainer im
 	* @see         java.awt.Menu#insert(java.lang.String, int)
 	* @see         java.awt.Menu#insert(java.awt.MenuItem, int)
 	*/
-	@:overload public function add(mi : java.awt.MenuItem) : java.awt.MenuItem;
+	@:overload @:public public function add(mi : java.awt.MenuItem) : java.awt.MenuItem;
 	
 	/**
 	* Adds an item with the specified label to this menu.
@@ -126,7 +126,7 @@ extern class Menu extends java.awt.MenuItem implements java.awt.MenuContainer im
 	* @see         java.awt.Menu#insert(java.lang.String, int)
 	* @see         java.awt.Menu#insert(java.awt.MenuItem, int)
 	*/
-	@:overload public function add(label : String) : Void;
+	@:overload @:public public function add(label : String) : Void;
 	
 	/**
 	* Inserts a menu item into this menu
@@ -141,7 +141,7 @@ extern class Menu extends java.awt.MenuItem implements java.awt.MenuContainer im
 	*                    <code>index</code> is less than zero
 	* @since         JDK1.1
 	*/
-	@:require(java1) @:overload public function insert(menuitem : java.awt.MenuItem, index : Int) : Void;
+	@:require(java1) @:overload @:public public function insert(menuitem : java.awt.MenuItem, index : Int) : Void;
 	
 	/**
 	* Inserts a menu item with the specified label into this menu
@@ -157,13 +157,13 @@ extern class Menu extends java.awt.MenuItem implements java.awt.MenuContainer im
 	*                    <code>index</code> is less than zero
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function insert(label : String, index : Int) : Void;
+	@:require(java1) @:overload @:public public function insert(label : String, index : Int) : Void;
 	
 	/**
 	* Adds a separator line, or a hypen, to the menu at the current position.
 	* @see         java.awt.Menu#insertSeparator(int)
 	*/
-	@:overload public function addSeparator() : Void;
+	@:overload @:public public function addSeparator() : Void;
 	
 	/**
 	* Inserts a separator at the specified position.
@@ -174,13 +174,13 @@ extern class Menu extends java.awt.MenuItem implements java.awt.MenuContainer im
 	* @see         java.awt.Menu#addSeparator
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function insertSeparator(index : Int) : Void;
+	@:require(java1) @:overload @:public public function insertSeparator(index : Int) : Void;
 	
 	/**
 	* Removes the menu item at the specified index from this menu.
 	* @param       index the position of the item to be removed.
 	*/
-	@:overload public function remove(index : Int) : Void;
+	@:overload @:public public function remove(index : Int) : Void;
 	
 	/**
 	* Removes the specified menu item from this menu.
@@ -189,13 +189,13 @@ extern class Menu extends java.awt.MenuItem implements java.awt.MenuContainer im
 	*         or is not in this menu, this method does
 	*         nothing.
 	*/
-	@:overload public function remove(item : java.awt.MenuComponent) : Void;
+	@:overload @:public public function remove(item : java.awt.MenuComponent) : Void;
 	
 	/**
 	* Removes all items from this menu.
 	* @since       JDK1.0.
 	*/
-	@:require(java0) @:overload public function removeAll() : Void;
+	@:require(java0) @:overload @:public public function removeAll() : Void;
 	
 	/**
 	* Returns a string representing the state of this <code>Menu</code>.
@@ -206,7 +206,7 @@ extern class Menu extends java.awt.MenuItem implements java.awt.MenuContainer im
 	*
 	* @return the parameter string of this menu
 	*/
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this Menu.
@@ -218,7 +218,7 @@ extern class Menu extends java.awt.MenuItem implements java.awt.MenuContainer im
 	*         AccessibleContext of this Menu
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -241,7 +241,7 @@ extern class Menu extends java.awt.MenuItem implements java.awt.MenuContainer im
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

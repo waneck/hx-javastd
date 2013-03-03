@@ -31,7 +31,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*
 	* @see Group
 	*/
-	public static var DEFAULT_SIZE(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_SIZE(default, null) : Int;
 	
 	/**
 	* Indicates the preferred size from the component or gap should
@@ -39,7 +39,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*
 	* @see Group
 	*/
-	public static var PREFERRED_SIZE(default, null) : Int;
+	@:public @:static @:final public static var PREFERRED_SIZE(default, null) : Int;
 	
 	/**
 	* Creates a {@code GroupLayout} for the specified {@code Container}.
@@ -48,7 +48,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*        the {@code LayoutManager} for
 	* @throws IllegalArgumentException if host is {@code null}
 	*/
-	@:overload public function new(host : java.awt.Container) : Void;
+	@:overload @:public public function new(host : java.awt.Container) : Void;
 	
 	/**
 	* Sets whether component visiblity is considered when sizing and
@@ -70,7 +70,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*                         sizing and positioning components
 	* @see #setHonorsVisibility(Component,Boolean)
 	*/
-	@:overload public function setHonorsVisibility(honorsVisibility : Bool) : Void;
+	@:overload @:public public function setHonorsVisibility(honorsVisibility : Bool) : Void;
 	
 	/**
 	* Returns whether component visiblity is considered when sizing and
@@ -79,7 +79,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @return whether component visiblity is considered when sizing and
 	*         positioning components
 	*/
-	@:overload public function getHonorsVisibility() : Bool;
+	@:overload @:public public function getHonorsVisibility() : Bool;
 	
 	/**
 	* Sets whether the component's visiblity is considered for
@@ -101,7 +101,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @throws IllegalArgumentException if {@code component} is {@code null}
 	* @see #setHonorsVisibility(Component,Boolean)
 	*/
-	@:overload public function setHonorsVisibility(component : java.awt.Component, honorsVisibility : Null<Bool>) : Void;
+	@:overload @:public public function setHonorsVisibility(component : java.awt.Component, honorsVisibility : Null<Bool>) : Void;
 	
 	/**
 	* Sets whether a gap between components should automatically be
@@ -113,7 +113,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @param autoCreatePadding whether a gap between components is
 	*        automatically created
 	*/
-	@:overload public function setAutoCreateGaps(autoCreatePadding : Bool) : Void;
+	@:overload @:public public function setAutoCreateGaps(autoCreatePadding : Bool) : Void;
 	
 	/**
 	* Returns {@code true} if gaps between components are automatically
@@ -122,7 +122,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @return {@code true} if gaps between components are automatically
 	*         created
 	*/
-	@:overload public function getAutoCreateGaps() : Bool;
+	@:overload @:public public function getAutoCreateGaps() : Bool;
 	
 	/**
 	* Sets whether a gap between the container and components that
@@ -133,7 +133,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*        components that touch the border of the container should
 	*        automatically be created
 	*/
-	@:overload public function setAutoCreateContainerGaps(autoCreateContainerPadding : Bool) : Void;
+	@:overload @:public public function setAutoCreateContainerGaps(autoCreateContainerPadding : Bool) : Void;
 	
 	/**
 	* Returns {@code true} if gaps between the container and components that
@@ -142,7 +142,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @return {@code true} if gaps between the container and components that
 	*         border the container are automatically created
 	*/
-	@:overload public function getAutoCreateContainerGaps() : Bool;
+	@:overload @:public public function getAutoCreateContainerGaps() : Bool;
 	
 	/**
 	* Sets the {@code Group} that positions and sizes
@@ -152,7 +152,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*        components along the horizontal axis
 	* @throws IllegalArgumentException if group is {@code null}
 	*/
-	@:overload public function setHorizontalGroup(group : javax.swing.GroupLayout.GroupLayout_Group) : Void;
+	@:overload @:public public function setHorizontalGroup(group : javax.swing.GroupLayout.GroupLayout_Group) : Void;
 	
 	/**
 	* Sets the {@code Group} that positions and sizes
@@ -162,14 +162,14 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*        components along the vertical axis
 	* @throws IllegalArgumentException if group is {@code null}
 	*/
-	@:overload public function setVerticalGroup(group : javax.swing.GroupLayout.GroupLayout_Group) : Void;
+	@:overload @:public public function setVerticalGroup(group : javax.swing.GroupLayout.GroupLayout_Group) : Void;
 	
 	/**
 	* Creates and returns a {@code SequentialGroup}.
 	*
 	* @return a new {@code SequentialGroup}
 	*/
-	@:overload public function createSequentialGroup() : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
+	@:overload @:public public function createSequentialGroup() : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Creates and returns a {@code ParallelGroup} with an alignment of
@@ -179,7 +179,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @return a new {@code ParallelGroup}
 	* @see #createParallelGroup(Alignment)
 	*/
-	@:overload public function createParallelGroup() : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
+	@:overload @:public public function createParallelGroup() : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* Creates and returns a {@code ParallelGroup} with the specified
@@ -193,7 +193,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @see #createBaselineGroup
 	* @see ParallelGroup
 	*/
-	@:overload public function createParallelGroup(alignment : javax.swing.GroupLayout.GroupLayout_Alignment) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
+	@:overload @:public public function createParallelGroup(alignment : javax.swing.GroupLayout.GroupLayout_Alignment) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* Creates and returns a {@code ParallelGroup} with the specified
@@ -221,7 +221,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @see #createBaselineGroup
 	* @see GroupLayout.ParallelGroup
 	*/
-	@:overload public function createParallelGroup(alignment : javax.swing.GroupLayout.GroupLayout_Alignment, resizable : Bool) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
+	@:overload @:public public function createParallelGroup(alignment : javax.swing.GroupLayout.GroupLayout_Alignment, resizable : Bool) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* Creates and returns a {@code ParallelGroup} that aligns it's
@@ -233,7 +233,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @see #createBaselineGroup
 	* @see ParallelGroup
 	*/
-	@:overload public function createBaselineGroup(resizable : Bool, anchorBaselineToTop : Bool) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
+	@:overload @:public public function createBaselineGroup(resizable : Bool, anchorBaselineToTop : Bool) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* Forces the specified components to have the same size
@@ -252,7 +252,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         {@code null}, or contains {@code null}
 	* @see #linkSize(int,Component[])
 	*/
-	@:overload public function linkSize(components : java.NativeArray<java.awt.Component>) : Void;
+	@:overload @:public public function linkSize(components : java.NativeArray<java.awt.Component>) : Void;
 	
 	/**
 	* Forces the specified components to have the same size along the
@@ -277,7 +277,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*          is not {@code SwingConstants.HORIZONTAL} or
 	*          {@code SwingConstants.VERTICAL}
 	*/
-	@:overload public function linkSize(axis : Int, components : java.NativeArray<java.awt.Component>) : Void;
+	@:overload @:public public function linkSize(axis : Int, components : java.NativeArray<java.awt.Component>) : Void;
 	
 	/**
 	* Replaces an existing component with a new one.
@@ -290,7 +290,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         {@code null} or {@code existingComponent} is not being managed
 	*         by this layout manager
 	*/
-	@:overload public function replace(existingComponent : java.awt.Component, newComponent : java.awt.Component) : Void;
+	@:overload @:public public function replace(existingComponent : java.awt.Component, newComponent : java.awt.Component) : Void;
 	
 	/**
 	* Sets the {@code LayoutStyle} used to calculate the preferred
@@ -300,7 +300,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @param layoutStyle the {@code LayoutStyle} to use
 	* @see LayoutStyle
 	*/
-	@:overload public function setLayoutStyle(layoutStyle : javax.swing.LayoutStyle) : Void;
+	@:overload @:public public function setLayoutStyle(layoutStyle : javax.swing.LayoutStyle) : Void;
 	
 	/**
 	* Returns the {@code LayoutStyle} used for calculating the preferred
@@ -310,7 +310,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @return the {@code LayoutStyle} used for calculating the preferred
 	*         gap between components
 	*/
-	@:overload public function getLayoutStyle() : javax.swing.LayoutStyle;
+	@:overload @:public public function getLayoutStyle() : javax.swing.LayoutStyle;
 	
 	/**
 	* Notification that a {@code Component} has been added to
@@ -321,7 +321,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @param name the string to be associated with the component
 	* @param component the {@code Component} to be added
 	*/
-	@:overload public function addLayoutComponent(name : String, component : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, component : java.awt.Component) : Void;
 	
 	/**
 	* Notification that a {@code Component} has been removed from
@@ -332,7 +332,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @param component the component to be removed
 	* @see java.awt.Component#remove
 	*/
-	@:overload public function removeLayoutComponent(component : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(component : java.awt.Component) : Void;
 	
 	/**
 	* Returns the preferred size for the specified container.
@@ -345,7 +345,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         this layout are not in both a horizontal and vertical group
 	* @see java.awt.Container#getPreferredSize
 	*/
-	@:overload public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the minimum size for the specified container.
@@ -358,7 +358,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         this layout are not in both a horizontal and vertical group
 	* @see java.awt.Container#getMinimumSize
 	*/
-	@:overload public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Lays out the specified container.
@@ -367,7 +367,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @throws IllegalStateException if any of the components added to
 	*         this layout are not in both a horizontal and vertical group
 	*/
-	@:overload public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(parent : java.awt.Container) : Void;
 	
 	/**
 	* Notification that a {@code Component} has been added to
@@ -378,7 +378,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @param component the component added
 	* @param constraints description of where to place the component
 	*/
-	@:overload public function addLayoutComponent(component : java.awt.Component, constraints : Dynamic) : Void;
+	@:overload @:public public function addLayoutComponent(component : java.awt.Component, constraints : Dynamic) : Void;
 	
 	/**
 	* Returns the maximum size for the specified container.
@@ -391,7 +391,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         this layout are not in both a horizontal and vertical group
 	* @see java.awt.Container#getMaximumSize
 	*/
-	@:overload public function maximumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function maximumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the alignment along the x axis.  This specifies how
@@ -405,7 +405,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         the same {@code Container} that this was created with
 	* @return the alignment; this implementation returns {@code .5}
 	*/
-	@:overload public function getLayoutAlignmentX(parent : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentX(parent : java.awt.Container) : Single;
 	
 	/**
 	* Returns the alignment along the y axis.  This specifies how
@@ -419,7 +419,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         the same {@code Container} that this was created with
 	* @return alignment; this implementation returns {@code .5}
 	*/
-	@:overload public function getLayoutAlignmentY(parent : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentY(parent : java.awt.Container) : Single;
 	
 	/**
 	* Invalidates the layout, indicating that if the layout manager
@@ -429,7 +429,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @throws IllegalArgumentException if {@code parent} is not
 	*         the same {@code Container} that this was created with
 	*/
-	@:overload public function invalidateLayout(parent : java.awt.Container) : Void;
+	@:overload @:public public function invalidateLayout(parent : java.awt.Container) : Void;
 	
 	/**
 	* Returns a string representation of this {@code GroupLayout}.
@@ -439,7 +439,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*
 	* @return a string representation of this {@code GroupLayout}
 	**/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -562,7 +562,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @param group the {@code Group} to add
 	* @return this {@code Group}
 	*/
-	@:overload public function addGroup(group : javax.swing.GroupLayout.GroupLayout_Group) : javax.swing.GroupLayout.GroupLayout_Group;
+	@:overload @:public public function addGroup(group : javax.swing.GroupLayout.GroupLayout_Group) : javax.swing.GroupLayout.GroupLayout_Group;
 	
 	/**
 	* Adds a {@code Component} to this {@code Group}.
@@ -570,7 +570,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @param component the {@code Component} to add
 	* @return this {@code Group}
 	*/
-	@:overload public function addComponent(component : java.awt.Component) : javax.swing.GroupLayout.GroupLayout_Group;
+	@:overload @:public public function addComponent(component : java.awt.Component) : javax.swing.GroupLayout.GroupLayout_Group;
 	
 	/**
 	* Adds a {@code Component} to this {@code Group}
@@ -585,7 +585,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*            {@code PREFERRED_SIZE}
 	* @return this {@code Group}
 	*/
-	@:overload public function addComponent(component : java.awt.Component, min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_Group;
+	@:overload @:public public function addComponent(component : java.awt.Component, min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_Group;
 	
 	/**
 	* Adds a rigid gap to this {@code Group}.
@@ -595,7 +595,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @throws IllegalArgumentException if {@code size} is less than
 	*         {@code 0}
 	*/
-	@:overload public function addGap(size : Int) : javax.swing.GroupLayout.GroupLayout_Group;
+	@:overload @:public public function addGap(size : Int) : javax.swing.GroupLayout.GroupLayout_Group;
 	
 	/**
 	* Adds a gap to this {@code Group} with the specified size.
@@ -607,7 +607,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         less than {@code 0}
 	* @return this {@code Group}
 	*/
-	@:overload public function addGap(min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_Group;
+	@:overload @:public public function addGap(min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_Group;
 	
 	
 }
@@ -634,7 +634,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addGroup(group : javax.swing.GroupLayout.GroupLayout_Group) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
+	@:overload @:public override public function addGroup(group : javax.swing.GroupLayout.GroupLayout_Group) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds a {@code Group} to this {@code Group}.
@@ -644,12 +644,12 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*        be used to calculate the baseline for this {@code Group}
 	* @return this {@code Group}
 	*/
-	@:overload public function addGroup(useAsBaseline : Bool, group : javax.swing.GroupLayout.GroupLayout_Group) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
+	@:overload @:public public function addGroup(useAsBaseline : Bool, group : javax.swing.GroupLayout.GroupLayout_Group) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addComponent(component : java.awt.Component) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
+	@:overload @:public override public function addComponent(component : java.awt.Component) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds a {@code Component} to this {@code Group}.
@@ -659,12 +659,12 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @param component the {@code Component} to add
 	* @return this {@code Group}
 	*/
-	@:overload public function addComponent(useAsBaseline : Bool, component : java.awt.Component) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
+	@:overload @:public public function addComponent(useAsBaseline : Bool, component : java.awt.Component) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addComponent(component : java.awt.Component, min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
+	@:overload @:public override public function addComponent(component : java.awt.Component, min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds a {@code Component} to this {@code Group}
@@ -681,17 +681,17 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*            {@code PREFERRED_SIZE}
 	* @return this {@code Group}
 	*/
-	@:overload public function addComponent(useAsBaseline : Bool, component : java.awt.Component, min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
+	@:overload @:public public function addComponent(useAsBaseline : Bool, component : java.awt.Component, min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addGap(size : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
+	@:overload @:public override public function addGap(size : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addGap(min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
+	@:overload @:public override public function addGap(min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds an element representing the preferred gap between two
@@ -707,7 +707,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         {@code comp2} is {@code null}
 	* @see LayoutStyle
 	*/
-	@:overload public function addPreferredGap(comp1 : javax.swing.JComponent, comp2 : javax.swing.JComponent, type : ComponentPlacement) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
+	@:overload @:public public function addPreferredGap(comp1 : javax.swing.JComponent, comp2 : javax.swing.JComponent, type : ComponentPlacement) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds an element representing the preferred gap between two
@@ -726,7 +726,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         {@code comp2} is {@code null}
 	* @see LayoutStyle
 	*/
-	@:overload public function addPreferredGap(comp1 : javax.swing.JComponent, comp2 : javax.swing.JComponent, type : ComponentPlacement, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
+	@:overload @:public public function addPreferredGap(comp1 : javax.swing.JComponent, comp2 : javax.swing.JComponent, type : ComponentPlacement, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds an element representing the preferred gap between the
@@ -747,7 +747,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         {@code LayoutStyle.ComponentPlacement.RELATED} or
 	*         {@code LayoutStyle.ComponentPlacement.UNRELATED}
 	*/
-	@:overload public function addPreferredGap(type : ComponentPlacement) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
+	@:overload @:public public function addPreferredGap(type : ComponentPlacement) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds an element representing the preferred gap between the
@@ -771,7 +771,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         {@code LayoutStyle.ComponentPlacement.UNRELATED}
 	* @see LayoutStyle
 	*/
-	@:overload public function addPreferredGap(type : ComponentPlacement, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
+	@:overload @:public public function addPreferredGap(type : ComponentPlacement, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds an element representing the preferred gap between an edge
@@ -784,7 +784,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*
 	* @return this {@code SequentialGroup}
 	*/
-	@:overload public function addContainerGap() : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
+	@:overload @:public public function addContainerGap() : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds an element representing the preferred gap between one
@@ -800,7 +800,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*        {@code PREFERRED_SIZE} or a value &gt;= 0
 	* @return this {@code SequentialGroup}
 	*/
-	@:overload public function addContainerGap(pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
+	@:overload @:public public function addContainerGap(pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	
 }
@@ -809,15 +809,15 @@ extern class GroupLayout implements java.awt.LayoutManager2
 */
 @:native('javax$swing$GroupLayout$SpringDelta') @:internal extern class GroupLayout_SpringDelta implements java.lang.Comparable<javax.swing.GroupLayout.GroupLayout_SpringDelta>
 {
-	public var index(default, null) : Int;
+	@:public @:final public var index(default, null) : Int;
 	
-	public var delta : Int;
+	@:public public var delta : Int;
 	
-	@:overload public function new(index : Int, delta : Int) : Void;
+	@:overload @:public public function new(index : Int, delta : Int) : Void;
 	
-	@:overload public function compareTo(o : javax.swing.GroupLayout.GroupLayout_SpringDelta) : Int;
+	@:overload @:public public function compareTo(o : javax.swing.GroupLayout.GroupLayout_SpringDelta) : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -908,27 +908,27 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addGroup(group : javax.swing.GroupLayout.GroupLayout_Group) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
+	@:overload @:public override public function addGroup(group : javax.swing.GroupLayout.GroupLayout_Group) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addComponent(component : java.awt.Component) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
+	@:overload @:public override public function addComponent(component : java.awt.Component) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addComponent(component : java.awt.Component, min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
+	@:overload @:public override public function addComponent(component : java.awt.Component, min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addGap(pref : Int) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
+	@:overload @:public override public function addGap(pref : Int) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addGap(min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
+	@:overload @:public override public function addGap(min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* Adds a {@code Group} to this {@code ParallelGroup} with the
@@ -942,7 +942,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @throws IllegalArgumentException if {@code alignment} is
 	*         {@code null}
 	*/
-	@:overload public function addGroup(alignment : javax.swing.GroupLayout.GroupLayout_Alignment, group : javax.swing.GroupLayout.GroupLayout_Group) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
+	@:overload @:public public function addGroup(alignment : javax.swing.GroupLayout.GroupLayout_Alignment, group : javax.swing.GroupLayout.GroupLayout_Group) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* Adds a {@code Component} to this {@code ParallelGroup} with
@@ -954,7 +954,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @throws IllegalArgumentException if {@code alignment} is
 	*         {@code null}
 	*/
-	@:overload public function addComponent(component : java.awt.Component, alignment : javax.swing.GroupLayout.GroupLayout_Alignment) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
+	@:overload @:public public function addComponent(component : java.awt.Component, alignment : javax.swing.GroupLayout.GroupLayout_Alignment) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* Adds a {@code Component} to this {@code ParallelGroup} with the
@@ -969,7 +969,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         {@code null}
 	* @return this {@code Group}
 	*/
-	@:overload public function addComponent(component : java.awt.Component, alignment : javax.swing.GroupLayout.GroupLayout_Alignment, min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
+	@:overload @:public public function addComponent(component : java.awt.Component, alignment : javax.swing.GroupLayout.GroupLayout_Alignment, min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	
 }
@@ -1007,21 +1007,21 @@ extern class GroupLayout implements java.awt.LayoutManager2
 */
 @:native('javax$swing$GroupLayout$AutoPreferredGapSpring') @:internal extern class GroupLayout_AutoPreferredGapSpring extends javax.swing.GroupLayout.GroupLayout_Spring
 {
-	@:overload public function setSource(source : javax.swing.GroupLayout.GroupLayout_ComponentSpring) : Void;
+	@:overload @:public public function setSource(source : javax.swing.GroupLayout.GroupLayout_ComponentSpring) : Void;
 	
-	@:overload public function setSources(sources : java.util.List<javax.swing.GroupLayout.GroupLayout_ComponentSpring>) : Void;
+	@:overload @:public public function setSources(sources : java.util.List<javax.swing.GroupLayout.GroupLayout_ComponentSpring>) : Void;
 	
-	@:overload public function setUserCreated(userCreated : Bool) : Void;
+	@:overload @:public public function setUserCreated(userCreated : Bool) : Void;
 	
-	@:overload public function getUserCreated() : Bool;
+	@:overload @:public public function getUserCreated() : Bool;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function calculatePadding(axis : Int) : Void;
+	@:overload @:public public function calculatePadding(axis : Int) : Void;
 	
-	@:overload public function addTarget(spring : javax.swing.GroupLayout.GroupLayout_ComponentSpring, axis : Int) : Void;
+	@:overload @:public public function addTarget(spring : javax.swing.GroupLayout.GroupLayout_ComponentSpring, axis : Int) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -1031,11 +1031,11 @@ extern class GroupLayout implements java.awt.LayoutManager2
 */
 @:native('javax$swing$GroupLayout$AutoPreferredGapMatch') @:internal extern class GroupLayout_AutoPreferredGapMatch
 {
-	public var source(default, null) : javax.swing.GroupLayout.GroupLayout_ComponentSpring;
+	@:public @:final public var source(default, null) : javax.swing.GroupLayout.GroupLayout_ComponentSpring;
 	
-	public var target(default, null) : javax.swing.GroupLayout.GroupLayout_ComponentSpring;
+	@:public @:final public var target(default, null) : javax.swing.GroupLayout.GroupLayout_ComponentSpring;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -1044,21 +1044,21 @@ extern class GroupLayout implements java.awt.LayoutManager2
 */
 @:native('javax$swing$GroupLayout$ContainerAutoPreferredGapSpring') @:internal extern class GroupLayout_ContainerAutoPreferredGapSpring extends javax.swing.GroupLayout.GroupLayout_AutoPreferredGapSpring
 {
-	@:overload override public function addTarget(spring : javax.swing.GroupLayout.GroupLayout_ComponentSpring, axis : Int) : Void;
+	@:overload @:public override public function addTarget(spring : javax.swing.GroupLayout.GroupLayout_ComponentSpring, axis : Int) : Void;
 	
-	@:overload override public function calculatePadding(axis : Int) : Void;
+	@:overload @:public override public function calculatePadding(axis : Int) : Void;
 	
 	
 }
 @:native('javax$swing$GroupLayout$LinkInfo') @:internal extern class GroupLayout_LinkInfo
 {
-	@:overload public function add(child : javax.swing.GroupLayout.GroupLayout_ComponentInfo) : Void;
+	@:overload @:public public function add(child : javax.swing.GroupLayout.GroupLayout_ComponentInfo) : Void;
 	
-	@:overload public function remove(info : javax.swing.GroupLayout.GroupLayout_ComponentInfo) : Void;
+	@:overload @:public public function remove(info : javax.swing.GroupLayout.GroupLayout_ComponentInfo) : Void;
 	
-	@:overload public function clearCachedSize() : Void;
+	@:overload @:public public function clearCachedSize() : Void;
 	
-	@:overload public function getSize(axis : Int) : Int;
+	@:overload @:public public function getSize(axis : Int) : Int;
 	
 	
 }
@@ -1069,25 +1069,25 @@ extern class GroupLayout implements java.awt.LayoutManager2
 */
 @:native('javax$swing$GroupLayout$ComponentInfo') @:internal extern class GroupLayout_ComponentInfo
 {
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
-	@:overload public function setBounds(insets : java.awt.Insets, parentWidth : Int, ltr : Bool) : Void;
+	@:overload @:public public function setBounds(insets : java.awt.Insets, parentWidth : Int, ltr : Bool) : Void;
 	
-	@:overload public function setComponent(component : java.awt.Component) : Void;
+	@:overload @:public public function setComponent(component : java.awt.Component) : Void;
 	
-	@:overload public function getComponent() : java.awt.Component;
+	@:overload @:public public function getComponent() : java.awt.Component;
 	
 	/**
 	* Returns true if this component has its size linked to
 	* other components.
 	*/
-	@:overload public function isLinked(axis : Int) : Bool;
+	@:overload @:public public function isLinked(axis : Int) : Bool;
 	
-	@:overload public function getLinkInfo(axis : Int) : javax.swing.GroupLayout.GroupLayout_LinkInfo;
+	@:overload @:public public function getLinkInfo(axis : Int) : javax.swing.GroupLayout.GroupLayout_LinkInfo;
 	
-	@:overload public function clearCachedSize() : Void;
+	@:overload @:public public function clearCachedSize() : Void;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class Resolver implements org.xml.sax.EntityResolver
 	/**
 	* Constructs a resolver.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns an input source, using the MIME type information and URL
@@ -61,7 +61,7 @@ extern class Resolver implements org.xml.sax.EntityResolver
 	*                    default to US-ASCII.  Files are always autodetected since most
 	*                    file systems discard character encoding information.
 	*/
-	@:overload public static function createInputSource(contentType : String, stream : java.io.InputStream, checkType : Bool, scheme : String) : org.xml.sax.InputSource;
+	@:overload @:public @:static public static function createInputSource(contentType : String, stream : java.io.InputStream, checkType : Bool, scheme : String) : org.xml.sax.InputSource;
 	
 	/**
 	* Creates an input source from a given URI.
@@ -70,13 +70,13 @@ extern class Resolver implements org.xml.sax.EntityResolver
 	* @param checkType if true, the MIME content type for the entity
 	*                  is checked for document type and character set encoding.
 	*/
-	@:overload public static function createInputSource(uri : java.net.URL, checkType : Bool) : org.xml.sax.InputSource;
+	@:overload @:static @:public public static function createInputSource(uri : java.net.URL, checkType : Bool) : org.xml.sax.InputSource;
 	
 	/**
 	* Creates an input source from a given file, autodetecting
 	* the character encoding.
 	*/
-	@:overload public static function createInputSource(file : java.io.File) : org.xml.sax.InputSource;
+	@:overload @:static @:public public static function createInputSource(file : java.io.File) : org.xml.sax.InputSource;
 	
 	/**
 	* <b>SAX:</b>
@@ -96,14 +96,14 @@ extern class Resolver implements org.xml.sax.EntityResolver
 	* @param uri  Used when no alternate copy of the entity is found;
 	*             this is the XML "system ID", normally a URI.
 	*/
-	@:overload public function resolveEntity(name : String, uri : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(name : String, uri : String) : org.xml.sax.InputSource;
 	
 	/**
 	* Returns true if this resolver is ignoring MIME types in the documents
 	* it returns, to work around bugs in how servers have reported the
 	* documents' MIME types.
 	*/
-	@:overload public function isIgnoringMIME() : Bool;
+	@:overload @:public public function isIgnoringMIME() : Bool;
 	
 	/**
 	* Tells the resolver whether to ignore MIME types in the documents it
@@ -115,7 +115,7 @@ extern class Resolver implements org.xml.sax.EntityResolver
 	* include text encoding declarations (as most should do), these server
 	* bugs can be worked around by ignoring the MIME type entirely.
 	*/
-	@:overload public function setIgnoringMIME(value : Bool) : Void;
+	@:overload @:public public function setIgnoringMIME(value : Bool) : Void;
 	
 	/**
 	* Registers the given public ID as corresponding to a particular
@@ -127,7 +127,7 @@ extern class Resolver implements org.xml.sax.EntityResolver
 	* @param publicId The managed public ID being mapped
 	* @param uri      The URI of the preferred copy of that entity
 	*/
-	@:overload public function registerCatalogEntry(publicId : String, uri : String) : Void;
+	@:overload @:public public function registerCatalogEntry(publicId : String, uri : String) : Void;
 	
 	/**
 	* Registers a given public ID as corresponding to a particular Java
@@ -145,7 +145,7 @@ extern class Resolver implements org.xml.sax.EntityResolver
 	* @param loader       The class loader holding the resource, or null if
 	*                     it is a system resource.
 	*/
-	@:overload public function registerCatalogEntry(publicId : String, resourceName : String, loader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function registerCatalogEntry(publicId : String, resourceName : String, loader : java.lang.ClassLoader) : Void;
 	
 	
 }

@@ -43,42 +43,42 @@ extern class StandardTextSource extends sun.font.TextSource
 	* and lm is the line metrics for the entire source text, but not
 	* necessarily the context.
 	*/
-	@:overload public function new(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int, cstart : Int, clen : Int, level : Int, flags : Int, font : java.awt.Font, frc : java.awt.font.FontRenderContext, cm : sun.font.CoreMetrics) : Void;
+	@:overload @:public public function new(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int, cstart : Int, clen : Int, level : Int, flags : Int, font : java.awt.Font, frc : java.awt.font.FontRenderContext, cm : sun.font.CoreMetrics) : Void;
 	
 	/** Create a StandardTextSource whose context is coextensive with the source. */
-	@:overload public function new(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int, level : Int, flags : Int, font : java.awt.Font, frc : java.awt.font.FontRenderContext, cm : sun.font.CoreMetrics) : Void;
+	@:overload @:public public function new(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int, level : Int, flags : Int, font : java.awt.Font, frc : java.awt.font.FontRenderContext, cm : sun.font.CoreMetrics) : Void;
 	
 	/** Create a StandardTextSource whose context and source are coextensive with the entire char array. */
-	@:overload public function new(chars : java.NativeArray<java.StdTypes.Char16>, level : Int, flags : Int, font : java.awt.Font, frc : java.awt.font.FontRenderContext) : Void;
+	@:overload @:public public function new(chars : java.NativeArray<java.StdTypes.Char16>, level : Int, flags : Int, font : java.awt.Font, frc : java.awt.font.FontRenderContext) : Void;
 	
 	/** Create a StandardTextSource whose context and source are all the text in the String. */
-	@:overload public function new(str : String, level : Int, flags : Int, font : java.awt.Font, frc : java.awt.font.FontRenderContext) : Void;
+	@:overload @:public public function new(str : String, level : Int, flags : Int, font : java.awt.Font, frc : java.awt.font.FontRenderContext) : Void;
 	
-	@:overload public function getChars() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public override public function getChars() : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload public function getStart() : Int;
+	@:overload @:public override public function getStart() : Int;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public override public function getLength() : Int;
 	
-	@:overload public function getContextStart() : Int;
+	@:overload @:public override public function getContextStart() : Int;
 	
-	@:overload public function getContextLength() : Int;
+	@:overload @:public override public function getContextLength() : Int;
 	
-	@:overload public function getLayoutFlags() : Int;
+	@:overload @:public override public function getLayoutFlags() : Int;
 	
-	@:overload public function getBidiLevel() : Int;
+	@:overload @:public override public function getBidiLevel() : Int;
 	
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public override public function getFont() : java.awt.Font;
 	
-	@:overload public function getFRC() : java.awt.font.FontRenderContext;
+	@:overload @:public override public function getFRC() : java.awt.font.FontRenderContext;
 	
-	@:overload public function getCoreMetrics() : sun.font.CoreMetrics;
+	@:overload @:public override public function getCoreMetrics() : sun.font.CoreMetrics;
 	
-	@:overload public function getSubSource(start : Int, length : Int, dir : Int) : sun.font.TextSource;
+	@:overload @:public override public function getSubSource(start : Int, length : Int, dir : Int) : sun.font.TextSource;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function toString(withContext : Bool) : String;
+	@:overload @:public override public function toString(withContext : Bool) : String;
 	
 	
 }

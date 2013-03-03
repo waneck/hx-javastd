@@ -39,21 +39,21 @@ extern class MimeHeader
 	* @param name a <code>String</code> giving the name of the header
 	* @param value a <code>String</code> giving the value of the header
 	*/
-	@:overload public function new(name : String, value : String) : Void;
+	@:overload @:public public function new(name : String, value : String) : Void;
 	
 	/**
 	* Returns the name of this <code>MimeHeader</code> object.
 	*
 	* @return the name of the header as a <code>String</code>
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the value of this <code>MimeHeader</code> object.
 	*
 	* @return  the value of the header as a <code>String</code>
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	
 }

@@ -48,7 +48,7 @@ extern interface HTMLOptionElement extends org.w3c.dom.html.HTMLElement
 	*  Returns the <code>FORM</code> element containing this control. Returns
 	* <code>null</code> if this control is not within the context of a form.
 	*/
-	@:overload public function getForm() : org.w3c.dom.html.HTMLFormElement;
+	@:overload @:public public function getForm() : org.w3c.dom.html.HTMLFormElement;
 	
 	/**
 	*  Represents the value of the HTML selected attribute. The value of this
@@ -57,36 +57,36 @@ extern interface HTMLOptionElement extends org.w3c.dom.html.HTMLElement
 	* <code>defaultSelected</code> , however, resets the state of the form
 	* control. See the  selected attribute definition in HTML 4.0.
 	*/
-	@:overload public function getDefaultSelected() : Bool;
+	@:overload @:public public function getDefaultSelected() : Bool;
 	
-	@:overload public function setDefaultSelected(defaultSelected : Bool) : Void;
+	@:overload @:public public function setDefaultSelected(defaultSelected : Bool) : Void;
 	
 	/**
 	*  The text contained within the option element.
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
 	/**
 	*  The index of this <code>OPTION</code> in its parent <code>SELECT</code>
 	*  , starting from 0.
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	*  The control is unavailable in this context. See the  disabled
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getDisabled() : Bool;
+	@:overload @:public public function getDisabled() : Bool;
 	
-	@:overload public function setDisabled(disabled : Bool) : Void;
+	@:overload @:public public function setDisabled(disabled : Bool) : Void;
 	
 	/**
 	*  Option label for use in hierarchical menus. See the  label attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getLabel() : String;
+	@:overload @:public public function getLabel() : String;
 	
-	@:overload public function setLabel(label : String) : Void;
+	@:overload @:public public function setLabel(label : String) : Void;
 	
 	/**
 	*  Represents the current state of the corresponding form control, in an
@@ -94,17 +94,17 @@ extern interface HTMLOptionElement extends org.w3c.dom.html.HTMLElement
 	* the form control, but does not change the value of the HTML selected
 	* attribute of the element.
 	*/
-	@:overload public function getSelected() : Bool;
+	@:overload @:public public function getSelected() : Bool;
 	
-	@:overload public function setSelected(selected : Bool) : Void;
+	@:overload @:public public function setSelected(selected : Bool) : Void;
 	
 	/**
 	*  The current form control value. See the  value attribute definition in
 	* HTML 4.0.
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload public function setValue(value : String) : Void;
+	@:overload @:public public function setValue(value : String) : Void;
 	
 	
 }

@@ -35,7 +35,7 @@ extern interface BuiltinLeafInfo<T, C> extends com.sun.xml.internal.bind.v2.mode
 	* @return
 	*      never null.
 	*/
-	@:overload public function getTypeName() : javax.xml.namespace.QName;
+	@:overload @:public public function getTypeName() : javax.xml.namespace.QName;
 	
 	
 }

@@ -33,14 +33,14 @@ extern class StringContent extends com.sun.tools.doclets.internal.toolkit.Conten
 	/**
 	* Constructor to construct StringContent object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor to construct StringContent object with some initial content.
 	*
 	* @param initialContent initial content for the object
 	*/
-	@:overload public function new(initialContent : String) : Void;
+	@:overload @:public public function new(initialContent : String) : Void;
 	
 	/**
 	* This method is not supported by the class.
@@ -50,7 +50,7 @@ extern class StringContent extends com.sun.tools.doclets.internal.toolkit.Conten
 	*                              DocletAbortException because it
 	*                              is not supported.
 	*/
-	@:overload public function addContent(content : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public override public function addContent(content : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds content for the StringContent object.  The method escapes
@@ -58,22 +58,22 @@ extern class StringContent extends com.sun.tools.doclets.internal.toolkit.Conten
 	*
 	* @param strContent string content to be added
 	*/
-	@:overload public function addContent(strContent : String) : Void;
+	@:overload @:public override public function addContent(strContent : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function write(contentBuilder : java.lang.StringBuilder) : Void;
+	@:overload @:public override public function write(contentBuilder : java.lang.StringBuilder) : Void;
 	
 	
 }

@@ -29,7 +29,7 @@ extern interface XPointerPart
 	*         the syntax defined by its scheme.
 	*
 	*/
-	@:overload public function parseXPointer(part : String) : Void;
+	@:overload @:public public function parseXPointer(part : String) : Void;
 	
 	/**
 	* Evaluates an XML resource with respect to an XPointer expressions
@@ -46,7 +46,7 @@ extern interface XPointerPart
 	* @throws XNIException Thrown to signal an error
 	*
 	*/
-	@:overload public function resolveXPointer(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations, event : Int) : Bool;
+	@:overload @:public public function resolveXPointer(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations, event : Int) : Bool;
 	
 	/**
 	* Returns true if the XPointer expression resolves to a resource fragment
@@ -57,7 +57,7 @@ extern interface XPointerPart
 	* @throws XNIException Thrown to signal an error
 	*
 	*/
-	@:overload public function isFragmentResolved() : Bool;
+	@:overload @:public public function isFragmentResolved() : Bool;
 	
 	/**
 	* Returns true if the XPointer expression resolves to a non-element child
@@ -68,7 +68,7 @@ extern interface XPointerPart
 	* @throws XNIException Thrown to signal an error
 	*
 	*/
-	@:overload public function isChildFragmentResolved() : Bool;
+	@:overload @:public public function isChildFragmentResolved() : Bool;
 	
 	/**
 	* Returns a String containing the scheme name of the PointerPart
@@ -77,7 +77,7 @@ extern interface XPointerPart
 	* @return A String containing the scheme name of the PointerPart.
 	*
 	*/
-	@:overload public function getSchemeName() : String;
+	@:overload @:public public function getSchemeName() : String;
 	
 	/**
 	* Returns a String containing the scheme data of the PointerPart.
@@ -85,7 +85,7 @@ extern interface XPointerPart
 	* @return A String containing the scheme data of the PointerPart.
 	*
 	*/
-	@:overload public function getSchemeData() : String;
+	@:overload @:public public function getSchemeData() : String;
 	
 	/**
 	* Sets the scheme name of the PointerPart or the ShortHand Pointer name.
@@ -93,7 +93,7 @@ extern interface XPointerPart
 	* @param schemeName A String containing the scheme name of the PointerPart.
 	*
 	*/
-	@:overload public function setSchemeName(schemeName : String) : Void;
+	@:overload @:public public function setSchemeName(schemeName : String) : Void;
 	
 	/**
 	* Sets the scheme data of the PointerPart.
@@ -101,7 +101,7 @@ extern interface XPointerPart
 	* @param schemeData A String containing the scheme data of the PointerPart.
 	*
 	*/
-	@:overload public function setSchemeData(schemeData : String) : Void;
+	@:overload @:public public function setSchemeData(schemeData : String) : Void;
 	
 	
 }

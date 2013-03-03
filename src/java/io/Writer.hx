@@ -52,13 +52,13 @@ package java.io;
 	* the object in this field rather than <tt>this</tt> or a synchronized
 	* method.
 	*/
-	private var lock : Dynamic;
+	@:protected private var lock : Dynamic;
 	
 	/**
 	* Creates a new character-stream writer whose critical sections will
 	* synchronize on the writer itself.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates a new character-stream writer whose critical sections will
@@ -67,7 +67,7 @@ package java.io;
 	* @param  lock
 	*         Object to synchronize on
 	*/
-	@:overload private function new(lock : Dynamic) : Void;
+	@:overload @:protected private function new(lock : Dynamic) : Void;
 	
 	/**
 	* Writes a single character.  The character to be written is contained in
@@ -83,7 +83,7 @@ package java.io;
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public function write(c : Int) : Void;
+	@:overload @:public public function write(c : Int) : Void;
 	
 	/**
 	* Writes an array of characters.
@@ -94,7 +94,7 @@ package java.io;
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public function write(cbuf : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function write(cbuf : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Writes a portion of an array of characters.
@@ -111,7 +111,7 @@ package java.io;
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:abstract public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:abstract @:public public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
 	/**
 	* Writes a string.
@@ -122,7 +122,7 @@ package java.io;
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public function write(str : String) : Void;
+	@:overload @:public public function write(str : String) : Void;
 	
 	/**
 	* Writes a portion of a string.
@@ -144,7 +144,7 @@ package java.io;
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public function write(str : String, off : Int, len : Int) : Void;
+	@:overload @:public public function write(str : String, off : Int, len : Int) : Void;
 	
 	/**
 	* Appends the specified character sequence to this writer.
@@ -173,7 +173,7 @@ package java.io;
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function append(csq : java.lang.CharSequence) : java.io.Writer;
+	@:require(java5) @:overload @:public public function append(csq : java.lang.CharSequence) : java.io.Writer;
 	
 	/**
 	* Appends a subsequence of the specified character sequence to this writer.
@@ -211,7 +211,7 @@ package java.io;
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.io.Writer;
+	@:require(java5) @:overload @:public public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.io.Writer;
 	
 	/**
 	* Appends the specified character to this writer.
@@ -232,7 +232,7 @@ package java.io;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function append(c : java.StdTypes.Char16) : java.io.Writer;
+	@:require(java5) @:overload @:public public function append(c : java.StdTypes.Char16) : java.io.Writer;
 	
 	/**
 	* Flushes the stream.  If the stream has saved any characters from the
@@ -250,7 +250,7 @@ package java.io;
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:abstract public function flush() : Void;
+	@:overload @:abstract @:public public function flush() : Void;
 	
 	/**
 	* Closes the stream, flushing it first. Once the stream has been closed,
@@ -260,7 +260,7 @@ package java.io;
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:abstract @:public public function close() : Void;
 	
 	
 }

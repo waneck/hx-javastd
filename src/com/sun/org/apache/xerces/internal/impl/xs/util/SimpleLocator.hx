@@ -20,61 +20,61 @@ package com.sun.org.apache.xerces.internal.impl.xs.util;
 */
 extern class SimpleLocator implements com.sun.org.apache.xerces.internal.xni.XMLLocator
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(lsid : String, esid : String, line : Int, column : Int) : Void;
+	@:overload @:public public function new(lsid : String, esid : String, line : Int, column : Int) : Void;
 	
-	@:overload public function setValues(lsid : String, esid : String, line : Int, column : Int) : Void;
+	@:overload @:public public function setValues(lsid : String, esid : String, line : Int, column : Int) : Void;
 	
-	@:overload public function new(lsid : String, esid : String, line : Int, column : Int, offset : Int) : Void;
+	@:overload @:public public function new(lsid : String, esid : String, line : Int, column : Int, offset : Int) : Void;
 	
-	@:overload public function setValues(lsid : String, esid : String, line : Int, column : Int, offset : Int) : Void;
+	@:overload @:public public function setValues(lsid : String, esid : String, line : Int, column : Int, offset : Int) : Void;
 	
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
-	@:overload public function getCharacterOffset() : Int;
+	@:overload @:public public function getCharacterOffset() : Int;
 	
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
-	@:overload public function getExpandedSystemId() : String;
+	@:overload @:public public function getExpandedSystemId() : String;
 	
-	@:overload public function getLiteralSystemId() : String;
+	@:overload @:public public function getLiteralSystemId() : String;
 	
-	@:overload public function getBaseSystemId() : String;
+	@:overload @:public public function getBaseSystemId() : String;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.XMLLocator#setColumnNumber(int)
 	*/
-	@:overload public function setColumnNumber(col : Int) : Void;
+	@:overload @:public public function setColumnNumber(col : Int) : Void;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.XMLLocator#setLineNumber(int)
 	*/
-	@:overload public function setLineNumber(line : Int) : Void;
+	@:overload @:public public function setLineNumber(line : Int) : Void;
 	
-	@:overload public function setCharacterOffset(offset : Int) : Void;
+	@:overload @:public public function setCharacterOffset(offset : Int) : Void;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier#setBaseSystemId(String)
 	*/
-	@:overload public function setBaseSystemId(systemId : String) : Void;
+	@:overload @:public public function setBaseSystemId(systemId : String) : Void;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier#setExpandedSystemId(String)
 	*/
-	@:overload public function setExpandedSystemId(systemId : String) : Void;
+	@:overload @:public public function setExpandedSystemId(systemId : String) : Void;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier#setLiteralSystemId(String)
 	*/
-	@:overload public function setLiteralSystemId(systemId : String) : Void;
+	@:overload @:public public function setLiteralSystemId(systemId : String) : Void;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier#setPublicId(String)
 	*/
-	@:overload public function setPublicId(publicId : String) : Void;
+	@:overload @:public public function setPublicId(publicId : String) : Void;
 	
 	/** Returns the encoding of the current entity.
 	* Since these locators are used in the construction of
@@ -82,9 +82,9 @@ extern class SimpleLocator implements com.sun.org.apache.xerces.internal.xni.XML
 	* no point in having this object deal intelligently
 	* with encoding information.
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
-	@:overload public function getXMLVersion() : String;
+	@:overload @:public public function getXMLVersion() : String;
 	
 	
 }

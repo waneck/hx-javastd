@@ -32,67 +32,67 @@ package com.sun.tools.example.debug.gui;
 */
 extern class SourceTool extends javax.swing.JPanel
 {
-	@:overload public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
+	@:overload @:public public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
 	
-	@:overload public function setTextFont(f : java.awt.Font) : Void;
+	@:overload @:public public function setTextFont(f : java.awt.Font) : Void;
 	
-	@:overload public function showSourceForLocation(locn : com.sun.jdi.Location) : Bool;
+	@:overload @:public public function showSourceForLocation(locn : com.sun.jdi.Location) : Bool;
 	
-	@:overload public function showSourceFile(fileName : String) : Bool;
+	@:overload @:public public function showSourceFile(fileName : String) : Bool;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$SourceTool$SourceToolListener') @:internal extern class SourceTool_SourceToolListener implements com.sun.tools.example.debug.gui.ContextListener implements com.sun.tools.example.debug.gui.SourceListener implements com.sun.tools.example.debug.bdi.SpecListener
 {
-	@:overload public function currentFrameChanged(e : com.sun.tools.example.debug.gui.CurrentFrameChangedEvent) : Void;
+	@:overload @:public public function currentFrameChanged(e : com.sun.tools.example.debug.gui.CurrentFrameChangedEvent) : Void;
 	
-	@:overload public function sourcepathChanged(e : com.sun.tools.example.debug.gui.SourcepathChangedEvent) : Void;
+	@:overload @:public public function sourcepathChanged(e : com.sun.tools.example.debug.gui.SourcepathChangedEvent) : Void;
 	
-	@:overload public function breakpointSet(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function breakpointSet(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function breakpointDeferred(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function breakpointDeferred(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function breakpointDeleted(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function breakpointDeleted(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function breakpointResolved(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function breakpointResolved(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function breakpointError(e : com.sun.tools.example.debug.bdi.SpecErrorEvent) : Void;
+	@:overload @:public public function breakpointError(e : com.sun.tools.example.debug.bdi.SpecErrorEvent) : Void;
 	
-	@:overload public function watchpointSet(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function watchpointSet(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function watchpointDeferred(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function watchpointDeferred(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function watchpointDeleted(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function watchpointDeleted(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function watchpointResolved(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function watchpointResolved(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function watchpointError(e : com.sun.tools.example.debug.bdi.SpecErrorEvent) : Void;
+	@:overload @:public public function watchpointError(e : com.sun.tools.example.debug.bdi.SpecErrorEvent) : Void;
 	
-	@:overload public function exceptionInterceptSet(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function exceptionInterceptSet(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function exceptionInterceptDeferred(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function exceptionInterceptDeferred(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function exceptionInterceptDeleted(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function exceptionInterceptDeleted(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function exceptionInterceptResolved(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
+	@:overload @:public public function exceptionInterceptResolved(e : com.sun.tools.example.debug.bdi.SpecEvent) : Void;
 	
-	@:overload public function exceptionInterceptError(e : com.sun.tools.example.debug.bdi.SpecErrorEvent) : Void;
+	@:overload @:public public function exceptionInterceptError(e : com.sun.tools.example.debug.bdi.SpecErrorEvent) : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$SourceTool$SourceLineRenderer') @:internal extern class SourceTool_SourceLineRenderer extends javax.swing.DefaultListCellRenderer
 {
-	@:overload public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
+	@:overload @:public override public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
 	
-	@:overload public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$SourceTool$STMouseListener') @:internal extern class SourceTool_STMouseListener extends java.awt.event.MouseAdapter implements java.awt.event.MouseListener
 {
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

@@ -36,7 +36,7 @@ extern class Document
 	* @param dw
 	*      The {@link DatatypeWriter} to be added. Must not be null.
 	*/
-	@:overload public function addDatatypeWriter(dw : com.sun.xml.internal.txw2.DatatypeWriter<Dynamic>) : Void;
+	@:overload @:public public function addDatatypeWriter(dw : com.sun.xml.internal.txw2.DatatypeWriter<Dynamic>) : Void;
 	
 	
 }

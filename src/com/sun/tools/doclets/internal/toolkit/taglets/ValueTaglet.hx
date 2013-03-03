@@ -44,47 +44,47 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	/**
 	* Construct a new ValueTaglet.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Will return false because this inline tag may
 	* only appear in Fields.
 	* @return false since this is not a method.
 	*/
-	@:overload override public function inMethod() : Bool;
+	@:overload @:public override public function inMethod() : Bool;
 	
 	/**
 	* Will return false because this inline tag may
 	* only appear in Fields.
 	* @return false since this is not a method.
 	*/
-	@:overload override public function inConstructor() : Bool;
+	@:overload @:public override public function inConstructor() : Bool;
 	
 	/**
 	* Will return false because this inline tag may
 	* only appear in Fields.
 	* @return false since this is not a method.
 	*/
-	@:overload override public function inOverview() : Bool;
+	@:overload @:public override public function inOverview() : Bool;
 	
 	/**
 	* Will return false because this inline tag may
 	* only appear in Fields.
 	* @return false since this is not a method.
 	*/
-	@:overload override public function inPackage() : Bool;
+	@:overload @:public override public function inPackage() : Bool;
 	
 	/**
 	* Will return false because this inline tag may
 	* only appear in Fields.
 	* @return false since this is not a method.
 	*/
-	@:overload override public function inType() : Bool;
+	@:overload @:public override public function inType() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getTagletOutput(tag : com.sun.javadoc.Tag, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function getTagletOutput(tag : com.sun.javadoc.Tag, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

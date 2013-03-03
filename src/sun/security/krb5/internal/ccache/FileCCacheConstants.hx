@@ -41,41 +41,41 @@ extern interface FileCCacheConstants
 	*
 	* FCC version 3 contains keyblock encryption type information, and is
 	* architecture independent.  Previous versions are not. */
-	public var KRB5_FCC_FVNO_1(default, null) : Int;
+	@:public @:final public var KRB5_FCC_FVNO_1(default, null) : Int;
 	
-	public var KRB5_FCC_FVNO_2(default, null) : Int;
+	@:public @:final public var KRB5_FCC_FVNO_2(default, null) : Int;
 	
-	public var KRB5_FCC_FVNO_3(default, null) : Int;
+	@:public @:final public var KRB5_FCC_FVNO_3(default, null) : Int;
 	
-	public var KRB5_FCC_FVNO_4(default, null) : Int;
+	@:public @:final public var KRB5_FCC_FVNO_4(default, null) : Int;
 	
-	public var FCC_TAG_DELTATIME(default, null) : Int;
+	@:public @:final public var FCC_TAG_DELTATIME(default, null) : Int;
 	
-	public var KRB5_NT_UNKNOWN(default, null) : Int;
+	@:public @:final public var KRB5_NT_UNKNOWN(default, null) : Int;
 	
-	public var MAXNAMELENGTH(default, null) : Int;
+	@:public @:final public var MAXNAMELENGTH(default, null) : Int;
 	
-	public var TKT_FLG_FORWARDABLE(default, null) : Int;
+	@:public @:final public var TKT_FLG_FORWARDABLE(default, null) : Int;
 	
-	public var TKT_FLG_FORWARDED(default, null) : Int;
+	@:public @:final public var TKT_FLG_FORWARDED(default, null) : Int;
 	
-	public var TKT_FLG_PROXIABLE(default, null) : Int;
+	@:public @:final public var TKT_FLG_PROXIABLE(default, null) : Int;
 	
-	public var TKT_FLG_PROXY(default, null) : Int;
+	@:public @:final public var TKT_FLG_PROXY(default, null) : Int;
 	
-	public var TKT_FLG_MAY_POSTDATE(default, null) : Int;
+	@:public @:final public var TKT_FLG_MAY_POSTDATE(default, null) : Int;
 	
-	public var TKT_FLG_POSTDATED(default, null) : Int;
+	@:public @:final public var TKT_FLG_POSTDATED(default, null) : Int;
 	
-	public var TKT_FLG_INVALID(default, null) : Int;
+	@:public @:final public var TKT_FLG_INVALID(default, null) : Int;
 	
-	public var TKT_FLG_RENEWABLE(default, null) : Int;
+	@:public @:final public var TKT_FLG_RENEWABLE(default, null) : Int;
 	
-	public var TKT_FLG_INITIAL(default, null) : Int;
+	@:public @:final public var TKT_FLG_INITIAL(default, null) : Int;
 	
-	public var TKT_FLG_PRE_AUTH(default, null) : Int;
+	@:public @:final public var TKT_FLG_PRE_AUTH(default, null) : Int;
 	
-	public var TKT_FLG_HW_AUTH(default, null) : Int;
+	@:public @:final public var TKT_FLG_HW_AUTH(default, null) : Int;
 	
 	
 }

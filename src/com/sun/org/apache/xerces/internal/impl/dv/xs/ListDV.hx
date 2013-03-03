@@ -30,36 +30,36 @@ extern class ListDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.TypeVa
 	*
 	* @version $Id: ListDV.java,v 1.7 2010-11-01 04:39:47 joehw Exp $
 	*/
-	@:overload override public function getAllowedFacets() : java.StdTypes.Int16;
+	@:overload @:public override public function getAllowedFacets() : java.StdTypes.Int16;
 	
-	@:overload override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
+	@:overload @:public override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
 	
-	@:overload override public function getDataLength(value : Dynamic) : Int;
+	@:overload @:public override public function getDataLength(value : Dynamic) : Int;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$impl$dv$xs$ListDV$ListData') @:internal extern class ListDV_ListData extends java.util.AbstractList<Dynamic> implements com.sun.org.apache.xerces.internal.xs.datatypes.ObjectList
 {
-	@:overload public function new(data : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload @:synchronized override public function toString() : String;
+	@:overload @:public @:synchronized override public function toString() : String;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload override public function contains(item : Dynamic) : Bool;
+	@:overload @:public override public function contains(item : Dynamic) : Bool;
 	
-	@:overload public function item(index : Int) : Dynamic;
+	@:overload @:public public function item(index : Int) : Dynamic;
 	
 	/*
 	* List methods
 	*/
-	@:overload public function get(index : Int) : Dynamic;
+	@:overload @:public override public function get(index : Int) : Dynamic;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	
 }

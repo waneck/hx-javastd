@@ -42,7 +42,7 @@ package com.sun.java.swing.plaf.windows;
 	* @param textRect Bounding rectangle to render the text.
 	* @param text String to render
 	*/
-	@:overload public static function paintText(g : java.awt.Graphics, b : javax.swing.AbstractButton, textRect : java.awt.Rectangle, text : String, textShiftOffset : Int) : Void;
+	@:overload @:public @:static public static function paintText(g : java.awt.Graphics, b : javax.swing.AbstractButton, textRect : java.awt.Rectangle, text : String, textShiftOffset : Int) : Void;
 	
 	
 }

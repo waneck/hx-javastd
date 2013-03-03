@@ -33,23 +33,23 @@ package com.sun.script.util;
 @:require(java6) extern class InterfaceImplementor
 {
 	/** Creates a new instance of Invocable */
-	@:overload public function new(engine : javax.script.Invocable) : Void;
+	@:overload @:public public function new(engine : javax.script.Invocable) : Void;
 	
-	@:overload public function getInterface<T>(thiz : Dynamic, iface : Class<T>) : T;
+	@:overload @:public public function getInterface<T>(thiz : Dynamic, iface : Class<T>) : T;
 	
-	@:overload private function isImplemented(thiz : Dynamic, iface : Class<Dynamic>) : Bool;
+	@:overload @:protected private function isImplemented(thiz : Dynamic, iface : Class<Dynamic>) : Bool;
 	
-	@:overload private function convertResult(method : java.lang.reflect.Method, res : Dynamic) : Dynamic;
+	@:overload @:protected private function convertResult(method : java.lang.reflect.Method, res : Dynamic) : Dynamic;
 	
-	@:overload private function convertArguments(method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
+	@:overload @:protected private function convertArguments(method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
 	
 	
 }
 @:native('com$sun$script$util$InterfaceImplementor$InterfaceImplementorInvocationHandler') @:internal extern class InterfaceImplementor_InterfaceImplementorInvocationHandler implements java.lang.reflect.InvocationHandler
 {
-	@:overload public function new(thiz : Dynamic, accCtxt : java.security.AccessControlContext) : Void;
+	@:overload @:public public function new(thiz : Dynamic, accCtxt : java.security.AccessControlContext) : Void;
 	
-	@:overload public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

@@ -30,7 +30,7 @@ extern class Logger
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var GLOBAL_LOGGER_NAME(default, null) : String;
+	@:require(java6) @:public @:static @:final public static var GLOBAL_LOGGER_NAME(default, null) : String;
 	
 	/**
 	* Return global logger object with the name Logger.GLOBAL_LOGGER_NAME.
@@ -38,7 +38,7 @@ extern class Logger
 	* @return global logger object
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:final public static function getGlobal() : java.util.logging.Logger;
+	@:require(java7) @:overload @:public @:static @:final public static function getGlobal() : java.util.logging.Logger;
 	
 	/**
 	* The "global" Logger object is provided as a convenience to developers
@@ -61,7 +61,7 @@ extern class Logger
 	* <code>Logger.getLogger(Logger.GLOBAL_LOGGER_NAME)</code>
 	* or <code>Logger.getLogger("global")</code>.
 	*/
-	public static var global(default, null) : java.util.logging.Logger;
+	@:public @:static @:final public static var global(default, null) : java.util.logging.Logger;
 	
 	/**
 	* Protected method to construct a logger for a named subsystem.
@@ -80,7 +80,7 @@ extern class Logger
 	* @throws MissingResourceException if the resourceBundleName is non-null and
 	*             no corresponding resource can be found.
 	*/
-	@:overload private function new(name : String, resourceBundleName : String) : Void;
+	@:overload @:protected private function new(name : String, resourceBundleName : String) : Void;
 	
 	/**
 	* Find or create a logger for a named subsystem.  If a logger has
@@ -109,7 +109,7 @@ extern class Logger
 	* @return a suitable Logger
 	* @throws NullPointerException if the name is null.
 	*/
-	@:overload public static function getLogger(name : String) : java.util.logging.Logger;
+	@:overload @:public @:static public static function getLogger(name : String) : java.util.logging.Logger;
 	
 	/**
 	* Find or create a logger for a named subsystem.  If a logger has
@@ -151,7 +151,7 @@ extern class Logger
 	*             a different resource bundle name.
 	* @throws NullPointerException if the name is null.
 	*/
-	@:overload public static function getLogger(name : String, resourceBundleName : String) : java.util.logging.Logger;
+	@:overload @:public @:static public static function getLogger(name : String, resourceBundleName : String) : java.util.logging.Logger;
 	
 	/**
 	* Create an anonymous Logger.  The newly created Logger is not
@@ -173,7 +173,7 @@ extern class Logger
 	*
 	* @return a newly created private Logger
 	*/
-	@:overload public static function getAnonymousLogger() : java.util.logging.Logger;
+	@:overload @:public @:static public static function getAnonymousLogger() : java.util.logging.Logger;
 	
 	/**
 	* Create an anonymous Logger.  The newly created Logger is not
@@ -199,7 +199,7 @@ extern class Logger
 	* @throws MissingResourceException if the resourceBundleName is non-null and
 	*             no corresponding resource can be found.
 	*/
-	@:overload public static function getAnonymousLogger(resourceBundleName : String) : java.util.logging.Logger;
+	@:overload @:public @:static public static function getAnonymousLogger(resourceBundleName : String) : java.util.logging.Logger;
 	
 	/**
 	* Retrieve the localization resource bundle for this
@@ -209,7 +209,7 @@ extern class Logger
 	*
 	* @return localization bundle (may be null)
 	*/
-	@:overload public function getResourceBundle() : java.util.ResourceBundle;
+	@:overload @:public public function getResourceBundle() : java.util.ResourceBundle;
 	
 	/**
 	* Retrieve the localization resource bundle name for this
@@ -218,7 +218,7 @@ extern class Logger
 	*
 	* @return localization bundle name (may be null)
 	*/
-	@:overload public function getResourceBundleName() : String;
+	@:overload @:public public function getResourceBundleName() : String;
 	
 	/**
 	* Set a filter to control output on this Logger.
@@ -231,14 +231,14 @@ extern class Logger
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have LoggingPermission("control").
 	*/
-	@:overload public function setFilter(newFilter : java.util.logging.Filter) : Void;
+	@:overload @:public public function setFilter(newFilter : java.util.logging.Filter) : Void;
 	
 	/**
 	* Get the current filter for this Logger.
 	*
 	* @return  a filter object (may be null)
 	*/
-	@:overload public function getFilter() : java.util.logging.Filter;
+	@:overload @:public public function getFilter() : java.util.logging.Filter;
 	
 	/**
 	* Log a LogRecord.
@@ -249,7 +249,7 @@ extern class Logger
 	*
 	* @param record the LogRecord to be published
 	*/
-	@:overload public function log(record : java.util.logging.LogRecord) : Void;
+	@:overload @:public public function log(record : java.util.logging.LogRecord) : Void;
 	
 	/**
 	* Log a message, with no arguments.
@@ -261,7 +261,7 @@ extern class Logger
 	* @param   level   One of the message level identifiers, e.g., SEVERE
 	* @param   msg     The string message (or a key in the message catalog)
 	*/
-	@:overload public function log(level : java.util.logging.Level, msg : String) : Void;
+	@:overload @:public public function log(level : java.util.logging.Level, msg : String) : Void;
 	
 	/**
 	* Log a message, with one object parameter.
@@ -274,7 +274,7 @@ extern class Logger
 	* @param   msg     The string message (or a key in the message catalog)
 	* @param   param1  parameter to the message
 	*/
-	@:overload public function log(level : java.util.logging.Level, msg : String, param1 : Dynamic) : Void;
+	@:overload @:public public function log(level : java.util.logging.Level, msg : String, param1 : Dynamic) : Void;
 	
 	/**
 	* Log a message, with an array of object arguments.
@@ -287,7 +287,7 @@ extern class Logger
 	* @param   msg     The string message (or a key in the message catalog)
 	* @param   params  array of parameters to the message
 	*/
-	@:overload public function log(level : java.util.logging.Level, msg : String, params : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function log(level : java.util.logging.Level, msg : String, params : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Log a message, with associated Throwable information.
@@ -305,7 +305,7 @@ extern class Logger
 	* @param   msg     The string message (or a key in the message catalog)
 	* @param   thrown  Throwable associated with log message.
 	*/
-	@:overload public function log(level : java.util.logging.Level, msg : String, thrown : java.lang.Throwable) : Void;
+	@:overload @:public public function log(level : java.util.logging.Level, msg : String, thrown : java.lang.Throwable) : Void;
 	
 	/**
 	* Log a message, specifying source class and method,
@@ -320,7 +320,7 @@ extern class Logger
 	* @param   sourceMethod   name of method that issued the logging request
 	* @param   msg     The string message (or a key in the message catalog)
 	*/
-	@:overload public function logp(level : java.util.logging.Level, sourceClass : String, sourceMethod : String, msg : String) : Void;
+	@:overload @:public public function logp(level : java.util.logging.Level, sourceClass : String, sourceMethod : String, msg : String) : Void;
 	
 	/**
 	* Log a message, specifying source class and method,
@@ -336,7 +336,7 @@ extern class Logger
 	* @param   msg      The string message (or a key in the message catalog)
 	* @param   param1    Parameter to the log message.
 	*/
-	@:overload public function logp(level : java.util.logging.Level, sourceClass : String, sourceMethod : String, msg : String, param1 : Dynamic) : Void;
+	@:overload @:public public function logp(level : java.util.logging.Level, sourceClass : String, sourceMethod : String, msg : String, param1 : Dynamic) : Void;
 	
 	/**
 	* Log a message, specifying source class and method,
@@ -352,7 +352,7 @@ extern class Logger
 	* @param   msg     The string message (or a key in the message catalog)
 	* @param   params  Array of parameters to the message
 	*/
-	@:overload public function logp(level : java.util.logging.Level, sourceClass : String, sourceMethod : String, msg : String, params : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function logp(level : java.util.logging.Level, sourceClass : String, sourceMethod : String, msg : String, params : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Log a message, specifying source class and method,
@@ -373,7 +373,7 @@ extern class Logger
 	* @param   msg     The string message (or a key in the message catalog)
 	* @param   thrown  Throwable associated with log message.
 	*/
-	@:overload public function logp(level : java.util.logging.Level, sourceClass : String, sourceMethod : String, msg : String, thrown : java.lang.Throwable) : Void;
+	@:overload @:public public function logp(level : java.util.logging.Level, sourceClass : String, sourceMethod : String, msg : String, thrown : java.lang.Throwable) : Void;
 	
 	/**
 	* Log a message, specifying source class, method, and resource bundle name
@@ -394,7 +394,7 @@ extern class Logger
 	*                         can be null
 	* @param   msg     The string message (or a key in the message catalog)
 	*/
-	@:overload public function logrb(level : java.util.logging.Level, sourceClass : String, sourceMethod : String, bundleName : String, msg : String) : Void;
+	@:overload @:public public function logrb(level : java.util.logging.Level, sourceClass : String, sourceMethod : String, bundleName : String, msg : String) : Void;
 	
 	/**
 	* Log a message, specifying source class, method, and resource bundle name,
@@ -416,7 +416,7 @@ extern class Logger
 	* @param   msg      The string message (or a key in the message catalog)
 	* @param   param1    Parameter to the log message.
 	*/
-	@:overload public function logrb(level : java.util.logging.Level, sourceClass : String, sourceMethod : String, bundleName : String, msg : String, param1 : Dynamic) : Void;
+	@:overload @:public public function logrb(level : java.util.logging.Level, sourceClass : String, sourceMethod : String, bundleName : String, msg : String, param1 : Dynamic) : Void;
 	
 	/**
 	* Log a message, specifying source class, method, and resource bundle name,
@@ -438,7 +438,7 @@ extern class Logger
 	* @param   msg     The string message (or a key in the message catalog)
 	* @param   params  Array of parameters to the message
 	*/
-	@:overload public function logrb(level : java.util.logging.Level, sourceClass : String, sourceMethod : String, bundleName : String, msg : String, params : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function logrb(level : java.util.logging.Level, sourceClass : String, sourceMethod : String, bundleName : String, msg : String, params : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Log a message, specifying source class, method, and resource bundle name,
@@ -465,7 +465,7 @@ extern class Logger
 	* @param   msg     The string message (or a key in the message catalog)
 	* @param   thrown  Throwable associated with log message.
 	*/
-	@:overload public function logrb(level : java.util.logging.Level, sourceClass : String, sourceMethod : String, bundleName : String, msg : String, thrown : java.lang.Throwable) : Void;
+	@:overload @:public public function logrb(level : java.util.logging.Level, sourceClass : String, sourceMethod : String, bundleName : String, msg : String, thrown : java.lang.Throwable) : Void;
 	
 	/**
 	* Log a method entry.
@@ -477,7 +477,7 @@ extern class Logger
 	* @param   sourceClass    name of class that issued the logging request
 	* @param   sourceMethod   name of method that is being entered
 	*/
-	@:overload public function entering(sourceClass : String, sourceMethod : String) : Void;
+	@:overload @:public public function entering(sourceClass : String, sourceMethod : String) : Void;
 	
 	/**
 	* Log a method entry, with one parameter.
@@ -491,7 +491,7 @@ extern class Logger
 	* @param   sourceMethod   name of method that is being entered
 	* @param   param1         parameter to the method being entered
 	*/
-	@:overload public function entering(sourceClass : String, sourceMethod : String, param1 : Dynamic) : Void;
+	@:overload @:public public function entering(sourceClass : String, sourceMethod : String, param1 : Dynamic) : Void;
 	
 	/**
 	* Log a method entry, with an array of parameters.
@@ -506,7 +506,7 @@ extern class Logger
 	* @param   sourceMethod   name of method that is being entered
 	* @param   params         array of parameters to the method being entered
 	*/
-	@:overload public function entering(sourceClass : String, sourceMethod : String, params : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function entering(sourceClass : String, sourceMethod : String, params : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Log a method return.
@@ -518,7 +518,7 @@ extern class Logger
 	* @param   sourceClass    name of class that issued the logging request
 	* @param   sourceMethod   name of the method
 	*/
-	@:overload public function exiting(sourceClass : String, sourceMethod : String) : Void;
+	@:overload @:public public function exiting(sourceClass : String, sourceMethod : String) : Void;
 	
 	/**
 	* Log a method return, with result object.
@@ -532,7 +532,7 @@ extern class Logger
 	* @param   sourceMethod   name of the method
 	* @param   result  Object that is being returned
 	*/
-	@:overload public function exiting(sourceClass : String, sourceMethod : String, result : Dynamic) : Void;
+	@:overload @:public public function exiting(sourceClass : String, sourceMethod : String, result : Dynamic) : Void;
 	
 	/**
 	* Log throwing an exception.
@@ -555,7 +555,7 @@ extern class Logger
 	* @param   sourceMethod  name of the method.
 	* @param   thrown  The Throwable that is being thrown.
 	*/
-	@:overload public function throwing(sourceClass : String, sourceMethod : String, thrown : java.lang.Throwable) : Void;
+	@:overload @:public public function throwing(sourceClass : String, sourceMethod : String, thrown : java.lang.Throwable) : Void;
 	
 	/**
 	* Log a SEVERE message.
@@ -566,7 +566,7 @@ extern class Logger
 	* <p>
 	* @param   msg     The string message (or a key in the message catalog)
 	*/
-	@:overload public function severe(msg : String) : Void;
+	@:overload @:public public function severe(msg : String) : Void;
 	
 	/**
 	* Log a WARNING message.
@@ -577,7 +577,7 @@ extern class Logger
 	* <p>
 	* @param   msg     The string message (or a key in the message catalog)
 	*/
-	@:overload public function warning(msg : String) : Void;
+	@:overload @:public public function warning(msg : String) : Void;
 	
 	/**
 	* Log an INFO message.
@@ -588,7 +588,7 @@ extern class Logger
 	* <p>
 	* @param   msg     The string message (or a key in the message catalog)
 	*/
-	@:overload public function info(msg : String) : Void;
+	@:overload @:public public function info(msg : String) : Void;
 	
 	/**
 	* Log a CONFIG message.
@@ -599,7 +599,7 @@ extern class Logger
 	* <p>
 	* @param   msg     The string message (or a key in the message catalog)
 	*/
-	@:overload public function config(msg : String) : Void;
+	@:overload @:public public function config(msg : String) : Void;
 	
 	/**
 	* Log a FINE message.
@@ -610,7 +610,7 @@ extern class Logger
 	* <p>
 	* @param   msg     The string message (or a key in the message catalog)
 	*/
-	@:overload public function fine(msg : String) : Void;
+	@:overload @:public public function fine(msg : String) : Void;
 	
 	/**
 	* Log a FINER message.
@@ -621,7 +621,7 @@ extern class Logger
 	* <p>
 	* @param   msg     The string message (or a key in the message catalog)
 	*/
-	@:overload public function finer(msg : String) : Void;
+	@:overload @:public public function finer(msg : String) : Void;
 	
 	/**
 	* Log a FINEST message.
@@ -632,7 +632,7 @@ extern class Logger
 	* <p>
 	* @param   msg     The string message (or a key in the message catalog)
 	*/
-	@:overload public function finest(msg : String) : Void;
+	@:overload @:public public function finest(msg : String) : Void;
 	
 	/**
 	* Set the log level specifying which message levels will be
@@ -648,7 +648,7 @@ extern class Logger
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have LoggingPermission("control").
 	*/
-	@:overload public function setLevel(newLevel : java.util.logging.Level) : Void;
+	@:overload @:public public function setLevel(newLevel : java.util.logging.Level) : Void;
 	
 	/**
 	* Get the log Level that has been specified for this Logger.
@@ -657,7 +657,7 @@ extern class Logger
 	*
 	* @return  this Logger's level
 	*/
-	@:overload public function getLevel() : java.util.logging.Level;
+	@:overload @:public public function getLevel() : java.util.logging.Level;
 	
 	/**
 	* Check if a message of the given level would actually be logged
@@ -667,13 +667,13 @@ extern class Logger
 	* @param   level   a message logging level
 	* @return  true if the given message level is currently being logged.
 	*/
-	@:overload public function isLoggable(level : java.util.logging.Level) : Bool;
+	@:overload @:public public function isLoggable(level : java.util.logging.Level) : Bool;
 	
 	/**
 	* Get the name for this logger.
 	* @return logger name.  Will be null for anonymous Loggers.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Add a log Handler to receive logging messages.
@@ -686,7 +686,7 @@ extern class Logger
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have LoggingPermission("control").
 	*/
-	@:overload public function addHandler(handler : java.util.logging.Handler) : Void;
+	@:overload @:public public function addHandler(handler : java.util.logging.Handler) : Void;
 	
 	/**
 	* Remove a log Handler.
@@ -697,14 +697,14 @@ extern class Logger
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have LoggingPermission("control").
 	*/
-	@:overload public function removeHandler(handler : java.util.logging.Handler) : Void;
+	@:overload @:public public function removeHandler(handler : java.util.logging.Handler) : Void;
 	
 	/**
 	* Get the Handlers associated with this logger.
 	* <p>
 	* @return  an array of all registered Handlers
 	*/
-	@:overload public function getHandlers() : java.NativeArray<java.util.logging.Handler>;
+	@:overload @:public public function getHandlers() : java.NativeArray<java.util.logging.Handler>;
 	
 	/**
 	* Specify whether or not this logger should send its output
@@ -717,7 +717,7 @@ extern class Logger
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have LoggingPermission("control").
 	*/
-	@:overload public function setUseParentHandlers(useParentHandlers : Bool) : Void;
+	@:overload @:public public function setUseParentHandlers(useParentHandlers : Bool) : Void;
 	
 	/**
 	* Discover whether or not this logger is sending its output
@@ -725,7 +725,7 @@ extern class Logger
 	*
 	* @return  true if output is to be sent to the logger's parent
 	*/
-	@:overload public function getUseParentHandlers() : Bool;
+	@:overload @:public public function getUseParentHandlers() : Bool;
 	
 	/**
 	* Return the parent for this Logger.
@@ -740,7 +740,7 @@ extern class Logger
 	*
 	* @return nearest existing parent Logger
 	*/
-	@:overload public function getParent() : java.util.logging.Logger;
+	@:overload @:public public function getParent() : java.util.logging.Logger;
 	
 	/**
 	* Set the parent for this Logger.  This method is used by
@@ -752,7 +752,7 @@ extern class Logger
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have LoggingPermission("control").
 	*/
-	@:overload public function setParent(parent : java.util.logging.Logger) : Void;
+	@:overload @:public public function setParent(parent : java.util.logging.Logger) : Void;
 	
 	
 }

@@ -35,7 +35,7 @@ extern class Track
 	* @return <code>true</code> if the event did not already exist in the
 	* track and was added, otherwise <code>false</code>
 	*/
-	@:overload public function add(event : javax.sound.midi.MidiEvent) : Bool;
+	@:overload @:public public function add(event : javax.sound.midi.MidiEvent) : Bool;
 	
 	/**
 	* Removes the specified event from the track.
@@ -43,7 +43,7 @@ extern class Track
 	* @return <code>true</code> if the event existed in the track and was removed,
 	* otherwise <code>false</code>
 	*/
-	@:overload public function remove(event : javax.sound.midi.MidiEvent) : Bool;
+	@:overload @:public public function remove(event : javax.sound.midi.MidiEvent) : Bool;
 	
 	/**
 	* Obtains the event at the specified index.
@@ -53,13 +53,13 @@ extern class Track
 	* this track.
 	* @see #size
 	*/
-	@:overload public function get(index : Int) : javax.sound.midi.MidiEvent;
+	@:overload @:public public function get(index : Int) : javax.sound.midi.MidiEvent;
 	
 	/**
 	* Obtains the number of events in this track.
 	* @return the size of the track's event vector
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Obtains the length of the track, expressed in MIDI ticks.  (The
@@ -71,13 +71,13 @@ extern class Track
 	* @see Sequencer#setTempoInBPM(float)
 	* @see Sequencer#getTickPosition()
 	*/
-	@:overload public function ticks() : haxe.Int64;
+	@:overload @:public public function ticks() : haxe.Int64;
 	
 	
 }
 @:native('javax$sound$midi$Track$ImmutableEndOfTrack') @:internal extern class Track_ImmutableEndOfTrack extends javax.sound.midi.MetaMessage
 {
-	@:overload override public function setMessage(type : Int, data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
+	@:overload @:public override public function setMessage(type : Int, data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
 	
 	
 }

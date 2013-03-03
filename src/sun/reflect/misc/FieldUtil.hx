@@ -25,11 +25,11 @@ package sun.reflect.misc;
 */
 extern class FieldUtil
 {
-	@:overload public static function getField(cls : Class<Dynamic>, name : String) : java.lang.reflect.Field;
+	@:overload @:public @:static public static function getField(cls : Class<Dynamic>, name : String) : java.lang.reflect.Field;
 	
-	@:overload public static function getFields(cls : Class<Dynamic>) : java.NativeArray<java.lang.reflect.Field>;
+	@:overload @:public @:static public static function getFields(cls : Class<Dynamic>) : java.NativeArray<java.lang.reflect.Field>;
 	
-	@:overload public static function getDeclaredFields(cls : Class<Dynamic>) : java.NativeArray<java.lang.reflect.Field>;
+	@:overload @:public @:static public static function getDeclaredFields(cls : Class<Dynamic>) : java.NativeArray<java.lang.reflect.Field>;
 	
 	
 }

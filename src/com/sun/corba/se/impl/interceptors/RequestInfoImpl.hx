@@ -29,82 +29,82 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* Implementation of the RequestInfo interface as specified in
 	* orbos/99-12-02 section 5.4.1.
 	*/
-	private var myORB : com.sun.corba.se.spi.orb.ORB;
+	@:protected private var myORB : com.sun.corba.se.spi.orb.ORB;
 	
-	private var wrapper : com.sun.corba.se.impl.logging.InterceptorsSystemException;
+	@:protected private var wrapper : com.sun.corba.se.impl.logging.InterceptorsSystemException;
 	
-	private var stdWrapper : com.sun.corba.se.impl.logging.OMGSystemException;
+	@:protected private var stdWrapper : com.sun.corba.se.impl.logging.OMGSystemException;
 	
-	private var flowStackIndex : Int;
+	@:protected private var flowStackIndex : Int;
 	
-	private var startingPointCall : Int;
+	@:protected private var startingPointCall : Int;
 	
-	private var intermediatePointCall : Int;
+	@:protected private var intermediatePointCall : Int;
 	
-	private var endingPointCall : Int;
+	@:protected private var endingPointCall : Int;
 	
-	private var replyStatus : java.StdTypes.Int16;
+	@:protected private var replyStatus : java.StdTypes.Int16;
 	
-	private static var UNINITIALIZED(default, null) : java.StdTypes.Int16;
+	@:protected @:static @:final private static var UNINITIALIZED(default, null) : java.StdTypes.Int16;
 	
-	private var currentExecutionPoint : Int;
+	@:protected private var currentExecutionPoint : Int;
 	
-	private static var EXECUTION_POINT_STARTING(default, null) : Int;
+	@:protected @:static @:final private static var EXECUTION_POINT_STARTING(default, null) : Int;
 	
-	private static var EXECUTION_POINT_INTERMEDIATE(default, null) : Int;
+	@:protected @:static @:final private static var EXECUTION_POINT_INTERMEDIATE(default, null) : Int;
 	
-	private static var EXECUTION_POINT_ENDING(default, null) : Int;
+	@:protected @:static @:final private static var EXECUTION_POINT_ENDING(default, null) : Int;
 	
-	private var alreadyExecuted : Bool;
+	@:protected private var alreadyExecuted : Bool;
 	
-	private var serviceContexts : com.sun.corba.se.spi.servicecontext.ServiceContexts;
+	@:protected private var serviceContexts : com.sun.corba.se.spi.servicecontext.ServiceContexts;
 	
-	private var forwardRequest : org.omg.PortableInterceptor.ForwardRequest;
+	@:protected private var forwardRequest : org.omg.PortableInterceptor.ForwardRequest;
 	
-	private var forwardRequestIOR : com.sun.corba.se.spi.ior.IOR;
+	@:protected private var forwardRequestIOR : com.sun.corba.se.spi.ior.IOR;
 	
-	private var slotTable : com.sun.corba.se.impl.interceptors.SlotTable;
+	@:protected private var slotTable : com.sun.corba.se.impl.interceptors.SlotTable;
 	
-	private var exception : java.lang.Exception;
+	@:protected private var exception : java.lang.Exception;
 	
 	/*
 	**********************************************************************
 	* Access protection
 	**********************************************************************/
-	private static var MID_REQUEST_ID(default, null) : Int;
+	@:protected @:static @:final private static var MID_REQUEST_ID(default, null) : Int;
 	
-	private static var MID_OPERATION(default, null) : Int;
+	@:protected @:static @:final private static var MID_OPERATION(default, null) : Int;
 	
-	private static var MID_ARGUMENTS(default, null) : Int;
+	@:protected @:static @:final private static var MID_ARGUMENTS(default, null) : Int;
 	
-	private static var MID_EXCEPTIONS(default, null) : Int;
+	@:protected @:static @:final private static var MID_EXCEPTIONS(default, null) : Int;
 	
-	private static var MID_CONTEXTS(default, null) : Int;
+	@:protected @:static @:final private static var MID_CONTEXTS(default, null) : Int;
 	
-	private static var MID_OPERATION_CONTEXT(default, null) : Int;
+	@:protected @:static @:final private static var MID_OPERATION_CONTEXT(default, null) : Int;
 	
-	private static var MID_RESULT(default, null) : Int;
+	@:protected @:static @:final private static var MID_RESULT(default, null) : Int;
 	
-	private static var MID_RESPONSE_EXPECTED(default, null) : Int;
+	@:protected @:static @:final private static var MID_RESPONSE_EXPECTED(default, null) : Int;
 	
-	private static var MID_SYNC_SCOPE(default, null) : Int;
+	@:protected @:static @:final private static var MID_SYNC_SCOPE(default, null) : Int;
 	
-	private static var MID_REPLY_STATUS(default, null) : Int;
+	@:protected @:static @:final private static var MID_REPLY_STATUS(default, null) : Int;
 	
-	private static var MID_FORWARD_REFERENCE(default, null) : Int;
+	@:protected @:static @:final private static var MID_FORWARD_REFERENCE(default, null) : Int;
 	
-	private static var MID_GET_SLOT(default, null) : Int;
+	@:protected @:static @:final private static var MID_GET_SLOT(default, null) : Int;
 	
-	private static var MID_GET_REQUEST_SERVICE_CONTEXT(default, null) : Int;
+	@:protected @:static @:final private static var MID_GET_REQUEST_SERVICE_CONTEXT(default, null) : Int;
 	
-	private static var MID_GET_REPLY_SERVICE_CONTEXT(default, null) : Int;
+	@:protected @:static @:final private static var MID_GET_REPLY_SERVICE_CONTEXT(default, null) : Int;
 	
-	private static var MID_RI_LAST(default, null) : Int;
+	@:protected @:static @:final private static var MID_RI_LAST(default, null) : Int;
 	
 	/**
 	* Creates a new RequestInfoImpl object.
 	*/
-	@:overload public function new(myORB : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(myORB : com.sun.corba.se.spi.orb.ORB) : Void;
 	
 	/**
 	* Implementation for request_id() differs for client and server
@@ -114,7 +114,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* request/reply sequence is concluded this ID may be reused.  (this
 	* is NOT necessarily the same as the GIOP request_id).
 	*/
-	@:overload @:abstract public function request_id() : Int;
+	@:overload @:abstract @:public public function request_id() : Int;
 	
 	/**
 	* Implementation for operation() differs for client and server
@@ -122,42 +122,42 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	*
 	* The name of the operation being invoked.
 	*/
-	@:overload @:abstract public function operation() : String;
+	@:overload @:abstract @:public public function operation() : String;
 	
 	/**
 	* This method returns the list of arguments for the operation that was
 	* invoked. It raises NO_RESOURCES exception if the operation is not invoked
 	* by using DII mechanism.
 	*/
-	@:overload @:abstract public function arguments() : java.NativeArray<org.omg.Dynamic.Parameter>;
+	@:overload @:abstract @:public public function arguments() : java.NativeArray<org.omg.Dynamic.Parameter>;
 	
 	/**
 	* This method returns the list of exceptios  that was raised when the
 	* operation was invoked. It raises NO_RESOURCES exception if the operation
 	* is not invoked by using DII mechanism.
 	*/
-	@:overload @:abstract public function exceptions() : java.NativeArray<org.omg.CORBA.TypeCode>;
+	@:overload @:abstract @:public public function exceptions() : java.NativeArray<org.omg.CORBA.TypeCode>;
 	
 	/**
 	* This method returns the list of contexts for the DII operation.
 	* It raises NO_RESOURCES exception if the operation is not invoked by
 	* using DII mechanism.
 	*/
-	@:overload @:abstract public function contexts() : java.NativeArray<String>;
+	@:overload @:abstract @:public public function contexts() : java.NativeArray<String>;
 	
 	/**
 	* This method returns the list of operation_context for the DII operation.
 	* It raises NO_RESOURCES exception if the operation is not invoked by
 	* using DII mechanism.
 	*/
-	@:overload @:abstract public function operation_context() : java.NativeArray<String>;
+	@:overload @:abstract @:public public function operation_context() : java.NativeArray<String>;
 	
 	/**
 	* This method returns the result from the invoked DII operation.
 	* It raises NO_RESOURCES exception if the operation is not invoked by
 	* using DII mechanism.
 	*/
-	@:overload @:abstract public function result() : org.omg.CORBA.Any;
+	@:overload @:abstract @:public public function result() : org.omg.CORBA.Any;
 	
 	/**
 	* Implementation for response_expected() differs for client and server
@@ -169,7 +169,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* which case receive_exception is called.  On the client, within
 	* send_poll, this attribute is true.
 	*/
-	@:overload @:abstract public function response_expected() : Bool;
+	@:overload @:abstract @:public public function response_expected() : Bool;
 	
 	/**
 	* Defined in the Messaging specification.  Pertinent only when
@@ -184,7 +184,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	*   <li>Messaging::SYNC_WITH_TARGET</li>
 	* </ul>
 	*/
-	@:overload public function sync_scope() : java.StdTypes.Int16;
+	@:overload @:public public function sync_scope() : java.StdTypes.Int16;
 	
 	/**
 	* Describes the state of the result of the operation invocation.  Its
@@ -197,7 +197,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	*   <li>PortableInterceptor::TRANSPORT_RETRY</li>
 	* </ul>
 	*/
-	@:overload public function reply_status() : java.StdTypes.Int16;
+	@:overload @:public public function reply_status() : java.StdTypes.Int16;
 	
 	/**
 	* Implementation for forward_reference() differs for client and server
@@ -208,7 +208,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* to which the request will be forwarded.  It is indeterminate whether a
 	* forwarded request will actually occur.
 	*/
-	@:overload @:abstract public function forward_reference() : org.omg.CORBA.Object;
+	@:overload @:abstract @:public public function forward_reference() : org.omg.CORBA.Object;
 	
 	/**
 	* Returns the data from the given slot of the PortableInterceptor::Current
@@ -219,7 +219,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* <p>
 	* If the ID does not define an allocated slot, InvalidSlot is raised.
 	*/
-	@:overload public function get_slot(id : Int) : org.omg.CORBA.Any;
+	@:overload @:public public function get_slot(id : Int) : org.omg.CORBA.Any;
 	
 	/**
 	* Implementation for get_request_service_context() differs for client
@@ -230,7 +230,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* does not contain an etry for that ID, BAD_PARAM with a minor code of
 	* TBD_BP is raised.
 	*/
-	@:overload @:abstract public function get_request_service_context(id : Int) : org.omg.IOP.ServiceContext;
+	@:overload @:abstract @:public public function get_request_service_context(id : Int) : org.omg.IOP.ServiceContext;
 	
 	/**
 	* Implementation for get_reply_service_context() differs for client
@@ -241,7 +241,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* does not contain an entry for that ID, BAD_PARAM with a minor code of
 	* TBD_BP is raised.
 	*/
-	@:overload @:abstract public function get_reply_service_context(id : Int) : org.omg.IOP.ServiceContext;
+	@:overload @:abstract @:public public function get_reply_service_context(id : Int) : org.omg.IOP.ServiceContext;
 	
 	/**
 	* @return The connection on which the request is made.
@@ -249,12 +249,12 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* Note: we store the connection as an internal type but
 	* expose it here as an external type.
 	*/
-	@:overload public function connection() : com.sun.corba.se.spi.legacy.connection.Connection;
+	@:overload @:public public function connection() : com.sun.corba.se.spi.legacy.connection.Connection;
 	
 	/**
 	* Internal utility method to convert an NVList into a PI Parameter[]
 	*/
-	@:overload private function nvListToParameterArray(parNVList : org.omg.CORBA.NVList) : java.NativeArray<org.omg.Dynamic.Parameter>;
+	@:overload @:protected private function nvListToParameterArray(parNVList : org.omg.CORBA.NVList) : java.NativeArray<org.omg.Dynamic.Parameter>;
 	
 	/**
 	* Utility to wrap the given Exception in an Any object and return it.
@@ -262,14 +262,14 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* an any, then this returns an Any containing the system exception
 	* UNKNOWN.
 	*/
-	@:overload private function exceptionToAny(exception : java.lang.Exception) : org.omg.CORBA.Any;
+	@:overload @:protected private function exceptionToAny(exception : java.lang.Exception) : org.omg.CORBA.Any;
 	
 	/**
 	* Utility method to look up a service context with the given id and
 	* convert it to an IOP.ServiceContext.  Uses the given HashMap as
 	* a cache.  If not found in cache, the result is inserted in the cache.
 	*/
-	@:overload private function getServiceContext(cachedServiceContexts : java.util.HashMap<Dynamic, Dynamic>, serviceContexts : com.sun.corba.se.spi.servicecontext.ServiceContexts, id : Int) : org.omg.IOP.ServiceContext;
+	@:overload @:protected private function getServiceContext(cachedServiceContexts : java.util.HashMap<Dynamic, Dynamic>, serviceContexts : com.sun.corba.se.spi.servicecontext.ServiceContexts, id : Int) : org.omg.IOP.ServiceContext;
 	
 	/**
 	* Utility method to add an IOP.ServiceContext to a core.ServiceContexts
@@ -282,7 +282,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* Uses the given HashMap as a cache.  If a service context is placed
 	* in the container, it goes in the HashMap as well.
 	*/
-	@:overload private function addServiceContext(cachedServiceContexts : java.util.HashMap<Dynamic, Dynamic>, serviceContexts : com.sun.corba.se.spi.servicecontext.ServiceContexts, service_context : org.omg.IOP.ServiceContext, replace : Bool) : Void;
+	@:overload @:protected private function addServiceContext(cachedServiceContexts : java.util.HashMap<Dynamic, Dynamic>, serviceContexts : com.sun.corba.se.spi.servicecontext.ServiceContexts, service_context : org.omg.IOP.ServiceContext, replace : Bool) : Void;
 	
 	/**
 	* Sets the number of interceptors whose starting interception
@@ -294,108 +294,108 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* points for the interceptors whose starting interception points
 	* were not completed.  This simulates the "Flow Stack Visual Model"
 	* presented in section 5.1.3.*/
-	@:overload private function setFlowStackIndex(num : Int) : Void;
+	@:overload @:protected private function setFlowStackIndex(num : Int) : Void;
 	
 	/**
 	* Returns the number of interceptors whose starting interception
 	* points were actually invoked on this client request.  See
 	* setFlowStackIndex for more details.
 	*/
-	@:overload private function getFlowStackIndex() : Int;
+	@:overload @:protected private function getFlowStackIndex() : Int;
 	
 	/**
 	* Sets which ending interception point should be called
 	* for each interceptor in the virtual flow stack.
 	*/
-	@:overload private function setEndingPointCall(call : Int) : Void;
+	@:overload @:protected private function setEndingPointCall(call : Int) : Void;
 	
 	/**
 	* Retrieves the current ending point call type (see
 	* setEndingPointCall for more details).
 	*/
-	@:overload private function getEndingPointCall() : Int;
+	@:overload @:protected private function getEndingPointCall() : Int;
 	
 	/**
 	* Sets which intermediate interception point should be called
 	* for each interceptor in the virtual flow stack.
 	*/
-	@:overload private function setIntermediatePointCall(call : Int) : Void;
+	@:overload @:protected private function setIntermediatePointCall(call : Int) : Void;
 	
 	/**
 	* Retrieves the current intermediate point call type (see
 	* setEndingPointCall for more details).
 	*/
-	@:overload private function getIntermediatePointCall() : Int;
+	@:overload @:protected private function getIntermediatePointCall() : Int;
 	
 	/**
 	* Sets which starting interception point should be called
 	* for each interceptor in the virtual flow stack.
 	*/
-	@:overload private function setStartingPointCall(call : Int) : Void;
+	@:overload @:protected private function setStartingPointCall(call : Int) : Void;
 	
 	/**
 	* Retrieves the current starting point call type (see
 	* setStartingPointCall for more details).
 	*/
-	@:overload private function getStartingPointCall() : Int;
+	@:overload @:protected private function getStartingPointCall() : Int;
 	
 	/**
 	* Returns true if all interceptors' starting and ending points
 	* have already executed to completion, or false if not yet.
 	*/
-	@:overload private function getAlreadyExecuted() : Bool;
+	@:overload @:protected private function getAlreadyExecuted() : Bool;
 	
 	/**
 	* Sets whether all interceotrs' starting and ending points
 	* have already been executed to completion.
 	*/
-	@:overload private function setAlreadyExecuted(alreadyExecuted : Bool) : Void;
+	@:overload @:protected private function setAlreadyExecuted(alreadyExecuted : Bool) : Void;
 	
 	/**
 	* Sets the value to be returned by reply_status
 	*/
-	@:overload private function setReplyStatus(replyStatus : java.StdTypes.Int16) : Void;
+	@:overload @:protected private function setReplyStatus(replyStatus : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Gets the current reply_status without doing an access check
 	* (available only to package and subclasses)
 	*/
-	@:overload private function getReplyStatus() : java.StdTypes.Int16;
+	@:overload @:protected private function getReplyStatus() : java.StdTypes.Int16;
 	
 	/**
 	* Stores the given ForwardRequest object for later analysis.
 	* This version supplements setForwardRequest( IOR );
 	*/
-	@:overload private function setForwardRequest(forwardRequest : org.omg.PortableInterceptor.ForwardRequest) : Void;
+	@:overload @:protected private function setForwardRequest(forwardRequest : org.omg.PortableInterceptor.ForwardRequest) : Void;
 	
 	/**
 	* Stores the given IOR for later forward request analysis.
 	* This version supplements setForwardRequest( ForwardRequest );
 	*/
-	@:overload private function setForwardRequest(ior : com.sun.corba.se.spi.ior.IOR) : Void;
+	@:overload @:protected private function setForwardRequest(ior : com.sun.corba.se.spi.ior.IOR) : Void;
 	
 	/**
 	* Retrieves the ForwardRequest object as a ForwardRequest exception.
 	*/
-	@:overload private function getForwardRequestException() : org.omg.PortableInterceptor.ForwardRequest;
+	@:overload @:protected private function getForwardRequestException() : org.omg.PortableInterceptor.ForwardRequest;
 	
 	/**
 	* Retrieves the IOR of the ForwardRequest exception.
 	*/
-	@:overload private function getForwardRequestIOR() : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:protected private function getForwardRequestIOR() : com.sun.corba.se.spi.ior.IOR;
 	
 	/**
 	* Sets the exception to be returned by received_exception and
 	* received_exception_id.
 	*/
-	@:overload private function setException(exception : java.lang.Exception) : Void;
+	@:overload @:protected private function setException(exception : java.lang.Exception) : Void;
 	
 	/**
 	* Sets the execution point that we are currently executing
 	* (starting points, intermediate points, or ending points).
 	* This allows us to enforce the validity table.
 	*/
-	@:overload private function setCurrentExecutionPoint(executionPoint : Int) : Void;
+	@:overload @:protected private function setCurrentExecutionPoint(executionPoint : Int) : Void;
 	
 	/**
 	* Check whether the caller is allowed to access this method at
@@ -409,9 +409,9 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	*     This allows us to easily look up the method access in a table.
 	*     Note that method ids may overlap between subclasses.
 	*/
-	@:overload @:abstract private function checkAccess(methodID : Int) : Void;
+	@:overload @:protected @:abstract private function checkAccess(methodID : Int) : Void;
 	
-	@:overload private function iorToObject(ior : com.sun.corba.se.spi.ior.IOR) : org.omg.CORBA.Object;
+	@:overload @:protected private function iorToObject(ior : com.sun.corba.se.spi.ior.IOR) : org.omg.CORBA.Object;
 	
 	/**
 	* Returns a duplicate of this CORBA object reference.
@@ -428,7 +428,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* @return a duplicate of this object reference or this object reference
 	*         itself
 	*/
-	@:overload @:public @:public override public function _duplicate() : org.omg.CORBA.Object;
+	@:overload @:public @:public @:public override public function _duplicate() : org.omg.CORBA.Object;
 	
 	/**
 	* Returns a new <code>Object</code> with the given policies
@@ -446,7 +446,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* @return a new <code>Object</code> with the given policies replacing
 	*         or added to those in this <code>Object</code>
 	*/
-	@:overload @:public @:public override public function _set_policy_override(policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : org.omg.CORBA.Object;
+	@:overload @:public @:public @:public override public function _set_policy_override(policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : org.omg.CORBA.Object;
 	
 	/**
 	* Returns the <code>Policy</code> object of the specified type
@@ -460,7 +460,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* ORB or because a policy object of that type is not associated with this
 	* Object
 	*/
-	@:overload @:public @:public override public function _get_policy(policy_type : Int) : org.omg.CORBA.Policy;
+	@:overload @:public @:public @:public override public function _get_policy(policy_type : Int) : org.omg.CORBA.Policy;
 	
 	/**
 	* Signals that the caller is done using this object reference, so
@@ -468,7 +468,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* released. Note that the object implementation is not involved in
 	* this operation, and other references to the same object are not affected.
 	*/
-	@:overload @:public @:public override public function _release() : Void;
+	@:overload @:public @:public @:public override public function _release() : Void;
 	
 	/**
 	* Obtains an <code>InterfaceDef</code> for the object implementation
@@ -481,7 +481,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	*         which provides type information about the object referred to by
 	*         this object reference
 	*/
-	@:overload @:public @:public override public function _get_interface_def() : org.omg.CORBA.Object;
+	@:overload @:public @:public @:public override public function _get_interface_def() : org.omg.CORBA.Object;
 	
 	/**
 	* Returns an ORB-internal identifier for this object reference.
@@ -497,7 +497,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* @param maximum the upper bound on the hash value returned by the ORB
 	* @return the ORB-internal hash identifier for this object reference
 	*/
-	@:overload @:public @:public override public function _hash(maximum : Int) : Int;
+	@:overload @:public @:public @:public override public function _hash(maximum : Int) : Int;
 	
 	/**
 	* Determines whether the two object references are equivalent,
@@ -514,7 +514,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	*         object references are distinct, not necessarily that
 	*         they reference distinct objects.
 	*/
-	@:overload @:public @:public override public function _is_equivalent(other : org.omg.CORBA.Object) : Bool;
+	@:overload @:public @:public @:public override public function _is_equivalent(other : org.omg.CORBA.Object) : Bool;
 	
 	/**
 	* Retrieves the <code>DomainManagers</code> of this object.
@@ -527,7 +527,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* default each object is associated with at least one domain manager at
 	* creation.
 	*/
-	@:overload @:public @:public override public function _get_domain_managers() : java.NativeArray<org.omg.CORBA.DomainManager>;
+	@:overload @:public @:public @:public override public function _get_domain_managers() : java.NativeArray<org.omg.CORBA.DomainManager>;
 	
 	/**
 	* Creates a <code>Request</code> instance for use in the
@@ -537,7 +537,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	*                        <code>Request</code> instance
 	* @return the newly-created <code>Request</code> instance
 	*/
-	@:overload @:public @:public override public function _request(operation : String) : org.omg.CORBA.Request;
+	@:overload @:public @:public @:public override public function _request(operation : String) : org.omg.CORBA.Request;
 	
 	/**
 	* Creates a <code>Request</code> instance initialized with the
@@ -565,7 +565,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* @see ExceptionList
 	* @see ContextList
 	*/
-	@:overload @:public @:public override public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue, exclist : org.omg.CORBA.ExceptionList, ctxlist : org.omg.CORBA.ContextList) : org.omg.CORBA.Request;
+	@:overload @:public @:public @:public override public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue, exclist : org.omg.CORBA.ExceptionList, ctxlist : org.omg.CORBA.ContextList) : org.omg.CORBA.Request;
 	
 	/**
 	* Checks whether this object is an instance of a class that
@@ -576,7 +576,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	*         of a class that implements the interface;
 	*         <code>false</code> otherwise
 	*/
-	@:overload @:public @:public override public function _is_a(repositoryIdentifier : String) : Bool;
+	@:overload @:public @:public @:public override public function _is_a(repositoryIdentifier : String) : Bool;
 	
 	/**
 	* Determines whether the server object for this object reference has been
@@ -584,7 +584,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* @return <code>true</code> if the ORB knows authoritatively that the
 	*         server object does not exist; <code>false</code> otherwise
 	*/
-	@:overload @:public @:public override public function _non_existent() : Bool;
+	@:overload @:public @:public @:public override public function _non_existent() : Bool;
 	
 	/**
 	* Creates a <code>Request</code> instance initialized with the
@@ -604,7 +604,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* @see NVList
 	* @see NamedValue
 	*/
-	@:overload @:public @:public override public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue) : org.omg.CORBA.Request;
+	@:overload @:public @:public @:public override public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue) : org.omg.CORBA.Request;
 	
 	
 }

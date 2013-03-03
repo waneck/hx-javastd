@@ -25,7 +25,7 @@ package com.sun.tools.jdi;
 */
 @:internal extern class PrimitiveTypeImpl extends com.sun.tools.jdi.TypeImpl implements com.sun.jdi.PrimitiveType
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Returns the JNI-style signature for this type.
@@ -38,12 +38,12 @@ package com.sun.tools.jdi;
 	* @see <a href="doc-files/signature.html">Type Signatures</a>
 	* @return the string containing the type signature.
 	*/
-	@:overload override public function signature() : String;
+	@:overload @:public override public function signature() : String;
 	
 	/**
 	* @return a text representation of this type.
 	*/
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
 	/**
 	* Gets the VirtualMachine to which this
@@ -52,7 +52,7 @@ package com.sun.tools.jdi;
 	*
 	* @return the {@link VirtualMachine} for which this mirror is a proxy.
 	*/
-	@:overload override public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	
 }

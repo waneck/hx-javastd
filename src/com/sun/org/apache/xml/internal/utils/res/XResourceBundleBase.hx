@@ -30,7 +30,7 @@ extern class XResourceBundleBase extends java.util.ListResourceBundle
 	*
 	* @return error string associated with the given error code
 	*/
-	@:overload @:abstract public function getMessageKey(errorCode : Int) : String;
+	@:overload @:abstract @:public public function getMessageKey(errorCode : Int) : String;
 	
 	/**
 	* Get the warning string associated with the error code
@@ -39,7 +39,7 @@ extern class XResourceBundleBase extends java.util.ListResourceBundle
 	*
 	* @return warning string associated with the given error code
 	*/
-	@:overload @:abstract public function getWarningKey(errorCode : Int) : String;
+	@:overload @:abstract @:public public function getWarningKey(errorCode : Int) : String;
 	
 	
 }

@@ -29,14 +29,14 @@ extern class BeanContextChildSupport implements java.beans.beancontext.BeanConte
 	* construct a BeanContextChildSupport where this class has been
 	* subclassed in order to implement the JavaBean component itself.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* construct a BeanContextChildSupport where the JavaBean component
 	* itself implements BeanContextChild, and encapsulates this, delegating
 	* that interface to this implementation
 	*/
-	@:overload public function new(bcc : java.beans.beancontext.BeanContextChild) : Void;
+	@:overload @:public public function new(bcc : java.beans.beancontext.BeanContextChild) : Void;
 	
 	/**
 	* Sets the <code>BeanContext</code> for
@@ -45,7 +45,7 @@ extern class BeanContextChildSupport implements java.beans.beancontext.BeanConte
 	* property
 	* @throws <code>PropertyVetoException</code> if the change is rejected
 	*/
-	@:overload @:synchronized public function setBeanContext(bc : java.beans.beancontext.BeanContext) : Void;
+	@:overload @:public @:synchronized public function setBeanContext(bc : java.beans.beancontext.BeanContext) : Void;
 	
 	/**
 	* Gets the nesting <code>BeanContext</code>
@@ -53,7 +53,7 @@ extern class BeanContextChildSupport implements java.beans.beancontext.BeanConte
 	* @return the nesting <code>BeanContext</code> for
 	* this <code>BeanContextChildSupport</code>.
 	*/
-	@:overload @:synchronized public function getBeanContext() : java.beans.beancontext.BeanContext;
+	@:overload @:public @:synchronized public function getBeanContext() : java.beans.beancontext.BeanContext;
 	
 	/**
 	* Add a PropertyChangeListener for a specific property.
@@ -66,7 +66,7 @@ extern class BeanContextChildSupport implements java.beans.beancontext.BeanConte
 	* @param name The name of the property to listen on
 	* @param pcl The <code>PropertyChangeListener</code> to be added
 	*/
-	@:overload public function addPropertyChangeListener(name : String, pcl : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(name : String, pcl : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Remove a PropertyChangeListener for a specific property.
@@ -81,7 +81,7 @@ extern class BeanContextChildSupport implements java.beans.beancontext.BeanConte
 	* @param name The name of the property that was listened on
 	* @param pcl The PropertyChangeListener to be removed
 	*/
-	@:overload public function removePropertyChangeListener(name : String, pcl : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(name : String, pcl : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Add a VetoableChangeListener for a specific property.
@@ -94,7 +94,7 @@ extern class BeanContextChildSupport implements java.beans.beancontext.BeanConte
 	* @param name The name of the property to listen on
 	* @param vcl The <code>VetoableChangeListener</code> to be added
 	*/
-	@:overload public function addVetoableChangeListener(name : String, vcl : java.beans.VetoableChangeListener) : Void;
+	@:overload @:public public function addVetoableChangeListener(name : String, vcl : java.beans.VetoableChangeListener) : Void;
 	
 	/**
 	* Removes a <code>VetoableChangeListener</code>.
@@ -109,7 +109,7 @@ extern class BeanContextChildSupport implements java.beans.beancontext.BeanConte
 	* @param name The name of the property that was listened on
 	* @param vcl The <code>VetoableChangeListener</code> to be removed
 	*/
-	@:overload public function removeVetoableChangeListener(name : String, vcl : java.beans.VetoableChangeListener) : Void;
+	@:overload @:public public function removeVetoableChangeListener(name : String, vcl : java.beans.VetoableChangeListener) : Void;
 	
 	/**
 	* A service provided by the nesting BeanContext has been revoked.
@@ -119,7 +119,7 @@ extern class BeanContextChildSupport implements java.beans.beancontext.BeanConte
 	* @param bcsre The <code>BeanContextServiceRevokedEvent</code> fired as a
 	* result of a service being revoked
 	*/
-	@:overload public function serviceRevoked(bcsre : java.beans.beancontext.BeanContextServiceRevokedEvent) : Void;
+	@:overload @:public public function serviceRevoked(bcsre : java.beans.beancontext.BeanContextServiceRevokedEvent) : Void;
 	
 	/**
 	* A new service is available from the nesting BeanContext.
@@ -130,7 +130,7 @@ extern class BeanContextChildSupport implements java.beans.beancontext.BeanConte
 	* result of a service becoming available
 	*
 	*/
-	@:overload public function serviceAvailable(bcsae : java.beans.beancontext.BeanContextServiceAvailableEvent) : Void;
+	@:overload @:public public function serviceAvailable(bcsae : java.beans.beancontext.BeanContextServiceAvailableEvent) : Void;
 	
 	/**
 	* Gets the <tt>BeanContextChild</tt> associated with this
@@ -138,14 +138,14 @@ extern class BeanContextChildSupport implements java.beans.beancontext.BeanConte
 	*
 	* @return the <tt>BeanContextChild</tt> peer of this class
 	*/
-	@:overload public function getBeanContextChildPeer() : java.beans.beancontext.BeanContextChild;
+	@:overload @:public public function getBeanContextChildPeer() : java.beans.beancontext.BeanContextChild;
 	
 	/**
 	* Reports whether or not this class is a delegate of another.
 	*
 	* @return true if this class is a delegate of another
 	*/
-	@:overload public function isDelegated() : Bool;
+	@:overload @:public public function isDelegated() : Bool;
 	
 	/**
 	* Report a bound property update to any registered listeners. No event is
@@ -154,7 +154,7 @@ extern class BeanContextChildSupport implements java.beans.beancontext.BeanConte
 	* @param oldValue  The old value of the property
 	* @param newValue  The new value of the property
 	*/
-	@:overload public function firePropertyChange(name : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:public public function firePropertyChange(name : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Report a vetoable property update to any registered listeners.
@@ -173,7 +173,7 @@ extern class BeanContextChildSupport implements java.beans.beancontext.BeanConte
 	* @throws PropertyVetoException if the recipient wishes the property
 	* change to be rolled back.
 	*/
-	@:overload public function fireVetoableChange(name : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:public public function fireVetoableChange(name : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Called from setBeanContext to validate (or otherwise) the
@@ -184,7 +184,7 @@ extern class BeanContextChildSupport implements java.beans.beancontext.BeanConte
 	*  the BeanContext property
 	* @return <code>true</code> if the change operation is to be vetoed
 	*/
-	@:overload public function validatePendingSetBeanContext(newValue : java.beans.beancontext.BeanContext) : Bool;
+	@:overload @:public public function validatePendingSetBeanContext(newValue : java.beans.beancontext.BeanContext) : Bool;
 	
 	/**
 	* This method may be overridden by subclasses to provide their own
@@ -192,41 +192,41 @@ extern class BeanContextChildSupport implements java.beans.beancontext.BeanConte
 	* obtained from its current BeanContext property should be released
 	* since the object is no longer nested within that BeanContext.
 	*/
-	@:overload private function releaseBeanContextResources() : Void;
+	@:overload @:protected private function releaseBeanContextResources() : Void;
 	
 	/**
 	* This method may be overridden by subclasses to provide their own
 	* initialization behaviors. When invoked any resources requried by the
 	* BeanContextChild should be obtained from the current BeanContext.
 	*/
-	@:overload private function initializeBeanContextResources() : Void;
+	@:overload @:protected private function initializeBeanContextResources() : Void;
 	
 	/**
 	* The <code>BeanContext</code> in which
 	* this <code>BeanContextChild</code> is nested.
 	*/
-	public var beanContextChildPeer : java.beans.beancontext.BeanContextChild;
+	@:public public var beanContextChildPeer : java.beans.beancontext.BeanContextChild;
 	
 	/**
 	* The <tt>PropertyChangeSupport</tt> associated with this
 	* <tt>BeanContextChildSupport</tt>.
 	*/
-	private var pcSupport : java.beans.PropertyChangeSupport;
+	@:protected private var pcSupport : java.beans.PropertyChangeSupport;
 	
 	/**
 	* The <tt>VetoableChangeSupport</tt> associated with this
 	* <tt>BeanContextChildSupport</tt>.
 	*/
-	private var vcSupport : java.beans.VetoableChangeSupport;
+	@:protected private var vcSupport : java.beans.VetoableChangeSupport;
 	
-	@:transient private var beanContext : java.beans.beancontext.BeanContext;
+	@:protected @:transient private var beanContext : java.beans.beancontext.BeanContext;
 	
 	/**
 	* A flag indicating that there has been
 	* at least one <code>PropertyChangeVetoException</code>
 	* thrown for the attempted setBeanContext operation.
 	*/
-	@:transient private var rejectedSetBCOnce : Bool;
+	@:protected @:transient private var rejectedSetBCOnce : Bool;
 	
 	
 }

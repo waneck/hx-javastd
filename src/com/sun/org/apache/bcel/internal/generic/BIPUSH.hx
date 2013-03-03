@@ -60,28 +60,28 @@ extern class BIPUSH extends com.sun.org.apache.bcel.internal.generic.Instruction
 {
 	/** Push byte on stack
 	*/
-	@:overload public function new(b : java.StdTypes.Int8) : Void;
+	@:overload @:public public function new(b : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Dump instruction as byte code to stream out.
 	*/
-	@:overload override public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload @:public override public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return mnemonic for instruction
 	*/
-	@:overload override public function toString(verbose : Bool) : String;
+	@:overload @:public override public function toString(verbose : Bool) : String;
 	
 	/**
 	* Read needed data (e.g. index) from file.
 	*/
-	@:overload override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload @:protected override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
-	@:overload public function getValue() : java.lang.Number;
+	@:overload @:public public function getValue() : java.lang.Number;
 	
 	/** @return Type.BYTE
 	*/
-	@:overload public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -91,7 +91,7 @@ extern class BIPUSH extends com.sun.org.apache.bcel.internal.generic.Instruction
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

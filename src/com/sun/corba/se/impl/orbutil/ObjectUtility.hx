@@ -30,7 +30,7 @@ extern class ObjectUtility
 	* elements of arr1 followed by the elements of arr2.
 	* Throws IllegalArgumentException otherwise.
 	*/
-	@:overload public static function concatenateArrays(arr1 : Dynamic, arr2 : Dynamic) : Dynamic;
+	@:overload @:public @:static public static function concatenateArrays(arr1 : Dynamic, arr2 : Dynamic) : Dynamic;
 	
 	
 }

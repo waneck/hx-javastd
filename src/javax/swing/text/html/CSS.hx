@@ -106,12 +106,12 @@ package javax.swing.text.html;
 */
 extern class CSS implements java.io.Serializable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Return the set of all possible CSS attribute keys.
 	*/
-	@:overload public static function getAllAttributeKeys() : java.NativeArray<javax.swing.text.html.CSS.CSS_Attribute>;
+	@:overload @:public @:static public static function getAllAttributeKeys() : java.NativeArray<javax.swing.text.html.CSS.CSS_Attribute>;
 	
 	/**
 	* Translates a string to a <code>CSS.Attribute</code> object.
@@ -124,7 +124,7 @@ extern class CSS implements java.io.Serializable
 	*  or <code>null</code> if the string
 	*  doesn't represent a valid attribute key
 	*/
-	@:overload @:final public static function getAttribute(name : String) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:overload @:public @:static @:final public static function getAttribute(name : String) : javax.swing.text.html.CSS.CSS_Attribute;
 	
 	
 }
@@ -141,142 +141,142 @@ extern class CSS implements java.io.Serializable
 	* should exactly match the string specified in the
 	* CSS specification.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Fetch the default value for the attribute.
 	* If there is no default value (such as for
 	* composite attributes), null will be returned.
 	*/
-	@:overload public function getDefaultValue() : String;
+	@:overload @:public public function getDefaultValue() : String;
 	
 	/**
 	* Indicates if the attribute should be inherited
 	* from the parent or not.
 	*/
-	@:overload public function isInherited() : Bool;
+	@:overload @:public public function isInherited() : Bool;
 	
-	public static var BACKGROUND(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BACKGROUND(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BACKGROUND_ATTACHMENT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BACKGROUND_ATTACHMENT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BACKGROUND_COLOR(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BACKGROUND_COLOR(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BACKGROUND_IMAGE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BACKGROUND_IMAGE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BACKGROUND_POSITION(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BACKGROUND_POSITION(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BACKGROUND_REPEAT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BACKGROUND_REPEAT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_BOTTOM(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_BOTTOM(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_BOTTOM_COLOR(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_BOTTOM_COLOR(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_BOTTOM_STYLE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_BOTTOM_STYLE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_BOTTOM_WIDTH(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_BOTTOM_WIDTH(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_COLOR(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_COLOR(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_LEFT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_LEFT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_LEFT_COLOR(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_LEFT_COLOR(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_LEFT_STYLE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_LEFT_STYLE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_LEFT_WIDTH(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_LEFT_WIDTH(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_RIGHT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_RIGHT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_RIGHT_COLOR(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_RIGHT_COLOR(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_RIGHT_STYLE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_RIGHT_STYLE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_RIGHT_WIDTH(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_RIGHT_WIDTH(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_STYLE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_STYLE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_TOP(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_TOP(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_TOP_COLOR(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_TOP_COLOR(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_TOP_STYLE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_TOP_STYLE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_TOP_WIDTH(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_TOP_WIDTH(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var BORDER_WIDTH(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var BORDER_WIDTH(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var CLEAR(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var CLEAR(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var COLOR(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var COLOR(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var DISPLAY(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var DISPLAY(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var FLOAT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var FLOAT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var FONT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var FONT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var FONT_FAMILY(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var FONT_FAMILY(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var FONT_SIZE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var FONT_SIZE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var FONT_STYLE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var FONT_STYLE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var FONT_VARIANT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var FONT_VARIANT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var FONT_WEIGHT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var FONT_WEIGHT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var HEIGHT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var HEIGHT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var LETTER_SPACING(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var LETTER_SPACING(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var LINE_HEIGHT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var LINE_HEIGHT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var LIST_STYLE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var LIST_STYLE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var LIST_STYLE_IMAGE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var LIST_STYLE_IMAGE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var LIST_STYLE_POSITION(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var LIST_STYLE_POSITION(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var LIST_STYLE_TYPE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var LIST_STYLE_TYPE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var MARGIN(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var MARGIN(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var MARGIN_BOTTOM(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var MARGIN_BOTTOM(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var MARGIN_LEFT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var MARGIN_LEFT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var MARGIN_RIGHT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var MARGIN_RIGHT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var MARGIN_TOP(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var MARGIN_TOP(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var PADDING(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var PADDING(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var PADDING_BOTTOM(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var PADDING_BOTTOM(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var PADDING_LEFT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var PADDING_LEFT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var PADDING_RIGHT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var PADDING_RIGHT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var PADDING_TOP(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var PADDING_TOP(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var TEXT_ALIGN(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var TEXT_ALIGN(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var TEXT_DECORATION(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var TEXT_DECORATION(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var TEXT_INDENT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var TEXT_INDENT(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var TEXT_TRANSFORM(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var TEXT_TRANSFORM(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var VERTICAL_ALIGN(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var VERTICAL_ALIGN(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var WORD_SPACING(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var WORD_SPACING(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var WHITE_SPACE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var WHITE_SPACE(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
-	public static var WIDTH(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
+	@:public @:static @:final public static var WIDTH(default, null) : javax.swing.text.html.CSS.CSS_Attribute;
 	
 	
 }
@@ -287,7 +287,7 @@ extern class CSS implements java.io.Serializable
 	* should exactly match the string specified in the
 	* CSS specification.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -323,7 +323,7 @@ extern class CSS implements java.io.Serializable
 	/**
 	* Return the CSS format of the value
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -409,7 +409,7 @@ extern class CSS implements java.io.Serializable
 */
 @:native('javax$swing$text$html$CSS$LengthUnit') @:internal extern class CSS_LengthUnit implements java.io.Serializable
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

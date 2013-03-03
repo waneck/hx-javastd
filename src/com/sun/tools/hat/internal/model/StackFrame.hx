@@ -37,25 +37,25 @@ package com.sun.tools.hat.internal.model;
 */
 extern class StackFrame
 {
-	public static var LINE_NUMBER_UNKNOWN(default, null) : Int;
+	@:public @:final @:static public static var LINE_NUMBER_UNKNOWN(default, null) : Int;
 	
-	public static var LINE_NUMBER_COMPILED(default, null) : Int;
+	@:public @:final @:static public static var LINE_NUMBER_COMPILED(default, null) : Int;
 	
-	public static var LINE_NUMBER_NATIVE(default, null) : Int;
+	@:public @:final @:static public static var LINE_NUMBER_NATIVE(default, null) : Int;
 	
-	@:overload public function new(methodName : String, methodSignature : String, className : String, sourceFileName : String, lineNumber : Int) : Void;
+	@:overload @:public public function new(methodName : String, methodSignature : String, className : String, sourceFileName : String, lineNumber : Int) : Void;
 	
-	@:overload public function resolve(snapshot : com.sun.tools.hat.internal.model.Snapshot) : Void;
+	@:overload @:public public function resolve(snapshot : com.sun.tools.hat.internal.model.Snapshot) : Void;
 	
-	@:overload public function getMethodName() : String;
+	@:overload @:public public function getMethodName() : String;
 	
-	@:overload public function getMethodSignature() : String;
+	@:overload @:public public function getMethodSignature() : String;
 	
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
-	@:overload public function getSourceFileName() : String;
+	@:overload @:public public function getSourceFileName() : String;
 	
-	@:overload public function getLineNumber() : String;
+	@:overload @:public public function getLineNumber() : String;
 	
 	
 }

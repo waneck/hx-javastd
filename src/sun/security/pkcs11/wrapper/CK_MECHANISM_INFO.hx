@@ -68,7 +68,7 @@ extern class CK_MECHANISM_INFO
 	*   CK_ULONG ulMinKeySize;
 	* </PRE>
 	*/
-	public var ulMinKeySize : haxe.Int64;
+	@:public public var ulMinKeySize : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -76,7 +76,7 @@ extern class CK_MECHANISM_INFO
 	*   CK_ULONG ulMaxKeySize;
 	* </PRE>
 	*/
-	public var ulMaxKeySize : haxe.Int64;
+	@:public public var ulMaxKeySize : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -84,16 +84,16 @@ extern class CK_MECHANISM_INFO
 	*   CK_FLAGS flags;
 	* </PRE>
 	*/
-	public var flags : haxe.Int64;
+	@:public public var flags : haxe.Int64;
 	
-	@:overload public function new(minKeySize : haxe.Int64, maxKeySize : haxe.Int64, flags : haxe.Int64) : Void;
+	@:overload @:public public function new(minKeySize : haxe.Int64, maxKeySize : haxe.Int64, flags : haxe.Int64) : Void;
 	
 	/**
 	* Returns the string representation of CK_MECHANISM_INFO.
 	*
 	* @return the string representation of CK_MECHANISM_INFO
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

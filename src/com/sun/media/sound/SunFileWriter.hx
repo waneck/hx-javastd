@@ -30,17 +30,17 @@ package com.sun.media.sound;
 	*
 	* @author Jan Borgersen
 	*/
-	private static var bufferSize(default, null) : Int;
+	@:protected @:static @:final private static var bufferSize(default, null) : Int;
 	
-	private static var bisBufferSize(default, null) : Int;
+	@:protected @:static @:final private static var bisBufferSize(default, null) : Int;
 	
-	@:overload public function getAudioFileTypes() : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
+	@:overload @:public override public function getAudioFileTypes() : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
 	
-	@:overload @:abstract public function getAudioFileTypes(stream : javax.sound.sampled.AudioInputStream) : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
+	@:overload @:public @:abstract override public function getAudioFileTypes(stream : javax.sound.sampled.AudioInputStream) : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
 	
-	@:overload @:abstract public function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.OutputStream) : Int;
+	@:overload @:public @:abstract override public function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.OutputStream) : Int;
 	
-	@:overload @:abstract public function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.File) : Int;
+	@:overload @:public @:abstract override public function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.File) : Int;
 	
 	/**
 	* rllong
@@ -50,7 +50,7 @@ package com.sun.media.sound;
 	* @return 32 bits swapped value.
 	* @exception IOException
 	*/
-	@:overload private function rllong(dis : java.io.DataInputStream) : Int;
+	@:overload @:protected private function rllong(dis : java.io.DataInputStream) : Int;
 	
 	/**
 	* big2little
@@ -58,7 +58,7 @@ package com.sun.media.sound;
 	* @param int
 	* @return 32 bits swapped value
 	*/
-	@:overload private function big2little(i : Int) : Int;
+	@:overload @:protected private function big2little(i : Int) : Int;
 	
 	/**
 	* rlshort
@@ -67,7 +67,7 @@ package com.sun.media.sound;
 	* @return the swapped value.
 	* @exception IOException
 	*/
-	@:overload private function rlshort(dis : java.io.DataInputStream) : java.StdTypes.Int16;
+	@:overload @:protected private function rlshort(dis : java.io.DataInputStream) : java.StdTypes.Int16;
 	
 	/**
 	* big2little
@@ -75,7 +75,7 @@ package com.sun.media.sound;
 	* @param int
 	* @return 16 bits swapped value
 	*/
-	@:overload private function big2littleShort(i : java.StdTypes.Int16) : java.StdTypes.Int16;
+	@:overload @:protected private function big2littleShort(i : java.StdTypes.Int16) : java.StdTypes.Int16;
 	
 	
 }
@@ -86,25 +86,25 @@ package com.sun.media.sound;
 */
 @:native('com$sun$media$sound$SunFileWriter$NoCloseInputStream') extern class SunFileWriter_NoCloseInputStream extends java.io.InputStream
 {
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload override public function mark(readlimit : Int) : Void;
+	@:overload @:public override public function mark(readlimit : Int) : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	
 }

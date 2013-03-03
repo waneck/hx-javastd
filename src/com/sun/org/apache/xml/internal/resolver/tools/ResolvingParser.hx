@@ -23,25 +23,25 @@ package com.sun.org.apache.xml.internal.resolver.tools;
 extern class ResolvingParser implements org.xml.sax.Parser implements org.xml.sax.DTDHandler implements org.xml.sax.DocumentHandler implements org.xml.sax.EntityResolver
 {
 	/** Make the parser Namespace aware? */
-	public static var namespaceAware : Bool;
+	@:public @:static public static var namespaceAware : Bool;
 	
 	/** Make the parser validating? */
-	public static var validating : Bool;
+	@:public @:static public static var validating : Bool;
 	
 	/** Suppress explanatory message?
 	*
 	* @see #parse(InputSource)
 	*/
-	public static var suppressExplanation : Bool;
+	@:public @:static public static var suppressExplanation : Bool;
 	
 	/** Constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Constructor. */
-	@:overload public function new(manager : com.sun.org.apache.xml.internal.resolver.CatalogManager) : Void;
+	@:overload @:public public function new(manager : com.sun.org.apache.xml.internal.resolver.CatalogManager) : Void;
 	
 	/** Return the Catalog being used. */
-	@:overload public function getCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
+	@:overload @:public public function getCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
 	
 	/**
 	* SAX Parser API.
@@ -64,19 +64,19 @@ extern class ResolvingParser implements org.xml.sax.Parser implements org.xml.sa
 	* <code>suppressExplanation</code> is set to <code>false</code> before
 	* parsing, it will never be printed.</p>
 	*/
-	@:overload public function parse(input : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function parse(input : org.xml.sax.InputSource) : Void;
 	
 	/** SAX Parser API.
 	*
 	* @see #parse(InputSource)
 	*/
-	@:overload public function parse(systemId : String) : Void;
+	@:overload @:public public function parse(systemId : String) : Void;
 	
 	/** SAX Parser API. */
-	@:overload public function setDocumentHandler(handler : org.xml.sax.DocumentHandler) : Void;
+	@:overload @:public public function setDocumentHandler(handler : org.xml.sax.DocumentHandler) : Void;
 	
 	/** SAX Parser API. */
-	@:overload public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
+	@:overload @:public public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
 	
 	/**
 	* SAX Parser API.
@@ -84,50 +84,50 @@ extern class ResolvingParser implements org.xml.sax.Parser implements org.xml.sa
 	* <p>The purpose of this class is to implement an entity resolver.
 	* Attempting to set a different one is pointless (and ignored).</p>
 	*/
-	@:overload public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
 	
 	/** SAX Parser API. */
-	@:overload public function setErrorHandler(handler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function setErrorHandler(handler : org.xml.sax.ErrorHandler) : Void;
 	
 	/** SAX Parser API. */
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
 	/** SAX DocumentHandler API. */
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/** SAX DocumentHandler API. */
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
 	/** SAX DocumentHandler API. */
-	@:overload public function endElement(name : String) : Void;
+	@:overload @:public public function endElement(name : String) : Void;
 	
 	/** SAX DocumentHandler API. */
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/** SAX DocumentHandler API. */
-	@:overload public function processingInstruction(target : String, pidata : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, pidata : String) : Void;
 	
 	/** SAX DocumentHandler API. */
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	/** SAX DocumentHandler API. */
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
 	/** SAX DocumentHandler API. */
-	@:overload public function startElement(name : String, atts : org.xml.sax.AttributeList) : Void;
+	@:overload @:public public function startElement(name : String, atts : org.xml.sax.AttributeList) : Void;
 	
 	/** SAX DTDHandler API. */
-	@:overload public function notationDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function notationDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	/** SAX DTDHandler API. */
-	@:overload public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
+	@:overload @:public public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
 	
 	/**
 	* Implements the <code>resolveEntity</code> method
 	* for the SAX interface, using an underlying CatalogResolver
 	* to do the real work.
 	*/
-	@:overload public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
 	
 }

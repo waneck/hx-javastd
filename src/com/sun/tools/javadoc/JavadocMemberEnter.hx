@@ -30,15 +30,15 @@ package com.sun.tools.javadoc;
 */
 extern class JavadocMemberEnter extends com.sun.tools.javac.comp.MemberEnter
 {
-	@:overload public static function instance0(context : com.sun.tools.javac.util.Context) : com.sun.tools.javadoc.JavadocMemberEnter;
+	@:overload @:public @:static public static function instance0(context : com.sun.tools.javac.util.Context) : com.sun.tools.javadoc.JavadocMemberEnter;
 	
-	@:overload public static function preRegister(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:public @:static public static function preRegister(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function visitMethodDef(tree : JCMethodDecl) : Void;
+	@:overload @:public public function visitMethodDef(tree : JCMethodDecl) : Void;
 	
-	@:overload public function visitVarDef(tree : JCVariableDecl) : Void;
+	@:overload @:public public function visitVarDef(tree : JCVariableDecl) : Void;
 	
 	
 }

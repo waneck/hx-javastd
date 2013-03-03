@@ -32,12 +32,12 @@ package com.sun.imageio.plugins.jpeg;
 	* segments.  XXX break out UnknownMarkerSegment as a subclass
 	* and make this abstract, avoiding unused data field.
 	*/
-	private static var LENGTH_SIZE(default, null) : Int;
+	@:protected @:static @:final private static var LENGTH_SIZE(default, null) : Int;
 	
 	/**
 	* Deep copy of data array.
 	*/
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected private function clone() : Dynamic;
 	
 	
 }

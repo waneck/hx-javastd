@@ -63,7 +63,7 @@ package java.lang.management;
 	* @return the total number of classes loaded.
 	*
 	*/
-	@:overload public function getTotalLoadedClassCount() : haxe.Int64;
+	@:overload @:public public function getTotalLoadedClassCount() : haxe.Int64;
 	
 	/**
 	* Returns the number of classes that are currently loaded in the
@@ -71,7 +71,7 @@ package java.lang.management;
 	*
 	* @return the number of currently loaded classes.
 	*/
-	@:overload public function getLoadedClassCount() : Int;
+	@:overload @:public public function getLoadedClassCount() : Int;
 	
 	/**
 	* Returns the total number of classes unloaded since the Java virtual machine
@@ -79,7 +79,7 @@ package java.lang.management;
 	*
 	* @return the total number of unloaded classes.
 	*/
-	@:overload public function getUnloadedClassCount() : haxe.Int64;
+	@:overload @:public public function getUnloadedClassCount() : haxe.Int64;
 	
 	/**
 	* Tests if the verbose output for the class loading system is enabled.
@@ -87,7 +87,7 @@ package java.lang.management;
 	* @return <tt>true</tt> if the verbose output for the class loading
 	* system is enabled; <tt>false</tt> otherwise.
 	*/
-	@:overload public function isVerbose() : Bool;
+	@:overload @:public public function isVerbose() : Bool;
 	
 	/**
 	* Enables or disables the verbose output for the class loading
@@ -107,7 +107,7 @@ package java.lang.management;
 	*             exists and the caller does not have
 	*             ManagementPermission("control").
 	*/
-	@:overload public function setVerbose(value : Bool) : Void;
+	@:overload @:public public function setVerbose(value : Bool) : Void;
 	
 	
 }

@@ -31,28 +31,28 @@ extern class JEnumConstant extends com.sun.codemodel.internal.JExpressionImpl im
 	* @param arg
 	*        Argument to add to argument list
 	*/
-	@:overload public function arg(arg : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JEnumConstant;
+	@:overload @:public public function arg(arg : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JEnumConstant;
 	
 	/**
 	* Returns the name of this constant.
 	*
 	* @return never null.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Creates, if necessary, and returns the enum constant javadoc.
 	*
 	* @return JDocComment containing javadocs for this constant.
 	*/
-	@:overload public function javadoc() : com.sun.codemodel.internal.JDocComment;
+	@:overload @:public public function javadoc() : com.sun.codemodel.internal.JDocComment;
 	
 	/**
 	* Adds an annotation to this variable.
 	* @param clazz
 	*          The annotation class to annotate the field with
 	*/
-	@:overload public function annotate(clazz : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function annotate(clazz : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JAnnotationUse;
 	
 	/**
 	* Adds an annotation to this variable.
@@ -60,18 +60,18 @@ extern class JEnumConstant extends com.sun.codemodel.internal.JExpressionImpl im
 	* @param clazz
 	*          The annotation class to annotate the field with
 	*/
-	@:overload public function annotate(clazz : Class<java.lang.annotation.Annotation>) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function annotate(clazz : Class<java.lang.annotation.Annotation>) : com.sun.codemodel.internal.JAnnotationUse;
 	
-	@:overload public function annotate2<W : com.sun.codemodel.internal.JAnnotationWriter<Dynamic>>(clazz : Class<W>) : W;
+	@:overload @:public public function annotate2<W : com.sun.codemodel.internal.JAnnotationWriter<Dynamic>>(clazz : Class<W>) : W;
 	
 	/**
 	* {@link JAnnotatable#annotations()}
 	*/
-	@:overload public function annotations() : java.util.Collection<com.sun.codemodel.internal.JAnnotationUse>;
+	@:overload @:public public function annotations() : java.util.Collection<com.sun.codemodel.internal.JAnnotationUse>;
 	
-	@:overload public function declare(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function declare(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
-	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

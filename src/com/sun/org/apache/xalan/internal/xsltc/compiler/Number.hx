@@ -27,40 +27,40 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* Returns true if this closure is compiled in an inner class (i.e.
 	* if this is a real closure).
 	*/
-	@:overload public function inInnerClass() : Bool;
+	@:overload @:public public function inInnerClass() : Bool;
 	
 	/**
 	* Returns a reference to its parent closure or null if outermost.
 	*/
-	@:overload public function getParentClosure() : com.sun.org.apache.xalan.internal.xsltc.compiler.Closure;
+	@:overload @:public public function getParentClosure() : com.sun.org.apache.xalan.internal.xsltc.compiler.Closure;
 	
 	/**
 	* Returns the name of the auxiliary class or null if this predicate
 	* is compiled inside the Translet.
 	*/
-	@:overload public function getInnerClassName() : String;
+	@:overload @:public public function getInnerClassName() : String;
 	
 	/**
 	* Add new variable to the closure.
 	*/
-	@:overload public function addVariable(variableRef : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableRefBase) : Void;
+	@:overload @:public public function addVariable(variableRef : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableRefBase) : Void;
 	
-	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* True if the has specified a value for this instance of number.
 	*/
-	@:overload public function hasValue() : Bool;
+	@:overload @:public public function hasValue() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this instance of number has neither
 	* a from nor a count pattern.
 	*/
-	@:overload public function isDefault() : Bool;
+	@:overload @:public public function isDefault() : Bool;
 	
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

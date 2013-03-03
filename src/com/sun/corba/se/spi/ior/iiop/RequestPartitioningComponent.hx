@@ -25,7 +25,7 @@ package com.sun.corba.se.spi.ior.iiop;
 */
 extern interface RequestPartitioningComponent extends com.sun.corba.se.spi.ior.TaggedComponent
 {
-	@:overload public function getRequestPartitioningId() : Int;
+	@:overload @:public public function getRequestPartitioningId() : Int;
 	
 	
 }

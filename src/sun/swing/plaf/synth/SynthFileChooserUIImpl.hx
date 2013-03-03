@@ -40,97 +40,97 @@ package sun.swing.plaf.synth;
 */
 extern class SynthFileChooserUIImpl extends sun.swing.plaf.synth.SynthFileChooserUI
 {
-	@:overload public function new(b : javax.swing.JFileChooser) : Void;
+	@:overload @:public public function new(b : javax.swing.JFileChooser) : Void;
 	
-	@:overload override private function installDefaults(fc : javax.swing.JFileChooser) : Void;
+	@:overload @:protected override private function installDefaults(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload override public function installComponents(fc : javax.swing.JFileChooser) : Void;
+	@:overload @:public override public function installComponents(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload override private function installListeners(fc : javax.swing.JFileChooser) : Void;
+	@:overload @:protected override private function installListeners(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload override private function uninstallListeners(fc : javax.swing.JFileChooser) : Void;
+	@:overload @:protected override private function uninstallListeners(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function installStrings(fc : javax.swing.JFileChooser) : Void;
+	@:overload @:protected override private function installStrings(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload override public function getFileName() : String;
+	@:overload @:public override public function getFileName() : String;
 	
-	@:overload override public function setFileName(fileName : String) : Void;
+	@:overload @:public override public function setFileName(fileName : String) : Void;
 	
-	@:overload override public function rescanCurrentDirectory(fc : javax.swing.JFileChooser) : Void;
+	@:overload @:public override public function rescanCurrentDirectory(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload private function doSelectedFileChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected override private function doSelectedFileChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function doSelectedFilesChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected override private function doSelectedFilesChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function doDirectoryChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected override private function doDirectoryChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function doFileSelectionModeChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected override private function doFileSelectionModeChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function doAccessoryChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected override private function doAccessoryChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function doControlButtonsChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected override private function doControlButtonsChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function addControlButtons() : Void;
+	@:overload @:protected private function addControlButtons() : Void;
 	
-	@:overload private function removeControlButtons() : Void;
+	@:overload @:protected private function removeControlButtons() : Void;
 	
-	@:overload private function createActionMap() : javax.swing.ActionMap;
+	@:overload @:protected override private function createActionMap() : javax.swing.ActionMap;
 	
-	@:overload private function getDirectoryComboBox() : javax.swing.JComponent;
+	@:overload @:protected private function getDirectoryComboBox() : javax.swing.JComponent;
 	
-	@:overload private function getDirectoryComboBoxAction() : javax.swing.Action;
+	@:overload @:protected private function getDirectoryComboBoxAction() : javax.swing.Action;
 	
-	@:overload private function createDirectoryComboBoxRenderer(fc : javax.swing.JFileChooser) : sun.swing.plaf.synth.SynthFileChooserUIImpl.SynthFileChooserUIImpl_DirectoryComboBoxRenderer;
+	@:overload @:protected private function createDirectoryComboBoxRenderer(fc : javax.swing.JFileChooser) : sun.swing.plaf.synth.SynthFileChooserUIImpl.SynthFileChooserUIImpl_DirectoryComboBoxRenderer;
 	
-	@:overload private function createDirectoryComboBoxModel(fc : javax.swing.JFileChooser) : sun.swing.plaf.synth.SynthFileChooserUIImpl.SynthFileChooserUIImpl_DirectoryComboBoxModel;
+	@:overload @:protected private function createDirectoryComboBoxModel(fc : javax.swing.JFileChooser) : sun.swing.plaf.synth.SynthFileChooserUIImpl.SynthFileChooserUIImpl_DirectoryComboBoxModel;
 	
-	@:overload private function createFilterComboBoxRenderer() : sun.swing.plaf.synth.SynthFileChooserUIImpl.SynthFileChooserUIImpl_FilterComboBoxRenderer;
+	@:overload @:protected private function createFilterComboBoxRenderer() : sun.swing.plaf.synth.SynthFileChooserUIImpl.SynthFileChooserUIImpl_FilterComboBoxRenderer;
 	
-	@:overload private function createFilterComboBoxModel() : sun.swing.plaf.synth.SynthFileChooserUIImpl.SynthFileChooserUIImpl_FilterComboBoxModel;
+	@:overload @:protected private function createFilterComboBoxModel() : sun.swing.plaf.synth.SynthFileChooserUIImpl.SynthFileChooserUIImpl_FilterComboBoxModel;
 	
 	
 }
 @:native('sun$swing$plaf$synth$SynthFileChooserUIImpl$SynthFileChooserUIAccessor') @:internal extern class SynthFileChooserUIImpl_SynthFileChooserUIAccessor implements sun.swing.FilePane.FilePane_FileChooserUIAccessor
 {
-	@:overload public function getFileChooser() : javax.swing.JFileChooser;
+	@:overload @:public public function getFileChooser() : javax.swing.JFileChooser;
 	
-	@:overload public function getModel() : javax.swing.plaf.basic.BasicDirectoryModel;
+	@:overload @:public public function getModel() : javax.swing.plaf.basic.BasicDirectoryModel;
 	
-	@:overload public function createList() : javax.swing.JPanel;
+	@:overload @:public public function createList() : javax.swing.JPanel;
 	
-	@:overload public function createDetailsView() : javax.swing.JPanel;
+	@:overload @:public public function createDetailsView() : javax.swing.JPanel;
 	
-	@:overload public function isDirectorySelected() : Bool;
+	@:overload @:public public function isDirectorySelected() : Bool;
 	
-	@:overload public function getDirectory() : java.io.File;
+	@:overload @:public public function getDirectory() : java.io.File;
 	
-	@:overload public function getChangeToParentDirectoryAction() : javax.swing.Action;
+	@:overload @:public public function getChangeToParentDirectoryAction() : javax.swing.Action;
 	
-	@:overload public function getApproveSelectionAction() : javax.swing.Action;
+	@:overload @:public public function getApproveSelectionAction() : javax.swing.Action;
 	
-	@:overload public function getNewFolderAction() : javax.swing.Action;
+	@:overload @:public public function getNewFolderAction() : javax.swing.Action;
 	
-	@:overload public function createDoubleClickListener(list : javax.swing.JList<Dynamic>) : java.awt.event.MouseListener;
+	@:overload @:public public function createDoubleClickListener(list : javax.swing.JList<Dynamic>) : java.awt.event.MouseListener;
 	
-	@:overload public function createListSelectionListener() : javax.swing.event.ListSelectionListener;
+	@:overload @:public public function createListSelectionListener() : javax.swing.event.ListSelectionListener;
 	
 	
 }
 @:native('sun$swing$plaf$synth$SynthFileChooserUIImpl$DirectoryComboBoxRenderer') @:internal extern class SynthFileChooserUIImpl_DirectoryComboBoxRenderer implements javax.swing.ListCellRenderer<Dynamic>
 {
-	@:overload public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
+	@:overload @:public public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
 	
 	
 }
 @:native('sun$swing$plaf$synth$SynthFileChooserUIImpl$IndentIcon') @:internal extern class SynthFileChooserUIImpl_IndentIcon implements javax.swing.Icon
 {
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
@@ -139,24 +139,24 @@ extern class SynthFileChooserUIImpl extends sun.swing.plaf.synth.SynthFileChoose
 */
 @:native('sun$swing$plaf$synth$SynthFileChooserUIImpl$DirectoryComboBoxModel') extern class SynthFileChooserUIImpl_DirectoryComboBoxModel extends javax.swing.AbstractListModel<Dynamic> implements javax.swing.ComboBoxModel<Dynamic>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Adds the directory to the model and sets it to be selected,
 	* additionally clears out the previous selected directory and
 	* the paths leading up to it, if any.
 	*/
-	@:overload public function addItem(directory : java.io.File) : Void;
+	@:overload @:public public function addItem(directory : java.io.File) : Void;
 	
-	@:overload public function getDepth(i : Int) : Int;
+	@:overload @:public public function getDepth(i : Int) : Int;
 	
-	@:overload public function setSelectedItem(selectedDirectory : Dynamic) : Void;
+	@:overload @:public public function setSelectedItem(selectedDirectory : Dynamic) : Void;
 	
-	@:overload public function getSelectedItem() : Dynamic;
+	@:overload @:public public function getSelectedItem() : Dynamic;
 	
-	@:overload public function getSize() : Int;
+	@:overload @:public override public function getSize() : Int;
 	
-	@:overload public function getElementAt(index : Int) : Dynamic;
+	@:overload @:public override public function getElementAt(index : Int) : Dynamic;
 	
 	
 }
@@ -165,9 +165,9 @@ extern class SynthFileChooserUIImpl extends sun.swing.plaf.synth.SynthFileChoose
 */
 @:native('sun$swing$plaf$synth$SynthFileChooserUIImpl$DirectoryComboBoxAction') extern class SynthFileChooserUIImpl_DirectoryComboBoxAction extends javax.swing.AbstractAction
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -176,7 +176,7 @@ extern class SynthFileChooserUIImpl extends sun.swing.plaf.synth.SynthFileChoose
 */
 @:native('sun$swing$plaf$synth$SynthFileChooserUIImpl$FilterComboBoxRenderer') extern class SynthFileChooserUIImpl_FilterComboBoxRenderer implements javax.swing.ListCellRenderer<Dynamic>
 {
-	@:overload public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
+	@:overload @:public public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
 	
 	
 }
@@ -185,19 +185,19 @@ extern class SynthFileChooserUIImpl extends sun.swing.plaf.synth.SynthFileChoose
 */
 @:native('sun$swing$plaf$synth$SynthFileChooserUIImpl$FilterComboBoxModel') extern class SynthFileChooserUIImpl_FilterComboBoxModel extends javax.swing.AbstractListModel<Dynamic> implements javax.swing.ComboBoxModel<Dynamic> implements java.beans.PropertyChangeListener
 {
-	private var filters : java.NativeArray<javax.swing.filechooser.FileFilter>;
+	@:protected private var filters : java.NativeArray<javax.swing.filechooser.FileFilter>;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload public function setSelectedItem(filter : Dynamic) : Void;
+	@:overload @:public public function setSelectedItem(filter : Dynamic) : Void;
 	
-	@:overload public function getSelectedItem() : Dynamic;
+	@:overload @:public public function getSelectedItem() : Dynamic;
 	
-	@:overload public function getSize() : Int;
+	@:overload @:public override public function getSize() : Int;
 	
-	@:overload public function getElementAt(index : Int) : Dynamic;
+	@:overload @:public override public function getElementAt(index : Int) : Dynamic;
 	
 	
 }
@@ -209,21 +209,21 @@ extern class SynthFileChooserUIImpl extends sun.swing.plaf.synth.SynthFileChoose
 */
 @:native('sun$swing$plaf$synth$SynthFileChooserUIImpl$ButtonAreaLayout') @:internal extern class SynthFileChooserUIImpl_ButtonAreaLayout implements java.awt.LayoutManager
 {
-	@:overload public function addLayoutComponent(string : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(string : String, comp : java.awt.Component) : Void;
 	
-	@:overload public function layoutContainer(container : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(container : java.awt.Container) : Void;
 	
-	@:overload public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
 	
 }
 @:native('sun$swing$plaf$synth$SynthFileChooserUIImpl$AlignedLabel') @:internal extern class SynthFileChooserUIImpl_AlignedLabel extends javax.swing.JLabel
 {
-	@:overload public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	
 }

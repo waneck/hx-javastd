@@ -34,7 +34,7 @@ extern class XJCFacade
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

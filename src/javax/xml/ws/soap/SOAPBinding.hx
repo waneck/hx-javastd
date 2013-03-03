@@ -29,7 +29,7 @@ extern interface SOAPBinding extends javax.xml.ws.Binding
 	*
 	*  @return Set&lt;String> The set of roles played by the binding instance.
 	**/
-	@:overload public function getRoles() : java.util.Set<String>;
+	@:overload @:public public function getRoles() : java.util.Set<String>;
 	
 	/** Sets the roles played by the SOAP binding instance.
 	*
@@ -37,14 +37,14 @@ extern interface SOAPBinding extends javax.xml.ws.Binding
 	*  @throws WebServiceException On an error in the configuration of
 	*                  the list of roles.
 	**/
-	@:overload public function setRoles(roles : java.util.Set<String>) : Void;
+	@:overload @:public public function setRoles(roles : java.util.Set<String>) : Void;
 	
 	/**
 	* Returns <code>true</code> if the use of MTOM is enabled.
 	*
 	* @return <code>true</code> if and only if the use of MTOM is enabled.
 	**/
-	@:overload public function isMTOMEnabled() : Bool;
+	@:overload @:public public function isMTOMEnabled() : Bool;
 	
 	/**
 	* Enables or disables use of MTOM.
@@ -55,21 +55,21 @@ extern interface SOAPBinding extends javax.xml.ws.Binding
 	*                  by this binding instance.
 	*
 	**/
-	@:overload public function setMTOMEnabled(flag : Bool) : Void;
+	@:overload @:public public function setMTOMEnabled(flag : Bool) : Void;
 	
 	/**
 	* Gets the SAAJ <code>SOAPFactory</code> instance used by this SOAP binding.
 	*
 	* @return SOAPFactory instance used by this SOAP binding.
 	**/
-	@:overload public function getSOAPFactory() : javax.xml.soap.SOAPFactory;
+	@:overload @:public public function getSOAPFactory() : javax.xml.soap.SOAPFactory;
 	
 	/**
 	* Gets the SAAJ <code>MessageFactory</code> instance used by this SOAP binding.
 	*
 	* @return MessageFactory instance used by this SOAP binding.
 	**/
-	@:overload public function getMessageFactory() : javax.xml.soap.MessageFactory;
+	@:overload @:public public function getMessageFactory() : javax.xml.soap.MessageFactory;
 	
 	
 }

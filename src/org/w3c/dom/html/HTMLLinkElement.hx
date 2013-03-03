@@ -51,70 +51,70 @@ extern interface HTMLLinkElement extends org.w3c.dom.html.HTMLElement
 	*  Enables/disables the link. This is currently only used for style sheet
 	* links, and may be used to activate or deactivate style sheets.
 	*/
-	@:overload public function getDisabled() : Bool;
+	@:overload @:public public function getDisabled() : Bool;
 	
-	@:overload public function setDisabled(disabled : Bool) : Void;
+	@:overload @:public public function setDisabled(disabled : Bool) : Void;
 	
 	/**
 	*  The character encoding of the resource being linked to. See the
 	* charset attribute definition in HTML 4.0.
 	*/
-	@:overload public function getCharset() : String;
+	@:overload @:public public function getCharset() : String;
 	
-	@:overload public function setCharset(charset : String) : Void;
+	@:overload @:public public function setCharset(charset : String) : Void;
 	
 	/**
 	*  The URI of the linked resource. See the  href attribute definition in
 	* HTML 4.0.
 	*/
-	@:overload public function getHref() : String;
+	@:overload @:public public function getHref() : String;
 	
-	@:overload public function setHref(href : String) : Void;
+	@:overload @:public public function setHref(href : String) : Void;
 	
 	/**
 	*  Language code of the linked resource. See the  hreflang attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getHreflang() : String;
+	@:overload @:public public function getHreflang() : String;
 	
-	@:overload public function setHreflang(hreflang : String) : Void;
+	@:overload @:public public function setHreflang(hreflang : String) : Void;
 	
 	/**
 	*  Designed for use with one or more target media. See the  media
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getMedia() : String;
+	@:overload @:public public function getMedia() : String;
 	
-	@:overload public function setMedia(media : String) : Void;
+	@:overload @:public public function setMedia(media : String) : Void;
 	
 	/**
 	*  Forward link type. See the  rel attribute definition in HTML 4.0.
 	*/
-	@:overload public function getRel() : String;
+	@:overload @:public public function getRel() : String;
 	
-	@:overload public function setRel(rel : String) : Void;
+	@:overload @:public public function setRel(rel : String) : Void;
 	
 	/**
 	*  Reverse link type. See the  rev attribute definition in HTML 4.0.
 	*/
-	@:overload public function getRev() : String;
+	@:overload @:public public function getRev() : String;
 	
-	@:overload public function setRev(rev : String) : Void;
+	@:overload @:public public function setRev(rev : String) : Void;
 	
 	/**
 	*  Frame to render the resource in. See the  target attribute definition
 	* in HTML 4.0.
 	*/
-	@:overload public function getTarget() : String;
+	@:overload @:public public function getTarget() : String;
 	
-	@:overload public function setTarget(target : String) : Void;
+	@:overload @:public public function setTarget(target : String) : Void;
 	
 	/**
 	*  Advisory content type. See the  type attribute definition in HTML 4.0.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function setType(type : String) : Void;
+	@:overload @:public public function setType(type : String) : Void;
 	
 	
 }

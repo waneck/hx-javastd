@@ -43,7 +43,7 @@ extern interface AncestorListener extends java.util.EventListener
 	* all its parents must be visible and it must be in a hierarchy
 	* rooted at a Window
 	*/
-	@:overload public function ancestorAdded(event : javax.swing.event.AncestorEvent) : Void;
+	@:overload @:public public function ancestorAdded(event : javax.swing.event.AncestorEvent) : Void;
 	
 	/**
 	* Called when the source or one of its ancestors is made invisible
@@ -53,12 +53,12 @@ extern interface AncestorListener extends java.util.EventListener
 	* at least one of its parents must by invisible or it is not in
 	* a hierarchy rooted at a Window
 	*/
-	@:overload public function ancestorRemoved(event : javax.swing.event.AncestorEvent) : Void;
+	@:overload @:public public function ancestorRemoved(event : javax.swing.event.AncestorEvent) : Void;
 	
 	/**
 	* Called when either the source or one of its ancestors is moved.
 	*/
-	@:overload public function ancestorMoved(event : javax.swing.event.AncestorEvent) : Void;
+	@:overload @:public public function ancestorMoved(event : javax.swing.event.AncestorEvent) : Void;
 	
 	
 }

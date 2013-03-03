@@ -64,9 +64,9 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class ClassGenException extends java.lang.RuntimeException
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

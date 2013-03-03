@@ -39,140 +39,140 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	* Mapping of ClassDocs to set of PackageDoc used by that class.
 	* Entries may be null.
 	*/
-	public var classToPackage : java.util.Map<String, java.util.Set<com.sun.javadoc.PackageDoc>>;
+	@:public public var classToPackage : java.util.Map<String, java.util.Set<com.sun.javadoc.PackageDoc>>;
 	
 	/**
 	* Mapping of Annotations to set of PackageDoc that use the annotation.
 	*/
-	public var classToPackageAnnotations : java.util.Map<String, java.util.List<com.sun.javadoc.PackageDoc>>;
+	@:public public var classToPackageAnnotations : java.util.Map<String, java.util.List<com.sun.javadoc.PackageDoc>>;
 	
 	/**
 	* Mapping of ClassDocs to set of ClassDoc used by that class.
 	* Entries may be null.
 	*/
-	public var classToClass : java.util.Map<String, java.util.Set<com.sun.javadoc.ClassDoc>>;
+	@:public public var classToClass : java.util.Map<String, java.util.Set<com.sun.javadoc.ClassDoc>>;
 	
 	/**
 	* Mapping of ClassDocs to list of ClassDoc which are direct or
 	* indirect subclasses of that class.
 	* Entries may be null.
 	*/
-	public var classToSubclass : java.util.Map<String, java.util.List<com.sun.javadoc.ClassDoc>>;
+	@:public public var classToSubclass : java.util.Map<String, java.util.List<com.sun.javadoc.ClassDoc>>;
 	
 	/**
 	* Mapping of ClassDocs to list of ClassDoc which are direct or
 	* indirect subinterfaces of that interface.
 	* Entries may be null.
 	*/
-	public var classToSubinterface : java.util.Map<String, java.util.List<com.sun.javadoc.ClassDoc>>;
+	@:public public var classToSubinterface : java.util.Map<String, java.util.List<com.sun.javadoc.ClassDoc>>;
 	
 	/**
 	* Mapping of ClassDocs to list of ClassDoc which implement
 	* this interface.
 	* Entries may be null.
 	*/
-	public var classToImplementingClass : java.util.Map<String, java.util.List<com.sun.javadoc.ClassDoc>>;
+	@:public public var classToImplementingClass : java.util.Map<String, java.util.List<com.sun.javadoc.ClassDoc>>;
 	
 	/**
 	* Mapping of ClassDocs to list of FieldDoc declared as that class.
 	* Entries may be null.
 	*/
-	public var classToField : java.util.Map<String, java.util.List<com.sun.javadoc.FieldDoc>>;
+	@:public public var classToField : java.util.Map<String, java.util.List<com.sun.javadoc.FieldDoc>>;
 	
 	/**
 	* Mapping of ClassDocs to list of MethodDoc returning that class.
 	* Entries may be null.
 	*/
-	public var classToMethodReturn : java.util.Map<String, java.util.List<com.sun.javadoc.MethodDoc>>;
+	@:public public var classToMethodReturn : java.util.Map<String, java.util.List<com.sun.javadoc.MethodDoc>>;
 	
 	/**
 	* Mapping of ClassDocs to list of MethodDoc having that class
 	* as an arg.
 	* Entries may be null.
 	*/
-	public var classToMethodArgs : java.util.Map<String, java.util.List<com.sun.javadoc.ExecutableMemberDoc>>;
+	@:public public var classToMethodArgs : java.util.Map<String, java.util.List<com.sun.javadoc.ExecutableMemberDoc>>;
 	
 	/**
 	* Mapping of ClassDocs to list of MethodDoc which throws that class.
 	* Entries may be null.
 	*/
-	public var classToMethodThrows : java.util.Map<String, java.util.List<com.sun.javadoc.ExecutableMemberDoc>>;
+	@:public public var classToMethodThrows : java.util.Map<String, java.util.List<com.sun.javadoc.ExecutableMemberDoc>>;
 	
 	/**
 	* Mapping of ClassDocs to list of ConstructorDoc having that class
 	* as an arg.
 	* Entries may be null.
 	*/
-	public var classToConstructorArgs : java.util.Map<String, java.util.List<com.sun.javadoc.ExecutableMemberDoc>>;
+	@:public public var classToConstructorArgs : java.util.Map<String, java.util.List<com.sun.javadoc.ExecutableMemberDoc>>;
 	
 	/**
 	* Mapping of ClassDocs to list of ConstructorDoc which throws that class.
 	* Entries may be null.
 	*/
-	public var classToConstructorThrows : java.util.Map<String, java.util.List<com.sun.javadoc.ExecutableMemberDoc>>;
+	@:public public var classToConstructorThrows : java.util.Map<String, java.util.List<com.sun.javadoc.ExecutableMemberDoc>>;
 	
 	/**
 	* The mapping of AnnotationTypeDocs to constructors that use them.
 	*/
-	public var classToConstructorAnnotations : java.util.Map<String, java.util.List<com.sun.javadoc.ConstructorDoc>>;
+	@:public public var classToConstructorAnnotations : java.util.Map<String, java.util.List<com.sun.javadoc.ConstructorDoc>>;
 	
 	/**
 	* The mapping of AnnotationTypeDocs to Constructor parameters that use them.
 	*/
-	public var classToConstructorParamAnnotation : java.util.Map<String, java.util.List<com.sun.javadoc.ExecutableMemberDoc>>;
+	@:public public var classToConstructorParamAnnotation : java.util.Map<String, java.util.List<com.sun.javadoc.ExecutableMemberDoc>>;
 	
 	/**
 	* The mapping of ClassDocs to Constructor arguments that use them as type parameters.
 	*/
-	public var classToConstructorDocArgTypeParam : java.util.Map<String, java.util.List<com.sun.javadoc.ExecutableMemberDoc>>;
+	@:public public var classToConstructorDocArgTypeParam : java.util.Map<String, java.util.List<com.sun.javadoc.ExecutableMemberDoc>>;
 	
 	/**
 	* The mapping of ClassDocs to ClassDocs that use them as type parameters.
 	*/
-	public var classToClassTypeParam : java.util.Map<String, java.util.List<com.sun.javadoc.ClassDoc>>;
+	@:public public var classToClassTypeParam : java.util.Map<String, java.util.List<com.sun.javadoc.ClassDoc>>;
 	
 	/**
 	* The mapping of AnnotationTypeDocs to ClassDocs that use them.
 	*/
-	public var classToClassAnnotations : java.util.Map<String, java.util.List<com.sun.javadoc.ClassDoc>>;
+	@:public public var classToClassAnnotations : java.util.Map<String, java.util.List<com.sun.javadoc.ClassDoc>>;
 	
 	/**
 	* The mapping of ClassDocs to ExecutableMemberDocs that use them as type parameters.
 	*/
-	public var classToExecMemberDocTypeParam : java.util.Map<String, java.util.List<com.sun.javadoc.MethodDoc>>;
+	@:public public var classToExecMemberDocTypeParam : java.util.Map<String, java.util.List<com.sun.javadoc.MethodDoc>>;
 	
 	/**
 	* The mapping of ClassDocs to ExecutableMemberDocs arguments that use them as type parameters.
 	*/
-	public var classToExecMemberDocArgTypeParam : java.util.Map<String, java.util.List<com.sun.javadoc.ExecutableMemberDoc>>;
+	@:public public var classToExecMemberDocArgTypeParam : java.util.Map<String, java.util.List<com.sun.javadoc.ExecutableMemberDoc>>;
 	
 	/**
 	* The mapping of AnnotationTypeDocs to ExecutableMemberDocs that use them.
 	*/
-	public var classToExecMemberDocAnnotations : java.util.Map<String, java.util.List<com.sun.javadoc.MethodDoc>>;
+	@:public public var classToExecMemberDocAnnotations : java.util.Map<String, java.util.List<com.sun.javadoc.MethodDoc>>;
 	
 	/**
 	* The mapping of ClassDocs to ExecutableMemberDocs that have return type
 	* with type parameters of that class.
 	*/
-	public var classToExecMemberDocReturnTypeParam : java.util.Map<String, java.util.List<com.sun.javadoc.MethodDoc>>;
+	@:public public var classToExecMemberDocReturnTypeParam : java.util.Map<String, java.util.List<com.sun.javadoc.MethodDoc>>;
 	
 	/**
 	* The mapping of AnnotationTypeDocs to MethodDoc parameters that use them.
 	*/
-	public var classToExecMemberDocParamAnnotation : java.util.Map<String, java.util.List<com.sun.javadoc.ExecutableMemberDoc>>;
+	@:public public var classToExecMemberDocParamAnnotation : java.util.Map<String, java.util.List<com.sun.javadoc.ExecutableMemberDoc>>;
 	
 	/**
 	* The mapping of ClassDocs to FieldDocs that use them as type parameters.
 	*/
-	public var classToFieldDocTypeParam : java.util.Map<String, java.util.List<com.sun.javadoc.FieldDoc>>;
+	@:public public var classToFieldDocTypeParam : java.util.Map<String, java.util.List<com.sun.javadoc.FieldDoc>>;
 	
 	/**
 	* The mapping of AnnotationTypeDocs to FieldDocs that use them.
 	*/
-	public var annotationToFieldDoc : java.util.Map<String, java.util.List<com.sun.javadoc.FieldDoc>>;
+	@:public public var annotationToFieldDoc : java.util.Map<String, java.util.List<com.sun.javadoc.FieldDoc>>;
 	
-	@:overload public function new(root : com.sun.javadoc.RootDoc, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
+	@:overload @:public public function new(root : com.sun.javadoc.RootDoc, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
 	
 	
 }

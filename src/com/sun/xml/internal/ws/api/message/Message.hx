@@ -31,7 +31,7 @@ extern class Message
 	* @return
 	*      true if headers are present.
 	*/
-	@:overload @:abstract public function hasHeaders() : Bool;
+	@:overload @:public @:abstract public function hasHeaders() : Bool;
 	
 	/**
 	* Gets all the headers of this message.
@@ -46,21 +46,21 @@ extern class Message
 	* @return
 	*      always return the same non-null object.
 	*/
-	@:overload @:abstract public function getHeaders() : com.sun.xml.internal.ws.api.message.HeaderList;
+	@:overload @:public @:abstract public function getHeaders() : com.sun.xml.internal.ws.api.message.HeaderList;
 	
 	/**
 	* Gets the attachments of this message
 	* (attachments live outside a message.)
 	*/
-	@:overload public function getAttachments() : com.sun.xml.internal.ws.api.message.AttachmentSet;
+	@:overload @:public public function getAttachments() : com.sun.xml.internal.ws.api.message.AttachmentSet;
 	
 	/**
 	* Optimization hint for the derived class to check
 	* if we may have some attachments.
 	*/
-	@:overload private function hasAttachments() : Bool;
+	@:overload @:protected private function hasAttachments() : Bool;
 	
-	private var attachmentSet : com.sun.xml.internal.ws.api.message.AttachmentSet;
+	@:protected private var attachmentSet : com.sun.xml.internal.ws.api.message.AttachmentSet;
 	
 	/**
 	* Returns the operation of which this message is an instance of.
@@ -89,7 +89,7 @@ extern class Message
 	*      or when we are on the client and the user appliation sends a random DOM through
 	*      {@link Dispatch}, so this error needs to be handled gracefully.
 	*/
-	@:overload @:final public function getOperation(boundPortType : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundPortType) : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
+	@:overload @:public @:final public function getOperation(boundPortType : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundPortType) : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
 	
 	/**
 	* The same as {@link #getOperation(WSDLBoundPortType)} but
@@ -99,7 +99,7 @@ extern class Message
 	* information in the Message. Instead, Use {@link com.sun.xml.internal.ws.api.message.Packet#getWSDLOperation()}
 	* to get it correctly.
 	*/
-	@:overload @:final public function getOperation(port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort) : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
+	@:overload @:public @:final public function getOperation(port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort) : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
 	
 	/**
 	* Returns the java Method of which this message is an instance of.
@@ -126,7 +126,7 @@ extern class Message
 	*      DOM through {@link Dispatch}, so this error needs to be handled
 	*      gracefully.
 	*/
-	@:overload @:final public function getMethod(seiModel : com.sun.xml.internal.ws.api.model.SEIModel) : com.sun.xml.internal.ws.api.model.JavaMethod;
+	@:overload @:public @:final public function getMethod(seiModel : com.sun.xml.internal.ws.api.model.SEIModel) : com.sun.xml.internal.ws.api.model.JavaMethod;
 	
 	/**
 	* Returns true if this message is a request message for a
@@ -151,7 +151,7 @@ extern class Message
 	*      value, so the behavior is undefined if multiple callers provide
 	*      different {@link WSDLPort} objects, which is a bug of the caller.
 	*/
-	@:overload public function isOneWay(port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort) : Bool;
+	@:overload @:public public function isOneWay(port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort) : Bool;
 	
 	/**
 	* Makes an assertion that this {@link Message} is
@@ -175,7 +175,7 @@ extern class Message
 	*
 	* @see #isOneWay(WSDLPort)
 	*/
-	@:overload @:final public function assertOneWay(value : Bool) : Void;
+	@:overload @:public @:final public function assertOneWay(value : Bool) : Void;
 	
 	/**
 	* Gets the local name of the payload element.
@@ -183,7 +183,7 @@ extern class Message
 	* @return
 	*      null if a {@link Message} doesn't have any payload.
 	*/
-	@:overload @:abstract public function getPayloadLocalPart() : String;
+	@:overload @:public @:abstract public function getPayloadLocalPart() : String;
 	
 	/**
 	* Gets the namespace URI of the payload element.
@@ -191,7 +191,7 @@ extern class Message
 	* @return
 	*      null if a {@link Message} doesn't have any payload.
 	*/
-	@:overload @:abstract public function getPayloadNamespaceURI() : String;
+	@:overload @:public @:abstract public function getPayloadNamespaceURI() : String;
 	
 	/**
 	* Returns true if a {@link Message} has a payload.
@@ -207,7 +207,7 @@ extern class Message
 	* </S:Envelope>
 	* </xmp></pre>
 	*/
-	@:overload @:abstract public function hasPayload() : Bool;
+	@:overload @:public @:abstract public function hasPayload() : Bool;
 	
 	/**
 	* Returns true if this message is a fault.
@@ -216,7 +216,7 @@ extern class Message
 	* Just a convenience method built on {@link #getPayloadNamespaceURI()}
 	* and {@link #getPayloadLocalPart()}.
 	*/
-	@:overload public function isFault() : Bool;
+	@:overload @:public public function isFault() : Bool;
 	
 	/**
 	* It gives S:Envelope/S:Body/S:Fault/detail 's first child's name. Should
@@ -228,13 +228,13 @@ extern class Message
 	* @return first detail entry's name, if there is one
 	*         else null
 	*/
-	@:overload public function getFirstDetailEntryName() : javax.xml.namespace.QName;
+	@:overload @:public public function getFirstDetailEntryName() : javax.xml.namespace.QName;
 	
 	/**
 	* Consumes this message including the envelope.
 	* returns it as a {@link Source} object.
 	*/
-	@:overload @:abstract public function readEnvelopeAsSource() : javax.xml.transform.Source;
+	@:overload @:public @:abstract public function readEnvelopeAsSource() : javax.xml.transform.Source;
 	
 	/**
 	* Returns the payload as a {@link Source} object.
@@ -244,7 +244,7 @@ extern class Message
 	* @return
 	*      if there's no payload, this method returns null.
 	*/
-	@:overload @:abstract public function readPayloadAsSource() : javax.xml.transform.Source;
+	@:overload @:public @:abstract public function readPayloadAsSource() : javax.xml.transform.Source;
 	
 	/**
 	* Creates the equivalent {@link SOAPMessage} from this message.
@@ -254,7 +254,7 @@ extern class Message
 	* @throws SOAPException
 	*      if there's any error while creating a {@link SOAPMessage}.
 	*/
-	@:overload @:abstract public function readAsSOAPMessage() : javax.xml.soap.SOAPMessage;
+	@:overload @:public @:abstract public function readAsSOAPMessage() : javax.xml.soap.SOAPMessage;
 	
 	/**
 	* Creates the equivalent {@link SOAPMessage} from this message. It also uses
@@ -267,7 +267,7 @@ extern class Message
 	* @throws SOAPException
 	*      if there's any error while creating a {@link SOAPMessage}.
 	*/
-	@:overload public function readAsSOAPMessage(packet : com.sun.xml.internal.ws.api.message.Packet, inbound : Bool) : javax.xml.soap.SOAPMessage;
+	@:overload @:public public function readAsSOAPMessage(packet : com.sun.xml.internal.ws.api.message.Packet, inbound : Bool) : javax.xml.soap.SOAPMessage;
 	
 	/**
 	* Reads the payload as a JAXB object by using the given unmarshaller.
@@ -277,7 +277,7 @@ extern class Message
 	* @throws JAXBException
 	*      If JAXB reports an error during the processing.
 	*/
-	@:overload @:abstract public function readPayloadAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
+	@:overload @:public @:abstract public function readPayloadAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
 	
 	/**
 	* Reads the payload as a JAXB object according to the given {@link Bridge}.
@@ -289,7 +289,7 @@ extern class Message
 	* @throws JAXBException
 	*      If JAXB reports an error during the processing.
 	*/
-	@:overload @:abstract public function readPayloadAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
+	@:overload @:public @:abstract public function readPayloadAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
 	
 	/**
 	* Reads the payload as a {@link XMLStreamReader}
@@ -303,7 +303,7 @@ extern class Message
 	*      Otherwise always non-null valid {@link XMLStreamReader} that points to
 	*      the payload tag name.
 	*/
-	@:overload @:abstract public function readPayload() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:abstract public function readPayload() : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* Marks the message as consumed, without actually reading the contents.
@@ -316,7 +316,7 @@ extern class Message
 	* This method may not be called more than once since it may have
 	* released the reusable resources.
 	*/
-	@:overload public function consume() : Void;
+	@:overload @:public public function consume() : Void;
 	
 	/**
 	* Writes the payload to StAX.
@@ -335,7 +335,7 @@ extern class Message
 	*      If the {@link XMLStreamWriter} reports an error,
 	*      or some other errors happen during the processing.
 	*/
-	@:overload @:abstract public function writePayloadTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public @:abstract public function writePayloadTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Writes the whole SOAP message (but not attachments)
@@ -347,7 +347,7 @@ extern class Message
 	*      If the {@link XMLStreamWriter} reports an error,
 	*      or some other errors happen during the processing.
 	*/
-	@:overload @:abstract public function writeTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public @:abstract public function writeTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Writes the whole SOAP envelope as SAX events.
@@ -364,7 +364,7 @@ extern class Message
 	*      thrown as {@link SAXParseException}. {@link SAXException}s thrown
 	*      from {@link ErrorHandler} should propagate directly through this method.
 	*/
-	@:overload @:abstract public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public @:abstract public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Creates a copy of a {@link Message}.
@@ -420,7 +420,7 @@ extern class Message
 	* The restrictions placed on the use of copied {@link Message} can be
 	* relaxed if necessary, but it will make the copy method more expensive.
 	*/
-	@:overload @:abstract public function copy() : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:abstract public function copy() : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Retuns a unique id for the message. The id can be used for various things,
@@ -442,7 +442,7 @@ extern class Message
 	*
 	* @return unique id for the message
 	*/
-	@:overload public function getID(binding : com.sun.xml.internal.ws.api.WSBinding) : String;
+	@:overload @:public public function getID(binding : com.sun.xml.internal.ws.api.WSBinding) : String;
 	
 	/**
 	* Retuns a unique id for the message.
@@ -452,7 +452,7 @@ extern class Message
 	* @param sv SOAP version
 	* @return unique id for the message
 	*/
-	@:overload public function getID(av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion) : String;
+	@:overload @:public public function getID(av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion) : String;
 	
 	
 }

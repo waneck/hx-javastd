@@ -42,26 +42,26 @@ package javax.swing.text.html.parser;
 	* Return the element that must come next in the
 	* input stream.
 	*/
-	@:overload public function first() : javax.swing.text.html.parser.Element;
+	@:overload @:public public function first() : javax.swing.text.html.parser.Element;
 	
 	/**
 	* Return the ContentModel that must be satisfied by
 	* what comes next in the input stream.
 	*/
-	@:overload public function contentModel() : javax.swing.text.html.parser.ContentModel;
+	@:overload @:public public function contentModel() : javax.swing.text.html.parser.ContentModel;
 	
 	/**
 	* Convert to a string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:internal extern class NPrintWriter extends java.io.PrintWriter
 {
-	@:overload public function new(numberOfLines : Int) : Void;
+	@:overload @:public public function new(numberOfLines : Int) : Void;
 	
-	@:overload override public function println(array : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public override public function println(array : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	
 }

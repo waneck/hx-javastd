@@ -29,7 +29,7 @@ extern class SSLSocket extends java.net.Socket
 	* Used only by subclasses.
 	* Constructs an uninitialized, unconnected TCP socket.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Used only by subclasses.
@@ -52,7 +52,7 @@ extern class SSLSocket extends java.net.Socket
 	*         65535, inclusive.
 	* @see SecurityManager#checkConnect
 	*/
-	@:overload private function new(host : String, port : Int) : Void;
+	@:overload @:protected private function new(host : String, port : Int) : Void;
 	
 	/**
 	* Used only by subclasses.
@@ -74,7 +74,7 @@ extern class SSLSocket extends java.net.Socket
 	* @throws NullPointerException if <code>address</code> is null.
 	* @see SecurityManager#checkConnect
 	*/
-	@:overload private function new(address : java.net.InetAddress, port : Int) : Void;
+	@:overload @:protected private function new(address : java.net.InetAddress, port : Int) : Void;
 	
 	/**
 	* Used only by subclasses.
@@ -102,7 +102,7 @@ extern class SSLSocket extends java.net.Socket
 	*         which is between 0 and 65535, inclusive.
 	* @see SecurityManager#checkConnect
 	*/
-	@:overload private function new(host : String, port : Int, clientAddress : java.net.InetAddress, clientPort : Int) : Void;
+	@:overload @:protected private function new(host : String, port : Int, clientAddress : java.net.InetAddress, clientPort : Int) : Void;
 	
 	/**
 	* Used only by subclasses.
@@ -129,7 +129,7 @@ extern class SSLSocket extends java.net.Socket
 	* @throws NullPointerException if <code>address</code> is null.
 	* @see SecurityManager#checkConnect
 	*/
-	@:overload private function new(address : java.net.InetAddress, port : Int, clientAddress : java.net.InetAddress, clientPort : Int) : Void;
+	@:overload @:protected private function new(address : java.net.InetAddress, port : Int, clientAddress : java.net.InetAddress, clientPort : Int) : Void;
 	
 	/**
 	* Returns the names of the cipher suites which could be enabled for use
@@ -142,7 +142,7 @@ extern class SSLSocket extends java.net.Socket
 	* @see #getEnabledCipherSuites()
 	* @see #setEnabledCipherSuites(String [])
 	*/
-	@:overload @:abstract public function getSupportedCipherSuites() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getSupportedCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Returns the names of the SSL cipher suites which are currently
@@ -159,7 +159,7 @@ extern class SSLSocket extends java.net.Socket
 	* @see #getSupportedCipherSuites()
 	* @see #setEnabledCipherSuites(String [])
 	*/
-	@:overload @:abstract public function getEnabledCipherSuites() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getEnabledCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Sets the cipher suites enabled for use on this connection.
@@ -179,7 +179,7 @@ extern class SSLSocket extends java.net.Socket
 	* @see #getSupportedCipherSuites()
 	* @see #getEnabledCipherSuites()
 	*/
-	@:overload @:abstract public function setEnabledCipherSuites(suites : java.NativeArray<String>) : Void;
+	@:overload @:public @:abstract public function setEnabledCipherSuites(suites : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns the names of the protocols which could be enabled for use
@@ -187,7 +187,7 @@ extern class SSLSocket extends java.net.Socket
 	*
 	* @return an array of protocols supported
 	*/
-	@:overload @:abstract public function getSupportedProtocols() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getSupportedProtocols() : java.NativeArray<String>;
 	
 	/**
 	* Returns the names of the protocol versions which are currently
@@ -195,7 +195,7 @@ extern class SSLSocket extends java.net.Socket
 	* @see #setEnabledProtocols(String [])
 	* @return an array of protocols
 	*/
-	@:overload @:abstract public function getEnabledProtocols() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getEnabledProtocols() : java.NativeArray<String>;
 	
 	/**
 	* Sets the protocol versions enabled for use on this connection.
@@ -211,7 +211,7 @@ extern class SSLSocket extends java.net.Socket
 	*            when the protocols parameter is null.
 	* @see #getEnabledProtocols()
 	*/
-	@:overload @:abstract public function setEnabledProtocols(protocols : java.NativeArray<String>) : Void;
+	@:overload @:public @:abstract public function setEnabledProtocols(protocols : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns the SSL Session in use by this connection.  These can
@@ -230,7 +230,7 @@ extern class SSLSocket extends java.net.Socket
 	*
 	* @return the <code>SSLSession</code>
 	*/
-	@:overload @:abstract public function getSession() : javax.net.ssl.SSLSession;
+	@:overload @:public @:abstract public function getSession() : javax.net.ssl.SSLSession;
 	
 	/**
 	* Returns the {@code SSLSession} being constructed during a SSL/TLS
@@ -272,7 +272,7 @@ extern class SSLSocket extends java.net.Socket
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getHandshakeSession() : javax.net.ssl.SSLSession;
+	@:require(java7) @:overload @:public public function getHandshakeSession() : javax.net.ssl.SSLSession;
 	
 	/**
 	* Registers an event listener to receive notifications that an
@@ -283,7 +283,7 @@ extern class SSLSocket extends java.net.Socket
 	* @see #removeHandshakeCompletedListener(HandshakeCompletedListener)
 	* @throws IllegalArgumentException if the argument is null.
 	*/
-	@:overload @:abstract public function addHandshakeCompletedListener(listener : javax.net.ssl.HandshakeCompletedListener) : Void;
+	@:overload @:public @:abstract public function addHandshakeCompletedListener(listener : javax.net.ssl.HandshakeCompletedListener) : Void;
 	
 	/**
 	* Removes a previously registered handshake completion listener.
@@ -293,7 +293,7 @@ extern class SSLSocket extends java.net.Socket
 	* or the argument is null.
 	* @see #addHandshakeCompletedListener(HandshakeCompletedListener)
 	*/
-	@:overload @:abstract public function removeHandshakeCompletedListener(listener : javax.net.ssl.HandshakeCompletedListener) : Void;
+	@:overload @:public @:abstract public function removeHandshakeCompletedListener(listener : javax.net.ssl.HandshakeCompletedListener) : Void;
 	
 	/**
 	* Starts an SSL handshake on this connection.  Common reasons include
@@ -313,7 +313,7 @@ extern class SSLSocket extends java.net.Socket
 	* @throws IOException on a network level error
 	* @see #addHandshakeCompletedListener(HandshakeCompletedListener)
 	*/
-	@:overload @:abstract public function startHandshake() : Void;
+	@:overload @:public @:abstract public function startHandshake() : Void;
 	
 	/**
 	* Configures the socket to use client (or server) mode when
@@ -332,7 +332,7 @@ extern class SSLSocket extends java.net.Socket
 	*          after the initial handshake has begun.
 	* @see #getUseClientMode()
 	*/
-	@:overload @:abstract public function setUseClientMode(mode : Bool) : Void;
+	@:overload @:public @:abstract public function setUseClientMode(mode : Bool) : Void;
 	
 	/**
 	* Returns true if the socket is set to use client mode when
@@ -342,7 +342,7 @@ extern class SSLSocket extends java.net.Socket
 	*          in "client" mode
 	* @see #setUseClientMode(boolean)
 	*/
-	@:overload @:abstract public function getUseClientMode() : Bool;
+	@:overload @:public @:abstract public function getUseClientMode() : Bool;
 	
 	/**
 	* Configures the socket to <i>require</i> client authentication.  This
@@ -370,7 +370,7 @@ extern class SSLSocket extends java.net.Socket
 	* @see #getWantClientAuth()
 	* @see #setUseClientMode(boolean)
 	*/
-	@:overload @:abstract public function setNeedClientAuth(need : Bool) : Void;
+	@:overload @:public @:abstract public function setNeedClientAuth(need : Bool) : Void;
 	
 	/**
 	* Returns true if the socket will <i>require</i> client authentication.
@@ -383,7 +383,7 @@ extern class SSLSocket extends java.net.Socket
 	* @see #getWantClientAuth()
 	* @see #setUseClientMode(boolean)
 	*/
-	@:overload @:abstract public function getNeedClientAuth() : Bool;
+	@:overload @:public @:abstract public function getNeedClientAuth() : Bool;
 	
 	/**
 	* Configures the socket to <i>request</i> client authentication.
@@ -410,7 +410,7 @@ extern class SSLSocket extends java.net.Socket
 	* @see #getNeedClientAuth()
 	* @see #setUseClientMode(boolean)
 	*/
-	@:overload @:abstract public function setWantClientAuth(want : Bool) : Void;
+	@:overload @:public @:abstract public function setWantClientAuth(want : Bool) : Void;
 	
 	/**
 	* Returns true if the socket will <i>request</i> client authentication.
@@ -423,7 +423,7 @@ extern class SSLSocket extends java.net.Socket
 	* @see #setWantClientAuth(boolean)
 	* @see #setUseClientMode(boolean)
 	*/
-	@:overload @:abstract public function getWantClientAuth() : Bool;
+	@:overload @:public @:abstract public function getWantClientAuth() : Bool;
 	
 	/**
 	* Controls whether new SSL sessions may be established by this socket.
@@ -436,7 +436,7 @@ extern class SSLSocket extends java.net.Socket
 	*          must be resumed
 	* @see #getEnableSessionCreation()
 	*/
-	@:overload @:abstract public function setEnableSessionCreation(flag : Bool) : Void;
+	@:overload @:public @:abstract public function setEnableSessionCreation(flag : Bool) : Void;
 	
 	/**
 	* Returns true if new SSL sessions may be established by this socket.
@@ -446,7 +446,7 @@ extern class SSLSocket extends java.net.Socket
 	*          must be resumed
 	* @see #setEnableSessionCreation(boolean)
 	*/
-	@:overload @:abstract public function getEnableSessionCreation() : Bool;
+	@:overload @:public @:abstract public function getEnableSessionCreation() : Bool;
 	
 	/**
 	* Returns the SSLParameters in effect for this SSLSocket.
@@ -456,7 +456,7 @@ extern class SSLSocket extends java.net.Socket
 	* @return the SSLParameters in effect for this SSLSocket.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getSSLParameters() : javax.net.ssl.SSLParameters;
+	@:require(java6) @:overload @:public public function getSSLParameters() : javax.net.ssl.SSLParameters;
 	
 	/**
 	* Applies SSLParameters to this socket.
@@ -479,7 +479,7 @@ extern class SSLSocket extends java.net.Socket
 	*    the setEnabledProtocols() call fails
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setSSLParameters(params : javax.net.ssl.SSLParameters) : Void;
+	@:require(java6) @:overload @:public public function setSSLParameters(params : javax.net.ssl.SSLParameters) : Void;
 	
 	
 }

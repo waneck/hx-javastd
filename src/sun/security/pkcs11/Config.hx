@@ -31,7 +31,7 @@ package sun.security.pkcs11;
 */
 @:require(java5) @:internal extern class Config
 {
-	@:overload public function getNssNetscapeDbWorkaround() : Bool;
+	@:overload @:public public function getNssNetscapeDbWorkaround() : Bool;
 	
 	
 }

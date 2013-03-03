@@ -28,21 +28,21 @@ package com.sun.tools.apt.mirror.util;
 */
 extern class DeclarationsImpl implements com.sun.mirror.util.Declarations
 {
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.mirror.util.Declarations;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.mirror.util.Declarations;
 	
 	/**
 	* {@inheritDoc}
 	* See sections 8.3 and 8.4.6 of
 	* <cite>The Java&trade; Language Specification</cite>
 	*/
-	@:overload public function hides(sub : com.sun.mirror.declaration.MemberDeclaration, sup : com.sun.mirror.declaration.MemberDeclaration) : Bool;
+	@:overload @:public public function hides(sub : com.sun.mirror.declaration.MemberDeclaration, sup : com.sun.mirror.declaration.MemberDeclaration) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* See section 8.4.6.1 of
 	* <cite>The Java&trade; Language Specification</cite>
 	*/
-	@:overload public function overrides(sub : com.sun.mirror.declaration.MethodDeclaration, sup : com.sun.mirror.declaration.MethodDeclaration) : Bool;
+	@:overload @:public public function overrides(sub : com.sun.mirror.declaration.MethodDeclaration, sup : com.sun.mirror.declaration.MethodDeclaration) : Bool;
 	
 	
 }

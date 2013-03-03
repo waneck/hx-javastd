@@ -25,17 +25,17 @@ package com.sun.tools.jdi;
 */
 extern class RawCommandLineLauncher extends com.sun.tools.jdi.AbstractLauncher implements com.sun.jdi.connect.LaunchingConnector
 {
-	@:overload public function transportService() : com.sun.jdi.connect.spi.TransportService;
+	@:overload @:public public function transportService() : com.sun.jdi.connect.spi.TransportService;
 	
-	@:overload override public function transport() : com.sun.jdi.connect.Transport;
+	@:overload @:public override public function transport() : com.sun.jdi.connect.Transport;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function launch(arguments : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : com.sun.jdi.VirtualMachine;
+	@:overload @:public override public function launch(arguments : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : com.sun.jdi.VirtualMachine;
 	
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload override public function description() : String;
+	@:overload @:public override public function description() : String;
 	
 	
 }

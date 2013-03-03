@@ -62,29 +62,29 @@ package com.sun.org.apache.xerces.internal.impl;
 extern class XMLVersionDetector
 {
 	/** Property identifier: symbol table. */
-	private static var SYMBOL_TABLE(default, null) : String;
+	@:protected @:static @:final private static var SYMBOL_TABLE(default, null) : String;
 	
 	/** Property identifier: error reporter. */
-	private static var ERROR_REPORTER(default, null) : String;
+	@:protected @:static @:final private static var ERROR_REPORTER(default, null) : String;
 	
 	/** Property identifier: entity manager. */
-	private static var ENTITY_MANAGER(default, null) : String;
+	@:protected @:static @:final private static var ENTITY_MANAGER(default, null) : String;
 	
 	/** Symbol: "version". */
-	private static var fVersionSymbol(default, null) : String;
+	@:protected @:final @:static private static var fVersionSymbol(default, null) : String;
 	
-	private static var fXMLSymbol(default, null) : String;
+	@:protected @:static @:final private static var fXMLSymbol(default, null) : String;
 	
 	/** Symbol table. */
-	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
 	/** Error reporter. */
-	private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
+	@:protected private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
 	
 	/** Entity manager. */
-	private var fEntityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager;
+	@:protected private var fEntityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager;
 	
-	private var fEncoding : String;
+	@:protected private var fEncoding : String;
 	
 	/**
 	*
@@ -94,7 +94,7 @@ extern class XMLVersionDetector
 	* @throws SAXException Throws exception if required features and
 	*                      properties cannot be found.
 	*/
-	@:overload public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/**
 	* Reset the reference to the appropriate scanner given the version of the
@@ -102,7 +102,7 @@ extern class XMLVersionDetector
 	* @param scanner - the scanner to use
 	* @param version - the version of the document (XML 1.1 or XML 1.0).
 	*/
-	@:overload public function startDocumentParsing(scanner : com.sun.org.apache.xerces.internal.impl.XMLEntityHandler, version : java.StdTypes.Int16) : Void;
+	@:overload @:public public function startDocumentParsing(scanner : com.sun.org.apache.xerces.internal.impl.XMLEntityHandler, version : java.StdTypes.Int16) : Void;
 	
 	/**
 	* This methods scans the XML declaration to find out the version
@@ -113,7 +113,7 @@ extern class XMLVersionDetector
 	*                  otherwise Constants.XML_VERSION_1_0
 	* @throws IOException
 	*/
-	@:overload public function determineDocVersion(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : java.StdTypes.Int16;
+	@:overload @:public public function determineDocVersion(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : java.StdTypes.Int16;
 	
 	
 }

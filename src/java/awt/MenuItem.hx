@@ -33,7 +33,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since    JDK1.1
 	*/
-	@:require(java1) @:overload public function new() : Void;
+	@:require(java1) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new MenuItem with the specified label
@@ -47,7 +47,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since       JDK1.0
 	*/
-	@:require(java0) @:overload public function new(label : String) : Void;
+	@:require(java0) @:overload @:public public function new(label : String) : Void;
 	
 	/**
 	* Create a menu item with an associated keyboard shortcut.
@@ -62,13 +62,13 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function new(label : String, s : java.awt.MenuShortcut) : Void;
+	@:require(java1) @:overload @:public public function new(label : String, s : java.awt.MenuShortcut) : Void;
 	
 	/**
 	* Creates the menu item's peer.  The peer allows us to modify the
 	* appearance of the menu item without changing its functionality.
 	*/
-	@:overload public function addNotify() : Void;
+	@:overload @:public public function addNotify() : Void;
 	
 	/**
 	* Gets the label for this menu item.
@@ -77,7 +77,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see     java.awt.MenuItem#setLabel
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function getLabel() : String;
+	@:require(java0) @:overload @:public public function getLabel() : String;
 	
 	/**
 	* Sets the label for this menu item to the specified label.
@@ -85,14 +85,14 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see       java.awt.MenuItem#getLabel
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload @:synchronized public function setLabel(label : String) : Void;
+	@:require(java0) @:overload @:public @:synchronized public function setLabel(label : String) : Void;
 	
 	/**
 	* Checks whether this menu item is enabled.
 	* @see        java.awt.MenuItem#setEnabled
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload public function isEnabled() : Bool;
+	@:require(java0) @:overload @:public public function isEnabled() : Bool;
 	
 	/**
 	* Sets whether or not this menu item can be chosen.
@@ -101,25 +101,25 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see        java.awt.MenuItem#isEnabled
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function setEnabled(b : Bool) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setEnabled(boolean)</code>.
 	*/
-	@:overload @:synchronized public function enable() : Void;
+	@:overload @:public @:synchronized public function enable() : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setEnabled(boolean)</code>.
 	*/
-	@:overload public function enable(b : Bool) : Void;
+	@:overload @:public public function enable(b : Bool) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setEnabled(boolean)</code>.
 	*/
-	@:overload @:synchronized public function disable() : Void;
+	@:overload @:public @:synchronized public function disable() : Void;
 	
 	/**
 	* Get the <code>MenuShortcut</code> object associated with this
@@ -129,7 +129,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see         java.awt.MenuItem#setShortcut
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function getShortcut() : java.awt.MenuShortcut;
+	@:require(java1) @:overload @:public public function getShortcut() : java.awt.MenuShortcut;
 	
 	/**
 	* Set the <code>MenuShortcut</code> object associated with this
@@ -140,14 +140,14 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see         java.awt.MenuItem#getShortcut
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function setShortcut(s : java.awt.MenuShortcut) : Void;
+	@:require(java1) @:overload @:public public function setShortcut(s : java.awt.MenuShortcut) : Void;
 	
 	/**
 	* Delete any <code>MenuShortcut</code> object associated
 	* with this menu item.
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function deleteShortcut() : Void;
+	@:require(java1) @:overload @:public public function deleteShortcut() : Void;
 	
 	/**
 	* Enables event delivery to this menu item for events
@@ -165,7 +165,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see         java.awt.Component#enableEvents
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload @:final private function enableEvents(eventsToEnable : haxe.Int64) : Void;
+	@:require(java1) @:overload @:protected @:final private function enableEvents(eventsToEnable : haxe.Int64) : Void;
 	
 	/**
 	* Disables event delivery to this menu item for events
@@ -177,7 +177,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see         java.awt.Component#disableEvents
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload @:final private function disableEvents(eventsToDisable : haxe.Int64) : Void;
+	@:require(java1) @:overload @:protected @:final private function disableEvents(eventsToDisable : haxe.Int64) : Void;
 	
 	/**
 	* Sets the command name of the action event that is fired
@@ -190,7 +190,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see         java.awt.MenuItem#getActionCommand
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function setActionCommand(command : String) : Void;
+	@:require(java1) @:overload @:public public function setActionCommand(command : String) : Void;
 	
 	/**
 	* Gets the command name of the action event that is fired
@@ -198,7 +198,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see         java.awt.MenuItem#setActionCommand
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function getActionCommand() : String;
+	@:require(java1) @:overload @:public public function getActionCommand() : String;
 	
 	/**
 	* Adds the specified action listener to receive action events
@@ -214,7 +214,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see        java.awt.event.ActionListener
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function addActionListener(l : java.awt.event.ActionListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function addActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Removes the specified action listener so it no longer receives
@@ -230,7 +230,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see        java.awt.event.ActionListener
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeActionListener(l : java.awt.event.ActionListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Returns an array of all the action listeners
@@ -246,7 +246,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see        java.awt.event.ActionListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -281,7 +281,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see #getActionListeners
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Processes events on this menu item. If the event is an
@@ -298,7 +298,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see         java.awt.MenuItem#processActionEvent
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload override private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:require(java1) @:overload @:protected override private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes action events occurring on this menu item,
@@ -322,7 +322,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @see         java.awt.MenuItem#enableEvents
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload private function processActionEvent(e : java.awt.event.ActionEvent) : Void;
+	@:require(java1) @:overload @:protected private function processActionEvent(e : java.awt.event.ActionEvent) : Void;
 	
 	/**
 	* Returns a string representing the state of this <code>MenuItem</code>.
@@ -333,7 +333,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	*
 	* @return the parameter string of this menu item
 	*/
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this MenuItem.
@@ -345,7 +345,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	*         AccessibleContext of this MenuItem
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -368,7 +368,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @return the localized name of the object -- can be null if this
 	* object does not have a name
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Get the role of this object.
@@ -376,7 +376,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the AccessibleAction associated with this object.  In the
@@ -386,7 +386,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload @:public override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Get the AccessibleValue associated with this object.  In the
@@ -396,7 +396,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Returns the number of Actions available in this object.  The
@@ -404,14 +404,14 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	*
 	* @return 1, the number of Actions in this object
 	*/
-	@:overload public function getAccessibleActionCount() : Int;
+	@:overload @:public public function getAccessibleActionCount() : Int;
 	
 	/**
 	* Return a description of the specified action of the object.
 	*
 	* @param i zero-based index of the actions
 	*/
-	@:overload public function getAccessibleActionDescription(i : Int) : String;
+	@:overload @:public public function getAccessibleActionDescription(i : Int) : String;
 	
 	/**
 	* Perform the specified Action on the object
@@ -419,7 +419,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @param i zero-based index of actions
 	* @return true if the action was performed; otherwise false.
 	*/
-	@:overload public function doAccessibleAction(i : Int) : Bool;
+	@:overload @:public public function doAccessibleAction(i : Int) : Bool;
 	
 	/**
 	* Get the value of this object as a Number.
@@ -428,28 +428,28 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* this is selected.
 	* @see javax.swing.AbstractButton#isSelected()
 	*/
-	@:overload public function getCurrentAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getCurrentAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Set the value of this object as a Number.
 	*
 	* @return True if the value was set.
 	*/
-	@:overload public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
+	@:overload @:public public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
 	
 	/**
 	* Get the minimum value of this object as a Number.
 	*
 	* @return An Integer of 0.
 	*/
-	@:overload public function getMinimumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMinimumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Get the maximum value of this object as a Number.
 	*
 	* @return An Integer of 0.
 	*/
-	@:overload public function getMaximumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMaximumAccessibleValue() : java.lang.Number;
 	
 	
 }

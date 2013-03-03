@@ -20,24 +20,24 @@ package com.sun.xml.internal.stream.dtd;
 extern class DTDGrammarUtil
 {
 	/** Property identifier: symbol table. */
-	private static var SYMBOL_TABLE(default, null) : String;
+	@:protected @:static @:final private static var SYMBOL_TABLE(default, null) : String;
 	
-	private static var NAMESPACES(default, null) : String;
+	@:protected @:static @:final private static var NAMESPACES(default, null) : String;
 	
-	private var fDTDGrammar : com.sun.xml.internal.stream.dtd.nonvalidating.DTDGrammar;
+	@:protected private var fDTDGrammar : com.sun.xml.internal.stream.dtd.nonvalidating.DTDGrammar;
 	
 	/** Namespaces. */
-	private var fNamespaces : Bool;
+	@:protected private var fNamespaces : Bool;
 	
 	/** Symbol table. */
-	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
 	/** Default constructor. */
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
-	@:overload public function new(grammar : com.sun.xml.internal.stream.dtd.nonvalidating.DTDGrammar, symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(grammar : com.sun.xml.internal.stream.dtd.nonvalidating.DTDGrammar, symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
-	@:overload public function new(grammar : com.sun.xml.internal.stream.dtd.nonvalidating.DTDGrammar, symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, namespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext) : Void;
+	@:overload @:public public function new(grammar : com.sun.xml.internal.stream.dtd.nonvalidating.DTDGrammar, symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, namespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext) : Void;
 	
 	/*
 	* Resets the component. The component can query the component manager
@@ -53,7 +53,7 @@ extern class DTDGrammarUtil
 	*                      SAXNotRecognizedException or a
 	*                      SAXNotSupportedException.
 	*/
-	@:overload public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/**
 	* The start of an element.
@@ -64,7 +64,7 @@ extern class DTDGrammarUtil
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Void;
+	@:overload @:public public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Void;
 	
 	/**
 	* The end of an element.
@@ -74,7 +74,7 @@ extern class DTDGrammarUtil
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName) : Void;
+	@:overload @:public public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName) : Void;
 	
 	/**
 	* The start of a CDATA section.
@@ -82,7 +82,7 @@ extern class DTDGrammarUtil
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a CDATA section.
@@ -90,22 +90,22 @@ extern class DTDGrammarUtil
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/** Add default attributes and validate. */
-	@:overload public function addDTDDefaultAttrs(elementName : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Void;
+	@:overload @:public public function addDTDDefaultAttrs(elementName : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Void;
 	
 	/** Handle element
 	* @return true if validator is removed from the pipeline
 	*/
-	@:overload private function handleStartElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Void;
+	@:overload @:protected private function handleStartElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Void;
 	
 	/** Handle end element. */
-	@:overload private function handleEndElement(element : com.sun.org.apache.xerces.internal.xni.QName) : Void;
+	@:overload @:protected private function handleEndElement(element : com.sun.org.apache.xerces.internal.xni.QName) : Void;
 	
-	@:overload public function isInElementContent() : Bool;
+	@:overload @:public public function isInElementContent() : Bool;
 	
-	@:overload public function isIgnorableWhiteSpace(text : com.sun.org.apache.xerces.internal.xni.XMLString) : Bool;
+	@:overload @:public public function isIgnorableWhiteSpace(text : com.sun.org.apache.xerces.internal.xni.XMLString) : Bool;
 	
 	
 }

@@ -32,7 +32,7 @@ extern class TransformerConfigurationException extends javax.xml.transform.Trans
 	* Create a new <code>TransformerConfigurationException</code> with no
 	* detail mesage.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a new <code>TransformerConfigurationException</code> with
@@ -40,7 +40,7 @@ extern class TransformerConfigurationException extends javax.xml.transform.Trans
 	*
 	* @param msg The error message for the exception.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Create a new <code>TransformerConfigurationException</code> with a
@@ -49,7 +49,7 @@ extern class TransformerConfigurationException extends javax.xml.transform.Trans
 	* @param e The exception to be encapsulated in a
 	* TransformerConfigurationException.
 	*/
-	@:overload public function new(e : java.lang.Throwable) : Void;
+	@:overload @:public public function new(e : java.lang.Throwable) : Void;
 	
 	/**
 	* Create a new <code>TransformerConfigurationException</code> with the
@@ -59,7 +59,7 @@ extern class TransformerConfigurationException extends javax.xml.transform.Trans
 	*      TransformerConfigurationException
 	* @param msg The detail message.
 	*/
-	@:overload public function new(msg : String, e : java.lang.Throwable) : Void;
+	@:overload @:public public function new(msg : String, e : java.lang.Throwable) : Void;
 	
 	/**
 	* Create a new TransformerConfigurationException from a message and a Locator.
@@ -71,7 +71,7 @@ extern class TransformerConfigurationException extends javax.xml.transform.Trans
 	* @param message The error or warning message.
 	* @param locator The locator object for the error or warning.
 	*/
-	@:overload public function new(message : String, locator : javax.xml.transform.SourceLocator) : Void;
+	@:overload @:public public function new(message : String, locator : javax.xml.transform.SourceLocator) : Void;
 	
 	/**
 	* Wrap an existing exception in a TransformerConfigurationException.
@@ -81,7 +81,7 @@ extern class TransformerConfigurationException extends javax.xml.transform.Trans
 	* @param locator The locator object for the error or warning.
 	* @param e Any exception.
 	*/
-	@:overload public function new(message : String, locator : javax.xml.transform.SourceLocator, e : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, locator : javax.xml.transform.SourceLocator, e : java.lang.Throwable) : Void;
 	
 	
 }

@@ -81,7 +81,7 @@ extern interface Tube
 	*      A {@link NextAction} object that represents the next action
 	*      to be taken by the JAX-WS runtime.
 	*/
-	@:overload public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
 	/**
 	* Acts on a response and performs some protocol specific operation.
@@ -107,7 +107,7 @@ extern interface Tube
 	*      A {@link NextAction} object that represents the next action
 	*      to be taken by the JAX-WS runtime.
 	*/
-	@:overload public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
 	/**
 	* Acts on a exception and performs some clean up operations.
@@ -139,7 +139,7 @@ extern interface Tube
 	*      A {@link NextAction} object that represents the next action
 	*      to be taken by the JAX-WS runtime.
 	*/
-	@:overload public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
 	/**
 	* Invoked before the last copy of the pipeline is about to be discarded,

@@ -26,11 +26,11 @@ package sun.io;
 ////EBIDIC DBCSONLY Korean
 extern class CharToByteCp834 extends sun.io.CharToByteDBCS_ASCII
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function getMaxBytesPerChar() : Int;
+	@:overload @:public override public function getMaxBytesPerChar() : Int;
 	
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
 	
 }

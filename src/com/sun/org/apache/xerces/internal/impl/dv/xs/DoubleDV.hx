@@ -30,29 +30,29 @@ extern class DoubleDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Type
 	*
 	* @version $Id: DoubleDV.java,v 1.7 2010-11-01 04:39:46 joehw Exp $
 	*/
-	@:overload public function getAllowedFacets() : java.StdTypes.Int16;
+	@:overload @:public override public function getAllowedFacets() : java.StdTypes.Int16;
 	
-	@:overload public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
+	@:overload @:public override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
 	
-	@:overload public function compare(value1 : Dynamic, value2 : Dynamic) : Int;
+	@:overload @:public override public function compare(value1 : Dynamic, value2 : Dynamic) : Int;
 	
-	@:overload public function isIdentical(value1 : Dynamic, value2 : Dynamic) : Bool;
+	@:overload @:public override public function isIdentical(value1 : Dynamic, value2 : Dynamic) : Bool;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$impl$dv$xs$DoubleDV$XDouble') @:internal extern class DoubleDV_XDouble implements com.sun.org.apache.xerces.internal.xs.datatypes.XSDouble
 {
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
-	@:overload public function equals(val : Dynamic) : Bool;
+	@:overload @:public public function equals(val : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function isIdentical(val : com.sun.org.apache.xerces.internal.impl.dv.xs.DoubleDV.DoubleDV_XDouble) : Bool;
+	@:overload @:public public function isIdentical(val : com.sun.org.apache.xerces.internal.impl.dv.xs.DoubleDV.DoubleDV_XDouble) : Bool;
 	
-	@:overload @:synchronized public function toString() : String;
+	@:overload @:public @:synchronized public function toString() : String;
 	
-	@:overload public function getValue() : Float;
+	@:overload @:public public function getValue() : Float;
 	
 	
 }

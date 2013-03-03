@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.util;
 */
 extern class ReadAllStream extends java.io.InputStream
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Reads the data from input stream completely. It keeps
@@ -39,39 +39,39 @@ extern class ReadAllStream extends java.io.InputStream
 	* @param inMemory this much data is kept in the memory
 	* @throws IOException in case of exception
 	*/
-	@:overload public function readAll(_in : java.io.InputStream, inMemory : haxe.Int64) : Void;
+	@:overload @:public public function readAll(_in : java.io.InputStream, inMemory : haxe.Int64) : Void;
 	
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, sz : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, sz : Int) : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$util$ReadAllStream$FileStream') @:internal extern class ReadAllStream_FileStream extends java.io.InputStream
 {
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, sz : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, sz : Int) : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$util$ReadAllStream$MemoryStream') @:internal extern class ReadAllStream_MemoryStream extends java.io.InputStream
 {
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, sz : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, sz : Int) : Int;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$util$ReadAllStream$MemoryStream$Chunk') @:internal extern class ReadAllStream_MemoryStream_Chunk
 {
-	@:overload public function new(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function new(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function createNext(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : com.sun.xml.internal.ws.util.ReadAllStream.ReadAllStream_MemoryStream_Chunk;
+	@:overload @:public public function createNext(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : com.sun.xml.internal.ws.util.ReadAllStream.ReadAllStream_MemoryStream_Chunk;
 	
 	
 }

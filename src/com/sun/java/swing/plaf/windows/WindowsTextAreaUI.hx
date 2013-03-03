@@ -33,7 +33,7 @@ extern class WindowsTextAreaUI extends javax.swing.plaf.basic.BasicTextAreaUI
 	*
 	* @return the caret object
 	*/
-	@:overload override private function createCaret() : javax.swing.text.Caret;
+	@:overload @:protected override private function createCaret() : javax.swing.text.Caret;
 	
 	/**
 	* Creates a UI for a JTextField.
@@ -41,7 +41,7 @@ extern class WindowsTextAreaUI extends javax.swing.plaf.basic.BasicTextAreaUI
 	* @param c the text field
 	* @return the UI
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	
 }

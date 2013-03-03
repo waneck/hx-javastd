@@ -28,12 +28,12 @@ extern class GZIPInputStream extends java.util.zip.InflaterInputStream
 	/**
 	* CRC-32 for uncompressed data.
 	*/
-	private var crc : java.util.zip.CRC32;
+	@:protected private var crc : java.util.zip.CRC32;
 	
 	/**
 	* Indicates end of input stream.
 	*/
-	private var eos : Bool;
+	@:protected private var eos : Bool;
 	
 	/**
 	* Creates a new input stream with the specified buffer size.
@@ -45,7 +45,7 @@ extern class GZIPInputStream extends java.util.zip.InflaterInputStream
 	* @exception IOException if an I/O error has occurred
 	* @exception IllegalArgumentException if size is <= 0
 	*/
-	@:overload public function new(_in : java.io.InputStream, size : Int) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, size : Int) : Void;
 	
 	/**
 	* Creates a new input stream with a default buffer size.
@@ -55,7 +55,7 @@ extern class GZIPInputStream extends java.util.zip.InflaterInputStream
 	*                         compression method used is unsupported
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Reads uncompressed data into an array of bytes. If <code>len</code> is not
@@ -75,19 +75,19 @@ extern class GZIPInputStream extends java.util.zip.InflaterInputStream
 	* @exception IOException if an I/O error has occurred.
 	*
 	*/
-	@:overload override public function read(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Closes this input stream and releases any system resources associated
 	* with the stream.
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* GZIP header magic number.
 	*/
-	public static var GZIP_MAGIC(default, null) : Int;
+	@:public @:final @:static public static var GZIP_MAGIC(default, null) : Int;
 	
 	
 }

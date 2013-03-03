@@ -35,41 +35,41 @@ extern class Content
 	*
 	* @return string representation of the content
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Adds content to the existing content.
 	*
 	* @param content content that needs to be added
 	*/
-	@:overload @:abstract public function addContent(content : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public @:abstract public function addContent(content : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds a string content to the existing content.
 	*
 	* @param stringContent the string content to be added
 	*/
-	@:overload @:abstract public function addContent(stringContent : String) : Void;
+	@:overload @:public @:abstract public function addContent(stringContent : String) : Void;
 	
 	/**
 	* Writes content to a StringBuilder.
 	*
 	*/
-	@:overload @:abstract public function write(contentBuilder : java.lang.StringBuilder) : Void;
+	@:overload @:public @:abstract public function write(contentBuilder : java.lang.StringBuilder) : Void;
 	
 	/**
 	* Returns true if the content is empty.
 	*
 	* @return true if no content to be displayed else return false
 	*/
-	@:overload @:abstract public function isEmpty() : Bool;
+	@:overload @:public @:abstract public function isEmpty() : Bool;
 	
 	/**
 	* Returns true if the content is valid.
 	*
 	* @return true if the content is valid else return false
 	*/
-	@:overload public function isValid() : Bool;
+	@:overload @:public public function isValid() : Bool;
 	
 	/**
 	* Checks for null values.
@@ -77,7 +77,7 @@ extern class Content
 	* @param t reference type to check for null values
 	* @return the reference type if not null or else throws a null pointer exception
 	*/
-	@:overload private static function nullCheck<T>(t : T) : T;
+	@:overload @:protected @:static private static function nullCheck<T>(t : T) : T;
 	
 	/**
 	* Returns true if the content ends with a newline character. Empty content
@@ -86,7 +86,7 @@ extern class Content
 	* @param contentBuilder content to test for newline character at the end
 	* @return true if the content ends with newline.
 	*/
-	@:overload private function endsWithNewLine(contentBuilder : java.lang.StringBuilder) : Bool;
+	@:overload @:protected private function endsWithNewLine(contentBuilder : java.lang.StringBuilder) : Bool;
 	
 	
 }

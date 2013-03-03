@@ -26,19 +26,19 @@ package javax.swing;
 extern class JCheckBox extends javax.swing.JToggleButton implements javax.accessibility.Accessible
 {
 	/** Identifies a change to the flat property. */
-	public static var BORDER_PAINTED_FLAT_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var BORDER_PAINTED_FLAT_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Creates an initially unselected check box button with no text, no icon.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an initially unselected check box with an icon.
 	*
 	* @param icon  the Icon image to display
 	*/
-	@:overload public function new(icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates a check box with an icon and specifies whether
@@ -48,14 +48,14 @@ extern class JCheckBox extends javax.swing.JToggleButton implements javax.access
 	* @param selected a boolean value indicating the initial selection
 	*        state. If <code>true</code> the check box is selected
 	*/
-	@:overload public function new(icon : javax.swing.Icon, selected : Bool) : Void;
+	@:overload @:public public function new(icon : javax.swing.Icon, selected : Bool) : Void;
 	
 	/**
 	* Creates an initially unselected check box with text.
 	*
 	* @param text the text of the check box.
 	*/
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* Creates a check box where properties are taken from the
@@ -63,7 +63,7 @@ extern class JCheckBox extends javax.swing.JToggleButton implements javax.access
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(a : javax.swing.Action) : Void;
+	@:require(java3) @:overload @:public public function new(a : javax.swing.Action) : Void;
 	
 	/**
 	* Creates a check box with text and specifies whether
@@ -73,7 +73,7 @@ extern class JCheckBox extends javax.swing.JToggleButton implements javax.access
 	* @param selected a boolean value indicating the initial selection
 	*        state. If <code>true</code> the check box is selected
 	*/
-	@:overload public function new(text : String, selected : Bool) : Void;
+	@:overload @:public public function new(text : String, selected : Bool) : Void;
 	
 	/**
 	* Creates an initially unselected check box with
@@ -82,7 +82,7 @@ extern class JCheckBox extends javax.swing.JToggleButton implements javax.access
 	* @param text the text of the check box.
 	* @param icon  the Icon image to display
 	*/
-	@:overload public function new(text : String, icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(text : String, icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates a check box with text and icon,
@@ -93,7 +93,7 @@ extern class JCheckBox extends javax.swing.JToggleButton implements javax.access
 	* @param selected a boolean value indicating the initial selection
 	*        state. If <code>true</code> the check box is selected
 	*/
-	@:overload public function new(text : String, icon : javax.swing.Icon, selected : Bool) : Void;
+	@:overload @:public public function new(text : String, icon : javax.swing.Icon, selected : Bool) : Void;
 	
 	/**
 	* Sets the <code>borderPaintedFlat</code> property,
@@ -117,7 +117,7 @@ extern class JCheckBox extends javax.swing.JToggleButton implements javax.access
 	*  description: Whether the border is painted flat.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setBorderPaintedFlat(b : Bool) : Void;
+	@:require(java3) @:overload @:public public function setBorderPaintedFlat(b : Bool) : Void;
 	
 	/**
 	* Gets the value of the <code>borderPaintedFlat</code> property.
@@ -126,14 +126,14 @@ extern class JCheckBox extends javax.swing.JToggleButton implements javax.access
 	* @see #setBorderPaintedFlat
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function isBorderPaintedFlat() : Bool;
+	@:require(java3) @:overload @:public public function isBorderPaintedFlat() : Bool;
 	
 	/**
 	* Resets the UI property to a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns a string that specifies the name of the L&F class
@@ -146,7 +146,7 @@ extern class JCheckBox extends javax.swing.JToggleButton implements javax.access
 	*        expert: true
 	*   description: A string that specifies the name of the L&F class
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Returns a string representation of this JCheckBox. This method
@@ -158,7 +158,7 @@ extern class JCheckBox extends javax.swing.JToggleButton implements javax.access
 	*
 	* @return  a string representation of this JCheckBox.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JCheckBox.
@@ -172,7 +172,7 @@ extern class JCheckBox extends javax.swing.JToggleButton implements javax.access
 	*       expert: true
 	*  description: The AccessibleContext associated with this CheckBox.
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -199,7 +199,7 @@ extern class JCheckBox extends javax.swing.JToggleButton implements javax.access
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

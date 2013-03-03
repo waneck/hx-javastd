@@ -25,13 +25,13 @@ package com.sun.corba.se.impl.legacy.connection;
 */
 extern class USLPort
 {
-	@:overload public function new(type : String, port : Int) : Void;
+	@:overload @:public public function new(type : String, port : Int) : Void;
 	
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

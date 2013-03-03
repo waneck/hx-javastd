@@ -25,32 +25,32 @@ package com.sun.corba.se.impl.ior;
 */
 extern class ObjectReferenceFactoryImpl extends com.sun.corba.se.impl.ior.ObjectReferenceProducerBase implements org.omg.PortableInterceptor.ObjectReferenceFactory implements org.omg.CORBA.portable.StreamableValue
 {
-	@:overload public function new(is : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function new(is : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, iortemps : com.sun.corba.se.spi.ior.IORTemplateList) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, iortemps : com.sun.corba.se.spi.ior.IORTemplateList) : Void;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	public static var repositoryId(default, null) : String;
+	@:public @:static @:final public static var repositoryId(default, null) : String;
 	
-	@:overload public function _truncatable_ids() : java.NativeArray<String>;
+	@:overload @:public public function _truncatable_ids() : java.NativeArray<String>;
 	
-	@:overload public function _type() : org.omg.CORBA.TypeCode;
+	@:overload @:public public function _type() : org.omg.CORBA.TypeCode;
 	
 	/** Read the data into a (presumably) empty ObjectReferenceFactoryImpl.
 	* This sets the orb to the ORB of the InputStream.
 	*/
-	@:overload public function _read(is : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function _read(is : org.omg.CORBA.portable.InputStream) : Void;
 	
 	/** Write the state to the OutputStream.
 	*/
-	@:overload public function _write(os : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function _write(os : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload public function getIORFactory() : com.sun.corba.se.spi.ior.IORFactory;
+	@:overload @:public override public function getIORFactory() : com.sun.corba.se.spi.ior.IORFactory;
 	
-	@:overload public function getIORTemplateList() : com.sun.corba.se.spi.ior.IORTemplateList;
+	@:overload @:public override public function getIORTemplateList() : com.sun.corba.se.spi.ior.IORTemplateList;
 	
 	
 }

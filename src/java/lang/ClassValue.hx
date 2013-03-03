@@ -29,7 +29,7 @@ extern class ClassValue<T>
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Computes the given class's derived value for this {@code ClassValue}.
@@ -49,7 +49,7 @@ extern class ClassValue<T>
 	* @see #get
 	* @see #remove
 	*/
-	@:overload @:abstract private function computeValue(type : Class<Dynamic>) : T;
+	@:overload @:protected @:abstract private function computeValue(type : Class<Dynamic>) : T;
 	
 	/**
 	* Returns the value for the given class.
@@ -77,7 +77,7 @@ extern class ClassValue<T>
 	* @see #remove
 	* @see #computeValue
 	*/
-	@:overload public function get(type : Class<Dynamic>) : T;
+	@:overload @:public public function get(type : Class<Dynamic>) : T;
 	
 	/**
 	* Removes the associated value for the given class.
@@ -132,7 +132,7 @@ extern class ClassValue<T>
 	* @param type the type whose class value must be removed
 	* @throws NullPointerException if the argument is null
 	*/
-	@:overload public function remove(type : Class<Dynamic>) : Void;
+	@:overload @:public public function remove(type : Class<Dynamic>) : Void;
 	
 	
 }

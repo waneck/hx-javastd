@@ -25,23 +25,23 @@ package com.sun.tools.internal.xjc.addon.episode;
 */
 extern class PluginImpl extends com.sun.tools.internal.xjc.Plugin
 {
-	@:overload override public function getOptionName() : String;
+	@:overload @:public override public function getOptionName() : String;
 	
-	@:overload override public function getUsage() : String;
+	@:overload @:public override public function getUsage() : String;
 	
-	@:overload override public function parseArgument(opt : com.sun.tools.internal.xjc.Options, args : java.NativeArray<String>, i : Int) : Int;
+	@:overload @:public override public function parseArgument(opt : com.sun.tools.internal.xjc.Options, args : java.NativeArray<String>, i : Int) : Int;
 	
 	/**
 	* Capture all the generated classes from global schema components
 	* and generate them in an episode file.
 	*/
-	@:overload override public function run(model : com.sun.tools.internal.xjc.outline.Outline, opt : com.sun.tools.internal.xjc.Options, errorHandler : org.xml.sax.ErrorHandler) : Bool;
+	@:overload @:public override public function run(model : com.sun.tools.internal.xjc.outline.Outline, opt : com.sun.tools.internal.xjc.Options, errorHandler : org.xml.sax.ErrorHandler) : Bool;
 	
 	
 }
 @:native('com$sun$tools$internal$xjc$addon$episode$PluginImpl$OutlineAdaptor') @:internal extern class PluginImpl_OutlineAdaptor
 {
-	@:overload public function new(schemaComponent : com.sun.xml.internal.xsom.XSComponent, outlineType : com.sun.tools.internal.xjc.addon.episode.PluginImpl.PluginImpl_OutlineAdaptor_OutlineType, implName : String, packageName : String) : Void;
+	@:overload @:public public function new(schemaComponent : com.sun.xml.internal.xsom.XSComponent, outlineType : com.sun.tools.internal.xjc.addon.episode.PluginImpl.PluginImpl_OutlineAdaptor_OutlineType, implName : String, packageName : String) : Void;
 	
 	
 }

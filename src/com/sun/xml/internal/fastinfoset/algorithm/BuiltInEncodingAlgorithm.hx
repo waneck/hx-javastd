@@ -27,33 +27,33 @@ package com.sun.xml.internal.fastinfoset.algorithm;
 */
 extern class BuiltInEncodingAlgorithm implements com.sun.xml.internal.org.jvnet.fastinfoset.EncodingAlgorithm
 {
-	private static var SPACE_PATTERN(default, null) : java.util.regex.Pattern;
+	@:protected @:final @:static private static var SPACE_PATTERN(default, null) : java.util.regex.Pattern;
 	
-	@:overload @:abstract public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
+	@:overload @:public @:abstract public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
 	
-	@:overload @:abstract public function getOctetLengthFromPrimitiveLength(primitiveLength : Int) : Int;
+	@:overload @:public @:abstract public function getOctetLengthFromPrimitiveLength(primitiveLength : Int) : Int;
 	
-	@:overload @:abstract public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
+	@:overload @:public @:abstract public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	
-	@:overload public function matchWhiteSpaceDelimnatedWords(cb : java.nio.CharBuffer, wl : com.sun.xml.internal.fastinfoset.algorithm.BuiltInEncodingAlgorithm.BuiltInEncodingAlgorithm_WordListener) : Void;
+	@:overload @:public public function matchWhiteSpaceDelimnatedWords(cb : java.nio.CharBuffer, wl : com.sun.xml.internal.fastinfoset.algorithm.BuiltInEncodingAlgorithm.BuiltInEncodingAlgorithm_WordListener) : Void;
 	
-	@:overload public function removeWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : java.lang.StringBuffer;
+	@:overload @:public public function removeWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : java.lang.StringBuffer;
 	
-	@:overload @:public public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
+	@:overload @:public @:public public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
 	
-	@:overload @:public public function encodeToOutputStream(data : Dynamic, s : java.io.OutputStream) : Void;
+	@:overload @:public @:public public function encodeToOutputStream(data : Dynamic, s : java.io.OutputStream) : Void;
 	
-	@:overload @:public public function decodeFromInputStream(s : java.io.InputStream) : Dynamic;
+	@:overload @:public @:public public function decodeFromInputStream(s : java.io.InputStream) : Dynamic;
 	
-	@:overload @:public public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
+	@:overload @:public @:public public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
 	
-	@:overload @:public public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
+	@:overload @:public @:public public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
 	
 	
 }
 @:native('com$sun$xml$internal$fastinfoset$algorithm$BuiltInEncodingAlgorithm$WordListener') extern interface BuiltInEncodingAlgorithm_WordListener
 {
-	@:overload public function word(start : Int, end : Int) : Void;
+	@:overload @:public public function word(start : Int, end : Int) : Void;
 	
 	
 }

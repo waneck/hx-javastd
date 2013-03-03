@@ -68,7 +68,7 @@ package javax.crypto;
 	* @param os  the OutputStream object
 	* @param c   an initialized Cipher object
 	*/
-	@:overload public function new(os : java.io.OutputStream, c : javax.crypto.Cipher) : Void;
+	@:overload @:public public function new(os : java.io.OutputStream, c : javax.crypto.Cipher) : Void;
 	
 	/**
 	* Constructs a CipherOutputStream from an OutputStream without
@@ -79,7 +79,7 @@ package javax.crypto;
 	*
 	* @param os  the OutputStream object
 	*/
-	@:overload private function new(os : java.io.OutputStream) : Void;
+	@:overload @:protected private function new(os : java.io.OutputStream) : Void;
 	
 	/**
 	* Writes the specified byte to this output stream.
@@ -88,7 +88,7 @@ package javax.crypto;
 	* @exception  IOException  if an I/O error occurs.
 	* @since      JCE1.2
 	*/
-	@:require(java2) @:overload override public function write(b : Int) : Void;
+	@:require(java2) @:overload @:public override public function write(b : Int) : Void;
 	
 	/**
 	* Writes <code>b.length</code> bytes from the specified byte array
@@ -105,7 +105,7 @@ package javax.crypto;
 	* @see        javax.crypto.CipherOutputStream#write(byte[], int, int)
 	* @since JCE1.2
 	*/
-	@:require(java2) @:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:require(java2) @:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Writes <code>len</code> bytes from the specified byte array
@@ -117,7 +117,7 @@ package javax.crypto;
 	* @exception  IOException  if an I/O error occurs.
 	* @since      JCE1.2
 	*/
-	@:require(java2) @:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:require(java2) @:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Flushes this output stream by forcing any buffered output bytes
@@ -133,7 +133,7 @@ package javax.crypto;
 	* @exception  IOException  if an I/O error occurs.
 	* @since      JCE1.2
 	*/
-	@:require(java2) @:overload override public function flush() : Void;
+	@:require(java2) @:overload @:public override public function flush() : Void;
 	
 	/**
 	* Closes this output stream and releases any system resources
@@ -151,7 +151,7 @@ package javax.crypto;
 	* @exception  IOException  if an I/O error occurs.
 	* @since      JCE1.2
 	*/
-	@:require(java2) @:overload override public function close() : Void;
+	@:require(java2) @:overload @:public override public function close() : Void;
 	
 	
 }

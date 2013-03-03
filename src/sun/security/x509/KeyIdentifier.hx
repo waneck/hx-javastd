@@ -36,14 +36,14 @@ extern class KeyIdentifier
 	*
 	* @param octetString the octet string identifying the key identifier.
 	*/
-	@:overload public function new(octetString : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(octetString : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Create a KeyIdentifier from the DER encoded value.
 	*
 	* @param val the DerValue
 	*/
-	@:overload public function new(val : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(val : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Creates a KeyIdentifier from a public-key value.
@@ -64,28 +64,28 @@ extern class KeyIdentifier
 	* @param pubKey the public key from which to construct this KeyIdentifier
 	* @throws IOException on parsing errors
 	*/
-	@:overload public function new(pubKey : java.security.PublicKey) : Void;
+	@:overload @:public public function new(pubKey : java.security.PublicKey) : Void;
 	
 	/**
 	* Return the value of the KeyIdentifier as byte array.
 	*/
-	@:overload public function getIdentifier() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getIdentifier() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a printable representation of the KeyUsage.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hash code value for this object.
 	* Objects that are equal will also have the same hashcode.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Indicates whether some other object is "equal to" this one.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	
 }

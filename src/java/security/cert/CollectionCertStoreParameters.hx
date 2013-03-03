@@ -51,14 +51,14 @@ extern class CollectionCertStoreParameters implements java.security.cert.CertSto
 	* @exception NullPointerException if <code>collection</code> is
 	* <code>null</code>
 	*/
-	@:overload public function new(collection : java.util.Collection<Dynamic>) : Void;
+	@:overload @:public public function new(collection : java.util.Collection<Dynamic>) : Void;
 	
 	/**
 	* Creates an instance of <code>CollectionCertStoreParameters</code> with
 	* the default parameter values (an empty and immutable
 	* <code>Collection</code>).
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the <code>Collection</code> from which <code>Certificate</code>s
@@ -69,7 +69,7 @@ extern class CollectionCertStoreParameters implements java.security.cert.CertSto
 	*
 	* @return the <code>Collection</code> (never null)
 	*/
-	@:overload public function getCollection() : java.util.Collection<Dynamic>;
+	@:overload @:public public function getCollection() : java.util.Collection<Dynamic>;
 	
 	/**
 	* Returns a copy of this object. Note that only a reference to the
@@ -77,14 +77,14 @@ extern class CollectionCertStoreParameters implements java.security.cert.CertSto
 	*
 	* @return the copy
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns a formatted string describing the parameters.
 	*
 	* @return a formatted string describing the parameters
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

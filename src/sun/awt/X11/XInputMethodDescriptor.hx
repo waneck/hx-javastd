@@ -28,7 +28,7 @@ package sun.awt.X11;
 	/**
 	* @see java.awt.im.spi.InputMethodDescriptor#createInputMethod
 	*/
-	@:overload override public function createInputMethod() : java.awt.im.spi.InputMethod;
+	@:overload @:public override public function createInputMethod() : java.awt.im.spi.InputMethod;
 	
 	
 }

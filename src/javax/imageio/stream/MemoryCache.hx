@@ -31,7 +31,7 @@ package javax.imageio.stream;
 	* is equal to the smaller of <code>pos</code> and the
 	* length of the source.
 	*/
-	@:overload public function loadFromStream(stream : java.io.InputStream, pos : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function loadFromStream(stream : java.io.InputStream, pos : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Writes out a portion of the cache to an <code>OutputStream</code>.
@@ -44,7 +44,7 @@ package javax.imageio.stream;
 	* is in a block already disposed), or if either <code>pos</code> or
 	* <code>len</code> is < 0.
 	*/
-	@:overload public function writeToStream(stream : java.io.OutputStream, pos : haxe.Int64, len : haxe.Int64) : Void;
+	@:overload @:public public function writeToStream(stream : java.io.OutputStream, pos : haxe.Int64, len : haxe.Int64) : Void;
 	
 	/**
 	* Overwrites and/or appends the cache from a byte array.
@@ -61,7 +61,7 @@ package javax.imageio.stream;
 	* <code>len</code>, or <code>pos</code> are negative,
 	* or if <code>off+len > b.length</code>.
 	*/
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int, pos : haxe.Int64) : Void;
+	@:overload @:public public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int, pos : haxe.Int64) : Void;
 	
 	/**
 	* Overwrites or appends a single byte to the cache.
@@ -74,21 +74,21 @@ package javax.imageio.stream;
 	*
 	* @exception IndexOutOfBoundsException if <code>pos</code> is negative.
 	*/
-	@:overload public function write(b : Int, pos : haxe.Int64) : Void;
+	@:overload @:public public function write(b : Int, pos : haxe.Int64) : Void;
 	
 	/**
 	* Returns the total length of data that has been cached,
 	* regardless of whether any early blocks have been disposed.
 	* This value will only ever increase.
 	*/
-	@:overload public function getLength() : haxe.Int64;
+	@:overload @:public public function getLength() : haxe.Int64;
 	
 	/**
 	* Returns the single byte at the given position, as an
 	* <code>int</code>.  Returns -1 if this position has
 	* not been cached or has been disposed.
 	*/
-	@:overload public function read(pos : haxe.Int64) : Int;
+	@:overload @:public public function read(pos : haxe.Int64) : Int;
 	
 	/**
 	* Copy <code>len</code> bytes from the cache, starting
@@ -102,7 +102,7 @@ package javax.imageio.stream;
 	* requested data is not in the cache (including if
 	* <code>pos</code> is in a block that has already been disposed).
 	*/
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int, pos : haxe.Int64) : Void;
+	@:overload @:public public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int, pos : haxe.Int64) : Void;
 	
 	/**
 	* Free the blocks up to the position <code>pos</code>.
@@ -111,14 +111,14 @@ package javax.imageio.stream;
 	* @exception IndexOutOfBoundsException if <code>pos</code>
 	* is in a block that has already been disposed.
 	*/
-	@:overload public function disposeBefore(pos : haxe.Int64) : Void;
+	@:overload @:public public function disposeBefore(pos : haxe.Int64) : Void;
 	
 	/**
 	* Erase the entire cache contents and reset the length to 0.
 	* The cache object may subsequently be reused as though it had just
 	* been allocated.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

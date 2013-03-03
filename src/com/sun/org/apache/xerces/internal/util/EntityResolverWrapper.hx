@@ -21,19 +21,19 @@ package com.sun.org.apache.xerces.internal.util;
 extern class EntityResolverWrapper implements com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver
 {
 	/** The SAX entity resolver. */
-	private var fEntityResolver : org.xml.sax.EntityResolver;
+	@:protected private var fEntityResolver : org.xml.sax.EntityResolver;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Wraps the specified SAX entity resolver. */
-	@:overload public function new(entityResolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function new(entityResolver : org.xml.sax.EntityResolver) : Void;
 	
 	/** Sets the SAX entity resolver. */
-	@:overload public function setEntityResolver(entityResolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(entityResolver : org.xml.sax.EntityResolver) : Void;
 	
 	/** Returns the SAX entity resolver. */
-	@:overload public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
 	/**
 	* Resolves an external parsed entity. If the entity cannot be
@@ -45,7 +45,7 @@ extern class EntityResolverWrapper implements com.sun.org.apache.xerces.internal
 	* @throws IOException  Thrown if resolved entity stream cannot be
 	*                      opened or some other i/o error occurs.
 	*/
-	@:overload public function resolveEntity(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
+	@:overload @:public public function resolveEntity(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
 	
 	
 }

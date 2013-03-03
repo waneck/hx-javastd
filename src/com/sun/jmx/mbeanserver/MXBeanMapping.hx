@@ -35,19 +35,19 @@ extern class MXBeanMapping
 	*
 	* @throws NullPointerException if either argument is null.
 	*/
-	@:overload private function new(javaType : java.lang.reflect.Type, openType : javax.management.openmbean.OpenType<Dynamic>) : Void;
+	@:overload @:protected private function new(javaType : java.lang.reflect.Type, openType : javax.management.openmbean.OpenType<Dynamic>) : Void;
 	
 	/**
 	* <p>The Java type that was supplied to the constructor.</p>
 	* @return the Java type that was supplied to the constructor.
 	*/
-	@:overload @:final public function getJavaType() : java.lang.reflect.Type;
+	@:overload @:public @:final public function getJavaType() : java.lang.reflect.Type;
 	
 	/**
 	* <p>The Open Type that was supplied to the constructor.</p>
 	* @return the Open Type that was supplied to the constructor.
 	*/
-	@:overload @:final public function getOpenType() : javax.management.openmbean.OpenType<Dynamic>;
+	@:overload @:public @:final public function getOpenType() : javax.management.openmbean.OpenType<Dynamic>;
 	
 	/**
 	* <p>The Java class that corresponds to instances of the
@@ -56,7 +56,7 @@ extern class MXBeanMapping
 	* Open Type for this mapping.
 	* @see OpenType#getClassName
 	*/
-	@:overload @:final public function getOpenClass() : Class<Dynamic>;
+	@:overload @:public @:final public function getOpenClass() : Class<Dynamic>;
 	
 	/**
 	* <p>Convert an instance of the Open Type into the Java type.
@@ -64,7 +64,7 @@ extern class MXBeanMapping
 	* @return the converted value.
 	* @throws InvalidObjectException if the value cannot be converted.
 	*/
-	@:overload @:abstract public function fromOpenValue(openValue : Dynamic) : Dynamic;
+	@:overload @:public @:abstract public function fromOpenValue(openValue : Dynamic) : Dynamic;
 	
 	/**
 	* <p>Convert an instance of the Java type into the Open Type.
@@ -72,7 +72,7 @@ extern class MXBeanMapping
 	* @return the converted value.
 	* @throws OpenDataException if the value cannot be converted.
 	*/
-	@:overload @:abstract public function toOpenValue(javaValue : Dynamic) : Dynamic;
+	@:overload @:public @:abstract public function toOpenValue(javaValue : Dynamic) : Dynamic;
 	
 	/**
 	* <p>Throw an appropriate InvalidObjectException if we will not
@@ -86,7 +86,7 @@ extern class MXBeanMapping
 	* @throws InvalidObjectException if {@code fromOpenValue} will throw
 	* an exception no matter what its argument is.
 	*/
-	@:overload public function checkReconstructible() : Void;
+	@:overload @:public public function checkReconstructible() : Void;
 	
 	
 }

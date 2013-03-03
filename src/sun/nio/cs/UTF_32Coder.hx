@@ -25,37 +25,37 @@ package sun.nio.cs;
 */
 @:internal extern class UTF_32Coder
 {
-	private static var BOM_BIG(default, null) : Int;
+	@:protected @:static @:final private static var BOM_BIG(default, null) : Int;
 	
-	private static var BOM_LITTLE(default, null) : Int;
+	@:protected @:static @:final private static var BOM_LITTLE(default, null) : Int;
 	
-	private static var NONE(default, null) : Int;
+	@:protected @:static @:final private static var NONE(default, null) : Int;
 	
-	private static var BIG(default, null) : Int;
+	@:protected @:static @:final private static var BIG(default, null) : Int;
 	
-	private static var LITTLE(default, null) : Int;
+	@:protected @:static @:final private static var LITTLE(default, null) : Int;
 	
 	
 }
 @:native('sun$nio$cs$UTF_32Coder$Decoder') extern class UTF_32Coder_Decoder extends java.nio.charset.CharsetDecoder
 {
-	@:overload private function new(cs : java.nio.charset.Charset, bo : Int) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, bo : Int) : Void;
 	
-	@:overload override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function implReset() : Void;
+	@:overload @:protected override private function implReset() : Void;
 	
 	
 }
 @:native('sun$nio$cs$UTF_32Coder$Encoder') extern class UTF_32Coder_Encoder extends java.nio.charset.CharsetEncoder
 {
-	@:overload private function put(cp : Int, dst : java.nio.ByteBuffer) : Void;
+	@:overload @:protected private function put(cp : Int, dst : java.nio.ByteBuffer) : Void;
 	
-	@:overload private function new(cs : java.nio.charset.Charset, byteOrder : Int, doBOM : Bool) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, byteOrder : Int, doBOM : Bool) : Void;
 	
-	@:overload override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function implReset() : Void;
+	@:overload @:protected override private function implReset() : Void;
 	
 	
 }

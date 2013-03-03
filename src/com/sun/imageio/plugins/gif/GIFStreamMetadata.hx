@@ -25,55 +25,55 @@ package com.sun.imageio.plugins.gif;
 */
 extern class GIFStreamMetadata extends com.sun.imageio.plugins.gif.GIFMetadata
 {
-	public static var versionStrings(default, null) : java.NativeArray<String>;
+	@:public @:static @:final public static var versionStrings(default, null) : java.NativeArray<String>;
 	
-	public var version : String;
+	@:public public var version : String;
 	
-	public var logicalScreenWidth : Int;
+	@:public public var logicalScreenWidth : Int;
 	
-	public var logicalScreenHeight : Int;
+	@:public public var logicalScreenHeight : Int;
 	
-	public var colorResolution : Int;
+	@:public public var colorResolution : Int;
 	
-	public var pixelAspectRatio : Int;
+	@:public public var pixelAspectRatio : Int;
 	
-	public var backgroundColorIndex : Int;
+	@:public public var backgroundColorIndex : Int;
 	
-	public var sortFlag : Bool;
+	@:public public var sortFlag : Bool;
 	
-	public static var colorTableSizes(default, null) : java.NativeArray<String>;
+	@:public @:static @:final public static var colorTableSizes(default, null) : java.NativeArray<String>;
 	
-	public var globalColorTable : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var globalColorTable : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function new(standardMetadataFormatSupported : Bool, nativeMetadataFormatName : String, nativeMetadataFormatClassName : String, extraMetadataFormatNames : java.NativeArray<String>, extraMetadataFormatClassNames : java.NativeArray<String>) : Void;
+	@:overload @:protected private function new(standardMetadataFormatSupported : Bool, nativeMetadataFormatName : String, nativeMetadataFormatClassName : String, extraMetadataFormatNames : java.NativeArray<String>, extraMetadataFormatClassNames : java.NativeArray<String>) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload override public function getAsTree(formatName : String) : org.w3c.dom.Node;
+	@:overload @:public override public function getAsTree(formatName : String) : org.w3c.dom.Node;
 	
-	@:overload override public function getStandardChromaNode() : IIOMetadataNode;
+	@:overload @:public override public function getStandardChromaNode() : IIOMetadataNode;
 	
-	@:overload override public function getStandardCompressionNode() : IIOMetadataNode;
+	@:overload @:public override public function getStandardCompressionNode() : IIOMetadataNode;
 	
-	@:overload override public function getStandardDataNode() : IIOMetadataNode;
+	@:overload @:public override public function getStandardDataNode() : IIOMetadataNode;
 	
-	@:overload override public function getStandardDimensionNode() : IIOMetadataNode;
+	@:overload @:public override public function getStandardDimensionNode() : IIOMetadataNode;
 	
-	@:overload override public function getStandardDocumentNode() : IIOMetadataNode;
+	@:overload @:public override public function getStandardDocumentNode() : IIOMetadataNode;
 	
-	@:overload override public function getStandardTextNode() : IIOMetadataNode;
+	@:overload @:public override public function getStandardTextNode() : IIOMetadataNode;
 	
-	@:overload override public function getStandardTransparencyNode() : IIOMetadataNode;
+	@:overload @:public override public function getStandardTransparencyNode() : IIOMetadataNode;
 	
-	@:overload override public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
+	@:overload @:public override public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
 	
-	@:overload private function mergeNativeTree(root : org.w3c.dom.Node) : Void;
+	@:overload @:protected override private function mergeNativeTree(root : org.w3c.dom.Node) : Void;
 	
-	@:overload private function mergeStandardTree(root : org.w3c.dom.Node) : Void;
+	@:overload @:protected override private function mergeStandardTree(root : org.w3c.dom.Node) : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }

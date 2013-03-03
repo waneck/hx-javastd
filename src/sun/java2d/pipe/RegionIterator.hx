@@ -30,14 +30,14 @@ extern class RegionIterator
 	* iteration state as this object to allow multiple iteration
 	* branches from the current position.
 	*/
-	@:overload public function createCopy() : sun.java2d.pipe.RegionIterator;
+	@:overload @:public public function createCopy() : sun.java2d.pipe.RegionIterator;
 	
 	/**
 	* Copies the iteration state from this RegionIterator object
 	* into another RegionIterator object to allow multiple iteration
 	* branches from the current position.
 	*/
-	@:overload public function copyStateFrom(ri : sun.java2d.pipe.RegionIterator) : Void;
+	@:overload @:public public function copyStateFrom(ri : sun.java2d.pipe.RegionIterator) : Void;
 	
 	/**
 	* Moves the iteration state to the beginning of the next
@@ -45,7 +45,7 @@ extern class RegionIterator
 	* and recording the low and high Y coordinates of the
 	* range in the array at locations 1 and 3 respectively.
 	*/
-	@:overload public function nextYRange(range : java.NativeArray<Int>) : Bool;
+	@:overload @:public public function nextYRange(range : java.NativeArray<Int>) : Bool;
 	
 	/**
 	* Moves the iteration state to the beginning of the next
@@ -53,7 +53,7 @@ extern class RegionIterator
 	* found and recording the low and high X coordinates of
 	* the range in the array at locations 0 and 2 respectively.
 	*/
-	@:overload public function nextXBand(range : java.NativeArray<Int>) : Bool;
+	@:overload @:public public function nextXBand(range : java.NativeArray<Int>) : Bool;
 	
 	
 }

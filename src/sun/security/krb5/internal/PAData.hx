@@ -29,9 +29,9 @@ package sun.security.krb5.internal;
 */
 extern class PAData
 {
-	@:overload public function new(new_pADataType : Int, new_pADataValue : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(new_pADataType : Int, new_pADataValue : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Constructs a PAData object.
@@ -39,7 +39,7 @@ extern class PAData
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes this object to an OutputStream.
@@ -48,11 +48,11 @@ extern class PAData
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	* @exception Asn1Exception on encoding errors.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
-	@:overload public function getValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the preferred etype from the PAData array.
@@ -64,7 +64,7 @@ extern class PAData
 	* @return the etype, or defaultEType if not enough info
 	* @throws Asn1Exception|IOException if there is an encoding error
 	*/
-	@:overload public static function getPreferredEType(pas : java.NativeArray<sun.security.krb5.internal.PAData>, defaultEType : Int) : Int;
+	@:overload @:public @:static public static function getPreferredEType(pas : java.NativeArray<sun.security.krb5.internal.PAData>, defaultEType : Int) : Int;
 	
 	/**
 	* Fetches salt and s2kparams value for eType in a series of PA-DATAs.
@@ -75,9 +75,9 @@ extern class PAData
 	* (This is useful when PA-DATAs from KRB-ERROR and AS-REP are combined).
 	* @return salt and s2kparams. can be null if not found
 	*/
-	@:overload public static function getSaltAndParams(eType : Int, pas : java.NativeArray<sun.security.krb5.internal.PAData>) : sun.security.krb5.internal.PAData.PAData_SaltAndParams;
+	@:overload @:public @:static public static function getSaltAndParams(eType : Int, pas : java.NativeArray<sun.security.krb5.internal.PAData>) : sun.security.krb5.internal.PAData.PAData_SaltAndParams;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -88,11 +88,11 @@ extern class PAData
 */
 @:native('sun$security$krb5$internal$PAData$SaltAndParams') extern class PAData_SaltAndParams
 {
-	public var salt(default, null) : String;
+	@:public @:final public var salt(default, null) : String;
 	
-	public var params(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:public @:final public var params(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function new(s : String, p : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(s : String, p : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

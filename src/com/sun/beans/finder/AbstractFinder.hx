@@ -33,7 +33,7 @@ package com.sun.beans.finder;
 	*
 	* @param args  array of classes of arguments
 	*/
-	@:overload private function new(args : java.NativeArray<Class<Dynamic>>) : Void;
+	@:overload @:protected private function new(args : java.NativeArray<Class<Dynamic>>) : Void;
 	
 	/**
 	* Returns an array of {@code Class} objects
@@ -43,7 +43,7 @@ package com.sun.beans.finder;
 	* @param method  the object that represents method
 	* @return the parameter types of the method
 	*/
-	@:overload @:abstract private function getParameters(method : T) : java.NativeArray<Class<Dynamic>>;
+	@:overload @:protected @:abstract private function getParameters(method : T) : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Returns {@code true} if and only if the method
@@ -54,7 +54,7 @@ package com.sun.beans.finder;
 	*         to take a variable number of arguments;
 	*         {@code false} otherwise
 	*/
-	@:overload @:abstract private function isVarArgs(method : T) : Bool;
+	@:overload @:protected @:abstract private function isVarArgs(method : T) : Bool;
 	
 	/**
 	* Checks validness of the method.
@@ -64,7 +64,7 @@ package com.sun.beans.finder;
 	* @return {@code true} if the method is valid,
 	*         {@code false} otherwise
 	*/
-	@:overload @:abstract private function isValid(method : T) : Bool;
+	@:overload @:protected @:abstract private function isValid(method : T) : Bool;
 	
 	
 }

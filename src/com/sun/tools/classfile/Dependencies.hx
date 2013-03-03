@@ -43,7 +43,7 @@ extern class Dependencies
 	* Get the  default finder used to locate the dependencies for a class.
 	* @return the default finder
 	*/
-	@:overload public static function getDefaultFinder() : com.sun.tools.classfile.Dependency.Dependency_Finder;
+	@:overload @:public @:static public static function getDefaultFinder() : com.sun.tools.classfile.Dependency.Dependency_Finder;
 	
 	/**
 	* Get a finder used to locate the API dependencies for a class.
@@ -58,19 +58,19 @@ extern class Dependencies
 	* @param access the access of members to be checked
 	* @return an API finder
 	*/
-	@:overload public static function getAPIFinder(access : Int) : com.sun.tools.classfile.Dependency.Dependency_Finder;
+	@:overload @:public @:static public static function getAPIFinder(access : Int) : com.sun.tools.classfile.Dependency.Dependency_Finder;
 	
 	/**
 	* Get the finder used to locate the dependencies for a class.
 	* @return the finder
 	*/
-	@:overload public function getFinder() : com.sun.tools.classfile.Dependency.Dependency_Finder;
+	@:overload @:public public function getFinder() : com.sun.tools.classfile.Dependency.Dependency_Finder;
 	
 	/**
 	* Set the finder used to locate the dependencies for a class.
 	* @param f the finder
 	*/
-	@:overload public function setFinder(f : com.sun.tools.classfile.Dependency.Dependency_Finder) : Void;
+	@:overload @:public public function setFinder(f : com.sun.tools.classfile.Dependency.Dependency_Finder) : Void;
 	
 	/**
 	* Get the default filter used to determine included when searching
@@ -78,7 +78,7 @@ extern class Dependencies
 	* Unless overridden, the default filter accepts all dependencies.
 	* @return the default filter.
 	*/
-	@:overload public static function getDefaultFilter() : com.sun.tools.classfile.Dependency.Dependency_Filter;
+	@:overload @:public @:static public static function getDefaultFilter() : com.sun.tools.classfile.Dependency.Dependency_Filter;
 	
 	/**
 	* Get a filter which uses a regular expression on the target's class name
@@ -86,7 +86,7 @@ extern class Dependencies
 	* @param pattern the pattern used to match the target's class name
 	* @return a filter for matching the target class name with a regular expression
 	*/
-	@:overload public static function getRegexFilter(pattern : java.util.regex.Pattern) : com.sun.tools.classfile.Dependency.Dependency_Filter;
+	@:overload @:public @:static public static function getRegexFilter(pattern : java.util.regex.Pattern) : com.sun.tools.classfile.Dependency.Dependency_Filter;
 	
 	/**
 	* Get a filter which checks the package of a target's class name
@@ -97,7 +97,7 @@ extern class Dependencies
 	* @param matchSubpackages whether or not to match subpackages as well
 	* @return a filter for checking the target package name against a list of package names
 	*/
-	@:overload public static function getPackageFilter(packageNames : java.util.Set<String>, matchSubpackages : Bool) : com.sun.tools.classfile.Dependency.Dependency_Filter;
+	@:overload @:public @:static public static function getPackageFilter(packageNames : java.util.Set<String>, matchSubpackages : Bool) : com.sun.tools.classfile.Dependency.Dependency_Filter;
 	
 	/**
 	* Get the filter used to determine the dependencies included when searching
@@ -105,14 +105,14 @@ extern class Dependencies
 	* Unless overridden, the default filter accepts all dependencies.
 	* @return the filter
 	*/
-	@:overload public function getFilter() : com.sun.tools.classfile.Dependency.Dependency_Filter;
+	@:overload @:public public function getFilter() : com.sun.tools.classfile.Dependency.Dependency_Filter;
 	
 	/**
 	* Set the filter used to determine the dependencies included when searching
 	* the transitive closure of all the dependencies.
 	* @param f the filter
 	*/
-	@:overload public function setFilter(f : com.sun.tools.classfile.Dependency.Dependency_Filter) : Void;
+	@:overload @:public public function setFilter(f : com.sun.tools.classfile.Dependency.Dependency_Filter) : Void;
 	
 	/**
 	* Find the dependencies of a class, using the current
@@ -131,7 +131,7 @@ extern class Dependencies
 	* @throws ClassFileError if an error occurs while processing a class file,
 	*      such as an error in the internal class file structure.
 	*/
-	@:overload public function findAllDependencies(classFinder : com.sun.tools.classfile.Dependencies.Dependencies_ClassFileReader, rootClassNames : java.util.Set<String>, transitiveClosure : Bool) : java.util.Set<com.sun.tools.classfile.Dependency>;
+	@:overload @:public public function findAllDependencies(classFinder : com.sun.tools.classfile.Dependencies.Dependencies_ClassFileReader, rootClassNames : java.util.Set<String>, transitiveClosure : Bool) : java.util.Set<com.sun.tools.classfile.Dependency>;
 	
 	/**
 	* Find the dependencies of a class, using the current
@@ -150,7 +150,7 @@ extern class Dependencies
 	* @throws ClassFileError if an error occurs while processing a class file,
 	*      such as an error in the internal class file structure.
 	*/
-	@:overload public function findAllDependencies(classFinder : com.sun.tools.classfile.Dependencies.Dependencies_ClassFileReader, rootClassNames : java.util.Set<String>, transitiveClosure : Bool, recorder : com.sun.tools.classfile.Dependencies.Dependencies_Recorder) : Void;
+	@:overload @:public public function findAllDependencies(classFinder : com.sun.tools.classfile.Dependencies.Dependencies_ClassFileReader, rootClassNames : java.util.Set<String>, transitiveClosure : Bool, recorder : com.sun.tools.classfile.Dependencies.Dependencies_Recorder) : Void;
 	
 	
 }
@@ -159,11 +159,11 @@ extern class Dependencies
 */
 @:native('com$sun$tools$classfile$Dependencies$ClassFileNotFoundException') extern class Dependencies_ClassFileNotFoundException extends java.lang.Exception
 {
-	@:overload public function new(className : String) : Void;
+	@:overload @:public public function new(className : String) : Void;
 	
-	@:overload public function new(className : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(className : String, cause : java.lang.Throwable) : Void;
 	
-	public var className(default, null) : String;
+	@:public @:final public var className(default, null) : String;
 	
 	
 }
@@ -172,7 +172,7 @@ extern class Dependencies
 */
 @:native('com$sun$tools$classfile$Dependencies$ClassFileError') extern class Dependencies_ClassFileError extends java.lang.Error
 {
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }
@@ -188,7 +188,7 @@ extern class Dependencies
 	* @throws Dependencies#ClassFileNotFoundException if the classfile cannot be
 	*   found
 	*/
-	@:overload public function getClassFile(className : String) : com.sun.tools.classfile.ClassFile;
+	@:overload @:public public function getClassFile(className : String) : com.sun.tools.classfile.ClassFile;
 	
 	
 }
@@ -201,7 +201,7 @@ extern class Dependencies
 	* Record a dependency that has been found.
 	* @param d
 	*/
-	@:overload public function addDependency(d : com.sun.tools.classfile.Dependency) : Void;
+	@:overload @:public public function addDependency(d : com.sun.tools.classfile.Dependency) : Void;
 	
 	
 }
@@ -210,20 +210,20 @@ extern class Dependencies
 */
 @:native('com$sun$tools$classfile$Dependencies$SimpleLocation') @:internal extern class Dependencies_SimpleLocation implements com.sun.tools.classfile.Dependency.Dependency_Location
 {
-	@:overload public function new(className : String) : Void;
+	@:overload @:public public function new(className : String) : Void;
 	
 	/**
 	* Get the name of the class being depended on. This name will be used to
 	* locate the class file for transitive dependency analysis.
 	* @return the name of the class being depended on
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -232,17 +232,17 @@ extern class Dependencies
 */
 @:native('com$sun$tools$classfile$Dependencies$SimpleDependency') @:internal extern class Dependencies_SimpleDependency implements com.sun.tools.classfile.Dependency
 {
-	@:overload public function new(origin : com.sun.tools.classfile.Dependency.Dependency_Location, target : com.sun.tools.classfile.Dependency.Dependency_Location) : Void;
+	@:overload @:public public function new(origin : com.sun.tools.classfile.Dependency.Dependency_Location, target : com.sun.tools.classfile.Dependency.Dependency_Location) : Void;
 	
-	@:overload public function getOrigin() : com.sun.tools.classfile.Dependency.Dependency_Location;
+	@:overload @:public public function getOrigin() : com.sun.tools.classfile.Dependency.Dependency_Location;
 	
-	@:overload public function getTarget() : com.sun.tools.classfile.Dependency.Dependency_Location;
+	@:overload @:public public function getTarget() : com.sun.tools.classfile.Dependency.Dependency_Location;
 	
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -251,7 +251,7 @@ extern class Dependencies
 */
 @:native('com$sun$tools$classfile$Dependencies$DefaultFilter') @:internal extern class Dependencies_DefaultFilter implements com.sun.tools.classfile.Dependency.Dependency_Filter
 {
-	@:overload public function accepts(dependency : com.sun.tools.classfile.Dependency) : Bool;
+	@:overload @:public public function accepts(dependency : com.sun.tools.classfile.Dependency) : Bool;
 	
 	
 }
@@ -261,7 +261,7 @@ extern class Dependencies
 */
 @:native('com$sun$tools$classfile$Dependencies$TargetRegexFilter') @:internal extern class Dependencies_TargetRegexFilter implements com.sun.tools.classfile.Dependency.Dependency_Filter
 {
-	@:overload public function accepts(dependency : com.sun.tools.classfile.Dependency) : Bool;
+	@:overload @:public public function accepts(dependency : com.sun.tools.classfile.Dependency) : Bool;
 	
 	
 }
@@ -271,7 +271,7 @@ extern class Dependencies
 */
 @:native('com$sun$tools$classfile$Dependencies$TargetPackageFilter') @:internal extern class Dependencies_TargetPackageFilter implements com.sun.tools.classfile.Dependency.Dependency_Filter
 {
-	@:overload public function accepts(dependency : com.sun.tools.classfile.Dependency) : Bool;
+	@:overload @:public public function accepts(dependency : com.sun.tools.classfile.Dependency) : Bool;
 	
 	
 }
@@ -280,7 +280,7 @@ extern class Dependencies
 */
 @:native('com$sun$tools$classfile$Dependencies$ClassDependencyFinder') @:internal extern class Dependencies_ClassDependencyFinder extends com.sun.tools.classfile.Dependencies.Dependencies_BasicDependencyFinder
 {
-	@:overload public function findDependencies(classfile : com.sun.tools.classfile.ClassFile) : java.lang.Iterable<com.sun.tools.classfile.Dependency>;
+	@:overload @:public public function findDependencies(classfile : com.sun.tools.classfile.ClassFile) : java.lang.Iterable<com.sun.tools.classfile.Dependency>;
 	
 	
 }
@@ -290,7 +290,7 @@ extern class Dependencies
 */
 @:native('com$sun$tools$classfile$Dependencies$APIDependencyFinder') @:internal extern class Dependencies_APIDependencyFinder extends com.sun.tools.classfile.Dependencies.Dependencies_BasicDependencyFinder
 {
-	@:overload public function findDependencies(classfile : com.sun.tools.classfile.ClassFile) : java.lang.Iterable<com.sun.tools.classfile.Dependency>;
+	@:overload @:public public function findDependencies(classfile : com.sun.tools.classfile.ClassFile) : java.lang.Iterable<com.sun.tools.classfile.Dependency>;
 	
 	
 }
@@ -301,53 +301,53 @@ extern class Dependencies
 	* @param classfile the class file to be examined
 	* @return the dependencies located in the given class file.
 	*/
-	@:overload @:public public function findDependencies(classfile : com.sun.tools.classfile.ClassFile) : java.lang.Iterable<com.sun.tools.classfile.Dependency>;
+	@:overload @:public @:public public function findDependencies(classfile : com.sun.tools.classfile.ClassFile) : java.lang.Iterable<com.sun.tools.classfile.Dependency>;
 	
 	
 }
 @:native('com$sun$tools$classfile$Dependencies$BasicDependencyFinder$Visitor') @:internal extern class Dependencies_BasicDependencyFinder_Visitor implements com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<java.lang.Void, java.lang.Void> implements com.sun.tools.classfile.Type.Type_Visitor<java.lang.Void, java.lang.Void>
 {
-	@:overload public function visitClass(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Class_info, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitClass(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Class_info, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitDouble(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Double_info, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitDouble(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Double_info, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitFieldref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Fieldref_info, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitFieldref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Fieldref_info, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitFloat(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Float_info, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitFloat(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Float_info, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitInteger(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Integer_info, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitInteger(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Integer_info, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitInterfaceMethodref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_InterfaceMethodref_info, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitInterfaceMethodref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_InterfaceMethodref_info, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitInvokeDynamic(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_InvokeDynamic_info, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitInvokeDynamic(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_InvokeDynamic_info, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitLong(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Long_info, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitLong(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Long_info, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitMethodHandle(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_MethodHandle_info, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitMethodHandle(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_MethodHandle_info, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitMethodType(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_MethodType_info, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitMethodType(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_MethodType_info, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitMethodref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Methodref_info, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitMethodref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Methodref_info, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitNameAndType(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_NameAndType_info, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitNameAndType(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_NameAndType_info, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitString(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_String_info, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitString(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_String_info, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitUtf8(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Utf8_info, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitUtf8(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Utf8_info, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitSimpleType(type : com.sun.tools.classfile.Type.Type_SimpleType, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitSimpleType(type : com.sun.tools.classfile.Type.Type_SimpleType, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitArrayType(type : com.sun.tools.classfile.Type.Type_ArrayType, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitArrayType(type : com.sun.tools.classfile.Type.Type_ArrayType, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitMethodType(type : com.sun.tools.classfile.Type.Type_MethodType, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitMethodType(type : com.sun.tools.classfile.Type.Type_MethodType, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitClassSigType(type : com.sun.tools.classfile.Type.Type_ClassSigType, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitClassSigType(type : com.sun.tools.classfile.Type.Type_ClassSigType, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitClassType(type : com.sun.tools.classfile.Type.Type_ClassType, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitClassType(type : com.sun.tools.classfile.Type.Type_ClassType, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitTypeParamType(type : com.sun.tools.classfile.Type.Type_TypeParamType, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitTypeParamType(type : com.sun.tools.classfile.Type.Type_TypeParamType, p : java.lang.Void) : java.lang.Void;
 	
-	@:overload public function visitWildcardType(type : com.sun.tools.classfile.Type.Type_WildcardType, p : java.lang.Void) : java.lang.Void;
+	@:overload @:public public function visitWildcardType(type : com.sun.tools.classfile.Type.Type_WildcardType, p : java.lang.Void) : java.lang.Void;
 	
 	
 }

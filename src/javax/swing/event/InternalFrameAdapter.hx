@@ -43,38 +43,38 @@ extern class InternalFrameAdapter implements javax.swing.event.InternalFrameList
 	/**
 	* Invoked when an internal frame has been opened.
 	*/
-	@:overload public function internalFrameOpened(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameOpened(e : javax.swing.event.InternalFrameEvent) : Void;
 	
 	/**
 	* Invoked when an internal frame is in the process of being closed.
 	* The close operation can be overridden at this point.
 	*/
-	@:overload public function internalFrameClosing(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameClosing(e : javax.swing.event.InternalFrameEvent) : Void;
 	
 	/**
 	* Invoked when an internal frame has been closed.
 	*/
-	@:overload public function internalFrameClosed(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameClosed(e : javax.swing.event.InternalFrameEvent) : Void;
 	
 	/**
 	* Invoked when an internal frame is iconified.
 	*/
-	@:overload public function internalFrameIconified(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameIconified(e : javax.swing.event.InternalFrameEvent) : Void;
 	
 	/**
 	* Invoked when an internal frame is de-iconified.
 	*/
-	@:overload public function internalFrameDeiconified(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameDeiconified(e : javax.swing.event.InternalFrameEvent) : Void;
 	
 	/**
 	* Invoked when an internal frame is activated.
 	*/
-	@:overload public function internalFrameActivated(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameActivated(e : javax.swing.event.InternalFrameEvent) : Void;
 	
 	/**
 	* Invoked when an internal frame is de-activated.
 	*/
-	@:overload public function internalFrameDeactivated(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameDeactivated(e : javax.swing.event.InternalFrameEvent) : Void;
 	
 	
 }

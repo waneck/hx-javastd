@@ -265,7 +265,7 @@ package java.nio;
 	* @throws  IllegalArgumentException
 	*          If the <tt>capacity</tt> is a negative integer
 	*/
-	@:overload public static function allocate(capacity : Int) : java.nio.LongBuffer;
+	@:overload @:public @:static public static function allocate(capacity : Int) : java.nio.LongBuffer;
 	
 	/**
 	* Wraps a long array into a buffer.
@@ -298,7 +298,7 @@ package java.nio;
 	*          If the preconditions on the <tt>offset</tt> and <tt>length</tt>
 	*          parameters do not hold
 	*/
-	@:overload public static function wrap(array : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : java.nio.LongBuffer;
+	@:overload @:public @:static public static function wrap(array : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : java.nio.LongBuffer;
 	
 	/**
 	* Wraps a long array into a buffer.
@@ -316,7 +316,7 @@ package java.nio;
 	*
 	* @return  The new long buffer
 	*/
-	@:overload public static function wrap(array : java.NativeArray<haxe.Int64>) : java.nio.LongBuffer;
+	@:overload @:public @:static public static function wrap(array : java.NativeArray<haxe.Int64>) : java.nio.LongBuffer;
 	
 	/**
 	* Creates a new long buffer whose content is a shared subsequence of
@@ -335,7 +335,7 @@ package java.nio;
 	*
 	* @return  The new long buffer
 	*/
-	@:overload @:abstract public function slice() : java.nio.LongBuffer;
+	@:overload @:public @:abstract public function slice() : java.nio.LongBuffer;
 	
 	/**
 	* Creates a new long buffer that shares this buffer's content.
@@ -352,7 +352,7 @@ package java.nio;
 	*
 	* @return  The new long buffer
 	*/
-	@:overload @:abstract public function duplicate() : java.nio.LongBuffer;
+	@:overload @:public @:abstract public function duplicate() : java.nio.LongBuffer;
 	
 	/**
 	* Creates a new, read-only long buffer that shares this buffer's
@@ -372,7 +372,7 @@ package java.nio;
 	*
 	* @return  The new, read-only long buffer
 	*/
-	@:overload @:abstract public function asReadOnlyBuffer() : java.nio.LongBuffer;
+	@:overload @:public @:abstract public function asReadOnlyBuffer() : java.nio.LongBuffer;
 	
 	/**
 	* Relative <i>get</i> method.  Reads the long at this buffer's
@@ -383,7 +383,7 @@ package java.nio;
 	* @throws  BufferUnderflowException
 	*          If the buffer's current position is not smaller than its limit
 	*/
-	@:overload @:abstract public function get() : haxe.Int64;
+	@:overload @:public @:abstract public function get() : haxe.Int64;
 	
 	/**
 	* Relative <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -402,7 +402,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function put(l : haxe.Int64) : java.nio.LongBuffer;
+	@:overload @:public @:abstract public function put(l : haxe.Int64) : java.nio.LongBuffer;
 	
 	/**
 	* Absolute <i>get</i> method.  Reads the long at the given
@@ -417,7 +417,7 @@ package java.nio;
 	*          If <tt>index</tt> is negative
 	*          or not smaller than the buffer's limit
 	*/
-	@:overload @:abstract public function get(index : Int) : haxe.Int64;
+	@:overload @:public @:abstract public function get(index : Int) : haxe.Int64;
 	
 	/**
 	* Absolute <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -440,7 +440,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function put(index : Int, l : haxe.Int64) : java.nio.LongBuffer;
+	@:overload @:public @:abstract public function put(index : Int, l : haxe.Int64) : java.nio.LongBuffer;
 	
 	/**
 	* Relative bulk <i>get</i> method.
@@ -491,7 +491,7 @@ package java.nio;
 	*          If the preconditions on the <tt>offset</tt> and <tt>length</tt>
 	*          parameters do not hold
 	*/
-	@:overload public function get(dst : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : java.nio.LongBuffer;
+	@:overload @:public public function get(dst : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : java.nio.LongBuffer;
 	
 	/**
 	* Relative bulk <i>get</i> method.
@@ -509,7 +509,7 @@ package java.nio;
 	*          If there are fewer than <tt>length</tt> longs
 	*          remaining in this buffer
 	*/
-	@:overload public function get(dst : java.NativeArray<haxe.Int64>) : java.nio.LongBuffer;
+	@:overload @:public public function get(dst : java.NativeArray<haxe.Int64>) : java.nio.LongBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -552,7 +552,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload public function put(src : java.nio.LongBuffer) : java.nio.LongBuffer;
+	@:overload @:public public function put(src : java.nio.LongBuffer) : java.nio.LongBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -604,7 +604,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload public function put(src : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : java.nio.LongBuffer;
+	@:overload @:public public function put(src : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : java.nio.LongBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -625,7 +625,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:final public function put(src : java.NativeArray<haxe.Int64>) : java.nio.LongBuffer;
+	@:overload @:public @:final public function put(src : java.NativeArray<haxe.Int64>) : java.nio.LongBuffer;
 	
 	/**
 	* Tells whether or not this buffer is backed by an accessible long
@@ -638,7 +638,7 @@ package java.nio;
 	* @return  <tt>true</tt> if, and only if, this buffer
 	*          is backed by an array and is not read-only
 	*/
-	@:overload @:final override public function hasArray() : Bool;
+	@:overload @:public @:final override public function hasArray() : Bool;
 	
 	/**
 	* Returns the long array that backs this
@@ -659,7 +659,7 @@ package java.nio;
 	* @throws  UnsupportedOperationException
 	*          If this buffer is not backed by an accessible array
 	*/
-	@:overload @:final override public function array() : java.NativeArray<haxe.Int64>;
+	@:overload @:public @:final override public function array() : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* Returns the offset within this buffer's backing array of the first
@@ -681,7 +681,7 @@ package java.nio;
 	* @throws  UnsupportedOperationException
 	*          If this buffer is not backed by an accessible array
 	*/
-	@:overload @:final override public function arrayOffset() : Int;
+	@:overload @:public @:final override public function arrayOffset() : Int;
 	
 	/**
 	* Compacts this buffer&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -722,21 +722,21 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function compact() : java.nio.LongBuffer;
+	@:overload @:public @:abstract public function compact() : java.nio.LongBuffer;
 	
 	/**
 	* Tells whether or not this long buffer is direct. </p>
 	*
 	* @return  <tt>true</tt> if, and only if, this buffer is direct
 	*/
-	@:overload @:abstract override public function isDirect() : Bool;
+	@:overload @:public @:abstract override public function isDirect() : Bool;
 	
 	/**
 	* Returns a string summarizing the state of this buffer.  </p>
 	*
 	* @return  A summary string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the current hash code of this buffer.
@@ -751,7 +751,7 @@ package java.nio;
 	*
 	* @return  The current hash code of this buffer
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Tells whether or not this buffer is equal to another object.
@@ -785,7 +785,7 @@ package java.nio;
 	* @return  <tt>true</tt> if, and only if, this buffer is equal to the
 	*           given object
 	*/
-	@:overload public function equals(ob : Dynamic) : Bool;
+	@:overload @:public public function equals(ob : Dynamic) : Bool;
 	
 	/**
 	* Compares this buffer to another.
@@ -810,7 +810,7 @@ package java.nio;
 	* @return  A negative integer, zero, or a positive integer as this buffer
 	*          is less than, equal to, or greater than the given buffer
 	*/
-	@:overload public function compareTo(that : java.nio.LongBuffer) : Int;
+	@:overload @:public public function compareTo(that : java.nio.LongBuffer) : Int;
 	
 	/**
 	* Retrieves this buffer's byte order.
@@ -824,7 +824,7 @@ package java.nio;
 	*
 	* @return  This buffer's byte order
 	*/
-	@:overload @:abstract public function order() : java.nio.ByteOrder;
+	@:overload @:public @:abstract public function order() : java.nio.ByteOrder;
 	
 	/**
 	* Compares this object with the specified object for order.  Returns a
@@ -865,7 +865,7 @@ package java.nio;
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload @:public @:public public function compareTo(o : Dynamic) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
 	
 	
 }

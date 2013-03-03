@@ -30,9 +30,9 @@ package com.sun.media.sound;
 */
 extern class SoftCubicResampler extends com.sun.media.sound.SoftAbstractResampler
 {
-	@:overload override public function getPadding() : Int;
+	@:overload @:public override public function getPadding() : Int;
 	
-	@:overload override public function interpolate(_in : java.NativeArray<Single>, in_offset : java.NativeArray<Single>, in_end : Single, startpitch : java.NativeArray<Single>, pitchstep : Single, out : java.NativeArray<Single>, out_offset : java.NativeArray<Int>, out_end : Int) : Void;
+	@:overload @:public override public function interpolate(_in : java.NativeArray<Single>, in_offset : java.NativeArray<Single>, in_end : Single, startpitch : java.NativeArray<Single>, pitchstep : Single, out : java.NativeArray<Single>, out_offset : java.NativeArray<Int>, out_end : Int) : Void;
 	
 	
 }

@@ -28,14 +28,14 @@ extern class MimeType implements java.io.Externalizable
 	/**
 	* Default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor that builds a MimeType from a String.
 	*
 	* @param rawdata   the MIME type string
 	*/
-	@:overload public function new(rawdata : String) : Void;
+	@:overload @:public public function new(rawdata : String) : Void;
 	
 	/**
 	* Constructor that builds a MimeType with the given primary and sub type
@@ -46,14 +46,14 @@ extern class MimeType implements java.io.Externalizable
 	* @exception       MimeTypeParseException  if the primary type or subtype
 	*                                          is not a valid token
 	*/
-	@:overload public function new(primary : String, sub : String) : Void;
+	@:overload @:public public function new(primary : String, sub : String) : Void;
 	
 	/**
 	* Retrieve the primary type of this object.
 	*
 	* @return  the primary MIME type
 	*/
-	@:overload public function getPrimaryType() : String;
+	@:overload @:public public function getPrimaryType() : String;
 	
 	/**
 	* Set the primary type for this object to the given String.
@@ -62,14 +62,14 @@ extern class MimeType implements java.io.Externalizable
 	* @exception       MimeTypeParseException  if the primary type
 	*                                          is not a valid token
 	*/
-	@:overload public function setPrimaryType(primary : String) : Void;
+	@:overload @:public public function setPrimaryType(primary : String) : Void;
 	
 	/**
 	* Retrieve the subtype of this object.
 	*
 	* @return  the MIME subtype
 	*/
-	@:overload public function getSubType() : String;
+	@:overload @:public public function getSubType() : String;
 	
 	/**
 	* Set the subtype for this object to the given String.
@@ -78,14 +78,14 @@ extern class MimeType implements java.io.Externalizable
 	* @exception       MimeTypeParseException  if the subtype
 	*                                          is not a valid token
 	*/
-	@:overload public function setSubType(sub : String) : Void;
+	@:overload @:public public function setSubType(sub : String) : Void;
 	
 	/**
 	* Retrieve this object's parameter list.
 	*
 	* @return  a MimeTypeParameterList object representing the parameters
 	*/
-	@:overload public function getParameters() : javax.activation.MimeTypeParameterList;
+	@:overload @:public public function getParameters() : javax.activation.MimeTypeParameterList;
 	
 	/**
 	* Retrieve the value associated with the given name, or null if there
@@ -94,7 +94,7 @@ extern class MimeType implements java.io.Externalizable
 	* @param name      the parameter name
 	* @return          the paramter's value
 	*/
-	@:overload public function getParameter(name : String) : String;
+	@:overload @:public public function getParameter(name : String) : String;
 	
 	/**
 	* Set the value to be associated with the given name, replacing
@@ -103,19 +103,19 @@ extern class MimeType implements java.io.Externalizable
 	* @param name      the parameter name
 	* @param value     the paramter's value
 	*/
-	@:overload public function setParameter(name : String, value : String) : Void;
+	@:overload @:public public function setParameter(name : String, value : String) : Void;
 	
 	/**
 	* Remove any value associated with the given name.
 	*
 	* @param name      the parameter name
 	*/
-	@:overload public function removeParameter(name : String) : Void;
+	@:overload @:public public function removeParameter(name : String) : Void;
 	
 	/**
 	* Return the String representation of this object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Return a String representation of this object
@@ -123,7 +123,7 @@ extern class MimeType implements java.io.Externalizable
 	*
 	* @return  the MIME type and sub-type
 	*/
-	@:overload public function getBaseType() : String;
+	@:overload @:public public function getBaseType() : String;
 	
 	/**
 	* Determine if the primary and sub type of this object is
@@ -132,7 +132,7 @@ extern class MimeType implements java.io.Externalizable
 	* @param type      the MimeType object to compare with
 	* @return          true if they match
 	*/
-	@:overload public function match(type : javax.activation.MimeType) : Bool;
+	@:overload @:public public function match(type : javax.activation.MimeType) : Bool;
 	
 	/**
 	* Determine if the primary and sub type of this object is
@@ -141,7 +141,7 @@ extern class MimeType implements java.io.Externalizable
 	* @param rawdata   the MIME type string to compare with
 	* @return          true if they match
 	*/
-	@:overload public function match(rawdata : String) : Bool;
+	@:overload @:public public function match(rawdata : String) : Bool;
 	
 	/**
 	* The object implements the writeExternal method to save its contents
@@ -152,7 +152,7 @@ extern class MimeType implements java.io.Externalizable
 	* @param out       the ObjectOutput object to write to
 	* @exception IOException Includes any I/O exceptions that may occur
 	*/
-	@:overload public function writeExternal(out : java.io.ObjectOutput) : Void;
+	@:overload @:public public function writeExternal(out : java.io.ObjectOutput) : Void;
 	
 	/**
 	* The object implements the readExternal method to restore its
@@ -165,7 +165,7 @@ extern class MimeType implements java.io.Externalizable
 	* @exception ClassNotFoundException If the class for an object being
 	*              restored cannot be found.
 	*/
-	@:overload public function readExternal(_in : java.io.ObjectInput) : Void;
+	@:overload @:public public function readExternal(_in : java.io.ObjectInput) : Void;
 	
 	
 }

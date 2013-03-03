@@ -35,7 +35,7 @@ extern interface OpenMBeanOperationInfo
 	*
 	* @return the description.
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	/**
 	* Returns the name of the operation
@@ -43,7 +43,7 @@ extern interface OpenMBeanOperationInfo
 	*
 	* @return the name.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns an array of <tt>OpenMBeanParameterInfo</tt> instances
@@ -56,7 +56,7 @@ extern interface OpenMBeanOperationInfo
 	*
 	* @return the signature.
 	*/
-	@:overload public function getSignature() : java.NativeArray<javax.management.MBeanParameterInfo>;
+	@:overload @:public public function getSignature() : java.NativeArray<javax.management.MBeanParameterInfo>;
 	
 	/**
 	* Returns an <tt>int</tt> constant qualifying the impact of the
@@ -71,7 +71,7 @@ extern interface OpenMBeanOperationInfo
 	*
 	* @return the impact code.
 	*/
-	@:overload public function getImpact() : Int;
+	@:overload @:public public function getImpact() : Int;
 	
 	/**
 	* Returns the fully qualified Java class name of the values
@@ -82,7 +82,7 @@ extern interface OpenMBeanOperationInfo
 	*
 	* @return the return type.
 	*/
-	@:overload public function getReturnType() : String;
+	@:overload @:public public function getReturnType() : String;
 	
 	/**
 	* Returns the <i>open type</i> of the values returned by the
@@ -91,7 +91,7 @@ extern interface OpenMBeanOperationInfo
 	*
 	* @return the return type.
 	*/
-	@:overload public function getReturnOpenType() : javax.management.openmbean.OpenType<Dynamic>;
+	@:overload @:public public function getReturnOpenType() : javax.management.openmbean.OpenType<Dynamic>;
 	
 	
 }

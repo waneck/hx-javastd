@@ -37,9 +37,9 @@ package com.sun.java.swing.plaf.motif;
 */
 extern class MotifTreeCellRenderer extends javax.swing.tree.DefaultTreeCellRenderer
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function loadLeafIcon() : javax.swing.Icon;
+	@:overload @:public @:static public static function loadLeafIcon() : javax.swing.Icon;
 	
 	
 }
@@ -55,13 +55,13 @@ extern class MotifTreeCellRenderer extends javax.swing.tree.DefaultTreeCellRende
 */
 @:native('com$sun$java$swing$plaf$motif$MotifTreeCellRenderer$TreeLeafIcon') extern class MotifTreeCellRenderer_TreeLeafIcon implements javax.swing.Icon implements java.io.Serializable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }

@@ -25,19 +25,19 @@ package com.sun.corba.se.impl.transport;
 */
 extern class ListenerThreadImpl implements com.sun.corba.se.pept.transport.ListenerThread implements com.sun.corba.se.spi.orbutil.threadpool.Work
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, acceptor : com.sun.corba.se.pept.transport.Acceptor, selector : com.sun.corba.se.pept.transport.Selector) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, acceptor : com.sun.corba.se.pept.transport.Acceptor, selector : com.sun.corba.se.pept.transport.Selector) : Void;
 	
-	@:overload public function getAcceptor() : com.sun.corba.se.pept.transport.Acceptor;
+	@:overload @:public public function getAcceptor() : com.sun.corba.se.pept.transport.Acceptor;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function doWork() : Void;
+	@:overload @:public public function doWork() : Void;
 	
-	@:overload public function setEnqueueTime(timeInMillis : haxe.Int64) : Void;
+	@:overload @:public public function setEnqueueTime(timeInMillis : haxe.Int64) : Void;
 	
-	@:overload public function getEnqueueTime() : haxe.Int64;
+	@:overload @:public public function getEnqueueTime() : haxe.Int64;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

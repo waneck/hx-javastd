@@ -33,12 +33,12 @@ extern interface XMSelectionListener
 	/*
 	* This method is called when the owner changes
 	*/
-	@:overload public function ownerChanged(screen : Int, sel : sun.awt.X11.XMSelection, newOwner : haxe.Int64, data : haxe.Int64, timestamp : haxe.Int64) : Void;
+	@:overload @:public public function ownerChanged(screen : Int, sel : sun.awt.X11.XMSelection, newOwner : haxe.Int64, data : haxe.Int64, timestamp : haxe.Int64) : Void;
 	
 	/*
 	* This method is called when the owner dies
 	*/
-	@:overload public function ownerDeath(screen : Int, sel : sun.awt.X11.XMSelection, deadOwner : haxe.Int64) : Void;
+	@:overload @:public public function ownerDeath(screen : Int, sel : sun.awt.X11.XMSelection, deadOwner : haxe.Int64) : Void;
 	
 	/*
 	* This method is for selection change notification
@@ -46,7 +46,7 @@ extern interface XMSelectionListener
 	* This method will only get called if you use the default constructor
 	* or expilicitly specify PropertyChangeMask.
 	*/
-	@:overload public function selectionChanged(screen : Int, sel : sun.awt.X11.XMSelection, owner : haxe.Int64, event : sun.awt.X11.XPropertyEvent) : Void;
+	@:overload @:public public function selectionChanged(screen : Int, sel : sun.awt.X11.XMSelection, owner : haxe.Int64, event : sun.awt.X11.XPropertyEvent) : Void;
 	
 	
 }

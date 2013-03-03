@@ -25,33 +25,33 @@ package sun.tools.jconsole;
 */
 extern class BorderedComponent extends javax.swing.JPanel implements java.awt.event.ActionListener
 {
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
-	@:overload public function new(text : String, comp : javax.swing.JComponent) : Void;
+	@:overload @:public public function new(text : String, comp : javax.swing.JComponent) : Void;
 	
-	@:overload public function new(text : String, comp : javax.swing.JComponent, collapsible : Bool) : Void;
+	@:overload @:public public function new(text : String, comp : javax.swing.JComponent, collapsible : Bool) : Void;
 	
-	@:overload public function setComponent(comp : javax.swing.JComponent) : Void;
+	@:overload @:public public function setComponent(comp : javax.swing.JComponent) : Void;
 	
-	@:overload public function setValueLabel(str : String) : Void;
+	@:overload @:public public function setValueLabel(str : String) : Void;
 	
-	@:overload public function actionPerformed(ev : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(ev : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload override public function doLayout() : Void;
+	@:overload @:public override public function doLayout() : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$BorderedComponent$ArrowIcon') @:internal extern class BorderedComponent_ArrowIcon implements javax.swing.Icon
 {
-	@:overload public function new(direction : Int, textLabel : javax.swing.JLabel) : Void;
+	@:overload @:public public function new(direction : Int, textLabel : javax.swing.JLabel) : Void;
 	
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
@@ -71,14 +71,14 @@ extern class BorderedComponent extends javax.swing.JPanel implements java.awt.ev
 */
 @:native('sun$tools$jconsole$BorderedComponent$LabeledBorder') extern class BorderedComponent_LabeledBorder extends javax.swing.border.TitledBorder
 {
-	private var label : javax.swing.JComponent;
+	@:protected private var label : javax.swing.JComponent;
 	
 	/**
 	* Creates a LabeledBorder instance.
 	*
 	* @param label  the label the border should display
 	*/
-	@:overload public function new(label : javax.swing.JComponent) : Void;
+	@:overload @:public public function new(label : javax.swing.JComponent) : Void;
 	
 	/**
 	* Creates a LabeledBorder instance with the specified border
@@ -86,7 +86,7 @@ extern class BorderedComponent extends javax.swing.JPanel implements java.awt.ev
 	*
 	* @param border  the border
 	*/
-	@:overload public function new(border : javax.swing.border.Border) : Void;
+	@:overload @:public public function new(border : javax.swing.border.Border) : Void;
 	
 	/**
 	* Creates a LabeledBorder instance with the specified border and
@@ -95,7 +95,7 @@ extern class BorderedComponent extends javax.swing.JPanel implements java.awt.ev
 	* @param border  the border
 	* @param label  the label the border should display
 	*/
-	@:overload public function new(border : javax.swing.border.Border, label : javax.swing.JComponent) : Void;
+	@:overload @:public public function new(border : javax.swing.border.Border, label : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the border for the specified component with the
@@ -107,46 +107,46 @@ extern class BorderedComponent extends javax.swing.JPanel implements java.awt.ev
 	* @param width the width of the painted border
 	* @param height the height of the painted border
 	*/
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Reinitialize the insets parameter with this Border's current Insets.
 	* @param c the component for which this border insets value applies
 	* @param insets the object to be reinitialized
 	*/
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* Returns the label of the labeled border.
 	*/
-	@:overload public function getLabel() : javax.swing.JComponent;
+	@:overload @:public public function getLabel() : javax.swing.JComponent;
 	
 	/**
 	* Sets the title of the titled border.
 	* param title the title for the border
 	*/
-	@:overload public function setLabel(label : javax.swing.JComponent) : Void;
+	@:overload @:public public function setLabel(label : javax.swing.JComponent) : Void;
 	
 	/**
 	* Returns the minimum dimensions this border requires
 	* in order to fully display the border and title.
 	* @param c the component where this border will be drawn
 	*/
-	@:overload override public function getMinimumSize(c : java.awt.Component) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : java.awt.Component) : java.awt.Dimension;
 	
 	
 }
 @:native('sun$tools$jconsole$BorderedComponent$FocusBorder') extern class BorderedComponent_FocusBorder extends javax.swing.border.AbstractBorder implements java.awt.event.FocusListener
 {
-	@:overload public function new(comp : java.awt.Component) : Void;
+	@:overload @:public public function new(comp : java.awt.Component) : Void;
 	
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
 	
 }

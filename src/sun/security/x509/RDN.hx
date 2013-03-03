@@ -36,7 +36,7 @@ extern class RDN
 	* @param name String form of RDN
 	* @throws IOException on parsing error
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Constructs an RDN from its printable representation.
@@ -50,23 +50,23 @@ extern class RDN
 	* @param keyword an additional mapping of keywords to OIDs
 	* @throws IOException on parsing error
 	*/
-	@:overload public function new(name : String, keywordMap : java.util.Map<String, String>) : Void;
+	@:overload @:public public function new(name : String, keywordMap : java.util.Map<String, String>) : Void;
 	
-	@:overload public function new(ava : sun.security.x509.AVA) : Void;
+	@:overload @:public public function new(ava : sun.security.x509.AVA) : Void;
 	
-	@:overload public function new(avas : java.NativeArray<sun.security.x509.AVA>) : Void;
+	@:overload @:public public function new(avas : java.NativeArray<sun.security.x509.AVA>) : Void;
 	
 	/**
 	* Return an immutable List of the AVAs in this RDN.
 	*/
-	@:overload public function avas() : java.util.List<sun.security.x509.AVA>;
+	@:overload @:public public function avas() : java.util.List<sun.security.x509.AVA>;
 	
 	/**
 	* Return the number of AVAs in this RDN.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/*
 	* Calculates a hash code value for the object.  Objects
@@ -74,40 +74,40 @@ extern class RDN
 	*
 	* @returns int hashCode value
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/*
 	* Returns a printable form of this RDN, using RFC 1779 style catenation
 	* of attribute/value assertions, and emitting attribute type keywords
 	* from RFCs 1779, 2253, and 3280.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/*
 	* Returns a printable form of this RDN using the algorithm defined in
 	* RFC 1779. Only RFC 1779 attribute type keywords are emitted.
 	*/
-	@:overload public function toRFC1779String() : String;
+	@:overload @:public public function toRFC1779String() : String;
 	
 	/*
 	* Returns a printable form of this RDN using the algorithm defined in
 	* RFC 1779. RFC 1779 attribute type keywords are emitted, as well
 	* as keywords contained in the OID/keyword map.
 	*/
-	@:overload public function toRFC1779String(oidMap : java.util.Map<String, String>) : String;
+	@:overload @:public public function toRFC1779String(oidMap : java.util.Map<String, String>) : String;
 	
 	/*
 	* Returns a printable form of this RDN using the algorithm defined in
 	* RFC 2253. Only RFC 2253 attribute type keywords are emitted.
 	*/
-	@:overload public function toRFC2253String() : String;
+	@:overload @:public public function toRFC2253String() : String;
 	
 	/*
 	* Returns a printable form of this RDN using the algorithm defined in
 	* RFC 2253. RFC 2253 attribute type keywords are emitted, as well as
 	* keywords contained in the OID/keyword map.
 	*/
-	@:overload public function toRFC2253String(oidMap : java.util.Map<String, String>) : String;
+	@:overload @:public public function toRFC2253String(oidMap : java.util.Map<String, String>) : String;
 	
 	/*
 	* Returns a printable form of this RDN using the algorithm defined in
@@ -115,7 +115,7 @@ extern class RDN
 	* If canonical is true, then additional canonicalizations
 	* documented in X500Principal.getName are performed.
 	*/
-	@:overload public function toRFC2253String(canonical : Bool) : String;
+	@:overload @:public public function toRFC2253String(canonical : Bool) : String;
 	
 	
 }
@@ -125,7 +125,7 @@ extern class RDN
 	* AVA's containing a standard keyword are ordered alphabetically,
 	* followed by AVA's containing an OID keyword, ordered numerically
 	*/
-	@:overload public function compare(a1 : sun.security.x509.AVA, a2 : sun.security.x509.AVA) : Int;
+	@:overload @:public public function compare(a1 : sun.security.x509.AVA, a2 : sun.security.x509.AVA) : Int;
 	
 	
 }

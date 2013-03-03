@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface NoFixedFacet extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.Annotated extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function value(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.NoFixedFacet;
+	@:overload @:public public function value(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.NoFixedFacet;
 	
 	
 }

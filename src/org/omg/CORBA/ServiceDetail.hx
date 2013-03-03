@@ -37,19 +37,19 @@ extern class ServiceDetail implements org.omg.CORBA.portable.IDLEntity
 	* The type of the ORB service that this <code>ServiceDetail</code>
 	* object represents.
 	*/
-	public var service_detail_type : Int;
+	@:public public var service_detail_type : Int;
 	
 	/**
 	* The data describing the ORB service that this <code>ServiceDetail</code>
 	* object represents.
 	*/
-	public var service_detail : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var service_detail : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Constructs a <code>ServiceDetail</code> object with 0 for the type of
 	* ORB service and an empty description.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>ServiceDetail</code> object with the given
@@ -59,7 +59,7 @@ extern class ServiceDetail implements org.omg.CORBA.portable.IDLEntity
 	*                            ORB service
 	* @param service_detail a <code>byte</code> array describing the ORB service
 	*/
-	@:overload public function new(service_detail_type : Int, service_detail : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(service_detail_type : Int, service_detail : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

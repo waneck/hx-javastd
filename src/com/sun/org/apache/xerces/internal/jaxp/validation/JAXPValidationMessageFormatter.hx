@@ -35,7 +35,7 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 	* @throws MissingResourceException Thrown if the message with the
 	*                                  specified key cannot be found.
 	*/
-	@:overload public static function formatMessage(locale : java.util.Locale, key : String, arguments : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static public static function formatMessage(locale : java.util.Locale, key : String, arguments : java.NativeArray<Dynamic>) : String;
 	
 	
 }

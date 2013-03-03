@@ -28,27 +28,27 @@ package com.sun.codemodel.internal;
 */
 extern class JMod
 {
-	public static var NONE(default, null) : Int;
+	@:public @:final @:static public static var NONE(default, null) : Int;
 	
-	public static var PUBLIC(default, null) : Int;
+	@:public @:final @:static public static var PUBLIC(default, null) : Int;
 	
-	public static var PROTECTED(default, null) : Int;
+	@:public @:final @:static public static var PROTECTED(default, null) : Int;
 	
-	public static var PRIVATE(default, null) : Int;
+	@:public @:final @:static public static var PRIVATE(default, null) : Int;
 	
-	public static var FINAL(default, null) : Int;
+	@:public @:final @:static public static var FINAL(default, null) : Int;
 	
-	public static var STATIC(default, null) : Int;
+	@:public @:final @:static public static var STATIC(default, null) : Int;
 	
-	public static var ABSTRACT(default, null) : Int;
+	@:public @:final @:static public static var ABSTRACT(default, null) : Int;
 	
-	public static var NATIVE(default, null) : Int;
+	@:public @:final @:static public static var NATIVE(default, null) : Int;
 	
-	public static var SYNCHRONIZED(default, null) : Int;
+	@:public @:final @:static public static var SYNCHRONIZED(default, null) : Int;
 	
-	public static var TRANSIENT(default, null) : Int;
+	@:public @:final @:static public static var TRANSIENT(default, null) : Int;
 	
-	public static var VOLATILE(default, null) : Int;
+	@:public @:final @:static public static var VOLATILE(default, null) : Int;
 	
 	
 }

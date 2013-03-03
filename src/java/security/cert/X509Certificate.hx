@@ -28,7 +28,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	/**
 	* Constructor for X.509 certificates.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Checks that the certificate is currently valid. It is if
@@ -53,7 +53,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* @exception CertificateNotYetValidException if the certificate is not
 	* yet valid.
 	*/
-	@:overload @:abstract public function checkValidity() : Void;
+	@:overload @:public @:abstract public function checkValidity() : Void;
 	
 	/**
 	* Checks that the given date is within the certificate's
@@ -70,7 +70,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	*
 	* @see #checkValidity()
 	*/
-	@:overload @:abstract public function checkValidity(date : java.util.Date) : Void;
+	@:overload @:public @:abstract public function checkValidity(date : java.util.Date) : Void;
 	
 	/**
 	* Gets the <code>version</code> (version number) value from the
@@ -82,7 +82,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* </pre>
 	* @return the version number, i.e. 1, 2 or 3.
 	*/
-	@:overload @:abstract public function getVersion() : Int;
+	@:overload @:public @:abstract public function getVersion() : Int;
 	
 	/**
 	* Gets the <code>serialNumber</code> value from the certificate.
@@ -99,7 +99,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	*
 	* @return the serial number.
 	*/
-	@:overload @:abstract public function getSerialNumber() : java.math.BigInteger;
+	@:overload @:public @:abstract public function getSerialNumber() : java.math.BigInteger;
 	
 	/**
 	* <strong>Denigrated</strong>, replaced by {@linkplain
@@ -140,7 +140,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	*
 	* @return a Principal whose name is the issuer distinguished name.
 	*/
-	@:overload @:abstract public function getIssuerDN() : java.security.Principal;
+	@:overload @:public @:abstract public function getIssuerDN() : java.security.Principal;
 	
 	/**
 	* Returns the issuer (issuer distinguished name) value from the
@@ -152,7 +152,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	*          distinguished name
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getIssuerX500Principal() : javax.security.auth.x500.X500Principal;
+	@:require(java4) @:overload @:public public function getIssuerX500Principal() : javax.security.auth.x500.X500Principal;
 	
 	/**
 	* <strong>Denigrated</strong>, replaced by {@linkplain
@@ -176,7 +176,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	*
 	* @return a Principal whose name is the subject name.
 	*/
-	@:overload @:abstract public function getSubjectDN() : java.security.Principal;
+	@:overload @:public @:abstract public function getSubjectDN() : java.security.Principal;
 	
 	/**
 	* Returns the subject (subject distinguished name) value from the
@@ -190,7 +190,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	*          distinguished name
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getSubjectX500Principal() : javax.security.auth.x500.X500Principal;
+	@:require(java4) @:overload @:public public function getSubjectX500Principal() : javax.security.auth.x500.X500Principal;
 	
 	/**
 	* Gets the <code>notBefore</code> date from the validity period of
@@ -210,7 +210,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* @return the start date of the validity period.
 	* @see #checkValidity
 	*/
-	@:overload @:abstract public function getNotBefore() : java.util.Date;
+	@:overload @:public @:abstract public function getNotBefore() : java.util.Date;
 	
 	/**
 	* Gets the <code>notAfter</code> date from the validity period of
@@ -220,7 +220,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* @return the end date of the validity period.
 	* @see #checkValidity
 	*/
-	@:overload @:abstract public function getNotAfter() : java.util.Date;
+	@:overload @:public @:abstract public function getNotAfter() : java.util.Date;
 	
 	/**
 	* Gets the DER-encoded certificate information, the
@@ -230,7 +230,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* @return the DER-encoded certificate information.
 	* @exception CertificateEncodingException if an encoding error occurs.
 	*/
-	@:overload @:abstract public function getTBSCertificate() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getTBSCertificate() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the <code>signature</code> value (the raw signature bits) from
@@ -242,7 +242,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	*
 	* @return the signature.
 	*/
-	@:overload @:abstract public function getSignature() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getSignature() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the signature algorithm name for the certificate
@@ -263,7 +263,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	*
 	* @return the signature algorithm name.
 	*/
-	@:overload @:abstract public function getSigAlgName() : String;
+	@:overload @:public @:abstract public function getSigAlgName() : String;
 	
 	/**
 	* Gets the signature algorithm OID string from the certificate.
@@ -280,7 +280,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	*
 	* @return the signature algorithm OID string.
 	*/
-	@:overload @:abstract public function getSigAlgOID() : String;
+	@:overload @:public @:abstract public function getSigAlgOID() : String;
 	
 	/**
 	* Gets the DER-encoded signature algorithm parameters from this
@@ -298,7 +298,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* @return the DER-encoded signature algorithm parameters, or
 	*         null if no parameters are present.
 	*/
-	@:overload @:abstract public function getSigAlgParams() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getSigAlgParams() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the <code>issuerUniqueID</code> value from the certificate.
@@ -318,7 +318,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* @return the issuer unique identifier or null if it is not
 	* present in the certificate.
 	*/
-	@:overload @:abstract public function getIssuerUniqueID() : java.NativeArray<Bool>;
+	@:overload @:public @:abstract public function getIssuerUniqueID() : java.NativeArray<Bool>;
 	
 	/**
 	* Gets the <code>subjectUniqueID</code> value from the certificate.
@@ -332,7 +332,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* @return the subject unique identifier or null if it is not
 	* present in the certificate.
 	*/
-	@:overload @:abstract public function getSubjectUniqueID() : java.NativeArray<Bool>;
+	@:overload @:public @:abstract public function getSubjectUniqueID() : java.NativeArray<Bool>;
 	
 	/**
 	* Gets a boolean array representing bits of
@@ -364,7 +364,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* truncated. Returns null if this certificate does not
 	* contain a KeyUsage extension.
 	*/
-	@:overload @:abstract public function getKeyUsage() : java.NativeArray<Bool>;
+	@:overload @:public @:abstract public function getKeyUsage() : java.NativeArray<Bool>;
 	
 	/**
 	* Gets an unmodifiable list of Strings representing the OBJECT
@@ -398,7 +398,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* @throws CertificateParsingException if the extension cannot be decoded
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getExtendedKeyUsage() : java.util.List<String>;
+	@:require(java4) @:overload @:public public function getExtendedKeyUsage() : java.util.List<String>;
 	
 	/**
 	* Gets the certificate constraints path length from the
@@ -428,7 +428,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* <code>Integer.MAX_VALUE</code> is returned to indicate that there is no
 	* limit to the allowed length of the certification path.
 	*/
-	@:overload @:abstract public function getBasicConstraints() : Int;
+	@:overload @:public @:abstract public function getBasicConstraints() : Int;
 	
 	/**
 	* Gets an immutable collection of subject alternative names from the
@@ -492,7 +492,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* @throws CertificateParsingException if the extension cannot be decoded
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getSubjectAlternativeNames() : java.util.Collection<java.util.List<Dynamic>>;
+	@:require(java4) @:overload @:public public function getSubjectAlternativeNames() : java.util.Collection<java.util.List<Dynamic>>;
 	
 	/**
 	* Gets an immutable collection of issuer alternative names from the
@@ -531,7 +531,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* @throws CertificateParsingException if the extension cannot be decoded
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getIssuerAlternativeNames() : java.util.Collection<java.util.List<Dynamic>>;
+	@:require(java4) @:overload @:public public function getIssuerAlternativeNames() : java.util.Collection<java.util.List<Dynamic>>;
 	
 	/**
 	* Gets a Set of the OID strings for the extension(s) marked
@@ -575,7 +575,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* If there are no extensions present at all, then this method returns
 	* null.
 	*/
-	@:overload @:public @:public public function getNonCriticalExtensionOIDs() : java.util.Set<String>;
+	@:overload @:public @:public @:public public function getNonCriticalExtensionOIDs() : java.util.Set<String>;
 	
 	/**
 	* Gets a Set of the OID strings for the extension(s) marked
@@ -610,7 +610,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* If there are no extensions present at all, then this method returns
 	* null.
 	*/
-	@:overload @:public @:public public function getCriticalExtensionOIDs() : java.util.Set<String>;
+	@:overload @:public @:public @:public public function getCriticalExtensionOIDs() : java.util.Set<String>;
 	
 	/**
 	* Gets the DER-encoded OCTET string for the extension value
@@ -651,7 +651,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* @return the DER-encoded octet string of the extension value or
 	* null if it is not present.
 	*/
-	@:overload @:public @:public public function getExtensionValue(oid : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:public @:public public function getExtensionValue(oid : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Check if there is a critical extension that is not supported.
@@ -659,7 +659,7 @@ extern class X509Certificate extends java.security.cert.Certificate implements j
 	* @return <tt>true</tt> if a critical extension is found that is
 	* not supported, otherwise <tt>false</tt>.
 	*/
-	@:overload @:public @:public public function hasUnsupportedCriticalExtension() : Bool;
+	@:overload @:public @:public @:public public function hasUnsupportedCriticalExtension() : Bool;
 	
 	
 }

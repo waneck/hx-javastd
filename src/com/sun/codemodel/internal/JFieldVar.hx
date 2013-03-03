@@ -28,7 +28,7 @@ package com.sun.codemodel.internal;
 */
 extern class JFieldVar extends com.sun.codemodel.internal.JVar implements com.sun.codemodel.internal.JDocCommentable
 {
-	@:overload override public function name(name : String) : Void;
+	@:overload @:public override public function name(name : String) : Void;
 	
 	/**
 	* Creates, if necessary, and returns the class javadoc for this
@@ -36,9 +36,9 @@ extern class JFieldVar extends com.sun.codemodel.internal.JVar implements com.su
 	*
 	* @return JDocComment containing javadocs for this class
 	*/
-	@:overload public function javadoc() : com.sun.codemodel.internal.JDocComment;
+	@:overload @:public public function javadoc() : com.sun.codemodel.internal.JDocComment;
 	
-	@:overload override public function declare(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public override public function declare(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

@@ -109,7 +109,7 @@ extern interface Key extends java.io.Serializable
 	*
 	* @return the name of the algorithm associated with this key.
 	*/
-	@:overload public function getAlgorithm() : String;
+	@:overload @:public public function getAlgorithm() : String;
 	
 	/**
 	* Returns the name of the primary encoding format of this key,
@@ -128,7 +128,7 @@ extern interface Key extends java.io.Serializable
 	*
 	* @return the primary encoding format of the key.
 	*/
-	@:overload public function getFormat() : String;
+	@:overload @:public @:public public function getFormat() : String;
 	
 	/**
 	* Returns the key in its primary encoding format, or null
@@ -137,7 +137,7 @@ extern interface Key extends java.io.Serializable
 	* @return the encoded key, or null if the key does not support
 	* encoding.
 	*/
-	@:overload public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

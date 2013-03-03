@@ -25,31 +25,31 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class UnionSimpleTypeImpl extends com.sun.xml.internal.xsom.impl.SimpleTypeImpl implements com.sun.xml.internal.xsom.XSUnionSimpleType
 {
-	@:overload public function new(_parent : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _name : String, _anonymous : Bool, finalSet : java.util.Set<com.sun.xml.internal.xsom.XSVariety>, _members : java.NativeArray<com.sun.xml.internal.xsom.impl.Ref.Ref_SimpleType>) : Void;
+	@:overload @:public public function new(_parent : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _name : String, _anonymous : Bool, finalSet : java.util.Set<com.sun.xml.internal.xsom.XSVariety>, _members : java.NativeArray<com.sun.xml.internal.xsom.impl.Ref.Ref_SimpleType>) : Void;
 	
-	@:overload public function getMember(idx : Int) : com.sun.xml.internal.xsom.XSSimpleType;
+	@:overload @:public public function getMember(idx : Int) : com.sun.xml.internal.xsom.XSSimpleType;
 	
-	@:overload public function getMemberSize() : Int;
+	@:overload @:public public function getMemberSize() : Int;
 	
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.xsom.XSSimpleType>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.xsom.XSSimpleType>;
 	
-	@:overload override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSSimpleTypeVisitor) : Void;
+	@:overload @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSSimpleTypeVisitor) : Void;
 	
-	@:overload override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSSimpleTypeFunction<Dynamic>) : Dynamic;
+	@:overload @:public override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSSimpleTypeFunction<Dynamic>) : Dynamic;
 	
-	@:overload override public function getBaseUnionType() : com.sun.xml.internal.xsom.XSUnionSimpleType;
+	@:overload @:public override public function getBaseUnionType() : com.sun.xml.internal.xsom.XSUnionSimpleType;
 	
-	@:overload override public function getFacet(name : String) : com.sun.xml.internal.xsom.XSFacet;
+	@:overload @:public override public function getFacet(name : String) : com.sun.xml.internal.xsom.XSFacet;
 	
-	@:overload override public function getFacets(name : String) : java.util.List<com.sun.xml.internal.xsom.XSFacet>;
+	@:overload @:public override public function getFacets(name : String) : java.util.List<com.sun.xml.internal.xsom.XSFacet>;
 	
-	@:overload override public function getVariety() : com.sun.xml.internal.xsom.XSVariety;
+	@:overload @:public override public function getVariety() : com.sun.xml.internal.xsom.XSVariety;
 	
-	@:overload override public function getPrimitiveType() : com.sun.xml.internal.xsom.XSSimpleType;
+	@:overload @:public override public function getPrimitiveType() : com.sun.xml.internal.xsom.XSSimpleType;
 	
-	@:overload override public function isUnion() : Bool;
+	@:overload @:public override public function isUnion() : Bool;
 	
-	@:overload override public function asUnion() : com.sun.xml.internal.xsom.XSUnionSimpleType;
+	@:overload @:public override public function asUnion() : com.sun.xml.internal.xsom.XSUnionSimpleType;
 	
 	
 }

@@ -27,10 +27,10 @@ extern class KeyStoreResolver extends com.sun.org.apache.xml.internal.security.k
 	* @param keyStore is the keystore which contains the Certificates
 	* @throws StorageResolverException
 	*/
-	@:overload public function new(keyStore : java.security.KeyStore) : Void;
+	@:overload @:public public function new(keyStore : java.security.KeyStore) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getIterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function getIterator() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Method main
@@ -38,7 +38,7 @@ extern class KeyStoreResolver extends com.sun.org.apache.xml.internal.security.k
 	* @param unused
 	* @throws Exception
 	*/
-	@:overload public static function main(unused : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(unused : java.NativeArray<String>) : Void;
 	
 	
 }
@@ -56,19 +56,19 @@ extern class KeyStoreResolver extends com.sun.org.apache.xml.internal.security.k
 	* @param keyStore
 	* @throws StorageResolverException
 	*/
-	@:overload public function new(keyStore : java.security.KeyStore) : Void;
+	@:overload @:public public function new(keyStore : java.security.KeyStore) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
 	/** @inheritDoc */
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
 	/**
 	* Method remove
 	*
 	*/
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

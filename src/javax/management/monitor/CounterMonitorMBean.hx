@@ -33,7 +33,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	* @return The derived gauge.
 	* @deprecated As of JMX 1.2, replaced by {@link #getDerivedGauge(ObjectName)}
 	*/
-	@:overload public function getDerivedGauge() : java.lang.Number;
+	@:overload @:public public function getDerivedGauge() : java.lang.Number;
 	
 	/**
 	* Gets the derived gauge timestamp.
@@ -41,7 +41,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	* @return The derived gauge timestamp.
 	* @deprecated As of JMX 1.2, replaced by {@link #getDerivedGaugeTimeStamp(ObjectName)}
 	*/
-	@:overload public function getDerivedGaugeTimeStamp() : haxe.Int64;
+	@:overload @:public public function getDerivedGaugeTimeStamp() : haxe.Int64;
 	
 	/**
 	* Gets the threshold value.
@@ -52,7 +52,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	*
 	* @deprecated As of JMX 1.2, replaced by {@link #getThreshold(ObjectName)}
 	*/
-	@:overload public function getThreshold() : java.lang.Number;
+	@:overload @:public public function getThreshold() : java.lang.Number;
 	
 	/**
 	* Sets the threshold value.
@@ -63,7 +63,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	* @exception java.lang.IllegalArgumentException The specified threshold is null or the threshold value is less than zero.
 	* @deprecated As of JMX 1.2, replaced by {@link #setInitThreshold}
 	*/
-	@:overload public function setThreshold(value : java.lang.Number) : Void;
+	@:overload @:public public function setThreshold(value : java.lang.Number) : Void;
 	
 	/**
 	* Gets the derived gauge for the specified MBean.
@@ -73,7 +73,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	*         set of observed MBeans, or <code>null</code> otherwise.
 	*
 	*/
-	@:overload public function getDerivedGauge(object : javax.management.ObjectName) : java.lang.Number;
+	@:overload @:public public function getDerivedGauge(object : javax.management.ObjectName) : java.lang.Number;
 	
 	/**
 	* Gets the derived gauge timestamp for the specified MBean.
@@ -83,7 +83,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	*         is in the set of observed MBeans, or <code>null</code> otherwise.
 	*
 	*/
-	@:overload public function getDerivedGaugeTimeStamp(object : javax.management.ObjectName) : haxe.Int64;
+	@:overload @:public public function getDerivedGaugeTimeStamp(object : javax.management.ObjectName) : haxe.Int64;
 	
 	/**
 	* Gets the threshold value for the specified MBean.
@@ -95,7 +95,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	* @see #setThreshold
 	*
 	*/
-	@:overload public function getThreshold(object : javax.management.ObjectName) : java.lang.Number;
+	@:overload @:public public function getThreshold(object : javax.management.ObjectName) : java.lang.Number;
 	
 	/**
 	* Gets the initial threshold value common to all observed objects.
@@ -105,7 +105,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	* @see #setInitThreshold
 	*
 	*/
-	@:overload public function getInitThreshold() : java.lang.Number;
+	@:overload @:public public function getInitThreshold() : java.lang.Number;
 	
 	/**
 	* Sets the initial threshold value common to all observed MBeans.
@@ -117,7 +117,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	* @see #getInitThreshold
 	*
 	*/
-	@:overload public function setInitThreshold(value : java.lang.Number) : Void;
+	@:overload @:public public function setInitThreshold(value : java.lang.Number) : Void;
 	
 	/**
 	* Gets the offset value.
@@ -126,7 +126,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	*
 	* @return The offset value.
 	*/
-	@:overload public function getOffset() : java.lang.Number;
+	@:overload @:public public function getOffset() : java.lang.Number;
 	
 	/**
 	* Sets the offset value.
@@ -137,7 +137,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	*
 	* @see #getOffset()
 	*/
-	@:overload public function setOffset(value : java.lang.Number) : Void;
+	@:overload @:public public function setOffset(value : java.lang.Number) : Void;
 	
 	/**
 	* Gets the modulus value.
@@ -146,7 +146,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	*
 	* @see #setModulus
 	*/
-	@:overload public function getModulus() : java.lang.Number;
+	@:overload @:public public function getModulus() : java.lang.Number;
 	
 	/**
 	* Sets the modulus value.
@@ -157,7 +157,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	*
 	* @see #getModulus
 	*/
-	@:overload public function setModulus(value : java.lang.Number) : Void;
+	@:overload @:public public function setModulus(value : java.lang.Number) : Void;
 	
 	/**
 	* Gets the notification's on/off switch value.
@@ -167,7 +167,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	*
 	* @see #setNotify
 	*/
-	@:overload public function getNotify() : Bool;
+	@:overload @:public public function getNotify() : Bool;
 	
 	/**
 	* Sets the notification's on/off switch value.
@@ -176,7 +176,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	*
 	* @see #getNotify
 	*/
-	@:overload public function setNotify(value : Bool) : Void;
+	@:overload @:public public function setNotify(value : Bool) : Void;
 	
 	/**
 	* Gets the difference mode flag value.
@@ -186,7 +186,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	*
 	* @see #setDifferenceMode
 	*/
-	@:overload public function getDifferenceMode() : Bool;
+	@:overload @:public public function getDifferenceMode() : Bool;
 	
 	/**
 	* Sets the difference mode flag value.
@@ -195,7 +195,7 @@ extern interface CounterMonitorMBean extends javax.management.monitor.MonitorMBe
 	*
 	* @see #getDifferenceMode
 	*/
-	@:overload public function setDifferenceMode(value : Bool) : Void;
+	@:overload @:public public function setDifferenceMode(value : Bool) : Void;
 	
 	
 }

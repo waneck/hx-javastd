@@ -28,35 +28,35 @@ package com.sun.tools.apt.mirror.apt;
 */
 extern class FilerImpl implements com.sun.mirror.apt.Filer
 {
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.mirror.apt.FilerImpl;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.mirror.apt.FilerImpl;
 	
-	@:overload public function flush() : Void;
-	
-	/**
-	* {@inheritDoc}
-	*/
-	@:overload public function createSourceFile(name : String) : java.io.PrintWriter;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function createClassFile(name : String) : java.io.OutputStream;
+	@:overload @:public public function createSourceFile(name : String) : java.io.PrintWriter;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function createTextFile(loc : com.sun.mirror.apt.Filer.Filer_Location, pkg : String, relPath : java.io.File, charsetName : String) : java.io.PrintWriter;
+	@:overload @:public public function createClassFile(name : String) : java.io.OutputStream;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function createBinaryFile(loc : com.sun.mirror.apt.Filer.Filer_Location, pkg : String, relPath : java.io.File) : java.io.OutputStream;
+	@:overload @:public public function createTextFile(loc : com.sun.mirror.apt.Filer.Filer_Location, pkg : String, relPath : java.io.File, charsetName : String) : java.io.PrintWriter;
 	
-	@:overload public function getSourceFileNames() : java.util.Set<String>;
+	/**
+	* {@inheritDoc}
+	*/
+	@:overload @:public public function createBinaryFile(loc : com.sun.mirror.apt.Filer.Filer_Location, pkg : String, relPath : java.io.File) : java.io.OutputStream;
 	
-	@:overload public function getClassFileNames() : java.util.Set<String>;
+	@:overload @:public public function getSourceFileNames() : java.util.Set<String>;
 	
-	@:overload public function roundOver() : Void;
+	@:overload @:public public function getClassFileNames() : java.util.Set<String>;
+	
+	@:overload @:public public function roundOver() : Void;
 	
 	
 }

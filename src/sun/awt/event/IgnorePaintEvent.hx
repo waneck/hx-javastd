@@ -32,7 +32,7 @@ extern class IgnorePaintEvent extends java.awt.event.PaintEvent
 	* Look at <code>javax.swing.SwingPaintEventDispatcher</code> for more.
 	*
 	*/
-	@:overload public function new(source : java.awt.Component, id : Int, updateRect : java.awt.Rectangle) : Void;
+	@:overload @:public public function new(source : java.awt.Component, id : Int, updateRect : java.awt.Rectangle) : Void;
 	
 	
 }

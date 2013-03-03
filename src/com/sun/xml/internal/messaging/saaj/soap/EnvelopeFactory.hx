@@ -29,9 +29,9 @@ extern class EnvelopeFactory
 	* EnvelopeFactory creates SOAP Envelope objects using different
 	* underlying implementations.
 	*/
-	private static var log(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var log(default, null) : java.util.logging.Logger;
 	
-	@:overload public static function createEnvelope(src : javax.xml.transform.Source, soapPart : com.sun.xml.internal.messaging.saaj.soap.SOAPPartImpl) : com.sun.xml.internal.messaging.saaj.soap.Envelope;
+	@:overload @:public @:static public static function createEnvelope(src : javax.xml.transform.Source, soapPart : com.sun.xml.internal.messaging.saaj.soap.SOAPPartImpl) : com.sun.xml.internal.messaging.saaj.soap.Envelope;
 	
 	
 }

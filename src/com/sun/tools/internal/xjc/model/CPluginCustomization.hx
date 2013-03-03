@@ -30,7 +30,7 @@ extern class CPluginCustomization
 	*
 	* Always non-null.
 	*/
-	public var element(default, null) : org.w3c.dom.Element;
+	@:public @:final public var element(default, null) : org.w3c.dom.Element;
 	
 	/**
 	* The source location where this customization is placed.
@@ -41,7 +41,7 @@ extern class CPluginCustomization
 	*
 	* Always non-nul.
 	*/
-	public var locator(default, null) : org.xml.sax.Locator;
+	@:public @:final public var locator(default, null) : org.xml.sax.Locator;
 	
 	/**
 	* When a {@link Plugin} "uses" this annotation, call this method
@@ -52,11 +52,11 @@ extern class CPluginCustomization
 	* reporeted as an error to users. This allows us to catch
 	* customizations that are not used by anybody.
 	*/
-	@:overload public function markAsAcknowledged() : Void;
+	@:overload @:public public function markAsAcknowledged() : Void;
 	
-	@:overload public function new(element : org.w3c.dom.Element, locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function isAcknowledged() : Bool;
+	@:overload @:public public function isAcknowledged() : Bool;
 	
 	
 }

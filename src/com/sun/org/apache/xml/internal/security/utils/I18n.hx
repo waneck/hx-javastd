@@ -22,7 +22,7 @@ package com.sun.org.apache.xml.internal.security.utils;
 extern class I18n
 {
 	/** Field NOT_INITIALIZED_MSG */
-	public static var NOT_INITIALIZED_MSG(default, null) : String;
+	@:public @:static @:final public static var NOT_INITIALIZED_MSG(default, null) : String;
 	
 	/**
 	* Method translate
@@ -36,7 +36,7 @@ extern class I18n
 	* @param args is an <CODE>Object[]</CODE> array of strings which are inserted into the String which is retrieved from the <CODE>ResouceBundle</CODE>
 	* @return message translated
 	*/
-	@:overload public static function translate(message : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static public static function translate(message : String, args : java.NativeArray<Dynamic>) : String;
 	
 	/**
 	* Method translate
@@ -47,7 +47,7 @@ extern class I18n
 	* @param message
 	* @return message translated
 	*/
-	@:overload public static function translate(message : String) : String;
+	@:overload @:public @:static public static function translate(message : String) : String;
 	
 	/**
 	* Method getExceptionMessage
@@ -56,7 +56,7 @@ extern class I18n
 	* @return message translated
 	*
 	*/
-	@:overload public static function getExceptionMessage(msgID : String) : String;
+	@:overload @:public @:static public static function getExceptionMessage(msgID : String) : String;
 	
 	/**
 	* Method getExceptionMessage
@@ -65,7 +65,7 @@ extern class I18n
 	* @param originalException
 	* @return message translated
 	*/
-	@:overload public static function getExceptionMessage(msgID : String, originalException : java.lang.Exception) : String;
+	@:overload @:public @:static public static function getExceptionMessage(msgID : String, originalException : java.lang.Exception) : String;
 	
 	/**
 	* Method getExceptionMessage
@@ -74,7 +74,7 @@ extern class I18n
 	* @param exArgs
 	* @return message translated
 	*/
-	@:overload public static function getExceptionMessage(msgID : String, exArgs : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static public static function getExceptionMessage(msgID : String, exArgs : java.NativeArray<Dynamic>) : String;
 	
 	
 }

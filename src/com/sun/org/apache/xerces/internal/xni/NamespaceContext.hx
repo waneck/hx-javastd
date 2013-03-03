@@ -31,7 +31,7 @@ extern interface NamespaceContext
 	*
 	* @see #popContext
 	*/
-	@:overload public function pushContext() : Void;
+	@:overload @:public public function pushContext() : Void;
 	
 	/**
 	* Revert to the previous Namespace context.
@@ -46,7 +46,7 @@ extern interface NamespaceContext
 	*
 	* @see #pushContext
 	*/
-	@:overload public function popContext() : Void;
+	@:overload @:public public function popContext() : Void;
 	
 	/**
 	* Declare a Namespace prefix.
@@ -70,7 +70,7 @@ extern interface NamespaceContext
 	* @see #getURI
 	* @see #getDeclaredPrefixAt
 	*/
-	@:overload public function declarePrefix(prefix : String, uri : String) : Bool;
+	@:overload @:public public function declarePrefix(prefix : String, uri : String) : Bool;
 	
 	/**
 	* Look up a prefix and get the currently-mapped Namespace URI.
@@ -84,7 +84,7 @@ extern interface NamespaceContext
 	* @return The associated Namespace URI, or null if the prefix
 	*         is undeclared in this context.
 	*/
-	@:overload public function getURI(prefix : String) : String;
+	@:overload @:public public function getURI(prefix : String) : String;
 	
 	/**
 	* Look up a namespace URI and get one of the mapped prefix.
@@ -102,18 +102,18 @@ extern interface NamespaceContext
 	*
 	* @see #getPrefix
 	*/
-	@:overload public function getPrefix(uri : String) : String;
+	@:overload @:public public function getPrefix(uri : String) : String;
 	
 	/**
 	* Return a count of locally declared prefixes, including
 	* the default prefix if bound.
 	*/
-	@:overload public function getDeclaredPrefixCount() : Int;
+	@:overload @:public public function getDeclaredPrefixCount() : Int;
 	
 	/**
 	* Returns the prefix at the specified index in the current context.
 	*/
-	@:overload public function getDeclaredPrefixAt(index : Int) : String;
+	@:overload @:public public function getDeclaredPrefixAt(index : Int) : String;
 	
 	/**
 	* Return an enumeration of all prefixes whose declarations are active
@@ -121,7 +121,7 @@ extern interface NamespaceContext
 	* that have not been overridden.
 	* @return Enumeration
 	*/
-	@:overload public function getAllPrefixes() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getAllPrefixes() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Reset this Namespace support object for reuse.
@@ -132,7 +132,7 @@ extern interface NamespaceContext
 	* <p>Note that implementations of this method need to ensure that
 	* the declaration of the prefixes "xmlns" and "xml" are available.</p>
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

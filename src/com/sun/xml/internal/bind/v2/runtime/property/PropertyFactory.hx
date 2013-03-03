@@ -29,7 +29,7 @@ extern class PropertyFactory
 	* Creates/obtains a properly configured {@link Property}
 	* object from the given description.
 	*/
-	@:overload public static function create(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, info : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo) : com.sun.xml.internal.bind.v2.runtime.property.Property<Dynamic>;
+	@:overload @:public @:static public static function create(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, info : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo) : com.sun.xml.internal.bind.v2.runtime.property.Property<Dynamic>;
 	
 	
 }

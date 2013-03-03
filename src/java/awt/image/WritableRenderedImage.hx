@@ -39,7 +39,7 @@ extern interface WritableRenderedImage extends java.awt.image.RenderedImage
 	* it will receive multiple notifications.
 	* @param to the specified <code>TileObserver</code>
 	*/
-	@:overload public function addTileObserver(to : java.awt.image.TileObserver) : Void;
+	@:overload @:public public function addTileObserver(to : java.awt.image.TileObserver) : Void;
 	
 	/**
 	* Removes an observer.  If the observer was not registered,
@@ -47,7 +47,7 @@ extern interface WritableRenderedImage extends java.awt.image.RenderedImage
 	* notifications, it will now be registered for one fewer.
 	* @param to the specified <code>TileObserver</code>
 	*/
-	@:overload public function removeTileObserver(to : java.awt.image.TileObserver) : Void;
+	@:overload @:public public function removeTileObserver(to : java.awt.image.TileObserver) : Void;
 	
 	/**
 	* Checks out a tile for writing.
@@ -60,7 +60,7 @@ extern interface WritableRenderedImage extends java.awt.image.RenderedImage
 	* @param tileY the Y index of the tile.
 	* @return a writable tile.
 	*/
-	@:overload public function getWritableTile(tileX : Int, tileY : Int) : java.awt.image.WritableRaster;
+	@:overload @:public public function getWritableTile(tileX : Int, tileY : Int) : java.awt.image.WritableRaster;
 	
 	/**
 	* Relinquishes the right to write to a tile.  If the caller
@@ -76,7 +76,7 @@ extern interface WritableRenderedImage extends java.awt.image.RenderedImage
 	* @param tileX the X index of the tile.
 	* @param tileY the Y index of the tile.
 	*/
-	@:overload public function releaseWritableTile(tileX : Int, tileY : Int) : Void;
+	@:overload @:public public function releaseWritableTile(tileX : Int, tileY : Int) : Void;
 	
 	/**
 	* Returns whether a tile is currently checked out for writing.
@@ -86,7 +86,7 @@ extern interface WritableRenderedImage extends java.awt.image.RenderedImage
 	* @return <code>true</code> if specified tile is checked out
 	*         for writing; <code>false</code> otherwise.
 	*/
-	@:overload public function isTileWritable(tileX : Int, tileY : Int) : Bool;
+	@:overload @:public public function isTileWritable(tileX : Int, tileY : Int) : Bool;
 	
 	/**
 	* Returns an array of Point objects indicating which tiles
@@ -95,7 +95,7 @@ extern interface WritableRenderedImage extends java.awt.image.RenderedImage
 	* @return an array containing the locations of tiles that are
 	*         checked out for writing.
 	*/
-	@:overload public function getWritableTileIndices() : java.NativeArray<java.awt.Point>;
+	@:overload @:public public function getWritableTileIndices() : java.NativeArray<java.awt.Point>;
 	
 	/**
 	* Returns whether any tile is checked out for writing.
@@ -103,7 +103,7 @@ extern interface WritableRenderedImage extends java.awt.image.RenderedImage
 	* @return <code>true</code> if any tiles are checked out for
 	*         writing; <code>false</code> otherwise.
 	*/
-	@:overload public function hasTileWriters() : Bool;
+	@:overload @:public public function hasTileWriters() : Bool;
 	
 	/**
 	* Sets a rect of the image to the contents of the Raster r, which is
@@ -111,7 +111,7 @@ extern interface WritableRenderedImage extends java.awt.image.RenderedImage
 	* The operation is clipped to the bounds of the WritableRenderedImage.
 	* @param r the specified <code>Raster</code>
 	*/
-	@:overload public function setData(r : java.awt.image.Raster) : Void;
+	@:overload @:public public function setData(r : java.awt.image.Raster) : Void;
 	
 	
 }

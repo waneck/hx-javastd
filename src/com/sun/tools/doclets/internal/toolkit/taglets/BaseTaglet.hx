@@ -35,7 +35,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 */
 @:require(java4) extern class BaseTaglet implements com.sun.tools.doclets.internal.toolkit.taglets.Taglet
 {
-	private var name : String;
+	@:protected private var name : String;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -44,7 +44,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in constructor documentation and false
 	* otherwise.
 	*/
-	@:overload public function inConstructor() : Bool;
+	@:overload @:public public function inConstructor() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -53,7 +53,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in field documentation and false
 	* otherwise.
 	*/
-	@:overload public function inField() : Bool;
+	@:overload @:public public function inField() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -62,7 +62,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in method documentation and false
 	* otherwise.
 	*/
-	@:overload public function inMethod() : Bool;
+	@:overload @:public public function inMethod() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -71,7 +71,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in method documentation and false
 	* otherwise.
 	*/
-	@:overload public function inOverview() : Bool;
+	@:overload @:public public function inOverview() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -80,7 +80,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in package documentation and false
 	* otherwise.
 	*/
-	@:overload public function inPackage() : Bool;
+	@:overload @:public public function inPackage() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -89,7 +89,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in type documentation and false
 	* otherwise.
 	*/
-	@:overload public function inType() : Bool;
+	@:overload @:public public function inType() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -97,25 +97,25 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @return true if this <code>Taglet</code>
 	* is an inline tag and false otherwise.
 	*/
-	@:overload public function isInlineTag() : Bool;
+	@:overload @:public public function isInlineTag() : Bool;
 	
 	/**
 	* Return the name of this custom tag.
 	* @return the name of this custom tag.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* {@inheritDoc}
 	* @throws IllegalArgumentException thrown when the method is not supported by the taglet.
 	*/
-	@:overload public function getTagletOutput(tag : com.sun.javadoc.Tag, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public public function getTagletOutput(tag : com.sun.javadoc.Tag, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	* @throws IllegalArgumentException thrown when the method is not supported by the taglet.
 	*/
-	@:overload public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

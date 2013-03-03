@@ -7,13 +7,13 @@ package org.omg.CosNaming;
 */
 extern class NameComponent implements org.omg.CORBA.portable.IDLEntity
 {
-	public var id : String;
+	@:public public var id : String;
 	
-	public var kind : String;
+	@:public public var kind : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_id : String, _kind : String) : Void;
+	@:overload @:public public function new(_id : String, _kind : String) : Void;
 	
 	
 }

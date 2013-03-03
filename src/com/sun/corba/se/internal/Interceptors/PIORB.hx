@@ -28,7 +28,7 @@ extern class PIORB extends com.sun.corba.se.internal.POA.POAORB
 	/**
 	* Deprecated class for backward compatibility.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

@@ -28,32 +28,32 @@ extern class BindYellow extends com.sun.tools.internal.xjc.reader.xmlschema.Colo
 	/**
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload override public function complexType(ct : com.sun.xml.internal.xsom.XSComplexType) : Void;
+	@:overload @:public override public function complexType(ct : com.sun.xml.internal.xsom.XSComplexType) : Void;
 	
-	@:overload public function wildcard(xsWildcard : com.sun.xml.internal.xsom.XSWildcard) : Void;
+	@:overload @:public override public function wildcard(xsWildcard : com.sun.xml.internal.xsom.XSWildcard) : Void;
 	
-	@:overload public function elementDecl(xsElementDecl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
+	@:overload @:public override public function elementDecl(xsElementDecl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
 	
-	@:overload public function simpleType(xsSimpleType : com.sun.xml.internal.xsom.XSSimpleType) : Void;
+	@:overload @:public override public function simpleType(xsSimpleType : com.sun.xml.internal.xsom.XSSimpleType) : Void;
 	
-	@:overload override public function attributeDecl(xsAttributeDecl : com.sun.xml.internal.xsom.XSAttributeDecl) : Void;
+	@:overload @:public override public function attributeDecl(xsAttributeDecl : com.sun.xml.internal.xsom.XSAttributeDecl) : Void;
 	
 	/*
 
 	Components that can never map to a type
 
 */
-	@:overload override public function attGroupDecl(xsAttGroupDecl : com.sun.xml.internal.xsom.XSAttGroupDecl) : Void;
+	@:overload @:public override public function attGroupDecl(xsAttGroupDecl : com.sun.xml.internal.xsom.XSAttGroupDecl) : Void;
 	
-	@:overload override public function attributeUse(use : com.sun.xml.internal.xsom.XSAttributeUse) : Void;
+	@:overload @:public override public function attributeUse(use : com.sun.xml.internal.xsom.XSAttributeUse) : Void;
 	
-	@:overload public function modelGroupDecl(xsModelGroupDecl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
+	@:overload @:public override public function modelGroupDecl(xsModelGroupDecl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
 	
-	@:overload public function modelGroup(xsModelGroup : com.sun.xml.internal.xsom.XSModelGroup) : Void;
+	@:overload @:public override public function modelGroup(xsModelGroup : com.sun.xml.internal.xsom.XSModelGroup) : Void;
 	
-	@:overload public function particle(xsParticle : com.sun.xml.internal.xsom.XSParticle) : Void;
+	@:overload @:public override public function particle(xsParticle : com.sun.xml.internal.xsom.XSParticle) : Void;
 	
-	@:overload public function empty(xsContentType : com.sun.xml.internal.xsom.XSContentType) : Void;
+	@:overload @:public override public function empty(xsContentType : com.sun.xml.internal.xsom.XSContentType) : Void;
 	
 	
 }

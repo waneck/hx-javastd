@@ -25,27 +25,27 @@ package com.sun.corba.se.impl.orbutil;
 */
 extern class CacheTable
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, u : Bool) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, u : Bool) : Void;
 	
-	@:overload @:final public function put(key : Dynamic, val : Int) : Void;
+	@:overload @:public @:final public function put(key : Dynamic, val : Int) : Void;
 	
-	@:overload @:final public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public @:final public function containsKey(key : Dynamic) : Bool;
 	
-	@:overload @:final public function getVal(key : Dynamic) : Int;
+	@:overload @:public @:final public function getVal(key : Dynamic) : Int;
 	
-	@:overload @:final public function containsVal(val : Int) : Bool;
+	@:overload @:public @:final public function containsVal(val : Int) : Bool;
 	
-	@:overload @:final public function containsOrderedVal(val : Int) : Bool;
+	@:overload @:public @:final public function containsOrderedVal(val : Int) : Bool;
 	
-	@:overload @:final public function getKey(val : Int) : Dynamic;
+	@:overload @:public @:final public function getKey(val : Int) : Dynamic;
 	
-	@:overload public function done() : Void;
+	@:overload @:public public function done() : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$orbutil$CacheTable$Entry') @:internal extern class CacheTable_Entry
 {
-	@:overload public function new(k : Dynamic, v : Int) : Void;
+	@:overload @:public public function new(k : Dynamic, v : Int) : Void;
 	
 	
 }

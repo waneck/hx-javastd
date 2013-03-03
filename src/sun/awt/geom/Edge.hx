@@ -25,29 +25,29 @@ package sun.awt.geom;
 */
 @:internal extern class Edge
 {
-	@:overload public function new(c : sun.awt.geom.Curve, ctag : Int) : Void;
+	@:overload @:public public function new(c : sun.awt.geom.Curve, ctag : Int) : Void;
 	
-	@:overload public function new(c : sun.awt.geom.Curve, ctag : Int, etag : Int) : Void;
+	@:overload @:public public function new(c : sun.awt.geom.Curve, ctag : Int, etag : Int) : Void;
 	
-	@:overload public function getCurve() : sun.awt.geom.Curve;
+	@:overload @:public public function getCurve() : sun.awt.geom.Curve;
 	
-	@:overload public function getCurveTag() : Int;
+	@:overload @:public public function getCurveTag() : Int;
 	
-	@:overload public function getEdgeTag() : Int;
+	@:overload @:public public function getEdgeTag() : Int;
 	
-	@:overload public function setEdgeTag(etag : Int) : Void;
+	@:overload @:public public function setEdgeTag(etag : Int) : Void;
 	
-	@:overload public function getEquivalence() : Int;
+	@:overload @:public public function getEquivalence() : Int;
 	
-	@:overload public function setEquivalence(eq : Int) : Void;
+	@:overload @:public public function setEquivalence(eq : Int) : Void;
 	
-	@:overload public function compareTo(other : sun.awt.geom.Edge, yrange : java.NativeArray<Float>) : Int;
+	@:overload @:public public function compareTo(other : sun.awt.geom.Edge, yrange : java.NativeArray<Float>) : Int;
 	
-	@:overload public function record(yend : Float, etag : Int) : Void;
+	@:overload @:public public function record(yend : Float, etag : Int) : Void;
 	
-	@:overload public function isActiveFor(y : Float, etag : Int) : Bool;
+	@:overload @:public public function isActiveFor(y : Float, etag : Int) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

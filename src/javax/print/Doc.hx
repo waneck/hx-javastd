@@ -31,7 +31,7 @@ extern interface Doc
 	*
 	* @return  Doc flavor.
 	*/
-	@:overload public function getDocFlavor() : javax.print.DocFlavor;
+	@:overload @:public public function getDocFlavor() : javax.print.DocFlavor;
 	
 	/**
 	* Obtains the print data representation object that contains this doc
@@ -50,7 +50,7 @@ extern interface Doc
 	*     Thrown if the representation class is a stream and there was an I/O
 	*     error while constructing the stream.
 	*/
-	@:overload public function getPrintData() : Dynamic;
+	@:overload @:public public function getPrintData() : Dynamic;
 	
 	/**
 	* Obtains the set of printing attributes for this doc object. If the
@@ -68,7 +68,7 @@ extern interface Doc
 	*          to obtain all attribute values from the job's attribute
 	*          set.
 	*/
-	@:overload public function getAttributes() : javax.print.attribute.DocAttributeSet;
+	@:overload @:public public function getAttributes() : javax.print.attribute.DocAttributeSet;
 	
 	/**
 	* Obtains a reader for extracting character print data from this doc.
@@ -93,7 +93,7 @@ extern interface Doc
 	* @exception  IOException
 	*     Thrown if there was an I/O error while creating the reader.
 	*/
-	@:overload public function getReaderForText() : java.io.Reader;
+	@:overload @:public public function getReaderForText() : java.io.Reader;
 	
 	/**
 	* Obtains an input stream for extracting byte print data from this
@@ -117,7 +117,7 @@ extern interface Doc
 	* @exception  IOException
 	*     Thrown if there was an I/O error while creating the input stream.
 	*/
-	@:overload public function getStreamForBytes() : java.io.InputStream;
+	@:overload @:public public function getStreamForBytes() : java.io.InputStream;
 	
 	
 }

@@ -37,7 +37,7 @@ package javax.management;
 	* @param notification The notification to be sent.
 	* @return <CODE>true</CODE> if the notification has to be sent to the listener, <CODE>false</CODE> otherwise.
 	*/
-	@:overload public function isNotificationEnabled(notification : javax.management.Notification) : Bool;
+	@:overload @:public public function isNotificationEnabled(notification : javax.management.Notification) : Bool;
 	
 	
 }

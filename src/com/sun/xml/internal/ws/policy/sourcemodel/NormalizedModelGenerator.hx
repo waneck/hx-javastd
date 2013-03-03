@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.policy.sourcemodel;
 */
 @:internal extern class NormalizedModelGenerator extends com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator
 {
-	@:overload public function translate(policy : com.sun.xml.internal.ws.policy.Policy) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
+	@:overload @:public override public function translate(policy : com.sun.xml.internal.ws.policy.Policy) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
-	@:overload private function translate(parentAssertion : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode, policy : com.sun.xml.internal.ws.policy.NestedPolicy) : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
+	@:overload @:protected override private function translate(parentAssertion : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode, policy : com.sun.xml.internal.ws.policy.NestedPolicy) : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	
 }

@@ -28,18 +28,18 @@ package javax.swing.plaf.basic;
 	/**
 	* Returns whether or not the event is potentially part of a drag sequence.
 	*/
-	@:overload public static function mousePressed(me : java.awt.event.MouseEvent) : Bool;
+	@:overload @:public @:static public static function mousePressed(me : java.awt.event.MouseEvent) : Bool;
 	
 	/**
 	* If a dnd recognition has been going on, return the MouseEvent
 	* that started the recognition. Otherwise, return null.
 	*/
-	@:overload public static function mouseReleased(me : java.awt.event.MouseEvent) : java.awt.event.MouseEvent;
+	@:overload @:public @:static public static function mouseReleased(me : java.awt.event.MouseEvent) : java.awt.event.MouseEvent;
 	
 	/**
 	* Returns whether or not a drag gesture recognition is ongoing.
 	*/
-	@:overload public static function mouseDragged(me : java.awt.event.MouseEvent, bd : javax.swing.plaf.basic.DragRecognitionSupport.DragRecognitionSupport_BeforeDrag) : Bool;
+	@:overload @:public @:static public static function mouseDragged(me : java.awt.event.MouseEvent, bd : javax.swing.plaf.basic.DragRecognitionSupport.DragRecognitionSupport_BeforeDrag) : Bool;
 	
 	
 }
@@ -49,7 +49,7 @@ package javax.swing.plaf.basic;
 */
 @:native('javax$swing$plaf$basic$DragRecognitionSupport$BeforeDrag') extern interface DragRecognitionSupport_BeforeDrag
 {
-	@:overload public function dragStarting(me : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function dragStarting(me : java.awt.event.MouseEvent) : Void;
 	
 	
 }

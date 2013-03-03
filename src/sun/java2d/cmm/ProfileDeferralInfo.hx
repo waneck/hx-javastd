@@ -31,16 +31,20 @@ extern class ProfileDeferralInfo extends java.io.InputStream
 	* ICC_Profile.  Loading of the profile data and initialization
 	* of the CMM is to be deferred as long as possible.
 	*/
-	public var colorSpaceType : Int;
+	@:public public var colorSpaceType : Int;
 	
-	public var filename : String;
+	@:public public var numComponents : Int;
 	
-	@:overload public function new(fn : String, type : Int, ncomp : Int, pclass : Int) : Void;
+	@:public public var profileClass : Int;
+	
+	@:public public var filename : String;
+	
+	@:overload @:public public function new(fn : String, type : Int, ncomp : Int, pclass : Int) : Void;
 	
 	/**
 	* Implements the abstract read() method of InputStream.
 	*/
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	
 }

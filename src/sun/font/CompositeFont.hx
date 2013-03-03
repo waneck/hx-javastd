@@ -25,43 +25,43 @@ package sun.font;
 */
 extern class CompositeFont extends sun.font.Font2D
 {
-	@:overload public function new(name : String, compFileNames : java.NativeArray<String>, compNames : java.NativeArray<String>, metricsSlotCnt : Int, exclRanges : java.NativeArray<Int>, maxIndexes : java.NativeArray<Int>, defer : Bool, fm : sun.font.SunFontManager) : Void;
+	@:overload @:public public function new(name : String, compFileNames : java.NativeArray<String>, compNames : java.NativeArray<String>, metricsSlotCnt : Int, exclRanges : java.NativeArray<Int>, maxIndexes : java.NativeArray<Int>, defer : Bool, fm : sun.font.SunFontManager) : Void;
 	
-	@:overload public function isExcludedChar(slot : Int, charcode : Int) : Bool;
+	@:overload @:public public function isExcludedChar(slot : Int, charcode : Int) : Bool;
 	
-	@:overload public function getStyleMetrics(pointSize : Single, metrics : java.NativeArray<Single>, offset : Int) : Void;
+	@:overload @:public override public function getStyleMetrics(pointSize : Single, metrics : java.NativeArray<Single>, offset : Int) : Void;
 	
-	@:overload public function getNumSlots() : Int;
+	@:overload @:public public function getNumSlots() : Int;
 	
-	@:overload public function getSlotFont(slot : Int) : sun.font.PhysicalFont;
+	@:overload @:public public function getSlotFont(slot : Int) : sun.font.PhysicalFont;
 	
 	/* This is set false when the composite is created using a specified
 	* physical font as the first slot and called by code which
 	* selects composites by locale preferences to know that this
 	* isn't a font which should be adjusted.
 	*/
-	@:overload public function isStdComposite() : Bool;
+	@:overload @:public public function isStdComposite() : Bool;
 	
 	/* This isn't very efficient but its infrequently used.
 	* StandardGlyphVector uses it when the client assigns the glyph codes.
 	* These may not be valid. This validates them substituting the missing
 	* glyph elsewhere.
 	*/
-	@:overload private function getValidatedGlyphCode(glyphCode : Int) : Int;
+	@:overload @:protected override private function getValidatedGlyphCode(glyphCode : Int) : Int;
 	
-	@:overload public function getMapper() : sun.font.CharToGlyphMapper;
+	@:overload @:public public function getMapper() : sun.font.CharToGlyphMapper;
 	
-	@:overload public function hasSupplementaryChars() : Bool;
+	@:overload @:public override public function hasSupplementaryChars() : Bool;
 	
-	@:overload public function getNumGlyphs() : Int;
+	@:overload @:public override public function getNumGlyphs() : Int;
 	
-	@:overload public function getMissingGlyphCode() : Int;
+	@:overload @:public override public function getMissingGlyphCode() : Int;
 	
-	@:overload public function canDisplay(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canDisplay(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload public function useAAForPtSize(ptsize : Int) : Bool;
+	@:overload @:public override public function useAAForPtSize(ptsize : Int) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

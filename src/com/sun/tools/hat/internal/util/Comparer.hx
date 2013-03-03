@@ -40,7 +40,7 @@ extern class Comparer
 	* @return a number <, == or > 0 depending on lhs compared to rhs
 	* @see java.lang.String.compareTo
 	**/
-	@:overload @:abstract public function compare(lhs : Dynamic, rhs : Dynamic) : Int;
+	@:overload @:abstract @:public public function compare(lhs : Dynamic, rhs : Dynamic) : Int;
 	
 	
 }

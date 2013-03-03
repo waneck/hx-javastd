@@ -43,7 +43,7 @@ extern class InsetsUIResource extends java.awt.Insets implements javax.swing.pla
 	* @author Amy Fowler
 	*
 	*/
-	@:overload public function new(top : Int, left : Int, bottom : Int, right : Int) : Void;
+	@:overload @:public public function new(top : Int, left : Int, bottom : Int, right : Int) : Void;
 	
 	
 }

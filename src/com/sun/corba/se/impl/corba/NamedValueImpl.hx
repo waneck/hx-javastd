@@ -31,15 +31,15 @@ package com.sun.corba.se.impl.corba;
 */
 extern class NamedValueImpl extends org.omg.CORBA.NamedValue
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, name : String, value : org.omg.CORBA.Any, flags : Int) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, name : String, value : org.omg.CORBA.Any, flags : Int) : Void;
 	
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload override public function value() : org.omg.CORBA.Any;
+	@:overload @:public override public function value() : org.omg.CORBA.Any;
 	
-	@:overload override public function flags() : Int;
+	@:overload @:public override public function flags() : Int;
 	
 	
 }

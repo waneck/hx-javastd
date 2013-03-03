@@ -30,15 +30,15 @@ extern class VersionUtil
 	*
 	* @author JAX-WS Development Team
 	*/
-	@:overload public static function isVersion20(version : String) : Bool;
+	@:overload @:public @:static public static function isVersion20(version : String) : Bool;
 	
 	/**
 	* @param version
 	* @return true if version is a 2.0 version
 	*/
-	@:overload public static function isValidVersion(version : String) : Bool;
+	@:overload @:public @:static public static function isValidVersion(version : String) : Bool;
 	
-	@:overload public static function getValidVersionString() : String;
+	@:overload @:public @:static public static function getValidVersionString() : String;
 	
 	/**
 	* BugFix# 4948171
@@ -52,7 +52,7 @@ extern class VersionUtil
 	*
 	* @return int[] Canonical version number
 	*/
-	@:overload public static function getCanonicalVersion(version : String) : java.NativeArray<Int>;
+	@:overload @:public @:static public static function getCanonicalVersion(version : String) : java.NativeArray<Int>;
 	
 	/**
 	*
@@ -63,11 +63,11 @@ extern class VersionUtil
 	* 0 if version1 is equal to version2
 	* 1 if version1 is greater than version2
 	*/
-	@:overload public static function compare(version1 : String, version2 : String) : Int;
+	@:overload @:public @:static public static function compare(version1 : String, version2 : String) : Int;
 	
-	public static var JAXWS_VERSION_20(default, null) : String;
+	@:public @:static @:final public static var JAXWS_VERSION_20(default, null) : String;
 	
-	public static var JAXWS_VERSION_DEFAULT(default, null) : String;
+	@:public @:static @:final public static var JAXWS_VERSION_DEFAULT(default, null) : String;
 	
 	
 }

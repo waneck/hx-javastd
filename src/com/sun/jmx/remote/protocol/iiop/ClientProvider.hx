@@ -25,7 +25,7 @@ package com.sun.jmx.remote.protocol.iiop;
 */
 extern class ClientProvider implements javax.management.remote.JMXConnectorProvider
 {
-	@:overload public function newJMXConnector(serviceURL : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>) : javax.management.remote.JMXConnector;
+	@:overload @:public public function newJMXConnector(serviceURL : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>) : javax.management.remote.JMXConnector;
 	
 	
 }

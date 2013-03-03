@@ -88,7 +88,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* @see ColorSpace
 	* @see java.awt.Transparency
 	*/
-	@:overload public function new(colorSpace : java.awt.color.ColorSpace, bits : java.NativeArray<Int>, hasAlpha : Bool, isAlphaPremultiplied : Bool, transparency : Int, transferType : Int) : Void;
+	@:overload @:public public function new(colorSpace : java.awt.color.ColorSpace, bits : java.NativeArray<Int>, hasAlpha : Bool, isAlphaPremultiplied : Bool, transparency : Int, transferType : Int) : Void;
 	
 	/**
 	* Constructs a <CODE>ComponentColorModel</CODE> from the specified
@@ -134,7 +134,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* @see java.awt.Transparency
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(colorSpace : java.awt.color.ColorSpace, hasAlpha : Bool, isAlphaPremultiplied : Bool, transparency : Int, transferType : Int) : Void;
+	@:require(java4) @:overload @:public public function new(colorSpace : java.awt.color.ColorSpace, hasAlpha : Bool, isAlphaPremultiplied : Bool, transparency : Int, transferType : Int) : Void;
 	
 	/**
 	* Returns the red color component for the specified pixel, scaled
@@ -154,7 +154,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* @throws IllegalArgumentException If the component value for this
 	* <CODE>ColorModel</CODE> is signed
 	*/
-	@:overload override public function getRed(pixel : Int) : Int;
+	@:overload @:public override public function getRed(pixel : Int) : Int;
 	
 	/**
 	* Returns the green color component for the specified pixel, scaled
@@ -174,7 +174,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* @throws IllegalArgumentException If the component value for this
 	* <CODE>ColorModel</CODE> is signed
 	*/
-	@:overload override public function getGreen(pixel : Int) : Int;
+	@:overload @:public override public function getGreen(pixel : Int) : Int;
 	
 	/**
 	* Returns the blue color component for the specified pixel, scaled
@@ -194,7 +194,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* @throws IllegalArgumentException If the component value for this
 	* <CODE>ColorModel</CODE> is signed
 	*/
-	@:overload override public function getBlue(pixel : Int) : Int;
+	@:overload @:public override public function getBlue(pixel : Int) : Int;
 	
 	/**
 	* Returns the alpha component for the specified pixel, scaled
@@ -209,7 +209,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* @throws IllegalArgumentException If the component value for this
 	* <CODE>ColorModel</CODE> is signed
 	*/
-	@:overload override public function getAlpha(pixel : Int) : Int;
+	@:overload @:public override public function getAlpha(pixel : Int) : Int;
 	
 	/**
 	* Returns the color/alpha components of the pixel in the default
@@ -227,7 +227,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* @throws IllegalArgumentException If the component value for this
 	* <CODE>ColorModel</CODE> is signed
 	*/
-	@:overload override public function getRGB(pixel : Int) : Int;
+	@:overload @:public override public function getRGB(pixel : Int) : Int;
 	
 	/**
 	* Returns the red color component for the specified pixel, scaled
@@ -259,7 +259,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* <CODE>DataBuffer.TYPE_INT</CODE>, <CODE>DataBuffer.TYPE_SHORT</CODE>,
 	* <CODE>DataBuffer.TYPE_FLOAT</CODE>, or <CODE>DataBuffer.TYPE_DOUBLE</CODE>.
 	*/
-	@:overload override public function getRed(inData : Dynamic) : Int;
+	@:overload @:public override public function getRed(inData : Dynamic) : Int;
 	
 	/**
 	* Returns the green color component for the specified pixel, scaled
@@ -291,7 +291,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* <CODE>DataBuffer.TYPE_INT</CODE>, <CODE>DataBuffer.TYPE_SHORT</CODE>,
 	* <CODE>DataBuffer.TYPE_FLOAT</CODE>, or <CODE>DataBuffer.TYPE_DOUBLE</CODE>.
 	*/
-	@:overload override public function getGreen(inData : Dynamic) : Int;
+	@:overload @:public override public function getGreen(inData : Dynamic) : Int;
 	
 	/**
 	* Returns the blue color component for the specified pixel, scaled
@@ -323,7 +323,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* <CODE>DataBuffer.TYPE_INT</CODE>, <CODE>DataBuffer.TYPE_SHORT</CODE>,
 	* <CODE>DataBuffer.TYPE_FLOAT</CODE>, or <CODE>DataBuffer.TYPE_DOUBLE</CODE>.
 	*/
-	@:overload override public function getBlue(inData : Dynamic) : Int;
+	@:overload @:public override public function getBlue(inData : Dynamic) : Int;
 	
 	/**
 	* Returns the alpha component for the specified pixel, scaled from
@@ -352,7 +352,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* <CODE>DataBuffer.TYPE_INT</CODE>, <CODE>DataBuffer.TYPE_SHORT</CODE>,
 	* <CODE>DataBuffer.TYPE_FLOAT</CODE>, or <CODE>DataBuffer.TYPE_DOUBLE</CODE>.
 	*/
-	@:overload override public function getAlpha(inData : Dynamic) : Int;
+	@:overload @:public override public function getAlpha(inData : Dynamic) : Int;
 	
 	/**
 	* Returns the color/alpha components for the specified pixel in the
@@ -386,7 +386,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* <CODE>DataBuffer.TYPE_FLOAT</CODE>, or <CODE>DataBuffer.TYPE_DOUBLE</CODE>.
 	* @see ColorModel#getRGBdefault
 	*/
-	@:overload override public function getRGB(inData : Dynamic) : Int;
+	@:overload @:public override public function getRGB(inData : Dynamic) : Int;
 	
 	/**
 	* Returns a data element array representation of a pixel in this
@@ -422,7 +422,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* @see WritableRaster#setDataElements
 	* @see SampleModel#setDataElements
 	*/
-	@:overload override public function getDataElements(rgb : Int, pixel : Dynamic) : Dynamic;
+	@:overload @:public override public function getDataElements(rgb : Int, pixel : Dynamic) : Dynamic;
 	
 	/** Returns an array of unnormalized color/alpha components given a pixel
 	* in this <CODE>ColorModel</CODE>.
@@ -448,7 +448,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* array is not null and is not large enough to hold all the color and
 	* alpha components (starting at offset).
 	*/
-	@:overload override public function getComponents(pixel : Int, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
+	@:overload @:public override public function getComponents(pixel : Int, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
 	
 	/**
 	* Returns an array of unnormalized color/alpha components given a pixel
@@ -489,7 +489,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* components (starting at offset), or if <CODE>pixel</CODE> is not large
 	* enough to hold a pixel value for this ColorModel.
 	*/
-	@:overload override public function getComponents(pixel : Dynamic, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
+	@:overload @:public override public function getComponents(pixel : Dynamic, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
 	
 	/**
 	* Returns an array of all of the color/alpha components in unnormalized
@@ -531,7 +531,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	*          <code>normComponents</code> minus <code>normOffset</code>
 	*          is less than <code>numComponents</code>
 	*/
-	@:overload override public function getUnnormalizedComponents(normComponents : java.NativeArray<Single>, normOffset : Int, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
+	@:overload @:public override public function getUnnormalizedComponents(normComponents : java.NativeArray<Single>, normOffset : Int, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
 	
 	/**
 	* Returns an array of all of the color/alpha components in normalized
@@ -567,7 +567,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* @throws IllegalArgumentException If this
 	* <CODE>ComponentColorModel</CODE> does not support the unnormalized form
 	*/
-	@:overload override public function getNormalizedComponents(components : java.NativeArray<Int>, offset : Int, normComponents : java.NativeArray<Single>, normOffset : Int) : java.NativeArray<Single>;
+	@:overload @:public override public function getNormalizedComponents(components : java.NativeArray<Int>, offset : Int, normComponents : java.NativeArray<Single>, normOffset : Int) : java.NativeArray<Single>;
 	
 	/**
 	* Returns a pixel value represented as an int in this <CODE>ColorModel</CODE>,
@@ -583,7 +583,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* @throws IllegalArgumentException If this
 	* <CODE>ComponentColorModel</CODE> does not support the unnormalized form
 	*/
-	@:overload override public function getDataElement(components : java.NativeArray<Int>, offset : Int) : Int;
+	@:overload @:public override public function getDataElement(components : java.NativeArray<Int>, offset : Int) : Int;
 	
 	/**
 	* Returns a data element array representation of a pixel in this
@@ -626,7 +626,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* @see WritableRaster#setDataElements
 	* @see SampleModel#setDataElements
 	*/
-	@:overload override public function getDataElements(components : java.NativeArray<Int>, offset : Int, obj : Dynamic) : Dynamic;
+	@:overload @:public override public function getDataElements(components : java.NativeArray<Int>, offset : Int, obj : Dynamic) : Dynamic;
 	
 	/**
 	* Returns a pixel value represented as an <code>int</code> in this
@@ -653,7 +653,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	*  <code>normOffset</code>
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getDataElement(normComponents : java.NativeArray<Single>, normOffset : Int) : Int;
+	@:require(java4) @:overload @:public override public function getDataElement(normComponents : java.NativeArray<Single>, normOffset : Int) : Int;
 	
 	/**
 	* Returns a data element array representation of a pixel in this
@@ -689,7 +689,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* @see SampleModel#setDataElements
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getDataElements(normComponents : java.NativeArray<Single>, normOffset : Int, obj : Dynamic) : Dynamic;
+	@:require(java4) @:overload @:public override public function getDataElements(normComponents : java.NativeArray<Single>, normOffset : Int, obj : Dynamic) : Dynamic;
 	
 	/**
 	* Returns an array of all of the color/alpha components in normalized
@@ -735,7 +735,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	*          value for this <code>ColorModel</code>.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getNormalizedComponents(pixel : Dynamic, normComponents : java.NativeArray<Single>, normOffset : Int) : java.NativeArray<Single>;
+	@:require(java4) @:overload @:public override public function getNormalizedComponents(pixel : Dynamic, normComponents : java.NativeArray<Single>, normOffset : Int) : java.NativeArray<Single>;
 	
 	/**
 	* Forces the raster data to match the state specified in the
@@ -760,7 +760,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* <CODE>DataBuffer.TYPE_INT</CODE>, <CODE>DataBuffer.TYPE_SHORT</CODE>,
 	* <CODE>DataBuffer.TYPE_FLOAT</CODE>, or <CODE>DataBuffer.TYPE_DOUBLE</CODE>.
 	*/
-	@:overload override public function coerceData(raster : java.awt.image.WritableRaster, isAlphaPremultiplied : Bool) : java.awt.image.ColorModel;
+	@:overload @:public override public function coerceData(raster : java.awt.image.WritableRaster, isAlphaPremultiplied : Bool) : java.awt.image.ColorModel;
 	
 	/**
 	* Returns true if <CODE>raster</CODE> is compatible with this
@@ -771,7 +771,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* @return <CODE>true</CODE> if <CODE>raster</CODE> is compatible with this
 	* <CODE>ColorModel</CODE>, <CODE>false</CODE> if it is not.
 	*/
-	@:overload override public function isCompatibleRaster(raster : java.awt.image.Raster) : Bool;
+	@:overload @:public override public function isCompatibleRaster(raster : java.awt.image.Raster) : Bool;
 	
 	/**
 	* Creates a <CODE>WritableRaster</CODE> with the specified width and height,
@@ -786,7 +786,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* @see WritableRaster
 	* @see SampleModel
 	*/
-	@:overload override public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
+	@:overload @:public override public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a <CODE>SampleModel</CODE> with the specified width and height,
@@ -800,7 +800,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	*
 	* @see SampleModel
 	*/
-	@:overload override public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
+	@:overload @:public override public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
 	
 	/**
 	* Checks whether or not the specified <CODE>SampleModel</CODE>
@@ -814,7 +814,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	*
 	* @see SampleModel
 	*/
-	@:overload override public function isCompatibleSampleModel(sm : java.awt.image.SampleModel) : Bool;
+	@:overload @:public override public function isCompatibleSampleModel(sm : java.awt.image.SampleModel) : Bool;
 	
 	/**
 	* Returns a <CODE>Raster</CODE> representing the alpha channel of an image,
@@ -832,7 +832,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* @return A <CODE>WritableRaster</CODE> containing the image's alpha channel.
 	*
 	*/
-	@:overload override public function getAlphaRaster(raster : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
+	@:overload @:public override public function getAlphaRaster(raster : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Compares this color model with another for equality.
@@ -841,7 +841,7 @@ extern class ComponentColorModel extends java.awt.image.ColorModel
 	* @return <CODE>true</CODE> if the color model objects are equal,
 	* <CODE>false</CODE> if they are not.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	
 }

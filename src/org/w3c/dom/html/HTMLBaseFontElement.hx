@@ -49,25 +49,25 @@ extern interface HTMLBaseFontElement extends org.w3c.dom.html.HTMLElement
 	*  Font color. See the  color attribute definition in HTML 4.0. This
 	* attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getColor() : String;
+	@:overload @:public public function getColor() : String;
 	
-	@:overload public function setColor(color : String) : Void;
+	@:overload @:public public function setColor(color : String) : Void;
 	
 	/**
 	*  Font face identifier. See the  face attribute definition in HTML 4.0.
 	* This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getFace() : String;
+	@:overload @:public public function getFace() : String;
 	
-	@:overload public function setFace(face : String) : Void;
+	@:overload @:public public function setFace(face : String) : Void;
 	
 	/**
 	*  Font size. See the  size attribute definition in HTML 4.0. This
 	* attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getSize() : String;
+	@:overload @:public public function getSize() : String;
 	
-	@:overload public function setSize(size : String) : Void;
+	@:overload @:public public function setSize(size : String) : Void;
 	
 	
 }

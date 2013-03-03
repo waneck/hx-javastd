@@ -34,7 +34,7 @@ extern class IIOException extends java.io.IOException
 	*
 	* @see #getMessage
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructs an <code>IIOException</code> with a given message
@@ -48,7 +48,7 @@ extern class IIOException extends java.io.IOException
 	* @see #getCause
 	* @see #getMessage
 	*/
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	
 }

@@ -37,25 +37,25 @@ package com.sun.xml.internal.org.jvnet.fastinfoset;
 */
 extern class EncodingAlgorithmIndexes
 {
-	public static var HEXADECIMAL(default, null) : Int;
+	@:public @:static @:final public static var HEXADECIMAL(default, null) : Int;
 	
-	public static var BASE64(default, null) : Int;
+	@:public @:static @:final public static var BASE64(default, null) : Int;
 	
-	public static var SHORT(default, null) : Int;
+	@:public @:static @:final public static var SHORT(default, null) : Int;
 	
-	public static var INT(default, null) : Int;
+	@:public @:static @:final public static var INT(default, null) : Int;
 	
-	public static var LONG(default, null) : Int;
+	@:public @:static @:final public static var LONG(default, null) : Int;
 	
-	public static var BOOLEAN(default, null) : Int;
+	@:public @:static @:final public static var BOOLEAN(default, null) : Int;
 	
-	public static var FLOAT(default, null) : Int;
+	@:public @:static @:final public static var FLOAT(default, null) : Int;
 	
-	public static var DOUBLE(default, null) : Int;
+	@:public @:static @:final public static var DOUBLE(default, null) : Int;
 	
-	public static var UUID(default, null) : Int;
+	@:public @:static @:final public static var UUID(default, null) : Int;
 	
-	public static var CDATA(default, null) : Int;
+	@:public @:static @:final public static var CDATA(default, null) : Int;
 	
 	
 }

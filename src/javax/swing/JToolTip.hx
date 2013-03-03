@@ -26,21 +26,21 @@ package javax.swing;
 extern class JToolTip extends javax.swing.JComponent implements javax.accessibility.Accessible
 {
 	/** Creates a tool tip. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the L&F object that renders this component.
 	*
 	* @return the <code>ToolTipUI</code> object that renders this component
 	*/
-	@:overload public function getUI() : javax.swing.plaf.ToolTipUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.ToolTipUI;
 	
 	/**
 	* Resets the UI property to a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -49,7 +49,7 @@ extern class JToolTip extends javax.swing.JComponent implements javax.accessibil
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Sets the text to show when the tool tip is displayed.
@@ -61,7 +61,7 @@ extern class JToolTip extends javax.swing.JComponent implements javax.accessibil
 	*        bound: true
 	*  description: Sets the text of the tooltip
 	*/
-	@:overload public function setTipText(tipText : String) : Void;
+	@:overload @:public public function setTipText(tipText : String) : Void;
 	
 	/**
 	* Returns the text that is shown when the tool tip is displayed.
@@ -69,7 +69,7 @@ extern class JToolTip extends javax.swing.JComponent implements javax.accessibil
 	*
 	* @return the <code>String</code> that is displayed
 	*/
-	@:overload public function getTipText() : String;
+	@:overload @:public public function getTipText() : String;
 	
 	/**
 	* Specifies the component that the tooltip describes.
@@ -84,7 +84,7 @@ extern class JToolTip extends javax.swing.JComponent implements javax.accessibil
 	*       bound: true
 	* description: Sets the component that the tooltip describes.
 	*/
-	@:overload public function setComponent(c : javax.swing.JComponent) : Void;
+	@:overload @:public public function setComponent(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Returns the component the tooltip applies to.
@@ -94,7 +94,7 @@ extern class JToolTip extends javax.swing.JComponent implements javax.accessibil
 	*
 	* @see JComponent#createToolTip
 	*/
-	@:overload public function getComponent() : javax.swing.JComponent;
+	@:overload @:public public function getComponent() : javax.swing.JComponent;
 	
 	/**
 	* Returns a string representation of this <code>JToolTip</code>.
@@ -106,7 +106,7 @@ extern class JToolTip extends javax.swing.JComponent implements javax.accessibil
 	*
 	* @return  a string representation of this <code>JToolTip</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JToolTip.
@@ -117,7 +117,7 @@ extern class JToolTip extends javax.swing.JComponent implements javax.accessibil
 	* @return an AccessibleJToolTip that serves as the
 	*         AccessibleContext of this JToolTip
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -142,7 +142,7 @@ extern class JToolTip extends javax.swing.JComponent implements javax.accessibil
 	*
 	* @return a localized String describing this object.
 	*/
-	@:overload override public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
 	/**
 	* Get the role of this object.
@@ -150,7 +150,7 @@ extern class JToolTip extends javax.swing.JComponent implements javax.accessibil
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

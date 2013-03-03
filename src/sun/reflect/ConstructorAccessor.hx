@@ -26,7 +26,7 @@ package sun.reflect;
 extern interface ConstructorAccessor
 {
 	/** Matches specification in {@link java.lang.reflect.Constructor} */
-	@:overload public function newInstance(args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function newInstance(args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

@@ -28,34 +28,34 @@ extern class ConvertExpression extends sun.tools.tree.UnaryExpression
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, type : sun.tools.java.Type, right : sun.tools.tree.Expression) : Void;
+	@:overload @:public public function new(where : haxe.Int64, type : sun.tools.java.Type, right : sun.tools.tree.Expression) : Void;
 	
 	/**
 	* Check the value
 	*/
-	@:overload override public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
+	@:overload @:public override public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
 	
 	/**
 	* Check if the expression is equal to a value
 	*/
-	@:overload override public function equals(i : Int) : Bool;
+	@:overload @:public override public function equals(i : Int) : Bool;
 	
-	@:overload override public function equals(b : Bool) : Bool;
+	@:overload @:public override public function equals(b : Bool) : Bool;
 	
 	/**
 	* Inline
 	*/
-	//@:overload override public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	//@:overload @:public override public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* Code
 	*/
-	@:overload override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Print
 	*/
-	@:overload override public function print(out : java.io.PrintStream) : Void;
+	@:overload @:public override public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

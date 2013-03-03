@@ -23,22 +23,22 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class FilterParentPath extends com.sun.org.apache.xalan.internal.xsltc.compiler.Expression
 {
-	@:overload public function new(filterExpr : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression, path : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression) : Void;
+	@:overload @:public public function new(filterExpr : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression, path : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression) : Void;
 	
-	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload public function setDescendantAxis() : Void;
+	@:overload @:public public function setDescendantAxis() : Void;
 	
 	/**
 	* Type check a FilterParentPath. If the filter is not a node-set add a
 	* cast to node-set only if it is of reference type. This type coercion is
 	* needed for expressions like $x/LINE where $x is a parameter reference.
 	*/
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

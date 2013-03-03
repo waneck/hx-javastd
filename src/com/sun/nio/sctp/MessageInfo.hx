@@ -28,7 +28,7 @@ extern class MessageInfo
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates a {@code MessageInfo} instance suitable for use when
@@ -57,7 +57,7 @@ extern class MessageInfo
 	* @throws  IllegalArgumentException
 	*          If the streamNumber is negative or greater than {@code 65536}
 	*/
-	@:overload public static function createOutgoing(address : java.net.SocketAddress, streamNumber : Int) : com.sun.nio.sctp.MessageInfo;
+	@:overload @:public @:static public static function createOutgoing(address : java.net.SocketAddress, streamNumber : Int) : com.sun.nio.sctp.MessageInfo;
 	
 	/**
 	* Creates a {@code MessageInfo} instance suitable for use when
@@ -87,7 +87,7 @@ extern class MessageInfo
 	*          If {@code association} is {@code null}, or the streamNumber is
 	*          negative or greater than {@code 65536}
 	*/
-	@:overload public static function createOutgoing(association : com.sun.nio.sctp.Association, address : java.net.SocketAddress, streamNumber : Int) : com.sun.nio.sctp.MessageInfo;
+	@:overload @:public @:static public static function createOutgoing(association : com.sun.nio.sctp.Association, address : java.net.SocketAddress, streamNumber : Int) : com.sun.nio.sctp.MessageInfo;
 	
 	/**
 	* Returns the source socket address if the message has been received,
@@ -98,7 +98,7 @@ extern class MessageInfo
 	*          specifying a preferred destination address
 	*
 	*/
-	@:overload @:abstract public function address() : java.net.SocketAddress;
+	@:overload @:public @:abstract public function address() : java.net.SocketAddress;
 	
 	/**
 	* Returns the association that the message was received on, if the message
@@ -110,7 +110,7 @@ extern class MessageInfo
 	*         the {@link #createOutgoing(SocketAddress,int)
 	*         createOutgoing(SocketAddress,int)} static factory method
 	*/
-	@:overload @:abstract public function association() : com.sun.nio.sctp.Association;
+	@:overload @:public @:abstract public function association() : com.sun.nio.sctp.Association;
 	
 	/**
 	* Returns the number of bytes read for the received message.
@@ -122,7 +122,7 @@ extern class MessageInfo
 	*          SctpChannel} that has reached end-of-stream, otherwise
 	*          {@code 0}
 	*/
-	@:overload @:abstract public function bytes() : Int;
+	@:overload @:public @:abstract public function bytes() : Int;
 	
 	/**
 	* Tells whether or not the message is complete.
@@ -136,7 +136,7 @@ extern class MessageInfo
 	*
 	* @return  {@code true} if, and only if, the message is complete
 	*/
-	@:overload @:abstract public function isComplete() : Bool;
+	@:overload @:public @:abstract public function isComplete() : Bool;
 	
 	/**
 	* Sets whether or not the message is complete.
@@ -154,7 +154,7 @@ extern class MessageInfo
 	*
 	* @see  MessageInfo#isComplete()
 	*/
-	@:overload @:abstract public function complete(complete : Bool) : com.sun.nio.sctp.MessageInfo;
+	@:overload @:public @:abstract public function complete(complete : Bool) : com.sun.nio.sctp.MessageInfo;
 	
 	/**
 	* Tells whether or not the message is unordered. For received messages
@@ -165,7 +165,7 @@ extern class MessageInfo
 	* @return  {@code true} if the message is unordered, otherwise
 	*          {@code false}
 	*/
-	@:overload @:abstract public function isUnordered() : Bool;
+	@:overload @:public @:abstract public function isUnordered() : Bool;
 	
 	/**
 	* Sets whether or not the message is unordered.
@@ -178,7 +178,7 @@ extern class MessageInfo
 	*
 	* @see  MessageInfo#isUnordered()
 	*/
-	@:overload @:abstract public function unordered(unordered : Bool) : com.sun.nio.sctp.MessageInfo;
+	@:overload @:public @:abstract public function unordered(unordered : Bool) : com.sun.nio.sctp.MessageInfo;
 	
 	/**
 	* Returns the payload protocol Identifier.
@@ -189,7 +189,7 @@ extern class MessageInfo
 	*
 	* @return  The Payload Protocol Identifier
 	*/
-	@:overload @:abstract public function payloadProtocolID() : Int;
+	@:overload @:public @:abstract public function payloadProtocolID() : Int;
 	
 	/**
 	* Sets the payload protocol Identifier.
@@ -205,7 +205,7 @@ extern class MessageInfo
 	*
 	* @see  MessageInfo#payloadProtocolID()
 	*/
-	@:overload @:abstract public function payloadProtocolID(ppid : Int) : com.sun.nio.sctp.MessageInfo;
+	@:overload @:public @:abstract public function payloadProtocolID(ppid : Int) : com.sun.nio.sctp.MessageInfo;
 	
 	/**
 	* Returns the stream number that the message was received on, if the
@@ -214,7 +214,7 @@ extern class MessageInfo
 	*
 	* @return  The stream number
 	*/
-	@:overload @:abstract public function streamNumber() : Int;
+	@:overload @:public @:abstract public function streamNumber() : Int;
 	
 	/**
 	* Sets the stream number that the message is to be sent on.
@@ -227,7 +227,7 @@ extern class MessageInfo
 	*
 	* @return  This MessageInfo
 	*/
-	@:overload @:abstract public function streamNumber(streamNumber : Int) : com.sun.nio.sctp.MessageInfo;
+	@:overload @:public @:abstract public function streamNumber(streamNumber : Int) : com.sun.nio.sctp.MessageInfo;
 	
 	/**
 	* The time period that the sending side may expire the message if it has
@@ -237,7 +237,7 @@ extern class MessageInfo
 	*
 	* @return  The time period in milliseconds, or {@code 0}
 	*/
-	@:overload @:abstract public function timeToLive() : haxe.Int64;
+	@:overload @:public @:abstract public function timeToLive() : haxe.Int64;
 	
 	/**
 	* Sets the time period that the sending side may expire the message if it
@@ -251,7 +251,7 @@ extern class MessageInfo
 	*
 	* @see MessageInfo#timeToLive()
 	*/
-	@:overload @:abstract public function timeToLive(millis : haxe.Int64) : com.sun.nio.sctp.MessageInfo;
+	@:overload @:public @:abstract public function timeToLive(millis : haxe.Int64) : com.sun.nio.sctp.MessageInfo;
 	
 	
 }

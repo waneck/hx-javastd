@@ -33,7 +33,7 @@ extern class ConnectionEvent extends java.util.EventObject
 	* @param con the pooled connection that is the source of the event
 	* @throws IllegalArgumentException if <code>con</code> is null.
 	*/
-	@:overload public function new(con : javax.sql.PooledConnection) : Void;
+	@:overload @:public public function new(con : javax.sql.PooledConnection) : Void;
 	
 	/**
 	* <P>Constructs a <code>ConnectionEvent</code> object initialized with
@@ -44,7 +44,7 @@ extern class ConnectionEvent extends java.util.EventObject
 	* @param ex the SQLException about to be thrown to the application
 	* @throws IllegalArgumentException if <code>con</code> is null.
 	*/
-	@:overload public function new(con : javax.sql.PooledConnection, ex : java.sql.SQLException) : Void;
+	@:overload @:public public function new(con : javax.sql.PooledConnection, ex : java.sql.SQLException) : Void;
 	
 	/**
 	* <P>Retrieves the <code>SQLException</code> for this
@@ -52,7 +52,7 @@ extern class ConnectionEvent extends java.util.EventObject
 	*
 	* @return the SQLException about to be thrown or <code>null</code>
 	*/
-	@:overload public function getSQLException() : java.sql.SQLException;
+	@:overload @:public public function getSQLException() : java.sql.SQLException;
 	
 	
 }

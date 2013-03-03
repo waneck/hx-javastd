@@ -39,9 +39,9 @@ extern class Sort
 	* @param right - the last index.
 	* @param comp - an object that implemnts the Compare interface to resolve thecomparison.
 	*/
-	@:overload public static function quicksort(arr : java.NativeArray<Dynamic>, left : Int, right : Int, comp : sun.misc.Compare) : Void;
+	@:overload @:public @:static public static function quicksort(arr : java.NativeArray<Dynamic>, left : Int, right : Int, comp : sun.misc.Compare) : Void;
 	
-	@:overload public static function quicksort(arr : java.NativeArray<Dynamic>, comp : sun.misc.Compare) : Void;
+	@:overload @:public @:static public static function quicksort(arr : java.NativeArray<Dynamic>, comp : sun.misc.Compare) : Void;
 	
 	
 }

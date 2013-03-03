@@ -32,7 +32,7 @@ extern class CookieManager extends java.net.CookieHandler
 	* cookie store and accept policy. The effect is same as
 	* <tt>CookieManager(null, null)</tt>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a new cookie manager with specified cookie store and cookie policy.
@@ -45,7 +45,7 @@ extern class CookieManager extends java.net.CookieHandler
 	*                          if <tt>null</tt>, ACCEPT_ORIGINAL_SERVER will
 	*                          be used.
 	*/
-	@:overload public function new(store : java.net.CookieStore, cookiePolicy : java.net.CookiePolicy) : Void;
+	@:overload @:public public function new(store : java.net.CookieStore, cookiePolicy : java.net.CookiePolicy) : Void;
 	
 	/**
 	* To set the cookie policy of this cookie manager.
@@ -57,24 +57,24 @@ extern class CookieManager extends java.net.CookieHandler
 	* @param cookiePolicy      the cookie policy. Can be <tt>null</tt>, which
 	*                          has no effects on current cookie policy.
 	*/
-	@:overload public function setCookiePolicy(cookiePolicy : java.net.CookiePolicy) : Void;
+	@:overload @:public public function setCookiePolicy(cookiePolicy : java.net.CookiePolicy) : Void;
 	
 	/**
 	* To retrieve current cookie store.
 	*
 	* @return  the cookie store currently used by cookie manager.
 	*/
-	@:overload public function getCookieStore() : java.net.CookieStore;
+	@:overload @:public public function getCookieStore() : java.net.CookieStore;
 	
-	@:overload override public function get(uri : java.net.URI, requestHeaders : java.util.Map<String, java.util.List<String>>) : java.util.Map<String, java.util.List<String>>;
+	@:overload @:public override public function get(uri : java.net.URI, requestHeaders : java.util.Map<String, java.util.List<String>>) : java.util.Map<String, java.util.List<String>>;
 	
-	@:overload override public function put(uri : java.net.URI, responseHeaders : java.util.Map<String, java.util.List<String>>) : Void;
+	@:overload @:public override public function put(uri : java.net.URI, responseHeaders : java.util.Map<String, java.util.List<String>>) : Void;
 	
 	
 }
 @:native('java$net$CookieManager$CookiePathComparator') @:internal extern class CookieManager_CookiePathComparator implements java.util.Comparator<java.net.HttpCookie>
 {
-	@:overload public function compare(c1 : java.net.HttpCookie, c2 : java.net.HttpCookie) : Int;
+	@:overload @:public public function compare(c1 : java.net.HttpCookie, c2 : java.net.HttpCookie) : Int;
 	
 	
 }

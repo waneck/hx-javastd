@@ -28,33 +28,33 @@ extern class NTLMException extends java.security.GeneralSecurityException
 	/**
 	* If the incoming packet is invalid.
 	*/
-	public static var PACKET_READ_ERROR(default, null) : Int;
+	@:public @:final @:static public static var PACKET_READ_ERROR(default, null) : Int;
 	
 	/**
 	* If the client cannot get a domain value from the server and the
 	* caller has not provided one.
 	*/
-	public static var NO_DOMAIN_INFO(default, null) : Int;
+	@:public @:final @:static public static var NO_DOMAIN_INFO(default, null) : Int;
 	
 	/**
 	* If the client name is not found on server's user database.
 	*/
-	public static var USER_UNKNOWN(default, null) : Int;
+	@:public @:final @:static public static var USER_UNKNOWN(default, null) : Int;
 	
 	/**
 	* If authentication fails.
 	*/
-	public static var AUTH_FAILED(default, null) : Int;
+	@:public @:final @:static public static var AUTH_FAILED(default, null) : Int;
 	
 	/**
 	* If an illegal version string is provided.
 	*/
-	public static var BAD_VERSION(default, null) : Int;
+	@:public @:final @:static public static var BAD_VERSION(default, null) : Int;
 	
 	/**
 	* Protocol errors.
 	*/
-	public static var PROTOCOL(default, null) : Int;
+	@:public @:final @:static public static var PROTOCOL(default, null) : Int;
 	
 	/**
 	* Constructs an NTLMException object.
@@ -63,13 +63,13 @@ extern class NTLMException extends java.security.GeneralSecurityException
 	* @param msg the string message, which can be retrived by
 	* the {@link Exception#getMessage() } method.
 	*/
-	@:overload public function new(errorCode : Int, msg : String) : Void;
+	@:overload @:public public function new(errorCode : Int, msg : String) : Void;
 	
 	/**
 	* Returns the error code associated with this NTLMException.
 	* @return the error code
 	*/
-	@:overload public function errorCode() : Int;
+	@:overload @:public public function errorCode() : Int;
 	
 	
 }

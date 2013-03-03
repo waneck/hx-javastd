@@ -46,9 +46,9 @@ package com.sun.xml.internal.rngom.dt.builtin;
 */
 extern class BuiltinDatatypeLibraryFactory implements org.relaxng.datatype.DatatypeLibraryFactory
 {
-	@:overload public function new(coreFactory : org.relaxng.datatype.DatatypeLibraryFactory) : Void;
+	@:overload @:public public function new(coreFactory : org.relaxng.datatype.DatatypeLibraryFactory) : Void;
 	
-	@:overload public function createDatatypeLibrary(uri : String) : org.relaxng.datatype.DatatypeLibrary;
+	@:overload @:public public function createDatatypeLibrary(uri : String) : org.relaxng.datatype.DatatypeLibrary;
 	
 	
 }

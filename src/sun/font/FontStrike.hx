@@ -25,17 +25,17 @@ package sun.font;
 */
 extern class FontStrike
 {
-	private var disposer : sun.font.FontStrikeDisposer;
+	@:protected private var disposer : sun.font.FontStrikeDisposer;
 	
-	private var desc : sun.font.FontStrikeDesc;
+	@:protected private var desc : sun.font.FontStrikeDesc;
 	
-	private var strikeMetrics : sun.font.StrikeMetrics;
+	@:protected private var strikeMetrics : sun.font.StrikeMetrics;
 	
-	private var algoStyle : Bool;
+	@:protected private var algoStyle : Bool;
 	
-	private var boldness : Single;
+	@:protected private var boldness : Single;
 	
-	private var italic : Single;
+	@:protected private var italic : Single;
 	
 	/*
 	* lastLookupTime is updated by Font2D.getStrike and can be used to
@@ -43,7 +43,7 @@ extern class FontStrike
 	* memory usage gets too high. Active strikes will never be purged
 	* because purging is via GC of WeakReferences.
 	*/
-	@:overload @:abstract public function getNumGlyphs() : Int;
+	@:overload @:public @:abstract public function getNumGlyphs() : Int;
 	
 	
 }

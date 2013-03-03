@@ -25,39 +25,39 @@ package sun.tools.jconsole;
 */
 extern class JConsole extends javax.swing.JFrame implements java.awt.event.ActionListener implements javax.swing.event.InternalFrameListener
 {
-	public static var ROOT_URL(default, null) : String;
+	@:public @:final @:static public static var ROOT_URL(default, null) : String;
 	
-	@:overload public function new(hotspot : Bool) : Void;
+	@:overload @:public public function new(hotspot : Bool) : Void;
 	
-	@:overload public function getDesktopPane() : javax.swing.JDesktopPane;
+	@:overload @:public public function getDesktopPane() : javax.swing.JDesktopPane;
 	
-	@:overload public function getInternalFrames() : java.util.List<sun.tools.jconsole.VMInternalFrame>;
+	@:overload @:public public function getInternalFrames() : java.util.List<sun.tools.jconsole.VMInternalFrame>;
 	
-	@:overload public function actionPerformed(ev : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(ev : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function tileWindows() : Void;
+	@:overload @:public public function tileWindows() : Void;
 	
-	@:overload public function cascadeWindows() : Void;
+	@:overload @:public public function cascadeWindows() : Void;
 	
-	@:overload public function internalFrameClosing(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameClosing(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameOpened(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameOpened(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameClosed(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameClosed(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameIconified(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameIconified(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameDeiconified(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameDeiconified(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameActivated(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameActivated(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameDeactivated(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameDeactivated(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
-	@:overload public static function isDebug() : Bool;
+	@:overload @:public @:static public static function isDebug() : Bool;
 	
-	@:overload public static function isLocalAttachAvailable() : Bool;
+	@:overload @:public @:static public static function isLocalAttachAvailable() : Bool;
 	
 	
 }
@@ -67,14 +67,14 @@ extern class JConsole extends javax.swing.JFrame implements java.awt.event.Actio
 }
 @:native('sun$tools$jconsole$JConsole$FixedJRootPane') @:internal extern class JConsole_FixedJRootPane extends javax.swing.JRootPane
 {
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* The revalidate method seems to be the only one that gets
 	* called whenever there is a change of L&F or change of theme
 	* in Windows L&F and GTK L&F.
 	*/
-	@:overload public function revalidate() : Void;
+	@:overload @:public override public function revalidate() : Void;
 	
 	
 }

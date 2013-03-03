@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.policy.jaxws;
 */
 @:internal extern class BuilderHandler
 {
-	@:overload @:abstract private function doPopulate(policyMapExtender : com.sun.xml.internal.ws.policy.PolicyMapExtender) : Void;
+	@:overload @:protected @:abstract private function doPopulate(policyMapExtender : com.sun.xml.internal.ws.policy.PolicyMapExtender) : Void;
 	
 	
 }

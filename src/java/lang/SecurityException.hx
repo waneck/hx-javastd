@@ -35,7 +35,7 @@ package java.lang;
 	/**
 	* Constructs a <code>SecurityException</code> with no detail  message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>SecurityException</code> with the specified
@@ -43,7 +43,7 @@ package java.lang;
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Creates a <code>SecurityException</code> with the specified
@@ -56,7 +56,7 @@ package java.lang;
 	*        and indicates that the cause is nonexistent or unknown.)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:require(java5) @:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Creates a <code>SecurityException</code> with the specified cause
@@ -69,7 +69,7 @@ package java.lang;
 	*        and indicates that the cause is nonexistent or unknown.)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(cause : java.lang.Throwable) : Void;
+	@:require(java5) @:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

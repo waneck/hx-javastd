@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.protocol;
 */
 extern class AddressingDispositionException extends java.lang.RuntimeException
 {
-	@:overload public function new(expectedAddrDisp : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(expectedAddrDisp : java.StdTypes.Int16) : Void;
 	
-	@:overload public function expectedAddrDisp() : java.StdTypes.Int16;
+	@:overload @:public public function expectedAddrDisp() : java.StdTypes.Int16;
 	
 	
 }

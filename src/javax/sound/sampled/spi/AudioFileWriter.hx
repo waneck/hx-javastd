@@ -31,7 +31,7 @@ extern class AudioFileWriter
 	* @return array of file types.  If no file types are supported,
 	* an array of length 0 is returned.
 	*/
-	@:overload @:abstract public function getAudioFileTypes() : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
+	@:overload @:public @:abstract public function getAudioFileTypes() : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
 	
 	/**
 	* Indicates whether file writing support for the specified file type is provided
@@ -40,7 +40,7 @@ extern class AudioFileWriter
 	* @return <code>true</code> if the file type is supported,
 	* otherwise <code>false</code>
 	*/
-	@:overload public function isFileTypeSupported(fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type) : Bool;
+	@:overload @:public public function isFileTypeSupported(fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type) : Bool;
 	
 	/**
 	* Obtains the file types that this audio file writer can write from the
@@ -50,7 +50,7 @@ extern class AudioFileWriter
 	* @return array of file types.  If no file types are supported,
 	* an array of length 0 is returned.
 	*/
-	@:overload @:abstract public function getAudioFileTypes(stream : javax.sound.sampled.AudioInputStream) : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
+	@:overload @:public @:abstract public function getAudioFileTypes(stream : javax.sound.sampled.AudioInputStream) : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
 	
 	/**
 	* Indicates whether an audio file of the type specified can be written
@@ -60,7 +60,7 @@ extern class AudioFileWriter
 	* @return <code>true</code> if the file type is supported for this audio input stream,
 	* otherwise <code>false</code>
 	*/
-	@:overload public function isFileTypeSupported(fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, stream : javax.sound.sampled.AudioInputStream) : Bool;
+	@:overload @:public public function isFileTypeSupported(fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, stream : javax.sound.sampled.AudioInputStream) : Bool;
 	
 	/**
 	* Writes a stream of bytes representing an audio file of the file type
@@ -81,7 +81,7 @@ extern class AudioFileWriter
 	* @see #isFileTypeSupported(AudioFileFormat.Type, AudioInputStream)
 	* @see #getAudioFileTypes
 	*/
-	@:overload @:abstract public function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.OutputStream) : Int;
+	@:overload @:public @:abstract public function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.OutputStream) : Int;
 	
 	/**
 	* Writes a stream of bytes representing an audio file of the file format
@@ -97,7 +97,7 @@ extern class AudioFileWriter
 	* @see #isFileTypeSupported
 	* @see #getAudioFileTypes
 	*/
-	@:overload @:abstract public function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.File) : Int;
+	@:overload @:public @:abstract public function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.File) : Int;
 	
 	
 }

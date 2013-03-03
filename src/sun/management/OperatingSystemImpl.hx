@@ -28,19 +28,19 @@ extern class OperatingSystemImpl implements java.lang.management.OperatingSystem
 	/**
 	* Constructor of OperatingSystemImpl class.
 	*/
-	@:overload private function new(vm : sun.management.VMManagement) : Void;
+	@:overload @:protected private function new(vm : sun.management.VMManagement) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getArch() : String;
+	@:overload @:public public function getArch() : String;
 	
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
-	@:overload public function getAvailableProcessors() : Int;
+	@:overload @:public public function getAvailableProcessors() : Int;
 	
-	@:overload public function getSystemLoadAverage() : Float;
+	@:overload @:public public function getSystemLoadAverage() : Float;
 	
-	@:overload public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
 	
 }

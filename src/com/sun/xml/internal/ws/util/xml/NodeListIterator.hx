@@ -28,17 +28,17 @@ extern class NodeListIterator implements java.util.Iterator<Dynamic>
 	/**
 	* @author WS Development Team
 	*/
-	private var _list : org.w3c.dom.NodeList;
+	@:protected private var _list : org.w3c.dom.NodeList;
 	
-	private var _index : Int;
+	@:protected private var _index : Int;
 	
-	@:overload public function new(list : org.w3c.dom.NodeList) : Void;
+	@:overload @:public public function new(list : org.w3c.dom.NodeList) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

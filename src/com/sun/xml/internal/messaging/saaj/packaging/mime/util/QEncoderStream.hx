@@ -34,19 +34,19 @@ extern class QEncoderStream extends com.sun.xml.internal.messaging.saaj.packagin
 	* @param encodingWord true if we are Q-encoding a word within a
 	*                  phrase.
 	*/
-	@:overload public function new(out : java.io.OutputStream, encodingWord : Bool) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, encodingWord : Bool) : Void;
 	
 	/**
 	* Encodes the specified <code>byte</code> to this output stream.
 	* @param      c   the <code>byte</code>.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function write(c : Int) : Void;
+	@:overload @:public override public function write(c : Int) : Void;
 	
 	/**
 	* Returns the length of the encoded version of this byte array.
 	*/
-	@:overload public static function encodedLength(b : java.NativeArray<java.StdTypes.Int8>, encodingWord : Bool) : Int;
+	@:overload @:public @:static public static function encodedLength(b : java.NativeArray<java.StdTypes.Int8>, encodingWord : Bool) : Int;
 	
 	
 }

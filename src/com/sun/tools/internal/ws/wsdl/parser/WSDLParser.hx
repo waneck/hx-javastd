@@ -25,13 +25,13 @@ package com.sun.tools.internal.ws.wsdl.parser;
 */
 extern class WSDLParser
 {
-	@:overload public function new(options : com.sun.tools.internal.ws.wscompile.WsimportOptions, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiverFilter, forest : com.sun.tools.internal.ws.wsdl.parser.MetadataFinder) : Void;
+	@:overload @:public public function new(options : com.sun.tools.internal.ws.wscompile.WsimportOptions, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiverFilter, forest : com.sun.tools.internal.ws.wsdl.parser.MetadataFinder) : Void;
 	
-	@:overload public function addParserListener(l : com.sun.tools.internal.ws.wsdl.framework.ParserListener) : Void;
+	@:overload @:public public function addParserListener(l : com.sun.tools.internal.ws.wsdl.framework.ParserListener) : Void;
 	
-	@:overload public function parse() : com.sun.tools.internal.ws.wsdl.document.WSDLDocument;
+	@:overload @:public public function parse() : com.sun.tools.internal.ws.wsdl.document.WSDLDocument;
 	
-	@:overload public function getDOMForest() : com.sun.tools.internal.ws.wsdl.parser.MetadataFinder;
+	@:overload @:public public function getDOMForest() : com.sun.tools.internal.ws.wsdl.parser.MetadataFinder;
 	
 	
 }

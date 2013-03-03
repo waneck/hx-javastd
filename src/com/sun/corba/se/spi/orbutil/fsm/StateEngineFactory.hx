@@ -25,7 +25,7 @@ package com.sun.corba.se.spi.orbutil.fsm;
 */
 extern class StateEngineFactory
 {
-	@:overload public static function create() : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
+	@:overload @:public @:static public static function create() : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
 	
 	
 }

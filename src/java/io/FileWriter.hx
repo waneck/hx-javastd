@@ -55,7 +55,7 @@ package java.io;
 	*                  than a regular file, does not exist but cannot be
 	*                  created, or cannot be opened for any other reason
 	*/
-	@:overload public function new(fileName : String) : Void;
+	@:overload @:public public function new(fileName : String) : Void;
 	
 	/**
 	* Constructs a FileWriter object given a file name with a boolean
@@ -68,7 +68,7 @@ package java.io;
 	*                  than a regular file, does not exist but cannot be
 	*                  created, or cannot be opened for any other reason
 	*/
-	@:overload public function new(fileName : String, append : Bool) : Void;
+	@:overload @:public public function new(fileName : String, append : Bool) : Void;
 	
 	/**
 	* Constructs a FileWriter object given a File object.
@@ -78,7 +78,7 @@ package java.io;
 	*                  a regular file, does not exist but cannot be created,
 	*                  or cannot be opened for any other reason
 	*/
-	@:overload public function new(file : java.io.File) : Void;
+	@:overload @:public public function new(file : java.io.File) : Void;
 	
 	/**
 	* Constructs a FileWriter object given a File object. If the second
@@ -93,14 +93,14 @@ package java.io;
 	*                  or cannot be opened for any other reason
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(file : java.io.File, append : Bool) : Void;
+	@:require(java4) @:overload @:public public function new(file : java.io.File, append : Bool) : Void;
 	
 	/**
 	* Constructs a FileWriter object associated with a file descriptor.
 	*
 	* @param fd  FileDescriptor object to write to.
 	*/
-	@:overload public function new(fd : java.io.FileDescriptor) : Void;
+	@:overload @:public public function new(fd : java.io.FileDescriptor) : Void;
 	
 	
 }

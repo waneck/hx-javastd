@@ -27,21 +27,21 @@ package sun.nio.cs.ext;
 */
 extern class JIS_X_0212 extends java.nio.charset.Charset
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	
 }
 @:native('sun$nio$cs$ext$JIS_X_0212$Decoder') @:internal extern class JIS_X_0212_Decoder extends sun.nio.cs.ext.JIS_X_0212_Decoder
 {
-	@:overload private function decodeSingle(b : Int) : java.StdTypes.Char16;
+	@:overload @:protected override private function decodeSingle(b : Int) : java.StdTypes.Char16;
 	
-	@:overload public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:public public function new(cs : java.nio.charset.Charset) : Void;
 	
 	
 }

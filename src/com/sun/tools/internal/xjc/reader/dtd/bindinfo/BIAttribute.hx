@@ -26,7 +26,7 @@ package com.sun.tools.internal.xjc.reader.dtd.bindinfo;
 extern class BIAttribute
 {
 	/** Gets the name of this attribute-property declaration. */
-	@:overload @:final public function name() : String;
+	@:overload @:public @:final public function name() : String;
 	
 	/**
 	* Gets the conversion method for this attribute, if any.
@@ -35,7 +35,7 @@ extern class BIAttribute
 	*        If the convert attribute is not specified, this
 	*        method returns null.
 	*/
-	@:overload public function getConversion() : com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIConversion;
+	@:overload @:public public function getConversion() : com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIConversion;
 	
 	/**
 	* Gets the realization of this particle, if any.
@@ -43,7 +43,7 @@ extern class BIAttribute
 	* @return
 	*      null if the "collection" attribute was not specified.
 	*/
-	@:overload @:final public function getRealization() : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
+	@:overload @:public @:final public function getRealization() : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer;
 	
 	/**
 	* Gets the property name for this attribute.
@@ -51,7 +51,7 @@ extern class BIAttribute
 	* @return
 	*      always a non-null, valid string.
 	*/
-	@:overload @:final public function getPropertyName() : String;
+	@:overload @:public @:final public function getPropertyName() : String;
 	
 	
 }

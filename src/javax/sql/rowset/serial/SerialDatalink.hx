@@ -31,7 +31,7 @@ extern class SerialDatalink implements java.io.Serializable implements java.lang
 	* <P>
 	* @throws SerialException if url parameter is a null
 	*/
-	@:overload public function new(url : java.net.URL) : Void;
+	@:overload @:public public function new(url : java.net.URL) : Void;
 	
 	/**
 	* Returns a new URL that is a copy of this <code>SerialDatalink</code>
@@ -41,7 +41,7 @@ extern class SerialDatalink implements java.io.Serializable implements java.lang
 	* <code>URL</code> object in the Java programming language.
 	* @throws SerialException if the <code>URL</code> object cannot be de-serialized
 	*/
-	@:overload public function getDatalink() : java.net.URL;
+	@:overload @:public public function getDatalink() : java.net.URL;
 	
 	
 }

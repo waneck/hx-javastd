@@ -25,15 +25,15 @@ package com.sun.xml.internal.ws.model.wsdl;
 */
 extern class WSDLProperties extends com.sun.xml.internal.ws.api.PropertySet
 {
-	@:overload public function new(port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort) : Void;
+	@:overload @:public public function new(port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort) : Void;
 	
-	@:overload public function getWSDLService() : javax.xml.namespace.QName;
+	@:overload @:public public function getWSDLService() : javax.xml.namespace.QName;
 	
-	@:overload public function getWSDLPort() : javax.xml.namespace.QName;
+	@:overload @:public public function getWSDLPort() : javax.xml.namespace.QName;
 	
-	@:overload public function getWSDLPortType() : javax.xml.namespace.QName;
+	@:overload @:public public function getWSDLPortType() : javax.xml.namespace.QName;
 	
-	@:overload private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
+	@:overload @:protected override private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
 	
 }

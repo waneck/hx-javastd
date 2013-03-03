@@ -28,17 +28,17 @@ extern class TextEvent extends java.awt.AWTEvent
 	/**
 	* The first number in the range of ids used for text events.
 	*/
-	public static var TEXT_FIRST(default, null) : Int;
+	@:public @:static @:final public static var TEXT_FIRST(default, null) : Int;
 	
 	/**
 	* The last number in the range of ids used for text events.
 	*/
-	public static var TEXT_LAST(default, null) : Int;
+	@:public @:static @:final public static var TEXT_LAST(default, null) : Int;
 	
 	/**
 	* This event id indicates that object's text changed.
 	*/
-	public static var TEXT_VALUE_CHANGED(default, null) : Int;
+	@:public @:static @:final public static var TEXT_VALUE_CHANGED(default, null) : Int;
 	
 	/**
 	* Constructs a <code>TextEvent</code> object.
@@ -55,7 +55,7 @@ extern class TextEvent extends java.awt.AWTEvent
 	* @see #getSource()
 	* @see #getID()
 	*/
-	@:overload public function new(source : Dynamic, id : Int) : Void;
+	@:overload @:public public function new(source : Dynamic, id : Int) : Void;
 	
 	/**
 	* Returns a parameter string identifying this text event.
@@ -63,7 +63,7 @@ extern class TextEvent extends java.awt.AWTEvent
 	*
 	* @return a string identifying the event and its attributes
 	*/
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	
 }

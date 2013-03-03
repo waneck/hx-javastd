@@ -37,13 +37,13 @@ package com.sun.org.apache.xerces.internal.impl.dv.util;
 */
 extern class Base64
 {
-	@:overload private static function isWhiteSpace(octect : java.StdTypes.Char16) : Bool;
+	@:overload @:protected @:static private static function isWhiteSpace(octect : java.StdTypes.Char16) : Bool;
 	
-	@:overload private static function isPad(octect : java.StdTypes.Char16) : Bool;
+	@:overload @:protected @:static private static function isPad(octect : java.StdTypes.Char16) : Bool;
 	
-	@:overload private static function isData(octect : java.StdTypes.Char16) : Bool;
+	@:overload @:protected @:static private static function isData(octect : java.StdTypes.Char16) : Bool;
 	
-	@:overload private static function isBase64(octect : java.StdTypes.Char16) : Bool;
+	@:overload @:protected @:static private static function isBase64(octect : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Encodes hex octects into Base64
@@ -51,7 +51,7 @@ extern class Base64
 	* @param binaryData Array containing binaryData
 	* @return Encoded Base64 array
 	*/
-	@:overload public static function encode(binaryData : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public @:static public static function encode(binaryData : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	/**
 	* Decodes Base64 data into octects
@@ -59,7 +59,7 @@ extern class Base64
 	* @param encoded string containing Base64 data
 	* @return Array containind decoded data.
 	*/
-	@:overload public static function decode(encoded : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function decode(encoded : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* remove WhiteSpace from MIME containing encoded Base64 data.
@@ -67,7 +67,7 @@ extern class Base64
 	* @param data  the byte array of base64 data (with WS)
 	* @return      the new length
 	*/
-	@:overload private static function removeWhiteSpace(data : java.NativeArray<java.StdTypes.Char16>) : Int;
+	@:overload @:protected @:static private static function removeWhiteSpace(data : java.NativeArray<java.StdTypes.Char16>) : Int;
 	
 	
 }

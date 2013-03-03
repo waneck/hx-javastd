@@ -23,7 +23,7 @@ package com.sun.org.apache.xpath.internal.objects;
 */
 extern class XRTreeFragSelectWrapper extends com.sun.org.apache.xpath.internal.objects.XRTreeFrag implements java.lang.Cloneable
 {
-	@:overload public function new(expr : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function new(expr : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	/**
 	* This function is used to fixup variables from QNames to stack frame
@@ -35,7 +35,7 @@ extern class XRTreeFragSelectWrapper extends com.sun.org.apache.xpath.internal.o
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* For support of literal objects in xpaths.
@@ -46,7 +46,7 @@ extern class XRTreeFragSelectWrapper extends com.sun.org.apache.xpath.internal.o
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Detaches the <code>DTMIterator</code> from the set which it iterated
@@ -57,49 +57,49 @@ extern class XRTreeFragSelectWrapper extends com.sun.org.apache.xpath.internal.o
 	*
 	* In general, detach should only be called once on the object.
 	*/
-	@:overload override public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	/**
 	* Cast result object to a number.
 	*
 	* @return The result tree fragment as a number or NaN
 	*/
-	@:overload override public function num() : Float;
+	@:overload @:public override public function num() : Float;
 	
 	/**
 	* Cast result object to an XMLString.
 	*
 	* @return The document fragment node data or the empty string.
 	*/
-	@:overload override public function xstr() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public override public function xstr() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Cast result object to a string.
 	*
 	* @return The document fragment node data or the empty string.
 	*/
-	@:overload override public function str() : String;
+	@:overload @:public override public function str() : String;
 	
 	/**
 	* Tell what kind of class this is.
 	*
 	* @return the string type
 	*/
-	@:overload override public function getType() : Int;
+	@:overload @:public override public function getType() : Int;
 	
 	/**
 	* Cast result object to a result tree fragment.
 	*
 	* @return The document fragment this wraps
 	*/
-	@:overload override public function rtf() : Int;
+	@:overload @:public override public function rtf() : Int;
 	
 	/**
 	* Cast result object to a DTMIterator.
 	*
 	* @return The document fragment as a DTMIterator
 	*/
-	@:overload override public function asNodeIterator() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public override public function asNodeIterator() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	
 }

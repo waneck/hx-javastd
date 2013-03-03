@@ -25,11 +25,11 @@ package com.sun.tools.internal.xjc.reader.relaxng;
 */
 extern class RELAXNGInternalizationLogic implements com.sun.tools.internal.xjc.reader.internalizer.InternalizationLogic
 {
-	@:overload public function createExternalReferenceFinder(parent : com.sun.tools.internal.xjc.reader.internalizer.DOMForest) : org.xml.sax.helpers.XMLFilterImpl;
+	@:overload @:public public function createExternalReferenceFinder(parent : com.sun.tools.internal.xjc.reader.internalizer.DOMForest) : org.xml.sax.helpers.XMLFilterImpl;
 	
-	@:overload public function checkIfValidTargetNode(parent : com.sun.tools.internal.xjc.reader.internalizer.DOMForest, bindings : org.w3c.dom.Element, target : org.w3c.dom.Element) : Bool;
+	@:overload @:public public function checkIfValidTargetNode(parent : com.sun.tools.internal.xjc.reader.internalizer.DOMForest, bindings : org.w3c.dom.Element, target : org.w3c.dom.Element) : Bool;
 	
-	@:overload public function refineTarget(target : org.w3c.dom.Element) : org.w3c.dom.Element;
+	@:overload @:public public function refineTarget(target : org.w3c.dom.Element) : org.w3c.dom.Element;
 	
 	
 }
@@ -39,7 +39,7 @@ extern class RELAXNGInternalizationLogic implements com.sun.tools.internal.xjc.r
 */
 @:native('com$sun$tools$internal$xjc$reader$relaxng$RELAXNGInternalizationLogic$ReferenceFinder') @:internal extern class RELAXNGInternalizationLogic_ReferenceFinder extends com.sun.tools.internal.xjc.reader.internalizer.AbstractReferenceFinderImpl
 {
-	@:overload override private function findExternalResource(nsURI : String, localName : String, atts : org.xml.sax.Attributes) : String;
+	@:overload @:protected override private function findExternalResource(nsURI : String, localName : String, atts : org.xml.sax.Attributes) : String;
 	
 	
 }

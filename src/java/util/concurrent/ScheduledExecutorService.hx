@@ -104,7 +104,7 @@ package java.util.concurrent;
 	*         scheduled for execution
 	* @throws NullPointerException if command is null
 	*/
-	@:overload public function schedule(command : java.lang.Runnable, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
+	@:overload @:public public function schedule(command : java.lang.Runnable, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
 	
 	/**
 	* Creates and executes a ScheduledFuture that becomes enabled after the
@@ -118,7 +118,7 @@ package java.util.concurrent;
 	*         scheduled for execution
 	* @throws NullPointerException if callable is null
 	*/
-	@:overload public function schedule<V>(callable : java.util.concurrent.Callable<V>, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<V>;
+	@:overload @:public public function schedule<V>(callable : java.util.concurrent.Callable<V>, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<V>;
 	
 	/**
 	* Creates and executes a periodic action that becomes enabled first
@@ -145,7 +145,7 @@ package java.util.concurrent;
 	* @throws NullPointerException if command is null
 	* @throws IllegalArgumentException if period less than or equal to zero
 	*/
-	@:overload public function scheduleAtFixedRate(command : java.lang.Runnable, initialDelay : haxe.Int64, period : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
+	@:overload @:public public function scheduleAtFixedRate(command : java.lang.Runnable, initialDelay : haxe.Int64, period : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
 	
 	/**
 	* Creates and executes a periodic action that becomes enabled first
@@ -169,7 +169,7 @@ package java.util.concurrent;
 	* @throws NullPointerException if command is null
 	* @throws IllegalArgumentException if delay less than or equal to zero
 	*/
-	@:overload public function scheduleWithFixedDelay(command : java.lang.Runnable, initialDelay : haxe.Int64, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
+	@:overload @:public public function scheduleWithFixedDelay(command : java.lang.Runnable, initialDelay : haxe.Int64, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
 	
 	
 }

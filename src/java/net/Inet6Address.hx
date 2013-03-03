@@ -43,7 +43,7 @@ extern class Inet6Address extends java.net.InetAddress
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getByAddress(host : String, addr : java.NativeArray<java.StdTypes.Int8>, nif : java.net.NetworkInterface) : java.net.Inet6Address;
+	@:require(java5) @:overload @:public @:static public static function getByAddress(host : String, addr : java.NativeArray<java.StdTypes.Int8>, nif : java.net.NetworkInterface) : java.net.Inet6Address;
 	
 	/**
 	* Create an Inet6Address in the exact manner of {@link InetAddress#getByAddress(String,byte[])}
@@ -60,7 +60,7 @@ extern class Inet6Address extends java.net.InetAddress
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getByAddress(host : String, addr : java.NativeArray<java.StdTypes.Int8>, scope_id : Int) : java.net.Inet6Address;
+	@:require(java5) @:overload @:public @:static public static function getByAddress(host : String, addr : java.NativeArray<java.StdTypes.Int8>, scope_id : Int) : java.net.Inet6Address;
 	
 	/**
 	* Utility routine to check if the InetAddress is an IP multicast
@@ -71,7 +71,7 @@ extern class Inet6Address extends java.net.InetAddress
 	* an IP multicast address
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload override public function isMulticastAddress() : Bool;
+	@:require(java1) @:overload @:public override public function isMulticastAddress() : Bool;
 	
 	/**
 	* Utility routine to check if the InetAddress in a wildcard address.
@@ -79,7 +79,7 @@ extern class Inet6Address extends java.net.InetAddress
 	*         a wildcard address.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function isAnyLocalAddress() : Bool;
+	@:require(java4) @:overload @:public override public function isAnyLocalAddress() : Bool;
 	
 	/**
 	* Utility routine to check if the InetAddress is a loopback address.
@@ -88,7 +88,7 @@ extern class Inet6Address extends java.net.InetAddress
 	* a loopback address; or false otherwise.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function isLoopbackAddress() : Bool;
+	@:require(java4) @:overload @:public override public function isLoopbackAddress() : Bool;
 	
 	/**
 	* Utility routine to check if the InetAddress is an link local address.
@@ -97,7 +97,7 @@ extern class Inet6Address extends java.net.InetAddress
 	* a link local address; or false if address is not a link local unicast address.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function isLinkLocalAddress() : Bool;
+	@:require(java4) @:overload @:public override public function isLinkLocalAddress() : Bool;
 	
 	/**
 	* Utility routine to check if the InetAddress is a site local address.
@@ -106,7 +106,7 @@ extern class Inet6Address extends java.net.InetAddress
 	* a site local address; or false if address is not a site local unicast address.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function isSiteLocalAddress() : Bool;
+	@:require(java4) @:overload @:public override public function isSiteLocalAddress() : Bool;
 	
 	/**
 	* Utility routine to check if the multicast address has global scope.
@@ -116,7 +116,7 @@ extern class Inet6Address extends java.net.InetAddress
 	*         of global scope or it is not a multicast address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function isMCGlobal() : Bool;
+	@:require(java4) @:overload @:public override public function isMCGlobal() : Bool;
 	
 	/**
 	* Utility routine to check if the multicast address has node scope.
@@ -126,7 +126,7 @@ extern class Inet6Address extends java.net.InetAddress
 	*         of node-local scope or it is not a multicast address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function isMCNodeLocal() : Bool;
+	@:require(java4) @:overload @:public override public function isMCNodeLocal() : Bool;
 	
 	/**
 	* Utility routine to check if the multicast address has link scope.
@@ -136,7 +136,7 @@ extern class Inet6Address extends java.net.InetAddress
 	*         of link-local scope or it is not a multicast address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function isMCLinkLocal() : Bool;
+	@:require(java4) @:overload @:public override public function isMCLinkLocal() : Bool;
 	
 	/**
 	* Utility routine to check if the multicast address has site scope.
@@ -146,7 +146,7 @@ extern class Inet6Address extends java.net.InetAddress
 	*         of site-local scope or it is not a multicast address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function isMCSiteLocal() : Bool;
+	@:require(java4) @:overload @:public override public function isMCSiteLocal() : Bool;
 	
 	/**
 	* Utility routine to check if the multicast address has organization scope.
@@ -157,7 +157,7 @@ extern class Inet6Address extends java.net.InetAddress
 	*         or it is not a multicast address
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function isMCOrgLocal() : Bool;
+	@:require(java4) @:overload @:public override public function isMCOrgLocal() : Bool;
 	
 	/**
 	* Returns the raw IP address of this <code>InetAddress</code>
@@ -166,7 +166,7 @@ extern class Inet6Address extends java.net.InetAddress
 	*
 	* @return  the raw IP address of this object.
 	*/
-	@:overload override public function getAddress() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getAddress() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the numeric scopeId, if this instance is associated with
@@ -175,7 +175,7 @@ extern class Inet6Address extends java.net.InetAddress
 	* @return the scopeId, or zero if not set.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getScopeId() : Int;
+	@:require(java5) @:overload @:public public function getScopeId() : Int;
 	
 	/**
 	* Returns the scoped interface, if this instance was created with
@@ -184,7 +184,7 @@ extern class Inet6Address extends java.net.InetAddress
 	* @return the scoped interface, or null if not set.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getScopedInterface() : java.net.NetworkInterface;
+	@:require(java5) @:overload @:public public function getScopedInterface() : java.net.NetworkInterface;
 	
 	/**
 	* Returns the IP address string in textual presentation. If the instance was created
@@ -194,14 +194,14 @@ extern class Inet6Address extends java.net.InetAddress
 	*
 	* @return  the raw IP address in a string format.
 	*/
-	@:overload override public function getHostAddress() : String;
+	@:overload @:public override public function getHostAddress() : String;
 	
 	/**
 	* Returns a hashcode for this IP address.
 	*
 	* @return  a hash code value for this IP address.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Compares this object against the specified object.
@@ -219,7 +219,7 @@ extern class Inet6Address extends java.net.InetAddress
 	*          <code>false</code> otherwise.
 	* @see     java.net.InetAddress#getAddress()
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Utility routine to check if the InetAddress is an
@@ -229,7 +229,7 @@ extern class Inet6Address extends java.net.InetAddress
 	* an IPv4 compatible IPv6 address; or false if address is IPv4 address.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isIPv4CompatibleAddress() : Bool;
+	@:require(java4) @:overload @:public public function isIPv4CompatibleAddress() : Bool;
 	
 	
 }

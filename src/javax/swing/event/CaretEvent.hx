@@ -30,14 +30,14 @@ extern class CaretEvent extends java.util.EventObject
 	*
 	* @param source the object responsible for the event
 	*/
-	@:overload public function new(source : Dynamic) : Void;
+	@:overload @:public public function new(source : Dynamic) : Void;
 	
 	/**
 	* Fetches the location of the caret.
 	*
 	* @return the dot >= 0
 	*/
-	@:overload @:abstract public function getDot() : Int;
+	@:overload @:public @:abstract public function getDot() : Int;
 	
 	/**
 	* Fetches the location of other end of a logical
@@ -46,7 +46,7 @@ extern class CaretEvent extends java.util.EventObject
 	*
 	* @return the mark >= 0
 	*/
-	@:overload @:abstract public function getMark() : Int;
+	@:overload @:public @:abstract public function getMark() : Int;
 	
 	
 }

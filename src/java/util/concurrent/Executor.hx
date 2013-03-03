@@ -134,7 +134,7 @@ package java.util.concurrent;
 	* accepted for execution.
 	* @throws NullPointerException if command is null
 	*/
-	@:overload public function execute(command : java.lang.Runnable) : Void;
+	@:overload @:public public function execute(command : java.lang.Runnable) : Void;
 	
 	
 }

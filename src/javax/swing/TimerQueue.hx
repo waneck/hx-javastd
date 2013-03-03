@@ -28,21 +28,21 @@ package javax.swing;
 	/**
 	* Constructor for TimerQueue.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function sharedInstance() : javax.swing.TimerQueue;
+	@:overload @:public @:static public static function sharedInstance() : javax.swing.TimerQueue;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('javax$swing$TimerQueue$DelayedTimer') @:internal extern class TimerQueue_DelayedTimer implements java.util.concurrent.Delayed
 {
-	@:overload @:final public function getDelay(unit : java.util.concurrent.TimeUnit) : haxe.Int64;
+	@:overload @:final @:public public function getDelay(unit : java.util.concurrent.TimeUnit) : haxe.Int64;
 	
-	@:overload public function compareTo(other : java.util.concurrent.Delayed) : Int;
+	@:overload @:public public function compareTo(other : java.util.concurrent.Delayed) : Int;
 	
 	
 }

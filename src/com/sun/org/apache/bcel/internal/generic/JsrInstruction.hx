@@ -65,7 +65,7 @@ extern class JsrInstruction extends com.sun.org.apache.bcel.internal.generic.Bra
 {
 	/** @return return address type
 	*/
-	@:overload public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/**
 	* Returns an InstructionHandle to the physical successor
@@ -78,11 +78,11 @@ extern class JsrInstruction extends com.sun.org.apache.bcel.internal.generic.Bra
 	* @return an InstructionHandle to the "next" instruction that
 	* will be executed when RETurned from a subroutine.
 	*/
-	@:overload public function physicalSuccessor() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function physicalSuccessor() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/** @return how many words are produced on stack
 	*/
-	@:overload @:public @:public @:public public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public @:public @:public @:public @:public override public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	
 }

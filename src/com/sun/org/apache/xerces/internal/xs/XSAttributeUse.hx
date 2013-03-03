@@ -28,23 +28,23 @@ extern interface XSAttributeUse extends com.sun.org.apache.xerces.internal.xs.XS
 	* requires an appropriate attribute information item to be present, or
 	* merely allows it.
 	*/
-	@:overload public function getRequired() : Bool;
+	@:overload @:public public function getRequired() : Bool;
 	
 	/**
 	* [attribute declaration]: provides the attribute declaration itself,
 	* which will in turn determine the simple type definition used.
 	*/
-	@:overload public function getAttrDeclaration() : com.sun.org.apache.xerces.internal.xs.XSAttributeDeclaration;
+	@:overload @:public public function getAttrDeclaration() : com.sun.org.apache.xerces.internal.xs.XSAttributeDeclaration;
 	
 	/**
 	* Value Constraint: one of default, fixed.
 	*/
-	@:overload public function getConstraintType() : java.StdTypes.Int16;
+	@:overload @:public public function getConstraintType() : java.StdTypes.Int16;
 	
 	/**
 	* Value Constraint: The constraint value, otherwise <code>null</code>.
 	*/
-	@:overload public function getConstraintValue() : String;
+	@:overload @:public public function getConstraintValue() : String;
 	
 	/**
 	* Value Constraint: Binding specific actual constraint value or
@@ -54,7 +54,7 @@ extern interface XSAttributeUse extends com.sun.org.apache.xerces.internal.xs.XS
 	*   NOT_SUPPORTED_ERR: Raised if the implementation does not support this
 	*   method.
 	*/
-	@:overload public function getActualVC() : Dynamic;
+	@:overload @:public public function getActualVC() : Dynamic;
 	
 	/**
 	* The actual constraint value built-in datatype, e.g.
@@ -71,7 +71,7 @@ extern interface XSAttributeUse extends com.sun.org.apache.xerces.internal.xs.XS
 	*   NOT_SUPPORTED_ERR: Raised if the implementation does not support this
 	*   method.
 	*/
-	@:overload public function getActualVCType() : java.StdTypes.Int16;
+	@:overload @:public public function getActualVCType() : java.StdTypes.Int16;
 	
 	/**
 	* In the case the actual constraint value represents a list, i.e. the
@@ -86,12 +86,12 @@ extern interface XSAttributeUse extends com.sun.org.apache.xerces.internal.xs.XS
 	*   NOT_SUPPORTED_ERR: Raised if the implementation does not support this
 	*   method.
 	*/
-	@:overload public function getItemValueTypes() : com.sun.org.apache.xerces.internal.xs.ShortList;
+	@:overload @:public public function getItemValueTypes() : com.sun.org.apache.xerces.internal.xs.ShortList;
 	
 	/**
 	* A sequence of [annotations] or an empty <code>XSObjectList</code>.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	
 }

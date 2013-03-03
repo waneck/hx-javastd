@@ -35,27 +35,27 @@ package com.sun.tools.javadoc;
 	/**
 	* Return the parameter name.
 	*/
-	@:overload public function parameterName() : String;
+	@:overload @:public public function parameterName() : String;
 	
 	/**
 	* Return the parameter comment.
 	*/
-	@:overload public function parameterComment() : String;
+	@:overload @:public public function parameterComment() : String;
 	
 	/**
 	* Return the kind of this tag.
 	*/
-	@:overload override public function kind() : String;
+	@:overload @:public override public function kind() : String;
 	
 	/**
 	* Return true if this ParamTag corresponds to a type parameter.
 	*/
-	@:overload public function isTypeParameter() : Bool;
+	@:overload @:public public function isTypeParameter() : Bool;
 	
 	/**
 	* convert this object to a string.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* For the parameter comment with embedded @link tags return the array of
@@ -65,7 +65,7 @@ package com.sun.tools.javadoc;
 	* @see TagImpl#inlineTagImpls()
 	* @see ThrowsTagImpl#inlineTagImpls()
 	*/
-	@:overload override public function inlineTags() : java.NativeArray<com.sun.javadoc.Tag>;
+	@:overload @:public override public function inlineTags() : java.NativeArray<com.sun.javadoc.Tag>;
 	
 	
 }

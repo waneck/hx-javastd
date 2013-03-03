@@ -28,14 +28,14 @@ extern class ObjectPool implements java.io.Serializable
 	*
 	* @param type Type of objects for this pool
 	*/
-	@:overload public function new(type : Class<Dynamic>) : Void;
+	@:overload @:public public function new(type : Class<Dynamic>) : Void;
 	
 	/**
 	* Constructor ObjectPool
 	*
 	* @param className Fully qualified name of the type of objects for this pool.
 	*/
-	@:overload public function new(className : String) : Void;
+	@:overload @:public public function new(className : String) : Void;
 	
 	/**
 	* Constructor ObjectPool
@@ -44,13 +44,13 @@ extern class ObjectPool implements java.io.Serializable
 	* @param type Type of objects for this pool
 	* @param size Size of vector to allocate
 	*/
-	@:overload public function new(type : Class<Dynamic>, size : Int) : Void;
+	@:overload @:public public function new(type : Class<Dynamic>, size : Int) : Void;
 	
 	/**
 	* Constructor ObjectPool
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Get an instance of the given object in this pool if available
@@ -58,7 +58,7 @@ extern class ObjectPool implements java.io.Serializable
 	*
 	* @return an instance of the given object if available or null
 	*/
-	@:overload @:synchronized public function getInstanceIfFree() : Dynamic;
+	@:overload @:public @:synchronized public function getInstanceIfFree() : Dynamic;
 	
 	/**
 	* Get an instance of the given object in this pool
@@ -66,7 +66,7 @@ extern class ObjectPool implements java.io.Serializable
 	*
 	* @return An instance of the given object
 	*/
-	@:overload @:synchronized public function getInstance() : Dynamic;
+	@:overload @:public @:synchronized public function getInstance() : Dynamic;
 	
 	/**
 	* Add an instance of the given object to the pool
@@ -74,7 +74,7 @@ extern class ObjectPool implements java.io.Serializable
 	*
 	* @param obj Object to add.
 	*/
-	@:overload @:synchronized public function freeInstance(obj : Dynamic) : Void;
+	@:overload @:public @:synchronized public function freeInstance(obj : Dynamic) : Void;
 	
 	
 }

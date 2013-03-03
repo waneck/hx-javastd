@@ -28,11 +28,11 @@ extern interface WrapperInstance
 	/** Produce or recover a target method handle which is behaviorally
 	*  equivalent to the SAM method of this object.
 	*/
-	@:overload public function getWrapperInstanceTarget() : java.lang.invoke.MethodHandle;
+	@:overload @:public public function getWrapperInstanceTarget() : java.lang.invoke.MethodHandle;
 	
 	/** Recover the SAM type for which this object was created.
 	*/
-	@:overload public function getWrapperInstanceType() : Class<Dynamic>;
+	@:overload @:public public function getWrapperInstanceType() : Class<Dynamic>;
 	
 	
 }

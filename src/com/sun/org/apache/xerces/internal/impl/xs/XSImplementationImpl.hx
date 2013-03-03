@@ -21,7 +21,7 @@ package com.sun.org.apache.xerces.internal.impl.xs;
 extern class XSImplementationImpl extends com.sun.org.apache.xerces.internal.dom.CoreDOMImplementationImpl implements com.sun.org.apache.xerces.internal.xs.XSImplementation
 {
 	/** NON-DOM: Obtain and return the single shared object */
-	@:overload public static function getDOMImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload @:public @:static public static function getDOMImplementation() : org.w3c.dom.DOMImplementation;
 	
 	/**
 	* Test if the DOM implementation supports a specific "feature" --
@@ -38,17 +38,17 @@ extern class XSImplementationImpl extends com.sun.org.apache.xerces.internal.dom
 	* @return    true iff this implementation is compatable with the specified
 	* feature and version.
 	*/
-	@:overload override public function hasFeature(feature : String, version : String) : Bool;
+	@:overload @:public override public function hasFeature(feature : String, version : String) : Bool;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.XSImplementation#createXSLoader(com.sun.org.apache.xerces.internal.xs.StringList)
 	*/
-	@:overload public function createXSLoader(versions : com.sun.org.apache.xerces.internal.xs.StringList) : com.sun.org.apache.xerces.internal.xs.XSLoader;
+	@:overload @:public public function createXSLoader(versions : com.sun.org.apache.xerces.internal.xs.StringList) : com.sun.org.apache.xerces.internal.xs.XSLoader;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.XSImplementation#getRecognizedVersions()
 	*/
-	@:overload public function getRecognizedVersions() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getRecognizedVersions() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
 	
 }

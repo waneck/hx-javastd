@@ -79,15 +79,15 @@ extern class Attribute implements java.lang.Cloneable implements com.sun.org.apa
 	* @see     Deprecated
 	* @see     Signature
 */
-	private var name_index : Int;
+	@:protected private var name_index : Int;
 	
-	private var length : Int;
+	@:protected private var length : Int;
 	
-	private var tag : java.StdTypes.Int8;
+	@:protected private var tag : java.StdTypes.Int8;
 	
-	private var constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
+	@:protected private var constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
 	
-	@:overload private function new(tag : java.StdTypes.Int8, name_index : Int, length : Int, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:protected private function new(tag : java.StdTypes.Int8, name_index : Int, length : Int, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -96,7 +96,7 @@ extern class Attribute implements java.lang.Cloneable implements com.sun.org.apa
 	*
 	* @param v Visitor object
 	*/
-	@:overload @:abstract public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public @:abstract public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump attribute to file stream in binary format.
@@ -104,7 +104,7 @@ extern class Attribute implements java.lang.Cloneable implements com.sun.org.apa
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/** Add an Attribute reader capable of parsing (user-defined) attributes
 	* named "name". You should not add readers for the standard attributes
@@ -113,13 +113,13 @@ extern class Attribute implements java.lang.Cloneable implements com.sun.org.apa
 	* @param name the name of the attribute as stored in the class file
 	* @param r the reader object
 	*/
-	@:overload public static function addAttributeReader(name : String, r : com.sun.org.apache.bcel.internal.classfile.AttributeReader) : Void;
+	@:overload @:public @:static public static function addAttributeReader(name : String, r : com.sun.org.apache.bcel.internal.classfile.AttributeReader) : Void;
 	
 	/** Remove attribute reader
 	*
 	* @param name the name of the attribute as stored in the class file
 	*/
-	@:overload public static function removeAttributeReader(name : String) : Void;
+	@:overload @:public @:static public static function removeAttributeReader(name : String) : Void;
 	
 	/* Class method reads one attribute from the input data stream.
 	* This method must not be accessible from the outside.  It is
@@ -133,45 +133,45 @@ extern class Attribute implements java.lang.Cloneable implements com.sun.org.apa
 	* @throws  IOException
 	* @throws  ClassFormatException
 	*/
-	@:overload @:final public static function readAttribute(file : java.io.DataInputStream, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
+	@:overload @:public @:static @:final public static function readAttribute(file : java.io.DataInputStream, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
 	/**
 	* @return Length of attribute field in bytes.
 	*/
-	@:overload @:final public function getLength() : Int;
+	@:overload @:public @:final public function getLength() : Int;
 	
 	/**
 	* @param Attribute length in bytes.
 	*/
-	@:overload @:final public function setLength(length : Int) : Void;
+	@:overload @:public @:final public function setLength(length : Int) : Void;
 	
 	/**
 	* @param name_index of attribute.
 	*/
-	@:overload @:final public function setNameIndex(name_index : Int) : Void;
+	@:overload @:public @:final public function setNameIndex(name_index : Int) : Void;
 	
 	/**
 	* @return Name index in constant pool of attribute name.
 	*/
-	@:overload @:final public function getNameIndex() : Int;
+	@:overload @:public @:final public function getNameIndex() : Int;
 	
 	/**
 	* @return Tag of attribute, i.e., its type. Value may not be altered, thus
 	* there is no setTag() method.
 	*/
-	@:overload @:final public function getTag() : java.StdTypes.Int8;
+	@:overload @:public @:final public function getTag() : java.StdTypes.Int8;
 	
 	/**
 	* @return Constant pool used by this object.
 	* @see ConstantPool
 	*/
-	@:overload @:final public function getConstantPool() : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
+	@:overload @:public @:final public function getConstantPool() : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
 	
 	/**
 	* @param constant_pool Constant pool to be used for this object.
 	* @see ConstantPool
 	*/
-	@:overload @:final public function setConstantPool(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public @:final public function setConstantPool(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Use copy() if you want to have a deep copy(), i.e., with all references
@@ -179,17 +179,17 @@ extern class Attribute implements java.lang.Cloneable implements com.sun.org.apa
 	*
 	* @return shallow copy of this attribute
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* @return deep copy of this attribute
 	*/
-	@:overload @:abstract public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
+	@:overload @:public @:abstract public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
 	/**
 	* @return attribute name.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

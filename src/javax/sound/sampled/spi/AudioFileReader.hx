@@ -43,7 +43,7 @@ extern class AudioFileReader
 	* @see InputStream#markSupported
 	* @see InputStream#mark
 	*/
-	@:overload @:abstract public function getAudioFileFormat(stream : java.io.InputStream) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:public @:abstract public function getAudioFileFormat(stream : java.io.InputStream) : javax.sound.sampled.AudioFileFormat;
 	
 	/**
 	* Obtains the audio file format of the URL provided.  The URL must
@@ -55,7 +55,7 @@ extern class AudioFileReader
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload @:abstract public function getAudioFileFormat(url : java.net.URL) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:public @:abstract public function getAudioFileFormat(url : java.net.URL) : javax.sound.sampled.AudioFileFormat;
 	
 	/**
 	* Obtains the audio file format of the <code>File</code> provided.  The <code>File</code> must
@@ -67,7 +67,7 @@ extern class AudioFileReader
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload @:abstract public function getAudioFileFormat(file : java.io.File) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:public @:abstract public function getAudioFileFormat(file : java.io.File) : javax.sound.sampled.AudioFileFormat;
 	
 	/**
 	* Obtains an audio input stream from the input stream provided.  The stream must
@@ -88,7 +88,7 @@ extern class AudioFileReader
 	* @see InputStream#markSupported
 	* @see InputStream#mark
 	*/
-	@:overload @:abstract public function getAudioInputStream(stream : java.io.InputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public @:abstract public function getAudioInputStream(stream : java.io.InputStream) : javax.sound.sampled.AudioInputStream;
 	
 	/**
 	* Obtains an audio input stream from the URL provided.  The URL must
@@ -101,7 +101,7 @@ extern class AudioFileReader
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload @:abstract public function getAudioInputStream(url : java.net.URL) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public @:abstract public function getAudioInputStream(url : java.net.URL) : javax.sound.sampled.AudioInputStream;
 	
 	/**
 	* Obtains an audio input stream from the <code>File</code> provided.  The <code>File</code> must
@@ -114,7 +114,7 @@ extern class AudioFileReader
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload @:abstract public function getAudioInputStream(file : java.io.File) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public @:abstract public function getAudioInputStream(file : java.io.File) : javax.sound.sampled.AudioInputStream;
 	
 	
 }

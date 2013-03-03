@@ -44,20 +44,20 @@ package java.lang;
 	* The {@code Boolean} object corresponding to the primitive
 	* value {@code true}.
 	*/
-	public static var TRUE(default, null) : Null<Bool>;
+	@:public @:static @:final public static var TRUE(default, null) : Null<Bool>;
 	
 	/**
 	* The {@code Boolean} object corresponding to the primitive
 	* value {@code false}.
 	*/
-	public static var FALSE(default, null) : Null<Bool>;
+	@:public @:static @:final public static var FALSE(default, null) : Null<Bool>;
 	
 	/**
 	* The Class object representing the primitive type boolean.
 	*
 	* @since   JDK1.1
 	*/
-	@:require(java1) public static var TYPE(default, null) : Class<Null<Bool>>;
+	@:require(java1) @:public @:static @:final public static var TYPE(default, null) : Class<Null<Bool>>;
 	
 	/**
 	* Allocates a {@code Boolean} object representing the
@@ -70,7 +70,7 @@ package java.lang;
 	*
 	* @param   value   the value of the {@code Boolean}.
 	*/
-	@:overload public function new(value : Bool) : Void;
+	@:overload @:public public function new(value : Bool) : Void;
 	
 	/**
 	* Allocates a {@code Boolean} object representing the value
@@ -85,7 +85,7 @@ package java.lang;
 	*
 	* @param   s   the string to be converted to a {@code Boolean}.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Parses the string argument as a boolean.  The {@code boolean}
@@ -100,7 +100,7 @@ package java.lang;
 	* @return     the boolean represented by the string argument
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function parseBoolean(s : String) : Bool;
+	@:require(java5) @:overload @:public @:static public static function parseBoolean(s : String) : Bool;
 	
 	/**
 	* Returns the value of this {@code Boolean} object as a boolean
@@ -108,7 +108,7 @@ package java.lang;
 	*
 	* @return  the primitive {@code boolean} value of this object.
 	*/
-	@:overload public function booleanValue() : Bool;
+	@:overload @:public public function booleanValue() : Bool;
 	
 	/**
 	* Returns a {@code Boolean} instance representing the specified
@@ -124,7 +124,7 @@ package java.lang;
 	* @return a {@code Boolean} instance representing {@code b}.
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public static function valueOf(b : Bool) : Null<Bool>;
+	@:require(java4) @:overload @:public @:static public static function valueOf(b : Bool) : Null<Bool>;
 	
 	/**
 	* Returns a {@code Boolean} with a value represented by the
@@ -135,7 +135,7 @@ package java.lang;
 	* @param   s   a string.
 	* @return  the {@code Boolean} value represented by the string.
 	*/
-	@:overload public static function valueOf(s : String) : Null<Bool>;
+	@:overload @:public @:static public static function valueOf(s : String) : Null<Bool>;
 	
 	/**
 	* Returns a {@code String} object representing the specified
@@ -147,7 +147,7 @@ package java.lang;
 	* @return the string representation of the specified {@code boolean}
 	* @since 1.4
 	*/
-	@:require(java4) @:native('toString') @:overload public static function _toString(b : Bool) : String;
+	@:require(java4) @:native('toString') @:overload @:public @:static public static function _toString(b : Bool) : String;
 	
 	/**
 	* Returns a {@code String} object representing this Boolean's
@@ -157,7 +157,7 @@ package java.lang;
 	*
 	* @return  a string representation of this object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hash code for this {@code Boolean} object.
@@ -166,7 +166,7 @@ package java.lang;
 	* {@code true}; returns the integer {@code 1237} if this
 	* object represents {@code false}.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns {@code true} if and only if the argument is not
@@ -177,7 +177,7 @@ package java.lang;
 	* @return  {@code true} if the Boolean objects represent the
 	*          same value; {@code false} otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns {@code true} if and only if the system property
@@ -196,7 +196,7 @@ package java.lang;
 	* @see     java.lang.System#getProperty(java.lang.String)
 	* @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
 	*/
-	@:overload public static function getBoolean(name : String) : Bool;
+	@:overload @:public @:static public static function getBoolean(name : String) : Bool;
 	
 	/**
 	* Compares this {@code Boolean} instance with another.
@@ -210,7 +210,7 @@ package java.lang;
 	* @see     Comparable
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function compareTo(b : Null<Bool>) : Int;
+	@:require(java5) @:overload @:public public function compareTo(b : Null<Bool>) : Int;
 	
 	/**
 	* Compares two {@code boolean} values.
@@ -226,7 +226,7 @@ package java.lang;
 	*         a value greater than {@code 0} if {@code x && !y}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function compare(x : Bool, y : Bool) : Int;
+	@:require(java7) @:overload @:public @:static public static function compare(x : Bool, y : Bool) : Int;
 	
 	
 }

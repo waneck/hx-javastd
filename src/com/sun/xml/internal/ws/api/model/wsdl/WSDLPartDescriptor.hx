@@ -28,12 +28,12 @@ extern interface WSDLPartDescriptor extends com.sun.xml.internal.ws.api.model.ws
 	/**
 	* Gives Qualified name of the XML Schema element or type
 	*/
-	@:overload public function name() : javax.xml.namespace.QName;
+	@:overload @:public public function name() : javax.xml.namespace.QName;
 	
 	/**
 	* Gives whether wsdl:part references a schema type or a global element.
 	*/
-	@:overload public function type() : com.sun.xml.internal.ws.api.model.wsdl.WSDLDescriptorKind;
+	@:overload @:public public function type() : com.sun.xml.internal.ws.api.model.wsdl.WSDLDescriptorKind;
 	
 	
 }

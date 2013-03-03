@@ -30,20 +30,20 @@ extern class JavadocEnter extends com.sun.tools.javac.comp.Enter
 	*  done by javac.
 	*  @author Neal Gafter
 	*/
-	@:overload public static function instance0(context : com.sun.tools.javac.util.Context) : com.sun.tools.javadoc.JavadocEnter;
+	@:overload @:public @:static public static function instance0(context : com.sun.tools.javac.util.Context) : com.sun.tools.javadoc.JavadocEnter;
 	
-	@:overload public static function preRegister(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:public @:static public static function preRegister(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function main(trees : com.sun.tools.javac.util.List<JCCompilationUnit>) : Void;
+	@:overload @:public override public function main(trees : com.sun.tools.javac.util.List<JCCompilationUnit>) : Void;
 	
-	@:overload public function visitTopLevel(tree : JCCompilationUnit) : Void;
+	@:overload @:public public function visitTopLevel(tree : JCCompilationUnit) : Void;
 	
-	@:overload public function visitClassDef(tree : JCClassDecl) : Void;
+	@:overload @:public public function visitClassDef(tree : JCClassDecl) : Void;
 	
 	/** Don't complain about a duplicate class. */
-	@:overload private function duplicateClass(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, c : ClassSymbol) : Void;
+	@:overload @:protected override private function duplicateClass(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, c : ClassSymbol) : Void;
 	
 	
 }

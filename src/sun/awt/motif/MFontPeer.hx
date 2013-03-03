@@ -25,9 +25,9 @@ package sun.awt.motif;
 */
 extern class MFontPeer extends sun.awt.PlatformFont
 {
-	@:overload public function new(name : String, style : Int) : Void;
+	@:overload @:public public function new(name : String, style : Int) : Void;
 	
-	@:overload override private function getMissingGlyphCharacter() : java.StdTypes.Char16;
+	@:overload @:protected override private function getMissingGlyphCharacter() : java.StdTypes.Char16;
 	
 	
 }

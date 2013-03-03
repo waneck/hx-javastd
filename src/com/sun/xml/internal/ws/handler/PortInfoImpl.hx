@@ -33,13 +33,13 @@ extern class PortInfoImpl implements javax.xml.ws.handler.PortInfo
 	* @param portName The QName of the port.
 	* @param serviceName The QName of the service.
 	*/
-	@:overload public function new(bindingId : com.sun.xml.internal.ws.api.BindingID, portName : javax.xml.namespace.QName, serviceName : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(bindingId : com.sun.xml.internal.ws.api.BindingID, portName : javax.xml.namespace.QName, serviceName : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getBindingID() : String;
+	@:overload @:public public function getBindingID() : String;
 	
-	@:overload public function getPortName() : javax.xml.namespace.QName;
+	@:overload @:public public function getPortName() : javax.xml.namespace.QName;
 	
-	@:overload public function getServiceName() : javax.xml.namespace.QName;
+	@:overload @:public public function getServiceName() : javax.xml.namespace.QName;
 	
 	/**
 	* Object.equals is overridden here so that PortInfo objects
@@ -51,13 +51,13 @@ extern class PortInfoImpl implements javax.xml.ws.handler.PortInfo
 	* @return True if they match, and false if they do not or
 	* if the object passed in is not a PortInfo.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Needed so PortInfoImpl can be used as a key in a map. This
 	* method just delegates to the hashCode method of java.lang.String.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

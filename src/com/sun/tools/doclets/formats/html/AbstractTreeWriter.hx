@@ -36,7 +36,7 @@ extern class AbstractTreeWriter extends com.sun.tools.doclets.formats.html.HtmlD
 	/**
 	* The class and interface tree built by using {@link ClassTree}
 	*/
-	private var classtree(default, null) : com.sun.tools.doclets.internal.toolkit.util.ClassTree;
+	@:protected @:final private var classtree(default, null) : com.sun.tools.doclets.internal.toolkit.util.ClassTree;
 	
 	/**
 	* Constructor initilises classtree variable. This constructor will be used
@@ -47,7 +47,7 @@ extern class AbstractTreeWriter extends com.sun.tools.doclets.formats.html.HtmlD
 	* @throws IOException
 	* @throws DocletAbortException
 	*/
-	@:overload private function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
+	@:overload @:protected private function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
 	
 	/**
 	* Create appropriate directory for the package and also initilise the
@@ -64,7 +64,7 @@ extern class AbstractTreeWriter extends com.sun.tools.doclets.formats.html.HtmlD
 	* @throws IOException
 	* @throws DocletAbortException
 	*/
-	@:overload private function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, path : String, filename : String, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree, pkg : com.sun.javadoc.PackageDoc) : Void;
+	@:overload @:protected private function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, path : String, filename : String, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree, pkg : com.sun.javadoc.PackageDoc) : Void;
 	
 	/**
 	* Add each level of the class tree. For each sub-class or
@@ -76,7 +76,7 @@ extern class AbstractTreeWriter extends com.sun.tools.doclets.formats.html.HtmlD
 	* @param isEnum true if we are generating a tree for enums
 	* @param contentTree the content tree to which the level information will be added
 	*/
-	@:overload private function addLevelInfo(parent : com.sun.javadoc.ClassDoc, list : java.util.List<com.sun.javadoc.ClassDoc>, isEnum : Bool, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addLevelInfo(parent : com.sun.javadoc.ClassDoc, list : java.util.List<com.sun.javadoc.ClassDoc>, isEnum : Bool, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the heading for the tree depending upon tree type if it's a
@@ -87,7 +87,7 @@ extern class AbstractTreeWriter extends com.sun.tools.doclets.formats.html.HtmlD
 	* @param heading heading for the tree
 	* @param div the content tree to which the tree will be added
 	*/
-	@:overload private function addTree(list : java.util.List<com.sun.javadoc.ClassDoc>, heading : String, div : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addTree(list : java.util.List<com.sun.javadoc.ClassDoc>, heading : String, div : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add information regarding the classes which this class extends or
@@ -97,7 +97,7 @@ extern class AbstractTreeWriter extends com.sun.tools.doclets.formats.html.HtmlD
 	* @param cd the classdoc under consideration
 	* @param contentTree the content tree to which the information will be added
 	*/
-	@:overload private function addExtendsImplements(parent : com.sun.javadoc.ClassDoc, cd : com.sun.javadoc.ClassDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addExtendsImplements(parent : com.sun.javadoc.ClassDoc, cd : com.sun.javadoc.ClassDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add information about the class kind, if it's a "class" or "interface".
@@ -105,14 +105,14 @@ extern class AbstractTreeWriter extends com.sun.tools.doclets.formats.html.HtmlD
 	* @param cd the class being documented
 	* @param contentTree the content tree to which the information will be added
 	*/
-	@:overload private function addPartialInfo(cd : com.sun.javadoc.ClassDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addPartialInfo(cd : com.sun.javadoc.ClassDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get the tree label for the navigation bar.
 	*
 	* @return a content tree for the tree label
 	*/
-	@:overload private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

@@ -150,12 +150,12 @@ extern class CondVar
 	* <p>[<a href="http://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/concurrent/intro.html"> Introduction to this package. </a>]
 
 	**/
-	private var debug_ : Bool;
+	@:protected private var debug_ : Bool;
 	
 	/** The mutex **/
-	private var mutex_(default, null) : com.sun.corba.se.impl.orbutil.concurrent.Sync;
+	@:protected @:final private var mutex_(default, null) : com.sun.corba.se.impl.orbutil.concurrent.Sync;
 	
-	private var remutex_(default, null) : com.sun.corba.se.impl.orbutil.concurrent.ReentrantMutex;
+	@:protected @:final private var remutex_(default, null) : com.sun.corba.se.impl.orbutil.concurrent.ReentrantMutex;
 	
 	/**
 	* Create a new CondVar that relies on the given mutual
@@ -172,9 +172,9 @@ extern class CondVar
 	* to prevent nested monitor lockouts, this
 	* object should not use any native Java synchronized blocks.
 	**/
-	@:overload public function new(mutex : com.sun.corba.se.impl.orbutil.concurrent.Sync, debug : Bool) : Void;
+	@:overload @:public public function new(mutex : com.sun.corba.se.impl.orbutil.concurrent.Sync, debug : Bool) : Void;
 	
-	@:overload public function new(mutex : com.sun.corba.se.impl.orbutil.concurrent.Sync) : Void;
+	@:overload @:public public function new(mutex : com.sun.corba.se.impl.orbutil.concurrent.Sync) : Void;
 	
 	/**
 	* Wait for notification. This operation at least momentarily
@@ -187,7 +187,7 @@ extern class CondVar
 	* that the currentThread's interruption state stays true, so can
 	* be probed by callers.
 	**/
-	@:overload public function await() : Void;
+	@:overload @:public public function await() : Void;
 	
 	/**
 	* Wait for at most msecs for notification.
@@ -205,17 +205,17 @@ extern class CondVar
 	* @exception InterruptedException if the thread was interrupted
 	* before or during the wait.
 	**/
-	@:overload public function timedwait(msecs : haxe.Int64) : Bool;
+	@:overload @:public public function timedwait(msecs : haxe.Int64) : Bool;
 	
 	/**
 	* Notify a waiting thread.
 	* If one exists, a non-interrupted thread will return
 	* normally (i.e., not via InterruptedException) from await or timedwait.
 	**/
-	@:overload @:synchronized public function signal() : Void;
+	@:overload @:public @:synchronized public function signal() : Void;
 	
 	/** Notify all waiting threads **/
-	@:overload @:synchronized public function broadcast() : Void;
+	@:overload @:public @:synchronized public function broadcast() : Void;
 	
 	
 }

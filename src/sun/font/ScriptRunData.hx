@@ -31,7 +31,7 @@ package sun.font;
 */
 extern class ScriptRunData
 {
-	@:overload @:final public static function getScript(cp : Int) : Int;
+	@:overload @:public @:static @:final public static function getScript(cp : Int) : Int;
 	
 	
 }

@@ -28,12 +28,12 @@ extern class IdentifiableContainerBase extends com.sun.corba.se.impl.ior.Freezab
 	/** Create this class with an empty list of identifiables.
 	* The current implementation uses an ArrayList.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Return an iterator which iterates over all contained Identifiables
 	* with type given by id.
 	*/
-	@:overload public function iteratorById(id : Int) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function iteratorById(id : Int) : java.util.Iterator<Dynamic>;
 	
 	
 }

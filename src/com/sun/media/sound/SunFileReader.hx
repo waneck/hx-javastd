@@ -30,12 +30,12 @@ package com.sun.media.sound;
 	*
 	* @author Jan Borgersen
 	*/
-	private static var bisBufferSize(default, null) : Int;
+	@:protected @:static @:final private static var bisBufferSize(default, null) : Int;
 	
 	/**
 	* Constructs a new SunFileReader object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Obtains the audio file format of the input stream provided.  The stream must
@@ -55,7 +55,7 @@ package com.sun.media.sound;
 	* @see InputStream#markSupported
 	* @see InputStream#mark
 	*/
-	@:overload @:abstract override public function getAudioFileFormat(stream : java.io.InputStream) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:abstract @:public override public function getAudioFileFormat(stream : java.io.InputStream) : javax.sound.sampled.AudioFileFormat;
 	
 	/**
 	* Obtains the audio file format of the URL provided.  The URL must
@@ -67,7 +67,7 @@ package com.sun.media.sound;
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload @:abstract override public function getAudioFileFormat(url : java.net.URL) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:abstract @:public override public function getAudioFileFormat(url : java.net.URL) : javax.sound.sampled.AudioFileFormat;
 	
 	/**
 	* Obtains the audio file format of the File provided.  The File must
@@ -79,7 +79,7 @@ package com.sun.media.sound;
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload @:abstract override public function getAudioFileFormat(file : java.io.File) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:abstract @:public override public function getAudioFileFormat(file : java.io.File) : javax.sound.sampled.AudioFileFormat;
 	
 	/**
 	* Obtains an audio stream from the input stream provided.  The stream must
@@ -100,7 +100,7 @@ package com.sun.media.sound;
 	* @see InputStream#markSupported
 	* @see InputStream#mark
 	*/
-	@:overload @:abstract override public function getAudioInputStream(stream : java.io.InputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:abstract @:public override public function getAudioInputStream(stream : java.io.InputStream) : javax.sound.sampled.AudioInputStream;
 	
 	/**
 	* Obtains an audio stream from the URL provided.  The URL must
@@ -113,7 +113,7 @@ package com.sun.media.sound;
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload @:abstract override public function getAudioInputStream(url : java.net.URL) : javax.sound.sampled.AudioInputStream;
+	@:overload @:abstract @:public override public function getAudioInputStream(url : java.net.URL) : javax.sound.sampled.AudioInputStream;
 	
 	/**
 	* Obtains an audio stream from the File provided.  The File must
@@ -126,7 +126,7 @@ package com.sun.media.sound;
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload @:abstract override public function getAudioInputStream(file : java.io.File) : javax.sound.sampled.AudioInputStream;
+	@:overload @:abstract @:public override public function getAudioInputStream(file : java.io.File) : javax.sound.sampled.AudioInputStream;
 	
 	/**
 	* rllong
@@ -136,7 +136,7 @@ package com.sun.media.sound;
 	* @return 32 bits swapped value.
 	* @exception IOException
 	*/
-	@:overload private function rllong(dis : java.io.DataInputStream) : Int;
+	@:overload @:protected private function rllong(dis : java.io.DataInputStream) : Int;
 	
 	/**
 	* big2little
@@ -144,7 +144,7 @@ package com.sun.media.sound;
 	* @param int
 	* @return 32 bits swapped value
 	*/
-	@:overload private function big2little(i : Int) : Int;
+	@:overload @:protected private function big2little(i : Int) : Int;
 	
 	/**
 	* rlshort
@@ -153,7 +153,7 @@ package com.sun.media.sound;
 	* @return the swapped value.
 	* @exception IOException
 	*/
-	@:overload private function rlshort(dis : java.io.DataInputStream) : java.StdTypes.Int16;
+	@:overload @:protected private function rlshort(dis : java.io.DataInputStream) : java.StdTypes.Int16;
 	
 	/**
 	* big2little
@@ -161,7 +161,7 @@ package com.sun.media.sound;
 	* @param int
 	* @return 16 bits swapped value
 	*/
-	@:overload private function big2littleShort(i : java.StdTypes.Int16) : java.StdTypes.Int16;
+	@:overload @:protected private function big2littleShort(i : java.StdTypes.Int16) : java.StdTypes.Int16;
 	
 	/** Calculates the frame size for PCM frames.
 	* Note that this method is appropriate for non-packed samples.
@@ -170,7 +170,7 @@ package com.sun.media.sound;
 	* @param channels the number of channels
 	* @return the size of a PCM frame in bytes.
 	*/
-	@:overload private static function calculatePCMFrameSize(sampleSizeInBits : Int, channels : Int) : Int;
+	@:overload @:protected @:static private static function calculatePCMFrameSize(sampleSizeInBits : Int, channels : Int) : Int;
 	
 	
 }

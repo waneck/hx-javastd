@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 */
 extern class StructureLoader extends com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader
 {
-	@:overload public function new(beanInfo : com.sun.xml.internal.bind.v2.runtime.ClassBeanInfoImpl<Dynamic>) : Void;
+	@:overload @:public public function new(beanInfo : com.sun.xml.internal.bind.v2.runtime.ClassBeanInfoImpl<Dynamic>) : Void;
 	
 	/**
 	* Completes the initialization.
@@ -34,21 +34,21 @@ extern class StructureLoader extends com.sun.xml.internal.bind.v2.runtime.unmars
 	* To fix the cyclic reference issue, the main part of the initialization needs to be done
 	* after a {@link StructureLoader} is set to {@link ClassBeanInfoImpl#loader}.
 	*/
-	@:overload public function init(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, beanInfo : com.sun.xml.internal.bind.v2.runtime.ClassBeanInfoImpl<Dynamic>, attWildcard : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, java.util.Map<javax.xml.namespace.QName, String>>) : Void;
+	@:overload @:public public function init(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, beanInfo : com.sun.xml.internal.bind.v2.runtime.ClassBeanInfoImpl<Dynamic>, attWildcard : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, java.util.Map<javax.xml.namespace.QName, String>>) : Void;
 	
-	@:overload public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:public override public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload public function childElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, arg : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:public override public function childElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, arg : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload public function getExpectedChildElements() : java.util.Collection<javax.xml.namespace.QName>;
+	@:overload @:public override public function getExpectedChildElements() : java.util.Collection<javax.xml.namespace.QName>;
 	
-	@:overload public function getExpectedAttributes() : java.util.Collection<javax.xml.namespace.QName>;
+	@:overload @:public override public function getExpectedAttributes() : java.util.Collection<javax.xml.namespace.QName>;
 	
-	@:overload public function text(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, text : java.lang.CharSequence) : Void;
+	@:overload @:public override public function text(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, text : java.lang.CharSequence) : Void;
 	
-	@:overload public function leaveElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:public override public function leaveElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload public function getBeanInfo() : com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo<Dynamic>;
+	@:overload @:public public function getBeanInfo() : com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo<Dynamic>;
 	
 	
 }

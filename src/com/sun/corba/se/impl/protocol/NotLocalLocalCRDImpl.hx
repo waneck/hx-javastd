@@ -28,13 +28,13 @@ extern class NotLocalLocalCRDImpl implements com.sun.corba.se.spi.protocol.Local
 	/**
 	* @author Harold Carr
 	*/
-	@:overload public function useLocalInvocation(self : org.omg.CORBA.Object) : Bool;
+	@:overload @:public public function useLocalInvocation(self : org.omg.CORBA.Object) : Bool;
 	
-	@:overload public function is_local(self : org.omg.CORBA.Object) : Bool;
+	@:overload @:public public function is_local(self : org.omg.CORBA.Object) : Bool;
 	
-	@:overload public function servant_preinvoke(self : org.omg.CORBA.Object, operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
+	@:overload @:public public function servant_preinvoke(self : org.omg.CORBA.Object, operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
 	
-	@:overload public function servant_postinvoke(self : org.omg.CORBA.Object, servant : org.omg.CORBA.portable.ServantObject) : Void;
+	@:overload @:public public function servant_postinvoke(self : org.omg.CORBA.Object, servant : org.omg.CORBA.portable.ServantObject) : Void;
 	
 	
 }

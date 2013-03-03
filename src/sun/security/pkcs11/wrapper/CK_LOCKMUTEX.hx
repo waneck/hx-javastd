@@ -59,7 +59,7 @@ extern interface CK_LOCKMUTEX
 	* @param pMutex The mutex (lock) object to lock.
 	* @exception PKCS11Exception
 	*/
-	@:overload public function new(pMutex : Dynamic) : Void;
+	@:overload @:public public function new(pMutex : Dynamic) : Void;
 	
 	
 }

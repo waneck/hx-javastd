@@ -36,14 +36,14 @@ extern interface XMLBufferListener
 	* Will be invoked by XMLEntityReader before it tries to resize,load new data
 	* into current ScannedEntities buffer.
 	*/
-	@:overload public function refresh() : Void;
+	@:overload @:public public function refresh() : Void;
 	
 	/**
 	* receives callbacks from {@link XMLEntityReader } when buffer
 	* is being changed.
 	* @param refreshPosition
 	*/
-	@:overload public function refresh(loadPosition : Int) : Void;
+	@:overload @:public public function refresh(loadPosition : Int) : Void;
 	
 	
 }

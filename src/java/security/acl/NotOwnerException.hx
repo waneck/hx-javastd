@@ -35,7 +35,7 @@ extern class NotOwnerException extends java.lang.Exception
 	/**
 	* Constructs a NotOwnerException.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

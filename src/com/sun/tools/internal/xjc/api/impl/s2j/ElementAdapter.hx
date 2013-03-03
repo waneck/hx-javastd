@@ -42,22 +42,22 @@ package com.sun.tools.internal.xjc.api.impl.s2j;
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	private var core(default, null) : com.sun.tools.internal.xjc.outline.FieldOutline;
+	@:protected @:final private var core(default, null) : com.sun.tools.internal.xjc.outline.FieldOutline;
 	
 	/**
 	* The only one {@link CElementInfo} that can be in the property.
 	*/
-	private var ei(default, null) : com.sun.tools.internal.xjc.model.CElementInfo;
+	@:protected @:final private var ei(default, null) : com.sun.tools.internal.xjc.model.CElementInfo;
 	
-	@:overload public function new(core : com.sun.tools.internal.xjc.outline.FieldOutline, ei : com.sun.tools.internal.xjc.model.CElementInfo) : Void;
+	@:overload @:public public function new(core : com.sun.tools.internal.xjc.outline.FieldOutline, ei : com.sun.tools.internal.xjc.model.CElementInfo) : Void;
 	
-	@:overload public function parent() : com.sun.tools.internal.xjc.outline.ClassOutline;
+	@:overload @:public public function parent() : com.sun.tools.internal.xjc.outline.ClassOutline;
 	
-	@:overload public function getPropertyInfo() : com.sun.tools.internal.xjc.model.CPropertyInfo;
+	@:overload @:public public function getPropertyInfo() : com.sun.tools.internal.xjc.model.CPropertyInfo;
 	
-	@:overload @:final private function outline() : com.sun.tools.internal.xjc.outline.Outline;
+	@:overload @:protected @:final private function outline() : com.sun.tools.internal.xjc.outline.Outline;
 	
-	@:overload @:final private function codeModel() : com.sun.codemodel.internal.JCodeModel;
+	@:overload @:protected @:final private function codeModel() : com.sun.codemodel.internal.JCodeModel;
 	
 	/**
 	* Creates a new {@link FieldAccessor} of this field
@@ -67,7 +67,7 @@ package com.sun.tools.internal.xjc.api.impl.s2j;
 	*      Evaluates to an object, and the field on this object
 	*      will be accessed.
 	*/
-	@:overload public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.outline.FieldAccessor;
+	@:overload @:public public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.outline.FieldAccessor;
 	
 	/**
 	* Gets the type of the "raw value".
@@ -80,26 +80,26 @@ package com.sun.tools.internal.xjc.api.impl.s2j;
 	* This type allows the client of the outline to generate code
 	* to set/get values from a property.
 	*/
-	@:overload public function getRawType() : com.sun.codemodel.internal.JType;
+	@:overload @:public public function getRawType() : com.sun.codemodel.internal.JType;
 	
 	
 }
 @:native('com$sun$tools$internal$xjc$api$impl$s2j$ElementAdapter$FieldAccessorImpl') extern class ElementAdapter_FieldAccessorImpl implements com.sun.tools.internal.xjc.outline.FieldAccessor
 {
-	@:overload public function new(target : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:public public function new(target : com.sun.codemodel.internal.JExpression) : Void;
 	
-	@:overload public function unsetValues(body : com.sun.codemodel.internal.JBlock) : Void;
+	@:overload @:public public function unsetValues(body : com.sun.codemodel.internal.JBlock) : Void;
 	
-	@:overload public function hasSetValue() : com.sun.codemodel.internal.JExpression;
+	@:overload @:public public function hasSetValue() : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public function owner() : com.sun.tools.internal.xjc.outline.FieldOutline;
+	@:overload @:public public function owner() : com.sun.tools.internal.xjc.outline.FieldOutline;
 	
-	@:overload public function getPropertyInfo() : com.sun.tools.internal.xjc.model.CPropertyInfo;
+	@:overload @:public public function getPropertyInfo() : com.sun.tools.internal.xjc.model.CPropertyInfo;
 	
 	/**
 	* Wraps a type value into a {@link JAXBElement}.
 	*/
-	@:overload @:final private function createJAXBElement($var : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JInvocation;
+	@:overload @:protected @:final private function createJAXBElement($var : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JInvocation;
 	
 	/**
 	* Sets the value of the field from the specified expression.
@@ -120,7 +120,7 @@ package com.sun.tools.internal.xjc.api.impl.s2j;
 	*      The expression that evaluates to a value of the type
 	*      {@link FieldOutline#getRawType()}.
 	*/
-	@:overload public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:public public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
 	
 	/**
 	* Dumps everything in this field into the given variable.
@@ -133,7 +133,7 @@ package com.sun.tools.internal.xjc.api.impl.s2j;
 	* @param $var
 	*      Variable whose type is {@link FieldOutline#getRawType()}
 	*/
-	@:overload public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
+	@:overload @:public public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
 	
 	
 }

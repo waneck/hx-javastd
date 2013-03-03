@@ -29,7 +29,7 @@ extern class RemoteServer extends java.rmi.server.RemoteObject
 	* Constructs a <code>RemoteServer</code>.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload private function new() : Void;
+	@:require(java1) @:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs a <code>RemoteServer</code> with the given reference type.
@@ -37,7 +37,7 @@ extern class RemoteServer extends java.rmi.server.RemoteObject
 	* @param ref the remote reference
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload private function new(ref : java.rmi.server.RemoteRef) : Void;
+	@:require(java1) @:overload @:protected private function new(ref : java.rmi.server.RemoteRef) : Void;
 	
 	/**
 	* Returns a string representation of the client host for the
@@ -50,7 +50,7 @@ extern class RemoteServer extends java.rmi.server.RemoteObject
 	*
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public static function getClientHost() : String;
+	@:require(java1) @:overload @:public @:static public static function getClientHost() : String;
 	
 	/**
 	* Log RMI calls to the output stream <code>out</code>. If
@@ -68,7 +68,7 @@ extern class RemoteServer extends java.rmi.server.RemoteObject
 	* @see #getLog
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public static function setLog(out : java.io.OutputStream) : Void;
+	@:require(java1) @:overload @:public @:static public static function setLog(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Returns stream for the RMI call log.
@@ -76,7 +76,7 @@ extern class RemoteServer extends java.rmi.server.RemoteObject
 	* @see #setLog
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public static function getLog() : java.io.PrintStream;
+	@:require(java1) @:overload @:public @:static public static function getLog() : java.io.PrintStream;
 	
 	
 }

@@ -48,7 +48,7 @@ extern interface DocumentCSS extends org.w3c.dom.stylesheets.DocumentStyle
 	* @param pseudoElt  The pseudo-element or <code>null</code> if none.
 	* @return  The override style declaration.
 	*/
-	@:overload public function getOverrideStyle(elt : org.w3c.dom.Element, pseudoElt : String) : org.w3c.dom.css.CSSStyleDeclaration;
+	@:overload @:public public function getOverrideStyle(elt : org.w3c.dom.Element, pseudoElt : String) : org.w3c.dom.css.CSSStyleDeclaration;
 	
 	
 }

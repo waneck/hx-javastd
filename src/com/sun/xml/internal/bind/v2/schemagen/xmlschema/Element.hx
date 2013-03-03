@@ -25,13 +25,13 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface Element extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.Annotated extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexTypeHost extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.FixedOrDefault extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.SimpleTypeHost extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function type(value : javax.xml.namespace.QName) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Element;
+	@:overload @:public public function type(value : javax.xml.namespace.QName) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Element;
 	
-	@:overload public function block(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Element;
+	@:overload @:public public function block(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Element;
 	
-	@:overload public function block(value : java.NativeArray<String>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Element;
+	@:overload @:public public function block(value : java.NativeArray<String>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Element;
 	
-	@:overload public function nillable(value : Bool) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Element;
+	@:overload @:public public function nillable(value : Bool) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Element;
 	
 	
 }

@@ -46,7 +46,7 @@ extern class Helper implements com.sun.tools.corba.se.idl.toJavaPortable.AuxGen
 	/**
 	* Public zero-argument constructor.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Generate the helper class.  Provides general algorithm
@@ -61,148 +61,148 @@ extern class Helper implements com.sun.tools.corba.se.idl.toJavaPortable.AuxGen
 	* 6.) Write class closing: close curly
 	* 7.) Close the print stream
 	**/
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:public public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/**
 	* Initialize variables unique to this generator.
 	**/
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
 	/**
 	* Open the print stream for subsequent output.
 	**/
-	@:overload private function openStream() : Void;
+	@:overload @:protected private function openStream() : Void;
 	
 	/**
 	* Generate the heading, including package, imports, class statements,
 	* and open curly.
 	**/
-	@:overload private function writeHeading() : Void;
+	@:overload @:protected private function writeHeading() : Void;
 	
 	/**
 	* Generate members of this class.
 	**/
-	@:overload private function writeBody() : Void;
+	@:overload @:protected private function writeBody() : Void;
 	
 	/**
 	* Generate members of the Helper interface.
 	**/
-	@:overload private function writeHelperInterface() : Void;
+	@:overload @:protected private function writeHelperInterface() : Void;
 	
 	/**
 	* Generate members of the ValueHelper interface.
 	**/
-	@:overload private function writeValueHelperInterface() : Void;
+	@:overload @:protected private function writeValueHelperInterface() : Void;
 	
 	/**
 	* Generate the closing statements.
 	**/
-	@:overload private function writeClosing() : Void;
+	@:overload @:protected private function writeClosing() : Void;
 	
 	/**
 	* Write the stream to file by closing the print stream.
 	**/
-	@:overload private function closeStream() : Void;
+	@:overload @:protected private function closeStream() : Void;
 	
 	/**
 	* Generate the instance variables.
 	**/
-	@:overload private function writeInstVars() : Void;
+	@:overload @:protected private function writeInstVars() : Void;
 	
 	/**
 	* Generate the constructors.
 	**/
-	@:overload private function writeCtors() : Void;
+	@:overload @:protected private function writeCtors() : Void;
 	
 	/**
 	* Generate the insert method.
 	**/
-	@:overload private function writeInsert() : Void;
+	@:overload @:protected private function writeInsert() : Void;
 	
 	/**
 	* Generate the extract method.
 	**/
-	@:overload private function writeExtract() : Void;
+	@:overload @:protected private function writeExtract() : Void;
 	
 	/**
 	* Generate the typecode variable and type method.
 	**/
-	@:overload private function writeType() : Void;
+	@:overload @:protected private function writeType() : Void;
 	
 	/**
 	* Generate the ID method.
 	**/
-	@:overload private function writeID() : Void;
+	@:overload @:protected private function writeID() : Void;
 	
 	/**
 	* Generate the read method.
 	**/
-	@:overload private function writeRead() : Void;
+	@:overload @:protected private function writeRead() : Void;
 	
 	/**
 	* Generate the write method.
 	**/
-	@:overload private function writeWrite() : Void;
+	@:overload @:protected private function writeWrite() : Void;
 	
 	/**
 	* Generate the narrow method.
 	**/
-	@:overload private function writeNarrow() : Void;
+	@:overload @:protected private function writeNarrow() : Void;
 	
 	/**
 	* Write the narrow() method for a remotable object.
 	**/
-	@:overload private function writeRemoteNarrow() : Void;
+	@:overload @:protected private function writeRemoteNarrow() : Void;
 	
 	/**
 	* Generate the unchecked narrow method.
 	**/
-	@:overload private function writeUncheckedNarrow() : Void;
+	@:overload @:protected private function writeUncheckedNarrow() : Void;
 	
 	/**
 	* Write the unchecked narrow() method for a remotable object.
 	**/
-	@:overload private function writeUncheckedRemoteNarrow() : Void;
+	@:overload @:protected private function writeUncheckedRemoteNarrow() : Void;
 	
 	/**
 	* Generate the GetID method.
 	**/
-	@:overload private function writeGetID() : Void;
+	@:overload @:protected private function writeGetID() : Void;
 	
 	/**
 	* Generate the GetType method.
 	**/
-	@:overload private function writeGetType() : Void;
+	@:overload @:protected private function writeGetType() : Void;
 	
 	/**
 	* Generate the get_class method.
 	**/
-	@:overload private function writeGetClass() : Void;
+	@:overload @:protected private function writeGetClass() : Void;
 	
 	/**
 	* Generate the get_instance method.
 	**/
-	@:overload private function writeGetInstance() : Void;
+	@:overload @:protected private function writeGetInstance() : Void;
 	
 	/**
 	* Generate the GetSafeBaseIds method.
 	**/
-	@:overload private function writeGetSafeBaseIds() : Void;
+	@:overload @:protected private function writeGetSafeBaseIds() : Void;
 	
 	/**
 	* Return the stub name for the interface entry.
 	**/
-	@:overload private function stubName(entry : com.sun.tools.corba.se.idl.InterfaceEntry) : String;
+	@:overload @:protected private function stubName(entry : com.sun.tools.corba.se.idl.InterfaceEntry) : String;
 	
-	private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	private var entry : com.sun.tools.corba.se.idl.SymtabEntry;
+	@:protected private var entry : com.sun.tools.corba.se.idl.SymtabEntry;
 	
-	private var stream : com.sun.tools.corba.se.idl.GenFileStream;
+	@:protected private var stream : com.sun.tools.corba.se.idl.GenFileStream;
 	
-	private var helperClass : String;
+	@:protected private var helperClass : String;
 	
-	private var helperType : String;
+	@:protected private var helperType : String;
 	
 	
 }

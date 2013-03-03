@@ -36,7 +36,7 @@ extern interface UNSUPPORTED_POLICY_VALUE
 	/**
 	*  The Error code for PolicyError exception.
 	*/
-	public var value(default, null) : java.StdTypes.Int16;
+	@:final public var value(default, null) : java.StdTypes.Int16;
 	
 	
 }

@@ -40,13 +40,13 @@ extern class GenericURLContext implements javax.naming.Context
 	* @author Scott Seligman
 	* @author Rosanna Lee
 	*/
-	private var myEnv : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var myEnv : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	@:overload public function new(env : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(env : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function getNameInNamespace() : String;
+	@:overload @:public public function getNameInNamespace() : String;
 	
 	/**
 	* Resolves 'name' into a target context with remaining name.
@@ -59,7 +59,7 @@ extern class GenericURLContext implements javax.naming.Context
 	* getRootURLContext(), getURLPrefix(), and getURLSuffix()
 	* must be in sync wrt how URLs are parsed and returned.
 	*/
-	@:overload @:abstract private function getRootURLContext(url : String, env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.spi.ResolveResult;
+	@:overload @:abstract @:protected private function getRootURLContext(url : String, env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.spi.ResolveResult;
 	
 	/**
 	* Returns the suffix of the url. The result should be identical to
@@ -96,7 +96,7 @@ extern class GenericURLContext implements javax.naming.Context
 	* foo:/rest/of/name                       rest/of/name
 	* foo:rest/of/name                        rest/of/name
 	*/
-	@:overload private function getURLSuffix(prefix : String, url : String) : javax.naming.Name;
+	@:overload @:protected private function getURLSuffix(prefix : String, url : String) : javax.naming.Name;
 	
 	/**
 	* Finds the prefix of a URL.
@@ -115,7 +115,7 @@ extern class GenericURLContext implements javax.naming.Context
 	* foo:/rest/of/name                       foo:
 	* foo:rest/of/name                        foo:
 	*/
-	@:overload private function getURLPrefix(url : String) : String;
+	@:overload @:protected private function getURLPrefix(url : String) : String;
 	
 	/**
 	* Determines whether two URLs are the same.
@@ -123,7 +123,7 @@ extern class GenericURLContext implements javax.naming.Context
 	* Subclass should override if this is not appropriate.
 	* This method is used by rename().
 	*/
-	@:overload private function urlEquals(url1 : String, url2 : String) : Bool;
+	@:overload @:protected private function urlEquals(url1 : String, url2 : String) : Bool;
 	
 	/**
 	* Gets the context in which to continue the operation. This method
@@ -133,61 +133,61 @@ extern class GenericURLContext implements javax.naming.Context
 	* NamingManager.getContinuationContext() to get the target context in
 	* which to operate on the remainder of the name (n.getSuffix(1)).
 	*/
-	@:overload private function getContinuationContext(n : javax.naming.Name) : javax.naming.Context;
+	@:overload @:protected private function getContinuationContext(n : javax.naming.Name) : javax.naming.Context;
 	
-	@:overload public function lookup(name : String) : Dynamic;
+	@:overload @:public public function lookup(name : String) : Dynamic;
 	
-	@:overload public function lookup(name : javax.naming.Name) : Dynamic;
+	@:overload @:public public function lookup(name : javax.naming.Name) : Dynamic;
 	
-	@:overload public function bind(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function bind(name : String, obj : Dynamic) : Void;
 	
-	@:overload public function bind(name : javax.naming.Name, obj : Dynamic) : Void;
+	@:overload @:public public function bind(name : javax.naming.Name, obj : Dynamic) : Void;
 	
-	@:overload public function rebind(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function rebind(name : String, obj : Dynamic) : Void;
 	
-	@:overload public function rebind(name : javax.naming.Name, obj : Dynamic) : Void;
+	@:overload @:public public function rebind(name : javax.naming.Name, obj : Dynamic) : Void;
 	
-	@:overload public function unbind(name : String) : Void;
+	@:overload @:public public function unbind(name : String) : Void;
 	
-	@:overload public function unbind(name : javax.naming.Name) : Void;
+	@:overload @:public public function unbind(name : javax.naming.Name) : Void;
 	
-	@:overload public function rename(oldName : String, newName : String) : Void;
+	@:overload @:public public function rename(oldName : String, newName : String) : Void;
 	
-	@:overload public function rename(name : javax.naming.Name, newName : javax.naming.Name) : Void;
+	@:overload @:public public function rename(name : javax.naming.Name, newName : javax.naming.Name) : Void;
 	
-	@:overload public function list(name : String) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
+	@:overload @:public public function list(name : String) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
 	
-	@:overload public function list(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
+	@:overload @:public public function list(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
 	
-	@:overload public function listBindings(name : String) : javax.naming.NamingEnumeration<javax.naming.Binding>;
+	@:overload @:public public function listBindings(name : String) : javax.naming.NamingEnumeration<javax.naming.Binding>;
 	
-	@:overload public function listBindings(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.Binding>;
+	@:overload @:public public function listBindings(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.Binding>;
 	
-	@:overload public function destroySubcontext(name : String) : Void;
+	@:overload @:public public function destroySubcontext(name : String) : Void;
 	
-	@:overload public function destroySubcontext(name : javax.naming.Name) : Void;
+	@:overload @:public public function destroySubcontext(name : javax.naming.Name) : Void;
 	
-	@:overload public function createSubcontext(name : String) : javax.naming.Context;
+	@:overload @:public public function createSubcontext(name : String) : javax.naming.Context;
 	
-	@:overload public function createSubcontext(name : javax.naming.Name) : javax.naming.Context;
+	@:overload @:public public function createSubcontext(name : javax.naming.Name) : javax.naming.Context;
 	
-	@:overload public function lookupLink(name : String) : Dynamic;
+	@:overload @:public public function lookupLink(name : String) : Dynamic;
 	
-	@:overload public function lookupLink(name : javax.naming.Name) : Dynamic;
+	@:overload @:public public function lookupLink(name : javax.naming.Name) : Dynamic;
 	
-	@:overload public function getNameParser(name : String) : javax.naming.NameParser;
+	@:overload @:public public function getNameParser(name : String) : javax.naming.NameParser;
 	
-	@:overload public function getNameParser(name : javax.naming.Name) : javax.naming.NameParser;
+	@:overload @:public public function getNameParser(name : javax.naming.Name) : javax.naming.NameParser;
 	
-	@:overload public function composeName(name : String, prefix : String) : String;
+	@:overload @:public public function composeName(name : String, prefix : String) : String;
 	
-	@:overload public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
 	
-	@:overload public function removeFromEnvironment(propName : String) : Dynamic;
+	@:overload @:public public function removeFromEnvironment(propName : String) : Dynamic;
 	
-	@:overload public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
+	@:overload @:public public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
 	
-	@:overload public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:public public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	
 }

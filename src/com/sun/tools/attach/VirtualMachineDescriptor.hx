@@ -35,7 +35,7 @@ extern class VirtualMachineDescriptor
 	* @throws  NullPointerException
 	*          If any of the arguments are <code>null</code>
 	*/
-	@:overload public function new(provider : com.sun.tools.attach.spi.AttachProvider, id : String, displayName : String) : Void;
+	@:overload @:public public function new(provider : com.sun.tools.attach.spi.AttachProvider, id : String, displayName : String) : Void;
 	
 	/**
 	* Creates a virtual machine descriptor from the given components.
@@ -58,28 +58,28 @@ extern class VirtualMachineDescriptor
 	* @throws  NullPointerException
 	*          If <tt>provider</tt> or <tt>id</tt> is <tt>null</tt>.
 	*/
-	@:overload public function new(provider : com.sun.tools.attach.spi.AttachProvider, id : String) : Void;
+	@:overload @:public public function new(provider : com.sun.tools.attach.spi.AttachProvider, id : String) : Void;
 	
 	/**
 	* Return the <code>AttachProvider</code> that this descriptor references.
 	*
 	* @return The <code>AttachProvider</code> that this descriptor references.
 	*/
-	@:overload public function provider() : com.sun.tools.attach.spi.AttachProvider;
+	@:overload @:public public function provider() : com.sun.tools.attach.spi.AttachProvider;
 	
 	/**
 	* Return the identifier component of this descriptor.
 	*
 	* @return  The identifier component of this descriptor.
 	*/
-	@:overload public function id() : String;
+	@:overload @:public public function id() : String;
 	
 	/**
 	* Return the <i>display name</i> component of this descriptor.
 	*
 	* @return  The display name component of this descriptor.
 	*/
-	@:overload public function displayName() : String;
+	@:overload @:public public function displayName() : String;
 	
 	/**
 	* Returns a hash-code value for this VirtualMachineDescriptor. The hash
@@ -89,7 +89,7 @@ extern class VirtualMachineDescriptor
 	*
 	* @return  A hash-code value for this descriptor.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Tests this VirtualMachineDescriptor for equality with another object.
@@ -108,12 +108,12 @@ extern class VirtualMachineDescriptor
 	*                a VirtualMachineDescriptor that is equal to this
 	*                VirtualMachineDescriptor.
 	*/
-	@:overload public function equals(ob : Dynamic) : Bool;
+	@:overload @:public public function equals(ob : Dynamic) : Bool;
 	
 	/**
 	* Returns the string representation of the <code>VirtualMachineDescriptor</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

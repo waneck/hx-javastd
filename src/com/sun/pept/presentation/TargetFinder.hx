@@ -45,7 +45,7 @@ extern interface TargetFinder
 	* @param x ...
 	* </p>
 	*/
-	@:overload public function findTarget(x : com.sun.pept.ept.MessageInfo) : com.sun.pept.presentation.Tie;
+	@:overload @:public public function findTarget(x : com.sun.pept.ept.MessageInfo) : com.sun.pept.presentation.Tie;
 	
 	
 }

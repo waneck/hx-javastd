@@ -57,7 +57,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @return  the number of components in this list
 	* @see #size()
 	*/
-	@:overload override public function getSize() : Int;
+	@:overload @:public override public function getSize() : Int;
 	
 	/**
 	* Returns the component at the specified index.
@@ -73,7 +73,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	*             list
 	* @see #get(int)
 	*/
-	@:overload override public function getElementAt(index : Int) : E;
+	@:overload @:public override public function getElementAt(index : Int) : E;
 	
 	/**
 	* Copies the components of this list into the specified array.
@@ -83,14 +83,14 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @param   anArray   the array into which the components get copied
 	* @see Vector#copyInto(Object[])
 	*/
-	@:overload public function copyInto(anArray : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function copyInto(anArray : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Trims the capacity of this list to be the list's current size.
 	*
 	* @see Vector#trimToSize()
 	*/
-	@:overload public function trimToSize() : Void;
+	@:overload @:public public function trimToSize() : Void;
 	
 	/**
 	* Increases the capacity of this list, if necessary, to ensure
@@ -100,7 +100,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @param   minCapacity   the desired minimum capacity
 	* @see Vector#ensureCapacity(int)
 	*/
-	@:overload public function ensureCapacity(minCapacity : Int) : Void;
+	@:overload @:public public function ensureCapacity(minCapacity : Int) : Void;
 	
 	/**
 	* Sets the size of this list.
@@ -108,7 +108,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @param   newSize   the new size of this list
 	* @see Vector#setSize(int)
 	*/
-	@:overload public function setSize(newSize : Int) : Void;
+	@:overload @:public public function setSize(newSize : Int) : Void;
 	
 	/**
 	* Returns the current capacity of this list.
@@ -116,7 +116,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @return  the current capacity
 	* @see Vector#capacity()
 	*/
-	@:overload public function capacity() : Int;
+	@:overload @:public public function capacity() : Int;
 	
 	/**
 	* Returns the number of components in this list.
@@ -124,7 +124,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @return  the number of components in this list
 	* @see Vector#size()
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Tests whether this list has any components.
@@ -134,7 +134,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	*          <code>false</code> otherwise
 	* @see Vector#isEmpty()
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Returns an enumeration of the components of this list.
@@ -142,7 +142,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @return  an enumeration of the components of this list
 	* @see Vector#elements()
 	*/
-	@:overload public function elements() : java.util.Enumeration<E>;
+	@:overload @:public public function elements() : java.util.Enumeration<E>;
 	
 	/**
 	* Tests whether the specified object is a component in this list.
@@ -152,7 +152,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	*          is the same as a component in this list
 	* @see Vector#contains(Object)
 	*/
-	@:overload public function contains(elem : Dynamic) : Bool;
+	@:overload @:public public function contains(elem : Dynamic) : Bool;
 	
 	/**
 	* Searches for the first occurrence of <code>elem</code>.
@@ -162,7 +162,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	*          list; returns <code>-1</code> if the object is not found
 	* @see Vector#indexOf(Object)
 	*/
-	@:overload public function indexOf(elem : Dynamic) : Int;
+	@:overload @:public public function indexOf(elem : Dynamic) : Int;
 	
 	/**
 	* Searches for the first occurrence of <code>elem</code>, beginning
@@ -175,7 +175,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	*          if the <code>elem</code> is not found in the list
 	* @see Vector#indexOf(Object,int)
 	*/
-	@:overload public function indexOf(elem : Dynamic, index : Int) : Int;
+	@:overload @:public public function indexOf(elem : Dynamic, index : Int) : Int;
 	
 	/**
 	* Returns the index of the last occurrence of <code>elem</code>.
@@ -185,7 +185,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	*          in the list; returns <code>-1</code> if the object is not found
 	* @see Vector#lastIndexOf(Object)
 	*/
-	@:overload public function lastIndexOf(elem : Dynamic) : Int;
+	@:overload @:public public function lastIndexOf(elem : Dynamic) : Int;
 	
 	/**
 	* Searches backwards for <code>elem</code>, starting from the
@@ -198,7 +198,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	*          returns <code>-1</code> if the object is not found
 	* @see Vector#lastIndexOf(Object,int)
 	*/
-	@:overload public function lastIndexOf(elem : Dynamic, index : Int) : Int;
+	@:overload @:public public function lastIndexOf(elem : Dynamic, index : Int) : Int;
 	
 	/**
 	* Returns the component at the specified index.
@@ -215,7 +215,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @see #get(int)
 	* @see Vector#elementAt(int)
 	*/
-	@:overload public function elementAt(index : Int) : E;
+	@:overload @:public public function elementAt(index : Int) : E;
 	
 	/**
 	* Returns the first component of this list.
@@ -224,7 +224,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @return     the first component of this list
 	* @see Vector#firstElement()
 	*/
-	@:overload public function firstElement() : E;
+	@:overload @:public public function firstElement() : E;
 	
 	/**
 	* Returns the last component of the list.
@@ -234,7 +234,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @return  the last component of the list
 	* @see Vector#lastElement()
 	*/
-	@:overload public function lastElement() : E;
+	@:overload @:public public function lastElement() : E;
 	
 	/**
 	* Sets the component at the specified <code>index</code> of this
@@ -254,7 +254,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @see #set(int,Object)
 	* @see Vector#setElementAt(Object,int)
 	*/
-	@:overload public function setElementAt(element : E, index : Int) : Void;
+	@:overload @:public public function setElementAt(element : E, index : Int) : Void;
 	
 	/**
 	* Deletes the component at the specified index.
@@ -271,7 +271,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @see #remove(int)
 	* @see Vector#removeElementAt(int)
 	*/
-	@:overload public function removeElementAt(index : Int) : Void;
+	@:overload @:public public function removeElementAt(index : Int) : Void;
 	
 	/**
 	* Inserts the specified element as a component in this list at the
@@ -291,7 +291,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @see #add(int,Object)
 	* @see Vector#insertElementAt(Object,int)
 	*/
-	@:overload public function insertElementAt(element : E, index : Int) : Void;
+	@:overload @:public public function insertElementAt(element : E, index : Int) : Void;
 	
 	/**
 	* Adds the specified component to the end of this list.
@@ -299,7 +299,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @param   element   the component to be added
 	* @see Vector#addElement(Object)
 	*/
-	@:overload public function addElement(element : E) : Void;
+	@:overload @:public public function addElement(element : E) : Void;
 	
 	/**
 	* Removes the first (lowest-indexed) occurrence of the argument
@@ -310,7 +310,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	*          list; <code>false</code> otherwise
 	* @see Vector#removeElement(Object)
 	*/
-	@:overload public function removeElement(obj : Dynamic) : Bool;
+	@:overload @:public public function removeElement(obj : Dynamic) : Bool;
 	
 	/**
 	* Removes all components from this list and sets its size to zero.
@@ -323,7 +323,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @see #clear()
 	* @see Vector#removeAllElements()
 	*/
-	@:overload public function removeAllElements() : Void;
+	@:overload @:public public function removeAllElements() : Void;
 	
 	/**
 	* Returns a string that displays and identifies this
@@ -331,7 +331,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	*
 	* @return a String representation of this object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns an array containing all of the elements in this list in the
@@ -340,7 +340,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @return an array containing the elements of the list
 	* @see Vector#toArray()
 	*/
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns the element at the specified position in this list.
@@ -351,7 +351,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	*
 	* @param index index of element to return
 	*/
-	@:overload public function get(index : Int) : E;
+	@:overload @:public public function get(index : Int) : E;
 	
 	/**
 	* Replaces the element at the specified position in this list with the
@@ -365,7 +365,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @param element element to be stored at the specified position
 	* @return the element previously at the specified position
 	*/
-	@:overload public function set(index : Int, element : E) : E;
+	@:overload @:public public function set(index : Int, element : E) : E;
 	
 	/**
 	* Inserts the specified element at the specified position in this list.
@@ -377,7 +377,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @param index index at which the specified element is to be inserted
 	* @param element element to be inserted
 	*/
-	@:overload public function add(index : Int, element : E) : Void;
+	@:overload @:public public function add(index : Int, element : E) : Void;
 	
 	/**
 	* Removes the element at the specified position in this list.
@@ -390,13 +390,13 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @param index the index of the element to removed
 	* @return the element previously at the specified position
 	*/
-	@:overload public function remove(index : Int) : E;
+	@:overload @:public public function remove(index : Int) : E;
 	
 	/**
 	* Removes all of the elements from this list.  The list will
 	* be empty after this call returns (unless it throws an exception).
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Deletes the components at the specified range of indexes.
@@ -413,7 +413,7 @@ extern class DefaultListModel<E> extends javax.swing.AbstractListModel<E>
 	* @param      toIndex   the index of the upper end of the range
 	* @see        #remove(int)
 	*/
-	@:overload public function removeRange(fromIndex : Int, toIndex : Int) : Void;
+	@:overload @:public public function removeRange(fromIndex : Int, toIndex : Int) : Void;
 	
 	
 }

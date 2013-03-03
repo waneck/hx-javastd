@@ -36,13 +36,13 @@ package com.sun.demo.jvmti.hprof;
 */
 extern class Tracker
 {
-	@:overload public static function ObjectInit(obj : Dynamic) : Void;
+	@:overload @:public @:static public static function ObjectInit(obj : Dynamic) : Void;
 	
-	@:overload public static function NewArray(obj : Dynamic) : Void;
+	@:overload @:public @:static public static function NewArray(obj : Dynamic) : Void;
 	
-	@:overload public static function CallSite(cnum : Int, mnum : Int) : Void;
+	@:overload @:public @:static public static function CallSite(cnum : Int, mnum : Int) : Void;
 	
-	@:overload public static function ReturnSite(cnum : Int, mnum : Int) : Void;
+	@:overload @:public @:static public static function ReturnSite(cnum : Int, mnum : Int) : Void;
 	
 	
 }

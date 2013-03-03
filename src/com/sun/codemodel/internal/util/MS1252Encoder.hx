@@ -39,9 +39,9 @@ extern class MS1252Encoder extends com.sun.codemodel.internal.util.SingleByteEnc
 	* This code depends on Sun internal package, so we have to make sure
 	* it won't be executed on other JDKs.
 	*/
-	@:overload public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:public public function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override public function canEncode(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canEncode(c : java.StdTypes.Char16) : Bool;
 	
 	
 }

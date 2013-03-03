@@ -30,14 +30,14 @@ extern interface RelationType extends java.io.Serializable
 	*
 	* @return the relation type name.
 	*/
-	@:overload public function getRelationTypeName() : String;
+	@:overload @:public public function getRelationTypeName() : String;
 	
 	/**
 	* Returns the list of role definitions (ArrayList of RoleInfo objects).
 	*
 	* @return an {@link ArrayList} of {@link RoleInfo}.
 	*/
-	@:overload public function getRoleInfos() : java.util.List<javax.management.relation.RoleInfo>;
+	@:overload @:public public function getRoleInfos() : java.util.List<javax.management.relation.RoleInfo>;
 	
 	/**
 	* Returns the role info (RoleInfo object) for the given role info name
@@ -52,7 +52,7 @@ extern interface RelationType extends java.io.Serializable
 	* @exception RoleInfoNotFoundException  if no role info with that name in
 	* relation type.
 	*/
-	@:overload public function getRoleInfo(roleInfoName : String) : javax.management.relation.RoleInfo;
+	@:overload @:public public function getRoleInfo(roleInfoName : String) : javax.management.relation.RoleInfo;
 	
 	
 }

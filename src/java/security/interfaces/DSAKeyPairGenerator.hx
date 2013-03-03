@@ -76,7 +76,7 @@ extern interface DSAKeyPairGenerator
 	* @exception InvalidParameterException if the <code>params</code>
 	* value is invalid or null.
 	*/
-	@:overload public function initialize(params : java.security.interfaces.DSAParams, random : java.security.SecureRandom) : Void;
+	@:overload @:public public function initialize(params : java.security.interfaces.DSAParams, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes the key pair generator for a given modulus length
@@ -105,7 +105,7 @@ extern interface DSAKeyPairGenerator
 	* there are no precomputed parameters for the requested modulus
 	* length.
 	*/
-	@:overload public function initialize(modlen : Int, genParams : Bool, random : java.security.SecureRandom) : Void;
+	@:overload @:public public function initialize(modlen : Int, genParams : Bool, random : java.security.SecureRandom) : Void;
 	
 	
 }

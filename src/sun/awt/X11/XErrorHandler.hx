@@ -28,7 +28,7 @@ extern class XErrorHandler
 	/*
 	* Called under AWT lock
 	*/
-	@:overload @:abstract public function handleError(display : haxe.Int64, err : sun.awt.X11.XErrorEvent) : Int;
+	@:overload @:public @:abstract public function handleError(display : haxe.Int64, err : sun.awt.X11.XErrorEvent) : Int;
 	
 	
 }
@@ -38,7 +38,7 @@ extern class XErrorHandler
 */
 @:native('sun$awt$X11$XErrorHandler$XBaseErrorHandler') extern class XErrorHandler_XBaseErrorHandler extends sun.awt.X11.XErrorHandler
 {
-	@:overload override public function handleError(display : haxe.Int64, err : sun.awt.X11.XErrorEvent) : Int;
+	@:overload @:public override public function handleError(display : haxe.Int64, err : sun.awt.X11.XErrorEvent) : Int;
 	
 	
 }
@@ -49,17 +49,17 @@ extern class XErrorHandler
 */
 @:native('sun$awt$X11$XErrorHandler$IgnoreBadWindowHandler') extern class XErrorHandler_IgnoreBadWindowHandler extends sun.awt.X11.XErrorHandler.XErrorHandler_XBaseErrorHandler
 {
-	@:overload override public function handleError(display : haxe.Int64, err : sun.awt.X11.XErrorEvent) : Int;
+	@:overload @:public override public function handleError(display : haxe.Int64, err : sun.awt.X11.XErrorEvent) : Int;
 	
-	@:overload public static function getInstance() : sun.awt.X11.XErrorHandler.XErrorHandler_IgnoreBadWindowHandler;
+	@:overload @:public @:static public static function getInstance() : sun.awt.X11.XErrorHandler.XErrorHandler_IgnoreBadWindowHandler;
 	
 	
 }
 @:native('sun$awt$X11$XErrorHandler$VerifyChangePropertyHandler') extern class XErrorHandler_VerifyChangePropertyHandler extends sun.awt.X11.XErrorHandler.XErrorHandler_XBaseErrorHandler
 {
-	@:overload override public function handleError(display : haxe.Int64, err : sun.awt.X11.XErrorEvent) : Int;
+	@:overload @:public override public function handleError(display : haxe.Int64, err : sun.awt.X11.XErrorEvent) : Int;
 	
-	@:overload public static function getInstance() : sun.awt.X11.XErrorHandler.XErrorHandler_VerifyChangePropertyHandler;
+	@:overload @:public @:static public static function getInstance() : sun.awt.X11.XErrorHandler.XErrorHandler_VerifyChangePropertyHandler;
 	
 	
 }

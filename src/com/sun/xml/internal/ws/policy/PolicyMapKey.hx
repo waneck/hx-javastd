@@ -25,19 +25,19 @@ package com.sun.xml.internal.ws.policy;
 */
 extern class PolicyMapKey
 {
-	@:overload public function getOperation() : javax.xml.namespace.QName;
+	@:overload @:public public function getOperation() : javax.xml.namespace.QName;
 	
-	@:overload public function getPort() : javax.xml.namespace.QName;
+	@:overload @:public public function getPort() : javax.xml.namespace.QName;
 	
-	@:overload public function getService() : javax.xml.namespace.QName;
+	@:overload @:public public function getService() : javax.xml.namespace.QName;
 	
-	@:overload public function getFaultMessage() : javax.xml.namespace.QName;
+	@:overload @:public public function getFaultMessage() : javax.xml.namespace.QName;
 	
-	@:overload public function equals(that : Dynamic) : Bool;
+	@:overload @:public public function equals(that : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

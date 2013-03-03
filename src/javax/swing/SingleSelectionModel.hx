@@ -36,7 +36,7 @@ extern interface SingleSelectionModel
 	* @return  the model's selection, or -1 if there is no selection
 	* @see     #setSelectedIndex
 	*/
-	@:overload public function getSelectedIndex() : Int;
+	@:overload @:public public function getSelectedIndex() : Int;
 	
 	/**
 	* Sets the model's selected index to <I>index</I>.
@@ -47,18 +47,18 @@ extern interface SingleSelectionModel
 	* @see   #getSelectedIndex
 	* @see   #addChangeListener
 	*/
-	@:overload public function setSelectedIndex(index : Int) : Void;
+	@:overload @:public public function setSelectedIndex(index : Int) : Void;
 	
 	/**
 	* Clears the selection (to -1).
 	*/
-	@:overload public function clearSelection() : Void;
+	@:overload @:public public function clearSelection() : Void;
 	
 	/**
 	* Returns true if the selection model currently has a selected value.
 	* @return true if a value is currently selected
 	*/
-	@:overload public function isSelected() : Bool;
+	@:overload @:public public function isSelected() : Bool;
 	
 	/**
 	* Adds <I>listener</I> as a listener to changes in the model.

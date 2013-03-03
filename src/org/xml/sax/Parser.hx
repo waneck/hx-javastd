@@ -44,7 +44,7 @@ extern interface Parser
 	* @see org.xml.sax.SAXException
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload @:abstract public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public @:abstract public function setLocale(locale : java.util.Locale) : Void;
 	
 	/**
 	* Allow an application to register a custom entity resolver.
@@ -62,7 +62,7 @@ extern interface Parser
 	* @see EntityResolver
 	* @see HandlerBase
 	*/
-	@:overload @:abstract public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public @:abstract public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
 	
 	/**
 	* Allow an application to register a DTD event handler.
@@ -80,7 +80,7 @@ extern interface Parser
 	* @see DTDHandler
 	* @see HandlerBase
 	*/
-	@:overload @:abstract public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
+	@:overload @:public @:abstract public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
 	
 	/**
 	* Allow an application to register a document event handler.
@@ -98,7 +98,7 @@ extern interface Parser
 	* @see DocumentHandler
 	* @see HandlerBase
 	*/
-	@:overload @:abstract public function setDocumentHandler(handler : org.xml.sax.DocumentHandler) : Void;
+	@:overload @:public @:abstract public function setDocumentHandler(handler : org.xml.sax.DocumentHandler) : Void;
 	
 	/**
 	* Allow an application to register an error event handler.
@@ -117,7 +117,7 @@ extern interface Parser
 	* @see SAXException
 	* @see HandlerBase
 	*/
-	@:overload @:abstract public function setErrorHandler(handler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public @:abstract public function setErrorHandler(handler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Parse an XML document.
@@ -146,7 +146,7 @@ extern interface Parser
 	* @see #setDocumentHandler
 	* @see #setErrorHandler
 	*/
-	@:overload @:abstract public function parse(source : org.xml.sax.InputSource) : Void;
+	@:overload @:public @:abstract public function parse(source : org.xml.sax.InputSource) : Void;
 	
 	/**
 	* Parse an XML document from a system identifier (URI).
@@ -170,7 +170,7 @@ extern interface Parser
 	*            supplied by the application.
 	* @see #parse(org.xml.sax.InputSource)
 	*/
-	@:overload @:abstract public function parse(systemId : String) : Void;
+	@:overload @:public @:abstract public function parse(systemId : String) : Void;
 	
 	
 }

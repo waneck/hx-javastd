@@ -35,7 +35,7 @@ extern class Request
 	* The main task of the Request object is to be exectuted from a request
 	* queue.
 	*/
-	@:overload @:abstract public function execute() : Void;
+	@:overload @:abstract @:public public function execute() : Void;
 	
 	
 }

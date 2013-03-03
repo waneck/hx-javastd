@@ -34,7 +34,7 @@ extern class WrappedRuntimeException extends java.lang.RuntimeException
 	*
 	* @param e Primary checked exception
 	*/
-	@:overload public function new(e : java.lang.Exception) : Void;
+	@:overload @:public public function new(e : java.lang.Exception) : Void;
 	
 	/**
 	* Constructor WrappedRuntimeException
@@ -43,14 +43,14 @@ extern class WrappedRuntimeException extends java.lang.RuntimeException
 	* @param msg Exception information.
 	* @param e Primary checked exception
 	*/
-	@:overload public function new(msg : String, e : java.lang.Exception) : Void;
+	@:overload @:public public function new(msg : String, e : java.lang.Exception) : Void;
 	
 	/**
 	* Get the checked exception that this runtime exception wraps.
 	*
 	* @return The primary checked exception
 	*/
-	@:overload public function getException() : java.lang.Exception;
+	@:overload @:public public function getException() : java.lang.Exception;
 	
 	
 }

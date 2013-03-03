@@ -31,7 +31,7 @@ extern class AccumulativeRunnable<T> implements java.lang.Runnable
 	*
 	* @param args accumulated argumets to process.
 	*/
-	@:overload @:abstract private function run(args : java.util.List<T>) : Void;
+	@:overload @:protected @:abstract private function run(args : java.util.List<T>) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -40,7 +40,7 @@ extern class AccumulativeRunnable<T> implements java.lang.Runnable
 	* This implementation calls {@code run(List<T> args)} mehtod
 	* with the list of accumulated arguments.
 	*/
-	@:overload @:final public function run() : Void;
+	@:overload @:public @:final public function run() : Void;
 	
 	/**
 	* appends arguments and sends this {@cod Runnable} for the
@@ -50,7 +50,7 @@ extern class AccumulativeRunnable<T> implements java.lang.Runnable
 	* {@code Runnable} for execution.
 	* @param args the arguments to accumulate
 	*/
-	@:overload @:final @:synchronized public function add(args : java.NativeArray<T>) : Void;
+	@:overload @:public @:final @:synchronized public function add(args : java.NativeArray<T>) : Void;
 	
 	/**
 	* Sends this {@code Runnable} for the execution
@@ -61,7 +61,7 @@ extern class AccumulativeRunnable<T> implements java.lang.Runnable
 	* <p>
 	* This implementation uses {@code SwingWorker.invokeLater}.
 	*/
-	@:overload private function submit() : Void;
+	@:overload @:protected private function submit() : Void;
 	
 	
 }

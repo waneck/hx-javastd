@@ -25,9 +25,9 @@ package com.sun.jmx.mbeanserver;
 */
 @:internal extern class WeakIdentityHashMap<K, V>
 {
-	@:overload public function put(key : K, value : V) : V;
+	@:overload @:public public function put(key : K, value : V) : V;
 	
-	@:overload public function remove(key : K) : V;
+	@:overload @:public public function remove(key : K) : V;
 	
 	
 }
@@ -41,9 +41,9 @@ package com.sun.jmx.mbeanserver;
 */
 @:native('com$sun$jmx$mbeanserver$WeakIdentityHashMap$IdentityWeakReference') @:internal extern class WeakIdentityHashMap_IdentityWeakReference<T> extends java.lang.ref.WeakReference<T>
 {
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

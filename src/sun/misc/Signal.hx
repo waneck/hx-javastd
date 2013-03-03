@@ -26,7 +26,7 @@ package sun.misc;
 extern class Signal
 {
 	/* Returns the signal number */
-	@:overload public function getNumber() : Int;
+	@:overload @:public public function getNumber() : Int;
 	
 	/**
 	* Returns the signal name.
@@ -34,7 +34,7 @@ extern class Signal
 	* @return the name of the signal.
 	* @see sun.misc.Signal#Signal(String name)
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Compares the equality of two <code>Signal</code> objects.
@@ -42,14 +42,14 @@ extern class Signal
 	* @param other the object to compare with.
 	* @return whether two <code>Signal</code> objects are equal.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode for this Signal.
 	*
 	* @return  a hash code value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this signal. For example, "SIGINT"
@@ -57,7 +57,7 @@ extern class Signal
 	*
 	* @return a string representation of the signal
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Constructs a signal from its name.
@@ -66,7 +66,7 @@ extern class Signal
 	* @exception IllegalArgumentException unknown signal
 	* @see sun.misc.Signal#getName()
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Registers a signal handler.
@@ -80,7 +80,7 @@ extern class Signal
 	* @see sun.misc.SignalHandler#SIG_DFL
 	* @see sun.misc.SignalHandler#SIG_IGN
 	*/
-	@:overload @:synchronized public static function handle(sig : sun.misc.Signal, handler : sun.misc.SignalHandler) : sun.misc.SignalHandler;
+	@:overload @:public @:static @:synchronized public static function handle(sig : sun.misc.Signal, handler : sun.misc.SignalHandler) : sun.misc.SignalHandler;
 	
 	/**
 	* Raises a signal in the current process.
@@ -88,7 +88,7 @@ extern class Signal
 	* @param sig a signal
 	* @see sun.misc.Signal#handle(Signal sig, SignalHandler handler)
 	*/
-	@:overload public static function raise(sig : sun.misc.Signal) : Void;
+	@:overload @:public @:static public static function raise(sig : sun.misc.Signal) : Void;
 	
 	
 }

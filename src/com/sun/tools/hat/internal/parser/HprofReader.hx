@@ -35,9 +35,9 @@ package com.sun.tools.hat.internal.parser;
 */
 extern class HprofReader extends java.io.Reader implements com.sun.tools.hat.internal.model.ArrayTypeCodes
 {
-	@:overload public function new(fileName : String, _in : com.sun.tools.hat.internal.parser.PositionDataInputStream, dumpNumber : Int, callStack : Bool, debugLevel : Int) : Void;
+	@:overload @:public public function new(fileName : String, _in : com.sun.tools.hat.internal.parser.PositionDataInputStream, dumpNumber : Int, callStack : Bool, debugLevel : Int) : Void;
 	
-	@:overload override public function read() : com.sun.tools.hat.internal.model.Snapshot;
+	@:overload @:public override public function read() : com.sun.tools.hat.internal.model.Snapshot;
 	
 	
 }

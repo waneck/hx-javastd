@@ -57,7 +57,7 @@ extern interface JClassContainer
 	* @exception JClassAlreadyExistsException
 	*      When the specified class/interface was already created.
 	*/
-	@:overload public function _class(name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _class(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Add an interface to this class/package.
@@ -73,7 +73,7 @@ extern interface JClassContainer
 	* @exception JClassAlreadyExistsException
 	*      When the specified class/interface was already created.
 	*/
-	@:overload public function _interface(mods : Int, name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _interface(mods : Int, name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Adds a public interface to this package.
@@ -81,7 +81,7 @@ extern interface JClassContainer
 	* @exception JClassAlreadyExistsException
 	*      When the specified class/interface was already created.
 	*/
-	@:overload public function _interface(name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _interface(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Create a new class or a new interface.
@@ -89,18 +89,18 @@ extern interface JClassContainer
 	* @deprecated
 	*      use {@link #_class(int, String, ClassType)}
 	*/
-	@:overload public function _class(mods : Int, name : String, isInterface : Bool) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _class(mods : Int, name : String, isInterface : Bool) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Creates a new class/enum/interface/annotation.
 	*/
-	@:overload public function _class(mods : Int, name : String, kind : com.sun.codemodel.internal.ClassType) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _class(mods : Int, name : String, kind : com.sun.codemodel.internal.ClassType) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Returns an iterator that walks the nested classes defined in this
 	* class.
 	*/
-	@:overload public function classes() : java.util.Iterator<com.sun.codemodel.internal.JDefinedClass>;
+	@:overload @:public public function classes() : java.util.Iterator<com.sun.codemodel.internal.JDefinedClass>;
 	
 	/**
 	* Parent JClassContainer.
@@ -114,7 +114,7 @@ extern interface JClassContainer
 	* If this is an inner class, this method returns the outer
 	* class.
 	*/
-	@:overload public function parentContainer() : com.sun.codemodel.internal.JClassContainer;
+	@:overload @:public public function parentContainer() : com.sun.codemodel.internal.JClassContainer;
 	
 	/**
 	* Gets the nearest package parent.
@@ -122,12 +122,12 @@ extern interface JClassContainer
 	* <p>
 	* If <tt>this.isPackage()</tt>, then return <tt>this</tt>.
 	*/
-	@:overload public function getPackage() : com.sun.codemodel.internal.JPackage;
+	@:overload @:public public function getPackage() : com.sun.codemodel.internal.JPackage;
 	
 	/**
 	* Get the root code model object.
 	*/
-	@:overload public function owner() : com.sun.codemodel.internal.JCodeModel;
+	@:overload @:public public function owner() : com.sun.codemodel.internal.JCodeModel;
 	
 	/**
 	* Add an annotationType Declaration to this package
@@ -139,7 +139,7 @@ extern interface JClassContainer
 	*      When the specified class/interface was already created.
 
 	*/
-	@:overload public function _annotationTypeDeclaration(name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _annotationTypeDeclaration(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Add a public enum to this package
@@ -151,7 +151,7 @@ extern interface JClassContainer
 	*      When the specified class/interface was already created.
 
 	*/
-	@:overload public function _enum(name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _enum(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	
 }

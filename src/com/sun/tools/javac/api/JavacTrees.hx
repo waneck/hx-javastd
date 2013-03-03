@@ -25,45 +25,45 @@ package com.sun.tools.javac.api;
 */
 extern class JavacTrees extends com.sun.source.util.Trees
 {
-	@:overload public static function instance(task : javax.tools.JavaCompiler.JavaCompiler_CompilationTask) : com.sun.tools.javac.api.JavacTrees;
+	@:overload @:public @:static public static function instance(task : javax.tools.JavaCompiler.JavaCompiler_CompilationTask) : com.sun.tools.javac.api.JavacTrees;
 	
-	@:overload public static function instance(env : javax.annotation.processing.ProcessingEnvironment) : com.sun.tools.javac.api.JavacTrees;
+	@:overload @:public @:static public static function instance(env : javax.annotation.processing.ProcessingEnvironment) : com.sun.tools.javac.api.JavacTrees;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.api.JavacTrees;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.api.JavacTrees;
 	
-	@:overload public function updateContext(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:public public function updateContext(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload override public function getSourcePositions() : com.sun.source.util.SourcePositions;
+	@:overload @:public override public function getSourcePositions() : com.sun.source.util.SourcePositions;
 	
-	@:overload override public function getTree(element : javax.lang.model.element.TypeElement) : JCClassDecl;
+	@:overload @:public override public function getTree(element : javax.lang.model.element.TypeElement) : JCClassDecl;
 	
-	@:overload override public function getTree(method : javax.lang.model.element.ExecutableElement) : JCMethodDecl;
+	@:overload @:public override public function getTree(method : javax.lang.model.element.ExecutableElement) : JCMethodDecl;
 	
-	@:overload override public function getTree(element : javax.lang.model.element.Element) : com.sun.tools.javac.tree.JCTree;
+	@:overload @:public override public function getTree(element : javax.lang.model.element.Element) : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload override public function getTree(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror) : com.sun.tools.javac.tree.JCTree;
+	@:overload @:public override public function getTree(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror) : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload override public function getTree(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror, v : javax.lang.model.element.AnnotationValue) : com.sun.tools.javac.tree.JCTree;
+	@:overload @:public override public function getTree(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror, v : javax.lang.model.element.AnnotationValue) : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload override public function getPath(unit : com.sun.source.tree.CompilationUnitTree, node : com.sun.source.tree.Tree) : com.sun.source.util.TreePath;
+	@:overload @:public override public function getPath(unit : com.sun.source.tree.CompilationUnitTree, node : com.sun.source.tree.Tree) : com.sun.source.util.TreePath;
 	
-	@:overload override public function getPath(e : javax.lang.model.element.Element) : com.sun.source.util.TreePath;
+	@:overload @:public override public function getPath(e : javax.lang.model.element.Element) : com.sun.source.util.TreePath;
 	
-	@:overload override public function getPath(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror) : com.sun.source.util.TreePath;
+	@:overload @:public override public function getPath(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror) : com.sun.source.util.TreePath;
 	
-	@:overload override public function getPath(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror, v : javax.lang.model.element.AnnotationValue) : com.sun.source.util.TreePath;
+	@:overload @:public override public function getPath(e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror, v : javax.lang.model.element.AnnotationValue) : com.sun.source.util.TreePath;
 	
-	@:overload override public function getElement(path : com.sun.source.util.TreePath) : javax.lang.model.element.Element;
+	@:overload @:public override public function getElement(path : com.sun.source.util.TreePath) : javax.lang.model.element.Element;
 	
-	@:overload override public function getTypeMirror(path : com.sun.source.util.TreePath) : javax.lang.model.type.TypeMirror;
+	@:overload @:public override public function getTypeMirror(path : com.sun.source.util.TreePath) : javax.lang.model.type.TypeMirror;
 	
-	@:overload override public function getScope(path : com.sun.source.util.TreePath) : com.sun.tools.javac.api.JavacScope;
+	@:overload @:public override public function getScope(path : com.sun.source.util.TreePath) : com.sun.tools.javac.api.JavacScope;
 	
-	@:overload override public function getDocComment(path : com.sun.source.util.TreePath) : String;
+	@:overload @:public override public function getDocComment(path : com.sun.source.util.TreePath) : String;
 	
-	@:overload override public function isAccessible(scope : com.sun.source.tree.Scope, type : javax.lang.model.element.TypeElement) : Bool;
+	@:overload @:public override public function isAccessible(scope : com.sun.source.tree.Scope, type : javax.lang.model.element.TypeElement) : Bool;
 	
-	@:overload override public function isAccessible(scope : com.sun.source.tree.Scope, member : javax.lang.model.element.Element, type : javax.lang.model.type.DeclaredType) : Bool;
+	@:overload @:public override public function isAccessible(scope : com.sun.source.tree.Scope, member : javax.lang.model.element.Element, type : javax.lang.model.type.DeclaredType) : Bool;
 	
 	/**
 	* Gets the original type from the ErrorType object.
@@ -71,7 +71,7 @@ extern class JavacTrees extends com.sun.source.util.Trees
 	* @returns TypeMirror corresponding to the original type, replaced by the ErrorType.
 	*          noType (type.tag == NONE) is returned if there is no original type.
 	*/
-	@:overload override public function getOriginalType(errorType : javax.lang.model.type.ErrorType) : javax.lang.model.type.TypeMirror;
+	@:overload @:public override public function getOriginalType(errorType : javax.lang.model.type.ErrorType) : javax.lang.model.type.TypeMirror;
 	
 	/**
 	* Prints a message of the specified kind at the location of the
@@ -82,9 +82,9 @@ extern class JavacTrees extends com.sun.source.util.Trees
 	* @param t    the tree to use as a position hint
 	* @param root the compilation unit that contains tree
 	*/
-	@:overload override public function printMessage(kind : javax.tools.Diagnostic.Diagnostic_Kind, msg : java.lang.CharSequence, t : com.sun.source.tree.Tree, root : com.sun.source.tree.CompilationUnitTree) : Void;
+	@:overload @:public override public function printMessage(kind : javax.tools.Diagnostic.Diagnostic_Kind, msg : java.lang.CharSequence, t : com.sun.source.tree.Tree, root : com.sun.source.tree.CompilationUnitTree) : Void;
 	
-	@:overload override public function getLub(tree : com.sun.source.tree.CatchTree) : javax.lang.model.type.TypeMirror;
+	@:overload @:public override public function getLub(tree : com.sun.source.tree.CatchTree) : javax.lang.model.type.TypeMirror;
 	
 	
 }
@@ -93,7 +93,7 @@ extern class JavacTrees extends com.sun.source.util.Trees
 **/
 @:native('com$sun$tools$javac$api$JavacTrees$Copier') @:internal extern class JavacTrees_Copier extends com.sun.tools.javac.tree.TreeCopier<com.sun.tools.javac.tree.JCTree>
 {
-	@:overload public function copy<T : com.sun.tools.javac.tree.JCTree>(t : T, leaf : com.sun.tools.javac.tree.JCTree) : T;
+	@:overload @:public public function copy<T : com.sun.tools.javac.tree.JCTree>(t : T, leaf : com.sun.tools.javac.tree.JCTree) : T;
 	
 	
 }

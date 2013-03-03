@@ -29,29 +29,29 @@ package com.sun.xml.internal.messaging.saaj.soap.ver1_2;
 */
 extern class Header1_2Impl extends com.sun.xml.internal.messaging.saaj.soap.impl.HeaderImpl
 {
-	private static var log(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var log(default, null) : java.util.logging.Logger;
 	
-	@:overload public function new(ownerDocument : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, prefix : String) : Void;
+	@:overload @:public public function new(ownerDocument : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, prefix : String) : Void;
 	
-	@:overload override private function getNotUnderstoodName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected override private function getNotUnderstoodName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload override private function getUpgradeName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected override private function getUpgradeName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload override private function getSupportedEnvelopeName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected override private function getSupportedEnvelopeName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload override public function addNotUnderstoodHeaderElement(sourceName : javax.xml.namespace.QName) : javax.xml.soap.SOAPHeaderElement;
+	@:overload @:public override public function addNotUnderstoodHeaderElement(sourceName : javax.xml.namespace.QName) : javax.xml.soap.SOAPHeaderElement;
 	
-	@:overload override public function addTextNode(text : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function addTextNode(text : String) : javax.xml.soap.SOAPElement;
 	
-	@:overload override private function createHeaderElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPHeaderElement;
+	@:overload @:protected override private function createHeaderElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPHeaderElement;
 	
-	@:overload override private function createHeaderElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPHeaderElement;
+	@:overload @:protected override private function createHeaderElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPHeaderElement;
 	
-	@:overload override public function setEncodingStyle(encodingStyle : String) : Void;
+	@:overload @:public override public function setEncodingStyle(encodingStyle : String) : Void;
 	
-	@:overload override public function addAttribute(name : javax.xml.soap.Name, value : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function addAttribute(name : javax.xml.soap.Name, value : String) : javax.xml.soap.SOAPElement;
 	
-	@:overload override public function addAttribute(name : javax.xml.namespace.QName, value : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function addAttribute(name : javax.xml.namespace.QName, value : String) : javax.xml.soap.SOAPElement;
 	
 	
 }

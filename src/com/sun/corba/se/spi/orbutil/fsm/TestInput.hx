@@ -25,71 +25,71 @@ package com.sun.corba.se.spi.orbutil.fsm;
 */
 @:internal extern class TestInput
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getInput() : com.sun.corba.se.spi.orbutil.fsm.Input;
+	@:overload @:public public function getInput() : com.sun.corba.se.spi.orbutil.fsm.Input;
 	
 	
 }
 @:internal extern class TestAction1 implements com.sun.corba.se.spi.orbutil.fsm.Action
 {
-	@:overload public function doIt(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : Void;
+	@:overload @:public public function doIt(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : Void;
 	
-	@:overload public function new(oldState : com.sun.corba.se.spi.orbutil.fsm.State, label : com.sun.corba.se.spi.orbutil.fsm.Input, newState : com.sun.corba.se.spi.orbutil.fsm.State) : Void;
+	@:overload @:public public function new(oldState : com.sun.corba.se.spi.orbutil.fsm.State, label : com.sun.corba.se.spi.orbutil.fsm.Input, newState : com.sun.corba.se.spi.orbutil.fsm.State) : Void;
 	
 	
 }
 @:internal extern class TestAction2 implements com.sun.corba.se.spi.orbutil.fsm.Action
 {
-	@:overload public function doIt(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : Void;
+	@:overload @:public public function doIt(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : Void;
 	
-	@:overload public function new(oldState : com.sun.corba.se.spi.orbutil.fsm.State, newState : com.sun.corba.se.spi.orbutil.fsm.State) : Void;
+	@:overload @:public public function new(oldState : com.sun.corba.se.spi.orbutil.fsm.State, newState : com.sun.corba.se.spi.orbutil.fsm.State) : Void;
 	
 	
 }
 @:internal extern class TestAction3 implements com.sun.corba.se.spi.orbutil.fsm.Action
 {
-	@:overload public function doIt(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : Void;
+	@:overload @:public public function doIt(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : Void;
 	
-	@:overload public function new(oldState : com.sun.corba.se.spi.orbutil.fsm.State, label : com.sun.corba.se.spi.orbutil.fsm.Input) : Void;
+	@:overload @:public public function new(oldState : com.sun.corba.se.spi.orbutil.fsm.State, label : com.sun.corba.se.spi.orbutil.fsm.Input) : Void;
 	
 	
 }
 @:internal extern class NegateGuard implements com.sun.corba.se.spi.orbutil.fsm.Guard
 {
-	@:overload public function new(guard : com.sun.corba.se.spi.orbutil.fsm.Guard) : Void;
+	@:overload @:public public function new(guard : com.sun.corba.se.spi.orbutil.fsm.Guard) : Void;
 	
-	@:overload public function evaluate(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : com.sun.corba.se.spi.orbutil.fsm.Guard.Guard_Result;
+	@:overload @:public public function evaluate(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : com.sun.corba.se.spi.orbutil.fsm.Guard.Guard_Result;
 	
 	
 }
 @:internal extern class MyFSM extends com.sun.corba.se.spi.orbutil.fsm.FSMImpl
 {
-	@:overload public function new(se : com.sun.corba.se.spi.orbutil.fsm.StateEngine) : Void;
+	@:overload @:public public function new(se : com.sun.corba.se.spi.orbutil.fsm.StateEngine) : Void;
 	
-	public var counter : Int;
+	@:public public var counter : Int;
 	
 	
 }
 extern class FSMTest
 {
-	public static var STATE1(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
+	@:public @:static @:final public static var STATE1(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
 	
-	public static var STATE2(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
+	@:public @:static @:final public static var STATE2(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
 	
-	public static var STATE3(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
+	@:public @:static @:final public static var STATE3(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
 	
-	public static var STATE4(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
+	@:public @:static @:final public static var STATE4(default, null) : com.sun.corba.se.spi.orbutil.fsm.State;
 	
-	public static var INPUT1(default, null) : com.sun.corba.se.spi.orbutil.fsm.Input;
+	@:public @:static @:final public static var INPUT1(default, null) : com.sun.corba.se.spi.orbutil.fsm.Input;
 	
-	public static var INPUT2(default, null) : com.sun.corba.se.spi.orbutil.fsm.Input;
+	@:public @:static @:final public static var INPUT2(default, null) : com.sun.corba.se.spi.orbutil.fsm.Input;
 	
-	public static var INPUT3(default, null) : com.sun.corba.se.spi.orbutil.fsm.Input;
+	@:public @:static @:final public static var INPUT3(default, null) : com.sun.corba.se.spi.orbutil.fsm.Input;
 	
-	public static var INPUT4(default, null) : com.sun.corba.se.spi.orbutil.fsm.Input;
+	@:public @:static @:final public static var INPUT4(default, null) : com.sun.corba.se.spi.orbutil.fsm.Input;
 	
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

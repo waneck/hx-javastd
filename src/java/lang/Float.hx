@@ -30,21 +30,21 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* {@code float}. It is equal to the value returned by
 	* {@code Float.intBitsToFloat(0x7f800000)}.
 	*/
-	public static var POSITIVE_INFINITY(default, null) : Single;
+	@:public @:static @:final public static var POSITIVE_INFINITY(default, null) : Single;
 	
 	/**
 	* A constant holding the negative infinity of type
 	* {@code float}. It is equal to the value returned by
 	* {@code Float.intBitsToFloat(0xff800000)}.
 	*/
-	public static var NEGATIVE_INFINITY(default, null) : Single;
+	@:public @:static @:final public static var NEGATIVE_INFINITY(default, null) : Single;
 	
 	/**
 	* A constant holding a Not-a-Number (NaN) value of type
 	* {@code float}.  It is equivalent to the value returned by
 	* {@code Float.intBitsToFloat(0x7fc00000)}.
 	*/
-	public static var NaN(default, null) : Single;
+	@:public @:static @:final public static var NaN(default, null) : Single;
 	
 	/**
 	* A constant holding the largest positive finite value of type
@@ -53,7 +53,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* {@code 0x1.fffffeP+127f} and also equal to
 	* {@code Float.intBitsToFloat(0x7f7fffff)}.
 	*/
-	public static var MAX_VALUE(default, null) : Single;
+	@:public @:static @:final public static var MAX_VALUE(default, null) : Single;
 	
 	/**
 	* A constant holding the smallest positive normal value of type
@@ -63,7 +63,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var MIN_NORMAL(default, null) : Single;
+	@:require(java6) @:public @:static @:final public static var MIN_NORMAL(default, null) : Single;
 	
 	/**
 	* A constant holding the smallest positive nonzero value of type
@@ -71,7 +71,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* hexadecimal floating-point literal {@code 0x0.000002P-126f}
 	* and also equal to {@code Float.intBitsToFloat(0x1)}.
 	*/
-	public static var MIN_VALUE(default, null) : Single;
+	@:public @:static @:final public static var MIN_VALUE(default, null) : Single;
 	
 	/**
 	* Maximum exponent a finite {@code float} variable may have.  It
@@ -80,7 +80,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var MAX_EXPONENT(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var MAX_EXPONENT(default, null) : Int;
 	
 	/**
 	* Minimum exponent a normalized {@code float} variable may have.
@@ -89,14 +89,14 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var MIN_EXPONENT(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var MIN_EXPONENT(default, null) : Int;
 	
 	/**
 	* The number of bits used to represent a {@code float} value.
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var SIZE(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var SIZE(default, null) : Int;
 	
 	/**
 	* The {@code Class} instance representing the primitive type
@@ -104,7 +104,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) public static var TYPE(default, null) : Class<java.lang.Float>;
+	@:require(java1) @:public @:static @:final public static var TYPE(default, null) : Class<java.lang.Float>;
 	
 	/**
 	* Returns a string representation of the {@code float}
@@ -172,7 +172,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* @param   f   the float to be converted.
 	* @return a string representation of the argument.
 	*/
-	@:native('toString') @:overload public static function _toString(f : Single) : String;
+	@:native('toString') @:overload @:public @:static public static function _toString(f : Single) : String;
 	
 	/**
 	* Returns a hexadecimal string representation of the
@@ -248,7 +248,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* @since 1.5
 	* @author Joseph D. Darcy
 	*/
-	@:require(java5) @:overload public static function toHexString(f : Single) : String;
+	@:require(java5) @:overload @:public @:static public static function toHexString(f : Single) : String;
 	
 	/**
 	* Returns a {@code Float} object holding the
@@ -374,7 +374,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* @throws  NumberFormatException  if the string does not contain a
 	*          parsable number.
 	*/
-	@:overload public static function valueOf(s : String) : java.lang.Float;
+	@:overload @:public @:static public static function valueOf(s : String) : java.lang.Float;
 	
 	/**
 	* Returns a {@code Float} instance representing the specified
@@ -389,7 +389,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* @return a {@code Float} instance representing {@code f}.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public static function valueOf(f : Single) : java.lang.Float;
+	@:require(java5) @:overload @:public @:static public static function valueOf(f : Single) : java.lang.Float;
 	
 	/**
 	* Returns a new {@code float} initialized to the value
@@ -405,7 +405,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* @see    java.lang.Float#valueOf(String)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function parseFloat(s : String) : Single;
+	@:require(java2) @:overload @:public @:static public static function parseFloat(s : String) : Single;
 	
 	/**
 	* Returns {@code true} if the specified number is a
@@ -415,7 +415,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* @return  {@code true} if the argument is NaN;
 	*          {@code false} otherwise.
 	*/
-	@:native('isNaN') @:overload public static function _isNaN(v : Single) : Bool;
+	@:native('isNaN') @:overload @:static @:public public static function _isNaN(v : Single) : Bool;
 	
 	/**
 	* Returns {@code true} if the specified number is infinitely
@@ -425,7 +425,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* @return  {@code true} if the argument is positive infinity or
 	*          negative infinity; {@code false} otherwise.
 	*/
-	@:native('isInfinite') @:overload public static function _isInfinite(v : Single) : Bool;
+	@:native('isInfinite') @:overload @:static @:public public static function _isInfinite(v : Single) : Bool;
 	
 	/**
 	* Constructs a newly allocated {@code Float} object that
@@ -433,7 +433,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	*
 	* @param   value   the value to be represented by the {@code Float}.
 	*/
-	@:overload public function new(value : Single) : Void;
+	@:overload @:public public function new(value : Single) : Void;
 	
 	/**
 	* Constructs a newly allocated {@code Float} object that
@@ -441,7 +441,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	*
 	* @param   value   the value to be represented by the {@code Float}.
 	*/
-	@:overload public function new(value : Float) : Void;
+	@:overload @:public public function new(value : Float) : Void;
 	
 	/**
 	* Constructs a newly allocated {@code Float} object that
@@ -454,7 +454,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	*               parsable number.
 	* @see        java.lang.Float#valueOf(java.lang.String)
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Returns {@code true} if this {@code Float} value is a
@@ -463,7 +463,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* @return  {@code true} if the value represented by this object is
 	*          NaN; {@code false} otherwise.
 	*/
-	@:overload public function isNaN() : Bool;
+	@:overload @:public public function isNaN() : Bool;
 	
 	/**
 	* Returns {@code true} if this {@code Float} value is
@@ -473,7 +473,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	*          positive infinity or negative infinity;
 	*          {@code false} otherwise.
 	*/
-	@:overload public function isInfinite() : Bool;
+	@:overload @:public public function isInfinite() : Bool;
 	
 	/**
 	* Returns a string representation of this {@code Float} object.
@@ -484,7 +484,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* @return  a {@code String} representation of this object.
 	* @see java.lang.Float#toString(float)
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the value of this {@code Float} as a {@code byte} (by
@@ -493,7 +493,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* @return  the {@code float} value represented by this object
 	*          converted to type {@code byte}
 	*/
-	@:overload override public function byteValue() : java.StdTypes.Int8;
+	@:overload @:public override public function byteValue() : java.StdTypes.Int8;
 	
 	/**
 	* Returns the value of this {@code Float} as a {@code short} (by
@@ -503,7 +503,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	*          converted to type {@code short}
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload override public function shortValue() : java.StdTypes.Int16;
+	@:require(java1) @:overload @:public override public function shortValue() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the value of this {@code Float} as an {@code int} (by
@@ -512,7 +512,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* @return  the {@code float} value represented by this object
 	*          converted to type {@code int}
 	*/
-	@:overload override public function intValue() : Int;
+	@:overload @:public override public function intValue() : Int;
 	
 	/**
 	* Returns value of this {@code Float} as a {@code long} (by
@@ -521,14 +521,14 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* @return  the {@code float} value represented by this object
 	*          converted to type {@code long}
 	*/
-	@:overload override public function longValue() : haxe.Int64;
+	@:overload @:public override public function longValue() : haxe.Int64;
 	
 	/**
 	* Returns the {@code float} value of this {@code Float} object.
 	*
 	* @return the {@code float} value represented by this object
 	*/
-	@:overload override public function floatValue() : Single;
+	@:overload @:public override public function floatValue() : Single;
 	
 	/**
 	* Returns the {@code double} value of this {@code Float} object.
@@ -537,7 +537,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	*         object is converted to type {@code double} and the
 	*         result of the conversion is returned.
 	*/
-	@:overload override public function doubleValue() : Float;
+	@:overload @:public override public function doubleValue() : Float;
 	
 	/**
 	* Returns a hash code for this {@code Float} object. The
@@ -548,7 +548,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 
@@ -590,7 +590,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	*          {@code false} otherwise.
 	* @see java.lang.Float#floatToIntBits(float)
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a representation of the specified floating-point value
@@ -623,7 +623,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* @param   value   a floating-point number.
 	* @return the bits that represent the floating-point number.
 	*/
-	@:overload public static function floatToIntBits(value : Single) : Int;
+	@:overload @:public @:static public static function floatToIntBits(value : Single) : Int;
 	
 	/**
 	* Returns a representation of the specified floating-point value
@@ -660,7 +660,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* @return the bits that represent the floating-point number.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:native public static function floatToRawIntBits(value : Single) : Int;
+	@:require(java3) @:overload @:public @:static @:native public static function floatToRawIntBits(value : Single) : Int;
 	
 	/**
 	* Returns the {@code float} value corresponding to a given
@@ -721,7 +721,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* @return  the {@code float} floating-point value with the same bit
 	*          pattern.
 	*/
-	@:overload @:native public static function intBitsToFloat(bits : Int) : Single;
+	@:overload @:public @:static @:native public static function intBitsToFloat(bits : Int) : Single;
 	
 	/**
 	* Compares two {@code Float} objects numerically.  There are
@@ -755,7 +755,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	* @since   1.2
 	* @see Comparable#compareTo(Object)
 	*/
-	@:require(java2) @:overload public function compareTo(anotherFloat : java.lang.Float) : Int;
+	@:require(java2) @:overload @:public public function compareTo(anotherFloat : java.lang.Float) : Int;
 	
 	/**
 	* Compares the two specified {@code float} values. The sign
@@ -775,7 +775,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<java
 	*          {@code f2}.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function compare(f1 : Single, f2 : Single) : Int;
+	@:require(java4) @:overload @:public @:static public static function compare(f1 : Single, f2 : Single) : Int;
 	
 	
 }

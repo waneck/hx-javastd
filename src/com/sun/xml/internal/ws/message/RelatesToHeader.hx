@@ -32,17 +32,17 @@ extern class RelatesToHeader extends com.sun.xml.internal.ws.message.StringHeade
 	*
 	* @author Arun Gupta
 	*/
-	private var type : String;
+	@:protected private var type : String;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, messageId : String, type : String) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, messageId : String, type : String) : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, mid : String) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, mid : String) : Void;
 	
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload override public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload override public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public override public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
 	
 	
 }

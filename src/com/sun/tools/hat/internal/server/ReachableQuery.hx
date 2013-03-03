@@ -34,9 +34,9 @@ package com.sun.tools.hat.internal.server;
 */
 @:internal extern class ReachableQuery extends com.sun.tools.hat.internal.server.QueryHandler
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

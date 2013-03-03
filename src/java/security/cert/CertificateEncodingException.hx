@@ -36,7 +36,7 @@ extern class CertificateEncodingException extends java.security.cert.Certificate
 	* detail message is a String that describes this particular
 	* exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a CertificateEncodingException with the specified detail
@@ -45,7 +45,7 @@ extern class CertificateEncodingException extends java.security.cert.Certificate
 	*
 	* @param message the detail message.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Creates a <code>CertificateEncodingException</code> with the specified
@@ -58,7 +58,7 @@ extern class CertificateEncodingException extends java.security.cert.Certificate
 	*        and indicates that the cause is nonexistent or unknown.)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:require(java5) @:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Creates a <code>CertificateEncodingException</code>
@@ -72,7 +72,7 @@ extern class CertificateEncodingException extends java.security.cert.Certificate
 	*        and indicates that the cause is nonexistent or unknown.)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(cause : java.lang.Throwable) : Void;
+	@:require(java5) @:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

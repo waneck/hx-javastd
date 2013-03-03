@@ -27,13 +27,13 @@ package com.sun.xml.internal.org.jvnet.fastinfoset;
 */
 extern class RestrictedAlphabet
 {
-	public static var NUMERIC_CHARACTERS(default, null) : String;
+	@:public @:static @:final public static var NUMERIC_CHARACTERS(default, null) : String;
 	
-	public static var NUMERIC_CHARACTERS_INDEX(default, null) : Int;
+	@:public @:static @:final public static var NUMERIC_CHARACTERS_INDEX(default, null) : Int;
 	
-	public static var DATE_TIME_CHARACTERS(default, null) : String;
+	@:public @:static @:final public static var DATE_TIME_CHARACTERS(default, null) : String;
 	
-	public static var DATE_TIME_CHARACTERS_INDEX(default, null) : Int;
+	@:public @:static @:final public static var DATE_TIME_CHARACTERS_INDEX(default, null) : Int;
 	
 	
 }

@@ -61,14 +61,14 @@ package org.xml.sax;
 	/**
 	* Create a new SAXException.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a new SAXException.
 	*
 	* @param message The error or warning message.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Create a new SAXException wrapping an existing exception.
@@ -79,7 +79,7 @@ package org.xml.sax;
 	*
 	* @param e The exception to be wrapped in a SAXException.
 	*/
-	@:overload public function new(e : java.lang.Exception) : Void;
+	@:overload @:public public function new(e : java.lang.Exception) : Void;
 	
 	/**
 	* Create a new SAXException from an existing exception.
@@ -90,7 +90,7 @@ package org.xml.sax;
 	* @param message The detail message.
 	* @param e The exception to be wrapped in a SAXException.
 	*/
-	@:overload public function new(message : String, e : java.lang.Exception) : Void;
+	@:overload @:public public function new(message : String, e : java.lang.Exception) : Void;
 	
 	/**
 	* Return a detail message for this exception.
@@ -101,28 +101,28 @@ package org.xml.sax;
 	*
 	* @return The error or warning message.
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	/**
 	* Return the embedded exception, if any.
 	*
 	* @return The embedded exception, or null if there is none.
 	*/
-	@:overload public function getException() : java.lang.Exception;
+	@:overload @:public public function getException() : java.lang.Exception;
 	
 	/**
 	* Return the cause of the exception
 	*
 	* @return Return the cause of the exception
 	*/
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	/**
 	* Override toString to pick up any embedded exception.
 	*
 	* @return A string representation of this exception.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

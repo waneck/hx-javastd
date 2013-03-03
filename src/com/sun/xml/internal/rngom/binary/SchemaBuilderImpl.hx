@@ -46,14 +46,14 @@ package com.sun.xml.internal.rngom.binary;
 */
 extern class SchemaBuilderImpl implements com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic> implements com.sun.xml.internal.rngom.ast.builder.ElementAnnotationBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic> implements com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>
 {
-	@:overload public function expandPattern(_pattern : com.sun.xml.internal.rngom.ast.om.ParsedPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function expandPattern(_pattern : com.sun.xml.internal.rngom.ast.om.ParsedPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
 	/**
 	*
 	* @param eh
 	*        Error handler to receive errors while building the schema.
 	*/
-	@:overload public function new(eh : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function new(eh : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	*
@@ -64,75 +64,75 @@ extern class SchemaBuilderImpl implements com.sun.xml.internal.rngom.ast.builder
 	* @param pb
 	*        Used to build patterns.
 	*/
-	@:overload public function new(eh : org.xml.sax.ErrorHandler, datatypeLibraryFactory : org.relaxng.datatype.DatatypeLibraryFactory, pb : com.sun.xml.internal.rngom.binary.SchemaPatternBuilder) : Void;
+	@:overload @:public public function new(eh : org.xml.sax.ErrorHandler, datatypeLibraryFactory : org.relaxng.datatype.DatatypeLibraryFactory, pb : com.sun.xml.internal.rngom.binary.SchemaPatternBuilder) : Void;
 	
-	@:overload public function getNameClassBuilder() : com.sun.xml.internal.rngom.ast.builder.NameClassBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:overload @:public public function getNameClassBuilder() : com.sun.xml.internal.rngom.ast.builder.NameClassBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	
-	@:overload public function makeChoice(patterns : java.util.List<Dynamic>, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeChoice(patterns : java.util.List<Dynamic>, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeInterleave(patterns : java.util.List<Dynamic>, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeInterleave(patterns : java.util.List<Dynamic>, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeGroup(patterns : java.util.List<Dynamic>, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeGroup(patterns : java.util.List<Dynamic>, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeOneOrMore(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeOneOrMore(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeZeroOrMore(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeZeroOrMore(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeOptional(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeOptional(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeList(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeList(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeMixed(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeMixed(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeEmpty(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeEmpty(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeNotAllowed(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeNotAllowed(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeText(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeText(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeErrorPattern() : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeErrorPattern() : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeAttribute(nc : com.sun.xml.internal.rngom.ast.om.ParsedNameClass, p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeAttribute(nc : com.sun.xml.internal.rngom.ast.om.ParsedNameClass, p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeElement(nc : com.sun.xml.internal.rngom.ast.om.ParsedNameClass, p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeElement(nc : com.sun.xml.internal.rngom.ast.om.ParsedNameClass, p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeDataPatternBuilder(datatypeLibrary : String, type : String, loc : com.sun.xml.internal.rngom.ast.om.Location) : com.sun.xml.internal.rngom.ast.builder.DataPatternBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:overload @:public public function makeDataPatternBuilder(datatypeLibrary : String, type : String, loc : com.sun.xml.internal.rngom.ast.om.Location) : com.sun.xml.internal.rngom.ast.builder.DataPatternBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	
-	@:overload public function makeValue(datatypeLibrary : String, type : String, value : String, context : com.sun.xml.internal.rngom.parse.Context, ns : String, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeValue(datatypeLibrary : String, type : String, value : String, context : com.sun.xml.internal.rngom.parse.Context, ns : String, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeGrammar(parent : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.builder.Grammar<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:overload @:public public function makeGrammar(parent : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.builder.Grammar<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	
-	@:overload public function annotate(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function annotate(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function annotateAfter(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, e : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function annotateAfter(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, e : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function commentAfter(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function commentAfter(p : com.sun.xml.internal.rngom.ast.om.ParsedPattern, comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeExternalRef(current : com.sun.xml.internal.rngom.parse.Parseable, uri : String, ns : String, scope : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeExternalRef(current : com.sun.xml.internal.rngom.parse.Parseable, uri : String, ns : String, scope : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeLocation(systemId : String, lineNumber : Int, columnNumber : Int) : com.sun.xml.internal.rngom.ast.om.Location;
+	@:overload @:public public function makeLocation(systemId : String, lineNumber : Int, columnNumber : Int) : com.sun.xml.internal.rngom.ast.om.Location;
 	
-	@:overload public function makeAnnotations(comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>, context : com.sun.xml.internal.rngom.parse.Context) : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>;
+	@:overload @:public public function makeAnnotations(comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>, context : com.sun.xml.internal.rngom.parse.Context) : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>;
 	
-	@:overload public function makeElementAnnotationBuilder(ns : String, localName : String, prefix : String, loc : com.sun.xml.internal.rngom.ast.om.Location, comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>, context : com.sun.xml.internal.rngom.parse.Context) : com.sun.xml.internal.rngom.ast.builder.ElementAnnotationBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:overload @:public public function makeElementAnnotationBuilder(ns : String, localName : String, prefix : String, loc : com.sun.xml.internal.rngom.ast.om.Location, comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>, context : com.sun.xml.internal.rngom.parse.Context) : com.sun.xml.internal.rngom.ast.builder.ElementAnnotationBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	
-	@:overload public function makeCommentList() : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>;
+	@:overload @:public public function makeCommentList() : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>;
 	
-	@:overload public function addComment(value : String, loc : com.sun.xml.internal.rngom.ast.om.Location) : Void;
+	@:overload @:public public function addComment(value : String, loc : com.sun.xml.internal.rngom.ast.om.Location) : Void;
 	
-	@:overload public function addAttribute(ns : String, localName : String, prefix : String, value : String, loc : com.sun.xml.internal.rngom.ast.om.Location) : Void;
+	@:overload @:public public function addAttribute(ns : String, localName : String, prefix : String, value : String, loc : com.sun.xml.internal.rngom.ast.om.Location) : Void;
 	
-	@:overload public function addElement(ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
+	@:overload @:public public function addElement(ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
 	
-	@:overload public function addComment(comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
+	@:overload @:public public function addComment(comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
 	
-	@:overload public function addLeadingComment(comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
+	@:overload @:public public function addLeadingComment(comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
 	
-	@:overload public function makeElementAnnotation() : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation;
+	@:overload @:public public function makeElementAnnotation() : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation;
 	
-	@:overload public function addText(value : String, loc : com.sun.xml.internal.rngom.ast.om.Location, comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
+	@:overload @:public public function addText(value : String, loc : com.sun.xml.internal.rngom.ast.om.Location, comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
 	
-	@:overload public function usesComments() : Bool;
+	@:overload @:public public function usesComments() : Bool;
 	
 	
 }
@@ -142,63 +142,63 @@ extern class SchemaBuilderImpl implements com.sun.xml.internal.rngom.ast.builder
 }
 @:native('com$sun$xml$internal$rngom$binary$SchemaBuilderImpl$DummyDataPatternBuilder') @:internal extern class SchemaBuilderImpl_DummyDataPatternBuilder implements com.sun.xml.internal.rngom.ast.builder.DataPatternBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>
 {
-	@:overload public function addParam(name : String, value : String, context : com.sun.xml.internal.rngom.parse.Context, ns : String, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload @:public public function addParam(name : String, value : String, context : com.sun.xml.internal.rngom.parse.Context, ns : String, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function makePattern(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makePattern(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makePattern(except : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makePattern(except : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function annotation(ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
+	@:overload @:public public function annotation(ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$rngom$binary$SchemaBuilderImpl$ValidationContextImpl') @:internal extern class SchemaBuilderImpl_ValidationContextImpl implements org.relaxng.datatype.ValidationContext
 {
-	@:overload public function resolveNamespacePrefix(prefix : String) : String;
+	@:overload @:public public function resolveNamespacePrefix(prefix : String) : String;
 	
-	@:overload public function getBaseUri() : String;
+	@:overload @:public public function getBaseUri() : String;
 	
-	@:overload public function isUnparsedEntity(entityName : String) : Bool;
+	@:overload @:public public function isUnparsedEntity(entityName : String) : Bool;
 	
-	@:overload public function isNotation(notationName : String) : Bool;
+	@:overload @:public public function isNotation(notationName : String) : Bool;
 	
 	
 }
 @:native('com$sun$xml$internal$rngom$binary$SchemaBuilderImpl$DataPatternBuilderImpl') @:internal extern class SchemaBuilderImpl_DataPatternBuilderImpl implements com.sun.xml.internal.rngom.ast.builder.DataPatternBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>
 {
-	@:overload public function addParam(name : String, value : String, context : com.sun.xml.internal.rngom.parse.Context, ns : String, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload @:public public function addParam(name : String, value : String, context : com.sun.xml.internal.rngom.parse.Context, ns : String, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function makePattern(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makePattern(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makePattern(except : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makePattern(except : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function annotation(ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
+	@:overload @:public public function annotation(ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$rngom$binary$SchemaBuilderImpl$GrammarImpl') @:internal extern class SchemaBuilderImpl_GrammarImpl implements com.sun.xml.internal.rngom.ast.builder.Grammar<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic> implements com.sun.xml.internal.rngom.ast.builder.Div<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic> implements com.sun.xml.internal.rngom.ast.builder.IncludedGrammar<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>
 {
-	@:overload private function new(sb : com.sun.xml.internal.rngom.binary.SchemaBuilderImpl, g : com.sun.xml.internal.rngom.binary.SchemaBuilderImpl.SchemaBuilderImpl_GrammarImpl) : Void;
+	@:overload @:protected private function new(sb : com.sun.xml.internal.rngom.binary.SchemaBuilderImpl, g : com.sun.xml.internal.rngom.binary.SchemaBuilderImpl.SchemaBuilderImpl_GrammarImpl) : Void;
 	
-	@:overload public function endGrammar(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function endGrammar(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function endDiv(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload @:public public function endDiv(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function endIncludedGrammar(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function endIncludedGrammar(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function define(name : String, combine : com.sun.xml.internal.rngom.ast.builder.GrammarSection.GrammarSection_Combine, pattern : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload @:public public function define(name : String, combine : com.sun.xml.internal.rngom.ast.builder.GrammarSection.GrammarSection_Combine, pattern : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function topLevelAnnotation(ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
+	@:overload @:public public function topLevelAnnotation(ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
 	
-	@:overload public function topLevelComment(comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
+	@:overload @:public public function topLevelComment(comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
 	
-	@:overload public function makeRef(name : String, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeRef(name : String, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeParentRef(name : String, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function makeParentRef(name : String, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function makeDiv() : com.sun.xml.internal.rngom.ast.builder.Div<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:overload @:public public function makeDiv() : com.sun.xml.internal.rngom.ast.builder.Div<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	
-	@:overload public function makeInclude() : com.sun.xml.internal.rngom.ast.builder.Include<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:overload @:public public function makeInclude() : com.sun.xml.internal.rngom.ast.builder.Include<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	
 	
 }
@@ -208,19 +208,19 @@ extern class SchemaBuilderImpl implements com.sun.xml.internal.rngom.ast.builder
 }
 @:native('com$sun$xml$internal$rngom$binary$SchemaBuilderImpl$IncludeImpl') @:internal extern class SchemaBuilderImpl_IncludeImpl implements com.sun.xml.internal.rngom.ast.builder.Include<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic> implements com.sun.xml.internal.rngom.ast.builder.Div<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>
 {
-	@:overload public function define(name : String, combine : com.sun.xml.internal.rngom.ast.builder.GrammarSection.GrammarSection_Combine, pattern : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload @:public public function define(name : String, combine : com.sun.xml.internal.rngom.ast.builder.GrammarSection.GrammarSection_Combine, pattern : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function endDiv(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload @:public public function endDiv(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function topLevelAnnotation(ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
+	@:overload @:public public function topLevelAnnotation(ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
 	
-	@:overload public function topLevelComment(comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
+	@:overload @:public public function topLevelComment(comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
 	
-	@:overload public function makeDiv() : com.sun.xml.internal.rngom.ast.builder.Div<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:overload @:public public function makeDiv() : com.sun.xml.internal.rngom.ast.builder.Div<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	
-	@:overload public function endInclude(current : com.sun.xml.internal.rngom.parse.Parseable, uri : String, ns : String, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload @:public public function endInclude(current : com.sun.xml.internal.rngom.parse.Parseable, uri : String, ns : String, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function makeInclude() : com.sun.xml.internal.rngom.ast.builder.Include<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:overload @:public public function makeInclude() : com.sun.xml.internal.rngom.ast.builder.Include<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	
 	
 }

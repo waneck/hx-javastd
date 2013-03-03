@@ -25,19 +25,19 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsInternalFrameUI extends javax.swing.plaf.basic.BasicInternalFrameUI
 {
-	@:overload public function installDefaults() : Void;
+	@:overload @:public override public function installDefaults() : Void;
 	
-	@:overload public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload public function uninstallDefaults() : Void;
+	@:overload @:public override public function uninstallDefaults() : Void;
 	
-	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function new(w : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function new(w : javax.swing.JInternalFrame) : Void;
 	
-	@:overload private function createDesktopManager() : javax.swing.DesktopManager;
+	@:overload @:protected override private function createDesktopManager() : javax.swing.DesktopManager;
 	
-	@:overload private function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
+	@:overload @:protected override private function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
 	
 	
 }
@@ -49,11 +49,11 @@ extern class WindowsInternalFrameUI extends javax.swing.plaf.basic.BasicInternal
 	* @param width the width of the painted border
 	* @param height the height of the painted border
 	*/
-	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
-	@:overload public function isBorderOpaque() : Bool;
+	@:overload @:public override public function isBorderOpaque() : Bool;
 	
 	
 }

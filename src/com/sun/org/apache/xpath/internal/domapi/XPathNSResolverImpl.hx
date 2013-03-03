@@ -27,12 +27,12 @@ package com.sun.org.apache.xpath.internal.domapi;
 	* Constructor for XPathNSResolverImpl.
 	* @param xpathExpressionContext
 	*/
-	@:overload public function new(xpathExpressionContext : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(xpathExpressionContext : org.w3c.dom.Node) : Void;
 	
 	/**
 	* @see org.w3c.dom.xpath.XPathNSResolver#lookupNamespaceURI(String)
 	*/
-	@:overload public function lookupNamespaceURI(prefix : String) : String;
+	@:overload @:public public function lookupNamespaceURI(prefix : String) : String;
 	
 	
 }

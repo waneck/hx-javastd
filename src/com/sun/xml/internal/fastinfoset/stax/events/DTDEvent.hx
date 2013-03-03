@@ -28,9 +28,9 @@ package com.sun.xml.internal.fastinfoset.stax.events;
 extern class DTDEvent extends com.sun.xml.internal.fastinfoset.stax.events.EventBase implements javax.xml.stream.events.DTD
 {
 	/** Creates a new instance of DTDEvent */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(dtd : String) : Void;
+	@:overload @:public public function new(dtd : String) : Void;
 	
 	/**
 	* Returns the entire Document Type Declaration as a string, including
@@ -40,9 +40,9 @@ extern class DTDEvent extends com.sun.xml.internal.fastinfoset.stax.events.Event
 	* Document Type Declaration which matches the doctypedecl
 	* production in the XML 1.0 specification
 	*/
-	@:overload public function getDocumentTypeDeclaration() : String;
+	@:overload @:public public function getDocumentTypeDeclaration() : String;
 	
-	@:overload public function setDTD(dtd : String) : Void;
+	@:overload @:public public function setDTD(dtd : String) : Void;
 	
 	/**
 	* Return a List containing the general entities,
@@ -51,7 +51,7 @@ extern class DTDEvent extends com.sun.xml.internal.fastinfoset.stax.events.Event
 	* @see EntityDeclaration
 	* @return an unordered list of EntityDeclaration events
 	*/
-	@:overload public function getEntities() : java.util.List<Dynamic>;
+	@:overload @:public public function getEntities() : java.util.List<Dynamic>;
 	
 	/**
 	* Return a List containing the notations declared in the DTD.
@@ -59,20 +59,20 @@ extern class DTDEvent extends com.sun.xml.internal.fastinfoset.stax.events.Event
 	* @see NotationDeclaration
 	* @return an unordered list of NotationDeclaration events
 	*/
-	@:overload public function getNotations() : java.util.List<Dynamic>;
+	@:overload @:public public function getNotations() : java.util.List<Dynamic>;
 	
 	/**
 	*Returns an implementation defined representation of the DTD.
 	* This method may return null if no representation is available.
 	*
 	*/
-	@:overload public function getProcessedDTD() : Dynamic;
+	@:overload @:public public function getProcessedDTD() : Dynamic;
 	
-	@:overload public function setEntities(entites : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function setEntities(entites : java.util.List<Dynamic>) : Void;
 	
-	@:overload public function setNotations(notations : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function setNotations(notations : java.util.List<Dynamic>) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

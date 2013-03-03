@@ -105,7 +105,7 @@ extern interface CharacterIterator extends java.lang.Cloneable
 	* @return the first character in the text, or DONE if the text is empty
 	* @see #getBeginIndex()
 	*/
-	@:overload public function first() : java.StdTypes.Char16;
+	@:overload @:public public function first() : java.StdTypes.Char16;
 	
 	/**
 	* Sets the position to getEndIndex()-1 (getEndIndex() if the text is empty)
@@ -113,7 +113,7 @@ extern interface CharacterIterator extends java.lang.Cloneable
 	* @return the last character in the text, or DONE if the text is empty
 	* @see #getEndIndex()
 	*/
-	@:overload public function last() : java.StdTypes.Char16;
+	@:overload @:public public function last() : java.StdTypes.Char16;
 	
 	/**
 	* Gets the character at the current position (as returned by getIndex()).
@@ -121,7 +121,7 @@ extern interface CharacterIterator extends java.lang.Cloneable
 	* position is off the end of the text.
 	* @see #getIndex()
 	*/
-	@:overload public function current() : java.StdTypes.Char16;
+	@:overload @:public public function current() : java.StdTypes.Char16;
 	
 	/**
 	* Increments the iterator's index by one and returns the character
@@ -131,7 +131,7 @@ extern interface CharacterIterator extends java.lang.Cloneable
 	* @return the character at the new position or DONE if the new
 	* position is off the end of the text range.
 	*/
-	@:overload public function next() : java.StdTypes.Char16;
+	@:overload @:public public function next() : java.StdTypes.Char16;
 	
 	/**
 	* Decrements the iterator's index by one and returns the character
@@ -140,7 +140,7 @@ extern interface CharacterIterator extends java.lang.Cloneable
 	* @return the character at the new position or DONE if the current
 	* position is equal to getBeginIndex().
 	*/
-	@:overload public function previous() : java.StdTypes.Char16;
+	@:overload @:public public function previous() : java.StdTypes.Char16;
 	
 	/**
 	* Sets the position to the specified position in the text and returns that
@@ -150,26 +150,26 @@ extern interface CharacterIterator extends java.lang.Cloneable
 	* if an invalid value is supplied.
 	* @return the character at the specified position or DONE if the specified position is equal to getEndIndex()
 	*/
-	@:overload public function setIndex(position : Int) : java.StdTypes.Char16;
+	@:overload @:public public function setIndex(position : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Returns the start index of the text.
 	* @return the index at which the text begins.
 	*/
-	@:overload public function getBeginIndex() : Int;
+	@:overload @:public public function getBeginIndex() : Int;
 	
 	/**
 	* Returns the end index of the text.  This index is the index of the first
 	* character following the end of the text.
 	* @return the index after the last character in the text
 	*/
-	@:overload public function getEndIndex() : Int;
+	@:overload @:public public function getEndIndex() : Int;
 	
 	/**
 	* Returns the current index.
 	* @return the current index.
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	
 }

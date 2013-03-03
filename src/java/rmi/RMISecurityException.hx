@@ -43,7 +43,7 @@ package java.rmi;
 	* @since JDK1.1
 	* @deprecated no replacement
 	*/
-	@:require(java1) @:overload public function new(name : String) : Void;
+	@:require(java1) @:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Construct an <code>RMISecurityException</code> with a detail message.
@@ -52,7 +52,7 @@ package java.rmi;
 	* @since JDK1.1
 	* @deprecated no replacement
 	*/
-	@:require(java1) @:overload public function new(name : String, arg : String) : Void;
+	@:require(java1) @:overload @:public public function new(name : String, arg : String) : Void;
 	
 	
 }

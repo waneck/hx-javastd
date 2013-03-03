@@ -47,7 +47,7 @@ package com.sun.jdi;
 	* permissions required by the implementation.
 	* </p>
 	*/
-	@:overload @:synchronized public static function virtualMachineManager() : com.sun.jdi.VirtualMachineManager;
+	@:overload @:static @:public @:synchronized public static function virtualMachineManager() : com.sun.jdi.VirtualMachineManager;
 	
 	
 }

@@ -25,11 +25,11 @@ package com.sun.xml.internal.ws.addressing;
 */
 extern class WSEPRExtension extends com.sun.xml.internal.ws.api.addressing.WSEndpointReference.WSEndpointReference_EPRExtension
 {
-	@:overload public function new(xsb : com.sun.xml.internal.stream.buffer.XMLStreamBuffer, qname : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(xsb : com.sun.xml.internal.stream.buffer.XMLStreamBuffer, qname : javax.xml.namespace.QName) : Void;
 	
-	@:overload override public function readAsXMLStreamReader() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function readAsXMLStreamReader() : javax.xml.stream.XMLStreamReader;
 	
-	@:overload override public function getQName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getQName() : javax.xml.namespace.QName;
 	
 	
 }

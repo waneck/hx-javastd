@@ -30,33 +30,33 @@ package sun.security.krb5.internal;
 */
 extern class NetClient
 {
-	@:overload public static function getInstance(protocol : String, hostname : String, port : Int, timeout : Int) : sun.security.krb5.internal.NetClient;
+	@:overload @:public @:static public static function getInstance(protocol : String, hostname : String, port : Int, timeout : Int) : sun.security.krb5.internal.NetClient;
 	
-	@:overload @:abstract public function send(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:abstract @:public public function send(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:abstract public function receive() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:abstract @:public public function receive() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:abstract public function close() : Void;
+	@:overload @:abstract @:public public function close() : Void;
 	
 	
 }
 @:internal extern class TCPClient extends sun.security.krb5.internal.NetClient
 {
-	@:overload override public function send(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function send(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override public function receive() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function receive() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
 @:internal extern class UDPClient extends sun.security.krb5.internal.NetClient
 {
-	@:overload override public function send(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function send(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override public function receive() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function receive() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

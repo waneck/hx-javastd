@@ -25,13 +25,13 @@ package com.sun.tools.internal.ws.wsdl.parser;
 */
 extern class WSDLInternalizationLogic implements com.sun.tools.internal.ws.wsdl.parser.InternalizationLogic
 {
-	@:overload public function createExternalReferenceFinder(parent : com.sun.tools.internal.ws.wsdl.parser.DOMForest) : org.xml.sax.helpers.XMLFilterImpl;
+	@:overload @:public public function createExternalReferenceFinder(parent : com.sun.tools.internal.ws.wsdl.parser.DOMForest) : org.xml.sax.helpers.XMLFilterImpl;
 	
-	@:overload public function checkIfValidTargetNode(parent : com.sun.tools.internal.ws.wsdl.parser.DOMForest, bindings : org.w3c.dom.Element, target : org.w3c.dom.Element) : Bool;
+	@:overload @:public public function checkIfValidTargetNode(parent : com.sun.tools.internal.ws.wsdl.parser.DOMForest, bindings : org.w3c.dom.Element, target : org.w3c.dom.Element) : Bool;
 	
-	@:overload public function refineSchemaTarget(target : org.w3c.dom.Element) : org.w3c.dom.Element;
+	@:overload @:public public function refineSchemaTarget(target : org.w3c.dom.Element) : org.w3c.dom.Element;
 	
-	@:overload public function refineWSDLTarget(target : org.w3c.dom.Element) : org.w3c.dom.Element;
+	@:overload @:public public function refineWSDLTarget(target : org.w3c.dom.Element) : org.w3c.dom.Element;
 	
 	
 }
@@ -41,7 +41,7 @@ extern class WSDLInternalizationLogic implements com.sun.tools.internal.ws.wsdl.
 */
 @:native('com$sun$tools$internal$ws$wsdl$parser$WSDLInternalizationLogic$ReferenceFinder') @:internal extern class WSDLInternalizationLogic_ReferenceFinder extends com.sun.tools.internal.ws.wsdl.parser.AbstractReferenceFinderImpl
 {
-	@:overload override private function findExternalResource(nsURI : String, localName : String, atts : org.xml.sax.Attributes) : String;
+	@:overload @:protected override private function findExternalResource(nsURI : String, localName : String, atts : org.xml.sax.Attributes) : String;
 	
 	
 }

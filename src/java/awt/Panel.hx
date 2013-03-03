@@ -42,20 +42,20 @@ package java.awt;
 	* The default layout manager for all panels is the
 	* <code>FlowLayout</code> class.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new panel with the specified layout manager.
 	* @param layout the layout manager for this panel.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function new(layout : java.awt.LayoutManager) : Void;
+	@:require(java1) @:overload @:public public function new(layout : java.awt.LayoutManager) : Void;
 	
 	/**
 	* Creates the Panel's peer.  The peer allows you to modify the
 	* appearance of the panel without changing its functionality.
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Gets the AccessibleContext associated with this Panel.
@@ -67,7 +67,7 @@ package java.awt;
 	*         AccessibleContext of this Panel
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -85,7 +85,7 @@ package java.awt;
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

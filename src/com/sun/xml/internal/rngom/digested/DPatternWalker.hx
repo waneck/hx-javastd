@@ -49,45 +49,45 @@ package com.sun.xml.internal.rngom.digested;
 */
 extern class DPatternWalker implements com.sun.xml.internal.rngom.digested.DPatternVisitor<java.lang.Void>
 {
-	@:overload public function onAttribute(p : com.sun.xml.internal.rngom.digested.DAttributePattern) : java.lang.Void;
+	@:overload @:public public function onAttribute(p : com.sun.xml.internal.rngom.digested.DAttributePattern) : java.lang.Void;
 	
-	@:overload private function onXmlToken(p : com.sun.xml.internal.rngom.digested.DXmlTokenPattern) : java.lang.Void;
+	@:overload @:protected private function onXmlToken(p : com.sun.xml.internal.rngom.digested.DXmlTokenPattern) : java.lang.Void;
 	
-	@:overload public function onChoice(p : com.sun.xml.internal.rngom.digested.DChoicePattern) : java.lang.Void;
+	@:overload @:public public function onChoice(p : com.sun.xml.internal.rngom.digested.DChoicePattern) : java.lang.Void;
 	
-	@:overload private function onContainer(p : com.sun.xml.internal.rngom.digested.DContainerPattern) : java.lang.Void;
+	@:overload @:protected private function onContainer(p : com.sun.xml.internal.rngom.digested.DContainerPattern) : java.lang.Void;
 	
-	@:overload public function onData(p : com.sun.xml.internal.rngom.digested.DDataPattern) : java.lang.Void;
+	@:overload @:public public function onData(p : com.sun.xml.internal.rngom.digested.DDataPattern) : java.lang.Void;
 	
-	@:overload public function onElement(p : com.sun.xml.internal.rngom.digested.DElementPattern) : java.lang.Void;
+	@:overload @:public public function onElement(p : com.sun.xml.internal.rngom.digested.DElementPattern) : java.lang.Void;
 	
-	@:overload public function onEmpty(p : com.sun.xml.internal.rngom.digested.DEmptyPattern) : java.lang.Void;
+	@:overload @:public public function onEmpty(p : com.sun.xml.internal.rngom.digested.DEmptyPattern) : java.lang.Void;
 	
-	@:overload public function onGrammar(p : com.sun.xml.internal.rngom.digested.DGrammarPattern) : java.lang.Void;
+	@:overload @:public public function onGrammar(p : com.sun.xml.internal.rngom.digested.DGrammarPattern) : java.lang.Void;
 	
-	@:overload public function onGroup(p : com.sun.xml.internal.rngom.digested.DGroupPattern) : java.lang.Void;
+	@:overload @:public public function onGroup(p : com.sun.xml.internal.rngom.digested.DGroupPattern) : java.lang.Void;
 	
-	@:overload public function onInterleave(p : com.sun.xml.internal.rngom.digested.DInterleavePattern) : java.lang.Void;
+	@:overload @:public public function onInterleave(p : com.sun.xml.internal.rngom.digested.DInterleavePattern) : java.lang.Void;
 	
-	@:overload public function onList(p : com.sun.xml.internal.rngom.digested.DListPattern) : java.lang.Void;
+	@:overload @:public public function onList(p : com.sun.xml.internal.rngom.digested.DListPattern) : java.lang.Void;
 	
-	@:overload public function onMixed(p : com.sun.xml.internal.rngom.digested.DMixedPattern) : java.lang.Void;
+	@:overload @:public public function onMixed(p : com.sun.xml.internal.rngom.digested.DMixedPattern) : java.lang.Void;
 	
-	@:overload public function onNotAllowed(p : com.sun.xml.internal.rngom.digested.DNotAllowedPattern) : java.lang.Void;
+	@:overload @:public public function onNotAllowed(p : com.sun.xml.internal.rngom.digested.DNotAllowedPattern) : java.lang.Void;
 	
-	@:overload public function onOneOrMore(p : com.sun.xml.internal.rngom.digested.DOneOrMorePattern) : java.lang.Void;
+	@:overload @:public public function onOneOrMore(p : com.sun.xml.internal.rngom.digested.DOneOrMorePattern) : java.lang.Void;
 	
-	@:overload public function onOptional(p : com.sun.xml.internal.rngom.digested.DOptionalPattern) : java.lang.Void;
+	@:overload @:public public function onOptional(p : com.sun.xml.internal.rngom.digested.DOptionalPattern) : java.lang.Void;
 	
-	@:overload public function onRef(p : com.sun.xml.internal.rngom.digested.DRefPattern) : java.lang.Void;
+	@:overload @:public public function onRef(p : com.sun.xml.internal.rngom.digested.DRefPattern) : java.lang.Void;
 	
-	@:overload public function onText(p : com.sun.xml.internal.rngom.digested.DTextPattern) : java.lang.Void;
+	@:overload @:public public function onText(p : com.sun.xml.internal.rngom.digested.DTextPattern) : java.lang.Void;
 	
-	@:overload public function onValue(p : com.sun.xml.internal.rngom.digested.DValuePattern) : java.lang.Void;
+	@:overload @:public public function onValue(p : com.sun.xml.internal.rngom.digested.DValuePattern) : java.lang.Void;
 	
-	@:overload public function onZeroOrMore(p : com.sun.xml.internal.rngom.digested.DZeroOrMorePattern) : java.lang.Void;
+	@:overload @:public public function onZeroOrMore(p : com.sun.xml.internal.rngom.digested.DZeroOrMorePattern) : java.lang.Void;
 	
-	@:overload private function onUnary(p : com.sun.xml.internal.rngom.digested.DUnaryPattern) : java.lang.Void;
+	@:overload @:protected private function onUnary(p : com.sun.xml.internal.rngom.digested.DUnaryPattern) : java.lang.Void;
 	
 	
 }

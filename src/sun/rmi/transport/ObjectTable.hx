@@ -28,7 +28,7 @@ extern class ObjectTable
 	/**
 	* Returns the target associated with the remote object
 	*/
-	@:overload public static function getTarget(impl : java.rmi.Remote) : sun.rmi.transport.Target;
+	@:overload @:public @:static public static function getTarget(impl : java.rmi.Remote) : sun.rmi.transport.Target;
 	
 	/**
 	* Returns the stub for the remote object <b>obj</b> passed
@@ -39,7 +39,7 @@ extern class ObjectTable
 	* @exception NoSuchObjectException if the stub for the
 	* remote object could not be found.
 	*/
-	@:overload public static function getStub(impl : java.rmi.Remote) : java.rmi.Remote;
+	@:overload @:public @:static public static function getStub(impl : java.rmi.Remote) : java.rmi.Remote;
 	
 	/**
 	* Remove the remote object, obj, from the RMI runtime. If
@@ -58,7 +58,7 @@ extern class ObjectTable
 	* @exception NoSuchObjectException if the remote object is not
 	* currently exported
 	*/
-	@:overload public static function unexportObject(obj : java.rmi.Remote, force : Bool) : Bool;
+	@:overload @:public @:static public static function unexportObject(obj : java.rmi.Remote, force : Bool) : Bool;
 	
 	
 }
@@ -74,7 +74,7 @@ extern class ObjectTable
 */
 @:native('sun$rmi$transport$ObjectTable$Reaper') @:internal extern class ObjectTable_Reaper implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

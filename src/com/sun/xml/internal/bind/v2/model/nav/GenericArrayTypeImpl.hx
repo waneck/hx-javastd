@@ -33,13 +33,13 @@ package com.sun.xml.internal.bind.v2.model.nav;
 	*         of this array
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getGenericComponentType() : java.lang.reflect.Type;
+	@:require(java5) @:overload @:public public function getGenericComponentType() : java.lang.reflect.Type;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

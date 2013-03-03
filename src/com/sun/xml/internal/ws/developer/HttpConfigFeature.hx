@@ -28,15 +28,15 @@ extern class HttpConfigFeature extends javax.xml.ws.WebServiceFeature
 	/**
 	* Constant value identifying the {@link @HttpConfigFeature} feature.
 	*/
-	public static var ID(default, null) : String;
+	@:public @:static @:final public static var ID(default, null) : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(cookieJar : java.net.CookieHandler) : Void;
+	@:overload @:public public function new(cookieJar : java.net.CookieHandler) : Void;
 	
-	@:overload override public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
-	@:overload public function getCookieHandler() : java.net.CookieHandler;
+	@:overload @:public public function getCookieHandler() : java.net.CookieHandler;
 	
 	
 }

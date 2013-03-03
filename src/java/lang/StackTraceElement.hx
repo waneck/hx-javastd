@@ -45,7 +45,7 @@ extern class StackTraceElement implements java.io.Serializable
 	*         {@code methodName} is null
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(declaringClass : String, methodName : String, fileName : String, lineNumber : Int) : Void;
+	@:require(java5) @:overload @:public public function new(declaringClass : String, methodName : String, fileName : String, lineNumber : Int) : Void;
 	
 	/**
 	* Returns the name of the source file containing the execution point
@@ -59,7 +59,7 @@ extern class StackTraceElement implements java.io.Serializable
 	*         represented by this stack trace element, or {@code null} if
 	*         this information is unavailable.
 	*/
-	@:overload public function getFileName() : String;
+	@:overload @:public public function getFileName() : String;
 	
 	/**
 	* Returns the line number of the source line containing the execution
@@ -72,7 +72,7 @@ extern class StackTraceElement implements java.io.Serializable
 	*         point represented by this stack trace element, or a negative
 	*         number if this information is unavailable.
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* Returns the fully qualified name of the class containing the
@@ -81,7 +81,7 @@ extern class StackTraceElement implements java.io.Serializable
 	* @return the fully qualified name of the {@code Class} containing
 	*         the execution point represented by this stack trace element.
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Returns the name of the method containing the execution point
@@ -94,7 +94,7 @@ extern class StackTraceElement implements java.io.Serializable
 	* @return the name of the method containing the execution point
 	*         represented by this stack trace element.
 	*/
-	@:overload public function getMethodName() : String;
+	@:overload @:public public function getMethodName() : String;
 	
 	/**
 	* Returns true if the method containing the execution point
@@ -103,7 +103,7 @@ extern class StackTraceElement implements java.io.Serializable
 	* @return {@code true} if the method containing the execution point
 	*         represented by this stack trace element is a native method.
 	*/
-	@:overload public function isNativeMethod() : Bool;
+	@:overload @:public public function isNativeMethod() : Bool;
 	
 	/**
 	* Returns a string representation of this stack trace element.  The
@@ -131,7 +131,7 @@ extern class StackTraceElement implements java.io.Serializable
 	* </ul>
 	* @see    Throwable#printStackTrace()
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns true if the specified object is another
@@ -152,12 +152,12 @@ extern class StackTraceElement implements java.io.Serializable
 	*         {@code StackTraceElement} instance representing the same
 	*         execution point as this instance.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for this stack trace element.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

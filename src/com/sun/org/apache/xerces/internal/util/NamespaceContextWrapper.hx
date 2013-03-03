@@ -25,22 +25,22 @@ package com.sun.org.apache.xerces.internal.util;
 */
 extern class NamespaceContextWrapper implements javax.xml.namespace.NamespaceContext
 {
-	@:overload public function new(namespaceContext : com.sun.org.apache.xerces.internal.util.NamespaceSupport) : Void;
+	@:overload @:public public function new(namespaceContext : com.sun.org.apache.xerces.internal.util.NamespaceSupport) : Void;
 	
-	@:overload public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public public function getNamespaceURI(prefix : String) : String;
 	
-	@:overload public function getPrefix(namespaceURI : String) : String;
+	@:overload @:public public function getPrefix(namespaceURI : String) : String;
 	
 	/**
 	* TODO: Namespace doesn't give information giving multiple prefixes for
 	* the same namespaceURI.
 	*/
-	@:overload public function getPrefixes(namespaceURI : String) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getPrefixes(namespaceURI : String) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* This method supports all functions in the NamespaceContext utility class
 	*/
-	@:overload public function getNamespaceContext() : com.sun.org.apache.xerces.internal.xni.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : com.sun.org.apache.xerces.internal.xni.NamespaceContext;
 	
 	
 }

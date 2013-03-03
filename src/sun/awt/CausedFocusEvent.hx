@@ -25,11 +25,11 @@ package sun.awt;
 */
 extern class CausedFocusEvent extends java.awt.event.FocusEvent
 {
-	@:overload public function getCause() : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause;
+	@:overload @:public public function getCause() : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload public function new(source : java.awt.Component, id : Int, temporary : Bool, opposite : java.awt.Component, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Void;
+	@:overload @:public public function new(source : java.awt.Component, id : Int, temporary : Bool, opposite : java.awt.Component, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Void;
 	
 	/**
 	* Retargets the original focus event to the new target.  If the
@@ -38,7 +38,7 @@ extern class CausedFocusEvent extends java.awt.event.FocusEvent
 	* with cause as RETARGETED.
 	* @return retargeted event, or null if e is null
 	*/
-	@:overload public static function retarget(e : java.awt.event.FocusEvent, newSource : java.awt.Component) : java.awt.event.FocusEvent;
+	@:overload @:public @:static public static function retarget(e : java.awt.event.FocusEvent, newSource : java.awt.Component) : java.awt.event.FocusEvent;
 	
 	
 }

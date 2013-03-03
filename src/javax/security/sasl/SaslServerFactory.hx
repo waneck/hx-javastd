@@ -61,7 +61,7 @@ extern interface SaslServerFactory
 	*@exception SaslException If cannot create a <tt>SaslServer</tt> because
 	* of an error.
 	*/
-	@:overload @:abstract public function createSaslServer(mechanism : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslServer;
+	@:overload @:public @:abstract public function createSaslServer(mechanism : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslServer;
 	
 	/**
 	* Returns an array of names of mechanisms that match the specified
@@ -76,7 +76,7 @@ extern interface SaslServerFactory
 	* including any map entries with non-String keys.
 	* @return A non-null array containing a IANA-registered SASL mechanism names.
 	*/
-	@:overload @:abstract public function getMechanismNames(props : java.util.Map<String, Dynamic>) : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getMechanismNames(props : java.util.Map<String, Dynamic>) : java.NativeArray<String>;
 	
 	
 }

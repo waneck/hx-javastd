@@ -49,7 +49,7 @@ extern class OutputKeys
 	* @see <a href="http://www.w3.org/TR/xslt#output">
 	*  section 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
 	*/
-	public static var METHOD(default, null) : String;
+	@:public @:static @:final public static var METHOD(default, null) : String;
 	
 	/**
 	* version = <var>nmtoken</var>.
@@ -67,7 +67,7 @@ extern class OutputKeys
 	* @see <a href="http://www.w3.org/TR/xslt#output">
 	*  section 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
 	*/
-	public static var VERSION(default, null) : String;
+	@:public @:static @:final public static var VERSION(default, null) : String;
 	
 	/**
 	* encoding = <var>string</var>.
@@ -84,7 +84,7 @@ extern class OutputKeys
 	* @see <a href="http://www.w3.org/TR/xslt#output">
 	* section 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
 	*/
-	public static var ENCODING(default, null) : String;
+	@:public @:static @:final public static var ENCODING(default, null) : String;
 	
 	/**
 	* omit-xml-declaration = "yes" | "no".
@@ -95,7 +95,7 @@ extern class OutputKeys
 	* @see <a href="http://www.w3.org/TR/xslt#output">
 	*  section 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
 	*/
-	public static var OMIT_XML_DECLARATION(default, null) : String;
+	@:public @:static @:final public static var OMIT_XML_DECLARATION(default, null) : String;
 	
 	/**
 	* standalone = "yes" | "no".
@@ -106,7 +106,7 @@ extern class OutputKeys
 	* @see <a href="http://www.w3.org/TR/xslt#output">
 	*  section 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
 	*/
-	public static var STANDALONE(default, null) : String;
+	@:public @:static @:final public static var STANDALONE(default, null) : String;
 	
 	/**
 	* doctype-public = <var>string</var>.
@@ -116,7 +116,7 @@ extern class OutputKeys
 	* @see <a href="http://www.w3.org/TR/xslt#output">
 	*  section 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
 	*/
-	public static var DOCTYPE_PUBLIC(default, null) : String;
+	@:public @:static @:final public static var DOCTYPE_PUBLIC(default, null) : String;
 	
 	/**
 	* doctype-system = <var>string</var>.
@@ -147,7 +147,7 @@ extern class OutputKeys
 	* @see <a href="http://www.w3.org/TR/xslt#output">
 	*  section 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
 	*/
-	public static var DOCTYPE_SYSTEM(default, null) : String;
+	@:public @:static @:final public static var DOCTYPE_SYSTEM(default, null) : String;
 	
 	/**
 	* cdata-section-elements = <var>expanded names</var>.
@@ -161,7 +161,7 @@ extern class OutputKeys
 	* @see <a href="http://www.w3.org/TR/xslt#output">
 	*  section 16 of the XSL Transformations (XSLT) W3C Recommendation.</a>
 	*/
-	public static var CDATA_SECTION_ELEMENTS(default, null) : String;
+	@:public @:static @:final public static var CDATA_SECTION_ELEMENTS(default, null) : String;
 	
 	/**
 	* indent = "yes" | "no".
@@ -172,7 +172,7 @@ extern class OutputKeys
 	* @see <a href="http://www.w3.org/TR/xslt#output">
 	*  section 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
 	*/
-	public static var INDENT(default, null) : String;
+	@:public @:static @:final public static var INDENT(default, null) : String;
 	
 	/**
 	* media-type = <var>string</var>.
@@ -187,7 +187,7 @@ extern class OutputKeys
 	* @see <a href="http://www.w3.org/TR/xslt#output">s
 	* ection 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
 	*/
-	public static var MEDIA_TYPE(default, null) : String;
+	@:public @:static @:final public static var MEDIA_TYPE(default, null) : String;
 	
 	
 }

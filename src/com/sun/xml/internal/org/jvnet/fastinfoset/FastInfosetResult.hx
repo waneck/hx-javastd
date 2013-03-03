@@ -27,15 +27,15 @@ package com.sun.xml.internal.org.jvnet.fastinfoset;
 */
 extern class FastInfosetResult extends javax.xml.transform.sax.SAXResult
 {
-	@:overload public function new(outputStream : java.io.OutputStream) : Void;
+	@:overload @:public public function new(outputStream : java.io.OutputStream) : Void;
 	
-	@:overload public function getHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public override public function getHandler() : org.xml.sax.ContentHandler;
 	
-	@:overload public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
+	@:overload @:public override public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
 	
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
-	@:overload public function setOutputStream(outputStream : java.io.OutputStream) : Void;
+	@:overload @:public public function setOutputStream(outputStream : java.io.OutputStream) : Void;
 	
 	
 }

@@ -22,7 +22,7 @@ package com.sun.org.apache.xml.internal.security.utils;
 extern class Base64
 {
 	/** Field BASE64DEFAULTLENGTH */
-	public static var BASE64DEFAULTLENGTH(default, null) : Int;
+	@:public @:static @:final public static var BASE64DEFAULTLENGTH(default, null) : Int;
 	
 	/**
 	* Encode in Base64 the given <code>{@link BigInteger}<code>.
@@ -30,7 +30,7 @@ extern class Base64
 	* @param big
 	* @return String with Base64 encoding
 	*/
-	@:overload @:final public static function encode(big : java.math.BigInteger) : String;
+	@:overload @:public @:static @:final public static function encode(big : java.math.BigInteger) : String;
 	
 	/**
 	* Returns a byte-array representation of a <code>{@link BigInteger}<code>.
@@ -43,7 +43,7 @@ extern class Base64
 	* @param bitlen <code>int<code> the desired length in bits of the representation
 	* @return a byte array with <code>bitlen</code> bits of <code>big</code>
 	*/
-	@:overload @:final public static function encode(big : java.math.BigInteger, bitlen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static @:final public static function encode(big : java.math.BigInteger, bitlen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Method decodeBigIntegerFromElement
@@ -52,7 +52,7 @@ extern class Base64
 	* @return the biginter obtained from the node
 	* @throws Base64DecodingException
 	*/
-	@:overload @:final public static function decodeBigIntegerFromElement(element : org.w3c.dom.Element) : java.math.BigInteger;
+	@:overload @:public @:static @:final public static function decodeBigIntegerFromElement(element : org.w3c.dom.Element) : java.math.BigInteger;
 	
 	/**
 	* Method decodeBigIntegerFromText
@@ -61,7 +61,7 @@ extern class Base64
 	* @return the biginter obtained from the text node
 	* @throws Base64DecodingException
 	*/
-	@:overload @:final public static function decodeBigIntegerFromText(text : org.w3c.dom.Text) : java.math.BigInteger;
+	@:overload @:public @:static @:final public static function decodeBigIntegerFromText(text : org.w3c.dom.Text) : java.math.BigInteger;
 	
 	/**
 	* This method takes an (empty) Element and a BigInteger and adds the
@@ -70,7 +70,7 @@ extern class Base64
 	* @param element
 	* @param biginteger
 	*/
-	@:overload @:final public static function fillElementWithBigInteger(element : org.w3c.dom.Element, biginteger : java.math.BigInteger) : Void;
+	@:overload @:public @:static @:final public static function fillElementWithBigInteger(element : org.w3c.dom.Element, biginteger : java.math.BigInteger) : Void;
 	
 	/**
 	* Method decode
@@ -83,7 +83,7 @@ extern class Base64
 	* $todo$ not tested yet
 	* @throws Base64DecodingException
 	*/
-	@:overload @:final public static function decode(element : org.w3c.dom.Element) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static @:final public static function decode(element : org.w3c.dom.Element) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Method encodeToElement
@@ -94,7 +94,7 @@ extern class Base64
 	* @return an Element with the base64 encoded in the text.
 	*
 	*/
-	@:overload @:final public static function encodeToElement(doc : org.w3c.dom.Document, localName : String, bytes : java.NativeArray<java.StdTypes.Int8>) : org.w3c.dom.Element;
+	@:overload @:public @:static @:final public static function encodeToElement(doc : org.w3c.dom.Document, localName : String, bytes : java.NativeArray<java.StdTypes.Int8>) : org.w3c.dom.Element;
 	
 	/**
 	* Method decode
@@ -105,7 +105,7 @@ extern class Base64
 	* @throws Base64DecodingException
 	*
 	*/
-	@:overload @:final public static function decode(base64 : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final @:static public static function decode(base64 : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Encode a byte array and fold lines at the standard 76th character unless
@@ -114,7 +114,7 @@ extern class Base64
 	* @param binaryData <code>byte[]<code> to be base64 encoded
 	* @return the <code>String<code> with encoded data
 	*/
-	@:overload @:final public static function encode(binaryData : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public @:static @:final public static function encode(binaryData : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	/**
 	* Base64 decode the lines from the reader and return an InputStream
@@ -127,11 +127,11 @@ extern class Base64
 	* @throws IOException
 	* @throws Base64DecodingException
 	*/
-	@:overload @:final public static function decode(reader : java.io.BufferedReader) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final @:static public static function decode(reader : java.io.BufferedReader) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:final private static function isWhiteSpace(octect : java.StdTypes.Int8) : Bool;
+	@:overload @:protected @:static @:final private static function isWhiteSpace(octect : java.StdTypes.Int8) : Bool;
 	
-	@:overload @:final private static function isPad(octect : java.StdTypes.Int8) : Bool;
+	@:overload @:protected @:static @:final private static function isPad(octect : java.StdTypes.Int8) : Bool;
 	
 	/**
 	* Encode a byte array in Base64 format and return an optionally
@@ -141,7 +141,7 @@ extern class Base64
 	* @param length <code>int<code> length of wrapped lines; No wrapping if less than 4.
 	* @return a <code>String</code> with encoded data
 	*/
-	@:overload @:final public static function encode(binaryData : java.NativeArray<java.StdTypes.Int8>, length : Int) : String;
+	@:overload @:public @:static @:final public static function encode(binaryData : java.NativeArray<java.StdTypes.Int8>, length : Int) : String;
 	
 	/**
 	* Decodes Base64 data into octects
@@ -150,11 +150,11 @@ extern class Base64
 	* @return byte array containing the decoded data
 	* @throws Base64DecodingException if there is a problem decoding the data
 	*/
-	@:overload @:final public static function decode(encoded : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final @:static public static function decode(encoded : String) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:final private static function getBytesInternal(s : String, result : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:protected @:static @:final private static function getBytesInternal(s : String, result : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload @:final private static function decodeInternal(base64Data : java.NativeArray<java.StdTypes.Int8>, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:final @:static private static function decodeInternal(base64Data : java.NativeArray<java.StdTypes.Int8>, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Decodes Base64 data into  outputstream
@@ -164,7 +164,7 @@ extern class Base64
 	* @throws IOException
 	* @throws Base64DecodingException
 	*/
-	@:overload @:final public static function decode(base64Data : String, os : java.io.OutputStream) : Void;
+	@:overload @:public @:final @:static public static function decode(base64Data : String, os : java.io.OutputStream) : Void;
 	
 	/**
 	* Decodes Base64 data into  outputstream
@@ -174,9 +174,9 @@ extern class Base64
 	* @throws IOException
 	* @throws Base64DecodingException
 	*/
-	@:overload @:final public static function decode(base64Data : java.NativeArray<java.StdTypes.Int8>, os : java.io.OutputStream) : Void;
+	@:overload @:public @:final @:static public static function decode(base64Data : java.NativeArray<java.StdTypes.Int8>, os : java.io.OutputStream) : Void;
 	
-	@:overload @:final private static function decode(base64Data : java.NativeArray<java.StdTypes.Int8>, os : java.io.OutputStream, len : Int) : Void;
+	@:overload @:protected @:final @:static private static function decode(base64Data : java.NativeArray<java.StdTypes.Int8>, os : java.io.OutputStream, len : Int) : Void;
 	
 	/**
 	* Decodes Base64 data into  outputstream
@@ -186,7 +186,7 @@ extern class Base64
 	* @throws IOException
 	* @throws Base64DecodingException
 	*/
-	@:overload @:final public static function decode(is : java.io.InputStream, os : java.io.OutputStream) : Void;
+	@:overload @:public @:final @:static public static function decode(is : java.io.InputStream, os : java.io.OutputStream) : Void;
 	
 	/**
 	* remove WhiteSpace from MIME containing encoded Base64 data.
@@ -194,7 +194,7 @@ extern class Base64
 	* @param data  the byte array of base64 data (with WS)
 	* @return      the new length
 	*/
-	@:overload @:final private static function removeWhiteSpace(data : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:protected @:static @:final private static function removeWhiteSpace(data : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	
 }

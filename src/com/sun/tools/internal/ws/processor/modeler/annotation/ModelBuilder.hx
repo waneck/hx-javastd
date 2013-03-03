@@ -29,50 +29,50 @@ extern interface ModelBuilder
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function getAPEnv() : com.sun.mirror.apt.AnnotationProcessorEnvironment;
+	@:overload @:public public function getAPEnv() : com.sun.mirror.apt.AnnotationProcessorEnvironment;
 	
-	@:overload public function setService(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
+	@:overload @:public public function setService(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
 	
-	@:overload public function setPort(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
+	@:overload @:public public function setPort(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
 	
-	@:overload public function getOperationName(methodName : String) : String;
+	@:overload @:public public function getOperationName(methodName : String) : String;
 	
-	@:overload public function getResponseName(operationName : String) : String;
+	@:overload @:public public function getResponseName(operationName : String) : String;
 	
-	@:overload public function getHolderValueType(type : com.sun.mirror.type.TypeMirror) : com.sun.mirror.type.TypeMirror;
+	@:overload @:public public function getHolderValueType(type : com.sun.mirror.type.TypeMirror) : com.sun.mirror.type.TypeMirror;
 	
-	@:overload public function checkAndSetProcessed(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
+	@:overload @:public public function checkAndSetProcessed(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
 	
-	@:overload public function isRemoteException(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
+	@:overload @:public public function isRemoteException(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
 	
 	/**
 	* Checks if the TypeDeclaration is a service specific exception
 	* @param typeDecl
 	* @return true if is not a service specifc excpetion as defined by JAX-WS specification
 	*/
-	@:overload public function isServiceException(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
+	@:overload @:public public function isServiceException(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
 	
-	@:overload public function isRemote(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
+	@:overload @:public public function isRemote(typeDecl : com.sun.mirror.declaration.TypeDeclaration) : Bool;
 	
-	@:overload public function canOverWriteClass(className : String) : Bool;
+	@:overload @:public public function canOverWriteClass(className : String) : Bool;
 	
-	@:overload public function setWrapperGenerated(wrapperGenerated : Bool) : Void;
+	@:overload @:public public function setWrapperGenerated(wrapperGenerated : Bool) : Void;
 	
-	@:overload public function getTypeDeclaration(typeName : String) : com.sun.mirror.declaration.TypeDeclaration;
+	@:overload @:public public function getTypeDeclaration(typeName : String) : com.sun.mirror.declaration.TypeDeclaration;
 	
-	@:overload public function getSourceVersion() : String;
+	@:overload @:public public function getSourceVersion() : String;
 	
-	@:overload public function getOptions() : com.sun.tools.internal.ws.wscompile.WsgenOptions;
+	@:overload @:public public function getOptions() : com.sun.tools.internal.ws.wscompile.WsgenOptions;
 	
-	@:overload public function getSourceDir() : java.io.File;
+	@:overload @:public public function getSourceDir() : java.io.File;
 	
-	@:overload public function getXMLName(javaName : String) : String;
+	@:overload @:public public function getXMLName(javaName : String) : String;
 	
-	@:overload public function log(msg : String) : Void;
+	@:overload @:public public function log(msg : String) : Void;
 	
-	@:overload public function onError(s : String) : Void;
+	@:overload @:public public function onError(s : String) : Void;
 	
-	@:overload public function onError(pos : com.sun.mirror.util.SourcePosition, msg : com.sun.xml.internal.ws.util.localization.Localizable) : Void;
+	@:overload @:public public function onError(pos : com.sun.mirror.util.SourcePosition, msg : com.sun.xml.internal.ws.util.localization.Localizable) : Void;
 	
 	
 }

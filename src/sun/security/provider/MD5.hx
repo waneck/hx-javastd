@@ -34,9 +34,9 @@ package sun.security.provider;
 */
 extern class MD5 extends sun.security.provider.DigestBase
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

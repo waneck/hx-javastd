@@ -34,14 +34,14 @@ extern class CertPathTrustManagerParameters implements javax.net.ssl.ManagerFact
 	*
 	* @throws NullPointerException if parameters is null
 	*/
-	@:overload public function new(parameters : java.security.cert.CertPathParameters) : Void;
+	@:overload @:public public function new(parameters : java.security.cert.CertPathParameters) : Void;
 	
 	/**
 	* Return a clone of the CertPathParameters encapsulated by this class.
 	*
 	* @return a clone of the CertPathParameters encapsulated by this class.
 	*/
-	@:overload public function getParameters() : java.security.cert.CertPathParameters;
+	@:overload @:public public function getParameters() : java.security.cert.CertPathParameters;
 	
 	
 }

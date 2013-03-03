@@ -26,11 +26,11 @@ extern class LocaleUtility
 	/**
 	* IETF RFC 1766 tag separator
 	*/
-	public static var IETF_SEPARATOR(default, null) : java.StdTypes.Char16;
+	@:public @:final @:static public static var IETF_SEPARATOR(default, null) : java.StdTypes.Char16;
 	
-	public static var EMPTY_STRING(default, null) : String;
+	@:public @:final @:static public static var EMPTY_STRING(default, null) : String;
 	
-	@:overload public static function langToLocale(lang : String) : java.util.Locale;
+	@:overload @:public @:static public static function langToLocale(lang : String) : java.util.Locale;
 	
 	
 }

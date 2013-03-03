@@ -27,19 +27,19 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* Construct a cast expression and check that the conversion is
 	* valid by calling typeCheck().
 	*/
-	@:overload public function new(left : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
+	@:overload @:public public function new(left : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
 	
-	@:overload public function getExpr() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
+	@:overload @:public public function getExpr() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
 	
 	/**
 	* Returns true if this expressions contains a call to position(). This is
 	* needed for context changes in node steps containing multiple predicates.
 	*/
-	@:overload public function hasPositionCall() : Bool;
+	@:overload @:public override public function hasPositionCall() : Bool;
 	
-	@:overload public function hasLastCall() : Bool;
+	@:overload @:public override public function hasLastCall() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Type checking a cast expression amounts to verifying that the
@@ -47,11 +47,11 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* type checking, but typeCheck() is usually not called on them.
 	* As a result, this method is called from the constructor.
 	*/
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload public function translateDesynthesized(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translateDesynthesized(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

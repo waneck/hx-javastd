@@ -34,7 +34,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*  @see #getDefaultLightWeightPopupEnabled
 	*  @see #setLightWeightPopupEnabled
 	*/
-	@:overload public static function setDefaultLightWeightPopupEnabled(aFlag : Bool) : Void;
+	@:overload @:public @:static public static function setDefaultLightWeightPopupEnabled(aFlag : Bool) : Void;
 	
 	/**
 	*  Gets the <code>defaultLightWeightPopupEnabled</code> property,
@@ -45,12 +45,12 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*
 	*  @see #setDefaultLightWeightPopupEnabled
 	*/
-	@:overload public static function getDefaultLightWeightPopupEnabled() : Bool;
+	@:overload @:public @:static public static function getDefaultLightWeightPopupEnabled() : Bool;
 	
 	/**
 	* Constructs a <code>JPopupMenu</code> without an "invoker".
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>JPopupMenu</code> with the specified title.
@@ -58,14 +58,14 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @param label  the string that a UI may use to display as a title
 	* for the popup menu.
 	*/
-	@:overload public function new(label : String) : Void;
+	@:overload @:public public function new(label : String) : Void;
 	
 	/**
 	* Returns the look and feel (L&F) object that renders this component.
 	*
 	* @return the <code>PopupMenuUI</code> object that renders this component
 	*/
-	@:overload public function getUI() : javax.swing.plaf.PopupMenuUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.PopupMenuUI;
 	
 	/**
 	* Sets the L&F object that renders this component.
@@ -78,14 +78,14 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.PopupMenuUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.PopupMenuUI) : Void;
 	
 	/**
 	* Resets the UI property to a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -94,16 +94,16 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
-	@:overload override private function processFocusEvent(evt : java.awt.event.FocusEvent) : Void;
+	@:overload @:protected override private function processFocusEvent(evt : java.awt.event.FocusEvent) : Void;
 	
 	/**
 	* Processes key stroke events such as mnemonics and accelerators.
 	*
 	* @param evt  the key event to be processed
 	*/
-	@:overload override private function processKeyEvent(evt : java.awt.event.KeyEvent) : Void;
+	@:overload @:protected override private function processKeyEvent(evt : java.awt.event.KeyEvent) : Void;
 	
 	/**
 	* Returns the model object that handles single selections.
@@ -111,7 +111,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @return the <code>selectionModel</code> property
 	* @see SingleSelectionModel
 	*/
-	@:overload public function getSelectionModel() : javax.swing.SingleSelectionModel;
+	@:overload @:public public function getSelectionModel() : javax.swing.SingleSelectionModel;
 	
 	/**
 	* Sets the model object to handle single selections.
@@ -122,7 +122,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* description: The selection model for the popup menu
 	*      expert: true
 	*/
-	@:overload public function setSelectionModel(model : javax.swing.SingleSelectionModel) : Void;
+	@:overload @:public public function setSelectionModel(model : javax.swing.SingleSelectionModel) : Void;
 	
 	/**
 	* Appends the specified menu item to the end of this menu.
@@ -130,7 +130,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @param menuItem the <code>JMenuItem</code> to add
 	* @return the <code>JMenuItem</code> added
 	*/
-	@:overload public function add(menuItem : javax.swing.JMenuItem) : javax.swing.JMenuItem;
+	@:overload @:public public function add(menuItem : javax.swing.JMenuItem) : javax.swing.JMenuItem;
 	
 	/**
 	* Creates a new menu item with the specified text and appends
@@ -138,7 +138,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*
 	* @param s the string for the menu item to be added
 	*/
-	@:overload public function add(s : String) : javax.swing.JMenuItem;
+	@:overload @:public public function add(s : String) : javax.swing.JMenuItem;
 	
 	/**
 	* Appends a new menu item to the end of the menu which
@@ -148,7 +148,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @return the new menu item
 	* @see Action
 	*/
-	@:overload public function add(a : javax.swing.Action) : javax.swing.JMenuItem;
+	@:overload @:public public function add(a : javax.swing.Action) : javax.swing.JMenuItem;
 	
 	/**
 	* Factory method which creates the <code>JMenuItem</code> for
@@ -160,13 +160,13 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function createActionComponent(a : javax.swing.Action) : javax.swing.JMenuItem;
+	@:require(java3) @:overload @:protected private function createActionComponent(a : javax.swing.Action) : javax.swing.JMenuItem;
 	
 	/**
 	* Returns a properly configured <code>PropertyChangeListener</code>
 	* which updates the control as changes to the <code>Action</code> occur.
 	*/
-	@:overload private function createActionChangeListener(b : javax.swing.JMenuItem) : java.beans.PropertyChangeListener;
+	@:overload @:protected private function createActionChangeListener(b : javax.swing.JMenuItem) : java.beans.PropertyChangeListener;
 	
 	/**
 	* Removes the component at the specified index from this popup menu.
@@ -177,7 +177,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*                          <code>pos</code> is greater than the
 	*                          number of items
 	*/
-	@:overload override public function remove(pos : Int) : Void;
+	@:overload @:public override public function remove(pos : Int) : Void;
 	
 	/**
 	* Sets the value of the <code>lightWeightPopupEnabled</code> property,
@@ -200,7 +200,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*
 	* @see #isLightWeightPopupEnabled
 	*/
-	@:overload public function setLightWeightPopupEnabled(aFlag : Bool) : Void;
+	@:overload @:public public function setLightWeightPopupEnabled(aFlag : Bool) : Void;
 	
 	/**
 	* Gets the <code>lightWeightPopupEnabled</code> property.
@@ -208,7 +208,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @return the value of the <code>lightWeightPopupEnabled</code> property
 	* @see #setLightWeightPopupEnabled
 	*/
-	@:overload public function isLightWeightPopupEnabled() : Bool;
+	@:overload @:public public function isLightWeightPopupEnabled() : Bool;
 	
 	/**
 	* Returns the popup menu's label
@@ -216,7 +216,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @return a string containing the popup menu's label
 	* @see #setLabel
 	*/
-	@:overload public function getLabel() : String;
+	@:overload @:public public function getLabel() : String;
 	
 	/**
 	* Sets the popup menu's label.  Different look and feels may choose
@@ -229,12 +229,12 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* description: The label for the popup menu.
 	*       bound: true
 	*/
-	@:overload public function setLabel(label : String) : Void;
+	@:overload @:public public function setLabel(label : String) : Void;
 	
 	/**
 	* Appends a new separator at the end of the menu.
 	*/
-	@:overload public function addSeparator() : Void;
+	@:overload @:public public function addSeparator() : Void;
 	
 	/**
 	* Inserts a menu item for the specified <code>Action</code> object at
@@ -246,7 +246,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @exception IllegalArgumentException if <code>index</code> < 0
 	* @see Action
 	*/
-	@:overload public function insert(a : javax.swing.Action, index : Int) : Void;
+	@:overload @:public public function insert(a : javax.swing.Action, index : Int) : Void;
 	
 	/**
 	* Inserts the specified component into the menu at a given
@@ -257,21 +257,21 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*                   to insert the component, where 0 is the first
 	* @exception IllegalArgumentException if <code>index</code> < 0
 	*/
-	@:overload public function insert(component : java.awt.Component, index : Int) : Void;
+	@:overload @:public public function insert(component : java.awt.Component, index : Int) : Void;
 	
 	/**
 	*  Adds a <code>PopupMenu</code> listener.
 	*
 	*  @param l  the <code>PopupMenuListener</code> to add
 	*/
-	@:overload public function addPopupMenuListener(l : javax.swing.event.PopupMenuListener) : Void;
+	@:overload @:public public function addPopupMenuListener(l : javax.swing.event.PopupMenuListener) : Void;
 	
 	/**
 	* Removes a <code>PopupMenu</code> listener.
 	*
 	* @param l  the <code>PopupMenuListener</code> to remove
 	*/
-	@:overload public function removePopupMenuListener(l : javax.swing.event.PopupMenuListener) : Void;
+	@:overload @:public public function removePopupMenuListener(l : javax.swing.event.PopupMenuListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>PopupMenuListener</code>s added
@@ -281,7 +281,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getPopupMenuListeners() : java.NativeArray<javax.swing.event.PopupMenuListener>;
+	@:require(java4) @:overload @:public public function getPopupMenuListeners() : java.NativeArray<javax.swing.event.PopupMenuListener>;
 	
 	/**
 	* Adds a <code>MenuKeyListener</code> to the popup menu.
@@ -289,7 +289,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @param l the <code>MenuKeyListener</code> to be added
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function addMenuKeyListener(l : javax.swing.event.MenuKeyListener) : Void;
+	@:require(java5) @:overload @:public public function addMenuKeyListener(l : javax.swing.event.MenuKeyListener) : Void;
 	
 	/**
 	* Removes a <code>MenuKeyListener</code> from the popup menu.
@@ -297,7 +297,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @param l the <code>MenuKeyListener</code> to be removed
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function removeMenuKeyListener(l : javax.swing.event.MenuKeyListener) : Void;
+	@:require(java5) @:overload @:public public function removeMenuKeyListener(l : javax.swing.event.MenuKeyListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>MenuKeyListener</code>s added
@@ -307,31 +307,31 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*         array if no listeners have been added
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getMenuKeyListeners() : java.NativeArray<javax.swing.event.MenuKeyListener>;
+	@:require(java5) @:overload @:public public function getMenuKeyListeners() : java.NativeArray<javax.swing.event.MenuKeyListener>;
 	
 	/**
 	* Notifies <code>PopupMenuListener</code>s that this popup menu will
 	* become visible.
 	*/
-	@:overload private function firePopupMenuWillBecomeVisible() : Void;
+	@:overload @:protected private function firePopupMenuWillBecomeVisible() : Void;
 	
 	/**
 	* Notifies <code>PopupMenuListener</code>s that this popup menu will
 	* become invisible.
 	*/
-	@:overload private function firePopupMenuWillBecomeInvisible() : Void;
+	@:overload @:protected private function firePopupMenuWillBecomeInvisible() : Void;
 	
 	/**
 	* Notifies <code>PopupMenuListeners</code> that this popup menu is
 	* cancelled.
 	*/
-	@:overload private function firePopupMenuCanceled() : Void;
+	@:overload @:protected private function firePopupMenuCanceled() : Void;
 	
 	/**
 	* Lays out the container so that it uses the minimum space
 	* needed to display its contents.
 	*/
-	@:overload public function pack() : Void;
+	@:overload @:public public function pack() : Void;
 	
 	/**
 	* Sets the visibility of the popup menu.
@@ -342,13 +342,13 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*           bound: true
 	*     description: Makes the popup visible
 	*/
-	@:overload override public function setVisible(b : Bool) : Void;
+	@:overload @:public override public function setVisible(b : Bool) : Void;
 	
 	/**
 	* Returns true if the popup menu is visible (currently
 	* being displayed).
 	*/
-	@:overload override public function isVisible() : Bool;
+	@:overload @:public override public function isVisible() : Bool;
 	
 	/**
 	* Sets the location of the upper left corner of the
@@ -361,7 +361,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @beaninfo
 	* description: The location of the popup menu.
 	*/
-	@:overload override public function setLocation(x : Int, y : Int) : Void;
+	@:overload @:public override public function setLocation(x : Int, y : Int) : Void;
 	
 	/**
 	* Returns the component which is the 'invoker' of this
@@ -369,7 +369,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*
 	* @return the <code>Component</code> in which the popup menu is displayed
 	*/
-	@:overload public function getInvoker() : java.awt.Component;
+	@:overload @:public public function getInvoker() : java.awt.Component;
 	
 	/**
 	* Sets the invoker of this popup menu -- the component in which
@@ -381,7 +381,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* description: The invoking component for the popup menu
 	*      expert: true
 	*/
-	@:overload public function setInvoker(invoker : java.awt.Component) : Void;
+	@:overload @:public public function setInvoker(invoker : java.awt.Component) : Void;
 	
 	/**
 	* Displays the popup menu at the position x,y in the coordinate
@@ -393,7 +393,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @param y the y coordinate in invoker's coordinate space at which
 	* the popup menu is to be displayed
 	*/
-	@:overload public function show(invoker : java.awt.Component, x : Int, y : Int) : Void;
+	@:overload @:public public function show(invoker : java.awt.Component, x : Int, y : Int) : Void;
 	
 	/**
 	* Returns the component at the specified index.
@@ -402,7 +402,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @return the <code>Component</code> at that index
 	* @deprecated replaced by {@link java.awt.Container#getComponent(int)}
 	*/
-	@:overload public function getComponentAtIndex(i : Int) : java.awt.Component;
+	@:overload @:public public function getComponentAtIndex(i : Int) : java.awt.Component;
 	
 	/**
 	* Returns the index of the specified component.
@@ -411,7 +411,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @return the index of the component, where 0 is the first;
 	*         or -1 if the component is not found
 	*/
-	@:overload public function getComponentIndex(c : java.awt.Component) : Int;
+	@:overload @:public public function getComponentIndex(c : java.awt.Component) : Int;
 	
 	/**
 	* Sets the size of the Popup window using a <code>Dimension</code> object.
@@ -422,7 +422,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @beaninfo
 	* description: The size of the popup menu
 	*/
-	@:overload public function setPopupSize(d : java.awt.Dimension) : Void;
+	@:overload @:public public function setPopupSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Sets the size of the Popup window to the specified width and
@@ -434,7 +434,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @beaninfo
 	* description: The size of the popup menu
 	*/
-	@:overload public function setPopupSize(width : Int, height : Int) : Void;
+	@:overload @:public public function setPopupSize(width : Int, height : Int) : Void;
 	
 	/**
 	* Sets the currently selected component,  This will result
@@ -446,7 +446,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*      expert: true
 	*      hidden: true
 	*/
-	@:overload public function setSelected(sel : java.awt.Component) : Void;
+	@:overload @:public public function setSelected(sel : java.awt.Component) : Void;
 	
 	/**
 	* Checks whether the border should be painted.
@@ -454,7 +454,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @return true if the border is painted, false otherwise
 	* @see #setBorderPainted
 	*/
-	@:overload public function isBorderPainted() : Bool;
+	@:overload @:public public function isBorderPainted() : Bool;
 	
 	/**
 	* Sets whether the border should be painted.
@@ -464,7 +464,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @beaninfo
 	* description: Is the border of the popup menu painted
 	*/
-	@:overload public function setBorderPainted(b : Bool) : Void;
+	@:overload @:public public function setBorderPainted(b : Bool) : Void;
 	
 	/**
 	* Paints the popup menu's border if the <code>borderPainted</code>
@@ -474,7 +474,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @see JComponent#paint
 	* @see JComponent#setBorder
 	*/
-	@:overload private function paintBorder(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintBorder(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Returns the margin, in pixels, between the popup menu's border and
@@ -482,7 +482,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*
 	* @return an <code>Insets</code> object containing the margin values.
 	*/
-	@:overload public function getMargin() : java.awt.Insets;
+	@:overload @:public public function getMargin() : java.awt.Insets;
 	
 	/**
 	* Returns a string representation of this <code>JPopupMenu</code>.
@@ -494,7 +494,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*
 	* @return  a string representation of this <code>JPopupMenu</code>.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JPopupMenu.
@@ -505,14 +505,14 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @return an AccessibleJPopupMenu that serves as the
 	*         AccessibleContext of this JPopupMenu
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	/**
 	* This method is required to conform to the
 	* <code>MenuElement</code> interface, but it not implemented.
 	* @see MenuElement#processMouseEvent(MouseEvent, MenuElement[], MenuSelectionManager)
 	*/
-	@:overload public function processMouseEvent(event : java.awt.event.MouseEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
+	@:overload @:public public function processMouseEvent(event : java.awt.event.MouseEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
 	
 	/**
 	* Processes a key event forwarded from the
@@ -526,7 +526,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @param path the <code>MenuElement</code> path array
 	* @param manager   the <code>MenuSelectionManager</code>
 	*/
-	@:overload public function processKeyEvent(e : java.awt.event.KeyEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
+	@:overload @:public public function processKeyEvent(e : java.awt.event.KeyEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
 	
 	/**
 	* Messaged when the menubar selection changes to activate or
@@ -538,7 +538,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*        it is not
 	* @see MenuElement#menuSelectionChanged(boolean)
 	*/
-	@:overload public function menuSelectionChanged(isIncluded : Bool) : Void;
+	@:overload @:public public function menuSelectionChanged(isIncluded : Bool) : Void;
 	
 	/**
 	* Returns an array of <code>MenuElement</code>s containing the submenu
@@ -551,14 +551,14 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @return an array of <code>MenuElement</code> objects
 	* @see MenuElement#getSubElements
 	*/
-	@:overload public function getSubElements() : java.NativeArray<javax.swing.MenuElement>;
+	@:overload @:public public function getSubElements() : java.NativeArray<javax.swing.MenuElement>;
 	
 	/**
 	* Returns this <code>JPopupMenu</code> component.
 	* @return this <code>JPopupMenu</code> object
 	* @see MenuElement#getComponent
 	*/
-	@:overload public function getComponent() : java.awt.Component;
+	@:overload @:public public function getComponent() : java.awt.Component;
 	
 	/**
 	* Returns true if the <code>MouseEvent</code> is considered a popup trigger
@@ -567,7 +567,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @return true if the mouse event is a popup trigger
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function isPopupTrigger(e : java.awt.event.MouseEvent) : Bool;
+	@:require(java3) @:overload @:public public function isPopupTrigger(e : java.awt.event.MouseEvent) : Bool;
 	
 	
 }
@@ -584,7 +584,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function new() : Void;
+	@:require(java5) @:overload @:protected private function new() : Void;
 	
 	/**
 	* Get the role of this object.
@@ -592,7 +592,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @return an instance of AccessibleRole describing the role of
 	* the object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* This method gets called when a bound property is changed.
@@ -602,7 +602,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @throws NullPointerException if the parameter is null.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:require(java5) @:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -611,7 +611,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 */
 @:native('javax$swing$JPopupMenu$Separator') extern class JPopupMenu_Separator extends javax.swing.JSeparator
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -620,7 +620,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	
 }

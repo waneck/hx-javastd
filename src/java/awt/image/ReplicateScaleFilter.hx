@@ -28,41 +28,41 @@ extern class ReplicateScaleFilter extends java.awt.image.ImageFilter
 	/**
 	* The width of the source image.
 	*/
-	private var srcWidth : Int;
+	@:protected private var srcWidth : Int;
 	
 	/**
 	* The height of the source image.
 	*/
-	private var srcHeight : Int;
+	@:protected private var srcHeight : Int;
 	
 	/**
 	* The target width to scale the image.
 	*/
-	private var destWidth : Int;
+	@:protected private var destWidth : Int;
 	
 	/**
 	* The target height to scale the image.
 	*/
-	private var destHeight : Int;
+	@:protected private var destHeight : Int;
 	
 	/**
 	* An <code>int</code> array containing information about a
 	* row of pixels.
 	*/
-	private var srcrows : java.NativeArray<Int>;
+	@:protected private var srcrows : java.NativeArray<Int>;
 	
 	/**
 	* An <code>int</code> array containing information about a
 	* column of pixels.
 	*/
-	private var srccols : java.NativeArray<Int>;
+	@:protected private var srccols : java.NativeArray<Int>;
 	
 	/**
 	* A <code>byte</code> array initialized with a size of
 	* {@link #destWidth} and used to deliver a row of pixel
 	* data to the {@link ImageConsumer}.
 	*/
-	private var outpixbuf : Dynamic;
+	@:protected private var outpixbuf : Dynamic;
 	
 	/**
 	* Constructs a ReplicateScaleFilter that scales the pixels from
@@ -72,7 +72,7 @@ extern class ReplicateScaleFilter extends java.awt.image.ImageFilter
 	* @throws IllegalArgumentException if <code>width</code> equals
 	*         zero or <code>height</code> equals zero
 	*/
-	@:overload public function new(width : Int, height : Int) : Void;
+	@:overload @:public public function new(width : Int, height : Int) : Void;
 	
 	/**
 	* Passes along the properties from the source object after adding a
@@ -87,7 +87,7 @@ extern class ReplicateScaleFilter extends java.awt.image.ImageFilter
 	* this method directly since that operation could interfere
 	* with the filtering operation.
 	*/
-	@:overload public function setProperties(props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public override public function setProperties(props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Override the dimensions of the source image and pass the dimensions
@@ -101,7 +101,7 @@ extern class ReplicateScaleFilter extends java.awt.image.ImageFilter
 	* with the filtering operation.
 	* @see ImageConsumer
 	*/
-	@:overload public function setDimensions(w : Int, h : Int) : Void;
+	@:overload @:public override public function setDimensions(w : Int, h : Int) : Void;
 	
 	/**
 	* Choose which rows and columns of the delivered byte pixels are
@@ -115,7 +115,7 @@ extern class ReplicateScaleFilter extends java.awt.image.ImageFilter
 	* this method directly since that operation could interfere
 	* with the filtering operation.
 	*/
-	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Void;
+	@:overload @:public override public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Void;
 	
 	/**
 	* Choose which rows and columns of the delivered int pixels are
@@ -129,7 +129,7 @@ extern class ReplicateScaleFilter extends java.awt.image.ImageFilter
 	* this method directly since that operation could interfere
 	* with the filtering operation.
 	*/
-	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
+	@:overload @:public override public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
 	
 	
 }

@@ -32,7 +32,7 @@ extern class BindingID
 	* @return
 	*      Always a new instance.
 	*/
-	@:overload @:final public function createBinding() : com.sun.xml.internal.ws.api.WSBinding;
+	@:overload @:public @:final public function createBinding() : com.sun.xml.internal.ws.api.WSBinding;
 	
 	/**
 	* Returns wsdl:binding@transport attribute. Sub classes
@@ -42,11 +42,11 @@ extern class BindingID
 	* @return wsdl:binding@transport attribute
 	* @since JAX-WS RI 2.1.6
 	*/
-	@:require(java1) @:overload public function getTransport() : String;
+	@:require(java1) @:overload @:public public function getTransport() : String;
 	
-	@:overload @:final public function createBinding(features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : com.sun.xml.internal.ws.api.WSBinding;
+	@:overload @:public @:final public function createBinding(features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : com.sun.xml.internal.ws.api.WSBinding;
 	
-	@:overload @:final public function createBinding(features : com.sun.xml.internal.ws.api.WSFeatureList) : com.sun.xml.internal.ws.api.WSBinding;
+	@:overload @:public @:final public function createBinding(features : com.sun.xml.internal.ws.api.WSFeatureList) : com.sun.xml.internal.ws.api.WSBinding;
 	
 	/**
 	* Gets the SOAP version of this binding.
@@ -61,7 +61,7 @@ extern class BindingID
 	*      returns null. See {@link Message} for how a non-SOAP
 	*      binding shall be handled by {@link Tube}s.
 	*/
-	@:overload @:abstract public function getSOAPVersion() : com.sun.xml.internal.ws.api.SOAPVersion;
+	@:overload @:public @:abstract public function getSOAPVersion() : com.sun.xml.internal.ws.api.SOAPVersion;
 	
 	/**
 	* Creates a new {@link Codec} for this binding.
@@ -71,7 +71,7 @@ extern class BindingID
 	*      {@link WSBinding} at runtime by users, so some {@link Codec}s
 	*      need to have access to {@link WSBinding} that it's working for.
 	*/
-	@:overload @:abstract public function createEncoder(binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.api.pipe.Codec;
+	@:overload @:public @:abstract public function createEncoder(binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.api.pipe.Codec;
 	
 	/**
 	* Gets the binding ID, which uniquely identifies the binding.
@@ -84,7 +84,7 @@ extern class BindingID
 	* @return
 	*      Always non-null same value.
 	*/
-	@:overload @:abstract public function toString() : String;
+	@:overload @:public @:abstract public function toString() : String;
 	
 	/**
 	* Returna a new {@link WebServiceFeatureList} instance
@@ -95,7 +95,7 @@ extern class BindingID
 	* <tt>"{@value SOAPBinding#SOAP11HTTP_MTOM_BINDING}"</tt>
 	* would always return a list that has {@link MTOMFeature} enabled.
 	*/
-	@:overload public function createBuiltinFeatureList() : com.sun.xml.internal.ws.binding.WebServiceFeatureList;
+	@:overload @:public public function createBuiltinFeatureList() : com.sun.xml.internal.ws.binding.WebServiceFeatureList;
 	
 	/**
 	* Returns true if this binding can generate WSDL.
@@ -106,7 +106,7 @@ extern class BindingID
 	* runtime is not generating one and it expects the WSDL is packaged.
 	*
 	*/
-	@:overload public function canGenerateWSDL() : Bool;
+	@:overload @:public public function canGenerateWSDL() : Bool;
 	
 	/**
 	* Returns a parameter of this binding ID.
@@ -134,14 +134,14 @@ extern class BindingID
 	*      in the above example.) If not present, this method returns
 	*      the {@code defaultValue}.
 	*/
-	@:overload public function getParameter(parameterName : String, defaultValue : String) : String;
+	@:overload @:public public function getParameter(parameterName : String, defaultValue : String) : String;
 	
 	/**
 	* Compares the equality based on {@link #toString()}.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Parses a binding ID string into a {@link BindingID} object.
@@ -157,7 +157,7 @@ extern class BindingID
 	* @throws WebServiceException
 	*      If the binding ID is not understood.
 	*/
-	@:overload public static function parse(lexical : String) : com.sun.xml.internal.ws.api.BindingID;
+	@:overload @:public @:static public static function parse(lexical : String) : com.sun.xml.internal.ws.api.BindingID;
 	
 	/**
 	* Figures out the binding from {@link BindingType} annotation.
@@ -166,50 +166,50 @@ extern class BindingID
 	*      default to {@link BindingID#SOAP11_HTTP}, if no such annotation is present.
 	* @see #parse(String)
 	*/
-	@:overload public static function parse(implClass : Class<Dynamic>) : com.sun.xml.internal.ws.api.BindingID;
+	@:overload @:public @:static public static function parse(implClass : Class<Dynamic>) : com.sun.xml.internal.ws.api.BindingID;
 	
 	/**
 	* Constant that represents implementation specific SOAP1.2/HTTP which is
 	* used to generate non-standard WSDLs
 	*/
-	public static var X_SOAP12_HTTP(default, null) : com.sun.xml.internal.ws.api.BindingID.BindingID_SOAPHTTPImpl;
+	@:public @:static @:final public static var X_SOAP12_HTTP(default, null) : com.sun.xml.internal.ws.api.BindingID.BindingID_SOAPHTTPImpl;
 	
 	/**
 	* Constant that represents SOAP1.2/HTTP.
 	*/
-	public static var SOAP12_HTTP(default, null) : com.sun.xml.internal.ws.api.BindingID.BindingID_SOAPHTTPImpl;
+	@:public @:static @:final public static var SOAP12_HTTP(default, null) : com.sun.xml.internal.ws.api.BindingID.BindingID_SOAPHTTPImpl;
 	
 	/**
 	* Constant that represents SOAP1.1/HTTP.
 	*/
-	public static var SOAP11_HTTP(default, null) : com.sun.xml.internal.ws.api.BindingID.BindingID_SOAPHTTPImpl;
+	@:public @:static @:final public static var SOAP11_HTTP(default, null) : com.sun.xml.internal.ws.api.BindingID.BindingID_SOAPHTTPImpl;
 	
 	/**
 	* Constant that represents SOAP1.2/HTTP.
 	*/
-	public static var SOAP12_HTTP_MTOM(default, null) : com.sun.xml.internal.ws.api.BindingID.BindingID_SOAPHTTPImpl;
+	@:public @:static @:final public static var SOAP12_HTTP_MTOM(default, null) : com.sun.xml.internal.ws.api.BindingID.BindingID_SOAPHTTPImpl;
 	
 	/**
 	* Constant that represents SOAP1.1/HTTP.
 	*/
-	public static var SOAP11_HTTP_MTOM(default, null) : com.sun.xml.internal.ws.api.BindingID.BindingID_SOAPHTTPImpl;
+	@:public @:static @:final public static var SOAP11_HTTP_MTOM(default, null) : com.sun.xml.internal.ws.api.BindingID.BindingID_SOAPHTTPImpl;
 	
 	/**
 	* Constant that represents REST.
 	*/
-	public static var XML_HTTP(default, null) : com.sun.xml.internal.ws.api.BindingID;
+	@:public @:static @:final public static var XML_HTTP(default, null) : com.sun.xml.internal.ws.api.BindingID;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$api$BindingID$Impl') @:internal extern class BindingID_Impl extends com.sun.xml.internal.ws.api.BindingID
 {
-	@:overload public function new(version : com.sun.xml.internal.ws.api.SOAPVersion, lexical : String, canGenerateWSDL : Bool) : Void;
+	@:overload @:public public function new(version : com.sun.xml.internal.ws.api.SOAPVersion, lexical : String, canGenerateWSDL : Bool) : Void;
 	
-	@:overload override public function getSOAPVersion() : com.sun.xml.internal.ws.api.SOAPVersion;
+	@:overload @:public override public function getSOAPVersion() : com.sun.xml.internal.ws.api.SOAPVersion;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload override public function canGenerateWSDL() : Bool;
+	@:overload @:public override public function canGenerateWSDL() : Bool;
 	
 	
 }
@@ -218,15 +218,15 @@ extern class BindingID
 */
 @:native('com$sun$xml$internal$ws$api$BindingID$SOAPHTTPImpl') @:internal extern class BindingID_SOAPHTTPImpl extends com.sun.xml.internal.ws.api.BindingID.BindingID_Impl implements java.lang.Cloneable
 {
-	@:overload public function new(version : com.sun.xml.internal.ws.api.SOAPVersion, lexical : String, canGenerateWSDL : Bool) : Void;
+	@:overload @:public public function new(version : com.sun.xml.internal.ws.api.SOAPVersion, lexical : String, canGenerateWSDL : Bool) : Void;
 	
-	@:overload public function new(version : com.sun.xml.internal.ws.api.SOAPVersion, lexical : String, canGenerateWSDL : Bool, mtomEnabled : Bool) : Void;
+	@:overload @:public public function new(version : com.sun.xml.internal.ws.api.SOAPVersion, lexical : String, canGenerateWSDL : Bool, mtomEnabled : Bool) : Void;
 	
-	@:overload override public function createEncoder(binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.api.pipe.Codec;
+	@:overload @:public override public function createEncoder(binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.api.pipe.Codec;
 	
-	@:overload override public function createBuiltinFeatureList() : com.sun.xml.internal.ws.binding.WebServiceFeatureList;
+	@:overload @:public override public function createBuiltinFeatureList() : com.sun.xml.internal.ws.binding.WebServiceFeatureList;
 	
-	@:overload override public function getParameter(parameterName : String, defaultValue : String) : String;
+	@:overload @:public override public function getParameter(parameterName : String, defaultValue : String) : String;
 	
 	
 }

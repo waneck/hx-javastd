@@ -29,9 +29,9 @@ package sun.io;
 */
 extern class ByteToCharUTF16 extends sun.io.ByteToCharUnicode
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
 	
 }

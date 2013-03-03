@@ -27,27 +27,27 @@ package sun.nio.cs.ext;
 */
 extern class DoubleByteEncoder extends java.nio.charset.CharsetEncoder
 {
-	@:overload private function new(cs : java.nio.charset.Charset, index1 : java.NativeArray<java.StdTypes.Int16>, index2 : java.NativeArray<String>) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, index1 : java.NativeArray<java.StdTypes.Int16>, index2 : java.NativeArray<String>) : Void;
 	
-	@:overload private function new(cs : java.nio.charset.Charset, index1 : java.NativeArray<java.StdTypes.Int16>, index2 : java.NativeArray<String>, avg : Single, max : Single) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, index1 : java.NativeArray<java.StdTypes.Int16>, index2 : java.NativeArray<String>, avg : Single, max : Single) : Void;
 	
-	@:overload private function new(cs : java.nio.charset.Charset, index1 : java.NativeArray<java.StdTypes.Int16>, index2 : java.NativeArray<String>, repl : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, index1 : java.NativeArray<java.StdTypes.Int16>, index2 : java.NativeArray<String>, repl : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload private function new(cs : java.nio.charset.Charset, index1 : java.NativeArray<java.StdTypes.Int16>, index2 : java.NativeArray<String>, repl : java.NativeArray<java.StdTypes.Int8>, avg : Single, max : Single) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, index1 : java.NativeArray<java.StdTypes.Int16>, index2 : java.NativeArray<String>, repl : java.NativeArray<java.StdTypes.Int8>, avg : Single, max : Single) : Void;
 	
-	@:overload override public function canEncode(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canEncode(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
-	
-	/*
-	* Can be changed by subclass
-	*/
-	@:overload private function encodeDouble(ch : java.StdTypes.Char16) : Int;
+	@:overload @:protected override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
 	/*
 	* Can be changed by subclass
 	*/
-	@:overload private function encodeSingle(inputChar : java.StdTypes.Char16) : Int;
+	@:overload @:protected private function encodeDouble(ch : java.StdTypes.Char16) : Int;
+	
+	/*
+	* Can be changed by subclass
+	*/
+	@:overload @:protected private function encodeSingle(inputChar : java.StdTypes.Char16) : Int;
 	
 	/**
 	*  Protected method which should be overridden by concrete DBCS
@@ -56,7 +56,7 @@ extern class DoubleByteEncoder extends java.nio.charset.CharsetEncoder
 	*  null return value indicates surrogate values could not be
 	*  handled or encoded.
 	*/
-	@:overload private function encodeSurrogate(highSurrogate : java.StdTypes.Char16, lowSurrogate : java.StdTypes.Char16) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected private function encodeSurrogate(highSurrogate : java.StdTypes.Char16, lowSurrogate : java.StdTypes.Char16) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -21,29 +21,29 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class ElementDefinitionImpl extends com.sun.org.apache.xerces.internal.dom.ParentNode
 {
 	/** Element definition name. */
-	private var name : String;
+	@:protected private var name : String;
 	
 	/** Default attributes. */
-	private var attributes : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl;
+	@:protected private var attributes : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl;
 	
 	/** Factory constructor. */
-	@:overload public function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, name : String) : Void;
+	@:overload @:public public function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, name : String) : Void;
 	
 	/**
 	* A short integer indicating what type of node this is. The named
 	* constants for this value are defined in the org.w3c.dom.Node interface.
 	*/
-	@:overload public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public override public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the element definition name
 	*/
-	@:overload public function getNodeName() : String;
+	@:overload @:public override public function getNodeName() : String;
 	
 	/**
 	* Replicate this object.
 	*/
-	@:overload public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Query the attributes defined on this Element.
@@ -55,7 +55,7 @@ extern class ElementDefinitionImpl extends com.sun.org.apache.xerces.internal.do
 	*
 	* @return org.w3c.dom.NamedNodeMap containing org.w3c.dom.Attribute
 	*/
-	@:overload public function getAttributes() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public override public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
 	
 }

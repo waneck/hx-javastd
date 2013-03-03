@@ -36,7 +36,7 @@ extern class PropertySetterTaglet extends com.sun.tools.doclets.internal.toolkit
 	/**
 	* Construct a new PropertyGetterTaglet.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

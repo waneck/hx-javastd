@@ -31,7 +31,7 @@ package com.sun.xml.internal.ws.policy;
 */
 extern class EffectivePolicyModifier extends com.sun.xml.internal.ws.policy.PolicyMapMutator
 {
-	@:overload public static function createEffectivePolicyModifier() : com.sun.xml.internal.ws.policy.EffectivePolicyModifier;
+	@:overload @:public @:static public static function createEffectivePolicyModifier() : com.sun.xml.internal.ws.policy.EffectivePolicyModifier;
 	
 	/**
 	* Replaces current effective policy on the service scope (identified by a {@code key} parameter) with the new efective
@@ -43,7 +43,7 @@ extern class EffectivePolicyModifier extends com.sun.xml.internal.ws.policy.Poli
 	*
 	* @throws IllegalArgumentException in case any of the input parameters is {@code null}
 	*/
-	@:overload public function setNewEffectivePolicyForServiceScope(key : com.sun.xml.internal.ws.policy.PolicyMapKey, newEffectivePolicy : com.sun.xml.internal.ws.policy.Policy) : Void;
+	@:overload @:public public function setNewEffectivePolicyForServiceScope(key : com.sun.xml.internal.ws.policy.PolicyMapKey, newEffectivePolicy : com.sun.xml.internal.ws.policy.Policy) : Void;
 	
 	/**
 	* Replaces current effective policy on the endpoint scope (identified by a {@code key} parameter) with the new efective
@@ -54,7 +54,7 @@ extern class EffectivePolicyModifier extends com.sun.xml.internal.ws.policy.Poli
 	*
 	* @throws IllegalArgumentException in case any of the input parameters is {@code null}
 	*/
-	@:overload public function setNewEffectivePolicyForEndpointScope(key : com.sun.xml.internal.ws.policy.PolicyMapKey, newEffectivePolicy : com.sun.xml.internal.ws.policy.Policy) : Void;
+	@:overload @:public public function setNewEffectivePolicyForEndpointScope(key : com.sun.xml.internal.ws.policy.PolicyMapKey, newEffectivePolicy : com.sun.xml.internal.ws.policy.Policy) : Void;
 	
 	/**
 	* Replaces current effective policy on the operation scope (identified by a {@code key} parameter) with the new efective
@@ -66,7 +66,7 @@ extern class EffectivePolicyModifier extends com.sun.xml.internal.ws.policy.Poli
 	*
 	* @throws IllegalArgumentException in case any of the input parameters is {@code null}
 	*/
-	@:overload public function setNewEffectivePolicyForOperationScope(key : com.sun.xml.internal.ws.policy.PolicyMapKey, newEffectivePolicy : com.sun.xml.internal.ws.policy.Policy) : Void;
+	@:overload @:public public function setNewEffectivePolicyForOperationScope(key : com.sun.xml.internal.ws.policy.PolicyMapKey, newEffectivePolicy : com.sun.xml.internal.ws.policy.Policy) : Void;
 	
 	/**
 	* Replaces current effective policy on the input message scope (identified by a {@code key} parameter) with the new efective
@@ -78,7 +78,7 @@ extern class EffectivePolicyModifier extends com.sun.xml.internal.ws.policy.Poli
 	*
 	* @throws IllegalArgumentException in case any of the input parameters is {@code null}
 	*/
-	@:overload public function setNewEffectivePolicyForInputMessageScope(key : com.sun.xml.internal.ws.policy.PolicyMapKey, newEffectivePolicy : com.sun.xml.internal.ws.policy.Policy) : Void;
+	@:overload @:public public function setNewEffectivePolicyForInputMessageScope(key : com.sun.xml.internal.ws.policy.PolicyMapKey, newEffectivePolicy : com.sun.xml.internal.ws.policy.Policy) : Void;
 	
 	/**
 	* Replaces current effective policy on the output message scope (identified by a {@code key} parameter) with the new efective
@@ -90,7 +90,7 @@ extern class EffectivePolicyModifier extends com.sun.xml.internal.ws.policy.Poli
 	*
 	* @throws IllegalArgumentException in case any of the input parameters is {@code null}
 	*/
-	@:overload public function setNewEffectivePolicyForOutputMessageScope(key : com.sun.xml.internal.ws.policy.PolicyMapKey, newEffectivePolicy : com.sun.xml.internal.ws.policy.Policy) : Void;
+	@:overload @:public public function setNewEffectivePolicyForOutputMessageScope(key : com.sun.xml.internal.ws.policy.PolicyMapKey, newEffectivePolicy : com.sun.xml.internal.ws.policy.Policy) : Void;
 	
 	/**
 	* Replaces current effective policy on the fault message scope (identified by a {@code key} parameter) with the new efective
@@ -102,7 +102,7 @@ extern class EffectivePolicyModifier extends com.sun.xml.internal.ws.policy.Poli
 	*
 	* @throws IllegalArgumentException in case any of the input parameters is {@code null}
 	*/
-	@:overload public function setNewEffectivePolicyForFaultMessageScope(key : com.sun.xml.internal.ws.policy.PolicyMapKey, newEffectivePolicy : com.sun.xml.internal.ws.policy.Policy) : Void;
+	@:overload @:public public function setNewEffectivePolicyForFaultMessageScope(key : com.sun.xml.internal.ws.policy.PolicyMapKey, newEffectivePolicy : com.sun.xml.internal.ws.policy.Policy) : Void;
 	
 	
 }

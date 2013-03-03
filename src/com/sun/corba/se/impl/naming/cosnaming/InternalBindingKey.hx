@@ -32,17 +32,17 @@ extern class InternalBindingKey
 	* It computes the hashCode once and stores it, and also precomputes
 	* the lengths of the id and kind strings for faster comparison.
 	*/
-	public var name : org.omg.CosNaming.NameComponent;
+	@:public public var name : org.omg.CosNaming.NameComponent;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(n : org.omg.CosNaming.NameComponent) : Void;
+	@:overload @:public public function new(n : org.omg.CosNaming.NameComponent) : Void;
 	
-	@:overload private function setup(n : org.omg.CosNaming.NameComponent) : Void;
+	@:overload @:protected private function setup(n : org.omg.CosNaming.NameComponent) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

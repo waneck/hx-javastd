@@ -25,7 +25,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 */
 extern class XMLNode
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

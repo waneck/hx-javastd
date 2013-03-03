@@ -35,7 +35,7 @@ extern class ImageFilter implements java.awt.image.ImageConsumer implements java
 	* @see #getFilterInstance
 	* @see ImageConsumer
 	*/
-	private var consumer : java.awt.image.ImageConsumer;
+	@:protected private var consumer : java.awt.image.ImageConsumer;
 	
 	/**
 	* Returns a unique instance of an ImageFilter object which will
@@ -51,7 +51,7 @@ extern class ImageFilter implements java.awt.image.ImageConsumer implements java
 	* @return an <code>ImageFilter</code> used to perform the
 	*         filtering for the specified <code>ImageConsumer</code>.
 	*/
-	@:overload public function getFilterInstance(ic : java.awt.image.ImageConsumer) : java.awt.image.ImageFilter;
+	@:overload @:public public function getFilterInstance(ic : java.awt.image.ImageConsumer) : java.awt.image.ImageFilter;
 	
 	/**
 	* Filters the information provided in the setDimensions method
@@ -64,7 +64,7 @@ extern class ImageFilter implements java.awt.image.ImageConsumer implements java
 	* with the filtering operation.
 	* @see ImageConsumer#setDimensions
 	*/
-	@:overload public function setDimensions(width : Int, height : Int) : Void;
+	@:overload @:public public function setDimensions(width : Int, height : Int) : Void;
 	
 	/**
 	* Passes the properties from the source object along after adding a
@@ -79,7 +79,7 @@ extern class ImageFilter implements java.awt.image.ImageConsumer implements java
 	* @param props the properties from the source object
 	* @exception NullPointerException if <code>props</code> is null
 	*/
-	@:overload public function setProperties(props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function setProperties(props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Filter the information provided in the setColorModel method
@@ -92,7 +92,7 @@ extern class ImageFilter implements java.awt.image.ImageConsumer implements java
 	* with the filtering operation.
 	* @see ImageConsumer#setColorModel
 	*/
-	@:overload public function setColorModel(model : java.awt.image.ColorModel) : Void;
+	@:overload @:public public function setColorModel(model : java.awt.image.ColorModel) : Void;
 	
 	/**
 	* Filters the information provided in the setHints method
@@ -105,7 +105,7 @@ extern class ImageFilter implements java.awt.image.ImageConsumer implements java
 	* with the filtering operation.
 	* @see ImageConsumer#setHints
 	*/
-	@:overload public function setHints(hints : Int) : Void;
+	@:overload @:public public function setHints(hints : Int) : Void;
 	
 	/**
 	* Filters the information provided in the setPixels method of the
@@ -118,7 +118,7 @@ extern class ImageFilter implements java.awt.image.ImageConsumer implements java
 	* with the filtering operation.
 	* @see ImageConsumer#setPixels
 	*/
-	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Void;
+	@:overload @:public public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Void;
 	
 	/**
 	* Filters the information provided in the setPixels method of the
@@ -131,7 +131,7 @@ extern class ImageFilter implements java.awt.image.ImageConsumer implements java
 	* with the filtering operation.
 	* @see ImageConsumer#setPixels
 	*/
-	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
+	@:overload @:public public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
 	
 	/**
 	* Filters the information provided in the imageComplete method of
@@ -144,7 +144,7 @@ extern class ImageFilter implements java.awt.image.ImageConsumer implements java
 	* with the filtering operation.
 	* @see ImageConsumer#imageComplete
 	*/
-	@:overload public function imageComplete(status : Int) : Void;
+	@:overload @:public public function imageComplete(status : Int) : Void;
 	
 	/**
 	* Responds to a request for a TopDownLeftRight (TDLR) ordered resend
@@ -193,12 +193,12 @@ extern class ImageFilter implements java.awt.image.ImageConsumer implements java
 	* forwarded to if necessary
 	* @exception NullPointerException if <code>ip</code> is null
 	*/
-	@:overload public function resendTopDownLeftRight(ip : java.awt.image.ImageProducer) : Void;
+	@:overload @:public public function resendTopDownLeftRight(ip : java.awt.image.ImageProducer) : Void;
 	
 	/**
 	* Clones this object.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

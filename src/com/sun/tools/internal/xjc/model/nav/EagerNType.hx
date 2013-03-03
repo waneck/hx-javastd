@@ -25,17 +25,17 @@ package com.sun.tools.internal.xjc.model.nav;
 */
 @:internal extern class EagerNType implements com.sun.tools.internal.xjc.model.nav.NType
 {
-	@:overload public function new(type : java.lang.reflect.Type) : Void;
+	@:overload @:public public function new(type : java.lang.reflect.Type) : Void;
 	
-	@:overload public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
+	@:overload @:public public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function isBoxedType() : Bool;
+	@:overload @:public public function isBoxedType() : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function fullName() : String;
+	@:overload @:public public function fullName() : String;
 	
 	
 }

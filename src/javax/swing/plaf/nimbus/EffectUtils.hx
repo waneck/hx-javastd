@@ -43,7 +43,7 @@ package javax.swing.plaf.nimbus;
 	* @throws IllegalArgumentException is <code>pixels</code> is non-null and
 	*   of length &lt; w*h
 	*/
-	@:overload public static function getPixels(img : java.awt.image.BufferedImage, x : Int, y : Int, w : Int, h : Int, pixels : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public @:static public static function getPixels(img : java.awt.image.BufferedImage, x : Int, y : Int, w : Int, h : Int, pixels : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
 	/**
 	* <p>Writes a rectangular area of pixels in the destination
@@ -60,7 +60,7 @@ package javax.swing.plaf.nimbus;
 	* @throws IllegalArgumentException is <code>pixels</code> is non-null and
 	*   of length &lt; w*h
 	*/
-	@:overload public static function setPixels(img : java.awt.image.BufferedImage, x : Int, y : Int, w : Int, h : Int, pixels : java.NativeArray<Int>) : Void;
+	@:overload @:public @:static public static function setPixels(img : java.awt.image.BufferedImage, x : Int, y : Int, w : Int, h : Int, pixels : java.NativeArray<Int>) : Void;
 	
 	/**
 	* <p>Returns a new <code>BufferedImage</code> using the same color model
@@ -73,7 +73,7 @@ package javax.swing.plaf.nimbus;
 	* @return a new <code>BufferedImage</code>, compatible with the color model
 	*   of <code>image</code>
 	*/
-	@:overload public static function createColorModelCompatibleImage(image : java.awt.image.BufferedImage) : java.awt.image.BufferedImage;
+	@:overload @:public @:static public static function createColorModelCompatibleImage(image : java.awt.image.BufferedImage) : java.awt.image.BufferedImage;
 	
 	/**
 	* <p>Returns a new translucent compatible image of the specified width and
@@ -87,7 +87,7 @@ package javax.swing.plaf.nimbus;
 	* @return a new translucent compatible <code>BufferedImage</code> of the
 	*   specified width and height
 	*/
-	@:overload public static function createCompatibleTranslucentImage(width : Int, height : Int) : java.awt.image.BufferedImage;
+	@:overload @:public @:static public static function createCompatibleTranslucentImage(width : Int, height : Int) : java.awt.image.BufferedImage;
 	
 	
 }

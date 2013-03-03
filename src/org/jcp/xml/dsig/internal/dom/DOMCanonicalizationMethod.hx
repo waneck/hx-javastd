@@ -37,7 +37,7 @@ extern class DOMCanonicalizationMethod extends org.jcp.xml.dsig.internal.dom.DOM
 	*
 	* @param spi TransformService
 	*/
-	@:overload public function new(spi : javax.xml.crypto.dsig.TransformService) : Void;
+	@:overload @:public public function new(spi : javax.xml.crypto.dsig.TransformService) : Void;
 	
 	/**
 	* Creates a <code>DOMCanonicalizationMethod</code> from an element. This
@@ -46,7 +46,7 @@ extern class DOMCanonicalizationMethod extends org.jcp.xml.dsig.internal.dom.DOM
 	*
 	* @param cmElem a CanonicalizationMethod element
 	*/
-	@:overload public function new(cmElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
+	@:overload @:public public function new(cmElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
 	
 	/**
 	* Canonicalizes the specified data using the underlying canonicalization
@@ -61,11 +61,11 @@ extern class DOMCanonicalizationMethod extends org.jcp.xml.dsig.internal.dom.DOM
 	* @throws TransformException if an unexpected error occurs while
 	*    canonicalizing the data
 	*/
-	@:overload public function canonicalize(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
+	@:overload @:public public function canonicalize(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
 	
-	@:overload public function canonicalize(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext, os : java.io.OutputStream) : javax.xml.crypto.Data;
+	@:overload @:public public function canonicalize(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext, os : java.io.OutputStream) : javax.xml.crypto.Data;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
 	
 }

@@ -87,7 +87,7 @@ extern class AttachPermission extends java.security.BasicPermission
 	* @throws NullPointerException if name is <code>null</code>.
 	* @throws IllegalArgumentException if the name is invalid.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Constructs a new AttachPermission object.
@@ -101,7 +101,7 @@ extern class AttachPermission extends java.security.BasicPermission
 	* @throws NullPointerException if name is <code>null</code>.
 	* @throws IllegalArgumentException if arguments are invalid.
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	
 }

@@ -21,23 +21,23 @@ package com.sun.org.apache.xerces.internal.util;
 extern class LocatorProxy implements org.xml.sax.ext.Locator2
 {
 	/** Constructs an XML locator proxy. */
-	@:overload public function new(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator) : Void;
+	@:overload @:public public function new(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator) : Void;
 	
 	/** Public identifier. */
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/** System identifier. */
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/** Line number. */
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/** Column number. */
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
-	@:overload public function getXMLVersion() : String;
+	@:overload @:public public function getXMLVersion() : String;
 	
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	
 }

@@ -38,17 +38,17 @@ package sun.jvmstat.perfdata.monitor;
 	/**
 	* method to parse the given input file.
 	*/
-	@:overload public function parse(map : java.util.Map<String, java.util.ArrayList<String>>) : Void;
+	@:overload @:public public function parse(map : java.util.Map<String, java.util.ArrayList<String>>) : Void;
 	
 	
 }
 @:native('sun$jvmstat$perfdata$monitor$AliasFileParser$Token') @:internal extern class AliasFileParser_Token
 {
-	public var sval : String;
+	@:public public var sval : String;
 	
-	public var ttype : Int;
+	@:public public var ttype : Int;
 	
-	@:overload public function new(ttype : Int, sval : String) : Void;
+	@:overload @:public public function new(ttype : Int, sval : String) : Void;
 	
 	
 }

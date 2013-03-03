@@ -30,7 +30,7 @@ extern class X400Address implements sun.security.x509.GeneralNameInterface
 	*
 	* @param nameValue value of the name as a byte array
 	*/
-	@:overload public function new(value : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(value : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Create the X400Address object from the passed encoded Der value.
@@ -38,12 +38,12 @@ extern class X400Address implements sun.security.x509.GeneralNameInterface
 	* @param derValue the encoded DER X400Address.
 	* @exception IOException on error.
 	*/
-	@:overload public function new(derValue : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(derValue : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Return the type of the GeneralName.
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Encode the X400 name into the DerOutputStream.
@@ -51,12 +51,12 @@ extern class X400Address implements sun.security.x509.GeneralNameInterface
 	* @param out the DER stream to encode the X400Address to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Return the printable string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Return type of constraint inputName places on this name:<ul>
@@ -73,7 +73,7 @@ extern class X400Address implements sun.security.x509.GeneralNameInterface
 	* @throws UnsupportedOperationException if name is same type, but comparison operations are
 	*          not supported for this name type.
 	*/
-	@:overload public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
+	@:overload @:public public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
 	
 	/**
 	* Return subtree depth of this name for purposes of determining
@@ -83,7 +83,7 @@ extern class X400Address implements sun.security.x509.GeneralNameInterface
 	* @returns distance of name from root
 	* @throws UnsupportedOperationException if not supported for this name type
 	*/
-	@:overload public function subtreeDepth() : Int;
+	@:overload @:public public function subtreeDepth() : Int;
 	
 	
 }

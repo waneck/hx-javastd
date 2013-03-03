@@ -57,7 +57,7 @@ package javax.net.ssl;
 	*
 	* @see SSLParameters#getAlgorithmConstraints
 	*/
-	@:overload @:abstract public function getLocalSupportedSignatureAlgorithms() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getLocalSupportedSignatureAlgorithms() : java.NativeArray<String>;
 	
 	/**
 	* Obtains an array of supported signature algorithms that the peer is
@@ -81,7 +81,7 @@ package javax.net.ssl;
 	* @see X509KeyManager
 	* @see X509ExtendedKeyManager
 	*/
-	@:overload @:abstract public function getPeerSupportedSignatureAlgorithms() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getPeerSupportedSignatureAlgorithms() : java.NativeArray<String>;
 	
 	/**
 	* Removes the object bound to the given name in the session's
@@ -97,7 +97,7 @@ package javax.net.ssl;
 	*          across different access control contexts
 	* @throws IllegalArgumentException if the argument is null.
 	*/
-	@:overload public function removeValue(name : String) : Void;
+	@:overload @:public @:public public function removeValue(name : String) : Void;
 	
 	/**
 	* Returns the identity of the peer which was identified as part
@@ -120,7 +120,7 @@ package javax.net.ssl;
 	*          has not been verified
 	* @see #getPeerPrincipal()
 	*/
-	@:overload public function getPeerCertificateChain() : java.NativeArray<javax.security.cert.X509Certificate>;
+	@:overload @:public @:public public function getPeerCertificateChain() : java.NativeArray<javax.security.cert.X509Certificate>;
 	
 	/**
 	* Returns the certificate(s) that were sent to the peer during
@@ -142,7 +142,7 @@ package javax.net.ssl;
 	*
 	* @see #getLocalPrincipal()
 	*/
-	@:overload public function getLocalCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public @:public public function getLocalCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the name of the SSL cipher suite which is used for all
@@ -154,7 +154,7 @@ package javax.net.ssl;
 	*
 	* @return the name of the session's cipher suite
 	*/
-	@:overload public function getCipherSuite() : String;
+	@:overload @:public @:public public function getCipherSuite() : String;
 	
 	/**
 	* Returns the last time this Session representation was accessed by the
@@ -172,7 +172,7 @@ package javax.net.ssl;
 	*
 	* @return the last time this Session was accessed
 	*/
-	@:overload public function getLastAccessedTime() : haxe.Int64;
+	@:overload @:public @:public public function getLastAccessedTime() : haxe.Int64;
 	
 	/**
 	* Returns whether this session is valid and available for resuming or
@@ -183,7 +183,7 @@ package javax.net.ssl;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isValid() : Bool;
+	@:require(java5) @:overload @:public @:public public function isValid() : Bool;
 	
 	/**
 	*
@@ -204,7 +204,7 @@ package javax.net.ssl;
 	* @param value the data object to be bound. This may not be null.
 	* @throws IllegalArgumentException if either argument is null.
 	*/
-	@:overload public function putValue(name : String, value : Dynamic) : Void;
+	@:overload @:public @:public public function putValue(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Returns the port number of the peer in this session.
@@ -221,7 +221,7 @@ package javax.net.ssl;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getPeerPort() : Int;
+	@:require(java5) @:overload @:public @:public public function getPeerPort() : Int;
 	
 	/**
 	* Gets the current size of the largest SSL/TLS packet that is expected
@@ -240,14 +240,14 @@ package javax.net.ssl;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getPacketBufferSize() : Int;
+	@:require(java5) @:overload @:public @:public public function getPacketBufferSize() : Int;
 	
 	/**
 	* Returns the identifier assigned to this Session.
 	*
 	* @return the Session identifier
 	*/
-	@:overload public function getId() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:public public function getId() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the context in which this session is bound.
@@ -267,7 +267,7 @@ package javax.net.ssl;
 	* @return the session context used for this session, or null
 	* if the context is unavailable.
 	*/
-	@:overload public function getSessionContext() : javax.net.ssl.SSLSessionContext;
+	@:overload @:public @:public public function getSessionContext() : javax.net.ssl.SSLSessionContext;
 	
 	/**
 	* Returns the identity of the peer which was established as part of
@@ -285,7 +285,7 @@ package javax.net.ssl;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getPeerPrincipal() : java.security.Principal;
+	@:require(java5) @:overload @:public @:public public function getPeerPrincipal() : java.security.Principal;
 	
 	/**
 	* Returns the host name of the peer in this session.
@@ -305,7 +305,7 @@ package javax.net.ssl;
 	* @return  the host name of the peer host, or null if no information
 	*          is available.
 	*/
-	@:overload public function getPeerHost() : String;
+	@:overload @:public @:public public function getPeerHost() : String;
 	
 	/**
 	* Returns an array of the names of all the application layer
@@ -317,7 +317,7 @@ package javax.net.ssl;
 	* @return a non-null (possibly empty) array of names of the objects
 	*  bound to this Session.
 	*/
-	@:overload public function getValueNames() : java.NativeArray<String>;
+	@:overload @:public @:public public function getValueNames() : java.NativeArray<String>;
 	
 	/**
 	* Gets the current size of the largest application data that is
@@ -335,7 +335,7 @@ package javax.net.ssl;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getApplicationBufferSize() : Int;
+	@:require(java5) @:overload @:public @:public public function getApplicationBufferSize() : Int;
 	
 	/**
 	* Returns the time at which this Session representation was created,
@@ -343,7 +343,7 @@ package javax.net.ssl;
 	*
 	* @return the time this Session was created
 	*/
-	@:overload public function getCreationTime() : haxe.Int64;
+	@:overload @:public @:public public function getCreationTime() : haxe.Int64;
 	
 	/**
 	* Returns the object bound to the given name in the session's
@@ -357,7 +357,7 @@ package javax.net.ssl;
 	*          not exist.
 	* @throws IllegalArgumentException if the argument is null.
 	*/
-	@:overload public function getValue(name : String) : Dynamic;
+	@:overload @:public @:public public function getValue(name : String) : Dynamic;
 	
 	/**
 	* Returns the identity of the peer which was established as part
@@ -374,7 +374,7 @@ package javax.net.ssl;
 	*          been verified
 	* @see #getPeerPrincipal()
 	*/
-	@:overload public function getPeerCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public @:public public function getPeerCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the standard name of the protocol used for all
@@ -385,7 +385,7 @@ package javax.net.ssl;
 	* @return the standard name of the protocol used for all
 	* connections in the session.
 	*/
-	@:overload public function getProtocol() : String;
+	@:overload @:public @:public public function getProtocol() : String;
 	
 	/**
 	* Invalidates the session.
@@ -397,7 +397,7 @@ package javax.net.ssl;
 	*
 	* @see #isValid()
 	*/
-	@:overload public function invalidate() : Void;
+	@:overload @:public @:public public function invalidate() : Void;
 	
 	/**
 	* Returns the principal that was sent to the peer during handshaking.
@@ -412,7 +412,7 @@ package javax.net.ssl;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getLocalPrincipal() : java.security.Principal;
+	@:require(java5) @:overload @:public @:public public function getLocalPrincipal() : java.security.Principal;
 	
 	
 }

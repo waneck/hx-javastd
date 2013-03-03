@@ -43,7 +43,7 @@ extern interface MessageInfo extends com.sun.pept.presentation.MessageStruct
 	* @return a EPTFactory with ...
 	* </p>
 	*/
-	@:overload public function getEPTFactory() : com.sun.pept.ept.EPTFactory;
+	@:overload @:public public function getEPTFactory() : com.sun.pept.ept.EPTFactory;
 	
 	/**
 	* <p>
@@ -53,7 +53,7 @@ extern interface MessageInfo extends com.sun.pept.presentation.MessageStruct
 	* @return a MessageDispatcher with ...
 	* </p>
 	*/
-	@:overload public function getMessageDispatcher() : com.sun.pept.protocol.MessageDispatcher;
+	@:overload @:public public function getMessageDispatcher() : com.sun.pept.protocol.MessageDispatcher;
 	
 	/**
 	* <p>
@@ -63,7 +63,7 @@ extern interface MessageInfo extends com.sun.pept.presentation.MessageStruct
 	* @return a Encoder with ...
 	* </p>
 	*/
-	@:overload public function getEncoder() : com.sun.pept.encoding.Encoder;
+	@:overload @:public public function getEncoder() : com.sun.pept.encoding.Encoder;
 	
 	/**
 	* <p>
@@ -73,7 +73,7 @@ extern interface MessageInfo extends com.sun.pept.presentation.MessageStruct
 	* @return a Decoder with ...
 	* </p>
 	*/
-	@:overload public function getDecoder() : com.sun.pept.encoding.Decoder;
+	@:overload @:public public function getDecoder() : com.sun.pept.encoding.Decoder;
 	
 	/**
 	* <p>
@@ -83,7 +83,7 @@ extern interface MessageInfo extends com.sun.pept.presentation.MessageStruct
 	* @return a Connection with ...
 	* </p>
 	*/
-	@:overload public function getConnection() : com.sun.pept.transport.Connection;
+	@:overload @:public public function getConnection() : com.sun.pept.transport.Connection;
 	
 	/**
 	* <p>
@@ -95,7 +95,7 @@ extern interface MessageInfo extends com.sun.pept.presentation.MessageStruct
 	* @param eptFactory ...
 	* </p>
 	*/
-	@:overload public function setEPTFactory(eptFactory : com.sun.pept.ept.EPTFactory) : Void;
+	@:overload @:public public function setEPTFactory(eptFactory : com.sun.pept.ept.EPTFactory) : Void;
 	
 	/**
 	* <p>
@@ -107,7 +107,7 @@ extern interface MessageInfo extends com.sun.pept.presentation.MessageStruct
 	* @param messageDispatcher ...
 	* </p>
 	*/
-	@:overload public function setMessageDispatcher(messageDispatcher : com.sun.pept.protocol.MessageDispatcher) : Void;
+	@:overload @:public public function setMessageDispatcher(messageDispatcher : com.sun.pept.protocol.MessageDispatcher) : Void;
 	
 	/**
 	* <p>
@@ -119,7 +119,7 @@ extern interface MessageInfo extends com.sun.pept.presentation.MessageStruct
 	* @param encoder ...
 	* </p>
 	*/
-	@:overload public function setEncoder(encoder : com.sun.pept.encoding.Encoder) : Void;
+	@:overload @:public public function setEncoder(encoder : com.sun.pept.encoding.Encoder) : Void;
 	
 	/**
 	* <p>
@@ -131,7 +131,7 @@ extern interface MessageInfo extends com.sun.pept.presentation.MessageStruct
 	* @param decoder ...
 	* </p>
 	*/
-	@:overload public function setDecoder(decoder : com.sun.pept.encoding.Decoder) : Void;
+	@:overload @:public public function setDecoder(decoder : com.sun.pept.encoding.Decoder) : Void;
 	
 	/**
 	* <p>
@@ -143,7 +143,7 @@ extern interface MessageInfo extends com.sun.pept.presentation.MessageStruct
 	* @param connection ...
 	* </p>
 	*/
-	@:overload public function setConnection(connection : com.sun.pept.transport.Connection) : Void;
+	@:overload @:public public function setConnection(connection : com.sun.pept.transport.Connection) : Void;
 	
 	
 }

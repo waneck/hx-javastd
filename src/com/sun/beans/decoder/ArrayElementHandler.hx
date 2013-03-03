@@ -40,13 +40,13 @@ package com.sun.beans.decoder;
 	* @param name   the attribute name
 	* @param value  the attribute value
 	*/
-	@:overload override public function addAttribute(name : String, value : String) : Void;
+	@:overload @:public override public function addAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Calculates the value of this element
 	* if the lentgh attribute is set.
 	*/
-	@:overload override public function startElement() : Void;
+	@:overload @:public override public function startElement() : Void;
 	
 	/**
 	* Creates an instance of the array.
@@ -55,7 +55,7 @@ package com.sun.beans.decoder;
 	* @param args  the array of arguments
 	* @return the value of this element
 	*/
-	@:overload private function getValueObject(type : Class<Dynamic>, args : java.NativeArray<Dynamic>) : com.sun.beans.decoder.ValueObject;
+	@:overload @:protected private function getValueObject(type : Class<Dynamic>, args : java.NativeArray<Dynamic>) : com.sun.beans.decoder.ValueObject;
 	
 	
 }

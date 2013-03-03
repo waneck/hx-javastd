@@ -28,29 +28,29 @@ package com.sun.tools.apt.mirror.type;
 */
 extern class WildcardTypeImpl extends com.sun.tools.apt.mirror.type.TypeMirrorImpl implements com.sun.mirror.type.WildcardType
 {
-	private var type : com.sun.tools.javac.code.Type.Type_WildcardType;
+	@:protected private var type : com.sun.tools.javac.code.Type.Type_WildcardType;
 	
 	/**
 	* Returns the string form of a wildcard type, consisting of "?"
 	* and any "extends" or "super" clause.
 	* Delimiting brackets are not included.  Class names are qualified.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getUpperBounds() : java.util.Collection<com.sun.mirror.type.ReferenceType>;
+	@:overload @:public public function getUpperBounds() : java.util.Collection<com.sun.mirror.type.ReferenceType>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getLowerBounds() : java.util.Collection<com.sun.mirror.type.ReferenceType>;
+	@:overload @:public public function getLowerBounds() : java.util.Collection<com.sun.mirror.type.ReferenceType>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
 	
 	
 }

@@ -29,17 +29,17 @@ package javax.management.loading;
 	/**
 	* Loader must be non-null;
 	*/
-	@:overload public function new(_in : java.io.InputStream, loader : javax.management.loading.MLet) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, loader : javax.management.loading.MLet) : Void;
 	
 	/**
 	* Use the given ClassLoader rather than using the system class
 	*/
-	@:overload override private function resolveClass(objectstreamclass : java.io.ObjectStreamClass) : Class<Dynamic>;
+	@:overload @:protected override private function resolveClass(objectstreamclass : java.io.ObjectStreamClass) : Class<Dynamic>;
 	
 	/**
 	* Returns the ClassLoader being used
 	*/
-	@:overload public function getClassLoader() : java.lang.ClassLoader;
+	@:overload @:public public function getClassLoader() : java.lang.ClassLoader;
 	
 	
 }

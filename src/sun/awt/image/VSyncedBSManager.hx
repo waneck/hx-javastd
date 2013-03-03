@@ -31,13 +31,13 @@ extern class VSyncedBSManager
 	*
 	* @return true if the bs is allowed to be v-synced, false otherwise
 	*/
-	@:overload public static function vsyncAllowed(bs : java.awt.image.BufferStrategy) : Bool;
+	@:overload @:public @:static public static function vsyncAllowed(bs : java.awt.image.BufferStrategy) : Bool;
 	
 	/**
 	* Lets the manager know that this buffer strategy is no longer interested
 	* in being v-synced.
 	*/
-	@:overload @:synchronized public static function releaseVsync(bs : java.awt.image.BufferStrategy) : Void;
+	@:overload @:public @:static @:synchronized public static function releaseVsync(bs : java.awt.image.BufferStrategy) : Void;
 	
 	
 }
@@ -55,9 +55,9 @@ extern class VSyncedBSManager
 */
 @:native('sun$awt$image$VSyncedBSManager$SingleVSyncedBSMgr') @:internal extern class VSyncedBSManager_SingleVSyncedBSMgr extends sun.awt.image.VSyncedBSManager
 {
-	@:overload @:synchronized public function checkAllowed(bs : java.awt.image.BufferStrategy) : Bool;
+	@:overload @:public @:synchronized public function checkAllowed(bs : java.awt.image.BufferStrategy) : Bool;
 	
-	@:overload @:synchronized public function relinquishVsync(bs : java.awt.image.BufferStrategy) : Void;
+	@:overload @:public @:synchronized public function relinquishVsync(bs : java.awt.image.BufferStrategy) : Void;
 	
 	
 }

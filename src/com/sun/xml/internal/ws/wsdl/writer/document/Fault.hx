@@ -29,7 +29,7 @@ extern interface Fault extends com.sun.xml.internal.txw2.TypedXmlWriter extends 
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Fault;
+	@:overload @:public public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Fault;
 	
 	
 }

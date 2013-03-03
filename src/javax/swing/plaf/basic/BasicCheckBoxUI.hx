@@ -25,9 +25,9 @@ package javax.swing.plaf.basic;
 */
 extern class BasicCheckBoxUI extends javax.swing.plaf.basic.BasicRadioButtonUI
 {
-	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function getPropertyPrefix() : String;
+	@:overload @:public override public function getPropertyPrefix() : String;
 	
 	
 }

@@ -25,11 +25,11 @@ package com.sun.tools.javac.util;
 */
 extern class SharedNameTable extends com.sun.tools.javac.util.Name.Name_Table
 {
-	@:overload @:synchronized public static function create(names : com.sun.tools.javac.util.Names) : com.sun.tools.javac.util.SharedNameTable;
+	@:overload @:static @:public @:synchronized public static function create(names : com.sun.tools.javac.util.Names) : com.sun.tools.javac.util.SharedNameTable;
 	
 	/** The shared byte array holding all encountered names.
 	*/
-	public var bytes : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var bytes : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** Allocator
 	*  @param names The main name table
@@ -37,37 +37,37 @@ extern class SharedNameTable extends com.sun.tools.javac.util.Name.Name_Table
 	*                  needs to be a power of two.
 	*  @param nameSize the initial size of the name table.
 	*/
-	@:overload public function new(names : com.sun.tools.javac.util.Names, hashSize : Int, nameSize : Int) : Void;
+	@:overload @:public public function new(names : com.sun.tools.javac.util.Names, hashSize : Int, nameSize : Int) : Void;
 	
-	@:overload public function new(names : com.sun.tools.javac.util.Names) : Void;
+	@:overload @:public public function new(names : com.sun.tools.javac.util.Names) : Void;
 	
-	@:overload public function fromChars(cs : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : com.sun.tools.javac.util.Name;
+	@:overload @:public override public function fromChars(cs : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : com.sun.tools.javac.util.Name;
 	
-	@:overload public function fromUtf(cs : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : com.sun.tools.javac.util.Name;
+	@:overload @:public override public function fromUtf(cs : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : com.sun.tools.javac.util.Name;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
 	
 }
 @:native('com$sun$tools$javac$util$SharedNameTable$NameImpl') @:internal extern class SharedNameTable_NameImpl extends javax.lang.model.element.Name
 {
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
-	@:overload public function getByteLength() : Int;
+	@:overload @:public public function getByteLength() : Int;
 	
-	@:overload public function getByteAt(i : Int) : java.StdTypes.Int8;
+	@:overload @:public public function getByteAt(i : Int) : java.StdTypes.Int8;
 	
-	@:overload public function getByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getByteOffset() : Int;
+	@:overload @:public public function getByteOffset() : Int;
 	
 	/** Return the hash value of this name.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/** Is this name equal to other?
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	
 }

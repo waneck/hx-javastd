@@ -30,7 +30,7 @@ extern interface SSLSession
 	*
 	* @return the Session identifier
 	*/
-	@:overload public function getId() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getId() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the context in which this session is bound.
@@ -50,7 +50,7 @@ extern interface SSLSession
 	* @return the session context used for this session, or null
 	* if the context is unavailable.
 	*/
-	@:overload public function getSessionContext() : javax.net.ssl.SSLSessionContext;
+	@:overload @:public public function getSessionContext() : javax.net.ssl.SSLSessionContext;
 	
 	/**
 	* Returns the time at which this Session representation was created,
@@ -58,7 +58,7 @@ extern interface SSLSession
 	*
 	* @return the time this Session was created
 	*/
-	@:overload public function getCreationTime() : haxe.Int64;
+	@:overload @:public public function getCreationTime() : haxe.Int64;
 	
 	/**
 	* Returns the last time this Session representation was accessed by the
@@ -76,7 +76,7 @@ extern interface SSLSession
 	*
 	* @return the last time this Session was accessed
 	*/
-	@:overload public function getLastAccessedTime() : haxe.Int64;
+	@:overload @:public public function getLastAccessedTime() : haxe.Int64;
 	
 	/**
 	* Invalidates the session.
@@ -88,7 +88,7 @@ extern interface SSLSession
 	*
 	* @see #isValid()
 	*/
-	@:overload public function invalidate() : Void;
+	@:overload @:public public function invalidate() : Void;
 	
 	/**
 	* Returns whether this session is valid and available for resuming or
@@ -99,7 +99,7 @@ extern interface SSLSession
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isValid() : Bool;
+	@:require(java5) @:overload @:public public function isValid() : Bool;
 	
 	/**
 	*
@@ -120,7 +120,7 @@ extern interface SSLSession
 	* @param value the data object to be bound. This may not be null.
 	* @throws IllegalArgumentException if either argument is null.
 	*/
-	@:overload public function putValue(name : String, value : Dynamic) : Void;
+	@:overload @:public public function putValue(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Returns the object bound to the given name in the session's
@@ -134,7 +134,7 @@ extern interface SSLSession
 	*          not exist.
 	* @throws IllegalArgumentException if the argument is null.
 	*/
-	@:overload public function getValue(name : String) : Dynamic;
+	@:overload @:public public function getValue(name : String) : Dynamic;
 	
 	/**
 	* Removes the object bound to the given name in the session's
@@ -150,7 +150,7 @@ extern interface SSLSession
 	*          across different access control contexts
 	* @throws IllegalArgumentException if the argument is null.
 	*/
-	@:overload public function removeValue(name : String) : Void;
+	@:overload @:public public function removeValue(name : String) : Void;
 	
 	/**
 	* Returns an array of the names of all the application layer
@@ -162,7 +162,7 @@ extern interface SSLSession
 	* @return a non-null (possibly empty) array of names of the objects
 	*  bound to this Session.
 	*/
-	@:overload public function getValueNames() : java.NativeArray<String>;
+	@:overload @:public public function getValueNames() : java.NativeArray<String>;
 	
 	/**
 	* Returns the identity of the peer which was established as part
@@ -179,7 +179,7 @@ extern interface SSLSession
 	*          been verified
 	* @see #getPeerPrincipal()
 	*/
-	@:overload public function getPeerCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public public function getPeerCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the certificate(s) that were sent to the peer during
@@ -201,7 +201,7 @@ extern interface SSLSession
 	*
 	* @see #getLocalPrincipal()
 	*/
-	@:overload public function getLocalCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public public function getLocalCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the identity of the peer which was identified as part
@@ -224,7 +224,7 @@ extern interface SSLSession
 	*          has not been verified
 	* @see #getPeerPrincipal()
 	*/
-	@:overload public function getPeerCertificateChain() : java.NativeArray<javax.security.cert.X509Certificate>;
+	@:overload @:public public function getPeerCertificateChain() : java.NativeArray<javax.security.cert.X509Certificate>;
 	
 	/**
 	* Returns the identity of the peer which was established as part of
@@ -242,7 +242,7 @@ extern interface SSLSession
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getPeerPrincipal() : java.security.Principal;
+	@:require(java5) @:overload @:public public function getPeerPrincipal() : java.security.Principal;
 	
 	/**
 	* Returns the principal that was sent to the peer during handshaking.
@@ -257,7 +257,7 @@ extern interface SSLSession
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getLocalPrincipal() : java.security.Principal;
+	@:require(java5) @:overload @:public public function getLocalPrincipal() : java.security.Principal;
 	
 	/**
 	* Returns the name of the SSL cipher suite which is used for all
@@ -269,7 +269,7 @@ extern interface SSLSession
 	*
 	* @return the name of the session's cipher suite
 	*/
-	@:overload public function getCipherSuite() : String;
+	@:overload @:public public function getCipherSuite() : String;
 	
 	/**
 	* Returns the standard name of the protocol used for all
@@ -280,7 +280,7 @@ extern interface SSLSession
 	* @return the standard name of the protocol used for all
 	* connections in the session.
 	*/
-	@:overload public function getProtocol() : String;
+	@:overload @:public public function getProtocol() : String;
 	
 	/**
 	* Returns the host name of the peer in this session.
@@ -300,7 +300,7 @@ extern interface SSLSession
 	* @return  the host name of the peer host, or null if no information
 	*          is available.
 	*/
-	@:overload public function getPeerHost() : String;
+	@:overload @:public public function getPeerHost() : String;
 	
 	/**
 	* Returns the port number of the peer in this session.
@@ -317,7 +317,7 @@ extern interface SSLSession
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getPeerPort() : Int;
+	@:require(java5) @:overload @:public public function getPeerPort() : Int;
 	
 	/**
 	* Gets the current size of the largest SSL/TLS packet that is expected
@@ -336,7 +336,7 @@ extern interface SSLSession
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getPacketBufferSize() : Int;
+	@:require(java5) @:overload @:public public function getPacketBufferSize() : Int;
 	
 	/**
 	* Gets the current size of the largest application data that is
@@ -354,7 +354,7 @@ extern interface SSLSession
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getApplicationBufferSize() : Int;
+	@:require(java5) @:overload @:public public function getApplicationBufferSize() : Int;
 	
 	
 }

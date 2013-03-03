@@ -48,7 +48,7 @@ extern interface NamingEnumeration<T> extends java.util.Enumeration<T>
 	* @exception java.util.NoSuchElementException If attempting to get the next element when none is available.
 	* @see java.util.Enumeration#nextElement
 	*/
-	@:overload public function next() : T;
+	@:overload @:public public function next() : T;
 	
 	/**
 	* Determines whether there are any more elements in the enumeration.
@@ -64,7 +64,7 @@ extern interface NamingEnumeration<T> extends java.util.Enumeration<T>
 	*                 and its subclasses for the possible naming exceptions.
 	* @see java.util.Enumeration#hasMoreElements
 	*/
-	@:overload public function hasMore() : Bool;
+	@:overload @:public public function hasMore() : Bool;
 	
 	/**
 	* Closes this enumeration.
@@ -89,7 +89,7 @@ extern interface NamingEnumeration<T> extends java.util.Enumeration<T>
 	* while closing the enumeration.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function close() : Void;
+	@:require(java3) @:overload @:public public function close() : Void;
 	
 	
 }

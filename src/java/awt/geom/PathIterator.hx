@@ -64,21 +64,21 @@ extern interface PathIterator
 	* @see #WIND_EVEN_ODD
 	* @see #WIND_NON_ZERO
 	*/
-	@:overload public function getWindingRule() : Int;
+	@:overload @:public public function getWindingRule() : Int;
 	
 	/**
 	* Tests if the iteration is complete.
 	* @return <code>true</code> if all the segments have
 	* been read; <code>false</code> otherwise.
 	*/
-	@:overload public function isDone() : Bool;
+	@:overload @:public public function isDone() : Bool;
 	
 	/**
 	* Moves the iterator to the next segment of the path forwards
 	* along the primary direction of traversal as long as there are
 	* more points in that direction.
 	*/
-	@:overload public function next() : Void;
+	@:overload @:public public function next() : Void;
 	
 	/**
 	* Returns the coordinates and type of the current path segment in
@@ -101,7 +101,7 @@ extern interface PathIterator
 	* @see #SEG_CUBICTO
 	* @see #SEG_CLOSE
 	*/
-	@:overload public function currentSegment(coords : java.NativeArray<Single>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Single>) : Int;
 	
 	/**
 	* Returns the coordinates and type of the current path segment in
@@ -124,7 +124,7 @@ extern interface PathIterator
 	* @see #SEG_CUBICTO
 	* @see #SEG_CLOSE
 	*/
-	@:overload public function currentSegment(coords : java.NativeArray<Float>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Float>) : Int;
 	
 	
 }

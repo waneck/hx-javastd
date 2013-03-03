@@ -51,9 +51,9 @@ extern class ParsedPatternHost implements com.sun.xml.internal.rngom.ast.om.Pars
 	* @author
 	*      Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	public var lhs(default, null) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:public @:final public var lhs(default, null) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	public var rhs(default, null) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:public @:final public var rhs(default, null) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
 	
 }

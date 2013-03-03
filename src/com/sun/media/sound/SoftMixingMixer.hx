@@ -25,77 +25,77 @@ package com.sun.media.sound;
 */
 extern class SoftMixingMixer implements javax.sound.sampled.Mixer
 {
-	private static var INFO_NAME(default, null) : String;
+	@:protected @:static @:final private static var INFO_NAME(default, null) : String;
 	
-	private static var INFO_VENDOR(default, null) : String;
+	@:protected @:static @:final private static var INFO_VENDOR(default, null) : String;
 	
-	private static var INFO_DESCRIPTION(default, null) : String;
+	@:protected @:static @:final private static var INFO_DESCRIPTION(default, null) : String;
 	
-	private static var INFO_VERSION(default, null) : String;
+	@:protected @:static @:final private static var INFO_VERSION(default, null) : String;
 	
-	private static var info(default, null) : javax.sound.sampled.Mixer.Mixer_Info;
+	@:protected @:final @:static private static var info(default, null) : javax.sound.sampled.Mixer.Mixer_Info;
 	
-	private var control_mutex : Dynamic;
+	@:protected private var control_mutex : Dynamic;
 	
-	private var implicitOpen : Bool;
+	@:protected private var implicitOpen : Bool;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getLine(info : javax.sound.sampled.Line.Line_Info) : javax.sound.sampled.Line;
+	@:overload @:public public function getLine(info : javax.sound.sampled.Line.Line_Info) : javax.sound.sampled.Line;
 	
-	@:overload public function getMaxLines(info : javax.sound.sampled.Line.Line_Info) : Int;
+	@:overload @:public public function getMaxLines(info : javax.sound.sampled.Line.Line_Info) : Int;
 	
-	@:overload public function getMixerInfo() : javax.sound.sampled.Mixer.Mixer_Info;
+	@:overload @:public public function getMixerInfo() : javax.sound.sampled.Mixer.Mixer_Info;
 	
-	@:overload public function getSourceLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public public function getSourceLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
-	@:overload public function getSourceLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public public function getSourceLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
-	@:overload public function getSourceLines() : java.NativeArray<javax.sound.sampled.Line>;
+	@:overload @:public public function getSourceLines() : java.NativeArray<javax.sound.sampled.Line>;
 	
-	@:overload public function getTargetLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public public function getTargetLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
-	@:overload public function getTargetLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public public function getTargetLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
-	@:overload public function getTargetLines() : java.NativeArray<javax.sound.sampled.Line>;
+	@:overload @:public public function getTargetLines() : java.NativeArray<javax.sound.sampled.Line>;
 	
-	@:overload public function isLineSupported(info : javax.sound.sampled.Line.Line_Info) : Bool;
+	@:overload @:public public function isLineSupported(info : javax.sound.sampled.Line.Line_Info) : Bool;
 	
-	@:overload public function isSynchronizationSupported(lines : java.NativeArray<javax.sound.sampled.Line>, maintainSync : Bool) : Bool;
+	@:overload @:public public function isSynchronizationSupported(lines : java.NativeArray<javax.sound.sampled.Line>, maintainSync : Bool) : Bool;
 	
-	@:overload public function synchronize(lines : java.NativeArray<javax.sound.sampled.Line>, maintainSync : Bool) : Void;
+	@:overload @:public public function synchronize(lines : java.NativeArray<javax.sound.sampled.Line>, maintainSync : Bool) : Void;
 	
-	@:overload public function unsynchronize(lines : java.NativeArray<javax.sound.sampled.Line>) : Void;
+	@:overload @:public public function unsynchronize(lines : java.NativeArray<javax.sound.sampled.Line>) : Void;
 	
-	@:overload public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
+	@:overload @:public public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
 	
-	@:overload public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
+	@:overload @:public public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
 	
-	@:overload public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload @:public public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
-	@:overload public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
+	@:overload @:public public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
 	
-	@:overload public function isOpen() : Bool;
+	@:overload @:public public function isOpen() : Bool;
 	
-	@:overload public function open() : Void;
+	@:overload @:public public function open() : Void;
 	
-	@:overload public function open(line : javax.sound.sampled.SourceDataLine) : Void;
+	@:overload @:public public function open(line : javax.sound.sampled.SourceDataLine) : Void;
 	
-	@:overload public function openStream(targetFormat : javax.sound.sampled.AudioFormat) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public public function openStream(targetFormat : javax.sound.sampled.AudioFormat) : javax.sound.sampled.AudioInputStream;
 	
-	@:overload public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
-	@:overload public function getLatency() : haxe.Int64;
+	@:overload @:public public function getLatency() : haxe.Int64;
 	
-	@:overload public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public public function getFormat() : javax.sound.sampled.AudioFormat;
 	
-	@:overload private function getControlRate() : Single;
+	@:overload @:protected private function getControlRate() : Single;
 	
-	@:overload private function getMainMixer() : com.sun.media.sound.SoftMixingMainMixer;
+	@:overload @:protected private function getMainMixer() : com.sun.media.sound.SoftMixingMainMixer;
 	
 	
 }
@@ -106,7 +106,7 @@ extern class SoftMixingMixer implements javax.sound.sampled.Mixer
 */
 @:native('com$sun$media$sound$SoftMixingMixer$Info') @:internal extern class SoftMixingMixer_Info extends javax.sound.sampled.Mixer.Mixer_Info
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

@@ -29,7 +29,7 @@ extern interface ProxyServiceProvider
 	*
 	* @author  Zhengyu Gu
 	*/
-	@:overload public function getProxyInfo(url : java.net.URL) : java.NativeArray<com.sun.java.browser.net.ProxyInfo>;
+	@:overload @:public public function getProxyInfo(url : java.net.URL) : java.NativeArray<com.sun.java.browser.net.ProxyInfo>;
 	
 	
 }

@@ -32,11 +32,11 @@ package sun.security.pkcs11;
 */
 @:require(java5) @:internal extern class P11SecretKeyFactory extends javax.crypto.SecretKeyFactorySpi
 {
-	@:overload override private function engineGenerateSecret(keySpec : java.security.spec.KeySpec) : javax.crypto.SecretKey;
+	@:overload @:protected override private function engineGenerateSecret(keySpec : java.security.spec.KeySpec) : javax.crypto.SecretKey;
 	
-	@:overload override private function engineGetKeySpec(key : javax.crypto.SecretKey, keySpec : Class<Dynamic>) : java.security.spec.KeySpec;
+	@:overload @:protected override private function engineGetKeySpec(key : javax.crypto.SecretKey, keySpec : Class<Dynamic>) : java.security.spec.KeySpec;
 	
-	@:overload override private function engineTranslateKey(key : javax.crypto.SecretKey) : javax.crypto.SecretKey;
+	@:overload @:protected override private function engineTranslateKey(key : javax.crypto.SecretKey) : javax.crypto.SecretKey;
 	
 	
 }

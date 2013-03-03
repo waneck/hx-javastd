@@ -28,22 +28,22 @@ extern class MGF1ParameterSpec implements java.security.spec.AlgorithmParameterS
 	/**
 	* The MGF1ParameterSpec which uses "SHA-1" message digest.
 	*/
-	public static var SHA1(default, null) : java.security.spec.MGF1ParameterSpec;
+	@:public @:static @:final public static var SHA1(default, null) : java.security.spec.MGF1ParameterSpec;
 	
 	/**
 	* The MGF1ParameterSpec which uses "SHA-256" message digest.
 	*/
-	public static var SHA256(default, null) : java.security.spec.MGF1ParameterSpec;
+	@:public @:static @:final public static var SHA256(default, null) : java.security.spec.MGF1ParameterSpec;
 	
 	/**
 	* The MGF1ParameterSpec which uses "SHA-384" message digest.
 	*/
-	public static var SHA384(default, null) : java.security.spec.MGF1ParameterSpec;
+	@:public @:static @:final public static var SHA384(default, null) : java.security.spec.MGF1ParameterSpec;
 	
 	/**
 	* The MGF1ParameterSpec which uses SHA-512 message digest.
 	*/
-	public static var SHA512(default, null) : java.security.spec.MGF1ParameterSpec;
+	@:public @:static @:final public static var SHA512(default, null) : java.security.spec.MGF1ParameterSpec;
 	
 	/**
 	* Constructs a parameter set for mask generation function MGF1
@@ -53,7 +53,7 @@ extern class MGF1ParameterSpec implements java.security.spec.AlgorithmParameterS
 	* used in this mask generation function MGF1.
 	* @exception NullPointerException if <code>mdName</code> is null.
 	*/
-	@:overload public function new(mdName : String) : Void;
+	@:overload @:public public function new(mdName : String) : Void;
 	
 	/**
 	* Returns the algorithm name of the message digest used by the mask
@@ -61,7 +61,7 @@ extern class MGF1ParameterSpec implements java.security.spec.AlgorithmParameterS
 	*
 	* @return the algorithm name of the message digest.
 	*/
-	@:overload public function getDigestAlgorithm() : String;
+	@:overload @:public public function getDigestAlgorithm() : String;
 	
 	
 }

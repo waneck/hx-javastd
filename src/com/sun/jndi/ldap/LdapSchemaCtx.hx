@@ -25,27 +25,27 @@ package com.sun.jndi.ldap;
 */
 @:internal extern class LdapSchemaCtx extends com.sun.jndi.toolkit.dir.HierMemDirCtx
 {
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload @:final override public function bind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:final @:public override public function bind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
 	
-	@:overload @:final override private function doBind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes, useFactory : Bool) : Void;
+	@:overload @:final @:protected override private function doBind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes, useFactory : Bool) : Void;
 	
-	@:overload @:final override public function rebind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:final @:public override public function rebind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes) : Void;
 	
-	@:overload @:final override private function doRebind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes, useFactory : Bool) : Void;
+	@:overload @:final @:protected override private function doRebind(name : javax.naming.Name, obj : Dynamic, attrs : javax.naming.directory.Attributes, useFactory : Bool) : Void;
 	
-	@:overload @:final override private function doUnbind(name : javax.naming.Name) : Void;
+	@:overload @:final @:protected override private function doUnbind(name : javax.naming.Name) : Void;
 	
-	@:overload @:final override private function doRename(oldname : javax.naming.Name, newname : javax.naming.Name) : Void;
+	@:overload @:final @:protected override private function doRename(oldname : javax.naming.Name, newname : javax.naming.Name) : Void;
 	
-	@:overload @:final override private function doDestroySubcontext(name : javax.naming.Name) : Void;
+	@:overload @:final @:protected override private function doDestroySubcontext(name : javax.naming.Name) : Void;
 	
-	@:overload @:final override private function doCreateSubcontext(name : javax.naming.Name, attrs : javax.naming.directory.Attributes) : javax.naming.directory.DirContext;
+	@:overload @:final @:protected override private function doCreateSubcontext(name : javax.naming.Name, attrs : javax.naming.directory.Attributes) : javax.naming.directory.DirContext;
 	
-	@:overload @:final override private function doModifyAttributes(mods : java.NativeArray<javax.naming.directory.ModificationItem>) : Void;
+	@:overload @:final @:protected override private function doModifyAttributes(mods : java.NativeArray<javax.naming.directory.ModificationItem>) : Void;
 	
-	@:overload @:final override private function createNewCtx() : com.sun.jndi.toolkit.dir.HierMemDirCtx;
+	@:overload @:final @:protected override private function createNewCtx() : com.sun.jndi.toolkit.dir.HierMemDirCtx;
 	
 	
 }

@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.client.sei;
 */
 @:internal extern class SEIMethodHandler extends com.sun.xml.internal.ws.client.sei.MethodHandler
 {
-	private var soapAction(default, null) : String;
+	@:protected @:final private var soapAction(default, null) : String;
 	
-	private var isOneWay(default, null) : Bool;
+	@:protected @:final private var isOneWay(default, null) : Bool;
 	
-	private var javaMethod(default, null) : com.sun.xml.internal.ws.model.JavaMethodImpl;
+	@:protected @:final private var javaMethod(default, null) : com.sun.xml.internal.ws.model.JavaMethodImpl;
 	
-	private var checkedExceptions(default, null) : java.util.Map<javax.xml.namespace.QName, com.sun.xml.internal.ws.model.CheckedExceptionImpl>;
+	@:protected @:final private var checkedExceptions(default, null) : java.util.Map<javax.xml.namespace.QName, com.sun.xml.internal.ws.model.CheckedExceptionImpl>;
 	
 	
 }

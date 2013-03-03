@@ -34,7 +34,7 @@ extern class NotEquals extends com.sun.org.apache.xpath.internal.operations.Oper
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function operate(left : com.sun.org.apache.xpath.internal.objects.XObject, right : com.sun.org.apache.xpath.internal.objects.XObject) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function operate(left : com.sun.org.apache.xpath.internal.objects.XObject, right : com.sun.org.apache.xpath.internal.objects.XObject) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	
 }

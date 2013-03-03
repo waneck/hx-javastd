@@ -40,14 +40,14 @@ extern class PKCS10Attributes implements sun.security.util.DerEncoder
 	/**
 	* Default constructor for the PKCS10 attribute.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create the object from the array of PKCS10Attribute objects.
 	*
 	* @param attrs the array of PKCS10Attribute objects.
 	*/
-	@:overload public function new(attrs : java.NativeArray<sun.security.pkcs.PKCS10Attribute>) : Void;
+	@:overload @:public public function new(attrs : java.NativeArray<sun.security.pkcs.PKCS10Attribute>) : Void;
 	
 	/**
 	* Create the object, decoding the values from the passed DER stream.
@@ -56,7 +56,7 @@ extern class PKCS10Attributes implements sun.security.util.DerEncoder
 	* @param in the DerInputStream to read the attributes from.
 	* @exception IOException on decoding errors.
 	*/
-	@:overload public function new(_in : sun.security.util.DerInputStream) : Void;
+	@:overload @:public public function new(_in : sun.security.util.DerInputStream) : Void;
 	
 	/**
 	* Encode the attributes in DER form to the stream.
@@ -64,7 +64,7 @@ extern class PKCS10Attributes implements sun.security.util.DerEncoder
 	* @param out the OutputStream to marshal the contents to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Encode the attributes in DER form to the stream.
@@ -73,34 +73,34 @@ extern class PKCS10Attributes implements sun.security.util.DerEncoder
 	* @param out the OutputStream to marshal the contents to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload public function derEncode(out : java.io.OutputStream) : Void;
+	@:overload @:public public function derEncode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Set the attribute value.
 	*/
-	@:overload public function setAttribute(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function setAttribute(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Get the attribute value.
 	*/
-	@:overload public function getAttribute(name : String) : Dynamic;
+	@:overload @:public public function getAttribute(name : String) : Dynamic;
 	
 	/**
 	* Delete the attribute value.
 	*/
-	@:overload public function deleteAttribute(name : String) : Void;
+	@:overload @:public public function deleteAttribute(name : String) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this
 	* attribute.
 	*/
-	@:overload public function getElements() : java.util.Enumeration<sun.security.pkcs.PKCS10Attribute>;
+	@:overload @:public public function getElements() : java.util.Enumeration<sun.security.pkcs.PKCS10Attribute>;
 	
 	/**
 	* Return a Collection of attributes existing within this
 	* PKCS10Attributes object.
 	*/
-	@:overload public function getAttributes() : java.util.Collection<sun.security.pkcs.PKCS10Attribute>;
+	@:overload @:public public function getAttributes() : java.util.Collection<sun.security.pkcs.PKCS10Attribute>;
 	
 	/**
 	* Compares this PKCS10Attributes for equality with the specified
@@ -112,14 +112,14 @@ extern class PKCS10Attributes implements sun.security.util.DerEncoder
 	* @return true if all the entries match that of the Other,
 	* false otherwise.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode value for this PKCS10Attributes.
 	*
 	* @return the hashcode value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this <tt>PKCS10Attributes</tt> object
@@ -129,7 +129,7 @@ extern class PKCS10Attributes implements sun.security.util.DerEncoder
 	*
 	* @return  a string representation of this PKCS10Attributes.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

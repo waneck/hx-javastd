@@ -28,7 +28,7 @@ extern class LinuxVirtualMachine extends sun.tools.attach.HotSpotVirtualMachine
 	/**
 	* Detach from the target VM
 	*/
-	@:overload override public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	
 }
@@ -37,13 +37,13 @@ extern class LinuxVirtualMachine extends sun.tools.attach.HotSpotVirtualMachine
 */
 @:native('sun$tools$attach$LinuxVirtualMachine$SocketInputStream') @:internal extern class LinuxVirtualMachine_SocketInputStream extends java.io.InputStream
 {
-	@:overload public function new(s : Int) : Void;
+	@:overload @:public public function new(s : Int) : Void;
 	
-	@:overload @:synchronized override public function read() : Int;
+	@:overload @:public @:synchronized override public function read() : Int;
 	
-	@:overload @:synchronized override public function read(bs : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public @:synchronized override public function read(bs : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

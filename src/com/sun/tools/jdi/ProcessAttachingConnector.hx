@@ -31,18 +31,18 @@ package com.sun.tools.jdi;
 */
 extern class ProcessAttachingConnector extends com.sun.tools.jdi.ConnectorImpl implements com.sun.jdi.connect.AttachingConnector
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Attach to a target VM using the specified address and Connector arguments.
 	*/
-	@:overload public function attach(args : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : com.sun.jdi.VirtualMachine;
+	@:overload @:public public function attach(args : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : com.sun.jdi.VirtualMachine;
 	
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload override public function description() : String;
+	@:overload @:public override public function description() : String;
 	
-	@:overload override public function transport() : com.sun.jdi.connect.Transport;
+	@:overload @:public override public function transport() : com.sun.jdi.connect.Transport;
 	
 	
 }

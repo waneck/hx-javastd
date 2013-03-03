@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.policy.sourcemodel;
 */
 extern class PolicyModelTranslator
 {
-	@:overload private function new(creators : java.util.Collection<com.sun.xml.internal.ws.policy.spi.PolicyAssertionCreator>) : Void;
+	@:overload @:protected private function new(creators : java.util.Collection<com.sun.xml.internal.ws.policy.spi.PolicyAssertionCreator>) : Void;
 	
 	/**
 	* Method returns thread-safe policy model translator instance.
@@ -36,7 +36,7 @@ extern class PolicyModelTranslator
 	* @return A policy model translator instance.
 	* @throws PolicyException If instantiating a PolicyAssertionCreator failed.
 	*/
-	@:overload public static function getTranslator() : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelTranslator;
+	@:overload @:public @:static public static function getTranslator() : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelTranslator;
 	
 	/**
 	* The method translates {@link PolicySourceModel} structure into normalized {@link Policy} expression. The resulting Policy
@@ -46,7 +46,7 @@ extern class PolicyModelTranslator
 	* @return translated policy expression in it's normalized form.
 	* @throws PolicyException in case of translation failure
 	*/
-	@:overload public function translate(model : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public public function translate(model : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel) : com.sun.xml.internal.ws.policy.Policy;
 	
 	
 }

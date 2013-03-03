@@ -45,13 +45,13 @@ extern class PAEncTSEnc
 	* <a href="http://www.ietf.org/rfc/rfc4120.txt">
 	* http://www.ietf.org/rfc/rfc4120.txt</a>.
 	*/
-	public var pATimeStamp : sun.security.krb5.internal.KerberosTime;
+	@:public public var pATimeStamp : sun.security.krb5.internal.KerberosTime;
 	
-	public var pAUSec : Null<Int>;
+	@:public public var pAUSec : Null<Int>;
 	
-	@:overload public function new(new_pATimeStamp : sun.security.krb5.internal.KerberosTime, new_pAUSec : Null<Int>) : Void;
+	@:overload @:public public function new(new_pATimeStamp : sun.security.krb5.internal.KerberosTime, new_pAUSec : Null<Int>) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a PAEncTSEnc object.
@@ -59,7 +59,7 @@ extern class PAEncTSEnc
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes a PAEncTSEnc object.
@@ -67,7 +67,7 @@ extern class PAEncTSEnc
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.activation;
 */
 extern class NameServiceStartThread extends java.lang.Thread
 {
-	@:overload public function new(theOrb : com.sun.corba.se.spi.orb.ORB, theDir : java.io.File) : Void;
+	@:overload @:public public function new(theOrb : com.sun.corba.se.spi.orb.ORB, theDir : java.io.File) : Void;
 	
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

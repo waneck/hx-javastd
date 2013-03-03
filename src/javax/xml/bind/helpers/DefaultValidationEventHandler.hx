@@ -47,7 +47,7 @@ extern class DefaultValidationEventHandler implements javax.xml.bind.ValidationE
 	* @see javax.xml.bind.ValidationEventHandler
 	* @since JAXB1.0
 	*/
-	@:require(java0) @:overload public function handleEvent(event : javax.xml.bind.ValidationEvent) : Bool;
+	@:require(java0) @:overload @:public public function handleEvent(event : javax.xml.bind.ValidationEvent) : Bool;
 	
 	
 }

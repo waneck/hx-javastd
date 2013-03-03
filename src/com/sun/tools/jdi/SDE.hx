@@ -45,7 +45,7 @@ package com.sun.tools.jdi;
 }
 @:native('com$sun$tools$jdi$SDE$LineStratum') @:internal extern class SDE_LineStratum
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

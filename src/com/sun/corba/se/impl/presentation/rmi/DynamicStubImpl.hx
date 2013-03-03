@@ -25,29 +25,29 @@ package com.sun.corba.se.impl.presentation.rmi;
 */
 extern class DynamicStubImpl extends org.omg.CORBA.portable.ObjectImpl implements com.sun.corba.se.spi.presentation.rmi.DynamicStub implements java.io.Serializable
 {
-	@:overload public function setSelf(self : com.sun.corba.se.spi.presentation.rmi.DynamicStub) : Void;
+	@:overload @:public public function setSelf(self : com.sun.corba.se.spi.presentation.rmi.DynamicStub) : Void;
 	
-	@:overload public function getSelf() : com.sun.corba.se.spi.presentation.rmi.DynamicStub;
+	@:overload @:public public function getSelf() : com.sun.corba.se.spi.presentation.rmi.DynamicStub;
 	
-	@:overload public function new(typeIds : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(typeIds : java.NativeArray<String>) : Void;
 	
-	@:overload public function setDelegate(delegate : org.omg.CORBA.portable.Delegate) : Void;
+	@:overload @:public public function setDelegate(delegate : org.omg.CORBA.portable.Delegate) : Void;
 	
-	@:overload public function getDelegate() : org.omg.CORBA.portable.Delegate;
+	@:overload @:public public function getDelegate() : org.omg.CORBA.portable.Delegate;
 	
-	@:overload public function getORB() : org.omg.CORBA.ORB;
+	@:overload @:public public function getORB() : org.omg.CORBA.ORB;
 	
-	@:overload override public function _ids() : java.NativeArray<String>;
+	@:overload @:public override public function _ids() : java.NativeArray<String>;
 	
-	@:overload public function getTypeIds() : java.NativeArray<String>;
+	@:overload @:public public function getTypeIds() : java.NativeArray<String>;
 	
-	@:overload public function connect(orb : org.omg.CORBA.ORB) : Void;
+	@:overload @:public public function connect(orb : org.omg.CORBA.ORB) : Void;
 	
-	@:overload public function isLocal() : Bool;
+	@:overload @:public public function isLocal() : Bool;
 	
-	@:overload public function request(operation : String, responseExpected : Bool) : org.omg.CORBA.portable.OutputStream;
+	@:overload @:public public function request(operation : String, responseExpected : Bool) : org.omg.CORBA.portable.OutputStream;
 	
-	@:overload public function readResolve() : org.omg.CORBA.Object;
+	@:overload @:public public function readResolve() : org.omg.CORBA.Object;
 	
 	
 }

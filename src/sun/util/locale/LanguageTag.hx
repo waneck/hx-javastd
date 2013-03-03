@@ -31,13 +31,13 @@ package sun.util.locale;
 */
 extern class LanguageTag
 {
-	public static var SEP(default, null) : String;
+	@:public @:static @:final public static var SEP(default, null) : String;
 	
-	public static var PRIVATEUSE(default, null) : String;
+	@:public @:static @:final public static var PRIVATEUSE(default, null) : String;
 	
-	public static var UNDETERMINED(default, null) : String;
+	@:public @:static @:final public static var UNDETERMINED(default, null) : String;
 	
-	public static var PRIVUSE_VARIANT_PREFIX(default, null) : String;
+	@:public @:static @:final public static var PRIVUSE_VARIANT_PREFIX(default, null) : String;
 	
 	/*
 	* BNF in RFC5464
@@ -84,67 +84,67 @@ extern class LanguageTag
 	* privateuse    = "x" 1*("-" (1*8alphanum))
 	*
 	*/
-	@:overload public static function parse(languageTag : String, sts : sun.util.locale.ParseStatus) : sun.util.locale.LanguageTag;
+	@:overload @:public @:static public static function parse(languageTag : String, sts : sun.util.locale.ParseStatus) : sun.util.locale.LanguageTag;
 	
-	@:overload public static function parseLocale(baseLocale : sun.util.locale.BaseLocale, localeExtensions : sun.util.locale.LocaleExtensions) : sun.util.locale.LanguageTag;
+	@:overload @:public @:static public static function parseLocale(baseLocale : sun.util.locale.BaseLocale, localeExtensions : sun.util.locale.LocaleExtensions) : sun.util.locale.LanguageTag;
 	
-	@:overload public function getLanguage() : String;
+	@:overload @:public public function getLanguage() : String;
 	
-	@:overload public function getExtlangs() : java.util.List<String>;
+	@:overload @:public public function getExtlangs() : java.util.List<String>;
 	
-	@:overload public function getScript() : String;
+	@:overload @:public public function getScript() : String;
 	
-	@:overload public function getRegion() : String;
+	@:overload @:public public function getRegion() : String;
 	
-	@:overload public function getVariants() : java.util.List<String>;
+	@:overload @:public public function getVariants() : java.util.List<String>;
 	
-	@:overload public function getExtensions() : java.util.List<String>;
+	@:overload @:public public function getExtensions() : java.util.List<String>;
 	
-	@:overload public function getPrivateuse() : String;
+	@:overload @:public public function getPrivateuse() : String;
 	
-	@:overload public static function isLanguage(s : String) : Bool;
+	@:overload @:public @:static public static function isLanguage(s : String) : Bool;
 	
-	@:overload public static function isExtlang(s : String) : Bool;
+	@:overload @:public @:static public static function isExtlang(s : String) : Bool;
 	
-	@:overload public static function isScript(s : String) : Bool;
+	@:overload @:public @:static public static function isScript(s : String) : Bool;
 	
-	@:overload public static function isRegion(s : String) : Bool;
+	@:overload @:public @:static public static function isRegion(s : String) : Bool;
 	
-	@:overload public static function isVariant(s : String) : Bool;
+	@:overload @:public @:static public static function isVariant(s : String) : Bool;
 	
-	@:overload public static function isExtensionSingleton(s : String) : Bool;
+	@:overload @:public @:static public static function isExtensionSingleton(s : String) : Bool;
 	
-	@:overload public static function isExtensionSingletonChar(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isExtensionSingletonChar(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload public static function isExtensionSubtag(s : String) : Bool;
+	@:overload @:public @:static public static function isExtensionSubtag(s : String) : Bool;
 	
-	@:overload public static function isPrivateusePrefix(s : String) : Bool;
+	@:overload @:public @:static public static function isPrivateusePrefix(s : String) : Bool;
 	
-	@:overload public static function isPrivateusePrefixChar(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isPrivateusePrefixChar(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload public static function isPrivateuseSubtag(s : String) : Bool;
+	@:overload @:public @:static public static function isPrivateuseSubtag(s : String) : Bool;
 	
-	@:overload public static function canonicalizeLanguage(s : String) : String;
+	@:overload @:public @:static public static function canonicalizeLanguage(s : String) : String;
 	
-	@:overload public static function canonicalizeExtlang(s : String) : String;
+	@:overload @:public @:static public static function canonicalizeExtlang(s : String) : String;
 	
-	@:overload public static function canonicalizeScript(s : String) : String;
+	@:overload @:public @:static public static function canonicalizeScript(s : String) : String;
 	
-	@:overload public static function canonicalizeRegion(s : String) : String;
+	@:overload @:public @:static public static function canonicalizeRegion(s : String) : String;
 	
-	@:overload public static function canonicalizeVariant(s : String) : String;
+	@:overload @:public @:static public static function canonicalizeVariant(s : String) : String;
 	
-	@:overload public static function canonicalizeExtension(s : String) : String;
+	@:overload @:public @:static public static function canonicalizeExtension(s : String) : String;
 	
-	@:overload public static function canonicalizeExtensionSingleton(s : String) : String;
+	@:overload @:public @:static public static function canonicalizeExtensionSingleton(s : String) : String;
 	
-	@:overload public static function canonicalizeExtensionSubtag(s : String) : String;
+	@:overload @:public @:static public static function canonicalizeExtensionSubtag(s : String) : String;
 	
-	@:overload public static function canonicalizePrivateuse(s : String) : String;
+	@:overload @:public @:static public static function canonicalizePrivateuse(s : String) : String;
 	
-	@:overload public static function canonicalizePrivateuseSubtag(s : String) : String;
+	@:overload @:public @:static public static function canonicalizePrivateuseSubtag(s : String) : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

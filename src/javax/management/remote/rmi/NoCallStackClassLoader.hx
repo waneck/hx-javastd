@@ -26,15 +26,15 @@ package javax.management.remote.rmi;
 @:internal extern class NoCallStackClassLoader extends java.lang.ClassLoader
 {
 	/** Simplified constructor when this loader only defines one class.  */
-	@:overload public function new(className : String, byteCode : java.NativeArray<java.StdTypes.Int8>, referencedClassNames : java.NativeArray<String>, referencedClassLoader : java.lang.ClassLoader, protectionDomain : java.security.ProtectionDomain) : Void;
+	@:overload @:public public function new(className : String, byteCode : java.NativeArray<java.StdTypes.Int8>, referencedClassNames : java.NativeArray<String>, referencedClassLoader : java.lang.ClassLoader, protectionDomain : java.security.ProtectionDomain) : Void;
 	
-	@:overload public function new(classNames : java.NativeArray<String>, byteCodes : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>, referencedClassNames : java.NativeArray<String>, referencedClassLoader : java.lang.ClassLoader, protectionDomain : java.security.ProtectionDomain) : Void;
+	@:overload @:public public function new(classNames : java.NativeArray<String>, byteCodes : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>, referencedClassNames : java.NativeArray<String>, referencedClassLoader : java.lang.ClassLoader, protectionDomain : java.security.ProtectionDomain) : Void;
 	
 	/* This method is called at most once per name.  Define the name
 	* if it is one of the classes whose byte code we have, or
 	* delegate the load if it is one of the referenced classes.
 	*/
-	@:overload private function findClass(name : String) : Class<Dynamic>;
+	@:overload @:protected override private function findClass(name : String) : Class<Dynamic>;
 	
 	/**
 	* <p>Construct a <code>byte[]</code> using the characters of the
@@ -60,7 +60,7 @@ package javax.management.remote.rmi;
 	* byte of the result is numerically identical (mod 256) to the
 	* corresponding character of the input.
 	*/
-	@:overload public static function stringToBytes(s : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function stringToBytes(s : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

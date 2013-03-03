@@ -29,7 +29,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* Constructor for concrete subclasses; uses {@code null} for the
 	* default value.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructor for concrete subclasses; uses the argument for the
@@ -37,7 +37,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	*
 	* @param defaultValue the value to assign to {@link #DEFAULT_VALUE}
 	*/
-	@:overload private function new(defaultValue : R) : Void;
+	@:overload @:protected private function new(defaultValue : R) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -48,7 +48,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p {@inheritDoc}
 	* @return  {@inheritDoc}
 	*/
-	@:overload override public function visitPackage(e : javax.lang.model.element.PackageElement, p : P) : R;
+	@:overload @:public override public function visitPackage(e : javax.lang.model.element.PackageElement, p : P) : R;
 	
 	/**
 	* Visits a type element, dispatching to the visit method for the
@@ -60,7 +60,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p {@inheritDoc}
 	* @return  the result of the kind-specific visit method
 	*/
-	@:overload override public function visitType(e : javax.lang.model.element.TypeElement, p : P) : R;
+	@:overload @:public override public function visitType(e : javax.lang.model.element.TypeElement, p : P) : R;
 	
 	/**
 	* Visits an {@code ANNOTATION_TYPE} type element by calling
@@ -70,7 +70,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitTypeAsAnnotationType(e : javax.lang.model.element.TypeElement, p : P) : R;
+	@:overload @:public public function visitTypeAsAnnotationType(e : javax.lang.model.element.TypeElement, p : P) : R;
 	
 	/**
 	* Visits a {@code CLASS} type element by calling {@code
@@ -80,7 +80,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitTypeAsClass(e : javax.lang.model.element.TypeElement, p : P) : R;
+	@:overload @:public public function visitTypeAsClass(e : javax.lang.model.element.TypeElement, p : P) : R;
 	
 	/**
 	* Visits an {@code ENUM} type element by calling {@code
@@ -90,7 +90,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitTypeAsEnum(e : javax.lang.model.element.TypeElement, p : P) : R;
+	@:overload @:public public function visitTypeAsEnum(e : javax.lang.model.element.TypeElement, p : P) : R;
 	
 	/**
 	* Visits an {@code INTERFACE} type element by calling {@code
@@ -100,7 +100,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitTypeAsInterface(e : javax.lang.model.element.TypeElement, p : P) : R;
+	@:overload @:public public function visitTypeAsInterface(e : javax.lang.model.element.TypeElement, p : P) : R;
 	
 	/**
 	* Visits a variable element, dispatching to the visit method for
@@ -112,7 +112,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p {@inheritDoc}
 	* @return  the result of the kind-specific visit method
 	*/
-	@:overload override public function visitVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
+	@:overload @:public override public function visitVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
 	
 	/**
 	* Visits an {@code ENUM_CONSTANT} variable element by calling
@@ -122,7 +122,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitVariableAsEnumConstant(e : javax.lang.model.element.VariableElement, p : P) : R;
+	@:overload @:public public function visitVariableAsEnumConstant(e : javax.lang.model.element.VariableElement, p : P) : R;
 	
 	/**
 	* Visits an {@code EXCEPTION_PARAMETER} variable element by calling
@@ -132,7 +132,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitVariableAsExceptionParameter(e : javax.lang.model.element.VariableElement, p : P) : R;
+	@:overload @:public public function visitVariableAsExceptionParameter(e : javax.lang.model.element.VariableElement, p : P) : R;
 	
 	/**
 	* Visits a {@code FIELD} variable element by calling
@@ -142,7 +142,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitVariableAsField(e : javax.lang.model.element.VariableElement, p : P) : R;
+	@:overload @:public public function visitVariableAsField(e : javax.lang.model.element.VariableElement, p : P) : R;
 	
 	/**
 	* Visits a {@code LOCAL_VARIABLE} variable element by calling
@@ -152,7 +152,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitVariableAsLocalVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
+	@:overload @:public public function visitVariableAsLocalVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
 	
 	/**
 	* Visits a {@code PARAMETER} variable element by calling
@@ -162,7 +162,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitVariableAsParameter(e : javax.lang.model.element.VariableElement, p : P) : R;
+	@:overload @:public public function visitVariableAsParameter(e : javax.lang.model.element.VariableElement, p : P) : R;
 	
 	/**
 	* Visits a {@code RESOURCE_VARIABLE} variable element by calling
@@ -174,7 +174,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function visitVariableAsResourceVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
+	@:require(java7) @:overload @:public public function visitVariableAsResourceVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
 	
 	/**
 	* Visits an executable element, dispatching to the visit method
@@ -186,7 +186,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p {@inheritDoc}
 	* @return  the result of the kind-specific visit method
 	*/
-	@:overload override public function visitExecutable(e : javax.lang.model.element.ExecutableElement, p : P) : R;
+	@:overload @:public override public function visitExecutable(e : javax.lang.model.element.ExecutableElement, p : P) : R;
 	
 	/**
 	* Visits a {@code CONSTRUCTOR} executable element by calling
@@ -196,7 +196,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitExecutableAsConstructor(e : javax.lang.model.element.ExecutableElement, p : P) : R;
+	@:overload @:public public function visitExecutableAsConstructor(e : javax.lang.model.element.ExecutableElement, p : P) : R;
 	
 	/**
 	* Visits an {@code INSTANCE_INIT} executable element by calling
@@ -206,7 +206,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitExecutableAsInstanceInit(e : javax.lang.model.element.ExecutableElement, p : P) : R;
+	@:overload @:public public function visitExecutableAsInstanceInit(e : javax.lang.model.element.ExecutableElement, p : P) : R;
 	
 	/**
 	* Visits a {@code METHOD} executable element by calling
@@ -216,7 +216,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitExecutableAsMethod(e : javax.lang.model.element.ExecutableElement, p : P) : R;
+	@:overload @:public public function visitExecutableAsMethod(e : javax.lang.model.element.ExecutableElement, p : P) : R;
 	
 	/**
 	* Visits a {@code STATIC_INIT} executable element by calling
@@ -226,7 +226,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitExecutableAsStaticInit(e : javax.lang.model.element.ExecutableElement, p : P) : R;
+	@:overload @:public public function visitExecutableAsStaticInit(e : javax.lang.model.element.ExecutableElement, p : P) : R;
 	
 	/**
 	* {@inheritDoc}
@@ -237,7 +237,7 @@ extern class ElementKindVisitor6<R, P> extends javax.lang.model.util.SimpleEleme
 	* @param p {@inheritDoc}
 	* @return  {@inheritDoc}
 	*/
-	@:overload override public function visitTypeParameter(e : javax.lang.model.element.TypeParameterElement, p : P) : R;
+	@:overload @:public override public function visitTypeParameter(e : javax.lang.model.element.TypeParameterElement, p : P) : R;
 	
 	
 }

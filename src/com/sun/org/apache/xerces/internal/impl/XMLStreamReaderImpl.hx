@@ -26,49 +26,49 @@ package com.sun.org.apache.xerces.internal.impl;
 extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 {
 	/** Property identifier: entity manager. */
-	private static var ENTITY_MANAGER(default, null) : String;
+	@:protected @:static @:final private static var ENTITY_MANAGER(default, null) : String;
 	
 	/** Property identifier: Error Reporter. */
-	private static var ERROR_REPORTER(default, null) : String;
+	@:protected @:static @:final private static var ERROR_REPORTER(default, null) : String;
 	
 	/** Property identifier: Symbol table. */
-	private static var SYMBOL_TABLE(default, null) : String;
+	@:protected @:static @:final private static var SYMBOL_TABLE(default, null) : String;
 	
-	private static var READER_IN_DEFINED_STATE(default, null) : String;
+	@:protected @:static @:final private static var READER_IN_DEFINED_STATE(default, null) : String;
 	
 	/** Document scanner. */
-	private var fScanner : com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl;
+	@:protected private var fScanner : com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl;
 	
-	private var fNamespaceContextWrapper : com.sun.org.apache.xerces.internal.util.NamespaceContextWrapper;
+	@:protected private var fNamespaceContextWrapper : com.sun.org.apache.xerces.internal.util.NamespaceContextWrapper;
 	
-	private var fEntityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager;
+	@:protected private var fEntityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager;
 	
-	private var fErrorReporter : com.sun.xml.internal.stream.StaxErrorReporter;
+	@:protected private var fErrorReporter : com.sun.xml.internal.stream.StaxErrorReporter;
 	
 	/** Entity scanner, this alwasy works on last entity that was opened. */
-	private var fEntityScanner : com.sun.org.apache.xerces.internal.impl.XMLEntityScanner;
+	@:protected private var fEntityScanner : com.sun.org.apache.xerces.internal.impl.XMLEntityScanner;
 	
 	/** Input Source */
-	private var fInputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
+	@:protected private var fInputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
 	
 	/** Store properties*/
-	private var fPropertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager;
+	@:protected private var fPropertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager;
 	
 	/**
 	* @param inputStream
 	* @param props
 	* @throws XMLStreamException
 	*/
-	@:overload public function new(inputStream : java.io.InputStream, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function new(inputStream : java.io.InputStream, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
-	@:overload public function getScanner() : com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl;
+	@:overload @:public public function getScanner() : com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl;
 	
 	/**
 	* @param systemid
 	* @param props
 	* @throws XMLStreamException
 	*/
-	@:overload public function new(systemid : String, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function new(systemid : String, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* @param inputStream
@@ -76,149 +76,149 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @param props
 	* @throws XMLStreamException
 	*/
-	@:overload public function new(inputStream : java.io.InputStream, encoding : String, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function new(inputStream : java.io.InputStream, encoding : String, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* @param reader
 	* @param props
 	* @throws XMLStreamException
 	*/
-	@:overload public function new(reader : java.io.Reader, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function new(reader : java.io.Reader, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* @param inputSource
 	* @param props
 	* @throws XMLStreamException
 	*/
-	@:overload public function new(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function new(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* @param inputSource
 	* @throws XMLStreamException
 	*/
-	@:overload public function setInputSource(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public public function setInputSource(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/** This function tells if this instances is available for reuse.
 	* One must call reset() and setInputSource() to be able to reuse
 	* this instance.
 	*/
-	@:overload public function canReuse() : Bool;
+	@:overload @:public public function canReuse() : Bool;
 	
 	/**
 	* Resets this instance so that this instance is ready for reuse.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/** Frees any resources associated with this Reader. This method does not close the underlying input source.
 	* @throws XMLStreamException if there are errors freeing associated resources
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/** Returns the character encoding declared on the xml declaration Returns null if none was declared
 	* @return the encoding declared in the document or null
 	*/
-	@:overload public function getCharacterEncodingScheme() : String;
+	@:overload @:public public function getCharacterEncodingScheme() : String;
 	
 	/**
 	* @return
 	*/
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	/** Return input encoding if known or null if unknown.
 	* @return the encoding of this instance or null
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/** Returns the current value of the parse event as a string, this returns the string value of a CHARACTERS event, returns the value of a COMMENT, the replacement value for an ENTITY_REFERENCE, the string value of a CDATA section, the string value for a SPACE event, or the String value of the internal subset of the DTD. If an ENTITY_REFERENCE has been resolved, any character data will be reported as CHARACTERS events.
 	* @return the current text or null
 	*/
-	@:overload public function getEventType() : Int;
+	@:overload @:public public function getEventType() : Int;
 	
 	/**
 	* @return
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
-	@:overload public function getLocalName() : String;
+	@:overload @:public public function getLocalName() : String;
 	
 	/**
 	* @return
 	*/
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
 	/** Get the data section of a processing instruction
 	* @return the data or null
 	*/
-	@:overload public function getPIData() : String;
+	@:overload @:public public function getPIData() : String;
 	
 	/** Get the target of a processing instruction
 	* @return the target or null
 	*/
-	@:overload public function getPITarget() : String;
+	@:overload @:public public function getPITarget() : String;
 	
 	/**
 	* @return the prefix of the current event, or null if the event does
 	* not have a prefix. For START_ELEMENT and END_ELEMENT, return
 	* XMLConstants.DEFAULT_NS_PREFIX when no prefix is available.
 	*/
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
 	/**
 	* @return
 	*/
-	@:overload public function getTextCharacters() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getTextCharacters() : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* @return
 	*/
-	@:overload public function getTextLength() : Int;
+	@:overload @:public public function getTextLength() : Int;
 	
 	/**
 	* @return
 	*/
-	@:overload public function getTextStart() : Int;
+	@:overload @:public public function getTextStart() : Int;
 	
 	/**
 	* @return
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	/** Get the XML language version of the current document being parsed */
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
 	/**
 	* @return
 	*/
-	@:overload public function hasAttributes() : Bool;
+	@:overload @:public public function hasAttributes() : Bool;
 	
 	/** this Funtion returns true if the current event has name */
-	@:overload public function hasName() : Bool;
+	@:overload @:public public function hasName() : Bool;
 	
 	/**
 	* @throws XMLStreamException
 	* @return
 	*/
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
 	/**
 	* @return
 	*/
-	@:overload public function hasValue() : Bool;
+	@:overload @:public public function hasValue() : Bool;
 	
 	/**
 	* @return
 	*/
-	@:overload public function isEndElement() : Bool;
+	@:overload @:public public function isEndElement() : Bool;
 	
 	/**
 	* @return
 	*/
-	@:overload public function isStandalone() : Bool;
+	@:overload @:public public function isStandalone() : Bool;
 	
 	/**
 	* @return
 	*/
-	@:overload public function isStartElement() : Bool;
+	@:overload @:public public function isStartElement() : Bool;
 	
 	/**
 	*  Returns true if the cursor points to a character data event that consists of all whitespace
@@ -226,13 +226,13 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	*  for the same event.
 	* @return
 	*/
-	@:overload public function isWhiteSpace() : Bool;
+	@:overload @:public public function isWhiteSpace() : Bool;
 	
 	/**
 	* @throws XMLStreamException
 	* @return
 	*/
-	@:overload public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
 	/** Returns the count of attributes on this START_ELEMENT,
 	* this method is only valid on a START_ELEMENT or ATTRIBUTE.  This
@@ -241,7 +241,7 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @return returns the number of attributes
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function getAttributeCount() : Int;
+	@:overload @:public public function getAttributeCount() : Int;
 	
 	/** Returns the localName of the attribute at the provided
 	* index
@@ -249,13 +249,13 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @return the localName of the attribute
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function getAttributeName(index : Int) : javax.xml.namespace.QName;
+	@:overload @:public public function getAttributeName(index : Int) : javax.xml.namespace.QName;
 	
 	/**
 	* @param index
 	* @return
 	*/
-	@:overload public function getAttributeLocalName(index : Int) : String;
+	@:overload @:public public function getAttributeLocalName(index : Int) : String;
 	
 	/** Returns the namespace of the attribute at the provided
 	* index
@@ -263,7 +263,7 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @return the namespace URI (can be null)
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function getAttributeNamespace(index : Int) : String;
+	@:overload @:public public function getAttributeNamespace(index : Int) : String;
 	
 	/** Returns the prefix of this attribute at the
 	* provided index
@@ -271,7 +271,7 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @return the prefix of the attribute
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function getAttributePrefix(index : Int) : String;
+	@:overload @:public public function getAttributePrefix(index : Int) : String;
 	
 	/** Returns the qname of the attribute at the provided index
 	*
@@ -279,7 +279,7 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @return the QName of the attribute
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function getAttributeQName(index : Int) : javax.xml.namespace.QName;
+	@:overload @:public public function getAttributeQName(index : Int) : javax.xml.namespace.QName;
 	
 	/** Returns the XML type of the attribute at the provided
 	* index
@@ -287,7 +287,7 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @return the XML type of the attribute
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function getAttributeType(index : Int) : String;
+	@:overload @:public public function getAttributeType(index : Int) : String;
 	
 	/** Returns the value of the attribute at the
 	* index
@@ -295,14 +295,14 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @return the attribute value
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function getAttributeValue(index : Int) : String;
+	@:overload @:public public function getAttributeValue(index : Int) : String;
 	
 	/**
 	* @param namespaceURI
 	* @param localName
 	* @return
 	*/
-	@:overload public function getAttributeValue(namespaceURI : String, localName : String) : String;
+	@:overload @:public public function getAttributeValue(namespaceURI : String, localName : String) : String;
 	
 	/** Reads the content of a text-only element. Precondition:
 	* the current event is START_ELEMENT. Postcondition:
@@ -310,7 +310,7 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @throws XMLStreamException if the current event is not a START_ELEMENT or if
 	* a non text element is encountered
 	*/
-	@:overload public function getElementText() : String;
+	@:overload @:public public function getElementText() : String;
 	
 	/** Return the current location of the processor.
 	* If the Location is unknown the processor should return
@@ -319,19 +319,19 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* The location information is only valid until next() is
 	* called.
 	*/
-	@:overload public function getLocation() : javax.xml.stream.Location;
+	@:overload @:public public function getLocation() : javax.xml.stream.Location;
 	
 	/** Returns a QName for the current START_ELEMENT or END_ELEMENT event
 	* @return the QName for the current START_ELEMENT or END_ELEMENT event
 	*/
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
 	/** Returns a read only namespace context for the current
 	* position.  The context is transient and only valid until
 	* a call to next() changes the state of the reader.
 	* @return return a namespace context
 	*/
-	@:overload public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
 	
 	/** Returns the count of namespaces declared on this START_ELEMENT or END_ELEMENT,
 	* this method is only valid on a START_ELEMENT, END_ELEMENT or NAMESPACE. On
@@ -341,7 +341,7 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @return returns the number of namespace declarations on this specific element
 	* @throws IllegalStateException if this is not a START_ELEMENT, END_ELEMENT or NAMESPACE
 	*/
-	@:overload public function getNamespaceCount() : Int;
+	@:overload @:public public function getNamespaceCount() : Int;
 	
 	/** Returns the prefix for the namespace declared at the
 	* index.  Returns null if this is the default namespace
@@ -351,7 +351,7 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @return returns the namespace prefix
 	* @throws IllegalStateException if this is not a START_ELEMENT, END_ELEMENT or NAMESPACE
 	*/
-	@:overload public function getNamespacePrefix(index : Int) : String;
+	@:overload @:public public function getNamespacePrefix(index : Int) : String;
 	
 	/** Returns the uri for the namespace declared at the
 	* index.
@@ -360,14 +360,14 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @return returns the namespace uri
 	* @throws IllegalStateException if this is not a START_ELEMENT, END_ELEMENT or NAMESPACE
 	*/
-	@:overload public function getNamespaceURI(index : Int) : String;
+	@:overload @:public public function getNamespaceURI(index : Int) : String;
 	
 	/** Get the value of a feature/property from the underlying implementation
 	* @param name The name of the property, may not be null
 	* @return The value of the property
 	* @throws IllegalArgumentException if name is null
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	/** Returns the current value of the parse event as a string,
 	* this returns the string value of a CHARACTERS event,
@@ -378,7 +378,7 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @throws java.lang.IllegalStateException if this state is not
 	* a valid text state.
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
 	/** Test if the current event is of the given type and if the namespace and name match the current namespace and name of the current event.
 	* If the namespaceURI is null it is not checked for equality, if the localName is null it is not checked for equality.
@@ -387,7 +387,7 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @param localName the localName of the event, may be null
 	* @throws XMLStreamException if the required values are not matched.
 	*/
-	@:overload public function require(type : Int, namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function require(type : Int, namespaceURI : String, localName : String) : Void;
 	
 	/** Gets the the text associated with a CHARACTERS, SPACE or CDATA event.
 	* Text starting a "sourceStart" is copied into "destination" starting at "targetStart".
@@ -425,13 +425,13 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @throws UnsupportedOperationException if this method is not supported
 	* @throws NullPointerException is if target is null
 	*/
-	@:overload public function getTextCharacters(sourceStart : Int, target : java.NativeArray<java.StdTypes.Char16>, targetStart : Int, length : Int) : Int;
+	@:overload @:public public function getTextCharacters(sourceStart : Int, target : java.NativeArray<java.StdTypes.Char16>, targetStart : Int, length : Int) : Int;
 	
 	/** Return true if the current event has text, false otherwise
 	* The following events have text:
 	* CHARACTERS,DTD ,ENTITY_REFERENCE, COMMENT
 	*/
-	@:overload public function hasText() : Bool;
+	@:overload @:public public function hasText() : Bool;
 	
 	/** Returns a boolean which indicates if this
 	* attribute was created by default
@@ -439,12 +439,12 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @return true if this is a default attribute
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function isAttributeSpecified(index : Int) : Bool;
+	@:overload @:public public function isAttributeSpecified(index : Int) : Bool;
 	
 	/** Returns true if the cursor points to a character data event
 	* @return true if the cursor points to character data, false otherwise
 	*/
-	@:overload public function isCharacters() : Bool;
+	@:overload @:public public function isCharacters() : Bool;
 	
 	/** Skips any insignificant events (COMMENT and PROCESSING_INSTRUCTION)
 	* until a START_ELEMENT or
@@ -456,18 +456,18 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @return the event type of the element read
 	* @throws XMLStreamException if the current event is not white space
 	*/
-	@:overload public function nextTag() : Int;
+	@:overload @:public public function nextTag() : Int;
 	
 	/** Checks if standalone was set in the document
 	* @return true if standalone was set in the document, or false otherwise
 	*/
-	@:overload public function standaloneSet() : Bool;
+	@:overload @:public public function standaloneSet() : Bool;
 	
 	/**
 	* @param qname
 	* @return
 	*/
-	@:overload public function convertXNIQNametoJavaxQName(qname : com.sun.org.apache.xerces.internal.xni.QName) : javax.xml.namespace.QName;
+	@:overload @:public public function convertXNIQNametoJavaxQName(qname : com.sun.org.apache.xerces.internal.xni.QName) : javax.xml.namespace.QName;
 	
 	/** Return the uri for the given prefix.
 	* The uri returned depends on the current state of the processor.
@@ -482,18 +482,18 @@ extern class XMLStreamReaderImpl implements javax.xml.stream.XMLStreamReader
 	* @param prefix The prefix to lookup, may not be null
 	* @throws IllegalStateException - if the prefix is null
 	*/
-	@:overload public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public public function getNamespaceURI(prefix : String) : String;
 	
-	@:overload private function setPropertyManager(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:protected private function setPropertyManager(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* @return returns the reference to property manager.
 	*/
-	@:overload private function getPropertyManager() : com.sun.org.apache.xerces.internal.impl.PropertyManager;
+	@:overload @:protected private function getPropertyManager() : com.sun.org.apache.xerces.internal.impl.PropertyManager;
 	
-	@:overload private function getEntityDecls() : java.util.List<Dynamic>;
+	@:overload @:protected private function getEntityDecls() : java.util.List<Dynamic>;
 	
-	@:overload private function getNotationDecls() : java.util.List<Dynamic>;
+	@:overload @:protected private function getNotationDecls() : java.util.List<Dynamic>;
 	
 	
 }

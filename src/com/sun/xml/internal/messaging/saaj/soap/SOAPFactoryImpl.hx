@@ -25,29 +25,29 @@ package com.sun.xml.internal.messaging.saaj.soap;
 */
 extern class SOAPFactoryImpl extends javax.xml.soap.SOAPFactory
 {
-	private static var log(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var log(default, null) : java.util.logging.Logger;
 	
-	@:overload @:abstract private function createDocument() : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl;
+	@:overload @:protected @:abstract private function createDocument() : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl;
 	
-	@:overload override public function createElement(tagName : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function createElement(tagName : String) : javax.xml.soap.SOAPElement;
 	
-	@:overload override public function createElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function createElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
 	
-	@:overload override public function createElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function createElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
-	@:overload override public function createElement(localName : String, prefix : String, uri : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function createElement(localName : String, prefix : String, uri : String) : javax.xml.soap.SOAPElement;
 	
-	@:overload override public function createName(localName : String, prefix : String, uri : String) : javax.xml.soap.Name;
+	@:overload @:public override public function createName(localName : String, prefix : String, uri : String) : javax.xml.soap.Name;
 	
-	@:overload override public function createName(localName : String) : javax.xml.soap.Name;
+	@:overload @:public override public function createName(localName : String) : javax.xml.soap.Name;
 	
-	@:overload override public function createElement(domElement : org.w3c.dom.Element) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function createElement(domElement : org.w3c.dom.Element) : javax.xml.soap.SOAPElement;
 	
-	@:overload override public function createDetail() : javax.xml.soap.Detail;
+	@:overload @:public override public function createDetail() : javax.xml.soap.Detail;
 	
-	@:overload override public function createFault(reasonText : String, faultCode : javax.xml.namespace.QName) : javax.xml.soap.SOAPFault;
+	@:overload @:public override public function createFault(reasonText : String, faultCode : javax.xml.namespace.QName) : javax.xml.soap.SOAPFault;
 	
-	@:overload override public function createFault() : javax.xml.soap.SOAPFault;
+	@:overload @:public override public function createFault() : javax.xml.soap.SOAPFault;
 	
 	
 }

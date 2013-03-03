@@ -30,7 +30,7 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	*
 	* @param sourceBean  The bean to be given as the source for any events.
 	*/
-	@:overload public function new(sourceBean : Dynamic) : Void;
+	@:overload @:public public function new(sourceBean : Dynamic) : Void;
 	
 	/**
 	* Add a PropertyChangeListener to the listener list.
@@ -42,7 +42,7 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	*
 	* @param listener  The PropertyChangeListener to be added
 	*/
-	@:overload public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Remove a PropertyChangeListener from the listener list.
@@ -55,7 +55,7 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	*
 	* @param listener  The PropertyChangeListener to be removed
 	*/
-	@:overload public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the listeners that were added to the
@@ -88,7 +88,7 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	*         empty array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:require(java4) @:overload @:public public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	/**
 	* Add a PropertyChangeListener for a specific property.  The listener
@@ -103,7 +103,7 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	* @param propertyName  The name of the property to listen on.
 	* @param listener  The PropertyChangeListener to be added
 	*/
-	@:overload public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Remove a PropertyChangeListener for a specific property.
@@ -118,7 +118,7 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	* @param propertyName  The name of the property that was listened on.
 	* @param listener  The PropertyChangeListener to be removed
 	*/
-	@:overload public function removePropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the listeners which have been associated
@@ -131,7 +131,7 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	*         returned.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getPropertyChangeListeners(propertyName : String) : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:require(java4) @:overload @:public public function getPropertyChangeListeners(propertyName : String) : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	/**
 	* Reports a bound property update to listeners
@@ -147,7 +147,7 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	* @param oldValue      the old value of the property
 	* @param newValue      the new value of the property
 	*/
-	@:overload public function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:public public function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Reports an integer bound property update to listeners
@@ -163,7 +163,7 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	* @param oldValue      the old value of the property
 	* @param newValue      the new value of the property
 	*/
-	@:overload public function firePropertyChange(propertyName : String, oldValue : Int, newValue : Int) : Void;
+	@:overload @:public public function firePropertyChange(propertyName : String, oldValue : Int, newValue : Int) : Void;
 	
 	/**
 	* Reports a boolean bound property update to listeners
@@ -179,7 +179,7 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	* @param oldValue      the old value of the property
 	* @param newValue      the new value of the property
 	*/
-	@:overload public function firePropertyChange(propertyName : String, oldValue : Bool, newValue : Bool) : Void;
+	@:overload @:public public function firePropertyChange(propertyName : String, oldValue : Bool, newValue : Bool) : Void;
 	
 	/**
 	* Fires a property change event to listeners
@@ -190,7 +190,7 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	*
 	* @param event  the {@code PropertyChangeEvent} to be fired
 	*/
-	@:overload public function firePropertyChange(event : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function firePropertyChange(event : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* Reports a bound indexed property update to listeners
@@ -208,7 +208,7 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	* @param newValue      the new value of the property
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function fireIndexedPropertyChange(propertyName : String, index : Int, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:require(java5) @:overload @:public public function fireIndexedPropertyChange(propertyName : String, index : Int, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Reports an integer bound indexed property update to listeners
@@ -226,7 +226,7 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	* @param newValue      the new value of the property
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function fireIndexedPropertyChange(propertyName : String, index : Int, oldValue : Int, newValue : Int) : Void;
+	@:require(java5) @:overload @:public public function fireIndexedPropertyChange(propertyName : String, index : Int, oldValue : Int, newValue : Int) : Void;
 	
 	/**
 	* Reports a boolean bound indexed property update to listeners
@@ -244,7 +244,7 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	* @param newValue      the new value of the property
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function fireIndexedPropertyChange(propertyName : String, index : Int, oldValue : Bool, newValue : Bool) : Void;
+	@:require(java5) @:overload @:public public function fireIndexedPropertyChange(propertyName : String, index : Int, oldValue : Bool, newValue : Bool) : Void;
 	
 	/**
 	* Check if there are any listeners for a specific property, including
@@ -254,7 +254,7 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	* @param propertyName  the property name.
 	* @return true if there are one or more listeners for the given property
 	*/
-	@:overload public function hasListeners(propertyName : String) : Bool;
+	@:overload @:public public function hasListeners(propertyName : String) : Bool;
 	
 	
 }
@@ -272,7 +272,7 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	* @param length  the array length
 	* @return        an array with specified length
 	*/
-	@:overload override private function newArray(length : Int) : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:overload @:protected override private function newArray(length : Int) : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	/**
 	* Creates a {@link PropertyChangeListenerProxy PropertyChangeListenerProxy}
@@ -282,12 +282,12 @@ extern class PropertyChangeSupport implements java.io.Serializable
 	* @param listener  the listener to process events
 	* @return          a {@code PropertyChangeListenerProxy} object
 	*/
-	@:overload private function newProxy(name : String, listener : java.beans.PropertyChangeListener) : java.beans.PropertyChangeListener;
+	@:overload @:protected private function newProxy(name : String, listener : java.beans.PropertyChangeListener) : java.beans.PropertyChangeListener;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:final public function extract(listener : java.beans.PropertyChangeListener) : java.beans.PropertyChangeListener;
+	@:overload @:public @:final public function extract(listener : java.beans.PropertyChangeListener) : java.beans.PropertyChangeListener;
 	
 	
 }

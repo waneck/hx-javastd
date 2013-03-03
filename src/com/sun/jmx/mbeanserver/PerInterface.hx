@@ -39,9 +39,9 @@ package com.sun.jmx.mbeanserver;
 */
 @:native('com$sun$jmx$mbeanserver$PerInterface$InitMaps') @:internal extern class PerInterface_InitMaps implements com.sun.jmx.mbeanserver.MBeanAnalyzer.MBeanAnalyzer_MBeanVisitor<Dynamic>
 {
-	@:overload public function visitAttribute(attributeName : String, getter : Dynamic, setter : Dynamic) : Void;
+	@:overload @:public public function visitAttribute(attributeName : String, getter : Dynamic, setter : Dynamic) : Void;
 	
-	@:overload public function visitOperation(operationName : String, operation : Dynamic) : Void;
+	@:overload @:public public function visitOperation(operationName : String, operation : Dynamic) : Void;
 	
 	
 }

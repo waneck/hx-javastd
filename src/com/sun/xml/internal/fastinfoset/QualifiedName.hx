@@ -27,65 +27,65 @@ package com.sun.xml.internal.fastinfoset;
 */
 extern class QualifiedName
 {
-	public var prefix : String;
+	@:public public var prefix : String;
 	
-	public var namespaceName : String;
+	@:public public var namespaceName : String;
 	
-	public var localName : String;
+	@:public public var localName : String;
 	
-	public var qName : String;
+	@:public public var qName : String;
 	
-	public var index : Int;
+	@:public public var index : Int;
 	
-	public var prefixIndex : Int;
+	@:public public var prefixIndex : Int;
 	
-	public var namespaceNameIndex : Int;
+	@:public public var namespaceNameIndex : Int;
 	
-	public var localNameIndex : Int;
+	@:public public var localNameIndex : Int;
 	
-	public var attributeId : Int;
+	@:public public var attributeId : Int;
 	
-	public var attributeHash : Int;
+	@:public public var attributeHash : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(prefix : String, namespaceName : String, localName : String, qName : String) : Void;
+	@:overload @:public public function new(prefix : String, namespaceName : String, localName : String, qName : String) : Void;
 	
-	@:overload public function set(prefix : String, namespaceName : String, localName : String, qName : String) : Void;
+	@:overload @:public public function set(prefix : String, namespaceName : String, localName : String, qName : String) : Void;
 	
-	@:overload public function new(prefix : String, namespaceName : String, localName : String, qName : String, index : Int) : Void;
+	@:overload @:public public function new(prefix : String, namespaceName : String, localName : String, qName : String, index : Int) : Void;
 	
-	@:overload @:final public function set(prefix : String, namespaceName : String, localName : String, qName : String, index : Int) : com.sun.xml.internal.fastinfoset.QualifiedName;
+	@:overload @:public @:final public function set(prefix : String, namespaceName : String, localName : String, qName : String, index : Int) : com.sun.xml.internal.fastinfoset.QualifiedName;
 	
-	@:overload public function new(prefix : String, namespaceName : String, localName : String, qName : String, index : Int, prefixIndex : Int, namespaceNameIndex : Int, localNameIndex : Int) : Void;
+	@:overload @:public public function new(prefix : String, namespaceName : String, localName : String, qName : String, index : Int, prefixIndex : Int, namespaceNameIndex : Int, localNameIndex : Int) : Void;
 	
-	@:overload @:final public function set(prefix : String, namespaceName : String, localName : String, qName : String, index : Int, prefixIndex : Int, namespaceNameIndex : Int, localNameIndex : Int) : com.sun.xml.internal.fastinfoset.QualifiedName;
+	@:overload @:public @:final public function set(prefix : String, namespaceName : String, localName : String, qName : String, index : Int, prefixIndex : Int, namespaceNameIndex : Int, localNameIndex : Int) : com.sun.xml.internal.fastinfoset.QualifiedName;
 	
-	@:overload public function new(prefix : String, namespaceName : String, localName : String) : Void;
+	@:overload @:public public function new(prefix : String, namespaceName : String, localName : String) : Void;
 	
-	@:overload @:final public function set(prefix : String, namespaceName : String, localName : String) : com.sun.xml.internal.fastinfoset.QualifiedName;
+	@:overload @:public @:final public function set(prefix : String, namespaceName : String, localName : String) : com.sun.xml.internal.fastinfoset.QualifiedName;
 	
-	@:overload public function new(prefix : String, namespaceName : String, localName : String, prefixIndex : Int, namespaceNameIndex : Int, localNameIndex : Int, charBuffer : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(prefix : String, namespaceName : String, localName : String, prefixIndex : Int, namespaceNameIndex : Int, localNameIndex : Int, charBuffer : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
-	@:overload @:final public function set(prefix : String, namespaceName : String, localName : String, prefixIndex : Int, namespaceNameIndex : Int, localNameIndex : Int, charBuffer : java.NativeArray<java.StdTypes.Char16>) : com.sun.xml.internal.fastinfoset.QualifiedName;
+	@:overload @:public @:final public function set(prefix : String, namespaceName : String, localName : String, prefixIndex : Int, namespaceNameIndex : Int, localNameIndex : Int, charBuffer : java.NativeArray<java.StdTypes.Char16>) : com.sun.xml.internal.fastinfoset.QualifiedName;
 	
-	@:overload public function new(prefix : String, namespaceName : String, localName : String, index : Int) : Void;
+	@:overload @:public public function new(prefix : String, namespaceName : String, localName : String, index : Int) : Void;
 	
-	@:overload @:final public function set(prefix : String, namespaceName : String, localName : String, index : Int) : com.sun.xml.internal.fastinfoset.QualifiedName;
+	@:overload @:public @:final public function set(prefix : String, namespaceName : String, localName : String, index : Int) : com.sun.xml.internal.fastinfoset.QualifiedName;
 	
-	@:overload public function new(prefix : String, namespaceName : String, localName : String, index : Int, prefixIndex : Int, namespaceNameIndex : Int, localNameIndex : Int) : Void;
+	@:overload @:public public function new(prefix : String, namespaceName : String, localName : String, index : Int, prefixIndex : Int, namespaceNameIndex : Int, localNameIndex : Int) : Void;
 	
-	@:overload @:final public function set(prefix : String, namespaceName : String, localName : String, index : Int, prefixIndex : Int, namespaceNameIndex : Int, localNameIndex : Int) : com.sun.xml.internal.fastinfoset.QualifiedName;
+	@:overload @:public @:final public function set(prefix : String, namespaceName : String, localName : String, index : Int, prefixIndex : Int, namespaceNameIndex : Int, localNameIndex : Int) : com.sun.xml.internal.fastinfoset.QualifiedName;
 	
-	@:overload public function new(prefix : String, namespaceName : String) : Void;
+	@:overload @:public public function new(prefix : String, namespaceName : String) : Void;
 	
-	@:overload @:final public function set(prefix : String, namespaceName : String) : com.sun.xml.internal.fastinfoset.QualifiedName;
+	@:overload @:public @:final public function set(prefix : String, namespaceName : String) : com.sun.xml.internal.fastinfoset.QualifiedName;
 	
-	@:overload @:final public function getQName() : javax.xml.namespace.QName;
+	@:overload @:public @:final public function getQName() : javax.xml.namespace.QName;
 	
-	@:overload @:final public function getQNameString() : String;
+	@:overload @:public @:final public function getQNameString() : String;
 	
-	@:overload @:final public function createAttributeValues(size : Int) : Void;
+	@:overload @:public @:final public function createAttributeValues(size : Int) : Void;
 	
 	
 }

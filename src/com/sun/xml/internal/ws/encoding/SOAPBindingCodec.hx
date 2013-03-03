@@ -25,27 +25,27 @@ package com.sun.xml.internal.ws.encoding;
 */
 extern class SOAPBindingCodec extends com.sun.xml.internal.ws.encoding.MimeCodec implements com.sun.xml.internal.ws.api.pipe.SOAPBindingCodec
 {
-	@:overload public function getXMLCodec() : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec;
+	@:overload @:public public function getXMLCodec() : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec;
 	
-	@:overload public function new(binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
+	@:overload @:public public function new(binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
 	
-	@:overload public function new(binding : com.sun.xml.internal.ws.api.WSBinding, xmlSoapCodec : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec) : Void;
+	@:overload @:public public function new(binding : com.sun.xml.internal.ws.api.WSBinding, xmlSoapCodec : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec) : Void;
 	
-	@:overload override public function getMimeType() : String;
+	@:overload @:public override public function getMimeType() : String;
 	
-	@:overload override public function getStaticContentType(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public override public function getStaticContentType(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload override public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public override public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public override public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload override public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public override public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload override public function decode(_in : java.nio.channels.ReadableByteChannel, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public override public function decode(_in : java.nio.channels.ReadableByteChannel, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload override public function copy() : com.sun.xml.internal.ws.api.pipe.SOAPBindingCodec;
+	@:overload @:public override public function copy() : com.sun.xml.internal.ws.api.pipe.SOAPBindingCodec;
 	
-	@:overload override private function decode(mpp : com.sun.xml.internal.ws.encoding.MimeMultipartParser, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:protected override private function decode(mpp : com.sun.xml.internal.ws.encoding.MimeMultipartParser, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	
 }
@@ -59,13 +59,13 @@ extern class SOAPBindingCodec extends com.sun.xml.internal.ws.encoding.MimeCodec
 
 @:native('com$sun$xml$internal$ws$encoding$SOAPBindingCodec$AcceptContentType') @:internal extern class SOAPBindingCodec_AcceptContentType implements com.sun.xml.internal.ws.api.pipe.ContentType
 {
-	@:overload public function set(p : com.sun.xml.internal.ws.api.message.Packet, c : com.sun.xml.internal.ws.api.pipe.ContentType) : com.sun.xml.internal.ws.encoding.SOAPBindingCodec.SOAPBindingCodec_AcceptContentType;
+	@:overload @:public public function set(p : com.sun.xml.internal.ws.api.message.Packet, c : com.sun.xml.internal.ws.api.pipe.ContentType) : com.sun.xml.internal.ws.encoding.SOAPBindingCodec.SOAPBindingCodec_AcceptContentType;
 	
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
-	@:overload public function getSOAPActionHeader() : String;
+	@:overload @:public public function getSOAPActionHeader() : String;
 	
-	@:overload public function getAcceptHeader() : String;
+	@:overload @:public public function getAcceptHeader() : String;
 	
 	
 }

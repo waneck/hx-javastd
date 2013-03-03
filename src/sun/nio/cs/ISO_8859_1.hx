@@ -25,37 +25,37 @@ package sun.nio.cs;
 */
 @:internal extern class ISO_8859_1 extends java.nio.charset.Charset implements sun.nio.cs.HistoricallyNamedCharset
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function historicalName() : String;
+	@:overload @:public public function historicalName() : String;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	
 }
 @:native('sun$nio$cs$ISO_8859_1$Decoder') @:internal extern class ISO_8859_1_Decoder extends java.nio.charset.CharsetDecoder implements sun.nio.cs.ArrayDecoder
 {
-	@:overload override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload public function decode(src : java.NativeArray<java.StdTypes.Int8>, sp : Int, len : Int, dst : java.NativeArray<java.StdTypes.Char16>) : Int;
+	@:overload @:public public function decode(src : java.NativeArray<java.StdTypes.Int8>, sp : Int, len : Int, dst : java.NativeArray<java.StdTypes.Char16>) : Int;
 	
 	
 }
 @:native('sun$nio$cs$ISO_8859_1$Encoder') @:internal extern class ISO_8859_1_Encoder extends java.nio.charset.CharsetEncoder implements sun.nio.cs.ArrayEncoder
 {
-	@:overload override public function canEncode(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canEncode(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload override public function isLegalReplacement(repl : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public override public function isLegalReplacement(repl : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
-	@:overload override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function implReplaceWith(newReplacement : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected override private function implReplaceWith(newReplacement : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function encode(src : java.NativeArray<java.StdTypes.Char16>, sp : Int, len : Int, dst : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public public function encode(src : java.NativeArray<java.StdTypes.Char16>, sp : Int, len : Int, dst : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	
 }

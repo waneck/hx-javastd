@@ -27,37 +27,37 @@ package com.sun.xml.internal.fastinfoset.util;
 */
 extern class CharArray implements java.lang.CharSequence
 {
-	public var ch : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var ch : java.NativeArray<java.StdTypes.Char16>;
 	
-	public var start : Int;
+	@:public public var start : Int;
 	
-	private var _hash : Int;
+	@:protected private var _hash : Int;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload public function new(_ch : java.NativeArray<java.StdTypes.Char16>, _start : Int, _length : Int, copy : Bool) : Void;
+	@:overload @:public public function new(_ch : java.NativeArray<java.StdTypes.Char16>, _start : Int, _length : Int, copy : Bool) : Void;
 	
-	@:overload @:final public function set(_ch : java.NativeArray<java.StdTypes.Char16>, _start : Int, _length : Int, copy : Bool) : Void;
+	@:overload @:public @:final public function set(_ch : java.NativeArray<java.StdTypes.Char16>, _start : Int, _length : Int, copy : Bool) : Void;
 	
-	@:overload @:final public function cloneArray() : Void;
+	@:overload @:public @:final public function cloneArray() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:native('hashCode') @:overload @:final public static function _hashCode(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Int;
+	@:native('hashCode') @:overload @:public @:static @:final public static function _hashCode(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Int;
 	
-	@:overload @:final public function equalsCharArray(cha : com.sun.xml.internal.fastinfoset.util.CharArray) : Bool;
+	@:overload @:public @:final public function equalsCharArray(cha : com.sun.xml.internal.fastinfoset.util.CharArray) : Bool;
 	
-	@:overload @:final public function equalsCharArray(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Bool;
+	@:overload @:public @:final public function equalsCharArray(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Bool;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload @:final public function length() : Int;
+	@:overload @:public @:final public function length() : Int;
 	
-	@:overload @:final public function charAt(index : Int) : java.StdTypes.Char16;
+	@:overload @:public @:final public function charAt(index : Int) : java.StdTypes.Char16;
 	
-	@:overload @:final public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
+	@:overload @:public @:final public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
 	
 	
 }

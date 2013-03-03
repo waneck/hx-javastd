@@ -35,25 +35,25 @@ extern class XCatalogReader extends com.sun.org.apache.xml.internal.resolver.rea
 	/** The catalog object needs to be stored by the object so that
 	* SAX callbacks can use it.
 	*/
-	private var catalog : com.sun.org.apache.xml.internal.resolver.Catalog;
+	@:protected private var catalog : com.sun.org.apache.xml.internal.resolver.Catalog;
 	
 	/** Set the current catalog. */
-	@:overload public function setCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog) : Void;
+	@:overload @:public public function setCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog) : Void;
 	
 	/** Get the current catalog. */
-	@:overload public function getCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
+	@:overload @:public public function getCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
 	
 	/** The constructor */
-	@:overload public function new(parserFactory : javax.xml.parsers.SAXParserFactory) : Void;
+	@:overload @:public public function new(parserFactory : javax.xml.parsers.SAXParserFactory) : Void;
 	
 	/** The SAX <code>setDocumentLocator</code> method does nothing. */
-	@:overload override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	/** The SAX <code>startDocument</code> method does nothing. */
-	@:overload override public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
 	/** The SAX <code>endDocument</code> method does nothing. */
-	@:overload override public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
 	/**
 	* The SAX <code>startElement</code> method recognizes elements
@@ -67,19 +67,19 @@ extern class XCatalogReader extends com.sun.org.apache.xml.internal.resolver.rea
 	*
 	* @see CatalogEntry
 	*/
-	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/** The SAX <code>endElement</code> method does nothing. */
-	@:overload override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
 	/** The SAX <code>characters</code> method does nothing. */
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/** The SAX <code>ignorableWhitespace</code> method does nothing. */
-	@:overload override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/** The SAX <code>processingInstruction</code> method does nothing. */
-	@:overload override public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public override public function processingInstruction(target : String, data : String) : Void;
 	
 	
 }

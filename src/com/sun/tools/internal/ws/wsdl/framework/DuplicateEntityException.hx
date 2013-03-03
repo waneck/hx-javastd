@@ -30,13 +30,13 @@ package com.sun.tools.internal.ws.wsdl.framework;
 */
 extern class DuplicateEntityException extends com.sun.tools.internal.ws.wsdl.framework.ValidationException
 {
-	@:overload public function new(entity : com.sun.tools.internal.ws.wsdl.framework.GloballyKnown) : Void;
+	@:overload @:public public function new(entity : com.sun.tools.internal.ws.wsdl.framework.GloballyKnown) : Void;
 	
-	@:overload public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Identifiable) : Void;
+	@:overload @:public public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Identifiable) : Void;
 	
-	@:overload public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity, name : String) : Void;
+	@:overload @:public public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity, name : String) : Void;
 	
-	@:overload public function getDefaultResourceBundleName() : String;
+	@:overload @:public override public function getDefaultResourceBundleName() : String;
 	
 	
 }

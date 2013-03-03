@@ -77,14 +77,14 @@ extern class MidiMessage implements java.lang.Cloneable
 	* of the message are data bytes for this message.
 	* @see #getLength
 	*/
-	private var data : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var data : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* The number of bytes in the MIDI message, including the
 	* status byte and any data bytes.
 	* @see #getLength
 	*/
-	private var length : Int;
+	@:protected private var length : Int;
 	
 	/**
 	* Constructs a new <code>MidiMessage</code>.  This protected
@@ -98,7 +98,7 @@ extern class MidiMessage implements java.lang.Cloneable
 	*
 	* @see #setMessage
 	*/
-	@:overload private function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected private function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the data for the MIDI message.   This protected
@@ -106,7 +106,7 @@ extern class MidiMessage implements java.lang.Cloneable
 	* ensure that the data array specifies a complete, valid MIDI
 	* message.
 	*/
-	@:overload private function setMessage(data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
+	@:overload @:protected private function setMessage(data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
 	
 	/**
 	* Obtains the MIDI message data.  The first byte of the returned byte
@@ -118,7 +118,7 @@ extern class MidiMessage implements java.lang.Cloneable
 	*
 	* @return the byte array containing the complete <code>MidiMessage</code> data
 	*/
-	@:overload public function getMessage() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getMessage() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Obtains the status byte for the MIDI message.  The status "byte" is
@@ -128,7 +128,7 @@ extern class MidiMessage implements java.lang.Cloneable
 	*
 	* @return the integer representation of this event's status byte
 	*/
-	@:overload public function getStatus() : Int;
+	@:overload @:public public function getStatus() : Int;
 	
 	/**
 	* Obtains the total length of the MIDI message in bytes.  A
@@ -139,14 +139,14 @@ extern class MidiMessage implements java.lang.Cloneable
 	*
 	* @return the length of the message in bytes
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Creates a new object of the same class and with the same contents
 	* as this object.
 	* @return a clone of this instance.
 	*/
-	@:overload @:abstract public function clone() : Dynamic;
+	@:overload @:public @:abstract public function clone() : Dynamic;
 	
 	
 }

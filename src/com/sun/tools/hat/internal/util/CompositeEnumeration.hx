@@ -30,11 +30,11 @@ package com.sun.tools.hat.internal.util;
 */
 extern class CompositeEnumeration implements java.util.Enumeration<Dynamic>
 {
-	@:overload public function new(e1 : java.util.Enumeration<Dynamic>, e2 : java.util.Enumeration<Dynamic>) : Void;
+	@:overload @:public public function new(e1 : java.util.Enumeration<Dynamic>, e2 : java.util.Enumeration<Dynamic>) : Void;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
 	
 }
